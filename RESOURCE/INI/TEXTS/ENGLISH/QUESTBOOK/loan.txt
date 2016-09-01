@@ -1,0 +1,14 @@
+title=General Quest - Borrowed money off of loanshark.
+text.t1=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t2=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t3=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t4=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t5=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t6=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t7=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t8=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t9=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t10=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t11=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t12=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t13=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.

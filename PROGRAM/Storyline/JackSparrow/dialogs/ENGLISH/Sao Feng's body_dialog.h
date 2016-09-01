@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"Thank you for saving us, Captain Jack Sparrow.",
+"No worries.",
+"Are you here to save us, captain?",
+"Captain Jack Sparrow, yes I am Sao Feng hired me to get you home again.",
+"Are we free to escape?",
+"No not yet, I still have a job to do here.",
+"Are we free to escape?",
+"Yes the coast is clear, at least in the lair anyway.",
+"Thank you Captain Sparrow, what is the plan now?",
+"Padre Domingues has got the keys, he will let you out while I go and stop the ship in the bay.",
+"My sister and I are very thankful for you Captain Jack Sparrow, we wish to go with you to the tavern!",
+"Ok, to the tavern it is ladies, and then the church to see Padre.",
+"Wow Captain Sparrow, we owe you two now.",
+"Thank you ladies for such good fun, lets go to the church now.",
+"My sister and I are very thankful for you Captain Jack Sparrow, can we explore the beach please?",
+"Sure and maybe we can find a quiet spot to lay down.",
+"Wow Captain Sparrow, we owe you two now.",
+"Thank you ladies for such good fun, lets go to the church now.",
+
+};

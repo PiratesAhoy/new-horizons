@@ -1,0 +1,11 @@
+alarm_indicator_title
+{
+Alarm indicator
+}
+
+alarm_indicator_info
+{
+    Alarm indicator is in the top right corner of the screen and could be seen only on land. It shows how player is treated in this town. Usually it's blue, but with increase of hostility to you part of it will become red (from left to right). When a half of the indicator is red it starts to pulse. That means that any soldier that see player will attack you, and other people will run away from player, or report about him to soldiers, or even attack.
+    Alarm indicator grows after any hostile action you perform to soldiers or citizens. Also it becomes completely red when somebody notices you after starting an alarm and if most of the indicator is still red.
+    Alarm calmes down with time, but only if no one sees player or his officers until the indicator will be at least half-blue.
+}

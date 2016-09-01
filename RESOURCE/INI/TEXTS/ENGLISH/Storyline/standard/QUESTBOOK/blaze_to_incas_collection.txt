@@ -1,0 +1,17 @@
+title=Return the native art collection to Governor Silehard.
+text.t1=The governor told me that the pirates under the command of Alistair Garcilaso captured the ship that was delivering a collection of native artifacts to #sRedmond# on #sisland_Redmond#. The pirate's den is on #sisland_Douwesen# island. I've got a mission to find the collection and deliver it to #sRedmond# on #sisland_Redmond#. This is a difficult challenge, but I'll be well-paid. First I need to find out exactly where the pirate's den is, and then I'll proceed according to circumstances.
+text.t2=An old fox of a tavern-keeper introduced me to one strange fellow who says he knows where the pirate's den is. This fellow offered to explain how to get there or to show me the way. I asked him just to explain me how to get there.
+text.t3=An old fox of a tavern-keeper introduced me to one strange fellow who says he knows where the pirate's den is. This fellow offered to explain how to get there or to show me the way. I asked him to show me the way.
+text.t4=The pirate who agreed to show me the way to the pirate's den attacked me in the jungle. I quickly dispatched him. Now I doubt it will be very easy to sneak into the den.
+text.t5=I knew it. As soon as the first sentry caught sight of me, he gave the alarm.
+text.t6=My unsavory reputation helped me talk my way into the pirate's den without fighting.
+text.t7=From my conversation with the pirate leader I learned that the statuettes are on the pirate's ship except for one statuette that was bought by some girl. I could try to sneak on to the ship now with my fellows while there is no crew aboard, or I could return to my ship and then board the pirate ship - but then I fear it may be more difficult because the pirates will be aboard making ready to put to sea.
+text.t8=I sneaked aboard the pirate barque with my officers. There were a few more guards than I thought, but we won the fight. I have the collection now, and I will return to the governor.
+text.t9=I boarded the pirate barque and struck lucky. In the Captain's cabin I found the native art collection apart from one statuette that was apparently bought by some girl. Now that I have it I can return to the governor for the reward.
+text.t10=During the engagement, I sank the pirate barque. Fortunately it sank in shallow water, and we should be able to get the cargo from her hold.
+text.t11=My crew spent all day retrieving the goods from the sunken pirate ship's hold. They managed to recover the whole collection, and now it's time to sail to the governor.
+text.t12=Hmm. It seems that Silehard was most upset because a single idol from the collection is missing - that one idol bought by some unknown girl. But perhaps I am mistaken...he didn't specifically complain to me about it.
+text.t13=I just bought the collection from the pirates. Unfortunately, I had to pay a handsome sum of money for it. Now I am going to report back to Silehard.
+text.t14=Alistar Garsilaso, #sisland_Douwesen#'s pirate chief, turned out to be a miserable coward. I just leaned on him a little, and he gave me the collection straight away.
+text.t15=Since I didn't find the collection the Alistar's house, it's probably still on his ship. Now I just need to find the ship. Most likely I'll find it at some nearby bay.
+text.t16=Alistar refused to cooperate with me. I just hope that the collection of idols is still on the pirate's ship. I suspect it lies in the bay close to the pirate's den.

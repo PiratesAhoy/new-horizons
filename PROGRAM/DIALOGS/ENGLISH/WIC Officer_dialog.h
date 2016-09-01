@@ -1,0 +1,18 @@
+string DLG_TEXT[17] = { 
+"Good day to you. My name is ",
+" and I am the representative of the West India Trading Company. What brings you to my desk?",
+"My name is ",
+". There is a favour I would like to ask from you.",
+"Wait, this is an office? I must have taken a wrong turn somewhere. Goodbye.",
+"Ask away. But please be brief. There is a lot more paperwork lying on my desk.",
+"Paperwork? Yes, PAPERWORK! That is exactly what I need help with. I would like to avoid paying commission on the sale of my cargo.",
+"Ah, that sounds like a good idea. That should also prevent your crew from wanting to sign articles with them and it is only a small step from there to piracy!",
+"It appears we speak the same language! The more profit and the less pirates preying on merchant vessels, the better it is!",
+"While of course I am quite happy to help a fellow merchant, you must understand that there are some... administrative costs involved. I can do as you ask, but it will cost you 1,000,000 gold pieces.",
+"I imagine that price is so inflated as proof that I truly am serious about being a respectable merchant? That is understandable. It seems we have a deal.",
+"Now that sounds like a lot of fun. How about I take my leave and let you to your own affairs? Thanks and goodbye.",
+"Pirating merchant vessels? No, we would not be wanting that at all. Yet you have just given me a completely unrelated idea. I shall be leaving now...",
+"Wait? What? How....? Piece of paper? Plenty gold??? I think I'll go visit the apothecary now.",
+"There you go! Signed, stamped and all official. Be warned though that your license will be immediately revoked upon the slightest unrespectable act.",
+"Understood. I'm sure I'll enjoy my time as an honest merchant. It has been a pleasure doing business with you.",
+};

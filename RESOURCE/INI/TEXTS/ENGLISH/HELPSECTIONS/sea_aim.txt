@@ -1,0 +1,9 @@
+sea_aim_title
+{
+Cannon Aiming Circle
+}
+
+sea_aim_info
+{
+    Cannon Aiming Circle will appear in the center of the screen while player in on ship deck only if it is possible to make a cannon salvo in the direction of player's sight. If some target enters the zone where it can be covered with cannons salvo the aiming circle starts to pulse, changing its size. Also aiming shows target type with it color. If the target is friendly, the aiming cirle is green. And if the target is hostile, aiming circle blinks red, while normal color of the aiming cirle is brown.
+}

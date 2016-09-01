@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = { 
+"You can get it right here! The best gear for the well-equipped traveler! Everything you need for a long voyage!",
+"Let's see what you have.",
+"Not today, thanks.",
+"Well I'm looking for some Navigation instruments...",
+"Unfortunately the Navy's in port and have bought every single item of that kind.",
+"Hmm, do you know anywhere else I can find something like a Spyglass?",
+"Spyglasses have not been seen in this town for ages, but perhaps you could try with Mister Pym. He may still have some things from his early years at sea.",
+"Is that Arthur Gordon Pym?",
+"Indeed it is. You have heard of him, is that so?",
+"Oh, just rumours... but only bad ones I'm afraid.",
+"Bah, that can't be true. I assure you Mr Pym is a very respected citizen.",
+"Very well, where does he live?",
+"You have to pass the Tailor's shop to find Mr Pym's house.",
+"And the Tailor is..?",
+"Very close to the entrance to Chinatown.",
+"I see, goodbye then.",
+"Nothing of interest at all?",
+
+};

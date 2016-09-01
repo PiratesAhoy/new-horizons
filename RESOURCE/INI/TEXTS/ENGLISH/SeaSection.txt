@@ -1,0 +1,45 @@
+Ship_critical		{Critical hit}
+Ship_got_good_1		{You've got}
+Ship_got_good_2		{cwt of}
+Ship_cant_got_good_1	{Can't load}
+Ship_cant_got_good_2	{- hold is full!}
+
+Fort_destroy		{is destroyed.}
+Fort_cannon		{cannon exploded!}
+
+seg_Balls		{Cannonballs}
+seg_Grapes		{Grapes}
+seg_Knippels	{Knippels}
+seg_Bombs		{Bombs}
+seg_Sailcloth	{Sailcloth}
+seg_Planks		{Planks}
+seg_Slaves		{Slaves}
+seg_Wheat		{Wheat}
+seg_Ebony		{Ebony}
+seg_Chocolate	{Chocolate}
+seg_Sugar		{Sugar}
+seg_Wine		{Wine}
+seg_Linen		{Linen}
+seg_Rum			{Rum}
+seg_Tobacco		{Tobacco}
+seg_Coffee		{Coffee}
+seg_Mahogany	{Mahogany}
+seg_Cinnamon	{Cinnamon}
+seg_Copra		{Copra}
+seg_Paprika		{Paprika}
+seg_Fruits		{Fruits}
+seg_Ale			{Ale}
+seg_Silk		{Silk}
+seg_Clothes		{Clothes}
+seg_Cotton		{Cotton}
+seg_Sandal		{Sandal}
+seg_Leather		{Leather}
+seg_Oil			{Oil}
+seg_Gold		{Gold}
+seg_Silver		{Silver}
+seg_Bricks		{Bricks}
+seg_Food		{Food}
+seg_Weapon		{Weapons}
+seg_Gunpowder	{Gunpowder}
+seg_Ration		{Food}
+seg_Medicines	{Medicaments}

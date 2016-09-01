@@ -1,0 +1,23 @@
+string DLG_TEXT[20] = {
+"Captain, I have no time to talk to you right now.",
+"See you later then.",
+"I can reveal the secrets about Shared Experience.",
+"I can teach you how to use Fire-Ships.",
+"I can teach you how to organize a Landing Party.",
+"I can reveal the secrets about Shared Experience or teach you how to use Fire-Ships.",
+"I can reveal the secrets about Shared Experience or teach you how to organize a Landing Party.",
+"I can teach you how to use Fire-Ships or how to organize a Landing Party.",
+"I certainly say yes to that!",
+"I want to learn more about Shared Experience.",
+"I want to learn more about Fire-Ships.",
+"I want to learn more about Landing Party.",
+"Maybe later.",
+"I can reveal the secrets about Shared Experience or teach you how to use Fire-Ships or a Landing Party.",
+"There is one single copper coin.",
+"Not worth much eh?",
+"If you want to know more about the Collection Box -",
+"- ask someone else.",
+"Captain, now you know as much as we do about the Collection Box!",
+"Okay, I have it all in my Questbook.",
+
+};

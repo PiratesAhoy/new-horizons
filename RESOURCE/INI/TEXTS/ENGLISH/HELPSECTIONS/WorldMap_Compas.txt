@@ -1,0 +1,9 @@
+Compas_title
+{
+Compass
+}
+
+Compas_info
+{
+     On World Map Compass is in right bottom corner of the screen. Use it to set your course.
+}

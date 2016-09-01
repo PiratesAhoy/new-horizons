@@ -1,0 +1,3 @@
+title=Lifting the Curse
+text.t1=By the time we found out we were cursed, it was already too late. We turn to skeletons at night, causing everyone to flee or attack us on sight. However, we are also extra strong at that time! So perhaps we can make use of this....
+text.t2=The only way to reverse my crew's situation is to ferry the souls of the dead past World's End for ten years and hope that after that time, the goddess of the sea will be good enough to do it. But I know that is never going to happen. So I will wreak havoc on all ships that cross my path! It will be hard to keep going without making shore, but I will do everything in my considerable power to succeed for as long as possible!

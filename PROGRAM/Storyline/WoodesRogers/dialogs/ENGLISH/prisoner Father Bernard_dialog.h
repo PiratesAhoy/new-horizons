@@ -1,0 +1,35 @@
+string DLG_TEXT[31] = {
+"It could be worse young Captain - we're after all in the house of God.",
+"Well, I'm happy to hear that - try to encourage the others as well!",
+"Thank God, we are saved. If there is anything I can do for you Captain, please let me know.",
+"Thank you Father, but I havn't figured out how to open all doors yet...",
+"Ahh Captain, welcome to the church my child. But let me ask you - what were you doing in the choirs room?",
+"There is a choir?! Hmm, how are they dressed?",
+"Yes we are very proud of the Port Royal Church Choir. If you ask me they look like monks - red monks.",	//6
+"I'm in desperate need for some outfits like that. What do you want for them Father?",				//7
+"You can start with what you've got of spare weapons...",
+"I'll agree to that!",
+"... and pay the rest when you have picked up the wares.",
+"And that would be...?",
+"Well I guess we could say you made a (huge) donation to the church. How about your gold for them Captain?",
+"All my gold!!?? Hmm, I'll think this over...",
+"If you're so interested in music -",
+"- why don't you go back to the Choir room and play a tune yourself Captain?",
+"I see you have decided to buy the choirs clothes after all Captain!",
+"Alright - take the money Father. (shrewd bargainer that priest)",
+"Now let me ask you: You don't have anything else that belongs to the church?",
+"(gulp, this wasn't what I have expected) Of course not Father!",
+"What's in that sack you've got there...?",
+"Only personal belongings.",
+"Like what...?",
+"(Oh come on) Sleepingbag, toothbrush and so on...",
+"I think you're lying - who has ever heard of a 'toothbrush'!? No it's the church treasures you got there, right Captain!",
+"Alright Father but it was for a good cause. It can save the lives of my friends!",
+"Hmm, in that case maybe I should let you have them...? And you did rescue us earlier too.",
+"Thank you Father Bernard and goodbye.",
+"Go on Captain, before I change my mind!",
+"Here, take this one as a sample.",
+"Wow, I like it!",
+
+
+};

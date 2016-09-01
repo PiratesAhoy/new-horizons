@@ -1,0 +1,6 @@
+title=Alchemy - open the Gold lock
+text.t1=I have to find something that dissolves Gold
+text.t2=I have Aqua Reigis - and it can dissolve Gold!!
+text.t3= 
+text.t4=
+text.t5=

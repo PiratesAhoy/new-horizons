@@ -1,0 +1,11 @@
+title=Open to Cave Shore
+text.t1=I'm going to search for the door that opened.
+text.t2=I have to try that lever on the Ship once more!
+text.t3=I'll try the megaphone on the Shore - maybe someone can here me?
+text.t4=I go down to the Shore and see if they did send a boat.
+text.t5=The Chest from the Blue Cavern is stuck under the Boat. I need help to lift the Boat!
+text.t6=Can I balance on the edging to the Musket?
+text.t7=
+text.t8=
+text.t9=
+text.t10=

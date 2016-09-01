@@ -1,0 +1,12 @@
+title=Davy Jones
+text.t1=I have thirteen years to sort out my problems. The first one is to find Barbossa again. I should try the tavern in #sTortuga# just off the coast of #sisland_Hispaniola#. But first maybe I should explore the Caribbean.
+text.t2=That was a strange encounter! My soul in exchange for 13 years with my beloved ship? Of course I declined and now I am on my own. I will have to seek my fortune from scratch, it seems. But if I reconsider, this creature told me to find him in his Secret Hidehout near a native temple.
+text.t3=I met up with Davy Jones again and he raised my ship (which I have renamed the Black Pearl) from the debts as a sign of thanks. I do have one problem and that is to find Barbossa again. I should try the tavern in #sTortuga# just off the coast of #sisland_Hispaniola#. But first maybe I should explore the Caribbean.
+text.t4=.
+text.t5=.
+text.t6=.
+text.t7=.
+text.t8=.
+text.t9=.
+text.t10=.
+ 

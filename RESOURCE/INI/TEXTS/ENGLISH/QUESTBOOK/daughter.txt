@@ -1,0 +1,7 @@
+title=Side Quest - Saving #sToff#'s daughter.
+text.t1=#sToffOremans# told me that his girl was kidnapped by some Spanish pirate in the service of the governor of #sDouwesen#. I think I should deal with that problem and help this girl return home.
+text.t2=The governor directed me to investigate this case, and if my investigation is successful, he will pay me money.
+text.t3=This Spaniard was unforgivably rude with me. So I killed him and his officer. The girl is saved.
+text.t4=This Spaniard was unforgivably rude with me. But when his men realized that I was here by the order of the governor, they slew their captain and left.
+text.t5=Governor paid me a reward - nothing of consequence, of course.
+text.t6=I've got Nicolas Sharp's saber! #sToffOremans#, father of the girl that I saved, gave it to me, and something about this weapon makes me think that it really belonged to the legendary pirate.

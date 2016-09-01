@@ -1,0 +1,2553 @@
+int nCurScroll;
+
+//int lngFileID;
+
+object objNewItemsEquip;
+
+void InitInterface_I(string iniName, int item)
+{
+	//remove all skill modifiers
+	ref pch;
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { pch = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
+	else { pch = GetMainCharacter(); }
+
+    // JRH remove ghost ammo -->
+	if(ENABLE_AMMOMOD == 1)
+	{
+		int gp = GetCharacterItem(pch, "gunpowder");
+		if(gp == 0)
+		{
+			TakenItems(pch, "gunpowder", 1); TakenItems(pch, "gunpowder", -1);
+		}
+
+		int pb = GetCharacterItem(pch, "pistolbullets");
+		if(pb == 0)
+		{
+			TakenItems(pch, "pistolbullets", 1); TakenItems(pch, "pistolbullets", -1);
+		}
+
+		int pg = GetCharacterItem(pch, "pistolgrapes");
+		if(pg == 0)
+		{
+			TakenItems(pch, "pistolgrapes", 1); TakenItems(pch, "pistolgrapes", -1);
+		}
+
+		int mb = GetCharacterItem(pch, "musketbullets");
+		if(mb == 0)
+		{
+			TakenItems(pch, "musketbullets", 1); TakenItems(pch, "musketbullets", -1);
+		}
+
+		if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)
+		{
+			int ca = GetCharacterItem(pch, "cartridges");
+			if(ca == 0)
+			{
+				TakenItems(pch, "cartridges", 1); TakenItems(pch, "cartridges", -1);
+			}
+			int gpb = GetCharacterItem(pch, "cart_box_O");
+			if(gpb == 0)
+			{
+				TakenItems(pch, "cart_box_O", 1); TakenItems(pch, "cart_box_O", -1);
+			}
+			int cap = GetCharacterItem(pch, "caps_box_O");
+			if(cap == 0)
+			{
+				TakenItems(pch, "caps_box_O", 1); TakenItems(pch, "caps_box_O", -1);
+			}
+		}
+
+		int ar = GetCharacterItem(pch, "bladearrows");
+		if(ar == 0)
+		{
+			TakenItems(pch, "bladearrows", 1); TakenItems(pch, "bladearrows", -1);
+		}
+
+		int ar2 = GetCharacterItem(pch, "arrows2");
+		if(ar2 == 0)
+		{
+			TakenItems(pch, "arrows2", 1); TakenItems(pch, "arrows2", -1);
+		}
+
+		int ro = GetCharacterItem(pch, "rockets");
+		if(ro == 0)
+		{
+			TakenItems(pch, "rockets", 1); TakenItems(pch, "rockets", -1);
+		}
+	}
+    // <-- JRH
+
+//	GameInterface.title = "titleItems";
+
+	nCurScroll=-1;
+	SetUsedItems();
+//	FillScroll();
+	string selection = GUN_ITEM_TYPE;
+	if (item > -1 && item < ITEMS_QUANTITY && CheckAttribute(&Items[item], "groupID") == true) selection = Items[item].groupID; // KK
+
+	//JRH -->
+	if (selection == BLADE_ITEM_TYPE || selection == ARMOR_ITEM_TYPE || selection == AMMUNITION_ITEM_TYPE || selection == FLASK_ITEM_TYPE || selection == POUCH_ITEM_TYPE || selection == BELT_ITEM_TYPE || selection == OPEN_ITEM_TYPE) selection = GUN_ITEM_TYPE;
+	if (selection == SPYGLASS_ITEM_TYPE  || selection == LOCKPICK_ITEM_TYPE || selection == CLOCK_ITEM_TYPE || selection == COMPASS_ITEM_TYPE || selection == DOCUMENT_ITEM_TYPE || selection == OUTFIT_ITEM_TYPE) selection = OBJECT_ITEM_TYPE;
+	if (selection == EQUIP_ITEM_TYPE || selection == EXAMINE_ITEM_TYPE) selection = QUEST_ITEM_TYPE;
+	//<-- JRH
+
+	FillSelectedScroll(selection);
+	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
+	CreateExitString();//MAXIMUS: standard exit-string for exit-button
+	CreateString(true, "ItemName", "", FONT_NORMAL, COLOR_YELLOW, 320, 200, SCRIPT_ALIGN_CENTER, 1.1); // KK
+
+// KK -->
+	bool hasShip = false;
+	for (int i = 0; i < COMPANION_MAX; i++) {
+		int cidx = GetCompanionIndex(GetMainCharacter(), i);
+		if (cidx < 0) continue;
+		if (GetCharacterShipType(GetCharacter(cidx)) != SHIP_NOTUSED) {
+			hasShip = true;
+			break;
+		}
+	}
+	SetSelectable("I_SHIPHOLD", !LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm() && hasShip);
+	if (hasShip == false && GetBerthedShipsQuantityForTown(GetTownIDFromLocID(characters[GetMainCharacterIndex()].location)) > 0) {
+		hasShip = true;
+		GameInterface.GoDirectToShipBerthing = true;
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "I_SHIP", 0, XI_ConvertString("Sel Berth"));
+	}
+// <-- KK
+
+// MAXIMUS interface MOD -->
+	SetSelectable("I_SHIP", !LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm() && hasShip); // KK
+	// KK SetSelectable("I_NATIONS",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());
+	SetSelectable("I_TRADEBOOK",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());
+	// PB SetSelectable("I_QUESTBOOK",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());
+	SetSelectable("I_SHIPLOG",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());
+	SetSelectable("EXIT_BUTTON",true);
+// MAXIMUS interface MOD <--
+
+	SetEventHandler("InterfaceBreak","ProcessCancelExit",0);
+	SetEventHandler("frame","FrameProcess",1);
+	SetEventHandler("exitCancel","ProcessCancelExit",0);
+	SetEventHandler("TossItemYes", "I_TossItem", 0); //Levis
+	SetEventHandler("TossItemNo", "Remove_Confirm", 0); //Levis
+	//SetEventHandler("EquipPress","ProcEquipPress",0);
+	SetEventHandler("ievnt_command","ProcessCommandExecute",0);
+
+	FrameProcess();
+	UpdateItemData();
+
+// KK -->
+	switch (selection)
+	{
+		case GUN_ITEM_TYPE: SetSelectable("B_WEAPON",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntWeapon"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+		case POTION_ITEM_TYPE: SetSelectable("B_POTION",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntMedicine"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+		case OBJECT_ITEM_TYPE: SetSelectable("B_ITEMS",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntItems"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+		case MAP_ITEM_TYPE: SetSelectable("B_MAP",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntMap"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+		case QUEST_ITEM_TYPE: SetSelectable("B_QUEST",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntQuest"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+	}
+// <-- KK
+	// PB -->
+	// Why is this necessary? It works without it for regular maps
+	if(CheckAttribute(pch, "inventory")) // Return to Maps Tab
+	{
+		ChangeSelectedScroll(MAP_ITEM_TYPE);    UpdateItemData();
+		DeleteAttribute(pch, "inventory");
+	}
+	if(CheckAttribute(pch, "bookreading")) // Return to Items Tab
+	{
+		ChangeSelectedScroll(OBJECT_ITEM_TYPE);    UpdateItemData();
+		DeleteAttribute(pch, "bookreading");
+	}
+	// PB <--
+}
+
+void FrameProcess()
+{
+	if(nCurScroll!=sti(GameInterface.itemslist.current))
+	{
+		nCurScroll = sti(GameInterface.itemslist.current);
+		UpdateItemData();
+	}
+}
+
+void ProcessCommandExecute()
+{
+	string comName = GetEventData();
+	string nodName = GetEventData();
+
+// MAXIMUS interface MOD -->
+	int x;ref tmpch;string tmpstr;
+        if(nodName=="I_CHARACTER")
+{
+if(comName=="activate" || comName=="click")
+	{
+
+		PostEvent("LaunchIAfterFrame",1,"sl", nodName, 2);
+		InterfaceStack.SelectMenu_node = nodName;
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		ProcessCancelExit();
+		EndCancelInterface(false);
+
+	}
+}
+        if(nodName=="I_SHIP")
+{
+if(comName=="activate" || comName=="click")
+	{
+
+		PostEvent("LaunchIAfterFrame",1,"sl", nodName, 2);
+		InterfaceStack.SelectMenu_node = nodName;
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		ProcessCancelExit();
+		EndCancelInterface(false);
+
+	}
+}
+        if(nodName=="I_SHIPHOLD")
+{
+if(comName=="activate" || comName=="click")
+	{
+
+		PostEvent("LaunchIAfterFrame",1,"sl", nodName, 2);
+		InterfaceStack.SelectMenu_node = nodName;
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		ProcessCancelExit();
+		EndCancelInterface(false);
+
+	}
+}
+        if(nodName=="I_PASSENGER")
+{
+if(comName=="activate" || comName=="click")
+	{
+
+		PostEvent("LaunchIAfterFrame",1,"sl", nodName, 2);
+		InterfaceStack.SelectMenu_node = nodName;
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		ProcessCancelExit();
+		EndCancelInterface(false);
+
+	}
+}
+        if(nodName=="I_QUESTBOOK")
+{
+if(comName=="activate" || comName=="click")
+	{
+
+		PostEvent("LaunchIAfterFrame",1,"sl", nodName, 2);
+		InterfaceStack.SelectMenu_node = nodName;
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		ProcessCancelExit();
+		EndCancelInterface(false);
+
+	}
+}
+        if(nodName=="I_TRADEBOOK")
+{
+if(comName=="activate" || comName=="click")
+	{
+
+		PostEvent("LaunchIAfterFrame",1,"sl", nodName, 2);
+		InterfaceStack.SelectMenu_node = nodName;
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		ProcessCancelExit();
+		EndCancelInterface(false);
+
+	}
+}
+        if(nodName=="I_SHIPLOG")
+{
+if(comName=="activate" || comName=="click")
+	{
+
+		PostEvent("LaunchIAfterFrame",1,"sl", nodName, 2);
+		InterfaceStack.SelectMenu_node = nodName;
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		ProcessCancelExit();
+		EndCancelInterface(false);
+
+	}
+}
+        if(nodName=="I_NATIONS")
+{
+if(comName=="activate" || comName=="click")
+	{
+
+		PostEvent("LaunchIAfterFrame",1,"sl", nodName, 2);
+		InterfaceStack.SelectMenu_node = nodName;
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		ProcessCancelExit();
+		EndCancelInterface(false);
+
+	}
+}
+// MAXIMUS interface MOD <--
+
+	switch(nodName)
+	{
+	case "EQUIP_BUTTON":
+		if(comName=="activate" || comName=="click")
+		{
+
+		//JRH -->
+			ref PChar;
+			PChar = GetMainCharacter();
+
+			string itmName = GetItemIDByOrder(nCurScroll);
+
+			if(IsEquipCharacterByItem(Pchar, "pistol20"))	//RELEASE PISTOL20 OR EQUIP OTHER GUN OR EQUIP ANY BLADE!!!
+			{
+				if(CheckCharacterItem(Pchar,"ammobag2"))
+				{
+					aref itemref; makearef(itemref,Items[GetItemIndex(itmName)]);
+					if(CheckAttribute(itemref,"groupID") && itemref.groupID == GUN_ITEM_TYPE)
+					{
+						if(IsEquipCharacterByItem(Pchar, "ammobag2")) RemoveCharacterEquip(Pchar, POUCH_ITEM_TYPE);
+
+						TakeItemFromCharacter(Pchar, "ammobag2");
+						GiveItem2Character(Pchar, "ammobag1");
+					}
+				}
+			}
+			else
+			{
+				if(IsEquipCharacterByItem(Pchar, "pistolthrow5") || IsEquipCharacterByItem(Pchar, "pistolthrow4")
+				|| IsEquipCharacterByItem(Pchar, "pistolthrow3") || IsEquipCharacterByItem(Pchar, "pistolthrow2")
+				|| IsEquipCharacterByItem(Pchar, "pistolthrow1"))	//RELEASE PISTOLTROW 1-5
+				{
+					if(IsEquipCharacterByItem(Pchar, "ammobag2")) RemoveCharacterEquip(Pchar, POUCH_ITEM_TYPE);
+
+					if(CheckCharacterItem(Pchar,"ammobag2"))
+					{
+						TakeItemFromCharacter(Pchar, "ammobag2");
+						GiveItem2Character(Pchar, "ammobag1");
+					}
+				}
+			}
+			else
+			{
+				if(IsEquipCharacterByItem(Pchar, "pistolbelt"))	//RELEASE PISTOLBELT
+				{
+					if(itmName == "pistolbelt")	//yes should be different, pistolbelt is not a gun
+					{
+						if(IsEquipCharacterByItem(Pchar, "ammobag2")) RemoveCharacterEquip(Pchar, POUCH_ITEM_TYPE);
+
+						if(CheckCharacterItem(Pchar,"ammobag2"))
+						{
+							TakeItemFromCharacter(Pchar, "ammobag2");
+							GiveItem2Character(Pchar, "ammobag1");
+						}
+					}
+				}
+			}
+			else
+			{
+				if(itmName == "pistol20" || itmName == "pistolbelt" || itmName == "pistolthrow5"
+				|| itmName == "pistolthrow4" || itmName == "pistolthrow3" || itmName == "pistolthrow2"
+				|| itmName == "pistolthrow1")	//EQUIP PISTOL20 or PISTOLTHROW 1-5 or PISTOLBELT
+				{
+					if(CheckCharacterItem(Pchar,"ammobag1"))
+					{
+						TakeItemFromCharacter(Pchar, "ammobag1");
+						GiveItem2Character(Pchar, "ammobag2");
+					}
+				}
+			}
+
+			if(itmName == "ammobag2")
+			{
+				RemoveCharacterEquip(Pchar, POUCH_ITEM_TYPE);
+				TakeItemFromCharacter(Pchar, "ammobag1");
+
+				if(!CheckCharacterItem(Pchar,"ammobag2"))
+				GiveItem2Character(Pchar, "ammobag2");
+
+				TakeItemFromCharacter(Pchar, "ammopouch");
+				RemoveCharacterEquip(Pchar, FLASK_ITEM_TYPE);
+				TakeItemFromCharacter(Pchar, "powderflask");
+			}
+
+			if(itmName == "med_bag2_out")
+			{
+				PlaySound("PEOPLE\clothes1.wav");
+				RemoveCharacterEquip(Pchar, OUTFIT_ITEM_TYPE);
+				TakeItemFromCharacter(Pchar, "med_bag2_out");
+				GiveItem2Character(Pchar, "med_bag1_out");
+				TakeItemFromCharacter(Pchar, "crypto_excel");
+			}
+
+			if(itmName == "med_bag1_out")
+			{
+				PlaySound("INTERFACE\cancel.wav");
+
+				if(CheckAttribute(Pchar,"quest.med_bag1_out") && Pchar.quest.med_bag1_out == "equipped")	
+				{
+					//RELEASE
+					RemoveCharacterEquip(Pchar, OUTFIT_ITEM_TYPE);
+					TakeItemFromCharacter(Pchar, "med_bag1_out");
+					GiveItem2Character(Pchar, "med_bag1_doc_YES");	//restarts item loop
+					Pchar.quest.med_bag1_out = "released";
+				}
+				else							
+				{
+					//EQUIP
+					Pchar.quest.med_bag1_out = "equipped";
+				}
+			}
+
+			//EMPTY
+			if(itmName == "detective_kit3")
+			{
+				TakeItemFromCharacter(Pchar, "detective_kit3");
+				
+				if(CheckCharacterItem(Pchar,"D_feather") && CheckCharacterItem(Pchar,"D_scissors") && CheckCharacterItem(Pchar,"D_compasses")
+				&& CheckCharacterItem(Pchar,"D_scalpel") && CheckCharacterItem(Pchar,"D_magnifying") && CheckCharacterItem(Pchar,"D_tweezers"))
+				{
+					PlaySound("INTERFACE\cancel.wav");
+					TakeItemFromCharacter(Pchar, "D_feather");
+					TakeItemFromCharacter(Pchar, "D_scissors");
+					TakeItemFromCharacter(Pchar, "D_compasses");
+					TakeItemFromCharacter(Pchar, "D_scalpel");
+					TakeItemFromCharacter(Pchar, "D_magnifying");
+					TakeItemFromCharacter(Pchar, "D_tweezers");
+					GiveItem2Character(Pchar, "detective_kit4");
+					Pchar.quest.detective_kit = "filled";
+				}
+				else
+				{
+					PlaySound("INTERFACE\detective_kit_lock.wav");
+					GiveItem2Character(Pchar, "detective_kit1");
+					Pchar.quest.detective_kit = "empty";
+				}
+			}
+
+			//FILLED
+			if(itmName == "detective_kit4")
+			{
+				PlaySound("INTERFACE\detective_kit_lock.wav");
+				TakeItemFromCharacter(Pchar, "detective_kit4");
+				GiveItem2Character(Pchar, "detective_kit1");
+
+				if(CheckAttribute(Pchar,"quest.Dkit4_first_time") && Pchar.quest.Dkit4_first_time == "no")	
+				{
+					
+				}
+				else
+				{
+					//it is the first time
+					Pchar.quest.Dkit4_first_time = "no";
+
+					LAi_QuestDelay("Dkit1_prepared", 0.5);
+				}
+			}
+
+			if(itmName == "doc1B")
+			{
+				PlaySound("INTERFACE\paper_small.wav");
+				TakeItemFromCharacter(Pchar, "doc1B");
+				GiveItem2Character(Pchar, "doc1A");
+
+				if(CheckCharacterItem(Pchar,"med_bag1_doc_YES"))
+				{
+					TakeItemFromCharacter(Pchar, "med_bag1_doc_YES");
+					GiveItem2Character(Pchar, "med_bag1_out");
+					EquipCharacterByItem(Pchar, "med_bag1_out");
+					Pchar.quest.med_bag1_out = "equipped";
+				}
+			}
+
+			if(itmName == "doc4B")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "doc4B");
+				GiveItem2Character(Pchar, "doc4A");
+
+				if(CheckCharacterItem(Pchar,"med_bag1_doc_YES"))
+				{
+					TakeItemFromCharacter(Pchar, "med_bag1_doc_YES");
+					GiveItem2Character(Pchar, "med_bag1_out");
+					EquipCharacterByItem(Pchar, "med_bag1_out");
+					Pchar.quest.med_bag1_out = "equipped";
+				}
+			}
+
+			if(itmName == "doc5C")
+			{
+				PlaySound("AMBIENT\TAVERN\open_bottle.wav");
+				TakeItemFromCharacter(Pchar, "doc5C");
+				GiveItem2Character(Pchar, "doc5A");
+
+				if(CheckCharacterItem(Pchar,"med_bag1_doc_YES"))
+				{
+					TakeItemFromCharacter(Pchar, "med_bag1_doc_YES");
+					GiveItem2Character(Pchar, "med_bag1_out");
+					EquipCharacterByItem(Pchar, "med_bag1_out");
+					Pchar.quest.med_bag1_out = "equipped";
+				}
+			}
+
+			if(itmName == "doc6C")
+			{
+				PlaySound("INTERFACE\paper_small.wav");
+				TakeItemFromCharacter(Pchar, "doc6C");
+				GiveItem2Character(Pchar, "doc6A");
+
+				if(CheckCharacterItem(Pchar,"med_bag1_doc_YES"))
+				{
+					TakeItemFromCharacter(Pchar, "med_bag1_doc_YES");
+					GiveItem2Character(Pchar, "med_bag1_out");
+					EquipCharacterByItem(Pchar, "med_bag1_out");
+					Pchar.quest.med_bag1_out = "equipped";
+				}
+			}
+
+			if(itmName == "doc2E")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "doc2D");
+				TakeItemFromCharacter(Pchar, "doc2E");
+				TakeItemFromCharacter(Pchar, "doc3D");
+				GiveItem2Character(Pchar, "doc2A");
+
+				if(CheckCharacterItem(Pchar,"med_bag1_doc_YES"))
+				{
+					TakeItemFromCharacter(Pchar, "med_bag1_doc_YES");
+					GiveItem2Character(Pchar, "med_bag1_out");
+					EquipCharacterByItem(Pchar, "med_bag1_out");
+					Pchar.quest.med_bag1_out = "equipped";
+				}
+			}
+
+			if(itmName == "doc3D")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "doc2D");
+				TakeItemFromCharacter(Pchar, "doc2E");
+				TakeItemFromCharacter(Pchar, "doc3D");
+				GiveItem2Character(Pchar, "doc2A");
+
+				if(CheckCharacterItem(Pchar,"med_bag1_doc_YES"))
+				{
+					TakeItemFromCharacter(Pchar, "med_bag1_doc_YES");
+					GiveItem2Character(Pchar, "med_bag1_out");
+					EquipCharacterByItem(Pchar, "med_bag1_out");
+					Pchar.quest.med_bag1_out = "equipped";
+				}
+			}
+
+			if(itmName == "bagcompass4")
+			{
+				if(IsEquipCharacterByItem(Pchar, "bagcompass4"))
+				{
+					//RELEASE
+					if(CheckAttribute(Pchar,"model") && Pchar.model == "William Legrand3")
+					{
+						SetModel(Pchar, "William Legrand", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+						PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+					}
+				}
+				else
+				{
+					//EQUIP
+					if(CheckAttribute(Pchar,"model") && Pchar.model == "William Legrand")
+					{
+						SetModel(Pchar, "William Legrand3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+						PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+					}
+				}
+			}
+
+			if(itmName == "bladespyglass6") PlaySound("PEOPLE\spyglass.wav");
+			if(itmName == "pistolsextant2") PlaySound("INTERFACE\pinion_take.wav");
+
+			if(itmName == "book54")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "book54");
+				GiveItem2Character(Pchar, "book52");
+			}
+
+			if(itmName == "book55C")
+			{
+				PlaySound("INTERFACE\took_item.wav");
+				TakeItemFromCharacter(Pchar, "book55C");
+				GiveItem2Character(Pchar, "book55D");
+				GiveItem2Character(Pchar, "key29");
+				Pchar.quest.key29 = "picked_up";
+			}
+
+			if(itmName == "book55D")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "book55D");
+				GiveItem2Character(Pchar, "book55A");
+			}
+
+			if(itmName == "BH_sketch_out")
+			{
+				PlaySound("INTERFACE\paper.wav");
+				TakeItemFromCharacter(Pchar, "BH_sketch_out");
+				GiveItem2Character(Pchar, "rolled_paper");
+			}
+
+			if(itmName == "rolled_paper")
+			{
+				PlaySound("PEOPLE\gunpowder.wav");
+				TakeItemFromCharacter(Pchar, "rolled_paper");
+				GiveItem2Character(Pchar, "rolled_paper_gp");
+				TakenItems(Pchar, "gunpowder", -100);
+			}
+		
+			if(itmName == "rolled_paper_gp")
+			{
+				PlaySound("INTERFACE\paper.wav");
+				TakeItemFromCharacter(Pchar, "rolled_paper_gp");
+				GiveItem2Character(Pchar, "bladepaperroll");
+				
+				LAi_QuestDelay("bladepaperroll_equip_check", 0.1);
+			}
+
+			if(itmName == "bladearrows")
+			{
+				if(IsEquipCharacterByItem(Pchar, "bladearrows"))
+				{
+					//RELEASE
+					//no problem
+				}
+				else
+				{
+					//EQUIP
+					LAi_QuestDelay("indian_arrow_tomahawk_equip_check", 0.1);
+				}
+			}
+		
+			if(itmName == "tomahawk")
+			{
+				if(IsEquipCharacterByItem(Pchar, "tomahawk"))
+				{
+					//RELEASE
+					//no problem
+				}
+				else
+				{
+					//EQUIP
+					LAi_QuestDelay("indian_arrow_tomahawk_equip_check", 0.1);
+				}
+			}
+		
+			if(itmName != "pistolbow" || itmName != "blowgun")
+			{
+				if(HasSubStr(itmName, "pistol"))
+				{
+					if(IsEquipCharacterByItem(Pchar, FindCharacterItemByGroup(&PChar, GUN_ITEM_TYPE)))
+					{
+						//RELEASE
+						//no problem				
+					}
+					else
+					{
+						//EQUIP
+						LAi_QuestDelay("indian_pistols_equip_check", 0.1);
+					}
+				}
+			}
+
+			if(itmName == "shield_hand")
+			{
+				TakeItemFromCharacter(Pchar, "shield_hand");
+				GiveItem2Character(Pchar, "shield_back");
+				EquipCharacterByItem(Pchar, "shield_back");
+
+				LAi_QuestDelay("indian_shield_equip_check", 0.1);
+			}
+
+			if(itmName == "shield_back")
+			{
+				LAi_QuestDelay("indian_shield_equip_check", 0.1);
+			}
+
+			if(itmName == "skull_ring")
+			{
+				if(IsEquipCharacterByItem(Pchar, "skull_ring"))
+				{
+					//RELEASE
+					Pchar.skull_ring = "off";
+					PlaySound("PEOPLE\teleport.wav");
+
+					LAi_QuestDelay("skull_ring_release", 2.0);
+				}
+				else
+				{
+					//EQUIP
+					Pchar.skull_ring = "on";
+					PlaySound("PEOPLE\transform.wav");
+
+					if(IsEquipCharacterByItem(Pchar, "moccasins")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					if(IsEquipCharacterByItem(Pchar, "filled_pipe")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					SetModel(Pchar, pchar.model, "man", "man", 1.8, true);
+					Pchar.filled_pipe = "released";
+
+					LAi_QuestDelay("skull_ring_equip", 2.0);
+				}
+
+				LAi_QuestDelay("skull_ring_hp", 0.1);
+			}
+
+			if(itmName == "moccasins")
+			{
+				if(IsEquipCharacterByItem(Pchar, "moccasins"))
+				{
+					//RELEASE
+					SetModel(Pchar, pchar.model, "man", "man", 1.8, true);
+					PlaySound("PEOPLE\clothes1.wav");
+				}
+				else
+				{
+					//EQUIP
+					SetModel(Pchar, pchar.model, "fast_man", "man", 1.8, true);
+					PlaySound("PEOPLE\clothes1.wav");
+
+					if(IsEquipCharacterByItem(Pchar, "skull_ring")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					if(IsEquipCharacterByItem(Pchar, "filled_pipe")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					Pchar.skull_ring = "off";
+					Pchar.filled_pipe = "released";
+					
+
+					LAi_QuestDelay("moccasins_equip", 2.0);
+					LAi_QuestDelay("skull_ring_release", 2.0);
+				}
+
+				LAi_QuestDelay("skull_ring_hp", 0.1);
+			}
+
+			if(itmName == "pulverized_mushrooms")
+			{	
+				//EQUIP
+				if(CheckCharacterItem(Pchar,"empty_pipe"))
+				{
+					PlaySound("AMBIENT\CHURCH\bench1_2.wav");
+					PlaySound("PEOPLE\clothes3.wav");
+					PlaySound("PEOPLE\clothes3.wav");
+					TakeItemFromCharacter(Pchar, "pulverized_mushrooms");
+					TakeItemFromCharacter(Pchar, "empty_pipe");
+					GiveItem2Character(Pchar, "filled_pipe");
+
+					if(IsEquipCharacterByItem(Pchar, "skull_ring")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					if(IsEquipCharacterByItem(Pchar, "moccasins")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					if(IsEquipCharacterByItem(Pchar, "filled_pipe")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					SetModel(Pchar, pchar.model, "man", "man", 1.8, true);
+					Pchar.skull_ring = "off";
+					Pchar.filled_pipe = "released";
+
+					LAi_QuestDelay("skull_ring_release", 2.0);
+				}	
+			}
+
+			if(itmName == "filled_pipe")
+			{
+				if(IsEquipCharacterByItem(Pchar, "filled_pipe"))
+				{
+					//RELEASE
+					PlaySound("OBJECTS\SHIPCHARGE\sail_damage3.wav");
+					Pchar.filled_pipe = "released";
+				}
+				else
+				{	
+					//EQUIP
+					PlaySound("INTERFACE\cancel.wav");
+					Pchar.filled_pipe = "equipped";
+
+					if(IsEquipCharacterByItem(Pchar, "skull_ring")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					if(IsEquipCharacterByItem(Pchar, "moccasins")) RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+					SetModel(Pchar, pchar.model, "man", "man", 1.8, true);
+					Pchar.skull_ring = "off";
+
+					LAi_QuestDelay("filled_pipe_equip", 0.1);
+					LAi_QuestDelay("skull_ring_release", 2.0);
+				}	
+			}
+
+			bool ExtraUpdate = false; // PB
+			if(itmName == "telescope")
+			{
+				if(CheckCharacterItem(Pchar,"LongRifle_W"))
+				{
+					PlaySound("PEOPLE\spyglass.wav");
+					RemoveCharacterEquip (Pchar, GUN_ITEM_TYPE);
+					TakeItemFromCharacter(Pchar, "telescope");
+					TakeItemFromCharacter(Pchar, "LongRifle_W");
+					GiveItem2Character   (Pchar, "LongRifle_WT");
+					EquipCharacterByItem (Pchar, "LongRifle_WT");
+					ExtraUpdate = true; // PB
+				}
+				else
+				{
+					if(CheckCharacterItem(Pchar,"LongRifle_C"))
+					{
+						PlaySound("PEOPLE\spyglass.wav");
+						RemoveCharacterEquip (Pchar, GUN_ITEM_TYPE);
+						TakeItemFromCharacter(Pchar, "telescope");
+						TakeItemFromCharacter(Pchar, "LongRifle_C");
+						GiveItem2Character   (Pchar, "LongRifle_CT");
+						EquipCharacterByItem (Pchar, "LongRifle_CT");
+						ExtraUpdate = true; // PB
+					}
+				}
+			}
+
+			if(itmName == "LongRifle_WT" && IsEquipedItem("LongRifle_WT"))
+			{
+				PlaySound("PEOPLE\key_box.wav");
+				TakeItemFromCharacter(Pchar, "LongRifle_WT");
+				GiveItem2Character(Pchar, "LongRifle_W");
+				EquipCharacterByItem(Pchar, "LongRifle_W");
+				GiveItem2Character(Pchar, "telescope");
+				ExtraUpdate = true; // PB
+			}
+
+			if(itmName == "LongRifle_CT" && IsEquipedItem("LongRifle_CT"))
+			{
+				PlaySound("PEOPLE\key_box.wav");
+				TakeItemFromCharacter(Pchar, "LongRifle_CT");
+				GiveItem2Character  (Pchar, "telescope");
+				GiveItem2Character  (Pchar, "LongRifle_C");
+				EquipCharacterByItem(Pchar, "LongRifle_C");
+				ExtraUpdate = true; // PB
+			}
+
+			if(itmName == "yarn" || itmName == "magnet")
+			{
+				if(CheckCharacterItem(Pchar,"yarn") && CheckCharacterItem(Pchar,"magnet"))
+				{
+					PlaySound("PEOPLE\clothes1.wav");
+					TakeItemFromCharacter(Pchar, "yarn");
+					TakeItemFromCharacter(Pchar, "magnet");
+					GiveItem2Character(Pchar, "magnet2");
+				}
+				else
+				{
+					PlaySound("VOICE\ENGLISH\Poe_and.wav");
+					Logit(TranslateString("","I'm not sure what to do with this item."));
+					Logit(TranslateString("","Maybe something is missing?"));
+					return;
+				}
+			}
+
+			if(itmName == "needles" || itmName == "pliers")
+			{
+				if(CheckCharacterItem(Pchar,"needles") && CheckCharacterItem(Pchar,"pliers"))
+				{
+					PlaySound("INTERFACE\water_tap.wav");
+					TakeItemFromCharacter(Pchar, "needles");
+					TakeItemFromCharacter(Pchar, "pliers");
+					GiveItem2Character(Pchar, "needles2");
+				}
+				else
+				{
+					PlaySound("VOICE\ENGLISH\Poe_and.wav");
+					Logit(TranslateString("","I'm not sure what to do with this item."));
+					Logit(TranslateString("","Maybe something is missing?"));
+					return;
+				}
+			}
+
+			if(itmName == "book61D")
+			{
+				PlaySound("INTERFACE\paper_small.wav");
+				RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+				TakeItemFromCharacter(Pchar, "book61D");
+				GiveItem2Character(Pchar, "book61C2");
+			}
+
+			if(itmName == "book61C2")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				RemoveCharacterEquip(Pchar, EQUIP_ITEM_TYPE);
+				TakeItemFromCharacter(Pchar, "book61C2");
+				GiveItem2Character(Pchar, "book61A");
+			}
+	//------------------------------------------------------------------------------
+
+			if(itmName == "pistol204_P")
+			{
+				if(IsEquipCharacterByItem(Pchar, "pistol204_P"))
+				{
+					//RELEASE
+					
+					if(CheckCharacterItem(Pchar,"p_case_2C"))
+					{
+						RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+						TakeItemFromCharacter(Pchar, "pistol204_P");
+						TakeItemFromCharacter(Pchar, "p_case_2C");
+						GiveItem2Character(Pchar, "p_case_3");
+						Pchar.p_case_status = "3";
+					}
+					if(CheckCharacterItem(Pchar,"p_case_1B"))
+					{
+						RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+						TakeItemFromCharacter(Pchar, "pistol204_P");
+						TakeItemFromCharacter(Pchar, "p_case_1B");
+						GiveItem2Character(Pchar, "p_case_2A");
+						Pchar.p_case_status = "2A";
+					}
+					if(CheckCharacterItem(Pchar,"p_case_1C"))
+					{
+						RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+						TakeItemFromCharacter(Pchar, "pistol204_P");
+						TakeItemFromCharacter(Pchar, "p_case_1C");
+						GiveItem2Character(Pchar, "p_case_2B");
+						Pchar.p_case_status = "2B";
+					}
+					if(CheckCharacterItem(Pchar,"p_case_0"))
+					{
+						RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+						TakeItemFromCharacter(Pchar, "pistol204_P");
+						TakeItemFromCharacter(Pchar, "p_case_0");
+						GiveItem2Character(Pchar, "p_case_1A");
+						Pchar.p_case_status = "1A";
+					}
+					if(CheckCharacterItem(Pchar,"p_case_C"))
+					{
+						RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+					}
+				}
+				else
+				{
+					//EQUIP
+					RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+					EquipCharacterByItem(Pchar, "pistol204_P");
+
+					LAi_QuestDelay("pistol_204_load_check", 2.0);
+				}
+				ExtraUpdate = true; // PB
+			}
+
+			if(itmName == "cart_box_O")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakenItems(Pchar, "cart_box_O", -100);
+
+				if(IsEquipCharacterByItem(Pchar, "pistol204_P"))
+				{
+					GiveItem2Character(Pchar, "cart_box_C");
+				}
+				else
+				{
+					if(CheckCharacterItem(Pchar,"p_case_C"))
+					{
+						GiveItem2Character(Pchar, "cart_box_C");
+					}
+					else
+					{
+						//PISTOL NOT EQUIPPED, CASE IS OPEN
+
+						if(CheckCharacterItem(Pchar,"p_case_2B"))
+						{
+							TakeItemFromCharacter(Pchar, "p_case_2B");
+							GiveItem2Character(Pchar, "p_case_3");
+							Pchar.p_case_status = "3";
+						}
+						if(CheckCharacterItem(Pchar,"p_case_1A"))
+						{
+							TakeItemFromCharacter(Pchar, "p_case_1A");
+							GiveItem2Character(Pchar, "p_case_2A");
+							Pchar.p_case_status = "2A";
+						}
+						if(CheckCharacterItem(Pchar,"p_case_1C"))
+						{
+							TakeItemFromCharacter(Pchar, "p_case_1C");
+							GiveItem2Character(Pchar, "p_case_2C");
+							Pchar.p_case_status = "2C";
+						}
+						if(CheckCharacterItem(Pchar,"p_case_0"))
+						{
+							TakeItemFromCharacter(Pchar, "p_case_0");
+							GiveItem2Character(Pchar, "p_case_1B");
+							Pchar.p_case_status = "1B";
+						}
+					}
+				}
+
+				ExtraUpdate = true; // PB
+			}
+
+			if(itmName == "caps_box_O")
+			{
+				PlaySound("PEOPLE\spyglass.wav");
+				TakenItems(Pchar, "caps_box_O", -100);
+
+				if(IsEquipCharacterByItem(Pchar, "pistol204_P"))
+				{
+					GiveItem2Character(Pchar, "caps_box_C");
+				}
+				else
+				{
+					if(CheckCharacterItem(Pchar,"p_case_C"))
+					{
+						GiveItem2Character(Pchar, "caps_box_C");
+					}
+					else
+					{
+						//PISTOL NOT EQUIPPED, CASE IS OPEN
+
+						if(CheckCharacterItem(Pchar,"p_case_2A"))
+						{
+							TakeItemFromCharacter(Pchar, "p_case_2A");
+							GiveItem2Character(Pchar, "p_case_3");
+							Pchar.p_case_status = "3";
+						}
+						if(CheckCharacterItem(Pchar,"p_case_1A"))
+						{
+							TakeItemFromCharacter(Pchar, "p_case_1A");
+							GiveItem2Character(Pchar, "p_case_2B");
+							Pchar.p_case_status = "2B";
+						}
+						if(CheckCharacterItem(Pchar,"p_case_1B"))
+						{
+							TakeItemFromCharacter(Pchar, "p_case_1B");
+							GiveItem2Character(Pchar, "p_case_2C");
+							Pchar.p_case_status = "2C";
+						}
+						if(CheckCharacterItem(Pchar,"p_case_0"))
+						{
+							TakeItemFromCharacter(Pchar, "p_case_0");
+							GiveItem2Character(Pchar, "p_case_1C");
+							Pchar.p_case_status = "1C";
+						}
+					}
+				}
+
+				ExtraUpdate = true; // PB
+			}
+
+			if(itmName == "p_case_0")
+			{
+				PlaySound("INTERFACE\p_case_close.wav");
+				TakeItemFromCharacter(Pchar, "p_case_0");
+				GiveItem2Character(Pchar, "p_case_C");
+				Pchar.p_case_status = "0";
+				ExtraUpdate = true; // PB
+			}
+//JRH equip
+		//<-- JRH
+
+			I_EquipItem();
+			// PB -->
+			if(ExtraUpdate)
+			{
+				PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+				InterfaceStack.SelectMenu_node = "I_ITEMS";
+				EndCancelInterface(false);
+			}
+			// PB <--
+		}
+		if(comName=="upstep" || comName=="deactivate")
+		{
+			SetCurrentNode("ITEMSLIST");
+		}
+	break;
+// KK -->
+	case "EXAMINE_BUTTON":
+		if(comName=="activate" || comName=="click")
+		{
+			I_ExamineItem();
+		}
+		if(comName=="upstep" || comName=="deactivate")
+		{
+			SetCurrentNode("ITEMSLIST");
+		}
+	break;
+// <-- KK
+// Levis -->
+	case "TOSS_BUTTON":
+		if(comName=="activate" || comName=="click")
+		{
+			GameInterface.itemslist.currenttemp = nCurScroll;
+			SetNodeUsing("MSC_CONFIRM_RECTANGLE", true);
+			SetNodeUsing("MSC_TEXTWINDOW", true);
+			SetNodeUsing("MSC_CONFIRM_YES_BUTTON", true);
+			SetNodeUsing("MSC_CONFIRM_NO_BUTTON", true);
+			SetCurrentNode("MSC_CONFIRM_NO_BUTTON");
+			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "MSC_CONFIRM_NO_BUTTON");
+			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "MSC_CONFIRM_YES_BUTTON");
+			SetFormatedText("MSC_TEXTWINDOW", TranslateString("", "TossItemInterface"));
+			SetFormatedText("MSC_TEXTWINDOW", "Are you sure you want to toss this item?");
+		}
+	break;
+// <-- Levis
+	case "ITEMSLIST":
+		if(comName=="activate")
+		{
+			if(GetSelectable("EQUIP_BUTTON"))
+			{
+				SetCurrentNode("EQUIP_BUTTON");
+			}
+			if (GetSelectable("EXAMINE_BUTTON"))
+			{
+				SetCurrentNode("EXAMINE_BUTTON");
+			}
+			//Levis -->
+			if (GetSelectable("TOSS_BUTTON"))
+			{
+				SetCurrentNode("TOSS_BUTTON");
+			}
+			//<-- Levis
+		}
+		if(comName=="upstep")
+		{
+			if( SendMessage(&GameInterface,"lsll",MSG_INTERFACE_MSG_TO_NODE,"TEXTWINDOW",6, true) )
+			{	SendMessage(&GameInterface,"lslls",MSG_INTERFACE_MSG_TO_NODE,"TEXTWINDOW",-1,3, comName);
+			}
+		}
+		if(comName=="downstep")
+		{
+			if( SendMessage(&GameInterface,"lsll",MSG_INTERFACE_MSG_TO_NODE,"TEXTWINDOW",6, false) )
+			{	SendMessage(&GameInterface,"lslls",MSG_INTERFACE_MSG_TO_NODE,"TEXTWINDOW", -1,3, comName);
+			}
+		}
+	break;
+	case "B_WEAPON": if(comName=="activate" || comName=="click") { ChangeSelectedScroll(GUN_ITEM_TYPE);    UpdateItemData(); } break;
+	case "B_POTION": if(comName=="activate" || comName=="click") { ChangeSelectedScroll(POTION_ITEM_TYPE); UpdateItemData(); } break;
+	case "B_ITEMS":  if(comName=="activate" || comName=="click") { ChangeSelectedScroll(OBJECT_ITEM_TYPE); UpdateItemData(); } break;
+	case "B_MAP":    if(comName=="activate" || comName=="click") { ChangeSelectedScroll(MAP_ITEM_TYPE);    UpdateItemData(); } break;
+	case "B_QUEST":  if(comName=="activate" || comName=="click") { ChangeSelectedScroll(QUEST_ITEM_TYPE);  UpdateItemData(); } break;
+	}
+}
+// Levis -->
+
+void I_TossItem()
+{
+	Remove_Confirm();
+	int currentitem = sti(GameInterface.itemslist.currenttemp);
+	ref PChar = GetMainCharacter();
+	string itemid = GetItemIDByOrder(currentitem);
+	string curItemGroup = Items[GetItemIndex(itemid)].groupID
+	TakeItemFromCharacter(Pchar, itemid);
+	DeleteAttribute(&GameInterface,"itemslist");
+	//FillSelectedScroll(curItemGroup);
+	if(!GetSelectable("B_WEAPON")) { curItemGroup = GUN_ITEM_TYPE; }
+	if(!GetSelectable("B_POTION")) { curItemGroup = POTION_ITEM_TYPE; }
+	if(!GetSelectable("B_ITEMS")) { curItemGroup = OBJECT_ITEM_TYPE; }
+	if(!GetSelectable("B_MAP")) { curItemGroup = MAP_ITEM_TYPE; } // KK
+	if(!GetSelectable("B_QUEST")) { curItemGroup = QUEST_ITEM_TYPE; }
+	FillSelectedScroll(curItemGroup);
+	nCurScroll = currentitem;
+	GameInterface.itemslist.current = nCurScroll;
+	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"ITEMSLIST",nCurScroll);
+	UpdateItemData();
+	SendMessage(&GameInterface,"ls",MSG_INTERFACE_REFRESH_SCROLL,"ITEMSLIST");
+	trace("ITEMS: Tossed item: "+itemid);
+}
+
+void Remove_Confirm()
+{
+	SendMessage(&GameInterface,"ll", MSG_INTERFACE_LOCK_NODE, 0);
+	SetNodeUsing("MSC_CONFIRM_RECTANGLE", false);
+	SetNodeUsing("MSC_TEXTWINDOW", false);
+	SetNodeUsing("MSC_CONFIRM_YES_BUTTON", false);
+	SetNodeUsing("MSC_CONFIRM_NO_BUTTON", false);
+	SetCurrentNode("ITEMSLIST");
+}
+// <-- Levis
+
+void I_EquipItem()
+{
+	int currentitem = nCurScroll; // KK
+	ProcEquipPress();
+	DeleteAttribute(&GameInterface,"itemslist");
+	string curItemGroup = OBJECT_ITEM_TYPE;
+	if(!GetSelectable("B_WEAPON"))	{ curItemGroup = GUN_ITEM_TYPE; }
+	if(!GetSelectable("B_POTION"))	{ curItemGroup = POTION_ITEM_TYPE; }
+	if(!GetSelectable("B_ITEMS"))	{ curItemGroup = OBJECT_ITEM_TYPE; }
+	if(!GetSelectable("B_MAP"))		{ curItemGroup = MAP_ITEM_TYPE; } // KK
+	if(!GetSelectable("B_QUEST"))	{ curItemGroup = QUEST_ITEM_TYPE; }
+	FillSelectedScroll(curItemGroup);
+// KK -->
+	nCurScroll = currentitem;
+	GameInterface.itemslist.current = nCurScroll;
+	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"ITEMSLIST",nCurScroll);
+	UpdateItemData();
+	SendMessage(&GameInterface,"ls",MSG_INTERFACE_REFRESH_SCROLL,"ITEMSLIST");
+// <-- KK
+	SetCurrentNode("ITEMSLIST");
+}
+
+// KK -->
+void I_ExamineItem()
+{
+	string itmName = GetItemIDByOrder(nCurScroll);
+	aref itmRef;
+	if (Items_FindItem(itmName, &itmRef) >= 0 && CheckAttribute(itmRef, "index")) GameInterface.ItemIdx = itmRef.index;
+//JRH -->
+	ref PChar;
+	PChar = GetMainCharacter();
+	if(itmName == "notebook")
+	{
+		if(!CheckAttribute(Pchar,"quest.study_notebook") || Pchar.quest.study_notebook != "yes")
+		{
+			LAi_QuestDelay("notebook", 0.1);
+		}
+	}
+
+
+
+//JRH -->
+	if(itmName == "map")
+	{
+		if(CheckAttribute(Pchar,"quest.check_pelagomap") && Pchar.quest.check_pelagomap == "enabled")
+		{
+			AddQuestRecord("Woodes_Rogers_quest", "2");
+			Pchar.quest.check_pelagomap = "disabled";
+		}
+
+	// PB: Only One Map Interface -->
+		PostEvent("LaunchIAfterFrame",1,"sl", "A_MAP", 2);
+		InterfaceStack.SelectMenu_node = "A_MAP";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		PChar.inventory = true;
+		return;
+	}
+
+	if(itmName == "book52")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "book52");
+		GiveItem2Character(Pchar, "book53");
+		AddQuestRecord("The_message","3");
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book53")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book53");
+		GiveItem2Character(Pchar, "book54");
+		AddQuestRecord("The_message","4");
+		Pchar.quest.book53 = "yes";
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "wrinkled_paper")
+	{
+		if(Pchar.model == "William Legrand")
+		{
+			LAi_SetPlayerType(pchar);
+			PlaySound("INTERFACE\paper.wav");
+			TakeItemFromCharacter(Pchar, "wrinkled_paper");
+			GiveItem2Character(Pchar, "bird_sketch");
+			AddQuestRecord("The_message","6");
+			Pchar.quest.Fort_password = "yes";
+			PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+			InterfaceStack.SelectMenu_node = "I_ITEMS";
+			interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+			EndCancelInterface(false);
+			return;	
+		}
+		else return;	
+	}
+
+	if(itmName == "bird_sketch_doc")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "bird_sketch_doc");
+		GiveItem2Character(Pchar, "bird_backside");
+		//AddQuestRecord("The_message","6");
+		//Pchar.quest.Fort_password = "yes";
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "crypto1")
+	{
+		PlaySound("INTERFACE\paper.wav");
+
+		if(!CheckAttribute(Pchar,"Lut_G_cipher") || Pchar.Lut_G_cipher != "done")
+		{
+			Pchar.Lut_G_cipher = "done";
+
+			LAi_QuestDelay("Lut_G_cipher", 0.1);
+		}
+	}
+
+	if(itmName == "crypto2")
+	{
+		PlaySound("INTERFACE\paper.wav");
+
+		if(CheckAttribute(Pchar,"quest.beeline") && Pchar.quest.beeline == "unknown")
+		{
+			Pchar.quest.beeline = "50_feet";
+			Characters[GetCharacterIndex("Edgar Allan Poe")].dialog.CurrentNode  = "beeline_50_feet";
+			
+			LAi_QuestDelay("beeline_50_feet", 0.1);
+		}
+
+		if(!CheckAttribute(Pchar,"quest.bye_bye_Poe") || Pchar.quest.bye_bye_Poe != "done")
+		{
+			LAi_QuestDelay("bye_bye_Poe", 1.0);
+		}
+	}
+
+	if(itmName == "med_bag1_doc_YES")
+	{
+		PlaySound("PEOPLE\clothes1.wav");
+		TakeItemFromCharacter(Pchar, "med_bag1_doc_YES");
+		GiveItem2Character(Pchar, "med_bag1_obj");
+		GiveItem2Character(Pchar, "med_bag2_doc");
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "med_bag1_doc_NO")
+	{
+		PlaySound("VOICE\ENGLISH\claire_hmm.wav");
+
+		LAi_QuestDelay("med_woman_sees_all", 0.5);
+		return;
+	}
+
+	if(itmName == "med_bag2_doc")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "med_bag2_doc");
+		GiveItem2Character(Pchar, "med_bag2_obj");
+		GiveItem2Character(Pchar, "crypto_excel");
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "crypto_excel")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		
+		if(!CheckAttribute(Pchar,"quest.message7") || Pchar.quest.message7 != "done")
+		{
+			AddQuestRecord("The_message","7");
+			Pchar.quest.message7 = "done";
+		}
+
+		if(!CheckCharacterItem(Pchar,"med_bag2_out"))
+		{
+			TakeItemFromCharacter(Pchar, "med_bag1_obj");
+			TakeItemFromCharacter(Pchar, "med_bag2_obj");
+			GiveItem2Character(Pchar, "med_bag2_out");
+		}
+	}
+
+	//LOCKED
+	if(itmName == "detective_kit1")
+	{
+		if(CheckCharacterItem(Pchar,"D_hairpin"))
+		{
+			PlaySound("INTERFACE\detective_kit_open.wav");
+			TakeItemFromCharacter(Pchar, "detective_kit1");
+			
+			if(CheckAttribute(Pchar,"quest.detective_kit") && Pchar.quest.detective_kit == "keys")
+			{
+				GiveItem2Character(Pchar, "detective_kit2");
+			}
+
+			if(CheckAttribute(Pchar,"quest.detective_kit") && Pchar.quest.detective_kit == "empty")
+			{
+				GiveItem2Character(Pchar, "detective_kit3");
+			}
+			
+			if(CheckAttribute(Pchar,"quest.detective_kit") && Pchar.quest.detective_kit == "filled")
+			{
+				GiveItem2Character(Pchar, "detective_kit5");
+			}
+
+			PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+			InterfaceStack.SelectMenu_node = "I_ITEMS";
+			interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+			EndCancelInterface(false);
+			return;
+		}
+		else 
+		{
+			PlaySound("PEOPLE\beltkey.wav");
+			return;
+		}
+	}
+
+	//EMPTY BUT WITH KEYS
+	if(itmName == "detective_kit2")
+	{
+		PlaySound("AMBIENT\JAIL\chains2.wav");
+		TakeItemFromCharacter(Pchar, "detective_kit2");
+		GiveItem2Character(Pchar, "detective_kit3");
+		GiveItem2Character(Pchar, "D_key23");
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	//FILLED
+	if(itmName == "detective_kit5")
+	{
+		PlaySound("PEOPLE\key_box.wav");
+		TakeItemFromCharacter(Pchar, "detective_kit5");
+		GiveItem2Character(Pchar, "detective_kit3");
+		GiveItem2Character(Pchar, "D_feather");
+		GiveItem2Character(Pchar, "D_scissors");
+		GiveItem2Character(Pchar, "D_compasses");
+		GiveItem2Character(Pchar, "D_scalpel");
+		GiveItem2Character(Pchar, "D_magnifying");
+		GiveItem2Character(Pchar, "D_tweezers");
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc1A")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "doc1A");
+		GiveItem2Character(Pchar, "doc1B");
+
+		if(!CheckAttribute(Pchar,"quest.gunpowder4") || Pchar.quest.gunpowder4 != "done")
+		{
+			AddQuestRecord("Gunpowder","1");
+			Pchar.quest.gunpowder4 = "done";
+		}
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc2A")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "doc2A");
+		GiveItem2Character(Pchar, "doc2B");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc2B")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "doc2B");
+		GiveItem2Character(Pchar, "doc2C");
+		GiveItem2Character(Pchar, "doc3C");
+
+		if(!CheckAttribute(Pchar,"quest.gunpowder2") || Pchar.quest.gunpowder2 != "done")
+		{
+			AddQuestRecord("Gunpowder","2");
+			Pchar.quest.gunpowder2 = "done";
+		}
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc3C")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "doc2C");
+		TakeItemFromCharacter(Pchar, "doc3C");
+
+		if(CheckAttribute(Pchar,"quest.fireworks_recipe") && Pchar.quest.fireworks_recipe == "yes")
+		{
+			GiveItem2Character(Pchar, "doc2E");
+
+			if(!CheckAttribute(Pchar,"quest.gunpowder3") || Pchar.quest.gunpowder3 != "done")
+			{
+				AddQuestRecord("Gunpowder","3");
+				Pchar.quest.gunpowder3 = "done";
+				AddQuestRecord("Fireworks","2");
+			}
+		}
+		else GiveItem2Character(Pchar, "doc2D");
+
+		GiveItem2Character(Pchar, "doc3D");
+
+		if(!CheckAttribute(Pchar,"quest.gunpowder5") || Pchar.quest.gunpowder5 != "done")
+		{
+			AddQuestRecord("Gunpowder","5");
+			Pchar.quest.gunpowder5 = "done";
+		}
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc4A")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "doc4A");
+		GiveItem2Character(Pchar, "doc4B");
+		
+		if(!CheckAttribute(Pchar,"quest.charcoal4") || Pchar.quest.charcoal4 != "done")
+		{
+			//AddQuestRecord("Charcoal","2");
+			AddQuestRecord("Charcoal","5");
+			AddQuestRecord("Charcoal","6");
+			AddQuestRecord("Charcoal","7");
+			AddQuestRecord("Charcoal","8");
+			AddQuestRecord("Charcoal","9");
+
+			Pchar.quest.charcoal4 = "done";
+		}
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc5A")
+	{
+		PlaySound("AMBIENT\TAVERN\open_bottle.wav");
+		TakeItemFromCharacter(Pchar, "doc5A");
+		GiveItem2Character(Pchar, "doc5B");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc5B")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "doc5B");
+		GiveItem2Character(Pchar, "doc5C");
+		
+		if(!CheckAttribute(Pchar,"quest.salpeter5") || Pchar.quest.salpeter5 != "done")
+		{
+			//AddQuestRecord("Salpeter","5");
+			AddQuestRecord("Salpeter","7");
+			AddQuestRecord("Salpeter","8");
+			AddQuestRecord("Salpeter","9");
+			AddQuestRecord("Salpeter","10");
+			AddQuestRecord("Salpeter","11");
+			AddQuestRecord("Salpeter","12");
+			AddQuestRecord("Salpeter","13");
+			Pchar.quest.salpeter5 = "done";
+		}
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc6A")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "doc6A");
+		GiveItem2Character(Pchar, "doc6B");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc6B")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "doc6B");
+		GiveItem2Character(Pchar, "doc6C");
+		
+		if(!CheckAttribute(Pchar,"quest.sulfur3") || Pchar.quest.sulfur3 != "done")
+		{
+			//AddQuestRecord("Sulfur","3");
+			AddQuestRecord("Sulfur","5");
+			AddQuestRecord("Sulfur","6");
+			AddQuestRecord("Sulfur","7");
+			AddQuestRecord("Sulfur","8");
+			AddQuestRecord("Sulfur","9");
+			AddQuestRecord("Sulfur","10");
+			AddQuestRecord("Sulfur","11");
+			Pchar.quest.sulfur3 = "done";
+		}
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "book55A")
+	{
+		PlaySound("INTERFACE\button3.wav");
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book55A");
+		GiveItem2Character(Pchar, "book55B");
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book55B")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book55B");
+
+		if(CheckAttribute(Pchar,"quest.key29") && Pchar.quest.key29 == "picked_up")
+		{
+			GiveItem2Character(Pchar, "book55D");
+		}
+		else 
+		{
+			GiveItem2Character(Pchar, "book55C");
+		}
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "dried_mushrooms")
+	{
+		PlaySound("PEOPLE\clothes3.wav");
+		PlaySound("PEOPLE\clothes3.wav");
+		PlaySound("PEOPLE\grass_noise.wav");
+		TakeItemFromCharacter(Pchar, "dried_mushrooms");
+		GiveItem2Character(Pchar, "pulverized_mushrooms");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "knitting_basket")
+	{
+		PlaySound("PEOPLE\basket.wav");
+		TakeItemFromCharacter(Pchar, "knitting_basket");
+		GiveItem2Character(Pchar, "knitting");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "knitting")
+	{
+		PlaySound("INTERFACE\button3.wav");
+		TakeItemFromCharacter(Pchar, "knitting");
+		GiveItem2Character(Pchar, "yarn");
+		GiveItem2Character(Pchar, "needles");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book61A")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "book61A");
+		GiveItem2Character(Pchar, "book61B");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book61B")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book61B");
+
+		if(CheckCharacterItem(Pchar,"book61D"))
+		{
+			GiveItem2Character(Pchar, "book61C2");
+		}
+		else GiveItem2Character(Pchar, "book61C1");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book61C1")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "book61C1");
+		GiveItem2Character(Pchar, "book61C2");
+		GiveItem2Character(Pchar, "book61D");
+
+		AddQuestRecord("Claude_Frollo's_mission","5");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+//---------------------------------------------------------------------
+	if(itmName == "p_package")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "p_package");
+		GiveItem2Character(Pchar, "p_case_C");
+
+		PlaySound("VOICE\ENGLISH\Poe_look.wav");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "p_case_C")
+	{
+		PlaySound("INTERFACE\p_case_open.wav");
+		TakeItemFromCharacter(Pchar, "p_case_C");
+
+		if(CheckAttribute(Pchar,"p_case_status"))
+		{
+			switch(Pchar.p_case_status)
+			{
+				case "3": GiveItem2Character(Pchar, "p_case_3"); break;
+				case "2A": GiveItem2Character(Pchar, "p_case_2A"); break;
+				case "2B": GiveItem2Character(Pchar, "p_case_2B"); break;
+				case "2C": GiveItem2Character(Pchar, "p_case_2C"); break;
+				case "1A": GiveItem2Character(Pchar, "p_case_1A"); break;
+				case "1B": GiveItem2Character(Pchar, "p_case_1B"); break;
+				case "1C": GiveItem2Character(Pchar, "p_case_1C"); break;
+				case "0": GiveItem2Character(Pchar, "p_case_0"); break;
+			}
+		}
+
+		if(!CheckAttribute(Pchar,"pistol_case") || Pchar.pistol_case != "already_seen")
+		{
+			Pchar.pistol_case = "already_seen";
+			PlaySound("VOICE\ENGLISH\Poe_ooh.wav");
+			AddQuestRecord("Weapons","10");
+		}
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "p_case_3")
+	{
+		PlaySound("OBJECTS\DUEL\reload1.wav");
+		TakeItemFromCharacter(Pchar, "p_case_3");
+		GiveItem2Character(Pchar, "p_case_2C");
+		GiveItem2Character(Pchar, "pistol204_P");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "p_case_2A")
+	{
+		PlaySound("OBJECTS\DUEL\reload1.wav");
+		TakeItemFromCharacter(Pchar, "p_case_2A");
+		GiveItem2Character(Pchar, "p_case_1B");
+		GiveItem2Character(Pchar, "pistol204_P");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "p_case_2B")
+	{
+		PlaySound("OBJECTS\DUEL\reload1.wav");
+		TakeItemFromCharacter(Pchar, "p_case_2B");
+		GiveItem2Character(Pchar, "p_case_1C");
+		GiveItem2Character(Pchar, "pistol204_P");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "p_case_2C")
+	{
+		PlaySound("PEOPLE\clothes4.wav");
+		TakeItemFromCharacter(Pchar, "p_case_2C");
+		GiveItem2Character(Pchar, "p_case_1C");
+		GiveItem2Character(Pchar, "cart_box_C");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "p_case_1A")
+	{
+		PlaySound("OBJECTS\DUEL\reload1.wav");
+		TakeItemFromCharacter(Pchar, "p_case_1A");
+		GiveItem2Character(Pchar, "p_case_0");
+		GiveItem2Character(Pchar, "pistol204_P");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "p_case_1B")
+	{
+		PlaySound("PEOPLE\clothes4.wav");
+		TakeItemFromCharacter(Pchar, "p_case_1B");
+		GiveItem2Character(Pchar, "p_case_0");
+		GiveItem2Character(Pchar, "cart_box_C");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "p_case_1C")
+	{
+		PlaySound("INTERFACE\button1.wav");
+		TakeItemFromCharacter(Pchar, "p_case_1C");
+		GiveItem2Character(Pchar, "p_case_0");
+		GiveItem2Character(Pchar, "caps_box_C");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "cart_box_C")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "cart_box_C");
+		TakenItems(Pchar, "cart_box_O", makeint(Pchar.gpb_status));
+		
+		LAi_QuestDelay("pistol_204_load_check", 2.0);
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "caps_box_C")
+	{
+		PlaySound("INTERFACE\water_tap.wav");
+		TakeItemFromCharacter(Pchar, "caps_box_C");
+		TakenItems(Pchar, "caps_box_O", makeint(Pchar.cap_status));
+		
+		LAi_QuestDelay("pistol_204_load_check", 2.0);
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "poe_manuscript")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		
+		if(!CheckAttribute(Pchar,"manuscript") || Pchar.manuscript != "already_seen")
+		{
+			Pchar.manuscript = "already_seen";
+
+			LAi_QuestDelay("skeletons_talk", 1.0);
+		}
+	}
+//JRH examine
+	
+
+
+//<-- JRH
+	
+	//Levis Skill Books -->
+	if(itmRef.groupID == BOOK_ITEM_TYPE)
+	{
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_BOOK", 2);
+		InterfaceStack.SelectMenu_node = "I_BOOK";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+	//Levis Skill Books <--
+
+	PostEvent("LaunchIAfterFrame",1,"sl", "I_MAP", 2);
+	InterfaceStack.SelectMenu_node = "I_MAP";
+	interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+	EndCancelInterface(false);
+}
+// <-- KK
+
+void ChangeSelectedScroll(string curItemGroup)
+{
+	DeleteAttribute(&GameInterface,"itemslist");
+
+    // JRH remove ghost ammo -->
+	ref curchar;
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { curchar = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
+	else { curchar = GetMainCharacter(); }
+
+	if(ENABLE_AMMOMOD == 1)
+	{
+		int gp = GetCharacterItem(curchar, "gunpowder");
+		if(gp == 0)
+		{
+			TakenItems(curchar, "gunpowder", 1); TakenItems(curchar, "gunpowder", -1);
+		}
+
+		int pb = GetCharacterItem(curchar, "pistolbullets");
+		if(pb == 0)
+		{
+			TakenItems(curchar, "pistolbullets", 1); TakenItems(curchar, "pistolbullets", -1);
+		}
+
+		int pg = GetCharacterItem(curchar, "pistolgrapes");
+		if(pg == 0)
+		{
+			TakenItems(curchar, "pistolgrapes", 1); TakenItems(curchar, "pistolgrapes", -1);
+		}
+
+		int mb = GetCharacterItem(curchar, "musketbullets");
+		if(mb == 0)
+		{
+			TakenItems(curchar, "musketbullets", 1); TakenItems(curchar, "musketbullets", -1);
+		}
+
+		if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)
+		{
+			int ca = GetCharacterItem(curchar, "cartridges");
+			if(ca == 0)
+			{
+				TakenItems(curchar, "cartridges", 1); TakenItems(curchar, "cartridges", -1);
+			}
+			int gpb = GetCharacterItem(curchar, "cart_box_O");
+			if(gpb == 0)
+			{
+				TakenItems(curchar, "cart_box_O", 1); TakenItems(curchar, "cart_box_O", -1);
+			}
+			int cap = GetCharacterItem(curchar, "caps_box_O");
+			if(cap == 0)
+			{
+				TakenItems(curchar, "caps_box_O", 1); TakenItems(curchar, "caps_box_O", -1);
+			}
+		}
+
+		int ar = GetCharacterItem(curchar, "bladearrows");
+		if(ar == 0)
+		{
+			TakenItems(curchar, "bladearrows", 1); TakenItems(curchar, "bladearrows", -1);
+		}
+
+		int ar2 = GetCharacterItem(curchar, "arrows2");
+		if(ar2 == 0)
+		{
+			TakenItems(curchar, "arrows2", 1); TakenItems(curchar, "arrows2", -1);
+		}
+		int ro = GetCharacterItem(curchar, "rockets");
+		if(ro == 0)
+		{
+			TakenItems(curchar, "rockets", 1); TakenItems(curchar, "rockets", -1);
+		}
+	}
+    // <-- JRH
+
+	FillSelectedScroll(curItemGroup);
+	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"ITEMSLIST",-1);
+	SetCurrentNode("ITEMSLIST");
+	SetSelectable("B_WEAPON",true);
+	SetSelectable("B_POTION",true);
+	SetSelectable("B_ITEMS",true);
+	SetSelectable("B_MAP",true); // KK
+	SetSelectable("B_QUEST",true);
+	switch(curItemGroup)
+	{
+		case GUN_ITEM_TYPE: SetSelectable("B_WEAPON",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntWeapon"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+		case POTION_ITEM_TYPE: SetSelectable("B_POTION",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntMedicine"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+		case OBJECT_ITEM_TYPE: SetSelectable("B_ITEMS",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntItems"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+		case MAP_ITEM_TYPE: SetSelectable("B_MAP",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntMap"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break; // KK
+		case QUEST_ITEM_TYPE: SetSelectable("B_QUEST",false); CreateStringCheckCase(true,"fakeTitle",XI_ConvertString("IntQuest"),"interface_title",COLOR_NORMAL,320,5,SCRIPT_ALIGN_CENTER,1.0,true); break;
+	}
+}
+
+void UpdateItemData()
+{
+//	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"CONTEXTHELP",0);
+
+	string attributeName = "pic" + (nCurScroll+1);
+	if( !CheckAttribute(&GameInterface,"itemslist."+attributeName+".itemID") )
+	{
+		GameInterface.strings.ItemName = ""; // KK
+		SetFormatedText("TEXTWINDOW","");
+		return;
+	}
+
+	aref itemARef;
+	if( Items_FindItem(GameInterface.itemslist.(attributeName).itemID,&itemARef)<0 )
+	{
+		GameInterface.strings.ItemName = ""; // KK
+		SetFormatedText("TEXTWINDOW","");
+		return;
+	}
+
+	string newLineStr = GlobalStringConvert("newline");
+	string itmDescribe = "";
+	string strTmp;
+	string Quality = "";
+	if( CheckAttribute(itemARef,"name") ) // NK, was checking attr "describe"
+	{
+		if( GetAttribute(itemARef,"groupID") == QUEST_ITEM_TYPE)
+		{
+			GameInterface.strings.ItemName = PreprocessText(TranslateString("", itemARef.name)); // PB
+		}
+		else
+		{
+			GameInterface.strings.ItemName = GetAssembledString(TranslateString("", itemARef.name), itemARef); // KK
+		}
+	}
+	if( CheckAttribute(itemARef,"groupID") )
+	{
+        // scheffnow - weaponsmod -->
+  	    // NK moved above if
+        // scheffnow - weaponsmod <--
+		switch(itemARef.groupID)
+		{
+			case GUN_ITEM_TYPE:
+				// scheffnow - weaponsmod -->
+				if (CheckAttribute(itemARef,"QualityName"))
+				{
+					// LDH added quality "q" translation string - 07May09
+					Quality = TranslateString("", "q"+itemARef.QualityName) + " ";
+				}
+				GameInterface.strings.ItemName = Quality + GameInterface.strings.ItemName; // KK
+				// scheffnow - weaponsmod <--
+				itmDescribe = GetAssembledString(TranslateString("", "weapon gun parameters"), itemARef) + newLineStr;
+			break;
+			case BLADE_ITEM_TYPE:
+				// scheffnow - weaponsmod -->
+				if (CheckAttribute(itemARef,"QualityName"))
+				{
+					// LDH added quality "q" translation string - 07May09
+					Quality = TranslateString("", "q"+itemARef.QualityName) + " ";
+				}
+				GameInterface.strings.ItemName = Quality + GameInterface.strings.ItemName; // KK
+				// scheffnow - weaponsmod <--
+				itmDescribe = GetAssembledString(TranslateString("", "weapon blade parameters"), itemARef) + newLineStr; // KK
+			break;
+			// GreatZen -->
+			case ARMOR_ITEM_TYPE:
+				itmDescribe = GetAssembledString(TranslateString("", "weapon armor parameters"),itemARef) + newLineStr;
+			break;
+			// GreatZen <--
+		}
+	}
+	else
+	{	if( CheckAttribute(itemARef,"potion") )
+		{
+			itmDescribe = TranslateString("", "Potion parameters")+":";
+			if( CheckAttribute(itemARef,"potion.health") )
+			{
+				itmDescribe += " "+TranslateString("", "health value");
+				if(stf(itemARef.potion.health)>=0)
+				{	itmDescribe += "+" + sti(itemARef.potion.health) + ".";
+				} else
+				{	itmDescribe += sti(itemARef.potion.health) + ".";
+				}
+			}
+			itmDescribe += newLineStr;
+		}
+	}
+	// KK itmDescribe += newLineStr;
+	if( CheckAttribute(itemARef,"describe") )
+	{
+		if( GetAttribute(itemARef,"groupID") == QUEST_ITEM_TYPE)
+		{
+			itmDescribe = GetAssembledString(itmDescribe,itemARef) + PreprocessText(TranslateString("", itemARef.describe)) + GetItemBonuses(itemARef.id); // PB
+		}
+		else
+		{
+			itmDescribe = GetAssembledString(itmDescribe,itemARef) + GetAssembledString(TranslateString("", itemARef.describe), itemARef) + GetItemBonuses(itemARef.id); // NK
+		}
+	}
+
+	SetFormatedText("TEXTWINDOW",itmDescribe);
+
+	SetNodeUsing("EXAMINE_BUTTON", false); // KK
+
+	//Levis -->
+	SetNodeUsing("TOSS_BUTTON", true);
+	bool TossEnable = true;
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES" )) > 0)	TossEnable = false; // JRH
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)	TossEnable = false; // JRH
+	if(sti(GetAttribute(itemARef, "price")) <= 1)						TossEnable = false; // PB
+	if(GetAttribute(itemARef, "id")    == "bladeX4")					TossEnable = false;
+	if(GetAttribute(itemARef, "id")    == "map")						TossEnable = false;
+	if(GetAttribute(itemARef, "id")    == "cursedcoin")					TossEnable = false;
+	if(GetAttribute(itemARef, "id")    == "albatross")					TossEnable = false;
+	if(GetAttribute(itemARef, "id")    == "telescope")					TossEnable = false;
+	if(!GetSelectable("B_QUEST"))										TossEnable = false;
+	SetSelectable("TOSS_BUTTON",	TossEnable);
+	//Levis <--
+
+	if( CheckAttribute(itemARef,"groupID") )
+	{
+// KK -->
+		if (itemARef.groupID == MAP_ITEM_TYPE || itemARef.groupID == DOCUMENT_ITEM_TYPE || itemARef.groupID == BOOK_ITEM_TYPE
+		|| itemARef.groupID == EXAMINE_ITEM_TYPE || itemARef.groupID == OPEN_ITEM_TYPE) {
+			//JRH: DOCUMENT_ITEM_TYPE
+			SetNodeUsing("EQUIP_BUTTON", false);
+			SetNodeUsing("EXAMINE_BUTTON", true);
+			return;
+		}
+// <-- KK
+		if (itemARef.groupID!=BLADE_ITEM_TYPE && itemARef.groupID!=GUN_ITEM_TYPE && itemARef.groupID!=ARMOR_ITEM_TYPE && itemARef.groupID!=SPYGLASS_ITEM_TYPE
+		&& itemARef.groupID!=FLASK_ITEM_TYPE && itemARef.groupID!=POUCH_ITEM_TYPE && itemARef.groupID!=LOCKPICK_ITEM_TYPE
+		&& itemARef.groupID!=CLOCK_ITEM_TYPE && itemARef.groupID!=COMPASS_ITEM_TYPE && itemARef.groupID!=BELT_ITEM_TYPE
+		&& itemARef.groupID!=DOCUMENT_ITEM_TYPE && itemARef.groupID!=OUTFIT_ITEM_TYPE
+		&& itemARef.groupID!=EQUIP_ITEM_TYPE) {
+			//JRH: new types
+			SetNodeUsing("EQUIP_BUTTON",false);
+			SetNodeUsing("EXAMINE_BUTTON", false);
+			return;
+		}
+		SetNodeUsing("EQUIP_BUTTON",true);
+		SetSelectable("EQUIP_BUTTON",ThisItemCanBeEquip(itemARef));
+		
+		//Levis: Only equip telescope if you have the long rifle -->
+		if(GetAttribute(itemARef, "id") == "telescope")
+		{
+			if(!CheckCharacterItem(GetMainCharacter(),"LongRifle_C") && !CheckCharacterItem(GetMainCharacter(),"LongRifle_W"))
+			{
+				SetSelectable("EQUIP_BUTTON",false);
+			}
+		}
+		//Levis <--
+
+		if(IsEquipedItem(itemARef.id))
+		{
+			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"EQUIP_BUTTON",0, XI_ConvertString("Release that"));
+			if(itemARef.groupID==GUN_ITEM_TYPE || itemARef.groupID==BLADE_ITEM_TYPE || itemARef.groupID==ARMOR_ITEM_TYPE || itemARef.groupID==SPYGLASS_ITEM_TYPE
+			|| itemARef.groupID==FLASK_ITEM_TYPE || itemARef.groupID==POUCH_ITEM_TYPE || itemARef.groupID==LOCKPICK_ITEM_TYPE
+			|| itemARef.groupID==CLOCK_ITEM_TYPE || itemARef.groupID==COMPASS_ITEM_TYPE || itemARef.groupID==BELT_ITEM_TYPE
+			|| itemARef.groupID==OUTFIT_ITEM_TYPE || itemARef.groupID==EQUIP_ITEM_TYPE)
+			{
+				//JRH: new types
+				SetSelectable("EQUIP_BUTTON",true);
+			}
+			SetSelectable("TOSS_BUTTON", false); //Levis
+		}
+		else
+		{
+			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"EQUIP_BUTTON",0, XI_ConvertString("Equip that"));
+		}
+	} else {
+		SetNodeUsing("EQUIP_BUTTON",false);
+		SetNodeUsing("EXAMINE_BUTTON", false); // KK
+		SetSelectable("TOSS_BUTTON", false); //Levis
+	}
+}
+/*
+void FillScroll()
+{
+    int i,j;
+    string attributeName;
+
+	if(nCurScroll<0)	nCurScroll = 0;
+	GameInterface.itemslist.current = nCurScroll;
+	nCurScroll = -1;
+	GameInterface.itemslist.ImagesGroup.t0 = "usedflag";
+	GameInterface.itemslist.ImagesGroup.t1 = "ICONS";
+	aref arImgGrp;
+	makearef(arImgGrp,GameInterface.itemslist.ImagesGroup);
+	FillImagesGroupForItems(arImgGrp);
+	GameInterface.itemslist.NotUsed = 5;
+
+	GameInterface.itemslist.BadTex1 = GetItemPictureTexture("itemslist.ImagesGroup","");
+	GameInterface.itemslist.BadPic1 = GetItemPictureName("");
+
+	aref curItem,arItem;
+	aref rootItems; makearef(rootItems,Characters[GetMainCharacterIndex()].Items);
+    for(i=0; i<GetAttributesNum(rootItems); i++)
+    {
+		attributeName = "pic" + (i+1);
+		curItem = GetAttributeN(rootItems,i);
+		j = sti(GetAttributeValue(curItem));
+
+		if( Items_FindItem(GetAttributeName(curItem),&arItem) >= 0 )
+		{
+			GameInterface.itemslist.(attributeName).img1 = GetItemPictureName(arItem.id);
+			GameInterface.itemslist.(attributeName).tex1 = GetItemPictureTexture("itemslist.ImagesGroup",arItem.id);
+			if(j>1)	GameInterface.itemslist.(attributeName).str1 = "#"+j;
+			GameInterface.itemslist.(attributeName).itemID = arItem.id;
+			if(IsEquipedItem(arItem.id))
+			{
+				GameInterface.itemslist.(attributeName).img2 = "usedflag";
+				GameInterface.itemslist.(attributeName).tex2 = 0;
+			}
+		}
+		else
+		{
+			GameInterface.itemslist.(attributeName).img1 = GameInterface.itemslist.BadPic1;
+			GameInterface.itemslist.(attributeName).tex1 = GameInterface.itemslist.BadTex1;
+		}
+    }
+	GameInterface.itemslist.ListSize = i;
+	//DumpAttributes(&GameInterface);
+}
+*/
+void ProcessCancelExit()
+{
+	IDoExit(RC_INTERFACE_ITEMS_EXIT);
+}
+
+void IDoExit(int exitCode)
+{
+	DelEventHandler("InterfaceBreak","ProcessCancelExit");
+	DelEventHandler("frame","FrameProcess");
+	DelEventHandler("exitCancel","ProcessCancelExit");
+	DelEventHandler("TossItemYes", "I_TossItem"); //Levis
+	DelEventHandler("TossItemNo", "Remove_Confirm"); //Levis
+	//DelEventHandler("EquipPress","ProcEquipPress");
+	DelEventHandler("ievnt_command","ProcessCommandExecute");
+
+	RefreshUsedItems();
+	ref chref;
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { chref = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
+	else { chref = GetMainCharacter(); }
+
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { DeleteAttribute(GetMainCharacter(),"Interface.Fellow"); }
+    interfaceResultCommand = exitCode;
+// MAXIMUS interface MOD -->
+/*
+	if( CheckAttribute(&InterfaceStates,"InstantExit") && sti(InterfaceStates.InstantExit)==true )
+	{
+		EndCancelInterface(true);
+	}
+	else
+	{
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_SELECTMENU", 1);
+		EndCancelInterface(false);
+	}*/
+	EndCancelInterface(true);
+// MAXIMUS interface MOD <--
+
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
+}
+
+void ProcEquipPress()
+{
+	ref chref;
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { chref = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
+	else { chref = GetMainCharacter(); }
+	string itmName = GetItemIDByOrder(nCurScroll);
+	aref itmRef;
+	if( Items_FindItem(itmName,&itmRef)>=0 && CheckAttribute(itmRef,"groupID") )
+	{
+		string itmGroup = itmRef.groupID;
+		if( IsEquipedItem(itmName) )
+		{
+			objNewItemsEquip.(itmGroup) = "";
+		}
+		else
+		{
+			objNewItemsEquip.(itmGroup) = itmName;
+		}
+	}
+}
+
+string GetItemIDByOrder(int num)
+{
+	string attrName = "pic"+(num+1);
+	if( CheckAttribute(&GameInterface,"itemslist."+attrName+".itemID") )
+		return GameInterface.itemslist.(attrName).itemID;
+	return "";
+}
+
+void SetUsedItems()
+{
+	ref mchref;
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { mchref = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
+	else { mchref = GetMainCharacter(); }
+	DeleteAttribute(&objNewItemsEquip,"");
+	aref arEquip;
+	makearef(arEquip,mchref.equip);
+	CopyAttributes(&objNewItemsEquip,arEquip);
+}
+
+bool IsEquipedItem(string itemID)
+{
+	int q = GetAttributesNum(&objNewItemsEquip);
+
+	aref arEquip;
+	for(int i=0; i<q; i++)
+	{
+		arEquip = GetAttributeN(&objNewItemsEquip,i);
+		if( GetAttributeValue(arEquip)==itemID ) return true;
+	}
+
+	return false;
+}
+
+void RefreshUsedItems()
+{
+	ref mchref;
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { mchref = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
+	else { mchref = GetMainCharacter(); }
+	aref arItm;
+
+	string sItemName;
+	string sGroupName;
+	aref arEquip;
+	int q = GetAttributesNum(&objNewItemsEquip);
+
+	for(int i=0; i<q; i++)
+	{
+		arEquip = GetAttributeN(&objNewItemsEquip,i);
+		sGroupName = GetAttributeName(arEquip);
+		sItemName = GetAttributeValue(arEquip);
+		if(sItemName=="")
+		{	RemoveCharacterEquip(mchref,sGroupName);
+		}
+		else
+		{	EquipCharacterByItem(mchref,sItemName);
+		}
+	}
+}
+
+bool ThisItemCanBeEquip( aref arItem )
+{
+	ref mchref;
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { mchref = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
+	else { mchref = GetMainCharacter(); }
+
+	if( !CheckAttribute(arItem,"groupID") )
+	{
+		trace("WARNING!!! item "+arItem.id+" hav`t attr. groupID");
+		return false;
+	}
+	if( !IsCanEquiping(mchref,arItem.groupID) )
+	{
+		ShowHelpString("chelp_items#10");
+		return false;
+	}
+	if(arItem.groupID!=GUN_ITEM_TYPE) return true;
+
+	if( !CheckAttribute(arItem,"chargeQ") )
+	{
+		trace("WARNING!!! item "+arItem.id+" hav`t attr. chargeQ");
+		return false;
+	}
+	int chrgQ = sti(arItem.chargeQ);
+
+	if(chrgQ<2) return true;
+	if( !IsCharacterPerkOn(mchref,"Gunman") )
+	{
+		ShowHelpString("chelp_items#11");
+		return false;
+	}
+
+	if(chrgQ<4) return true;
+	if( !IsCharacterPerkOn(mchref,"GunProfessional") )
+	{
+		ShowHelpString("chelp_items#11");
+		return false;
+	}
+
+	//JRH -->
+	if(chrgQ<6) return true;
+	if( !IsCharacterPerkOn(mchref,"GunFighter") )
+	{
+		ShowHelpString("chelp_items#11");
+		return false;
+	}
+	//<-- JRH
+
+	return true;
+}
+
+void FillSelectedScroll(string itemsID)
+{
+	SetNodeUsing("EQUIP_BUTTON", false); // KK
+	SetNodeUsing("EXAMINE_BUTTON", false); // KK
+
+	ref pch;
+	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { pch = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
+	else { pch = GetMainCharacter(); }
+
+	int i,j,allItems;
+	string attributeName;
+
+	if(nCurScroll<0)	nCurScroll = 0;
+	GameInterface.itemslist.current = nCurScroll;
+	nCurScroll = -1;
+	GameInterface.itemslist.ImagesGroup.t0 = "usedflag";
+	GameInterface.itemslist.ImagesGroup.t1 = "ICONS";
+	aref arImgGrp;
+	makearef(arImgGrp,GameInterface.itemslist.ImagesGroup);
+	FillImagesGroupForItems(arImgGrp);
+	GameInterface.itemslist.NotUsed = 5;
+
+	GameInterface.itemslist.BadTex1 = GetItemPictureTexture("itemslist.ImagesGroup","");
+	GameInterface.itemslist.BadPic1 = GetItemPictureName("");
+
+	aref curItem,arItem;
+	aref rootItems; makearef(rootItems,pch.Items);
+	int loaded = 0;
+	string curItemID = OBJECT_ITEM_TYPE;
+	for(i=0; i<GetAttributesNum(rootItems); i++)
+	{
+		curItemID = OBJECT_ITEM_TYPE;
+		attributeName = "pic" + (i+1);
+		curItem = GetAttributeN(rootItems,i);
+		j = sti(GetAttributeValue(curItem));
+
+		if(Items_FindItem(GetAttributeName(curItem),&arItem)>=0)
+		{
+			if(CheckAttribute(arItem,"groupID"))
+			{
+				curItemID = OBJECT_ITEM_TYPE;
+			//	if(arItem.groupID==GUN_ITEM_TYPE || arItem.groupID==BLADE_ITEM_TYPE || arItem.groupID==ARMOR_ITEM_TYPE || arItem.groupID==AMMUNITION_ITEM_TYPE) { curItemID = GUN_ITEM_TYPE; }
+				if(arItem.groupID==GUN_ITEM_TYPE || arItem.groupID==BLADE_ITEM_TYPE || arItem.groupID==ARMOR_ITEM_TYPE || arItem.groupID==AMMUNITION_ITEM_TYPE || arItem.groupID==FLASK_ITEM_TYPE || arItem.groupID==POUCH_ITEM_TYPE || arItem.groupID==BELT_ITEM_TYPE || arItem.groupID==OPEN_ITEM_TYPE) { curItemID = GUN_ITEM_TYPE; }
+				//JRH: added 4 types to GUN_ITEM_TYPE
+				if(arItem.groupID==POTION_ITEM_TYPE) curItemID = POTION_ITEM_TYPE;
+				//if(arItem.groupID==SPYGLASS_ITEM_TYPE || arItem.groupID==FLASK_ITEM_TYPE || arItem.groupID==POUCH_ITEM_TYPE || arItem.groupID==LOCKPICK_ITEM_TYPE || arItem.groupID==CLOCK_ITEM_TYPE || arItem.groupID==COMPASS_ITEM_TYPE) { curItemID = OBJECT_ITEM_TYPE; }
+				if (arItem.groupID == MAP_ITEM_TYPE) curItemID = MAP_ITEM_TYPE; // KK
+				if(arItem.groupID==QUEST_ITEM_TYPE || arItem.groupID==EQUIP_ITEM_TYPE || arItem.groupID==EXAMINE_ITEM_TYPE) curItemID = QUEST_ITEM_TYPE;
+				if(curItemID==itemsID)
+				{
+				//	if(curItemID==GUN_ITEM_TYPE && arItem.id=="bladeX4") continue;//MAXIMUS
+					attributeName = "pic" + (loaded+1);
+					GameInterface.itemslist.(attributeName).img1 = GetItemPictureName(arItem.id);
+					GameInterface.itemslist.(attributeName).tex1 = GetItemPictureTexture("itemslist.ImagesGroup",arItem.id);
+					if(j>1)	GameInterface.itemslist.(attributeName).str1 = "#"+j;
+// KK -->
+					string name = "";
+					if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name
+					if( GetAttribute(arItem,"groupID") == QUEST_ITEM_TYPE)
+					{
+						name += PreprocessText(TranslateString("", arItem.name)); // PB
+					}
+					else
+					{
+						name += GetAssembledString(TranslateString("", arItem.name), arItem); // Levis
+					}
+
+					if(DynamicInterfaceLevel() > 1) GameInterface.itemslist.(attributeName).str2 = "#" + name; // PB: Dynamic Interfaces
+// <-- KK
+					GameInterface.itemslist.(attributeName).itemID = arItem.id;
+					if(IsEquipedItem(arItem.id))
+					{
+						GameInterface.itemslist.(attributeName).img2 = "usedflag";
+						GameInterface.itemslist.(attributeName).tex2 = 0;
+					}
+					loaded++;
+				}
+				else
+				{
+					attributeName = "pic" + (loaded+1);
+					GameInterface.itemslist.(attributeName).img1 = GameInterface.itemslist.BadPic1;
+					GameInterface.itemslist.(attributeName).tex1 = GameInterface.itemslist.BadTex1;
+				}
+			}
+			else
+			{
+				if(curItemID==itemsID)
+				{
+				//	if(curItemID==GUN_ITEM_TYPE && arItem.id=="bladeX4") continue;//MAXIMUS
+					attributeName = "pic" + (loaded+1);
+					GameInterface.itemslist.(attributeName).img1 = GetItemPictureName(arItem.id);
+					GameInterface.itemslist.(attributeName).tex1 = GetItemPictureTexture("itemslist.ImagesGroup",arItem.id);
+					if(j>1)	GameInterface.itemslist.(attributeName).str1 = "#"+j;
+					GameInterface.itemslist.(attributeName).itemID = arItem.id;
+					if(IsEquipedItem(arItem.id))
+					{
+						GameInterface.itemslist.(attributeName).img2 = "usedflag";
+						GameInterface.itemslist.(attributeName).tex2 = 0;
+					}
+					loaded++;
+				}
+				else
+				{
+					attributeName = "pic" + (loaded+1);
+					GameInterface.itemslist.(attributeName).img1 = GameInterface.itemslist.BadPic1;
+					GameInterface.itemslist.(attributeName).tex1 = GameInterface.itemslist.BadTex1;
+				}
+			}
+		}
+		else
+		{
+			attributeName = "pic" + (loaded+1);
+			GameInterface.itemslist.(attributeName).img1 = GameInterface.itemslist.BadPic1;
+			GameInterface.itemslist.(attributeName).tex1 = GameInterface.itemslist.BadTex1;
+		}
+  }
+	GameInterface.itemslist.ListSize = loaded;
+	if (nCurScroll < 0) nCurScroll = 0;
+	if (nCurScroll > loaded) nCurScroll = loaded;
+	GameInterface.itemslist.current = nCurScroll;
+}

@@ -1,0 +1,12 @@
+title=Land Battle
+text.t1=We are to go to #sRedmond# on #sisland_Redmond# to pick up troops to fight the French.
+text.t2=I am assigned to take the troops to Octopus Bay on #sisland_Falaise de Fleur# where we will engage the French.
+text.t3=The battle is won. Lieutenant Chumley wants to go back to #sCharlestown# but we have so many wounded I am going to take them to #sOxbay# on #sisland_Oxbay#.
+text.t4=.
+text.t5=.
+text.t6=.
+text.t7=.
+text.t8=.
+text.t9=.
+text.t10=.
+text.t11=.

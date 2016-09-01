@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"Aye captain! Great to see you here!", 
+"Aye matey! You're the carpenter, aren't you?", 
+"Yes, captain! Ready for orders!", 
+"Well, we need planks to repair our ship. This jungles seems to be full of good trees!", 
+"For today, take your best men with you and go in the jungle to cut some trees and make planks for repairs.", 
+"Yeah cap'n, Planks will be boarded as soon as possible!", 
+"Thanks. Make your report as soon you will return!", 
+"I've changed my mind!", 
+"Well, what's your orders, captain?", 
+"Not now mate, if you please!",
+"Captain, we cut and boarded ",
+" planks today ",
+"but ",
+" men were killed by wild jungle or disappeared..",
+"I refuse to trade with a person of your reputation and relations. Now get out, ",
+", before I call the guards.",
+"Very well.",
+"You need a better uniform.",
+
+};

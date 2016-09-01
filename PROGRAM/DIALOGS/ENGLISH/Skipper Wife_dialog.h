@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"Good luck.",
+"I will have to find it myself then.",
+"What are you doing in my house?",
+"Uhm, don't know?",
+"I saw you today in town, and I found you really attractive, so I thought, perhaps I could pay you a visit?",
+"Stealing some very important papers for the Contre-Amirale, and since you caught me, I will have to kill you!",
+"Nothing! And I have 500 gold here to prove it.",
+"You are trying to rob me! Guards!",
+"Not good.",
+"You, you filthy bastard, you are here to rape me! Jan, Jan, help me! This man wants to rape me!",
+"Mon Dieu, that was not what meant. Please, do not scream like that!",
+"Please don't kill me, I will give you anything!",
+"Too late, sorry!", 
+"What do you have to offer?",
+"350 gold, that is everything I have got! Oh, and here have some jewels too, that is everything, please don't kill me!",
+"Non, not enough. Say goodbye!", 
+"Thank you! Now remember, I wasn't here!",
+"Owh, 500 gold?! No, you are right, you were doing absolutly nothing here. Bye, kind sir whom I have never met!",
+
+};

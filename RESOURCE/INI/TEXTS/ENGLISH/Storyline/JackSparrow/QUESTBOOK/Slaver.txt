@@ -1,0 +1,11 @@
+title=Slave Killing.
+text.t1=In #sOranjestad# on #sisland_Aruba# I saw two men fighting in the street. I decided to step in. After I killed the attacker, I found out that the man I saved was a slaver.
+text.t2=I decided to have him join my crew as an officer in the hope he will lead me to freeing the slaves.
+text.t3=This fellow offered his services as an officer, but I have my reservations about him and him leading me to free the slaves, so I told him I have a full crew.
+text.t4=When I arrived in #sDouwesen# on #sisland_Douwesen#, The slaver told me a strange story about a shipwreck behind a waterfall. I might want to check it out.
+text.t5=The gold was there! I now know the location of the Plantation with the slaves is on #sisland_Eleuthera#. Next stop is to try and free them. 
+text.t6=The slaver went ahead to the plantation and probably into the head's house. I should follow him there.
+text.t7=The head of the plantation is a pirate lord! I can't fight him.
+text.t8=I fought and killed the pirate lord and all of his men. The slaves are now free. I also have his piece of 8, maybe I should go and see Nathan Kell on #sisland_Turks# about a new worthy Pirate Lord.
+text.t9=Nathan Kell suggested I go to the fort and give the piece of 8 to Cap'n Drow.
+text.t10=I gave the piece of 8 to Cap'n Drow, in return I stole a ring that was on his table.

@@ -1,0 +1,79 @@
+Captain{Captain}
+Keene{Keene}
+Sir Edward{Sir Edward}
+Pellew{Pellew}
+Clayton{Clayton}
+Jack{Jack}
+Simpson{Simpson}
+Helmsman{Helmsman}
+Lt. Alan{Lt. Alan}
+Smithee{Smithee}
+James{James}
+Sawyer{Sawyer}
+Lt. William{Lt. William}
+Bush{Bush}
+Lt. Percy{Lt. Percy}
+Buckland{Buckland}
+Captain James{Captain James}
+Sawyer{Sawyer}
+Captain Horatio{Captain Horatio}
+Nelson{Nelson}
+Lady Barbara{Lady Barbara}
+Wellesley{Wellesley}
+Sir Hew{Sir Hew}
+Dalrymple{Dalrymple}
+Lt.{Lt.}
+Chadd{Chadd}
+Eccleston{Eccleston}
+The Duchess of{The Duchess of}
+Wharfedale{Wharfedale}
+Archie{Archie}
+Kennedy{Kennedy}
+Rifleman{Rifleman}
+Cooper{Cooper}
+Haggman{Haggman}
+Higgins{Higgins}
+Uriah{Uriah}
+Quelp{Quelp}
+Don{Don}
+Masseredo{Masseredo}
+Richard{Richard}
+Sharpe{Sharpe}
+Patrick{Patrick}
+Harper{Harper}
+Midshipman{Midshipman}
+Hunter{Hunter}
+Smug{Smug}
+Larr{Larr}
+Big{Big}
+Bryan{Bryan}
+Arthur{Arthur}
+Matthews{Matthews}
+Styles{Styles}
+French{French}
+Crewman{Crewman}
+Perrin{Perrin}
+Harris{Harris}
+Tongue{Tongue}
+Etienne{Etienne}
+de Vergasse{de Vergasse}
+Oldroyd{Oldroyd}
+Marsh{Marsh}
+Mansfield{Mansfield}
+William{William}
+Chumley{Chumley}
+Dreadnought{Dreadnought}
+Foster{Foster}
+Black Charlie{Black Charlie}
+Hammond{Hammond}
+Lieutenant{Lieutenant}
+Bracegirdle{Bracegirdle}
+Francisco Manuel{Francisco Manuel}
+Ortega{Ortega}
+Arthur{Arthur}
+Wellard{Wellard}
+Doctor{Doctor}
+Clive{Clive}
+Henry{Henry}
+Donatien{Donatien}
+Thibaud{Thibaud}

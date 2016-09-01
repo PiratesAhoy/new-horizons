@@ -1,0 +1,4 @@
+title=Deliver a prisoner to the governor.
+text.t1=The governor charged me with a mission to bring him the prisoner held in #sGreenford#'s prison on #sisland_Oxbay#.
+text.t2=When I said that I wanted to see the prisoner, the commandant told me he had escaped several hours ago. They are looking for him, but there is no good news so far.
+text.t3=When I arrived at #sRedmond# on #sisland_Redmond#, I told the governor that the prisoner had escaped. Silehard wasn't at all pleased to hear that.

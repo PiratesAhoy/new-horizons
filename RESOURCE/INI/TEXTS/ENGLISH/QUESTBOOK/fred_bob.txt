@@ -1,0 +1,10 @@
+title=Side Quest - Help the Boatswain
+text.t1=What an odd character that Orable Caron is! I'm not sure I can trust him. Well, to the beach South of the #sFalaise de Fleur# port on #sisland_Falaise de Fleur# to see about a new boatswain.
+text.t2=The boatswain's a little hard to follow, but seems like a good man. I need to talk to the Captain of the Guard, if I can find him, to see if I can get this man pardoned.
+text.t3=I met the boatswain and already I can't understand him. I'll have to think about it, but I don't think I can help him.
+text.t4=I met this boatswain and he seems sincere, but I can't go around risking my reputation for someone I don't know! Pity, but there's really nothing else to be done.
+text.t5=I've spoken to Aufort and there's nothing to be done. So the boatswain will remain in custody.
+text.t6=I've spoken to Aufort, and what luck! The boatswain is free, as long as I take him away with me. I think the chap will be very happy to be back at sea.
+text.t7=Fred Bob says a letter he is carrying needs to be delivered to a noblewoman in #sIsla Muelle# on #sisland_Isla Muelle#. She is supposed to be in the church which is near the Townhall. I wonder what this is all about!
+text.t8=It's too bad, really. I would like to help the boatswain but things just did not work out. Perhaps I'll try when my reputation is better.
+text.t9=I can't understand a word this man says! Maybe I'll try later. Or not.

@@ -1,0 +1,5 @@
+title=Examination for Lieutenant
+text.t1=I have been ordered to sail for #sisland_Redmond# by Captain Foster.
+text.t2=I am to meet Captain Pellew at the gates of the Residence.
+text.t3=Captain Pellew told me that Archie has been captured by the Spanish. Right now I must go and take my Lieutenants examination.
+text.t4=A Fire Ship is bearing down on the port. We must get to the port and see what we can do about it.

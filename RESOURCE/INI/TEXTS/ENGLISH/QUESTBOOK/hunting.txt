@@ -1,0 +1,7 @@
+title=General Quest - Ship Hunting off #sisland#.
+text.t1=I must sink the #sship_descr# off #sisland#.
+text.t2=I successfully sank the #stype# (with the help of God, certainly), and can return to the governor of #stown# for my reward.
+text.t3=Success was on my side, and the enemy captain and his band are feeding the sharks now. I need to go to the governor of #stown# to get the promised reward.
+text.t4=We managed with it! The #sship_descr# has met with Davy Jones and for me it's time to go to the governor of #stown# to claim my reward.
+text.t5=Ha... the #stype# wasn't too good warrior. The money promised by the governor of colony #stown# reached me very easily.
+text.t6=The fight was hard, but the #stype# was foundered. All I need now is to get the money from the governor of #stown#.

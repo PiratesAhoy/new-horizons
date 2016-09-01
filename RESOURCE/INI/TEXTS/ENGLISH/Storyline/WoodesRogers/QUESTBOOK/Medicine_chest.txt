@@ -1,0 +1,14 @@
+title=A filled Medicine Chest
+text.t1=Dave Edna maybe knows something about a Medicine Chest.
+text.t2=I have found a medicine chest, still locked though.
+text.t3=Half the medicine chest is .... open. Now where can I get some food, maybe in the cellar under the kitchen?
+text.t4=There are some places for bottles on the backside as well.
+text.t5=The food is delivered - now let's see if the citizens can contribute with any medicines.
+text.t6=The madman opened the left door - he shot off the entire lock! The large drawer is in place. Now let's pick up some remedys at the church. 
+text.t7=What a collection! There is no place for any more bottles and all drawers are filled! Only problem is that the doors can't be locked.
+text.t8=The Medicine chest is now repaired. (Very amateurish I must say).
+text.t9=Half the chest is filled with medicines. Two drawers are filled: one with anti-scurvy-pills, the other one with various medicals from the doctor.
+text.t10=There is a chest in the store!
+text.t11=Mr Cook is at the church collecting citizens donations of medicines and cures.
+text.t12=Mr Stretton can open the rest of the chest, according to grandma Rogers.
+text.t13=I am wanted at the shipyard.

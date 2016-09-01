@@ -1,0 +1,30 @@
+string DLG_TEXT[25] = {
+"Ahh, Mister Legrand, there you are. Have you managed to solve the puzzle yet?",
+"What?? How on earth can you know anything about this? (Who is this snob?)",
+"You don't recognize me. But we have met earlier...",
+"(Maybe the face is familiar but...) I'm sorry I can't really...",
+"Never mind then. Did you check this place 'SE.ENTH', you know what 'R' is now?",
+"Well I... not quite sure...",
+"Maybe you should try again. Don't forget to check the Questbook.",
+"I'll see what I can do...",		
+"Yes it's  'B'",	
+"Yes it's  'C'",
+"Yes it's  'F'",
+"Yes it's  'J'",
+"Yes it's  'K'",		
+"Yes it's  'P'",
+"Yes it's  'Q'",
+"Yes it's  'V'",
+"Yes it's  'W'",	
+"Yes it's  'X'",
+"Yes it's  'Y'",	
+"Yes it's  'Z'",
+"Yes of course it is. What do you say about '2' ?",
+"Indeed, it occurs on several places. Now there are only two letters left. Both are use only once. Let's try '.' first.",
+"You are very clever Mister Legrand. Only one letter left and now it's rather easy. '_' must be..?",
+"Congratulations - all letters found! Why don't you go and see if Mister Poe has returned home.",
+"Thank you and goodbye. (He still reminds me of someone...)",
+
+
+
+};

@@ -1,0 +1,14 @@
+title=General Quest - Lost Treasure on #sisland#.
+text.t1=A treasure chest is hidden somewhere in the jungle close to the roadsign and the two roads.
+text.t2=A treasure chest is hidden somewhere in the #sOxbay# dungeon.
+text.t3=By the shore of Leviathan Rock, you can access a grotto where the treasure is hidden.
+text.t4=By the hole in the cliff, you can access a cave where the treasure is hidden.
+text.t5=Find the shipwreck on a beach on #sisland_Turks#. The treasure is in a chest somewhere in the wreck.
+text.t6=On the wild coast of Bahia de San Antonio. In front of the cliffs. The treasure is hidden near the big rock.
+text.t7=After the bridge and the cavern of Sandy Point, find the small rock near a tree.
+text.t8=Go ashore at Cayman Kai. The treasure is hidden in a cavern in the jungle.
+text.t9=Go ashore at Sand Bluff. There is a hidden entrance to a cave somewhere in the jungle. The treasure is hidden in the cave.
+text.t10=A treasure chest is hidden somewhere on the beach of Boca de Hubon.
+text.t11=A treasure chest is hidden in the ruin of the lighthouse.
+text.t12=A cave, eh? I might need to bring a pickaxe.
+text.t13=Sounds like a spade could come in handy.

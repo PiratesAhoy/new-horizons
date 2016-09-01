@@ -1,0 +1,53 @@
+Bella{Bella}
+James{James}
+Norrington{Norrington}
+Susan{Susan}
+Shaypen{Shaypen}
+Couch Captain{Couch Captain}
+Petros{Petros}
+Sir Christopher{Sir Christopher}
+Mings{Mings}
+Nathan{Nathan}
+Kell{Kell}
+Pirate_KK{Pirate_KK}
+the Terror{the Terror}
+Bootstrap Bill{Bootstrap Bill}
+Cutler{Cutler}
+Beckett{Beckett}
+Tia{Tia}
+Dalma{Dalma}
+Morris{Morris}
+Murtogg{Murtogg}
+Malvert{Malvert}
+Mullroy{Mullroy}
+Weatherby{Weatherby}
+Annamaria{Annamaria}
+Brinkley{Brinkley}
+Couch Captain{Couch Captain}
+Sir Christopher{Sir Christopher}
+Mings{Mings}
+Petros{Petros}
+Rackham{Rackham}
+Willemoes{Willemoes}
+Cap'n{Cap'n}
+Drow{Drow}
+Maximus{Maximus}
+Damski{Damski}
+Bligh{Bligh}
+Maykin{Maykin}
+Blundas{Blundas}
+Teague{Teague}
+Port Guard{Port Guard}
+Silas{Silas}
+Simpkins{Simpkins}
+Tipman{Tipman}
+Wanderman{Wanderman}
+Howard{Howard}
+Cummins{Cummins}
+Arthur{Arthur}
+Straightly{Straightly}
+Stephen{Stephen}
+Walsh{Walsh}
+Maggee{Maggee}
+Ragetti{Ragetti}
+Pintel{Pintel}

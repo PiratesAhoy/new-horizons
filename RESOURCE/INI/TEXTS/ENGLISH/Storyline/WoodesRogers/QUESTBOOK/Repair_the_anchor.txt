@@ -1,0 +1,6 @@
+title=Repair the anchor mechanism
+text.t1=It's something wrong with the Corvette's anchor.
+text.t2=I'm looking for a Wheel and some Pinions.
+text.t3=Yes! I have fixed it. Now to the Galley door problem...
+text.t4=
+text.t5=

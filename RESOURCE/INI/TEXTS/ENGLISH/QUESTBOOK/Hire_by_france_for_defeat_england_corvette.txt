@@ -1,0 +1,4 @@
+title=Side Quest - Sink the Pirate Frigate.
+text.t1=The governor of #sFalaise de Fleur# on #sisland_Falaise de Fleur#, Joseph Claude Le Moigne, charged me with a mission to sink the pirate ship blockading the colony while the French squadron is at sea.
+text.t2=I had to refuse Le Moigne. 5000 gold is not reward enough for such risks. It's no small matter to battle with a heavy frigate. It appears that the governor was upset by my refusal.
+text.t3=The governor was pleased with my performance. He gave me the reward and told me to keep in touch. He wants to work with me in the future as well.

@@ -1,0 +1,12 @@
+title=Attack on #sisland_Antigua#.
+text.t1=Sir Arthur Wellesley has ordered me to look to the defence of the outskirts of #sSt John's#.
+text.t2=We are going to go to the beach to see if we can lure the French out of hiding.
+text.t3=We must get back to the outskirts of #sSt John's# to organise a defence.
+text.t4=We have defeated the French, but the other half of the Company did not return. I must report to Sir Arthur in the town.
+text.t5=I have been given documents to take to Naval H.Q. in #sGreenford# on #sisland_Oxbay#.
+text.t6=A peace treaty has been signed with France and I no longer have a ship. I have found accommodation with Mrs. Mason and her daughter Maria.
+text.t7=Maria tells me there are some Riflemen waiting to see me in the Tavern.
+text.t8=We need to go to Lighthouse Bay and look for Lieutenant Quelp.
+text.t9=The French were dead when we got here and no sign of Hunter. I should go back to Mrs. Mason's house.
+text.t10=.
+text.t11=.

@@ -1,0 +1,2 @@
+title=#stown# Assignment
+text.t1=Having served in the West Indies for a couple of years, I've finally been appointed commander of my own ship with orders to cruise for prizes. This gives me immense freedom - I am as close to the master of my own fate as one could be in the service.

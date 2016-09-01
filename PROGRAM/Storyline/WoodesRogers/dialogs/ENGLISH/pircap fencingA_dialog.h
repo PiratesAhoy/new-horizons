@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"Captain, I have no time to talk to you right now.",
+"See you later then.",
+"I can train you to become a Professional Fencer.",
+"Let me show you some Advanced Defence.",
+"You have to learn more basic skills first - ",
+"- talk to somebody else.",
+"Let me show you the Critical Hit.",
+"Let me show you some Advanced Defence or the Critical Hit.",
+"I want to learn more about Advanced Defence.",
+"Yes, show me you the Critical Hit.",
+"I certainly say yes to that!",
+"Maybe later.",
+"Use nothing but round coins.",
+"Alright.",
+"If you want to know more about the Collection Box -",
+"- ask someone else.",
+"Captain, now you know as much as we do about the Collection Box!",
+"Okay, I have it all in my Questbook.",
+
+};

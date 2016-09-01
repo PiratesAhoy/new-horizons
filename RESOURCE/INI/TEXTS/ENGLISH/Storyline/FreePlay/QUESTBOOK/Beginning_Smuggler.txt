@@ -1,0 +1,2 @@
+title=Starting as a smuggler on #sisland#
+text.t1=It is unfortunate that I have no honest trade goods currently on board. We have some expensive repairs ahead of us and the only way of generating the funds required is to contact a smuggler agent in the #stown# tavern. While I am friendly with the government of this town, they may not take kindly to my actions to do. I had better be careful!

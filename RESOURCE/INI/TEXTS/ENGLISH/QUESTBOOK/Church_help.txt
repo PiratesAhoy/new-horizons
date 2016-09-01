@@ -1,0 +1,15 @@
+title=Side Quest - Help the church.
+text.t1=#sFatherBernard# is the head of the church in #sRedmond# on #sisland_Redmond#. He asked me to find evidence to prove whether the priest named #sFatherJerald# is guilty or not. He lives in the city of #sGreenford# on #sisland_Oxbay#, and people say that he is up to his eyes in sin, and that he forgot about God. This shouldn't take long. I'll check at the tavern, first.
+text.t2=#sSimonHanpool# is a tavern-keeper in #sGreenford# on #sisland_Oxbay#. I talked to him, and he had no idea that such rumors were circulating about #sFatherJerald#. According to his words, #sFatherJerald# is a good priest, and he tends to his duties without fail. Next, to talk to the priests.
+text.t3=#sFatherJerald#'s assistant gave evidence of the priest's guilt. I suspect he wants to take over #sJerald#'s position. Has this ambition made him fabricate this story?
+text.t4=#sFatherJerald# claims that he is not guilty. And I find him very convincing. I think that something is wrong here. I need to talk to the woman involved.
+text.t5=I made an offer to the priest to buy the letters and he agreed straight away. Doesn't it prove that he is guilty?
+text.t6=I made an offer to the priest to buy the letters and he agreed straight away. I don't know whether he is guilty or not, so I can tell #sFatherBernard# whatever I choose.
+text.t7=The waitress confirmed that she really got several love-letters from #sFatherJerald#. I'm not sure I trust her; she has a bit of the trollop in the way she acts. I'll talk to the tavern-keeper again.
+text.t8=The owner of the tavern is still sure that #sFatherJerald# is not guilty. He claims that the letters were written by another person named Yedam Kinne. He is Dutch, he lives here on this island, and he can forge anyone's handwriting. According to the tavern-keeper, he saw Kinne and the priest's assistant together several days ago. Perhaps some locals can tell me where to find this Dutchman.
+text.t9=Yedam Kinne claims he had nothing to do with those letters. Is #sFatherJerald# guilty?
+text.t10=Yedam Kinne confessed that he wrote the letters. It means #sFatherJerald# is innocent, and his assistant is the one who's caused all this trouble.
+text.t11=I had to kill that stubborn Dutchman. Unfortunately, now there's no way of knowing whether he wrote those letters or not. Perhaps the tavern-keeper got some information from the waitress?
+text.t12=The tavern-keeper told me that the girl who said that #sFatherJerald# allegedly harassed her actually worked for #sJerald#'s assistant. So, these letters are forgeries. Back now to #sRedmond# on #sisland_Redmond# with the proof.
+text.t13=I returned to #sRedmond# on #sisland_Redmond# and managed to persuade #sFatherBernard# that #sFatherJerald# is innocent. He thanked me and asked to visit him later for my next task.
+text.t14=I returned to #sRedmond# on #sisland_Redmond# and told #sFatherBernard# that #sFatherJerald# is guilty. He thanked me and asked to visit him later for my next task.

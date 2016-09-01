@@ -1,0 +1,6 @@
+title=A remedy for curing syphilis
+text.t1=Have to find this medicine.
+text.t2=Where can I find empty bottles in a town based on rum and drunken sailors?
+text.t3=I got the empty bottles, now to the doctor again.
+text.t4=Done!
+text.t5=The doctor is trying some new outfits - where?

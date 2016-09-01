@@ -1,0 +1,1730 @@
+Potion parameters{Medical Remedy}
+health value{Health}
+weapon blade parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, piercing #dpiercing#%, block #dblock#%.}
+weapon gun parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, reload time #dchargespeed#sec, accuracy #daccuracy#%.}
+weapon armor parameters{Armor: Coverage #dcoverage#%, Chance to stop / Percent of damage taken if not stopped, for: Sword #dbladestop#% / #dbladefrac#%, Gun #dgunstop#% / #dgunfrac#%.}
+
+//..........................BLADE ITEMS START.........................................
+
+itmname_bladeskull1	{Skull}
+itmdescr_bladeskull1
+{
+What did he use this macabre item to?. 
+}
+
+itmname_bladerammer		{Ramrod}
+itmdescr_bladerammer
+{
+A Gunner's tool. 
+}
+
+itmname_bladeplank2		{Plank}
+itmdescr_bladeplank2
+{
+A heavy plank. 
+}
+
+itmname_bladeirontool		{Tool}
+itmdescr_bladeirontool
+{
+Could be used as a crowbar. 
+}
+
+itmname_bladeemptysack_P	{Empty Sack}
+itmdescr_bladeemptysack_P
+{
+An old sack with place for a lot of books.
+}
+
+itmname_bladesemifullsack_P	{Sack with some Books}
+itmdescr_bladesemifullsack_P
+{
+The sack with some books. Heavy enough?
+}
+
+itmname_bladefullsack_P		{Sack with Books}
+itmdescr_bladefullsack_P
+{
+The sack is now filled with books. Heavy enough?
+}
+
+itmname_bladeemptysack_B	{Empty Sack}
+itmdescr_bladeemptysack_B
+{
+An old sack with place for four birds.
+}
+
+itmname_bladebirdsack		{Sack with Birds}
+itmdescr_bladebirdsack
+{
+Now I got enough food for a meal or two.
+}
+
+itmname_bladecauldron		{Cauldron}
+itmdescr_bladecauldron
+{
+A heavy cast iron Cauldron.
+}
+
+itmname_bladecauldron_w		{Cauldron}
+itmdescr_bladecauldron_w
+{
+The Cauldron is filled with Water.
+}
+
+itmname_bladeemptysack		{Empty Sack}
+itmdescr_bladeemptysack
+{
+An old sack with place for nine pieces of wood.
+}
+
+itmname_bladewoodsack		{Sack with Wood}
+itmdescr_bladewoodsack
+{
+Now I got enough wood for a new fire.
+}
+
+itmname_bladefryingpan		{Dish}
+itmdescr_bladefryingpan
+{
+A large ovenproof dish.
+}
+
+itmname_bladefish		{Big Fish}
+itmdescr_bladefish
+{
+A big but also very delicious fish - if it hadn't been stored away in this cellar for days in the Caribbean heat.
+}
+
+itmname_bladeflag_usa		{Fort Flag}
+itmdescr_bladeflag_usa
+{
+The Star-spangled Banner.
+}
+
+itmname_bladespyglass6		{Spyglass}
+itmdescr_bladespyglass6
+{
+A  long Spyglass was hidden inside the flag roll.
+}
+
+itmname_bladeoilbottle		{Bottle of Oil}
+itmdescr_bladeoilbottle
+{
+A bottle filled with the finest olive oil.
+}
+
+itmname_bladebarrel		{Rum Barrel}
+itmdescr_bladebarrel
+{
+A small barrel filled with the finest rum in the entire Caribbean, distilled by an expert (hrm).
+}
+
+itmname_bladebarrel_gp0		{Empty Barrel}
+itmdescr_bladebarrel_gp0
+{
+
+}
+
+itmname_bladebarrel_gpW		{Gunpowder Barrel}
+itmdescr_bladebarrel_gpW
+{
+No, the mixture isn't right. I have to get rid of it.
+}
+
+itmname_bladebarrel_gpS		{Gunpowder Barrel}
+itmdescr_bladebarrel_gpS
+{
+Standard Gunpowder for all kind of Handguns.
+}
+
+itmname_bladebarrel_gpF		{Gunpowder Barrel}
+itmdescr_bladebarrel_gpF
+{
+Special Gunpowder for Fireworks.
+}
+
+itmname_bladelockpick		{Lockpick}
+itmdescr_bladelockpick
+{
+Two small irons that could be used as lockpick tools.
+}
+
+itmname_bladewood_short		{Wood}
+itmdescr_bladewood_short
+{
+Hmm, I have to split the Wood too.
+}
+
+itmname_bladewood4		{Wood}
+itmdescr_bladewood4
+{
+Okay, I think this will do in the fireplace.
+}
+
+itmname_sledgehammer		{Sledgehammer}
+itmdescr_sledgehammer
+{
+With this Sledgehammer I can break anything.
+}
+
+itmname_bladepickaxe1		{Tool}
+itmdescr_bladepickaxe1
+{
+A long gardening tool(?) or maybe something used in the mines. 
+}
+
+itmname_bladehammer		{Hammer}
+itmdescr_bladehammer
+{
+A short but very heavy hammer. 
+}
+
+itmname_bladesaw		{Saw}
+itmdescr_bladesaw
+{
+A carpenter's robust tool. 
+}
+
+itmname_bladeladle		{Ladle}
+itmdescr_bladeladle
+{
+A sooty metal ladle. 
+}
+
+itmname_bladebroom		{Broom}
+itmdescr_bladebroom
+{
+Now I can tidy up the place. 
+}
+
+itmname_bladeladder2		{Ladder}
+itmdescr_bladeladder2
+{
+The big ladder I found in the Cavern.
+}
+
+itmname_clubmusketoon		{Musketoon Club}
+itmdescr_clubmusketoon
+{
+A Musketoon used as a very heavy Club.
+}
+
+itmname_bladeanchor		{Anchor}
+itmdescr_bladeanchor
+{
+A small but heavy anchor, how did it end up in the tailor's shop? 
+}
+
+itmname_bladeboom		{Boom}
+itmdescr_bladeboom
+{
+Just a piece of wood, hardly a dangerous weapon. 
+}
+
+itmname_bladepaperroll		{Paper Roll}
+itmdescr_bladepaperroll
+{
+I'll place it on the floor and use the Tinderbox to light it.
+}
+
+itmname_bladespade		{Spade}
+itmdescr_bladespade
+{
+Better than nothing as a weapon.
+}
+
+itmname_bladepickaxe2		{Pickaxe}
+itmdescr_bladepickaxe2
+{
+A long sharp tool used in the mining business. 
+}
+
+itmname_machete		 	{Machete}
+itmdescr_machete
+{
+Used for cutting sugar canes.
+}
+
+itmname_holy_water		 {Holy Water}
+itmdescr_holy_water
+{
+My only protection against Zombies and other undead.
+}
+
+itmname_bladelever		 {Lever}
+itmdescr_bladelever
+{
+I guess it will be needed somewhere.
+}
+//..........................BLADE ITEMS END............................................
+
+//..........................BLADECRYPTO START..........................................
+
+itmname_crypto			{Parchment}
+itmdescr_crypto
+{
+The dirty Parchment I found on the shore.
+}
+
+itmname_bladecrypto_d		{Parchment}
+itmdescr_bladecrypto_d
+{
+The dirty Parchment I found on the shore.
+}
+
+itmname_bladecrypto_dl		{Parchment}
+itmdescr_bladecrypto_dl
+{
+My drawing of the Goldbug on the dirty Parchment.
+}
+
+itmname_bladecrypto_ds		{Parchment}
+itmdescr_bladecrypto_ds
+{
+My drawing of the Goldbug, but on the other side there is a Death's-head now!
+}
+
+itmname_bladecrypto_dsk		{Parchment}
+itmdescr_bladecrypto_dsk
+{
+Together with the Death's-head a Goat?
+}
+
+itmname_bladecrypto_cl		{Parchment}
+itmdescr_bladecrypto_cl
+{
+My drawing of the Goldbug on the rinsed Parchment.
+}
+
+itmname_bladecrypto_csk		{Parchment}
+itmdescr_bladecrypto_csk
+{
+Here are the Death's-head and the Goat again.
+}
+
+itmname_bladecrypto_cskp	{Parchment}
+itmdescr_bladecrypto_cskp
+{
+Besides the Death's-head and the Goat also some figures arranged in lines.
+}
+
+itmname_bladecrypto_cskt	{Parchment}
+itmdescr_bladecrypto_cskt
+{
+A lot of characters are rudely traced between the Death's-head and the Goat.
+}
+
+//..........................BLADECRYPTO END............................................
+
+//..........................BLADEBOTTLES START.........................................
+
+itmname_bladebottle_CB2		{Cognac}
+itmdescr_bladebottle_CB2
+{
+If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
+}
+
+itmname_Cognac			{Cognac?}
+itmdescr_Cognac
+{
+If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
+}
+
+itmname_bladebottle_CE0		{Small Bottle}
+itmdescr_bladebottle_CE0
+{
+Small empty bottle.
+}
+
+itmname_bladebottle_AC2		{Small Bottle}
+itmdescr_bladebottle_AC2
+{
+Small bottle filled with Charcoal. 
+}
+
+itmname_bladebottle_AG2		{Small Bottle}
+itmdescr_bladebottle_AG2
+{
+Small bottle filled with a mix of Charcoal and Salpeter. 
+}
+
+itmname_bladebottle_AN2		{Small Bottle}
+itmdescr_bladebottle_AN2
+{
+Small bottle filled with Salpeter. 
+}
+
+itmname_bladebottle_AS2		{Small Bottle}
+itmdescr_bladebottle_AS2
+{
+Small bottle filled with Sulfur. 
+}
+
+itmname_bladebottle_AY2		{Small Bottle}
+itmdescr_bladebottle_AY2
+{
+Small bottle filled with a mix of Sulfur and Salpeter. 
+}
+
+itmname_bladebottle_AZ2		{Small Bottle}
+itmdescr_bladebottle_AZ2
+{
+Small bottle filled with a mix of Sulfur and Charcoal. 
+}
+
+itmname_bladebottle_BE0		{Big Bottle}
+itmdescr_bladebottle_BE0
+{
+Big empty bottle.
+}
+
+itmname_bladebottle_BC2		{Big Bottle}
+itmdescr_bladebottle_BC2
+{
+Big bottle filled with Charcoal. 
+}
+
+itmname_bladebottle_BG2		{Big Bottle}
+itmdescr_bladebottle_BG2
+{
+Big bottle filled with a mix of Charcoal and Salpeter. 
+}
+
+itmname_bladebottle_BN2		{Big Bottle}
+itmdescr_bladebottle_BN2
+{
+Big bottle filled with Salpeter. 
+}
+
+itmname_bladebottle_BS2		{Big Bottle}
+itmdescr_bladebottle_BS2
+{
+Big bottle filled with Sulfur. 
+}
+
+itmname_bladebottle_BY2		{Big Bottle}
+itmdescr_bladebottle_BY2
+{
+Big bottle filled with a mix of Sulfur and Salpeter. 
+}
+
+itmname_bladebottle_BZ2		{Big Bottle}
+itmdescr_bladebottle_BZ2
+{
+Big bottle filled with a mix of Sulfur and Charcoal. 
+}
+
+itmname_bladebottle_BC1		{Big bottle}
+itmdescr_bladebottle_BC1
+{
+Big bottle half filled with Charcoal. 
+}
+
+itmname_bladebottle_BG1		{Big Bottle}
+itmdescr_bladebottle_BG1
+{
+Big bottle half filled with a mix of Charcoal and Salpeter. 
+}
+
+itmname_bladebottle_BN1		{Big Bottle}
+itmdescr_bladebottle_BN1
+{
+Big bottle half filled with Salpeter. 
+}
+
+itmname_bladebottle_BS1		{Big bottle}
+itmdescr_bladebottle_BS1
+{
+Big bottle half filled with Sulfur. 
+}
+
+itmname_bladebottle_BY1		{Big Bottle}
+itmdescr_bladebottle_BY1
+{
+Big bottle half filled with a mix of Sulfur and Salpeter. 
+}
+
+itmname_bladebottle_BZ1		{Big Bottle}
+itmdescr_bladebottle_BZ1
+{
+Big bottle half filled with a mix of Sulfur and Charcoal. 
+}
+
+//..........................BLADEBOTTLES END.........................................
+
+//..........................GUN ITEMS START..........................................
+
+itmname_pistolFWchest		{Fireworks}
+itmdescr_pistolFWchest
+{
+A Chest stuffed with Pyrotechnics. The Rockets have fancy names like Red Sun, Fire Rain, Burning Ring, Golden Cross and Blue Anemon.
+}
+
+itmname_blowgun			{Blowgun}
+itmdescr_blowgun
+{
+The Maya used the Blowgun to hunt birds and small animals. A tube for poisoned darts is attached to the pipe. 
+}
+
+itmname_pistoltinderbox		{Tinderbox}
+itmdescr_pistoltinderbox
+{
+A tinderbox looking like a small pistol.
+}
+
+itmname_revolver 		{Revolver}
+itmdescr_revolver
+{
+American patent nr 138 for a 'Revolving Gun' by Samuel Colt.
+}
+
+itmname_pistol204_P 		{Pistol}
+itmdescr_pistol204_P
+{
+A double-barrelled pistol with percussion lock.
+}
+
+itmname_pistolbedlinen		{Bed linen}
+itmdescr_pistolbedlinen
+{
+Three rolls of new linen. Maybe a faint smell of mold?
+}
+
+itmname_pistolsalt		{Salt}
+itmdescr_pistolsalt
+{
+A jar full of ordinary salt.
+}
+
+itmname_pistolbucket_empty	{Empty Bucket}
+itmdescr_pistolbucket_empty
+{
+
+}
+
+itmname_pistolbucket_water	{Bucket}
+itmdescr_pistolbucket_water
+{
+A Bucket filled with Water.
+}
+
+itmname_pistolbucket_nitre	{Bucket}
+itmdescr_pistolbucket_nitre
+{
+A Bucket filled with Salpeter.
+}
+
+itmname_pistolhand2		{}
+itmdescr_pistolhand2
+{
+.
+}
+
+itmname_pistolnitre_E		{Empty Sack}
+itmdescr_pistolnitre_E
+{
+
+}
+
+itmname_pistolnitre_H		{Salpeter Sack}
+itmdescr_pistolnitre_H
+{
+A Leathersack half filled with Salpeter.
+}
+
+itmname_pistolnitre_big_F	{Salpeter Sack}
+itmdescr_pistolnitre_big_F
+{
+A Leathersack filled with Salpeter.
+}
+
+itmname_pistolsulphur_E		{Empty Basket}
+itmdescr_pistolsulphur_E
+{
+
+}
+
+itmname_pistolsulphur_H		{Sulfur Basket}
+itmdescr_pistolsulphur_H
+{
+A Basket half filled with Sulfur.
+}
+
+itmname_pistolsulphur_F		{Sulfur Basket}
+itmdescr_pistolsulphur_F
+{
+A Basket filled with Sulfur.
+}
+
+itmname_pistolcharcoal_E	{Empty Jar}
+itmdescr_pistolcharcoal_E
+{
+
+}
+
+itmname_pistolcharcoal_H	{Charcoal Jar}
+itmdescr_pistolcharcoal_H
+{
+A Jar half filled with Charcoal.
+}
+
+itmname_pistolcharcoal_F	{Charcoal Jar}
+itmdescr_pistolcharcoal_F
+{
+A Jar filled with Charcoal.
+}
+
+itmname_pistolpyrite_E		{Empty Box}
+itmdescr_pistolpyrite_E
+{
+
+}
+
+itmname_pistolpyrite_H		{Pyrite Box}
+itmdescr_pistolpyrite_H
+{
+A Box half filled with Pyrite Dust.
+}
+
+itmname_pistolpyrite_F		{Pyrite Box}
+itmdescr_pistolpyrite_F
+{
+A Box filled with Pyrite Dust.
+}
+
+itmname_pistolbarrel_gp0	{Empty Barrel}
+itmdescr_pistolbarrel_gp0
+{
+
+}
+
+itmname_pistolbarrel_gpW	{Gunpowder Barrel}
+itmdescr_pistolbarrel_gpW
+{
+No, the mixture isn't right. I have to get rid of it.
+}
+
+itmname_pistolbarrel_gpS	{Gunpowder Barrel}
+itmdescr_pistolbarrel_gpS
+{
+Standard Gunpowder for all kind of Handguns.
+}
+
+itmname_pistolbarrel_gpF	{Gunpowder Barrel}
+itmdescr_pistolbarrel_gpF
+{
+Special Gunpowder for Fireworks.
+}
+
+itmname_pistolsextant2 		{Sextant}
+itmdescr_pistolsextant2
+{
+The sextant of Arthur Gordon Pym.
+}
+
+//..........................GUN ITEMS END.............................................
+//..........................AMMO ITEMS START..........................................
+
+itmname_arrows2			{Poisoned Darts}
+itmdescr_arrows2	
+{
+Some cultures dip the tip of the darts in curare or other poisons in order to paralyze the target.
+}
+
+itmname_cartridges 		{Cartridges}
+itmdescr_cartridges
+{
+Also called rounds, packages the bullet and gunpowder into a single unit. For the Revolver. 
+}
+
+itmname_nails 			{Nails}
+itmdescr_nails
+{
+Maybe these can be used instead of pistolgrapes for the Musketoon?
+}
+
+itmname_bagcompass4 		{Compass}
+itmdescr_bagcompass4
+{
+A heavy ship Compass complete with a bag.
+}
+
+itmname_p_package 		{Package}
+itmdescr_p_package
+{
+Claude Frollo's reward. What can it be?
+}
+
+itmname_p_case_C 		{Casket}
+itmdescr_p_case_C
+{
+A very fine Mahogany Casket.  
+}
+
+itmname_p_case_3 		{Pistol Case}
+itmdescr_p_case_3
+{
+A Gentleman's Pistol Case with all Tools and equipment.
+}
+
+itmname_p_case_2A 		{Pistol Case}
+itmdescr_p_case_2A
+{
+A Gentleman's Pistol Case with all Tools and equipment.
+}
+
+itmname_p_case_2B 		{Pistol Case}
+itmdescr_p_case_2B
+{
+A Gentleman's Pistol Case with all Tools and equipment.
+}
+
+itmname_p_case_2C		{Pistol Case}
+itmdescr_p_case_2C
+{
+A Gentleman's Pistol Case with all Tools and equipment.
+}
+
+itmname_p_case_1A 		{Pistol Case}
+itmdescr_p_case_1A
+{
+A Gentleman's Pistol Case with all Tools and equipment.
+}
+
+itmname_p_case_1B 		{Pistol Case}
+itmdescr_p_case_1B
+{
+A Gentleman's Pistol Case with all Tools and equipment.
+}
+
+itmname_p_case_1C		{Pistol Case}
+itmdescr_p_case_1C
+{
+A Gentleman's Pistol Case with all Tools and equipment.
+}
+
+itmname_p_case_0		{Pistol Case}
+itmdescr_p_case_0
+{
+A Gentleman's Pistol Case with all Tools and equipment.
+}
+
+itmname_cart_box_C		{Cartridge Box}
+itmdescr_cart_box_C
+{
+Cartridges impervious to dampness. Manufactured by D.C. Sage & Co
+}
+
+itmname_cart_box_O		{Cartridges}
+itmdescr_cart_box_O
+{
+Paper Cartridges containing Gunpowder and a Pistol Bullet. 18 grs 44/100 caliber. Hotchkiss' patent.
+}
+
+itmname_caps_box_C		{Percussion Caps Box}
+itmdescr_caps_box_C
+{
+Colt's Pistol Caps made by Eley Bros. London.
+}
+
+itmname_caps_box_O		{Percussion Caps}
+itmdescr_caps_box_O
+{
+Percussion Caps makes your Pistol only click in one of a hundred shots.
+}
+
+//..........................AMMO ITEMS END............................................
+//..........................OTHER ITEMS START.........................................
+
+
+itmname_marsh_hen		{Marsh-hen}
+itmdescr_marsh_hen
+{
+Sullivan's Island is a favorite resort of the marsh-hen.
+}
+
+itmname_shell1			{Shell}
+itmdescr_shell1
+{
+A fine shell I found on the seashore.
+}
+
+itmname_shell2			{Shell}
+itmdescr_shell2
+{
+A fine shell I found on the seashore.
+}
+
+itmname_shell3			{Shell}
+itmdescr_shell3
+{
+A fine shell I found on the seashore.
+}
+
+itmname_shell4			{Shell}
+itmdescr_shell4
+{
+A fine shell I found on the seashore.
+}
+
+itmname_shell5			{Shell}
+itmdescr_shell5
+{
+A fine shell I found on the seashore.
+}
+
+itmname_shell6			{Shell}
+itmdescr_shell6
+{
+A fine shell I found on the seashore.
+}
+
+itmname_shell_collection	{Shell collection}
+itmdescr_shell_collection
+{
+This collection of shells may be envied by a Swammerdamm.
+}
+
+itmname_inkpen			{Pen and Ink}
+itmdescr_inkpen
+{
+Nothing more nothing less.
+}
+
+itmname_1_log			{Driftood}
+itmdescr_1_log
+{
+A piece of wood I found on the shore.
+}
+
+itmname_bigfish			{Big Fish}
+itmdescr_bigfish
+{
+A big but also very delicious fish - if it cooked today.
+}
+
+itmname_meat			{Boucan}
+itmdescr_meat
+{
+A speciality from Tortuga. Meat smoked by hunters, also known as buccaneers. Some smell though?  
+}
+
+itmname_2winebottles		{Two Wine Bottles}
+itmdescr_2winebottles
+{
+French wine of highest quality, but a little warm.
+}
+
+itmname_bread			{Ships Biscuits}
+itmdescr_bread
+{
+Bread baked for long journeys at sea meant to stay fresh. It didn't! Something's moving inside.  
+}
+
+itmname_ale			{Ale}
+itmdescr_ale
+{
+A strong brew - all the way from England? Be careful, this beer can really knock you out.  
+}
+
+itmname_tankard			{Tankard}
+itmdescr_tankard
+{
+A large tin tankard - maybe worth some money? 
+}
+
+itmname_fish			{Fish}
+itmdescr_fish
+{
+It may be good for your brain to eat fish, but boring day after day.
+}
+
+itmname_coin7			{Coin}
+itmdescr_coin7
+{
+A chinese brass coin.
+}
+
+itmname_foreign_items		{Item Collection}
+itmdescr_foreign_items
+{
+Some trinkets of little value and mostly of foreign make.
+}
+
+itmname_tobacco			{Tobacco}
+itmdescr_tobacco
+{
+Pieces of pigtail tobacco.
+}
+
+itmname_goldbug2		{Gold-Bug}
+itmdescr_goldbug2
+{
+The Goldbug is carefully wrapped in a piece of paper.
+}
+
+itmname_tin_jug			{Tin Canikin}
+itmdescr_tin_jug
+{
+A small tin jug.
+}
+
+itmname_plate			{Plate}
+itmdescr_plate
+{
+Blue china imported by the East India Company. 
+}
+
+itmname_copper_cauldron		{Cauldron}
+itmdescr_copper_cauldron
+{
+A heavy copper cauldron. 
+}
+
+itmname_chain			{Chain and handcuffs}
+itmdescr_chain
+{
+A prison startkit maybe. I try to get rid of these to anyone in the Gunroom...
+}
+
+itmname_medicine_leaves		{Medicine Leaves}
+itmdescr_medicine_leaves
+{
+These leaves may protect you against evil spirits and inspire your imagination.   
+}
+
+itmname_Poes_clothes		{Clothes}
+itmdescr_Poes_clothes
+{
+   
+}
+
+itmname_Poes_urn		{Urn}
+itmdescr_Poes_urn
+{
+   
+}
+
+itmname_Poes_books		{Books}
+itmdescr_Poes_books
+{
+   
+}
+
+itmname_gibbet_rope		{Long Rope}
+itmdescr_gibbet_rope
+{
+The Long Rope I found in The Maroon Cavern.   
+}
+
+itmname_fort_rope		{Long Rope}
+itmdescr_fort_rope
+{
+The Long Rope I bought in Fort Moultrie.   
+}
+
+itmname_cork			{Cork}
+itmdescr_cork
+{
+The Cork from the Barrel.   
+}
+
+itmname_corkscrew		{Corkscrew}
+itmdescr_corkscrew
+{
+An ordinary Corkscrew.   
+}
+
+itmname_picture3		{Map}
+itmdescr_picture3
+{
+A map of a fortified city: Caletum. Calais?
+}
+
+itmname_picture5		{Inventory}
+itmdescr_picture5
+{
+This is an inventory of the household.
+}
+
+itmname_picture6		{List}
+itmdescr_picture6
+{
+A list of supplies for the garrison.
+}
+
+itmname_glasses			{Glasses}
+itmdescr_glasses
+{
+A pair of worn but fine glasses.
+}
+
+itmname_blue_uniform	        {Full Uniform}
+itmdescr_blue_uniform
+{
+Lieutenant G's finest uniform. Looks new.
+}
+
+itmname_G_journal		{Journal}
+itmdescr_G_journal
+{
+Journal of lieutenant G. Most about animals.
+}
+
+itmname_G_letter1		{Papers}
+itmdescr_G_letter1
+{
+Very private letter.
+}
+
+itmname_G_letter2		{Document}
+itmdescr_G_letter2
+{
+Very private letter.
+}
+
+itmname_G_letter3		{Letter}
+itmdescr_G_letter3
+{
+Very private letter.
+}
+
+itmname_sailbag			{Sailbag}
+itmdescr_sailbag
+{
+Really heavy those sails.
+}
+
+itmname_pistol_package		{Package}
+itmdescr_pistol_package
+{
+The Package I got at the Brothel. It's from the Priest, Claude Frollo.
+}
+
+itmname_calabash		{Calabash with an Antidote}
+itmdescr_calabash
+{
+This unknown liquid cures poison.
+}
+
+itmname_herbs			{Bag of Herbs}
+itmdescr_herbs
+{
+A mixture of herbs that cures light wounds.
+}
+
+//..........................OTHER ITEMS END.........................................
+
+//..........................BOOKS DOCUMENTS START...................................
+
+itmname_letter_paper		{Letter-paper}
+itmdescr_letter_paper
+{
+A few sheets of dirty letter-paper with the hotels logo.
+}
+
+itmname_crypto1			{Cipher}
+itmdescr_crypto1
+{
+I have copied the characters from the parchment. As any one might readily guess, they convey a meaning.
+}
+
+itmname_crypto2			{Cipher}
+itmdescr_crypto2
+{
+The full text divided into sentences by Mr Poe.
+}
+
+itmname_book52 			{A few Words on Secret Writing}
+itmdescr_book52
+{
+An essay by Edgar Allan Poe. In the book a folded paper. 
+}
+
+itmname_book53 			{A few Words on Secret Writing}
+itmdescr_book53
+{
+Marked with red: Now, of all words in the language,  'THE'  is most usual; let us see, therefore, whether there are not repetitions of any three characters, in the same order of collocation. If we discover repetitions of such letters, so arranged, the will most probably represent the word  'THE' . 
+}
+
+itmname_book54 			{Frequency Table}
+itmdescr_book54
+{
+In English, the letter which most frequently occurs is  'E' . Afterwards, the succession runs thus: a o i d h n r s t u y c f g l m w b k p q x z. 'E'  predominates so remarkably that an individual sentence of any length is rarely seen, in which it is not the prevailing character. 
+}
+
+itmname_book26			{The Human Skeleton}
+itmdescr_book26
+{
+A manual to all the 206 bones of a human being. Pictures.
+}
+
+itmname_book27			{Chymist}
+itmdescr_book27
+{
+A german work of chemistry published in Leipzig 1729. Looks like it is about minerals and vegetables? 
+}
+
+itmname_book33			{Geografien}
+itmdescr_book33
+{
+An old and very basic schoolbook, in any of those nordic languages perhaps?
+}
+
+itmname_book21			{Statute Book}
+itmdescr_book21
+{
+Abstract of the British West Indian statutes. The cover is worn but has it ever been opened?
+}
+
+itmname_doc1A			{Folded Paper}
+itmdescr_doc1A
+{
+
+}
+
+itmname_doc1B			{Note}
+itmdescr_doc1B
+{
+Right-hand items: F3 + F3, left-hand items: F3 + fire pistol.//JRH
+}
+
+itmname_doc2A			{Folder}
+itmdescr_doc2A
+{
+
+}
+
+itmname_doc2B			{Folder}
+itmdescr_doc2B
+{
+
+}
+
+itmname_doc2C			{Picture}
+itmdescr_doc2C
+{
+A picture of a wheel? I don't know. On the Right page there's something written though.
+}
+
+itmname_doc3C			{Recipe Standard Gunpowder}
+itmdescr_doc3C
+{
+Take 6 parts of Salpeter, 1 part of Charcoal and Sulfur each.
+}
+
+itmname_doc2D			{Empty Page}
+itmdescr_doc2D
+{
+
+}
+
+itmname_doc3D			{Mixing Ingredients}
+itmdescr_doc3D
+{
+Always remember to mix Charcoal with Salpeter to Salpeter Soot and Sulfur with Salpeter to Sulfur Soot. Do this before grinding and you're safe.
+}
+
+itmname_doc2E			{Recipe Slow-burning Gunpowder}
+itmdescr_doc2E
+{
+Take 4 parts of Salpeter, 2 parts of Charcoal and Sulfur each.
+}
+
+itmname_doc4A			{Old Book}
+itmdescr_doc4A
+{
+A badly worn Book.
+}
+
+itmname_doc4B			{How to Burn Charcoal}
+itmdescr_doc4B
+{
+1 saw the logs
+2 chop the wood
+3 place it in the fireplace and
+4 set fire to it
+5 when it has burned to charcoal it's ready, scoop it from the fireplace
+}
+
+itmname_doc5A			{Bottle Post}
+itmdescr_doc5A
+{
+A Bottle with a Sealed Paper inside.
+}
+
+itmname_doc5B			{Scroll}
+itmdescr_doc5B
+{
+Now let's read the Message!
+}
+
+itmname_doc5C			{How to Extract Salpeter}
+itmdescr_doc5C
+{
+1 prepare by placing more wood in the oven
+2 fill basin nr 1 and wait for it to boil
+3 fill basin nr 2 and wait for it to solve the Salpeter
+4 fill basin nr 3 and fill a bucket from there with the solution
+5 pour the liquid on the planks and wait for it to dry
+6 scrape the Salpeter from the planks
+}
+
+itmname_doc6A			{Envelope}
+itmdescr_doc6A
+{
+Something inside?
+}
+
+itmname_doc6B			{Letter}
+itmdescr_doc6B
+{
+What's it all about?
+}
+
+itmname_doc6C			{How to Distill Sulfur}
+itmdescr_doc6C
+{
+1 bring down some Pyrite Stones on the planks
+2 smash them carefully into Pyrite Dust
+3 collect the Pyrite Dust and
+4 place it in the Distillery
+5 fill up the Distillery with Water from the Courtyard
+6 start the Distillery and wait for it to process
+7 pick up the Distilled Sulfhur
+}
+
+itmname_goldbug			{Gold-Bug}
+itmdescr_goldbug
+{
+A scarabæus which I believe to be totally new.
+}
+
+itmname_wrinkled_paper		{Piece of Paper}
+itmdescr_wrinkled_paper
+{
+A piece of paper in which the scarabæus was wrapped.
+}
+
+itmname_bird_sketch		{Picture}
+itmdescr_bird_sketch
+{
+A childish sketch of a black bird. But which one is it supposed to be?
+}
+
+itmname_bird_sketch_doc		{Picture of a Raven}
+itmdescr_bird_sketch_doc
+{
+Maybe the backside is clean enough for another drawing?
+}
+
+itmname_bird_backside		{Empty Paper}
+itmdescr_bird_backside
+{
+The backside of the Raven picture.
+}
+
+itmname_BH_sketch		{Drawing}
+itmdescr_BH_sketch
+{
+The Black Magic Woman made me this drawing of a Rock which she calls Bessop's Castle.
+}
+
+itmname_BH_sketch_out		{Drawing}
+itmdescr_BH_sketch_out
+{
+I can make a roll of this paper to light the Gunpowder.
+}
+
+itmname_rolled_paper		{Paper Roll}
+itmdescr_rolled_paper
+{
+I'll fill it up with Gunpowder.
+}
+
+itmname_rolled_paper_gp		{Home-made Bomb}
+itmdescr_rolled_paper_gp
+{
+I'll place it on the floor and use the Tinderbox to light it.
+}
+
+itmname_book55A			{Moby Dick}
+itmdescr_book55A
+{
+The novel about Captain Ahab chasing the white whale by Herman Melville.
+}
+
+itmname_book55B			{Moby Dick}
+itmdescr_book55B
+{
+Now that's a big Whale.
+}
+
+itmname_book55C			{Moby Dick}
+itmdescr_book55C
+{
+There's something hidden inside!
+}
+
+itmname_book55D			{Moby Dick}
+itmdescr_book55D
+{
+
+}
+
+itmname_book56			{Jules Verne Collection}
+itmdescr_book56
+{
+"Le Tour du Monde en Quatre-Vingts Jours"
+"Voyage au Centre de la Terre"
+"Hector Servadac: Voyages et aventures à travers le monde solaire"
+"Michel Strogoff: Moscou-Irkutsk"
+"L'île mystérieuse"
+}
+
+itmname_book57			{Famous Underground Caves}
+itmdescr_book57
+{
+"1 Mulu Caves, Borneo"
+"2 Jeita Grotto, Lebanon"
+"3 Carlsbad Caverns, New Mexico"
+"4 Skocjan Caves, Slovenia"
+"5 Majlis al Jinn Cave, Oman"
+"6 Waitomo Caves, New Zealand"
+"7 Puerto Princesa Underground River, Philippines"
+"8 Cave of the Crystals, northern Mexico"	
+"9 Reed Flute Cave, southern China"
+}
+
+itmname_book58			{Cannibalism theme}
+itmdescr_book58
+{
+"Hansel and Gretel" by the Brothers Grimm.
+"Robinson Crusoe" by Daniel Defoe, two volumes.
+"Cooking with Hannibal Lecter" new extended edition, 1400 pages.
+}
+
+itmname_book59			{Four Pirate Classics}
+itmdescr_book59
+{
+"Mutiny on the Bounty" by Charles Nordhoff and James Norman Hall.
+"The Privateersman" by Frederick Marryat. 
+"The Red Rover" by James Fenimore Cooper.
+"The Dark Frigate" by Charles Boardman Hawes.
+}
+
+itmname_book60			{Newfoundland Dogs}
+itmdescr_book60
+{
+A pile of of papers with notes about Pym's favourite dogs. Complete with a portrait of "Tiger".
+}
+
+itmname_book61A			{Book}
+itmdescr_book61A
+{
+The Book has an Icon on the cover. A Bible?
+}
+
+itmname_book61B			{Hymn Book}
+itmdescr_book61B
+{
+No it's a Hymn Book, 'Missa in Discantu'. Something's hidden inside.
+}
+
+itmname_book61C1		{Letters}
+itmdescr_book61C1
+{
+Hmm, there's a Collection of Letters here. The Priest's 'document'.
+}
+
+itmname_book61C2		{Letters}
+itmdescr_book61C2
+{
+The Priest's Letters.
+}
+
+itmname_book61D			{Love Letter}
+itmdescr_book61D
+{
+A very Compromising Letter for a Priest. So that's why he wanted the Book back so badly.
+}
+
+itmname_sergeants_note		{Sergeant's Note}
+itmdescr_sergeants_note
+{
+This Note gives me a Revolver, ammunition and a Long Rope from a Corporal in the Armory.
+}
+
+itmname_poe_manuscript		{Poe's Manuscript}
+itmdescr_poe_manuscript
+{
+Let's see what Mister Poe has written...
+}
+//..........................BOOKS DOCUMENTS END.....................................
+
+//..........................MEDICINE BAG START......................................
+
+itmname_med_bag1_obj		{Medicine Bag}
+itmdescr_med_bag1_obj
+{
+The Medicine Bag is empty.
+}
+
+itmname_med_bag1_doc_NO		{Medicine Bag}
+itmdescr_med_bag1_doc_NO
+{
+The Medicine Bag I got from the indian woman. I'll examine it when I come home or...
+}
+
+itmname_med_bag1_doc_YES	{Medicine Bag}
+itmdescr_med_bag1_doc_YES
+{
+The Medicine Bag I got from the indian woman. Now let's see what's inside!
+}
+
+itmname_med_bag1_out		{Medicine Bag}
+itmdescr_med_bag1_out
+{
+The Medicine Bag I got from the indian woman. Equipped it increases my Luck with +2.
+}
+
+itmname_med_bag2_doc		{Medicine Items}
+itmdescr_med_bag2_doc
+{
+A Hawk Feather, a Pine Cone and a Blue Stone, which could be Lapis Lazuli. Also a folded paper - a message? 
+}
+
+itmname_med_bag2_obj		{Medicine Items}
+itmdescr_med_bag2_obj
+{
+The four items I checked earlier. 
+}
+
+itmname_med_bag2_out		{Medicine Items}
+itmdescr_med_bag2_out
+{
+I think I'll put the Items back in the Medicine Bag. 
+}
+
+itmname_crypto_excel		{Squared Paper}
+itmdescr_crypto_excel
+{
+A large Squared Papper with a small note and a picture attached. The picture of a Hanged Pirate? The note has a very small writing... 
+}
+
+//..........................MEDICINE BAG END........................................
+
+//..........................DETECTVE KIT START......................................
+
+itmname_detective_kit1		{Detective Kit}
+itmdescr_detective_kit1
+{
+The toolkit is locked.   
+}
+
+itmname_detective_kit2		{Detective Kit}
+itmdescr_detective_kit2
+{
+I succeded in opening the box with the Hairpin! Inside is a bunch of Keys.   
+}
+
+itmname_detective_kit3		{Detective Kit}
+itmdescr_detective_kit3
+{
+The toolkit is open but empty. I have to collect six items to fill it up.   
+}
+
+itmname_detective_kit4		{Detective Kit}
+itmdescr_detective_kit4
+{
+The toolkit is filled. Just to lock it and deliver it to Mr Dupin.   
+}
+
+itmname_detective_kit5		{Detective Kit}
+itmdescr_detective_kit5
+{
+The toolkit is filled. I can take out the items if I want to.   
+}
+
+itmname_D_feather		{Feather Brush}
+itmdescr_D_feather
+{
+A small Feather used as a brush. When taking fingerprints?   
+}
+
+itmname_D_scissors		{Scissors}
+itmdescr_D_scissors
+{
+A pair of Scissors. For medical use?   
+}
+
+itmname_D_compasses		{Compasses}
+itmdescr_D_compasses
+{
+A pair of Compasses. Comes in handy when examingin a map.   
+}
+
+itmname_D_scalpel		{Scalpel}
+itmdescr_D_scalpel
+{
+A very sharp Scalpel. I have to be careful so I don't cut myself.   
+}
+
+itmname_D_magnifying		{Magnifying Glass}
+itmdescr_D_magnifying
+{
+The Magnifying Glass is the most wellknown of a private investigators tools.   
+}
+
+itmname_D_tweezers		{Tweezers}
+itmdescr_D_tweezers
+{
+A pair of Tweezers. For picking up very small pieces of evidence.   
+}
+
+itmname_D_hairpin		{Hairpin}
+itmdescr_D_hairpin
+{
+An ordinary Hairpin - what use can I have of it?   
+}
+
+itmname_D_key23			{Keys}
+itmdescr_D_key23
+{
+A collection of five Keys, to where?   
+}
+
+//..........................DETECTVE KIT END........................................
+
+//..........................KEYS START..............................................
+
+itmname_key2			{Chest Key}
+itmdescr_key2
+{
+A common key to a chest.
+}
+
+itmname_key7			{Key}
+itmdescr_key7
+{
+A key with a house symbol.
+}
+
+itmname_key20			{Key}
+itmdescr_key20
+{
+An old key.
+}
+
+itmname_key21			{Key}
+itmdescr_key21
+{
+My room key.
+}
+
+itmname_key22			{Key}
+itmdescr_key22
+{
+The Key to the Sacristy.
+}
+
+itmname_key24			{Black Key}
+itmdescr_key24
+{
+
+}
+
+itmname_key25			{Gold Key}
+itmdescr_key25
+{
+
+}
+
+itmname_key26			{Silver Key}
+itmdescr_key26
+{
+
+}
+
+itmname_key27			{Red Key}
+itmdescr_key27
+{
+
+}
+
+itmname_key28			{Brothel Key}
+itmdescr_key28
+{
+A fine Key with a small bell attached to it.
+}
+
+itmname_key29			{Key}
+itmdescr_key29
+{
+A Key with an empty reel of thread. 
+}
+
+itmname_key30			{Key}
+itmdescr_key30
+{
+A large Key marked with "Cave". 
+}
+
+itmname_key31			{Key}
+itmdescr_key31
+{
+A Key attached to a Chess Piece? 
+}
+
+itmname_key32			{Prison Keys}
+itmdescr_key32
+{
+Keys to all six Prison cells. 
+}
+
+//..........................KEYS END..............................................
+
+//..........................CHURCH ITEMS START....................................
+
+itmname_measuring_tape		{Measuring Tape}
+itmdescr_measuring_tape
+{
+A 15 feet Measuring Tape.
+}
+
+itmname_peg			{Peg}
+itmdescr_peg
+{
+A small wooden Peg.
+}
+
+itmname_knitting_basket		{Small Basket}
+itmdescr_knitting_basket
+{
+Someone has forgotten it in the church. What's inside?
+}
+
+itmname_knitting		{Knitting}
+itmdescr_knitting
+{
+A Ball of Twine with two Needles.
+}
+
+itmname_yarn			{Ball of Twine}
+itmdescr_yarn
+{
+A Ball of Twine yes. And?
+}
+
+itmname_needles			{Needles}
+itmdescr_needles
+{
+Maybe I can use them to pick locks?
+}
+
+itmname_needles2		{Lockpick Tools}
+itmdescr_needles2
+{
+The Needles converted to Lockpick Tools.
+}
+
+itmname_magnet			{Magnet}
+itmdescr_magnet
+{
+A very thin Magnet.
+}
+
+itmname_magnet2			{Magnet}
+itmdescr_magnet2
+{
+A string is attached to the Magnet.
+}
+
+itmname_pliers			{Pair of Pliers}
+itmdescr_pliers
+{
+Just an ordinary tool. How can I use it?
+}
+
+itmname_potionwine2		{Communion Wine}
+itmdescr_potionwine2
+{
+Looks like ordinary Red Wine to me.
+}
+
+itmname_fake_candelabre		{Candelabre}
+
+itmname_wax_candles		{Wax Candles}
+
+itmname_fake_chalice		{Chalice}
+
+itmname_altar_bread		{Altar Bread}
+itmdescr_altar_bread
+{
+Poor bastard - only these dry biscuits to eat.
+}
+
+itmname_flyswatter		{Flyswatter}
+
+itmname_shrine			{Shrine}
+
+itmname_jewelcross		{Jewelcross}
+
+itmname_cowl			{Cowl}
+
+itmname_fake_censer		{Censer}
+
+//..........................CHURCH ITEMS END....................................
+//........................TREASURE ITEMS START..................................
+
+itmname_mixed_treasure		{Treasure}
+itmdescr_mixed_treasure
+{
+In an instant, a treasure of incalculable value lay gleaming before us. 
+As the rays of the sun fell within the pit, there flashed upwards a glow and a glare, 
+from a confused heap of gold and of jewels that absolutely dazzled our eyes.
+}
+
+itmname_emptysack		{Empty Sack}
+itmdescr_emptysack
+{
+An old empty sack.
+}
+
+itmname_treasuresack		{Filled Sack}
+itmdescr_treasuresack
+{
+Part of the Treasure in a sack.
+}
+
+itmname_treasure1		{Prodigious Punch Bowl}
+itmname_treasure2		{Censer}
+itmname_treasure3		{Opal}
+itmname_treasure4		{Elephant}
+
+itmname_treasure5		{Large Ring}
+itmname_treasure6		{Small Ring}
+itmname_treasure7		{Finger Ring}
+itmname_treasure8		{Small Chain}
+
+itmname_treasure9		{Large Clock}
+itmname_treasure10		{Small Clock}
+itmname_treasure11		{Medium Clock}
+itmname_treasure12		{Rich Chain}
+
+itmname_treasure13		{French Crucifix}
+itmname_treasure14		{Small Crucifix}
+itmname_treasure15		{Large Crucifix}
+itmname_treasure16		{Heavy Chain}
+
+itmname_incas_collection	{Incan treasure collection}
+itmname_sword_handle1		{Sword Handle}
+itmname_sword_handle2		{Sword Handle}
+
+itmname_coin3			{Doubloon}
+itmname_coin5			{Guinea}
+itmname_coin9			{Sequin}
+itmname_coin12			{Louis d'Or}
+itmname_coin13			{Gulden}
+itmname_coin16			{Moydore}

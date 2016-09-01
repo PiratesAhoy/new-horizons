@@ -1,0 +1,114 @@
+
+sea_Cancel {Cancel}
+sea_Moor {Moor}
+sea_Port {Port}
+sea_Fort {Fort}
+sea_Shore {Shore}
+sea_SailTo {Sail To}
+sea_Board {Board}
+sea_LandTroops {Land Troops}
+sea_Map {Map}
+sea_Attack {Attack}
+sea_Defend {Defend}
+sea_SailAway {Sail Away}
+sea_HeaveToDrift {Heave To Drift}
+sea_Transfer {Transfer}
+sea_Charge {Reload}
+sea_Speed {Sails}
+sea_CCommand {Give Order}
+sea_Ability {Use Ability}
+sea_ImmediateDeath {Destroy!}
+sea_HoistFlag {Hoist Flag}
+sea_EnterCabin {Captain's Cabin}
+sea_EnterDeck {Ship deck}
+sea_EnterShip {#sshipname# Deck}
+sea_EnterSeadogs {Crew's quarters}
+sea_EnterShipDeck {Ship Deck}
+sea_EnterMainCannonsDeck {Main Cannons Deck}
+sea_EnterUpperCannonsDeck {Upper Cannons Deck}
+sea_EnterLowerCannonsDeck {Lower Cannons Deck}
+sea_EnterHold {Cargo Hold}
+sea_EnterHold1 {1st Cargo Hold}
+sea_EnterHold2 {2nd Cargo Hold}
+sea_LowerSails {Lower sails}
+sea_BattleSails {Battle sails}
+sea_FullSails {Full sails}
+sea_FCoHS_Hail {Hail Ship}
+sea_FCoHS_Contact {Visit Ship}
+sea_KrakenAttack {Summon Kraken}
+sea_SubmergeDutchman {Submerge/Emerge}
+sea_PearlSweeps {Run Out Sweeps}
+sea_QARSword {Sword of Triton}
+sea_NeptuneTrident {Neptune's Trident}
+
+sea_EnglishFlag {England}
+sea_SpainFlag {Spain}
+sea_PortugalFlag {Portugal}
+sea_FranceFlag {France}
+sea_HollandFlag {Holland}
+sea_Flags {Flags}
+sea_Explosion {Explode!}
+
+land_ItemsDead {Loot Corpse}
+land_FastReload {Fast Travel}
+land_ItemsUse {UseItem}
+land_DialogStart {Talk}
+land_ItemsChange {Exchange}
+land_TakeItem {Take Item}
+land_PlaceItem {Place Item}
+land_OutDoor {Open}
+land_UseBox {Open}
+land_ActivateRush {Rush}
+land_ExitDeck {Sea}
+land_Look {Look}
+land_Back {Back}
+land_EnterDeck {Ship deck}
+land_EnterShip {#sshipname# Deck}
+land_EnterCabin {Captain's Cabin}
+land_EnterSeadogs {Crew's quarters}
+land_EnterShipDeck {Ship Deck}
+land_EnterMainCannonsDeck {Main Cannons Deck}
+land_EnterUpperCannonsDeck {Upper Cannons Deck}
+land_EnterLowerCannonsDeck {Lower Cannons Deck}
+land_EnterHold {Cargo Hold}
+land_EnterHold1 {1st Cargo Hold}
+land_EnterHold2 {2nd Cargo Hold}
+land_UseCorpse {Looting corpse}
+land_UseBarrel {Look into barrel}
+land_UseStorage {Gunpowder storage}
+land_GoToTeachHead {Blackbeard's head}
+
+go_store {Store}
+go_shipyard {Shipyard}
+go_tavern {Tavern}
+go_residence {Townhall}
+go_port {Port}
+go_shore {Shore}
+go_loanshark {Loanshark}
+go_brothel {Brothel}
+go_church {Church}
+go_prison {Prison}
+go_fort {Fort}
+go_tailorshop {Tailor's Shop}
+go_blacksmith {Blacksmith}
+go_shipdeck {Ship Deck}
+go_cabin {Captain's Cabin}
+go_seadogs {Crew's quarters}
+go_maincannonsdeck {Main Cannons Deck}
+go_uppercannonsdeck {Upper Cannons Deck}
+go_lowercannonsdeck {Lower Cannons Deck}
+go_hold {Cargo Hold}
+go_hold1 {1st Cargo Hold}
+go_hold2 {2nd Cargo Hold}
+go_apothecary {Apothecary}
+go_gunsmith {Gunsmith}
+go_gunblacksmith {Gun- and Blacksmith}
+go_opium {Opium Den}
+go_library {Library}
+go_maltese {Maltese Abbey}
+go_indianstore {Indian Store}
+go_tavern2 {Second Tavern}
+go_eitc {East India Trading Company}
+go_dwic {Dutch West India Company}
+go_academy {Naval Academy}
+go_HQ {Naval HQ}

@@ -1,0 +1,5 @@
+title=Distiller
+text.t1=No rum, no molasses, no nothing - yet.
+text.t2=I can find wood and bottles with molasses in the Study.
+text.t3=They want me to light the fire. But I don't have any fire kits, maybe I could use my Pistol??
+text.t4=That's it! I have made Rum and found the Key. Now I only have to find out where to use the Key.

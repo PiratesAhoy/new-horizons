@@ -1,0 +1,73 @@
+
+
+Обновление атрибутов
+
+characters[i].actions = "";
+
+
+Действия в нормальном режиме
+
+characters[i].actions.walk = "walk";
+characters[i].actions.backwalk = "back walk";
+characters[i].actions.run = "run";
+characters[i].actions.backrun = "back run";
+characters[i].actions.stsUp = "stairs up";
+characters[i].actions.stsDown = "stairs down";
+characters[i].actions.stsUpBack = "back stairs up";
+characters[i].actions.stsDownBack = "back stairs down";
+characters[i].actions.stsUpRun = "run stairs up";
+characters[i].actions.stsDownRun = "run stairs down";
+characters[i].actions.stsUpRunBack = "back run stairs up";
+characters[i].actions.stsDownRunBack = "back run stairs down";
+
+characters[i].actions.turnLeft = "turn left";
+characters[i].actions.turnRight = "turn right";
+
+Idle анимация в нормальном режиме
+
+characters[i].actions.idle.i1 = "idle_1";
+characters[i].actions.idle.i2 = "idle_2";
+characters[i].actions.idle.i3 = "idle_3";
+characters[i].actions.idle.i4 = "idle_4";
+characters[i].actions.idle.i5 = "idle_5";
+characters[i].actions.idle.i6 = "idle_6";
+characters[i].actions.idle.i7 = "idle_7";
+characters[i].actions.idle.i8 = "idle_8";
+characters[i].actions.idle.i9 = "idle_9";
+characters[i].actions.idle.i10 = "idle_10";
+...
+
+
+//Действия в режиме боя
+characters[i].actions.fightwalk = "fight walk";
+characters[i].actions.fightbackwalk = "fight back walk";
+characters[i].actions.fightrun = "fight run";
+characters[i].actions.fightbackrun = "fight back run";
+
+characters[i].actions.fight.abf1.attack = "attack_1";
+characters[i].actions.fight.abf1.block = "block_1";
+characters[i].actions.fight.abf1.hit = "hit_1";
+
+characters[i].actions.fight.abf2.attack = "attack_2";
+characters[i].actions.fight.abf2.block = "block_2";
+characters[i].actions.fight.abf2.hit = "hit_2";
+
+characters[i].actions.fight.abf3.attack = "attack_3";
+characters[i].actions.fight.abf3.block = "block_3";
+characters[i].actions.fight.abf3.hit = "hit_3";
+
+characters[i].actions.fight.abf4.attack = "attack_4";
+characters[i].actions.fight.abf4.block = "block_4";
+characters[i].actions.fight.abf4.hit = "hit_4";
+
+//Idle анимация в режиме боя
+characters[i].actions.fightidle.i1 = "fight stand_1";
+characters[i].actions.fightidle.i2 = "fight stand_2";
+...
+
+
+
+
+
+
+

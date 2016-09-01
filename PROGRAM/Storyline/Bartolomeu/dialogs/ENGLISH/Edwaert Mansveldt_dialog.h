@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"....",
+"....",
+"Hello Captain! Nice to meet you.",
+"Hello Captain Mansveldt. Your name is familiar.",
+"Maybe you've heard someone talking of my expeditions. I've attacked the Spanish colonies many times and been very lucky with my efforts.",
+"Of course, now I remember! You are referred as the pirate leader of #sisland_Redmond#, your fame has spread far and wide.",
+"Indeed, but I'm an old pirate. And most probably, Captain Morgan will succeed me.",
+"Of course, I understand.",
+"Captain, it would be better to not waste time in idle chatter. Please go to your ship. We'll join you in due course.",
+"Very well, I will see you on board.",
+"Now, we know that the island is not deserted.",
+"Yes and it is dangerous. We have to be on our guard. Keep your eyes open and weapons at hand, move on.",
+"The port seems to be calm. Even the spanish fleut has no crew at the moment.",
+"Really strange...The only thing we are sure of is that the silver train hasn't arrived yet...",
+"The silver is loaded Captain.",
+"Great! Let's sail for #sTortuga#. We have much business to do there.",
+"Captain, I was pleased to work with you, another successful mission. Maybe we'll meet again..",
+"Maybe. Goodbye Captain Mansveldt.",
+
+};

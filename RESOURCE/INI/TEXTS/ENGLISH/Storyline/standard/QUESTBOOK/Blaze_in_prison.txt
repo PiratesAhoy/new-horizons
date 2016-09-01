@@ -1,0 +1,7 @@
+title=Get out of jail.
+text.t1=The soldiers put me in jail. I don't know where my weapon is, and they probably neglected to inform the governor that I am here. What should I do?
+text.t2=The jailer by the name of Edgar Attwood let me out of my prison cell in exchange for my agreement to take him on board my ship as a gunner.
+text.t3=The jailer named Edgar Attwood said that he had been a good gunner, but that he had been fired for hard drinking. I offered him a berth as a gunner on my ship...but only if he let me out of the prison cell. He just laughed.
+text.t4=I don't like it when people make fun of me. Edgar said that I'd walk on crutches if I kept interrupting him while he told me the story of his life. I grew weary of his threats and shot him.
+text.t5=Now I have to get out of this dank vault they call a jail. Edgar mentioned that there are several guards standing watch. I'll have to kill them all. That's the only way to regain my freedom.
+text.t6=Governor Silehard himself came to jail. He said it was a terrible mistake that I was imprisoned, and he offered his full apology. Then he invited me to follow him to his study for a serious conversation.

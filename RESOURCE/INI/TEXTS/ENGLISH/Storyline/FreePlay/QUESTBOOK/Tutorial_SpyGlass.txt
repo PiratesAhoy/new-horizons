@@ -1,0 +1,3 @@
+title=Tutorial - Buy a new spyglass
+text.t1=It appears my spyglass has seen better days as well. Perhaps there is a replacement available.
+text.t2=Done!

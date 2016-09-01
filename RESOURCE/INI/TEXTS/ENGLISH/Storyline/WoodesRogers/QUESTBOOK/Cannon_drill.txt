@@ -1,0 +1,6 @@
+title=Cannon drill
+text.t1=The bell on quarterdeck calls the Cannon Crew.
+text.t2=I have to find a Powderhorn for the priming powder. 
+text.t3=I'll look for a handbook in Cannon Drill at the Military Headquarter. It's near the Docks.
+text.t4=
+text.t5=

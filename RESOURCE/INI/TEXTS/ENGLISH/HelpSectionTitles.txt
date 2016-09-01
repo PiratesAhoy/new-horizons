@@ -1,0 +1,44 @@
+sea_minimap
+{
+  Navigation minimap.
+
+}
+ship_commands
+{
+  Player's and companions' ship control command menu.
+
+}
+fast_commands
+{
+  Current "Hot Action" command icon.
+
+}
+sea_aim
+{
+  This aiming circle show where ship cannons will fire.
+
+}
+alarm_indicator
+{
+  Alarm indicator.
+
+}
+land_commands
+{
+  It shows condition of a player party and commands that could be given to player's officers.
+
+}
+WorldMap_Date_Clock
+{
+  Game time and date could be seen on World Map.
+
+}
+WorldMap_Compas
+{
+  Compass on World Map.
+
+}
+Dialog_window
+{
+  Dialogue window.
+}

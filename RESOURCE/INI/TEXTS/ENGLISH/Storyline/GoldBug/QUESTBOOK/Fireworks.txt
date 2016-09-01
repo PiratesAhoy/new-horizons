@@ -1,0 +1,6 @@
+title=Fireworks
+text.t1=The Chinese restaurant sells Fireworks according to Jupiter.
+text.t2=Slow-burning Gunpowder for Fireworks: 4 parts of Salpeter, 2 parts of Charcoal and Sulfur each.
+text.t3=I have to produce Slow-burning Gunpowder used for Fireworks.
+text.t4=The Chinese has opened three workshops where more raw materials can be found.
+text.t5=If I follow the Chinese to his Laboratory he'll make some Fireworks for me.

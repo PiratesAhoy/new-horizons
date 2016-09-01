@@ -1,0 +1,9 @@
+title=Woodes Rogers third reward
+text.t1=I have to go through the Loansharks's office to find the third (yes) pistol.
+text.t2=I have got a key - leading where?
+text.t3=And guess what I found?! But this pistol has belonged to the famous pirate hunter Hornigold. Maybe it's worth some money?
+text.t4=The Governor implies I missed something - have to check the basement again.
+text.t5=Dave told me about Selkirk - I think I have heard of him, what's he doing here? He is to be found in Rogers' Bootyroom.
+text.t6=Caroline is back according to Selkirk's friend. I'll look for her room.
+text.t7=There should be an old padlock with its key in Caroline's Bedroom.
+text.t8=I also have to search for a way to unlock the door to Rogers' Bedroom.

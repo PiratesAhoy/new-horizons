@@ -1,0 +1,3 @@
+title=Help the church.
+text.t1=Father Bernard is the head of the church in #sRedmond# on #sisland_Redmond#. He asked me to find evidence to prove whether the priest named Father Jerald is guilty or not. He lives in the city of #sGreenford# on #sisland_Oxbay#, and people say that he is up to his eyes in sin, and that he forgot about God. This shouldn't take long. I'll run this errand in the hopes that I can win the trust of Father Bernard. I'll check at the tavern, first.
+text.t2=Simon Hanpool is a tavern-keeper in #sGreenford# on #sisland_Oxbay#. I talked to him, and he had no idea that such rumors were circulating about Father Jerald. According to his words, Father Jerald is a good priest, and he tends to his duties without fail. Next, to talk to the priests.

@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = { 
+"You! Get out!",
+"...",
+"Well, look who it is! Maybe you'll buy a drink for the best navigator in this foul archipelago? Or, at least, not the worst!",
+"I'm sorry. I don't believe we've ever met.",
+"Even better! We will celebrate our new friendship!",
+"I'm more interested in information at the moment. I wonder if your ship has ever run across a pirate corvette?",
+"I'm happy to answer questions until the seasons change - as long as I've got a mug of rum before me.",
+"Here's your rum. Let's see if it loosens your tongue.",
+"How about if I slap you silly instead? How would that be?",
+"Ahhh. Good rum!",
+"You haven't answered my question.",
+"Question? Ah, the pirate corvette! Yes. I saw it as clearly as I see you now. If our holds hadn't been empty, I doubt I would be here to speak with you. Fortunately for my comrades and I, the corvette's holds must have been full, and we were able to slip away. \nStrange name, as I recall. Not one I'd heard before. 'Crimson Blood'.'",
+"So, did the pirate corvette give chase? And where did it go when it became clear it couldn't run your vessel down?",
+"Who knows? When they decided to resign from chasing us, it seemed they headed Eastward. They were definitely pirates, so I bet they plan to land at the pirate settlement on #sisland_Quebradas Costillas#.",
+"Thanks. Enjoy your rum.",
+"Yes. That might work, too. Perhaps we'll just forget about the rum.",
+"You didn't answer my question.",
+
+};

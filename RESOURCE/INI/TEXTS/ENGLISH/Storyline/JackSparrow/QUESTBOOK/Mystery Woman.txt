@@ -1,0 +1,17 @@
+title=Mystery Woman
+text.t1=I was approached by a woman who wants me to meet her at Gray Rock Bay, with my ship.
+text.t2=Met the mystery woman. It turns out she is an Excise Agent. I have decided to help her, so we are need to go to #sTortuga# off the coast of #sisland_Hispaniola#.
+text.t3=Met the mystery woman. It turns out she is an Excise Agent. I decided not to help her, she stole my ship and I got arrested by the Town Guards. Anyway talked my way out of that one, so I need to decide whether to return to #sOxbay# or goto the Pirate encampment on #sisland_Quebradas Costillas# to look for Miss Brin.
+text.t4=I decided not to meet the mystery woman at Gray Rock Bay. But, I ran into her at the pirate island and I have knocked her out. Now on to the Tavern to try to see what's going on here.
+text.t5=We made it to #sTortuga#, and picked up an officer by the name of Bootstrap Bill Turner. We need to sail to #sisland_Quebradas Costillas# now as he says that is where the woman Brinkley went.
+text.t6=I cannot leave without doing something to help out at #sOxbay#, so I will work for the Company and the Governor. I hope I haven't taken on too much as there is no going back.
+text.t7=We need to find a diamond smuggler named Eastwood. He is somewhere here on the island.
+text.t8=Bootstrap has left us to join Barbossa's ship. We need to get back to #sOxbay# on #sisland_Oxbay# and find Brock.
+text.t9=Another mystery woman. This one wants me to meet her at Lighthouse bay some time.
+text.t10=Our relationship is over. But I made out quite well overall.
+text.t11=I fell into a trap. Brock is still on #sisland_Oxbay#. We need to go back and find him.
+text.t12=empty.
+text.t13=empty.
+text.t14=empty.
+text.t15=empty.
+

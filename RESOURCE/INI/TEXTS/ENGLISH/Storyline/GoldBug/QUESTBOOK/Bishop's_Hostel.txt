@@ -1,0 +1,16 @@
+title=Bishop's Hostel
+text.t1=There is place called Bessop's Castle.
+text.t2=Coming from from Charleston search for a path immediately to the right.
+text.t3=After the Bridge turn left and walk over the cliff.
+text.t4=Actually it's neither a Castle, nor a tavern, but a high Rock.
+text.t5=There it is, the Rock looks just like the sketch. Now I have to find a way up.
+text.t6=I have found Devil's Seat, no doubt about it.
+text.t7=Let's return to to the Devil's Seat now.
+text.t8=A Skull in a Tree! That must be it, now I'm looking for a very high tree. The stem differs from the other trees - its brown!
+text.t9=Yes, we have found the place. This will require tools, weapons and Mr Poe's help. Let's return to him in Charleston. 
+text.t10=I'll meet Mr Poe ouside the Town gates when I have found what I need.
+text.t11=I'm supposed to take our Boat to dat Bishop's Hotel.
+text.t12=I'll meet Mr Legrand ouside the Town gates when I have found what I need.
+text.t13=The ammunition to this new Percussion Lock Pistol was a little tricky but now I'm ready to join my friend William outside town.
+text.t14=To Bishop's Hostel then. Hope Jupiter found his way there.
+text.t15=Let's return to the Tree now when we got all kind of Tools.

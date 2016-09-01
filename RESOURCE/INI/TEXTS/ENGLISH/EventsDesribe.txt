@@ -1,0 +1,44 @@
+ECONOMY_title {#stown# is now #seconomy#}
+ECONOMY_entry {#stown# is now #seconomy# due to recent events that has happend. This will mean this town now will require other goods so it's best to visit the store again to check.}
+
+MALARIA_title {Malaria strikes #stown#}
+MALARIA_entry {An increasing number of people in #stown# are reported to have died from Malaria. The civilian losses were quite high, but the soldiers in the local garrison have suffered even more.}
+
+PIRATES_title {Pirates plunder #stown#}
+PIRATES_entry {A pirate assault on #stown# has been reported. Some pirates seem to have sneaked into town before their ships attacked the harbor in the middle of the night. Those in town took the garrison by surprise and kept the town gates open for their comrades. The whole attack didn't last much longer than two hours. The pirates escaped with a vast amount of gold, before the fort commander was able to gather his troops for defence. Several people died in the brutal attack, as they tried to defend their possesions on their own.}
+
+GOLDFOUND_title {Gold found near #stown#}
+GOLDFOUND_entry {Miners from #stown# have struck a rich vein of gold. A new gold mine has been opened and the governor has sent for more troops in order to better protect the town from possible pirate attacks. The new riches attract all kind of people, so #stown# is expected to grow.}
+
+SILVERFOUND_title {Silver found near #stown#}
+SILVERFOUND_entry {Miners from #stown# have struck a rich vein of silver. A new silver mine has been opened and the governor has sent for more troops in order to better protect the town from possible pirate attacks. The new riches attract all kind of people, so #stown# is expected to grow.}
+
+INDIANS_title {Indians attack #stown#}
+INDIANS_entry {A major attack of indians on #stown# has been reported by travellers. The indians seem to have plundered and massacred the civilian population as well as the local garrison. Finally the cannons of the garrison drove them away, leaving the town completely desolate.}
+
+SLAVEREVOLT_title {Slave revolt at #stown#}
+SLAVEREVOLT_entry {The governor of #stown# spread news that a slave revolt has been put down by the local garrison. All surviving marauders were hanged as a warning. Although the rebellion has been put down, the loss of quite a lot of slaves is expected to have a bad impact on the economy of #stown#.}
+
+FIRE_title {Serious fire in #stown#}
+FIRE_entry {A serious fire has laid waste to parts of #stown#. The fire erupted near the harbor, where a warehouse suddenly exploded into flames. There is rumor it was stocked with oil or gunpowder or even both. The fire quickly spread and could not be quenched until two days later. Quite a lot of people are reported to have died in the attempt to save their belongings from the flames.}
+
+HURRICANE_title {Hurricane strikes #stown#}
+HURRICANE_entry {#stown# has been struck by a serious hurricane. Wind and water destroyed many buildings in town, especially the poorer parts were hit badly. Several ships in the harbor sunk as a result of the hurricane. Diseases are expected to spread throughout town as usual after such disasters.}
+
+SETTLERS_title {New settlers at #stown#}
+SETTLERS_entry {A convoy of ships bringing new settlers from Europe has arrived at #stown#. The new settlers are badly needed to strengthen the economy of the town. It has been reported that the convoi also brought luxory goods and new inventions from Europe to the colonies, as well as a small battalion of soldiers.}
+
+EXPEDITION_title {Expedition returns to #stown#}
+EXPEDITION_entry {An expedition into the jungle has returned to #stown#. The expedition was a great success, as the explorers found a gold vein not far away, which was exploited by a native tribe. The explorers captured the village and enslaved the surviving indians in order to establish a new mining camp. The expedition finally returned with a great amount of goods and gold, several hitherto unknown plants and a number of slaves.}
+
+GOODECO_title {}
+GOODECO_entry {}
+
+Fetch_Shipyard_title {#stown# is expanding the warfleet}
+Fetch_Shipyard_entry {The governor of #stown# has ordered the shipyard to create new ships for the warfleet. This will require a lot of resources so chances are some of these are depleted.}
+
+Fetch_Tailor_title {#stown# is expanding the military}
+Fetch_Tailor_entry {The fortcommander of #stown# is drafting new people to join their army. This will provide the tailor with a lot of new work and might deplete some of the resources of the island.}
+
+Fetch_Smith_title {#stown# wants new weapons}
+Fetch_Smith_entry {To fight better the governor of #stown# has decided that all weapons should be checked and improved. This will probably make the smith use a lot of resources and they might need some help.}

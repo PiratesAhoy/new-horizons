@@ -1,0 +1,5 @@
+title=Such Devoted Sisters
+text.t1=I have found my sister Bonnie. It's like looking in a mirror, we are so alike. 
+text.t2=Now we must go to #sisland_Turks# Island and find the pirate Short Jack Gold... and ask him if he wants to go swimming!
+text.t3=We made it to #sisland_Turks# Island. Now to find Short Jack Gold. We will ask in the Tavern first.
+text.t4=So it's off to #sisland_Quebradas Costillas# to find our brother Blaze.

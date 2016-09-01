@@ -1,0 +1,3 @@
+title=Tutorial - Hire some crew at the tavern
+text.t1=Unfortunately, a few hands were lost at sea. I should find a tavern to hire more crew before setting sail.
+text.t2=Done!

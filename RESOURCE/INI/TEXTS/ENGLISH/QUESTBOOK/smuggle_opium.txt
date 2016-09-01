@@ -1,0 +1,5 @@
+title=General Quest - Smuggling Opium for #sbuyer#.
+text.t1=I talked to #sbuyer# from #splace#. He told me to get him #samount# opium plants before 2 months have passed. I'll guess it's time to head to the Opium Den!
+text.t2=I got the opium in #splace#! Now let's head back to the client.
+text.t3=I brought the client the opium and he seemed pleased. He told me that for he has enough for a while and I should try other clients. When I've helped at least one of them, I could try with this one again.
+text.t4=I was too late and couldn't make the deal. I hope this won't affect my relation to the smugglers too badly.

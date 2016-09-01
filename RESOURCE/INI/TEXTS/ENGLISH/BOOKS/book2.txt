@@ -1,0 +1,34 @@
+TEXT	{
+Theorem : All numbers are equal to zero.
+Proof: Suppose that a=b. Then
+a = b
+a^2 = ab
+a^2 - b^2 = ab - b^2
+(a + b)(a - b) = b(a - b)
+a + b = b
+a = 0
+Furthermore if a + b = b, and a = b, then b + b = b, and 2b = b, which mean that 2 = 1 and your two-mast brig is actually a one-mast tartane.
+-------------------------
+Jack Sparrow and his two lieutenants stay a night in Tortuga tavern, where they're charged 10 gold each - 5 for the normal tavern rate and 5 for the night's company with the bar wench. It still works out cheaper than going to the brothel, so Jack takes 10 gold from each lieutenant, another 10 gold from his own pocket, then hands over the 30 gold total. The following morning the bar wench says that she forgot that there's a special offer for a foursome, it's only 25 gold total, and hands 5 gold back to Jack. Jack puts 1 gold in his pocket, gives 1 gold to each of his lieutenants, then gives the other 2 back to the wench. Now there are two problems with this story. One is that Jack Sparrow, having got his hands on 5 gold, would not willingly part with it again. The other is that each man has now paid a total of 9 gold, which together with the 2 gold Jack gave back to the wench makes a total of 29 gold. Where's the missing gold piece?
+-------------------------
+Blackbeard: "Think of a number between 1 and 10 but don't tell me what it is."
+Pirate 1: "Got it."
+Blackbeard: "Your number is 4."
+Pirate 1: "No, actually it's 6."
+Blackbeard: "Wrong answer." <BANG> "Think of a number between 1 and 10 but don't tell me what it is."
+Pirate 2: "Got it."
+Blackbeard: "Your number is 7."
+Pirate 2: "I was thinking of 3 but suddenly I'm thinking of 7."
+-------------------------
+Theorem: All numbers are equal.
+Proof: Choose arbitrary a and b, and let t = a + b. Then
+a + b = t
+(a + b)(a - b) = t(a - b)
+a^2 - b^2 = ta - tb
+a^2 - ta = b^2 - tb
+a^2 - ta + (t^2)/4 = b^2 - tb + (t^2)/4
+(a - t/2)^2 = (b - t/2)^2
+a - t/2 = b - t/2
+a = b
+So all numbers are the same, and math is pointless, which means it is time to put down this book and get back to the helm before you hit that rock ahead.
+}

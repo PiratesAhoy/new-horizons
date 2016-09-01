@@ -1,0 +1,3 @@
+title=Kill Sidonio Ogarrio.
+text.t1=Wilfred Bythesea has given me a mission to kill a person named Sidonio Ogarrio who lives in #sIsla Muelle# on #sisland_Isla Muelle#.
+text.t2=Upon arriving at #sIsla Muelle# on #sisland_Isla Muelle# I carried out a simple task of eliminating Sidonio Ogarrio from the game.

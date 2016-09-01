@@ -1,0 +1,83 @@
+itmname_chest	{McDorey's Chest}
+itmdescr_chest
+{
+A small chest that Oweyn McDorey has asked you to deliver to Charles Windem on #sisland_Redmond#.
+}
+
+itmname_coins	{Cursed Coins}
+itmdescr_coins
+{
+Large golden coins with a skull depiction. You don't like the look of them.
+}
+
+itmname_gov_letter	{Governor's letter}
+itmdescr_gov_letter
+{
+A letter from Governor Silehard that he entrusted you to deliver to Isenbrandt Jurcksen on #sisland_Quebradas Costillas#.
+}
+
+itmname_incas_idol	{Golden idol}
+itmdescr_incas_idol
+{
+A golden idol of Hurukacelitipochtli, the Incan god of death.
+}
+
+itmname_incas_collection	{Incan treasure collection}
+itmdescr_incas_collection
+{
+A collection of Incan treasures.
+}
+
+itmname_piece_of_legend	{Tablet}
+itmdescr_piece_of_legend
+{
+A piece of a clay tablet covered with ancient Incan characters
+}
+
+itmname_notes_of_legend	{Text of the legend}
+itmdescr_notes_of_legend
+{
+Text of the ancient Incan legend, written on paper.
+}
+
+itmname_copyes_of_legend	{Copy of the legend's text}
+itmdescr_copyes_of_legend
+{
+A copy of the ancient Incan legend text.
+}
+
+itmname_rheims_journal	{Rheims' Journal}
+itmdescr_rheims_journal
+{
+Journal of captain Rheims.
+}
+
+itmname_compramat_to_domigues	{Compromising documents}
+itmdescr_compramat_to_domigues
+{
+Documents completely discrediting Padre Domingues.
+}
+
+itmname_rheims_letter	{Rheims' letter}
+itmdescr_rheims_letter
+{
+A letter from Captain Rheims to the governor of #sRedmond# on #sisland_Redmond#, Robert Christopher Silehard.
+}
+
+itmname_massoni_papers	{Valentin Massoni's papers}
+itmdescr_massoni_papers
+{
+These papers say that the supply barque is at #sFalaise de Fleur# on #sisland_Falaise de Fleur# right now, waiting for a convoy vessel.
+}
+
+itmname_artefact	{Artefact}
+itmdescr_artefact
+{
+The mysterious artefact that you found in the ancient temple. There is a tingling sensation in your hands when you hold it.
+}
+
+itmname_story_gramota	{Documents}
+itmdescr_story_gramota
+{
+These papers give permission to escort the ship 'Oiseau' and need to be shown to the harbour master.
+}

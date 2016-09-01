@@ -1,0 +1,6 @@
+TEXT	{
+This is version #dversion# of the patrolling schedule for #sIsland#.
+Because of the amount of contraband for sale on this island, it has been decided to put the coastguard to #sState#.
+This means this will be the schedule:
+#sSchedule#
+}

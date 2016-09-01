@@ -1,0 +1,71 @@
+QUEST_MESSAGE1 {Mission Failed. Danielle is dead! GAME OVER.}
+QUEST_MESSAGE2 {The time for your delivery quest has expired.}
+QUEST_MESSAGE3 {You became TOO old to resist the curse of the Aztec gold...}
+QUEST_MESSAGE4 {You found a silver treasure!}
+QUEST_MESSAGE5 {Nigel Blythe is attacking the smuggler corvette!}
+QUEST_MESSAGE6 {Nigel Blythe has left you!}
+QUEST_MESSAGE7 {Captain, we've encountered the Black Pearl!}
+QUEST_MESSAGE8 {Nice work, you've killed your teacher!}
+QUEST_MESSAGE9 {Now you're on your own in this cruel world!}
+QUEST_MESSAGE10 {To a pirate who has no mercy in his}
+QUEST_MESSAGE11 {wicked heart we give a secret reward!}
+QUEST_MESSAGE12 {Sorry, you have too many officers! Fire one or more of your officers and try again!}
+
+Address_Form_Spa {Señor}
+Address_Form_Fra {Monsieur}
+Address_Form_Eng {Sir}
+Address_Form_Por {Senhor}
+Address_Form_Hol {Mijnheer}
+
+Swear_1 {Break my rudder!}
+Swear_2 {Damn!}
+Swear_3 {Oh dear!}
+Swear_4 {Blast!}
+Swear_5 {Sink my ship!}
+Swear_6 {Blow me down!}
+Swear_7 {Tear my sails!}
+Swear_8 {Arrgh!!!}
+Swear_9 {Oh heaven!}
+Swear_10 {Blazes!}
+
+TimeGreeting {Good day}
+
+Rumour_1 {Nothing much has happened lately. Everything has been fairly smooth. I wonder how long it will be like this!}
+Rumour_2 {I've heard an aboriginal cemetery was found inside the Oxbay mine. A lot of bones, crockery, spikes and clay plates were found but not a grain of gold!}
+Rumour_3 {I heard that the Redmond Governor put a merchant in jail over a small tavern fight. They say he ordered the arrest just so he could confiscate the merchant's goods.}
+Rumour_4 {I heard that the Redmond Governor put a merchant in jail over a small tavern fight. They say he ordered the arrest just so he could confiscate the merchant's goods.}
+Rumour_5 {I heard that the Redmond Governor put a merchant in jail over a small tavern fight. They say he ordered the arrest just so he could confiscate the merchant's goods.}
+Rumour_6 {I heard that the Redmond Governor put a merchant in jail over a small tavern fight. They say he ordered the arrest just so he could confiscate the merchant's goods.}
+Rumour_7 {I heard that the Redmond Governor put a merchant in jail over a small tavern fight. They say he ordered the arrest just so he could confiscate the merchant's goods.}
+
+Falaise De Fleur {Falaise De Fleur}
+Isla Muelle {Isla Muelle}
+Conceicao {Conceição}
+Conceição {Conceição}
+Douwesen {Douwesen}
+Redmond {Redmond}
+Oxbay {Oxbay}
+Greenford {Greenford}
+Grand Cayman{Grand Cayman}
+Santo Domingo{Santo Domingo}
+Port au Prince{Port au Prince}
+Pointe à Pitre{Pointe à Pitre}
+Pointe a Pitre{Pointe à Pitre}
+Havana{Havana}
+Marigot{Marigot}
+Philipsburg{Philipsburg}
+
+OFFIC_TYPE_BOATSWAIN {boatswain}
+OFFIC_TYPE_CANNONEER {cannoneer}
+OFFIC_TYPE_QMASTER {quartermaster}
+OFFIC_TYPE_NAVIGATOR {navigator}
+OFFIC_TYPE_FIRSTMATE {first mate}
+OFFIC_TYPE_CARPENTER {carpenter}
+OFFIC_TYPE_DOCTOR {doctor}
+OFFIC_TYPE_ABORDAGE {deck fighter}
+
+DOUBLE_QUOTE {"}
+
+newline {
+
+}

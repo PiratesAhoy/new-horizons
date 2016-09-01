@@ -1,0 +1,2 @@
+title=Jupiters wood mission
+text.t1=Pick up wood in the boathouse.

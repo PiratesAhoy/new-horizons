@@ -1,0 +1,10 @@
+title=Charcoal
+text.t1=I have produced Charcoal.
+text.t2=
+text.t3=I need a Ladle to scoop the Charcoal from the fireplace.
+text.t4=It's going to take time - I'll do something else meanwhile.
+text.t5=1 Saw the logs.
+text.t6=2 Chop the wood.
+text.t7=3 Place it in the fireplace.
+text.t8=4 Set fire to it.
+text.t9=5 When it has burned to charcoal it's ready, scoop it from the fireplace.

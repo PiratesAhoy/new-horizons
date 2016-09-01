@@ -1,0 +1,3 @@
+title=Tutorial - Repair battle damage
+text.t1=The hull and rigging were damaged in a pirate attack so I must repair them at the shipyard before leaving the island.
+text.t2=Done!

@@ -1,0 +1,6 @@
+title=Woodes Rogers sixth reward
+text.t1=There is one more pistol - the last (puh!). Rogers inviteded me to take a drink in the Crew's Quarters.
+text.t2=This should be the last one then ... Wonder who 'Basilica Hands' was?
+text.t3=Oh no - when I finally got that last Pistol I'm stuck in the prison! I have to explore the cell carefully.
+text.t4=
+text.t5=

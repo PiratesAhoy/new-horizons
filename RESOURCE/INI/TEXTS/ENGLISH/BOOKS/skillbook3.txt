@@ -1,0 +1,3 @@
+TEXT	{
+Round shot is used by naval guns and often ploughs through many ranks of crewmembers, causing multiple casualties. It is like a bouncing bowling ball, which does not stop after the initial impact, but continues and tears through anything in its path. It can bounce when it hits the ground, striking men at each bounce.
+}

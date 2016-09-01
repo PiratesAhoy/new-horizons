@@ -1,0 +1,14 @@
+title=Salpeter
+text.t1=I have produced Salpeter.
+text.t2=It's going to take time to get all that water boiling - I'll do something else meanwhile.
+text.t3=It's going to take time to solve all Salpeter - I'll do something else meanwhile.
+text.t4=It's going to take time to dry the Salpeter on the planks - I'll do something else meanwhile.
+text.t5=
+text.t6=I need a Tool to scrape the Salpeter from the planks.
+text.t7=1 Prepare by placing more wood in the oven.
+text.t8=2 Set all levers to 'up' which is stop.
+text.t9=3 Fill basin nr 1 and wait for it to boil.
+text.t10=4 Fill basin nr 2 and wait for it to solve the Salpeter.
+text.t11=5 Fill basin nr 3 and fill a bucket there with the solution.    
+text.t12=6 Pour the liquid on the planks and wait for it to dry.
+text.t13=7 Scrape the Salpeter from the planks.

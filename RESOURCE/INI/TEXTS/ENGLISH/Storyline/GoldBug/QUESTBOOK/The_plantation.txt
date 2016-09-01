@@ -1,0 +1,6 @@
+title=The plantation
+text.t1=The Bessop plantation is to be found in the jungle outside Charleston.
+text.t2=There might be some slaves left from the Bessop era. Have to get inside.
+text.t3=We'll climb the mountain first to find a way in.
+text.t4=There are safe zones in the Plantation such as among those Bales, in the Sugarcane Fields or even in some Buildings. I can only SAVE there.
+text.t5=I have to keep very close to the Mountain so the guards don't see me.

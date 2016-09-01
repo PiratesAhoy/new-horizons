@@ -1,0 +1,448 @@
+CtrlPress{Press "Ctrl" for add }
+AltPress{"Alt" for add}
+ShiftPress{"Shift" for add}
+
+SettingsDefault{WARNING!}
+SettingsDefaultinfo{
+
+All Build Settings will be reset to default.
+You will lose all your personal preferences.
+Continue?}
+
+profile_name{Game profile-name}
+settingprofile_name1
+{
+Default game-profile name
+}
+settingprofile_name2
+{
+#All saved game will be stored with this profile-name and can be loaded with this profile-name only
+}
+
+REALISMMODE_0{- Simple sailing mode, wind direction has little effect
+- Spyglasses and on-screen RADAR offer full information
+- Worldmap Sailing and DirectSail are both available
+- Sail-To and Fast Travel are freely available
+- Can freely command ships and reload gun while fighting}
+
+REALISMMODE_1{- Wind and inertia heavily affect sailing
+- On-Sea data depends on the items you have equipped
+- Worldmap Sailing and DirectSail are both available
+- Instant Travel limited to only discovered locations
+- Large ships limited as well as reload while fencing}
+
+REALISMMODE_2{- Worldmap completely disabled
+- Size of Caribbean increased for accurate travel
+- No unrealistic On-Sea data available
+- Sail-To completely disabled
+- No unrealistic skill enhancements from items}
+
+AniOn{Animation and Extra Text}
+
+AniOff{No Animation or Text}
+
+general_game{-- GENERAL GAME SETTINGS --}
+settinggeneral_game1
+{
+# These are settings you can tweak based on your own personal preference, but aren't generally related to realism or difficulty.
+}
+graphical{-- GRAPHICAL SETTINGS --}
+settinggraphical1
+{
+# These settings change the way the game looks, but have no influence on gameplay.
+}
+difficulty{-- DIFFICULTY SETTINGS --}
+settingdifficulty1
+{
+# These settings can be used to increase/decrease the difficulty of the game.
+}
+realism_character{-- REALISM SETTINGS: CHARACTER --}
+settingrealism_character1
+{
+# These realism settings are related to the characters, such as the skill increases and weapons.
+}
+realism_interface{-- REALISM SETTINGS: INTERFACE --}
+settingrealism_interface1
+{
+# These realism settings allow/disallow certain things in the game's interfaces.
+}
+realism_sea{-- REALISM SETTINGS: SEA --}
+settingrealism_sea1
+{
+# These realism settings are related to sailing around at sea, including sea battles, as well as the worldmap.
+}
+
+
+auto_skill_system{Experience Gain}
+settingauto_skill_system1
+{
+Manually distribute received skill points (stock PotC)
+}
+settingauto_skill_system2
+{
+Player actions define the skill increases
+}
+settingauto_skill_system3
+{
+# Choose how you gain experience during the game.
+NOTE: Does NOT apply to Abilities.
+}
+deathrate{Survival Chance}
+settingdeathrate1
+{
+Chance of Game Over after shipwrecks and lost fights. If you survive, you will be down and out, making this a whole new challenge!
+1 means certain survival, 130 means certain death.
+}
+enable_weaponsmod{Weapon Qualities}
+settingenable_weaponsmod1
+{
+Off (stock PotC)
+}
+settingenable_weaponsmod2
+{
+Weapons have different quality grades: from "Worn" to "Excellent".
+}
+settingenable_weaponsmod3
+{
+#Blade quality decreases over time and can break.
+Weapons can be repaired again at blacksmiths.
+}
+wdmap_ship_show_mode{WorldMap Ships Info Level}
+settingwdmap_ship_show_mode1
+{
+All ships shown as nation-specific ship models (stock PotC)
+}
+settingwdmap_ship_show_mode2
+{
+All ships visible, but nationality for all but pirate hidden
+}
+settingwdmap_ship_show_mode3
+{
+No nations shown
+}
+settingwdmap_ship_show_mode4
+{
+No ships shown at all
+}
+settingwdmap_ship_show_mode5
+{
+#   England: Brig       France: Frigate
+  Holland: Fleut       Spain: Galleon
+Portugal: Caravel       Pirate: Schooner
+}
+national_paint_schemes{National Paint Schemes}
+settingnational_paint_schemes1
+{
+Most ships' paint schemes are random (stock PotC)
+}
+settingnational_paint_schemes2
+{
+Ships' paint schemes are dependent on their nationality
+}
+settingnational_paint_schemes3
+{
+#Distinct colour schemes for specific nations' ships can help recognizing them from afar
+}
+sailho_infolevel{Sail-Ho Info Level}
+settingsailho_infolevel1
+{
+Reports only a "strange sail on the horizon"
+}
+settingsailho_infolevel2
+{
+The type of ship is reported, but nothing else
+}
+settingsailho_infolevel3
+{
+Nationality and type of ship reported
+}
+settingsailho_infolevel4
+{
+#This setting allows you to add some surprise to your encounters
+}
+visit_deck{Anchoring and Ransom}
+settingvisit_deck1
+{
+You go straight to port or shore. Prisoner ransoming is via Passenger Interface.
+}
+settingvisit_deck2
+{
+You go to deck first. Prisoner ransoming is done by talking to them in your ship's cargo hold.
+}
+settingvisit_deck3
+{
+#Visit ship deck when traveling between port/shore and sea.
+
+NOTE: You can skip this at any time by using the [Enter] menu and choosing "Sea" or "Port".
+}
+use_real_cannons{Real cannons}
+settinguse_real_cannons1
+{
+Stock PotC: guns fire in a high arc, wide left-right traversing
+}
+settinguse_real_cannons2
+{
+More realistic, direct fire; less left-right traversing possible
+}
+extra_hit_check{Extra hit check}
+settingextra_hit_check1
+{
+No, accidental hits won't cause hostilities
+}
+settingextra_hit_check2
+{
+Yes, when a ship is hit, reduce relation to you
+}
+settingextra_hit_check3
+{
+#Enable stray shot hits on friendly ships to cause hostility. "Real cannons" must be enabled for this setting to take effect
+}
+cannonpowder_mod{Gunpowder for Cannons}
+settingcannonpowder_mod1
+{
+No gunpowder required for ship guns (stock PotC)
+}
+settingcannonpowder_mod2
+{
+You must have gunpowder in your CARGO HOLD to charge ships' cannons
+}
+settingcannonpowder_mod3
+{
+#Not to be confused with the PERSONAL ITEM gunpowder for PISTOLS
+}
+food_on{Food Rations}
+settingfood_on1
+{
+Off (stock PotC)
+}
+settingfood_on2
+{
+The crew requires food and rum to stay alive and happy
+}
+settingfood_on3
+{
+#Half food rations decreases morale. Double rum rations can increase morale. Until the crew gets drunk, that is.
+}
+sy_rpg_style{Shipyard Ship Availability}
+settingsy_rpg_style1
+{
+All ship types may be sold (stock PotC)
+}
+settingsy_rpg_style2
+{
+Shipyards will not sell outclassed ships to low level players
+}
+settingsy_rpg_style3
+{
+#If ON, sale price for ships depends on how you acquired the ship. A pirated ship does not sell for as much gold as a previously purchased one does.
+}
+realistic_ship_purchase{Realistic Ship Purchase}
+settingrealistic_ship_purchase1
+{
+No additional limits on buying ships (stock PotC)
+}
+settingrealistic_ship_purchase2
+{
+No ships larger than frigates can be purchased but need to be captured instead
+}
+settingrealistic_ship_purchase3
+{
+#If you want to buy large ships, you need to be friendly with the nations selling them. In most cases, you will even need to have a rank with that nation. Higher rank means larger ships.
+}
+it_rpg_style{Trader Item Availability}
+settingit_rpg_style1
+{
+Players can buy VERY good items at the beginning of the game
+}
+settingit_rpg_style2
+{
+Traders will not have items that are too good for the player
+}
+settingit_rpg_style3
+{
+#Take player's level into account for items available from vendors
+}
+salary_multiplier{Salary Mutiplier}
+settingsalary_multiplier1
+{
+Multiplier for Crew and Officer salary. 1 is stock PotC. 4 and above makes for a more interesting and challenging game.
+}
+kb_tuneships{Tune ships}
+settingkb_tuneships1
+{
+Stock PotC: Ships can't be upgraded
+}
+settingkb_tuneships2
+{
+Upgrading ships is possible in shipyards
+}
+enable_ammomod{Ammunition and Powder}
+settingenable_ammomod1
+{
+No ammunition required for handheld guns (stock PotC)
+}
+settingenable_ammomod2
+{
+You must have gunpowder and the right type of bullets in your PERSONAL INVENTORY to charge HANDHELD guns.
+}
+settingenable_ammomod3
+{
+# Not to be confused with gunpowder for ships' CANNONS
+}
+corpsemode{Lootable Corpses}
+settingcorpsemode1
+{
+No bodies laying around, no looting ability (stock PotC)
+}
+settingcorpsemode2
+{
+Corpses will persist, but will not be manually lootable
+}
+settingcorpsemode3
+{
+Corpse persists and can be manually looted of items
+}
+settingcorpsemode4
+{
+Corpse persists, can be manually looted of items and not obstruct walking
+}
+settingcorpsemode5
+{
+#WARNING: On option 3, the body will create an impassible obstacle until looted!
+}
+autoloot_on{Auto-Looting}
+settingautoloot_on1
+{
+No automatic looting of killed characters
+}
+settingautoloot_on2
+{
+Blade/Gun/Money of killed enemies is automatically moved into your inventory.
+}
+settingautoloot_on3
+{
+#This can be combined with the Lootable Corpse setting as any leftover items not Auto-Looted will be left on the corpse.
+}
+dialog_camera{Dialog Camera}
+settingdialog_camera1
+{
+0.0: Camera remains locked behind character (stock PotC)
+}
+settingdialog_camera2
+{
+0.1 to 1.0: Camera will be moved to the side of the characters
+}
+settingdialog_camera3
+{
+#NOTE: Maximum value not suitable for all locations
+}
+enable_brothel{Brothel Access}
+settingenable_brothel1
+{
+Completely disabled (stock PotC)
+}
+settingenable_brothel2
+{
+Location accessible
+}
+settingenable_brothel3
+{
+#A bit explicit, but in WORDS only.
+NOTE: Required for certain storylines.
+}
+enable_buildingset{BuildingSet}
+settingenable_buildingset1
+{
+No additional buildings in any locations. Building yourself is not possible.
+}
+settingenable_buildingset2
+{
+"Additional" buildings in some new locations. You can construct your own buildings on shore for various purposes.
+}
+settingenable_buildingset3
+{
+#These buildings are required for the added storylines to make sense.
+NOTE: Buildings can appear bright at night and allow you to walk through the walls due to game engine limitations.
+}
+no_theft{Pick-Pocketing}
+settingno_theft1
+{
+You can now pick pockets. But this is risky, and other thieves may pick YOUR pocket too. The higher this value, the safer you are from pickpockets. Above 30 nobody picks YOUR pocket, above 60 you yourself get no chance to steal
+}
+lock_open{Chest Locks}
+settinglock_open1
+{
+You need some skill to pick a chest's lock. And some may be booby-trapped! Above 33 you won't hurt yourself anymore, above 66 chests are always open.
+}
+loc_camera{Door Camera}
+settingloc_camera1
+{
+Camera view will stay locked on the player from behind
+}
+settingloc_camera2
+{
+Camera will turn around to focus on the player character (stock PotC)
+}
+settingloc_camera3
+{
+#Behaviour of the camera as the player approaches a door
+}
+onsea_compass{Compass Appearance}
+settingonsea_compass1
+{
+Simple blue compass rose (stock PotC)
+}
+settingonsea_compass2
+{
+Orange transparent compass
+}
+settingonsea_compass3
+{
+Historical brass compass
+}
+settingonsea_compass4
+{
+#Shown in the Battle Interface at sea
+}
+default_sails{National Sails}
+settingdefault_sails1
+{
+Stock PotC: All ships common white sails, with emblems
+}
+settingdefault_sails2
+{
+Build Default: All ships weathered sails, only accurate emblems
+}
+settingdefault_sails3
+{
+All ships weathered sails, with emblems
+}
+settingdefault_sails4
+{
+All ships pure white sails, only accurate emblems
+}
+settingdefault_sails5
+{
+All ships pure white sails, with emblems
+}
+settingdefault_sails6
+{
+#Emblems can help you recognize ship nationalities from afar
+}
+pirates_black_sails{Pirate Sails}
+settingpirates_black_sails1
+{
+Pirates use the same sails as the National Sails (set above)
+}
+settingpirates_black_sails2
+{
+Pirates use plain black sails
+}
+settingpirates_black_sails3
+{
+Pirates use emblemed black sails
+}
+settingpirates_black_sails4
+{
+#Black sails can help you recognize pirates from afar
+}

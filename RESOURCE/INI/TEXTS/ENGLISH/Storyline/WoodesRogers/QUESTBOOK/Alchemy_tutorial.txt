@@ -1,0 +1,7 @@
+title=Alchemy - tutorial
+text.t1=So Champagne can be transformed to cognac! First I must check that the apparatus is ready.
+text.t2=There is a picture in Rogers' Bedroom.
+text.t3=I have to mix this raw alcohol with water before drinking it.
+text.t4=Done! Now I know how to distill and to mix liquids on the table.
+text.t5=The liquid I want to distill should be poured in the retort.
+text.t6=I have to be careful with the oxygen. Two steps on that plank is enough.

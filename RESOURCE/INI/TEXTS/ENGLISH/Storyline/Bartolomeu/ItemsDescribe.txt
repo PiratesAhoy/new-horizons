@@ -1,0 +1,243 @@
+Potion parameters{Medical Remedy}
+health value{Health}
+weapon blade parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, piercing #dpiercing#%, block #dblock#%.}
+weapon gun parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, reload time #dchargespeed#sec, accuracy #daccuracy#%.}
+weapon armor parameters{Armor: Coverage #dcoverage#%, Chance to stop / Percent of damage taken if not stopped, for: Sword #dbladestop#% / #dbladefrac#%, Gun #dgunstop#% / #dgunfrac#%.}
+
+itmname_Letter_Governor	{Letter for the #sDouwesen# Governor}
+itmdescr_Letter_Governor
+{
+This letter written by the Governor of #sConceicao# aims to ask the Dutch help in a possible attack of Cartagena.
+}
+
+itmname_Letter_King	{Letter for the Cartagena Governor}
+itmdescr_Letter_King
+{
+Letter written by the Spanish King and asking to inform the envoy about the situation of Cartagena in many aspects.
+}
+
+itmname_darien_idol	{Darien Idol}
+itmdescr_darien_idol
+{
+This golden idol belongs to a tribe of cannibals. It represents their god of war. Whoever steals it will be in BIG trouble.
+}
+
+itmname_navy_papers	{Navy Papers}
+itmdescr_navy_papers
+{
+These documents confirm you work for the Portuguese Navy and you get its protection against the Pirates and enemies of Portugal.
+}
+
+itmname_Letter_Spy	{Letter for the Spy}
+itmdescr_Letter_Spy
+{
+Thanks to this letter, the spy in San Juan will help you in your search.
+}
+
+itmname_Fort_Keys	{Fort's Keys}
+itmdescr_Fort_Keys
+{
+The prison's keys. You can find the jail downstairs. 
+}
+
+itmname_muerte_map	{Isla de Muerte Map}
+itmdescr_muerte_map
+{
+This is the map of an island called Isla de Muerte. The island is a long way south of Cayman.
+}
+
+itmname_Animist_cloth		{Monk habit}
+itmdescr_Animist_cloth
+{
+A Monk's outfit in the same style as mine. Perfect for Elting when we have escaped this horrid place.
+}
+
+itmname_key3			{Big Key}
+itmdescr_key3
+{
+Is it the key to open the gate?
+}
+
+itmname_key4			{Small Key}
+itmdescr_key4
+{
+This key seems to be suited to open a cell in this location.
+}
+
+itmname_Montejo_Book {Montejo's Secret Book}
+itmdescr_Montejo_Book
+{
+This old book has belonged to the famous conquistador Francisco de Montejo y Alvarez who tried to conquer western Yucatán.
+}
+
+itmname_skull_ring		{Skull Ring}
+itmdescr_skull_ring
+{
+The Ring looks evil, will it give you extra power or the opposite?
+}
+
+itmname_moccasins		{Moccasins}
+itmdescr_moccasins
+{
+The Moccasines once belonged to The Bounding Elk. Can they be useful to you?  
+}
+
+itmname_mayan_compass		{Mayan compass}
+itmdescr_mayan_compass
+{
+What secrets will this engraved stone disc reveal?
+}
+
+itmname_filled_pipe		{Filled Pipe}
+itmdescr_filled_pipe
+{
+The Corn Cob Pipe is filled with pulverized, dried mushrooms.
+}
+
+itmname_dried_mushrooms		{Dried Mushrooms}
+itmdescr_dried_mushrooms
+{
+Is it a Fly Agaric and two King Bolete?
+}
+
+itmname_pulverized_mushrooms	{Pulverized Mushrooms}
+itmdescr_pulverized_mushrooms
+{
+The Mushrooms are ready for the Pipe.
+}
+
+//JRH Cartagena items -->
+
+itmname_bladecannon_ball	{Cannon Ball}
+itmdescr_bladecannon_ball
+{
+This is a very heavy one!
+}
+
+itmname_bladeclockkey		{Key}
+itmdescr_bladeclockkey
+{
+Ouch, it's still hot.
+}
+
+itmname_bladelever		{Lever}
+itmdescr_bladelever
+{
+Hmm, where should I place it?
+}
+
+itmname_bladefire_irons		{Fire Irons}
+itmdescr_bladefire_irons
+{
+Ok? To the Fireplace then.
+}
+
+//<-- JRH Cartagena items
+
+itmname_bladeacid		{Acid}
+itmdescr_bladeacid
+{
+A bottle of Acid with a very poisonous color. God only knows what the Priest used this for.
+}
+
+itmname_bladepclub203		{Pistol Club}
+itmdescr_bladepclub203
+{
+A heavy pistol can be used as a club. Makes more damage than your fists.
+}
+
+itmname_pistol203 		{Pistol}
+itmdescr_pistol203
+{
+A heavy gun that seems to have been used as a club.
+}
+
+itmname_pistolmaquahuitl	{Maquahuitl}
+itmdescr_pistolmaquahuitl
+{
+This Maquahuitl is cursed and can invoke the thundergod Chaac.
+}
+
+itmname_halberd			{Rusty Halberd}
+itmdescr_halberd
+{
+An ancient but powerful weapon - or it was once before the rust took over.
+}
+
+itmname_bladeflint		{Flint}
+itmdescr_bladeflint
+{
+Combined with a Steel you can make fire.
+}
+
+itmname_pistolsteel		{Steel}
+itmdescr_pistolsteel
+{
+Combined with a Flint you can make fire.
+}
+
+itmname_empty_pipe		{Empty Pipe}
+itmdescr_empty_pipe
+{
+An empty Corn Cob Pipe.
+}
+
+itmname_calabash		{Calabash with an Antidote}
+itmdescr_calabash
+{
+This unknown liquid cures poison.
+}
+
+itmname_herbs			{Bag of Herbs}
+itmdescr_herbs
+{
+A mixture of herbs that cures light wounds.
+}
+
+itmname_blowgun			{Blowgun}
+itmdescr_blowgun
+{
+The Maya used the Blowgun to hunt birds and small animals. A tube for poisoned darts is attached to the pipe. 
+}
+
+itmname_arrows2			{Poisoned Darts}
+itmdescr_arrows2	
+{
+Some cultures dip the tip of the darts in curare or other poisons in order to paralyze the target.
+}
+
+itmname_shield_hand		{Shield}
+itmdescr_shield_hand	
+{
+This wooden Shield may protect you against many weapons. Especially useful when attacked by Arrows.
+}
+
+itmname_shield_back		{Shield}
+itmdescr_shield_back	
+{
+This wooden Shield may protect you against many weapons. Especially useful when attacked by Arrows.
+}
+
+itmname_pistolrocket	{Rocket Launcher}
+itmdescr_pistolrocket
+{
+Basically a metal cylinder on a bamboo stick. Makes a lot of damage to a group of enemies but also to yourself if being too close. 
+}
+
+itmname_rockets			{Rockets}
+itmdescr_rockets
+{
+Ammunition to the Rocket Launcher. You'll need Gunpowder as well to fire these projectiles. 
+}
+
+itmname_rocketbag		{Bag for Rockets}
+itmdescr_rocketbag
+{
+With the Rocket Bag equipped you can carry eight Rockets else only two. 
+}
+
+itmname_pistolwhip		{Bullwhip}
+itmdescr_pistolwhip
+{
+A single-tailed whip, made of braided leather, designed as a tool for working with livestock. Use it to disarm your enemies.
+}

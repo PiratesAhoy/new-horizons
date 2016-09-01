@@ -1,0 +1,2 @@
+title=Failure
+text.t1=Dash it! I didn't meet the time limit. I should avoid the Vice-Admiral and any Spaniards from now on.

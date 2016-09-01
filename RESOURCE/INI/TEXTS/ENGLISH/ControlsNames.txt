@@ -1,0 +1,580 @@
+HelpChooser {Help Chooser}
+MainInterface {Main Interface}
+DialogControls {Dialog}
+WorldMapControls {World Map}
+BattleInterfaceControls {Interface Menu}
+Sailing1Pers {Sailing 1st Person}
+Sailing3Pers {Sailing 3rd Person}
+FightModeControls {Fight Mode}
+PrimaryLand {Primary Land}
+
+
+
+ChrCamTurnV
+{
+Vertical character camera movement
+
+}
+ChrCamTurnH
+{
+Horizontal character camera movement
+
+}
+ChrCamCameraSwitch
+{
+Switch camera to first/third person view mode
+
+}
+ChrCamNormalize
+{
+Set camera view to default position
+
+}
+
+Sulan_ArchipelagoMap
+{
+Show archipelago map (if you have one)
+
+}
+
+ShipCamera_Turn_V
+{
+Vertical ship camera movement
+
+}
+ShipCamera_Turn_H
+{
+Horizontal ship camera movement
+
+}
+ShipCamera_Forward
+{
+Zoom in camera on ship
+
+}
+ShipCamera_Backward
+{
+Zoom out camera from ship
+
+}
+
+
+
+
+
+
+
+DeckCamera_Turn_V
+{
+Look up/down on ship deck
+
+}
+DeckCamera_Turn_H
+{
+Turn left/right on ship deck
+
+}
+DeckCamera_Forward
+{
+Move forward on ship deck
+
+}
+DeckCamera_Backward
+{
+Move backward on ship deck
+
+}
+DeckCamera_Left
+{
+Strafe left on ship deck
+
+}
+DeckCamera_Right
+{
+Strafe right on ship deck
+
+}
+
+
+
+
+
+
+
+ChrTurnH
+{
+Turn character
+
+}
+ChrTurnV
+{
+Walk character
+
+}
+ChrTurnHL
+{
+Turn character left
+
+}
+ChrTurnHR
+{
+Turn character right
+
+}
+ChrAction
+{
+Perform an action
+
+}
+ChrForward
+{
+Forward Movement
+
+}
+ChrForward1
+{
+Forward Movement
+
+}
+ChrBackward
+{
+Backward Movement
+
+}
+ChrBackward1
+{
+Backward Movement
+
+}
+ChrRun
+{
+Run
+
+}
+ChrRunStick
+{
+Run
+
+}
+ChrBlock
+{
+Block
+
+}
+ChrAttack
+{
+Attack
+
+}
+ChrRecoil
+{
+Dodge 
+
+}
+ChrFightMode
+{
+Draw/Sheath Sword
+
+}
+ChrFire
+{
+Fire pistol
+
+}
+
+
+
+
+
+
+Ship_TurnLeft
+{
+Turn ship left
+
+}
+Ship_TurnRight
+{
+Turn ship right
+
+}
+Ship_SailUp
+{
+Set sails
+
+}
+Ship_SailDown
+{
+Strike sails
+
+}
+Ship_Fire
+{
+Fire ship cannons
+
+}
+Aimed_Ship_Fire
+{
+Fire manually aimed shot
+
+}
+Sea_CameraSwitch
+{
+Switch between the On Deck and Flying Camera mode
+
+}
+TelescopeIn
+{
+Turn on/off a spyglass
+
+}
+
+
+
+
+
+WMapTurnH
+{
+Rotate camera around the ship on World Map
+
+}
+WMapTurnV
+{
+Rotate camera over the ship on World Map
+
+}
+WMapCameraRotate
+{
+Enable camera slide and rotation
+
+}
+WMapForward
+{
+Zoom in on World Map
+
+}
+WMapBackward
+{
+Zoom out on World Map
+
+}
+WMapCameraSwitch
+{
+Change Camera Mode
+
+}
+WMapShipSailUp
+{
+Sail forward
+
+}
+WMapShipSailDown
+{
+Sail backward
+
+}
+WMapShipTurnLeft
+{
+Turn left
+
+}
+WMapShipTurnRight
+{
+Turn right
+
+}
+WMapCancel
+{
+Exit from World Map
+
+}
+
+
+
+
+
+
+Interface
+{
+Open player Status Screen
+
+}
+MainMenu
+{
+Open main menu
+
+}
+Help
+{
+Open Help Topics selection
+
+}
+
+
+
+
+
+BICommandsActivate
+{
+Open command icon menu
+
+}
+LICommandsActivate
+{
+Open command icon menu
+
+}
+BICommandsConfirm
+{
+Activate selected command icon
+
+}
+BICommandsCancel
+{
+Cancel current command icon menu
+
+}
+BICommandsLeft
+{
+Scroll left through command icon menu
+
+}
+BICommandsRight
+{
+Scroll right through command icon menu
+
+}
+MiniMapZoomIn
+{
+Zoom In on Minimap
+
+}
+MiniMapZoomOut
+{
+Zoom out on Minimap
+
+}
+BIFastCommand
+{
+Perform "Hot Action" command
+
+}
+
+
+
+
+
+HelpChooser_Cancel
+{
+Exit Help Topics Selection
+
+}
+HelpChooser_Action
+{
+View help topic on selected screen element
+
+}
+HelpChooser_Next
+{
+View next help topic
+
+}
+HelpChooser_Prev
+{
+View previous help topic
+
+}
+HelpChooser_Left
+{
+Select topic that is to the left
+
+}
+HelpChooser_Right
+{
+Select topic that is to the right
+
+}
+HelpChooser_Up
+{
+Select topic that is above
+
+}
+HelpChooser_Down
+{
+Select topic that is below
+
+}
+
+
+
+
+
+
+
+DlgAction
+{
+Choose an answer in dialogue
+
+}
+DlgUp
+{
+Select previous answer in dialogue
+
+}
+DlgDown
+{
+Select next answer in dialogue
+
+}
+DlgScrollUp
+{
+Scroll dialogue text down
+
+}
+DlgScrollDown
+{
+Scroll dialogue text up
+
+}
+
+// NK configurable modded controls
+BI_ChargeCannonballs
+{
+Reload with cannonballs
+
+}
+
+BI_ChargeGrapes
+{
+Reload with grape
+
+}
+
+BI_ChargeKnippels
+{
+Reload with chainshot
+
+}
+
+BI_ChargeBombs
+{
+Reload with bombs
+
+}
+
+NK_NameChange
+{
+Change player's name to the one in BuildSettings.h
+
+}
+
+NK_AlwaysRunToggle
+{
+Toggle always-run / "Clubhauling" direction (starboard or port)
+
+}
+
+NK_LogsToggle
+{
+Toggle extra log info
+
+}
+
+NK_Re-init
+{
+Reinitialize the game
+
+}
+
+SCHEFFNOW_RUSH
+{
+Start rush mode
+
+}
+
+BOAL_Control
+{
+Speed UP time in steps from 1x to 3x, 10x and 30x
+
+}
+
+BOAL_Control2
+{
+Show info for character in front, do bugfixing. If game crashes, reload and press this.
+
+}
+
+BOAL_Control0
+{
+Slow DOWN time in steps from 30x to 10x, 3x and 1x
+
+}
+
+BOAL_UsePotion
+{
+Drink a healing potion
+
+}
+TIH_FireDrill
+{
+Try to put out a fire on your ship
+
+}
+
+DCH_Quicksave
+{
+Quicksave HotKey
+
+}
+DCH_Quickload
+{
+Quickload HotKey
+
+}
+
+Sidestep_left_on
+{
+Sidestep left
+
+}
+
+Sidestep_right_on
+{
+Sidestep right
+
+}
+
+Equip
+{
+Quick-equip button
+
+}
+
+NK_Pause
+{
+Pause Game
+
+}
+
+NK_DialogStart
+{
+Loot Corpse
+
+}
+
+straif_weapon_left
+{
+Jump to the left
+
+}
+
+straif_weapon_right
+{
+Jump to the right
+
+}
+
+ScreenCleaning
+{
+Removes icons and log messages
+
+}

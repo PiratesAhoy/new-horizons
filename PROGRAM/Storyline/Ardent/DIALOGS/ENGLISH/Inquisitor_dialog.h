@@ -1,0 +1,15 @@
+string DLG_TEXT[13] = {
+"Who are you?",
+"What? I didn't expect a Spanish Inquisition!",
+"NOBODY expects the Spanish Inquisition! Our main weapon is surprise. Surprise and speed - our *two* main weapons are surprise and speed. And as I'm out of soft cushions and short on time, I repeat - who are you?",
+"I am Charles Ardent.",
+"I am Helen Ardent.",
+"What do you want?",
+"I want adventure, excitement and romance.",
+"Never mind all that nonsense. I'm a black-hearted sea-robber and am only interested in gold, gold and more gold!",
+"Who do you serve and who do you trust?",
+"What part of 'PIRATES of the Caribbean' don't you understand?",
+"I serve only myself and trust only my sword. I won't start any fights but I will finish them.",
+"Thank you for your assistance. We may now commence.",
+"Commence what? Hey, come back...",
+};

@@ -1,0 +1,15 @@
+title=Navigation items
+text.t1=I'll return to Charleston to find a Spyglass, a Compass and a Sextant.
+text.t2=The Store is next to Mr Poe's house.
+text.t3=The Tailor's shop is near the entrance to Chinatown. I'll search for a Mr Pym there.
+text.t4=Pym has got a Sextant and is willing to trade it if I open up the Tailor's shop. I'll look for a ladder at the building opposite to Auguste Dupin's office.
+text.t5=The Sextant is in the Tower Room.
+text.t6=There's something hidden here but the hatch is stuck!
+text.t7=Yes finally! I've found the Sextant. 
+text.t8=Now to Mr Poe's house and meet Jupiter.
+text.t9=Mr Pym has a spare Key to the Tailor's shop in his bedroom.
+text.t10=To Fort Moultrie then!
+text.t11=Lieutenant G is found on top of the East Tower, looking for birds.
+text.t12=Now to Mr Poe's house and meet massa Will.
+text.t13=I have to find a Flag in Lieutenant G's Office and raise it on top of the South Tower.
+text.t14=We have got all Navigation Items we need.

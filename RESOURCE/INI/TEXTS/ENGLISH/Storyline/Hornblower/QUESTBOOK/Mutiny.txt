@@ -1,0 +1,12 @@
+title=Mutiny.
+text.t1=I have been transferred to the RENOWN. I must find Archie in the Tavern then go to Naval H.Q. in #sGreenford#.
+text.t2=Midshipman Wellard has joined the ship and Sharpe has been made a sergeant.
+text.t3=Captain Sawyer has had Wellard beaten. There is something wrong with the captain, but I can't speak out yet.
+text.t4=We met Captain Sawyer. He seems to have changed, and not for the better.
+text.t5=Lieutenant Bush has joined the ship. I must get to the helm.
+text.t6=The Captain fell into the hold and is now incapable of commanding the ship. Lieutenant Buckland has assumed command.
+text.t7=We are going to try to capture the Spanish fort where Archie and I were imprisoned.
+text.t8=The Spanish prisoners have captured the Renown. We must board her and get her back.
+text.t9=We have the ship back. Now we go to #sRedmond# to see what awaits us there.
+text.t10=.
+text.t11=.

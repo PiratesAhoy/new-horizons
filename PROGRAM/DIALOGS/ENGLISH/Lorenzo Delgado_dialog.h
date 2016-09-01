@@ -1,0 +1,18 @@
+string DLG_TEXT[16] = {
+".....",
+".....",
+"Dom Guillermo, welcome to my office.",
+"I note you didn't forget me since our meeting in the Governor's party.",
+"Of course, how could forget the envoy of our King. Can I help you?",
+"Yes, during my visit in the San Felipe fort, Governor Montavez revealed a secret.",
+"What exactly?",
+"There would have a tunnel connecting your office to the fort.",
+"That's true. The entrance is at the bottom of these stairs.",
+"Interesting.",
+"Thanks to it, if necessary, I can send more troops to the fort without being in danger by enemy ships shooting to the Port.",
+"Wonderful! What a fantastic idea. Can you show me the tunnel.",
+"I'm sorry, Dom Guillermo. As maybe you've already seen, the entrance is locked by an iron gate and only Governor Montavez has the key.",
+"[Thinks: Not Good!] I understand, Admiral. That's not important, it was just for curiosity. Well, you must have a lot of work since your come back in Cartagena so I prefer to let you alone.",
+"Thank you, Dom Guillermo. It's true the expedition on Curacao has delayed my work here but everything will be settled in a few days.",
+"Good to hear. See you Admiral!",
+};

@@ -1,0 +1,7 @@
+title=Gunpowder
+text.t1=Right-hand items: F3 + F3, left-hand items: F3 + fire pistol.
+text.t2=Standard Gunpowder: 6 parts of Salpeter, 1 part of Charcoal and Sulfur each.
+text.t3=Slow-burning Gunpowder for Fireworks: 4 parts of Salpeter, 2 parts of Charcoal and Sulfur each.
+text.t4=The most important precaution when grinding Gunpowder is to add a little Water.
+text.t5=Always remember to mix Charcoal with Salpeter to Salpeter Soot and Sulfur with Salpeter to Sulfur Soot. Do this before grinding and you're safe.
+text.t6=No, I don't know how to go on. I have to visit the Restaurant.

@@ -1,0 +1,5 @@
+title=Crew Rescue
+text.t1=According to my officers, the crew are being held in a slave camp somewhere outside town.
+text.t2=The Indian warrior says he knows the way to the slave camp.
+text.t3=Two Dogs has agreed to show us the way to the camp if we take him home.
+text.t4=The crew are free and we've made it back to #sHavana#.

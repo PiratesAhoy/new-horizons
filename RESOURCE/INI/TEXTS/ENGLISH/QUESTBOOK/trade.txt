@@ -1,0 +1,3 @@
+title=General Quest - Deliver cargo to #stown#.
+text.t1=I've got to deliver #dquantity# ctw of #scargo# to #stown# on #sisland# before #sdeadline#, to the store owner #sstore_owner#.
+text.t2=The time for this delivery has expired. However, I had better still deliver the goods if I ever want to be able to do this again.

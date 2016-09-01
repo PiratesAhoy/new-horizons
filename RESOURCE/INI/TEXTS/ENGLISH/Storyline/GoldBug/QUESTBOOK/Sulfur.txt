@@ -1,0 +1,13 @@
+title=Sulfur
+text.t1=I have produced Sulfur.
+text.t2=It's going to take time to distill the Sulfur - I'll do something else meanwhile.
+text.t3=
+text.t4=I need a Box to collect the Pyrite Dust.
+text.t5=1 Bring down some Pyrite Stones on the planks. 
+text.t6=2 Smash them carefully into Pyrite Dust.
+text.t7=3 Collect the Pyrite Dust and
+text.t8=4 Place it in the Distillery. 
+text.t9=5 Fill up the Distillery with Water from the Courtyard.  
+text.t10=6 Start the Distillery and wait for it to process. 
+text.t11=7 Pick up the Distilled Sulfur.
+

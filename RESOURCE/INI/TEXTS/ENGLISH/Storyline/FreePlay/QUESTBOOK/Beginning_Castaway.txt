@@ -1,0 +1,3 @@
+title=Down on my luck
+text.t1=It was my own fault that I went to see the captain and complain about this raging storm. Little did I know how stupid and risky that was! As soon as I stepped out on deck again, I was swept off my feet by a massive wave and washed overboard. I suppose I should consider myself lucky to be still alive.
+text.t2=With my possessions still in my cabin and the ship long gone, I have nothing left in this world. But I did see one of the lifeboats going overboard by the same wave that took me. It should still be around here somewhere...

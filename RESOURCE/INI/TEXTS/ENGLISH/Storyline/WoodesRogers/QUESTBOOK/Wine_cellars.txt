@@ -1,0 +1,11 @@
+title=Wine cellars
+text.t1=I can swim but most sailors can't. I'll try to use that in the cellars!
+text.t2=A Barrel on an Elevator - what am I supposed to do?
+text.t3=There's a Steplock under the Elevator!
+text.t4=Think I have found the exit - but how do I open it?
+text.t5=By the sound three gates opened.
+text.t6=
+text.t7=
+text.t8=
+text.t9=
+text.t10=

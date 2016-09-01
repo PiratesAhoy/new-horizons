@@ -1,0 +1,1854 @@
+Delete savefile confirm{Are you sure you want remove this game?}
+Overwrite savefile confirm{Are you sure you want overwrite this game?}
+Low storage and unable save create{Insufficent space on your harddrive. Unable to save.}
+Load game confirm{Are you sure you want load this game?}
+Unable to Load save game{Unable to load save game.}
+save game limit {You have reached the max number of save games allowed. You must delete a game before you can save a new game.}
+You can't save while sailing or boarding!{You can't save while sailing or boarding!}
+on ship in{on ship in}
+#sisland_name# Waters{#sisland_name# Waters}
+
+Salary info {Your crew demands its monthly salary. Will you pay them?}
+
+New game confirm{Are you sure you want start a new game?}
+
+Insert Disk Ok {Please insert "Pirates Of The Caribbean" disc 1 and press <Ok> to start application or <Exit> to quit.}
+
+Buy cannons confirm1{Do you really want to buy}
+Buy cannons confirm2{By adding cannons of less caliber you will decrease the firepower of Your ship to}
+Buy cannons confirm3{caliber. You agree?}
+Buy cannons confirm4{By adding cannons of greater caliber you will not increase the firepower of Your ship to}
+Transfer cannons confirm1{Do you really want to transfer}
+Transfer cannons confirm2{on to the ship}
+Exit from cannons confirm{The purchase isn't confirmed. Do you really want to exit?}
+Adding{Replaces only damaged cannons}
+Exit from abordage confirm{Do you really want to leave this ship?}
+Exit from fortabordage confirm{Do you really want to halt the fort robbery?}
+Exit from exchange confirm{Do you really want to exit?}
+Not enough crew assigned{Not enough crew assigned!}
+Min crew reached{Min crew reached!}
+This officer has too low Leadership and Sailing skills to command this ship. Assign anyway?{This officer has too low Leadership and Sailing skills to command this ship. Assign anyway?}
+You can't command a fleet until reaching level{You can't command a fleet until reaching level}
+Leadership. Assign anyway?{Leadership. Assign anyway?}
+'s current colours{current colours}
+is known as{is known as}
+Raise{Raise}
+have been installed{have been installed}
+on to the ship{on to the ship}
+Notown{You don't own this ship!}
+Nomoney{Not enough money}
+NoCannons{No cannons installed on ship}
+Installed{Cannons currently installed}
+Bigcaliber{Too big caliber for your ship!}
+CanBuyMax{You can buy a maximum of}
+cannons.{cannons.}
+Repairs are completed{Repairs are completed}
+later.{later.}
+Not enough food! Your purser makes an emergency purchase of{Not enough food! Your purser makes an emergency purchase of}
+days' rations for the crew of the{days' rations for the crew of the}
+for a cost of{for a cost of}
+Too little room! Your purser makes an emergency sale of{Too little room! Your purser makes an emergency sale of}
+units of{units of}
+from the{from the}
+for a total of{for a total of}
+You are low on food! Purser could not buy more because you are low on money!{You are low on food! Purser could not buy more because you are low on money!}
+
+tax_none{None}
+tax_low{Low}
+tax_normal{Normal}
+tax_high{High}
+tax_plunder{Very high}
+
+This officer can command ships up to tier{This officer can command ships up to tier}
+
+Broken{Broken}
+Badly worn{Badly worn}
+Worn{Worn}
+Good{Good}
+Fine{Fine}
+Exellent{Exellent}
+Average{Mediocre}
+Broken {Broken}
+Badly worn {Badly worn}
+Worn {Worn}
+Good {Good}
+Fine {Fine}
+Exellent {Exellent}
+Average {Mediocre}
+
+Qual{Qual}
+a{a}
+a broken{a broken}
+a badly worn{a badly worn}
+a worn{a worn}
+an average{a mediocre}
+a good{a good}
+a fine{a fine}
+an excellent{an excellent}
+You don't have{You don't have}
+to equip{to equip}
+You equipped{You equipped}
+All hands execute fire drill ! NOW !!{All hands execute fire drill ! NOW !!}
+Sails and cartridges jettisoned.{Sails and cartridges jettisoned.}
+?? Captain, what's a firedrawl ?{?? Captain, what's a firedrawl ?}
+Your crew seems to lack SHIPDEFENCE ability...{Your crew seems to lack SHIPDEFENCE ability...}
+Used potion{Used potion}
+You equipped{You equipped}
+You don't have a regular blade to equip.{You don't have a regular blade to equip.}
+You don't have a regular gun to equip.{You don't have a regular gun to equip.}
+You equipped a cobblestone.{You equipped a cobblestone.}
+You don't have a cobblestone to equip.{You don't have a cobblestone to equip.}
+You equipped a sandbag.{You equipped a sandbag.}
+You don't have a sandbag to equip.{You don't have a sandbag to equip.}
+You equipped an etherbottle.{You equipped an etherbottle.}
+You don't have an etherbottle to equip.{You don't have an etherbottle to equip.}
+You equipped a thief's knife.{You equipped a thief's knife.}
+You don't have a thief's knife to equip.{You don't have a thief's knife to equip.}
+You equipped a poisoned throwingknife.{You equipped a poisoned throwingknife.}
+You don't have a poisoned throwingknife to equip.{You don't have a poisoned throwingknife to equip.}
+You equipped a stinkpot.{You equipped a stinkpot.}
+You don't have a stinkpot to equip.{You don't have a stinkpot to equip.}
+You equipped a grenade.{You equipped a grenade.}
+You don't have a grenade to equip.{You don't have a grenade to equip.}
+You equipped your trusty fists.{You equipped your trusty fists.}
+What the heck? You don't have your trusty fists???{What the heck? You don't have your trusty fists???}
+You manage to launch a boat in the last moment.{You manage to launch a boat in the last moment.}
+With a few mates you escape from disaster.{With a few mates you escape from disaster.}
+'Cap'n, we are giving you and your cronies this boat.{'Cap'n, we are giving you and your cronies this boat.}
+If you're careful, you just might make it.{If you're careful, you just might make it.}
+But given your past performance you'll all starve'{But given your past performance you'll all starve'}
+You regain consciousness after a long feverish sleep{You regain consciousness after a long feverish sleep}
+Fire has reached the{Fire has reached the}
+'s powder magazine!{'s powder magazine!}
+One fire doused!{One fire doused!}
+men burnt{men burnt}
+Fire still burning! Execute firedrill procedure immediately!{Fire still burning! Execute firedrill procedure immediately!}
+Strike all sail!{Strike all sail!}
+Battle sails!{Battle sails!}
+Make all sail!{Make all sail!}
+We're sinking!{We're sinking!}
+You need a sheltered anchorage for repairs!{You need a sheltered anchorage for repairs!}
+Health Up{Health Up}
+You are cured from poison{You are cured from poison}
+has been sunk by{has been sunk by}
+has been sunk by the{has been sunk by the}
+God gained{God gained}
+Total XP{Total XP}
+Hand of God{Hand of God}
+Victim poisoned !{Victim poisoned !}
+WHACK! You knocked out your opponent!{WHACK! You knocked out your opponent!}
+Opponent disarmed !{Opponent disarmed !}
+One of your officers was disarmed!{One of your officers was disarmed!}
+You were disarmed!{You were disarmed!}
+The Merchant Guild's watchmen are very vigilant...{The Merchant Guild's watchmen are very vigilant...}
+The Garrison Commander sent immediate reinforcements...{The Garrison Commander sent immediate reinforcements...}
+Weapon misfired & blew up !{Weapon misfired & blew up !}
+Robbing helpless citizens isn't good for your reputation !{Robbing helpless citizens isn't good for your reputation !}
+has gained a new level!{has gained a new level!}
+(Now level{(Now level}
+CHANGE REP FOR PLAYER:{Your reputation changed by your actions:}
+for attacking friends{for attacking friends}
+has been captured by{has been captured by}
+New captain{New captain}
+Gained{Gained}
+You smell some gunpowder about...{You smell some gunpowder about...}
+You catch a glint of cold steel.{You catch a glint of cold steel.}
+You take item{You take item}
+You give item{You give item}
+has been occupied by{has been occupied by}
+England{England}
+Britain{Britain}
+France{France}
+Spain{Spain}
+Pirate{Pirate}
+Holland{Holland}
+Portugal{Portugal}
+English{English}
+French{French}
+Spanish{Spanish}
+Pirates{Pirates}
+Dutch{Dutch}
+Portuguese{Portuguese}
+British{British}
+Neutral{neutral}
+Wary{wary}
+Hostile{hostile}
+Letter of Marque{Letter of Marque}
+ALARM !  AN AMBUSH !!!!{ALARM !  AN AMBUSH !!!!}
+Gamlet{Only Hamlet spoke to the dead, and even he didn't expect them to talk back.}
+NoItems{There is nothing to take}
+Captain, we have only{Captain, we have only}
+days worth of rum left!{days worth of rum left!}
+Captain, we're out of rum!{Captain, we're out of rum!}
+days worth of food left!{days worth of food left!}
+Captain, we're out of food!{Captain, we're out of food!}
+Food Qty{Food Qty}
+Rum Qty{Rum Qty}
+good for{good for}
+Drunken brawl breaks out, morale plummets!{Drunken brawl breaks out, morale plummets!}
+Each crewman's share is now{Each crewman's share is now}
+x average for this time.{x average for this time.}
+crew have died from starvation.{crew have died from starvation.}
+We've been out{We've been out}
+The crew now has{The crew now has}
+days out.{days out.}
+You made{You made}
+gold from your estates.{gold from your estates.}
+gold as taxes from controlled towns.{gold as taxes from controlled towns.}
+Colony of{Colony of}
+captured by{captured by}
+Your prisoner{Your prisoner}
+jumped overboard and escaped!{jumped overboard and escaped!}
+Sir, the{Sir, the}
+has struck her colors!{has struck her colors!}
+has struck her colors to the enemy!{has struck her colors to the enemy!}
+Fire! Execute firedrill procedure!{Fire! Execute firedrill procedure!}
+We lost a cannon! From the{We lost a cannon! From the}
+We think we can fix it, captain.{We think we can fix it, captain.}
+We knocked out one of{We knocked out one of}
+'s{'s}
+guns!{guns!}
+port{port}
+starboard{starboard}
+bow{bow}
+stern{stern}
+days.{days.}
+Reinitializing...{Reinitializing...}
+LOADED NEW INTERFACE{LOADED NEW INTERFACE}
+LOADED OLD INTERFACE{LOADED OLD INTERFACE}
+Character Tables...{Character Tables...}
+Ships...{Ships...}
+Kell-Mudd Ships Changes...{Kell-Mudd Ships Changes...}
+Cannon...{Cannon...}
+Weather...{Weather...}
+Encounters...{Encounters...}
+Land Encounters...{Land Encounters...}
+Nations...{Nations...}
+Rumors...{Rumors...}
+Fast Travel...{Fast Travel...}
+FBQ characters and items already initialised.{FBQ characters and items already initialised.}
+Initialising new FBQ characters and items...{Initialising new FBQ characters and items...}
+Towns...{Towns...}
+Stores...{Stores...}
+Always run is now on{Always run is now on}
+Always run is now off{Always run is now off}
+Log level is now set to{Log level is now set to}
+Mantrap set! grp:{Mantrap set! grp:}
+port authority{port authority}
+from your party in berthing duties.{from your party in berthing duties.}
+You pay{You pay}
+to the crew and officers you have{to the crew and officers you have}
+on shore leave at{on shore leave at}
+FAILED{FAILED}
+You haven't the file{You don't have the file}
+You can't save while carrying a holy relic! Give it to a monk{You can't save while carrying a holy relic! Give it back to the monk}
+You can't save or load until{You can't save or load until}
+leaves.{leaves.}
+NewSave{New Save}
+God mode{God mode}
+Shotgun mode{Shotgun mode}
+Worldmap encounters{Worldmap encounters}
+Fake Level Up{Fake Level Up}
+Error updating passenger, is passenger{Error updating passenger, is passenger}
+(no ships berthed at{(no ships berthed at}
+){)}
+(empty slot){(empty slot)}
+New captain{New captain}
+(CHOOSE A CAPTAIN){(CHOOSE A CAPTAIN)}
+(no available captains){(no available captains)}
+Currently a passenger{Currently a passenger}
+Currently an officer{Currently an officer}
+Currently captain of the ship being relaunched{Currently captain of the ship being relaunched}
+Currently captain of the ship going on shore leave{Currently captain of the ship going on shore leave}
+Ship is to be LAID UP at{Ship is to be LAID UP at}
+Ship is to be put on SHORE LEAVE at{Ship is to be put on SHORE LEAVE at}
+(CLICK TO VIEW){(CLICK TO VIEW)}
+Days in berth{Days in berth}
+Calculated daily (now due{Calculated daily (now due}
+Crew & officers' pay{Crew & officers' pay}
+Calculated monthly (now due{Calculated monthly (now due}
+Choose a companion slot in which to relaunch this ship:{Choose a companion slot in which to relaunch this ship:}
+Swap with the{Swap with the}
+Relaunch into empty companion slot{Relaunch into empty companion slot}
+(flagship slot){(flagship slot)}
+(You may not swap with the{(You may not swap with the}
+Choose a ship to berth at{Choose a ship to berth at}
+(You may not berth the{(You may not berth the}
+Currently in companion slot{Currently in companion slot}
+Choose a berthing slot at{Choose a berthing slot at}
+Swap with{Swap with}
+Berth ship in empty slot{Berth ship in empty slot}
+Falaise de Fleur{Falaise de Fleur}
+Redmond{Redmond}
+Isla Muelle{Isla Muelle}
+Oxbay{Oxbay}
+Greenford{Greenford}
+Conceição{Conceição}
+Conceicao{Conceição}
+Douwesen{Douwesen}
+Quebradas Costillas{Quebradas Costillas}
+Khael Roa{Khael Roa}
+Cayman{Cayman}
+Hispaniola{Hispaniola}
+Cuba{Cuba}
+Guadeloupe{Guadeloupe}
+Saint Martin{Saint Martin}
+Antigua{Antigua}
+Turks{Turks}
+Grand Cayman{Grand Cayman}
+Marigot{Marigot}
+Havana{Havana}
+Santiago{Santiago}
+St John's{St. John's}
+St John's port{St. John's port}
+St John's port.{St. John's port}
+Pointe a pitre{Pointe a Pitre}
+Port au prince{Port au prince}
+Santo Domingo{Santo Domingo}
+Tortuga{Tortuga}
+Grand Turk{Grand Turk}
+Initial location{Initial location}
+Laid up{Laid up}
+On shore leave{On shore leave}
+(error){(error)}
+island{on the island}
+island.{island}
+Choosing captain for ship being relaunched, the{Choosing captain for ship being relaunched, the}
+Choosing captain for ship going on shore leave, the{Choosing captain for ship going on shore leave, the}
+at{at}
+on{on}
+Ship is currently{Ship is currently}
+Ship is to be RELAUNCHED into companion slot{Ship is to be RELAUNCHED into companion slot}
+Current captain{Current captain}
+Ship is currently in companion slot{Ship is currently in companion slot}
+empty companion slot{empty companion slot}
+empty berthing slot{empty berthing slot}
+You have signed articles with your crew.{You have signed articles with your crew.}
+This means{This means they are paid by division of plunder after each expedition. If you've had enough of all that privateering, you can pay your crew a regular salary. This would make crew morale more stable, although it would not be as high as it could be under a divide-the-plunder agreement.}
+Note: Before you can do this, you must divide the plunder.{Note: Before you can do this, you must divide the plunder.}
+WARNING! A proportion of the crew will desert if you do this.{WARNING! A proportion of the crew will desert if you do this.}
+Your crew is currently paid by regular salary.{Your crew is currently paid by regular salary.}
+The alternative{The alternative is to sign articles with your crew, which means you pay them by dividing the plunder of each expedition (do this at the Loanshark's office in any port). If you sign articles with your crew, it is possible to raise your crew's morale much higher than before, but harder to keep it that way!}
+FULL{FULL}
+HALF{HALF}
+DOUBLE{DOUBLE}
+NORMAL{NORMAL}
+FOOD rations are at{FOOD rations are at}
+level. On these rations, food in the hold is enough for{level. On these rations, food in the hold is enough for}
+RUM rations are at{}
+level. On these rations, rum in the hold is enough for{level. On these rations, rum in the hold is enough for}
+Emblem{Emblem}
+Special Sail{Special Sail}
+sails with pirate emblem.{sails with pirate emblem.}
+sails with national emblem.{sails with national emblem.}
+
+Black tattered sails characteristic to Black Pearl.{Black tattered sails characteristic to Black Pearl.}
+Whole black sails characteristic to Black Pearl.{Whole black sails characteristic to Black Pearl.}
+Black patched sails used on Black Pearl under Captain Jack Sparrow command.{Black patched sails used on Black Pearl under Captain Jack Sparrow's command.}
+White sails with blue stripes as used by the notorious pirate Barbarossa.{White sails with blue stripes as used by the notorious pirate Barbarossa.}
+Red sails with yellow stripes as used by the notorious Petros the Pirate.{Red sails with yellow stripes as used by the notorious Petros the Pirate.}
+Red sails with black stripes as used by the notorious Petros the Pirate.{Red sails with black stripes as used by the notorious Petros the Pirate.}
+White sails with blue stripes as used by the notorious Petros the Pirate.{White sails with blue stripes as used by the notorious Petros the Pirate.}
+Khaki whole sails as seen on the Flying Dutchman under the command of captain Will Turner.{Khaki whole sails as seen on the Flying Dutchman under the command of captain Will Turner.}
+Green torn sails as seen on the Flying Dutchman under the command of captain Davy Jones.{Green torn sails as seen on the Flying Dutchman under the command of captain Davy Jones.}
+Catholic sails with a picture of the Virgin Mary.{Catholic sails with a picture of the Virgin Mary.}
+Red torn sails with holes characteristic to Queen Anne's Revenge.{Red torn sails with holes characteristic to Queen Anne's Revenge.}
+Junk sails for Empress.{Junk sails for Empress.}
+National Emblem{National Emblem}
+sails, without emblem.{sails, without emblem.}
+Plain{Plain}
+black{black}
+crimson{crimson}
+white{white}
+Torn{Torn}
+Whole{Whole}
+Default Sails{Default Sails}
+Standard Sails{Standard Sails}
+Normal Sails{Normal Sails}
+Pure White Sails{Pure White Sails}
+Weathered Sails{Weathered Sails}
+Special Sails{Special Sails}
+Whole Sails{Whole Sails}
+Torn Sails{Torn Sails}
+White Sails{White Sails}
+Crimson Sails{Crimson Sails}
+Black Sails{Black Sails}
+Pirate Emblem{Pirate Emblem}
+Pure White{Pure White}
+Weathered{Weathered}
+of{of}
+You have hoisted a Pirate flag! Argh!{You have hoisted a Pirate flag! Argh!}
+Plain Sails Selected{Plain Sails Selected}
+Sails Selected{Sails Selected}
+Secret Chest{Secret Chest}
+Chest{Chest}
+You've dropped through a trapdoor into the{You've dropped through a trapdoor into the}
+Ladder to attic{Ladder to attic}
+You've found{You've found}
+Gold{Gold}
+Do you want to leave this place for good?{Do you want to leave this place for good?}
+You could pry this door open, but you never know what's waiting behind!{You could pry this door open, but you never know what's waiting behind!}
+Weaponslocker. Boarders use these arms, so stock it well!{Weaponslocker. Boarders use these arms, so stock it well!}
+Weaponslocker. You can find something interesting here!{Weaponslocker. You can find something interesting here!}
+Random locs disabled!{Random locs disabled!}
+Your prying knife slips from the lock... into your hand!{Your prying knife slips from the lock... into your hand!}
+You try to pick the lock with your knife... in vain!{You try to pick the lock with your knife... in vain!}
+Your lockpick broke and got stuck in the lock!{Your lockpick broke and got stuck in the lock!}
+This lock will not open. There seems to be a lockpick stuck in it.{This lock will not open. There seems to be a lockpick stuck in it.}
+You failed to open the lock with your lockpick. Better try again.{You failed to open the lock with your lockpick. Better try again.}
+Boobytrapped{Boobytrapped}
+There's an error in the location init code in{There's an error in the location init code in}
+Your musket fire kills{Your musket fire kills}
+Enemy crewmen{Enemy crewmen}
+Enemy musket fire kills{Enemy musket fire kills}
+Your crewmen{of your crewmen}
+Player Morale{Player Morale}
+Slips by the armor!{Slips by the armor!}
+Stopped by armor!{Stopped by armor!}
+Reduced by armor!{Reduced by armor!}
+an Indian artifact{an Indian artifact}
+You got{You got}
+You got the beast's hide!{You got the beast's hide!}
+Visions of kingdom come fill your blood-deprived brain{Visions of kingdom come fill your blood-deprived brain}
+Will that lovely angel save you ?{Will that lovely angel save you ?}
+Or will you join the demons of the netherworld ?{Or will you join the demons of the netherworld ?}
+You rescued Edgar Attwood!{You rescued Edgar Attwood!}
+Already boarded this ship!{Already boarded this ship!}
+survivors rescued{survivors rescued}
+colors sighted at{colors sighted at}
+Sail to{Sail to}
+Too close! Can't use sail-to. You must sail manually.{Too close! Can't use sail-to. You must sail manually.}
+Enemy ship will outpace us! Can't use sail-to. You must sail manually.{Enemy ship will outpace us! Can't use sail-to. You must sail manually.}
+Wait a sec while I get out the chart, captain!{Wait a sec while I get out the chart, captain!}
+Your crewman{Your crewman}
+from the locker{from the locker}
+skill has improved to{skill has improved to}
+Open Sea{Open Sea}
+merchants{merchants}
+merchants with a light escort{merchants with a light escort}
+a single merchant with heavy escort{a single merchant with heavy escort}
+a small patrol{a small patrol}
+warships{warships}
+small craft{small craft}
+a rag-tag bunch{a rag-tag bunch}
+a group of merchants{a group of merchants}
+an escorted group of merchants{an escorted group of merchants}
+a convoy{a convoy}
+a large patrol{a large patrol}
+a small fleet{a small fleet}
+a battle fleet{a battle fleet}
+a scratch patrol{a scratch patrol}
+ship{ship}
+ships{ships}
+flying the colors of{flying the colors of}
+flying the Jolly Roger{flying the Jolly Roger}
+Sail Ho! There's a battle up ahead sir, it looks like{Sail Ho! There's a battle up ahead sir,}
+Sail Ho! It looks like{It looks like}
+Sail Ho! And gunfire, there's a battle up ahead!{Sail Ho! And gunfire, there's a battle up ahead!}
+Sail Ho!{Sail Ho!}
+Engage{Engage}
+The crew of your{The crew of your}
+commanded by(commanded by}
+revolted, but the mutiny was successfully scotched{revolted, but the mutiny was successfully scotched}
+mutinied and turned against you{mutinied and turned against you}
+Captain{Captain}
+of the{of the}
+does not approve of your actions and turned against you{does not approve of your actions and turned against you}
+Captain, we're out of crew!{Captain, we're out of crew!}
+Captain, we're out of food!{Captain, we're out of food!}
+Captain, we're out of rum!{Captain, we're out of rum!}
+Choosing outfit for{Choosing outfit for}
+The thief spreads the news{The thief spreads the news}
+that you receive stolen goods.{that you receive stolen goods.}
+This meeting has really lightened you...{This meeting has really lightened you...}
+This meeting has really enlightened you...{This meeting has really enlightened you...}
+For five hours are you being lectured on{For five hours are you being lectured on}
+This has improved your{This has improved your}
+skill{skill}
+New ship characters...{New ship characters...}
+
+There are not enough Grapeshots{There are not enough Grapeshots!}
+There are not enough Pistolbullets{There are not enough Pistolbullets!}
+There are no Grapeshots left{There are no Grapeshots left!}
+There are no Musketbullets left{There are no Musketbullets left!}
+There is not enough Gunpowder{There is not enough Gunpowder!}
+There is no Gunpowder left{There is no Gunpowder left!}
+There are no Pistolbullets left{There are no Pistolbullets left!}
+There are no Cartridges left{There are no Cartridges left!}
+There are no Paper Cartridges left{There are no Paper Cartridges left}
+There are no Percussion Caps left{There are no Percussion Caps left}
+There are no Arrows left{There are no Arrows left!}
+There are no{There are no}
+and gunpowder{and Gunpowder}
+left{left!}
+You have taken{You have taken}
+Equip the Ammunition Pouch!{Equip the Ammunition Pouch!}
+Equip the Gunpowder Flask!{Equip the Gunpowder Flask!}
+Mustering those drunken tars takes till nightfall...{Mustering those drunken tars takes till nightfall...}
+Donation of personal wealth to crew{Donation of personal wealth to crew}
+will be notified of all sightings{will be notified of all sightings}
+won't be notified of too-powerful sightings{won't be notified of too-powerful sightings}
+Done loading{Done loading}
+Battle-interface commands on{Battle-interface commands on}
+Land-interface commands on{Land-interface commands on}
+Islands and locations names on{Islands and locations names on}
+language...{language...}
+Characters names on{Characters names on}
+You get your blade back one day later.{You get your blade back one day later.}
+You get your gun back one day later.{You get your gun back one day later.}
+You wait here{You wait here}
+for ship repairs{for ship repairs}
+Contraband transfer was interrupted by Coastal Guards{Contraband transfer was interrupted by Coastal Guards}
+FIRST CONTRABAND GOOD SELECTED TO TRADE IS:{FIRST CONTRABAND GOOD SELECTED TO TRADE IS:}
+FIRST CONTRABAND GOOD PRICE IS:{FIRST CONTRABAND GOOD PRICE IS:}
+CONTRABAND ONBOARD COUNTER HAS VALUE:{CONTRABAND ONBOARD COUNTER HAS VALUE:}
+QUANTITY OF FIRST CONTRABAND GOOD ONBOARD:{QUANTITY OF FIRST CONTRABAND GOOD ONBOARD:}
+INDEX OF FIRST CONTRABAND IS:{INDEX OF FIRST CONTRABAND IS:}
+THERE ARE SOME MORE CONTRABAND GOODS{THERE ARE SOME MORE CONTRABAND GOODS}
+ONLY ONE CONTRABAND GOOD IS AVAILABLE{ONLY ONE CONTRABAND GOOD IS AVAILABLE}
+Donation of personal wealth to crew{Donation of personal wealth to crew}
+You have hoisted a Pirate flag! Argh!{You have hoisted a Pirate flag! Argh!}
+You've dropped through a trapdoor into a cave...{You've dropped through a trapdoor into a cave...}
+Secret Hide{Secret Hide}
+You've dropped through a trapdoor into the crypt...{You've dropped through a trapdoor into the crypt...}
+You've dropped through a trapdoor into the undercroft...{You've dropped through a trapdoor into the undercroft...}
+The vapour makes you stronger but has a side effect...{The vapour makes you stronger but has a side effect...}
+Among THIS handful of earth you find a piece of mineral{Among THIS handful of earth you find a piece of mineral}
+What am I going to dig with? My HANDS? I need a spade!{What am I going to dig with? My HANDS? I need a spade!}
+How am I going to pry this loose? I think a pickaxe should do the trick!{How am I going to pry this loose? I think a pickaxe should do the trick!}
+You must dig DEEPER !{You must dig DEEPER !}
+On THIS shovelload blinks a jewel..{On THIS shovelload blinks a jewel..}
+The sword of a buried abbot{The sword of a buried abbot}
+An artefact from the temple that once stood here{An artefact from the temple that once stood here}
+You plunge into the remains of a halfdecayed plaguevictim..{You plunge into the remains of a halfdecayed plaguevictim..}
+Someone's buried here.. but he aint dead!!{Someone's buried here.. but he aint dead!!}
+A file of LIVING Maltese knights comes to exorcise their crypt{A file of LIVING Maltese knights comes to exorcise their crypt}
+You might be exorcised as well..{You might be exorcised as well..}
+The grandmaster himself checks his treasure..{The grandmaster himself checks his treasure..}
+Your spade hits a stone and breaks..{Your spade hits a stone and breaks..}
+You dig up a treasurechest{You dig up a treasurechest}
+An  Akkelani witchdoctor. Mummified.. but spitting VENOM !{An  Akkelani witchdoctor. Mummified.. but spitting VENOM !}
+Looks like someone has been digging here..{Looks like someone has been digging here..}
+Do you want to dig as well? With your SWORD{Do you want to dig as well? With your SWORD}
+TAVERNBRAWL{TAVERNBRAWL}
+AMBUSH{AMBUSH}
+MILITARY RAID{MILITARY RAID}
+ALERT{ALERT}
+PIRATES RAID{PIRATES RAID}
+You are ALONE now. No other LIVING soul dares to enter here..{You are ALONE now. No other LIVING soul dares to enter here..}
+The warriormonk disappears... like the smoke of a long forgotten pyre...{The warriormonk disappears... like the smoke of a long forgotten pyre...}
+The weird monk reveals his true nature..{The weird monk reveals his true nature..}
+Old vag gone at the moment, but...burglers!{Old vag gone at the moment, but...burglers!}
+We are recognized, captain!{We are recognized, captain!}
+Cabin for captives can be here{Prison cabin can be here}
+Prisoners{Talk to prisoners in the hold for various options. Do so while in port to ransom them. The fee depends on their relations to the prisoner.}
+You hide the Jolly Roger and hoist your former flag again{You hide the Jolly Roger and hoist your former flag again}
+CaptainMoney1{You got}
+CaptainMoney2{piastres from the captain's coffer.}
+Carefully! It's a very dangerous barrel!!!{Careful! It's a very dangerous barrel!!!}
+Captain, we're out of gunpowder!{Captain, we're out of gunpowder!!!}
+GUNPOWDER STORAGE. Be careful with opened fire!{GUNPOWDER STORAGE. Be careful with opened fire!}
+save_You can't save{You can't save}
+save_now{now}
+save_while sailing{while sailing}
+save_while boarding{while boarding}
+save_while sailing or boarding{while sailing or boarding}
+save_on deck{on deck}
+Type{Type}
+Points{Points}
+trade_ship{Trade}
+war_ship{War}
+
+Brothel{Brothel}
+Tutorial Deck{Tutorial Deck}
+Tutorial_Deck{Tutorial Deck}
+Loanshark's Office{Loanshark's Office}
+Loanshark's backdoor{Loanshark's backdoor}
+Room in #stown_name# tavern{Room in #stown_name# tavern}
+#stown_name# tavern{#stown_name# tavern}
+#stown_name# store{#stown_name# store}
+#stown_name# shipyard{#stown_name# shipyard}
+#stown_name# townhall{#stown_name# townhall}
+#stown_name# residence{#stown_name# residence}
+#stown_name# prison{#stown_name# prison}
+#stown_name# brothel{#stown_name# brothel}
+Exit from #stown_name#{Exit from #stown_name#}
+#stown_name# Outskirts{#stown_name# Outskirts}
+#stown_name# Dungeon{#stown_name# Dungeon}
+#stown_name#{#stown_name#}
+#stown_name# town{#stown_name# town}
+#stown_name# Port{#stown_name# Port}
+#stown_name#. Center{#stown_name#. Center}
+#stown_name#. Trade Square{#stown_name#. Trade Square}
+Room in #stown_name# brothel{Room in #stown_name# brothel}
+#stown_name# Fort{#stown_name# Fort}
+Underworld{Underworld}
+Shipyard{Shipyard}
+Shipwright's Office{Shipwright's Office}
+Tavern{Tavern}
+Store{Store}
+Jungle{Jungle}
+House{House}
+Tailor's Shop{Tailor's Shop}
+Mansion{Mansion}
+SeaPort{Port}
+SeaFort{Fort}
+Cave{Cave}
+Sea{Sea}
+Ship{Ship}
+Pitfall!!!!{Pitfall!!!}
+#sisland_name# jungle{#sisland_name# jungle}
+#sisland_name# jungles{#sisland_name# jungles}
+Far Beach{Far Beach}
+#sisland_name# shore{#sisland_name# shore}
+#sisland_name# cave entrance{#sisland_name# cave entrance}
+#sisland_name# Plantation Residence{#sisland_name# Plantation Residence}
+Gray Rock Bay{Gray Rock Bay}
+To #stown_name#{To #stown_name#}
+Study{Study}
+Hall{Hall}
+Bedroom{Bedroom}
+MILITARY AREA. NO TRESPASSING!{MILITARY AREA. NO TRESPASSING!}
+Danger! Abbey out of repair!{Danger! Abbey out of repair!}
+Naval officers only!{Naval officers only!}
+Towncenter{Towncenter}
+Warehouse{Warehouse}
+Abbey of the Maltese order{Abbey of the Maltese order}
+Greenford{Greenford}
+Greenford port{Greenford port}
+Exit from Greenford{Exit from Greenford}
+Greenford shipyard{Greenford shipyard}
+Greenford store{Greenford store}
+Greenford tavern{Greenford tavern}
+Room in Greenford tavern{Room in Greenford tavern}
+#sisland_name# canyon{#sisland_name# canyon}
+#sisland_name# lighthouse{#sisland_name# lighthouse}
+#sisland_name# lighthouse Inside{#sisland_name# lighthouse Inside}
+#sisland_name# mine{#sisland_name# mine}
+#sisland_name# cavern{#sisland_name# cavern}
+#stown_name# church{#stown_name# church}
+Sewer{Sewer}
+Abandoned mine{Abandoned mine}
+Town{Town}
+Dutch West India Company{Dutch West India Company}
+
+Brothel.{Brothel}
+Loanshark's Office.{Loanshark's Office}
+Loanshark's backdoor.{Loanshark's backdoor}
+Room in #stown_name# tavern.{Room in #stown_name# tavern}
+#stown_name# tavern.{#stown_name# tavern}
+#stown_name# store.{#stown_name# store}
+#stown_name# shipyard.{#stown_name# shipyard}
+#stown_name# townhall.{#stown_name# townhall}
+#stown_name# residence.{#stown_name# residence}
+#stown_name# prison.{#stown_name# prison}
+#stown_name# brothel. {#stown_name# brothel}
+Exit from #stown_name#.{Exit from #stown_name#}
+#stown_name# Outskirts.{#stown_name# Outskirts}
+#stown_name# Dungeon.{#stown_name# Dungeon}
+#stown_name#.{#stown_name#}
+#stown_name# town.{#stown_name# town}
+#stown_name# Port.{#stown_name# Port}
+#stown_name#. Center.{#stown_name#. Center}
+#stown_name#. Trade Square.{#stown_name#. Trade Square}
+Room in #stown_name# brothel.{Room in #stown_name# brothel}
+#stown_name# Fort.{#stown_name# Fort}
+Underworld.{Underworld}
+Shipyard.{Shipyard}
+Tavern.{Tavern}
+Store.{Store}
+Jungle.{Jungle}
+House.{House}
+Tailor's Shop.{Tailor's Shop}
+Mansion.{Mansion}
+SeaPort.{Port}
+Cave.{Cave}
+Sea.{Sea}
+Ship.{Ship}
+Pitfall!!!!.{Pitfall!!!}
+#sisland_name# jungle.{#sisland_name# jungle}
+#sisland_name# jungles.{#sisland_name# jungles}
+Far Beach.{Far Beach}
+#sisland_name# shore.{#sisland_name# shore}
+#sisland_name# cave entrance.{#sisland_name# cave entrance}
+Gray Rock Bay.{Gray Rock Bay}
+To #stown_name#.{To #stown_name#}
+Study.{Study}
+Hall.{Hall}
+Bedroom.{Bedroom}
+MILITARY AREA! NO TRESPASSING!.{MILITARY AREA! NO TRESPASSING!}
+Towncenter.{Towncenter}
+Warehouse.{Warehouse}
+Abbey of the Maltese order.{Abbey of the Maltese order}
+#sisland_name# canyon.{#sisland_name# canyon}
+#sisland_name# lighthouse.{#sisland_name# lighthouse}
+#sisland_name# lighthouse Inside.{#sisland_name# lighthouse Inside}
+#sisland_name# mine.{#sisland_name# mine}
+#sisland_name# cavern.{#sisland_name# cavern}
+#stown_name# church.{#stown_name# church}
+Sewer.{Sewer}
+Abandoned mine.{Abandoned mine}
+Town.{Town}
+
+Khael Roa Shore{Khael Roa Shore}
+Incas Temple{Incas Temple}
+Maze{Maze}
+Alcove{Alcove}
+
+Khael Roa Shore.{Khael Roa Shore}
+Incas Temple.{Incas Temple}
+Maze.{Maze}
+Alcove.{Alcove}
+
+Pirate Chief's House{Pirate Chief's House}
+House of leader #stown_name# pirates{House of leader #stown_name# pirates}
+Room{Room}
+Entrance to strange house{Entrance to strange house}
+Enter{Enter}
+Inside strange house{Inside strange house}
+Exit{Exit}
+
+Pirate Chief's House.{Pirate Chief's House}
+House of leader #stown_name# pirates.{House of leader #stown_name# pirates}
+Room.{Room}
+Entrance to strange house.{Entrance to strange house}
+Enter.{Enter}
+Inside strange house.{Inside strange house}
+Exit.{Exit}
+Loanshark{Loanshark}
+Loanshark.{Loanshark}
+Residence{Residence}
+Residence.{Residence}
+
+Boarding deck{Boarding deck}
+Fort inside{Fort inside}
+Boarding town{Boarding town}
+
+Boarding deck.{Boarding deck}
+Fort inside.{Fort inside}
+Boarding town.{Boarding town}
+
+House of Amérigo Vieira{House of Amerigo Vieira}
+Smithy{Smithy}
+Sunny Haven{Sunny Haven}
+Hidden Cave{Hidden Cave}
+Exit from Smugglers Lair{Exit from Smugglers Lair}
+Leviathan Rock{Leviathan Rock}
+Chief's House{Chief's House}
+Rheims' House{Rheims' House}
+Rheims' House Window{Rheims' House Window}
+Smugglers Tavern{Smugglers Tavern}
+House of Leader of smugglers{House of Leader of smugglers}
+Rheims house in #stown_name#{Rheims house in #stown_name#}
+
+House of Amérigo Vieira.{House of Amerigo Vieira}
+Smithy.{Smithy}
+Sunny Haven.{Sunny Haven}
+Hidden Cave.{Hidden Cave}
+Exit from Smugglers Lair.{Exit from Smugglers Lair}
+Leviathan Rock.{Leviathan Rock}
+Smugglers Lair.{Smugglers Lair}
+Chief's House.{Chief's House}
+Rheims' House.{Rheims' House}
+Rheims' House Window.{Rheims' House Window}
+Smugglers Tavern.{Smugglers Tavern}
+House of Leader of smugglers.{House of Leader of smugglers}
+Rheims house in #stown_name#.{Rheims house in #stown_name#}
+
+#stown_name#. Slums{#stown_name#. Slums}
+Beach{Beach}
+#sisland_name# beach{#sisland_name# beach}
+Head port house{Head port house}
+Center{Town Center}
+Octopus Bay{Octopus Bay}
+House in #stown_name#{House in #stown_name#}
+
+#stown_name#. Slums.{#stown_name#. Slums}
+Beach.{Beach}
+#sisland_name# beach.{#sisland_name# beach}
+Head port house.{Head port house}
+Center.{Town Center}
+Octopus Bay.{Octopus Bay}
+House in #stown_name#.{House in #stown_name#}
+
+Trade Square{Trade Square}
+House of Mateus Santos{House of Mateus Santos}
+Damski's House{Damski's House}
+House of Sidonio Ogarrio{House of Sidonio Ogarrio}
+Sea Passage{Sea Passage}
+#sisland_name# passage{#sisland_name# passage}
+Oyster Beach{Oyster Beach}
+Entrace to #sisland_name# cave{Entrace to #sisland_name# cave}
+Shore{Shore}
+ANIMISTS Lair{ANIMISTS Lair}
+
+Trade Square.{Trade Square}
+House of Mateus Santos.{House of Mateus Santos}
+House of Sidonio Ogarrio.{House of Sidonio Ogarrio}
+Sea Passage.{Sea Passage}
+#sisland_name# passage.{#sisland_name# passage}
+Oyster Beach.{Oyster Beach}
+Entrace to #sisland_name# cave.{Entrace to #sisland_name# cave}
+Shore.{Shore}
+ANIMISTS Lair.{ANIMISTS Lair}
+
+Prison{Prison}
+Devil's Throat{Devil's Throat}
+Rocky Shore{Rocky Shore}
+Dungeon{Dungeon}
+
+Prison.{Prison}
+Devil's Throat.{Devil's Throat}
+Rocky Shore.{Rocky Shore}
+Dungeon.{Dungeon}
+
+Ship deck{Ship deck}
+Cannons deck{Cannons deck}
+Main Cannons Deck{Main Cannons Deck}
+Upper Cannons Deck{Upper Cannons Deck}
+Lower Cannons Deck{Lower Cannons Deck}
+Gunpowder Storage{Gunpowder Storage}
+Cargo Hold{Cargo Hold}
+1st Cargo Hold{1st Cargo Hold}
+2nd Cargo Hold{2nd Cargo Hold}
+Captain's Cabin{Captain's Cabin}
+Crew's Quarters{Crew's Quarters}
+Quarterdeck{Quarterdeck}
+
+Cannons deck.{Cannons deck}
+Lower cannons deck.{Lower cannons deck}
+Gunpowder storage.{Gunpowder storage}
+Cargo hold.{Cargo hold}
+Captain's cabin.{Captain's cabin}
+Crew's quarters.{Crew's quarters}
+Quarterdeck.{Quarterdeck}
+
+Passage{Passage}
+Old Fort{Old Fort}
+Turtle Bay{Turtle Bay}
+Inside House{Inside House}
+Birds Cove{Birds Cove}
+Pirate Lair{Pirate Lair}
+
+Passage.{Passage}
+Old Fort.{Old Fort}
+Turtle Bay.{Turtle Bay}
+Inside House.{Inside House}
+Birds Cove.{Birds Cove}
+Pirate Lair.{Pirate Lair}
+
+White Bay.{White Bay}
+White Bay{White Bay}
+
+White Bay.{White Bay}
+White Bay{White Bay}
+
+Exit from #stown_name#{Exit from #stown_name#}
+#sisland_name# Cavern{#sisland_name# Cavern}
+Pirate Fort{Pirate Fort}
+House of leader of #sisland_name# pirates{House of leader of #sisland_name# pirates}
+Palm Beach{Palm Beach}
+Crab Cliffs{Crab Cliffs}
+House in Jungle{House in Jungle}
+Rheims house on #sisland_name#{Rheims house on #sisland_name#}
+Room in Pirate tavern{Room in Pirate tavern}
+The cavern{The cavern}
+#sisland_name# shore ship{#sisland_name# shore ship}
+
+Exit from #stown_name#.{Exit from #stown_name#}
+#stown_name# Cavern.{#stown_name# Cavern}
+Pirate Fort.{Pirate Fort}
+House of leader of #sisland_name# pirates.{House of leader of #sisland_name# pirates}
+Palm Beach.{Palm Beach}
+Crab Cliffs.{Crab Cliffs}
+House in Jungle.{House in Jungle}
+Rheims house on #sisland_name#.{Rheims house on #sisland_name#}
+Room in Pirate tavern.{Room in Pirate tavern}
+The cavern.{The cavern}
+#sisland_name# shore ship.{#sisland_name# shore ship}
+
+in the town of #slocname#{in the town of #slocname#}
+at the shore of #slocname#{at the shore of #slocname#}
+near the citygates of #slocname#{near the citygates of #slocname#}
+on the causeway of #slocname#{on the causeway of #slocname#}
+somewhere in #slocname#{somewhere in #slocname#}
+on #slocname#{on #slocname#}
+somewhere in the jungles of #slocname#{somewhere in the jungles of #slocname#}
+
+Douwesen_port{#stown_name# port}
+Douwesen_shore_01{Palm Beach on #sisland_name#}
+Douwesen_shore_02{Crab Cliffs on #sisland_name#}
+Muelle_port{#stown_name# port}
+Muelle_shore{Oyster Beach on #sisland_name#}
+Falaise_de_fleur_port_01{#stown_name# port}
+Falaise_de_fleur_shore{Octopus Bay on #sisland_name#}
+QC_port{#stown_name# port}
+KhaelRoa_port{#sisland_name#}
+Conceicao_port{#stown_name# port}
+Conceicao_shore_01{Sunny Haven on #sisland_name#}
+Conceicao_shore_02{Leviathan Rock on #sisland_name#}
+REDMOND_PORT{#stown_name# port}
+Redmond_Shore_01{Devil's Throat on #sisland_name#}
+Redmond_Shore_02{Rocky Shore on #sisland_name#}
+Greenford_port{#stown_name# port}
+Oxbay_port{#stown_name# port}
+Oxbay_shore_02{Gray Rock Bay on #sisland_name#}
+Oxbay_lighthouse{Lighthouse on #sisland_name#}
+Oxbay_Shore_01{Far Beach on #sisland_name#}
+Oxbay_suburb{#stown_name# suburb}
+Greenford_suburb{#stown_name# suburb}
+
+Tradepost{Tradepost}
+Inn{Inn}
+Simpson Bay{Simpson Bay}
+Baie Orient{Baie Orient}
+Cellar{Cellar}
+Muscetto Cove{Muscetto Cove}
+Mixteca Bay{Mixteca Bay}
+Darien Beach{Darien Beach}
+
+Tradepost.{Tradepost}
+Inn.{Inn}
+Simpson Bay.{Simpson Bay}
+Baie Orient.{Baie Orient}
+Cellar.{Cellar}
+Muscetto Cove.{Muscetto Cove}
+
+Cape Francos{Cape Francos}
+Cape Francos.{Cape Francos}
+Temple{Temple}
+Temple.{Temple}
+Cave entrance{Cave entrance}
+Cave entrance.{Cave entrance}
+Grot{Grot}
+Grot.{Grot}
+Buccaneers Camp{Buccaneers Camp}
+Buccaneers Camp.{Buccaneers Camp}
+Village{Village}
+Village.{Village}
+
+Barracks{Barracks}
+Church{Church}
+Entrance to plantation{Entrance to plantation}
+Anse Casse-Bois{Anse Casse-Bois}
+
+Barracks.{Barracks}
+Church.{Church}
+Entrance to plantation.{Entrance to plantation}
+Anse Casse-Bois.{Anse Casse-Bois}
+
+Storehouse{Storehouse}
+Storehouse.{Storehouse}
+Guardhouse{Guardhouse}
+Guardhouse.{Guardhouse}
+Naval academy{Naval academy}
+Naval academy.{Naval academy}
+For mature men only!{For mature men only!}
+Brothel Bedroom{Brothel Bedroom}
+Brothel Bedroom.{Brothel Bedroom}
+Lighthouse{Lighthouse}
+Lighthouse.{Lighthouse}
+Arsenal{Barracks}
+Arsenal.{Barracks}
+
+To Fort{To Fort}
+Cayman Kai{Cayman Kai}
+#sisland_name# Grot entrance{#sisland_name# Grot entrance}
+Entrance to house{Entrance to house}
+Inside house{Inside house}
+#sisland_name# underground{#sisland_name# underground}
+Naval officers only!{Naval officers only!}
+
+To Fort.{To Fort}
+Cayman Kai.{Cayman Kai}
+#sisland_name# Grot entrance.{#sisland_name# Grot entrance}
+Entrance to house.{Entrance to house}
+Inside house.{Inside house}
+#sisland_name# underground.{#sisland_name# underground}
+Naval officers only!{Naval officers only!}
+
+NoCannons{No more cannons!}
+Enough{You can't install more cannons on this place!}
+
+There is no building ground left anymore!{There is no building ground left anymore!}
+Switch to first-person-view if your avatar is inside of the building{Switch to first-person-view if your avatar is inside of the building}
+There is no building ground free at{There is no building ground free at}
+Buildings for Greater Oxbay locs{Buildings for Greater Oxbay locs}
+BK Keeper initialised.{BK Keeper initialised.}
+You chat on for hours and learn a lot{You chat on for hours and learn a lot}
+After 24hrs are you fit again, even stronger than before.{After 24hrs are you fit again, even stronger than before.}
++ 1 max HP{+ 1 max HP}
+You have learned a lot about woundtreatment.{You have learned a lot about woundtreatment.}
+You wake up feeling feverish.{You wake up feeling feverish.}
+Your wounds burn like fire!{Your wounds burn like fire!}
+about the town.{about the town.}
+Your victim produces{Your victim produces}
+Your conduct didn't improve your reputation{Your conduct didn't improve your reputation}
+Mustering those drunken tars takes till nightfall...{Mustering those drunken tars takes till nightfall...}
+
+For mature men only!{For mature men only!}
+Brothel Bedroom{Brothel Bedroom}
+Naval academy{Naval academy}
+Storehouse{Storehouse}
+
+You wait here 5 days{You wait here 5 days}
+You spend 1 day in the house{You spend 1 day in the house}
+You spend 1 day in{You spend 1 day in}
+A few days later{A few days later}
+You wait here 1 day for ship repairs{You wait here 1 day for ship repairs}
+You wait here 5 days for ship repairs{You wait here 5 days for ship repairs}
+You wait here 10 days for ship repairs{You wait here 10 days for ship repairs}
+You wait here all a month for ship repairs{You wait here all a month for ship repairs}
+Captain, we killed and fished for{Captain, we killed and fished for}
+rations today{rations today}
+but{but}
+men were killed by wild jungle or disappeared..{men were killed by wild jungle or disappeared...}
+You you stand guard for hours.{You you stand guard for hours.}
+It may be time to claim your reward.{It may be time to claim your reward.}
+The Keeper disappears without word or sound, as if the ancient walls had swallowed him...{The Keeper disappears without word or sound, as if the ancient walls had swallowed him...}
+here{here}
+
+low_trade_1{But I am in dire need of your help! I can sell all of my goods cheaper than your ordinary price.}
+low_trade_2{Sounds like I can make quite some good money here! But you'll not blab to anybody about it, agreed?}
+low_trade_3{I am no enemy of yours! Couldn't do business with you otherwise, could I?}
+low_trade_4{I changed my mind. Sorry.}
+low_trade_5{So you want to have a look at my goods? I assure you, they are first class!}
+low_trade_6{With pleasure. But will you consider looking at mine as well?}
+
+high_trade_1{But I am in dire need of your help! I'll pay you double price for your discretion.}
+high_trade_2{Sounds like I can make quite some good money here! But you'll not blab to anybody about it either, agreed?}
+high_trade_3{I'm no enemy of yours! Couldn't do business with you otherwise, could I?}
+high_trade_4{I changed my mind. Sorry.}
+high_trade_5{Well, make it quick, will you? I think I can hear the guards patrolling outside!}
+high_trade_6{Let's cut through the jabber then. I need to repair my ship.}
+high_trade_7{I want to restock on cannons. Or maybe install a new set altogether.}
+
+You refilled your{You refilled your}
+The Gunner has provided you with{The Gunner has provided you with}
+Ammunition.{Ammunition.}
+Ammunition!{Ammunition!}
+Executed Console{Executed Console}
+Your shore party has been resupplied with Ammunition!{Your shore party has been resupplied with Ammunition!}
+
+Your new tattoo looks splendid and inspiring!{Your new tattoo looks splendid and inspiring!}
+But it took a bit of life out of you...{But it took a bit of life out of you...}
+Your new tattoo looks nice, but...{Your new tattoo looks nice, but...}
+the infected needle made you sick!{the infected needle made you sick!}
+Plus the procedure took some life out of you...{Plus the procedure took some life out of you...}
+
+Crew begins transfer of{Crew begins transfer of}
+cwt of cargo.{cwt of cargo.}
+Transfer takes roughly a day{Transfer takes roughly a day}
+Transfer takes roughly{Transfer takes roughly}
+Transfer takes roughly an hour{Transfer takes roughly an hour}
+
+You get your blade back three days later.{You get your blade back three days later.}
+You get your blade back two days later.{You get your blade back two days later.}
+
+You have hoisted a Pirate flag! Argh!{You have hoisted a Pirate flag! Argh!}
+No Balls to Load{No Balls to Load}
+No Grapes to Load{No Grapes to Load}
+No Chains to Load{No Chains to Load}
+No Bombs to Load{No Bombs to Load}
+
+There's a cave entrance in the Cliff!{There's a cave entrance in the Cliff!}
+NoGambleMoney{Nothing? That's not much of a gamble, is it? Or are you broke?}
+NoGamblerMoney{Not that rich, eh?}
+GambleBetMin{That doesn't look like much... but it seems real enough. I'll take it.}
+FirstTimePlayingBlackJack{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Left click on the cards to begin a game. Left click on the portraits to make each character move. Click Bet during own turn to double up.}
+FirstTimePlayingPoker{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Left click on the cards to begin a game. Left click on the portraits to make each character move. Left click on any of your cards to change them.}
+FirstTimePlayingDumb{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Left click on the cards to begin a game. Left click on any of your cards to make a move.}
+FirstTimePlayingDice{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Click on the mug to roll the dice.}
+Exit from gamble confirm{Do you really want to leave this game?}
+CrewMutinyLeavesShip{Crewmembers are leaving your ship!}
+CrewMutinyArticles1{You violate the conditions of our agreement, captain. If you won't immediately pay us}
+CrewMutinyArticles2{gold and won't give us a small cask of rum, we'll hitch you up on a yard!}
+CrewMutinyArticles3{Well, captain. Follow the conditions of our agreement in the future, and you'll not be disappointed...}
+CrewMutinyArticles4{You don't have rum...}
+CrewMutinyArticles5{Your pockets are empty...}
+GainedPerk{gained new Ability -}
+PlaguevictimsGrave{Curse? A plaguevictims grave? Whatever, you suddenly feel terribly sick!}
+Petit Tabac{Petit Tabac}
+Battle_Rocks{Petit Tabac}
+Isla De Muerte{Isla De Muerte}
+IslaDeMuerte{Isla De Muerte}
+Deserted shore{Deserted shore}
+Dead Man's Bay{Dead Man's Bay}
+Witch's Rock{Witch's Rock}
+Strange sail to the{Strange sail to the}
+Captain, a hint:{Captain, a hint:}
+of_island{of}
+lies nothing but open sea!{lies nothing but open sea!}
+North{North}
+South{South}
+West{West}
+East{East}
+Northeast{Northeast}
+Northwest{Northwest}
+Southeast{Southeast}
+Southwest{Southwest}
+No island within reach{No island within reach}
+Enter the map to sail to some island{Enter the map to sail to some island}
+in sight{in sight}
+to the{to the}
+Captain, there is something drifting in the water{Captain, there is something drifting in the water}
+Something is drifting there, DEAD AHEAD,{Something is drifting there, DEAD AHEAD,}
+Captain, a boat{Captain, a boat}
+Captain, a native raft{Captain, a native raft}
+Captain, a dismasted vessel{Captain, a dismasted vessel}
+You don't have enough gunpowder for a mine{You don't have enough gunpowder for a mine}
+A mine{A mine}
+Collision with a drifting trunk !{Collision with a drifting trunk !}
+You find some votive items on an Indian ceremonial raft{You find some votive items on an Indian ceremonial raft}
+You find some burial objects on a witch doctor's funeral raft{You find some burial objects on a witch doctor's funeral raft}
+You find some burial objects on a voodoo priest's funeral raft{You find some burial objects on a voodoo priest's funeral raft}
+This Indian funeral raft has already been plundered...{This Indian funeral raft has already been plundered...}
+You find some jewels on an abandoned packet boat{You find some jewels on an abandoned packet boat}
+You find some money on an abandoned packet boat{You find some money on an abandoned packet boat}
+You find some ordinance on an abandoned ammo tender{You find some ordinance on an abandoned ammo tender}
+Someone has already emptied this abandoned hulk...{Someone has already emptied this abandoned hulk...}
+Directsail mod active{Directsail mod active}
+Directsail mod deactivated{Directsail mod deactivated}
+Directsail toggled, press 0 to enable{Directsail toggled, press "0" to enable}
+
+Portugese Blacksmith{Portugese Blacksmith}
+French Blacksmith{French Blacksmith}
+Spanish Blacksmith{Spanish Blacksmith}
+Redmond Blacksmith{Redmond Blacksmith}
+Opium Den{Opium Den}
+Dutch Blacksmith{Dutch Blacksmith}
+Pirate Blacksmith{Pirate Blacksmith}
+Apothecary{Apothecary}
+Eden Rock{Eden Rock}
+Sand Bluff{Sand Bluff}
+Study{Study}
+Undercroft{Undercroft}
+Yard{Yard}
+Outskirts{Outskirts}
+Bahia de Moa{Bahia de Moa}
+Guadeloupe lighthouse{Guadeloupe lighthouse}
+Redmond Townhall. Silehards's Bedroom{Redmond Townhall. Silehards's Bedroom}
+Pirate bark{Pirate bark}
+Gamboa ship{Gamboa ship}
+Kidnappers' Hideout, 2nd floor{Kidnappers' Hideout, 2nd floor}
+House of Geffrey Bampfylde{House of Geffrey Bampfylde}
+Room in Marigot tavern{Room in Marigot tavern}
+Mine{Mine}
+Sandy Point{Sandy Point}
+White Reefs{White Reefs}
+Wreckage shore{Wreckage shore}
+
+Portugese Blacksmith.{Portugese Blacksmith}
+French Blacksmith.{French Blacksmith}
+Spanish Blacksmith.{Spanish Blacksmith}
+Redmond Blacksmith.{Redmond Blacksmith}
+Opium Den.{Opium Den}
+Dutch Blacksmith.{Dutch Blacksmith}
+Pirate Blacksmith.{Pirate Blacksmith}
+Apothecary.{Apothecary}
+Eden Rock.{Eden Rock}
+Sand Bluff.{Sand Bluff}
+Study.{Study}
+Undercroft.{Undercroft}
+Yard.{Yard}
+Outskirts.{Outskirts}
+Bahia de Moa.{Bahia de Moa}
+Guadeloupe lighthouse.{Guadeloupe lighthouse}
+Redmond Townhall. Silehards's Bedroom.{Redmond Townhall. Silehards's Bedroom}
+Pirate bark.{Pirate bark}
+Gamboa ship.{Gamboa ship}
+Kidnappers' Hideout, 2nd floor.{Kidnappers' Hideout, 2nd floor}
+House of Geffrey Bampfylde.{House of Geffrey Bampfylde}
+Room in Marigot tavern.{Room in Marigot tavern}
+Mine.{Mine}
+Sandy Point.{Sandy Point}
+White Reefs.{White Reefs}
+Wreckage shore.{Wreckage shore}
+Boca de Yuman{Boca de Yuman}
+Boca de Hubon{Boca de Hubon}
+Bahia de San Antonio{Bahia de San Antonio}
+Playa de Sabana{Playa de Sabana}
+Punta de Maisi{Punta de Maisi}
+Playa de Sierra Maestra{Playa de Sierra Maestra}
+Peninsula de Zapata{Peninsula de Zapata}
+Fort St Louis{Fort St Louis}
+Fort James{Fort James}
+Fort{Fort}
+Terks{Turks}
+Hidden Coast{Hidden Coast}
+Pirate Port{Pirate Port}
+Fort Amsterdam{Fort Amsterdam}
+Sent{Saint Martin}
+Navy Office{Navy Office}
+Tortuga prison{Tortuga prison}
+Tortuga Townhall{Tortuga Townhall}
+
+have declared a ceasefire!{have declared a ceasefire!}
+have formed an alliance!{have formed an alliance!}
+have declared war on each other!{have declared war on each other!}
+have broken their alliance but are currently peaceful!{have broken their alliance but are currently peaceful!}
+have broken their alliance and are now at war!{have broken their alliance and are now at war!}
+
+My dear, I'm totally enchanted!  May I spend a few moments of your precious time?{My dear, I'm totally enchanted!  May I spend a few moments of your precious time?}
+You take the wind right out of my sails!  Would you do me the pleasure of some conversation?{You take the wind right out of my sails!  Would you do me the pleasure of some conversation?}
+I am delighted to have the opportunity to be here with you.  Might you indulge a lonely sailor?{I am delighted to have the opportunity to be here with you.  Might you indulge a lonely sailor?}
+You are as radiant as a summer's sunset out at sea!  May I become better acquainted with you?{You are as radiant as a summer's sunset out at sea!  May I become better acquainted with you?}
+This lowly seaman is at a loss for words.  Speak, I pray, that I might know you better!{This lowly seaman is at a loss for words.  Speak, I pray, that I might know you better!}
+I would be honored and delighted to share a few moments of time with you, dear lady!{I would be honored and delighted to share a few moments of time with you, dear lady!}
+I must leave with the tide, dear one...  But until then, might we share some companionable moments?{I must leave with the tide, dear one...  But until then, might we share some companionable moments?}
+The sea calls, and I must build a future.  Until the next tide, would you indulge a weary sailor?{The sea calls, and I must build a future.  Until the next tide, would you indulge a weary sailor?}
+My dear, I'm just a master and commander.  Tell me about yourself, everything, I'd love to know!{My dear, I'm just a master and commander.  Tell me about yourself, everything, I'd love to know!}
+There are any wondrous things at sea, from mighty ships to flying fish. But none so lovely as your smile!{There are any wondrous things at sea, from mighty ships to flying fish. But none so lovely as your smile!}
+I hesitate to be so bold, but I am lost without you.  Would you complete me by consenting to be my bride?{I hesitate to be so bold, but I am lost without you.  Would you complete me by consenting to be my bride?}
+I used to think that I was happy at sea, but I would be much happier knowing that you waited at my home port.  Would you be my wife?{I used to think that I was happy at sea, but I would be much happier knowing that you waited at my home port.  Would you be my wife?}
+I...  I'm at a loss for words... Ha'hmmm...  I have this ring here, you see, and I...  Would you marry me?{I...  I'm at a loss for words... Ha'hmmm...  I have this ring here, you see, and I...  Would you marry me?}
+Dear lady, I have trod decks riddled with shot without the depth of fear I feel now.  Please ease my soul and tell me that you'll marry me!{Dear lady, I have trod decks riddled with shot without the depth of fear I feel now.  Please ease my soul and tell me that you'll marry me!}
+
+cplates_desc{A copper sheath prevents accumulation of seaborne deritrus on the hull, resulting in increased performance.}
+bcannons_desc{For those who could afford them, bronze cannon offered greater accuracy over those of iron.}
+gchasers_desc{Bronze cannon were preferred for chaser mounts where accuracy was paramount.}
+nsails_desc{Traditionally, sails were made from linen. These lighter sails of American cotton will increase efficiency.}
+ltopmasts_desc{Increasing the height of the masts will yield dividends in sail area and thus speed.}
+stays_desc{Additional staysails, flown between masts or from mast to deck, will benefit upwind performance.}
+rhull_desc{Jury-rigged structural reinforcements, to the Captain's specification, makes your vessel marginally more survivable against storm, sea, and shot.}
+flushed_desc{Corsairs regularly strip out unnecessary superstructure from a vessel to increase speed, agility and cargo capacity at the cost of hull strength.}
+
+Swamp Island{Swamp Island}
+Swamp Wreck{Swamp Wreck}
+Store upstairs{Store upstairs}
+Woodes Rogers' bedroom{Woodes Rogers' bedroom}
+Caroline K's bedroom{Caroline K's bedroom}
+Woodes Rogers' kitchen{Woodes Rogers' kitchen}
+Woodes Rogers' food cellar{Woodes Rogers' food cellar}
+Tavern storeroom{Tavern storeroom}
+Charles Windem's room{Charles Windem's room}
+Woodes Rogers' library{Woodes Rogers' library}
+Caroline K's drawing room{Caroline K's drawing room}
+Woodes Rogers' study{Woodes Rogers' study}
+Woodes Rogers' secret room{Woodes Rogers' secret room}
+Woodes Rogers' residence{Woodes Rogers' residence}
+Loanshark cellar{Loanshark cellar}
+Woodes Rogers' booty room{Woodes Rogers' booty room}
+Fried Egg's Room{Fried Egg's Room}
+Shipyard stairs{Shipyard stairs}
+Shipyard shore{Shipyard shore}
+Redmond shore{Redmond shore}
+Woodes Rogers' port{Woodes Rogers' port}
+Woodes Rogers' armory{Woodes Rogers' armory}
+Gunpowder storage{Gunpowder storage}
+Crew's quarter{Crew's quarter}
+Gunroom{Gunroom}
+Storeroom attic{Storeroom attic}
+Rogers' Paintings Furniture & Weapons{Rogers' Paintings Furniture & Weapons}
+Shop office{Shop office}
+Dave Edna's Room{Dave Edna's Room}
+Grandmother Rogers' room{Grandmother Rogers' room}
+Guard room{Guard room}
+Woodes Rogers' prison{Woodes Rogers' prison}
+Port Royal old mine{Port Royal old mine}
+Cannon tower{Cannon tower}
+Cave shore{Cave shore}
+Blue cavern{Blue cavern}
+Outside pirate church{Outside pirate church}
+Entrance to church attic{Entrance to church attic}
+Outside pirate church{Outside pirate church}
+Church attic{Church attic}
+Sacristy{Sacristy}
+Pirate church{Pirate church}
+Chapel stairs{Chapel stairs}
+Chapel{Chapel}
+Temple stairs{Temple stairs}
+Temple{Temple}
+Port Royal catacombs{Port Royal catacombs}
+Prison ships{Prison ships}
+Boat shore{Boat shore}
+Small fort{Small fort}
+Shipyard shore{Shipyard shore}
+Docks{Docks}
+De Foe's home{De Foe's home}
+Roger's wine cellar{Roger's wine cellar}
+Church wine cellar{Church wine cellar}
+Port Royal Church Choir{Port Royal Church Choir}
+Port Royal Military Head Quarter{Port Royal Military Head Quarter}
+Grandma's stairs{Grandma's stairs}
+
+Rogers' kitchen{Rogers' kitchen}
+Rogers' bedroom{Rogers' bedroom}
+Rogers' passage{Rogers' passage}
+Minervas room{Minervas room}
+Rogers' bootyroom{Rogers' bootyroom}
+Rogers' laboratory{Rogers' laboratory}
+Wood tower{Wood tower}
+
+You equipped a Powder Flask and an Ammunition Pouch.{You equipped a Powder Flask and an Ammunition Pouch.}
+If I push the fat trader I can take his cutlass!{If I push the fat trader I can take his cutlass!}
+Maybe there's something under this body too?{Maybe there's something under this body too?}
+CLOSED BECAUSE OF ILLNESS - Charles Windem innkeeper{CLOSED BECAUSE OF ILLNESS - Charles Windem innkeeper}
+TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager{TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager}
+There sure is a lot of rum stacked in here{There sure is a lot of rum stacked in here}
+My barrel is filled with rum!{My barrel is filled with rum!}
+You can't carry these tools without a real Carpenter's Chest.{You can't carry these tools without a real Carpenter's Chest.}
+Collect all the Carpenter's Tools - maybe you find something useful!{Collect all the Carpenter's Tools - maybe you find something useful!}
+Now get the Carpenter's Chest!{Now get the Carpenter's Chest!}
+I found a big key in one of his pockets!{I found a big key in one of his pockets!}
+The Carpenter's Chest is now filled up!{The Carpenter's Chest is now filled up!}
+Hmm, the other lock is not opened yet{Hmm, the other lock is not opened yet}
+Woodes Rogers' kitchen{Woodes Rogers' kitchen}
+Erotica{Erotica}
+Geography and Meteorology{Geography and Meteorology}
+Mathematics, Physics and Chemistry{Mathematics, Physics and Chemistry}
+Shipbuilding{Shipbuilding}
+Trade and Economics{Trade and Economics}
+Navigation and Seamanship{Navigation and Seamanship}
+Sea Battles{Sea Battles}
+Philosophy and Psychology{Philosophy and Psychology}
+Architecture, Town Planning and Fortifications{Architecture, Town Planning and Fortifications}
+Poetry and Love Songs{Poetry and Love Songs}
+Medicine{Medicine}
+Law{Law}
+Antiques and Jewels{Antiques and Jewels}
+Travels around the world{Travels around the world}
+History and Biographies{History and Biographies}
+Maps and Documents{Maps and Documents}
+Alchemy and Mysticism{Alchemy and Mysticism}
+Novels about Hidden Treasure{Novels about Hidden Treasure}
+Remember to return all books to their right places!{Remember to return all books to their right places!}
+Law book placed{Law book placed}
+History book placed{History book placed}
+RUM has started to drip into the Barrel!{RUM has started to drip into the Barrel!}
+After one hour - least{After one hour - least}
+The Barrel is now filled with RUM ...{The Barrel is now filled with RUM ...}
+Sea Battles book placed{Sea Battles book placed}
+Medicine book placed{Medicine book placed}
+A note falls out of the Medicine book!{A note falls out of the Medicine book!}
+Treasure Tale placed{Treasure Tale placed}
+Chemistry book placed{Chemistry book placed}
+I have repaired Dampier's book!{I have repaired Dampier's book!}
+A small key is attached to the inside of the cover of the Chemistry book!{A small key is attached to the inside of the cover of the Chemistry book!}
+Erotic book placed{Erotic book placed}
+You need something to carry the books in!{You need something to carry the books in!}
+History book picked up{History book picked up}
+Water tank{Water tank}
+Molasses tank{Molasses tank}
+Water valve{Water valve}
+The lever is not working!!!{The lever is not working!!!}
+
+That island is the only land in sight. I have to get there!{That island is the only land in sight. I have to get there!}
+Hmm, this tree is floating, how can I get it to sea?{Hmm, this tree is floating, how can I get it to sea?}
+Yes, I can push tree to the shore!{Yes, I can push tree to the shore!}
+This tar is really heavy - and I don't need it...{This tar is really heavy - and I don't need it...}
+It's an ordinary lock here.{It's an ordinary lock here.}
+It's an ordinary lock to the right.{It's an ordinary lock to the right.}
+It's a large lock to the left.{It's a large lock to the left.}
+This beam is too heavy, I must find something to use as a lever.{This beam is too heavy, I must find something to use as a lever.}
+If I only could push this beam a little.{If I only could push this beam a little.}
+No lock but it's stuck, maybe I can pry it open with any sharp and strong item.{No lock but it's stuck, maybe I can pry it open with any sharp and strong item.}
+It's unlocked but somehow the mechanism is jammed.{It's unlocked but somehow the mechanism is jammed.}
+No lock - and no handle either, how do I open it?{No lock - and no handle either, how do I open it?}
+Have to be careful - that beam rests only on a small piece of wood.{Have to be careful - that beam rests only on a small piece of wood.}
+This 'lock' is so simple that I could pick it with a fork!{This 'lock' is so simple that I could pick it with a fork!}
+Not a chance!{Not a chance!}
+The Carpenter's Chest is filled up!{The Carpenter's Chest is filled up!}
+The chest is blocked by a lot of goods.{The chest is blocked by a lot of goods.}
+
+
+Choose ONE picture.{Choose ONE picture.}
+Yes, this picture seems to be the right one!{Yes, this picture seems to be the right one!}
+Now I need some glue to repair the Book.{Now I need some glue to repair the Book.}
+No this is not the right picture.{No this is not the right picture.}
+Maybe I should cut him down.{Maybe I should cut him down.}
+That barrel could be useful but I can't remove it with my bare hands from the gibbet.{That barrel could be useful but I can't remove it with my bare hands from the gibbet.}
+Ok, there might be skeletons in here...{Ok, there might be skeletons in here...}
+...and how do I frighten them away with fire!?{...and how do I frighten them away with fire!?}
+Hmm, very foggy now - maybe the Skeletons can't see me?{Hmm, very foggy now - maybe the Skeletons can't see me?}
+The corpse is too heavy walking around with.{The corpse is too heavy walking around with.}
+Maybe these poles and planks could be of some help.{Maybe these poles and planks could be of some help.}
+I need something with a hook to get those boxes.{I need something with a hook to get those boxes.}
+If I just had something to carry this chest with!{If I just had something to carry this chest with!}
+I could use a box or bag or anything to carry this in.{I could use a box or bag or anything to carry this in.}
+I'll need a foodchest first.{I'll need a foodchest first.}
+No, I can't carry the medicine stuff too.{No, I can't carry the medicine stuff too.}
+I can't lock the chest. The key and the entire lock are missing!{I can't lock the chest. The key and the entire lock are missing!}
+You have learned the 'Master Gunfighter' ability{You have learned the 'Master Gunfighter' ability}
+You have learned the 'Professional Gunman' ability{You have learned the 'Professional Gunman' ability}
+You have learned the 'Gunman' ability{You have learned the 'Gunman' ability}
+You have learned the 'Basic Defence' ability{You have learned the 'Basic defence' ability}
+You have learned the 'Iron Will' ability{You have learned the 'Iron Will' ability}
+You have learned the 'Light Repairs' ability{You have learned the 'Light Repairs' ability}
+You have learned the 'Quick Repairs' ability{You have learned the 'Quick Repairs' ability}
+You have learned the 'Basic Ship Defence' ability{You have learned the 'Basic Ship defence' ability}
+You have learned the 'Advanced Ship Defence' ability{You have learned the 'Advanced Ship defence' ability}
+You have learned the 'Professional Ship Defence' ability{You have learned the 'Professional Ship defence' ability}
+You have learned the 'Shared Experience' ability{You have learned the 'Shared Experience' ability}
+You have learned the 'Fire-ship' ability{You have learned the 'Fire-ship' ability}
+You have learned the 'Landing Party' ability{You have learned the 'Landing Party' ability}
+You have learned the 'Land Owner' ability{You have learned the 'Land Owner' ability}
+You have learned the 'Basic Commerce' ability{You have learned the 'Basic Commerce' ability}
+You have learned the 'Advanced Commerce' ability{You have learned the 'Advanced Commerce' ability}
+You have learned the 'Trustworthy Lad' ability{You have learned the 'Trustworthy Lad' ability}
+You have learned the 'Long Range Boarding' ability{You have learned the 'Long Range Boarding' ability}
+You have learned the 'Musket Volley' ability{You have learned the 'Musket Volley' ability}
+You have learned the 'Master Of Boarding' ability{You have learned the 'Master Of Boarding' ability}
+You have learned the 'Instant Boarding' ability{You have learned the 'Instant Boarding' ability}
+You have learned the 'Speed Increase' ability{You have learned the 'Speed Increase' ability}
+You have learned the 'Maneuverability' ability{You have learned the 'Maneuverability' ability}
+You have learned the 'Storm Helmsman' ability{You have learned the 'Storm Helmsman' ability}
+You have learned the 'Quick Turn-Around' ability{You have learned the 'Quick Turn-Around' ability}
+You have learned the 'Sense Fairway' ability{You have learned the 'Sense Fairway' ability}
+You have learned the 'Sea Wolf' ability{You have learned the 'Sea Wolf' ability}
+You have learned the 'Advanced defence' ability{You have learned the 'Advanced defence' ability}
+You have learned the 'Toughness' ability{You have learned the 'Toughness' ability}
+You have learned the 'Rush' ability{You have learned the 'Rush' ability}
+You have learned the 'Critical Hit' ability{You have learned the 'Critical Hit' ability}
+You have learned the 'SwordplayProfessional' ability{You have learned the 'SwordplayProfessional' ability}
+You have learned the 'Fast Reload' ability{You have learned the 'Fast Reload' ability}
+You have learned the 'Pre-reloading' ability{You have learned the 'Pre-reloading' ability}
+You have learned the 'Increased Ship Damage' ability{You have learned the 'Increased Ship Damage' ability}
+You have learned the 'Increased Sail Damage' ability{You have learned the 'Increased Sail Damage' ability}
+You have learned the 'Increased Crew Damage' ability{You have learned the 'Increased Crew Damage' ability}
+You have learned the 'Critical Shot' ability{You have learned the 'Critical Shot' ability}
+You have learned the 'Increased Volley Range' ability{You have learned the 'Increased Volley Range' ability}
+You have learned the 'Professional Cannoneer' ability{You have learned the 'Professional Cannoneer' ability}
+
+You have received Cotton, Chocolate and Sugar goods.{You have received Cotton, Chocolate and Sugar goods.}
+You have received Cotton and Chocolate goods.{You have received Cotton and Chocolate goods.}
+You have received Cotton and Sugar goods.{You have received Cotton and Sugar goods.}
+You have received Cotton goods.{You have received Cotton goods.}
+You have received Chocolate and Sugar goods.{You have received Chocolate and Sugar goods.}
+You have received Chocolate goods.{You have received Chocolate goods.}
+You have received Sugar goods.{You have received Sugar goods.}
+Yes, I have got a 'Woodes-Rogers'!{Yes, I have got a 'Woodes-Rogers'!}
+
+They are really heavy - one set is enough!{They are really heavy - one set is enough!}
+One retort is enough!{One retort is enough!}
+One top is enough!{One top is enough!}
+One glass tube is enough!{One glass tube is enough!}
+One empty bottle is enough!{One empty bottle is enough!}
+One Champagne bottle is enough!{One Champagne bottle is enough!}
+
+I can't remove that plank with my bare hands.{I can't remove that plank with my bare hands.}
+This heavy cast iron door has a copper lock{This heavy cast iron door has a copper lock}
+This heavy cast iron door has a silver lock{This heavy cast iron door has a silver lock}
+This heavy cast iron door has a gold lock{This heavy cast iron door has a gold lock}
+It smells like Pure Alcohol.{It smells like Pure Alcohol.}
+It smells like Sulfuric Acid.{It smells like Sulfuric Acid.}
+It smells like Nitric Acid.{It smells like Nitric Acid.}
+It smells like Hydrochloricic Acid.{It smells like Hydrochloricic Acid.}
+I have made Cognac!{I have made Cognac!}
+I have made Diluted Sulfuric Acid!{I have made Diluted Sulfuric Acid!}
+I have made Aqua Fortis!{I have made Aqua Fortis!}
+I have made Aqua Regis!{I have made Aqua Regis!}
+
+Cabin{Cabin}
+Prize ships{Prize ships}
+Prize ship{Prize ship}
+Galley{Galley}
+Officer's cabin{Officer's cabin}
+Captain's deck{Captain's deck}
+Captain's cabin{Captain's cabin}
+Cannonball storage{Cannonball storage}
+Water supply{Water supply}
+Wad of rugs supply{Wad of rugs supply}
+Where is my Priming horn?{Where is my Priming horn?}
+Cannonball storage is empty!!{Cannonball storage is empty!!}
+
+Contemporary Notorious Pirates{Contemporary Notorious Pirates}
+Practical Alchemy{Practical Alchemy}
+Selkirk research{Selkirk research}
+Roger's journals: A Cruising Voyage Round the World{Roger's journals: A Cruising Voyage Round the World}
+
+The door is locked from the other side with the key still in the lock.{The door is locked from the other side with the key still in the lock.}
+I don't bother to carry these bottles any more!!!{I don't bother to carry these bottles any more!!!}
+I need a blade to open that box!{I need a blade to open that box!}
+No, the elevator is to heavy!{No, the elevator is to heavy!}
+No, the barrel is to heavy!{No, the barrel is to heavy!}
+I need something to make ONE pack of all these clothes!{I need something to make ONE pack of all these clothes!}
+I need something to put up all these things in!{I need something to put up all these things in!}
+Nothing but coins can be placed in the collection box!{Nothing but coins can be placed in the collection box!}
+The Moidor is too large!{The Moidor is too large!}
+This coin fell through the box to the floor!{This coin fell through the box to the floor!}
+Hmm, that hatch is too high up.{Hmm, that hatch is too high up.}
+One musket is missing!{One musket is missing!}
+Gunpowder must be wet!{Gunpowder must be wet!}
+Finally I got some dry gunpowder!{Finally I got some dry gunpowder!}
+I'll wake you up mister!{I'll wake you up mister!}
+No idea Captain - this boat is far too heavy!!{No idea Captain - this boat is far too heavy!!}
+Hmm. That's not a good idea{Hmm. That's not a good idea}
+No, they have nailed down the planks!{No, they have nailed down the planks!}
+I put away the Wine now - Maybe I'll need it further on.{I put away the Wine now - Maybe I'll need it further on.}
+I put away the Cognac now - Maybe I'll need it further on.{I put away the Cognac now - Maybe I'll need it further on.}
+It's wine!{It's wine!}
+It has stopped.{It has stopped.}
+The lock is too rusty - I can't move the key.{The lock is too rusty - I can't move the key.}
+Neither lock nor handle. How do I open it?{Neither lock nor handle. How do I open it?}
+The pieces-of-eight vary too much in weight to be of any use!{The pieces-of-eight vary too much in weight to be of any use!}
+Alright, I can weigh all the coins - and then what?{Alright, I can weigh all the coins - and then what?}
+Scales hmm...?{Scales hmm...?}
+'Call mates'{'Call mates'}
+'Carry on'{'Carry on'}
+'The side'{'The side'}
+'Away boat'{'Away boat'}
+Now, how did THAT happened??{Now, how did THAT happen?}
+I have opened the sealed paper - let's see what it is!{I have opened the sealed paper - let's see what it is!}
+I have opened the package - let's see what's inside!{I have opened the package - let's see what's inside!}
+I have 3 sailors left to hire.{I have 3 sailors left to hire.}
+I have 2 sailors left to hire.{I have 2 sailors left to hire.}
+I have 1 sailor left to hire.{I have 1 sailor left to hire.}
+I have 2 officers left to hire.{I have 2 officers left to hire.}
+I have 1 officer left to hire.{I have 1 officer left to hire.}
+I need more logs to build a raft.{I need more logs to build a raft.}
+That was it. I'll go back to Charles Vane.{That was it. I'll go back to Charles Vane.}
+Maybe the Captains in the Sacristy know more...{Maybe the Captains in the Sacristy know more...}
+Maybe the Captains in the Church know more...{Maybe the Captains in the Church know more..}
+What? There should be TWO prisoners in the last cell!{What? There should be TWO prisoners in the last cell!}
+Oh no, I have to start all over again!{Oh no, I have to start all over again!}
+Okay, I'm in the Shop now. Where am I supposed to use the padlock?{Okay, I'm in the Shop now. Where am I supposed to use the padlock?}
+I saw no gun at all in there. Did I miss it?{I saw no gun at all in there. Did I miss it?}
+Now I can open the Chemistry shelf.{Now I can open the Chemistry shelf.}
+Now I can't remove the chain - I need something to pick the lock with.{Now I can't remove the chain - I need something to pick the lock with.}
+Now where did HE come from!?{Now where did HE come from!?}
+There's a chest - but how do I get to it?{There's a chest - but how do I get to it?}
+Yes! It's open now but I cannot see the chest any longer...{Yes! It's open now but I cannot see the chest any longer...}
+That could maybe be the way in?{That could maybe be the way in?}
+No, it's not heavy enough!{No, it's not heavy enough!}
+Oh yes! I knew it was something hidden in here.{Oh yes! I knew it was something hidden in here.}
+I have found an axe that obviously has been used to cut off heads. Is that what I have to do?{I have found an axe that obviously has been used to cut off heads. Is that what I have to do?}
+Is this skull really heavy enough for the steplock in the cell?{Is this skull really heavy enough for the steplock in the cell?}
+The niche stays open now but how can I reach the Chest?{The niche stays open now but how can I reach the Chest?}
+Never mind - let's see what that Monkey is up to...{Never mind - let's see what that Monkey is up to...}
+Yes, the fire scared them away!{Yes, the fire scared them away!}
+I'm gonna search this new shaft thoroughly at low tide!{I'm gonna search this new shaft thoroughly at low tide!}
+What's wrong with the lights - did the Monkey turned them out?{What's wrong with the lights - did the Monkey turn them off?}
+Wonder what I'm supposed to do with that Saw?{Wonder what I'm supposed to do with that Saw?}
+I got a plank, maybe I can use it in a similar way as the skull??{I got a plank, maybe I can use it in a similar way as the skull??}
+No, I can't remove that thing whatever it is.{No, I can't remove that thing whatever it is.}
+What have they done here - nailed the cupboard?{What have they done here - nailed the cupboard?}
+No effect - the mechanism is not activated.{No effect - the mechanism is not activated.}
+That's it! But how do I release the Mine?{That's it! But how do I release the Mine?}
+There's a steplock under the box.{There's a steplock under the box.}
+Not much of a mechanism left here. The Pinions and the Wheel are all missing.{Not much of a mechanism left here. The Pinions and the Wheel are all missing.}
+But I guess it's the Galley.{But I guess it's the Galley.}
+Okay, I got these ropes - but I'm not sure where to use them.{Okay, I got these ropes - but I'm not sure where to use them.}
+Hmm, maybe I can make them go all the way down into the hold?{Hmm, maybe I can make them go all the way down into the hold?}
+Hmm, they go all the way down into the hold?{Hmm, they go all the way down into the hold?}
+Oh!! It's really hot and stuffy in here - think I have to open the window!{Oh!! It's really hot and stuffy in here - think I have to open the window!}
+And..?{And..?}
+This heavy cast iron door has a silver lock{This heavy cast iron door has a silver lock}
+There's something under the elevator!{There's something under the elevator!}
+How can two planks help me get the Tool from the elevator?{How can two planks help me get the Tool from the elevator?}
+Not exactly what I had in mind!{Not exactly what I had in mind!}
+I think I can reach the Tool now!{I think I can reach the Tool now!}
+Hmm, is that what I'm looking for?{Hmm, is that what I'm looking for?}
+There is that Belt again!{There is that Belt again!}
+I can use a heavy pistol as a Club!{I can use a heavy pistol as a Club!}
+I can throw my Pistols on the enemies!{I can throw my Pistols on the enemies!}
+A Barrel on an Elevator - what am I supposed to do?{A Barrel on an Elevator - what am I supposed to do?}
+Aha, there's a Steplock under the Elevator!{Aha, there's a Steplock under the Elevator!}
+Guess this is the way out from here.{Guess this is the way out from here.}
+By the sound three gates opened.{By the sound three gates opened.}
+A door opened - Which one?{A door opened - Which one?}
+No this was not what I expected. I have to try that lever on the Ship once more!{No this was not what I expected. I have to try that lever on the Ship once more!}
+I'll try the megaphone on the Shore - maybe someone can here me?{I'll try the megaphone on the Shore - maybe someone can here me?}
+Hope they are sending a boat!{Hope they are sending a boat!}
+The Chest from the Blue Cavern - and it's stuck under the Boat!{The Chest from the Blue Cavern - and it's stuck under the Boat!}
+Can I balance on the edging to the Musket?{Can I balance on the edging to the Musket?}
+Hah, I took your Blade!{Hah, I took your Blade!}
+Hah, I took all your Blades!{Hah, I took all your Blades!}
+There's something in the fire.{There's something in the fire.}
+Not here I said!{Not here I said!}
+
+Sullivan shore{Sullivan shore}
+Sullivan jungle{Sullivan jungle}
+Legrands backyard{Legrands backyard}
+Legrands house{Legrands house}
+Legrands kitchen{Legrands kitchen}
+Legrands food cellar{Legrands food cellar}
+Legrands boathouse{Legrands boathouse}
+Fort Moultrie Village{Fort Moultrie Village}
+Fort Moultrie store{Fort Moultrie store}
+Room{Room}
+Staff only{Staff only}
+Summer cottage{Summer cottage}
+Fort Moultrie exit{Fort Moultrie exit}
+Fort Moultrie{Fort Moultrie}
+Lieutenant G:s house{Lieutenant G:s house}
+Lieutenant G:s office{Lieutenant G:s office}
+Lieutenant G:s bedroom{Lieutenant G:s bedroom}
+Fort Moultrie shore{Fort Moultrie shore}
+Charleston{Charleston}
+Charleston port{Charleston port}
+Charleston port tavern{Charleston port tavern}
+Charleston town{Charleston town}
+Charleston shipyard{Charleston shipyard}
+Charleston townhall{Charleston townhall}
+Charleston store{Charleston store}
+Charleston blacksmith{Charleston blacksmith}
+Post Office{Post Office}
+Poe's house{Poe's house}
+Poe's bedroom{Poe's bedroom}
+Exit from Charleston{Exit from Charleston}
+Charleston swamp{Charleston swamp}
+Charleston passage{Charleston passage}
+Charleston shore{Charleston shore}
+Bishops Hostel{Bishops Hostel}
+Bessop Plantation{Bessop Plantation}
+
+
+
+It's too high, I can't climb the rocks.{It's too high, I can't climb the rocks.}
+Oxbay? Greenford? What are they talking about?{Oxbay? Greenford? What are they talking about?}
+That was close - I'll remember not to go there again!{That was close - I'll remember not to go there again!}
+It's getting worse and worse...{It's getting worse and worse...}
+The bridge is rotten, I'll have to fix it somehow.{The bridge is rotten, I'll have to fix it somehow.}
+The bridge is rotten, I have to be careful.{The bridge is rotten, I have to be careful.}
+Charleston...{Charleston...}
+There is not enough wood left!{There is not enough wood left!}
+No, the water isn't warm enough.{No, the water isn't warm enough.}
+No, I'll burn the parchment to ashes.{No, I'll burn the parchment to ashes.}
+I need something to carry the wood in.{I need something to carry the wood in.}
+The sack is full - let's go home!{The sack is full - let's go home!}
+I've got a collection of shells - let's go home!{I've got a collection of shells - let's go home!}
+That really helped - now let's see if there are more secrets to be found on the parchment.{That really helped - now let's see if there are more secrets to be found on the parchment.}
+So that's how it happened! The heat revealed a death's-head on the other side of the parchment!{So that's how it happened! The heat revealed a death's-head on the other side of the parchment!}
+More heat and now there's a goat together with a death's-head!{More heat and now there's a goat together with a death's-head!}
+Okay, there's the goat and the death's-head again!{Okay, there's the goat and the death's-head again!}
+I knew it! There are some some figures arranged in lines!{I knew it! There are some some figures arranged in lines!}
+Yes yes yes. I knew there was more. A lot of characters are rudely traced between the Death's-head and the Goat!{Yes yes yes. I knew there was more. A lot of characters are rudely traced between the Death's-head and the Goat!}
+Ouch, I'll burn my fingers.{Ouch, I'll burn my fingers.}
+The remnants of the hull of what appear to have been a ship's long boat.{The remnants of the hull of what appear to have been a ship's long boat.}
+The last storm must have brought it here.{The last storm must have brought it here.}
+I'll need a leaf, or something of that nature, by which to take hold of it.{I'll need a leaf, or something of that nature, by which to take hold of it.}
+Jupiter look! It's a Gold-Bug!{Jupiter look! It's a Gold-Bug!}
+Ouch, the Gold-Bug gave me a sharp bite!{Ouch, the Gold-Bug gave me a sharp bite!}
+OPEN ONLY DURING TOURIST SEASON{OPEN ONLY DURING TOURIST SEASON}
+Hmm, it's only glowing...?{Hmm, it's only glowing...?}
+Only ashes left - I'll need new wood!{Only ashes left - I'll need new wood!}
+Two empty barrels.{Two empty barrels.}
+Some empty bottles.{Some empty bottles.}
+It's flour in these sacks.{It's flour in these sacks.}
+Good beer!{Good beer!}
+What a stench!{What a stench!}
+No, I don't bother to take anything.{No, I don't bother to take anything.}
+No, I only keep the Ovenproof Dish.{No, I only keep the Ovenproof Dish.}
+Yes, it's Cognac!{Yes, it's Cognac!}
+No, nothing behind the curtain.{No, nothing behind the curtain.}
+No, I only keep the Cipher Book.{No, I only keep the Cipher Book.}
+No, I only keep the Hairpin.{No, I only keep the Hairpin.}
+I can't believe it! She's knows what I'm trying to do!{I can't believe it! She's knows what I'm trying to do!}
+No, I can never climb up the way I came down.{No, I can never climb up the way I came down.}
+No, I'm not going back. The metal door locked behind me.{No, I'm not going back. The metal door locked behind me.}
+William Kidd 1645 - 1701{William Kidd 1645 - 1701}
+C. Auguste Dupin has earned this certificate for...{C. Auguste Dupin has earned this certificate for...}
+Fort Moultrie{Fort Moultrie}
+Edgar Allan Poe{Edgar Allan Poe}
+Whaling{Whaling}
+Caves{Caves}
+Piracy{Piracy}
+Cannibalism{Cannibalism}
+Newfoundland Dogs{Newfoundland Dogs}
+Nantucket Whaling Ships{Nantucket Whaling Ships}
+The Brig Grampus{The Brig Grampus}
+The magnet makes something move inside.{The magnet makes something move inside.}
+Yes, with the Magnet I got a Key out of the collection box.{Yes, with the Magnet I got a Key out of the collection box.}
+Private.{Private.}
+Textiles.{Textiles.}
+A photo of Edgar{A photo of Edgar}
+The painting is signed by Frans Hals 1641{The painting is signed by Frans Hals 1641}
+Hmm, many notes, letters and books here{Hmm, many notes, letters and books here}
+The Narrative of Arthur Gordon Pym of Nantucket{The Narrative of Arthur Gordon Pym of Nantucket}
+A hairpin - what use can I have of this little thing?{A hairpin - what use can I have of this little thing?}
+I could need a Saw here.{I could need a Saw here.}
+I have already placed wood in here.{I have already placed wood in here.}
+The fire has almost gone out - I need more wood.{The fire has almost gone out - I need more wood.}
+I have already got some wood.{I have already got some wood.}
+This will take time - I'll do something else meanwhile.{This will take time - I'll do something else meanwhile.}
+I need a Ladle to scoop the Charcoal from the fireplace.{I need a Ladle to scoop the Charcoal from the fireplace.}
+I need a Jar to collect the Charcoal.{I need a Jar to collect the Charcoal.}
+The Sack is only half filled with Nitre.{The Sack is only half filled with Nitre.}
+The Jar is only half filled with Charcoal.{The Jar is only half filled with Charcoal.}
+I need a Broom to sweep the Pyrite Dust from the floor.{I need a Broom to sweep the Pyrite Dust from the floor.}
+I need a Box to collect the Pyrite Dust.{I need a Box to collect the Pyrite Dust.}
+The Box is only half filled with Pyrite Dust.{The Box is only half filled with Pyrite Dust.}
+I need an Empty Bucket to get the Salpeter from the Tub.{I need an Empty Bucket to get the Salpeter from the Tub.}
+There is some Salpeter in the water but not enough.{There is some Salpeter in the water but not enough.}
+The Salpeter is not dry yet.{The Salpeter is not dry yet.}
+There is no Salpeter here yet - only water.{There is no Salpeter here yet - only water.}
+It's here on the planks they let the Salpeter dry.{It's here on the planks they let the Salpeter dry.}
+No, I have enough pyrite on the floor already.{No, I have enough pyrite on the floor already.}
+I need a tool to smash the Pyrite stones to dust.{I need a tool to smash the Pyrite stones to dust.}
+There are still some stones left.{There are still some stones left.}
+No, I have filled the distillery with Pyrite Dust already.{No, I have filled the distillery with Pyrite Dust already.}
+Now it's just to collect the Pyrite Dust.{Now it's just to collect the Pyrite Dust.}
+The Basket is only half filled with Sulphur.{The Basket is only half filled with Sulphur.}
+No, I'm not sure that's the right mix.{No, I'm not sure that's the right mix.}
+Oh no - I lost all the Gunpowder on the floor!{Oh no - I lost all the Gunpowder on the floor!}
+The Barrel isn't filled yet.{The Barrel isn't filled yet.}
+I have to grind all first.{I have to grind all first.}
+I have already filled that Barrel, it's just to pick it up.{I have already filled that Barrel, it's just to pick it up.}
+I have already done that.{I have already done that.}
+There's nothing to grind yet.{There's nothing to grind yet.}
+Water is already added.{Water is already added.}
+In the Gunpowder Mill now:{In the Gunpowder Mill now:}
+water{water}
+nothing{nothing}
+I can get rid of bad Mixtures here.{I can get rid of bad Mixtures here.}
+Yes! I made it - now to the Restaurant.{Yes! I made it - now to the Restaurant.}
+I have made Gunpowder but there's still some in the Mill - enough for another barrel.{I have made Gunpowder but there's still some in the Mill - enough for another barrel.}
+That's Salpeter Soot alright!{That's Salpeter Soot alright!}
+That's Sulfur Soot alright!{That's Sulfur Soot alright!}
+It's going to take time to get all that water boiling - I'll do something else meanwhile.{It's going to take time to get all that water boiling - I'll do something else meanwhile.}
+It's going to take time to solve all Salpeter - I'll do something else meanwhile.{It's going to take time to solve all Salpeter - I'll do something else meanwhile.}
+It's going to take time to dry the Salpeter on the planks - I'll do something else meanwhile.{It's going to take time to dry the Salpeter on the planks - I'll do something else meanwhile.}
+It's going to take time to distill the Sulphur - I'll do something else meanwhile.{It's going to take time to distill the Sulphur - I'll do something else meanwhile.}
+No, I don't know how to go on. I have to visit the Restaurant.{No, I don't know how to go on. I have to visit the Restaurant.}
+I have made Gunpowder for Fireworks but there's still some in the Mill.{I have made Gunpowder for Fireworks but there's still some in the Mill.}
+I have made Gunpowder but NOT the right type.{I have made Gunpowder but NOT the right type.}
+I have missed something.{I have missed something.}
+There's no Barrel on the floor.{There's no Barrel on the floor.}
+No no no, I forgot to add Sulfur Dust!{No no no, I forgot to add Sulfur Dust!}
+No no no, I forgot to add Water!{No no no, I forgot to add Water!}
+I have added Water to the Big Barrel.{I have added Water to the Big Barrel.}
+I got what I need of missing Tools. To the workshops!{I got what I need of missing Tools. To the workshops!}
+The Lever must have fallen to the ground.{The Lever must have fallen to the ground.}
+No, the Lever is missing.{No, the Lever is missing.}
+I need a Ladder to place the Rope.{I need a Ladder to place the Rope.}
+With a Rope I could get down from this cliff.{With a Rope I could get down from this cliff.}
+No, I can't climb the rope carrying this Ladder.{No, I can't climb the rope carrying this Ladder.}
+The Rope isn't long enough - I'll brake my bones.{The Rope isn't long enough - I'll brake my bones.}
+Not a chance - the Barrel is too heavy.{Not a chance - the Barrel is too heavy.}
+Hmm, I can't get the Cork out.{Hmm, I can't get the Cork out.}
+The Ladder is stuck under the Barrel.{The Ladder is stuck under the Barrel.}
+The Ladder is still stuck somehow! How do I lift it?{The Ladder is still stuck somehow! How do I lift it?}
+The Ladder is stuck under the bridge now!{The Ladder is stuck under the bridge now!}
+No, it's locked from the inside. I have to brake it.{No, it's locked from the inside. I have to brake it.}
+I'll use the butt-end of my pistol.{I'll use the butt-end of my pistol.}
+Yes, I'll try this on the Cell door!{Yes, I'll try this on the Cell door!}
+I shouldn't have done that. Hope no one heard it.{I shouldn't have done that. Hope no one heard it.}
+They went to sleep again. Let's go!{They went to sleep again. Let's go!}
+Hmm, I have to find another way into the Church.{Hmm, I have to find another way into the Church.}
+No, there's nothing here.{No, there's nothing here.}
+
+Moon Status {Sir we now have a}
+New Moon {New Moon}
+Waxing crescent moon {Waxing crescent moon}
+Waxing moon {Waxing moon}
+Full Moon {Full Moon}
+Waning moon {Waning moon}
+Waning crescent moon {Waning crescent moon}
+
+No, I can never climb the rope carrying this Ladder.{No, I can never climb the rope carrying this Ladder.}
+Maybe if I tie the Ladder to the rope and pull it up from the top.{Maybe if I tie the Ladder to the rope and pull it up from the top.}
+Yes, now I can extend the rope with the Ladder.{Yes, now I can extend the rope with the Ladder.}
+And now the Ladder!{And now the Ladder!}
+No, that crate is too heavy.{No, that crate is too heavy.}
+No, it's to steep - I have to find another way up.{No, it's to steep - I have to find another way up.}
+Visitors to the Tavern - please use the door to the left.{Visitors to the Tavern - please use the door to the left.}
+STRIKE - Brothel closed.{STRIKE - Brothel closed.}
+Storeroom.{Storeroom.}
+Winecellar.{Winecellar.}
+Hmm, nothing of use here.{Hmm, nothing of use here.}
+Servants.{Servants.}
+What am I doing wrong?{What am I doing wrong?}
+It's no idea - the sack is empty.{It's no idea - the sack is empty.}
+There's something behind here but the hatch is stuck.{There's something behind here but the hatch is stuck.}
+No, it's locked to the Study!{No, it's locked to the Study!}
+No, I have to try something else!{No, I have to try something else!}
+I don't know what to place here.{I don't know what to place here.}
+I need a Flint too!{I need a Flint too!}
+This Ring is eating all my Power!{This Ring is eating all my Power!}
+Now I only need Fire.{Now I only need Fire.}
+I have to find another way down.{I have to find another way down.}
+To Mr Poe's house now!{To Mr Poe's house now!}
+East tower{East tower}
+South tower{South tower}
+Hmm, what are they doing? Something's hanging down from that tree.{Hmm, what are they doing? Something's hanging down from that tree.}
+
+There are no Rockets left{There are no Rockets left}
+TossItemInterface{Are you sure you want to toss this item?}
+Jupiter for God's sake - don't alarm the Maroons.{Jupiter for God's sake - don't alarm the Maroons.}
+Yes! I got a Spade from that thug.{Yes! I got a Spade from that thug.}
+I have to run to the raft! But where is Jupiter?{I have to run to the raft! But where is Jupiter?}
+No, I take only one Musketoon.{No, I take only one Musketoon.}
+Oh yes, the Sails!{Oh yes, the Sails!}
+That Machete was just crap!{That Machete was just crap!}
+That's enough of Empty Sacks!{That's enough of Empty Sacks!}
+I found de Key.{I found de Key}
+A Tree must have fallen and blocked de Door!!{A Tree must have fallen and blocked de Door!!}
+No, the door isn't locked but something is blocking it.{No, the door isn't locked but something is blocking it.}
+I'm not sure what to do with this item.{I'm not sure what to do with this item.}
+Maybe something is missing?{Maybe something is missing?}
+No, it's locked!{No, it's locked!}
+That lock looks very simple - maybe I can pick it open?{That lock looks very simple - maybe I can pick it open?}
+Hope that Ladder leads to the Church.{Hope that Ladder leads to the Church.}
+No, that one is already dead.{No, that one is already dead.}
+Finally, they have stopped the repairs.{Finally, they have stopped the repairs.}
+The door isn't locked but blocked.{The door isn't locked but blocked.}
+What is it - an old Cutlass?{What is it - an old Cutlass?}
+I need something to carry the Treasure in.{I need something to carry the Treasure in.}
+We have to get the rest of the Treasure first.{We have to get the rest of the Treasure first.}
+No, I have already done that.{No, I have already done that.}
+Now when it's clean, maybe I should heat it up again?{Now when it's clean, maybe I should heat it up again?}
+No, I don't want to boil the Parchment!{No, I don't want to boil the Parchment!}
+No, let's go on instead.{No, let's go on instead.}
+
+West crescent{West crescent}
+East crescent{East crescent}
+West wing{West wing}
+East wing{East wing}
+Rotunda upper levels{Rotunda upper levels}
+Rotunda middle levels{Rotunda middle levels}
+Rotunda lower levels{Rotunda lower levels}
+I'll need a Rope here.{I'll need a Rope here.}
+Dormitorium{Dormitorium}
+Cellarium{Cellarium}
+Chapter-house{Chapter-house}
+Scriptorium{Scriptorium}
+Cloister{Cloister}
+Infirmary{Infirmary}
+Lavatorium{Lavatorium}
+Sacristy{Sacristy}
+
+Something under that straw?{Something under that straw?}
+No, I'll only cut myself on those shards.{No, I'll only cut myself on those shards.}
+The bell is too heavy - can't move it. I need something heavy to hit it with.{The bell is too heavy - can't move it. I need something heavy to hit it with.}
+Poor nun!{Poor nun!}
+
+But it's something under it!{But it's something under it!}
+One wine bottle in each hand is enough!{One wine bottle in each hand is enough!}
+Hmm, I could place some goods on the elevator.{Hmm, I could place some goods on the elevator.}
+No, the elevator isn't heavy enough.{No, the elevator isn't heavy enough.}
+Now let's fill the barrel up.{Now let's fill the barrel up.}
+
+I don't need more wood at the moment.{I don't need more wood at the moment.}
+No, I havn't processed the content yet.{No, I havn't processed the content yet.}
+I can grind stones here.{I can grind stones here.}
+I think I'll use the Big Bottle for Mixtures instead.{I think I'll use the Big Bottle for Mixtures instead.}
+I think I'll use the Small Bottle for Mixtures instead.{I think I'll use the Small Bottle for Mixtures instead.}
+I think that's the right mixture.{I think that's the right mixture.} 
+A Small Bottle will do here.{A Small Bottle will do here.}
+A clean piece of Cloth as a filter is needed here.{A clean piece of Cloth as a filter is needed here.}
+Two Salt Jars are enough!{Two Salt Jars are enough!}
+One Filter is enough!{One Filter is enough!}
+One Calcium Sack is enough!{One Calcium Sack is enough!}
+Two Coal Jars are enough!{Two Coal Jars are enough!}
+One Nitre Sack is enough!{One Nitre Sack is enough!}
+One Limestone Basket is enough!{One Limestone Basket is enough!}
+One Camel Dung Bucket is enough!{One Camel Dung Bucket is enough!}
+One Sulphur Basket is enough!{One Sulphur Basket is enough!}
+Two Wax Jars are enough!{Two Wax Jars are enough!}
+One Antimony Basket is enough!{One Antimony Basket is enough!}
+One Black Antimony Basket is enough!{One Black Antimony Basket is enough!}
+One Mercury Oxide Basket is enough!{One Mercury Oxide Basket is enough!}
+It's gas in the bottle.{It's gas in the bottle.}
+Oh no, there's no gas left in the bottle!{Oh no, there's no gas left in the bottle!}
+I have made Sodium Carbonate!{I have made Sodium Carbonate!}
+I have made Liquor Hepatis!{I have made Liquor Hepatis!}
+I have made Black Pulvis Solaris!{I have made Black Pulvis Solaris!}
+I have made Red Pulvis Solaris!{I have made Red Pulvis Solaris!}
+I have made Pulvis Solaris!{I have made Pulvis Solaris!}
+I have made Sulfur Auretum!{I have made Sulfur Auretum!}
+I think I'll make some more Sulfur Auretum first.{I think I'll make some more Sulfur Auretum first.}
+Let's keep it on the table.{Let's keep it on the table.}
+
+Yes! That was the last ghost. Maybe the indian wants to talk to me now...{Yes! That was the last ghost. Maybe the indian wants to talk to me now...}
+Cartagena Hotel{Cartagena Hotel}

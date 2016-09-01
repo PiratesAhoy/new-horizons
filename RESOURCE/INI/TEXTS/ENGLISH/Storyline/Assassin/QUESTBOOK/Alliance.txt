@@ -1,0 +1,11 @@
+title=The Alliance
+text.t1=The Vice-Admiral suspects France of becoming allied with Portugal. Tello Basadre will be my informer in this mission. He works as docker in #sMarigot# on #sisland_Saint Martin# and lives in a house at the back of the Townhall. I should go there when he has finished work.
+text.t2=I need to go to #sisland_Falaise de Fleur# in order to confirm if the French lineship is really there. Let's hope it's not too late. 
+text.t3=Tello Basadre was right. 'La Fougueuse' is moored in the port. Now, I need to know her mission. There maybe some sailors or soldiers from this shipin the tavern, a few bottles of rum should loosen their tongues. 
+text.t4=Found it! I just need to get out of the townhall via the window and join Chico on the ship.
+text.t5=Chico has been searching for information about the French captain in town for an hour. I hope he finds something useful.
+text.t6=Twenty minutes I h've hidden in this church. It seems quiet now. It's time to join Chico at Octopus Bay. But before that, I have to be sure that Captain Aurelien Bergerat is really dead.
+text.t7=Impressive! Chico Cois is a real expert in explosives. The captain and his guards have been torn up. I should not stay here anymore, someone could have seen me near the explosion and tell the guards.
+text.t8=What misfortune! I will now have to find a way to stop the French at #sConceicao# on #sisland_Conceicao#.
+text.t9=Done! 'La Fougueuse' is sinking. Now, I can return to #sHavana# on #sisland_Cuba#, the Vice-Admiral will be pleased.
+text.t10=I wasted too much time getting to #sisland_Falaise de Fleur#. The lineship must have left #sisland_Falaise de Fleur#. I failed my mission, the Vice-Admiral will have me hung if he catches me, I'd better keep clear of the Spaniards.

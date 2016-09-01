@@ -1,0 +1,4 @@
+TEXT	{
+Don't forget to bury the goods we brought here. We might need them at a later stage, but we don't want people to find them here.
+There is an old Abbey just outside with plenty of room. When you've completed the task, please let me know where you buried it.
+}

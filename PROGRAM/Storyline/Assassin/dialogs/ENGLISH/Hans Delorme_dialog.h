@@ -1,0 +1,18 @@
+string DLG_TEXT[16] = {
+"......",
+"......",
+"I'm Hans Delorme, the best smuggler in #sisland_Curacao#. I can find anything for you.",
+"I'm not looking for goods at the moment, I will keep you in mind though. I am looking for someone.",
+"Who, maybe I can help?",
+"Roche Brasiliano.",
+"I don't work for him, but I know he's not in the village at the moment.",
+"What do you mean? Someone in #sWillemstad# said he lives here.",
+"Yes, but he left #sisland_Curacao# a few days ago for a while.",
+"Why?",
+"No idea. Maybe, he wanted to attack some ships.. Anyway, I don't want to know. Since his arrival, he has almost taken over the village. Even the authorities avoid us now.",
+"His house is the one guarded by two men, isn't it?",
+"Yes, guarded by his men day and night.",
+"He can't have only two men in the village?",
+"No, there are more. Maybe a dozen or so. Of course, when he's in the village his crew are with him, around 350 men.",
+"A lot of men.. Thank you Hans, I have things to do now.",
+};

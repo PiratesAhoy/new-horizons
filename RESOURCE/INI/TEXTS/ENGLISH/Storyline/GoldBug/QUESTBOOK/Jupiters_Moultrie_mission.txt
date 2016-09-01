@@ -1,0 +1,12 @@
+title=Jupiters Moultrie mission
+text.t1=
+text.t2=Buy some papers in Fort Moultrie village.
+text.t3=Get the Gold-Bug back from Lieutenant G at the Fort.
+text.t4=I have got the Gold-Bug.
+text.t5=I have got the papers.
+text.t6=Now it's only to fill up the bottle with cognac from the barrel in the restaurant!
+text.t7=I'm sure there's an empty bottle somewhere in the restaurant.
+text.t8=Yes, the hotel is willing to exchange paper for some bed linen.
+text.t9=The store accepts liquor not food.
+text.t10=Lieutenant G has been seen on his way to the restaurant.
+text.t11=Lieutenant G is downstairs in the restaurant.

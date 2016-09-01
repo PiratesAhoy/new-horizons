@@ -1,0 +1,377 @@
+Remarks	{Remarks}
+none	{None}
+Requires	{Requires}
+Rank	{Minimal rank}
+TimeDuration	{Lasts for}
+TimeDelay	{Can be used every}
+NegativeTimeDelay	{Can be used only once}
+timeunit	{sec}
+Unlocked	{You unlocked the ability:}
+Locked		{This Perk needs to be unlocked first}
+
+BasicDefence	{Basic defence}
+perkBasicDefence
+{
+The character's blocks are 25% harder to pierce, and melee damage to the character is decreased by 10%.
+}
+
+AdvancedDefence	{Advanced defence}
+perkAdvancedDefence
+{
+The character's blocks are 50% harder to pierce, and melee damage to the character is decreased by 20%.
+}
+perkAdvancedDefenceLocked
+{
+You can find this wisdom in a book | The character's blocks are 50% harder to pierce, and melee damage to the character is decreased by 20%.
+}
+
+Toughness	{Toughness}
+perkToughness
+{
+The character gets a bonus of 10% to maximum hit points, regenerates hit points faster, and has a natural resistance to poisons which reduces the poison damage dealt to the character by 50%.
+}
+perkToughnessLocked
+{
+The highwaymen in the jungle can teach this to you | +10% hit points, regenerates faster, and a natural resistance to poisons
+}
+
+CriticalHit	{Improved Critical Hit}
+perkCriticalHit
+{
+The character's chance of scoring a critical hit in melee combat is increased to 10%.
+}
+
+SwordplayProfessional	{Professional Fencer}
+perkSwordplayProfessional
+{
+The character's melee attacks are 25% harder to block, chance of scoring a critical hit is increased to 25%, and melee damage to the character is decreased by 30%.
+}
+perkSwordplayProfessionalLocked
+{
+Finish highest sword training with your crew on deck | The character's melee attacks are 25% harder to block, chance of scoring a critical hit is increased to 25%, and melee damage to the character is decreased by 30%.
+}
+
+Rush	{Rush}
+perkRush
+{
+The character's melee attacks cause more damage, but it is harder to block. The effect lasts for 30 seconds.
+}
+
+Gunman	{Gunman}
+perkGunman
+{
+The character handles a pistol better - reloading is 10% faster, accuracy is increased by 5% and chance of scoring a critical hit is increased with 5%. The character can use dual-barrel pistol and all brace pistol sets.
+}
+
+ImproveAiming	{Expert Marksman}
+perkImproveAiming
+{
+The character is an expert marksman which increases accuracy by 20% and chance of scoring a critical hit by 15%. Press Tab to aim manually using first person mode.
+}
+perkImproveAimingLocked
+{
+Complete a fetchquest for a gunsmith | The character is an expert marksman which increases accuracy by 20% and chance of scoring a critical hit by 15%. Press Tab to aim manually using first person mode.
+}
+
+GunProfessional	{Professional Gunman}
+perkGunProfessional
+{
+The character is a pistol professional - reloading is 50% faster and accuracy is increased by an addition 10% and chance of scoring a critical hit is increased with 10%. The character can use quad-barrel pistol.
+}
+perkGunProfessionalLocked
+{
+Find a book to unlock | The character is a pistol professional - reloading is 50% faster and accuracy is increased by 25% and chance of scoring a critical hit is increased to 15%. The character can use quad-barrel pistol.
+}
+
+GunFighter	{Master Gunfighter}
+perkGunFighter
+{
+The character is now an expert gunman and an experienced pirateleader. The character can use extraordinary set of pistols.
+}
+
+ImprovePotions	{Effective Potions}
+perkImprovePotions
+{
+Healing potions will be 10% more effective for the complete party.
+}
+perkToughnessLocked
+{
+Help the apothecary when it needs some goods | Healing potions will be 10% more effective for the complete party.
+}
+
+DefendPoison	{Poison Resistance}
+perkDefendPoison
+{
+Your party has better poison resistance due to better medicine available.
+}
+
+ShipTurnRateUp	{Maneuverability}
+perkShipTurnRateUp
+{
+The character's ship maneuverability is increased by 15%.
+}
+
+ShipSpeedUp	{Speed Increase}
+perkShipSpeedUp
+{
+The character's ship speed is increased by 15%.
+}
+
+Turn180	{Club Hauling}
+perkTurn180
+{
+The character's ship can initiate a quick 90 degree turn by lowering the anchor on one side while moving. This can be done once every three minutes.
+Use the "Fast Run" toggle button to choose the preferred side to turn to.
+}
+perkTurn180Locked
+{
+You can get this from a captain of an enemy ship if you are civilized | The character's ship can initiate a quick 90 degree turn by lowering the anchor on one side while moving. 
+}
+ 
+
+SandbankManeuver	{Sense Fairway}
+perkSandbankManeuver
+{
+The character's ship is protected from the perils of traversing reefs and shoals for 60 seconds, providing the character an opportunity to escape dangerous waters without taking heavy damage.
+}
+
+StormProfessional	{Storm Helmsman}
+perkStormProfessional
+{
+The damage that the character's ship takes from storms and tornadoes is decreased by 40%.
+}
+
+SailingProfessional	{Sea Wolf}
+perkSailingProfessional
+{
+The character's ship speed and maneuverability are increased by 20%. On the world map, the character gets a 50% chance of being able to skip a random encounter. In that case, a "Skip encounter" icon appears and the "Enter" key can be pressed to skip the encounter.
+}
+
+BasicBattleState	{Basic Ship defence}
+perkBasicBattleState
+{
+The character's ship takes 15% less damage from enemy fire. Also allows the character to execute fire drills if the ship is on fire.
+}
+
+AdvancedBattleState	{Advanced Ship defence}
+perkAdvancedBattleState
+{
+The character's ship takes 25% less damage from enemy fire.
+}
+perkAdvancedBattleStateLocked
+{
+Find a book to unlock | The character's ship takes 25% less damage from enemy fire.
+}
+
+ShipDefenceProfessional	{Professional Ship defence}
+perkShipDefenceProfessional
+{
+The character's ship takes 40% less damage from enemy fire and cannot be critically hit.
+}
+
+FastReload	{Fast Reload}
+perkFastReload
+{
+Ship cannons reload 20% faster.
+}
+
+ImmediateReload	{Pre-reloading}
+perkImmediateReload
+{
+Ship cannons reload 50% faster, but the ability can be used only once every five minutes.
+}
+perkImmediateReloadLocked
+{
+You can get this from a captain of an enemy ship if you are civilized | Ship cannons reload 50% faster, but the ability can be used only once every five minutes.
+}
+
+
+HullDamageUp	{Increased Ship Damage}
+perkHullDamageUp
+{
+Damage to the enemy's ship is increased by 15%.
+}
+
+SailsDamageUp	{Increased Sail Damage}
+perkSailsDamageUp
+{
+Damage to the enemy's sails is increased by 15%.
+}
+
+CrewDamageUp	{Increased Crew Damage}
+perkCrewDamageUp
+{
+Damage to the enemy's crew is increased by 15%.
+}
+
+CriticalShoot	{Critical Shot}
+perkCriticalShoot
+{
+The character gains a 5% chance that a volley will inflict critical damage to an enemy ship.
+}
+
+LongRangeShoot	{Increased Volley Range}
+perkLongRangeShoot
+{
+Ship cannons' range is increased by 15%.
+}
+
+CannonProfessional	{Professional Cannoneer}
+perkCannonProfessional
+{
+Cannon fire damage to enemy ships is increased by 30%, and critical hit probability is increased to 15%.
+}
+perkCannonProfessionalLocked
+{
+Find a book to unlock | Cannon fire damage to enemy ships is increased by 30%, and critical hit probability is increased to 15%.
+}
+
+LongRangeGrappling	{Long Range Boarding}
+perkLongRangeGrappling
+{
+The range at which boarding can be initiated is increased by 15%.
+}
+perkLongRangeGrapplingLocked
+{
+You can get this from a captain of an enemy ship if you are civilized | The range at which boarding can be initiated is increased by 15%.
+}
+
+
+MusketsShoot	{Musket Volley}
+perkMusketsShoot
+{
+Right before boarding an enemy ship, the character's crew fires muskets. This salvo kills 25% of the enemy's crew minus any defence bonuses.
+}
+
+GrapplingProfessional	{Master of Boarding}
+perkGrapplingProfessional
+{
+The range at which boarding can be initiated is increased by 25%. Speed and angle of closing no longer matters.
+}
+
+InstantBoarding	{Instant Boarding}
+perkInstantBoarding
+{
+Once per battle, the character can instantly board a chosen nearby enemy ship.
+}
+
+Troopers	{Landing Party}
+perkTroopers
+{
+Send a ship in the fleet to weaken or capture a fort. Effectiveness depends on the number of crew and captain's experience.
+Also allows to land troops at enemy towns without forts provided there are no enemy ships around the island anymore.
+}
+perkTroopersLocked
+{
+Gain a governor's trust to enable this ability. | Send a ship in the fleet to weaken or capture a fort. Also allows to land troops at enemy towns.
+}
+
+LightRepair	{Emergency Repairs}
+perkLightRepair
+{
+This ability allows the character's crew to slowly repair the ship up to 10% of max HP when the ship is near sinking. This does not require any resources.
+}
+
+InstantRepair	{Quick Repairs}
+perkInstantRepair
+{
+When not locked in a battle, the character's crew can instantly repair the ship up to a maximum of 90% of max HP. This requires planks and sailcloth and does not repair fallen masts or crew.
+}
+perkInstantRepairLocked
+{
+Help the shipyard when it needs you with materials | When not locked in a battle, the character's crew can instantly repair the ship up to a maximum of 90% of max HP. This requires planks and sailcloth and does not repair fallen masts or crew.
+}
+
+Cooking	{Cooking Lessons}
+perkCooking
+{
+Your food consumption per day will be reduced with 10%.
+}
+
+HighStakes	{High Stakes}
+perkHighStakes
+{
+This allows you to have higher bets while gambling.
+You can also gamble with guards to get their patrol schedule.
+}
+
+Disguiser {Master of Disguise}
+perkDisguiser 
+{
+You are a master in disguises, which decreases the chance of your false flag being detected by 10%.
+}
+
+ImproveSmuggling	{Evade Coast Guard}
+perkImproveSmuggling
+{
+There is a large chance that if the coast guard finds you they will be in a smaller group then usual. And the chance they find you at all is reduced with 5%. The chance to be caught when smuggling opium is reduced with 10%.
+}
+perkImproveSmugglingLocked
+{
+You should inspect bodies of the coast guard to see what they have. | There is a large chance that if the coast guard finds you they will be in a smaller group then usual. And the chance they find you at all is reduced with 5%.
+}
+
+AdvanceSmuggling	{Advanced Smuggling}
+perkAdvanceSmuggling
+{
+The smugglers like you so much they will pay you 15% more for your goods. And the chance the coastguard finds you is reduced with another 10%. The chance of coastguard ships appearing after getting caught is also reduced by 50%.
+The chance to be caught when smuggling opium is reduced with another 15%.
+}
+
+BasicCommerce	{Basic Commerce}
+perkBasicCommerce
+{
+The character gets a 10% discount when buying goods in stores.
+}
+perkBasicCommerceLocked
+{
+Finish a convoy quest from the tavern | The character gets a 10% discount when buying goods in stores.
+}
+
+AdvancedCommerce	{Advanced Commerce}
+perkAdvancedCommerce
+{
+The character gets a 20% discount when buying goods and a 5% bonus when selling goods in stores.
+}
+perkAdvancedCommerceLocked
+{
+Help the Tailor when he needs materials | The character gets a 20% discount when buying goods and a 5% bonus when selling goods in stores.
+}
+
+Trustworthy	{Trustworthy}
+perkTrustworthy
+{
+The character has the option to buy and sell contraband goods in all stores... Unfortunately, at the normal price.
+}
+perkTrustworthyLocked
+{
+Gain a governor's trust to enable this ability. | The character has the option to buy and sell contraband goods in all stores... Unfortunately, at the normal price.
+}
+
+BasicLandOwner {Land Owner}
+perkBasicLandOwner
+{
+The crop yield is 50% higher on the character's estates.
+}
+perkBasicLandOwnerLocked 
+{
+Gain a governor's trust to enable this ability. | The crop yield is 50% higher on the character's estates
+}
+
+SharedExperience	{Shared Experience}
+perkSharedExperience
+{
+When your party gains experience, your officers gain points also for skills that they do not contribute.
+}
+
+IronWill	{Iron Will}
+perkIronWill
+{
+Morale increases by 25%. Additionally, this gives the character a 50% decrease in morale loss when skipping on salary payment.
+}
+
+Brander	{Fire Ship}
+perkBrander
+{
+Using this ability, a fleet commander can order a ship in the fleet to explode close to the enemy, potentially causing great damage.
+}

@@ -1,0 +1,9 @@
+title=Side Quest - The indian treasure
+text.t1=While watching the indians in the warehouse, I heard them talk about a treasure they buried. I wonder what it could be. They said it is buried behind the #sGreenford# Abbey, close to the corner of the wall.
+text.t2=I found a note on an indian corpse about a hidden treasure. It should be buried somewhere around the #sGreenford# abby. Maybe I can find it?
+text.t3=I talked to the #sGreenford# prison commander. He said they mentioned something about a buried treasure somewhere in town when they were captured. The commander couldn't get more information from them. Maybe I'll find it some day.
+text.t4=I found the indian treasure. It contained some very interesting potions.
+text.t5=The #sGreenford# apothecary can probably tell me more about these potions.
+text.t6=Steven told me the natives extract these potions from special herbs. They are very rare and boost your fighting capabilities, but only work for a limited amount of time. I should use them only in the area where I need it because the effect wears off as soon as you leave.
+text.t7=While watching the indians in the warehouse, I heard them talk about a treasure they buried. Alas I wasn't able to hear where they buried it.
+text.t8=The guards took all the bottles from me. Maybe one day I will find them again.

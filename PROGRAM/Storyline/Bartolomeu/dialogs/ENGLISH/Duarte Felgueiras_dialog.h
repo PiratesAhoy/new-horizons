@@ -1,0 +1,16 @@
+string DLG_TEXT[14] = {
+".....",
+".....",
+"Captain Bartolomeu! Nice to see you. Thankfully, you used a friendly flag.",
+"Hello Sir. Why do you say that?",
+"Because the soldiers of the fort were ready to sink the ship. Indeed, they thought the pirate you arrested had come back to attack the town.",
+"Don't worry, the nightmare is over.",
+"Yes, thanks be to God... and you of course HA-HA! The Governor has been told of your arrival. He is waiting for you.",
+"Let's go get this over with.",
+"Captain Bartolomeu! Finally, I see you again. Do you remember me?",
+"Nice to see you. Of course, I remember. The last time I saw you, it was here when I took back Charles Baxter.",
+"Right, you have a good memory. Governor Barreto informed me you work again for him.",
+"Indeed. By the way, did he give you a letter for me?",
+"Yes, Captain. Take it and good luck for your mission!",
+"Thank you.",  
+};

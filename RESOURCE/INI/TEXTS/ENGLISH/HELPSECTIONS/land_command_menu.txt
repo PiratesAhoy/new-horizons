@@ -1,0 +1,11 @@
+land_commands_title
+{
+Party Condition
+}
+
+land_commands_info
+{
+    Player character and his party condition could be seen at left bottom corner of the screen while walking on land (Pic.1). Player sees faces of his character and his officers, and two stripes above them. Blue stripe represents loading state of characters pistol (if he has one), and red is character's health.
+    Reloading of the pistol and replenishment of health take time.
+    Also here there is a command menu, much the same as Ship Command Icon Menu. Menu can be opened with Command key. From that menu you can use Fast Travel command to some locations (pic.2). Those locations are listed on pic.3 These are (from left to right means top-down) store, shipyard, tavern, governor residence and port where player's ship is. Using this menu is absolutely the same as using Ship Command Icon menu.
+}

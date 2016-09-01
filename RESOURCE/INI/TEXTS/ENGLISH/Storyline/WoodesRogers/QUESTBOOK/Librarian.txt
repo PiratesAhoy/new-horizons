@@ -1,0 +1,8 @@
+title=Librarian
+text.t1=I got six books from Selkirk to put back on their right places.
+text.t2=Now there is that Dampier book to repair.
+text.t3=I have to return he repaired Dampier book to its shelf - that would be 'Travels'.
+text.t4=Rogers' equipped me with three books in exchange for the Dampier book.
+text.t5=I must deliver "Notorious Pirates" to Rogers.
+text.t6=The chain and the handcuffs are blocking the Chemistry shelf so I can open it.
+text.t7=I'm not so interested in Poetry - can I use this sack of books in another way?
