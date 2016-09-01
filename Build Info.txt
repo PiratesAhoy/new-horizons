@@ -1,0 +1,2585 @@
+Build Version: Sunday 17 July 2016
+Build 14 Beta 4.1 WIP
+
+==========================
+New mods and improved mods:
+==========================
+
+Build 14 Beta 4.1:
+- New Features:
+  . Receive a free soldier outfit after dealing with Soldier Reinforcements by Grey Roger
+  . Storage chest added to the personal cabin on Cozumel by Jack Rackham
+  . Improved Fast Travel by Jack Rackham
+  . Cartagena Second Tavern sells Wine and Rum by Grey Roger
+  . Soldiers on boardings receive soldier weapons by Pieter Boelen
+  . Store added to Bonaire Pirate Fort by ANSEL
+  . Apothecary/Strange Plants sidequest fixed and finished by Jack Rackham
+  . Skill Colour Coding added to Officer Transfer Interface by Pieter Boelen
+- Code Updates:
+  . Limited number of soldiers in Merchant Guild attacks by Pieter Boelen
+  . Reduced number of soldiers in Soldier Reinforcements by Pieter Boelen
+  . Reduced strength for town guards by Pieter Boelen
+  . Allow swapping ships as Naval Officer after reaching rank 7 by Pieter Boelen
+  . Character transfer disabled between two companion ships by Pedrwyth
+  . Removed cap to fencing XP for high-level opponents by Pieter Boelen
+  . Allowed more variety in destinations for Cargo Quests by Pieter Boelen
+  . Reduced cargo capacity for Gunboat by Pieter Boelen
+  . Variables added for additional companions, officers and skill points by Mere Mortal
+  . Rebalanced ship upgrade prices by Mere Mortal
+  . Ship and fort memory takes into account player ship type by Grey Roger
+  . Ship Speed and Turn Rate added to Ransack Interface by Mere Mortal
+  . Keyboard controls for Save/Load Interface improved by Mere Mortal
+  . Pirates are more forgiving of actions against them if you're a Pirate by Pieter Boelen
+  . Opium Smuggling "Buyers List" code improved by Mere Mortal and Pieter Boelen
+  . Characters in non-existent locations removed by Pieter Boelen
+  . Various characters set as "quest characters" by Pieter Boelen
+  . Ransack/Transfer Main Interface error fixed by Pieter Boelen
+  . Transfer Crew Interface error fixed by Pieter Boelen
+  . Quiver, Curare and Tar always enabled in the game by Pieter Boelen
+  . Ship Deck Texture code cleaned up and simplified by Pieter Boelen
+  . Error checking code added to GetPrettyLocationName function by Pieter Boelen
+  . Error checking added to Passengers Interface and Face Lists by Pieter Boelen
+  . Relation quest check simplified by Grey Roger
+  . Ships Init mistakes corrected by Hotshot
+  . Passengers Interface skill colour coding improved by Pieter Boelen
+  . Antigua Port Admiral quests require English Letter of Marque by Grey Roger
+  . Smuggling Coastal Guards never let you go free if you are hostile by Johanno
+  . Rain and storm chances further reduced by ANSEL
+  . Random name for new ship takes into account player's Served Nation by Pieter Boelen
+  . Safe Port Leave restores your previous flag afterwards by Grey Roger
+  . XP cap for high level opponents restored by Pieter Boelen
+  . Possible to toss Indian items (arrows, quiver, curare, tar) by Pieter Boelen
+  . Modified musket accuracy and armour statistics by Grey Roger
+  . Sword Training with Crewmembers delay increased by Pieter Boelen
+  . IsPlayerParty removed (replaced with bAllies) by Pieter Boelen
+  . Period-dependent conditions for joining the Pirates by Grey Roger
+- Bug Fixes:
+  . Fix to prevent Merchant Guild attack when player group was not responsible by Pieter Boelen
+  . Fix to allow larger Random Quest Ships by Pieter Boelen
+  . Any town capture resets the memory for its fort by Pieter Boelen
+  . Fix to ensure any passengers are not erased by Pieter Boelen
+  . Fix to ensure best smuggling time matches between dialog and questbook by Pieter Boelen
+  . Correction for Shipyard "Cannot Buy" text with Shipyard Ship Availability set to "Stock PotC" by Pieter Boelen
+  . Crew transfer between companion ships re-enabled by Pedrwyth
+  . Officer dialog restored after sending Smuggling Scout by Pieter Boelen
+  . Looting of Blade Muskets fixed by Jack Rackham
+  . Stuck while reloading during anchoring fix by Pedrwyth
+  . Prevent ship stats of zero for Personal Design ships by Pieter Boelen
+  . Fixed ship deck for Naval Ketch by Pieter Boelen
+  . Hull upgrade increases maximum cannon calibre by Mere Mortal
+  . HP Bonus code fixed and cleaned up by Pieter Boelen
+  . Opium Smuggling Fast Travel effect fixed and simplified by Pieter Boelen
+  . Hireable officers will not be on the random Opium List by Pieter Boelen
+  . Using opium takes away only one item instead of two by Pieter Boelen
+  . Attempted fix for Boarding Looting Crashes by Mere Mortal (adapted by Pieter Boelen)
+  . Fetch Quest amounts fixed by Pieter Boelen
+  . Apothecary Fetch Quest Ship's Log entry added by Talisman
+  . Opium Smuggling Quest timer and quest closing fixed by Talisman
+  . Ship calibre in Shipyard fixed by Mere Mortal
+  . Martinique "No Save" monk appearance fixed by Pieter Boelen
+  . Potential CharacterFromID error fixed by Mere Mortal
+  . Potential crash from Companion as Fort Commander fixed by Pieter Boelen
+  . Prevent captain of ship you are boarding being cleared by Pieter Boelen
+  . Game crash from dialog with officers/soldiers on islands without smuggling patrols fixed by Pieter Boelen
+  . Cargo quests with multiple ships fixed by Pieter Boelen
+  . IsPassenger old check depreciated to prevent errors by Pieter Boelen
+  . Reputation change for officers fixed by Pieter Boelen
+  . Cartagena ladies greetings fixed by Grey Roger
+  . Andre Juliao and Thierry Bosquet appearance fixed by Grey Roger and Pieter Boelen
+  . Effective skill updates correctly with Auto Skill System OFF by Pieter Boelen
+  . Antigua Port Admiral ambush fixed by Grey Roger
+  . Cargo quests fixed for Grand Turk and Hispaniola Buccaneer's Camp by Pieter Boelen
+  . Ship Interface cannon numbers and Speed/TurnRate display fixed by MereMortal
+  . Crewmember name nationalities during boarding fixed by Pieter Boelen
+  . Incorrect references to Opium Den removed by Pieter Boelen
+  . Prevent losing Letter of Marque when gaining points by Pieter Boelen
+  . Flag-related error log fixed by Pieter Boelen
+  . Potential error when gaining points for sinking/capturing ships fixed by Pieter Boelen
+  . Player Companion Mutinies fixed by Pieter Boelen
+  . Crash when putting enemy captain in cargo hold with Weaponsmod OFF fixed by Pieter Boelen
+  . Enforced false flag detection fixed by Grey Roger
+  . Reload disable/enable code simplified and fixed by Pieter Boelen
+  . Officer skill contribution fixed for companion ships by Pieter Boelen
+  . Telescope never auto-equips fixed by Pieter Boelen
+  . Prevented IsPassenger error log entry by Pieter Boelen
+  . Game world is reset correctly when leaving the Pirates by Pieter Boelen
+  . Blacksmiths fully disabled if Weaponsmod OFF by Pieter Boelen
+  . Playing Cards for Smuggling does not mess up gambling afterwards by Pieter Boelen
+  . Errors with Musket Bayonets fixed by Jack Rackham
+  . Using Reinit while carrying the Opium List does not mess up Maps by Pieter Boelen
+  . Getting stuck in Cartagena Town after killing item trader/soldier fixed by Pieter Boelen
+  . Random characters in Banks fixed by ANSEL
+  . Relation quest condition fixed by Grey Roger
+  . Potential anchoring issue when setting sail prevented by Pieter Boelen
+- Storyline Updates:
+  . Sidequests:
+    > First Contact HP after being shot fixed by Pieter Boelen
+    > First Contact ship deck code fixed by Pieter Boelen
+    > Sinking the Vogelstruijs more reliable quest update by Pieter Boelen
+    > Sinking the Vogelstruijs quest loop fixed properly by Pieter Boelen
+    > Sinking the Vogelstruijs, Barend Hesselink more formidable enemy by Grey Roger
+    > Animists sidequest ensure enemy ships are hostile by Pieter Boelen
+    > Search for Peter Blood's Ship, Txiki Pijuan immortal at start of quest to prevent errors by Pieter Boelen
+    > Find Angelique Moulin's Father, Antoine Chamfort always present and soldiers do not attack him by Pieter Boelen
+    > Hard Larbours of an Assassin sidequest can be started again if initially refused by Pieter Boelen
+    > Strange Things Going on in the Archipelago, Jaoquin de Masse gets regular officer dialog after being hired by Pieter Boelen
+    > Smuggling for Thomas O'Reilly clarified by Pieter Boelen
+    > Claire Larousse sidequest no longer locks Barbados island by Pieter Boelen
+    > Church Protection sidequest code cleaned up so it completes only once by Pieter Boelen
+    > Girl Won in a Card Game enabled also at Grenada by Pieter Boelen
+  . Standard storyline:
+    > Rheim's death potential quest break fixed by Pieter Boelen
+    > Robert Christopher Silehard functions as regular governor by Grey Roger
+    > Potential sidequest interference with Danielle avoided by Grey Roger
+    > Virgile Boon does not trigger reinforcements during boarding by Pieter Boelen
+    > Random characters interfering with tavern scene fixed by Grey Roger
+    > Potential killing Ferro Cerezo exploit fixed by Pieter Boelen
+    > Avoid accidental fight with Cursed Pirates by Grey Roger
+    > Avoid skipping ahead using Fast Travel at Nevis Pirate Settlement by Pieter Boelen
+  . Ardent storyline:
+    > Quest extension including wedding and convoy strike added by Grey Roger
+  . Assassin storyline:
+    > Hitman quest ending restored by Pieter Boelen
+    > Isla Mona attempted fix by Bartolomeu o Portugues
+    > Isla Mona smuggling nation modified as per the story by Grey Roger
+    > Spanish Captain character model fixed by Grey Roger
+    > Hitman interference fixed by Grey Roger
+    > Relations and flag hoisting fixed by Grey Roger
+    > Sidequests restored by Grey Roger
+  . Bartolomeu o Portugues storyline:
+    > Cargo Quests disabled for Hispaniola Buccaneer Camp by Pieter Boelen
+  . Free Play storyline:
+    > Tiny boat ship stats affected only for Castaway (instead of Swashbuckler difficulty) by Pieter Boelen
+    > Jean Lafitte gets Opium at game start, other smugglers don't by Pieter Boelen
+  . Hornblower storyline:
+    > Lieutenant Bush custom model added by Grey Roger
+    > Various fixes by Grey Roger
+  . Jack Sparrow storyline:
+    > First Contact bugs fixed by Pieter Boelen
+  . Woodes Rogers storyline:
+    > New WIP content added by Jack Rackham
+  . The Gold-Bug storyline:
+    > Ending fixed by Jack Rackham
+- Model and Texture Updates:
+  . Historically accurate British Navy Fleet paint scheme by Armada and Grey Roger
+  . HMS Interceptor improved texture by Legendary Spider
+  . HMS Victory historically accurate textures by Armada
+  . Elizabeth Swann pirate outfit added by Grey Roger
+  . Milady de Winter custom character skin added by Grey Roger
+  . Brandenburg Personal Flag added by Grey Roger
+  . Speightstown Dungeon, Charlestown and Cartagena locators fixed by Pieter Boelen
+- ADDITIONAL INSTALLATION OPTIONS:
+  . Possibility to revert to original black-and-yellow paint scheme for British ships
+
+Build 14 Beta 4:
+- New Features:
+  . Specific Free Play Only storyline added by Levis, Pedrwyth, TechnicJelle, Andouce and Pieter Boelen
+      > Contains various custom game starts linked to player background profession
+      > Includes all sidequests available in the game
+      > Possibility to choose from several pre-defined characters
+          - Includes the Horatio Nelson, Jean de la Croix, Jean Lafitte and Jack Aubrey characters from previous modpack releases
+          - There is at least one navy and one non-navy character available for each nationality
+      > Possibility to change starting date
+      > Many settings linked to character models as set up in initModels.c
+      > Select Storyline Interface adapted as required
+  . Improved Nation Relations by Pieter Boelen
+      > Relations Tutorial quest added at game start
+      > Allow paying governors to make forts forget about you if this has become a problem
+      > Player loyalty (Served Nation) impacts game functionality:
+          - Loyalty is indicated in the Questbook Interface by the large yellow nation name
+          - Random Relation Change code rewritten and fixed
+          - Player relations will automatically follow random relation changes affecting his/her Served Nation (but not for Pirate and Personal loyalities)
+          - Loyalty is set to your chosen nation at game start
+          - Loyalties are updated on each promotion
+          - Having multiple Letters of Marque (LoM) will set your loyalty to Personal
+          - Large acts of piracy, repeated small acts of piracy and joining the pirates will set your loyalty to the Pirates
+          - If your loyalty lies with the pirates, you may be recognized for this by citizens of non-pirate towns
+          - When your loyalty lies with the pirates, the only way to undo this is to stop serving the pirates and get a single LoM
+      > Relation Changes from player actions completely rewritten:
+          - You gain point with a nation only if you have a LoM with them
+          - Having multiple LoMs decreases the amount of points you get per nation, though you still get more in total by Grey Roger
+          - You lose points with nations allied to the nation you attacked if you have no legal reason to do so or if you have multiple LoMs
+          - You lose your LoM if you attack one of your nation's allies
+          - Pirates are more forgiving of attacks against them than other nations are, but such an act will still lose you any positive points you had with them
+          - You gain points with the pirates through acts of piracy; if you have gained enough points, your loyalties shift to the pirates
+          - An unrespectable act is attacking without having a legal reason for it, which applies to ALL ships you sink/capture without having a LoM or navy commission
+          - A major act of piracy is actively betraying a nation you were serving or one of their allies or attacking while under a still-friendly flag
+      > False Flag detection rewrite
+          - Upon loading the scene, correctly set the relations between ALL ships at sea; most other relation-changing code has been deleted
+          - Allow changing flags during battle
+          - Some towns are tolerant of pirates both at sea and ashore, such as Tortuga and in The Spanish Main also Port Royale
+          - This affects the player if you are friendly to the pirates, flying a pirate flag and the town is tolerant of pirates
+          - Reset the memory of specific nation forts when buying amnesty, a LoM or on each promotion
+          - Call generic functionality for when firing on and hitting friendly ships at sea; skip turning nations hostile when doing this
+          - Generic behaviour for firing on friendly ships, including betrayal
+          - Flag and betrayal factored into relation change upon capturing/sinking a ship
+          - Sinking surrendered ships gives you relation points
+          - Custom ship log entry for sinking surrendered ships
+  . Skill and Ability System rewritten by Levis
+      > Different officer types get rank and HP bonuses
+      > Three new abilities
+      > Explanation of officer types added when you first hire an officer; limited to the Landlubber and Mariner difficulty levels
+      > All characters have an offictype assigned and will advance accordingly
+      > Delayed XP gain to fix lag during sea battles from cannon hits
+      > Includes icon updates by Armada
+  . The Gold-Bug brand new storyline completed by Jack Rackham
+- Code Updates:
+  . Pirates will trade with friendly privateers by Grey Roger
+  . Shotgun removed in Realistic and Iron Man Mode by Pieter Boelen
+  . Antigua disabled in Early Explorers period by Grey Roger
+  . Alternate curse added at game start for Davy Jones by Pieter Boelen
+  . Allow gambling even after playing a lot by Pieter Boelen
+  . Improved Performance in Shipyard Interface by Levis
+  . New Cheatmode Functionality: Numpad 9 trigger an instant promotion by Pieter Boelen
+  . Ships at the shipyard may have upgrades by Levis
+  . Asking for Directions Unlocks Fast Travel by Jack Rackham, Bartolomeu o Portugues, Salonikasurf and Pieter Boelen
+  . Updated "Gunner restocks ammo" functionality by Jack Rackham
+  . Spelling corrected in several files by Jack Sparring
+  . Crewmembers on Shore dialogs updated by Morgan Terror
+  . Indians use bow and arrows by Jack Rackham and Levis
+  . Redone NPC Tacking behaviour on Realistic Game Mode by Pieter Boelen
+- Bug Fixes:
+  . Musket/Musketoon on Back code completely rewritten and improved by Jack Rackham
+  . Main Menu, QuickSave and QuickLoad disabled while being resurrected by Pieter Boelen
+  . No Save Monks fixed, including re-enabled third relic, by Pedrwyth
+  . Distance to forts shown correctly by Pieter Boelen
+  . Sail-To disabled when close to a hostile fort by Pieter Boelen
+  . Day Adding on the Hour skipped if DirectSail is not active by Pieter Boelen
+  . "Protected" quest companion ships will never mutiny by Pieter Boelen
+  . Fixes to Maltese Knight Abbey, including ability to kill immortal enemies there in Shotgun Mode, by Pieter Boelen
+  . Prevented too low ship HP on Stormy Start by Pieter Boelen
+  . Correct address form for all characters by Pieter Boelen
+  . Scroll functionality added to Questbook Interface by Levis
+  . Store looting crash fixed by Pedrwyth
+  . Personal Shipyard crash fixed by Pieter Boelen
+  . Nation Relations Interface only shows your relation green (=awaiting promotions) if you actually have a LoM so you can receive that promotion by Pieter Boelen
+  . Sitting at the tavern fixed by Pedrwyth
+  . Stock game Officer Loyalty mod corrected for quest characters by Pedrwyth
+  . Corrections to Food and Rum Consumption by Pieter Boelen
+  . Corrections to crew pay calculations by jsv
+  . Tier 8 ships no longer repair for free by jsv
+  . Rumours based on current island and nation by Mirsaneli
+  . Salary Screen no longer accidentally skippable by jsv
+  . Errors with wounded crew fixed by jsv
+  . Salary cleaned up and made uniform to ensure prices match by jsv
+  . Cannot save during resurrection to avoid CTDs by Levis
+  . Map item availability corrected throughout the game by Pieter Boelen
+- Storyline Updates:
+  . Ardent storyline added by Grey Roger [WIP]
+  . Assassin and Bartolomeu storylines give Letters of Marque as appropriate by Bartolomeu o Portugues
+  . Sidequests:
+      > Sidequests available in ALL storylines as appropriate by Pieter Boelen
+      > Apothecary sidequest added by Levis
+      > Improvements to Baldewyn Coffier, Arnaud & Sabine Matton sidequests by pedrwyth
+  . Hornblower Storyline:
+      > Quest extension added to the end by Grey Roger, with help of Jack Rackham
+      > No salary requirement and cannot gain ranks while you are not officially in command of a ship by Pieter Boelen
+      > Many fixes throughout by Grey Roger and Pieter Boelen
+      > Common Long Rifles given to Riflemen by Grey Roger
+      > Moved "C.S. Forester" to less obvious location at game start by Pieter Boelen
+  . Jack Sparrow Storyline:
+      > Changed relations throughout to match with the story by Pieter Boelen
+      > Encourage joining the pirates, but not enforced by Pieter Boelen
+      > Several Pirate Lord sidequest disabled if you do not join the pirates by Pieter Boelen
+      > Allow resuming the main quest if you decline Davy Jones' offer the first time by Pieter Boelen
+      > Hylie Pistof tavern owner improved by Mirsaneli and Jack Rackham
+- Model and Texture Updates:
+  . Turks Town completely replaced and updated by Jack Rackham
+  . Sao Feng, Sao Feng's guards, Pintel, Sri Sumbhajee, Sri Sumbhajee's aides, Francis Drake, Michiel de Ruyter and Eduardo Villanueva characters models added by Jack Rackham
+  . John Paul Jones, Jean Lafitte and Laurens de Graaf custom portraits added by Jack Rachham and Grey Roger
+  . Golden Hind ship model with extra details added by Jack Rackham, Hylie Pistof and Armada
+  . Brigantine Castell Friedrichsburg 1688 high-detail custom model added by Rider88, Hylie Pistof and Armada
+  . Improved Superbe model by DF5
+  . Postillionen spanker sail fixed by Hylie Pistof
+  . Lyon Hoy rigging fixed by Hylie Pistof
+  . Polacca additional paint scheme added by Hylie Pistof
+  . Improvements to Spanish and French paint schemes in Napoleonic time period by Grey Roger
+  . FR_Greyhound, FR_Indefatigable, FR_Surprise, PO_Greyhound, SP_Surprise, SP_Volage and FR_WarGalleon added by Grey Roger
+  . Satanist Fleut retexture added as 'Mefisto' replacement in Early Explorers and The Spanish Main by Grey Roger
+  . Cave in Cozumel Secret Hideout replaced with Captain's Cabin by Pieter Boelen
+  . Custom grass textures added by Hylie Pistof, Pedrwyth and Levis
+  . Many ship model locator and texture errors fixed by Pedrwyth and Hylie Pistof
+  . Merchant and navy flags and pennants updated by Grey Roger
+- Sound Updates:
+  . Custom steam engine sound added by Robert Nutter
+- For Future Development:
+  . Collision Detection for BuildingSet structures by Levis
+  . Improve Fight AI code by Levis
+  . [WIP: Turned off on purpose] Officer Tutorial by Levis (disabled in PROGRAM\DIALOGS\Enc_officer.c)
+- ADDITIONAL INSTALLATION OPTIONS:
+  . Redone installation process for improved efficiency and reliability by Pieter Boelen, based on suggestions by Kpax7
+  . Unfinished Storylines contains:
+      > Devlin Opera storyline by Short Jack Gold
+
+Build 14 Beta 3.5:
+- New Features:
+  . Additional Personal and Pirate Flags added by pedrwyth, Grey Roger and Jack Rackham
+  . Hire specific officer types by talking to Tavern Owners by Pieter Boelen
+  . New musket style guns added by Jack Rackham
+      > Rarity and period assignments adjusted by Grey Roger
+  . Distinguished between Player Types by Grey Roger, Levis and Pieter Boelen
+      > Current Player Type is indicated by your captain type in the bottom of the Character Interface
+      > Commissioned Player Type:
+          - Triggered by choosing "Naval Officer" at game start
+          - Gain appropriate ships, officers and uniforms as you are promoted
+          - Only gain land after rank 6 (Commodore)
+          - Can only give Captured Towns to your Served Nation
+          - Free Crew Hire in towns of your Served Nation
+          - Cannot Swap Ships until rank 7 (Commodore)
+          - Cannot Buy ships and cannot Sell player ship
+          - Cannot Sign Articles
+          - Receive 50% prize money on sale of legally captured ships
+          - Pay 50% commission on all cargo sold, skipping skill effects
+      > Improved Privateer Gameplay by Pieter Boelen:
+          - Triggered by buying a Letter of Marque
+          - Different promotion titles
+          - Receive 50% prize money on sale of legally captured ships
+          - Pay 50% commission on all cargo sold, skipping skill effects
+      > Improved Merchant Gameplay by Pieter Boelen:
+          - Triggered by carrying a "Merchant License" (choosing "Merchant" at game start gives you one)
+          - Possible to buy a "Merchant License" from the WIC office on Curacao and the EITC office on Jamaica
+          - Selling cargo skips skill effects (this overrides the 50% commission when in the service of a nation)
+          - Carrying a "Merchant License" prevents your crew from becoming envious of the amount of money you have
+          - You lose your "Merchant License" through any unrespectable act (the first time provides a warning only)
+      > Improved Pirate Gameplay by Pieter Boelen:
+          - Can join the pirates if you have no LoM and are not hostile to them
+          - Pirates sell their design ships if you have no LoM OR you are not hostile to them
+          - Can gain ranks with pirates after joining them
+          - Improved Nevis blacksmith functionality after joining them
+          - No land given upon promotion
+          - Distinguished promotion ranks from fame level
+          - Receive 80% of the value of any pirated ships after joining them
+  . Stealing from item traders and town guards made much more challenging by Pieter Boelen
+      > Reinforcements are sent when you are caught
+      > Location is locked until all enemies are taken care of
+      > Huge penalty for killing item traders
+  . Escort Quests made more interesting by Pieter Boelen
+      > Looting trader while still in your squadron prevented
+      > Ship turns hostile if you hoist a hostile flag
+      > Talk to the escorted captain to inform him if you wish to use a false flag
+      > Possibility for enemy ship to be generated at destination
+      > Cumulatively increasing reward for defending the trader from such an enemy
+      > Distance factor in pay fixed by Levis
+  . Improved Smuggling by Levis
+      > Your actions towards the smugglers may lead them to like/dislike you
+      > Possible to buy opium from the Jamaica Opium Den
+      > Possible to place a wager with the soldiers to gain the smuggling schedule
+      > The coastguard can show up at any moment, so even before you talked to the smugglers
+      > Possibility to send officers on scouting duty for smuggling
+      > Includes Governor Smuggler Quest
+- Code Updates:
+  . Shared dialogs for general Governor and Tavern Functions by Pieter Boelen
+  . Minimum Ship Initialization Values Enforced by Pieter Boelen
+      > Default "Auto Buy" supply will always fit into each ship's cargo hold
+      > Changes to ensure ship randomization doesn't cause less capacity than the pre-calculated minimum
+      > Possibility to set "supply scalars" in ships_init.c to distinguish between coastal, regular and long-distance ships
+  . Dialog order code updated by Levis
+  . Dialog text files loaded from storyline folder if available by Pieter Boelen
+  . Beach and Smuggler added to Cartagena Devil's Throat disabled as smuggling shore and by Pillat and Levis
+  . Pistol sound volume toggle added by Jack Rackham
+  . Modified cannon weights by J Norrington
+  . Unrandomized "guard resident from burglar" reputation increase by Grey Roger
+  . Treasure Quest pistols adapted for period by Grey Roger
+  . Early Explorers corsairs given better items to defend themselves against the Spanish by Grey Roger
+  . Missing priests added to Nevis and Guadeloupe Churches by Grey Roger
+  . Removed random female Captains and Mates from taverns by Pieter Boelen
+  . Pirate cargo quests can send you to different nation islands by Pieter Boelen
+  . Always random name and outfit for governors after Town Capture by Pieter Boelen
+- Bug Fixes:
+  . Shipyard Interface upgrade exploit and ship sale prices fixed by Levis
+  . Persistent items added to prevent reinit errors by Levis
+  . Nighttime weather-related error logs fixed by Levis
+  . Appearance of Itemsbox Interface opened through F2 menu fixed by Levis
+  . Sitting in taverns fixed by Pedrwyth
+  . Store Interface multiplier code fixed and re-enabled by Pedrwyth
+  . Display of label for Hispaniola Treasure Cave fixed by Pedrwyth
+  . Tortuga fixes to Brothel and Tailor by Jack Rackham
+  . PinnaceMedium ship walk file restored by Hylie Pistof
+  . Correction to store interface by Grey Roger
+  . Nation for promotion rewards fixed for Emisarries by Grey Roger
+  . vcskip attribute enabled for Tortuga Atmosphere by Pieter Boelen and Grey Roger
+  . Armor display on character model disabled for new armor types by Pieter Boelen
+  . Clint Eastwood fixed by Pieter Boelen
+  . Custom self dialogs restored after use by Pieter Boelen
+  . Stuck at sea after taking enemy ship for self fixed by Pieter Boelen
+  . Restoring stunned and looted characters fixed by Pieter Boelen
+  . Textures for town boarding fixed by Pieter Boelen
+  . Characters in Player Party are NEVER considered soldiers by Pieter Boelen
+  . WorldMap quest updates always disabled while on shore by Pieter Boelen
+  . Wrong name upon death fixed by Pieter Boelen
+  . SetRank rewritten to work correctly for NPCs and promotions/demotions by Pieter Boelen
+  . Fast Travel fixed in Guadeloupe, Charlestown and Tortuga fixed by Pieter Boelen
+  . "Nathaniel Hawks" in personal forts fixed by Pieter Boelen
+  . Custom personal flags for non-player characters restored by Pieter Boelen
+  . Passengers Interface tabs fixed by Levis
+- Storyline Updates:
+  . Generic Quests:
+      > Fetch Quest errors fixed and Apothecary included by Levis and Pieter Boelen
+      > Governor Ship Hunting quest expires after a month so you get a new one afterwards by Pieter Boelen
+  . Sidequests:
+      > "A Girl Won in Card Game": Ending fixed by Pieter Boelen and Grey Roger
+      > "Artois Voysey": Quest loop error fixed by Pieter Boelen
+      > "Edgar Attwood": Enabled in all storylines by Pieter Boelen
+      > "Escort Vigila Mendes' ship": Rewritten to improve reliability by Pieter Boelen
+      > "Find Angelique Moulin's Father": Corrected for Early Explorers by Grey Roger, including "Angel Sword" added by Bartolomeu o Portugues and Jack Rackham
+      > "Find the missing son of the Spanish admiral": Arabella Silehard last name changed to match with period-correct governor by Pieter Boelen
+      > "Hard Labors of an Assassin": Reward items changed to normal type by Grey Roger
+      > "Help the church": Corrected for Early Explorers by Grey Roger
+      > "Help the Turks island settlement": Potential lock fixed and completing sets you neutral to the pirates by Pieter Boelen
+      > "Patric and the idols": Bypass fixed by Grey Roger
+      > "Saving Toff's daughter": Corrected for Early Explorers by Grey Roger
+      > "Sink the Pirate corvette": Fixed and updated for period by Pieter Boelen
+      > "Sinking the Vogelstruijs": Dialog rewritten by Salonikasurf
+      > "Smuggling for Thomas O'Reilly": Made independent from Standard Storyline by Pieter Boelen; unlocked only after a certain amount of smuggling by Levis
+      > "Strange things going on in the Caribbean": Corrected for Early Explorers by Grey Roger, passenger and prison warden errors fixed by pedrwyth
+      > "The French pirate in the tavern": Modified to allow double-crossing at the end to work properly by Pieter Boelen
+      > "The Saga of the Blacque Family": Marc Blacque can be hired as officer by Salonikasurf
+  . Tutorial in Standard and Free Play storylines:
+      > American tutorial enabled by pedrwyth
+      > Locked locations after French Tutorial fixed by Pieter Boelen
+  . Standard Storyline:
+      > Black Pearl boarding deck texture fixed by Pieter Boelen
+      > Black Pearl stats improved by Grey Roger
+      > Boarding certain quest ships fixed by pedrwyth
+  . Jack Sparrow Storyline:
+      > Appearance of Pintel and Ragetti as officers fixed by Pieter Boelen
+  . Free Play Storyline:
+      > Malcolm Hatcher hostile nation randomized by pedrwyth
+      > Ensure characters without a starting island are friendly with the Pirates by Pieter Boelen
+      > Ensure safe port leave for Tortuga starts by Pieter Boelen
+  . Assassin Storyline:
+      > Repeated rewards exploit fixed by Grey Roger
+  . Bartolomeu Storyline:
+      > Cartagena Firecracker Quest fixed by Bartolomeu o Portugues
+      > Various issues fixed by Bartolomeu o Portugues and Grey Roger
+      > Give custom personal flag to Roxanne Lalliere by Grey Roger
+  . Woodes Rogers Storyline:
+      > Corrected equipping of characters throughout the story by Jack Rackham
+- For Future Development:
+  . Whip added for quest purposes by Jack Rackham
+  . Realistic Cargo Mod by Pieter Boelen
+      > Disabled with SHIPS_WEIGHT toggle at the bottom of PROGRAM\globals.c, enabling requires New Game!
+      > Crew amount and cannons included dynamically in cargo capacity
+      > Overweight ships capsize if the problem is not resolved within a minute
+      > Naval ships have double capacity for supplies, but reduced extra capacity for other cargo
+      > Minimum and maximum crew overwritten if set too low in ships_init.c
+- Model and Texture Updates:
+  . Wider pier added to Antigua Port by Hylie Pistof, Jack Rackham and Pieter Boelen
+  . San Juan "sea locators" turned 180 degrees by Jack Rackham
+  . Archipelago Map corrected by Kpax7
+- Modder Tools:
+  . Skill debug dialog option by Levis
+  . Loading timer functionality added by Levis
+  . Globals.c added DEBUG functionality: Reinit functionality updates player and companion ship stats by Pieter Boelen
+
+Build 14 Beta 3.4:
+- New Features:
+  . Improved Player Character Background customization choices by Jason Maffettone and Pieter Boelen
+      > 20 different professional backgrounds, each with their own starting skills, log entries, and unique starting gear
+      > Standard storyline starts at Rank 1, all other storylines that allow Free Play start at rank 5
+  . Improved smuggling with scheduled patrols and the ability to acquire these schedules by Levis
+  . Almost all blacksmiths allow repairing multiple blades by Jack Rackham and Pieter Boelen
+  . First Person Aiming Mode expanded by Levis and Pieter Boelen, sounds and textures updated by Pillat
+  . Long Rifles with equippable Telescope added by Jack Rackham
+      > Long Rifle can be found in the Bridgetown Maltese Knight Abbey Crypt by Pieter Boelen
+      > Telescope can be given to you through the church by Levis
+  . Blade Kit reduces blade break chance by 50% by Jason Mafettone
+  . Neptune's Trident added that allows you to start and end storms on command by TechnicJelle
+      > Purchase from Hendrick Vanderdecken at Isla de Muerta for a substantial price
+  . Blackbeard wielding the Sword of Triton added to Isla de Muerta by Pieter Boelen, model by Ostrov
+- Code Updates:
+  . Updates to Abilities System, including 3 new abilities and a Filter Button by Levis
+  . Toss Item button added to Inventory interface to get rid of unwanted items by Levis
+  . Modified numbers for Ship Surrender by Levis
+  . Distinguished better between Navy and Privateer Free Play; select Navy Play using the Commissioned character type by Pieter Boelen
+  . Nation merchant ships no longer have soldiers as boarding crew by Pieter Boelen
+  . More realistic behaviour for submerged Flying Dutchman by Pillat, Levis and Pieter Boelen
+  . Improved sound and visual effects for using bandages and cauterization kits by Jack Rackham
+  . Reputation changes rebalanced by Levis
+- Bug Fixes:
+  . Fetch Quests rewritten and fixed by Levis
+  . Part of FEMALE_OFFICER_PERCENTAGE code removed again by Pieter Boelen
+  . Cannot save while on ship deck by Pieter Boelen
+  . Attempted fix for Stuck At Sea When Assaulted During Mooring by Pieter Boelen
+- Storyline Updates:
+  . Bartolomeu o Portugues Storyline:
+      > Cartagena Quest finished by Bartolomeu o Portugues
+  . Side Quests:
+      > Mules added to Petit Tabac during the Silver Quest sidequest by Bartolomeu o Portugues
+      > Bow and arrow items added for Quest Indians by Bartolomeu o Portugues and Jack Rackham
+  . Brave Black Flag new Free Play storyline added by Jason Maffettone
+      > Includes a modified tutorial
+      > All of the standard game’s side quests.
+      > Start the game with a full cadre of 7 officers
+      > Some standard story characters and ships have been altered for greater variety, challenge, and reward
+      > Full wardrobe of 12 outfits from beginning of the game based on the Blaze model
+- Location Updates:
+  . Tortuga Town, Oranjestad Port, Havana Center, Santiago and Santo Domingo Towns completely replaced and updated by Jack Rackham and Bartolomeu o Portugues
+  . various walk patches fixed and improved by danitim1
+- Model and Texture Updates:
+  . Merchant Pinnace and Medium Pinnace high-detail custom models added by De Zeeroovers
+- For Future Development:
+  . Rockets added for quest purposes by Jack Rackham
+  . Cursed Maquahuitl item added for quest purposes by Jack Rackham; idea by Bartolomeu o Portugues
+  . Test code added for quest boulder chase scene by Jack Rackham; idea by Bartolomeu o Portugues
+
+Build 14 Beta 3.3:
+- "New Horizons Tutorials & History.pdf" updated by Thagarr
+- Code Updates:
+  . Land Crew equips automatically by Jack Rackham
+  . Pirates don't trade if you have a Letter of Marque from another nation by Pieter Boelen, idea by Jason Maffettone
+  . Lower Officer Levels by Jason Maffettone
+  . Added 7 skill items, 3 armor types, 2 pistols and 1 blade by Jason Maffettone
+  . Can purchase the "Famous Pirates Collection" from all tailor shops by Jason Maffettone
+  . Captured Captain dialog clarified by Skyworm
+  . Custom Player Type removed for Auto Skill System
+  . Curse of Cortez ONLY active in Arcade Game Mode
+  . Various pistols modified for realism by Jason Maffettone
+  . Flush ship upgrade replaced with Corsair Refit by Jason Maffettone
+  . Money check for salary crew modified by Levis
+  . Realistic Abilities code modified to be more flexible by Pieter Boelen
+  . Reduced log messages depending on Logs Toggle to reduce screen clutter by Pieter Boelen
+  . Sell All Loot button always keeps one Spade and Pickaxe for Treasure Hunting by Pieter Boelen
+  . Godmode applies to ALL methods of receiving character damage by Pieter Boelen
+- Bug Fixes:
+  . Character Encounter Code returned to Beta 3 state
+  . WorldMap Encounter Code returned to Beta 3 state
+  . Dynamic Economy returned to Beta 3 state
+  . Crew Fires Pistols Again (simplified code) by Jack Rackham
+  . Morale drop on Divide the Plunder mode fixed by Pieter Boelen
+  . Officiant dialog fixed by Jack Rackham
+  . Books properly contribute skill points by Pieter Boelen
+  . Deck textures after capturing Black Pearl fixed by Pieter Boelen
+  . Tortuga Fast Travel fixed by Pieter Boelen
+  . Blackjack no more doubling up after overshooting 21 by Levis
+  . Receiving Promotion Ships fixed by Grey Roger and Pieter Boelen
+  . Shipyard Interface prices corrected and exploits through upgrades fixed by Levis
+  . Nation relation changes after Town Capture fixed by Pieter Boelen
+  . Cannot Hoist/Lower Sails fixed by Pieter Boelen
+  . Fix for Bonaire No Save Monk missing in Assassin and Bartolomeu storylines by Pieter Boelen
+  . Musket Bullets no longer show up during the wrong time periods by Pieter Boelen
+  . Weird internal code error for store initialization fixed by Levis
+  . Cannot Loot Corpses under "Go to Ship" Icon fixed by Levis
+  . Looting after talk with Maltese Knight corpse fixed by Pieter Boelen
+  . Crew asking for salary on Divide the Plunder mode fixed by Levis
+- Storyline Updates:
+  . Side Quests:
+      > Help the Church: Father Bernard dialog fixed by ANSEL
+      > Girl Won in a Card Game: Joseph Claude le Moigne dialog adapted to fix Amnesty not Given by Levis
+      > Capture the Corvette: Adapted for relevant time periods in Devlin and La Croix storylines by Skyworm
+      > Bartolomeu o Portugues: Main character replaced in Brave Black Flag and Standard storyline by Bartolomeu o Portugues
+  . Standard storyline
+      > Missing tailor after French invasion of Speightstown fixed by Pieter Boelen
+  . Hoist the Colours Storyline:
+      > Peter Willemoes dialog corrected by ANSEL
+  . Bartolomeu o Portugues Storyline:
+      > Missing Cecile Bienbonne dialog added by Hylie Pistof
+  . Assassin Storyline:
+      > Brothel Mod permanently enabled by Pieter Boelen
+      > Dialogs improved by Grey Roger
+  . Hornblower Storyline:
+      > Dialogs improved by Grey Roger
+  . Woodes Rogers by Jack Rackham:
+      > Sell All Loot button disabled when selling items to 5 pirate captains
+      > Vane and co. had too little money
+      > Textures fixed on shipyard3
+      > Church_choir: you could press F3 "too fast", and get stuck
+      > Better fight with 3 thugs on Nevis Pirate Settlement roofs: Musketoon no longer kills all 3 at once
+  . Gold-Bug Storyline:
+      > New WIP content included by Jack Rackham
+- Model and Texture Updates:
+  . Improvements to Fleuts, Fast Galleons, NL_SevenProvincien, HeavyLineship, WallerPinnace, NL_PinnaceofWar47, Battleships, Belette and Fragata Latina by Hylie Pistof
+  . Added 12 new character models by Jason Maffettone
+  . "Iceni Queen" custom ship texture added by Jason Maffettone
+  . Irish Harp and Smoking Pirate Skull flags added by Jason Maffettone
+
+Build 14 Beta 3.2:
+- Config.exe restored and improved, with special thanks to De Zeeroovers
+- New Archipelago Map added by Agentad
+- Bug Fixes:
+  . Missing Ships on Worldmap Encounters fixed by Levis
+  . Monthly Salary Payments fixed by Levis
+  . Extra Atmosphere Tavern Fights fixed by Levis
+  . Rival Suitor error messages fixed by Levis
+  . Weird Effects after Self Dialog fixed by Levis
+  . Missed "corpse" attribute error log fixed by Levis
+  . Muskets/Musketoons not working during boardings fixed by Jack Rackham
+  . Father Bernard "Skill Reset" functionality fixed by El Rapido
+  . Promotion Reward Officer model errors fixed by Pieter Boelen
+  . Fix to Guadeloupe Town Capture by Pieter Boelen
+  . Barbados location descriptions fixed by Pieter Boelen
+  . Fleut of War encounter chance improved by Pieter Boelen
+  . Attempted fix for Capture Colonies Female Governors by Pieter Boelen
+  . Cartagena Escort Quest fixed by Pieter Boelen
+- Gameplay Updates:
+  . Locked Abilities Functionality added by Levis
+    Unlock Perks in various ways, explained in the descriptions
+  . Fetch Quests Improved by Levis
+    Now avaible everywhere
+    Tailor and Shipyard quests are now shown in the town news at the tavern
+  . All books made readable by Levis and Pieter Boelen
+    Includes texture work by Darkhymn, FireBat and Thagarr done for the Gentlemen of Fortune modpack
+    Mathematical jokes by Grey Roger
+  . Worldmap Encounters improved to take into account nearby islands and time of day by Levis
+  . Redone Dynamic Import/Export Goods System by Levis
+  . Moon Phase changes visibly ingame by Purseon
+  . Training Fights with crew on player ship deck fixed and reinstated by Purseon
+  . Hostile Traders can be fooled, depending on false flag detection chance, by Purseon
+  . ENABLE_CHEATMODE functionality added by El Rapido
+      > Tailor provides a "Famous Pirate Clothes Collection"
+      > Tailor allows resetting of Player and Officer skills and abilities
+- Code Updates:
+  . Ability System fixed and improved by Levis
+  . F2>Character Screen shows highest rank instead of latest rank by Levis
+  . Enemy Soldiers in Taverns improved by Levis
+  . Enhanced Dialog System included by Levis
+  . Character Encounter Code updated by Levis
+  . Town Events can now trigger quests by Levis
+  . Pickpocket Gold handling improved by Aconcagua
+  . Female Officer Percentage setting added by Aconcagua
+  . Officer Hire Price randomized a bit more by Aconcagua
+  . Perks Code improved by Aconcagua
+  . Timescale Settings changed to x1, x3, x5, x10 and x20 by El Rapido
+  . Officer Skill Contribution values modified by El Rapido
+  . SKILL_EXPERIENCE_MULTIPLIER and EXPERIENCE_MULTIPLIER settings added by El Rapido
+  . Nation-Specific Weapons for enemy ship crews disabled by Pieter Boelen
+  . Blacksmiths get paid into Town Gold
+- Storyline Updates:
+  . ALL Storylines:
+      > Davy Jones made into a more formidable opponent by Levis
+  . Sidequests:
+      > Marc Blacque quest can be completed even when hostile to England by Pieter Boelen
+  . Standard Storyline:
+      > Potential Stuck in Speighstown during tutorial error fixed by Levis
+      > Edgar Attwood quest starting twice fixed by Levis
+      > Capture Black Pearl scene fixed by Levis
+      > Black Pearl swap with uncursed version after capture fixed by Pieter Boelen
+  . Bartolomeu Storyline:
+      > Cartagena part of the storyline extended by Bartolomeu o Portugues and Jack Rackham
+  . Assassin Storyline:
+      > Potential missing Henry Morgan fixed by Levis
+      > 'La Couronne' quest completion clarification message added by Levis
+  . Hoist the Colours Storyline:
+      > Black tavern quest scene fixed by Levis
+      > Pintel Passenger Bug fixed by VanessaHudgensFan and Levis
+      > Double greeting on Bella Brin fixed by VanessaHudgensFan and Pieter Boelen
+      > Potential quest errors due to immortal Mr. Gibbs fixed by Pieter Boelen
+      > Laurence Bannerman returns to Turks after ending by Pieter Boelen
+  . Hornblower Storyline:
+      > Dialog spelling and factual errors corrected by Grey Roger
+      > Missed character ID error fixed by Pieter Boelen
+  . Gold-Bug Storyline:
+      > New WIP content included by Jack Rackham
+- Texture Updates:
+  . High-detail Boat texture added by TheBlackKnight
+  . Ship Window texture improved by Armada
+- Model Updates:
+  . Polacca high-detail custom model added by De Zeeroovers
+  . Model improved on Fast Galleons by De Zeeroovers
+  . HMS Surprise camera height improved by Hylie Pistof
+  . Improved Superbe model by DF5
+  . Rigging improved on Derfflinger by Hylie Pistof
+  . Rigging improved on War Galleon by Hylie Pistof
+    Includes new textures courtesy of the Gentlemen of Fortune Mod Team
+  . Model improved on NL_Fleut50 and PO_Fleut50 by Hylie Pistof
+- Modder Tools:
+  . Perks Reinit Code added by Levis
+  . Easier events system by Levis
+- ADDITIONAL INSTALLATION OPTIONS:
+  . Widescreen Textures including:
+      > Improved Spyglasses by TheBlackKnight
+      > Widescreen Moon Textures by Purseon
+
+Build 14 Beta 3.1:
+- PiratesAhoy! Logo opening video updated by Diperscitus and Thomas the Terror
+- Engine updated so it can handle >2gb address space by Lord_Kosmos
+- Bug Fixes:
+  . Corpsemode 3 fixed by Levis
+  . Missing dialog files added by Levis
+  . Random prison commander dialog file added by Pieter Boelen
+  . Nevis Pirate Settlement Leader dialog check fixed by Pieter Boelen
+  . Period governor model code fixed by Pieter Boelen
+  . Massive morale drop upon hiring crew fixed by Pieter Boelen
+- Gameplay Updates:
+  . Abilities cost more than 1 point by Levis
+  . Fetch Quests added by Levis
+    Works in Alice Town, Grand Cayman, Speightstown, Philipsburg and Tortuga by talking to Tavern Owner
+  . Extra Atmosphere added to taverns by Levis
+  . Improvements to Time Scale code by Pieter Boelen
+      > Log messages quickly scrolling off the screen prevented if using time compression
+      > Game slows down to normal speed automatically if:
+	- Enemy draws blade
+	- Ship is caught in irons after a weather change
+	- Upon boarding
+	- Upon reload to sea and worldmap
+	- Drunken brawl due to double rum rations
+  . Blackjack Updated: Ace now counts as 1 and 11. Also allows double up by Levis
+  . Only player ship gets collision damage by Pieter Boelen
+  . Realistic Game Mode: All Sail-To locations open up when you have a map of the island by Pieter Boelen
+- Code Updates:
+  . Realistic Abilities option during Iron Man Mode expanded on and improved by Levis
+  . Checks if character can sail ship after officer transfer and if you can command a fleet by Levis
+  . Updates to Officer System by Aconcagua
+  . All statements of "Defense" replaced with "Defence" to prevent confusion by Pieter Boelen
+  . Questbook entry added to notify player of morale decrease due to too much money by Pieter Boelen
+  . Unnecessary log messages during DirectSail removed by jsv
+- Storyline Updates:
+  . Standard storyline Hitman sidequest timers fixed by Talisman
+  . Standard storyline Nigel Blythe sidequest not dependable on mainquest anymore by Levis
+  . Bartolomeu storyline dialog errors fixed by Levis
+  . Hornblower storyline model code fixed by Pieter Boelen
+  . Jack Sparrow storyline appearance of Annamaria fixed by Pieter Boelen
+  . Woodes Rogers storyline Loading Screen Tips disabled by Pieter Boelen
+- Model Updates:
+  . Blaze armor models added and updated by SuperDurnius
+  . Rigging improved on Waller Pinnace by Hylie Pistof
+  . Rigging improved on XebecAS by Hylie Pistof
+  . Rigging improved on Cutters by Hylie Pistof
+  . Darker sailor textures at sea by Nethaeru
+- Modder Tools:
+  . Build version written to compile.log as per an idea by Levis
+  . Support added for Random Loading Screens by Pieter Boelen
+
+Build 14 Beta 3:
+- Bug Fixes:
+  . Capture Colonies mod fixed and finished by Talisman and Pieter Boelen
+  . Prisoned Captain Dialog fixed and rewritten to reinstate Ransom functionality by Pieter Boelen
+  . Promotion Reward Ships fixed and reinstated by Pieter Boelen
+  . Use of Custom Storyline Profile Name fixed by Pieter Boelen
+  . Worldmap and DirectSail Encounters code fixed and updated by Pieter Boelen
+- Gameplay Updates:
+  . Sidestep disabled by default
+      > Can be switched on at the bottom of PROGRAM\InternalSettings.h
+      > Now works in separate steps by Pirate_KK
+  . Logs Toggle has various notification levels by Pirate_KK
+  . 75% chance on Gold and Silver shipments when encountering Spanish Treasure Fleets by Pieter Boelen
+  . Boarders use potions placed in the Weaponslocker by Pieter Boelen
+      > Stocking the weaponslocker with Antidotes and Stinkpots could make for interesting situations
+  . Elaborate Curse of Cortez functionality added for Aztec Coins by Pieter Boelen
+      > The chest in the cave on Isla de Muerta is filled with Aztec Coins
+      > Aztec Coins turn you into a skeleton when outside at night, that is hated by all
+        You get additional HP for this, but only WHILE you are a skeleton
+      > Aztec Coins can be given to officers/crew or placed in all your ships' weaponslockers
+        If placed in the Weaponslocker, they are used by boarders and decrease crew damage during sea battles
+      > Food and Rum consumption decreases for each crewmember cursed, but morale decreases too
+      > Aztec Coins can be sold; however, they WILL keep counting for the extent of the curse
+      > After a while of being cursed, your ship will get torn sails and start trailing fog
+      > The curse can only be lifted by placing 882 coins back in the chest on Isla de Muerta
+        Careful with losing those coins! If you can't collect 882 again, you're stuck with the curse!
+        There is ONE place other than the chest on Isla de Muerta where ONE additional coin can be acquired if you are in dire need of it. Guess where!
+  . Dead Albatross bad luck enforced by Pieter Boelen
+      > You cannot get rid of it, except in ONE way. Try to figure it out!
+  . Flag Hoisting Code rewritten and simplified by Pieter Boelen
+      > If you use the Quick-Command Menu, you will hoist your original flag again later on
+      > You are no longer marked as a traitor whenever you hoist a pirate flag, but if you hoist ANY hostile flag in sight of OTHER ships
+  . ENABLE_CHEATMODE functionality added by Pieter Boelen
+      > Select Storyline allows you to choose ANY ship, even high-level ones
+      > Numpad 1-2-3 allow you to select the character to apply the cheat to
+        - Numpad 8 disables worldmap storms and ships
+        - Godmode includes crew immortality
+        - Level Up and Fake Level Up automatically increase your skill points if you use Auto Skill System
+  . Use Tab when you have a Shotgun, Musket OR Jack Sparrow's pistol equipped to go into Shotgun Mode by Pieter Boelen
+  . Additional large cannon types added by Pillat
+      > Special Cannons interface picture added by Cassadar
+      > ANY cannon type can be installed at Vanderdecken's shipyard by Pieter Boelen
+  . Flying Dutchman Improvements:
+      > Emerging from the depths effects and music improved by Pillat
+      > No worldmap encounters or storms if submerged by Pieter Boelen
+      > Kraken Attack enabled if you have the cursed Flying Dutchman in your fleet by Pieter Boelen
+- Code Updates:
+  . Use Quickload to load your latest savegame by Pirate_KK
+  . Updated Realism Modes:
+      > Delay of 3 seconds (plus/minus morale changes) before your sail commands are executed by Pirate_KK
+      > Ship Type and Nationality Icon in Sail-To Menu disabled for faraway ships by Pirate_KK
+      > "We are recognized" log messages disabled in Iron Man Game Mode by Pieter Boelen
+      > Skill modifiers for Jewelry, Indian Artefacts and Minerals hidden by Pieter Boelen
+  . Updated Periods System:
+      > Emissaries added for nations without towns: Holland and England use Antigua, Portugal uses Grenada by Pieter Boelen
+      > Early Explorers islands historically without settlements disabled by Pieter Boelen as per an idea by Pirate_KK
+      > Nation-specific town textures used depending on time period by Pieter Boelen
+      > Accurate nation and royalty names by Pirate_KK
+      > "HMS" prefix used only in the Golden Age of Piracy and more recent by Pieter Boelen
+      > Switch from Julian to Gregorian calendar added by Pirate_KK
+  . Item availability code thoroughly modified by Pieter Boelen
+      > Potions and Mixtures are now VERY rare and never sold
+        Random characters that used to sell 'potions' now sell bandages by Pieter Boelen
+      > Random weapons will NEVER be in chests or lying around in locations
+      > Tools are not sold, except for Spades and Pickaxes
+      > Booty for stealing from bandits is now coded in the same way as chests and random items
+      > Books are sold and cannot be found; skill modifiers hidden for low-level books, prices increased
+  . Morale code rewritten and corrected to work as intended by Pieter Boelen
+      > Use Double Rum Rations or Sign Articles with your crew to improve morale
+	  > Companion Ships can mutiny by Pirate_KK
+      > Note that companion reputation compared to the player can be a big factor on the crew morale of companion ships
+  . Store Owners use Town Gold instead of personal money for item transactions by Pieter Boelen
+  . Cannot "Land Troops" at fortless towns unless you have the "Land Troops" ability by Pieter Boelen
+  . Different Flags code completely rewritten by Pirate_KK
+  . National ship stat modifiers rebalanced by Armada
+  . Citizen dialogs added by Pillat
+  . Town guards and soldiers strength dependent on difficulty level by Baste and Pieter Boelen
+  . Alternate reputation names added for female characters by Pieter Boelen
+- Interface Updates:
+  . Select Storyline Interface updated by Pirate_KK
+      > Allows selection of your own flags, ship, character model and more
+      > Fixed, finished and cleaned up by Pieter Boelen
+  . Nation Relations redone to provide a quicker overview by Pirate_KK
+      > Also allows Pirate and Personal Flag selection by Pieter Boelen
+  . Map Interfaces Improved by Pieter Boelen
+      > Right-click functionality restored, including explanatory help string
+      > Caribbean Map interface always the same; other map interfaces simplied
+  . "Default Sails" Interface Button sets your ENTIRE fleet to their OWN default sails by Pieter Boelen
+  . About Build interface replaced with Tips & Tricks by Pillat & Pieter Boelen
+  . Character Interface title and officer type simplified by Pieter Boelen as per an idea by Pirate_KK
+  . Brown interfaces improved by Pieter Boelen
+- Ship Model Updates:
+  . Raa Frigate exterior camera fixed and model improved by Armada
+  . Navy Ketch exterior camera fixed and model improved by Armada
+  . La Couronne exterior camera fixed by Armada
+  . Cursed Flying Dutchman texture improved by Pillat
+  . Rigging improved on all Fluyts by Hylie Pistof
+  . La Marianna cursed ghost ship improved by GhostOfDeath91
+  . Missing cannons added to Fast Galleons by GhostOfDeath91
+- Worldmap, Island and Location Updates:
+  . Completely redone WorldMap based on the real Caribbean, including the Spanish Main by Armada
+      Includes small models for Isla Mona and Petit Tabac and an improved icon for Isla de Muerta
+  . Cartagena Included as Regular Town:
+      > Required locations and characters added by Bartolomeu o Portugues
+      > Colombia island location replaced with main land with actual San Felipe fortress by Armada
+      > City Center walk patch by Jack Rackham
+      > Textures improved by Pieter Boelen
+  . Improved Island Models:
+      > Antigua and Saint Martin island models improved with correct port models and lighting effects by Armada
+      > Town and Fort added to Curacao by Armada
+      > Lighting files added for all islands by Pieter Boelen
+      > Kralendijk Fort Flag restored by Pieter Boelen
+  . Fixed In-Game Signage by Armada and Pieter Boelen
+  . Philipsburg Sewer location camera issue fixed by Armada
+- Sound Updates:
+  . Additional music tracks added by Pillat
+  . Additional music tracks added and unused music repurposed by Pieter Boelen
+- Texture Updates:
+  . Blue Stock Game and Brown Build Default dialog interface improved by Cassadar
+  . ALL Character Portraits updated to standard quality by Cassadar
+  . ALL Worldmap Animated Flags, including USA, updated to be period-correct by Cassadar
+  . Sail-To Menu and Spyglass nation icons redone for Periods mod by Cassadar
+  . Sail-To Menu for all Town and Shore icons redone by Cassadar
+  . Island interface pictures redone by Cassadar
+  . Additional Sail Types by Pieter Boelen:
+      > Weathered Emblemed Sails option with sails for all nations
+      > Pure White and Standard Sails with US emblem
+      > Standard Sails with personal nation emblem
+  . All crest textures, including pirate and personal flags, redone and updated by Pieter Boelen
+  . "Fire Ship" ability icon improved by Pieter Boelen
+  . Updated Barbossa character texture by Cassadar
+- Storyline Updates:
+  . ALL Storylines:
+      > Random Quest Cases Not Executing fixed by Pieter Boelen
+      > Cargo Quests Fixed by Pieter Boelen
+      > Escort Quests Fixed by Pieter Boelen
+      > Generic Quest Ship generation code rewritten by Pieter Boelen
+      > Starting Ship stats updated by Pieter Boelen
+        Same design as the selected player nation, no "free" upgrades applied and installed cannon type depends on selected ship type
+  . Improved Free Play by Pieter Boelen
+      > Starting Nation Selection defines the relations you will have at game start by Pieter Boelen
+      > False Flag will never be recognized the first time you set sail so you will not be killed by the fort
+      > Selected nation flag will be hoisted after the first time on the WorldMap
+  . Standard Storyline:
+      > Start out with Personal Flag even if selecting England to ensure players don't die upon setting sail by Pieter Boelen
+        English flag is hoisted after escaping from the French squadron, but ONLY if player nation was English
+      > France goes to war ONLY if player nation was Personal or England by Pieter Boelen
+      > Soldier stopping you in Jamaica ONLY happens if player nation was Personal or England by Pieter Boelen
+      > Bridgetown Assault reinstated by Pirate_KK
+  . Assassin Storyline:
+      > Spain turns Neutral after starting to work for them by Pieter Boelen
+  . Bartolomeu Storyline:
+      > First part of Cartagena Firework Quest added by Bartolomeu o Portugues
+      > Cargo to Jean Maginot fixed by Pieter Boelen
+  . Woodes Rogers Storyline:
+      > Character HP no longer overridden by Jack Rackham
+      > Original gun values restored by Pieter Boelen
+      > Loading Screens replaced with uncompressed versions by Jack Rackham
+      > Blackbeard's Head errors fixed by Jack Rackham
+  . Hornblower storyline:
+      > Character Ranks shown properly in interfaces by Pirate_KK
+      > Jamaica Navy HQ open ONLY in this storyline at the necessary time by Pieter Boelen
+      > Missing character init entries added by Pieter Boelen
+  . Sidequests Fixed by Pieter Boelen
+      > "A girl won in a card game" sidequest available in ALL storylines
+      > Find the missing son of the Spanish Admiral
+      > Find Angelique Moulin’s Father
+      > Baldewyn Coffier & Arnaud Matton
+- Modder Tools:
+  . PERIOD_ACCURACY_LEVEL setting at the top of PROGRAM\Ships\ships_init.c for testing purposes by Pieter Boelen
+  . Visible Locators Bright Colours toggle added by Jack Rackham
+  . Separate Left and Right sidestep distance settings by Pieter Boelen
+  . Improved Free Camera mode for Screenshot Making by Pieter Boelen
+  . Quest case checking compile.log messages added, serious errors shown on-screen by Pieter Boelen
+  . Missing fantom model ID on-screen log message added by Pieter Boelen
+  . Missing character ID on-screen log message added by Pieter Boelen
+  . Random ship encounter model not found compile.log message added
+  . Encounter type compile.log message added
+
+Build 14 Beta 2.5:
+- Config.exe removed to prevent compatibility issues
+  Edit engine.ini manually with Notepad
+- Bug Fixes:
+  . Resume Button after using Options Menu fixed and reinstated by Pieter Boelen
+  . New Game with another game already started reinstated
+    Randomizing of names in this instance fixed by Pieter Boelen
+  . Fencing skill increase stopping after getting Professional Fencer ability fixed by Baste
+  . Pistol reload progress updates properly again by Pieter Boelen
+  . Coastraider ship captains can now be captured if they surrender upon boarding by Pieter Boelen
+  . Rain inside during ship boarding fixed by Baste
+  . Music after boarding fixed by Baste
+  . Patrols in towns properly recognize if you are their enemy by Pieter Boelen
+  . Portuguese Soldiers in Period Revolutions and more modern fixed by Pieter Boelen
+  . Shipwright dialogs fixed for High Trade at hostile nations by Pieter Boelen
+  . Divide the Plunder reload fader and time update reinstated for ALL storylines by Pieter Boelen
+  . BuildingSet structures disappear properly when being demolished by Pieter Boelen
+    Also can no longer be Auto-Looted
+  . Master Gunfighter ability limited to Woodes Rogers storyline only by Pieter Boelen
+  . Eleuthera ports missing foam added by Pieter Boelen
+  . Cartagena excluded from Trade and Escort Missions by Pieter Boelen
+  . Eleuthera shipwright Philippe dialog fixed by Pieter Boelen
+- Interface Updates:
+  . Brown Interface tick boxes texture improved and clarified by Armada
+  . Options>Realism Settings menu cleaned up and clarified by Pieter Boelen
+    > Iron Man Mode toggle added, useless button removed and explanations added on the various modes
+    > Separate toggles available in PROGRAM\InternalSettings.h for advanced players
+  . Options>Interface Settings menu cleaned up and clarified by Pieter Boelen
+  . Shipyard Cannons Interface fixed to make more sense, use separate buy/sell prices and prevent exploits by Pieter Boelen
+  . Select Storyline Customize Options disabled in Woodes Rogers, Bartolomeu, Jack Sparrow and Hornblower storylines by Pieter Boelen
+  . Select Storyline "Free Play Only" clarification note added for Jack Aubrey and Jean Lafitte storylines by Pieter Boelen
+  . Map Interface improved labels and icons, including a legend, by Pieter Boelen
+  . Date format changed to "Month Day(th), Year" to appear more historically appropriate by Pieter Boelen
+  . Advanced Options menu renamed to Game Preferences and further cleaned up by Pieter Boelen
+  . Period "The Corsican" renamed to "Napoleonic" by Armada
+  . Game Preferences, About Build and Colonies interfaces colouring toned down by Pieter Boelen
+- Code Updates:
+  . Open Sea Mod included in Iron Man Mode, increasing the worldmap size for realistic travel lengths by Jeff
+    > Ability to switch this ON/OFF in mid-game
+    > Scaled down archipelago map improved by Armada
+  . Merchants and Shipwrights trade depends on relation to nation and player reputation by Pieter Boelen
+    > At Hero you can trade with everyone, but Pirates don't like nice guys and won't trade above Matey
+  . Leadership Bonus added on Divide the Plunder similar to Salary Mode by Pieter Boelen
+  . Treasure Quests fixed and improved, including X Marks the Spot and digging, by Pieter Boelen
+  . All firearms rebalanced by Pieter Boelen
+    > Misfire chance restored to Blunderbuss
+	> Multi-damage added to the musketoon
+  . Clint Eastwood at the strange house in the Nevis jungle now works as intended by Pieter Boelen
+    > He is the ONLY way to get the "Pump Shotgun". Try to take it from him!
+  . Skill level and critical hits taken into account for fencing skill increase by Baste
+  . Range of fort cannons reduced by 50% by Armada
+  . All ship encounter chances and cabin+deck assignments updated by Armada
+  . Ability to remove BuildingSet structures from Speightstown port reinstated by Pieter Boelen
+    > Talk to the workshop owner in the port and mention the earthquake
+  . Boarding Sound added during the boarding fights instead of after it by Pieter Boelen
+  . Morale decrease because of too much money on board in Salary Mode explanation note added by Pieter Boelen
+  . Maximum sea height limited for some port locations by Pieter Boelen
+  . Fencing skill penalty for Common Armour removed by Pieter Boelen
+  . Promotion Reward Swords stats improved by Don Lasagnetti
+  . America governor promotion rewards and uniforms implemented by Don Lasagnetti
+  . Additional names added for American characters by Don Lasagnetti
+  . Tools removed from weapon quality system by Pieter Boelen
+  . Gain Sailing XP at sea even when using time compression by Pieter Boelen
+  . Prevent sound notification when you are pickpocketed on Sea Dog and Swashbuckler difficulty by Pieter Boelen
+  . Storyline Specific Start New Game Screen code rewritten by Pieter Boelen
+- Storyline Updates:
+  . One Free Play storyline now available in each time period:
+    > Standard and La Croix storylines start dates changed to move them one period further by Armada
+    > New Free Play storyline added: Jean Lafitte by Pieter Boelen
+  . Sidequests added from Standard storyline by Don Lasagnetti
+    To the following storylines: Devlin Opera, Master & Commander, The Buccaneer and Tales of a Chevalier
+    Sidequests added:
+    > Baldewyn Coffier & Arnaud Matton
+    > Find Angelique Moulin’s Father
+    > Find the missing son of the Spanish Admiral
+    > Help the Boatswain
+    > Help the Lady
+    > Saga of the Blacque Family
+    > Saving Toff's Daughter
+    > Zaid Murro's Problems
+    > Elizabeth Shaw's Disappearance
+    > Escort Vigila Mendes Ship
+    > Rys Bloom Quest
+    > Sink the Pirate Corvette
+    > Cargo for Thomas O'Reily
+    > Contraband for Thomas O'Reily
+  . Changing Nation Relations mod switched on/off depending on storyline by Pieter Boelen
+    > ON in "Free Play encouraged" storylines:		Devlin Opera, Jack Aubrey, La Croix and Jean Lafitte
+    > OFF in "quest enforced" storylines:			Woodes Rogers and Hornblower
+  . Toff Oremans gives a WORN Sabre of Nicholas Sharp to prevent getting too good a weapon in the early game by Don Lasagnetti
+- Ship Model Updates:
+  . Stock game corvette completely remodeled to high-detail Aurora class Frigate by Armada, rigging improved by Hylie Pistof
+    Applies to PiratCorvette and CrimsonBlood
+  . Steam Frigates model improved based on the upgraded Constitution by Captain Armstrong and Armada
+  . Rigging improved on Barques, NL_Fleut50 and Schooner2 by Hylie Pistof
+- Texture, Model and Sound Updates:
+  . Loading Screens replaced with uncompressed versions by Pieter Boelen
+  . Music Tracks replaced with higher bitrate versions by Pieter Boelen
+  . Interface Title Font replaced with European version by Baste
+  . Spanish soldier portrait files updated by Pieter Boelen
+  . DirectSail: small boat with crew replaced with more detailed model by Pieter Boelen
+  . Cartagena town location lighting files updated by Pieter Boelen
+  . Cartagena town square texture updated and English flag replaced by Pieter Boelen
+- ADDITIONAL INSTALLATION OPTIONS:
+  . IMPROVED Intel Graphics Card fix by Armada, based on work by Amplificar
+
+Build 14 Beta 2.4:
+- Archipelago Map added in Documentation folder by Jaco
+- Bug Fixes:
+  . Worldmap encounters are no longer always skippable; this now depends on the relative speeds between squadrons by Pieter Boelen
+  . Tier 1 Ships no longer give a penalty on characters with Leadership and Sailing skill of 9 and above by Pieter Boelen
+  . Nation Relation related issues fixed, including Governor, Storekeeper and Tavern Owner quest availability by Pieter Boelen
+  . After declining Pirate Hunting missions, you can get another mission after three days by Pieter Boelen
+  . Antigua Victualler now always accepts completion of Trade Quests by Pieter Boelen
+  . Steam engines fixed for non-player ships by Pieter Boelen
+  . Player boardermodels after French promotion fixed by Pieter Boelen
+  . US design ships maximum calibre of 32 enforced by Pieter Boelen
+  . Governor's Harbor (Eleuthera) governor Cole Arkwright slight dialog error fixed by Pieter Boelen
+  . Barbados Lighthouse location name fixed by Pieter Boelen
+- Code Updates:
+  . CannonFX v3.0 mod added by Merciless Mark
+    > Set the realism level in PROGRAM\InternalSetting.h with the USE_PARTICLES_CANNONS setting
+  . Default controls modified:
+    > Left Mouse Button for Attack and Right Mouse Button for Block
+    > F5 for QuickSave and F6 for QuickLoad
+  . Repeatedly Paying Salary gives an increasing Leadership bonus each month by Pieter Boelen
+    > Repeatedly Skipping Salary payment given an increasingly large morale drop
+  . Pirate Hunting target ships generated at a random location around the island by Pieter Boelen
+  . DirectSail disabled during Governor Ship Hunting quests at target island only to prevent target ship from disappearing by Pieter Boelen
+  . Many ship stats fixed and improved by Armada
+  . Storm sea colour improved by Armada
+  . Cannon fire sounds updated by priatnia
+  . Moving the camera to NON-player vessels disabled in Iron Man Mode by Pieter Boelen
+  . Rush, Immediate Reload and Instant Boarding abilities disabled in Iron Man Mode by Pieter Boelen
+  . Nation Relations text adjusted to display properly regardless of character's name length by Armada
+- Ship Model Updates:
+  . Yards can move further with the wind by Hylie Pistof
+  . Stock game corvette completely remodeled to high-detail Aurora class Frigate by Armada, rigging improved by Hylie Pistof
+    Applies to Corvette1, Corvette2 and RN_Corvette
+  . Fast Merchantmen completely remodeled as scrapped navy vessels based on the Aurora class Frigate by Armada, rigging improved by Hylie Pistof
+    Applies to Fastmerchantman1 and Fastmerchantman2
+  . HMS Centurion 1732 high-detail custom model added by KrisWood and Captain Armstrong
+  . Arcadia Xebec high-detail custom model added by Elessaria, ported by Rider88
+  . Spanish and Portuguese skin of Trinity 2nd Rate high-detail custom model added by Noriruru
+  . British, Dutch and French skin of USS Essex 1799 high-detail custom model added by Captain Armstrong
+  . Apostol Felipe texture mapping upgrade by Armada, rigging improved by Hylie Pistof
+  . Amsterdam rigging improved by Hylie Pistof
+  . Lyon Hoy hull upgraded by Hylie Pistof
+  . Carrack and Spanish+Pirate Battle Galleon rigging improved by Hylie Pistof
+  . Cursed Flying Dutchman now uses fixed locators from Flying Dutchman by Armada
+  . Postillionen bow smoothness fixed by Armada
+  . Bermuda Sloop spanker sail fixed by Hylie Pistof
+- Texture Updates:
+  . Brown interface textures improved by Armada
+  . Brown Interface various display errors fixed by Armada
+  . Fixed Battle Interface textures included by Armada
+  . Loading Screen Tips textures updated by Baste
+  . Flying Dutchman sails improved by Armada
+- Storyline Updates:
+  . ENABLE_CHEATMODE functionality added: Woodes Rogers storyline Blackbeard's Head added in opening cabin scene to allow skipping to various quest cases by Jack Rackham
+  . Woodes Rogers storyline various bugs fixed by Jack Rackham
+  . Master & Commander storyline navy aspects deleted to allow better free play by Pieter Boelen
+  . Standard storyline Joaquin de Masse dialog error fixed by agentad
+  . Standard storyline cursed pirate replaced with Ragetti from the Pirates of the Caribbean films by Pieter Boelen
+
+Build 14 Beta 2.3:
+- Bug Fixes:
+  . European engine.ini included to improve game stability by Baste
+    Error logging enabled by default (could slightly decrease game performance)
+  . Battle Interface Heap Corruption fixed to improve game stability (with slight performance loss) by Amplificar
+  . Spelling mistakes fixed by Jack Rackham and Morgan Terror
+  . New tavern models missing lighting files added by Jack Rackham
+  . Cannon Quantity included in F9 Hide Interface functionality by Pieter Boelen
+  . Promotion Reward Ships disabled due to weird bugs by Pieter Boelen
+- Code Updates:
+  . ENABLE_CHEATMODE functionality added: F4 allows instant teleporting and dialog tests by Baste
+  . Sail Selection Code improved by Armada and Pieter Boelen
+    > Emblemed Sails enabled on ALL ships larger than class 8
+    > Improved for historical accuracy
+    > Interfaces cleaned up and fixed
+    > Companion Ship Sail Selection based on Ship Type first (prevents wrong sails on special ships)
+  . Tips added during game reload by Baste (NOTE: Can be disabled with "numoftips" in engine.ini)
+  . Ship Class system replaced by more uniform Tier system based on crew numbers by Armada
+  . Rum no longer contraband by Talisman
+  . Mines only enabled in and after the Revolutions time period by Jeff
+  . Soldiers on your ship's deck (NOT 3D sailing mode!) after first Promotion by Cap'n Crunch
+- Ship Model Updates:
+  . Frigate 'Rossiya' high-detail custom model added by Armada
+    Replaces the stock game frigates, including Frigate1, Frigate2, FR_Frigate, NL_Frigate47 and PiratFrigatSup
+  . French Heavy Sloop of War 'Volage' high-detail custom model added by Captain Armstrong
+    Including additional British, Portuguese and United States colour schemes
+  . USS Essex 1799 new high-detail custom model added by Captain Armstrong
+  . Trinity 2nd Rate (based on the Christianus Sextus) high-detail custom model added by Remus77, rigging work by Hylie Pistof, ported by Armada
+  . Early Neptunus (NL_NeptunusE, FR_NeptunusE, PO_NeptunusE and SP_NeptunusE) high-detail custom model added by SeaNorris and Rider88, ported by Hylie Pistof
+  . USS Constitution model improved by Captain Armstrong and Armada
+  . BattleFrigate models improved by Captain Armstrong and Armada
+  . FastGalleon models improved by Armada, rigging improved by Hylie Pistof
+  . La Licorne rigging improved by Hylie Pistof
+  . FastMerchantman rigging improved by Hylie Pistof
+  . PiratCorvettes rigging improved by Hylie Pistof
+  . Lyon Hoy rigging improved by Hylie Pistof
+  . La Dilligente rigging improved by Hylie Pistof
+- Texture Updates:
+  . More accurate Weathered and Pure White Sail Textures by Armada
+  . Period-accurate Portuguese soldier models added by GhostOfDeath91 and Bartolomeu o Portugues
+  . Blackbeard character model added by GhostOfDeath91
+  . Improved Moon texture by Jeff and Armada
+- Storyline Updates:
+  . All storylines (except Standard) redundant characters removed by Pieter Boelen
+  . Woodes Rogers storyline several fixes, including disabeling cheatmode, officers and crew by Jack Rackham
+  . Bartolomeu and Assassin storyline fixes by Bartolomeu o Portugues
+  . Standard Storyline ending movie with narration added by Baste
+- ADDITIONAL INSTALLATION OPTIONS:
+  . Open Sea Mod by Jeff
+  . NEW Intel Graphics Card fix by Amplificar
+
+Build 14 Beta 2.2:
+- Bug Fixes:
+  . Smugglers fixed on all islands by Talisman
+    This includes changes in trade goods for various islands. "Rum" is no longer contraband anywhere.
+  . Treasure quest location descriptions fixed by Talisman
+  . Shoulder-mounted muskets code improved by Jack Rackham
+  . Various character and officer models and (head) animations fixed by Agentad
+  . Preset weapons fixed to be period-correct by Agentad
+- Code Updates:
+  . Nation-specific ship skins disabled in Realistic Game Mode by Armada
+  . Realistic Clubhauling mod (90 degree turn) replaces the 180 degree turn ability by Armada
+    Select the preferred side to turn to with the "Fast Run" toggle key (defaults to [K] ) by Pieter Boelen
+  . Period pistol code added and fixed by Agentad
+  . Nation-specific weapons for soldiers by Agentad
+  . Sea colour and wave harmonics updated by Armada
+  . Black Pearl "stealth mode" at night by Pieter Boelen
+  . American soldier and citizen dialogs added for Eleuthera by tommy61157
+  . Many dialog and interface texts improved by Morgan Terror
+- Ship Model Updates:
+  . Chinese Junk "Empress" new high-detail custom model added by Iron Roger Flint, textures by Legendary Spider
+  . Prince de Neufchatel new high-detail custom model added by Captain Armstrong
+  . Postillionen (several national variants) new high-detail custom model added by Rider88, ported by Hylie Pistof
+  . Hulls of the Ships of the Line, War Galleons and NL_Pinnace upgraded by Armada
+  . Rigging improved on First Rates, War Galeons, Lineships and various unique ships by Hylie Pistof
+  . La Marianna cursed ghost ship added by GhostOfDeath91
+  . La Dilligente tartane model fixed by Armada and Hylie Pistof
+- Texture Updates:
+  . More accurate merchant and personal flags for the last three periods by Captain Armstrong
+  . Red sunset sky reinstated by Armada
+  . Improvements to HMS_Indefatigable to match most other RN ships by Armada
+  . Improvements to RN_Surprise to match most other RN ships by Armada
+  . Better red cannon texture for FR_Boussole and general future use by Armada
+  . New yellow cannon texture for HMS_Victory and general future use by Armada
+  . Better green bulwark texture for USS_Constitution, US_BattleFrigate, US_Bellona and US_FirstRate by Armada
+  . Bump-mapped Wood_Deck.tga by Armada
+  . New deck textures for Captain Armstrong's ships and future use by Armada
+  . New black rope texture for Captain Armstrong's ships and future use by Armada
+  . Fixed PO_FastNavy hull texture for upgraded Corvette hull by Armada
+  . Transparent ship cabin windows reinstated by Pieter Boelen
+  . Morgan Terror character skin updated
+- Storyline Updates:
+  . Sabine Matton sidequest fix by Talisman
+  . First Contact sidequest dialog improved by Talisman
+  . Bartolomeu quest stuck fixed by Bartolomeu o Portugues
+  . Bartolomeu storyline Cartagena new location added by Bartolomeu o Portugues
+  . Bartolomeu storyline Cartagena improved textures by GhostOfDeath91
+  . Bartolomeu storyline new puzzle added by Jack Rackham
+  . Cavern opening in Jack Sparrow storyline fixed by Talisman
+  . Woodes Rogers storyline fix by Jack Rackham
+
+Build 14 Beta 2.1:
+- Fixed Bugs:
+  . Missing SAVE folder by Pieter Boelen
+  . Weather effects fixed by Jack Rackham
+  . Only player and officers require gunpowder; all other characters should fire their guns without by Jack Rackham
+  . Presentation and special Quest blades quickly breaking fixed by Pieter Boelen
+  . Select Sails interface various bugs fixed by Pieter Boelen
+  . Unique weapons cannot be encountered at random enforced by Pieter Boelen (minlevel = 99)
+  . Tortuga back to Pirate nationality in the Colonial Powers time period by Pieter Boelen
+  . Missing head models on personal soldiers on deck after a Promotion fixed by Pieter Boelen
+- Ship Model Updates:
+  . Soleil Royal pennants added and flag bugs fixed by Armada
+  . Derfflinger yards fixed by Hylie Pistof
+- Texture Updates:
+  . Ugly schematic goods icons fixed by Talisman
+  . Missing Woodes Rogers storyline items interface pictures fixed by Jack Rackham
+  . Ground and jungle textures improved by Jack Rackham
+  . Wellesley missing texture file fixed by Short Jack Gold
+  . Missing sail textures fixed by Pieter Boelen
+  . Missing sail cover on NL_FWzP fixed by Pieter Boelen
+- Storyline Updates:
+  . Woodes Rogers storyline ship types fixed by Jack Rackham
+  . Standard storyline Sabine Matton sidequest fixed by Talisman
+  . Hornblower storyline more ships in Antigua port at the beginning by Pieter Boelen
+  . Hornblower storyline double use of RN_Superbe replaced with RN_Corvette by Pieter Boelen
+  . Master & Commander storyline boarding models and food off fixed by Pieter Boelen
+  . Jack Sparrow storyline Mr. Gibbs renamed to Joshamee Gibbs by Pieter Boelen
+- Code Updates:
+  . Realistic Water Colours improved by Armada
+  . All soldiers using muskets in all periods starting with Golden Age of Piracy by Pieter Boelen
+  . Sneaky Traders encountered in towns now sell special weapons instead of high level blades by Pieter Boelen
+
+Build 14 Beta 2:
+- New and Improved Functionality
+  . Woodes Rogers totally new storyline added by Jack Rackham
+    Lots of puzzles offer a unique type of gameplay
+  . Historically correct weapons & item rarity by Sulan
+    > All Weapons have a period of first appearance and a period of last appearance
+    > Random weapons in chests, on NPCs and at merchants are based on these "history settings"
+    > Rarity of random items in chests and on NPCs has been fixed
+    > Soldiers should no longer equip spades, axes etc., they are more likely to carry their nation's weapons
+  . Trade Economy by Sulan
+    > Re-adjusted all prices for goods to be more in-line with the item prices
+    > Decreased the influence of good availability (quantity) vs townsize on price, reducing trading profits and thereby trade mission profits
+    > Trade missions make more sense now (not exporting import goods and vice versa)
+    > Mutiny as a result of much gold carried is now based on reputation and much less likely for a honest trader than for a pirate
+    > Re-adjusted contraband prices and influence of goods availability vs townsize
+  . Ship special abilities added by Pieter Boelen
+    > Cursed Flying Dutchman:      - Can sail into the wind
+                                   - Can submerge/emerge, control in [Enter] menu (NOTE: Game was not made to support submarines, so this has some weird effects)
+                                   - Summon the Kraken on enemy ships, control in [Enter] menu (Note: time limit enforced on this)
+                                     Kraken Attack number of tentacles decreased by Pieter Boelen
+    > Cursed Black Pearl:          - Run Out the Sweeps temporary speed burst, control in [Enter] menu (Note: time limit enforced on this)
+                                   - Fog trailing the ship wherever you go
+    > Queen Anne's Revenge:        - Sword of Triton temporary speed burst, control in [Enter] menu (Note: time limit enforced on this)
+                                   - Greek Fire instead of regular bow chasers can set target ships aflame
+    > Steam Frigates:              - Engine requires fuel (planks) [WIP: introduce new good "coal"]
+                                   - Engine loses efficiency based on hull damage
+- Code Updates:
+  . Muskets carried on back added by Jack Rackham
+  . Console rewritten by Pieter Boelen
+  . About Build Interface updated by Armada and Pieter Boelen
+  . Promotion Reward Ship selection updated with Period-specific ships for all nations by Pieter Boelen
+  . Periods Mod town nationalities and governor names updated by Pieter Boelen
+  . St John's, Willemstad and Oranjestad governors set by Pieter Boelen
+  . Ship Model Descriptions updated by Armada and Pieter Boelen
+  . [WIP: Turned off on purpose] Friendly Contact on High Seas (Hail Ship) mod added by Erwin Lindemann
+- Storyline updates:
+  . Hornblower storyline ship selection improved by Armada, Hylie Pistof, Seb and Pieter Boelen
+- Texture updates:
+  . Thorough Texture Compression Project performed by Pieter Boelen
+  . Ship Interface Screenshots updated by Armada, Hylie Pistof and Pieter Boelen
+  . Queen Anne's Revenge texture updated by Legendary Spider
+  . Sail damage texture updated by Black Bart
+- Ship Model Updates:
+  . Thorough Ship Clean-Up Project performed by Armada, Hylie Pistof and Pieter Boelen
+  . Black Pearl (BlackPearl and CursedPearl) new high-detail custom model added by Bonjourmonami, textures by Legendary Spider, ported by Armada
+  . Wicked Wench (WickedWench) new high-detail custom model added by Bonjourmonami, textures by Legendary Spider, ported by Armada
+  . Derfflinger (FR_Derfflinger, NL_Derfflinger and SP_Derfflinger) high-detail custom model added by Pgargon, ported by Hylie Pistof
+  . La Dilligente (FR_Dilligente) high-detail custom model added by Kris Wood and Rider88, ported by Hylie Pistof
+  . Dutch Pinnace (NL_LightPinnace, PO_LightPinnace and SP_LightPinnace) high-detail custom model added by Pgargon, ported by Hylie Pistof
+  . Friedrich Wilhelm zu Perde (NL_FWzP) high-detail custom model added by Pgargon, ported by Hylie Pistof
+  . HMS Unicorn (HMS_Unicorn) high-detail custom model added by Pgargon, ported by Hylie Pistof
+  . Lyon Hoy (FR_Hoy, PO_Hoy and SP_Hoy) high-detail custom model added by Rider88, ported by Hylie Pistof
+  . Neptunus (NL_Neptunus, PO_Neptunus and SP_Neptunus) high-detail custom model added by SeaNorris and Rider88, ported by Hylie Pistof
+  . Raa Frigate (RN_RaaFrigate) high-detail custom model added by Jaberddau and Jack Harrison and Noriruru and Craiggo, ported by Hylie Pistof
+  . Heavy Lugger (Lugger3) updated AoP model added by Pgargon, ported by Armada
+  . La Rêve (FR_Sloop) updated AoP model added by Pgargon, texture by Seb, ported by Hylie Pistof and Pieter Boelen
+  . French Light Pinnace (FR_LightPinnace) updated AoP model added by Pgargon, ported by Hylie Pistof and Pieter Boelen
+  . Centaure class 3rd Rate (FR_Bellona) reskin added by Armada
+  . Independence class 3rd Rate (US_Bellona) reskin added by Armada
+  . America class 3rd Rate (RN_Superbe) reskin added by Armada
+  . Hull massively improved on all corvette-based ships by Armada
+  . Rigging improved on Barques, Corvettes, Fast Merchantmen and the Portuguese Caravel by Hylie Pistof
+
+Build 14 Beta 1 Patch 7:
+- Bug Fixes:
+  . New attempted fix for CTDs due to allied characters being assigned to Sea AI groups by Pieter Boelen
+  . Attempted fix for CTDs due to having a lot of DirectSail encounters by Pieter Boelen
+  . Rewritten Storm Rotate Impulse by Pieter Boelen
+    This should fix ships turning out of control during or after storms
+  . "Oily" water fix by Cpt. Bruce Havoc
+  . Stuck on boarding bug fixed by Talisman
+  . Corrected the "can't sell ship in shipyard bug" by Sulan
+  . No more random characters in tavern rooms by Pieter Boelen
+  . Aruba and Hispaniola tavern rooms fixed by Captain Maggee
+  . Corrected tradebook islands quantity in sort order (20 instead of 19) by Sulan
+  . Cut island name "Santa María de Guadalupe de Extremadura" to "Santa María de Guadalupe" to fit interface by Sulan
+  . Ghost Ammo fix updated by Jack Rackham
+  . Pirate promotion reward code fixed by Aviator543
+  . Passengers Interface empty officer picture fixed for the Brown Interface by Pieter Boelen
+- New and Improved Functionality
+  . Better Economy
+    > Implemented basic self-developing town economy by Sulan
+    > Implemented random town events ("Malaria strikes Guadeloupe ...") with influence on economy, town size, troop size, town gold etc. by Sulan
+    > Tweaks for items (lower prices in general) by Black Bart
+    > Item realism mode (no skill bonuses for rubies, etc.) by Black Bart
+    > Advanced Option button on the above by Sulan
+    > Reduced the amount of gold carried by crewmen/officers, etc. by Sulan
+    > Updated goods' prices (general increase) to better balance items' prices vs. goods' prices by Sulan
+    > Decreased prices for silver & gold a bit by Sulan
+    > Decreased the influence of good availability (quantity) vs townsize on price, reducing trading profits and thereby trade mission profits by Sulan
+    > Trade missions make more sense now (not exporting import goods and vice versa) by Sulan
+    > Mutiny as a result of much gold carried is now based on reputation and much less likely for a honest trader than for a pirate by Sulan
+    > Ship balancing and prices modified by Black Bart
+  . Ship's Log Interface by Sulan
+    > Automatically generated log entries for sea battles including a record of plundered goods and gold
+    > Automatically generated log entries for promotions, marriage
+    > Automatically generated log entries for nation relation changes and random town events
+    > Automatically generated log entries for goods and item trades, including the net profit/loss
+    > Automatically generated log entries for ship repairs, upgrades and cannon installations
+    > Automatically generated log entries for loans and deposits
+    > You have to talk to tavern keeps to update information on nation relation changes and town events in the ship's log
+    > You can write and save custom log entries (Notes)
+    > You can filter log entries by the categories "General", "Battle", "Ship", "Personal" and "Notes"
+    > Includes statistics on kills, sunk and captured ships
+- Code Updates:
+  . Simplified Advanced Options menu
+    > Several options removed, the rest reordered and categorized by Pieter Boelen
+    > Updated to show more options at once by Sulan
+  . Added configurable hotkey to show archipelago map (default: M) from anywhere in the game by Sulan
+  . Added the powder barrel and the ammunition bag including game mechanics (24 shots) by Sulan
+  . Possibility added to score critical hits with guns by Baste
+  . Additional weapons added from Russian Mod for Period Weapons mod by Bartolomeu o Portugues
+    Weapon pictures mismatch fixed by Pieter Boelen
+  . Bridgetown Maltese Knight Abbey restored to full functionality by Pieter Boelen
+  . Simplified Time Compression Controls by Pieter Boelen
+    [R] will speed up time in steps from 1x to 3x, 10x and 30x and [G] slows things down again from 30x to 10x, 3x and back to 1x
+  . Steam Ships wind-independent propulsion and sound effects added by Pieter Boelen
+    Press Numpad [+] to increase engine power and Numpad [-] to decrease engine power. Numpad [*] sets power to zero
+  . [L] button also toggles the Date & Time Display at the top of the screen by Pieter Boelen
+  . Improved sea colour by Tom Darkwood and Armada
+  . Storm sail damage decreased to compensate for longer storms by Armada
+  . Critical Hit code rewritten by Baste
+  . Fists damage calculations further improved by Baste
+  . Professional fencer damage decreased as per the ability description by Baste
+  . Ability descriptions and order enhanced by Baste
+  . Camera height at sea on ship deck restored to stock default by Baste
+  . Decreased sailing experience with Auto Skill System OFF by Black Bart
+  . Updated and fixed Rumours by Morgan Terror
+  . Improved Item Names and Descriptions by Morgan Terror
+  . Weapons without quality no longer break by Pieter Boelen
+  . Wind strength log removed except in ports, on shores and the player ship deck or at sea when you don't have a compass by Pieter Boelen
+  . Reload to jetty in port on Fast Travel in all stock game based towns by Pieter Boelen
+  . SHIP_INTERFACE_SCREENSHOTS toggle added to ships_init.c by Pieter Boelen
+- Storyline updates:
+  . Padre Domingues quest fix by Captain Maggee
+  . Bartolomeu storyline custom start screen restored by Pieter Boelen
+  . Assassin storyline Period Weapons set by Bartolomeu o Portugues
+  . Bartolomeu storyline Period Weapons set by Bartolomeu o Portugues
+  . Bartolomeu storyline Isla Mona Residence loading screen replaced by Bartolomeu o Portugues
+  . Standard storyline Period Weapons set by Bartolomeu o Portugues
+  . Teague Sparrow renamed to Edward Teague as per his actual name by Pieter Boelen
+  . Tia Dalma character model added by Damski
+- Texture updates:
+  . Cleaned up Fast Travel icons by Baste
+  . "Land Owner" ability texture in unselected state improved by Baste
+  . Updated hull and sail blots by Armada
+  . Increased detail on deck crew by Armada
+  . Empty sea texture updated by Armada
+  . Ship deck textures updated by Armada
+  . Updated sail textures by Armada
+- Ship Model Updates:
+  . Queen Anne's Revenge from Pirates of the Caribbean: On Stranger Tides added
+    Model by Bonjourmonami, updated by Armada, Textures by Legendary Spider, Walk file by Craiggo
+  . Caravela Redonda high-detail custom model added by pgargon
+  . HMS Revenge high-detail custom model added by Nightwatcher, textures by Craiggo
+  . US Constution and HMS Victory unique versions added by Armada
+  . Flying Dutchman model replaced with more movie-accurate repaint of Cursed Dutchman by Armada
+  . Many ships rigging improved by Hylie Pistoff
+    Strung ropes all over the place and cut some new sails, flags and pennants for the older ships.
+    This started out as a project to make the older POTC ships look better then evolved into an effort to reduce the Graphic Anomalies (GA).
+    Visually most of the ships have more ropes and better sails which makes them look more realistic and less "empty". It's the difference in GA that is most important.
+    Visually the Luggers only have a pennant added, but they are the most important ships because they were causing most of the GA.
+    All of the ships in POTC have been looked at from the Naval Cutters to the Man O' Wars. The smaller ships got the most attention with the Light Frigates being changed the most.
+  . Boat in port scene reverse lighting fixed by Armada
+
+Build 14 Beta 1 Patch 6:
+- Ship Interface Screenshots Mod by Armada, Pieter Boelen and Hylie Pistoff
+- Code Updates:
+  . Improved AI behaviour for navigation against the wind, by iR4tiOn4L
+  . EXPERIMENT: Ability to hire your crewmembers as officers by Pieter Boelen
+    Note: Limited to once per location to prevent bugs
+  . Increased draw distances for ropes and vants by Baste and Hylie Pistoff
+  . Many Town Capture Boarding Locators files made and fixed by Talisman
+  . Wind strength always shown regarless of spyglass by Flayed One
+  . Several ships now have crew walk files for the first time by Craiggo and Armada
+  . Several ships now have fixed/improved crew walk files by Armada
+  . New ship type naming system by Armada
+  . Corrected period encounter chances by Armada
+  . BattleFrigates + Constitution grouped by Armada
+  . SteamFrigates grouped by Armada
+  . New ship descriptions by Scoundrel and Armada
+  . More American ship names added by Legendary_Spider
+  . Chance of player's ship appearing in random encounters fixed by Armada, Hylie Pistoff and Pieter Boelen
+  . Fix for Speightstown dungeon to remove all water by Pieter Boelen
+  . Fists piercing value decreased to prevent them from being too strong by Baste
+  . Fists damage calculation redone to prevent them from being too strong by Baste
+  . Sea battle music code improved by Baste
+  . Camera height at sea on ship deck increased by Baste
+  . Spyglass zoom values increased to compensate for less information in Realistic Game Mode by Black Bart
+  . Price for maps increased by Black Bart
+  . Fort attack loading screen fixed by Pieter Boelen
+  . Spanish fort textures fixed by Pieter Boelen
+  . Brothel dialogue updated to lower the sexual tone
+  . Dialog improvements and spelling fixes by Black Bart
+  . Ship Upgrades being removed on laying up ship to prevent weird bugs by Flayed One
+  . Ghost ammunition items bug fixed by Jack Rackham
+  . End date of the last game period extended to 1830
+  . Allow corrected location names in item descriptions by Pieter Boelen
+  . Main menu misplaced logo glow removed by Baste
+  . EXPERIMENT: Have storekeepers present in their stores at night time as well by Pieter Boelen
+  . Create Columbia code for Bartolomeu storyline by Pieter Boelen
+  . New realism code:
+    > Arcade Game Mode: Spyglasses work as in the stock game without any inaccuracies
+    > Realistic Game Mode: Spyglasses have inaccuracies based on the new custom values by Black Bart
+    > Iron man Mode (selectable in Advanced Options): Worldmap sailing, Sail To, minimap and spyglass additional information disabled by Flayed One and Screwface
+- Quest updates:
+  . Assassin storyline "El Morro" part added by Bartolomeu o Portugues
+  . Assassin storyline "Soleil Royal" replaced with "La Couronne" by Pieter Boelen
+  . Bartolomeu o Portugues storyline "Aztec Treasure" part added by Bartolomeu o Portugues
+- Standard Storyline updates:
+  . Storyline renamed to "Tales of a Sea Hawk" and starting ship changed and renamed
+  . Claire Larousse potential main quest interference fixed by Talisman
+  . Item description location names fixed by Pieter Boelen
+  . Document item description added by Black Bart
+- Jack Sparrow Storyline updates:
+  . Ensured you will get all required map parts in all paths by Talisman
+  . Cutler Beckett's ship accompanies you again into Port Royal during the escort by Talisman
+  . Mr. Gibbs follows the player to Petros' plantation by Talisman
+  . Various quest texts fixed by Talisman
+  . Capture on Guadeloupe fixed by Talisman
+  . Dauntless soldier models fixed by Talisman
+  . CTDs on using health items after getting an unexisting quest item fixed by BlackDeath
+- Texture Updates:
+  . Cursed Black Pearl new sails by Armada
+  . New 'Pure White' sail texture by Armada
+  . American Navy flag updated for historical accuracy in the 'Revolutions' period by Armada
+  . Improved glass texture for several ships’ stern windows by Armada
+- Ship Model Updates:
+  . PO_Poseidon/RN_Poseidon/FR_Fleuron high-detail custom model added by Jabberdau, ported by Jack Harrison and Armada
+  . SanFelipe1 high-detail custom model added by pgargon
+  . HMS Endeavour high-detail custom model added by pgargon
+  . HMS Dauntless high-detail custom model added by pgargon
+  . US Victory version high-detail custom model added by pgargon
+  . French Victory version high-detail custom model added by pgargon
+  . HMS_Surprise (film accurate version) by Jack Harrison; textures by Armada
+  . HMS Victory model updated by pgargon
+  . Le Superbe model updated by pgargon
+  . Hannah model updated by pgargon
+  . Pirate Hannah version model updated by pgargon
+  . HMS Speedy model updated by pgargon
+  . Surprise model updated by pgargon
+  . Couronne model updated by pgargon
+  . Felipe model updated by pgargon
+  . HMS_Indefatigable replaced with old HMS_Surprise model and re-textured by Armada
+  . SoleilRoyal fixed and reintroduced by Armada
+- Ship Texture and Rigging Updates:
+  . USS_Enterprise deck, masts and yards re-textured by Armada
+  . US_Schooner47 masts and yards re-textured by Armada
+  . US_Brig47 masts and yards re-textured by Armada
+  . HMS_Interceptor yards and hull re-textured by Armada
+  . RN_BattleFrigate deck, hull, including nets, and yards re-textured by Armada
+  . RN_SteamFrigate deck, hull and yards re-textured by Armada
+  . FR_BattleFrigate deck, nets and yards re-textured by Armada
+  . FR_SteamFrigate deck and yards re-textured by Armada
+  . US_BattleFrigate hull, nets and yards re-textured by Armada
+  . US_SteamFrigate hull and yards re-textured by Armada
+  . Remaining corvette models rigging improved by Armada
+  . Victory hull colours refined by Armada
+  . US_FirstRate deck, masts and gun ports re-textured; hull colours refined by Armada
+  . FR_FirstRate deck and gun ports re-textured; hull colours refined. by Armada
+  . RN_SuperiorWarship hull re-textured + re-rigged by Armada
+  . Corvette47 rope locator compatibility issue fixed by Armada
+  . RN_Warship hull re-textured, re-rigged, details added, and upgraded to 52 guns by Armada
+  . SP_BattleGalleon full re-texture, ropes and detail added by Craiggo and Armada
+  . HMS_Endeavour hull, stern and masts re-textured for film accuracy by Armada
+  . HMS_Dauntless hull and stern re-textured for film accuracy by Armada
+  . FR/RN/SP_SotL new details and textures by Craiggo and Armada
+  . PO_SotL removed from Portugal and renamed as US_SotL for America; new details and textures by Armada
+  . EdinburghTrader new hull texture by Armada
+  . HMS_Bounty new hull texture by Armada
+  . Carrack rigging improved by Hylie Pistoff
+  . FastMerchantman1 and FastMerchantman2 rigging improved by Hylie Pistoff
+  . Fleut1, Fleut2, FleutWar, NL_Fleut50 and PO_Fleut50 rigging improved by Hylie Pistoff
+  . NL_FleutWar rigging improved by Hylie Pistoff
+  . HeavyLineship rigging improved by Hylie Pistoff
+  . NL_Amsterdam masts and rigging adjusted by Hylie Pistoff
+  . Pinnace1 and Pinnace2 rigging improved by Hylie Pistoff
+
+Build 14 Beta 1 Patch 5:
+- Character portraits added and fixed by Talisman
+- Location-specific Loading Screens Project completed by Pieter Boelen
+- Storyline-specific Start New Game Screens Project by Pieter Boelen
+- Code Updates:
+  . Dialog Option Up/Down default controls changed to W and S
+  . Ship ropes draw distances increased by Hylie Pistoff
+  . Antigua Tavern Keeper head model fixed by Talisman
+  . Dawg Bennett dialog fixed to allow quests by Pieter Boelen
+  . Some ship period appearances fixed by Armada
+- Quest updates:
+  . Assassin storyline Chico Cois dungeon interference fixed by Bartolomeu o Portugues
+- Ship Model updates:
+  . FR_Belette re-rigged by Armada
+  . Some corvettes re-rigged by Armada
+  . Textures of RN_SuperiorWarship improved by Armada
+  . HMS Victory's nameplate removed for generic use by Armada
+  . Reverse lighting bug fixed on HMS Bellona, HMS Greyhound, HMS Nonsuch, HMS Sophie, HMS Speedy and USS Enterprise by Pgargon
+    Conversion to PotC and locator-work by Armada
+
+Build 14 Beta 1 Patch 4:
+- Code updates:
+  . DoDailyCrewPay error fixed by Sulan
+  . NPC gun quality error fixed by Sulan
+  . No money texture when moving to chests error fixed by Sulan
+  . Looting invalid items without itemID fixed by Sulan
+  . Boudewijn Smidt, blacksmith in Kralendijk (Bonaire) has some apprentices and can repair all your blades at once now by Sulan
+  . Diego Uargo, blacksmith in Sao Jorge (La Grenade) can repair all your guns at once up to a certain quality by Sulan
+  . Equipped item marker not set correctly when moving items fixed by Sulan
+  . When swapping money it is added to character wealth instead of character money fixed by Sulan
+  . Added loanshark to Charlestown bank by Sulan
+  . MAX_GUNPOWDER and MAX_SHOTS settings coded in by Sulan
+  . Grand Schooner (SchoonerXebec) double ships_init entry fixed by Armada
+  . 74-Gun 3rd Rate (FR_Belette) game crash fixed by Pieter Boelen
+  . Attempted fix for CTDs due to allied characters being assigned to Sea AI groups by Pieter Boelen
+  . Charlestown appearance on worldmap fixed by Pieter Boelen
+  . NK.c reordered to make more sense by Pieter Boelen
+  . Modification to steamship smoke stack generation to decrease the effect of the smoke not coming out of the stack properly by Pieter Boelen
+  . Sounds and graphical effects added to Capsize mod by Armada
+  . Crewmembers falling overboard added in the water behind the ship by Pieter Boelen
+  . GivePromotionReward function expanded to give an officer with a ship on rank #5 by A Drop of Rum
+  . GivePromotionReward function no longer changes your model to male when you are playing as a female by Pieter Boelen
+  . United States and Pirate nations added into GivePromotionReward function by Pieter Boelen
+- Assassin Storyline updates:
+  . New part added by Bartolomeu o Portugues
+  . Cargo space early quest break fixed by Armada
+  . Guibert Daudet dialog break fixed by Bartolomeu o Portugues
+  . Random names fixed by Bartolomeu o Portugues
+  . Questbook text fixed by Talisman
+- Jack Sparrow Storyline updates:
+  . Questbook text fixed by Talisman
+  . Fred Bob, Turks tavern owner, disappearing at night time fixed by Pieter Boelen
+  . Thomas the Terror, Turks tailor, dialog fixed by Pieter Boelen
+  . Matthew Shaw no longer appears in Hendrick Vanderdecken's seat by Talisman
+  . Weatherby Swann, governor of Jamaica, reappears after the "Port Royale Grand Entrance" scene by Pieter Boelen
+  . Roger Murray, Jamaica shipwright, reappears after the "Swordfight with Will Turner" scene by Talisman
+  . Player ship doesn't keep sailing away after the "HMS Dauntless Deck" scene by Pieter Boelen
+  . Towns are no longer half-empty after the Isla de Muerta scenes by Pieter Boelen
+  . Weatherby Swann, governor of Jamaica, returns for ordinary governor duties after the Curse of the Black Pearl has been completed by Pieter Boelen
+- Quest updates:
+  . Standard storyline ending dialog reinstated by Pieter Boelen
+  . Bartolomeu o Portugues Storyline cargo space early quest break fixed by Armada
+  . Hornblower storyline character disappearing bug fixed by Short Jack Gold
+  . Padre Domingues set to not disappear during night time by Pieter Boelen
+  . Jasmine Cotton, Tortuga merchant, dialog fixed to allow cargo deliveries by Pieter Boelen
+    Jasmine Cotton dialog text modified to be more in-character by A Drop of Rum
+- Character Model Updates:
+  . Starting player model now always available in Choose Outfit interface by Pieter Boelen
+  . Kate Blowhorn, Nevis Pirate Settlement's merchant, animation fixed by Pieter Boelen
+  . Hendrick Vanderdecken character model swap with CIII models fixed by Pieter Boelen
+  . Nathaniel Hawk promotion model update code fixed by Pieter Boelen
+  . Various missing head files added by Pieter Boelen
+  . Unexisting "Lt_Chadd_H" character model code reference removed by Pieter Boelen
+- Location Model Updates:
+  . Removed strange half-buried rear exit-mansion (BuildingSet) in Bridgetown by Sulan
+  . COL lighting files added for Speightstown and Bridgetown suburbs, Bridgetown and Turks Apothecary and Hitman storyline unique locations by Pieter Boelen
+    Finally no more ridiculously bright locations; these used to be especially apparant during night-time in the suburbs
+  . Guadeloupe "Jungle_2" location changed into a swamp by Pieter Boelen
+    Change ANY jungle location into a swamp by adding/changing the following lines of code in the location init entry:
+	Locations[n].environment.sea = "true";
+	Locations[n].environment.swamp = "true";
+	Locations[n].MaxSeaHeight = 0.2;
+  . Speightstown Sewer actually full of water by Pieter Boelen
+- Ship Model Updates:
+  . HMS Victory high-detail custom model added by Pgargon
+  . Le Superbe high-detail custom model added by Pgargon
+  . HMS Bellona high-detail custom model added by Pgargon
+  . HMS Nonsuch high-detail custom model added by Pgargon
+  . HMS Greyhound high-detail custom model added by Pgargon
+  . HMS Sophie high-detail custom model added by Pgargon
+  . USS Enterprise high-detail custom model added by Pgargon
+  . HMS Mordaunt high-detail custom model added by Pgargon
+  . La Couronne high-detail custom model added by Pgargon
+  . Apostól Felipe high-detail custom model added by Pgargon
+  . USS Hannah and Pirate Version high-detail custom model added by Pgargon
+  . HMS Speedy high-detail custom model added by Pgargon
+  . British Royal Navy steam ship added by Armada
+  . Flags and rigging updated for the HMS Surprise, Boussole and all Lineship models by Armada
+  . More additional details on many ship models by Seb
+  . Cabins visible through windows on the larger Age of Pirates based ship models by Russian modders, added and adjusted by Seb and Pieter Boelen
+  . Battleship texture detail enhanced by Seb
+  . Stock game crew walk files restored for the following ships by Pieter Boelen:
+      Jackass Bark (Barque3_50)
+      English Bark (Barque4_47)
+      Indiaman (FastMerchantman1)
+      Indiaman (FastMerchantman2)
+      Fragata Latina (PO_FastNavy)
+      Pinnace (NL_Pinnace)
+      74-Gun 3rd Rate (FR_Belette)
+      74-Gun 3rd Rate (FR_SuperiorWarship)
+      74-Gun 3rd Rate (RN_SuperiorWarship)
+      Heavy Pinnace of War (NL_TwoDecker_47)
+      Heavy Pinnace-of-War (NL_SevenProvincien)
+  . Crew walk files added/updated for the following ships by Pieter Boelen, thanks to Conversion Tool by back84:
+      Carrack (Carrack)
+      Fast Galleon (FastGalleon1)
+      Fast Galleon (FastGalleon2)
+      Fast War Galleon (PirateFastGal)
+      Barque Longue (BarqueHeavy)
+      Squaresail Schooner (Hooker)
+      Naval Sloop (FR_Sloop)
+      Lugger (Lugger3)
+      Fluyt-of-War (NL_FleutWar)
+      Light Pinnace (FR_LightPinnace)
+      Heavy East Indiaman (PO_WarGalleon)
+      Heavy East Indiaman (FR_WarGalleon)
+      Heavy East Indiaman (RN_WarGalleon)
+      Heavy East Indiaman (NL_WarGalleon)
+      Heavy East Indiaman (FR_Licorne)
+      East Indiaman (HMS_Mordaunt)
+      Trade Brig (EdinburghTrader)
+      Trade Brig (HMS_Bounty)
+      Corvette (Corvette47)
+- Modder Tools:
+  . New functions: ReloadToTexturedModel and CycleThroughTexturedModels, useful for finding a location that uses a certain model for screenshot-making by Pieter Boelen
+    Syntax:	CycleThroughTexturedModels( [Model Folder, eg. "Town_Redmond\Town_03"] );
+		ReloadToTexturedModel( [Model Folder, eg. "Town_Redmond\Town_03"] , [Texture Folder, eg. "" or "ENGLAND"] );
+  . Allow LAi_SetPatrolType and LAi_SetCivilianPatrolType characters to patrol between locators by Pieter Boelen
+    Syntax: In a character init file, add two lines:
+	ch.patrollocator.0 = "goto2";
+	ch.patrollocator.1 = "goto4";
+
+Build 14 Beta 1 Patch 3:
+- Code updates:
+  . Shipyard and store owners not talking to you if you've got a Letter of Marque bug fixed by Pieter Boelen
+  . Capsize mod added on-screen display of roll angle in storms by Pirate_KK
+  . Capsize mod added colour coding to roll angle warning messages by Pieter Boelen
+  . French national ranks spell-checked by Daf.fr
+  . Re-enable Quick-Equip button during boardings by Pieter Boelen
+  . Turks gunsmith dialog fixed by Pieter Boelen
+  . Itemsbox interface performance improved by Sulan (needs further testing)
+  . Aruba texture-less dungeon fixed by Pieter Boelen
+  . Bugged armored "Morgan" character models removed by Pieter Boelen
+  . Missing flags on ships problem fixed by Screwface
+  . Additional ship balancing and type renaming by Oberleutnant
+    Additional modifications by Pieter Boelen and Armada
+- Assassin Storyline updates:
+  . New parts added by Bartolomeu o Portugues
+
+Build 14 Beta 1 Patch 2:
+- Ugly deck texture fixed by Captain Maggee
+- Capsize Mod by Pieter Boelen
+  . In storms, there's a risk of roll-induced damage
+  . You can decrease the risk of this happening by putting the ship's head into the waves
+  . If the ship rolls too much, various events will happen and the ship can even capsize in the worst case
+- Code updates:
+  . Taking captured captains as companion crash workaround by Sulan
+  . "Unique Ship" upgradeable now by Pieter Boelen
+  . Cannons fire on cursed ships bought from Vanderdecken shipyard by Pieter Boelen
+  . Code governing whether merchants/shipwrights talk to you rewritten by Pieter Boelen
+  . Questbook interface always available by Pieter Boelen
+  . BuildingSet models moved to subfolder to clean up the "Ammo" folder by Pieter Boelen
+  . Spell-checks and texts improved in dialog and questbook files by Cap'n Cook and Pieter Boelen
+- Bartolomeu o Portugues storyline updates:
+  . Appearance of Isla de Muerta fixed
+  . Isla de Muerta Grotto location now open by Captain Maggee
+  . Appearance of Spanish governor fixed by Talisman
+  . Appearance of Juan Esteban in Havana fixed by Talisman
+  . Not talking Bertrand Ogeron fixed by Talisman
+  . Not talking Roxanne in jail fixed by Cap'n Cook and Pieter Boelen
+  . Cowering Fort Captain fixed by Pieter Boelen
+  . Different particle systems used for explosions by Pieter Boelen
+- Quest updates:
+  . LaCroix storyline slight fix by Captain Maggee
+  . Standard storyline Danielle rename fix by Captain Maggee
+  . Jack Sparrow Tia Dalma/Annamaria not talking issue fixed by Captain Maggee
+
+Build 14 Beta 1 Patch 1:
+
+- Rename HMS Indefatigable fix by Novotny999
+- Missing sail textures re-added
+- Code updates:
+  . Willemstad loading screen fixed by Pieter Boelen
+  . Allowing reloading with fists, shotgun and various other weapons by Pieter Boelen
+  . Steam Ships added to Vanderdecken shipyard
+  . Re-enable the animated background as intended in the TradeBook interface by Pieter Boelen
+  . "Pick-up gold" picture fixed by Pieter Boelen
+  . "Block Damage" toggle removed
+  . DISPLAY_BATTLEINTERFACE set to false by default
+  . New promotion system by Aviator543 (Edited by Captain Maggee)
+- Bartolomeu o Portugues storyline updates:
+  . Cargo holds issue fixed by Snow White Sorrow
+  . Various updates by Bartolomeu o Portugues
+  . Questbook texts updated by Cap'n Cook
+  . Fixed PO_Caravel50 CTD
+- Jack Sparrow storyline updates:
+  . Questbook files added
+  . Cutler Beckett on jetty fixed
+  . Thomas Tipman wrong dialog fixed
+  . Annamaria giving piece of map fixed
+  . Various Brin/Brock questfixes - by Talisman and Captain Maggee
+  . Various fixes to Jones quest - by Talisman and Captain Maggee
+- Standard storyline updates:
+  . Tailor is there!
+  . Silehard not talking fixed (again)
+
+Build 14 Beta 1:
+- New Horizons Manual document by Thagarr and Snow White Sorrow
+- New Horizons Tutorials & History document by Thagarr
+- Willemstad Builders' Trials by Snow White Sorrow
+  . REALISTIC GAME MODE ON BY DEFAULT!!!
+  . All ships' manoeuvring characteristics and stats historically retuned and balanced
+  . Encounter chances of all ship types retuned for more historical accuracy
+  . Ship types renamed and waterline values amended
+  . In Realistic Game Mode, inertia becomes important
+  . In Realistic Game Mode, now counter-rudder is required
+  . More information in "Documentation\New Horizons Ship Recognition Guide.pdf"
+  . Based on advice by Morgan Terror, Rum Runner, Bumpkin and Captain Maggee
+- Code updates:
+  . Animated Interface changed to Dynamic Interface by Pieter Boelen
+    Dynamic Interface contains transparent itemsbox interface and additional explanation texts on item icons
+  . Wind direction log message only shown if you've got a compass equipped by Pieter Boelen
+  . Ship Upgrades descriptions updated by Snow White Sorrow
+  . DirectSail random ship event distances increased by Snow White Sorrow
+  . Kraken Attack code updated by Pieter Boelen
+  . Bronze cannons and chasers prices and balancing fixed by Snow White Sorrow
+  . Four new special sail types added for Spain and Portugal and Sea Shepherds by Snow White Sorrow
+  . Fire On Ship icon updated by SuperDurnius, code by Pirate_KK
+  . Hendrick Vanderdecken set to always present by Pieter Boelen
+  . Antigua regulating captain dialog crash fixed by Pieter Boelen
+  . Constitution walk file fixed by Snow White Sorrow
+  . Cannonball damage retuned by Snow White Sorrow
+  . Brown Interface Questbook interface updated by Snow White Sorrow and Thagarr
+  . Martinique town loading screens replaced by Pieter Boelen
+- Quest updates:
+  . Assassin storyline various fixes by Bartolomeu o Portugues
+  . Bartolomeu o Portugues storyline various fixes by Bartolomeu o Portugues
+  . Jack Sparrow storyline various fixes by Captain Maggee
+  . Horatio Hornblower storyline updates by Short Jack Gold
+- Model updates:
+  . Two steam ships added, based on ZarethPL's USS Constitution
+    Model modifications by SuperChango, particle code by Pieter Boelen and particle effects and support by Snow White Sorrow
+  . New Black Pearl model by Kazeite and ZarethPL
+  . British texture of ZarethPL's USS Constitution model by KroKoDyl, bow decoration by Snow White Sorrow
+  . French texture of ZarethPL's USS Constitution model by Oskar94 and Takeda-One, texture integration by Snow White Sorrow
+  . Spanish Battle Galleon model by SuperChango, texture and support by Snow White Sorrow
+  . Kraken tentacle models added to the Kraken Attack by Iron Roger Flint
+  . Hornblower storyline character models by Short Jack Gold
+  . Deck location lighting files made by Screwface
+  . English (Elizabethian) Galleon 1st person walk patch fixed by SuperChango
+
+Build 14 Alpha 10 Patch 1:
+- Code updates:
+  . Profile and Save Bugs fixed by Screwface
+  . Current load of cannonballs is no longer lost upon Save/Load at sea by Screwface
+  . "Guns Ready" sounds fixed by Pirate_KK and Pieter Boelen
+  . Deck texture directory use disabled for boardings (Black Pearl boarding missing texture fix) by Pieter Boelen
+  . No surrendered ships in ports by Screwface
+  . In Realistic Game Mode, spyglass does tell you ship's name for nearby ships by Screwface
+  . Realistic Game Mode 'Fast Travel' disabled in Kralendijk too by Screwface
+  . Realistic Game Mode removes 'list of ships' log messages upon entering 3D sailing mode at an island
+  . Brown Interface 'Hire Crew' interface small fix by Pieter Boelen
+- Quest updates:
+  . Zaid Murro and Vigila Mendes moved to Standard storyline only by Pieter Boelen
+  . LaCroix storyline slight fixes by Thomas the Terror
+  . Standard storyline attempted fix for Silehard not appearing in his bedroom at night by Captain Maggee
+  . Standard storyline various fixes by Captain Maggee
+- Jack Sparrow Quest Updates by Captain Maggee:
+  . EITC Office errors fixed
+  . Cutler Beckett 'making profit' money values fixed
+  . Maykin Blundas leaving during dialog fixed
+  . Sao Feng sidequest fixed
+  . Anabella Brin Nevis island mention in dialog fixed
+  . Attempted for for Cutler Beckett not appearing on the dockside after the escort quest
+  . Annamaria appearance fixed
+- Model updates:
+  . Alternate Assassin storyline character model in "Assassin's Creed" style available from F2>Character menu by Damski62 and Bartolomeu o Portugues
+
+Build 14 Alpha 10:
+- Code updates:
+  . Save At Sea Mod by Pirate_KK, fixed by Screwface
+  . Profiles Mod by Pirate_KK, fixed by Screwface
+  . Ship Upgrade Interface by Pirate_KK, fixed by Screwface
+  . Ship Cannons Interface by Pirate_KK, fixed by Screwface and Pieter Boelen
+    > Can repair missing cannons and install single cannons
+  . Wounded Crew by Pirate_KK, fixed by Pieter Boelen
+    > Number of wounded crew indicated as "[healthy crew] / [wounded crew]" in the F2>Ship menu.
+    > Wounded crewmembers can become healthy again or die from gangrene afterwards.
+    > By default, 1 crewmember gets healed and 16 die every day (on average).
+    > Medicine goods increase the number of healed by 5 and decrease the daily casualties by 5
+    > at the expense of one good unit a day taken from the cargo hold.
+    > A doctor will increase the number of healed crew by his defence skill and
+    > the daily casualties are decreased by his defence skill
+  . Period-correct island and town names appear on the buyable maps by Screwface
+  . Shipberthing fully fixed for the new islands by Screwface
+  . Modified PortLandscape code by Pirate_KK: No more port landscape if you're at sea
+  . Ships in Port Scene Update by Captain Maggee and Pieter Boelen
+    > Random Sailing Ships in Port Scene Mod
+    > Only small enough ships moored along the jetty
+    > Enemy ships no longer appear
+    > Jetty ships do not randomly sail away
+  . Support Bricks for BuildingSet by Pirate_KK
+  . Colonies interface replaces Tradebook by Pirate_KK
+  . Assorted Interface Modifications by Pirate_KK
+    > Brown interface set to Build default
+    > TODO: Salary screen black background in DirectSail mode
+  . Ship Appearance Interface by Pirate_KK
+  . Capture Colony code modified by Pirate_KK
+    > TODO: Interface is confused; character names and portraits in portraits windows don't match with the assigned officers
+    > TODO: Get stuck on locations, such as the Redmond church one
+    > TODO: After taking a colony for myself, the soldiers aren't updated with my own soldiers
+  . Items reordered; hopefully the equip-keys will no longer choose inferior blades/guns by Pieter Boelen
+  . Marigot reload to Port Royale tailor fixed by Pieter Boelen
+  . Frigate2 walk file fixed by Pieter Boelen
+- Quest updates:
+  . Trader escort quests fixed for the new towns; additional variety added for the models by Pieter Boelen
+  . Standard storyline Claire Larousse interference fixed by Captain Maggee
+  . Standard storyline Nigel Blythe / Artois Voysey quest fixed by Captain Maggee
+  . Standard storyline Lucas quest fixed by Captain Maggee
+  . Standard storyline First Contact quest fixed by Captain Maggee
+  . Hornblower Storyline update by Short Jack Gold
+  . Hornblower storyline video, worldmap position and Volcano appearance fixed by Pieter Boelen
+  . Tales of a Chevalier storyline updates to make it more playable by Pieter Boelen
+- Jack Sparrow Quest Updates by Captain Maggee:
+  . Sir Christopher Mings path loop fixed by Captain Maggee
+  . Taking of the HMS Interceptor scene improved by Captain Maggee
+  . Sao Feng sidequest Jaoquin de Masse leaves on shore fix by Captain Maggee
+- Model updates:
+  . Amsterdam ship model fixed by ZarethPL
+  . Boussole texture updated by Seb
+  . Additional details on many ship models by Seb
+  . Ten new weapons by SuperDurnius
+  . Custom Black Pearl deck location textured by SuperDurnius; code by Pirate_KK
+
+Build 14 Alpha 9.5 Patch 4:
+- New Officer System by a simple virtual sailor and Aconcagua:
+  . All officers contribute their skills, not just the three selected ones
+  . Change Officer Role button added to Passengers interface
+  . More information in "buildinfo\New Officer System.txt"
+- Improved Weather Mod by Screwface:
+  . Storms fixes, including music, wave colour and texture, sky colour and bow splash
+  . Storms in DirectSail mode
+  . Storm remains active until the weather improves (there's a chance of this happening every 60 seconds)
+  . Rain chance depends on the month and distinguishes between the Caribbean wet and dry season
+  . Lagoon Colour Mod changes the sea colour to Caribbean light blue close to shores
+- Periods Mod:
+  . Random Relations Mod replaced with Period Relations by Sim and Pieter Boelen
+  . Town and island names differ in each period by Sim and Pieter Boelen
+  . Town nationalities change per period by Sim and Pieter Boelen
+  . Historically correct governors by Sim and Pieter Boelen
+  . Personal and Pirate Flag textures finished by Thomas the Terror
+  . Storyline-specific and quest flag assignments and changes by Thomas the Terror and Pieter Boelen
+  . Historical Ships Mod by Doober
+  . Worldmap ship models flags updated; Napoleonic ship added in Napoleonic period by Pieter Boelen
+- Realistic Gameplay Mods by Screwface:
+  . Fast Travel only enabled after you found the location manually yourself first
+  . 'Alarm' status only enabled after present enemies drew their blade; no prior warning
+  . Spyglasses only enlarge the view, but don't give additional information anymore
+  . These all fall under the "Realistic Sailing Mode" toggle in the Options interface
+- Code updates:
+  . Improved Sea AI fixes by Screwface
+  . Shipberthing Mod fixed by Screwface
+  . Enable shipberthing at Cozumel by Screwface
+  . Fort Fast Travel fixed by Screwface
+  . Fixes for main character with no ship by Screwface
+  . Cozumel reload fixes by Screwface
+  . 'Auto Skill System' off Character interface bug fixed by Aconcagua
+  . Prevent start new game after already starting a game by Aconcagua
+  . Gunpowder weight increased to realistic value by Aconcagua
+  . Trader quest dialog improvement for skipping map and viewing map multiple times by Aconcagua
+  . Address form fixes in many dialogs by Captain Maggee
+  . Eleuthera resurrection fix by Captain Maggee
+  . More Varied Ship Sinking Animation by Halfman
+  . Different Flags Mod: random flags used by pirates; ability to pre-set personal and pirate flags for quest characters by Pieter Boelen
+  . Cursed Black Pearl GiveShip2Character bug fix by Pieter Boelen
+  . Period-correct town names in Select Storyline interface by Pieter Boelen
+  . Pre-set difficulty levels per storyline by Pieter Boelen
+  . Cabinfight and Anacleto dialog confusion cleaned up by Pieter Boelen
+  . Escort quests destination, questbook texts and map fixes by Pieter Boelen
+- Quest updates:
+  . Tales of a Chevalier storyline added by Thomas the Terror
+  . Assassin Storyline Part V added by Bartolomeu o Portugues - jump-start code included in the opening dialog (cheatmode required)
+  . Cozumel inaccessible in standard storyline until after the main quest by Pieter Boelen
+  . Work-around for Bridgetown capture block included in Danielle dialog
+  . Capture of governor Silehard and boarding of Black Pearl in standard storyline fixed by Captain Maggee
+  . First Contact quest unlinked from Lucas quest in standard storyline by Captain Maggee
+  . Assassin storyline 'enemies on ship' fix by Bartolomeu o Portugues
+  . Master and Commander 'quest' restored, including questbook entry to explain the lack of an actual story by Pieter Boelen
+- Jack Sparrow Quest Updates by Captain Maggee:
+  . Ability to join EITC later
+  . Alternate way of acquiring HMS Interceptor fixed
+  . EITC office and Sir Christopher Mings mansion changed to 'normal' locations
+  . Storyline loops fixed
+  . Updates to Lucas and First Contact quests
+  . Updates to Sao Feng sidequest
+  . Updates to Gentleman Jocard sidequest
+- Model updates:
+  . Character models for Billy Brock (young and old), Annabella Brinkley and young Cutler Beckett by Thomas the Terror
+  . Jack Sparrow (Pelegostos god version) by D4V1DXxX
+  . Edinburgh Trader skin by D4V1DXxX
+  . Crimson Blood by Cylon13
+  . Soleil Royal by red10october (TODO: needs to be properly fixed for PotC)
+  . Field cannons added by SuperDurnius
+
+Build 14 Alpha 9.5 Patch 3:
+- Different Flags Mod:
+  . Mod by Pirate_KK, fixes by Screwface
+  . Interface and flag work by Thomas the Terror
+  . Pennant work by Captain Maggee and Pieter Boelen
+- Code updates:
+  . Sail To locations appear only after you've 'discovered' them in Realistic Sailing Mode by Screwface
+    Sail To disabled for friendly forts and hostile ports
+    Per an original idea by a simple virtual sailor
+  . Purpose restored for Select Storyline player type selection by Pieter Boelen
+  . Pre-set player type and nationality in Select Storyline interface by Pieter Boelen
+  . Deck black screen bug fixed by Pieter Boelen
+  . Missed 'officerprice' attribute error messages fixed by Pieter Boelen
+  . 'No Rebirth Enabled' bug for crewmembers ashore fixed by a simple virtual sailor
+  . Assassin storyline missing generic questtext files added by Bartolomeu o Portugues
+  . Tortuga governor dialog fixed by Bartolomeu o Portugues
+  . Battle Rocks renamed to Petit Tabac and reloads to shore fixed by Pieter Boelen
+  . Error messages on islands with no towns fixed by Pieter Boelen
+- Quest updates:
+  . Assassin Storyline Part IV added by Bartolomeu o Portugues - jump-start code included in the opening dialog (cheatmode required)
+  . Hornblower storyline location and locator fixes by Short Jack Gold
+  . Silver Train quest enabled manual reload to Petit Tabac shore by Pieter Boelen
+- Jack Sparrow Quest Updates by Captain Maggee and Talisman:
+  . Heavy fog after encounter with Davy Jones fixed
+  . Capitaine Chevalle, Eduardo Villanueva, Sao Feng, Gentleman Jocard and Lucas quest fixes
+- Location updates:
+  . Jungle Church Location added for Dead Man's Chest quest by Jack Rackham
+  . New Cave Ship location replaces the hideout on Cozumel by SuperDurnius
+  . Isla Mona island added for Assassin storyline: land locations by Bartolomeu o Portugues
+  . Curacao Village locations and characters added by Bartolomeu o Portugues
+  . No more navy officers in Antigua port before Colonial Powers period by Pieter Boelen
+  . Turks and Tortuga governors fixed by Pieter Boelen
+- Ship updates:
+  . Crew on deck added for several ships that were missing them but should have had them by Pieter Boelen
+- Item updates:
+  . Mercenary pistol added by Bartolomeu o Portugues
+
+Build 14 Alpha 9.5 Patch 2:
+- Updated engine file; solves the Nero Burning ROM compatibility issue
+- Code updates:
+  . Updated Sea AI code, including fort relations fix, by Screwface
+  . Taking captured captains as companion crash workaround by Sulan
+  . Temporary fix to shipberthing by Sulan
+  . British ships using other nation skins fixed by Screwface
+  . Ship teleports at Bonaire and Antigua fixed by Pieter Boelen
+  . Eleuthera officiant added by Sulan
+  . Updated GiveShip2Character function; takes into account cannon type now by Pirate_KK
+  . Maximum number of crew ashore code improved by Aconcagua
+- Quest updates:
+  . Horatio Hornblower main quest completed by Short Jack Gold
+  . Assassin main quest three new parts added by Bartolomeu o Portugues
+  . Standard storyline First Contact quest ending extended and improved by Captain Maggee
+  . Standard storyline Church Help and Animist Quest fixed by Captain Maggee
+  . Bartolomeu o Portugues 'dangerous locations' feature added by Pieter Boelen
+  . Isla de Muerta accessible in all storylines by getting the Aztec Compass from Mr. Gibbs in the Tortuga tavern by Pieter Boelen
+  . Hendrick Vanderdecken, seller of cursed ships, moved to Isla de Muerta
+  . Tortuga Atmosphere stationary skeleton and double characters bugs fixed by Pieter Boelen
+  . Return-to-player code after self dialog updated by Pieter Boelen
+- Jack Sparrow Quest Updates by Captain Maggee:
+  . No landing on Isla de Muerta after the mutiny bug fixed
+  . New extended opening scene
+  . Instant-reloads to important quest points available from the Random Drunk in the opening tavern (cheatmode required)
+  . Billy Brock always appears in Speightstown tavern, Sir Christopher Mings only after talking to Lt. Bligh in port
+  . Burning of the Wicked Wench scene improved
+  . Deal with Davy Jones scene improved
+  . Marooning by Barbossa scene improved
+  . Post Curse of the Black Pearl scenes added
+  . Captain Eduardo Villanueva sidequest added; begins at Tortuga port after the Capitaine Chevalle quest
+  . Sri Sumbhajee Angria sidequest added; begins in Havana tavern
+  . Ammand the Corsair sidequest added; begins at Port Royale church
+  . Captain Sao Feng sidequest added; begins at Turks governor's mansion
+  . Gentleman Jocard sidequest added; begins at Oranjestad town
+- Ship updates:
+  . Updated Cursed Flying Dutchman by ZarethPL
+  . Three new manowars by Seb
+  . Updated starting ship models by Seb
+  . Updated British Superior Warship skin by Thomas the Terror
+- Character updates:
+  . New character models, including governors, rich people and some poor people by Thomas the Terror
+  . Capture Colonies governor models and names updated by Thevegimobil
+  . Black Johan Elting character model with armors by SuperDurnius
+  . Kieron and Meigger character models by Sir Christopher Mings
+  . Various fixed head models for characters by Aconcagua and Damski62
+- Item updates:
+  . New blades and Jack Sparrow's gun added by Thomas the Terror
+  . Swapping quest items disabled by Aconcagua
+  . Selling special weapons fixed by Aconcagua
+  . 'Leeches' Apothecary item fixed
+- Location updates:
+  . Many updated location loading screens by Pieter Boelen
+  . Oranjestad port in deck scene fixed by Pieter Boelen
+  . Havana town fixes, including fast travel, erroneous locations and reloads and blacksmith added by Bartolomeu o Portugues
+  . Charlestown locators restored and fixed by Pieter Boelen
+  . Major updates to Turks by Captain Maggee
+  . Dead skeletons in one Hispaniola cave replaced with live enemies for future Assassin quest update by Pieter Boelen
+
+Build 14 Alpha 9.5 Patch 1:
+- Fixes by Hook
+  . Cannon reload code improved to take into account available crew and destroyed cannons
+  . Fixed weaponslocker code; no more magically appearing weapons
+  . Ship's chests lootable only once a day
+  . Improved balancing on blade damage values
+  . Improved selection of weapons by NPCs
+  . Fix to swapping ships
+- Improved Sea AI by Screwface
+  . Random ships at sea update their tasks periodically
+  . Task depends on ship type, purpose and presence of other ships
+  . Visibility of ships decreases in fog and at night
+  . Fake flag recognizing now happens as you close in on unaware ships
+    The closer you get, the higher the chance of being recognized
+- Jack Sparrow quest fixes by Captain Maggee
+  . Norrington boarding scene fixed
+  . Various questbook updates fixed
+  . Pintel and Ragetti characters added
+- Lucas/First Contact quests linked by Captain Maggee
+  . Dead soldier dialog fixed
+  . Character models fixed
+  . Town attack fixed
+  . Final encounter fixed
+- Storm scene fix by Faradin
+- Many Capture Town boarding locators fixed by Faradin
+- Sidestep check disabled by default
+- Beatrice model fixed for PotC animation by damski62
+- Fixed "invisible" weapon model by zkajo
+- Saint Martin location fixes by Bartolomeu o Portugues
+- Charlestown locators fixed by Pieter Boelen
+- Kraken Attack code added by Pieter Boelen
+- Updated HMS Bounty by ZarethPL and Thomas the Terror
+- Edinburgh Trader by ZarethPL
+- USS Enterprise by Kazeite and ZarethPL
+- Updated HMS Surprise and Boussole by Seb and ZarethPL; original model by Inzane and Merciless Mark
+- Three new portrait files by Dirk Struan
+- Dutch Lineship by Yo Ho Ho and Thomas the Terror
+- Improved deck textures by Thomas the Terror
+- Captain Chevalle side quest added to Jack Sparrow storyline by Thomas the Terror
+- Johan Elting models updated by Thomas the Terror
+- Golden Age of Piracy soldier skins updated by Thomas the Terror
+- Pirate Norrington model updated by Sir Christopher Mings
+- Barbossa character model by Sir Christopher Mings
+- La Licorne ship and Francois de Hadoque character model by Seb
+- Skeletons and mummies disabled in random encounters by Pieter Boelen
+
+Build 14 Alpha 9.5:
+- Horatio Hornblower quest extended by Short Jack Gold
+- Store interface fixed by Hook
+- Ability to store 3/4 of your money at the Loansharks by Hook
+- Update for the undivided loot calculation by Hook
+- GOLD_PER_CLICK setting in InternalSettings.h by Hook
+- Musket fire code improvements by Hook
+- DirectSail encounters disabled when you're close to island transistion by Hook
+- Improvements to Auto Skill System by Hook
+- Improvements to pierce/block calculations by Hook
+- Professional navy characters don't pay salary by Hook
+- Weaponslocker tutorial fixed by Hook
+- Skill System fixes to Robert Christopher Silehard and Arnaud Matton dialogs by Hook
+- Jack Sparrow Robert Christopher Silehard dialog updated by Pieter Boelen
+- Fixes to Eleuthera by Screwface
+- Fixed lighting files for AoP/CoAS locations by Screwface
+- Many new location loading screens by Pieter Boelen
+
+Build 14 Alpha 9 Patch 4:
+- Tutorial text improved and expanded by Estharos
+- Rapid Raid code fixes by Hook
+- Unique weapons fixes by Hook plus UNIQUE_WEAPONS toggle in PROGRAM\InternalSettings.h
+- FREE_CAMERA setting in PROGRAM\InternalSettings.h
+- Start New Game disabled if you already had another game loaded by Hook
+- Divide the Plunder calculations improved by Hook
+- Gunpowder Auto Buy code improved by Hook
+- Go to Sea direction fixed for some islands by Hook
+- Corvette ship decks reassigned by Hook
+- Eleuthera locations and characters added by Philippe and Screwface
+- Encounters in Ports code simplified and improved by Screwface
+- Maltese corpse dialog fix by Estharos
+- Thomas Modiford dialog fix by LamAnd and Hook
+- Antigua Victualler dialog fix by LamAnd
+- Oranjestad Store and Tavern opening times fixed by LamAnd
+- Jack Sparrow quest Barbossa dialog loop fixed by Short Jack Gold
+- Fight with Soldiers fixes by a simple virtual sailor
+- Old soldier skins by Thomas the Terror for use as unique quest characters
+- Several character skins by SuperDurnius for use in future quests
+
+Build 14 Alpha 9 Patch 3:
+- Bladedamage values set to 75; 100 seems to be too high and 50 too low by Pieter Boelen
+- Fix for compass if DISPLAY_BATTLEINTERFACE is on by Erwin Lindemann
+- Smugglers and coast guard ships should be properly fixed now by a simple virtual sailor
+- Further model assignment improvements by Estharos
+- Havana location fixes by Bartolomeu o Portugues, including:
+  . No more floating governor
+  . Close at night fixed for several locations
+- Real plantation model added to Guadeloupe outside the town by Screwface
+- Willemstad officiant added
+- Maximum SALARY_MULTIPLIER set to 30 by Hook
+- Fix for salary payment if there isn't enough money by Hook
+- Attempted fix for worldmap CTDs by removing replacewith attributes on items with skipsell by Hook
+- Rewritten and improved system for blockdamage, now taking into account pierce and block values properly by Hook
+- Camouflage model code modified by Pieter Boelen
+- "Dangerous" location code added; to be improved later by Pieter Boelen
+- Nevis pirate port missing port model in deck scene restored by Pieter Boelen
+- Beatrice model confusion sorted by Pieter Boelen
+- Proper Ammo Mod toggles added for storylines by Pieter Boelen
+- Many fixes to Jack Sparrow storyline by Short Jack Gold; should be playable now
+- Fixed "double fists" in standard storyline by Pieter Boelen
+- Fix to Silehard bedroom scene in standard storyline by Hook
+- Fix to researcher rescue scene in standard storyline by Hook
+- Restore Henry the Beggar character model in Jack Sparrow storyline by Pieter Boelen
+- Smaller crew on ships in 3D sailing mode by Damski62
+- Transfer Goods interface video error fixed by Pieter Boelen
+- Seven Provincien light bug fixed by ZarethPL
+- HMS Interceptor fixed rigging by ZarethPL
+- Jungle and ground location texture improvements by Thomas the Terror
+- Further sound fixes by Hook:
+  . Sound restored properly after fight
+  . Prison sound fixed
+  . Random first music upon starting a new game
+- Toughness perk InternalSettings toggle added; new default value by Hook
+- Officer hire price calculation improvements by Hook
+- professionalnavy attribute added to Hornblower and Jack Aubrey instead of setting SALARY_MULTIPLIER to 1 by Hook
+ - Many new ships added:
+  . Pinnace11 by Yo Ho Ho
+  . Spanish Frigate1 by Jesus of Bonaire
+  . Dutch Battleship2 by Jesus of Bonaire
+  . Portuguese Manowar2 by Jesus of Bonaire
+  . Spanish (black) battleship by Jesus of Bonaire
+  . Spanish (red pattern) battleship by Jesus of Bonaire
+  . American Heavy Warship by Jesus of Bonaire
+  . French Warship by Jesus of Bonaire
+  . Dutch Merchantman by Jesus of Bonaire
+  . Dutch Lineship5 by Jesus of Bonaire
+  . Spanish Ship of the Line by Jesus of Bonaire
+- Completely new storyline added: Assassin quest by Bartolomeu o Portugues
+  . New character models by Bartolomeu o Portugues and Thomas the Terror
+  . New ship: XebecAS by Damski62, ZarethPL and Thomas the Terror
+  . Improved location and loading screen textures
+
+Build 14 Alpha 9 Patch 2:
+- Women outside Kralendijk townhall in standard storyline have their dialog back (Strange Things in Archipelago quest) by Pieter Boelen
+- Txiki Pijuan dialog in Bartolomeu side quest fixed by Pieter Boelen
+- Blaze officer model names fixed by Pieter Boelen
+- DECK_VIEW_ON_SEAENTER can be set in InternalSettings by Pieter Boelen
+- Bladedamage default values divided by two (hopefully your blade now DOES sometimes decrease in quality) by Pieter Boelen
+  . Added an on-screen log message for when this happens by Megla
+- Music bug fixed by Hook
+- Playing main theme code optimized by Hook
+- Various fixes to Jack Sparrow storyline
+- Jack Sparrow EITC lieutenant added to initModels.c (required for Jack Sparrow storyline)
+- Henry the beggar is Spanish in the Devlin storylines by a simple virtual sailor
+- Missing beggar sounds re-added by a simple virtual sailor
+- Unused dialg2 file removed by a simple virtual sailor
+- Missing texts restored for trade, escort, hunting and treasure quests by Pieter Boelen
+- Rigging improvements added for several brig-type ships and one corvette by Cylon13
+- Towns updated properly if you're not anchored there by Hook
+- Fix for double Auto Skill log messages by Hook
+- Improvements to jungle encounters by Hook
+- DirectSail warning if you're about to enter to the next island by Hook
+- Improved British navy officer skins by Thomas the Terror
+
+Build 14 Alpha 9 Patch 1:
+- DECK_VIEW_ON_SEAENTER mod reinstated by Hook
+- Many fixes to sound system by Hook
+- Added main theme music to Bartolomeu o Portugues storyline
+- Fix skill jump when you're stabbed by Danielle in the standard storyline by Hook
+- Smuggler quests fixes in all storylines by a simple virtual sailor
+- Various animation fixes for shipyard and tavern owners by Estharos
+- Jack Sparrow influences on standard storyline removed; should hopefully fix a lot of weird issues by Pieter Boelen
+- Saint Pierre tavern owner has his proper dialog restored by Pieter Boelen
+- Fix for traders losing their items by Hook
+- "Your Trusty Fists" now available in ALL storylines and visible in Inventory screen again by Pieter Boelen
+- Fix for sliders in Options menu resetting to 0 every time you open the screen by Hook
+- Fix for accidental removal of savegames if you press space three times and move your mouse a bit by Hook
+- Vanderdecken now actually SELLS his ships by Pieter Boelen
+- Fix for capture of Spanish and Portuguese forts by Pieter Boelen
+- Jack Sparrow storyline EITC building fix by Short Jack Gold
+- Completely re-ordered and cleaned up initModels.c file by Estharos
+- Reference to unexisting bocman7 model fixed by Estharos
+- Tortuga atmosphere mod added to ALL storylines by Pieter Boelen
+- Update weather on return to sea after boarding by Hook
+- Francisco Cruz model added to Bartolomeu storyline by Bartolomeu o Portugues
+- Various fixes to Bartolomeu storyline; confirmed completely playable by Bartolomeu o Portugues
+- Devlin storyline Morgan Terror dialog fix by Pieter Boelen
+- Devlin storyline Petros/Nathan Kell confusion fix by Pieter Boelen
+- Beatrice Devlin storyline dialog and quest updates as per Blaze Devlin quest by Pieter Boelen
+- Various fixes to Jack Sparrow storyline, including rewriting one trap quest to a detour quest by Short Jack Gold
+- Mr. Gibbs returns as hirable officer at the Tortuga tavern in the standard storyline by Pieter Boelen
+- Added various missing foam files by Pieter Boelen
+- Fixed Flying Cursed Dutchman cannons by ZarethPL
+- Improved Skull character texture by Damski62
+
+Build 14 Alpha 9 Small Patch:
+- GivePromotionReward fix for weaponsmod off by Hook
+- Couple of shipyard and tavern owner model fixes by Estharos
+- Removed a couple of double character init entries by Pieter Boelen
+- Escort trader won't talk after view map fix by Pieter Boelen
+- CTD in Antigua Portadmiral fix by Pieter Boelen
+- Add tick mark to map on Portadmiral escort quest by Pieter Boelen
+- Fix lack of soldiers in Port au Prince fort by Pieter Boelen
+- Fix Kralendijk deck scene missing textures by Pieter Boelen
+- Add two CheckAttribute lines to LAi_Actor.c by Pieter Boelen
+- Fightdisable set to true in Havana townhall Bartolomeu o Portugues
+- Fix reload from Havana prison to town by Bartolomeu o Portugues
+- Fix Port au Prince deck scene by Pieter Boelen
+- Enable pre-set destination on escort quests (for Antigua portadmiral) by Pieter Boelen
+- Move pchar_back_to_player to quests_common.c (will hopefully fix a fair amount of issues where you can't move anymore) by Pieter Boelen
+- Swap line for finish escort trader quest; hopefully traders will appear on destination properly now by Pieter Boelen
+- Fix to mutiny deck by Hook
+- Add opening movie to Bartolomeu quest by Bartolomeu o Portugues
+- Jack Sparrow quest dialog fix
+- Wave height fixes by Hook
+- Add missing foam files for St. John's, Cuba Shore and Quest Charlestown by Pieter Boelen
+- Add sword and gun locators to 50_Petra2.gm and mowngirl5.gm (should fix floating blades) by Pieter Boelen
+- Fix Portuguese officer headmodel by Pieter Boelen
+- Add two missing Black Pearl rey files by Pieter Boelen
+- Add PiratBrig50 rey fix by Pieter Boelen
+- Re-add new plain white sails by Pieter Boelen
+
+Build 14 Alpha 9:
+- Character models reassigned by Estharos
+- Realistic Weather Mod by Maturin and Hook
+- Replaced icons, interface screens and generic loading screens by Pieter Boelen
+- Updated and fixed Bartolomeu o Portugues Main Quest by Bartolomeu o Portugues
+- Updated and fixed Jack Sparrow Main Quest by Short Jack Gold and Bartolomeu o Portugues
+- Updated and fixed Horatio Hornblower Main Quest by Short Jack Gold
+- Realistic period soldiers by Thomas the Terror
+- Resized shark by Damski62
+- Many new character models by Thomas the Terror, Damski62, SuperDurnius and Bartolomeu o Portugues
+- Fixed location lighting by Thomas the Terror
+- Many new ship models by ZarethPL, Yo Ho Ho, Seb, Bartolomeu o Portugues and Petros
+- Bugged ship models fixed by ZarethPL
+- Three new music tracks for Dutch town, English town and Sailing by Thomas the Terror, Short Jack Gold and a simple virtual sailor
+- Improved interface item textures by SuperDurnius
+- Improvements to location textures by Thomas the Terror
+- Improved DirectSail mod by Hook
+- Improved Auto Skill System by Hook
+- Many, many fixes by Hook, a simple virtual sailor and Estharos
+- Character expressions by a simple virtual sailor
+
+
+Build 14 Alpha 8.5 Patch 2:
+- Support for governor actors by a simple virtual sailor
+- Cuba and Hispaniola character updates by Bartolomeu o Portugues
+  Including add Tortuga governor
+- Location updates by Bartolomeu o Portugues
+  Including use Redmond port model for Havana and add Tortuga townhall and prison
+- New character and ship models by Bartolomeu o Portugues and Thomas the Terror
+  Navy_Portugal, Navy_Portugal2, GypsyCaptn_6, Roche, Mansveldt, Juan_Esteban, giant and Gherarde_De_Jongh
+- Many updates and fixes to Bartolomeu o Portugues main quest
+- Relative bearings on DirectSail encounters by Hook
+- Fixed GiveShip2Character function by Hook
+- Skip pay salary screen if pay is 0 by Hook
+- Fix for ship surrender: no more surrenders if no enemy near by Hook
+- Fix for lag upon firing cannons by Hook and Captain Dan Wolf
+- Standard storyline Thomas O'Reily ammo replinishment option fixed by Estharos
+- Further Realistic Weather updates by Hook
+  Including new SetNextWind function
+- Thicker ropes on ships by Petros
+- Books aren't sold as per Hook's suggestion
+
+
+Build 14 Alpha 8.5 Patch 1:
+- Various fixes by Hook
+- Improved Realistic Weather by Hook
+- Major dialog fix by a simple virtual sailor
+  No more double dialog-sounds on random characters, no more getting stuck on Luc Merin in the Bartolomeu main quest
+  and Hendrick Vanderdecken has his introductory dialog back!
+- Simplified compasses by Hook
+- Hornblower quest updated by Short Jack Gold; now includes cutscene from the TV Series
+- Jack Sparrow quest updated by Short Jack Gold; many bugfixes and a new opening scene
+- USS Constitution by ZarethPL
+- ConvoiShip1 (Wappen von Hamburg) by Yo Ho Ho
+- Improved Spanish Main soldier and officer skins by Thomas the Terror
+- Lighting files for two newly added ship decks by Thomas the Terror
+- Improved loading screens, splash screen and main menu graphics, now with new images and updated logo
+- Removed BLOCKDAMAGE mod
+- BlackPearl missing model files
+- Boussole temporary fixed model files
+- Missing improved location texture files
+
+
+Build 14 Alpha 8.5:
+- Many Fixes by Hook Pirate_KK and Estharos
+  Including the midnight full cargohold CTD, the skill enhancing items not taking effect, improved DirectSail,
+  improved Auto Skill System, dialog and character fixes and many others.
+- Realistic Weather Mod by Maturin and Hook
+  Weather changes at sea are no longer abrupt and in addition adds a couple more skies.
+- Hornblower and Jack Sparrow Main Quest Updates by Short Jack Gold
+- Fixed Ship Models by ZarethPL
+  No more reversed lighting bugs and other weirdness!
+- Ship, Character and Location Models by ZarethPL, Petros, Thomas the Terror, SuperDurnius, Damski62, Yo Ho Ho and Seb
+  The nation-specific towns and period-specific soldier skins have been updated again. There's a whole bunch of new ships,
+  including the Cursed Flying Dutchman, HMS Bounty, Jolly Mon and many others.
+  Additionally, there's a bunch of new character models too, including Captain Teague Sparrow, who will be used in the Jack Sparrow quest.
+- Interface Updates by SuperDurnius
+  The archipelago map has been properly updated with the three new islands and several item textures have been improved and replaced.
+  Additionally the splash screen, game icon, main menu and generic loading screens have all been replaced with the new Build 14 versions.
+
+
+
+
+
+[...............................................................]
+
+
+
+
+
+
+
+Build v10.1
+-------------
+*** YOU MUST RESTART ***
+ALL SCALARS MOVED TO NK.C! THEY ARE NO LONGER IN GLOBALS.C!
+Now you get dead officers' swords and pistols again. Got changed for some reason on last build.
+Per Boocha, Bosun Sounds distances tweaked.
+Transfer Interface fixed
+Random Encounters disabled when following gold convoy in Larrouse / Mines quest.
+Crew who stay after dividing the plunder based on crew share ratio as well as leadership, per Boocha
+Isenbrandt Jurcksen will only let you join if you are somewhat famous (you can always switch flag to the Jolly Roger by talking to an officer, though). He will also be kinder (for Jurcksen...) if you are already a pirate.
+Now, when you leave the service of a nation / become hostile to a nation, your reputation is checked; if above a minimum, and you were in the service of that nation, your old rank is recorded and you can resume your career after buying amnesty and a LoM. If it's below the minimum, or if you attack a friendly ship with no warning / hoist the Jolly Roger near a friendly ship, land given to you by that country is confiscated and that country's soldiers will attack you. In addition, on leaving service, if your flag is that nation's, a new flag is chosen (the flag of the nation with whom you have the best relations; or, if you have wary or worse relations with every nation, pirate colors).
+Mast bug with bought ships fixed.
+Hire crew bug fixed by ALexusB (with thanks to Gray Angel)
+Pre-Req for Ships v2.0: Ship calls are now based on ID, not index. In the process, ship assignment for coast guard officers is redone to use Pirate Hunting Quest ship assignment code. Same for trade escort ships.
+Added Potion use on press of C key by ALexusB
+Changed random items code to use all non-quest items (now supports any and all added items).
+Changed Itemtraders code again, now supports any and all added items
+Added questtext for Patric Cardone quest, by Sailor Al
+Reinit now only logs when called by user
+NEW: GreatZen/NK - Items. Adds new items, many items now affect skills; added support for armor and three armor types.
+Item prices for blades/guns changed again.
+Changed schooners' mainmast to use sloop's mast.
+Changed time greetings to be time-based
+NEW: NK/Sailor Al: Added marriage!
+NEW: CouchCaptainCharles's Vice City Mod!
+ALexusB: Cannon reloading v2
+ALexusB: Islands now appear again during encounters
+ALexusB: Improved AI for land battles
+ALexusB: Improved ammo choosing AI (tweak and Buildizing by me)
+Generated Trade Missions will now no longer assign consumables as goods
+Morgan: Musket Volley perk now actually works
+Rumor system redone so that quest rumors can be turned on and off at the appropriate times, and, if one is available, it may override the normal rumor selection process.
+Added laying up of ships.
+Tuned down crew damage from cannonfire
+Made mast damage take ship size into account
+Fixed bug in Min Crew on transfers
+Added laying up of ships--talk to an officer. Only one supported at the moment; and PLEASE only do this on land...
+Food and Rum tracking can now be toggled, but you only get 75% of your salary/share if it's /ever/ off during your voyage (or during the month, if in salary mode).
+Random turning from storms reduced.
+NEW: Kieron Merrett: Corrections v1.0. Includes European fonts, a number of words that should have accents are corrected, and sets the date to 1690 with appropriate flags.
+
+ALL SCALARS MOVED TO NK.C! THEY ARE NO LONGER IN GLOBALS.C!
+Note: Pirate Corvette skin is by Akella, not Morgan; the rest are indeed by Morgan. my apologies for the mixup.
+=========
+Patches:
+**v10.1**
+Fixed rumor reinit bug. Please reinit.
+Fixed transfers (well, fixed my own fix)
+Fixed coastguard bug
+Rep from rapists encounter increased slightly, but only at lower levels.
+Fame needed for marriage tweaked. Will need to be introduced again for this to take effect.
+Can no longer buy contraband in stores, only sell it.
+Fixed most instances of VC interfering with quests
+Added new flag art by KAM
+
+
+Build v9.2
+-------------
+*** If you're patching to 9.0 from 8.x, you do not need to restart. But PLEASE REINITIALIZE. If you're willing to restart, download Patch 9.1! It adds some great features.***
+Tweaks to various pirate ships, and new skins (see below)
+Fearless is now "warship" and non-quest Black Pearl is now "lineship". Both have stats tweaked, are now Class 2. There are now two each per nation (one each for pirates).
+NEW: SIX new ships! Textures by Morgan. Pirate Frigate and Corvette, two new Fearless skins, and one new Black Pearl skin (and one copy of that, recolored, by me).
+I rewrote the function that gives ships to shipwrights to take advantage of this. They now support any number of added ships, without further changes (i.e. like the Items mod). Shipwrights now have, as the pool of possible ships, all ships of their nation plus all ships with no nation (i.e. tartana, etc.), though of course higher-class ships are rarer. Also, they may have two versions of the same ship, since there are two separate models for most ships. Ships also may be "out of order".
+NEW: GreatZen: Fast Travel to Loansharks and QC Port.
+Forts now vulnerable, and have crew based on town troops, which is now also based on difficulty.
+Fix for officers not being payed correctly on dividing the plunder.
+Yet another fix for enemies that don't draw their swords.
+Tweak to piercing calcs, so that if blocker's skill is higher it makes a difference.
+Fix for Minimum Crew Enforced (finally).
+Sell All split into two buttons, sell all, Autobuy ammo/repair/food/rum. File name.c changed to NK.c and now has defines for default ammo/repair/food/rum goods. The ammo is this many shots per gun, the sailcloth/planks is this many units per Hull HP of ship, and the wheat and rum are this many days at full rations (i.e. double this for rum at normal rations).
+Dialog heads fixed by Boocha
+Arcade Mode tweaked. Now speed is normal, turnrate is doubled, and cannon reload time is halved.
+Speed backwinded is increased.
+Artois, Nigel, and Lucas set to slot 3 instead of any slot, to avoid problems if you already have officers.
+Fixed problem with releasing/executing non-removable characters
+Fixed "Moses" typo.
+Donate wealth to crew removed, since GreatZen made a much better interface.
+Fixed "Hoist pirate flag in battle"
+Added Portugal as a nation you can serve.
+NEW: Sailor Al: added questrecords to Thomas O'Reily's cargo delivery.
+========
+Patches:
+**v9.1**
+NEW: GreatZen: donate money to crew and transfer interface, both available from the Select (F2) menu. THIS REQUIRES A RESTART AFTER INSTALLING
+**v9.2**
+Fort characters are now generated like other fantoms, and XP from destroying a fort is now based on the fort commander's rank.
+The finest spyglass now shows morale too (in a log line, like distance).
+Agents (diplomats) now cost more than talking to the governor.
+Titles changed to be more realistic (both in those used, and the rankings). Thanks to Heyreddin Barbarossa and Duke Surak'nar.
+Various changes to fame (and also then crew-available) calcs, as well as adding a score (based on average fame from all nations).
+Score-title now shown on relations screen.
+
+
+Build v8.3
+-------------
+*** If you're patching to 8.3, you do not need to restart. But PLEASE REINITIALIZE.***
+*** If the game crashes on switching to Sea mode from land, after accepting a Pirate Hunting Quest, reload, press T, and try again. That should fix it. If not, drop me a line. ***
+Added Scumdog's soundpack. It adds another meg or so, but it's worth it.
+NEW: MareX - Exchange gold in 100gp lots
+Mithrandir - Realistic Weather v2! (with a little tweak to windspeeds)
+Changed portraits around so no more invisible portraits / clones.
+Revamped relations system; replaced VMM. You may now work for as many, or as few, nations as you want; relations now span from hostile to wary to neutral to Letter of Marque/Ranked. You can leave service at any time, but for a rep hit (and watch out if your rep is too low!). Merchants and shipwrights may not trade with you, depending on your reputation and your relations with said merchant/shipwright's country.
+Added officer salaries to salary mode (1/5 hiring price), shown on charsheet; companions take 1/2 salary. Player is also payed the same wage, but only if there is enough money (modified by difficulty).
+GreatZen and NK: Added land to character and charsheet. It is given with promotions from governors. Land also returns a profit.
+Added deductions for officers to DP mode.
+Personal share in DP mode based on difficulty level.
+Fixed Virgile Boon.
+Speed added to spyglasses.
+Tweaked wine properties
+Ability to raise and lower flags at will; speak to a tavern-hired officer. Note that this will NOT change your relation with nations! You must be neutral or better with the nation to raise that nation's flag; you can always raise the Jolly Roger, however.
+Raising a pirate flag via the battle interface will make you hostile only with those nations that are present at that time (and thus can see you do it). Raising a pirate flag via an officer will NOT change your relations.
+Change to prisoners: Execution now hurts the player's reputation, but awards XP equal to the ransom.
+Towns now have populations, which can increase or decrease over time, depending on the amount of food available. A chunk of the population is killed / leaves town, when you sack the town. Troops in forts, and crew available for hire in taverns, and goods available in stores, are based on town size. Goods' prices are based on the quantity of the good vs. the size of the town, and price updates for each unit of goods purchased. Note: goods price calcs take time--if your game looks like it's frozen up, give it a minute; it's just calculating cost. The town now also has a set amount of gold, which changes based on population size and in trading with the merchant and shipwright; if they don't have enough money, you can't sell...this gold is also used to find how much booty you take when you sack the town (and that gold is then subtracted from the town's gold). XP on sacking is based on number of troops; after sacking a town, population decreases (as does number of troops), and then slowly grows back.
+Town gold is displayed on the right side of the "gold bar" when trading with merchants or shipwrights; your party's gold is on the left. When buying and selling goods, the current price to buy or sell a unit of that good is displayed in the center of the bar. The average price per unit is displayed in parentheses after the total price to buy/sell.
+Ask a citizen in the streets about the colony; they'll tell you the population.
+If town size or goods get screwed up, press I to reset towns to default population, goods, and gold.
+========
+Patches:
+*8.1
+Isla Muelle citizens and merchants and the governor now have nation set correctly.
+Oxbay Shipwright Oweyn's dialog fixed.
+Bugfix to boarding HP
+Dynamic prices, based on supply
+========
+*8.2
+Zaid Murro quest log bugfix
+Officer salary now modified by player's leadership skill and Iron Will perk, and difficultly level (just like crew salary, but crew salary is based on the best leadership skill and perk selection in the party).
+Goods price tweaks
+Expedition length now shows in Ship Sheet, when viewing crew.
+Typo fixed in switching to salary mode
+Typo fixed in morale for salary mode.
+Land profit tweaked
+Sea experience changed to AddPartyXP to allow for sharing of XP to inactive officers.
+Sell All at stores skips ammunition, repair goods, and wheat and rum. Selling a ship at the shipyard (and thus selling all goods on it) does still sell those goods. Thanks to Stone-D for the code and Surak'nar for reminding me.
+========
+*8.3
+Price of Fearless changed to 250k
+NEW: When an encounter is created, ships of the correct nation are assigned (though there is a slight chance that a ship not of that nation may be assigned, to keep things interesting).
+Added option to turn on and off encounter ship class capping based on player's ship class. It's under difficulty level choice when talking with a tavern officer.
+XP Logs do not show for boarding crew and enemy boarding crew
+Various monetary tweaks
+==========
+If you're upgrading from a previous build, or installing a build for the first time, you must start a new game. None of your old saves will work.
+
+Build v7.5
+-------------
+*** Difficulty Levels have now been implemented ***
+*** Falling Masts in Combat by Walker ***
+
+NK - Reinitialize Mod: updated to create a new file called Reinit.c, with a single function, and to reinitialize automatically on starting a new game.
+NK - CM/DP Mod: Rewritten so the factors act as scalars rather than add/subtract constants. In addition, the food and rum decrement routines have been rewritten for better, more bug-free, operation. And the gold required for a happy crew has been reduced. Now you can choose whether to pay your crew, or divide the plunder every so often. Talk to a hired tavern-officer to choose. PLEASE REREAD THE DOCS FILE.
+NK - New English Governor: updated to fix problem with the mansion being locked. If you want the new governor to appear, you must load a save from (*SPOILER*) after you take Greenford but before you talk to the newly-freed researcher at the lighthouse. (*/SPOILER*) If you're not there yet, don't worry.
+NK - Name: default changed back to Nathaniel Hawk.
+NK - Fix Cannons: cannon strength and reload time tweaked further, as well as the damage from different types of ammo.
+NK - Merchant Ship Mods v3 SD: fixed money bug where money was only given if ship was taken as a prize. Also, money amount halved.
+NK - Pirate Frigate: changed model back to Frigate1
+NK - Taghmon - Redo Character Generation Code: This mod recodes all random character generation to use Taghmon's officer code with a new Random Enemy officer type, and to correctly equip the characters (with no blade if they shouldn't have one, and not just a saber if they should); this includes the respawning soldiers, who now are based on your rank. Also, chargen for ship captains is now totally redone; and they can now have "virtual" officers, giving them skill bonuses at sea; and it adds a difficulty scalar. Talk to an Encounter (aka Random) Officer and tell him you don't fit in right to change it.
+NK - Give Other Captains Virtual Officers: increases the skills--but only while at sea--for captains who are not companions, by giving them "virtual" officers, i.e. increasing their skills by a multiplier semi-randomly based on how many officers the player has enabled and the class of the captain's ship.
+NK - Difficulty levels: There are now four difficulty levels. When you start the game, you start on the easiest; hire an officer from a tavern and talk to him to change your difficulty level (if you're not starting a new game, just talk to a hired tavern officer). This scales, on generation, enemy character ranks and HP; officer ranks and HP (inverse of the difficulty), chance for characters to be generated with better blades, and the chance of ship captains having "virtual" officers, to increase their skills.
+NK - Make Enc Rank based on Ship Class: checks to see if, for encounter generation purposes, your rank is greater than (8-ship class) * 2 and if so makes rank (8-ship class) * 2. Note that this applies to Pirate Hunting quest enemy generation too.
+NK - Items: now harder for enemy characters to get good blades, and in addition scaled based on difficulty. Also, thanks to MareX, you now get gold too. And, gun algorithm rewritten to be like the blade algorithm (non-arbitrary).
+Wardobe v3: Includes three new portraits by fragster (since v2), and now switches your model as soon as you choose it. Also includes one new choice, by Sailor Al.
+Surak'nar - Adds crew-on-deck for Fearless
+Viper - Add Cargo Value to Ship Sale Price
+Sailor Al - Quest Log Text for New Quests: for now, only the Blacques are covered, but coming soon there will be Quest text for all re-enabled quests.
+NK - Luck in fighting: Luck, and difficulty level, now affects the amount of damage you do.
+REMOVED: Stone-D's Shared Experience mod. Caused crashes at various points.
+NK - Shared Experience: My version of a Shared Experience mod. When party XP is added, half of full XP goes to each passenger--all if the party has the SXP perk; if the passenger is an officer (or the player), he/she gets the full XP. When personal XP is added, half goes to each officer (including the player), or the full if SXP.
+Fix to Edgar Attwood Greenford adventure.
+Fix to Pirate Hunting Quests
+
+Sail-to text is back, thanks to Surak'nar.
+
+If you already have build 9-30 installed, all you have to do is load your saved game, reinitialize, and save again. However, you /may/ have to reset controls to defaults and then re-customize them (if you have problems with controls, or the game doesn't respond right to them). If you don't have 9-30 installed, but do have a previous build, read the changelog section for the 9-30 build on how to upgrade.
+
+Build 9-30-03
+-------------
+Includes all fixes from the 9-24 patch (Rheims quest bugfix, Crew Morale and Div. Plunder fixes, update to Gregor Samsa, SDSM boarding / forts fix).
+
+Quests: Edgar Attwood quests fixed (see Quests Added.txt for a info and a walkthrough if you need one). Also, issue fixed in Zaid Murro/Bandits quest.
+New: Minifix - it can no longer rain in the ship's cabin.
+NEW: Viper - Emblemed Sails v2.5 Full: An big update of v2, now supports the Xebec Barbarossa and many more sail types.
+NEW: NK - Tweak to Rapers Mod: this gives back the rep boost: if your rep is under 80, 1/2 the time you get +1 rep instead of the gold.
+NEW: Viper - Missing Children Fix. Like the Play-Past-The-End mod I'd thought I'd included this, and wrote I had in the readme, but hadn't installed it. Now it is.
+Verruckt - NK -  Military Mod: Revised required-num-sunk totals for rank advancement. Also, more little bitty wage bugs fixed (now everything is made integers first).
+ALexusB - NK - Pirate Hunting for VMM: Fixed bug in dialog; also now pirates are generated just like other ships.
+NK - Merchant Ship Mods v3: In addition to its previous changes, you now get a calculated (but somewhat random) amount of money when you successfully board a ship, lots for merchants, some for warships (MoW with a really good captain gives about the same money as a Galleon with a good captain), and a very random amount for pirates (from not very much to even more than the above Galleon). Also, the ransom you're payed when you release captives is changed, so it's based on the character's rank, old ship's weight and class, and a random scalar.
+SD - Surrender Mod: Fixed bug in the bugfix, re: boarding ships after boarding forts.
+Sailor Al - NK - New Swords v2: Adds four blades total (two new to v2).
+NK - Crew Morale and Divide the Plunder: Expedition Length changed to 60-100 days.
+NEW: NK - New English Governor: This gives Redmond a new governor after you kill or capture Silehard. I'll let you find out who!. Note that even though this adds a new character, you do NOT need to start a new game!
+NEW: Viper - Fast Travel to Port
+NEW: Pythagoras - Re-enable SD2 Logo
+Viper - Adm.W. - Stone-D: Charsheet v2.0: fix
+MASSIVELY NEW: This build uses all but one DLL from the new Russian Patch. This has one issue (see below), but otherwise seems to work great. Including the falling masts!
+Also included are AI adjustments and other neat things--check out the readme for the 1.02r Russian Patch in the Russian Patch thread on Pirates Ahoy.
+
+**********NOTE: If you have the 9-23 build working, you do not need to start a new game (though that's often wise, and can't hurt). BUT! You still do have to reinitialize at least once after installing this build, and you *MUST* sell all your items to a merchant, exit the sell interface, and then buy them back. Otherwise Bad Things Will Happen.**********
+
+KNOWN ISSUES:
+1. The labels for the items on the sail-to menu do not appear.
+2. The dialog-only head models for new characters do not appear. Regular models work fine; it's just the green box in the upper-left corner is empty when talking with a character with a new model.
+
+Build 9-23-03
+-------------
+SD - Surrender Mod: Fixed bug with boarding forts, and the bug whereby you get only 1 enemy. Fudgefix for now.
+Quests: Many bugfixes to the additional quests by Taghmon. Thanks, Taghmon! Also, fixed bug with smuggler who takes you to Machado.
+NK - Rep Changes: Firing on friendly ships lowers your reputation.
+Verruckt - NK -  Military Mod: Revised required-num-sunk totals for rank advancement (Actually this change was in a previous build but I forgot about it). Also, fixed a longstanding bug in wages code. Thanks, Fred Bob!
+NEW: You can no longer tell a ship's nationality on the world map. To compensate, you have a far better chance of having "No" available on the "Engage?" screen, and the chance for it being available is now based not only on sailing skill and luck but also on sailing perks and your speed vs. the encounter's speed.
+NEW: Thanks to Sailor Al, KFleshman's Play Past End Mod is now installed (I thought it was already, but actually not).
+Minifix to Gregor Samsa's dialog, so he now supports any number of new blades/guns/glasses.
+NK - Items assignment mod: now chooses best possible blade for enemy in random encounters (if they meet or beat its rarity), rather than a random blade.
+NK - Prices: some prices changed. (weapons prices now 10 * (oldprice/100)^1.5 )
+NEW: Sailor Al has a new blade for us, the Cardinal's Guard.
+NEW: NK - Crew Morale daily updates and Divide the Plunder are now implemented. Please read the readme for details, it's rather complex.
+NEW: NK - Wardrobe: This lets you change what you're wearing, by talking to Malcolm right off the bat, or talking to him again later, or talking to a hired random-officer. You start out in your bathrobe. Note that your portrait does update!
+NEW: Thanks to Lord_Kosmos we have two new characters, a Royal Navy captain and admiral.
+NEW: Thanks to Kodo_Boon and ALexusB we have Jack Sparrow in the game!
+NEW: NK - Fix Trade Quest Bug, where the wrong destination is written down.
+NEW: Captain Gull - Bug Fix Loan Shark infinite money: This is a fix to the bug where loans in the game can be infinite.
+NEW: NK - Fix Artois-Animists Bug: This MOD fixes a conflict in the Artois quest and Animists quest, and the bug in the Artois quest that results in this.
+NEW: ALexusB - Small Font in Dialogs.
+
+A big thank-you to everyone who's contributed to these builds; especially Taghmon and Sailor Al, without whose help this build would not be possible (let alone less bugged than usual, I hope).
+
+
+Build 9-17-03
+-------------
+Rain now a bit less common.
+The Corsair's Pride sword now has its name show up.
+Quests: bugfixes, most thanks to Taghmon. Also fixed was the Smuggler who takes you to Machado.
+NK - Prices v2: Cannon sell price tweaked slightly.
+Bug in Become a Pirate by talking to Isenbrant Jurcksen fixed.
+Taghmon - Random Officers Mod: various improvements.
+NK - Loot the Dead: gun bug fixed. AGAIN.
+NK - Fix Tut: fixed tut section so it works with the Mega or Moderate Start mods.
+NEW: NK - Rep Changes: Reputation changes from quests increased; changing rep via priests costs more and is based on rank.
+NEW: NK - Toggles: this lets you toggle Always Run on/off, and turn on/off the "annoying" logs.
+NEW: More portraits: by Verruckt and fragster.
+NK - Fix Tut: HP bug fixed.
+NEW - NK - Take All Mod: this sets the take all button in the transfer goods screen to take the most expensive items first.
+NEW: Boatswain Ship Sounds v3: this adds almost all old Seadogs boatswain commands back in.
+
+
+Build 9-14-03
+-------------
+NK - Swords and Items: Spyglasses made less rare by factor of 6.
+NK - Cannons v4: Crew damage changed. Bombs do slightly less hull damage.
+Quests: added two quests, Arnaud Matton and Baldewyn Coffier, and Sabine Matton. (see Quests Added.txt). Bug fixed where Albion is incorrectly reported sunk. Bugfix for the Teodoro quest. (Thanks, Taghmon!)
+NEW: Taghmon - Fix Character Sheet Bug
+NEW: Taghmon - Random Officers Mod with NK Officer Models Mod (supercedes NK - Officers and Perks)
+NEW: Taghmon - Add Video Options and various control options from the German Version.
+NEW: Amokachi - Boatswain Sounds: new to the build, and with a fix by NK so it works for keyboard sail instructions.
+NEW: NK - Fix Forts Bug: fixes the bug where forts will still fire on you even after you fix relations. Also, it fixes the bug where the game doesn't register you've met a relation agent.
+
+
+Build 9-12-03
+-------------
+NK - Prices: sell price of ships now 1/4 old buy price, 1/8 new buy price.
+ALexusB - NK - Quests v1.2 included, now has more quests (see Quests Added.txt)
+NK - Loot the Dead: gun bug fixed.
+NK - Merchant Ship Mods v2: 32pdr bug fixed.
+
+
+Build 9-10-03
+-------------
+First build.
