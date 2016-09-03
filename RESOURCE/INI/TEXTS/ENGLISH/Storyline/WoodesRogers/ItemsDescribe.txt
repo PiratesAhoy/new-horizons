@@ -154,6 +154,12 @@ itmdescr_key33
 A key with a skull.
 }
 
+itmname_key34		{Key}
+itmdescr_key34
+{
+A key with the Maltese cross.
+}
+
 //--------------- KEYS END -----------------------------------------------------------------------------------------
 //--------------- BOOKS START --------------------------------------------------------------------------------------
 
@@ -333,6 +339,42 @@ itmname_bible_shot		{Selkirk's Bible}
 itmdescr_bible_shot
 {
 Selkirk's Bible has saved my life!
+}
+
+itmname_book63		{Manual of Medicine}
+itmdescr_book63
+{
+An easy to grasp book in the popular scientific style. Many pictures.
+}
+
+itmname_book64		{L’Ordre de Malte}
+itmdescr_book64
+{
+A french edition, author Annet de Clermont-Gessant.
+}
+
+itmname_book65		{Sacred Writ}
+itmdescr_book65
+{
+The Holy Bible complete with a small crucifix as a bookmarker.
+}
+
+itmname_book66		{Pile of Sheets}
+itmdescr_book66
+{
+The accounts for the Maltese Order in Charlestown.
+}
+
+itmname_book67		{Document}
+itmdescr_book67
+{
+Not sure what it is. Looks important though.
+}
+
+itmname_book68		{Scroll}
+itmdescr_book68
+{
+It's all in latin. Could be anything from medicine to excorcism.
 }
 
 //--------------- BOOKS END --------------------------------------------------------------------------------------
@@ -1483,6 +1525,12 @@ itmdescr_bladeanchor
 A small but heavy anchor, it may cause some really bad damage. 
 }
 
+itmname_bladeanchor_big		{Big Anchor}
+itmdescr_bladeanchor_big
+{
+A very heavy anchor. I'll try to block the suspension bridge with it. 
+}
+
 itmname_fake_anchor		{Anchor}
 itmdescr_fake_anchor
 {
@@ -1493,6 +1541,12 @@ itmname_bladebroom		{Broom}
 itmdescr_bladebroom
 {
 Now I can tidy up the place. 
+}
+
+itmname_bladespade		{Spade}
+itmdescr_bladespade
+{
+Yes, I can dig up the anchor on the shore now.
 }
 
 //--------------- BLADE WEAPONS END --------------------------------------------------------------------------------------
@@ -1743,67 +1797,67 @@ A wooden box with green vitriol.
 itmname_pistolfunnel		{Funnel}
 itmdescr_pistolfunnel
 {
-
+A glass funnel.
 }
 
 itmname_pistolcloth		{Filter}
 itmdescr_pistolcloth
 {
-
+A clean piece of linen cloth.
 }
 
 itmname_pistolbucket_dung	{Camel Dung}
 itmdescr_pistolbucket_dung
 {
-
+Even though the bucket has a lid it stinks like hell.
 }
 
 itmname_pistolstonebasket_R	{Mercury Sulfide}
 itmdescr_pistolstonebasket_R
 {
-HgS
+A chemical compound composed of the chemical elements mercury and sulphur.
 }
 
 itmname_pistolstonebasket_G	{Limestone}
 itmdescr_pistolstonebasket_G
 {
-
+A sedimentary rock composed largely of calcium carbonate.
 }
 
 itmname_pistolstonebasket_M	{Antimony}
 itmdescr_pistolstonebasket_M
 {
-
+A lustrous gray metalloid.
 }
 
 itmname_pistolstonebasket_B	{Black Antimony}
 itmdescr_pistolstonebasket_B
 {
-
+A common sulfide of antimony.
 }
 
 itmname_pistolsulphur_WR	{Sulphur}
 itmdescr_pistolsulphur_WR
 {
-
+Elemental sulphur is a bright yellow crystalline solid at room temperature.
 }
 
 itmname_pistolcharcoal_WR	{Coal}
 itmdescr_pistolcharcoal_WR
 {
-
+Charcoal is usually produced by slow pyrolysis, the heating of wood in the absence of oxygen.
 }
 
 itmname_pistolretort3		{Wax, fat}
 itmdescr_pistolretort3
 {
-
+Beeswax and butter. Very greasy.
 }
 
 itmname_pistolcalciumsack	{Calcium Carbonate}
 itmdescr_pistolcalciumsack
 {
-
+Produced from limestone and water.
 }
 
 //----------------- ALCHEMY ITEMS END -------------------------------------------------------------------------------------
@@ -1924,7 +1978,7 @@ itmdescr_potionwine2
 Looks like ordinary Red Wine to me.
 }
 
-//Q2
+//Q2 pär
 
 itmname_bladebottle_BE0		{Big Empty Bottle}
 itmdescr_bladebottle_BE0
@@ -1932,10 +1986,22 @@ itmdescr_bladebottle_BE0
  
 }
 
+itmname_bladebottle_BTc_hydr	{Mixture}
+itmdescr_bladebottle_BTc_hydr
+{
+Salt and Sulfuric Acid.
+}
+
 itmname_bladebottle_CV1_ss	{Sodium Sulfate}
 itmdescr_bladebottle_CV1_ss
 {
 
+}
+
+itmname_bladebottle_BG2		{Mixture}
+itmdescr_bladebottle_BG2
+{
+Sodium Sulfate, Calcium Carbonate and Coal.
 }
 
 itmname_bladebottle_CV2		{Mixture}
@@ -1950,6 +2016,30 @@ itmdescr_bladebottle_CV1_sc
 
 }
 
+itmname_bladebottle_BTc_mix3	{Mixture}
+itmdescr_bladebottle_BTc_mix3
+{
+Sodium Carbonate, Calcium Sulfide and water.
+}
+
+itmname_bladebottle_CG1		{Grinded Limestone}
+itmdescr_bladebottle_CG1
+{
+
+}
+
+itmname_bladebottle_BY2_mix7	{Mixture}
+itmdescr_bladebottle_BY2_mix7
+{
+Sulphur, Sal Ammoniac, Calcium Oxide and water.
+}
+
+itmname_bladebottle_BY1_mix7	{Mixture}
+itmdescr_bladebottle_BY1_mix7
+{
+Sulphur, Sal Ammoniac, Calcium Oxide and water.
+}
+
 itmname_bladebottle_CV1_cao	{Calcium Oxide}
 itmdescr_bladebottle_CV1_cao
 {
@@ -1962,10 +2052,34 @@ itmdescr_bladebottle_CV1_NH4Cl
 Ammonium Chloride
 }
 
+itmname_bladebottle_GY2		{Gas Mixture}
+itmdescr_bladebottle_GY2
+{
+H2S + NH3
+}
+
 itmname_bladebottle_BS2_LH	{Liquor Hepatis}
 itmdescr_bladebottle_BS2_LH
 {
 
+}
+
+itmname_bladebottle_BY2_mix9	{Mixture}
+itmdescr_bladebottle_BY2_mix9
+{
+Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.
+}
+
+itmname_bladebottle_CB1_mix9	{Mixture}
+itmdescr_bladebottle_CB1_mix9
+{
+Distilled Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
+}
+
+itmname_bladebottle_CB2_mix9	{Mixture}
+itmdescr_bladebottle_CB2_mix9
+{
+Distilled Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
 }
 
 itmname_bladebottle_CC2_bps	{Black Pulvis Solaris}
@@ -1974,16 +2088,52 @@ itmdescr_bladebottle_CC2_bps
 
 }
 
-itmname_bladebottle_CR2_rps	{Red Pulvis Solaris}
-itmdescr_bladebottle_CR2_rps
+itmname_bladebottle_CC1		{Grinded Black Antimony}
+itmdescr_bladebottle_CC1
 {
 
+}
+
+itmname_bladebottle_BP1_ps	{Pulvis Solaris}
+itmdescr_bladebottle_BP1_ps
+{
+Which means Powder of the Sun.
 }
 
 itmname_bladebottle_BP2_ps	{Pulvis Solaris}
 itmdescr_bladebottle_BP2_ps
 {
 Which means Powder of the Sun.
+}
+
+itmname_bladebottle_CQ1		{Mercury}
+itmdescr_bladebottle_CQ1
+{
+
+}
+
+itmname_bladebottle_CT2_mix11	{Mixture}
+itmdescr_bladebottle_CT2_mix11
+{
+Mercury and Nitric Acid
+}
+
+itmname_bladebottle_CA2_mix11	{Mixture}
+itmdescr_bladebottle_CA2_mix11
+{
+Mercury Oxide and more.
+}
+
+itmname_bladebottle_CR1		{Mercury Oxide}
+itmdescr_bladebottle_CR1
+{
+
+}
+
+itmname_bladebottle_CR2_rps	{Red Pulvis Solaris}
+itmdescr_bladebottle_CR2_rps
+{
+
 }
 
 itmname_bladebottle_BAU		{Philospher's Stone}
@@ -2228,5 +2378,22 @@ itmdescr_corkscrew
 {
 An ordinary Corkscrew.
 }
+
+itmname_bladekeyring		{Key Collection}
+itmdescr_bladekeyring
+{
+Nine keys on a ring. 
+}
+
+itmname_Malta_icon		{Icon}
+itmname_Malta_outfit		{Outfit}
+itmname_Malta_poison		{Medicines?}
+itmname_Malta_syringe		{Syringe, bandages}
+itmname_Malta_medkit		{Small Apothecary}
+itmname_Malta_statue		{Bust}
+itmname_Malta_box		{Shrine}
+itmname_Malta_relic		{Relic}
+itmname_Malta_cross		{Crucifix}
+itmname_Malta_censer		{Censer}
 
 //--------------- OTHER ITEMS END --------------------------------------------------------------------------------------

@@ -5827,14 +5827,14 @@ void QuestComplete(string sQuestName)
 
 		case "First_meet_Wellard":
 			LAi_SetActorType(characterFromID("Richard Sharpe"));
-			LAi_ActorGoToLocation(characterFromID("Richard Sharpe"), "goto", "goto37", "none", "", "", "", 0.0);
+			LAi_ActorGoToLocator(characterFromID("Richard Sharpe"), "goto", "goto37", "", 30);
 			characters[GetCharacterIndex("Henry Wellard")].Dialog.Filename = "Henry Wellard_dialog.c";
 			LAi_SetActorType(characterFromID("Henry Wellard"));
 			LAi_ActorDialog(characterFromID("Henry Wellard"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Henry Wellard")].dialog.currentnode = "Can_you_help";
 		break;
 
-		case "Wellard_in_tow":
+		case "Wellard_in_tow": // Triggered by dialog with Henry Wellard
 			LAi_SetOfficerType(characterFromID("Richard Sharpe"));
 			Characters[GetCharacterIndex("Henry Wellard")].dialog.currentnode = "First time";
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Henry Wellard"));

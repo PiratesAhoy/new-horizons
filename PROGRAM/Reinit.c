@@ -62,6 +62,8 @@ void Reinit(bool start, bool show)
 		//Reinit officer types
 		Trace("Gauging: officertypes");
 		InitOfficerTypes();
+		Trace("Gauging: Nation bonuschances");
+		InitBonusChances();
 
 		if(bRealBattleInterface)
 		{

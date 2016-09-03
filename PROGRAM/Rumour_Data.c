@@ -217,13 +217,13 @@ void SetRumourDefaults(bool isreinit)
 	Rumour[i].chance = 100; //This one should happen moreoften too
 	i++;
 
-    Rumour[i].text = LanguageConvertString(tmpLangFileID,"Better be careful in those Autumn months. The weather get's quite nasty here, so I'd suggest you get yourself a sturdy ship before venturing out in that pea soup."); // Morgan Terror
+    Rumour[i].text = LanguageConvertString(tmpLangFileID,"An old sailor told me he is considering retiring. The weather gets quite nasty in the colder months, storms and such. He said if he can't find a sturdier ship to sign on with before next autumn, he won't risk another stormy season at sea."); // Morgan Terror
     Rumour[i].state = "active";
 	Rumour[i].loc = "all";
 	Rumour[i].chance = 50; //Lowered a bit -Levis
 	i++;
 
-    Rumour[i].text = LanguageConvertString(tmpLangFileID,"Have you seen the summer weather yet? Nary a breeze. Wonderful stuff, but i'd imagine it'd be frustrating for a captain such as yourself."); // Morgan Terror
+    Rumour[i].text = LanguageConvertString(tmpLangFileID,"I heard a captain in the tavern say that he prefers winter weather to summer, despite the storms. In the summer, there is nary a breeze. Wonderful stuff in my opinion, but I'd imagine it'd be frustrating for a captain with a schedule to keep."); // Morgan Terror
     Rumour[i].state = "active";
 	Rumour[i].loc = "all";
 	Rumour[i].chance = 50; //Lowered a bit -Levis

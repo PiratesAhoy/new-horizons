@@ -710,7 +710,7 @@ void SetVariable()
 //		SetNewPicture("TYPEPICT", "");
 //	} else {
 	if ( IsCompanion(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\blank_ship.tga");			// changed after build 11 by KAM
-	if ( IsOfficer(xi_refCharacter) ) //SetNewPicture("TYPEPICT", "interfaces\kam_isofficer.tga");				// changed after build 11 by KAM
+	/*if ( IsOfficer(xi_refCharacter) ) //SetNewPicture("TYPEPICT", "interfaces\kam_isofficer.tga");				// changed after build 11 by KAM
 	{
 		if(CheckAttribute(xi_refCharacter,"quest.officertype"))
 		{
@@ -729,14 +729,15 @@ void SetVariable()
 				// <-- KK
 			}
 		}
-	}
+	}*/
+	if ( IsOfficer(xi_refCharacter) ) SetNewPicture("TYPEPICT", GetOfficerPricture(xi_refCharacter)); //Levis put all images in 1 function
 	if ( IsOfficerCompanion(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isofficercompanion.tga");		// changed after build 11 by KAM
 	if ( IsOnShoreLeave(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isonshoreleave.tga");			// added after build 11 by KAM
 	if ( IsOfficerOnShoreLeave(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isofficeronshoreleave.tga");	// added after build 11 by KAM
 	if ( IsPrisoner(xi_refCharacter) ) // KK
 	{
-		SetNewPicture("TYPEPICT", "interfaces\isprisoned.tga");  // added by MAXIMUS
-		if(CheckAttribute(xi_refCharacter,"quest.officertype"))  // added by MAXIMUS
+		SetNewPicture("TYPEPICT1", "interfaces\isprisoned.tga");  // added by MAXIMUS //Levis changed to use TYPIC 1 so we don't need to do extra stuff
+		/*if(CheckAttribute(xi_refCharacter,"quest.officertype"))  // added by MAXIMUS
 		{
 			switch (xi_refCharacter.quest.officertype)
 			{
@@ -753,7 +754,7 @@ void SetVariable()
 				case OFFIC_TYPE_TRADER: SetNewPicture("TYPEPICT1", "interfaces\trader.tga"); break;
 // <-- KK
 			}
-		}
+		}*/
 	}
 // Viper - CharSheetEnh End
 	if (!CheckAttribute(GameInterface.strings,"OfficerType"))

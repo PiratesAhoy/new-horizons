@@ -1695,7 +1695,7 @@ bool SetShipIcons()
 	ref mchr = GetMainCharacter();
 	for (i = 0; i < COMPANION_MAX; i++) {
 		cn = GetCompanionIndex(mchr, i);
-		if (cn < 0 || cn == iShipCaptain) continue;
+		if (cn < 0) continue;
 		curchr = GetCharacter(cn);
 		st = GetCharacterShipType(curchr);
 		if (st >= 0 && st < SHIP_TYPES_QUANTITY) {

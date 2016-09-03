@@ -361,7 +361,7 @@ void ProcessDialogEvent()
 				{
 					link.l2 = DLG_TEXT[85];
 					link.l2.go = "money_end";
-					pchar.quest.money_to_ferro = 9000;
+					pchar.quest.money_to_ferro = 8000;
 				}
 			}
 			else

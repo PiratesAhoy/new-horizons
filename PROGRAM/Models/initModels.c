@@ -12440,6 +12440,41 @@ void InitModels(bool isstart)
 	model.nation	  =  BROKEN;
 	model.assigned	=  true;
 	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Soldier_Malta2";
+	model.FaceId	= 386;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "WhiteKnight";
+	model.FaceId	= 387;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Soldier_Malta1";
+	model.FaceId	= 388;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Maltese2";
+	model.FaceId	= 24;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Animist_Maltese";
+	model.FaceId	= 389;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
     //<-- JRH
 
 	//The code below this comment HAVE TO be after all model definitions.

@@ -861,6 +861,42 @@ int getIslandSmugglingState(ref sisland)
 	return state;
 }
 
+int getIslandSmugglingStateTradebook(ref sisland, ref Character)
+{
+	//This returns the smuggling state of the island which is last known by the player. If not known it returns -1
+	int state = -1;
+	string islandid = sisland.id;
+	if(CheckAttribute(Character,"quest.smuggling_guild.patrolstates."+islandid+".state")) state = sti(Character.quest.smuggling_guild.patrolstates.(islandid).state);
+	return state;
+}
+
+string getIslandSmugglingDateTradebook(ref sisland, ref Character)
+{
+	//This returns the date when the smuggling state of the island which is last known by the player.
+	string date = "";
+	string islandid = sisland.id;
+	if(CheckAttribute(Character,"quest.smuggling_guild.patrolstates."+islandid+".date")) date = Character.quest.smuggling_guild.patrolstates.(islandid).date;
+	return date;
+}
+
+void updateIslandSmugglingStateTradebookAll(ref Character)
+{
+	//Updates all patrol states for the tradebook
+	for(int n=0; n<ISLANDS_QUANTITY; n++) 
+	{
+		updateIslandSmugglingStateTradebookIsland(GetIslandByIndex(n), Character);
+	}
+	DumpAttributes(Character);
+}
+
+void updateIslandSmugglingStateTradebookIsland(ref sisland, ref Character)
+{
+	//Updates a single island in the tradebook
+	string islandid = sisland.id;
+	Character.quest.smuggling_guild.patrolstates.(islandid).state = getIslandSmugglingState(sisland);
+	Character.quest.smuggling_guild.patrolstates.(islandid).date = GetHumanDate(GetDataYear(),GetDataMonth(),GetDataDay());
+}
+
 float getCoastGuardEncounterChance()
 {
 	//returns the chance of getting caught.
@@ -1059,6 +1095,35 @@ string getSmugglingStateDesc(int state)
 		break;
 	}
 	return "a normal patrolling duty";
+}
+
+//TODO: This should be done by the ConvertString function
+string getSmugglingStateShortDesc(int state)
+{
+	//This function returns a nice text for the patrolling state.
+	switch (state)
+	{
+		case SMUGGLING_NONE:
+			return "None";
+		break;
+		
+		case SMUGGLING_LOW:
+			return "Low";
+		break;
+		
+		case SMUGGLING_NORMAL:
+			return "Avarage";
+		break;
+		
+		case SMUGGLING_MEDIUM:
+			return "High";
+		break;
+		
+		case SMUGGLING_HIGH:
+			return "Very High";
+		break;
+	}
+	return "Normal";
 }
 
 string CreatePatrolBook(ref sisland)

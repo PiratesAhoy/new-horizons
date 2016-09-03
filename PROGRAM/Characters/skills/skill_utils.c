@@ -392,18 +392,29 @@ int CalcSkillModifier(ref character, string skillName)
 			if(CheckAttribute(itm, "groupID") && IsCanEquiping(character, itm.groupID) && !IsEquipCharacterByItem(character, itmid))
 				continue; // if equipable and not equipped, skip // KK
 
-			// *.stack = num of item that can be stacked together. Default = 1
-			if(sti(itm.skill.stack) >= qty/sti(itm.skill.num))
-			{
-				mod += sti(itm.skill.(skillName)) * qty/sti(itm.skill.num);
-			}
-			else
-			{
-				mod += sti(itm.skill.(skillName)) * sti(itm.skill.stack) / sti(itm.skill.num);
-			}
+			// *.stack = num of item that can be stacked together. Default = false JRH
+			//Levis --> changed to fix the problem with overflowing the stack no applying any bonus
+			//Check if the player has enough items
+			if(qty >= sti(itm.skill.num))
+            		{
+				//Check if bonusses stack
+				if(itm.skill.stack == true)			//JRH
+				{
+					//they stack so we can add the mod
+					mod += sti(itm.skill.(skillName)) * qty/sti(itm.skill.num);
+				}
+				else
+				{
+					//they don't stack so just add the mod once.
+					mod += sti(itm.skill.(skillName));
+				}
+           		}
+			//Levis <--
 		}
 	}
-	mod = iclamp(-MAX_SKILL_INCREASE, MAX_SKILL_INCREASE, mod); // PB: Single line
+
+//	mod = iclamp(-MAX_SKILL_INCREASE, MAX_SKILL_INCREASE, mod); // PB: Single line
+	mod = iclamp(-100, MAX_SKILL_INCREASE, mod);		//JRH for cursed coin
 	character.skill.(skillName).modifier = mod;
 	return mod;
 }

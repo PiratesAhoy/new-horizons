@@ -1098,6 +1098,25 @@ void LocationInitQuebradasCostillas(ref n)
 //	locations[n].reload.l16.disable = 0;			//JRH: conflict with fast reload
 	Locations[n].reload.l16.close_for_night = 1;
 	// SJG <--
+
+	locations[n].reload.l17.name = "reload17";
+	locations[n].reload.l17.go = "bb_Maltains";
+	locations[n].reload.l17.emerge = "reload1";
+	locations[n].reload.l17.autoreload = "0";
+	locations[n].reload.l17.label = "Order of Malta only in WoodesRogers quest";	
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
+	{
+		Locations[n].reload.l17.close_for_day = 1;
+	}
+	else locations[n].reload.l17.disable = 1;
+
+	locations[n].reload.l18.name = "reload18";
+	locations[n].reload.l18.go = "bb_Maltains";
+	locations[n].reload.l18.emerge = "reload3";
+	locations[n].reload.l18.autoreload = "0";
+	locations[n].reload.l18.label = "Order of Malta only in WoodesRogers quest";
+	locations[n].reload.l18.disable = 1;
+	
 	Locations[n].island = "QuebradasCostillas"; // NK 04-08-29
 	n = n + 1;
 
@@ -1454,13 +1473,20 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].environment.sea = "false";
 	Locations[n].models.back = "back\redss_";
 	//Reload map
-	Locations[n].reload.l1.name = "locator2";
-	Locations[n].reload.l1.go = "Charlestown_Port";
-	Locations[n].reload.l1.emerge = "reload6_back";
-	Locations[n].reload.l1.autoreload = "0";
-	Locations[n].reload.l1.label = "#stown_name#";
-	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].reload.l2.name = "locator2";
+	Locations[n].reload.l2.go = "Charlestown_Port";
+	Locations[n].reload.l2.emerge = "reload6_back";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.label = "#stown_name#";
 
+	Locations[n].reload.l1.name = "locator1";
+	Locations[n].reload.l1.go = "bb_Maltains_office";
+	Locations[n].reload.l1.emerge = "locator2";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "Secret room only in WoodesRogers quest";
+	Locations[n].reload.l1.disable = true;			//only in WoodesRogers
+
+	LAi_LocationFightDisable(&Locations[n], true);
 
 	Locations[n].island = "QuebradasCostillas"; // NK 04-08-29
 	n = n + 1;

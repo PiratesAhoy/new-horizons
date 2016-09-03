@@ -309,12 +309,14 @@ void StartStoryLine()
 	//	Pchar.quest.WR_start = "48";	//Richards monastary
 
 	//	Pchar.quest.WR_start = "50";	//Caesar 
+	//	Pchar.quest.WR_start = "57";	//Caesar Maynard Citadel Rock
 	//	Pchar.quest.WR_start = "58";	//Caesar Turks
 	//	Pchar.quest.WR_start = "59";	//Caesar Sloop
 
-	//	Pchar.quest.WR_start = "60";	//Hands outsk - port - alcove - (POTC dungeons)
-	//	Pchar.quest.WR_start = "61";	//Hands alcove
-	//	Pchar.quest.WR_start = "62";	//Hands prison2
+	//	Pchar.quest.WR_start = "62";	//Hands Charleston
+	//	Pchar.quest.WR_start = "64";	//Hands outsk - port - alcove - (POTC dungeons)
+	//	Pchar.quest.WR_start = "66";	//Hands alcove
+	//	Pchar.quest.WR_start = "68";	//Hands prison2
 
 	//	Pchar.quest.WR_start = "90";	//Kristiania canyon
 	//	Pchar.quest.WR_start = "91";	//BB island1	
@@ -474,6 +476,30 @@ void StartStoryLine()
 				EquipCharacterByItem(Pchar, "blade1");	
 			break;
 
+			case "57":
+				//Caesar Mayanard Citadel Rock				
+
+				sTeleportLocName = "Eleuthera_tavern_upstairs";
+				rldGroup = "reload";
+				rldLocator = "reload3_back";
+
+				LAi_SetImmortal(pchar, true);
+				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "blade27");
+				EquipCharacterByItem(Pchar, "blade27");
+				GiveItem2Character(Pchar, "pistolmtoon");
+				EquipCharacterByItem(Pchar, "pistolmtoon");
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolgrapes", 6);
+
+			//	GiveItem2Character(Pchar, "bladelever");	//temp
+			//	GiveItem2Character(Pchar, "map");		//temp
+			//	GiveItem2Character(Pchar, "bladeanchor_big");
+			//	EquipCharacterByItem(Pchar, "bladeanchor_big");	
+
+				LAi_QuestDelay("Citadel_rock_start", 0.1);
+			break;
+		
 			case "58":
 				//Caesar Turks
 		//LAi_SetImmortal(pchar, true);	//temp
@@ -556,7 +582,77 @@ void StartStoryLine()
 				EquipCharacterByItem(Pchar, "blade1");	
 			break;
 
-			case "60":
+			case "62":
+				//Charleston
+		LAi_SetImmortal(pchar, true);	//temp
+
+				Pchar.quest.disable_rebirth = true;
+
+				sTeleportLocName = "Charlestown_port";
+			
+				rldGroup = "reload";
+				rldLocator = "reload8_back";
+
+				//SetCurrentTime(12, 0);
+			SetCurrentTime(2, 0);
+				//SetNextWeather("Clear");
+			SetNextWeather("Heavy Rain");
+
+				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				
+				GiveItem2Character(Pchar, "bladeX4");
+				EquipCharacterByItem(Pchar, "bladeX4");
+			//	GiveItem2Character(Pchar, "key34");
+			//	GiveItem2Character(Pchar, "bladekeyring");
+			//	EquipCharacterByItem(Pchar, "bladekeyring");
+
+			//GiveItem2Character(Pchar, "blade1");
+			//GiveItem2Character(Pchar, "clock1");
+			//EquipCharacterByItem(Pchar, "clock1");
+
+			//Locations[FindLocation("bb_Maltains")].locators_radius.reload.reload2 = 0.0001;	//testing
+			//Locations[FindLocation("bb_Maltains")].locators_radius.box.box21 = 1.0; //testing
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Charlestown_port");
+					
+				AddCharacterGoods(Pchar, GOOD_WHEAT, 1);
+				AddCharacterGoods(Pchar, GOOD_RUM, 1);
+				AddCharacterGoods(Pchar, GOOD_BALLS, 1);
+				AddCharacterGoods(Pchar, GOOD_KNIPPELS, 1);
+				AddCharacterGoods(Pchar, GOOD_BOMBS, 1);
+				AddCharacterGoods(Pchar, GOOD_GUNPOWDER, 1);
+				AddCharacterGoods(Pchar, GOOD_SAILCLOTH, 1);
+				AddCharacterGoods(Pchar, GOOD_PLANKS, 1);
+				AddCharacterGoods(Pchar, GOOD_GOLD, 1);
+				AddCharacterGoods(Pchar, GOOD_SILVER, 1);
+				AddCharacterGoods(Pchar, GOOD_CINNAMON, 1);
+				AddCharacterGoods(Pchar, GOOD_CHOCOLATE, 1);
+				AddCharacterGoods(Pchar, GOOD_COFFEE, 1);
+				AddCharacterGoods(Pchar, GOOD_FOOD, 1);
+				AddCharacterGoods(Pchar, GOOD_TREATMENT, 1);
+				AddCharacterGoods(Pchar, GOOD_PAPRIKA, 1);
+				AddCharacterGoods(Pchar, GOOD_WINE, 1);
+				AddCharacterGoods(Pchar, GOOD_SANDAL, 1);
+				AddCharacterGoods(Pchar, GOOD_EBONY, 1);
+				AddCharacterGoods(Pchar, GOOD_MAHOGANY, 1);
+				AddCharacterGoods(Pchar, GOOD_SUGAR, 1);
+				AddCharacterGoods(Pchar, GOOD_TOBACCO, 1);
+				AddCharacterGoods(Pchar, GOOD_ALE, 1);
+				AddCharacterGoods(Pchar, GOOD_SILK, 1);
+				AddCharacterGoods(Pchar, GOOD_LINEN, 1);
+				AddCharacterGoods(Pchar, GOOD_FRUITS, 1);
+				AddCharacterGoods(Pchar, GOOD_CLOTHES, 1);
+				AddCharacterGoods(Pchar, GOOD_BRICKS, 1);
+				AddCharacterGoods(Pchar, GOOD_OIL, 1);
+				AddCharacterGoods(Pchar, GOOD_COTTON, 1);
+				AddCharacterGoods(Pchar, GOOD_COPRA, 1);
+				AddCharacterGoods(Pchar, GOOD_LEATHER, 1);
+				
+				LAi_QuestDelay("start_Maltains", 0.1);
+			break;
+
+			case "64":
 				//Hands prison outsk - port - alcove - (POTC dungeons)
 		LAi_SetImmortal(pchar, true);	//temp
 
@@ -597,7 +693,7 @@ void StartStoryLine()
 				pchar.quest.bb_prison_opening2.win_condition = "bb_prison_opening2";
 			break;
 
-			case "61":
+			case "66":
 				//Hands alcove etc
 		LAi_SetImmortal(pchar, true);	//temp
 
@@ -678,7 +774,7 @@ void StartStoryLine()
 				pchar.quest.alcove_stop6.win_condition = "alcove_stop6";
 			break;
 
-			case "62":
+			case "68":
 				//Hands prison2
 		LAi_SetImmortal(pchar, true);	//temp
 
@@ -902,9 +998,9 @@ void StartStoryLine()
 			//GiveItem2Character(Pchar, "bladebottle_CR1");
 			
 			//#13 start final mixes
-			GiveItem2Character(Pchar, "bladebottle_BS2_LH");
-			GiveItem2Character(Pchar, "bladebottle_CC2_bps");
-			GiveItem2Character(Pchar, "bladebottle_CR2_rps");
+		//	GiveItem2Character(Pchar, "bladebottle_BS2_LH");
+		//	GiveItem2Character(Pchar, "bladebottle_CC2_bps");
+		//	GiveItem2Character(Pchar, "bladebottle_CR2_rps");
 
 
 				//PORT ROYAL: SHIPYARD BEFORE FARM
@@ -974,6 +1070,8 @@ void StartStoryLine()
 			pchar.quest.Minerva = "arrived";
 			Pchar.quest.cauldron = "water";
 			Pchar.quest.retort = "yes";
+		Pchar.quest.block_water = "yes";
+		
 
 			//new attributes Q2
 			Pchar.alchemy2_grinder = "empty";

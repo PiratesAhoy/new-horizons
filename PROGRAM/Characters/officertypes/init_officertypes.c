@@ -345,6 +345,39 @@ void eInitOfficerTypes()
 	if(isPerkExisting("ImproveSmuggling")) {OfficerTypes.(type).perks.ImproveSmuggling = 1};
 	if(isPerkExisting("Cooking")) {OfficerTypes.(type).perks.Cooking = 1};
 	
+	//Trader: used for convoy quests
+	type = OFFIC_TYPE_TRADER;
+	OfficerTypes.(type).skills.Leadership = 0;
+	OfficerTypes.(type).skills.Leadership.importance = 2;
+	OfficerTypes.(type).skills.Fencing = 0;
+	OfficerTypes.(type).skills.Sailing = 0;
+	OfficerTypes.(type).skills.Sailing.importance = 8;
+	OfficerTypes.(type).skills.Accuracy = 0;
+	OfficerTypes.(type).skills.Cannons = 0;
+	OfficerTypes.(type).skills.Grappling = 0;
+	OfficerTypes.(type).skills.Repair = 0;
+	OfficerTypes.(type).skills.Defence = 0;
+	OfficerTypes.(type).skills.Defence.importance = 4;
+	OfficerTypes.(type).skills.Commerce = 0;
+	OfficerTypes.(type).skills.Commerce.importance = 10;
+	OfficerTypes.(type).skills.Sneak = 0;
+	OfficerTypes.(type).notcontribute = 1;
+	OfficerTypes.(type).pricemod = 1.25;
+	OfficerTypes.(type).noncontribchance = 10;
+	OfficerTypes.(type).crewtype = OFFIC_TYPE_SAILOR;
+	OfficerTypes.(type).picture = "interfaces\trader.tga";
+	if(isPerkExisting("ShipTurnRateUp")) {OfficerTypes.(type).perks.ShipTurnRateUp = 1};
+	if(isPerkExisting("ShipSpeedUp")) {OfficerTypes.(type).perks.ShipSpeedUp = 1};
+	if(isPerkExisting("StormProfessional")) {OfficerTypes.(type).perks.StormProfessional = 1};
+	if(isPerkExisting("SailingProfessional")) {OfficerTypes.(type).perks.SailingProfessional = 1};
+	if(isPerkExisting("SailsDamageUp")) {OfficerTypes.(type).perks.SailsDamageUp = 1};
+	if(isPerkExisting("Cooking")) {OfficerTypes.(type).perks.Cooking = 1};
+	if(isPerkExisting("BasicCommerce")) {OfficerTypes.(type).perks.BasicCommerce = 1};
+	if(isPerkExisting("AdvancedCommerce")) {OfficerTypes.(type).perks.AdvancedCommerce = 1};
+	if(isPerkExisting("Trustworthy")) {OfficerTypes.(type).perks.Trustworthy = 1};
+	if(isPerkExisting("SharedExperience")) {OfficerTypes.(type).perks.SharedExperience = 1};
+	if(isPerkExisting("Disguiser")) {OfficerTypes.(type).perks.Disguiser = 1};
+	
 	//Boatswain
 	type = OFFIC_TYPE_BOATSWAIN;
 	OfficerTypes.(type).skills.Leadership = 1;
@@ -363,6 +396,7 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).usableoffictype = true;
 	OfficerTypes.(type).hplevelbonus = 3;
 	OfficerTypes.(type).noncontribchance = 10;
+	OfficerTypes.(type).picture = "interfaces\order.tga";
 	if(isPerkExisting("LongRangeGrappling")) {OfficerTypes.(type).perks.LongRangeGrappling = 1};
 	if(isPerkExisting("GrapplingProfessional")) {OfficerTypes.(type).perks.GrapplingProfessional = 1};
 	if(isPerkExisting("InstantBoarding")) {OfficerTypes.(type).perks.InstantBoarding = 1};
@@ -386,6 +420,7 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).skills.Commerce = 0;
 	OfficerTypes.(type).skills.Sneak = 0;
 	OfficerTypes.(type).usableoffictype = true;
+	OfficerTypes.(type).picture = "interfaces\gunner.tga";
 	if(isPerkExisting("FastReload")) {OfficerTypes.(type).perks.FastReload = 1};
 	if(isPerkExisting("ImmediateReload")) {OfficerTypes.(type).perks.ImmediateReload = 1};
 	if(isPerkExisting("HullDamageUp")) {OfficerTypes.(type).perks.HullDamageUp = 1};
@@ -414,6 +449,7 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).usableoffictype = true;
 	OfficerTypes.(type).hpbasebonus = 30;
 	OfficerTypes.(type).pricemod = 0.95;
+	OfficerTypes.(type).picture = "interfaces\quartermaster.tga";
 	if(isPerkExisting("Disguiser")) {OfficerTypes.(type).perks.Disguiser = 1};
 	if(isPerkExisting("BasicCommerce")) {OfficerTypes.(type).perks.BasicCommerce = 1};
 	if(isPerkExisting("AdvancedCommerce")) {OfficerTypes.(type).perks.AdvancedCommerce = 1};
@@ -439,6 +475,7 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).skills.Sneak = 1;				// set to 1 for compensation of leadership
 	OfficerTypes.(type).skills.Sneak.importance = 4;
 	OfficerTypes.(type).usableoffictype = true;
+	OfficerTypes.(type).picture = "interfaces\navigator.tga";
 	if(isPerkExisting("ShipSpeedUp")) {OfficerTypes.(type).perks.ShipSpeedUp = 1};
 	if(isPerkExisting("ShipTurnRateUp")) {OfficerTypes.(type).perks.ShipTurnRateUp = 1};
 	if(isPerkExisting("StormProfessional")) {OfficerTypes.(type).perks.StormProfessional = 1};
@@ -468,6 +505,7 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).hplevelbonus = 1;
 	OfficerTypes.(type).pricemod = 1.02;
 	OfficerTypes.(type).noncontribchance = 15;
+	OfficerTypes.(type).picture = "interfaces\officer.tga";
 	if(isPerkExisting("IronWill")) {OfficerTypes.(type).perks.IronWill = 1};
 	if(isPerkExisting("SharedExperience")) {OfficerTypes.(type).perks.SharedExperience = 1};
 	if(isPerkExisting("Brander")) {OfficerTypes.(type).perks.Brander = 1};
@@ -492,6 +530,7 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).skills.Commerce = 0;
 	OfficerTypes.(type).skills.Sneak = 0;
 	OfficerTypes.(type).usableoffictype = true;
+	OfficerTypes.(type).picture = "interfaces\carpenter.tga";
 	if(isPerkExisting("LightRepair")) {OfficerTypes.(type).perks.LightRepair = 1};
 	if(isPerkExisting("InstantRepair")) {OfficerTypes.(type).perks.InstantRepair = 1};
 	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};    // added by El Rapido
@@ -517,6 +556,7 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).usableoffictype = true;
 	OfficerTypes.(type).hpbasebonus = 30;
 	OfficerTypes.(type).noncontribchance = 15;
+	OfficerTypes.(type).picture = "interfaces\doctor.tga";
 	if(isPerkExisting("ImprovePotions")) {OfficerTypes.(type).perks.ImprovePotions = 1};
 	if(isPerkExisting("DefendPoison")) {OfficerTypes.(type).perks.DefendPoison = 1};
 	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};

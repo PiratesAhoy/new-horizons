@@ -529,7 +529,7 @@ void BothQuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "HurtEnough";			
 			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "", 1.0, 1.0);		
-		//	Lai_QuestDelay("ReturnPlayer", 2.0);
+		//	Lai_QuestDelay("Tut_ReturnPlayer", 2.0);
 		break;
 
 		case "Tut_ReturnPlayer":
@@ -559,7 +559,7 @@ void BothQuestComplete(string sQuestName)
 			Lai_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			LAi_SetFightMode(PChar, false);
 
-			Lai_QuestDelay("ReturnPlayer", 1.5);
+			Lai_QuestDelay("Tut_ReturnPlayer", 1.5);
 			
 			Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "SeriousStopped";
 			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "", 1.0, 1.0);
@@ -591,7 +591,7 @@ void BothQuestComplete(string sQuestName)
 			Lai_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			LAi_SetFightMode(PChar, false);
 
-			Lai_QuestDelay("ReturnPlayer", 1.5);
+			Lai_QuestDelay("Tut_ReturnPlayer", 1.5);
 
 			LAi_group_SetRelation(LAI_GROUP_PLAYER, "tutorial", LAI_GROUP_FRIEND);
 			
@@ -1914,7 +1914,7 @@ void BothQuestComplete(string sQuestName)
 			PChar.quest.Tut_KillTutor.over = "yes";
 			locDisableUpdateTime = false;
 			Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "FinalStage";
-			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "ReturnPlayer", 4.0, 1.0);
+			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "Tut_ReturnPlayer", 4.0, 1.0);
 		break;
 
 		case "Tut_SkipTutorialOnShip":

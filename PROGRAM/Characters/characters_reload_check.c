@@ -73,6 +73,10 @@ bool chrCheckReload(ref loc, string reloadLocatorName)
 			{
 				if(GetTime()>22.0 || GetTime()<6.0) disableVal++;
 			}
+			if(CheckAttribute(at, "close_for_day") && sti(at.close_for_day)>0)	  //JRH
+			{
+				if(GetTime()>=6.0 && GetTime()<=22.0) disableVal++;
+			}
 			return disableVal <= 0;
 		}
 	}
@@ -171,7 +175,8 @@ int chrCheckReloadLink(ref loc, string reloadLocatorName) // KK
 					if (HasSubStr(goLoc.id, "_sailmaker")) mc.reloadStatus = "ToSailmaker";		//JRH
 					if (HasSubStr(goLoc.id, "_library")) mc.reloadStatus = "ToLibrary";			//JRH
 					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Opium Den") mc.reloadStatus = "ToOpium";			//JRH
-					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Abbey of the Maltese order") mc.reloadStatus = "ToMaltese";	//JRH
+					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Abbey of the Maltese order") mc.reloadStatus = "ToMaltese";	//JRH				
+					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Order of Malta") mc.reloadStatus = "ToMaltese";		//JRH							//JRH
 					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Naval academy") mc.reloadStatus = "ToAcademy";		//JRH
 					if (goLoc.id == "Antigua_Residence" || goLoc.id == "Greenford Naval HQ" 
 					 || goLoc.id == "Redmond Naval HQ" || goLoc.id == "Admiral_Office"

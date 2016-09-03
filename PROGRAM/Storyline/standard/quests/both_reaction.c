@@ -658,7 +658,7 @@ void BothQuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "HurtEnough";			
 			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "", 1.0, 1.0);		
-		//	Lai_QuestDelay("ReturnPlayer", 2.0);
+		//	Lai_QuestDelay("Tut_ReturnPlayer", 2.0);
 		break;
 
 		case "Tut_ReturnPlayer":
@@ -688,7 +688,7 @@ void BothQuestComplete(string sQuestName)
 			Lai_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			LAi_SetFightMode(PChar, false);
 
-			Lai_QuestDelay("ReturnPlayer", 1.5);
+			Lai_QuestDelay("Tut_ReturnPlayer", 1.5);
 			
 			Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "SeriousStopped";
 			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "", 1.0, 1.0);
@@ -720,7 +720,7 @@ void BothQuestComplete(string sQuestName)
 			Lai_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			LAi_SetFightMode(PChar, false);
 
-			Lai_QuestDelay("ReturnPlayer", 1.5);
+			Lai_QuestDelay("Tut_ReturnPlayer", 1.5);
 
 			LAi_group_SetRelation(LAI_GROUP_PLAYER, "tutorial", LAI_GROUP_FRIEND);
 			
@@ -2780,8 +2780,8 @@ void BothQuestComplete(string sQuestName)
 				break;
 
 				case 13:
-					loadPort = "Hispaniola_shore_03";
-					loadTown = "Hispaniola_shore_02"; // KK (separated from ship)
+					loadPort = "Hispaniola_shore_02"; // JRH was 03	ship nowhere to find
+					loadTown = "Hispaniola_shore_02"; // KK (separated from ship) JRH not any more
 					rldLocator = "reload1";
 				break;
 

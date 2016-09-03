@@ -166,7 +166,7 @@ Find a book to unlock | The character's ship takes 25% less damage from enemy fi
 ShipDefenceProfessional	{Professional Ship defence}
 perkShipDefenceProfessional
 {
-The character's ship takes 40% less damage from enemy fire and cannot be critically hit.
+The character's ship takes 40% less damage from enemy fire and has a drastically reduced chance to be critically hit.
 }
 
 FastReload	{Fast Reload}

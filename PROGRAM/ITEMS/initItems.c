@@ -227,34 +227,36 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 //Q2
   n = InitQuestBlade(n, "bladebarrel3", 	   "bladebarrel3", "JRH27",  4,    5, 10,      0,  5, 	  "", 0,   0);	  //Bladebarrel3 Eden tunnel
 
-  n = InitQuestBlade(n, "bladebottle_CC1",           "bottle_CC1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ black powder: grinded limestone
-  n = InitQuestBlade(n, "bladebottle_CG1",           "bottle_CG1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ grey powder: grinded SB2S3
+  n = InitQuestBlade(n, "bladebottle_CC1",           "bottle_CC1", "JRH22",  4,   "", "",      0,  0, 	  "", 0,   1);    //½ black powder: grinded limestone
+  n = InitQuestBlade(n, "bladebottle_CG1",           "bottle_CG1", "JRH22",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ grey powder: grinded SB2S3
   n = InitQuestBlade(n, "bladebottle_CV1_ss",        "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after first boiling: Sodium Sulfate
   n = InitQuestBlade(n, "bladebottle_CV1_sc",        "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after filter: Sodium Carbonate
   n = InitQuestBlade(n, "bladebottle_CV1_cao",       "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after grey powder oven heat2
   n = InitQuestBlade(n, "bladebottle_CV1_NH4Cl",     "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after dung in oven heat1
-  n = InitQuestBlade(n, "bladebottle_CR1",           "bottle_CR1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ red powder, after filter
-  n = InitQuestBlade(n, "bladebottle_BTc_mix3",      "bottle_BTc", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //3/4 Na2CO3 + H2O + CaS, before filter
-  n = InitQuestBlade(n, "bladebottle_BTc_hydr",      "bottle_BTc", "JRH13",  7,   "", "",      0,  0, 	  "", 0,   1);    //3/4 2NaCl + H2SO4
-  n = InitQuestBlade(n, "bladebottle_CV2",           "bottle_CV2", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //mix2 after oven
+  n = InitQuestBlade(n, "bladebottle_CR1",           "bottle_CR1", "JRH30",  9,   "", "",      0,  0, 	  "", 0,   1);    //½ red powder, after filter
+  n = InitQuestBlade(n, "bladebottle_BTc_mix3",      "bottle_BTc", "JRH30",  1,   "", "",      0,  0, 	  "", 0,   1);    //3/4 Na2CO3 + H2O + CaS, before filter
+  n = InitQuestBlade(n, "bladebottle_BTc_hydr",      "bottle_BTc", "JRH30",  1,   "", "",      0,  0, 	  "", 0,   1);    //3/4 2NaCl + H2SO4
+  n = InitQuestBlade(n, "bladebottle_CV2",           "bottle_CV2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //mix2 after oven
   n = InitQuestBlade(n, "bladebottle_BY2_mix7",      "bottle_BY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: yellow liquid
-  n = InitQuestBlade(n, "bladebottle_BY1_mix7",      "bottle_BY1", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //½: yellow liquid (as a rest)
+  n = InitQuestBlade(n, "bladebottle_BY1_mix7",      "bottle_BY1", "JRH22",  1,   "", "",      0,  0, 	  "", 0,   1);    //½: yellow liquid (as a rest)
   n = InitQuestBlade(n, "bladebottle_GY2",           "bottle_GY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: light yellow gas
-  n = InitQuestBlade(n, "bladebottle_BS1_LH",        "bottle_BS1", "JRH22",  6,   "", "",      0,  0, 	  "", 0,   1);    //½: Liquor Hepatis
+  n = InitQuestBlade(n, "bladebottle_BS1_LH",        "bottle_BS1", "JRH22",  2,   "", "",      0,  0, 	  "", 0,   1);    //½: Liquor Hepatis
   n = InitQuestBlade(n, "bladebottle_BS2_LH",        "bottle_BS2", "JRH22",  6,   "", "",      0,  0, 	  "", 0,   1);    //full: Liquor Hepatis
   n = InitQuestBlade(n, "bladebottle_BY2_mix9",      "bottle_BY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: light yellow powder
-  n = InitQuestBlade(n, "bladebottle_BP1_ps",        "bottle_BP1", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //½ purple: Pulvis Solaris
-  n = InitQuestBlade(n, "bladebottle_BP2_ps",        "bottle_BP2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full purple: Pulvis Solaris
-  n = InitQuestBlade(n, "bladebottle_BAU",           "bottle_BAU", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //
+  n = InitQuestBlade(n, "bladebottle_BP1_ps",        "bottle_BP1", "JRH30", 10,   "", "",      0,  0, 	  "", 0,   1);    //½ purple: Pulvis Solaris
+  n = InitQuestBlade(n, "bladebottle_BP2_ps",        "bottle_BP2", "JRH30", 11,   "", "",      0,  0, 	  "", 0,   1);    //full purple: Pulvis Solaris
+  n = InitQuestBlade(n, "bladebottle_BAU",           "bottle_BAU", "JRH30", 12,   "", "",      0,  0, 	  "", 0,   1);    //
 
   n = InitQuestBlade(n, "bladebottle_CB2_mix9",      "bottle_CB2", "JRH12", 12,   "", "",      0,  0, 	  "", 0,   1);    //full: dark yellow powder: dried mix9
-  n = InitQuestBlade(n, "bladebottle_CB1_mix9",      "bottle_CB1", "JRH12", 12,   "", "",      0,  0, 	  "", 0,   1);    //½ dark yellow powder: dried mix9
+  n = InitQuestBlade(n, "bladebottle_CB1_mix9",      "bottle_CB1", "JRH13",  4,   "", "",      0,  0, 	  "", 0,   1);    //½ dark yellow powder: dried mix9
   n = InitQuestBlade(n, "bladebottle_CC2_bps",       "bottle_AC2", "JRH22",  8,   "", "",      0,  0, 	  "", 0,   1);    //full: Black Pulvis Solaris
-  n = InitQuestBlade(n, "bladebottle_CQ1",           "bottle_CQ1", "JRH22",  8,   "", "",      0,  0, 	  "", 0,   1);    //½ liquid mercury
+  n = InitQuestBlade(n, "bladebottle_CQ1",           "bottle_CQ1", "JRH30", 13,   "", "",      0,  0, 	  "", 0,   1);    //½ liquid mercury
   n = InitQuestBlade(n, "bladebottle_CT2_mix11",     "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //full white 
   n = InitQuestBlade(n, "bladebottle_CA2_mix11",     "bottle_CA2", "JRH13",  7,   "", "",      0,  0, 	  "", 0,   1);    //full orange liquid: HgO + HNO2, before filter
   n = InitQuestBlade(n, "bladebottle_CR2_rps",       "bottle_CR2", "JRH12", 13,   "", "",      0,  0, 	  "", 0,   1);    //full: Red Pulvis Solaris
 
+  n = InitQuestBlade(n, "bladekeyring",       	     "keyring",     "JRH30", 14,   2,   2,      0,  0, 	  "", 0,   0);    //Maltese location
+ 
 
 //GoldBug
   n = InitQuestBlade(n, "bladeemptysack",                 "sack2", "JRH3",  10,    1,  1,      0,  0,     "", 0,   0);    //for driftwood
@@ -436,16 +438,16 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 
 //Q2
   n = InitQuestGun(n, "pistolcalciumsack", "calciumsack",   "JRH13", 15,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //alchemy
-  n = InitQuestGun(n, "pistolstonebasket_R","stonebasket_R", "", "",        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //mercury oxide
-  n = InitQuestGun(n, "pistolstonebasket_G","stonebasket_G", "", "",        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //limestone
-  n = InitQuestGun(n, "pistolstonebasket_M","stonebasket_M", "", "",        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //antimony
-  n = InitQuestGun(n, "pistolstonebasket_B","stonebasket_B", "", "",        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //black antimony
-  n = InitQuestGun(n, "pistolbucket_dung","bucket_dung","JRH21",  3,        "", "",      "", 1, 0.1,	 "", "", 		   "",                "", 0);
-  n = InitQuestGun(n, "pistolretort3",	  "retort3",    "JRH13",  9,        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
+  n = InitQuestGun(n, "pistolstonebasket_R","stonebasket_R","JRH30",  8,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //mercury oxide
+  n = InitQuestGun(n, "pistolstonebasket_G","stonebasket_G","JRH30",  6,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //limestone
+  n = InitQuestGun(n, "pistolstonebasket_M","stonebasket_M","JRH30",  5,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //antimony
+  n = InitQuestGun(n, "pistolstonebasket_B","stonebasket_B","JRH30",  7,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //black antimony
+  n = InitQuestGun(n, "pistolbucket_dung","bucket_dung",    "JRH21",  3,    "", "",      "", 1, 0.1,	 "", "", 		   "",                "", 0);
+  n = InitQuestGun(n, "pistolretort3",	  "retort3",        "JRH30",  4,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
   n = InitQuestGun(n, "pistolsulphur_WR", "sulphur_basket_WR","JRH21", 10,  "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //smaller in WoodesRogers
   n = InitQuestGun(n, "pistolcharcoal_WR","charcoal_jar_WR","JRH21",  6,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //smaller in WoodesRogers
-  n = InitQuestGun(n, "pistolfunnel",	 "pistolfunnel",    "JRH13",  9,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy2
-  n = InitQuestGun(n, "pistolcloth",	 "pistolcloth",     "JRH13",  9,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
+  n = InitQuestGun(n, "pistolfunnel",	 "pistolfunnel",    "JRH30",  2,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy2
+  n = InitQuestGun(n, "pistolcloth",	 "pistolcloth",     "JRH30",  3,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
 
 
 
@@ -499,9 +501,9 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //-----------|---|------------|----------|---|----|----|------|----|----|---|--|------|---|---|---|---|---|---|---|---|---|-----|--|--|--|skipsell--
   // HOLY ITEMS: scheffnow
   //-----------|---|------------|----------|---|----|----|------|----|----|---|--|------|---|---|---|---|---|---|---|---|---|-----|--|--|--|----------
-  n = InitItem(n,"holycross1", "",         8,  1, 0.01,  0,     0,   0,   1,  1, 1,    +2, +4,  0, +2, +2, +2,  0,  0,  0,  0,    1, 1, 1, 1);
+  n = InitItem(n,"holycross1", "",         8,  1, 0.01,  0,     0,   0,   1,  0, 1,    +2, +4,  0, +2, +2, +2,  0,  0,  0,  0,    1, 1, 1, 1);
   n = InitItem(n,"holycross2", "",         8,  2, 0.10,  0,     0,   0,   0,  0, 0,     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,    1, 1, 1, 1);
-  n = InitItem(n,"holycross3", "",         8,  3, 0.01,  0,     0,   0,   1,  1, 1,    +2,  0,  0,  0,  0,  0,  0,  0, +4, +4,    1, 1, 1, 1);
+  n = InitItem(n,"holycross3", "",         8,  3, 0.01,  0,     0,   0,   1,  0, 1,    +2,  0,  0,  0,  0,  0,  0,  0, +4, +4,    1, 1, 1, 1);
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // TATTOOS:   Alan_Smithee Opium Den & Tattoos
   //-----------|---|------------|----------|---|----|----|------|----|----|---|--|------|---|---|---|---|---|---|---|---|---|-----|--|--|--|----------
@@ -799,6 +801,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"pole3",			"pole3");		//bladeboom horizontal
   n = InitBuildingItemJRH(n,	"plank1",			"plank1");		//bladeplank on the edge
   n = InitBuildingItemJRH(n,	"plank1_long",			"plank1_long");		//bladeplank on the edge (deck2 prow 2 st)
+  n = InitBuildingItemJRH(n,	"plank1_very_long",		"plank1_very_long");	//Maltains
   n = InitBuildingItemJRH(n,	"plank2",			"plank2");		//bladeplank flat
   n = InitBuildingItemJRH(n,	"plank2_long",			"plank2_long");		//big plank flat (hold)
   n = InitBuildingItemJRH(n,	"plank3",			"plank3");		//bladeplank 45 up
@@ -909,7 +912,6 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 
 //JRH
 //Q2
-  n = InitBuildingItemJRH(n,	"suspension_bridge",		"suspension_bridge");	//
   n = InitBuildingItemJRH(n,	"ellipse_tower",		"ellipse_tower");	//
   n = InitBuildingItemJRH(n,	"cellar_wall",			"cellar_wall");		// = "B_house02" with an empty inside
   n = InitBuildingItemJRH(n,	"barn",				"barn");		//used for its ladder
@@ -1183,12 +1185,17 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
  n = InitBuildingItemJRH(n,	"wood_long_log",		"wood_long_log");	//Chinatown + Aruba
 
  n = InitBuildingItemJRH(n,	"gatedoor_w8",			"gatedoor_w8");		//gatedoor metal on dark stones, also in Assassin
+ n = InitBuildingItemJRH(n,	"door_H1_small",		"door_H1_small");	//Citadel Rock
  //Moved to common by Levis & JRH:
  n = InitBuildingItemJRH(n,	"door_M11",			"door_M11");		//ships: cabin door, a little bigger, hotel
  n = InitBuildingItemJRH(n,	"gatedoor_dark_stone",		"gatedoor_dark_stone");	//stonewall mine tunnelA no lights, hotel
  n = InitBuildingItemJRH(n,	"hatch2",			"hatch2");		//floor hatch (inside, loansh. Redm), hotel
  n = InitBuildingItemJRH(n,	"hatch11",			"hatch11");		//floor hatch mine tunnelA, hotel
  n = InitBuildingItemJRH(n,	"hatch11D_O3",			"hatch11D_O3");		//dito brighter, Pym's, hotel
+ n = InitBuildingItemJRH(n,	"suspension_bridge",		"suspension_bridge");	//Citadel
+ n = InitBuildingItemJRH(n,	"suspension_bridge_ropes",	"suspension_bridge_ropes");//Citadel
+ n = InitBuildingItemJRH(n,	"small_planks",			"small_planks");	//Citadel
+
 
   //--------------------------------------------------------------------------------------------------------------------------------
   // JRH <--
@@ -2452,6 +2459,33 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.disarm	= 0;
   n++;
 
+  // Bladeanchor big
+  makeref(itm,Items[n]);
+  itm.id = "bladeanchor_big";
+  itm.sound = "OBJECTS\DUEL\anchor.wav";
+  itm.skipsell = true;	// you can't buy them
+  itm.skiprand = true;
+  itm.skipequip = NO_SPECIALWEAPONED_NPC ;
+  itm.groupID = BLADE_ITEM_TYPE;
+  itm.name = "itmname_bladeanchor_big";
+  itm.describe = "itmdescr_bladeanchor_big";
+  itm.folder = "ammo";
+  itm.model = "OtherItemsJRH\bladeanchor_big";
+  itm.picIndex = 15;
+  itm.picTexture = "ITEMS_JRH28";
+  itm.price = 0;
+  itm.dmg_min = 10.0;
+  itm.dmg_max = 20.0;
+  itm.piercing = 15;
+  itm.minlevel = 1;
+  itm.rare = 0.00;				// should be unique
+  itm.block = 10;
+  itm.param.time = 0.1;
+  itm.param.colorstart = argb(64, 64, 64, 64);
+  itm.param.colorend = argb(0, 32, 32, 32);
+  itm.disarm	= 0;
+  n++;
+
   // Bladespyglass6, Selkirk
   makeref(itm,Items[n]);
   itm.id = "bladespyglass6";
@@ -2976,11 +3010,11 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //-----------|------|------|----------|---|----|-----|-----|----|----|--|--|----|---|---|---|---|---|---|---|---|---|---|---|---|---|-------------------------------
   // SPECIAL ITEMS:
   //-----------|------|------|----------|---|----|-----|-----|----|----|--|--|----|---|---|---|---|---|---|---|---|---|---|---|---|---|-------------------------------
-  n = InitItem(n,"cursedcoin", "",      4, 15, 0.10,   5,   1500, 0,   1,10, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);
+  n = InitItem(n,"cursedcoin", "",      4, 15, 0.10,   5,   1500, 0,   1, 1, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0, -1,  0,  0,  0,  1);
   n = InitItem(n,"lockpick",    "",     8,  8, 0.10,   5,    110, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1); // Lockpick
   n = InitItem(n,"ayahuasca", "", "Levis",  1, 0.00,   1,      1, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Ayahuasca
-  n = InitItem(n,"opium", "", 	  "Levis",  2, 0.00,   1,      0, 0,   0, 144, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Opium
-  n = InitItem(n,"vegetal", "",   "Levis",  3, 0.00,   1,    100, 0,   0, 256, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Vegetal
+  n = InitItem(n,"opium", "", 	  "Levis",  2, 0.00,   1,      0, 0,   0, 0, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Opium
+  n = InitItem(n,"vegetal", "",   "Levis",  3, 0.00,   1,    100, 0,   0, 0, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Vegetal
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   n = InitItem(n,"compass1", "",       11,  1,  0.20,  1,    508, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Cheap Compass
   n = InitItem(n,"compass2", "",       11,  2,  0.10,  4,   1916, 0,   1, 0, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0);// Normal Compass		// + skill item
@@ -3052,61 +3086,61 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // JEWELRY:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
-  n = InitItem(n,"jewelry1", "sapphire",2,  1,  0.05,  3,    753, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Sapphire			// + skill item //BB remove all skill bonus
-  n = InitItem(n,"jewelry2", "diamond", 2,  2,  0.02,  4,   1118, 0,   1, 1, 0,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Diamond				// + skill item //BB but add value to price
-  n = InitItem(n,"jewelry3", "ruby",    2,  3,  0.10,  1,    856, 0,   1, 1, 0,   0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ruby				// + skill item //BB this is valuable and rare
-  n = InitItem(n,"jewelry4", "emerald", 2,  4,  0.10,  2,    809, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1);// Emerald				// + skill item //BB gems and jewelry after all!
-  n = InitItem(n,"jewelry5", "",        2,  5,  0.10,  1,    209, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold Nugget			//BB economci adjusts also.
-  n = InitItem(n,"jewelry6", "",        2,  6,  0.10,  2,    320, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Silver sapphire ring
-  n = InitItem(n,"jewelry7", "",        2,  7,  0.10,  5,    650, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold emerald ring
-  n = InitItem(n,"jewelry8", "",        2,  8,  0.15,  1,    730, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Lucky Ring			// + skill item //BB as above, remove all
-  n = InitItem(n,"jewelry9", "",        2,  9,  0.15,  2,    960, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Bronze Cross		// + skill item //BB skill bonus for
-  n = InitItem(n,"jewelry10","",        2, 10,  0.10,  7,    714, 0,   1, 1, 0,   0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1);// Gold sapphire ring	// + skill item //BB jewelry items
-  n = InitItem(n,"jewelry11","pearlbig",2, 11,  0.15,  2,    693, 0,   1, 1, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Large pearl
-  n = InitItem(n,"jewelry12","pearlsmall",2,12, 0.20,  1,    320, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Small pearl
-  n = InitItem(n,"jewelry13","",        2, 13,  0.10,  3,    482, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Silver Brooch
-  n = InitItem(n,"jewelry14","",        2, 14,  0.05,  7,    911, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold Brooch
-  n = InitItem(n,"jewelry15","",        2, 15,  0.05,  9,   4390, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Emerald Pendant
-  n = InitItem(n,"jewelry16","",        2, 16,  0.02, 12,   6925, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gem necklace
+  n = InitItem(n,"jewelry1", "sapphire",2,  1,  0.05,  3,    753, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Sapphire			// + skill item //BB remove all skill bonus
+  n = InitItem(n,"jewelry2", "diamond", 2,  2,  0.02,  4,   1118, 0,   1, 0, 0,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Diamond				// + skill item //BB but add value to price
+  n = InitItem(n,"jewelry3", "ruby",    2,  3,  0.10,  1,    856, 0,   1, 0, 0,   0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ruby				// + skill item //BB this is valuable and rare
+  n = InitItem(n,"jewelry4", "emerald", 2,  4,  0.10,  2,    809, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1);// Emerald				// + skill item //BB gems and jewelry after all!
+  n = InitItem(n,"jewelry5", "",        2,  5,  0.10,  1,    209, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold Nugget			//BB economci adjusts also.
+  n = InitItem(n,"jewelry6", "",        2,  6,  0.10,  2,    320, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Silver sapphire ring
+  n = InitItem(n,"jewelry7", "",        2,  7,  0.10,  5,    650, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold emerald ring
+  n = InitItem(n,"jewelry8", "",        2,  8,  0.15,  1,    730, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Lucky Ring			// + skill item //BB as above, remove all
+  n = InitItem(n,"jewelry9", "",        2,  9,  0.15,  2,    960, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Bronze Cross		// + skill item //BB skill bonus for
+  n = InitItem(n,"jewelry10","",        2, 10,  0.10,  7,    714, 0,   1, 0, 0,   0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1);// Gold sapphire ring	// + skill item //BB jewelry items
+  n = InitItem(n,"jewelry11","pearlbig",2, 11,  0.15,  2,    693, 0,   1, 0, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Large pearl
+  n = InitItem(n,"jewelry12","pearlsmall",2,12, 0.20,  1,    320, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Small pearl
+  n = InitItem(n,"jewelry13","",        2, 13,  0.10,  3,    482, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Silver Brooch
+  n = InitItem(n,"jewelry14","",        2, 14,  0.05,  7,    911, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold Brooch
+  n = InitItem(n,"jewelry15","",        2, 15,  0.05,  9,   4390, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Emerald Pendant
+  n = InitItem(n,"jewelry16","",        2, 16,  0.02, 12,   6925, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gem necklace
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // INDIAN TRINKETS:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
-  n = InitItem(n,"indian1", "",         5,  1,  0.10,  3,   1750, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Irgantachul Idol
-  n = InitItem(n,"indian2", "",         5,  2,  0.05,  1,     70, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Weird Animal Figurine
-  n = InitItem(n,"indian3", "",         5,  3,  0.10,  1,    150, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Small Mosaic
-  n = InitItem(n,"indian4", "",         5,  4,  0.20,  1,     50, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Clay Jar
-  n = InitItem(n,"indian5", "",         5,  5,  0.05,  6,   1730, 1,   1, 1, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Markuchankatu Mask	// + skill item
-  n = InitItem(n,"indian6", "",         5,  6,  0.05,  4,    770, 1,   1, 1, 0,   0, +1,  0,  0,  0,  0,  0,  0,  0, -1,  0,  0,  0,  1);// Akumalartu Figurine	// +- skill item
-  n = InitItem(n,"indian7", "",         5,  7,  0.10,  3,   1720, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Pikachuatl Idol		// + skill item
-  n = InitItem(n,"indian8", "",         5,  8,  0.08,  4,   1440, 1,   1, 1, 0,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Royal Cuspidor
-  n = InitItem(n,"indian9", "",         5,  9,  0.05,  5,    460, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Bakachukta Idol
-  n = InitItem(n,"indian10", "",        5, 10,  0.07,  2,   1270, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1);// Yxtoikchatlu Idol
-  n = InitItem(n,"indian11", "",        5, 11,  0.10,  5,   1250, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  1);// Wisdom Tooth Figurine
-  n = InitItem(n,"indian12", "",        5, 12,  0.07,  5,    280, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Morchachtulak Idol
-  n = InitItem(n,"indian13", "",        5, 13,  0.10,  1,    140, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ancient Ritual Jar
-  n = InitItem(n,"indian14", "",        5, 14,  0.05,  5,    490, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ichtyloxtumba Idol
-  n = InitItem(n,"indian15", "",        5, 15,  0.05,  9,    290, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Clay Ritual Bath
-  n = InitItem(n,"indian16", "",        5, 16,  0.05,  3,    120, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Unusually Painted Pot
-  n = InitItem(n,"indian17", "stat1",   5, 14,  0.01, 55,   6000, 1,   1, 1, 0,  +1, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1);// Darien Idol			// quest item
+  n = InitItem(n,"indian1", "",         5,  1,  0.10,  3,   1750, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Irgantachul Idol
+  n = InitItem(n,"indian2", "",         5,  2,  0.05,  1,     70, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Weird Animal Figurine
+  n = InitItem(n,"indian3", "",         5,  3,  0.10,  1,    150, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Small Mosaic
+  n = InitItem(n,"indian4", "",         5,  4,  0.20,  1,     50, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Clay Jar
+  n = InitItem(n,"indian5", "",         5,  5,  0.05,  6,   1730, 1,   1, 0, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Markuchankatu Mask	// + skill item
+  n = InitItem(n,"indian6", "",         5,  6,  0.05,  4,    770, 1,   1, 0, 0,   0, +1,  0,  0,  0,  0,  0,  0,  0, -1,  0,  0,  0,  1);// Akumalartu Figurine	// +- skill item
+  n = InitItem(n,"indian7", "",         5,  7,  0.10,  3,   1720, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Pikachuatl Idol		// + skill item
+  n = InitItem(n,"indian8", "",         5,  8,  0.08,  4,   1440, 1,   1, 0, 0,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Royal Cuspidor
+  n = InitItem(n,"indian9", "",         5,  9,  0.05,  5,    460, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Bakachukta Idol
+  n = InitItem(n,"indian10", "",        5, 10,  0.07,  2,   1270, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1);// Yxtoikchatlu Idol
+  n = InitItem(n,"indian11", "",        5, 11,  0.10,  5,   1250, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  1);// Wisdom Tooth Figurine
+  n = InitItem(n,"indian12", "",        5, 12,  0.07,  5,    280, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Morchachtulak Idol
+  n = InitItem(n,"indian13", "",        5, 13,  0.10,  1,    140, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ancient Ritual Jar
+  n = InitItem(n,"indian14", "",        5, 14,  0.05,  5,    490, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ichtyloxtumba Idol
+  n = InitItem(n,"indian15", "",        5, 15,  0.05,  9,    290, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Clay Ritual Bath
+  n = InitItem(n,"indian16", "",        5, 16,  0.05,  3,    120, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Unusually Painted Pot
+  n = InitItem(n,"indian17", "stat1",   5, 14,  0.01, 55,   6000, 1,   1, 0, 0,  +1, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1);// Darien Idol			// quest item
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // MINERALS:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
-  n = InitItem(n,"mineral1", "",        7,  1,  0.08,  3,    410, 1,   3, 1, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Pyrite
-  n = InitItem(n,"mineral2", "",        7,  2,  0.09,  5,    880, 0,   2, 1, 0,   0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Garnet
-  n = InitItem(n,"mineral3", "",        7,  3,  0.08,  8,    950, 1,   2, 1, 0,   0,  0, +1,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1);// Chrysoberyl
-  n = InitItem(n,"mineral7", "",        7,  7,  0.12,  5,    650, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0, -1,  0,  0,  0,  1);// Smoky Quartz
-  n = InitItem(n,"mineral8", "",        7,  8,  0.08,  8,    630, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Tormaline
-  n = InitItem(n,"mineral9", "",        7,  9,  0.10,  9,    550, 0,   2, 1, 0,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  1);// Topaz
-  n = InitItem(n,"mineral15", "",       7, 15,  0.05,  6,    720, 0,   1, 1, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Platinum
-  n = InitItem(n,"mineral16", "",       7, 16,  0.10,  6,    210, 0,   4, 1, 0,  +1,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Rock Crystal
+  n = InitItem(n,"mineral1", "",        7,  1,  0.08,  3,    410, 1,   3, 0, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Pyrite
+  n = InitItem(n,"mineral2", "",        7,  2,  0.09,  5,    880, 0,   2, 0, 0,   0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Garnet
+  n = InitItem(n,"mineral3", "",        7,  3,  0.08,  8,    950, 1,   2, 0, 0,   0,  0, +1,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1);// Chrysoberyl
+  n = InitItem(n,"mineral7", "",        7,  7,  0.12,  5,    650, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0, -1,  0,  0,  0,  1);// Smoky Quartz
+  n = InitItem(n,"mineral8", "",        7,  8,  0.08,  8,    630, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Tormaline
+  n = InitItem(n,"mineral9", "",        7,  9,  0.10,  9,    550, 0,   2, 0, 0,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  1);// Topaz
+  n = InitItem(n,"mineral15", "",       7, 15,  0.05,  6,    720, 0,   1, 0, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Platinum
+  n = InitItem(n,"mineral16", "",       7, 16,  0.10,  6,    210, 0,   4, 0, 0,  +1,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Rock Crystal
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // SPECIAL:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
-  n = InitItem(n,"chinatiger", "",      7, 10,  0.03,  8,   4580, 0,   1, 1, 0,   0,  0,  0, +2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// LDH unhide 05Jan09
-  n = InitItem(n,"whiteskull", "",      7, 11,  0.08, 10,   2750, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
-  n = InitItem(n,"roseskull", "",       7, 12,  0.05, 13,   3250, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
-  n = InitItem(n,"blueskull", "",       7, 13,  0.01, 15,   8100, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
-  n = InitItem(n,"albatross", "",       7,  4,  0.05,  1,     25, 0,   1, 1, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0, -2,  1,  0,  0,  1);// Albatross
+  n = InitItem(n,"chinatiger", "",      7, 10,  0.03,  8,   4580, 0,   1, 0, 0,   0,  0,  0, +2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// LDH unhide 05Jan09
+  n = InitItem(n,"whiteskull", "",      7, 11,  0.08, 10,   2750, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
+  n = InitItem(n,"roseskull", "",       7, 12,  0.05, 13,   3250, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
+  n = InitItem(n,"blueskull", "",       7, 13,  0.01, 15,   8100, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
+  n = InitItem(n,"albatross", "",       7,  4,  0.05,  1,     25, 0,   1, 0, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0, -2,  1,  0,  0,  1);// Albatross
 
 if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0
 || sti(GetStorylineVar(FindCurrentStoryline(), "BART_PUZZLES")) > 0)
@@ -3220,7 +3254,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
       SKILLITEMS[SKILLITEMS_QUANTITY].id = itm.id;
       SKILLITEMS_QUANTITY++;
       if(!CheckAttribute(itm,"skill.num")) itm.skill.num = 1;
-      if(!CheckAttribute(itm,"skill.stack")) itm.skill.stack = 1;
+      if(!CheckAttribute(itm,"skill.stack")) itm.skill.stack = 0;			//JRH ?
       if(!CheckAttribute(itm,"skill.hidden")) itm.skill.hidden = 0;
     }
     //DumpAttributes(itm);
@@ -4297,7 +4331,7 @@ int InitItem( ref   ItemIndex,
               int   minlevel,
               float price,
               int   indiantype,
-              int numneeded, int stack, int hidden,
+              int numneeded, bool stack, int hidden,
               int leadership, int fencing, int sailing, int accuracy, int cannons,
               int grappling, int repair, int defence, int commerce, int sneak,
               int skiptrade, int skiprand, int skipequip, int skipsell
@@ -4316,8 +4350,8 @@ int InitItem( ref   ItemIndex,
   // GreatZen -->
   genitm.skill.num = 1;//MAXIMUS
   if ( numneeded > 1 )  genitm.skill.num      = numneeded;
-  genitm.skill.stack = 1;//MAXIMUS
-  if ( stack > 1 )      genitm.skill.stack    = stack;
+  genitm.skill.stack = false;						//JRH
+  if ( stack >= 1 )      genitm.skill.stack    = true;			//JRH
   genitm.skill.hidden = false;//MAXIMUS
   if ( hidden == 1 )    genitm.skill.hidden   = true;
 
