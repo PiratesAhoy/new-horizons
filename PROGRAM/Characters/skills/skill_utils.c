@@ -369,10 +369,15 @@ int CalcShipSkill(ref character, string skillName)
 // Set skill modifier from items
 int CalcSkillModifier(ref character, string skillName)
 {
-	int j, qty;
-	int mod = 0;
+	int j, qty, idi;
+	float mod = 0; //Levis: changed to float
 	ref itm;
-
+	string modid = "";
+	
+	//Levis first remove the old modifier
+	DeleteAttribute(character,"skill."+skillName+".modifier");
+	DeleteAttribute(character,"itemmods."+skillName);
+	
 	int iChrCabin = FindCharacterShipCabin(character); // KK
 	for(j = 0; j < SKILLITEMS_QUANTITY; j++)
 	{
@@ -396,7 +401,7 @@ int CalcSkillModifier(ref character, string skillName)
 			//Levis --> changed to fix the problem with overflowing the stack no applying any bonus
 			//Check if the player has enough items
 			if(qty >= sti(itm.skill.num))
-            		{
+            {
 				//Check if bonusses stack
 				if(itm.skill.stack == true)			//JRH
 				{
@@ -408,15 +413,26 @@ int CalcSkillModifier(ref character, string skillName)
 					//they don't stack so just add the mod once.
 					mod += sti(itm.skill.(skillName));
 				}
-           		}
+				//Levis for difficulty sake we divide the mod by the difficultylevel
+				mod = mod/GetDifficulty():
+				//Levis let's store which item gives the boost so we can display this in the character interface
+				idi = 0;
+				while(CheckAttribute(character,"skill."+skillName+".modifier.id"+idi))
+				{
+					idi++;
+				}
+				modid = "id"+idi;
+				character.itemmods.(skillName).(modid) = mod;
+				character.itemmods.(skillName).(modid).desc = itm.id;
+           	}
 			//Levis <--
 		}
 	}
 
 //	mod = iclamp(-MAX_SKILL_INCREASE, MAX_SKILL_INCREASE, mod); // PB: Single line
-	mod = iclamp(-100, MAX_SKILL_INCREASE, mod);		//JRH for cursed coin
+	mod = fclamp(-100, MAX_SKILL_INCREASE, mod);		//JRH for cursed coin
 	character.skill.(skillName).modifier = mod;
-	return mod;
+	return rounddown(mod); //we return the modifier as an rounded integer so it can be handled internally like this.
 }
 
 // Reset item skill modifier

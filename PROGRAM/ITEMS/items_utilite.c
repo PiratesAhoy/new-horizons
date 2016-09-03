@@ -286,9 +286,9 @@ string GetItemBonuses(string id)
 		{
 			if(comma) tempstr += ", ";
 			comma = true;
-			if(CheckAttribute(itm,"skill."+skillName+".set")) { tempstr += itm.skill.(skillName).set + " " + XI_ConvertString(skillName); continue; }
-			if(sti(itm.skill.(skillName)) > 0) { tempstr += "+" + itm.skill.(skillName) + " " + XI_ConvertString(skillName);}
-			else { tempstr += itm.skill.(skillName) + " " + XI_ConvertString(skillName); }
+			if(CheckAttribute(itm,"skill."+skillName+".set")) { tempstr += itm.skill.(skillName).set + " " + XI_ConvertString(skillName); continue; } //Levis: I believe this isn't used, delete?
+			if(sti(itm.skill.(skillName)) > 0) { tempstr += "+" + itm.skill.(skillName) + "/" + GetDifficulty() + " " + XI_ConvertString(skillName);}
+			else { tempstr += itm.skill.(skillName) + "/" + GetDifficulty() + " " + XI_ConvertString(skillName); }
 		}
 	}
 	if(CheckAttribute(itm,"skill.num")) { if(sti(itm.skill.num)>1) { tempstr += "; " + XI_ConvertString("rrequired") + " " + itm.skill.num + " " + XI_ConvertString("required"); } }
