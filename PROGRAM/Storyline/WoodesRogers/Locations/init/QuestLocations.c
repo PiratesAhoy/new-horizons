@@ -162,6 +162,7 @@ void LocationInitQuestLocations(ref n)
 	n = n + 1;
 
 //--------------------------------------------------------------------------
+
 	locations[n].id = "Swamp_island2";
 	//locations[n].id = "TownExitW_flooded";
 	locations[n].id.label = "Swamp Island";
@@ -462,7 +463,9 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].rats = "true";
 	Locations[n].island = "Redmond";
 	n = n + 1;
+
 //--------------------------------------------------------------------------
+
 	Locations[n].id = "Loghouse";
 	locations[n].id.label = "Log-house";		//open = on, try from start
 	Locations[n].image = "wr_loghouse.tga";
@@ -8621,7 +8624,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].locators_radius.box.box2 = 0.7;
 	Locations[n].locators_radius.box.box3 = 0.5;
 	Locations[n].locators_radius.box.box4 = 0.7;
-	Locations[n].locators_radius.box.box5 = 0.7;
+	Locations[n].locators_radius.box.box5 = 0.0001;			//big barrel not used
 	Locations[n].locators_radius.box.box6 = 0.7;
 	Locations[n].locators_radius.box.box7 = 0.5;
 	Locations[n].locators_radius.box.box8 = 0.5;
@@ -9204,8 +9207,178 @@ void LocationInitQuestLocations(ref n)
 	n = n + 1;
 
 //============================================================================
-//JRH Hands prison start
+//JRH Hands Charlestown Maltains
+//pär
+	locations[n].id = "bb_Maltains";
+	locations[n].id.label = "Order of Malta";
+	Locations[n].image = "church_wine_cellar.tga";
+	//Town sack
+	locations[n].townsack = "QuebradasCostillas";
+	//Sound
+	locations[n].type = "Rogers_cellar";
+	
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\Maltains";
+	locations[n].models.always.l1 = "Malta_Base";
+	locations[n].models.always.l2 = "bars_down";		//closed from start	
+	locations[n].models.always.fonars = "Malta_fonars";
+	locations[n].models.always.locators = "Malta_locators_JRH";	
 
+	//Day
+	locations[n].models.day.charactersPatch = "Malta_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "Malta_patch";
+	
+	//Environment
+	locations[n].environment.weather = "true";		//must be true to give fonars at night
+	locations[n].environment.sea = "false";
+	Locations[n].MaxSeaHeight = 0.2;
+	Locations[n].lockWeather = "Clear";
+
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Charlestown_port";		
+	locations[n].reload.l1.emerge = "reload17";		
+	locations[n].reload.l1.autoreload = "0";
+
+	locations[n].reload.l2.name = "reload2";
+	locations[n].reload.l2.go = "bb_maltains_office";
+	locations[n].reload.l2.emerge = "arrive";
+	locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.disable = 1;
+
+	locations[n].reload.l3.name = "reload3";
+	locations[n].reload.l3.go = "Charlestown_port";
+	locations[n].reload.l3.emerge = "reload18";
+	locations[n].reload.l3.autoreload = "0";
+	Locations[n].reload.l3.disable = 1;			//bars down from start
+
+	Locations[n].locators_radius.box.box1  = 0.5;
+	Locations[n].locators_radius.box.box2  = 0.5;
+	Locations[n].locators_radius.box.box3  = 0.5;
+	Locations[n].locators_radius.box.box4  = 0.5;
+	Locations[n].locators_radius.box.box5  = 0.5;
+	Locations[n].locators_radius.box.box6  = 0.5;
+	Locations[n].locators_radius.box.box7  = 0.5;
+	Locations[n].locators_radius.box.box8  = 0.5;
+	Locations[n].locators_radius.box.box9  = 0.5;
+	Locations[n].locators_radius.box.box10  = 0.5;
+	Locations[n].locators_radius.box.box11  = 0.5;
+	Locations[n].locators_radius.box.box12  = 0.5;
+	Locations[n].locators_radius.box.box13  = 0.5;
+	Locations[n].locators_radius.box.box14  = 0.5;
+	Locations[n].locators_radius.box.box15  = 0.5;
+	Locations[n].locators_radius.box.box16  = 0.5;
+	Locations[n].locators_radius.box.box17  = 0.5;
+	Locations[n].locators_radius.box.box18  = 0.5;
+	Locations[n].locators_radius.box.box19  = 0.5;
+	Locations[n].locators_radius.box.box20  = 0.5;
+	Locations[n].locators_radius.box.box21  = 0.001;	//to maltains_office
+	Locations[n].locators_radius.box.box22  = 0.5;
+	Locations[n].locators_radius.box.box23  = 0.5;
+	Locations[n].locators_radius.box.box24  = 0.6;
+	Locations[n].locators_radius.box.box25  = 0.5;
+	Locations[n].locators_radius.box.box26  = 0.5;
+	Locations[n].locators_radius.box.box27  = 0.5;
+	Locations[n].locators_radius.box.box28  = 0.5;
+	Locations[n].locators_radius.box.box29  = 0.5;
+	Locations[n].locators_radius.box.box30  = 0.2;
+	Locations[n].locators_radius.box.box31  = 0.5;
+	Locations[n].locators_radius.box.box32  = 0.2;
+	Locations[n].locators_radius.box.box33  = 0.5;
+	Locations[n].locators_radius.box.box34  = 0.3;
+	Locations[n].locators_radius.box.box35  = 0.3;
+	Locations[n].locators_radius.quest.quest2  = 1.5;
+	Locations[n].locators_radius.quest.quest4  = 1.5;
+
+	Locations[n].locators_radius.randitem.randitem1 = 1.0;
+	Locations[n].items.randitem1 = "book68";			//scroll
+	
+	Locations[n].locators_radius.randitem.randitem2 = 1.0;
+	Locations[n].items.randitem2 = "pillow";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.0001;
+	Locations[n].items.randitem3 = "chest5_coas";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.0001;
+	Locations[n].items.randitem4 = "book67";			//document
+
+	Locations[n].locators_radius.randitem.randitem5 = 1.3;
+	Locations[n].items.randitem5 = "book63";			//medicine
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.0001;
+	Locations[n].items.randitem6 = "elevator_button_up";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.0001;
+	Locations[n].items.randitem7 = "elevator_button_down";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "QuebradasCostillas";
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\inside\shipyard2";
+	Locations[n].filespath.textures = "locations\inside\Shipyard2\malta";
+	Locations[n].id = "bb_maltains_office";
+	locations[n].id.label = "Secret room";
+	Locations[n].image = "church_wine_cellar.tga";
+
+	//Town sack
+	Locations[n].townsack = "Quebradas Costillas";
+
+	//Sound
+	locations[n].type = "";//was "shop"
+
+	//Models
+	//Always
+	//THIS PART IS FOR THE Falaise de Fleur STYLE SHIPYARD(FANCY)
+	Locations[n].models.always.locators = "sh02_l_Malta";
+	Locations[n].models.always.tavern = "sh02";
+	Locations[n].models.always.window = "sh02_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	locations[n].models.always.l1 = "closed_windows";
+
+	//Day
+	//THIS PART IS FOR THE Falaise de Fleur STYLE SHIPYARD(FANCY)
+	Locations[n].models.day.charactersPatch = "sh02_p";
+
+	//Night
+	//THIS PART IS FOR THE Falaise de Fleur STYLE SHIPYARD(FANCY)
+	Locations[n].models.night.charactersPatch = "sh02_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "locator2";
+	Locations[n].reload.l1.go = "Charlestown_store";
+	Locations[n].reload.l1.emerge = "locator1";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.disable = 1;			//opened by guard
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "bb_Maltains";
+	Locations[n].reload.l2.emerge = "reload2";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].locators_radius.reload.reload2 = 0.5;
+	Locations[n].reload.l2.disable = 1;
+
+	Locations[n].locators_radius.sit.sit3 = 4.0;
+	
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "hatch11";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+
+	Locations[n].island = "QuebradasCostillas"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+//JRH Hands prison start
     	Locations[n].id = "bb_prison_outskirt";
 	locations[n].id.label = "Outside spanish prison";
 	Locations[n].filespath.models = "locations\Town_Redmond\REDexit1";
@@ -9213,7 +9386,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].image = "Town_Redmond_Exit1.tga";
 
 	//Town sack
-	Locations[n].townsack = "Redmond";
+	locations[n].townsack = "Charlestown";
 
 	//Sound
 	locations[n].type = "prison_ships";
@@ -12702,6 +12875,408 @@ Locations[n].reload.l9.autoreload = "0";
 	Locations[n].items.randitem4 = "textileB";
 
 	Locations[n].island = "KhaelRoa";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	Locations[n].id = "Citadel_tower_stairs1";
+	locations[n].id.label = "Citadel";
+	Locations[n].filespath.models = "locations\inside\store04";
+	Locations[n].filespath.textures = "locations\inside\store04\fort";
+	Locations[n].image = "wr_wood_tower2.tga";
+
+	//Town sack
+	Locations[n].townsack = "Khael Roa";
+
+	//Sound
+	locations[n].type = "silent_cave_seashore";		
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "store04_locators_JRH_C";
+	Locations[n].models.always.tavern = "store04";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "store04_patch_JRH";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\shp_";
+
+	//Reload map
+
+	//up
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "Citadel_tower_bedroom";
+    	Locations[n].reload.l4.emerge = "reload1";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "";
+	Locations[n].locators_radius.reload.reload4 = 0.5;
+	locations[n].reload.l4.disable = 0;
+
+	//down = blocked
+	Locations[n].reload.l7.name = "reload7";
+	Locations[n].reload.l7.go = "Citadel_damaged";
+	Locations[n].reload.l7.emerge = "reload1";
+	Locations[n].reload.l7.autoreload = "0";
+	Locations[n].reload.l7.label = "";
+	locations[n].reload.l7.disable = 1;
+
+	//bridge
+	Locations[n].reload.l8.name = "reload8";
+	Locations[n].reload.l8.go = "Eleuthera_shore";
+	Locations[n].reload.l8.emerge = "box17";
+	Locations[n].reload.l8.autoreload = "0";
+	Locations[n].reload.l8.label = "";
+
+	Locations[n].locators_radius.goto.goto3 = 1.0;
+	Locations[n].locators_radius.box.box1 = 0.7;
+	Locations[n].locators_radius.box.box2 = 0.7;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "gatedoor_LH1";	
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.001;
+	Locations[n].items.randitem2 = "door_N09";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Eleuthera";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	//only for the label
+	Locations[n].id = "Citadel_damaged";
+	locations[n].id.label = "This part of the Citadel is damaged";
+	Locations[n].filespath.models = "locations\inside\store04";
+	Locations[n].filespath.textures = "locations\inside\store04\fort";
+	Locations[n].image = "wr_wood_tower2.tga";
+
+	//Town sack
+	Locations[n].townsack = "Khael Roa";
+
+	//Sound
+	locations[n].type = "silent_cave_seashore";		
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "store04_locators_JRH_C";
+	Locations[n].models.always.tavern = "store04";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "store04_patch_JRH";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "gatedoor_LH1";	
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.001;
+	Locations[n].items.randitem2 = "door_N09";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Eleuthera";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	Locations[n].id = "Citadel_tower_bedroom";
+	locations[n].id.label = "Maynard's room";
+	Locations[n].filespath.models = "locations\inside\mh5";
+	Locations[n].filespath.textures = "locations\inside\mh5\fort";
+	Locations[n].image = "Inside_mh5.tga";
+
+	//Town sack
+//	Locations[n].townsack = "Falaise de Fleur";
+
+	//Sound
+	locations[n].type = "Fort_Moultrie_inside";
+//	locations[n].fastreload = "Falaise_De_Fleur";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "mh5_l_JRH";
+	Locations[n].models.always.house = "mh5";
+//	Locations[n].models.always.window = "mh5_w";			//try off
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "mh5_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "mh5_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\shp_";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Citadel_tower_stairs1";
+	Locations[n].reload.l1.emerge = "reload4";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].locators_radius.reload.reload1 = 0.8;
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "Eleuthera_shore";
+	Locations[n].reload.l2.emerge = "quest3";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].locators_radius.reload.reload2 = 0.6;
+
+	Locations[n].locators_radius.box.box1 = 0.001;
+	Locations[n].locators_radius.box.box2 = 0.001;
+	Locations[n].locators_radius.box.box3 = 0.001;
+	Locations[n].locators_radius.box.box4 = 0.001;
+	Locations[n].locators_radius.box.box5 = 0.001;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.1;
+	Locations[n].items.randitem1 = "hatch11D";
+	
+	Locations[n].locators_radius.randitem.randitem2 = 0.1;
+	Locations[n].items.randitem2 = "gatedoor_store4_wall";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.1;
+	Locations[n].items.randitem3 = "gatedoor_store4_wall";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.1;
+	Locations[n].items.randitem4 = "gatedoor_store4_wall";
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.0001;
+	Locations[n].items.randitem5 = "carpet1";
+	
+	Locations[n].island = "Eleuthera";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	Locations[n].id = "Citadel_tower_stairs2";
+	locations[n].id.label = "Citadel";
+	Locations[n].filespath.models = "locations\inside\store04";
+	Locations[n].filespath.textures = "locations\inside\store04\fort";
+	Locations[n].image = "wr_wood_tower2.tga";
+
+	//Town sack
+	Locations[n].townsack = "Khael Roa";
+
+	//Sound
+	locations[n].type = "silent_cave_seashore";		
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "store04_locators_JRH_C";
+	Locations[n].models.always.tavern = "store04";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "store04_patch_JRH";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\shp_";
+
+	//Reload map
+
+	//up = blocked
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "Citadel_damaged";
+    	Locations[n].reload.l4.emerge = "reload6";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "";
+	Locations[n].locators_radius.reload.reload4 = 0.5;
+	locations[n].reload.l4.disable = 1;
+
+	//down
+	Locations[n].reload.l7.name = "reload7";
+	Locations[n].reload.l7.go = "Citadel_tower_stairs3";
+	Locations[n].reload.l7.emerge = "reload4";
+	Locations[n].reload.l7.autoreload = "0";
+	Locations[n].reload.l7.label = "";
+	Locations[n].locators_radius.reload.reload7 = 1.8;
+
+	//ground
+	Locations[n].reload.l8.name = "reload8";
+	Locations[n].reload.l8.go = "Eleuthera_shore";
+	Locations[n].reload.l8.emerge = "box32";
+	Locations[n].reload.l8.autoreload = "0";
+	Locations[n].reload.l8.label = "";
+
+	Locations[n].locators_radius.goto.goto3 = 1.0;
+	Locations[n].locators_radius.box.box1 = 0.7;
+	Locations[n].locators_radius.box.box2 = 0.7;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "gatedoor_LH1";	
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.001;
+	Locations[n].items.randitem2 = "door_N09";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Eleuthera";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	Locations[n].id = "Citadel_tower_stairs3";
+	locations[n].id.label = "Citadel";	
+	Locations[n].filespath.models = "locations\inside\store04";
+	Locations[n].filespath.textures = "locations\inside\store04\fort_darker";
+	Locations[n].image = "wr_wood_tower2.tga";
+
+	//Town sack
+	Locations[n].townsack = "Khael Roa";
+
+	//Sound
+	locations[n].type = "silent_cave_seashore";		
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "store04_locators_JRH_C";
+	Locations[n].models.always.tavern = "store04";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "store04_patch_JRH";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+
+	//up
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "Citadel_tower_stairs2";
+    	Locations[n].reload.l4.emerge = "goto3";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "";
+	Locations[n].locators_radius.reload.reload4 = 0.5;
+
+	//down
+	Locations[n].reload.l7.name = "reload7";
+	Locations[n].reload.l7.go = "Citadel_tower_stairs4";
+	Locations[n].reload.l7.emerge = "reload4";
+	Locations[n].reload.l7.autoreload = "0";
+	Locations[n].reload.l7.label = "";
+
+	Locations[n].locators_radius.reload.reload8 = 0.0001;
+	Locations[n].locators_radius.goto.goto3 = 1.0;
+	Locations[n].locators_radius.box.box1 = 0.7;
+	Locations[n].locators_radius.box.box2 = 0.7;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "gatedoor_LH1";	
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.001;
+	Locations[n].items.randitem2 = "key8";			//invisible
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Eleuthera";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	Locations[n].id = "Citadel_tower_stairs4";
+	locations[n].id.label = "Citadel";
+	Locations[n].filespath.models = "locations\inside\store04_stone";
+	Locations[n].image = "wr_wood_tower2.tga";
+
+	//Town sack
+	Locations[n].townsack = "Khael Roa";
+
+	//Sound
+	locations[n].type = "silent_cave_seashore";		
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "store04_locators_JRH_C3";
+	Locations[n].models.always.tavern = "store04";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "store04_patch_JRH";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "store04_patch_JRH";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+
+	//up = stairs 2
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "Citadel_tower_stairs3";
+    	Locations[n].reload.l4.emerge = "goto3";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "";
+	Locations[n].locators_radius.reload.reload4 = 0.5;
+	locations[n].reload.l4.disable = 0;
+
+	Locations[n].locators_radius.goto.goto3 = 1.0;
+	Locations[n].locators_radius.box.box1 = 0.7;
+	Locations[n].locators_radius.box.box2 = 0.7;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "gatedoor_LH1";	
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Eleuthera";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Inside\Grot";
+
+	Locations[n].id = "Citadel_cave";
+	locations[n].id.label = "Citadel Cave";
+	Locations[n].image = "Inside_Grot.tga";
+	//Sound
+	locations[n].type = "silent_cave_seashore";
+	//Models
+	Locations[n].models.back = "back\grotenv_";
+	//Always
+	Locations[n].models.always.cave = "Grot";
+	Locations[n].models.always.locators = "Grot_l_JRH_C";
+	//Day
+	Locations[n].models.day.charactersPatch = "Grot_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Grot_p";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "true";
+	//Reload map
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "Eleuthera_shore";
+	Locations[n].reload.l2.emerge = "reload4";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.label = "Jungle.";
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.0001;
+	Locations[n].items.randitem1 = "gatedoor_w7";
+
+	Locations[n].island = "Eleuthera"; // NK 04-08-29
 	n = n + 1;
 
 // -------------------------------------------------

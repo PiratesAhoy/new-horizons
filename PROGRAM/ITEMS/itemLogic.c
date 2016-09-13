@@ -365,6 +365,11 @@ void Item_OnPickItem()
 						}
 					}
 				}
+
+				if(Items[sti(activeLocation.(activeRandItemAttribute))].id == "book63" 
+				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "book67"
+				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "book68")  LAi_QuestDelay("6_malta_books_check", 1.5);
+				
 	//------------------------------------------------------------------------------------------------------------
 				SendMessage(&randItemModels[sti(chr.activeItem)], "lslff", MSG_MODEL_BLEND, "blenditemlit", 1000, 1.0, 0.0);
 				GiveItem2Character(GetMainCharacter(), Items[sti(activeLocation.(activeRandItemAttribute))].id);
@@ -2255,10 +2260,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 		if(_location.id=="wr_corv_capmd")spawnItemsCount = 0;
 		if(_location.id=="wr_gall_captain")spawnItemsCount = 0;
 		if(_location.id=="Defoes_cabin")spawnItemsCount = 0;
-		
 		if(_location.id=="wr_farm_bedroom")spawnItemsCount = 0;
-		
-		
 		if(_location.id=="wr_farm_grot")spawnItemsCount = 0;
 		if(_location.id=="church_wine_cellar")spawnItemsCount = 0;
 		if(_location.id=="church_choir")spawnItemsCount = 0;
@@ -2299,6 +2301,37 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 		if(_location.id=="GB_Charleston_governor_bedroom")spawnItemsCount = 0;
 		if(_location.id=="GB_Charleston_governor_kitchen")spawnItemsCount = 0;
 		if(_location.id=="GB_Charleston_store")spawnItemsCount = 0;
+
+		if(_location.id=="bb_Maltains")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box12.items.Malta_relic = 1;
+			locations[FindLocation(chr.location)].box12.items.book66 = 1;
+			locations[FindLocation(chr.location)].box23.items.book65 = 1;
+			locations[FindLocation(chr.location)].box30.items.book64 = 1;
+			
+			locations[FindLocation(chr.location)].box31.items.Malta_cross = 1;
+			locations[FindLocation(chr.location)].box24.items.Malta_outfit = 1;
+			locations[FindLocation(chr.location)].box24.items.Malta_syringe = 1;
+			locations[FindLocation(chr.location)].box24.items.Malta_box = 1;
+			locations[FindLocation(chr.location)].box22.items.Malta_statue = 1;
+			locations[FindLocation(chr.location)].box6.items.Malta_medkit = 1;
+			locations[FindLocation(chr.location)].box8.items.Malta_icon = 1;
+			locations[FindLocation(chr.location)].box8.items.Malta_censer = 1;
+			
+			locations[FindLocation(chr.location)].box30.items.Malta_poison = 1;
+		}
+
+		if(_location.id=="Citadel_tower_bedroom")
+		{
+			spawnItemsCount = 0;
+		}
+
+		if(_location.id=="Citadel_cave")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.bladespade = 1;
+		}
 
 		if(_location.id=="Cartagena Hotel")
 		{
@@ -2671,6 +2704,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box1.items.pistolsalt = 6;
 			locations[FindLocation(chr.location)].box2.items.pistolcloth = 7;
 			locations[FindLocation(chr.location)].box3.items.pistolfunnel = 1;
+			locations[FindLocation(chr.location)].box3.items.bladebottle_CE0 = 9;
 		}
 
 		if(_location.id=="wr_farm_booty")
@@ -2685,6 +2719,8 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 		if(_location.id=="wr_farm_booty2")
 		{
 			spawnItemsCount = 0;
+
+			locations[FindLocation(chr.location)].box3.items.bladebottle_CV1_cao = 4;
 			locations[FindLocation(chr.location)].box3.items.pistolstonebasket_M = 4;
 			locations[FindLocation(chr.location)].box3.items.pistolstonebasket_B = 5;
 			locations[FindLocation(chr.location)].box1.items.pistolstonebasket_R = 4;

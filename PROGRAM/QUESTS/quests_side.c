@@ -7459,9 +7459,12 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Rian Dekkers"));
 			LAi_SetActorType(characterFromID("Janneke Blinkerhof"));
 			LAi_SetActorType(characterFromID("Lisebet Schefold"));
-			LAi_ActorGoToLocation(characterFromID("Rian Dekkers"), "reload", "reload1", "none", "", "", "", 15.0);
-			LAi_ActorGoToLocation(characterFromID("Janneke Blinkerhof"), "reload", "reload1", "none", "", "", "", 15.0);
-			LAi_ActorGoToLocation(characterFromID("Lisebet Schefold"), "reload", "reload1", "none", "", "", "", 15.0);
+//			LAi_ActorGoToLocation(characterFromID("Rian Dekkers"), "reload", "reload1", "none", "", "", "", 15.0);
+//			LAi_ActorGoToLocation(characterFromID("Janneke Blinkerhof"), "reload", "reload1", "none", "", "", "", 15.0);
+//			LAi_ActorGoToLocation(characterFromID("Lisebet Schefold"), "reload", "reload1", "none", "", "", "", 15.0);
+			LAi_ActorGoToLocation(characterFromID("Rian Dekkers"), "reload", "reload9", "none", "", "", "", 60.0);		// GR: The women have just been told their children are in port,
+			LAi_ActorGoToLocation(characterFromID("Janneke Blinkerhof"), "reload", "reload9", "none", "", "", "", 60.0);	// GR: so make them go to the port, and give them time to get there.
+			LAi_ActorGoToLocation(characterFromID("Lisebet Schefold"), "reload", "reload9", "none", "", "", "", 60.0);
 		break;
 
 // --> CatalinaThePirate Fix for Animist Quest
@@ -7544,12 +7547,16 @@ void SideQuestComplete(string sQuestName)
 
 		case "return_priest_complete2":
 			DoReloadCharacterToLocation("Muelle_Church", "reload", "reload1");
-			changeCharacterAddressGroup(characterfromID("padre Domingues"), "Muelle_Church", "goto", "goto1");
+			changeCharacterAddressGroup(characterfromID("padre Domingues"), "Muelle_Church", "goto", "goto1");	// GR: if you didn't return to Animist cave cell to release Domingues, he appears
+			changeCharacterAddress(characterfromID("second_spaniard_priest"), "none", "");				// here anyway but Padre Robano is not removed. Do it now instead.
 			LAi_SetActorType(characterFromID("padre Domingues"));
 			LAi_ActorDialog(characterFromID("padre Domingues"), pchar, "", 0.0, 0.0);
 			characters[GetCharacterIndex("padre Domingues")].dialog.currentnode = "Thank_You";
 
 			pchar.quest.return_priest_complete.over = "yes";
+
+			Locations[FindLocation("Muelle_church")].reload.l1.go = "Muelle_town_04"; //GR: put church exit back to normal
+			Locations[FindLocation("Muelle_church")].reload.l1.emerge = "reload4";
 		break;
 
 		case "return_priest_complete3":

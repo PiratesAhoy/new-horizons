@@ -1852,3 +1852,10 @@ Let's keep it on the table.{Let's keep it on the table.}
 
 Yes! That was the last ghost. Maybe the indian wants to talk to me now...{Yes! That was the last ghost. Maybe the indian wants to talk to me now...}
 Cartagena Hotel{Cartagena Hotel}
+
+No, it's stuck in the sand.{No, it's stuck in the sand.}
+Order of Malta only in WoodesRogers quest{Order of Malta only in WoodesRogers quest}
+Order of Malta{Order of Malta}
+It's not time for any meal now.{It's not time for any meal now.}
+Hey, it's occupied.{Hey, it's occupied.}
+No, I'm only allowed to take books and documents.{No, I'm only allowed to take books and documents.}

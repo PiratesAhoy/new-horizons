@@ -710,7 +710,7 @@ void SetVariable()
 //		SetNewPicture("TYPEPICT", "");
 //	} else {
 	if ( IsCompanion(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\blank_ship.tga");			// changed after build 11 by KAM
-	if ( IsOfficer(xi_refCharacter) ) //SetNewPicture("TYPEPICT", "interfaces\kam_isofficer.tga");				// changed after build 11 by KAM
+	/*if ( IsOfficer(xi_refCharacter) ) //SetNewPicture("TYPEPICT", "interfaces\kam_isofficer.tga");				// changed after build 11 by KAM
 	{
 		if(CheckAttribute(xi_refCharacter,"quest.officertype"))
 		{
@@ -729,14 +729,15 @@ void SetVariable()
 				// <-- KK
 			}
 		}
-	}
+	}*/
+	if ( IsOfficer(xi_refCharacter) ) SetNewPicture("TYPEPICT", GetOfficerPricture(xi_refCharacter)); //Levis put all images in 1 function
 	if ( IsOfficerCompanion(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isofficercompanion.tga");		// changed after build 11 by KAM
 	if ( IsOnShoreLeave(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isonshoreleave.tga");			// added after build 11 by KAM
 	if ( IsOfficerOnShoreLeave(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isofficeronshoreleave.tga");	// added after build 11 by KAM
 	if ( IsPrisoner(xi_refCharacter) ) // KK
 	{
-		SetNewPicture("TYPEPICT", "interfaces\isprisoned.tga");  // added by MAXIMUS
-		if(CheckAttribute(xi_refCharacter,"quest.officertype"))  // added by MAXIMUS
+		SetNewPicture("TYPEPICT1", "interfaces\isprisoned.tga");  // added by MAXIMUS //Levis changed to use TYPIC 1 so we don't need to do extra stuff
+		/*if(CheckAttribute(xi_refCharacter,"quest.officertype"))  // added by MAXIMUS
 		{
 			switch (xi_refCharacter.quest.officertype)
 			{
@@ -753,7 +754,7 @@ void SetVariable()
 				case OFFIC_TYPE_TRADER: SetNewPicture("TYPEPICT1", "interfaces\trader.tga"); break;
 // <-- KK
 			}
-		}
+		}*/
 	}
 // Viper - CharSheetEnh End
 	if (!CheckAttribute(GameInterface.strings,"OfficerType"))
@@ -1598,6 +1599,47 @@ void ShowInfo(string nodeName)
 	header = LanguageConvertString(ilngid, nodeName + "_Header");
 	text = LanguageConvertString(ilngid, nodeName + "_Descr");
 	img = LanguageConvertString(ilngid, nodeName + "_Img");
+	if(nodeName == "ALEADERSHIP" || nodeName == "AFENCING" || nodeName == "ASAILING" || nodeName == "AACCURACY" || nodeName == "ACANNONS"
+	|| nodeName == "AGRAPPLING" || nodeName == "AREPAIR" || nodeName == "ADEFENCE" || nodeName == "ACOMMERCE" || nodeName == "ASNEAK")
+	{
+		//Create a newline string we use to build the description
+		string newLineStr = GlobalStringConvert("newline");
+		//Determine the skillname
+		string skillname = strcut(nodeName,1,strlen(nodeName)-1);
+		aref mods, mod, item;
+		float modifier = 0.0;
+		string suf;
+		//Loop trough all item mods
+		makearef(mods,xi_refCharacter.itemmods.(skillName));
+		int nummods = GetAttributesNum(mods);
+		if(nummods>0) text += newLineStr+"Bonuses by items:";
+		for(int n = 0; n < nummods; n++)
+		{
+			//Get the itemmod
+			mod = GetAttributeN(mods, n);
+			//Find the specific item
+			Items_FindItem(mod.desc,&item);
+			//Build the string
+			modifier = roundto(stf(GetAttributeValue(mod)),2);
+			suf = "+";
+			if(modifier < 0) suf = "-";
+			text += newLineStr+suf+modifier+" - "+GetAssembledString(TranslateString("", item.name), item);
+		}
+		//Loop trough all charmods
+		makearef(mods,xi_refCharacter.charmods.(skillName));
+		nummods = GetAttributesNum(mods);
+		if(nummods>0) text += newLineStr+"Bonuses by other things:";
+		for(n = 0; n < nummods; n++)
+		{
+			//Get the itemmod
+			mod = GetAttributeN(mods, n);
+			//Build the string
+			modifier = roundto(stf(GetAttributeValue(mod)),2);
+			suf = "+";
+			if(modifier < 0.0) suf = "-";
+			text += newLineStr+suf+modifier+" - "+mod.desc;
+		}
+	}
 	LanguageCloseFile(ilngid);
 	if (header == "" && text == "") return;
 	switch (nodeName) {

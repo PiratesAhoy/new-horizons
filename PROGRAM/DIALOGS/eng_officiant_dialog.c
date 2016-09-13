@@ -116,7 +116,7 @@ void ProcessDialogEvent()
 									link.l1 = DLG_TEXT[5];
 									link.l1.go = "exit";
 									link.l2 = DLG_TEXT[44];
-									if(sti(pchar.rank) > 4)
+									if(sti(pchar.rank) > 10)
 									{
 										if (makeint(environment.time) >= 22.0 || makeint(environment.time) < 10.0)
 										{

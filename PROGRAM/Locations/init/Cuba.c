@@ -1179,7 +1179,7 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l3.emerge = "reload3";
 	Locations[n].reload.l3.autoreload = "1";
 	Locations[n].reload.l3.label = "Jungle.";
-	Locations[n].locators_radius.reload.reload2_back = 3.0;
+	Locations[n].locators_radius.reload.reload2_back = 5.0;		//JRH 3.0 was too small
 
 	Locations[n].reload.l2.name = "boat";
 	Locations[n].reload.l2.go = "Cuba";

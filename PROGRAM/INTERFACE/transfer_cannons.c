@@ -526,13 +526,13 @@ void ProcessExit_yes()
 
     if(myCurQty>0)
 	{
-		if(myCaliber>enCaliber) SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(tmpChar));
+		if(myCaliber>enCaliber || myCaliber==0) SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(tmpChar));
 		else SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(xi_refCharacter));
 	}
 
     if(enCurQty>0)
 	{
-		if(enCaliber>myCaliber) SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(xi_refCharacter));
+		if(enCaliber>myCaliber || enCaliber==0) SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(xi_refCharacter));
 		else SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(tmpChar));
 	}
 
@@ -1126,13 +1126,13 @@ void CharacterExit_yes()
 
     if(myCurQty>0)
 	{
-		if(myCaliber>enCaliber) SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(tmpChar));
+		if(myCaliber>enCaliber || myCaliber==0) SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(tmpChar));
 		else SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(xi_refCharacter));
 	}
 
     if(enCurQty>0)
 	{
-		if(enCaliber>myCaliber) SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(xi_refCharacter));
+		if(enCaliber>myCaliber || enCaliber==0) SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(xi_refCharacter));
 		else SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(tmpChar));
 	}
 

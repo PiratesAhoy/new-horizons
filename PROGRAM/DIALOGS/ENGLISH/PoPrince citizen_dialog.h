@@ -12,7 +12,7 @@ string DLG_TEXT[170] = {
 ". I'd like to ask you some questions.",
 "You can call me captain ",
 ". I'd just like some information.",
-"Hello, captain",
+"Hello, captain ",
 ". What brings you to our colony?",
 "Ah, captain ",
 ". ",

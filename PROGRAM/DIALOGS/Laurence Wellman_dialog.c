@@ -138,6 +138,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "node_Rys Bloom_4":
+			if (PChar.sex == "man") Preprocessor_Add("person", "man");
+			else Preprocessor_Add("person", "woman");
 			d.Text = DLG_TEXT[45] + GetMyName(Pchar) + DLG_TEXT[46];
 			Link.l1 = DLG_TEXT[47];
 			if(makeint(PChar.reputation)>=6)

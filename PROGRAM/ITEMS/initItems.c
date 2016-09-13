@@ -227,30 +227,30 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 //Q2
   n = InitQuestBlade(n, "bladebarrel3", 	   "bladebarrel3", "JRH27",  4,    5, 10,      0,  5, 	  "", 0,   0);	  //Bladebarrel3 Eden tunnel
 
-  n = InitQuestBlade(n, "bladebottle_CC1",           "bottle_CC1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ black powder: grinded limestone
-  n = InitQuestBlade(n, "bladebottle_CG1",           "bottle_CG1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ grey powder: grinded SB2S3
+  n = InitQuestBlade(n, "bladebottle_CC1",           "bottle_CC1", "JRH22",  4,   "", "",      0,  0, 	  "", 0,   1);    //½ black powder: grinded limestone
+  n = InitQuestBlade(n, "bladebottle_CG1",           "bottle_CG1", "JRH22",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ grey powder: grinded SB2S3
   n = InitQuestBlade(n, "bladebottle_CV1_ss",        "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after first boiling: Sodium Sulfate
   n = InitQuestBlade(n, "bladebottle_CV1_sc",        "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after filter: Sodium Carbonate
   n = InitQuestBlade(n, "bladebottle_CV1_cao",       "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after grey powder oven heat2
   n = InitQuestBlade(n, "bladebottle_CV1_NH4Cl",     "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after dung in oven heat1
-  n = InitQuestBlade(n, "bladebottle_CR1",           "bottle_CR1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ red powder, after filter
-  n = InitQuestBlade(n, "bladebottle_BTc_mix3",      "bottle_BTc", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //3/4 Na2CO3 + H2O + CaS, before filter
-  n = InitQuestBlade(n, "bladebottle_BTc_hydr",      "bottle_BTc", "JRH13",  7,   "", "",      0,  0, 	  "", 0,   1);    //3/4 2NaCl + H2SO4
-  n = InitQuestBlade(n, "bladebottle_CV2",           "bottle_CV2", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //mix2 after oven
+  n = InitQuestBlade(n, "bladebottle_CR1",           "bottle_CR1", "JRH30",  9,   "", "",      0,  0, 	  "", 0,   1);    //½ red powder, after filter
+  n = InitQuestBlade(n, "bladebottle_BTc_mix3",      "bottle_BTc", "JRH30",  1,   "", "",      0,  0, 	  "", 0,   1);    //3/4 Na2CO3 + H2O + CaS, before filter
+  n = InitQuestBlade(n, "bladebottle_BTc_hydr",      "bottle_BTc", "JRH30",  1,   "", "",      0,  0, 	  "", 0,   1);    //3/4 2NaCl + H2SO4
+  n = InitQuestBlade(n, "bladebottle_CV2",           "bottle_CV2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //mix2 after oven
   n = InitQuestBlade(n, "bladebottle_BY2_mix7",      "bottle_BY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: yellow liquid
-  n = InitQuestBlade(n, "bladebottle_BY1_mix7",      "bottle_BY1", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //½: yellow liquid (as a rest)
+  n = InitQuestBlade(n, "bladebottle_BY1_mix7",      "bottle_BY1", "JRH22",  1,   "", "",      0,  0, 	  "", 0,   1);    //½: yellow liquid (as a rest)
   n = InitQuestBlade(n, "bladebottle_GY2",           "bottle_GY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: light yellow gas
-  n = InitQuestBlade(n, "bladebottle_BS1_LH",        "bottle_BS1", "JRH22",  6,   "", "",      0,  0, 	  "", 0,   1);    //½: Liquor Hepatis
+  n = InitQuestBlade(n, "bladebottle_BS1_LH",        "bottle_BS1", "JRH22",  2,   "", "",      0,  0, 	  "", 0,   1);    //½: Liquor Hepatis
   n = InitQuestBlade(n, "bladebottle_BS2_LH",        "bottle_BS2", "JRH22",  6,   "", "",      0,  0, 	  "", 0,   1);    //full: Liquor Hepatis
   n = InitQuestBlade(n, "bladebottle_BY2_mix9",      "bottle_BY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: light yellow powder
-  n = InitQuestBlade(n, "bladebottle_BP1_ps",        "bottle_BP1", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //½ purple: Pulvis Solaris
-  n = InitQuestBlade(n, "bladebottle_BP2_ps",        "bottle_BP2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full purple: Pulvis Solaris
-  n = InitQuestBlade(n, "bladebottle_BAU",           "bottle_BAU", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //
+  n = InitQuestBlade(n, "bladebottle_BP1_ps",        "bottle_BP1", "JRH30", 10,   "", "",      0,  0, 	  "", 0,   1);    //½ purple: Pulvis Solaris
+  n = InitQuestBlade(n, "bladebottle_BP2_ps",        "bottle_BP2", "JRH30", 11,   "", "",      0,  0, 	  "", 0,   1);    //full purple: Pulvis Solaris
+  n = InitQuestBlade(n, "bladebottle_BAU",           "bottle_BAU", "JRH30", 12,   "", "",      0,  0, 	  "", 0,   1);    //
 
   n = InitQuestBlade(n, "bladebottle_CB2_mix9",      "bottle_CB2", "JRH12", 12,   "", "",      0,  0, 	  "", 0,   1);    //full: dark yellow powder: dried mix9
-  n = InitQuestBlade(n, "bladebottle_CB1_mix9",      "bottle_CB1", "JRH12", 12,   "", "",      0,  0, 	  "", 0,   1);    //½ dark yellow powder: dried mix9
+  n = InitQuestBlade(n, "bladebottle_CB1_mix9",      "bottle_CB1", "JRH13",  4,   "", "",      0,  0, 	  "", 0,   1);    //½ dark yellow powder: dried mix9
   n = InitQuestBlade(n, "bladebottle_CC2_bps",       "bottle_AC2", "JRH22",  8,   "", "",      0,  0, 	  "", 0,   1);    //full: Black Pulvis Solaris
-  n = InitQuestBlade(n, "bladebottle_CQ1",           "bottle_CQ1", "JRH22",  8,   "", "",      0,  0, 	  "", 0,   1);    //½ liquid mercury
+  n = InitQuestBlade(n, "bladebottle_CQ1",           "bottle_CQ1", "JRH30", 13,   "", "",      0,  0, 	  "", 0,   1);    //½ liquid mercury
   n = InitQuestBlade(n, "bladebottle_CT2_mix11",     "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //full white 
   n = InitQuestBlade(n, "bladebottle_CA2_mix11",     "bottle_CA2", "JRH13",  7,   "", "",      0,  0, 	  "", 0,   1);    //full orange liquid: HgO + HNO2, before filter
   n = InitQuestBlade(n, "bladebottle_CR2_rps",       "bottle_CR2", "JRH12", 13,   "", "",      0,  0, 	  "", 0,   1);    //full: Red Pulvis Solaris
@@ -436,16 +436,16 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 
 //Q2
   n = InitQuestGun(n, "pistolcalciumsack", "calciumsack",   "JRH13", 15,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //alchemy
-  n = InitQuestGun(n, "pistolstonebasket_R","stonebasket_R", "", "",        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //mercury oxide
-  n = InitQuestGun(n, "pistolstonebasket_G","stonebasket_G", "", "",        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //limestone
-  n = InitQuestGun(n, "pistolstonebasket_M","stonebasket_M", "", "",        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //antimony
-  n = InitQuestGun(n, "pistolstonebasket_B","stonebasket_B", "", "",        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //black antimony
-  n = InitQuestGun(n, "pistolbucket_dung","bucket_dung","JRH21",  3,        "", "",      "", 1, 0.1,	 "", "", 		   "",                "", 0);
-  n = InitQuestGun(n, "pistolretort3",	  "retort3",    "JRH13",  9,        "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
+  n = InitQuestGun(n, "pistolstonebasket_R","stonebasket_R","JRH30",  8,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //mercury oxide
+  n = InitQuestGun(n, "pistolstonebasket_G","stonebasket_G","JRH30",  6,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //limestone
+  n = InitQuestGun(n, "pistolstonebasket_M","stonebasket_M","JRH30",  5,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //antimony
+  n = InitQuestGun(n, "pistolstonebasket_B","stonebasket_B","JRH30",  7,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //black antimony
+  n = InitQuestGun(n, "pistolbucket_dung","bucket_dung",    "JRH21",  3,    "", "",      "", 1, 0.1,	 "", "", 		   "",                "", 0);
+  n = InitQuestGun(n, "pistolretort3",	  "retort3",        "JRH30",  4,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
   n = InitQuestGun(n, "pistolsulphur_WR", "sulphur_basket_WR","JRH21", 10,  "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //smaller in WoodesRogers
   n = InitQuestGun(n, "pistolcharcoal_WR","charcoal_jar_WR","JRH21",  6,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 0);    //smaller in WoodesRogers
-  n = InitQuestGun(n, "pistolfunnel",	 "pistolfunnel",    "JRH13",  9,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy2
-  n = InitQuestGun(n, "pistolcloth",	 "pistolcloth",     "JRH13",  9,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
+  n = InitQuestGun(n, "pistolfunnel",	 "pistolfunnel",    "JRH30",  2,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy2
+  n = InitQuestGun(n, "pistolcloth",	 "pistolcloth",     "JRH30",  3,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
 
 
 
@@ -499,9 +499,9 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //-----------|---|------------|----------|---|----|----|------|----|----|---|--|------|---|---|---|---|---|---|---|---|---|-----|--|--|--|skipsell--
   // HOLY ITEMS: scheffnow
   //-----------|---|------------|----------|---|----|----|------|----|----|---|--|------|---|---|---|---|---|---|---|---|---|-----|--|--|--|----------
-  n = InitItem(n,"holycross1", "",         8,  1, 0.01,  0,     0,   0,   1,  1, 1,    +2, +4,  0, +2, +2, +2,  0,  0,  0,  0,    1, 1, 1, 1);
+  n = InitItem(n,"holycross1", "",         8,  1, 0.01,  0,     0,   0,   1,  0, 1,    +2, +4,  0, +2, +2, +2,  0,  0,  0,  0,    1, 1, 1, 1);
   n = InitItem(n,"holycross2", "",         8,  2, 0.10,  0,     0,   0,   0,  0, 0,     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,    1, 1, 1, 1);
-  n = InitItem(n,"holycross3", "",         8,  3, 0.01,  0,     0,   0,   1,  1, 1,    +2,  0,  0,  0,  0,  0,  0,  0, +4, +4,    1, 1, 1, 1);
+  n = InitItem(n,"holycross3", "",         8,  3, 0.01,  0,     0,   0,   1,  0, 1,    +2,  0,  0,  0,  0,  0,  0,  0, +4, +4,    1, 1, 1, 1);
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // TATTOOS:   Alan_Smithee Opium Den & Tattoos
   //-----------|---|------------|----------|---|----|----|------|----|----|---|--|------|---|---|---|---|---|---|---|---|---|-----|--|--|--|----------
@@ -2705,17 +2705,17 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //               |bladeID   modelID               | rare          |  minDamage     |Blocking|       DisableWeaponsMod
   //               |  |          | picTexture       |  |   MinLevel |   | maxDamage  |   |    |    Disarm  |      Available in period      Last period of availability
   //---------------|--|----------|----------|-------|--|------|-----|---|-----|------|---|----|-----|------|--------------|----------------------------|----------------------------
-  n = InitBlade(n,"bladeaxe3","axe3", "JD",         8, 0.90,  1,   20, 10.0, 18.0, 30,  4,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Hatchet//BB
-  n = InitBlade(n,"bladeaxe1","axe1", "JD",         6, 0.37,  1,   33, 10.0, 26.0, 40,  5,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Axe //BB
-  n = InitBlade(n,"bladeaxe2","axe2", "JD",         7, 0.25,  3,   79, 14.0, 30.0, 50,  6,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Boarding Axe//BB
-  n = InitBlade(n,"topor1",  "topor1", "24",        2, 0.05,  9, 1323, 26.0, 40.0, 60, 10,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Engraved Felling Axe //BB
-  n = InitBlade(n,"topor2",  "topor2", "24",        3, 0.01, 15, 2507, 28.0, 45.0, 70, 13,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Single Half-Moon Battle Axe //BB
-  n = InitBlade(n,"battleax",  "battleax", "BOP2", 13, 0.01, 15, 2507, 28.0, 45.0, 70, 13,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Master Battle Axe 
-  n = InitBlade(n,"bladelead","bladelead","JD",    16, 0.25,  1,   14,  4.0, 10.0,  0,  0,  PIRATE, 1,     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Bronze Knuckles // SLiB special weapons added by KevAtl 09-03-2007
-  n = InitBlade(n,"bladeclub","bladeclub","JD",    13, 0.20,  1,   19,  5.0, 20.0, 40,  5,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Banger Club // SLiB special weapons added by KevAtl 09-03-2007
-  n = InitBlade(n,"tomahawk", "tomahawk", "BOP",    4, 0.00,  9, 1323, 26.0, 40.0, 60, 10,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Tomahawk special for Oranjestad //JRH
-  n = InitBlade(n,"halberd",  "halberd",   "22",   13, 0.00,  9, 2507, 30.0, 40.0, 80, 10,  PIRATE, 1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Halberd for Conquistadors //JRH
-  n = InitBlade(n,"machete",  "machete", "JRH25",  13, 0.00,  1,   20, 10.0, 20.0, 30, 5,   PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Machete //JRH
+  n = InitBlade(n,"bladeaxe3","axe3", "JD",         8, 0.90,  1,   10, 10.0, 18.0, 30,  4,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Hatchet//BB
+  n = InitBlade(n,"bladeaxe1","axe1", "JD",         6, 0.37,  1,   16, 10.0, 26.0, 40,  5,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Axe //BB
+  n = InitBlade(n,"bladeaxe2","axe2", "JD",         7, 0.25,  3,   39, 14.0, 30.0, 50,  6,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Boarding Axe//BB
+  n = InitBlade(n,"topor1",  "topor1", "24",        2, 0.05,  9,  661, 26.0, 40.0, 60, 10,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Engraved Felling Axe //BB
+  n = InitBlade(n,"topor2",  "topor2", "24",        3, 0.01, 15, 1253, 28.0, 45.0, 70, 13,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Single Half-Moon Battle Axe //BB
+  n = InitBlade(n,"battleax",  "battleax", "BOP2", 13, 0.01, 15, 1253, 28.0, 45.0, 70, 13,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Master Battle Axe 
+  n = InitBlade(n,"bladelead","bladelead","JD",    16, 0.25,  1,    7,  4.0, 10.0,  0,  0,  PIRATE, 1,     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Bronze Knuckles // SLiB special weapons added by KevAtl 09-03-2007
+  n = InitBlade(n,"bladeclub","bladeclub","JD",    13, 0.20,  1,    9,  5.0, 20.0, 40,  5,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Banger Club // SLiB special weapons added by KevAtl 09-03-2007
+  n = InitBlade(n,"tomahawk", "tomahawk", "BOP",    4, 0.00,  9,  661, 26.0, 40.0, 60, 10,  PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Tomahawk special for Oranjestad //JRH
+  n = InitBlade(n,"halberd",  "halberd",   "22",   13, 0.00,  9, 1253, 30.0, 40.0, 80, 10,  PIRATE, 1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Halberd for Conquistadors //JRH
+  n = InitBlade(n,"machete",  "machete", "JRH25",  13, 0.00,  1,   10, 10.0, 20.0, 30, 5,   PIRATE, 1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Machete //JRH
   //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2723,78 +2723,78 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //        ItemIndex  bladeID   modelID                      |  rare           | minDamage     |Blocking|          DisableWeaponsMod
   //            |         |          |             picTexture |    |   MinLevel |    | maxDamage|   |    |      Disarm    |   Available in period         Last period of availability
   //------------|---------|----------|-------------------|----|----|------|-----|----|-----|----|---|----|---------|------|------------|-----------------------------|---------------
-  n = InitBlade(n, "blade1",  "blade1",                  6,  11,  0.90,   1,   63, 15.0, 18.0, 14, 13,  "",        0,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // Sabre//BB
-  n = InitBlade(n, "blade2",  "blade2",                  6,  10,  0.90,   1,   67, 12.0, 17.0, 20, 10,  "",        0,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Rapier//BB
-  n = InitBlade(n, "blade3",  "blade3",                  6,   8,  0.90,   1,   56, 15.0, 17.0, 15, 10,  FRANCE,    1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Badelaire//BB
-  n = InitBlade(n, "blade4",  "blade4",                  6,   7,  0.90,   1,   60, 15.0, 18.0, 15, 11,  "",        1,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Cutlass//BB (BASE SWORD WEAPON)
-  n = InitBlade(n, "blade5",  "blade5",                  6,   9,  0.90,   1,   12,  6.0, 15.0, 30,  4,  "",        0,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Dagger //BB
-  n = InitBlade(n, "blade6",  "blade6",                  6,  12,  0.50,   4,  139, 14.0, 19.0, 19, 19,  PIRATE,    1,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_COLONIAL_POWERS); // Schiavona (pirate?)//BB
-  n = InitBlade(n, "blade7",  "blade7",                  6,  13,  0.50,   2,   58, 13.0, 18.0, 25,  5,  "",        0,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_COLONIAL_POWERS); // Yataghan//BB
-  n = InitBlade(n, "blade8",  "blade8",                  3,   1,  0.10,   7,  290, 18.0, 23.0, 20, 26,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Maltese Knight Sword//BB
-  n = InitBlade(n, "blade9",  "blade9",                  3,   2,  0.10,  11,  494, 26.0, 41.0, 57, 35,  FRANCE,    5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // French Admiralty Rapier//BB
-  n = InitBlade(n, "blade10", "blade10",                 3,   3,  0.40,   5,  161, 21.0, 26.0, 28, 13,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Piranha//BB
-  n = InitBlade(n, "blade11", "blade11",                 3,   4,  0.30,   4,  264, 18.0, 22.0, 25, 19,  ENGLAND,   3,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Highlander//BB
-  n = InitBlade(n, "blade12", "blade12",                 3,   5,  0.20,   6,  470, 17.0, 21.0, 30, 28,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Arabic Scimitar//BB
-  n = InitBlade(n, "blade13", "blade13",                 3,   6,  0.10,   5,  285, 16.0, 19.0, 35, 15,  "",        1,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Dueling Rapier//BB
-  n = InitBlade(n, "blade14", "blade14",                 3,   7,  0.05,   9, 2280, 22.0, 32.0, 33, 56,  SPAIN,     5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Spanish Nobility Longsword//BB
-  n = InitBlade(n, "blade15", "blade15",                 3,   8,  0.15,   5,  280, 19.0, 21.0, 21, 23,  PORTUGAL,  1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Iberian Longsword//BB
-  n = InitBlade(n, "blade16", "blade16",                 3,   9,  0.15,  10,  711, 21.0, 29.0, 35, 25,  SPAIN,     3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Tizona//BB
-  n = InitBlade(n, "blade17", "blade17",                 3,  10,  0.10,   9,  340, 15.0, 25.0, 35, 19,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Flamigera//BB
+  n = InitBlade(n, "blade1",  "blade1",                  6,  11,  0.90,   1,   31, 15.0, 18.0, 14, 13,  "",        0,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // Sabre//BB
+  n = InitBlade(n, "blade2",  "blade2",                  6,  10,  0.90,   1,   31, 12.0, 17.0, 20, 10,  "",        0,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Rapier//BB
+  n = InitBlade(n, "blade3",  "blade3",                  6,   8,  0.90,   1,   28, 15.0, 17.0, 15, 10,  FRANCE,    1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Badelaire//BB
+  n = InitBlade(n, "blade4",  "blade4",                  6,   7,  0.90,   1,   30, 15.0, 18.0, 15, 11,  "",        1,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Cutlass//BB (BASE SWORD WEAPON)
+  n = InitBlade(n, "blade5",  "blade5",                  6,   9,  0.90,   1,    6,  6.0, 15.0, 30,  4,  "",        0,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Dagger //BB
+  n = InitBlade(n, "blade6",  "blade6",                  6,  12,  0.50,   4,   69, 14.0, 19.0, 19, 19,  PIRATE,    1,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_COLONIAL_POWERS); // Schiavona (pirate?)//BB
+  n = InitBlade(n, "blade7",  "blade7",                  6,  13,  0.50,   2,   29, 13.0, 18.0, 25,  5,  "",        0,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_COLONIAL_POWERS); // Yataghan//BB
+  n = InitBlade(n, "blade8",  "blade8",                  3,   1,  0.10,   7,  145, 18.0, 23.0, 20, 26,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Maltese Knight Sword//BB
+  n = InitBlade(n, "blade9",  "blade9",                  3,   2,  0.10,  11,  247, 26.0, 41.0, 57, 35,  FRANCE,    5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // French Admiralty Rapier//BB
+  n = InitBlade(n, "blade10", "blade10",                 3,   3,  0.40,   5,   80, 21.0, 26.0, 28, 13,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Piranha//BB
+  n = InitBlade(n, "blade11", "blade11",                 3,   4,  0.30,   4,  132, 18.0, 22.0, 25, 19,  ENGLAND,   3,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Highlander//BB
+  n = InitBlade(n, "blade12", "blade12",                 3,   5,  0.20,   6,  235, 17.0, 21.0, 30, 28,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Arabic Scimitar//BB
+  n = InitBlade(n, "blade13", "blade13",                 3,   6,  0.10,   5,  142, 16.0, 19.0, 35, 15,  "",        1,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Dueling Rapier//BB
+  n = InitBlade(n, "blade14", "blade14",                 3,   7,  0.05,   9, 1140, 22.0, 32.0, 33, 56,  SPAIN,     5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Spanish Nobility Longsword//BB
+  n = InitBlade(n, "blade15", "blade15",                 3,   8,  0.15,   5,  140, 19.0, 21.0, 21, 23,  PORTUGAL,  1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Iberian Longsword//BB
+  n = InitBlade(n, "blade16", "blade16",                 3,   9,  0.15,  10,  355, 21.0, 29.0, 35, 25,  SPAIN,     3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Tizona//BB
+  n = InitBlade(n, "blade17", "blade17",                 3,  10,  0.10,   9,  170, 15.0, 25.0, 35, 19,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Flamigera//BB
   n = InitBlade(n, "blade18", "blade18",                 3,  11,  0.00,  99,16350, 27.0, 45.0, 70, 80,  "",        4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Sabre of Nicholas Sharp//(Unique+quest item)BB
-  n = InitBlade(n, "blade19", "blade19",                 3,  12,  0.15,   7,  364, 15.0, 26.0, 38, 20,  "",        1,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // German Rapier//BB
-  n = InitBlade(n, "blade20", "blade20",                 3,  13,  0.15,   9,  410, 22.0, 27.0, 30, 30,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Asiatic Broadsword//BB
-  n = InitBlade(n, "blade21", "blade21",                 3,  14,  0.45,   7,  334, 24.0, 29.0, 29, 19,  "",        2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Falchion//BB
-  n = InitBlade(n, "blade22", "blade22",                 3,  15,  0.10,   8,  578, 29.0, 40.0, 49, 34,  ENGLAND,   2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Corsair's Pride//BB
-  n = InitBlade(n, "blade23", "blade23",                 3,  16,  0.10,  11, 2548, 27.0, 37.0, 52, 42,  HOLLAND,   5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Dutch Admiralty Sword//BB
-  n = InitBlade(n, "blade24", "blade24",                 6,  14,  0.12,  12, 2562, 22.0, 37.0, 40, 40,  ENGLAND,   5,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // English Officer's Sabre//BB
-  n = InitBlade(n, "blade25", "blade25",                 6,  15,  0.05,  17, 4910, 20.0, 35.0, 35, 45,  FRANCE,    6,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // French Nobility Sword//BB
-  n = InitBlade(n, "blade26", "blade26",                 9,  16,  0.15,  16, 3106, 23.0, 35.0, 50, 35,  HOLLAND,   5,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Solingen Rapier (Petros)//BB
-  n = InitBlade(n, "blade27", "blade27",                 6,  16,  0.25,  12,  527, 20.0, 35.0, 35, 29,  "",        3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Bosun's Choice//BB (common as name denotes)
-  n = InitBlade(n, "blade28", "blade28",                 9,  15,  0.15,   9,  490, 20.0, 35.0, 30, 15,  "",        2,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Shamshir (SLiB KevAtl)//BB
-  n = InitBlade(n, "blade29", "blade29",                 9,  14,  0.12,  10, 2373, 20.0, 30.0, 36, 34,  PORTUGAL,  5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Portuguese Officer's Sword//BB
-  n = InitBlade(n, "blade30", "blade30",                 9,  13,  0.20,  11,  527, 20.0, 29.0, 40, 27,  HOLLAND,   3,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // Dueling Sabre (SLiB KevAtl)//BB
-  n = InitBlade(n, "blade31", "blade31",                 9,  12,  0.15,  10,  560, 20.0, 40.0, 42, 10,  "",        3,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Snake Head (SLiB KevAtl)//BB
-  n = InitBlade(n, "blade32", "blade32",                 9,  11,  0.02,  20, 5890, 27.0, 51.0, 51, 27,  PORTUGAL,  5,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Damascus Shamshir (SLiB KevAtl)//BB (rare+powerfull)
-  n = InitBlade(n, "blade33", "blade33",                 9,  10,  0.02,  15, 3880, 25.0, 39.0, 45, 28,  SPAIN,     4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Moorish Sabre (SLiB KevAtl)//BB  (rare)
-  n = InitBlade(n, "blade34", "blade34",                 9,   9,  0.02,  18, 5240, 33.0, 44.0, 50, 40,  PIRATE,    6,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Dragon's Head (SLiB KevAtl)//BB (rare+powerfull)
-  n = InitBlade(n, "blade35", "blade35",                23,   1,  0.01,  19, 5400, 22.0, 49.0, 35, 40,  "",        4,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Knights Templer Sword//BB (rare+powerfull)
-  n = InitBlade(n, "blade36", "blade36",                23,   2,  0.25,   4,   96, 12.0, 20.0, 30, 12,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Hunting Sword//BB
+  n = InitBlade(n, "blade19", "blade19",                 3,  12,  0.15,   7,  182, 15.0, 26.0, 38, 20,  "",        1,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // German Rapier//BB
+  n = InitBlade(n, "blade20", "blade20",                 3,  13,  0.15,   9,  205, 22.0, 27.0, 30, 30,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Asiatic Broadsword//BB
+  n = InitBlade(n, "blade21", "blade21",                 3,  14,  0.45,   7,  167, 24.0, 29.0, 29, 19,  "",        2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Falchion//BB
+  n = InitBlade(n, "blade22", "blade22",                 3,  15,  0.10,   8,  289, 29.0, 40.0, 49, 34,  ENGLAND,   2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Corsair's Pride//BB
+  n = InitBlade(n, "blade23", "blade23",                 3,  16,  0.10,  11, 1274, 27.0, 37.0, 52, 42,  HOLLAND,   5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Dutch Admiralty Sword//BB
+  n = InitBlade(n, "blade24", "blade24",                 6,  14,  0.12,  12, 1281, 22.0, 37.0, 40, 40,  ENGLAND,   5,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // English Officer's Sabre//BB
+  n = InitBlade(n, "blade25", "blade25",                 6,  15,  0.05,  17, 2455, 20.0, 35.0, 35, 45,  FRANCE,    6,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // French Nobility Sword//BB
+  n = InitBlade(n, "blade26", "blade26",                 9,  16,  0.15,  16, 1553, 23.0, 35.0, 50, 35,  HOLLAND,   5,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Solingen Rapier (Petros)//BB
+  n = InitBlade(n, "blade27", "blade27",                 6,  16,  0.25,  12,  263, 20.0, 35.0, 35, 29,  "",        3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Bosun's Choice//BB (common as name denotes)
+  n = InitBlade(n, "blade28", "blade28",                 9,  15,  0.15,   9,  245, 20.0, 35.0, 30, 15,  "",        2,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Shamshir (SLiB KevAtl)//BB
+  n = InitBlade(n, "blade29", "blade29",                 9,  14,  0.12,  10, 1186, 20.0, 30.0, 36, 34,  PORTUGAL,  5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Portuguese Officer's Sword//BB
+  n = InitBlade(n, "blade30", "blade30",                 9,  13,  0.20,  11,  263, 20.0, 29.0, 40, 27,  HOLLAND,   3,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // Dueling Sabre (SLiB KevAtl)//BB
+  n = InitBlade(n, "blade31", "blade31",                 9,  12,  0.15,  10,  280, 20.0, 40.0, 42, 10,  "",        3,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Snake Head (SLiB KevAtl)//BB
+  n = InitBlade(n, "blade32", "blade32",                 9,  11,  0.02,  20, 2945, 27.0, 51.0, 51, 27,  PORTUGAL,  5,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Damascus Shamshir (SLiB KevAtl)//BB (rare+powerfull)
+  n = InitBlade(n, "blade33", "blade33",                 9,  10,  0.02,  15, 1940, 25.0, 39.0, 45, 28,  SPAIN,     4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Moorish Sabre (SLiB KevAtl)//BB  (rare)
+  n = InitBlade(n, "blade34", "blade34",                 9,   9,  0.02,  18, 2620, 33.0, 44.0, 50, 40,  PIRATE,    6,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Dragon's Head (SLiB KevAtl)//BB (rare+powerfull)
+  n = InitBlade(n, "blade35", "blade35",                23,   1,  0.01,  19, 2700, 22.0, 49.0, 35, 40,  "",        4,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Knights Templer Sword//BB (rare+powerfull)
+  n = InitBlade(n, "blade36", "blade36",                23,   2,  0.25,   4,   48, 12.0, 20.0, 30, 12,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Hunting Sword//BB
   n = InitBlade(n, "blade37", "blade37",                23,   3,  0.01,   9, 1894,  9.0, 19.0, 31, 10,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Gold and Jewel Encrusted Dagger//BB (rare+expensive+ceremonial)
-  n = InitBlade(n, "blade38", "blade38",                23,   4,  0.10,  13,  564, 13.0, 25.0, 39, 25,  "",        2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Kilij//BB
-  n = InitBlade(n, "blade39", "blade39",                23,   5,  0.10,  12,  932, 12.0, 19.0, 20, 22,  ENGLAND,   3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Gold Handled Naval Dirk//BB (rare+expensive+ceremonial)
-  n = InitBlade(n, "blade40", "blade40",                23,   6,  0.01,  24, 8209, 25.0, 39.0, 50, 40,  "",        4,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Polish Hussar's Szabla//BB (rare+powerfull)
-  n = InitBlade(n, "blade41", "blade41",                23,   7,  0.01,  28, 9200, 29.0, 43.0, 55, 35,  "",        6,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // Russian Cossack's Shashka//BB (rare+powerfull)
-  n = InitBlade(n, "blade43", "blade43",                23,  10,  0.08,  19, 5607, 24.0, 38.0, 45, 40,  "",        5,     0,    PERIOD_REVOLUTIONS,          PERIOD_NAPOLEONIC); // US Cavalry Sabre//BB (rare, slight upgrade on 'english officer sabre')
-  n = InitBlade(n, "blade44", "blade44",                23,   9,  0.15,  14,  681, 21.0, 32.0, 48, 30,  SPAIN,     3,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Spanish Cup-Hilt Rapier//BB
-  n = InitBlade(n, "blade45", "blade45",                23,  11,  0.05,   9,  480, 14.0, 25.0, 26, 20,  PORTUGAL,  2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Crab Claw BroadSword//BB (rare+'fantasy' blade)
-  n = InitBlade(n, "blade46", "blade46",                23,  12,  0.15,   3,  132, 12.0, 20.0, 19, 21,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Shortsword//BB renamed 'shortsword' model is very short!
-  n = InitBlade(n, "blade47", "blade47",                23,  13,  0.15,   9,  350, 14.0, 25.0, 26, 21,  SPAIN,     2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Light Tizona//BB (pre-cursor to the Tizona)
-  n = InitBlade(n, "blade48", "blade48",                23,  14,  0.50,   3,   50,  8.0, 12.0, 15, 18,  "",        2,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Wooden Handled Naval Dirk//BB(defensive)
-  n = InitBlade(n, "blade49", "blade49",                23,  15,  0.35,   7,   81, 11.0, 19.0, 17, 20,  "",        3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Bronze Handled Naval Dirk//BB(defensive)
-  n = InitBlade(n, "blade50", "blade50",                23,  16,  0.10,  14,  667, 18.0, 39.0, 49, 28,  PIRATE,    2,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Venetian Navy Cutlass//BB
-  n = InitBlade(n, "blade51", "blade51",                24,   1,  0.05,  16, 4540, 20.0, 32.0, 33, 40,  FRANCE,    4,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // French Court Sword//BB (pre-cursor to French Nobility sword)
-  n = InitBlade(n, "bladeC2", "bladeC2",                21,  14,  0.20,  12,  822, 21.0, 27.0, 40, 30,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Back-bladed Sidesword (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC6", "bladeC6",                21,  15,  0.50,   6,  250, 15.0, 19.0, 33, 19,  "",        1,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Smallsword (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC10","bladeC10",               21,  11,  0.50,   5,  209, 15.0, 25.0, 27, 18,  "",        2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Falchion (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC11","bladeC11",               21,  13,  0.20,   8,  449, 17.0, 22.0, 30, 32,  "",        5,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Milanese longsword(CoAS Metazot)//BB model is very long(so now a longsword)
-  n = InitBlade(n, "bladeC12","bladeC12",               21,  12,  0.20,  10,  483, 14.0, 35.0, 37, 19,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Katzbalger (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC18","bladeC18",               21,  10,  0.20,  10,  590, 25.0, 39.0, 39, 20,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Shellcup Falchion (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC26","bladeC26",               21,  16,  0.15,  11,  516, 19.0, 31.0, 40, 25,  "",        2,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Pappenheimer Rapier (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC30","bladeC30",               21,   8,  0.25,  13, 1651, 19.0, 29.0, 46, 29,  "",        4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Swept Hilt Rapier  (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC33","bladeC33",               21,   9,  0.20,   9,  588, 14.0, 26.0, 30, 45,  HOLLAND,   3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Germanic Baskethilt Sword (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC35","bladeC35",               21,  14,  0.03,  19, 5200, 20.0, 40.0, 40, 45,  "",        3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Hibernian (Irish sword) //JRMM
-  n = InitBlade(n, "Barmansknife","Barmansknife",       22,   7,  0.90,   1,    5,  3.0,  9.0, 20,  3,  PIRATE,    0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Breadknife (SuperDurnius)//BB USE AS BASE VALUE FOR ECONOMY (CHEAPEST)
-  n = InitBlade(n, "Guestsknife","Guestsknife",         22,   6,  0.90,   1,    9,  3.0, 11.0, 25,  4,  PIRATE,    0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Knife (SuperDurnius)//BB
-  n = InitBlade(n, "MerchantsBlade","MerchantsBlade",   22,   9,  0.90,   1,   59, 10.0, 15.0, 13, 14,  "",        0,     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Merchants Blade (SuperDurnius)//BB(defensive)
-  n = InitBlade(n, "Merchantsdagger","Merchantsdagger", 22,   8,  0.90,   1,   14,  5.0, 12.0, 20,  7,  "",        0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Merchants Dagger (SuperDurnius)//BB(defensive)
-  n = InitBlade(n, "Minersaxe","worker_Axe",            22,   2,  0.90,   1,   26, 10.0, 19.0, 30,  6,  PIRATE,    1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Woodmen's Axe (SuperDurnius)//BB
-  n = InitBlade(n, "Minerscrow","worker_Crow",          22,   1,  0.80,   1,   15,  3.0, 13.0,  5, 10,  PIRATE,    1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Shovel (SuperDurnius)//BB
-  n = InitBlade(n, "Minerspick","worker_Pick",          22,   4,  0.80,   1,   19,  8.0, 13.0, 15, 10,  PIRATE,    1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Pickaxe (SuperDurnius)//BB
-  n = InitBlade(n, "Minersspade","worker_Spade",        22,   3,  0.80,   1,   17,  3.0, 13.0,  5, 15,  PIRATE,    2,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Spade (SuperDurnius)//BB
-  n = InitBlade(n, "Piratesdagger","piratesdagger",     22,   5,  0.80,   1,   48, 10.0, 15.0, 34,  9,  "",        0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Stiletto (SuperDurnius)//BB
+  n = InitBlade(n, "blade38", "blade38",                23,   4,  0.10,  13,  282, 13.0, 25.0, 39, 25,  "",        2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Kilij//BB
+  n = InitBlade(n, "blade39", "blade39",                23,   5,  0.10,  12,  466, 12.0, 19.0, 20, 22,  ENGLAND,   3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Gold Handled Naval Dirk//BB (rare+expensive+ceremonial)
+  n = InitBlade(n, "blade40", "blade40",                23,   6,  0.01,  24, 4104, 25.0, 39.0, 50, 40,  "",        4,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Polish Hussar's Szabla//BB (rare+powerfull)
+  n = InitBlade(n, "blade41", "blade41",                23,   7,  0.01,  28, 4600, 29.0, 43.0, 55, 35,  "",        6,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // Russian Cossack's Shashka//BB (rare+powerfull)
+  n = InitBlade(n, "blade43", "blade43",                23,  10,  0.08,  19, 2803, 24.0, 38.0, 45, 40,  "",        5,     0,    PERIOD_REVOLUTIONS,          PERIOD_NAPOLEONIC); // US Cavalry Sabre//BB (rare, slight upgrade on 'english officer sabre')
+  n = InitBlade(n, "blade44", "blade44",                23,   9,  0.15,  14,  340, 21.0, 32.0, 48, 30,  SPAIN,     3,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Spanish Cup-Hilt Rapier//BB
+  n = InitBlade(n, "blade45", "blade45",                23,  11,  0.05,   9,  240, 14.0, 25.0, 26, 20,  PORTUGAL,  2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Crab Claw BroadSword//BB (rare+'fantasy' blade)
+  n = InitBlade(n, "blade46", "blade46",                23,  12,  0.15,   3,   66, 12.0, 20.0, 19, 21,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Shortsword//BB renamed 'shortsword' model is very short!
+  n = InitBlade(n, "blade47", "blade47",                23,  13,  0.15,   9,  175, 14.0, 25.0, 26, 21,  SPAIN,     2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Light Tizona//BB (pre-cursor to the Tizona)
+  n = InitBlade(n, "blade48", "blade48",                23,  14,  0.50,   3,   25,  8.0, 12.0, 15, 18,  "",        2,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Wooden Handled Naval Dirk//BB(defensive)
+  n = InitBlade(n, "blade49", "blade49",                23,  15,  0.35,   7,   40, 11.0, 19.0, 17, 20,  "",        3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Bronze Handled Naval Dirk//BB(defensive)
+  n = InitBlade(n, "blade50", "blade50",                23,  16,  0.10,  14,  333, 18.0, 39.0, 49, 28,  PIRATE,    2,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Venetian Navy Cutlass//BB
+  n = InitBlade(n, "blade51", "blade51",                24,   1,  0.05,  16, 2270, 20.0, 32.0, 33, 40,  FRANCE,    4,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // French Court Sword//BB (pre-cursor to French Nobility sword)
+  n = InitBlade(n, "bladeC2", "bladeC2",                21,  14,  0.20,  12,  411, 21.0, 27.0, 40, 30,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Back-bladed Sidesword (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC6", "bladeC6",                21,  15,  0.50,   6,  125, 15.0, 19.0, 33, 19,  "",        1,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Smallsword (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC10","bladeC10",               21,  11,  0.50,   5,  104, 15.0, 25.0, 27, 18,  "",        2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Falchion (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC11","bladeC11",               21,  13,  0.20,   8,  224, 17.0, 22.0, 30, 32,  "",        5,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Milanese longsword(CoAS Metazot)//BB model is very long(so now a longsword)
+  n = InitBlade(n, "bladeC12","bladeC12",               21,  12,  0.20,  10,  241, 14.0, 35.0, 37, 19,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Katzbalger (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC18","bladeC18",               21,  10,  0.20,  10,  295, 25.0, 39.0, 39, 20,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Shellcup Falchion (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC26","bladeC26",               21,  16,  0.15,  11,  258, 19.0, 31.0, 40, 25,  "",        2,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Pappenheimer Rapier (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC30","bladeC30",               21,   8,  0.25,  13,  825, 19.0, 29.0, 46, 29,  "",        4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Swept Hilt Rapier  (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC33","bladeC33",               21,   9,  0.20,   9,  294, 14.0, 26.0, 30, 45,  HOLLAND,   3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Germanic Baskethilt Sword (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC35","bladeC35",               21,  14,  0.03,  19, 2600, 20.0, 40.0, 40, 45,  "",        3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Hibernian (Irish sword) //JRMM
+  n = InitBlade(n, "Barmansknife","Barmansknife",       22,   7,  0.90,   1,    2,  3.0,  9.0, 20,  3,  PIRATE,    0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Breadknife (SuperDurnius)//BB USE AS BASE VALUE FOR ECONOMY (CHEAPEST)
+  n = InitBlade(n, "Guestsknife","Guestsknife",         22,   6,  0.90,   1,    4,  3.0, 11.0, 25,  4,  PIRATE,    0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Knife (SuperDurnius)//BB
+  n = InitBlade(n, "MerchantsBlade","MerchantsBlade",   22,   9,  0.90,   1,   29, 10.0, 15.0, 13, 14,  "",        0,     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Merchants Blade (SuperDurnius)//BB(defensive)
+  n = InitBlade(n, "Merchantsdagger","Merchantsdagger", 22,   8,  0.90,   1,    7,  5.0, 12.0, 20,  7,  "",        0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Merchants Dagger (SuperDurnius)//BB(defensive)
+  n = InitBlade(n, "Minersaxe","worker_Axe",            22,   2,  0.90,   1,   13, 10.0, 19.0, 30,  6,  PIRATE,    1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Woodmen's Axe (SuperDurnius)//BB
+  n = InitBlade(n, "Minerscrow","worker_Crow",          22,   1,  0.80,   1,    7,  3.0, 13.0,  5, 10,  PIRATE,    1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Shovel (SuperDurnius)//BB
+  n = InitBlade(n, "Minerspick","worker_Pick",          22,   4,  0.80,   1,    9,  8.0, 13.0, 15, 10,  PIRATE,    1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Pickaxe (SuperDurnius)//BB
+  n = InitBlade(n, "Minersspade","worker_Spade",        22,   3,  0.80,   1,    8,  3.0, 13.0,  5, 15,  PIRATE,    2,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Spade (SuperDurnius)//BB
+  n = InitBlade(n, "Piratesdagger","piratesdagger",     22,   5,  0.80,   1,   24, 10.0, 15.0, 34,  9,  "",        0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Stiletto (SuperDurnius)//BB
   n = InitBlade(n, "blademketB", "blademusketB",   "JRH28",   4,  0.00,  20, 4000, 20.0, 40.0, 40, 20,  "",        5,     1,    PERIOD_REVOLUTIONS,          PERIOD_NAPOLEONIC); // Musket with bayonet //JRH
   n = InitBlade(n, "blademketK", "blademusketK",   "JRH28",   3,  0.00,  20, 3305, 20.0, 30.0, 30, 20,  "",        5,     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_COLONIAL_POWERS); // Musket with primitive bayonet //JRH
-  n = InitBlade(n, "blade_mKnife", "blade_mKnife", "JRH28",   2,  0.20,   1,   60,  6.0, 15.0, 30,  4,  "",        0,     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_COLONIAL_POWERS); // Knife to use as primitive bayonet //JRH
+  n = InitBlade(n, "blade_mKnife", "blade_mKnife", "JRH28",   2,  0.20,   1,   30,  6.0, 15.0, 30,  4,  "",        0,     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_COLONIAL_POWERS); // Knife to use as primitive bayonet //JRH
 
   //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   // GUNS: ItemIndex                               picIndex          Price                 Charges
@@ -2817,9 +2817,9 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitGun(n,"pistol25", "pistol5",           24,  9, 0.02,  54,   9999, 50.0,150.0,   70, 4, 14, "", "OBJECTS\DUEL\pistol_big.wav",    "pb",     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC);  // Brace of four Horse Pistols (JRMM)
   n = InitGun(n,"pistol26", "pistol26",          24, 10, 0.02,  24,   9999, 30.0, 60.0,   30, 4, 35, "", "OBJECTS\DUEL\pistol_grape.wav",  "pg",     0,    PERIOD_NAPOLEONIC, 	        PERIOD_NAPOLEONIC);  // Four-barrel Grapeshot Pistol (JRH)
   n = InitGun(n,"pistolbow", "bow",           "BOP",  1, 0.00,   1,     20, 30.0, 40.0,   80, 1, 1.5,"", "OBJECTS\DUEL\bow.wav",           "ar",     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // Bow (BOP)
-  n = InitGun(n,"LongRifle_C", "LongRifle_C_back", "BOP2",11,0.00,99,    1, 50.0,150.0,   20, 1, 30, "", "OBJECTS\DUEL\pistol_medium2.wav","pb2",    1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Long Rifle for All Storylines
-  n = InitGun(n,"LongRifle_CT","LongRifle_CT_back","BOP2",12,0.00,99,    1,150.0,250.0,   80, 1, 30, "", "OBJECTS\DUEL\pistol_medium2.wav","pb2",    1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Long Rifle for All Storylines, with telescope
-  n = InitGun(n,"telescope",    "",		           "BOP2", 9,0.00,99,    1,150.0,250.0,   80, 1, 30, "", "",                                 "",     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Telescope
+  n = InitGun(n,"LongRifle_C", "LongRifle_C_back", "BOP2",11,0.00,99,    1,150.0,200.0,   80, 1, 50, "", "OBJECTS\DUEL\pistol_medium2.wav","pb",    1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Long Rifle for All Storylines
+  n = InitGun(n,"LongRifle_CT","LongRifle_CT_back","BOP2",11,0.00,99,    1,150.0,200.0,   80, 1, 50, "", "OBJECTS\DUEL\pistol_medium2.wav","pb",    1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Long Rifle for All Storylines, with telescope
+  n = InitGun(n,"telescope",    "",		           "BOP2", 9,0.00,99,    1,150.0,200.0,   80, 1, 50, "", "",                                 "",     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Telescope
   n = InitGun(n,"LongRifle_BT","LongRifle_BT_back","BOP2",10,0.00,99,12000,150.0,250.0,   80, 1,  1, "", "OBJECTS\DUEL\pistol_medium2.wav",  "",     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Custom quest musket for BOP, with telescope
   n = InitGun(n,"LongRifle_W", "LongRifle_W_back", "BOP2", 7,0.00,99,    0,150.0,250.0,   80, 1, 30, "", "OBJECTS\DUEL\pistol_medium2.wav", "pb2",   1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Custom quest musket for WR
   n = InitGun(n,"LongRifle_WT","LongRifle_WT_back","BOP2", 8,0.00,99,    0,150.0,250.0,   80, 1, 30, "", "OBJECTS\DUEL\pistol_medium2.wav", "pb2",   1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Custom quest musket for WR, with telescope 
@@ -2976,11 +2976,11 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //-----------|------|------|----------|---|----|-----|-----|----|----|--|--|----|---|---|---|---|---|---|---|---|---|---|---|---|---|-------------------------------
   // SPECIAL ITEMS:
   //-----------|------|------|----------|---|----|-----|-----|----|----|--|--|----|---|---|---|---|---|---|---|---|---|---|---|---|---|-------------------------------
-  n = InitItem(n,"cursedcoin", "",      4, 15, 0.10,   5,   1500, 0,   1,10, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);
-  n = InitItem(n,"lockpick",    "",     8,  8, 0.10,   5,    110, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1); // Lockpick
+  n = InitItem(n,"cursedcoin", "",      4, 15, 0.10,   5,   1500, 0,   1, 1, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0, -1,  0,  0,  0,  1);
+  n = InitItem(n,"lockpick",    "",     8,  8, 0.10,   5,    110, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +2,  0,  0,  0,  1); // Lockpick
   n = InitItem(n,"ayahuasca", "", "Levis",  1, 0.00,   1,      1, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Ayahuasca
-  n = InitItem(n,"opium", "", 	  "Levis",  2, 0.00,   1,      0, 0,   0, 144, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Opium
-  n = InitItem(n,"vegetal", "",   "Levis",  3, 0.00,   1,    100, 0,   0, 256, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Vegetal
+  n = InitItem(n,"opium", "", 	  "Levis",  2, 0.00,   1,      0, 0,   0, 0, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Opium
+  n = InitItem(n,"vegetal", "",   "Levis",  3, 0.00,   1,    100, 0,   0, 0, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Vegetal
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   n = InitItem(n,"compass1", "",       11,  1,  0.20,  1,    508, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Cheap Compass
   n = InitItem(n,"compass2", "",       11,  2,  0.10,  4,   1916, 0,   1, 0, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0);// Normal Compass		// + skill item
@@ -3010,7 +3010,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitItem(n,"book12", "",         13,  5,  0.10,  2,   1220, 0,   1, 0, 1,   0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0);// Great Gun Sights
   n = InitItem(n,"book13", "",         13,  6,  0.10,  1,   1108, 0,   1, 0, 1,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0);// Handy Sea Phrases
   n = InitItem(n,"book4",  "",         13, 14,  0.05,  3,   2310, 0,   1, 0, 0,   0,  0, +2,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0);// Hook's Book
-  n = InitItem(n,"book14", "",         13,  8,  0.10,  1,   1105, 0,   1, 0, 1,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1,  0,  0);// How to Repel Boarders
+  n = InitItem(n,"book14", "",         13,  8,  0.10,  1,   2210, 0,   1, 0, 1,   0, +1,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1,  0,  0);// How to Repel Boarders
   n = InitItem(n,"book5",  "",         13, 15,  0.10,  2,   2215, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1,  0,  0);// Morgan's Missing Mizzen
   n = InitItem(n,"book6",  "",         13,  9,  0.10,  3,   2320, 0,   1, 0, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1,  0,  0);// Morgan's Mast Mashing
   n = InitItem(n,"book7",  "",         11, 14,  0.05,  9,   2975, 0,   1, 0, 0,  +1,  +1, 0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0);// Morgan's Almanac
@@ -3052,61 +3052,61 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // JEWELRY:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
-  n = InitItem(n,"jewelry1", "sapphire",2,  1,  0.05,  3,    753, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Sapphire			// + skill item //BB remove all skill bonus
-  n = InitItem(n,"jewelry2", "diamond", 2,  2,  0.02,  4,   1118, 0,   1, 1, 0,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Diamond				// + skill item //BB but add value to price
-  n = InitItem(n,"jewelry3", "ruby",    2,  3,  0.10,  1,    856, 0,   1, 1, 0,   0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ruby				// + skill item //BB this is valuable and rare
-  n = InitItem(n,"jewelry4", "emerald", 2,  4,  0.10,  2,    809, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1);// Emerald				// + skill item //BB gems and jewelry after all!
-  n = InitItem(n,"jewelry5", "",        2,  5,  0.10,  1,    209, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold Nugget			//BB economci adjusts also.
-  n = InitItem(n,"jewelry6", "",        2,  6,  0.10,  2,    320, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Silver sapphire ring
-  n = InitItem(n,"jewelry7", "",        2,  7,  0.10,  5,    650, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold emerald ring
-  n = InitItem(n,"jewelry8", "",        2,  8,  0.15,  1,    730, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Lucky Ring			// + skill item //BB as above, remove all
-  n = InitItem(n,"jewelry9", "",        2,  9,  0.15,  2,    960, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Bronze Cross		// + skill item //BB skill bonus for
-  n = InitItem(n,"jewelry10","",        2, 10,  0.10,  7,    714, 0,   1, 1, 0,   0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1);// Gold sapphire ring	// + skill item //BB jewelry items
-  n = InitItem(n,"jewelry11","pearlbig",2, 11,  0.15,  2,    693, 0,   1, 1, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Large pearl
-  n = InitItem(n,"jewelry12","pearlsmall",2,12, 0.20,  1,    320, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Small pearl
-  n = InitItem(n,"jewelry13","",        2, 13,  0.10,  3,    482, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Silver Brooch
-  n = InitItem(n,"jewelry14","",        2, 14,  0.05,  7,    911, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold Brooch
-  n = InitItem(n,"jewelry15","",        2, 15,  0.05,  9,   4390, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Emerald Pendant
-  n = InitItem(n,"jewelry16","",        2, 16,  0.02, 12,   6925, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gem necklace
+  n = InitItem(n,"jewelry1", "sapphire",2,  1,  0.05,  3,    753, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Sapphire			// + skill item //BB remove all skill bonus
+  n = InitItem(n,"jewelry2", "diamond", 2,  2,  0.02,  4,   1118, 0,   1, 0, 0,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Diamond				// + skill item //BB but add value to price
+  n = InitItem(n,"jewelry3", "ruby",    2,  3,  0.10,  1,    856, 0,   1, 0, 0,   0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ruby				// + skill item //BB this is valuable and rare
+  n = InitItem(n,"jewelry4", "emerald", 2,  4,  0.10,  2,    809, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1);// Emerald				// + skill item //BB gems and jewelry after all!
+  n = InitItem(n,"jewelry5", "",        2,  5,  0.10,  1,    209, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold Nugget			//BB economci adjusts also.
+  n = InitItem(n,"jewelry6", "",        2,  6,  0.10,  2,    320, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Silver sapphire ring
+  n = InitItem(n,"jewelry7", "",        2,  7,  0.10,  5,    650, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold emerald ring
+  n = InitItem(n,"jewelry8", "",        2,  8,  0.15,  1,    730, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Lucky Ring			// + skill item //BB as above, remove all
+  n = InitItem(n,"jewelry9", "",        2,  9,  0.15,  2,    960, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Bronze Cross		// + skill item //BB skill bonus for
+  n = InitItem(n,"jewelry10","",        2, 10,  0.10,  7,    714, 0,   1, 0, 0,   0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1);// Gold sapphire ring	// + skill item //BB jewelry items
+  n = InitItem(n,"jewelry11","pearlbig",2, 11,  0.15,  2,    693, 0,   1, 0, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Large pearl
+  n = InitItem(n,"jewelry12","pearlsmall",2,12, 0.20,  1,    320, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Small pearl
+  n = InitItem(n,"jewelry13","",        2, 13,  0.10,  3,    482, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Silver Brooch
+  n = InitItem(n,"jewelry14","",        2, 14,  0.05,  7,    911, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gold Brooch
+  n = InitItem(n,"jewelry15","",        2, 15,  0.05,  9,   4390, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Emerald Pendant
+  n = InitItem(n,"jewelry16","",        2, 16,  0.02, 12,   6925, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Gem necklace
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // INDIAN TRINKETS:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
-  n = InitItem(n,"indian1", "",         5,  1,  0.10,  3,   1750, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Irgantachul Idol
-  n = InitItem(n,"indian2", "",         5,  2,  0.05,  1,     70, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Weird Animal Figurine
-  n = InitItem(n,"indian3", "",         5,  3,  0.10,  1,    150, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Small Mosaic
-  n = InitItem(n,"indian4", "",         5,  4,  0.20,  1,     50, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Clay Jar
-  n = InitItem(n,"indian5", "",         5,  5,  0.05,  6,   1730, 1,   1, 1, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Markuchankatu Mask	// + skill item
-  n = InitItem(n,"indian6", "",         5,  6,  0.05,  4,    770, 1,   1, 1, 0,   0, +1,  0,  0,  0,  0,  0,  0,  0, -1,  0,  0,  0,  1);// Akumalartu Figurine	// +- skill item
-  n = InitItem(n,"indian7", "",         5,  7,  0.10,  3,   1720, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Pikachuatl Idol		// + skill item
-  n = InitItem(n,"indian8", "",         5,  8,  0.08,  4,   1440, 1,   1, 1, 0,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Royal Cuspidor
-  n = InitItem(n,"indian9", "",         5,  9,  0.05,  5,    460, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Bakachukta Idol
-  n = InitItem(n,"indian10", "",        5, 10,  0.07,  2,   1270, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1);// Yxtoikchatlu Idol
-  n = InitItem(n,"indian11", "",        5, 11,  0.10,  5,   1250, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  1);// Wisdom Tooth Figurine
-  n = InitItem(n,"indian12", "",        5, 12,  0.07,  5,    280, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Morchachtulak Idol
-  n = InitItem(n,"indian13", "",        5, 13,  0.10,  1,    140, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ancient Ritual Jar
-  n = InitItem(n,"indian14", "",        5, 14,  0.05,  5,    490, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ichtyloxtumba Idol
-  n = InitItem(n,"indian15", "",        5, 15,  0.05,  9,    290, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Clay Ritual Bath
-  n = InitItem(n,"indian16", "",        5, 16,  0.05,  3,    120, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Unusually Painted Pot
-  n = InitItem(n,"indian17", "stat1",   5, 14,  0.01, 55,   6000, 1,   1, 1, 0,  +1, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1);// Darien Idol			// quest item
+  n = InitItem(n,"indian1", "",         5,  1,  0.10,  3,   1750, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Irgantachul Idol
+  n = InitItem(n,"indian2", "",         5,  2,  0.05,  1,     70, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Weird Animal Figurine
+  n = InitItem(n,"indian3", "",         5,  3,  0.10,  1,    150, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Small Mosaic
+  n = InitItem(n,"indian4", "",         5,  4,  0.20,  1,     50, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Clay Jar
+  n = InitItem(n,"indian5", "",         5,  5,  0.05,  6,   1730, 1,   1, 0, 0,   0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Markuchankatu Mask	// + skill item
+  n = InitItem(n,"indian6", "",         5,  6,  0.05,  4,    770, 1,   1, 0, 0,   0, +1,  0,  0,  0,  0,  0,  0,  0, -1,  0,  0,  0,  1);// Akumalartu Figurine	// +- skill item
+  n = InitItem(n,"indian7", "",         5,  7,  0.10,  3,   1720, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1);// Pikachuatl Idol		// + skill item
+  n = InitItem(n,"indian8", "",         5,  8,  0.08,  4,   1440, 1,   1, 0, 0,  +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Royal Cuspidor
+  n = InitItem(n,"indian9", "",         5,  9,  0.05,  5,    460, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Bakachukta Idol
+  n = InitItem(n,"indian10", "",        5, 10,  0.07,  2,   1270, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  1);// Yxtoikchatlu Idol
+  n = InitItem(n,"indian11", "",        5, 11,  0.10,  5,   1250, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  1);// Wisdom Tooth Figurine
+  n = InitItem(n,"indian12", "",        5, 12,  0.07,  5,    280, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Morchachtulak Idol
+  n = InitItem(n,"indian13", "",        5, 13,  0.10,  1,    140, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ancient Ritual Jar
+  n = InitItem(n,"indian14", "",        5, 14,  0.05,  5,    490, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Ichtyloxtumba Idol
+  n = InitItem(n,"indian15", "",        5, 15,  0.05,  9,    290, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Clay Ritual Bath
+  n = InitItem(n,"indian16", "",        5, 16,  0.05,  3,    120, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Unusually Painted Pot
+  n = InitItem(n,"indian17", "stat1",   5, 14,  0.01, 55,   6000, 1,   1, 0, 0,  +1, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1);// Darien Idol			// quest item
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // MINERALS:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
-  n = InitItem(n,"mineral1", "",        7,  1,  0.08,  3,    410, 1,   3, 1, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Pyrite
-  n = InitItem(n,"mineral2", "",        7,  2,  0.09,  5,    880, 0,   2, 1, 0,   0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Garnet
-  n = InitItem(n,"mineral3", "",        7,  3,  0.08,  8,    950, 1,   2, 1, 0,   0,  0, +1,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1);// Chrysoberyl
-  n = InitItem(n,"mineral7", "",        7,  7,  0.12,  5,    650, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0, -1,  0,  0,  0,  1);// Smoky Quartz
-  n = InitItem(n,"mineral8", "",        7,  8,  0.08,  8,    630, 0,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Tormaline
-  n = InitItem(n,"mineral9", "",        7,  9,  0.10,  9,    550, 0,   2, 1, 0,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  1);// Topaz
-  n = InitItem(n,"mineral15", "",       7, 15,  0.05,  6,    720, 0,   1, 1, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Platinum
-  n = InitItem(n,"mineral16", "",       7, 16,  0.10,  6,    210, 0,   4, 1, 0,  +1,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Rock Crystal
+  n = InitItem(n,"mineral1", "",        7,  1,  0.08,  3,    410, 1,   3, 0, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Pyrite
+  n = InitItem(n,"mineral2", "",        7,  2,  0.09,  5,    880, 0,   2, 0, 0,   0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Garnet
+  n = InitItem(n,"mineral3", "",        7,  3,  0.08,  8,    950, 1,   2, 0, 0,   0,  0, +1,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  1);// Chrysoberyl
+  n = InitItem(n,"mineral7", "",        7,  7,  0.12,  5,    650, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0, +1,  0,  0, -1,  0,  0,  0,  1);// Smoky Quartz
+  n = InitItem(n,"mineral8", "",        7,  8,  0.08,  8,    630, 0,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  1);// Tormaline
+  n = InitItem(n,"mineral9", "",        7,  9,  0.10,  9,    550, 0,   2, 0, 0,   0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  1);// Topaz
+  n = InitItem(n,"mineral15", "",       7, 15,  0.05,  6,    720, 0,   1, 0, 0,   0,  0,  0,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Platinum
+  n = InitItem(n,"mineral16", "",       7, 16,  0.10,  6,    210, 0,   4, 0, 0,  +1,  0, +1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// Rock Crystal
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // SPECIAL:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
-  n = InitItem(n,"chinatiger", "",      7, 10,  0.03,  8,   4580, 0,   1, 1, 0,   0,  0,  0, +2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// LDH unhide 05Jan09
-  n = InitItem(n,"whiteskull", "",      7, 11,  0.08, 10,   2750, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
-  n = InitItem(n,"roseskull", "",       7, 12,  0.05, 13,   3250, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
-  n = InitItem(n,"blueskull", "",       7, 13,  0.01, 15,   8100, 1,   1, 1, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
-  n = InitItem(n,"albatross", "",       7,  4,  0.05,  1,     25, 0,   1, 1, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0, -2,  1,  0,  0,  1);// Albatross
+  n = InitItem(n,"chinatiger", "",      7, 10,  0.03,  8,   4580, 0,   1, 0, 0,   0,  0,  0, +2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// LDH unhide 05Jan09
+  n = InitItem(n,"whiteskull", "",      7, 11,  0.08, 10,   2750, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
+  n = InitItem(n,"roseskull", "",       7, 12,  0.05, 13,   3250, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
+  n = InitItem(n,"blueskull", "",       7, 13,  0.01, 15,   8100, 1,   1, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);// quest item
+  n = InitItem(n,"albatross", "",       7,  4,  0.05,  1,     25, 0,   1, 0, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0, -2,  1,  0,  0,  1);// Albatross
 
 if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0
 || sti(GetStorylineVar(FindCurrentStoryline(), "BART_PUZZLES")) > 0)
@@ -3220,7 +3220,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
       SKILLITEMS[SKILLITEMS_QUANTITY].id = itm.id;
       SKILLITEMS_QUANTITY++;
       if(!CheckAttribute(itm,"skill.num")) itm.skill.num = 1;
-      if(!CheckAttribute(itm,"skill.stack")) itm.skill.stack = 1;
+      if(!CheckAttribute(itm,"skill.stack")) itm.skill.stack = 0;			//JRH ?
       if(!CheckAttribute(itm,"skill.hidden")) itm.skill.hidden = 0;
     }
     //DumpAttributes(itm);
@@ -4297,7 +4297,7 @@ int InitItem( ref   ItemIndex,
               int   minlevel,
               float price,
               int   indiantype,
-              int numneeded, int stack, int hidden,
+              int numneeded, bool stack, int hidden,
               int leadership, int fencing, int sailing, int accuracy, int cannons,
               int grappling, int repair, int defence, int commerce, int sneak,
               int skiptrade, int skiprand, int skipequip, int skipsell
@@ -4316,8 +4316,8 @@ int InitItem( ref   ItemIndex,
   // GreatZen -->
   genitm.skill.num = 1;//MAXIMUS
   if ( numneeded > 1 )  genitm.skill.num      = numneeded;
-  genitm.skill.stack = 1;//MAXIMUS
-  if ( stack > 1 )      genitm.skill.stack    = stack;
+  genitm.skill.stack = false;						//JRH
+  if ( stack >= 1 )      genitm.skill.stack    = true;			//JRH
   genitm.skill.hidden = false;//MAXIMUS
   if ( hidden == 1 )    genitm.skill.hidden   = true;
 

@@ -1,4 +1,4 @@
-string DLG_TEXT[75] = {
+string DLG_TEXT[77] = {
 "What do you want, captain?",
 "I'm ",
 ".",
@@ -73,4 +73,7 @@ string DLG_TEXT[75] = {
 "I've noticed you are having some problems with this Thomas O'Reily guy. I've seen him also dealing with native people. I thought you might be interested in knowing that.",
 "Thank you for the information. We will handle this with him.",
 "My pleasure.",
+"Do you know anything about the coastguard patrol schedules?",
+"Maybe we do, maybe we don't. I don't feel like I should tell you.",
+"We don't know the exact patrol schedules, you have to find those yourself. We do know which islands are patrolled more heavily. Let me put it in your tradebook."
 };

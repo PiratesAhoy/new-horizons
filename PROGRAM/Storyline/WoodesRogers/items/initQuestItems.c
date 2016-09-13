@@ -165,7 +165,24 @@ void InitQuestItems()
 	n = InitQuestItem(n,"icon",		"icon",			"",    "JRH12",	16,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"crypt_sketch",	"crypt_sketch",		"",     "JRH8",	 4,	0,0,	"","",	"","",	"","","");
         n = InitQuestItem(n,"corkscrew",	"corkscrew",            "",    "JRH24",	 6,	0,0,	"","",	"","",	"","","");
-
+	
+	n = InitQuestItem(n,"key34",		"key34",		"",    "JRH30", 15,	0,0,	"","",	"","",	"","",""); //Maltese key
+	n = InitQuestItem(n,"book63",		"book63",	  "book63",    "JRH31",  1,	0,0,	"","",	"","",	"","",""); //Maltese medicine
+        n = InitQuestItem(n,"book64",		"book64",	        "",    "JRH31",  2,	0,0,	"","",	"","",	"","",""); //Maltese french
+	n = InitQuestItem(n,"book65",		"book65",	        "",    "JRH31",  3,	0,0,	"","",	"","",	"","",""); //Maltese bible
+        n = InitQuestItem(n,"book66",		"book66",	        "",    "JRH31",  4,	0,0,	"","",	"","",	"","",""); //Maltese pile of sheets
+	n = InitQuestItem(n,"book67",		"book67",     "document67",    "JRH31",  5,	0,0,	"","",	"","",	"","",""); //Maltese official document
+	n = InitQuestItem(n,"book68",		"book68",    "scroll_long",    "JRH31",  6,	0,0,	"","",	"","",	"","",""); //Maltese scroll
+	n = InitQuestItem(n,"Malta_icon",	"Malta_icon",	        "",    "JRH31",  7,	0,0,	"","",	"","",	"","",""); //Maltese icon
+	n = InitQuestItem(n,"Malta_outfit",	"Malta_outfit",	        "",    "JRH31",  8,	0,0,	"","",	"","",	"","",""); //Maltese outfit
+	n = InitQuestItem(n,"Malta_poison",	"Malta_poison",	        "",    "JRH31",  9,	0,0,	"","",	"","",	"","",""); //Maltese poison
+	n = InitQuestItem(n,"Malta_syringe",	"Malta_syringe",	"",    "JRH31", 10,	0,0,	"","",	"","",	"","",""); //Maltese syringe bandage
+	n = InitQuestItem(n,"Malta_medkit",	"Malta_medkit",	        "",    "JRH31", 11,	0,0,	"","",	"","",	"","",""); //Maltese medicine kit
+	n = InitQuestItem(n,"Malta_statue",	"Malta_statue",	        "",    "JRH31", 12,	0,0,	"","",	"","",	"","",""); //Maltese statuette
+	n = InitQuestItem(n,"Malta_box",	"Malta_box",	        "",    "JRH31", 13,	0,0,	"","",	"","",	"","",""); //Maltese shrine
+	n = InitQuestItem(n,"Malta_relic",	"Malta_relic",	        "",    "JRH29",  7,	0,0,	"","",	"","",	"","",""); //Maltese relic
+	n = InitQuestItem(n,"Malta_cross",	"Malta_cross",	        "",    "JRH29", 13,	0,0,	"","",	"","",	"","",""); //Maltese crucifix
+	n = InitQuestItem(n,"Malta_censer",	"Malta_censer",	        "",    "JRH29",  2,	0,0,	"","",	"","",	"","",""); //Maltese censer
 
 	QUESTITEMS_QUANTITY = n;
 }

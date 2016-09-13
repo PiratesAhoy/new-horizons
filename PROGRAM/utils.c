@@ -199,6 +199,12 @@ int round(float num)
 	return makeint(num + 0.5);
 }
 
+//Levis:
+float roundto(float num, int fractals)
+{
+	return makefloat(round(num*(pow(10,fractals))))/100.0;
+}
+
 //strips spaces from a string
 string stripblank(string str)
 {

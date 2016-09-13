@@ -99,8 +99,11 @@ ref CreateOfficerType(string otype, int offset)
 	SetModelfromArray(&ch, GetModelIndex(GetRandomModelForTypeNation(1, otype, sti(ch.nation))));
 	SetRandomNameToCharacter(&ch);
 	LAi_SetCitizenType(ch);
+	trace("Place");
 	if(FindLoadedLocation() != -1) PlaceCharacter(&ch, "goto"); //Moved up by levis so it will level easier
+	trace("Placed");
 	LAi_Create_Officer(offset, &ch);
+	trace("Created");
 	LAi_NPC_Equip(&ch, sti(ch.rank), true, true);
 	DeleteAttribute(ch, "greeting");
 	return &ch;

@@ -176,6 +176,9 @@ int Build(string nr, string building, string interior, float x, float y, float z
 	LAi_SetBuildingType(chr);
 	LAi_SetHP(chr, hp, hp);
 	LAi_group_MoveCharacter(chr, aigroup);
+	//Levis make sure we can see what are buildings
+	chr.isBuilding = 1;
+	trace("Called build for "+building);
 
 // MAXIMUS 09.10.2006 [for correct names showing] -->
 	string corName = XI_ConvertString(building);

@@ -2119,6 +2119,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_AppearOnIslaMuelleonAnacletoShip":
+			CloseQuestHeader("Where_are_i"); // GR: Catch-all as questbook is not closed by some story sequences
 			iPassenger = makeint(Pchar.Temp.Officer.idx1);
 
 			PlaceCharacter(&Characters[iPassenger], "officers");
@@ -2438,6 +2439,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_GreenfordAssaultStarted":
+			LAi_SetOfficerType(characterFromID("danielle")); // GR: If Danielle is to join you in the fort assault, let her fight
 			Characters[GetCharacterIndex("Greenford Commander")].Dialog.Filename = "Greenford Commander_dialog.c";
 			Characters[GetCharacterIndex("Greenford Commander")].Dialog.BoardingNode = "capture_of_Greenford";
 
@@ -2614,7 +2616,11 @@ void QuestComplete(string sQuestName)
 			//SetCharacterRelation(GetCharacterIndex("Greenford commander"),GetMainCharacterIndex(),RELATION_FRIEND);
 			//UpdateRelations();
 			SetTownFortCommander("Greenford", characterFromID("Danielle"));
+//			CaptureTownForNation("Greenford", PERSONAL_NATION); // GR: Doesn't foul up your relations with everyone else
+//			Characters[GetCharacterIndex("Greenford Commander")].skipRM = true;
+			Characters[GetTownFortCommanderIndex("Greenford", 0)].skipRM = true;
 			CaptureColony("Greenford", PERSONAL_NATION);
+			if(GetRMRelation(PChar, ENGLAND) > REL_WAR) SetRMRelation(PChar, ENGLAND, REL_WAR); // GR: In case you improved your relations with Britain since Silehard denounced you
 
 			// PB: Prevent missed attributes -->
 			Characters[GetCharacterIndex("Danielle")].Fort.Cannons.Charge.Type = Characters[GetCharacterIndex("Greenford Commander")].orig.Fort.Cannons.Charge.Type;
@@ -2637,7 +2643,7 @@ void QuestComplete(string sQuestName)
 
 		case "Story_DanielleAndResearcher":
 			PlaceCharacter(characterFromID("Danielle"), "goto");
-			PlaceCharacter(characterFromID("Researcher"), "goto");
+//			PlaceCharacter(characterFromID("Researcher"), "goto");
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("danielle"));
 			Lai_ActorFollow(pchar, characterFromID("danielle"), "", 2.0);
@@ -2647,13 +2653,13 @@ void QuestComplete(string sQuestName)
 		case "Story_DanielleAndResearcher_2":
 			LAi_ActorWaitDialog(pchar, characterFromID("danielle"));
 			Characters[GetCharacterIndex("Danielle")].Dialog.CurrentNode = "Greenford_captured";
-			LAi_SetStayType(characterFromID("researcher"));
+//			LAi_SetStayType(characterFromID("researcher"));
 			LAi_SetActorType(characterFromID("danielle"));
 			LAi_ActorDialog(characterFromID("Danielle"), PChar, "player_back", 10.0, 1.0);
 		break;
 
 		case "danielle_Greenford_captured_exit":
-			/*LAi_SetActorType(characterFromID("danielle"));
+			LAi_SetActorType(characterFromID("danielle"));
 			ChangeCharacterAddress(characterFromID("Researcher"), "Greenford_prison", "goto9");
 
 			Pchar.quest.Story_AppearedInGreenfordPrison.win_condition.l1 = "location";
@@ -2661,30 +2667,39 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_AppearedInGreenfordPrison.win_condition = "Story_AppearedInGreenfordPrison";
 			// KK SetTownCapturedState("Greenford", false); // 04-12-15
 
-			LAi_ActorRunToLocator(characterFromID("danielle"), "reload", "reload27", "Story_DanielleWentToGreenfordPrison", 20.0);*/
-			LAi_SetActorType(pchar);
+			LAi_ActorRunToLocator(characterFromID("danielle"), "reload", "reload27", "Story_DanielleWentToGreenfordPrison", 20.0);
+/*			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Researcher"));
 			Lai_ActorFollow(pchar, characterFromID("Researcher"), "", 2.0);
-			Lai_ActorFollow(characterFromID("Researcher"), pchar, "Story_DanielleAndResearcher_3", 2.0);
+			Lai_ActorFollow(characterFromID("Researcher"), pchar, "Story_DanielleAndResearcher_3", 2.0); */
 		break;
 
 		case "Story_DanielleAndResearcher_3":
-			LAi_ActorWaitDialog(pchar, characterFromID("Researcher"));
+//			LAi_ActorWaitDialog(pchar, characterFromID("Researcher"));
 			Characters[GetCharacterIndex("Researcher")].Dialog.CurrentNode = "Translation";
 			LAi_SetActorType(characterFromID("Researcher"));
 			LAi_ActorDialog(characterFromID("Researcher"), PChar, "player_back", 10.0, 1.0);
 		break;
 
-		/*case "Story_DanielleWentToGreenfordPrison":
+		case "Story_DanielleWentToGreenfordPrison":
 			ChangeCharacterAddress(characterFromID("Danielle"), "Greenford_prison", "goto18");
+			Locations[FindLocation("Greenford_prison")].vcskip = true;
 		break;
 
 		case "Story_AppearedInGreenfordPrison":
+			LAi_SetOfficerType(characterFromID("danielle"));
 			Pchar.quest.Story_DanielleWentToGreenfordPrison.over = "yes";
 			Characters[GetCharacterIndex("Researcher")].Dialog.CurrentNode = "Translation";
-		break;*/
+
+			Pchar.quest.story_researcher_in_prison_speaks.win_condition.l1 = "locator";
+			Pchar.quest.story_researcher_in_prison_speaks.win_condition.l1.location = "Greenford_prison";
+			Pchar.quest.story_researcher_in_prison_speaks.win_condition.l1.locator_group = "reload";
+			Pchar.quest.story_researcher_in_prison_speaks.win_condition.l1.locator = "reload12";
+			pchar.quest.story_researcher_in_prison_speaks.win_condition = "Story_DanielleAndResearcher_3";
+		break;
 
 		case "Story_MovingToLighthouse":
+			DeleteAttribute(&Locations[FindLocation("Greenford_prison")],"vcskip");
 			RemovePassenger(Pchar, characterFromID("Danielle"));
 
 			CloseQuestHeader("Meet_Danielle_on_Muelle");
@@ -2927,7 +2942,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterRelationBoth(GetCharacterIndex("Brian The Slayer"),GetCharacterIndex("Thomas Norton"),RELATION_FRIEND);
 			SetCharacterRelationBoth(GetCharacterIndex("Isenbrandt Jurcksen"),GetCharacterIndex("Thomas Norton"),RELATION_FRIEND);
 			UpdateRelations(); */
-			characters[GetCharacterIndex("Robert Christopher Silehard")].nation = PIRATE;
+//			characters[GetCharacterIndex("Robert Christopher Silehard")].nation = PIRATE;
 			characters[GetCharacterIndex("Isenbrandt Jurcksen")].nation = PIRATE;
 			characters[GetCharacterIndex("Thomas Norton")].nation = PIRATE;
 			characters[GetCharacterIndex("Brian The Slayer")].nation = PIRATE;
@@ -3448,7 +3463,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_AfterFinalOnRedmond2.win_condition.l1.location = "Redmond_shore_02";
 			Pchar.quest.Story_AfterFinalOnRedmond2.win_condition = "Story_AfterFinalOnRedmond2";
 			Pchar.quest.Story_AfterFinalOnRedmond2.fail_condition = "Story_AfterFinalOnRedmond2";
-			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "AfterFinal2";	  // <-- Cat for Danielle fix
+			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "After_Final2";	  // <-- Cat for Danielle fix
 		break;
 
 		case "remove_officers_from_blaze_in_redmond_complete":
@@ -4887,7 +4902,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(pchar);
 			pchar.quest.kill_ferro_cerezo.over = "yes";
 			pchar.quest.abording_ferro_cerezo.over = "yes";
-			ChangeCharacterAddress(characterFromID("Ferro Cerezo"), "None", ""); // GR
+			if (characters[GetCharacterIndex("Ferro Cerezo")].location == "Conceicao_tavern") ChangeCharacterAddress(characterFromID("Ferro Cerezo"), "None", ""); // GR
 			if (CalcCharacterSkill(pchar, SKILL_FENCING) > 7)
 			{
 				LAi_QuestDelay("after_kicked_2_complete", 0.5);
@@ -5166,7 +5181,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "prepare_for_storm":
-			AddQuestrecord("Where_are_i", 1);
+//			AddQuestrecord("Where_are_i", 1);
 			Pchar.quest.before_storm.win_condition.l1 = "MapEnter";
 			Pchar.quest.before_storm.win_condition = "before_storm";
 		break;
@@ -5334,6 +5349,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "to_douwesen_shore_complete":
+			AddQuestrecord("Where_are_i", 1);
 			PlaceCharacter(characterFromID("peasant"), "goto");
 			LAi_SetActorType(pchar);
 			LAi_ActorFollow(pchar, characterFromID("peasant"), "", 2.0);
@@ -6824,7 +6840,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_AfterFinalOnRedmond2.over = "yes";
 // <-- KK
 			LAi_SetActorType(characterFromID("Danielle"));
-			LAi_ActorWaitDialog(Pchar, characterFromID("Danielle"));
+//			LAi_ActorWaitDialog(Pchar, characterFromID("Danielle"));
 			LAi_ActorDialog(characterFromID("Danielle"), Pchar, "", 5.0, 1.0);
 			Characters[GetCharacterIndex("Danielle")].Dialog.CurrentNode = "After_Final2";
 		break;

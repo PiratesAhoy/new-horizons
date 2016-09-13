@@ -54,6 +54,7 @@ void InitAutoSkillsSystem(ref refCharacter, bool dailyUpdate)
 	if(!IsMainCharacter(refCharacter))
 	{
 		if ( CheckAttribute(refCharacter,"corpse")) return;
+		if ( CheckAttribute(refCharacter,"isBuilding")) return; //we don't need to check buildings
 		if (!CheckAttribute(refCharacter,"completeinit")) 
 		{
 			if(DEBUG_EXPERIENCE>1 || DEBUG_POSTINIT>1) Trace("Need to init skills");
@@ -474,49 +475,52 @@ void AddExpAndShow(ref chref, int _exp)
 void SetUpCharacterBonus(ref chr)
 {
 	//First we determine how many bonus skills this character will have.
-	int numbonus = 0;
+	int randval,numbonus,numbskill;
 	int val = rand(100);
-	int numprefer = 0;
-	aref Bonus, Prefer;
+	aref Bonus, B_Skill;
 	string skillname;
+	string nation = chr.nation;
+	numbonus = 0;
 	if(val < NPC_ONE_BONUS_CHANCE) numbonus = 1;
 	if(val < (NPC_ONE_BONUS_CHANCE+NPC_TWO_BONUS_CHANCE)) numbonus = 2;
-	if(DEBUG_EXPERIENCE>1) Trace("XP LOG: Setup Bonusses for: "+GetMySimpleName(chr)+" with "+numbonus+" bonusses");
+	if(DEBUG_EXPERIENCE>1) Trace("XP LOG: Setup Bonusses for: "+GetMySimpleName(chr)+" with "+numbonus+" bonusses and nation = "+nation);
+	int cval = 100;
+	bool picked[SKILL_MAX];
 	for(int n = 0; n < numbonus; n++)
 	{
-		bool isset = false;
 		if(CheckAttribute(chr,"nation"))
 		{
-			string nation = chr.nation;
+			//The total value of the bonus skills will always be 100 so we start with a random value under 100.
+			randval = rand(cval);
+			//Now we see which skill this gives us
 			makearef(Bonus,SkillBonus.(nation));
-			numprefer = GetAttributesNum(Bonus);
-			int index = 0;
-			int offset = rand(numprefer-1);
-			for(int i = 0; i < numprefer; i++)
+			numbskill = GetAttributesNum(Bonus);
+			int totval = 0;
+			for(int i = 0; i < numbskill; i++)
 			{
-				if(!isset)
+				if(picked[i] != true)
 				{
-					index = i+offset;
-					if(index>=numprefer) index -= numprefer;
-					Prefer = GetAttributeN(Bonus,i);
-					val = rand(100);
-					if(val < sti(Prefer))
+					//Get the value of this skill
+					B_Skill = GetAttributeN(Bonus,i);
+					totval += sti(B_Skill);
+					//Check if we found the right skill
+					if(randval <= totval)
 					{
-						skillname = GetAttributeName(Prefer);
-						if(stf(GetAttribute(chr,"skill."+skillname+".bonus")) > 1.0) continue;
-						if(DEBUG_EXPERIENCE>1) trace("XP LOG: Picked "+skillname);
+						picked[i] = true;
+						skillname = GetAttributeName(B_Skill);
 						chr.skill.(skillname).bonus = 1.25;
-						isset = true;
+						cval -= sti(B_Skill);
+						if(DEBUG_EXPERIENCE>1) trace("XP LOG: Picked "+skillname);
+						break;
 					}
 				}
 			}
 		}
-		if(!isset)
+		else
 		{
 			skillname = GetSkillName(rand(9));
-			if(DEBUG_EXPERIENCE>1) trace("XP LOG: Picked "+skillname);
+			if(DEBUG_EXPERIENCE>1) trace("XP LOG: No nation set so picked "+skillname);
 			chr.skill.(skillname).bonus = 1.25;
-			isset = true;
 		}
 	}
 	chr.bonussetup = true;
@@ -527,12 +531,14 @@ void SetUpCharacterBonus(ref chr)
 void InitBonusChances()
 {
 	string nation = ENGLAND;
+	trace("nation = "+nation);
 	string skill = SKILL_SAILING;
 	SkillBonus.(nation).(skill) = 65;
 	skill = SKILL_LEADERSHIP;
 	SkillBonus.(nation).(skill) = 35;
 	
 	nation = FRANCE;
+	trace("nation = "+nation);
 	skill = SKILL_DEFENCE;
 	SkillBonus.(nation).(skill) = 75;
 	skill = SKILL_REPAIR;
@@ -708,8 +714,16 @@ void PrepareSelectPerksForCharacter(ref chref)
 
 bool SelectPerksForCharacter(ref chref, int attempts)
 {
+	if(sti(chref.perks.FreePoints) < 1)
+	{
+		if(DEBUG_PERKSELECT>1) Trace("PERK SELECT: No free point for "+GetMySimpleName(chref)+"so cancelled SelectPerksForCharacter");
+		return false;
+	}
 	if(!CheckAttribute(chref,"PerkTypes")) PrepareSelectPerksForCharacter(chref);
-	if(sti(chref.PerkTypes) <= 0) return false;
+	if(sti(chref.PerkTypes) <= 0) 
+	{
+		return false;
+	}
 	string typename;
 	int numperktypes = GetAttributesNum(PerkTypes);
 	if(DEBUG_PERKSELECT>1) Trace("PERK SELECT: Called SelectPerksForCharacter for: "+GetMySimpleName(chref));
@@ -733,6 +747,11 @@ bool SelectPerksForCharacter(ref chref, int attempts)
 			if(DEBUG_PERKSELECT>1) Trace("PERK SELECT: attempt "+(n+2)+" random number: "+rnum);
 			for(int i = 0; i < numperktypes; i++)
 			{
+				if(sti(chref.perks.FreePoints) < 1)
+				{
+					if(DEBUG_PERKSELECT>1) Trace("PERK SELECT: no more freepoints left. Break the loop");
+					break;
+				}
 				typename = GetAttributeName(GetAttributeN(PerkTypes, i));
 				if(rnum < sti(chref.PerkTypes.(typename)))
 				{
@@ -890,7 +909,7 @@ void InitCharacterSkills(ref chref)
 		if(DEBUG_EXPERIENCE>1)trace("XP LOG: Rank Check "+GetMySimpleName(chref)+" rank: "+rank+" skillrank: "+skillrank);
 		if(skillrank > rank && !CheckAttribute(chref,"IsFantom")) rank = skillrank; //Fantoms keep their assigned rank so they get the XP they need.
 		if(rank < 5) rank = GetRandomRank(CharacterIsFriend(chref), chref.quest.officerType, 0); //We don't like level 1 characters that much
-		if(DEBUG_POSTINIT > 1)Trace("POSTINIT: rank "+rank);
+		if(DEBUG_POSTINIT > 1 || DEBUG_EXPERIENCE > 1)Trace("POSTINIT: rank "+rank);
 	}
 	else
 	{
@@ -925,7 +944,9 @@ void InitCharacterSkills(ref chref)
 			if(!dopost)
 			{
 				if(DEBUG_POSTINIT > 1)Trace("POSTINIT: do normal init");
+				trace("FREEPOINTS NOW: "+sti(chref.perks.FreePoints));
 				AddXPtoChar(chref, "", CalculateExperienceFromRank(rank)); //Bypassing multipliers and shared experience
+				trace("FREEPOINTS AFTER: "+sti(chref.perks.FreePoints));
 				FinishCharInit(chref);
 			}
 		}
@@ -960,6 +981,7 @@ void CheckCharacterSetup(ref chref)
 {
 	if (!CheckAttribute(chref,"id")) {chref.id = "without_id"; }
 	if (!CheckAttribute(chref,"Experience")) {chref.Experience = 1; }
+	if (!CheckAttribute(chref,"nation")) {trace("NO NATION!");}
 	if (!CheckAttribute(chref,"perks.FreePoints")){chref.perks.FreePoints = 1; }
 	if (!CheckAttribute(chref,"skill.freeskill")){chref.skill.freeskill = 0; }
 	if (!CheckAttribute(chref,"quest.officertype") || GetAttribute(chref,"quest.officertype") == "combat")
@@ -1049,14 +1071,15 @@ int ResetSkillsandPerks(ref chref)
 			chref.skill.(skill).bonus = 1.0;
 		}
 	}
-	chref.perks.FreePoints = 1;
-	chref.skill.freeskill = 0;
 	if(!CheckAttribute(chref,"quest.NoRaise")) chref.officerprice = 0;
 	chref.Experience = 0;
 	ResetHP(chref);
 	DeleteAttribute(chref,"perks");
 	DeleteAttribute(chref,"ContribList");
+	DeleteAttribute(chref,"bonussetup");
 	chref.rank = 1;
+	chref.perks.FreePoints = 1;
+	chref.skill.freeskill = 0;
 	skillrank = makeint(skillrank/ADD_SKILLPOINTS_PERLEVEL);
 	if (skillrank < 1) skillrank = 1; // PB: Fix to prevent negative character levels
 	return skillrank;

@@ -2514,7 +2514,19 @@ void RansomColony(string TownName, int nBooty)
 	townsize = GetTownSize(TownName);
 	troops = GetTownNumTroops(TownName);
 	nExp = troops * 50;
-	UpdateRMRelation(PChar, iNation, makefloat(townsize+troops)/100.0);
+	
+	ref chref = GetTownFortCommander(TownName, 0); // PB
+	if (CheckAttribute(chref, "skipRM"))
+	{
+		DeleteAttribute(chref, "skipRM");
+		DeleteAttribute(chref, "betrayed");
+	}
+	else
+	{
+		if (CheckAttribute(chref, "betrayed"))	PChar.traitor = true; // PB: Temporary attribute, will be deleted in the next function
+		UpdateRMRelation(PChar, iNation, makefloat(townsize+troops)/100.0);
+	}
+	
 	SetTownGold(TownName, GetTownGold(TownName) - nBooty);
 	AddMoneyToCharacter(PChar, nBooty);
 	SetTownNumTroops(TownName, makeint(makefloat(troops) * SACK_TROOPS_DECREASE * (0.75 + frand(0.5))));
@@ -2551,14 +2563,25 @@ void CaptureColony(string TownName, int toNation)
 	int i, fn, nExp, iNation, townsize, troops;
 	ref PChar = GetMainCharacter();
 	ref chref;
-	bool tmpbool = toNation >= 0 || toNation < NATIONS_QUANTITY;
+	bool tmpbool = toNation >= 0 && toNation < NATIONS_QUANTITY;
 
 	tmpbool = tmpbool || toNation == PERSONAL_NATION;
 	if (!tmpbool || !TownExist(TownName)) return;
 	iNation = GetTownNation(TownName);
 	townsize = GetTownSize(TownName);
 	troops = GetTownNumTroops(TownName);
-	UpdateRMRelation(PChar, iNation, makefloat(townsize+troops)/100.0);
+	
+	chref = GetTownFortCommander(TownName, 0); // PB
+	if (CheckAttribute(chref, "skipRM"))
+	{
+		DeleteAttribute(chref, "skipRM");
+		DeleteAttribute(chref, "betrayed");
+	}
+	else
+	{
+		if (CheckAttribute(chref, "betrayed"))	PChar.traitor = true; // PB: Temporary attribute, will be deleted in the next function
+		UpdateRMRelation(PChar, iNation, makefloat(townsize+troops)/100.0);
+	}
 	
 	string sLogTitle;
 	string sLogEntry;
