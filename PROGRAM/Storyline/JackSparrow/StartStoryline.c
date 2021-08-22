@@ -127,7 +127,7 @@ void StartStoryLine()
 		// immediately available
 
 	// Justine Le Moigne
-		// Custom version of Elizabeth Shaw’s Disappearance sidequest
+		// Custom version of Elizabeth Shawâ€™s Disappearance sidequest
 		PChar.quest.Firstcontact = "";
 		PChar.quest.Contact_start.win_condition.l1 = "location";
 		PChar.quest.Contact_start.win_condition.l1.character = PChar.id;
@@ -152,7 +152,7 @@ void StartStoryLine()
 		SetRumourState("Children_start", false);	// Disable standard rumour
 		// enabled in case "storm_complete"
 
-	// Sri Sumbhajee Angria – Saving Askays Brother
+	// Sri Sumbhajee Angria â€“ Saving Askays Brother
 		// Custom version of Saving Toff's Daughter sidequest
 		ChangeCharacterAddress(characterFromID("Toff Oremans"), "none", "");
 		pchar.quest.spanish_soldier_alone.win_condition.l1 = "locator";

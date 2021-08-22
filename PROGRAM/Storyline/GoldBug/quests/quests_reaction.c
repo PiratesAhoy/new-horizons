@@ -1,4 +1,4 @@
-﻿
+п»ї
 GetTime(){ return stf(Environment.time); }
 
 void QuestComplete(string sQuestName)
@@ -12004,7 +12004,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.leave_female_slave.win_condition.l1.locator = "door_in";
 			pchar.quest.leave_female_slave.win_condition = "leave_female_slave";
 		break;
-//pär door
+//pГ¤r door
 		case "leave_female_slave":
 	//LogIt("leave_female_slave");
 			ChangeCharacterAddressGroup(Pchar, "Bessop_plantation", "goto", "barrack_out");
@@ -12543,7 +12543,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialogNow(characterFromID("f_slave1"), pchar, "", 0.1);
 			LAi_ActorWaitDialog(Pchar, characterFromID("f_slave1"));
 		break;
-//pär save
+//pГ¤r save
 		case "witch_is_drawing_done":
 			PlaySound("INTERFACE\paper_small.wav");
 			GiveItem2Character(Pchar, "BH_sketch");

@@ -3117,7 +3117,7 @@ void StartStoryLine()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers¥ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers“ë library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";

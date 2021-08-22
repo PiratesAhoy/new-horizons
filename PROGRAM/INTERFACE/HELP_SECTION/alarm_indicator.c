@@ -6,10 +6,10 @@ void alarm_indicator_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="alarm_indicator") return;
 
-	// Заполним экран содержимым
-		// каринки
+	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
+		// РєР°СЂРёРЅРєРё
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\alarm_indicator.tga");
-		// строки
+		// СЃС‚СЂРѕРєРё
 	int strFileID = LanguageOpenFile("helpsections\alarm_indicator.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"alarm_indicator_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"alarm_indicator_title");
@@ -21,7 +21,7 @@ void alarm_indicator_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="alarm_indicator") return;
 
-	// Удалим с эрана все
+	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

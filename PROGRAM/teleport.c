@@ -153,12 +153,12 @@ void SetTeleportData(int tshowType)
 
 	switch(tshowType)
 	{
-	case 0: // Выбор телепорт персонажа или корабля
+	case 0: // Р’С‹Р±РѕСЂ С‚РµР»РµРїРѕСЂС‚ РїРµСЂСЃРѕРЅР°Р¶Р° РёР»Рё РєРѕСЂР°Р±Р»СЏ
 		objTeleport.data.id1 = "character teleport";
 		objTeleport.data.id2 = "ship teleport";
 		objTeleport.data.id3 = "character dialog";
 		break;
-	case 1: // Выбор локации
+	case 1: // Р’С‹Р±РѕСЂ Р»РѕРєР°С†РёРё
 		for(i = 0; i < MAX_LOCATIONS; i++)
 		{
 			if(Locations[i].id != "")
@@ -168,7 +168,7 @@ void SetTeleportData(int tshowType)
 			}
 		}
 		break;
-	case 2: // Выбор группы локаторов
+	case 2: // Р’С‹Р±РѕСЂ РіСЂСѓРїРїС‹ Р»РѕРєР°С‚РѕСЂРѕРІ
 		locationNum = FindLocation(tel_location_id);
 		if(locationNum!=-1)
 		{
@@ -197,7 +197,7 @@ void SetTeleportData(int tshowType)
 			}
 		}
 		break;
-	case 3: // Выбор локатора
+	case 3: // Р’С‹Р±РѕСЂ Р»РѕРєР°С‚РѕСЂР°
 		Trace("~~~~~~~ loc id = "+tel_location_id + " group id = "+locatorGroup);
 		locationNum = FindLocation(tel_location_id);
 		if(locationNum!=-1)
@@ -217,7 +217,7 @@ void SetTeleportData(int tshowType)
 			}
 		}
 		break;
-	case 10: // выбор диалога
+	case 10: // РІС‹Р±РѕСЂ РґРёР°Р»РѕРіР°
 		object objFileFinder;
 		objFileFinder.dir = "PROGRAM\DIALOGS";
 		objFileFinder.mask = "*.c";
@@ -229,7 +229,7 @@ void SetTeleportData(int tshowType)
 			CopyAttributes(arData,arList);
 		}
 		break;
-	case 11: // Выбор нода
+	case 11: // Р’С‹Р±РѕСЂ РЅРѕРґР°
 		object objNodeFinder;
 		objNodeFinder.file = "PROGRAM\DIALOGS\\" + tel_dialogFileName;
 		CreateEntity(&objNodeFinder,"FINDDIALOGNODES");

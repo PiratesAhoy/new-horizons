@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- -иалог первый - первая вс=реча
+		// ----------------------------------- -РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃ=СЂРµС‡Р°
 		// ----------------- TALISMAN changes done to make Skull give piece of Treasure map to Player in Jack Sparrow Story
 		case "First time":
 			Dialog.defAni = "dialog_stay1";

@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -33,7 +33,7 @@ void ProcessDialogEvent()
 			Dialog.snd = "voice\SYBO001\SYBO001";
 
 			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			// включить проверку, если девушка была или захвачена игроком, но выкуп за нее Сильвией уже заплачен, то она ругает игрока.
+			// РІРєР»СЋС‡РёС‚СЊ РїСЂРѕРІРµСЂРєСѓ, РµСЃР»Рё РґРµРІСѓС€РєР° Р±С‹Р»Р° РёР»Рё Р·Р°С…РІР°С‡РµРЅР° РёРіСЂРѕРєРѕРј, РЅРѕ РІС‹РєСѓРї Р·Р° РЅРµРµ РЎРёР»СЊРІРёРµР№ СѓР¶Рµ Р·Р°РїР»Р°С‡РµРЅ, С‚Рѕ РѕРЅР° СЂСѓРіР°РµС‚ РёРіСЂРѕРєР°.
 			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			Dialog.Text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[1];
 			link.l1 = pcharrepphrase(DLG_TEXT[2], DLG_TEXT[3]);
@@ -185,7 +185,7 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "captured_by_blaze";
 			TakeItemFromCharacter(Pchar, "Correspondence1");// PW remove Arnaud letter
 			///////////////////////////////////////////
-			// Убрать сабину и перегрузить локацию
+			// РЈР±СЂР°С‚СЊ СЃР°Р±РёРЅСѓ Рё РїРµСЂРµРіСЂСѓР·РёС‚СЊ Р»РѕРєР°С†РёСЋ
 			///////////////////////////////////////////
 		//	ChangeCharacterAddress(characterFromID("Sabine Matton"), "none", "none")// PW she should still be on pchar ship
 		break;
@@ -205,7 +205,7 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "captured_by_blaze";
 			ChangeCharacterReputation(pchar, -3);
 			///////////////////////////////////////////
-			// Убрать сабину и перегрузить локацию
+			// РЈР±СЂР°С‚СЊ СЃР°Р±РёРЅСѓ Рё РїРµСЂРµРіСЂСѓР·РёС‚СЊ Р»РѕРєР°С†РёСЋ
 			///////////////////////////////////////////
 		//	ChangeCharacterAddress(characterFromID("Sabine Matton"), "none", "none")// PW she should still be on pchar ship
 		break;
@@ -227,7 +227,7 @@ void ProcessDialogEvent()
 			link.l1 = pcharrepphrase(DLG_TEXT[88], DLG_TEXT[89]);
 			link.l1.go = "exit";
 			////////////////////////////////////////
-			// Убрать письмо, добавить новое письмо
+			// РЈР±СЂР°С‚СЊ РїРёСЃСЊРјРѕ, РґРѕР±Р°РІРёС‚СЊ РЅРѕРІРѕРµ РїРёСЃСЊРјРѕ
 			////////////////////////////////////////
 			ChangeCharacterReputation(pchar, 1);
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "almost_done";

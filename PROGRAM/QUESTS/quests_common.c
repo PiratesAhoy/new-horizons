@@ -1724,7 +1724,7 @@ void CommonQuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Enc_Char1")].nodisarm = 1; // PB: Disable disarming
 			LAi_SetImmortal(CharacterFromID("Enc_Char1"), true);
 
-			//Ïðè ïåðâîì ïîäõîäå èëè èñòå÷åíèè âðåìåíè ñðàáîòàåò êâåñò
+			//ÐŸÑ€Ð¸ Ð¿ÐµÑ€Ð²Ð¾Ð¼ Ð¿Ð¾Ð´Ñ…Ð¾Ð´Ðµ Ð¸Ð»Ð¸ Ð¸ÑÑ‚ÐµÑ‡ÐµÐ½Ð¸Ð¸ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð¸ ÑÑ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ ÐºÐ²ÐµÑÑ‚
 			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
 			LAi_ActorFollow(CharacterFromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "", 240);
 			LAi_ActorFollow(CharacterFromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "", 240);
@@ -1850,7 +1850,7 @@ void CommonQuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("Enc_Char3"));
 			LAi_SetActorType(CharacterFromID("Enc_Char4"));
 
-			//Ïðè ïåðâîì ïîäõîäå èëè èñòå÷åíèè âðåìåíè ñðàáîòàåò êâåñò
+			//ÐŸÑ€Ð¸ Ð¿ÐµÑ€Ð²Ð¾Ð¼ Ð¿Ð¾Ð´Ñ…Ð¾Ð´Ðµ Ð¸Ð»Ð¸ Ð¸ÑÑ‚ÐµÑ‡ÐµÐ½Ð¸Ð¸ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð¸ ÑÑ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ ÐºÐ²ÐµÑÑ‚
 			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
 			LAi_ActorFollow(CharacterFromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "", 240);
 			LAi_ActorFollow(CharacterFromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "", 240);
@@ -2275,7 +2275,7 @@ Cost for level 50 is 55,374,000
 			iTradeNation = sti(pchar.quest.generate_trade_quest_progress.iTradeNation);
 
 			AddCharacterGoods(pchar, iTradeGoods, iQuantityGoods);
-			//çàäàåì êâåñò
+			//Ð·Ð°Ð´Ð°ÐµÐ¼ ÐºÐ²ÐµÑÑ‚
 			pchar.quest.generate_trade_quest.win_condition.l1 = "Timer";
 			pchar.quest.generate_trade_quest.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
 			pchar.quest.generate_trade_quest.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
@@ -2489,7 +2489,7 @@ Cost for level 50 is 55,374,000
 			pchar.quest.prepare_for_kill_pirate.win_condition.l1.location = pchar.quest.generate_kill_quest.destination;
 			pchar.quest.prepare_for_kill_pirate.win_condition = "prepare_for_kill_pirate";
 			pchar.quest.prepare_for_kill_pirate.town = GetCurrentTownID();
-			//çàâîä êíèãè
+			//Ð·Ð°Ð²Ð¾Ð´ ÐºÐ½Ð¸Ð³Ð¸
 			//Log_SetStringToLog("kill_pirate_agree");
 // KK -->
 			Preprocessor_AddQuestData("island", TranslateString("", FindIslandName(pchar.quest.generate_kill_quest.destination)));

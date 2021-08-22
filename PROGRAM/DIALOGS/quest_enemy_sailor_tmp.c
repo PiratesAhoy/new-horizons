@@ -18,7 +18,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "take_HardouinBeauvallet_start":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";

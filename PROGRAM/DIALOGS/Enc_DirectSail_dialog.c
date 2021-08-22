@@ -321,18 +321,18 @@ string InfoReloadToSea(ref mc)
 
 void DialogDirectSailExit(ref char)
 {
-	//Если диалога уже не ведётся, выйдем
+	//Р•СЃР»Рё РґРёР°Р»РѕРіР° СѓР¶Рµ РЅРµ РІРµРґС‘С‚СЃСЏ, РІС‹Р№РґРµРј
 	if(dialogRun == false) return;
 	DelEventHandler("frame", "DialogPlayGreeting");
-	//Освобождаем ресурсы
+	//РћСЃРІРѕР±РѕР¶РґР°РµРј СЂРµСЃСѓСЂСЃС‹
 	DeleteClass(&Dialog);
 	if(FullDialogPath!="") UnloadSegment(FullDialogPath);
 	if(PathDlgLngExtn!="") UnloadSegment(PathDlgLngExtn);
 	if(dialogSelf == false)
 	{
-		//Ссылка на главного персонажа
+		//РЎСЃС‹Р»РєР° РЅР° РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 		ref mainChr = GetMainCharacter();
-		//Отметим, что персонажи освободились от диалога
+		//РћС‚РјРµС‚РёРј, С‡С‚Рѕ РїРµСЂСЃРѕРЅР°Р¶Рё РѕСЃРІРѕР±РѕРґРёР»РёСЃСЊ РѕС‚ РґРёР°Р»РѕРіР°
 		LAi_Character_EndDialog(mainChr, char);
 		LAi_Character_EndDialog(char, mainChr);
 		SendMessage(mainChr, "lsl", MSG_CHARACTER_EX_MSG, "InDialog", 0);
@@ -344,6 +344,6 @@ void DialogDirectSailExit(ref char)
 	}
 	DeleteAttribute(GetMainCharacter(), "forcedlg");
 	dialogRun = false;
-	//Сообщим об окончании диалога
+	//РЎРѕРѕР±С‰РёРј РѕР± РѕРєРѕРЅС‡Р°РЅРёРё РґРёР°Р»РѕРіР°
 	PostEvent(EVENT_DIALOG_EXIT, 1, "l", sti(char.index));
 }

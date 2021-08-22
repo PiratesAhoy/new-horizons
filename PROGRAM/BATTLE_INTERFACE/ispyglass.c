@@ -140,7 +140,7 @@ void SetSpyGlassData()
 		if( CheckAttribute(arScopeItm,"scope.show.nation") && sti(arScopeItm.scope.show.nation)!=0 )
 		{	shipNation = TranslateNationCode(sti(chref.nation));	}
 
-		// ñìîòðèì íà ôîðò
+		// ÑÐ¼Ð¾Ñ‚Ñ€Ð¸Ð¼ Ð½Ð° Ñ„Ð¾Ñ€Ñ‚
 		if(GetCharacterShipType(chref)==SHIP_FORT) // PS
 		{
 			// KK -->
@@ -191,7 +191,7 @@ void SetSpyGlassData()
 			}
 			// meh <--
 		}
-		// ñìîòðèì íà êîðàáëü
+		// ÑÐ¼Ð¾Ñ‚Ñ€Ð¸Ð¼ Ð½Ð° ÐºÐ¾Ñ€Ð°Ð±Ð»ÑŒ
 		else
 		{
 			if( CheckAttribute(arScopeItm,"scope.show.cannons") && sti(arScopeItm.scope.show.cannons)!=0 )
@@ -397,7 +397,7 @@ void SetSpyGlassData()
 			}
 			// meh <--
 		}
-		// ñìîòðèì íà êîðàáëü
+		// ÑÐ¼Ð¾Ñ‚Ñ€Ð¸Ð¼ Ð½Ð° ÐºÐ¾Ñ€Ð°Ð±Ð»ÑŒ
 		else
 
 		// KBSPG - It's a ship
@@ -679,28 +679,28 @@ int TranslateNationCode(int nationCode)
 
 void FillISpyGlassParameters()
 {
-	// ñêîðîñòü ôýéäà
+	// ÑÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ Ñ„ÑÐ¹Ð´Ð°
 	objISpyGlass.parameters.FadeTime = 0.5;
-	// èìåíà òåêñòóðíûõ ôàéëîâ äëÿ ïîäëîæêè è èêîíîê
+	// Ð¸Ð¼ÐµÐ½Ð° Ñ‚ÐµÐºÑÑ‚ÑƒÑ€Ð½Ñ‹Ñ… Ñ„Ð°Ð¹Ð»Ð¾Ð² Ð´Ð»Ñ Ð¿Ð¾Ð´Ð»Ð¾Ð¶ÐºÐ¸ Ð¸ Ð¸ÐºÐ¾Ð½Ð¾Ðº
 	objISpyGlass.parameters.BackTextureName = "battle_interface\panel.tga";
 	objISpyGlass.parameters.IconsTextureName = "battle_interface\spyglasses_icons.tga";
 	objISpyGlass.parameters.NationsTextureName = "battle_interface\all_nations"+GetCurrentPeriod()+".tga"; // PB
 	int bottomOffset = 24;
-	// ïîçèöèÿ ïîäëîæêè
+	// Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ñ Ð¿Ð¾Ð´Ð»Ð¾Ð¶ÐºÐ¸
 	objISpyGlass.parameters.globalpos.left = 0;
 	objISpyGlass.parameters.globalpos.top = sti(showWindow.bottom)-RecalculateVIcon(50+bottomOffset);
 	objISpyGlass.parameters.globalpos.right = sti(showWindow.width);
 	objISpyGlass.parameters.globalpos.bottom = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset);
-	// ðàçìåð èêîíîê
+	// Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¸ÐºÐ¾Ð½Ð¾Ðº
 	objISpyGlass.parameters.iconsize.x = RecalculateHIcon(40);
 	objISpyGlass.parameters.iconsize.y = RecalculateVIcon(40);
-	// òåêñò îá èìåíè êîðàáëÿ è åãî òèïå
+	// Ñ‚ÐµÐºÑÑ‚ Ð¾Ð± Ð¸Ð¼ÐµÐ½Ð¸ ÐºÐ¾Ñ€Ð°Ð±Ð»Ñ Ð¸ ÐµÐ³Ð¾ Ñ‚Ð¸Ð¿Ðµ
 	objISpyGlass.parameters.ShipText.font = "interface_normal";
 	objISpyGlass.parameters.ShipText.scale = 1.0;
 	objISpyGlass.parameters.ShipText.left = sti(showWindow.left)+RecalculateHIcon(10+42);
 	objISpyGlass.parameters.ShipText.topName = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset+80);
 	objISpyGlass.parameters.ShipText.topType = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset+36);
-	// òåêñò èíôû îá êîðàáëå
+	// Ñ‚ÐµÐºÑÑ‚ Ð¸Ð½Ñ„Ñ‹ Ð¾Ð± ÐºÐ¾Ñ€Ð°Ð±Ð»Ðµ
 	objISpyGlass.parameters.DigitData.font = "bold_numbers";
 	objISpyGlass.parameters.DigitData.scale = 0.5;
 	objISpyGlass.parameters.DigitData.topOffset = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset+32);
@@ -709,7 +709,7 @@ void FillISpyGlassParameters()
 	objISpyGlass.parameters.DigitData.leftCrew = makeint(393.0*stf(showWindow.sw)/640.0);
 	objISpyGlass.parameters.DigitData.leftSpeed = makeint(478.0*stf(showWindow.sw)/640.0);
 	objISpyGlass.parameters.DigitData.leftCannons = makeint(562.0*stf(showWindow.sw)/640.0);
-	// êîîðäèíàòû äëÿ èêîíîê
+	// ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ð´Ð»Ñ Ð¸ÐºÐ¾Ð½Ð¾Ðº
 	objISpyGlass.parameters.Icons.topOffset = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset+45);
 	objISpyGlass.parameters.Icons.leftNation = sti(showWindow.left)+RecalculateHIcon(10);
 	objISpyGlass.parameters.Icons.leftHull = sti(objISpyGlass.parameters.DigitData.leftHull)-RecalculateHIcon(42);
@@ -718,7 +718,7 @@ void FillISpyGlassParameters()
 	objISpyGlass.parameters.Icons.leftSpeed = sti(objISpyGlass.parameters.DigitData.leftSpeed)-RecalculateHIcon(42);
 	objISpyGlass.parameters.Icons.leftCannons = sti(objISpyGlass.parameters.DigitData.leftCannons)-RecalculateHIcon(42);
 	objISpyGlass.parameters.Icons.leftCharge = sti(showWindow.right)-RecalculateHIcon(42);
-	// êîîðäèíàòû tu,tv äëÿ èêîíîê
+	// ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ tu,tv Ð´Ð»Ñ Ð¸ÐºÐ¾Ð½Ð¾Ðº
 	objISpyGlass.parameters.IconsTexture.hull.left = 0;
 	objISpyGlass.parameters.IconsTexture.hull.top = 0;
 	objISpyGlass.parameters.IconsTexture.hull.right = 0.3125;

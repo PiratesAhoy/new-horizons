@@ -1015,7 +1015,7 @@ void wdmInitWorldMap()
 	{
 		worldMap.islands.Guadeloupe.locations.city1.name = "GuadShore 2";
 		worldMap.islands.Guadeloupe.locations.city1.modelName = "leaf";
-		worldMap.islands.Guadeloupe.locations.city1.label.text = "Bahía Grande";
+		worldMap.islands.Guadeloupe.locations.city1.label.text = "BahÐ½a Grande";
 		worldMap.islands.Guadeloupe.locations.city1.label.icon = -1;
 
 		worldMap.islands.Guadeloupe.locations.city2.label.text = "Ensenada del Bosque Quebrado";

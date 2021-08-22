@@ -21,7 +21,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -431,7 +431,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[65];
 			link.l1 = DLG_TEXT[66];
 			link.l1.go = "prisoners_leave";
-			//AddQuestRecord("Charles_Vanes_quest", "11");		//pдr what?
+			//AddQuestRecord("Charles_Vanes_quest", "11");		//pРґr what?
 		break;
 
 		case "prisoners_leave":

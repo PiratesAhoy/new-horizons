@@ -23,7 +23,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -106,7 +106,7 @@ void ProcessDialogEvent()
 			}
 			if(CheckQuestAttribute("ReturnMoney","3000"))//moneyBack
 			{
-			//	dialog.text = "Ах! это снова вы. Я не знал что у вас важные дела к командиру.";
+			//	dialog.text = "РђС…! СЌС‚Рѕ СЃРЅРѕРІР° РІС‹. РЇ РЅРµ Р·РЅР°Р» С‡С‚Рѕ Сѓ РІР°СЃ РІР°Р¶РЅС‹Рµ РґРµР»Р° Рє РєРѕРјР°РЅРґРёСЂСѓ.";
 				link.l1 = DLG_TEXT[24];
 				link.l1.go = "Node_3";
 			}
@@ -171,7 +171,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(Pchar,6000);
-			Pchar.quest.ReturnMoney = "0";//деньги вернулись!!!
+			Pchar.quest.ReturnMoney = "0";//РґРµРЅСЊРіРё РІРµСЂРЅСѓР»РёСЃСЊ!!!
 			AddQuestRecord("Story_Find_Rheims", 116);
 		break;
 
@@ -195,7 +195,7 @@ void ProcessDialogEvent()
 		case "exitandpay":
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(Pchar,-3000);
-			Pchar.quest.ReturnMoney = "1";//сохраним, для откупа...
+			Pchar.quest.ReturnMoney = "1";//СЃРѕС…СЂР°РЅРёРј, РґР»СЏ РѕС‚РєСѓРїР°...
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
 			AddQuestRecord("Story_Find_Rheims", 114);

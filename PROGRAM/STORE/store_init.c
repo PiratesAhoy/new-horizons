@@ -1,11 +1,11 @@
 //===========================================================================================
 //			RULE:
-//	pStore.StoreSize	- размер магазина ("large" или "small") - влияет на кол-во товара,
-//						по умолчанию берется равным "large".
-//	pStore.Island		- id острова к которому принадлежит магазин.
-//	pStore.Goods.имя_товара.NotUsed		- устанавливается в TRUE для тех товаров, которыми
-//										нельзя торговать в данном магазине.
-//										(по умолчанию false).
+//	pStore.StoreSize	- СЂР°Р·РјРµСЂ РјР°РіР°Р·РёРЅР° ("large" РёР»Рё "small") - РІР»РёСЏРµС‚ РЅР° РєРѕР»-РІРѕ С‚РѕРІР°СЂР°,
+//						РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ Р±РµСЂРµС‚СЃСЏ СЂР°РІРЅС‹Рј "large".
+//	pStore.Island		- id РѕСЃС‚СЂРѕРІР° Рє РєРѕС‚РѕСЂРѕРјСѓ РїСЂРёРЅР°РґР»РµР¶РёС‚ РјР°РіР°Р·РёРЅ.
+//	pStore.Goods.РёРјСЏ_С‚РѕРІР°СЂР°.NotUsed		- СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РІ TRUE РґР»СЏ С‚РµС… С‚РѕРІР°СЂРѕРІ, РєРѕС‚РѕСЂС‹РјРё
+//										РЅРµР»СЊР·СЏ С‚РѕСЂРіРѕРІР°С‚СЊ РІ РґР°РЅРЅРѕРј РјР°РіР°Р·РёРЅРµ.
+//										(РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ false).
 //===========================================================================================
 void StoreInit()
 {
@@ -55,7 +55,7 @@ void StoreInit()
 	Stores[OXBAY_STORE].taylor = "Guy Gilroy"; // KK
 	STORE_QUANTITY++; // NK 05-03-30 use int qty and oversized array
 
-	// незахваченный город в Oxbay
+	// РЅРµР·Р°С…РІР°С‡РµРЅРЅС‹Р№ РіРѕСЂРѕРґ РІ Oxbay
 	Stores[GREENFORD_STORE].Island	= "Oxbay";
 	Stores[GREENFORD_STORE].Group	= "Greenford";
 	Stores[GREENFORD_STORE].owner	=	"John Filbert"; // KK
@@ -77,7 +77,7 @@ void StoreInit()
 	Stores[CONCEICAO_STORE].gunsmith = "Diego Uargo"; // Levis
 	STORE_QUANTITY++; // NK 05-03-30 use int qty and oversized array
 
-	// контрабандисты
+	// РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚С‹
 	Stores[SMUGGLERS_STORE].Island	= "Conceicao";
 	Stores[SMUGGLERS_STORE].group	= "Smugglers Lair";
 	Stores[SMUGGLERS_STORE].owner	= "Leonardo Violate"; // KK

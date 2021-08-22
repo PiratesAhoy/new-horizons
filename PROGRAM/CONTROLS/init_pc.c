@@ -696,7 +696,7 @@ void ExternInitKeyCodes()
 	objControlsState.key_codes.VK_F5        = 116;
 	objControlsState.key_codes.VK_F5.img    = "a";
 	objControlsState.key_codes.VK_F6        = 117;
-	objControlsState.key_codes.VK_F6.img    = "ö";
+	objControlsState.key_codes.VK_F6.img    = "Ñ†";
 	objControlsState.key_codes.VK_F9        = 120;
 	objControlsState.key_codes.VK_F9.img    = "f";
 
@@ -732,29 +732,29 @@ void ExternInitKeyCodes()
 		objControlsState.key_codes.VK_INSERT.img = ">";
 		objControlsState.key_codes.VK_DELETE = 46;
 		objControlsState.key_codes.VK_DELETE.img = ">";
-		objControlsState.key_codes.VK_OEM_1 = 186; // ; æ
+		objControlsState.key_codes.VK_OEM_1 = 186; // ; Ð¶
 		objControlsState.key_codes.VK_OEM_1.img = ">";
 		objControlsState.key_codes.VK_OEM_PLUS = 187; // +
 		objControlsState.key_codes.VK_OEM_PLUS.img = ">";
-		objControlsState.key_codes.VK_OEM_COMMA = 188; // , á
+		objControlsState.key_codes.VK_OEM_COMMA = 188; // , Ð±
 		objControlsState.key_codes.VK_OEM_COMMA.img = ">";
 		objControlsState.key_codes.VK_OEM_MINUS = 189; // -
 		objControlsState.key_codes.VK_OEM_MINUS.img = ">";
-		objControlsState.key_codes.VK_OEM_PERIOD = 190; // . þ
+		objControlsState.key_codes.VK_OEM_PERIOD = 190; // . ÑŽ
 		objControlsState.key_codes.VK_OEM_PERIOD.img = ">";
 
 		// added by MAXIMUS for typing on Russian -->
 		objControlsState.key_codes.VK_OEM_2 = 191; // / .
 		objControlsState.key_codes.VK_OEM_2.img = ">";
-		objControlsState.key_codes.VK_OEM_3 = 192; // ` ¸
+		objControlsState.key_codes.VK_OEM_3 = 192; // ` Ñ‘
 		objControlsState.key_codes.VK_OEM_3.img = ">";
-		objControlsState.key_codes.VK_OEM_4 = 219; // [ õ
+		objControlsState.key_codes.VK_OEM_4 = 219; // [ Ñ…
 		objControlsState.key_codes.VK_OEM_4.img = ">";
 		objControlsState.key_codes.VK_OEM_5 = 220; // \
 		objControlsState.key_codes.VK_OEM_5.img = ">";
-		objControlsState.key_codes.VK_OEM_6 = 221; // ] ú
+		objControlsState.key_codes.VK_OEM_6 = 221; // ] ÑŠ
 		objControlsState.key_codes.VK_OEM_6.img = ">";
-		objControlsState.key_codes.VK_OEM_7 = 222; // ' ý changed by MAXIMUS was 223
+		objControlsState.key_codes.VK_OEM_7 = 222; // ' Ñ changed by MAXIMUS was 223
 		objControlsState.key_codes.VK_OEM_7.img = ">";
 		// added by MAXIMUS for typing on Russian <--
 		//oem_2-3 are 191-192 as / and `

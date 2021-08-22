@@ -30,7 +30,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- Диалог первый - первая встреча
+		// ----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -49,7 +49,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "exit";
 
-			//разговор с блейзом
+			//СЂР°Р·РіРѕРІРѕСЂ СЃ Р±Р»РµР№Р·РѕРј
 			if (pchar.quest.main_line == "blaze_talk_with_machado")
 			{
 				dialog.snd = "Voice\CAMA\CAMA002";
@@ -104,13 +104,13 @@ void ProcessDialogEvent()
 			{
 				Locations[FindLocation("Smugglers_Lair")].reload.l6.disable = 0;
 			}
-			//даем возможность блейзу просто убить стражников
+			//РґР°РµРј РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р±Р»РµР№Р·Сѓ РїСЂРѕСЃС‚Рѕ СѓР±РёС‚СЊ СЃС‚СЂР°Р¶РЅРёРєРѕРІ
 			pchar.quest.kill_guards_in_rheims_house_smugglers.win_condition.l1 = "NPC_Death";
 			pchar.quest.kill_guards_in_rheims_house_smugglers.win_condition.l1.character = "Macario Regalo";
 			pchar.quest.kill_guards_in_rheims_house_smugglers.win_condition.l2 = "NPC_Death";
 			pchar.quest.kill_guards_in_rheims_house_smugglers.win_condition.l2.character = "Evaristo Filho";
 			pchar.quest.kill_guards_in_rheims_house_smugglers.win_condition = "kill_guards_in_rheims_house_smugglers_complete";
-			//сразу же даем квест на попадание в дом
+			//СЃСЂР°Р·Сѓ Р¶Рµ РґР°РµРј РєРІРµСЃС‚ РЅР° РїРѕРїР°РґР°РЅРёРµ РІ РґРѕРј
 			pchar.quest.blaze_to_rheims_house_in_smugglers.win_condition.l1 = "location";
 			pchar.quest.blaze_to_rheims_house_in_smugglers.win_condition.l1.location = "Rheims_house_in_smugglers";
 			pchar.quest.blaze_to_rheims_house_in_smugglers.win_condition = "blaze_to_rheims_house_in_smugglers_complete";

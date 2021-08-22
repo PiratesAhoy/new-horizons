@@ -6,10 +6,10 @@ void ship_commands_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="ship_commands") return;
 
-	// Заполним экран содержимым
-		// каринки
+	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
+		// РєР°СЂРёРЅРєРё
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\ship_commands.tga");
-		// строки
+		// СЃС‚СЂРѕРєРё
 	int strFileID = LanguageOpenFile("helpsections\ships_command_menu.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"ships_command_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"ships_command_title");
@@ -21,7 +21,7 @@ void ship_commands_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="ship_commands") return;
 
-	// Удалим с эрана все
+	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

@@ -29,9 +29,9 @@ void LoadActivePerkShower()
 	DeleteAttribute(&objActivePerkShower,"PerkList.list");
 	DeleteAttribute(&objActivePerkShower,"Textures");
 
-	// информация о текстурах
+	// РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РµРєСЃС‚СѓСЂР°С…
 	if(bSeaActive && !bAbordageStarted)
-	{	// морская часть
+	{	// РјРѕСЂСЃРєР°СЏ С‡Р°СЃС‚СЊ
 		objActivePerkShower.Textures.t0.file = "battle_interface\sea_abilitys.tga";
 		objActivePerkShower.Textures.t0.horz = 8;
 		objActivePerkShower.Textures.t0.vert = 2;
@@ -53,7 +53,7 @@ void LoadActivePerkShower()
 // PB <--
 	}
 	else
-	{	// земная часть
+	{	// Р·РµРјРЅР°СЏ С‡Р°СЃС‚СЊ
 		objActivePerkShower.Textures.t0.file = "battle_interface\LandCommands.tga";
 		objActivePerkShower.Textures.t0.horz = 4;
 		objActivePerkShower.Textures.t0.vert = 8; // KK
@@ -84,7 +84,7 @@ void LoadActivePerkShower()
 
 	CreateEntity(&objActivePerkShower,"ActivePerkShower");
 	if(bSeaActive && !bAbordageStarted)
-	{	// морская часть
+	{	// РјРѕСЂСЃРєР°СЏ С‡Р°СЃС‚СЊ
 		LayerAddObject(SEA_EXECUTE,&objActivePerkShower,-1);
 		LayerAddObject(SEA_REALIZE,&objActivePerkShower,-1);
 	}

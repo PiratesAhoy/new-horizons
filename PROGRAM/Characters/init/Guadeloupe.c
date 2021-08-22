@@ -179,10 +179,10 @@ void CreateGuadeloupeCharacters(ref n)
 
 // Guadeloupe_Plantation_inside:
 
-			//François de Vigny
-	ch.name 	= TranslateString("","François");
+			//FranÐ·ois de Vigny
+	ch.name 	= TranslateString("","FranÐ·ois");
 	ch.lastname = TranslateString("","de Vigny");
-	ch.id		= "François de Vigny";
+	ch.id		= "FranÐ·ois de Vigny";
 	ch.model	= "Nobleman2";
 	ch.headmodel = "h_Nobleman2";
 	ch.sex = "man";

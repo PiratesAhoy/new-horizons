@@ -21,7 +21,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- Диалог первый - первая встреча
+		// ----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -72,7 +72,7 @@ void ProcessDialogEvent()
 			iTest = 0;
 			dialog.snd = "Voice\DUCO\DUCO004";
 			dialog.text = DLG_TEXT[17] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[18];
-			//вопрос блейза о Реймсе
+			//РІРѕРїСЂРѕСЃ Р±Р»РµР№Р·Р° Рѕ Р РµР№РјСЃРµ
 			if (pchar.quest.main_line == "blaze_talk_with_innes_diaz_complete")
 			{
 				link.l1 = DLG_TEXT[19] + characters[GetCharacterIndex(DLG_TEXT[20])].lastname + DLG_TEXT[21];

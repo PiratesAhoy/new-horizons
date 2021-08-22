@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			ResumeAllSounds();
 			Dialog.defAni = "dialog_stay1";
@@ -300,7 +300,7 @@ void ProcessDialogEvent()
 			AddQuestRecord("Examination for Lieutenant", 1);
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Arthur Wellesley"));
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"FR_Sloop","Le Rиve",-1,FRANCE,true,true);
+			GiveShip2Character(pchar,"FR_Sloop","Le RРёve",-1,FRANCE,true,true);
 			SetCharacterShipLocation(Pchar, "REDMOND_PORT");
 			SetCrewQuantity(pchar, 150);
 			AddCharacterGoods(pchar, GOOD_BALLS, 500);

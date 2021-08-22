@@ -46,7 +46,7 @@ void CreateConceicaoCharacters(ref n)
 
 //Location: Conceicao Pier (an entrance to the town from the pier)
 
-	//Soldier на входе в город
+	//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -84,7 +84,7 @@ void CreateConceicaoCharacters(ref n)
 	ch.greeting = "Gr_Conceicao Soldier";
 	AddGameCharacter(n, ch);
 
-	//Soldier на входе в город -- one more
+	//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ -- one more
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";

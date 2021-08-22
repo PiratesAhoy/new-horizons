@@ -21,7 +21,7 @@ void ProcessDialogEvent()
 	switch(iNation)
 	{
 		case FRANCE:
-			Father = "prêtre";
+			Father = "prÐºtre";
 			Preprocessor_Add("allez", "Allez");
 		break;
 
@@ -58,7 +58,7 @@ void ProcessDialogEvent()
 		case GUEST1_NATION:
 			if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
 			{
-				Father = "präst";
+				Father = "prÐ´st";
 				Preprocessor_Add("allez", "Skynda");
 			}
 			else
@@ -74,7 +74,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
+		// ----------------------------------- Ð”Ð¸Ð°Ð»Ð¾Ð³ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ - Ð¿ÐµÑ€Ð²Ð°Ñ Ð²ÑÑ‚Ñ€ÐµÑ‡Ð°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";

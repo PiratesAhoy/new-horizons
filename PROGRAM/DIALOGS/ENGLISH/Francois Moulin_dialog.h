@@ -2,7 +2,7 @@ string DLG_TEXT[25] = {
 "...",
 "...",
 "What do you want?",
-"Are you François Moulin?",
+"Are you FranÐ·ois Moulin?",
 "Yes, how do you know me?",
 "I've spoken to your daughter. She is quite worried about your sudden disappearance two weeks ago.",
 "It's just a temporary situation. I am going to leave the island today on the 'Amsterdam', the ship that you see lying in the water there. Captain Pieter Boelen promised to take me to a safe island. I risk both my daughter's and my own life if I stay on this island any longer.",

@@ -19,7 +19,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
+		// -----------------------------------Г„ГЁГ Г«Г®ГЈ ГЇГҐГ°ГўГ»Г© - ГЇГҐГ°ГўГ Гї ГўГ±ГІГ°ГҐГ·Г 
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";

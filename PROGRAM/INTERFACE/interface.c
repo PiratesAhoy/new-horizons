@@ -86,9 +86,9 @@ object	GameInterface;
 object	LanguageObject;
 object  Interfaces[INTERFACE_QUANTITY];
 
-// состояние интерфейса
+// СЃРѕСЃС‚РѕСЏРЅРёРµ РёРЅС‚РµСЂС„РµР№СЃР°
 object InterfaceStates;
-// профиль игрока
+// РїСЂРѕС„РёР»СЊ РёРіСЂРѕРєР°
 // KK -->
 object GlobalSettings;
 object ProfileSettings;
@@ -1384,7 +1384,7 @@ void EndCancelInterface(bool bYesRelease)
 	if(bYesRelease)	PostEvent("evntQuestsCheck",1);
 }
 
-// стек для вложенных интерфейсов
+// СЃС‚РµРє РґР»СЏ РІР»РѕР¶РµРЅРЅС‹С… РёРЅС‚РµСЂС„РµР№СЃРѕРІ
 object InterfaceStack;
 void ClearInterfaceStack()
 {
@@ -1906,7 +1906,7 @@ void IProcEventSetGameTime()
 }
 
 //==============================================================
-//	Секция Показывающая какую либо инфо на экране
+//	РЎРµРєС†РёСЏ РџРѕРєР°Р·С‹РІР°СЋС‰Р°СЏ РєР°РєСѓСЋ Р»РёР±Рѕ РёРЅС„Рѕ РЅР° СЌРєСЂР°РЅРµ
 //==============================================================
 #event_handler("DoInfoShower", "procInfoShow");
 object objInfoList[10];

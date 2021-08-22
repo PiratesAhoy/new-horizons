@@ -4,11 +4,11 @@
 #define DEBUG_FIGHTING	0
 
 /*
-	Возможные состояния:
-		"wait"		ждёт цели
-		"go"		идёт к цели
-		"fight"		дерётся с целью
-		"stop"		ждёт возможности пройти к цели
+	Р’РѕР·РјРѕР¶РЅС‹Рµ СЃРѕСЃС‚РѕСЏРЅРёСЏ:
+		"wait"		Р¶РґС‘С‚ С†РµР»Рё
+		"go"		РёРґС‘С‚ Рє С†РµР»Рё
+		"fight"		РґРµСЂС‘С‚СЃСЏ СЃ С†РµР»СЊСЋ
+		"stop"		Р¶РґС‘С‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РїСЂРѕР№С‚Рё Рє С†РµР»Рё
 		"chase"		The character has its sword sheeted and is chasing you (EXPERIMENTAL)
 */
 
@@ -206,10 +206,10 @@ bool LAi_tmpl_fight_InitTemplate(aref chr)
 	return LAi_IsInitedAI;
 }
 
-//Процессирование шаблона персонажа
+//РџСЂРѕС†РµСЃСЃРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 {
-	//Если не в режиме боя переведём в него
+	//Р•СЃР»Рё РЅРµ РІ СЂРµР¶РёРјРµ Р±РѕСЏ РїРµСЂРµРІРµРґС‘Рј РІ РЅРµРіРѕ
 	float time,cx,cy,cz,tx,ty,tz,distancetotarget;
 	aref tmpl;
 	makearef(tmpl, chr.chr_ai.tmpl);
@@ -222,7 +222,7 @@ void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 	if(tmpl.target != "")
 	{
 		ref target = &Characters[sti(tmpl.target)];
-		//Анализируем действие стояния
+		//РђРЅР°Р»РёР·РёСЂСѓРµРј РґРµР№СЃС‚РІРёРµ СЃС‚РѕСЏРЅРёСЏ
 		if(IMPROVE_FIGHT_AI)
 		{
 			if(DEBUG_FIGHTING) trace("Start Update");
@@ -444,7 +444,7 @@ void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 				LAi_SetFightMode(chr,true);
 				LAi_LockFightMode(chr,true);
 			}
-			//Если есть цель, то отслеживаем её смерть
+			//Р•СЃР»Рё РµСЃС‚СЊ С†РµР»СЊ, С‚Рѕ РѕС‚СЃР»РµР¶РёРІР°РµРј РµС‘ СЃРјРµСЂС‚СЊ
 			if(LAi_IsDead(target))
 			{
 				LAi_tmpl_fight_SetWaitState(chr);
@@ -453,7 +453,7 @@ void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 			}
 			if(tmpl.state == "stop")
 			{
-				//Определим дистанцию до противника
+				//РћРїСЂРµРґРµР»РёРј РґРёСЃС‚Р°РЅС†РёСЋ РґРѕ РїСЂРѕС‚РёРІРЅРёРєР°
 				if(!LAi_tmpl_fight_CheckEnemy(chr))
 				{
 					time = stf(tmpl.time) - dltTime;
@@ -719,7 +719,7 @@ void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 		}
 		else
 		{
-			//Если цели нет, переходим в режим ожидания
+			//Р•СЃР»Рё С†РµР»Рё РЅРµС‚, РїРµСЂРµС…РѕРґРёРј РІ СЂРµР¶РёРј РѕР¶РёРґР°РЅРёСЏ
 			if(tmpl.state != "wait")
 			{
 				LAi_tmpl_fight_SetWaitState(chr);
@@ -728,57 +728,57 @@ void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Персонаж выполнил команду  go to point
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  go to point
 void LAi_tmpl_fight_EndGoToPoint(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
-//Персонаж провалил команду  go to point
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  go to point
 void LAi_tmpl_fight_FailureGoToPoint(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
 
-//Персонаж выполнил команду  run to point
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  run to point
 void LAi_tmpl_fight_EndRunToPoint(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
-//Персонаж провалил команду  run to point
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  run to point
 void LAi_tmpl_fight_FailureRunToPoint(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
-//Персонаж не может добраться до точки назначения
+//РџРµСЂСЃРѕРЅР°Р¶ РЅРµ РјРѕР¶РµС‚ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ С‚РѕС‡РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
 void LAi_tmpl_fight_BusyPos(aref chr, float x, float y, float z)
 {
 	if(!IMPROVE_FIGHT_AI) LAi_tmpl_fight_Stop(chr, 1.0 + rand(3));
 }
 
-//Персонаж начал перемещение за другим
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
 void LAi_tmpl_fight_FollowGo(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
-//Персонаж начал дошёл до другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_fight_FollowStay(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
-//Персонаж провалил команду  follow character
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  follow character
 void LAi_tmpl_fight_FailureFollow(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
 
-//Персонаж начал перемещение за другим
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РїРµСЂРµРјРµС‰РµРЅРёРµ Р·Р° РґСЂСѓРіРёРј
 void LAi_tmpl_fight_FightGo(aref chr)
 {
 	if(!LAi_IsFightMode(chr))
@@ -892,7 +892,7 @@ void LAi_tmpl_fight_SwitchIn(aref chr)
 }
 
 
-//Персонаж начал дошёл до другого персонажа
+//РџРµСЂСЃРѕРЅР°Р¶ РЅР°С‡Р°Р» РґРѕС€С‘Р» РґРѕ РґСЂСѓРіРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 void LAi_tmpl_fight_FightStay(aref chr)
 {
 	if(!LAi_IsFightMode(chr))
@@ -910,67 +910,67 @@ void LAi_tmpl_fight_FightStay(aref chr)
 	GroupTargetSetState(chr, "fight");
 }
 
-//Персонаж провалил команду  Fight
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  Fight
 void LAi_tmpl_fight_FailureFight(aref chr)
 {
 	if(!IMPROVE_FIGHT_AI) LAi_tmpl_fight_SetWaitState(chr);
 }
 
-//Можно ли стрелять
+//РњРѕР¶РЅРѕ Р»Рё СЃС‚СЂРµР»СЏС‚СЊ
 bool LAi_tmpl_fight_IsFire(aref chr)
 {
 	return LAi_CharacterCanFire(chr);
 }
 
-//Можно ли использовать оружие
+//РњРѕР¶РЅРѕ Р»Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕСЂСѓР¶РёРµ
 bool LAi_tmpl_fight_IsFight(aref chr)
 {
 	return LAi_LocationCanFight();
 }
 
 
-//Персонаж выполнил команду  escape
+//РџРµСЂСЃРѕРЅР°Р¶ РІС‹РїРѕР»РЅРёР» РєРѕРјР°РЅРґСѓ  escape
 void LAi_tmpl_fight_EndEscape(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
-//Персонаж скользит вдоль патча
+//РџРµСЂСЃРѕРЅР°Р¶ СЃРєРѕР»СЊР·РёС‚ РІРґРѕР»СЊ РїР°С‚С‡Р°
 void LAi_tmpl_fight_EscapeSlide(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
-//Персонаж провалил команду  escape
+//РџРµСЂСЃРѕРЅР°Р¶ РїСЂРѕРІР°Р»РёР» РєРѕРјР°РЅРґСѓ  escape
 void LAi_tmpl_fight_FailureEscape(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
 
-//Персонаж толкается с другими персонажами
+//РџРµСЂСЃРѕРЅР°Р¶ С‚РѕР»РєР°РµС‚СЃСЏ СЃ РґСЂСѓРіРёРјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё
 void LAi_tmpl_fight_ColThreshold(aref chr)
 {
 	if(!IMPROVE_FIGHT_AI) LAi_tmpl_fight_Stop(chr, 1.0 + rand(3));
 }
 
-//Персонаж закончил проигрывать анимацию
+//РџРµСЂСЃРѕРЅР°Р¶ Р·Р°РєРѕРЅС‡РёР» РїСЂРѕРёРіСЂС‹РІР°С‚СЊ Р°РЅРёРјР°С†РёСЋ
 void LAi_tmpl_fight_EndAction(aref chr)
 {
 	LAi_tmpl_fight_updatetemplate(chr);
 }
 
 
-//Персонажа просят освободить место
+//РџРµСЂСЃРѕРЅР°Р¶Р° РїСЂРѕСЃСЏС‚ РѕСЃРІРѕР±РѕРґРёС‚СЊ РјРµСЃС‚Рѕ
 void LAi_tmpl_fight_FreePos(aref chr, aref who)
 {
 }
 
 //------------------------------------------------------------------------------------------
-//Внутреннии функции
+//Р’РЅСѓС‚СЂРµРЅРЅРёРё С„СѓРЅРєС†РёРё
 //------------------------------------------------------------------------------------------
 
-//Перейти в режим боя и ожидать указание цели
+//РџРµСЂРµР№С‚Рё РІ СЂРµР¶РёРј Р±РѕСЏ Рё РѕР¶РёРґР°С‚СЊ СѓРєР°Р·Р°РЅРёРµ С†РµР»Рё
 void LAi_tmpl_fight_SetWaitState(aref chr)
 {
 	if(DEBUG_FIGHTING) trace("Character "+chr.id+" is now waiting");
@@ -987,7 +987,7 @@ void LAi_tmpl_fight_SetWaitState(aref chr)
 	GroupTargetSetState(chr, "wait");
 }
 
-//Атаковать цель
+//РђС‚Р°РєРѕРІР°С‚СЊ С†РµР»СЊ
 void LAi_tmpl_fight_SetTarget(aref chr, aref target)
 {
 	if(!CheckAttribute(target,"index"))
@@ -1087,7 +1087,7 @@ void LAi_tmpl_fight_SetTarget(aref chr, aref target)
 	}
 }
 
-//Получить цель
+//РџРѕР»СѓС‡РёС‚СЊ С†РµР»СЊ
 int LAi_tmpl_fight_GetTarget(aref chr)
 {
 	if(!CheckAttribute(chr, "chr_ai.tmpl.target")) return -1;
@@ -1101,9 +1101,9 @@ void LAi_tmpl_fight_Stop(aref chr, float stopTime)
 	if(chr.chr_ai.tmpl.state != "go") return;
 	if(stopTime <= 0) return;
 	if(chr.chr_ai.tmpl.target == "") return;
-	//Определяем в близи наличие врагов
+	//РћРїСЂРµРґРµР»СЏРµРј РІ Р±Р»РёР·Рё РЅР°Р»РёС‡РёРµ РІСЂР°РіРѕРІ
 	if(LAi_tmpl_fight_CheckEnemy(chr)) return;
-	//Оставим в режиме боя
+	//РћСЃС‚Р°РІРёРј РІ СЂРµР¶РёРјРµ Р±РѕСЏ
 	SetCharacterTask_Stay(chr);
 	chr.chr_ai.tmpl.state = "stop";
 	GroupTargetSetState(chr, "stop");

@@ -19,7 +19,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------ƒË‡ÎÓ„ ÔÂ‚˚È - ÔÂ‚‡ˇ ‚ÒÚÂ˜‡
+		// -----------------------------------–î–∏–∞–ª–æ–≥ –ø–µ—Ä–≤—ã–π - –ø–µ—Ä–≤–∞—è –≤—Å—Ç—Ä–µ—á–∞
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -113,7 +113,7 @@ void ProcessDialogEvent()
 
 		case "outside_cave_he_must_face_justice":
 			dialog.text = DLG_TEXT[22];
-			link.l1 = DLG_TEXT[23] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[24];
+			link.l1 = DLG_TEXT[23] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[24];
 			link.l1.go = "outside_cave_why_believe_you";
 		break;
 
@@ -188,8 +188,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "inside_cave_kidnappers_mistake":
-			dialog.text = DLG_TEXT[50] + GetMySimpleName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[51];
-			link.l1 = DLG_TEXT[52] + GetMySimpleName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[53];
+			dialog.text = DLG_TEXT[50] + GetMySimpleName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[51];
+			link.l1 = DLG_TEXT[52] + GetMySimpleName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[53];
 			link.l1.go = "exit";
 		break;
 
@@ -207,14 +207,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "santiago_on_to_townhall":
-			dialog.text = DLG_TEXT[61] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[62];
+			dialog.text = DLG_TEXT[61] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[62];
 			link.l1 = DLG_TEXT[63];
 			link.l1.go = "exit";
 		break;
 
 		case "santiago_townhall_approach":
 			dialog.text = DLG_TEXT[64];
-			link.l1 = DLG_TEXT[65] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[66];
+			link.l1 = DLG_TEXT[65] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[66];
 			link.l1.go = "santiago_townhall_approach2";
 		break;
 
@@ -230,7 +230,7 @@ void ProcessDialogEvent()
 //			if (PChar.sex == "man") Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 //			else Preprocessor_Add("pronoun3", XI_ConvertString("her"));
 			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));
-			dialog.text = DLG_TEXT[69] + GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation)) + DLG_TEXT[70] + GetMyLastName(PChar) + DLG_TEXT[71] + GetMyLastName(PChar) + DLG_TEXT[72] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[73];
+			dialog.text = DLG_TEXT[69] + GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation)) + DLG_TEXT[70] + GetMyLastName(PChar) + DLG_TEXT[71] + GetMyLastName(PChar) + DLG_TEXT[72] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[73];
 			link.l1 = "";
 			link.l1.go = "exit";
 		break;
@@ -242,7 +242,7 @@ void ProcessDialogEvent()
 //			else Preprocessor_Add("pronoun3", XI_ConvertString("her"));
 			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));
 			string finally = "";
-			if(!LAi_IsDead(CharacterFromID("Emiliano de Guzm·n"))) finally = DLG_TEXT[77] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[78];
+			if(!LAi_IsDead(CharacterFromID("Emiliano de Guzm–±n"))) finally = DLG_TEXT[77] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[78];
 			dialog.text = DLG_TEXT[74] + GetMyLastName(PChar) + DLG_TEXT[75] + GetMyLastName(PChar) + DLG_TEXT[76] + finally;
 			link.l1 = "";
 			link.l1.go = "exit";
@@ -287,7 +287,7 @@ void ProcessDialogEvent()
 
 		case "guzman_dead_goto_havana":
 			dialog.text = DLG_TEXT[93];
-			link.l1 = DLG_TEXT[94] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[95];
+			link.l1 = DLG_TEXT[94] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[95];
 			link.l1.go = "guzman_dead_goto_havana2";
 		break;
 

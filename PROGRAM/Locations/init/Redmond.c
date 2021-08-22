@@ -148,26 +148,26 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l7.go = "Redmond_HouseInsideR5(01)";
 	Locations[n].reload.l7.emerge = "reload1";
 	Locations[n].reload.l7.autoreload = "0";
-	Locations[n].reload.l7.label = "ƒÓÏ.";
+	Locations[n].reload.l7.label = "–î–æ–º.";
 	Locations[n].reload.l7.close_for_night = 1;
 
 	Locations[n].reload.l8.name = "door_7";
 	Locations[n].reload.l8.go = "Redmond_HouseInsideR7(01)";
 	Locations[n].reload.l8.emerge = "reload1";
 	Locations[n].reload.l8.autoreload = "0";
-	Locations[n].reload.l8.label = "ƒÓÏ.";
+	Locations[n].reload.l8.label = "–î–æ–º.";
 
 	Locations[n].reload.l9.name = "door_3";
 	Locations[n].reload.l9.go = "Redmond_HouseInsideR3(01)";
 	Locations[n].reload.l9.emerge = "reload1";
 	Locations[n].reload.l9.autoreload = "0";
-	Locations[n].reload.l9.label = "ƒÓÏ.";
+	Locations[n].reload.l9.label = "–î–æ–º.";
 
 	Locations[n].reload.l10.name = "door_1";
 	Locations[n].reload.l10.go = "Redmond_HouseInsideR1(01)";
 	Locations[n].reload.l10.emerge = "reload1";
 	Locations[n].reload.l10.autoreload = "0";
-	Locations[n].reload.l10.label = "ƒÓÏ.";*/
+	Locations[n].reload.l10.label = "–î–æ–º.";*/
 
 	// RobC/Alan_Smithee Blacksmiths -->
 	if (ENABLE_WEAPONSMOD)
@@ -651,7 +651,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l18.go = "wr_residence";
 	Locations[n].reload.l18.emerge = "reload1";
 	Locations[n].reload.l18.autoreload = "0";
-	Locations[n].reload.l18.label = "Woodes Rogers¥residence.";
+	Locations[n].reload.l18.label = "Woodes Rogers“ëresidence.";
 	Locations[n].locators_radius.reload.reload7 = 0.2;
 
 	Locations[n].locators_radius.randitem.randitem3 = 0.1;
@@ -690,7 +690,7 @@ void LocationInitRedmond(ref n)
 
 	//Day
 	Locations[n].models.day.charactersPatch = "RedPort_pd";
-	Locations[n].models.day.rinok = "RedPort_e01"; //˚ÌÓÍ
+	Locations[n].models.day.rinok = "RedPort_e01"; //—Ä—ã–Ω–æ–∫
 	Locations[n].models.day.fonar = "RedPort_fd";
 	Locations[n].models.day.jumppatch = "RedPort_j";
 	//Night
@@ -892,7 +892,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l2.go = "Redmond_shore_02";
 	Locations[n].reload.l2.emerge = "reload2";
 	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].reload.l2.label = "¡ÛıÚ‡.";
+	Locations[n].reload.l2.label = "–ë—É—Ö—Ç–∞.";
 	Locations[n].locators_radius.reload.reload2 = 3.0;*/
 
 	Locations[n].reload.l2.name = "Reload1";
@@ -1339,7 +1339,7 @@ void LocationInitRedmond(ref n)
 	//Locations[n].reload.l3.go = "wr_library";
 	//Locations[n].reload.l3.emerge = "reload6";
 	//Locations[n].reload.l3.autoreload = "0";
-	//Locations[n].reload.l3.label = "Woodes Rogers¥ library.";
+	//Locations[n].reload.l3.label = "Woodes Rogers“ë library.";
 
     //temp case when locked
     	Locations[n].reload.l3.name = "reload5";

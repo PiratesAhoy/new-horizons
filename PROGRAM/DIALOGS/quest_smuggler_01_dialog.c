@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- Диалог первый - первая встреча
+		// ----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -30,7 +30,7 @@ void ProcessDialogEvent()
 
 			NextDiag.TempNode = "first time";
 
-			//разговор с блейзом
+			//СЂР°Р·РіРѕРІРѕСЂ СЃ Р±Р»РµР№Р·РѕРј
 			if (pchar.quest.main_line == "blaze_talk_with_duarte")
 			{
 				Dialog.snd = "voice\QUS1\QUS1001";

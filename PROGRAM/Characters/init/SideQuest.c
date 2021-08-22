@@ -218,7 +218,7 @@ void CreateSideQuestCharacters(ref n)
 //	ch.questchar = true;//MAXIMUS: identifier for captives, commented out by Grey Roger to allow name to change
 	AddGameCharacter(n, ch);
 
-				// Mergildo Hurtado - капитан барка со священниками
+				// Mergildo Hurtado - РєР°РїРёС‚Р°РЅ Р±Р°СЂРєР° СЃРѕ СЃРІСЏС‰РµРЅРЅРёРєР°РјРё
 	ch.old.name = "Mergildo";
 	ch.old.lastname = "Hurtado";
 	ch.name = TranslateString("", "Mergildo");
@@ -265,7 +265,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// Jordano - сын кузнеца на Муэле
+				// Jordano - СЃС‹РЅ РєСѓР·РЅРµС†Р° РЅР° РњСѓСЌР»Рµ
 	ch.old.name = "Jordano";
 	ch.old.lastname = "";
 	ch.name = TranslateString("", "Jordano");
@@ -303,7 +303,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				//Yedam Kinne - дивет в Гринфорде - подделывает документы и подчерки.
+				//Yedam Kinne - РґРёРІРµС‚ РІ Р“СЂРёРЅС„РѕСЂРґРµ - РїРѕРґРґРµР»С‹РІР°РµС‚ РґРѕРєСѓРјРµРЅС‚С‹ Рё РїРѕРґС‡РµСЂРєРё.
 	ch.old.name = "Yedam";
 	ch.old.lastname = "Kinne";
 	ch.name = TranslateString("", "Yedam");
@@ -1398,7 +1398,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-// первый наймит губернатора для нападения на Даниель
+// РїРµСЂРІС‹Р№ РЅР°Р№РјРёС‚ РіСѓР±РµСЂРЅР°С‚РѕСЂР° РґР»СЏ РЅР°РїР°РґРµРЅРёСЏ РЅР° Р”Р°РЅРёРµР»СЊ
 	ch.old.name = "killer";
 	ch.old.lastname = "";
 	ch.name = TranslateString("", "killer");
@@ -1796,10 +1796,10 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-// Franзois Moulin - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
-	ch.old.name = "Franзois";
+// FranР·ois Moulin - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
+	ch.old.name = "FranР·ois";
 	ch.old.lastname = "Moulin";
-	ch.name = TranslateString("", "Franзois");
+	ch.name = TranslateString("", "FranР·ois");
 	ch.lastname = TranslateString("", "Moulin");
 	ch.id	 = "Francois Moulin";
 	ch.model = "old_man1";
@@ -3142,7 +3142,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// Ethilrede Claar - пират, который продал в рабство одного из наших офицеров () Leborio Drago
+				// Ethilrede Claar - РїРёСЂР°С‚, РєРѕС‚РѕСЂС‹Р№ РїСЂРѕРґР°Р» РІ СЂР°Р±СЃС‚РІРѕ РѕРґРЅРѕРіРѕ РёР· РЅР°С€РёС… РѕС„РёС†РµСЂРѕРІ () Leborio Drago
 	ch.old.name = "Ethilrede";
 	ch.old.lastname = "Claar";
 	ch.name = TranslateString("", "Ethilrede");
@@ -6393,9 +6393,9 @@ void CreateSideQuestCharacters(ref n)
 	SetRank(ch, SPAIN, 5);
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "Seсorita";
+	ch.old.name = "SeСЃorita";
 	ch.old.lastname = "Hebe";
-	ch.name = TranslateString("","Seсorita");
+	ch.name = TranslateString("","SeСЃorita");
 	ch.lastname = TranslateString("","Hebe");
 	ch.id		= "Hebe";
 	ch.model	= "downgirl2";
@@ -6429,9 +6429,9 @@ void CreateSideQuestCharacters(ref n)
 
 	// Crystal Skull sidequest
 	ch.old.name = "Constantino";
-	ch.old.lastname = "Avellбn";
+	ch.old.lastname = "AvellР±n";
 	ch.name = TranslateString("","Constantino");
-	ch.lastname = TranslateString("","Avellбn");
+	ch.lastname = TranslateString("","AvellР±n");
 	ch.id		= "Skull_Researcher";
 	ch.model = "9R_Purs";
 	ch.sex = "man";
@@ -6971,9 +6971,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Rafael";
-	ch.old.lastname = "Patiсo";
+	ch.old.lastname = "PatiСЃo";
 	ch.name = TranslateString("","Rafael");
-	ch.lastname = TranslateString("","Patiсo");
+	ch.lastname = TranslateString("","PatiСЃo");
 	ch.id		= "CS_Spanish_Captain2";
 	ch.nation	= SPAIN;
 	ch.model	= "9JdSpa";
@@ -7019,7 +7019,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 2500 + rand(1000);	
-	ch.Ship.Name = "Marнa Santнsima";
+	ch.Ship.Name = "MarРЅa SantРЅsima";
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "WallerPinnace";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FR_BattleFrigate";
@@ -7147,7 +7147,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 1500 + rand(1000);	
-	ch.Ship.Name = "Бngel de la Guarda";
+	ch.Ship.Name = "Р‘ngel de la Guarda";
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "Frigate1";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "SP_Surprise";
@@ -7163,9 +7163,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Leonardo";
-	ch.old.lastname = "Echevarrнa";
+	ch.old.lastname = "EchevarrРЅa";
 	ch.name = TranslateString("","Leonardo");
-	ch.lastname = TranslateString("","Echevarrнa");
+	ch.lastname = TranslateString("","EchevarrРЅa");
 	ch.id		= "CS_Spanish_Captain5";
 	ch.nation	= SPAIN;
 	ch.model	= GetRandomModelForTypeExSubCheck(true, "Captains", "man", SPAIN);
@@ -7227,7 +7227,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 1500 + rand(1000);	
-	ch.Ship.Name = "Septentriуn";
+	ch.Ship.Name = "SeptentriСѓn";
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "FastGalleon1";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "Frigate1";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "SP_Surprise";

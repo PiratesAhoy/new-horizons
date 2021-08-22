@@ -86,7 +86,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -102,7 +102,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "exit";
 			// NK 04-10-01 move wait_for_remove_comp to bottom to take precedence
-			// разговор в квестовой таверне Редмонда
+			// СЂР°Р·РіРѕРІРѕСЂ РІ РєРІРµСЃС‚РѕРІРѕР№ С‚Р°РІРµСЂРЅРµ Р РµРґРјРѕРЅРґР°
 			if (pchar.quest.main_line == "talk_in_tavern_begin")
 			{
 				if(PChar.sex == "woman")
@@ -123,7 +123,7 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[11] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[12])]) + DLG_TEXT[13];
 				link.l1.go = "talk_in_tavern_1";
 			}
-			//разговор на маяке
+			//СЂР°Р·РіРѕРІРѕСЂ РЅР° РјР°СЏРєРµ
 			if (pchar.quest.main_line == "meet_danielle_in_lighthouse")
 			{
 				dialog.text = GetMyName(PChar) + DLG_TEXT[14];
@@ -197,7 +197,7 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[46];
 				link.l1.go = "both_escape_from_redmond_complete_2";
 			}
-			// разговор в квестовой таверне Редмонда
+			// СЂР°Р·РіРѕРІРѕСЂ РІ РєРІРµСЃС‚РѕРІРѕР№ С‚Р°РІРµСЂРЅРµ Р РµРґРјРѕРЅРґР°
 			if( CheckQuestAttribute("FindMysteriousTablet","EnterDenied") )
 			{
 				dialog.text = RandSwear() + DLG_TEXT[47];
@@ -311,7 +311,7 @@ void ProcessDialogEvent()
 			pchar.quest.main_line = "after_wait_for_night_in_shore";
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-			//Выставляем ночь
+			//Р’С‹СЃС‚Р°РІР»СЏРµРј РЅРѕС‡СЊ
 			AddDialogExitQuest("wait_for_night_in_shore");
 		break;
 

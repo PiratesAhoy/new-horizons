@@ -14,7 +14,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -62,7 +62,7 @@ void ProcessDialogEvent()
 			{
 				if (CheckQuestAttribute("gambling_with_girl", "to_hovernor_2") && GetNationRelation2MainCharacter(iNation) == RELATION_ENEMY)
 				{
-					//прощают
+					//РїСЂРѕС‰Р°СЋС‚
 					dialog.text = DLG_TEXT[96];
 					link.l1 = DLG_TEXT[97];
 					link.l1.go = "forgive";
@@ -73,7 +73,7 @@ void ProcessDialogEvent()
 				{
 					if (GetNationRelation2MainCharacter(iNation) == RELATION_ENEMY)
 					{
-						//позвол¤ют уйти
+						//РїРѕР·РІРѕР»В¤СЋС‚ СѓР№С‚Рё
 						dialog.text = DLG_TEXT[98];
 						link.l1 = DLG_TEXT[99] + GetCharacterFullName(DLG_TEXT[100]) + DLG_TEXT[101];
 						link.l1.go = "ransom";
@@ -82,7 +82,7 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//обычный разговор
+						//РѕР±С‹С‡РЅС‹Р№ СЂР°Р·РіРѕРІРѕСЂ
 						dialog.text = DLG_TEXT[102];
 						link.l1 = DLG_TEXT[103] + GetCharacterFullName(DLG_TEXT[104]) + DLG_TEXT[105];
 						link.l1.go = "virginie";

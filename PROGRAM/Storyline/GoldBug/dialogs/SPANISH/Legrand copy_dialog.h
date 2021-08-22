@@ -1,22 +1,22 @@
 string DLG_TEXT[18] = {
-"Hola, Júpiter, ¿qué pasa?",
-"Oh, no é ná, 'massa' Will.",
-"Ah, aquí estás. ¡Y encontraste la madera!",
-"Ajá.",
+"Hola, JÑŠpiter, Ñ—quĞ¹ pasa?",
+"Oh, no Ğ¹ nĞ±, 'massa' Will.",
+"Ah, aquĞ½ estĞ±s. ĞY encontraste la madera!",
+"AjĞ±.",
 "Toma esta vieja moneda; creo que es china.",
-"China, ¿eh...?",
-"¿Por fin has conseguido algo de papel, Júpiter?",
-"¡Júpiter tié papel y el bicho de oro tamién! Aquí e'tá, 'massa' Will!",
-"Buen trabajo. Toma esta pequeña perla por tus esfuerzos.",
-"Una pe'la, ¡guau!",
-"Cambiando de tema, nos hemos vuelto a quedar sin leña.",			//10
-"¿Sí, 'massa'? Vamos a la playa a bu'car más madera a la deriva.",
+"China, Ñ—eh...?",
+"Ñ—Por fin has conseguido algo de papel, JÑŠpiter?",
+"ĞJÑŠpiter tiĞ¹ papel y el bicho de oro tamiĞ¹n! AquĞ½ e'tĞ±, 'massa' Will!",
+"Buen trabajo. Toma esta pequeÑa perla por tus esfuerzos.",
+"Una pe'la, Ğguau!",
+"Cambiando de tema, nos hemos vuelto a quedar sin leÑa.",			//10
+"Ñ—SĞ½, 'massa'? Vamos a la playa a bu'car mĞ±s madera a la deriva.",
 "Eso es, Jup.",
-"¿Tié los sacos, 'massa' Will?",
-"Aquí están. Ve tú delante.",
+"Ñ—TiĞ¹ los sacos, 'massa' Will?",
+"AquĞ½ estĞ±n. Ve tÑŠ delante.",
 "---",
-"Edgar, por fin. Temía que se hubiera metido en algún lío.",
-"Ah, bueno..., no. Lo tengo todo preparado. ¿Nos ponemos en marcha?",
+"Edgar, por fin. TemĞ½a que se hubiera metido en algÑŠn lĞ½o.",
+"Ah, bueno..., no. Lo tengo todo preparado. Ñ—Nos ponemos en marcha?",
 
 
 };

@@ -236,7 +236,7 @@ void CheckMaxShipClassYes()
 		if (tempnum != 1) { SetSelectable("REMOVE_BUTTON",true); } else { SetSelectable("REMOVE_BUTTON",false); }		// changed after build 11 by KAM
 		// end tempnum/check attribute fix
 	}
-	// Изменим список офицеров
+	// РР·РјРµРЅРёРј СЃРїРёСЃРѕРє РѕС„РёС†РµСЂРѕРІ
 
 	else
 	{
@@ -246,7 +246,7 @@ void CheckMaxShipClassYes()
 		oldCharIdx = SetOfficersIndex(GetCharacter(oldCharIdx),nFourImageNum,newCompanion);
 	}
 
-	// изменим список пассажиров
+	// РёР·РјРµРЅРёРј СЃРїРёСЃРѕРє РїР°СЃСЃР°Р¶РёСЂРѕРІ
 	if(oldCharIdx!=-1)
 		ChangePassenger(refMyCharacter,GetPassengerNumber(refMyCharacter,newCompanion),oldCharIdx);
 	else

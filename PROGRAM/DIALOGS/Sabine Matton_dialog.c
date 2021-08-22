@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		//----------------------------------- Диалог первый - первая встреча
+		//----------------------------------- Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -193,7 +193,7 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("danielle_end_exit");
 
 		//	npchar.location = "none"; // PW replaced by "danielle_end_exit" case to action leave
-			//именно так. Исчезает при следующем входе в локацию.
+			//РёРјРµРЅРЅРѕ С‚Р°Рє. РСЃС‡РµР·Р°РµС‚ РїСЂРё СЃР»РµРґСѓСЋС‰РµРј РІС…РѕРґРµ РІ Р»РѕРєР°С†РёСЋ.
 		break;
 
 		case "first_time_01":

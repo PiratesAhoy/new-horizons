@@ -5,7 +5,7 @@ void CreateOfficersCharacters(ref n)
 
 	makeref(ch, chobj);
 
-	//Danielle Даниэль
+	//Danielle Р”Р°РЅРёСЌР»СЊ
 	ch.old.name = "Danielle";
 	ch.old.lastname = "Greene";
 	ch.name = TranslateString("","Danielle");
@@ -64,7 +64,7 @@ void CreateOfficersCharacters(ref n)
 	ch.isOfficer = true;
 	AddGameCharacter(n, ch);
 
-	// Ralph Fawn  боцман девушки.
+	// Ralph Fawn  Р±РѕС†РјР°РЅ РґРµРІСѓС€РєРё.
 	ch.old.name = "Ralph";
 	ch.old.lastname = "Fawn";
 	ch.name = TranslateString("","Ralph");
@@ -104,7 +104,7 @@ void CreateOfficersCharacters(ref n)
 	ch.isOfficer = true;
 	AddGameCharacter(n, ch);
 
-	// Researcher Изобретатель
+	// Researcher РР·РѕР±СЂРµС‚Р°С‚РµР»СЊ
 	ch.old.name = "Clement";
 	ch.old.middlename = "Barnabas";
 	ch.old.lastname = "Aurentius";
@@ -195,7 +195,7 @@ void CreateOfficersCharacters(ref n)
 	ch.isOfficer = true;
 	AddGameCharacter(n, ch);
 
-	// Gervasio Serrao - в таверне пиратского острова
+	// Gervasio Serrao - РІ С‚Р°РІРµСЂРЅРµ РїРёСЂР°С‚СЃРєРѕРіРѕ РѕСЃС‚СЂРѕРІР°
 	ch.old.name = "Gervasio";
 	ch.old.lastname = "Serrao";
 	ch.name = TranslateString("","Gervasio");

@@ -46,7 +46,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
@@ -195,7 +195,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[24];
 			if (npchar.quest_begin == "0")
 			////////////////////////////////////////
-			// ВЫДАЧА КВЕСТОВ
+			// Р’Р«Р”РђР§Рђ РљР’Р•РЎРўРћР’
 			////////////////////////////////////////
 			{
 //NK --> Reenable both quests and set them so they run only once, first_job first.
@@ -241,7 +241,7 @@ void ProcessDialogEvent()
 				}
 			}
 			////////////////////////////////////////
-			// ПРИЕМ КВЕСТОВ
+			// РџР РР•Рњ РљР’Р•РЎРўРћР’
 			////////////////////////////////////////
 			if (NPChar.quest.first_job == "complete" && iTest < QUEST_COUNTER)
 			{
@@ -256,7 +256,7 @@ void ProcessDialogEvent()
 				iTest = iTest + 1;
 			}
 			////////////////////////////////////////
-			// квест про котнрабандистов
+			// РєРІРµСЃС‚ РїСЂРѕ РєРѕС‚РЅСЂР°Р±Р°РЅРґРёСЃС‚РѕРІ
 			////////////////////////////////////////
 			if (npchar.quest.contraband == "after_fight" && iTest < QUEST_COUNTER)
 			{
@@ -276,7 +276,7 @@ void ProcessDialogEvent()
 				link.l3.go = "marc";
 			}
 			////////////////////////////////////////
-			// конец квеста про котнрабандистов
+			// РєРѕРЅРµС† РєРІРµСЃС‚Р° РїСЂРѕ РєРѕС‚РЅСЂР°Р±Р°РЅРґРёСЃС‚РѕРІ
 			////////////////////////////////////////
 			Link.l99 = DLG_TEXT[42];
 			Link.l99.go = "no quest";
@@ -694,7 +694,7 @@ void ProcessDialogEvent()
 			if(npchar.quest.trade_date != lastspeak_date)
 			{
 				npchar.quest.trade_date = lastspeak_date;
-				//проверка враждебности нам страны торговца
+				//РїСЂРѕРІРµСЂРєР° РІСЂР°Р¶РґРµР±РЅРѕСЃС‚Рё РЅР°Рј СЃС‚СЂР°РЅС‹ С‚РѕСЂРіРѕРІС†Р°
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
 					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
@@ -713,12 +713,12 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//проверяем импорт/экспорт
+						//РїСЂРѕРІРµСЂСЏРµРј РёРјРїРѕСЂС‚/СЌРєСЃРїРѕСЂС‚
 						float fprice, tprice;
 						// NK redo this to take price into account 05-05-12 -->
 						int iTradeGoods = GenerateGoodForTrade(sti(NPChar.nation), iTradeNation, &fprice, &tprice);
 						string sNation = GenerateTradeQuest(pchar, iTradeNation, iTradeGoods, fprice, tprice, true);// MAXIMUS: all was moved into MAXIMUS_Functions.c - returns translated string
-						//проверяем свободное место (при этом должно вмещаться по меньшей мере 100 единиц выбранного груза
+						//РїСЂРѕРІРµСЂСЏРµРј СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ (РїСЂРё СЌС‚РѕРј РґРѕР»Р¶РЅРѕ РІРјРµС‰Р°С‚СЊСЃСЏ РїРѕ РјРµРЅСЊС€РµР№ РјРµСЂРµ 100 РµРґРёРЅРёС† РІС‹Р±СЂР°РЅРЅРѕРіРѕ РіСЂСѓР·Р°
 						if (GetSquadronFreeSpace(pchar, iTradeGoods) < 100 || sNation=="")
 						{
 							dialog.text = DLG_TEXT[184];

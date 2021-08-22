@@ -120,7 +120,7 @@ void DoViewDescribe(string profName, int texNum)
 	SetSelectable("OK_BUTTON",true);
 	SetCurrentNode("CANCEL_BUTTON");
 
-	SetFormatedText("DESCRIBEWINDOW","›“Œ œ–Œ¬≈– ¿");
+	SetFormatedText("DESCRIBEWINDOW","–≠–¢–û –ü–†–û–í–ï–†–ö–ê");
 	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"DESCRIBEWINDOW", 5);
 }
 

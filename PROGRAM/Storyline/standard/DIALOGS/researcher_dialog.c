@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -244,7 +244,7 @@ void ProcessDialogEvent()
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();
 
-			//Здесь надо включить ролик убегания из храма.
+			//Р—РґРµСЃСЊ РЅР°РґРѕ РІРєР»СЋС‡РёС‚СЊ СЂРѕР»РёРє СѓР±РµРіР°РЅРёСЏ РёР· С…СЂР°РјР°.
 			
 		break;
 

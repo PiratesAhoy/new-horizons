@@ -6,10 +6,10 @@ void sea_minimap_InitHelp()
 	string sectName = GetEventData();
 	if(sectName!="sea_minimap") return;
 
-	// Заполним экран содержимым
-		// каринки
+	// Р—Р°РїРѕР»РЅРёРј СЌРєСЂР°РЅ СЃРѕРґРµСЂР¶РёРјС‹Рј
+		// РєР°СЂРёРЅРєРё
 	SetNewPicture("HELPPICTURE","interfaces\helppictures\minimap.tga");
-		// строки
+		// СЃС‚СЂРѕРєРё
 	int strFileID = LanguageOpenFile("helpsections\navigator_minimap.txt");
 	SetFormatedText("TEXTWINDOW",LanguageConvertString(strFileID,"minimap_info"));
 	GameInterface.strings.HelpName = LanguageConvertString(strFileID,"minimap_title");
@@ -21,7 +21,7 @@ void sea_minimap_ResetHelp()
 	string sectName = GetEventData();
 	if(sectName!="sea_minimap") return;
 
-	// Удалим с эрана все
+	// РЈРґР°Р»РёРј СЃ СЌСЂР°РЅР° РІСЃРµ
 	SetNewPicture("HELPPICTURE","");
 	SetFormatedText("TEXTWINDOW","");
 }

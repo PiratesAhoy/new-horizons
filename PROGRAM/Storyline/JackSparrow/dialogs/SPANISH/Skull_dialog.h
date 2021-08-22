@@ -1,70 +1,70 @@
 string DLG_TEXT[66] = {
-"No sÈ quiÈn eres, pero si te vas ahora mismo, °no tendrÈ que alimentar a los tiburones!",
+"No s–π qui–πn eres, pero si te vas ahora mismo, –éno tendr–π que alimentar a los tiburones!",
 "...",
-"øQuiÈn demonios eres t˙, irrumpiendo aquÌ sin ser invitado?",
-"Lo siento Capit·n Skull, soy el Capit·n ",
+"—óQui–πn demonios eres t—ä, irrumpiendo aqu–Ω sin ser invitado?",
+"Lo siento Capit–±n Skull, soy el Capit–±n ",
 ", y tengo una propuesta de negocios para ti.",
-"øUna propuesta de negocios? Adelante, te escucho, pero m·s vale que sea buena.",
-"Lo es, crÈeme. EscuchÈ que tienes algunos rehenes y me gustarÌa negociar para compr·rtelos.",
-"øDe verdad? No me parece que seas un hombre rico. Las hermanas Brin traer·n una suma considerable. Una suma considerable. øCrees que podrÌas permitÌrtelo?",
-"°Ah! Eso es cierto Capit·n, pero tambiÈn le traer·n un montÛn de problemas a su cabeza, y mi plan le aliviar· de esa preocupaciÛn. [PIENSA: øHermanas? °PensÈ que sÛlo habÌa una y una criada! Alguien no est· jugando limpio conmigo.]",
-"øY cÛmo 'tu plan' me aliviar· de alg˙n problema en particular?.",
-"Capit·n, se ha llevado a las hijas del Gobernador. Una cosa es retener al hijo de un hombre rico. No tiene otra opciÛn que pagarle. øPero las hijas del Gobernador? El Gobernador enviar· toda la flota, bloquear· esta isla y te matar· de hambre. AÒade a eso el agente de impuestos y que Dios te ayude.",
-"Yo no hice el secuestro, y no ocurriÛ desde una de mis naves. AsÌ que no sabe que est·n aquÌ, en cuyo caso eso no parece probable, øverdad?",
-"Piensa en esto, Capit·n. El agente de impuestos averiguÛ que est·n aquÌ, y yo tambiÈn lo averig¸È. Si lo hicimos, puede estar seguro de que el gobernador Brin lo har·, si no lo ha hecho ya.",
-"De acuerdo, Capit·n, tiene mi atenciÛn. øCu·nto est· dispuesto a pagar por los rehenes? Y quiero algo m·s que oro, como algunos de esos diamantes que un pajarito me dijo que llevabas.", // TALISMAN changed
-"Creo que 1000 de oro para cada una de las chicas Brin y 100 por el agente. Eso hace 2.100 piezas de oro en total, y te darÈ dos diamantes. [PIENSA: Espero salirme con la mÌa.]",   //TALISMAN changed
-"Creo que deberÌas pagarme para que te los quite de las manos. Piensa en la alternativa.",
+"—óUna propuesta de negocios? Adelante, te escucho, pero m–±s vale que sea buena.",
+"Lo es, cr–πeme. Escuch–π que tienes algunos rehenes y me gustar–Ωa negociar para compr–±rtelos.",
+"—óDe verdad? No me parece que seas un hombre rico. Las hermanas Brin traer–±n una suma considerable. Una suma considerable. —óCrees que podr–Ωas permit–Ωrtelo?",
+"–éAh! Eso es cierto Capit–±n, pero tambi–πn le traer–±n un mont—Én de problemas a su cabeza, y mi plan le aliviar–± de esa preocupaci—Én. [PIENSA: —óHermanas? –éPens–π que s—Élo hab–Ωa una y una criada! Alguien no est–± jugando limpio conmigo.]",
+"—óY c—Émo 'tu plan' me aliviar–± de alg—än problema en particular?.",
+"Capit–±n, se ha llevado a las hijas del Gobernador. Una cosa es retener al hijo de un hombre rico. No tiene otra opci—Én que pagarle. —óPero las hijas del Gobernador? El Gobernador enviar–± toda la flota, bloquear–± esta isla y te matar–± de hambre. A—Åade a eso el agente de impuestos y que Dios te ayude.",
+"Yo no hice el secuestro, y no ocurri—É desde una de mis naves. As–Ω que no sabe que est–±n aqu–Ω, en cuyo caso eso no parece probable, —óverdad?",
+"Piensa en esto, Capit–±n. El agente de impuestos averigu—É que est–±n aqu–Ω, y yo tambi–πn lo averig—å–π. Si lo hicimos, puede estar seguro de que el gobernador Brin lo har–±, si no lo ha hecho ya.",
+"De acuerdo, Capit–±n, tiene mi atenci—Én. —óCu–±nto est–± dispuesto a pagar por los rehenes? Y quiero algo m–±s que oro, como algunos de esos diamantes que un pajarito me dijo que llevabas.", // TALISMAN changed
+"Creo que 1000 de oro para cada una de las chicas Brin y 100 por el agente. Eso hace 2.100 piezas de oro en total, y te dar–π dos diamantes. [PIENSA: Espero salirme con la m–Ωa.]",   //TALISMAN changed
+"Creo que deber–Ωas pagarme para que te los quite de las manos. Piensa en la alternativa.",
 "No tienes tanto oro. Me has hecho perder el tiempo. Desenvaina tu espada, chiflado.",
 "Muy bien. Dame el oro, y los diamantes.", // TALISMAN changed
-"Primero te arrancarÈ la cabeza. Desenvaina tu espada.",
-"°Como quieras!",
-"Gracias Capit·n. Fue un placer hacer negocios con usted.",
+"Primero te arrancar–π la cabeza. Desenvaina tu espada.",
+"–éComo quieras!",
+"Gracias Capit–±n. Fue un placer hacer negocios con usted.",
 ".",
 ".",
 ".",
-"? Entonces, øel viejo zorro quiere mi ayuda de nuevo? Muy interesante. Ahora, øpor quÈ sigues ahÌ de pie? Has entregado la carta, °asÌ que vete!",
+"? Entonces, —óel viejo zorro quiere mi ayuda de nuevo? Muy interesante. Ahora, —ópor qu–π sigues ah–Ω de pie? Has entregado la carta, –éas–Ω que vete!",
 "...",
-"DÈjame explicarte en quÈ te equivocas, muchacho. Este pueblo es mÌo. Esta isla es mÌa. Y todo lo que pasa aquÌ sucede porque quiero.",
-"Entonces, øquÈ eres? -- øun cacique pirata?",
-"Prefiero pensar en mi mismo como gobernador de una colonia independiente. Pero todavÌa estoy esperando tu respuesta.",
-"QuÈ clase de civilizaciÛn tienes aquÌ, donde una pobre chica est· tratando de encontrar a su amante y todo el mundo inmediatamente se pone a °gritar!",
-"øAmante? °Ja, ja, no digas eso! °Los milagros todavÌa ocurren en este mundo! øPor quÈ te dejÛ?",
-"Dime, øestaba aquÌ? øCu·ndo? øAdÛnde se fue?",
-"Estaba aquÌ... haciendo reparaciones despuÈs de una tormenta. Pero no sÈ adÛnde navegÛ. No lo dijo. Est· bien, ahora vete.",
+"D–πjame explicarte en qu–π te equivocas, muchacho. Este pueblo es m–Ωo. Esta isla es m–Ωa. Y todo lo que pasa aqu–Ω sucede porque quiero.",
+"Entonces, —óqu–π eres? -- —óun cacique pirata?",
+"Prefiero pensar en mi mismo como gobernador de una colonia independiente. Pero todav–Ωa estoy esperando tu respuesta.",
+"Qu–π clase de civilizaci—Én tienes aqu–Ω, donde una pobre chica est–± tratando de encontrar a su amante y todo el mundo inmediatamente se pone a –égritar!",
+"—óAmante? –éJa, ja, no digas eso! –éLos milagros todav–Ωa ocurren en este mundo! —óPor qu–π te dej—É?",
+"Dime, —óestaba aqu–Ω? —óCu–±ndo? —óAd—Énde se fue?",
+"Estaba aqu–Ω... haciendo reparaciones despu–πs de una tormenta. Pero no s–π ad—Énde naveg—É. No lo dijo. Est–± bien, ahora vete.",
 "...",
-"°Ah, amigo! Bueno, envÌame al casillero de Davy Jones si no tienes las cualidades de un verdadero pirata.",
-"Es una idea interesante, seguro. Y debo admitir que se est· volviendo bastante cansado tener a tu banda de bandidos persiguiÈndome por todo el Caribe",
-"Me esfuerzo por evitar la familiaridad con los piratas. AdiÛs.",
-"Sean bienvenidos a unirse a nuestra noble hermandad. °Pero os advierto que serÈis odiados por la gente normal, como el resto de nosotros!",
-"Naturalmente. Robamos a los ricos. Y a los pobres. Y nos lo guardamos para nosotros mismos. No se puede esperar hacer muchos amigos haciendo eso. °Pero eso es parte de la diversiÛn!",
-"øQuÈ? °Pero yo no soy ese tipo de pirata! Soy del tipo BUENO que da caramelos a los niÒos pequeÒos. °AdiÛs, sinverg¸enza de corazÛn negro!",
-"En ese caso, por favor permÌteme ser el primero en darte la bienvenida a la Hermandad, muchacho.",
+"–éAh, amigo! Bueno, env–Ωame al casillero de Davy Jones si no tienes las cualidades de un verdadero pirata.",
+"Es una idea interesante, seguro. Y debo admitir que se est–± volviendo bastante cansado tener a tu banda de bandidos persigui–πndome por todo el Caribe",
+"Me esfuerzo por evitar la familiaridad con los piratas. Adi—És.",
+"Sean bienvenidos a unirse a nuestra noble hermandad. –éPero os advierto que ser–πis odiados por la gente normal, como el resto de nosotros!",
+"Naturalmente. Robamos a los ricos. Y a los pobres. Y nos lo guardamos para nosotros mismos. No se puede esperar hacer muchos amigos haciendo eso. –éPero eso es parte de la diversi—Én!",
+"—óQu–π? –éPero yo no soy ese tipo de pirata! Soy del tipo BUENO que da caramelos a los ni—Åos peque—Åos. –éAdi—És, sinverg—åenza de coraz—Én negro!",
+"En ese caso, por favor perm–Ωteme ser el primero en darte la bienvenida a la Hermandad, muchacho.",
 "ARRRRRRRRRRR!!!",
-"Me alegra ver que puedes percibir algo de sentido, cuando se necesita ser un niÒo. Srta. Brinkley, vaya a recoger a los prisioneros, por favor.",
+"Me alegra ver que puedes percibir algo de sentido, cuando se necesita ser un ni—Åo. Srta. Brinkley, vaya a recoger a los prisioneros, por favor.",
 "Hmmm...",
-"øQuÈ quieres decir con 'Hmmm'?", // TALISMAN changed
-"Bueno... SÈ que est·s a punto de ser cosido por tu Srta. Brinkley. De hecho, sÛlo se ofreciÛ a venir con nosotros para asegurar la transferencia del rescate para poder tomarlo por sÌ misma, y dejarte aquÌ con un rehÈn in˙til. Y lo que es peor, te habr· asociado con el secuestro.",
-"øY quÈ? Soy un pirata, hacemos, hacemos secuestros, y °estamos interesados en los diamantes! SÌ, la Srta. Brinkley me dijo que te dio algunos. øTodavÌa los tienes?", // TALISMAN changed
-"øLos diamantes? sÌ, respecto al secuestro. Una cosa es secuestrar al hijo de un hombre rico, pero, °las hijas del Gobernador...! ", //TALISMAN changed
-"øCu·l es la diferencia?",
-"Una cosa es encontrarse con la patrulla inglesa de vez en cuando ... Pero el gobernador enviar· toda la FLOTA contra este campamento, y øcu·nto tiempo crees que podrÌas durar contra ellos?",
-"°Errg! ...piensas demasiado, seÒor. Entonces, øquÈ sugieres que haga?",
-"Bien, para mantenerte al margen, envÌa a mi oficial aquÌ con la Srta. Brinkley en un barco, y a mÌ con las chicas Brin en el otro. Mi oficial retrasar· el anclaje en Jamaica hasta que yo indique que la transferencia se ha realizado. De esa manera mantenemos a la Srta. Brinkley alejada de los rehenes y del dinero del rescate, y luego la entregamos como secuestradora, y ella carga con la culpa. T˙ est·s libre y limpio
+"—óQu–π quieres decir con 'Hmmm'?", // TALISMAN changed
+"Bueno... S–π que est–±s a punto de ser cosido por tu Srta. Brinkley. De hecho, s—Élo se ofreci—É a venir con nosotros para asegurar la transferencia del rescate para poder tomarlo por s–Ω misma, y dejarte aqu–Ω con un reh–πn in—ätil. Y lo que es peor, te habr–± asociado con el secuestro.",
+"—óY qu–π? Soy un pirata, hacemos, hacemos secuestros, y –éestamos interesados en los diamantes! S–Ω, la Srta. Brinkley me dijo que te dio algunos. —óTodav–Ωa los tienes?", // TALISMAN changed
+"—óLos diamantes? s–Ω, respecto al secuestro. Una cosa es secuestrar al hijo de un hombre rico, pero, –élas hijas del Gobernador...! ", //TALISMAN changed
+"—óCu–±l es la diferencia?",
+"Una cosa es encontrarse con la patrulla inglesa de vez en cuando ... Pero el gobernador enviar–± toda la FLOTA contra este campamento, y —ócu–±nto tiempo crees que podr–Ωas durar contra ellos?",
+"–éErrg! ...piensas demasiado, se—Åor. Entonces, —óqu–π sugieres que haga?",
+"Bien, para mantenerte al margen, env–Ωa a mi oficial aqu–Ω con la Srta. Brinkley en un barco, y a m–Ω con las chicas Brin en el otro. Mi oficial retrasar–± el anclaje en Jamaica hasta que yo indique que la transferencia se ha realizado. De esa manera mantenemos a la Srta. Brinkley alejada de los rehenes y del dinero del rescate, y luego la entregamos como secuestradora, y ella carga con la culpa. T—ä est–±s libre y limpio
 
 .",
-"Hmm... Eso podrÌa funcionar. Espera aquÌ. Necesito hablar con mi Srta. Brinkley. TendrÈ que redactarlo con cuidado para que no sospeche nada. TambiÈn necesitarÈ algo para darle a Ines para el uso de su habitaciÛn, dos de los diamantes que la Srta. Brinkley te dio deberÌan servir. No te preocupes. A cambio te darÈ un trozo de un supuesto mapa del tesoro que le quitÈ a un borracho el otro dÌa. JA, JA.",  // TALISMAN changed
-"TÛmate tu tiempo. øDe quÈ me sirven los diamantes? [suspiro].",  // TALISMAN changed
-"He hablado con Brinkley y ella navegar· con su oficial en su barco. Tomar·s a los rehenes en tu barco. Todos est·n esperando afuera, asÌ que ser· mejor que te vayas. Ah, ten el mapa del tesoro que te prometÌ.", // TALISMAN changed
-"Sabia decisiÛn, Capit·n. Partiremos de inmediato. [PIENSA: Este mapa parece interesante].", //TALISMAN changed
-"Toma, pero øpor quÈ quieres los diamantes?", // TALISMAN added --->
-"Bueno, tengo que darle algo a InÈs para el uso de su habitaciÛn, øno? Pero por la bondad de mi corazÛn te darÈ este viejo pedazo de mapa. Un borracho, para salvar su vida, tratÛ de decirme que era parte de un mapa del tesoro. HA HA. °A˙n asÌ lo matÈ!",
-"Siento que me est·n robando, pero supongo que no tengo elecciÛn. Toma los dos diamantes.",
-"Me alegra ver que puedes percibir su sentido, cuando se necesita ser un niÒo. Ve al puerto y harÈ que te envÌen los prisioneros.",
-"°No tienes ning˙n diamante! °Me has hecho perder el tiempo! °Desenvaina tu espada, chiflado!",
-"øLos diamantes? no, respecto al secuestro. Una cosa es secuestrar al hijo de un hombre rico, pero las hijas del gobernador es otra cosa ", 
+"Hmm... Eso podr–Ωa funcionar. Espera aqu–Ω. Necesito hablar con mi Srta. Brinkley. Tendr–π que redactarlo con cuidado para que no sospeche nada. Tambi–πn necesitar–π algo para darle a Ines para el uso de su habitaci—Én, dos de los diamantes que la Srta. Brinkley te dio deber–Ωan servir. No te preocupes. A cambio te dar–π un trozo de un supuesto mapa del tesoro que le quit–π a un borracho el otro d–Ωa. JA, JA.",  // TALISMAN changed
+"T—Émate tu tiempo. —óDe qu–π me sirven los diamantes? [suspiro].",  // TALISMAN changed
+"He hablado con Brinkley y ella navegar–± con su oficial en su barco. Tomar–±s a los rehenes en tu barco. Todos est–±n esperando afuera, as–Ω que ser–± mejor que te vayas. Ah, ten el mapa del tesoro que te promet–Ω.", // TALISMAN changed
+"Sabia decisi—Én, Capit–±n. Partiremos de inmediato. [PIENSA: Este mapa parece interesante].", //TALISMAN changed
+"Toma, pero —ópor qu–π quieres los diamantes?", // TALISMAN added --->
+"Bueno, tengo que darle algo a In–πs para el uso de su habitaci—Én, —óno? Pero por la bondad de mi coraz—Én te dar–π este viejo pedazo de mapa. Un borracho, para salvar su vida, trat—É de decirme que era parte de un mapa del tesoro. HA HA. –éA—än as–Ω lo mat–π!",
+"Siento que me est–±n robando, pero supongo que no tengo elecci—Én. Toma los dos diamantes.",
+"Me alegra ver que puedes percibir su sentido, cuando se necesita ser un ni—Åo. Ve al puerto y har–π que te env–Ωen los prisioneros.",
+"–éNo tienes ning—än diamante! –éMe has hecho perder el tiempo! –éDesenvaina tu espada, chiflado!",
+"—óLos diamantes? no, respecto al secuestro. Una cosa es secuestrar al hijo de un hombre rico, pero las hijas del gobernador es otra cosa ", 
 "Bueno ... yo...",
-"øSabes algo que yo no sÈ?",
-"°Veamos quÈ tienes entonces!",
-"Ok, °aquÌ est·!", // TALISMAN Added <---
+"—óSabes algo que yo no s–π?",
+"–éVeamos qu–π tienes entonces!",
+"Ok, –éaqu–Ω est–±!", // TALISMAN Added <---
 };

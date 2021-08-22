@@ -26,12 +26,12 @@ void ProcessDialogEvent()
 		break;
 
 		case SPAIN:
-			Preprocessor_Add("captain", "Capitбn");
+			Preprocessor_Add("captain", "CapitР±n");
 			Preprocessor_Add("attack", "Al ataque");
 		break;
 
 		case PORTUGAL:
-			Preprocessor_Add("captain", "CapitЭo");
+			Preprocessor_Add("captain", "CapitР­o");
 			Preprocessor_Add("attack", "Al ataque");
 		break;
 
@@ -72,7 +72,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";

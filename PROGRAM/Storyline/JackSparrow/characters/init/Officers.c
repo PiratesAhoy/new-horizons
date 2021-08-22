@@ -109,7 +109,7 @@ void CreateOfficersCharacters(ref n)
 	ch.isOfficer = true;
 	AddGameCharacter(n, ch);
 
-	// Jaoquin De Masse  мальтийский рыцарь.
+	// Jaoquin De Masse  РјР°Р»СЊС‚РёР№СЃРєРёР№ СЂС‹С†Р°СЂСЊ.
 	ch.old.name = "Jaoquin";
 	ch.old.lastname = "De Masse";
 	ch.name = TranslateString("","Jaoquin");

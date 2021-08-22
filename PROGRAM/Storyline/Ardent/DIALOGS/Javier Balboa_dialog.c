@@ -34,7 +34,7 @@ void ProcessDialogEvent()
 
 	if(CheckAttribute(characterFromID(PChar.quest.romance), "married") && characters[getCharacterIndex(PChar.quest.romance)].married == MR_MARRIED && characters[getCharacterIndex(PChar.quest.romance)].married.id == PChar.id)
 		name = GetMyName(PChar);
-	else name = "Capitбn " + GetMyLastName(PChar);
+	else name = "CapitР±n " + GetMyLastName(PChar);
 
 	DeleteAttribute(&Dialog,"Links");
 
@@ -47,7 +47,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// ----------------------------------- |иалог первый - первая встреча
+		// ----------------------------------- |РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";

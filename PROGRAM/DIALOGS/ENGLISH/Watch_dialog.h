@@ -1,7 +1,7 @@
 string DLG_TEXT[17] = {
 ".....",
 ".....",
-"Oi, I don¥t know you! Lay down your arms scurvy dogs!",
+"Oi, I don“ët know you! Lay down your arms scurvy dogs!",
 "#shello#!",
 "Intruders! Get them lads!",
 "#sattack#!",

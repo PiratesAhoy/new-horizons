@@ -3099,7 +3099,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				//Yedam Kinne - дивет в Гринфорде - подделывает документы и подчерки.
+				//Yedam Kinne - РґРёРІРµС‚ РІ Р“СЂРёРЅС„РѕСЂРґРµ - РїРѕРґРґРµР»С‹РІР°РµС‚ РґРѕРєСѓРјРµРЅС‚С‹ Рё РїРѕРґС‡РµСЂРєРё.
 	ch.old.name = "Yedam";
 	ch.old.lastname = "Kinne";
 	ch.name = TranslateString("", "Yedam");
@@ -3330,7 +3330,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-					// Mergildo Hurtado - капитан барка со священниками
+					// Mergildo Hurtado - РєР°РїРёС‚Р°РЅ Р±Р°СЂРєР° СЃРѕ СЃРІСЏС‰РµРЅРЅРёРєР°РјРё
 	ch.old.name = "Mergildo";
 	ch.old.lastname = "Hurtado";
 	ch.name = TranslateString("", "Mergildo");
@@ -3377,7 +3377,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// Jordano - сын кузнеца на Муэле
+				// Jordano - СЃС‹РЅ РєСѓР·РЅРµС†Р° РЅР° РњСѓСЌР»Рµ
 	ch.old.name = "Jordano";
 	ch.old.lastname = "";
 	ch.name = TranslateString("", "Jordano");
@@ -4990,7 +4990,7 @@ void CreateTempQuestCharacters(ref n)
 	LAi_SetHP(ch, 200.0, 200.0);
 	AddGameCharacter(n, ch);
 
-				//Soldier на входе в город
+				//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("", "Soldier");
@@ -5028,7 +5028,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
 
-			//Soldier на входе в город
+			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
 	ch.name = TranslateString("", "Soldier");

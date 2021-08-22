@@ -2130,7 +2130,7 @@ void QuestComplete(string sQuestName)
 
 		case "Now_get_to_see_Petros_house":
 			Pchar.Quest.Captured_on_Guadeloupe.over = "yes";
-			ChangeCharacterAddress(characterFromID("François de Vigny"), "None", "");
+			ChangeCharacterAddress(characterFromID("FranÐ·ois de Vigny"), "None", "");
 			ChangeCharacterAddressGroup(characterFromID("Konrad Kulczycki"),"Guadeloupe_Plantation_inside", "goto", "goto5");
 			ChangeCharacterAddressGroup(characterFromID("Petros"),"Guadeloupe_Plantation_inside", "sit", "sit1");
 			LAi_SetSitType(characterfromID("Petros"));

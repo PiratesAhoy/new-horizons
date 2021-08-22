@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Р”РёР°Р»РѕРі РїРµСЂРІС‹Р№ - РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°
 		case "First time":
 
 			Dialog.defAni = "dialog_stay1";
@@ -77,7 +77,7 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "Sit_Look_Around";
 			Dialog.cam = "1";
-			Dialog.snd = "voice\VIМА\VIМА008";
+			Dialog.snd = "voice\VIРњРђ\VIРњРђ008";
 			
 			dialog.text = DLG_TEXT[5];
 			link.l1 = DLG_TEXT[6];			

@@ -1949,7 +1949,7 @@ void CreateHispaniolaCharacters(ref n)
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// SOLDIERS
 	///////////////////////////////////////////////////////////////////////////////////////////////
-			//Soldier на входе в город
+			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";
@@ -1988,7 +1988,7 @@ void CreateHispaniolaCharacters(ref n)
 	ch.greeting = "Gr_falaise de fleur soldier";
 	AddGameCharacter(n, ch);
 
-  			//Soldier на входе в город -- one more
+  			//Soldier РЅР° РІС…РѕРґРµ РІ РіРѕСЂРѕРґ -- one more
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name 	= "";

@@ -27,7 +27,7 @@ string DLG_TEXT[115] = {
 ", are you aware that you stand accused of murder? You were seen near the victim's body. What do you say in response to this charge?",
 "It has nothing to do with me. The man was already dead when I entered the room! I was told he was only injured, and that he might have some important information for me.",
 ", I've just been told that a man was captured as he attempted to leave town with a blood-stained knife in his possession. He confessed to the murder you were accused of. You may go free immediately.",
-"Thank you. I knew I could trust in justice here on Conceição.", //spell-checked by KAM
+"Thank you. I knew I could trust in justice here on ConceiÐ·Ð³o.", //spell-checked by KAM
 "I wish to defect to Portugal.",
 "Indeed? Very well, you are now a Portugese citizen.",
 "I thank you for your infinite kindness, sir.",

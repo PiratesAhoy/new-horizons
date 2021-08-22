@@ -254,7 +254,7 @@ void LAi_group_FightGroupsEx(string group1, string group2, bool asignWarriorType
 			}
 		}
 	}
-	//Настроим группы
+	//РќР°СЃС‚СЂРѕРёРј РіСЂСѓРїРїС‹
 	LAi_group_SetRelation(group1, group2, LAI_GROUP_ENEMY);
 	LAi_group_SetHearRadius(group1, 40000000.0);
 	LAi_group_SetSayRadius(group1, 40000000.0);

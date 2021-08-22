@@ -18,37 +18,37 @@ bool	dialogSelf = false;
 bool	FightDisable; // PB
 bool	DIALOG_DEBUG = false; //Levis
 
-//Инициализация
+//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
 void DialogsInit()
 {
-	Quest_Init();				//Инициализация начального состояния слухов и информации об NPC ------- Ренат
+	Quest_Init();				//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃР»СѓС…РѕРІ Рё РёРЅС„РѕСЂРјР°С†РёРё РѕР± NPC ------- Р РµРЅР°С‚
 }
 
-//Начать диалог
+//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі
 bool DialogMain(ref Character)
 {
 	//Add the debug dialog files for everyone
 	Character.Dialog.Filename.Debug = "Debug.c";
 	if(CheckAttribute(Character, "condition") && Character.condition=="reload") return false;//MAXIMUS: prevents from dialogs start during reload -->
 	if(CheckAttribute(GetMainCharacter(), "condition") && Characters[GetMainCharacterIndex()].condition=="reload") return false;//MAXIMUS: prevents from dialogs start during reload <--
-	//Если диалог запущен, выходим
+	//Р•СЃР»Рё РґРёР°Р»РѕРі Р·Р°РїСѓС‰РµРЅ, РІС‹С…РѕРґРёРј
 	if(dialogRun != false) return false;
-	//Ссылка на главного персонажа
+	//РЎСЃС‹Р»РєР° РЅР° РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 	ref mainChr = GetMainCharacter();
-	//Если когото не заведено, выходим
+	//Р•СЃР»Рё РєРѕРіРѕС‚Рѕ РЅРµ Р·Р°РІРµРґРµРЅРѕ, РІС‹С…РѕРґРёРј
 	if(!IsEntity(mainChr)) return false;
 	if(!IsEntity(Character)) return false;
 	if(LAi_IsDead(mainChr)) return false;
 	if(LAi_IsDead(Character)) return false;
-	//Проверим на существование текущего нода
+	//РџСЂРѕРІРµСЂРёРј РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С‚РµРєСѓС‰РµРіРѕ РЅРѕРґР°
 	if(!CheckAttribute(Character, "Dialog.CurrentNode"))
 	{
 		Trace("Dialog: Character <" + Character.id + "> can't have field Dialog.CurrentNode, exit from dialog!")
 		return false;
 	}
-	//Если персонаж не готов говорить выходим
+	//Р•СЃР»Рё РїРµСЂСЃРѕРЅР°Р¶ РЅРµ РіРѕС‚РѕРІ РіРѕРІРѕСЂРёС‚СЊ РІС‹С…РѕРґРёРј
 	if(!LAi_Character_CanDialog(mainChr, Character)) return false;
-	//Если персонаж не готов говорить выходим
+	//Р•СЃР»Рё РїРµСЂСЃРѕРЅР°Р¶ РЅРµ РіРѕС‚РѕРІ РіРѕРІРѕСЂРёС‚СЊ РІС‹С…РѕРґРёРј
 	if(!LAi_Character_CanDialog(Character, mainChr)) return false;
 // added by MAXIMUS -->
 	if(CheckAttribute(Character,"corpse"))//MAXIMUS: was [if(Character.Dialog.Filename == "corpse_dialog.c")]
@@ -63,17 +63,17 @@ bool DialogMain(ref Character)
 		}*/
 	}//MAXIMUS: dialog with Maltese-corpse will be started by looting only <--
 // added by MAXIMUS <--
-	//Сохраняем ссыклу на того с кем говорим
+	//РЎРѕС…СЂР°РЅСЏРµРј СЃСЃС‹РєР»Сѓ РЅР° С‚РѕРіРѕ СЃ РєРµРј РіРѕРІРѕСЂРёРј
 	CharacterRef = Character;
 	LoadAllDialogFiles(Character); //Added by Levis for better dialogs
-	// Попытка загрузить текст дилога
+	// РџРѕРїС‹С‚РєР° Р·Р°РіСЂСѓР·РёС‚СЊ С‚РµРєСЃС‚ РґРёР»РѕРіР°
 	/*if( !LoadDialogFiles(Character.Dialog.Filename) ) {
-		// имеем ошибочный диалог
+		// РёРјРµРµРј РѕС€РёР±РѕС‡РЅС‹Р№ РґРёР°Р»РѕРі
 		if( !LoadDialogFiles("error_dialog.c") ) {
 			return false;
 		}
 	}*/ //Removed by Levis
-	//Можем начинать диалог
+	//РњРѕР¶РµРј РЅР°С‡РёРЅР°С‚СЊ РґРёР°Р»РѕРі
 	dialogRun = true;
 	dialogSelf = false;
 	LAi_Character_StartDialog(mainChr, Character);
@@ -90,7 +90,7 @@ bool DialogMain(ref Character)
 // ccc building kit, keeps first person view for building dialogs
 	if(Character.chr_ai.type != LAI_TYPE_BUILDING) SendMessage(mainChr, "lsl", MSG_CHARACTER_EX_MSG, "InDialog", 1);
 	SendMessage(Character, "lsl", MSG_CHARACTER_EX_MSG, "InDialog", 1);
-	//Запускаем диалог
+	//Р—Р°РїСѓСЃРєР°РµРј РґРёР°Р»РѕРі
 	//Trace("Dialog: dialog path for character <" + Character.id + "> = " + FullDialogPath);
 	Dialog.CurrentNode = CharacterRef.Dialog.CurrentNode;
 	startDialogMainCounter = 0;
@@ -213,35 +213,35 @@ void Change_Mood(ref mood)
 }
 // <--- a simple virtual sailor
 
-//Начать диалог с самим собой
+//РќР°С‡Р°С‚СЊ РґРёР°Р»РѕРі СЃ СЃР°РјРёРј СЃРѕР±РѕР№
 void SelfDialog(ref Character)
 {
-	//Если диалог запущен, выходим
+	//Р•СЃР»Рё РґРёР°Р»РѕРі Р·Р°РїСѓС‰РµРЅ, РІС‹С…РѕРґРёРј
 	if(dialogRun != false) return; //MAXIMUS: void function return value (was "return false")
-	//Если когото не заведено, выходим
+	//Р•СЃР»Рё РєРѕРіРѕС‚Рѕ РЅРµ Р·Р°РІРµРґРµРЅРѕ, РІС‹С…РѕРґРёРј
 	if(!IsEntity(Character) && !CheckAttribute(Character,"SailHo") && !CheckAttribute(Character,"DirectSail.messenger")) return false;//changed by MAXIMUS: for new "Sail Ho" and DirectSail-Mod
-	//Проверим на существование текущего нода
+	//РџСЂРѕРІРµСЂРёРј РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С‚РµРєСѓС‰РµРіРѕ РЅРѕРґР°
 	if(!CheckAttribute(Character, "Dialog.CurrentNode"))
 	{
 		Trace("SelfDialog: Character <" + Character.id + "> can't have field Dialog.CurrentNode, exit from dialog!")
 		return false;
 	}
-	//Сохраняем ссылку на того с кем говорим
+	//РЎРѕС…СЂР°РЅСЏРµРј СЃСЃС‹Р»РєСѓ РЅР° С‚РѕРіРѕ СЃ РєРµРј РіРѕРІРѕСЂРёРј
 	CharacterRef = Character;
 	LoadAllDialogFiles(Character); //Added by Levis for better dialogs
- 	// Попытка загрузить текст дилога
+ 	// РџРѕРїС‹С‚РєР° Р·Р°РіСЂСѓР·РёС‚СЊ С‚РµРєСЃС‚ РґРёР»РѕРіР°
 	/*if(!LoadDialogFiles(Character.Dialog.Filename))
 	{
-		// имеем ошибочный диалог
+		// РёРјРµРµРј РѕС€РёР±РѕС‡РЅС‹Р№ РґРёР°Р»РѕРі
 		if(!LoadDialogFiles("error_dialog.c")) return; //MAXIMUS: void function return value (was "return false")
 	}*/ //Removed by Levis
-	//Если персонаж не готов говорить выходим
+	//Р•СЃР»Рё РїРµСЂСЃРѕРЅР°Р¶ РЅРµ РіРѕС‚РѕРІ РіРѕРІРѕСЂРёС‚СЊ РІС‹С…РѕРґРёРј
 	LAi_Character_CanDialog(Character, Character);
-	//Можем начинать диалог
+	//РњРѕР¶РµРј РЅР°С‡РёРЅР°С‚СЊ РґРёР°Р»РѕРі
 	dialogRun = true;
 	dialogSelf = true;
 	SendMessage(Character, "lsl", MSG_CHARACTER_EX_MSG, "InDialog", 1);
-	//Запускаем диалог
+	//Р—Р°РїСѓСЃРєР°РµРј РґРёР°Р»РѕРі
 	Dialog.CurrentNode = CharacterRef.Dialog.CurrentNode;
 	//Trace("SelfDialog: dialog path for self character <" + Character.id + "> = " + FullDialogPath);
 // KK -->
@@ -301,7 +301,7 @@ void SelfDialog(ref Character)
 	ResetTimeToNormal();//MAXIMUS
 }
 
-//Закончить диалог
+//Р—Р°РєРѕРЅС‡РёС‚СЊ РґРёР°Р»РѕРі
 void DialogExit()
 {
 	//Check if all dialog files are closed
@@ -309,19 +309,19 @@ void DialogExit()
 	{
 		UnloadDialogFileByIndex(DialogFilesLoaded);
 	}
-	//Ссылка на главного персонажа
+	//РЎСЃС‹Р»РєР° РЅР° РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 	ref mainChr = GetMainCharacter(); // KK
-	//Если диалога уже не ведётся, выйдем
+	//Р•СЃР»Рё РґРёР°Р»РѕРіР° СѓР¶Рµ РЅРµ РІРµРґС‘С‚СЃСЏ, РІС‹Р№РґРµРј
 	if(dialogRun == false) return;
 	//DelEventHandler("PlayDialogGreeting", "DialogPlayGreeting"); // KK
 	DelEventHandler("DialogEvent","ProcessDialogText"); // KK
-	//Освобождаем ресурсы
+	//РћСЃРІРѕР±РѕР¶РґР°РµРј СЂРµСЃСѓСЂСЃС‹
 	DeleteClass(&Dialog);
 	/*if(FullDialogPath!="") UnloadSegment(FullDialogPath);
 	if(PathDlgLngExtn!="") UnloadSegment(PathDlgLngExtn);*/ //Removed by Levis
 	if(dialogSelf == false)
 	{
-		//Отметим, что персонажи освободились от диалога
+		//РћС‚РјРµС‚РёРј, С‡С‚Рѕ РїРµСЂСЃРѕРЅР°Р¶Рё РѕСЃРІРѕР±РѕРґРёР»РёСЃСЊ РѕС‚ РґРёР°Р»РѕРіР°
 		LAi_Character_EndDialog(mainChr, CharacterRef);
 		LAi_Character_EndDialog(CharacterRef, mainChr);
 		SendMessage(mainChr, "lsl", MSG_CHARACTER_EX_MSG, "InDialog", 0);
@@ -334,7 +334,7 @@ void DialogExit()
 	DeleteAttribute(GetMainCharacter(), "forcedlg"); // NK 05-07-13 to allow for dlg in fight mode
 	dialogRun = false;
 	dialogSelf = false; //Added by Levis to fix exit
-	//Сообщим об окончании диалога
+	//РЎРѕРѕР±С‰РёРј РѕР± РѕРєРѕРЅС‡Р°РЅРёРё РґРёР°Р»РѕРіР°
 	PostEvent(EVENT_DIALOG_EXIT, 1, "l", sti(CharacterRef.index));
 	// PB: No fights during dialog -->
 	if(FightDisable == false) {LAi_LocationFightDisable(&Locations[FindLocation(mainChr.location)], false);}
@@ -349,18 +349,18 @@ void DialogExit()
 	CheckCharacterAction();
 }
 
-//Это событие приходит от Player
+//Р­С‚Рѕ СЃРѕР±С‹С‚РёРµ РїСЂРёС…РѕРґРёС‚ РѕС‚ Player
 void StartDialogWithMainCharacter()
 {
 	// NK disable this to allow dlg in boarding 05-07-12 - if(LAi_IsBoardingProcess()) return;
 	if(dialogDisable) return;
-	//С кем хотим говорить
+	//РЎ РєРµРј С…РѕС‚РёРј РіРѕРІРѕСЂРёС‚СЊ
 	int person = GetEventData();
-	//Сими с собой не беседуем
+	//РЎРёРјРё СЃ СЃРѕР±РѕР№ РЅРµ Р±РµСЃРµРґСѓРµРј
 	if(person == GetMainCharacterIndex()) return;
-	//С непрогруженными персонажами не беседуем
+	//РЎ РЅРµРїСЂРѕРіСЂСѓР¶РµРЅРЅС‹РјРё РїРµСЂСЃРѕРЅР°Р¶Р°РјРё РЅРµ Р±РµСЃРµРґСѓРµРј
 	if(!IsEntity(&Characters[person])) return;
-	//Начинаем диалог
+	//РќР°С‡РёРЅР°РµРј РґРёР°Р»РѕРі
 	DialogMain(&Characters[person]);
 	//Trace("Dialog: start dialog " + person + " whith main character");
 }
@@ -784,18 +784,18 @@ void ProcessDialogText()
 //MAXIMUS -->
 void DialogCorpseExit(ref char)
 {
-	//Если диалога уже не ведётся, выйдем
+	//Р•СЃР»Рё РґРёР°Р»РѕРіР° СѓР¶Рµ РЅРµ РІРµРґС‘С‚СЃСЏ, РІС‹Р№РґРµРј
 	if(dialogRun == false) return;
 	DelEventHandler("frame", "DialogPlayGreeting");
-	//Освобождаем ресурсы
+	//РћСЃРІРѕР±РѕР¶РґР°РµРј СЂРµСЃСѓСЂСЃС‹
 	DeleteClass(&Dialog);
 	/*if(FullDialogPath!="") UnloadSegment(FullDialogPath);
 	if(PathDlgLngExtn!="") UnloadSegment(PathDlgLngExtn);*/ //Removed by Levis
 	if(dialogSelf == false)
 	{
-		//Ссылка на главного персонажа
+		//РЎСЃС‹Р»РєР° РЅР° РіР»Р°РІРЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°
 		ref mainChr = GetMainCharacter();
-		//Отметим, что персонажи освободились от диалога
+		//РћС‚РјРµС‚РёРј, С‡С‚Рѕ РїРµСЂСЃРѕРЅР°Р¶Рё РѕСЃРІРѕР±РѕРґРёР»РёСЃСЊ РѕС‚ РґРёР°Р»РѕРіР°
 		LAi_Character_EndDialog(mainChr, char);
 		LAi_Character_EndDialog(char, mainChr);
 		SendMessage(mainChr, "lsl", MSG_CHARACTER_EX_MSG, "InDialog", 0);
@@ -808,7 +808,7 @@ void DialogCorpseExit(ref char)
 	DeleteAttribute(GetMainCharacter(), "forcedlg");
 	dialogRun = false;
 	dialogSelf = false; //Added by Levis to fix exit
-	//Сообщим об окончании диалога
+	//РЎРѕРѕР±С‰РёРј РѕР± РѕРєРѕРЅС‡Р°РЅРёРё РґРёР°Р»РѕРіР°
 	PostEvent(EVENT_DIALOG_EXIT, 1, "l", sti(char.index));
 	// PB -->
 	locCameraFollow(); //a simple virtual sailor

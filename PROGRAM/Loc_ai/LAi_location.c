@@ -1,7 +1,7 @@
 
 
 
-//Запретить сражаться персонажам в заданной локации
+//Р—Р°РїСЂРµС‚РёС‚СЊ СЃСЂР°Р¶Р°С‚СЊСЃСЏ РїРµСЂСЃРѕРЅР°Р¶Р°Рј РІ Р·Р°РґР°РЅРЅРѕР№ Р»РѕРєР°С†РёРё
 void LAi_LocationFightDisable(ref location, bool isDisable)
 {
 	if(isDisable)
@@ -12,7 +12,7 @@ void LAi_LocationFightDisable(ref location, bool isDisable)
 	}
 }
 
-//Разрешить или запретить генерации монстров
+//Р Р°Р·СЂРµС€РёС‚СЊ РёР»Рё Р·Р°РїСЂРµС‚РёС‚СЊ РіРµРЅРµСЂР°С†РёРё РјРѕРЅСЃС‚СЂРѕРІ
 void LAi_LocationMonstersGen(ref location, bool isEnable)
 {
 	if(isEnable)
@@ -23,7 +23,7 @@ void LAi_LocationMonstersGen(ref location, bool isEnable)
 	}
 }
 
-//Установить время генерации монстров
+//РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІСЂРµРјСЏ РіРµРЅРµСЂР°С†РёРё РјРѕРЅСЃС‚СЂРѕРІ
 void LAi_LocationSetMonstersTime(ref location, float start, float end)
 {
 	//!!!
@@ -39,10 +39,10 @@ void LAi_LocationSetMonstersTime(ref location, float start, float end)
 
 bool LAi_LocationIsMonstersGen(ref location)
 {
-	//Проверим разрешение на генерацию монстров
+	//РџСЂРѕРІРµСЂРёРј СЂР°Р·СЂРµС€РµРЅРёРµ РЅР° РіРµРЅРµСЂР°С†РёСЋ РјРѕРЅСЃС‚СЂРѕРІ
 	if(CheckAttribute(location, "monsters") == false) return false;
 	if(sti(location.monsters) == 0) return false;
-	//Проверим время логина
+	//РџСЂРѕРІРµСЂРёРј РІСЂРµРјСЏ Р»РѕРіРёРЅР°
 	if(CheckAttribute(location, "monsters.stime"))
 	{
 		if(CheckAttribute(location, "monsters.etime"))
@@ -55,7 +55,7 @@ bool LAi_LocationIsMonstersGen(ref location)
 	return true;
 }
 
-//Разрешить или запретить генерации фантомов при убийстве в данной локации
+//Р Р°Р·СЂРµС€РёС‚СЊ РёР»Рё Р·Р°РїСЂРµС‚РёС‚СЊ РіРµРЅРµСЂР°С†РёРё С„Р°РЅС‚РѕРјРѕРІ РїСЂРё СѓР±РёР№СЃС‚РІРµ РІ РґР°РЅРЅРѕР№ Р»РѕРєР°С†РёРё
 void LAi_LocationFantomsGen(ref location, bool isEnable)
 {
 	if(isEnable)

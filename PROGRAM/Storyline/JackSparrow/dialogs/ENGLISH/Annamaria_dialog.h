@@ -2,7 +2,7 @@ string DLG_TEXT[88] = {
 "What's the benefit for us?",
 "Anamaria!?",
 "You stole my boat!",
-"Aïee! Actually...borrowed without permission but with every intention of bringing it back.",
+"AÐ¿ee! Actually...borrowed without permission but with every intention of bringing it back.",
 "But, you didn't!",
 "You'll get another one.",
 "humm...",

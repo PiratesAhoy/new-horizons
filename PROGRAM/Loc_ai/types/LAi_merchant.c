@@ -1,7 +1,7 @@
 /*
-Òèï: ñòîÿ÷èé, âñåãäà ñòîèò, îòâå÷àåò íà äèàëîãè, íèêîãäà íå áîèòñÿ
+Ð¢Ð¸Ð¿: ÑÑ‚Ð¾ÑÑ‡Ð¸Ð¹, Ð²ÑÐµÐ³Ð´Ð° ÑÑ‚Ð¾Ð¸Ñ‚, Ð¾Ñ‚Ð²ÐµÑ‡Ð°ÐµÑ‚ Ð½Ð° Ð´Ð¸Ð°Ð»Ð¾Ð³Ð¸, Ð½Ð¸ÐºÐ¾Ð³Ð´Ð° Ð½Ðµ Ð±Ð¾Ð¸Ñ‚ÑÑ
 
-	Èñïîëüçóåìûå øàáëîíû:
+	Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÐ¼Ñ‹Ðµ ÑˆÐ°Ð±Ð»Ð¾Ð½Ñ‹:
 		stay
 		dialog
 */
@@ -11,7 +11,7 @@
 #define LAI_TYPE_MERCHANT		"merchant"
 
 
-//Èíèöèàëèçàöèÿ
+//Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ
 void LAi_type_merchant_Init(aref chr)
 {
 	DeleteAttribute(chr, "location.follower");
@@ -23,18 +23,18 @@ void LAi_type_merchant_Init(aref chr)
 	chr.chr_ai.type.timewait = "0";
 	chr.chr_ai.type.afraid = "0";
 	LAi_tmpl_stay_InitTemplate(chr);
-	//Óñòàíîâèì àíèìàöèþ ïåðñîíàæó
+	//Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ð¼ Ð°Ð½Ð¸Ð¼Ð°Ñ†Ð¸ÑŽ Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶Ñƒ
 	LAi_SetDefaultStayAnimation(chr);
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightWOWeapon", false);
 }
 
-//Ïðîöåññèðîâàíèå òèïà ïåðñîíàæà
+//ÐŸÑ€Ð¾Ñ†ÐµÑÑÐ¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ Ñ‚Ð¸Ð¿Ð° Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶Ð°
 void LAi_type_merchant_CharacterUpdate(aref chr, float dltTime)
 {
 	float time, tw;
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY)
 	{
-		//Ñìîòðèì áëèçêî ïðîõîäÿùèõ ïåðñîíàæåé
+		//Ð¡Ð¼Ð¾Ñ‚Ñ€Ð¸Ð¼ Ð±Ð»Ð¸Ð·ÐºÐ¾ Ð¿Ñ€Ð¾Ñ…Ð¾Ð´ÑÑ‰Ð¸Ñ… Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶ÐµÐ¹
 		time = stf(chr.chr_ai.type.time);
 		int num = FindNearCharacters(chr, 4.5, -1.0, -1.0, 0.001, false, true);
 		if(num > 0)
@@ -42,7 +42,7 @@ void LAi_type_merchant_CharacterUpdate(aref chr, float dltTime)
 			if(LAi_type_merchant_FindEnemy(chr, num) < 0)
 			{
 				int ichr = sti(chrFindNearCharacters[0].index);
-				//Òðåïèìñÿ ñ ïîäîøåäøèì
+				//Ð¢Ñ€ÐµÐ¿Ð¸Ð¼ÑÑ Ñ Ð¿Ð¾Ð´Ð¾ÑˆÐµÐ´ÑˆÐ¸Ð¼
 				time = time + dltTime;
 				chr.chr_ai.type.time = time;
 				if(stf(chr.chr_ai.type.who) != ichr)
@@ -59,7 +59,7 @@ void LAi_type_merchant_CharacterUpdate(aref chr, float dltTime)
 					{
 						if(rand(100) < 30)
 						{
-							//Çàïóñòèì ðåæèì çàìàíèâàíèÿ ïîêóïàòåëåé
+							//Ð—Ð°Ð¿ÑƒÑÑ‚Ð¸Ð¼ Ñ€ÐµÐ¶Ð¸Ð¼ Ð·Ð°Ð¼Ð°Ð½Ð¸Ð²Ð°Ð½Ð¸Ñ Ð¿Ð¾ÐºÑƒÐ¿Ð°Ñ‚ÐµÐ»ÐµÐ¹
 							LAi_type_merchant_Ask(chr);
 							chr.chr_ai.type.timewait = "0";
 							CharacterTurnByChr(chr, &Characters[ichr]);
@@ -73,7 +73,7 @@ void LAi_type_merchant_CharacterUpdate(aref chr, float dltTime)
 					}				
 				}
 			}else{
-				//Áîèìñÿ
+				//Ð‘Ð¾Ð¸Ð¼ÑÑ
 				chr.chr_ai.type.afraid = "1";
 				LAi_tmpl_ani_PlayAnimation(chr, "afraid", -1.0);
 				LAi_SetAfraidDead(chr);
@@ -92,7 +92,7 @@ void LAi_type_merchant_CharacterUpdate(aref chr, float dltTime)
 			chr.chr_ai.type.who = "-1";
 			chr.chr_ai.type.timewait = "3";
 		}else{
-			//Ñìîòðèì áëèçêî ïðîõîäÿùèõ ïåðñîíàæåé
+			//Ð¡Ð¼Ð¾Ñ‚Ñ€Ð¸Ð¼ Ð±Ð»Ð¸Ð·ÐºÐ¾ Ð¿Ñ€Ð¾Ñ…Ð¾Ð´ÑÑ‰Ð¸Ñ… Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶ÐµÐ¹
 			time = stf(chr.chr_ai.type.time);
 			num = FindNearCharacters(chr, 5.5, -1.0, -1.0, 0.001, false, false);
 			if(num > 0)
@@ -114,19 +114,19 @@ void LAi_type_merchant_CharacterUpdate(aref chr, float dltTime)
 	}
 }
 
-//Çàãðóçêà ïåðñîíàæà â ëîêàöèþ
+//Ð—Ð°Ð³Ñ€ÑƒÐ·ÐºÐ° Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶Ð° Ð² Ð»Ð¾ÐºÐ°Ñ†Ð¸ÑŽ
 bool LAi_type_merchant_CharacterLogin(aref chr)
 {
 	return true;
 }
 
-//Âûãðóçêà ïåðñîíàæà èç ëîêàöèþ
+//Ð’Ñ‹Ð³Ñ€ÑƒÐ·ÐºÐ° Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶Ð° Ð¸Ð· Ð»Ð¾ÐºÐ°Ñ†Ð¸ÑŽ
 bool LAi_type_merchant_CharacterLogoff(aref chr)
 {
 	return true;
 }
 
-//Çàâåðøåíèå ðàáîòû òåìïëåéòà
+//Ð—Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¸Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ñ‚ÐµÐ¼Ð¿Ð»ÐµÐ¹Ñ‚Ð°
 void LAi_type_merchant_TemplateComplite(aref chr, string tmpl)
 {
 	if(chr.chr_ai.tmpl == LAI_TMPL_ANI)
@@ -138,66 +138,66 @@ void LAi_type_merchant_TemplateComplite(aref chr, string tmpl)
 	}
 }
 
-//Ñîîáùèòü î æåëàíèè çàâåñòè äèàëîã
+//Ð¡Ð¾Ð¾Ð±Ñ‰Ð¸Ñ‚ÑŒ Ð¾ Ð¶ÐµÐ»Ð°Ð½Ð¸Ð¸ Ð·Ð°Ð²ÐµÑÑ‚Ð¸ Ð´Ð¸Ð°Ð»Ð¾Ð³
 void LAi_type_merchant_NeedDialog(aref chr, aref by)
 {
 }
 
-//Çàïðîñ íà äèàëîã, åñëè âîçâðàòèòü true òî â ýòîò ìîìåíò ìîæíî íà÷àòü äèàëîã
+//Ð—Ð°Ð¿Ñ€Ð¾Ñ Ð½Ð° Ð´Ð¸Ð°Ð»Ð¾Ð³, ÐµÑÐ»Ð¸ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‚Ð¸Ñ‚ÑŒ true Ñ‚Ð¾ Ð² ÑÑ‚Ð¾Ñ‚ Ð¼Ð¾Ð¼ÐµÐ½Ñ‚ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ñ‡Ð°Ñ‚ÑŒ Ð´Ð¸Ð°Ð»Ð¾Ð³
 bool LAi_type_merchant_CanDialog(aref chr, aref by)
 {
-	//Ñîãëàñèìñÿ íà äèàëîã
+	//Ð¡Ð¾Ð³Ð»Ð°ÑÐ¸Ð¼ÑÑ Ð½Ð° Ð´Ð¸Ð°Ð»Ð¾Ð³
 	if(chr.chr_ai.type.afraid == "1") return false;
 	if(chr.chr_ai.tmpl == LAI_TMPL_STAY) return true;
 	if(chr.chr_ai.tmpl == LAI_TMPL_ANI) return true;
 	return false;
 }
 
-//Íà÷àòü äèàëîã
+//ÐÐ°Ñ‡Ð°Ñ‚ÑŒ Ð´Ð¸Ð°Ð»Ð¾Ð³
 void LAi_type_merchant_StartDialog(aref chr, aref by)
 {
-	//Åñëè ìû ïàñèâíû, çàïóñêàåì øàáëîí áåç âðåìåíè çàâåðøåíèÿ
+	//Ð•ÑÐ»Ð¸ Ð¼Ñ‹ Ð¿Ð°ÑÐ¸Ð²Ð½Ñ‹, Ð·Ð°Ð¿ÑƒÑÐºÐ°ÐµÐ¼ ÑˆÐ°Ð±Ð»Ð¾Ð½ Ð±ÐµÐ· Ð²Ñ€ÐµÐ¼ÐµÐ½Ð¸ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¸Ñ
 	LAi_CharacterSaveAy(chr);
 	CharacterTurnByChr(chr, by);
 	LAi_tmpl_SetActivatedDialog(chr, by);
 }
 
-//Çàêîí÷èòü äèàëîã
+//Ð—Ð°ÐºÐ¾Ð½Ñ‡Ð¸Ñ‚ÑŒ Ð´Ð¸Ð°Ð»Ð¾Ð³
 void LAi_type_merchant_EndDialog(aref chr, aref by)
 {
 	LAi_tmpl_stay_InitTemplate(chr);
 	LAi_CharacterRestoreAy(chr);
 }
 
-//Ïåðñîíàæ àòàêîâàë äðóãîãî ïåðñîíàæà
+//ÐŸÐµÑ€ÑÐ¾Ð½Ð°Ð¶ Ð°Ñ‚Ð°ÐºÐ¾Ð²Ð°Ð» Ð´Ñ€ÑƒÐ³Ð¾Ð³Ð¾ Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶Ð°
 void LAi_type_merchant_Attack(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//Ïåðñîíàæ àòîêîâàë çàáëîêèðîâàâøåãîñÿ ïåðñîíàæà
+//ÐŸÐµÑ€ÑÐ¾Ð½Ð°Ð¶ Ð°Ñ‚Ð¾ÐºÐ¾Ð²Ð°Ð» Ð·Ð°Ð±Ð»Ð¾ÐºÐ¸Ñ€Ð¾Ð²Ð°Ð²ÑˆÐµÐ³Ð¾ÑÑ Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶Ð°
 void LAi_type_merchant_Block(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
 
 }
 
-//Ïåðñîíàæ âûñòðåëèë
+//ÐŸÐµÑ€ÑÐ¾Ð½Ð°Ð¶ Ð²Ñ‹ÑÑ‚Ñ€ÐµÐ»Ð¸Ð»
 void LAi_type_merchant_Fire(aref attack, aref enemy, float kDist, bool isFindedEnemy)
 {
 
 }
 
 
-//Ïåðñîíàæ àòàêîâàí
+//ÐŸÐµÑ€ÑÐ¾Ð½Ð°Ð¶ Ð°Ñ‚Ð°ÐºÐ¾Ð²Ð°Ð½
 void LAi_type_merchant_Attacked(aref chr, aref by)
 {
 	
 }
 
-//Ïðîèãðàòü àíèìàöèþ çàçûâàíèÿ ïîêóïàíåëåé
+//ÐŸÑ€Ð¾Ð¸Ð³Ñ€Ð°Ñ‚ÑŒ Ð°Ð½Ð¸Ð¼Ð°Ñ†Ð¸ÑŽ Ð·Ð°Ð·Ñ‹Ð²Ð°Ð½Ð¸Ñ Ð¿Ð¾ÐºÑƒÐ¿Ð°Ð½ÐµÐ»ÐµÐ¹
 void LAi_type_merchant_Ask(aref chr)
 {
-	//Âûáèðàåì àíèìàöèþ
+	//Ð’Ñ‹Ð±Ð¸Ñ€Ð°ÐµÐ¼ Ð°Ð½Ð¸Ð¼Ð°Ñ†Ð¸ÑŽ
 	string animation;
 	switch(rand(2))
 	{
@@ -212,7 +212,7 @@ void LAi_type_merchant_Ask(aref chr)
 		break;
 	};
 	LAi_tmpl_ani_PlayAnimation(chr, animation, -1.0);
-	//Âûáèðàåì ïðîèãðûâàåìûé çâóê
+	//Ð’Ñ‹Ð±Ð¸Ñ€Ð°ÐµÐ¼ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ñ‹Ð²Ð°ÐµÐ¼Ñ‹Ð¹ Ð·Ð²ÑƒÐº
 	//a simple virtual sailor change -->
 	//LAi_CharacterPlaySound(chr, "merchant");
 	switch(chr.sex)
@@ -235,7 +235,7 @@ void LAi_type_merchant_Ask(aref chr)
 	//a simple virtual sailor change <--
 }
 
-//Ïðîèãðàòü àíèìàöèþ çàçûâàíèÿ ïîêóïàíåëåé
+//ÐŸÑ€Ð¾Ð¸Ð³Ñ€Ð°Ñ‚ÑŒ Ð°Ð½Ð¸Ð¼Ð°Ñ†Ð¸ÑŽ Ð·Ð°Ð·Ñ‹Ð²Ð°Ð½Ð¸Ñ Ð¿Ð¾ÐºÑƒÐ¿Ð°Ð½ÐµÐ»ÐµÐ¹
 void LAi_type_merchant_RestoreAngle(aref chr)
 {
 	if(CheckAttribute(chr, "location.group"))
@@ -247,7 +247,7 @@ void LAi_type_merchant_RestoreAngle(aref chr)
 	}
 }
 
-//Íàéòè âðàãà
+//ÐÐ°Ð¹Ñ‚Ð¸ Ð²Ñ€Ð°Ð³Ð°
 int LAi_type_merchant_FindEnemy(aref chr, int num)
 {
 	for(int i = 0; i < num; i++)

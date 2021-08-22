@@ -90,10 +90,10 @@ void wdmReloadToSea()
 				if(MakeInt(worldMap.encounter.select) == 0) continue;
 				isShipEncounterType = true;
 				/*
-				// boal нужно перенести наверх, а то в территории острова -->
+				// boal РЅСѓР¶РЅРѕ РїРµСЂРµРЅРµСЃС‚Рё РЅР°РІРµСЂС…, Р° С‚Рѕ РІ С‚РµСЂСЂРёС‚РѕСЂРёРё РѕСЃС‚СЂРѕРІР° -->
 				wdmLoginToSea.island = "";
 				wdmCurrentIsland = WDM_NONE_ISLAND;
-				// boal нужно перенести наверх, а то в территории острова <--
+				// boal РЅСѓР¶РЅРѕ РїРµСЂРµРЅРµСЃС‚Рё РЅР°РІРµСЂС…, Р° С‚Рѕ РІ С‚РµСЂСЂРёС‚РѕСЂРёРё РѕСЃС‚СЂРѕРІР° <--
 				*/
 				grp = "group" + i;
 				encX = MakeFloat(worldMap.encounter.x);

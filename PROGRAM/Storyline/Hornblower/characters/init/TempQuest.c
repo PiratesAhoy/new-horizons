@@ -36,7 +36,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Téméraire";
+	ch.Ship.Name = "TÐ¹mÐ¹raire";
 	ch.Ship.Type = "FR_Superbe";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -118,7 +118,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "0";
-	ch.Ship.Name = "Téméraire";
+	ch.Ship.Name = "TÐ¹mÐ¹raire";
 	ch.Ship.Type = "FR_Superbe";
 	ch.Ship.Stopped = true; 
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -192,7 +192,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
-	ch.Ship.Name = "Méduse";
+	ch.Ship.Name = "MÐ¹duse";
 	ch.Ship.Type = "FR_Greyhound";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);

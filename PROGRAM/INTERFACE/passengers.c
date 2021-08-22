@@ -536,7 +536,7 @@ void PressRansomCaptive()
 	if(captiveIdx==-1) return;
 	ref captiveCharacter = GetCharacter(captiveIdx);
 	if( !GetRemovable(captiveCharacter) ) return;
-	DeleteAttribute(captiveCharacter,"prisoned"); // освободили пленника
+	DeleteAttribute(captiveCharacter,"prisoned"); // РѕСЃРІРѕР±РѕРґРёР»Рё РїР»РµРЅРЅРёРєР°
 	DelFromScroll("PASSENGERSLIST",nCurScrollNum);
 	SetCurrentNode("PASSENGERSLIST");
 	for(int i=1;i<OFFICER_MAX;i++)
@@ -560,7 +560,7 @@ void PressReleaseCaptive()
 	if(captiveIdx==-1) return;
 	ref captiveCharacter = GetCharacter(captiveIdx);
 	if( !GetRemovable(captiveCharacter) ) return;
-	DeleteAttribute(captiveCharacter,"prisoned"); // освободили пленника
+	DeleteAttribute(captiveCharacter,"prisoned"); // РѕСЃРІРѕР±РѕРґРёР»Рё РїР»РµРЅРЅРёРєР°
 	DelFromScroll("PASSENGERSLIST",nCurScrollNum);
 	SetCurrentNode("PASSENGERSLIST");
 	for(int i=1;i<OFFICER_MAX;i++)
