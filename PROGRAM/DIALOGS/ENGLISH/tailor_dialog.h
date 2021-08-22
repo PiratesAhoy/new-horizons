@@ -1,4 +1,4 @@
-string DLG_TEXT[88] = {
+string DLG_TEXT[113] = {
 ", How can I help you?",
 "I am happy to see you here, ",
 ". Do you need my services?",
@@ -60,7 +60,7 @@ string DLG_TEXT[88] = {
 "Stop modding!",
 ".",
 "Gimme the famous Pirate Clothes Collection! (10,000 gold)",
-"Yes sir, an excellent choice if I may say.",
+"Yes #ssir#, an excellent choice if I may say.",
 "It is, and you may.",
 "DLG_TEXT[63]",  // El Rapido: always subtract 2 from the actual line in the dialog.h file to get the DLG_TEXT[NUMBER] and don't forget the , after the last "
 "By the might of El Rapido! Reset the main character's and/or the 3 assigned officers' skills and abilities.",
@@ -85,6 +85,32 @@ string DLG_TEXT[88] = {
 "A Carpenter.",
 "A Surgeon.",
 "A Master of Arms.",
-"I changed my mind. I don't want to hire an officer right now."
+"I changed my mind. I don't want to hire an officer right now.",
 // -- Scheffnow -- 2004-01-25 -- AppereanceMod -- end -----------------
+"My rich uncle has bought ",
+"me",
+"my brother",
+" a commission as a Kapitein. Can you make the necessary adjustments to this uniform?",
+"Certainly, ",
+". If you'll just give me the commissioning papers, I'll start right away.",
+"Commissioning papers?",
+"Yes. I don't doubt your word, of course. But it's standard policy to require the commissioning papers to prevent any random soldier from trying to get a uniform he is not entitled to wear.",
+"Of course. Here they are. <make a play of looking in your pocket> Ah. Hopefully they're still in the barracks, otherwise a pickpocket has helped himself to them and I'll need to get the papers replaced. I'll return when I have them.",
+"Here are the papers.",
+"Thank you. Yes, these are valid papers for a Kapitein who has just been commissioned into the 3rd Foot Company. I have the required insignia in stock. Come back tomorrow and I'll have the uniform ready for you.",
+"Thank you.",
+"I am here to ask about the uniform I ordered.",
+"Yes, I've been waiting for you. The uniform is now ready. That will be 4000 gold, please.",
+"Here is the money.",
+"I don't have that much money with me. I'll be back when I do have it.",
+"And here is the uniform. I look forward to seeing ",
+"you",
+"your brother",
+" wearing it on duty.",
+"Thank you. It will indeed not be long before you see ",
+"me",
+"my brother",
+" putting the uniform to good use.",
+"Certainly I can adjust your uniform. But not while you are wearing it!",
+"Good point. I'll change into something else first.",
 };

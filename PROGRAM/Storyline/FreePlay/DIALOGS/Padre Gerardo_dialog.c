@@ -12,7 +12,65 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	int iNation = sti(PChar.nation); // DeathDaisy
+	string sNation = iNation; // DeathDaisy
+	string Father;
 
+	// DeathDaisy -->
+	switch(iNation)
+	{
+		case FRANCE:
+			Father = "prêtre";
+			Preprocessor_Add("allez", "Allez");
+		break;
+
+		case SPAIN:
+			Father = "sacerdote";
+			Preprocessor_Add("allez", "Vayan");
+		break;
+
+		case PORTUGAL:
+			Father = "Padre";
+			Preprocessor_Add("allez", "Va");
+		break;
+
+		case HOLLAND:
+			Father = "priester";
+			Preprocessor_Add("allez", "Haast");
+		break;
+
+		case ENGLAND:
+			Father = "priest";
+			Preprocessor_Add("allez", "Hurry");
+		break;
+
+		case PIRATE:
+			Father = DLG_TEXT[13];
+			Preprocessor_Add("allez", DLG_TEXT[14]);
+		break;
+
+		case PERSONAL_NATION:
+			Father = DLG_TEXT[13];
+			Preprocessor_Add("allez", DLG_TEXT[14]);
+		break;
+
+		case GUEST1_NATION:
+			if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
+			{
+				Father = "präst";
+				Preprocessor_Add("allez", "Skynda");
+			}
+			else
+			{
+				Father = "priest";
+				Preprocessor_Add("allez", "Hurry");
+			}
+		break;
+	}
+	// DeathDaisy <--
+	
+	Preprocessor_Add("father", Father);
 
 	switch(Dialog.CurrentNode)
 	{
@@ -27,7 +85,9 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
-
+			
+			
+			
 			dialog.text = DLG_TEXT[0];
 			Link.l1 = DLG_TEXT[1];
 			Link.l1.go = "node_1";

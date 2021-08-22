@@ -135,6 +135,7 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[11];
 			Link.l1.go = "Prepare_to_leave_Oxbay";
 			GiveShip2Character(pchar, "WickedWench","Wicked Wench",-1,ENGLAND,true,true);
+			PChar.quest.wench_given_by = "Brin";
 			SetCharacterShipLocation(Pchar, "Oxbay_port");
 		break;
 

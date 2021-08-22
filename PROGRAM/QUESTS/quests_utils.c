@@ -162,7 +162,7 @@ bool FillTreasureChestWithRandomLoot(string locid)
 			if(calc_luck > 7)
 			{
 				if (period >= PERIOD_GOLDEN_AGE_OF_PIRACY) lcn.treasure_box.items.pistol6 = (Calc_luck*rand(4)); // Double-Shot Pistol
-				else lcn.treasure_box.items.pistol7 = (Calc_luck*rand(5)); // Brace of Small Pistols
+				else lcn.treasure_box.items.pistol7a = (Calc_luck*rand(5)); // Brace of older Small Pistols
 				lcn.treasure_box.items.spyglass3 = 1;
 			}
 			if(calc_luck > 8)

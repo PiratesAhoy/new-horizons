@@ -1,0 +1,18 @@
+string DLG_TEXT[16] = {
+"Hello.",
+"Goodbye.",
+", I am ",
+", admiral in the service of El Supremo.",
+"El Supremo? That means 'the Almighty'.",
+"El Supremo was formerly known to men as ",
+"Ahem. And where is this ",
+"El Supremo is in his fortress. You will come with me now.",
+"Follow me. Do not try to take the other path away from this beach. It leads towards #sHavana# and the road is heavily patrolled by Spanish soldiers.",
+"Thank you for the warning. I am here to meet ",
+", not the Spanish.",
+"Be very respectful to El Supremo if you value your life!",
+"Of course.",
+"Aside from water, I shall need 200 bullocks, 500 pigs, 100 quintels of salt, 40 tons of flour, 10 tons of sugar, 5 tons of tobacco, 1 ton of coffee, the juice of 40000 limes and... er... are there any wines to be had here? Spirits?",
+"We drink a spirit distilled from molasses which you probably do not know. We call it rum. Will that do?",
+"If there's nothing better, that will have to do. 100 barrels.",
+}

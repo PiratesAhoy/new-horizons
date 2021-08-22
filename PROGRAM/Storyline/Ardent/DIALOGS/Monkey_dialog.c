@@ -48,6 +48,28 @@ void ProcessDialogEvent()
 			link.l4.go = "exit";
 		break;
 
+		case "farewell1":
+			PlaySound("trep\monkey.wav");
+			dialog.text = DLG_TEXT[8];
+			link.l1 = DLG_TEXT[9];
+			link.l1.go = "farewell2";
+		break;
+
+		case "farewell2":
+			PlaySound("trep\monkey.wav");
+			dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[11];
+			link.l1.go = "farewell3";
+		break;
+
+		case "farewell3":
+			PlaySound("trep\monkey.wav");
+			dialog.text = DLG_TEXT[12];
+			link.l1 = DLG_TEXT[13];
+			AddDialogExitQuest("monkey_farewell2");
+			link.l1.go = "exit";
+		break;
+
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();

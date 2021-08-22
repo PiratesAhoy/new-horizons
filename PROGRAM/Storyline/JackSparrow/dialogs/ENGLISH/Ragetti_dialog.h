@@ -28,7 +28,7 @@ string DLG_TEXT[213] = {
 "Then our conversation ends here... you will now find out how much lady fortune thinks of you.",
 "Goodbye.",
 "Hello Sir, you look like a Captain! Maybe your in need of a couple of cannoneers? I'm Ragetti and this is my uncle, Pintel.",
-"Why yes I'm Captain Jack Sparraw, What qualifications do you have?",
+"Why yes, I'm Captain Jack Sparrow. What qualifications do you have?",
 "Well we were...",
 "...",
 "I was the only one, but you and me go back a'ways. Anyway, lying on the seabed I didn't know what to do. I couldn't die, so I called for Davy Jones, and he rescued me. I had to swear to join his crew and serve for 100 years, but he's given me five years to sort myself out before I have to join the ship, on condition I don't speak to my son again. He's in England so that is no hardship.",

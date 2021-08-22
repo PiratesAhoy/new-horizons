@@ -70,7 +70,7 @@ string DLG_TEXT[73] = {
 "Anything else, ",
 "?",
 "Remember: We never spoke of this arrangement.",
-"But of course, of course! I'm no fool, lad!",
+"But of course, of course! I'm no fool, *slad*!",
 "That's good to know. I'll be seeing you.",
 
 };

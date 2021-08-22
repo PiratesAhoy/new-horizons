@@ -398,7 +398,7 @@ void ProcessDialogEvent()
 		case "town_carriage":
 			d.Text = DLG_TEXT[179];
 			Link.l1 = DLG_TEXT[114];
-			Link.l1.go = "exit";
+			Link.l1.go = "exit_carriage";
 			Link.l2 = DLG_TEXT[110];
 			Link.l2.go = "town_tavern";
 			Link.l3 = DLG_TEXT[165];
@@ -437,7 +437,7 @@ void ProcessDialogEvent()
 		case "town_tower":
 			d.Text = DLG_TEXT[177];
 			Link.l1 = DLG_TEXT[114];
-			Link.l1.go = "exit";
+			Link.l1.go = "exit_tower";
 			Link.l2 = DLG_TEXT[110];
 			Link.l2.go = "town_tavern";
 			Link.l3 = DLG_TEXT[165];
@@ -756,6 +756,12 @@ void ProcessDialogEvent()
 		break;
 
 		case "exit_surgeon":
+			if(!CheckAttribute(Pchar,"qbook.richards4") || Pchar.qbook.richards4 != "done")
+			{
+				AddQuestRecord("Richards","4");
+				Pchar.qbook.richards4 = "done";
+			}
+
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reloadQ4", 1.5);	
 			Locations[FindLocation("Tortuga_port")].locators_radius.reload.reloadQ4 = 1.5;	
 			Diag.CurrentNode = Diag.TempNode;
@@ -764,6 +770,12 @@ void ProcessDialogEvent()
 		break;
 
 		case "exit_gunsmith":
+			if(!CheckAttribute(Pchar,"qbook.richards6") || Pchar.qbook.richards6 != "done")
+			{
+				AddQuestRecord("Richards","6");
+				Pchar.qbook.richards6 = "done";
+			}
+
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box8", 1.0);	
 			Locations[FindLocation("Tortuga_port")].locators_radius.box.box8 = 1.0;	
 			Diag.CurrentNode = Diag.TempNode;
@@ -772,8 +784,38 @@ void ProcessDialogEvent()
 		break;
 
 		case "exit_sailmaker":
+			if(!CheckAttribute(Pchar,"qbook.richards8") || Pchar.qbook.richards8 != "done")
+			{
+				AddQuestRecord("Richards","8");
+				Pchar.qbook.richards8 = "done";
+			}
+
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reloadQ1", 0.9);	
 			Locations[FindLocation("Tortuga_port")].locators_radius.reload.reloadQ1 = 0.9;	
+			Diag.CurrentNode = Diag.TempNode;
+			NPChar.quest.meeting = NPC_Meeting;
+			DialogExit();
+		break;
+
+		case "exit_carriage":
+			if(!CheckAttribute(Pchar,"qbook.richards10") || Pchar.qbook.richards10 != "done")
+			{
+				AddQuestRecord("Richards","10");
+				Pchar.qbook.richards10 = "done";
+			}
+
+			Diag.CurrentNode = Diag.TempNode;
+			NPChar.quest.meeting = NPC_Meeting;
+			DialogExit();
+		break;
+
+		case "exit_tower":
+			if(!CheckAttribute(Pchar,"qbook.richards12") || Pchar.qbook.richards12 != "done")
+			{
+				AddQuestRecord("Richards","12");
+				Pchar.qbook.richards12 = "done";
+			}
+
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();

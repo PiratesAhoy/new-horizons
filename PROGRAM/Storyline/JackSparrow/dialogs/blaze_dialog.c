@@ -1005,7 +1005,7 @@ void ProcessDialogEvent()
 		Dialog.Text = DLG_TEXT[285];
 		Link.l1 = " ";
 		Link.l1.go = "exit";
-		AddDialogExitQuest("Jackpot_start_search");
+//		AddDialogExitQuest("Jackpot_start_search");
 		AddQuestRecord("Chevalle", 11);
 	break;
 
@@ -1064,8 +1064,10 @@ void ProcessDialogEvent()
 	break;
 	
 	case "fort_speech":
-		Dialog.Text = "(A judge announces your execution) : " + GetMyFullName(PChar) ;
-		Link.l1 = DLG_TEXT[270] + GetMyFullName(PChar) ;
+//		Dialog.Text = "(A judge announces your execution) : " + GetMyFullName(PChar) ;	// GR: GetMyFullName includes your rank if you have one.  Also, move the text to "blaze_dialog.h" in case it needs to be translated.
+//		Link.l1 = DLG_TEXT[270] + GetMyFullName(PChar) ;
+		Dialog.Text = DLG_TEXT[308] + GetMySimpleName(PChar) + ".";
+		Link.l1 = DLG_TEXT[270] + GetMySimpleName(PChar) + ".";
 		Link.l1.go = "fort_speech2";
 	break;
 
@@ -1104,9 +1106,16 @@ void ProcessDialogEvent()
 	break;
 
 	case "Isla_muerta_alone":
-        Dialog.Text = DLG_TEXT[306];
-        Link.l1= DLG_TEXT[307];
-        Link.l1.go = "exit";
-    break;
+		Dialog.Text = DLG_TEXT[306];
+		Link.l1= DLG_TEXT[307];
+		Link.l1.go = "exit";
+	break;
+
+//Ship stolen at Tortuga
+	case "ship_stolen_tortuga":
+		dialog.text = DLG_TEXT[309];
+		link.l1 = DLG_TEXT[310];
+		link.l1.go = "exit";
+	break;
 	}
 }

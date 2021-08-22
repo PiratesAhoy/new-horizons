@@ -25,6 +25,8 @@ void QuestComplete(string sQuestName)
 	int pg;
 	int mb;
 
+	int cog;
+
 	switch(sQuestName)
 	{
 
@@ -68,8 +70,32 @@ void QuestComplete(string sQuestName)
 			PlaySound("OBJECTS\VOICES\DEAD\male\dead7.wav");
 		break;
 
+		case "Pchar_aah":
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead6.wav");
+		break;
+
+		case "pchar_puh":
+			PlaySound("VOICE\ENGLISH\blaze_puh.wav");
+		break;
+
 		case "Pchar_very_nice":
 			PlaySound("VOICE\ENGLISH\blaze_very_nice.wav");
+		break;
+
+		case "Pchar_lets_go":
+			PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
+		break;
+
+		case "Pchar_laugh":
+			PlaySound("PEOPLE\laugh1.wav");
+		break;
+
+		case "pchar_grr":
+			PlaySound("OBJECTS\DUEL\man_attack5.wav");
+		break;
+
+		case "pchar_psst":
+			PlaySound("VOICE\ENGLISH\defoe_psst.wav");
 		break;
 
 		case "Pchar_sittype":
@@ -132,6 +158,16 @@ void QuestComplete(string sQuestName)
 
 		case "recoil_sound":
 			PlaySound("PEOPLE\recoil.wav");	
+		break;
+	
+		case "quest_item":
+			PlaySound("INTERFACE\important_item.wav");	
+			Logit(TranslateString("","An item has been removed from your inventory"));
+		break;
+
+		case "bomb_lit":
+			PlaySound("OBJECTS\SHIPCHARGE\bomb_lit.wav");
+			CreateParticleSystem("fort_fire" , 27.7, 0.5, 1.1, 0.0, 0.0, 0.0, sti(20) );
 		break;
 
 		case "temp_ammo_check_equip_button":
@@ -495,12 +531,6 @@ void QuestComplete(string sQuestName)
 			pchar.quest.mutiny_deck.win_condition.l1 = "location";
 			pchar.quest.mutiny_deck.win_condition.l1.location = "mutiny_deck";
 			pchar.quest.mutiny_deck.win_condition = "mutiny_deck";
-
-		/*
-			Pchar.quest.mutiny_deck.win_condition.l1 = "ExitFromLocation";
-			Pchar.quest.mutiny_deck.win_condition.l1.location = "mutiny_cabin";
-			Pchar.quest.mutiny_deck.win_condition = "mutiny_deck";
-		*/
 		break;
 	//----------------------------------------------------------------------------------------------------------------
 		case "mutiny_deck":
@@ -9420,6 +9450,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "shop_walkers1":
+			RemoveCharacterEquip(characterFromID("wr_fsh"), GUN_ITEM_TYPE);
+			TakeItemFromCharacter(characterFromID("wr_fsh"), "pistol1");
+			RemoveCharacterEquip(characterFromID("wr_fsh"), BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(characterFromID("wr_fsh"), "blade4");
+
+			GiveItem2Character(CharacterFromID("wr_fsh"), "bladearmchair");
+			EquipCharacterbyItem(characterFromID("wr_fsh"), "bladearmchair");
+			
 			PlaySound("INTERFACE\Closet_open.wav");
 			LAi_SetStayType(CharacterFromID("wr_fsh"));
 			ChangeCharacterAddressGroup(CharacterFromID("wr_fsh"), "wr_shop", "reload", "reload2");
@@ -9472,6 +9510,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "shop_walkers3":
+			RemoveCharacterEquip(characterFromID("wr_cor3"), GUN_ITEM_TYPE);
+			TakeItemFromCharacter(characterFromID("wr_cor3"), "pistol1");
+			RemoveCharacterEquip(characterFromID("wr_cor3"), BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(characterFromID("wr_cor3"), "blade4");
+
+			GiveItem2Character(CharacterFromID("wr_cor3"), "bladeX4");
+			EquipCharacterbyItem(characterFromID("wr_cor3"), "bladeX4");
+			GiveItem2Character(CharacterFromID("wr_cor3"), "pistol_armchair");
+			EquipCharacterbyItem(characterFromID("wr_cor3"), "pistol_armchair");
+
 			PlaySound("INTERFACE\Closet_open.wav");
 			LAi_SetStayType(CharacterFromID("wr_cor3"));
 			ChangeCharacterAddressGroup(CharacterFromID("wr_cor3"), "wr_shop", "reload", "reload2");
@@ -26237,6 +26285,26 @@ void QuestComplete(string sQuestName)
 
 		case "wr_farm_loadingimage_back":
 			LAi_SetFightMode(pchar, false);
+//postman start
+			if(!CheckAttribute(Pchar,"postman") || Pchar.postman != "arrived")
+			{
+				if(CheckCharacterItem(Pchar,"bladebottle_CT1_nitr") && CheckCharacterItem(Pchar,"bladebottle_CV1_sc"))
+				{
+					Pchar.postman = "arrived";					
+
+					LAi_QuestDelay("postman1", 1.0);
+				}
+			}
+//sloop start
+			if(!CheckAttribute(Pchar,"sloop") || Pchar.sloop != "arrived")
+			{
+				if(CheckCharacterItem(Pchar,"bladebottle_BS2_LH"))
+				{
+					Pchar.sloop = "arrived";					
+
+					LAi_QuestDelay("sloop1", 1.0);
+				}
+			}
 
 			if(CheckCharacterItem(Pchar,"bladebottle_CB2"))
 			{
@@ -26336,6 +26404,7 @@ void QuestComplete(string sQuestName)
 
 			if(locations[FindLocation("wr_farm_alchemy")].models.always.l16 == "bottle_AU2")
 			{
+				Pchar.Q2_mix = "15";
 				LAi_SetStayType(Pchar);
 				PauseAllSounds();//stops music
 				locations[FindLocation("wr_farm_alchemy")].type = "silent_residence";
@@ -26347,25 +26416,603 @@ void QuestComplete(string sQuestName)
 
 				LAi_QuestDelay("pchar_oh", 2.0);
 				LAi_QuestDelay("pchar_oh", 2.0);
-				LAi_QuestDelay("fanfare", 4.0);
+				LAi_QuestDelay("pchar_playertype", 4.0);
+				Logit(LanguageConvertString(tmpLangFileID,"I think that's the right mixture."));
 			}
+		break;		
+//postman--------------------------------------------------------------------------------------------------------
+		case "postman1":
+			PlaySound("AMBIENT\SEASHORE\fanfare2.wav");
+			ChangeCharacterAddressGroup(characterFromID("postman"), "wr_port", "goto", "goto13");
+		
+			LAi_QuestDelay("postman2", 3.0);
+			LAi_QuestDelay("postman5", 10.0);
+
+			pchar.quest.postman3.win_condition.l1 = "location";
+			pchar.quest.postman3.win_condition.l1.location = "wr_farm_kitchen";
+			pchar.quest.postman3.win_condition = "postman3";
+		break;
+
+		case "postman2":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "cavalry";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "postman3":
+			PlaySound("AMBIENT\SEASHORE\fanfare2.wav");
+
+			LAi_QuestDelay("postman4", 3.0);
+
+			pchar.quest.postman_dialog.win_condition.l1 = "locator";
+			pchar.quest.postman_dialog.win_condition.l1.location = "wr_port";
+			pchar.quest.postman_dialog.win_condition.l1.locator_group = "goto";
+			pchar.quest.postman_dialog.win_condition.l1.locator = "goto13";
+			pchar.quest.postman_dialog.win_condition = "postman_dialog";
+		break;
+
+		case "postman4":
+			PlaySound("OBJECTS\DUEL\man_attack5.wav");
+		break;
+
+		case "postman5":
+			if(pchar.location == "wr_port" || pchar.location == "wr_farm_kitchen")
+			{
+				//don't play it here
+			}
+			else 
+			{
+				PlaySound("AMBIENT\SEASHORE\fanfare2.wav");
+
+				LAi_QuestDelay("postman6", 3.0);
+			}
+		break;
+
+		case "postman6":
+			PlaySound("VOICE\ENGLISH\Dut_m_a_017.wav");
+		break;
+
+		case "postman_dialog":
+			LAi_SetActorType(characterFromID("postman"));
+			LAi_ActorDialog(characterFromID("postman"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("postman"));
+			characters[GetCharacterIndex("postman")].dialog.CurrentNode = "package";
+		break;
+
+		case "postman_done":
+			LAi_SetStayType(pchar);
+			PlaySound("VOICE\ENGLISH\Dupin_good_day.wav");
+			LAi_SetActorType(characterFromID("postman"));
+			LAi_ActorRunToLocator(CharacterFromID("postman"), "goto", "goto16", "", 7.0);
+
+			LAi_QuestDelay("postman_done1", 4.0);
+		break;
+
+		case "postman_done1":
+			PlaySound("AMBIENT\SEASHORE\fanfare2.wav");
+			PlaySound("AMBIENT\SEASHORE\fanfare2.wav");
+
+			LAi_QuestDelay("pchar_ooh", 3.0);
+			LAi_QuestDelay("postman_done2", 3.0);
+		break;
+
+		case "postman_done2":
+			ChangeCharacterAddressGroup(characterFromID("postman"), "none", "", "");
+			LAi_SetPlayerType(pchar);
+		break;
+//postman--------------------------------------------------------------------------------------------------------
+//sloop----------------------------------------------------------------------------------------------------------
+		case "sloop1":
+			Locations[FindLocation("Tutorial_Deck")].WeaponsLocker.items.blade10 = 1;
+			Locations[FindLocation("Tutorial_Deck")].WeaponsLocker.items.Pistol6 = 1;
+
+			Locations[FindLocation("Tutorial_Deck")].box1.items.shirt_shoes = 1;
+			Locations[FindLocation("Tutorial_Deck")].box1.items.spyglass3 = 1;
+			Locations[FindLocation("Tutorial_Deck")].box1.items.compass2 = 1;
+			Locations[FindLocation("Tutorial_Deck")].box1.items.map = 1;
+			Locations[FindLocation("Tutorial_Deck")].box1.items.medical2 = 1;
+			Locations[FindLocation("Tutorial_Deck")].box1.items.potionrum = 2;
+		//	Locations[FindLocation("Tutorial_Deck")].box1.money = 3000;	//was 1500
+
+			Locations[FindLocation("Tutorial_Deck")].box2.items.ammopouch = 1;
+			Locations[FindLocation("Tutorial_Deck")].box2.items.powderflask = 1;
+			Locations[FindLocation("Tutorial_Deck")].box2.items.gunpowder = 12;
+			Locations[FindLocation("Tutorial_Deck")].box2.items.pistolbullets = 12;
+
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire_01.wav");
+			Island_SetReloadEnableLocal("Redmond", "reload_1", true);	//to wr_port
+			Locations[FindLocation("wr_port")].models.always.locators = "QCport_l_JRHsea";
+			SetCharacterShipLocation(Pchar, "wr_port");
+
+			LAi_QuestDelay("pchar_huh", 3.0);
+			LAi_QuestDelay("sloop_new_shot", 20.0);
+
+			ChangeCharacterAddressGroup(characterFromID("Claire Voyant"), "wr_port", "goto", "claire");	
+			ChangeCharacterAddressGroup(characterFromID("Defoe"), "wr_port", "goto", "defoe");
+			LAi_SetStayType(characterFromID("Claire Voyant"));
+			LAi_SetStayType(characterFromID("Defoe"));
+	
+			pchar.quest.sloop2.win_condition.l1 = "locator";
+			pchar.quest.sloop2.win_condition.l1.location = "wr_port";
+			pchar.quest.sloop2.win_condition.l1.locator_group = "goto";
+			pchar.quest.sloop2.win_condition.l1.locator = "sloop";
+			pchar.quest.sloop2.win_condition = "sloop2";
+		break;
+
+		case "sloop_new_shot":
+			if(pchar.location != "wr_port")
+			{
+				PlaySound("OBJECTS\SHIPCHARGE\cannon_fire_01.wav");
+
+				LAi_QuestDelay("sloop_new_comment", 3.0);
+			}
+		break;
+
+		case "sloop_new_comment":
+			if(pchar.location != "wr_port") LAi_QuestDelay("pchar_lets_go", 0.01);
+		break;
+
+		case "sloop2":
+			if(CheckAttribute(Pchar,"book72_caesarL") && Pchar.book72_caesarL == "read")
+			{
+			    if(CheckAttribute(Pchar,"book72_edenL") && Pchar.book72_edenL == "read")
+			    {
+				if(CheckAttribute(Pchar,"book72_handsL") && Pchar.book72_handsL == "read")
+				{
+				    if(CheckAttribute(Pchar,"book72_richardsL") && Pchar.book72_richardsL == "read")
+				    {
+					locations[FindLocation("wr_farm_bedroom")].box5.items.book72_closed = 1;
+				    }
+				}
+			    }
+			}
+
+			locations[FindLocation("wr_farm_alchemy2")].box3.items.pistolfunnel = 1;
+			locations[FindLocation("wr_farm_alchemy2")].box19.items.book70 = 1;
+			if(Pchar.model == "Howard_Pyle_1") Pchar.bandages_trousersQ = "keep";
+
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			LAi_ActorDialog(characterFromID("Claire Voyant"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Claire Voyant"));
+			Characters[GetCharacterIndex("Claire Voyant")].dialog.CurrentNode  = "sloop2";
+		break;
+		
+		case "sloop3":
+			LAi_SetActorType(CharacterFromID("Defoe"));
+			LAi_ActorDialog(characterFromID("Defoe"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Defoe"));
+			Characters[GetCharacterIndex("Defoe")].dialog.CurrentNode  = "sloop3";
+		break;
+
+		case "sloop4":
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			LAi_ActorDialog(characterFromID("Claire Voyant"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Claire Voyant"));
+			Characters[GetCharacterIndex("Claire Voyant")].dialog.CurrentNode  = "sloop4";
+		break;
+
+		case "sloop5":
+			LAi_SetActorType(CharacterFromID("Defoe"));
+			LAi_ActorDialog(characterFromID("Defoe"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Defoe"));
+			Characters[GetCharacterIndex("Defoe")].dialog.CurrentNode  = "sloop5";
+		break;
+
+
+		case "sloop6":
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			LAi_ActorDialog(characterFromID("Claire Voyant"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Claire Voyant"));
+			Characters[GetCharacterIndex("Claire Voyant")].dialog.CurrentNode  = "sloop6";
+		break;
+	
+		case "sloop7":
+			LAi_SetActorType(CharacterFromID("Defoe"));
+			LAi_ActorDialog(characterFromID("Defoe"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Defoe"));
+			Characters[GetCharacterIndex("Defoe")].dialog.CurrentNode  = "sloop7";
+		break;
+
+		case "sloop8":
+			weaponID7 = GetCharacterEquipByGroup(Pchar,BLADE_ITEM_TYPE);
+			weaponID8 = GetCharacterEquipByGroup(Pchar,GUN_ITEM_TYPE);
+		
+			if(!CheckCharacterItem(CharacterFromID("Claire Voyant"),"bladeX4")) 
+			{ GiveItem2Character(CharacterFromID("Claire Voyant"), "bladeX4"); }
+			EquipCharacterByItem(CharacterFromID("Claire Voyant"), "bladeX4");
+			GiveItem2Character(CharacterFromID("Claire Voyant"), weaponID8);
+			EquipCharacterByItem(CharacterFromID("Claire Voyant"), weaponID8);
+
+			GiveItem2Character(CharacterFromID("Defoe"), weaponID7);
+			EquipCharacterByItem(CharacterFromID("Defoe"), weaponID7);
+			PlaySound("INTERFACE\button2.wav");
+			PlaySound("PEOPLE\clothes1.wav");
+
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			DeleteAttribute(Pchar, "items");
+
+			//give back some items to pchar
+			GiveItem2Character(Pchar, "bladeX4");
+			GiveItem2Character(Pchar, "mapBB1");
+
+		 	if(CheckAttribute(locations[FindLocation("wr_farm_bedroom")].box5.items,"book72_richardsL") 
+			&& locations[FindLocation("wr_farm_bedroom")].box5.items.book72_closed == 0)
+			{
+				//it has not been returned, so you'll still need it
+				GiveItem2Character(Pchar, "book72_closed");
+			}
+
+			if(Pchar.model == "Howard_Pyle_1") GiveItem2Character(Pchar, "bandages_trousersQ");
+	
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			LAi_ActorDialog(characterFromID("Claire Voyant"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Claire Voyant"));
+			Characters[GetCharacterIndex("Claire Voyant")].dialog.CurrentNode  = "sloop8";
+		break;
+
+		case "sloop9":
+			LAi_SetActorType(CharacterFromID("Defoe"));
+			LAi_ActorDialog(characterFromID("Defoe"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Defoe"));
+			Characters[GetCharacterIndex("Defoe")].dialog.CurrentNode  = "sloop9";
+		break;
+
+		case "sloop10":
+			LAi_SetStayType(pchar);
+			LAi_SetActorType(CharacterFromID("Defoe"));
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			LAi_ActorGoToLocator(CharacterFromID("Claire Voyant"), "reload", "reload2", "lock_farm", 5.0);
+			LAi_ActorGoToLocator(CharacterFromID("Defoe"), "reload", "reload2", "_", 5.0);
+
+			LAi_QuestDelay("sloop11", 2.0);
+		break;
+
+		case "sloop11":
+			LAi_SetActorType(pchar);
+			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
+		break;
+
+		case "lock_farm":
+			PlaySound("INTERFACE\closed_locked_door.wav");
+			Locations[FindLocation("wr_port")].reload.l2.disable = 1;	
+			ChangeCharacterAddressGroup(characterFromID("Claire Voyant"), "none", "", "");	
+			ChangeCharacterAddressGroup(characterFromID("Defoe"), "none", "", "");
+			LAi_SetPlayerType(pchar);
+		break;
+
+	//ALL READY HERE FOR ALCHEMY PART 2
+		case "return_farm_items":
+			Locations[FindLocation("wr_port")].reload.l2.disable = 0;
+			Locations[FindLocation("wr_farm_alchemy2")].reload.l1.disable = 0;	//to sklad2
+			locations[FindLocation("wr_farm_booty2")].id.label = "Rogers' secret storeroom";
+			ChangeCharacterAddressGroup(characterFromID("Minerva"), "wr_farm_kitchen", "goto", "goto1");
+			LAi_SetStayType(CharacterFromID("Minerva"));
+
+		locations[FindLocation("wr_farm_kitchen")].box1.items.pistolretort3 = 0;
+			locations[FindLocation("wr_farm_kitchen")].box1.items.pistolretort3 = 4;
+
+		locations[FindLocation("wr_farm_booty")].box4.items.pistolretort = 0;
+		locations[FindLocation("wr_farm_booty")].box3.items.bladetop = 0;
+		locations[FindLocation("wr_farm_booty")].box2.items.pistolglass_tube = 0;
+		locations[FindLocation("wr_farm_booty")].box6.items.bladebottle_CE0 = 0;
+		locations[FindLocation("wr_farm_booty")].box5.items.bladebottle_BE0 = 0;
+			locations[FindLocation("wr_farm_booty")].box4.items.pistolretort = 15;
+			locations[FindLocation("wr_farm_booty")].box3.items.bladetop = 13;
+			locations[FindLocation("wr_farm_booty")].box2.items.pistolglass_tube = 12;
+			locations[FindLocation("wr_farm_booty")].box6.items.bladebottle_CE0 = 11;
+			locations[FindLocation("wr_farm_booty")].box5.items.bladebottle_BE0 = 8;
+
+		locations[FindLocation("wr_farm_booty")].box7.items.pistolbucket_dung = 0;
+		locations[FindLocation("wr_farm_booty")].box7.items.pistolstonebasket_G = 0;
+		locations[FindLocation("wr_farm_booty")].box7.items.pistolsulphur_WR = 0;
+			locations[FindLocation("wr_farm_booty")].box7.items.pistolbucket_dung = 3;
+			locations[FindLocation("wr_farm_booty")].box7.items.pistolstonebasket_G = 5;
+			locations[FindLocation("wr_farm_booty")].box7.items.pistolsulphur_WR = 4;
+
+		locations[FindLocation("wr_farm_alchemy")].box1.items.pistolcalciumsack = 0;
+		locations[FindLocation("wr_farm_alchemy")].box1.items.pistolcharcoal_WR = 0;
+			locations[FindLocation("wr_farm_alchemy")].box1.items.pistolcalciumsack = 4;
+			locations[FindLocation("wr_farm_alchemy")].box1.items.pistolcharcoal_WR = 6;
+
+		locations[FindLocation("wr_farm_alchemy2")].box1.items.pistolsalt = 0;
+		locations[FindLocation("wr_farm_alchemy2")].box2.items.pistolcloth = 0;
+		locations[FindLocation("wr_farm_alchemy2")].box3.items.pistolfunnel = 0;
+		locations[FindLocation("wr_farm_alchemy2")].box3.items.bladebottle_CE0 = 0;
+			locations[FindLocation("wr_farm_alchemy2")].box1.items.pistolsalt = 4;
+			locations[FindLocation("wr_farm_alchemy2")].box2.items.pistolcloth = 6;
+			locations[FindLocation("wr_farm_alchemy2")].box3.items.pistolfunnel = 1;
+			locations[FindLocation("wr_farm_alchemy2")].box3.items.bladebottle_CE0 = 9;
+
+		locations[FindLocation("wr_farm_servant")].box1.items.pistolnitre = 0;
+			locations[FindLocation("wr_farm_servant")].box1.items.pistolnitre = 3;
+
+			pchar.quest.Minerva_alchemy2.win_condition.l1 = "locator";
+			pchar.quest.Minerva_alchemy2.win_condition.l1.location = "wr_farm_kitchen";
+			pchar.quest.Minerva_alchemy2.win_condition.l1.locator_group = "goto";
+			pchar.quest.Minerva_alchemy2.win_condition.l1.locator = "goto1";
+			pchar.quest.Minerva_alchemy2.win_condition = "Minerva_alchemy2";
+		break;
+
+		case "Minerva_alchemy2":
+			LAi_SetActorType(CharacterFromID("Minerva"));
+			LAi_ActorDialog(characterFromID("Minerva"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Minerva"));
+			Characters[GetCharacterIndex("Minerva")].dialog.CurrentNode  = "alchemy_part2";
+		break;
+
+		case "Minerva_alchemy2_done":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_009.wav");
+			LAi_SetWaitressType(characterFromID("Minerva"));
+		break;
+
+//sloop----------------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------------------------
+//gold, single bar
+		case "making_gold":
+			Locations[FindLocation(Pchar.location)].models.always.l16 = "goldbar";
+			Locations[FindLocation("wr_farm_alchemy2")].locators_radius.box.box6 = 0.0001;
+			Locations[FindLocation("wr_farm_alchemy2")].image = "";
+			DoQuestReloadToLocation("wr_farm_alchemy2", "goto", "gold", "making_gold1");
+		break;
+
+		case "making_gold1":
+			LAi_SetFightMode(pchar, false);
+			LAi_SetStayType(Pchar);
+				
+			PlaySound("OBJECTS\duel\rocket.wav");
+			CreateParticleSystem("rocket_fire" , -7.3, 3.8, 7.3, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , -7.3, 3.8, 7.3, 5.1, 4.0, 0.0, sti(20) );	//3
+
+			Locations[FindLocation("wr_farm_alchemy2")].image = "wr_booty.tga";
+			LAi_LocationFightDisable(&Locations[FindLocation("wr_farm_alchemy2")], true);
+
+			LAi_QuestDelay("for_longer_rocket_fire", 0.7);
+			LAi_QuestDelay("pchar_oh", 2.0);
+			LAi_QuestDelay("cheer_applause", 3.0);
+		break;
+
+		case "for_longer_rocket_fire":
+			CreateParticleSystem("rocket_fire" , -7.3, 3.8, 7.3, 5.1, 4.0, 0.0, sti(20) );
+		break;
+
+		case "cheer_applause":
+			PlaySound("AMBIENT\cheer2.wav");
+
+			LAi_QuestDelay("after_single_goldbar", 4.0);
+		break;
+
+		case "after_single_goldbar":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "after_single_goldbar";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+	
+	//................................................................................................
+//gold, pile of bars
+		case "making_more_gold":
+			Locations[FindLocation(Pchar.location)].models.always.l2 = "goldbars";
+			Locations[FindLocation(Pchar.location)].models.always.l3 = "goldbars_chest";
+			Locations[FindLocation("wr_farm_booty2")].locators_radius.box.box5 = 0.0001;
+			Locations[FindLocation("wr_farm_booty2")].image = "";
+			DoQuestReloadToLocation("wr_farm_booty2", "goto", "goto1", "making_more_gold1");
+		break;
+
+		case "making_more_gold1":
+			LAi_SetFightMode(pchar, false);
+			LAi_SetStayType(Pchar);
+				
+			PlaySound("OBJECTS\duel\rocket.wav");
+			CreateParticleSystem("rocket_fire" , 0.7, 1.0, 2.3, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("rocket_fire" , 1.0, 1.1, 2.1, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("rocket_fire" , 1.2, 1.2, 1.9, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("rocket_fire" , 1.4, 1.0, 1.6, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("rocket_fire" , 1.7, 1.0, 1.4, 5.1, 4.0, 0.0, sti(20) );
+
+			CreateParticleSystem("smoke_short" , 0.7, 1.0, 2.3, 5.1, 4.0, 0.0, sti(20) );	//3
+			CreateParticleSystem("smoke_short" , 1.0, 1.1, 2.1, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 1.2, 1.2, 1.9, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 1.4, 1.0, 1.6, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 1.7, 1.0, 1.4, 5.1, 4.0, 0.0, sti(20) );
+
+			Locations[FindLocation("wr_farm_booty2")].image = "wr_booty.tga";
+			LAi_LocationFightDisable(&Locations[FindLocation("wr_farm_booty2")], true);
+
+			LAi_QuestDelay("for_more_longer_rocket_fire", 0.7);
+			LAi_QuestDelay("for_more_longer_smoke_short", 4.0);
+			LAi_QuestDelay("pchar_yah", 3.0);
+			LAi_QuestDelay("fanfare", 4.0);
+		break;
+
+		case "for_more_longer_rocket_fire":
+			CreateParticleSystem("rocket_fire" , 0.7, 1.0, 2.3, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("rocket_fire" , 1.0, 1.1, 2.1, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("rocket_fire" , 1.2, 1.2, 1.9, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("rocket_fire" , 1.4, 1.0, 1.6, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("rocket_fire" , 1.7, 1.0, 1.4, 5.1, 4.0, 0.0, sti(20) );
+		break;
+
+		case "for_more_longer_smoke_short":
+			CreateParticleSystem("smoke_short" , 0.7, 1.0, 2.3, 5.1, 4.0, 0.0, sti(20) );	//3
+			CreateParticleSystem("smoke_short" , 1.0, 1.1, 2.1, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 1.2, 1.2, 1.9, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 1.4, 1.0, 1.6, 5.1, 4.0, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 1.7, 1.0, 1.4, 5.1, 4.0, 0.0, sti(20) );
 		break;
 
 		case "fanfare":
 			PlaySound("AMBIENT\SEASHORE\fanfare.wav");
 
-			LAi_QuestDelay("fanfare_end", 13.0);
+			LAi_QuestDelay("after_many_goldbars", 12.0);
 		break;
 
-		case "fanfare_end":
-			Pchar.Q2_mix = "15";
+		case "after_many_goldbars":
+			locations[FindLocation("wr_farm_alchemy2")].type = "Blackbeard_house";
+			locations[FindLocation("wr_farm_booty2")].type = "Blackbeard_house";
+			PostEvent("LoadSceneSound", 0.1);
+
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "after_many_goldbars";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "captain_around":
+			PlaySound("VOICE\ENGLISH\grandma_2.wav");
+
+			LAi_QuestDelay("knock_on_door", 2.5);
+		break;
+
+		case "knock_on_door":
+			PlaySound("INTERFACE\knock.wav");
 			LAi_SetPlayerType(Pchar);
+			Locations[FindLocation("wr_farm_booty2")].reload.l1.emerge = "pchar";
+			Locations[FindLocation("wr_farm_alchemy2")].models.always.locators = "TwoFloorHouse_locators_JRH0";//just to be sure
+
+			ChangeCharacterAddressGroup(CharacterFromID("friday"), "wr_farm_alchemy2", "quest", "door1");
+			ChangeCharacterAddressGroup(CharacterFromID("Dave Edna"), "wr_farm_alchemy2", "quest", "door2");
+			ChangeCharacterAddressGroup(CharacterFromID("wench3"), "wr_farm_alchemy2", "quest", "stair1");
+			ChangeCharacterAddressGroup(CharacterFromID("Minerva"), "wr_farm_alchemy2", "quest", "stair2");
+			ChangeCharacterAddressGroup(CharacterFromID("powdermonkey"), "wr_farm_alchemy2", "quest", "monkey");
+			ChangeCharacterAddressGroup(CharacterFromID("Selkirk"), "wr_farm_alchemy2", "quest", "floor3");
+			ChangeCharacterAddressGroup(CharacterFromID("grandma"), "wr_farm_alchemy2", "quest", "floor1");
+			ChangeCharacterAddressGroup(CharacterFromID("Defoe"), "wr_farm_alchemy2", "quest", "floor2");
+			ChangeCharacterAddressGroup(CharacterFromID("Claire Voyant"), "wr_farm_alchemy2", "quest", "floor4");
+		
+			ChangeCharacterAddressGroup(CharacterFromID("caesar"), "wr_farm_alchemy2", "quest", "officer1");
+			ChangeCharacterAddressGroup(CharacterFromID("hands"), "wr_farm_alchemy2", "quest", "officer3");
+			ChangeCharacterAddressGroup(CharacterFromID("pell"), "wr_farm_alchemy2", "quest", "officer2");
+
+			SetModel(characterFromID("grandma"), "Grandma_boss", "man", "man", 1.8, true);
+			SetModel(characterFromID("Dave Edna"), "Dave_officer", "man", "man", 1.8, true);
+			SetModel(characterFromID("wench3"), "Caroline_officer", "man", "man", 1.8, true);
+			SetModel(characterFromID("Selkirk"), "Selkirk_officer", "man", "man", 1.8, true);
+			SetModel(characterFromID("Friday"), "Friday_officer", "man", "man", 1.8, true);
+			SetModel(characterFromID("hands"), "bb_hands2", "man", "man", 1.8, true);
+			
+			LAi_SetActorType(CharacterFromID("grandma"));
+			LAi_SetActorType(CharacterFromID("Dave Edna"));
+			LAi_SetActorType(CharacterFromID("wench3"));
+			LAi_SetActorType(CharacterFromID("Minerva"));
+			LAi_SetActorType(CharacterFromID("Selkirk"));
+			LAi_SetActorType(CharacterFromID("Friday"));
+			LAi_SetActorType(CharacterFromID("Defoe"));
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			LAi_SetActorType(CharacterFromID("caesar"));
+			LAi_SetActorType(CharacterFromID("hands"));
+		//	LAi_SetActorType(CharacterFromID("pell"));
+
+			LAi_QuestDelay("Im_coming", 1.0);
 		break;
 
+		case "Im_coming":
+			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+
+			pchar.quest.quest_end1.win_condition.l1 = "location";
+			pchar.quest.quest_end1.win_condition.l1.location = "wr_farm_alchemy2";
+			pchar.quest.quest_end1.win_condition = "quest_end1";
+		break;
+
+		case "quest_end1":
+			LAi_SetActorType(Pchar);
+			LAi_QuestDelay("pchar_ohoh", 1.0);
+
+			LAi_QuestDelay("grandma_finale", 3.0);
+		break;
+
+		case "grandma_finale":
+			LAi_SetActorType(CharacterFromID("grandma"));
+			LAi_ActorDialog(characterFromID("grandma"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("grandma"));
+			Characters[GetCharacterIndex("grandma")].dialog.CurrentNode  = "finale";
+		break;
+
+		case "Pyle_group":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "officer3");
+
+			LAi_QuestDelay("grandma_finale1_A", 2.0);
+		break;		
+
+		case "grandma_finale1_A":
+			LAi_SetActorType(CharacterFromID("grandma"));
+			LAi_ActorDialog(characterFromID("grandma"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("grandma"));
+			Characters[GetCharacterIndex("grandma")].dialog.CurrentNode  = "finale1_A";
+		break;
+
+		case "monkey_protest":
+			PlaySound("OBJECTS\VOICES\DEAD\monkey\monkey_dead1.wav");
+
+			LAi_QuestDelay("monkey_protest1", 1.0);
+		break;
+
+		case "monkey_protest1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "monkey");
+			LAi_SetActorType(CharacterFromID("grandma"));
+			LAi_ActorTurnToLocator(CharacterFromID("grandma"), "quest", "monkey");
+
+			LAi_QuestDelay("grandma_finale2", 1.0);
+		break;
+
+		case "grandma_finale2":
+			LAi_SetActorType(CharacterFromID("grandma"));
+			LAi_ActorDialog(characterFromID("grandma"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("grandma"));
+			Characters[GetCharacterIndex("grandma")].dialog.CurrentNode  = "finale2";
+		break;
+
+		case "claire_platina":
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			LAi_ActorDialog(characterFromID("Claire Voyant"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Claire Voyant"));
+			Characters[GetCharacterIndex("Claire Voyant")].dialog.CurrentNode  = "platina";
+		break;
+
+		case "wait_grandma_finale5":
+			LAi_QuestDelay("grandma_finale5", 2.0);
+		break;
+
+		case "grandma_finale5":
+			LAi_SetActorType(CharacterFromID("grandma"));
+			LAi_ActorDialog(characterFromID("grandma"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("grandma"));
+			Characters[GetCharacterIndex("grandma")].dialog.CurrentNode  = "finale5";
+		break;
+
+		case "the_very_end":
+			locx = stf(loadedLocation.locators.quest.turn_around.x);
+       			locy = stf(loadedLocation.locators.quest.turn_around.y);
+       			locz = stf(loadedLocation.locators.quest.turn_around.z);
+       			locCameraToPos(locx, locy, locz, false);
+
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "turn_around");
+			PlaySound("INTERFACE\blues_end.wav");
+
+			LAi_QuestDelay("the_very_end1", 6.0);
+			LAi_QuestDelay("the_very_end2", 10.0);
+		break;
+
+		case "the_very_end1":
+			LAi_ActorAnimation(Pchar, "hands up", "_", 11.0);
+
+			LAi_QuestDelay("pchar_sigh", 0.01);
+			LAi_QuestDelay("pchar_sigh", 0.01);
+		break;
+
+		case "the_very_end2":
+			Event("DoInfoShower","sl","game prepare",true);
+			SetEventHandler("frame","Main_Start",1);
+			InterfaceStates.Buttons.Resume.enable = false;
+		break;
+	
+	//................................................................................................
 		case "glass_on_stool_sound":
 			PlaySound("PEOPLE\step_stairway2.wav");
 		break;
-	//................................................................................................
+	
 		case "retort_check":
 			//from itemlogic box
 			if(CheckCharacterItem(Pchar,"pistolretort"))
@@ -27000,9 +27647,18 @@ void QuestComplete(string sQuestName)
 				Pchar.quest.apparatus_cooling = "2";
 			}
 			else Pchar.quest.apparatus_cooling = "1";
-			LAi_SetStayType(Pchar);
+//no Minerva Q2
+			if(CheckAttribute(Pchar,"quest.distillery_items_Q2") && Pchar.quest.distillery_items_Q2 == "open")
+			{
+				//it's quest 2
+				LAi_SetPlayerType(Pchar);
+			}
+			else
+			{
+				LAi_SetStayType(Pchar);
 
-			LAi_QuestDelay("alchemy_glass_explosion4", 1.0);
+				LAi_QuestDelay("alchemy_glass_explosion4", 1.0);
+			}
 		break;
 
 		case "alchemy_glass_explosion4":
@@ -39468,8 +40124,8 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("wr_sol6f77"), "none", "", "");
 
 			Locations[FindLocation("wr_port")].models.always.locators = "QCport_l_JRH1";
-
-			Locations[FindLocation("wr_port")].reload.l2.disable = 1;			//to farm
+//don't lock to farm
+		//	Locations[FindLocation("wr_port")].reload.l2.disable = 1;			//to farm
 			ChangeCharacterAddressGroup(CharacterFromID("wr_pir5"), "none", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("wr_hubport"), "none", "", "");
 			SetCharacterShipLocation(characterFromID("Coastbrother27"), "none");		//boat2 at wr_port
@@ -44583,7 +45239,7 @@ void QuestComplete(string sQuestName)
 			}
 			else LAi_QuestDelay("find_key17", 0.5);
 		break;
-
+//package A
 		case "find_lever":
 			if(CheckCharacterItem(Pchar,"bladelever"))
 			{
@@ -44591,12 +45247,12 @@ void QuestComplete(string sQuestName)
 				EquipCharacterByItem(Pchar, "bladelever");
 				AddQuestRecord("Secrets", "3");
 
-				LAi_QuestDelay("package1", 0.1);
-				LAi_QuestDelay("find_package", 0.1);
+	//			LAi_QuestDelay("package1", 0.1);
+	//			LAi_QuestDelay("find_package", 0.1);
 			}
 			else LAi_QuestDelay("find_lever", 0.5);
 		break;
-
+	/*
 		case "find_package":
 			if(CheckCharacterItem(Pchar,"package"))
 			{
@@ -44604,7 +45260,7 @@ void QuestComplete(string sQuestName)
 			}
 			else LAi_QuestDelay("find_package", 0.5);
 		break;
-
+	*/
 		case "study_puzzle7":
 			PlaySound("INTERFACE\closed_door.wav");
 			LAi_SetStayType(CharacterFromID("Wench3"));
@@ -45090,13 +45746,38 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation(Pchar.location)].box1.items.package = 1;		//gammal sjömanskappa, med oljedukspaket (karta + anteckningsbok)
 			locations[FindLocation(Pchar.location)].box1.items.temp_purse = 2660;	//påse med pengar
 
-			LAi_QuestDelay("red_uniform", 0.1);
+	//		LAi_QuestDelay("red_uniform", 0.1);
 
 			pchar.quest.drawing_room.win_condition.l1 = "location";
 			pchar.quest.drawing_room.win_condition.l1.location = "ck_drawing_room";
 			pchar.quest.drawing_room.win_condition = "drawing_room";
 		break;
+//secret
+		case "secret_room_finished_check":
+			if(CheckAttribute(Pchar,"quest.study_notebook") && Pchar.quest.study_notebook == "yes")
+			{
+				if(CheckAttribute(Pchar,"quest.red_uniform") && Pchar.quest.red_uniform == "yes")
+				{
+					if(CheckCharacterItem(Pchar,"mapBB1"))
+					{
+						Locations[FindLocation("wr_library")].reload.l4.disable = 0;
+						locations[FindLocation("ck_drawing_room")].id.label = "Caroline K's drawing room";
+						AddQuestRecord("Secrets", "8");
+						CloseQuestHeader("Secrets");
 
+						LAi_QuestDelay("secret_room_finished", 0.1);
+					}
+				}
+			}
+		break;
+
+		case "secret_room_finished":
+			PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
+			Logit(LanguageConvertString(tmpLangFileID,"It's time to go downstairs and visit Caroline in her Drawing Room."));
+
+		break;
+
+	/*
 		case "red_uniform":
 			if(IsEquipCharacterByItem(Pchar, "red_uniform"))
 			{
@@ -45141,7 +45822,9 @@ void QuestComplete(string sQuestName)
 				}
 			}
 		break;
-
+	
+//package B
+	
 		case "package1":
 			if(CheckCharacterItem(Pchar,"folding_knife"))
 			{
@@ -45316,6 +45999,8 @@ void QuestComplete(string sQuestName)
 			PlaySound("OBJECTS\DUEL\man_attack6.wav");
 			Logit(LanguageConvertString(tmpLangFileID,"I have opened the sealed paper - let's see what it is!"));
 		break;
+	*/
+
 	//.......................................................................................................
 		case "drawing_room":
 			DeleteQuestHeader("Secrets");
@@ -45895,8 +46580,21 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Minerva")].dialog.CurrentNode  = "thanks_for_the_shop";
 		break;
 
+//--------------------------------------------------------------------------------------------------------------------
+//farm, sloop here? grandma dialog
+
+		case "grandma_farm_sloop":
+			//from Caroline dialog
+			LAi_SetActorType(CharacterFromID("grandma"));
+			LAi_ActorDialog(characterFromID("grandma"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("grandma"));
+			Characters[GetCharacterIndex("grandma")].dialog.CurrentNode  = "farm_sloop";
+		break;
+//--------------------------------------------------------------------------------------------------------------------
+
 		case "grandma_future_plans9":
 			//from Minerva dialog
+			//No, from grandma farm sloop dialog
 			LAi_SetActorType(CharacterFromID("Selkirk"));
 			LAi_ActorDialog(characterFromID("Selkirk"), pchar, "", 0.0, 0.0);
 			LAi_ActorWaitDialog(Pchar, characterFromID("Selkirk"));
@@ -46778,6 +47476,7 @@ void QuestComplete(string sQuestName)
 			Pchar.equip.gun = "pistol3";
 
 			LAi_SetPoorType(Pchar);
+			LAi_SetPoorType(characterFromID("Teach"));
 
 			GiveItem2Character(characterFromID("Teach"), "bladeMap_Hgold");
 			EquipCharacterByItem(CharacterFromID("Teach"), "bladeMap_Hgold");
@@ -47441,9 +48140,10 @@ void QuestComplete(string sQuestName)
 
 			Locations[FindLocation("Redmond_UsurerHouse")].models.always.locators = "SS_l_JRH3";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l1.disable = 0;		//to town
-			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.disable = 0;		//to library
+			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.disable = 1;		//to library
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l4.disable = 1;		//to behind counter
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l6.disable = 1;		//to cellar
+			Locations[FindLocation("Redmond_UsurerHouse")].reload.l7.disable = 1;		//to town behind counter
 			locations[FindLocation("Redmond_UsurerHouse")].type = "house";			//reset
 
 			locations[FindLocation("Loanshark_cellar")].id.label = "Loanshark cellar";
@@ -47456,10 +48156,12 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_Town_01")].reload.l23.disable = 1;		//gate terrace
 			Locations[FindLocation("Redmond_Town_01")].reload.l26.disable = 1;		//tavern storeroom
 			Locations[FindLocation("Redmond_Town_01")].reload.l20.disable = 1;		//LS back door
-			Locations[FindLocation("Redmond_Town_01")].reload.l9.close_for_night = 1;	//shipyard
-			Locations[FindLocation("Redmond_shipyard")].reload.l2.disable = 1;		//shipyard stairs
+		//	Locations[FindLocation("Redmond_Town_01")].reload.l9.close_for_night = 1;	//shipyard
+			Locations[FindLocation("Redmond_shipyard")].reload.l2.disable = 0;		//shipyard stairs
 			locations[FindLocation("shipyard_stairs")].id.label = "Shipyard stairs";
-
+			Locations[FindLocation("Shipyard_shore")].reload.l1.disable = 1;		//to docks
+			Locations[FindLocation("Shipyard_shore")].reload.l2.disable = 1;		//to docks
+		
 			Locations[FindLocation("Redmond_tavern")].models.always.locators = "LT_l_JRH3";
 			Locations[FindLocation("Redmond_tavern")].reload.l3.disable = 1;		//balcony: officer problems
 			Locations[FindLocation("Redmond_tavern")].reload.l4.disable = 1;		//counter: officer problems
@@ -47470,6 +48172,7 @@ void QuestComplete(string sQuestName)
 
 			Locations[FindLocation("Redmond_Town_01")].reload.l13.disable = 0;	//to governor's residence
 			Locations[FindLocation("Redmond_Port")].reload.l6.disable = 0;		//to harbour office
+			Locations[FindLocation("Redmond_Port")].reload.l4.disable = 1;		//to my ship
 
 			locations[FindLocation("Redmond_church")].reload.l1.disable = 0;
 			locations[FindLocation("Redmond_church")].reload.l2.disable = 1;
@@ -47481,9 +48184,17 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Redmond_town_exit_2")].reload.l5.disable = 1;		//to well
 			Locations[FindLocation("Redmond_Town_exit_2")].reload.l1.disable = 0;		//to town
 
+			Locations[FindLocation("Shipyard_shore")].models.always.locators = "FFport02_l_JRH_out";
+			locations[FindLocation("Shipyard_shore")].type = "silent_town";
 			Locations[FindLocation("Redmond_shore_02")].models.always.locators = "shore03_l";
 
+			pchar.quest.Shipyard_shore_ambush.win_condition.l1 = "location";
+			pchar.quest.Shipyard_shore_ambush.win_condition.l1.location = "Shipyard_shore";
+			pchar.quest.Shipyard_shore_ambush.win_condition = "Shipyard_shore_ambush";
+
+		/*
 			//reset sound types
+			//no don't
 			locations[FindLocation("Redmond_Town_01")].type = "town";
 			locations[FindLocation("Redmond_Town_03")].type = "town";
 			locations[FindLocation("Redmond_Town_04")].type = "town";
@@ -47494,20 +48205,130 @@ void QuestComplete(string sQuestName)
 			bDisableFastReload = 0;
 
 			LAi_QuestDelay("goodbye_blues", 1.5);
+		*/
 		break;
-
+	/*
 		case "goodbye_blues":
 			PlaySound("INTERFACE\blues_end.wav");
 			Pchar.quest.WR_part1 = "finished";			//the quest guns can now be lost if reincarnated
 			Pchar.quest.pistolthrow = "know_how";			//just to be sure
 
-/*
 			ref chr = CharacterFromID("Dante Siciliano");
 			DeleteAttribute(chr, "Flags.Pirate");			//reset to no special flag
 			DeleteAttribute(chr, "Flags.Pirate.texture");
-*/
+
+		break;
+	*/
+
+		case "Shipyard_shore_ambush":
+			PlaySound("INTERFACE\key_lock.wav");
+			Locations[FindLocation("Shipyard_shore")].reload.l30.disable = 1;	//back to stairs
+
+			LAi_SetImmortal(pchar, true);
+			LAi_SetActorType(Pchar);
+			LAi_ActorGoToLocator(Pchar, "goto", "target", "Shipyard_shore_ambush1", 1.0);
+
+			LAi_QuestDelay("Shipyard_shore_ambush_officers", 1.0);		//0.01 possible
+		break;
+	
+		case "Shipyard_shore_ambush1":
+			LAi_SetStayType(Pchar);
+			ChangeCharacterAddressGroup(Pchar, "Shipyard_shore", "goto", "target");
+			RemoveCharacterEquip(characterFromID("wr_boc3"), GUN_ITEM_TYPE);
+			TakeItemFromCharacter(characterFromID("wr_boc3"), "pistol2");
+			ChangeCharacterAddressGroup(characterFromID("wr_boc3"), "Shipyard_shore", "reload", "Falaise_de_fleur_location_01_05");
+	
+			LAi_QuestDelay("Shipyard_shore_ambush2", 0.5);
 		break;
 
+		case "Shipyard_shore_ambush2":
+			LAi_SetActorType(characterFromID("wr_boc3"));
+			LAi_ActorAttack(CharacterFromID("wr_boc3"), Pchar, "");
+			
+			LAi_QuestDelay("Shipyard_shore_ambush3", 2.5);		//was 1.5
+			LAi_QuestDelay("Shipyard_shore_ambush5", 3.0);
+		break;
+
+		case "Shipyard_shore_ambush3":
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead6.wav");
+			LAi_SetActorType(Pchar);
+			LAi_ActorAnimation(Pchar, "death_1", "Shipyard_shore_ambush4", 4.0);
+
+			LAi_QuestDelay("Shipyard_shore_ambush3A", 2.0);
+		break;
+
+		case "Shipyard_shore_ambush3A":
+			PlaySound("VOICE\ENGLISH\Spa_m_b_050.wav");
+		break;
+
+		case "Shipyard_shore_ambush4":
+			ChangeCharacterAddressGroup(Pchar, "Shipyard_shore", "goto", "target2");
+			ChangeCharacterAddressGroup(characterFromID("wr_boc3"), "none", "", "");
+			LAi_SetActorType(Pchar);
+			LAi_ActorSetLayMode(Pchar);
+		break;
+
+		case "Shipyard_shore_ambush5":
+			LAi_SetStayType(characterFromID("wr_boc3"));
+
+			LAi_QuestDelay("Shipyard_shore_ambush6", 6.0);
+		break;
+
+		case "Shipyard_shore_ambush_officers":
+			PlaySound("OBJECTS\DUEL\pistol_bbus.wav");
+			CreateParticleSystem("gunfire" , -21.3, 6.1, 48.7, -21.3, 6.1, 48.7, sti(20) );
+			
+			LAi_QuestDelay("Shipyard_shore_ambush_officers1", 0.75);
+		break;
+
+		case "Shipyard_shore_ambush_officers1":
+			PlaySound("OBJECTS\DUEL\pistol_bbus.wav");
+			CreateParticleSystem("gunfire" , -21.4, 6.1, 45.3, -21.4, 6.1, 45.3, sti(20) );
+		
+			for (i = 1; i < 24; i++)
+			{
+				LAi_KillCharacter(characterFromID("gm_crew" + i));
+			}
+		break;
+	
+		case "Shipyard_shore_ambush6":
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			Locations[FindLocation("Shipyard_shore")].image = "";
+			locations[FindLocation("Shipyard_shore")].type = "blues_port";
+
+			DoQuestReloadToLocation("Shipyard_shore", "goto", "target" ,"Shipyard_shore_ambush7");
+		break;
+
+		case "Shipyard_shore_ambush7":
+			SetModel(Pchar, "Howard_Pyle_1", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+			LAi_SetImmortal(pchar, false);
+			Php = LAi_GetCharacterHP(Pchar);
+			int Php95 = Php*0.95;
+			LAi_ApplyCharacterDamage(Pchar, Php95);
+
+			DeleteAttribute(Pchar, "items");
+		TakeItemFromCharacter(Pchar, "chinatiger");	
+			AddMoneyToCharacter(Pchar,-10000);
+			GiveItem2Character(Pchar, "bladeX4");
+			EquipCharacterByItem(Pchar, "bladeX4");
+			GiveItem2Character(Pchar, "key17");
+			GiveItem2Character(Pchar, "mapBB1");
+
+			Locations[FindLocation("Shipyard_shore")].image = "Shipyard_shore.tga";
+			
+			LAi_QuestDelay("Shipyard_shore_ambush8", 3.0);
+		break;
+
+		case "Shipyard_shore_ambush8":
+			LAi_SetPoorType(Pchar);
+			GetCharacterPos(Pchar, &u, &v, &w);
+			CreateParticleSystem("stars_short" , u, v+1, w, 0.0, 0.0, 0.0, sti(20) );
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead7.wav");
+
+			LAi_QuestDelay("pchar_playertype", 4.0);
+			LAi_QuestDelay("start_alchemy2", 0.1);
+		break;
 	//-------------------------------------------------------------------------------------------------------
 		case "delay_no_reinc":
 			GameOverOrg("land");
@@ -47719,6 +48540,16 @@ void QuestComplete(string sQuestName)
 							SetModel(Pchar, "ShkiperM_UH_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
 							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
 						break;
+
+						case "Howard_Pyle":
+							SetModel(Pchar, "Howard_Pyle_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+						break;
+
+						case "Howard_Pyle_hat":
+							SetModel(Pchar, "Howard_Pyle_hat_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+						break;
 					//..........................................................................................................
 						case "Pira4M_HTUS_b":
 							SetModel(Pchar, "Pira4M_HTUS_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
@@ -47742,6 +48573,16 @@ void QuestComplete(string sQuestName)
 
 						case "ShkiperM_UH_b":
 							SetModel(Pchar, "ShkiperM_UH_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							PlaySound("INTERFACE\button1.wav");
+						break;
+
+						case "Howard_Pyle_b":
+							SetModel(Pchar, "Howard_Pyle_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							PlaySound("INTERFACE\button1.wav");
+						break;
+
+						case "Howard_Pyle_hat_b":
+							SetModel(Pchar, "Howard_Pyle_hat_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
 							PlaySound("INTERFACE\button1.wav");
 						break;
 					}
@@ -47781,6 +48622,16 @@ void QuestComplete(string sQuestName)
 								SetModel(Pchar, "ShkiperM_UH_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
 								PlaySound("PEOPLE\clothes1.wav");
 							break;
+
+							case "Howard_Pyle":
+								SetModel(Pchar, "Howard_Pyle_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+								PlaySound("PEOPLE\clothes1.wav");
+							break;
+
+							case "Howard_Pyle_hat":
+								SetModel(Pchar, "Howard_Pyle_hat_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+								PlaySound("PEOPLE\clothes1.wav");
+							break;
 							//..........................................................................................................
 							case "Pira4M_HTUS_a":
 								SetModel(Pchar, "Pira4M_HTUS_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
@@ -47804,6 +48655,16 @@ void QuestComplete(string sQuestName)
 
 							case "ShkiperM_UH_a":
 								SetModel(Pchar, "ShkiperM_UH_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+								PlaySound("INTERFACE\button1.wav");
+							break;
+
+							case "Howard_Pyle_a":
+								SetModel(Pchar, "Howard_Pyle_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+								PlaySound("INTERFACE\button1.wav");
+							break;
+
+							case "Howard_Pyle_hat_a":
+								SetModel(Pchar, "Howard_Pyle_hat_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
 								PlaySound("INTERFACE\button1.wav");
 							break;
 						}
@@ -47840,6 +48701,16 @@ void QuestComplete(string sQuestName)
 							SetModel(Pchar, "ShkiperM_UH", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
 							PlaySound("PEOPLE\clothes1.wav");
 						break;
+
+						case "Howard_Pyle_b":
+							SetModel(Pchar, "Howard_Pyle", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							PlaySound("PEOPLE\clothes1.wav");
+						break;
+
+						case "Howard_Pyle_hat_b":
+							SetModel(Pchar, "Howard_Pyle_hat", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							PlaySound("PEOPLE\clothes1.wav");
+						break;
 					//..........................................................................................................
 						case "Pira4M_HTUS_a":
 							SetModel(Pchar, "Pira4M_HTUS", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
@@ -47863,6 +48734,16 @@ void QuestComplete(string sQuestName)
 
 						case "ShkiperM_UH_a":
 							SetModel(Pchar, "ShkiperM_UH", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+						break;
+
+						case "Howard_Pyle_a":
+							SetModel(Pchar, "Howard_Pyle", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
+						break;
+
+						case "Howard_Pyle_hat_a":
+							SetModel(Pchar, "Howard_Pyle_hat", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
 							PlaySound("PEOPLE\clothes1.wav"); PlaySound("INTERFACE\button1.wav");
 						break;
 					}
@@ -48937,8 +49818,1644 @@ void QuestComplete(string sQuestName)
 
 //_________________________________________________________________________________________________________________
 //Q2 Eden
-//JRH Eden
+//estate start
+		case "governor_info_estate_done":
+			LAi_SetStayType(Pchar);
+			LAi_SetActorType(characterFromID("Edmund Christobel Shaw"));
+			LAi_ActorGoToLocator(characterFromID("Edmund Christobel Shaw"), "goto", "box1", "governor_info_estate_done1", 2.0);
+		break;
+
+		case "governor_info_estate_done1":
+			PlaySound("INTERFACE\key_unlock.wav");
+			Pchar.Cayman_box1 = "unlocked";
+
+			LAi_QuestDelay("governor_info_estate_done2", 2.0);
+		break;
+
+		case "governor_info_estate_done2":
+			LAi_SetStayType(Pchar);
+			LAi_SetActorType(characterFromID("Edmund Christobel Shaw"));
+			LAi_ActorGoToLocator(characterFromID("Edmund Christobel Shaw"), "goto", "goto12", "governor_info_estate_done3", 2.0);
+		break;
+
+		case "governor_info_estate_done3":
+			LAi_SetStayType(characterFromID("Edmund Christobel Shaw"));
+			LAi_SetPlayerType(Pchar);
+			PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
+
+			Pchar.quest.reset_cayman_governor.win_condition.l1 = "ExitFromLocation";
+			Pchar.quest.reset_cayman_governor.win_condition.l1.location = "Grand_Cayman_townhall";
+			Pchar.quest.reset_cayman_governor.win_condition = "reset_cayman_governor";
+		break;
+
+		case "reset_cayman_governor":
+			ChangeCharacterAddressGroup(characterFromID("Edmund Christobel Shaw"), "Grand_Cayman_townhall", "sit", "sit2");
+			LAi_SetHuberType(characterFromID("Edmund Christobel Shaw"));
+			Pchar.servants_info = "0";	//start case
+
+			LAi_QuestDelay("estate_doors_locked", 0.1);
+		break;
+
+		case "estate_doors_locked":
+			pchar.quest.estate_doors_locked2.win_condition.l1 = "locator";
+			pchar.quest.estate_doors_locked2.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.estate_doors_locked2.win_condition.l1.locator_group = "reload";
+			pchar.quest.estate_doors_locked2.win_condition.l1.locator = "reload2";
+			pchar.quest.estate_doors_locked2.win_condition = "estate_doors_locked_A";	
+
+			pchar.quest.estate_doors_locked3.win_condition.l1 = "locator";
+			pchar.quest.estate_doors_locked3.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.estate_doors_locked3.win_condition.l1.locator_group = "reload";
+			pchar.quest.estate_doors_locked3.win_condition.l1.locator = "reload3";
+			pchar.quest.estate_doors_locked3.win_condition = "estate_doors_locked_A";
+
+			pchar.quest.estate_doors_locked4.win_condition.l1 = "locator";
+			pchar.quest.estate_doors_locked4.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.estate_doors_locked4.win_condition.l1.locator_group = "reload";
+			pchar.quest.estate_doors_locked4.win_condition.l1.locator = "reload4";
+			pchar.quest.estate_doors_locked4.win_condition = "estate_doors_locked_A";	
+
+			pchar.quest.estate_doors_locked5.win_condition.l1 = "locator";
+			pchar.quest.estate_doors_locked5.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.estate_doors_locked5.win_condition.l1.locator_group = "reload";
+			pchar.quest.estate_doors_locked5.win_condition.l1.locator = "reload5";
+			pchar.quest.estate_doors_locked5.win_condition = "estate_doors_locked_A";
+
+			pchar.quest.estate_doors_locked6.win_condition.l1 = "locator";
+			pchar.quest.estate_doors_locked6.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.estate_doors_locked6.win_condition.l1.locator_group = "reload";
+			pchar.quest.estate_doors_locked6.win_condition.l1.locator = "reload6";
+			pchar.quest.estate_doors_locked6.win_condition = "estate_doors_locked_A";	
+
+			pchar.quest.estate_doors_locked9.win_condition.l1 = "locator";
+			pchar.quest.estate_doors_locked9.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.estate_doors_locked9.win_condition.l1.locator_group = "reload";
+			pchar.quest.estate_doors_locked9.win_condition.l1.locator = "reload9";
+			pchar.quest.estate_doors_locked9.win_condition = "estate_doors_locked_A";
+		break;
+	
+		case "estate_doors_locked_A":
+			if(!CheckAttribute(Pchar,"estate_doors") || Pchar.estate_doors != "locked")
+			{
+				Pchar.estate_doors = "locked";
+				characters[GetCharacterIndex("black_servant1")].dialog.CurrentNode = "locked_doors";
+				characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "locked_doors";
+				Pchar.servants_info = "2";
+			}
+		break;
+
+		case "enter_estate":
+			PlaySound("PEOPLE\counter_close.wav");
+
+			LAi_QuestDelay("Estate_change_soundtype", 2.0);	
+		break;
+
+		case "Estate_change_soundtype":
+			if(Locations[FindLocation(Pchar.location)].type == "Chinese_garden")
+			{
+				PauseAllSounds();
+				Locations[FindLocation(Pchar.location)].type = "Estate_garden";
+				PostEvent("LoadSceneSound", 0);
+			}
+			else
+			{
+				PauseAllSounds();
+				Locations[FindLocation(Pchar.location)].type = "Chinese_garden";
+				PostEvent("LoadSceneSound", 0);
+			}
+		break;
+	//----------------------------------------------------------------------------------------------------------------
+		case "servant_is_Caesar":
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_estate", "goto", "hands2");
+			if(IsOfficer(CharacterFromID("Pell")))				
+			{
+				ChangeCharacterAddressGroup(characterFromID("Pell"), "BB_Eden_estate", "goto", "pell2");
+			}
+
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "First time";
+			Characters[GetCharacterIndex("Caesar")].Dialog.Filename = "Caesar_dialog.c";
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorDialog(characterFromID("Caesar"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Caesar"));
+		break;
+
+		case "servant_is_Caesar1":
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "First time";
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorDialog(characterFromID("Hands"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Hands"));
+		break;
+
+		case "servant_is_Caesar2":
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
+			characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
+
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "Eden_saved_me";
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorDialog(characterFromID("Caesar"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Caesar"));
+		break;
+
+		case "servant_is_Caesar3":
+			LAi_SetActorType(characterFromID("black_servant1"));
+			LAi_ActorDialog(characterFromID("black_servant1"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("black_servant1"));
+			characters[GetCharacterIndex("black_servant1")].dialog.CurrentNode = "who_are_you";
+		break;
+
+		case "servant_is_Caesar4":
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "shut_up";
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorDialog(characterFromID("Caesar"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Caesar"));
+		break;
+
+	//this may now be different cases depending on if pchar has spoken 0, 1 or 2 timws with servants already
+
+		case "servant_is_Caesar5":
+			characters[GetCharacterIndex("black_servant1")].dialog.CurrentNode = "repeat_look_around";
+
+			Characters[GetCharacterIndex("Caesar")].Dialog.Filename = "Eden servants_dialog.c";
+			if(CheckAttribute(Pchar,"servants_info"))
+			{
+				switch(Pchar.servants_info)
+				{
+					case "0": 
+						//no servants info
+						characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "repeat_look_around";
+					break;
+
+					case "1": 
+						//you have only basic info	
+						characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "repeat_look_around";
+					break;
+
+					case "2": 
+						//you have tried locked doors
+						characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "locked_doors";
+					break;
+
+					case "3": 
+						//you know about the curtain
+						characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "repeat_look_around";
+					break;
+
+					case "4": 
+						//you are back from the garden house
+						characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "repeat_look_around";
+					break;
+			/*
+			//No, this will not happen at all if Pchar.servants_info = "5"
+			//change of road is earlier - in Caesar_dialog.c
+					case "5": 
+		//here's the big difference - the dialog must continue with Hands talk of the wine cellar and Pough showing up too 
+						//you are through with the Estate rooms tour
+						characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "repeat_look_around";
+					break;
+			*/
+					
+				}
+			}
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorDialog(characterFromID("Caesar"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Caesar"));
+		break;
+
+		case "servant_is_Caesar6":
+			ChangeCharacterAddressGroup(characterFromID("black_servant1"), "BB_Eden_estate", "goto", "servant1");
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_Eden_estate", "goto", "servant2");
+			LAi_SetStayType(characterFromID("black_servant1"));
+			LAi_SetStayType(characterFromID("Caesar"));
+
+			LAi_SetPlayerType(Pchar);
+			if(IsOfficer(CharacterFromID("Hands")))				
+			{
+				LAi_SetOfficerType(characterFromID("Hands"));
+			}
+			if(IsOfficer(CharacterFromID("Pell")))				
+			{
+				LAi_SetOfficerType(characterFromID("Pell"));
+			}
+
+			if(!CheckAttribute(Pchar,"Caesar.message10") || Pchar.Caesar.message10 != "done")
+			{
+				AddQuestRecord("Caesar","10");
+				AddQuestRecord("Charles_Eden", "3");
+				Pchar.Caesar.message10 = "done";
+			}
+		break;
+	
+		case "servant_is_Caesar7":
+			ChangeCharacterAddressGroup(characterFromID("black_servant1"), "BB_Eden_estate", "goto", "servant1");
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_Eden_estate", "goto", "servant2");
+			LAi_SetStayType(characterFromID("black_servant1"));
+			LAi_SetStayType(characterFromID("Caesar"));
+
+			LAi_SetPlayerType(Pchar);
+			if(IsOfficer(CharacterFromID("Hands")))				
+			{
+				LAi_SetOfficerType(characterFromID("Hands"));
+			}
+			if(IsOfficer(CharacterFromID("Pell")))				
+			{
+				LAi_SetOfficerType(characterFromID("Pell"));
+			}
+		break;
+	//----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+	
+	//----------------------------------------------------------------------------------------------------------------
+		case "behind_curtain":
+			if(!CheckAttribute(Pchar,"behind_curtain") || Pchar.behind_curtain != "revealed")
+			{
+				Pchar.behind_curtain = "revealed";
+				AddQuestRecord("Charles_Eden", "4");
+			}
+
+			ChangeCharacterAddressGroup(characterFromID("black_servant1"), "BB_Eden_estate", "goto", "servant1");
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_Eden_estate", "goto", "servant2");
+			LAi_SetStayType(characterFromID("black_servant1"));
+			LAi_SetStayType(characterFromID("Caesar"));
+			characters[GetCharacterIndex("black_servant1")].dialog.CurrentNode = "locked_doors1";
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "locked_doors1";
+
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload7", 0.7);
+			Locations[FindLocation("BB_Eden_estate")].locators_radius.reload.reload7 = 0.7;
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload8", 0.7);
+			Locations[FindLocation("BB_Eden_estate")].locators_radius.reload.reload8 = 0.7;
+
+			LAi_SetPlayerType(Pchar);
+			if(IsOfficer(CharacterFromID("Hands")))				
+			{
+				LAi_SetOfficerType(characterFromID("Hands"));
+			}
+			if(IsOfficer(CharacterFromID("Pell")))				
+			{
+				LAi_SetOfficerType(characterFromID("Pell"));
+			}
+			
+			pchar.quest.Margaret_Pough_to_maze.win_condition.l1 = "location";
+			pchar.quest.Margaret_Pough_to_maze.win_condition.l1.location = "BB_Eden_garden_house";
+			pchar.quest.Margaret_Pough_to_maze.win_condition = "Margaret_Pough_to_maze";
+		break;
+
+		case "Margaret_Pough_to_maze":
+			ChangeCharacterAddressGroup(characterFromID("Margaret_Pough"), "BB_Eden_maze", "goto", "margaret");
+						
+			LAi_SetStayType(characterFromID("Margaret_Pough"));
+
+			pchar.quest.Margaret_Pough.win_condition.l1 = "location";
+			pchar.quest.Margaret_Pough.win_condition.l1.location = "BB_Eden_maze";
+			pchar.quest.Margaret_Pough.win_condition = "Margaret_Pough";
+		break;
+
+/*
+		case "GH_boxes_check":
+			if(CheckAttribute(Pchar,"GH_box1") && Pchar.GH_box1 == "checked")
+			{
+				if(CheckAttribute(Pchar,"GH_box2") && Pchar.GH_box2 == "checked")
+				{
+					if(CheckAttribute(Pchar,"GH_box3") && Pchar.GH_box3 == "checked")
+					{
+						ChangeCharacterAddressGroup(characterFromID("Margaret_Pough"), "BB_Eden_maze", "goto", "margaret");
+						
+						LAi_SetStayType(characterFromID("Margaret_Pough"));
+
+						pchar.quest.Margaret_Pough.win_condition.l1 = "location";
+						pchar.quest.Margaret_Pough.win_condition.l1.location = "BB_Eden_maze";
+						pchar.quest.Margaret_Pough.win_condition = "Margaret_Pough";
+					}
+				}
+			}
+		break;
+*/
+		case "Margaret_Pough":
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorDialog(characterFromID("Margaret_Pough"), pchar, "", 1.5, 1.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "what";
+		break;
+
+		case "Pough_done":
+			AddQuestRecord("Charles_Eden", "6");
+			LAi_SetStayType(Pchar);
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorRunToLocator(characterFromID("Margaret_Pough"), "goto", "leave", "Pough_done1", 15.0);
+			Locations[FindLocation("BB_Eden_estate")].reload.l4.disable = 0;
+			characters[GetCharacterIndex("black_servant1")].dialog.CurrentNode = "repeat_look_around";
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "repeat_look_around";
+			Pchar.servants_info = "4";
+
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey1"), "BB_Eden_maze", "goto", "monkey1");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey2"), "BB_Eden_maze", "goto", "monkey2");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey3"), "BB_Eden_maze", "goto", "monkey3");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey4"), "BB_Eden_maze", "goto", "monkey4");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey5"), "BB_Eden_maze", "goto", "monkey5");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey6"), "BB_Eden_maze", "goto", "monkey6");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey7"), "BB_Eden_maze", "goto", "monkey7");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey8"), "BB_Eden_maze", "goto", "monkey8");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey6"), "BB_Eden_maze", "goto", "monkey9");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey7"), "BB_Eden_maze", "goto", "monkey10");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey8"), "BB_Eden_maze", "goto", "monkey11");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey8"), "BB_Eden_maze", "goto", "monkey12");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey8"), "BB_Eden_maze", "goto", "monkey13");
+			ChangeCharacterAddressGroup(characterFromID("maze_monkey8"), "BB_Eden_maze", "goto", "monkey14");
+
+			LAi_QuestDelay("pchar_playertype", 5.0);
+		break;
+
+		case "Pough_done1":
+			ChangeCharacterAddressGroup(characterFromID("Margaret_Pough"), "BB_Eden_estate", "goto", "unlock");
+
+			pchar.quest.Margaret_Pough2_up.win_condition.l1 = "locator";
+			pchar.quest.Margaret_Pough2_up.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.Margaret_Pough2_up.win_condition.l1.locator_group = "goto";
+			pchar.quest.Margaret_Pough2_up.win_condition.l1.locator = "unlock";
+			pchar.quest.Margaret_Pough2_up.win_condition = "Margaret_Pough2";
+		break;
+
+		case "Margaret_Pough2":
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorDialog(characterFromID("Margaret_Pough"), pchar, "", 1.5, 1.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "unlock";
+		break;
+
+		case "Pough2_done":
+			LAi_SetCitizenType(characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "neutral";
+
+			pchar.quest.Margaret_Pough3_A.win_condition.l1 = "location";
+			pchar.quest.Margaret_Pough3_A.win_condition.l1.location = "BB_Eden_chapel";
+			pchar.quest.Margaret_Pough3_A.win_condition = "Margaret_Pough3_A";
+		break;
+
+		case "Margaret_Pough3_A":
+			ChangeCharacterAddressGroup(characterFromID("Margaret_Pough"), "BB_Eden_estate", "goto", "goto6");
+			LAi_SetStayType(characterFromID("Margaret_Pough"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_estate", "goto", "entre");
+
+			pchar.quest.Margaret_Pough3.win_condition.l1 = "locator";
+			pchar.quest.Margaret_Pough3.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.Margaret_Pough3.win_condition.l1.locator_group = "goto";
+			pchar.quest.Margaret_Pough3.win_condition.l1.locator = "goto6";
+			pchar.quest.Margaret_Pough3.win_condition = "Margaret_Pough3";
+		break;
+
+		case "Margaret_Pough3":
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorDialog(characterFromID("Margaret_Pough"), pchar, "", 1.5, 1.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "chapel";
+		break;
+
+		case "Pough3_done":
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "wine_cellar";
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorDialog(characterFromID("Hands"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Hands"));
+		break;
+//-------------------------------------------------------------------------------------------------------
+//Eden bribing scene in here
+
+		case "Eden_bribing_scene_delay":
+			//from Hands dialog
+			if(CheckAttribute(Pchar,"model"))
+			{
+				switch(Pchar.model)
+				{
+					case "Howard_Pyle_3":
+						Pchar.Pyle_model = "3";	
+					break;
+
+					case "Howard_Pyle_4":
+						Pchar.Pyle_model = "4";		
+					break;
+
+					case "Howard_Pyle_5":
+						Pchar.Pyle_model = "5";		
+					break;
+
+					case "Howard_Pyle":
+						Pchar.Pyle_model = "0";		
+					break;
+				}
+			}
+
+			LAi_QuestDelay("Eden_bribing_scene", 1.0);
+		break;	
+
+		case "Eden_bribing_scene":
+			LAi_SetStayType(Pchar);
+			SetModel(Pchar, "bb_Hands1", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+
+			aref ito, ifrom;
+			DeleteAttribute(characterFromID("Brthug1"), "items");
+			
+			if(CheckAttribute(Pchar, "items"))
+			{
+				makearef(ifrom, Pchar.items);
+				Characters[GetCharacterIndex("Brthug1")].items = "";
+				makearef(ito, Characters[GetCharacterIndex("Brthug1")].items);
+				CopyAttributes(&ito, &ifrom);
+				DeleteAttribute(Pchar, "items");
+			}
 		
+			GiveItem2Character(Pchar, "bladeX4");
+			GiveItem2Character(Pchar, "blade1");	
+			EquipCharacterByItem(Pchar, "blade1");
+			GiveItem2Character(Pchar, "pistol206");
+			EquipCharacterByItem(Pchar, "pistol206");
+			TakenItems(Pchar, "gunpowder", 6);
+			TakenItems(Pchar, "pistolbullets", 6);
+
+			pchar.old.name = "Israel";
+			pchar.old.lastname = "Hands";
+			pchar.name = TranslateString("","Israel");
+			pchar.lastname = TranslateString("","Hands");	
+		
+			if(IsOfficer(CharacterFromID("Hands"))) 
+			{
+				RemoveOfficersIndex(pchar, GetCharacterIndex("Hands"));
+				RemovePassenger(pchar, characterFromID("Hands"));
+				Pchar.Hands_officer = "yes";
+			}
+			if(IsOfficer(CharacterFromID("Pell")))  
+			{
+				RemoveOfficersIndex(pchar, GetCharacterIndex("Pell"));
+				RemovePassenger(pchar, characterFromID("Pell"));
+				Pchar.Pell_officer = "yes";
+			}
+
+			SetModel(characterFromID("Teach"), "bb_Teach3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+
+			ChangeCharacterAddressGroup(characterFromID("Teach"), "BB_Eden_office", "goto", "goto4");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew5"), "BB_Eden_office", "goto", "crew1");
+			ChangeCharacterAddressGroup(characterFromID("Richards"), "BB_Eden_office", "goto", "crew2");		//was bb_crew16
+			ChangeCharacterAddressGroup(characterFromID("bb_crew8"), "BB_Eden_office", "officers", "reload3_1");
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "BB_Eden_office", "sit", "sit2");
+			LAi_SetStayType(characterFromID("Teach"));
+			LAi_SetStayType(characterFromID("Richards"));
+			LAi_SetSitType(characterFromID("Knight"));
+
+			GiveItem2Character(characterFromID("Eden"), "bladeX4");
+			GiveItem2Character(characterFromID("Eden"), "bladep204");
+			EquipCharacterbyItem(characterFromID("Eden"), "bladep204");
+
+			GiveItem2Character(characterFromID("Teach"), "bladeX4");
+			GiveItem2Character(characterFromID("Teach"), "bladeMap_Hgold");
+			EquipCharacterbyItem(characterFromID("Teach"), "bladeMap_Hgold");
+		
+			RemoveCharacterEquip(characterFromID("bb_crew5"), BLADE_ITEM_TYPE);
+			TakenItems(characterFromID("bb_crew5"), "blade4", -1);
+			GiveItem2Character(characterFromID("bb_crew5"), "bladeaxe2");		
+			EquipCharacterbyItem(characterFromID("bb_crew5"), "bladeaxe2");
+			
+			RemoveCharacterEquip(characterFromID("bb_crew8"), BLADE_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("bb_crew8"), GUN_ITEM_TYPE);
+			TakenItems(characterFromID("bb_crew8"), "piratespistol", -1);
+			TakenItems(characterFromID("bb_crew8"), "blade4", -1);
+			GiveItem2Character(characterFromID("bb_crew8"), "pistolbbuss");
+			EquipCharacterByItem(characterFromID("bb_crew8"), "pistolbbuss");
+			GiveItem2Character(characterFromID("bb_crew8"), "piratesdagger");		
+			EquipCharacterbyItem(characterFromID("bb_crew8"), "piratesdagger");
+
+			Locations[FindLocation("BB_Eden_office")].image = "Eden_estate.tga";
+
+			DoQuestReloadToLocation("BB_Eden_office", "reload", "reload2" ,"Eden_bribing_scene1");
+		break;
+
+		case "Eden_bribing_scene1":
+			PlaySound("INTERFACE\closed_locked_door.wav");
+
+			LAi_QuestDelay("Eden_bribing_scene2", 2.0);
+		break;
+
+		case "Eden_bribing_scene2":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "Hands_please";
+		break;
+
+		case "Eden_bribing_scene3":
+			PlaySound("VOICE\ENGLISH\gr_Hands1.wav");
+			LAi_SetPlayerType(Pchar);
+			LAi_SetStayType(characterFromID("Teach"));
+
+			Characters[GetCharacterIndex("bb_crew5")].Dialog.Filename = "bb_crew2_dialog.c";
+			Characters[GetCharacterIndex("bb_crew8")].Dialog.Filename = "bb_crew2_dialog.c";
+			Characters[GetCharacterIndex("Richards")].Dialog.Filename = "bb_crew2_dialog.c";
+			Characters[GetCharacterIndex("bb_crew5")].dialog.CurrentNode  = "neutral";
+			Characters[GetCharacterIndex("bb_crew8")].dialog.CurrentNode  = "neutral";
+			Characters[GetCharacterIndex("Richards")].dialog.CurrentNode  = "neutral";
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "neutral";
+			characters[GetCharacterIndex("Knight")].dialog.CurrentNode = "office1";
+			
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "sit", "sit2", 2.0);
+			Locations[FindLocation("BB_Eden_office")].locators_radius.sit.sit2 = 2.0;
+	
+			pchar.quest.Eden_bribing_scene4.win_condition.l1 = "locator";
+			pchar.quest.Eden_bribing_scene4.win_condition.l1.location = "BB_Eden_office";
+			pchar.quest.Eden_bribing_scene4.win_condition.l1.locator_group = "sit";
+			pchar.quest.Eden_bribing_scene4.win_condition.l1.locator = "sit2";
+			pchar.quest.Eden_bribing_scene4.win_condition = "Eden_bribing_scene4";
+		break;
+
+		case "Teach_neutral_done":
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "neutral";
+		break;
+
+		case "bb_crew2_neutral_done":
+			Characters[GetCharacterIndex("bb_crew8")].dialog.CurrentNode  = "neutral";
+			Characters[GetCharacterIndex("bb_crew5")].dialog.CurrentNode  = "neutral";
+			Characters[GetCharacterIndex("Richards")].dialog.CurrentNode  = "neutral";
+		break;
+
+		case "Eden_bribing_scene4":
+			characters[GetCharacterIndex("Knight")].dialog.CurrentNode = "office1";
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_ActorDialog(characterFromID("Knight"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Knight"));
+		break;
+	
+		case "Knight_office2_done":
+			//from Knight desk dialog, may be repeated
+			Characters[GetCharacterIndex("Knight")].dialog.CurrentNode  = "office2";
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "BB_Eden_office", "sit", "sit2");
+			LAi_SetSitType(characterFromID("Knight"));
+			PlaySound("PEOPLE\creak2.wav");
+		break;
+
+		case "Eden_bribing_scene6":
+			//from Knight desk dialog, only first time
+			LAi_QuestDelay("Eden_bribing_scene7", 1.0);
+
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "goto", "thug2", 5.0);
+
+			pchar.quest.Eden_bribing_scene9.win_condition.l1 = "locator";
+			pchar.quest.Eden_bribing_scene9.win_condition.l1.location = "BB_Eden_office";
+			pchar.quest.Eden_bribing_scene9.win_condition.l1.locator_group = "goto";
+			pchar.quest.Eden_bribing_scene9.win_condition.l1.locator = "thug2";
+			pchar.quest.Eden_bribing_scene9.win_condition = "Eden_bribing_scene9";
+		break;
+
+		case "Eden_bribing_scene7":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Teach"));
+
+			LAi_QuestDelay("pchar_sigh", 1.0);
+			LAi_QuestDelay("pchar_playertype", 1.0);
+			LAi_QuestDelay("Eden_bribing_scene8", 2.0);
+		break;
+
+		case "Eden_bribing_scene8":
+			PlaySound("AMBIENT\crew_negative.wav");
+			LAi_SetCitizenType(characterFromID("Teach"));
+			LAi_SetCitizenType(characterFromID("Richards"));
+			LAi_SetCitizenType(characterFromID("bb_crew5"));
+			LAi_SetCitizenType(characterFromID("bb_crew8"));
+
+	//		LAi_QuestDelay("Eden_bribing_scene9", 6.0);
+		break;
+
+		case "Eden_bribing_scene9":
+			PlaySound("INTERFACE\closed_locked_door.wav");
+			ChangeCharacterAddressGroup(characterFromID("Eden"), "BB_Eden_office", "reload", "reload1");
+
+			LAi_QuestDelay("Eden_bribing_scene10", 1.0);
+		break;
+
+		case "Eden_bribing_scene10":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorTurnToCharacter(characterFromID("Richards"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("bb_crew5"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew5"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew8"), characterFromID("Eden"));
+
+			LAi_QuestDelay("Eden_bribing_scene11", 1.0);
+		break;
+
+		case "Eden_bribing_scene11":
+			PlaySound("VOICE\ENGLISH\Eden_so.wav");
+			
+			LAi_QuestDelay("Eden_bribing_scene12", 1.0);
+		break;
+
+		case "Eden_bribing_scene12":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorGoToLocator(characterFromID("Eden"), "goto", "goto6", "Eden_bribing_scene13", 4.0);
+
+			PlaySound("PEOPLE\creak2.wav");
+			LAi_SetStayType(characterFromID("Knight"));
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "BB_Eden_office", "goto", "stay1");
+
+			LAi_QuestDelay("Eden_bribing_scene12_A", 1.0);
+		break;
+
+		case "Eden_bribing_scene12_A":
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "BB_Eden_office", "goto", "stay2");
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_ActorGoToLocator(characterFromID("Knight"), "goto", "knight_gov", "Eden_bribing_scene12_B", 8.0);
+		break;
+
+		case "Eden_bribing_scene12_B":
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "BB_Eden_office", "goto", "knight_gov");
+		break;
+
+		case "Eden_bribing_scene13":
+			PlaySound("VOICE\ENGLISH\Eden_well.wav");
+			ChangeCharacterAddressGroup(characterFromID("Eden"), "BB_Eden_office", "sit", "governor");
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorTurnToCharacter(characterFromID("Richards"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("bb_crew5"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew5"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew8"), characterFromID("Eden"));
+			
+			LAi_QuestDelay("Eden_bribing_scene14", 1.0);
+		break;
+
+		case "Eden_bribing_scene14":
+			LAi_SetPlayerType(Pchar);		//temp
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorGoToLocator(characterFromID("Teach"), "goto", "teach", "Eden_bribing_scene15", 3.0);
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorGoToLocator(characterFromID("Richards"), "goto", "richards", "_", "");
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorGoToLocator(characterFromID("bb_crew8"), "goto", "qm", "_", "");
+		break;
+
+		case "Eden_bribing_scene15":
+			ChangeCharacterAddressGroup(characterFromID("Teach"), "BB_Eden_office", "goto", "teach");
+			ChangeCharacterAddressGroup(characterFromID("Richards"), "BB_Eden_office", "goto", "richards");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew8"), "BB_Eden_office", "goto", "qm");
+
+			LAi_SetActorType(characterFromID("bb_crew5"));
+			LAi_ActorGoToLocator(characterFromID("bb_crew5"), "goto", "gunner", "Eden_bribing_scene16", 3.0);
+			LAi_SetActorType(Pchar);
+			LAi_ActorGoToLocator(Pchar, "goto", "hands1", "_", "");				//was hands
+		break;
+
+		case "Eden_bribing_scene16":
+			ChangeCharacterAddressGroup(characterFromID("bb_crew5"), "BB_Eden_office", "goto", "gunner");
+			ChangeCharacterAddressGroup(Pchar, "BB_Eden_office", "goto", "hands1");		//was hands
+	
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "bribing";
+		break;
+
+		case "Eden_bribing_scene17":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing1";
+		break;
+
+		case "Eden_bribing_scene18":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "bribing2";
+		break;
+
+		case "Eden_bribing_scene19":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing3";
+		break;
+
+		case "Eden_bribing_scene20":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "bribing4";
+		break;
+
+		case "Eden_bribing_scene21":
+			characters[GetCharacterIndex("Knight")].dialog.CurrentNode = "orwell";
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_ActorDialog(characterFromID("Knight"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Knight"));
+		break;
+
+		case "Eden_bribing_scene22":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing5";
+		break;
+
+		case "Eden_bribing_scene23":
+			PlaySound("OBJECTS\DUEL\man_attack5.wav");
+		
+			LAi_QuestDelay("Eden_bribing_scene24", 1.5);
+		break;
+
+		case "Eden_bribing_scene24":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing6";
+		break;
+
+		case "Eden_bribing_scene25":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "bribing7";
+		break;
+
+		case "Eden_bribing_scene26":
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorDialog(characterFromID("Richards"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Richards"));
+			Characters[GetCharacterIndex("Richards")].dialog.CurrentNode  = "more_dutch";
+		break;
+
+		case "Eden_bribing_scene27":
+			LAi_SetActorType(characterFromID("bb_crew5"));
+			LAi_ActorDialog(characterFromID("bb_crew5"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_crew5"));
+			Characters[GetCharacterIndex("bb_crew5")].dialog.CurrentNode  = "spanish_crew";
+		break;
+
+		case "Eden_bribing_scene28":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorTurnToCharacter(characterFromID("Eden"), characterFromID("bb_crew5"));			
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_ActorTurnToCharacter(characterFromID("Knight"), characterFromID("bb_crew5"));
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("bb_crew5"));
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorTurnToCharacter(characterFromID("Richards"), characterFromID("bb_crew5"));
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew8"), characterFromID("bb_crew5"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("bb_crew5"));
+
+			LAi_QuestDelay("Eden_bribing_scene28_A", 1.0);
+		break;
+
+		case "Eden_bribing_scene28_A":
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorDialog(characterFromID("bb_crew8"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_crew8"));
+			Characters[GetCharacterIndex("bb_crew8")].dialog.CurrentNode  = "no_crew";
+		break;
+
+		case "Eden_bribing_scene29":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing8";
+		break;
+
+		case "Eden_bribing_scene30":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorTurnToCharacter(characterFromID("Eden"), characterFromID("Teach"));			
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_ActorTurnToCharacter(characterFromID("Knight"), characterFromID("Teach"));
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorTurnToCharacter(characterFromID("Richards"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew8"), characterFromID("Eden"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Eden"));
+
+			LAi_QuestDelay("Eden_bribing_scene30_A", 1.0);
+		break;
+	
+		case "Eden_bribing_scene30_A":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "bribing9";
+		break;
+
+		case "Eden_bribing_scene31":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing10";
+		break;
+
+		case "Eden_bribing_scene32":
+			PlaySound("VOICE\ENGLISH\gr_Teach3.wav");
+			LAi_SetPlayerType(CharacterFromID("Teach"));
+			LAi_SetFightMode(CharacterFromID("Teach"), true);
+
+			LAi_QuestDelay("Eden_bribing_scene33", 2.5);
+		break;
+
+		case "Eden_bribing_scene33":
+			PlaySound("INTERFACE\paper.wav");
+			RemoveCharacterEquip(characterFromID("Teach"), BLADE_ITEM_TYPE);
+			EquipCharacterbyItem(characterFromID("Teach"), "bladeX4");
+			TakenItems(characterFromID("Teach"), "bladeMap_Hgold", -1);
+
+			GiveItem2Character(characterFromID("Eden"), "pistolMap_Hgold");		
+			EquipCharacterbyItem(characterFromID("Eden"), "pistolMap_Hgold");
+
+			LAi_QuestDelay("Eden_bribing_scene34", 1.0);
+		break;
+
+		case "Eden_bribing_scene34":
+			LAi_SetFightMode(CharacterFromID("Teach"), false);
+			LAi_SetStayType(CharacterFromID("Teach"));
+
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing11";
+		break;
+
+		case "Eden_bribing_scene35":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "bribing12";
+		break;
+
+		case "Eden_bribing_scene36":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing13";
+		break;
+
+		case "Eden_bribing_scene37":
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorDialog(characterFromID("bb_crew8"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_crew8"));
+			Characters[GetCharacterIndex("bb_crew8")].dialog.CurrentNode  = "cargo_sugar";
+		break;
+
+		case "Eden_bribing_scene38":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "bribing14";
+		break;
+
+		case "Eden_bribing_scene39":
+			PlaySound("AMBIENT\JAIL\cough.wav");
+
+			LAi_QuestDelay("Eden_bribing_scene40", 1.0);
+		break;
+
+		case "Eden_bribing_scene40":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorTurnToCharacter(characterFromID("Eden"), characterFromID("Knight"));			
+			LAi_SetActorType(characterFromID("bb_crew5"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew5"), characterFromID("Knight"));
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Knight"));
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorTurnToCharacter(characterFromID("Richards"), characterFromID("Knight"));
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew8"), characterFromID("Knight"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Knight"));
+
+			LAi_QuestDelay("Eden_bribing_scene41", 0.5);
+		break;
+
+		case "Eden_bribing_scene41":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "bribing15";
+		break;
+
+		case "Eden_bribing_scene42":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing16";
+		break;
+
+		case "Eden_bribing_scene43":
+			LAi_SetActorType(characterFromID("bb_crew5"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew5"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorTurnToCharacter(characterFromID("Richards"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew8"), characterFromID("Eden"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Eden"));
+
+			LAi_QuestDelay("Eden_bribing_scene43_A", 0.5);
+		break;
+
+		case "Eden_bribing_scene43_A":
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_ActorGoToLocator(characterFromID("Knight"), "reload", "reload1", "Eden_bribing_scene44", 5.0);
+
+			LAi_QuestDelay("Eden_bribing_scene46", 2.0);
+		break;
+
+		case "Eden_bribing_scene44":
+			PlaySound("INTERFACE\key_unlock.wav");
+		break;
+	
+		case "Eden_bribing_scene46":
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "none", "", "");
+			PlaySound("VOICE\ENGLISH\blaze_follow_you.wav");			
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorGoToLocator(characterFromID("bb_crew8"), "reload", "reload1", "Eden_bribing_scene47", 4.0);
+		break;
+
+		case "Eden_bribing_scene47":
+			ChangeCharacterAddressGroup(characterFromID("bb_crew8"), "none", "", "");
+
+			LAi_QuestDelay("Eden_bribing_scene47_A", 1.5);
+			LAi_QuestDelay("Eden_bribing_scene48", 3.0);
+		break;
+
+		case "Eden_bribing_scene47_A":
+			PlaySound("INTERFACE\closed_locked_door.wav");
+		break;
+
+		case "Eden_bribing_scene48":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing17";
+		break;
+		
+		case "Eden_bribing_scene49":
+			ChangeCharacterAddressGroup(characterFromID("Eden"), "BB_Eden_office", "goto", "goto6");
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorGoToLocator(characterFromID("Eden"), "reload", "reload2", "Eden_bribing_scene50", 9.0);
+		break;
+
+		case "Eden_bribing_scene50":
+			PlaySound("INTERFACE\key_unlock.wav");
+			ChangeCharacterAddressGroup(characterFromID("Eden"), "BB_Eden_office", "officers", "reload3_1");
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorTurnToLocator(characterFromID("Eden"), "goto", "crew2");
+
+			LAi_SetActorType(characterFromID("bb_crew5"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew5"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorTurnToCharacter(characterFromID("Richards"), characterFromID("Eden"));
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorTurnToCharacter(characterFromID("bb_crew8"), characterFromID("Eden"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Eden"));
+
+			LAi_QuestDelay("Eden_bribing_scene51", 1.0);
+		break;
+
+		case "Eden_bribing_scene51":	
+			LAi_ActorGoToLocator(characterFromID("Richards"), "reload", "reload2", "Eden_bribing_scene53", 5.0);
+
+			LAi_QuestDelay("Eden_bribing_scene51_A", 1.5);	//was 1.0
+		break;
+
+		case "Eden_bribing_scene51_A":
+			LAi_ActorGoToLocator(characterFromID("bb_crew5"), "reload", "reload2", "Eden_bribing_scene52", 5.0);
+		break;
+
+		case "Eden_bribing_scene52":
+			ChangeCharacterAddressGroup(characterFromID("bb_crew5"), "BB_Eden_estate_wreck", "goto", "B_crew1");
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorGoToLocator(characterFromID("Teach"), "goto", "goto4", "Eden_bribing_scene55", 6.0);
+
+			LAi_QuestDelay("Eden_bribing_scene54", 5.0);
+		break;
+
+		case "Eden_bribing_scene53":
+			ChangeCharacterAddressGroup(characterFromID("Richards"), "BB_Eden_estate_wreck", "goto", "B_crew2");
+		break;
+
+		case "Eden_bribing_scene54":
+			LAi_SetActorType(Pchar);
+			LAi_ActorGoToLocator(Pchar, "goto", "crew2", "Eden_bribing_scene56", 4.0);
+		break;
+
+		case "Eden_bribing_scene55":	
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToLocator(characterFromID("Teach"), "officers", "reload3_1");
+		break;
+
+		case "Eden_bribing_scene56":	
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorDialog(characterFromID("Eden"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Eden"));
+			characters[GetCharacterIndex("Eden")].dialog.CurrentNode = "bribing19";
+		break;
+
+		case "Eden_bribing_scene57":
+			PlaySound("VOICE\ENGLISH\Eden_yeah.wav");	
+			LAi_SetPlayerType(CharacterFromID("Eden"));
+			LAi_SetFightMode(CharacterFromID("Eden"), true);
+
+			LAi_QuestDelay("Eden_bribing_scene58", 1.0);
+		break;
+
+		case "Eden_bribing_scene58":
+			PlaySound("OBJECTS\DUEL\pistol_out1original.wav");
+			RemoveCharacterEquip(characterFromID("Eden"), BLADE_ITEM_TYPE);
+			EquipCharacterbyItem(characterFromID("Eden"), "bladeX4");
+			TakenItems(characterFromID("Eden"), "bladep204", -1);
+
+			GiveItem2Character(characterFromID("Teach"), "pistol204");		
+			EquipCharacterbyItem(characterFromID("Teach"), "pistol204");
+
+			LAi_QuestDelay("Eden_bribing_scene59", 1.0);
+		break;
+
+		case "Eden_bribing_scene59":
+			PlaySound("VOICE\ENGLISH\gr_Teach4.wav");	
+			LAi_SetFightMode(CharacterFromID("Eden"), false);
+			LAi_SetStayType(CharacterFromID("Eden"));
+			
+			LAi_QuestDelay("Eden_bribing_scene60", 2.0);
+		break;
+
+		case "Eden_bribing_scene60":
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorTurnToLocator(characterFromID("Eden"), "reload", "reload2");
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorGoToLocator(characterFromID("Teach"), "reload", "reload2", "Eden_bribing_scene61", 2.0);
+		break;
+
+		case "Eden_bribing_scene61":
+			ChangeCharacterAddressGroup(characterFromID("Teach"), "BB_Eden_estate_wreck", "goto", "B_teach");
+
+			LAi_SetActorType(characterFromID("Eden"));
+			LAi_ActorGoToLocator(characterFromID("Eden"), "reload", "reload2", "Eden_bribing_scene62", 2.0);
+		break;
+
+		case "Eden_bribing_scene62":
+			ChangeCharacterAddressGroup(characterFromID("Eden"), "BB_Eden_estate_wreck", "goto", "B_eden");
+			Locations[FindLocation("BB_Eden_office")].reload.l2.disable = 0;
+			Locations[FindLocation("BB_Eden_office")].reload.l2.go = "BB_Eden_estate_wreck";
+			Locations[FindLocation("BB_Eden_office")].reload.l2.emerge = "B_hands";
+			LAi_SetPlayerType(Pchar);
+			SetCurrentTime(1, 0);
+			SetNextWeather("Clear");
+
+			pchar.quest.burning_ship.win_condition.l1 = "location";
+			pchar.quest.burning_ship.win_condition.l1.location = "BB_Eden_estate_wreck";
+			pchar.quest.burning_ship.win_condition = "burning_ship";
+		break;
+
+		case "burning_ship":
+			LAi_SetActorType(characterFromID("Teach"));
+
+			LAi_QuestDelay("burning_ship_sound", 0.1);
+			LAi_QuestDelay("burning_ship1", 2.0);
+			
+		break;
+
+		case "burning_ship_sound":
+			if(Pchar.location == "BB_Eden_estate_wreck")
+			{
+				PlaySound3D("NATURE\fireplace3.wav", -371.0, 2.5, 227.0);
+				PlaySound3D("NATURE\fireplace3.wav", -371.0, 2.5, 227.0);
+				PlaySound3D("NATURE\fireplace4.wav", -371.0, 2.5, 227.0);
+
+				LAi_QuestDelay("burning_ship_sound", 4.8);
+			}
+			else return;
+		break;
+
+		case "burning_ship1":
+			PlaySound("VOICE\ENGLISH\Eden_take_care.wav");
+
+			LAi_QuestDelay("burning_ship2", 2.0);
+		break;
+
+		case "burning_ship2":
+			PlaySound("VOICE\ENGLISH\gr_Teach6.wav");
+
+			LAi_QuestDelay("burning_ship3", 2.5);
+		break;
+
+		case "burning_ship3":
+			PlaySound("VOICE\ENGLISH\Eden_why.wav");
+
+			LAi_QuestDelay("burning_ship4", 1.0);
+		break;
+
+		case "burning_ship4":
+			PlaySound("VOICE\ENGLISH\gr_Teach4.wav");
+
+			LAi_QuestDelay("burning_ship5", 2.5);
+		break;
+
+		case "burning_ship5":
+			PlaySound("VOICE\ENGLISH\Eden_well.wav");
+
+			LAi_QuestDelay("burning_ship6", 1.0);
+		break;
+
+		case "burning_ship6":
+			PlaySound("VOICE\ENGLISH\gr_Teach10.wav");
+
+			LAi_QuestDelay("burning_ship7", 2.5);
+		break;
+
+		case "burning_ship7":
+			PlaySound("VOICE\ENGLISH\Eden_so.wav");
+
+			LAi_QuestDelay("burning_ship8", 1.0);
+		break;
+
+		case "burning_ship8":
+			PlaySound("VOICE\ENGLISH\gr_Teach5.wav");
+
+			LAi_QuestDelay("burning_ship9", 2.5);
+		break;
+
+		case "burning_ship9":
+			PlaySound("VOICE\ENGLISH\Eden_twist_neck.wav");
+
+			LAi_QuestDelay("burning_ship10", 4.5);
+		break;
+
+		case "burning_ship10":
+			PlaySound("VOICE\ENGLISH\pir_capR3.wav");
+
+			LAi_QuestDelay("burning_ship11", 2.0);
+		break;
+
+		case "burning_ship11":
+			PlaySound("VOICE\ENGLISH\Eden_time_go.wav");
+
+			LAi_QuestDelay("burning_ship12", 1.5);
+		break;
+
+		case "burning_ship12":
+			PlaySound("VOICE\ENGLISH\gr_Hands1.wav");
+
+			LAi_QuestDelay("burning_ship13", 1.0);
+		break;
+
+		case "burning_ship13":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box5");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
+			LAi_QuestDelay("burning_ship14", 2.0);
+		break;
+
+		case "burning_ship14":
+			if(CheckAttribute(Pchar,"Pyle_model"))
+			{
+				switch(Pchar.Pyle_model)
+				{
+					case "3":
+						SetModel(Pchar, "Howard_Pyle_3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+					break;
+
+					case "4":
+						SetModel(Pchar, "Howard_Pyle_4", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);	
+					break;
+
+					case "5":
+						SetModel(Pchar, "Howard_Pyle_5", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);		
+					break;
+
+					case "0":
+						SetModel(Pchar, "Howard_Pyle", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);	
+					break;
+				}
+			}
+
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			DeleteAttribute(Pchar, "items");
+			
+			if(CheckAttribute(characterFromID("Brthug1"), "items"))
+			{
+				makearef(ifrom, Characters[GetCharacterIndex("Brthug1")].items);
+				Pchar.items = "";
+				makearef(ito, Pchar.items);
+				CopyAttributes(&ito, &ifrom);
+				DeleteAttribute(Characters[GetCharacterIndex("Brthug1")], "items");
+			}
+		
+			GiveItem2Character(Pchar, "bladeX4");	
+			EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, BLADE_ITEM_TYPE));
+			EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, GUN_ITEM_TYPE));
+
+			if(CheckAttribute(Pchar, "Hands_officer") && Pchar.Hands_officer == "yes")
+			{
+				AddPassenger(Pchar, characterFromID("Hands"), 0);
+				SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+				LAi_SetOfficerType(characterFromID("Hands"));
+			}	
+			if(CheckAttribute(Pchar, "Pell_officer") && Pchar.Pell_officer == "yes")
+			{
+				AddPassenger(Pchar, characterFromID("Pell"), 0);
+				SetOfficersIndex(Pchar, 2, getCharacterIndex("Pell"));
+				LAi_SetOfficerType(characterFromID("Pell"));
+			}
+
+			Locations[FindLocation("BB_Eden_office")].image = "";			//change back here later on
+			
+			SetCurrentTime(12, 0);
+			if(CheckAttribute(Pchar, "hands_dialogG") && Pchar.hands_dialogG == "yes")
+			{
+				DoQuestReloadToLocation("BB_Eden_estate", "reload", "reload11" ,"Margaret_Pough3A");
+			}
+			else DoQuestReloadToLocation("BB_Eden_estate", "reload", "reload6" ,"Margaret_Pough3AA");
+		break;
+//end burning ship
+//-------------------------------------------------------------------------------------------------------
+		case "Pough3_done_no_Hands":
+			AddQuestRecord("Charles_Eden", "8");
+			LAi_SetCitizenType(characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "neutral";
+			Pchar.servants_info = "5";
+		break;
+//-------------------------------------------------------------------------------------------------------
+
+		case "Margaret_Pough3AA":
+			LAi_SetActorType(Pchar);
+			LAi_ActorGoToLocator(Pchar, "goto", "dialogC", "Margaret_Pough3A", 2.0);
+		break;
+
+		case "Margaret_Pough3A":
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "wine_cellar2";
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorDialog(characterFromID("Hands"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Hands"));
+		break;
+
+		case "Margaret_Pough4":
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorDialog(characterFromID("Margaret_Pough"), pchar, "", 1.5, 1.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "Tobias_Knight";
+		break;
+
+		case "Pough4_done":
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "wine_cellar3";
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorDialog(characterFromID("Hands"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Hands"));
+		break;
+
+		case "estate_wine_cellar1":
+			AddQuestRecord("Charles_Eden", "7");
+			LAi_SetStayType(characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "neutral";
+			if(IsOfficer(CharacterFromID("Pell")))				
+			{
+				RemovePassenger(Pchar, characterFromID("Pell"));
+				LAi_SetActorType(characterFromID("Pell"));
+				LAi_ActorGoToLocator(characterFromID("Pell"), "reload", "reload5", "Pell_guard", 10.0);
+				Pchar.Pell = "in_hall";
+			}
+
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorGoToLocator(characterFromID("Hands"), "box", "box1", "Hands_gone", 26.0);
+			Pchar.estate_direction = "Teach_house";
+
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "servant");
+
+			LAi_QuestDelay("pchar_staytype", 1.0);
+			LAi_QuestDelay("pchar_playertype", 13.0);
+		break;
+
+		case "Pell_guard":
+			ChangeCharacterAddressGroup(characterFromID("Pell"), "BB_Eden_estate", "reload", "reload5");
+			LAi_SetStayType(characterFromID("Pell"));
+		break;
+
+		case "Hands_gone":
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_estate", "box", "box24");
+
+			pchar.quest.Hands_river.win_condition.l1 = "locator";
+			pchar.quest.Hands_river.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.Hands_river.win_condition.l1.locator_group = "goto";
+			pchar.quest.Hands_river.win_condition.l1.locator = "box5";
+			pchar.quest.Hands_river.win_condition = "Hands_river";
+		break;
+
+		case "Hands_river":
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_estate", "box", "box6");
+
+			LAi_QuestDelay("Eden_steplocks", 0.1);
+
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "flood";
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorDialog(characterFromID("Hands"), Pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Hands"));	
+		break;
+
+		case "Estate_low_tide":
+			Locations[FindLocation("BB_Eden_estate")].models.always.locators = "Estate_locators_Q2_lowtide";
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Teach_drawing_room", "goto", "goto7");
+			locations[FindLocation("BB_Eden_estate")].environment.sea = "false";
+			SetCurrentTime(12.00, 0);
+			SetNextWeather("Clear");
+
+			pchar.quest.Hands_door_where.win_condition.l1 = "locator";
+			pchar.quest.Hands_door_where.win_condition.l1.location = "BB_Eden_tunnel";
+			pchar.quest.Hands_door_where.win_condition.l1.locator_group = "goto";
+			pchar.quest.Hands_door_where.win_condition.l1.locator = "door_where";
+			pchar.quest.Hands_door_where.win_condition = "Hands_door_where";
+		break;
+	
+		//------------------------------------------------------------------------------
+
+		case "Cayman_turn_to_ri3":
+			PlaySound("PEOPLE\grass_turn.wav");
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "randitem", "randitem3");
+
+			LAi_QuestDelay("Cayman_turn_to_ri3_A", 1.0);
+		break;
+
+		case "Cayman_turn_to_ri3_A":
+			Pchar.Cayman_box2 = "turned";
+			LAi_SetPlayerType(Pchar);
+		break;
+
+		case "Estate_turn_to_box9":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box9");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box1");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box22":
+			PlaySound("PEOPLE\grass_turn.wav");
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box22");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
+		break;
+
+		case "Estate_turn_to_wall":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "wall");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box24":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box24");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box25":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box25");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box26":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box26");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box27":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box27");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box28":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box28");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box29":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box29");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box4":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box4");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Hands_to_Teach_kitchen":
+			PlaySound("INTERFACE\closed_door.wav");
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Teach_kitchen", "officers", "reload4_1");
+			LAi_SetOfficerType(characterFromID("Hands"));
+		break;
+
+		case "Estate_turn_to_box7":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box7");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_Teach_door":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "Teach_door");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box8":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box8");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box9":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box9");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Estate_turn_to_box10":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box10");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+		
+		case "Estate_turn_to_box13":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box13");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "Hands_to_Eden_cellar":
+			PlaySound("INTERFACE\metal_hatch_close.wav");
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "officers", "reload2_1");
+		break;
+
+		case "Estate_turn_to_Teach_cellar":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "Teach_cellar");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "maze_gate1_down_check":
+			pchar.quest.maze_gate1_down.win_condition.l1 = "locator";
+			pchar.quest.maze_gate1_down.win_condition.l1.location = "BB_Eden_maze";
+			pchar.quest.maze_gate1_down.win_condition.l1.locator_group = "goto";
+			pchar.quest.maze_gate1_down.win_condition.l1.locator = "gate1";
+			pchar.quest.maze_gate1_down.win_condition = "maze_gate1_down";
+		break;
+
+		case "maze_gate1_down":
+			ChangeCharacterAddressGroup(Pchar, "BB_Eden_maze", "goto", "gate1_down");
+
+			LAi_QuestDelay("maze_gate1_up_check", 0.5);
+		break;
+
+		case "maze_gate1_up_check":
+			pchar.quest.maze_gate1_up.win_condition.l1 = "locator";
+			pchar.quest.maze_gate1_up.win_condition.l1.location = "BB_Eden_maze";
+			pchar.quest.maze_gate1_up.win_condition.l1.locator_group = "goto";
+			pchar.quest.maze_gate1_up.win_condition.l1.locator = "gate1";
+			pchar.quest.maze_gate1_up.win_condition = "maze_gate1_up";
+		break;
+
+		case "maze_gate1_up":
+			ChangeCharacterAddressGroup(Pchar, "BB_Eden_maze", "goto", "gate1_up");
+
+			LAi_QuestDelay("maze_gate1_down_check", 0.5);
+		break;
+
+		//------------------------------------------------------------------------------
+
+		case "maze_gate2_down_check":
+			pchar.quest.maze_gate2_down.win_condition.l1 = "locator";
+			pchar.quest.maze_gate2_down.win_condition.l1.location = "BB_Eden_maze";
+			pchar.quest.maze_gate2_down.win_condition.l1.locator_group = "goto";
+			pchar.quest.maze_gate2_down.win_condition.l1.locator = "gate2";
+			pchar.quest.maze_gate2_down.win_condition = "maze_gate2_down";
+		break;
+
+		case "maze_gate2_down":
+			ChangeCharacterAddressGroup(Pchar, "BB_Eden_maze", "goto", "gate2_down");
+
+			LAi_QuestDelay("maze_gate2_up_check", 0.5);
+		break;
+
+		case "maze_gate2_up_check":
+			pchar.quest.maze_gate2_up.win_condition.l1 = "locator";
+			pchar.quest.maze_gate2_up.win_condition.l1.location = "BB_Eden_maze";
+			pchar.quest.maze_gate2_up.win_condition.l1.locator_group = "goto";
+			pchar.quest.maze_gate2_up.win_condition.l1.locator = "gate2";
+			pchar.quest.maze_gate2_up.win_condition = "maze_gate2_up";
+		break;
+
+		case "maze_gate2_up":
+			ChangeCharacterAddressGroup(Pchar, "BB_Eden_maze", "goto", "gate2_up");
+
+			LAi_QuestDelay("maze_gate2_down_check", 0.5);
+		break;
+
+		//------------------------------------------------------------------------------
+
+		case "estate_girder":
+			Locations[FindLocation("BB_Eden_chapel")].image = "";
+			DoQuestReloadToLocation("BB_Eden_chapel", "goto", "goto5" ,"estate_girder1");
+		break;
+
+		case "estate_girder1":
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload1", 1.0);
+			Locations[FindLocation("BB_Eden_chapel")].locators_radius.reload.reload1 = 1.0;
+
+			if(!IsOfficer(CharacterFromID("Hands"))) ChangeCharacterAddressGroup(CharacterFromID("Hands"), "none", "", "");
+
+			Locations[FindLocation("BB_Eden_chapel")].image = "wr_chapel.tga";
+
+			pchar.quest.hands_dialogG.win_condition.l1 = "locator";
+			pchar.quest.hands_dialogG.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.hands_dialogG.win_condition.l1.locator_group = "goto";
+			pchar.quest.hands_dialogG.win_condition.l1.locator = "entre";
+			pchar.quest.hands_dialogG.win_condition = "hands_dialogG";
+		break;
+
+		case "hands_dialogG":
+			Pchar.hands_dialogG = "yes";
+		break;
+
+		//------------------------------------------------------------------------------
+
+		case "Hands_mhm":
+			if(locations[FindLocation("BB_Eden_estate")].environment.sea == "false")
+			{
+				PlaySound("VOICE\ENGLISH\gr_Hands1.wav");
+			}
+		break;
+
+		case "Hands_door_where":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "door_where";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "Hands_door_where1":
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "door_where";
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorDialog(characterFromID("Hands"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Hands"));
+		break;
+
+		case "Hands_door_where_done":
+			LAi_SetPlayerType(pchar);
+			LAi_SetOfficerType(characterFromID("Hands"));
+		break;
+
+		//------------------------------------------------------------------------------
+
 		case "Eden_steplocks":
 			//starts Eden tunnel puzzle
 		
@@ -49041,8 +51558,17 @@ void QuestComplete(string sQuestName)
 
 		case "Eden_steplock_3":
 			PlaySound("INTERFACE\rusty.wav");
-			
+			RemovePassenger(Pchar, characterFromID("Hands"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_steplock");
+
+			LAi_QuestDelay("Hands_reset_officer", 0.2);
 			LAi_QuestDelay("Eden_steplock_4", 1.0);
+		break;
+
+		case "Hands_reset_officer":
+			AddPassenger(Pchar, characterFromID("Hands"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+			LAi_SetOfficerType(characterFromID("Hands"));
 		break;
 
 		case "Eden_steplock_4":
@@ -49125,8 +51651,11 @@ void QuestComplete(string sQuestName)
 
 		case "Eden_tunnel_gate_up1":
 			PlaySound("INTERFACE\rusty.wav");
+			RemovePassenger(Pchar, characterFromID("Hands"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_lever6");
 			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
 	
+			LAi_QuestDelay("Hands_reset_officer", 0.2);
 			LAi_QuestDelay("Eden_tunnel_gate_up2", 2.0);
 		break;
 
@@ -49168,8 +51697,11 @@ void QuestComplete(string sQuestName)
 
 		case "Eden_tunnel_gate_down1":
 			PlaySound("INTERFACE\rusty.wav");
+			RemovePassenger(Pchar, characterFromID("Hands"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_lever6");
 			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
 	
+			LAi_QuestDelay("Hands_reset_officer", 0.2);
 			LAi_QuestDelay("Eden_tunnel_gate_down2", 2.0);
 		break;
 
@@ -49192,7 +51724,11 @@ void QuestComplete(string sQuestName)
 
 		case "Eden_tunnel_elevator_up1":
 			PlaySound("INTERFACE\elevator_short.wav");
+			RemovePassenger(Pchar, characterFromID("Hands"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_lever7");
 			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+
+			LAi_QuestDelay("Hands_reset_officer", 0.2);
 
 			pchar.quest.Eden_steplock.win_condition.l1 = "locator";
 			pchar.quest.Eden_steplock.win_condition.l1.location = "BB_Eden_tunnel";
@@ -49218,7 +51754,11 @@ void QuestComplete(string sQuestName)
 
 		case "Eden_tunnel_elevator_down1":
 			PlaySound("INTERFACE\elevator_short.wav");
+			RemovePassenger(Pchar, characterFromID("Hands"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_lever7");
 			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+
+			LAi_QuestDelay("Hands_reset_officer", 0.2);
 
 			pchar.quest.Eden_elevator1.win_condition.l1 = "locator";
 			pchar.quest.Eden_elevator1.win_condition.l1.location = "BB_Eden_tunnel";
@@ -49271,8 +51811,11 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(Pchar);
 			PlaySound("INTERFACE\running_water.wav");
 			PlaySound("INTERFACE\running_water.wav");
+			RemovePassenger(Pchar, characterFromID("Hands"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_barrel");
 			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
 
+			LAi_QuestDelay("Hands_reset_officer", 0.2);
 			LAi_QuestDelay("Eden_tunnel_wine_out2", 3.0);
 		break;
 
@@ -49303,7 +51846,10 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(Pchar, "bladebarrel3"); 
 			EquipCharacterbyItem(Pchar, "bladebarrel3");
 			LAi_SetPlayerType(Pchar);
+			RemovePassenger(Pchar, characterFromID("Hands"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_barrel");
 
+			LAi_QuestDelay("Hands_reset_officer", 0.2);
 			LAi_QuestDelay("Eden_tunnel_take_empty_barrel1", 1.0);
 		break;
 
@@ -49329,7 +51875,11 @@ void QuestComplete(string sQuestName)
 
 		case "Eden_tunnel_place_empty_barrel1":
 			LAi_SetPlayerType(Pchar);
+			RemovePassenger(Pchar, characterFromID("Hands"));
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_tunnel", "goto", "H_elevator");
 			Locations[FindLocation("BB_Eden_tunnel")].image = "church_wine_cellar.tga";
+
+			LAi_QuestDelay("Hands_reset_officer", 0.2);
 		break;
 
 		case "equip_wine_bottles_box1":
@@ -49419,8 +51969,10 @@ void QuestComplete(string sQuestName)
 					break;
 
 					case "4": 
+						EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, BLADE_ITEM_TYPE));
 						SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box3", 0.001);
 						Locations[FindLocation("BB_Eden_tunnel")].locators_radius.box.box3 = 0.001;
+						Locations[FindLocation("BB_Eden_office")].models.always.locators = "EstateOffice_locators_Q2";//reset to the old one
 
 						LAi_QuestDelay("pchar_4", 1.0); 
 						LAi_QuestDelay("count_bottles1", 2.0);
@@ -49448,14 +52000,1062 @@ void QuestComplete(string sQuestName)
 		case "open_Eden_office_from_upper_floor2":
 			PlaySound("INTERFACE\key_unlock2.wav");
 
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "BB_Eden_office", "goto", "goto3");
+			ChangeCharacterAddressGroup(characterFromID("wr_bri"), "BB_Eden_office", "goto", "governor1");
+			ChangeCharacterAddressGroup(characterFromID("wr_boc1"), "BB_Eden_office", "goto", "thug1");
+			ChangeCharacterAddressGroup(characterFromID("wr_boc3"), "BB_Eden_office", "goto", "thug2");
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_SetActorType(characterFromID("wr_bri"));
+			LAi_SetActorType(characterFromID("wr_boc1"));
+			LAi_SetActorType(characterFromID("wr_boc3"));
+			RemoveCharacterEquip(characterFromID("wr_boc1"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_boc1"), BLADE_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_boc3"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_boc3"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_boc1"), "items");
+			DeleteAttribute(characterFromID("wr_boc3"), "items");
+			AddMoneyToCharacter(characterFromID("wr_boc1"),-10000);
+			AddMoneyToCharacter(characterFromID("wr_boc3"),-10000);
+			GiveItem2Character(characterFromID("wr_boc1"), "blade4");
+			EquipCharacterByItem(characterFromID("wr_boc1"), "blade4");
+			GiveItem2Character(characterFromID("wr_boc1"), "pistol1");
+			EquipCharacterByItem(characterFromID("wr_boc1"), "pistol1");
+			GiveItem2Character(characterFromID("wr_boc3"), "blade4");
+			EquipCharacterByItem(characterFromID("wr_boc3"), "blade4");
+			GiveItem2Character(characterFromID("wr_boc3"), "pistol1");
+			EquipCharacterByItem(characterFromID("wr_boc3"), "pistol1");
+			TakenItems(characterFromID("wr_boc1"), "gunpowder", 2);
+			TakenItems(characterFromID("wr_boc1"), "pistolbullets", 2);
+			TakenItems(characterFromID("wr_boc3"), "gunpowder", 2);
+			TakenItems(characterFromID("wr_boc3"), "pistolbullets", 2);
+
+			LAi_SetImmortal(CharacterFromID("wr_bri"), false);
+			RemoveCharacterEquip(characterFromID("wr_bri"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_bri"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_bri"), "items");
+			AddMoneyToCharacter(characterFromID("wr_bri"),-10000);
+			GiveItem2Character(characterFromID("wr_bri"), "bladeA5");
+			EquipCharacterByItem(characterFromID("wr_bri"), "bladeA5");
+			GiveItem2Character(characterFromID("wr_bri"), "spyglass3");
+
+			if(CheckAttribute(Pchar, "killed_wr_officers"))
+			{
+				switch(Pchar.killed_wr_officers)
+				{
+					case "0":
+						GiveItem2Character(characterFromID("wr_bri"), "pistol203");
+						EquipCharacterByItem(characterFromID("wr_bri"), "pistol203");
+						GiveItem2Character(characterFromID("wr_bri"), "ammobag1");
+						TakenItems(characterFromID("wr_bri"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_bri"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Courtney_items0_check", 0.1);
+					break;
+
+					case "1":
+						GiveItem2Character(characterFromID("wr_bri"), "pistol201");
+						GiveItem2Character(characterFromID("wr_bri"), "pistol204");
+						EquipCharacterByItem(characterFromID("wr_bri"), "pistol201");
+						TakenItems(characterFromID("wr_bri"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_bri"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Courtney_items1_check", 0.1);
+					break;
+
+					case "2":
+						GiveItem2Character(characterFromID("wr_bri"), "pistol205");
+						GiveItem2Character(characterFromID("wr_bri"), "pistol202");
+						EquipCharacterByItem(characterFromID("wr_bri"), "pistol205");
+						TakenItems(characterFromID("wr_bri"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_bri"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Courtney_items2_check", 0.1);
+					break;
+
+					case "3":
+						GiveItem2Character(characterFromID("wr_bri"), "pistol206");
+						GiveItem2Character(characterFromID("wr_bri"), "pistolbelt");
+						EquipCharacterByItem(characterFromID("wr_bri"), "pistol206");
+						TakenItems(characterFromID("wr_bri"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_bri"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Courtney_items3_check", 0.1);
+					break;
+				}
+			}
+			
 			LAi_QuestDelay("pchar_yah", 1.0);
+
+			pchar.quest.enter_Eden_office.win_condition.l1 = "location";
+			pchar.quest.enter_Eden_office.win_condition.l1.location = "BB_Eden_office";
+			pchar.quest.enter_Eden_office.win_condition = "enter_Eden_office";
 		break;
 
+		case "Courtney_items0_check":
+			if(CheckCharacterItem(Pchar,"pistol203") && CheckCharacterItem(Pchar,"ammobag1"))
+			{
+				LAi_QuestDelay("Courtney_looted", 0.1);
+			}
+			else LAi_QuestDelay("Courtney_items0_check", 0.5);//loop check
+		break;
+
+		case "Courtney_items1_check":
+			if(CheckCharacterItem(Pchar,"pistol201") && CheckCharacterItem(Pchar,"pistol204"))
+			{
+				LAi_QuestDelay("Courtney_looted", 0.1);
+			}
+			else LAi_QuestDelay("Courtney_items1_check", 0.5);//loop check
+		break;
+
+		case "Courtney_items2_check":
+			if(CheckCharacterItem(Pchar,"pistol205") && CheckCharacterItem(Pchar,"pistol202"))
+			{
+				LAi_QuestDelay("Courtney_looted", 0.1);
+			}
+			else LAi_QuestDelay("Courtney_items2_check", 0.5);//loop check
+		break;
+
+		case "Courtney_items3_check":
+			if(CheckCharacterItem(Pchar,"pistol206") && CheckCharacterItem(Pchar,"pistolbelt"))
+			{
+				LAi_QuestDelay("Courtney_looted", 0.1);
+			}
+			else LAi_QuestDelay("Courtney_items3_check", 0.5);//loop check
+		break;
+
+//---------------------------------------------------------------------------------------------------------------------
+
+		case "enter_Eden_office":
+			LAi_SetStayType(Pchar);
+			PlaySound("INTERFACE\key_lock.wav");
+			LAi_ActorRunToLocator(characterFromID("Knight"), "reload", "reload1", "enter_Eden_office1", 5.0);
+			LAi_ActorAttack(CharacterFromID("wr_bri"), characterFromID("Knight"), "");
+
+			Pchar.eden_office_boxes = "open";
+
+			if(CheckAttribute(Pchar,"model"))
+			{
+				switch(Pchar.model)
+				{
+					case "Howard_Pyle_3":
+						locations[FindLocation(Pchar.location)].box4.items.socks_sewing = 1;	
+					break;
+
+					case "Howard_Pyle_4":
+						locations[FindLocation(Pchar.location)].box4.items.waistcoat = 1;	
+					break;
+
+					case "Howard_Pyle_5":
+						locations[FindLocation(Pchar.location)].box4.items.sash = 1;	
+					break;
+				}
+			}
+
+			LAi_QuestDelay("pchar_huh", 2.0);
+		break;
+
+		case "enter_Eden_office1":
+			LAi_SetPlayerType(Pchar);
+			LAi_SetHP(CharacterFromID("wr_bri"), 250.0, 250.0);
+			LAi_SetHP(CharacterFromID("wr_boc1"), 100.0, 100.0);
+			LAi_SetHP(CharacterFromID("wr_boc3"), 100.0, 100.0);
+
+			PlaySound("INTERFACE\key_unlock2.wav");
+			LAi_group_MoveCharacter(characterFromID("wr_bri"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("wr_boc1"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("wr_boc3"), "ROOF_THUGS_1");
+
+			LAi_QuestDelay("enter_Eden_office2", 1.0);
+		break;
+
+		case "enter_Eden_office2":
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "none", "", "");
+			PlaySound("INTERFACE\closed_locked_door.wav");
+			LAi_group_Register("ROOF_THUGS_1");
+			LAi_group_SetRelation(LAI_GROUP_PLAYER, "ROOF_THUGS_1", LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAI_GROUP_PLAYER, "ROOF_THUGS_1", true);
+
+			LAi_QuestDelay("pchar_ohoh", 1.0);
+
+			Pchar.quest.Courtney_dead.win_condition.l1 = "NPC_Death";
+			Pchar.quest.Courtney_dead.win_condition.l1.character = "wr_bri";
+			Pchar.quest.Courtney_dead.win_condition.l2 = "NPC_Death";
+			Pchar.quest.Courtney_dead.win_condition.l2.character = "wr_boc1";
+			Pchar.quest.Courtney_dead.win_condition.l3 = "NPC_Death";
+			Pchar.quest.Courtney_dead.win_condition.l3.character = "wr_boc3";
+			Pchar.quest.Courtney_dead.win_condition = "Courtney_dead";
+		break;
+
+		case "Courtney_dead":
+			LAi_SetFightMode(CharacterFromID("Hands"), false);
+			Pchar.killed_wr_officers = sti(Pchar.killed_wr_officers) + 1;
+			
+			//reset
+			Locations[FindLocation("BB_Eden_estate")].models.always.locators = "Estate_locators_Q2";
+			Locations[FindLocation("BB_Eden_estate")].environment.sea = "true";
+		break;
+
+//----------------------------------------------------------------------------------------------------------------------
+
+		case "Courtney_looted":
+			Pchar.Courtney.looted = "yes";
+
+			LAi_QuestDelay("Eden_office_done", 0.1);
+		break;
+
+		case "return_Eden_books":
+			if(CheckCharacterItem(Pchar,"book21") || CheckCharacterItem(Pchar,"book24") || CheckCharacterItem(Pchar,"book34"))
+			{
+				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"No, I don't bother to take anything."));
+				PlaySound("INTERFACE\book_close.wav");
+				TakenItems(Pchar, "book21", -1); TakenItems(Pchar, "book24", -1); TakenItems(Pchar, "book34", -1);
+				locations[FindLocation(Pchar.location)].box1.items.book21 = 0;
+				locations[FindLocation(Pchar.location)].box1.items.book24 = 0;
+				locations[FindLocation(Pchar.location)].box1.items.book34 = 0;
+				locations[FindLocation(Pchar.location)].box1.items.book21 = 1;
+				locations[FindLocation(Pchar.location)].box1.items.book24 = 1;
+				locations[FindLocation(Pchar.location)].box1.items.book34 = 1;
+			}
+		break;
+
+		case "return_Eden_pictures":
+			if(CheckCharacterItem(Pchar,"picture1") || CheckCharacterItem(Pchar,"picture3") 
+			|| CheckCharacterItem(Pchar,"picture5") || CheckCharacterItem(Pchar,"picture6"))
+			{
+				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"No, I don't bother to take anything."));
+				PlaySound("INTERFACE\paper_small.wav");
+				TakenItems(Pchar, "picture1", -1); TakenItems(Pchar, "picture3", -1); 
+				TakenItems(Pchar, "picture5", -1); TakenItems(Pchar, "picture6", -1);
+				locations[FindLocation(Pchar.location)].box2.items.picture1 = 0;
+				locations[FindLocation(Pchar.location)].box2.items.picture3 = 0;
+				locations[FindLocation(Pchar.location)].box2.items.picture5 = 0;
+				locations[FindLocation(Pchar.location)].box2.items.picture6 = 0;
+				locations[FindLocation(Pchar.location)].box2.items.picture1 = 1;
+				locations[FindLocation(Pchar.location)].box2.items.picture3 = 1;
+				locations[FindLocation(Pchar.location)].box2.items.picture5 = 1;
+				locations[FindLocation(Pchar.location)].box2.items.picture6 = 1;
+			}
+		break;
+
+		case "empty_Eden_box4_check":
+			if(IsOfficer(CharacterFromID("Hands")))				
+			{
+				ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_Eden_office", "box", "box5");
+			}
+
+			if(locations[FindLocation(Pchar.location)].box4.items.socks_sewing == 0 && locations[FindLocation(Pchar.location)].box4.items.waistcoat == 0
+			&& locations[FindLocation(Pchar.location)].box4.items.sash == 0)	
+			{
+					Pchar.Eden.Pyle_outfit = "yes";
+				
+					LAi_QuestDelay("Eden_office_done", 0.1);
+			}
+		break;
+
+		case "Eden_office_done":
+			if(CheckAttribute(Pchar,"Courtney.looted") && Pchar.Courtney.looted == "yes") 
+			{
+				if(CheckAttribute(Pchar,"Eden.Pyle_outfit") && Pchar.Eden.Pyle_outfit == "yes") 
+				{
+					PlaySound("INTERFACE\key_unlock.wav");
+					Locations[FindLocation("BB_Eden_office")].reload.l1.disable = 0;
+					Locations[FindLocation("BB_Eden_estate")].reload.l5.disable = 0;
+					
+					LAi_QuestDelay("Eden_office_done1", 1.0);
+				}
+			}
+		break;
+
+		case "Eden_office_done1":
+			ChangeCharacterAddressGroup(characterFromID("black_servant1"), "BB_Eden_office", "reload", "reload1");
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "reload", "reload1");
+
+			if(CheckAttribute(Pchar,"Pell") && Pchar.Pell == "in_hall")
+			{
+				AddPassenger(Pchar, characterFromID("Pell"), 0);
+				SetOfficersIndex(Pchar, 2, getCharacterIndex("Pell"));
+				LAi_SetOfficerType(characterFromID("Pell"));
+			}
+
+			LAi_QuestDelay("Eden_office_done2", 1.0);
+		break;
+
+		case "Eden_office_done2":
+			characters[GetCharacterIndex("black_servant1")].dialog.CurrentNode = "what_are_you_doing";
+			LAi_SetActorType(characterFromID("black_servant1"));
+			LAi_ActorDialog(characterFromID("black_servant1"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("black_servant1"));
+		break;
+
+		case "Eden_office_done3":
+			PlaySound("INTERFACE\closed_door.wav");
+			LAi_SetPlayerType(Pchar);
+			ChangeCharacterAddressGroup(characterFromID("black_servant1"), "BB_Eden_estate", "goto", "Hton_end");
+			ChangeCharacterAddressGroup(characterFromID("Knight"), "BB_Eden_estate", "goto", "goto5");
+			ChangeCharacterAddressGroup(characterFromID("Margaret_Pough"), "BB_Eden_estate", "goto", "pough_end");
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_Eden_estate", "goto", "caesar_kill");
+			LAi_SetPoorType(characterFromID("Knight"));
+		
+			pchar.quest.Estate_end.win_condition.l1 = "location";
+			pchar.quest.Estate_end.win_condition.l1.location = "BB_Eden_estate";
+			pchar.quest.Estate_end.win_condition = "Estate_end";
+		break;
+
+		case "Estate_end":
+			LAi_SetStayType(Pchar);
+			ChangeCharacterAddressGroup(Pchar, "BB_Eden_estate", "goto", "office_exit");
+			GetCharacterPos(characterFromID("Knight"), &u, &v, &w);
+			CreateParticleSystem("stars_short" , u, v+1, w, 0.0, 0.0, 0.0, sti(20) );
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead7.wav");
+
+			ChangeCharacterAddressGroup(characterFromID("wr_bri"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("wr_boc1"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("wr_boc3"), "none", "", "");
+
+			LAi_QuestDelay("Estate_end1", 1.0);
+		break;
+
+		case "Estate_end1":
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorDialog(characterFromID("Margaret_Pough"), pchar, "", 1.5, 1.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "Knight_hurt";
+		break;
+
+		case "Estate_end2":
+			Characters[GetCharacterIndex("Caesar")].Dialog.Filename = "Caesar_dialog.c";
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "Knight_thief";
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorDialog(characterFromID("Caesar"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Caesar"));
+		break;
+
+		case "Estate_end3":
+			Characters[GetCharacterIndex("black_servant1")].Dialog.Filename = "Eden servants_dialog.c";
+			characters[GetCharacterIndex("black_servant1")].dialog.CurrentNode = "Caesar_pirate";
+			LAi_SetActorType(characterFromID("black_servant1"));
+			LAi_ActorDialog(characterFromID("black_servant1"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("black_servant1"));
+		break;
+
+		case "Estate_end4":
+			characters[GetCharacterIndex("Knight")].dialog.CurrentNode = "he_hit_me";
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_ActorDialog(characterFromID("Knight"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Knight"));
+		break;
+
+		case "Estate_end5":
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorDialog(characterFromID("Margaret_Pough"), pchar, "", 1.5, 1.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "sell_the_slave";
+		break;
+
+		case "Estate_end6":
+			characters[GetCharacterIndex("Caesar")].name = "Caesar";
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "leaving_as_servant";
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorDialog(characterFromID("Caesar"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Caesar"));
+		break;
+
+		case "Estate_end7":
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorDialog(characterFromID("Margaret_Pough"), pchar, "", 1.5, 1.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Margaret_Pough"));
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "stop_them";
+		break;
+
+		case "Estate_end8":
+			AddPassenger(Pchar, characterFromID("Caesar"), 0);
+			if(IsOfficer(CharacterFromID("Pell")))				
+			{
+				SetOfficersIndex(Pchar, 3, getCharacterIndex("Caesar"));
+			}
+			else SetOfficersIndex(Pchar, 2, getCharacterIndex("Caesar"));
+			LAi_SetOfficerType(characterFromID("Caesar"));
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+
+			LAi_QuestDelay("Estate_end9", 1.0);
+		break;
+
+		case "Estate_end9":
+			LAi_SetActorType(characterFromID("Knight"));
+			LAi_ActorTurnToCharacter(characterFromID("Knight"), Pchar);
+			LAi_SetActorType(characterFromID("Margaret_Pough"));
+			LAi_ActorTurnToCharacter(characterFromID("Margaret_Pough"), Pchar);
+			LAi_SetActorType(characterFromID("black_servant1"));
+			LAi_ActorTurnToCharacter(characterFromID("black_servant1"), Pchar);
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorTurnToCharacter(characterFromID("Caesar"), characterFromID("Knight"));
+
+			LAi_QuestDelay("Estate_end10", 1.0);
+		break;
+
+		case "Estate_end10":
+			LAi_SetPlayerType(characterFromID("Knight"));
+			LAi_SetPlayerType(characterFromID("Margaret_Pough"));
+			LAi_SetPlayerType(characterFromID("black_servant1"));
+			LAi_SetFightMode(CharacterFromID("Knight"), true);
+			LAi_SetFightMode(CharacterFromID("Margaret_Pough"), true);
+			LAi_SetFightMode(CharacterFromID("black_servant1"), true);
+
+			LAi_QuestDelay("Estate_end11", 1.5);
+		break;
+
+		case "Estate_end11":
+			LAi_SetPlayerType(Pchar);
+			LAi_SetFightMode(Pchar, true);
+			LAi_SetPlayerType(characterFromID("Hands"));
+			LAi_SetFightMode(CharacterFromID("Hands"), true);
+			GiveItem2Character(characterFromID("Caesar"), "bladeX4");
+			EquipCharacterByItem(characterFromID("Caesar"), "bladeX4");
+			LAi_SetPlayerType(characterFromID("Caesar"));
+			LAi_SetFightMode(CharacterFromID("Caesar"), true);
+			if(IsOfficer(CharacterFromID("Pell"))) 
+			{
+				LAi_SetPlayerType(characterFromID("Pell"));
+				LAi_SetFightMode(CharacterFromID("Pell"), true);
+			}
+
+			LAi_QuestDelay("Estate_end12", 1.5);
+		break;
+
+		case "Estate_end12":
+			PlaySound("OBJECTS\VOICES\DEAD\female\dead_wom5.wav");
+			LAi_SetFightMode(CharacterFromID("Knight"), false);
+			LAi_SetFightMode(CharacterFromID("Margaret_Pough"), false);
+			LAi_SetFightMode(CharacterFromID("black_servant1"), false);
+
+			LAi_QuestDelay("Estate_end13", 1.5);
+		break;
+
+		case "Estate_end13":
+			PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
+			LAi_SetFightMode(Pchar, false);
+			LAi_SetFightMode(CharacterFromID("Hands"), false);
+			LAi_SetFightMode(CharacterFromID("Caesar"), false);
+			if(IsOfficer(CharacterFromID("Pell"))) 
+			{
+				LAi_SetFightMode(CharacterFromID("Pell"), false);
+				LAi_SetOfficerType(characterFromID("Pell"));
+			}
+
+			LAi_SetOfficerType(characterFromID("Hands"));
+			LAi_SetOfficerType(characterFromID("Caesar"));
+
+			Pchar.estate_direction = "Cayman_town";
+			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], true);
+			Characters[GetCharacterIndex("Margaret_Pough")].dialog.CurrentNode  = "hostile";
+			characters[GetCharacterIndex("black_servant1")].dialog.CurrentNode = "hostile";
+			characters[GetCharacterIndex("Knight")].dialog.CurrentNode = "hostile";
+			LAi_SetCitizenType(characterFromID("Knight"));
+			LAi_SetCitizenType(characterFromID("Margaret_Pough"));
+			LAi_SetCitizenType(characterFromID("black_servant1"));
+			Pchar.Cayman_box1 = "locked";	//from townhall to Estate
+
+			pchar.quest.Estate_end15.win_condition.l1 = "location";
+			pchar.quest.Estate_end15.win_condition.l1.location = "Grand_Cayman_townhall";
+			pchar.quest.Estate_end15.win_condition = "Estate_end15";
+		break;
+
+		case "Estate_end15":
+			PlaySound("INTERFACE\key_lock.wav");
+			Locations[FindLocation("Grand_Cayman_town")].locators_radius.goto.goto30 = 3.0;
+			SetModel(characterFromID("Caesar"), "bb_Caesar", "man", "man", 1.8, false);
+			LAi_SetOfficerType(characterFromID("Caesar"));
+
+			pchar.quest.delay_Caesar_mapBB3.win_condition.l1 = "locator";
+			pchar.quest.delay_Caesar_mapBB3.win_condition.l1.location = "Grand_Cayman_town";
+			pchar.quest.delay_Caesar_mapBB3.win_condition.l1.locator_group = "goto";
+			pchar.quest.delay_Caesar_mapBB3.win_condition.l1.locator = "goto30";
+			pchar.quest.delay_Caesar_mapBB3.win_condition = "delay_Caesar_mapBB3";
+		break;
+
+		case "delay_Caesar_mapBB3":	
+			LAi_SetActorType(pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Caesar"));
+			PlaySound("VOICE\ENGLISH\gm_crew5B.wav");
+
+			LAi_QuestDelay("Caesar_mapBB3", 1.5);
+		break;
+
+		case "Caesar_mapBB3":
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "mapBB3";
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorDialog(characterFromID("Caesar"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Caesar"));
+		break;
+
+		case "Caesar_mapBB3_done":
+			LAi_SetOfficerType(characterFromID("Caesar"));
+			PlaySound("INTERFACE\paper_small.wav");
+			GiveItem2Character(Pchar, "mapBB3");
+
+			LAi_QuestDelay("pchar_yah", 1.0);
+			LAi_QuestDelay("Caesar_mapBB3_taken", 2.0);
+		break;
+
+		case "Caesar_mapBB3_taken":
+			AddQuestRecord("Charles_Eden", "5");
+			CloseQuestHeader("Charles_Eden");
+
+			LAi_QuestDelay("Caesars_map", 1.0);
+		break;
+
+		case "Caesars_map":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "Caesars_map";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "Caesars_map1":
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "Caesars_map1";
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorDialog(characterFromID("Caesar"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Caesar"));
+		break;
+
+		case "Caesar_info_given":
+			//yoiu have been to Citadel or more
+			LAi_SetPlayerType(pchar);
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Caesar"));
+			AddQuestRecord("Caesar", "12");
+			Pchar.Caesar_info = "yes";	//enables blade_gp_dry to be picked up in GPS Turks_wreck_hold
+		break;
+
+		case "Caesar_info_given2":
+			//you have only talked to Odel
+			LAi_SetPlayerType(pchar);
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Caesar"));
+			AddQuestRecord("Caesar", "13");
+			Pchar.Caesar_info = "yes";	//enables blade_gp_dry to be picked up in GPS Turks_wreck_hold
+		break;
+
+		
+
+
+//Q2 Caesar: Ocracoke Island scene
+//_________________________________________________________________________________________________________________
+
+		case "Odel_dialog":
+			SetNextWeather("Clear");
+			LAi_SetActorType(characterFromID("Odel"));
+			LAi_ActorDialog(characterFromID("Odel"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Odel"));
+		break;
+
+		case "Teach_sloop":
+			SetCurrentTime(12, 0);
+
+			if(IsOfficer(CharacterFromID("Caesar"))) 
+			{
+				Pchar.Caesar_officer = "yes";
+				RemovePassenger(Pchar, characterFromID("Caesar"));
+				if(IsOfficer(CharacterFromID("Pell"))) 
+				{
+					Pchar.Pell_officer = "yes";
+					RemovePassenger(Pchar, characterFromID("Pell"));
+				}
+			}
+
+			ChangeCharacterAddressGroup(characterFromID("Teach"), "BB_sloop", "quest", "teach");
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_sloop", "quest", "caesar");
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_SetActorType(characterFromID("Caesar"));
+			SetModel(characterFromID("Teach"), "bb_Teach3", "man", "man", 1.8, false);
+			SetModel(Pchar, "Ragetti", "man", "man", 1.8, false);
+			DeleteAttribute(characterFromID("Teach"), "items");
+			DeleteAttribute(characterFromID("Caesar"), "items");
+			GiveItem2Character(characterFromID("Teach"), "bladeMap_Hgold");
+			EquipCharacterByItem(characterFromID("Teach"), "bladeMap_Hgold");
+			GiveItem2Character(characterFromID("Caesar"), "bladep202");
+			EquipCharacterByItem(characterFromID("Caesar"), "bladep202");
+			GiveItem2Character(characterFromID("Caesar"), "pistol202");
+			EquipCharacterByItem(characterFromID("Caesar"), "pistol202");
+			Pchar.old.name = "Samuel";
+			Pchar.old.lastname = "Odel";
+			Pchar.name = TranslateString("","Samuel");
+			Pchar.lastname = TranslateString("","Odel");
+
+		//bb_crew in here
+			ChangeCharacterAddressGroup(characterFromID("bb_crew1"), "BB_sloop", "quest", "swivel");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew2"), "BB_sloop", "quest", "odel");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew3"), "BB_sloop", "quest", "gun1L");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew4"), "BB_sloop", "quest", "gun1R");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew5"), "BB_sloop", "quest", "gun1C");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew6"), "BB_sloop", "quest", "gun2L");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew7"), "BB_sloop", "quest", "gun2R");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew8"), "BB_sloop", "quest", "gun2C");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew9"), "BB_sloop", "quest", "gun3L");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew10"), "BB_sloop", "quest", "gun3R");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew11"), "BB_sloop", "quest", "gun3C");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew12"), "BB_sloop", "quest", "gun4L");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew13"), "BB_sloop", "quest", "gun4R");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew14"), "BB_sloop", "quest", "gun4C");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew15"), "BB_sloop", "quest", "border1");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew16"), "BB_sloop", "quest", "bsw");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew17"), "BB_sloop", "quest", "border3");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew18"), "BB_sloop", "quest", "border4");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew19"), "BB_sloop", "quest", "border5");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew20"), "BB_sloop", "quest", "border6");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew21"), "BB_sloop", "quest", "ratline");
+			
+			GiveItem2Character(Pchar, "blade4");
+			EquipCharacterByItem(Pchar, "blade4");
+			GiveItem2Character(Pchar, "piratespistol");
+			EquipCharacterByItem(Pchar, "piratespistol");
+
+			gp = GetCharacterItem(pchar, "gunpowder");
+			pb = GetCharacterItem(pchar, "pistolbullets");
+			if(gp ==0) 
+			{
+				TakeNItems(Pchar,"gunpowder", 1); 
+				pchar.extra_gp = "true";
+			}
+			if(pb ==0) 
+			{
+				TakeNItems(Pchar,"pistolbullets", 1); 
+				pchar.extra_pb = "true";
+			}
+
+			pchar.quest.Teach_sloop24.win_condition.l1 = "locator";
+			pchar.quest.Teach_sloop24.win_condition.l1.location = "BB_sloop";
+			pchar.quest.Teach_sloop24.win_condition.l1.locator_group = "reload";
+			pchar.quest.Teach_sloop24.win_condition.l1.locator = "loc0";
+			pchar.quest.Teach_sloop24.win_condition = "Teach_sloop24";
+			
+			SetNextWeather("Clear");
+			DoQuestReloadToLocation("BB_sloop", "quest", "helm" ,"Teach_sloop1");	//was odel
+		break;
+
+		case "Teach_sloop1":
+			LAi_SetStayType(Pchar);
+
+			LAi_QuestDelay("Teach_sloop2", 3.0);
+		break;
+
+		case "Teach_sloop2":
+			PlaySound("OBJECTS\DUEL\man_attack5.wav");
+			
+			LAi_QuestDelay("Teach_sloop3", 1.0);
+		break;
+
+		case "Teach_sloop3":
+			PlaySound("VOICE\ENGLISH\gr_Teach5.wav");
+
+			LAi_QuestDelay("Teach_sloop4", 2.0);
+		break;
+
+		case "Teach_sloop4":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("bb_crew15"));
+
+			LAi_QuestDelay("Teach_sloop5", 1.0);
+		break;
+
+		case "Teach_sloop5":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "Caesar1";
+		break;
+
+		case "Teach_sloop6":
+			PlaySound("OBJECTS\DUEL\man_hit1.wav");
+
+			LAi_QuestDelay("Teach_sloop7", 2.0);
+		break;
+
+		case "Teach_sloop7":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "Caesar2";
+		break;
+
+		case "Teach_sloop8":
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
+
+			LAi_QuestDelay("Teach_sloop9", 2.0);
+		break;
+
+		case "Teach_sloop9":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "Caesar3";
+		break;
+
+		case "Teach_sloop10":
+			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], false);//temp only
+			PlaySound("OBJECTS\DUEL\man_attack1.wav");
+			LAi_SetPlayerType(CharacterFromID("Caesar"));
+			LAi_SetFightMode(CharacterFromID("Caesar"), true);
+
+			LAi_QuestDelay("Teach_sloop11", 1.5);
+		break;
+
+		case "Teach_sloop11":
+			RemoveCharacterEquip(CharacterFromID("Caesar"), BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(CharacterFromID("Caesar"), "bladep202");
+			GiveItem2Character(CharacterFromID("Caesar"), "bladeX4");
+			EquipCharacterByItem(CharacterFromID("Caesar"), "bladeX4");
+
+			PlaySound("OBJECTS\DUEL\reload1.wav");
+			GiveItem2Character(CharacterFromID("Teach"), "pistol202");
+			EquipCharacterByItem(CharacterFromID("Teach"), "pistol202");
+
+			LAi_QuestDelay("Teach_sloop12", 0.5);
+		break;
+
+		case "Teach_sloop12":
+			LAi_SetFightMode(CharacterFromID("Caesar"), false);
+			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], true);//reset
+
+			LAi_QuestDelay("Teach_sloop13", 1.0);
+		break;
+
+		case "Teach_sloop13":
+			PlaySound("VOICE\ENGLISH\gr_Teach3.wav");
+
+			LAi_QuestDelay("Teach_sloop14", 2.5);
+		break;
+
+		case "Teach_sloop14":
+			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], false);//temp only
+			LAi_SetPlayerType(CharacterFromID("Teach"));
+			LAi_SetFightMode(CharacterFromID("Teach"), true);
+
+			LAi_QuestDelay("Teach_sloop15", 1.5);
+		break;
+
+		case "Teach_sloop15":
+			RemoveCharacterEquip(CharacterFromID("Teach"), BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(CharacterFromID("Teach"), "bladeMap_Hgold");
+			GiveItem2Character(CharacterFromID("Teach"), "bladeX4");
+			EquipCharacterByItem(CharacterFromID("Teach"), "bladeX4");
+
+			PlaySound("PEOPLE\step_sand.wav");
+			GiveItem2Character(CharacterFromID("Caesar"), "bladeMap_Hgold");
+			EquipCharacterByItem(CharacterFromID("Caesar"), "bladeMap_Hgold");
+
+			LAi_QuestDelay("Teach_sloop16", 0.5);
+			LAi_QuestDelay("pchar_yah", 2.0);
+		break;
+
+		case "Teach_sloop16":
+			LAi_SetFightMode(CharacterFromID("Teach"), false);
+			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], true);//reset
+
+			LAi_QuestDelay("Teach_sloop17", 2.5);
+		break;
+
+		case "Teach_sloop17":
+			PlaySound("VOICE\ENGLISH\gr_Teach1.wav");
+
+			LAi_QuestDelay("Teach_sloop18", 3.0);
+		break;
+
+		case "Teach_sloop18":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "Caesar4";	//mission
+		break;
+	
+		case "Teach_sloop19":
+			PlaySound("OBJECTS\DUEL\man_attack5.wav");
+			characters[GetCharacterIndex("wr_mummy8")].sailaway = true;
+			characters[GetCharacterIndex("wr_mummy9")].sailaway = true;
+
+			LAi_QuestDelay("Teach_sloop20", 1.0);
+		break;
+
+		case "Teach_sloop20":
+			PlaySound("PEOPLE\Jump_roof.wav");
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_sloop", "quest", "jump");
+
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("bb_crew10"));
+
+			LAi_QuestDelay("Teach_sloop22", 0.5);
+		break;
+	
+		case "Teach_sloop22":
+			LAi_SetActorType(characterFromID("Caesar"));
+			LAi_ActorGoToLocator(characterFromID("Caesar"), "reload", "loc0", "Teach_sloop25", 12.0);
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("bb_crew15"));
+
+			LAi_QuestDelay("Teach_sloop23", 6.0);
+		break;
+
+		case "Teach_sloop23":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "stop_Caesar";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "Teach_sloop24":
+			LAi_SetStayType(Pchar);
+			PlaySound("INTERFACE\knock.wav");
+
+			LAi_QuestDelay("pchar_oh", 1.0);
+			LAi_QuestDelay("Teach_sloop24_A", 3.0);
+		break;
+	
+		case "Teach_sloop24_A":
+			PlaySound("INTERFACE\_EvShip0.wav");
+
+			LAi_QuestDelay("Teach_sloop26", 1.5);
+		break;
+
+		case "Teach_sloop25":
+			PlaySound("PEOPLE\counter_openclose.wav");
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "none", "", "");
+		break;
+
+		case "Teach_sloop26":
+			SetCurrentTime(12.00, 0);
+			SetNextWeather("Clear");
+			SetNextWind("W",30);
+			Locations[FindLocation("BB_sloop")].image = "";
+			locations[FindLocation("BB_sloop")].type = "silent_seashore";
+
+			DoQuestReloadToLocation("BB_sloop", "quest", "broadside" ,"Teach_sloop28");
+		break;
+
+		case "Teach_sloop28":
+			PlaySound("OBJECTS\SHIPCHARGE\gunner_fire.wav");
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToLocator(characterFromID("Teach"), "ships_other", "ship_1");
+
+			LAi_QuestDelay("Teach_sloop29", 2.0);
+		break;
+
+		case "Teach_sloop29":
+			PlaySound("OBJECTS\SHIPCHARGE\LG18J.wav");
+
+			CreateParticleSystem("smoke_short" , 3.9, 1.6, 4.2, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 4.2, 1.6, 4.2, 4.5, 1.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 3.9, 1.6, 4.2, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 4.2, 1.6, 4.2, 0.0, 4.5, 0.0, sti(20) );
+
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("bb_crew6"));
+
+			LAi_QuestDelay("Teach_sloop30", 0.8);
+			LAi_QuestDelay("Teach_sloop29_A", 3.0);
+		break;
+		
+		case "Teach_sloop29_A":
+			CreateParticleSystem("gunfire" , 3.9, 1.6, 4.2, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 4.2, 1.6, 4.2, 0.0, 4.5, 0.0, sti(20) );
+		break;
+
+		case "Teach_sloop30":
+			PlaySound("OBJECTS\SHIPCHARGE\LG18J.wav");
+			
+			CreateParticleSystem("smoke_short" , 4.1, 1.5, 0.9, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 4.4, 1.5, 0.9, 4.5, 1.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 4.1, 1.5, 0.9, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 4.4, 1.5, 0.9, 0.0, 4.5, 0.0, sti(20) );
+			
+			LAi_QuestDelay("Teach_sloop31", 0.6);
+			LAi_QuestDelay("Teach_sloop30_A", 3.0);
+		break;
+
+		case "Teach_sloop30_A":
+			CreateParticleSystem("gunfire" , 4.1, 1.5, 0.9, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 4.4, 1.5, 0.9, 0.0, 4.5, 0.0, sti(20) );
+		break;
+
+		case "Teach_sloop31":
+			PlaySound("OBJECTS\SHIPCHARGE\LG18J.wav");
+
+			CreateParticleSystem("smoke_short" , 3.9, 1.7, -2.2, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 4.2, 1.7, -2.2, 4.5, 1.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 3.9, 1.7, -2.2, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 4.2, 1.7, -2.2, 0.0, 4.5, 0.0, sti(20) );
+
+			LAi_QuestDelay("Teach_sloop32", 0.4);
+			LAi_QuestDelay("Teach_sloop31_A", 3.0);
+		break;
+
+		case "Teach_sloop31_A":
+			CreateParticleSystem("gunfire" , 3.9, 1.7, -2.2, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 4.2, 1.7, -2.2, 0.0, 4.5, 0.0, sti(20) );
+		break;
+
+		case "Teach_sloop32":
+			PlaySound("OBJECTS\SHIPCHARGE\LG18J.wav");
+
+			CreateParticleSystem("smoke_short" , 3.8, 1.9, -5.1, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 4.1, 1.9, -5.1, 4.5, 1.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 3.8, 1.9, -5.1, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 4.1, 1.9, -5.1, 0.0, 4.5, 0.0, sti(20) );
+			
+			LAi_QuestDelay("Teach_sloop33", 0.4);
+			LAi_QuestDelay("Teach_sloop32_A", 3.0);
+		break;
+
+		case "Teach_sloop32_A":
+			CreateParticleSystem("gunfire" , 3.8, 1.9, -5.1, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 4.1, 1.9, -5.1, 0.0, 4.5, 0.0, sti(20) );
+		break;
+	
+		case "Teach_sloop33":
+			PlaySound("OBJECTS\SHIPCHARGE\CR12C.wav");
+
+			CreateParticleSystem("smoke_short" , 2.9, 4.0, -8.0, 4.5, 1.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire_red" , 3.1, 4.0, -8.0, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire_red" , 2.9, 4.0, -8.0, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 2.9, 4.0, -8.0, 0.0, 4.5, 0.0, sti(20) );
+			
+			LAi_QuestDelay("Teach_sloop34", 2.0);
+			LAi_QuestDelay("Teach_sloop33_A", 3.0);
+		break;
+
+		case "Teach_sloop33_A":
+			CreateParticleSystem("gunfire" , 2.9, 4.0, -8.0, 0.0, 4.5, 0.0, sti(20) );
+		break;
+
+		case "Teach_sloop34":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "ships_other", "ship_1");
+
+			
+			PlaySound("INTERFACE\_GTBoard3.wav");			//slaughter
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "ships_other", "ship_1");
+
+			LAi_QuestDelay("Teach_sloop37", 2.5);
+			
+		break;
+
+		case "Teach_sloop37":
+			PlaySound("OBJECTS\SHIPCHARGE\hurrah.wav");
+			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], false);
+			LAi_SetPlayerType(characterFromID("bb_crew1"));
+			LAi_SetPlayerType(characterFromID("bb_crew2"));
+			LAi_SetPlayerType(characterFromID("bb_crew3"));
+			LAi_SetPlayerType(characterFromID("bb_crew4"));
+			LAi_SetPlayerType(characterFromID("bb_crew5"));
+			LAi_SetPlayerType(characterFromID("bb_crew6"));
+			LAi_SetPlayerType(characterFromID("bb_crew7"));
+			LAi_SetPlayerType(characterFromID("bb_crew8"));
+			LAi_SetPlayerType(characterFromID("bb_crew9"));
+			LAi_SetPlayerType(characterFromID("bb_crew10"));
+			LAi_SetPlayerType(characterFromID("bb_crew11"));
+			LAi_SetPlayerType(characterFromID("bb_crew12"));
+			LAi_SetPlayerType(characterFromID("bb_crew13"));
+			LAi_SetPlayerType(characterFromID("bb_crew14"));
+			LAi_SetPlayerType(characterFromID("bb_crew15"));
+			LAi_SetPlayerType(characterFromID("bb_crew16"));
+			LAi_SetPlayerType(characterFromID("bb_crew17"));
+			LAi_SetPlayerType(characterFromID("bb_crew18"));
+			LAi_SetPlayerType(characterFromID("bb_crew19"));
+			LAi_SetPlayerType(characterFromID("bb_crew20"));
+			LAi_SetPlayerType(characterFromID("Teach"));
+			LAi_SetFightMode(CharacterFromID("bb_crew1"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew2"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew3"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew4"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew5"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew6"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew7"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew8"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew9"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew10"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew11"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew12"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew13"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew14"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew15"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew16"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew17"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew18"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew19"), true);
+			LAi_SetFightMode(CharacterFromID("bb_crew20"), true);
+			LAi_SetFightMode(CharacterFromID("Teach"), true);
+
+			LAi_QuestDelay("Teach_sloop38", 2.0);
+		break;
+
+		case "Teach_sloop38":
+			//end scene here - teleport back to smugglers tavern
+			DoQuestReloadToLocation("smugglers_tavern", "goto", "drunk" ,"Odel_dialog_end");
+		break;
+
+		case "Odel_dialog_end":
+			SetModel(Pchar, "Howard_Pyle", "man", "man", 1.8, false);
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			TakeItemFromCharacter(Pchar, "piratespistol");
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(Pchar, "blade4");
+
+			EquipCharacterByItem(Pchar, FindCharacterItemByGroup(Pchar, BLADE_ITEM_TYPE));
+			EquipCharacterByItem(Pchar, FindCharacterItemByGroup(Pchar, GUN_ITEM_TYPE));
+
+			if(CheckAttribute(Pchar, "extra_gp") && Pchar.extra_gp == "true")
+			{
+				TakeNItems(Pchar,"gunpowder", -1); 
+			}
+			if(CheckAttribute(Pchar, "extra_pb") && Pchar.extra_pb == "true")
+			{
+				TakeNItems(Pchar,"pistolbullets", -1); 
+			}
+
+			if(CheckAttribute(Pchar,"Caesar_officer") && Pchar.Caesar_officer == "yes")
+			{
+				AddPassenger(Pchar, characterFromID("Caesar"), 0);
+				SetOfficersIndex(Pchar, 2, getCharacterIndex("Caesar"));
+				LAi_SetOfficerType(characterFromID("Caesar"));
+
+				if(CheckAttribute(Pchar,"Pell_officer") && Pchar.Pell_officer == "yes")
+				{
+					AddPassenger(Pchar, characterFromID("Pell"), 0);
+					SetOfficersIndex(Pchar, 3, getCharacterIndex("Pell"));
+					LAi_SetOfficerType(characterFromID("Pell"));
+				}
+			}
+
+			Pchar.old.name = "Howard";
+			Pchar.old.lastname = "Pyle";
+			Pchar.name = TranslateString("","Howard");
+			Pchar.lastname = TranslateString("","Pyle");
+
+			LAi_SetActorType(characterFromID("Odel"));
+			LAi_ActorDialog(characterFromID("Odel"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Odel"));
+			Characters[GetCharacterIndex("Odel")].dialog.CurrentNode  = "end";
+		break;
+
+		case "Odel_dialog_end_done":
+			Pchar.Odel_dialog = "done";
+			LAi_SetStayType(characterFromID("Odel"));
+			Characters[GetCharacterIndex("Odel")].dialog.CurrentNode  = "neutral";
+			AddQuestRecord("Caesar", "4");
+			LAi_SetPlayerType(Pchar);
+
+			LAi_QuestDelay("Citadel_rock_start", 0.1);
+		break;
 
 
 //Q2 Caesar: Citadel Rock
 //_________________________________________________________________________________________________________________
-//pär
+
 		case "Citadel_rock_start":
 			Locations[FindLocation("Eleuthera_shore")].models.always.locators = "Pass1_l_Eleuthera_F";	//neutral start WR quest
 			Locations[FindLocation("Eleuthera_shore")].models.always.l1 = "";
@@ -49472,7 +53072,11 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Eleuthera_shore")].locators_radius.monsters.monster2 = 3.0;
 			Locations[FindLocation("Eleuthera_shore")].locators_radius.monsters.monster3 = 3.0;
 			Locations[FindLocation("Eleuthera_shore")].locators_radius.monsters.monster4 = 3.0;
+			Locations[FindLocation("Eleuthera_shore")].reload.l3.disable = 1;	//locked back to tavern tunnel - ev officers left behind
 
+			pchar.quest.Eleuthera_shore_locked.win_condition.l1 = "location";
+			pchar.quest.Eleuthera_shore_locked.win_condition.l1.location = "Eleuthera_shore";
+			pchar.quest.Eleuthera_shore_locked.win_condition = "Eleuthera_shore_locked";
 
 			pchar.quest.maynard_start.win_condition.l1 = "locator";
 			pchar.quest.maynard_start.win_condition.l1.location = "Eleuthera_shore";
@@ -49515,6 +53119,12 @@ void QuestComplete(string sQuestName)
 			pchar.quest.Citadel_thug5_17.win_condition.l1.locator_group = "goto";
 			pchar.quest.Citadel_thug5_17.win_condition.l1.locator = "goto17";
 			pchar.quest.Citadel_thug5_17.win_condition = "Citadel_thug5";
+		break;
+
+		case "Eleuthera_shore_locked":
+			PlaySound("INTERFACE\girder_close.wav");
+
+			LAi_QuestDelay("pchar_huh", 2.0);	
 		break;
 
 		case "maynard_start":
@@ -49868,6 +53478,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "maynard_tower_done":
+			if(!CheckAttribute(Pchar,"Caesar_qbook5") || Pchar.Caesar_qbook5 != "done")
+			{
+				AddQuestRecord("Caesar","5");
+				Pchar.Caesar_qbook5 = "done";
+				ChangeCharacterAddressGroup(characterFromID("shipwreck_trader"), "Turks_Fort_Office", "sit", "sit1");
+				Locations[FindLocation("Turks_Fort_Office")].locators_radius.sit.sit1 = 2.5;
+			}
+
 			Locations[FindLocation("Citadel_tower_bedroom")].locators_radius.box.box1 = 0.7;
 			Locations[FindLocation("Citadel_tower_bedroom")].locators_radius.box.box2 = 0.7;
 			Locations[FindLocation("Citadel_tower_bedroom")].locators_radius.box.box3 = 1.0;
@@ -49891,11 +53509,703 @@ void QuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(Pchar, characterFromID("Maynard"));
 			Characters[GetCharacterIndex("Maynard")].dialog.CurrentNode  = "repeat";
 		break;
-//pär
+
+		case "key30_check":
+			if(CheckAttribute(Pchar,"key30") && Pchar.key30 == "done") return;
+
+			if(CheckCharacterItem(Pchar,"key30"))
+			{
+				Pchar.key30 = "done";
+				Locations[FindLocation("Eleuthera_shore")].locators_radius.reload.reload1_back = 0.0001;				
+				Locations[FindLocation("Eleuthera_shore")].locators_radius.box.box40 = 0.8;	
+			}
+			else
+			{
+				LAi_QuestDelay("key30_check", 0.5);//loop check
+			}
+		break;
+
+		case "unlock_citadel_tunnel":
+			Locations[FindLocation("Eleuthera_shore")].locators_radius.reload.reload1_back = 1.5;				
+			Locations[FindLocation("Eleuthera_shore")].locators_radius.box.box40 = 0.0001;
+			TakeItemFromCharacter(Pchar, "key30");
+			Locations[FindLocation("Eleuthera_shore")].reload.l3.disable = 0;
+			DoQuestReloadToLocation("Eleuthera_tavern_upstairs", "reload", "reload3", "_");
+		break;
 
 //_________________________________________________________________________________________________________________
 //Q2 Caesar: Turks
 
+		case "Turks_armory":
+			pchar.quest.Turks_shipwreck_trader.win_condition.l1 = "locator";
+			pchar.quest.Turks_shipwreck_trader.win_condition.l1.location = "Turks_Fort_Office";
+			pchar.quest.Turks_shipwreck_trader.win_condition.l1.locator_group = "sit";
+			pchar.quest.Turks_shipwreck_trader.win_condition.l1.locator = "sit1";
+			pchar.quest.Turks_shipwreck_trader.win_condition = "Turks_shipwreck_trader";
+		break;
+
+		case "Turks_shipwreck_trader":
+			LAi_SetActorType(characterFromID("shipwreck_trader"));
+			LAi_ActorDialog(characterFromID("shipwreck_trader"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("shipwreck_trader"));
+		break;
+
+		case "Turks_mistress":
+			AddQuestRecord("Caesar", "7");
+			AddQuestRecord("Caesar", "11");
+			Locations[FindLocation("Turks_tavern_kitchen")].reload.l5.disable = 0;	//unlocked to bedroom
+			LAi_SetSitType(characterFromID("shipwreck_trader"));
+			ChangeCharacterAddressGroup(characterFromID("Mistress"), "Turks_Jungle_03", "goto", "barrels");
+			LAi_SetActorType(characterFromID("Mistress"));
+			LAi_SetImmortal(characterFromID("Mistress"), true);
+
+			GiveItem2Character(characterFromID("Mistress"), "blade5");
+			EquipCharacterByItem(characterFromID("Mistress"), "blade5");
+			GiveItem2Character(characterFromID("Mistress"), "pistolbbuss");
+			EquipCharacterByItem(characterFromID("Mistress"), "pistolbbuss");
+			TakeNItems(characterFromID("Mistress"),"gunpowder", 2); 
+			TakeNItems(characterFromID("Mistress"),"pistolgrapes", 2); 
+
+			Locations[FindLocation("Turks_Jungle_03")].locators_radius.goto.barrels = 6.0;
+			LAi_LocationFantomsGen(&locations[FindLocation("Turks_Jungle_03")], false);
+			LAi_LocationMonstersGen(&locations[FindLocation("Turks_Jungle_03")], false);
+			Locations[FindLocation("Turks_Jungle_03")].vcskip = true; // PB
+			Locations[FindLocation("Turks_Jungle_03")].monsters = 0; // KK
+
+			pchar.quest.Turks_mistress_attack.win_condition.l1 = "locator";
+			pchar.quest.Turks_mistress_attack.win_condition.l1.location = "Turks_Jungle_03";
+			pchar.quest.Turks_mistress_attack.win_condition.l1.locator_group = "goto";
+			pchar.quest.Turks_mistress_attack.win_condition.l1.locator = "barrels";
+			pchar.quest.Turks_mistress_attack.win_condition = "Turks_mistress_attack";
+		break;
+
+		case "Turks_mistress_attack":
+			LAi_SetStayType(Pchar);
+			PauseAllSounds();//stops music
+			Locations[FindLocation("Turks_Jungle_03")].type = "silent_jungle";
+			
+			LAi_ActorTurnToCharacter(characterFromID("Mistress"), Pchar);
+			PlaySound("VOICE\ENGLISH\gr_mistress2.wav");
+
+			LAi_QuestDelay("Turks_mistress_attack1", 1.0);		//was 3
+
+			pchar.quest.Turks_gate_locked.win_condition.l1 = "locator";
+			pchar.quest.Turks_gate_locked.win_condition.l1.location = "Turks_Jungle_03";
+			pchar.quest.Turks_gate_locked.win_condition.l1.locator_group = "reload";
+			pchar.quest.Turks_gate_locked.win_condition.l1.locator = "reload2_back";
+			pchar.quest.Turks_gate_locked.win_condition = "Turks_gate_locked";
+		break;
+
+		case "Turks_mistress_attack1":
+			LAi_ActorAttack(CharacterFromID("Mistress"), Pchar, "");
+
+			LAi_QuestDelay("pchar_playertype", 5.0);
+			LAi_QuestDelay("Turks_mistress_attack2", 3.0);
+			LAi_QuestDelay("pchar_aah", 3.0);
+		break;
+
+		case "Turks_mistress_attack2":
+			LAi_SetFightMode(characterFromID("Mistress"), false);
+			LAi_SetActorType(characterFromID("Mistress"));
+
+			LAi_QuestDelay("Turks_mistress_attack3", 1.0);
+		break;
+	
+		case "Turks_mistress_attack3":
+			Locations[FindLocation("Turks_Jungle_03")].reload.l4.disable = 1;		//locked to port
+			PlaySound("INTERFACE\shelf_close.wav");
+			ChangeCharacterAddressGroup(characterFromID("Mistress"), "none", "", "");
+		break;
+	
+		case "Turks_mistress_attack4":
+			PlaySound("VOICE\ENGLISH\gr_mistress.wav");
+		break;
+	
+		case "Turks_gate_locked":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "gate_locked";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "Turks_gate_locked1":
+			LAi_SetPlayerType(pchar);
+			AddQuestRecord("Caesar", "6");
+			ChangeCharacterAddressGroup(characterFromID("shipwreck_trader"), "Turks_old_Fort", "goto", "goto13");
+			LAi_SetCitizenType(characterFromID("shipwreck_trader"));
+			Locations[FindLocation("Turks_Fort_office")].locators_radius.box.box7 = 0.7;
+
+			LAi_QuestDelay("Turks_mistress_attack4", 1.0);
+		break;
+
+		case "Turks_armory_turn_to_gpb":
+			LAi_SetActorType(pchar);	
+			LAi_ActorTurnToLocator(Pchar, "candles", "candle6");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+			LAi_QuestDelay("Turks_bladebarrel_gpS_check", 0.01);
+		break;
+
+		case "Turks_bladebarrel_gpS_check":
+			if(CheckCharacterItem(Pchar,"bladebarrel_gpS"))
+			{
+				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+				EquipCharacterByItem(pchar, "bladebarrel_gpS");
+				SetLocatorRadius(locations[FindLocation(Pchar.location)], "randitem", "randitem2", 0.001);
+				Locations[FindLocation("Turks_Fort_Office")].locators_radius.randitem.randitem2 = 0.001;
+				SetLocatorRadius(locations[FindLocation(Pchar.location)], "randitem", "randitem1", 0.7);
+				Locations[FindLocation("Turks_Fort_Office")].locators_radius.randitem.randitem1 = 0.7;
+
+				LAi_QuestDelay("Turks_pistolbarrel_gpS_check", 0.5);//starts next loop
+			}
+			else
+			{
+				LAi_QuestDelay("Turks_bladebarrel_gpS_check", 0.5);//loop check
+			}
+		break;
+		
+		case "Turks_pistolbarrel_gpS_check":
+			if(CheckCharacterItem(Pchar,"pistolbarrel_gpS"))
+			{
+				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+				EquipCharacterByItem(pchar, "pistolbarrel_gpS");
+				SetLocatorRadius(locations[FindLocation(Pchar.location)], "randitem", "randitem1", 0.001);
+				Locations[FindLocation("Turks_Fort_Office")].locators_radius.randitem.randitem1 = 0.001;
+				SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box7", 0.001);
+				Locations[FindLocation("Turks_Fort_Office")].locators_radius.box.box7 = 0.001;
+
+				LAi_QuestDelay("Turks_barrels_picked_up", 1.0);
+			}
+			else
+			{
+				LAi_QuestDelay("Turks_pistolbarrel_gpS_check", 0.5);//loop check
+			}
+		break;
+
+		case "Turks_barrels_picked_up":
+			PlaySound("PEOPLE\run_stone.wav");
+			ChangeCharacterAddressGroup(Pchar, "Turks_Fort_Office", "goto", "exit");
+			Locations[FindLocation("Turks_Jungle_03")].locators_radius.reload.reload2_back = 0.001;
+			Locations[FindLocation("Turks_Jungle_03")].locators_radius.box.box1 = 1.5;
+		break;
+
+		case "Turks_place_barrels":
+			Locations[FindLocation("Turks_Jungle_03")].models.always.l5 = "gp_barrels";
+			Locations[FindLocation("Turks_Jungle_03")].image = "";
+			DoQuestReloadToLocation("Turks_Jungle_03", "goto", "barrels", "Turks_place_barrels1");
+		break;
+
+		case "Turks_place_barrels1":
+			LAi_SetPlayerType(pchar);
+			Locations[FindLocation("Turks_Jungle_03")].image = "Outside_Jungle_6.tga";
+
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "gate_runaway";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "Turks_gate_explosion":
+			GetCharacterPos(Pchar, &u, &v, &w);
+			float gate_dist = GetDistance2D(27.7, 1.1, u, w);
+		//LogIt("gate_dist = " + gate_dist);
+
+			if(gate_dist <= 20.0)
+			{
+				LAi_KillCharacter(Pchar);
+			}
+		
+			if(gate_dist <= 25.0)
+			{
+				//survive but wounded
+				Pchar.Turks_gate = "wounded";
+				Php = LAi_GetCharacterHP(Pchar);
+				Php2 = Php/2;
+				LAi_ApplyCharacterDamage(Pchar, Php2);
+				LAi_SetPoorType(pchar);
+			}
+			else LAi_SetStayType(pchar);
+
+			CreateParticleSystem("canfire2" , 27.7, 0.6, 1.1, 5.1, 4.0, 0.0, sti(20) );		//19
+			CreateParticleSystem("gunfire_revolver" , 27.7, 0.6, 1.1, 5.1, 4.0, 0.0, sti(20) );	//66
+			CreateParticleSystem("smoke_inv" , 27.7, 0.4, 1.1, 5.1, 4.0, 0.0, sti(20) );		//4 black smoke
+			CreateParticleSystemX("blast_dirt", 27.7, 0.9, 1.1, 27.7, 0.9, 1.1,10);
+			CreateParticleSystemX("blast_dirt", 27.7, 0.4, 1.1, 27.7, 0.9, 1.1,10);
+			
+			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
+			PlaySound("OBJECTS\DUEL\pistol_musket.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
+
+			if(!LAi_IsDead(Pchar)) LAi_QuestDelay("Turks_gate_explosion1", 2.0);
+		break;
+
+		case "Turks_gate_explosion1":	
+			Locations[FindLocation("Turks_Jungle_03")].image = "";
+			Locations[FindLocation("Turks_Jungle_03")].models.always.l5 = "";	//no barrels
+			Locations[FindLocation("Turks_Jungle_03")].models.always.gate = "";
+			Locations[FindLocation("Turks_Jungle_03")].models.always.gatebroken = "Margarita_gatebroken";
+			Locations[FindLocation("Turks_Jungle_03")].locators_radius.reload.reload2_back = 2.5;
+			Locations[FindLocation("Turks_Jungle_03")].locators_radius.box.box1 = 0.001;
+
+			GetCharacterPos(Pchar, &x, &y, &z);
+			nearloc = LAi_FindNearestFreeLocator("goto", x, y, z);
+			DoQuestReloadToLocation("Turks_Jungle_03", "goto", nearloc, "Turks_gate_explosion2");
+		break;
+
+		case "Turks_gate_explosion2":
+			if(CheckAttribute(Pchar,"Turks_gate") || Pchar.Turks_gate == "wounded")
+			{
+				LAi_QuestDelay("pchar_ooh", 0.001);
+
+				LAi_QuestDelay("Turks_gate_explosion3", 3.0);
+			}
+			else
+			{
+				LAi_SetActorType(pchar);
+				LAi_ActorTurnToLocator(Pchar, "goto", "barrels");
+
+				LAi_QuestDelay("pchar_playertype", 1.0);
+			}
+
+			CreateParticleSystem("smoke_inv" , 27.7, 0.4, 0.6, 5.1, 4.0, 0.0, sti(20) );		//4 black smoke
+			CreateParticleSystem("smoke_inv" , 27.7, 0.9, 1.1, 5.1, 4.0, 0.0, sti(20) );		//4 black smoke
+			CreateParticleSystem("smoke_inv" , 27.7, 0.9, 1.6, 5.1, 4.0, 0.0, sti(20) );		//4 black smoke
+			
+			Locations[FindLocation("Turks_Jungle_03")].image = "Outside_Jungle_6.tga";
+			Locations[FindLocation("Turks_port")].models.always.l9 = "Margarita_gatebroken";
+			Locations[FindLocation("Turks_Jungle_03")].reload.l4.disable = 0;		//unlocked to port
+			ChangeCharacterAddressGroup(characterFromID("Mistress"), "Turks_port", "quest", "quest2");
+			LAi_SetActorType(characterFromID("Mistress"));
+			LAi_ActorSetLayMode(characterFromID("Mistress"));
+
+			pchar.quest.Turks_enemy0.win_condition.l1 = "locator";
+			pchar.quest.Turks_enemy0.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_enemy0.win_condition.l1.locator_group = "quest";
+			pchar.quest.Turks_enemy0.win_condition.l1.locator = "shot1";
+			pchar.quest.Turks_enemy0.win_condition = "Turks_enemy0";
+
+			LAi_QuestDelay("Turks_roofs", 0.1);
+		break;
+
+		case "Turks_gate_explosion3":
+			Pchar.Turks_explosion = "done";
+			LAi_SetActorType(pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "barrels");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
+		break;
+	//...............................................................................................
+		case "Turks_roofs":
+			ChangeCharacterAddressGroup(CharacterFromID("wr_boc4"), "Turks_port", "quest", "fight1");
+			ChangeCharacterAddressGroup(CharacterFromID("wr_blcor"), "Turks_port", "quest", "enemy3");
+			ChangeCharacterAddressGroup(CharacterFromID("wr_kor"), "Turks_port", "quest", "enemy6");
+			ChangeCharacterAddressGroup(CharacterFromID("wr_cor4"), "Turks_port", "quest", "enemy5");
+			LAi_SetActorType(CharacterFromID("wr_cor4"));
+			ChangeCharacterAddressGroup(CharacterFromID("wr_9SNat"), "Turks_port", "quest", "enemy9");
+			LAi_SetPoorType(CharacterFromID("wr_9SNat"));
+
+			LAi_NoRebirthEnable(CharacterFromID("wr_boc4"));
+			LAi_NoRebirthEnable(CharacterFromID("wr_18_1"));
+			LAi_NoRebirthEnable(CharacterFromID("wr_blcor"));
+			LAi_NoRebirthEnable(CharacterFromID("wr_kor"));
+			LAi_NoRebirthEnable(CharacterFromID("wr_cor4"));
+			LAi_NoRebirthEnable(CharacterFromID("wr_blm"));
+			LAi_NoRebirthEnable(CharacterFromID("wr_9SNat"));
+
+			RemoveCharacterEquip(characterFromID("wr_boc4"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_boc4"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_boc4"), "items");
+			GiveItem2Character(characterFromID("wr_boc4"), "blade4");
+			EquipCharacterByItem(characterFromID("wr_boc4"), "blade4");
+
+			RemoveCharacterEquip(characterFromID("wr_18_1"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_18_1"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_18_1"), "items");
+			GiveItem2Character(characterFromID("wr_18_1"), "blade4");
+			EquipCharacterByItem(characterFromID("wr_18_1"), "blade4");
+
+			RemoveCharacterEquip(characterFromID("wr_blcor"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_blcor"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_blcor"), "items");
+			GiveItem2Character(characterFromID("wr_blcor"), "blade4");
+			EquipCharacterByItem(characterFromID("wr_blcor"), "blade4");
+
+			RemoveCharacterEquip(characterFromID("wr_kor"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_kor"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_kor"), "items");
+			GiveItem2Character(characterFromID("wr_kor"), "blade4");
+			EquipCharacterByItem(characterFromID("wr_kor"), "blade4");
+
+			RemoveCharacterEquip(characterFromID("wr_blm"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_blm"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_blm"), "items");
+			GiveItem2Character(characterFromID("wr_blm"), "blade4");
+			EquipCharacterByItem(characterFromID("wr_blm"), "blade4");
+
+			RemoveCharacterEquip(characterFromID("wr_9SNat"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_9SNat"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_9SNat"), "items");
+			GiveItem2Character(characterFromID("wr_9SNat"), "blade4");
+			EquipCharacterByItem(characterFromID("wr_9SNat"), "blade4");
+
+			RemoveCharacterEquip(characterFromID("wr_cor4"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_cor4"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_cor4"), "items");
+			GiveItem2Character(characterFromID("wr_cor4"), "bladeA2");
+			EquipCharacterByItem(characterFromID("wr_cor4"), "bladeA2");
+			GiveItem2Character(characterFromID("wr_cor4"), "sextant");
+		break;
+
+		case "Turks_enemy0":
+			LAi_SetHP(CharacterFromID("wr_boc4"), 100.0, 100.0);
+			LAi_SetActorType(CharacterFromID("wr_boc4"));
+			LAi_ActorAttack(CharacterFromID("wr_boc4"), Pchar, "");
+
+			pchar.quest.Turks_enemy1.win_condition.l1 = "locator";
+			pchar.quest.Turks_enemy1.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_enemy1.win_condition.l1.locator_group = "quest";
+			pchar.quest.Turks_enemy1.win_condition.l1.locator = "fight1";
+			pchar.quest.Turks_enemy1.win_condition = "Turks_enemy1";
+		break;
+
+		case "Turks_enemy1":
+			LAi_SetHP(CharacterFromID("wr_18_1"), 100.0, 100.0);
+			LAi_SetActorType(CharacterFromID("wr_18_1"));
+			ChangeCharacterAddressGroup(CharacterFromID("wr_18_1"), "Turks_port", "quest", "enemy1");
+			
+			LAi_QuestDelay("Turks_enemy1_A", 0.5);
+		break;
+
+		case "Turks_enemy1_A":
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(CharacterFromID("wr_18_1"), "Turks_port", "quest", "enemy2");
+			LAi_SetActorType(CharacterFromID("wr_18_1"));
+			LAi_ActorAttack(CharacterFromID("wr_18_1"), Pchar, "");
+
+			pchar.quest.Turks_musket.win_condition.l1 = "locator";
+			pchar.quest.Turks_musket.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_musket.win_condition.l1.locator_group = "box";
+			pchar.quest.Turks_musket.win_condition.l1.locator = "box8";
+			pchar.quest.Turks_musket.win_condition = "Turks_musket";
+		break;
+
+		case "Turks_musket":
+			LAi_QuestDelay("pchar_ohoh", 0.01);
+			Logit(LanguageConvertString(tmpLangFileID,"It's a trap! I have to creep under the musket."));
+
+			pchar.quest.Turks_musket_fire.win_condition.l1 = "locator";
+			pchar.quest.Turks_musket_fire.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_musket_fire.win_condition.l1.locator_group = "quest";
+			pchar.quest.Turks_musket_fire.win_condition.l1.locator = "fight2";
+			pchar.quest.Turks_musket_fire.win_condition = "Turks_musket_fire";
+		break;
+
+		case "Turks_to_fight2":
+			PlaySound("PEOPLE\grass_turn.wav");
+			ChangeCharacterAddressGroup(Pchar, "Turks_port", "quest", "fight2");
+
+			LAi_QuestDelay("Turks_to_musket", 1.0);
+		break;
+
+		case "Turks_to_musket":
+			PlaySound("PEOPLE\grass_turn.wav");
+			ChangeCharacterAddressGroup(Pchar, "Turks_port", "quest", "musket");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
+			LAi_QuestDelay("pchar_puh", 1.0);
+			LAi_QuestDelay("pchar_puh", 1.0);
+		break;
+
+		case "Turks_musket_fire":
+			PlaySound("OBJECTS\DUEL\pistol_bbus.wav");
+			CreateParticleSystem("gunfire" , -2.3, 10.8, -50.1, -2.3, 10.8, -50.1, sti(20) );
+
+			if(CheckAttribute(Pchar, "Turks_creep") && Pchar.Turks_creep == "yes")
+			{
+				pchar.quest.Turks_cannon.win_condition.l1 = "locator";
+				pchar.quest.Turks_cannon.win_condition.l1.location = "Turks_port";
+				pchar.quest.Turks_cannon.win_condition.l1.locator_group = "quest";
+				pchar.quest.Turks_cannon.win_condition.l1.locator = "fight3";
+				pchar.quest.Turks_cannon.win_condition = "Turks_cannon";
+			}
+			else LAi_KillCharacter(Pchar);
+		break;
+
+		case "Turks_cannon":
+			if(CheckAttribute(Pchar, "killed_wr_officers"))
+			{
+				switch(Pchar.killed_wr_officers)
+				{
+					case "0":
+						GiveItem2Character(characterFromID("wr_cor4"), "pistol203");
+						EquipCharacterByItem(characterFromID("wr_cor4"), "pistol203");
+						GiveItem2Character(characterFromID("wr_cor4"), "ammobag1");
+						TakenItems(characterFromID("wr_cor4"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_cor4"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Dampier_items0_check", 0.1);
+					break;
+
+					case "1":
+						GiveItem2Character(characterFromID("wr_cor4"), "pistol201");
+						GiveItem2Character(characterFromID("wr_cor4"), "pistol204");
+						EquipCharacterByItem(characterFromID("wr_cor4"), "pistol201");
+						TakenItems(characterFromID("wr_cor4"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_cor4"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Dampier_items1_check", 0.1);
+					break;
+
+					case "2":
+						GiveItem2Character(characterFromID("wr_cor4"), "pistol205");
+						GiveItem2Character(characterFromID("wr_cor4"), "pistol202");
+						EquipCharacterByItem(characterFromID("wr_cor4"), "pistol205");
+						TakenItems(characterFromID("wr_cor4"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_cor4"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Dampier_items2_check", 0.1);
+					break;
+
+					case "3":
+						GiveItem2Character(characterFromID("wr_cor4"), "pistol206");
+						GiveItem2Character(characterFromID("wr_cor4"), "pistolbelt");
+						EquipCharacterByItem(characterFromID("wr_cor4"), "pistol206");
+						TakenItems(characterFromID("wr_cor4"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_cor4"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Dampier_items3_check", 0.1);
+					break;
+				}
+			}
+
+			LAi_QuestDelay("Turks_cannon_turn", 2.0);
+
+			pchar.quest.Turks_cannon_escape.win_condition.l1 = "location";
+			pchar.quest.Turks_cannon_escape.win_condition.l1.location = "Turks_balcony_room";
+			pchar.quest.Turks_cannon_escape.win_condition = "Turks_cannon_escape";
+		break;
+
+		case "Dampier_items0_check":
+			if(CheckCharacterItem(Pchar,"pistol203") && CheckCharacterItem(Pchar,"ammobag1"))
+			{
+				LAi_QuestDelay("Turks_jump_open", 0.1);
+			}
+			else LAi_QuestDelay("Dampier_items0_check", 0.5);//loop check
+		break;
+
+		case "Dampier_items1_check":
+			if(CheckCharacterItem(Pchar,"pistol201") && CheckCharacterItem(Pchar,"pistol204"))
+			{
+				LAi_QuestDelay("Turks_jump_open", 0.1);
+			}
+			else LAi_QuestDelay("Dampier_items1_check", 0.5);//loop check
+		break;
+
+		case "Dampier_items2_check":
+			if(CheckCharacterItem(Pchar,"pistol205") && CheckCharacterItem(Pchar,"pistol202"))
+			{
+				LAi_QuestDelay("Turks_jump_open", 0.1);
+			}
+			else LAi_QuestDelay("Dampier_items2_check", 0.5);//loop check
+		break;
+
+		case "Dampier_items3_check":
+			if(CheckCharacterItem(Pchar,"pistol206") && CheckCharacterItem(Pchar,"pistolbelt"))
+			{
+				LAi_QuestDelay("Turks_jump_open", 0.1);
+			}
+			else LAi_QuestDelay("Dampier_items3_check", 0.5);//loop check
+		break;
+
+		case "Turks_jump_open":
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "quest", "jump", 0.001);
+			Locations[FindLocation("Turks_port")].locators_radius.quest.jump = 0.001;
+
+			pchar.quest.Turks_splash.win_condition.l1 = "locator";
+			pchar.quest.Turks_splash.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_splash.win_condition.l1.locator_group = "quest";
+			pchar.quest.Turks_splash.win_condition.l1.locator = "splash";
+			pchar.quest.Turks_splash.win_condition = "Turks_splash";
+		break;	
+
+		case "Turks_cannon_turn":
+			if(Pchar.location == "Turks_port") 
+			{
+				LAi_SetActorType(Pchar);
+				LAi_ActorTurnToLocator(Pchar, "quest", "look1");
+
+				LAi_QuestDelay("pchar_playertype", 1.0);
+			}
+
+			LAi_QuestDelay("Turks_cannon_fire", 2.0);
+		break;
+
+		case "Turks_cannon_fire":
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire_01.wav");
+			CreateParticleSystem("gunfire" , 15.0, 6.3, -42.3, 15.0, 6.3, -42.3, sti(20) );
+
+			CreateParticleSystem("canfire2" , 15.0, 6.3, -42.3, 5.1, 4.0, 0.0, sti(20) );		//19
+			CreateParticleSystem("gunfire_revolver" , 15.0, 6.3, -42.3, 5.1, 4.0, 0.0, sti(20) );	//66
+			CreateParticleSystem("smoke_inv" , 15.0, 6.3, -42.3, 5.1, 4.0, 0.0, sti(20) );	
+
+			LAi_QuestDelay("Turks_cannon_fire1", 1.0);
+		break;
+
+		case "Turks_cannon_fire1":
+			if(Pchar.location == "Turks_port") 
+			{
+				Locations[FindLocation("Turks_port")].reload.l17.disable = 1;
+				LAi_KillCharacter(Pchar);
+			}
+		break;
+
+		case "Turks_cannon_escape":
+			pchar.quest.Turks_enemy2.win_condition.l1 = "location";
+			pchar.quest.Turks_enemy2.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_enemy2.win_condition = "Turks_enemy2";
+		break;
+
+		case "Turks_enemy2":
+			LAi_SetHP(CharacterFromID("wr_blcor"), 100.0, 100.0);
+			LAi_SetActorType(CharacterFromID("wr_blcor"));
+			LAi_ActorAttack(CharacterFromID("wr_blcor"), Pchar, "");
+
+			pchar.quest.Turks_enemy3.win_condition.l1 = "locator";
+			pchar.quest.Turks_enemy3.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_enemy3.win_condition.l1.locator_group = "quest";
+			pchar.quest.Turks_enemy3.win_condition.l1.locator = "fight4";
+			pchar.quest.Turks_enemy3.win_condition = "Turks_enemy3";
+		break;
+
+		case "Turks_enemy3":
+			LAi_SetHP(CharacterFromID("wr_kor"), 100.0, 100.0);
+			LAi_SetActorType(CharacterFromID("wr_kor"));
+			LAi_ActorAttack(CharacterFromID("wr_kor"), Pchar, "");
+
+			pchar.quest.Turks_enemy4.win_condition.l1 = "locator";
+			pchar.quest.Turks_enemy4.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_enemy4.win_condition.l1.locator_group = "quest";
+			pchar.quest.Turks_enemy4.win_condition.l1.locator = "fight5";
+			pchar.quest.Turks_enemy4.win_condition = "Turks_enemy4";
+		break;
+
+		case "Turks_enemy4":
+			LAi_SetHP(CharacterFromID("wr_9SNat"), 100.0, 100.0);
+			PlaySound("PEOPLE\recoil.wav");
+			LAi_SetActorType(CharacterFromID("wr_9SNat"));
+			ChangeCharacterAddressGroup(CharacterFromID("wr_9SNat"), "Turks_port", "quest", "shot3");		
+
+			LAi_QuestDelay("pchar_staytype", 1.0);
+			LAi_QuestDelay("Turks_enemy5", 2.0);
+		break;
+
+		case "Turks_enemy5":
+			PlaySound("PEOPLE\jump_roof.wav");
+			ChangeCharacterAddressGroup(CharacterFromID("wr_blm"), "Turks_port", "quest", "enemy8");
+			LAi_SetActorType(CharacterFromID("wr_blm"));
+			LAi_SetHP(CharacterFromID("wr_blm"), 75.0, 75.0);
+			
+			LAi_QuestDelay("Turks_enemy5_1", 1.0);
+		break;
+
+		case "Turks_enemy5_1":
+			LAi_QuestDelay("Pchar_huh", 0.001);
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "enemy8");
+
+			LAi_QuestDelay("Turks_enemy5_2", 1.0);
+		break;
+
+		case "Turks_enemy5_2":
+			LAi_SetPlayerType(Pchar);
+			LAi_SetActorType(CharacterFromID("wr_blm"));
+			LAi_SetActorType(CharacterFromID("wr_9SNat"));
+			LAi_ActorAttack(CharacterFromID("wr_blm"), Pchar, "");
+			LAi_ActorAttack(CharacterFromID("wr_9SNat"), Pchar, "");
+
+			pchar.quest.Turks_enemy6.win_condition.l1 = "locator";
+			pchar.quest.Turks_enemy6.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_enemy6.win_condition.l1.locator_group = "quest";
+			pchar.quest.Turks_enemy6.win_condition.l1.locator = "fight6";
+			pchar.quest.Turks_enemy6.win_condition = "Turks_enemy6";
+		break;
+
+		case "Turks_enemy6":
+			DoQuickSave();
+			LAi_SetImmortal(characterFromID("wr_cor4"), false);
+			LAi_SetHP(CharacterFromID("wr_cor4"), 250.0, 250.0);
+			LAi_SetActorType(CharacterFromID("wr_cor4"));
+			LAi_ActorAttack(CharacterFromID("wr_cor4"), Pchar, "");
+			PlaySound("VOICE\ENGLISH\dampier_sailorboy.wav");
+
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box3", 0.001);
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box4", 0.001);
+
+			Pchar.quest.Turks_enemy6_dead.win_condition.l1 = "NPC_Death";
+			Pchar.quest.Turks_enemy6_dead.win_condition.l1.character = "wr_cor4";
+			Pchar.quest.Turks_enemy6_dead.win_condition = "Turks_enemy6_dead";
+
+			LAi_QuestDelay("Turks_jump", 0.1);
+		break;
+
+		case "Turks_enemy6_dead":
+			Pchar.killed_wr_officers = sti(Pchar.killed_wr_officers) + 1;
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box3", 0.5);
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box4", 0.5);
+
+			LAi_QuestDelay("Turks_steplocks", 0.1);
+		break;
+	
+		case "Turks_jump":
+			pchar.quest.Turks_jump_back.win_condition.l1 = "locator";
+			pchar.quest.Turks_jump_back.win_condition.l1.location = "Turks_port";
+			pchar.quest.Turks_jump_back.win_condition.l1.locator_group = "quest";
+			pchar.quest.Turks_jump_back.win_condition.l1.locator = "jump";
+			pchar.quest.Turks_jump_back.win_condition = "Turks_jump_back";
+		break;
+
+		case "Turks_jump_back":
+			LAi_QuestDelay("pchar_ohoh", 0.01);
+			Logit(LanguageConvertString(tmpLangFileID,"I have not looted Dampier!"));
+			ChangeCharacterAddressGroup(Pchar, "Turks_port", "quest", "jump_back");
+
+			LAi_QuestDelay("Turks_jump", 0.5);
+		break;
+	
+		case "Turks_splash":
+			LAi_QuestDelay("Turks_splash1", 0.5);
+		break;
+
+		case "Turks_splash1":
+			PlaySound("OBJECTS\SHIPCHARGE\ball_splash2.wav");
+			CreateParticleSystemX("ball_splash", 41.2, -4.0, 18.4, 0.0, 0.0, 0.0, 0);
+			if(IsEquipCharacterByItem(Pchar, "longrifle_W")) {RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);}
+			TakeItemFromCharacter(pchar, "longrifle_W");
+			if(IsEquipCharacterByItem(Pchar, "blade4") || IsEquipCharacterByItem(Pchar, "bladeA2")) {RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);}	
+			TakenItems(Pchar, "blade4", -6);
+		//	TakeItemFromCharacter(pchar, "bladeA2");
+			Pchar.quest.hammer_gp = 0;
+			Locations[FindLocation("Turks_port")].locators_radius.box.box10 = 0.7;
+		break;
+
+		case "Turks_to_step_up1":
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(Pchar, "Turks_port", "quest", "step_up1");
+			LAi_SetPlayerType(pchar);
+		break;
+
+		case "Turks_to_box6":
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(Pchar, "Turks_port", "box", "box7");
+			LAi_SetPlayerType(pchar);
+		break;
+
+		case "Turks_to_step_up3":
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(Pchar, "Turks_port", "quest", "step_up3");
+			LAi_SetPlayerType(pchar);
+		break;
+	//...............................................................................................
 		case "Turks_steplocks":
 			pchar.quest.Turks_steplockM.win_condition.l1 = "locator";
 			pchar.quest.Turks_steplockM.win_condition.l1.location = "Turks_port";
@@ -50024,7 +54334,6 @@ void QuestComplete(string sQuestName)
 					//hatch must be closed too
 					if(Locations[FindLocation(Pchar.location)].models.always.locators == "Margarita_locators_KR_closed")
 					{
-
 						LAi_SetStayType(Pchar);
 						PlaySound("INTERFACE\step_path.wav");
 						Locations[FindLocation(Pchar.location)].environment.sea = "true";
@@ -50137,8 +54446,11 @@ void QuestComplete(string sQuestName)
 			{
 				PlaySound("INTERFACE\closed_door.wav");	
 			}
-			else PlaySound("INTERFACE\closet_Open.wav");	
-
+			else 
+			{
+				PlaySound("INTERFACE\closet_Open.wav");	
+				SetCurrentTime(12, 0);			//brown sewer water looks best daytime
+			}
 			LAi_QuestDelay("Turks_steplockL_4", 1.0);
 		break;
 
@@ -50209,15 +54521,937 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "fall_to_sewer3":
+			SetNextWeather("Clear");
 			PlaySound("OBJECTS\VOICES\DEAD\male\dead8.wav");
 			Locations[FindLocation("Turks_port")].reload.l16.autoreload = "0";
+
+			Pchar.quest.blade_gp_dry_check.win_condition.l1 = "item";
+			Pchar.quest.blade_gp_dry_check.win_condition.l1.character = Pchar.id;
+			Pchar.quest.blade_gp_dry_check.win_condition.l1.item = "blade_gp_dry";
+			Pchar.quest.blade_gp_dry_check.win_condition = "blade_gp_dry_check";
+
+			pchar.quest.bladebottle_CB2_check.win_condition.l1 = "location";
+			pchar.quest.bladebottle_CB2_check.win_condition.l1.location = "Turks_wreck_shore";
+			pchar.quest.bladebottle_CB2_check.win_condition = "bladebottle_CB2_check";
 		break;
 
-//_________________________________________________________________________________________________________________
-//pär Charleston Maltains
+	//-------------------------------------------------------------------------------------
+	// Turks_wreck_shore
+		
+		case "Turks_shore_turn_to_splash":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "splash");
+
+			LAi_QuestDelay("pchar_playertype", 1.3);
+		break;
+
+		case "Turks_shore_to_box7":
+			ChangeCharacterAddressGroup(Pchar, "Turks_wreck_shore", "box", "box7");
+		break;
+
+		case "Turks_shore_to_box10":
+			ChangeCharacterAddressGroup(Pchar, "Turks_wreck_shore", "box", "box10");
+		break;
+
+		case "bladebottle_CB2_check":
+			if(CheckCharacterItem(Pchar,"bladebottle_CB2"))
+			{
+				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+				EquipCharacterByItem(pchar, "bladebottle_CB2");
+				PlaySound("INTERFACE\glass1.wav");
 	
+				LAi_QuestDelay("bladebottle_CB2_check2", 1.5);
+			}
+			else
+			{
+				LAi_QuestDelay("bladebottle_CB2_check", 0.5);	//loop check
+			}
+		break;
+
+		case "bladebottle_CB2_check2":
+			PlaySound("PEOPLE\creak2.wav");
+			ChangeCharacterAddressGroup(Pchar, "Turks_wreck_shore", "box", "box9");
+		break;
+
+	// BB_sloop_wreck_hold
+
+		case "blade_gp_dry_check":
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			EquipCharacterByItem(pchar, "blade_gp_dry");
+			Locations[FindLocation("BB_sloop_wreck_cabin")].locators_radius.reload.reload2 = 0.001;	//to shore
+
+			pchar.quest.blade_gp_dry_dialog.win_condition.l1 = "locator";
+			pchar.quest.blade_gp_dry_dialog.win_condition.l1.location = "BB_sloop_wreck_hold";
+			pchar.quest.blade_gp_dry_dialog.win_condition.l1.locator_group = "goto";
+			pchar.quest.blade_gp_dry_dialog.win_condition.l1.locator = "goto3";
+			pchar.quest.blade_gp_dry_dialog.win_condition = "blade_gp_dry_dialog";
+		break;
+
+		case "blade_gp_dry_dialog":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "gp_dry";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "dialog_gp_dry_done":
+			LAi_QuestDelay("dialog_gp_dry_done1", 1.0);
+		break;
+
+		case "dialog_gp_dry_done1":
+			AddQuestRecord("Caesar", "8");
+			DoQuickSave();
+		break;
+
+	// BB_sloop_wreck_cabin
+
+		case "place_gp_dry":
+			Locations[FindLocation("BB_sloop_wreck_cabin")].locators_radius.reload.reload2 = 1.0;	//to shore
+			Locations[FindLocation(Pchar.location)].models.always.l2 = "gp_dry";
+
+			Locations[FindLocation("BB_sloop_wreck_cabin")].image = "";
+			DoQuestReloadToLocation("BB_sloop_wreck_cabin", "goto", "free", "gpmap_free");
+		break;
+
+		case "gpmap_free":
+			LAi_SetFightMode(pchar, false);
+			LAi_SetPlayerType(Pchar);
+
+			Locations[FindLocation("BB_sloop_wreck_cabin")].image = "Deck_Capsm.tga";
+			LAi_LocationFightDisable(&Locations[FindLocation("BB_sloop_wreck_cabin")], true);
+
+			if(CheckCharacterItem(Pchar,"bladebottle_CE0")) 
+			{
+				LAi_QuestDelay("pchar_yah", 0.1);
+
+				LAi_QuestDelay("skip_empty_bottle", 1.0);
+			}
+		break;
+
+		case "wine_on_gp_dry":
+			PlaySound("AMBIENT\TAVERN\tinkle1.wav");
+
+			LAi_QuestDelay("wine_on_gp_dry1", 3.0);
+		break;
+
+		case "wine_on_gp_dry1":
+			Locations[FindLocation("BB_sloop_wreck_cabin")].models.always.l2 = "gp_wet";
+			Locations[FindLocation("BB_sloop_wreck_cabin")].models.always.locators = "capsm_l_KR_map1";
+
+			Locations[FindLocation("BB_sloop_wreck_cabin")].image = "";
+			DoQuestReloadToLocation("BB_sloop_wreck_cabin", "goto", "free", "gpmap_free");
+		break;
+
+		case "skip_empty_bottle":
+			PlaySound("AMBIENT\TAVERN\tinkle4.wav");
+			TakeItemFromCharacter(Pchar, "bladebottle_CE0");
+			EquipCharacterByItem(Pchar, "bladeX4");
+		break;
+
+		case "hand_on_gp_wet":
+	/*
+			Pchar.quest.map_piece_Caesar.win_condition.l1 = "item";
+			Pchar.quest.map_piece_Caesar.win_condition.l1.character = Pchar.id;
+			Pchar.quest.map_piece_Caesar.win_condition.l1.item = "gpmap";
+			Pchar.quest.map_piece_Caesar.win_condition = "map_piece_Caesar";
+	*/
+			LAi_QuestDelay("gpmap_check", 0.01);
+
+			Locations[FindLocation("BB_sloop_wreck_cabin")].models.always.locators = "capsm_l_KR_map2";
+			Locations[FindLocation("BB_sloop_wreck_cabin")].locators_radius.randitem.randitem1 = 1.0;	//enable map-piece
+			Locations[FindLocation("BB_sloop_wreck_cabin")].locators_radius.box.box2 = 0.0001;
+
+			Locations[FindLocation("BB_sloop_wreck_cabin")].image = "";
+			DoQuestReloadToLocation("BB_sloop_wreck_cabin", "goto", "free", "gpmap_free");
+		break;
+
+		case "stuck_at_gpmap":
+			//from itemlogic BB_sloop_wreck_cabin
+			if(!LAi_IsFightMode(Pchar))
+			{
+				ChangeCharacterAddressGroup(Pchar, "BB_sloop_wreck_cabin", "goto", "free");
+				LAi_LocationFightDisable(&Locations[FindLocation("BB_sloop_wreck_cabin")], true);
+			}
+			else LAi_QuestDelay("stuck_at_gpmap", 1.0);//loops until not fightmode
+		break;
+
+		case "gpmap_check":
+			if(CheckCharacterItem(Pchar,"gpmap"))
+			{
+				PlaySound("INTERFACE\paper_small.wav");
+				TakeItemFromCharacter(pchar, "gpmap");
+			/*
+				if(CheckAttribute(Pchar, "killed_wr_officers"))
+				{
+					switch(Pchar.killed_wr_officers)
+					{
+						case "1": GiveItem2Character(Pchar, "mapBB2"); break;
+
+						case "2": GiveItem2Character(Pchar, "mapBB3"); break;
+
+						case "3": GiveItem2Character(Pchar, "mapBB4"); break;
+
+						case "4": GiveItem2Character(Pchar, "mapBB5"); break;
+					}
+				}
+			*/
+				
+				GiveItem2Character(Pchar, "mapBB2");
+
+				Pchar.Caesar_map = "picked_up";
+				AddQuestRecord("Caesar", "9");
+				CloseQuestHeader("Caesar");	
+			}
+			else
+			{
+				LAi_QuestDelay("gpmap_check", 0.5);	//loop check
+			}
+		break;
+	
+//_________________________________________________________________________________________________________________
+//pär start Hands Willemstad
+		
+		case "start_Hands_Willemstad":
+			//from book read (in items.c) or StartStoryline.c
+			ChangeCharacterAddressGroup(CharacterFromID("WR_beggar1"), "Willemstad_port", "goto", "goto10");
+			ChangeCharacterAddressGroup(CharacterFromID("WR_beggar2"), "Willemstad_port", "goto", "goto15");
+			ChangeCharacterAddressGroup(CharacterFromID("WR_beggar3"), "Willemstad_port", "goto", "goto19");
+			
+			ChangeCharacterAddressGroup(CharacterFromID("WR_beggar4"), "Willemstad_town", "goto", "goto9");
+			ChangeCharacterAddressGroup(CharacterFromID("WR_beggar5"), "Willemstad_town", "goto", "goto27");
+			ChangeCharacterAddressGroup(CharacterFromID("WR_beggar6"), "Willemstad_town", "goto", "goto37");
+
+			ChangeCharacterAddressGroup(CharacterFromID("WR_beggar7"), "Willemstad_town_3", "officers", "reload18_1");
+			ChangeCharacterAddressGroup(CharacterFromID("WR_beggar8"), "Willemstad_town_3", "goto", "goto18");
+		break;
+
+		case "are_you_Hands":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "are_you_Hands";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "are_you_Hands_yes":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "are_you_hands_yes";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+		
+		case "beggar_is_Hands_prepare":
+			Characters[GetCharacterIndex("Hands")].name = TranslateString("","Israel");
+			Characters[GetCharacterIndex("Hands")].lastname = TranslateString("","Hands");
+
+			LAi_QuestDelay("beggar_is_Hands", 0.5);
+		break;
+
+		case "beggar_is_Hands":
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "beggar_is_Hands";
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorDialog(characterFromID("Hands"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Hands"));
+		break;
+
+		case "Hands_shot_scene":
+			float Php_CUR;
+			Php_CUR = LAi_GetCharacterHP(Pchar);
+
+			if(CheckAttribute(Pchar,"model"))
+			{
+				switch(Pchar.model)
+				{
+					case "Howard_Pyle_3":
+						Pchar.Pyle_model = "3";	
+					break;
+
+					case "Howard_Pyle_4":
+						Pchar.Pyle_model = "4";		
+					break;
+
+					case "Howard_Pyle_5":
+						Pchar.Pyle_model = "5";		
+					break;
+
+					case "Howard_Pyle":
+						Pchar.Pyle_model = "0";		
+					break;
+				}
+			}
+
+			SetModel(Pchar, "bb_Hands1", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+
+			DeleteAttribute(characterFromID("Brthug1"), "items");
+			
+			if(CheckAttribute(Pchar, "items"))
+			{
+				makearef(ifrom, Pchar.items);
+				Characters[GetCharacterIndex("Brthug1")].items = "";
+				makearef(ito, Characters[GetCharacterIndex("Brthug1")].items);
+				CopyAttributes(&ito, &ifrom);
+				DeleteAttribute(Pchar, "items");
+			}
+		
+			GiveItem2Character(Pchar, "bladeX4");
+			GiveItem2Character(Pchar, "blade1");	
+			EquipCharacterByItem(Pchar, "blade1");
+			GiveItem2Character(Pchar, "pistol206");
+			EquipCharacterByItem(Pchar, "pistol206");
+			TakenItems(Pchar, "gunpowder", 6);
+			TakenItems(Pchar, "pistolbullets", 6);
+
+			pchar.old.name = "Israel";
+			pchar.old.lastname = "Hands";
+			pchar.name = TranslateString("","Israel");
+			pchar.lastname = TranslateString("","Hands");
+
+			SetModel(characterFromID("Teach"), "bb_Teach3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+			ChangeCharacterAddressGroup(CharacterFromID("Teach"), "BB_QAR_cabinH", "sit", "sit1");
+			LAi_SetSitType(characterFromID("Teach"));
+			ChangeCharacterAddressGroup(CharacterFromID("Bonnet"), "BB_QAR_cabinH", "sit", "sit5");
+			LAi_SetSitType(characterFromID("Bonnet"));
+		
+			RemoveCharacterEquip(characterFromID("Teach"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("Teach"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("Teach"), "items");
+			GiveItem2Character(characterFromID("Teach"), "bladeX4");
+			GiveItem2Character(characterFromID("Teach"), "bladep0");
+			EquipCharacterbyItem(characterFromID("Teach"), "bladep0");
+			GiveItem2Character(characterFromID("Teach"), "pistol0");
+			EquipCharacterbyItem(characterFromID("Teach"), "pistol0");
+
+			SetCurrentTime(21.00, 0);
+			SetNextWind("N",30);
+
+			LAi_SetPlayerType(pchar);
+
+			SetNextWeather("Clear");
+			Pchar.quest.JRH_rain = "Clear";
+			DoQuestReloadToLocation("BB_QAR_cabinH", "sit", "teach", "Hands_shot_scene1");
+		break;
+
+		case "Hands_shot_scene1":
+			LAi_SetSitType(pchar);
+
+			LAi_QuestDelay("Hands_shot_scene2", 4.0);
+		break;
+	//------------------------------------------------------------------------------------
+		case "Hands_shot_scene2":
+			logit("PILOT");
+			PlaySound("VOICE\ENGLISH\windem_drunk.wav");
+
+			LAi_QuestDelay("Hands_shot_scene3", 5.0);
+		break;
+
+		case "Hands_shot_scene3":
+			logit("EDWARD TEACH");
+			PlaySound("VOICE\ENGLISH\gr_Teach7.wav");
+
+			LAi_QuestDelay("Hands_shot_scene4", 4.0);
+		break;
+
+		case "Hands_shot_scene4":
+			logit("MERCHANT");
+			PlaySound("VOICE\ENGLISH\Poe_ok.wav");
+
+			LAi_QuestDelay("Hands_shot_scene5", 2.5);	
+		break;
+
+		case "Hands_shot_scene5":
+			logit("ISRAEL HANDS");
+			PlaySound("VOICE\ENGLISH\Odel_otherwise.wav");
+
+			LAi_QuestDelay("Hands_shot_scene6", 2.5);
+		break;
+
+		case "Hands_shot_scene6":
+			logit("STEDE BONNET");
+			PlaySound("VOICE\ENGLISH\Dave_Edna_4.wav");
+
+			LAi_QuestDelay("Hands_shot_scene7", 3.0);
+		break;
+
+		case "Hands_shot_scene7":
+			logit("EDWARD TEACH");
+			PlaySound("VOICE\ENGLISH\gr_Teach4.wav");
+
+			LAi_QuestDelay("Hands_shot_scene8", 4.0);
+		break;
+
+		case "Hands_shot_scene8":
+			logit("MERCHANT");
+			PlaySound("VOICE\ENGLISH\Poe_and.wav");
+
+			LAi_QuestDelay("Hands_shot_scene9", 2.5);
+		break;
+
+		case "Hands_shot_scene9":
+			logit("EDWARD TEACH");
+			PlaySound("VOICE\ENGLISH\gr_Teach12.wav");
+
+			LAi_QuestDelay("Hands_shot_scene10", 3.5);
+		break;
+
+		case "Hands_shot_scene10":
+			logit("STEDE BONNET");
+			PlaySound("VOICE\ENGLISH\Dave_Edna_2.wav");
+
+			LAi_QuestDelay("Hands_shot_scene11", 5.0);
+		break;
+
+		case "Hands_shot_scene11":
+			logit("ISRAEL HANDS");
+			PlaySound("VOICE\ENGLISH\gr_Hands1.wav");
+
+			LAi_QuestDelay("Hands_shot_scene12", 2.0);
+		break;
+
+		case "Hands_shot_scene12":
+			logit("PILOT");
+			PlaySound("VOICE\ENGLISH\Maynard_big_swindel.wav");
+
+			LAi_QuestDelay("Hands_shot_scene13", 4.5);		
+		break;
+
+		case "Hands_shot_scene13":
+			logit("EDWARD TEACH");
+			PlaySound("VOICE\ENGLISH\pir_capR3.wav");
+
+			LAi_QuestDelay("Hands_shot_scene14", 3.0);
+			LAi_QuestDelay("Hands_shot_scene14", 3.5);
+			LAi_QuestDelay("Hands_shot_scene15", 4.5);
+		break;
+
+		case "Hands_shot_scene14":
+			PlaySound("OBJECTS\DUEL\reload1.wav");
+		break;
+	//______________________________________RELOAD SOUNDS__________________________________________________
+		case "Hands_shot_scene15":
+			PauseAllSounds();//stops music
+			Locations[FindLocation("BB_QAR_cabinH")].type = "party";
+
+			LAi_QuestDelay("Hands_shot_scene15_A", 0.5);	
+			LAi_QuestDelay("Hands_shot_scene16", 1.5);
+		break;
+
+		case "Hands_shot_scene15_A":
+			logit("ISRAEL HANDS");
+			LAi_QuestDelay("pchar_ohoh", 0.001);
+		break;
+
+		case "Hands_shot_scene16":
+			logit("MERCHANT");
+			PlaySound("VOICE\ENGLISH\Poe_smoke.wav");
+			PlaySound("PEOPLE\creak2.wav");
+			LAi_SetActorType(characterFromID("QAR_guest_merchant"));
+			ChangeCharacterAddressGroup(characterFromID("QAR_guest_merchant"),"BB_QAR_cabinH","goto","merch_stay");
+			
+			LAi_QuestDelay("Hands_shot_scene18", 2.0);
+			LAi_QuestDelay("Hands_shot_scene19", 5.0);
+		break;
+	
+		case "Hands_shot_scene18":
+			LAi_ActorGoToLocator(characterFromID("QAR_guest_merchant"), "reload", "reload1_back", "Hands_shot_scene18_A", 6.0);
+		break;
+
+		case "Hands_shot_scene18_A":
+			ChangeCharacterAddressGroup(characterFromID("QAR_guest_merchant"), "none", "", "");
+			PlaySound("INTERFACE\closed_door.wav");
+		break;
+
+		case "Hands_shot_scene19":
+			logit("PILOT");
+			PlaySound("VOICE\ENGLISH\Maynard_steady_there.wav");
+
+			LAi_QuestDelay("Hands_shot_scene20", 3.0);		
+		break;
+
+		case "Hands_shot_scene20":
+			logit("EDWARD TEACH");
+			PlaySound("VOICE\ENGLISH\pir_capR5.wav");
+
+			LAi_QuestDelay("Hands_shot_scene21", 5.5);
+		break;
+	
+		case "Hands_shot_scene21":
+			logit("STEDE BONNET");
+			PlaySound("VOICE\ENGLISH\Dave_Edna_3.wav");
+
+			LAi_QuestDelay("Hands_shot_scene22", 2.5);
+		break;
+
+		case "Hands_shot_scene22":
+			logit("EDWARD TEACH");
+			PlaySound("VOICE\ENGLISH\pir_capR4.wav");
+
+			LAi_QuestDelay("Hands_shot_scene23", 5.0);
+		break;
+
+		case "Hands_shot_scene23":
+			LAi_SetStayType(characterFromID("Teach"));
+			PlaySound("OBJECTS\DUEL\censer.wav");
+			PlaySound("OBJECTS\DUEL\censer.wav");
+			LAi_QuestDelay("pchar_puh", 0.01);
+			LAi_QuestDelay("pchar_puh", 0.01);
+
+			LAi_QuestDelay("Hands_shot_scene23_A", 0.35);
+			LAi_QuestDelay("Hands_shot_scene24", 1.0);
+		break;
+
+		case "Hands_shot_scene23_A":
+			LAi_SetSitType(characterFromID("Teach"));
+		break;
+
+		case "Hands_shot_scene24":
+			SetNextWeather("Clear");
+			Pchar.quest.JRH_rain = "Clear";
+			Locations[FindLocation("BB_QAR_cabinH")].models.always.l1 = "Cabin01_dark";
+			Locations[FindLocation("BB_QAR_cabinH")].models.always.locators = "Cabin01_l_Q2H_2";
+			SetNextWind("N",30);
+			Locations[FindLocation("BB_QAR_cabinH")].type = "silent_cave_seashore";
+			Locations[FindLocation("BB_QAR_cabinH")].image = "";			
+
+			DoQuestReloadToLocation("BB_QAR_cabinH", "sit", "teach", "Hands_shot_scene26");
+		break;
+	//______________________________________LIGHTS OUT_____________________________________________________
+
+		case "Hands_shot_scene26":
+			logit("STEDE BONNET");
+			PlaySound("VOICE\ENGLISH\Dave_Edna_5.wav");
+
+			LAi_QuestDelay("Hands_shot_scene27", 4.0);
+		break;
+
+		case "Hands_shot_scene27":
+			logit("PILOT");
+			PlaySound("PEOPLE\creak2.wav");
+			PlaySound("VOICE\ENGLISH\blaze_drunk2.wav");
+			LAi_SetActorType(characterFromID("QAR_guest_pilot"));
+			ChangeCharacterAddressGroup(characterFromID("QAR_guest_pilot"),"BB_QAR_cabinH","goto","pilot_stay");
+
+			LAi_QuestDelay("Hands_shot_scene28", 2.0);
+			LAi_QuestDelay("Hands_shot_scene28_B", 2.0);
+			LAi_QuestDelay("Hands_shot_scene28_B", 3.0);
+			LAi_QuestDelay("Hands_shot_scene28_B", 4.0);
+			LAi_QuestDelay("Hands_shot_scene29", 5.0);		
+		break;
+
+		case "Hands_shot_scene28":
+			LAi_ActorGoToLocator(characterFromID("QAR_guest_pilot"), "reload", "reload1_back", "Hands_shot_scene28_A", 6.0);
+		break;
+
+		case "Hands_shot_scene28_A":
+			ChangeCharacterAddressGroup(characterFromID("QAR_guest_pilot"), "none", "", "");
+			PlaySound("INTERFACE\closed_door.wav");
+		break;
+
+		case "Hands_shot_scene28_B":
+			ChangeCharacterAddressGroup(Pchar,"BB_QAR_cabinH","sit","teach");	//reset Hands being pushed by the pilot
+		break;
+
+		case "Hands_shot_scene29":
+			logit("ISRAEL HANDS");
+			PlaySound("VOICE\ENGLISH\blaze_hah.wav");
+
+			LAi_QuestDelay("Hands_shot_scene30", 2.5);
+		break;
+
+		case "Hands_shot_scene30":
+			logit("EDWARD TEACH");
+			PlaySound("VOICE\ENGLISH\pir_capR2.wav");
+
+			LAi_QuestDelay("Hands_shot_scene31", 3.5);
+		break;
+
+		case "Hands_shot_scene31":
+			GetCharacterPos(characterFromID("Teach"), &u, &v, &w);
+			CreateParticleSystem("gunfire" , u+0.5, v+0.8, w, 0.0, 0.0, 0.0, sti(20) );
+			PlaySound("OBJECTS\DUEL\pistol_pocket2.wav");
+
+			LAi_QuestDelay("Hands_shot_scene32", 1.0);
+			LAi_QuestDelay("Hands_shot_scene_gunsmoke", 0.5);
+		break;
+
+		case "Hands_shot_scene_gunsmoke":
+			GetCharacterPos(characterFromID("Teach"), &u, &v, &w);
+			CreateParticleSystem("gunfire" , u+0.5, v+0.8, w, 0.0, 0.0, 0.0, sti(20) );
+		break;
+
+		case "Hands_shot_scene32":
+			Locations[FindLocation("BB_QAR_cabinH")].models.always.chair4 = "chair4_fallen";
+
+			DoQuestReloadToLocation("BB_QAR_cabinH", "sit", "teach", "Hands_shot_scene33");
+		break;
+	//______________________________________2 SHOTS________________________________________________________
+		case "Hands_shot_scene33":
+			PlaySound("OBJECTS\VOICES\body_fallen2.wav");
+
+			GetCharacterPos(characterFromID("Teach"), &u, &v, &w);
+			CreateParticleSystem("gunfire" , u+0.5, v+0.8, w, 0.0, 0.0, 0.0, sti(20) );
+
+			LAi_SetStayType(characterFromID("Bonnet"));
+			ChangeCharacterAddressGroup(characterFromID("Bonnet"),"BB_QAR_cabinH","goto","bonnet_stay");
+			
+			Php = LAi_GetCharacterHP(Pchar);
+			Php2 = Php/2;
+			LAi_ApplyCharacterDamage(Pchar, Php2);
+			LAi_SetPoorType(Pchar);
+
+			LAi_QuestDelay("Hands_shot_scene34", 1.0);
+		break;
+
+		case "Hands_shot_scene34":
+			logit("ISRAEL HANDS");
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead6.wav");
+
+			LAi_QuestDelay("Hands_shot_scene35", 2.5);
+		break;
+
+		case "Hands_shot_scene35":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "whats_the meaning";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "Hands_shot_scene36":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "I_shot_you";
+		break;
+	
+		case "Hands_shot_scene37":
+			logit("ISRAEL HANDS");
+			PlaySound("VOICE\ENGLISH\Odel_yourself_again.wav");
+
+			LAi_QuestDelay("Hands_shot_scene38", 3.5);
+		break;
+
+		case "Hands_shot_scene38":
+			Php = LAi_GetCharacterHP(Pchar);
+			Php2 = Php/2;
+			LAi_ApplyCharacterDamage(Pchar, Php2);
+			PlaySound("PEOPLE\jump.wav");
+			LAi_SetActorType(Pchar);
+			LAi_ActorSetLayMode(Pchar);
+			GetCharacterPos(Pchar, &u, &v, &w);
+			CreateParticleSystem("stars_short" , u, v+1, w, 0.0, 0.0, 0.0, sti(20) );
+
+			LAi_QuestDelay("Hands_shot_scene39", 2.0);
+		break;
+
+		case "Hands_shot_scene39":
+			LAi_SetActorType(characterFromID("Bonnet"));
+			LAi_ActorDialog(characterFromID("Bonnet"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Bonnet"));
+			Characters[GetCharacterIndex("Bonnet")].dialog.CurrentNode  = "Passed_out";
+		break;
+
+		case "Hands_shot_scene40":
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorDialog(characterFromID("Teach"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Teach"));
+			Characters[GetCharacterIndex("Teach")].dialog.CurrentNode  = "You_help_him";
+		break;
+
+		case "Hands_shot_scene41":
+			LAi_SetActorType(characterFromID("Teach"));	
+			LAi_ActorTurnToLocator(characterFromID("Teach"), "goto", "teach_door");
+
+			LAi_QuestDelay("Hands_shot_scene41_A", 1.5);
+		break;
+
+		case "Hands_shot_scene41_A":
+			PlaySound("PEOPLE\run_wood.wav");
+			ChangeCharacterAddressGroup(characterFromID("Teach"),"BB_QAR_cabinH","goto","teach_door");
+
+			LAi_QuestDelay("Hands_shot_scene42", 1.5);
+		break;
+
+		case "Hands_shot_scene42":
+			PlaySound("INTERFACE\closet_open.wav");
+
+			LAi_QuestDelay("Hands_shot_scene43", 1.5);
+		break;
+
+		case "Hands_shot_scene43":
+			PauseAllSounds();//stops music
+			Locations[FindLocation("BB_QAR_cabinH")].type = "silent_seashore";
+			PostEvent("LoadSceneSound", 0);
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(characterFromID("Teach"),"BB_QAR_cabinH","goto","teach_out");
+
+			LAi_QuestDelay("Hands_shot_scene44", 1.5);
+		break;
+
+		case "Hands_shot_scene44":
+			PlaySound("PEOPLE\run_wood.wav");
+			ChangeCharacterAddressGroup(characterFromID("Teach"),"BB_QAR_cabinH","goto","teach_railing");
+			LAi_SetActorType(characterFromID("Teach"));
+			LAi_ActorTurnToLocator(characterFromID("Teach"), "ships_other", "ship_4");
+
+			LAi_QuestDelay("Hands_shot_scene45", 1.5);
+		break;
+
+		case "Hands_shot_scene45":
+			PlaySound("VOICE\ENGLISH\G_hey_now.wav");
+			LAi_SetActorType(characterFromID("Bonnet"));
+			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "goto", "looting");
+
+			LAi_QuestDelay("Hands_shot_scene45_A", 1.5);
+		break;
+	
+		case "Hands_shot_scene45_A":
+			LAi_SetActorType(characterFromID("Bonnet"));
+			LAi_ActorGoToLocator(characterFromID("Bonnet"), "goto", "pilot_stay", "Hands_shot_scene46", 3.0);
+		break;
+
+		case "Hands_shot_scene46":
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(characterFromID("Bonnet"),"BB_QAR_cabinH","goto","looting");
+			LAi_SetPoorType(characterFromID("Bonnet"));
+			
+			LAi_QuestDelay("Hands_shot_scene47_A", 2.0);
+		break;
+
+		case "Hands_shot_scene47_A":
+			PlaySound("PEOPLE\clothes1.wav");
+			
+			LAi_QuestDelay("Hands_shot_scene47_B", 1.5);
+		break;
+
+		case "Hands_shot_scene47_B":
+			PlaySound("INTERFACE\clock_small.wav");
+			
+			LAi_QuestDelay("Hands_shot_scene47_C", 3.0);
+		break;
+
+		case "Hands_shot_scene47_C":
+			logit("A small clock that's something.");
+			PlaySound("VOICE\ENGLISH\Dave_Edna_6.wav");
+			
+			LAi_QuestDelay("Hands_shot_scene48_A", 3.0);
+		break;
+
+		case "Hands_shot_scene48_A":
+			PlaySound("PEOPLE\clothes1.wav");
+			
+			LAi_QuestDelay("Hands_shot_scene48_B", 1.5);
+		break;
+
+		case "Hands_shot_scene48_B":
+			PlaySound("INTERFACE\coins8.wav");
+			
+			LAi_QuestDelay("Hands_shot_scene48_C", 2.5);
+		break;
+
+		case "Hands_shot_scene48_C":
+			logit("A purse with a lot of coins - that's better!");
+			PlaySound("VOICE\ENGLISH\G_good_work.wav");
+			
+			LAi_QuestDelay("Hands_shot_scene49_A", 1.5);
+		break;
+
+		case "Hands_shot_scene49_A":
+			PlaySound("PEOPLE\clothes2.wav");
+			
+			LAi_QuestDelay("Hands_shot_scene49_B", 3.0);
+		break;
+
+		case "Hands_shot_scene49_B":
+			PlaySound("INTERFACE\paper.wav");
+			GiveItem2Character(characterFromID("Bonnet"), "pistolmap_Hgold");
+			EquipCharacterbyItem(characterFromID("Bonnet"), "pistolmap_Hgold");
+			
+			LAi_QuestDelay("pchar_yah", 1.5);
+			LAi_QuestDelay("Hands_shot_scene49_C", 1.5);
+		break;
+
+		case "Hands_shot_scene49_C":
+			logit("I found his map-piece!!!");
+
+			LAi_QuestDelay("Hands_shot_scene50", 1.5);
+		break;
+
+		case "Hands_shot_scene50":
+			LAi_SetStayType(characterFromID("Bonnet"));
+
+			LAi_QuestDelay("Hands_shot_scene51", 1.5);
+		break;
+
+		case "Hands_shot_scene51":
+			PlaySound("VOICE\ENGLISH\blaze_help.wav");
+			logit("STEDE BONNET");
+			LAi_SetActorType(characterFromID("Bonnet"));
+			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "reload", "reload1_back");
+			
+			LAi_QuestDelay("Hands_shot_scene52_A", 2.5);
+	//		LAi_QuestDelay("Hands_shot_scene_over", 2.5);	//test skip surgeons
+		break;
+
+		case "Hands_shot_scene52_A":
+			PlaySound("INTERFACE\knock2.wav");
+
+			LAi_QuestDelay("Hands_shot_scene52_B", 1.5);
+		break;
+
+		case "Hands_shot_scene52_B":
+			PlaySound("PEOPLE\counter_openclose.wav");
+
+			LAi_QuestDelay("Hands_shot_scene53_A", 2.0);
+		break;
+
+		case "Hands_shot_scene53_A":
+			logit("SURGEON MAJOR");
+			PlaySound("VOICE\ENGLISH\Fre_m_c_011.wav");
+
+			LAi_QuestDelay("Hands_shot_scene53_B", 3.0);
+		break;
+
+		case "Hands_shot_scene53_B":
+			logit("STEDE BONNET");
+			PlaySound("VOICE\ENGLISH\G_tell_you_what.wav");
+
+			LAi_QuestDelay("Hands_shot_scene54_A", 2.0);
+		break;
+
+		case "Hands_shot_scene54_A":
+			logit("SECOND SURGEON");
+			PlaySound("VOICE\ENGLISH\Fre_m_a_001.wav");
+			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "goto", "S2");
+
+			LAi_QuestDelay("Hands_shot_scene54_B", 2.5);
+		break;
+
+		case "Hands_shot_scene54_B":
+			logit("STEDE BONNET");
+			PlaySound("VOICE\ENGLISH\G_have_to_try.wav");
+
+			LAi_QuestDelay("Hands_shot_scene55_A", 2.5);
+		break;
+
+		case "Hands_shot_scene55_A":
+			logit("GUNSMITH OR THIRD SURGEON");
+			PlaySound("VOICE\ENGLISH\Fre_m_b_020.wav");
+			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "goto", "S3");
+
+			LAi_QuestDelay("Hands_shot_scene55_B", 3.5);
+		break;
+
+		case "Hands_shot_scene55_B":
+			logit("STEDE BONNET");
+			PlaySound("VOICE\ENGLISH\G_you_could.wav");
+
+			LAi_QuestDelay("Hands_shot_scene56_A", 2.5);
+		break;
+
+		case "Hands_shot_scene56_A":
+			logit("SURGEON'S AIDE");
+			PlaySound("VOICE\ENGLISH\Dupin_help.wav");
+			LAi_ActorTurnToLocator(characterFromID("Bonnet"), "goto", "S4");
+
+			LAi_QuestDelay("Hands_shot_scene56_B", 1.5);
+		break;
+
+		case "Hands_shot_scene56_B":
+			logit("STEDE BONNET");
+			PlaySound("VOICE\ENGLISH\Herrick2.wav");
+
+			LAi_QuestDelay("Hands_shot_scene_over", 3.5);	//was 2.5
+		break;
+
+		case "Hands_shot_scene_over":
+			if(CheckAttribute(Pchar,"Pyle_model"))
+			{
+				switch(Pchar.Pyle_model)
+				{
+					case "3":
+						SetModel(Pchar, "Howard_Pyle_3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+					break;
+
+					case "4":
+						SetModel(Pchar, "Howard_Pyle_4", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);	
+					break;
+
+					case "5":
+						SetModel(Pchar, "Howard_Pyle_5", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);		
+					break;
+
+					case "0":
+						SetModel(Pchar, "Howard_Pyle", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);	
+					break;
+				}
+			}
+
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			DeleteAttribute(Pchar, "items");
+			
+			if(CheckAttribute(characterFromID("Brthug1"), "items"))
+			{
+				makearef(ifrom, Characters[GetCharacterIndex("Brthug1")].items);
+				Pchar.items = "";
+				makearef(ito, Pchar.items);
+				CopyAttributes(&ito, &ifrom);
+				DeleteAttribute(Characters[GetCharacterIndex("Brthug1")], "items");
+			}
+		
+			EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, BLADE_ITEM_TYPE));
+			EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, GUN_ITEM_TYPE));
+
+			LAi_SetHP(Pchar, Php_CUR, Php_CUR);
+			LAi_SetPlayerType(Pchar);
+
+			Pchar.old.name = "Howard";
+			Pchar.old.lastname = "Pyle";
+			Pchar.name = TranslateString("","Howard");
+			Pchar.lastname = TranslateString("","Pyle");
+
+			SetCurrentTime(12.00, 0);
+
+			DoQuestReloadToLocation("Willemstad_town_3", "quest", "jrh1", "back_to_Wstad");
+		break;
+
+		case "back_to_Wstad":
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorTurnToCharacter(characterFromID("Hands"), Pchar);
+
+			LAi_QuestDelay("back_to_Wstad1", 2.0);
+		break;
+
+		case "back_to_Wstad1":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "Teach_saved_you";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "back_to_Wstad2":
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "I_am_alive";
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorDialog(characterFromID("Hands"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Hands"));
+		break;
+
+		case "back_to_Wstad3":
+			LAi_SetPlayerType(pchar);
+			AddQuestRecord("Israel_Hands","4");
+			
+			AddPassenger(Pchar, characterFromID("Hands"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+			LAi_SetOfficerType(characterFromID("Hands"));
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
+
+			LAi_QuestDelay("pchar_lets_go", 1.0);
+			LAi_QuestDelay("start_Maltains", 1.0);
+		break;
+
+//--------------------------------------------------------------------------------------------------------------
 		case "start_Maltains":
+			locations[FindLocation("Charlestown_port")].reload.l17.disable = 0;
+			Locations[FindLocation("Charlestown_port")].reload.l17.close_for_day = 1;	//after info from Hands
+			
+
 			ChangeCharacterAddressGroup(characterFromID("Thomas Modiford"), "none", "", "");	//governor gone
+			ChangeCharacterAddressGroup(characterFromID("Anne_Russel"), "Charlestown_Residence", "goto", "goto6");
 			ChangeCharacterAddressGroup(characterFromID("Maltese_soldier3"), "Charlestown_port", "quest", "quest2");
 			ChangeCharacterAddressGroup(characterFromID("Maltese_soldier4"), "Charlestown_port", "quest", "quest3");
 
@@ -50248,6 +55482,152 @@ void QuestComplete(string sQuestName)
 		case "start_Maltains_dialog_done":
 			Characters[GetCharacterIndex("Maltese_red1")].dialog.CurrentNode  = "got_all_books";
 		break;
+
+		//------------------------------------------------------------------------------
+
+		case "Malta_items1":
+			AddQuestRecord("Malta_items","1");
+			Pchar.malta_items = 0;	
+
+			LAi_QuestDelay("book63_check", 0.5);
+			LAi_QuestDelay("book64_check", 0.5);
+			LAi_QuestDelay("book65_check", 0.5);
+			LAi_QuestDelay("book66_check", 0.5);
+			LAi_QuestDelay("book67_check", 0.5);
+			LAi_QuestDelay("book68_check", 0.5);
+		break;
+
+		case "book63_check":
+			//med book in wine cellar
+			if(CheckCharacterItem(Pchar,"book63"))
+			{
+				Pchar.malta_items = sti(Pchar.malta_items) + 1;
+				PlaySound("INTERFACE\book_close.wav");
+
+				LAi_QuestDelay("count_malta_items", 0.5);
+			}
+			else LAi_QuestDelay("book63_check", 0.5);//loop check
+		break;
+
+		case "book64_check":
+			//french book on top of boxes
+			if(CheckCharacterItem(Pchar,"book64"))
+			{
+				Pchar.malta_items = sti(Pchar.malta_items) + 1;
+				PlaySound("INTERFACE\book_close.wav");
+
+				LAi_QuestDelay("count_malta_items", 0.5);
+			}
+			else LAi_QuestDelay("book64_check", 0.5);//loop check
+		break;
+
+		case "book65_check":
+			//bibble in counter
+			if(CheckCharacterItem(Pchar,"book65"))
+			{
+				Pchar.malta_items = sti(Pchar.malta_items) + 1;
+				PlaySound("INTERFACE\book_close.wav");
+
+				LAi_QuestDelay("count_malta_items", 0.5);
+			}
+			else LAi_QuestDelay("book65_check", 0.5);//loop check
+		break;
+
+		case "book66_check":
+			//pile of sheets in last cell
+			if(CheckCharacterItem(Pchar,"book66"))
+			{
+				Pchar.malta_items = sti(Pchar.malta_items) + 1;
+				PlaySound("INTERFACE\paper.wav");
+
+				LAi_QuestDelay("count_malta_items", 0.5);
+			}
+			else LAi_QuestDelay("book66_check", 0.5);//loop check
+		break;
+
+		case "book67_check":
+			//document under pillow in a cell
+			if(CheckCharacterItem(Pchar,"book67"))
+			{
+				Pchar.malta_items = sti(Pchar.malta_items) + 1;
+				PlaySound("INTERFACE\paper_small.wav");
+
+				LAi_QuestDelay("count_malta_items", 0.5);
+			}
+			else LAi_QuestDelay("book67_check", 0.5);//loop check
+		break;
+
+		case "book68_check":
+			//scroll in chapel
+			if(CheckCharacterItem(Pchar,"book68"))
+			{
+				Pchar.malta_items = sti(Pchar.malta_items) + 1;
+				PlaySound("INTERFACE\carpet_move.wav");
+
+				LAi_QuestDelay("count_malta_items", 0.5);
+			}
+			else LAi_QuestDelay("book68_check", 0.5);//loop check
+		break;
+
+
+		case "count_malta_items":
+			if(CheckAttribute(Pchar, "malta_items"))
+			{
+				switch (Pchar.malta_items)
+				{
+					case "1":
+						Logit("I have got 1 Malta Document.");
+						ChangeCharacterAddressGroup(characterFromID("Maltese_soldier7"), "bb_maltains", "goto", "goto2");
+
+						LAi_QuestDelay("pchar_sigh", 1.0);
+					break;
+
+					case "2":
+						Logit("I have got 2 Malta Documents.");
+						ChangeCharacterAddressGroup(characterFromID("Maltese_red2"), "bb_maltains", "goto", "goto5");
+
+						LAi_QuestDelay("pchar_puh", 1.0);
+					break;
+
+					case "3":
+						Logit("I have got 3 Malta Documents.");
+						ChangeCharacterAddressGroup(characterFromID("Maltese_green"), "bb_maltains", "goto", "goto12");
+
+						LAi_QuestDelay("pchar_hah", 1.0);
+					break;
+
+					case "4":
+						Logit("I have got 4 Malta Documents.");
+						ChangeCharacterAddressGroup(characterFromID("Maltese_black"), "bb_maltains", "goto", "goto8");
+
+						LAi_QuestDelay("pchar_mhm", 1.0);
+					break;
+
+					case "5":
+						Logit("I have got 5 Malta Documents.");
+						ChangeCharacterAddressGroup(characterFromID("Maltese_knight"), "bb_maltains", "goto", "goto16");
+
+						LAi_QuestDelay("pchar_lets_go", 1.0);
+					break;
+
+					case "6":
+						Logit("I have got all 6 Malta Documents!");
+						AddQuestRecord("Malta_items","2");
+						CloseQuestHeader("Malta_items");
+
+						LAi_QuestDelay("6_malta_books", 1.0);
+					break;
+				}
+			}
+		break;	
+
+		case "6_malta_books":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "6_malta_books";
+			LAi_ActorSelfDialog(pchar, "");
+		break;	
+
+		//------------------------------------------------------------------------------
 
 		case "reset_cells":
 			PlaySound("INTERFACE\step_reset.wav");
@@ -50423,34 +55803,7 @@ void QuestComplete(string sQuestName)
 				LAi_QuestDelay("pillow_check", 0.5);//loop check
 			}
 		break;
-
-		case "6_malta_books_check":
-			if(CheckCharacterItem(Pchar,"Malta_relic")) return;
-
-			int book63, book64, book65, book66, book67, book68, totbooks;
-			book63 = 0; book64 = 0; book65 = 0; book66 = 0; book67 = 0; book68 = 0;
-			
-			if(CheckCharacterItem(Pchar,"book63")) book63 = 1; if(CheckCharacterItem(Pchar,"book64")) book64 = 1;
-			if(CheckCharacterItem(Pchar,"book65")) book65 = 1; if(CheckCharacterItem(Pchar,"book66")) book66 = 1;
-			if(CheckCharacterItem(Pchar,"book67")) book67 = 1; if(CheckCharacterItem(Pchar,"book68")) book68 = 1;
-		
-			totbooks = book63 + book64 + book65 + book66 + book67 + book68;
-		//LogIt("totbooks = " + totbooks);
-
-			if(totbooks == 1) ChangeCharacterAddressGroup(characterFromID("Maltese_soldier7"), "bb_maltains", "goto", "goto2");
-			if(totbooks == 2) ChangeCharacterAddressGroup(characterFromID("Maltese_red2"), "bb_maltains", "goto", "goto5");
-			if(totbooks == 3) ChangeCharacterAddressGroup(characterFromID("Maltese_green"), "bb_maltains", "goto", "goto12");
-			if(totbooks == 4) ChangeCharacterAddressGroup(characterFromID("Maltese_black"), "bb_maltains", "goto", "goto8");
-			if(totbooks == 5) ChangeCharacterAddressGroup(characterFromID("Maltese_knight"), "bb_maltains", "goto", "goto16");
-
-			if(totbooks == 6)
-			{
-				LAi_SetActorType(pchar);	
-				characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "6_malta_books";
-				LAi_ActorSelfDialog(pchar, "");
-			}
-		break;
-
+	
 		case "Deliver_6_malta_books":
 			LAi_SetPlayerType(pchar);
 		break;
@@ -50478,6 +55831,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "got_all_books_done":
+			DeleteQuestHeader("Malta_items");
 			PlaySound("INTERFACE\took_item.wav");
 			GiveItem2Character(Pchar, "key34");
 			Characters[GetCharacterIndex("Maltese_red1")].dialog.CurrentNode  = "neutral_clerk";
@@ -50550,6 +55904,13 @@ void QuestComplete(string sQuestName)
 		break;	
 
 		case "prison_info_done":
+			GiveItem2Character(Pchar, "doc61");
+			AddQuestRecord("Israel_Hands","5");
+
+			LAi_QuestDelay("prison_info_done0", 1.0);
+		break;
+
+		case "prison_info_done0":
 			Characters[GetCharacterIndex("Maltese_governor")].dialog.CurrentNode  = "neutral_governor";
 
 			PlaySound("VOICE\ENGLISH\pir_capLL.wav"); 
@@ -50590,14 +55951,46 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(characterFromID("Maltese_green"));
 			LAi_SetStayType(characterFromID("Maltese_black"));
 			LAi_SetStayType(characterFromID("Maltese_knight"));
+
+			//this enables the prison tour
+			locations[FindLocation("Antigua_port")].models.always.locators = "StJohns_locators_JRH";
 			
 			pchar.quest.prison_info_done5.win_condition.l1 = "location";
 			pchar.quest.prison_info_done5.win_condition.l1.location = "Charlestown_store";
 			pchar.quest.prison_info_done5.win_condition = "prison_info_done5";
 		break;
-
+//pär start prison
 		case "prison_info_done5":
 			PlaySound("INTERFACE\key_lock.wav");
+
+			//this enables the prison tour
+			Locations[FindLocation("Antigua_fakefort1")].reload.l4.name = "reloadc1";
+			Locations[FindLocation("Antigua_fakefort1")].reload.l4.go = "bb_prison_port";
+			Locations[FindLocation("Antigua_fakefort1")].reload.l4.emerge = "reload2";
+			locations[FindLocation("Antigua_port")].reload.l23.disable = 1;	//Antigua port to fort
+			
+			Pchar.quest.prison_pier = "phase0";
+			Pchar.quest.prison_elevator = "down";
+			Pchar.quest.prison_opening = "stairs";
+			Pchar.quest.prison_opening2 = "prison";
+			Pchar.prison2.water = "fast";
+			SetLocatorRadius(locations[FindLocation("Antigua_port")], "reload", "reload7_back", 0.001);	//box6 instead first time
+			Locations[FindLocation("Antigua_port")].locators_radius.reload.reload7_back = 0.001;
+
+			LAi_QuestDelay("prison_alcove", 0.1);
+
+			pchar.quest.bb_prison_opening.win_condition.l1 = "locator";
+			pchar.quest.bb_prison_opening.win_condition.l1.location = "bb_prison2";
+			pchar.quest.bb_prison_opening.win_condition.l1.locator_group = "goto";
+			pchar.quest.bb_prison_opening.win_condition.l1.locator = "opening";
+			pchar.quest.bb_prison_opening.win_condition = "bb_prison_opening";
+
+			pchar.quest.bb_prison_opening2.win_condition.l1 = "locator";
+			pchar.quest.bb_prison_opening2.win_condition.l1.location = "bb_prison2";
+			pchar.quest.bb_prison_opening2.win_condition.l1.locator_group = "goto";
+			pchar.quest.bb_prison_opening2.win_condition.l1.locator = "opening2";
+			pchar.quest.bb_prison_opening2.win_condition = "bb_prison_opening2";
+	
 		break;
 
 		case "neutral_clerk_repeat":
@@ -50611,9 +56004,40 @@ void QuestComplete(string sQuestName)
 //malta end
 //_________________________________________________________________________________________________________________
 //Q2 Israel Hands: prison
-		case "arrive_prison_pier":
-	//		Pchar.quest.prison_pier = "phase1";
 
+		case "Antigua_fort":
+			LAi_SetActorType(characterFromID("Antigua_guard1"));
+			LAi_ActorDialog(characterFromID("Antigua_guard1"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Antigua_guard1"));
+			Characters[GetCharacterIndex("Antigua_guard1")].dialog.CurrentNode  = "halt";
+		break;
+
+		case "Antigua_fort1":
+			LAi_SetActorType(characterFromID("Antigua_guard2"));
+			LAi_ActorDialog(characterFromID("Antigua_guard2"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Antigua_guard2"));
+			Characters[GetCharacterIndex("Antigua_guard2")].dialog.CurrentNode  = "pass";
+		break;
+
+		case "Antigua_fort2":
+			PlaySound("INTERFACE\key_unlock2.wav");
+			locations[FindLocation("Antigua_port")].reload.l23.disable = 0;	//Antigua port to fort
+			LAi_SetStayType(characterFromID("Antigua_guard1"));
+			Characters[GetCharacterIndex("Antigua_guard1")].dialog.CurrentNode  = "First time";
+			LAi_SetStayType(characterFromID("Antigua_guard2"));
+			Characters[GetCharacterIndex("Antigua_guard2")].dialog.CurrentNode  = "First time";
+
+			LAi_QuestDelay("Antigua_fort3", 1.0);
+		break;
+
+		case "Antigua_fort3":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "look_gate");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
+		break;
+
+		case "arrive_prison_pier":
 			pchar.quest.arrive_prison_pier1.win_condition.l1 = "locator";
 			pchar.quest.arrive_prison_pier1.win_condition.l1.location = "bb_prison_port";
 			pchar.quest.arrive_prison_pier1.win_condition.l1.locator_group = "goto";
@@ -50706,6 +56130,11 @@ void QuestComplete(string sQuestName)
 		break;
 
 //---------------------------------------------------------------------------------------------------
+		case "prison_bridge_extra_turn":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "randitem", "randitem5");
+		break;
+
 		case "prison_bridge_start_turn":
 			Pchar.quest.prison_bridge = "start";
 			PlaySound("OBJECTS\VOICES\DEAD\male\dead1.wav");
@@ -50719,7 +56148,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\step_echo.wav");
 			LAi_SetPlayerType(Pchar);
 		break;
-//JRH prison
+
 		case "prison_alcove":
 			pchar.quest.alcove_box5.win_condition.l1 = "locator";
 			pchar.quest.alcove_box5.win_condition.l1.location = "bb_prison_alcove";
@@ -50953,8 +56382,6 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "push_alcove_crate1":
-	//switch locatorfile here + make one box larger radius
-
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box1", 0.7);
 			Locations[FindLocation("BB_prison_alcove")].locators_radius.box.box1 = 0.7;
 			Locations[FindLocation(Pchar.location)].models.always.locators = "Alcove_l_JRH2";	//crate down
@@ -50970,7 +56397,7 @@ void QuestComplete(string sQuestName)
 			Pchar.alcove.crate = "fallen_down";
 			Locations[FindLocation("BB_prison_alcove")].image = "Incas_Temple_Alcove.tga";
 		break;
-
+//pär stop prison
 		case "unlock_bb_prison":
 			TakeItemFromCharacter(pchar, "key3");
 			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box8", 0.001);
@@ -50979,9 +56406,288 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("BB_prison_alcove")].locators_radius.box.box8 = 0.001;
 			Locations[FindLocation("BB_prison_alcove")].locators_radius.reload.reload2 = 1.0;
 
-			DoQuestReloadToLocation("bb_prison", "reload", "reload2", "_");
+			pchar.quest.bb_prison_alarm.win_condition.l1 = "locator";
+			pchar.quest.bb_prison_alarm.win_condition.l1.location = "bb_prison";
+			pchar.quest.bb_prison_alarm.win_condition.l1.locator_group = "quest";
+			pchar.quest.bb_prison_alarm.win_condition.l1.locator = "alarm";
+			pchar.quest.bb_prison_alarm.win_condition = "bb_prison_alarm";
+
+			DoQuestReloadToLocation("bb_prison_stairs1", "reload", "reload1", "_");
+		break;
+
+		case "prisoner1_stay": LAi_SetStayType(characterFromID("bb_prisoner1")); break;
+		case "prisoner2_stay": LAi_SetStayType(characterFromID("bb_prisoner2")); break;
+		case "prisoner3_stay": LAi_SetStayType(characterFromID("bb_prisoner3")); break;
+		case "prisoner4_stay": LAi_SetStayType(characterFromID("bb_prisoner4")); break;
+		case "prisoner5_stay": LAi_SetStayType(characterFromID("bb_prisoner5")); break;
+		case "prisoner6_stay": LAi_SetStayType(characterFromID("bb_prisoner6")); break;
+		case "prisoner7_stay": LAi_SetStayType(characterFromID("bb_prisoner7")); break;
+		case "prisoner8_stay": LAi_SetStayType(characterFromID("bb_prisoner8")); break;
+		case "prisoner9_stay": LAi_SetStayType(characterFromID("bb_prisoner9")); break;
+		case "prisoner10_stay": LAi_SetStayType(characterFromID("bb_prisoner10")); break;
+	//------------------------------------------------------------------------------------------------------------
+		case "bb_prison_alarm":
+			PlaySound("INTERFACE\closed_door.wav");
+			ChangeCharacterAddressGroup(characterFromID("wr_voy"), "bb_prison", "quest", "dover");
+			LAi_SetImmortal(CharacterFromID("wr_voy"), false);
+			RemoveCharacterEquip(characterFromID("wr_voy"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(characterFromID("wr_voy"), BLADE_ITEM_TYPE);
+			DeleteAttribute(characterFromID("wr_voy"), "items");
+			AddMoneyToCharacter(characterFromID("wr_voy"),-10000);
+			GiveItem2Character(characterFromID("wr_voy"), "bladeA4");
+			EquipCharacterByItem(characterFromID("wr_voy"), "bladeA4");
+			GiveItem2Character(characterFromID("wr_voy"), "doctortoolkit");
+			TakenItems(characterFromID("wr_voy"), "cognac", 2);
+			
+			LAi_QuestDelay("bb_prison_alarm0", 0.5);
+		break;
+		
+		case "bb_prison_alarm0":
+			PlaySound("VOICE\ENGLISH\alarm1.wav");
+			LAi_SetStayType(Pchar);
+
+			if(CheckAttribute(Pchar, "killed_wr_officers"))
+			{
+				switch(Pchar.killed_wr_officers)
+				{
+					case "0":
+						GiveItem2Character(characterFromID("wr_voy"), "pistol203");
+						EquipCharacterByItem(characterFromID("wr_voy"), "pistol203");
+						GiveItem2Character(characterFromID("wr_voy"), "ammobag1");
+						TakenItems(characterFromID("wr_voy"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_voy"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Dover_items0_check", 0.1);
+					break;
+
+					case "1":
+						GiveItem2Character(characterFromID("wr_voy"), "pistol201");
+						GiveItem2Character(characterFromID("wr_voy"), "pistol204");
+						EquipCharacterByItem(characterFromID("wr_voy"), "pistol201");
+						TakenItems(characterFromID("wr_voy"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_voy"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Dover_items1_check", 0.1);
+					break;
+
+					case "2":
+						GiveItem2Character(characterFromID("wr_voy"), "pistol205");
+						GiveItem2Character(characterFromID("wr_voy"), "pistol202");
+						EquipCharacterByItem(characterFromID("wr_voy"), "pistol205");
+						TakenItems(characterFromID("wr_voy"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_voy"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Dover_items2_check", 0.1);
+					break;
+
+					case "3":
+						GiveItem2Character(characterFromID("wr_voy"), "pistol206");
+						GiveItem2Character(characterFromID("wr_voy"), "pistolbelt");
+						EquipCharacterByItem(characterFromID("wr_voy"), "pistol206");
+						TakenItems(characterFromID("wr_voy"), "gunpowder", 2);
+						TakenItems(characterFromID("wr_voy"), "pistolbullets", 2);
+
+						LAi_QuestDelay("Dover_items3_check", 0.1);
+					break;
+				}
+			}
+
+			LAi_QuestDelay("bb_prison_alarm1", 1.5);
+		break;
+
+		case "bb_prison_alarm1":
+			LAi_QuestDelay("pchar_huh", 0.1);
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box15");
+			LAi_SetActorType(CharacterFromID("wr_voy"));
+			LAi_ActorAttack(CharacterFromID("wr_voy"), Pchar, "");
+	
+		//ev Dovers crewmembers dead check too
+			Pchar.quest.Dover_dead.win_condition.l1 = "NPC_Death";
+			Pchar.quest.Dover_dead.win_condition.l1.character = "wr_voy";
+			Pchar.quest.Dover_dead.win_condition = "Dover_dead";
+
+			LAi_QuestDelay("bb_prison_alarm2", 1.0);
+		break;
+
+		case "bb_prison_alarm2":
+			LAi_SetPlayerType(Pchar);
+			LAi_SetFightMode(Pchar, true);
+			PlaySound("VOICE\ENGLISH\Eng_m_a_056.wav");
+			ChangeCharacterAddressGroup(characterFromID("bb_prison_officer"), "bb_prison", "quest", "officer");
+			LAi_SetActorType(characterFromID("bb_prison_officer"));
+
+			LAi_QuestDelay("bb_prison_alarm3", 2.0);
+		break;
+
+		case "bb_prison_alarm3":
+			PlaySound("AMBIENT\c_brothers_long.wav");
+			ChangeCharacterAddressGroup(characterFromID("bb_prisoner1"), "bb_prison", "box", "box22");
+			ChangeCharacterAddressGroup(characterFromID("bb_prisoner4"), "bb_prison", "box", "box11");
+			ChangeCharacterAddressGroup(characterFromID("bb_prisoner5"), "bb_prison", "box", "box10");
+			ChangeCharacterAddressGroup(characterFromID("bb_prisoner6"), "bb_prison", "box", "box9");
+			ChangeCharacterAddressGroup(characterFromID("bb_prisoner7"), "bb_prison", "box", "box8");
+			ChangeCharacterAddressGroup(characterFromID("bb_prisoner8"), "bb_prison", "box", "box12");
+			ChangeCharacterAddressGroup(characterFromID("bb_prisoner9"), "bb_prison", "box", "box13");
+		break;
+
+		case "Dover_dead":
+			DoQuickSave(); //if you forget to loot him properly
+			Pchar.killed_wr_officers = sti(Pchar.killed_wr_officers) + 1;
+			Pchar.quest.remove_Dover_corpse.win_condition.l1 = "ExitFromLocation";
+			Pchar.quest.remove_Dover_corpse.win_condition.l1.location = "bb_prison";
+			Pchar.quest.remove_Dover_corpse.win_condition = "remove_Dover_corpse";
+		break;
+
+		case "remove_Dover_corpse":
+			ChangeCharacterAddressGroup(characterFromID("wr_voy"), "none", "", "");
+		break;
+
+		case "Dover_items0_check":
+			cog = GetCharacterItem(Pchar, "cognac");
+
+			if(CheckCharacterItem(Pchar,"pistol203") && CheckCharacterItem(Pchar,"ammobag1") && cog >= 2)
+			{
+				LAi_QuestDelay("Dover_looted", 0.1);
+			}
+			else LAi_QuestDelay("Dover_items0_check", 0.5);//loop check
+		break;
+
+		case "Dover_items1_check":
+			cog = GetCharacterItem(Pchar, "cognac");
+
+			if(CheckCharacterItem(Pchar,"pistol201") && CheckCharacterItem(Pchar,"pistol204") && cog >= 2)
+			{
+				LAi_QuestDelay("Dover_looted", 0.1);
+			}
+			else LAi_QuestDelay("Dover_items1_check", 0.5);//loop check
+		break;
+
+		case "Dover_items2_check":
+			cog = GetCharacterItem(Pchar, "cognac");
+
+			if(CheckCharacterItem(Pchar,"pistol205") && CheckCharacterItem(Pchar,"pistol202") && cog >= 2)
+			{
+				LAi_QuestDelay("Dover_looted", 0.1);
+			}
+			else LAi_QuestDelay("Dover_items2_check", 0.5);//loop check
+		break;
+
+		case "Dover_items3_check":
+			cog = GetCharacterItem(Pchar, "cognac");
+
+			if(CheckCharacterItem(Pchar,"pistol206") && CheckCharacterItem(Pchar,"pistolbelt") && cog >= 2)
+			{
+				LAi_QuestDelay("Dover_looted", 0.1);
+			}
+			else LAi_QuestDelay("Dover_items3_check", 0.5);//loop check
+		break;
+
+		case "Dover_looted":
+			ChangeCharacterAddressGroup(characterFromID("bb_prison_officer"), "bb_prison", "sit", "sit1");
+			LAi_SetSitType(characterFromID("bb_prison_officer"));
+			Pchar.Dover.looted = "yes";
+			Locations[FindLocation("BB_prison")].reload.l1.disable = 0;
+
+			pchar.quest.bb_prison_stop.win_condition.l1 = "locator";
+			pchar.quest.bb_prison_stop.win_condition.l1.location = "bb_prison";
+			pchar.quest.bb_prison_stop.win_condition.l1.locator_group = "quest";
+			pchar.quest.bb_prison_stop.win_condition.l1.locator = "stop";
+			pchar.quest.bb_prison_stop.win_condition = "bb_prison_stop";
+		break;
+	//------------------------------------------------------------------------------------------------------------
+		case "bb_prison_stop":
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
+
+			Characters[GetCharacterIndex("bb_prison_officer")].dialog.CurrentNode  = "bb_prison_stop";
+			LAi_SetActorType(characterFromID("bb_prison_officer"));
+			LAi_ActorDialogNow(characterFromID("bb_prison_officer"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_prison_officer"));
+		break;
+
+		case "bb_prison_stop1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorGoToLocator(Pchar, "quest", "document", "bb_prison_stop2", 2.0);
+		break;
+
+		case "bb_prison_stop2":
+			TakeItemFromCharacter(pchar, "doc61");
+			PlaySound("INTERFACE\paper.wav");
+			ChangeCharacterAddressGroup(Pchar, "bb_prison", "quest", "document");
+
+			LAi_QuestDelay("bb_prison_stop3", 3.0);
+		break;
+
+		case "bb_prison_stop3":
+			Characters[GetCharacterIndex("bb_prison_officer")].dialog.CurrentNode  = "bb_prison_stop3";
+			LAi_SetActorType(characterFromID("bb_prison_officer"));
+			LAi_ActorDialogNow(characterFromID("bb_prison_officer"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_prison_officer"));
+		break;
+//pär start 3 items check
+		case "bb_prison_stop7":
+			LAi_SetSitType(characterFromID("bb_prison_officer"));
+			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+			LAi_SetPlayerType(Pchar);
+			Characters[GetCharacterIndex("bb_prison_officer")].dialog.CurrentNode  = "First time";
+
+			LAi_QuestDelay("prison2_tools3_check", 0.5);
 		break;
 //---------------------------------------------------------------------------------------------------	
+		case "prison2_tools3_check":
+			if(CheckCharacterItem(Pchar,"bladesaw") || CheckCharacterItem(Pchar,"bladeaxe4") || CheckCharacterItem(Pchar,"bladehammer"))
+			{
+				if( LAi_IsDead(characterFromID("P2_guard1")) && LAi_IsDead(characterFromID("P2_guard2"))   
+				&& LAi_IsDead(characterFromID("P2_guard3")) && LAi_IsDead(characterFromID("P2_guard4")) ) 
+				{
+					return;
+				}
+				else LAi_QuestDelay("P2_guards_attack", 0.1);
+			}
+			else LAi_QuestDelay("prison2_tools3_check", 0.5);//loop check
+		break;
+
+		case "P2_guards_attack":
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "goto", "opening", 0.0001);
+			Locations[FindLocation("bb_prison2")].locators_radius.goto.opening = 0.0001;
+			LAi_LocationFightDisable(&Locations[FindLocation(Pchar.location)], false);
+			LAi_SetActorType(characterFromID("P2_guard1")); LAi_SetActorType(characterFromID("P2_guard2"));
+			LAi_SetActorType(characterFromID("P2_guard3")); LAi_SetActorType(characterFromID("P2_guard4"));
+			LAi_ActorAttack(CharacterFromID("P2_guard1"), Pchar, "");
+			LAi_ActorAttack(CharacterFromID("P2_guard2"), Pchar, "");
+			LAi_ActorAttack(CharacterFromID("P2_guard3"), Pchar, "");
+			LAi_ActorAttack(CharacterFromID("P2_guard4"), Pchar, "");
+		break;
+//---------------------------------------------------------------------------------------------------
+//unlock to cell1 (4 maroons)	
+		case "cell1_step_back":
+			PlaySound("PEOPLE\recoil.wav");	
+			ChangeCharacterAddressGroup(Pchar, "bb_prison2", "goto", "step_back1");
+			LAi_SetStayType(Pchar);
+
+			LAi_QuestDelay("bb_maroon4_out", 0.01);
+		break;
+
+		case "bb_maroon4_out":
+			LAi_SetActorType(characterFromID("bb_maroon4"));
+			LAi_ActorGoToLocator(characterFromID("bb_maroon4"), "goto", "goto2", "bb_maroon4_out1", 2.0);
+		break;
+
+		case "bb_maroon4_out1":
+			PlaySound("INTERFACE\rusty.wav");
+			ChangeCharacterAddressGroup(characterFromID("bb_maroon4"), "bb_prison2", "goto", "goto1");
+			LAi_ActorGoToLocator(characterFromID("bb_maroon4"), "goto", "freeRR", "bb_maroon4_out2", 2.0);
+
+			LAi_QuestDelay("pchar_psst", 1.0);
+		break;
+
+		case "bb_maroon4_out2":
+			ChangeCharacterAddressGroup(characterFromID("bb_maroon4"), "bb_prison2", "goto", "freeRR");
+			LAi_SetOfficerType(characterFromID("bb_maroon4"));
+		break;
+
+
+//---------------------------------------------------------------------------------------------------
 		case "bb_prison_opening_start":
 			pchar.quest.bb_prison_opening.win_condition.l1 = "locator";
 			pchar.quest.bb_prison_opening.win_condition.l1.location = "bb_prison2";
@@ -50995,12 +56701,15 @@ void QuestComplete(string sQuestName)
 			{
 				ChangeCharacterAddressGroup(Pchar, "bb_prison2", "goto", "floor");
 				Pchar.quest.prison_opening = "floor";
-
+				if(IsOfficerType(characterFromID("Pell"))) 
+				{ ChangeCharacterAddressGroup(characterFromID("Pell"), "bb_prison2", "goto", "floor_pell"); }
 			}
 			else
 			{
 				ChangeCharacterAddressGroup(Pchar, "bb_prison2", "goto", "stairs");
 				Pchar.quest.prison_opening = "stairs";
+				if(IsOfficerType(characterFromID("Pell"))) 
+				{ ChangeCharacterAddressGroup(characterFromID("Pell"), "bb_prison2", "goto", "stairs_pell"); }
 			}
 
 			LAi_QuestDelay("bb_prison_opening_start", 0.1);
@@ -51019,14 +56728,718 @@ void QuestComplete(string sQuestName)
 			{
 				ChangeCharacterAddressGroup(Pchar, "bb_prison2", "goto", "river");
 				Pchar.quest.prison_opening2 = "river";
+				if(IsOfficerType(characterFromID("Pell"))) 
+				{ ChangeCharacterAddressGroup(characterFromID("Pell"), "bb_prison2", "goto", "river_pell"); }
 			}
 			else
 			{
 				ChangeCharacterAddressGroup(Pchar, "bb_prison2", "goto", "prison");
 				Pchar.quest.prison_opening2 = "prison";
+				if(IsOfficerType(characterFromID("Pell"))) 
+				{ ChangeCharacterAddressGroup(characterFromID("Pell"), "bb_prison2", "goto", "prison_pell"); }
 			}
 
 			LAi_QuestDelay("bb_prison_opening2_start", 0.1);
+		break;
+
+		case "prison2_rope12":
+			//fast/slow
+
+			if(CheckAttribute(Pchar, "prison2.water"))
+			{
+				switch(Pchar.prison2.water)
+				{
+					case "empty":
+						//no effect
+						LAi_QuestDelay("pchar_huh", 0.1);
+					break;
+
+					case "slow":
+						Pchar.prison2.water = "fast";
+						PlaySound("NATURE\fountain.wav");
+						Locations[FindLocation("bb_prison2")].models.always.l1 = "a5";
+						Locations[FindLocation("bb_prison2")].models.always.river.uvslide.v0 = -0.1;		
+					break;
+
+					case "fast":
+						Pchar.prison2.water = "slow";
+						PlaySound("NATURE\watermill_off.wav");
+						Locations[FindLocation("bb_prison2")].models.always.l1 = "";
+						Locations[FindLocation("bb_prison2")].models.always.river.uvslide.v0 = -0.05;
+					break;
+				}
+			}
+			return;
+		break;
+
+		case "prison2_rope11":
+			//slow/empty
+
+			if(CheckAttribute(Pchar, "prison2.water"))
+			{
+				switch(Pchar.prison2.water)
+				{
+					case "empty":
+						Pchar.prison2.water = "slow";
+						PlaySound("NATURE\water_in.wav");
+						Locations[FindLocation("bb_prison2")].models.always.l1 = "";
+						Locations[FindLocation("bb_prison2")].models.always.river = "a5";
+						Locations[FindLocation("bb_prison2")].models.always.river.uvslide.v0 = -0.05;
+						Locations[FindLocation("bb_prison2")].locators_radius.box.box7 = 0.001;
+
+						LAi_QuestDelay("prison_officer_back", 2.5);
+					break;
+
+					case "slow":
+						Pchar.prison2.water = "empty";
+						PlaySound("NATURE\water_out.wav");
+						Locations[FindLocation("bb_prison2")].models.always.l1 = "";
+						Locations[FindLocation("bb_prison2")].models.always.river = "";
+						Locations[FindLocation("bb_prison2")].locators_radius.box.box7 = 0.7;
+
+						LAi_QuestDelay("prison_officer_back", 3.5);
+					break;
+
+					case "fast":
+						//no effect
+						LAi_QuestDelay("pchar_huh", 0.1);
+					break;
+				}
+			}
+			return;
+		break;
+
+		case "prison_officer_back":
+			PlaySound("PEOPLE\run_wood.wav");
+			ChangeCharacterAddressGroup(Pchar, "bb_prison_officer", "goto", "back");
+		break;
+//---------------------------------------------------------------------------------------------------	
+		case "IronMaiden":
+		//	ChangeCharacterAddressGroup(Pchar, "bb_prison2", "quest", "IronMaiden");
+			Locations[FindLocation("wr_farm_corridor")].image = "";
+		//	DoQuestReloadToLocation("wr_farm_corridor", "goto", "candle_free", "IronMaiden1");
+			DoQuestReloadToLocation("unknown_location", "goto", "goto1", "IronMaiden1");
+		break;
+
+		case "IronMaiden1":
+			LAi_KillCharacter(Pchar);
+		break;
+//---------------------------------------------------------------------------------------------------	
+//pär pell story
+		case "Pell_story":
+			ChangeCharacterAddressGroup(characterFromID("Pell"), "bb_prison2", "box", "box4");
+
+			Characters[GetCharacterIndex("Pell")].dialog.CurrentNode  = "story";
+			LAi_SetActorType(characterFromID("Pell"));
+			LAi_ActorDialogNow(characterFromID("Pell"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Pell"));
+		break;
+
+		case "Pell_story_interrupted":
+			ChangeCharacterAddressGroup(characterFromID("Tookerman"), "bb_prison2", "goto", "T-man");
+
+			Characters[GetCharacterIndex("Tookerman")].dialog.CurrentNode  = "interrupt";
+			LAi_SetActorType(characterFromID("Tookerman"));
+			LAi_ActorDialogNow(characterFromID("Tookerman"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Tookerman"));
+		break;
+
+		case "Pell_story_interrupted_done":
+			PlaySound("INTERFACE\glass1.wav");
+			
+			LAi_QuestDelay("Pell_story_interrupted_done1", 1.0);
+		break;
+
+		case "Pell_story_interrupted_done1":
+			PlaySound("VOICE\ENGLISH\gr_WR_offer1.wav");
+			LAi_SetActorType(characterFromID("Tookerman"));
+			LAi_ActorGoToLocator(characterFromID("Tookerman"), "box", "box5", "Pell_story_interrupted_done2", 6.0);
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "prison_pell");
+
+			LAi_QuestDelay("Pell_story5", 7.0);
+		break;
+
+		case "Pell_story_interrupted_done2":
+			PlaySound("PEOPLE\counter_openclose.wav");
+			ChangeCharacterAddressGroup(characterFromID("Tookerman"), "bb_prison_officer", "sit", "sit2");
+			LAi_SetSitType(characterFromID("Tookerman"));
+			Locations[FindLocation("bb_prison2")].reload.l2.disable = 0;	//open to officer
+
+			pchar.quest.Took_sober.win_condition.l1 = "location";
+			pchar.quest.Took_sober.win_condition.l1.location = "bb_prison_officer";
+			pchar.quest.Took_sober.win_condition = "Took_sober";
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "Took_sober":
+			PlaySound("VOICE\ENGLISH\gr_WR_host8.wav");
+			LAi_SetStayType(Pchar);
+
+			pchar.quest.Took_soberX.win_condition.l1 = "location";
+			pchar.quest.Took_soberX.win_condition.l1.location = "bb_prison2";
+			pchar.quest.Took_soberX.win_condition = "Took_soberX";
+		break;
+
+		case "Took_soberX":
+			LAi_SetPlayerType(Pchar);
+
+			pchar.quest.Took_sober.win_condition.l1 = "location";
+			pchar.quest.Took_sober.win_condition.l1.location = "bb_prison_officer";
+			pchar.quest.Took_sober.win_condition = "Took_sober";
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "Pell_story5":
+			Characters[GetCharacterIndex("Pell")].dialog.CurrentNode  = "story5";
+			LAi_SetActorType(characterFromID("Pell"));
+			LAi_ActorDialogNow(characterFromID("Pell"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Pell"));
+		break;
+
+		case "Pell_story_done":
+			LAi_SetPlayerType(Pchar);
+			Pchar.P2_box3 = "off";
+			Pchar.Pell_story = "done";
+			LAi_SetStayType(characterFromID("Pell"));
+			Characters[GetCharacterIndex("Pell")].dialog.CurrentNode  = "neutral_cell";
+
+			
+		break;
+
+//pär end
+
+//---------------------------------------------------------------------------------------------------	
+//JRH Vane about Richards
+
+		case "Vane_Richards_from game":
+			Pchar.quest.disable_rebirth = true;
+			Locations[FindLocation("wr_cave_shore")].models.always.locators = "Shore04_l_JRHsea";
+
+			Locations[FindLocation("wr_cave_shore")].locators_radius.reload.reload1 = 0.0001;
+			locations[FindLocation("wr_cave_shore")].reload.l2.disable = 1;
+			locations[FindLocation("wr_cave_shore")].reload.l33.disable = 1;
+			locations[FindLocation("wr_cave_shore")].reload.l11.disable = 0;
+			locations[FindLocation("wr_cave_shore")].reload.l111.disable = 0;
+
+			GiveShip2Character(characterFromID("pir_cap2"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap3"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap4"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap5"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap6"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap7"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap8"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap9"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap10"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap12"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap13"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap14"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap15"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap17"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap18"),"obj_invisible","",-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("pir_cap21"),"obj_invisible","",-1,PIRATE,true,true);
+
+			SetCharacterShipLocation(characterFromID("pir_cap1"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap2"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap3"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap4"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap5"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap6"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap7"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap8"), "wr_cave_shore");
+			
+			SetCharacterShipLocation(characterFromID("pir_cap9"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap10"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap11"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap12"), "wr_cave_shore");
+		
+			SetCharacterShipLocation(characterFromID("pir_cap13"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap14"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap15"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap16"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap17"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap18"), "wr_cave_shore");
+		
+			SetCharacterShipLocation(characterFromID("pir_cap19"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap20"), "wr_cave_shore");
+			SetCharacterShipLocation(characterFromID("pir_cap21"), "wr_cave_shore");
+			
+			ChangeCharacterAddressGroup(characterFromID("pir_cap2"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap3"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap4"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap5"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap6"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap7"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap8"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap9"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap10"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap11"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap14"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap15"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap16"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap17"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap20"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap21"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap22"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap23"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap24"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap27"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap28"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap29"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap30"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap31"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap32"), "none", "", "");
+		break;
+
+		case "Vane_Richards_from_jumpstart_and_game":
+			Locations[FindLocation("wr_cavern")].models.always.locators = "cavern_l_JRH_air_closed";
+			Locations[FindLocation("wr_church_outside")].models.always.locators = "Pirl_l_JRH_outside_rum2";
+			locations[FindLocation("wr_Cavern")].reload.l1.disable = 0;
+			locations[FindLocation("wr_Cavern")].reload.l2.disable = 0;
+			Locations[FindLocation("wr_Cavern")].locators_radius.box.box1 = 0.001;
+
+			Locations[FindLocation("wr_church_inside")].reload.l2.disable = 1;
+			Locations[FindLocation("wr_church_inside")].reload.l3.disable = 1;
+			Locations[FindLocation("wr_church_inside")].reload.l8.disable = 1;
+			Locations[FindLocation("wr_church_inside")].reload.l1.emerge = "richards";
+			Locations[FindLocation("wr_church_outside")].locators_radius.box.box1 = 0.5;
+
+			locations[FindLocation("wr_chapel_stairs")].id.label = "Chapel stairs";
+
+			ChangeCharacterAddressGroup(characterFromID("pir_cap1"), "wr_church_outside", "goto", "taylor");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap18"), "wr_church_outside", "goto", "rackham");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap26"), "wr_church_outside", "goto", "read");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap25"), "wr_cave_shore", "goto", "flag_pole");
+
+			ChangeCharacterAddressGroup(characterFromID("pir_cap13"), "wr_cave_shore", "goto", "guard");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap19"), "wr_cave_shore", "goto", "guard2");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap12"), "wr_church_outside", "officers", "reload2_2");
+
+
+			LAi_SetPoorType(characterFromID("pir_cap1"));
+			LAi_SetStayType(characterFromID("pir_cap18"));
+			LAi_SetPoorType(characterFromID("pir_cap26"));
+			LAi_SetStayType(characterFromID("pir_cap12"));
+			LAi_SetStayType(characterFromID("pir_cap13"));
+			LAi_SetStayType(characterFromID("pir_cap19"));
+			LAi_SetStayType(characterFromID("pir_cap25"));
+
+			pchar.quest.Vane_Richards0.win_condition.l1 = "locator";
+			pchar.quest.Vane_Richards0.win_condition.l1.location = "wr_church_outside";
+			pchar.quest.Vane_Richards0.win_condition.l1.locator_group = "goto";
+			pchar.quest.Vane_Richards0.win_condition.l1.locator = "richards";
+			pchar.quest.Vane_Richards0.win_condition = "Vane_Richards0";
+		break;
+
+		case "Vane_Richards0":
+			LAi_SetStayType(Pchar);
+
+			PauseAllSounds();//stops music
+			locations[FindLocation("wr_church_outside")].type = "silent_jungle";
+			PostEvent("LoadSceneSound", 0.1);
+
+			LAi_QuestDelay("Vane_Richards1", 2.0);
+			LAi_QuestDelay("Vane_boiling_loop", 0.2);
+		break;
+
+		case "Vane_Richards1":
+			Characters[GetCharacterIndex("pir_cap18")].dialog.CurrentNode  = "about_Richards";
+			LAi_SetActorType(characterFromID("pir_cap18"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap18"), PChar);
+			LAi_ActorDialogNow(characterFromID("pir_cap18"), pchar, "", 2.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap18"));
+		break;
+
+		case "Vane_Richards2":
+			PlaySound("VOICE\ENGLISH\pir_capR4.wav");
+
+			LAi_QuestDelay("Vane_Richards3", 3.0);
+		break;
+
+		case "Vane_Richards3":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(PChar, characterFromID("pir_cap1"));
+
+			LAi_QuestDelay("Vane_Richards4", 1.0);
+		break;
+		
+		case "Vane_Richards4":
+			Characters[GetCharacterIndex("pir_cap1")].dialog.CurrentNode  = "about_Richards4";
+			LAi_SetActorType(characterFromID("pir_cap1"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap1"), PChar);
+			LAi_ActorDialogNow(characterFromID("pir_cap1"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap1"));
+		break;
+	
+		case "Vane_Richards5":
+			PlaySound("VOICE\ENGLISH\pir_capR10.wav");
+
+			LAi_QuestDelay("Vane_Richards6", 2.5);
+		break;
+
+		case "Vane_Richards6":
+			Characters[GetCharacterIndex("pir_cap26")].dialog.CurrentNode  = "about_Richards6";
+			LAi_SetActorType(characterFromID("pir_cap26"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap26"), PChar);
+			LAi_ActorDialogNow(characterFromID("pir_cap26"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap26"));
+		break;
+	
+		case "Vane_Richards8":
+			Characters[GetCharacterIndex("pir_cap1")].dialog.CurrentNode  = "about_Richards8";
+			LAi_SetActorType(characterFromID("pir_cap1"));
+			LAi_ActorDialogNow(characterFromID("pir_cap1"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap1"));
+		break;
+
+		case "Vane_Richards9":
+			Characters[GetCharacterIndex("pir_cap18")].dialog.CurrentNode  = "about_Richards9";
+			LAi_SetActorType(characterFromID("pir_cap18"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap18"), PChar);
+			LAi_ActorDialogNow(characterFromID("pir_cap18"), pchar, "", 2.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap18"));
+		break;
+
+		case "Vane_Richards10":
+			Characters[GetCharacterIndex("pir_cap26")].dialog.CurrentNode  = "about_Richards10";
+			LAi_SetActorType(characterFromID("pir_cap26"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap26"), PChar);
+			LAi_ActorDialogNow(characterFromID("pir_cap26"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap26"));
+		break;
+
+		case "Vane_Richards11":
+			PlaySound("VOICE\ENGLISH\Eng_f_c_007.wav");
+			ChangeCharacterAddressGroup(Pchar, "wr_church_outside", "reload", "reload9");
+			LAi_SetPlayerType(Pchar);
+			PlaySound3D("INTERFACE\steam2.wav", 24.0, 2.7, -9.0);
+
+			LAi_QuestDelay("Vane_Richards12", 3.0);
+			LAi_QuestDelay("Vane_rum_explosion", 4.0);
+		break;
+
+		case "Vane_Richards12":
+			if(Pchar.location == "wr_church_outside")
+			{
+				PlaySound("OBJECTS\VOICES\DEAD\male\dead1.wav");
+			}
+		break;
+
+		case "Vane_rum_explosion":
+			if(Pchar.location == "wr_church_inside")
+			{
+				//you survive
+
+				PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
+				PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+
+				Locations[FindLocation("wr_church_inside")].reload.l1.disable = 1;
+
+				Locations[FindLocation("wr_church_outside")].models.always.locators = "Pirl_l_JRH_outside_explosion";
+				ChangeCharacterAddressGroup(characterFromID("pir_cap18"), "wr_church_outside", "goto", "richards");
+
+				LAi_SetActorType(characterFromID("pir_cap1"));
+				LAi_SetActorType(characterFromID("pir_cap18"));
+				LAi_SetActorType(characterFromID("pir_cap26"));
+				LAi_ActorSetLayMode(characterFromID("pir_cap1"));
+				LAi_ActorSetLayMode(characterFromID("pir_cap18"));
+				LAi_ActorSetLayMode(characterFromID("pir_cap26"));
+
+				LAi_QuestDelay("pchar_puh", 2.0);
+
+				Pchar.quest.Vane_rum_explosion1.win_condition.l1 = "Location";
+				Pchar.quest.Vane_rum_explosion1.win_condition.l1.location = "wr_church_outside";
+				Pchar.quest.Vane_rum_explosion1.win_condition = "Vane_rum_explosion1";
+			}
+			else
+			{
+				//you die
+
+				PauseAllSounds();
+				PlaySound("OBJECTS\DUEL\pistol_musket.wav");
+				PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+				PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
+				PlayStereoSound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
+				PlaySound("PEOPLE\roof_broken2.wav");
+
+				u = 23.9; v = 3.9; w = -5.4;
+
+				CreateParticleSystem("fort_fire" , u-0.5, v, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("fort_fire" , u-0.1, v+1.8, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("fort_fire" , u-0.3, v+0.5, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("fort_fire" , u-0.2, v+1.0, w-0.5, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("fort_fire" , u, v+1.0, w+0.5, 0.0, 0.0, 0.0, sti(20) );
+
+				CreateParticleSystem("canfire" , u-0.5, v, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("canfire" , u-0.1, v+1.8, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("canfire" , u-0.3, v+0.5, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("canfire" , u-0.2, v+1.0, w-0.5, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("canfire" , u, v+1.0, w+0.5, 0.0, 0.0, 0.0, sti(20) );
+
+				CreateParticleSystem("gunfire_red" , u-0.5, v, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("gunfire_red" , u-0.1, v+1.8, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("gunfire_red" , u-0.3, v+0.5, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("gunfire_red" , u-0.2, v+1.0, w-0.5, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("gunfire_red" , u, v+1.0, w+0.5, 0.0, 0.0, 0.0, sti(20) );
+
+				CreateParticleSystem("stars_fire" , u-0.5, v, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("stars_fire" , u-0.1, v+1.8, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("stars_fire" , u-0.3, v+0.5, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("stars_fire" , u-0.2, v+1.0, w-0.5, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("stars_fire" , u, v+1.0, w+0.5, 0.0, 0.0, 0.0, sti(20) );
+
+				CreateParticleSystem("cancloud" , u-0.5, v, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("cancloud" , u-0.1, v+1.8, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("cancloud" , u-0.3, v+0.5, w, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("cancloud" , u-0.2, v+1.0, w-0.5, 0.0, 0.0, 0.0, sti(20) );
+				CreateParticleSystem("cancloud" , u, v+1.0, w+0.5, 0.0, 0.0, 0.0, sti(20) );
+
+				CreateParticleSystem("splinters", u, v+1.8, W, 0.0, 0.0, 0.0, 0);
+				CreateParticleSystem("splinters", u-0.5, v+1.0, W, 0.0, 0.0, 0.0, 0);
+				CreateParticleSystem("splinters2", u, v+1.8, w, 0.0, 0.0, 0.0, 0);
+				CreateParticleSystem("splinters2", u-0.5, v+1.0, w, 0.0, 0.0, 0.0, 0);
+
+				LAi_QuestDelay("Vane_black_smoke", 0.1);
+
+				LAi_KillCharacter(Pchar);
+				LAi_KillCharacter(characterFromID("pir_cap1"));
+				LAi_KillCharacter(characterFromID("pir_cap18"));
+				LAi_KillCharacter(characterFromID("pir_cap26"));
+			}
+
+			Pchar.Vane_black_smoke = "yes";
+		break;
+
+		case "Vane_rum_explosion1":
+			LAi_QuestDelay("Vane_black_smoke", 0.1);
+			LAi_SetActorType(Pchar);
+			LAi_ActorGoToLocator(Pchar, "quest", "quest1", "Vane_rum_explosion2", 6.0);
+
+			LAi_SetActorType(characterFromID("pir_cap12"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap12"), characterFromID("pir_cap18"));
+
+			ChangeCharacterAddressGroup(characterFromID("pir_cap13"), "wr_church_outside", "reload", "reload1");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap19"), "wr_church_outside", "reload", "reload1");
+			LAi_SetOfficerType(characterFromID("pir_cap13"));
+			LAi_SetOfficerType(characterFromID("pir_cap19"));
+		break;
+
+		case "Vane_rum_explosion2":
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
+			ChangeCharacterAddressGroup(Pchar, "wr_church_outside", "quest", "quest1");
+			LAi_SetStayType(Pchar);
+
+			LAi_QuestDelay("Vane_rum_explosion3A", 2.0);
+		break;
+
+		case "Vane_rum_explosion3A":
+			LAi_SetPoorType(characterFromID("pir_cap26"));
+			PlaySound("OBJECTS\VOICES\DEAD\female\dead_wom5.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion3B", 2.0);
+		break;
+
+		case "Vane_rum_explosion3B":
+			LAi_SetStayType(characterFromID("pir_cap26"));
+			PlaySound("VOICE\ENGLISH\Eng_f_c_020.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion4A", 3.0);
+		break;
+
+		case "Vane_rum_explosion4A":
+			LAi_SetPoorType(characterFromID("pir_cap1"));
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead3.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion4B", 2.0);
+		break;
+
+		case "Vane_rum_explosion4B":
+			LAi_SetStayType(characterFromID("pir_cap1"));
+			PlaySound("VOICE\ENGLISH\pir_capR11.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion5", 3.0);
+		break;
+
+		case "Vane_rum_explosion5":
+			Characters[GetCharacterIndex("pir_cap26")].dialog.CurrentNode  = "Rackham1";
+			LAi_SetActorType(characterFromID("pir_cap26"));
+			LAi_ActorDialogNow(characterFromID("pir_cap26"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap26"));
+		break;
+
+		case "Vane_rum_explosion6":
+			PlaySound("VOICE\ENGLISH\pir_capR7.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion7", 3.0);
+		break;
+
+		case "Vane_rum_explosion7":
+			LAi_SetPoorType(characterFromID("pir_cap18"));
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead7.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion8", 2.0);
+		break;
+
+		case "Vane_rum_explosion8":
+			LAi_SetActorType(characterFromID("pir_cap18"));
+			LAi_ActorTurnToLocator(characterFromID("pir_cap18"), "reload", "reload9");
+			PlaySound("VOICE\ENGLISH\pir_capP.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion9", 2.5);
+		break;
+
+		case "Vane_rum_explosion9":
+			PlaySound("VOICE\ENGLISH\pir_capR1.wav");
+			LAi_SetActorType(characterFromID("pir_cap1"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap1"), characterFromID("pir_cap18"));
+
+			LAi_QuestDelay("Vane_rum_explosion10", 2.5);
+		break;
+
+		case "Vane_rum_explosion10":			
+			Characters[GetCharacterIndex("pir_cap18")].dialog.CurrentNode  = "I_am";
+			LAi_SetActorType(characterFromID("pir_cap18"));
+			LAi_ActorDialogNow(characterFromID("pir_cap18"), pchar, "", 2.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap18"));
+		break;
+
+		case "Vane_rum_explosion11":			
+			PlaySound("VOICE\ENGLISH\pir_capR2.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion12", 2.5);
+		break;
+
+		case "Vane_rum_explosion12":
+			Characters[GetCharacterIndex("pir_cap26")].dialog.CurrentNode  = "Rackham2";
+			LAi_SetActorType(characterFromID("pir_cap26"));
+			LAi_ActorDialogNow(characterFromID("pir_cap26"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap26"));
+		break;
+
+		case "Vane_rum_explosion13":
+			PlaySound("VOICE\ENGLISH\pir_capR4.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion14", 3.5);
+		break;
+
+		case "Vane_rum_explosion14":
+			PlaySound("VOICE\ENGLISH\pir_capFFF.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion15", 3.5);
+		break;
+
+		case "Vane_rum_explosion15":
+			Characters[GetCharacterIndex("pir_cap26")].dialog.CurrentNode  = "Rackham3";
+			LAi_SetActorType(characterFromID("pir_cap26"));
+			LAi_ActorDialogNow(characterFromID("pir_cap26"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap26"));
+		break;
+
+		case "Vane_rum_explosion16":
+			PlaySound("VOICE\ENGLISH\pir_capB.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion17", 2.5);
+		break;
+
+		case "Vane_rum_explosion17":
+			Characters[GetCharacterIndex("pir_cap1")].dialog.CurrentNode  = "Rackham_sail";
+			LAi_SetActorType(characterFromID("pir_cap1"));
+			LAi_ActorDialogNow(characterFromID("pir_cap1"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap1"));
+		break;
+
+		case "Vane_rum_explosion18":
+			PlaySound("VOICE\ENGLISH\pir_capMMM.wav");
+
+			LAi_QuestDelay("Vane_rum_explosion19", 2.5);
+		break;
+
+		case "Vane_rum_explosion19":
+			PlaySound("VOICE\ENGLISH\Eng_f_c_018.wav");
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("pir_cap26"));
+
+			LAi_QuestDelay("Vane_rum_explosion20", 2.5);
+		break;
+
+		case "Vane_rum_explosion20":
+			PlaySound("VOICE\ENGLISH\pir_capCC.wav");
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("pir_cap18"));
+
+			LAi_QuestDelay("Vane_rum_explosion21", 2.5);
+		break;
+
+		case "Vane_rum_explosion21":
+			PlaySound("AMBIENT\cheer2.wav");
+			LAi_SetPlayerType(Pchar);
+			Pchar.Vane_black_smoke = "no";
+
+			LAi_QuestDelay("Vane_rum_explosion22", 5.0);
+		break;
+
+		case "Vane_rum_explosion22":
+			Characters[GetCharacterIndex("pir_cap1")].dialog.CurrentNode  = "back_to_posts";
+			LAi_SetActorType(characterFromID("pir_cap1"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap1"), PChar);
+			LAi_ActorDialogNow(characterFromID("pir_cap1"), pchar, "", 0.01);
+			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap1"));
+		break;
+
+		case "Vane_rum_explosion23":
+			locations[FindLocation("wr_church_outside")].type = "Vane_jungle";
+			PostEvent("LoadSceneSound", 0);
+
+			ChangeCharacterAddressGroup(characterFromID("pir_cap12"), "wr_church_outside", "officers", "reload2_2");
+			LAi_SetStayType(characterFromID("pir_cap12"));
+			LAi_SetActorType(characterFromID("pir_cap13"));
+			LAi_SetActorType(characterFromID("pir_cap19"));
+			LAi_ActorRunToLocator(characterFromID("pir_cap13"), "reload", "reload1", "Vane_rum_explosion24", 10.0);
+			LAi_ActorRunToLocator(characterFromID("pir_cap19"), "reload", "reload1", "Vane_rum_explosion24", 10.0);
+		break;
+
+		case "Vane_rum_explosion24":
+			ChangeCharacterAddressGroup(characterFromID("pir_cap13"), "wr_cave_shore", "goto", "guard");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap19"), "wr_cave_shore", "goto", "guard2");
+			LAi_SetStayType(characterFromID("pir_cap13"));
+			LAi_SetStayType(characterFromID("pir_cap19"));
+
+			Pchar.quest.Vane_rum_explosion25.win_condition.l1 = "Location";
+			Pchar.quest.Vane_rum_explosion25.win_condition.l1.location = "wr_cavern";
+			Pchar.quest.Vane_rum_explosion25.win_condition = "Vane_rum_explosion25";
+		break;
+
+		case "Vane_rum_explosion25":
+			ChangeCharacterAddressGroup(characterFromID("pir_cap1"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap18"), "none", "", "");
+			ChangeCharacterAddressGroup(characterFromID("pir_cap26"), "none", "", "");
+		break;
+
+	//---------------------------------------------------------------------------
+		case "Vane_boiling_loop":
+			if(Pchar.location == "wr_church_outside")
+			{
+				PlaySound3D("INTERFACE\rumble1.wav", 24.0, 2.7, -6.0);		//z was -3
+				if(CheckAttribute(Pchar,"Vane_boiling_bubbles") && Pchar.Vane_boiling_bubbles == "yes")
+				{
+					PlaySound3D("INTERFACE\bubbles2.wav", 24.0, 2.7, 0.0);	
+				}
+				if(CheckAttribute(Pchar,"Vane_boiling_steam") && Pchar.Vane_boiling_steam == "yes")
+				{
+					PlaySound3D("INTERFACE\steam1.wav", 24.0, 2.7, -9.0);
+					PlaySound3D("INTERFACE\steam1.wav", 24.0, 2.7, -9.0);
+				}
+				
+				LAi_QuestDelay("Vane_boiling_loop", 4.7);
+			}
+			else return;
+		break;
+
+		case "Vane_black_smoke":
+			CreateParticleSystem("smoke_inv" , 24.8, 2.7, -4.0, 5.1, 4.0, 0.0, sti(20) );
+
+			if(CheckAttribute(Pchar,"Vane_black_smoke") && Pchar.Vane_black_smoke == "yes")
+			{
+				LAi_QuestDelay("Vane_black_smoke", 5.0);
+			}
 		break;
 
 //---------------------------------------------------------------------------------------------------	
@@ -51062,6 +57475,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "leave_french_surgeon2":
+			if(!CheckAttribute(Pchar,"qbook.richards5") || Pchar.qbook.richards5 != "done")
+			{
+				AddQuestRecord("Richards","5");
+				Pchar.qbook.richards5 = "done";
+			}
+
 			Pchar.Tgunsmith = "yes";
 			
 			LAi_SetActorType(Pchar);
@@ -51097,6 +57516,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "leave_french_surgeon3":
+			if(!CheckAttribute(Pchar,"qbook.richards7") || Pchar.qbook.richards7 != "done")
+			{
+				AddQuestRecord("Richards","7");
+				Pchar.qbook.richards7 = "done";
+			}
+
 			Pchar.Tsailmaker = "yes";
 			
 			LAi_SetActorType(Pchar);
@@ -51132,6 +57557,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "leave_french_surgeon1":
+			if(!CheckAttribute(Pchar,"qbook.richards9") || Pchar.qbook.richards9 != "done")
+			{
+				AddQuestRecord("Richards","9");
+				Pchar.qbook.richards9 = "done";
+			}
+
 			Pchar.Tassistent = "yes";
 			LAi_SetStayType(characterFromID("french_surgeon1"));
 			
@@ -51173,6 +57604,67 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "carriage_girl_end":
+			if(!CheckAttribute(Pchar,"qbook.richards11") || Pchar.qbook.richards11 != "done")
+			{
+				AddQuestRecord("Richards","11");
+				Pchar.qbook.richards11 = "done";
+
+				LAi_SetActorType(CharacterFromID("wr_pir13"));
+				LAi_NoRebirthEnable(CharacterFromID("wr_pir13"));
+				RemoveCharacterEquip(characterFromID("wr_pir13"), GUN_ITEM_TYPE);
+				RemoveCharacterEquip(characterFromID("wr_pir13"), BLADE_ITEM_TYPE);
+				DeleteAttribute(characterFromID("wr_pir13"), "items");
+				GiveItem2Character(characterFromID("wr_pir13"), "bladeA17");
+				EquipCharacterByItem(characterFromID("wr_pir13"), "bladeA17");
+				GiveItem2Character(characterFromID("wr_pir13"), "bladekit");
+
+				if(CheckAttribute(Pchar, "killed_wr_officers"))
+				{
+					switch(Pchar.killed_wr_officers)
+					{
+						case "0":
+							GiveItem2Character(characterFromID("wr_pir13"), "pistol203");
+							EquipCharacterByItem(characterFromID("wr_pir13"), "pistol203");
+							GiveItem2Character(characterFromID("wr_pir13"), "ammobag1");
+							TakenItems(characterFromID("wr_pir13"), "gunpowder", 2);
+							TakenItems(characterFromID("wr_pir13"), "pistolbullets", 2);
+
+							LAi_QuestDelay("Cook_items0_check", 0.1);
+						break;
+
+						case "1":
+							GiveItem2Character(characterFromID("wr_pir13"), "pistol201");
+							GiveItem2Character(characterFromID("wr_pir13"), "pistol204");
+							EquipCharacterByItem(characterFromID("wr_pir13"), "pistol201");
+							TakenItems(characterFromID("wr_pir13"), "gunpowder", 2);
+							TakenItems(characterFromID("wr_pir13"), "pistolbullets", 2);
+
+							LAi_QuestDelay("Cook_items1_check", 0.1);
+						break;
+
+						case "2":
+							GiveItem2Character(characterFromID("wr_pir13"), "pistol205");
+							GiveItem2Character(characterFromID("wr_pir13"), "pistol202");
+							EquipCharacterByItem(characterFromID("wr_pir13"), "pistol205");
+							TakenItems(characterFromID("wr_pir13"), "gunpowder", 2);
+							TakenItems(characterFromID("wr_pir13"), "pistolbullets", 2);
+
+							LAi_QuestDelay("Cook_items2_check", 0.1);
+						break;
+
+						case "3":
+							GiveItem2Character(characterFromID("wr_pir13"), "pistol206");
+							GiveItem2Character(characterFromID("wr_pir13"), "pistolbelt");
+							EquipCharacterByItem(characterFromID("wr_pir13"), "pistol206");
+							TakenItems(characterFromID("wr_pir13"), "gunpowder", 2);
+							TakenItems(characterFromID("wr_pir13"), "pistolbullets", 2);
+
+							LAi_QuestDelay("Cook_items3_check", 0.1);
+						break;
+					}
+				}
+			}
+
 			Pchar.Ttower = "yes";
 			port = &Locations[FindLocation("Tortuga_port")]; 
 			if(CheckAttribute(port,"lockCamAngle") ) DeleteAttribute(port,"lockCamAngle"); 	
@@ -51180,8 +57672,6 @@ void QuestComplete(string sQuestName)
 	 		DeleteAttribute(Pchar, "quest.JRH_rain");
 			//RESET
 
-			
-		
 			LAi_QuestDelay("no_rain_in_tower", 0.1);
 
 			DoQuestReloadToLocation("Tortuga_port", "box", "box9", "carriage_girl_end2");
@@ -51196,9 +57686,84 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\run_stone.wav");
 			ChangeCharacterAddressGroup(Pchar, "Tortuga_port", "box", "box9");
 		break;
+//---------------------------------------------------------------------------------------------------	
+		case "Tortuga_Cook_fight":
+			PlaySound("PEOPLE\run_stone.wav");
+			ChangeCharacterAddressGroup(CharacterFromID("wr_pir13"), "Tortuga_port", "quest", "fight2");
+			DoQuickSave();
+			LAi_SetImmortal(characterFromID("wr_pir13"), false);
+			LAi_SetHP(CharacterFromID("wr_pir13"), 250.0, 250.0);
+			
+			LAi_QuestDelay("Tortuga_Cook_fight1", 0.7);
+		break;
 
+		case "Tortuga_Cook_fight1":
+			PlaySound("VOICE\ENGLISH\Eng_m_c_012.wav");
+			LAi_SetActorType(CharacterFromID("wr_pir13"));
+			LAi_ActorAttack(CharacterFromID("wr_pir13"), Pchar, "");
 
-		//TOWER TOUR START
+			Pchar.quest.Tortuga_Cook_dead.win_condition.l1 = "NPC_Death";
+			Pchar.quest.Tortuga_Cook_dead.win_condition.l1.character = "wr_pir13";
+			Pchar.quest.Tortuga_Cook_dead.win_condition = "Tortuga_Cook_dead";
+		break;
+
+		case "Tortuga_Cook_dead":
+			Pchar.Cook_dead = "yes";
+			
+			LAi_QuestDelay("Tortuga_Cook_dead1", 1.0);	
+		break;
+
+		case "Tortuga_Cook_dead1":
+			if(LAi_IsFightMode(Pchar)) LAi_SetFightMode(PChar, false);
+
+			LAi_QuestDelay("Tortuga_Cook_dead2", 2.0);	
+		break;
+
+		case "Tortuga_Cook_dead2":
+			PlaySound("PEOPLE\run_stone.wav");
+			ChangeCharacterAddressGroup(Pchar, "Tortuga_port", "quest", "fight2");	
+		break;
+
+		case "Cook_items0_check":
+			if(CheckCharacterItem(Pchar,"pistol203") && CheckCharacterItem(Pchar,"ammobag1"))
+			{
+				LAi_QuestDelay("Tortuga_Cook_dead3", 0.1);
+			}
+			else LAi_QuestDelay("Cook_items0_check", 0.5);//loop check
+		break;
+
+		case "Cook_items1_check":
+			if(CheckCharacterItem(Pchar,"pistol201") && CheckCharacterItem(Pchar,"pistol204"))
+			{
+				LAi_QuestDelay("Tortuga_Cook_dead3", 0.1);
+			}
+			else LAi_QuestDelay("Cook_items1_check", 0.5);//loop check
+		break;
+
+		case "Cook_items2_check":
+			if(CheckCharacterItem(Pchar,"pistol205") && CheckCharacterItem(Pchar,"pistol202"))
+			{
+				LAi_QuestDelay("Tortuga_Cook_dead3", 0.1);
+			}
+			else LAi_QuestDelay("Cook_items2_check", 0.5);//loop check
+		break;
+
+		case "Cook_items3_check":
+			if(CheckCharacterItem(Pchar,"pistol206") && CheckCharacterItem(Pchar,"pistolbelt"))
+			{
+				LAi_QuestDelay("Tortuga_Cook_dead3", 0.1);
+			}
+			else LAi_QuestDelay("Cook_items3_check", 0.5);//loop check
+		break;
+
+		case "Tortuga_Cook_dead3":
+			PlaySound("PEOPLE\run_stone.wav");
+			ChangeCharacterAddressGroup(Pchar, "Tortuga_port", "box", "box15");
+
+			LAi_QuestDelay("TT_turn_box16", 0.5);	
+		break;
+//---------------------------------------------------------------------------------------------------	
+	//TOWER TOUR START
 		case "no_rain_in_tower":
 			ChangeCharacterAddressGroup(characterFromID("Bertrand Ogeron"), "none", "", "");
 			Locations[FindLocation("Tortuga_townhall")].reload.l3.disable = 0;	//tower passage	
@@ -51227,7 +57792,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.no_rain_in_tower.win_condition.l1.location = "Tortuga_tower_passage";
 			pchar.quest.no_rain_in_tower.win_condition = "no_rain_in_tower1";
 		break;
-//JRH tower
+
 	//WAY UP
 		case "TT_turn_box12":
 			LAi_SetActorType(Pchar);
@@ -51327,6 +57892,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "leave_french_surgeon4":
+			if(!CheckAttribute(Pchar,"qbook.richards13") || Pchar.qbook.richards13 != "done")
+			{
+				AddQuestRecord("Richards","13");
+				Pchar.qbook.richards13 = "done";
+				Locations[FindLocation("cloister_exit")].locators_radius.box.box1 = 2.0;	//opens WoodesRogers part
+				Pchar.monastary = "Sister_Richards";
+			}
+
 			Pchar.Tgovernor = "yes";
 
 			LAi_QuestDelay("leave_french_surgeon4_A", 1.0);
@@ -51377,17 +57950,801 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\run_wood.wav");
 			ChangeCharacterAddressGroup(Pchar, "Tortuga_port", "goto", "box8");
 		break;
+//---------------------------------------------------------------------------------------------------
+//monastary start
+		case "Sister_Richards_in_bell_tower":
+			Pchar.monastary = "repeat_Sister_Richards";
+			AddQuestRecord("Richards","16");
+			Locations[FindLocation("BB_graveyard")].reload.l6.disable = 0;
+			Locations[FindLocation("BB_graveyard")].locators_radius.reload.reload6 = 0.001;		//large after Sister Richards dialog
+			ChangeCharacterAddressGroup(characterFromID("bb_nun1"), "BB_graveyard", "reload", "reload6");
+		break;
+//---------------------------------------------------------------------------------------------------	
+//Charleston blockade scene
+
+		case "Charleston_blockade_start":
+			SetCurrentTime(12, 0);
+			SetNextWeather("Clear");
+			Pchar.quest.JRH_rain = "Clear";
+
+			SetNextWind("SE",30);			//was S
+			Pchar.quest.disable_rebirth = true;
+
+			SetModel(PChar, "bb_Teach2", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+		
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+		
+		//	aref ito, ifrom;
+			DeleteAttribute(characterFromID("Brthug1"), "items");
+			
+			if(CheckAttribute(Pchar, "items"))
+			{
+				makearef(ifrom, Pchar.items);
+				Characters[GetCharacterIndex("Brthug1")].items = "";
+				makearef(ito, Characters[GetCharacterIndex("Brthug1")].items);
+				CopyAttributes(&ito, &ifrom);
+				DeleteAttribute(Pchar, "items");
+			}
+		
+			GiveItem2Character(Pchar, "bladeX4");
+			GiveItem2Character(Pchar, "blade27");	
+			EquipCharacterByItem(Pchar, "blade27");
+
+			pchar.old.name = "Edward";
+			pchar.old.lastname = "Teach";
+			pchar.name = TranslateString("","Edward");
+			pchar.lastname = TranslateString("","Teach");	
+
+			DoQuestReloadToLocation("BB_QAR_cabin", "goto", "window" ,"Charleston_blockade1");
+		break;
+
+		case "Charleston_blockade1":
+			LAi_SetStayType(pchar);
+
+			ChangeCharacterAddressGroup(characterFromID("bb_crew1"), "BB_qar_deck", "goto", "qar1");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew2"), "BB_qar_deck", "goto", "qar2");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew3"), "BB_qar_deck", "goto", "qar3");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew4"), "BB_qar_deck", "goto", "qar4");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew5"), "BB_qar_deck", "goto", "qar5");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew6"), "BB_qar_deck", "goto", "qar6");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew7"), "BB_qar_deck", "goto", "qar7");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew8"), "BB_qar_deck", "quest", "bridge");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew9"), "BB_qar_deck", "goto", "sloop1");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew10"), "BB_qar_deck", "goto", "sloop2");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew11"), "BB_qar_deck", "goto", "sloop3");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew12"), "BB_qar_deck", "goto", "sloop4");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew13"), "BB_qar_deck", "goto", "sloop5");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew14"), "BB_qar_deck", "goto", "sloop6");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew15"), "BB_qar_deck", "goto", "sloop7");
+			ChangeCharacterAddressGroup(characterFromID("Bonnet"), "BB_qar_deck", "goto", "revenge1");
+			ChangeCharacterAddressGroup(characterFromID("Herriot"), "BB_qar_deck", "goto", "revenge2");
+			ChangeCharacterAddressGroup(characterFromID("Pell"), "BB_qar_deck", "goto", "revenge3");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew16"), "BB_qar_deck", "goto", "adventure1");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew17"), "BB_qar_deck", "goto", "qar8");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew18"), "BB_qar_deck", "goto", "qar12");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew19"), "BB_qar_deck", "goto", "qar9");
+			ChangeCharacterAddressGroup(characterFromID("postman"), "BB_qar_deck", "goto", "qar10");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew20"), "BB_qar_deck", "goto", "qar13");
+			ChangeCharacterAddressGroup(characterFromID("bb_crew21"), "BB_qar_deck", "goto", "qar11");
+			ChangeCharacterAddressGroup(characterFromID("Louis_Arot"), "BB_qar_deck", "goto", "revenge4");
+		
+			Characters[GetCharacterIndex("bb_crew5")].Dialog.Filename = "bb_crew_dialog.c";
+			Characters[GetCharacterIndex("bb_crew8")].Dialog.Filename = "bb_crew_dialog.c";
+			Characters[GetCharacterIndex("Richards")].Dialog.Filename = "bb_crew2_dialog.c";
+			Characters[GetCharacterIndex("Richards")].dialog.CurrentNode  = "First time";
+
+			Locations[FindLocation("BB_QAR_cabin")].image = "deck_cabin1.tga";
+
+			LAi_QuestDelay("wait_for_Richards", 2.0);
+		break;
+
+		case "wait_for_Richards":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "wait_for_Richards";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "wait_for_Richards_done":
+			LAi_QuestDelay("Charleston_gp_explosion", 2.0);
+		break;
+
+		case "Charleston_gp_explosion":
+			PauseAllSounds();
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\LG42H.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\gunpowder_explosion.wav");
+			PlaySound("PEOPLE\roof_broken2.wav");
+
+			ref cmdr = CharacterFromID("Dante Siciliano");
+			CaptureTownForNation("Grand Turk", GUEST1_NATION);
+			cmdr.nation = GUEST1_NATION; pchar.tower.flag = "pir2";
+			
+			LAi_QuestDelay("Charleston_gp_explosion1", 7.0);	
+		break;
+
+		case "Charleston_gp_explosion1":
+			PlaySound("OBJECTS\SHIPCHARGE\hurrah.wav");
+			LAi_SetPlayerType(pchar);
+			SetNextWind("SE",30);	
+
+			LAi_QuestDelay("Charleston_gp_explosion1_A", 1.5);		//was 3.5
+
+			pchar.quest.turn_Bonnet.win_condition.l1 = "location";
+			pchar.quest.turn_Bonnet.win_condition.l1.location = "BB_qar_deck";
+			pchar.quest.turn_Bonnet.win_condition = "turn_Bonnet";
+		break;
+
+		case "Charleston_gp_explosion1_A":
+			PlaySound("VOICE\ENGLISH\pir_capR3.wav");
+		break;
+
+		case "turn_Bonnet":
+			LAi_SetActorType(CharacterFromID("Bonnet"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Bonnet"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Herriot"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Herriot"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Pell"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Pell"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("bb_crew16"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew16"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("bb_crew17"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew17"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Louis_Arot"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Louis_Arot"), "quest", "hole");
+		
+			pchar.quest.Charleston_gp_explosion2.win_condition.l1 = "locator";
+			pchar.quest.Charleston_gp_explosion2.win_condition.l1.location = "BB_qar_deck";
+			pchar.quest.Charleston_gp_explosion2.win_condition.l1.locator_group = "quest";
+			pchar.quest.Charleston_gp_explosion2.win_condition.l1.locator = "hole";
+			pchar.quest.Charleston_gp_explosion2.win_condition = "Charleston_gp_explosion2";
+		break;
+
+		case "Charleston_gp_explosion2":
+			PlaySound("VOICE\ENGLISH\gr_Teach2.wav");
+			ChangeCharacterAddressGroup(Pchar, "BB_qar_deck", "quest", "hole");
+			LAi_SetStayType(pchar);
+
+			LAi_SetActorType(CharacterFromID("Bonnet"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Bonnet"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Herriot"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Herriot"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Pell"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Pell"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("bb_crew16"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew16"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("bb_crew17"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew17"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Louis_Arot"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Louis_Arot"), "quest", "hole");
+
+			LAi_QuestDelay("Charleston_gp_explosion3", 1.5);
+		break;
+
+		case "Charleston_gp_explosion3":
+			Characters[GetCharacterIndex("bb_crew8")].Dialog.Filename = "bb_crew2_dialog.c";
+
+			LAi_SetActorType(characterFromID("bb_crew8"));
+			LAi_ActorDialog(characterFromID("bb_crew8"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_crew8"));
+		break;
+
+		case "Charleston_gp_explosion4":
+			PlaySound("VOICE\ENGLISH\gr_Teach1.wav");
+			LAi_SetActorType(CharacterFromID("bb_crew8"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew8"), "blacksmoke", "bsmoke1");
+			
+			LAi_QuestDelay("Charleston_gp_explosion5", 1.0);
+		break;
+
+		case "Charleston_gp_explosion5":
+			LAi_SetStayType(characterFromID("bb_crew8"));
+			Characters[GetCharacterIndex("bb_crew8")].Dialog.Filename = "bb_crew_dialog.c";
+
+			LAi_QuestDelay("Charleston_gp_explosion6", 1.0);
+		break;
+
+		case "Charleston_gp_explosion6":
+			Characters[GetCharacterIndex("bb_crew5")].Dialog.Filename = "bb_crew2_dialog.c";
+
+			LAi_SetActorType(characterFromID("bb_crew5"));
+			LAi_ActorDialog(characterFromID("bb_crew5"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_crew5"));
+		break;
+
+		case "Charleston_gp_explosion7":
+			PlaySound("VOICE\ENGLISH\gr_Teach7.wav");
+			LAi_SetActorType(CharacterFromID("bb_crew5"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew5"), "blacksmoke", "bsmoke1");
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "blacksmoke", "bsmoke1");
+			
+			Locations[FindLocation("BB_QAR_cabin")].locators_radius.box.box1 = 1.5;
+			
+			LAi_QuestDelay("pchar_playertype", 0.5);
+			LAi_QuestDelay("Charleston_gp_explosion8", 1.0);
+		break;
+
+		case "Charleston_gp_explosion8":
+			LAi_SetStayType(characterFromID("bb_crew5"));
+			Characters[GetCharacterIndex("bb_crew5")].Dialog.Filename = "bb_crew_dialog.c";
+		break;
+
+		case "Richards_back":
+			PlaySound("INTERFACE\knock2.wav");
+
+			LAi_QuestDelay("Richards_back1", 4.0);
+		break;
+
+		case "Richards_back1":
+			PlaySound("INTERFACE\knock2.wav");
+
+			LAi_QuestDelay("Richards_back2", 4.0);
+		break;
+
+		case "Richards_back2":
+			PlaySound("INTERFACE\knock.wav");
+
+			LAi_QuestDelay("Richards_back3", 2.0);
+		break;
+
+		case "Richards_back3":
+			PlaySound("PEOPLE\recoil.wav");
+			LAi_SetPlayerType(pchar);
+			ChangeCharacterAddressGroup(Pchar, "BB_qar_cabin", "goto", "wakeup");
+			LAi_LocationFightDisable(&Locations[FindLocation("BB_qar_cabin")], false);
+
+			LAi_QuestDelay("Richards_back4", 0.5);
+		break;
+
+		case "Richards_back4":
+			LAi_SetFightMode(Pchar, true);
+			PlaySound("VOICE\ENGLISH\gm_crew16B.wav");
+			PlaySound("VOICE\ENGLISH\gm_crew16B.wav");
+
+			LAi_QuestDelay("Richards_back5", 1.5);
+		break;
+
+		case "Richards_back5":
+			LAi_LocationFightDisable(&Locations[FindLocation("BB_qar_cabin")], true);
+			if(LAi_IsFightMode(Pchar)) {LAi_SetFightMode(Pchar, false);}
+			Characters[GetCharacterIndex("BB_nun1")].Ship.Type = "boat";
+			Characters[GetCharacterIndex("crypt_skeleton5")].Ship.Type = "obj_invisible";
+			Characters[GetCharacterIndex("crypt_skeleton6")].Ship.Type = "obj_invisible";
+
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_qar_deck", "goto", "adventure2");
+			ChangeCharacterAddressGroup(characterFromID("Hornigold"), "BB_qar_deck", "goto", "adventure3");
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_qar_deck", "goto", "adventure4");
+			ChangeCharacterAddressGroup(characterFromID("Odel"), "BB_qar_deck", "goto", "adventure5");
+			LAi_SetStayType(CharacterFromID("Hands"));
+			LAi_SetStayType(CharacterFromID("Caesar"));	
+			SetNextWind("SE",30);	
+		
+			LAi_QuestDelay("pchar_hah", 1.0);
+			LAi_QuestDelay("pchar_playertype", 1.0);
+
+			pchar.quest.turn_Hands.win_condition.l1 = "location";
+			pchar.quest.turn_Hands.win_condition.l1.location = "BB_qar_deck";
+			pchar.quest.turn_Hands.win_condition = "turn_Hands";
+		break;
+
+		case "turn_Hands":
+			LAi_SetActorType(CharacterFromID("Hands"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Hands"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Hornigold"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Hornigold"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Odel"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Odel"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Caesar"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Caesar"), "quest", "hole");
+	
+			LAi_SetActorType(CharacterFromID("Bonnet"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Bonnet"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Herriot"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Herriot"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Pell"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Pell"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("bb_crew16"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew16"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("bb_crew17"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew17"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Louis_Arot"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Louis_Arot"), "quest", "hole");
+
+			pchar.quest.Richards_back6.win_condition.l1 = "locator";
+			pchar.quest.Richards_back6.win_condition.l1.location = "BB_qar_deck";
+			pchar.quest.Richards_back6.win_condition.l1.locator_group = "quest";
+			pchar.quest.Richards_back6.win_condition.l1.locator = "hole";
+			pchar.quest.Richards_back6.win_condition = "Richards_back6";
+		break;
+
+		case "Richards_back6":
+			LAi_QuestDelay("pchar_huh", 0.01);
+			ChangeCharacterAddressGroup(Pchar, "BB_qar_deck", "quest", "hole2");
+			LAi_SetStayType(pchar);
+
+			LAi_SetActorType(CharacterFromID("Hands"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Hands"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Hornigold"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Hornigold"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Odel"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Odel"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Caesar"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Caesar"), "quest", "hole");
+	
+			LAi_SetActorType(CharacterFromID("Bonnet"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Bonnet"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Herriot"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Herriot"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Pell"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Pell"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("bb_crew16"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew16"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("bb_crew17"));	
+			LAi_ActorTurnToLocator(CharacterFromID("bb_crew17"), "quest", "hole");
+			LAi_SetActorType(CharacterFromID("Louis_Arot"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Louis_Arot"), "quest", "hole");
+
+			DeleteAttribute(CharacterFromID("Richards"), "items");
+			GiveItem2Character(CharacterFromID("Richards"),"bladep205");
+			EquipCharacterByItem(characterFromID("Richards"), "bladep205");
+			GiveItem2Character(CharacterFromID("Richards"),"pistolmdchest_F1");
+			EquipCharacterByItem(characterFromID("Richards"), "pistolmdchest_F1");
+			
+			LAi_QuestDelay("Richards_back7", 2.0);
+		break;
+
+		case "Richards_back7":
+			PlaySound("PEOPLE\creak2.wav");
+			LAi_SetStayType(CharacterFromID("Richards"));
+			ChangeCharacterAddressGroup(characterFromID("Richards"), "BB_qar_deck", "quest", "richards1");
+
+			LAi_QuestDelay("Richards_back8", 1.0);
+		break;
+
+		case "Richards_back8":
+			PlaySound("VOICE\ENGLISH\gr_Teach5.wav");
+		
+			LAi_QuestDelay("Richards_back9", 2.0);
+		break;
+
+		case "Richards_back9":
+			LAi_SetPlayerType(pchar);
+			PlaySound("PEOPLE\recoil.wav");
+			LAi_SetStayType(CharacterFromID("Richards"));
+			ChangeCharacterAddressGroup(characterFromID("Richards"), "BB_qar_deck", "quest", "richards2");
+
+			pchar.quest.Richards_back10.win_condition.l1 = "locator";
+			pchar.quest.Richards_back10.win_condition.l1.location = "BB_qar_deck";
+			pchar.quest.Richards_back10.win_condition.l1.locator_group = "quest";
+			pchar.quest.Richards_back10.win_condition.l1.locator = "richards2";
+			pchar.quest.Richards_back10.win_condition = "Richards_back10";
+		break;
+	
+		case "Richards_back10":
+			LAi_SetStayType(pchar);
+
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorDialog(characterFromID("Richards"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Richards"));
+		break;
+
+		case "Richards_back11":	
+			PlaySound("PEOPLE\clothes1.wav");
+			RemoveCharacterEquip(characterFromID("Richards"), GUN_ITEM_TYPE);
+			TakeItemFromCharacter(characterFromID("Richards"), "pistolmdchest_F1");
+			GiveItem2Character(Pchar, "pistolmdchest_F1");
+			EquipCharacterByItem(Pchar, "pistolmdchest_F1");
+			
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			GiveItem2Character(Pchar, "bladeMap_Hgold");
+			EquipCharacterByItem(Pchar, "bladeMap_Hgold");
+
+			LAi_QuestDelay("Richards_back12", 1.0);
+		break;
+
+		case "Richards_back12":
+			PlaySound("VOICE\ENGLISH\gr_Teach3.wav");
+			LAi_SetPlayerType(pchar);
+			LAi_SetFightMode(Pchar, true);
+
+			LAi_QuestDelay("Richards_back13", 2.5);
+		break;
+
+		case "Richards_back13":
+			LAi_LocationFightDisable(&Locations[FindLocation("BB_qar_deck")], true);
+			if(LAi_IsFightMode(Pchar)) {LAi_SetFightMode(Pchar, false);}
+
+			PlaySound("INTERFACE\paper.wav");
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(Pchar, "bladeMap_Hgold");					
+			EquipCharacterByItem(Pchar, "bladeX4");
+			GiveItem2Character(characterFromID("Richards"), "pistolMap_Hgold");
+			EquipCharacterByItem(characterFromID("Richards"), "pistolMap_Hgold");
+
+			LAi_QuestDelay("Richards_back14", 1.5);
+		break;
+
+		case "Richards_back14":
+			characters[GetCharacterIndex("Richards")].dialog.CurrentNode = "Richards_huh";
+			LAi_SetActorType(characterFromID("Richards"));
+			LAi_ActorDialog(characterFromID("Richards"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Richards"));
+		break;
+
+		case "Richards_back15":
+			LAi_SetStayType(pchar);
+			Characters[GetCharacterIndex("Richards")].Dialog.Filename = "bb_crew_dialog.c";
+			PlaySound("VOICE\ENGLISH\pir_capMMM.wav");
+	
+			LAi_QuestDelay("Richards_back16", 1.5);
+		break;
+
+		case "Richards_back16":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "Richards_pistol";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "Richards_back17":
+			PlaySound("OBJECTS\DUEL\man_hit1.wav");
+			LAi_LocationFightDisable(&Locations[FindLocation("BB_qar_deck")], false);
+			LAi_SetPlayerType(characterFromID("Richards"));
+			LAi_SetFightMode(characterFromID("Richards"), true);
+
+			LAi_QuestDelay("Richards_back18", 1.5);
+		break;
+
+		case "Richards_back18":
+			LAi_LocationFightDisable(&Locations[FindLocation("BB_qar_deck")], true);
+			if(LAi_IsFightMode(characterFromID("Richards"))) {LAi_SetFightMode(characterFromID("Richards"), false);}
+			PlaySound("OBJECTS\DUEL\pistol_out1original.wav");
+			RemoveCharacterEquip(characterFromID("Richards"), BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(characterFromID("Richards"), "bladep205");					
+			EquipCharacterByItem(characterFromID("Richards"), "bladeX4");
+			GiveItem2Character(Pchar, "bladep205");
+			EquipCharacterByItem(Pchar, "bladep205");
+
+			LAi_QuestDelay("Richards_back19", 1.0);
+		break;
+
+		case "Richards_back19":
+			LAi_SetPlayerType(pchar);
+
+			pchar.quest.QAR_broadside.win_condition.l1 = "locator";
+			pchar.quest.QAR_broadside.win_condition.l1.location = "BB_qar_deck";
+			pchar.quest.QAR_broadside.win_condition.l1.locator_group = "quest";
+			pchar.quest.QAR_broadside.win_condition.l1.locator = "hole";
+			pchar.quest.QAR_broadside.win_condition = "QAR_broadside";
+		break;
+
+		case "QAR_broadside":
+			LAi_SetStayType(pchar);
+			ChangeCharacterAddressGroup(Pchar, "BB_qar_deck", "quest", "bell");
+
+			LAi_QuestDelay("QAR_broadside1", 1.0);
+		break;
+
+		case "QAR_broadside1":
+			PlaySound("OBJECTS\SHIPCHARGE\gunner_fire.wav");
+
+			LAi_QuestDelay("QAR_broadside1_A", 1.0);
+			LAi_QuestDelay("QAR_broadside2", 2.0);
+		break;
+
+		case "QAR_broadside1_A":
+			LAi_LocationFightDisable(&Locations[FindLocation("BB_qar_deck")], false);
+			LAi_SetPlayerType(characterFromID("bb_crew18"));
+			LAi_SetFightMode(characterFromID("bb_crew18"), true);
+		break;
+
+		case "QAR_broadside2":
+			PlaySound("INTERFACE\bell2.wav");
+
+			ChangeCharacterAddressGroup(characterFromID("Louis_Arot"), "BB_qar_deck", "quest", "r_gunner1");
+			ChangeCharacterAddressGroup(characterFromID("Pell"), "BB_qar_deck", "quest", "r_gunner2");
+			ChangeCharacterAddressGroup(characterFromID("Herriot"), "BB_qar_deck", "quest", "r_gunner3");
+			ChangeCharacterAddressGroup(characterFromID("Bonnet"), "BB_qar_deck", "quest", "r_gunner4");
+
+			LAi_QuestDelay("QAR_broadside3", 1.5);
+		break;
+
+		case "QAR_broadside3":
+			PlaySound("INTERFACE\bell2.wav");
+	
+			ChangeCharacterAddressGroup(characterFromID("bb_crew16"), "BB_qar_deck", "quest", "a_gunner1");
+			ChangeCharacterAddressGroup(characterFromID("Odel"), "BB_qar_deck", "quest", "a_gunner2");
+			ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_qar_deck", "quest", "a_gunner3");
+			ChangeCharacterAddressGroup(characterFromID("Hornigold"), "BB_qar_deck", "quest", "a_gunner4");
+			ChangeCharacterAddressGroup(characterFromID("Hands"), "BB_qar_deck", "quest", "a_gunner5");
+
+			LAi_QuestDelay("QAR_broadside4", 1.5);
+		break;
+
+		case "QAR_broadside4":
+			LAi_SetActorType(Pchar);	
+			LAi_ActorTurnToLocator(Pchar, "quest", "a_gunner1");
+
+	LAi_QuestDelay("pchar_playertype", 1.5);	//temp
+			LAi_QuestDelay("QAR_broadsideR", 1.0);
+		break;
+
+		case "QAR_broadsideR":
+			CreateParticleSystem("smoke_short" , 34.4, 2.0, 29.45, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 34.4, 2.0, 29.75, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 34.4, 2.0, 29.45, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 34.4, 2.0, 29.75, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("smoke_short" , 37.9, 2.0, 29.35, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 37.9, 2.0, 29.65, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 37.9, 2.0, 29.35, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 37.9, 2.0, 29.65, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("smoke_short" , 41.3, 2.1, 29.15, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 41.3, 2.1, 29.45, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 34.4, 2.1, 29.15, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 34.4, 2.1, 29.45, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("smoke_short" , 44.8, 2.2, 28.95, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 44.8, 2.2, 29.25, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 44.8, 2.2, 28.95, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 44.8, 2.2, 29.25, 0.0, 4.5, 0.0, sti(20) );
+
+			LAi_QuestDelay("LG12J", 0.01);
+			LAi_QuestDelay("LG12J", 0.5);
+			LAi_QuestDelay("LG12J", 1.0);
+			LAi_QuestDelay("LG12J", 1.5);
+
+			LAi_QuestDelay("LG18J", 3.0);
+			LAi_QuestDelay("LG18J", 4.0);
+			LAi_QuestDelay("LG18J", 5.0);
+			LAi_QuestDelay("LG18J", 5.5);
+			LAi_QuestDelay("LG18J", 5.8);
+
+			LAi_QuestDelay("QAR_broadsideR_1", 3.0);
+			LAi_QuestDelay("QAR_broadsideR_1", 6.0);
+			LAi_QuestDelay("QAR_broadsideR_1", 9.0);
+			LAi_QuestDelay("QAR_broadsideA", 3.0);
+		break;
+
+		case "LG12J":
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire2.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire2.wav");
+		break;
+
+		case "LG18J":
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+		break;
+
+		case "QAR_broadsideR_1":
+			CreateParticleSystem("gunfire" , 34.4, 2.0, 29.45, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 34.4, 2.0, 29.75, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 37.9, 2.0, 29.35, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 37.9, 2.0, 29.65, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 34.4, 2.1, 29.15, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 34.4, 2.1, 29.45, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 44.8, 2.2, 28.95, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 44.8, 2.2, 29.25, 0.0, 4.5, 0.0, sti(20) );
+		break;
+
+		case "QAR_broadsideA":
+			CreateParticleSystem("smoke_short" , 65.6, 2.7, 18.25, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 65.6, 2.7, 18.55, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 65.6, 2.7, 18.25, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 65.6, 2.7, 18.55, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("smoke_short" , 68.7, 2.7, 18.25, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 68.7, 2.7, 18.55, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 68.7, 2.7, 18.25, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 68.7, 2.7, 18.55, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("smoke_short" , 71.9, 2.85, 18.35, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 71.9, 2.85, 18.65, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 71.9, 2.85, 18.35, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 71.9, 2.85, 18.65, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("smoke_short" , 74.9, 2.4, 18.15, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 74.9, 2.4, 18.45, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 74.9, 2.4, 18.45, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 74.9, 2.4, 18.45, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("smoke_short" , 78.1, 2.5, 17.75, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("smoke_short" , 78.1, 2.5, 18.05, 4.5, 1.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 78.1, 2.5, 17.75, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 78.1, 2.5, 18.05, 0.0, 4.5, 0.0, sti(20) );
+		
+			LAi_QuestDelay("QAR_broadsideA_1", 3.0);
+			LAi_QuestDelay("QAR_broadsideA_1", 6.0);
+			LAi_QuestDelay("QAR_broadsideA_1", 9.0);
+			LAi_QuestDelay("QAR_broadside5", 3.0);
+		break;
+
+		case "QAR_broadsideA_1":
+			CreateParticleSystem("gunfire" , 65.6, 2.7, 18.25, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 65.6, 2.7, 18.55, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 68.7, 2.7, 18.25, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 68.7, 2.7, 18.55, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 71.9, 2.85, 18.35, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 71.9, 2.85, 18.65, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 74.9, 2.4, 18.45, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 74.9, 2.4, 18.45, 0.0, 4.5, 0.0, sti(20) );
+
+			CreateParticleSystem("gunfire" , 78.1, 2.5, 17.75, 0.0, 4.5, 0.0, sti(20) );
+			CreateParticleSystem("gunfire" , 78.1, 2.5, 18.05, 0.0, 4.5, 0.0, sti(20) );
+		break;
+
+		case "QAR_broadside5":
+			PlaySound("OBJECTS\ABORDAGE\abordage_wining.wav");
+
+			LAi_QuestDelay("return_to_monastary", 3.0);
+		break;
+
+		case "return_to_monastary":
+			SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+			pchar.old.name = "Howard";
+			pchar.old.lastname = "Pyle";
+			pchar.name = TranslateString("","Howard");
+			pchar.lastname = TranslateString("","Pyle");		
+		
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+		
+
+			DeleteAttribute(Pchar, "items");
+
+			if(CheckAttribute(characterFromID("Brthug1"), "items"))
+			{	
+				makearef(ifrom, Characters[GetCharacterIndex("Brthug1")].items);
+				Pchar.items = "";
+				makearef(ito, Pchar.items);
+				CopyAttributes(&ito, &ifrom);
+			}
+		
+			DoQuestReloadToLocation("BB_graveyard", "goto", "richards", "abbess_info");
+		break;
 
 //---------------------------------------------------------------------------------------------------	
-//JRH monastary
+//monastary after BB scene
+
+		case "abbess_info":
+			characters[GetCharacterIndex("bb_nun1")].dialog.CurrentNode = "Richards9";
+			LAi_SetActorType(characterFromID("bb_nun1"));
+			LAi_ActorDialog(characterFromID("bb_nun1"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_nun1"));
+		break;
+
+		case "abbess_info_done":
+			AddQuestRecord("Richards","17");
+			LAi_SetCitizenType(characterFromID("bb_nun1"));
+			Pchar.monastary = "repeat_abbess";
+			characters[GetCharacterIndex("bb_nun1")].Dialog.Filename = "monastary_dialog.c";
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload6", 1.0);
+			Locations[FindLocation("BB_graveyard")].locators_radius.reload.reload6 = 1.0;	
+			Locations[FindLocation("BB_refectory")].reload.l4.disable = 0;		//to abbess
+
+			Pchar.quest.move_nun1.win_condition.l1 = "ExitFromLocation";
+			Pchar.quest.move_nun1.win_condition.l1.location = "BB_graveyard";
+			Pchar.quest.move_nun1.win_condition = "move_nun1";
+		break;
+
+		case "move_nun1":
+			ChangeCharacterAddressGroup(characterFromID("bb_nun1"), "BB_graveyard", "goto", "goto1");
+		break;
+
+		case "abbess_arrives":
+			PlaySound("PEOPLE\counter_close.wav");
+			ChangeCharacterAddressGroup(characterFromID("bb_nun8"), "BB_abbess", "reload", "reload1");
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload1", 0.001);
+
+			LAi_QuestDelay("abbess_arrives1", 1.0);
+		break;
+
+		case "abbess_arrives1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "randitem", "randitem1");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
+		break;
+
+		case "abbess_quest_given":
+			PlaySound("PEOPLE\counter_close.wav");
+			ChangeCharacterAddressGroup(characterFromID("bb_nun8"), "none", "", "");
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload1", 1.0);
+			
+			LAi_QuestDelay("abbess_quest_given1", 1.0);
+		break;
+
+		case "abbess_quest_given1":
+			AddQuestRecord("Richards","18");
+			Pchar.monastary = "repeat_abbess_quest";
+			Locations[FindLocation("BB_graveyard")].locators_radius.box.box3 = 1.5;
+			Pchar.abbess_items = 0;			//start value
+
+			pchar.quest.chapel_window_hint.win_condition.l1 = "locator";
+			pchar.quest.chapel_window_hint.win_condition.l1.location = "BB_graveyard";
+			pchar.quest.chapel_window_hint.win_condition.l1.locator_group = "reload";
+			pchar.quest.chapel_window_hint.win_condition.l1.locator = "reload3";
+			pchar.quest.chapel_window_hint.win_condition = "chapel_window_hint";
+		break;
+
+		case "chapel_window_hint":
+			Pchar.monastary = "repeat_abbess_quest_window_hint";
+		break;
+
+//---------------------------------------------------------------------------------------------------
 		case "enter_chapel":
 			LAi_SetSitType(Pchar);
 			LAi_ApplyCharacterDamage(Pchar, 10);
 			PlaySound("PEOPLE\jump_roof.wav");
 			PlaySound("AMBIENT\TAVERN\tinkle4.wav");
+			Pchar.monastary = "repeat_abbess_quest";	//reset to no window hint
 
 			LAi_QuestDelay("pchar_playertype", 0.5);
+			LAi_QuestDelay("book62_check", 0.1);
 		break;
+
+		case "book62_check":
+			if(CheckCharacterItem(Pchar,"book62"))
+			{
+				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
+				PlaySound("INTERFACE\book_close.wav");
+
+				LAi_QuestDelay("count_abbess_items", 0.5);
+			}
+			else LAi_QuestDelay("book62_check", 0.5);//loop check
+		break;
+
+		case "count_abbess_items":
+			if(CheckAttribute(Pchar, "abbess_items"))
+			{
+				switch (Pchar.abbess_items)
+				{
+					case "1":
+						LAi_QuestDelay("pchar_1", 1.0);
+					break;
+
+					case "2":
+						LAi_QuestDelay("pchar_2", 1.0);
+					break;
+
+					case "3":
+						LAi_QuestDelay("pchar_3", 1.0);
+					break;
+
+					case "4":
+						LAi_QuestDelay("pchar_4", 1.0);
+					break;
+
+					case "5":
+						LAi_QuestDelay("pchar_5", 1.0);
+					break;
+
+					case "6":
+						LAi_QuestDelay("pchar_6", 1.0);
+					break;
+
+					case "7":
+						LAi_QuestDelay("pchar_7", 1.0);
+					break;
+
+					case "8":
+						Locations[FindLocation("BB_refectory")].reload.l5.disable = 0;	//to chapel
+						AddQuestRecord("Richards","19");					
+
+						LAi_QuestDelay("pchar_8", 1.0);
+						LAi_QuestDelay("all_abbess_items", 2.0);
+					break;
+				}
+			}
+		break;	
 
 		case "unlock_church_room":
 			//from SL_utils
@@ -51395,7 +58752,7 @@ void QuestComplete(string sQuestName)
 			Pchar.church_room_box2 = "off";
 			Locations[FindLocation("BB_church_room")].locators_radius.box.box2 = 0.0001;
 			Locations[FindLocation("BB_church_room")].locators_radius.reload.reload1 = 1.0;
-			Locations[FindLocation("BB_graveyard")].reload.l3.disable = 0;
+			Locations[FindLocation("BB_graveyard")].reload.l3.disable = 0;	//small chapel
 			
 			DoQuestReloadToLocation("BB_graveyard", "reload", "reload3", "_");
 		break;
@@ -51434,27 +58791,39 @@ void QuestComplete(string sQuestName)
 		case "graveyard_bell1":
 			Pchar.nun_out = "done";
 			PlaySound("INTERFACE\closet_open.wav");
-			ChangeCharacterAddressGroup(CharacterFromID("BB_nun1"), "BB_bell_tower", "reload", "reload4");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "BB_bell_tower", "reload", "reload4");
 			Locations[FindLocation("BB_graveyard")].reload.l4.disable = 0;
 
+			LAi_QuestDelay("wax_candles_check", 0.1);
 			LAi_QuestDelay("graveyard_bell2", 2.0);
 		break;
 
+		case "wax_candles_check":
+			if(CheckCharacterItem(Pchar,"wax_candles"))
+			{
+				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
+				PlaySound("PEOPLE\step_grass1.wav");
+
+				LAi_QuestDelay("count_abbess_items", 0.5);
+			}
+			else LAi_QuestDelay("wax_candles_check", 0.5);//loop check
+		break;
+
 		case "graveyard_bell2":
-			ChangeCharacterAddressGroup(CharacterFromID("BB_nun1"), "BB_graveyard", "reload", "reload4");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "BB_graveyard", "reload", "reload4");
 			DoQuestReloadToLocation("BB_graveyard", "reload", "reload6", "graveyard_bell3");
 		break;
 
 		case "graveyard_bell3":
-			LAi_SetActorType(CharacterFromID("BB_nun1"));
-			LAi_ActorGoToLocator(CharacterFromID("BB_nun1"), "goto", "goto4", "graveyard_bell4", 5.0);
+			LAi_SetActorType(CharacterFromID("bb_nun2"));
+			LAi_ActorGoToLocator(CharacterFromID("bb_nun2"), "goto", "goto4", "graveyard_bell4", 5.0);
 
 			LAi_QuestDelay("key33_check", 0.1);
 		break;
 
 		case "graveyard_bell4":
-			ChangeCharacterAddressGroup(CharacterFromID("BB_nun1"), "BB_graveyard", "goto", "goto4");
-			LAi_SetStayType(CharacterFromID("BB_nun1"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "BB_graveyard", "goto", "goto4");
+			LAi_SetStayType(CharacterFromID("bb_nun2"));
 		break;
 //---------------------------------------------------------------------------------------------------	
 		case "key33_check":
@@ -51466,12 +58835,38 @@ void QuestComplete(string sQuestName)
 
 				Locations[FindLocation("BB_crypt2_1")].locators_radius.box.box2 = 1.0;
 				Locations[FindLocation("BB_crypt2_1")].locators_radius.reload.reload2 = 0.0001;
+
+				LAi_QuestDelay("altar_bread_check", 0.5);
+				LAi_QuestDelay("pistolcenser_check", 1.0);
 			}
 			else
 			{
 				LAi_QuestDelay("key33_check", 0.5);//loop check
 			}
 		break;
+
+		case "altar_bread_check":
+			if(CheckCharacterItem(Pchar,"altar_bread"))
+			{
+				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
+				PlaySound("INTERFACE\chewing.wav");
+
+				LAi_QuestDelay("count_abbess_items", 1.0);
+			}
+			else LAi_QuestDelay("altar_bread_check", 0.5);//loop check
+		break;
+
+		case "pistolcenser_check":
+			if(CheckCharacterItem(Pchar,"pistolcenser"))
+			{
+				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
+				PlaySound("OBJECTS\DUEL\censer.wav");
+
+				LAi_QuestDelay("count_abbess_items", 1.0);
+			}
+			else LAi_QuestDelay("pistolcenser_check", 0.5);//loop check
+		break;
+
 //---------------------------------------------------------------------------------------------------	
 		case "unlock_crypt2_2":
 			//from SL_utils
@@ -51596,8 +58991,8 @@ void QuestComplete(string sQuestName)
 		break;
 //------------------------------------------------------------------------------------------------------------
 		case "unlock_crypt1":
-			LAi_SetActorType(CharacterFromID("BB_nun1"));
-			LAi_ActorGoToLocator(CharacterFromID("BB_nun1"), "goto", "nun1", "unlock_crypt1_A", 7.0);
+			LAi_SetActorType(CharacterFromID("bb_nun2"));
+			LAi_ActorGoToLocator(CharacterFromID("bb_nun2"), "goto", "nun1", "unlock_crypt1_A", 7.0);
 		break;
 
 		case "unlock_crypt1_A":
@@ -51605,11 +59000,48 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("BB_graveyard")].reload.l5.disable = 0;
 
 			LAi_QuestDelay("unlock_crypt1_B", 1.5);
+
+			LAi_QuestDelay("silvercross_check", 0.5);
+			LAi_QuestDelay("rosary_check", 1.0);
+			LAi_QuestDelay("icon_check", 1.5);
+		break;
+
+		case "silvercross_check":
+			if(CheckCharacterItem(Pchar,"silvercross"))
+			{
+				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
+				PlaySound("INTERFACE\took_item.wav");
+
+				LAi_QuestDelay("count_abbess_items", 0.5);
+			}
+			else LAi_QuestDelay("silvercross_check", 0.5);//loop check
+		break;
+
+		case "rosary_check":
+			if(CheckCharacterItem(Pchar,"rosary"))
+			{
+				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
+				PlaySound("INTERFACE\button3.wav");
+
+				LAi_QuestDelay("count_abbess_items", 0.5);
+			}
+			else LAi_QuestDelay("rosary_check", 0.5);//loop check
+		break;
+
+		case "icon_check":
+			if(CheckCharacterItem(Pchar,"icon"))
+			{
+				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
+				PlaySound("PEOPLE\step_stairway2.wav");
+
+				LAi_QuestDelay("count_abbess_items", 0.5);
+			}
+			else LAi_QuestDelay("icon_check", 0.5);//loop check
 		break;
 
 		case "unlock_crypt1_B":
-			ChangeCharacterAddressGroup(CharacterFromID("BB_nun1"), "BB_crypt1", "goto", "altar");
-			LAi_SetStayType(CharacterFromID("BB_nun1"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "BB_crypt1", "goto", "altar");
+			LAi_SetStayType(CharacterFromID("bb_nun2"));
 		break;
 
 		case "close_crypt1_box":
@@ -51627,8 +59059,14 @@ void QuestComplete(string sQuestName)
 				EquipCharacterByItem(Pchar, "bladebroom");
 				locations[FindLocation(Pchar.location)].box5.items.bladebroom = 0;
 
-				ChangeCharacterAddressGroup(CharacterFromID("BB_nun1"), "BB_crypt1", "goto", "altar");
-				LAi_SetStayType(CharacterFromID("BB_nun1"));
+				ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "BB_crypt1", "goto", "altar");
+				LAi_SetStayType(CharacterFromID("bb_nun2"));
+
+				if(CheckAttribute(Pchar,"abbess_relic_check") && Pchar.abbess_relic_check == "started")
+				{
+
+				}
+				else LAi_QuestDelay("treasure7_check", 0.5);
 			}
 		break;
 
@@ -51639,9 +59077,28 @@ void QuestComplete(string sQuestName)
 				EquipCharacterByItem(Pchar, "bladebroom");
 				locations[FindLocation(Pchar.location)].box4.items.bladebroom = 0;
 
-				ChangeCharacterAddressGroup(CharacterFromID("BB_nun1"), "BB_crypt1", "goto", "altar");
-				LAi_SetStayType(CharacterFromID("BB_nun1"));
+				ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "BB_crypt1", "goto", "altar");
+				LAi_SetStayType(CharacterFromID("bb_nun2"));
+
+				if(CheckAttribute(Pchar,"abbess_relic_check") && Pchar.abbess_relic_check == "started")
+				{
+
+				}
+				else LAi_QuestDelay("treasure7_check", 0.5);
 			}
+		break;
+
+		case "treasure7_check":
+			Pchar.abbess_relic_check = "started";
+
+			if(CheckCharacterItem(Pchar,"treasure7"))
+			{
+				Pchar.abbess_items = sti(Pchar.abbess_items) + 1;
+				PlaySound("PEOPLE\teleport.wav");
+				
+				LAi_QuestDelay("count_abbess_items", 0.5);
+			}
+			else LAi_QuestDelay("treasure7_check", 0.5);//loop check
 		break;
 	
 //------------------------------------------------------------------------------------------------------------
@@ -51662,8 +59119,971 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(Pchar);
 			Locations[FindLocation("BB_misericord")].image = "Incas_Temple_Alcove.tga";
 		break;
+//------------------------------------------------------------------------------------------------------------
+		case "all_abbess_items":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "all_abbess_items";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "all_abbess_items_done":
+			LAi_SetPlayerType(pchar);
+			Locations[FindLocation("BB_refectory")].reload.l4.disable = 1;		//to abbess
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun8"), "BB_monastary_chapel", "goto", "goto11");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun1"), "BB_monastary_chapel", "sit", "sit3");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "BB_monastary_chapel", "sit", "sit5");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun3"), "BB_monastary_chapel", "sit", "sit6");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun4"), "BB_monastary_chapel", "sit", "sit13");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun5"), "BB_monastary_chapel", "sit", "sit14");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun6"), "BB_monastary_chapel", "sit", "sit15");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun7"), "BB_monastary_chapel", "sit", "sit16");
+			LAi_SetSitType(CharacterFromID("bb_nun1"));
+			LAi_SetSitType(CharacterFromID("bb_nun2"));
+			LAi_SetSitType(CharacterFromID("bb_nun3"));
+			LAi_SetSitType(CharacterFromID("bb_nun4"));
+			LAi_SetSitType(CharacterFromID("bb_nun5"));
+			LAi_SetSitType(CharacterFromID("bb_nun6"));
+			LAi_SetSitType(CharacterFromID("bb_nun7"));
+
+			Pchar.monastary = "dont_disturb";
+
+			pchar.quest.abbess_chapel.win_condition.l1 = "locator";
+			pchar.quest.abbess_chapel.win_condition.l1.location = "BB_monastary_chapel";
+			pchar.quest.abbess_chapel.win_condition.l1.locator_group = "goto";
+			pchar.quest.abbess_chapel.win_condition.l1.locator = "goto11";
+			pchar.quest.abbess_chapel.win_condition = "abbess_chapel";
+		break;
+
+		case "abbess_chapel":
+			characters[GetCharacterIndex("bb_nun8")].dialog.CurrentNode = "precious_items";
+			LAi_SetActorType(characterFromID("bb_nun8"));
+			LAi_ActorDialog(characterFromID("bb_nun8"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_nun8"));
+		break;
+
+		case "precious_items_done":
+			LAi_SetStayType(pchar);	
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(Pchar, "wax_candles");
+			TakeItemFromCharacter(Pchar, "altar_bread");
+			TakeItemFromCharacter(Pchar, "book62");
+			TakeItemFromCharacter(Pchar, "treasure7");
+			TakeItemFromCharacter(Pchar, "silvercross");
+			TakeItemFromCharacter(Pchar, "rosary");
+			TakeItemFromCharacter(Pchar, "icon");
+			TakeItemFromCharacter(Pchar, "pistolcenser");
+
+			TakeItemFromCharacter(Pchar, "crypt_sketch");
+			TakeItemFromCharacter(Pchar, "bladehammer");
+			TakeItemFromCharacter(Pchar, "bladebroom");
+
+			LAi_QuestDelay("abbess_map", 2.0);
+		break;
+
+		case "abbess_map":
+			characters[GetCharacterIndex("bb_nun8")].dialog.CurrentNode = "map";
+			LAi_SetActorType(characterFromID("bb_nun8"));
+			LAi_ActorDialog(characterFromID("bb_nun8"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_nun8"));
+		break;
+
+		case "abbess_map_given":
+			PlaySound("INTERFACE\paper.wav");
+			GiveItem2Character(Pchar, "mapBB5");
+			LAi_SetPlayerType(pchar);
+			Pchar.abbess = "dont_disturb";
+			characters[GetCharacterIndex("bb_nun8")].dialog.CurrentNode = "First time";
+			LAi_SetStayType(characterFromID("bb_nun8"));
+			
+			LAi_QuestDelay("abbess_map_given1", 1.0);
+		break;
+
+		case "abbess_map_given1":
+			AddQuestRecord("Richards","20");
+			CloseQuestHeader("Richards");
+
+			Locations[FindLocation("cloister_exit")].locators_radius.box.box1 = 0.0001;
+			Locations[FindLocation("cloister_exit")].reload.l1.disable = 1;		//to town
+			Locations[FindLocation("cloister_inside")].reload.l1.disable = 1;	//to exit	
+			DoQuickSave();
+			
+			Pchar.cloister = "bandits";
+
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk1"), "cloister_passage", "quest", "m1");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk2"), "cloister_passage", "quest", "m2");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk3"), "cloister_passage", "quest", "m3");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk4"), "cloister_passage", "quest", "m4");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk5"), "cloister_exit", "quest", "m5");
+			LAi_SetActorType(characterFromID("BB_monk1"));
+			LAi_SetActorType(characterFromID("BB_monk2"));
+			LAi_SetActorType(characterFromID("BB_monk3"));
+			LAi_SetActorType(characterFromID("BB_monk4"));
+			LAi_SetActorType(characterFromID("BB_monk5"));
+
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug1"), "cloister_passage", "quest", "b1");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug2"), "cloister_passage", "quest", "b2");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug5"), "cloister_passage", "quest", "b3");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug4"), "cloister_passage", "quest", "b4");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug3"), "cloister_passage", "quest", "b5");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug6"), "cloister_passage", "quest", "b6");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug7"), "cloister_passage", "quest", "b7");
+			LAi_SetActorType(characterFromID("Brthug1"));
+			LAi_SetActorType(characterFromID("Brthug2"));
+			LAi_SetActorType(characterFromID("Brthug3"));
+			LAi_SetActorType(characterFromID("Brthug4"));	
+			LAi_SetActorType(characterFromID("Brthug5"));
+			LAi_SetActorType(characterFromID("Brthug6"));
+			LAi_SetActorType(characterFromID("Brthug7"));
+
+			pchar.quest.cloister_monk.win_condition.l1 = "locator";
+			pchar.quest.cloister_monk.win_condition.l1.location = "cloister_exit";
+			pchar.quest.cloister_monk.win_condition.l1.locator_group = "goto";
+			pchar.quest.cloister_monk.win_condition.l1.locator = "goto5";
+			pchar.quest.cloister_monk.win_condition = "cloister_monk";
+		break;
+	//------------------------------------------------------------------------------
+	//cloister attack
+
+		case "cloister_monk":
+			LAi_SetStayType(pchar);
+
+			LAi_QuestDelay("cloister_monk1", 0.5);
+		break;
+
+		case "cloister_monk1":
+			LAi_SetActorType(characterFromID("BB_monk5"));
+			LAi_ActorDialog(characterFromID("BB_monk5"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("BB_monk5"));
+		break;
+
+		case "cloister_ambush":
+			LAi_SetPlayerType(pchar);
+			LAi_SetOfficerType(characterFromID("BB_monk5"));
+			Pchar.cloister = "neutral";		//reset
+
+			pchar.quest.cloister_ambush1.win_condition.l1 = "location";
+			pchar.quest.cloister_ambush1.win_condition.l1.location = "cloister_inside";
+			pchar.quest.cloister_ambush1.win_condition = "cloister_ambush1";
+		break;
+
+		case "cloister_ambush1":
+			PlaySound("INTERFACE\closed_locked_door.wav");
+			LAi_SetActorType(characterFromID("BB_monk5"));
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk5"), "cloister_inside", "quest", "m5");
+			LAi_SetActorType(characterFromID("BB_monk5"));
+			LAi_group_MoveCharacter(characterFromID("BB_monk5"), LAI_GROUP_PLAYER);
+
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk3_copy"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk4_copy"), "none", "", "");
+
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk1"), "cloister_inside", "quest", "m1");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk2"), "cloister_inside", "quest", "m2");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk3"), "cloister_inside", "quest", "m3");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk4"), "cloister_inside", "quest", "m4");
+	
+			LAi_SetActorType(characterFromID("BB_monk1"));
+			LAi_SetActorType(characterFromID("BB_monk2"));
+			LAi_SetActorType(characterFromID("BB_monk3"));
+			LAi_SetActorType(characterFromID("BB_monk4"));
+
+			LAi_group_MoveCharacter(characterFromID("BB_monk1"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_monk2"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_monk3"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_monk4"), LAI_GROUP_PLAYER);
+
+			//place bad guys attacking cloister here
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug1"), "cloister_inside", "quest", "b1");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug2"), "cloister_inside", "quest", "b2");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug5"), "cloister_inside", "quest", "b3");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug4"), "cloister_inside", "quest", "b4");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug3"), "cloister_inside", "quest", "b5");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug6"), "cloister_inside", "quest", "b6");
+			ChangeCharacterAddressGroup(CharacterFromID("Brthug7"), "cloister_inside", "quest", "b7");
+			LAi_SetActorType(characterFromID("Brthug1"));
+			LAi_SetActorType(characterFromID("Brthug2"));
+			LAi_SetActorType(characterFromID("Brthug3"));
+			LAi_SetActorType(characterFromID("Brthug4"));	
+			LAi_SetActorType(characterFromID("Brthug5"));
+			LAi_SetActorType(characterFromID("Brthug6"));
+			LAi_SetActorType(characterFromID("Brthug7"));			
+			LAi_SetImmortal(characterFromID("Brthug4"), false);
+			LAi_SetImmortal(characterFromID("Brthug6"), false);
+			DeleteAttribute(characterFromID("Brthug3"), "items");
+			GiveItem2Character(characterFromID("Brthug3"), "blade5");
+			EquipCharacterByItem(characterFromID("Brthug3"), "blade5");
+			GiveItem2Character(characterFromID("Brthug1"), "bladeX2");
+			EquipCharacterByItem(characterFromID("Brthug1"), "bladeX2");
+		
+			LAi_SetHP(characterFromID("Brthug1"), 120.0, 120.0);
+			LAi_SetHP(characterFromID("Brthug2"), 120.0, 120.0);
+			LAi_SetHP(characterFromID("Brthug3"), 75.0, 75.0);
+			LAi_SetHP(characterFromID("Brthug4"), 90.0, 90.0);
+			LAi_SetHP(characterFromID("Brthug5"), 105.0, 105.0);
+			LAi_SetHP(characterFromID("Brthug6"), 90.0, 90.0);
+			LAi_SetHP(characterFromID("Brthug7"), 90.0, 90.0);
+		
+			LAi_group_MoveCharacter(characterFromID("Brthug1"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("Brthug2"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("Brthug3"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("Brthug4"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("Brthug5"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("Brthug6"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("Brthug7"), "ROOF_THUGS_1");
+
+			LAi_group_Register("ROOF_THUGS_1");
+			LAi_group_SetRelation(LAI_GROUP_PLAYER, "ROOF_THUGS_1", LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAI_GROUP_PLAYER, "ROOF_THUGS_1", true);
+
+			ChangeCharacterAddressGroup(CharacterFromID("inq_priest"), "cloister_inside", "quest", "inq_A1");
+			ChangeCharacterAddressGroup(CharacterFromID("inq_monk1"), "cloister_inside", "quest", "inq_A2");
+			ChangeCharacterAddressGroup(CharacterFromID("inq_monk2"), "cloister_inside", "quest", "inq_A3");
+			ChangeCharacterAddressGroup(CharacterFromID("inq_monk3"), "cloister_inside", "quest", "inq_A4");
+			ChangeCharacterAddressGroup(CharacterFromID("inq_monk4"), "cloister_inside", "quest", "inq_A5");
+			
+			Pchar.quest.7thugs_dead_yes.win_condition.l1 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l1.character = "Brthug1";
+			Pchar.quest.7thugs_dead_yes.win_condition.l2 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l2.character = "Brthug2";
+			Pchar.quest.7thugs_dead_yes.win_condition.l3 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l3.character = "Brthug3";
+			Pchar.quest.7thugs_dead_yes.win_condition.l4 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l4.character = "Brthug4";
+			Pchar.quest.7thugs_dead_yes.win_condition.l5 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l5.character = "Brthug5";
+			Pchar.quest.7thugs_dead_yes.win_condition.l6 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l6.character = "Brthug6";
+			Pchar.quest.7thugs_dead_yes.win_condition.l7 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l7.character = "Brthug7";
+			Pchar.quest.7thugs_dead_yes.win_condition = "7thugs_dead_yes";
+		break;
+
+		case "7thugs_dead_yes":
+			PlaySound("INTERFACE\key_unlock2.wav");
+
+			LAi_SetActorType(characterFromID("BB_monk1"));
+			LAi_ActorRunToLocator(characterFromID("BB_monk1"), "quest", "m1", "", 4.0);
+			LAi_SetActorType(characterFromID("BB_monk2"));
+			LAi_ActorRunToLocator(characterFromID("BB_monk2"), "quest", "m2", "", 4.0);
+			LAi_SetActorType(characterFromID("BB_monk3"));
+			LAi_ActorRunToLocator(characterFromID("BB_monk3"), "quest", "m3", "", 4.0);
+			LAi_SetActorType(characterFromID("BB_monk4"));
+			LAi_ActorRunToLocator(characterFromID("BB_monk4"), "quest", "m4", "", 4.0);
+			LAi_SetActorType(characterFromID("BB_monk5"));
+			LAi_ActorRunToLocator(characterFromID("BB_monk5"), "quest", "m5_2", "inquisition3", 4.0);
+
+			ChangeCharacterAddressGroup(CharacterFromID("inq_priest"), "cloister_inside", "reload", "reload1");
+
+			LAi_QuestDelay("inquisition1", 1.0);
+		break;
+
+		case "inquisition1":
+			PlaySound("VOICE\ENGLISH\c_brother21.wav");
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "reload", "reload1");
+
+			LAi_QuestDelay("inquisition2", 1.0);
+		break;
+
+		case "inquisition2":
+			PlaySound("AMBIENT\TAVERN\tinkle4.wav");
+			PlaySound("AMBIENT\TAVERN\tinkle4.wav");
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(CharacterFromID("inq_monk1"), "cloister_inside", "quest", "inq_B2");
+			ChangeCharacterAddressGroup(CharacterFromID("inq_monk2"), "cloister_inside", "quest", "inq_B3");
+			ChangeCharacterAddressGroup(CharacterFromID("inq_monk3"), "cloister_inside", "quest", "inq_B4");
+			ChangeCharacterAddressGroup(CharacterFromID("inq_monk4"), "cloister_inside", "quest", "inq_B5");
+			LAi_SetActorType(characterFromID("inq_priest"));
+			LAi_SetActorType(characterFromID("inq_monk1"));
+			LAi_SetActorType(characterFromID("inq_monk2"));
+			LAi_SetActorType(characterFromID("inq_monk3"));
+			LAi_SetActorType(characterFromID("inq_monk4"));
+			LAi_group_MoveCharacter(characterFromID("inq_priest"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("inq_monk1"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("inq_monk2"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("inq_monk3"), "ROOF_THUGS_1");
+			LAi_group_MoveCharacter(characterFromID("inq_monk4"), "ROOF_THUGS_1");
+		break; 
+
+		case "inquisition3":
+			LAi_SetPlayerType(Pchar);
+
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun1"), "cloister_inside", "quest", "nuns_standby");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "cloister_inside", "quest", "nuns_standby");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun3"), "cloister_inside", "quest", "nuns_standby");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun4"), "cloister_inside", "quest", "nuns_standby");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun5"), "cloister_inside", "quest", "nuns_standby");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun6"), "cloister_inside", "quest", "nuns_standby");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun7"), "cloister_inside", "quest", "nuns_standby");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun8"), "cloister_inside", "quest", "nuns_standby");
+
+			GiveItem2Character(CharacterFromID("bb_nun1"), "bladekeyring");
+			EquipCharacterByItem(characterFromID("bb_nun1"), "bladekeyring");
+			GiveItem2Character(CharacterFromID("bb_nun2"), "bladecandelabre");
+			EquipCharacterByItem(characterFromID("bb_nun2"), "bladecandelabre");
+			GiveItem2Character(CharacterFromID("bb_nun3"), "bladechalice");
+			EquipCharacterByItem(characterFromID("bb_nun3"), "bladechalice");
+			GiveItem2Character(CharacterFromID("bb_nun4"), "bladereliquary");
+			EquipCharacterByItem(characterFromID("bb_nun4"), "bladereliquary");
+			GiveItem2Character(CharacterFromID("bb_nun5"), "bladecenser");
+			EquipCharacterByItem(characterFromID("bb_nun5"), "bladecenser");
+			GiveItem2Character(CharacterFromID("bb_nun6"), "bladehammer");
+			EquipCharacterByItem(characterFromID("bb_nun6"), "bladehammer");
+			GiveItem2Character(CharacterFromID("bb_nun7"), "bladebroom");
+			EquipCharacterByItem(characterFromID("bb_nun7"), "bladebroom");
+			GiveItem2Character(CharacterFromID("bb_nun8"), "bladeX4");
+			EquipCharacterByItem(characterFromID("bb_nun8"), "bladeX4");
+			GiveItem2Character(CharacterFromID("bb_nun8"), "pistolmaquahuitl");
+			EquipCharacterByItem(characterFromID("bb_nun8"), "pistolmaquahuitl");
+
+			LAi_SetActorType(characterFromID("BB_nun1"));
+			LAi_SetActorType(characterFromID("BB_nun2"));
+			LAi_SetActorType(characterFromID("BB_nun3"));
+			LAi_SetActorType(characterFromID("BB_nun4"));
+			LAi_SetActorType(characterFromID("BB_nun5"));
+			LAi_SetActorType(characterFromID("BB_nun6"));
+			LAi_SetActorType(characterFromID("BB_nun7"));
+			LAi_SetActorType(characterFromID("BB_nun8"));
+			LAi_group_MoveCharacter(characterFromID("BB_nun1"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_nun2"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_nun3"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_nun4"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_nun5"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_nun6"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_nun7"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_nun8"), LAI_GROUP_PLAYER);
+
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk1"), "cloister_inside", "quest", "m1");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk2"), "cloister_inside", "quest", "m2");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk3"), "cloister_inside", "quest", "m3");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk4"), "cloister_inside", "quest", "m4");
+			ChangeCharacterAddressGroup(CharacterFromID("BB_monk5"), "cloister_inside", "quest", "m5_2");
+			LAi_SetActorType(characterFromID("BB_monk1"));
+			LAi_SetActorType(characterFromID("BB_monk2"));
+			LAi_SetActorType(characterFromID("BB_monk3"));
+			LAi_SetActorType(characterFromID("BB_monk4"));
+			LAi_SetActorType(characterFromID("BB_monk5"));
+			LAi_group_MoveCharacter(characterFromID("BB_monk1"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_monk2"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_monk3"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_monk4"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(characterFromID("BB_monk5"), LAI_GROUP_PLAYER);
+
+			LAi_group_Register("ROOF_THUGS_1");
+			LAi_group_SetRelation(LAI_GROUP_PLAYER, "ROOF_THUGS_1", LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAI_GROUP_PLAYER, "ROOF_THUGS_1", true);
+
+			LAi_QuestDelay("inquisition4", 5.0);
+			LAi_QuestDelay("inquisition5", 10.0);
+		break; 
+	
+		case "inquisition4":
+			PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+			PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun1"), "cloister_inside", "quest", "inq_A2");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "cloister_inside", "quest", "inq_A3");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun3"), "cloister_inside", "quest", "inq_A4");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun4"), "cloister_inside", "quest", "inq_A5");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun8"), "cloister_inside", "quest", "inq_A1");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun5"), "cloister_inside", "quest", "nunB_1");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun6"), "cloister_inside", "quest", "nunC_1");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun7"), "cloister_inside", "quest", "nunD_1");
+		break; 
+
+		case "inquisition5":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_012.wav");
+			PlaySound("VOICE\ENGLISH\Fre_f_a_012.wav");
+
+			LAi_SetImmortal(characterFromID("inq_priest"), false);
+			LAi_SetImmortal(characterFromID("inq_monk1"), false);
+			LAi_SetImmortal(characterFromID("inq_monk2"), false);
+			LAi_SetImmortal(characterFromID("inq_monk3"), false);
+			LAi_SetImmortal(characterFromID("inq_monk4"), false);
+		
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun1"), "cloister_inside", "quest", "inq_B2");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "cloister_inside", "quest", "inq_B3");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun3"), "cloister_inside", "quest", "inq_B4");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun4"), "cloister_inside", "quest", "inq_B5");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun8"), "cloister_inside", "quest", "nunA");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun5"), "cloister_inside", "quest", "nunB");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun6"), "cloister_inside", "quest", "nunC");
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun7"), "cloister_inside", "quest", "nunD");
+
+			Pchar.quest.7thugs_dead_yes.win_condition.l1 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l1.character = "inq_priest";
+			Pchar.quest.7thugs_dead_yes.win_condition.l2 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l2.character = "inq_monk1";
+			Pchar.quest.7thugs_dead_yes.win_condition.l3 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l3.character = "inq_monk2";
+			Pchar.quest.7thugs_dead_yes.win_condition.l4 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l4.character = "inq_monk3";
+			Pchar.quest.7thugs_dead_yes.win_condition.l5 = "NPC_Death";
+			Pchar.quest.7thugs_dead_yes.win_condition.l5.character = "inq_monk4";
+			Pchar.quest.7thugs_dead_yes.win_condition = "5inq_dead_yes";
+		break;
+
+		case "5inq_dead_yes":
+			if(LAi_IsFightMode(Pchar)) {LAi_SetFightMode(Pchar, false);}
+
+			LAi_QuestDelay("5inq_dead_yes1", 1.0);			
+		break;
+
+		case "5inq_dead_yes1":
+			characters[GetCharacterIndex("bb_nun8")].dialog.CurrentNode = "thank_you";
+			LAi_SetActorType(characterFromID("bb_nun8"));
+			LAi_ActorDialog(characterFromID("bb_nun8"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_nun8"));
+		break;
+
+		case "Sister_Richards_leaves":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "reload", "reload1");
+
+			LAi_SetActorType(CharacterFromID("bb_nun1"));
+			LAi_ActorGoToLocator(CharacterFromID("bb_nun1"), "reload", "reload1", "Sister_Richards_leaves1", 5.0);
+
+			LAi_SetStayType(characterFromID("BB_monk1"));
+			LAi_SetStayType(characterFromID("BB_monk2"));
+			LAi_SetStayType(characterFromID("BB_monk3"));
+			LAi_SetStayType(characterFromID("BB_monk4"));
+			LAi_SetStayType(characterFromID("BB_monk5"));
+
+			LAi_SetStayType(characterFromID("BB_nun2"));
+			LAi_SetStayType(characterFromID("BB_nun3"));
+			LAi_SetStayType(characterFromID("BB_nun4"));
+			LAi_SetStayType(characterFromID("BB_nun5"));
+			LAi_SetStayType(characterFromID("BB_nun6"));
+			LAi_SetStayType(characterFromID("BB_nun7"));
+			LAi_SetStayType(characterFromID("BB_nun8"));
+
+			Pchar.cloister = "neutral";
+			Pchar.monastary = "dont_disturb";
+			Pchar.abbess = "dont_disturb";
+			characters[GetCharacterIndex("bb_nun8")].dialog.CurrentNode = "First time";
+		break;
+
+		case "Sister_Richards_leaves1":
+			LAi_SetPlayerType(Pchar);
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun1"), "cloister_exit", "reload", "reload1");
+			Locations[FindLocation("cloister_inside")].reload.l1.disable = 0;	//to exit
+			Locations[FindLocation("cloister_exit")].locators_radius.goto.goto7 = 3.0;
+			Locations[FindLocation("cloister_exit")].locators_radius.box.box1 = 2.0;
+
+			Pchar.quest.Sister_Richards_leaves2.win_condition.l1 = "ExitFromLocation";
+			Pchar.quest.Sister_Richards_leaves2.win_condition.l1.location = "cloister_inside";
+			Pchar.quest.Sister_Richards_leaves2.win_condition = "Sister_Richards_leaves2";
+		break;
+
+		case "Sister_Richards_leaves2":
+			LAi_SetCitizenType(characterFromID("BB_monk1"));
+			LAi_SetCitizenType(characterFromID("BB_monk2"));
+			LAi_SetCitizenType(characterFromID("BB_monk3"));
+			LAi_SetCitizenType(characterFromID("BB_monk4"));
+			LAi_SetCitizenType(characterFromID("BB_monk5"));
+
+			LAi_SetCitizenType(characterFromID("BB_nun2"));
+			LAi_SetCitizenType(characterFromID("BB_nun3"));
+			LAi_SetCitizenType(characterFromID("BB_nun4"));
+			LAi_SetCitizenType(characterFromID("BB_nun5"));
+			LAi_SetCitizenType(characterFromID("BB_nun6"));
+			LAi_SetCitizenType(characterFromID("BB_nun7"));
+			LAi_SetCitizenType(characterFromID("BB_nun8"));
+
+			pchar.quest.Sister_Richards_leaves3.win_condition.l1 = "locator";
+			pchar.quest.Sister_Richards_leaves3.win_condition.l1.location = "Cloister_exit";
+			pchar.quest.Sister_Richards_leaves3.win_condition.l1.locator_group = "goto";
+			pchar.quest.Sister_Richards_leaves3.win_condition.l1.locator = "goto7";
+			pchar.quest.Sister_Richards_leaves3.win_condition = "Sister_Richards_leaves3";
+		break;
+
+		case "Sister_Richards_leaves3":
+			characters[GetCharacterIndex("bb_nun1")].Dialog.Filename = "Sister Richards_dialog.c";
+
+			characters[GetCharacterIndex("bb_nun1")].dialog.CurrentNode = "unlock_to_town";
+			LAi_SetActorType(characterFromID("bb_nun1"));
+			LAi_ActorDialog(characterFromID("bb_nun1"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("bb_nun1"));
+		break;
+
+		case "Sister_Richards_leaves4":
+			LAi_SetActorType(CharacterFromID("bb_nun1"));
+			LAi_ActorTurnToLocator(CharacterFromID("bb_nun1"), "randitem", "randitem9");
+
+			LAi_QuestDelay("Sister_Richards_leaves5", 1.0);	
+		break;
+
+		case "Sister_Richards_leaves5":
+			PlaySound("INTERFACE\key_unlock2.wav");
+			Locations[FindLocation("cloister_exit")].reload.l1.disable = 0;		//to town
+
+			LAi_QuestDelay("Sister_Richards_leaves6", 1.0);	
+
+			Pchar.quest.monastary_reset.win_condition.l1 = "Location";
+			Pchar.quest.monastary_reset.win_condition.l1.location = "Cartagena_town_02";
+			Pchar.quest.monastary_reset.win_condition = "monastary_reset";
+		break;
+
+		case "Sister_Richards_leaves6":
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun1"), "none", "", "");
+		break;
+
+		case "monastary_reset":
+			ChangeCharacterAddressGroup(characterFromID("BB_monk3_copy"), "cloister_passage", "goto", "stay1");
+			LAi_SetStayType(CharacterFromID("BB_monk3_copy"));
+			ChangeCharacterAddressGroup(characterFromID("BB_monk4_copy"), "cloister_passage", "sit", "sit1");
+			LAi_SetSitType(CharacterFromID("BB_monk4_copy"));
+
+			ChangeCharacterAddressGroup(characterFromID("BB_monk1"), "cloister_exit", "goto", "goto4");
+			LAi_SetCitizenType(CharacterFromID("BB_monk1"));
+			ChangeCharacterAddressGroup(characterFromID("BB_monk2"), "cloister_exit", "goto", "goto1");
+			LAi_SetCitizenType(CharacterFromID("BB_monk2"));
+			ChangeCharacterAddressGroup(characterFromID("BB_monk3"), "cloister_inside", "goto", "goto2");
+			LAi_SetStayType(CharacterFromID("BB_monk3"));
+			ChangeCharacterAddressGroup(characterFromID("BB_monk4"), "cloister_inside", "sit", "sit1");
+			LAi_SetSitType(CharacterFromID("BB_monk4"));
+			ChangeCharacterAddressGroup(characterFromID("BB_monk5"), "cloister_passage", "goto", "chapel");
+			LAi_SetStayType(CharacterFromID("BB_monk5"));
+
+			ChangeCharacterAddressGroup(characterFromID("bb_nun1"), "BB_graveyard", "goto", "goto1");
+			LAi_SetCitizenType(CharacterFromID("bb_nun1"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun2"), "BB_crypt1", "goto", "altar");
+			LAi_SetStayType(CharacterFromID("bb_nun2"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun3"), "BB_refectory", "sit", "sit17");
+			LAi_SetSitType(CharacterFromID("bb_nun3"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun4"), "BB_refectory", "merchant", "goto1");
+			LAi_SetBarmanType(CharacterFromID("bb_nun4"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun5"), "BB_refectory", "tables", "table4");
+			LAi_SetCitizenType(CharacterFromID("bb_nun5"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun6"), "BB_refectory", "sit", "sit14");
+			LAi_SetSitType(CharacterFromID("bb_nun6"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun7"), "BB_refectory", "sit", "sit16");
+			LAi_SetSitType(CharacterFromID("bb_nun7"));
+			ChangeCharacterAddressGroup(CharacterFromID("bb_nun8"), "BB_church_room", "barmen", "bar1");
+			LAi_SetStayType(CharacterFromID("bb_nun8"));
+
+			DeleteAttribute(characterFromID("bb_nun1"), "items");
+			DeleteAttribute(characterFromID("bb_nun2"), "items");
+			DeleteAttribute(characterFromID("bb_nun3"), "items");
+			DeleteAttribute(characterFromID("bb_nun4"), "items");
+			DeleteAttribute(characterFromID("bb_nun5"), "items");
+			DeleteAttribute(characterFromID("bb_nun6"), "items");
+			DeleteAttribute(characterFromID("bb_nun7"), "items");
+			DeleteAttribute(characterFromID("bb_nun8"), "items");
+		break;
+
+
 //_________________________________________________________________________________________________________________
-//Q2 Kristiania
+//Kristiania
+		case "start_Kristiania":
+			SetNextWeather("Clear");
+			Pchar.Kr_quest = "BB_tower";
+
+			pchar.quest.end_auction.win_condition.l1 = "locator";
+			pchar.quest.end_auction.win_condition.l1.location = "Kristiania_entre";
+			pchar.quest.end_auction.win_condition.l1.locator_group = "quest";
+			pchar.quest.end_auction.win_condition.l1.locator = "sit4";
+			pchar.quest.end_auction.win_condition = "end_auction";
+		break;
+
+		case "end_auction":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "auctionist");
+
+			LAi_QuestDelay("pchar_1", 0.1);
+			LAi_QuestDelay("pchar_2", 1.1);
+			LAi_QuestDelay("pchar_3", 2.1);
+			LAi_QuestDelay("end_auction1", 3.1);
+		break;
+
+		case "end_auction1":
+			LAi_SetStayType(Pchar);
+			PlaySound("PEOPLE\wood1.wav");
+			
+			LAi_QuestDelay("end_auction2", 0.5);
+		break;
+
+		case "end_auction2":
+			PlaySound("AMBIENT\cheer2.wav");
+
+			LAi_QuestDelay("end_auction3", 4.0);
+		break;
+
+		case "end_auction3":
+			LAi_SetActorType(characterFromID("Kr_cit26"));
+			LAi_ActorDialog(characterFromID("Kr_cit26"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Kr_cit26"));
+			Characters[GetCharacterIndex("Kr_cit26")].dialog.CurrentNode  = "end_auction";
+		break;
+
+		case "end_auction_done":
+			LAi_SetPlayerType(Pchar);
+			PlaySound("AMBIENT\cheer.wav");
+			PlaySound("AMBIENT\silent_talk.wav");
+
+			Characters[GetCharacterIndex("Kr_cit22")].dialog.CurrentNode  = "auction_over";
+			LAi_SetStayType(characterFromID("Kr_cit26"));
+			Characters[GetCharacterIndex("Kr_cit26")].dialog.CurrentNode  = "auction_over";
+
+			LAi_SetCitizenType(characterFromID("Kr_cit1")); LAi_SetCitizenType(characterFromID("Kr_cit4"));
+			LAi_SetCitizenType(characterFromID("Kr_cit6")); LAi_SetCitizenType(characterFromID("Kr_cit7"));
+			LAi_SetCitizenType(characterFromID("Kr_cit12")); LAi_SetCitizenType(characterFromID("Kr_cit17"));
+			LAi_SetCitizenType(characterFromID("Kr_cit18")); LAi_SetCitizenType(characterFromID("Kr_cit20"));
+			LAi_SetCitizenType(characterFromID("Kr_cit21")); LAi_SetCitizenType(characterFromID("Kr_cit23"));
+			LAi_SetCitizenType(characterFromID("Kr_cit24")); LAi_SetCitizenType(characterFromID("Kr_cit25"));
+			LAi_SetCitizenType(characterFromID("Kr_cit28"));
+
+			LAi_SetStayType(characterFromID("Kr_cit2")); LAi_SetStayType(characterFromID("Kr_cit8"));
+			LAi_SetStayType(characterFromID("Kr_cit10")); LAi_SetStayType(characterFromID("Kr_cit11"));
+			LAi_SetStayType(characterFromID("Kr_cit14")); LAi_SetStayType(characterFromID("Kr_cit15"));
+			LAi_SetStayType(characterFromID("Kr_cit16"));
+
+			locations[FindLocation("Kristiania_entre")].type = "silent_repair_town";
+			PostEvent("LoadSceneSound", 0);	
+
+			Pchar.quest.Kr_characters_split_group.win_condition.l1 = "ExitFromLocation";
+			Pchar.quest.Kr_characters_split_group.win_condition.l1.location = "Kristiania_entre";
+			Pchar.quest.Kr_characters_split_group.win_condition = "Kr_characters_split_group";
+
+			LAi_QuestDelay("end_auction_done1", 5.0);
+		break;
+
+		case "end_auction_done1":
+			if(pchar.location == "Kristiania_entre")
+			{
+				LAi_SetCitizenType(characterFromID("Kr_cit2")); LAi_SetCitizenType(characterFromID("Kr_cit8"));
+				LAi_SetCitizenType(characterFromID("Kr_cit10")); LAi_SetCitizenType(characterFromID("Kr_cit11"));
+				LAi_SetCitizenType(characterFromID("Kr_cit14")); LAi_SetCitizenType(characterFromID("Kr_cit15"));
+				LAi_SetCitizenType(characterFromID("Kr_cit16"));
+
+				LAi_SetStayType(characterFromID("Kr_cit3")); LAi_SetStayType(characterFromID("Kr_cit5"));
+				LAi_SetStayType(characterFromID("Kr_cit9")); LAi_SetStayType(characterFromID("Kr_cit13"));
+				LAi_SetStayType(characterFromID("Kr_cit19")); LAi_SetStayType(characterFromID("Kr_cit27"));
+				LAi_SetStayType(characterFromID("Kr_cit29"));
+
+				LAi_QuestDelay("end_auction_done2", 5.0);
+			}
+		break;
+
+		case "end_auction_done2":
+			if(pchar.location == "Kristiania_entre")
+			{
+				LAi_SetCitizenType(characterFromID("Kr_cit3")); LAi_SetCitizenType(characterFromID("Kr_cit5"));
+				LAi_SetCitizenType(characterFromID("Kr_cit9")); LAi_SetCitizenType(characterFromID("Kr_cit13"));
+				LAi_SetCitizenType(characterFromID("Kr_cit19")); LAi_SetCitizenType(characterFromID("Kr_cit27"));
+				LAi_SetCitizenType(characterFromID("Kr_cit29"));
+			}
+		break;
+	
+		case "Kr_characters_split_group":
+			Locations[FindLocation("Kristiania_entre")].models.always.locators = "FF01_l_JRH_stop1";
+			LAi_LocationFantomsGen(&locations[FindLocation("Kristiania_entre")], true);
+			LAi_LocationMonstersGen(&locations[FindLocation("Kristiania_entre")], true);
+			locations[FindLocation("Kristiania_entre")].vcskip = false;
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit1"), "Kristiania_entre", "goto", "citizen010");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit8"), "Kristiania_entre", "reload", "locator22");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit9"), "Kristiania_entre", "goto", "citizen06");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit10"), "Kristiania_entre", "goto", "locator11");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit2"), "Kristiania_center", "reload", "reload28");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit11"), "Kristiania_center", "goto", "goto37");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit12"), "Kristiania_center", "goto", "goto52");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit13"), "Kristiania_center", "reload", "reload13");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit3"), "Kristiania_downhill", "goto", "locator13");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit14"), "Kristiania_downhill", "goto", "citizen04");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit15"), "Kristiania_downhill", "reload", "home");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit4"), "Kristiania_suburb", "goto", "citizen01");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit16"), "Kristiania_suburb", "reload", "locator21");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit17"), "Kristiania_suburb", "goto", "locator9");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit5"), "Nueva_Suecia_lower_town", "reload", "reload27");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit18"), "Nueva_Suecia_lower_town", "reload", "reload25");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit19"), "Nueva_Suecia_lower_town", "goto", "goto90");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit20"), "Nueva_Suecia_hidden_town", "goto", "goto2");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit21"), "Nueva_Suecia_hidden_town", "goto", "goto61");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit6"), "Nueva_Suecia_upper_town", "goto", "goto5");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit23"), "Nueva_Suecia_upper_town", "reload", "reload8");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit24"), "Nueva_Suecia_upper_town", "goto", "character4");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit7"), "Kristiania_port", "goto", "goto1");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit25"), "Kristiania_port", "goto", "goto4");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit27"), "Kristiania_port", "goto", "goto3");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit28"), "Kristiania_swamp_exit", "goto", "citizen02");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit29"), "Kristiania_swamp_exit", "goto", "citizen04");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit30"), "Kristiania_jungle_exit", "goto", "citizen011");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit31"), "Kristiania_jungle_exit", "goto", "citizen013");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit32"), "Kristiania_jungle_exit", "goto", "citizen03");
+
+			LAi_SetCitizenType(characterFromID("Kr_cit1")); LAi_SetCitizenType(characterFromID("Kr_cit4"));
+			LAi_SetCitizenType(characterFromID("Kr_cit6")); LAi_SetCitizenType(characterFromID("Kr_cit7"));
+			LAi_SetCitizenType(characterFromID("Kr_cit12")); LAi_SetCitizenType(characterFromID("Kr_cit17"));
+			LAi_SetCitizenType(characterFromID("Kr_cit18")); LAi_SetCitizenType(characterFromID("Kr_cit20"));
+			LAi_SetCitizenType(characterFromID("Kr_cit21")); LAi_SetCitizenType(characterFromID("Kr_cit23"));
+			LAi_SetCitizenType(characterFromID("Kr_cit24")); LAi_SetCitizenType(characterFromID("Kr_cit25"));
+
+			LAi_SetCitizenType(characterFromID("Kr_cit2")); LAi_SetCitizenType(characterFromID("Kr_cit8"));
+			LAi_SetCitizenType(characterFromID("Kr_cit10")); LAi_SetCitizenType(characterFromID("Kr_cit11"));
+			LAi_SetCitizenType(characterFromID("Kr_cit14")); LAi_SetCitizenType(characterFromID("Kr_cit15"));
+			LAi_SetCitizenType(characterFromID("Kr_cit16"));
+
+			LAi_SetCitizenType(characterFromID("Kr_cit3")); LAi_SetCitizenType(characterFromID("Kr_cit5"));
+			LAi_SetCitizenType(characterFromID("Kr_cit9")); LAi_SetCitizenType(characterFromID("Kr_cit13"));
+			LAi_SetCitizenType(characterFromID("Kr_cit19")); LAi_SetCitizenType(characterFromID("Kr_cit27"));
+			LAi_SetCitizenType(characterFromID("Kr_cit29"));
+
+			LAi_SetCitizenType(characterFromID("Kr_cit28")); LAi_SetCitizenType(characterFromID("Kr_cit30"));
+			LAi_SetCitizenType(characterFromID("Kr_cit31")); LAi_SetCitizenType(characterFromID("Kr_cit32"));
+
+			Pchar.quest.BB_tower_found.win_condition.l1 = "Location";
+			Pchar.quest.BB_tower_found.win_condition.l1.location = "BB_island2";
+			Pchar.quest.BB_tower_found.win_condition = "BB_tower_found";
+
+			Pchar.quest.jungle_path.win_condition.l1 = "Location";
+			Pchar.quest.jungle_path.win_condition.l1.location = "Kristiania_jungle_exit";
+			Pchar.quest.jungle_path.win_condition = "jungle_path";
+		break;
+
+		case "BB_tower_found":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "BB_tower_found";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "jungle_path":
+			LAi_SetActorType(characterFromID("Kri_soldier_13"));
+			LAi_ActorDialog(characterFromID("Kri_soldier_13"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Kri_soldier_13"));
+			Characters[GetCharacterIndex("Kri_soldier_13")].dialog.CurrentNode  = "jungle_path";
+		break;
+
+		case "jungle_path_done":
+			ChangeCharacterAddressGroup(CharacterFromID("Kri_soldier_13"), "Kristiania_jungle_exit", "goto", "citizen010");
+			LAi_SetStayType(characterFromID("Kri_soldier_13"));
+			Characters[GetCharacterIndex("Kri_soldier_13")].dialog.CurrentNode  = "First time";
+
+			Pchar.quest.jungle_path1.win_condition.l1 = "Location";
+			Pchar.quest.jungle_path1.win_condition.l1.location = "Kristiania_center_stairs";
+			Pchar.quest.jungle_path1.win_condition = "jungle_path1";
+		break;
+
+		case "jungle_path1":
+			Pchar.quest.jungle_path.win_condition.l1 = "Location";
+			Pchar.quest.jungle_path.win_condition.l1.location = "Kristiania_jungle_exit";
+			Pchar.quest.jungle_path.win_condition = "jungle_path";
+		break;
+
+		case "jungle_path_known":
+			PlaySound("VOICE\ENGLISH\gm_crew1C.wav");
+			ChangeCharacterAddressGroup(CharacterFromID("Kri_soldier_13"), "Kristiania_jungle_exit", "goto", "citizen010");
+			LAi_SetStayType(characterFromID("Kri_soldier_13"));
+			Characters[GetCharacterIndex("Kri_soldier_13")].dialog.CurrentNode  = "First time";
+		break;
+
+		case "items_list_no_noney":
+			PlaySound("VOICE\ENGLISH\Dut_m_a_070.wav");
+		break;
+
+		case "items_list_done":
+			PlaySound("INTERFACE\coins7.wav");
+			LAi_SetStayType(characterFromID("Kr_cit22"));
+			Characters[GetCharacterIndex("Kr_cit22")].dialog.CurrentNode  = "auction_over";
+
+			LAi_QuestDelay("items_list_done1", 2.0);
+		break;
+
+		case "items_list_done1":
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit22"), "Kristiania_entre", "quest", "auctionist3");
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "randitem", "randitem14", 2.5);
+			Locations[FindLocation("Nueva_Suecia_lower_town")].locators_radius.randitem.randitem14 = 2.5;
+
+			LAi_QuestDelay("Axel_W_leaves", 2.0);
+			LAi_QuestDelay("auction_list_check", 0.1);
+		break;
+
+		case "Axel_W_leaves":
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit22"), "Kristiania_entre", "quest", "auctionist4");
+
+			LAi_QuestDelay("Axel_W_leaves1", 2.0);
+		break;
+
+		case "Axel_W_leaves1":
+			PlaySound("INTERFACE\closed_door.wav");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit22"), "Kristiania_townhall_entre", "sit", "sit2");
+			ChangeCharacterAddressGroup(CharacterFromID("Kr_cit26"), "Kristiania_townhall_entre", "sit", "sit3");
+			LAi_SetSitType(characterFromID("Kr_cit22"));
+			LAi_SetSitType(characterFromID("Kr_cit26"));
+			Characters[GetCharacterIndex("Kr_cit22")].dialog.CurrentNode  = "townhall_neutral";
+			Characters[GetCharacterIndex("Kr_cit26")].dialog.CurrentNode  = "townhall_neutral";
+		break;
+
+		case "auction_list_check":
+			if(CheckCharacterItem(Pchar,"auction_list_roll"))
+			{
+				Pchar.Kr_quest = "salute";
+				LAi_QuestDelay("salute", 1.0);
+				LAi_QuestDelay("salute", 2.0);
+				LAi_QuestDelay("hurrah", 3.0);
+				LAi_QuestDelay("salute1", 1.5);
+				LAi_QuestDelay("salute2", 5.0);
+
+				pchar.quest.letter_check.win_condition.l1 = "location";
+				pchar.quest.letter_check.win_condition.l1.location = "Kristiania_townhall";
+				pchar.quest.letter_check.win_condition = "letter_check";
+			}
+			else
+			{
+				LAi_QuestDelay("auction_list_check", 0.5);//loop check
+			}
+		break;
+
+		case "salute":
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+		break;
+
+		case "hurrah":
+			PlaySound("OBJECTS\SHIPCHARGE\hurrah.wav");
+		break;
+
+		case "salute1":
+			LAi_SetActorType(pchar);	
+			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
+		break;
+
+		case "salute2":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "salute";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "letter_check":
+			if(CheckCharacterItem(Pchar,"doc60A"))
+			{
+				PlaySound("INTERFACE\closed_door.wav");
+				ChangeCharacterAddressGroup(CharacterFromID("Trafvenfeldt"), "Kristiania_townhall", "reload", "reload2");
+				
+				LAi_QuestDelay("Anna_Helena", 0.5);
+			}
+			else
+			{
+				LAi_QuestDelay("letter_check", 0.5);//loop check
+			}
+		break;
+
+		case "Anna_Helena":
+			LAi_SetActorType(pchar);	
+			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
+
+			LAi_QuestDelay("pchar_ohoh", 1.0);
+			LAi_QuestDelay("Anna_Helena_thief", 4.0);
+		break;
+
+		case "Anna_Helena_thief":
+			LAi_SetActorType(characterFromID("Trafvenfeldt"));
+			LAi_ActorDialog(characterFromID("Trafvenfeldt"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Trafvenfeldt"));
+			Characters[GetCharacterIndex("Trafvenfeldt")].dialog.CurrentNode  = "thief";
+		break;
+
+		case "thief_done":
+			LAi_SetPlayerType(pchar);
+
+			LAi_QuestDelay("Anna_Helena_password", 4.0);
+		break;
+
+		case "Anna_Helena_password":
+			LAi_SetActorType(characterFromID("Trafvenfeldt"));
+			LAi_ActorDialog(characterFromID("Trafvenfeldt"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Trafvenfeldt"));
+			Characters[GetCharacterIndex("Trafvenfeldt")].dialog.CurrentNode  = "password";
+		break;
+
+		case "password_done":
+			Characters[GetCharacterIndex("Trafvenfeldt")].dialog.CurrentNode  = "anna_helena_neutral";
+			LAi_SetPlayerType(pchar);
+			LAi_SetStayType(characterFromID("Trafvenfeldt"));
+			Pchar.Kr_password = "known";
+		break;
+
+		case "Kristiania_fort_password":
+			LAi_SetActorType(characterFromID("Kri_dragoon_4"));
+			LAi_ActorDialog(characterFromID("Kri_dragoon_4"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Kri_dragoon_4"));
+			Characters[GetCharacterIndex("Kri_dragoon_4")].dialog.CurrentNode  = "password";
+		break;
+
+		case "fort_no_password_done":
+			LAi_SetPlayerType(pchar);
+			Characters[GetCharacterIndex("Kri_dragoon_4")].dialog.CurrentNode  = "First time";
+			ChangeCharacterAddressGroup(CharacterFromID("Kri_dragoon_4"), "Kristiania_center", "goto", "goto35");
+			LAi_SetStayType(characterFromID("Kri_dragoon_4"));
+		break;
+
+		case "fort_password_done":
+			PlaySound("VOICE\ENGLISH\black_witch_yah.wav");
+			Characters[GetCharacterIndex("Kri_dragoon_4")].dialog.CurrentNode  = "First time";
+			ChangeCharacterAddressGroup(CharacterFromID("Kri_dragoon_4"), "Kristiania_center", "goto", "goto35");
+			LAi_SetStayType(characterFromID("Kri_dragoon_4"));
+
+			LAi_QuestDelay("fort_unlock", 1.0);
+		break;
+
+		case "fort_unlock":
+			PlaySound("VOICE\ENGLISH\gm_crew1A.wav");
+			LAi_SetActorType(pchar);	
+			LAi_ActorTurnToLocator(Pchar, "goto", "goto36");
+			LAi_SetActorType(CharacterFromID("Kri_dragoon_5"));	
+			LAi_ActorTurnToLocator(CharacterFromID("Kri_dragoon_5"), "box", "box1");
+
+			LAi_QuestDelay("fort_unlock1", 1.0);
+		break;
+
+		case "fort_unlock1":
+			PlaySound("INTERFACE\key_unlock2.wav");
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box1", 0.0001);
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload19", 1.0);
+
+			Locations[FindLocation("Kristiania_center")].locators_radius.box.box1 = 0.0001;
+			Locations[FindLocation("Kristiania_center")].locators_radius.reload.reload19 = 1.0;
+
+			LAi_QuestDelay("fort_unlock2", 1.0);
+		break;
+
+		case "fort_unlock2":
+			ChangeCharacterAddressGroup(CharacterFromID("Kri_dragoon_5"), "Kristiania_center", "goto", "goto36");
+			LAi_SetStayType(characterFromID("Kri_dragoon_5"));
+			PlaySound("VOICE\ENGLISH\gm_crew1B.wav");
+			LAi_SetActorType(pchar);	
+			LAi_ActorTurnToLocator(Pchar, "reload", "reload19");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+
+			pchar.quest.at_fort_tower.win_condition.l1 = "locator";
+			pchar.quest.at_fort_tower.win_condition.l1.location = "Kristiania_fort";
+			pchar.quest.at_fort_tower.win_condition.l1.locator_group = "goto";
+			pchar.quest.at_fort_tower.win_condition.l1.locator = "guard1";
+			pchar.quest.at_fort_tower.win_condition = "at_fort_tower";
+		break;
+
+		case "at_fort_tower":
+			LAi_SetActorType(characterFromID("Kri_gunner_7"));
+			LAi_ActorDialog(characterFromID("Kri_gunner_7"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Kri_gunner_7"));
+			Characters[GetCharacterIndex("Kri_gunner_7")].dialog.CurrentNode  = "no_commander";
+		break;
+
+		case "no_commander_done":
+			Characters[GetCharacterIndex("Kri_gunner_7")].dialog.CurrentNode  = "First time";
+			LAi_SetStayType(characterFromID("Kri_gunner_7"));
+		break;
+
+//---------------------------------------------------------------------------------------------------
 		case "KR_center_backloop1":
 			pchar.quest.KR_center_backloop1A.win_condition.l1 = "locator";
 			pchar.quest.KR_center_backloop1A.win_condition.l1.location = "Kristiania_center";
@@ -51706,14 +60126,534 @@ void QuestComplete(string sQuestName)
 			LAi_QuestDelay("KR_lower_backloop", 0.1);
 		break;
 //---------------------------------------------------------------------------------------------------
-		case "KR_church":
-			pchar.quest.KR_church1.win_condition.l1 = "location";
-			pchar.quest.KR_church1.win_condition.l1.location = "Kristiania_cathedral";
-			pchar.quest.KR_church1.win_condition = "KR_church1";
+		case "switch_auction_lists":
+			if(!CheckCharacterItem(Pchar,"auction_list_roll"))
+			{
+				PlaySound("INTERFACE\carpet_move.wav");
+				TakeItemFromCharacter(Pchar, "auction_list_open");
+				GiveItem2Character(Pchar, "auction_list_roll");
+			}
 		break;
 
-		case "KR_church1":
-			locations[FindLocation(Pchar.location)].box1.items.cursedcoin = 1;
+		case "equip_BB_blades":
+			if(CheckCharacterItem(Pchar,"bladeBB"))
+			{
+				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+				EquipCharacterByItem(Pchar, "bladeBB");
+			}
+			if(CheckCharacterItem(Pchar,"pistolbladeBB"))
+			{
+				RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+				EquipCharacterByItem(Pchar, "pistolbladeBB");
+			}
+		break;
+//---------------------------------------------------------------------------------------------------
+//shya
+		case "NS_locked_shipyard_start":
+			pchar.quest.NS_locked_shipyard.win_condition.l1 = "locator";
+			pchar.quest.NS_locked_shipyard.win_condition.l1.location = "Nueva_Suecia_lower_town";
+			pchar.quest.NS_locked_shipyard.win_condition.l1.locator_group = "quest";
+			pchar.quest.NS_locked_shipyard.win_condition.l1.locator = "shipyard";
+			pchar.quest.NS_locked_shipyard.win_condition = "NS_locked_shipyard";
+		break;
+
+		case "NS_locked_shipyard":
+			LAi_SetStayType(Pchar);
+			PlaySound("INTERFACE\knock.wav");
+			ChangeCharacterAddressGroup(CharacterFromID("Kristiania_shipyard_owner"), "Nueva_Suecia_lower_town", "quest", "lodbrok");
+	
+			LAi_SetActorType(characterFromID("Kristiania_shipyard_owner"));
+			LAi_ActorDialog(characterFromID("Kristiania_shipyard_owner"), pchar, "", 1.5, 1.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Kristiania_shipyard_owner"));
+			Characters[GetCharacterIndex("Kristiania_shipyard_owner")].dialog.CurrentNode  = "locked_shipyard";
+		break;
+
+		case "NS_locked_shipyard_done":
+			LAi_SetActorType(pchar);
+			LAi_ActorGoToLocator(Pchar, "goto", "goto89", "NS_locked_shipyard_done1", 4.0);
+
+			ChangeCharacterAddressGroup(CharacterFromID("Kristiania_shipyard_owner"), "none", "", "");	
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box8", 0.0001);
+			Locations[FindLocation("Nueva_Suecia_lower_town")].locators_radius.box.box8 = 0.0001;
+		break;
+
+		case "NS_locked_shipyard_done1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "bell");
+
+			LAi_QuestDelay("NS_locked_shipyard_done2", 1.0);
+		break;
+
+		case "NS_locked_shipyard_done2":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "locked_shipyard";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "NS_low_turn_to_bell":
+			Pchar.NS_low_bell = "ready";
+			LAi_SetPlayerType(Pchar);
+		break;
+	
+		case "NS_low_bell_sound":
+			PlaySound("INTERFACE\bell2.wav");
+		break;
+
+		case "NS_open_shipyard":
+			PlaySound("PEOPLE\counter_open.wav");
+			ChangeCharacterAddressGroup(CharacterFromID("Kristiania_shipyard_owner"), "Nueva_Suecia_lower_town", "reload", "reload17");
+			LAi_SetActorType(characterFromID("Kristiania_shipyard_owner"));
+			LAi_ActorRunToLocator(characterFromID("Kristiania_shipyard_owner"), "goto", "goto89", "NS_open_shipyard1", 4.0);
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "goto89");
+			Locations[FindLocation("Nueva_Suecia_lower_town")].reload.l17.disable = 0;	//to shipyard	
+		break;
+
+		case "NS_open_shipyard1":
+			PlaySound("VOICE\ENGLISH\Dut_m_a_053.wav");
+			LAi_SetPlayerType(Pchar);
+
+			LAi_QuestDelay("NS_open_shipyard2", 2.0);
+		break;
+
+		case "NS_open_shipyard2":
+			LAi_SetStayType(Pchar);
+			ChangeCharacterAddressGroup(Pchar, "Nueva_Suecia_lower_town", "quest", "shipyard");
+			PlaySound("PEOPLE\jump.wav");	
+			
+			LAi_QuestDelay("shipyard_owner_attacks", 1.0);
+
+			pchar.quest.NS_open_shipyard3.win_condition.l1 = "location";
+			pchar.quest.NS_open_shipyard3.win_condition.l1.location = "Kristiania_shipyard";
+			pchar.quest.NS_open_shipyard3.win_condition = "NS_open_shipyard3";
+		break;
+	
+		case "shipyard_owner_attacks":
+			ChangeCharacterAddressGroup(CharacterFromID("Kristiania_shipyard_owner"), "Nueva_Suecia_lower_town", "quest", "attack");
+			LAi_ActorAttack(CharacterFromID("Kristiania_shipyard_owner"), Pchar, "");
+		break;
+
+		case "shipyard_owner_disappears":
+			ChangeCharacterAddressGroup(CharacterFromID("Kristiania_shipyard_owner"), "none", "", "");
+		break;
+
+		case "NS_open_shipyard3":
+			PlaySound("INTERFACE\key_lock.wav");
+			if(!LAi_IsDead(Pchar)) 
+			{ 
+				LAi_SetPlayerType(Pchar); 
+			}
+			Locations[FindLocation("Nueva_Suecia_lower_town")].reload.l17.disable = 1;
+			Pchar.cardinal = "start";
+			ChangeCharacterAddressGroup(CharacterFromID("Kristiania_shipyard_owner"), "none", "", "");
+
+			LAi_QuestDelay("shipyard_owner_disappears", 1.0);
+			LAi_QuestDelay("shipyard_owner_disappears", 2.0);
+		break;
+
+		case "cardinal_start":	
+			LAi_SetActorType(characterFromID("Kr_cardinal"));
+			LAi_ActorDialog(characterFromID("Kr_cardinal"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Kr_cardinal"));
+			Characters[GetCharacterIndex("Kr_cardinal")].dialog.CurrentNode  = "where_is_he";
+		break;	
+
+		case "where_is_he_done":
+			LAi_SetStayType(Pchar);
+			locations[FindLocation("Kristiania_cathedral")].type = "Turks_church";
+			Characters[GetCharacterIndex("Kr_cardinal")].dialog.CurrentNode  = "cardinal_neutral";
+
+			LAi_SetActorType(characterFromID("Kr_priest3"));
+			LAi_SetActorType(characterFromID("Kr_priest4"));
+			LAi_SetActorType(characterFromID("Kr_priest1"));
+			LAi_SetActorType(characterFromID("Kr_priest2"));
+			LAi_SetActorType(characterFromID("Kr_cardinal"));
+			LAi_ActorGoToLocator(CharacterFromID("Kr_priest3"), "quest", "church_inside", "_", 4.0);
+			LAi_ActorGoToLocator(CharacterFromID("Kr_priest4"), "quest", "church_inside", "_", 4.0);
+			LAi_ActorGoToLocator(CharacterFromID("Kr_priest1"), "quest", "church_inside", "_", 4.0);
+			LAi_ActorGoToLocator(CharacterFromID("Kr_priest2"), "quest", "church_inside", "_", 4.0);
+			LAi_ActorGoToLocator(CharacterFromID("Kr_cardinal"), "quest", "church_inside", "_", 4.0);
+		
+			LAi_QuestDelay("pchar_playertype", 3.0);
+			LAi_QuestDelay("cardinal_to_church", 4.0);
+		break;	
+
+		case "cardinal_to_church":
+			ChangeCharacterAddressGroup(CharacterFromID("KR_cardinal"), "Kristiania_cathedral", "goto", "goto12");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_priest1"), "Kristiania_cathedral", "goto", "goto11");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_priest2"), "Kristiania_cathedral", "goto", "goto7");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_priest3"), "Kristiania_cathedral", "goto", "window2");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_priest4"), "Kristiania_cathedral", "goto", "goto1");
+			LAi_SetStayType(characterFromID("Kr_cardinal"));
+			LAi_SetStayType(characterFromID("Kr_priest1"));
+			LAi_SetCitizenType(characterFromID("Kr_priest2"));
+			LAi_SetCitizenType(characterFromID("Kr_priest3"));
+			LAi_SetStayType(characterFromID("Kr_priest4"));
+		break;
+
+//cardinal
+
+//---------------------------------------------------------------------------------------------------
+//church
+		case "reset_Pyle_model": 
+			GetCharacterPos(Pchar, &u, &v, &w);
+			CreateParticleSystem("gunfire_black" , u, v+1.5, w, 0.0, 0.0, 0.0, sti(20) );
+			CreateParticleSystem("gunfire_black" , u, v+1.3, w, 0.0, 0.0, 0.0, sti(20) );
+			SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead6.wav");
+
+			LAi_QuestDelay("reset_Pyle_model1", 0.5);
+		break;
+
+		case "reset_Pyle_model1": 
+			LAi_SetPoorType(Pchar);
+			PlaySound("PEOPLE\jump.wav");
+			PlaySound("PEOPLE\step_echo1.wav");
+			PlaySound("PEOPLE\step_echo1.wav");
+
+			LAi_QuestDelay("pchar_playertype", 3.0);
+			LAi_QuestDelay("pchar_whatwasthat", 3.0);
+		break;
+
+		case "place_switch_button":
+			Locations[FindLocation(Pchar.location)].models.always.l1 = "door_button";
+			Locations[FindLocation(Pchar.location)].models.always.l2 = "";
+
+			Locations[FindLocation("Kristiania_cathedral")].image = "";
+			DoQuestReloadToLocation("Kristiania_cathedral", "goto", "see_button", "place_switch_button1");	
+		break;
+	
+		case "place_switch_button1":
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+
+			pchar.quest.remove_cardinal.win_condition.l1 = "location";
+			pchar.quest.remove_cardinal.win_condition.l1.location = "NS_hidden_town_priest";
+			pchar.quest.remove_cardinal.win_condition = "remove_cardinal";
+
+			pchar.quest.see_oriel.win_condition.l1 = "locator";
+			pchar.quest.see_oriel.win_condition.l1.location = "Nueva_Suecia_upper_town";
+			pchar.quest.see_oriel.win_condition.l1.locator_group = "quest";
+			pchar.quest.see_oriel.win_condition.l1.locator = "see_oriel";
+			pchar.quest.see_oriel.win_condition = "see_oriel";
+		break;		
+//see oriel
+		case "remove_cardinal":
+			locations[FindLocation("Kristiania_cathedral")].type = "Kristiania_church";
+			ChangeCharacterAddressGroup(CharacterFromID("KR_cardinal"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_priest1"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_priest2"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_priest3"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_priest4"), "none", "", "");
+		break;
+
+		case "see_oriel":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "oriel");
+
+			LAi_QuestDelay("see_oriel1", 0.7);
+		break;	
+
+		case "see_oriel1":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "see_oriel";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "KR_church_close_door":
+			//from SL_utils
+			Locations[FindLocation("Kristiania_cathedral")].image = "";
+			DoQuestReloadToLocation("Kristiania_cathedral", "goto", "see_button", "KR_church_close_door1");			
+		break;
+
+		case "KR_church_close_door1":
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			PlaySound("INTERFACE\shelf_close.wav");
+		break;
+
+		case "KR_church_open_door":
+			//from SL_utils
+			Locations[FindLocation("Kristiania_cathedral")].image = "";
+			DoQuestReloadToLocation("Kristiania_cathedral", "goto", "see_button", "KR_church_open_door1");			
+		break;
+
+		case "KR_church_open_door1":
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			PlaySound("INTERFACE\shelf_open.wav");
+		break;
+
+		case "KR_church_lever_down":
+			//from SL_utils
+			Locations[FindLocation("Kristiania_cathedral")].image = "";
+			DoQuestReloadToLocation("Kristiania_cathedral", "goto", "lever3", "KR_church_lever_down1");
+		break;
+
+		case "KR_church_lever_down1":
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			PlaySound("INTERFACE\el_on.wav");
+		break;
+
+		case "KR_church_lever_up":
+			//from SL_utils
+			Locations[FindLocation("Kristiania_cathedral")].image = "";
+			DoQuestReloadToLocation("Kristiania_cathedral", "goto", "lever3", "KR_church_lever_up1");
+		break;
+
+		case "KR_church_lever_up1":
+			Locations[FindLocation("Kristiania_cathedral")].image = "Inside_Church_3.tga";
+			PlaySound("INTERFACE\gas_off2.wav");
+		break;
+
+		case "lock_door_sound":
+			PlaySound("INTERFACE\closed_locked_door.wav");
+		break;
+
+		case "use_paper_clip":
+			PlaySound("INTERFACE\took_item.wav");
+			GiveItem2Character(Pchar, "BB_coin");
+			TakeItemFromCharacter(pchar, "paper_clip2");
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box6", 0.0001);
+			Locations[FindLocation("Kristiania_cathedral")].locators_radius.box.box6 = 0.0001;
+
+			LAi_QuestDelay("pchar_yah", 1.0);
+		break;
+
+		case "check_logbook":
+			if(CheckCharacterItem(Pchar,"book69A") || CheckCharacterItem(Pchar,"book69B") || CheckCharacterItem(Pchar,"book69C"))
+			{
+		//		ChangeCharacterAddressGroup(CharacterFromID("wench3"), "Kristiania_jungle_house", "goto", "goto10");
+				ChangeCharacterAddressGroup(CharacterFromID("JRH"), "Kristiania_jungle_house", "goto", "jrh");
+
+				pchar.quest.maynard_bridge.win_condition.l1 = "locator";
+				pchar.quest.maynard_bridge.win_condition.l1.location = "Eleuthera_shore";
+				pchar.quest.maynard_bridge.win_condition.l1.locator_group = "quest";
+				pchar.quest.maynard_bridge.win_condition.l1.locator = "quest11";
+				pchar.quest.maynard_bridge.win_condition = "maynard_bridge";
+			}
+			else LAi_QuestDelay("check_logbook", 0.5);//loop check
+		break;
+
+//---------------------------------------------------------------------------------------------------
+//NS lever
+		case "NS_upper_town_lever_down":
+			//from SL_utils
+			Locations[FindLocation("Nueva_Suecia_upper_town")].image = "";
+			DoQuestReloadToLocation("Nueva_Suecia_upper_town", "quest", "lever", "NS_upper_town_lever_down1");
+		break;
+
+		case "NS_upper_town_lever_down1":
+			Locations[FindLocation("Nueva_Suecia_upper_town")].image = "Town_IslaMuelle_Town_03.tga";
+			PlaySound("INTERFACE\girder_open.wav");
+		break;
+
+		case "NS_upper_town_lever_up":
+			//from SL_utils
+			Locations[FindLocation("Nueva_Suecia_upper_town")].image = "";
+			DoQuestReloadToLocation("Nueva_Suecia_upper_town", "quest", "lever", "NS_upper_town_lever_up1");
+		break;
+
+		case "NS_upper_town_lever_up1":
+			Locations[FindLocation("Nueva_Suecia_upper_town")].image = "Town_IslaMuelle_Town_03.tga";
+			PlaySound("INTERFACE\girder_close.wav");
+		break;
+
+//---------------------------------------------------------------------------------------------------
+//NS roofs
+		case "NS_up_to_box4":
+			LAi_SetSitType(Pchar);
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(Pchar, "Nueva_Suecia_upper_town", "box", "box4");
+			
+			LAi_QuestDelay("pchar_playertype", 0.25);
+		break;
+
+		case "NS_up_to_box5":
+			LAi_SetSitType(Pchar);
+			PlaySound("PEOPLE\jump_roof.wav");
+			ChangeCharacterAddressGroup(Pchar, "Nueva_Suecia_upper_town", "box", "box5");
+			
+			LAi_QuestDelay("pchar_playertype", 0.25);
+			LAi_QuestDelay("NS_up_turn_to_box6", 0.5);
+		break;
+
+		case "NS_up_turn_to_box6":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box6");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "NS_up_to_box8":
+			LAi_SetSitType(Pchar);
+			PlaySound("PEOPLE\recoil.wav");
+			ChangeCharacterAddressGroup(Pchar, "Nueva_Suecia_upper_town", "box", "box8");
+			
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "NS_up_to_box9":
+			PlaySound("PEOPLE\run_stone.wav");
+			ChangeCharacterAddressGroup(Pchar, "Nueva_Suecia_upper_town", "box", "box9");
+
+			LAi_QuestDelay("NS_up_turn_to_box10", 0.5);
+		break;
+
+		case "NS_up_turn_to_box10":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box10");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "shutter_selfdialog":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "NS_up_shutter";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "NS_up_fall_to_ground":
+			if(CheckAttribute(Pchar, "NS_up_shutter") && Pchar.NS_up_shutter == "saved")
+			{
+				return;
+			}
+			else 
+			{
+				PlaySound("PEOPLE\jump.wav");
+				LAi_SetActorType(Pchar);
+				LAi_ActorSetLayMode(Pchar);
+
+				GetCharacterPos(Pchar, &u, &v, &w);
+				CreateParticleSystem("blast_dirt" , u, v+1, w, 0.0, 0.0, 0.0, sti(20) );
+
+				Php = LAi_GetCharacterHP(Pchar);
+				Php3 = Php/3;
+				LAi_ApplyCharacterDamage(Pchar, Php3);
+
+				LAi_QuestDelay("NS_up_fall_to_ground1",2);
+			}
+		break;
+
+		case "NS_up_fall_to_ground1":
+			LAi_SetPoorType(Pchar);
+			GetCharacterPos(Pchar, &u, &v, &w);
+			CreateParticleSystem("stars_short" , u, v+1, w, 0.0, 0.0, 0.0, sti(20) );
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead4.wav");
+
+			LAi_QuestDelay("pchar_playertype",3);
+		break;
+
+		case "beam_selfdialog":
+			LAi_SetActorType(pchar);	
+			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "NS_up_beam";
+			LAi_ActorSelfDialog(pchar, "");
+		break;
+
+		case "NS_up_turn_to_camera9":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "camera", "camera9");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "NS_up_turn_to_box24":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box24");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "NS_up_turn_to_box28":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box28");
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+		
+		case "NS_up_turn_to_box32":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box32");
+
+			LAi_QuestDelay("pchar_playertype", 1.5);
+			LAi_QuestDelay("NS_up_to_box32", 1.0);
+		break;
+
+		case "NS_up_to_box32":
+			ChangeCharacterAddressGroup(Pchar, "Nueva_Suecia_upper_town", "box", "box32");
+		break;
+
+		case "NS_up_to_box38":
+			ChangeCharacterAddressGroup(Pchar, "Nueva_Suecia_upper_town", "box", "box38");
+			PlaySound("PEOPLE\jump_stone.wav");
+			LAi_SetSitType(Pchar);
+
+			LAi_QuestDelay("pchar_playertype", 0.25);
+		break;
+
+		case "NS_up_to_box40":
+			ChangeCharacterAddressGroup(Pchar, "Nueva_Suecia_upper_town", "box", "box40");
+			PlaySound("PEOPLE\jump_stone.wav");
+			LAi_SetSitType(Pchar);
+
+			LAi_QuestDelay("pchar_playertype", 0.25);
+		break;
+
+		case "unlock_NS_up":
+			TakeItemFromCharacter(pchar, "key35");
+			Locations[FindLocation("Nueva_Suecia_upper_town")].reload.l3.disable = false;
+			Pchar.tailor_passage = "open";
+
+			DoQuestReloadToLocation("Nueva_Suecia_upper_town", "reload", "reload3", "_");
+		break;
+	
+		case "check_Pyle_hat":
+			if(IsEquipCharacterByItem(Pchar, "BB_hatA2"))
+			{
+				PlaySound("VOICE\ENGLISH\blaze_mhm.wav");
+			}
+			else PlaySound("VOICE\ENGLISH\blaze_puh.wav");
+		break;
+
+//---------------------------------------------------------------------------------------------------
+//indian ambush
+
+		case "KR_indian_ambush_start":
+			pchar.quest.KR_indian_ambush.win_condition.l1 = "locator";
+			pchar.quest.KR_indian_ambush.win_condition.l1.location = "KR_jungle_9";
+			pchar.quest.KR_indian_ambush.win_condition.l1.locator_group = "goto";
+			pchar.quest.KR_indian_ambush.win_condition.l1.locator = "box9";
+			pchar.quest.KR_indian_ambush.win_condition = "KR_indian_ambush";
+		break;
+
+		case "KR_indian_ambush":
+			LAi_SetStayType(Pchar);
+
+			PauseAllSounds();//stops music
+			locations[FindLocation("KR_jungle_9")].type = "very_silent_jungle";
+			PostEvent("LoadSceneSound", 0.1);
+
+			ChangeCharacterAddressGroup(CharacterFromID("KR_indian_1"), "KR_jungle_9", "quest", "attack1");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_indian_2"), "KR_jungle_9", "quest", "attack2");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_indian_3"), "KR_jungle_9", "quest", "attack3");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_indian_4"), "KR_jungle_9", "quest", "attack4");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_indian_5"), "KR_jungle_9", "quest", "attack5");
+			ChangeCharacterAddressGroup(CharacterFromID("KR_indian_6"), "KR_jungle_9", "quest", "attack6");
+
+			LAi_QuestDelay("pchar_huh", 3.0);
+			LAi_QuestDelay("KR_indian_ambush1", 4.0);
+		break;
+
+		case "KR_indian_ambush1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "attack3");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
+			LAi_QuestDelay("pchar_oh", 1.0);
+			LAi_QuestDelay("KR_indian_ambush2", 2.0);
+		break;
+
+		case "KR_indian_ambush2":
+			PlaySound("OBJECTS\ABORDAGE\abordage.wav");
+			PlaySound("OBJECTS\ABORDAGE\abordage_wining.wav");
+			LAi_group_FightGroups("JUNGLE_INDIANS", LAI_GROUP_PLAYER, true);
 		break;
 //---------------------------------------------------------------------------------------------------
 		case "BB_island1_ladder_up":
@@ -51727,6 +60667,7 @@ void QuestComplete(string sQuestName)
 		case "BB_island1_ladder_up1":
 			LAi_SetPlayerType(Pchar);
 			Pchar.quest.BB_isl1_ladder = "way_up";
+			Pchar.BB_isl1_box4 = "off";
 		break;
 //---------------------------------------------------------------------------------------------------
 		case "BB_island1_ladder_down":
@@ -51754,6 +60695,102 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(Pchar);
 			Pchar.quest.BB_isl1_ladder = "way_down";
 		break;
+
+		case "BB_island1_ladder_down_to_box2":
+			Pchar.quest.BB_isl1_ladder = "way_down";
+			PlaySound("PEOPLE\creak2.wav");
+			ChangeCharacterAddressGroup(Pchar, "BB_island1", "goto", "box2");
+			Pchar.BB_isl1_box4 = "off";
+		break;
+
+		case "BB_island1_ground_turn_around":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "citizen010");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
+		break;
+
+		case "BB_isl1_box4_off":
+			Pchar.BB_isl1_box4 = "off";
+		break;
+
+		case "key_unlock2":
+			PlaySound("INTERFACE\key_unlock2.wav");
+		break;
+		
+		case "BB_island1_unlock_tunnel":
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			TakeItemFromCharacter(pchar, "bladeBB");
+			if(!CheckCharacterItem(Pchar,"bladeX4")) GiveItem2Character(Pchar, "bladeX4");
+			EquipCharacterByItem(Pchar, "bladeX4");
+			Locations[FindLocation("BB_island1")].models.always.l1 = "blade1";
+		Locations[FindLocation(Pchar.location)].models.always.locators = "jungle07_l_JRH_open";
+			Locations[FindLocation("BB_island1")].image = "";
+			DoQuestReloadToLocation("BB_island1", "goto", "box3", "BB_island1_unlock_tunnel1");
+		break;
+
+		case "BB_island1_unlock_tunnel1":
+			LAi_SetFightMode(Pchar, false);
+			Locations[FindLocation("BB_island1")].image = "Outside_Jungle_7.tga";
+			Pchar.BB_isl1_box4 = "off";
+			Pchar.BB_isl1_tunnel = "open";
+	
+			LAi_QuestDelay("BB_island1_unlock_tunnel2", 1.5);
+		break;
+	
+		case "BB_island1_unlock_tunnel2":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "turn");
+
+			LAi_QuestDelay("BB_island1_unlock_tunnel3", 1.5);
+		break;
+
+		case "BB_island1_unlock_tunnel3":
+			Pchar.quest.BB_isl1_ladder = "way_up";		//access now to tunnel
+			LAi_SetPlayerType(Pchar);
+
+			pchar.quest.equip_pistolbladeBB.win_condition.l1 = "location";
+			pchar.quest.equip_pistolbladeBB.win_condition.l1.location = "BB_island2";
+			pchar.quest.equip_pistolbladeBB.win_condition = "equip_pistolbladeBB";
+		break;
+
+		case "equip_pistolbladeBB":
+			if(CheckCharacterItem(Pchar,"pistolbladeBB"))
+			{
+				if(!IsEquipCharacterByItem(Pchar, "pistolbladeBB"))
+				{
+					RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+					RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+					EquipCharacterByItem(Pchar, "bladeX4");
+					EquipCharacterByItem(Pchar, "pistolbladeBB");
+				}	
+			}
+		break;
+	//--------------------------------------------------------------------------------------------
+		case "BB_island2_still_locked":
+			PlaySound("PEOPLE\run_stone.wav");
+			PlaySound("PEOPLE\creak2.wav");
+			ChangeCharacterAddressGroup(Pchar, "BB_island2", "goto", "box2");
+		break;
+
+		case "BB_isl2_box7_off":
+			Pchar.BB_isl2_box7 = "off";
+		break;
+
+		case "BB_island2_unlock_tower":
+			Locations[FindLocation("BB_island2")].models.always.l1 = "blade2";
+			Locations[FindLocation("BB_island2")].image = "";
+			DoQuestReloadToLocation("BB_island2", "reload", "reload4", "BB_island2_unlock_tower1");
+		break;
+
+		case "BB_island2_unlock_tower1":
+			LAi_SetFightMode(Pchar, false);
+			Locations[FindLocation("BB_island2")].image = "Outside_Jungle_7.tga";
+			Pchar.BB_isl2_box7 = "off";
+			Pchar.BB_tower_entrance = "open";
+	
+			LAi_QuestDelay("pchar_playertype", 1.5);
+		break;
 //---------------------------------------------------------------------------------------------------
 		case "BB_tower_top_backloop":
 			pchar.quest.BB_tower_top_backloop_A.win_condition.l1 = "locator";
@@ -51765,7 +60802,6 @@ void QuestComplete(string sQuestName)
 
 		case "BB_tower_top_backloop_A":
 			ChangeCharacterAddressGroup(Pchar, "BB_tower", "goto", "reload4");
-			SetNextWind("N",30);
 			
 			LAi_QuestDelay("BB_tower_top_backloop", 0.1);
 		break;
@@ -51808,6 +60844,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "BB_lower_cave_backloop_A":
+			PlaySound("INTERFACE\locked_window.wav");
 			ChangeCharacterAddressGroup(Pchar, "BB_lower_cave", "goto", "goto3");
 			
 			LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
@@ -51895,11 +60932,14 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "randitem", "randitem4");
 
-			LAi_QuestDelay("BB_uppercave_leverturn1", 1.0);
+			LAi_QuestDelay("pchar_playertype", 1.0);
 		break;
 
-		case "BB_uppercave_leverturn1":
-			LAi_SetPlayerType(Pchar);
+		case "BB_uppercave_caveturn":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "box", "box4");
+
+			LAi_QuestDelay("pchar_playertype", 1.0);
 		break;
 //------------------------------------------------------------------------------------------------------------------------
 		case "close_grotto_hatch":
@@ -51909,7 +60949,8 @@ void QuestComplete(string sQuestName)
 
 		case "close_grotto_hatch0":
 			locations[FindLocation("BB_upper_cave")].image = "loading\inside\cave.tga";
-			PlaySound("INTERFACE\window_open.wav");
+			PlaySound("INTERFACE\chart_move.wav");
+			PlaySound("INTERFACE\chart_move.wav");
 
 			LAi_QuestDelay("close_grotto_hatch1", 1.5);
 		break;
@@ -52057,7 +61098,17 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("BB_uppercave_leverturn", 0.01);
 			LAi_QuestDelay("return_to_uppercave", 2.0);
+
+			if(characters[GetCharacterIndex("Louis_Arot")].location == "BB_upper_cave")
+			{
+				LAi_QuestDelay("au_revoir", 4.0);
+			}
 		break;
+
+		case "au_revoir":
+			PlaySound("VOICE\ENGLISH\Fre_m_c_049.wav");
+		break;
+		
 //------------------------------------------------------------------------------------------------------------------------
 		case "lower_cave_water_in":
 			//from itemlogic
@@ -52081,6 +61132,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "return_to_uppercave1":
+			if(Locations[FindLocation("BB_upper_cave")].models.always.l3 == "girder_block2")
+			{
+				PlaySound("INTERFACE\girder_close.wav");
+			}
+			else PlaySound("INTERFACE\girder_open.wav");
+
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "goto", "box4");
 
@@ -52120,7 +61177,10 @@ void QuestComplete(string sQuestName)
 					Locations[FindLocation("BB_lower_cave")].locators_radius.reload.reload3 = 1.0;
 
 					Locations[FindLocation("BB_upper_cave")].models.always.l1 = "bars_down";
-					Locations[FindLocation("BB_upper_cave")].reload.l1.disable = 0;
+					if(Locations[FindLocation("BB_upper_cave")].models.always.l3 == "girder_free2")
+					{
+						Locations[FindLocation("BB_upper_cave")].reload.l1.disable = 0;
+					}
 				}
 			}
 
@@ -52152,51 +61212,157 @@ void QuestComplete(string sQuestName)
 			pchar.quest.BB_lower_cave_steplock1.win_condition = "BB_lower_cave_steplock1";
 		break;
 //------------------------------------------------------------------------------------------------------------------------
-		case "move_to_BB_flagpole":
+		case "move_to_BB_hatch":
 			PlaySound("VOICE\ENGLISH\blaze_hah.wav");
 
-			LAi_QuestDelay("move_to_BB_flagpole1", 1.5);
+			LAi_QuestDelay("move_to_BB_hatch1", 1.5);
 		break;
 
-		case "move_to_BB_flagpole1":
+		case "move_to_BB_hatch1":
 			PlaySound("PEOPLE\run_stone.wav");
-			ChangeCharacterAddressGroup(Pchar, "BB_island2", "goto", "flagpole");
+			ChangeCharacterAddressGroup(Pchar, "BB_island2", "goto", "reload6");
+			Pchar.BB_spyglass = "off";
 		break;
 
 		case "place_coin_BB_spyglass":
-			Locations[FindLocation("BB_island2")].image = "zoom_boat.tga";
+			if(Pchar.new.flag.sequence == 6) 
+			{
+				Locations[FindLocation("BB_island2")].image = "zoom_islet.tga";
+				Pchar.boat.islet = "ready";
+			}
+			else Locations[FindLocation("BB_island2")].image = "zoom_archipelago.tga";
 
 			DoQuestReloadToLocation("BB_island2", "goto", "spyglass", "place_coin_BB_spyglass1");
 		break;
 
 		case "place_coin_BB_spyglass1":
-			Locations[FindLocation("BB_island2")].image = "Outside_Jungle_1.tga";
-			
-			LAi_QuestDelay("move_to_BB_flagpole1", 1.0);
+			if(Pchar.new.flag.sequence == 6) 
+			{
+				PlaySound("VOICE\ENGLISH\blaze_hah.wav");
+			}
+			else PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+
+			Locations[FindLocation("BB_island2")].image = "Outside_Jungle_1.tga";	
+
+			LAi_QuestDelay("place_coin_BB_spyglass2", 1.0);
 		break;
 
-		
+		case "place_coin_BB_spyglass2":
+			PlaySound("INTERFACE\took_item.wav");	
+
+			LAi_QuestDelay("move_to_BB_hatch1", 1.0);
+		break;
 
 //------------------------------------------------------------------------------------------------------------------------
-		case "raise_BBflag":
-			ref cmdr = Group_GetGroupCommander(GetGroupIDFromCharacter("Grand Turk Commander"));
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir")) cmdr.Flags.Pirate = 0;
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir1")) cmdr.Flags.Pirate = 1;
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir2")) cmdr.Flags.Pirate = 2;
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir3")) cmdr.Flags.Pirate = 3;
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir4")) cmdr.Flags.Pirate = 4;
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir5")) cmdr.Flags.Pirate = 5;
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir6")) cmdr.Flags.Pirate = 6;
 
+		case "start_BB_flag":
+			Pchar.old.flag.sequence = 0;
+			Pchar.new.flag.sequence = 0;
+			pchar.tower.flag = "none";
+
+	//LogIt("old_flag_sequence = " + Pchar.old.flag.sequence);
+	//LogIt("new_flag_sequence = " + Pchar.new.flag.sequence);
+		break;
+
+		case "raise_BBflag":
+		//	ref cmdr = CharacterFromID("Dante Siciliano");
+			cmdr = CharacterFromID("Dante Siciliano");
+
+			pchar_blade = GetCharacterEquipByGroup(PCHAR, BLADE_ITEM_TYPE);
+			switch (pchar_blade)
+			{
+				case "bladeflag_pir":
+					CaptureTownForNation("Grand Turk", PIRATE);
+					cmdr.nation = PIRATE; pchar.tower.flag = "pir";
+				break;
+			
+				case "bladeflag_pir2":
+					CaptureTownForNation("Grand Turk", GUEST1_NATION);
+					cmdr.nation = GUEST1_NATION; pchar.tower.flag = "pir2";
+				break;
+
+				case "bladeflag_HOL":
+					CaptureTownForNation("Grand Turk", HOLLAND);
+					cmdr.nation = HOLLAND; pchar.tower.flag = "HOL";
+				break;
+
+				case "bladeflag_ENG":
+					CaptureTownForNation("Grand Turk", ENGLAND);
+					cmdr.nation = ENGLAND; pchar.tower.flag = "ENG";
+				break;
+
+				case "bladeflag_FRA":
+					CaptureTownForNation("Grand Turk", FRANCE);
+					cmdr.nation = FRANCE; pchar.tower.flag = "FRA";
+				break;
+
+				case "bladeflag_POR":
+					CaptureTownForNation("Grand Turk", PORTUGAL);
+					cmdr.nation = PORTUGAL; pchar.tower.flag = "POR";
+
+					if(Pchar.old.flag.sequence == 0) Pchar.new.flag.sequence = 1;
+				break;
+				
+				case "bladeflag_SPA":
+					CaptureTownForNation("Grand Turk", SPAIN);
+					cmdr.nation = SPAIN; pchar.tower.flag = "SPA";
+				break;
+
+				case "bladeflag_PRE":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "PRE";
+					cmdr.Flags.Personal = 1; cmdr.Flags.Personal.texture = 4;
+
+					if(Pchar.old.flag.sequence == 0) Pchar.new.flag.sequence = 1;
+				break;
+
+				case "bladeflag_IRE":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "IRE";
+					cmdr.Flags.Personal = 2; cmdr.Flags.Personal.texture = 4;	
+				break;
+
+				case "bladeflag_SWE":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "SWE";
+					cmdr.Flags.Personal = 3; cmdr.Flags.Personal.texture = 4;	
+				break;
+
+				case "bladeflag_HOL2":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "HO2";
+					cmdr.Flags.Personal = 4; cmdr.Flags.Personal.texture = 4;	
+				break;
+
+				case "bladeflag_AME":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "AME";
+					cmdr.Flags.Personal = 5; cmdr.Flags.Personal.texture = 4;	
+				break;
+			
+				case "bladeflag_SPA2":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "SP2";
+					cmdr.Flags.Personal = 6; cmdr.Flags.Personal.texture = 4;	
+				break;
+			}
+
+			Towns[GetTownIndex("Grand Turk")].gov = "Dante Siciliano";
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "0") TakeItemFromCharacter(Pchar, "bladeflag_pir");
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "1") TakeItemFromCharacter(Pchar, "bladeflag_pir1");
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "2") TakeItemFromCharacter(Pchar, "bladeflag_pir2");
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "3") TakeItemFromCharacter(Pchar, "bladeflag_pir3");
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "4") TakeItemFromCharacter(Pchar, "bladeflag_pir4");
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "5") TakeItemFromCharacter(Pchar, "bladeflag_pir5");
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "6") TakeItemFromCharacter(Pchar, "bladeflag_pir6");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir") TakeItemFromCharacter(Pchar, "bladeflag_pir");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir2") TakeItemFromCharacter(Pchar, "bladeflag_pir2");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HOL") TakeItemFromCharacter(Pchar, "bladeflag_HOL");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "ENG") TakeItemFromCharacter(Pchar, "bladeflag_ENG");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "FRA") TakeItemFromCharacter(Pchar, "bladeflag_FRA");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "POR") TakeItemFromCharacter(Pchar, "bladeflag_POR");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SPA") TakeItemFromCharacter(Pchar, "bladeflag_SPA");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "PRE") TakeItemFromCharacter(Pchar, "bladeflag_PRE");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "IRE") TakeItemFromCharacter(Pchar, "bladeflag_IRE");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SWE") TakeItemFromCharacter(Pchar, "bladeflag_SWE");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HO2") TakeItemFromCharacter(Pchar, "bladeflag_HOL2");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "AME") TakeItemFromCharacter(Pchar, "bladeflag_AME");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SP2") TakeItemFromCharacter(Pchar, "bladeflag_SPA2");
 
 			if(!CheckCharacterItem(Pchar,"bladeX4")) GiveItem2Character(Pchar, "bladeX4");
 			EquipCharacterByItem(Pchar, "bladeX4");
@@ -52204,129 +61370,253 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("BB_island2")].image = "";
 			Locations[FindLocation(Pchar.location)].models.always.locators = "jungle01_l_JRH_F";
 			
-			DoQuestReloadToLocation("BB_island2", "goto", "reload6", "raise_BBflag_A");
-		break;
-
-		case "raise_BBflag_A":
-			Locations[FindLocation("BB_island2")].image = "Outside_Jungle_1.tga";
-			PlaySound("PEOPLE\clothes1.wav");
-			LAi_SetFightMode(Pchar, false);
-			LAi_SetStayType(Pchar);
-		break;
-//------------------------------------------------------------------------------------------------------------------------
-		case "lower_BBflag":
-			cmdr = Group_GetGroupCommander(GetGroupIDFromCharacter("Grand Turk Commander"));
-			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
-
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "0")
-			{ GiveItem2Character(Pchar, "bladeflag_pir"); EquipCharacterByItem(Pchar, "bladeflag_pir"); }
-
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "1")
-			{ GiveItem2Character(Pchar, "bladeflag_pir1"); EquipCharacterByItem(Pchar, "bladeflag_pir1"); }
-
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "2")
-			{ GiveItem2Character(Pchar, "bladeflag_pir2"); EquipCharacterByItem(Pchar, "bladeflag_pir2"); }
-
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "3")
-			{ GiveItem2Character(Pchar, "bladeflag_pir3"); EquipCharacterByItem(Pchar, "bladeflag_pir3"); }
-
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "4")
-			{ GiveItem2Character(Pchar, "bladeflag_pir4"); EquipCharacterByItem(Pchar, "bladeflag_pir4"); }
-
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "5")
-			{ GiveItem2Character(Pchar, "bladeflag_pir5"); EquipCharacterByItem(Pchar, "bladeflag_pir5"); }
-
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "6")
-			{ GiveItem2Character(Pchar, "bladeflag_pir6"); EquipCharacterByItem(Pchar, "bladeflag_pir6"); }
-
-			Locations[FindLocation("BB_island2")].image = "";
-			Locations[FindLocation(Pchar.location)].models.always.locators = "jungle01_l_JRH";
-
-			DoQuestReloadToLocation("BB_island2", "goto", "reload6", "lower_BBflag_A");
-		break;
-
-		case "lower_BBflag_A":
-			cmdr = Group_GetGroupCommander(GetGroupIDFromCharacter("Grand Turk Commander"));
-			cmdr.Flags.Pirate = "";
-			Locations[FindLocation("BB_island2")].image = "Outside_Jungle_1.tga";
-			PlaySound("PEOPLE\clothes1.wav");
-			LAi_SetFightMode(Pchar, false);
-			LAi_SetStayType(Pchar);
+			DoQuestReloadToLocation("BB_island2", "goto", "flagpole", "change_BBflag_A");
 		break;
 //------------------------------------------------------------------------------------------------------------------------
 		case "change_BBflag":
-			cmdr = Group_GetGroupCommander(GetGroupIDFromCharacter("Grand Turk Commander"));
+			cmdr = CharacterFromID("Dante Siciliano");
 
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "0") Pchar.quest.BB_old_flag = "0";
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "1") Pchar.quest.BB_old_flag = "1";
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "2") Pchar.quest.BB_old_flag = "2";
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "3") Pchar.quest.BB_old_flag = "3";
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "4") Pchar.quest.BB_old_flag = "4";
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "5") Pchar.quest.BB_old_flag = "5";
-			if(CheckAttribute(cmdr, "Flags.Pirate") && cmdr.Flags.Pirate == "6") Pchar.quest.BB_old_flag = "6";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir") Pchar.BB_old_flag = "pir";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir2") Pchar.BB_old_flag = "pir2";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HOL") Pchar.BB_old_flag = "HOL";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "ENG") Pchar.BB_old_flag = "ENG";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "FRA") Pchar.BB_old_flag = "FRA";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "POR") Pchar.BB_old_flag = "POR";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SPA") Pchar.BB_old_flag = "SPA";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "PRE") Pchar.BB_old_flag = "PRE";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "IRE") Pchar.BB_old_flag = "IRE";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SWE") Pchar.BB_old_flag = "SWE";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HO2") Pchar.BB_old_flag = "HO2";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "AME") Pchar.BB_old_flag = "AME";
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SP2") Pchar.BB_old_flag = "SP2";
+		
+			pchar_blade = GetCharacterEquipByGroup(PCHAR, BLADE_ITEM_TYPE);
+			switch (pchar_blade)
+			{
+				case "bladeflag_pir":
+					CaptureTownForNation("Grand Turk", PIRATE);
+					cmdr.nation = PIRATE; pchar.tower.flag = "pir";
 
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir")) Pchar.quest.BB_new_flag = "0";
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir1")) Pchar.quest.BB_new_flag = "1";
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir2")) Pchar.quest.BB_new_flag = "2";
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir3")) Pchar.quest.BB_new_flag = "3";
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir4")) Pchar.quest.BB_new_flag = "4";
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir5")) Pchar.quest.BB_new_flag = "5";
-			if(IsEquipCharacterByItem(Pchar, "bladeflag_pir6")) Pchar.quest.BB_new_flag = "6";
+					if(Pchar.old.flag.sequence == 2) 
+					{
+						Pchar.new.flag.sequence = 3;
+					}
+					else 
+					{
+						Pchar.old.flag.sequence = 0;
+						Pchar.new.flag.sequence = 0;
+					}
+				break;
+			
+				case "bladeflag_pir2":
+					//needed as a reset when personal is going down & teach is going up
+					CaptureTownForNation("Grand Turk", PIRATE);		
+					cmdr.nation = PIRATE; pchar.tower.flag = "pir";
 
+					CaptureTownForNation("Grand Turk", GUEST1_NATION);
+					cmdr.nation = GUEST1_NATION; pchar.tower.flag = "pir2";
+
+					if(Pchar.old.flag.sequence == 4) 
+					{
+						Pchar.new.flag.sequence = 5;
+					}
+					else 
+					{
+						Pchar.old.flag.sequence = 0;
+						Pchar.new.flag.sequence = 0;
+					}
+				break;
+
+				case "bladeflag_HOL":
+					CaptureTownForNation("Grand Turk", HOLLAND);
+					cmdr.nation = HOLLAND; pchar.tower.flag = "HOL";
+
+					Pchar.old.flag.sequence = 0;
+					Pchar.new.flag.sequence = 0;
+				break;
+
+				case "bladeflag_ENG":
+					CaptureTownForNation("Grand Turk", ENGLAND);
+					cmdr.nation = ENGLAND; pchar.tower.flag = "ENG";
+
+					if(Pchar.old.flag.sequence == 5) 
+					{
+						Pchar.new.flag.sequence = 6;
+					}
+					else 
+					{
+						Pchar.old.flag.sequence = 0;
+						Pchar.new.flag.sequence = 0;
+					}
+				break;
+
+				case "bladeflag_FRA":
+					CaptureTownForNation("Grand Turk", FRANCE);
+					cmdr.nation = FRANCE; pchar.tower.flag = "FRA";
+
+					Pchar.old.flag.sequence = 0;
+					Pchar.new.flag.sequence = 0;
+				break;
+
+				case "bladeflag_POR":
+					CaptureTownForNation("Grand Turk", PORTUGAL);
+					cmdr.nation = PORTUGAL; pchar.tower.flag = "POR";
+
+					if(Pchar.old.flag.sequence == 0) 
+					{
+						Pchar.new.flag.sequence = 1;
+					}
+					else 
+					{
+						Pchar.old.flag.sequence = 0;
+						Pchar.new.flag.sequence = 0;
+					}
+				break;
+				
+				case "bladeflag_SPA":
+					CaptureTownForNation("Grand Turk", SPAIN);
+					cmdr.nation = SPAIN; pchar.tower.flag = "SPA";
+
+					Pchar.old.flag.sequence = 0;
+					Pchar.new.flag.sequence = 0;
+				break;
+
+				case "bladeflag_PRE":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "PRE";
+					cmdr.Flags.Personal = 1; cmdr.Flags.Personal.texture = 4;
+
+					if(Pchar.old.flag.sequence == 0) 
+					{
+						Pchar.new.flag.sequence = 1;
+					}
+					else 
+					{
+						Pchar.old.flag.sequence = 0;
+						Pchar.new.flag.sequence = 0;
+					}
+				break;
+
+				case "bladeflag_IRE":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "IRE";
+					cmdr.Flags.Personal = 2; cmdr.Flags.Personal.texture = 4;
+
+					if(Pchar.old.flag.sequence == 1) 
+					{
+						Pchar.new.flag.sequence = 2;
+					}
+					else 
+					{
+						Pchar.old.flag.sequence = 0;
+						Pchar.new.flag.sequence = 0;
+					}	
+				break;
+
+				case "bladeflag_SWE":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "SWE";
+					cmdr.Flags.Personal = 3; cmdr.Flags.Personal.texture = 4;
+
+					Pchar.old.flag.sequence = 0;
+					Pchar.new.flag.sequence = 0;	
+				break;
+
+				case "bladeflag_HOL2":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "HO2";
+					cmdr.Flags.Personal = 4; cmdr.Flags.Personal.texture = 4;
+
+					Pchar.old.flag.sequence = 0;
+					Pchar.new.flag.sequence = 0;	
+				break;
+
+				case "bladeflag_AME":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "AME";
+					cmdr.Flags.Personal = 5; cmdr.Flags.Personal.texture = 4;
+
+					if(Pchar.old.flag.sequence == 3) 
+					{
+						Pchar.new.flag.sequence = 4;
+					}
+					else 
+					{
+						Pchar.old.flag.sequence = 0;
+						Pchar.new.flag.sequence = 0;
+					}	
+				break;
+			
+				case "bladeflag_SPA2":
+					CaptureTownForNation("Grand Turk", PERSONAL_NATION);
+					cmdr.nation = PERSONAL_NATION; pchar.tower.flag = "SP2";
+					cmdr.Flags.Personal = 6; cmdr.Flags.Personal.texture = 4;
+				
+					Pchar.old.flag.sequence = 0;
+					Pchar.new.flag.sequence = 0;
+				break;
+			}
+
+			Towns[GetTownIndex("Grand Turk")].gov = "Dante Siciliano";
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 
-			//...........................................
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir") TakeItemFromCharacter(Pchar, "bladeflag_pir");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir2") TakeItemFromCharacter(Pchar, "bladeflag_pir2");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HOL") TakeItemFromCharacter(Pchar, "bladeflag_HOL");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "ENG") TakeItemFromCharacter(Pchar, "bladeflag_ENG");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "FRA") TakeItemFromCharacter(Pchar, "bladeflag_FRA");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "POR") TakeItemFromCharacter(Pchar, "bladeflag_POR");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SPA") TakeItemFromCharacter(Pchar, "bladeflag_SPA");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "PRE") TakeItemFromCharacter(Pchar, "bladeflag_PRE");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "IRE") TakeItemFromCharacter(Pchar, "bladeflag_IRE");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SWE") TakeItemFromCharacter(Pchar, "bladeflag_SWE");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HO2") TakeItemFromCharacter(Pchar, "bladeflag_HOL2");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "AME") TakeItemFromCharacter(Pchar, "bladeflag_AME");
+			if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SP2") TakeItemFromCharacter(Pchar, "bladeflag_SPA2");
 
-			if(CheckAttribute(Pchar, "quest.BB_new_flag") && Pchar.quest.BB_new_flag == "0")
-			{ TakeItemFromCharacter(Pchar, "bladeflag_pir"); cmdr.Flags.Pirate = 0; }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "pir") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_pir"); EquipCharacterByItem(Pchar, "bladeflag_pir"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_new_flag") && Pchar.quest.BB_new_flag == "1")
-			{ TakeItemFromCharacter(Pchar, "bladeflag_pir1"); cmdr.Flags.Pirate = 1; }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "pir2") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_pir2"); EquipCharacterByItem(Pchar, "bladeflag_pir2"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_new_flag") && Pchar.quest.BB_new_flag == "2")
-			{ TakeItemFromCharacter(Pchar, "bladeflag_pir2"); cmdr.Flags.Pirate = 2; }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "HOL") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_HOL"); EquipCharacterByItem(Pchar, "bladeflag_HOL"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_new_flag") && Pchar.quest.BB_new_flag == "3")
-			{ TakeItemFromCharacter(Pchar, "bladeflag_pir3"); cmdr.Flags.Pirate = 3; }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "ENG") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_ENG"); EquipCharacterByItem(Pchar, "bladeflag_ENG"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_new_flag") && Pchar.quest.BB_new_flag == "4")
-			{ TakeItemFromCharacter(Pchar, "bladeflag_pir4"); cmdr.Flags.Pirate = 4; }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "FRA") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_FRA"); EquipCharacterByItem(Pchar, "bladeflag_FRA"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_new_flag") && Pchar.quest.BB_new_flag == "5")
-			{ TakeItemFromCharacter(Pchar, "bladeflag_pir5"); cmdr.Flags.Pirate = 5; }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "POR") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_POR"); EquipCharacterByItem(Pchar, "bladeflag_POR"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_new_flag") && Pchar.quest.BB_new_flag == "6")
-			{ TakeItemFromCharacter(Pchar, "bladeflag_pir6"); cmdr.Flags.Pirate = 6; }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "SPA") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_SPA"); EquipCharacterByItem(Pchar, "bladeflag_SPA"); }
 
-			//...........................................
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "PRE") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_PRE"); EquipCharacterByItem(Pchar, "bladeflag_PRE"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_old_flag") && Pchar.quest.BB_old_flag == "0")
-			{ GiveItem2Character(Pchar, "bladeflag_pir"); EquipCharacterByItem(Pchar, "bladeflag_pir"); }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "IRE") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_IRE"); EquipCharacterByItem(Pchar, "bladeflag_IRE"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_old_flag") && Pchar.quest.BB_old_flag == "1")
-			{ GiveItem2Character(Pchar, "bladeflag_pir1"); EquipCharacterByItem(Pchar, "bladeflag_pir1"); }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "SWE") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_SWE"); EquipCharacterByItem(Pchar, "bladeflag_SWE"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_old_flag") && Pchar.quest.BB_old_flag == "2")
-			{ GiveItem2Character(Pchar, "bladeflag_pir2"); EquipCharacterByItem(Pchar, "bladeflag_pir2"); }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "HO2") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_HOL2"); EquipCharacterByItem(Pchar, "bladeflag_HOL2"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_old_flag") && Pchar.quest.BB_old_flag == "3")
-			{ GiveItem2Character(Pchar, "bladeflag_pir3"); EquipCharacterByItem(Pchar, "bladeflag_pir3"); }
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "AME") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_AME"); EquipCharacterByItem(Pchar, "bladeflag_AME"); }
 
-			if(CheckAttribute(Pchar, "quest.BB_old_flag") && Pchar.quest.BB_old_flag == "4")
-			{ GiveItem2Character(Pchar, "bladeflag_pir4"); EquipCharacterByItem(Pchar, "bladeflag_pir4"); }
-
-			if(CheckAttribute(Pchar, "quest.BB_old_flag") && Pchar.quest.BB_old_flag == "5")
-			{ GiveItem2Character(Pchar, "bladeflag_pir5"); EquipCharacterByItem(Pchar, "bladeflag_pir5"); }
-
-			if(CheckAttribute(Pchar, "quest.BB_old_flag") && Pchar.quest.BB_old_flag == "6")
-			{ GiveItem2Character(Pchar, "bladeflag_pir6"); EquipCharacterByItem(Pchar, "bladeflag_pir6"); }
-
-			//...........................................
-
+			if(CheckAttribute(Pchar, "BB_old_flag") && Pchar.BB_old_flag == "SP2") 
+			{ Pchar.BB_old_flag = "none"; GiveItem2Character(Pchar, "bladeflag_SPA2"); EquipCharacterByItem(Pchar, "bladeflag_SPA2"); }
+		
 			Locations[FindLocation("BB_island2")].image = "";
 			Locations[FindLocation(Pchar.location)].models.always.locators = "jungle01_l_JRH_F";
 			
-			DoQuestReloadToLocation("BB_island2", "goto", "reload6", "change_BBflag_A");
+			DoQuestReloadToLocation("BB_island2", "goto", "flagpole", "change_BBflag_A");
 		break;
 
 		case "change_BBflag_A":
@@ -52334,7 +61624,249 @@ void QuestComplete(string sQuestName)
 			PlaySound("PEOPLE\clothes1.wav");
 			LAi_SetFightMode(Pchar, false);
 			LAi_SetStayType(Pchar);
+
+	//LogIt("old_flag_sequence = " + Pchar.old.flag.sequence);
+	//LogIt("new_flag_sequence = " + Pchar.new.flag.sequence);
+
+			if(sti(Pchar.new.flag.sequence) > sti(Pchar.old.flag.sequence)) 
+			{
+				LAi_QuestDelay("confirm_BBflag", 2.0);
+			}
+			else
+			{
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir") LogIt("R");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "pir2") LogIt("T");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HOL") LogIt("D");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "ENG") LogIt("E");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "FRA") LogIt("F");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "POR") LogIt("P");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SPA") LogIt("S");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "PRE") LogIt("P");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "IRE") LogIt("I");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SWE") LogIt("S");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "HO2") LogIt("D");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "AME") LogIt("A");
+				if(CheckAttribute(Pchar, "tower.flag") && Pchar.tower.flag == "SP2") LogIt("U");
+
+				LAi_QuestDelay("Pchar_sigh", 2.0);
+				LAi_QuestDelay("BB_isl2_box4_off", 2.0);
+			}
 		break;
+
+		case "confirm_BBflag":
+		//	PlaySound("OBJECTS\SHIPCHARGE\cannon_fire_01.wav");
+			Pchar.old.flag.sequence = Pchar.new.flag.sequence;
+
+	//LogIt("old_flag_sequence = " + Pchar.old.flag.sequence);
+	//LogIt("new_flag_sequence = " + Pchar.new.flag.sequence);
+
+			if(Pchar.new.flag.sequence == 1) 
+			{
+				LogIt("P");
+				LAi_QuestDelay("BB_isl2_box4_off", 2.0);
+			}
+			if(Pchar.new.flag.sequence == 2)
+			{
+				LogIt("P");
+				LogIt("I");
+				LAi_QuestDelay("BB_isl2_box4_off", 2.0);
+			}
+			if(Pchar.new.flag.sequence == 3)
+			{
+				LogIt("P");
+				LogIt("I");
+				LogIt("R");
+				LAi_QuestDelay("BB_isl2_box4_off", 2.0);
+			}
+			if(Pchar.new.flag.sequence == 4)
+			{
+				LogIt("P");
+				LogIt("I");
+				LogIt("R");
+				LogIt("A");
+				LAi_QuestDelay("BB_isl2_box4_off", 2.0);
+			}
+			if(Pchar.new.flag.sequence == 5)
+			{
+				LogIt("P");
+				LogIt("I");
+				LogIt("R");
+				LogIt("A");
+				LogIt("T");
+				LAi_QuestDelay("BB_isl2_box4_off", 2.0);
+			}
+
+			if(Pchar.new.flag.sequence == 6) 
+			{
+				LogIt("P");
+				LogIt("I");
+				LogIt("R");
+				LogIt("A");
+				LogIt("T");
+				LogIt("E");
+			PlaySound("OBJECTS\SHIPCHARGE\cannon_fire_01.wav");
+				
+				LAi_QuestDelay("confirm_BBflag_end", 2.0);
+			}
+		break;
+
+		case "confirm_BBflag_end":
+			PlaySound("AMBIENT\SEASHORE\fanfare.wav");
+			TakeItemFromCharacter(Pchar, "doc60A");
+			TakeItemFromCharacter(Pchar, "doc60B");
+			TakeItemFromCharacter(Pchar, "doc60C");
+			TakeItemFromCharacter(Pchar, "doc60D");
+		
+			LAi_QuestDelay("confirm_BBflag_end1", 13.0);
+		break;
+
+		case "confirm_BBflag_end1":
+			PlaySound("PEOPLE\run_stone.wav");
+			ChangeCharacterAddressGroup(Pchar, "BB_island2", "goto", "spyglass");
+		break;
+
+		case "BB_isl2_box4_off":
+			Pchar.BB_isl2_box4 = "off";
+			//LogIt("OFF");
+		break;
+//------------------------------------------------------------------------------------------------------------------------
+//isle
+		case "chimney_dialog":
+			ChangeCharacterAddressGroup(CharacterFromID("Louis_Arot"), "BB_isle", "reload", "reload1");
+
+			LAi_SetActorType(characterFromID("Louis_Arot"));
+			LAi_ActorDialog(characterFromID("Louis_Arot"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Louis_Arot"));
+		break;
+
+		case "chimney_done":
+			LAi_SetStayType(Pchar);
+			Pchar.isle.chimney = "logbook";
+		break;
+
+		case "logbook_down_chimney":
+			LAi_QuestDelay("quest_item", 0.01);
+
+			LAi_QuestDelay("logbook_down_chimney1", 1.0);
+		break;
+
+		case "logbook_down_chimney1":
+			LAi_SetActorType(characterFromID("Louis_Arot"));
+			LAi_ActorDialog(characterFromID("Louis_Arot"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Louis_Arot"));
+			Characters[GetCharacterIndex("Louis_Arot")].dialog.CurrentNode  = "open_hut";
+		break;
+
+		case "open_hut_done":
+			LAi_SetPlayerType(Pchar);
+			ChangeCharacterAddressGroup(CharacterFromID("Louis_Arot"), "BB_isle_hut", "goto", "Arot");
+
+			LAi_QuestDelay("open_hut_done1", 3.0);
+		break;
+
+		case "open_hut_done1":
+			PlaySound("INTERFACE\key_unlock2.wav");
+			Locations[FindLocation("BB_isle")].reload.l1.disable = 0;
+			LAi_SetStayType(characterFromID("Louis_Arot"));
+			Characters[GetCharacterIndex("Louis_Arot")].dialog.CurrentNode  = "inside_hut";
+		break;
+
+		case "inside_hut_done":
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box2", 1.0);
+			Locations[FindLocation("BB_isle_hut")].locators_radius.box.box2 = 1.0;
+
+			TakeItemFromCharacter(pchar, "flagchest_closed"); TakeItemFromCharacter(pchar, "flagchest_open");
+			TakeItemFromCharacter(pchar, "flagchest_empty"); TakeItemFromCharacter(pchar, "bladeflag_pir");
+			TakeItemFromCharacter(pchar, "bladeflag_pir2"); TakeItemFromCharacter(pchar, "bladeflag_HOL");
+			TakeItemFromCharacter(pchar, "bladeflag_FRA"); TakeItemFromCharacter(pchar, "bladeflag_POR");
+			TakeItemFromCharacter(pchar, "bladeflag_SPA"); TakeItemFromCharacter(pchar, "bladeflag_PRE");
+			TakeItemFromCharacter(pchar, "bladeflag_IRE"); TakeItemFromCharacter(pchar, "bladeflag_SWE");
+			TakeItemFromCharacter(pchar, "bladeflag_HOL2"); TakeItemFromCharacter(pchar, "bladeflag_AME");
+			TakeItemFromCharacter(pchar, "bladeflag_SPA2");    
+
+			LAi_SetStayType(characterFromID("Louis_Arot"));
+			Characters[GetCharacterIndex("Louis_Arot")].dialog.CurrentNode  = "neutral_inside";
+
+			LAi_QuestDelay("quest_item", 0.01);
+			LAi_QuestDelay("bladelever3_check", 0.5);
+		break;
+
+		case "neutral_inside_repeat":
+			LAi_SetStayType(characterFromID("Louis_Arot"));
+			Characters[GetCharacterIndex("Louis_Arot")].dialog.CurrentNode  = "neutral_inside";
+		break;
+
+		case "Arot_gone":
+			ChangeCharacterAddressGroup(CharacterFromID("Louis_Arot"), "none", "", "");
+		break;
+
+		case "unlock_isle_chest":
+			Pchar.isle.chest = "open";
+		break;
+
+		case "BB_isle_hut_jump":
+			LAi_SetSitType(Pchar);
+			PlaySound("PEOPLE\jump_roof.wav");
+			PlaySound("PEOPLE\jump_roof.wav");
+			CreateParticleSystem("blast_dirt_small" , 1.7, 0.0, 0.7, 0.0, 0.0, 0.0, sti(20) );
+
+			LAi_QuestDelay("pchar_playertype", 0.5);
+		break;
+
+		case "BB_isle_hut_jump_locked":
+			ChangeCharacterAddressGroup(Pchar, "BB_isle_hut", "goto", "jump");
+
+			LAi_QuestDelay("BB_isle_hut_jump", 0.7);
+		break;
+
+		case "bladelever3_check":
+			if(CheckCharacterItem(Pchar,"bladelever3"))
+			{
+				PlaySound("INTERFACE\cancel.wav");
+				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+				EquipCharacterByItem(Pchar, "bladelever3");
+
+				LAi_QuestDelay("Arot_tartane", 0.1);
+				//return;
+			}
+			else LAi_QuestDelay("bladelever3_check", 0.5);	//loops until item picked up
+		break;
+
+		case "Arot_tartane":
+			Characters[GetCharacterIndex("Louis_Arot")].dialog.CurrentNode  = "neutral_islet";
+			ChangeCharacterAddressGroup(CharacterFromID("Louis_Arot"), "BB_isle", "goto", "arrive");
+
+			SetCharacterShipLocation(characterFromID("gm_crew12"), "none");
+			SetCharacterShipLocation(characterFromID("gm_crew14"), "none");
+
+			SetCharacterShipLocation(characterFromID("wr_mummy6"), "BB_upper_cave");
+			SetCharacterShipLocation(characterFromID("wr_mummy7"), "BB_isle");
+
+			pchar.quest.Arot_tartane_cave.win_condition.l1 = "location";
+			pchar.quest.Arot_tartane_cave.win_condition.l1.location = "BB_upper_cave";
+			pchar.quest.Arot_tartane_cave.win_condition = "Arot_tartane_cave";
+		break;
+
+		case "neutral_islet_repeat":
+			LAi_SetStayType(characterFromID("Louis_Arot"));
+			Characters[GetCharacterIndex("Louis_Arot")].dialog.CurrentNode  = "neutral_islet";
+		break;
+
+		case "Arot_tartane_cave":
+			ChangeCharacterAddressGroup(CharacterFromID("Louis_Arot"), "BB_upper_cave", "box", "box9");
+
+			pchar.quest.Arot_tartane_sailing.win_condition.l1 = "location";
+			pchar.quest.Arot_tartane_sailing.win_condition.l1.location = "BB_lower_cave";
+			pchar.quest.Arot_tartane_sailing.win_condition = "Arot_tartane_sailing";
+		break;
+
+		case "Arot_tartane_sailing":
+			ChangeCharacterAddressGroup(CharacterFromID("Louis_Arot"), "none", "", "");
+			characters[GetCharacterIndex("wr_mummy6")].sailaway = true;
+			Pchar.Arot_sailing = "yes";
+		//	SetNextWind("W",30);
+		break;
+
 //------------------------------------------------------------------------------------------------------------------------
 
 
@@ -52358,6 +61890,59 @@ void QuestComplete(string sQuestName)
 
 		//here are all start conditions for alchemy 2 part (if not coming from jump start in StartStoryline)
 		case "start_alchemy2":
+
+			GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+			Locations[FindLocation("Redmond_shore_03")].models.always.locators = "shore10_l_JRH1";
+		//	Locations[FindLocation("Redmond_shore_03")].locators_radius.reload.reload1 = 0.001;
+			Locations[FindLocation("wr_farm_booty")].models.always.locators = "sklad_locators_JRH2";
+			Locations[FindLocation("wr_farm_bedroom")].reload.l2.disable = 0;
+			Locations[FindLocation("wr_farm_corridor")].filespath.textures = "locations\inside\Corridor\normal";
+			Locations[FindLocation("wr_farm_corridor")].locators_radius.box.box1 = 0.001;
+			Locations[FindLocation("wr_farm_corridor")].models.always.locators = "storeSmall_locators_JRH_normal";
+			Locations[FindLocation("wr_farm_corridor")].reload.l5.disable = 0;
+			Locations[FindLocation("wr_farm_servant")].models.always.locators = "sh_l_JRH2_open";
+			Locations[FindLocation("wr_farm_alchemy")].reload.l3.disable = 0;
+			Locations[FindLocation("wr_farm_alchemy")].locators_radius.box.box6 = 0.0001;
+			Locations[FindLocation("wr_farm_alchemy")].locators_radius.reload.reload1 = 0.6;
+			locations[FindLocation("wr_farm_alchemy")].models.always.l9 = "cauldron3_w";
+			locations[FindLocation("wr_farm_alchemy")].models.always.l10 = "retort_E0";
+			locations[FindLocation("wr_farm_alchemy")].models.always.l11 = "top3";
+			locations[FindLocation("wr_farm_alchemy")].models.always.l12 = "glass_tube3";
+			locations[FindLocation("wr_farm_servant")].id.label = "Minervas room";
+			locations[FindLocation("wr_farm_corridor")].id.label = "Rogers' passage";
+
+			Locations[FindLocation("wr_farm_alchemy")].locators_radius.box.box7 = 0.5;	//mixtable big bottle
+			locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "bottle_LE0";	//should be on here
+			locations[FindLocation("wr_farm_alchemy")].models.always.l15 = "hatch7";
+
+			Locations[FindLocation("wr_farm_kitchen")].items.randitem1 = "key8";		//invisible model
+			Locations[FindLocation("wr_farm_bedroom")].items.randitem7 = "key8";
+			Locations[FindLocation("wr_farm_corridor")].models.always.l1 = "";
+			Locations[FindLocation("wr_farm_servant")].items.randitem6 = "key8";
+			Locations[FindLocation("wr_farm_servant")].items.randitem7 = "key8";
+			Locations[FindLocation("wr_farm_alchemy")].items.randitem6 = "key8";
+
+			Locations[FindLocation("wr_farm_kitchen")].locators_radius.randitem.randitem1 = 0.0001;
+			Locations[FindLocation("wr_farm_bedroom")].locators_radius.randitem.randitem7 = 0.0001;
+			Locations[FindLocation("wr_farm_servant")].locators_radius.randitem.randitem6 = 0.0001;
+			Locations[FindLocation("wr_farm_servant")].locators_radius.randitem.randitem7 = 0.0001;
+			Locations[FindLocation("wr_farm_alchemy")].locators_radius.randitem.randitem6 = 0.0001;
+
+			Pchar.quest.distillery_items = "open";
+			//Pchar.quest.farm_water = "off";
+			Pchar.quest.alchemy_lever = "down";
+			Pchar.quest.alchemy_plank = "up";
+			Pchar.quest.apparatus_level = "glass_tube";		
+			Pchar.quest.farmbooty_fillbottle = "off";
+			Pchar.quest.apparatus_liquid = "none";
+			Pchar.quest.apparatus_cooling = "2";
+			Pchar.quest.mixtable_bottle = "ME0";
+			pchar.quest.Minerva = "arrived";
+			Pchar.quest.cauldron = "water";
+			Pchar.quest.retort = "yes";
+
+			//---------------------------------------------------------------------
+
 			Pchar.alchemy2_grinder = "empty";
 			Pchar.use_only_big_bottle = "yes";
 			Pchar.Q2_mix = "1";
@@ -52369,8 +61954,9 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "bottle_LE0";
 			locations[FindLocation("wr_farm_alchemy")].models.always.l15 = "hatch7";
 
-			Locations[FindLocation("wr_farm_alchemy")].reload.l2.disable = 0;			//to alchemy2
-			Locations[FindLocation("wr_farm_servant")].reload.l2.disable = 0;			//to alchemy2
+		pchar.quest.place_distillery_itemsA1.win_condition.l1 = "location";
+			pchar.quest.place_distillery_itemsA1.win_condition.l1.location = "wr_farm_booty";
+			pchar.quest.place_distillery_itemsA1.win_condition = "place_distillery_itemsA1";
 
 			pchar.quest.alchemy2_fire_level_down1.win_condition.l1 = "location";
 			pchar.quest.alchemy2_fire_level_down1.win_condition.l1.location = "wr_farm_alchemy2";
@@ -52399,6 +61985,112 @@ void QuestComplete(string sQuestName)
 			pchar.quest.woodstop.win_condition.l1.locator_group = "goto";
 			pchar.quest.woodstop.win_condition.l1.locator = "woodstop";
 			pchar.quest.woodstop.win_condition = "woodback";
+		break;
+
+		
+
+
+
+
+
+
+
+		case "newspapers_check":
+			if(CheckCharacterItem(Pchar,"newspaper1") || CheckCharacterItem(Pchar,"newspaper2") || CheckCharacterItem(Pchar,"newspaper3"))
+			{
+				Logit(LanguageConvertString(tmpLangFileID,"I don't need to carry these newspapers around."));
+				Logit(LanguageConvertString(tmpLangFileID,"Better study them or return them to the counter."));
+				PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+				LAi_SetStayType(Pchar);
+			}
+			else LAi_SetPlayerType(Pchar);
+		break;
+
+		case "return_newspaper1":
+			Pchar.return_newspaper = "yes";
+			TakeItemFromCharacter(Pchar, "newspaper1");
+			locations[FindLocation(Pchar.location)].box5.items.newspaper1 = 1;
+
+			LAi_QuestDelay("newspapers_sound_check", 0.01);
+			LAi_QuestDelay("newspapers_check", 1.0);
+		break;
+
+		case "return_newspaper2":
+			Pchar.return_newspaper = "yes";
+			TakeItemFromCharacter(Pchar, "newspaper2");
+			locations[FindLocation(Pchar.location)].box5.items.newspaper2 = 1;
+
+			LAi_QuestDelay("newspapers_sound_check", 0.01);
+			LAi_QuestDelay("newspapers_check", 1.0);
+		break;
+
+		case "return_newspaper3":
+			Pchar.return_newspaper = "yes";
+			TakeItemFromCharacter(Pchar, "newspaper3");
+			locations[FindLocation(Pchar.location)].box5.items.newspaper3 = 1;
+
+			LAi_QuestDelay("newspapers_sound_check", 0.01);
+			LAi_QuestDelay("newspapers_check", 1.0);
+		break;
+
+		case "newspapers_sound_check":
+			if(CheckAttribute(Pchar,"newspaper1") && Pchar.return_newspaper == "yes") PlaySound("INTERFACE\paper.wav");
+			Pchar.return_newspaper = "no";
+		break;
+
+
+		case "read_all_newspapers":
+			if(!CheckAttribute(Pchar,"all_newspapers") || Pchar.all_newspapers != "read")
+			{
+				if(CheckAttribute(Pchar,"newspaper1") && CheckAttribute(Pchar,"newspaper2") && CheckAttribute(Pchar,"newspaper3"))
+				{
+					if(Pchar.newspaper1 == "read" && Pchar.newspaper2 == "read" && Pchar.newspaper3 == "read")
+					{
+						Pchar.all_newspapers = "read";
+						AddQuestRecord("Johnson","2");
+					}
+				}
+			}
+		break;		
+
+		case "unlock_alchemy2_downstairs":
+			Locations[FindLocation("wr_farm_alchemy")].locators_radius.box.box8 = 0.0001;
+			Locations[FindLocation("wr_farm_alchemy")].locators_radius.reload.reload2 = 0.6;
+			Locations[FindLocation("wr_farm_alchemy2")].locators_radius.box.box17 = 0.0001;
+			Locations[FindLocation("wr_farm_alchemy2")].locators_radius.reload.reload2 = 0.7;
+			Locations[FindLocation("wr_farm_alchemy")].reload.l2.disable = 0;
+
+			if(CheckAttribute(locations[FindLocation("wr_farm_alchemy2")], "id.label") 
+			&& locations[FindLocation("wr_farm_alchemy2")].id.label == "Rogers' alchemy laboratory")
+			{ TakeItemFromCharacter(Pchar, "key36"); }
+
+			locations[FindLocation("wr_farm_alchemy2")].id.label = "Rogers' alchemy laboratory";
+
+			if(pchar.location == "wr_farm_alchemy") 
+			{
+				DoQuestReloadToLocation("wr_farm_alchemy2", "reload", "reload2", "_");
+			}
+			else DoQuestReloadToLocation("wr_farm_alchemy", "reload", "reload2", "_");
+		break;
+
+		case "unlock_alchemy2_upstairs":
+			Locations[FindLocation("wr_farm_servant")].locators_radius.box.box5 = 0.0001;
+			Locations[FindLocation("wr_farm_servant")].locators_radius.reload.reload2 = 0.7;
+			Locations[FindLocation("wr_farm_alchemy2")].locators_radius.box.box18 = 0.0001;
+			Locations[FindLocation("wr_farm_alchemy2")].locators_radius.reload.reload3 = 0.7;
+			Locations[FindLocation("wr_farm_servant")].reload.l2.disable = 0;
+			
+			if(CheckAttribute(locations[FindLocation("wr_farm_alchemy2")], "id.label") 
+			&& locations[FindLocation("wr_farm_alchemy2")].id.label == "Rogers' alchemy laboratory")
+			{ TakeItemFromCharacter(Pchar, "key36"); }
+
+			locations[FindLocation("wr_farm_alchemy2")].id.label = "Rogers' alchemy laboratory";
+
+			if(pchar.location == "wr_farm_servant") 
+			{
+				DoQuestReloadToLocation("wr_farm_alchemy2", "reload", "reload3", "_");
+			}
+			else DoQuestReloadToLocation("wr_farm_servant", "reload", "reload2", "_");
 		break;
 
 		//-------------------------------------------------------------------------------------------------
@@ -52521,6 +62213,9 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\button2.wav");
 		break;
 
+		//--------------------------------------------------------------------------------------------------------------
+		//Box 9
+
 		case "oven_alchemy2_box9":
 			Locations[FindLocation("wr_farm_alchemy2")].image = "";
 			DoQuestReloadToLocation("wr_farm_alchemy2", "goto", "ovenback1", "loading_back_alchemy2");
@@ -52560,6 +62255,51 @@ void QuestComplete(string sQuestName)
 				LAi_QuestDelay("Pchar_ooh", 2.0);
 			}
 		break;
+
+		//--------------------------------------------------------------------------------------------------------------
+		//Box 14
+
+		case "oven_alchemy2_box14":
+			Locations[FindLocation("wr_farm_alchemy2")].image = "";
+			DoQuestReloadToLocation("wr_farm_alchemy2", "goto", "ovenback2", "loading_back_alchemy2");
+		break;
+
+		case "oven_alchemy2_box14_take_time_JRH3":
+			Locations[FindLocation("wr_farm_alchemy2")].image = "";
+			DoQuestReloadToLocation("wr_farm_alchemy2", "goto", "ovenback2", "loading_back_alchemy2_take_time_JRH3");
+		break;
+
+		case "oven_alchemy2_box14_take_time_JRH2":
+			Locations[FindLocation("wr_farm_alchemy2")].image = "";
+			DoQuestReloadToLocation("wr_farm_alchemy2", "goto", "ovenback2", "loading_back_alchemy2_take_time_JRH2");
+		break;
+
+		case "oven_alchemy2_box14_take_time_JRH1":
+			Locations[FindLocation("wr_farm_alchemy2")].image = "";
+			DoQuestReloadToLocation("wr_farm_alchemy2", "goto", "ovenback2", "loading_back_alchemy2_take_time_JRH1");
+		break;
+
+		case "oven_alchemy2_box14_burning_direct":
+			if(CheckAttribute(Pchar, "Q2_mix") && Pchar.Q2_mix == "11")
+			{
+				CreateParticleSystem("smoke_short" , -8.4, 3.7, 3.7, 4.5, 1.5, 0.0, sti(20) );
+				PlaySound("INTERFACE\steam1.wav");
+
+				LAi_QuestDelay("alchemy_acid_heavy_boiling1", 4.0);
+				LAi_QuestDelay("alchemy_acid_small_boiling1", 3.0);
+				LAi_QuestDelay("alchemy_acid_hevay_boiling2", 5.0);
+			}
+			else 
+			{
+				CreateParticleSystemX("qar_fire", -8.4, 3.7, 3.7, 0.0, 3.0, -2.0, 5);
+				CreateParticleSystemX("smoke_inv_short", -8.4, 3.7, 3.7, 0.0, 3.0, -2.0, 5);
+				PlaySound("INTERFACE\fire_off.wav");
+
+				LAi_QuestDelay("Pchar_ooh", 2.0);
+			}
+		break;
+
+		//--------------------------------------------------------------------------------------------------------------
 //JRH heavy boil
 		case "alchemy_acid_heavy_boiling1":
 			PlaySound("INTERFACE\steam1.wav");
@@ -52648,6 +62388,72 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "place_wood_alchemy2_box14":
+			if(CheckAttribute(Pchar, "Q2_mix"))
+			{
+				if(Pchar.Q2_mix == "5" || Pchar.Q2_mix == "9")
+				{
+					if(Locations[FindLocation(Pchar.location)].models.always.l10 == "powder_grey")
+					{
+						if(Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH3")
+						{
+							Pchar.powder_grey = "burning";
+							Locations[FindLocation(Pchar.location)].models.always.l10 = "";		//burning up
+						}
+					}
+				}
+			}
+
+			if(CheckAttribute(Pchar, "Q2_mix") && Pchar.Q2_mix == "6")
+			{
+				if(Locations[FindLocation(Pchar.location)].models.always.l10 == "solid_brown")
+				{
+					if(Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH2"
+					|| Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH3")
+					{
+						Pchar.solid_brown = "burning";
+						Locations[FindLocation(Pchar.location)].models.always.l10 = "";		//burning up
+					}
+				}
+			}
+
+			if(CheckAttribute(Pchar, "Q2_mix") && Pchar.Q2_mix == "9")
+			{
+				if(Locations[FindLocation(Pchar.location)].models.always.l10 == "powder_light_yellow")
+				{
+					if(Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH2"
+					|| Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH3")
+					{
+						Pchar.powder_light_yellow = "burning";
+						Locations[FindLocation(Pchar.location)].models.always.l10 = "";		//burning up
+					}
+				}
+			}
+
+			if(CheckAttribute(Pchar, "Q2_mix") && Pchar.Q2_mix == "11")
+			{
+				if(Locations[FindLocation(Pchar.location)].models.always.l10 == "solid_red")
+				{
+					if(Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH2"
+					|| Locations[FindLocation(Pchar.location)].models.always.locators == "TwoFloorHouse_locators_JRH3")
+					{
+						Pchar.solid_red = "burning";
+						Locations[FindLocation(Pchar.location)].models.always.l10 = "";		//burning up
+					}
+				}
+
+				if(Locations[FindLocation(Pchar.location)].models.always.l10 == "liquid_white")
+				{
+					if(Locations[FindLocation("wr_farm_alchemy2")].models.always.locators == "TwoFloorHouse_locators_JRH3")
+					{
+						//reacting direct to orange liquid
+						Locations[FindLocation(Pchar.location)].models.always.l10 = "liquid_orange";
+						Pchar.liquid_orange = "processed";
+
+						LAi_QuestDelay("oven_alchemy2_box9_burning_direct", 0.5);
+					}			
+				}
+			}
+
 			DoQuestReloadToLocation("wr_farm_alchemy2", "goto", "ovenback2", "fire_up_alchemy2");
 		break;
 
@@ -53290,6 +63096,7 @@ void QuestComplete(string sQuestName)
 			if(CheckAttribute(Pchar, "filter_failure") && Pchar.filter_failure == "yes")
 			{
 				PlaySound("OBJECTS\VOICES\DEAD\male\dead7.wav");
+				Logit(LanguageConvertString(tmpLangFileID,"Oh no, I forgot to use a clean filter and lost the mixture!"));
 				Pchar.filter_failure = "no";
 			}
 		break;

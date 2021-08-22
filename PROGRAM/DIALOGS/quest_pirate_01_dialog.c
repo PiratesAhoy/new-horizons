@@ -52,8 +52,9 @@ void ProcessDialogEvent()
 			if (pchar.quest.main_line == "blaze_to_incas_collection_begin_1")
 			{
 				Dialog.snd = "voice\QUP1\QUP1006";
+				Preprocessor_Add("sir", strlower(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false))); // DeathDaisy
 				dialog.text = DLG_TEXT[9] + pchar.lastname + DLG_TEXT[10];
-				link.l1 = pcharrepphrase(DLG_TEXT[11], DLG_TEXT[12]);
+				link.l1 = DLG_TEXT[11];
 				link.l1.go = "blaze_to_incas_collection_begin_2";
 			}
 			if (pchar.quest.main_line == "blaze_to_incas_collection_begin_2")
@@ -137,6 +138,7 @@ void ProcessDialogEvent()
 
 		case "blaze_to_incas_collection_begin_4":
 			Dialog.snd = "voice\QUP1\QUP1016";
+			Preprocessor_Add("gentleman", "gentle" + PChar.sex);
 			dialog.text = DLG_TEXT[34];
 			link.l1 = DLG_TEXT[35];
 			link.l1.go = "blaze_to_incas_collection_begin_exit";

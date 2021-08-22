@@ -169,13 +169,23 @@ void ProcessDialogEvent()
 
 		case "return_idol_from_greenford_soldier_10":
 			dialog.snd = "Voice\GRSO\GRSO012";
-			dialog.text = DLG_TEXT[39];
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman")
+			{
+				dialog.text = DLG_TEXT[39];
+				Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[87];
+				Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+			}
 			link.l1 = DLG_TEXT[40];
 			link.l1.go = "return_idol_from_greenford_soldier_11";
 		break;
 
 		case "return_idol_from_greenford_soldier_11":
 			dialog.snd = "Voice\GRSO\GRSO013";
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(CharacterFromID("Danielle"))));
 			dialog.text = DLG_TEXT[41];
 			link.l1 = DLG_TEXT[42];
 			link.l1.go = "return_idol_from_greenford_soldier_12";
@@ -183,6 +193,9 @@ void ProcessDialogEvent()
 
 		case "return_idol_from_greenford_soldier_12":
 			dialog.snd = "Voice\GRSO\GRSO014";
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("girl", XI_ConvertString("girl"));
+			else Preprocessor_Add("girl", XI_ConvertString("lad"));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(CharacterFromID("Danielle"))));
 			dialog.text = DLG_TEXT[43];
 			link.l1 = DLG_TEXT[44];
 			link.l1.go = "return_idol_from_greenford_soldier_13";
@@ -190,6 +203,7 @@ void ProcessDialogEvent()
 
 		case "return_idol_from_greenford_soldier_13":
 			dialog.snd = "Voice\GRSO\GRSO015";
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(CharacterFromID("Danielle"))));
 			dialog.text = DLG_TEXT[45];
 			link.l1 = DLG_TEXT[46];
 			link.l1.go = "return_idol_from_greenford_soldier_14";

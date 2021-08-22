@@ -199,12 +199,6 @@ int round(float num)
 	return makeint(num + 0.5);
 }
 
-//Levis:
-float roundto(float num, int fractals)
-{
-	return makefloat(round(num*(pow(10,fractals))))/100.0;
-}
-
 //strips spaces from a string
 string stripblank(string str)
 {
@@ -386,14 +380,16 @@ float fClamp(float min, float max, float val)
 }
 
 // 05-04-18 int version
+// Corrected 25-11-2017 because it produces an error message if something calls it with a float for val
 int iClamp(int min, int max, int val)
 {
-	if(val < min) val = min;
+	int retval = val;
+	if(retval < min) retval = min;
 	else
 	{
-		if(val > max) val = max;
+		if(retval > max) retval = max;
 	}
-	return val;
+	return retval;
 }
 
 
@@ -1318,8 +1314,8 @@ string ChrFromCode(int code)
 		case 164: return "¤"; break;
 		case 165: return "¥"; break;
 		case 166: return ""; break;
-		case 167: return ""; break;
-		case 168: return ""; break;
+		case 167: return "§"; break;
+		case 168: return "¨"; break;
 		case 169: return ""; break;
 		case 170: return ""; break;
 		case 171: return "«"; break;
@@ -1526,6 +1522,8 @@ int ascii(string chr)
 		case "£": return 163; break;
 		case "¤": return 164; break;
 		case "¥": return 165; break;
+		case "§": return 167; break;
+		case "¨": return 168; break; 
 		case "«": return 171; break;
 		case "­": return 173; break;
 		case "¯": return 175; break;

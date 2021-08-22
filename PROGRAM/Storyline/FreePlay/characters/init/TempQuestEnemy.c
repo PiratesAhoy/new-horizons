@@ -93,8 +93,16 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade1");
 	ch.equip.blade = "blade1";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -286,5 +294,193 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_NoRebirthEnable(ch);
 	AddGameCharacter(n, ch);
 
+//-> Characters for the 'A Family Story' side-quest
+	// Robert Acre
+	ch.old.name = "Robert";
+	ch.old.lastname = "Acre";
+	ch.name = TranslateString("","Robert");
+	ch.lastname = TranslateString("","Acre");
+	ch.id		= "Robert Acre";
+	ch.model	= "mask_4";
+	ch.sound_type = "pirate";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "PiratesPistol");
+	ch.equip.gun = "PiratesPistol";
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	GiveItem2Character(ch, "blade7");
+	ch.equip.blade = "blade7";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Backoff";
+	ch.nation = FRANCE;
+	ch.rank 	= 10;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "4";
+	ch.skill.Sneak = "3";
+	ch.money = "10";
+    LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	//Kidnapper1
+	ch.old.name = "Jourdain";
+	ch.old.lastname = "Anjou";
+	ch.name = TranslateString("","Jourdain");
+	ch.lastname = TranslateString("","Anjou");
+	ch.id		= "kidnapper_1";
+	ch.model	= "pirat3";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "pistol1");
+	ch.equip.gun = "pistol1";
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.greeting = "Gr_Kidnappers";		
+	ch.Dialog.Filename = "kidnappers_dialog.c";//dialog filename
+	ch.nation = FRANCE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetCivilianGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	//Kidnapper2
+	ch.old.name = "Edam";
+	ch.old.lastname = "De Cow";
+	ch.name = TranslateString("","Edam");
+	ch.lastname = TranslateString("","De Cow");
+	ch.id		= "kidnapper_2";
+	ch.model	= "pirat1";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "pistol1");
+	ch.equip.gun = "pistol1";
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.greeting = "Gr_Kidnappers";		
+	ch.Dialog.Filename = "kidnappers_dialog.c";//dialog filename
+	ch.nation = FRANCE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetCivilianGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	//Abel Barco
+	ch.old.name = "Abel";
+	ch.old.lastname = "Barco";
+	ch.name = TranslateString("","Abel");
+	ch.lastname = TranslateString("","Barco");
+	ch.id		= "Abel Barco";
+	ch.model	= "pirat5";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "pistol2");
+	ch.equip.gun = "pistol2";
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	GiveItem2Character(ch, "blade27");
+	ch.equip.blade = "blade27";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.greeting = "Gr_Txiki Pijuan";	
+	ch.Dialog.Filename = "Abel Barco_dialog.c";//dialog filename
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetStayType(ch);
+    LAi_group_MoveCharacter(ch, "PIRATES_ABEL");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	//<- Characters for the 'A Family Story' side-quest		
 //====================================================================================================================
 }

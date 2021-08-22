@@ -1,4 +1,4 @@
-string DLG_TEXT[86] = { 
+string DLG_TEXT[107] = { 
 "I'm told you've gone to great lengths to request an audience. My name is ",
 ". Now, if you please, tell me the purpose of your visit, ",
 ".",
@@ -85,5 +85,25 @@ string DLG_TEXT[86] = {
 "I came to pay the 10000 gold coins for the prisoner.",
 "Exactly, governor. He attacked one of the ladies in there and...",
 "(*Interrupts*) You don't need to tell me the story. I am very well aware of what is going on in my city.",
-
+"I'd like a pass to visit a prisoner, ",
+"That man is a convicted #scrime#, captain. If you are an associate of his then you will probably join him in prison today and on the gallows soon.",
+"No, Excellency. But I knew him long ago when we were both boys, and I still keep in touch with his parents. His mother can't travel here and asked me to bring him a message.",
+"I see. Well, I can allow such a visit. But you will need to pay 10000 gold as security.",
+"That's a lot for just a simple visit.",
+"It is security. If you are genuinely a compassionate visitor then you may return here, hand back the pass and 9000 gold will be refunded, so the total cost will only be 1000.",
+"Very well. Here is the 10000.",
+"Even so, 10000 is a lot of money and I do not have that much with me. If I can raise that amount, I shall return.",
+"And here is your pass.",
+"Thank you, Excellency.",
+"You were unwise to return here, captain. I know of your little escapade in the prison. Guards! Arrest this #sperson#!",
+"Uh-oh...",
+"Not you, prisoner! You, #stitle# ",
+" - why have you brought this #sperson# before me?",
+"You are aware that the prisoner, ",
+", is to be hanged as a #scrime#?",
+"I protest! I have a valid Letter of Marque and any actions I have taken against France have been legal acts of war!",
+"True, but you were already a #scrime# before you acquired that Letter of Marque. For that you can hang.",
+"Yes, I do like that idea! Very well, you may take ",
+" with you. I look forward to hearing what you eventually do with #spronoun#.",
+"Or what I do with ",
 };

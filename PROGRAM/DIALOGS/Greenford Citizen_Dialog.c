@@ -51,6 +51,8 @@ void ProcessDialogEvent()
 					dialog.snd1 = "";
 					dialog.snd2 = "";
 					dialog.snd3 = "";
+					if (PChar.sex == "woman") Preprocessor_Add("himself", XI_ConvertString("herself"));
+					else Preprocessor_Add("himself", XI_ConvertString("himself"));
 				    d.Text = RandPhrase(DLG_TEXT[16] + GetMyName(Pchar) + DLG_TEXT[17], DLG_TEXT[18] + GetMyFullName(PChar) + DLG_TEXT[19], DLG_TEXT[20] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + Pchar.lastname + DLG_TEXT[21], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3);
 				}
 				else
@@ -58,6 +60,8 @@ void ProcessDialogEvent()
 					dialog.snd1 = "";
 					dialog.snd2 = "";
 					dialog.snd3 = "";
+					if (PChar.sex == "woman") Preprocessor_Add("himself", XI_ConvertString("herself"));
+					else Preprocessor_Add("himself", XI_ConvertString("himself"));
 				    d.Text = RandPhrase(DLG_TEXT[22] + GetMyName(Pchar) + DLG_TEXT[23], DLG_TEXT[24] + GetMyFullName(PChar) + DLG_TEXT[25], DLG_TEXT[26] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + Pchar.lastname + DLG_TEXT[27], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3);
 				}
 				if(Rand(1)==0)
@@ -102,7 +106,15 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[174];
 			Link.l1 = DLG_TEXT[175];
 			Link.l1.go = "exit";
-			AddDialogExitQuest("Learned About Apothecary"); 
+			Link.l2 = DLG_TEXT[176];
+			Link.l2.go = "apothecary2";
+//			AddDialogExitQuest("Learned About Apothecary");
+		break;
+
+		case "apothecary2":
+			d.Text = DLG_TEXT[177];
+			Link.l1 = DLG_TEXT[175];
+			Link.l1.go = "exit";
 		break;
 
 		case "religous_man":

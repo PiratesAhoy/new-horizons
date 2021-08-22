@@ -15,7 +15,15 @@ void ProcessDialogEvent()
 	makearef(NextDiag, NPChar.Dialog);
 	ref PChar;
 	PChar = GetMainCharacter();
-
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -61,14 +69,14 @@ void ProcessDialogEvent()
 
 		case "FindRheims_2":
 			Dialog.snd = "voice\WIBL\WIBL004";
-			dialog.text = DLG_TEXT[10];
+			dialog.text = PersuasionSuccess + DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];
 			link.l1.go = "FindRheims_story";
 		break;
 
 		case "FindRheims_3":
 			Dialog.snd = "voice\WIBL\WIBL005";
-			dialog.text = DLG_TEXT[12];
+			dialog.text = PersuasionFailure + DLG_TEXT[12];
 			link.l1 = RandSwear()+DLG_TEXT[13];
 			link.l1.go = "exit";
 			AddDialogExitQuest("Danielle_QC_tavern_kick");

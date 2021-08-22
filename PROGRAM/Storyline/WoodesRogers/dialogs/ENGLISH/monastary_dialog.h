@@ -1,0 +1,23 @@
+string DLG_TEXT[20] = {
+"You're not supposed to be here mister. Not at all!",
+"Oh I'm sorry. I'm just an poor and honest sailor.",
+"Very well mister ...? What's your business?",
+"Captain Howard Pyle, at your service. I'm looking for a Sister Richards - does she live here?",
+"Indeed she does. Do you know her? A relative perhaps? Your name sounds familiar somehow...",
+"Let's say I knew a relative to her.",
+"The pirate rogue?",
+"Well, ehh... yes.",
+"Maybe you're a pirate yourself Captain.",
+"Can I see Sister Richards?",
+"I think Sister Richards is in the Bell tower.",
+"Thank you Sister.",
+"The Abbess has a private room on the upper floor.",
+"Got it.",
+"You have to search the Crypts and the Small Chapel for the Reverend Mother's eight items.",
+"I see.",
+"Not now, please go away.",
+"Oh, sorry Sister.",
+"But all doors are locked!!!",
+"And the windows?",
+
+};

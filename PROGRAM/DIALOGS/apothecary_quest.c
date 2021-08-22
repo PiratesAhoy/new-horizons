@@ -19,6 +19,16 @@ void ProcessDialogEvent()
 	ref ctown = GetCurrentTown();
 	int chancecaught = 0;
 	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
+	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+	
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
@@ -778,7 +788,7 @@ void ProcessDialogEvent()
 			if(rand(99) < succeschance)
 			{
 				//succes
-				d.Text = DLG_TEXT[135];
+				d.Text = PersuasionSuccess + DLG_TEXT[135];
 				Link.l1 = DLG_TEXT[139];
 				Link.l1.go = "Succes with Beggar";
 			}
@@ -786,7 +796,7 @@ void ProcessDialogEvent()
 			{
 				//fail
 				Npchar.quest.indians.liking = sti(Npchar.quest.indians.liking) - 5;
-				d.Text = DLG_TEXT[137];
+				d.Text = PersuasionFailure + DLG_TEXT[137];
 				Link.l1 = DLG_TEXT[138];
 				Link.l1.go = "Beggar In Cartagena";
 			}
@@ -834,6 +844,7 @@ void ProcessDialogEvent()
 			if(GetCharacterReputation(pchar) >= comparerep && rand(99)>33) //Let's also add a little randomness to this because not every storey is nice (1/3 chance to fail)
 			{
 				//succes
+				Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 				Npchar.quest.indians.liking = sti(Npchar.quest.indians.liking) + 10;
 				d.Text = DLG_TEXT[148];
 				Link.l1 = DLG_TEXT[141];

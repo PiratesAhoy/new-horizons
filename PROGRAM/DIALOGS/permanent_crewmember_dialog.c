@@ -16,6 +16,7 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	int loc_id = FindLocation(PChar.location);
 	NPChar.quest.officertype = OFFIC_TYPE_ABORDAGE;
+	if(!CheckAttribute(NPChar, "quest.OfficerPrice")) NPChar.quest.OfficerPrice = GetBaseOfficerPrice(NPChar);
 	int min_off_price = makeint( 1000 * sqrt(sti(NPChar.rank)) );
 	if(sti(NPChar.quest.OfficerPrice) < min_off_price) NPChar.quest.OfficerPrice = min_off_price; // PB: Increased salary for better crewmember as officer
 
@@ -58,9 +59,9 @@ void ProcessDialogEvent()
 				{
 					if(sti(GetStorylineVar(FindCurrentStoryline(), "NO_CREW_OR_OFFICERS")) < 1 && !CheckAttribute(PChar, "isnotcaptain"))
 					{
-						Link.l4 = "You must have gained some experience serving under me. But how good are you really?";
+						Link.l4 = DLG_TEXT[17];
 						Link.l4.go = "ShowSkills";
-						Link.l5 = "I am very pleased with your performance. Therefore I am promoting you to officer. Please collect your warrant papers from the ship's purser and meet me later.";
+						Link.l5 = DLG_TEXT[18];
 						Link.l5.go = "enlist_me";
 					}
 				}
@@ -94,28 +95,30 @@ void ProcessDialogEvent()
 		case "ShowSkills":
 			// Aconcagua: LaunchOfficer uses separate interface now
 			Diag.CurrentNode = "ReturnfromSkillview";
-			NPChar.quest.OfficerPrice = CalcEncOfficerPrice(NPChar);
+//			NPChar.quest.OfficerPrice = CalcEncOfficerPrice(NPChar);	// 'CalcEncOfficerPrice' just multiplies NPChar.quest.OfficerPrice by a factor, so this line can continually inflate the officer's price
 			Pchar.Quest.Last_Enc_Officer = NPChar.Index;
 			DialogExit();			
 			LaunchOfficer(NPChar); // MAXIMUS interface MOD
 		break;
 
 		case "ReturnfromSkillview":
-			Dialog.Text = "What do you think of my qualities, captain?";
-			Link.l1 = "I am well impressed. Therefore I am promoting you to officer. Please collect your warrant papers from the ship's purser and meet me later.";
+			Dialog.Text = DLG_TEXT[19];
+			Link.l1 = DLG_TEXT[20];
 			Link.l1.go = "enlist_me";
-			Link.l2 = "You'll make a fine sailor; you can get back to work.";
+			Link.l2 = DLG_TEXT[21];
 			Link.l2.go = "exit";
 		break;
 
 		case "enlist_me":
-			if(MAX_CREWMEMBERS>1){MAX_CREWMEMBERS=MAX_CREWMEMBERS-1;}
+			RemoveCharacterCrew(PChar,1);
+			if(MAX_CREWMEMBERS  > 0){MAX_CREWMEMBERS = MAX_CREWMEMBERS-1;}
+			if(MAX_CREWMEMBERS == 0) LANDCREWMEMBERS = false;	// If this was your last crewmember ashore, disable this mod
 			NPChar.Dialog.Filename = "Enc_Officer_dialog.c";
 			NPChar.offgen = true;
 			NPChar.officer = true;
 			SetRandomNameToCharacter(NPChar); // Give a name
 
-			NPChar.quest.OfficerPrice = CalcEncOfficerPrice(NPChar);
+//			NPChar.quest.OfficerPrice = CalcEncOfficerPrice(NPChar);	// 'CalcEncOfficerPrice' just multiplies NPChar.quest.OfficerPrice by a factor, so this line inflates the officer's price
 			Pchar.quest.HiringOfficerIDX = GetCharacterIndex(NPChar.id);
 			Pchar.quest.OldCrewMember = NPChar.id;
 			AddDialogExitQuest("LandEnc_OfficerHired");

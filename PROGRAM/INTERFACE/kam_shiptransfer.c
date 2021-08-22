@@ -129,7 +129,8 @@ void UpdateSelectedCaptain1()
 		case 3:		tempstring2 = "SHIPS2";		break;
 		case 4:		tempstring2 = "SHIPS3";		break;
 		case 5:		tempstring2 = "SHIPS4";		break;
-		case 6:		tempstring2 = "ICONS";		break;
+		case 6:		tempstring2 = "SHIPS5";		break;
+		case 7:		tempstring2 = "ICONS";		break;
 	}
 	CreateImage("SelectedCaptain1Ship",tempstring2,tempstring1,30,250,130,350);
 
@@ -197,7 +198,8 @@ void UpdateSelectedCaptain2()
 		case 3:		tempstring2 = "SHIPS2";		break;
 		case 4:		tempstring2 = "SHIPS3";		break;
 		case 5:		tempstring2 = "SHIPS4";		break;
-		case 6:		tempstring2 = "ICONS";		break;
+		case 6:		tempstring2 = "SHIPS5";		break;
+		case 7:		tempstring2 = "ICONS";		break;
 	}
 	CreateImage("SelectedCaptain2Ship",tempstring2,tempstring1,400,250,500,350);
 
@@ -361,7 +363,8 @@ void FillScroll()
 	GameInterface.passengerslist.ImagesGroup.t3 = "SHIPS2";
 	GameInterface.passengerslist.ImagesGroup.t4 = "SHIPS3";
 	GameInterface.passengerslist.ImagesGroup.t5 = "SHIPS4";
-	GameInterface.passengerslist.ImagesGroup.t6 = "ICONS";
+	GameInterface.passengerslist.ImagesGroup.t6 = "SHIPS5";
+	GameInterface.passengerslist.ImagesGroup.t7 = "ICONS";
 
 	templistsize = 1;
 

@@ -57,7 +57,7 @@ ref CreateOfficer_Cheat(string otype, string model, int offset, int nation, bool
 	ch.AbordageMode = 0;
 	LAi_SetLoginTime(ch, 0.0, 24.0); // KK
 	LAi_group_MoveCharacter(ch, LAI_GROUP_PLAYER); // KK
-	ch.quest.officertype = otype
+	ch.quest.officertype = otype;
 	LAi_Create_Officer(offset, &ch);
 	SetModelfromArray(&ch, GetModelIndex(model));
 	SetRandomNameToCharacter(&ch);
@@ -99,11 +99,8 @@ ref CreateOfficerType(string otype, int offset)
 	SetModelfromArray(&ch, GetModelIndex(GetRandomModelForTypeNation(1, otype, sti(ch.nation))));
 	SetRandomNameToCharacter(&ch);
 	LAi_SetCitizenType(ch);
-	trace("Place");
 	if(FindLoadedLocation() != -1) PlaceCharacter(&ch, "goto"); //Moved up by levis so it will level easier
-	trace("Placed");
 	LAi_Create_Officer(offset, &ch);
-	trace("Created");
 	LAi_NPC_Equip(&ch, sti(ch.rank), true, true);
 	DeleteAttribute(ch, "greeting");
 	return &ch;

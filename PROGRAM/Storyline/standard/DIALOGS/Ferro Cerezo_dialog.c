@@ -173,7 +173,7 @@ void ProcessDialogEvent()
 				{
 					link.l2 = DLG_TEXT[40];
 					link.l2.go = "Danielle_buy_complete";
-					pchar.quest.money_to_ferro = 9000;
+					pchar.quest.money_to_ferro = 8000;
 				}
 			}
 			else
@@ -211,7 +211,7 @@ void ProcessDialogEvent()
 
 		case "talk_in_tavern_2":
 			dialog.snd = "Voice\FECE\FECE020";
-			dialog.text = DLG_TEXT[49] + characters[getCharacterIndex(DLG_TEXT[50])] + DLG_TEXT[51];
+			dialog.text = DLG_TEXT[49] + GetMySimpleName(characters[getCharacterIndex(DLG_TEXT[50])]) + DLG_TEXT[51];
 			link.l1 = DLG_TEXT[52];
 			link.l1.go = "talk_in_tavern_3";
 		break;
@@ -225,6 +225,15 @@ void ProcessDialogEvent()
 
 		case "talk_in_tavern_4":
 			dialog.snd = "Voice\FECE\FECE022";
+			AddQuestRecord("search_danielle", 3);
+			// DeathDaisy ->
+			if(PChar.sex == "woman"){
+				Preprocessor_Add("boy", XI_ConvertString("girl"));
+			}
+			else{
+				Preprocessor_Add("boy", XI_ConvertString("boy"));
+			}
+			// DeathDaisy <--
 			dialog.text = DLG_TEXT[55];
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) && makeint(pchar.reputation) < 30)
 			{
@@ -233,7 +242,6 @@ void ProcessDialogEvent()
 			}
 			link.l2 = DLG_TEXT[57];
 			link.l2.go = "money";
-			AddQuestRecord("search_danielle", 3);
 		break;
 
 		case "leadership":

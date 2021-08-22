@@ -3,7 +3,7 @@ string DLG_TEXT[71] = {
 "You can see this fellow is not resisting. I won't let you kill an unarmed man. Drop your sword.",
 "You're doing fine. Carry on.",
 "Did you see what that slave tried to do to me. He stole my weapon and tried to use it to kill me, thanks for stepping in.",
-"Yeah. It was no trouble, savvy. (THINKS: I just killed a slave, I need to redeem myself somehow!)",
+"Yeah. It was no trouble. (THINKS: I just killed a slave, I need to redeem myself somehow!)",
 "Did you see how Gombo tried to kill me? The scum took my sword and started to slash me up,\n He won't be hurting his owners anymore, will he? haha\nI'm a good officer - do you have a place for me on your ship? I need to earn some money before I can return to the slave plantation.",
 "Sorry. Not interested.",
 "We'll see how you do in real action. (THINKS: Maybe I can free these slaves!)",
@@ -59,7 +59,7 @@ string DLG_TEXT[71] = {
 "Only 100 tons, cap.",
 "Hmm. All right, we've got space for that. Now get back to the ship!",
 "You're mad! Where am I going to put it, in my cabin?! You've got half an hour to cancel this deal!",
-"You're a slaver? I can't stand slavers, savvy! Prepare to die!",
+"You're a slaver? If there's one thing I can't stand, it's slavers! Prepare to die!",
 "Sir, this is the island we were heading for when you found me on #sisland_Aruba#. We were coming for a large bit of gold, that was one of our ships that ran aground.",
 "And how do I get to this gold?",
 "There is a path through a waterfall just outside the town, that leads through a cavern, to a shore where the ship is.",
@@ -68,7 +68,7 @@ string DLG_TEXT[71] = {
 "Thanks for telling me.",
 "With this money I have enough to return to the Plantation.",
 "Where is the Plantation?",
-"Sail to #sisland_Eluethera# island and then make port in #sEleuthera#. The Plantation is located just outside the city.",
-"Ok we shall set sail for #sisland_Eluethera# then... savvy.", 
+"Sail to #sisland_Eleuthera# island and then make port in #sEleuthera#. The Plantation is located just outside the city.",
+"We shall set sail for #sisland_Eleuthera#, then.", 
 
 };

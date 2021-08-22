@@ -323,8 +323,16 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Armand Delacroix_dialog.c";
 	ch.nation = PIRATE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -416,8 +424,16 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.location.locator = "goto1";
 	ch.Dialog.Filename = "Isenbrandt Jurcksen_dialog.c";
 	ch.nation = PIRATE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));

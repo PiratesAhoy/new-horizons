@@ -7,6 +7,16 @@ void StartStoryLine()
 	string rldGroup = "reload";
 	string rldLocator = "reload1";
 
+	string cabinID = GetCharacterShipCabin(PChar);
+	if (cabinID != "Cabin_none")
+	{
+		iShipCaptain = GetMainCharacterIndex();
+		SetUpCabin(PChar);
+
+		Locations[FindLocation("Tutorial_deck")].models.always.l2 = "cabinchest";	//JRH
+		Locations[FindLocation("Tutorial_deck")].models.always.l3 = "trunk";		//JRH
+	}
+
 	TakeItemFromCharacter(PChar, "commonarmor"); // PB: Override Character Type
 	if(CharPlayerType == PLAYER_TYPE_MILITARY && CharNation == HOLLAND) // BOP: Override Character Type
 	{

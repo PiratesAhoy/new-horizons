@@ -1293,7 +1293,9 @@ void EndOkInterface()
 				InitInterface_I(Interfaces[CurrentInterface].IniFile,false);
 			}
 			*/
+			
 			return;
+			
 		break;
 	}
 	// if it got this far, it does default actions
@@ -1591,11 +1593,11 @@ void ISetSaveData(string saveName, string saveData)
 	SendMessage(&GameInterface,"lss",MSG_INTERFACE_DO_SAVE_DATA,saveName,saveData);
 }
 
+string Save_retStr; // LDH 26Oct16
 string IGetSaveString(string saveName)
 {
-	string retStr;
-	SendMessage(&GameInterface,"lse",MSG_INTERFACE_GET_SAVE_DATA,saveName,&retStr);
-	return retStr;
+	SendMessage(&GameInterface,"lse",MSG_INTERFACE_GET_SAVE_DATA,saveName,&Save_retStr);
+	return Save_retStr;
 }
 
 bool procEnableInterfaceLaunch(int _interfaceCode)
@@ -1840,6 +1842,8 @@ bool procInterfacePrepare(int interfaceCode)
 void Start_InterfaceDoExit()
 {
 	SetEventHandler("frame","InterfaceDoExit",1);
+ 	tradeLow = false; //PW reset on exit shop interface after low trade deal
+
 }
 
 void ReloadAfterFortCapture()
@@ -2110,7 +2114,7 @@ void SetShowWindowParameters(bool TVused, int w,int h, int l,int t,int r,int b)
 
 int RecalculateHIcon(int curHSize)
 {
-	return curHSize;
+	return makeint(curHSize); // LDH 27Oct16, would return a float if passed one
 }
 
 int RecalculateVIcon(int curVSize)

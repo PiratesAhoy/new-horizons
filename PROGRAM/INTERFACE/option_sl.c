@@ -413,6 +413,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 				Settings.BuildSettings.AUTO_SKILL_SYSTEM = AUTO_SKILL_SYSTEM;
 				Settings.BuildSettings.ENABLE_WEAPONSMOD = ENABLE_WEAPONSMOD;
 				Settings.BuildSettings.ENABLE_AMMOMOD = ENABLE_AMMOMOD;
+				Settings.BuildSettings.SWEDEN_ALLOWED = SWEDEN_ALLOWED;
 
 
 		/////////////////////////////////////////////////////////////////////
@@ -421,6 +422,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 				Settings.BuildSettings.IT_RPG_STYLE = IT_RPG_STYLE;
 				Settings.BuildSettings.SY_RPG_STYLE = SY_RPG_STYLE;
 				Settings.BuildSettings.REALISTIC_SHIP_PURCHASE = REALISTIC_SHIP_PURCHASE;
+				Settings.BuildSettings.PERSUASION_TAGS = PERSUASION_TAGS;
 
 
 		/////////////////////////////////////////////////////////////////////
@@ -431,6 +433,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 				Settings.BuildSettings.WDMAP_SHIP_SHOW_MODE = WDMAP_SHIP_SHOW_MODE;
 				Settings.BuildSettings.NATIONAL_PAINT_SCHEMES = NATIONAL_PAINT_SCHEMES;
 				Settings.BuildSettings.SAILHO_INFOLEVEL = SAILHO_INFOLEVEL;
+				Settings.BuildSettings.RELATION_IGNORE_FRIENDLY = RELATION_IGNORE_FRIENDLY;
 
 		trace("==> BuildSettings: Sets to default");
 	}
@@ -483,6 +486,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 				AUTO_SKILL_SYSTEM = Settings.BuildSettings.AUTO_SKILL_SYSTEM;
 				ENABLE_WEAPONSMOD = Settings.BuildSettings.ENABLE_WEAPONSMOD;
 				ENABLE_AMMOMOD = Settings.BuildSettings.ENABLE_AMMOMOD;
+				SWEDEN_ALLOWED = Settings.BuildSettings.SWEDEN_ALLOWED;
 
 
 		/////////////////////////////////////////////////////////////////////
@@ -491,6 +495,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 				IT_RPG_STYLE = Settings.BuildSettings.IT_RPG_STYLE;
 				SY_RPG_STYLE = Settings.BuildSettings.SY_RPG_STYLE;
 				REALISTIC_SHIP_PURCHASE = Settings.BuildSettings.REALISTIC_SHIP_PURCHASE;
+				PERSUASION_TAGS = Settings.BuildSettings.PERSUASION_TAGS;
 
 
 		/////////////////////////////////////////////////////////////////////
@@ -501,6 +506,7 @@ void InitBuildOptions(bool bDefault, bool bGlobal)
 				WDMAP_SHIP_SHOW_MODE = Settings.BuildSettings.WDMAP_SHIP_SHOW_MODE;
 				NATIONAL_PAINT_SCHEMES = Settings.BuildSettings.NATIONAL_PAINT_SCHEMES;
 				SAILHO_INFOLEVEL = Settings.BuildSettings.SAILHO_INFOLEVEL;
+				RELATION_IGNORE_FRIENDLY = Settings.BuildSettings.RELATION_IGNORE_FRIENDLY;
 
 		trace("==> BuildSettings: New settings applied");
 	}

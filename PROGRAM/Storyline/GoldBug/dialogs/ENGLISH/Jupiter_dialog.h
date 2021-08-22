@@ -192,7 +192,7 @@ string DLG_TEXT[251] = {
 "They're gone massa!?",							//190
 "Hmm, it's to good to be true. Lets's be very careful Jup.",
 "Sacks in de Grot - yeah I know. I get a Musketoon too but where's de Key to de Weapons Chest, massa?",
-"There are Sacks in the Attic too, Jupiter. The Key I think we agreed to hide in the one of the Jars.",
+"There are Sacks in the Attic too, Jupiter. The Key I think we agreed to hide in one of the Jars.",
 "And we need de Boat for de big Treasure, massa Will.",
 "Do you think you can find the way sailing our Boat to Bishop's Hostel?",
 "Ahh, there you are at last.",

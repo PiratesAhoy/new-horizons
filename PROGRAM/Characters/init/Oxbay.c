@@ -2379,8 +2379,16 @@ void CreateOxbayCharacters(ref n)
 	ch.greeting = "Gr_Greenford Commander";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "Pistol1");
-	ch.equip.gun = "Pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
      //JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -2852,8 +2860,16 @@ void CreateOxbayCharacters(ref n)
 	ch.model	= 0; // PB
 	ch.act.sound_type = "soldier";
 	ch.sex = "man";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
      //JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));

@@ -146,6 +146,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "daughter_6":
+			if (PChar.sex == "woman") Preprocessor_Add("child", XI_ConvertString("girl"));
+			else Preprocessor_Add("child", XI_ConvertString("boy"));
 			Dialog.snd = "voice\TOOR\TOOR012";
 			dialog.text = DLG_TEXT[30];
 			link.l1 = DLG_TEXT[31];

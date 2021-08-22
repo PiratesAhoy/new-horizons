@@ -103,6 +103,77 @@ void ProcessDialogEvent()
 			LAi_QuestDelay("coins_collection_check", 0.1);
 		break;
 
+		case "about_Richards6":
+			PlaySound3D("INTERFACE\bubbles2.wav", 24.0, 2.7, 0.0);
+			Pchar.Vane_boiling_bubbles = "yes";
+
+			PlaySound("VOICE\ENGLISH\Eng_f_c_003.wav");
+			Dialog.text = DLG_TEXT[8];
+			link.l1 = DLG_TEXT[9];
+			link.l1.go = "about_Richards7";
+		break;
+
+		case "about_Richards7":
+			PlaySound("VOICE\ENGLISH\Eng_f_c_017.wav");
+			Dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[11];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_Richards8");
+		break;
+
+		case "about_Richards10":
+			PlaySound3D("INTERFACE\steam1.wav", 24.0, 2.7, -9.0);
+			PlaySound3D("INTERFACE\steam1.wav", 24.0, 2.7, -9.0);
+			Pchar.Vane_boiling_steam = "yes";
+
+			PlaySound("VOICE\ENGLISH\Eng_f_c_005.wav");
+			Dialog.text = DLG_TEXT[12];
+			link.l1 = DLG_TEXT[13];
+			link.l1.go = "about_Richards11";
+		break;
+
+		case "about_Richards11":
+			AddQuestRecord("Richards","3");
+
+			PlaySound("VOICE\ENGLISH\Eng_f_c_002.wav");
+			Dialog.text = DLG_TEXT[14];
+			link.l1 = DLG_TEXT[15];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_Richards11");
+		break;
+
+		case "Rackham1":
+			PlaySound("OBJECTS\VOICES\DEAD\female\dead_wom2.wav");
+			LAi_ActorTurnToCharacter(NPChar, characterFromID("pir_cap18"));
+
+			Dialog.text = DLG_TEXT[16];
+			link.l1 = DLG_TEXT[17];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_rum_explosion6");
+		break;
+
+		case "Rackham2":
+			PlaySound("VOICE\ENGLISH\gm_crew12A.wav");
+			LAi_ActorTurnToCharacter(NPChar, characterFromID("pir_cap1"));
+
+			Dialog.text = DLG_TEXT[18];
+			link.l1 = DLG_TEXT[19];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_rum_explosion13");
+		break;
+
+		case "Rackham3":
+			PlaySound("VOICE\ENGLISH\gm_crew12B.wav");
+			LAi_ActorTurnToCharacter(NPChar, characterFromID("pir_cap18"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap18"), NPChar);
+
+			Dialog.text = DLG_TEXT[20];
+			link.l1 = DLG_TEXT[21];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_rum_explosion16");
+		break;
+
+
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

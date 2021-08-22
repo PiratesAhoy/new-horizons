@@ -1302,7 +1302,7 @@ void DoTradeOperation()
 			// TIH --> auto-equip better spyglass if bought another Jul15'06
 			if ( nTradeQuantity > 0 && CheckAttribute(itemref,"groupID") ) {
 				if ( itemref.groupID == SPYGLASS_ITEM_TYPE ) {
-					if( sti(itemref.quality) > sti(Items[GetItemIndex(GetCharacterEquipByGroup(refMyCh,SPYGLASS_ITEM_TYPE))].quality) ) {
+					if(GetCharacterEquipByGroup(refMyCh,SPYGLASS_ITEM_TYPE) == "" || sti(itemref.quality) > sti(Items[GetItemIndex(GetCharacterEquipByGroup(refMyCh,SPYGLASS_ITEM_TYPE))].quality) ) { // PB: Prevent errors
 						RemoveCharacterEquip(refMyCh, SPYGLASS_ITEM_TYPE);// remove equip of old one
 						EquipCharacterByItem(refMyCh, itmName);// equip the new better one
 					}

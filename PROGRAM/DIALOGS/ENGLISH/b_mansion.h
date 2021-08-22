@@ -69,7 +69,7 @@ void ProcessDialogEvent()
 	int tax = 0;
 
 	string adress;
-	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " my landlord ";}else{adress = " Mister ";}
+	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " my landlord ";}else{adress = " " + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " ";}
 	
 	ref chr;
 	float x,y,z;
@@ -91,7 +91,7 @@ void ProcessDialogEvent()
 			{
 				PlayStereoSound("voice\ENGLISH\Eng_f_c_019.wav");
 				ChangeCharacterReputation(Pchar, -2);  // punishment: reputationloss. Will be offset if you accept the fight	
-				Dialog.text =  LinkRandPhrase("Thanks to God that you came along! You can defend us against those brutes..", "Ahh, heaven sent you at a most crucial moment: we are about to come under attack. HELP US!", "Well met, I say, we desperately need a fighting man like you to ward of that raid...");
+				Dialog.text =  LinkRandPhrase("Thanks to God that you came along! You can defend us against those brutes..", "Ahh, heaven sent you at a most crucial moment: we are about to come under attack. HELP US!", "Well met, I say, we desperately need a fighting " + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + " like you to ward of that raid...");
 				link.l1 = LinkRandPhrase("Hey, calm down! My, my, you are already stiff from fear... Now tell me what's going on here.","Don't worry, whatever threat there is, I'll protect my proper.. err.. people. What is bothering you?","Shh.. Relax, you have nothing to fear as long as you are under my protection (and pay your dues). So what's up?");
 				if(interiorstr=="boudoir")
 				{
@@ -351,7 +351,7 @@ void ProcessDialogEvent()
 		case "taxhalf":
 			AddMoneytoCharacter(Pchar, sti(npchar.tax)/2 );
 			ChangeCharacterReputation(Pchar, 1);  // reward: reputation. Change figure to your liking
-			Dialog.text = "That's most generous of you, Sir. I'll tell everybody what a kind and caring pim.. err.. protector you are, you can be sure of that!";
+			Dialog.text = "That's most generous of you, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ". I'll tell everybody what a kind and caring pim.. err.. protector you are, you can be sure of that!";
 			link.l1 = "Oh, don't bother, I'm not so keen on my reputation. By the way, I grant you leave tonight. Why don't you go downtown, mingle with the townfolk, chat a lot... Have fun!";
 			link.l1.go = "exit";
 		break;

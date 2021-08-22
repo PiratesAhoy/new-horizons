@@ -15,6 +15,7 @@ void ProcessDialogEvent()
 	ref lcn = &Locations[FindLocation(PChar.location)];
 
 	Npchar.nation = Characters[getCharacterIndex("Philipsburg Commander")].nation;
+	
 
 	switch(Dialog.CurrentNode)
 	{
@@ -60,6 +61,7 @@ void ProcessDialogEvent()
 
 		case "bribe":
 			AddMoneytoCharacter(Pchar, -200);
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			Dialog.text = DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "exit";
@@ -84,6 +86,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "sorry":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			Dialog.text = DLG_TEXT[15];
 			link.l2 = DLG_TEXT[16];
 			link.l2.go = "harbour";
@@ -92,6 +95,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "harbour":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			Dialog.text = DLG_TEXT[18];
 			link.l1 = DLG_TEXT[19];
 			link.l1.go = "raid";

@@ -24,6 +24,8 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	PChar.storekeeper.Idx = -1;//MAXIMUS
 	Npchar.nation = Characters[getCharacterIndex("St John's Commander")].nation;
+	
+	Preprocessor_Add("sir", FirstLetterUp(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)));
 
 	int bribe = Makeint(GetCharacterShipHP(Pchar)*0.5);
 
@@ -59,25 +61,40 @@ void ProcessDialogEvent()
 			else
 			// <-- SJG
 			{
-				d.Text = DLG_TEXT[0];
-				if(sti(PChar.money)>bribe )
+				if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")))
 				{
-					Link.l0 = DLG_TEXT[1]+bribe+DLG_TEXT[2];
-					Link.l0.go = "bribe";
+					d.Text = DLG_TEXT[68] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[69];
+					Link.l1 = DLG_TEXT[70];
+					Link.l1.go = "trade";
+					Link.l2 = DLG_TEXT[5];
+					Link.l2.go = "duty";
+					Link.l4 = DLG_TEXT[41];
+					Link.l4.go = "exit";
 				}
-				Link.l1 = DLG_TEXT[3];
-				if(GetRMRelation(Pchar, sti(NPChar.nation) ) < REL_NEUTRAL )
+				else
 				{
-					Link.l1.go = "lomfalse";
-				} 
-				else 
-				{
-					Link.l1.go = "lomtrue";
+					d.Text = DLG_TEXT[0];
+					if(sti(PChar.money)>bribe )
+					{
+						Link.l0 = DLG_TEXT[1]+bribe+DLG_TEXT[2];
+						Link.l0.go = "bribe";
+					}
+					Link.l1 = DLG_TEXT[3];
+					if(GetRMRelation(Pchar, sti(NPChar.nation) ) < REL_NEUTRAL )
+					{
+						Link.l1.go = "lomfalse";
+					} 
+					else 
+					{
+						Link.l1.go = "lomtrue";
+					}
+					Link.l12 = DLG_TEXT[4];
+					Link.l12.go = "deny";
+					Link.l2 = DLG_TEXT[5];
+					Link.l2.go = "duty";
+					Link.l4 = Randswear()+DLG_TEXT[6];
+					Link.l4.go = "exit";
 				}
-				Link.l12 = DLG_TEXT[4];
-				Link.l12.go = "deny";
-				Link.l2 = DLG_TEXT[5];
-				Link.l2.go = "duty";
 				// PB: Able to skip past the Navy difficulties if you have a cargo to deliver -->
 				if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
 				{
@@ -88,29 +105,36 @@ void ProcessDialogEvent()
 					}
 				}
 				// PB: Able to skip past the Navy difficulties if you have a cargo to deliver <--
-				Link.l4 = Randswear()+DLG_TEXT[6];
-				Link.l4.go = "exit";
 			}
 		break;
 
 		case "duty":
-			d.Text = DLG_TEXT[7];
-			if(sti(PChar.money)>bribe )
+			if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")))
 			{
-			Link.l0 = DLG_TEXT[1]+bribe+DLG_TEXT[2];
-			Link.l0.go = "bribe";
-			}
-			Link.l1 = DLG_TEXT[3];
-			if(GetRMRelation(Pchar, sti(NPChar.nation) ) < REL_NEUTRAL )
-			{
-			Link.l1.go = "lomfalse";
+				d.Text = DLG_TEXT[71];
+				Link.l1 = DLG_TEXT[70];
+				Link.l1.go = "trade";
 			}
 			else
 			{
-			Link.l1.go = "lomtrue";
+				d.Text = DLG_TEXT[7];
+				if(sti(PChar.money)>bribe )
+				{
+				Link.l0 = DLG_TEXT[1]+bribe+DLG_TEXT[2];
+				Link.l0.go = "bribe";
+				}
+				Link.l1 = DLG_TEXT[3];
+				if(GetRMRelation(Pchar, sti(NPChar.nation) ) < REL_NEUTRAL )
+				{
+				Link.l1.go = "lomfalse";
+				}
+				else
+				{
+				Link.l1.go = "lomtrue";
+				}
+				Link.l3 = Randswear()+DLG_TEXT[6];
+				Link.l3.go = "exit";
 			}
-			Link.l3 = Randswear()+DLG_TEXT[6];
-			Link.l3.go = "exit";
 		break;
 
 		case "lomfalse":
@@ -145,6 +169,10 @@ void ProcessDialogEvent()
 		case "deny2":
 			if(frnd() < 0.3 )
 			{
+				// DeathDaisy -->
+				PreProcessor_Add("GENDERSubj", strupper(GetMyPronounSubj(PChar)));
+				PreProcessor_Add("GENDERObj", strupper(GetMyPronounObj(PChar)));
+				// DeathDaisy <--
 				d.Text = Randswear()+DLG_TEXT[16];
 				Link.l99 = Randswear()+DLG_TEXT[17];
 				Link.l99.go = "fight";
@@ -201,8 +229,12 @@ void ProcessDialogEvent()
 			GiveItem2Character(Pchar,"Map_Doc_1");
 			pchar.map = "1";
 			AddQuestRecord("Beckett","16");
-			AddCharacterGoods(pchar, GOOD_CINNAMON, 80);
-			AddCharacterGoods(pchar, GOOD_SILK, 80);
+			if (!CheckAttribute(PChar, "quest.got_antigua_goods"))
+			{
+				PChar.quest.got_antigua_goods = true;
+				AddCharacterGoods(PChar, GOOD_CINNAMON, 80);
+				AddCharacterGoods(PChar, GOOD_SILK, 80);
+			}
 			D.text = DLG_TEXT[28];
 			Link.l1 = DLG_TEXT[29];
 			Link.l1.go = "EITC Trading4";
@@ -230,12 +262,15 @@ void ProcessDialogEvent()
 
 		case "EITC Trading6":
 			D.text = DLG_TEXT[35];
-			Link.l1 = DLG_TEXT[36];
-			Link.l1.go = "EITC Trading7";
+			if (!CheckAttribute(PChar, "quest.got_antigua_goods"))
+			{
+				Link.l1 = DLG_TEXT[36];
+				Link.l1.go = "EITC Trading7";
+			}
 			Link.l2 =DLG_TEXT[33];
 			Link.l2.go = "EITCtrade";
-			Link.l2 =DLG_TEXT[34];
-			Link.l2.go = "exit";
+			Link.l3 =DLG_TEXT[34];
+			Link.l3.go = "exit";
 		break;
 
 		case "EITC Trading7":
@@ -244,8 +279,12 @@ void ProcessDialogEvent()
 			Link.l1.go = "EITCtrade";
 			Link.l2 =DLG_TEXT[34];
 			Link.l2.go = "exit";
-			AddCharacterGoods(PChar, GOOD_CINNAMON, 80);
-			AddCharacterGoods(PChar, GOOD_SILK, 80);
+			if (!CheckAttribute(PChar, "quest.got_antigua_goods"))
+			{
+				PChar.quest.got_antigua_goods = true;
+				AddCharacterGoods(PChar, GOOD_CINNAMON, 80);
+				AddCharacterGoods(PChar, GOOD_SILK, 80);
+			}
 		break;
 // <-- SJG
 
@@ -414,7 +453,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[66];
+				dialog.text = DLG_TEXT[66] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + "."; // DeathDaisy: changed "young man" to "my good man/woman" since player isn't always young
 				link.l1 = DLG_TEXT[67];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

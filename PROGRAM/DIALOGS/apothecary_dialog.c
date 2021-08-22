@@ -177,6 +177,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
+				Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)); // DeathDaisy
 				dialog.text = DLG_TEXT[23];
 				link.l1 = DLG_TEXT[24];
 				link.l1.go = "exit";
@@ -263,6 +264,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				dialog.text = DLG_TEXT[28];
 				if (makeint(pchar.money) >= 300)
 				{

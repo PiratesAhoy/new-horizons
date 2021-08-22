@@ -912,6 +912,52 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("goodbye_Vane_loop");
 		break;
 
+		case "about_Richards4":
+			PlaySound("VOICE\ENGLISH\pir_capR9.wav");
+
+			Dialog.text = DLG_TEXT[155];
+			link.l1 = DLG_TEXT[156];
+			link.l1.go = "about_Richards5";
+		break;
+
+		case "about_Richards5":
+			PlaySound("VOICE\ENGLISH\pir_capR6.wav");
+
+			Dialog.text = DLG_TEXT[157];
+			link.l1 = DLG_TEXT[158];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_Richards5");
+		break;
+
+		case "about_Richards8":
+			PlaySound("VOICE\ENGLISH\pir_capR12.wav");
+			LAi_ActorTurnToCharacter(NPChar, characterFromID("pir_cap18"));
+
+			Dialog.text = DLG_TEXT[159];
+			link.l1 = DLG_TEXT[160];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_Richards9");
+		break;
+
+		case "Rackham_sail":
+			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+			LAi_ActorTurnToCharacter(NPChar, characterFromID("pir_cap18"));
+			LAi_ActorTurnToCharacter(characterFromID("pir_cap18"), NPChar);
+
+			Dialog.text = DLG_TEXT[161];
+			link.l1 = DLG_TEXT[162];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_rum_explosion18");
+		break;
+
+		case "back_to_posts":
+			PlaySound("VOICE\ENGLISH\pir_capR11.wav");
+			Dialog.text = DLG_TEXT[163];
+			link.l1 = DLG_TEXT[164];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_rum_explosion23");
+		break;
+
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

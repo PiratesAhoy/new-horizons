@@ -5,7 +5,7 @@ string DLG_TEXT[32] = {
 "No, there isn't.",
 "When will this day end!?",
 "Soon enough, I'm sure...",
-"Such unbearable weather...and I've got to toil away in it! Consider yourself the luckiest man alive!",
+"Such unbearable weather...and I've got to toil away in it! Consider yourself the luckiest #sgender# alive!",
 "Sorry, I can't help you. I'm not your boss, I'm afraid.",
 "Can't talk now, I've got loads of work to do, and it's not my duty to interact with your kind....",
 "Calm down, I'll leave you alone now...",
@@ -29,7 +29,7 @@ string DLG_TEXT[32] = {
 "Well, you are slaves....",
 "Will you join us, become one of us, and help us to escape!?",
 "That's not a bad idea, I will help you!",
-"Thank you sir for killing the guards.",
+"Thank you #ssir# for killing the guards.",
 "Get out of here, you're free!",
 
 };

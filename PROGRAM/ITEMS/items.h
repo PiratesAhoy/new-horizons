@@ -18,14 +18,16 @@
 #define DOCUMENT_ITEM_TYPE		"document"		//JRH
 #define BOOK_ITEM_TYPE			"book"			//Levis
 #define EQUIP_ITEM_TYPE			"equip"			//JRH questitem with equip button
+#define EQUIP2_ITEM_TYPE		"equip2"		//JRH questitem with equip button
+#define EQUIP3_ITEM_TYPE		"equip3"		//JRH questitem with equip button
 #define EXAMINE_ITEM_TYPE		"examine"		//JRH questitem with examine button
 #define OPEN_ITEM_TYPE			"open"		    //JRH ammotitem with examine button
 
 // indexes for items` array
 // NK -->
-#define MAX_ITEMS					2000		//JRH was 1700
+#define MAX_ITEMS					2100		//JRH was 1700
 int ITEMS_QUANTITY = 0;
-#define MAX_RANDITEMS				2000 // MUST BE CAREFUL, JRH was 1700
+#define MAX_RANDITEMS				2100 // MUST BE CAREFUL, JRH was 1700
 // should be near items; some items are not for rand pickup, but some are added more than once
 // (for probability). Setting this = max_items should be fine.
 // note that this is academic as only ~200 something items are used now anyway.

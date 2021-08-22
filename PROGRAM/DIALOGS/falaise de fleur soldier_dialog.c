@@ -145,5 +145,13 @@ void ProcessDialogEvent()
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();
 		break;
+
+// Crystal Skull sidequest -->
+		case "crysskull_get_lost":
+			dialog.text = DLG_TEXT[28];
+			link.l1 = DLG_TEXT[29];
+			link.l1.go = "exit";
+		break;
+// <-- Crystal Skull sidequest
 	}
 }

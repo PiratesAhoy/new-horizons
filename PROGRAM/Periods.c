@@ -162,9 +162,20 @@ void InitPeriods()
 	period.Royal.Holland.Title = XI_ConvertString("The Dutch Republic");
 	period.Royal.Portugal.Name = "Filipe II"; // = Felipe III
 	period.Royal.Portugal.Title = XI_ConvertString("His Most Faithful Majesty");
+	if (SWEDEN_ALLOWED)
+	{
+		period.Nations.Guest1 = "Sweden";
+		period.Royal.Sweden.Name = "Gustav II Adolf";
+		period.Royal.Sweden.Title = XI_ConvertString("King of Sweden");
+		period.Relations.Sweden.England = RELATION_NEUTRAL;
+		period.Relations.Sweden.France = RELATION_NEUTRAL;
+		period.Relations.Sweden.Spain = RELATION_NEUTRAL;
+		period.Relations.Sweden.Holland = RELATION_NEUTRAL;
+		period.Relations.Sweden.Portugal = RELATION_NEUTRAL;
+	}
 	period.Relations.England.France = RELATION_FRIEND;
 	period.Relations.England.Spain = RELATION_ENEMY;
-	period.Relations.England.Holland = RELATION_ENEMY;
+	period.Relations.England.Holland = RELATION_FRIEND;
 	period.Relations.England.Portugal = RELATION_ENEMY;
 	period.Relations.France.Spain = RELATION_ENEMY;
 	period.Relations.France.Holland = RELATION_FRIEND;
@@ -244,6 +255,17 @@ void InitPeriods()
 	period.Royal.Holland.Title = XI_ConvertString("The Dutch Republic");
 	period.Royal.Portugal.Name = "Pedro II";
 	period.Royal.Portugal.Title = XI_ConvertString("His Most Faithful Majesty");
+	if (SWEDEN_ALLOWED)
+	{
+		period.Nations.Guest1 = "Sweden";
+		period.Royal.Sweden.Name = "Karl XII";
+		period.Royal.Sweden.Title = XI_ConvertString("of Sweden");
+		period.Relations.Sweden.England = RELATION_NEUTRAL;
+		period.Relations.Sweden.France = RELATION_NEUTRAL;
+		period.Relations.Sweden.Spain = RELATION_NEUTRAL;
+		period.Relations.Sweden.Holland = RELATION_NEUTRAL;
+		period.Relations.Sweden.Portugal = RELATION_NEUTRAL;
+	}
 	period.Relations.England.France = RELATION_ENEMY;
 	period.Relations.England.Spain = RELATION_ENEMY;
 	period.Relations.England.Holland = RELATION_FRIEND;
@@ -311,6 +333,17 @@ void InitPeriods()
 	period.Royal.Holland.Title = XI_ConvertString("The Dutch Republic");
 	period.Royal.Portugal.Name = "José I";
 	period.Royal.Portugal.Title = XI_ConvertString("His Most Faithful Majesty");
+	if (SWEDEN_ALLOWED)
+	{
+		period.Nations.Guest1 = "Sweden";
+		period.Royal.Sweden.Name = "Adolf Fredrik";
+		period.Royal.Sweden.Title = XI_ConvertString("King of Sweden");
+		period.Relations.Sweden.England = RELATION_NEUTRAL;
+		period.Relations.Sweden.France = RELATION_NEUTRAL;
+		period.Relations.Sweden.Spain = RELATION_NEUTRAL;
+		period.Relations.Sweden.Holland = RELATION_NEUTRAL;
+		period.Relations.Sweden.Portugal = RELATION_NEUTRAL;
+	}
 	period.Relations.England.France = RELATION_ENEMY;
 	period.Relations.England.Spain = RELATION_ENEMY;
 	period.Relations.England.Holland = RELATION_FRIEND;
@@ -379,7 +412,8 @@ void InitPeriods()
 	period.Nations.OfficialName.America = "United States of America";
 	period.Royal.England.Name = "George III";
 	period.Royal.England.Title = XI_ConvertString("His Royal Majesty");
-	period.Royal.France.Title = XI_ConvertString("Republic of France");
+	period.Royal.France.Name = "Louis XVI";
+	period.Royal.France.Title = XI_ConvertString("His Most Christian Majesty");
 	period.Royal.Spain.Name = "Carlos III";
 	period.Royal.Spain.Title = XI_ConvertString("His Most Catholic Majesty");
 	period.Royal.Pirate.Name = "Peter Alston";
@@ -472,8 +506,8 @@ void InitPeriods()
 	period.Royal.Pirate.Name = "Henri Caesar";
 	period.Royal.Pirate.Title = XI_ConvertString("The chief");
 	period.Royal.Holland.Title = XI_ConvertString("The Dutch Republic");
-	period.Royal.Portugal.Name = "Pedro III and Maria I";
-	period.Royal.Portugal.Title = XI_ConvertString("The Most Faithful Majesties of");
+	period.Royal.Portugal.Name = "Maria I"; // DeathDaisy: Pedro was already dead in 1790
+	period.Royal.Portugal.Title = XI_ConvertString("Her Most Faithful Majesty");
 	period.Royal.America.Name = "Thomas Jefferson";
 	period.Royal.America.Title = XI_ConvertString("President");
 	period.Relations.England.France = RELATION_ENEMY;
@@ -808,86 +842,134 @@ void GiveSoldierWeapon(ref curchar, int iNation)
 
 	string SoldierBlade = "";
 	string SoldierGun   = "";
-	switch(GetCurrentPeriod())
+	if (bSeaActive && bAbordageStarted)
 	{
-		case PERIOD_EARLY_EXPLORERS:
+		if(GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+		{
 			switch(iNation)
 			{
-				case ENGLAND:	SoldierBlade = "blade22";	break;		// ARF: Corsair's Pride (available all periods but guards get earlier)
-				case FRANCE:	SoldierBlade = "blade9";	break;		// ARF: French Admiralty Rapier (not available after golden age of piracy)
-				case SPAIN:		SoldierBlade = "blade16";	break;		// ARF: Tizona (not available after golden age of piracy)
-				case PIRATE:	SoldierBlade = "blade6";	break;		// ARF: Schiavona {pirate sword} (not available after colonial power)
-				case HOLLAND:	SoldierBlade = "blade23";	break;		// ARF: Dutch Admiralty Sword (available all periods but guards get earlier)
-				case PORTUGAL:	SoldierBlade = "blade15";	break;		// ARF: Iberian Longsword (not available after golden age of piracy)
-				case AMERICA:	SoldierBlade = "blade10";	break;		// ARF: piranha {no faction} (not available after golden age of piracy anyway AMERICA doesnt exist early)
+				case ENGLAND:	SoldierBlade = "blade11";	break;		// ARF: Highlander (available from The Spanish Main)
+				case FRANCE:	SoldierBlade = "blade13";	break;		// ARF: Duelling Rapier (available from The Spanish Main but marines get later)
+				case SPAIN:		SoldierBlade = "blade47";	break;		// ARF: Light Tizona (available in all periods)
+				case PIRATE:	SoldierBlade = "blade27";	break;		// GR: Bosun's Choice (available from The Golden Age of Piracy)
+				case HOLLAND:	SoldierBlade = "blade19";	break;		// ARF: German Rapier (available from The Spanish Main but marines get later)
+				case PORTUGAL:	SoldierBlade = "bladeC11";	break;		// GR: Milanese longsword (available from The Spanish Main but marines get later)
+				case AMERICA:	SoldierBlade = "bladeC6";	break;		// ARF: Smallsword (available from The Golden Age of Piracy)
 				// default:
-				SoldierBlade = "blade10";								// ARF: hunting sword (all periods available) only for "non regular" nation
+				SoldierBlade = "blade36";								// ARF: Hunting Sword (all periods available), only for "non regular" nation
 			}
-			SoldierGun   = "Arguebuse";
-		break;
-		case PERIOD_THE_SPANISH_MAIN:
+			if(iNation == PIRATE)	SoldierGun = "pistol7";				// GR: Brace of Small Pistols, because pirates are getting a better than average sword
+			else					SoldierGun = "pistol8";				// GR: Brace of Flintlock Pistols for periods from Golden Age of Piracy
+			//else					SoldierGun = "pistolmtoon";			// PB: Musketoon for periods from Golden Age of Piracy
+		}
+		else
+		{
 			switch(iNation)
 			{
-				case ENGLAND:	SoldierBlade = "blade22";	break;		// ARF: Corsair's Pride (available all periods but guards get earlier)
-				case FRANCE:	SoldierBlade = "blade9";	break;		// ARF: French Admiralty Rapier (not available after golden age of piracy)
-				case SPAIN:		SoldierBlade = "blade16";	break;		// ARF: Tizona (not available after golden age of piracy)
-				case PIRATE:	SoldierBlade = "blade6";	break;		// ARF: Schiavona {pirate sword} (not available after colonial power)
-				case HOLLAND:	SoldierBlade = "blade23";	break;		// ARF: Dutch Admiralty Sword (available all periods but guards get earlier)
-				case PORTUGAL:	SoldierBlade = "blade15";	break;		// ARF: Iberian Longsword (not available after golden age of piracy)
-				case AMERICA:	SoldierBlade = "blade10";	break;		// ARF: piranha {no faction} (not available after golden age of piracy anyway AMERICA doesnt exist early)
+				case ENGLAND:	SoldierBlade = "blade36";	break;		// ARF: Hunting Sword (available all periods)
+				case FRANCE:	SoldierBlade = "blade3";	break;		// ARF: Badelaire (available all periods)
+				case SPAIN:		SoldierBlade = "blade16";	break;		// ARF: Tizona (not available after Golden Age of Piracy)
+				case PIRATE:	SoldierBlade = "blade6";	break;		// ARF: Schiavona (not available after Colonial Powers)
+				case HOLLAND:	SoldierBlade = "blade21";	break;		// ARF: Falchion (not available after The Spanish Main)
+				case PORTUGAL:	SoldierBlade = "blade15";	break;		// ARF: Iberian Longsword (not available after Golden Age of Piracy)
+				case AMERICA:	SoldierBlade = "blade10";	break;		// ARF: Piranha (not available after Golden Age of Piracy, anyway AMERICA doesn't exist early)
 				// default:
-				SoldierBlade = "blade10";								// ARF: hunting sword (all periods available) only for "non regular" nation
+				SoldierBlade = "blade10";								// ARF: Piranha (not available after Golden Age of Piracy)
 			}
-			SoldierGun   = "Arguebuse";
-		break;
-		case PERIOD_GOLDEN_AGE_OF_PIRACY:								// JRH: Musket for Golden Age of Piracy & Colonial Powers
-			if(iNation == PIRATE)
-			{
-				SoldierBlade = "blade50";
-				SoldierGun   = "pistolbbuss";
-			}
-			else
-			{
-				SoldierBlade = "blade_mKnife";
-				SoldierGun   = "pistolmket";
-			}
-		break;
-		case PERIOD_COLONIAL_POWERS:									// JRH: Musket for Golden Age of Piracy & Colonial Powers
-			if(iNation == PIRATE)
-			{
-				SoldierBlade = "blade50";
-				SoldierGun   = "pistolbbuss";
-			}
-			else
-			{
-				SoldierBlade = "blade_mKnife";
-				SoldierGun   = "pistolmket";
-			}
-		break;
-		case PERIOD_REVOLUTIONS:										// JRH: Bayonet Musket for Revolutions & Napoleonic
-			if(iNation == PIRATE)
-			{
-				SoldierBlade = "blade50";
-				SoldierGun   = "pistolbbuss";
-			}
-			else
-			{
-				SoldierBlade = "bladeX4";
-				SoldierGun   = "pistolmketB";
-			}
-		break;
-		case PERIOD_NAPOLEONIC:											// JRH: Bayonet Musket for Revolutions & Napoleonic
-			if(iNation == PIRATE)
-			{
-				SoldierBlade = "blade50";
-				SoldierGun   = "pistolbbuss";
-			}
-			else
-			{
-				SoldierBlade = "bladeX4";
-				SoldierGun   = "pistolmketB";
-			}
-		break;
+			SoldierGun   = "pistol2";									// GR: Duelling Pistol for earlier periods
+		}
+	}
+	else
+	{
+		switch(GetCurrentPeriod())
+		{
+			case PERIOD_EARLY_EXPLORERS:
+				switch(iNation)
+				{
+					case ENGLAND:	SoldierBlade = "blade36";	break;		// ARF: Hunting Sword (available all periods)
+					case FRANCE:	SoldierBlade = "blade3";	break;		// ARF: Badelaire (available all periods)
+					case SPAIN:		SoldierBlade = "blade16";	break;		// ARF: Tizona (not available after Golden Age of Piracy)
+					case PIRATE:	SoldierBlade = "blade6";	break;		// ARF: Schiavona (not available after Colonial Powers)
+					case HOLLAND:	SoldierBlade = "blade21";	break;		// ARF: Falchion (not available after The Spanish Main)
+					case PORTUGAL:	SoldierBlade = "blade15";	break;		// ARF: Iberian Longsword (not available after Golden Age of Piracy)
+					case AMERICA:	SoldierBlade = "blade10";	break;		// ARF: Piranha (not available after Golden Age of Piracy, anyway AMERICA doesn't exist early)
+					// default:
+					SoldierBlade = "blade10";								// ARF: Piranha (not available after Golden Age of Piracy)
+				}
+				SoldierGun   = "pistolmtoon";
+			break;
+			case PERIOD_THE_SPANISH_MAIN:
+				switch(iNation)
+				{
+					case ENGLAND:	SoldierBlade = "blade36";	break;		// ARF: Hunting Sword (available all periods)
+					case FRANCE:	SoldierBlade = "blade3";	break;		// ARF: Badelaire (available all periods)
+					case SPAIN:		SoldierBlade = "blade16";	break;		// ARF: Tizona (not available after Golden Age of Piracy)
+					case PIRATE:	SoldierBlade = "blade6";	break;		// ARF: Schiavona (not available after Colonial Powers)
+					case HOLLAND:	SoldierBlade = "blade21";	break;		// ARF: Falchion (not available after The Spanish Main)
+					case PORTUGAL:	SoldierBlade = "blade15";	break;		// ARF: Iberian Longsword (not available after Golden Age of Piracy)
+					case AMERICA:	SoldierBlade = "blade10";	break;		// ARF: Piranha (not available after Golden Age of Piracy, anyway AMERICA doesn't exist early)
+					// default:
+					SoldierBlade = "blade10";								// ARF: Piranha (not available after Golden Age of Piracy)
+				}
+				SoldierGun   = "Arguebuse";
+			break;
+			case PERIOD_GOLDEN_AGE_OF_PIRACY:								// JRH: Musket for Golden Age of Piracy & Colonial Powers
+				if(iNation == PIRATE)
+				{
+					SoldierBlade = "blade50";
+					SoldierGun   = "pistolbbuss";
+				}
+				else
+				{
+					if(iNation == SWEDEN)
+					{
+						SoldierBlade = "bladeC6";
+					}
+					else SoldierBlade = "blade_mKnife";
+					SoldierGun   = "pistolmket";
+				}
+			break;
+			case PERIOD_COLONIAL_POWERS:									// JRH: Musket for Golden Age of Piracy & Colonial Powers
+				if(iNation == PIRATE)
+				{
+					SoldierBlade = "blade50";
+					SoldierGun   = "pistolbbuss";
+				}
+				else
+				{
+					if(iNation == SWEDEN)
+					{
+						SoldierBlade = "bladeC6";
+					}
+					else SoldierBlade = "blade_mKnife";
+					SoldierGun   = "pistolmket";
+				}
+			break;
+			case PERIOD_REVOLUTIONS:										// JRH: Bayonet Musket for Revolutions & Napoleonic
+				if(iNation == PIRATE)
+				{
+					SoldierBlade = "blade50";
+					SoldierGun   = "pistolbbuss";
+				}
+				else
+				{
+					SoldierBlade = "bladeX4";
+					SoldierGun   = "pistolmketB";
+				}
+			break;
+			case PERIOD_NAPOLEONIC:											// JRH: Bayonet Musket for Revolutions & Napoleonic
+				if(iNation == PIRATE)
+				{
+					SoldierBlade = "blade50";
+					SoldierGun   = "pistolbbuss";
+				}
+				else
+				{
+					SoldierBlade = "bladeX4";
+					SoldierGun   = "pistolmketB";
+				}
+			break;
+		}
 	}
 
 	GiveItem2Character  (curchar, SoldierBlade);
@@ -902,10 +984,12 @@ void GiveSoldierWeapon(ref curchar, int iNation)
 		string GunBullets = "pistolbullets";
 		switch(SoldierGun)
 		{
+			case "pistol7":		GunBullets = "pistolbullets";	break;
 			case "pistolbbuss":	GunBullets = "pistolgrapes";	break;
 			case "pistolmketB":	GunBullets = "musketbullets";	break;
 			case "pistolmket":	GunBullets = "musketbullets";	break;
 			case "Arguebuse":	GunBullets = "musketbullets";	break;
+			case "pistolmtoon": GunBullets = "pistolgrapes";	break;
 		}
 		TakenItems(curchar, "gunpowder", 1 + rand(2));
 		TakenItems(curchar,  GunBullets, 1 + rand(1));

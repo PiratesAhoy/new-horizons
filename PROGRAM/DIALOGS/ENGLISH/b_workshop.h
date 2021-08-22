@@ -63,7 +63,7 @@ void ProcessDialogEvent()
 	int tax = 0;
 
 	string adress, sound1, sound2;
-	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " Boss ";}else{adress = " Mister ";}
+	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " Boss ";}else{adress = " " + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " ";}
 	
 	// determine production based on interiortype
 	tax = taxdays * 1;	// Reward, output of goods, you can change the figure before the ';' to your liking
@@ -136,12 +136,12 @@ void ProcessDialogEvent()
 			{
 				ChangeCharacterReputation(Pchar, -2);  // punishment: reputationloss. Will be offset if accept the fight
 				PlayStereoSound("voice\ENGLISH\Eng_m_a_070.wav");	
-				Dialog.text =  LinkRandPhrase("Thanks to God that you came along! You can defend us against those brutes..", "Ahh, heaven sent you at a most crucial moment: we are about to come under attack. HELP US!", "Well met, I say, we desperately need a fighting man like you to ward of that raid...");
+				Dialog.text =  LinkRandPhrase("Thanks to God that you came along! You can defend us against those brutes..", "Ahh, heaven sent you at a most crucial moment: we are about to come under attack. HELP US!", "Well met, I say, we desperately need a fighting " + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + " like you to ward off that raid...");
 				link.l1 = "Hey, calm down! My, my, you are already stiff from fear... Now tell me what's going on here.";
 				if(rand(100)>70) {Link.l1.go = "attack1";}
 				else{Link.l1.go = "attack2";}
 
-				link.l9 = "Now, now, don't raise such a fuss because of some labor unrest. Use your tools to defend yourself, will you? I am busy managing the administration of this operation, and that task leaves me no time for union brawls!";
+				link.l9 = "Now, now, don't raise such a fuss because of some labour unrest. Use your tools to defend yourself, will you? I am busy managing the administration of this operation, and that task leaves me no time for union brawls!";
 				link.l9.go = "exit";
 			}
 			else
@@ -304,7 +304,7 @@ void ProcessDialogEvent()
 
 			if(money > sti(pchar.money) || crew > sti(Pchar.Ship.crew.quantity) || planks > GetSquadronGoods(pchar,GOOD_PLANKS) )
 			{
-				Dialog.text = "Umm, Sir, a " + npchar.interior + " requires " + planks + " planks, " + money + " Gold and "+crew+" men. But, as I said, we have only "+ GetSquadronGoods(pchar,GOOD_PLANKS) +" plankunits, "+pchar.money+" G and "+Pchar.Ship.crew.quantity+" hands...";
+				Dialog.text = "Umm, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", a " + npchar.interior + " requires " + planks + " planks, " + money + " Gold and "+crew+" men. But, as I said, we have only "+ GetSquadronGoods(pchar,GOOD_PLANKS) +" plankunits, "+pchar.money+" G and "+Pchar.Ship.crew.quantity+" hands...";
 				Link.l3 = "Oops.. a small..err.. Well, so you'll have to live on in this place as it is..";
 				Link.l3.go = "exit";
 			}
@@ -424,7 +424,7 @@ void ProcessDialogEvent()
       lcn.building.(nr).taxDay = GetDataDay();
 			AddCharacterGoods(pchar, prodgood, sti(npchar.tax)/2);
 			ChangeCharacterReputation(Pchar, 1);  // reward: reputation. Change figure to your liking
-			Dialog.text = "That's most generous of you, Sir. I'll tell everybody what a kind and caring employer you are, you can be sure of that!";
+			Dialog.text = "That's most generous of you, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ". I'll tell everybody what a kind and caring employer you are, you can be sure of that!";
 			link.l1 = "Oh, don't bother, I'm not so keen on my reputation. By the way, I grant you leave tonight. Why don't you go downtown, mingle with the townfolk, chat a lot... Have fun!";
 			link.l1.go = "exit";
 		break;

@@ -6,9 +6,13 @@
 #include "sea_ai\walk\Frigate_sat_walk.c"
 #include "sea_ai\walk\Corvette_walk.c"
 #include "sea_ai\walk\Battleship_walk.c"
+#include "sea_ai\walk\Battleship4_walk.c"
 #include "sea_ai\walk\Caravel_walk.c"
 #include "sea_ai\walk\Caravel2_walk.c"
 #include "sea_ai\walk\Brig_walk.c"
+#include "sea_ai\walk\Brig_20_Gun1_18_walk.c"
+#include "sea_ai\walk\BrigQeen_walk.c"
+#include "sea_ai\walk\BrigSW_walk.c"
 #include "sea_ai\walk\Fleut1_walk.c"
 #include "sea_ai\walk\Fleut2_walk.c"
 #include "sea_ai\walk\Lugger_walk.c"
@@ -30,6 +34,7 @@
 #include "sea_ai\walk\Lineship_walk.c"
 #include "sea_ai\walk\Warship_walk.c" // Surak'nar
 #include "sea_ai\walk\Indefatigable_walk.c"
+#include "sea_ai\walk\Flushdeck_walk.c"
 #include "sea_ai\walk\SloopBermuda_walk.c"
 #include "sea_ai\walk\Cutter1_walk.c"
 #include "sea_ai\walk\Indiaman1_walk.c"
@@ -115,9 +120,13 @@ void Ship_Walk_Init()
 	Frigate_sat_walk_init();
 	Corvette_walk_init();
 	Battleship_walk_init();
+	Battleship4_walk_init();
 	Caravel_walk_init();
 	Caravel2_walk_init();
 	Brig_walk_init();
+	Brig_20_Gun1_18_walk_init();
+	BrigQeen_walk_init();
+	BrigSW_walk_init();
 	Fleut1_walk_init();
 	Fleut2_walk_init();
 	Lugger_walk_init();
@@ -137,6 +146,7 @@ void Ship_Walk_Init()
 	Lineship_walk_init();
 	Warship_walk_init(); // Surak'nar
 	Indefatigable_walk_init();
+	Flushdeck_walk_init();
 	SloopBermuda_walk_init();
 	Cutter1_walk_init();
 	Indiaman1_walk_init();
@@ -276,6 +286,10 @@ void Ship_Walk_Create()
 		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,Battleship_walk_count, &Battleship_walk_verts, &Battleship_walk_graph, &Battleship_walk_types);
         //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "BATTLESHIP2", Battleship_walk_count, &Battleship_walk_verts, &Battleship_walk_graph, &Battleship_walk_types);
         break;
+	case "BATTLESHIP4":
+		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,Battleship4_walk_count, &Battleship4_walk_verts, &Battleship4_walk_graph, &Battleship4_walk_types);
+        //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "BATTLESHIP4", Battleship4_walk_count, &Battleship4_walk_verts, &Battleship4_walk_graph, &Battleship4_walk_types);
+        break;
  	case "BRIG1":
 		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,Brig_walk_count, &Brig_walk_verts, &Brig_walk_graph, &Brig_walk_types);
         //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "BRIG1", Brig_walk_count, &Brig_walk_verts, &Brig_walk_graph, &Brig_walk_types);
@@ -283,6 +297,18 @@ void Ship_Walk_Create()
  	case "BRIG2":
 		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,Brig_walk_count, &Brig_walk_verts, &Brig_walk_graph, &Brig_walk_types);
         //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "BRIG2", Brig_walk_count, &Brig_walk_verts, &Brig_walk_graph, &Brig_walk_types);
+        break;
+ 	case "BRIG_20_GUN1_18":
+		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,Brig_20_Gun1_18_walk_count, &Brig_20_Gun1_18_walk_verts, &Brig_20_Gun1_18_walk_graph, &Brig_20_Gun1_18_walk_types);
+        //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "BRIG_20_GUN1_18", Brig_20_Gun1_18_walk_count, &Brig_20_Gun1_18_walk_verts, &Brig_20_Gun1_18_walk_graph, &Brig_20_Gun1_18_walk_types);
+        break;
+ 	case "BRIGQEEN":
+		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,BrigQeen_walk_count, &BrigQeen_walk_verts, &BrigQeen_walk_graph, &BrigQeen_walk_types);
+        //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "BRIGQEEN", BrigQeen_walk_count, &BrigQeen_walk_verts, &BrigQeen_walk_graph, &BrigQeen_walk_types);
+        break;
+ 	case "BRIGSW":
+		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,BrigSW_walk_count, &BrigSW_walk_verts, &BrigSW_walk_graph, &BrigSW_walk_types);
+        //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "BRIGSW", BrigSW_walk_count, &BrigSW_walk_verts, &BrigSW_walk_graph, &BrigSW_walk_types);
         break;
 	case "CARAVEL1":
 		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,Caravel_walk_count, &Caravel_walk_verts, &Caravel_walk_graph, &Caravel_walk_types);
@@ -378,6 +404,10 @@ void Ship_Walk_Create()
         //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "Warship", Warship_walk_count, &Warship_walk_verts, &Warship_walk_graph, &Warship_walk_types);
 		break;
 	//Surak'nar <--
+ 	case "Flushdeck":
+		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,Flushdeck_walk_count, &Flushdeck_walk_verts, &Flushdeck_walk_graph, &Flushdeck_walk_types);
+        //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "Flushdeck", Flushdeck_walk_count, &Flushdeck_walk_verts, &Flushdeck_walk_graph, &Flushdeck_walk_types);
+		break;   
  	case "Indefatigable":
 		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship,Indefatigable_walk_count, &Indefatigable_walk_verts, &Indefatigable_walk_graph, &Indefatigable_walk_types);
         //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "Indefatigable", Indefatigable_walk_count, &Indefatigable_walk_verts, &Indefatigable_walk_graph, &Indefatigable_walk_types);

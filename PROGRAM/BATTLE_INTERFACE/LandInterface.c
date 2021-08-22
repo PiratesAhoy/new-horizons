@@ -430,15 +430,15 @@ void BLI_SetObjectData()
 	objLandInterface.CommandTextures.list.t6.name = "battle_interface\UsedItems3.tga"; //Levis
 	objLandInterface.CommandTextures.list.t6.xsize = 4;
 	objLandInterface.CommandTextures.list.t6.ysize = 2;
-	objLandInterface.CommandTextures.list.t7.name = "";
+	objLandInterface.CommandTextures.list.t7.name = "blank.tga"; // PW: avoid system.log errors
 	objLandInterface.CommandTextures.list.t7.xsize = 4;
 	objLandInterface.CommandTextures.list.t7.ysize = 4;
-	objLandInterface.CommandTextures.list.t8.name = "";
+	objLandInterface.CommandTextures.list.t8.name = "blank.tga"; // PW: avoid system.log errors
 	objLandInterface.CommandTextures.list.t8.xsize = 4;
 	objLandInterface.CommandTextures.list.t8.ysize = 4;
   // Viper
 // KK -->
-	objLandInterface.CommandTextures.list.t9.name = "";
+	objLandInterface.CommandTextures.list.t9.name = "blank.tga"; // PW: avoid system.log errors
 	objLandInterface.CommandTextures.list.t9.xsize = 0;
 	objLandInterface.CommandTextures.list.t9.ysize = 0;
 
@@ -1695,7 +1695,7 @@ bool SetShipIcons()
 	ref mchr = GetMainCharacter();
 	for (i = 0; i < COMPANION_MAX; i++) {
 		cn = GetCompanionIndex(mchr, i);
-		if (cn < 0) continue;
+		if (cn < 0) continue; // Levis: was if (cn < 0 || cn == iShipCaptain)
 		curchr = GetCharacter(cn);
 		st = GetCharacterShipType(curchr);
 		if (st >= 0 && st < SHIP_TYPES_QUANTITY) {

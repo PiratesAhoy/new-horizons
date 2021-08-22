@@ -82,7 +82,8 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "10";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.Ship.Name = "Vengeance";
-	ch.Ship.Type = "Battleship3"; // PRS3 // KK
+//	ch.Ship.Type = "Battleship3"; // PRS3 // KK
+	ch.Ship.Type = "Battleship4"; // GR - the AoP battleship is back!
 	ch.Ship.Stopped = true;
 	ch.nosurrender = 1;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -612,6 +613,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("","Valentin");
 	ch.lastname = TranslateString("","Massoni");
 	ch.id		= "Valentin Massoni";
+	ch.nation	= FRANCE;
 	ch.model	= Nations[FRANCE].fantomModel.m0; // PB
 	ch.sound_type = "soldier";
 	ch.activity_begin = "0";
@@ -661,6 +663,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("","Amiel");
 	ch.lastname = TranslateString("","Berangere");
 	ch.id		= "Amiel Berangere";
+	ch.nation	= FRANCE;
 	ch.model	= "Corsair2";
 	ch.sound_type = "pirate";
 	ch.act.rebirth = 0;
@@ -700,6 +703,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("","Faust");
 	ch.lastname = TranslateString("","Gasquet");
 	ch.id		= "Faust Gasquet";
+	ch.nation	= FRANCE;
 	ch.model	= "fisherman";
 	ch.sound_type = "seaman";
 	ch.sex = "man";
@@ -2042,7 +2046,8 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.Ship.Name = "Monarch";
-	ch.Ship.Type = "RN_Essex"; // Thomas the Terror
+//	ch.Ship.Type = "RN_Essex"; // Thomas the Terror
+	ch.Ship.Type = "RN_Battleship"; // GR: "RN_Essex" belongs to "Napoleonic" period, so "Monarch" is another basic battleship
 	ch.Ship.Stopped = true;
 	ch.nosurrender = 1;
 	ch.skipRM = true; // PB: Skip Relations Mod
@@ -2090,6 +2095,7 @@ void CreateStoryCharacters(ref n)
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.Ship.Name = "Black Prince";
 	ch.Ship.Type = "RN_Corvette"; // Thomas the Terror
+	ch.skipRM = true; // PB: Skip Relations Mod
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
 	ch.ShipSlot1.Type=SHIP_NOTUSED;
@@ -2135,8 +2141,10 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.Ship.Name = "Meleager";
-	ch.Ship.Type = "RN_Essex"; // Thomas the Terror
+//	ch.Ship.Type = "RN_Essex"; // Thomas the Terror
+	ch.Ship.Type = "Frigate1"; // "RN_Essex" belongs to "Napoleonic" period, so use a "Kreyser" class instead
 	ch.Ship.Stopped = true;
+	ch.skipRM = true; // PB: Skip Relations Mod
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
 	ch.ShipSlot1.Type=SHIP_NOTUSED;
 	ch.ShipSlot1.Name="NoName";
@@ -2180,7 +2188,8 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.Ship.Name = "Tremendous";
-	ch.Ship.Type = "RN_Brig"; // Thomas the Terror
+//	ch.Ship.Type = "RN_Brig"; // Thomas the Terror
+	ch.Ship.Type = "BrigSW1"; // GR: all the other pirates now have piratey ships so give this guy the scary pirate brig
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
 	ch.ShipSlot1.Type=SHIP_NOTUSED;
@@ -2224,7 +2233,8 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.Ship.Name = "Bato";
-	ch.Ship.Type = "FastGalleon2"; // KK
+//	ch.Ship.Type = "FastGalleon2"; // KK
+	ch.Ship.Type = "CrimsonBlood"; // GR - "FastGalleon2" should not exist in this time period, use pirate version of corvette instead
 	ch.Ship.Stopped = true;
 	ch.skipRM = true; // PB: Skip Relations Mod
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;

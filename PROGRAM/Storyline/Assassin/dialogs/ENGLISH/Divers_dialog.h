@@ -53,7 +53,7 @@ string DLG_TEXT[57] = {
 "Thanks, Captain! These dogs were about to execute us.",
 "No problem...",
 "Morgan, Bartolomeu and the traitor Elting... What a beautiful row of bastards!",
-"I note I and my comrades are enough famous to be recognized at first time. However, seeing the words you use to define us, it seems you know how to receive visitors. That must be the well-known Spanish hospitality.",
+"I note I and my comrades are enough famous to be recognized at first sight. However, seeing the words you use to define us, it seems you know how to receive visitors. That must be the well-known Spanish hospitality.",
 "You are certainly here to steal the Aztec treasure but I won't let you leave my fort alive, small excrement of mosquito.",
-"It's a shame to stain a suit so fine with blood but this is what you want. En garde!",   
+"It's a shame to stain a suit so fine with blood, but this is what you want. En garde!",   
 };

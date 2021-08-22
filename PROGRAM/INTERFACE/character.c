@@ -169,7 +169,7 @@ void InitInterface_R(string iniName,ref pCharacter)
 	if(AUTO_SKILL_SYSTEM)
 	{
 		int curY = 54;
-		for(int c = 0; c < 10; c++)
+		for(int c = 0; c < NUM_DIFF_SKILLS; c++)
 		{		
 			string curSkill = GetSkillName(c);
 			if(CheckAttribute(xi_refCharacter,"skill."+curSkill))
@@ -571,7 +571,7 @@ void SetVariable()
 	if(AUTO_SKILL_SYSTEM)
 	{
 		int curY = 54;
-		for(int c = 0; c < 10; c++)
+		for(int c = 0; c < NUM_DIFF_SKILLS; c++)
 		{		
 			string curSkill = GetSkillName(c);
 			if(CheckAttribute(xi_refCharacter,"skill."+curSkill))
@@ -710,7 +710,7 @@ void SetVariable()
 //		SetNewPicture("TYPEPICT", "");
 //	} else {
 	if ( IsCompanion(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\blank_ship.tga");			// changed after build 11 by KAM
-	/*if ( IsOfficer(xi_refCharacter) ) //SetNewPicture("TYPEPICT", "interfaces\kam_isofficer.tga");				// changed after build 11 by KAM
+	if ( IsOfficer(xi_refCharacter) ) //SetNewPicture("TYPEPICT", "interfaces\kam_isofficer.tga");				// changed after build 11 by KAM
 	{
 		if(CheckAttribute(xi_refCharacter,"quest.officertype"))
 		{
@@ -729,15 +729,14 @@ void SetVariable()
 				// <-- KK
 			}
 		}
-	}*/
-	if ( IsOfficer(xi_refCharacter) ) SetNewPicture("TYPEPICT", GetOfficerPricture(xi_refCharacter)); //Levis put all images in 1 function
+	}
 	if ( IsOfficerCompanion(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isofficercompanion.tga");		// changed after build 11 by KAM
 	if ( IsOnShoreLeave(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isonshoreleave.tga");			// added after build 11 by KAM
 	if ( IsOfficerOnShoreLeave(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isofficeronshoreleave.tga");	// added after build 11 by KAM
 	if ( IsPrisoner(xi_refCharacter) ) // KK
 	{
-		SetNewPicture("TYPEPICT1", "interfaces\isprisoned.tga");  // added by MAXIMUS //Levis changed to use TYPIC 1 so we don't need to do extra stuff
-		/*if(CheckAttribute(xi_refCharacter,"quest.officertype"))  // added by MAXIMUS
+		SetNewPicture("TYPEPICT", "interfaces\isprisoned.tga");  // added by MAXIMUS
+		if(CheckAttribute(xi_refCharacter,"quest.officertype"))  // added by MAXIMUS
 		{
 			switch (xi_refCharacter.quest.officertype)
 			{
@@ -754,7 +753,7 @@ void SetVariable()
 				case OFFIC_TYPE_TRADER: SetNewPicture("TYPEPICT1", "interfaces\trader.tga"); break;
 // <-- KK
 			}
-		}*/
+		}
 	}
 // Viper - CharSheetEnh End
 	if (!CheckAttribute(GameInterface.strings,"OfficerType"))
@@ -1303,23 +1302,23 @@ void ProcessFrame()
 				}else {
 				switch(newIndex)
 					{
-					case 1:		if(nLeadership>0 && nLeadership<MAX_CHARACTER_SKILL){bSetBtn=true;}	break;
-					case 2:		if(nFencing>0 && nFencing<MAX_CHARACTER_SKILL)		{bSetBtn=true;}	break;
-					case 3:		if(nSailing>0 && nSailing<MAX_CHARACTER_SKILL)		{bSetBtn=true;}	break;
-					case 4:		if(nAccuracy>0 && nAccuracy<MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
-					case 5:		if(nCannons>0 && nCannons<MAX_CHARACTER_SKILL)		{bSetBtn=true;}	break;
-					case 6:		if(nGrappling>0 && nGrappling<MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
-					case 7:		if(nRepair>0 && nRepair<MAX_CHARACTER_SKILL)		{bSetBtn=true;}	break;
-					case 8:		if(nDefence>0 && nDefence<MAX_CHARACTER_SKILL)		{bSetBtn=true;}	break;
-					case 9:		if(nCommerce>0 && nCommerce<MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
-					case 10:	if(nSneak>0 && nSneak<MAX_CHARACTER_SKILL)			{bSetBtn=true;}	break;
+					case  1:	if(nLeadership>0 && nLeadership<MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case  2:	if(nFencing   >0 && nFencing   <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case  3:	if(nSailing   >0 && nSailing   <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case  4:	if(nAccuracy  >0 && nAccuracy  <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case  5:	if(nCannons   >0 && nCannons   <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case  6:	if(nGrappling >0 && nGrappling <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case  7:	if(nRepair    >0 && nRepair    <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case  8:	if(nDefence   >0 && nDefence   <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case  9:	if(nCommerce  >0 && nCommerce  <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
+					case 10:	if(nSneak     >0 && nSneak     <MAX_CHARACTER_SKILL)	{bSetBtn=true;}	break;
 					}
 				}
 				// NK <--
 			}
 			if(bSetBtn)
 			{
-				int pic_top = 12 + 34*newIndex;
+				int pic_top    = 12 + 34*newIndex;
 				int pic_bottom = 44 + 34*newIndex;
 				SendMessage(&GameInterface,"lsllllll", MSG_INTERFACE_MSG_TO_NODE,"B_SKILLUP",0, 478,pic_top,510,pic_bottom, 0); // NK was 528,560
 			}
@@ -1599,47 +1598,6 @@ void ShowInfo(string nodeName)
 	header = LanguageConvertString(ilngid, nodeName + "_Header");
 	text = LanguageConvertString(ilngid, nodeName + "_Descr");
 	img = LanguageConvertString(ilngid, nodeName + "_Img");
-	if(nodeName == "ALEADERSHIP" || nodeName == "AFENCING" || nodeName == "ASAILING" || nodeName == "AACCURACY" || nodeName == "ACANNONS"
-	|| nodeName == "AGRAPPLING" || nodeName == "AREPAIR" || nodeName == "ADEFENCE" || nodeName == "ACOMMERCE" || nodeName == "ASNEAK")
-	{
-		//Create a newline string we use to build the description
-		string newLineStr = GlobalStringConvert("newline");
-		//Determine the skillname
-		string skillname = strcut(nodeName,1,strlen(nodeName)-1);
-		aref mods, mod, item;
-		float modifier = 0.0;
-		string suf;
-		//Loop trough all item mods
-		makearef(mods,xi_refCharacter.itemmods.(skillName));
-		int nummods = GetAttributesNum(mods);
-		if(nummods>0) text += newLineStr+"Bonuses by items:";
-		for(int n = 0; n < nummods; n++)
-		{
-			//Get the itemmod
-			mod = GetAttributeN(mods, n);
-			//Find the specific item
-			Items_FindItem(mod.desc,&item);
-			//Build the string
-			modifier = roundto(stf(GetAttributeValue(mod)),2);
-			suf = "+";
-			if(modifier < 0) suf = "-";
-			text += newLineStr+suf+modifier+" - "+GetAssembledString(TranslateString("", item.name), item);
-		}
-		//Loop trough all charmods
-		makearef(mods,xi_refCharacter.charmods.(skillName));
-		nummods = GetAttributesNum(mods);
-		if(nummods>0) text += newLineStr+"Bonuses by other things:";
-		for(n = 0; n < nummods; n++)
-		{
-			//Get the itemmod
-			mod = GetAttributeN(mods, n);
-			//Build the string
-			modifier = roundto(stf(GetAttributeValue(mod)),2);
-			suf = "+";
-			if(modifier < 0.0) suf = "-";
-			text += newLineStr+suf+modifier+" - "+mod.desc;
-		}
-	}
 	LanguageCloseFile(ilngid);
 	if (header == "" && text == "") return;
 	switch (nodeName) {

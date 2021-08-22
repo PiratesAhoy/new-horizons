@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 		// Blacksmith tells the main char about his trade (and use in the game)
 	case "Introduction":
 		NPCDialog.CurrentNode = "SelectFix";
-		Dialog.text = "Ah yes, of course I can, sir! I can repair any sword or gun you bring to me. Just equip the items that need fixing, and I'll fix it for you. The price varies for each type of sword or gun and level of damage, but I can fix everything in one day.";
+		Dialog.text = "Ah yes, of course I can, " + GetMyAddressForm(NPCChar, MainChar, ADDR_POLITE, false, false) + "! I can repair any sword or gun you bring to me. Just equip the items that need fixing, and I'll fix it for you. The price varies for each type of sword or gun and level of damage, but I can fix everything in one day.";
 		link.l1 = "Good, let's get down to business!";
 		link.l1.go = "SelectFix";
 		link.l2 = "Thanks, I'll keep it in mind! Goodbye.";

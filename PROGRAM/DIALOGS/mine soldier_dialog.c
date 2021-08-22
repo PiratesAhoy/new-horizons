@@ -13,6 +13,14 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	
 	switch(Dialog.CurrentNode)
@@ -61,7 +69,7 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) > 5)
 			{
 				Dialog.snd = "voice\MISO\MISO005";
-				dialog.text = DLG_TEXT[8];
+				dialog.text = PersuasionSuccess + DLG_TEXT[8];
 				link.l1 = DLG_TEXT[9];
 				link.l1.go = "exit";
 				AddDialogExitQuest("mine_soldier_resque_exit");
@@ -69,7 +77,7 @@ void ProcessDialogEvent()
 			else
 			{
 				Dialog.snd = "voice\MISO\MISO006";
-				dialog.text = DLG_TEXT[10];
+				dialog.text = PersuasionFailure + DLG_TEXT[10];
 				link.l1 = DLG_TEXT[11];
 				link.l1.go = "exit";
 				AddDialogExitQuest("second_speak_with_leborio_in_mines");

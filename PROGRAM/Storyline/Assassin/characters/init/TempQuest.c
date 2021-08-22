@@ -62,8 +62,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade13");
 	ch.equip.blade = "blade13";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -521,8 +521,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade25+3"); //SCM
 	ch.equip.blade = "blade25+3"; //SCM
-	GiveItem2Character(ch, "pistol1+3"); //SCM
-	ch.equip.gun = "pistol1+3"; //SCM
+	GiveItem2Character(ch, "pistol1a+3"); //SCM
+	ch.equip.gun = "pistol1a+3"; //SCM
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -652,8 +652,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "Thug"; //SCM
 	GiveItem2Character(ch, "blade36"); //SCM
 	ch.equip.blade = "blade36"; //SCM
-	GiveItem2Character(ch, "pistol1"); //SCM
-	ch.equip.gun = "pistol1"; //SCM
+	GiveItem2Character(ch, "pistol1a"); //SCM
+	ch.equip.gun = "pistol1a"; //SCM
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -699,8 +699,8 @@ void CreateTempQuestCharacters(ref n)
 	GiveItem2Character(ch, "bladeX1"); //SCM
 	ch.equip.blade = "bladeX1"; //SCM
 	ch.nodisarm	= 1;				// PB: Disable disarming
-	GiveItem2Character(ch, "pistol1+3"); //SCM
-	ch.equip.gun = "pistol1+3"; //SCM
+	GiveItem2Character(ch, "pistol1a+3"); //SCM
+	ch.equip.gun = "pistol1a+3"; //SCM
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -790,8 +790,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "Larry"; //SCM
 	GiveItem2Character(ch, "blade20"); //SCM
 	ch.equip.blade = "blade20"; //SCM
-	GiveItem2Character(ch, "pistol1"); //SCM
-	ch.equip.gun = "pistol1"; //SCM
+	GiveItem2Character(ch, "pistol1a"); //SCM
+	ch.equip.gun = "pistol1a"; //SCM
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -835,8 +835,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "Daryl"; //SCM
 	GiveItem2Character(ch, "blade28"); //SCM
 	ch.equip.blade = "blade28"; //SCM
-	GiveItem2Character(ch, "pistol1"); //SCM
-	ch.equip.gun = "pistol1"; //SCM
+	GiveItem2Character(ch, "pistol1a"); //SCM
+	ch.equip.gun = "pistol1a"; //SCM
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -880,8 +880,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "Thug"; //SCM
 	GiveItem2Character(ch, "blade31"); //SCM
 	ch.equip.blade = "blade31"; //SCM
-	GiveItem2Character(ch, "pistol1"); //SCM
-	ch.equip.gun = "pistol1"; //SCM
+	GiveItem2Character(ch, "pistol1a"); //SCM
+	ch.equip.gun = "pistol1a"; //SCM
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1239,8 +1239,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "bladec12");
 	ch.equip.blade = "bladec12";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1813,8 +1813,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.model	= "pirat2";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
      //JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1862,8 +1862,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.model	= "pirat3";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
      //JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1911,8 +1911,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.model	= "pirat4";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
      //JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1997,8 +1997,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2104,8 +2104,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate"; 
 	GiveItem2Character(ch, "bladeC30");
 	ch.equip.blade = "bladeC30";
-	GiveItem2Character(ch, "pistol7");
-	ch.equip.gun = "pistol7";
+	GiveItem2Character(ch, "pistol7a");
+	ch.equip.gun = "pistol7a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2167,8 +2167,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate"; 
 	GiveItem2Character(ch, "blade9");
 	ch.equip.blade = "blade9";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2549,8 +2549,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2630,14 +2630,14 @@ void CreateTempQuestCharacters(ref n)
 	ch.name = TranslateString("","Roxanne"); 
 	ch.lastname = TranslateString("","Lalliere");
 	ch.id		= "Roxanne Lalliere";
-	ch.model	= "9CATa";
+	ch.model	= "Roxanne";
 	ch.sex = "woman";
 	ch.sound_type = "pirate";
 	ch.nation = FRANCE;
 	GiveItem2Character(ch, "blthag02");
 	ch.equip.blade = "blthag02";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);

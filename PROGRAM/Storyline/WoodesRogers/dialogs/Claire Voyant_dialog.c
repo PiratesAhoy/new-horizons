@@ -215,6 +215,64 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("drawing_room_map25");
 		break;
 
+		case "sloop2":
+			PlaySound("VOICE\ENGLISH\claire_welcome.wav");
+			Dialog.text = DLG_TEXT[42];
+			link.l1 = DLG_TEXT[43];
+			link.l1.go = "exit";
+			AddDialogExitQuest("sloop3");
+		break;
+
+		case "sloop4":
+			PlaySound("VOICE\ENGLISH\claire_light.wav");
+			Dialog.text = DLG_TEXT[44];
+			link.l1 = DLG_TEXT[45];
+			link.l1.go = "exit";
+			AddDialogExitQuest("sloop5");
+		break;
+
+		case "sloop6":
+			PlaySound("VOICE\ENGLISH\claire_help.wav");
+			Dialog.text = DLG_TEXT[46];
+			link.l1 = DLG_TEXT[47];
+			link.l1.go = "exit";
+			AddDialogExitQuest("sloop7");
+		break;
+
+		case "sloop8":
+			PlaySound("VOICE\ENGLISH\claire_items.wav");
+			Dialog.text = DLG_TEXT[48];
+			link.l1 = DLG_TEXT[49];
+			link.l1.go = "exit";
+			AddDialogExitQuest("sloop9");
+		break;
+
+		case "platina":
+			PlaySound("VOICE\ENGLISH\claire_items.wav");
+			Dialog.text = DLG_TEXT[50];
+			link.l1 = DLG_TEXT[51];
+			link.l1.go = "platina1";
+		break;
+
+		case "platina1":
+			PlaySound("VOICE\ENGLISH\claire_hmm.wav");
+			Dialog.text = DLG_TEXT[52];
+			link.l1 = DLG_TEXT[53];
+			link.l1.go = "platina2";
+		break;
+
+		case "platina2":
+			PlaySound("VOICE\ENGLISH\claire_light.wav");
+			locations[FindLocation("wr_farm_alchemy2")].type = "silent_residence";
+			PostEvent("LoadSceneSound", 0.1);
+
+			Dialog.text = DLG_TEXT[54];
+			link.l1 = DLG_TEXT[55];
+			link.l1.go = "exit";
+			AddDialogExitQuest("pchar_ooh");
+			AddDialogExitQuest("wait_grandma_finale5");
+		break;
+
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

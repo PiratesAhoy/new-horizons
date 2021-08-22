@@ -160,6 +160,9 @@ void ProcessDialogEvent()
 						switch(Rand(1))
 						{
 							case 0:						// beggar
+								if (PChar.sex == "woman") Preprocessor_Add("title", XI_ConvertString("Madam"));
+								else Preprocessor_Add("title", XI_ConvertString("Sir"));
+								Preprocessor_Add("person", XI_ConvertString(NPChar.sex));
 								d.Text = DLG_TEXT[27];
 								Link.l1 = DLG_TEXT[28];
 								Link.l1.go = "beg";
@@ -168,6 +171,8 @@ void ProcessDialogEvent()
 							break;
 
 							case 1:						// beggar
+								Preprocessor_Add("title", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
+								Preprocessor_Add("person", XI_ConvertString(NPChar.sex));
 								d.Text = DLG_TEXT[30];
 								Link.l1 = DLG_TEXT[31];
 								Link.l1.go = "beg";
@@ -434,6 +439,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "reput":
+			Preprocessor_Add("person", XI_ConvertString(NPChar.sex));
 			d.Text = DLG_TEXT[62];
 			Link.l1 = DLG_TEXT[63];
 			Link.l1.go = "exit_out";
@@ -459,6 +465,7 @@ void ProcessDialogEvent()
 					break;
 
 					case 2:
+						Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 						d.Text = DLG_TEXT[69];
 						Link.l1 = DLG_TEXT[70];
 						Link.l1.go = "exit_than";
@@ -495,17 +502,10 @@ void ProcessDialogEvent()
 // MAXIMUS officers <--
 			}*/
 			//Levis let's use the unique types you can get from the enc_walker.
-			//NPChar.quest.officertype = GetRandomOfficerType(); //Levis let's use a global function so we can easily add types later.
+			NPChar.quest.officertype = GetRandomOfficerType(); //Levis let's use a global function so we can easily add types later.
 			LAi_Create_Officer(rand(8), &NPChar); //so that these officers are better than tavern ones.
 			PChar.newofficerid = NPChar.id;//MAXIMUS
 // MAXIMUS interface MOD <--
-		break;
-		
-		case "enlist_me1":
-			SetOfficersIndex(Pchar, -1, sti(NPChar.index)); // PB: Use index instead of reference
-			LAi_SetOfficerType(NPChar);
-			Diag.CurrentNode = "got_officer";
-			DialogExit();
 		break;
 
 		case "skill":
@@ -1380,12 +1380,14 @@ void ProcessDialogEvent()
 
 		//SCREWFACE : RANDOM TREASURE QUEST GENERATOR---------------------------------------
 		case "why":
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 			d.text = DLG_TEXT[282];
 			link.l1 = DLG_TEXT[283];
 			link.l1.go = "why_2";
 		break;
 
 		case "why_2":
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
 			d.text = DLG_TEXT[284];
 			link.l1 = DLG_TEXT[285];
 			link.l1.go = "why_3";
@@ -1601,7 +1603,9 @@ void ProcessDialogEvent()
 		case "exit_change_dlg":
 			Diag.CurrentNode = "Node_1";
 			DialogExit();
-			DialogMain(characterFromID(PChar.newofficerid));//MAXIMUS
+			// DialogMain(characterFromID(PChar.newofficerid));//MAXIMUS //Levis: Creates CTD
+			PChar.quest.hire_enc_walker = NPChar.id;
+			AddDialogExitQuest("LandEnc Talk to player about hireing");
 			DeleteAttribute(PChar,"newofficerid");//MAXIMUS
 		break;
 		// NK <--

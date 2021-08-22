@@ -1,5 +1,5 @@
 string DLG_TEXT[22] = {
-"Leave me alone, lad. You're bothering me.",
+"Leave me alone, #slad#. You're bothering me.",
 "...",
 "Well, would you look at that! A shepherd takes up a sword and thinks it'll keep us from our feast!",
 "So, it's you who's robbing the local ranchers?",

@@ -14,6 +14,14 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
+	
 	switch(Dialog.CurrentNode)
 	{
 		case "exit":
@@ -118,6 +126,7 @@ void ProcessDialogEvent()
 			dialog.snd1 = "";
 			dialog.snd2 = "";
 			dialog.snd3 = "";
+			Preprocessor_Add("pronounsubj", GetMyPronounSubj(PChar)); // DeathDaisy
 			d.Text = RandPhrase(DLG_TEXT[9], DLG_TEXT[10], DLG_TEXT[11], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 			Link.l1 = DLG_TEXT[12] + makeint(makeint(Pchar.money)/20)*10 + DLG_TEXT[13];
 			Link.l1.go = "CheckMoney";
@@ -134,7 +143,9 @@ void ProcessDialogEvent()
 					{
 						//You don't need to pay
 						Diag.TempNode = "GetLost";
-						d.Text = DLG_TEXT[56];
+						Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
+						if (PChar.sex == "woman") d.Text = PersuasionSuccess + DLG_TEXT[61];
+						else d.Text = PersuasionSuccess + DLG_TEXT[56];
 						Link.l1 = DLG_TEXT[57];
 						Link.l1.go = "Exit_GetPerk";
 						Link.l2 = DLG_TEXT[58];
@@ -146,7 +157,8 @@ void ProcessDialogEvent()
 						if(makeint(Pchar.money) > pricePerk)
 						{
 							Diag.TempNode = "GetLost";
-							d.Text = DLG_TEXT[56] + DLG_TEXT[59] + " " + pricePerk + " " + DLG_TEXT[60];
+							if (PChar.sex == "woman") d.Text = PersuasionSuccess + DLG_TEXT[61] + DLG_TEXT[59] + " " + pricePerk + " " + DLG_TEXT[60];
+							else d.Text = PersuasionSuccess + DLG_TEXT[56] + DLG_TEXT[59] + " " + pricePerk + " " + DLG_TEXT[60];
 							Link.l1 = DLG_TEXT[57];
 							Link.l1.go = "Exit_GetPerkPay";
 							Link.l2 = DLG_TEXT[58];
@@ -157,7 +169,7 @@ void ProcessDialogEvent()
 							dialog.snd1 = "";
 							dialog.snd2 = "";
 							dialog.snd3 = "";
-							d.Text = RandPhrase(DLG_TEXT[24], DLG_TEXT[25], DLG_TEXT[26], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
+							d.Text = PersuasionFailure + RandPhrase(DLG_TEXT[24], DLG_TEXT[25], DLG_TEXT[26], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 							Link.l1 = DLG_TEXT[27];
 							Link.l1.go = "Exit_Fight";	
 						}
@@ -168,7 +180,7 @@ void ProcessDialogEvent()
 					dialog.snd1 = "";
 					dialog.snd2 = "";
 					dialog.snd3 = "";
-					d.Text = RandPhrase(DLG_TEXT[24], DLG_TEXT[25], DLG_TEXT[26], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
+					d.Text = PersuasionFailure + RandPhrase(DLG_TEXT[24], DLG_TEXT[25], DLG_TEXT[26], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 					Link.l1 = DLG_TEXT[27];
 					Link.l1.go = "Exit_Fight";	
 				}
@@ -181,7 +193,8 @@ void ProcessDialogEvent()
 					dialog.snd1 = "";
 					dialog.snd2 = "";
 					dialog.snd3 = "";
-					d.Text = RandPhrase(DLG_TEXT[15], DLG_TEXT[16], DLG_TEXT[17], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
+					Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
+					d.Text = PersuasionSuccess + RandPhrase(DLG_TEXT[15], DLG_TEXT[16], DLG_TEXT[17], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 					Link.l1 = LinkRandPhrase(DLG_TEXT[18], DLG_TEXT[19], DLG_TEXT[20]);
 					Link.l1.go = "Exit_NoFight";
 					Link.l99 = LinkRandPhrase(DLG_TEXT[21], DLG_TEXT[22], DLG_TEXT[23]);
@@ -192,7 +205,7 @@ void ProcessDialogEvent()
 					dialog.snd1 = "";
 					dialog.snd2 = "";
 					dialog.snd3 = "";
-					d.Text = RandPhrase(DLG_TEXT[24], DLG_TEXT[25], DLG_TEXT[26], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
+					d.Text = PersuasionFailure + RandPhrase(DLG_TEXT[24], DLG_TEXT[25], DLG_TEXT[26], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 					Link.l1 = DLG_TEXT[27];
 					Link.l1.go = "Exit_Fight";	
 				}
@@ -212,6 +225,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
+				Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 				d.Text = DLG_TEXT[32];
 				Link.l1 = DLG_TEXT[33];
 				Link.l1.go = "Exit_Fight";				
@@ -235,6 +249,7 @@ void ProcessDialogEvent()
 			dialog.snd1 = "";
 			dialog.snd2 = "";
 			dialog.snd3 = "";
+			Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 			d.Text = RandPhrase(DLG_TEXT[39], DLG_TEXT[40], DLG_TEXT[41], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 			Link.l1 = DLG_TEXT[42];
 			Link.l1.go = "Exit";
@@ -247,6 +262,7 @@ void ProcessDialogEvent()
 			dialog.snd1 = "";
 			dialog.snd2 = "";
 			dialog.snd3 = "";
+			Preprocessor_Add("pronounsubj", FirstLetterUp(GetMyPronounSubj(PChar))); // DeathDaisy
 			d.Text = RandPhrase(DLG_TEXT[44], DLG_TEXT[45], DLG_TEXT[46], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 			Link.l1 = DLG_TEXT[47];
 			Link.l1.go = "Exit";			

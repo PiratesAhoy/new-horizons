@@ -5,7 +5,7 @@ string DLG_TEXT[41] = {
 "Settle down! I asked you a question.",
 "Apologies, captain. We're just glad to see you safe and sound.",
 "And I'm glad to be seen. But the question remains: What brought you here?",
-"Well, after you were washed overboard, we were tossed by the storm for several more hours. When the tempest finally subsided, we found that the closest dry land was #sisland_Isla Muelle#. The ship was badly damaged, so we enlisted the services of the Spanish shipyard there. \nIt took quite a long time, but now ",
+"Well, after you were washed overboard, we were tossed by the storm for several more hours. When the tempest finally subsided, we found that the closest dry land was #sisland_Isla Muelle#. The ship was badly damaged, so we enlisted the services of the Spanish shipyard there. \nIt took quite a long time, but now '",
 "ship storage",
 "' is in very good shape.",
 "That's good news. But how did you pay for the repairs?",

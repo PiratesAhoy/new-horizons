@@ -606,6 +606,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "both_talk_with_Silehard_3":
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(PChar)));
+			if (PChar.sex == "woman") Preprocessor_Add("Pronoun3_upper", FirstLetterUp(XI_ConvertString("her")));
+			else Preprocessor_Add("Pronoun3_upper", FirstLetterUp(XI_ConvertString("his")));
 			dialog.text = DLG_TEXT[165] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[166])]) + DLG_TEXT[167];
 			Link.l1 = DLG_TEXT[168];
 			Link.l1.go = "both_talk_with_Silehard_4";
@@ -668,7 +671,9 @@ void ProcessDialogEvent()
 			pchar.quest.return_to_lighthouse_search_rheims.win_condition = "return_to_lighthouse_search_rheims_complete";
 			AddQuestRecord("move_prisoner_from_greenford", 3);
 			CloseQuestHeader("move_prisoner_from_greenford");
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("again_find_rheims", 2);
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "incas_collection_complete_node":

@@ -838,8 +838,16 @@ void Add_KR_Characters()
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade1");
 	ch.equip.blade = "blade1";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
     //JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {		// LDH added check
 		TakenItems(ch, "gunpowder", 1 + rand(2));

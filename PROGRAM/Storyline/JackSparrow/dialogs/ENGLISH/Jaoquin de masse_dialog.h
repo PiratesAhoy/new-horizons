@@ -21,7 +21,7 @@ string DLG_TEXT[26] = {
 "The Crimson Blood, I will continue to sail my beloved Pearl!",
 "Take the #scursed_ship# while I sail the Crimson Blood.",
 "I think I will sink the ship actually.",
-"Captain, I think we should commandeer this ship, I can take over command of it or the Pearl, what say you?",
+"Captain, I think we should commandeer this ship, I can take over command of it or the #sship#, what say you?",
 "I shall think about it.",
 "I have to leave you now captain. Farewell.",
 "Goodbye.",

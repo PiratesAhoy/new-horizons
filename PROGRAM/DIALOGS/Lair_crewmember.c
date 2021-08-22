@@ -138,7 +138,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Meeting":
-				d.Text = DLG_TEXT[17] + DLG_TEXT[18];
+				d.Text = DLG_TEXT[17] + DLG_TEXT[18] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "?";
 				Link.l1 = DLG_TEXT[19] + DLG_TEXT[20];
 				Link.l1.go = "Wait_Time";
 				Link.l2 = DLG_TEXT[26];

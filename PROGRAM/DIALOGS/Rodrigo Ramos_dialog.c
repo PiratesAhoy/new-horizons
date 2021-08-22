@@ -84,15 +84,15 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[26];
 			if (checkQuestAttribute("mayan_temple", "find_guide"))
 			{
-				link.l9 = DLG_TEXT[114];
+				link.l9 = DLG_TEXT[57];
 				link.l9.go = "temple_guide";
 			}
 			if (!CheckQuestAttribute("generate_convoy_quest_progress", "begin") && npchar.work != lastspeak_date)
 			{
-				link.l10 = DLG_TEXT[41];
+				link.l10 = DLG_TEXT[27];
 				link.l10.go = "convoy";
 			}
-			link.l99 = DLG_TEXT[42];
+			link.l99 = DLG_TEXT[28];
 			link.l99.go = "node_1";
 		break;
 		
@@ -100,10 +100,10 @@ void ProcessDialogEvent()
 			if (makeint(environment.time) > 22.0 || makeint(environment.time) < 10.0)
 			{
 				dialog.snd = "Voice\CLBU\CLBU022";
-				Dialog.text = DLG_TEXT[86];
-				link.l1 = DLG_TEXT[87];
+				Dialog.text = DLG_TEXT[29];
+				link.l1 = DLG_TEXT[30];
 				link.l1.go = "room";
-				link.l2 = DLG_TEXT[88];
+				link.l2 = DLG_TEXT[31];
 				link.l2.go = "quests";
 			}
 			else
@@ -121,18 +121,18 @@ void ProcessDialogEvent()
 
 		case "room":
 			dialog.snd = "Voice\CLBU\CLBU023";
-			dialog.text = DLG_TEXT[89];
+			dialog.text = DLG_TEXT[32];
 			string roomWait = "";
 			if (makeint(environment.time) >= 22.0 || makeint(environment.time) < 10.0)
 			{
 				roomWait = "eveningwait";
-				link.l1 = DLG_TEXT[90];
+				link.l1 = DLG_TEXT[33];
 				link.l1.go = "room_day";
 			}
 			else
 			{
 				roomWait = "daywait";
-				link.l1 = DLG_TEXT[91];
+				link.l1 = DLG_TEXT[34];
 				link.l1.go = "room_night";
 			}
 			link.l2 = XI_ConvertString("Until tomorrow") + " " + XI_ConvertString(roomWait) + ".";
@@ -141,15 +141,15 @@ void ProcessDialogEvent()
 
 		case "room_24":
 			dialog.snd = "Voice\ANLE\ANLE014";
-			Dialog.text = DLG_TEXT[92];
+			Dialog.text = DLG_TEXT[35];
 			if (makeint(pchar.money) >= 5)
 			{
-				link.l1 = DLG_TEXT[93];
+				link.l1 = DLG_TEXT[36];
 				link.l1.go = "room_24_wait";
 			}
-			link.l2 = pcharrepphrase(DLG_TEXT[94], DLG_TEXT[95]);
+			link.l2 = pcharrepphrase(DLG_TEXT[37], DLG_TEXT[38]);
 			link.l2.go = "hall_24_wait";
-			link.l3 = DLG_TEXT[96];
+			link.l3 = DLG_TEXT[39];
 			link.l3.go = "second time";
 		break;
 
@@ -173,29 +173,29 @@ void ProcessDialogEvent()
 
 		case "room_day":
 			dialog.snd = "Voice\CLBU\CLBU024";
-			Dialog.text = DLG_TEXT[92];
+			Dialog.text = DLG_TEXT[35];
 			if (makeint(pchar.money) >= 5)
 			{
-				link.l1 = DLG_TEXT[93];
+				link.l1 = DLG_TEXT[36];
 				link.l1.go = "room_day_wait";
 			}
-			link.l2 = pcharrepphrase(DLG_TEXT[94], DLG_TEXT[95]);
+			link.l2 = pcharrepphrase(DLG_TEXT[37], DLG_TEXT[38]);
 			link.l2.go = "hall_day_wait";
-			link.l3 = DLG_TEXT[96];
+			link.l3 = DLG_TEXT[39];
 			link.l3.go = "second time";
 		break;
 
 		case "room_night":
 			dialog.snd = "Voice\CLBU\CLBU025";
-			Dialog.text = DLG_TEXT[97];
+			Dialog.text = DLG_TEXT[40];
 			if (makeint(pchar.money) >= 5)
 			{
-				link.l1 = DLG_TEXT[98];
+				link.l1 = DLG_TEXT[41];
 				link.l1.go = "room_night_wait";
 			}
-			link.l2 = pcharrepphrase(DLG_TEXT[99], DLG_TEXT[100]);
+			link.l2 = pcharrepphrase(DLG_TEXT[42], DLG_TEXT[43]);
 			link.l2.go = "hall_night_wait";
-			link.l3 = DLG_TEXT[101];
+			link.l3 = DLG_TEXT[44];
 			link.l3.go = "second time";
 		break;
 
@@ -242,8 +242,8 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\CLBU\CLBU026";
-			dialog.text = DLG_TEXT[102];
-			link.l1 = DLG_TEXT[103];
+			dialog.text = DLG_TEXT[45];
+			link.l1 = DLG_TEXT[46];
 			link.l1.go = "exit_sit";
 		break;
 
@@ -257,24 +257,24 @@ void ProcessDialogEvent()
 			npchar.work = lastspeak_date;
 			if (GetCompanionIndex(pchar,1) != -1 && GetCompanionIndex(pchar,2) != -1 && GetCompanionIndex(pchar,3) != -1)
 			{
-				dialog.text = DLG_TEXT[104];
-				link.l1 = DLG_TEXT[105];
+				dialog.text = DLG_TEXT[47];
+				link.l1 = DLG_TEXT[48];
 				link.l1.go = "exit";
 			}
 			else
 			{
 				if (GetNationRelation2MainCharacter(GetCurrentLocationNation()) == RELATION_ENEMY) // KK
 				{
-					dialog.text = DLG_TEXT[106];
-					link.l1 = DLG_TEXT[107];
+					dialog.text = DLG_TEXT[49];
+					link.l1 = DLG_TEXT[50];
 					link.l1.go = "exit";
 				}
 				else
 				{
 					if (makeint(pchar.reputation) <25)
 					{
-						dialog.text = DLG_TEXT[108];
-						link.l1 = DLG_TEXT[109];
+						dialog.text = DLG_TEXT[51];
+						link.l1 = DLG_TEXT[52];
 						link.l1.go = "exit";
 					}
 					else
@@ -282,16 +282,16 @@ void ProcessDialogEvent()
 						int randomGod = rand(1);
 						if (randomGod == 1)
 						{
-							dialog.text = DLG_TEXT[110];
-							link.l1 = DLG_TEXT[111];
+							dialog.text = DLG_TEXT[53];
+							link.l1 = DLG_TEXT[54];
 							link.l1.go = "exit";
 							AddDialogExitQuest("prepare_for_convoy_quest");
 							
 						}
 						else
 						{
-							dialog.text = DLG_TEXT[112];
-							link.l1 = DLG_TEXT[113];
+							dialog.text = DLG_TEXT[55];
+							link.l1 = DLG_TEXT[56];
 							link.l1.go = "exit";
 						}
 					}
@@ -300,8 +300,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "temple_guide":
-			dialog.text = DLG_TEXT[115];
-			link.l1 = DLG_TEXT[116];
+			dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
 			link.l1.go = "Exit";
 		break;
 	}

@@ -43,6 +43,7 @@ void ProcessDialogEvent()
 		
 		//Added by Levis for the smugglers guild -->
 		case "LookAtThis":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[10];
 			Link.l1 = DLG_TEXT[11];
 			Link.l1.go = "Exit2";

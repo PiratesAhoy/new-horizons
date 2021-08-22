@@ -335,7 +335,7 @@ void SetCharacterGoods(ref _refCharacter,int _Goods,int _Quantity)
 	_refCharacter.Ship.Cargo.Goods.(goodsName) = _Quantity;
 	int curLoad = RecalculateCargoLoad(_refCharacter);
 	int maxLoad = GetCargoMaxSpace(_refCharacter);
-	if(curLoad>maxLoad)
+	if(curLoad>maxLoad && _Quantity>0)
 	{
 // KK -->
 		//Trace("ERROR! Cargo space overup (character=" + _refCharacter.index + ",Quantity=" + _Quantity + ", curload=" + curLoad + ",maxload=" + maxLoad + ")"); // NK 05-04-06
@@ -2402,7 +2402,8 @@ string GetRankNameDirect(ref char, int iNation, int rank)
 		if(CheckAttribute(Nations[PIRATE],"Ranks."+rn))		return Nations[PIRATE].Ranks.(rn);		// PB: Fame Levels
 	}
 
-	if (ProfessionalNavyNation() == iNation)
+//	if (ProfessionalNavyNation() == iNation)
+	if (ProfessionalNavyNationChar(char) == iNation)	// GR: Look at whether this char, not player char, is in the navy
 	{
 		if(CheckAttribute(Nations[iNation],"Ranks."+rn))	return Nations[iNation].Ranks.(rn);		// NK: Navy Ranks
 	}
@@ -2797,6 +2798,8 @@ float GetFame(ref pchar, int iNation)
 	if(iNation == PIRATE) { points *= (FAME_PIRNATION_CSR_BASE+ lastcsr * FAME_PIRNATION_CSR_SCALAR); } // NK 04-09-06 so if querying fame with nation pirate, csr counts.
 	points *= FAME_SCALAR;
 	if(crew) points = 0.1 + sqrt(sqrt(pow(points,1.5))) / 10.0;
+	string fame_name = "extra_fame" + iNation
+	if (CheckAttribute(pchar, fame_name)) points += (stf(pchar.(fame_name))*FAME_SCALAR); // PB: Add extra fame for quest purposes
 	return points;
 }
 
@@ -3692,16 +3695,44 @@ void SetRandomNameToCharacter(ref rCharacter)
 			if(rCharacter.sex != "woman") rNames = &sPoManNames;
 			rLastNames = &sPoFamilies;
 		break;
-		case AMERICA:
-			rNames = &sAmWomenNames;
-			if(rCharacter.sex != "woman") rNames = &sAmManNames;
-			rLastNames = &sAmFamilies;
+		case GUEST1_NATION:
+			if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS && SWEDEN_ALLOWED){
+				rNames = &sSwWomenNames;
+				if(rCharacter.sex != "woman") rNames = &sSwManNames;
+				rLastNames = &sSwFamilies;
+			}
+			else{
+				rNames = &sAmWomenNames;
+				if(rCharacter.sex != "woman") rNames = &sAmManNames;
+				rLastNames = &sAmFamilies;
+			}
 		break;
+		/*case AMERICA:
+				rNames = &sAmWomenNames;
+				if(rCharacter.sex != "woman") rNames = &sAmManNames;
+				rLastNames = &sAmFamilies;
+		break;*/
+		/*case SWEDEN:
+			if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
+				rNames = &sSwWomenNames;
+				if(rCharacter.sex != "woman") rNames = &sSwManNames;
+				rLastNames = &sSwFamilies;
+			}
+		break;*/
 		// KK default:
 			rNames = &sEnWomenNames;
 			if(rCharacter.sex != "woman") rNames = &sEnManNames;
 			rLastNames = &sEnFamilies;
 	}
+	/*if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS && SWEDEN_ALLOWED){
+		switch(iNation){
+			case SWEDEN: 
+				rNames = &sSwWomenNames;
+				if(rCharacter.sex != "woman") rNames = &sSwManNames;
+				rLastNames = &sSwFamilies;
+			break;
+		}
+	}*/
 
 	if (GetArraySize(rNames) >= 2) //Quiliooto Fix
 	{

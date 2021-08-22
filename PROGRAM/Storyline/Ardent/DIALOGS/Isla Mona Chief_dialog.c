@@ -271,5 +271,135 @@ void ProcessDialogEvent()
 			link.l2 = DLG_TEXT[63];
 			link.l2.go = "bows_and_akellani3";
 		break;
+
+		case "what_have_you_done":
+			if(NPChar.quest.meeting == "0") dialog.text = DLG_TEXT[68] + DLG_TEXT[69];
+			else dialog.text = DLG_TEXT[68] + ", " + GetMyName(Pchar) + DLG_TEXT[69];
+			link.l1 = DLG_TEXT[70];
+			link.l1.go = "pirates_no_help";
+		break;
+
+		case "pirates_no_help":
+			dialog.text = DLG_TEXT[71];
+			link.l1 = DLG_TEXT[72];
+			link.l1.go = "actions_loud";
+		break;
+
+		case "actions_loud":
+			AddQuestRecord("Isla Mona Attack", 3);
+			dialog.text = DLG_TEXT[73];
+			link.l1 = DLG_TEXT[74];
+			link.l1.go = "exit";
+		break;
+
+		case "fort_taken":
+			if(NPChar.quest.meeting == "0") dialog.text = DLG_TEXT[75] + ".";
+			else dialog.text = DLG_TEXT[75] + ", " + GetMyName(Pchar) + ".";
+			link.l1 = DLG_TEXT[76];
+			link.l1.go = "as_i_feared";
+		break;
+
+		case "as_i_feared":
+			dialog.text = DLG_TEXT[77];
+			link.l1 = DLG_TEXT[78];
+			link.l1.go = "you_have_plan";
+		break;
+
+		case "you_have_plan":
+			dialog.text = DLG_TEXT[79];
+			link.l1 = DLG_TEXT[80];
+			link.l1.go = "if_they_attack_both";
+		break;
+
+		case "if_they_attack_both":
+			dialog.text = DLG_TEXT[81];
+			link.l1 = DLG_TEXT[82];
+			link.l1.go = "taino_not_warriors";
+		break;
+
+		case "taino_not_warriors":
+			dialog.text = DLG_TEXT[83];
+			link.l1 = DLG_TEXT[84];
+			link.l1.go = "this_will_be_legend";
+		break;
+
+		case "this_will_be_legend":
+			if(NPChar.quest.meeting == "0") dialog.text = DLG_TEXT[85] + DLG_TEXT[86];
+			else dialog.text = DLG_TEXT[85] + ", " + GetMyName(Pchar) + DLG_TEXT[86];
+			AddQuestRecord("Isla Mona Attack", 6);
+			if (CheckAttribute(PChar, "quest.mona_attack_prepare_for_battle") || GetCompanionQuantity(PChar) == 1)
+			{
+				link.l1 = DLG_TEXT[87];
+				AddDialogExitQuest("mona_attack_return_to_fort");
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[88];
+				PChar.quest.mona_attack_prepare_for_battle = "Taino done";
+			}
+			link.l1.go = "exit";
+		break;
+
+		case "dont_attack":
+			if (PChar.sex == "man") PreProcessor_Add("person", XI_ConvertString("man"));
+			else PreProcessor_Add("person", XI_ConvertString("woman"));
+			dialog.text = DLG_TEXT[89];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "why_you_in_uniform":
+			dialog.text = DLG_TEXT[90] + GetMyName(Pchar) + DLG_TEXT[91];
+			link.l1 = DLG_TEXT[92];
+			link.l1.go = "how_went_the_battle";
+		break;
+
+		case "how_went_the_battle":
+			dialog.text = DLG_TEXT[93];
+			link.l1 = DLG_TEXT[94];
+			link.l1.go = "after_the_battle";
+		break;
+
+		case "after_the_battle":
+			dialog.text = DLG_TEXT[95];
+			link.l1 = DLG_TEXT[96];
+			link.l1.go = "after_the_battle2";
+		break;
+
+		case "after_the_battle2":
+			dialog.text = DLG_TEXT[97];
+			link.l1 = DLG_TEXT[98];
+			link.l1.go = "after_the_battle3";
+		break;
+
+		case "after_the_battle3":
+			dialog.text = DLG_TEXT[99];
+			link.l1 = DLG_TEXT[100];
+			link.l1.go = "after_the_battle4";
+		break;
+
+		case "after_the_battle4":
+			dialog.text = DLG_TEXT[101];
+			link.l1 = DLG_TEXT[102];
+			link.l1.go = "after_the_battle5";
+		break;
+
+		case "after_the_battle5":
+			dialog.text = DLG_TEXT[103];
+			link.l1 = DLG_TEXT[104];
+			link.l1.go = "after_the_battle6";
+		break;
+
+		case "after_the_battle6":
+			dialog.text = DLG_TEXT[105];
+			link.l1 = DLG_TEXT[106];
+			link.l1.go = "after_the_battle7";
+		break;
+
+		case "after_the_battle7":
+			dialog.text = DLG_TEXT[107];
+			link.l1 = DLG_TEXT[108];
+			link.l1.go = "exit";
+		break;
 	}
 }

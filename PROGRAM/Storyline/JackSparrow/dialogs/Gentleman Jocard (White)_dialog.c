@@ -49,7 +49,13 @@ void ProcessDialogEvent()
 				Link.l1.go = "exit";
 				AddDialogExitQuest("not_killing_PL");
 
-				if (GetAttribute(Pchar, "Jack") == "Pirate_Lord" && GetAttribute(Pchar, "Turks") == "Brotherhood")
+//				if (GetAttribute(Pchar, "Jack") == "Pirate_Lord" && GetAttribute(Pchar, "Turks") == "Brotherhood")
+				{
+					Link.l2 = DLG_TEXT[2];
+					Link.l2.go = "kill_him";
+					NPC_meeting = "1";
+				}
+				if (CheckQuestAttribute("pirate_lord", "true"))		// GR: Unfair to block this because you picked the "Brock/Brinkley" start
 				{
 					Link.l2 = DLG_TEXT[2];
 					Link.l2.go = "kill_him";
@@ -61,7 +67,8 @@ void ProcessDialogEvent()
 				d.Text = DLG_TEXT[0];
 				Link.l1 = DLG_TEXT[1];
 				Link.l1.go = "exit";
-				if (GetAttribute(Pchar, "Jack") == "Pirate_Lord" && GetAttribute(Pchar, "Turks") == "Brotherhood")
+//				if (GetAttribute(Pchar, "Jack") == "Pirate_Lord" && GetAttribute(Pchar, "Turks") == "Brotherhood")
+				if (CheckQuestAttribute("pirate_lord", "true"))		// GR: Unfair to block this because you picked the "Brock/Brinkley" start
 				{
 					Link.l2 = DLG_TEXT[3];
 					Link.l2.go = "kill_him";

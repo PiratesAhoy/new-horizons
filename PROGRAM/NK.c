@@ -570,7 +570,16 @@ void GivePromotionReward(int iNation)
 	int PlayerRank     = GetRank(pchar, iNation);
 
 	// Nations Relations Tutorial
-	if (!CheckCharacterItem(pchar, "relationbook")) GiveItem2Character(pchar, "relationbook");
+	if (!CheckAttribute(pchar, "Got_Relation_Book") && iNation != PIRATE)
+	{
+		GiveItem2Character(pchar, "relationbook");
+		PChar.Got_Relation_Book = true;
+	}
+	if (!CheckAttribute(pchar, "Got_Pirate_Book") && iNation == PIRATE)
+	{
+		GiveItem2Character(pchar, "piratebook");
+		PChar.Got_Pirate_Book = true;
+	}
 
 	// Sword and Abilities
 	GiveSwordAndPerks(PlayerRank, iNation);
@@ -841,7 +850,7 @@ void GivePromotionReward(int iNation)
 					switch (GetMySimpleName(PChar))
 					{
 						case "Horatio Hornblower":
-							GiveShip2Character(PChar, "HMS_Bellona", "Sutherland", -1, ENGLAND, true, true); // Bellona class 3rd Rate
+							GiveShip2Character(PChar, "RN_Superbe", "Sutherland", -1, FRANCE, true, true); // Superbe class 3rd Rate, captured from French and given to Hornblower
 						break;
 						case "Theodore Groves":
 							GiveShip2Character(PChar, "HMS_Dauntless", "Dauntless", -1, ENGLAND, true, true); // Dauntless
@@ -1571,15 +1580,15 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_GOLDEN_AGE_OF_PIRACY:
-							GiveShip2Character(pchar, "Corvette1", "Étoile", -1, FRANCE, true, true); // Frigate
+							GiveShip2Character(pchar, "RN_RaaFrigate", "Étoile", -1, FRANCE, true, true); // Frigate
 						break;
 
 						case PERIOD_COLONIAL_POWERS:
-							GiveShip2Character(pchar, "Corvette47", "Iphigénie", -1, FRANCE, true, true); // Aurora class Frigate
+							GiveShip2Character(pchar, "Corvette1", "Iphigénie", -1, FRANCE, true, true); // Aurora class Frigate
 						break;
 
 						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "Corvette47", "Iphigénie", -1, FRANCE, true, true); // Aurora class Frigate
+							GiveShip2Character(pchar, "Corvette1", "Iphigénie", -1, FRANCE, true, true); // Aurora class Frigate
 						break;
 
 						case PERIOD_NAPOLEONIC:
@@ -1588,31 +1597,39 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 6: // Capitaine de Vaisseau
-					switch(GetCurrentPeriod())
+					switch (GetMySimpleName(PChar))
 					{
-						case PERIOD_EARLY_EXPLORERS:
-							GiveShip2Character(pchar, "FastGalleon2", "Asterix", -1, FRANCE, true, true); // Fast Galleon
+						case "François-Louis Rousselet":
+							GiveShip2Character(PChar, "WallerPinnace", "Le Saint Louis", -1, FRANCE, true, true); // Heavy Pinnace of War
 						break;
 
-						case PERIOD_THE_SPANISH_MAIN:
-							GiveShip2Character(pchar, "FastGalleon2", "Asterix", -1, FRANCE, true, true); // Fast Galleon
-						break;
+						//default:
+						switch(GetCurrentPeriod())
+						{
+							case PERIOD_EARLY_EXPLORERS:
+								GiveShip2Character(pchar, "FastGalleon2", "Asterix", -1, FRANCE, true, true); // Fast Galleon
+							break;
 
-						case PERIOD_GOLDEN_AGE_OF_PIRACY:
-							GiveShip2Character(pchar, "FR_Frigate", "Méduse", -1, FRANCE, true, true); // Rossiya Frigate
-						break;
+							case PERIOD_THE_SPANISH_MAIN:
+								GiveShip2Character(pchar, "FastGalleon2", "Asterix", -1, FRANCE, true, true); // Fast Galleon
+							break;
 
-						case PERIOD_COLONIAL_POWERS:
-							GiveShip2Character(pchar, "FR_Boussole", "Richelieu", -1, FRANCE, true, true); // Advanced Frigate
-						break;
+							case PERIOD_GOLDEN_AGE_OF_PIRACY:
+								GiveShip2Character(pchar, "FR_Frigate", "Méduse", -1, FRANCE, true, true); // Rossiya Frigate
+							break;
 
-						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "FR_BattleFrigate", "Achéron", -1, FRANCE, true, true); // Artémise class Frigate
-						break;
+							case PERIOD_COLONIAL_POWERS:
+								GiveShip2Character(pchar, "FR_Boussole", "Richelieu", -1, FRANCE, true, true); // Advanced Frigate
+							break;
 
-						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "FR_BattleFrigate", "Achéron", -1, FRANCE, true, true); // Artémise class Frigate
-						break;
+							case PERIOD_REVOLUTIONS:
+								GiveShip2Character(pchar, "FR_BattleFrigate", "Achéron", -1, FRANCE, true, true); // Artémise class Frigate
+							break;
+
+							case PERIOD_NAPOLEONIC:
+								GiveShip2Character(pchar, "FR_BattleFrigate", "Achéron", -1, FRANCE, true, true); // Artémise class Frigate
+							break;
+						}
 					}
 				break;
 				case 7: // Contre-Amiral
@@ -1650,54 +1667,70 @@ void GivePromotionReward(int iNation)
 						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
 				break;
 				case 8: // Vice-Amiral
-					switch(GetCurrentPeriod())
+					switch (GetMySimpleName(PChar))
 					{
-						case PERIOD_EARLY_EXPLORERS:
-							GiveShip2Character(pchar, "Galeon1", "Forte", -1, FRANCE, true, true); // Royal Manila Galleon
+						case "François-Louis Rousselet":
+							GiveShip2Character(PChar, "FR_SoleilRoyal", "Dauphin Royal", -1, FRANCE, true, true); // Heavy Pinnace of War
 						break;
+
+						//default:
+						switch(GetCurrentPeriod())
+						{
+							case PERIOD_EARLY_EXPLORERS:
+								GiveShip2Character(pchar, "Galeon1", "Forte", -1, FRANCE, true, true); // Royal Manila Galleon
+							break;
 							case PERIOD_THE_SPANISH_MAIN:
-							GiveShip2Character(pchar, "HeavyLineship", "Maillé Brézé", -1, FRANCE, true, true); // Pinnace-of-War
-						break;
+								GiveShip2Character(pchar, "HeavyLineship", "Maillé Brézé", -1, FRANCE, true, true); // Pinnace-of-War
+							break;
 							case PERIOD_GOLDEN_AGE_OF_PIRACY:
-							GiveShip2Character(pchar, "FR_Fleuron", "Le Fleuron", -1, FRANCE, true, true); // Fleuron class 3rd Rate
-						break;
+								GiveShip2Character(pchar, "FR_Fleuron", "Le Fleuron", -1, FRANCE, true, true); // Fleuron class 3rd Rate
+							break;
 							case PERIOD_COLONIAL_POWERS:
-							GiveShip2Character(pchar, "FR_Fleuron", "Le Fleuron", -1, FRANCE, true, true); // Fleuron class 3rd Rate
-						break;
+								GiveShip2Character(pchar, "FR_Fleuron", "Le Fleuron", -1, FRANCE, true, true); // Fleuron class 3rd Rate
+							break;
 							case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "FR_Superbe", "Redoutable", -1, FRANCE, true, true); // America class 3rd Rate
-						break;
+								GiveShip2Character(pchar, "FR_Superbe", "Redoutable", -1, FRANCE, true, true); // America class 3rd Rate
+							break;
 							case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "FR_Bellona", "Téméraire", -1, FRANCE, true, true); // Bellona class 3rd Rate
-						break;
+								GiveShip2Character(pchar, "FR_Bellona", "Téméraire", -1, FRANCE, true, true); // Bellona class 3rd Rate
+							break;
+						}
 					}
 				break;
 				case 9: // Vice-Amiral d'Escadre
-					switch(GetCurrentPeriod())
+					switch (GetMySimpleName(PChar))
 					{
-						case PERIOD_EARLY_EXPLORERS:
-							GiveShip2Character(pchar, "Galeon50", "Brennus", -1, FRANCE, true, true); // War Galleon
+						case "François-Louis Rousselet":
+							// Nothing on purpose
 						break;
 
-						case PERIOD_THE_SPANISH_MAIN:
-							GiveShip2Character(pchar, "Battleship2", "Challenger", -1, FRANCE, true, true); // 3rd Rate Battleship
-						break;
+						//default:
+						switch(GetCurrentPeriod())
+						{
+							case PERIOD_EARLY_EXPLORERS:
+								GiveShip2Character(pchar, "Galeon50", "Brennus", -1, FRANCE, true, true); // War Galleon
+							break;
 
-						case PERIOD_GOLDEN_AGE_OF_PIRACY:
-							GiveShip2Character(pchar, "FR_Belette", "Le Terrible", -1, FRANCE, true, true); // Superior Warship
-						break;
+							case PERIOD_THE_SPANISH_MAIN:
+								GiveShip2Character(pchar, "Battleship2", "Challenger", -1, FRANCE, true, true); // 3rd Rate Battleship
+							break;
 
-						case PERIOD_COLONIAL_POWERS:
-							GiveShip2Character(pchar, "FR_Trinity", "Triomphant", -1, FRANCE, true, true); // Trinity class 2nd Rate
-						break;
+							case PERIOD_GOLDEN_AGE_OF_PIRACY:
+								GiveShip2Character(pchar, "FR_Belette", "Le Terrible", -1, FRANCE, true, true); // Superior Warship
+							break;
 
-						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "FR_FirstRate", "Bucentaure", -1, FRANCE, true, true); // Victory class 1st Rate
-						break;
+							case PERIOD_COLONIAL_POWERS:
+								GiveShip2Character(pchar, "FR_Trinity", "Triomphant", -1, FRANCE, true, true); // Trinity class 2nd Rate
+							break;
 
-						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "FR_FirstRate", "Bucentaure", -1, FRANCE, true, true); // Victory class 1st Rate
-						break;
+							case PERIOD_REVOLUTIONS:
+								GiveShip2Character(pchar, "FR_FirstRate", "Bucentaure", -1, FRANCE, true, true); // Victory class 1st Rate
+							break;
+
+							case PERIOD_NAPOLEONIC:
+								GiveShip2Character(pchar, "FR_FirstRate", "Bucentaure", -1, FRANCE, true, true); // Victory class 1st Rate
+							break;
+						}
 					}
 				break;
 				case 10: // Amiral
@@ -3034,6 +3067,7 @@ void GivePromotionReward(int iNation)
 
 void GiveSwordAndPerks(int PlayerRank, int iNation)
 {
+	string PCharTitle; // DeathDaisy
 	ref pchar = GetMainCharacter();
 	ref ch;
 	string qual = "";
@@ -3093,8 +3127,8 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 					EquipCharacterByItem(pchar,"blade43"+qual);
 				break;
 				case PIRATE:
-					GiveItem2Character(pchar,"blade34+2"); // Dragon's Head
-					EquipCharacterByItem(pchar,"blade34+2");
+					GiveItem2Character(pchar,"blade34"+qual); // Dragon's Head
+					EquipCharacterByItem(pchar,"blade34"+qual);
 				break;
 			}
 		break;
@@ -3113,8 +3147,19 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 		break;
 		case 6: // Captain
 		break;
-		case 7: // Commodore/Knight
-			if (iNation == ENGLAND) SetRankTitle(PChar, TranslateString("", "Sir"));
+		case 7:		// Commodore/Knight
+			if (iNation == ENGLAND) 
+			{
+				// DeathDaisy -->
+				if (PChar.sex == "woman"){
+					PCharTitle = "Lady";
+				}
+				else{
+					PCharTitle = "Sir";
+				}
+				// DeathDaisy <--
+				SetRankTitle(PChar, TranslateString("", PCharTitle));
+			}
 			switch(PlayerType)
 			{
 				case 1: UnlockPerkCharacter(PChar ,"Troopers");			break;	// Privateer
@@ -3824,8 +3869,21 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 					ch.lastname = TranslateString("","Mowett");
 				break;
 				case "Horatio Hornblower":
-					ch.name = TranslateString("","William");
-					ch.lastname = TranslateString("","Bush");
+					if(GetCharacterIndex("Lt. William Bush") != -1)	// If a real Lt. Bush exists, use him
+					{
+						RemoveOfficersIndex(PChar, ch);
+						RemovePassenger(PChar, ch);
+						ch = CharacterFromID("Lt. William Bush");
+						LAi_SetOfficerType(ch);
+						AddPassenger(PChar, ch, false);
+					}
+					else							// otherwise create a fake one
+					{
+						SetModelFromID(ch, "BushLtn_18");
+						ch.name = TranslateString("","William");
+						ch.lastname = TranslateString("","Bush");
+						SetRank(ch, ENGLAND, 4);
+					}
 				break;
 				case "James Norrington":
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_FIRSTMATE, "Groves", 3, iNation, false);
@@ -3863,6 +3921,22 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_CARPENTER, "will_2", 3, iNation, false);
 					ch.name = TranslateString("","William");
 					ch.lastname = TranslateString("","Orswood");
+				break;
+
+				case "Horatio Hornblower":
+					if(GetCharacterIndex("Lieutenant Gerard") != -1)	// If a real Lieutenant Gerard exists, use him
+					{
+						ch = CharacterFromID("Lieutenant Gerard");
+						LAi_SetOfficerType(ch);
+						AddPassenger(PChar, ch, false);
+					}
+					else							// otherwise create a fake one
+					{
+						ch = CreateOfficer_Cheat(OFFIC_TYPE_CARPENTER, "brtlut2_18", 3, iNation, false);
+						ch.name = TranslateString("","Lieutenant");;
+						ch.lastname = TranslateString("","Gerard");
+						SetRank(ch, ENGLAND, 3);
+					}
 				break;
 				ch = CreateOfficer_Cheat(OFFIC_TYPE_CARPENTER, GetRandomModelForTypeExSubCheck(1, OFFIC_TYPE_CARPENTER, "man", iNation), 3, iNation, false);
 			}
@@ -5007,7 +5081,8 @@ void SetUpChar_Cheat(ref ch, string otype)
 			ch.items.bladex4 = 1;
 			ch.items.blade1 = 1;
 			ch.items.potion1 = 22;
-			ch.items.pistol1 = 1;
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.items.pistol1 = 1;
+			else ch.items.pistol1a = 1;
 			ch.items.spyglass1 = 1;
 			ch.items.commonarmor = 1;
 			stmp = "blade19+2";

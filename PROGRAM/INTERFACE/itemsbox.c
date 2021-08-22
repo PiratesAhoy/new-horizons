@@ -149,248 +149,220 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 						else { whichInterface = "GunpowderBarrel"; }
 					}
 				}
-			//JRH -->
-				else
-				{
-					if(curLocId=="wr_library")
-					{
-						whichInterface = "BookShelf";
-					}
-					else
-					{
-						if(curLocId=="wr_residence")
-						{
-							if(boxName == "box1" || boxName == "box3")
-							{
-								whichInterface = "BookShelf";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="wr_study")
-						{
-							//if(boxName == "box5" || boxName == "box7" || boxName == "box8" || boxName == "box9" || boxName == "box10" || boxName == "box11")
-							if(boxName == "box5" || boxName == "box7")
-							{
-								whichInterface = "ItemsBox";
-							}
-							else
-							{
-								if(boxName == "box16")
-								{
-									whichInterface = "Rogerscorpse";
-								}
-							}
-							else
-							{
-								whichInterface = "BookShelf";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="Defoes_cabin")
-						{
-							if(boxName == "box2" || boxName == "box3")
-							{
-								whichInterface = "BookShelf";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="wr_farm_servant")
-						{
-							if(boxName == "box2")
-							{
-								whichInterface = "BookShelf";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="wr_church_inside" || curLocId=="GB_Charleston_church" || curLocId=="Turks_church")
-						{
-							if(boxName == "box1")
-							{
-								whichInterface = "CollectionBox";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="wr_secret")
-						{
-							if(boxName == "box1")
-							{
-								whichInterface = "StevensonChest";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="wr_cannon_tower")
-						{
-							if(boxName == "box1")
-							{
-								whichInterface = "GunpowderBarrel";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="wr_gunpowder")
-						{
-							if(boxName == "box3")
-							{
-								whichInterface = "GunpowderBarrel";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="Legrands_house")
-						{
-							if(boxName == "box7")
-							{
-								whichInterface = "BookShelf";
-							}
-							else
-							{
-								if(boxName == "box1" || boxName == "box3" || boxName == "box5"
-								|| boxName == "box6" || boxName == "box7")
-								{
-									whichInterface = "ItemsBox";
-								}
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="Legrands_attic")
-						{
-							if(boxName == "box6" || boxName == "box7" || boxName == "box8"
-							|| boxName == "box9" || boxName == "box10" || boxName == "box11"
-							|| boxName == "box12" || boxName == "box13")
-							{
-								whichInterface = "TreasureSack";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="Poe_bedroom")
-						{
-							if(boxName == "box2")
-							{
-								whichInterface = "BookShelf";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="Cartagena_church")
-						{
-							if(boxName == "box4")
-							{
-								whichInterface = "CollectionBox";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="Pym_drawing_room")
-						{
-							if(boxName == "box6" || boxName == "box7")
-							{
-								whichInterface = "BookShelf";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="Pym_bedroom")
-						{
-							if(boxName == "box5")
-							{
-								if(CheckAttribute(pch, "quest.pym_niche") && pch.quest.pym_niche == "open")
-								{
-									whichInterface = "BookShelf";
-								}
-								else whichInterface = "ItemsBox";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-					else
-					{
-						if(curLocId=="Pym_study")
-						{
-							if(boxName == "box2" || boxName == "box3" || boxName == "box7")
-							{
-								whichInterface = "BookShelf";
-							}
-							else
-							{
-								whichInterface = "ItemsBox";
-							}
-						}
-					}
-				}
-			//<-- JRH
 				else
 				{
 					if(HasSubStr(boxName, "box") && HasSubStr(curLoc, "locations\decks")) { whichInterface = "SeaBox"; }
 					else { whichInterface = "ItemsBox"; }
 				}
+
+			//JRH -->
+				switch (curLocId)
+				{				
+					case "wr_library":
+						whichInterface = "BookShelf";
+					break;
+
+					case "wr_residence":
+						if(boxName == "box1" || boxName == "box3")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "wr_study":
+						if(boxName == "box5" || boxName == "box7")
+						{
+							whichInterface = "ItemsBox";
+						}
+						
+						if(boxName == "box16") 
+						{
+							whichInterface = "Rogerscorpse";
+						}
+						
+						if(boxName == "box1" || boxName == "box2" || boxName == "box3"
+						|| boxName == "box4" || boxName == "box6")
+						{
+							whichInterface = "BookShelf";
+						}
+					break;
+
+					case "Defoes_cabin":
+						if(boxName == "box2" || boxName == "box3")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "wr_farm_servant":
+						if(boxName == "box2")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "wr_church_inside":
+						if(boxName == "box1")
+						{
+							whichInterface = "CollectionBox";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "GB_Charleston_church":
+						if(boxName == "box1")
+						{
+							whichInterface = "CollectionBox";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Turks_church":
+						if(boxName == "box1")
+						{
+							whichInterface = "CollectionBox";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "wr_secret":
+						if(boxName == "box1")
+						{
+							whichInterface = "StevensonChest";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "wr_cannon_tower":
+						if(boxName == "box1")
+						{
+							whichInterface = "GunpowderBarrel";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "wr_gunpowder":
+						if(boxName == "box3")
+						{
+							whichInterface = "GunpowderBarrel";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Legrands_house":
+						if(boxName == "box7")
+						{
+							whichInterface = "BookShelf";
+						}
+						else
+						{
+							if(boxName == "box1" || boxName == "box3" || boxName == "box5"
+							|| boxName == "box6" || boxName == "box7")
+							{
+								whichInterface = "ItemsBox";
+							}
+						}
+					break;
+
+					case "Legrands_attic":
+						if(boxName == "box6" || boxName == "box7" || boxName == "box8"
+						|| boxName == "box9" || boxName == "box10" || boxName == "box11"
+						|| boxName == "box12" || boxName == "box13")
+						{
+							whichInterface = "TreasureSack";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Poe_bedroom":
+						if(boxName == "box2")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Cartagena_church":
+						if(boxName == "box4")
+						{
+							whichInterface = "CollectionBox";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Pym_drawing_room":
+						if(boxName == "box6" || boxName == "box7")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Pym_bedroom":
+						if(boxName == "box5")
+						{
+							if(CheckAttribute(pch, "quest.pym_niche") && pch.quest.pym_niche == "open")
+							{
+								whichInterface = "BookShelf";
+							}
+							else whichInterface = "ItemsBox";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Pym_study":
+						if(boxName == "box2" || boxName == "box3" || boxName == "box7")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Kristiania_townhall_entre":
+						if(boxName == "box4" || boxName == "box5")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+					
+					case "Kristiania_townhall":
+						if(boxName == "box4" || boxName == "box5")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Redhouse_room":
+						if(boxName == "box1" || boxName == "box2")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "Kristiania_cathedral":
+						if(boxName == "box6")
+						{
+							whichInterface = "CollectionBox";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "BB_sloop_wreck_hold":
+						if(boxName == "box1")
+						{
+							whichInterface = "GunpowderStorage_JRH";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+				}
+			//<-- JRH
+				
 			}
 		//changed by MAXIMUS: box-labels weren't right -->
 
@@ -432,7 +404,16 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 				isGunpowder = false;
 				isItemsBox = true;
 				break;
+
+			case "GunpowderStorage_JRH":
+				//empty
+				GameInterface.title = "titleGunpowderStorage";
+				PlaySound("AMBIENT\JAIL\door_003.wav");
+				isGunpowder = false;
+				isItemsBox = true;
+				break;
 		    //<-- JRH
+
 			case "Weaponslocker":
 				GameInterface.title = "titleWeaponslocker";
 				PlaySound("AMBIENT\JAIL\door_003.wav");// was door_002 which is corrupted in a way
@@ -483,69 +464,20 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 				|| Locations[FindLocation(pch.location)].id == "Cartagena_hotel_room3" || Locations[FindLocation(pch.location)].id == "Cartagena_hotel_room4"
 				|| Locations[FindLocation(pch.location)].id == "Cartagena hotel" || Locations[FindLocation(pch.location)].id == "Cartagena_hotel_office"
 				|| Locations[FindLocation(pch.location)].id == "Cartagena_hotel_private" || Locations[FindLocation(pch.location)].id == "Cartagena_hotel_attic"
-				|| Locations[FindLocation(pch.location)].id == "bb_Maltains")
+				|| Locations[FindLocation(pch.location)].id == "bb_Maltains" || Locations[FindLocation(pch.location)].id == "bb_Eden_estate"
+				|| Locations[FindLocation(pch.location)].id == "bb_Eden_bedroom1" || Locations[FindLocation(pch.location)].id == "bb_Eden_attic2"
+				|| Locations[FindLocation(pch.location)].id == "bb_Eden_attic3" || Locations[FindLocation(pch.location)].id == "Oriel_room"
+				|| Locations[FindLocation(pch.location)].id == "Redhouse_entre" || Locations[FindLocation(pch.location)].id == "Redhouse_room"
+				|| Locations[FindLocation(pch.location)].id == "Kristiania_townhall_entre" || Locations[FindLocation(pch.location)].id == "Kristiania_townhall"
+				|| Locations[FindLocation(pch.location)].id == "NS_hidden_town_priest" || Locations[FindLocation(pch.location)].id == "Kristiania_shipyard"
+				|| Locations[FindLocation(pch.location)].id == "Kristiania_fort_commander" || Locations[FindLocation(pch.location)].id == "Nueva_Suecia_tailor_upstairs"
+				|| Locations[FindLocation(pch.location)].id == "Kristiania_cathedral" || Locations[FindLocation(pch.location)].id == "wr_shop"
+				|| Locations[FindLocation(pch.location)].id == "church_choir" || Locations[FindLocation(pch.location)].id == "Legrands_attic"
+				|| Locations[FindLocation(pch.location)].id == "wr_farm_bedroom" || Locations[FindLocation(pch.location)].id == "Turks_tavern_bedroom"
+				|| Locations[FindLocation(pch.location)].id == "bb_Eden_office" || Locations[FindLocation(pch.location)].id == "Citadel_tower_bedroom")
 				{
 					//sounds generated in item_logic
 				}
-				else
-				{
-					if(Locations[FindLocation(pch.location)].id == "wr_shop")
-					{
-						if(boxName == "box13")
-						{
-							//sounds generated in item_logic
-						}
-						else
-						{
-							PlaySound("AMBIENT\JAIL\door_003.wav");	//standard
-						}
-					}
-				}
-				else
-				{
-					if(Locations[FindLocation(pch.location)].id == "church_choir")
-					{
-						if(boxName == "box1" || boxName == "box3" || boxName == "box5")
-						{
-							//sounds generated in item_logic
-						}
-						else
-						{
-							PlaySound("AMBIENT\JAIL\door_003.wav");	//standard
-						}
-					}
-				}
-				else
-				{
-					if(Locations[FindLocation(pch.location)].id == "Cartagena_center")
-					{
-						if(boxName == "box1" || boxName == "box2")
-						{
-							//sounds generated in item_logic
-						}
-						else
-						{
-							PlaySound("AMBIENT\JAIL\door_003.wav");	//standard
-						}
-					}
-				}
-				else
-				{
-					if(Locations[FindLocation(pch.location)].id == "Legrands_attic")
-					{
-						if(boxName == "box6" || boxName == "box7" || boxName == "box8" || boxName == "box9" 
-						|| boxName == "box10" || boxName == "box11" || boxName == "box12" || boxName == "box13")
-						{
-							//sounds generated in item_logic
-						}
-						else
-						{
-							PlaySound("AMBIENT\JAIL\door_003.wav");	//standard
-						}
-					}
-				}
-
-
 				else
 			    //<-- JRH
 				{
@@ -747,32 +679,31 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 				GameInterface.FACEPICT.pic1.img1 = "Enemy";
 				GameInterface.FACEPICT.pic1.tex1 = 2;
 			} else {
-
-
-		//JRH -->
-			if(curLocId=="wr_library")
-			{
-				CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
-			}
-			else
-			{
-				if(curLocId=="wr_residence")
-				{
-					if(boxName == "box1" || boxName == "box3")
-					{
-						CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
-					}
-					else
-					{
-						GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-						GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-						GameInterface.FACEPICT.pic1.tex1 = 3;
-					}
-				}
 				else
 				{
-					if(curLocId=="wr_study")
-					{
+					//CreateImage("OtherPic","BOX_IMAGE","BoxImage",5,302,133,430);
+					GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
+					if (ownDeckStarted()) GameInterface.FACEPICT.pic1.str2 = "SeaBox";
+					if (LAi_IsBoardingProcess() && !IsFort && !IsTown) GameInterface.FACEPICT.pic1.str2 = "SeaBox";
+					GameInterface.FACEPICT.pic1.img1 = "BoxImage";
+					GameInterface.FACEPICT.pic1.tex1 = 3;
+				}
+
+				//JRH -->
+				switch (curLocId)
+				{
+					case "wr_library":
+						CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
+					break;
+			
+					case "wr_residence":
+						if(boxName == "box1" || boxName == "box3")
+						{
+							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
+						}
+					break;
+				
+					case "wr_study":
 						if(boxName == "box5" || boxName == "box7")
 						{
 							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
@@ -787,245 +718,148 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 							}
 						}
 						else CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
-					}
-				}
-				else
-				{
-					if(curLocId=="Defoes_cabin")
-					{
+					break;
+				
+					case "Defoes_cabin":
 						if(boxName == "box2" || boxName == "box3")
 						{
 							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="wr_farm_servant")
-					{
+					break;
+				
+					case "wr_farm_servant":
 						if(boxName == "box2")
 						{
 							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="wr_church_inside")
-					{
+					break;
+				
+					case "wr_church_inside":
 						if(boxName == "box1")
 						{
 							CreateImage("OtherPic","COLLECTION_IMAGE","CollectionImage",5,302,133,430);
 						}
 						else CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
-					}
-				}
-				else
-				{
-					if(curLocId=="wr_cannon_tower")
-					{
+					break;
+				
+					case "wr_cannon_tower":
 						if(boxName == "box1")
 						{
-							CreateImage("OtherPic","GOODS","Gunpowder",-5,292,143,450);//JRH gunpowder barrel
+							GameInterface.FACEPICT.pic1.str2 = "Gunpowder";
+							GameInterface.FACEPICT.pic1.img1 = "Gunpowder";
+							GameInterface.FACEPICT.pic1.tex1 = 1;
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="wr_gunpowder")
-					{
+					break;
+				
+					case "wr_gunpowder":
 						if(boxName == "box3")
 						{
-							CreateImage("OtherPic","GOODS","Gunpowder",-5,292,143,450);//JRH gunpowder barrel
+							GameInterface.FACEPICT.pic1.str2 = "Gunpowder";
+							GameInterface.FACEPICT.pic1.img1 = "Gunpowder";
+							GameInterface.FACEPICT.pic1.tex1 = 1;
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="GB_Charleston_church")
-					{
+					break;
+				
+					case "GB_Charleston_church":
 						if(boxName == "box1")
 						{
 							CreateImage("OtherPic","COLLECTION_IMAGE","CollectionImage",5,302,133,430);
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="Legrands_house")
-					{
+					break;
+				
+					case "Legrands_house":
 						if(boxName == "box7")
 						{
 							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="Legrands_attic")
-					{
+					break;
+				
+					case "Legrands_attic":
 						if(boxName == "box6" || boxName == "box7" || boxName == "box8" || boxName == "box9"
 						|| boxName == "box10" || boxName == "box11" || boxName == "box12" || boxName == "box13")
 						{
 							CreateImage("OtherPic","TREASURE_IMAGE","TreasureImage",5,302,133,430);//JRH treasuresack
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="Poe_bedroom")
-					{
+					break;
+				
+					case "Poe_bedroom":
 						if(boxName == "box2")
 						{
 							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="Cartagena_church")
-					{
+					break;
+				
+					case "Cartagena_church":
 						if(boxName == "box4")
 						{
 							CreateImage("OtherPic","COLLECTION_IMAGE","CollectionImage",5,302,133,430);
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="Pym_drawing_room")
-					{
+					break;
+				
+					case "Pym_drawing_room":
 						if(boxName == "box6" || boxName == "box7")
 						{
 							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="Pym_bedroom")
-					{
+					break;
+				
+					case "Pym_bedroom":
 						if(boxName == "box5")
 						{
 							if(CheckAttribute(pch, "quest.pym_niche") && pch.quest.pym_niche == "open")
 							{
 								CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
 							}
-							else 
-							{
-								GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-								GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-								GameInterface.FACEPICT.pic1.tex1 = 3;
-							}
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="Pym_study")
-					{
+					break;
+				
+					case "Pym_study":
 						if(boxName == "box2" || boxName == "box3" || boxName == "box7")
 						{
 							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
 						}
-						else
-						{
-							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-							GameInterface.FACEPICT.pic1.tex1 = 3;
-						}
-					}
-				}
-				else
-				{
-					if(curLocId=="Turks_church")
-					{
+					break;
+				
+					case "Turks_church":
 						if(boxName == "box1")
 						{
 							CreateImage("OtherPic","COLLECTION_IMAGE","CollectionImage",5,302,133,430);
 						}
 						else CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
-					}
-				}
-			}
-			//<-- JRH
+					break;
+				
+					case "Kristiania_townhall_entre":
+						if(boxName == "box4" || boxName == "box5")
+						{
+							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
+						}
+					break;
 
-				else
-				{
-					//CreateImage("OtherPic","BOX_IMAGE","BoxImage",5,302,133,430);
-					GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
-					if (ownDeckStarted()) GameInterface.FACEPICT.pic1.str2 = "SeaBox";
-					if (LAi_IsBoardingProcess() && !IsFort && !IsTown) GameInterface.FACEPICT.pic1.str2 = "SeaBox";
-					GameInterface.FACEPICT.pic1.img1 = "BoxImage";
-					GameInterface.FACEPICT.pic1.tex1 = 3;
+					case "Kristiania_townhall":
+						if(boxName == "box4" || boxName == "box5")
+						{
+							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
+						}
+					break;
+				
+					case "Redhouse_room":
+						if(boxName == "box1" || boxName == "box2")
+						{
+							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
+						}
+					break;
+				
+					case "BB_sloop_wreck_hold":
+						if(boxName == "box1")
+						{
+							GameInterface.FACEPICT.pic1.str2 = "Gunpowder";
+							GameInterface.FACEPICT.pic1.img1 = "Gunpowder";
+							GameInterface.FACEPICT.pic1.tex1 = 1;
+						}
+					break;
+				
 				}
-
+				//<-- JRH
 			}
 		}
 	} else {
@@ -2485,17 +2319,24 @@ void TakeItems(bool bMoreThanOneItem)
 			break;
 
 			case "pistolsalt":
-				int ps = GetCharacterItem(mchref, "pistolsalt");
-				
-				if(ps >= 2)
+				if(mchref.location == "wr_corv_crew")
 				{
-					Logit(TranslateString("","Two Salt Jars are enough!"));
-					PlaySound("INTERFACE\button2.wav");
+					if(amount >0) takeitem = true;
 				}
 				else
 				{
-					amount = 1;
-					if(amount >0) takeitem = true;
+					int ps = GetCharacterItem(mchref, "pistolsalt");
+				
+					if(ps >= 2)
+					{
+						Logit(TranslateString("","Two Salt Jars are enough!"));
+						PlaySound("INTERFACE\button2.wav");
+					}
+					else
+					{
+						amount = 1;
+						if(amount >0) takeitem = true;
+					}
 				}
 			break;
 
@@ -2541,15 +2382,22 @@ void TakeItems(bool bMoreThanOneItem)
 			break;
 
 			case "pistolnitre":
-				if(CheckCharacterItem(mchref,"pistolnitre"))
+				if(mchref.location == "wr_corv_smallcabin_R")
 				{
-					Logit(TranslateString("","One Nitre Sack is enough!"));
-					PlaySound("PEOPLE\clothes4.wav");
+					if(amount >0) takeitem = true;
 				}
 				else
 				{
-					amount = 1;
-					if(amount >0) takeitem = true;
+					if(CheckCharacterItem(mchref,"pistolnitre"))
+					{
+						Logit(TranslateString("","One Nitre Sack is enough!"));
+						PlaySound("PEOPLE\clothes4.wav");
+					}
+					else
+					{
+						amount = 1;
+						if(amount >0) takeitem = true;
+					}
 				}
 			break;
 
@@ -2881,16 +2729,15 @@ void TakeItems(bool bMoreThanOneItem)
 						GiveItem2Character(mchref, "pistolthrow5");
 						EquipCharacterByItem(mchref, "pistolthrow5");
 					}
-					else
+
+					if(CheckCharacterItem(GetMainCharacter(),"pistol202") && !CheckCharacterItem(GetMainCharacter(),"pistol201"))
 					{
-						if(CheckCharacterItem(GetMainCharacter(),"pistol202"))
-						{
-							TakeItemFromCharacter(mchref, "pistol202");
-							GiveItem2Character(mchref, "pistolthrow4");
-							EquipCharacterByItem(mchref, "pistolthrow4");
-						}
+						TakeItemFromCharacter(mchref, "pistol202");
+						GiveItem2Character(mchref, "pistolthrow4");
+						EquipCharacterByItem(mchref, "pistolthrow4");
 					}
-					else
+
+					if(!CheckCharacterItem(GetMainCharacter(),"pistol202"))
 					{
 						GiveItem2Character(mchref, "pistolthrow3");
 						EquipCharacterByItem(mchref, "pistolthrow3");
@@ -2947,25 +2794,24 @@ void TakeItems(bool bMoreThanOneItem)
 						GiveItem2Character(mchref, "pistolthrow5");
 						EquipCharacterByItem(mchref, "pistolthrow5");
 					}
-					else
+
+					if(CheckCharacterItem(GetMainCharacter(),"pistol202") && CheckCharacterItem(GetMainCharacter(),"pistol204")
+					&& !CheckCharacterItem(GetMainCharacter(),"pistol201"))
 					{
-						if(CheckCharacterItem(GetMainCharacter(),"pistol202") && CheckCharacterItem(GetMainCharacter(),"pistol204"))
-						{
-							TakeItemFromCharacter(mchref, "pistol202"); TakeItemFromCharacter(mchref, "pistol204");
-							GiveItem2Character(mchref, "pistolthrow4");
-							EquipCharacterByItem(mchref, "pistolthrow4");
-						}
+						TakeItemFromCharacter(mchref, "pistol202"); TakeItemFromCharacter(mchref, "pistol204");
+						GiveItem2Character(mchref, "pistolthrow4");
+						EquipCharacterByItem(mchref, "pistolthrow4");
 					}
-					else
+
+					if(CheckCharacterItem(GetMainCharacter(),"pistol204") && !CheckCharacterItem(GetMainCharacter(),"pistol202")
+					&& !CheckCharacterItem(GetMainCharacter(),"pistol201"))
 					{
-						if(CheckCharacterItem(GetMainCharacter(),"pistol204"))
-						{
-							TakeItemFromCharacter(mchref, "pistol204");
-							GiveItem2Character(mchref, "pistolthrow3");
-							EquipCharacterByItem(mchref, "pistolthrow3");
-						}
+						TakeItemFromCharacter(mchref, "pistol204");
+						GiveItem2Character(mchref, "pistolthrow3");
+						EquipCharacterByItem(mchref, "pistolthrow3");
 					}
-					else
+
+					if(!CheckCharacterItem(GetMainCharacter(),"pistol204"))
 					{
 						GiveItem2Character(mchref, "pistolthrow2");
 						EquipCharacterByItem(mchref, "pistolthrow2");
@@ -3023,36 +2869,33 @@ void TakeItems(bool bMoreThanOneItem)
 						GiveItem2Character(mchref, "pistolthrow5");
 						EquipCharacterByItem(mchref, "pistolthrow5");
 					}
-					else
+
+					if(CheckCharacterItem(GetMainCharacter(),"pistol202") && CheckCharacterItem(GetMainCharacter(),"pistol204")
+					&& CheckCharacterItem(GetMainCharacter(),"pistol205") && !CheckCharacterItem(GetMainCharacter(),"pistol201"))
 					{
-						if(CheckCharacterItem(GetMainCharacter(),"pistol202") && CheckCharacterItem(GetMainCharacter(),"pistol204")
-						&& CheckCharacterItem(GetMainCharacter(),"pistol205"))
-						{
-							TakeItemFromCharacter(mchref, "pistol202"); TakeItemFromCharacter(mchref, "pistol204");
-							TakeItemFromCharacter(mchref, "pistol205");
-							GiveItem2Character(mchref, "pistolthrow4");
-							EquipCharacterByItem(mchref, "pistolthrow4");
-						}
+						TakeItemFromCharacter(mchref, "pistol202"); TakeItemFromCharacter(mchref, "pistol204");
+						TakeItemFromCharacter(mchref, "pistol205");
+						GiveItem2Character(mchref, "pistolthrow4");
+						EquipCharacterByItem(mchref, "pistolthrow4");
 					}
-					else
+
+					if(CheckCharacterItem(GetMainCharacter(),"pistol204") && CheckCharacterItem(GetMainCharacter(),"pistol205")
+					&& !CheckCharacterItem(GetMainCharacter(),"pistol201") && !CheckCharacterItem(GetMainCharacter(),"pistol202"))
 					{
-						if(CheckCharacterItem(GetMainCharacter(),"pistol204") && CheckCharacterItem(GetMainCharacter(),"pistol205"))
-						{
-							TakeItemFromCharacter(mchref, "pistol204"); TakeItemFromCharacter(mchref, "pistol205");
-							GiveItem2Character(mchref, "pistolthrow3");
-							EquipCharacterByItem(mchref, "pistolthrow3");
-						}
+						TakeItemFromCharacter(mchref, "pistol204"); TakeItemFromCharacter(mchref, "pistol205");
+						GiveItem2Character(mchref, "pistolthrow3");
+						EquipCharacterByItem(mchref, "pistolthrow3");
 					}
-					else
+
+					if(CheckCharacterItem(GetMainCharacter(),"pistol205") && !CheckCharacterItem(GetMainCharacter(),"pistol204")
+					&& !CheckCharacterItem(GetMainCharacter(),"pistol201") && !CheckCharacterItem(GetMainCharacter(),"pistol202"))
 					{
-						if(CheckCharacterItem(GetMainCharacter(),"pistol205"))
-						{
-							TakeItemFromCharacter(mchref, "pistol205");
-							GiveItem2Character(mchref, "pistolthrow2");
-							EquipCharacterByItem(mchref, "pistolthrow2");
-						}
+						TakeItemFromCharacter(mchref, "pistol205");
+						GiveItem2Character(mchref, "pistolthrow2");
+						EquipCharacterByItem(mchref, "pistolthrow2");
 					}
-					else
+
+					if(!CheckCharacterItem(GetMainCharacter(),"pistol205"))
 					{
 						GiveItem2Character(mchref, "pistolthrow1");
 						EquipCharacterByItem(mchref, "pistolthrow1");
@@ -3095,73 +2938,87 @@ void TakeItems(bool bMoreThanOneItem)
 
 			if(itm2 == "drawing_kit")
 			{
-				if(!CheckCharacterPerk(mchref, "ShipSpeedUp"))
+				int learned_perk = 0;
+
+				if(!CheckCharacterPerk(mchref, "SailingProfessional") && learned_perk == 0)
 				{
-					mchref.perks.list.ShipSpeedUp = true;
-					mchref.quest.drawing_kit = "speed";
-				}
-				else
-				{
-					if(!CheckCharacterPerk(mchref, "ShipTurnRateUp"))
-					{
-						mchref.perks.list.ShipTurnRateUp = true;
-						mchref.quest.drawing_kit = "maneuver";
-					}
-				}
-				else
-				{
-					if(!CheckCharacterPerk(mchref, "Turn180"))
-					{
-						mchref.perks.list.Turn180 = true;
-						mchref.quest.drawing_kit = "turn180";
-					}
-				}
-				else
-				{
-					if(!CheckCharacterPerk(mchref, "SandbankManeuver"))
-					{
-						mchref.perks.list.SandbankManeuver = true;
-						mchref.quest.drawing_kit = "sandbank";
-					}
-				}
-				else
-				{
-					if(!CheckCharacterPerk(mchref, "StormProfessional"))
-					{
-						mchref.perks.list.StormProfessional = true;
-						mchref.quest.drawing_kit = "storm";
-					}
-				}
-				else
-				{
-					if(!CheckCharacterPerk(mchref, "SailingProfessional"))
+					if(CheckCharacterPerk(mchref, "SandbankManeuver") && CheckCharacterPerk(mchref, "StormProfessional"))
 					{
 						mchref.perks.list.SailingProfessional = true;
 						mchref.quest.drawing_kit = "seawolf";
+						learned_perk = 1;
 					}
 				}
-				else
+
+				if(!CheckCharacterPerk(mchref, "StormProfessional") && learned_perk == 0)
 				{
-					if(!CheckCharacterPerk(mchref, "BasicBattleState"))
+					if(CheckCharacterPerk(mchref, "ShipTurnRateUp") && CheckCharacterPerk(mchref, "ShipSpeedUp"))
 					{
-						mchref.perks.list.BasicBattleState = true;
-						mchref.quest.drawing_kit = "def1";
+						mchref.perks.list.StormProfessional = true;
+						mchref.quest.drawing_kit = "storm";
+						learned_perk = 1;
 					}
 				}
-				else
+
+				if(!CheckCharacterPerk(mchref, "SandbankManeuver") && learned_perk == 0)
 				{
-					if(!CheckCharacterPerk(mchref, "AdvancedBattleState"))
+					if(CheckCharacterPerk(mchref, "ShipTurnRateUp") && CheckCharacterPerk(mchref, "ShipSpeedUp"))
 					{
-						mchref.perks.list.AdvancedBattleState = true;
-						mchref.quest.drawing_kit = "def2";
+						mchref.perks.list.SandbankManeuver = true;
+						mchref.quest.drawing_kit = "sandbank";
+						learned_perk = 1;
 					}
 				}
-				else
+
+				if(!CheckCharacterPerk(mchref, "Turn180") && learned_perk == 0)
 				{
-					if(!CheckCharacterPerk(mchref, "ShipDefenceProfessional"))
+					if(CheckCharacterPerk(mchref, "ShipTurnRateUp"))
+					{
+						mchref.perks.list.Turn180 = true;
+						mchref.quest.drawing_kit = "turn180";
+						learned_perk = 1;
+					}
+				}
+
+				if(!CheckCharacterPerk(mchref, "ShipTurnRateUp") && learned_perk == 0)
+				{
+					mchref.perks.list.ShipTurnRateUp = true;
+					mchref.quest.drawing_kit = "maneuver";
+					learned_perk = 1;
+				}
+
+				if(!CheckCharacterPerk(mchref, "ShipSpeedUp") && learned_perk == 0)
+				{
+					mchref.perks.list.ShipSpeedUp = true;
+					mchref.quest.drawing_kit = "speed";
+					learned_perk = 1;
+				}
+
+				if(!CheckCharacterPerk(mchref, "ShipDefenceProfessional"))
+				{
+					if(CheckCharacterPerk(mchref, "AdvancedBattleState") && learned_perk == 0)
 					{
 						mchref.perks.list.ShipDefenceProfessional = true;
 						mchref.quest.drawing_kit = "def3";
+						learned_perk = 1;
+					}
+					else
+					{
+						if(CheckCharacterPerk(mchref, "BasicBattleState") && learned_perk == 0)
+						{
+							mchref.perks.list.AdvancedBattleState = true;
+							mchref.quest.drawing_kit = "def2";
+							learned_perk = 1;
+						}
+						else
+						{
+							if(learned_perk == 0)
+							{
+								mchref.perks.list.BasicBattleState = true;
+								mchref.quest.drawing_kit = "def1";
+								learned_perk = 1;
+							}
+						}
 					}
 				}
 			}
@@ -3882,28 +3739,28 @@ void SetUpDownUsed()
 
 	if( IsQuestUsedItem(itmName1) )
 	{
-		if(itmName1 == "book21" || itmName1 == "book22" || itmName1 == "book23" || itmName1 == "book24"
-		|| itmName1 == "book25" || itmName1 == "book26" || itmName1 == "book27" || itmName1 == "book28"
-		|| itmName1 == "book29" || itmName1 == "book30" || itmName1 == "book31"
-		|| itmName1 == "book33" || itmName1 == "book34" || itmName1 == "book35" || itmName1 == "book36")
+		if(itmName1=="picture1" || itmName1=="picture2" || itmName1=="picture3"|| itmName1=="picture4"
+		|| itmName1=="picture5" || itmName1=="picture6" || itmName1=="picture7"|| itmName1=="picture8"
+		|| itmName1=="picture9" || itmName1=="picture10"|| itmName1=="picture11" || itmName1=="picture13"
+		|| itmName1=="picture14"|| itmName1=="picture15")
 		{
-
-		}
-		else
-		{
-			if(itmName1=="picture1" || itmName1=="picture2" || itmName1=="picture3"|| itmName1=="picture4"
-			|| itmName1=="picture5" || itmName1=="picture6" || itmName1=="picture7"|| itmName1=="picture8"
-			|| itmName1=="picture9" || itmName1=="picture10"|| itmName1=="picture11" || itmName1=="picture13"
-			|| itmName1=="picture14"|| itmName1=="picture15")
-			{
 				SetSelectable("SWAP_BUTTON",false);
-			}
 		}
 		else
 		{
-			SetSelectable("ONEDOWN_BUTTON",false);
-			SetSelectable("ALLDOWN_BUTTON",false);
-			SetSelectable("SWAP_BUTTON", false); // Aconcagua
+			if(itmName1 == "book21" || itmName1 == "book22" || itmName1 == "book23" || itmName1 == "book24"
+			|| itmName1 == "book25" || itmName1 == "book26" || itmName1 == "book27" || itmName1 == "book28"
+			|| itmName1 == "book29" || itmName1 == "book30" || itmName1 == "book31"
+			|| itmName1 == "book33" || itmName1 == "book34" || itmName1 == "book35" || itmName1 == "book36")
+			{
+
+			}
+			else
+			{
+				SetSelectable("ONEDOWN_BUTTON",false);
+				SetSelectable("ALLDOWN_BUTTON",false);
+				SetSelectable("SWAP_BUTTON", false); // Aconcagua
+			}
 		}
 	}
 
@@ -3912,7 +3769,16 @@ void SetUpDownUsed()
 	if(itmName1 == "book43" || itmName1 == "book44" || itmName1 == "book50" || itmName1 == "pistollog" 
 	|| itmName1 == "doc2A" || itmName1 == "doc2B" || itmName1 == "doc2C" || itmName1 == "doc2D" || itmName1 == "doc2E" 
 	|| itmName1 == "doc3C" || itmName1 == "doc3D"
-	|| itmName1 == "pistolcharcoal_E" || itmName1 == "pistolnitre_E" || itmName1 == "pistolsulphur_E" || itmName1 == "pistoltinderbox")
+	|| itmName1 == "pistolcharcoal_E" || itmName1 == "pistolnitre_E" || itmName1 == "pistolsulphur_E" || itmName1 == "pistoltinderbox"
+	|| itmName1 == "book70" || itmName1 == "book70_0" || itmName1 == "book70_1" || itmName1 == "book70_1"
+	|| itmName1 == "book70_2" || itmName1 == "book70_3" || itmName1 == "book70_4" || itmName1 == "book70_5"
+	|| itmName1 == "book70_6" || itmName1 == "book70_7" || itmName1 == "book70_8" || itmName1 == "book70_9"
+	|| itmName1 == "book70_10" || itmName1 == "book70_11" || itmName1 == "book71_9" || itmName1 == "book71_10"
+	|| itmName1 == "book71_11" || itmName1 == "book71_12" || itmName1 == "book71_13" || itmName1 == "book71_14"
+	|| itmName1 == "book71_15" || itmName1 == "book71_16" || itmName1 == "book71_17" || itmName1 == "book71_18"
+	|| itmName1 == "book71_19" || itmName1 == "book71_20" || itmName1 == "book71_21" || itmName1 == "book71_22"
+	|| itmName1 == "book71_23" || itmName1 == "book70_start" || itmName1 == "book71_9_start" || itmName1 == "bladebottle_CV1_sc"
+	|| itmName1 == "bladebottle_CB2")
 	{
 		SetSelectable("ONEDOWN_BUTTON",false);
 		SetSelectable("ALLDOWN_BUTTON",false);
@@ -3986,6 +3852,16 @@ void SetUpDownUsed()
 		SetSelectable("ONEUP_BUTTON",false);
 		SetSelectable("ALLUP_BUTTON",false);
 		SetSelectable("SWAP_BUTTON",false);
+	}
+
+	if(itmName2 == "blade_gp_dry")
+	{
+		if(CheckAttribute(Pchar,"Caesar_info") && Pchar.Caesar_info == "no")
+		{
+			SetSelectable("ONEUP_BUTTON",false);
+			SetSelectable("ALLUP_BUTTON",false);
+			SetSelectable("SWAP_BUTTON",false);
+		}
 	}
 
 	if(itmName2 == "book42" || itmName2 == "book49")

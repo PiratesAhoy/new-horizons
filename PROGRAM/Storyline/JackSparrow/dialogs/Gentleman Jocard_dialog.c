@@ -340,5 +340,37 @@ void ProcessDialogEvent()
 
 			AddDialogExitQuest("Jocard_Deck6");
 		break;
+
+		case "guards_dead":
+			dialog.text = DLG_TEXT[59];
+			link.l1 = DLG_TEXT[60];
+			link.l1.go = "be_a_pirate";
+		break;
+
+		case "be_a_pirate":
+			dialog.text = DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "be_a_lord";
+		break;
+
+		case "be_a_lord":
+			dialog.text = DLG_TEXT[63];
+			link.l1 = DLG_TEXT[64];
+			link.l1.go = "need_a_ship";
+		break;
+
+		case "need_a_ship":
+			dialog.text = DLG_TEXT[65];
+			link.l1 = DLG_TEXT[66];
+			link.l1.go = "now_youre_jocard";
+		break;
+
+		case "now_youre_jocard":
+			dialog.text = DLG_TEXT[67]
+			link.l1 = DLG_TEXT[68];
+			AddDialogExitQuest("slaves_run");
+			AddDialogExitQuest("reset_slave5");
+			link.l1.go = "exit";
+		break;
 	}
 }

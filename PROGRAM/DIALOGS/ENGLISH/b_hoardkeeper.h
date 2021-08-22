@@ -48,7 +48,7 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 			NextDiag.TempNode = "first time";
-			dialog.text = "Now, young man, whose rash voice resonates in these so venerable vaults, state your desire with the manners of a noble man, or let silence rule o'er ancient walls once more. Walls, once hung with tapestries of silk and velvet, once seeing regal feasts and regal battles.. and regal treachery and murder! Now silence is this ruin's royalty, these cold stone's only veil, for cent'ries past, and cent'ries come. Silence of peace? Silence of death? Which it shall be for you is not yet written in the scriptures.";
+			dialog.text = "Now, young " + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ", whose rash voice resonates in these so venerable vaults, state your desire with the manners of a noble " + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ", or let silence rule o'er ancient walls once more. Walls, once hung with tapestries of silk and velvet, once seeing regal feasts and regal battles.. and regal treachery and murder! Now silence is this ruin's royalty, these cold stone's only veil, for cent'ries past, and cent'ries come. Silence of peace? Silence of death? Which it shall be for you is not yet written in the scriptures.";
 			link.l1 = "Huh? Wha.. I didn't hear any door.. Where do you come from so suddenly and stealthy?";
 			link.l1.go = "help_2";
 			link.l4 = "So you are supposed to be the famous guardian of treasures? How can I be sure that you don't embezzle my stuff, eh?";

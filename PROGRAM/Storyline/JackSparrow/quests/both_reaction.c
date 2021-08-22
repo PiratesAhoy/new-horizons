@@ -19,6 +19,7 @@ void BothQuestComplete(string sQuestName)
 			Pchar.quest.Tortuga_restore.win_condition.l1 = "ExitFromLocation";
 			Pchar.quest.Tortuga_restore.win_condition.l1.location = "Tortuga_port";
 			Pchar.quest.Tortuga_restore.win_condition = "Tortuga_restore";
+			pchar.quest.Tortuga_restore.skip = "yes";
 
 			port = &locations[FindLocation("Tortuga_port")];
 			if(GetAttribute(pchar, "vcskip") < 1 && GetAttribute(port, "vcskip") < 1)
@@ -115,6 +116,7 @@ void BothQuestComplete(string sQuestName)
 			PChar.quest.Tortuga_jack.win_condition.l1.character = PChar.id;
 			PChar.quest.Tortuga_jack.win_condition.l1.location = "Tortuga_port";
 			PChar.quest.Tortuga_jack.win_condition = "Tortuga_jack";
+			pchar.quest.Tortuga_jack.skip = "yes";
 		break;
 
 //Capitaine Chevalle
@@ -219,6 +221,11 @@ void BothQuestComplete(string sQuestName)
 			LAi_SetImmortal(CharacterFromID("Captaine Chevalle"), 1);
 			LAi_ActorFollowEverywhere(characterFromID("Captaine Chevalle"), "", 60.0);
 
+			ChangeCharacterAddress(characterFromID("Eng_Soldier_7"), "none", "");	// GR: remove permanent soldiers from gate
+			ChangeCharacterAddress(characterFromID("Eng_soldier_8"), "none", "");
+			ChangeCharacterAddress(characterFromID("Eng_soldier_33"), "none", "");	// GR: remove permanent soldiers from prison
+			ChangeCharacterAddress(characterFromID("Eng_soldier_34"), "none", "");
+
 			PChar.quest.Chevalle = "crew";
 			Pchar.quest.Chevalle.win_condition.l1 = "location";
 			Pchar.quest.Chevalle.l1.character = "Captaine Chevalle";
@@ -246,8 +253,31 @@ void BothQuestComplete(string sQuestName)
 			LAi_ActorFollow (sld, pchar, "", 10);
 			sld.id = "soldat1";
 			LAi_group_MoveCharacter(sld, "GATE_SOLDIERS");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m4, "goto", "soldier03"); // GR: replace guards near prison with fantom stand-ins
+			LAi_SetHP(sld, 80.0, 80.0); 
+			LAi_SetActorType(sld);
+			LAi_ActorFollow (sld, pchar, "", 10);
+			sld.id = "soldat2";
+			LAi_group_MoveCharacter(sld, "GATE_SOLDIERS");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "goto", "soldier04");
+			LAi_SetHP(sld, 80.0, 80.0); 
+			LAi_SetActorType(sld);
+			LAi_ActorFollow (sld, pchar, "", 10);
+			sld.id = "soldat3";
+			LAi_group_MoveCharacter(sld, "GATE_SOLDIERS");
 			LAi_SetActorType(characterfromID("soldat"));
 			LAi_ActorDialog(characterfromID("soldat"), PChar, "", 0.5, 10);
+
+			PChar.quest.Chevalle_restore_soldiers.win_condition.l1 = "ExitFromLocation";
+			pchar.quest.Chevalle_restore_soldiers.win_condition.l1.location = "Redmond_town_04";
+			pchar.quest.Chevalle_restore_soldiers.win_condition = "Chevalle_restore_soldiers";
+		break;
+
+		case "Chevalle_restore_soldiers":	// GR: put normal guards back near gate and prison
+			ChangeCharacterAddressGroup(CharacterFromID("Eng_Soldier_7"), "Redmond_town_04", "goto", "soldier01");
+			ChangeCharacterAddressGroup(CharacterFromID("Eng_soldier_8"), "Redmond_town_04", "goto", "soldier02");
+			ChangeCharacterAddressGroup(CharacterFromID("Eng_soldier_33"), "Redmond_town_04", "goto", "soldier03");
+			ChangeCharacterAddressGroup(CharacterFromID("Eng_soldier_34"), "Redmond_town_04", "goto", "soldier04");
 		break;
 
 		case "fight_2":
@@ -696,16 +726,16 @@ void BothQuestComplete(string sQuestName)
 				if (IsBrothelEnabled()) 
 				{
 					ChangeCharacterAddressGroup(CharacterFromID("Captaine Chevalle"), "Tortuga_Brothel_room", "goto", "locator2");
-					Pchar.quest.meetturner.win_condition.l1 = "location";
-					Pchar.quest.meetturner.win_condition.l1.location = "Tortuga_Brothel_room";
-					PChar.quest.meetturner.win_condition = "MeetTurner";
+					Pchar.quest.MeetVillanueva.win_condition.l1 = "location";
+					Pchar.quest.MeetVillanueva.win_condition.l1.location = "Tortuga_Brothel_room";
+					PChar.quest.MeetVillanueva.win_condition = "MeetVillanueva";
 				}
 				else
 				{
 					ChangeCharacterAddressGroup(CharacterFromID("Captaine Chevalle"), "Tortuga_Townhall", "goto", "goto7");
-					Pchar.quest.meetturner.win_condition.l1 = "location";
-					Pchar.quest.meetturner.win_condition.l1.location = "Tortuga_Townhall";
-					PChar.quest.meetturner.win_condition = "MeetTurner";
+					Pchar.quest.MeetVillanueva.win_condition.l1 = "location";
+					Pchar.quest.MeetVillanueva.win_condition.l1.location = "Tortuga_Townhall";
+					PChar.quest.MeetVillanueva.win_condition = "MeetVillanueva";
 				}
 
 				LAi_SetActorType(Pchar);
@@ -726,7 +756,7 @@ void BothQuestComplete(string sQuestName)
 			}
 		break;
 
-		case "MeetTurner":
+		case "MeetVillanueva":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Captaine Chevalle"));
 			LAi_SetActorType(characterFromID("Eduardo Villanueva"));
@@ -1435,7 +1465,8 @@ void BothQuestComplete(string sQuestName)
 			LAi_ActorFollowEverywhere(characterFromID("Francois de Hadoque"), "", 60.0);
 
 			LAi_SetActorType(characterFromID("Captaine Chevalle"));
-			LAi_ActorAnimation(characterFromID("Captaine Chevalle"), "attack_2", "/*Eduardo_retail*/", 0.0);
+			LAi_ActorAnimation(characterFromID("Captaine Chevalle"), "attack_2", "/*Eduardo_retail*/", 0.0);	// Nonsensical quest case name
+			LAi_ActorAnimation(characterFromID("Captaine Chevalle"), "attack_2", "", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 
 			LAi_QuestDelay("Eduardo_retail", 0.2);
@@ -1544,6 +1575,7 @@ void BothQuestComplete(string sQuestName)
 			{
 				pchar.quest.spanish_soldier_alone.over = "yes";
 			}
+			ChangeCharacterAddress(characterFromID("random_spain_off"), "none", "");
 		break;
 
 		case "spanish_uniform":
@@ -1748,6 +1780,14 @@ void BothQuestComplete(string sQuestName)
 		case "kill_all_officers_spain":
 			//Locations[FindLocation("Muelle_shore")].reload.l2.disable = 0;
 			AddQuestRecord("sumbhajee", 5);
+			pchar.quest.sri_reset_prison_commendant.win_condition.l1 = "ExitFromLocation";
+			pchar.quest.sri_reset_prison_commendant.win_condition.l1.location = "Cuba_port";
+			pchar.quest.sri_reset_prison_commendant.win_condition = "sri_reset_prison_commendant";
+		break;
+
+		case "sri_reset_prison_commendant":
+			changeCharacterAddressGroup(characterFromID("Havana Prison Commendant"), "Havana_prison", "sit", "sit1");
+			LAi_SetSitType(characterFromID("Havana Prison Commendant"));
 		break;
 //Sri Sumbhajee Angria
 
@@ -1930,8 +1970,8 @@ void BothQuestComplete(string sQuestName)
 			Group_CreateGroup("ANIMISTS");
 			Group_AddCharacter("ANIMISTS", "Mystery_Man_04");
 			Group_AddCharacter("ANIMISTS", "Mystery_Man_05");
-			Characters[GetCharacterIndex("Dark Mystery_Man_04")].recognized = true; // PB: Ensure they're hostile!
-			Characters[GetCharacterIndex("Dark Mystery_Man_05")].recognized = true; // PB: Ensure they're hostile!
+			Characters[GetCharacterIndex("Mystery_Man_04")].recognized = true; // PB: Ensure they're hostile!
+			Characters[GetCharacterIndex("Mystery_Man_05")].recognized = true; // PB: Ensure they're hostile!
             // boal -->
             LAi_SetHP(characterFromID("Mystery_man_04"), 80.0, 80.0);
 			LAi_SetHP(characterFromID("Mystery_man_05"), 80.0, 80.0);
@@ -2779,6 +2819,7 @@ void BothQuestComplete(string sQuestName)
 		case "return_priest_complete":
 			DoReloadCharacterToLocation("Muelle_Church", "reload", "reload1");
 			changeCharacterAddressGroup(characterfromID("padre Domingues"), "Muelle_Church", "goto", "goto1");
+			changeCharacterAddress(characterfromID("second_spaniard_priest"), "none", "");
 			LAi_SetActorType(characterFromID("padre Domingues"));
 			LAi_ActorDialog(characterFromID("padre Domingues"), pchar, "", 2.0, 1.0);
 			characters[GetCharacterIndex("padre Domingues")].dialog.currentnode = "Thank_You";
@@ -2788,6 +2829,9 @@ void BothQuestComplete(string sQuestName)
 
 			AddQuestRecord("Sao Feng", 41);
 			//CloseQuestHeader("Sao Feng");
+
+			Locations[FindLocation("Muelle_church")].reload.l1.go = "Muelle_town_04";							//GR: put church exit back to normal
+			Locations[FindLocation("Muelle_church")].reload.l1.emerge = "reload4";
 		break;
 
 		case "return_priest_complete3":
@@ -2923,6 +2967,8 @@ void BothQuestComplete(string sQuestName)
 			RemovePassenger(pchar, characterFromID("Jaoquin de masse"));
 			RemoveCharacterCompanion(pchar, characterFromID("Jaoquin de masse"));
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Jaoquin de masse"));
+			ChangeCharacterAddress(characterFromID("Jaoquin de masse"), "None", "");
+			SetCharacterShipLocation(CharacterFromID("Jaoquin de masse"), "none");
 		break;
 
 		case "guards_in_church":
@@ -3466,6 +3512,7 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "before_shore_ship2":
+			AddPassenger(Pchar, characterFromID("Bos'un"), 0);
 			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Bos'un"));
 		break;
 
@@ -4091,8 +4138,9 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "not_killing_PL":
-			LAi_SetActorType(characterFromID("Gentleman Jocard (White)"));
-			LAi_ActorWaitDialog(CharacterFromID("Gentleman Jocard (White)"), PChar);
+//			LAi_SetActorType(characterFromID("Gentleman Jocard (White)"));
+//			LAi_ActorWaitDialog(CharacterFromID("Gentleman Jocard (White)"), PChar);
+			LAi_SetMerchantType(characterFromID("Gentleman Jocard (White)"));
 
 			if (GetAttribute(pchar, "PL_NF") != "1")
 			{
@@ -4142,13 +4190,24 @@ void BothQuestComplete(string sQuestName)
 		case "Killing_PL_fin":
 			pchar.Alantic_PL = "none";
 			pchar.Slaves = "free";
-			AddQuestRecord("Slaver", 8);
+			if (GetAttribute(Pchar, "Turks") == "Brotherhood") AddQuestRecord("Slaver", 8);
+			else
+			{
+				characters[GetCharacterIndex("Slave5")].dialog.filename = "Gentleman Jocard_dialog.c";
+				characters[getCharacterIndex("Slave5")].dialog.currentnode = "guards_dead";
+			}
 
 			LAi_SetActorType(characterFromID("Slave5"));
 			LAi_ActorDialog(CharacterFromID("Slave5"), PChar, "", 100.0, 100.0);
 		break;
 
-		case "slaves_run":
+		case "reset_slave5":	// Triggered by dialog with "Slave5" if he has just become Gentleman Jocard
+			characters[GetCharacterIndex("Slave5")].dialog.filename = "Plantation_Slave.c";
+			characters[getCharacterIndex("Slave5")].dialog.currentnode = "First time";
+			AddQuestRecord("Slaver", 11);
+		break;
+
+		case "slaves_run":	// Triggered by dialog with "Slave5"
 			ChangeCharacterAddressGroup(characterFromID("Slaver1"), "none", "", "");
 			ChangeCharacterAddressGroup(characterFromID("Slaver2"), "none", "", "");
 			ChangeCharacterAddressGroup(characterFromID("Slaver3"), "none", "", "");

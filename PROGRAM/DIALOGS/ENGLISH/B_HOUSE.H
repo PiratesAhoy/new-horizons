@@ -66,7 +66,7 @@ void ProcessDialogEvent()
 	int tax = 0;
 
 	string adress;
-	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " my landlord ";}else{adress = " Mister ";}
+	if(NPChar.chr_ai.group==LAI_GROUP_PLAYER ){adress = " my landlord ";}else{adress = " " + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " ";}
 
 	PlayStereoSound("ambient\town\cough.wav");
 	PlayStereoSound("ambient\shop\sigh2.wav");
@@ -88,7 +88,7 @@ void ProcessDialogEvent()
 			{
         		ChangeCharacterReputation(Pchar, -2);  // punishment: reputationloss. Will be offset if accept the fight	
         		PlayStereoSound("voice\ENGLISH\Eng_m_a_070.wav");	
-				Dialog.text =  LinkRandPhrase("Thanks to God that you came along! You can defend us against those brutes..", "Ahh, heaven sent you at a most crucial moment: we are about to come under attack. HELP US!", "Well met, I say, we desperately need a fighting man like you to ward of that raid...");
+				Dialog.text =  LinkRandPhrase("Thanks to God that you came along! You can defend us against those brutes..", "Ahh, heaven sent you at a most crucial moment: we are about to come under attack. HELP US!", "Well met, I say, we desperately need a fighting " + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + " like you to ward off that raid...");
 				link.l1 = "Hey, calm down! My, my, you are already stiff from fear... Now tell me what's going on here.";
 				if(rand(100)>60) {Link.l1.go = "attack1";}
 				else{Link.l1.go = "attack2";}

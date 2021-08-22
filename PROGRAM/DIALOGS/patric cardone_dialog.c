@@ -32,6 +32,14 @@ void ProcessDialogEvent()
 	if(!CheckAttribute(NPChar, "quest.item_date")) NPChar.quest.item_date = NPChar.quest.meeting;
 // NK <--
 
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
+
 
 	switch(Dialog.CurrentNode)
 	{
@@ -61,10 +69,11 @@ void ProcessDialogEvent()
 			Link.l1.go = "node_2";
 			Link.l2 = DLG_TEXT[4];
 			Link.l2.go = "exit";
-			SetQuestHeader("Patric"); // NK
+			if(!CheckAttribute(NPChar, "quest.teodoro_started")) SetQuestHeader("Patric"); // NK
 		break;
 
 		case "node_2":
+			Preprocessor_Add("sir", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false)); // DeathDaisy
 			Dialog.Text = DLG_TEXT[5];
 			Link.l1 = DLG_TEXT[6];
 			Link.l1.go = "node_3";
@@ -190,14 +199,14 @@ void ProcessDialogEvent()
 		case "node_20":
 			if (CalcCharacterSkill(PChar,SKILL_COMMERCE) > 2) // NK
 			{
-				Dialog.text = DLG_TEXT[65];
+				Dialog.text = PersuasionSuccess + DLG_TEXT[65];
 				Link.l1 = DLG_TEXT[66] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[67])]) + DLG_TEXT[68];
 				Link.l1.go = "node_21_1";
 				NPChar.money.quest = "5000";
 			}
 			else
 			{
-				Dialog.text = DLG_TEXT[69];
+				Dialog.text = PersuasionFailure + DLG_TEXT[69];
 				Link.l1 = DLG_TEXT[70];
 				Link.l1.go = "node_20_1";
 			}
@@ -381,8 +390,16 @@ void ProcessDialogEvent()
 		case "Exit":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			if(NextDiag.TempNode == "First Time") AddQuestRecord("Patric", 1); // NK
-			if(NextDiag.TempNode == "Second Time" && NPChar.quest.teodoro == "0") AddQuestRecord("Patric", 2); // NK
+			if(NextDiag.TempNode == "First Time" && !CheckAttribute(NPChar, "quest.teodoro_started"))
+			{
+				AddQuestRecord("Patric", 1); // NK
+				NPChar.quest.teodoro_started = true;
+			}
+			if(NextDiag.TempNode == "Second Time" && NPChar.quest.teodoro == "0")
+			{
+				AddQuestRecord("Patric", 2); // NK
+				CloseQuestHeader("Patric");
+			}
 		break;
 		
 		

@@ -5,7 +5,7 @@ string DLG_TEXT[15] = {
 "Maybe I'll do that.", //3
 "I hope you can. I'd like to hear anything you know about the courier's death.",
 "The Demon Hordes are within me, for my name is Legion and we are MANY!",
-"I shal remove your defiling presence from the temple of our Lord!!", //6
+"I shall remove your defiling presence from the temple of our Lord!!", //6
 "You've come to the right man. I was the one who found the poor lad - though only in time to hear his last breaths and administer the Last Rites.",
 "May I ask you a couple of questions about your acolyte's last minutes?",
 "Yes, of course. What would you like to know, my son?",

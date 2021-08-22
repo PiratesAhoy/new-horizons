@@ -88,7 +88,7 @@ int GetCostTun(int _idx, string _improvement, float _priceType)
 	int ship_caliber	= ShipRef.maxcaliber;
 	int ship_cannons	= ShipRef.cannonsquantity;
 
-	int modifier = GetCharPriceMod(GetMainCharacter(),_priceType,true,true)
+	float modifier = GetCharPriceMod(GetMainCharacter(),_priceType,true,true); // PW: was 'int'!
 
 	switch (_improvement) {
 		case "rhull":
@@ -466,7 +466,7 @@ void applytunhullhp(ref _char, string _improvement, float rangemax, float rangem
 	if (CheckAttribute(_char, "ship.hp"))
 	{
 		int shipHP = sti(_char.ship.hp);
-		int tuneHP = sti(_char.ship.tune.(_improvement).hp));
+		int tuneHP = sti(_char.ship.tune.(_improvement).hp);
 		if(shipHP + tuneHP > 0) _char.ship.hp = shipHP + tuneHP; //Levis added check to make sure we dont go under 0
 	}
 /*	if(IsMainCharacter(_char))
@@ -589,6 +589,12 @@ return; }
 
 void unapplytunhullhp(ref _char, string _improvement) {
 
+	if (CheckAttribute(_char, "ship.hp"))
+	{
+		int shipHP = sti(_char.ship.hp);
+		int tuneHP = sti(_char.ship.tune.(_improvement).hp);
+		if(shipHP - tuneHP > 0) _char.ship.hp = shipHP - tuneHP; //Levis added check to make sure we dont go under 0
+	}
 	_char.ship.tune.(_improvement).on = 0;
 	_char.ship.stats.hp = sti(_char.ship.stats.hp) - sti(_char.ship.tune.(_improvement).hp);
 	_char.ship.tune.(_improvement).hp = 0;
@@ -613,7 +619,7 @@ void unapplytunupcaliber(ref _char, string _improvement) {
 	int attribute = sti(GetLocalShipAttrib(temparef,tempref,"MaxCaliber"));
 	cal = GetCannonCaliberIndex(attribute);
 	if (cal != -1 && cal-inc < 0) { cal = 0; }
-	if(cal != -1) { cal=cal - inc; _char.ship.maxcaliber= Cannon_Calibers[cal]; }
+	if(cal != -1) { cal=cal - inc; _char.ship.stats.maxcaliber= Cannon_Calibers[cal]; }
 	_char.ship.tune.(_improvement).incaliber = 0;
 }
 

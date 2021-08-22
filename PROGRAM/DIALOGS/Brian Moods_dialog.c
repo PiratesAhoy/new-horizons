@@ -19,6 +19,7 @@ void ProcessDialogEvent()
 	string lastspeak_date = iday + " " + iMonth;
 
 	
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------|иалог первый - первая встреча
@@ -68,6 +69,7 @@ void ProcessDialogEvent()
 			else
 			{	
 				dialog.snd = "Voice\FRCO\FRCO002";
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				dialog.text = DLG_TEXT[6];
 				link.l1 = DLG_TEXT[7];
 				link.l1.go = "quests";
@@ -81,7 +83,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "nevermind":
-			dialog.text = DLG_TEXT[51];
+			dialog.text = DLG_TEXT[51] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ".";
 			Diag.CurrentNode = Diag.TempNode;
 		break;
 

@@ -36,6 +36,7 @@ void ProcessDialogEvent()
 			if (pchar.location == "Gamboa_ship")
 			{
 				Dialog.snd = "voice\TAOR\TAOR001";
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false)); // DeathDaisy
 				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[1];
 				link.l1.go = "what_about";

@@ -94,7 +94,10 @@ void ProcessDialogEvent()
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 2000);
 			RemovePassenger(pchar, Characters[GetCharacterIndex("Sabine Matton")]);
-			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "locator4")
+//			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "locator4")  //TALISMAN Changed - locator does not exist
+			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "goto5")		//TALISMAN Changed - original locator does not exist
+			Locations[FindLocation("Muelle_town_01")].reload.l8.disable = 1;// PW lock location now Sabine freed
+			TakeItemFromCharacter(Pchar, "Correspondence1");// PW remove Arnaud letter
 		break;
 
 		case "ransom_lie":
@@ -113,6 +116,8 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "captured_by_blaze_again";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 2000);
+			TakeItemFromCharacter(Pchar, "Correspondence1");// PW remove Arnaud letter
+			NextDiag.TempNode = "Last time";
 		break;
 
 		case "ransom_free":
@@ -131,7 +136,10 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			RemovePassenger(pchar, Characters[GetCharacterIndex("Sabine Matton")]);
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "almost_done_ransom_free";
+			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "goto8");// PW Sabine in house
+			TakeItemFromCharacter(Pchar, "Correspondence1"); // PW remove Arnaud letter
 			ChangeCharacterReputation(pchar, -1);
+			Locations[FindLocation("Muelle_town_01")].reload.l8.disable = 1;// PW lock location against return now Sabine freed
 		break;
 
 		case "ransom_free_right":
@@ -140,7 +148,9 @@ void ProcessDialogEvent()
 			link.l1 = pcharrepphrase(DLG_TEXT[61], DLG_TEXT[62]);
 			link.l1.go = "exit";
 			RemovePassenger(pchar, Characters[GetCharacterIndex("Sabine Matton")]);
-			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "almost_done";
+			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "goto8");// PW Sabine in house
+			TakeItemFromCharacter(Pchar, "Correspondence1"); // PW remove Arnaud letter
+			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "almost_done_ransom_free";// PW was "almost_done"
 			ChangeCharacterReputation(pchar, 1);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -148,6 +158,7 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 5);
 			}
 			else { AddPartyExp(pchar, 500); }
+			Locations[FindLocation("Muelle_town_01")].reload.l8.disable = 1;// PW lock location against return now Sabine freed
 		break;
 
 		case "goddaughter_denied":
@@ -175,7 +186,7 @@ void ProcessDialogEvent()
 			///////////////////////////////////////////
 			// Убрать сабину и перегрузить локацию
 			///////////////////////////////////////////
-			ChangeCharacterAddress(characterFromID("Sabine Matton"), "none", "none")
+		//	ChangeCharacterAddress(characterFromID("Sabine Matton"), "none", "none")// PW she should still be on pchar ship
 		break;
 
 		case "goddaughter_denied_2":
@@ -195,7 +206,7 @@ void ProcessDialogEvent()
 			///////////////////////////////////////////
 			// Убрать сабину и перегрузить локацию
 			///////////////////////////////////////////
-			ChangeCharacterAddress(characterFromID("Sabine Matton"), "none", "none")
+		//	ChangeCharacterAddress(characterFromID("Sabine Matton"), "none", "none")// PW she should still be on pchar ship
 		break;
 
 		case "goddaughter":
@@ -203,8 +214,10 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[80];
 			link.l1 = pcharrepphrase(DLG_TEXT[81] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[82])]) + DLG_TEXT[83], DLG_TEXT[84]);
 			link.l1.go = pcharrepphrase("goddaughter_1", "goddaughter_2");
+			TakeItemFromCharacter(PChar, "Correspondence1");// PW remove Arnaud's letter
 			RemovePassenger(pchar, Characters[GetCharacterIndex("Sabine Matton")]);
-			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "locator4")
+//			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "locator4")  //TALISMAN Changed - locator does not exist
+			ChangeCharacterAddress(characterFromID("Sabine Matton"), "house_of_sylvie_bondies", "goto5")  	//TALISMAN Changed - original locator does not exist
 		break;
 
 		case "goddaughter_1":
@@ -217,12 +230,14 @@ void ProcessDialogEvent()
 			////////////////////////////////////////
 			ChangeCharacterReputation(pchar, 1);
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "almost_done";
+			GiveItem2Character(PChar, "Correspondence2");// PW give Syvie's letter
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 700);
 				AddPartyExpChar(pchar, "Sneak", 7);
 			}
 			else { AddPartyExp(pchar, 700); }
+			Locations[FindLocation("Muelle_town_01")].reload.l8.disable = 1;// PW lock location now Sabine freed
 		break;
 
 		case "goddaughter_2":
@@ -232,6 +247,23 @@ void ProcessDialogEvent()
 			link.l1.go = "goddaughter_1";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 800);
+		break;
+
+		case "Last time":
+			Dialog.defAni = "dialog_stay1";
+			Dialog.defCam = "1";
+			Dialog.defSnd = "dialogs\0\017";
+			Dialog.defLinkAni = "dialog_1";
+			Dialog.defLinkCam = "1";
+			Dialog.defLinkSnd = "dialogs\woman\024";
+			Dialog.ani = "dialog_stay2";
+			Dialog.cam = "1";
+			Dialog.snd = "voice\SYBO001\SYBO001";
+
+			Dialog.Text = DLG_TEXT[92] ;
+			link.l1 = pcharrepphrase(DLG_TEXT[2], DLG_TEXT[3]);
+			link.l1.go = "exit";
+			NextDiag.TempNode = "Last time";
 		break;
 
 		case "Exit":

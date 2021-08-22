@@ -34,7 +34,11 @@ void InitQuestItems()
 	n = InitQuestItem(n,"key17",		"key17",		"",	"JRH11",5,	0,0,	"","",	"","",	"","",""); //key to counter in study
 	n = InitQuestItem(n,"key18",		"key18",		"",	"JRH12",11,	0,0,	"","",	"","",	"","",""); //key in corridor	
 	n = InitQuestItem(n,"key19",		"key19",	"keymiddle",	"JRH16",12,	0,0,	"","",	"","",	"","",""); //key to flag chest
-	
+	n = InitQuestItem(n,"key30",		"key30",        "keymiddle",    "JRH17",15,	0,0,	"","",	"","",	"","",""); //to tunnel from Citadel Rock also used in GoldBug to Maroon Cave
+	n = InitQuestItem(n,"key35",		"key35",		"",	"JRH7",	7,	0,0,	"","",	"","",	"","",""); //Kristiania oriel room
+	n = InitQuestItem(n,"key36",		"key36",		"",	"JRH30",16,	0,0,	"","",	"","",	"","",""); //farm key quest2
+	n = InitQuestItem(n,"key37",		"key37",		"",	"JRH37",6,	0,0,	"","",	"","",	"","",""); //not used yet	
+
 	n = InitQuestItem(n,"dummy_belt",	"",		"dummy_belt",	    "", "",	0,0,	"","",	"","",	"","",""); //Blackbeard´s Belt (empty) on dummy
 
 	n = InitQuestItem(n,"book21",		"book21",		"",	"JRH5",	1,	0,0,	"","",	"","",	"","",""); //law
@@ -131,7 +135,11 @@ void InitQuestItems()
 	n = InitQuestItem(n,"many_red_animists","many_red_animists",	"",    "JRH14",	7,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"pack_of_red_cloth","pack_of_red_cloth","red_cloth","JRH14",8,	0,0,	"","",	"","",	"","","");
 
+	n = InitQuestItem(n,"red_uniform",	"red_uniform",		"",    "JRH11",	6,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"package",		"package",		"",    "JRH11",	13,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"notebook",		"notebook",		"",    "JRH11",	14,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"sealed_map",	"sealed_map",		"",    "JRH11",	15,	0,0,	"","",	"","",	"","","");
+
 	n = InitQuestItem(n,"temp_purse",	"temp_purse",		"",          4,	2,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"temp_coins",	"temp_coins",		"",    "JRH11",	9,	0,0,	"","",	"","",	"","","");
 
@@ -166,7 +174,7 @@ void InitQuestItems()
 	n = InitQuestItem(n,"crypt_sketch",	"crypt_sketch",		"",     "JRH8",	 4,	0,0,	"","",	"","",	"","","");
         n = InitQuestItem(n,"corkscrew",	"corkscrew",            "",    "JRH24",	 6,	0,0,	"","",	"","",	"","","");
 	
-	n = InitQuestItem(n,"key34",		"key34",		"",    "JRH30", 15,	0,0,	"","",	"","",	"","",""); //Maltese key
+	n = InitQuestItem(n,"key34",		"key34",		"",    "JRH31", 15,	0,0,	"","",	"","",	"","",""); //Maltese key
 	n = InitQuestItem(n,"book63",		"book63",	  "book63",    "JRH31",  1,	0,0,	"","",	"","",	"","",""); //Maltese medicine
         n = InitQuestItem(n,"book64",		"book64",	        "",    "JRH31",  2,	0,0,	"","",	"","",	"","",""); //Maltese french
 	n = InitQuestItem(n,"book65",		"book65",	        "",    "JRH31",  3,	0,0,	"","",	"","",	"","",""); //Maltese bible
@@ -183,6 +191,90 @@ void InitQuestItems()
 	n = InitQuestItem(n,"Malta_relic",	"Malta_relic",	        "",    "JRH29",  7,	0,0,	"","",	"","",	"","",""); //Maltese relic
 	n = InitQuestItem(n,"Malta_cross",	"Malta_cross",	        "",    "JRH29", 13,	0,0,	"","",	"","",	"","",""); //Maltese crucifix
 	n = InitQuestItem(n,"Malta_censer",	"Malta_censer",	        "",    "JRH29",  2,	0,0,	"","",	"","",	"","",""); //Maltese censer
+
+	n = InitQuestItem(n,"switch_button",	"switch_button",	"",    "JRH33",  3,	0,0,	"","",	"","",	"","",""); //
+	
+	n = InitQuestItem(n,"doc60A",		"doc60A",		"",    "JRH23",	13,	0,0,	"","",	"","",	"","",""); //Letter from Tobias Knight
+	n = InitQuestItem(n,"doc60B",		"doc60B",		"",    "JRH23",	14,	0,0,	"","",	"","",	"","",""); //
+	n = InitQuestItem(n,"doc60C",		"doc60C",		"",    "JRH23",	15,	0,0,	"","",	"","",	"","",""); //
+        n = InitQuestItem(n,"doc60D",		"doc60D",		"",    "JRH33",	 4,	0,0,	"","",	"","",	"","",""); //
+	n = InitQuestItem(n,"book69A",		"book69A",    		"",    "JRH33",  5,	0,0,	"","",	"","",	"","",""); //Teach's logbook
+	n = InitQuestItem(n,"book69B",		"book69B",    		"",    "JRH33",  6,	0,0,	"","",	"","",	"","",""); //
+	n = InitQuestItem(n,"book69C",		"book69C",    		"",    "JRH33",  7,	0,0,	"","",	"","",	"","",""); //
+	n = InitQuestItem(n,"BB_hatA1",		"BB_hatA1",    		"",    "JRH33",  9,	0,0,	"","",	"","",	"","",""); //Teach's hat start
+	n = InitQuestItem(n,"BB_hatB",		"BB_hatB",    		"",    "JRH33", 10,	0,0,	"","",	"","",	"","",""); //Teach's hat inside
+        n = InitQuestItem(n,"BB_hatC",		"BB_hatC",    		"",    "JRH33", 11,	0,0,	"","",	"","",	"","",""); //Teach's hat inside key
+	n = InitQuestItem(n,"BB_key",	        "BB_key",    		"",    "JRH33", 12,	0,0,	"","",	"","",	"","",""); //Teach's key
+	n = InitQuestItem(n,"BB_hatA2",		"BB_hatA2",    		"",    "JRH33",  9,	0,0,	"","",	"","",	"","",""); //Teach's hat equip
+	n = InitQuestItem(n,"BB_coin",		"BB_coin",    		"",    "JRH32", 16,	0,0,	"","",	"","",	"","",""); //Teach's amulet
+	n = InitQuestItem(n,"paper_clip",	"paper_clip",    	"",    "JRH33", 13,	0,0,	"","",	"","",	"","",""); //start
+	n = InitQuestItem(n,"paper_clip2",	"paper_clip2",    	"",    "JRH33", 14,	0,0,	"","",	"","",	"","",""); //hook
+	n = InitQuestItem(n,"auction_list_roll","auction_list_roll","scroll_long", "JRH31", 6,	0,0,	"","",	"","",	"","",""); //auction list
+	n = InitQuestItem(n,"auction_list_open","auction_list_open",	"",    "JRH33",  8,	0,0,	"","",	"","",	"","",""); //auction list
+	n = InitQuestItem(n,"tailors_book",	"tailors_book",		"",    "JRH33", 15,	0,0,	"","",	"","",	"","",""); //
+	n = InitQuestItem(n,"tailors_note",	"tailors_note",		"",    "JRH33", 16,	0,0,	"","",	"","",	"","",""); //
+
+	n = InitQuestItem(n,"book70_start",	"book70_start",    	"",    "JRH34", 13,	0,0,	"","",	"","",	"","",""); //burned alchemy book
+	n = InitQuestItem(n,"book70",		"book70",    		"",    "JRH34", 13,	0,0,	"","",	"","",	"","",""); //burned alchemy book
+	n = InitQuestItem(n,"book70_0",		"book70_0",    		"",    "JRH34",  9,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_1",		"book70_1",    		"",    "JRH34", 10,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_2",		"book70_2",    		"",    "JRH34",  1,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_3",		"book70_3",    		"",    "JRH34",  2,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_4",		"book70_4",    		"",    "JRH34",  3,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_5",		"book70_5",    		"",    "JRH34",  4,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_6",		"book70_6",    		"",    "JRH34",  5,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_7",		"book70_7",    		"",    "JRH34",  6,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_8",		"book70_8",    		"",    "JRH34",  7,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_9",		"book70_9",    		"",    "JRH34",  8,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_10",	"book70_10",    	"",    "JRH34", 11,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book70_11",	"book70_11",    	"",    "JRH34", 12,	0,0,	"","",	"","",	"","","");
+
+	n = InitQuestItem(n,"book71_9_start",	"book71_9_start",    	"",    "JRH35", 15,	0,0,	"","",	"","",	"","",""); //ripped alchemy book
+	n = InitQuestItem(n,"book71_9",		"book71_9",    		"",    "JRH35", 15,	0,0,	"","",	"","",	"","",""); //ripped alchemy book
+	n = InitQuestItem(n,"book71_10",	"book71_10",    	"",    "JRH35",  1,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book71_11",	"book71_11",    	"",    "JRH35",  2,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_12",	"book71_12",    	"",    "JRH35",  3,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_13",	"book71_13",    	"",    "JRH35",  4,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_14",	"book71_14",    	"",    "JRH35",  5,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_15",	"book71_15",    	"",    "JRH35",  6,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book71_16",	"book71_16",    	"",    "JRH35",  7,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book71_17",	"book71_17",    	"",    "JRH35",  8,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_18",	"book71_18",    	"",    "JRH35",  9,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_19",	"book71_19",    	"",    "JRH35", 10,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_20",	"book71_20",    	"",    "JRH35", 11,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_21",	"book71_21",    	"",    "JRH35", 12,	0,0,	"","",	"","",	"","","");			
+	n = InitQuestItem(n,"book71_22",	"book71_22",    	"",    "JRH35", 13,	0,0,	"","",	"","",	"","","");	
+	n = InitQuestItem(n,"book71_23",	"book71_23",    	"",    "JRH35", 14,	0,0,	"","",	"","",	"","","");			
+	
+	n = InitQuestItem(n,"book72_package",	"book72_package",    	"",    "JRH36", 14,	0,0,	"","",	"","",	"","",""); //History of Pirates
+	n = InitQuestItem(n,"book72_closed",	"book72_closed",    	"",    "JRH36", 13,	0,0,	"","",	"","",	"","",""); 
+	n = InitQuestItem(n,"book72_openL",	"book72_openL",    	"",    "JRH36",  1,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_openR",	"book72_openR",    	"",    "JRH36",  2,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_edenL",	"book72_edenL",    	"",    "JRH36",  3,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_edenR",	"book72_edenR",    	"",    "JRH36",  4,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_caesarL",	"book72_caesarL",    	"",    "JRH36",  5,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_caesarR",	"book72_caesarR",    	"",    "JRH36",  6,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_handsL",	"book72_handsL",    	"",    "JRH36",  7,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_handsR",	"book72_handsR",    	"",    "JRH36",  8,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_richardsL",	"book72_richardsL",    	"",    "JRH36",  9,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"book72_richardsR",	"book72_richardsR",    	"",    "JRH36", 10,	0,0,	"","",	"","",	"","","");
+
+	n = InitQuestItem(n,"newspaper1",	"newspaper1",    	"",    "JRH34", 14,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"newspaper2",	"newspaper2",    	"",    "JRH34", 15,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"newspaper3",	"newspaper3",    	"",    "JRH34", 16,	0,0,	"","",	"","",	"","","");
+
+	n = InitQuestItem(n,"bandages_trousersX","bandages_trousersX",  "",    "JRH37",  1,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"bandages_trousersQ","bandages_trousersQ",  "",    "JRH37",  1,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"shirt_shoes",      "shirt_shoes",    	"",    "JRH37",  2,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"socks_sewing",     "socks_sewing",    	"",    "JRH37",  3,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"waistcoat",        "waistcoat",    	"",    "JRH37",  4,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"sash",        	"sash",    		"",    "JRH37",  5,	0,0,	"","",	"","",	"","","");
+
+	n = InitQuestItem(n,"gpmap",        	"",    		   "gpmap",         "", "",	0,0,	"","",	"","",	"","","");	//temp map piece hidden in gp-store
+	n = InitQuestItem(n,"doc61",		"doc61",		"",    "JRH37",	 8,	0,0,	"","",	"","",	"","",""); 	//from gov Stapelton
+	n = InitQuestItem(n,"Pell_outfit",	"Pell_outfit",		"",    "JRH37",	 9,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"key38",		"key38",  	 	"",    "JRH37", 10,	0,0,	"","",	"","",	"","",""); 	//prison2 keys
+
 
 	QUESTITEMS_QUANTITY = n;
 }

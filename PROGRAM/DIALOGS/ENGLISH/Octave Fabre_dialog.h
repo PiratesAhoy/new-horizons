@@ -1,7 +1,7 @@
 string DLG_TEXT[23] = {
 "...",
 "...",
-"Oui, Monsieur?",
+"Oui, #ssir#?",
 "Are you Octave Fabre?",
 "I am indeed.",
 "I have a question to ask of you. It is said you know a lot about this archipelago.",

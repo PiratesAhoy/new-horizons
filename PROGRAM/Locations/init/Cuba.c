@@ -524,7 +524,14 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l6.emerge = "reload_1_3";
 	Locations[n].reload.l6.autoreload = "1";
 	Locations[n].reload.l6.label = "#stown_name#.";
-	Locations[n].locators_radius.reload.reload10 = 2.0;	
+	Locations[n].locators_radius.reload.reload10 = 2.0;
+
+	Locations[n].reload.l9.name = "reload7";
+	Locations[n].reload.l9.go = "Suarez_House";
+	Locations[n].reload.l9.emerge = "reload1";
+	Locations[n].reload.l9.autoreload = "0";
+	Locations[n].reload.l9.label = "Suarez's house";
+	Locations[n].reload.l9.close_for_night = 1;
 
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;
@@ -790,6 +797,46 @@ void LocationInitCuba(ref n)
 
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;
+	
+	// -------------------------------------------------
+	Locations[n].filespath.models = "locations\Inside\Residence3_red";
+
+	Locations[n].id = "Suarez_House";
+	locations[n].id.label = "House";
+	Locations[n].image = "Inside_Residence3.tga";
+
+	//Town sack
+	Locations[n].townsack = "Havana";
+	locations[n].fastreload = "Havana";	
+	//Sound
+	locations[n].type = "Residence";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Res03_l_BoP1";
+	Locations[n].models.always.l1 = "Res03";
+	Locations[n].models.always.window = "Res03_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "Res03_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "Res03_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	//Locations[n].models.back = "back\mures3_";
+	Locations[n].models.back = "back\redrsb_";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Havana_town_02";
+	Locations[n].reload.l1.emerge = "reload7";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#.";
+
+	Locations[n].island = "Cuba";
+	n = n + 1;	
 	
 	// Thomas the Terror => -------------------------------------------------
 	Locations[n].id = "Havana_church";
@@ -2519,7 +2566,14 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l7.emerge = "reload1";
 	Locations[n].reload.l7.autoreload = "0";
 	Locations[n].reload.l7.label = "#stown_name# tavern.";
-	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l7.goto_disable = 1; // Screwface: Disable Go-To location	
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l7.goto_disable = 1; // Screwface: Disable Go-To location
+
+	Locations[n].reload.l8.name = "reload7";
+	Locations[n].reload.l8.go = "Cartographer_House";
+	Locations[n].reload.l8.emerge = "reload1";
+	Locations[n].reload.l8.autoreload = "0";
+	Locations[n].reload.l8.label = "Cartographer's House";
+	Locations[n].reload.l8.close_for_night = 1;
 
 	Locations[n].island = "Cuba";
 	n = n + 1;
@@ -2776,6 +2830,42 @@ void LocationInitCuba(ref n)
 	Locations[n].island = "Cuba";
 	n = n + 1;
 
+	// -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Inside\Pirate_House";
+
+	Locations[n].id = "Cartographer_House";
+	locations[n].id.label = "Cartographer's House";
+	Locations[n].image = "Inside_Pirate_House.tga";
+	//Sound
+	locations[n].type = "house";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "pirh_l";
+	Locations[n].models.always.house = "pirh";
+	Locations[n].models.always.window = "pirh_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "pirh_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "pirh_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\qcpirh_";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Santiago_town_01";
+	Locations[n].reload.l1.emerge = "reload7";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "Exit.";
+
+	Locations[n].island = "Cuba"; // NK 04-08-29
+	n = n + 1;	
 
 	// -------------------------------------------------
 	Locations[n].id = "Santiago_town_exit1";

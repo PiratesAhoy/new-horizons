@@ -15,6 +15,13 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 	
+	string PatrolState;
+	ref SmugglingIsland
+	int n;
+	n = GetCharacterCurrentIsland(Pchar);
+	if(n < 0) return "none";
+	SmugglingIsland = GetIslandByIndex(n);
+	
 	int topay;
 	
 	switch(Dialog.CurrentNode)
@@ -107,6 +114,7 @@ void ProcessDialogEvent()
 			Diag.CurrentNode = "Ready to go";
 			NPChar.quest.meeting = NPC_Meeting;
 			AddDialogExitQuest("Prepare Smuggling"); //Add quest
+			PChar.quest.Contraband.contact = NPChar.id;
 			DialogExit();
 		break;
 		
@@ -119,39 +127,25 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Ready to go":
-			d.Text = DLG_TEXT[19] + locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name + DLG_TEXT[22];
+			if(getSmugglingState(SmugglingIsland) == 1) PatrolState = DLG_TEXT[78];
+			if(getSmugglingState(SmugglingIsland) == 2) PatrolState = DLG_TEXT[79];
+			if(getSmugglingState(SmugglingIsland) == 3) PatrolState = DLG_TEXT[80];
+			if(getSmugglingState(SmugglingIsland) == 4) PatrolState = DLG_TEXT[81];
+			d.Text = DLG_TEXT[19] + locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name + DLG_TEXT[22]+PatrolState;
 			Link.l1 = DLG_TEXT[23];
 			Link.l1.go = "Smuggling_exit";
 			Link.l2 = DLG_TEXT[48];
 			Link.l2.go = "Smuggling cancel exit";
+			PChar.quest.Prepare_Smuggling_Fail.over = "yes";
 		break;
 		
 		case "Smuggling cancel exit":
-			Diag.CurrentNode = "Ready to go";
+			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
 			AddDialogExitQuest("Cancel_Smuggling"); //Add quest
 			DialogExit();
 		break;
 		//Added by Levis <--
-		
-		//Levis tradebook addon -->
-		case "Tradebook":
-			//Check if they like you enough
-			if(CheckSmugglerLiking(pchar) >= 70)
-			{
-				updateIslandSmugglingStateTradebookAll(Pchar);
-				d.Text = DLG_TEXT[76];
-				Link.l1 = DLG_TEXT[21];
-				Link.l1.go = "Exit";
-			}
-			else
-			{
-				d.Text = DLG_TEXT[75];
-				Link.l1 = DLG_TEXT[62];
-				Link.l1.go = "Exit";
-			}
-		break;
-		//Levis tradebook addon <--
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
@@ -199,7 +193,7 @@ void ProcessDialogEvent()
 					Link.l3 = DLG_TEXT[57];
 					Link.l3.go = "Offer Collector";
 				}
-				if(CheckAttribute(PChar,"quest.smuggle_collector.collect_bows") && GetAttribute(PChar,"items.pistolbow") >= 10)
+				if(CheckAttribute(PChar,"quest.smuggle_collector.collect_bows") && sti(PChar.items.pistolbow) >= 10)
 				{
 					Link.l3 = DLG_TEXT[65];
 					Link.l3.go = "Collector Contact";
@@ -212,16 +206,8 @@ void ProcessDialogEvent()
 					Link.l4.go = "Report Thomas";
 				}
 				//Levis: Thomas <--
-				//Levis: Tradebook addon -->
-				//You should have smuggled at least once to ask this
-				if(CheckSmugglingAmount(PChar) > 0)
-				{
-					Link.l5 = DLG_TEXT[74];
-					Link.l5.go = "Tradebook";
-				}
-				//Levis: Tradebook addon <--
-				Link.l6 = DLG_TEXT[8];
-				Link.l6.go = "Exit";
+				Link.l5 = DLG_TEXT[8];
+				Link.l5.go = "Exit";
 			}
 		break;
 		
@@ -300,7 +286,7 @@ void ProcessDialogEvent()
 				Link.l3 = DLG_TEXT[57];
 				Link.l3.go = "Offer Collector";
 			}
-			if(CheckAttribute(PChar,"quest.smuggle_collector.collect_bows") && GetAttribute(PChar,"items.pistolbow") >= 10)
+			if(CheckAttribute(PChar,"quest.smuggle_collector.collect_bows") && sti(PChar.items.pistolbow) >= 10)
 			{
 				Link.l3 = DLG_TEXT[65];
 				Link.l3.go = "Collector Contact";
@@ -313,16 +299,8 @@ void ProcessDialogEvent()
 				Link.l4.go = "Report Thomas";
 			}
 			//Levis: Thomas <--
-			//Levis: Tradebook addon -->
-			//You should have smuggled at least once to ask this
-			if(CheckSmugglingAmount(PChar) > 0)
-			{
-				Link.l5 = DLG_TEXT[74];
-				Link.l5.go = "Tradebook";
-			}
-			//Levis: Tradebook addon <--
-			Link.l6 = DLG_TEXT[11];
-			Link.l6.go = "Exit";
+			Link.l5 = DLG_TEXT[11];
+			Link.l5.go = "Exit";
 		break;
 
 		case "Meeting_1":
@@ -372,8 +350,13 @@ void ProcessDialogEvent()
 				if(CheckSmugglerLiking(pchar) >= 25)
 				{
 					Pchar.quest.contraband.CurrentPlace = SelectSmugglingLocation();
-					Dialog.snd = "voice\SMAG\SMAG007";				
-					d.Text = DLG_TEXT[20]+DLG_TEXT[25];    //+locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name  // TALISMAN - remove beach name so player has to go back to agent to find out where to go.
+					Dialog.snd = "voice\SMAG\SMAG007";
+					if(getSmugglingState(SmugglingIsland) == 1) PatrolState = DLG_TEXT[74];
+					if(getSmugglingState(SmugglingIsland) == 2) PatrolState = DLG_TEXT[75];
+					if(getSmugglingState(SmugglingIsland) == 3) PatrolState = DLG_TEXT[76];
+					if(getSmugglingState(SmugglingIsland) == 4) PatrolState = DLG_TEXT[77];
+				
+					d.Text = DLG_TEXT[20]+PatrolState+DLG_TEXT[25];    //+locations[FindLocation(Pchar.quest.contraband.CurrentPlace)].name  // TALISMAN - remove beach name so player has to go back to agent to find out where to go.
 					if (!CheckAttribute(Pchar,"quest.smuggling_got_book")) d.Text = d.Text + DLG_TEXT[24];
 					if (CheckAttribute(pchar, "amount_smuggleruns") && sti(pchar.amount_smuggleruns) > 2)    // PB & TALISMAN
 					{

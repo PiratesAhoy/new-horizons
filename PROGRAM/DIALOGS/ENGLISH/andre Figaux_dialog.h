@@ -1,11 +1,11 @@
-string DLG_TEXT[51] = {
+string DLG_TEXT[58] = {
 "Welcome to my tavern, stranger. My name is ",
 ". What brings you to my humble establishment? Do you need a place to rest?",
 "Thank you. My name is ",
 ". I'm here on business.",
 "My name is ",
 ", and you can spare your hospitality. I'm here on business.",
-"Welcome, sir! What do you want?",
+"Welcome, #ssir#! What do you want?",
 "I need some information, and I find the local innkeeper is usually the man to ask.",
 "I'm looking to hire some sailors for my ship.",
 "Point me to the patrons here who might be looking for a job. I need to add to my crew, and I don't mind if they're cutthroats.",
@@ -48,6 +48,13 @@ string DLG_TEXT[51] = {
 "Can you help me with something? I'm looking for the French frigate 'La Foudre'. She was supposed to call in here.",
 "There have hardly been any ships here lately. We did have a convoy due to appear, but she hasn't showed up.",
 "I know. I'm investigating its disappearance.",
-"Well I wish you the best of luck in your quest sir.",
+"Well I wish you the best of luck in your quest #ssir#.",
 "Thank you.",
+"Can you tell me if #svillain#, or anyone else from the '#sship#', has been in #sMarigot# recently?",
+"Yes, some sailors from the '#sship#' were in here a few nights ago. They were talking about what they'd do in the brothel in #sPointe a Pitre#.",
+"So they're heading for #sisland_Guadeloupe# next?",
+"That seems to be true, yes. I'll tell you something else\nNext time you're in the port, look out to sea and you'll see a big warship. That's the '#swarship#.'",
+"How big is that ship?",
+"Big enough that none of the Alliance so-called powers have anything in the Caribbean to match her. She'll clear these seas of France's enemies all by herself, just you see!",
+"That's good to know. Well, goodbye. <Thinks: the English navy would probably pay well to know that. If so, I could try my luck at the naval base on #sisland_Antigua#.>",
 };

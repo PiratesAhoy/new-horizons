@@ -65,6 +65,7 @@ void ProcessDialogEvent()
 			if (pchar.quest.main_line == "blaze_search_danielle_again" || pchar.quest.main_line == "blaze_search_danielle_again_10")
 			{
 				Dialog.snd = "voice\REDI\REDI006";
+				Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
 				dialog.text = DLG_TEXT[11] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[12])]) + DLG_TEXT[13];
 				link.l1 = DLG_TEXT[14];
 				link.l1.go = "blaze_search_danielle_again_2";
@@ -97,11 +98,19 @@ void ProcessDialogEvent()
 		case "see_yaht_exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
+			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID("Danielle"))));
 			AddQuestRecord("Where_are_i", 12);
+			Preprocessor_Remove("pronoun2");
+			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("Danielle");
 		break;
 		
 		case "without_ship":
 			Dialog.snd = "voice\REDI\REDI010";
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+			else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 			dialog.text = DLG_TEXT[25];
 			link.l1 = DLG_TEXT[26] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[27])]) + DLG_TEXT[28];
 			link.l1.go = "without_ship_2";
@@ -109,6 +118,9 @@ void ProcessDialogEvent()
 
 		case "without_ship_2":
 			Dialog.snd = "voice\REDI\REDI011";
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(characterFromID("Danielle"))));
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("girl", XI_ConvertString("girl"));
+			else Preprocessor_Add("girl", XI_ConvertString("lad"));
 			dialog.text = DLG_TEXT[29];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "without_ship_3";
@@ -135,15 +147,25 @@ void ProcessDialogEvent()
 		break;
 
 		case "blaze_search_danielle_again_2":
+			if (pchar.quest.main_line != "blaze_search_danielle_again_10")
+			{
+				Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+				Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
+				Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID("Danielle"))));
+				AddQuestRecord("Where_are_i", 11);
+				Preprocessor_Remove("pronoun2");
+				Preprocessor_Remove("pronoun");
+				Preprocessor_Remove("Danielle");
+				AddDialogExitQuest("prepare_for_storm");
+			}
 			Dialog.snd = "voice\REDI\REDI014";
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID("Danielle"))));
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("girl", XI_ConvertString("girl"));
+			else Preprocessor_Add("girl", XI_ConvertString("lad"));
 			dialog.text = DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			link.l1.go = "exit";
-			if (pchar.quest.main_line != "blaze_search_danielle_again_10")
-			{
-				AddQuestRecord("Where_are_i", 11);
-				AddDialogExitQuest("prepare_for_storm");
-			}
 		break;
 
 		case "to_oxbay_by_prisoner_escape_researcher_2":
@@ -261,6 +283,7 @@ void ProcessDialogEvent()
 
 		case "I go to the right":
 			Dialog.snd = "voice\REDI\REDI020";
+			Preprocessor_Add("Pronoun_upper", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle")))));
 			d.Text = DLG_TEXT[48];
 			Link.l1 = DLG_TEXT[49];
 			Link.l1.go = "I go to the right_1";
@@ -268,6 +291,8 @@ void ProcessDialogEvent()
 
 		case "I go to the right_1":
 			Dialog.snd = "voice\REDI\REDI021";
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+			else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 			d.Text = DLG_TEXT[50] + GetMyName(Pchar) + DLG_TEXT[51];
 			Link.l1 = DLG_TEXT[52];
 			Link.l1.go = "exit";

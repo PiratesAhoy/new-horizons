@@ -389,7 +389,7 @@ void CreateWeatherEnvironment()
 					}
 				}
 			}
-			// PB: Swamps -->
+			// PB: Swamps (yellow) -->
 			if(CheckAttribute(loc, "environment.swamp") && loc.environment.swamp == "true")
 			{
 				Sea.GF3.WaterColor = argb(0,160,116,33);
@@ -397,7 +397,15 @@ void CreateWeatherEnvironment()
 			}
 			// PB: Swamps <--
 
-			// JRH: Sewer -->
+			// JRH: Swamps (light green) -->
+			if(CheckAttribute(loc, "environment.swamp2") && loc.environment.swamp2 == "true")
+			{
+				Sea.GF3.WaterColor = argb(100,100,100,100);
+				Sea.GF3.SkyColor = argb(0,179,187,6);
+			}
+			// JRH: Swamps <--
+
+			// JRH: Sewer (brown) -->
 			if(CheckAttribute(loc, "environment.sewer") && loc.environment.sewer == "true")
 			{
 				Sea.GF3.WaterColor = argb(0,100,25,50);

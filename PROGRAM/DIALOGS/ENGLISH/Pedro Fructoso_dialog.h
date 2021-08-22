@@ -1,11 +1,11 @@
-string DLG_TEXT[54] = {
+string DLG_TEXT[57] = {
 "Welcome to my tavern, stranger. My name is ",
 ". What brings you to my humble establishment? Do you need a place to rest?",
 "Thank you. My name is ",
 ". I'm here on business.",
 "My name is ",
 ", and you can spare your hospitality. I'm here on business.",
-"Welcome, sir! What do you want?",
+"Welcome, #ssir#! What do you want?",
 "I need some information, and I find the local innkeeper is usually the man to ask.",
 "I'm looking to hire some sailors for my ship.",
 "Point me to the patrons here who might be looking for a job. I need to add to my crew, and I don't mind if they're cutthroats.",
@@ -53,4 +53,7 @@ string DLG_TEXT[54] = {
 " has just got engaged to the ",
 " of some rich Englishman over in #sRedmond#. So everyone gets one free drink on condition they raise their glasses to the happy couple.",
 "Well in that case, long life and happiness to the pair of them - cheers!",
+"I'm working for Lady Suarez. I want to speak with Abel Barco. Do you know him?",
+"Not really. He's just paid me to inform him when someone working for Lady Suarez would ask for him. And to tell you, tomorrow, he'll wait for you outside the town.",
+"Alright, Tell him I'll be there.",
 };

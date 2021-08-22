@@ -79,6 +79,9 @@ void InitMusic()
 	tmpref.Rogers_galleon.f1.name = "MUSIC\Rogers_galleon.ogg";
 
 	tmpref.choir.f1.name = "MUSIC\choir.ogg";
+
+	tmpref.Swe_inside.f1.name = "MUSIC\Swe_inside.ogg";
+
 	//=========================| WOODES ROGERS QUEST |========================//<-- JRH
 
 	//============================| GOLDBUG QUEST |===========================//JRH -->
@@ -126,8 +129,15 @@ void InitMusic()
 	//=============================| Ardent Quest |=============================// Grey Roger -->
 
 	tmpref.wedding2.f1.name = "MUSIC\Pachelbel_Canon.ogg";
+	tmpref.Ardent_start.f1.name = "MUSIC\The Song Of The High Seas.ogg";					// GR: Victory at Sea
+	tmpref.Ardent_end.f1.name = "MUSIC\Victory At Sea.ogg";							// GR: Victory at Sea
 
 	//=============================| Ardent Quest |=============================// Grey Roger <--
+	//=============================| Jack Sparrow |=============================// Grey Roger -->
+
+	tmpref.Black_Pearl.f1.name = "MUSIC\Barbossa Is Hungry.ogg";						// GR: Pirates of the Caribbean
+
+	//=============================| Jack Sparrow |=============================// Grey Roger <--
 
 	tmpref.music_eng_town.f1.name = "MUSIC\Eng_Town.ogg";							// PB: Sea Dogs
 	tmpref.music_eng_town.f2.name = "MUSIC\Eng_Town2.ogg";							// PB: Sea Dogs
@@ -153,6 +163,14 @@ void InitMusic()
 	tmpref.music_usa_town.f2.name = "MUSIC\USA_Town2.ogg";							// PB: No Man's Land
 	tmpref.music_usa_town.f3.name = "MUSIC\USA_Town3.ogg";							// PB: No Man's Land
 
+	tmpref.music_swe_town.f1.name = "MUSIC\Swe_Town.ogg";							// JRH
+	
+	tmpref.music_personal_town.f1.name = "MUSIC\PersonalNation\personal_town1.ogg";	// DeathDaisy: added music for personal colonies, music by Adrian von Ziegler provided by Cassadar
+	tmpref.music_personal_town.f2.name = "MUSIC\PersonalNation\personal_town2.ogg";	// DeathDaisy: Andrei Kyrlov
+	tmpref.music_personal_town.f3.name = "MUSIC\PersonalNation\personal_town3.ogg";	// DeathDaisy:	Derek Fiechter, provided by Cassadar
+	tmpref.music_personal_town.f4.name = "MUSIC\PersonalNation\personal_town4.ogg";	// DeathDaisy: Crusader Kings 2
+	tmpref.music_personal_town.f5.name = "MUSIC\PersonalNation\personal_town5.ogg";	// DeathDaisy: Witcher 3
+
 	tmpref.music_house.f1.name = "MUSIC\Gorod-1.ogg";
 	tmpref.music_house.f2.name = "MUSIC\Jungle.ogg";
 	tmpref.music_house.f3.name = "MUSIC\Enplavanie.ogg";
@@ -166,6 +184,10 @@ void InitMusic()
 
 	tmpref.music_tavern_pirate.f1.name = "MUSIC\YoHo_instrumental.ogg";				// PB: PotC
 	tmpref.music_tavern_pirate.f2.name = "MUSIC\YoHo_With_Vocals.ogg";				// PB: PotC
+	
+	// DeathDaisy: copies of the regular tavern music, so you can add your own
+	tmpref.music_tavern_personal.f1.name = "MUSIC\PersonalNation\personal_tavern1.ogg";
+	tmpref.music_tavern_personal.f2.name = "MUSIC\PersonalNation\personal_tavern2.ogg";	
 
 	//============ CHURCH ============================
 	tmpref.music_church.f1.name = "MUSIC\Church_Theme.ogg";
@@ -198,6 +220,11 @@ void InitMusic()
 
 	tmpref.music_american_governor.f1.name = "MUSIC\Governors_Theme.ogg";
 	tmpref.music_american_governor.f2.name = "MUSIC\Gubernator.ogg";
+	
+	tmpref.music_swedish_governor.f1.name = "MUSIC\Swe_Town.ogg";						// DeathDaisy: added special music for swedish gov. using JRH swe town music
+	
+	tmpref.music_personal_governor.f1.name = "MUSIC\PersonalNation\personal_governor1.ogg";	// DeathDaisy: added music for personal colonies. music by Derek Fiechter
+	tmpref.music_personal_governor.f2.name = "MUSIC\PersonalNation\personal_governor2.ogg";	// DeathDaisy: Derek Fiechter
 
 	//============= JUNGLE SHORE, JUNGLE ===============
 	tmpref.music_jungle.f1.name = "MUSIC\Jungle.ogg";
@@ -215,7 +242,7 @@ void InitMusic()
 	tmpref.music_day_sailing.f1.name = "MUSIC\Spokplavanie.ogg";
 	tmpref.music_day_sailing.f2.name = "MUSIC\Sailing01.ogg";
 	tmpref.music_day_sailing.f3.name = "MUSIC\Sailing02.ogg";
-	tmpref.music_day_sailing.f4.name = "MUSIC\Sailing03.ogg";						// PB: Cutthroat Island
+	tmpref.music_day_sailing.f4.name = "MUSIC\Sailing03.ogg";					// PB: Cutthroat Island
 
 	tmpref.music_night_sailing.f1.name = "MUSIC\Sailing_Night.ogg";					// MAXIMUS: AoP
 	tmpref.music_night_sailing.f2.name = "MUSIC\Sailing_Night2.ogg";				// PB: Sea Dogs

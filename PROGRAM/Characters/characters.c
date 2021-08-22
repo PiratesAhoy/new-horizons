@@ -42,7 +42,7 @@ bool Character_PostInit(int n)
 		if(rCharacter.sex == "woman")
 		{
 			if(StraifCharacter(rCharacter)) rCharacter.model.animation = "new_woman";
-			else rCharacter.model.animation = "towngirl";
+			else rCharacter.model.animation = "woman_sit";	// was "towngirl"
 // KK -->
 			rCharacter.model.height = WOMAN_HEIGHT;
 			rCharacter.capacity.max = WOMAN_CAPACITY;
@@ -90,7 +90,8 @@ bool Character_PostInit(int n)
 		}
 		else
 		{
-			rCharacter.equip.gun = "pistol1";
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) rCharacter.equip.gun = "pistol1";
+			else rCharacter.equip.gun = "pistol1a";
 		}
 		DeleteAttribute(rCharacter,"gun");
 	}
@@ -165,8 +166,8 @@ bool CreateCharacter(ref character)
 		fgtlevel = GetShipSkill(character, SKILL_FENCING);
 	}
 	if(fgtlevel < 0.0) fgtlevel = 0.0;
-	if(fgtlevel > SKILL_MAX) fgtlevel = SKILL_MAX;
-	fgtlevel = fgtlevel/SKILL_MAX;
+	if(fgtlevel > MAX_CHARACTER_SKILL) fgtlevel = MAX_CHARACTER_SKILL;
+	fgtlevel = fgtlevel/MAX_CHARACTER_SKILL;
 	SendMessage(character, "lf", MSG_CHARACTER_SETFTGLEVEL, fgtlevel);
 	//Set character sex
 	SendMessage(character, "lsl", MSG_CHARACTER_EX_MSG, "SetSex", character.sex == "man");
@@ -523,11 +524,20 @@ void SetDefaultFightDead(ref character)
 
 void SetHuberAnimation(ref character)
 {
-	character.actions.idle.i1 = "Gov_ObserveHands";
-	character.actions.idle.i2 = "Gov_LegOnLeg";
-	character.actions.idle.i3 = "Gov_Look_Around";
-	character.actions.idle.i4 = "Gov_think_1";
-	character.actions.idle.i5 = "Gov_think_2";
+	if(character.sex == "man")
+	{
+		character.actions.idle.i1 = "Gov_ObserveHands";
+		character.actions.idle.i2 = "Gov_LegOnLeg";
+		character.actions.idle.i3 = "Gov_Look_Around";
+		character.actions.idle.i4 = "Gov_think_1";
+		character.actions.idle.i5 = "Gov_think_2";
+	}
+	else
+	{
+		character.actions.idle.i1 = "Sit_Look_Around";
+		character.actions.idle.i2 = "Sit_Blew_1";
+		character.actions.idle.i3 = "Sit_Lower_head";
+	}
 }
 
 int GetMaxLandCrew(int crewQuantity)

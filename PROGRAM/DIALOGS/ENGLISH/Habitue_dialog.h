@@ -1,5 +1,5 @@
-string DLG_TEXT[118] = {
-"Oi, lad, you look like an experienced sea dog! Buy me a cup o' rum, will ya?",
+string DLG_TEXT[121] = {
+"Oi, #slad#, you look like an experienced sea dog! Buy me a cup o' rum, will ya?",
 "I'm not feeling particularly charitable at the moment.",
 "Sure. And I'll join you.",
 "Hey! Do you wanna play some dice? I recently came back from a very successful expedition, so I've got money to lose!",
@@ -75,7 +75,7 @@ string DLG_TEXT[118] = {
 "You...you're trying to get me drunk and steal my money!",
 "Settle down! I'm your friend, remember?",
 "Shut up, rat, before I run you through!",
-"Listen, you're a good man. Maybe you can help me with...a certain situation?",
+"Listen, you're a good #sgender#. Maybe you can help me with...a certain situation?",
 "No. I have to be going.",
 "Of course! We're friends, right?",
 "...And then I grabbed the blade of his sword and...",
@@ -116,5 +116,8 @@ string DLG_TEXT[118] = {
 "You are a good player. You have tenacious memory... With you - I'll meet with pleasure any time here.",
 "Thanks for the game... Good luck.",
 "So you are doubling up! Aye, give me a card and let's see if it brings you any luck!",
-"Alas, I don't have enough money to double up"
+"Alas, I don't have enough money to double up",
+"! You lose, lass!",
+"You've lost, lass!",
+"... Lucky girl. Give me the card..."
 };

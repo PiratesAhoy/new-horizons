@@ -1,5 +1,5 @@
 string DLG_TEXT[21] = {
-"I'm forever in your debt, sir!",
+"I'm forever in your debt, #ssir#!",
 "Not at all. I've been paid good money for your salvation.",
 "But who are you? Why did you save me?",
 "Let's take this outside.",

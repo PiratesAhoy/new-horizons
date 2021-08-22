@@ -173,6 +173,11 @@ void ProcessDialogEvent()
 			itest = 0;
 			Dialog.snd = "voice\MAFI\MAFI006";
 			dialog.text = DLG_TEXT[26];
+			if (CheckQuestAttribute("kapitein", "need_papers"))
+			{
+				link.l1 = DLG_TEXT[33];
+				link.l1.go = "kapitein_need_forger";
+			}
 			link.l99 = DLG_TEXT[27];
 			link.l99.go = "second time";
 		break;
@@ -222,6 +227,19 @@ void ProcessDialogEvent()
 			//NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();
 			AddDialogExitQuest("exit_sit");
+		break;
+
+		case "kapitein_need_forger":
+			dialog.text = DLG_TEXT[34];
+			link.l1 = DLG_TEXT[35];
+			link.l1.go = "kapitein_need_forger2";
+		break;
+
+		case "kapitein_need_forger2":
+			dialog.text = DLG_TEXT[36];
+			link.l1 = DLG_TEXT[37];
+			AddQuestRecord("kapitein", 13);
+			link.l1.go = "exit";
 		break;
 	}
 }

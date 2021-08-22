@@ -684,6 +684,7 @@ void ProcessDialogEvent()
 	break;
 
 	case "resque_danielle_8":
+		Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 		dialog.text = DLG_TEXT[203];
 		link.l1 = DLG_TEXT[204];
 		link.l1.go = "resque_danielle_9";
@@ -1129,6 +1130,12 @@ void ProcessDialogEvent()
 		Link.l1.go = "exit";
 		AddDialogExitQuest("Go_find_BushX2");
 	break;
+
+	case "sidequest_Admiralty_letter":
+		Dialog.Text = DLG_TEXT[342];
+		Link.l1 = DLG_TEXT[343];
+		Link.l1.go = "exit";
+	break;
 //Hornblower
 
 // Ardent
@@ -1163,6 +1170,69 @@ void ProcessDialogEvent()
 		Link.l1.go = "exit";
 	break;
 
+	case "abduction_move_ship":
+		Dialog.Text = DLG_TEXT[330];
+		Link.l1.go = "exit";
+	break;
+
+	case "threat_found_orders":
+		Dialog.Text = DLG_TEXT[336];
+		Link.l1.go = "exit";
+	break;
+
+	case "hunt_found_orders":
+		Preprocessor_Add("villain", GetMySimpleName(characterFromID(PChar.quest.villain)));
+		Dialog.Text = DLG_TEXT[331];
+		Link.l1.go = "exit";
+	break;
+
+	case "hunt_how_to_save_crew":
+		Dialog.Text = DLG_TEXT[335];
+		Link.l1.go = "exit";
+	break;
+
+	case "hunt_residence_backdoor":
+		if (GetDayTime() == DAY_TIME_NIGHT) Dialog.Text = DLG_TEXT[332];
+		else Dialog.Text = DLG_TEXT[332] + DLG_TEXT[333];
+		Link.l1.go = "exit";
+	break;
+
+	case "hunt_found_signature":
+		Dialog.Text = DLG_TEXT[334];
+		Link.l1.go = "exit";
+	break;
+
 // Ardent
+
+// The Kapitein of Kralendijk
+	case "kapitein_decision":
+		Preprocessor_Add("proposer", GetMySimpleName(characterFromID("Willem Voigt")));
+		Dialog.text = DLG_TEXT[337];
+		Link.l1 = DLG_TEXT[338];
+		Link.l1.go = "exit_kapitein_go_ahead";
+		Link.l2 = DLG_TEXT[339];
+		Link.l2.go = "exit";
+	break;
+
+	case "kapitein_steal_uniform":
+		Dialog.Text = DLG_TEXT[340];
+		Link.l1 = DLG_TEXT[341];
+		Link.l1.go = "exit";
+	break;
+
+	case "exit_kapitein_go_ahead":
+		AddDialogExitQuest("kapitein_start_quest");
+		DialogExit();
+		NextDiag.CurrentNode = NextDiag.TempNode;
+	break;
+// The Kapitein of Kralendijk
+
+// Crystal Skull
+	case "crysskull_stuck_in_cave":
+		Dialog.Text = DLG_TEXT[344];
+		Link.l1 = "...";
+		Link.l1.go = "exit";
+	break;
+// Crystal Skull
 	}
 }

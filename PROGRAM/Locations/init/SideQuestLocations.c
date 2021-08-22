@@ -1066,4 +1066,58 @@ void LocationInitSideQuestLocations(ref n)
 	Locations[n].island = "Colombia"; // NK 04-08-29	
 	n = n + 1;
 
+	//-------------------------------------------------
+	// GR: for use with "Crystal Skull" quest
+	//-------------------------------------------------
+	Locations[n].id = "Guadeloupe_Indian_House";
+	locations[n].id.label = "House";
+	Locations[n].filespath.models = "locations\inside\HutRoundInside";
+	Locations[n].image = "Inside_IndianHome.tga"; //Todo
+
+	//Town sack
+	Locations[n].townsack = "Pointe a Pitre";
+
+	//Sound
+	locations[n].type = "house";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "HutRoundInside2_locators";
+	Locations[n].models.always.house = "HutRoundInside_noclock";
+
+	//Day
+	Locations[n].models.day.charactersPatch = "HutRoundInside_patch";
+	//Locations[n].models.day.fonar = "SS_fn";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "HutRoundInside_patch";
+	//Locations[n].models.night.fonar = "SS_fn";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	
+	//Reload map
+	Locations[n].reload.l1.name = "reload1_back";
+	Locations[n].reload.l1.go = "Guadeloupe_Jungle_02";
+	Locations[n].reload.l1.emerge = "reload3";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload1_back = 0.6;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.01;
+	Locations[n].items.randitem1 = "carpet4";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.01;
+	Locations[n].items.randitem2 = "jars";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.01;
+	Locations[n].items.randitem3 = "jars";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Guadeloupe"; // NK 04-08-29
+	n = n + 1;
+
+	Locations[n].vcskip = true;
+
 }

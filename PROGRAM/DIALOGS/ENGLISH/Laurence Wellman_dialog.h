@@ -1,6 +1,6 @@
-string DLG_TEXT[62] = {
+string DLG_TEXT[70] = {
 "Welcome, ",
-". I don't believe we've met before. I am Laurence Wellman, harbor master.",
+". I don't believe we've met before. I am Laurence Wellman, harbour master.",
 "Hello, Laurence. I'm ",
 ", captain of the ",
 ".",
@@ -51,7 +51,7 @@ string DLG_TEXT[62] = {
 "I certainly do. Are you offering to vouch for him? Then I reverse my decision. \nSince you're vouching for Bloom, I'd recommend you hire him so you can keep an eye on him. \nIf he does something like this again, your reputation will suffer.",
 "I'll keep an eye on him. Thank you, and goodbye!",
 "Let me ask you something else, if I may.",
-"You seem a respectable man, but I must admit I don't know you well enough \nto let you vouch for young Bloom. Please don't be offended, ",
+"You seem a respectable #sgender#, but I must admit I don't know you well enough \nto let you vouch for young Bloom. Please don't be offended, ",
 ", but\nhe'll have to find another patron.",
 "Well, goodbye, Laurence.",
 "Let me ask you something else, if I may.",
@@ -61,5 +61,12 @@ string DLG_TEXT[62] = {
 "Of course... now where is my money? Hey what are those sailors doing with those ropes up there?",
 "What the... up to no good, no doubt. I'd better go and see what's going on.",
 "Yes, yes. I'll pay you when you get back.",
-
+"Could you tell me on which ship #svillain# sailed?",
+"You'll need to be more specific, ",
+". When did #svillain# sail from #sRedmond#?",
+"Probably soon after the battle near the churchyard. Those were #spronoun# men trying to let the French in.",
+"That certainly narrows it down. The ",
+" family maintain several trade ships. Four were lost to pirates not long ago. Others have been away for at least a month. Let me see which ships are still here.",
+"The East Indiaman '#sship#' is missing. That is probably the ship you're looking for.",
+"Thank you, Laurence. You've been very helpful. Goodbye.", 
 };

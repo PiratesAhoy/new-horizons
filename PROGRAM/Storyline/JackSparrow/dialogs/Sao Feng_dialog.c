@@ -89,10 +89,6 @@ void ProcessDialogEvent()
 
 		case "ANIMISTS_completed":
 			Dialog.snd = "voice\REGR\REGR007";
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_TITLE, false, false)); // KK
-			dialog.text = DLG_TEXT[20];
-			link.l1 = DLG_TEXT[21];
-			link.l1.go = "exit";
 			npchar.quest.ANIMISTS = "completed";
 			LAi_type_actor_Reset(characterFromID("Sao Feng's Body1"));
 			LAi_type_actor_Reset(characterFromID("Sao Feng's Body2"));
@@ -118,6 +114,10 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 28);
 			}
 			else { AddPartyExp(pchar, 2800); }
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_TITLE, false, false)); // KK
+			dialog.text = DLG_TEXT[20];
+			link.l1 = DLG_TEXT[21];
+			link.l1.go = "exit";
 		break;
 
 		case "ANIMISTS_1":
@@ -173,6 +173,7 @@ void ProcessDialogEvent()
 			AddQuestRecord("Sao Feng", 3);
 			AddQuestRecord("Pirate Lord", 5); 
 			ChangeCharacterAddressGroup(&characters[GetCharacterIndex("Tai Huang")], "Turks_tavern", "sit", "sit5");
+			SetRumourState("Sao_Feng_start", false); 
 			pchar.Colours = "0";
 		break;
 

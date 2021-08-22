@@ -9,7 +9,7 @@ string DLG_TEXT[14] = {
 "That sounds like a reasonable plan to me.",
 "Here you go.",
 "Please look at this.",
-"Oh sorry sir, move along!",
+"Oh sorry #ssir#, move along!",
 "Thank you, now please go away quickly.",
 " gold.",
 };

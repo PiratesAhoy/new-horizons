@@ -145,6 +145,8 @@ void CreateOfficersCharacters(ref n)
 	LAi_NoRebirthEnable(ch);
 	LAi_SetImmortal(ch, true);
 	ch.isOfficer = true;
+	ch.quest.officertype = OFFIC_TYPE_CARPENTER;
+	ch.questchar = true;	// Protect character from levelling system
 	AddGameCharacter(n, ch);
 
 	//Leborio Drago worker in mine

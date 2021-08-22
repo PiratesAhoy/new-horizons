@@ -72,7 +72,7 @@ void InitIslands()
 		rIsland.reload.l3.pic = 22;
 		rIsland.reload.l3.tex = "t1";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
-				
+
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
 		rIsland.InterfaceTextures.t1.h = 4;
 		rIsland.InterfaceTextures.t1.v = 16;
@@ -120,23 +120,48 @@ void InitIslands()
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.reload.l2.label = "Devil's Throat";
-		rIsland.reload.l2.name = "reload_1";
-		rIsland.reload.l2.go = "Redmond_Shore_01";
-		rIsland.reload.l2.emerge = "reload1";
-		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 12;
-		rIsland.reload.l2.tex = "t2";
-		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
+		if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
+		{
+			rIsland.reload.l2.label = "Woodes Rogers' Port";
+			rIsland.reload.l2.name = "reload_1";
+			rIsland.reload.l2.go = "wr_port";
+			rIsland.reload.l2.emerge = "reload1";
+			rIsland.reload.l2.radius = 200.0;
+			rIsland.reload.l2.pic = 10;
+			rIsland.reload.l2.tex = "t1";
+			rIsland.reload.l2.enable = false;      //start disabled
+			rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.reload.l3.label = "Rocky Shore";
-		rIsland.reload.l3.name = "reload_3";
-		rIsland.reload.l3.go = "Redmond_Shore_02";
-		rIsland.reload.l3.emerge = "reload1";
-		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 13;
-		rIsland.reload.l3.tex = "t2";
-		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
+			rIsland.reload.l3.label = "Cave shore";
+			rIsland.reload.l3.name = "reload_3";
+			rIsland.reload.l3.go = "wr_cave_shore";
+			rIsland.reload.l3.emerge = "reload11";
+			rIsland.reload.l3.radius = 200.0;
+			rIsland.reload.l3.pic = 2;
+			rIsland.reload.l3.tex = "t2";
+			rIsland.reload.l3.enable = false;      //start disabled
+			rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
+		}
+		else
+		{
+			rIsland.reload.l2.label = "Devil's Throat";
+			rIsland.reload.l2.name = "reload_1";
+			rIsland.reload.l2.go = "Redmond_Shore_01";
+			rIsland.reload.l2.emerge = "reload1";
+			rIsland.reload.l2.radius = 200.0;
+			rIsland.reload.l2.pic = 12;
+			rIsland.reload.l2.tex = "t2";
+			rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
+
+			rIsland.reload.l3.label = "Rocky Shore";
+			rIsland.reload.l3.name = "reload_3";
+			rIsland.reload.l3.go = "Redmond_Shore_02";
+			rIsland.reload.l3.emerge = "reload1";
+			rIsland.reload.l3.radius = 200.0;
+			rIsland.reload.l3.pic = 13;
+			rIsland.reload.l3.tex = "t2";
+			rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
+		}
 
 		rIsland.reload.l4.label = "#stown_name# Fort"; // KK
 		rIsland.reload.l4.name = "reload_fort1";
@@ -284,6 +309,7 @@ void InitIslands()
 		rIsland.reload.l2.radius = 200.0;
 		rIsland.reload.l2.pic = 17;
 		rIsland.reload.l2.tex = "t1";
+        rIsland.reload.l2.ships.l0.ay = 3.4;        // LDH 11Dec16
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l3.label = "Gray Rock Bay";
@@ -384,7 +410,7 @@ void InitIslands()
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 18;
 		rIsland.reload.l1.tex = "t1";
-		rIsland.reload.l1.ships.l0.ay = 4.8;			// LDH fix until the locators.gm file can be updated - 24Apr09
+        rIsland.reload.l1.ships.l0.ay = -1.5;           // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "Sunny Haven";
@@ -464,6 +490,7 @@ void InitIslands()
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 19;
 		rIsland.reload.l1.tex = "t1";
+        rIsland.reload.l1.ships.l0.ay = 2.7;        // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "Palm Beach";
@@ -516,6 +543,8 @@ void InitIslands()
 		rIsland.Trade.Import.id4 = GOOD_RUM;
 		rIsland.Trade.Import.id5 = GOOD_GOLD;
 		rIsland.Trade.Import.id6 = GOOD_SILVER;
+		rIsland.Trade.Import.id7 = GOOD_OIL;
+		rIsland.Trade.Import.id8 = GOOD_COTTON;
 		rIsland.Trade.Contraband.id1 = GOOD_SUGAR;
 		rIsland.Trade.Contraband.id2 = GOOD_LINEN;
 		rIsland.Trade.Contraband.id3 = GOOD_WINE;
@@ -544,6 +573,7 @@ void InitIslands()
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 9;
 		rIsland.reload.l1.tex = "t1";
+		rIsland.reload.l1.ships.l0.ay = 3.0;    // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "#stown_name# Port"; // KK
@@ -563,7 +593,7 @@ void InitIslands()
 		rIsland.reload.l3.pic = 16;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
-		
+
 		rIsland.reload.l4.label = "#stown_name# Fort"; // KK
 		rIsland.reload.l4.name = "reload_fort1";
 		rIsland.reload.l4.go = "Fort"; // KK
@@ -592,6 +622,9 @@ void InitIslands()
 		rIsland.Trade.Import.id2 = GOOD_SILVER;
 		rIsland.Trade.Import.id3 = GOOD_MAHOGANY;
 		rIsland.Trade.Import.id4 = GOOD_GUNPOWDER;
+		rIsland.Trade.Import.id5 = GOOD_CLOTHES;
+		rIsland.Trade.Import.id6 = GOOD_COTTON;
+		rIsland.Trade.Import.id7 = GOOD_OIL;
 		rIsland.Trade.Contraband.id1 = GOOD_EBONY;
 		rIsland.Trade.Contraband.id2 = GOOD_COFFEE;
 		rIsland.Trade.Contraband.id3 = GOOD_PAPRIKA;
@@ -749,6 +782,7 @@ void InitIslands()
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 0;
 		rIsland.reload.l1.tex = "t1";
+		rIsland.reload.l1.ships.l0.ay = 1.7;		// LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "#stown_name#"; // KK
@@ -758,6 +792,7 @@ void InitIslands()
 		rIsland.reload.l2.radius = 200.0;
 		rIsland.reload.l2.pic = 1;
 		rIsland.reload.l2.tex = "t1";
+		rIsland.reload.l2.ships.l0.ay = 0.7;		// LDH 11Dec16
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l3.label = "#stown_name# Port"; // KK
@@ -767,6 +802,7 @@ void InitIslands()
 		rIsland.reload.l3.radius = 200.0;
 		rIsland.reload.l3.pic = 2;
 		rIsland.reload.l3.tex = "t1";
+		rIsland.reload.l3.ships.l0.ay = -0.8;		// LDH 11Dec16
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l4.label = "Boca de Yuman";
@@ -856,7 +892,7 @@ void InitIslands()
 		rIsland.Trade.Export.id3 = GOOD_CINNAMON;
 		rIsland.Trade.Export.id4 = GOOD_SANDAL;
 		rIsland.Trade.Export.id5 = GOOD_GOLD;
-		rIsland.Trade.Export.id6 = GOOD_SILVER;               
+		rIsland.Trade.Export.id6 = GOOD_SILVER;
 		rIsland.Trade.Import.id1 = GOOD_PLANKS;
 		rIsland.Trade.Import.id2 = GOOD_SAILCLOTH;
 		rIsland.Trade.Import.id3 = GOOD_SUGAR;
@@ -899,6 +935,7 @@ void InitIslands()
 		rIsland.reload.l2.radius = 200.0;
 		rIsland.reload.l2.pic = 24;
 		rIsland.reload.l2.tex = "t1";
+        rIsland.reload.l2.ships.l0.ay = 3.0;        // LDH 11Dec16
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
 // KK -->
@@ -1096,6 +1133,7 @@ void InitIslands()
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 11;
 		rIsland.reload.l1.tex = "t1";
+        rIsland.reload.l1.ships.l0.ay = 2.0;        // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "Fort Amsterdam";
@@ -1118,6 +1156,7 @@ void InitIslands()
 		rIsland.reload.l3.radius = 200.0;
 		rIsland.reload.l3.pic = 12;
 		rIsland.reload.l3.tex = "t1";
+        rIsland.reload.l3.ships.l0.ay = -1.3;       // LDH 11Dec16
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l4.label = "Fort St Louis";
@@ -1271,6 +1310,7 @@ void InitIslands()
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 10;
 		rIsland.reload.l1.tex = "t1";
+		rIsland.reload.l1.ships.l0.ay = 3.0;    // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "Turtle Bay";
@@ -1280,6 +1320,7 @@ void InitIslands()
 		rIsland.reload.l2.radius = 200.0;
 		rIsland.reload.l2.pic = 4;
 		rIsland.reload.l2.tex = "t2";
+		rIsland.reload.l2.ships.l0.ay = 3.0;    // LDH 12Dec16
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l3.label = "White reefs";
@@ -1497,6 +1538,9 @@ void InitIslands()
 		rIsland.Trade.Import.id3 = GOOD_WHEAT;
 		rIsland.Trade.Import.id4 = GOOD_GOLD;
 		rIsland.Trade.Import.id5 = GOOD_SILVER;
+		rIsland.Trade.Import.id6 = GOOD_OIL;
+		rIsland.Trade.Import.id7 = GOOD_BRICKS;
+		rIsland.Trade.Import.id8 = GOOD_CLOTHES;
 		rIsland.Trade.Contraband.id1 = GOOD_SUGAR;
 		rIsland.Trade.Contraband.id2 = GOOD_LINEN;
 		rIsland.Trade.Contraband.id3 = GOOD_WINE;
@@ -1625,6 +1669,7 @@ void InitIslands()
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 3;
 		rIsland.reload.l1.tex = "t1";
+		rIsland.reload.l1.ships.l0.ay = 3.0;        // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false;
 
 		rIsland.reload.l2.label = "San Felipe Fort"; // KK

@@ -203,6 +203,13 @@ void SetRumourDefaults(bool isreinit)
 	Rumour[i].chance = 100;
 	i++;
 
+	Rumour[i].id = "crys_skull";
+	Rumour[i].text = LanguageConvertString(tmpLangFileID,"It's alright for some people! That researcher who moved in almost next door to the governor of Santo Domingo. Odd fellow - interested in skulls, it's said.");
+	Rumour[i].state = "active";
+	Rumour[i].loc = "Hispaniola";
+	Rumour[i].chance = 100;
+	i++;
+
 	if (IsBrothelEnabled()) {
 		Rumour[i].text = LanguageConvertString(tmpLangFileID,"I heard tell of a house of ill repute in some towns: Quebradas Costillas, Charlestown, Pointe a Pitre, Eleuthera, Alice Town and Tortuga, to name a few. Keep away from establishments ran by devil as God's punishment will be severe!"); 
 		Rumour[i].state = "active";
@@ -248,7 +255,8 @@ void SetRumourDefaults(bool isreinit)
 	i++;
 	
 	//Added by Levis -->
-	Rumour[i].text = LanguageConvertString(tmpLangFileID,"Recently a library has been opened on the island of Turks. Maybe soon we can get some books there.");
+	Rumour[i].text = LanguageConvertString(tmpLangFileID,"Recently a library has been opened on the island of Turks. No books yet.");
+	if(ALLOW_LOCKED_PERKS) Rumour[i].text = LanguageConvertString(tmpLangFileID,"Recently a library has been opened on the island of Turks.");
     Rumour[i].state = "active";
 	Rumour[i].loc = "all";
 	Rumour[i].chance = 80;

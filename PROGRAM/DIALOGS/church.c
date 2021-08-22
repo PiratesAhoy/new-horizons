@@ -17,6 +17,8 @@ void ProcessDialogEvent()
 	iMonth = environment.date.month;
 	string lastspeak_date = iday + " " + iMonth;
 	
+	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+	else Preprocessor_Add("child", XI_ConvertString("child"));
 	switch(Dialog.CurrentNode)
 	{
 		//Levis find telescope -->

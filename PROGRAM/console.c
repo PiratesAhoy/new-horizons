@@ -14,9 +14,6 @@ void ExecuteConsole()
 	ref ch;
 	int i;
 	int limit;
-
-DumpAttributes(LAi_grp_relations);
-
 											// Case 0 = Enable reload (useful when you get stuck on boarding) + Set player type (if you cannot move anymore)
 	switch(0)								// Case 1 = Various test and cheat codes
 	{										// Case 2 = Location coordinate information
@@ -25,7 +22,7 @@ DumpAttributes(LAi_grp_relations);
 
 		// Give ship
 		// ------------------
-		/*	for (i = 0; i <= GetCompanionQuantity(PChar); i++) {
+		/*	for (i = 0; i < COMPANION_MAX; i++) {
 				limit = GetCompanionIndex(PChar, i);
 				if (limit < 0) continue;
 				ch = GetCharacter(limit);
@@ -188,10 +185,7 @@ DumpAttributes(LAi_grp_relations);
 
 		case 3:
 			if (hasSubStr(pchar.location, "_port")) {
-				GiveModel2Player("Will",true);
-				pchar.name = "Will";
-				pchar.lastname = "Turner";
-				GiveShip2Character(pchar, "CursedDutchman","Flying Dutchman",-1,PIRATE,true,true);
+				GiveShip2Character(pchar, "HMS_Dauntless","Dauntless",-1,ENGLAND,true,true);
 
 				ChangeCharacterReputation(pchar, 60);
 
@@ -205,9 +199,9 @@ DumpAttributes(LAi_grp_relations);
 				EquipCharacterByItem(pchar, "pistol5+2");
 				GiveItem2Character(pchar, "commonarmor");
 				EquipCharacterByItem(pchar, "commonarmor");
+				GiveItem2Character(pchar, "Trident_Neptune");
 				PChar.rank = 40;
 				pchar.experience = CalculateExperienceFromRank(sti(PChar.rank));
-				ChangeHPBonus(pchar, sti(pchar.chr_ai.hp_max));
 				ResetHP(pchar);
 				LAi_SetImmortal(pchar, true);
 
@@ -221,35 +215,38 @@ DumpAttributes(LAi_grp_relations);
 				ch.lastname = "Gibbs";
 				SetOfficersIndex(pchar, -1, GetCharacterIndex(ch.id));
 
-				ch = CreateOfficer_Cheat(OFFIC_TYPE_NAVIGATOR, "DavyJones", 0, PIRATE, false);
-				ch.name = "Davy";
-				ch.lastname = "Jones";
+				ch = CreateOfficer_Cheat(OFFIC_TYPE_NAVIGATOR, "Conorrington", 3, ENGLAND, false);
+				ch.name = "James";
+				ch.lastname = "Norrington";
 				SetOfficersIndex(pchar, -1, GetCharacterIndex(ch.id));
 
-				ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Barbossa", 3, PIRATE, false);
+			/*	ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPPIRATE, "Barbossa", 3, PIRATE, false);
 				ch.name = "Hector";
 				ch.lastname = "Barbossa";
 				GiveShip2Character(ch,SHIP_CURSED,"Black Pearl",-1,PIRATE,true,true);
 				SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
 				RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 
-				ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Blackbeard", 3, PIRATE, false);
+				ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPPIRATE, "DavyJones", 0, PIRATE, false);
+				ch.name = "Davy";
+				ch.lastname = "Jones";
+				GiveShip2Character(ch, "CursedDutchman","Flying Dutchman",-1,PIRATE,true,true);
+				SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
+				RemovePassenger  (pchar,     CharacterFromID  (ch.id));
+
+				ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPPIRATE, "Blackbeard", 3, PIRATE, false);
 				ch.name = "Edward";
 				ch.lastname = "Teach";
 				GiveShip2Character(ch, "QueenAnnesRevenge","Queen Anne's Revenge",-1,PIRATE,true,true);
 				SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
-				RemovePassenger  (pchar,     CharacterFromID  (ch.id));
-
-				ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Conorrington", 3, ENGLAND, false);
-				ch.name = "James";
-				ch.lastname = "Norrington";
-				GiveShip2Character(ch, "HMS_Dauntless", "Dauntless", -1, ENGLAND, true,true);
-				SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
-				RemovePassenger  (pchar,     CharacterFromID  (ch.id));
+				RemovePassenger  (pchar,     CharacterFromID  (ch.id));*/
 
 				int idx = GetMainCharacterIndex();
 				aref arPerksRoot; makearef(arPerksRoot,ChrPerksList.list);
 				int chrPerksQ = GetAttributesNum(arPerksRoot);
+				//For Passengers
+				int s,p;
+				string skillname,perkName;
 				for (i = 0; i <= GetPassengersQuantity(PChar); i++) {
 					if (i > 0) {
 						idx = GetPassenger(PChar, i - 1);
@@ -265,14 +262,42 @@ DumpAttributes(LAi_grp_relations);
 						TakeNItems(GetCharacter(idx), "pistolbullets", 6);
 					}
 
-					for (int s = 0; s < 10; s++) {
-						string skillname = GetSkillName(s);
+					for (s = 0; s < 10; s++) {
+						skillname = GetSkillName(s);
 						characters[idx].Skill.(skillname) = 10;
 					}
 
-					for (int p = 0; p < chrPerksQ; p++)
+					for (p = 0; p < chrPerksQ; p++)
 					{
-						string perkName = GetAttributeName(GetAttributeN(arPerksRoot, p));
+						perkName = GetAttributeName(GetAttributeN(arPerksRoot, p));
+						characters[idx].perks.list.(perkName) = true;
+					}
+				}
+				//For companions
+				for(i=0; i < 4; i++)
+				{
+					if (i > 0) {
+						idx = GetCompanionIndex(PChar, i - 1);
+						if (idx < 0) continue;
+
+						GiveItem2Character(GetCharacter(idx), "blade13+1");
+						EquipCharacterByItem(GetCharacter(idx), "blade13+1");
+						GiveItem2Character(GetCharacter(idx), "pistol5+2");
+						EquipCharacterByItem(GetCharacter(idx), "pistol5+2");
+						GiveItem2Character(GetCharacter(idx), "commonarmor");
+						EquipCharacterByItem(GetCharacter(idx), "commonarmor");
+						TakeNItems(GetCharacter(idx), "gunpowder", 6);
+						TakeNItems(GetCharacter(idx), "pistolbullets", 6);
+					}
+
+					for (s = 0; s < 10; s++) {
+						skillname = GetSkillName(s);
+						characters[idx].Skill.(skillname) = 10;
+					}
+
+					for (p = 0; p < chrPerksQ; p++)
+					{
+						perkName = GetAttributeName(GetAttributeN(arPerksRoot, p));
 						characters[idx].perks.list.(perkName) = true;
 					}
 				}

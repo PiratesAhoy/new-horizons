@@ -1,4 +1,4 @@
-string DLG_TEXT[108] = {
+string DLG_TEXT[116] = {
 "I'm told you've gone to great lengths to request an audience. My name is ",
 ". Now, if you please, tell me the purpose of your visit, ",
 ".",
@@ -69,9 +69,9 @@ string DLG_TEXT[108] = {
 "Goodbye, ",
 "Huh?",
 "Tough.",
-"What are your orders, #saddr#?",
+"What are your orders, #saddr1#?",
 "I must manage this colony.",
-"Do you need any assistance, #saddr#?",
+"Do you need any assistance, #saddr2#?",
 "There are things I have to do.",
 "You shall receive 50 percent of the value of any ship you sell as your share of the prize money. Additionally, there is a fixed price for any legit prize ship sold by those in my service.",
 "Sounds profitable! And no haggling over prices will certainly be welcome, ",
@@ -107,5 +107,12 @@ string DLG_TEXT[108] = {
 "I will not let you down, #saddr#. That I promise!",
 "You are a disgrace to my great nation! You are hereby dishonourably discharged from the service. Get out of my sight!",
 "I should have seen that one coming, I suppose. We may meet again in the future, though that will likely be under different circumstances. And you may not like it!",
-
+"By the way, I'll need you to return that document I gave you. It won't be valid any more.",
+"Of course, #saddr#.",
+"Now, go to #sGreenford# Naval HQ, if you please. #sbriefing_officer# awaits you there with your new orders, I believe.",
+"Very good, #saddr#. I shall sail for #sGreenford# at once.",
+"What are other pirates saying about me these days?",
+"They've heard of your recent exploits! They're calling you ",
+"Your raiding has not gone unnoticed among the Brethren of the Coast. They've taken to referring to you as ",
+"That last bit of plundering was the talk of the tavern for days! You're being called ",
 };

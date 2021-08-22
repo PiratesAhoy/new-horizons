@@ -24,62 +24,63 @@ void ProcessDialogEvent()
 			switch(CharPlayerType)
 			{
 				case PLAYER_TYPE_NAVAL_OFFICER:
-					dialog.text = "Congratulations on your promotion, " + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) + ". You are hereby required and directed to sink, burn or take as a prize all enemy ships that you can.";
-					link.l1 = "Aye aye, sir! I will set sail as soon as I arrive in port.";
-					link.l1.go = "stormystart";
+					dialog.text = DLG_TEXT[240] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) + DLG_TEXT[241];
+					link.l1 = DLG_TEXT[242];
+					link.l1.go = "naval_part2";
 				break;
 
 				case PLAYER_TYPE_ROGUE:
-					dialog.text = "Captain, are you sure you want to do this? You know that what you did wasn't entirely honourable.";
-					link.l1 = "The lady knew what she was doing. If her brother cannot deal with that, then he can deal with ME!";
+					dialog.text = DLG_TEXT[247];
+					if(PChar.sex == "woman") link.l1 = DLG_TEXT[264];
+					else link.l1 = DLG_TEXT[248];
 					link.l1.go = "stormystart";
 				break;
 
 				case PLAYER_TYPE_GAMBLER:
-					dialog.text = "Captain, while we are happy to serve under you, we have no ill will towards our previous commander. He is just an unlucky man.";
-					link.l1 = "He accused me of cheating! How dare he do such a thing? I'll make him pay for that.";
+					dialog.text = DLG_TEXT[249];
+					link.l1 = DLG_TEXT[250];
 					link.l1.go = "stormystart";
 				break;
 
 				case PLAYER_TYPE_AGENT:
-					dialog.text = "You are hereby ordered to go undercover in this hostile town and make as many problems for our enemies as you can. It will be dangerous and I do not expect we will see each other again.";
-					link.l1 = "Understood, Sir. From here on, I will be on my own.";
+					dialog.text = DLG_TEXT[251];
+					link.l1 = DLG_TEXT[252];
 					link.l1.go = "stormystart";
 				break;
 
 				case PLAYER_TYPE_SMUGGLER:
-					dialog.text = "Captain, we're lucky to have reached this friendly port through that horrible storm! The ship has taken substantial damage and we have lost many of the crew.";
-					link.l1 = "It will be expensive getting us ready to set sail again. Unfortunately, we have no honest means to do so on this island. We'll need to take our chances and see if we can find a smuggling agent in the tavern.";
+					dialog.text = DLG_TEXT[253];
+					link.l1 = DLG_TEXT[254];
 					link.l1.go = "stormystart";
 				break;
 
 				case PLAYER_TYPE_CURSED:
 					if(CheckCharacterItem(PChar, "Davy_Chest"))
 					{
-						dialog.text = "Captain, are you certain you cannot be convinced to do the job we were supposed to be doing? Until this curse is lifted, we can never set foot ashore! And this whole fishy look is not so great either.";
-						link.l1 = "Ferry the lost souls who died at sea for the goddess of the sea? Never! I have been betrayed and the world will know my wrath! No ship at sea is safe from me.";
+						dialog.text = DLG_TEXT[255];
+						link.l1 = DLG_TEXT[256];
 						
 					}
 					else
 					{
-						dialog.text = "Captain, all the coins we could find have been stashed in the weapons locker as you ordered. But it seems some are missing, sir! One of the crew must have taken them.";
-						link.l1 = "Is that so? Before we know it, they will be scattered all over the Caribbean and we'll have a hard time getting them back! I will go ashore straight away to start the search.";
+						dialog.text = DLG_TEXT[257];
+						link.l1 = DLG_TEXT[258];
 					}
 					link.l1.go = "stormystart";
 				break;
 
 				case PLAYER_TYPE_CORSAIR:
-					dialog.text = "I cannot believe the #sTortuga# fort did not fire on us coming into port!";
+					dialog.text = DLG_TEXT[259];
 					if (GetNationRelation2MainCharacter(GetTownNation("Tortuga")) == RELATION_ENEMY)
-						link.l1 = "There was nothing to worry about. The French governor here is really very forgiving of all those flying a pirate flag. You'd do well to remember that!";
+						link.l1 = DLG_TEXT[260];
 					else
-						link.l1 = "There was nothing to worry about. France rules here and we are at peace with France.";
+						link.l1 = DLG_TEXT[261];
 					link.l1.go = "stormystart";
 				break;
 
 				case PLAYER_TYPE_CASTAWAY:
-					dialog.text = "I am sorry the ship's rolling is making you seasick, but we do not have different quarters available for you. Now please leave my cabin.";
-					link.l1 = "Very well, then. Let's just hope I don't fall overboard in this storm. You could get into a lot of trouble with your employer if you lose one of your passengers!";
+					dialog.text = DLG_TEXT[262];
+					link.l1 = DLG_TEXT[263];
 					link.l1.go = "stormystart";
 				break;
 
@@ -326,7 +327,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "HurtEnough":
-			AddDialogExitQuest("Tut_ReturnPlayer");
+			AddDialogExitQuest("player_back");
 			dialog.text = DLG_TEXT[57];
 			link.l1 = DLG_TEXT[58];
 			link.l1.go = "Continue_ToSeriousFight";
@@ -1433,6 +1434,18 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[239];
 			link.l1 = DLG_TEXT[35];
 			link.l1.go = "Exit";
+		break;
+
+		case "naval_part2":
+			dialog.text = DLG_TEXT[243];
+			link.l1 = DLG_TEXT[244];
+			link.l1.go = "naval_part3";
+		break;
+
+		case "naval_part3":
+			dialog.text = DLG_TEXT[245] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) + ".";
+			link.l1 = DLG_TEXT[246];
+			link.l1.go = "stormystart";
 		break;
 		
 		case "exit":

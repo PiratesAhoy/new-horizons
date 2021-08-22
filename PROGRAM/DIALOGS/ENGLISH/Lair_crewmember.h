@@ -17,7 +17,7 @@ string DLG_TEXT[30] = {
 "", 
 "Stand at ease, matey.", 
 "Yes Captain? Do we have planks and sailcloth to repair our ship? ", 
-"And how many days will ye be wantin' to stay, for repairs and all, sir?", 
+"And how many days will ye be wantin' to stay, for repairs and all, ", 
 "Well", 
 ", perhaps we could spend a few days here.", 
 "", 

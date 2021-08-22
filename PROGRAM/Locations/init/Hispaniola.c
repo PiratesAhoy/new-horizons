@@ -810,12 +810,12 @@ void LocationInitHispaniola(ref n)
 	n = n + 1;
 
 	// -------------------------------------------------
-	Locations[n].filespath.models = "locations\Outside\Jungle_5";
-	Locations[n].filespath.textures = "locations\JUNGLES";
+	Locations[n].filespath.models = "locations\Outside\smugglerLairExit";
+	//Locations[n].filespath.textures = "locations\JUNGLES";
 
 	Locations[n].id = "Hispaniola_Jungle_03";
 	locations[n].id.label = "Jungle";
-	Locations[n].image = "Outside_Jungle_5.tga";
+	Locations[n].image = "Buccaneer_camp_exit.tga";
 	//Sound
 	locations[n].type = "jungle";
 	LAi_LocationMonstersGen(&locations[n], true);
@@ -823,23 +823,25 @@ void LocationInitHispaniola(ref n)
 
 	//Models
 	//Always
-	Locations[n].models.always.locators = "Jungle05_l";
-	Locations[n].models.always.jungle = "Jungle05";
-	Locations[n].models.always.grassPatch = "JUNGLE05_g";
-	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.locators = "smugglerLairExit_locators";
+	Locations[n].models.always.jungle = "smugglerLairExit";
+	Locations[n].models.always.grassPatch = "smugglerLairExit_grass";
+	Locations[n].models.always.l1 = "plan1";
 	Locations[n].models.always.l1.level = 9;
 	Locations[n].models.always.l1.tech = "LocationModelBlend";
-	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2 = "plan2";
 	Locations[n].models.always.l2.level = 8;
 	Locations[n].models.always.l2.tech = "LocationModelBlend";
-	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3 = "plan3";
 	Locations[n].models.always.l3.level = 7;
 	Locations[n].models.always.l3.tech = "LocationModelBlend";
 
 	//Day
-	Locations[n].models.day.charactersPatch = "Jungle05_p";
+	Locations[n].models.day.fonar = "smugglerLairExit_fd";	
+	Locations[n].models.day.charactersPatch = "smugglerLairExit_patch";
 	//Night
-	Locations[n].models.night.charactersPatch = "Jungle05_p";
+	Locations[n].models.night.fonar = "smugglerLairExit_fn";	
+	Locations[n].models.night.charactersPatch = "smugglerLairExit_patch";
 	//Environment
 	Locations[n].environment.weather = "true";
 	Locations[n].environment.sea = "false";
@@ -854,7 +856,6 @@ void LocationInitHispaniola(ref n)
 	Locations[n].reload.l2.name = "reload2";
 	Locations[n].reload.l2.go = "Buccaneers_Camp";
 	Locations[n].reload.l2.emerge = "reload1";
-	Locations[n].reload.l2.autoreload = "1";
 	Locations[n].reload.l2.label = "Buccaneers camp.";
 	Locations[n].locators_radius.reload.Reload2 = 3.0;
 
@@ -871,14 +872,14 @@ void LocationInitHispaniola(ref n)
 	Locations[n].reload.l4.autoreload = "1";
 	Locations[n].reload.l4.label = "Jungle.";
 	Locations[n].locators_radius.reload.Reload1_back = 2.0;
-
+/*
 	Locations[n].reload.l5.name = "reload2_back";
 	Locations[n].reload.l5.go = "Buccaneers_Camp";
 	Locations[n].reload.l5.emerge = "reload1";
 	Locations[n].reload.l5.autoreload = "1";
 	Locations[n].reload.l5.label = "Buccaneers camp.";
 	Locations[n].locators_radius.reload.Reload2_back = 2.0;
-
+*/
 	Locations[n].reload.l6.name = "reload3_back";
 	Locations[n].reload.l6.go = "Hispaniola_Jungle_04";
 	Locations[n].reload.l6.emerge = "reload1";
@@ -890,60 +891,56 @@ void LocationInitHispaniola(ref n)
 	n = n + 1;
 
 	// -------------------------------------------------
-	Locations[n].filespath.models = "locations\Pirate Fort";
+	Locations[n].filespath.models = "locations\Outside\smugglerLairTown";
 
 	Locations[n].id = "Buccaneers_Camp";
 	locations[n].id.label = "Buccaneers Camp";
-	Locations[n].image = "Pirate_Fort.tga";
+	Locations[n].image = "Buccaneer.tga";
 
 	//Town sack
 	Locations[n].townsack = "Buccaneers Camp";
 
 	//Sound
-	locations[n].type = "jungle";
+//	locations[n].type = "jungle";
+	locations[n].type = "town";
 	Locations[n].fastreload = "BuccaneersCamp";
 
 	//Models
 	//Always
-	Locations[n].models.always.locators = "PiF_l";
-	Locations[n].models.always.town = "PiF";
-	Locations[n].models.always.grasspatch = "PiF_g";
-	Locations[n].models.always.l1 = "pif_b01";
+	Locations[n].models.always.locators = "smugglerLairTown_locators";
+	Locations[n].models.always.town = "smugglerLairTown";
+	Locations[n].models.always.grasspatch = "smugglerLairTown_grass";
+	Locations[n].models.always.l1 = "plan1";
 	Locations[n].models.always.l1.level = 9;
 	Locations[n].models.always.l1.tech = "LocationModelBlend";
-	Locations[n].models.always.l2 = "pif_b02";
+	Locations[n].models.always.l2 = "plan2";
 	Locations[n].models.always.l2.level = 8;
 	Locations[n].models.always.l2.tech = "LocationModelBlend";
-	Locations[n].models.always.l3 = "pif_b03";
+	Locations[n].models.always.l3 = "plan3";
 	Locations[n].models.always.l3.level = 7;
 	Locations[n].models.always.l3.tech = "LocationModelBlend";
-	Locations[n].models.always.l4 = "pif_b04";
-	Locations[n].models.always.l4.level = 6;
-	Locations[n].models.always.l4.tech = "LocationModelBlend";
-
 	//Day
-	Locations[n].models.day.fonar = "PiF_fd";
-	Locations[n].models.day.charactersPatch = "PiF_p";
+	Locations[n].models.day.fonar = "smugglerLairTown_fd";
+	Locations[n].models.day.charactersPatch = "smugglerLairTown_patch";
 	//Night
-	Locations[n].models.night.fonar = "PiF_fn";
-	Locations[n].models.night.charactersPatch = "PiF_p";
+	Locations[n].models.night.fonar = "smugglerLairTown_fn";
+	Locations[n].models.night.charactersPatch = "smugglerLairTown_patch";
 	//Environment
 	Locations[n].environment.weather = "true";
 	Locations[n].environment.sea = "false";
 	//Reload map
-	Locations[n].reload.l1.name = "Reload1";
+/*	Locations[n].reload.l1.name = "Reload1";
 	Locations[n].reload.l1.go = "Hispaniola_Jungle_03";
 	Locations[n].reload.l1.emerge = "Reload2";
 	Locations[n].reload.l1.label = "Jungle.";
-	Locations[n].reload.l1.autoreload = 1;
+	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].locators_radius.reload.reload1 = 1;
-
-	Locations[n].reload.l5.name = "Reload1_back";
+*/
+	Locations[n].reload.l5.name = "reload1";
 	Locations[n].reload.l5.go = "Hispaniola_Jungle_03";
-	Locations[n].reload.l5.emerge = "Reload2";
+	Locations[n].reload.l5.emerge = "reload2";
 	Locations[n].reload.l5.label = "Jungle.";
-	Locations[n].reload.l5.autoreload = 1;
-	Locations[n].locators_radius.reload.reload1_back = 2;
+	Locations[n].locators_radius.reload.reload1 = 1.5;// new value in order to avoid bugs of reloading
 
 	Locations[n].reload.l6.name = "Reload4";
 	Locations[n].reload.l6.go = "BC_Tavern";
@@ -967,10 +964,12 @@ void LocationInitHispaniola(ref n)
 	//Locations[n].reload.l3.emerge = "Reload1";
 	//Locations[n].reload.l3.label = "Tavern.";
 
-	//Locations[n].reload.l4.name = "Reload2";
-	//Locations[n].reload.l4.go = "Douwesen_Pirate_HouseInsideR2";
-	//Locations[n].reload.l4.emerge = "Reload1";
-	//Locations[n].reload.l4.label = "House.";
+	Locations[n].reload.l4.name = "Reload2";
+	Locations[n].reload.l4.go = "BC_ForgerHouse";
+	Locations[n].reload.l4.emerge = "Reload1";
+	Locations[n].reload.l4.label = "House of Pablo Escriva.";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.disable = 1;	// GR: locked until needed by quest
 
 	Locations[n].island = "Hispaniola"; // NK 04-08-29
 	n = n + 1;
@@ -2054,7 +2053,220 @@ void LocationInitHispaniola(ref n)
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l4.goto_disable = 1; // Screwface: Disable Go-To location
 // <-- KK
 
+  	Locations[n].reload.l25.name = "reload25";
+	Locations[n].reload.l25.go = "Santo_Domingo_Historian_House";
+	Locations[n].reload.l25.emerge = "reload1";
+	Locations[n].reload.l25.autoreload = "0";
+	Locations[n].reload.l25.label = "House in #stown_name#";
+	Locations[n].reload.l25.close_for_night = 1;
+
+	Locations[n].reload.l20.name = "reload2";
+	Locations[n].reload.l20.go = "Santo_Domingo_usurer";
+	Locations[n].reload.l20.emerge = "reload1";
+	Locations[n].reload.l20.autoreload = "0";
+	Locations[n].reload.l20.label = "Loanshark";
+	Locations[n].reload.l20.close_for_night = 1;
+	Locations[n].locators_radius.reload.reload2 = 0.5;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l20.goto_disable = 1; // Screwface: Disable Go-To location
+
+	Locations[n].reload.l30.name = "reload3";
+	Locations[n].reload.l30.go = "Santo_Domingo_usurer_stairs_down";
+	Locations[n].reload.l30.emerge = "reload2";
+	Locations[n].reload.l30.autoreload = "0";
+	Locations[n].reload.l30.label = "Loanshark";
+	Locations[n].reload.l30.close_for_night = 1;
+	Locations[n].locators_radius.reload.reload3 = 0.5;
+
+	Locations[n].reload.l60.name = "reload6";
+	Locations[n].reload.l60.go = "Santo_Domingo_usurer_stairs_up";
+	Locations[n].reload.l60.emerge = "goto4";
+	Locations[n].reload.l60.autoreload = "0";
+	Locations[n].reload.l60.label = "Loanshark";
+	Locations[n].reload.l60.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l60.goto_disable = 1;
+
+	Locations[n].locators_radius.box.box1 = 0.5;
+	Locations[n].locators_radius.box.box2 = 0.5;
+
 	Locations[n].island = "Hispaniola"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].id = "Santo_Domingo_usurer_stairs_up";
+	locations[n].id.label = "To the Loanshark";
+	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
+	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\church_attic";
+	Locations[n].image = "GB_small_stairs.tga";
+
+	//Town sack
+	Locations[n].townsack = "Santo Domingo";
+
+	//Sound
+	locations[n].type = "silent_residence";
+	
+	//Models
+	//Always
+	Locations[n].models.always.locators = "LH_F1_l_Domingo";
+	Locations[n].models.always.tavern = "LH_F1";
+	Locations[n].models.always.window = "LF1_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "LH_F1_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "LH_F1_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\redlf2_";
+
+	//Reload map
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "Santo_Domingo_town";
+	Locations[n].reload.l2.emerge = "box2";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.label = "";
+	Locations[n].locators_radius.reload.reload2 = 0.5;
+
+	Locations[n].reload.l3.name = "reload3";
+	Locations[n].reload.l3.go = "Santo_Domingo_usurer_stairs_up";
+	Locations[n].reload.l3.emerge = "reload4";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "";
+	Locations[n].locators_radius.reload.reload3 = 0.5;
+
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "Santo_Domingo_town";
+	Locations[n].reload.l4.emerge = "reload6";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "";
+	Locations[n].locators_radius.reload.reload4 = 0.3;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.01;
+	Locations[n].items.randitem1 = "door_A05";
+	
+	Locations[n].locators_radius.randitem.randitem2 = 0.01;
+	Locations[n].items.randitem2 = "gatedoor_attic_brick";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.001;
+	Locations[n].items.randitem3 = "door_A05";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.001;
+	Locations[n].items.randitem4 = "gatedoor_attic_brick";
+
+	Locations[n].island = "Hispaniola"; // NK 04-08-29
+	n = n + 1;
+
+//--------------------------------------------------------------------------
+
+	Locations[n].id = "Santo_Domingo_usurer_stairs_down";
+	locations[n].id.label = "Exit";
+	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
+	Locations[n].filespath.textures = "locations\inside\Doubleflour_house\church_attic";
+	Locations[n].image = "GB_small_stairs.tga";
+
+	//Town sack
+	Locations[n].townsack = "Santo Domingo";
+
+	//Sound
+	locations[n].type = "silent_residence";
+	
+	//Models
+	//Always
+	Locations[n].models.always.locators = "LH_F1_l_Domingo";
+	Locations[n].models.always.tavern = "LH_F1";
+	Locations[n].models.always.window = "LF1_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "LH_F1_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "LH_F1_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\redlf2_";
+
+	//Reload map
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "Santo_Domingo_town";
+	Locations[n].reload.l2.emerge = "box2";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.label = "";
+	Locations[n].locators_radius.reload.reload2 = 0.5;
+
+	Locations[n].reload.l3.name = "reload3";
+	Locations[n].reload.l3.go = "Santo_Domingo_usurer_stairs_down";
+	Locations[n].reload.l3.emerge = "reload4";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "";
+	Locations[n].locators_radius.reload.reload3 = 0.5;
+
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "Santo_Domingo_town";
+	Locations[n].reload.l4.emerge = "reload6";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "";
+	Locations[n].locators_radius.reload.reload4 = 0.3;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.01;
+	Locations[n].items.randitem1 = "door_A05";
+	
+	Locations[n].locators_radius.randitem.randitem2 = 0.01;
+	Locations[n].items.randitem2 = "gatedoor_attic_brick";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.001;
+	Locations[n].items.randitem3 = "door_A05";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.001;
+	Locations[n].items.randitem4 = "gatedoor_attic_brick";
+
+	Locations[n].island = "Hispaniola"; // NK 04-08-29
+	n = n + 1;
+
+	//  -------------------------------------------------
+
+	Locations[n].id = "Santo_Domingo_usurer";
+	locations[n].id.label = "Loanshark's Office";
+	//Town sack
+	Locations[n].townsack = "Santo Domingo";
+	//Sound
+	locations[n].type = "residence";
+	locations[n].fastreload = "Santo_Domingo";
+
+	//InitBank(Locations[n].id);
+
+	Locations[n].filespath.models = "locations\Inside\Bank";
+	Locations[n].image = "Inside_Bank.tga";
+	//Models
+	Locations[n].models.back = "back\tor3_";				//JRH
+	//Always
+	Locations[n].models.always.cave = "Bank";
+	Locations[n].models.always.locators = "Bank_locators";
+	Locations[n].models.always.window = "Bank_windows";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "Bank_patch";
+	//Night
+	Locations[n].models.night.charactersPatch = "Bank_patch";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.emerge = "box1";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.go = "Santo_Domingo_town";
+	Locations[n].reload.l1.label = "#stown_name#";
+
+	Locations[n].island = "Hispaniola";
 	n = n + 1;
 
 	// -------------------------------------------------
@@ -3002,7 +3214,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].reload.l11.go = "Tortuga_StoneHouse";
 	Locations[n].reload.l11.emerge = "reload1";
 	Locations[n].reload.l11.label = "House.";
-	Locations[n].reload.l11.close_for_night = 1;
+	if (!IsBrothelEnabled()) Locations[n].reload.l11.close_for_night = 1;
 	Locations[n].reload.l11.name = "brothel";
 	Locations[n].reload.l11.autoreload = "0";
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1; // Screwface: Disable Go-To location
@@ -4484,6 +4696,47 @@ void LocationInitHispaniola(ref n)
 	Locations[n].island = "Hispaniola"; // NK 04-08-29
 	n = n + 1;
 
+// Forger's house -------------------------------------------------
+	Locations[n].filespath.models = "locations\Inside\SmallHome";
+
+	Locations[n].id = "BC_ForgerHouse";
+	locations[n].id.label = "House of Pablo Escriva.";
+	Locations[n].image = "Inside_Smallhome.tga";
+	//Town sack
+	Locations[n].townsack = "Buccaneers Camp"; // GR - wrong, but less wrong than others
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "BuccaneersCamp";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Sh_L";
+	Locations[n].models.always.l1 = "SH";
+	Locations[n].models.always.window = "sh_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+
+	//Day
+	Locations[n].models.day.charactersPatch = "SH_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "SH_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\qcsh_";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Buccaneers_Camp";
+	Locations[n].reload.l1.emerge = "reload2";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "Buccaneers Camp.";
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].vcskip = true;
+
+	Locations[n].island = "Hispaniola"; // GR 2017-01-02
+	n = n + 1;
+
 	// Village_church -------------------------------------------------
 	Locations[n].id = "Village_church";
 	locations[n].id.label = "Village church";
@@ -4563,6 +4816,49 @@ void LocationInitHispaniola(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Town";
 	Locations[n].locators_radius.reload.reload1 = 0.8;
+
+	Locations[n].island = "Hispaniola"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+	Locations[n].id = "Santo_Domingo_Historian_House";
+	Locations[n].id.label = "House in #stown_name#";
+	Locations[n].image = "Inside_Residence2.tga";
+	Locations[n].filespath.models = "locations\inside\Residence2";
+
+	//Town sack
+	Locations[n].townsack = "Santo Domingo";
+
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "Santo_Domingo";
+	//Models
+	//Always
+	Locations[n].models.always.city = "Res02";
+	Locations[n].models.always.locators = "Res02_l_ccc";
+	Locations[n].models.always.window = "Res02_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "Res02_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "Res02_p";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\mures2_";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Santo_Domingo_town";
+	Locations[n].reload.l1.emerge = "reload25";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "Town";
+	Locations[n].locators_radius.reload.reload1 = 0.8;
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].vcskip = true;
 
 	Locations[n].island = "Hispaniola"; // NK 04-08-29
 	n = n + 1;
@@ -4756,10 +5052,10 @@ void LocationInitHispaniola(ref n)
 	Build_at("Hispaniola_jungle_02", "jungle2", "", -48.46, -2.39, -102.47, 1.57, "wild_jungles");
 	Build_at("Hispaniola_jungle_02", "jungle2", "", -29.39, -2.49, -91.46, -3.13, "wild_jungles");
 	Build_at("Hispaniola_jungle_02", "jungle2", "", -27.64, -3.40, -69.12, 1.63, "wild_jungles");
-	Build_at("Hispaniola_jungle_03", "jungle2", "", 1.98, 0.40, -12.71, 0.29, "wild_jungles");
-	Build_at("Hispaniola_jungle_03", "jungle2", "", 7.13, 0.01, -8.50, -2.26, "wild_jungles");
-	Build_at("Hispaniola_jungle_03", "jungle2", "", -5.98, 1.03, -6.43, 2.61, "wild_jungles");
-	Build_at("Hispaniola_jungle_03", "jungle2", "", -20.14, 0.19, -9.96, 0.12, "wild_jungles");
+	//Build_at("Hispaniola_jungle_03", "jungle2", "", 1.98, 0.40, -12.71, 0.29, "wild_jungles");
+	//Build_at("Hispaniola_jungle_03", "jungle2", "", 7.13, 0.01, -8.50, -2.26, "wild_jungles");
+	//Build_at("Hispaniola_jungle_03", "jungle2", "", -5.98, 1.03, -6.43, 2.61, "wild_jungles");
+	//Build_at("Hispaniola_jungle_03", "jungle2", "", -20.14, 0.19, -9.96, 0.12, "wild_jungles");
 	Build_at("Hispaniola_jungle_04", "jungle2", "", 6.07, 0.00, -24.51, 2.01, "wild_jungles");
 	Build_at("Hispaniola_jungle_04", "jungle2", "", 14.97, 0.00, -13.85, -1.86, "wild_jungles");
 	Build_at("Hispaniola_jungle_04", "jungle2", "", 9.65, 0.00, -2.70, 2.07, "wild_jungles");

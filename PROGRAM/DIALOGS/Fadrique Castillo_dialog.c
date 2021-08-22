@@ -51,7 +51,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\FRCO\FRCO002";
-			dialog.text = DLG_TEXT[6];
+			dialog.text = TimeGreeting() + " " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "quests";
 			link.l2 = pcharrepphrase(DLG_TEXT[8], DLG_TEXT[9]);

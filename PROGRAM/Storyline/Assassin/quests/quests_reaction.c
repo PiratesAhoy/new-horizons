@@ -4142,7 +4142,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Eleuthera_Jungle4")].vcskip = true;		
 			SetOfficersIndex(PChar, 1, GetCharacterIndex("Bartolomeu"));
 			SetOfficersIndex(PChar, 2, GetCharacterIndex("Roxanne Lalliere"));
-			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1");
+			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1a");
 			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "blade10");
             DoQuestReloadToLocation("Eleuthera_Jungle4", "reload", "reload2", "meet_enrique");			
         break;

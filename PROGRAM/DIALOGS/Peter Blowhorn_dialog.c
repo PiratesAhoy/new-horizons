@@ -17,6 +17,8 @@ void ProcessDialogEvent()
 	ref PChar = GetMainCharacter();
 	PChar.storekeeper.Idx = -1;//MAXIMUS
 	if(!CheckAttribute(NPChar, "quest.item_date")) NPChar.quest.item_date = NPChar.quest.meeting;
+	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false)); // DeathDaisy
 
 
 	switch(Dialog.CurrentNode)
@@ -282,6 +284,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "option_no_deal_1":
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[54];
 			link.l1 = DLG_TEXT[55];
 			link.l1.go = "exit";

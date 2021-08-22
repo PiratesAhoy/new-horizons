@@ -183,7 +183,7 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(Pchar, -5000);
 			Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -3;
 			lcn.building.(nr).interior = "cannon";
-			Dialog.text = "Yes, Sir, I know the mastersergeant of the local magazine quite well. For 5000 Gold he'd sell his whole ordinance. Just give me a few hours." ;
+			Dialog.text = "Yes, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", I know the mastersergeant of the local magazine quite well. For 5000 Gold he'd sell his whole ordinance. Just give me a few hours." ;
 			link.l1 = "That's the spirit, Marine! With your understanding of logistics you'll soon become corporal. (..if you live that long..)";
 			link.l1.go = "exit";
 		break;
@@ -191,13 +191,13 @@ void ProcessDialogEvent()
 
 // random attacks
 		case "attack1":
-			Dialog.text = "Savage Akellani cannibals approaching, Sir! Oh, if we had only more of those bastions, stockades, mines and cannon...";
+			Dialog.text = "Savage Akellani cannibals approaching, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! Oh, if we had only more of those bastions, stockades, mines and cannon...";
 			link.l1 = RandSwear() + " Attention, soldier! Hold this position whatever happens. Keep up firing, don't let the enemy draw you into close combat. I will take care of the bladework...";
 			link.l1.go = "exit_attack1";
 		break;
 
 		case "attack2":
-			Dialog.text = "Francisco Pizarro the Younger and his horde of maurading conquistadores approaching, Sir! Lusting for blood, plunder and rape... Oh, if we had only more of those bastions, stockades, mines and cannon...";
+			Dialog.text = "Francisco Pizarro the Younger and his horde of maurading conquistadores approaching, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! Lusting for blood, plunder and rape... Oh, if we had only more of those bastions, stockades, mines and cannon...";
 			link.l1 = RandSwear() + " Attention, soldier! Hold this position whatever happens. Keep up firing, don't let the enemy draw you into close combat. I will take care of the bladework...";
 			link.l1.go = "exit_attack2";
 		break;
@@ -259,7 +259,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "motion":
-			Dialog.text = LinkRandPhrase("Sir, we always stand to attention in a superiors presence. That's the drill, and the drill is everything.", "I have my eye on a suspicious target, and I don't want too loose it. 'Keep your aim, never flinch, never blink' our drillseargeant used to say.", "First rule of camouflage: movement attracts attention. So never move if you don't have to.");
+			Dialog.text = LinkRandPhrase(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", we always stand to attention in a superior's presence. That's the drill, and the drill is everything.", "I have my eye on a suspicious target, and I don't want too loose it. 'Keep your aim, never flinch, never blink' our drillseargeant used to say.", "First rule of camouflage: movement attracts attention. So never move if you don't have to.");
 			link.l1 = "Allright, I understand... Carry on.";
 			link.l1.go = "exit";
 		break;

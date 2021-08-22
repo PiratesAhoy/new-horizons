@@ -12,7 +12,7 @@ string DLG_TEXT[17] = {
 "You haven't answered my question.",
 "Question? Ah, the pirate corvette! Yes. I saw it as clearly as I see you now. If our holds hadn't been empty, I doubt I would be here to speak with you. Fortunately for my comrades and I, the corvette's holds must have been full, and we were able to slip away. \nStrange name, as I recall. Not one I'd heard before. 'Crimson Blood'.'",
 "So, did the pirate corvette give chase? And where did it go when it became clear it couldn't run your vessel down?",
-"Who knows? When they decided to resign from chasing us, it seemed they headed Eastward. They were definitely pirates, so I bet they plan to land at the pirate settlement on #sisland_Quebradas Costillas#.",
+"Who knows? When they decided to resign from chasing us, it seemed they headed Northward. They were definitely pirates, so I bet they plan to land at the pirate settlement on #sisland_Quebradas Costillas#.",
 "Thanks. Enjoy your rum.",
 "Yes. That might work, too. Perhaps we'll just forget about the rum.",
 "You didn't answer my question.",

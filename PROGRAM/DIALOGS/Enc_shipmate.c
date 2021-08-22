@@ -29,6 +29,7 @@ void ProcessDialogEvent()
 
 			if (rand(100)<25)
 			{
+				Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 				dialog.text = LinkRandPhrase(DLG_TEXT[0] + pchar.lastname + DLG_TEXT[1], pchar.lastname + DLG_TEXT[2], DLG_TEXT[3] + pchar.lastname + DLG_TEXT[4]) ;
  				link.l1 = RandSwear() + " " + LinkRandPhrase(DLG_TEXT[5], DLG_TEXT[6], DLG_TEXT[7]);
 				link.l1.go = "exit_fight";

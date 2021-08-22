@@ -51,6 +51,7 @@ void ProcessDialogEvent()
 
 		case "3":
 			dialog.snd = "Voice\GEBA\GEBA005";
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[8] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[9])]) + DLG_TEXT[10];
 			link.l1 = Characters[GetCharacterIndex(DLG_TEXT[11])].name +DLG_TEXT[12];
 			link.l1.go = "Exit_talk_to_Bucho";

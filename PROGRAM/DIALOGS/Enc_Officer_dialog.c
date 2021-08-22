@@ -3,6 +3,7 @@ void ProcessDialogEvent()
 	ref NPChar, PChar, d;
 	PChar = GetMainCharacter();
 	aref Link, Diag;
+	aref Type, OldType;
 	string NPC_Meeting;
 	// MAXIMUS 08.10.2006 ==>
 	int ourMoney, ourCrew;
@@ -12,11 +13,6 @@ void ProcessDialogEvent()
 	else ourCrew = 0;
 	// MAXIMUS 08.10.2006 <==
 	
-	//Levis for smuggling
-	string questname = "";
-	string patroltime = GetPatrolTimeText(Islands[GetCharacterCurrentIsland(Pchar)], GetBestSmugglingtime(Islands[GetCharacterCurrentIsland(Pchar)]));
-	if(CheckAttribute(Pchar,"amount_smuggleruns")) questname = "smuggle&number="+Pchar.amount_smuggleruns; //Set a questname
-	//end Levis
 
 	DeleteAttribute(&Dialog,"Links");
 
@@ -30,6 +26,20 @@ void ProcessDialogEvent()
 	aref weapon;
 	Items_FindItem(weaponID, &weapon);
 	// <-- JRH
+	
+	//Levis for smuggling
+	string questname = "";
+	string patroltime = GetPatrolTimeText(Islands[GetCharacterCurrentIsland(Pchar)], GetBestSmugglingtime(Islands[GetCharacterCurrentIsland(Pchar)],NPChar));
+	if(CheckAttribute(Pchar,"amount_smuggleruns")) questname = "smuggle&number="+Pchar.amount_smuggleruns; //Set a questname
+	//end Levis
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	// RM -->
 	if(strcut(Dialog.CurrentNode, 0, 3) == "flag") // changed by MAXIMUS [was Dialog.CurrentNode]
@@ -136,6 +146,13 @@ void ProcessDialogEvent()
 		NPChar.grsex = NPChar.sex;
 	}
 	// NK <--
+	if(PChar.sex == "woman"){
+		Preprocessor_Add("sir", XI_ConvertString("ma'am")); // DeathDaisy
+	}
+	else{
+		Preprocessor_Add("sir", XI_ConvertString("sir")); // DeathDaisy
+	}
+	
 	switch(Dialog.CurrentNode)
 	{
 		case "exit":
@@ -158,7 +175,7 @@ void ProcessDialogEvent()
 					}else{
 						TakenItems(NPChar, "gunpowder", -100);TakenItems(NPChar, "pistolbullets", -100);
 						TakenItems(NPChar, "pistolgrapes", -100);TakenItems(NPChar, "musketbullets", -100);
-						TakenItems(NPChar, "gunpowder", 6);
+						TakenItems(NPChar, "gunpowder", MAX_GUNPOWDER);		//UZVER
 					}
 				}
 
@@ -341,6 +358,10 @@ void ProcessDialogEvent()
 // LDH --> 05Oct06 Bandaid fix for invalid characters, Devlin, 33_Piratess10, etc.  Needs to be researched and fixed in the character files
 			if (NPChar.chr_ai.type == "actor")	// should be "sit" or "citizen" here
 			{
+				NPChar.old.chr_ai.type = NPChar.chr_ai.type;
+				makearef(Type, NPChar.chr_ai.type);
+				makearef(OldType, NPChar.old.chr_ai.type);
+				CopyAttributes(&OldType,&Type);
 				DeleteAttribute(NPChar, "chr_ai.type");		// fix for invalid characters, devlin, 33_Piratess10, etc
 				NPChar.chr_ai.type = "sit";					// note that they won't actually be sitting.
 			}
@@ -353,6 +374,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "ReturnfromSkillview":
+			if(CheckAttribute(NPChar, "old.chr_ai.type"))
+			{
+				NPChar.chr_ai.type = NPChar.old.chr_ai.type;
+				makearef(Type, NPChar.chr_ai.type);
+				makearef(OldType, NPChar.old.chr_ai.type);
+				CopyAttributes(&Type,&OldType);
+				DeleteAttribute(NPChar, "old.chr_ai.type");
+			}
 			d.Text = DLG_Text[47];
 			Link.l1 = DLG_TEXT[10];
 			Link.l1.go = "price";
@@ -406,7 +435,7 @@ void ProcessDialogEvent()
 				NPChar.quest.OfficerPrice = oPrice - ptest * 14 - Rand(ptest * 2);
 				// NK <--
 //				d.Text = DLG_TEXT[17] + NPChar.quest.OfficerPrice + DLG_TEXT[18];
-				d.Text = DLG_TEXT[17] + CalcEncOfficerPrice(NPChar) + DLG_TEXT[18];		// LDH 16Apr09
+				d.Text = PersuasionSuccess + DLG_TEXT[17] + CalcEncOfficerPrice(NPChar) + DLG_TEXT[18];		// LDH 16Apr09
 				Link.l1 = DLG_TEXT[19];
 				Link.l1.go = "hire";				
 				Link.l2 = DLG_TEXT[20];
@@ -414,7 +443,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				d.Text = DLG_TEXT[21];
+				d.Text = PersuasionFailure + DLG_TEXT[21];
 				Link.l1 = DLG_TEXT[22];
 				Link.l1.go = "hire";				
 				Link.l2 = DLG_TEXT[23];
@@ -441,6 +470,7 @@ void ProcessDialogEvent()
 				else
 				{
 					d.Text = DLG_TEXT[51];
+					if (HasSubStr(PChar.location, "jungle") || HasSubStr(PChar.location, "exit")) d.Text = DLG_TEXT[198];
 					Link.l1 = DLG_TEXT[52];
 				}
 				Link.l1.go = "Exit_hire";
@@ -698,7 +728,7 @@ void ProcessDialogEvent()
 			//Levis smuggling addon -->
 			if(CheckAttribute(Pchar,"quest.Contraband.scout"))
 			{
-				if(!CheckAttribute(Pchar,"quest.Contraband.scout.done"))
+				if(!CheckAttribute(Pchar,"quest.Contraband.scout.done") && !bSeaActive)
 				{
 					Link.l8 = DLG_TEXT[190];
 					Link.l8.go = "patrolquestion";
@@ -735,7 +765,7 @@ void ProcessDialogEvent()
 			AddQuestRecord(questname, 13);
 			Preprocessor_Remove("time");
 			//Text
-			d.Text = DLG_TEXT[196]+patroltime);
+			d.Text = DLG_TEXT[196]+ patroltime;
 			Link.l1 = DLG_TEXT[50];
 			Link.l1.go = "Exit_back_in_slot";
 		break;

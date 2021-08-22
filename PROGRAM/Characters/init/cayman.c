@@ -49,7 +49,7 @@ void CreateCaymanCharacters(ref n)
 	ch.old.lastname = "Weasly";
 	ch.name = TranslateString("","Ginny");
 	ch.lastname = TranslateString("","Weasly");
-	ch.id		= "Gillian Atterbury";
+	ch.id		= "Ginny Weasly";	// Was "Gillian Atterbury", but the real Gillian Atterbury is in "Redmond.c"
 	ch.model	= "Fanielle";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";

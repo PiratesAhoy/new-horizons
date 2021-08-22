@@ -1,5 +1,5 @@
 string DLG_TEXT[24] = {
-"Hey, buddy, you have something belongs to us. If you peacefully give us the chest we won't even kill you.",
+"Hey, mate, you have something belongs to us. If you give us the chest all peaceable like, we won't even kill you.",
 "What chest?",
 "Why don't you peacefully disappear, lads?",
 "The one you've brought here from #sOxbay#. Give it to us. It's ours!",

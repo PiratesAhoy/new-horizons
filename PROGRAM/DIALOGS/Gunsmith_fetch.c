@@ -22,6 +22,8 @@ void ProcessDialogEvent()
 	{
 		//Fetch Quest -->
 		case "fetch quest":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[1] + NPChar.fetch_quest.amount + " " + Goods[sti(NPChar.fetch_quest.good)].name + DLG_TEXT[2] + NPChar.fetch_quest.money + DLG_TEXT[3]  + NPChar.fetch_quest.expire;
 			Link.l1 = DLG_TEXT[4];
 			Link.l1.go = "agree fetch";
@@ -126,6 +128,7 @@ void ProcessDialogEvent()
 			Preprocessor_Remove("date");
 			PChar.fetchquestactive = sti(PChar.fetchquestactive) +1;
 			NPChar.fetch_quest_active = TRUE;
+			setFetchQuestExpireQuest(Islands[FindIsland(ctown.island)], NPChar.fetch_quest.cargoid, questbookname, NPChar.id); //Levis: Add expire quest
 		break;
 		
 		case "SelectFix":

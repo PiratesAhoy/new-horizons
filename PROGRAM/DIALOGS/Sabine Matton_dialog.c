@@ -41,8 +41,12 @@ void ProcessDialogEvent()
 				link.l2.go = "first_time_01";
 				npchar.quest.meeting = "1";
 				NextDiag.TempNode = "First time";
-				if (pchar.id == "Blaze")	npchar.quest.hire = "blaze_begin";
+//--->>> TALISMAN - change code to get Sabine Run Away - with player if Player is Female  - code working - no reputation check since Sabine desperate to run away
+//				if (pchar.id == "Blaze")	npchar.quest.hire = "blaze_begin";
+//				else						npchar.quest.hire = "danielle_begin";
+				if (PChar.sex == "man")		npchar.quest.hire = "blaze_begin";
 				else						npchar.quest.hire = "danielle_begin";
+//<<<----- TALISMAN
 			}
 			else
 			{
@@ -82,14 +86,14 @@ void ProcessDialogEvent()
 			{
 				Dialog.snd = "voice\SAMA\SAMA004";
 				dialog.text = DLG_TEXT[21] + GetMyName(Pchar) + DLG_TEXT[22];
-				link.l1 = pcharrepphrase(DLG_TEXT[23], DLG_TEXT[24] + GetMyFullName(PChar) + DLG_TEXT[25]);
+				link.l1 = pcharrepphrase(DLG_TEXT[23], DLG_TEXT[24] + GetMyName(PChar) + DLG_TEXT[25]);
 				link.l1.go = "danielle_1";
 			}
 			if (npchar.quest.hire == "request")
 			{
 				Dialog.snd = "voice\SAMA\SAMA005";
 				dialog.text = DLG_TEXT[26];
-				link.l1 = pcharrepphrase(DLG_TEXT[27], DLG_TEXT[28] + GetMyFullName(PChar) + DLG_TEXT[29]);
+				link.l1 = pcharrepphrase(DLG_TEXT[27], DLG_TEXT[28] + GetMyName(PChar) + DLG_TEXT[29]);
 				link.l1.go = "danielle_1";
 			}
 		break;
@@ -133,7 +137,7 @@ void ProcessDialogEvent()
 			link.l1.go = "danielle_6";
 			link.l2 = pcharrepphrase(DLG_TEXT[50], DLG_TEXT[51]);
 			link.l2.go = "exit";
-			npchar.quest.hire= "request";
+			npchar.quest.hire = "request";
 		break;
 
 		case "danielle_6":
@@ -161,7 +165,9 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			npchar.quest.hire = "danielle_on_ship";
 			AddPassenger(pchar, npchar, 0);
-			ChangeCharacterAddress(npchar, "none", "none");
+			SetCharacterRemovable(characterFromID("Sabine Matton"), false);// PW locked as passenger until quest complete
+			AddDialogExitQuest("danielle_end_exit");
+			//ChangeCharacterAddress(npchar, "none", "none");// PW replaced by "danielle_end_exit" case to action leave
 		break;
 
 		case "danielle_end_1":
@@ -183,8 +189,10 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[68] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[69];
 			link.l1 = DLG_TEXT[70];
 			link.l1.go = "exit";
-			npchar.quest.hire = "escape";
-			npchar.location = "none";
+			npchar.quest.hire = "escape";// PW looks like future extension point
+			AddDialogExitQuest("danielle_end_exit");
+
+		//	npchar.location = "none"; // PW replaced by "danielle_end_exit" case to action leave
 			//именно так. Исчезает при следующем входе в локацию.
 		break;
 

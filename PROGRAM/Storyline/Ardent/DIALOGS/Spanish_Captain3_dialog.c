@@ -41,8 +41,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "on_my_ship":
-			if (PChar.sex == "man") gov_kid = "daughter";
-			else gov_kid = "son";
+			if (PChar.sex == "man") gov_kid = XI_ConvertString("daughter");
+			else gov_kid = XI_ConvertString("son");
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3] + gov_kid + ".";
 			link.l1.go = "on_my_ship2";

@@ -9,7 +9,7 @@ string DLG_TEXT[61] = {
 "Vito Leone",
 "?",
 "You've done very well, captain! Here is your 10000 gold. I trust you found my daughter well? Pretty is she not? Well, I'd best go and let her out of that cell. Listen, if you ever need to...plan a funeral for someone, be sure to let us know, we'll provide the best service - at a decent discount. Come along you two, we have much to discuss.",
-"Thank's and farewell.",
+"Thanks and farewell.",
 "Yes, that's me. And you must be ",
 ". I've heard a lot about your success performing certain...jobs.",
 "You arrived a week ago, and you already know who I am and what I've been doing? Why?",

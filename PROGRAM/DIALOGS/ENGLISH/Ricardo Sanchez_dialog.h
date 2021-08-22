@@ -51,7 +51,7 @@ string DLG_TEXT[57] = {
 "Oh, sorry.",
 "You've recalled your delivery a bit too late, don't you think? I'll take the goods anyway, but don't expect to be paid. Pay closer attention next time! Goodbye.",
 "Farewell.",
-"Oh! I've been waiting for it for a long time. Here is your reward, young man.",
+"Oh! I've been waiting for it for a long time. Here is your reward, ",
 "Always welcome.",
 "I'm sorry. I have nothing for you now.",
 "That's a pity. Perhaps you'll answer some questions, then.",

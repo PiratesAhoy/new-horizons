@@ -1,5 +1,5 @@
 string DLG_TEXT[13] = {
-"Hello, sir.",
+"Hello, ",
 "Can I ask you a question? I'm looking for a man called Emilio Soares. Have you seen him?",
 "Perhaps. Who are you?",
 "I am ",

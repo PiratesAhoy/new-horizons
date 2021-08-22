@@ -2,7 +2,7 @@ string DLG_TEXT[52] = {
 "Hey, ",
 ", you bastard! Finally got you! Remember how you once had my skin flogged off for 'insolence'... Now I'll give you insolence!",
 ", you won't escape from my revenge this time. You'll regret that you once cut my balls off for raping that nun... I have already killed HER, and now I'll kill you!",
-"Ha, the man I hate most - Captain ",
+"Ha, the #sgender# I hate most - Captain ",
 "! Do you know what kept me alive on the desolate rock on which you had marooned me? The wish to kill you one day... THIS day!",
 "I should have killed you back then, when you were an easy prey..",
 "Here comes harsh punishment for the sins of my youth...",

@@ -57,6 +57,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "search_rheims":
+			Preprocessor_Add("sir", strlower(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false))); // DeathDaisy
 			dialog.text = DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "exit";
@@ -245,6 +246,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "town_whores":
+			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)); // DeathDaisy
+			if (PChar.sex == "woman") Preprocessor_Add("pronoun", XI_ConvertString("her")); // DeathDaisy
+			else Preprocessor_Add("pronoun", XI_ConvertString("his")); // DeathDaisy
 			dialog.text = DLG_TEXT[77];
 			link.l1 = DLG_TEXT[78];
 			link.l1.go = "whores2";
@@ -257,6 +261,38 @@ void ProcessDialogEvent()
 		break;
 
 		case "whores3":
+			// DeathDaisy -->
+			string RandEuphemism;
+			if(PChar.sex == "woman"){
+				RandEuphemism = GetRandSubString("1,2,3");
+			}
+			else{
+				RandEuphemism = GetRandSubString("4,5,6");
+			}
+			
+			string Spanking;
+			switch(RandEuphemism){
+				case "1": 
+					Spanking = "polishin' the jewel"; 
+				break;
+				case "2": 
+					Spanking = "swabbin' the foredeck"; 
+				break;
+				case "3": 
+					Spanking = "beatin' Venus' Anvil"; 
+				break;
+				case "4": 
+					Spanking = "spankin' the plank"; 
+				break;
+				case "5": 
+					Spanking = "playin' the fiddle"; 
+				break;
+				case "6": 
+					Spanking = "shakin' the ol' cod"; 
+				break;
+			}
+			Preprocessor_Add("onanism", Spanking);
+			// DeathDaisy <--- Random Euphemisms woooo! :D
 			dialog.text = DLG_TEXT[81];
 			link.l1 = DLG_TEXT[82];
 

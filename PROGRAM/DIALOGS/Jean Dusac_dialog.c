@@ -31,6 +31,7 @@ void ProcessDialogEvent()
 			if (PChar.quest.santiago == "search") 
 			{
 				dialog.snd = "Voice\CLLA\CLLA001";
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				dialog.text = DLG_TEXT[0];
 			        link.l1 = DLG_TEXT[1];
 				link.l1.go = "begin";

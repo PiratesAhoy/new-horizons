@@ -125,7 +125,7 @@ void ProcessDialogEvent()
 				//itest = iTest + 1;
 			}
 
-			if (npchar.quest.church_help == "done" && pchar.quest.ANIMISTS == "FRIGATE_LOST")
+			if (npchar.quest.church_help == "done" && CheckQuestAttribute("ANIMISTS", "FRIGATE_LOST"))
 			{
 				link.l1 = DLG_TEXT[20];
 				link.l1.go = "ANIMISTS_letter";
@@ -165,7 +165,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "destroyed_sekt":
-			if (CheckAttribute(Pchar, "ANIMISTS") == "women_returned")
+			if (GetAttribute(PChar, "ANIMISTS") == "women_returned")
 			{
 				dialog.snd = "Voice\FATB\FATB010";
 				dialog.text = DLG_TEXT[168];

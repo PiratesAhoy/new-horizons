@@ -17,7 +17,7 @@ string DLG_TEXT[45] = {
 "We can set sail immediately.",
 "Where is your ship?",
 "Hmm...well, it's hidden. In a secluded bay.",
-"Blast and ballast, man! Why isn't it in port? Go bring your ship here on the double. We need to set sail as soon as possible!",
+"Blast and ballast, #sgender#! Why isn't it in port? Go bring your ship here on the double. We need to set sail as soon as possible!",
 "Yes sir, I'll bring it to port now.",
 "Excuse me, ",
 "! You're a captain, aren't you?",

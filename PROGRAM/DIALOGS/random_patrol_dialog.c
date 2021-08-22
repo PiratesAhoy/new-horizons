@@ -15,6 +15,11 @@ void ProcessDialogEvent()
 	makearef(Diag, NPChar.Dialog);
 
 	ref PChar = GetMainCharacter();
+	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
+	Preprocessor_Add("gendersubj", FirstLetterUp(GetMyPronounSubj(PChar))); // DeathDaisy
+	Preprocessor_Add("genderobj", GetMyPronounObj(PChar)); // DeathDaisy
 
 	switch(Dialog.CurrentNode)
 	{

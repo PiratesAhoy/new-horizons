@@ -156,7 +156,14 @@ void wdmInitWorldMap()
 	worldMap.islands.Redmond.locations.city1.visible = "false";
 	worldMap.islands.Redmond.locations.city1.move = "false";
 	//Label
-	worldMap.islands.Redmond.locations.city1.label.text = "Devil's Throat";
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
+	{
+		worldMap.islands.Redmond.locations.city1.label.text = "Woodes Rogers' Port";
+	}
+	else 
+	{
+		worldMap.islands.Redmond.locations.city1.label.text = "Devil's Throat";
+	}
 	worldMap.islands.Redmond.locations.city1.label.icon = -1;
 	worldMap.islands.Redmond.locations.city1.label.visible = "false";
 	// initial ship location
@@ -173,7 +180,14 @@ void wdmInitWorldMap()
 	worldMap.islands.Redmond.locations.city2.visible = "false";
 	worldMap.islands.Redmond.locations.city2.move = "false";
 	//Label
-	worldMap.islands.Redmond.locations.city2.label.text = "Rocky Shore";
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
+	{
+		worldMap.islands.Redmond.locations.city2.label.text = "Cave Shore";
+	}
+	else
+	{
+		worldMap.islands.Redmond.locations.city2.label.text = "Rocky Shore";
+	}
 	worldMap.islands.Redmond.locations.city2.label.icon = -1;
 	worldMap.islands.Redmond.locations.city2.label.visible = "false";
 	// initial ship location

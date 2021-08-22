@@ -17,7 +17,7 @@ string DLG_TEXT[42] = {
 "Maybe you really do need me - that ",
 " of yours looks terrible. I can't possibly let you go without fixing it - in good conscience and all, you know.",
 "Eh, your, uh, ",
-" doesn't look too bad there, sir. Still, I'll patch it up if you're for real.",
+" doesn't look too bad there, #ssir#. Still, I'll patch it up if you're for real.",
 "See, now I don't know that you're not lying to me... I saw a ",
 " just like yours on some town guard somewhere. So if I'm going to fix it for you, you have to swear you won't try and turn me in - not that I've done anything wrong, mind.",
 "Well! In all my years as a perfectly legitimate businessman, I've never seen such a nice-looking ",

@@ -226,7 +226,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "resque_from_mines_denied_9":
-			dialog.text = DLG_TEXT[52];
+			if (PChar.sex == "woman") dialog.text = DLG_TEXT[112];
+			else dialog.text = DLG_TEXT[52];
 			link.l1 = DLG_TEXT[53];
 			link.l1.go = "resque_from_mines_denied_10";
 		break;
@@ -283,7 +284,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "bad_learn":
-			dialog.text = DLG_TEXT[72];
+			if (PChar.sex == "woman") dialog.text = DLG_TEXT[114];
+			else dialog.text = DLG_TEXT[72];
 			link.l1 = DLG_TEXT[73];
 			link.l1.go = "bad_story";
 		break;
@@ -292,7 +294,11 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[74];
 			link.l1 = DLG_TEXT[75];
 			link.l1.go = "bad_story_2";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
 			AddQuestRecord("search_danielle", 18);
+			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("Danielle");
 			NextDiag.tempnode = "first time";
 		break;
 
@@ -331,7 +337,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "bad_story_5":
-			dialog.text = DLG_TEXT[82];
+			if (PChar.sex == "woman") dialog.text = DLG_TEXT[113];
+			else dialog.text = DLG_TEXT[82];
 			link.l1 = DLG_TEXT[83];
 			if (pchar.quest.main_line == "resque_leborio")
 			{

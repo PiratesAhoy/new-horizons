@@ -26,7 +26,7 @@ string DLG_TEXT[45] = {
 "Maybe, goodbye!",
 "Excellent! I've already made the preparations so we can go right now. But before, Capitaine Chevalle has more to say to you. He'll be useful during this expedition. Indeed, he is a good fighter!",
 "Finally, we found a shore.",
-"Indeed, I was right when I said the coast is uneven. Let's go into the jungle to see if the spaniards have settled the island.",
+"Indeed, I was right when I said the coast is uneven. Let's go into the jungle to see if the Spaniards have settled the island.",
 "Now, we are so close to the goal, I'm not willing to give up.",
 "Me too!",
 "Dash it! He escaped.",
@@ -43,6 +43,6 @@ string DLG_TEXT[45] = {
 "...",
 "The French can eat my shoe, Capitaine.",
 "...",
-"I know where it is but I believe the mission is a fools end... savvy. I guess this is the end of your time on my ship Chevalle farewell for now.",
+"I know where it is, but I believe the mission is a fool's errand, savvy? I guess this is the end of your time on my ship, Chevalle. Farewell for now.",
 
 };

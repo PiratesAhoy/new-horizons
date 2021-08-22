@@ -13,6 +13,14 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	
 	switch(Dialog.CurrentNode)
@@ -35,6 +43,7 @@ void ProcessDialogEvent()
 
 			if (pchar.quest.main_line == "blaze_to_incas_collection_begin_5" || pchar.quest.main_line == "blaze_to_incas_collection_begin")
 			{
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				dialog.snd = "Voice\ALGA\ALGA002";
 				Dialog.Text = DLG_TEXT[2];
 				Link.l1 = DLG_TEXT[3];
@@ -167,6 +176,7 @@ void ProcessDialogEvent()
 			if (characters[GetCharacterIndex("danielle_sailor")].quest.kill_pirate_06 == "done")
 			{
 				dialog.snd = "Voice\ALGA\ALGA016";
+				Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 				dialog.text = DLG_TEXT[31];
 				link.l1 = DLG_TEXT[32];
 				link.l1.go = "exit";
@@ -201,7 +211,7 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(pchar, SKILL_COMMERCE) > 4)
 			{
 				dialog.snd = "Voice\ALGA\ALGA019";
-				dialog.text = DLG_TEXT[40];
+				dialog.text = PersuasionSuccess + DLG_TEXT[40];
 				if (makeint(pchar.money) >= 8000)
 				{
 					link.l1 = DLG_TEXT[41];
@@ -211,7 +221,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\ALGA\ALGA020";
-				dialog.text = DLG_TEXT[42];
+				dialog.text = PersuasionFailure + DLG_TEXT[42];
 				if(makeint(pchar.money) >= 10000)
 				{
 					link.l1 = DLG_TEXT[43];
@@ -225,6 +235,7 @@ void ProcessDialogEvent()
 
 		case "bad":
 			dialog.snd = "Voice\ALGA\ALGA021";
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[45];
 			link.l1 = DLG_TEXT[46];
 			link.l1.go = "blaze_node_5";
@@ -236,7 +247,7 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) > 7)
 			{
 				dialog.snd = "Voice\ALGA\ALGA022";
-				dialog.text = DLG_TEXT[48];
+				dialog.text = PersuasionSuccess + DLG_TEXT[48];
 				link.l1 = DLG_TEXT[49];
 				link.l1.go = "exit";
 				AddDialogExitQuest("alistar_garcilaso_idols");
@@ -246,7 +257,7 @@ void ProcessDialogEvent()
 				if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) > 3)
 				{
 					dialog.snd = "Voice\ALGA\ALGA023";
-					dialog.text = DLG_TEXT[50];
+					dialog.text = PersuasionFailure + DLG_TEXT[50];
 					link.l1 = DLG_TEXT[51];
 					link.l1.go = "fight";
 					link.l2 = DLG_TEXT[52];
@@ -255,7 +266,7 @@ void ProcessDialogEvent()
 				else
 				{
 					dialog.snd = "Voice\ALGA\ALGA024";
-					dialog.text = DLG_TEXT[53];
+					dialog.text = PersuasionFailure + DLG_TEXT[53];
 					link.l1 = DLG_TEXT[54];
 					link.l1.go = "fight_2";
 					link.l2 = DLG_TEXT[55];

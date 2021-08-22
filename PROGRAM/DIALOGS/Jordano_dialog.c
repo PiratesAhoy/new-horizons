@@ -42,6 +42,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "lie":
+			PreProcessor_Add("title", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[4];
 			link.l1 = DLG_TEXT[5];
 			link.l1.go = "lie_good";
@@ -72,15 +73,16 @@ void ProcessDialogEvent()
 		break;
 
 		case "lie_good_5":
-			dialog.text = DLG_TEXT[14];
-			link.l1 = DLG_TEXT[15];  // <-- edited by Cat for Animists Quest fix
-			link.l1.go = "exit";
 			pchar.quest.ANIMISTS = "to_greenford_for_teacher";
 			Preprocessor_AddQuestData("Simon", GetMyFirstNames(CharacterFromID("Simon Hanpool"), false));
 			AddQuestRecord("ANIMISTS", 26);
 			Preprocessor_Remove("Simon");
 			DeleteAttribute(&Locations[FindLocation("Muelle_town_01")],"vcskip"); // NK
 			AddDialogExitQuest("speak_with_jordano2");  // <-- edited by Cat for Animists Quest fix
+			PreProcessor_Add("title", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
+			dialog.text = DLG_TEXT[14];
+			link.l1 = DLG_TEXT[15];  // <-- edited by Cat for Animists Quest fix
+			link.l1.go = "exit";
 		break;
 					
 		case "Exit":

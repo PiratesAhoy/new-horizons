@@ -105,6 +105,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[19];
 			link.l1 = DLG_TEXT[20];
 			link.l1.go = "exit";
+            PlayStereoSound("VOICE\ENGLISH\Spa_m_a_008.wav");			
 			AddDialogExitQuest("minefight2");
 		break;
 
@@ -112,6 +113,7 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\CLLA\CLLA004";
 			dialog.text = DLG_TEXT[21];
 			link.l1 = DLG_TEXT[22];
+            PlayStereoSound("VOICE\ENGLISH\Eng_m_b_080.wav");				
 			link.l1.go = "begin_13";
 		break;
 
@@ -150,6 +152,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[31];
 			link.l1 = DLG_TEXT[32];
 			link.l1.go = "exit";
+            PlayStereoSound("VOICE\ENGLISH\Eng_m_c_002.wav");			
 			AddDialogExitQuest("leavebattle");
 		break;
 

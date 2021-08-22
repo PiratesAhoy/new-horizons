@@ -40,6 +40,12 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\COUN\COUN001";
+			if(PChar.sex == "woman"){
+				Preprocessor_Add("sir", XI_ConvertString("ma'am"));
+			}
+			else{
+				Preprocessor_Add("sir", XI_ConvertString("sir"));
+			}
 			d.Text = DLG_TEXT[0] + Pchar.lastname + DLG_TEXT[1];
 			link.l1 = DLG_TEXT[2];
 			link.l1.go = "Meeting_1";

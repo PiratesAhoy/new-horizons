@@ -19,7 +19,7 @@ float FRAND(float _x) { return rand(32768) / 32768.0 * _x; }
 // Bool section
 //--------------------------------------------------------------------
 #define false			0
-#define true			1			
+#define true			1
 
 
 //--------------------------------------------------------------------
@@ -36,6 +36,7 @@ float FRAND(float _x) { return rand(32768) / 32768.0 * _x; }
 #define PORTUGAL         5
 // KK -->
 #define AMERICA          6
+#define SWEDEN           6
 
 #define GUEST1_NATION    6
 #define GUEST2_NATION    7
@@ -121,13 +122,13 @@ object  GameState;
 //    TOTAL_CHARACTERS minus FANTOM_CHARACTERS gives the number of possible global fantoms.
 //--------------------------------------------------------------------
 // LDH new numbers 02May09
-#define TOTAL_CHARACTERS			2250	// Size of Characters array, all the characters in the game
-#define MAX_CHARACTERS				1999	// Number of permanent characters, JRH was 1849
-#define LOC_FANTOM_CHARACTERS		2000    // Index of first local fantom, must be > MAX_CHARACTERS, JRH was 1850
-#define FANTOM_CHARACTERS			2050	// Index of first permanent fantom, remainder of Character array is used for these
+#define TOTAL_CHARACTERS			2400	// Size of Characters array, all the characters in the game. JRH was 2050
+#define MAX_CHARACTERS				2149	// Number of permanent characters, JRH was 1999
+#define LOC_FANTOM_CHARACTERS		2150    // Index of first local fantom, must be > MAX_CHARACTERS, JRH was 2000
+#define FANTOM_CHARACTERS			2200	// Index of first permanent fantom, remainder of Character array is used for these, JRH was 2050
 int CHARACTERS_QUANTITY = 0; // 05-04-05 add int for max char, replace using of MAX_CHARACTERS.
 
-#define	MAX_LOCATIONS		1000 //NK 05-03-30 up number of locs
+#define	MAX_LOCATIONS		1100 //NK 05-03-30 up number of locs	//JRH was 1000
 #define	MAX_ISLANDS			24 // ditto, and now use ISLANDS_QUANTITY. 8
 // KK #define	MAX_BOARDING		16
 
@@ -137,6 +138,7 @@ string 	sPoManNames[2], sPoWomenNames[2], sPoFamilies[2];
 string 	sFrManNames[2], sFrWomenNames[2], sFrFamilies[2];
 string 	sSpManNames[2], sSpWomenNames[2], sSpFamilies[2];
 string 	sAmManNames[2], sAmWomenNames[2], sAmFamilies[2];
+string  sSwManNames[2], sSwWomenNames[2], sSwFamilies[2];
 
 // KK -->
 #define MAN_HEIGHT      1.85
@@ -144,7 +146,11 @@ string 	sAmManNames[2], sAmWomenNames[2], sAmFamilies[2];
 #define WOMAN_HEIGHT    1.7
 #define WOMAN_CAPACITY  9.5
 
-#define SKILL_MAX		10
+#define PASSENGERS_MAX			32
+#define OFFICER_MAX				4
+#define COMPANION_MAX			4
+#define MAX_CHARACTER_SKILL		10	// Maximum number for each skill
+#define NUM_DIFF_SKILLS			10	// Number of different skills
 // <-- KK
 
 object  NullCharacter;
@@ -225,8 +231,8 @@ bool	bCaptureShip = false;
 
 bool	bChangeNation = true;
 int CharLocation = 0;
-int	CharSkills[SKILL_MAX];
-float	CharBonusSkills[SKILL_MAX];
+int	CharSkills[NUM_DIFF_SKILLS];
+float	CharBonusSkills[NUM_DIFF_SKILLS];
 int	CharPlayerType; // PB
 int CharYear = 1690;
 int CharMonth = 4;
@@ -364,8 +370,8 @@ Note that you must be neutral with that nation to buy a LoM and buying the LoM s
 
 // RM <--
 
-#define BUILDVERSION			"14 Beta 4.1 WIP: 28 July 2016"	// this is not used in reinit.c anymore, so we can use a string now
-#define IS_SGV					14.934							// must be a float - use small numbers to keep them sequential for all these updates --> 12.10 is smaller than 12.9!
+#define BUILDVERSION				"14 (21st May 2018)"	// this is not used in reinit.c anymore, so we can use a string now
+#define IS_SGV					14.941			// must be a float - use small numbers to keep them sequential for all these updates --> 12.10 is smaller than 12.9!
 
 #define PA_INET					"www.piratesahoy.net"
 #define PA_DOWN					"www.moddb.com/mods/new-horizons"

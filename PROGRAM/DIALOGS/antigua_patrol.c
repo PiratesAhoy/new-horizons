@@ -17,6 +17,8 @@ void ProcessDialogEvent()
 	int iNation = GetTownNation(GetCurrentTownID()); // KK
 	int Relation = GetRMRelation(PChar, iNation);
 	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+	
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
@@ -61,6 +63,7 @@ void ProcessDialogEvent()
 
 		case "bribe":
 			AddMoneytoCharacter(Pchar, -200);
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			Dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];
 			link.l1.go = "exit";

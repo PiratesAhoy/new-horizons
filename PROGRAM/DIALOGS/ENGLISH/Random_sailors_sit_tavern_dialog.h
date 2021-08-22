@@ -1,7 +1,7 @@
 string DLG_TEXT[101] = {
 "Say, don't i know you? You're ",
 ", right? Bad choice of career mate, I hate pirates!",
-"Hey there! Say, I been hearing 'bout your exploits 'round here Sir and I was wonderin' if you'd be so kind as to give me a share of yer glory?",
+"Hey there! Say, I been hearing 'bout your exploits 'round here #ssir# and I was wonderin' if you'd be so kind as to give me a share of yer glory?",
 "I've been looking to serve the crown but the navy won't have me. Got a place for me on your ship?",
 "Well, why not. Welcome aboard.",
 "Sorry mate, but I prefer the more seaworthy kind of sailor.",
@@ -22,7 +22,7 @@ string DLG_TEXT[101] = {
 "I guess you could call that busy.",
 "DLG_TEXT[21]",
 "DLG_TEXT[22]",
-"Thanks mate! Err, Sir. Captain. Yes. So what are your orders Sir?",
+"Thanks mate! Err, #ssir#. Captain. Yes. So what are your orders #ssir#?",
 "I'd like you to follow me around town here for a bit. Could always use the extra help.",
 "Report to the quartermaster as soon as you're able, and don't make me leave without you.",
 "By your orders Cap'n!",

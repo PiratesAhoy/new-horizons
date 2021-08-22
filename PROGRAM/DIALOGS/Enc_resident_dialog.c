@@ -460,7 +460,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "extort2":
-			dialog.text = LinkRandPhrase(DLG_TEXT[63], DLG_TEXT[64], DLG_TEXT[65]);
+			dialog.text = LinkRandPhrase(DLG_TEXT[63], DLG_TEXT[64], GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + DLG_TEXT[65]);
 			Link.l2 = DLG_TEXT[62];
 			Link.l2.go = "exit";
 			Link.l1 = LinkRandPhrase(DLG_TEXT[66], DLG_TEXT[67], DLG_TEXT[68]);

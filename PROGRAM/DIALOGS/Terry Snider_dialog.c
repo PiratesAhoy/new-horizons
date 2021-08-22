@@ -9,6 +9,13 @@ void ProcessDialogEvent()
 	makearef(NextDiag, NPChar.Dialog);
 	ref PChar;
 	PChar = GetMainCharacter();
+
+	if (PChar.sex == "woman") Preprocessor_Add("mistah", XI_ConvertString("missus"));
+	else Preprocessor_Add("mistah", XI_ConvertString("mistah"));
+	
+	
+			
+
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -383,6 +390,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "town_whores":
+			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)); // DeathDaisy
+			if (PChar.sex == "woman") Preprocessor_Add("pronounobj", XI_ConvertString("her")); // DeathDaisy
+			else Preprocessor_Add("pronounobj", XI_ConvertString("his")); // DeathDaisy
 			dialog.text = DLG_TEXT[85];
 			link.l1 = DLG_TEXT[86];
 			link.l1.go = "whores2";
@@ -395,6 +405,38 @@ void ProcessDialogEvent()
 		break;
 
 		case "whores3":
+			// DeathDaisy -->
+			string RandEuphemism;
+			if(PChar.sex == "woman"){
+				RandEuphemism = GetRandSubString("1,2,3");
+			}
+			else{
+				RandEuphemism = GetRandSubString("4,5,6");
+			}
+			
+			string Spanking;
+			switch(RandEuphemism){
+				case "1": 
+					Spanking = "polishin' the jewel"; 
+				break;
+				case "2": 
+					Spanking = "swabbin' the foredeck"; 
+				break;
+				case "3": 
+					Spanking = "beatin' Venus' Anvil"; 
+				break;
+				case "4": 
+					Spanking = "spankin' the plank"; 
+				break;
+				case "5": 
+					Spanking = "playin' the fiddle"; 
+				break;
+				case "6": 
+					Spanking = "shakin' the ol' cod"; 
+				break;
+			}
+			Preprocessor_Add("onanism", Spanking);
+			// DeathDaisy <--- Random Euphemisms woooo! :D
 			dialog.text = DLG_TEXT[89];
 			link.l1 = DLG_TEXT[90];
 			link.l1.go = "whores4";
@@ -490,11 +532,13 @@ case "colony":
 		break;
 		
 		case "mefisto5":
+			pchar.quest.ANIMISTST = "kilt_me_bruthah";
+			AddQuestRecord("ANIMISTS", 39);
+			if (PChar.sex == "woman") Preprocessor_Add("mistah", "missus");
+			else Preprocessor_Add("mistah", "mistah");
 			dialog.text = DLG_TEXT[119];
 			link.l1 = DLG_TEXT[120];
 			link.l1.go = "exit";
-			pchar.quest.ANIMISTST = "kilt_me_bruthah";
-			AddQuestRecord("ANIMISTS", 39);
 		break;  //  <-- selah, haha!
 
 		case "Exit":

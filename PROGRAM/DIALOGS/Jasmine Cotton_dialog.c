@@ -134,6 +134,7 @@ void ProcessDialogEvent()
 		case "quests":
 			iTest = 0;
 			dialog.snd = "Voice\EMRI\EMRI005";
+			Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 			Dialog.text = DLG_TEXT[22];
 			if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))	// LDH was quest.quest.generate, fixed 01Jan09
 			{
@@ -181,6 +182,7 @@ void ProcessDialogEvent()
 					if (iTradeNation < 0)
 					{
 						dialog.snd = "Voice\EMRI\EMRI008";
+						Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 						dialog.text = DLG_TEXT[29];
 						link.l1 = DLG_TEXT[30];
 						link.l1.go = "exit";

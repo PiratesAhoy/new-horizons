@@ -21,21 +21,20 @@ Please follow these rules when editing settings:
 // ======================================
 // Included in Realistic Game Mode:
 #define REALISTIC_SHIP_INERTIA			0		// BOOL - 1=ON - Ships require counter-rudder and don't sail as if on rails
-#define SHORE_DANGER_ALARM				0		// BOOL - 1=ON - Red flashing icon and danger music do not start until enemies draw their blade
-#define DISCOVER_SAIL_TO				1		// BOOL - 0=OFF - Shores and ports must be discovered by sailing there manually before you can use Sail To
-#define DISCOVER_FAST_TRAVEL			1		// BOOL - 0=OFF - Town locations must be discovered by finding them manually before you can use Fast Travel
+#define SHORE_DANGER_ALARM			0		// BOOL - 1=ON - Red flashing icon and danger music do not start until enemies draw their blade
+#define DISCOVER_SAIL_TO			1		// BOOL - 0=OFF - Shores and ports must be discovered by sailing there manually or having the island's map before you can use Sail To
+#define DISCOVER_FAST_TRAVEL			1		// BOOL - 0=OFF - Town locations must be discovered by finding them manually or asking for directions before you can use Fast Travel
 #define NAVIGATION_EQUIPMENT			0		// BOOL - 1=ON - Items required for certain navigational information to become available
 #define ENABLE_LIMITED_SHIPCLASS		0		// BOOL - 1=ON - When player takes command of ship of too high tier, Leadership and Sailing skills drops
-#define CANNOT_RELOAD_WHILE_FIGHTING	1		// INT - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
-#define SAIL_OPERATE_DELAY				3		// INT - sailors will operate sails this amount of seconds after receiving command (set to 0 to restore stock PotC)
+#define CANNOT_RELOAD_WHILE_FIGHTING		1		// INT - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
+#define SAIL_OPERATE_DELAY			3		// INT - sailors will operate sails this amount of seconds after receiving command (set to 0 to restore stock PotC)
 // Included in Iron Man Mode:
-#define OPEN_SEA_MOD					0		// BOOL - 1=ON - Worldmap enlarged for realistic DirectSail
-#define WORLDMAP_DISABLED				0		// BOOL - 1=ON - DirectSail enforced
-#define SAILTO_DISABLED					0		// BOOL - 1=ON - Cannot Sail-To any ships at sea
-#define ONSEA_DATA_DISABLED				0		// BOOL - 1=ON - Spyglass and compass additional information disabled, cannot move camera to non-player ships
-#define REALISTIC_ABILITIES				1		// INT  - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
-#define ITEM_REALISM					0		// BOOL - 1=ON - Items like rubies, diamonds and inca statuettes give no skill bonuses (books and items like compass etc. still do)
-#define RELATION_IGNORE_FRIENDLY		0		// BOOL - 1=ON - Ships and forts will not remember your flag for future encounters if you are non-hostile
+#define OPEN_SEA_MOD				0		// BOOL - 1=ON - Worldmap enlarged for realistic DirectSail
+#define WORLDMAP_DISABLED			0		// BOOL - 1=ON - DirectSail enforced
+#define SAILTO_DISABLED				0		// BOOL - 1=ON - Cannot Sail-To any ships at sea
+#define ONSEA_DATA_DISABLED			0		// BOOL - 1=ON - Spyglass and compass additional information disabled, cannot move camera to non-player ships
+#define REALISTIC_ABILITIES			1		// INT  - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
+#define ITEM_REALISM				0		// BOOL - 1=ON - Items like rubies, diamonds and inca statuettes give no skill bonuses (books and items like compass etc. still do)
 
 
 // ======================================
@@ -793,7 +792,6 @@ Set all to -1 to disable this mod
 #define ONE_TRAP						1		// BOOL - will only explode booby trap once
 #define REMEMBER_OPEN					1		// BOOL - once opened, will stay open while still in that location.
 
-
 // ======================================
 // LAND FIGHT MODS:
 // ======================================
@@ -818,7 +816,7 @@ Set all to -1 to disable this mod
 #define WEAPMOD_GUNDMG					1.5		// FLOAT - scalar to base damage for pistols. 1.0 here means roughly 2/3 stock game damage.
 #define MIN_GUNATTACK_HP				5		// INT - The minimum hp you and officers will have left after being shot. Set 0 to disable this mod.
 
-#define USEMAXPOTION_ONKEYPRESS			0 		// BOOL - If pressing the use potion key, the SMALLEST potions will be used first.
+#define USEMAXPOTION_ONKEYPRESS			0 	// BOOL - If 0 (default), when pressing the use potion key the SMALLEST potions will be used first. If 1, the LARGEST potion will be used first.
 #define TOUGHNESS_REGEN_MULT			10.0	// FLOAT - Faster HP regen for toughness perk, default 2, Build 13 was 80
 
 // Autoloot and loot dead settings
@@ -882,10 +880,12 @@ Set all to -1 to disable this mod
 #define QTY_LOGOSAILS_WHOLE_WHITE		17		// INT - increase this when you add new whole white sails.
 												// The files should be named sails_whole_white_pirate0.tga.tx, sails_whole_white_pirate1.tga.tx, sails_whole_white_pirate2.tga.tx, etc.
 												// So if the value above is set, for example, to 15, then the file numbers should be 0 - 14
-												// They should be put in RESOURCE/Textures/Ships/
+												// They should be put in RESOURCE/Textures/Ships/Sails
 #define QTY_LOGOSAILS_TORN_WHITE		15		// INT - increase this when you add new torn white sails. the files should be named sails_torn_white_pirate0.tga.tx etc.
 #define QTY_LOGOSAILS_WHOLE_RED			17		// INT - increase this when you add new whole red sails. the files should be named sails_whole_red_pirate0.tga.tx etc.
 #define QTY_LOGOSAILS_TORN_RED			15		// INT - increase this when you add new torn red sails. the files should be named sails_torn_red_pirate0.tga.tx etc.
+#define QTY_LOGOSAILS_WHOLE_TAN			17		// INT - increase this when you add new whole tan sails. the files should be named sails_whole_tan_pirate0.tga.tx etc.
+#define QTY_LOGOSAILS_TORN_TAN			17		// INT - increase this when you add new torn tan sails. the files should be named sails_torn_tan_pirate0.tga.tx etc.
 #define QTY_LOGOSAILS_WHOLE_BLACK		17		// INT - increase this when you add new whole black sails. the files should be named sails_whole_black_pirate0.tga.tx etc.
 #define QTY_LOGOSAILS_TORN_BLACK		16		// INT - increase this when you add new torn black sails. the files should be named sails_torn_black_pirate0.tga.tx etc.
 

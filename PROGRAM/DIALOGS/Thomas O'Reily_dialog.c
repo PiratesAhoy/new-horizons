@@ -28,6 +28,14 @@ void ProcessDialogEvent()
 	iDay = environment.date.day;
 	iMonth = environment.date.month;
 	string lastspeak_date = iday + " " + iMonth;
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	switch(Dialog.CurrentNode)
 	{
@@ -165,6 +173,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Meeting":
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				d.Text = DLG_TEXT[17] + GetMyFullName(NPChar) + DLG_TEXT[18];
 				if(TradeCheck(PChar, NPChar, false)) {
 				Link.l1 = DLG_TEXT[19] + GetMyName(NPChar) + DLG_TEXT[20];
@@ -478,7 +487,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "first_job_3":
-			d.Text = DLG_TEXT[125];
+			d.Text = PersuasionSuccess + DLG_TEXT[125];
 			Link.l1 = DLG_TEXT[126];
 			Link.l1.go = "first_job_6";
 			Link.l2 = DLG_TEXT[127] + GetMyName(NPChar) + DLG_TEXT[128];
@@ -486,7 +495,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "first_job_4":
-			d.Text = DLG_TEXT[129] + GetMyName(Pchar) + DLG_TEXT[130];
+			d.Text = PersuasionFailure + DLG_TEXT[129] + GetMyName(Pchar) + DLG_TEXT[130];
 			Link.l1 = DLG_TEXT[131];
 			Link.l1.go = "first_job_5";
 			Link.l2 = DLG_TEXT[132] + GetMyName(NPChar) + DLG_TEXT[133];
@@ -715,7 +724,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[195];
+				dialog.text = DLG_TEXT[195] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ".";
 				link.l1 = DLG_TEXT[196];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

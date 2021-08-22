@@ -14,6 +14,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+	else Preprocessor_Add("child", XI_ConvertString("child"));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -36,6 +38,7 @@ void ProcessDialogEvent()
 			if (CheckQuestAttribute("ANIMISTS", "frigate_lost"))
 			{
 				dialog.snd = "Voice\FATG\FATG002";
+				Preprocessor_Add("person", PChar.sex);
 				dialog.text = DLG_TEXT[2];
 				link.l1 = DLG_TEXT[3];
 				link.l1.go = "exit";

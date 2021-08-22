@@ -461,7 +461,7 @@ void IDoExit(int exitCode)
 	DelEventHandler("ievnt_command","ProcessCommandExecute");
 	DelEventHandler("frame","ProcessFrame");
 
-	//Levis moved to function so it can be called at multiple places
+	//Levis moved to function so it can be called from multiple places
 	UpdateChangedFlag(); //Levis
 
     interfaceResultCommand = exitCode;

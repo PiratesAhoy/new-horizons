@@ -782,6 +782,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "capsm_ld"; // KK
 	Locations[n].models.always.l1 = "capsm";
+	Locations[n].models.always.l2 = "cabinchest";
+	Locations[n].models.always.l3 = "trunk";			//fake - not visible
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
 	//Day
@@ -822,6 +824,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "capmd_ld"; // KK
 	Locations[n].models.always.l1 = "capmd";
+	Locations[n].models.always.l2 = "cabinchest";
+	Locations[n].models.always.l3 = "trunk";			//fake - not visible
 	Locations[n].models.always.window = "capmd_w";
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
@@ -858,6 +862,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "tut_Deck_l";
 	Locations[n].models.always.l1 = "tut_Deck";
+	Locations[n].models.always.l2 = "cabinchest";			//JRH, 
+	Locations[n].models.always.l3 = "trunk";			//were missinng
 	Locations[n].models.always.window = "tut_deck_w";
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
@@ -1066,6 +1072,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "cap_ld"; // KK
 	Locations[n].models.always.l1 = "cap";
+	Locations[n].models.always.l2 = "cabinchest";			//fake - not visible
+	Locations[n].models.always.l3 = "trunk";			//fake - not visible
 	Locations[n].models.always.window = "cap_w";
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
@@ -1107,6 +1115,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "cabin01_ld"; // KK
 	Locations[n].models.always.l1 = "cabin01";
+	Locations[n].models.always.l2 = "cabinchest";			//fake - not visible
+	Locations[n].models.always.l3 = "trunk";			//fake - not visible
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
 	//Day
@@ -1147,6 +1157,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "cabin01_ld"; // KK
 	Locations[n].models.always.l1 = "cabin01";
+	Locations[n].models.always.l2 = "cabinchest";			//fake - not visible
+	Locations[n].models.always.l3 = "trunk";			//fake - not visible
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
 	//Day
@@ -1187,6 +1199,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "cabin02_ld"; // KK
 	Locations[n].models.always.l1 = "cabin02";
+	Locations[n].models.always.l2 = "cabinchest";			//fake - not visible
+	Locations[n].models.always.l3 = "trunk";			//JRH
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
 	//Day
@@ -1227,6 +1241,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "cabin03_ld"; // KK
 	Locations[n].models.always.l1 = "cabin03";
+	Locations[n].models.always.l2 = "cabinchest";			//fake - not visible
+	Locations[n].models.always.l3 = "trunk";			//JRH
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
 	//Day
@@ -1267,6 +1283,8 @@ void LocationInitShip(ref n)
 	//Always
 	Locations[n].models.always.locators = "cabin01_ld"; // KK
 	Locations[n].models.always.l1 = "cabin01";
+	Locations[n].models.always.l2 = "cabinchest";			//fake - not visible
+	Locations[n].models.always.l3 = "trunk";			//fake - not visible
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 65531;
 	//Day

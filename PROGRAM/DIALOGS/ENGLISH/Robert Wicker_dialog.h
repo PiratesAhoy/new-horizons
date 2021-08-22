@@ -5,7 +5,7 @@ string DLG_TEXT[46] = {
 ". I'm here on business.",
 "My name is ",
 ", and you can spare your hospitality. I'm here on business.",
-"Welcome, sir! What do you want?",
+"Welcome, #ssir#! What do you want?",
 "I need some information, and I find the local innkeeper is usually the man to ask.",
 "I'm looking to hire some sailors for my ship.",
 "Point me to the patrons here who might be looking for a job. I need to add to my crew, and I don't mind if they're cutthroats.",

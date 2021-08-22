@@ -14,6 +14,11 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(characterFromID("Danielle"))));
+	Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID("Danielle"))));
+	if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+	else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+
 	
 	switch(Dialog.CurrentNode)
 	{

@@ -176,7 +176,7 @@ void ProcessDialogEvent()
 						TakenItems(NPChar, "gunpowder", 2 + rand(2));
 						TakenItems(NPChar, "pistolgrapes", 2 + rand(2));
 					}
-					if(gun == "pistol1" || gun == "pistol2" || gun == "pistol4" || gun == "pistol5" || gun == "pistol6" || gun == "pistol7" || gun == "pistol8" || gun == "pistol9")
+					if(gun == "pistol1" || gun == "pistol1a" || gun == "pistol2" || gun == "pistol4" || gun == "pistol5" || gun == "pistol6" || gun == "pistol7" || gun == "pistol7a" || gun == "pistol8" || gun == "pistol9")
 					{
 						TakenItems(NPChar, "gunpowder", 1 + rand(2));
 						TakenItems(NPChar, "pistolbullets", 1 + rand(2));

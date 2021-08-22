@@ -1,4 +1,4 @@
-string DLG_TEXT[28] = { 
+string DLG_TEXT[30] = { 
 "Can't you see that I'm on duty! Don't bother me.",
 "All right, all right.",
 "Don't you want to inform me about some crime?",
@@ -27,5 +27,6 @@ string DLG_TEXT[28] = {
 ".",
 "What? He was...here a minute ago. I'll go find him. You...hic...you'll wait here if you want your beating!",
 "How dare you contradict me! I'm gonna strangle you!",
-
+"We do not allow savages like your friend into the town. Nor do we allow their friends to enter. Leave!",
+"Very well. I don't want to cause trouble.",
 };

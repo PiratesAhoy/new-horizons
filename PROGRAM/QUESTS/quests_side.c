@@ -5,7 +5,7 @@ void SideQuestComplete(string sQuestName)
 	int iPassenger, cidx, i, j, indianid;
 	float locx, locy, locz, parx, pary, parz;
 	float x1,x2,y1,y2,z1,z2,x,y,z;
-	string homelocation, homegroup, homelocator, attr;
+	string homelocation, homegroup, homelocator, attr, locatorName, deck;
 // <-- KK
 
 	PChar = GetMainCharacter();
@@ -67,6 +67,12 @@ void SideQuestComplete(string sQuestName)
 				SetQuestHeader("smuggleguild");
 				AddQuestRecord("smuggleguild", 1);
 				pchar.quest.smuggling_guild.have_met = true;
+
+				PChar.quest.smugglebook_timeout2.win_condition.l1 = "Timer";
+				PChar.quest.smugglebook_timeout2.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
+				PChar.quest.smugglebook_timeout2.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
+				PChar.quest.smugglebook_timeout2.win_condition.l1.date.year = GetAddingDataYear(0, 1, 0);
+				PChar.quest.smugglebook_timeout2.win_condition = "smugglebook_timeout";
 			}
 		break;
 		
@@ -80,6 +86,23 @@ void SideQuestComplete(string sQuestName)
 				pchar.quest.smuggling_guild.have_met = true;
 			}
 			AddQuestRecord("smuggleguild", 2);
+
+			PChar.quest.smugglebook_timeout.win_condition.l1 = "Timer";
+			PChar.quest.smugglebook_timeout.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
+			PChar.quest.smugglebook_timeout.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
+			PChar.quest.smugglebook_timeout.win_condition.l1.date.year = GetAddingDataYear(0, 1, 0);
+			PChar.quest.smugglebook_timeout.win_condition = "smugglebook_timeout";
+		break;
+
+		case "smugglebook_timeout":
+			PChar.quest.smugglebook_timeout.over = "yes";
+			PChar.quest.smugglebook_timeout2.over = "yes";
+			CloseQuestHeader("smuggleguild");
+		break;
+
+		case "Read_Smuggling_Book":
+			CloseQuestHeader("smuggleguild");
+			PChar.quest.smugglebook_timeout.over = "yes";
 		break;
 		
 		case "Smuggler Paid for relation":
@@ -92,7 +115,7 @@ void SideQuestComplete(string sQuestName)
 			}
 			if(!CheckAttribute(pchar,"quest.smuggling_guild.times_payed"))
 			{
-				AddQuestRecord("smuggleguild", 9);
+				AddQuestRecord("smuggleguild", 3);
 				pchar.quest.smuggling_guild.times_payed = 0;
 			}
 			pchar.quest.smuggling_guild.times_payed = sti(pchar.quest.smuggling_guild.times_payed) + 1;
@@ -116,11 +139,19 @@ void SideQuestComplete(string sQuestName)
 			}
 			ref gov_town = GetCurrentTown();
 			Preprocessor_AddQuestData("town", FindTownName(gov_town.id));
-			AddQuestRecord("smuggleguild", 3);
+//			if (!CheckAttribute(PChar,"QuestInfo.governor_smuggling")) 
+			SetQuestHeader("governor_smuggling");
+			AddQuestRecord("governor_smuggling", 1);
 			Preprocessor_Remove("town");
-			pchar.quest.smuggling_guild.governor_quest = true;
-			pchar.quest.smuggling_guild.governor_quest.town = gov_town.id;
-			pchar.quest.smuggling_guild.governor_quest.nation = gov_town.nation;
+			if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest"))
+			{
+				pchar.quest.smuggling_guild.governor_quest = true;
+				pchar.quest.smuggling_guild.governor_quest.town = gov_town.id;
+				pchar.quest.smuggling_guild.governor_quest.nation = gov_town.nation;
+			}
+			PChar.quest.smuggling_guild.governor_smuggling = "accepted";
+			PChar.quest.smuggling_guild.governor_smuggling.town = gov_town.id;
+			PChar.quest.smuggling_guild.governor_smuggling.nation = gov_town.nation;
 			GiveItem2Character(pchar,"smuggling_papers");
 		break;
 		
@@ -133,7 +164,8 @@ void SideQuestComplete(string sQuestName)
 			}
 			if(!CheckAttribute(pchar,"quest.smuggling_guild.opium_explain"))
 			{
-				AddQuestRecord("smuggleguild", 4);
+				if (!CheckAttribute(PChar,"QuestInfo.opium_smuggling")) SetQuestHeader("opium_smuggling");
+				AddQuestRecord("opium_smuggling", 1);
 			}
 		break;
 		
@@ -169,48 +201,67 @@ void SideQuestComplete(string sQuestName)
 				AddQuestRecord("smuggleguild", 1);
 				pchar.quest.smuggling_guild.have_met = true;
 			}
-			AddQuestRecord("smuggleguild", 7);
+			if (!CheckAttribute(PChar,"QuestInfo.opium_smuggling")) SetQuestHeader("opium_smuggling");
+			AddQuestRecord("opium_smuggling", 2);
 			if(CheckAttribute(pchar,"quest.smuggling_guild.governor_quest"))
 			{
-				AddQuestRecord("smuggleguild", 8);
+				AddQuestRecord("opium_smuggling", 3);
 			}
 		break;
 		
 		case "Smugglers Opium Effects Explain":
-			AddQuestRecord("smuggleguild", 15);
+			AddQuestRecord("opium_smuggling", 10);
 		break;
 		
 		case "First Encounter Opium Guard":
 			pchar.quest.opium_smuggling.Encountered_Opium_Guard = true;
-			AddQuestRecord("smuggleguild", 10);
+			AddQuestRecord("opium_smuggling", 5);
 		break;
 		
 		case "Made First Smuggling Report":
-			if(CheckAttribute(pchar,"quest.smuggling_guild.governor_quest"))
+//			if(CheckAttribute(pchar,"quest.smuggling_guild.governor_quest"))
+			if(CheckAttribute(PChar,"quest.smuggling_guild.governor_smuggling") && sti(GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.nation")) == GetSmugglingNation())
 			{
-				if(!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest.made_first_report"))
+//				if(!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest.made_first_report"))
+				if(!CheckCharacterItem(PChar,"smuggling_first_report"))
 				{
 					GiveItem2Character(pchar,"smuggling_first_report");
-					AddQuestRecord("smuggleguild", 5);
+					AddQuestRecord("governor_smuggling", 2);
 					pchar.quest.smuggling_guild.governor_quest.made_first_report = true;
+					PChar.quest.smuggling_guild.governor_smuggling = "report_made";
 				}
 			}
 		break;
 		
 		case "Hand in First Smuggling Report":
-			ChangeRMRelation(pchar, sti(pchar.quest.smuggling_guild.governor_quest.nation), 5);
+//			ChangeRMRelation(pchar, sti(pchar.quest.smuggling_guild.governor_quest.nation), 5);
+			ChangeRMRelation(pchar, sti(pchar.quest.smuggling_guild.governor_quest.nation), 2);
 			AddMoneyToCharacter(pchar, 2500);
 			AddXP(pchar, SKILL_SNEAK, 1000, XP_GROUP_OFFIC);
 			TakeItemFromCharacter(pchar,"smuggling_first_report");
-			AddQuestRecord("smuggleguild", 6);
+			if(CheckCharacterItem(Pchar,"smuggling_papers")) TakeItemFromCharacter(pchar,"smuggling_papers");	// GR: take away the papers so you can't keep using them.  If you want them again, ask the governor for another job!
+			AddQuestRecord("governor_smuggling", 3);
+			CloseQuestHeader("governor_smuggling");
 			pchar.quest.smuggling_guild.governor_quest.gave_first_report = true;
+			PChar.quest.smuggling_guild.governor_smuggling = "report_handed_in";
+			PChar.quest.close_governor_smuggling.win_condition.l1 = "MapEnter";
+			pchar.quest.close_governor_smuggling.win_condition.l2 = "Timer";
+			pchar.quest.close_governor_smuggling.win_condition.l2.date.day   = GetAddingDataDay  (0, 0, 3);
+			pchar.quest.close_governor_smuggling.win_condition.l2.date.month = GetAddingDataMonth(0, 0, 3);
+			pchar.quest.close_governor_smuggling.win_condition.l2.date.year  = GetAddingDataYear (0, 0, 3);
+			PChar.quest.close_governor_smuggling.win_condition = "close_governor_smuggling";
+		break;
+
+		case "close_governor_smuggling":
+			DeleteQuestHeader("governor_smuggling");
+			DeleteAttribute(PChar, "quest.smuggling_guild.governor_smuggling");
 		break;
 		
 		case "Hand in Buyers List":
 			ChangeRMRelation(pchar, sti(pchar.quest.smuggling_guild.governor_quest.nation), 5);
 			AddMoneyToCharacter(pchar, 1500);
 			AddXP(pchar, SKILL_SNEAK, 500, XP_GROUP_OFFIC);
-			AddQuestRecord("smuggleguild", 12);
+			AddQuestRecord("opium_smuggling", 7);
 			pchar.quest.smuggling_guild.governor_quest.gave_buyers_list = true;
 		break;
 		
@@ -220,7 +271,7 @@ void SideQuestComplete(string sQuestName)
 				if(!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest.made_second_report"))
 				{
 					GiveItem2Character(pchar,"smuggling_second_report");
-					AddQuestRecord("smuggleguild", 11);
+					AddQuestRecord("opium_smuggling", 6);
 					pchar.quest.smuggling_guild.governor_quest.made_second_report = true;
 				}
 			}
@@ -231,7 +282,7 @@ void SideQuestComplete(string sQuestName)
 			AddMoneyToCharacter(pchar, 3500);
 			AddXP(pchar, SKILL_SNEAK, 1200, XP_GROUP_OFFIC);
 			TakeItemFromCharacter(pchar,"smuggling_second_report");
-			AddQuestRecord("smuggleguild", 13);
+			AddQuestRecord("opium_smuggling", 8);
 			pchar.quest.smuggling_guild.governor_quest.gave_second_report = true;
 		break;
 		
@@ -240,8 +291,8 @@ void SideQuestComplete(string sQuestName)
 			SetRMRelation(pchar, sti(pchar.quest.smuggling_guild.governor_quest.nation), RequiredNextRankDirect(GetRank(pchar, sti(pchar.quest.smuggling_guild.governor_quest.nation))+1) );
 			AddMoneyToCharacter(pchar, 2500);
 			AddXP(pchar, SKILL_SNEAK, 1200, XP_GROUP_OFFIC);
-			AddQuestRecord("smuggleguild", 14);
-			CloseQuestHeader("smuggleguild");     // TALISMAN - added to close Header at Current end of Quest
+			AddQuestRecord("opium_smuggling", 9);
+			CloseQuestHeader("opium_smuggling");     // TALISMAN - added to close Header at Current end of Quest
 			pchar.quest.smuggling_guild.governor_quest.final_report = true;
 		break;
 		
@@ -1906,12 +1957,6 @@ void SideQuestComplete(string sQuestName)
 			int ghosts_gone = 0;
 			Pchar.quest.ghosts_gone = ghosts_gone;
 
-			pchar.quest.dusty_start.win_condition.l1 = "locator";
-			pchar.quest.dusty_start.win_condition.l1.location = "Cartagena hotel";
-			pchar.quest.dusty_start.win_condition.l1.locator_group = "goto";
-			pchar.quest.dusty_start.win_condition.l1.locator = "goto8";
-			pchar.quest.dusty_start.win_condition = "dusty_start";
-
 			pchar.quest.fall_to_private.win_condition.l1 = "locator";
 			pchar.quest.fall_to_private.win_condition.l1.location = "Cartagena_hotel_room2";
 			pchar.quest.fall_to_private.win_condition.l1.locator_group = "goto";
@@ -2003,13 +2048,6 @@ void SideQuestComplete(string sQuestName)
 			Locations[FindLocation("Cartagena_hotel_private")].locators_radius.reload.reload1 = 0.7;
 			Locations[FindLocation("Cartagena Hotel")].reload.l2.disable = 0;
 			DoQuestReloadToLocation("Cartagena Hotel", "reload", "reload2", "_");
-		break;
-
-		case "dusty_start":
-			LAi_SetActorType(CharacterFromID("Dusty_Broome"));
-			LAi_ActorDialog(characterFromID("Dusty_Broome"), pchar, "", 0.0, 0.0);
-			LAi_ActorWaitDialog(Pchar, characterFromID("Dusty_Broome"));
-			Characters[GetCharacterIndex("Dusty_Broome")].dialog.CurrentNode  = "First time";
 		break;
 
 		case "dusty_info_ghosts":
@@ -2661,6 +2699,7 @@ void SideQuestComplete(string sQuestName)
 			AddXP(pchar, SKILL_LEADERSHIP, 500, XP_GROUP_PARTY);
 			AddXP(pchar, SKILL_ACCURACY, 500, XP_GROUP_PARTY);
 			pchar.quest.telescope_quest.finished = true;
+			TakeItemFromCharacter(pchar, "book_exorcist"); // PB: Remove superfluous item
 		break
 
 ///////////////////////////////////////////////////////////////
@@ -2848,11 +2887,13 @@ void SideQuestComplete(string sQuestName)
 
 		case "hire_baldewyn_2":
 			ChangeCharacterAddress(characterFromID("Baldewyn Coffier"), "none", "");
+			Characters[GetCharacterIndex("Baldewyn Coffier")].dialog.Filename = "Enc_Officer_dialog.c"; // GR
+			Characters[GetCharacterIndex("Baldewyn Coffier")].dialog.CurrentNode = "hired"; // GR
 		break;
 
 		case "baldewyn_wait_month":
 			//characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "wait_month";
-			if (characters[GetCharacterIndex("Baldewyn Coffier")].quest.arno == "accepted") //Fix:Storekeeper:19.09
+			if (Checkattribute(CharacterFromID("Baldewyn Coffier"), "quest.arno") && characters[GetCharacterIndex("Baldewyn Coffier")].quest.arno == "accepted") //Fix:Storekeeper:19.09
 			{
 				characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "money_2";
 			}
@@ -3532,8 +3573,8 @@ void SideQuestComplete(string sQuestName)
 			bDisableFastReload = 0;
 			// PB: Allow starting the quest again <--
 			
-		/*	DeleteEnterLocationQuest("Conceicao_tavern", "Hit_start_check");
-			LAi_ActorGoToLocation(CharacterFromID("Ambroz Bricenos"), "reload", "reload1", "none", "", "", "Hit_refused_Ambroz_end", 3.0);
+			DeleteEnterLocationQuest("Conceicao_tavern", "Hit_start_check");
+		/*	LAi_ActorGoToLocation(CharacterFromID("Ambroz Bricenos"), "reload", "reload1", "none", "", "", "Hit_refused_Ambroz_end", 3.0);
 		break;
 
 		case "Hit_refused_Ambroz_end":
@@ -3548,7 +3589,8 @@ void SideQuestComplete(string sQuestName)
 		// dialog exit from Ambroz
 			DeleteEnterLocationQuest("Conceicao_tavern", "Hit_start_check");
 			PChar.quest.Hitman = "goto_mateus";
-			LAi_ActorGoToLocation(CharacterFromID("Ambroz Bricenos"), "reload", "reload1", "Conceicao_shore_02", "goto", "citizen06", "Hit_start2", 3.0);
+			LAi_SetActorType(CharacterFromID("Ambroz Bricenos"));
+			LAi_ActorGoToLocation(CharacterFromID("Ambroz Bricenos"), "reload", "reload1", "Conceicao_shore_02", "goto", "citizen06", "Hit_start2", 10.0);
 			chrEnableReloadLocator("Muelle_town_01", "reload21", 1);
 
 			//Add journal entry
@@ -4047,6 +4089,8 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetImmortal(CharacterFromID("Amerigo Vieira"), 0);
 			AddPassenger(Pchar, characterFromID("Amerigo Vieira"), 0);   //BT May 09
 			SetOfficersIndex(PChar, -1, GetCharacterIndex("Amerigo Vieira"));
+			Characters[GetCharacterIndex("Amerigo Vieira")].dialog.Filename = "Enc_Officer_dialog.c"; // GR
+			Characters[GetCharacterIndex("Amerigo Vieira")].dialog.CurrentNode = "hired"; // GR
 
 			//END QUEST
 			//LAi_QuestDelay("Hit_END", 0.0);
@@ -4998,12 +5042,14 @@ void SideQuestComplete(string sQuestName)
 			LAi_ActorRunToLocation(characterFromID("lookout"), "reload", "reload1", "none", "", "", "", 0.0);
 			LAi_QuestDelay("Turks_timer3", 0.0);
 			setCharacterShipLocation(characterFromID("Captain"), "Turks_Lighthouse");
+			
 			PChar.quest.Turkshelp = "marche";
+			Pchar.quest.Turkshelp.win_condition.l1 = "location";			
 			Pchar.quest.Turkshelp.win_condition.l1 = "location";
 			Pchar.quest.Turkshelp.win_condition.l1.location = "Turks_Lighthouse";
 			PChar.quest.Turkshelp.win_condition = "fightturtle";
+			
 			locations[FindLocation("Turks_port")].reload.l5.disable = 1;	//JRH: new Turks shipyard
-
 			locations[FindLocation("Turks_port")].reload.l3.disable = 1;	//JRH: new Turks townhall
 			locations[FindLocation("Turks_port")].reload.l10.disable = 1;	//JRH: new Turks store
 			locations[FindLocation("Turks_port")].reload.l13.disable = 1;	//JRH: new Turks blacksmith
@@ -5119,7 +5165,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "finalstory":
-		    ChangeCharacterAddressGroup(CharacterFromID("Pieter Boelen"), "Tortuga_port", "reload", "reload1_back");
+		    ChangeCharacterAddressGroup(CharacterFromID("Pieter Boelen"), "Tortuga_port", "goto", "goto31");
 			LAi_SetActorType(characterFromID("Pieter Boelen"));
 			Characters[GetCharacterIndex("Pieter Boelen")].dialog.currentnode = "begin_15";
 			LAi_ActorDialog(characterFromID("Pieter Boelen"), pchar, "", 1.0, 1.0);
@@ -5376,6 +5422,8 @@ void SideQuestComplete(string sQuestName)
 
 			if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
 			{
+			Locations[FindLocation("Cuba_Jungle_03")].locators_radius.goto.citizen010 = 2.0;				
+				
 				pchar.quest.epeeperdue.win_condition.l1 = "locator";
 				pchar.quest.epeeperdue.win_condition.l1.location = "Cuba_Jungle_03";
 				pchar.quest.epeeperdue.win_condition.l1.locator_group = "goto";
@@ -5384,6 +5432,8 @@ void SideQuestComplete(string sQuestName)
 			}
 			else
 			{
+			Locations[FindLocation("Antigua_Jungle_01")].locators_radius.goto.citizen010 = 2.0;				
+				
 				pchar.quest.epeeperdue.win_condition.l1 = "locator";
 				pchar.quest.epeeperdue.win_condition.l1.location = "Antigua_Jungle_01";
 				pchar.quest.epeeperdue.win_condition.l1.locator_group = "goto";
@@ -5408,11 +5458,13 @@ void SideQuestComplete(string sQuestName)
 			else { AddPartyExp(pchar, 15000); }
 			if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
 			{
+    			Locations[FindLocation("Cuba_Jungle_03")].locators_radius.goto.citizen010 = 0.6;				
 				AddQuestRecord("Moulin", 11);
 				GiveItem2Character(pchar, "blangel");	// Grey Roger: Angel sword instead because Drake is using his own sword
 			}
 			else
 			{
+    			Locations[FindLocation("Antigua_Jungle_01")].locators_radius.goto.citizen010 = 0.6;				
 				AddQuestRecord("Moulin", 8);
 				GiveItem2Character(pchar, "bladeFD");	// KevAtl update for new SLiB blades 09-07-2007
 			}
@@ -5525,7 +5577,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "txikimoi":
-			ChangeCharacterAddressGroup(CharacterFromID("Etienne Dupuis"), "PaP_Prison", "goto", "goto14");
+			ChangeCharacterAddressGroup(CharacterFromID("Etienne Dupuis"), "PaP_Prison", "goto", "goto17");
 			ChangeCharacterAddressGroup(CharacterFromID("Txiki Pijuan"), "PaP_Prison", "goto", "goto9");
 		break;
 
@@ -5643,6 +5695,7 @@ void SideQuestComplete(string sQuestName)
 
 			Characters[GetCharacterIndex("Txiki Pijuan")].dialog.currentnode = "begin_17";
 			PChar.quest.santiago = "rencgarda";
+			Pchar.quest.Santiago.win_condition.l1 = "location";			
 			Pchar.quest.Santiago.win_condition.l1 = "location";
 			Pchar.quest.Santiago.win_condition.l1.location = "Guadeloupe_shore_01";
 			PChar.quest.Santiago.win_condition = "ansegardes";
@@ -5843,6 +5896,8 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "crewmemberdead":
+			StartQuestMovie(true, false, false);
+			DisableFastTravel(true);
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "goto", "citizen07"); // PB
 			LAi_SetActorType(sld);
 			LAi_ActorSetLayMode(sld);
@@ -5854,6 +5909,8 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "jela":
+			DisableFastTravel(false);
+			EndQuestMovie();
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 1500);
@@ -5914,6 +5971,7 @@ void SideQuestComplete(string sQuestName)
 			Group_LockTask("FlyingDutchman");
 			UpdateRelations();
 			characters[GetCharacterIndex("Davy Jones")].nosurrender = 2;
+			Characters[GetCharacterIndex("Davy Jones")].recognized = true;
 			Character_SetAbordageEnable(characterFromID("Davy Jones"), false);
 // KK -->
 			PChar.quest.PrepareDavyEncounter.win_condition.l1 = "MapEnter";
@@ -6309,8 +6367,9 @@ void SideQuestComplete(string sQuestName)
 		//	locations[FindLocation("Tortuga_town_01")].reload.l6.disable = 0;
 			locations[FindLocation("Tortuga_port")].reload.l18.disable = 0;			//JRH: moved Will Turner's house
 			// PB -->
-			Characters[GetCharacterIndex("Elizabeth Swann")].model = "lizswann";		//GR: use new pirate Elizabeth Swann model
-			Characters[GetCharacterIndex("Elizabeth Swann")].model.ani = "woman_sit";
+//			Characters[GetCharacterIndex("Elizabeth Swann")].model = "lizswann";		//GR: use new pirate Elizabeth Swann model
+//			Characters[GetCharacterIndex("Elizabeth Swann")].model.ani = "woman_sit";
+			SetModelFromID(CharacterFromID("Elizabeth Swann"), "lizswann");
 			GiveItem2Character(GetCharacterIndex("Elizabeth Swann"), "blade6");
 			GiveItem2Character(GetCharacterIndex("Elizabeth Swann"), "pistol7");
 			Characters[GetCharacterIndex("Elizabeth Swann")].equip.blade = "blade6";
@@ -6834,9 +6893,9 @@ void SideQuestComplete(string sQuestName)
 			AddMoneyToCharacter(pchar, 60000);
 			AddQuestRecord("Jackpot", 8);
 			CloseQuestHeader("Jackpot");
-			LAi_ActorRunToLocation(characterFromID("Konrad Kulczycki"), "reload", "reload5_back", "none", "", "", "", 0.0);
-			LAi_ActorRunToLocation(characterFromID("Elizabeth Swann"), "reload", "gate", "none", "", "", "", 0.0);
-			LAi_ActorRunToLocation(characterFromID("Will Turner"), "reload", "gate", "none", "", "", "", 0.0);
+			LAi_ActorRunToLocation(characterFromID("Konrad Kulczycki"), "reload", "reload5_back", "none", "", "", "", 5.0);
+			LAi_ActorRunToLocation(characterFromID("Elizabeth Swann"), "reload", "gate", "none", "", "", "", 5.0);
+			LAi_ActorRunToLocation(characterFromID("Will Turner"), "reload", "gate", "none", "", "", "", 5.0);
 			RemoveCharacterCompanion(Pchar, characterFromID("Will Turner"));
 			setCharacterShipLocation(characterFromID("Will Turner"), "none");
 		break;
@@ -6963,8 +7022,10 @@ void SideQuestComplete(string sQuestName)
 			Group_CreateGroup("animists");
 			Group_AddCharacter("animists", "Mystery_Man_04");
 			Group_AddCharacter("animists", "Mystery_Man_05");
-			Characters[GetCharacterIndex("Dark Mystery_Man_04")].recognized = true; // PB: Ensure they're hostile!
-			Characters[GetCharacterIndex("Dark Mystery_Man_05")].recognized = true; // PB: Ensure they're hostile!
+//			Characters[GetCharacterIndex("Dark Mystery_Man_04")].recognized = true; // PB: Ensure they're hostile!
+//			Characters[GetCharacterIndex("Dark Mystery_Man_05")].recognized = true; // PB: Ensure they're hostile!
+			Characters[GetCharacterIndex("Mystery_Man_04")].recognized = true;	// GR: Who is "Dark Mystery_Man_04"?
+			Characters[GetCharacterIndex("Mystery_Man_05")].recognized = true;	// GR: Who is "Dark Mystery_Man_05"?
             // boal -->
             LAi_SetHP(characterFromID("Mystery_man_04"), 80.0, 80.0);
 			LAi_SetHP(characterFromID("Mystery_man_05"), 80.0, 80.0);
@@ -7206,8 +7267,8 @@ void SideQuestComplete(string sQuestName)
 			AddQuestRecord("ANIMISTS", 24);
 			AddPassenger(pchar, characterFromID("Jaoquin de masse"), 0);
 			Characters[getCharacterIndex("Jaoquin de masse")].location = "none";
-			Characters[GetCharacterIndex("Jaoquin de masse")].Filename = "Enc officer_dialog.c"; // PB
-			Characters[GetCharacterIndex("Jaoquin de masse")].CurrentNode = "hired"; // PB
+			Characters[GetCharacterIndex("Jaoquin de masse")].dialog.Filename = "Enc_Officer_dialog.c"; // PB
+			Characters[GetCharacterIndex("Jaoquin de masse")].dialog.CurrentNode = "hired"; // PB
 			LAi_SetStayType(characterFromID("father Bernard"));
 		break;
 
@@ -7462,7 +7523,7 @@ void SideQuestComplete(string sQuestName)
 //			LAi_ActorGoToLocation(characterFromID("Rian Dekkers"), "reload", "reload1", "none", "", "", "", 15.0);
 //			LAi_ActorGoToLocation(characterFromID("Janneke Blinkerhof"), "reload", "reload1", "none", "", "", "", 15.0);
 //			LAi_ActorGoToLocation(characterFromID("Lisebet Schefold"), "reload", "reload1", "none", "", "", "", 15.0);
-			LAi_ActorGoToLocation(characterFromID("Rian Dekkers"), "reload", "reload9", "none", "", "", "", 60.0);		// GR: The women have just been told their children are in port,
+			LAi_ActorGoToLocation(characterFromID("Rian Dekkers"), "reload", "reload9", "none", "", "", "", 60.0);			// GR: The women have just been told their children are in port,
 			LAi_ActorGoToLocation(characterFromID("Janneke Blinkerhof"), "reload", "reload9", "none", "", "", "", 60.0);	// GR: so make them go to the port, and give them time to get there.
 			LAi_ActorGoToLocation(characterFromID("Lisebet Schefold"), "reload", "reload9", "none", "", "", "", 60.0);
 		break;
@@ -7548,14 +7609,14 @@ void SideQuestComplete(string sQuestName)
 		case "return_priest_complete2":
 			DoReloadCharacterToLocation("Muelle_Church", "reload", "reload1");
 			changeCharacterAddressGroup(characterfromID("padre Domingues"), "Muelle_Church", "goto", "goto1");	// GR: if you didn't return to Animist cave cell to release Domingues, he appears
-			changeCharacterAddress(characterfromID("second_spaniard_priest"), "none", "");				// here anyway but Padre Robano is not removed. Do it now instead.
+			changeCharacterAddress(characterfromID("second_spaniard_priest"), "none", "");						// here anyway but Padre Robano is not removed. Do it now instead.
 			LAi_SetActorType(characterFromID("padre Domingues"));
 			LAi_ActorDialog(characterFromID("padre Domingues"), pchar, "", 0.0, 0.0);
 			characters[GetCharacterIndex("padre Domingues")].dialog.currentnode = "Thank_You";
 
 			pchar.quest.return_priest_complete.over = "yes";
 
-			Locations[FindLocation("Muelle_church")].reload.l1.go = "Muelle_town_04"; //GR: put church exit back to normal
+			Locations[FindLocation("Muelle_church")].reload.l1.go = "Muelle_town_04";							//GR: put church exit back to normal
 			Locations[FindLocation("Muelle_church")].reload.l1.emerge = "reload4";
 		break;
 
@@ -8017,6 +8078,11 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetStayType(CharacterFromID("Lucas Da Saldanha"));
 		break;
 
+		case "Lucas_officer":
+			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.Filename = "Enc_Officer_dialog.c"; // PB
+			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.CurrentNode = "hired";
+		break;
+
 
 ///////////////////////////////////////////////////////////////
 // SMUGGLING FOR THOMAS O'REILY
@@ -8048,6 +8114,24 @@ void SideQuestComplete(string sQuestName)
 		case "thomas_contraband_12_exit_2":
 			bQuestDisableMapEnter = true;
 			Island_SetReloadEnableGlobal("Redmond", false);
+
+			NPChar = CharacterFromID("Pirate Captain 04");
+			NPChar.recognized = true;
+			NPChar.nation = PRIVATEER_NATION;
+			SetNationRelationBoth(ENGLAND, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(PERSONAL_NATION, PRIVATEER_NATION, RELATION_ENEMY);
+			if(sti(GetAttribute(PChar, "flags.personal")) == 6 && sti(GetAttribute(PChar, "flags.personal.texture")) == 1)
+			{
+				NPChar.flags.personal = 1;
+				NPChar.flags.personal.texture = 2;
+			}
+			else
+			{
+				NPChar.flags.personal = 6;
+				NPChar.flags.personal.texture = 1;
+			}
+			NPChar.skipRM = true;
+			NPChar.nosurrender = 2;
 
 			Group_CreateGroup("Smugglers_squadron2");
 			Group_AddCharacter("Smugglers_squadron2", "Pirate Captain 04");
@@ -8261,6 +8345,7 @@ void SideQuestComplete(string sQuestName)
 // <-- KK
 
 			EndQuestMovie();TrackQuestMovie("end","saving_artois");
+			LAi_SetImmortal(characterFromID("Artois Voysey"), true);	// GR: prevent accidentally killing Artois
 			LAi_SetImmortal(characterFromID("Nigel Blythe"), false);
 			LAi_SetPlayerType (Pchar);
 			LAi_group_MoveCharacter(CharacterFromID("Nigel Blythe"), "nigel_2");
@@ -8547,6 +8632,11 @@ void SideQuestComplete(string sQuestName)
 		case "pause":
 			AddQuestRecord("artois", 8);
 			Locations[FindLocation("Conceicao_townhall")].reload.l1.disable = 1;
+			if(GetDayTime() == DAY_TIME_NIGHT)
+			{
+				WaitDate("", 0, 0, 1, 0, 0);
+				SetCurrentTime(10, 0);
+			}
 			DoQuestReloadToLocation ("Conceicao_townhall", "goto", "goto7", "pause2");
 		break;
 
@@ -10161,6 +10251,7 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Jack Greenfield"), "", "sit", "sit10");
 // NK -->
 			pchar.quest.Attwood1.leave = 1;
+			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, -2000);
 			LAi_QuestDelay("stand_up", 1.0);
 			LAi_QuestDelay("convoy", 2.0);
@@ -10328,6 +10419,10 @@ void SideQuestComplete(string sQuestName)
 			SetCharacterToNearLocatorFromMe("Edgar Attwood", 10);
 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Edgar Attwood")); // NK was -1
 			LAi_SetOfficerType(CharacterFromID("Edgar Attwood"));
+			ChangeCharacterAddress(characterFromID("Jack Greenfield"), "none", "");
+			ChangeCharacterAddress(characterFromID("Martin Warner"), "none", "");
+			Characters[GetCharacterIndex("Edgar Attwood")].dialog.Filename = "Enc_Officer_dialog.c"; // PB
+			Characters[GetCharacterIndex("Edgar Attwood")].dialog.CurrentNode = "hired";
 		break;
 
 // NK -->
@@ -10490,6 +10585,8 @@ void SideQuestComplete(string sQuestName)
 // NK <--
 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Edgar Attwood")); // NK was -1
 			LAi_SetOfficerType(CharacterFromID("Edgar Attwood"));
+			Characters[GetCharacterIndex("Edgar Attwood")].dialog.Filename = "Enc_Officer_dialog.c"; // PB
+			Characters[GetCharacterIndex("Edgar Attwood")].dialog.CurrentNode = "hired";
 //			}  //TALISMAN - remove to enable Edgar Attwood to be rescued from Prison Ship
 		break;
 
@@ -10498,16 +10595,31 @@ void SideQuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(CharacterFromID ("sold4"), "convoy");
 			LAi_group_MoveCharacter(CharacterFromID ("sold3"), "convoy");
 			LAi_group_MoveCharacter(CharacterFromID ("sold2"), "convoy");
+			LAi_group_MoveCharacter(CharacterFromID ("sold1"), "convoy");
 			LAi_type_actor_Reset(CharacterFromID ("sold2"));
 			LAi_type_actor_Reset(CharacterFromID ("sold1"));
 			LAi_type_actor_Reset(CharacterFromID ("sold3"));
 			LAi_type_actor_Reset(CharacterFromID ("sold4"));
 			LAi_type_actor_Reset(CharacterFromID ("sold5"));
+			LAi_RemoveCheckMinHP(CharacterFromID ("sold1"));
+			LAi_RemoveCheckMinHP(CharacterFromID ("sold2"));
+			LAi_RemoveCheckMinHP(CharacterFromID ("sold3"));
+			LAi_RemoveCheckMinHP(CharacterFromID ("sold4"));
+			LAi_RemoveCheckMinHP(CharacterFromID ("sold5"));
 			LAi_type_actor_Reset(CharacterFromID ("Edgar Attwood"));
 			LAi_type_actor_Reset(CharacterFromID ("zek"));
 			LAi_type_actor_Reset(CharacterFromID ("zek2"));
 			LAi_group_FightGroups("convoy", LAI_GROUP_PLAYER, true);
 			LAi_group_SetCheck("convoy", "list_Attwood2");
+
+			Pchar.quest.attwood_remove_zeks.win_condition.l1 = "ExitFromLocation";
+			Pchar.quest.attwood_remove_zeks.win_condition.l1.location = pchar.location;
+			Pchar.quest.attwood_remove_zeks.win_condition = "attwood_remove_zeks";
+		break;
+
+		case "attwood_remove_zeks":
+			ChangeCharacterAddress(characterFromID("zek"), "none", "");
+			ChangeCharacterAddress(characterFromID("zek2"), "none", "");
 		break;
 
 		case "list_Attwood2":
@@ -10517,6 +10629,8 @@ void SideQuestComplete(string sQuestName)
 // NK <--
 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Edgar Attwood")); // NK was -1
 			LAi_SetOfficerType(CharacterFromID("Edgar Attwood"));
+			Characters[GetCharacterIndex("Edgar Attwood")].dialog.Filename = "Enc_Officer_dialog.c"; // PB
+			Characters[GetCharacterIndex("Edgar Attwood")].dialog.CurrentNode = "hired";
 		break; //NK <--
 
 
@@ -10558,7 +10672,7 @@ void SideQuestComplete(string sQuestName)
 			Pchar.dialog.filename = "LaCroix_dialog.c";
 			Pchar.dialog.currentnode = "logbook";
 			LAi_ActorSelfDialog(Pchar, "player_back");
-			LAi_QuestDelay("learn about smugglers", 0.0); //Levis
+		//	LAi_QuestDelay("learn about smugglers", 0.0); //Levis, GR: Disabled this here
 		break;
 
 		case "birdsearch2":
@@ -10663,59 +10777,33 @@ void SideQuestComplete(string sQuestName)
 		case "birdhunt":
 			ChangeCharacterAddressGroup(CharacterFromID("Crewmember_Havana"), "PoPrince_town", "reload", "reload13");
 			Characters[GetCharacterIndex("Crewmember_Havana")].dialog.CurrentNode = "what_shall_we_do";
-			LAi_SetActorType(characterFromID("Crewmember_Havana"));
-			LAi_ActorDialog(characterFromID("Crewmember_Havana"), pchar, "", 10.0, 10.0);
+			
+			pchar.quest.birdhunt_start.win_condition.l1 = "location";
+			pchar.quest.birdhunt_start.win_condition.l1.location = "PoPrince_town";
+			pchar.quest.birdhunt_start.win_condition = "birdhunt_start";
 		break;
 
-/*		case "birdhunt1.5":
-			LAi_ActorRunToLocator(CharacterFromID("Crewmember_Havana"), "reload", "reload13", "", 2.0);
-			ChangeCharacterAddressGroup(characterFromID("Crewmember_Havana"), "none", "", "");
-			LAi_QuestDelay("birdhunt2", 5.0);
+		case "birdhunt_start":
+			LAi_SetActorType(CharacterFromID("Crewmember_Havana"));
+			LAi_ActorFollow(CharacterFromID("Crewmember_Havana"), PChar, "birdhunt2", -1);
 		break;
 
 		case "birdhunt2":
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Sailor2", "reload", "reload13");
-			LAi_SetHP(sld, 180.0, 180.0);
-			LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
-			LAi_SetCivilianGuardianType(sld);
-
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Sailor16", "reload", "reload13");
-			LAi_SetHP(sld, 180.0, 180.0);
-			LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
-			LAi_SetCivilianGuardianType(sld);
-
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "will_2", "reload", "reload13");
-			LAi_SetHP(sld, 180.0, 180.0);
-			LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
-			LAi_SetOfficerType(sld);
-
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Sailor1", "reload", "reload13");
-			LAi_SetHP(sld, 180.0, 180.0);
-			LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
-			LAi_SetOfficerType(sld);
-
-			ChangeCharacterAddressGroup(CharacterFromID("Crewmember_Havana"), "PoPrince_town", "reload", "reload13");
-			AddPassenger(Pchar, characterFromID("Crewmember_Havana"), 0);
-			SetOfficersIndex(Pchar, 3, getCharacterIndex("Crewmember_Havana"));
-			LAi_SetOfficerType(characterFromID("Crewmember_Havana"));
-
-			pchar.quest.birdhunt3.win_condition.l1 = "location";
-			pchar.quest.birdhunt3.win_condition.l1.location = "PoPrince_Port";
-			pchar.quest.birdhunt3.win_condition = "birdhunt3";
-		break;*/
+			LAi_ActorDialog(characterFromID("Crewmember_Havana"), PChar, "", -1, 0.0);
+		break;
 
 		case "birdhunt3":
 			bQuestDisableMapEnter = true;
-			UpdateRelations();
+		//	UpdateRelations(); // PB: Doesn't do anything
 			Group_CreateGroup("Skipper1");
 			Group_AddCharacter("Skipper1", "Skipper1");
 			Group_SetGroupCommander("Skipper1", "Skipper1");
-			Group_SetTaskRunAway("Attack");
+			Group_SetTaskNone("Skipper1");
 			Group_LockTask("Skipper1");
 			Group_SetAddress("Skipper1", "Hispaniola", "Quest_ships", "quest_ship_6");
 			Sea_LoginGroupNow("Skipper1");
 			characters[GetCharacterIndex("Skipper")].nosurrender = 2;
-			SetCharacterRelationBoth(GetCharacterIndex("Skipper1"),GetMainCharacterIndex(),RELATION_ENEMY);
+		//	SetCharacterRelationBoth(GetCharacterIndex("Skipper1"),GetMainCharacterIndex(),RELATION_ENEMY); // PB: Doesn't do anything
 		//	if(GetRMRelation(PChar, HOLLAND) > REL_WAR) SetRMRelation(PChar, HOLLAND, REL_WAR);
 			Character_SetAbordageEnable(characterFromID("Skipper1"), false);
 
@@ -10819,7 +10907,7 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.birdblow2.win_condition.l1.location = "VogelStruijs_Hold";
 			pchar.quest.birdblow2.win_condition.l1.locator_group = "box";
 			pchar.quest.birdblow2.win_condition.l1.locator = "gunpowder_1";
-			pchar.quest.birdblow2.win_condition = "birdblow2"
+			pchar.quest.birdblow2.win_condition = "birdblow2";
 		break;
 
 		case "birdblow2":
@@ -10866,6 +10954,3263 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Contre-Amirale"), "none", "");
 		break;
 
+///////////////////////////////////////////////////////////////
+///// Job at Martinique Shipyard
+///////////////////////////////////////////////////////////////
+		case "martinique_shipyard_work":
+			PlayStereoSound("AMBIENT\SHIPYARD\saw.wav");
+			waitdate("", 0, 0, 3, 0, 0);
+			SetCurrentTime(10.00, 0);
+			LAi_Fade("", "");
+			logit("Three days later...");
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(pchar, "Repair", 500);
+			else AddPartyExp(pchar, 500);
+			Characters[GetCharacterIndex("Jean Filaut")].dialog.currentnode = "job_done";
+		break;
+
+		case "danielle_end_exit": //PW new case to allow Sabine to exit from store after female pchar allows her on ship
+
+			LAi_SetActorType(CharacterFromID("Sabine Matton")); // PW Sabine to leave
+			LAi_ActorRunToLocation(CharacterFromID("Sabine Matton"), "Reload", "Reload1", "None", "", "", "", 120); // PW Sabine leaves
+		break;
+
+		case "Sabines_new_outfit": //GR: Sabine Matton is now your officer and gets shipboard clothes
+			SetModelfromID(CharacterFromID("Sabine Matton"), "SabineM2");
+			GiveModel2Player("towngirl1", false); // GR: Get Sabine's original dress as well.
+		break;
+
+///////////////////////////////////////////////////////////////////////
+// The Kapitein of Kralendijk
+// By Grey Roger
+// Based very loosely on the real life story of the Captain of Köpenick
+///////////////////////////////////////////////////////////////////////
+		case "Kapitein_follow_proposer_upstairs":
+			ChangeCharacterAddressGroup(characterFromID("Willem Voigt"), "Philipsburg_tavern", "tables", "table5");
+			LAi_SetActorType(characterFromID("Willem Voigt"));
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocation(CharacterFromID("Willem Voigt"), "reload", "reload2", "none", "", "", "", 10.0);
+			LAi_QuestDelay("Kapitein_follow_proposer_upstairs2", 1.0);
+		break;
+
+		case "Kapitein_follow_proposer_upstairs2":
+			LAi_ActorGoToLocation(PChar, "reload", "reload2", "none", "", "", "Kapitein_in_room_with_proposer", 5.0);
+		break;
+
+		case "Kapitein_in_room_with_proposer":
+			locations[FindLocation("Philipsburg_tavern_upstairs")].reload.l1.disable = 1;
+			DisableFastTravel(true);
+			DoQuestReloadToLocation("Philipsburg_tavern_upstairs", "reload", "reload1", "Kapitein_in_room_with_proposer2");
+		break;
+		
+		case "Kapitein_in_room_with_proposer2":
+			LAi_SetActorType(characterFromID("Willem Voigt"));
+			ChangeCharacterAddressGroup(characterFromID("Willem Voigt"), "Philipsburg_tavern_upstairs", "goto", "goto4");
+			LAi_ActorFollow(pchar, characterFromID("Willem Voigt"), "Kapitein_in_room_with_proposer3", 2.0);
+		break;
+
+		case "Kapitein_in_room_with_proposer3":
+			LAi_SetPlayerType(PChar);
+			Characters[GetCharacterIndex("Willem Voigt")].dialog.CurrentNode = "propose_job";
+			LAi_ActorDialog(characterFromID("Willem Voigt"), PChar, "Kapitein_open_upstairs_door",1.0,1.0);	// Exits to "Kapitein_job_accepted" or "Kapitein_permanent_refusal"
+		break;
+
+		case "Kapitein_open_upstairs_door":
+			LAi_SetStayType(characterFromID("Willem Voigt"));
+			locations[FindLocation(PChar.location)].reload.l1.disable = 0;
+			DisableFastTravel(false);
+		break;
+
+		case "Kapitein_setup_proposer_leaves":	// Triggered by dialog with Willem Voigt
+			Pchar.quest.Kapitein_proposer_vanishes.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.Kapitein_proposer_vanishes.win_condition.l1.location = PChar.location;
+			Pchar.quest.Kapitein_proposer_vanishes.win_condition = "Kapitein_proposer_vanishes";
+		break;
+
+		case "Kapitein_proposer_vanishes":
+			DisableFastTravel(false);
+			AddQuestRecord("fleece", 2);
+			CloseQuestHeader("fleece");
+			ChangeCharacterAddress(characterFromID("Willem Voigt"), "None", "");
+		break;
+
+		case "Kapitein_job_accepted":		// Triggered by dialog with Willem Voigt
+			DisableFastTravel(true);
+			Pchar.quest.Kapitein_proposer_vanishes.over = "yes";
+			LAi_SetActorType(characterFromID("Willem Voigt"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Willem Voigt"), "", 1.0);
+			LAi_SetImmortal(characterfromID("Willem Voigt"), true);
+			pchar.quest.Kapitein_land_exit.win_condition.l1 = "location";
+			pchar.quest.Kapitein_land_exit.win_condition.l1.location = "Philipsburg_exit";
+			pchar.quest.Kapitein_land_exit.win_condition = "Kapitein_gate_exit";
+			pchar.quest.Kapitein_port_exit.win_condition.l1 = "location";
+			pchar.quest.Kapitein_port_exit.win_condition.l1.location = "Philipsburg_port";
+			pchar.quest.Kapitein_port_exit.win_condition = "Kapitein_gate_exit";
+			pchar.quest.Kapitein_dungeon_entrance.win_condition.l1 = "locator";
+			pchar.quest.Kapitein_dungeon_entrance.win_condition.l1.location = "Philipsburg_town";
+			pchar.quest.Kapitein_dungeon_entrance.win_condition.l1.locator_group = "reload";
+			pchar.quest.Kapitein_dungeon_entrance.win_condition.l1.locator = "Reload10";
+			pchar.quest.Kapitein_dungeon_entrance.win_condition = "Kapitein_dungeon_entrance";
+		break;
+
+		case "Kapitein_gate_exit":
+			pchar.quest.Kapitein_land_exit.over = "yes";
+			pchar.quest.Kapitein_port_exit.over = "yes";
+			pchar.quest.Kapitein_dungeon_entrance.over = "yes";
+			StartQuestMovie(true, true, false);
+			if (PChar.location == "Philipsburg_port") sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[HOLLAND].fantomModel.m0, "goto", "goto1");
+			else sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[HOLLAND].fantomModel.m0, "goto", "locator5");
+			GiveSoldierWeapon(sld, HOLLAND);
+			sld.id = "Laurens-Jan Revenboer";
+			sld.nation = HOLLAND;
+			sld.name 	= "Laurens-Jan";
+			sld.lastname 	= "Revenboer";
+
+			LAi_SetImmortal(characterfromID("Laurens-Jan Revenboer"), true);
+			LAi_SetActorType(characterFromID("Laurens-Jan Revenboer"));
+			Characters[GetCharacterIndex("Laurens-Jan Revenboer")].dialog.Filename = "kapitein_guards_dialog.c";
+			Characters[GetCharacterIndex("Laurens-Jan Revenboer")].dialog.CurrentNode = "arrest_willem";
+			LAi_ActorDialog(characterFromID("Laurens-Jan Revenboer"),PChar,"kapitein_arrest_willem_answers",5.0,5.0);
+		break;
+
+		case "kapitein_arrest_willem_answers":
+			LAi_SetPlayerType(PChar);
+			Characters[GetCharacterIndex("Willem Voigt")].dialog.CurrentNode = "confirm_story";
+			LAi_ActorDialog(characterFromID("Willem Voigt"), PChar, "Kapitein_officer_knows_scam",1.0,1.0);
+		break;
+
+		case "Kapitein_officer_knows_scam":
+			Characters[GetCharacterIndex("Laurens-Jan Revenboer")].dialog.CurrentNode = "know_about_scam";
+			LAi_ActorDialog(characterFromID("Laurens-Jan Revenboer"),PChar,"kapitein_willem_arrested",5.0,5.0);
+		break;
+
+		case "kapitein_willem_arrested":
+			EndQuestMovie();
+			if (PChar.location == "Philipsburg_port")
+			{
+				LAi_ActorGoToLocation(CharacterFromID("Laurens-Jan Revenboer"), "reload", "Reload9_back", "none", "", "", "", 30);
+				LAi_ActorGoToLocation(CharacterFromID("Willem Voigt"), "reload", "Reload9_back", "none", "", "", "", 30);
+			}
+			else
+			{
+				LAi_ActorGoToLocation(CharacterFromID("Laurens-Jan Revenboer"), "reload", "reload2", "none", "", "", "", 30);
+				LAi_ActorGoToLocation(CharacterFromID("Willem Voigt"), "reload", "reload2", "none", "", "", "", 30);
+			}
+			AddQuestRecord("fleece", 4);
+			CloseQuestHeader("fleece");
+			PChar.quest.kapitein = "willem_arrested";
+			LAi_QuestDelay("kapitein_should_I_do_it", 2.0);
+			Pchar.quest.Kapitein_remove_proposer.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.Kapitein_remove_proposer.win_condition.l1.location = PChar.location;
+			Pchar.quest.Kapitein_remove_proposer.win_condition = "Kapitein_remove_proposer";
+		break;
+
+		case "Kapitein_dungeon_entrance":
+			LAi_SetActorType(characterFromID("Willem Voigt"));
+			Characters[GetCharacterIndex("Willem Voigt")].dialog.CurrentNode = "not_going_in";
+			LAi_ActorDialogNow(characterFromID("Willem Voigt"), PChar, "Kapitein_resume_following",1.0);
+			Pchar.quest.Kapitein_in_dungeon.win_condition.l1 = "Location";
+			PChar.quest.Kapitein_in_dungeon.win_condition.l1.location = "Philipsburg_dungeon";
+			Pchar.quest.Kapitein_in_dungeon.win_condition = "Kapitein_in_dungeon";
+		break;
+
+		case "Kapitein_resume_following":
+			LAi_SetActorType(characterFromID("Willem Voigt"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Willem Voigt"), "", 10.0);
+		break;
+
+		case "Kapitein_in_dungeon":
+			pchar.quest.Kapitein_land_exit.over = "yes";
+			pchar.quest.Kapitein_port_exit.over = "yes";
+			PChar.quest.kapitein = "willem_dungeon";
+			AddQuestRecord("fleece", 6);
+			CloseQuestHeader("fleece");
+			LAi_SetCitizenType(characterFromID("Willem Voigt"));
+			ChangeCharacterAddress(characterFromID("Willem Voigt"), "None", "");
+			LAi_QuestDelay("kapitein_should_I_do_it", 2.0);
+		break;
+
+		case "Kapitein_remove_proposer":
+			ChangeCharacterAddress(characterFromID("Willem Voigt"), "None", "");
+		break;
+
+		case "kapitein_should_I_do_it":
+			DisableFastTravel(false);
+			PChar.dialog.filename = "blaze_dialog.c";
+			Pchar.dialog.CurrentNode = "kapitein_decision";
+			LAi_SetActorType(PChar);
+			LAi_ActorSelfDialog(PChar, "player_back");	// Exits to "kapitein_start_quest" if you want to go ahead, otherwise just exits
+		break;
+
+		case "kapitein_start_quest":
+			LAi_SetPlayerType(PChar);
+			SetQuestHeader("kapitein");
+			if (CheckQuestAttribute("kapitein", "willem_arrested")) AddQuestRecord("kapitein", 1);
+			if (CheckQuestAttribute("kapitein", "willem_dungeon")) AddQuestRecord("kapitein", 2);
+			AddQuestRecord("kapitein", 3);
+			PChar.quest.kapitein = "start";		// Attribute will be recognised by Dutch tavern guards
+		break;
+
+		case "Kapitein_with_soldier_to_room":
+			string kapitein_location = PChar.location;
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, -150);
+			PChar.quest.kapitein = "start";
+			DoQuestReloadToLocation(kapitein_location + "_upstairs", "goto", "goto2", "Kapitein_with_soldier_to_room2");
+		break;
+
+		case "Kapitein_with_soldier_to_room2":
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, PChar.quest.kapitein.soldier_model, "goto", "goto4");	// Create drunk soldier in uniform
+//			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "man5", "goto", "goto4");					// Create drunk soldier without uniform, you've stolen it
+			LAi_SetLayType(sld);
+			sld.name = PChar.quest.kapitein.soldier_name;
+			sld.lastname = PChar.quest.kapitein.soldier_last_name;
+			sld.id = "Drunken soldier";
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToLocator(PChar, "goto", "goto4");
+			LAi_QuestDelay("Kapitein_with_soldier_to_room3", 1.0);
+		break;
+
+		case "Kapitein_with_soldier_to_room3":
+			PChar.dialog.filename = "blaze_dialog.c";
+			Pchar.dialog.CurrentNode = "kapitein_steal_uniform";
+			LAi_SetActorType(PChar);
+			LAi_ActorSelfDialog(PChar, "Kapitein_take_uniform");
+		break;
+
+		case "Kapitein_take_uniform":
+			if (CheckAttribute(PChar, "clothes." + PChar.quest.kapitein.soldier_model)) PChar.quest.kapitein_already_got_uniform = "true";
+			else GiveModel2Player(PChar.quest.kapitein.soldier_model, false);
+			SetModelfromID(CharacterFromID("Drunken soldier"), "man5");
+			LAi_SetPlayerType(PChar);
+			PChar.quest.kapitein = "tailor";
+			AddQuestRecord("kapitein", 4);
+		break;
+
+		case "Kapitein_need_papers":		// Triggered by dialog with Kralendijk tailor
+			PChar.quest.kapitein = "need_papers";
+			if (checkquestattribute("church_help", "Yedam") && !LAi_IsDead(characterFromID("Yedam Kinne"))) 
+			{
+				Characters[GetCharacterIndex("Yedam Kinne")].dialog.currentnode = "return_visit";				
+				AddQuestRecord("kapitein", 5);
+			}
+			else
+			{
+				if (CheckAttribute(CharacterFromID("Pablo Escriva"), "already_met")) AddQuestRecord("kapitein", 6);
+				else AddQuestRecord("kapitein", 7);
+			}
+		break;
+
+		case "kapitein_wait_for_papers":	// Triggered by dialog with Yedam Kinne - quicker than Pablo Escriva because Yedam is from Kralendijk
+			PChar.quest.kapitein_yedam_papers_ready.win_condition.l1 = "Timer";
+			PChar.quest.kapitein_yedam_papers_ready.win_condition.l1.date.day = GetAddingDataDay(0,0,1);
+			PChar.quest.kapitein_yedam_papers_ready.win_condition.l1.date.month = GetAddingDataMonth(0,0,1);
+			PChar.quest.kapitein_yedam_papers_ready.win_condition.l1.date.year = GetAddingDataYear(0,0,1);
+			PChar.quest.kapitein_yedam_papers_ready.win_condition = "kapitein_yedam_papers_ready";
+		break;
+
+		case "kapitein_yedam_papers_ready":
+			Preprocessor_AddQuestData("forger", GetMySimpleName(CharacterFromID("Yedam Kinne")));
+			AddQuestRecord("kapitein", 8);
+			Preprocessor_Remove("forger");
+			Characters[GetCharacterIndex("Yedam Kinne")].dialog.CurrentNode = "kapitein_document_done";
+		break;
+
+		case "kapitein_prepare_forger":		// Triggered by dialog with Florentin Destot, Buccaneer Camp tavernkeeper
+			Characters[GetCharacterIndex("Pablo Escriva")].dialog.currentNode = "ask_for_document";
+			Locations[FindLocation("Buccaneers_Camp")].reload.l4.disable = 0;
+		break;
+
+		case "kapitein_wait_three_days":	// Triggered by dialog with Pablo Escriva
+			PChar.quest.kapitein_Pablo_papers_ready.win_condition.l1 = "Timer";
+			PChar.quest.kapitein_Pablo_papers_ready.win_condition.l1.date.day = GetAddingDataDay(0,0,3);
+			PChar.quest.kapitein_Pablo_papers_ready.win_condition.l1.date.month = GetAddingDataMonth(0,0,3);
+			PChar.quest.kapitein_Pablo_papers_ready.win_condition.l1.date.year = GetAddingDataYear(0,0,3);
+			PChar.quest.kapitein_Pablo_papers_ready.win_condition = "kapitein_Pablo_papers_ready";
+		break;
+
+		case "kapitein_Pablo_papers_ready":
+			Preprocessor_AddQuestData("forger", GetMySimpleName(CharacterFromID("Pablo Escriva")));
+			AddQuestRecord("kapitein", 8);
+			Preprocessor_Remove("forger");
+			Characters[GetCharacterIndex("Pablo Escriva")].dialog.CurrentNode = "kapitein_document_done";
+		break;
+
+		case "kapitein_got_papers":
+			PChar.quest.kapitein = "got_papers";
+			AddQuestRecord("kapitein", 9);
+		break;
+
+		case "Kapitein_wait_for_tailor":	// Triggered by dialog with Kralendijk tailor
+			if (CheckAttribute(PChar, "quest.kapitein_already_got_uniform")) DeleteAttribute(PChar, "quest.kapitein_already_got_uniform");
+			else DeleteAttribute(PChar, "clothes." + PChar.quest.kapitein.soldier_model);
+			PChar.quest.kapitein = "waiting";
+			AddQuestRecord("kapitein", 10);
+			PChar.quest.kapitein_uniform_ready.win_condition.l1 = "Timer";
+			PChar.quest.kapitein_uniform_ready.win_condition.l1.date.day = GetAddingDataDay(0,0,1);
+			PChar.quest.kapitein_uniform_ready.win_condition.l1.date.month = GetAddingDataMonth(0,0,1);
+			PChar.quest.kapitein_uniform_ready.win_condition.l1.date.year = GetAddingDataYear(0,0,1);
+			PChar.quest.kapitein_uniform_ready.win_condition = "kapitein_uniform_ready";
+		break;
+
+		case "kapitein_uniform_ready":
+			PChar.quest.kapitein = "uniform_ready";
+			AddQuestRecord("kapitein", 11);
+		break;
+
+		case "kapitein_buy_uniform":
+			GiveModel2Player(Nations[HOLLAND].fantomModel.m0, false);
+			AddQuestRecord("kapitein", 12);
+			PChar.quest.kapitein = "got_uniform";
+		break;
+
+		case "kapitein_leave_tavern_with_soldier":
+			PChar.quest.kapitein = "got_soldier";
+			Characters[GetCharacterIndex(PChar.quest.kapitein.soldier_id2)].dialog.filename = "kapitein_guards_dialog.c";
+			Characters[GetCharacterIndex(PChar.quest.kapitein.soldier_id2)].dialog.CurrentNode = "follow_me";
+			StorePassengers(PChar.id);
+			Pchar.quest.kapitein_outside_tavern.win_condition.l1 = "Location";
+			PChar.quest.kapitein_outside_tavern.win_condition.l1.location = "Douwesen_town";
+			Pchar.quest.kapitein_outside_tavern.win_condition = "kapitein_outside_tavern";
+		break;
+
+		case "kapitein_outside_tavern":
+			AddQuestRecord("kapitein", 14);
+			DisableFastTravel(true);
+			for (i=1; i<12; i++)
+			{
+				if (i!=7)
+				{
+					attr = "l" + i;
+					Locations[FindLocation("Douwesen_town")].reload.(attr).disable = 1;
+				}
+			}
+
+			sld = CharacterFromID("Dou_soldier_1");					// Borrow one of the port guards
+			sld.original_name = sld.name;
+			sld.original_lastname = sld.lastname;
+			sld.original_model = sld.model;
+			sld.greeting = "Gr_Dutch Officer";
+			sld.name = PChar.quest.kapitein.soldier_name2;
+			sld.lastname = PChar.quest.kapitein.soldier_last_name2;
+			SetModelfromID(sld, PChar.quest.kapitein.soldier_model2);
+			SetCharacterToNearLocatorFromMe("Dou_soldier_1", 3);			// 'SetCharacterToNearLocatorFromMe' takes character ID
+			sld.dialog.filename = "kapitein_guards_dialog.c";
+			sld.dialog.currentNode = "to_the_townhall";
+			LAi_SetActorType(characterFromID("Dou_soldier_1"));
+			LAi_ActorDialog(sld, PChar, "kapitein_soldier_follow_to_townhall",5.0,5.0);
+		break;
+
+		case "kapitein_soldier_follow_to_townhall":
+			LAi_SetActorType(characterFromID("Dou_soldier_1"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Dou_soldier_1"), "", 1.0);
+			Pchar.quest.kapitein_arrest_governor.win_condition.l1 = "Location";
+			PChar.quest.kapitein_arrest_governor.win_condition.l1.location = "Douwesen_townhall";
+			Pchar.quest.kapitein_arrest_governor.win_condition = "kapitein_arrest_governor";
+		break;
+
+		case "kapitein_arrest_governor":
+			PChar.quest.kapitein = "arrest_governor";
+			Locations[FindLocation("Douwesen_townhall")].reload.l1.disable = 1;	// Lock townhall exit
+			for (i=1; i<12; i++)
+			{
+				if (i!=7)
+				{
+					attr = "l" + i;
+					Locations[FindLocation("Douwesen_town")].reload.(attr).disable = 0;
+				}
+			}
+			Locations[FindLocation("Douwesen_town")].reload.l7.disable = 1;		// Lock townhall entrance
+			NPChar = CharacterFromID("Reynard Grueneveldt");
+			NPChar.quest.old_dialog_file = NPChar.dialog.filename;			// Store governor's dialog status
+			NPChar.quest.old_dialog_currentnode = NPChar.dialog.currentNode;
+			NPChar.dialog.filename = "Reynard Grueneveldt_dialog.c";
+			NPChar.dialog.currentNode = "kapitein_arrest1";
+		break;
+
+		case "kapitein_busted":		// Triggered by dialog with Reynard Grueneveldt if you tried to arrest him while not wearing uniform
+			pchar.quest.disable_rebirth = true;
+			PostEvent("LAi_event_GameOver", 0, "s", "mutiny");
+		break;
+
+		case "kapitein_goto_chest":		// Triggered by dialog with Reynard Grueneveldt
+			LAi_SetActorType(characterFromID("Reynard Grueneveldt"));
+			LAi_SetActorType(characterFromID("Dou_soldier_1"));
+			Characters[GetCharacterIndex("Dou_soldier_1")].dialog.CurrentNode = "youre_witness";
+			LAi_ActorDialogNow(characterFromID("Dou_soldier_1"), PChar, "kapitein_get_money",1.0);
+		break;
+
+		case "kapitein_get_money":
+			pchar.quest.kapitein_get_money.win_condition.l1 = "locator";
+			pchar.quest.kapitein_get_money.win_condition.l1.location = "Douwesen_townhall";
+			pchar.quest.kapitein_get_money.win_condition.l1.locator_group = "box";
+			pchar.quest.kapitein_get_money.win_condition.l1.locator = "box1";
+			pchar.quest.kapitein_get_money.win_condition = "kapitein_get_money2";
+		break;
+
+		case "kapitein_get_money2":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, 35574);		// About 10 times the number of Marks that the real Captain of Köpenick got.
+			PChar.quest.kapitein = "got_money";
+			LAi_SetActorType(characterFromID("Dou_soldier_1"));
+			Characters[GetCharacterIndex("Dou_soldier_1")].dialog.CurrentNode = "keep_them_here";
+			LAi_ActorDialogNow(characterFromID("Dou_soldier_1"), PChar, "kapitein_getaway",1.0);
+		break;
+
+		case "kapitein_getaway":
+			AddQuestRecord("kapitein", 15);
+			LAi_SetActorType(characterFromID("Dou_soldier_1"));
+			LAi_ActorGoToLocator(CharacterFromID("Dou_soldier_1"), "reload", "reload1", "kapitein_guard_posted", 5.0);
+			RestorePassengers(PChar.id);
+			Locations[FindLocation("Douwesen_townhall")].reload.l1.disable = 0;
+			Pchar.quest.kapitein_leave_townhall.win_condition.l1 = "Location";
+			PChar.quest.kapitein_leave_townhall.win_condition.l1.location = "Douwesen_town";
+			Pchar.quest.kapitein_leave_townhall.win_condition = "kapitein_leave_townhall";
+		break;
+
+		case "kapitein_guard_posted":
+			LAi_SetGuardianType(CharacterFromID("Dou_soldier_1"));
+		break;
+
+		case "kapitein_leave_townhall":
+			DisableFastTravel(false);
+			AddQuestRecord("kapitein", 16);
+			sld = CharacterFromID("Dou_soldier_1")		// Restore port guard
+			ChangeCharacterAddressGroup(sld, "Douwesen_port", "goto", "goto16");
+			sld.name = sld.original_name;
+			sld.lastname = sld.original_lastname;
+			sld.greeting = "Gr_Douwesen Soldier";
+			SetModelfromID(sld, sld.original_model);
+			DeleteAttribute(sld, "original_name");
+			DeleteAttribute(sld, "original_lastname");
+			DeleteAttribute(sld, "original_model");
+			sld.Dialog.Filename = "Douwesen soldier_dialog.c";
+			sld.dialog.currentNode = "First time";
+
+			NPChar = CharacterFromID("Reynard Grueneveldt"); // Restore governor to normal
+			NPChar.dialog.filename = NPChar.quest.old_dialog_file;
+			NPChar.dialog.currentNode = NPChar.quest.old_dialog_currentnode;
+			DeleteAttribute(NPChar, "quest.old_dialog_file");
+			DeleteAttribute(NPChar, "quest.old_dialog_currentnode");
+			LAi_SetHuberStayType(NPChar);
+			LAi_SetStayHuberPointMap(NPChar, "goto", "goto4");
+			LAi_SetStayHuberPointWindow(NPChar, "goto", "goto6");
+
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Sneak", 20000); }
+			else { AddPartyExp(pchar, 20000); }
+			if(GetCharacterReputation(PChar) > REPUTATION_SWINDLER) ChangeCharacterReputation(PChar, -5);	// Reputation loss, but only to "Swindler" - this doesn't involve murder
+
+			Pchar.quest.kapitein_escape_to_sea.win_condition.l1 = "MapEnter";
+			Pchar.quest.kapitein_escape_to_sea.win_condition = "kapitein_escape_to_sea";
+		break;
+
+		case "kapitein_escape_to_sea":
+			Locations[FindLocation("Douwesen_town")].reload.l7.disable = 0;		// Unlock townhall entrance
+			PChar.quest.kapitein = "on_the_run";
+			PChar.quest.kapitein_arrest.win_condition.l1 = "Timer";
+			PChar.quest.kapitein_arrest.win_condition.l1.date.day = GetAddingDataDay(0,0,14);
+			PChar.quest.kapitein_arrest.win_condition.l1.date.month = GetAddingDataMonth(0,0,14);
+			PChar.quest.kapitein_arrest.win_condition.l1.date.year = GetAddingDataYear(0,0,14);
+			Pchar.quest.kapitein_arrest.win_condition.l2 = "Location";
+			PChar.quest.kapitein_arrest.win_condition.l2.location = "Douwesen_town";
+			PChar.quest.kapitein_arrest.win_condition = "kapitein_arrest";
+		break;
+
+		case "kapitein_arrest":
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
+			for (i=1; i<4; i++)
+			{
+				attr = "m" + i;
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[HOLLAND].fantomModel.(attr), "reload", "reload5");
+				LAi_group_MoveCharacter(sld, "DOUWESEN_SOLDIERS");
+				GiveSoldierWeapon(sld, HOLLAND);
+				sld.id = "arrester_" + i;
+				sld.nation = HOLLAND;
+				SetRandomNameToCharacter(sld);
+				LAi_SetActorType(sld);
+				LAi_ActorFollow(sld, PChar, "", 25.0);
+			}
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[HOLLAND].fantomModel.m0, "reload", "reload5");
+			LAi_group_MoveCharacter(sld, "DOUWESEN_SOLDIERS");
+			GiveSoldierWeapon(sld, HOLLAND);
+			sld.id = "arrester_officer";
+			sld.nation = HOLLAND;
+			SetRandomNameToCharacter(sld);
+			SetCharacterToNearLocatorFromMe("arrester_officer", 3);
+			LAi_SetActorType(sld);
+			sld.dialog.filename = "kapitein_guards_dialog.c";
+			sld.dialog.currentNode = "youre_nicked";
+			LAi_ActorDialog(sld, PChar, "",3.0,3.0);	// Exits to "kapitein_trial" or "kapitein_resist_arrest"
+		break;
+
+		case "kapitein_resist_arrest":
+			LAi_group_MoveCharacter(characterFromID("arrester_officer"), "DOUWESEN_SOLDIERS");
+			for (i=1; i<4; i++)
+			{
+				LAi_group_MoveCharacter(characterFromID("arrester_" + i), "DOUWESEN_SOLDIERS");
+			}
+			LAi_group_SetRelation("DOUWESEN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("DOUWESEN_SOLDIERS", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("DOUWESEN_SOLDIERS", "kapitein_resistance_successful");
+		break;
+
+		case "kapitein_resistance_successful":
+			AddQuestRecord("kapitein", 18);
+			CloseQuestHeader("kapitein");
+			DisableFastTravel(false);
+			EndQuestMovie();
+			LeaveService(PChar, HOLLAND, true);
+			if(GetRMRelation(PChar, HOLLAND) > REL_WAR) SetRMRelation(PChar, HOLLAND, REL_WAR);	// Holland now regards you as a wanted criminal
+		break;
+
+		case "kapitein_trial":
+			LAi_SetActorType(characterFromID("Reynard Grueneveldt"));
+			Characters[GetCharacterIndex("Reynard Grueneveldt")].greeting = "Gr_Reynard Grueneveldt_hostile";
+			DoQuestReloadToLocation("Douwesen_townhall", "reload", "reload1", "kapitein_trial2");
+		break;
+
+		case "kapitein_trial2":
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[HOLLAND].fantomModel.m1, "goto", "goto2");
+			LAi_group_MoveCharacter(sld, "DOUWESEN_SOLDIERS");
+			GiveSoldierWeapon(sld, HOLLAND);
+			sld.id = "drunk_soldier";
+			sld.name = PChar.quest.kapitein.soldier_name;
+			sld.lastname = PChar.quest.kapitein.soldier_last_name;
+			sld.dialog.filename = "kapitein_guards_dialog.c";
+			SetModelfromID(sld, PChar.quest.kapitein.soldier_model);
+			sld.nation = HOLLAND;
+
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[HOLLAND].fantomModel.m1, "goto", "goto6");
+			LAi_group_MoveCharacter(sld, "DOUWESEN_SOLDIERS");
+			GiveSoldierWeapon(sld, HOLLAND);
+			sld.id = "assisting_soldier";
+			sld.name = PChar.quest.kapitein.soldier_name2;
+			sld.lastname = PChar.quest.kapitein.soldier_last_name2;
+			sld.dialog.filename = "kapitein_guards_dialog.c";
+			SetModelfromID(sld, PChar.quest.kapitein.soldier_model2);
+			sld.nation = HOLLAND;
+
+			LAi_SetActorType(PChar);
+			LAi_ActorFollow(PChar, characterFromID("Reynard Grueneveldt"), "kapitein_trial3", 10.0);
+		break;
+
+		case "kapitein_trial3":
+			LAi_SetPlayerType(PChar);
+			Locations[FindLocation("Douwesen_townhall")].reload.l1.disable = 1;	// Lock townhall exit
+			NPChar = CharacterFromID("Reynard Grueneveldt");
+			NPChar.quest.old_dialog_file = NPChar.dialog.filename;			// Store governor's dialog status
+			NPChar.quest.old_dialog_currentnode = NPChar.dialog.currentNode;
+			NPChar.dialog.filename = "Reynard Grueneveldt_dialog.c";
+			NPChar.dialog.currentNode = "kapitein_trial1";
+			LAi_SetActorType(NPChar);
+			LAi_ActorDialogNow(NPChar, PChar, "kapitein_trial4",1.0);
+		break;
+
+		case "kapitein_trial4":
+			LAi_SetActorType(characterFromID("drunk_soldier"));
+			Characters[GetCharacterIndex("drunk_soldier")].dialog.CurrentNode = "trial_witness1";
+			LAi_ActorDialogNow(characterFromID("drunk_soldier"), PChar, "kapitein_trial5",1.0);
+		break;
+
+		case "kapitein_trial5":
+			LAi_SetActorType(characterFromID("Reynard Grueneveldt"));
+			Characters[GetCharacterIndex("Reynard Grueneveldt")].dialog.CurrentNode = "kapitein_trial3";
+			LAi_ActorDialogNow(characterFromID("Reynard Grueneveldt"), PChar, "kapitein_trial6",1.0);
+		break;
+
+		case "kapitein_trial6":
+			LAi_SetActorType(characterFromID("assisting_soldier"));
+			Characters[GetCharacterIndex("assisting_soldier")].dialog.CurrentNode = "trial_witness2";
+			LAi_ActorDialogNow(characterFromID("assisting_soldier"), PChar, "kapitein_trial7",1.0);
+		break;
+
+		case "kapitein_trial7":
+			LAi_SetActorType(characterFromID("Reynard Grueneveldt"));
+			Characters[GetCharacterIndex("Reynard Grueneveldt")].dialog.CurrentNode = "kapitein_trial4";
+			LAi_ActorDialogNow(characterFromID("Reynard Grueneveldt"), PChar, "kapitein_to_prison",1.0);
+		break;
+
+		case "kapitein_to_prison":
+			LeaveService(PChar, HOLLAND, false);
+			Locations[FindLocation("Douwesen_townhall")].reload.l1.disable = 0;	// Unlock townhall exit
+			Locations[FindLocation("PaP_prison")].vcskip = true;			// Use Guadeloupe prison because Kralendijk doesn't have one
+			Locations[FindLocation("PaP_prison")].reload.l1.disable = 1;
+			ChangeCharacterAddressGroup(characterfromID("Willem Voigt"), "PaP_prison", "goto", "goto9");
+			StorePassengers(PChar.id);
+			DoQuestReloadToLocation("PaP_prison", "goto", "goto24", "kapitein_in_prison");
+		break;
+
+		case "kapitein_in_prison":
+			AddQuestRecord("kapitein", 17);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[HOLLAND].fantomModel.m1, "goto", "goto16");
+			LAi_group_MoveCharacter(sld, "DOUWESEN_SOLDIERS");
+			GiveSoldierWeapon(sld, HOLLAND);
+			sld.id = "prison_guard1";
+			LAi_SetPatrolType(sld);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[HOLLAND].fantomModel.m2, "goto", "goto17");
+			LAi_group_MoveCharacter(sld, "DOUWESEN_SOLDIERS");
+			GiveSoldierWeapon(sld, HOLLAND);
+			sld.id = "prison_guard2";
+			LAi_SetPatrolType(sld);
+
+			LAi_SetActorType(characterFromID("Willem Voigt"));
+			Characters[GetCharacterIndex("Willem Voigt")].dialog.CurrentNode = "they_got_you_too";
+			LAi_ActorDialogNow(characterFromID("Willem Voigt"), PChar, "kapitein_in_prison2",1.0);
+		break;
+
+		case "kapitein_in_prison2":
+			LAi_SetActorType(characterFromID("Willem Voigt"));
+			LAi_Fade("kapitein_wait_two_months", "kapitein_reset_prison");
+		break;
+
+		case "kapitein_wait_two_months":
+			AddDataToCurrent(0, 2, 0, false);
+			SetCurrentTime(10.00, 0);
+			LAi_Fade("", "");
+			logit("Two months later...");
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(PChar, "goto", "goto9", "", 10.0);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[HOLLAND].fantomModel.m0, "goto", "goto22");
+			sld.id = "Dutch Prison Commander";
+			sld.greeting = "Gr_Redmond Commendant";
+			LAi_SetActorType(sld);
+			LAi_ActorGoToLocator(sld, "reload", "reload12", "kapitein_release", 30.0);
+		break;
+
+		case "kapitein_reset_prison":
+			DeleteAttribute(&Locations[FindLocation("PaP_prison")],"vcskip");
+			Locations[FindLocation("PaP_prison")].reload.l1.disable = 0;
+		break;
+
+		case "kapitein_release":
+			LAi_type_actor_Reset(PChar);
+			LAi_ActorWaitDialog(PChar, characterFromID("Dutch Prison Commander"));
+			LAi_SetActorType(characterFromID("Dutch Prison Commander"));
+			Characters[GetCharacterIndex("Dutch Prison Commander")].Dialog.Filename = "kapitein_guards_dialog.c";
+			Characters[GetCharacterIndex("Dutch Prison Commander")].dialog.CurrentNode = "kapitein_goto_governor";
+			LAi_ActorDialogNow(characterFromID("Dutch Prison Commander"),PChar,"kapitein_back_to_governor",1.0);
+		break;
+
+		case "kapitein_back_to_governor":
+			RestorePassengers(PChar.id);
+			LAi_SetPlayerType(PChar);
+			DoQuestReloadToLocation("Douwesen_townhall", "reload", "reload1", "kapitein_back_to_governor2");
+		break;
+
+		case "kapitein_back_to_governor2":
+			ChangeCharacterAddress(characterFromID("Willem Voigt"), "None", "");
+			LAi_SetActorType(PChar);
+			LAi_ActorFollow(PChar, characterFromID("Reynard Grueneveldt"), "kapitein_back_to_governor3", 10.0);
+		break;
+
+		case "kapitein_back_to_governor3":
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(characterFromID("Reynard Grueneveldt"));
+			Characters[GetCharacterIndex("Reynard Grueneveldt")].dialog.CurrentNode = "kapitein_pardon";
+			LAi_ActorDialogNow(characterFromID("Reynard Grueneveldt"), PChar, "kapitein_released",1.0);
+		break;
+
+		case "kapitein_released":
+			DisableFastTravel(false);
+			EndQuestMovie();
+			AddQuestRecord("kapitein", 19);
+			CloseQuestHeader("kapitein");
+			string fame_name = "extra_fame" + HOLLAND
+			x = stf(GetAttribute(PChar, fame_name));
+			if (x < 0) PChar.(fame_name) = 50.0;	// You just became famous because your exploits have been noticed by very important people and made all the news
+			else PChar.(fame_name) = x + 50.0;
+			if(GetCharacterReputation(PChar) > REPUTATION_BASTARD) ChangeCharacterReputation(PChar, -5);	// Reputation loss, but not to "Horror of the High Seas"
+			Pchar.quest.kapitein_reset_governor.win_condition.l1 = "MapEnter";
+			Pchar.quest.kapitein_reset_governor.win_condition = "kapitein_reset_governor";
+		break;
+
+		case "kapitein_reset_governor":
+			LAi_SetHuberStayType(CharacterFromID("Reynard Grueneveldt"));
+			LAi_SetStayHuberPointMap(CharacterFromID("Reynard Grueneveldt"), "goto", "goto4");
+			LAi_SetStayHuberPointWindow(CharacterFromID("Reynard Grueneveldt"), "goto", "goto6");
+			NPChar = CharacterFromID("Reynard Grueneveldt"); // Restore governor to normal
+			NPChar.dialog.filename = NPChar.quest.old_dialog_file;
+			NPChar.dialog.currentNode = NPChar.quest.old_dialog_currentnode;
+			NPChar.greeting = "Gr_Reynard Grueneveldt";
+			DeleteAttribute(NPChar, "quest.old_dialog_file");
+			DeleteAttribute(NPChar, "quest.old_dialog_currentnode");
+		break;
+
+
+///////////////////////////////////////////////////////////////////////
+// The Kapitein of Kralendijk - end
+///////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Hornblower sidequests
+// By Grey Roger
+// Based very loosely on incidents in the film "Captain Horatio Hornblower R.N."
+////////////////////////////////////////////////////////////////////////////////
+		case "Hornblower_initiate_Natividad":	// Triggered by dialog with governor when Hornblower is promoted to rank 6
+			SetQuestHeader("Natividad");
+			AddQuestRecord("Natividad", 1);
+			Characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_freeplay_dialog.c";
+			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.CurrentNode = "First time";
+		break;
+
+		case "hornblower_place_el_supremo":	// Triggered by dialog with Sir Edward Pellew
+			if (!CheckAttribute(PChar, "QuestInfo.Natividad")) SetQuestHeader("Natividad");
+			Preprocessor_AddQuestData("briefing_officer", GetMyFullName(CharacterFromID("Sir Edward Pellew")));
+			AddQuestRecord("Natividad", 2);
+			Preprocessor_Remove("briefing_officer");
+			ChangeCharacterAddressGroup(characterfromID("El Supremo"), "Dining_Room", "goto", "goto2");
+			Characters[GetCharacterIndex("El Supremo")].dialog.CurrentNode = "meet_Hornblower";
+
+			Locations[FindLocation("Cuba_Shore_04")].reload.l4.label = "Rebel Shore";
+			Locations[FindLocation("Prison_Shore")].id.label = "Rebel Shore";
+			Locations[FindLocation("Prison_Shore")].reload.l2.label = "Rebel Fort";
+			Locations[FindLocation("Prison_Shore")].vcskip = true;
+			locations[FindLocation("Havana_fakefort4")].id.label = "Rebel Fort";
+			Locations[FindLocation("Havana_fakefort4")].models.always.locators = "fort1_l_GR";
+			Build_at("Havana_fakefort4", "Gallows", "", 1.0, 0.0, 12.6, 0.0, "building");
+			Locations[FindLocation("Dining_Room")].models.always.locators = "Res05_l_GR";
+			locations[FindLocation("Dining_Room")].id.label = "Don Julian Alvarado's Quarters";
+			Locations[FindLocation("Prison_Shore")].reload.l2.disable = 1;
+
+			Pchar.quest.hornblower_cuba_arrival.win_condition.l1 = "Location";
+			PChar.quest.hornblower_cuba_arrival.win_condition.l1.location = "Cuba";
+			PChar.quest.hornblower_cuba_arrival.win_condition = "hornblower_cuba_arrival";
+
+			PChar.quest.Killed_at_Prison.over = "yes";	// Remove "Hornblower" storyline check on crossing blown bridge
+		break;
+
+		case "hornblower_cuba_arrival":
+			SetNextWeather("Clear");
+			AddDataToCurrent(0, 0, 1, true);
+			SetCurrentTime(10, 0);
+			Locations[FindLocation("ShipDeck1")].models.always.locators = "qdeck_ld_gr";
+			Locations[FindLocation("Cabin_medium")].models.always.locators = "capmd_l_GR";
+			SetCharacterShipLocation(characterFromID("Jose Hernandez"), "ShipDeck1");
+//			characters[GetCharacterIndex("Jose Hernandez")].sailaway = true;
+			SetCharacterShipLocation(PChar, "Cuba_Shore_04");
+			PChar.location.from_sea = "Cuba_Shore_04";
+			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "pchar");
+			StartQuestMovie(true, true, false);
+//			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), GetCharacterShipQDeck(PChar), "rld", "startloc");
+//			DoReloadFromSeaToLocation(GetCharacterShipQDeck(PChar), "rld", "reload1");
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck1", "goto", "goto4");
+			DoReloadFromSeaToLocation("ShipDeck1", "rld", "loc2");
+			LAi_QuestDelay("hornblower_cuba_arrival2", 0.1);
+		break;
+
+		case "hornblower_cuba_arrival2":
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m1, "goto", "goto5");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard1";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "goto", "goto10");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard2";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "goto", "goto9");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard3";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToLocator(PChar, "reload", "boatl");
+			LAi_QuestDelay("hornblower_cuba_arrival3", 2.0);
+		break;
+
+		case "hornblower_cuba_arrival3":
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(characterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "A rum lot";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "hornblower_hernandez_boards",5.0,5.0);
+		break;
+
+		case "hornblower_hernandez_boards":
+			LAi_SetOfficerType(CharacterFromID("Lt. William Bush"));
+			DeleteAttribute(characterFromID("Jose Hernandez"), "sailaway");
+			ChangeCharacterAddressGroup(CharacterFromID("Jose Hernandez"), "ShipDeck1", "reload", "boatl");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "fisherman1", "reload", "boatl");
+			GiveItem2Character(sld, "blade7");
+			EquipCharacterByItem(sld, "blade7");
+			sld.id = "hernadez_guard";
+			LAi_SetActorType(sld);
+			LAi_ActorFollow(sld, characterFromID("Jose Hernandez"), "", 25.0);
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+			LAi_ActorGoToLocator(characterFromID("Jose Hernandez"), "goto", "goto2", "hornblower_hernandez_boards2", 10.0);
+		break;
+
+		case "hornblower_hernandez_boards2":
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+			Characters[GetCharacterIndex("Jose Hernandez")].Dialog.Filename = "Jose Hernandez_dialog.c";
+			Characters[GetCharacterIndex("Jose Hernandez")].dialog.CurrentNode = "Hernandez_comes_aboard";
+			LAi_ActorDialog(characterFromID("Jose Hernandez"), PChar, "hornblower_bush_take_command",5.0,5.0);
+		break;
+
+		case "hornblower_bush_take_command":
+			LAi_SetActorType(characterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "If not back";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "hornblower_follow_hernandez",5.0,5.0);
+		break;
+
+		case "hornblower_follow_hernandez":
+			AddQuestRecord("Natividad", 3);
+			SetCharacterShipLocation(characterFromID("Jose Hernandez"), "Cuba_Shore_04");
+			ChangeCharacterAddressGroup(CharacterFromID("Jose Hernandez"), "Cuba_Shore_04", "goto", "locator8");
+			StorePassengers(PChar.id);
+			DoQuestReloadToLocation("Cuba_Shore_04", "reload", "reload1", "hornblower_follow_hernandez2");
+		break;
+
+		case "hornblower_follow_hernandez2":
+			bQuestDisableSeaEnter = true;
+			DisableFastTravel(true);
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+			Characters[GetCharacterIndex("Jose Hernandez")].dialog.CurrentNode = "Hernandez_warns_about_paths";
+			LAi_ActorDialog(characterFromID("Jose Hernandez"), PChar, "hornblower_follow_hernandez3",5.0,5.0);
+		break;
+
+		case "hornblower_follow_hernandez3":
+			EndQuestMovie();
+			Locations[FindLocation("Cuba_Shore_04")].reload.l3.disable = 1;
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+			LAi_ActorGoToLocation(CharacterFromID("Jose Hernandez"), "reload", "reload3", "Prison_Shore", "goto", "goto15", "", 30);
+			PChar.quest.hornblower_with_hernandez_to_fort.win_condition.l1 = "Location";
+			PChar.quest.hornblower_with_hernandez_to_fort.win_condition.l1.location = "Prison_Shore";
+			PChar.quest.hornblower_with_hernandez_to_fort.win_condition = "hornblower_with_hernandez_to_fort";
+		break;
+
+		case "hornblower_with_hernandez_to_fort":
+			ChangeCharacterAddressGroup(CharacterFromID("Jose Hernandez"), "Prison_Shore", "goto", "goto15");
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+			LAi_ActorGoToLocation(CharacterFromID("Jose Hernandez"), "reload", "reload1_back", "Havana_fakefort4", "rld", "aloc1", "hornblower_fort_opens", 540);
+			PChar.quest.hornblower_with_hernandez_to_fort2.win_condition.l1 = "Location";
+			PChar.quest.hornblower_with_hernandez_to_fort2.win_condition.l1.location = "Havana_fakefort4";
+			PChar.quest.hornblower_with_hernandez_to_fort2.win_condition = "hornblower_with_hernandez_to_fort2";
+
+			pchar.quest.hornblower_fort_closed.win_condition.l1 = "locator";
+			pchar.quest.hornblower_fort_closed.win_condition.l1.location = "Prison_Shore";
+			pchar.quest.hornblower_fort_closed.win_condition.l1.locator_group = "reload";
+			pchar.quest.hornblower_fort_closed.win_condition.l1.locator = "reload1_back";
+			pchar.quest.hornblower_fort_closed.win_condition = "hornblower_fort_closed";
+		break;
+
+		case "hornblower_fort_closed":
+			logit("The fort gate is closed. Wait for Admiral Hernandez to open it.");
+		break;
+
+		case "hornblower_fort_opens":
+			Locations[FindLocation("Prison_Shore")].reload.l2.disable = 0;
+			pchar.quest.hornblower_fort_closed.over = "yes";
+		break;
+
+		case "hornblower_with_hernandez_to_fort2":
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "fisherman", "goto", "goto8");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveItem2Character(sld, "blade4");
+			EquipCharacterByItem(sld, "blade4");
+			sld.id = "rebel_guard1";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto6");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "fisherman", "goto", "goto9");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveItem2Character(sld, "blade4");
+			EquipCharacterByItem(sld, "blade4");
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto7");
+			sld.id = "rebel_guard2";
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "prison_3", "goto", "goto6");
+			LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+			sld.id = "prisoner1";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto6");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "prison_5", "goto", "goto7");
+			LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto7");
+			sld.id = "prisoner2";
+			Locations[FindLocation("Havana_fakefort4")].reload.l1.disable = 1;
+			ChangeCharacterAddressGroup(CharacterFromID("Jose Hernandez"), "Havana_fakefort4", "rld", "aloc1");
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+			LAi_ActorGoToLocation(CharacterFromID("Jose Hernandez"), "reload", "reloadC5", "Dining_Room", "goto", "goto7", "", 30);
+			PChar.quest.hornblower_meet_el_supremo.win_condition.l1 = "Location";
+			PChar.quest.hornblower_meet_el_supremo.win_condition.l1.location = "Dining_Room";
+			PChar.quest.hornblower_meet_el_supremo.win_condition = "hornblower_meet_el_supremo";
+		break;
+
+		case "hornblower_meet_el_supremo":
+			ChangeCharacterAddressGroup(CharacterFromID("Jose Hernandez"), "Dining_Room", "goto", "goto7");
+			LAi_SetGuardianTypeNoGroup(characterFromID("Jose Hernandez"));
+			Characters[GetCharacterIndex("Jose Hernandez")].dialog.CurrentNode = "Hernandez_respect_El_Supremo";
+			Locations[FindLocation("Cuba_Shore_04")].reload.l3.disable = 0;
+			Locations[FindLocation("Havana_fakefort4")].reload.l1.disable = 0;
+			Characters[GetCharacterIndex("El Supremo")].dialog.CurrentNode = "introduction"; 
+		break;
+
+		case "Hornblower_Hernandez_shuts_up":		// Triggered by dialog with Jose Hernandez in El Supremo's room
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+		break;
+
+		case "Hornblower_El_Supremo_checks_window":
+			LAi_SetActorType(characterFromID("El Supremo"));
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(characterFromID("El Supremo"), "goto", "goto10", "", 10.0);
+			LAi_QuestDelay("Hornblower_El_Supremo_back_to_place", 2.0);
+		break;
+
+		case "Hornblower_El_Supremo_back_to_place":
+			LAi_ActorGoToLocator(characterFromID("El Supremo"), "goto", "goto2", "Hornblower_El_Supremo_allies", 10.0);
+		break;
+
+
+		case "Hornblower_El_Supremo_allies":	// Triggered by dialog with "El Supremo"
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(characterFromID("El Supremo"));
+			Characters[GetCharacterIndex("El Supremo")].dialog.CurrentNode = "we_are_allies";
+			LAi_ActorDialog(characterFromID("El Supremo"), PChar, "Hornblower_supplies_from_Hernandez",5.0,5.0);
+		break;
+
+		case "Hornblower_supplies_from_Hernandez":
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+			Characters[GetCharacterIndex("Jose Hernandez")].dialog.CurrentNode = "Supply_order";
+			LAi_ActorDialog(characterFromID("Jose Hernandez"), PChar, "hornblower_supremo_burning_city",5.0,5.0);
+		break;
+
+		case "hornblower_supremo_burning_city":
+			LAi_SetActorType(characterFromID("El Supremo"));
+			Characters[GetCharacterIndex("El Supremo")].dialog.CurrentNode = "next_move";
+			LAi_ActorDialog(characterFromID("El Supremo"), PChar, "hornblower_natividad_messenger",5.0,5.0);
+		break;
+
+		case "hornblower_natividad_messenger":
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "fisherman1", "reload", "reload1");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			sld.id = "rebel_messenger";
+			LAi_SetActorType(sld);
+			LAi_ActorRunToLocator(CharacterFromID("rebel_messenger"), "goto", "goto10", "hornblower_natividad_messenger_speaks", 10.0)
+		break;
+
+		case "hornblower_natividad_messenger_speaks":
+			LAi_SetActorType(characterFromID("rebel_messenger"));
+			Characters[GetCharacterIndex("rebel_messenger")].Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			Characters[GetCharacterIndex("rebel_messenger")].dialog.CurrentNode = "Natividad_announcement";
+			LAi_ActorDialogNow(characterFromID("rebel_messenger"), PChar, "Hornblower_El_Supremo_Natividad",1.0);
+		break;
+
+		case "Hornblower_El_Supremo_Natividad":
+			LAi_SetActorType(characterFromID("El Supremo"));
+			Characters[GetCharacterIndex("El Supremo")].dialog.CurrentNode = "Natividad_announced";
+			LAi_ActorDialogNow(characterFromID("El Supremo"), PChar, "",1.0);
+			PChar.quest.hornblower_back_into_fort.win_condition.l1 = "Location";
+			PChar.quest.hornblower_back_into_fort.win_condition.l1.location = "Havana_fakefort4";
+			PChar.quest.hornblower_back_into_fort.win_condition = "hornblower_back_into_fort";
+		break;
+
+		case "hornblower_back_into_fort":
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "fisherman", "rld", "loc9");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveItem2Character(sld, "blade4");
+			EquipCharacterByItem(sld, "blade4");
+			sld.id = "rebel_guard1";
+			LAi_SetPatrolType(sld);
+			sld.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			sld.dialog.CurrentNode = "rebel_guard";
+			sld.dialog.TempNode = "rebel_guard";
+			sld.greeting = "Gr_isla muelle soldier";
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "fisherman", "rld", "loc10");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveItem2Character(sld, "blade4");
+			EquipCharacterByItem(sld, "blade4");
+			LAi_SetPatrolType(sld);
+			sld.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			sld.dialog.CurrentNode = "rebel_guard";
+			sld.dialog.TempNode = "rebel_guard";
+			sld.greeting = "Gr_isla muelle soldier";
+			sld.id = "rebel_guard2";
+
+			Locations[FindLocation("Prison_Shore")].reload.l2.disable = 1;
+			Locations[FindLocation("Cuba_Shore_04")].reload.l2.disable = 1;
+			pchar.quest.hornblower_board_for_supplies_and_lookout.win_condition.l1 = "locator";
+			pchar.quest.hornblower_board_for_supplies_and_lookout.win_condition.l1.location = "Cuba_Shore_04";
+			pchar.quest.hornblower_board_for_supplies_and_lookout.win_condition.l1.locator_group = "reload";
+			pchar.quest.hornblower_board_for_supplies_and_lookout.win_condition.l1.locator = "boat";
+			pchar.quest.hornblower_board_for_supplies_and_lookout.win_condition = "hornblower_board_for_supplies_and_lookout";
+		break;
+
+		case "hornblower_board_for_supplies_and_lookout":
+			RestorePassengers(PChar.id);
+			Locations[FindLocation("Cuba_Shore_04")].reload.l2.disable = 0;
+			StartQuestMovie(true, true, false);
+			Locations[FindLocation("ShipDeck1")].reload.l4.go = "Cuba_Shore_04";
+			Locations[FindLocation("ShipDeck1")].reload.l4.emerge = "boat";
+			DoQuestReloadToLocation("ShipDeck1", "reload", "boatl", "hornblower_board_for_supplies_and_lookout2");
+		break;
+
+		case "hornblower_board_for_supplies_and_lookout2":
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck1", "rld", "loc2");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m1, "goto", "goto5");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard1";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "reload", "boatl");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "goto", "goto10");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard2";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "reload", "boatl");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "goto", "goto9");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard3";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "reload", "boatl");
+			PlaySound("OBJECTS\shipcharge\Eng_the_side.wav");
+			LAi_QuestDelay("hornblower_board_for_supplies_and_lookout3", 1.0);
+		break;
+
+		case "hornblower_board_for_supplies_and_lookout3":
+			LAi_SetActorType(characterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "Provisions and cargo";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "Hornblower_Natividad_sighted",15.0,15.0);
+		break;
+
+		case "Hornblower_exchange_weapons_for_supplies":	// Triggered by dialog with Lt. William Bush
+			AddQuestRecord("Natividad", 5);
+			AddCharacterGoods(PChar, GOOD_GUNPOWDER, -1*makeint(PChar.quest.powder_needed));
+			TakeNItems(PChar, "pistolmketB", -1*makeint(PChar.quest.muskets_needed));
+			int free_food_space = GetGoodQuantityByWeight(GOOD_WHEAT, GetCargoFreeSpace(PChar));
+			AddCharacterGoods(PChar, GOOD_WHEAT, makeint(free_food_space * 0.6));
+			AddCharacterGoods(PChar, GOOD_RUM, makeint(free_food_space * 0.3));
+		break;
+
+		case "Hornblower_Natividad_sighted":
+			SetNextWeather("Clear");
+			SetCurrentTime(22.8, 0);
+			DoQuestReloadToLocation("ShipDeck1", "rld", "loc2", "Hornblower_Natividad_sighted2");
+		break;
+
+		case "Hornblower_Natividad_sighted2":
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck1", "goto", "goto4");
+			PlaceCharacter(CharacterFromID("Lieutenant Gerard"), "goto");
+			PlaceCharacter(CharacterFromID("Midshipman Longley"), "goto");
+			LAi_SetActorType(characterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "Natividad sighted";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "Hornblower_Natividad_sighted3",15.0,15.0);
+		break;
+
+		case "Hornblower_Natividad_sighted3":
+			SetNextWeather("Clear");
+			SetCurrentTime(23.9, 0);
+			DoQuestReloadToLocation("Cabin_medium", "rld", "startloc", "Hornblower_evening_meal");
+		break;
+
+		case "Hornblower_evening_meal":
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "Cabin_medium", "rld", "aloc0");
+			PlaceCharacter(CharacterFromID("Lieutenant Gerard"), "rld");
+			PlaceCharacter(CharacterFromID("Midshipman Longley"), "rld");
+			LAi_SetActorType(CharacterFromID("Lieutenant Gerard"));
+			LAi_ActorFollow(CharacterFromID("Lieutenant Gerard"), CharacterFromID("Lt. William Bush"), "", 25.0);
+			LAi_SetActorType(CharacterFromID("Midshipman Longley"));
+			LAi_ActorFollow(CharacterFromID("Midshipman Longley"), CharacterFromID("Lt. William Bush"), "", 25.0);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "47_Blaze_brtlt", "reload", "reload1");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			sld.id = "reporting_crewman";
+			sld.name = "Lieutenant";
+			sld.lastname = "Crystal";
+			sld.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			sld.dialog.CurrentNode = "Natividad_approaches";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld, PChar, "Hornblower_cut_for_deal",10.0,10.0);
+		break;
+
+		case "Hornblower_cut_for_deal":
+			LAi_SetActorType(characterFromID("Midshipman Longley"));
+			Characters[GetCharacterIndex("Midshipman Longley")].dialog.CurrentNode = "cut_for_deal";
+			LAi_ActorDialogNow(characterFromID("Midshipman Longley"), PChar, "Hornblower_Natividad_anchored",1.0);
+		break;
+
+		case "Hornblower_Natividad_anchored":
+			SetNextWeather("Clear");
+			AddDataToCurrent(0, 0, 1, true);
+			SetCurrentTime(2, 0);
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "Cabin_medium", "rld", "aloc2");
+			Locations[FindLocation("Cabin_medium")].models.always.locators = "capmd_l_GR";
+			DoQuestReloadToLocation("Cabin_medium", "sit", "sit2", "Hornblower_Natividad_anchored2");
+		break;
+
+		case "Hornblower_Natividad_anchored2":
+//			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "Cabin_medium", "rld", "aloc2");
+			LAi_SetActorType(CharacterFromID("Lieutenant Gerard"));
+			LAi_ActorFollow(CharacterFromID("Lieutenant Gerard"), CharacterFromID("Lt. William Bush"), "", 25.0);
+			LAi_SetActorType(CharacterFromID("Midshipman Longley"));
+			LAi_ActorFollow(CharacterFromID("Midshipman Longley"), CharacterFromID("Lt. William Bush"), "", 25.0);
+			LAi_SetActorType(PChar);
+			LAi_ActorSetSitMode(Pchar);
+			LAi_QuestDelay("Hornblower_Natividad_anchored3", 1.0);
+		break;
+
+		case "Hornblower_Natividad_anchored3":
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "47_Blaze_brtlt", "reload", "reload1");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			sld.id = "reporting_crewman";
+			sld.name = "Lieutenant";
+			sld.lastname = "Crystal";
+			sld.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			sld.dialog.CurrentNode = "Natividad_anchored";
+			LAi_SetActorType(sld);
+			LAi_ActorWaitDialog(PChar, sld);
+			LAi_ActorDialogNow(sld, PChar, "",1.0);
+		break;
+
+		case "Hornblower_Natividad_anchored4":	// Triggered by dialog from fake Lt. Crystal
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.Filename = "Lt. William Bush_dialog.c";
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "Natividad gamble";
+			LAi_SetActorType(CharacterFromID("Lt. William Bush"));
+			LAi_ActorWaitDialog(PChar, CharacterFromID("Lt. William Bush"));
+			LAi_ActorDialogNow(CharacterFromID("Lt. William Bush"), PChar, "",1.0);
+		break;
+
+		case "Hornblower_Natividad_plan":	// Triggered by dialog from Lt. William Bush
+			Characters[GetCharacterIndex("Midshipman Longley")].dialog.Filename = "Midshipman Longley_dialog.c";
+			Characters[GetCharacterIndex("Midshipman Longley")].dialog.CurrentNode = "evening_swim";
+			LAi_SetActorType(CharacterFromID("Midshipman Longley"));
+			LAi_ActorWaitDialog(PChar, CharacterFromID("Midshipman Longley"));
+			LAi_ActorDialogNow(CharacterFromID("Midshipman Longley"), PChar, "Hornblower_to_shore_for_Natividad",1.0);
+		break;
+
+		case "Hornblower_to_shore_for_Natividad":
+			LAi_SetPlayerType(PChar);
+			EndQuestMovie();
+			LAi_SetOfficerType(characterFromID("Lt. William Bush"));
+			LAi_SetImmortal(characterfromID("Lt. William Bush"), true);
+			if (SetOfficersIndex(Pchar, -1, GetCharacterIndex("Lt. William Bush")) == GetCharacterIndex("Lt. William Bush"))
+			{
+				SetOfficersIndex(Pchar, 1, GetCharacterIndex("Lt. William Bush"));
+				SetCharacterRemovable(characterFromID("Lt. William Bush"), false);
+			}
+			if (SetOfficersIndex(Pchar, -1, GetCharacterIndex("Midshipman Longley")) == GetCharacterIndex("Midshipman Longley"))
+			{
+				SetOfficersIndex(Pchar, 3, GetCharacterIndex("Midshipman Longley"));
+				SetCharacterRemovable(characterFromID("Midshipman Longley"), false);
+			}
+			DoQuestReloadToLocation("Cuba_Shore_04", "reload", "reload1", "Hornblower_walk_to_Punta_de_Maisi");
+		break;
+
+		case "Hornblower_walk_to_Punta_de_Maisi":
+			ChangeCharacterAddressGroup(CharacterFromID("Matthews"), "Cuba_Shore_04", "goto", "locator9");
+			LAi_SetActorType(CharacterFromID("Matthews"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Matthews"), "", 1.0);
+			GiveItem2Character(CharacterFromID("Matthews"), "PiratesPistol");
+			EquipCharacterByItem(CharacterFromID("Matthews"),"PiratesPistol");
+			if (ENABLE_AMMOMOD) {	// LDH change
+				TakenItems(CharacterFromID("Matthews"), "gunpowder", 1 + rand(2));
+				TakenItems(CharacterFromID("Matthews"), "pistolbullets", 1 + rand(2));
+			}
+			LAi_group_MoveCharacter(CharacterFromID("Matthews"), LAI_GROUP_PLAYER);
+			ChangeCharacterAddressGroup(CharacterFromID("Styles"), "Cuba_Shore_04", "goto", "locator12");
+			LAi_SetActorType(CharacterFromID("Styles"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Styles"), "", 1.0);
+			GiveItem2Character(CharacterFromID("Styles"), "PiratesPistol");
+			EquipCharacterByItem(CharacterFromID("Styles"),"PiratesPistol");
+			if (ENABLE_AMMOMOD) {	// LDH change
+				TakenItems(CharacterFromID("Styles"), "gunpowder", 1 + rand(2));
+				TakenItems(CharacterFromID("Styles"), "pistolbullets", 1 + rand(2));
+			}
+			LAi_group_MoveCharacter(CharacterFromID("Styles"), LAI_GROUP_PLAYER);
+			ChangeCharacterAddressGroup(CharacterFromID("Perrin"), "Cuba_Shore_04", "goto", "locator23");
+			LAi_SetActorType(CharacterFromID("Perrin"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Perrin"), "", 1.0);
+			GiveItem2Character(CharacterFromID("Perrin"), "PiratesPistol");
+			EquipCharacterByItem(CharacterFromID("Perrin"),"PiratesPistol");
+			if (ENABLE_AMMOMOD) {	// LDH change
+				TakenItems(CharacterFromID("Perrin"), "gunpowder", 1 + rand(2));
+				TakenItems(CharacterFromID("Perrin"), "pistolbullets", 1 + rand(2));
+			}
+			LAi_group_MoveCharacter(CharacterFromID("Perrin"), LAI_GROUP_PLAYER);
+			ChangeCharacterAddressGroup(CharacterFromID("Oldroyd"), "Cuba_Shore_04", "goto", "locator24");
+			LAi_SetActorType(CharacterFromID("Oldroyd"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Oldroyd"), "", 1.0);
+			GiveItem2Character(CharacterFromID("Oldroyd"), "PiratesPistol");
+			EquipCharacterByItem(CharacterFromID("Oldroyd"),"PiratesPistol");
+			if (ENABLE_AMMOMOD) {	// LDH change
+				TakenItems(CharacterFromID("Oldroyd"), "gunpowder", 1 + rand(2));
+				TakenItems(CharacterFromID("Oldroyd"), "pistolbullets", 1 + rand(2));
+			}
+			LAi_group_MoveCharacter(CharacterFromID("Oldroyd"), LAI_GROUP_PLAYER);
+//			ChangeCharacterAddressGroup(CharacterFromID("Marsh"), "Cuba_Shore_04", "goto", "locator25");
+//			LAi_SetActorType(CharacterFromID("Marsh"));
+//			LAi_ActorFollowEverywhere(CharacterFromID("Marsh"), "", 1.0);
+//			GiveItem2Character(CharacterFromID("Marsh"), "PiratesPistol");
+//			EquipCharacterByItem(CharacterFromID("Marsh"),"PiratesPistol");
+//			if (ENABLE_AMMOMOD) {	// LDH change
+//				TakenItems(CharacterFromID("Marsh"), "gunpowder", 1 + rand(2));
+//				TakenItems(CharacterFromID("Marsh"), "pistolbullets", 1 + rand(2));
+//			}
+//			LAi_group_MoveCharacter(CharacterFromID("Marsh"), LAI_GROUP_PLAYER);
+			SetCharacterShipLocation(characterFromID("Natividad_captain"), "Cuba_Shore_03");
+
+			LAi_SetActorType(characterFromID("Midshipman Longley"));
+			Characters[GetCharacterIndex("Midshipman Longley")].dialog.CurrentNode = "which_way";
+			LAi_ActorDialog(characterFromID("Midshipman Longley"), PChar, "Hornblower_walk_to_Punta_de_Maisi2",10.0,10.0);
+		break;
+
+		case "Hornblower_walk_to_Punta_de_Maisi2":
+			LAi_SetOfficerType(characterFromID("Midshipman Longley"));
+			LAi_SetActorType(characterFromID("Perrin"));
+			Characters[GetCharacterIndex("Perrin")].dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			Characters[GetCharacterIndex("Perrin")].dialog.CurrentNode = "I_know_the_way";
+			LAi_ActorDialog(characterFromID("Perrin"), PChar, "Hornblower_walk_to_Punta_de_Maisi3",10.0,10.0);
+		break;
+
+		case "Hornblower_walk_to_Punta_de_Maisi3":
+			LAi_SetActorType(CharacterFromID("Perrin"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Perrin"), "", 1.0);
+			Locations[FindLocation("Cuba_Shore_04")].reload.l2.disable = 0;
+			PChar.vcskip = true;
+			PChar.quest.Hornblower_board_Natividad.win_condition.l1 = "locator";
+			PChar.quest.Hornblower_board_Natividad.win_condition.l1.location = "Cuba_Shore_03";
+			PChar.quest.Hornblower_board_Natividad.win_condition.l1.locator_group = "reload";
+			PChar.quest.Hornblower_board_Natividad.win_condition.l1.locator = "boat";
+			PChar.quest.Hornblower_board_Natividad.win_condition = "Hornblower_board_Natividad";
+
+			PChar.quest.hornblower_jungle_ambush.win_condition.l1 = "Location";
+			PChar.quest.hornblower_jungle_ambush.win_condition.l1.location = "Cuba_Jungle_01";
+			PChar.quest.hornblower_jungle_ambush.win_condition = "Hornblower_jungle_ambush";			
+		break;
+
+		case "Hornblower_jungle_ambush":
+			Rapid_Raid("Soldiers", 5, SPAIN, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, "", "Patrol soldier", OFFIC_TYPE_GUARD, 3, true, "blade_mKnife", "pistolmket");
+			PChar.quest.hornblower_havana_ambush.win_condition.l1 = "Location";
+			PChar.quest.hornblower_havana_ambush.win_condition.l1.location = "Havana_Outskirts";
+			PChar.quest.hornblower_havana_ambush.win_condition = "Hornblower_havana_ambush";
+		break;
+
+		case "Hornblower_havana_ambush":
+			Rapid_Raid("Soldiers", 5, SPAIN, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, "", "Patrol soldier", OFFIC_TYPE_GUARD, 3, true, "blade_mKnife", "pistolmket");
+			PChar.quest.hornblower_jungle_ambush.win_condition.l1 = "Location";
+			PChar.quest.hornblower_jungle_ambush.win_condition.l1.location = "Cuba_Jungle_01";
+			PChar.quest.hornblower_jungle_ambush.win_condition = "Hornblower_jungle_ambush";
+		break;
+
+		case "Hornblower_board_Natividad":
+			PChar.quest.hornblower_jungle_ambush.over = "yes";
+			PChar.quest.hornblower_havana_ambush.over = "yes";
+			DoQuestReloadToLocation("ShipDeck2", "reload", "boatl", "Hornblower_board_Natividad2");
+		break;
+
+		case "Hornblower_board_Natividad2":
+			ChangeCharacterAddressGroup(CharacterFromID("Matthews"), "ShipDeck2", "rld", "loc14");
+			LAi_SetWarriorType(CharacterFromID("Matthews"));
+			LAi_group_MoveCharacter(CharacterFromID("Matthews"), LAI_GROUP_PLAYER);
+			ChangeCharacterAddressGroup(CharacterFromID("Styles"), "ShipDeck2", "goto", "goto1");
+			LAi_SetWarriorType(CharacterFromID("Styles"));
+			LAi_group_MoveCharacter(CharacterFromID("Styles"), LAI_GROUP_PLAYER);
+			LAi_SetWarriorType(CharacterFromID("Perrin"));
+			ChangeCharacterAddressGroup(CharacterFromID("Perrin"), "ShipDeck2", "rld", "loc13");
+			LAi_group_MoveCharacter(CharacterFromID("Perrin"), LAI_GROUP_PLAYER);
+			ChangeCharacterAddressGroup(CharacterFromID("Oldroyd"), "ShipDeck2", "goto", "goto2");
+			LAi_SetWarriorType(CharacterFromID("Oldroyd"))
+			LAi_group_MoveCharacter(CharacterFromID("Oldroyd"), LAI_GROUP_PLAYER);
+//			ChangeCharacterAddressGroup(CharacterFromID("Marsh"), "ShipDeck2", "rld", "loc12");
+//			LAi_SetWarriorType(CharacterFromID("Marsh"));
+//			LAi_group_MoveCharacter(CharacterFromID("Marsh"), LAI_GROUP_PLAYER);
+/*			PChar.quest.Hornblower_Natividad_alarm1.win_condition.l1 = "locator";
+			PChar.quest.Hornblower_Natividad_alarm1.win_condition.l1.location = "ShipDeck2";
+			PChar.quest.Hornblower_Natividad_alarm1.win_condition.l1.locator_group = "rld";
+			PChar.quest.Hornblower_Natividad_alarm1.win_condition.l1.locator = "loc1";
+			PChar.quest.Hornblower_Natividad_alarm1.win_condition = "Hornblower_Natividad_alarm";
+
+			PChar.quest.Hornblower_Natividad_alarm2.win_condition.l1 = "locator";
+			PChar.quest.Hornblower_Natividad_alarm2.win_condition.l1.location = "ShipDeck2";
+			PChar.quest.Hornblower_Natividad_alarm2.win_condition.l1.locator_group = "rld";
+			PChar.quest.Hornblower_Natividad_alarm2.win_condition.l1.locator = "loc2";
+			PChar.quest.Hornblower_Natividad_alarm2.win_condition = "Hornblower_Natividad_alarm"; */
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck2", "goto", "goto1");
+			if (!LAi_IsDead(characterFromID("Midshipman Longley")))
+			{
+				ChangeCharacterAddressGroup(CharacterFromID("Midshipman Longley"), "ShipDeck2", "goto", "goto2");
+				LAi_SetActorType(characterFromID("Midshipman Longley"));
+				LAi_ActorRunToLocator(characterFromID("Midshipman Longley"), "rld", "loc1", "", 10.0);
+			}
+			LAi_SetActorType(PChar);
+			LAi_ActorRunToLocator(PChar, "rld", "loc2", "Hornblower_Natividad_alarm", 10.0);
+		break;
+
+		case "Hornblower_Natividad_alarm":
+			LAi_ActorTurnToLocator(PChar, "rld", "loc8");
+			LAi_QuestDelay("Hornblower_turns_round", 1.0);
+		break;
+
+		case "Hornblower_turns_round":
+			LAi_SetPlayerType(PChar);
+			if (LAi_IsDead(characterFromID("Midshipman Longley"))) LAi_QuestDelay("Hornblower_Natividad_alarm2", 0.1);
+			else
+			{
+				LAi_SetActorType(characterFromID("Midshipman Longley"));
+				Characters[GetCharacterIndex("Midshipman Longley")].dialog.CurrentNode = "wake_them_up";
+				LAi_ActorDialog(characterFromID("Midshipman Longley"), PChar, "Hornblower_Longley_alarm",5.0,5.0);
+			}
+		break;
+
+		case "Hornblower_Longley_alarm":
+			LAi_SetActorType(characterFromID("Midshipman Longley"));
+			LAi_ActorGoToLocator(characterFromID("Midshipman Longley"), "rld", "loc1", "Hornblower_Natividad_alarm2", 10.0);
+		break;
+
+		case "Hornblower_Natividad_alarm2":
+			if (!LAi_IsDead(characterFromID("Midshipman Longley")))
+			{
+				LAi_SetOfficerType(characterFromID("Midshipman Longley"));
+				SetCharacterRemovable(characterFromID("Midshipman Longley"), true);
+			}
+           		PlaySound("Ambient\Sea\bell6_0300_0700_1100.wav");
+			LAi_QuestDelay("Hornblower_Natividad_deck_battle", 2.0);
+		break;
+
+		case "Hornblower_Natividad_deck_battle":
+			PlaySound("OBJECTS\abordage\abordage2.wav");
+			for (i=1; i<5; i++)
+			{
+				attr = "m" + i;
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[SPAIN].fantomModel.(attr),  "reload", "reload1");
+				TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, BLADE_ITEM_TYPE));
+				TakeItemFromCharacter(sld, FindCharacterItemByGroup(sld, GUN_ITEM_TYPE));
+				GiveItem2Character(sld, "blade4");
+				EquipCharacterByItem(sld, "blade4");
+				GiveItem2Character(sld, "PiratesPistol");
+				EquipCharacterByItem(sld,"PiratesPistol");
+				if (ENABLE_AMMOMOD) {	// LDH change
+					TakenItems(sld, "gunpowder", 1 + rand(2));
+					TakenItems(sld, "pistolbullets", 1 + rand(2));
+				}
+				sld.id = "Natividad guard " + i;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				LAi_SetWarriorType(sld);
+				LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+				LAi_group_SetRelation("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+				LAi_group_FightGroups("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, true);
+			}
+			NPChar = CharacterFromID("Natividad_captain");
+			ChangeCharacterAddressGroup(NPChar, "ShipDeck2", "rld", "startloc");
+			LAi_SetHP(NPChar, 800.0, 800.0);
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToLocator(PChar, "rld", "startloc");
+			LAi_QuestDelay("Hornblower_Natividad_captain_attacks", 1.0);
+		break;
+
+		case "Hornblower_Natividad_captain_attacks":
+			LAi_SetPlayerType(PChar);
+			NPChar = CharacterFromID("Natividad_captain");
+			LAi_SetActorType(NPChar);
+			LAi_ActorAttack(NPChar, PChar, "");
+	        	LAi_SetCheckMinHP(NPChar, LAi_GetCharacterHP(NPChar)*0.25, false, "Hornblower_Natividad_surrender");
+		break;
+
+		case "Hornblower_Natividad_surrender":
+			LAi_LocationFightDisable(&Locations[FindLocation("ShipDeck2")], true);
+			LAi_SetFightMode(PChar, false);
+			DeleteAttribute(&PChar,"vcskip");
+			LAi_SetActorType(CharacterFromID("Natividad_captain"));
+			Characters[GetCharacterIndex("Natividad_captain")].dialog.CurrentNode = "Natividad_captain_surrender";
+			LAi_ActorDialog(characterFromID("Natividad_captain"), PChar, "Hornblower_put_them_in_irons",5.0,5.0);
+		break;
+
+		case "Hornblower_put_them_in_irons":
+			if (!LAi_IsDead(characterFromID("Midshipman Longley")))
+			{
+				LAi_SetActorType(characterFromID("Midshipman Longley"));
+				LAi_ActorGoToLocator(characterFromID("Midshipman Longley"), "rld", "loc1", "", 30.0);
+			}
+			LAi_SetActorType(CharacterFromID("Lt. William Bush"));
+			LAi_ActorRunToLocator(characterFromID("Lt. William Bush"), "rld", "loc0", "Hornblower_put_them_in_irons2", 30.0);
+		break;
+
+		case "Hornblower_put_them_in_irons2":
+			if (!LAi_IsDead(characterFromID("Midshipman Longley"))) LAi_SetOfficerType(characterFromID("Midshipman Longley"));
+			LAi_SetActorType(CharacterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "put_them_in_irons";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "Hornblower_Natividad_captain_protests",10.0,10.0);
+		break;
+
+		case "Hornblower_Natividad_captain_protests":
+			LAi_SetOfficerType(characterFromID("Lt. William Bush"));
+			LAi_SetActorType(CharacterFromID("Natividad_captain"));
+			Characters[GetCharacterIndex("Natividad_captain")].dialog.CurrentNode = "Natividad_rules_of_war";
+			LAi_ActorDialog(characterFromID("Natividad_captain"), PChar, "Hornblower_Natividad_captured",5.0,5.0);
+		break;
+
+		case "Hornblower_Natividad_captured":
+			Preprocessor_AddQuestData("our_ship", PChar.ship.name);
+			AddQuestRecord("Natividad", 6);
+			Preprocessor_Remove("our_ship");
+			PChar.quest.oldship.name = PChar.ship.name;
+			ExchangeCharacterShip(PChar, characterFromID("El Supremo"));
+			ExchangeCharacterShip(PChar, characterFromID("Natividad_captain"));
+			SetCurrentTime(7, 0);
+			SetNextWeather("Clear");
+			Locations[FindLocation("ShipDeck2")].models.always.locators = "udeck_ld_gr";
+			DoQuestReloadToLocation("ShipDeck2", "rld", "loc0", "Hornblower_Natividad_captured2");
+		break;
+
+		case "Hornblower_Natividad_captured2":
+			ChangeCharacterAddress(characterFromID("Natividad_captain"), "None", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck2", "rld", "loc2");
+			ChangeCharacterAddress(characterFromID("Midshipman Longley"), "None", "");
+			SetCharacterRemovable(characterFromID("Midshipman Longley"), false);
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Midshipman Longley"));
+//			if (!LAi_IsDead(characterFromID("Midshipman Longley"))) ChangeCharacterAddressGroup(CharacterFromID("Midshipman Longley"), "ShipDeck2", "rld", "loc1");
+			LAi_SetActorType(CharacterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "shes_a_beauty";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "",5.0,5.0);
+//			LAi_QuestDelay("Hornblower_11_gun_salute", 5.0);
+		break;
+
+		case "Hornblower_Natividad_handover":	// Triggered by dialog with Lt. William Bush
+			SetCharacterShipLocation(characterFromID("Jose Hernandez"), "ShipDeck2");
+			DoQuestReloadToLocation("ShipDeck2", "rld", "loc0", "Hornblower_Natividad_handover2");
+		break;
+
+		case "Hornblower_Natividad_handover2":
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck2", "rld", "loc2");
+			ChangeCharacterAddressGroup(CharacterFromID("Matthews"), "ShipDeck2", "reload", "reload1");
+			ChangeCharacterAddressGroup(CharacterFromID("Styles"), "ShipDeck2", "reload", "reload1");
+			ChangeCharacterAddressGroup(CharacterFromID("Perrin"), "ShipDeck2", "reload", "reload1");
+			ChangeCharacterAddressGroup(CharacterFromID("Oldroyd"), "ShipDeck2", "reload", "reload1");
+			ChangeCharacterAddressGroup(CharacterFromID("Marsh"), "ShipDeck2", "reload", "reload1");
+			ChangeCharacterAddressGroup(CharacterFromID("Midshipman Longley"), "ShipDeck2", "reload", "reload1");
+			for (i=1; i<5; i++)
+			{
+				attr = "m" + i;
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.(attr), "rld", "loc" + (i+2));
+				LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+				GiveSoldierWeapon(sld, ENGLAND);
+				sld.id = "ship_guard1";
+				LAi_SetActorType(sld);
+				LAi_ActorTurnToLocator(sld, "reload", "boatl");
+			}
+//			if (!LAi_IsDead(characterFromID("Midshipman Longley")))
+//			{
+//				ChangeCharacterAddressGroup(CharacterFromID("Midshipman Longley"), "ShipDeck2", "rld", "loc1");
+//				LAi_SetOfficerType(characterFromID("Midshipman Longley"));
+//			}
+			LAi_SetActorType(CharacterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "El_Supremo_boarding";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "",5.0,5.0);
+		break;
+
+		case "Hornblower_11_gun_salute":	// Triggered by dialog with Lt. William Bush
+			LAi_SetOfficerType(characterFromID("Lt. William Bush"));
+			ChangeCharacterAddressGroup(CharacterFromID("El Supremo"), "ShipDeck2", "reload", "boatl");
+			ChangeCharacterAddressGroup(CharacterFromID("Jose Hernandez"), "ShipDeck2", "reload", "boatl");
+			LAi_ActorFollow(CharacterFromID("Jose Hernandez"), CharacterFromID("El Supremo"), "", 10.0);
+
+			PChar.quest.cannon_number = 1;
+			for (i=0; i<11; i++)
+			{
+				LAi_QuestDelay("Hornblower_fire_salute_cannon", i * 1.0);
+			}
+			LAi_QuestDelay("Hornblower_El_Supremo_wants_more_guns", 11.5);
+		break;
+
+		case "Hornblower_fire_salute_cannon":
+			j = iclamp(1,11,sti(PChar.quest.cannon_number));
+			PChar.quest.cannon_number = j + 1;
+			locatorName = "cannon" + (100 + j);
+			ReadLocatorCoordinates("cannon", locatorName, &x1, &y1, &z1);
+			CreateParticleSystemX("blast_inv", x1, y1, z1, -0.8768, 0.0, 0.0,0);
+			CreateParticleSystemX("cancloud", x1, y1, z1, -0.8768, 0.0, 0.0,20);
+			CreateParticleSystemX("cancloud", x1, y1, z1, -0.8768, 0.0, 0.0,20);
+			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+		break;
+
+		case "Hornblower_El_Supremo_wants_more_guns":
+			LAi_SetActorType(characterFromID("Jose Hernandez"));
+			LAi_ActorFollow(characterFromID("Jose Hernandez"), characterFromID("El Supremo"), "", 25.0);
+			LAi_SetActorType(characterFromID("El Supremo"));
+			LAi_ActorGoToLocator(characterFromID("El Supremo"), "rld", "loc1", "Hornblower_El_Supremo_wants_more_guns2", 15.0);
+		break;
+
+		case "Hornblower_El_Supremo_wants_more_guns2":
+			LAi_SetActorType(characterFromID("El Supremo"));
+			Characters[GetCharacterIndex("El Supremo")].dialog.CurrentNode = "wrong_signal";
+			LAi_ActorDialog(characterFromID("El Supremo"), PChar, "Hornblower_El_Supremo_inspects_crew",5.0,5.0);
+		break;
+
+		case "Hornblower_El_Supremo_inspects_crew":
+			LAi_SetActorType(characterFromID("El Supremo"));
+			LAi_ActorTurnToLocator(characterFromID("El Supremo"), "rld", "aloc8");
+			LAi_QuestDelay("Hornblower_El_Supremo_inspects_crew2", 2.0);
+		break;
+
+		case "Hornblower_El_Supremo_inspects_crew2":
+			LAi_SetActorType(characterFromID("El Supremo"));
+			Characters[GetCharacterIndex("El Supremo")].dialog.CurrentNode = "you_did_not_kill_many";
+			LAi_ActorDialog(characterFromID("El Supremo"), PChar, "Hornblower_return_to_own_ship",5.0,5.0);
+		break;
+
+		case "Hornblower_return_to_own_ship":
+			LAi_SetActorType(CharacterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "return_to_ship";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "Hornblower_return_to_own_ship2",10.0,10.0);
+		break;
+
+		case "Hornblower_return_to_own_ship2":
+			ChangeCharacterAddress(characterFromID("Midshipman Longley"), "None", "");
+			SetCharacterRemovable(characterFromID("Lt. William Bush"), true);
+			LAi_SetImmortal(characterfromID("Lt. William Bush"), false);
+			bQuestDisableSeaEnter = false;
+			DisableFastTravel(false);
+
+			ExchangeCharacterShip(PChar, characterFromID("El Supremo"));
+//			PChar.ship.name = PChar.quest.oldship.name;
+			DeleteQuestAttribute("oldship.name");
+			AddQuestRecord("Natividad", 7);
+
+			Characters[GetCharacterIndex("El Supremo")].Flags.Personal = 0;
+			Characters[GetCharacterIndex("El Supremo")].Flags.Personal.texture = 5;
+            		Characters[GetCharacterIndex("El Supremo")].nation = PERSONAL_NATION;
+			PChar.quest.Natividad_Group = Group_CreateGroup("Natividad_El_Supremo");
+			Group_AddCharacter("Natividad_El_Supremo", "El Supremo");
+			Group_SetGroupCommander("Natividad_El_Supremo", "El Supremo");
+
+			Group_SetPursuitGroup("Natividad_El_Supremo", PLAYER_GROUP);
+			Group_SetAddress("Natividad_El_Supremo", "Cuba", "Quest_ships", "quest_ship_7");
+			Sea_LoginGroupNow("Natividad_El_Supremo");
+
+			QuestToSeaLogin_PrepareLoc("Cuba", "reload", "reload_9", false);
+			QuestToSeaLogin_Launch();
+
+			PChar.quest.Hornblower_Muelle_arrival.win_condition.l1 = "location";
+			PChar.quest.Hornblower_Muelle_arrival.win_condition.l1.location = "IslaMuelle";
+			PChar.quest.Hornblower_Muelle_arrival.win_condition = "Hornblower_Muelle_arrival";
+			PChar.quest.Hornblower_prepare_for_lugger_captain.win_condition.l1 = "location";
+			PChar.quest.Hornblower_prepare_for_lugger_captain.win_condition.l1.location = "IslaMuelle";
+			PChar.quest.Hornblower_prepare_for_lugger_captain.win_condition = "Hornblower_Bush_reports_lugger";
+		break;
+
+		case "Hornblower_Muelle_arrival":
+			PChar.quest.Spanish_Lugger_Group = Group_CreateGroup("Spanish lugger");
+			Group_AddCharacter("Spanish lugger", "Spanish_lugger_captain");
+			Group_SetGroupCommander("Spanish lugger", "Spanish_lugger_captain");
+
+			Group_SetPursuitGroup("Spanish lugger", PLAYER_GROUP);
+			Group_SetAddress("Spanish lugger", "IslaMuelle", "Quest_ships", "quest_ship_1");
+//			Sea_LoginGroupNow("Spanish lugger");
+		break;
+
+		case "Hornblower_prepare_for_lugger_captain":
+			PlaySound("INTERFACE\_EvEnemy1.wav");
+			LAi_QuestDelay("Hornblower_to_deck_for_lugger_captain", 5.0);
+		break;
+
+		case "Hornblower_Bush_reports_lugger":
+			PlaySound("INTERFACE\_EvEnemy1.wav");
+			SetNationRelationBoth(ENGLAND, SPAIN, RELATION_FRIEND);
+			SetNationRelationBoth(SPAIN, FRANCE, RELATION_ENEMY);
+			SetNationRelationBoth(ENGLAND, FRANCE, RELATION_ENEMY);	// Just in case random relations have put them at peace by now
+			StartQuestMovie(true, true, false);
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "Cabin_medium", "reload", "reload1");
+			DoReloadFromSeaToLocation("Cabin_medium", "rld", "startloc");
+			LAi_QuestDelay("Hornblower_Bush_reports_lugger2", 0.1);
+		break;
+
+		case "Hornblower_Bush_reports_lugger2":
+			LAi_SetActorType(CharacterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "lugger_report";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "Hornblower_to_deck_for_lugger_captain",5.0,5.0);
+		break;
+
+		case "Hornblower_to_deck_for_lugger_captain":
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck1", "goto", "goto3");
+			ChangeCharacterAddressGroup(CharacterFromID("Lieutenant Gerard"), "ShipDeck1", "rld", "loc4");
+			ChangeCharacterAddressGroup(CharacterFromID("Matthews"), "ShipDeck1", "goto", "goto2");
+			ChangeCharacterAddressGroup(CharacterFromID("Styles"), "ShipDeck1", "goto", "goto1");
+			ChangeCharacterAddressGroup(CharacterFromID("Oldroyd"), "ShipDeck1", "goto", "goto11");
+			ChangeCharacterAddressGroup(CharacterFromID("Marsh"), "ShipDeck1", "goto", "goto12");
+			LAi_SetCitizenTypeNoGroup(CharacterFromID("Matthews"));
+			LAi_SetCitizenTypeNoGroup(CharacterFromID("Styles"));
+			LAi_SetCitizenTypeNoGroup(CharacterFromID("Oldroyd"));
+			LAi_SetCitizenTypeNoGroup(CharacterFromID("Marsh"));
+			SetCharacterShipLocation(characterFromID("Spanish_lugger_captain"), "ShipDeck1");
+			DoQuestReloadToLocation("ShipDeck1", "rld", "loc2", "Hornblower_Gerard_reports_women");
+//			DoReloadFromSeaToLocation("ShipDeck1", "rld", "loc2");
+//			LAi_QuestDelay("Hornblower_to_deck_for_lugger_captain2", 0.1);
+		break;
+
+		case "Hornblower_Gerard_reports_women":
+			if (!LAi_IsDead(characterFromID("Midshipman Longley")))
+			{
+				ChangeCharacterAddressGroup(CharacterFromID("Midshipman Longley"), "ShipDeck1", "goto", "goto1");
+				LAi_SetActorType(characterFromID("Midshipman Longley"));
+				LAi_ActorTurnToLocator(characterFromID("Midshipman Longley"), "reload", "boatl");
+			}
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m1, "goto", "goto5");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard1";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "goto", "goto10");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard2";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "goto", "goto9");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard3";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+			LAi_SetActorType(CharacterFromID("Lieutenant Gerard"));
+			Characters[GetCharacterIndex("Lieutenant Gerard")].dialog.CurrentNode = "women_aboard";
+			LAi_ActorDialog(characterFromID("Lieutenant Gerard"), PChar, "Hornblower_to_deck_for_lugger_captain2",5.0,5.0);
+		break;
+
+		case "Hornblower_to_deck_for_lugger_captain2":
+			LAi_SetOfficerType(CharacterFromID("Lt. William Bush"));
+			LAi_SetOfficerType(CharacterFromID("Lieutenant Gerard"));
+			PlaySound("OBJECTS\shipcharge\Eng_the_side.wav");
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToLocator(PChar, "reload", "boatl");
+			LAi_QuestDelay("Hornblower_to_deck_for_lugger_captain3", 2.0);
+		break;
+
+		case "Hornblower_to_deck_for_lugger_captain3":
+			LAi_SetPlayerType(PChar);
+			ChangeCharacterAddressGroup(CharacterFromID("Spanish_lugger_captain"), "ShipDeck1", "reload", "boatl");
+			LAi_SetActorType(characterFromID("Spanish_lugger_captain"));
+			LAi_ActorGoToLocator(characterFromID("Spanish_lugger_captain"), "goto", "goto2", "Hornblower_lugger_captain_boards2", 10.0);
+		break;
+
+		case "Hornblower_lugger_captain_boards2":
+			LAi_SetActorType(characterFromID("Spanish_lugger_captain"));
+			Characters[GetCharacterIndex("Spanish_lugger_captain")].dialog.CurrentNode = "introductions";
+			LAi_ActorDialog(characterFromID("Spanish_lugger_captain"), PChar, "Hornblower_Bush_to_get_prisoners",5.0,5.0);
+		break;
+
+		case "Hornblower_Bush_to_get_prisoners":
+			LAi_SetActorType(characterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "Bring the prisoners";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "Hornblower_lugger_captain_continues",5.0,5.0);
+		break;
+
+		case "Hornblower_Bush_to_get_prisoners2":	// Triggered by dialog with Lt. William Bush
+			LAi_SetActorType(characterFromID("Lt. William Bush"));
+			LAi_ActorGoToLocation(CharacterFromID("Lt. William Bush"), "reload", "reload1", "none", "", "", "", 30);
+		break;
+
+		case "Hornblower_lugger_captain_continues":
+			LAi_SetActorType(characterFromID("Spanish_lugger_captain"));
+			Characters[GetCharacterIndex("Spanish_lugger_captain")].dialog.CurrentNode = "new king";
+			LAi_ActorDialog(characterFromID("Spanish_lugger_captain"), PChar, "Hornblower_prisoners_arrive",5.0,5.0);
+		break;
+
+		case "Hornblower_prisoners_arrive":
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck1", "reload", "reload1");
+			LAi_SetOfficerType(CharacterFromID("Lt. William Bush"));
+			ChangeCharacterAddressGroup(CharacterFromID("Natividad_captain"), "ShipDeck1", "reload", "reload3");
+			LAi_SetActorType(characterFromID("Spanish_lugger_captain"));
+			LAi_ActorGoToLocator(characterFromID("Spanish_lugger_captain"), "goto", "goto15", "Spanish_lugger_captain_turns", 10.0);
+			LAi_SetActorType(characterFromID("Natividad_captain"));
+			LAi_ActorGoToLocator(characterFromID("Natividad_captain"), "goto", "goto16", "", 10.0);
+//			LAi_ActorFollow(characterFromID("Natividad_captain"), characterFromID("Spanish_lugger_captain"), "", 25.0);
+			LAi_QuestDelay("Hornblower_prisoners_arrive2", 2.0);
+		break;
+
+		case "Spanish_lugger_captain_turns":
+			LAi_SetActorType(characterFromID("Spanish_lugger_captain"));
+			LAi_ActorTurnToLocator(characterFromID("Spanish_lugger_captain"), "reload", "reload3");
+		break;
+
+		case "Hornblower_prisoners_arrive2":
+			for (i=0; i<3; i++)
+			{
+				attr = "m" + i;
+				locatorName = "reload3_" + (i+1);
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[SPAIN].fantomModel.(attr), "reload", "reload3");
+				sld.id = "Spanish_prisoner" + i;
+				TakeItemFromCharacter(sld, FindCharacterItemByGroup(sld, BLADE_ITEM_TYPE));
+				TakeItemFromCharacter(sld, FindCharacterItemByGroup(sld, GUN_ITEM_TYPE));
+				LAi_SetActorType(sld);
+				LAi_ActorGoToLocator(sld, "reload", locatorName, "", 10.0);
+			}
+			LAi_QuestDelay("Hornblower_prisoners_arrive3", 1.0);
+			LAi_QuestDelay("Hornblower_read_letter", 2.0);
+			LAi_QuestDelay("Hornblower_Lady_Barbara_arrives", 3.0);
+		break;
+
+		case "Hornblower_prisoners_arrive3":
+			for (i=0; i<3; i++)
+			{
+				sld = CharacterFromID("Spanish_prisoner" + i);
+				LAi_SetActorType(sld);
+				LAi_ActorFollow(sld, characterFromID("Natividad_captain"), "", 25.0);
+			}
+		break;
+
+		case "Hornblower_read_letter":
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToLocator(PChar, "rld", "startloc");
+			LAi_QuestDelay("Hornblower_read_letter2", 0.5);
+			LAi_SetActorType(CharacterFromID("Lieutenant Gerard"));
+			LAi_ActorGoToLocator(characterFromID("Lieutenant Gerard"), "goto", "goto4", "", 30.0);
+		break;
+
+		case "Hornblower_read_letter2":
+			PChar.dialog.filename = "blaze_dialog.c";
+			Pchar.dialog.CurrentNode = "sidequest_Admiralty_letter";
+			LAi_SetActorType(PChar);
+			LAi_ActorSelfDialog(PChar, "Hornblower_Lady_Barbara_arrives2");
+		break;
+
+		case "Hornblower_Lady_Barbara_arrives":
+			ChangeCharacterAddressGroup(CharacterFromID("Lady Barbara Wellesley"), "ShipDeck1", "reload", "boatl");
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorGoToLocator(characterFromID("Lady Barbara Wellesley"), "goto", "goto2", "", 10.0);
+		break;
+
+		case "Hornblower_Lady_Barbara_arrives2":
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "welcome_aboard";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_Hebe_arrives",5.0,5.0);
+		break;
+
+		case "Hornblower_Hebe_arrives":
+			ChangeCharacterAddressGroup(CharacterFromID("Hebe"), "ShipDeck1", "reload", "boatl");
+			if (!LAi_IsDead(characterFromID("Midshipman Longley")))
+			{
+//				NPChar = CharacterFromID("Midshipman Longley");
+				PChar.quest.Hornblower_officer = "Midshipman Longley";
+			}
+			else
+			{
+//				NPChar = CharacterFromID("Lieutenant Gerard");
+//				NPChar.dialog.Filename = "Midshipman Longley_dialog.c";
+				PChar.quest.Hornblower_officer = "Lieutenant Gerard";
+			}
+			NPChar = CharacterFromID(PChar.quest.Hornblower_officer);
+			NPChar.dialog.Filename = "Midshipman Longley_dialog.c";
+			LAi_SetActorType(NPChar);
+			NPChar.dialog.CurrentNode = "what_is_screaming";
+			LAi_ActorDialogNow(NPChar, PChar, "Hornblower_Ladies_want_passage",1.0);
+		break;
+
+		case "Hornblower_Ladies_want_passage":
+			LAi_SetActorType(characterFromID("Hebe"));
+			LAi_ActorGoToLocator(characterFromID("Hebe"), "goto", "goto2", "Hornblower_Hebe_follows_Barbara", 10.0);
+//			LAi_ActorGoToLocation(CharacterFromID("Hebe"), "reload", "reload2", "none", "", "", "", 30);
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "require_passage";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_lugger_captain_protests",5.0,5.0);
+		break;
+
+		case "Hornblower_Hebe_follows_Barbara":
+			LAi_ActorFollow(characterFromID("Hebe"), characterFromID("Lady Barbara Wellesley"), "", 25.0);
+		break;
+
+		case "Hornblower_lugger_captain_protests":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorTurnToLocator(characterFromID("Lady Barbara Wellesley"), "ships", "ship_1");
+			LAi_SetActorType(characterFromID("Spanish_lugger_captain"));
+			Characters[GetCharacterIndex("Spanish_lugger_captain")].dialog.CurrentNode = "gave_away_Natividad";
+			LAi_ActorDialog(characterFromID("Spanish_lugger_captain"), PChar, "Hornblower_ladies_cant_stay",5.0,5.0);
+		break;
+
+		case "Hornblower_ladies_cant_stay":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "you_cant_stay_aboard";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_adios_lugger_captain",5.0,5.0);
+		break;
+
+		case "Hornblower_adios_lugger_captain":
+			NPChar = CharacterFromID(PChar.quest.Hornblower_officer);
+			LAi_SetActorType(NPChar);
+			LAi_ActorGoToLocator(NPChar, "reload", "reload3", "", 30.0);
+			LAi_SetActorType(characterFromID("Spanish_lugger_captain"));
+			Characters[GetCharacterIndex("Spanish_lugger_captain")].dialog.CurrentNode = "adios";
+			LAi_ActorDialog(characterFromID("Spanish_lugger_captain"), PChar, "Hornblower_cabin_moves1",5.0,5.0);
+		break;
+
+		case "Hornblower_cabin_moves1":
+			LAi_SetActorType(characterFromID("Spanish_lugger_captain"));
+			LAi_ActorGoToLocation(CharacterFromID("Spanish_lugger_captain"), "reload", "boatl", "none", "", "", "", 60);
+			LAi_SetActorType(characterFromID("Natividad_captain"));
+			LAi_ActorGoToLocation(CharacterFromID("Natividad_captain"), "reload", "boatl", "none", "", "", "", 60);
+			for (i=0; i<3; i++)
+			{
+				sld = CharacterFromID("Spanish_prisoner" + i);
+				LAi_ActorGoToLocation(sld, "reload", "boatl", "none", "", "", "", 60);
+			}
+
+			NPChar = CharacterFromID(PChar.quest.Hornblower_officer);
+			NPChar.dialog.Filename = "Midshipman Longley_dialog.c";
+			LAi_SetActorType(NPChar);
+			NPChar.dialog.CurrentNode = "cabin_moves";
+			LAi_ActorDialog(NPChar, PChar, "Hornblower_cabin_moves2",15.0,15.0);
+		break;
+
+		case "Hornblower_cabin_moves2":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "regret_insistence";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_cabin_scene1",5.0,5.0);
+		break;
+
+		case "Hornblower_cabin_scene1":
+			AddPassenger(Pchar, characterFromID("Lady Barbara Wellesley"), 0);
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].quest.officertype = OFFIC_TYPE_DOCTOR;
+			SetCharacterRemovable(characterFromID("Lady Barbara Wellesley"), false);
+			DoQuestReloadToLocation("Cabin_medium", "reload", "reload1", "Hornblower_becomes_Longley_for_cabin_scene2");
+		break;
+
+		case "Hornblower_becomes_Longley_for_cabin_scene2":
+			ChangeCharacterAddress(characterFromID("Spanish_lugger_captain"), "None", "");
+			ChangeCharacterAddress(characterFromID("Natividad_captain"), "None", "");
+			PChar.quest.old_model = PChar.model;
+			PChar.quest.old_name = PChar.name;
+			PChar.quest.old_lastname = PChar.lastname;
+			SetModelFromID(PChar, "brtmds3_18");
+			PChar.name = "Midshipman";
+			PChar.lastname = GetMyLastName(CharacterFromID(PChar.quest.Hornblower_officer));
+			LAi_SetActorType(PChar);
+			ChangeCharacterAddressGroup(CharacterFromID("Lady Barbara Wellesley"), "Cabin_medium", "reload", "reload1");
+			LAi_SetActorType(CharacterFromID("Lady Barbara Wellesley"));
+			LAi_ActorGoToLocator(CharacterFromID("Lady Barbara Wellesley"), "rld", "aloc0", "", 10.0);
+			LAi_QuestDelay("Hornblower_cabin_scene3", 0.2);
+		break;
+
+		case "Hornblower_cabin_scene3":
+			LAi_ActorGoToLocator(PChar, "rld", "aloc2", "Hornblower_cabin_scene4", 10.0);
+		break;
+
+		case "Hornblower_cabin_scene4":
+			ChangeCharacterAddressGroup(CharacterFromID("Hebe"), "Cabin_medium", "reload", "reload1");
+			LAi_SetActorType(CharacterFromID("Hebe"));
+			LAi_ActorGoToLocator(CharacterFromID("Hebe"), "rld", "aloc1", "", 10.0);
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "not_disturbing";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_second_opinion",5.0,5.0);
+		break;
+
+		case "Hornblower_second_opinion":
+			ChangeCharacterAddressGroup(CharacterFromID("Oldroyd"), "Cabin_medium", "reload", "reload1");
+			LAi_SetActorType(characterFromID("Oldroyd"));			
+			Characters[GetCharacterIndex("Oldroyd")].dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			Characters[GetCharacterIndex("Oldroyd")].dialog.CurrentNode = "second_opinion";
+			LAi_ActorDialog(characterFromID("Oldroyd"), PChar, "Hornblower_yelling_from_deck",5.0,5.0);
+		break;
+
+		case "Hornblower_yelling_from_deck":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "not_so_gentle";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_back_to_muelle_sea",5.0,5.0);
+		break;
+
+		case "Hornblower_back_to_muelle_sea":
+			AddQuestRecord("Natividad", 8);
+			SetModelFromID(PChar, PChar.quest.old_model);
+			PChar.name = PChar.quest.old_name;
+			PChar.lastname = PChar.quest.old_lastname;
+			DeleteQuestAttribute("old_model");
+			DeleteQuestAttribute("old_name");
+			DeleteQuestAttribute("old_lastname");
+			SetCharacterShipLocation(characterFromID("Spanish_lugger_captain"), "None");
+			DoQuestReloadToLocation("ShipDeck1", "rld", "loc2", "Hornblower_back_to_muelle_sea2");
+		break;
+
+		case "Hornblower_back_to_muelle_sea2":
+			LAi_SetActorType(characterFromID("Lt. William Bush"));
+			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "still_ship_of_war";
+			LAi_ActorDialog(characterFromID("Lt. William Bush"), PChar, "Hornblower_back_to_muelle_sea3",5.0,5.0);
+		break;
+
+		case "Hornblower_back_to_muelle_sea3":
+			EndQuestMovie();
+			LAi_SetOfficerType(CharacterFromID("Lt. William Bush"));
+			LAi_SetOfficerType(CharacterFromID("Lieutenant Gerard"));
+			LAi_SetOfficerType(CharacterFromID("Midshipman Longley"));
+			Group_SetPursuitGroup("Spanish lugger", PLAYER_GROUP);
+			Group_SetAddress("Spanish lugger", "IslaMuelle", "Quest_ships", "quest_ship_1");
+//			Sea_LoginGroupNow("Spanish lugger");
+			QuestToSeaLogin_PrepareLoc("IslaMuelle", "Quest_ships", "quest_ship_1", false);
+			QuestToSeaLogin_Launch();
+
+			PChar.quest.Hornblower_Natividad_battle.win_condition.l1 = "location";
+			PChar.quest.Hornblower_Natividad_battle.win_condition.l1.location = "Cuba";
+			PChar.quest.Hornblower_Natividad_battle.win_condition = "Hornblower_Natividad_battle";
+		break;
+
+		case "Hornblower_Natividad_battle":
+			PChar.quest.Natividad_Group = Group_CreateGroup("Natividad_El_Supremo");
+			Group_AddCharacter("Natividad_El_Supremo", "El Supremo");
+			Group_SetGroupCommander("Natividad_El_Supremo", "El Supremo");
+			Characters[GetCharacterIndex("El Supremo")].recognized = true;
+			Characters[GetCharacterIndex("El Supremo")].skipRM = true;
+			characters[GetCharacterIndex("El Supremo")].nosurrender = 2;
+
+			if (ENABLE_WEAPONSMOD)
+			{
+				GiveItem2Character(characterFromID("El Supremo"), "blade14+1");
+				GiveItem2Character(characterFromID("El Supremo"), "pistol8+1");
+			}
+			else
+			{
+				GiveItem2Character(characterFromID("El Supremo"), "blade14");
+				GiveItem2Character(characterFromID("El Supremo"), "pistol8");
+			}
+			EquipCharacterByItem(characterFromID("El Supremo"), "blade14");
+			EquipCharacterByItem(characterFromID("El Supremo"), "pistol8");
+			if (ENABLE_AMMOMOD) {	// LDH change
+				TakenItems(characterFromID("El Supremo"), "gunpowder", 1 + rand(2));
+				TakenItems(characterFromID("El Supremo"), "pistolbullets", 1 + rand(2));
+			}
+
+			Group_SetPursuitGroup("Natividad_El_Supremo", PLAYER_GROUP);
+			Group_SetAddress("Natividad_El_Supremo", "Cuba", "Quest_ships", "quest_ship_7");
+			Sea_LoginGroupNow("Natividad_El_Supremo");
+
+			pchar.quest.Hornblower_Natividad_battle_over.win_condition.l1 = "NPC_Death";
+			pchar.quest.Hornblower_Natividad_battle_over.win_condition.l1.character = "El Supremo";
+			pchar.quest.Hornblower_Natividad_battle_over.win_condition.l2 = "SeaEnter";
+			pchar.quest.Hornblower_Natividad_battle_over.win_condition = "Hornblower_Natividad_battle_over";
+		break;
+
+		case "Hornblower_Natividad_battle_over":
+			SetCharacterShipLocation(PChar, "Cuba_shore_02");
+			PChar.location.from_sea = "Cuba_shore_02";
+			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "pchar");
+//			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck1", "goto", "goto4");
+			ChangeCharacterAddressGroup(CharacterFromID("Midshipman Longley"), "Seadogs", "sleep", "bed1");
+			LAi_SetLayType(CharacterFromID("Midshipman Longley"));
+			ChangeCharacterAddressGroup(CharacterFromID("Lady Barbara Wellesley"), "Seadogs", "rld", "aloc2");
+			ChangeCharacterAddressGroup(CharacterFromID("Oldroyd"), "ShipDeck1", "goto", "goto16");
+//			Locations[FindLocation("Seadogs")].vcskip = true;
+/*			DoReloadFromSeaToLocation("ShipDeck1", "goto", "goto15");
+//			LAi_QuestDelay("Hornblower_to_deck_after_Natividad_battle", 0.1);
+			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition.l1 = "location";
+			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition.l1.location = "ShipDeck1";
+			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition = "Hornblower_to_deck_after_Natividad_battle"; */
+
+			Pchar.quest.Hornblower_return_to_barbados.win_condition.l1 = "Location";
+			PChar.quest.Hornblower_return_to_barbados.win_condition.l1.location = "Oxbay";
+			PChar.quest.Hornblower_return_to_barbados.win_condition = "Hornblower_return_to_barbados";
+
+			PostEvent("EventSeaToLocation", 5000, "ssss", "ShipDeck1", "goto", "goto15", "Hornblower_Natividad_battle_over2");
+		break;
+
+		case "Hornblower_Natividad_battle_over2":
+			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition.l1 = "location";
+			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition.l1.location = "ShipDeck1";
+			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition = "Hornblower_to_deck_after_Natividad_battle";
+		break;
+
+		case "Hornblower_to_deck_after_Natividad_battle":
+//			SetCharacterToNearLocatorFromMe("Oldroyd", 3);
+			LAi_SetActorType(characterFromID("Oldroyd"));			
+			Characters[GetCharacterIndex("Oldroyd")].dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			Characters[GetCharacterIndex("Oldroyd")].dialog.CurrentNode = "how_she_settling";
+			LAi_ActorDialog(characterFromID("Oldroyd"), PChar, "Hornblower_Lady_Barbara_Longley",5.0,5.0);
+		break;
+
+		case "Hornblower_Lady_Barbara_Longley":
+			DoQuestReloadToLocation("Seadogs", "reload", "reload2", "Hornblower_Lady_Barbara_Longley2");
+		break;
+
+		case "Hornblower_Lady_Barbara_Longley2":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorGoToLocator(CharacterFromID("Lady Barbara Wellesley"), "rld", "loc2", "Hornblower_Lady_Barbara_turns_to_Longley", 10.0);
+			PChar.quest.Hornblower_Lady_Barbara_Longley3.win_condition.l1 = "locator";
+			PChar.quest.Hornblower_Lady_Barbara_Longley3.win_condition.l1.location = "Seadogs";
+			PChar.quest.Hornblower_Lady_Barbara_Longley3.win_condition.l1.locator_group = "rld";
+			PChar.quest.Hornblower_Lady_Barbara_Longley3.win_condition.l1.locator = "loc2";
+			PChar.quest.Hornblower_Lady_Barbara_Longley3.win_condition = "Hornblower_Lady_Barbara_Longley3";
+		break;
+
+		case "Hornblower_Lady_Barbara_turns_to_Longley":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorTurnToCharacter(characterFromID("Lady Barbara Wellesley"), CharacterFromID("Midshipman Longley"));
+		break;
+
+		case "Hornblower_Lady_Barbara_Longley3":
+			LAi_SetActorType(characterFromID("Midshipman Longley"));
+			LAi_ActorSetLayMode(characterFromID("Midshipman Longley"));
+			Characters[GetCharacterIndex("Midshipman Longley")].dialog.CurrentNode = "came_back_to_mother";
+			LAi_ActorDialogNow(characterFromID("Midshipman Longley"), PChar, "Hornblower_Lady_Barbara_to_Longley1",1.0);
+		break;
+
+		case "Hornblower_Lady_Barbara_to_Longley1":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "answer_longley1";
+			LAi_ActorDialogNow(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_Longley_final_speech2",1.0);
+		break;
+
+		case "Hornblower_Longley_final_speech2":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorTurnToCharacter(characterFromID("Lady Barbara Wellesley"), CharacterFromID("Midshipman Longley"));
+			LAi_SetActorType(characterFromID("Midshipman Longley"));
+			LAi_ActorSetLayMode(characterFromID("Midshipman Longley"));
+			Characters[GetCharacterIndex("Midshipman Longley")].dialog.CurrentNode = "did_you_miss_me";
+			LAi_ActorDialogNow(characterFromID("Midshipman Longley"), PChar, "Hornblower_Lady_Barbara_to_Longley2",1.0);
+		break;
+
+		case "Hornblower_Lady_Barbara_to_Longley2":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "answer_longley2";
+			LAi_ActorDialogNow(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_Longley_final_speech3",1.0);
+		break;
+
+		case "Hornblower_Longley_final_speech3":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorTurnToCharacter(characterFromID("Lady Barbara Wellesley"), CharacterFromID("Midshipman Longley"));
+			LAi_SetActorType(characterFromID("Midshipman Longley"));
+			LAi_ActorSetLayMode(characterFromID("Midshipman Longley"));
+			Characters[GetCharacterIndex("Midshipman Longley")].dialog.CurrentNode = "kiss_me_mother";
+			LAi_ActorDialogNow(characterFromID("Midshipman Longley"), PChar, "Hornblower_Lady_Barbara_to_Longley3",1.0);
+		break;
+
+		case "Hornblower_Lady_Barbara_to_Longley3":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "not_know_how_to_kiss";
+			LAi_ActorDialogNow(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_Longley_final_speech4",1.0);
+		break;
+
+		case "Hornblower_Longley_final_speech4":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorTurnToCharacter(characterFromID("Lady Barbara Wellesley"), CharacterFromID("Midshipman Longley"));
+			LAi_SetActorType(characterFromID("Midshipman Longley"));
+			LAi_ActorSetLayMode(characterFromID("Midshipman Longley"));
+			Characters[GetCharacterIndex("Midshipman Longley")].dialog.CurrentNode = "goodnight";
+			LAi_ActorDialogNow(characterFromID("Midshipman Longley"), PChar, "Hornblower_goodnight_Longley",1.0);
+		break;
+
+		case "Hornblower_goodnight_Longley":
+			AddQuestRecord("Natividad", 9);
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "how_did_you_know";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "",5.0,5.0);
+			SetCharacterRemovable(characterFromID("Midshipman Longley"), true);
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Midshipman Longley"));
+			RemovePassenger(pchar, characterFromID("Midshipman Longley"));
+			bQuestDisableAllCommands = false;
+			bQuestDisableSeaEnter = false;
+			DisableFastTravel(false);
+		break;
+
+		case "Hornblower_return_to_barbados":
+			SetNextWeather("Clear");
+			AddDataToCurrent(0, 0, 1, true);
+			SetCurrentTime(10, 0);
+			SetCharacterShipLocation(PChar, "Greenford_port");
+			PChar.location.from_sea = "Greenford_port";
+			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "pchar");
+			StartQuestMovie(true, true, false);
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "ShipDeck1", "rld", "loc3");
+			ChangeCharacterAddressGroup(CharacterFromID("Lieutenant Gerard"), "ShipDeck1", "rld", "loc4");
+			DoReloadFromSeaToLocation("ShipDeck1", "rld", "loc2");
+			PChar.quest.Hornblower_return_to_barbados2.win_condition.l1 = "location";
+			PChar.quest.Hornblower_return_to_barbados2.win_condition.l1.location = "ShipDeck1";
+			PChar.quest.Hornblower_return_to_barbados2.win_condition = "Hornblower_return_to_barbados2";
+		break;
+
+		case "Hornblower_return_to_barbados2":
+			LAi_SetCitizenTypeNoGroup(CharacterFromID("Oldroyd"));
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m1, "goto", "goto5");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard1";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "goto", "goto10");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard2";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "goto", "goto9");
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			GiveSoldierWeapon(sld, ENGLAND);
+			sld.id = "ship_guard3";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(sld, "goto", "goto2");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Sir Rodney Leighton"), "ShipDeck1", "reload", "boatl");
+			LAi_SetActorType(characterFromID("Sir Rodney Leighton"));
+			LAi_ActorGoToLocator(characterFromID("Sir Rodney Leighton"), "goto", "goto2", "Hornblower_leighton_boards", 10.0);
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(PChar, "goto", "goto15", "", 10.0);
+		break;
+
+		case "Hornblower_leighton_boards":
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToCharacter(PChar, CharacterFromID("Sir Rodney Leighton"));
+			LAi_ActorWaitDialog(PChar, CharacterFromID("Sir Rodney Leighton"));
+			LAi_SetActorType(characterFromID("Sir Rodney Leighton"));
+			Characters[GetCharacterIndex("Sir Rodney Leighton")].dialog.CurrentNode = "bridgetown_intro";
+			LAi_ActorDialog(characterFromID("Sir Rodney Leighton"), PChar, "Hornblower_barbara_to_join_leighton",5.0,5.0);
+		break;
+
+		case "Hornblower_barbara_to_join_leighton":
+			LAi_SetPlayerType(PChar);
+			ChangeCharacterAddressGroup(CharacterFromID("Lady Barbara Wellesley"), "ShipDeck1", "reload", "reload1");
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorGoToLocator(characterFromID("Lady Barbara Wellesley"), "reload", "reload3_3", "Hornblower_barbara_to_leighton", 20.0);
+		break;
+
+		case "Hornblower_barbara_to_leighton":
+			LAi_SetActorType(characterFromID("Sir Rodney Leighton"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Sir Rodney Leighton"), CharacterFromID("Lady Barbara Wellesley"));
+			LAi_ActorFollow(characterFromID("Lady Barbara Wellesley"), characterFromID("Sir Rodney Leighton"), "Hornblower_leighton_to_barbara", 10.0);
+//			LAi_QuestDelay("Hornblower_leighton_to_barbara", 1.0);
+		break;
+
+		case "Hornblower_leighton_to_barbara":
+			LAi_SetActorType(characterFromID("Sir Rodney Leighton"));
+			Characters[GetCharacterIndex("Sir Rodney Leighton")].dialog.CurrentNode = "here_you_are_my_dear";
+			LAi_ActorDialog(characterFromID("Sir Rodney Leighton"), PChar, "Hornblower_barbara_to_leighton2",5.0,5.0);
+		break;
+
+		case "Hornblower_barbara_to_leighton2":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "sweet_leighton";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_leighton_to_barbara2",5.0,5.0);
+		break;
+
+		case "Hornblower_leighton_to_barbara2":
+			LAi_SetActorType(characterFromID("Sir Rodney Leighton"));
+			Characters[GetCharacterIndex("Sir Rodney Leighton")].dialog.CurrentNode = "families";
+			LAi_ActorDialog(characterFromID("Sir Rodney Leighton"), PChar, "Hornblower_goodbye_lady_barbara",5.0,5.0);
+		break;
+
+		case "Hornblower_goodbye_lady_barbara":
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "goodbye_hornblower";
+			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_leighton_and_barbara_leave",5.0,5.0);
+		break;
+
+		case "Hornblower_leighton_and_barbara_leave":
+			LAi_SetActorType(characterFromID("Sir Rodney Leighton"));
+			LAi_ActorGoToLocation(CharacterFromID("Sir Rodney Leighton"), "reload", "boatl", "Greenford_Station", "goto", "goto6", "Hornblower_arrive_Barbados", 60);
+			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
+			LAi_ActorGoToLocation(CharacterFromID("Lady Barbara Wellesley"), "reload", "boatl", "none", "", "", "", 60);
+		break;
+
+		case "Hornblower_arrive_Barbados":
+			EndQuestMovie();
+			ChangeCharacterAddress(characterFromID("Lady Barbara Wellesley"), "None", "");
+			SetCharacterRemovable(characterFromID("Lady Barbara Wellesley"), true);
+			RemovePassenger(pchar, characterFromID("Lady Barbara Wellesley"));
+			PChar.location.from_sea = "Greenford_port";
+			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "PChar");
+			LAi_QuestDelay("Hornblower_arrive_Barbados2", 2.0);
+		break;
+
+		case "Hornblower_arrive_Barbados2":
+			AddQuestRecord("Natividad", 10);
+			DoQuestReloadToLocation("Greenford_port", "reload", "reload1", "_");
+			ChangeCharacterAddressGroup(CharacterFromID("Captain Keene"), "Greenford_Station", "goto", "goto4");
+			ChangeCharacterAddressGroup(CharacterFromID("Sir Edward Pellew"), "Greenford_Station", "goto", "goto7");
+			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.Filename = "Sir Edward Pellew_freeplay_dialog.c";
+			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.CurrentNode = "great_report";
+			PChar.quest.Hornblower_report_to_Admiralty.win_condition.l1 = "location";
+			PChar.quest.Hornblower_report_to_Admiralty.win_condition.l1.character = PChar.id;
+			Pchar.quest.Hornblower_report_to_Admiralty.win_condition.l1.location = "Greenford Naval HQ";
+			Pchar.quest.Hornblower_report_to_Admiralty.win_condition = "Hornblower_report_to_Admiralty";
+		break;
+
+		case "Hornblower_report_to_Admiralty":
+			SetModelfromID(CharacterFromID("Captain Keene"), "KeeneAD_18");
+			if(GetCharacterIndex("Lt. Eccleston") == -1)
+			{
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "EcclestonH", "sit", "sit1");
+				sld.id = "Lt. Eccleston";
+				sld.name = "Lieutenant";
+				sld.lastname = "Eccleston";
+			}
+			else
+			{
+				sld = CharacterFromID("Lt. Eccleston");
+				ChangeCharacterAddressGroup(sld, "Greenford Naval HQ", "sit", "sit1");
+			}
+			sld.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			LAi_SetActorType(sld);
+			sld.dialog.CurrentNode = "admirals_upstairs";
+			LAi_ActorDialog(sld, PChar, "Hornblower_report_to_Admiralty2", 10.0, 10.0);
+		break;
+
+		case "Hornblower_report_to_Admiralty2":
+			PChar.quest.Hornblower_admirals_meeting.win_condition.l1 = "location";
+			Pchar.quest.Hornblower_admirals_meeting.win_condition.l1.location = "Greenford_Station";
+			Pchar.quest.Hornblower_admirals_meeting.win_condition = "Hornblower_admirals_meeting";
+		break;
+
+		case "Hornblower_Eccleston_sits":	// Triggered by dialog with Lt. Eccleston
+			LAi_ActorSetSitMode(characterFromID("Lt. Eccleston"));
+		break;
+
+		case "Hornblower_admirals_meeting":
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "brtadm1_18", "goto", "goto8");
+			sld.id = "Admiral Boulton";
+			sld.name = "Rear Admiral";
+			sld.lastname = "Boulton";
+			sld.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+			LAi_SetActorType(sld);
+			LAi_SetActorType(CharacterFromID("Captain Keene"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Sir Rodney Leighton"), CharacterFromID("Sir Edward Pellew"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Captain Keene"), CharacterFromID("Sir Rodney Leighton"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Admiral Boulton"), CharacterFromID("Sir Edward Pellew"));
+		break;
+
+		case "Hornblower_get_Sutherland":
+			Preprocessor_AddQuestData("old_ship", PChar.ship.name);
+			AddQuestRecord("Natividad", 11);
+			Preprocessor_Remove("old_ship");
+			CloseQuestHeader("Natividad");
+			GiveShip2Character(pchar,"RN_Superbe","Sutherland",-1,FRANCE,true,true);
+		break;
+
+// Arrival at port: 1:11:30 in video
+// Return home: 1:14:50
+// Report to Admiralty: 1:18:42
+// Admirals: Leighton, Elliot, Boulton, McCartney (Hornblower was one of McCartney's midshipmen, recognises Hornblower, makes improper comment about girls at sea)
+
+/*		case "hornblower_restore_sea_and_fasttravel":
+			bQuestDisableSeaEnter = false;
+			DisableFastTravel(false);
+			LAi_LocationFightDisable(&Locations[FindLocation("ShipDeck2")], false);
+		break; */
+
+		case "hornblower_execution":	// Triggered by dialog with "El Supremo" if you fail to deliver weapons or capture "Natividad"
+			pchar.quest.disable_rebirth = true;
+			PostEvent("LAi_event_GameOver", 0, "s", "mutiny");
+		break;
+
+///////////////////////////////////////////////////////////////////////
+// Hornblower sidequests - end
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+// The Quest for the Crystal Skull
+///////////////////////////////////////////////////////////////////////
+
+		case "crysskull_initiate":
+			SetQuestHeader("crystal_skull");
+			Preprocessor_AddQuestData("researcher", GetMyFullName(CharacterFromID("Skull_Researcher")));
+			AddQuestRecord("crystal_skull", 1);
+			Preprocessor_Remove("researcher");
+			ChangeCharacterAddressGroup(characterfromID("Carib_Chief"), "Guadeloupe_Indian_House", "goto", "goto3");
+			ChangeCharacterAddressGroup(characterfromID("Carib_Warrior"), "Guadeloupe_Indian_House", "goto", "goto6");
+			Locations[FindLocation("Guadeloupe_Jungle_02")].locators_radius.goto.goto7 = 5.0;
+			Locations[FindLocation("Guadeloupe_Jungle_02")].vcskip = true;
+			PChar.quest.crysskull_Carib_ambush.win_condition.l1 = "locator";
+			PChar.quest.crysskull_Carib_ambush.win_condition.l1.location = "Guadeloupe_Jungle_02";
+			PChar.quest.crysskull_Carib_ambush.win_condition.l1.locator_group = "goto";
+			PChar.quest.crysskull_Carib_ambush.win_condition.l1.locator = "goto7";
+			PChar.quest.crysskull_Carib_ambush.win_condition = "crysskull_Carib_ambush";
+		break;
+
+		case "crysskull_Carib_ambush":
+			Locations[FindLocation("Guadeloupe_Jungle_02")].locators_radius.goto.goto7 = 1.0;
+			DeleteAttribute(&Locations[FindLocation("Guadeloupe_Jungle_02")],"vcskip");
+			for (i=1; i<5; i++)
+			{
+				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", GetRandomRank(false, OFFIC_TYPE_GUARD, 0), true, 1.0, "Native", "monsters", "monster" + i);
+				sld.id = "Carib" + i;
+				sld.name = "Carib";
+				sld.lastname = i;
+				LAi_group_MoveCharacter(sld, LAi_monsters_group);
+			}
+			LAi_group_FightGroups(LAi_monsters_group, LAI_GROUP_PLAYER, true);
+			LAi_QuestDelay("crysskull_to_chiefs_hut", 8.0);
+		break;
+
+		case "crysskull_to_chiefs_hut":
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, SKILL_LEADERSHIP, 1500);
+				AddPartyExpChar(PChar, SKILL_SNEAK, 200);
+			}
+			else { AddPartyExp(PChar, 1500); }
+			Locations[FindLocation("Guadeloupe_Jungle_02")].models.always.locators = "jungle01_l_GR";
+			StartQuestMovie(true, false, false);
+			DisableFastTravel(true);
+			LAi_SetStayType(CharacterFromID("Carib_Warrior"));
+			LAi_SetStayType(CharacterFromID("Carib_Chief"));
+
+			sld = characterFromID("Carib_Warrior");
+			TakenItems(sld, "bladearrows", 3);
+			GiveItem2Character(sld, "pistolbow");
+			GiveItem2Character(sld, "tomahawk");
+			EquipCharacterByItem(sld, "pistolbow");
+
+			Locations[FindLocation("Guadeloupe_Indian_House")].vcskip = true;
+			DoQuestReloadToLocation("Guadeloupe_Indian_House", "reload", "reload1_back", "crysskull_to_chiefs_hut2");
+		break;
+
+		case "crysskull_to_chiefs_hut2":
+			for (i=1; i<5; i++)
+			{
+				if(i > 2) j = i + 4;
+				else j = i;
+				sld = LAi_CreateFantomCharacterExOtAt(true, OFFIC_TYPE_GUARD,"isIndian","","", GetRandomRank(false, OFFIC_TYPE_GUARD, 0), true, 1.0, "Native", "goto", "goto" + j);
+				sld.id = "Carib" + i;
+				sld.name = "Carib";
+				sld.lastname = "Warrior";
+				LAi_SetActorType(sld);
+			}
+			LAi_SetActorType(characterFromID("Carib_Chief"));
+			Characters[GetCharacterIndex("Carib_Chief")].dialog.CurrentNode = "introductions";
+			LAi_ActorDialog(characterFromID("Carib_Chief"), PChar, "crysskull_set_ultimatum",5.0,5.0);
+		break;
+
+		case "crysskull_set_ultimatum":
+			if (PChar.quest.crysskull.ultimatum == "hostage")
+			{
+
+				cidx = sti(PChar.quest.crysskull.hostage);
+				sld = GetCharacter(cidx);
+				if (HasSubStr(sld.id, "Enc_Officer")) LAi_StoreFantom(sld); // Prevent character from being overwritten by another "Enc_Officer"
+				RemoveOfficersIndex(PChar, cidx);
+				RemovePassenger(PChar, sld);
+				LAi_SetActorType(sld);
+				LAi_ActorGoToLocator(sld, "goto", "goto6", "", 20.0);
+/*				PChar.quest.crysskull_execute_hostage.win_condition.l1 = "Timer";
+				PChar.quest.crysskull_execute_hostage.win_condition.l1.date.day = GetAddingDataDay(0,2,0);
+				PChar.quest.crysskull_execute_hostage.win_condition.l1.date.month = GetAddingDataMonth(0,2,0);
+				PChar.quest.crysskull_execute_hostage.win_condition.l1.date.year = GetAddingDataYear(0,2,0);
+				PChar.quest.crysskull_execute_hostage.win_condition = "crysskull_execute_hostage"; */
+			}
+			if (PChar.quest.crysskull.ultimatum == "poison")
+			{
+				PChar.quest.crysskull_poison_player.win_condition.l1 = "Timer";
+				PChar.quest.crysskull_poison_player.win_condition.l1.date.day = GetAddingDataDay(0,2,0);
+				PChar.quest.crysskull_poison_player.win_condition.l1.date.month = GetAddingDataMonth(0,2,0);
+				PChar.quest.crysskull_poison_player.win_condition.l1.date.year = GetAddingDataYear(0,2,0);
+//				PChar.quest.crysskull_poison_player.win_condition.l1.date.day = GetAddingDataDay(0,0,1);	// 1 day to poison effect
+//				PChar.quest.crysskull_poison_player.win_condition.l1.date.month = GetAddingDataMonth(0,0,1);	// for testing
+//				PChar.quest.crysskull_poison_player.win_condition.l1.date.year = GetAddingDataYear(0,0,1);
+				PChar.quest.crysskull_poison_player.win_condition = "crysskull_poison_player";
+			}
+			LAi_QuestDelay("crysskull_warrior_joins", 0.2);
+		break;
+
+		case "crysskull_warrior_joins":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "join_you";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_warrior_joins2",5.0,5.0);
+		break;
+
+		case "crysskull_warrior_joins2":
+			SetOfficersIndex(PChar, -1, GetCharacterIndex("Carib_Warrior"));
+			SetCharacterRemovable(characterFromID("Carib_Warrior"), false);
+			LAi_SetImmortal(characterfromID("Carib_Warrior"), true);
+			DisableFastTravel(false);
+			EndQuestMovie();
+			PChar.quest.crys_skull_status = "go_to_Martinique";
+
+			Preprocessor_AddQuestData("warrior", GetMyFullName(CharacterFromID("Carib_Warrior")));
+			if (PChar.quest.crysskull.ultimatum == "hostage")
+			{
+				NPChar = GetCharacter(sti(PChar.quest.crysskull.hostage));
+				Preprocessor_AddQuestData("hostage", GetMyFullName(NPChar));
+				Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounObj(NPChar)));
+				AddQuestRecord("crystal_skull", 2);
+				Preprocessor_Remove("pronoun");
+				Preprocessor_Remove("hostage");
+			}
+			else
+			{
+				Preprocessor_AddQuestData("person", XI_ConvertString(PChar.sex));
+				AddQuestRecord("crystal_skull", 3);
+				Preprocessor_Remove("person");
+			}
+			Preprocessor_Remove("warrior");
+			AddQuestRecord("crystal_skull", 4);
+
+			setCharacterShipLocation(characterFromID("Archaeologist_captain"), "Falaise_de_fleur_shore");
+			Locations[FindLocation("Falaise_de_fleur_port_01")].dangerous = true;
+			Locations[FindLocation("Falaise_de_fleur_port_02")].dangerous = true;
+			Locations[FindLocation("Falaise_de_fleur_port_01")].reload.l1.disable = 1;
+			Locations[FindLocation("Falaise_de_fleur_port_02")].reload.l1.disable = 1;
+			Locations[FindLocation("Falaise_de_fleur_shore")].reload.l1.disable = 1;
+			Locations[FindLocation("Falaise_de_fleur_shore")].reload.l3.disable = 1;
+			ChangeCharacterAddressGroup(CharacterFromID("Falaise De Fleur Soldier 04"), "Falaise_de_fleur_port_02", "goto", "soldier_02");
+			ChangeCharacterAddressGroup(CharacterFromID("Falaise De Fleur Soldier 05"), "Falaise_de_fleur_port_02", "goto", "soldier_01");
+			PChar.quest.crysskull_ffsoldier1_talks.win_condition.l1 = "locator";
+			PChar.quest.crysskull_ffsoldier1_talks.win_condition.l1.location = "Falaise_de_fleur_port_01";
+			PChar.quest.crysskull_ffsoldier1_talks.win_condition.l1.locator_group = "reload";
+			PChar.quest.crysskull_ffsoldier1_talks.win_condition.l1.locator = "Falaise_de_fleur_location_01_02";
+			PChar.quest.crysskull_ffsoldier1_talks.win_condition = "crysskull_ffsoldier1_talks";
+			PChar.quest.crysskull_ffsoldier4_talks.win_condition.l1 = "locator";
+			PChar.quest.crysskull_ffsoldier4_talks.win_condition.l1.location = "Falaise_de_fleur_port_02";
+			PChar.quest.crysskull_ffsoldier4_talks.win_condition.l1.locator_group = "reload";
+			PChar.quest.crysskull_ffsoldier4_talks.win_condition.l1.locator = "Falaise_de_fleur_location_01_05";
+			PChar.quest.crysskull_ffsoldier4_talks.win_condition = "crysskull_ffsoldier4_talks";
+
+			PChar.quest.crysskull_Carib_warrior_on_ship.win_condition.l1 = "location";
+			Pchar.quest.crysskull_Carib_warrior_on_ship.win_condition.l1.location = "Guadeloupe";
+			Pchar.quest.crysskull_Carib_warrior_on_ship.win_condition = "crysskull_Carib_warrior_on_ship";
+
+			PChar.quest.crysskull_beach_arrival.win_condition.l1 = "location";
+			Pchar.quest.crysskull_beach_arrival.win_condition.l1.location = "Falaise_de_fleur_shore";
+			Pchar.quest.crysskull_beach_arrival.win_condition = "crysskull_beach_arrival";
+
+			PChar.quest.crysskull_port_arrival.win_condition.l1 = "location";
+			Pchar.quest.crysskull_port_arrival.win_condition.l1.location = "Falaise_de_fleur_port_01";
+			Pchar.quest.crysskull_port_arrival.win_condition = "crysskull_port_arrival";
+		break;
+
+		case "crysskull_Carib_warrior_on_ship":
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Carib_Warrior"));
+			ChangeCharacterAddress(characterFromID("Carib_Warrior"), "None", "");
+		break;
+
+		case "crysskull_ffsoldier1_talks":
+			LAi_SetActorType(characterFromID("Falaise De Fleur Soldier 01"));
+			Characters[GetCharacterIndex("Falaise De Fleur Soldier 01")].dialog.CurrentNode = "crysskull_get_lost";
+			LAi_ActorDialog(characterFromID("Falaise De Fleur Soldier 01"), PChar, "crysskull_reset_ffsoldiers",5.0,5.0);
+		break;
+
+		case "crysskull_ffsoldier4_talks":
+			LAi_SetActorType(characterFromID("Falaise De Fleur Soldier 04"));
+			Characters[GetCharacterIndex("Falaise De Fleur Soldier 04")].dialog.CurrentNode = "crysskull_get_lost";
+			LAi_ActorDialog(characterFromID("Falaise De Fleur Soldier 04"), PChar, "crysskull_reset_ffsoldiers",5.0,5.0);
+		break;
+
+		case "crysskull_reset_ffsoldiers":
+			LAi_SetGuardianType(characterFromID("Falaise De Fleur Soldier 01"));
+			LAi_SetGuardianType(characterFromID("Falaise De Fleur Soldier 04"));
+		break;
+
+		case "crysskull_reset_falaise_de_fleur":
+			DeleteAttribute(&Locations[FindLocation("Falaise_de_fleur_port_01")],"dangerous");
+			DeleteAttribute(&Locations[FindLocation("Falaise_de_fleur_port_02")],"dangerous");
+			Locations[FindLocation("Falaise_de_fleur_port_01")].reload.l1.disable = 0;
+			Locations[FindLocation("Falaise_de_fleur_port_02")].reload.l1.disable = 0;
+			Locations[FindLocation("Falaise_de_fleur_shore")].reload.l1.disable = 0;
+			Locations[FindLocation("Falaise_de_fleur_shore")].reload.l3.disable = 0;
+			ChangeCharacterAddressGroup(CharacterFromID("Falaise De Fleur Soldier 04"), "Falaise_de_fleur_location_02", "goto", "locator33");
+			ChangeCharacterAddressGroup(CharacterFromID("Falaise De Fleur Soldier 05"), "Falaise_de_fleur_location_02", "goto", "locator32");
+			PChar.quest.crysskull_ffsoldier1_talks.over = "yes";
+			PChar.quest.crysskull_ffsoldier4_talks.over = "yes";
+		break;
+
+		case "crysskull_poison_player":
+			if(IsEntity(&worldMap))
+			{
+				PChar.quest.crysskull_delay_poison_sea.win_condition.l1 = "SeaEnter";
+				Pchar.quest.crysskull_delay_poison_sea.win_condition = "crysskull_delay_poison_sea";
+			}
+			else
+			{ 
+				logit("You succumb to the Carib poison.");
+				LAi_KillCharacter(PChar);
+			}
+		break;
+
+		case "crysskull_delay_poison_sea":
+			LAi_QuestDelay("crysskull_poison_player", 0.2);	// Might not get you right away as quests aren't checked continuously at sea.  Should get you eventually, though
+		break;
+
+		case "crysskull_execute_hostage":
+			cidx = sti(PChar.quest.crysskull.hostage);
+			sld = GetCharacter(cidx);
+			logit(GetMyFullName(sld) + " has been executed.");
+			if (HasSubStr(sld.id, "Enc_Officer")) LAi_UnStoreFantom(sld); // Cancel protection
+			LAi_KillCharacter(sld);
+		break;
+
+		case "crysskull_port_arrival":
+			if (LAi_IsCapturedLocation)	// If you've destroyed the fort, nobody is going to object to you bringing a Carib into town!
+			{				
+				LAi_QuestDelay("crysskull_reset_falaise_de_fleur", 0.1);
+			}
+			else
+			{
+				ChangeCharacterAddressGroup(CharacterFromID("Carib_Warrior"), "Falaise_de_fleur_port_01", "officers", "sea_3");
+				if (SetOfficersIndex(PChar, -1, GetCharacterIndex("Carib_Warrior")) == GetCharacterIndex("Carib_Warrior"))
+				{
+					if (CheckAttribute(PChar, "quest.crysskull.hostage.slot")) i = sti(PChar.quest.crysskull.hostage.slot);
+					else i = OFFICER_MAX - 1;
+					SetOfficersIndex(PChar, i, GetCharacterIndex("Carib_Warrior"));
+				}
+				LAi_SetActorType(characterFromID("Carib_Warrior"));
+				Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "should_be_on_beach";
+				LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_reset_carib_warrior",5.0,5.0);
+			}
+		break;
+
+		case "crysskull_beach_arrival":
+			PChar.quest.crysskull_port_arrival.over = "yes";
+			if (!isofficer(characterFromID("Carib_Warrior")))
+			{
+				ChangeCharacterAddressGroup(CharacterFromID("Carib_Warrior"), "Falaise_de_fleur_shore", "officers", "reload1_3");
+				if (SetOfficersIndex(PChar, -1, GetCharacterIndex("Carib_Warrior")) == GetCharacterIndex("Carib_Warrior"))
+				{
+					if (CheckAttribute(PChar, "quest.crysskull.hostage.slot")) i = sti(PChar.quest.crysskull.hostage.slot);
+					else i = OFFICER_MAX - 1;
+					SetOfficersIndex(PChar, i, GetCharacterIndex("Carib_Warrior"));
+				}
+			}
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "follow_me1";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_warrior_goes_to_cave",5.0,5.0);
+		break;
+
+		case "crysskull_warrior_goes_to_cave":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "reload", "reload3_back", "", 300.0);
+			PChar.quest.crysskull_cave_arrival.win_condition.l1 = "location";
+			Pchar.quest.crysskull_cave_arrival.win_condition.l1.location = "FalaiseDeFleur_Grot";
+			Pchar.quest.crysskull_cave_arrival.win_condition = "crysskull_cave_arrival";
+		break;
+
+		case "crysskull_cave_arrival":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "bridge_warning";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_reset_carib_warrior",5.0,5.0);
+			PChar.quest.crysskull_bridge_arrival.win_condition.l1 = "location";
+			Pchar.quest.crysskull_bridge_arrival.win_condition.l1.location = "FalaiseDeFleur_Bridge";
+			Pchar.quest.crysskull_bridge_arrival.win_condition = "crysskull_bridge_arrival";
+		break;
+
+		case "crysskull_reset_carib_warrior":
+			LAi_SetOfficerType(CharacterFromID("Carib_Warrior"));
+		break;
+
+		case "crysskull_bridge_arrival":
+			DisableFastTravel(true);
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "walk_to_side";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_carib_warrior_shows_bridge_way",5.0,5.0);
+
+			PChar.quest.crysskull_bridge_trap1.win_condition.l1 = "locator";
+			PChar.quest.crysskull_bridge_trap1.win_condition.l1.location = "FalaiseDeFleur_Bridge";
+			PChar.quest.crysskull_bridge_trap1.win_condition.l1.locator_group = "goto";
+			PChar.quest.crysskull_bridge_trap1.win_condition.l1.locator = "goto30";
+			PChar.quest.crysskull_bridge_trap1.win_condition = "crysskull_bridge_trap";
+			PChar.quest.crysskull_bridge_trap2.win_condition.l1 = "locator";
+			PChar.quest.crysskull_bridge_trap2.win_condition.l1.location = "FalaiseDeFleur_Bridge";
+			PChar.quest.crysskull_bridge_trap2.win_condition.l1.locator_group = "goto";
+			PChar.quest.crysskull_bridge_trap2.win_condition.l1.locator = "goto40";
+			PChar.quest.crysskull_bridge_trap2.win_condition = "crysskull_bridge_trap";
+
+			PChar.quest.crysskull_jungle_arrival.win_condition.l1 = "location";
+			Pchar.quest.crysskull_jungle_arrival.win_condition.l1.location = "FalaiseDeFleur_jungle_01";
+			Pchar.quest.crysskull_jungle_arrival.win_condition = "crysskull_jungle_arrival";
+		break;
+
+		case "crysskull_bridge_trap":
+			Lai_KillCharacter(Pchar);
+			LAi_QuestDelay("crysskull_bridge_trap_game_over", 5.0);
+		break;
+
+		case "crysskull_bridge_trap_game_over":
+			pchar.quest.disable_rebirth = true
+			PostEvent("LAi_event_GameOver", 0, "s", "sea");
+		break;
+
+		case "crysskull_carib_warrior_shows_bridge_way":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "goto", "goto31", "crysskull_carib_warrior_shows_bridge_way2", 20.0);
+		break;
+
+		case "crysskull_carib_warrior_shows_bridge_way2":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "goto", "goto41", "crysskull_carib_warrior_shows_bridge_way3", 20.0);
+		break;
+
+		case "crysskull_carib_warrior_shows_bridge_way3":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "reload", "reload4", "", 20.0);
+		break;
+
+
+		case "crysskull_jungle_arrival":
+			LAi_SetOfficerType(CharacterFromID("Carib_Warrior"));
+			PChar.quest.crysskull_jungle2_arrival.win_condition.l1 = "location";
+			Pchar.quest.crysskull_jungle2_arrival.win_condition.l1.location = "FalaiseDeFleur_jungle_02";
+			Pchar.quest.crysskull_jungle2_arrival.win_condition = "crysskull_jungle_arrival2";
+		break;
+
+		case "crysskull_jungle_arrival2":
+			StartQuestMovie(true, false, false);
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "search_for_skull";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_carib_warrior_searches",5.0,5.0);
+		break;
+
+		case "crysskull_carib_warrior_searches":
+			LAi_SetCitizenTypeNoGroup(CharacterFromID("Carib_Warrior"));
+			LAi_QuestDelay("crysskull_carib_warrior_searches2", 10.0);
+		break;
+
+		case "crysskull_carib_warrior_searches2":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "goto", "goto1", "crysskull_carib_warrior_finds_skull", 30.0);
+		break;
+
+		case "crysskull_carib_warrior_finds_skull":
+			characters[GetCharacterindex("Carib_Warrior")].nodisarm = 1;
+			GiveItem2Character(characterFromID("Carib_Warrior"), "cryskull");
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "found_skull";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_time_to_go_back",15.0,15.0);
+		break;
+
+		case "crysskull_time_to_go_back":
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, SKILL_LEADERSHIP, 1500);
+				AddPartyExpChar(PChar, SKILL_SNEAK, 200);
+			}
+			else { AddPartyExp(PChar, 1500); }
+			Preprocessor_AddQuestData("warrior", GetMyFullName(CharacterFromID("Carib_Warrior")));
+			AddQuestRecord("crystal_skull", 6);
+			Preprocessor_Remove("warrior");
+			LAi_SetOfficerType(CharacterFromID("Carib_Warrior"));
+			EndQuestMovie();
+
+			Characters[GetCharacterIndex("Skull_Researcher")].dialog.CurrentNode = "welcome_back";
+
+			Pchar.quest.crysskull_you_stole_skull.win_condition.l1 = "item";
+			Pchar.quest.crysskull_you_stole_skull.win_condition.l1.item = "cryskull";
+			Pchar.quest.crysskull_you_stole_skull.win_condition = "crysskull_you_stole_skull";
+
+			PChar.quest.crysskull_jungle1_return.win_condition.l1 = "location";
+			Pchar.quest.crysskull_jungle1_return.win_condition.l1.location = "FalaiseDeFleur_jungle_01";
+			Pchar.quest.crysskull_jungle1_return.win_condition = "crysskull_jungle1_return";
+		break;
+
+		case "crysskull_you_stole_skull":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "skull_stolen";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_carib_warrior_angry",5.0,5.0);
+		break;
+
+		case "crysskull_carib_warrior_angry":
+			sld = characterFromID("Carib_Warrior");
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Carib_Warrior"));
+			RemovePassenger(PChar, sld);
+			LAi_SetImmortal(sld, false);
+			TakenItems(sld, "bladearrows", 1 + rand(2));
+			GiveItem2Character(sld, "pistolbow");
+			GiveItem2Character(sld, "tomahawk");
+			EquipCharacterByItem(sld, "pistolbow");
+			StartQuestMovie(true, false, false);
+			LAi_group_MoveCharacter(sld, LAi_monsters_group);
+			LAi_group_FightGroups(LAi_monsters_group, LAI_GROUP_PLAYER, true);
+			pchar.quest.crysskull_you_killed_carib_warrior.win_condition.l1 = "NPC_Death";
+			pchar.quest.crysskull_you_killed_carib_warrior.win_condition.l1.character = "Carib_Warrior";
+			pchar.quest.crysskull_you_killed_carib_warrior.win_condition = "crysskull_you_killed_carib_warrior";
+		break;
+
+		case "crysskull_you_killed_carib_warrior":
+			EndQuestMovie();
+			LAi_QuestDelay("crysskull_reset_falaise_de_fleur", 0.1);
+			PChar.quest.crysskull_carib_in_santo_domingo.over = "yes";
+		break;
+
+		case "crysskull_jungle1_return":
+			StartQuestMovie(true, false, false);
+			for (i=1; i<6; i++)
+			{
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "pirat" + (rand(5) + 1), "reload", "reload2_back");
+				sld.id = "pirate" + i;
+				sld.nation = PIRATE;
+				SetRandomNameToCharacter(sld);
+				LAi_group_MoveCharacter(sld, LAi_monsters_group);
+			}
+			LAi_group_SetRelation(LAi_monsters_group, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAi_monsters_group, LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck(LAi_monsters_group, "crysskull_jungle_ambush_over");
+		break;
+
+		case "crysskull_jungle_ambush_over":
+			EndQuestMovie();
+			AddQuestRecord("crystal_skull", 7);
+			PChar.quest.crysskull_bridge_return.win_condition.l1 = "location";
+			Pchar.quest.crysskull_bridge_return.win_condition.l1.location = "FalaiseDeFleur_Bridge";
+			Pchar.quest.crysskull_bridge_return.win_condition = "crysskull_bridge_return";
+		break;
+
+		case "crysskull_bridge_return":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "second_bridge_warning";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_carib_warrior_shows_way_back",5.0,5.0);
+
+			Locations[FindLocation("FalaiseDeFleur_Grot")].locators_radius.officers.reload1_1 = 2.0;
+			ChangeCharacterAddressGroup(CharacterFromID("Archaeologist_captain"), "FalaiseDeFleur_Grot", "officers", "reload2_2");
+
+			PChar.quest.crysskull_cave_return.win_condition.l1 = "location";
+			Pchar.quest.crysskull_cave_return.win_condition.l1.location = "FalaiseDeFleur_Grot";
+			Pchar.quest.crysskull_cave_return.win_condition = "crysskull_cave_return";
+		break;
+
+		case "crysskull_carib_warrior_shows_way_back":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "goto", "goto41", "crysskull_carib_warrior_shows_way_back2", 20.0);
+		break;
+
+		case "crysskull_carib_warrior_shows_way_back2":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "goto", "goto31", "crysskull_carib_warrior_shows_way_back3", 20.0);
+		break;
+
+		case "crysskull_carib_warrior_shows_way_back3":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "reload", "reload1_back", "", 20.0);
+		break;
+
+		case "crysskull_cave_return":
+			LAi_SetOfficerType(CharacterFromID("Carib_Warrior"));
+			StartQuestMovie(true, false, false);
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("FalaiseDeFleur_Grot")], true);
+			PChar.quest.crysskull_enemy_captain_speaks.win_condition.l1 = "locator";
+			PChar.quest.crysskull_enemy_captain_speaks.win_condition.l1.location = "FalaiseDeFleur_Grot";
+			PChar.quest.crysskull_enemy_captain_speaks.win_condition.l1.locator_group = "officers";
+			PChar.quest.crysskull_enemy_captain_speaks.win_condition.l1.locator = "reload1_1";
+			PChar.quest.crysskull_enemy_captain_speaks.win_condition = "crysskull_enemy_captain_speaks";
+		break;
+
+		case "crysskull_enemy_captain_speaks":
+			Locations[FindLocation("FalaiseDeFleur_Grot")].locators_radius.officers.reload1_1 = 1.0;
+			LAi_SetActorType(characterFromID("Archaeologist_captain"));
+			Characters[GetCharacterIndex("Archaeologist_captain")].dialog.CurrentNode = "introduction";
+			LAi_ActorDialog(characterFromID("Archaeologist_captain"), PChar, "",5.0,5.0);	// Exits to "crysskull_carib_warrior_refuses_skull", or straight to "crysskull_enemy_captain_leaves" if "Carib_Warrior" is dead
+		break;
+
+		case "crysskull_carib_warrior_refuses_skull":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "give_him_skull";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_carib_warrior_surrenders_skull1",5.0,5.0);
+		break;
+
+		case "crysskull_carib_warrior_surrenders_skull1":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			LAi_ActorFollow(characterFromID("Carib_Warrior"), characterFromID("Archaeologist_captain"), "", 3.0);
+			LAi_SetActorType(characterFromID("Archaeologist_captain"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Archaeologist_captain"), CharacterFromID("Carib_Warrior"));
+			LAi_QuestDelay("crysskull_carib_warrior_surrenders_skull2", 3.0);
+		break;
+
+		case "crysskull_carib_warrior_surrenders_skull2":
+			PlayStereoSound("INTERFACE\important_item.wav");
+			TakeItemFromCharacter(characterFromID("Carib_Warrior"), "cryskull");
+			GiveItem2Character(characterFromID("Archaeologist_captain"), "cryskull");
+			PChar.quest.crysskull_you_stole_skull.over = "yes";
+			LAi_SetOfficerType(CharacterFromID("Carib_Warrior"));
+			LAi_SetActorType(characterFromID("Archaeologist_captain"));
+			Characters[GetCharacterIndex("Archaeologist_captain")].dialog.CurrentNode = "wise_choice";
+			LAi_ActorDialog(characterFromID("Archaeologist_captain"), PChar, "",5.0,5.0);	// Exits to "crysskull_enemy_captain_leaves"
+		break;
+
+		case "crysskull_enemy_captain_leaves":
+			LAi_SetActorType(characterFromID("Archaeologist_captain"));
+			LAi_ActorGoToLocation(characterFromID("Archaeologist_captain"), "reload", "reload2_back", "none", "", "", "crysskull_prepare_cannon", 5.0);
+		break;
+
+		case "crysskull_prepare_cannon":
+			LAi_QuestDelay("crysskull_fire_cannon", 1.0);
+		break;
+
+		case "crysskull_fire_cannon":
+			logit("Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!");
+			LAi_QuestDelay("crysskull_bang", 1.0);
+		break;
+
+		case "crysskull_bang":
+			CreateParticleSystemX("blast_inv", 11.9, -0.7, 1.5, 0, 0.8768, 0.0,0);
+			CreateParticleSystemX("cancloud", 11.9, -0.7, 1.5, 0, 0.8768, 0.0,20);
+			CreateParticleSystemX("cancloud", 11.9, -0.7, 1.5, 0, 0.8768, 0.0,20);
+			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire_02.wav");
+			LAi_QuestDelay("crysskull_rockfall", 1.0);
+		break;
+
+		case "crysskull_rockfall":
+			Build_at("FalaiseDeFleur_Grot", "boulder", "", 11.2, -2.0, 1.5, 0.0, "building");
+			DoQuestReloadToLocation("FalaiseDeFleur_Grot", "reload", "reload3", "crysskull_rockfall2");
+		break;
+
+		case "crysskull_rockfall2":
+			Preprocessor_AddQuestData("enemy_captain", GetMyFullName(CharacterFromID("Archaeologist_captain")));
+			AddQuestRecord("crystal_skull", 8);
+			Preprocessor_Remove("enemy_captain");
+			PlayStereoSound("OBJECTS\boulder_start.wav");
+			if (!LAi_isDead(characterFromID("Carib_Warrior")))
+			{
+				PChar.quest.crysskull_rock_mover = "Carib_Warrior";
+				LAi_SetActorType(characterFromID("Carib_Warrior"));
+				Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "trapped";
+				LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_reset_rock_mover",5.0,5.0);
+			}
+			else
+			{	string speaker = "";
+				for (i=1; i<OFFICER_MAX; i++)
+				{
+					if(GetOfficersIndex(PChar, i) != -1)
+					{
+						speaker = characters[GetOfficersIndex(Pchar, i)].id;
+						break;
+					}
+				}
+				if (speaker != "")
+				{
+					PChar.quest.crysskull_rock_mover = speaker;
+					NPChar = CharacterFromID(speaker);
+					NPChar.quest.original_dialog_filename = NPChar.Dialog.Filename;
+					NPChar.quest.original_dialog_CurrentNode = NPChar.dialog.CurrentNode;
+					NPChar.dialog.filename = "Carib_Warrior_dialog.c";
+					NPChar.dialog.CurrentNode = "trapped_without_warrior";
+					LAi_SetActorType(characterFromID(speaker));
+					LAi_ActorDialog(characterFromID(speaker), PChar, "crysskull_reset_rock_mover",5.0,5.0);
+				}
+				else
+				{
+					LAi_SetActorType(PChar);
+					PChar.dialog.currentnode = "crysskull_stuck_in_cave";
+					LAi_ActorSelfDialog(PChar, "player_back");
+					EndQuestMovie();
+					Locations[FindLocation("FalaiseDeFleur_Grot")].reload.l2.disable = 1;
+				}
+			}
+		break;
+
+		case "crysskull_reset_rock_mover":
+			NPChar = CharacterFromID(PChar.quest.crysskull_rock_mover);
+			LAi_SetOfficerType(NPChar);
+			if (CheckAttribute(NPChar, "quest.original_dialog_filename"))
+			{
+				NPChar.Dialog.Filename = NPChar.quest.original_dialog_filename;
+				NPChar.dialog.CurrentNode = NPChar.quest.original_dialog_CurrentNode;
+				DeleteAttribute(NPChar, "quest.original_dialog_filename");
+				DeleteAttribute(NPChar, "quest.original_dialog_CurrentNode");
+			}
+			DeleteAttribute(PChar, "quest.crysskull_rock_mover");
+		break;
+
+		case "crysskull_move_rock":					// Triggered by dialog with either "Carib_Warrior" or an officer
+			lcn = &Locations[FindLocation("FalaiseDeFleur_Grot")];	// Remove rock so it can be placed at new spot
+			for(i = 1; i<=MAXBUILDINGS; i++)
+			{
+				if( CheckAttribute(lcn,"building."+i+".building") )
+				{
+					Building_delete(lcn, "" + i);
+				}
+			}
+			Build_at("FalaiseDeFleur_Grot", "boulder", "", 10.6, -2.0, -1.2, 0, "building");
+			DoQuestReloadToLocation("FalaiseDeFleur_Grot", "reload", "reload2", "crysskull_move_rock2");
+		break;
+
+		case "crysskull_move_rock2":
+			Preprocessor_AddQuestData("enemy_captain", GetMyFullName(CharacterFromID("Archaeologist_captain")));
+			AddQuestRecord("crystal_skull", 9);
+			Preprocessor_Remove("enemy_captain");
+			PlayStereoSound("OBJECTS\boulder_roll.wav");
+			EndQuestMovie();
+			DisableFastTravel(false);
+			LAi_LocationFightDisable(&Locations[FindLocation("FalaiseDeFleur_Grot")], false);
+
+			Pchar.quest.crysskull_seafight_setup.win_condition.l1 = "location";
+			Pchar.quest.crysskull_seafight_setup.win_condition.l1.location = "FalaiseDeFleur";
+			Pchar.quest.crysskull_seafight_setup.win_condition = "crysskull_seafight_setup";
+		break;
+
+		case "crysskull_seafight_setup":
+			Group_CreateGroup("Archaeologist_ship");
+			Group_AddCharacter("Archaeologist_ship", "Archaeologist_captain");
+			Group_SetGroupCommander("Archaeologist_ship", "Archaeologist_captain");
+
+			Group_SetPursuitGroup("Archaeologist_ship", PLAYER_GROUP);
+			Group_SetTaskAttack("Archaeologist_ship",  PLAYER_GROUP, true);
+			Group_LockTask("Archaeologist_ship");
+			Group_SetAddress("Archaeologist_ship", "FalaiseDeFleur", "Quest_ships", "quest_ship_22");
+			Sea_LoginGroupNow("Archaeologist_ship");
+			Characters[GetCharacterIndex("Archaeologist_captain")].nosurrender = 2;
+			Characters[GetCharacterIndex("Archaeologist_captain")].recognized = true;
+
+			PChar.quest.crysskull_ship_captured.win_condition.l1 = "Character_Capture";
+			PChar.quest.crysskull_ship_captured.win_condition.l1.character = "Archaeologist_captain";
+			PChar.quest.crysskull_ship_captured.win_condition.l2 = "SeaEnter";
+			PChar.quest.crysskull_ship_captured.win_condition = "crysskull_ship_captured";
+			PChar.quest.crysskull_ship_sunk.win_condition.l1 = "NPC_Death";
+			PChar.quest.crysskull_ship_sunk.win_condition.l1.character = "Archaeologist_captain";
+			PChar.quest.crysskull_ship_sunk.win_condition.l2 = "SeaEnter";
+			PChar.quest.crysskull_ship_sunk.win_condition = "crysskull_ship_sunk";
+
+			if (!LAi_isDead(characterFromID("Carib_Warrior")))
+			{
+				PChar.quest.crysskull_carib_in_santo_domingo.win_condition.l1 = "location";
+				PChar.quest.crysskull_carib_in_santo_domingo.win_condition.l1.character = "Carib_Warrior";
+				PChar.quest.crysskull_carib_in_santo_domingo.win_condition.l1.location = "Santo_Domingo_town";
+				PChar.quest.crysskull_carib_in_santo_domingo.win_condition = "crysskull_carib_in_santo_domingo";
+			}
+
+			Locations[FindLocation("Guadeloupe_Jungle_02")].vcskip = true;
+			PChar.quest.crysskull_return_to_caribs.win_condition.l1 = "location";
+			PChar.quest.crysskull_return_to_caribs.win_condition.l1.location = "Guadeloupe_Jungle_02";
+			PChar.quest.crysskull_return_to_caribs.win_condition = "crysskull_return_to_caribs";
+		break;
+
+		case "crysskull_ship_captured":
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, SKILL_LEADERSHIP, 3000);
+				AddPartyExpChar(PChar, SKILL_SAILING, 500);
+			}
+			else { AddPartyExp(PChar, 3000); }
+			PChar.quest.crysskull_ship_sunk.over = "yes";
+			setCharacterShipLocation(characterFromID("Archaeologist_captain"), "none");
+			if (CheckCharacterItem(PChar, "cryskull"))
+			{
+				if (PChar.quest.crysskull.ultimatum == "hostage")
+				{
+					Preprocessor_AddQuestData("hostage", GetMyFullName(GetCharacter(sti(PChar.quest.crysskull.hostage))));
+					AddQuestRecord("crystal_skull", 10);
+					Preprocessor_Remove("officer");
+				}
+				else AddQuestRecord("crystal_skull", 11);
+			}
+			else
+			{
+				SetCharacterShipLocation(PChar, "Falaise_de_Fleur_shore");
+				PChar.location.from_sea = "Falaise_de_Fleur_shore";
+				SetFleetInTown(GetTownIDFromLocID(PChar.location.from_sea), "PChar");
+				PChar.quest.crys_skull_status = "skull_found_by_crew";
+				deck = GetCharacterShipQDeck(PChar);
+				bQuestDisableAllCommands = true;
+				Sea_DeckStartNow(GetMainCharacterIndex(), GetCharacterShipQDeck(PChar));
+				PChar.quest.crysskull_deck_scene.win_condition.l1 = "location";
+				PChar.quest.crysskull_deck_scene.win_condition.l1.location = deck;
+				PChar.quest.crysskull_deck_scene.win_condition = "crysskull_deck_scene";
+			}
+		break;
+
+		case "crysskull_ship_sunk":
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, SKILL_LEADERSHIP, 3000);
+				AddPartyExpChar(PChar, SKILL_SAILING, 500);
+			}
+			else { AddPartyExp(PChar, 3000); }
+			setCharacterShipLocation(characterFromID("Archaeologist_captain"), "none");
+			SetCharacterShipLocation(PChar, "Falaise_de_Fleur_shore");
+			PChar.location.from_sea = "Falaise_de_Fleur_shore";
+			SetFleetInTown(GetTownIDFromLocID(PChar.location.from_sea), "PChar");
+			PChar.quest.crys_skull_status = "ship_sunk";
+			deck = GetCharacterShipQDeck(PChar);
+			bQuestDisableAllCommands = true;
+			Sea_DeckStartNow(GetMainCharacterIndex(), GetCharacterShipQDeck(PChar));
+			PChar.quest.crysskull_deck_scene.win_condition.l1 = "location";
+			PChar.quest.crysskull_deck_scene.win_condition.l1.location = deck;
+			PChar.quest.crysskull_deck_scene.win_condition = "crysskull_deck_scene";
+		break;
+
+		case "crysskull_deck_scene":
+			DisableFastTravel(true);
+			StartQuestMovie(true, false, false);
+			SetCharacterToNearLocatorFromMe("Carib_Warrior", 2);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "Sailor16",  "reload", "reload1");
+			if(GetServedNation() == PERSONAL_NATION) sld.nation = PChar.nation;
+			else sld.nation = GetServedNation();
+			SetRandomNameToCharacter(sld);
+			sld.Dialog.Filename = "Carib_Warrior_dialog.c";
+			LAi_SetActorType(sld);
+			if (PChar.quest.crys_skull_status == "ship_sunk") sld.dialog.CurrentNode = "diver_found_skull";
+			else sld.dialog.CurrentNode = "found_skull_in_chest";
+			LAi_ActorDialog(sld, PChar, "crysskull_get_skull",5.0,5.0);
+		break;
+
+		case "crysskull_get_skull":
+			GiveItem2Character(PChar, "cryskull");
+			PlayStereoSound("INTERFACE\important_item.wav");
+			if (PChar.quest.crysskull.ultimatum == "hostage")
+			{
+				Preprocessor_AddQuestData("hostage", GetMyFullName(GetCharacter(sti(PChar.quest.crysskull.hostage))));
+				AddQuestRecord("crystal_skull", 10);
+				Preprocessor_Remove("officer");
+			}
+			else AddQuestRecord("crystal_skull", 11);
+			bQuestDisableAllCommands = false;
+			EndQuestMovie();
+			DisableFastTravel(false);
+		break;
+
+		case "crysskull_carib_in_santo_domingo":
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "not_Karoukera";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_carib_warrior_angry",5.0,5.0);
+		break;
+
+		case "crysskull_return_to_caribs":
+			DeleteAttribute(&Locations[FindLocation("Guadeloupe_Jungle_02")],"vcskip");
+			LAi_LocationFightDisable(&Locations[FindLocation("Guadeloupe_Jungle_02")], true);
+			LAi_SetFightMode(PChar, false);
+			DisableFastTravel(true);
+			StartQuestMovie(true, false, false);
+			TakenItems(characterFromID("Carib_Chief"), "bladearrows", 3);
+			GiveItem2Character(characterFromID("Carib_Chief"), "pistolbow");
+			GiveItem2Character(characterFromID("Carib_Chief"), "tomahawk");
+			EquipCharacterByItem(characterFromID("Carib_Chief"), "pistolbow");
+			ChangeCharacterAddressGroup(characterfromID("Carib_Chief"), "Guadeloupe_Jungle_02", "goto", "goto4");
+			LAi_SetActorType(characterFromID("Carib_Chief"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Carib_Chief"), PChar);
+			for (i=1; i<4; i++)
+			{
+				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", GetRandomRank(false, OFFIC_TYPE_GUARD, 0), true, 1.0, "Native", "monsters", "monster" + i);
+				sld.id = "Carib" + i;
+				sld.name = "Carib";
+				sld.lastname = i;
+			}
+			if (PChar.quest.crysskull.ultimatum == "hostage") ChangeCharacterAddressGroup(GetCharacter(sti(PChar.quest.crysskull.hostage)), "Guadeloupe_Jungle_02", "monsters", "monster5");
+			LAi_QuestDelay("crysskull_return_to_caribs2", 0.1);
+		break;
+
+		case "crysskull_return_to_caribs2":
+			LAi_SetStayType(CharacterFromID("Carib_Chief"));
+			Characters[GetCharacterIndex("Carib_Chief")].dialog.CurrentNode = "return_with_skull";
+			sld = characterFromID("Carib_Warrior");
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Carib_Warrior"));
+			RemovePassenger(PChar, sld);
+			LAi_SetImmortal(sld, false);
+			TakenItems(sld, "bladearrows", 1 + rand(2));
+			GiveItem2Character(sld, "pistolbow");
+			GiveItem2Character(sld, "tomahawk");
+			EquipCharacterByItem(sld, "pistolbow");
+			LAi_SetActorType(sld);
+			LAi_ActorFollow(sld, characterFromID("Carib_Chief"), "", 30.0);
+			LAi_QuestDelay("crysskull_reset_falaise_de_fleur", 0.1);
+			PChar.quest.crysskull_carib_in_santo_domingo.over = "yes";
+		break;
+
+		case "crysskull_Carib_Warrior_reports":		// Triggered by dialog with "Carib_Chief" if "Carib_Warrior" is alive to make the report
+			LAi_SetActorType(characterFromID("Carib_Warrior"));
+			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "report_to_chief";
+			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_Carib_Chief_accepts_report",5.0,5.0);
+		break;
+
+		case "crysskull_Carib_Chief_accepts_report":
+			LAi_SetActorType(characterFromID("Carib_Chief"));
+			Characters[GetCharacterIndex("Carib_Chief")].dialog.CurrentNode = "warrior_likes_you";
+			LAi_ActorDialog(characterFromID("Carib_Chief"), PChar, "",5.0,5.0);	// Exits to "crysskull_Carib_trade" or "crysskull_final_fight_Caribs"
+		break;
+
+		case "crysskull_Carib_trade":
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, SKILL_LEADERSHIP, 5000);
+				AddPartyExpChar(PChar, SKILL_SNEAK, 500);
+			}
+			else { AddPartyExp(PChar, 5000); }
+			PlayStereoSound("INTERFACE\important_item.wav");
+			TakeItemFromCharacter(PChar, "cryskull");
+			PChar.quest.crys_skull_status = "traded";
+			ChangeCharacterReputation(pchar, 3);
+			OfficersReaction("good");
+			if (PChar.quest.crysskull.ultimatum == "hostage")
+			{
+				cidx = sti(PChar.quest.crysskull.hostage);
+				i = sti(PChar.quest.crysskull.hostage.slot);
+				NPChar = GetCharacter(cidx);
+				SetOfficersIndex(PChar, i, cidx);
+				if (HasSubStr(NPChar.id, "Enc_Officer")) LAi_UnStoreFantom(NPChar); // Cancel protection
+				DeleteQuestAttribute("crysskull.hostage");
+				PChar.quest.crysskull_execute_hostage.over = "yes";
+			}
+			else
+			{
+				PlayStereoSound("INTERFACE\drink.wav");
+				PChar.quest.crysskull_poison_player.over = "yes";
+			}
+			EndQuestMovie();
+			DisableFastTravel(false);
+			LAi_QuestDelay("crysskull_Carib_Chief_fetches_reward", 0.1);
+			Pchar.quest.crysskull_remove_Caribs.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.crysskull_remove_Caribs.win_condition.l1.location = PChar.location;
+			Pchar.quest.crysskull_remove_Caribs.win_condition = "crysskull_remove_Caribs";
+		break;
+
+		case "crysskull_Carib_Chief_fetches_reward":
+			LAi_SetActorType(characterFromID("Carib_Chief"));
+			LAi_ActorGoToLocation(characterFromID("Carib_Chief"), "reload", "reload3", "none", "", "", "crysskull_Carib_Chief_fetches_reward2", 60.0);
+		break;
+
+		case "crysskull_Carib_Chief_fetches_reward2":
+			if (PChar.location == "Guadeloupe_Jungle_02") LAi_QuestDelay("crysskull_Carib_Chief_fetches_reward3", 3.0);
+		break;
+
+		case "crysskull_Carib_Chief_fetches_reward3":
+			ChangeCharacterAddressGroup(characterfromID("Carib_Chief"), "Guadeloupe_Jungle_02", "reload", "reload3");
+			LAi_SetActorType(characterFromID("Carib_Chief"));
+			Characters[GetCharacterIndex("Carib_Chief")].dialog.CurrentNode = "here_is_reward";
+			LAi_ActorDialog(characterFromID("Carib_Chief"), PChar, "",60.0,60.0);
+		break;
+
+		case "crysskull_remove_Caribs":
+			PChar.quest.crysskull_Carib_Chief_fetches_reward3.over = "yes";
+			Locations[FindLocation("Guadeloupe_Jungle_02")].models.always.locators = "jungle01_l";	// Put locators back to normal so "reload3" does not exist and can't be used by random encounters
+			LAi_LocationFightDisable(&Locations[FindLocation("Guadeloupe_Jungle_02")], false);
+			ChangeCharacterAddress(characterFromID("Carib_Chief"), "None", "");
+			ChangeCharacterAddress(characterFromID("Carib_Warrior"), "None", "");
+		break;
+
+		case "crysskull_final_fight_Caribs":
+			PChar.quest.crys_skull_status = "fought_Caribs";
+			EndQuestMovie();				// Exits cleared, fast travel enabled
+			DisableFastTravel(false);			// You can run away if you like but you won't get antidote or rescue your officer
+			LAi_LocationFightDisable(&Locations[FindLocation("Guadeloupe_Jungle_02")], false);
+
+			for (i=1; i<4; i++)
+			{
+				LAi_group_MoveCharacter(CharacterFromID("Carib" + i), LAi_monsters_group);
+			}
+			LAi_group_MoveCharacter(characterFromID("Carib_Chief"), LAi_monsters_group);
+			LAi_group_MoveCharacter(characterFromID("Carib_Warrior"), LAi_monsters_group);
+
+			if (PChar.quest.crysskull.ultimatum == "hostage")
+			{
+				cidx = sti(PChar.quest.crysskull.hostage);	// Hostage will join in fight on player's side
+				NPChar = GetCharacter(cidx);
+				LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
+			}
+
+			PChar.quest.crysskull_remove_Caribs_and_hostage.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.crysskull_remove_Caribs_and_hostage.win_condition.l1.location = PChar.location;
+			Pchar.quest.crysskull_remove_Caribs_and_hostage.win_condition = "crysskull_remove_Caribs_and_hostage";
+
+			LAi_group_SetRelation(LAi_monsters_group, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAi_monsters_group, LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck(LAi_monsters_group, "crysskull_final_fight_over");
+		break;
+
+		case "crysskull_remove_Caribs_and_hostage":
+			PChar.quest.crysskull_final_fight_over.over = "yes";
+			ChangeCharacterAddress(characterFromID("Carib_Chief"), "None", "");
+			ChangeCharacterAddress(characterFromID("Carib_Warrior"), "None", "");
+			if (PChar.quest.crysskull.ultimatum == "hostage")
+			{
+				cidx = sti(PChar.quest.crysskull.hostage);
+				sld = GetCharacter(cidx);
+				logit("You failed to rescue " + GetMyFullName(sld) + ".");
+				if (HasSubStr(sld.id, "Enc_Officer")) LAi_UnStoreFantom(sld); // Cancel protection
+				LAi_KillCharacter(sld);
+				ChangeCharacterAddress(sld, "None", "");
+				PChar.quest.crysskull_execute_hostage.over = "yes";
+				Preprocessor_AddQuestData("hostage", GetMyFullName(sld));
+				AddQuestRecord("crystal_skull", 20);
+				Preprocessor_Remove("hostage");
+			}
+			else AddQuestRecord("crystal_skull", 21);
+		break;
+
+		case "crysskull_final_fight_over":
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, SKILL_LEADERSHIP, 5000);
+				AddPartyExpChar(PChar, SKILL_FENCING, 500);
+			}
+			else { AddPartyExp(PChar, 5000); }
+			PChar.quest.crys_skull_status = "defeated_Caribs";
+			PChar.quest.crysskull_remove_Caribs_and_hostage.over = "yes";
+			if (PChar.quest.crysskull.ultimatum == "hostage")
+			{
+				cidx = sti(PChar.quest.crysskull.hostage);
+				i = sti(PChar.quest.crysskull.hostage.slot);
+				NPChar = GetCharacter(cidx);
+				if (!LAi_isDead(NPChar))
+				{
+					SetOfficersIndex(PChar, i, cidx);
+					for (i = 0; i<GetPassengersQuantity(pchar); i++)	// Everyone rated for "loyality" gets an increase because you put yourself at risk to save an officer
+					{
+						NPChar = characters[GetPassenger(PChar, i)];
+						if(CheckAttribute(NPChar, "loyality")) NPChar.loyality = makeint(NPChar.loyality) + 1;
+					}
+					Preprocessor_AddQuestData("hostage", GetMyFullName(NPChar));
+					AddQuestRecord("crystal_skull", 18);
+					Preprocessor_Remove("hostage");
+				}
+				else
+				{
+					Preprocessor_AddQuestData("hostage", GetMyFullName(NPChar));
+					AddQuestRecord("crystal_skull", 19);
+					Preprocessor_Remove("hostage");
+				}
+				if (HasSubStr(NPChar.id, "Enc_Officer")) LAi_UnStoreFantom(NPChar); // Cancel protection
+				DeleteQuestAttribute("crysskull.hostage");
+				PChar.quest.crysskull_execute_hostage.over = "yes";
+			}
+			else
+			{
+				PlayStereoSound("INTERFACE\drink.wav");
+				PChar.quest.crysskull_poison_player.over = "yes";
+				AddQuestRecord("crystal_skull", 17);
+			}
+		break;
+
+		case "crysskull_researcher_fetches_antidote":
+			LAi_SetActorType(characterFromID("Skull_Researcher"));
+			LAi_ActorGoToLocation(characterFromID("Skull_Researcher"), "reload", "reload2", "none", "", "", "crysskull_researcher_fetches_antidote2", 30.0);
+		break;
+
+		case "crysskull_researcher_fetches_antidote2":
+			if (PChar.location == "Santo_Domingo_Historian_House") LAi_QuestDelay("crysskull_researcher_fetches_antidote3", 3.0);
+			else
+			{
+				Characters[GetCharacterIndex("Skull_Researcher")].dialog.CurrentNode = "here_is_antidote";
+				ChangeCharacterAddressGroup(characterfromID("Skull_Researcher"), "Santo_Domingo_Historian_House", "goto", "goto3");
+				LAi_SetCitizenType(characterfromID("Skull_Researcher"));
+			}
+		break;
+
+		case "crysskull_researcher_fetches_antidote3":
+			ChangeCharacterAddressGroup(characterfromID("Skull_Researcher"), "Santo_Domingo_Historian_House", "reload", "reload2");
+			LAi_SetActorType(characterFromID("Skull_Researcher"));
+			Characters[GetCharacterIndex("Skull_Researcher")].dialog.CurrentNode = "here_is_antidote";
+			LAi_ActorDialog(characterFromID("Skull_Researcher"), PChar, "",30.0,30.0);
+		break;
+
+		case "crysskull_officer_betrayed":
+			OfficersReaction("bad");
+			ChangeCharacterReputation(PChar, -3);
+			if (CheckAttribute(PChar, "quest.crysskull.hostage"))
+			{
+				cidx = sti(PChar.quest.crysskull.hostage);
+				i = sti(PChar.quest.crysskull.hostage.slot);
+				NPChar = GetCharacter(cidx);
+				if (!LAi_isDead(NPChar)) LAi_KillCharacter(sld);
+				if (HasSubStr(NPChar.id, "Enc_Officer")) LAi_UnStoreFantom(NPChar); // Cancel protection
+				DeleteQuestAttribute("crysskull.hostage");
+			}
+			PChar.quest.crysskull_execute_hostage.over = "yes";
+		break;
+
+///////////////////////////////////////////////////////////////////////
+// The Quest for the Crystal Skull - end
+///////////////////////////////////////////////////////////////////////
+
 		PChar.questnotfound = true; // PB: Testing
 	}
+}
+
+#event_handler("EventSeaToLocation", "EventSeaToLocation");
+void EventSeaToLocation()
+{
+trace("EVENT: EventSeaToLocation triggered");
+	string location = GetEventData();
+	string group = GetEventData();
+	string locator = GetEventData();
+	string questname = GetEventData();
+	bQuestDisableAllCommands = true;
+//	DoReloadFromSeaToLocation(location, group, locator);
+//	LAi_QuestDelay(questname, 0.1);
+	DoQuestReloadToLocation(location, group, locator, questname);
+//	Sea_DeckStartNow(GetMainCharacterIndex(), location);
 }

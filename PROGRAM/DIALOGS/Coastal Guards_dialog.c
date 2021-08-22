@@ -25,7 +25,7 @@ void ProcessDialogEvent()
 			LAi_SetPlayerType(Pchar);
 		break;
 
-		case "First time":			
+		case "First time":
 			dialog.snd = "Voice\COGU\COGU001";
 			d.Text = DLG_TEXT[0];
 			Link.l1 = DLG_TEXT[1];
@@ -36,7 +36,7 @@ void ProcessDialogEvent()
 			ccc, if you don't agree delete the 4 lines marked with ccc but keep the original one below
 			if(makeint(Pchar.reputation) >= 80 && makeint(Pchar.skill.Leadership) >= 5)	// original code
 			ccc */
-			if(makeint(Pchar.reputation) + (makeint(Pchar.skill.Leadership)*10) >= rand(200) && GetNationRelation2MainCharacter(sti(Npchar.nation)) != RELATION_ENEMY) )	// ccc new
+			if(makeint(Pchar.reputation) + (makeint(Pchar.skill.Leadership)*10) >= rand(200) && GetNationRelation2MainCharacter(sti(Npchar.nation)) != RELATION_ENEMY)	// ccc new
 			{
 				Link.l1.go = "ThisTimeFree";
 			}
@@ -80,6 +80,8 @@ void ProcessDialogEvent()
 		//Added by Levis for the smugglers guild -->
 		case "LookAtThis":
 			pchar.quest.smuggling_guild.governor_quest.usedpaper = true;
+			TakeItemFromCharacter(pchar,"smuggling_papers");	// GR: take the papers so you can't keep smuggling to the same nation forever
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[30];
 			Link.l1 = DLG_TEXT[31];
 			Link.l1.go = "exit";
@@ -89,6 +91,7 @@ void ProcessDialogEvent()
 
 		case "ThisTimeFree":
 			dialog.snd = "Voice\COGU\COGU002";		
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[4] + GetMyName(Pchar) + DLG_TEXT[5];
 			Link.l1 = DLG_TEXT[6];
 			Link.l1.go = "ThisTimeFree_1";

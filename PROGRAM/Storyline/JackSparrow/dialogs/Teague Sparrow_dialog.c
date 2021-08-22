@@ -189,6 +189,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("Teague_gives_Piece_of_8_1");
 			pchar.Jack = "Pirate_Lord";
+			PChar.quest.pirate_lord = "true";
 		break;
 
 		case "Exit_from_my_life":

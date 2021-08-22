@@ -995,6 +995,104 @@ void InitNations()
 			rNation.Titles.12 = "Governor";
 			// NK <--
 		}
+	
+		if  (period == PERIOD_THE_SPANISH_MAIN || period == PERIOD_GOLDEN_AGE_OF_PIRACY || period == PERIOD_COLONIAL_POWERS)
+		{	
+			//SWEDEN
+			makeref(rNation,Nations[SWEDEN]);
+			rNation.id = "Sweden";
+			rNation.Name = "Sweden";
+			// NK -->
+			rNation.Desc = "Swedish";
+			// NK <--
+			rNation.worldMapShip = "Swedish";
+			rNation.ShipNamePrefix = "HSwMS"; //
+			rNation.FlagIdx = SWEDEN; // KK
+			rNation.laigroup = "SWEDEN";
+
+			if(period == PERIOD_THE_SPANISH_MAIN) 
+			{
+				//Location fantom models
+				rNation.fantomModel.m0 = "Offic_Swe_16";
+				rNation.fantomModel.m1 = "Soldier_Swe_16";
+				rNation.fantomModel.m2 = "Soldier_Swe2_16";
+				rNation.fantomModel.m3 = "Soldier_Swe3_16";
+				rNation.fantomModel.m4 = "Soldier_Swe4_16";
+				rNation.fantomModel.m5 = "Soldier_Swe5_16";
+				rNation.fantomModel.m6 = "Soldier_Swe6_16";
+				//Boarding models
+				rNation.boardingModel.enemy.m1 = "Offic_Swe_16";
+				rNation.boardingModel.enemy.m1.ani = "man";
+				rNation.boardingModel.enemy.m2 = "Soldier_Swe_16";
+				rNation.boardingModel.enemy.m2.ani = "man";
+				rNation.boardingModel.enemy.m3 = "Soldier_Swe2_16";
+				rNation.boardingModel.enemy.m3.ani = "man";
+				rNation.boardingModel.enemy.m4 = "Soldier_Swe3_16";
+				rNation.boardingModel.enemy.m4.ani = "man";
+				rNation.boardingModel.enemy.m5 = "Soldier_Swe4_16";
+				rNation.boardingModel.enemy.m5.ani = "man";
+				rNation.boardingModel.enemy.m6 = "Soldier_Swe5_16";
+				rNation.boardingModel.enemy.m6.ani = "man";
+				rNation.boardingModel.enemy.m7 = "Soldier_Swe6_16";
+				rNation.boardingModel.enemy.m7.ani = "man";
+			}
+
+			if(period == PERIOD_GOLDEN_AGE_OF_PIRACY || period == PERIOD_COLONIAL_POWERS)
+			{
+				//Location fantom models
+				rNation.fantomModel.m0 = "Dragoon_Swe_18";
+				rNation.fantomModel.m1 = "Soldier_Swe3_18";
+				rNation.fantomModel.m2 = "Soldier_Swe9_18";
+				rNation.fantomModel.m3 = "Soldier_Swe10_18";
+				rNation.fantomModel.m4 = "Soldier_Swe13_18";
+				rNation.fantomModel.m5 = "Soldier_Swe14_18";
+				rNation.fantomModel.m6 = "Soldier_Swe6_18";
+				//Boarding models
+				rNation.boardingModel.enemy.m1 = "Dragoon_Swe_18";
+				rNation.boardingModel.enemy.m1.ani = "man";
+				rNation.boardingModel.enemy.m2 = "Soldier_Swe3_18";
+				rNation.boardingModel.enemy.m2.ani = "man";
+				rNation.boardingModel.enemy.m3 = "Soldier_Swe9_18";
+				rNation.boardingModel.enemy.m3.ani = "man";
+				rNation.boardingModel.enemy.m4 = "Soldier_Swe10_18";
+				rNation.boardingModel.enemy.m4.ani = "man";
+				rNation.boardingModel.enemy.m5 = "Soldier_Swe13_18";
+				rNation.boardingModel.enemy.m5.ani = "man";
+				rNation.boardingModel.enemy.m6 = "Soldier_Swe14_18";
+				rNation.boardingModel.enemy.m6.ani = "man";
+				rNation.boardingModel.enemy.m7 = "Soldier_Swe6_18";
+				rNation.boardingModel.enemy.m7.ani = "man";
+			}
+
+			// JRH -->
+			rNation.Ranks.Quantity = 12;
+			rNation.Ranks.1 = "Underlöjtnant";
+			rNation.Ranks.2 = "Överlöjtnant";
+			rNation.Ranks.3 = "Kaptenlöjtnant";
+			rNation.Ranks.4 = "Kapten";
+			rNation.Ranks.5 = "Örlogskapten";
+			rNation.Ranks.6 = "Kommendörkapten";
+			rNation.Ranks.7 = "Kommendör";
+			rNation.Ranks.8 = "Schoutbynacht";
+			rNation.Ranks.9 = "Konteramiral";
+			rNation.Ranks.10 = "Viceamiral";
+			rNation.Ranks.11 = "Amiral";
+			rNation.Ranks.12 = "Riksamiral";
+			rNation.Titles.Quantity = 12;
+			rNation.Titles.1 = "Underlöjtnant";
+			rNation.Titles.2 = "Överlöjtnant";
+			rNation.Titles.3 = "Kaptenlöjtnant";
+			rNation.Titles.4 = "Kapten";
+			rNation.Titles.5 = "Örlogskapten";
+			rNation.Titles.6 = "Kommendörkapten";
+			rNation.Titles.7 = "Riddare";
+			rNation.Titles.8 = "Friherre";
+			rNation.Titles.9 = "Greve";
+			rNation.Titles.10 = "Borgmästare";
+			rNation.Titles.11 = "Landshövding";
+			rNation.Titles.12 = "Riksråd";
+			// JRH <--
+		}
 	}
 // <-- KK
 

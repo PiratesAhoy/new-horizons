@@ -16,6 +16,8 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 
 	
 	switch(Dialog.CurrentNode)
@@ -113,6 +115,7 @@ void ProcessDialogEvent()
 
 		case "line_two_1":
 			dialog.snd = "Voice\BACO\BACO005";
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar))); // DeathDaisy
 			dialog.text = DLG_TEXT[30];
 			link.l1 = pcharrepphrase(DLG_TEXT[31], DLG_TEXT[32]);
 			link.l1.go = "line_two_2";
@@ -291,7 +294,7 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(pchar, -10000);
 			ChangeCharacterReputation(pchar, 2);
 			AddDialogExitQuest("baldewyn_wait_month");
-			Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store"; // NK
+			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "0") Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
 		break;
 
 		case "work_1":

@@ -68,6 +68,15 @@ void ProcessDialogEvent()
 		case "rumours":
 			dialog.snd = "Voice\FADU\FADU004";
 			dialog.text = DLG_TEXT[13] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[14];
+			if (CheckQuestAttribute("ardent_hunt_status", "need_forger") || CheckQuestAttribute("kapitein", "need_papers"))
+			{
+				if (!CheckAttribute(CharacterFromID("Pablo Escriva"), "already_met"))
+				{
+					link.l1 = DLG_TEXT[35];
+					link.l1.go = "recommend_forger";
+				}
+			}
+
 			link.l99 = DLG_TEXT[16];
 			link.l99.go = "second time";
 
@@ -223,6 +232,22 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[34];
 			link.l1.go = "exit_sit";
 
+		break;
+
+		case "recommend_forger":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[36];
+			link.l1 = DLG_TEXT[37];
+			link.l1.go = "recommend_forger2";
+		break;
+
+		case "recommend_forger2":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[38];
+			link.l1 = DLG_TEXT[39];
+			link.l1.go = "exit";
+			if (CheckQuestAttribute("ardent_hunt_status", "need_forger")) AddDialogExitQuest("hunt_prepare_forger");
+			if (CheckQuestAttribute("kapitein", "need_papers")) AddDialogExitQuest("kapitein_prepare_forger");
 		break;
 
 		case "exit_sit":

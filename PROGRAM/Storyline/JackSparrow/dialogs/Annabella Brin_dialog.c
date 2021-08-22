@@ -131,7 +131,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[18];
 			link.l1.go = "SearchExit";
 			AddQuestRecord("My Early Days",3);
-			AddPassenger(Pchar, characterFromID("Annabella Brin"), 0);
+//			AddPassenger(Pchar, characterFromID("Annabella Brin"), 0);
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Annabella Brinkley"));
 		break;
 		
@@ -290,9 +290,12 @@ void ProcessDialogEvent()
 		break;
 
 		case "SisterExit":
-			AddPassenger(Pchar, characterFromID("Annabella Brin"), 0);			
-			SetOfficersIndex(Pchar, 1, getCharacterIndex("Annabella Brin"));
-			LAi_SetOfficerType(characterFromID("Annabella Brin"));			
+//			AddPassenger(Pchar, characterFromID("Annabella Brin"), 0);			
+//			SetOfficersIndex(Pchar, 1, getCharacterIndex("Annabella Brin"));
+//			LAi_SetOfficerType(characterFromID("Annabella Brin"));	
+			AddPassenger(Pchar, characterFromID("Annabella Brinkley"), 0);			
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Annabella Brinkley"));
+			LAi_SetOfficerType(characterFromID("Annabella Brinkley"));				
 			pchar.quest.Jacks_early_days = "In_trouble_with_sisters";		
 			AddQuestRecord("My Early Days",4);
 			Pchar.quest.to_find_a_sister_capture.win_condition.l1 = "location";

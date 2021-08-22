@@ -57,6 +57,7 @@ void ProcessDialogEvent()
 
 
 		case "Node_2":
+			Preprocessor_Add("pronoun2", GetMyPronounObj(PChar));
 			Dialog.snd = "voice\WIDI\WIDI003";
 			d.Text = DLG_TEXT[7] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[8] + GetMyName(Pchar) + DLG_TEXT[9];
 			Link.l1 = DLG_TEXT[10];

@@ -35,8 +35,10 @@ void ProcessDialogEvent()
 
 			if(PChar.quest.Hitman == "mark_amerigo")
 			{
+				string intro = DLG_TEXT[2];
 				dialog.snd = "Voice\AMVI\AMVI002";
-				dialog.text = DLG_TEXT[2]+ Characters[GetCharacterIndex(DLG_TEXT[3])].lastname +DLG_TEXT[4];
+				if (PChar.sex == "woman") intro = DLG_TEXT[25];
+				dialog.text = intro + Characters[GetCharacterIndex(DLG_TEXT[3])].lastname +DLG_TEXT[4];
 				link.l1 = DLG_TEXT[5];
 				link.l1.go = "1";
 

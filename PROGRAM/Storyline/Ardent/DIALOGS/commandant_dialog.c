@@ -41,7 +41,7 @@ void ProcessDialogEvent()
 
 		case "execution":
 			PlaySound("VOICE\ENGLISH\Spa_m_b_034.wav");
-			if (PChar.ServedNation == PIRATE) dialog.text = GetMyFullName(PChar) + DLG_TEXT[2] + DLG_TEXT[4];
+			if (!checkquestattribute("background", "smuggler")) dialog.text = GetMyFullName(PChar) + DLG_TEXT[2] + DLG_TEXT[4];
 			else dialog.text = GetMyFullName(PChar) + DLG_TEXT[3] + DLG_TEXT[4];
 			link.l1 = DLG_TEXT[5];
 			link.l1.go = "Exit";

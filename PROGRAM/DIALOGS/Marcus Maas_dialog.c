@@ -51,6 +51,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\FRCO\FRCO002";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "quests";
@@ -82,6 +83,12 @@ void ProcessDialogEvent()
 					link.l2 = DLG_TEXT[46];
 				}
 				link.l2.go = "tav_1";
+			}
+			if (CheckQuestAttribute("ardent_hunt_status", "ship_known") && !CheckAttribute(PChar, "quest.tavern_checked"))
+			{
+				Preprocessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
+				link.l3 = DLG_TEXT[55];
+				link.l3.go = "ardent_hunt_philipsburg_tavern";
 			}
 			link.l99 = DLG_TEXT[15];
 			link.l99.go = "second time";
@@ -316,6 +323,27 @@ void ProcessDialogEvent()
 					}
 				}
 			}
+		break;
+
+		case "ardent_hunt_philipsburg_tavern":
+			Preprocessor_Add("ship", Characters[GetCharacterIndex(PChar.quest.villain)].Ship.Name);
+			dialog.text = DLG_TEXT[56];
+			link.l1 = DLG_TEXT[57];
+			link.l1.go = "ardent_hunt_philipsburg_tavern2";
+		break;
+
+		case "ardent_hunt_philipsburg_tavern2":
+			Preprocessor_AddQuestData("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
+			Preprocessor_AddQuestData("ship", Characters[GetCharacterIndex(PChar.quest.villain)].Ship.Name);
+			AddQuestRecord("Villain_Hunt", 4);
+			Preprocessor_Remove("ship");
+			Preprocessor_Remove("villain");
+			Preprocessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
+			Preprocessor_Add("ship", Characters[GetCharacterIndex(PChar.quest.villain)].Ship.Name);
+			dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "exit";
+			PChar.quest.tavern_checked = true;
 		break;
 	}
 }

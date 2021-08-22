@@ -28,9 +28,12 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
-
+			
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+			
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
+			if(IsOfficer(CharacterFromID("Lucas Da Saldanha"))) AddDialogExitQuest("Lucas_officer"); // GR: Switch to normal officer dialog
 			link.l1.go = "Exit";
 
 		break;

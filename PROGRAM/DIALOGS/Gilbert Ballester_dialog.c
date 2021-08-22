@@ -14,6 +14,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+	else Preprocessor_Add("child", XI_ConvertString("child"));
 	
 	switch(Dialog.CurrentNode)
 	{

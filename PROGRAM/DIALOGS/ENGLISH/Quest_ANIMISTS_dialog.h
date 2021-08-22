@@ -44,7 +44,7 @@ string DLG_TEXT[57] = {
 "You're carrying a certain letter! We need to read it. \nDon't worry, we've got a copy of the stamp it's sealed with. I promise the client won't notice. \nDo us this favor and we will pay you 1000 gold. What do you say?",
 "What do I say? Hmm, how do I put it...? NO! And go stick your stamp somewhere warm and cozy.",
 "Hmm... 1000 gold... Sounds tempting. I think we have a deal. Here's the letter.",
-"You're a wise man, ",
+"You're a wise #sgender#, ",
 ". Here's your money. Now we'll have a look at the letter. \nUh-hum, yes... I thought so... Now, they're wrong about this... So, I've learned all I need to know. Now...to seal the letter.... See, the stamp is identical? You may go.",
 "All right.",
 "Then we'll be forced to kill you.",

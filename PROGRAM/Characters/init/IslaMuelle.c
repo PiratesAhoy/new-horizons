@@ -6,7 +6,7 @@ void CreateIslaMuelleCharacters(ref n)
 	makeref(ch, chobj);
 
 			// Sylvie Bondies  француженка на исла муэле.
-	ch.nation = SPAIN;
+	ch.nation = FRANCE;
 	ch.old.name = "Sylvie";
 	ch.old.lastname = "Bondies";
 	ch.name = TranslateString("","Sylvie");
@@ -169,8 +169,16 @@ void CreateIslaMuelleCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Estrella Disguised_dialog.c";
 	ch.nation = SPAIN;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
      //JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1072,7 +1080,7 @@ void CreateIslaMuelleCharacters(ref n)
 	ch.name = TranslateString("","Tasia");
 	ch.lastname = TranslateString("","Cobo");
 	ch.id		= "Tasia Cobo";
-	ch.model = "towngirl1";
+	ch.model = "towngirl1_2"; // GR: was "towngirl1"
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
 	ch.location	= "Muelle_town_01";

@@ -56,6 +56,8 @@ void ProcessDialogEvent()
 				dialog.snd1 = "";
 				dialog.snd2 = "";
 				dialog.snd3 = "";
+				if (PChar.sex == "woman") Preprocessor_Add("yourself", XI_ConvertString("herself"));
+				else Preprocessor_Add("yourself", XI_ConvertString("himself"));
 				d.Text = RandPhrase(TimeGreeting() + DLG_TEXT[20] + PChar.name + DLG_TEXT[21], DLG_TEXT[22] + Pchar.name + DLG_TEXT[23], DLG_TEXT[24] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + Pchar.lastname + DLG_TEXT[25], &Dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 				if(Rand(1)==0)
 				{

@@ -1232,7 +1232,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.name = TranslateString("","Javier");
 	ch.lastname = TranslateString("","Balboa");
 	ch.id		= "Javier Balboa";
-	ch.model = "hub_spa3";
+	ch.model = "huber_spa6";	// was "hub_spa3"
 	ch.sex = "man";
 	ch.location	= "Santiago_townhall";
 	ch.location.group = "sit";

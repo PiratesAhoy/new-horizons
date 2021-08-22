@@ -310,7 +310,7 @@ void ProcessDialogEvent()
 			pchar.quest.Jacks_early_days = "first_meeting";
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-			AddDialogExitQuest("Start_Again_In_Tavern");
+//			AddDialogExitQuest("Start_Again_In_Tavern");	// GR: this doesn't seem to trigger
 		break;
 
 		case "Exit_for_upstairs_meeting":

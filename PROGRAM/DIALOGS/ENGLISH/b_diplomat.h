@@ -77,11 +77,11 @@ void ProcessDialogEvent()
 
 		if(sti(pchar.money)>sti(npchar.bribe))
 		{
-			link.l1 = "What? You think you can buy my me? Who do you think I am? I don't need your dirty bribemoney, I scorn such petty sums. Here, take " + npchar.bribe + " Goldpieces from ME, take them to your Majesty and tell him to shove them up his royal arse. I am sure you'll find a diplomatic way to do that, eh? And now get out of my eyes!";
+			link.l1 = "What? You think you can buy me? Who do you think I am? I don't need your dirty bribemoney, I scorn such petty sums. Here, take " + npchar.bribe + " Goldpieces from ME, take them to your Majesty and tell him to shove them up his royal arse. I am sure you'll find a diplomatic way to do that, eh? And now get out of my eyes!";
 			link.l1.go = "exit_reput";
 		}
 
-		link.l2 = "What? You think you can buy my me? Who do you think I am? A traitor? A gun for hire? Well, you have come to the right man then. Thanks a lot for the money, and kind regards to " + GetNationRoyalByType(sti(npchar.nation)) + ". Tell Him I'll sink some ships especially for him. Goodbye.";
+		link.l2 = "What? You think you can buy me? Who do you think I am? A traitor? A gun for hire? Well, you have come to the right " + XI_ConvertString(PChar.sex) + " then. Thanks a lot for the money, and kind regards to " + GetNationRoyalByType(sti(npchar.nation)) + ". Tell him I'll sink some ships especially for him. Goodbye.";
 		link.l2.go = "exit_change";
 
 		link.l3 = "Umm, I'm afraid that my current employ.. err.. my beloved mothercountry, I mean, won't be pleased if I switch sides. And I can't afford to have " + GetNationNameByType(GetServedNation()) + " as enemy. And I have to think of my reputation as well. So no deal today, sorry. ";

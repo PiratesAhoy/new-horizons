@@ -88,6 +88,7 @@ void ProcessDialogEvent()
 		Dialog.cam = "1";
 		Dialog.snd = "dialogs\0\009";
 
+		Preprocessor_Add("ladlass", GetMyAddressForm(NPChar, MainChar, ADDR_INFORMAL, false, false));
 		Dialog.text = DLG_TEXT[0];
 		link.l1 = DLG_TEXT[1];
 		link.l1.go = "Introduction";
@@ -230,6 +231,7 @@ void ProcessDialogEvent()
 
 						// If the blade is fine, show only excellent
 					case QUALITY_FINE:
+						PreProcessor_Add("title", GetMyAddressForm(NPChar, MainChar, ADDR_POLITE, false, false));
 						Dialog.text = DLG_TEXT[13] + BladeName + DLG_TEXT[14];
 						if (PriceExcellent <= PlayerMoney)
 						{

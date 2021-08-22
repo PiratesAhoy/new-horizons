@@ -28,7 +28,9 @@ void CreateParticles(ref Location)
 		//JRH -->
 			if(Location.id=="wr_port" || Location.id=="Fort_Moultrie_shore" || Location.id=="Sullivan_jungle1" || Location.id=="Legrands_backyard"
 			|| Location.id=="Legrands_kitchen" || Location.id=="Fort_Moultrie_village" || Location.id=="Fort_Moultrie_exit" || Location.id=="GB_chinese_nitre"
-			|| Location.id=="Bessop_plantation" || Location.id=="Oranjestad_port" || Location.id=="Oranjestad_store_02" || Location.id=="BB_graveyard")
+			|| Location.id=="Bessop_plantation" || Location.id=="Oranjestad_port" || Location.id=="Oranjestad_store_02" || Location.id=="BB_graveyard"
+			|| Location.id=="BB_isle" || Location.id=="Kristiania_jungle_house" || Location.id=="KR_jungle_9" || Location.id=="wr_church_outside"
+			|| Location.id=="BB_QAR_deck" || Location.id=="BB_QAR_cabin" || Location.id=="BB_Eden_estate")
 			{
 				CreateParticleSystem("smoke",stf(locator.x),stf(locator.y),stf(locator.z),-1.57,0,0,0);
 			}
@@ -103,6 +105,30 @@ void CreateParticles(ref Location)
 			}
 		}
 	}
+
+	//JRH -->
+	if(CheckAttribute(Location, "locators.wreck_fire"))
+	{
+		makearef(locator_group, location.locators.wreck_fire);
+		num = GetAttributesNum(locator_group);
+		for(n = 0; n < num; n++)
+		{
+			locator = GetAttributeN(locator_group, n);
+			loctrName = GetAttributeName(locator);
+			if(!CheckAttribute(Location, "locators.wreck_fire."+loctrName+".tmpLocator"))//MAXIMUS
+			{
+				if(CheckAttribute(locator,"x") && CheckAttribute(locator,"y") && CheckAttribute(locator,"z"))
+				{
+					pId = CreateParticleSystem("fort_fire_flames", stf(locator.x), stf(locator.y), stf(locator.z),-1.57,0,0,0);
+					pId = CreateParticleSystem("fort_gray_smoke", stf(locator.x), stf(locator.y), stf(locator.z),-1.57,0,0,0);
+					pId = CreateParticleSystem("fort_gray_smoke", stf(locator.x), stf(locator.y) + 2.0, stf(locator.z),-1.57,0,0,0);
+					tmpId = "pId"+n;
+					location.locators.fire.(tmpId) = pId;
+				}
+			}
+		}
+	}
+        //JRH <--
 
 	if(CheckAttribute(Location, "locators.heaters_p"))
 	{

@@ -136,6 +136,7 @@ void FillFourImage()
 	GameInterface.FourImage.ImagesGroup.t3 = "SHIPS2";
 	GameInterface.FourImage.ImagesGroup.t4 = "SHIPS3";
 	GameInterface.FourImage.ImagesGroup.t5 = "SHIPS4";
+	GameInterface.FourImage.ImagesGroup.t6 = "SHIPS5";
 	ref refMainCh = GetMainCharacter();
 	for(i=0; i<COMPANION_MAX; i++)
 	{

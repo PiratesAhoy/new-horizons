@@ -172,7 +172,7 @@ string DLG_TEXT[183] = {
 "Huh?",
 "Tough.",
 "I'm a friend of Roxanne Lalliere and I'd like to know where she is.",
-"Can you repeat your name, Monsieur?",
+"Can you repeat your name, #ssir#?",
 "I'm Bartolomeu o Portugues. I was her partner for the Santiago warehouse attack.",
 "Yes, she spoke to me about this operation. And why do you want to see her?",
 "I think she's in danger because of me. Some Spanish mercenaries want to arrest me and are likely to capture and question her or worse seeing she's my best friend.",

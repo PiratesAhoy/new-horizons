@@ -71,7 +71,7 @@ void ProcessDialogEvent()
 
 		case "donation":
 			Dialog.snd = "voice\PAJO\PAJO004";
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CHILD, false, false)); // KK
+			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.Text = DLG_TEXT[12];
 			Link.l1 = DLG_TEXT[13];
 			Link.l1.go = "No donation";
@@ -116,7 +116,7 @@ void ProcessDialogEvent()
 
 		case "No donation":
 			Dialog.snd = "voice\PADO\PADO042";
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CHILD, false, false)); // KK
+			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.Text = DLG_TEXT[17];
 			Link.l1 = DLG_TEXT[18];
 			Link.l1.go = "node_3";
@@ -166,7 +166,7 @@ void ProcessDialogEvent()
 
 		case "ispoved":
 			Dialog.snd = "voice\PAJO\PAJO006";
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CHILD, false, false)); // KK
+			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.text = DLG_TEXT[29];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "exit";
@@ -176,7 +176,7 @@ void ProcessDialogEvent()
 
 		case "ispoved_1":
 			Dialog.snd = "voice\PAJO\PAJO007";	
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CHILD, false, false)); // KK
+			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.text = DLG_TEXT[32];
 			link.l1 = DLG_TEXT[33];
 			link.l1.go = "ispoved_2";
@@ -235,7 +235,7 @@ void ProcessDialogEvent()
 
 		case "prihod_2":
 			Dialog.snd = "voice\PAJO\PAJO014";
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CHILD, false, false)); // KK
+			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.text = DLG_TEXT[49];
 			link.l1 = DLG_TEXT[50];
 			link.l1.go = "exit";
@@ -256,7 +256,7 @@ void ProcessDialogEvent()
 			else
 			{
 				Dialog.snd = "voice\PAJO\PAJO016";
-				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CHILD, false, false)); // KK
+				Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 				dialog.text = DLG_TEXT[57];
 				link.l1 = DLG_TEXT[58];
 				link.l1.go = "exit";
@@ -265,7 +265,7 @@ void ProcessDialogEvent()
 
 		case "prihod_4":
 			Dialog.snd = "voice\PAJO\PAJO017";
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CHILD, false, false)); // KK
+			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.text = DLG_TEXT[59];
 			link.l1 = DLG_TEXT[60];
 			link.l1.go = "exit";

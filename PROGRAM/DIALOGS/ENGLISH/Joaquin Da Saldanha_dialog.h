@@ -4,7 +4,7 @@ string DLG_TEXT[50] = {
 "Allow me to introduce myself. I am ",
 "Joaquin Da Saldanha",
 "Joaquin Da Saldanha",
-", admiral of the Spanish fleet. I'm glad to meet you, captain - the governor recommended you as a man who can deal with any trouble.",
+", admiral of the Spanish fleet. I'm glad to meet you, captain - the governor recommended you as a #sperson# who can deal with any trouble.",
 "The governor flatters me. Although I do have a great deal of experience with trouble....",
 "Captain, have you changed your mind about helping me find my son?",
 "Yes, I think I can help you now. But I'll need something to start with. Can you at least give me a general idea of where I should look?",

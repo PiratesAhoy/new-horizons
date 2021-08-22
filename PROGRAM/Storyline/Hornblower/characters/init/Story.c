@@ -510,7 +510,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = "";
 	ch.lastname = TranslateString("","Perrin");
 	ch.id		= "Perrin";
-	ch.model = "RNSail01HB": //"man1";
+	ch.model = "RNSail01HB"; //"man1";
 	ch.sex = "man";
 	ch.location	= "";
 	ch.location.group = "";
@@ -544,7 +544,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = "";
 	ch.lastname = TranslateString("","Oldroyd");
 	ch.id		= "Oldroyd";
-	ch.model = "OldroydHB": //"man2";
+	ch.model = "OldroydHB"; //"man2";
 	ch.sex = "man";
 	ch.location	= "";
 	ch.location.group = "";
@@ -578,7 +578,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = "";
 	ch.lastname = TranslateString("","Marsh");
 	ch.id		= "Marsh";
-	ch.model = "RNSail02HB": //"man3";
+	ch.model = "RNSail02HB"; //"man3";
 	ch.sex = "man";
 	ch.location	= "";
 	ch.location.group = "";
@@ -1222,7 +1222,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("","Teresa");
 	ch.lastname = TranslateString("","Moreno");
 	ch.id		= "Teresa Moreno";
-	ch.model = "fanielle";
+	ch.model = "Teresa_Moreno";
 	ch.sex = "woman";
 //	ch.sound_type = "female_citizen";
 	ch.location	= "";
@@ -1438,8 +1438,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1520,8 +1520,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "houseH1"; // PB
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1562,8 +1562,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "houseH1"; // PB
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1604,8 +1604,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "houseH1"; // PB
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1646,8 +1646,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "houseH1"; // PB
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1688,8 +1688,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1730,8 +1730,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1772,8 +1772,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1814,8 +1814,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1856,8 +1856,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1898,8 +1898,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1940,8 +1940,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1982,8 +1982,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2024,8 +2024,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "houseH1"; // PB
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2066,8 +2066,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2108,8 +2108,8 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "LongRifle_C");
-	ch.equip.gun = "LongRifle_C";
+	GiveItem2Character(ch, "LongRifle_H");
+	ch.equip.gun = "LongRifle_H";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);

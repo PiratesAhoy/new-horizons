@@ -111,6 +111,7 @@ void ProcessDialogEvent()
 
 		case "Node_no_ship":
 			Dialog.Snd = "Dialogs\VIBO\VIBO007";
+			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false));
 			d.Text = DLG_TEXT[18];
 			Link.l1 = DLG_TEXT[19];
 			Link.l1.go = "Exit";

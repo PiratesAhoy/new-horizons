@@ -254,13 +254,20 @@ void ProcessDialogEvent()
 
 		case "pismena":
 			dialog.snd = "Voice\CLBU\CLBU020";
+			if (characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_Add("person", XI_ConvertString("gentlewoman"));
+			else Preprocessor_Add("person", XI_ConvertString("gentleman"));
 			dialog.text = DLG_TEXT[79];
 			link.l1 = DLG_TEXT[80] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[81])]) + DLG_TEXT[83];
 			link.l1.go = "pismena_2";
 		break;
 
 		case "pismena_2":
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			AddQuestRecord("search_danielle", 21);
+			Preprocessor_Remove("Danielle");
 			dialog.snd = "Voice\CLBU\CLBU021";
+			Preprocessor_Add("Pronoun_upper", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle")))));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(CharacterFromID("Danielle"))));
 			dialog.text = DLG_TEXT[84];
 			link.l1 = DLG_TEXT[85];
 			link.l1.go = "exit";
@@ -270,7 +277,6 @@ void ProcessDialogEvent()
 			pchar.quest.movie_with_fight.win_condition.l1.locator_group = "reload";
 			pchar.quest.movie_with_fight.win_condition.l1.locator = "reload1";
 			pchar.quest.movie_with_fight.win_condition = "movie_with_fight_complete";
-			AddQuestRecord("search_danielle", 21);
 		break;
 
 		case "crew":

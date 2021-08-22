@@ -99,12 +99,14 @@ void CreateCharacters()
 			if(ENABLE_WEAPONSMOD)
 			{
 				GiveItem2Character(ch, "bladeC6+2");
-				GiveItem2Character(ch, "pistol1+3");
+				if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1+3");
+				else GiveItem2Character(ch, "pistol1a+3");
 			}
 			else
 			{
 				GiveItem2Character(ch, "bladeC6");
-				GiveItem2Character(ch, "pistol1");
+				if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+				else GiveItem2Character(ch, "pistol1a");
 			}
 		break;
 		case PLAYER_TYPE_CORSAIR:
@@ -127,14 +129,16 @@ void CreateCharacters()
 					else					GiveItem2Character(ch, "blade27");
 				}
 			}
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "compass2");
 			GiveItem2Character(ch, "clock1");
 		break;
 		case PLAYER_TYPE_ENGINEER:
 			ch.shiplog.Entry.log0 = "I have spent most of my adult life on solid ground, as solid as a battlefields gets in any case, as a military engineer in the service of the crown. With my earnings I have decided to leave the army and invest in a ship. I have arrived in the Caribbean where they say enterprising captains with a solid vessel can do very well for themselves. We shall see. While I must confess that I am not much of a seaman yet, I am past the stage of turning green in poor weather and should pick the rest up quickly as I go.";
 			GiveItem2Character(ch, "blade1");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "book2");
 			GiveItem2Character(ch, "book10");
 			GiveItem2Character(ch, "book15");
@@ -142,8 +146,9 @@ void CreateCharacters()
 		case PLAYER_TYPE_EXPLORER:
 			ch.shiplog.Entry.log0 = "My mother always said I had the devil’s own luck but that I should learn not to push it too far. My last adventure up the Amazon charting the river for the Portuguese crown has driven that point home. Half the expedition dead of malaria and the rest roasted on spits by savage cannibals. On the bright side, his majesty’s representative was impressed by my harrowing tale and paid me the full expedition’s wages as I was the sole survivor. I have bought my own ship and will see what I can make of myself as a captain here in the new world.";
 			if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "bladeC6+1");
-			else					GiveItem2Character(ch, "bladeC6");
-			GiveItem2Character(ch, "pistol1");
+			else			GiveItem2Character(ch, "bladeC6");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "compass3");
 		break;
 		case PLAYER_TYPE_GAMBLER:
@@ -171,7 +176,8 @@ void CreateCharacters()
 		case PLAYER_TYPE_MERCHANT:
 			ch.shiplog.Entry.log0 = "I've worked long and hard for this day but it has finally come. The captain has retired to life ashore and sold me his interest in the ship. My own vessel! She is in good shape thanks to my care as first mate these last several years and I know what she and her crew can manage. I have said my last ‘Aye, sir' while standing on this deck. Now she goes where I tell her. It's good to be the captain!";
 			GiveItem2Character(ch, "blade1");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "spyglass2");
 			GiveItem2Character(ch, "compass2");
 			GiveItem2Character(ch, "clock1");
@@ -181,7 +187,8 @@ void CreateCharacters()
 		case PLAYER_TYPE_NAVAL_OFFICER:
 			ch.shiplog.Entry.log0 = "Having joined the navy, it is now up to me to work myself up through the ranks.";
 			GiveItem2Character(ch, "blade1");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "spyglass2");
 			GiveItem2Character(ch, "compass2");
 			GiveItem2Character(ch, "clock1");
@@ -191,7 +198,8 @@ void CreateCharacters()
 		case PLAYER_TYPE_PHYSICIAN:
 			ch.shiplog.Entry.log0 = "It was chance that brought me into naval service as a ship's surgeon on graduating medical college but, I must confess, the salt is in my blood now. I have been putting money away for years now, trying to decide whether to retire on it, perhaps setting up a private practice in some sleepy country hamlet, or invest it in a ship of my own. The transition to ship's captain is not an easy one but I am confident I've made the right choice for myself. Time will tell if I am right.";
 			GiveItem2Character(ch, "blade1");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "doctortoolkit");
 			GiveItem2Character(ch, "microscope");
 			TakeNItems(ch, "potion1", 10);
@@ -200,13 +208,29 @@ void CreateCharacters()
 		case PLAYER_TYPE_QUARTERMASTER:
 			ch.shiplog.Entry.log0 = "The loss of the captain and first officer to fever on the outset of our last voyage was difficult on the entire crew, not least of which myself, as I was put in the awkward position of taking command personally. All went rather smoothly however once the illness had run its course and, with the encouragement of the crew, I have decided to buy the ship outright from our employers and take over as captain permanently.";
 			GiveItem2Character(ch, "blade1");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "scales");
 			GiveItem2Character(ch, "book2");
 			GiveItem2Character(ch, "book3");
 		break;
 		case PLAYER_TYPE_REBEL:
-			ch.shiplog.Entry.log0 = "Ever since I was a child I have been restless and unable to tolerate injustice. I have fought in many wars across the old world and been on the losing side of all of them. I am without regret or apology however. I have stayed true to what I believe in and never compromised my integrity for coin or comfort. Still, I know when it is time to move on and so I have done just that. It is off to the new world for me. If I can't make Europe a better place perhaps there is still time to make the Americas one.";
+			if(CharFirstName == "Hilda Sparre"){
+				ch.shiplog.Title.log0 = "Arrived in the New World";
+				ch.shiplog.Entry.log0 =  "That fool of a King and his predecessors would erode our rights, the rights of our blood tracing back to times immemorial. The realm was a bloody mess because the crown could not handle the finances of the realm. The new and growing number of lower nobles screaming for what was rightfully ours. 'Please, the war is so expensive, think of the realm'. Give them a finger and they take the whole hand. It had to stop. But it all went wrong so very fast.\n\n Me and some like-minded people I confided in had plans: Depose the King, push someone else's claim to the throne, someone who saw the worth of what we and our ancestors had done for the realm. But somehow the crown found us out. There is little doubt in my mind we were betrayed. A death sentence was a matter of fact.\n\n Thankfully I still had enough loyal friends and family that I could escape the country and get myself here to the New World. I am still hunted, Sweden's allies will not give me a warm welcome, and neither will her enemies. Their loss, I say. \n\nLo, I got myself a ship with what little wealth I had left, and now it is time to show my true mettle and prove that this noblewoman can claw her way back to greatness on her own merit. Time for adventure!";
+				GiveItem2Character(ch, "clock1");
+				if(ENABLE_WEAPONSMOD){
+					GiveItem2Character(ch, "bladeC2+1");
+					GiveItem2Character(ch, "pistol2+1");
+				}
+				else{
+					GiveItem2Character(ch, "bladeC2");
+					GiveItem2Character(ch, "pistol2");
+				}
+			}
+			else{
+				ch.shiplog.Entry.log0 = "Ever since I was a child I have been restless and unable to tolerate injustice. I have fought in many wars across the old world and been on the losing side of all of them. I am without regret or apology however. I have stayed true to what I believe in and never compromised my integrity for coin or comfort. Still, I know when it is time to move on and so I have done just that. It is off to the new world for me. If I can't make Europe a better place perhaps there is still time to make the Americas one.";
+			
 			if(ENABLE_WEAPONSMOD)
 			{
 				GiveItem2Character(ch, "bladeC2+1");
@@ -218,11 +242,13 @@ void CreateCharacters()
 				GiveItem2Character(ch, "PiratesPistol");
 			}
 			GiveItem2Character(ch, "cheaparmor");
+			}
 		break;
 		case PLAYER_TYPE_ROGUE:
 			ch.shiplog.Entry.log0 = "Gads! I barely escaped Paris with my life but I managed it and have invested the lion's share of the proceeds into the acquisition of a ship. Not wanting to pay full price of course I managed to convince an unhappy crew to abscond with their vessel under my command with promise of treasure and freedom. It remains to be seen if I can deliver on that promise but I need to disappear from Europe and they say the new world is a fine place to disappear to.";
 			GiveItem2Character(ch, "blade2");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "jewelry1");
 			GiveItem2Character(ch, "jewelry2");
 			GiveItem2Character(ch, "jewelry3");
@@ -245,7 +271,8 @@ void CreateCharacters()
 		case PLAYER_TYPE_SHIPWRIGHT:
 			ch.shiplog.Entry.log0 = "Today is the day I take to the high seas as the captain of my own vessel. I have spent my life building ships only to watch they sail off into the distance with other men at their helm. No more! I have had my fill of life on the land and go now to find my destiny on a sturdy vessel designed and built with my own two hands. It is a glorious feeling of accomplishment and I cannot wait to see what tomorrow will bring.";
 			GiveItem2Character(ch, "blade1");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			GiveItem2Character(ch, "compass1");
 			GiveItem2Character(ch, "book2");
 			GiveItem2Character(ch, "book10");
@@ -281,14 +308,24 @@ void CreateCharacters()
 			GiveItem2Character(ch, "jewelry7");
 		break;
 		case PLAYER_TYPE_SWORD_MASTER:
-			ch.shiplog.Entry.log0 = "I have done well for myself training the well-to-do how to master the sword in personal combat. I have studied the great masters and imparted their wisdom to my own students in turn but I have frankly become bored of this quiet life. Besides, what true master of the martial arts hides behind walls away from the danger of angry steel? I have used my considerable savings to invest in a ship and decided to make my way to the Caribbean to seek adventure and an even greater fortune.";
-			if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "bladeC30+3");
-			else					GiveItem2Character(ch, "bladeC30");
+			if (GetMySimpleName(ch) == "Bohdan Aleskeevich Voronov" && ch.nation == PERSONAL_NATION)
+			{
+				ch.shiplog.Entry.log0 = "Ten years since the death of our leader, Stenka Rasin, some of us have finally made it to the Caribbean. We have gathered our possessions and sold them to raise money to buy a ship. I have been chosen as the captain. Now we shall seek our fortune on the seas, and perhaps one day return to our beloved motherland.";
+				if(ENABLE_WEAPONSMOD) GiveItem2Character(ch, "blade41+3");
+				else GiveItem2Character(ch, "blade41");
+			}
+			else
+			{
+				ch.shiplog.Entry.log0 = "I have done well for myself training the well-to-do how to master the sword in personal combat. I have studied the great masters and imparted their wisdom to my own students in turn but I have frankly become bored of this quiet life. Besides, what true master of the martial arts hides behind walls away from the danger of angry steel? I have used my considerable savings to invest in a ship and decided to make my way to the Caribbean to seek adventure and an even greater fortune.";
+				if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "bladeC30+3");
+				else					GiveItem2Character(ch, "bladeC30");
+			}
 			GiveItem2Character(ch, "goldarmor");
 		break;
 		case PLAYER_TYPE_CURSED:
 			GiveItem2Character(ch, "blade4");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 			if(HasSubStr(CharShipType, "Dutchman"))
 			{
 				ch.shiplog.Entry.log0 = "I have started a new logbook. The old one contained too many painful memories. This new one will soon be filled with records of fear and terror that I shall reign upon all those who dare cross me at sea!";
@@ -322,7 +359,8 @@ void CreateCharacters()
 		break;
 		case PLAYER_TYPE_CUSTOM:
 			GiveItem2Character(ch, "blade4");
-			GiveItem2Character(ch, "pistol1");
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
 		break;
 		case PLAYER_TYPE_LAND_OWNER:
 			ch.shiplog.Title.log0 = "Personal Diary";

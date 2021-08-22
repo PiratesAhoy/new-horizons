@@ -48,6 +48,7 @@ void ProcessDialogEvent()
 			//PURSEON ==================== Begin Training fight Section ===================>
 			if(HasSubStr(PChar.location,"ShipDeck") && !CheckAttribute(PChar,"TrainingFight"))
 			{
+				Preprocessor_Add("lad", GetCharacterAddressForm(NPChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 				Link.l5 = DLG_TEXT[28];
 				Link.l5.go = "MakeChoice";
 			}
@@ -147,6 +148,14 @@ void ProcessDialogEvent()
 		break;
 		
 		case "whatsthetime":
+			if(PChar.sex == "woman")	
+			{
+				Preprocessor_Add("sir", FirstLetterUp(XI_ConvertString("ma'am"))); // DeathDaisy
+			}
+			else
+			{
+				Preprocessor_Add("sir", FirstLetterUp(XI_ConvertString("sir"))); // DeathDaisy
+			}
 			Dialog.Text = DLG_TEXT[43]+GetTimeText(GetTime())+DLG_TEXT[44];
 			Link.l1 = DLG_TEXT[46];
 			Link.l1.go = "Wait1hour";

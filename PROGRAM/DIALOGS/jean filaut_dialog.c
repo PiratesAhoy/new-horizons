@@ -19,6 +19,8 @@ void ProcessDialogEvent()
 	iMonth = environment.date.month;
 	string lastspeak_date = iday + " " + iMonth;
 
+	int cash;
+
 	ref PChar;
 	PChar = GetMainCharacter();
 
@@ -112,11 +114,39 @@ void ProcessDialogEvent()
 		break;
 
 		case "quest":
-			dialog.text = DLG_TEXT[9];
-			link.l1 = DLG_TEXT[10];
-			link.l1.go = "Second time";
-			link.l2 = DLG_TEXT[11];
-			link.l2.go = "exit";
+			if (isofficer(characterFromID("Rys Bloom")))
+			{
+				dialog.text = DLG_TEXT[23] + GetMySimpleName(characterFromID("Rys Bloom")) + DLG_TEXT[24];
+				link.l1 = DLG_TEXT[25];
+				link.l1.go = "quest2";
+				link.l2 = DLG_TEXT[26];
+				link.l2.go = "exit";
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[9];
+				link.l1 = DLG_TEXT[10];
+				link.l1.go = "Second time";
+				link.l2 = DLG_TEXT[11];
+				link.l2.go = "exit";
+			}
+		break;
+
+		case "quest2":
+			dialog.text = DLG_TEXT[27];
+			link.l1 = DLG_TEXT[28];
+			AddDialogExitQuest("martinique_shipyard_work");
+			link.l1.go = "exit";
+		break;
+
+		case "job_done":
+			cash = 1500;
+			PreProcessor_Add("cash", cash);
+			dialog.text = DLG_TEXT[29];
+			link.l1 = DLG_TEXT[30];
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, cash);
+			link.l1.go = "exit";
 		break;
 
 		case "shipyard":

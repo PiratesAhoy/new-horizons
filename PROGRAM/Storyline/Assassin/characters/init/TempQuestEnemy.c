@@ -15,8 +15,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 	ch.sex = "man";
 	ch.nation = FRANCE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -61,8 +61,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 	ch.sex = "man";
 	ch.nation = FRANCE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -107,8 +107,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 	ch.sex = "man";
 	ch.nation = FRANCE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -153,8 +153,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 	ch.sex = "man";
 	ch.nation = FRANCE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -199,8 +199,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 	ch.sex = "man";
 	ch.nation = FRANCE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -245,8 +245,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 	ch.sex = "man";
 	ch.nation = FRANCE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -291,8 +291,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 	ch.sex = "man";
 	ch.nation = FRANCE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1109,8 +1109,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1152,8 +1152,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1195,8 +1195,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1237,8 +1237,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1280,8 +1280,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1322,8 +1322,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);

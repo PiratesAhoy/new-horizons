@@ -416,7 +416,8 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[30];
 			link.l1 = DLG_TEXT[31];
 			link.l1.go = "exit";
-			AddDialogExitQuest("grandma_future_plans9");
+		//	AddDialogExitQuest("grandma_future_plans9");
+			AddDialogExitQuest("grandma_farm_sloop");
 		break;
 
 		case "monkey":
@@ -459,6 +460,35 @@ void ProcessDialogEvent()
 		break;
 
 	//---------------------------------------------------------------------------------------	
+
+		case "alchemy_part2":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_006.wav");
+			Dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "alchemy_part2_A";
+		break;
+
+		case "alchemy_part2_A":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			link.l1.go = "alchemy_part2_B";
+		break;
+
+		case "alchemy_part2_B":
+			PlaySound("INTERFACE\glass2.wav");
+			GiveItem2Character(Pchar, "bladebottle_CV1_sc");
+			GiveItem2Character(Pchar, "bladebottle_CT1_nitr");
+			GiveItem2Character(Pchar, "bladebottle_BS2_LH");
+
+			PlaySound("VOICE\ENGLISH\Fre_f_a_005.wav");
+			Dialog.text = DLG_TEXT[51];
+			link.l1 = DLG_TEXT[52];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Minerva_alchemy2_done");
+		break;
+
+	//---------------------------------------------------------------------------------------
 	
 		case "Exit":
 			DialogExit();

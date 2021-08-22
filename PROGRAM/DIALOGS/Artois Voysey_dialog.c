@@ -14,6 +14,7 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 	
+	PreProcessor_Add("title", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -111,12 +112,14 @@ void ProcessDialogEvent()
 			pchar.quest.treasure_found.win_condition.l1.locator = "randitem1";
 			pchar.quest.treasure_found.win_condition = "treasure_found";
 			NPChar.loyality = makeint(NPChar.loyality) - 5;
-			d.Text = DLG_TEXT[19];
-			Link.l1 = DLG_TEXT[20];
-			Link.l1.go = "exit";
 			OfficersReaction("bad");
 			AddDialogExitQuest("Voysey_listed_2");
 			AddQuestRecord("artois", 11);
+			PreProcessor_Add("title", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
+			d.Text = DLG_TEXT[19];
+			Link.l1 = DLG_TEXT[20];
+			Link.l1.go = "exit";
 		break;
 		
 		case "continue6":
@@ -155,13 +158,21 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\ARVO\ARVO013";
 			dialog.text = DLG_TEXT[27];
 			link.l1 = DLG_TEXT[28];
+			link.l1.go = "final_talk_1.5";
+		break;
+
+		case "final_talk_1.5":
+			dialog.snd = "Voice\ARVO\ARVO013";
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
+			dialog.text = DLG_TEXT[29];
+			link.l1 = DLG_TEXT[30];
 			link.l1.go = "final_talk_2";
 		break;
 		
 		case "final_talk_2":
 			dialog.snd = "Voice\ARVO\ARVO014";
-			dialog.text = DLG_TEXT[29];
-			link.l1 = DLG_TEXT[30];
+			dialog.text = DLG_TEXT[31];
+			link.l1 = DLG_TEXT[32];
 			link.l1.go = "exit";
 			pchar.quest.artois_line = "completed";
 			NPChar.Dialog.Filename = "Enc_Officer_dialog.c"; // PB

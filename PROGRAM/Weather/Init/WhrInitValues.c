@@ -60,7 +60,7 @@ void Whr_InitGValues()
 		Weathers.Sea.SunRoad.Start = 0.99;
 		Weathers.Sea.SunRoad.Color1 = argb(0,128,55,0);
 		Weathers.Sea.SunRoad.Color2 = argb(0,255,200,150);
-		Weathers.Sea.SunRoad.Power = 0.2;	// is this correct?
+		Weathers.Sea.SunRoad.Power = 0.25;	// is this correct?
 
 		if(Whr_IsStorm()){
 		Weathers.Fog.Color = argb(0,162,152,155);
@@ -279,7 +279,7 @@ void Whr_InitGValues()
 		Weathers.Sky.Angle = 0.0;
 		
 		Weathers.Sun.Color = argb(0,255,208,200);
-		Weathers.Sun.Ambient = argb(0,55,44,44);
+		Weathers.Sun.Ambient = argb(0,55,44,33); //0,55,44,44
 		Weathers.Sun.AzimuthAngle = Degree2Radian(350);
 		Weathers.Sun.HeightAngle = 0.21;
 
@@ -314,8 +314,8 @@ void Whr_InitGValues()
 		Weathers.Sea.Bump.Scale = 2.0;
 
 		Weathers.Sea.SunRoad.Start = 0.97;
-		Weathers.Sea.SunRoad.Color1 = argb(0,255,55,44);
-		Weathers.Sea.SunRoad.Color2 = argb(0,255,100,0);
+		Weathers.Sea.SunRoad.Color1 = argb(0,255,100,0); //changed from 0,255,55,44, was much too red for the new sun.DeathDaisy
+		Weathers.Sea.SunRoad.Color2 = argb(0,255,200,55); //changed from 0,255,100,0, ditto.DeathDaisy
 		Weathers.Sea.SunRoad.Power = 3.0;
 
 		Weathers.Fog.Color = argb(0,162,152,155);
@@ -345,10 +345,16 @@ void Whr_InitGValues()
 
 	if (sti(Weathers.Sun.Glow.Enable) == true)
 	{
+		string widescreen = "";
+		float screen_x = stf(showWindow.width);
+		float screen_y = stf(showWindow.height);
+		float screen_ratio = screen_x/screen_y;
+		if(screen_ratio > 1.4){ widescreen = "\widescreen";}
+		
 		Weathers.Sun.Glow.Dist = 3500.0;
 		Weathers.Sun.Glow.Size = 1250.0;
 		Weathers.Sun.Glow.RotateSpeed = 1.0;
-		Weathers.Sun.Glow.Texture = "weather\sun\glow\sunglow.tga";
+		Weathers.Sun.Glow.Texture = "weather\sun\glow" + widescreen + "\sunglow.tga";
 		Weathers.Sun.Glow.DecayTime = 8.0;
 		Weathers.Sun.Glow.TechniqueNoZ = "sunglow_noz";
 		Weathers.Sun.Glow.TechniqueZ = "sunglow_z";

@@ -36,7 +36,7 @@ void ProcessDialogEvent()
                 if (PChar.quest.Bartolomeu == "contact")
 			{
 			dialog.snd = "Voice\CLLA\CLLA004";
-			dialog.text = DLG_TEXT[0];
+			dialog.text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false);
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "begin_1";	
 			}

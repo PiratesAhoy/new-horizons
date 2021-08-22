@@ -12,7 +12,8 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
-
+	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 
 	switch(Dialog.CurrentNode)
 	{
@@ -55,6 +56,19 @@ void ProcessDialogEvent()
 
 		case "begin_4":
 			dialog.snd = "Voice\CLLA\CLLA004";
+			string Nationality;
+			switch(sti(PChar.nation))
+			{
+				case PERSONAL_NATION:
+					Nationality = DLG_TEXT[14];
+				break;
+				case PIRATE:
+					Nationality = DLG_TEXT[15];
+				break;
+				Nationality = GetNationDescByType(sti(PChar.nation));
+			}
+			Preprocessor_Add("country", Nationality);
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false));
 			dialog.text = DLG_TEXT[7];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "begin_5";

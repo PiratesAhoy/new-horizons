@@ -108,7 +108,14 @@ void ProcessDialogEvent()
 
 		case "begin_9":
 			dialog.snd = "Voice\CLLA\CLLA004";
-			dialog.text = DLG_TEXT[20];
+			if(sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) > 0)
+			{
+				dialog.text = DLG_TEXT[23];
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[20];
+			}
 			link.l1 = DLG_TEXT[21];
 			link.l1.go = "Exit";
 			AddDialogExitQuest("searchdebris");

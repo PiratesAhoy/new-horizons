@@ -1,5 +1,5 @@
 string DLG_TEXT[12] = {
-"Hello, sir. You seem to be trying to get into the brothel.",
+"Hello, #ssir#. You seem to be trying to get into the brothel.",
 "Indeed. I need to meet somebody inside.",
 "Of course you do. There are usually many meet-worthy somebodies inside. (*Meaningful look*) But not today. The brothel is closed for the time being.",
 "Uh? Why? Only minutes ago I heard of somebody being in the brothel right now.",

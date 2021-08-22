@@ -3,7 +3,7 @@ string DLG_TEXT[19] = {
 "Aye, indeed I'm in need of some supplies. The storekeeper says he will not have any of these supplies any time soon. Could you fetch me ",
 " I will pay you ",
 " gold coins. Please get it before ",
-"I'm your man. You will have those supplies in no time.",
+"I'm your #sgender#. You will have those supplies in no time.",
 "Sorry, I can't help you just yet.",
 "Too bad, I will need the supplies before ",
 "Have a good day.",

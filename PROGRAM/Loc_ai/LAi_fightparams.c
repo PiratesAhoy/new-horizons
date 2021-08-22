@@ -96,7 +96,8 @@ float LAi_BladeApplySkills(aref attack, aref enemy, float dmg)
 	if(IsCharacterPerkOn(enemy, "SwordplayProfessional")) kDmg = 0.7; // Baste
 	//Levis: Opium sickness
 	float s = 1.0;
-	if(CheckAttribute(enemy,"quest.opium_use.opiumsickness")) s = s + stf(enemy.quest.opium_use.opiumsickness);
+	if(CheckAttribute(enemy,"quest.opium_use.opiumsickness")) s = s - stf(enemy.quest.opium_use.opiumsickness);
+	if(s < 0.1) s = 0.1;
 	dmg = dmg*kDmg*s;
 	return dmg;
 }
@@ -203,7 +204,8 @@ float LAi_BladeFindPiercingProbability(aref attack, aref enemy, float hitDmg)
 
 	//Levis: Opium sickness
 	float s = 1.0;
-	if(CheckAttribute(enemy,"quest.opium_use.opiumsickness")) s = s + stf(enemy.quest.opium_use.opiumsickness);
+	if(CheckAttribute(enemy,"quest.opium_use.opiumsickness")) s = s - stf(enemy.quest.opium_use.opiumsickness);
+	if(s < 0.1) s = 0.1;
 	
 	p = p*k*hitDmg*pBreak*s;
 	if (p>1.0) p = 1.0;

@@ -3,6 +3,7 @@ void ProcessDialogEvent()
 {
 	ref NPChar;
 	aref Link, Diag; //NextDiag;
+	int x;
 
 	DeleteAttribute(&Dialog,"Links");
 
@@ -188,13 +189,13 @@ void ProcessDialogEvent()
 		case "go_to_governor":
 			if (PChar.sex == "man")
 			{
-				PreProcessor_Add("noun", "man");
-				PreProcessor_Add("relation", "son");
+				PreProcessor_Add("noun", XI_ConvertString("man"));
+				PreProcessor_Add("relation", XI_ConvertString("son"));
 			}
 			else
 			{
-				PreProcessor_Add("noun", "woman");
-				PreProcessor_Add("relation", "daughter");
+				PreProcessor_Add("noun", XI_ConvertString("woman"));
+				PreProcessor_Add("relation", XI_ConvertString("daughter"));
 			}
 			dialog.text = DLG_TEXT[56];
 			link.l1 = DLG_TEXT[57];
@@ -210,10 +211,388 @@ void ProcessDialogEvent()
 
 		case "convoy_found_romance":
 			dialog.text = DLG_TEXT[61];
-			if (PChar.sex == "man") PreProcessor_Add("relation", "daughter");
-			else PreProcessor_Add("relation", "son");
+			if (PChar.sex == "man") PreProcessor_Add("relation", XI_ConvertString("daughter"));
+			else PreProcessor_Add("relation", XI_ConvertString("son"));
 			link.l1 = DLG_TEXT[62] + GetMyFullName(characterFromID(PChar.quest.romance)) + DLG_TEXT[63] + GetMyFullName(characterFromID("Javier Balboa")) + DLG_TEXT[64];
 			link.l1.go = "exit";
-		break;			
+		break;
+
+		case "French_first_time":
+			Dialog.defAni = "dialog_stay1";
+			Dialog.defCam = "1";
+			Dialog.defSnd = "dialogs\0\017";
+			Dialog.defLinkAni = "dialog_1";
+			Dialog.defLinkCam = "1";
+			Dialog.defLinkSnd = "dialogs\woman\024";
+			Dialog.ani = "dialog_stay2";
+			Dialog.cam = "1";
+			Dialog.snd = "dialogs\0\009";
+
+			dialog.text = DLG_TEXT[67];
+			link.l1 = DLG_TEXT[68];
+			link.l1.go = "French_Exit";
+		break;
+
+		case "French_Exit":
+			Diag.CurrentNode = "French_first_time";
+			DialogExit();
+		break;
+
+		case "abduction_challenge":
+			dialog.text = DLG_TEXT[69];
+			link.l1 = DLG_TEXT[70];
+			link.l1.go = "abduction_entry_options";
+		break;
+
+		case "abduction_entry_options":
+			dialog.text = DLG_TEXT[71];
+			if (CheckCharacterItem(PChar, "PrisonPass") || CheckCharacterItem(PChar, "FakePrisonPass"))
+			{
+				link.l1 = DLG_TEXT[72];
+				link.l1.go = "abduction_check_pass";
+			}
+			link.l2 = DLG_TEXT[73];
+			link.l2.go = "abduction_offer_bribe";
+			link.l3 = DLG_TEXT[74];
+			link.l3.go = "exit_try_again";
+			link.l4 = DLG_TEXT[75];
+			link.l4.go = "abduction_fight_guards";
+		break;
+
+		case "abduction_check_pass":
+			dialog.text = DLG_TEXT[78];
+			link.l1 = DLG_TEXT[79];
+			link.l1.go = "French_Exit";
+			if (CheckCharacterItem(PChar, "PrisonPass") || CalcCharacterSkill(pchar, SKILL_LEADERSHIP) + CalcCharacterSkill(pchar, SKILL_SNEAK) > 7)
+			{
+				if (!CheckCharacterItem(PChar, "PrisonPass") && CalcCharacterSkill(pchar, SKILL_LEADERSHIP) + CalcCharacterSkill(pchar, SKILL_SNEAK) <= 10)
+				{
+					PChar.quest.abduction_guard_status = "fakepass";
+				}
+				dialog.text = DLG_TEXT[76];
+				link.l1 = DLG_TEXT[77];
+				link.l1.go = "exit_pass_accepted";
+			}
+		break;
+
+		case "abduction_offer_bribe":
+			dialog.text = DLG_TEXT[80];
+			if (makeint(pchar.money >= 5000))
+			{
+				link.l1 = DLG_TEXT[81];
+				link.l1.go = "exit_bribe_accepted";
+			}
+			link.l2 = DLG_TEXT[82];
+			link.l2.go = "exit_try_again";
+		break;
+
+		case "abduction_demand_second_bribe":
+			dialog.text = DLG_TEXT[83];
+			link.l1 = DLG_TEXT[84];
+			link.l1.go = "abduction_fight_guards";
+			if (makeint(pchar.money >= 5000))
+			{
+				link.l2 = DLG_TEXT[85];
+				link.l2.go = "exit_bribe_accepted";
+			}
+		break;
+
+		case "abduction_demand_fine":
+			dialog.text = DLG_TEXT[86];
+			link.l1 = DLG_TEXT[84];
+			link.l1.go = "abduction_fight_guards";
+			if (makeint(pchar.money >= 5000))
+			{
+				link.l2 = DLG_TEXT[85];
+				link.l2.go = "exit_bribe_accepted";
+			}
+		break;
+
+		case "abduction_fight_guards":
+			AddDialogExitQuest("abduction_fight_guards");
+			Diag.CurrentNode = "French_first_time";
+			DialogExit();
+		break;
+
+		case "abduction_exit_challenge":
+			dialog.text = DLG_TEXT[87];
+			link.l1 = DLG_TEXT[88];
+			link.l1.go = "exit";
+		break;
+
+		case "abduction_apology":
+			dialog.text = DLG_TEXT[89];
+			link.l1 = DLG_TEXT[90];
+			link.l1.go = "abduction_come_along";
+		break;
+
+		case "abduction_come_along":
+			dialog.text = DLG_TEXT[91];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "abduction_check_prisoner":
+			dialog.text = DLG_TEXT[92];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "mona_attack_what_no_uniform":
+			dialog.text = DLG_TEXT[93];
+			link.l1 = DLG_TEXT[94] + GetMyFullName(CharacterFromID("French_Captain1")) + DLG_TEXT[95];
+			link.l1.go = "mona_attack_get_back_into_uniform";
+		break;
+
+		case "mona_attack_get_back_into_uniform":
+			dialog.text = DLG_TEXT[96];
+			link.l1 = DLG_TEXT[97];
+			link.l1.go = "mona_attack_ordered_to_flagship";
+		break;
+
+		case "mona_attack_who_are_they":
+			dialog.text = DLG_TEXT[100];
+			link.l1 = DLG_TEXT[101];
+			link.l1.go = "mona_attack_hang_them_all";
+		break;
+
+		case "mona_attack_hang_them_all":
+			dialog.text = DLG_TEXT[102];
+			link.l1 = DLG_TEXT[103];
+			link.l1.go = "mona_attack_ordered_to_flagship";
+		break;
+
+		case "mona_attack_are_you_captain":
+			dialog.text = DLG_TEXT[98] + GetMyFullName(CharacterFromID("French_Captain1")) + "?";
+			link.l1 = DLG_TEXT[99];
+			link.l1.go = "mona_attack_ordered_to_flagship";
+		break;
+
+		case "mona_attack_ordered_to_flagship":
+			dialog.text = DLG_TEXT[104];
+			link.l1 = DLG_TEXT[105];
+			link.l1.go = "mona_attack_ordered_to_flagship2";
+		break;
+
+		case "mona_attack_ordered_to_flagship2":
+			dialog.text = DLG_TEXT[106];
+			link.l1 = DLG_TEXT[107] + GetMySimpleName(CharacterFromID("French_Captain1")) + DLG_TEXT[108];
+			link.l1.go = "exit";
+		break;
+
+		case "treachery_reinforcements":
+			dialog.text = DLG_TEXT[109];
+			link.l1 = DLG_TEXT[110];
+			link.l1.go = "exit";
+		break;
+
+		case "treachery_reinforcements2":
+			dialog.text = DLG_TEXT[111];
+			link.l1 = DLG_TEXT[112];
+			link.l1.go = "exit";
+		break;
+
+		case "treachery_survivor":
+			PreProcessor_Add("person", XI_ConvertString(PChar.sex));
+			dialog.text = DLG_TEXT[113];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "treachery_story_confirmed":
+			dialog.text = DLG_TEXT[114];
+			link.l1 = DLG_TEXT[115];
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, 5);
+			link.l1.go = "exit";
+		break;
+
+		case "treachery_goto_governor":
+			dialog.text = DLG_TEXT[116];
+			link.l1 = DLG_TEXT[117];
+			link.l1.go = "exit";
+		break;
+
+		case "hunt_guard_arrest":
+			dialog.text = DLG_TEXT[137];
+			link.l1 = DLG_TEXT[138];
+			link.l1.go = "exit_surrender";
+			link.l2 = DLG_TEXT[139];
+			link.l2.go = "exit_resist_arrest";
+		break;
+
+		case "hunt_taunt_guard":
+			dialog.text = DLG_TEXT[118];
+			link.l1 = DLG_TEXT[119];
+			link.l1.go = "hunt_taunt_guard2";
+		break;
+
+		case "hunt_taunt_guard2":
+			dialog.text = DLG_TEXT[120];
+			link.l1 = DLG_TEXT[121];
+			link.l1.go = "hunt_taunt_guard3";
+		break;
+
+		case "hunt_taunt_guard3":
+			dialog.text = DLG_TEXT[122];
+			link.l1 = DLG_TEXT[123];
+			link.l1.go = "hunt_taunt_guard4";
+		break;
+
+		case "hunt_taunt_guard4":
+			dialog.text = DLG_TEXT[124];
+			link.l1 = DLG_TEXT[125];
+			link.l1.go = "exit";
+		break;
+
+		case "hunt_flirt_guard":
+			dialog.text = DLG_TEXT[118];
+			link.l1 = DLG_TEXT[126];
+			link.l1.go = "hunt_flirt_guard2";
+		break;
+
+		case "hunt_flirt_guard2":
+			dialog.text = DLG_TEXT[127];
+			link.l1 = DLG_TEXT[128];
+			link.l1.go = "hunt_flirt_guard3";
+		break;
+
+		case "hunt_flirt_guard3":
+			dialog.text = DLG_TEXT[129];
+			link.l1 = DLG_TEXT[130];
+			link.l1.go = "hunt_flirt_guard4";
+		break;
+
+		case "hunt_flirt_guard4":
+			dialog.text = DLG_TEXT[131];
+			link.l1 = DLG_TEXT[132];
+			link.l1.go = "exit";
+		break;
+
+		case "hunt_teach_manners":
+			dialog.text = DLG_TEXT[133];
+			link.l1 = DLG_TEXT[134];
+			link.l1.go = "exit";
+		break;
+
+		case "hunt_get_comfortable":
+			dialog.text = DLG_TEXT[135];
+			link.l1 = DLG_TEXT[136];
+			link.l1.go = "exit";
+		break;
+
+		case "hunt_fort_what_business":
+			dialog.text = DLG_TEXT[140];
+			link.l1 = DLG_TEXT[141];
+			link.l1.go = "hunt_fort_authority";
+		break;
+
+		case "hunt_fort_authority":
+			dialog.text = DLG_TEXT[142];
+			if (CheckCharacterItem(PChar, "fake_fort_release"))
+			{
+				link.l1 = DLG_TEXT[144];
+				link.l1.go = "hunt_fort_release";
+			}
+			link.l2 = DLG_TEXT[143];
+			link.l2.go = "exit_hunt_fort_fight";
+		break;
+
+		case "hunt_fort_release":
+			if (PChar.model == "Ardent_Fr" || PChar.model == "Ardent_FrF" || CheckQuestAttribute("hunt_document_type", "requisition"))
+			{
+				if (PChar.model == "Ardent_Fr" || PChar.model == "Ardent_FrF")
+				{
+					Preprocessor_Add("person", XI_ConvertString("man"));
+					Preprocessor_Add("pronoun", XI_ConvertString("he"));
+				}
+				else
+				{
+					Preprocessor_Add("person", XI_ConvertString(PChar.sex));
+					Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
+				}
+				dialog.text = DLG_TEXT[145];
+				link.l1 = DLG_TEXT[146];
+				AddDialogExitQuest("hunt_fort_crew_released");
+				link.l1.go = "exit";
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[147];
+				link.l1 = DLG_TEXT[148];
+				link.l1.go = "exit_hunt_fort_fight";
+			}
+		break;
+
+		case "finale_port_royale_fort_battle_over":
+			Preprocessor_Add("governor", GetMyFullName(CharacterFromID("John Clifford Brin")));
+			dialog.text = DLG_TEXT[149] + GetMyFullName(CharacterFromID("Redmond Commander")) + DLG_TEXT[150];
+			link.l1 = DLG_TEXT[151] + GetMyFullName(PChar) + DLG_TEXT[152];
+			link.l1.go = "finale_french_no_problem";
+		break;
+
+		case "finale_french_no_problem":
+			dialog.text = DLG_TEXT[153];
+			link.l1 = DLG_TEXT[154];
+			link.l1.go = "finale_offer_escort";
+		break;
+
+		case "finale_offer_escort":
+			dialog.text = DLG_TEXT[155];
+			link.l1 = DLG_TEXT[156];
+			link.l1.go = "finale_insist_escort";
+		break;
+
+		case "finale_insist_escort":
+			dialog.text = DLG_TEXT[157];
+			link.l1 = DLG_TEXT[158];
+			link.l1.go = "exit";
+		break;
+
+		case "finale_report_victory_at_sea":
+			dialog.text = DLG_TEXT[159];
+			link.l1 = "...";
+			link.l1.go = "exit";
+		break;
+
+		case "exit_try_again":
+			AddDialogExitQuest("abduction_reset_guards");
+			Diag.CurrentNode = "abduction_entry_options";
+			DialogExit();
+		break;
+
+		case "exit_pass_accepted":
+			AddDialogExitQuest("abduction_open_barracks_door");
+			Diag.CurrentNode = "French_first_time";
+			DialogExit();
+		break;
+
+		case "exit_bribe_accepted":
+			PChar.quest.abduction_guard_status = "bribed";
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, -5000);
+			AddMoneyToCharacter(NPChar, 5000);
+			AddDialogExitQuest("abduction_open_barracks_door");
+			Diag.CurrentNode = "French_first_time";
+			DialogExit();
+		break;
+
+		case "exit_surrender":
+			AddDialogExitQuest("to_guadeloupe_prison1");
+			Diag.CurrentNode = "French_first_time";
+			DialogExit();
+		break;
+
+		case "exit_resist_arrest":
+			AddDialogExitQuest("hunt_resist_arrest");
+			Diag.CurrentNode = "French_first_time";
+			DialogExit();
+		break;
+
+		case "exit_hunt_fort_fight":
+			AddDialogExitQuest("hunt_fort_fight");
+			Diag.CurrentNode = "French_first_time";
+			DialogExit();
+		break;
 	}
 }

@@ -16,6 +16,8 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	int i;
 	
+	Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча

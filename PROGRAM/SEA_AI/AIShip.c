@@ -1398,13 +1398,22 @@ void Ship_Surrender(int chridx)
 
 	if (Ship_GetDistance2D(PChar, chr) > GetVisibilityRange(2)) bReleasedFree = true; // KK: Flag change can not be seen outside MEDIUM range
 	// TIH --> bandaide until this whole process is handled better Jul22'06
+	
 	if (!bReleasedFree) {
+		// DeathDaisy -->
+		string PCharTitle = "Sir";
+		switch(PChar.sex){
+			case "woman":
+				PCharTitle = "Ma'am";
+			break;
+		}
+		// DeathDaisy <--
 		if (oldrel == RELATION_ENEMY) {
-			TraceAndLog(TranslateString("","Sir, the") + " " + GetMyShipNameShow(chr) + " " + TranslateString("","has struck her colors!")); // KK
+			TraceAndLog(TranslateString("", PCharTitle + ", the") + " " + GetMyShipNameShow(chr) + " " + TranslateString("","has struck her colors!")); // KK
 			PlaySound("interface\notebook.wav");
 			PlaySound("objects\abordage\abordage_wining.wav");
 		} else {
-			TraceAndLog(TranslateString("","Sir, the") + " " + GetMyShipNameShow(chr) + " " + TranslateString("","has struck her colors to the enemy!")); // KK
+			TraceAndLog(TranslateString("", PCharTitle + ", the") + " " + GetMyShipNameShow(chr) + " " + TranslateString("","has struck her colors to the enemy!")); // KK
 		}
 	}
 	// TIH <--
@@ -5005,29 +5014,29 @@ void Ship_UpdateTmpSkills(ref rCharacter)
 	//if(IsCompanion(rCharacter))
 	//{
 	//There is no difference anymore between if character is a companion or not so this makes the function easier. -Levis
-		aTmpSkill.Commerce   = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_COMMERCE  )) / SKILL_MAX);
-		aTmpSkill.Leadership = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_LEADERSHIP)) / SKILL_MAX);
-		aTmpSkill.Sneak      = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_SNEAK     )) / SKILL_MAX);
-		aTmpSkill.Defence    = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_DEFENCE   )) / SKILL_MAX);
-		aTmpSkill.Grappling  = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_GRAPPLING )) / SKILL_MAX);
-		aTmpSkill.Sailing    = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_SAILING   )) / SKILL_MAX);
-		aTmpSkill.Repair     = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_REPAIR    )) / SKILL_MAX);
-		aTmpSkill.Fencing    = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_FENCING   )) / SKILL_MAX);
-		aTmpSkill.Accuracy   = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_ACCURACY  )) / SKILL_MAX);
-		aTmpSkill.Cannons    = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_CANNONS   )) / SKILL_MAX);
+		aTmpSkill.Commerce   = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_COMMERCE  )) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Leadership = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_LEADERSHIP)) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Sneak      = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_SNEAK     )) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Defence    = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_DEFENCE   )) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Grappling  = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_GRAPPLING )) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Sailing    = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_SAILING   )) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Repair     = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_REPAIR    )) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Fencing    = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_FENCING   )) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Accuracy   = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_ACCURACY  )) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Cannons    = Clampf(MakeFloat(GetShipSkill(rCharacter, SKILL_CANNONS   )) / MAX_CHARACTER_SKILL);
 	/*{
 	else
 	{
-		aTmpSkill.Commerce   = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_COMMERCE  ))) / SKILL_MAX);
-		aTmpSkill.Leadership = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_LEADERSHIP))) / SKILL_MAX);
-		aTmpSkill.Sneak      = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_SNEAK     ))) / SKILL_MAX);
-		aTmpSkill.Defence    = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_DEFENCE   ))) / SKILL_MAX);
-		aTmpSkill.Grappling  = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_GRAPPLING ))) / SKILL_MAX);
-		aTmpSkill.Sailing    = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_SAILING   ))) / SKILL_MAX);
-		aTmpSkill.Repair     = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_REPAIR    ))) / SKILL_MAX);
-		aTmpSkill.Fencing    = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_FENCING   ))) / SKILL_MAX);
-		aTmpSkill.Accuracy   = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_ACCURACY  ))) / SKILL_MAX);
-		aTmpSkill.Cannons    = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_CANNONS   ))) / SKILL_MAX);
+		aTmpSkill.Commerce   = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_COMMERCE  ))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Leadership = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_LEADERSHIP))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Sneak      = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_SNEAK     ))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Defence    = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_DEFENCE   ))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Grappling  = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_GRAPPLING ))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Sailing    = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_SAILING   ))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Repair     = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_REPAIR    ))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Fencing    = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_FENCING   ))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Accuracy   = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_ACCURACY  ))) / MAX_CHARACTER_SKILL);
+		aTmpSkill.Cannons    = Clampf(mult * MakeFloat(GetShipSkill(rCharacter, SKILL_CANNONS   ))) / MAX_CHARACTER_SKILL);
 	}*/
 	// NK <--
 	//Seriously why ... -Levis

@@ -58,8 +58,8 @@ string DLG_TEXT[71] = {
 "You got my Bible. Hand it over!",
 "You got my Crucifix and Bible. Hand'em over!",
 "You got my Sextant. Hand it over!",
-"You got my Pair of Compasses. Hand'em over!",
-"You got my Sextant and Pair of Compasses. Hand'em over!",		//60
+"You got my Drawing Kit. Hand'em over!",
+"You got my Sextant and Drawing Kit. Hand'em over!",		//60
 "You got my Spyglass. Hand it over!",
 "You got my Megaphone. Hand it over!",
 "You got my Spyglass and Megaphone. Hand'em over!",
@@ -67,7 +67,7 @@ string DLG_TEXT[71] = {
 "You got my Bandages. Hand'em over!",
 "You got my Surgery Kit and Bandages. Hand'em over!",
 "Okay, I'll clean out the Hotel rooms right away.",
-"But Captain, they have locked themselves in. I can't clean up the rooms. Only room 3 is still open.",
+"But Captain, they have locked themselves in. I can't clean up the rooms. We can only find the key to room 3.",
 "Captain, thanks for the journey. Before I leave you, here are the plants I promised you Captain.",
 "Yes. Finally!",							//70
 };

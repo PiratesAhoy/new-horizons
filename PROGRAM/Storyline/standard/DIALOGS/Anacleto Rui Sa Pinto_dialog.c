@@ -13,7 +13,14 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
-
+	// DeathDaisy -->
+	if(PChar.sex == "woman"){
+		Preprocessor_Add("child", "girl");
+	}
+	else{
+		Preprocessor_Add("child", "boy");
+	}
+	// DeathDaisy <--
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -35,6 +42,7 @@ void ProcessDialogEvent()
 			if (pchar.quest.main_line == "after_talk_with_douwesen_pirate" || pchar.quest.main_line == "to_douwesen_pirates" || pchar.quest.main_line == "after_speak_with_peasant")
 			{
 				dialog.snd = "Voice\ANRU\ANRU001";
+				Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 				Dialog.Text = DLG_TEXT[2];
 				Link.l1 = DLG_TEXT[3];
 				Link.l1.go = "talk_in_tavern";
@@ -88,6 +96,7 @@ void ProcessDialogEvent()
 		case "bad_swimming_in_oxbay_4":
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) > 5)
 			{
+				PreProcessor_Add("person", XI_ConvertString(PChar.sex));
 				dialog.snd = "Voice\ANRU\ANRU007";
 				dialog.text = DLG_TEXT[14];
 				link.l1 = DLG_TEXT[15];
@@ -108,6 +117,7 @@ void ProcessDialogEvent()
 
 		case "bad_swimming_in_oxbay_good":
 			dialog.snd = "Voice\ANRU\ANRU009";
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounObj(PChar)));
 			dialog.text = DLG_TEXT[18];
 			link.l1 = DLG_TEXT[19];
 			link.l1.go = "exit";
@@ -155,7 +165,9 @@ void ProcessDialogEvent()
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			pchar.quest.main_line = "bad_swimming_in_oxbay";
 			AddDialogExitQuest("bad_swimming_in_oxbay");
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestrecord("Where_are_i", 8);
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "captain":
@@ -183,13 +195,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "captain_4":
+			AddQuestrecord("Where_are_i", 5);
 			dialog.snd = "Voice\ANRU\ANRU015";
+			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false));
 			dialog.text = DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			link.l1.go = "captain5";
 			link.l2 = DLG_TEXT[37];
 			link.l2.go = "naezd";
-			AddQuestrecord("Where_are_i", 5);
 		break;
 
 		case "captain5":
@@ -206,7 +219,9 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[41];
 			link.l1 = DLG_TEXT[42];
 			link.l1.go = "exit";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestrecord("Where_are_i", 6);
+			Preprocessor_Remove("Danielle");
 			AddDialogExitQuest("anacleto_rui_sa_pinto_fight_exit");
 		break;
 

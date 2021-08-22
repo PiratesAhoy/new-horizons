@@ -44,7 +44,7 @@ void InitInterface_R(string iniName,ref _refCharacter)
 	CreateString(true,"skillCommerce","",FONT_BOLD_NUMBERS,COLOR_NORMAL,434,334,SCRIPT_ALIGN_RIGHT,1.0);
 	CreateString(true,"skillSneak","",FONT_BOLD_NUMBERS,COLOR_NORMAL,434,368,SCRIPT_ALIGN_RIGHT,1.0);
 
-	CreateString(false,"CharacterName","",FONT_NORMAL,COLOR_NORMAL,320,200,SCRIPT_ALIGN_CENTER,1.0);
+	CreateString(false,"CharacterName","",FONT_NORMAL,COLOR_NORMAL,320,175,SCRIPT_ALIGN_CENTER,1.0); //Levis: Change 200 to 175 to make room for aboardagemode
 	CreateString(false,"CharacterNation","",FONT_NORMAL,COLOR_NORMAL,320,234,SCRIPT_ALIGN_CENTER,1.0);
 	CreateString(false,"RansomCost","0",FONT_NORMAL,COLOR_NORMAL,284,266,SCRIPT_ALIGN_LEFT,1.0); // was 320. NK 05-04-16
 
@@ -53,6 +53,15 @@ void InitInterface_R(string iniName,ref _refCharacter)
 	SetSelectable("RANSOM_CAPTIVE",false); // NK 05-04-16
 	SetSelectable("EXECUTE_CAPTIVE",false);
 	/* END MOD : Stone-D 01/08/2003 */
+	
+	//Levis: Show Aboardagemode
+	CreateString(false,"Aboardagemode","",FONT_SMALL,COLOR_NORMAL,320,200,SCRIPT_ALIGN_CENTER,1.0);
+	SetNewPicture("BOARDINGMODE0", "interfaces\Viper_IsOfficer.tga");
+	SetNewPicture("BOARDINGMODE1", "interfaces\Viper_IsOfficer.tga");
+	SetNewPicture("BOARDINGMODE2", "interfaces\Viper_IsOfficer.tga");
+	SetNewPicture("BOARDINGMODE3", "interfaces\Viper_IsOfficer.tga");
+	UpdateAboardageMode();
+	//Levis: End Show Aboardagemode
 
 	SetVariable();
 
@@ -378,6 +387,7 @@ void DoFourImageChange()
 		SetShowMode(ISHOW_MODE_CHRSKILL);
 		SetChrSkillData(GetCharacter(cn));
 	}
+	UpdateAboardageMode(); //Levis: Show Aboardagemode
 }
 
 void SetVariable()
@@ -461,7 +471,7 @@ int XI_ChangeOfficer(int OfficerNum, int idxNew)
 		chref = GetCharacter(idxNew);
 		if(!CheckAttribute(chref, "quest.officertype"))
 		{
-			trace("ERROR: Please provide your savegame to the forums!")
+			TraceAndLog("Passengers XI_ChangeOfficer ERROR: Please post your savegame file at piratesahoy.net!");
 			//chref.quest.officertype = OFFIC_TYPE_ABORDAGE; //Levis: everyone has an officertype now, if not something goes very wrong!
 		}
 	}
@@ -684,6 +694,7 @@ void SetShowMode(int sm)
 	case ISHOW_MODE_CAPTIVE:
 	/* BEGIN MOD : Stone-D 01/08/2003 */
 		DisableString("CharacterName");
+		DisableString("Aboardagemode"); //Levis: Show aboardagemode
 		DisableString("CharacterNation");
 		DisableString("RansomCost");
 		SetNodeUsing("CAPTIVE_IMAGES",false);
@@ -726,6 +737,7 @@ void SetShowMode(int sm)
 		DisableString("skillCommerce");
 		DisableString("skillSneak");
 		DisableString("CharacterName");
+		DisableString("Aboardagemode"); //Levis: Show aboardagemode
 		SetNodeUsing("SUMMARYIMAGES",false);
 	break;
 
@@ -739,6 +751,7 @@ void SetShowMode(int sm)
 	case ISHOW_MODE_CAPTIVE:
 	/* BEGIN MOD : Stone-D 01/08/2003 */
 		EnableString("CharacterName");
+		DisableString("Aboardagemode"); //Levis: Show aboardagemode
 		EnableString("CharacterNation");
 		// NK add release at sea 05-04-16 -->
 		EnableString("RansomCost");  // show ransom
@@ -792,6 +805,7 @@ void SetShowMode(int sm)
 		EnableString("skillCommerce");
 		EnableString("skillSneak");
 		EnableString("CharacterName");
+		EnableString("Aboardagemode"); //Levis: Show aboardagemode
 		SetNodeUsing("SUMMARYIMAGES",true);
 	break;
 
@@ -803,7 +817,7 @@ void SetSumSkillData()
 	ref chref = _refCh;
 	string skill;
 	int n;
-	for(n = 0; n < SKILL_MAX; n++)
+	for(n = 0; n < NUM_DIFF_SKILLS; n++)
 	{
 		skill = GetSkillName(n);
 		int skillval = GetShipSkill(chref,skill);
@@ -823,7 +837,7 @@ void SetChrSkillData(ref chref)
 {
 	string skill;
 	int n;
-	for(n = 0; n < SKILL_MAX; n++)
+	for(n = 0; n < NUM_DIFF_SKILLS; n++)
 	{
 		skill = GetSkillName(n);
 		int skillval = GetEffectiveSkill(chref,skill);
@@ -842,6 +856,17 @@ void SetChrSkillData(ref chref)
 	//else GameInterface.strings.CharacterName = chref.name + " " + chref.lastname + " - " + XI_ConvertString("SComrade-In-Arms");
 //	GameInterface.strings.CharacterName = GetMyName(chref) + " - " + chref.quest.officertype;
 // changed by MAXIMUS <--
+	GameInterface.strings.CharacterName = chref.name + " " + chref.lastname + " - " + XI_ConvertString("S"+chref.quest.officertype);
+	//Levis: Show Aboardagemode
+	GameInterface.strings.Aboardagemode = TranslateString("","Officer Boarding False");
+	if(CheckAttribute(chref,"AbordageMode"))
+	{
+		if(chref.AbordageMode==1)
+		{
+			GameInterface.strings.Aboardagemode = TranslateString("","Officer Boarding True");
+		}
+	}
+	//Levis: End Show Aboardagemode
 }
 
 void SetCaptiveData(ref chPsgn)
@@ -1294,3 +1319,32 @@ void SetCharacterRole(string officerType)
 
 	SetSelectDialogUsing(false);
 }
+
+//Levis: Show Aboardagemode
+void UpdateAboardageMode()
+{
+	int i,cn;
+	ref refCurChar;
+	string imgname;
+
+	for(i=0; i<OFFICER_MAX; i++)
+	{
+		imgname = "BOARDINGMODE"+i;
+		cn = GetOfficersIndex(_refCh,i);
+		refCurChar = GetCharacter(cn);
+		SetNodeUsing(imgname,false);
+
+		if(cn>=0)
+		{
+			//Officer
+			if(CheckAttribute(refCurChar,"AbordageMode"))
+			{
+				if(refCurChar.AbordageMode==1)
+				{
+					SetNodeUsing(imgname,true);
+				}
+			}
+		}
+	}
+}
+//Levis: End Show Aboardagemode

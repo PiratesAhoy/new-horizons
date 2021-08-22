@@ -83,13 +83,28 @@ void ProcessDialogEvent()
 		case "False Colours2":
 			dialog.text = DLG_TEXT[16];
 			link.l1 = DLG_TEXT[17];
-			link.l1.go = "False Colours3";
+			if(HasThisShip("Black Pearl")) link.l1.go = "False Colours3";
+			else link.l1.go = "False Colours3_no_Pearl";
 		break;
 
 		case "False Colours3":
 			dialog.text = DLG_TEXT[18];
 			link.l1 = DLG_TEXT[19];
 			link.l1.go = "False Colours4";
+		break;
+
+		case "False Colours3_no_Pearl":
+			dialog.text = DLG_TEXT[22];
+			link.l1 = DLG_TEXT[21];
+			link.l1.go = "exit";
+			if (LAi_IsDead(characterFromID("Mergildo Hurtado")))
+			{
+				AddDialogExitQuest("Mercer_False_die");
+			}
+			else
+			{
+				AddDialogExitQuest("Mercer_False_surv");
+			}
 		break;
 
 		case "False Colours4":

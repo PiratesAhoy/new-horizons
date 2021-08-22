@@ -15,6 +15,8 @@ void ProcessDialogEvent()
 
 	Npchar.nation = Characters[getCharacterIndex("St John's Commander")].nation;
 	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+	
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
@@ -37,11 +39,22 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				Dialog.text =  DLG_TEXT[0];
-				link.l1 = DLG_TEXT[1];
-				link.l1.go = "exit";
-				link.l2 = DLG_TEXT[2] + GetMyFullName(PChar) + DLG_TEXT[3];
-				link.l2.go = "sorry";
+				if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")))
+				{
+					Dialog.text =  DLG_TEXT[25] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[26];
+					link.l1 = DLG_TEXT[27];
+					link.l1.go = "exit";
+					link.l2 = DLG_TEXT[2] + GetMyFullName(PChar) + DLG_TEXT[3];
+					link.l2.go = "naval_orders";
+				}
+				else
+				{
+					Dialog.text =  DLG_TEXT[0];
+					link.l1 = DLG_TEXT[1];
+					link.l1.go = "exit";
+					link.l2 = DLG_TEXT[2] + GetMyFullName(PChar) + DLG_TEXT[3];
+					link.l2.go = "sorry";
+				}
 			}
 		break;
 
@@ -68,6 +81,20 @@ void ProcessDialogEvent()
 					link.l2.go = "exit";
 				}
 			}
+		break;
+
+		case "naval_orders":
+			Dialog.text = DLG_TEXT[28];
+			link.l1 = DLG_TEXT[7];
+			link.l1.go = "convoy2";
+			link.l2 = DLG_TEXT[29];
+			link.l2.go = "refuse_order";
+		break;
+
+		case "refuse_order":
+			Dialog.text = DLG_TEXT[30];
+			link.l1 = DLG_TEXT[31];
+			link.l1.go = "convoy2";
 		break;
 
 		case "convoy":

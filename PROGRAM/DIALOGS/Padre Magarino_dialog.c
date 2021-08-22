@@ -15,6 +15,9 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	
+	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+	else Preprocessor_Add("child", XI_ConvertString("child"));
+
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -219,6 +222,58 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[39];
 			link.l1.go = "exit";
 		break;
-			
+
+		case "ardent_interruption1":
+			dialog.text = DLG_TEXT[42];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_interruption2":
+			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
+			Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
+			if (PChar.sex == "man") dialog.text = DLG_TEXT[43] + DLG_TEXT[45] + DLG_TEXT[46];
+			else dialog.text = DLG_TEXT[43] + DLG_TEXT[44] + DLG_TEXT[46];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_no_fight_in_church":
+			dialog.text = DLG_TEXT[47];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_about_to_sin":
+			dialog.text = "";
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_church_desecrated":
+			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
+			dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_loyal_to_church_first":
+			dialog.text = DLG_TEXT[51];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_proceed_with_wedding":
+			dialog.text = DLG_TEXT[52];
+			link.l1 = DLG_TEXT[53];
+			link.l1.go = "ardent_resume_wedding";
+		break;
+
+		case "ardent_resume_wedding":
+			dialog.text = DLG_TEXT[54] + DLG_TEXT[33];
+			if (PChar.sex == "man") link.l1 = DLG_TEXT[34];
+			else link.l1 = DLG_TEXT[39];
+			link.l1.go = "exit";
+		break;
 	}
 }

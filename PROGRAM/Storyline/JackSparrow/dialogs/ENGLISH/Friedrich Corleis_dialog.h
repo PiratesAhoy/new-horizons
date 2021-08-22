@@ -90,7 +90,7 @@ string DLG_TEXT[94] = {
 "There's supposed to be a merchant captain here who encountered a mysterious frigate.",
 "Ah that's Drabbe. You'll find him snoring over at the table by the window.",
 "Thanks.",
-"I'm interested in someone named Gombo. He is a tall young black man with a beard. Has he showed up around here?",
+"I'm interested in someone named Gombo. He is a tall young black man. Has he showed up around here?",
 "Yes, I've seen him, but I doubt it's going to make you happy.\nYou see, this lad came in here with some scoundrels,\nThey took to your Gombo, and heavily wounded him. He's in one of the rooms upstairs right now.",
 "Thousand curses! I need to see him! Maybe he knows who these scoundrels are.",
 

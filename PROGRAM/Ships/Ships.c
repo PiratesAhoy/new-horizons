@@ -5,7 +5,7 @@
 extern void InitShips();
 extern void InitRandomShipsNames();
 
-string	sRndShpSpName[2], sRndShpEnName[2], sRndShpFrName[2], sRndShpPiName[2], sRndShpHoName[2], sRndShpPoName[2], sRndShpAmName[2];
+string	sRndShpSpName[2], sRndShpEnName[2], sRndShpFrName[2], sRndShpPiName[2], sRndShpHoName[2], sRndShpPoName[2], sRndShpAmName[2], sRndShpSwName[2];
 
 void ShipsInit()
 {
@@ -40,10 +40,24 @@ string GetRandomShipNameForNation(int nat)
 		case PIRATE:   makeref(rMassiveOfNames, sRndShpPiName); break;
 		case HOLLAND:  makeref(rMassiveOfNames, sRndShpHoName); break;
 		case PORTUGAL: makeref(rMassiveOfNames, sRndShpPoName); break;
-		case AMERICA:  makeref(rMassiveOfNames, sRndShpAmName); break;
+		case GUEST1_NATION:
+			if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
+				makeref(rMassiveOfNames, sRndShpSwName);
+			}
+			else{
+				makeref(rMassiveOfNames, sRndShpAmName); 
+			}
+		break;
+		//case AMERICA:  makeref(rMassiveOfNames, sRndShpAmName); break;
+		//case SWEDEN: makeref(rMassiveOfNames, sRndShpSwName);	break;
 		// default:
                    makeref(rMassiveOfNames, sRndShpEnName); //add default case 04-12-06
 	}
+	/*if(SWEDEN_ALLOWED && GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
+		switch(nat){
+			case SWEDEN: makeref(rMassiveOfNames, sRndShpSwName);	break;
+		}
+	}*/
 	int iMassiveOfNamesSize = GetArraySize(rMassiveOfNames);
 
 	// LDH prevent duplicate ship names - 09Feb09
@@ -771,6 +785,8 @@ void CrimsonBlood_ModifyShip()
 {
 	object otmp;
 	ref refShip;
+	aref arship, cannonl, cannonr, cannonb, cannonf;
+	int i;
 
 	makeref(refShip, otmp);
 
@@ -795,6 +811,8 @@ void CrimsonBlood_ModifyShip()
 	// NK cannon qtys 05-04-18 -->
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
+	refShip.Cannons.Borts.cannonl.qty = 13;
+	refShip.Cannons.Borts.cannonr.qty = 13;
 	// NK <--
 	refShip.MaxCrew		 = 300;
 	refShip.MinCrew		 = 60;
@@ -857,6 +875,74 @@ void CrimsonBlood_ModifyShip()
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 133> is henceforth complete
 // on this day and date Jan 2 10, 1749h
 
+// GR: fill in cannon data normally provided by "Ships_init.c" -->
+	refShip.FireHeight = 3.0;
+ 	refShip.Height.Bombs.Y		= 3.0;		refShip.Height.Bombs.DY		= 1.0;
+	refShip.Height.Knippels.Y	= 25.0;		refShip.Height.Knippels.DY	= 15.0;
+	refShip.Height.Balls.Y		= 3.0;		refShip.Height.Balls.DY		= 1.0;
+
+	makearef(cannonl,refShip.Cannons.Borts.cannonl);
+	makearef(cannonr,refShip.Cannons.Borts.cannonr);
+	makearef(cannonf,refShip.Cannons.Borts.cannonf);
+	makearef(cannonb,refShip.Cannons.Borts.cannonb);
+	if(USE_REAL_CANNONS)
+	{
+		refShip.Height.Grapes.Y   = 5.0;    refShip.Height.Grapes.DY  = 1.0;
+		cannonf.FireZone  = Degree2Radian(20.0) * FIRE_ANGLE_SCALAR_W;
+		cannonf.FireDir   = Degree2Radian(0.0);
+		cannonf.FireAngMin  = Degree2Radian(-2.5) * FIRE_ANGLE_SCALAR_H;
+		cannonf.FireAngMax  = Degree2Radian(5.0) * FIRE_ANGLE_SCALAR_H;
+
+		cannonr.FireZone  = Degree2Radian(30.0) * FIRE_ANGLE_SCALAR_W;
+		cannonr.FireDir   = Degree2Radian(90.0);
+		cannonr.FireAngMin  = Degree2Radian(-2.5) * FIRE_ANGLE_SCALAR_H;
+		cannonr.FireAngMax  = Degree2Radian(5.0) * FIRE_ANGLE_SCALAR_H;
+
+		cannonb.FireZone  = Degree2Radian(20.0) * FIRE_ANGLE_SCALAR_W;
+		cannonb.FireDir   = Degree2Radian(180.0);
+		cannonb.FireAngMin  = Degree2Radian(-2.5) * FIRE_ANGLE_SCALAR_H;
+		cannonb.FireAngMax  = Degree2Radian(5.0) * FIRE_ANGLE_SCALAR_H;
+
+		cannonl.FireZone  = Degree2Radian(30.0) * FIRE_ANGLE_SCALAR_W;
+		cannonl.FireDir   = Degree2Radian(270.0);
+		cannonl.FireAngMin  = Degree2Radian(-2.5) * FIRE_ANGLE_SCALAR_H;
+		cannonl.FireAngMax  = Degree2Radian(5.0) * FIRE_ANGLE_SCALAR_H;
+	}
+	else
+	{
+		refShip.Height.Grapes.Y		= 4.0;		refShip.Height.Grapes.DY	= 1.0;
+		refShip.MaxCaliber = 24;
+		refShip.Cannon = CANNON_TYPE_CANNON_LBS24;
+		cannonf.FireZone	= Degree2Radian(30.0) * FIRE_ANGLE_SCALAR_W;
+		cannonf.FireDir		= Degree2Radian(0.0);
+		cannonf.FireAngMin	= -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		cannonf.FireAngMax	= 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+
+		cannonr.FireZone	= Degree2Radian(80.0) * FIRE_ANGLE_SCALAR_W;
+		cannonr.FireDir		= Degree2Radian(90.0);
+		cannonr.FireAngMin	= -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		cannonr.FireAngMax	= 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+
+		cannonb.FireZone	= Degree2Radian(30.0) * FIRE_ANGLE_SCALAR_W;
+		cannonb.FireDir		= Degree2Radian(180.0);
+		cannonb.FireAngMin	= -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		cannonb.FireAngMax	= 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+
+		cannonl.FireZone	= Degree2Radian(80.0) * FIRE_ANGLE_SCALAR_W;
+		cannonl.FireDir		= Degree2Radian(270.0);
+		cannonl.FireAngMin	= -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		cannonl.FireAngMax	= 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+	}
+// <-- GR: End of extra cannon data
+// GR: correct performance data -->
+	refShip.TurnDependWeight = 0.5;
+	if(USE_REAL_SAILING) refShip.TurnDependSpeed = 0.95;
+	else refShip.TurnDependSpeed = 0.6;
+	refShip.InertiaAccelerationY = stf(refShip.InertiaAccelerationY) / 6.0;
+	refShip.InertiaAccelerationZ = stf(refShip.InertiaAccelerationZ) / 4.0;
+	refShip.InertiaBrakingZ = stf(refShip.InertiaBrakingZ) / 10.0;
+// <-- GR: End of performance data
+
 	ModifyShip(refShip);
 
 	// PB: For dialogs, queststexts and ship names -->
@@ -872,8 +958,10 @@ bool IsShipMerchant(ref chr)
 	int iNation = sti(chr.nation);
 	ref rShip = GetShipByType(GetCharacterShipType(chr));
 	aref arShip; makearef(arShip, chr.Ship);
-	if (CheckShipAttribute(arShip, rShip, "Flags.UseMerchantFlag") == true && sti(GetLocalShipAttrib(arShip, rShip, "Flags.UseMerchantFlag")) == true) return true;
-	if (CheckShipAttribute(arShip, rShip, "Flags.UseNavalFlag"   ) == true && sti(GetLocalShipAttrib(arShip, rShip, "Flags.UseNavalFlag"   )) == true) return false;
+	if (CheckShipAttribute(arShip, rShip, "Flags.UseMerchantFlag") == true && sti(GetLocalShipAttrib(arShip, rShip, "Flags.UseMerchantFlag")) == true)	return true;
+	if (CheckShipAttribute(arShip, rShip, "Flags.UseNavalFlag"   ) == true && sti(GetLocalShipAttrib(arShip, rShip, "Flags.UseNavalFlag"   )) == true)	return false;
+	if (CheckAttribute(chr, "Flags.UseMerchantFlag") == true)																							return true;
+	if (CheckAttribute(chr, "Flags.UseNavalFlag") == true)																								return false;
 	if (IsMainCharacter(chr) || IsCompanion(chr))
 	{
 		// PB: Fly navy flag only if you're officially in the service of that nation -->

@@ -22,6 +22,7 @@ void InitInterface_RR(string iniName,ref pCharacter,ref enemyCh)
 	string cannonsTransfer;
 	MainChar = GetMainCharacter();
 	FillCharactersList(pCharacter, enemyCh);
+	nCompanionIndex = sti(enemyCh.index);
 
 	xi_refMainChar = GetMainCharacter();
 	xi_refCharacter = pCharacter;
@@ -278,7 +279,7 @@ void FillCharactersList(ref ViewingCharacter, ref ViewingEnemy)
 	{
 		tempnum2 = GetCompanionIndex(MainChar,tempnum1);
 		if(tempnum2>=0 && IsTrader(&characters[tempnum2]) == true) continue;//MAXIMUS: such companion will not be added // KK
-		if(CheckAttribute(newFriend,"index") && tempnum2==sti(newFriend.index)) continue;//MAXIMUS: companion will not be added
+	//	if(CheckAttribute(newFriend,"index") && tempnum2==sti(newFriend.index)) continue;//MAXIMUS: companion will not be added
 		if (tempnum2 >= 0)
 		{
 			tempstring1 = "member" + ListMax;
@@ -333,6 +334,9 @@ void CannonsYes(ref xi_refCharacter, ref tmpChar)
 	tmpChar.ship.Cannons.Borts.cannonb.curqty = sti(tmpChar.ship.Cannons.Borts.cannonb.qty);
 	tmpChar.ship.Cannons.Borts.cannonl.curqty = sti(tmpChar.ship.Cannons.Borts.cannonl.qty);
 	tmpChar.ship.Cannons.Borts.cannonr.curqty = sti(tmpChar.ship.Cannons.Borts.cannonr.qty);
+
+	if (GetCannonCurQuantity(xi_refCharacter) == 0) SetNoneCannonsOnShip(xi_refCharacter);
+	if (GetCannonCurQuantity(tmpChar        ) == 0) SetNoneCannonsOnShip(tmpChar);
 }
 
 void CannonsNo(ref xi_refCharacter, ref tmpChar)
@@ -486,7 +490,55 @@ void ProcessExit()
 	        if(ourCaliber<curCaliber) SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Transfer cannons confirm1")+" "+GetCannonName(GetCaracterShipCannonsType(xi_refCharacter)) + " - " + enCurQty + " " + XI_ConvertString("un") + ". "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm2")+" "+refEnemyCharacter.ship.Name+"? "+LanguageConvertString(tmpLangFileID,"Buy cannons confirm2")+ " " + ourCaliber + LanguageConvertString(tmpLangFileID,"Buy cannons confirm3"));
 	        if(ourCaliber>curCaliber) SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Transfer cannons confirm1")+" "+GetCannonName(GetCaracterShipCannonsType(xi_refCharacter)) + " - " + enCurQty + " " + XI_ConvertString("un") + ". "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm2")+" "+refEnemyCharacter.ship.Name+"? "+LanguageConvertString(tmpLangFileID,"Buy cannons confirm4")+ " " + ourCaliber + LanguageConvertString(tmpLangFileID,"Buy cannons confirm3"));
 	    }
-		else ProcessExit_Exit();
+// PW ---->transfer involving ship with no cannons
+		else
+		{
+			if (CurQty<0 && GetCaracterShipCannonsType(refEnemyCharacter) == CANNON_TYPE_NONECANNON)
+			{
+				ref rShip = GetShipByType(GetCharacterShipType(tmpchar));
+				int max_caliber = sti(rShip.MaxCaliber);
+
+				SetNodeUsing("CONFIRM_RECTANGLE",true);
+			    SetNodeUsing("TEXTWINDOW",true);
+			    SetNodeUsing("CONFIRM_YES_BUTTON",true);
+			    SetNodeUsing("CONFIRM_NO_BUTTON",true);
+			    SetNodeUsing("CAN_PIC",true);
+			    SetNodeUsing("CAN_PIC1",true);
+			    SetNodeUsing("CAN_PIC2",true);
+			    SetCurrentNode("CONFIRM_NO_BUTTON");
+			    SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "CONFIRM_NO_BUTTON");
+			    SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "CONFIRM_YES_BUTTON");
+
+			    if(ourCaliber>max_caliber) SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Transfer cannons confirm1")+" "+GetCannonName(GetCaracterShipCannonsType(xi_refCharacter)) + ". "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm2")+" "+refEnemyCharacter.ship.Name+"? "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm4")+ " " +max_caliber+ " " +LanguageConvertString(tmpLangFileID,"Buy cannons confirm3"));
+			    if(ourCaliber<=max_caliber) SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Transfer cannons confirm1")+" "+GetCannonName(GetCaracterShipCannonsType(xi_refCharacter)) + ". "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm2")+" "+refEnemyCharacter.ship.Name+"? "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm3")+ " " +ourCaliber+ " " +LanguageConvertString(tmpLangFileID,"Buy cannons confirm3"));
+			}
+			else
+			{
+				if(enCurQty<0  && GetCaracterShipCannonsType(xi_refCharacter) == CANNON_TYPE_NONECANNON)
+				{
+					rShip = GetShipByType(GetCharacterShipType(xi_refCharacter));
+					max_caliber = sti(rShip.MaxCaliber);
+				    SetNodeUsing("CONFIRM_RECTANGLE",true);
+				    SetNodeUsing("TEXTWINDOW",true);
+				    SetNodeUsing("CONFIRM_YES_BUTTON",true);
+				    SetNodeUsing("CONFIRM_NO_BUTTON",true);
+				    SetNodeUsing("CAN_PIC",true);
+				    SetNodeUsing("CAN_PIC1",true);
+				    SetNodeUsing("CAN_PIC2",true);
+				    SetCurrentNode("CONFIRM_NO_BUTTON");
+				    SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "CONFIRM_NO_BUTTON");
+				    SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "CONFIRM_YES_BUTTON");
+
+					if(max_caliber>=curCaliber) SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Transfer cannons confirm1")+" "+GetCannonName(GetCaracterShipCannonsType(refEnemyCharacter)) + ". "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm2")+" "+xi_refCharacter.ship.Name+"? "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm3")+ " " +curCaliber+ " " +LanguageConvertString(tmpLangFileID,"Buy cannons confirm3"));
+					if(max_caliber<curCaliber) SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Transfer cannons confirm1")+" "+GetCannonName(GetCaracterShipCannonsType(refEnemyCharacter))  + ". "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm2")+" "+xi_refCharacter.ship.Name+"? "+LanguageConvertString(tmpLangFileID,"Transfer cannons confirm4")+ " " +max_caliber+ " " +LanguageConvertString(tmpLangFileID,"Buy cannons confirm3"));
+				}
+				// <----------------transfer involving ship with no cannons PW
+				else
+				{
+					ProcessExit_Exit()
+				}
+			}
+		}
 	}
 	LanguageCloseFile(tmpLangFileID);
 }
@@ -524,16 +576,40 @@ void ProcessExit_yes()
 	int myCaliber = sti(GetCannonCaliber(GetCaracterShipCannonsType(xi_refCharacter)));
 	int enCaliber = sti(GetCannonCaliber(GetCaracterShipCannonsType(tmpChar)));
 
-    if(myCurQty>0)
+	ref rShip = GetShipByType(GetCharacterShipType(xi_refCharacter));
+	int myMax_caliber = sti(rShip.MaxCaliber);
+
+	rShip = GetShipByType(GetCharacterShipType(tmpchar));
+	int enMax_caliber = sti(rShip.MaxCaliber);
+
+
+	string sCannonType = "long gun";
+	if(myCurQty>0)
 	{
-		if(myCaliber>enCaliber || myCaliber==0) SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(tmpChar));
-		else SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(xi_refCharacter));
+		if(myCaliber>enCaliber)
+		{
+			SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(tmpChar));
+		}
+		else
+		{
+			SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(xi_refCharacter));
+		}
 	}
 
-    if(enCurQty>0)
+	if(enCurQty>0)
 	{
-		if(enCaliber>myCaliber || enCaliber==0) SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(xi_refCharacter));
+      	if(enCaliber>myCaliber) SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(xi_refCharacter));
 		else SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(tmpChar));
+	}
+	if (tmpChar.ship.cannons.type == CANNON_TYPE_NONECANNON)
+	{
+		if (enMax_caliber>=myCaliber) SetCharacterCannonType(tmpChar,GetCaracterShipCannonsType(xi_refCharacter));
+		else SetCharacterCannonType(tmpChar,GetCannonByTypeAndCaliber(sCannonType,enMax_caliber));
+	}
+	if (xi_refCharacter.ship.cannons.type == CANNON_TYPE_NONECANNON)
+	{
+		if (myMax_caliber>=enCaliber) SetCharacterCannonType(xi_refCharacter,GetCaracterShipCannonsType(tmpChar));
+		else SetCharacterCannonType(xi_refCharacter,GetCannonByTypeAndCaliber(sCannonType,myMax_caliber));
 	}
 
 	CannonsYes(xi_refCharacter, tmpChar);
@@ -597,7 +673,8 @@ void ProcessCancelExit()
 	int enQty = sti(GetCannonCurQuantity(tmpChar));
 	int enCurQty = sti(GetCannonQuantity(tmpChar)-enQty);
 
-    if(myCurQty>0 && enCurQty>0) ProcessExit();
+//	if(myCurQty>0 && enCurQty>0) ProcessExit(); PW commented replaced by line below
+	if(myCurQty>0 || enCurQty>0) ProcessExit();
 	else ProcessExit_Exit();
 // MAXIMUS cannons MOD <--
 }
@@ -610,6 +687,7 @@ void ProcessChangeFrontLeft()
 	ref MyshipRef = GetShipByType(GetCharacterShipType(xi_refCharacter));
 	aref myship; makearef(myship, xi_refCharacter.ship);
 
+/*Disabled too large a calibre block loop PW
 	if( GetLocalShipAttrib(myship, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(refEnemyCharacter)) )
 	{
 		DisableString("HelpString");
@@ -618,6 +696,7 @@ void ProcessChangeFrontLeft()
 	}
 	else
 	{
+*/
 		DisableString("HelpString"); 
 		if(GetCannonArcQty(xi_refCharacter, 0)<GetCannonArcMaxQty(xi_refCharacter,0))
 		{
@@ -666,7 +745,7 @@ void ProcessChangeFrontLeft()
 		{
 		    EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Enough");
 		}
-	}
+//	} //	Disabled loop for too large caliber PW
 	LanguageCloseFile(tmpLangFileID);
 }
 
@@ -676,7 +755,7 @@ void ProcessChangeLeftArcLeft()
 
 	ref MyshipRef = GetShipByType(GetCharacterShipType(xi_refCharacter));
 	aref myship; makearef(myship, xi_refCharacter.ship);
-
+/*Disabled too large a calibre block loop PW
 	if( GetLocalShipAttrib(myship, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(refEnemyCharacter)) )
 	{
 		DisableString("HelpString");
@@ -685,6 +764,7 @@ void ProcessChangeLeftArcLeft()
 	}
 	else
 	{
+*/
 		DisableString("HelpString"); 
 		if(GetCannonArcQty(xi_refCharacter, 3)<GetCannonArcMaxQty(xi_refCharacter,3))
 		{
@@ -733,7 +813,7 @@ void ProcessChangeLeftArcLeft()
 		{
 		    EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Enough");
 		}
-	}
+//	}	// Disabled too large a calibre block loop PW
 	LanguageCloseFile(tmpLangFileID);
 }
 
@@ -743,7 +823,7 @@ void ProcessChangeRightArcLeft()
 
 	ref MyshipRef = GetShipByType(GetCharacterShipType(xi_refCharacter));
 	aref myship; makearef(myship, xi_refCharacter.ship);
-
+/*Disabled too large a calibre block loop PW
 	if( GetLocalShipAttrib(myship, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(refEnemyCharacter)) )
 	{
 		DisableString("HelpString");
@@ -752,6 +832,7 @@ void ProcessChangeRightArcLeft()
 	}
 	else
 	{
+*/
 		DisableString("HelpString"); 
 		if(GetCannonArcQty(xi_refCharacter, 1)<GetCannonArcMaxQty(xi_refCharacter,1))
 		{
@@ -800,7 +881,7 @@ void ProcessChangeRightArcLeft()
 		{
 		    EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Enough");
 		}
-	}
+//	}	// Disabled too large a calibre block loop PW
 	LanguageCloseFile(tmpLangFileID);
 }
 
@@ -810,7 +891,7 @@ void ProcessChangeBackLeft()
 
 	ref MyshipRef = GetShipByType(GetCharacterShipType(xi_refCharacter));
 	aref myship; makearef(myship, xi_refCharacter.ship);
-
+/*Disabled too large a calibre block loop PW
 	if( GetLocalShipAttrib(myship, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(refEnemyCharacter)) )
 	{
 		DisableString("HelpString");
@@ -819,6 +900,7 @@ void ProcessChangeBackLeft()
 	}
 	else
 	{
+*/
 		DisableString("HelpString"); 
 		if(GetCannonArcQty(xi_refCharacter, 2)<GetCannonArcMaxQty(xi_refCharacter,2))
 		{
@@ -867,10 +949,11 @@ void ProcessChangeBackLeft()
 		{
 		    EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Enough");
 		}
-	}
+//	}	//	Disabled too large a calibre block loop PW
 	LanguageCloseFile(tmpLangFileID);
 }
 
+/* ---> old change arcs right calls PW
 void ProcessChangeFrontRight()
 {
 	DisableString("HelpString");
@@ -879,6 +962,15 @@ void ProcessChangeFrontRight()
 	ref EnshipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter));
 	aref enship; makearef(enship, refEnemyCharacter.ship);
 
+
+	ref MyshipRef = GetShipByType(GetCharacterShipType(xi_refCharacter));
+	aref myship; makearef(myship, xi_refCharacter.ship);
+	if( GetLocalShipAttrib(refEnemyCharacter, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(myship)) )
+	{
+		DisableString("HelpString");
+		EnableString("HelpString");
+		GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Bigcaliber");
+	}
 	if(GetCannonArcQty(refEnemyCharacter, 0)<GetCannonArcMaxQty(refEnemyCharacter,0))
 	{
 		if(GetCannonArcQty(xi_refCharacter, 0)!=0)
@@ -907,6 +999,16 @@ void ProcessChangeLeftArcRight()
 
 	ref EnshipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter));
 	aref enship; makearef(enship, refEnemyCharacter.ship);
+
+
+	ref MyshipRef = GetShipByType(GetCharacterShipType(xi_refCharacter));
+	aref myship; makearef(myship, xi_refCharacter.ship);
+	if( GetLocalShipAttrib(refEnemyCharacter, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(myship)) )
+	{
+		DisableString("HelpString");
+		EnableString("HelpString");
+		GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Bigcaliber");
+	}
 
 	if(GetCannonArcQty(refEnemyCharacter, 3)<GetCannonArcMaxQty(refEnemyCharacter,3))
 	{
@@ -937,6 +1039,16 @@ void ProcessChangeRightArcRight()
 	ref EnshipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter));
 	aref enship; makearef(enship, refEnemyCharacter.ship);
 
+
+	ref MyshipRef = GetShipByType(GetCharacterShipType(xi_refCharacter));
+	aref myship; makearef(myship, xi_refCharacter.ship);
+	if( GetLocalShipAttrib(refEnemyCharacter, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(myship)) )
+	{
+		DisableString("HelpString");
+		EnableString("HelpString");
+		GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Bigcaliber");
+	}
+
 	if(GetCannonArcQty(refEnemyCharacter, 1)<GetCannonArcMaxQty(refEnemyCharacter,1))
 	{
 		if(GetCannonArcQty(xi_refCharacter, 1)!=0)
@@ -966,6 +1078,16 @@ void ProcessChangeBackRight()
 	ref EnshipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter));
 	aref enship; makearef(enship, refEnemyCharacter.ship);
 
+
+	ref MyshipRef = GetShipByType(GetCharacterShipType(xi_refCharacter));
+	aref myship; makearef(myship, xi_refCharacter.ship);
+	if( GetLocalShipAttrib(refEnemyCharacter, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(myship)) )
+	{
+		DisableString("HelpString");
+		EnableString("HelpString");
+		GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Bigcaliber");
+	}
+
 	if(GetCannonArcQty(refEnemyCharacter, 2)<GetCannonArcMaxQty(refEnemyCharacter,2))
 	{
 		if(GetCannonArcQty(xi_refCharacter, 2)!=0)
@@ -987,7 +1109,286 @@ void ProcessChangeBackRight()
 	LanguageCloseFile(tmpLangFileID);
 }
 // MAXIMUS cannons MOD <--
+<------------ end of old change arc right calls PW
+*/ 
 
+// PW new change arc right functions
+
+
+void ProcessChangeFrontRight()
+{
+	int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
+
+	ref MyshipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter));
+	aref myship; makearef(myship, refEnemyCharacter.ship);
+/*Disabled too large a calibre block loop PW
+	if( GetLocalShipAttrib(myship, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(xi_refCharacter)) )
+	{
+		DisableString("HelpString");
+		EnableString("HelpString");
+		GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Bigcaliber");
+	}
+	else
+	{
+*/
+		DisableString("HelpString");
+		if(GetCannonArcQty(refEnemyCharacter, 0)<GetCannonArcMaxQty(refEnemyCharacter,0))
+		{
+			int mych, ench;
+			mych = GetCannonArcQty(refEnemyCharacter, 0);
+			if(GetCannonArcQty(xi_refCharacter, 0)>0)
+			{
+				ench = GetCannonArcQty(xi_refCharacter, 0);
+				SetCannonArcQty(refEnemyCharacter, 0, mych+1)
+				SetCannonArcQty(xi_refCharacter, 0, ench-1);
+				WasChangeData();
+			}
+			else
+			{
+				if(GetCannonArcQty(xi_refCharacter, 3)>0)
+				{
+					ench = GetCannonArcQty(xi_refCharacter, 3);
+					SetCannonArcQty(refEnemyCharacter, 0, mych+1)
+					SetCannonArcQty(xi_refCharacter, 3, ench-1);
+					WasChangeData();
+				}
+				else
+				{
+					if(GetCannonArcQty(xi_refCharacter, 1)>0)
+					{
+						ench = GetCannonArcQty(xi_refCharacter, 1);
+						SetCannonArcQty(refEnemyCharacter, 0, mych+1)
+						SetCannonArcQty(xi_refCharacter, 1, ench-1);
+						WasChangeData();
+					}
+					else
+					{
+						if(GetCannonArcQty(xi_refCharacter, 2)>0)
+						{
+							ench = GetCannonArcQty(xi_refCharacter, 2);
+							SetCannonArcQty(refEnemyCharacter, 0, mych+1)
+							SetCannonArcQty(xi_refCharacter, 2, ench-1);
+							WasChangeData();
+						}
+						else { EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"NoCannons"); }
+					}
+				}
+			}
+		}
+		else
+		{
+		    EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Enough");
+		}
+//	}	//	Disabled too large a calibre block loop PW
+	LanguageCloseFile(tmpLangFileID);
+}
+
+void ProcessChangeLeftArcRight()
+{
+	int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
+
+	ref MyshipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter));
+	aref myship; makearef(myship, refEnemyCharacter.ship);
+/*Disabled too large a calibre block loop PW
+	if( GetLocalShipAttrib(myship, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(xi_refCharacter)) )
+	{
+		DisableString("HelpString");
+		EnableString("HelpString");
+		GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Bigcaliber");
+	}
+	else
+	{
+*/
+		DisableString("HelpString"); 
+		if(GetCannonArcQty(refEnemyCharacter, 3)<GetCannonArcMaxQty(refEnemyCharacter,3))
+		{
+			int mych, ench;
+			mych = GetCannonArcQty(refEnemyCharacter, 3);
+			if(GetCannonArcQty(xi_refCharacter, 3)>0)
+			{
+				ench = GetCannonArcQty(xi_refCharacter, 3);
+				SetCannonArcQty(refEnemyCharacter, 3, mych+1)
+				SetCannonArcQty(xi_refCharacter, 3, ench-1);
+				WasChangeData();
+			}
+			else
+			{
+				if(GetCannonArcQty(xi_refCharacter, 1)>0)
+				{
+					ench = GetCannonArcQty(xi_refCharacter, 1);
+					SetCannonArcQty(refEnemyCharacter, 3, mych+1)
+					SetCannonArcQty(xi_refCharacter, 1, ench-1);
+					WasChangeData();
+				}
+				else
+				{
+					if(GetCannonArcQty(xi_refCharacter, 2)>0)
+					{
+						ench = GetCannonArcQty(xi_refCharacter, 2);
+						SetCannonArcQty(refEnemyCharacter, 3, mych+1)
+						SetCannonArcQty(xi_refCharacter, 2, ench-1);
+						WasChangeData();
+					}
+					else
+					{
+						if(GetCannonArcQty(xi_refCharacter, 0)>0)
+						{
+							ench = GetCannonArcQty(xi_refCharacter, 0);
+							SetCannonArcQty(refEnemyCharacter, 3, mych+1)
+							SetCannonArcQty(xi_refCharacter, 0, ench-1);
+							WasChangeData();
+						}
+						else { EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"NoCannons"); }
+					}
+				}
+			}
+		}
+		else
+		{
+		    EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Enough");
+		}
+//	}	//	Disabled too large a calibre block loop PW
+	LanguageCloseFile(tmpLangFileID);
+}
+
+void ProcessChangeRightArcRight()
+{
+	int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
+
+	ref MyshipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter));
+	aref myship; makearef(myship, refEnemyCharacter.ship);
+/*Disabled too large a calibre block loop PW
+	if( GetLocalShipAttrib(myship, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(xi_refCharacter)) )
+	{
+		DisableString("HelpString");
+		EnableString("HelpString");
+		GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Bigcaliber");
+	}
+	else
+	{
+*/
+		DisableString("HelpString"); 
+		if(GetCannonArcQty(refEnemyCharacter, 1)<GetCannonArcMaxQty(refEnemyCharacter,1))
+		{
+			int mych, ench;
+			mych = GetCannonArcQty(refEnemyCharacter, 1);
+			if(GetCannonArcQty(xi_refCharacter, 1)>0)
+			{
+				ench = GetCannonArcQty(xi_refCharacter, 1);
+				SetCannonArcQty(refEnemyCharacter, 1, mych+1)
+				SetCannonArcQty(xi_refCharacter, 1, ench-1);
+				WasChangeData();
+			}
+			else
+			{
+				if(GetCannonArcQty(xi_refCharacter, 2)>0)
+				{
+					ench = GetCannonArcQty(xi_refCharacter, 2);
+					SetCannonArcQty(refEnemyCharacter, 1, mych+1)
+					SetCannonArcQty(xi_refCharacter, 2, ench-1);
+					WasChangeData();
+				}
+				else
+				{
+					if(GetCannonArcQty(xi_refCharacter, 0)>0)
+					{
+						ench = GetCannonArcQty(xi_refCharacter, 0);
+						SetCannonArcQty(refEnemyCharacter, 1, mych+1)
+						SetCannonArcQty(xi_refCharacter, 0, ench-1);
+						WasChangeData();
+					}
+					else
+					{
+						if(GetCannonArcQty(xi_refCharacter, 3)>0)
+						{
+							ench = GetCannonArcQty(xi_refCharacter, 3);
+							SetCannonArcQty(refEnemyCharacter, 1, mych+1)
+							SetCannonArcQty(xi_refCharacter, 3, ench-1);
+							WasChangeData();
+						}
+						else { EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"NoCannons"); }
+					}
+				}
+			}
+		}
+		else
+		{
+		    EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Enough");
+		}
+//	}	//	Disabled too large a calibre block loop PW
+	LanguageCloseFile(tmpLangFileID);
+}
+
+void ProcessChangeBackRight()
+{
+	int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
+
+	ref MyshipRef = GetShipByType(GetCharacterShipType(refEnemyCharacter));
+	aref myship; makearef(myship, refEnemyCharacter.ship);
+/*Disabled too large a calibre block loop PW
+	if( GetLocalShipAttrib(myship, &MyshipRef, "MaxCaliber") < GetCannonCaliber(GetCaracterShipCannonsType(xi_refCharacter)) )
+	{
+		DisableString("HelpString");
+		EnableString("HelpString");
+		GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Bigcaliber");
+	}
+	else
+	{
+*/
+		DisableString("HelpString"); 
+		if(GetCannonArcQty(refEnemyCharacter, 2)<GetCannonArcMaxQty(refEnemyCharacter,2))
+		{
+			int mych, ench;
+			mych = GetCannonArcQty(refEnemyCharacter, 2);
+			if(GetCannonArcQty(xi_refCharacter, 2)>0)
+			{
+				ench = GetCannonArcQty(xi_refCharacter, 2);
+				SetCannonArcQty(refEnemyCharacter, 2, mych+1)
+				SetCannonArcQty(xi_refCharacter, 2, ench-1);
+				WasChangeData();
+			}
+			else
+			{
+				if(GetCannonArcQty(xi_refCharacter, 0)>0)
+				{
+					ench = GetCannonArcQty(xi_refCharacter, 0);
+					SetCannonArcQty(refEnemyCharacter, 2, mych+1)
+					SetCannonArcQty(xi_refCharacter, 0, ench-1);
+					WasChangeData();
+				}
+				else
+				{
+					if(GetCannonArcQty(xi_refCharacter, 3)>0)
+					{
+						ench = GetCannonArcQty(xi_refCharacter, 3);
+						SetCannonArcQty(refEnemyCharacter, 2, mych+1)
+						SetCannonArcQty(xi_refCharacter, 3, ench-1);
+						WasChangeData();
+					}
+					else
+					{
+						if(GetCannonArcQty(xi_refCharacter, 1)>0)
+						{
+							ench = GetCannonArcQty(xi_refCharacter, 1);
+							SetCannonArcQty(refEnemyCharacter, 2, mych+1)
+							SetCannonArcQty(xi_refCharacter, 1, ench-1);
+							WasChangeData();
+						}
+						else { EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"NoCannons"); }
+					}
+				}
+			}
+		}
+		else
+		{
+		    EnableString("HelpString"); GameInterface.strings.HelpString = LanguageConvertString(tmpLangFileID,"Enough");
+		}
+//	}	//	Disabled too large a calibre block loop PW
+	LanguageCloseFile(tmpLangFileID);
+}
+
+
+// PW end of new change arc right functions
 void ProcessCharacterChange(bool bRight)
 {
 	ref tmpChar = refEnemyCharacter;
@@ -1126,14 +1527,14 @@ void CharacterExit_yes()
 
     if(myCurQty>0)
 	{
-		if(myCaliber>enCaliber || myCaliber==0) SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(tmpChar));
-		else SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(xi_refCharacter));
+		if(myCaliber>enCaliber || myCaliber == 0) SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(tmpChar        ));
+		else                                      SetCharacterCannonType(xi_refCharacter, GetCaracterShipCannonsType(xi_refCharacter));
 	}
 
     if(enCurQty>0)
 	{
-		if(enCaliber>myCaliber || enCaliber==0) SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(xi_refCharacter));
-		else SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(tmpChar));
+		if(enCaliber>myCaliber || enCaliber == 0) SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(xi_refCharacter));
+		else                                      SetCharacterCannonType(tmpChar, GetCaracterShipCannonsType(tmpChar        ));
 	}
 
 	CannonsYes(xi_refCharacter, tmpChar);

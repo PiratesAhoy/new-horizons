@@ -36,6 +36,7 @@ void ProcessDialogEvent()
 			if (makeint(pchar.rank) > 14 && PChar.quest.Missingman == "") 
 			{
 				dialog.snd = "Voice\CLLA\CLLA001";
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				dialog.text = DLG_TEXT[2];
 			        link.l1 = DLG_TEXT[3];
 				link.l1.go = "begin";
@@ -100,6 +101,7 @@ void ProcessDialogEvent()
                case "begin_6":
 
 			dialog.snd = "Voice\CLLA\CLLA004";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[11];
 			link.l1 = DLG_TEXT[12];
 			link.l1.go = "begin_7";

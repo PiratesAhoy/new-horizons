@@ -1,5 +1,5 @@
 string DLG_TEXT[24] = {
-"Welcome to the Lord's house, my son. How can I help you?",
+"Welcome to the Lord's house, my #schild#. How can I help you?",
 "...",
 "I'd like to ask you some questions about the priest named ",
 "Father Jerald",

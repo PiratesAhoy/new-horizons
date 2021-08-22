@@ -77,7 +77,7 @@ string DLG_TEXT[290] = {
 "Mr. Quelp! Remember your place Sir! If I should require advice on strategy from you, I will ask for it. Until such time kindly tend to your duties. Mr. Bush! You have your orders. Hornblower. Is this your soldier?",
 "Tunnel? What tunnel is this ",
 "? Don't tell me that mining is also one of your latent talents.",
-"No Captain! It is an old smuggler's tunnel that leads from here to the town. It is faster that going through the jungle.",
+"No Captain! It is an old smuggler's tunnel that leads from here to the town. It is faster than going through the jungle.",
 "Hmmm! And how safe is this tunnel of yours?",
 "I have only used it once Sir, but Hunter has used it twice, and even brought the crew through it.",
 "Ah! Major. Let me introduce Lieutenant ",

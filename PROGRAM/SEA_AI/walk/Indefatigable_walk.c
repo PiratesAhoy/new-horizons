@@ -5,7 +5,9 @@ int Indefatigable_walk_graph[90];
 
 void Indefatigable_walk_init()
 {
-	Indefatigable_walk_count = 54;
+//	Indefatigable_walk_count = 54;
+	Indefatigable_walk_count = 0;
+
 
 Indefatigable_walk_verts[0] = 1.017544;
 Indefatigable_walk_verts[1] = 15.636810;

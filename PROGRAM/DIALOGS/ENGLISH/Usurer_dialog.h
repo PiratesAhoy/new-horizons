@@ -107,7 +107,7 @@ string DLG_TEXT[155] = {
 "Can I store some gold here for a rainy day?",
 "Good-bye, ",
 ".",
-"I see an intelligent man! So, how much money would you like to invest?",
+"I see an intelligent #sgender#! So, how much money would you like to invest?",
 "All right. Rest assured that this money will be safe and sound here, and that you'll receive interest, too. By the way, how much are you going to give me?",
 "I can tell that you know the how and why of things. How much do you want to deposit?",
 "A quarter of my wealth - ",

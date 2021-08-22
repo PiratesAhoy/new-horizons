@@ -14,6 +14,7 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -52,6 +53,7 @@ void ProcessDialogEvent()
 				}
 				else
 				{
+					Preprocessor_Add("friend", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 					if (PChar.model == "50_33_40Claire") dialog.text = DLG_TEXT[76];
 					else dialog.text = DLG_TEXT[2];
 					link.l1 = DLG_TEXT[3];

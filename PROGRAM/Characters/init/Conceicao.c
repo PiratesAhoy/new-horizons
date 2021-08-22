@@ -818,13 +818,14 @@ void CreateConceicaoCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "CONCEICAO_CITIZENS");
 	AddGameCharacter(n, ch);
 
-		//Beatriz Medeiros -- towngirl1
+		//Beatriz Medeiros -- towngirl1 or towngirl1_2 depending on period
 	ch.old.name = "Beatriz";
 	ch.old.lastname = "Medeiros";
 	ch.name = TranslateString("","Beatriz");
 	ch.lastname = TranslateString("","Medeiros");
 	ch.id		= "Beatriz Medeiros";
-	ch.model	= "towngirl1";
+	if (GetCurrentPeriod() < PERIOD_REVOLUTIONS) ch.model = "towngirl1_2";	// GR Use new southern model for Portuguese in most periods
+	else ch.model = "towngirl1";						// and original northern model for British in later periods
 	ch.sex = "woman";
 	ch.fanatic = "1";
 	ch.church = "Conceicao_church";

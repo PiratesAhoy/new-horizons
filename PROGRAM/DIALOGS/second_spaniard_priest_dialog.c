@@ -14,6 +14,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+	else Preprocessor_Add("child", XI_ConvertString("child"));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -52,24 +54,23 @@ void ProcessDialogEvent()
 		break;
 			
 		case "buhbye":
+			if(sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) > 0)
+			{
+				AddQuestRecord("Sao Feng", 40);
+			}
+			else
+			{
+				AddDialogExitQuest("Story_Domingues_to_cave");
+				AddQuestRecord("ANIMISTS", 40);
+			}
+			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+			else Preprocessor_Add("child", XI_ConvertString("child"));
 			dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[9];
 			link.l1.go = "exit";
-			if(sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) > 0)
-			{
-				AddQuestRecord("Sao Feng", 40);
-			}
-			else
-			{
-				AddDialogExitQuest("Story_Domingues_to_cave");
-				AddQuestRecord("ANIMISTS", 40);
-			}
 		break;  
 		
 		case "buhbye2":
-			dialog.text = DLG_TEXT[10];
-			link.l1 = DLG_TEXT[11];
-			link.l1.go = "exit";
 			if(sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) > 0)
 			{
 				AddQuestRecord("Sao Feng", 40);
@@ -79,6 +80,11 @@ void ProcessDialogEvent()
 				AddDialogExitQuest("Story_Domingues_to_cave");
 				AddQuestRecord("ANIMISTS", 40);
 			}
+			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+			else Preprocessor_Add("child", XI_ConvertString("child"));
+			dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[11];
+			link.l1.go = "exit";
 		break;  // <-- Cat
 
 		case "Exit":

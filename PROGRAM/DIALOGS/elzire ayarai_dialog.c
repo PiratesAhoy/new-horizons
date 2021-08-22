@@ -89,6 +89,7 @@ void ProcessDialogEvent()
 
 		case "node_4":
 			dialog.snd = "Voice\ELAY\ELAY009";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[18];
 			link.l1 = DLG_TEXT[19];
 			link.l1.go ="node_5";
@@ -141,6 +142,7 @@ void ProcessDialogEvent()
 
 		case "node_9":
 			dialog.snd = "Voice\ELAY\ELAY014";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[32];
 			link.l1 = DLG_TEXT[33];
 			link.l1.go = "node_10";

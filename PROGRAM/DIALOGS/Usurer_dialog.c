@@ -105,6 +105,14 @@ void ProcessDialogEvent()
 				case "Willemstad":
 					i = 13;
 				break;
+
+				case "Turks":
+					i = 14;
+				break;
+
+				case "Santo Domingo":
+					i = 15;
+				break;
 			}
 			DeleteQuestHeader("Loan");
 			SetQuestHeader("Loan");
@@ -469,6 +477,7 @@ void ProcessDialogEvent()
 			Dialog.snd1 = "voice\USDI\USDI027";
 			Dialog.snd2 = "voice\USDI\USDI028";
 			Dialog.snd3 = "voice\USDI\USDI029";
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			d.Text = RandPhrase(DLG_TEXT[108], DLG_TEXT[109], DLG_TEXT[110], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3);
 			Link.l1 = DLG_TEXT[111] + makeint(makeint(PChar.money)/40)*10 + DLG_TEXT[112];
 			Link.l1.go = "quarter";

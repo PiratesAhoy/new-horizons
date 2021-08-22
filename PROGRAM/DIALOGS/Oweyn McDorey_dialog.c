@@ -289,11 +289,13 @@ void ProcessDialogEvent()
 			Pchar.quest.Seen_Black_Pearl.win_condition = "Seen_Black_Pearl";
 
 			Dialog.snd = "voice\OWMC\OWMC024";
-		
+			
+			AddQuestRecord("chest", 5);
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
+			
 			d.Text = DLG_TEXT[71];
 			Link.l1 = DLG_TEXT[72];
 			Link.l1.go = "exit";			
-			AddQuestRecord("chest", 5);
 			ChangeCharacterAddressGroup(CharacterFromID("Henry Peat"), "HouseInsideR20", "sit", "sit1");
 		break;
 

@@ -13,6 +13,23 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 	
+	//DeathDaisy -->
+	string Frere;
+	string Ami;
+	if(PChar.sex == "woman")
+	{
+		Frere = "ma sœur";
+		Ami = "m'amie";
+	}
+	else
+	{
+		Frere = "mon frére";
+		Ami = "mon ami";
+	}
+	Preprocessor_Add("smarmy", Frere); 
+	Preprocessor_Add("friend", Ami);
+	// DeathDaisy <--
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
@@ -31,7 +48,8 @@ void ProcessDialogEvent()
 		case "Exit_Giddy":
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
-			LAi_QuestDelay("stand_up", 0.001);
+//			LAi_QuestDelay("stand_up", 0.001);
+			LAi_SetPlayerType(Pchar); // GR
 			AddDialogExitQuest("Story_SitAndDrinkWithDelacroix3");
 		break;
 		
@@ -86,14 +104,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "Node_3":
-			d.Text = DLG_TEXT[9] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[10];
+			d.Text = DLG_TEXT[9] + GetAddressForm(ADDR_CIVIL, FRANCE, chrsex(PChar)) + DLG_TEXT[10];
 			Link.l1 = DLG_TEXT[11];
 			Link.l1.go = "Node_4";
 		break;
 
 		case "Node_4":
 			Dialog.snd = "voice\VIÌÀ\VIÌÀ006";
-			d.Text = DLG_TEXT[12] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[13];
+			d.Text = DLG_TEXT[12] + GetAddressForm(ADDR_CIVIL, FRANCE, chrsex(PChar)) + DLG_TEXT[13];
 			Link.l1 = DLG_TEXT[14];
 			Link.l1.go = "Node_5";
 		break;
@@ -129,6 +147,7 @@ void ProcessDialogEvent()
 		break;
 	
 		case "Node_8":
+			Preprocessor_Add("friend", FirstLetterUp(Ami));
 			d.Text = DLG_TEXT[22];
 			Link.l1 = DLG_TEXT[23];
 			Link.l1.go = "Node_9";
@@ -174,6 +193,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Node_14":
+			Preprocessor_Add("smarmy", FirstLetterUp(Frere)); // DeathDaisy
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[37];
 			Link.l1 = DLG_TEXT[38];
 			Link.l1.go = "Node_15";
@@ -202,7 +223,13 @@ void ProcessDialogEvent()
 		break;
 		
 		case "thanks":
-			d.Text = DLG_TEXT[47];
+			string ThankYou = DLG_TEXT[47];
+			switch(PChar.sex){
+				case "woman":
+					ThankYou = DLG_TEXT[71];
+				break;
+			}
+			d.Text = ThankYou;
 			Link.l1 = DLG_TEXT[48];
 			Link.l1.go = "money";
 		break;

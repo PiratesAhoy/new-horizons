@@ -24,6 +24,7 @@ void GenerateQuestShip(string character_id, int iNation) // KK
 	if(GetShipCap()) { if((8-GetCharacterShipClass(PChar)) * 2 < pRank) { pRank = (8-GetCharacterShipClass(PChar)) * 2; } } // NK
 	irank = makeint((pRank/2.0 + Rand(pRank/2)) * (2.0/3.0 + ((makefloat(GetDifficulty())-1.0)/5.0)) + 0.5);
 	if(irank < 1) irank = 1;
+	if(isEnemy) irank += GetRank(PChar, iNation); // PB: Increase Difficulty for Higher Nation Rank
 	ref rFantom = characterFromID(character_id); // KK
 
 	if( sti(rFantom.nation) >= NATIONS_QUANTITY)	rFantom.nation = PIRATE; // KB- Fix Governor Pirate Quest bug // KK
@@ -147,12 +148,13 @@ int GenerateGoodForTrade(int FromNat, int ToNat, ref fromprice, ref toprice) // 
 		if(!CheckAttribute(&Towns[j],"nation")) continue;
 		if(CheckAttribute(&Towns[j],"skiptrade") && Towns[j].skiptrade==true) continue;//MAXIMUS: added for some towns (such as St. John's on Antigua)
 		if(Towns[j].nation!=ToNat) continue;
+		if(GetIslandIDFromTown(Towns[j].id) == GetIslandIDFromTown(GetCurrentTownID())) continue;
 		friendlyTowns = StoreString(friendlyTowns,Towns[j].id);
 	}
 	if(friendlyTowns!="")
 	{
 		destCol = GetRandSubString(friendlyTowns);
-		while(destCol=="" || HasSubStr(destCol,",") || GetIslandIDFromTown(destCol)==GetIslandIDFromTown(GetCurrentTownId())) { destCol = GetRandSubString(friendlyTowns); }
+		while(destCol=="" || HasSubStr(destCol,",")) { destCol = GetRandSubString(friendlyTowns); }
 	}
 	else
 	{
@@ -203,26 +205,29 @@ void OfficersReaction(string alignment)
 	for (int io = 0; io<GetPassengersQuantity(pchar); io++)
 	{
 		iPassenger = GetPassenger(pchar, io);
-		if(CheckAttribute(characters[iPassenger], "loyality"))
+		if(GetAttribute(characters[iPassenger], "alignment") != "neutral")
 		{
-			if (characters[iPassenger].alignment == alignment)
+			if(CheckAttribute(characters[iPassenger], "loyality") && CheckAttribute(characters[iPassenger], "alignment"))
 			{
-				characters[iPassenger].loyality = makeint(characters[iPassenger].loyality) + 1;
-			}
-			else
-			{
-				characters[iPassenger].loyality = makeint(characters[iPassenger].loyality) - 1;
-
-				if(makeint(characters[iPassenger].loyality) < 1)
+				if (characters[iPassenger].alignment == alignment)
 				{
-					PlaceCharacter(&characters[iPassenger], "goto");
-					characters[iPassenger].selfdialog.filename = characters[iPassenger].dialog.filename;
-					characters[iPassenger].selfdialog.currentnode = characters[iPassenger].dialog.currentnode;
-					characters[iPassenger].dialog.filename = "anacleto_dialog.c";
-					characters[iPassenger].dialog.currentnode = "remove";
-					LAi_SetActorType(&characters[iPassenger]);
-					LAi_ActorDialog(&characters[iPassenger], pchar, "player_back", 2.0, 1.0);
-					LAi_SetStayType(pchar);
+					characters[iPassenger].loyality = makeint(characters[iPassenger].loyality) + 1;
+				}
+				else
+				{
+					characters[iPassenger].loyality = makeint(characters[iPassenger].loyality) - 1;
+
+					if(makeint(characters[iPassenger].loyality) < 1)
+					{
+						PlaceCharacter(&characters[iPassenger], "goto");
+						characters[iPassenger].selfdialog.filename = characters[iPassenger].dialog.filename;
+						characters[iPassenger].selfdialog.currentnode = characters[iPassenger].dialog.currentnode;
+						characters[iPassenger].dialog.filename = "anacleto_dialog.c";
+						characters[iPassenger].dialog.currentnode = "remove";
+						LAi_SetActorType(&characters[iPassenger]);
+						LAi_ActorDialog(&characters[iPassenger], pchar, "player_back", 2.0, 1.0);
+						LAi_SetStayType(pchar);
+					}
 				}
 			}
 		}
@@ -613,6 +618,22 @@ string getFetchQuestExpireDate(ref tisland, string cargoID)
 	return date;
 }
 
+void setFetchQuestExpireQuest(ref tisland, string cargoID, string questbookname, string chrid)
+{
+	ref PChar = GetMainCharacter();
+	//This function sets a quest to expire the fetchquest.
+	PChar.quest.(questbookname).win_condition.l1 = "Timer";
+	int year = sti(tisland.cargos.(cargoid).expireYear);
+	int month = sti(tisland.cargos.(cargoid).expireMonth);
+	int day = sti(tisland.cargos.(cargoid).expireDay);
+	PChar.quest.(questbookname).chrid = chrid;
+	if(DEBUG_FETCH_QUEST) trace("FETCH QUEST: set quest "+questbookname+" timer to (yyyy,mm,dd) "+year+","+month+","+day);
+	PChar.quest.(questbookname).win_condition.l1.date.day = day;
+	PChar.quest.(questbookname).win_condition.l1.date.month = month;
+	PChar.quest.(questbookname).win_condition.l1.date.year = year;
+	PChar.quest.(questbookname).win_condition = "Fetch Quest Expire";
+}
+
 string getFetchQuestCargo(string type, ref ctown)
 {
 	aref cargos, cargo;
@@ -972,6 +993,25 @@ void CommonQuestComplete(string sQuestName)
 			Group_DelCharacter("Treasure_Pirate", "Treasure Pirate");
 			Group_deleteGroup("Treasure_Pirate");
 		break;
+		
+		////////////////////////////////////////////////////////////////////////
+		//  Fetch Quest
+		////////////////////////////////////////////////////////////////////////
+		
+		case "Fetch Quest Expire":
+			questbookname = pchar.quest.completed_win_condition; //Levis: get the quest which triggered this.
+			if(DEBUG_FETCH_QUEST) trace("FETCH QUEST: triggered expire quest for "+questbookname);
+			//Questbook
+			AddQuestRecord(questbookname, 4);
+			CloseQuestHeader(questbookname);
+			//Clean Up
+			NPChar = CharacterFromID(PChar.quest.(questbookname).chrid);
+			DeleteAttribute(NPChar,"fetch_quest");
+			DeleteAttribute(NPChar,"fetch_quest_active");
+			if(!CheckAttribute(PChar,"fetchquestfailed")) PChar.fetchquestfailed = 0;
+			PChar.fetchquestfailed = sti(PChar.fetchquestfailed) + 1;
+			
+		break;
 
 		////////////////////////////////////////////////////////////////////////
 		//  SMUGGLING
@@ -1001,6 +1041,21 @@ void CommonQuestComplete(string sQuestName)
 			{
 				Lai_QuestDelay("Smugglers First Meeting",0.0);
 			}
+			PChar.quest.Prepare_Smuggling_Fail.win_condition.l1 = "Timer";
+			PChar.quest.Prepare_Smuggling_Fail.win_condition.l1.date.day = GetAddingDataDay(0,0,7);
+			PChar.quest.Prepare_Smuggling_Fail.win_condition.l1.date.month = GetAddingDataMonth(0,0,7);
+			PChar.quest.Prepare_Smuggling_Fail.win_condition.l1.date.year = GetAddingDataYear(0,0,7);
+			PChar.quest.Prepare_Smuggling_Fail.win_condition = "Prepare Smuggling Fail";
+		break;
+		
+		case "Prepare Smuggling Fail": // DeathDaisy: this happens if you fail to get back to the smuggler agent with the patrol times within a week
+			ref ch = characterFromID(PChar.quest.Contraband.contact);
+			ch.Dialog.CurrentNode = ch.Dialog.TempNode;
+			questbookname = "smuggle&number="+Pchar.amount_smuggleruns;
+			AddQuestRecord(questbookname, 16);
+			CloseQuestHeader(questbookname);
+			ChangeSmugglerLiking(Pchar, -2); //Add liking
+			RemoveSmugglersFromShore();
 		break;
 		
 		case "Cancel_Smuggling":
@@ -1020,17 +1075,16 @@ void CommonQuestComplete(string sQuestName)
 			Pchar.quest.Contraband.scout.done = true;
 			//In 1 day he has to return
 			NPChar = characterFromID(PChar.quest.Contraband.officerID);
-			RemovePassenger(PChar, NPChar);
 			NPChar.StoredFellow = True;
 			if(DEBUG_SMUGGLING>2)trace("SMUGGLING removed "+NPChar.id+" as officer");
 			LAi_SetActorType(NPChar);
-			LAi_ActorRunToLocator(NPChar,"reload","reload1","Send Officer Gone",40);
+			LAi_ActorRunToLocation(NPChar, "reload", "reload1", "None", "", "", "Send Officer Gone", -1);
 		break;
 
 		case "Send Officer Gone":
 			NPChar = characterFromID(PChar.quest.Contraband.officerID);
-			LAi_SetOfficerType(NPChar);
-			ChangeCharacterAddressGroup(NPChar,"none","",""); //We don't have to see him anymore
+			RemovePassenger(PChar, NPChar);
+			BLI_UpdateOfficers();
 			if(DEBUG_SMUGGLING>2)trace("SMUGGLING removed "+NPChar.id+" from location");
 			PChar.quest.Contraband_Scouting.win_condition.l1 = "Timer";
 			PChar.quest.Contraband_Scouting.win_condition.l1.date.day = GetAddingDataDay(0, 0, 1);
@@ -1042,11 +1096,21 @@ void CommonQuestComplete(string sQuestName)
 
 		case "Send Officer time expired":
 			if(DEBUG_SMUGGLING>0)trace("SMUGGLING time expired you should go to: "+Pchar.quest.Contraband.tavern);
+			NPChar = characterFromID(PChar.quest.Contraband.officerID);
 			PChar.quest.Contraband_Scouting2.win_condition.l1 = "location";
 			PChar.quest.Contraband_Scouting2.win_condition.l1.location = Pchar.quest.Contraband.tavern;
 			ref smugisland = GetIslandByIndex(sti(Pchar.quest.Contraband.islandindex));
 			//First determine if the officer get caught.
-			int caughtchance = getSmugglingState(smugisland)*20 + (GetDifficulty()*5);
+			//int caughtchance = getSmugglingState(smugisland)*20 + (GetDifficulty()*5);
+			// DeathDaisy: chance of getting caught and getting info is now dependent of NPC skill and perks
+			int luck = CalcCharacterSkill(NPChar,SKILL_SNEAK);
+			int fencing = CalcCharacterSkill(NPChar,SKILL_FENCING);
+			int commerce = CalcCharacterSkill(NPChar,SKILL_COMMERCE);
+			int caughtchance = makeint((pow(getSmugglingState(smugisland),1.5)*10) - (luck*3) - (fencing*2) - (commerce));
+			if(CheckCharacterPerk(NPChar,"Trustworthy")) caughtchance = caughtchance*0.9;
+			if(CheckCharacterPerk(NPChar,"ImproveSmuggling")) caughtchance = caughtchance*0.8;
+			if(CheckCharacterPerk(NPChar,"AdvanceSmuggling")) caughtchance = caughtchance*0.5;
+			
 			if(DEBUG_SMUGGLING>2)trace("SMUGGLING caughtchance for officer is: "+caughtchance);
 			if(rand(99) < caughtchance)
 			{
@@ -1056,8 +1120,12 @@ void CommonQuestComplete(string sQuestName)
 			}
 			else
 			{
-				//Based on your luck
-				if(rand(9)<CalcCharacterSkill(PChar,SKILL_SNEAK))
+				int GetInfoSuccess = luck;
+				if(CheckCharacterPerk(NPChar,"Trustworthy")) GetInfoSuccess = GetInfoSuccess+1;
+				if(CheckCharacterPerk(NPChar,"ImproveSmuggling")) GetInfoSuccess = GetInfoSuccess+1;
+				if(CheckCharacterPerk(NPChar,"AdvanceSmuggling")) GetInfoSuccess = GetInfoSuccess+1;
+				//Based on officer luck and perks
+				if(rand(9)<GetInfoSuccess)
 				{
 					//Success
 					PChar.quest.Contraband_Scouting2.win_condition = "Send Officer has time";
@@ -1110,8 +1178,9 @@ void CommonQuestComplete(string sQuestName)
 			AddPassenger(PChar, NPChar, 0);
 			LAi_SetOfficerType(NPChar);
 			SetOfficersIndex(Pchar, -1, sti(NPChar.index)); // PB: Use index instead of reference
-			NPChar.dialog.currentnode = "hired";			// PB: Reset his dialog
-		break; 
+			NPChar.dialog.currentnode = "hired";            // PB: Reset his dialog
+			BLI_UpdateOfficers();
+		break;
 
 		case "Made Deal with Smuggler":
 			PlaceSmugglersOnShore(Pchar.quest.contraband.CurrentPlace);
@@ -1579,7 +1648,7 @@ void CommonQuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Enc_Char3")].nodisarm = 1; // PB: Disable disarming
 			Characters[GetCharacterIndex("Enc_Char4")].nodisarm = 1; // PB: Disable disarming
 
-			LAi_group_SetRelation("ENC_RAIDERS_GROUP", LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL);
+			LAi_group_SetRelation("ENC_RAPERS_GROUP", LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL);
 
 			LAi_SetCheckMinHP(characterFromID("Enc_Char2"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char2")) - 1), false, "LandEnc_RapersFight");
 			LAi_SetCheckMinHP(characterFromID("Enc_Char3"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char3")) - 1), false, "LandEnc_RapersFight");
@@ -1593,6 +1662,12 @@ void CommonQuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("Enc_Char2"));
 			LAi_SetActorType(CharacterFromID("Enc_Char3"));
 			LAi_SetActorType(CharacterFromID("Enc_Char4"));
+
+// GR: improved rapist scenario, woman is now armed
+			GiveItem2Character(CharacterFromID("Enc_Char1"), "Barmansknife");
+			EquipCharacterByItem(CharacterFromID("Enc_Char1"), "Barmansknife");
+			Characters[GetCharacterIndex("Enc_Char1")].nodisarm = 1; // PB: Disable disarming
+			LAi_SetImmortal(CharacterFromID("Enc_Char1"), true);
 
 			//При первом подходе или истечении времени сработает квест
 			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
@@ -1613,7 +1688,15 @@ void CommonQuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("Enc_Char3"));
 			LAi_SetActorType(CharacterFromID("Enc_Char4"));
 
-			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
+			if (CalcCharacterSkill(PChar, SKILL_FENCING) >= 3)
+			{
+				LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
+			}
+			else
+			{
+				LAi_SetActorType(CharacterFromID("Enc_Char1"));
+				LAi_ActorFollow(CharacterFromID("Enc_Char1"), PChar, "", 30.0);
+			}
 
 			LAi_SetCheckMinHP(characterFromID("Enc_Char2"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char2")) - 1), false, "LandEnc_RapersFight");
 			LAi_SetCheckMinHP(characterFromID("Enc_Char3"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char3")) - 1), false, "LandEnc_RapersFight");
@@ -1632,7 +1715,7 @@ void CommonQuestComplete(string sQuestName)
 			LAi_SetWarriorType(CharacterFromID("Enc_Char2"));
 			LAi_SetWarriorType(CharacterFromID("Enc_Char3"));
 			LAi_SetWarriorType(CharacterFromID("Enc_Char4"));
-
+			LAi_group_MoveCharacter(CharacterFromID("Enc_Char1"), LAI_DEFAULT_GROUP);
 			LAi_group_MoveCharacter(CharacterFromID("Enc_Char2"), "ENC_RAPERS_GROUP");
 			LAi_group_MoveCharacter(CharacterFromID("Enc_Char3"), "ENC_RAPERS_GROUP");
 			LAi_group_MoveCharacter(CharacterFromID("Enc_Char4"), "ENC_RAPERS_GROUP");
@@ -1645,34 +1728,193 @@ void CommonQuestComplete(string sQuestName)
 			Pchar.quest.LandEnc_KillAllRapers.win_condition.l3.character = "Enc_Char4";
 			PChar.quest.LandEnc_KillAllRapers.win_condition = "LandEnc_KillAllRapers";
 
-			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
+			if (CalcCharacterSkill(PChar, SKILL_FENCING) >= 3)
+			{
+				LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
+			}
+			else
+			{
+				LAi_SetWarriorType(CharacterFromID("Enc_Char1"));
+				LAi_SetActorTypeNoGroup(CharacterFromID("Enc_Char1"));
+				LAi_SetActorTypeNoGroup(CharacterFromID("Enc_Char2"));
+				LAi_ActorAttack(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), "");	// Force one enemy to attack woman
+				LAi_ActorAttack(characterfromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "");
+			}
 
 			LAi_group_FightGroups("ENC_RAPERS_GROUP", LAI_GROUP_PLAYER, false);
-		break;
-
-		case "LandEnc_RapersNoFight":
-
-			ChangeCharacterReputation(PChar, -5); // NK - Pchar.reputation = makeint(Pchar.reputation) - 5;
-
-			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
-
-			LAi_ActorFollow(CharacterFromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "", -1);
-			LAi_ActorFollow(CharacterFromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "", -1);
-			LAi_ActorFollow(CharacterFromID("Enc_Char4"), CharacterFromID("Enc_Char1"), "", -1);
-
 		break;
 
 		case "LandEnc_KillAllRapers":
 			//Pchar.reputation = makeint(Pchar.reputation) + 5;
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Leadership", makeint(Pchar.rank)*100); }
 			else { AddPartyExp(pchar, makeint(Pchar.rank)*100); }
+			LAi_SetActorType(CharacterFromID("Enc_Char1"));
 			LAi_type_actor_Reset(CharacterFromID("Enc_Char1"));
 			Characters[GetCharacterIndex("Enc_Char1")].Dialog.CurrentNode = "ThanksForHelp";
 			LAi_ActorDialog(CharacterFromID("Enc_Char1"), Pchar, "", 15, 0);
 
+			LAi_Group_MoveCharacter(CharacterFromID("Enc_Char1"), LAI_GROUP_PLAYER);
+			for (i=1; i<OFFICER_MAX; i++)
+			{
+				if(GetOfficersIndex(Pchar, i) != -1)
+				{
+					LAi_SetActorType(characters[GetOfficersIndex(Pchar, i)]);
+					LAi_type_actor_Reset(characters[GetOfficersIndex(Pchar, i)]);
+					LAi_SetOfficerType(characters[GetOfficersIndex(Pchar, i)]));
+				}
+			}
+		break;
+
+		case "LandEnc_Char1_Leaves":	// Triggered by dialog with "Enc_Char1", i.e. the woman
+			LAi_SetActorType(CharacterFromID("Enc_Char1"));
+			LAi_ActorGoToLocation(CharacterFromID("Enc_Char1"), "reload", LocatorExitSence(PChar.location, "from", "reload"), "none", "", "", "", -1);
+		break;
+
+
+//-----------------------------------------Defector---------------------------------------------------
+
+// Grey Roger - Defector MOD Start
+		case "LandEnc_DefectorLogin":
+
+			Characters[GetCharacterIndex("Enc_Char2")].nodisarm = 1; // PB: Disable disarming
+			Characters[GetCharacterIndex("Enc_Char3")].nodisarm = 1; // PB: Disable disarming
+			Characters[GetCharacterIndex("Enc_Char4")].nodisarm = 1; // PB: Disable disarming
+
+			LAi_group_SetRelation("ENC_DEFECTORS_GROUP", LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL);
+
+			LAi_SetCheckMinHP(characterFromID("Enc_Char2"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char2")) - 1), false, "LandEnc_Defector_PursuersFight");
+			LAi_SetCheckMinHP(characterFromID("Enc_Char3"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char3")) - 1), false, "LandEnc_Defector_PursuersFight");
+			LAi_SetCheckMinHP(characterFromID("Enc_Char4"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char4")) - 1), false, "LandEnc_Defector_PursuersFight");
+
+			LAi_QuestDelay("LandEnc_DefectorPursuit", 1); // NK was 5
+		break;
+
+		case "LandEnc_DefectorPursuit":
+			LAi_SetActorType(CharacterFromID("Enc_Char1"));
+			LAi_SetActorType(CharacterFromID("Enc_Char2"));
+			LAi_SetActorType(CharacterFromID("Enc_Char3"));
+			LAi_SetActorType(CharacterFromID("Enc_Char4"));
+
+			//При первом подходе или истечении времени сработает квест
+			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
+			LAi_ActorFollow(CharacterFromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "", 240);
+			LAi_ActorFollow(CharacterFromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "", 240);
+			LAi_ActorFollow(CharacterFromID("Enc_Char4"), CharacterFromID("Enc_Char1"), "", 240);
+
+			LAi_ActorDialog(CharacterFromID("Enc_Char1"), Pchar, "", 45, 0);
+
+			if(CheckAttribute(Pchar, "quest.LandEnc_StartingQuest1")) pchar.quest.LandEnc_StartingQuest1.over = "yes";
+			if(CheckAttribute(Pchar, "quest.LandEnc_StartingQuest2")) pchar.quest.LandEnc_StartingQuest2.over = "yes";
+			if(CheckAttribute(Pchar, "quest.LandEnc_StartingQuest3")) pchar.quest.LandEnc_StartingQuest3.over = "yes";
+		break;
+
+		case "LandEnc_Defector_PursuersTalk":
+			LAi_SetActorType(CharacterFromID("Enc_Char2"));
+			LAi_SetActorType(CharacterFromID("Enc_Char3"));
+			LAi_SetActorType(CharacterFromID("Enc_Char4"));
+
+//			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
+//			LAi_SetOfficerType(CharacterFromID("Enc_Char1"));
+			LAi_SetActorType(CharacterFromID("Enc_Char1"));
+			LAi_ActorFollow(CharacterFromID("Enc_Char1"), PChar, "", 30.0);
+
+			LAi_SetCheckMinHP(characterFromID("Enc_Char2"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char2")) - 1), false, "LandEnc_Defector_PursuersFight");
+			LAi_SetCheckMinHP(characterFromID("Enc_Char3"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char3")) - 1), false, "LandEnc_Defector_PursuersFight");
+			LAi_SetCheckMinHP(characterFromID("Enc_Char4"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char4")) - 1), false, "LandEnc_Defector_PursuersFight");
+
+			LAi_ActorDialog(CharacterFromID("Enc_Char2"), Pchar, "", 1, 0);
+			LAi_ActorDialog(CharacterFromID("Enc_Char3"), Pchar, "", 1, 0);
+			LAi_ActorDialog(CharacterFromID("Enc_Char4"), Pchar, "", 1, 0);
+		break;
+
+		case "LandEnc_Defector_PursuersFight":
+			Characters[GetCharacterIndex("Enc_Char2")].fight_started = "true";
+			LAi_RemoveCheckMinHP(characterFromID("Enc_Char2"));
+			LAi_RemoveCheckMinHP(characterFromID("Enc_Char3"));
+			LAi_RemoveCheckMinHP(characterFromID("Enc_Char4"));
+
+			LAi_SetWarriorType(CharacterFromID("Enc_Char2"));
+			LAi_SetWarriorType(CharacterFromID("Enc_Char3"));
+			LAi_SetWarriorType(CharacterFromID("Enc_Char4"));
+
+			LAi_group_MoveCharacter(CharacterFromID("Enc_Char2"), "ENC_DEFECTORS_GROUP");
+			LAi_group_MoveCharacter(CharacterFromID("Enc_Char3"), "ENC_DEFECTORS_GROUP");
+			LAi_group_MoveCharacter(CharacterFromID("Enc_Char4"), "ENC_DEFECTORS_GROUP");
+
+			Pchar.quest.LandEnc_Defector_KillAllPursuers.win_condition.l1 = "NPC_Death";
+			Pchar.quest.LandEnc_Defector_KillAllPursuers.win_condition.l1.character = "Enc_Char2";
+			Pchar.quest.LandEnc_Defector_KillAllPursuers.win_condition.l2 = "NPC_Death";
+			Pchar.quest.LandEnc_Defector_KillAllPursuers.win_condition.l2.character = "Enc_Char3";
+			Pchar.quest.LandEnc_Defector_KillAllPursuers.win_condition.l3 = "NPC_Death";
+			Pchar.quest.LandEnc_Defector_KillAllPursuers.win_condition.l3.character = "Enc_Char4";
+			PChar.quest.LandEnc_Defector_KillAllPursuers.win_condition = "LandEnc_Defector_KillAllPursuers";
+
+			LAi_ActorAfraid(CharacterFromID("Enc_Char1"), CharacterFromID("Enc_Char2"), true);
+			LAi_group_FightGroups("ENC_DEFECTORS_GROUP", LAI_GROUP_PLAYER, false);
+		break;
+
+		case "LandEnc_Defector_NoFight":
+			Characters[GetCharacterIndex("Enc_Char2")].exit_locator = LocatorExitSence(PChar.location, "from", "reload");
+			LAi_SetActorType(CharacterFromID("Enc_Char1"));
+			LAi_ActorRunToLocation(CharacterFromID("Enc_Char1"), "reload", Characters[GetCharacterIndex("Enc_Char2")].exit_locator, "none", "", "", "LandEnc_Defector_Escaped", -1);
+			LAi_SetActorTypeNoGroup(CharacterFromID("Enc_Char2"));
+			LAi_SetActorTypeNoGroup(CharacterFromID("Enc_Char3"));
+			LAi_SetActorTypeNoGroup(CharacterFromID("Enc_Char4"));
+
+			LAi_group_MoveCharacter(CharacterFromID("Enc_Char2"), "ENC_DEFECTORS_GROUP");
+			LAi_group_MoveCharacter(CharacterFromID("Enc_Char3"), "ENC_DEFECTORS_GROUP");
+			LAi_group_MoveCharacter(CharacterFromID("Enc_Char4"), "ENC_DEFECTORS_GROUP");
+
+			LAi_ActorAttack(characterfromID("Enc_Char2"), CharacterFromID("Enc_Char1"), "");
+			LAi_ActorAttack(characterfromID("Enc_Char3"), CharacterFromID("Enc_Char1"), "");
+			LAi_ActorAttack(characterfromID("Enc_Char4"), CharacterFromID("Enc_Char1"), "");
+
+			LAi_group_SetRelation("ENC_DEFECTORS_GROUP", LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL);
+			LAi_SetCheckMinHP(characterFromID("Enc_Char2"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char2")) - 1), false, "LandEnc_Defector_PursuersFight");
+			LAi_SetCheckMinHP(characterFromID("Enc_Char3"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char3")) - 1), false, "LandEnc_Defector_PursuersFight");
+			LAi_SetCheckMinHP(characterFromID("Enc_Char4"), (LAi_GetCharacterHP(CharacterFromID("Enc_Char4")) - 1), false, "LandEnc_Defector_PursuersFight");
+
+		break;
+
+		case "LandEnc_Defector_KillAllPursuers":
+			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Leadership", makeint(Pchar.rank)*100); }
+			else { AddPartyExp(pchar, makeint(Pchar.rank)*100); }
+			if (!CheckAttribute(CharacterFromID("Enc_Char1"), "escaped_from_attackers"))
+			{
+				LAi_SetActorType(CharacterFromID("Enc_Char1"));
+				LAi_type_actor_Reset(CharacterFromID("Enc_Char1"));
+				Characters[GetCharacterIndex("Enc_Char1")].Dialog.CurrentNode = "ThanksForHelp";
+				LAi_ActorDialog(CharacterFromID("Enc_Char1"), Pchar, "", 15, 0);
+			}
+		break;
+
+		case "LandEnc_Defector_Escaped":
+			Characters[GetCharacterIndex("Enc_Char1")].escaped_from_attackers = "true";
+			if (!CheckAttribute(CharacterFromID("Enc_Char2"), "fight_started"))
+			{
+				for(i = 2; i <= 4; i++)
+				{
+					sld = CharacterFromID("Enc_Char" + i);
+					if (!LAi_IsDead(sld))
+					LAi_SetActorType(sld);
+					LAi_ActorRunToLocation(sld, "reload", Characters[GetCharacterIndex("Enc_Char2")].exit_locator, "none", "", "", "", -1);
+				}
+			}
 		break;
 
 //------------------------------------------OFFICER----------------------------------------------------
+
+		case "LandEnc Talk to player about hireing":
+			NPChar = characterFromID(PChar.quest.hire_enc_walker);
+			LAi_SetActorType(NPChar);
+			LAi_ActorDialogNow(NPChar,Pchar,"Return LandEnc to citizentype",-1);
+		break;
+		
+		case "Return LandEnc to citizentype":
+			NPChar = characterFromID(PChar.quest.hire_enc_walker);
+			DeleteAttribute(PChar,"quest.hire_enc_walker");
+			Lai_SetCitizenType(NPChar);
+		break;
 
 		case "LandEnc_OfficerHired":
 		// This action is still used by the following applications:
@@ -2344,10 +2586,13 @@ Cost for level 50 is 55,374,000
 		break;
 		
 		case "reset after waiting":
-			NPChar = characterFromID(Pchar.waitedonship);
-			if(NPChar.location.locator == "sit3") LAi_SetHuberType(NPChar);
-			else LAi_SetCitizenType(NPChar);
-			LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
+			if(CheckAttribute(PChar, "waitedonship"))
+			{
+				NPChar = characterFromID(Pchar.waitedonship);
+				if(NPChar.location.locator == "sit3") LAi_SetHuberType(NPChar);
+				else LAi_SetCitizenType(NPChar);
+				LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
+			}
 		break;
 		//Levis: Add waiting time on ship <--
 		
@@ -2685,7 +2930,12 @@ Cost for level 50 is 55,374,000
 
 		case "girl_for_sale_2":
 			LAi_SetHP(characterFromID("danielle_quests_corsair_1"), 80.0, 80.0);
-			ChangeCharacterAddressGroup(characterFromID("danielle_quests_corsair_1"), pchar.location, "reload", "reload1");
+//			ChangeCharacterAddressGroup(characterFromID("danielle_quests_corsair_1"), pchar.location, "reload", "reload1");								// PB: Reset this to normal
+			if(pchar.location == "Antigua_Port")						// PB: Weird pier needs special case
+				ChangeCharacterAddressGroup(CharacterFromID("danielle_quests_corsair_1"), homelocation, "reload", "reload2");
+			else										// GR: attempt to spawn pirate wherever you are. 
+				SetCharacterToNearLocatorFromMe("danielle_quests_corsair_1", 3);	// 'SetCharacterToNearLocatorFromMe' takes character ID, not ref, as parameter
+
 			LAi_SetActorType(characterFromID("danielle_quests_corsair_1"));
 			LAi_ActorDialog(characterFromID("danielle_quests_corsair_1"), pchar, "", 2.0, 1.0);
 		break;
@@ -3547,6 +3797,7 @@ Cost for level 50 is 55,374,000
 				RemovePassenger(PChar,NPChar);
 				DeleteAttribute(NPChar,"prisoned");
 				DeleteAttribute(PChar,"prisonerIDX");
+				NPChar.ClearUponExit = true; // PB: So this guy is cleared upon exit
 			}
 		break;
 		// MAXIMUS =================================== Prisoners and Captived Captains Section =================================== <
@@ -4056,11 +4307,11 @@ Cost for level 50 is 55,374,000
 					sld.lastname = "";
 					LAi_SetCitizenType(characterFromID("dame2"));
 
-					sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Danblack", "goto", LAi_FindRandomLocator("goto"));
+					sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Anamaria", "goto", LAi_FindRandomLocator("goto"));
 					LAi_SetImmortal(sld, true);
 					sld.dialog.filename = "Dame_dialog.c";
 					sld.id = "dame3";
-					sld.name = "Annamaria";
+					sld.name = "Anamaria";
 					sld.lastname = "";
 					LAi_SetCitizenType(characterFromID("dame3"));
 				}
@@ -4297,6 +4548,7 @@ Cost for level 50 is 55,374,000
 			AddQuestRecord("relations_book", 3);
 			PChar.quest.relation_tutorial = 1;
 			PChar.quest.relationbook_timeout.over = "yes";
+			PChar.Got_Relation_Book = true;
 		break;
 
 		case "Read_Relation_Book":
@@ -4328,6 +4580,7 @@ Cost for level 50 is 55,374,000
 			AddQuestRecord("pirate_book", 2);
 			PChar.quest.pirate_tutorial = 1;
 			PChar.quest.piratebook_timeout.over = "yes";
+			PChar.Got_Pirate_Book = true;
 		break;
 
 		case "Read_Pirate_Book":
@@ -4402,6 +4655,7 @@ Cost for level 50 is 55,374,000
 			PlaySound("PEOPLE\clothes1.wav");
 		break;
 	*/
+	/*
 		case "place_LR_W_on_back":
 			GunCurCharge = LAi_GetCharacterRelCharge(Pchar); // Levis
 			weapon.model = "LongRifle_W_back";
@@ -4419,6 +4673,7 @@ Cost for level 50 is 55,374,000
 			Pchar.chr_ai.charge = GunCurCharge; // Levis
 			PlaySound("PEOPLE\clothes1.wav");
 		break;
+	*/
 //---------------------------------------------------------------------------------
 		case "equip_new_arrow":
 			PlaySound("OBJECTS\duel\arrow.wav");
@@ -4439,7 +4694,7 @@ Cost for level 50 is 55,374,000
 			EquipCharacterByItem(NPChar, "bladearrows");
 		break;
 
-		case "indian_arrow_tomahawk_equip_check":
+		case "indian_arrows_equip_check":
 			if(IsEquipCharacterByItem(Pchar, "pistolbow"))
 			{
 				//ok
@@ -4448,7 +4703,7 @@ Cost for level 50 is 55,374,000
 		break;
 
 		case "indian_pistols_equip_check":
-			if(IsEquipCharacterByItem(Pchar, "bladearrows") || IsEquipCharacterByItem(Pchar, "tomahawk") 
+			if(IsEquipCharacterByItem(Pchar, "bladearrows")
 			|| IsEquipCharacterByItem(Pchar, "shield_hand") || IsEquipCharacterByItem(Pchar, "shield_back"))
 			{
 				RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
@@ -4689,6 +4944,12 @@ Cost for level 50 is 55,374,000
 					weapon3.model = "LongRifle_C";
 					RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 					EquipCharacterByItem(Pchar, "LongRifle_C");
+				}
+				if(weapon3.model == "LongRifle_H_back")
+				{
+					weapon3.model = "LongRifle_H";
+					RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+					EquipCharacterByItem(Pchar, "LongRifle_H");
 				}
 				if(weapon3.model == "LongRifle_CT_back")
 				{
@@ -5178,6 +5439,125 @@ void back_LongRifle_C()
 
 //---------------------------------------------------------------------------
 
+#event_handler("LongRifle_H_on_hip", "hip_LongRifle_H");
+void hip_LongRifle_H()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	float GunCurCharge = LAi_GetCharacterRelCharge(attack); // Levis
+	weapon.model = "LongRifle_H";
+	RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+	EquipCharacterByItem(attack, "LongRifle_H");
+	attack.chr_ai.charge = GunCurCharge; // Levis
+
+	if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("OBJECTS\DUEL\reload1.wav");
+}
+
+#event_handler("LongRifle_H_on_back", "back_LongRifle_H");
+void back_LongRifle_H()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	if(weapon.model == "LongRifle_H")
+	{
+		float GunCurCharge = LAi_GetCharacterRelCharge(attack); // Levis
+		weapon.model = "LongRifle_H_back";
+		RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+		EquipCharacterByItem(attack, "LongRifle_H");
+		attack.chr_ai.charge = GunCurCharge; // Levis
+
+		if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("PEOPLE\clothes1.wav");
+	}
+}
+
+//---------------------------------------------------------------------------
+
+#event_handler("LongRifle_W_on_hip", "hip_LongRifle_W");
+void hip_LongRifle_W()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	float GunCurCharge = LAi_GetCharacterRelCharge(attack); // Levis
+	weapon.model = "LongRifle_W";
+	RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+	EquipCharacterByItem(attack, "LongRifle_W");
+	attack.chr_ai.charge = GunCurCharge; // Levis
+
+	if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("OBJECTS\DUEL\reload1.wav");
+}
+
+#event_handler("LongRifle_W_on_back", "back_LongRifle_W");
+void back_LongRifle_W()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	if(weapon.model == "LongRifle_W")
+	{
+		float GunCurCharge = LAi_GetCharacterRelCharge(attack); // Levis
+		weapon.model = "LongRifle_W_back";
+		RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+		EquipCharacterByItem(attack, "LongRifle_W");
+		attack.chr_ai.charge = GunCurCharge; // Levis
+
+		if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("PEOPLE\clothes1.wav");
+	}
+}
+
+//---------------------------------------------------------------------------
+
+#event_handler("bax_on_hip", "hip_bax");
+void hip_bax()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,BLADE_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	weapon.model = "battleax";
+	RemoveCharacterEquip(attack, BLADE_ITEM_TYPE );
+	EquipCharacterByItem(attack, "battleax");
+
+	if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("PEOPLE\clothes1.wav");
+}
+
+#event_handler("bax_on_back", "back_bax");
+void back_bax()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,BLADE_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	if(weapon.model == "battleax")
+	{
+		weapon.model = "battleax_back";
+		RemoveCharacterEquip(attack, BLADE_ITEM_TYPE );
+		EquipCharacterByItem(attack, "battleax");
+
+		if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("PEOPLE\clothes1.wav");
+	}
+}
+
+//---------------------------------------------------------------------------
+
 #event_handler("mguns_reset_check", "reset_check_mguns");
 void reset_check_mguns()
 {
@@ -5208,6 +5588,13 @@ void reset_check_mguns()
 					weapon.model = "musket_back";
 					EquipCharacterByItem(tmpChr, "pistolmket");
 					tmpChr.chr_ai.charge = GunCurCharge; // Levis
+				}
+
+				if(IsEquipCharacterByItem(tmpChr, "battleax"))
+				{
+					Items_FindItem("battleax", &weapon);
+					weapon.model = "battleax_back";
+					EquipCharacterByItem(tmpChr, "battleax");
 				}
 
 				if(IsEquipCharacterByItem(tmpChr, "blademketK"))
@@ -5278,6 +5665,22 @@ void reset_check_mguns()
 					Items_FindItem("LongRifle_C", &weapon);
 					weapon.model = "LongRifle_C_back";
 					EquipCharacterByItem(tmpChr, "LongRifle_C");
+					tmpChr.chr_ai.charge = GunCurCharge; // Levis
+				}
+
+				if(IsEquipCharacterByItem(tmpChr, "LongRifle_H"))
+				{
+					Items_FindItem("LongRifle_H", &weapon);
+					weapon.model = "LongRifle_H_back";
+					EquipCharacterByItem(tmpChr, "LongRifle_H");
+					tmpChr.chr_ai.charge = GunCurCharge; // Levis
+				}
+
+				if(IsEquipCharacterByItem(tmpChr, "LongRifle_W"))
+				{
+					Items_FindItem("LongRifle_W", &weapon);
+					weapon.model = "LongRifle_W_back";
+					EquipCharacterByItem(tmpChr, "LongRifle_W");
 					tmpChr.chr_ai.charge = GunCurCharge; // Levis
 				}
 			}
@@ -5357,6 +5760,22 @@ void fight_check_mguns()
 						Items_FindItem("LongRifle_C", &weapon);
 						weapon.model = "LongRifle_C_back";
 						EquipCharacterByItem(tmpChr, "LongRifle_C");
+						tmpChr.chr_ai.charge = GunCurCharge; // Levis
+					}
+
+					if(IsEquipCharacterByItem(tmpChr, "LongRifle_H"))
+					{
+						Items_FindItem("LongRifle_H", &weapon);
+						weapon.model = "LongRifle_H_back";
+						EquipCharacterByItem(tmpChr, "LongRifle_H");
+						tmpChr.chr_ai.charge = GunCurCharge; // Levis
+					}
+
+					if(IsEquipCharacterByItem(tmpChr, "LongRifle_W"))
+					{
+						Items_FindItem("LongRifle_W", &weapon);
+						weapon.model = "LongRifle_W_back";
+						EquipCharacterByItem(tmpChr, "LongRifle_W");
 						tmpChr.chr_ai.charge = GunCurCharge; // Levis
 					}
 				}

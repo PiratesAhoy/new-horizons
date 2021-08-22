@@ -5,7 +5,7 @@ string DLG_TEXT[120] = {
 "Are you all right?",
 "I can see you're busy. I'll let you get back to your work.",
 "I'm sorry. Did you say something?",
-"What's wrong with you, sir?",
+"What's wrong with you, #ssir#?",
 "Nothing important. I just said goodbye.",
 "Yes...yes, ",
 ", I'm fine.",

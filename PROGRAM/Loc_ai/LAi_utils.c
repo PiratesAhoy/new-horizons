@@ -259,8 +259,8 @@ float LAi_GetCharacterFightLevel(aref character)
 	}
 	//Level
 	if(fgtlevel < 0.0) fgtlevel = 0.0;
-	if(fgtlevel > SKILL_MAX) fgtlevel = SKILL_MAX;
-	fgtlevel = fgtlevel/SKILL_MAX;
+	if(fgtlevel > MAX_CHARACTER_SKILL) fgtlevel = MAX_CHARACTER_SKILL;
+	fgtlevel = fgtlevel/MAX_CHARACTER_SKILL;
 	return fgtlevel;
 }
 

@@ -83,6 +83,7 @@ void ProcessDialogEvent()
 			{
 				case "0": //drink
 					dialog.snd = "Voice\HADI\HADI001";
+					Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 					dialog.text = DLG_TEXT[0];
 					link.l1 = DLG_TEXT[1];
 					link.l1.go = "exit";
@@ -453,7 +454,11 @@ void ProcessDialogEvent()
 				AddMoneyToCharacter(pchar, -gameBet);
 				npchar.money = makeint(npchar.money) + gameBet;
 				dialog.snd = "Voice\HADI\HADI025";
-				Dialog.text = iPCDice + DLG_TEXT[53] + DLG_TEXT[54];
+				string you_lost = DLG_TEXT[54];
+				if(PChar.sex == "woman"){
+					you_lost = DLG_TEXT[119];
+				}
+				Dialog.text = iPCDice + DLG_TEXT[53] + you_lost;
 				if (makeint(pchar.money) >=gameBet)
 				{
 					link.l1 = DLG_TEXT[55];
@@ -560,6 +565,7 @@ void ProcessDialogEvent()
 
 				case 2: //soldiers
 					dialog.snd = "Voice\HADI\HADI034";
+					Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 					dialog.text = DLG_TEXT[76];
 					link.l1 = DLG_TEXT[77];
 					link.l1.go = "exit_sit";

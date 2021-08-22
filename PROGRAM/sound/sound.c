@@ -197,7 +197,12 @@ void SetSchemeForLocation(ref loc)
 				case PIRATE: SetMusicAlarm("music_pir_town"); break;
 				case HOLLAND: SetMusicAlarm("music_hol_town"); break;
 				case PORTUGAL: SetMusicAlarm("music_por_town"); break;
-				case AMERICA: SetMusicAlarm("music_usa_town"); break;
+				case GUEST1_NATION: // DeathDaisy: added swedish music
+					if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
+						SetMusicAlarm("music_swe_town"); 
+					} else{	SetMusicAlarm("music_usa_town"); }
+				break;
+				case PERSONAL_NATION:	SetMusicAlarm("music_personal_town"); break; // DeathDaisy: added music for personal colonies
 			}
 // <-- KK
 			//a simple virtual sailor change <--
@@ -214,13 +219,24 @@ void SetSchemeForLocation(ref loc)
 // KK -->
 			switch(location_or_nation)
 			{
-				case ENGLAND: SetMusicAlarm("music_eng_town"); break;
-				case FRANCE: SetMusicAlarm("music_fra_town"); break;
-				case SPAIN: SetMusicAlarm("music_spa_town"); break;
-				case PIRATE: SetMusicAlarm("music_pir_town"); break;
-				case HOLLAND: SetMusicAlarm("music_hol_town"); break;
+				case ENGLAND:  SetMusicAlarm("music_eng_town"); break;
+				case FRANCE:   SetMusicAlarm("music_fra_town"); break;
+				case SPAIN:    SetMusicAlarm("music_spa_town"); break;
+				case PIRATE:   SetMusicAlarm("music_pir_town"); break;
+				case HOLLAND:  SetMusicAlarm("music_hol_town"); break;
 				case PORTUGAL: SetMusicAlarm("music_por_town"); break;
-				case AMERICA: SetMusicAlarm("music_usa_town"); break;
+				case GUEST1_NATION: // DeathDaisy: added swedish music
+					if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
+						SetMusicAlarm("music_swe_town"); 
+					} else{	SetMusicAlarm("music_usa_town"); }
+				break;
+				//case AMERICA:  SetMusicAlarm("music_usa_town"); break;
+				case PERSONAL_NATION:
+					//SetMusicAlarm("music_eng_town");										//placeholder, doesn't work without it
+					SetMusicAlarm("music_personal_town"); // DeathDaisy: added music for personal colonies
+					if(HasSubStr(loc.id,"Nueva_Suecia")) SetMusicAlarm("Rogers_gunroom"); 	//JRH for Spanish part of Kristiania
+					if(HasSubStr(loc.id,"Kristiania"  )) SetMusicAlarm("music_swe_town"); 	//JRH for Spanish part of Kristiania
+				break;
 			}
 // <-- KK
 			//a simple virtual sailor change <--
@@ -277,6 +293,12 @@ void SetSchemeForLocation(ref loc)
 				SetMusicAlarm("music_jungle");
 			}
 			break;//changed by MAXIMUS <-[for some locations, such as QC]-
+		case "seashore_jungle":
+			ResetSoundScheme();
+			SetTimeScheme("land");
+			SetWeatherScheme("seashore_weather");
+			SetMusicAlarm("music_jungle");
+			break;//JRH for Turks Fort
 		case "cave":
 			SetSoundScheme("cave");
 			SetMusicAlarm("music_coridor");
@@ -290,43 +312,30 @@ void SetSchemeForLocation(ref loc)
 			SetMusicAlarm("music_house");
 			break;
 		case "tavern":
+			//a simple virtual sailor change -->
 			SetSoundScheme("tavern");
-// JRH -->
-			if(CheckAttribute(loc,"id") && loc.id == "GB_Charleston_town_tavern")
-			{
-				SetMusicAlarm("Rogers_gunroom");
-			}
+			if (CheckAttribute(loc,"townsack"))
+				location_or_nation=GettownNation(loc.townsack);
 			else
-			{	
-				if(CheckAttribute(loc,"id") && loc.id == "GB_Charleston_port_tavern")
-				{
-					SetMusicAlarm("music_tavern_pirate");
-				}
-			}	
-// <-- JRH
-			else
-			{
-
-
-				//a simple virtual sailor change -->
-				if (CheckAttribute(loc,"townsack"))
-					location_or_nation=GettownNation(loc.townsack);
-				else
-					location_or_nation=GetLocationNation(loc);
+				location_or_nation=GetLocationNation(loc);
 // KK -->
-				switch (location_or_nation) {
-					case ENGLAND: SetMusicAlarm("music_tavern"); break;
-					case FRANCE: SetMusicAlarm("music_tavern"); break;
-					case SPAIN: SetMusicAlarm("music_tavern"); break;
-					case PIRATE: SetMusicAlarm("music_tavern_pirate"); break;
-					case HOLLAND: SetMusicAlarm("music_tavern"); break;
-					case PORTUGAL: SetMusicAlarm("music_tavern"); break;
-					case AMERICA: SetMusicAlarm("music_tavern"); break;
-				}
-				//SetMusicAlarm("music_tavern");
-// <-- KK
-				//a simple virtual sailor change <--
+			switch (location_or_nation) {
+				case ENGLAND: SetMusicAlarm("music_tavern"); break;
+				case FRANCE: SetMusicAlarm("music_tavern"); break;
+				case SPAIN: SetMusicAlarm("music_tavern"); break;
+				case PIRATE: SetMusicAlarm("music_tavern_pirate"); break;
+				case HOLLAND: SetMusicAlarm("music_tavern"); break;
+				case PORTUGAL: SetMusicAlarm("music_tavern"); break;
+				case GUEST1_NATION: SetMusicAlarm("music_tavern"); break;
+				case PERSONAL_NATION: SetMusicAlarm("music_tavern_personal"); break;
 			}
+// <-- KK
+			//a simple virtual sailor change <--
+// JRH -->
+			if(CheckAttribute(loc,"id") && loc.id == "GB_Charleston_town_tavern") SetMusicAlarm("Rogers_gunroom");
+			if(CheckAttribute(loc,"id") && loc.id == "GB_Charleston_port_tavern") SetMusicAlarm("music_tavern_pirate");
+			if(CheckAttribute(loc,"id") && loc.id == "NS_hidden_town_Tavern") SetMusicAlarm("Rogers_crew");
+// <-- JRH
 			break;
 		case "shop":
 			SetSoundScheme("shop");
@@ -353,7 +362,13 @@ void SetSchemeForLocation(ref loc)
 				case PIRATE: SetMusicAlarm("music_pirate_governor"); break;
 				case HOLLAND: SetMusicAlarm("music_dutch_governor"); break;
 				case PORTUGAL: SetMusicAlarm("music_portugal_governor"); break;//changed by MAXIMUS <--
-				case AMERICA: SetMusicAlarm("music_american_governor"); break;
+				case GUEST1_NATION: // DeathDaisy: added swedish music
+					if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
+							SetMusicAlarm("music_swedish_governor"); 
+					} else{	SetMusicAlarm("music_american_governor"); }
+				break;
+				//case AMERICA: SetMusicAlarm("music_american_governor"); break;
+				case PERSONAL_NATION:	SetMusicAlarm("music_personal_governor"); break; // DeathDaisy: added music for personal governor
 			}
 			//SetMusicAlarm("music_gubernator");
 // <-- KK
@@ -367,6 +382,11 @@ void SetSchemeForLocation(ref loc)
 		case "Turks_church":
 			SetSoundScheme("Pym_tower");
 			SetMusicAlarm("music_Turks_church");
+			break;
+
+		case "Kristiania_church":
+			SetSoundScheme("church");
+			SetMusicAlarm("Vane_temple");
 			break;
 //<-- JRH
 		case "jail":
@@ -409,6 +429,12 @@ void SetSchemeForLocation(ref loc)
 			SetWeatherScheme("land");
 			SetMusicAlarm("music_house");
 			break;
+		case "silent_repair_town":
+			SetSoundScheme("repair_town");
+			SetTimeScheme("land");
+			SetWeatherScheme("land");
+			SetMusicAlarm("silence");
+			break;
 		case "blues_town":
 			SetSoundScheme("town");
 			SetTimeScheme("land");
@@ -423,6 +449,12 @@ void SetSchemeForLocation(ref loc)
 			break;
 		case "silent_jungle":
 			SetSoundScheme("jungle");
+			SetTimeScheme("land");
+			SetWeatherScheme("land");
+			SetMusicAlarm("silence");
+			break;
+		case "very_silent_jungle":
+		//	SetSoundScheme("jungle");		//no birds etc
 			SetTimeScheme("land");
 			SetWeatherScheme("land");
 			SetMusicAlarm("silence");
@@ -500,6 +532,10 @@ void SetSchemeForLocation(ref loc)
 			SetSoundScheme("house");
 			SetMusicAlarm("Blackbeard_scene");
 			break;
+		case "Blackbeard_party":
+			SetSoundScheme("tavern");
+			SetMusicAlarm("Blackbeard_scene");
+			break;
 		case "Blackbeard_shore":
 			ResetSoundScheme();
 			SetTimeScheme("land");
@@ -517,6 +553,20 @@ void SetSchemeForLocation(ref loc)
 			SetTimeScheme("land");
 			SetWeatherScheme("seashore_weather");
 			SetMusicAlarm("Sharpe_verse8");
+			break;
+		case "Ardent_cabin":
+			SetSoundScheme("deck");
+			SetMusicAlarm("Ardent_start");
+			break;
+		case "Ardent_finale_town":
+			SetSoundScheme("town");
+			SetTimeScheme("land");
+			SetWeatherScheme("land");
+			SetMusicAlarm("Ardent_end");
+			break;
+		case "Ardent_finale_sea":
+			SetSoundScheme("deck");
+			SetMusicAlarm("Ardent_end");
 			break;
         case "San_Felipe_fort":
 	        ResetSoundScheme();
@@ -630,6 +680,14 @@ void SetSchemeForLocation(ref loc)
 			SetSoundScheme("shop");
 			SetMusicAlarm("choir");
 			break;
+		case "Estate_sneaking":
+			SetSoundScheme("house");
+			SetMusicAlarm("night_sneaking");
+			break;
+		case "Swe_inside":
+			SetSoundScheme("shop");
+			SetMusicAlarm("Swe_inside");
+			break;
 	// GOLDBUG -->
 	
 		case "Charleston_port":
@@ -678,7 +736,6 @@ void SetSchemeForLocation(ref loc)
 			SetSoundScheme("jungle");
 			SetTimeScheme("land");
 			SetWeatherScheme("land");
-		//	SetMusicAlarm("Fort_Moultrie_village");
 			SetMusicAlarm("silence");
 			break;
 		case "Moultrie_restaurant":
@@ -762,6 +819,26 @@ void SetSchemeForLocation(ref loc)
 			SetTimeScheme("land");
 			SetWeatherScheme("land");
 			SetMusicAlarm("silence");
+			break;
+		case "Estate_garden":
+			if(Whr_IsStorm() || Whr_IsRain())
+			{
+				ResetSoundScheme();
+			}
+			else 
+			{
+				if (Whr_IsNight())
+				{
+					SetSoundScheme("town");
+				}
+				else 
+				{
+					SetSoundScheme("Chinese_garden");
+				}
+			}
+			SetTimeScheme("land");
+			SetWeatherScheme("land");
+			SetMusicAlarm("Rogers_study");
 			break;
 		case "Chinese_restaurant":
 			SetSoundScheme("tavern");
@@ -1029,16 +1106,31 @@ void SetSchemeForSea()
 
 		// LDH set night music properly - 11Feb09
 		ref pchar = GetMainCharacter();
-		// LDH 30Mar09
-		if (sti(pchar.Ship.POS.Mode) == SHIP_WAR) // PB: !bMapEnter doesn't have the same effect
-			SetMusic("music_sea_battle");
-		else
+		bool musicdone = false;
+		// PB & GR: check for attributes for custom music at sea
+		if (CheckAttribute(PChar, "seabattlemusic") && sti(pchar.Ship.POS.Mode) == SHIP_WAR)
 		{
-			if(Whr_IsNight())		SetMusicAlarm("music_night_sailing");
+			SetMusic(PChar.seabattlemusic);
+			musicdone = true;
+		}
+		if (CheckAttribute(PChar, "seamusic") && sti(pchar.Ship.POS.Mode) != SHIP_WAR)
+		{
+			SetMusicAlarm(PChar.seamusic);
+			musicdone = true;
+		}
+		if (!musicdone)
+		{
+			// LDH 30Mar09
+			if (sti(pchar.Ship.POS.Mode) == SHIP_WAR) // PB: !bMapEnter doesn't have the same effect
+				SetMusic("music_sea_battle");
 			else
 			{
-				if(Whr_IsFog())		SetMusicAlarm("music_fog_sailing");
-				else				SetMusicAlarm("music_day_sailing");
+				if(Whr_IsNight())		SetMusicAlarm("music_night_sailing");
+				else
+				{
+					if(Whr_IsFog())		SetMusicAlarm("music_fog_sailing");
+						else				SetMusicAlarm("music_day_sailing");
+				}
 			}
 		}
 
@@ -1312,13 +1404,21 @@ void Sound_OnAlarm(bool _alarmed)
 
 void Sound_OnSeaAlarm(bool _seaAlarmed)
 {
+	ref PChar = GetMainCharacter();
 	seaAlarmed = _seaAlarmed;
 	if (seaAlarmed == oldSeaAlarmed)
 		return;
 
 	if (seaAlarmed)
 	{ //alarm on!
-		SetMusic("music_sea_battle");
+		if (CheckAttribute(PChar, "seabattlemusic"))
+		{
+			SetMusic(PChar.seabattlemusic);
+		}
+		else
+		{
+			SetMusic("music_sea_battle");
+		}
 	}
 	else
 	{ //alarm off

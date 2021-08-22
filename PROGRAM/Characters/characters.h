@@ -43,11 +43,6 @@ string  MoraleTable[MORALE_TABLE_SIZE];
 #define REPUTATIONT_HERO        8
 string  ReputationTable[REPUTATION_TABLE_SIZE];
 
-#define PASSENGERS_MAX			32
-#define OFFICER_MAX				4
-#define COMPANION_MAX			4
-#define MAX_CHARACTER_SKILL		10
-
 // maximum number of cabin captains allowed to be alive at once:
 // (captured captains are alive until hired or released)
 #define CABINCAPTAINS_MAX 35

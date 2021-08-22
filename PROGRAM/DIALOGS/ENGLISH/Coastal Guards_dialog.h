@@ -4,7 +4,7 @@ string DLG_TEXT[32] = {// ccc stormy start; replaced text 21&22 as they were the
 "I'm just giving away gold. Is that illegal?",
 "This is none of your business, soldier. Keep moving.",
 "You disappoint me, captain ",
-"! Who would've thought that such a decent and respected man as yourself would deal in contraband?",
+"! Who would've thought that such a decent and respected #sgender# as yourself would deal in contraband?",
 "You're right, of course. I see the error of my ways, now.",
 "You'll be worse than disappointed when I cut you down!",
 "Well, considering the good things I've heard about you in the past, I'm willing to call this a first offense. Just stay away from such business in the future. As for these scoundrels, I'm taking them in right now!",
@@ -29,6 +29,6 @@ string DLG_TEXT[32] = {// ccc stormy start; replaced text 21&22 as they were the
 "You've gone too far! You'll die on this shore!",
 "We'll just see about that!",
 "Please look at this.",
-"Oh sorry sir, move along!",
+"Very good, #ssir#. I'll have to take that to add to my own report, of course. Now, move along!",
 "Thank you, now please go away quickly."
 };

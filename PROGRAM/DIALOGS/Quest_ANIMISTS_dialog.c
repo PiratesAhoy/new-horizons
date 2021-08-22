@@ -222,6 +222,7 @@ void ProcessDialogEvent()
 
 		case "talk_in_shore_2":
 			Dialog.snd = "voice\QUSA\QUSA020";
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[45] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[46];
 			link.l1 = DLG_TEXT[47];
 			link.l1.go = "exit";			

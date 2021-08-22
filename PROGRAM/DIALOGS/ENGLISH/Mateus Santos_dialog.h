@@ -35,7 +35,7 @@ string DLG_TEXT[118] = {
 "Ah, boldness, I admire that, but certainly it cannot have escaped your notice that I have seven men attending me, who, like myself, remain unconvinced by your effort.",
 "While I, on the other hand, am starting to find myself persuaded by the strength of your logic.",
 "Oh, these are your men, are they? I feared that I was interrupting a family reunion,... the Suidae family.",
-"Boldness and discretion, you overwhelm me, sir. I had heard rumors, but I'm delighted to discover for myself the ring of truth about them. ",
+"Boldness and discretion, you overwhelm me, #ssir#. I had heard rumors, but I'm delighted to discover for myself the ring of truth about them. ",
 "Ambroz Bricenos",
 " has set you up, Captain, pray let your discretion guide your unquestioned valor in your next response. My time is precious and you have already wasted ten minutes of it.",
 "Then to put it discreetly, I'll bid you good day with an apology for any disturbance I've caused. I trust I won't have to fight my way out?",

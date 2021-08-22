@@ -13,7 +13,62 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	int iNation = sti(PChar.nation); // DeathDaisy
+	string sNation = iNation; // DeathDaisy
 
+	// DeathDaisy -->
+	switch(iNation)
+	{
+		case FRANCE:
+			Preprocessor_Add("captain", "Capitaine");
+			Preprocessor_Add("attack", "A l'attaque");
+		break;
+
+		case SPAIN:
+			Preprocessor_Add("captain", "Capitán");
+			Preprocessor_Add("attack", "Al ataque");
+		break;
+
+		case PORTUGAL:
+			Preprocessor_Add("captain", "CapitÝo");
+			Preprocessor_Add("attack", "Al ataque");
+		break;
+
+		case HOLLAND:
+			Preprocessor_Add("captain", "Kapitein");
+			Preprocessor_Add("attack", "Aanvallen");
+		break;
+
+		case ENGLAND:
+			Preprocessor_Add("captain", "Captain");
+			Preprocessor_Add("attack", "Attack");
+		break;
+
+		case PIRATE:
+			Preprocessor_Add("captain", DLG_TEXT[12]);
+			Preprocessor_Add("attack", DLG_TEXT[13]);
+		break;
+
+		case PERSONAL_NATION:
+			Preprocessor_Add("captain", DLG_TEXT[12]);
+			Preprocessor_Add("attack", DLG_TEXT[13]);
+		break;
+
+		case GUEST1_NATION:
+			if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
+			{
+				Preprocessor_Add("captain", "Kapten");
+				Preprocessor_Add("attack", "Angrip");
+			}
+			else
+			{
+				Preprocessor_Add("captain", "Captain");
+				Preprocessor_Add("attack", "Attack");
+			}
+		break;
+	}
+	// DeathDaisy <--
 
 	switch(Dialog.CurrentNode)
 	{

@@ -228,8 +228,12 @@ void LocationInitEleuthera(ref n)
 	Locations[n].id = "Eleuthera_shore";
 	locations[n].id.label = "Citadel Rock."; 
 	locations[n].worldmap = "EleutheraShore 1";
-	Locations[n].image = "Outside_Passage1.tga";
+	Locations[n].image = "Outside_Citadel_Rock.tga";
 	Locations[n].name = "Citadel Rock";
+
+	//Town sack
+	locations[n].townsack = "Eleuthera";
+
 	//Sound
 	locations[n].type = "seashore";
 
@@ -251,6 +255,8 @@ void LocationInitEleuthera(ref n)
 	Locations[n].models.always.l3.level = 7;
 	Locations[n].models.always.l3.tech = "LocationModelBlend";
 	Locations[n].models.always.l4 = "fort_ruin";
+	Locations[n].models.always.l5 = "";			//leverC_up, leverC_down
+	Locations[n].models.always.l6 = "anchor_big1";		//anchor_big1, 2, 3
 
 	//Day
 	Locations[n].models.day.charactersPatch = "Pass1_p";
@@ -282,8 +288,84 @@ void LocationInitEleuthera(ref n)
 		Locations[n].reload.l1.label = "Sea.";
 	Locations[n].locators_radius.reload.boat = 9.0;
 
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "Citadel_cave";
+	Locations[n].reload.l4.emerge = "reload2";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].locators_radius.reload.reload4 = 0.001;		//large when discovered from inside
+
+	Locations[n].reload.l5.name = "reload5";
+	Locations[n].reload.l5.go = "Citadel_tower_stairs1";
+	Locations[n].reload.l5.emerge = "reload8";
+	Locations[n].reload.l5.autoreload = "0";
+	Locations[n].locators_radius.reload.reload5 = 0.2;		
+
+	Locations[n].reload.l6.name = "reload6";
+	Locations[n].reload.l6.go = "Citadel_tower_stairs2";
+	Locations[n].reload.l6.emerge = "reload8";
+	Locations[n].reload.l6.autoreload = "0";
+	Locations[n].locators_radius.reload.reload6 = 0.2;
+
+	Locations[n].locators_radius.box.box2 = 0.2;
+	Locations[n].locators_radius.box.box12 = 0.2;
+	Locations[n].locators_radius.box.box13 = 0.2;
+	Locations[n].locators_radius.box.box20 = 0.2;
+	Locations[n].locators_radius.box.box25 = 0.2;
+	Locations[n].locators_radius.box.box27 = 0.2;
+	Locations[n].locators_radius.box.box28 = 0.2;
+	Locations[n].locators_radius.box.box29 = 0.2;
+	Locations[n].locators_radius.box.box31 = 0.2;
+	Locations[n].locators_radius.box.box32 = 0.2;
+	Locations[n].locators_radius.box.box33 = 0.2;
+	Locations[n].locators_radius.box.box34 = 0.2;
+	Locations[n].locators_radius.box.box35 = 0.2;
+	Locations[n].locators_radius.box.box37 = 0.2;
+	Locations[n].locators_radius.box.box38 = 0.2;
+	Locations[n].locators_radius.box.box39 = 0.2;
+	Locations[n].locators_radius.box.box40 = 0.0001;
+	Locations[n].locators_radius.quest.quest11 = 1.0;
+
 	Locations[n].locators_radius.randitem.randitem2 = 0.01;
 	Locations[n].items.randitem2 = "gatedoor_w8";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.01;
+	Locations[n].items.randitem3 = "suspension_bridge_ropes";		
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.01;		//bridge: closed
+	Locations[n].items.randitem4 = "door_H1_small";
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.01;		//ground: closed
+	Locations[n].items.randitem5 = "door_H1_small";
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.01;
+	Locations[n].items.randitem6 = "pole1";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.01;
+	Locations[n].items.randitem7 = "stoneblock";
+
+	Locations[n].locators_radius.randitem.randitem8 = 0.01;
+	Locations[n].items.randitem8 = "steplock_v";
+
+	Locations[n].locators_radius.randitem.randitem9 = 0.01;
+	Locations[n].items.randitem9 = "suspension_bridge";
+
+	Locations[n].locators_radius.randitem.randitem10 = 0.01;
+	Locations[n].items.randitem10 = "hatch11";
+
+	Locations[n].locators_radius.randitem.randitem11 = 0.01;		//bridge: open
+	Locations[n].items.randitem11 = "door_H1_small";
+
+	Locations[n].locators_radius.randitem.randitem12 = 0.01;		//bridge: inner door
+	Locations[n].items.randitem12 = "door_N09";	
+	
+	Locations[n].locators_radius.randitem.randitem13 = 0.01;		//ground: open
+	Locations[n].items.randitem13 = "door_H1_small";
+
+	Locations[n].locators_radius.randitem.randitem14 = 0.01;		//ground: inner door
+	Locations[n].items.randitem14 = "door_N09";
+
+	Locations[n].locators_radius.randitem.randitem15 = 0.01;
+	Locations[n].items.randitem15 = "small_planks";
 
 	Locations[n].island = "Eleuthera"; // NK 04-08-29
 	n = n + 1;

@@ -1,4 +1,4 @@
-string DLG_TEXT[85] = {
+string DLG_TEXT[105] = {
 "Don't you dare to adress a superior in that manner again, you insolent hireling!",
 "Umm... err... I see. Sorry for having bothered you, Sir. Goodbye.",
 "Hey, you there! You look suspicious to me. Who the hell are you? Show me your papers!",
@@ -84,5 +84,25 @@ string DLG_TEXT[85] = {
 "I rather think not Mister Pyle - hand it over at once! Are you trying to keep any more items for yourself?",
 "Of course not Miss Rogers, it was not my intention to... Ehrmm, now what about Hornigold?",
 "The Red Costume please.",
+"Now to the Farm. As a token of our gratitude we are giving it to you Captain Pyle.",
+"Ohh. Me - a houseowner!",
+"The same goes for the Marquis. You may keep the sloop.",
+"You are indeed very generous Miss Rogers.",
+"We are also going to repair and refit the ship completely. If you wait at the Farm we'll sail here there.",
+"Wow, thank you again.",		//90
+"No Captain Pyle! We are ALL rich - as I told you once before.",
+"(gulp) Of course! It's enough for everyone - I have made a great discovery!",
+"Let me see... we are eight.",		//93
+"...and my group four.",
+"13 shares I mean. So you found the secret with those metal bars?",
+"Indeed I did. You did know that already?",
+"It was Claire who told us all about it.",
+"Hmm, I'm not surprised that she's well-acquainted with Alchemy too.",
+"Alchemy? I wouldn't call it that.",
+"No?!",
+"Now Captain Pyle, let's hear more about your great discovery!",
+"!!!",
+"That makes 12 shares.",
+"Yes.",
 
 };

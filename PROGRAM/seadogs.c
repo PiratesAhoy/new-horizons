@@ -952,8 +952,6 @@ void NewGame_continue()
 	//Reinit officer types
 	Trace("Gauging: officertypes");
 	InitOfficerTypes();
-	Trace("Gauging: Nation bonuschances");
-	InitBonusChances();
 	ReloadProgressUpdate();
 
 	InitPeriods();
@@ -1474,6 +1472,16 @@ void ProcessControls()
 						{
 							PostEvent("Longrifle_C_on_back", 1000, "i", PChar);
 						}
+						
+						if(IsEquipCharacterByItem(PChar, "Longrifle_H"))
+						{
+							PostEvent("Longrifle_H_on_back", 1000, "i", PChar);
+						}
+
+						if(IsEquipCharacterByItem(PChar, "Longrifle_W"))
+						{
+							PostEvent("Longrifle_W_on_back", 1000, "i", PChar);
+						}
 
 						if(IsEquipCharacterByItem(Pchar, "shield_hand"))
 						{
@@ -1481,6 +1489,11 @@ void ProcessControls()
 							TakeItemFromCharacter(Pchar, "shield_hand");
 							GiveItem2Character(Pchar, "shield_back");
 							EquipCharacterByItem(Pchar, "shield_back");								
+						}
+
+						if(IsEquipCharacterByItem(PChar, "battleax"))
+						{
+							PostEvent("bax_on_back", 1000, "i", PChar);
 						}
 
 						PostEvent("mguns_reset_check", 1000, "i", PChar);	//JRH: shouldn't matter what kind of gun pchar is equipped with
@@ -1535,6 +1548,16 @@ void ProcessControls()
 						{
 							if(charge == 1.0) PostEvent("Longrifle_C_on_hip", 1000, "i", Pchar);
 						}
+						
+						if(IsEquipCharacterByItem(Pchar, "Longrifle_H"))
+						{
+							if(charge == 1.0) PostEvent("Longrifle_H_on_hip", 1000, "i", Pchar);
+						}
+
+						if(IsEquipCharacterByItem(Pchar, "Longrifle_W"))
+						{
+							if(charge == 1.0) PostEvent("Longrifle_W_on_hip", 1000, "i", Pchar);
+						}
 
 						if(IsEquipCharacterByItem(Pchar, "pistolbow"))
 						{
@@ -1555,6 +1578,11 @@ void ProcessControls()
 							TakeItemFromCharacter(Pchar, "shield_back");
 							GiveItem2Character(Pchar, "shield_hand");
 							EquipCharacterByItem(Pchar, "shield_hand");								
+						}
+
+						if(IsEquipCharacterByItem(PChar, "battleax"))
+						{
+							PostEvent("bax_on_hip", 10, "i", PChar);
 						}
 					}
 
@@ -1639,6 +1667,7 @@ void ProcessControls()
 						}
 					}
 				*/
+				/*
 					if(IsEquipCharacterByItem(Pchar, "LongRifle_W"))
 					{
 						if(LAi_IsFightMode(PChar))
@@ -1650,6 +1679,7 @@ void ProcessControls()
 							LAi_QuestDelay("place_LR_W_on_hip", 1.0);
 						}
 					}
+				*/
 				}
 			break;
 			// <-- JRH

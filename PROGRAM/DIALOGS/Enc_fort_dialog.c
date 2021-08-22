@@ -100,6 +100,7 @@ void ProcessDialogEvent()
 
 
 		case "warning":
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[21];
 			Link.l1 = DLG_TEXT[22];
 			if (rand(100)< FORT_RAIDSUCCESS/2 )		//  chance that...

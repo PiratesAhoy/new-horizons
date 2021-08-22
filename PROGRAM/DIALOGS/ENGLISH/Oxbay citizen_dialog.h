@@ -22,7 +22,7 @@ string DLG_TEXT[183] = {
 ", you're the captain of the '",
 "', aren't you?",
 "Oh, it's captain ",
-" himself! What do you want to find out this time?",
+" #shimself#! What do you want to find out this time?",
 "Hello, ",
 ". Do you want anything?",
 "What kind of cock-and-bull stories have you heard here in the tavern lately?",

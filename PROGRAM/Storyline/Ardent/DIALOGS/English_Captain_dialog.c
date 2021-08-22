@@ -60,13 +60,13 @@ void ProcessDialogEvent()
 		case "how_you_got_person_aboard":
 			if (PChar.sex == "man")
 			{
-				Preprocessor_Add("pronoun", "she");
-				Preprocessor_Add("relative", "daughter");
+				Preprocessor_Add("pronoun", XI_ConvertString("she"));
+				Preprocessor_Add("relative", XI_ConvertString("daughter"));
 			}
 			else
 			{
-				Preprocessor_Add("pronoun", "he");
-				Preprocessor_Add("relative", "son");
+				Preprocessor_Add("pronoun", XI_ConvertString("he"));
+				Preprocessor_Add("relative", XI_ConvertString("son"));
 			}
 			dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];

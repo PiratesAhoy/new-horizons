@@ -13,6 +13,88 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	// DeathDaisy -->
+	int iNation = sti(PChar.nation);
+	string sNation = iNation;
+	switch(iNation)
+	{
+		case FRANCE:
+			Preprocessor_Add("hello", "Bonjour");
+			Preprocessor_Add("captain", "Capitaine");
+			Preprocessor_Add("mygod", "Mon dieu");
+			Preprocessor_Add("assault", "Oui, a l'assaut");
+			Preprocessor_Add("yes", "Oui");
+		break;
+
+		case SPAIN:
+			Preprocessor_Add("hello", "Hola");
+			Preprocessor_Add("captain", "Capitán");
+			Preprocessor_Add("mygod", "Dios mio");
+			Preprocessor_Add("assault", "Si, asalto");
+			Preprocessor_Add("yes", "Si");
+		break;
+
+		case PORTUGAL:
+			Preprocessor_Add("hello", "Ola");
+			Preprocessor_Add("captain", "CapitÝo");
+			Preprocessor_Add("mygod", "Meu Deus");
+			Preprocessor_Add("assault", "Sim, assalto");
+			Preprocessor_Add("yes", "Sim");
+		break;
+
+		case HOLLAND:
+			Preprocessor_Add("hello", "Hallo");
+			Preprocessor_Add("captain", "Kapitein");
+			Preprocessor_Add("mygod", "Mijn God");
+			Preprocessor_Add("assault", "Ja, aanval");
+			Preprocessor_Add("yes", "Ja");
+		break;
+
+		case ENGLAND:
+			Preprocessor_Add("hello", "Hello");
+			Preprocessor_Add("captain", "Captain");
+			Preprocessor_Add("mygod", "My God");
+			Preprocessor_Add("assault", "Yes, attack");
+			Preprocessor_Add("yes", "Yes");
+		break;
+
+		case PIRATE:
+			Preprocessor_Add("hello", DLG_TEXT[28]);
+			Preprocessor_Add("captain", DLG_TEXT[29]);
+			Preprocessor_Add("mygod", DLG_TEXT[30]);
+			Preprocessor_Add("assault", DLG_TEXT[31]);
+			Preprocessor_Add("yes", DLG_TEXT[32]);
+		break;
+
+		case PERSONAL_NATION:
+			Preprocessor_Add("hello", DLG_TEXT[28]);
+			Preprocessor_Add("captain", DLG_TEXT[29]);
+			Preprocessor_Add("mygod", DLG_TEXT[30]);
+			Preprocessor_Add("assault", DLG_TEXT[31]);
+			Preprocessor_Add("yes", DLG_TEXT[32]);
+		break;
+
+		case GUEST1_NATION:
+			if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
+			{
+				Preprocessor_Add("hello", "Hallå");
+				Preprocessor_Add("captain", "Kapten");
+				Preprocessor_Add("mygod", "Min Gud");
+				Preprocessor_Add("assault", "Ja, angrip");
+				Preprocessor_Add("yes", "Ja");
+			}
+			else
+			{
+				Preprocessor_Add("hello", "Hello");
+				Preprocessor_Add("captain", "Captain");
+				Preprocessor_Add("mygod", "My God");
+				Preprocessor_Add("assault", "Yes, attack");
+				Preprocessor_Add("yes", "Yes");
+			}
+		break;
+	}
+	// DeathDaisy <--
 
 
 	switch(Dialog.CurrentNode)
@@ -36,6 +118,7 @@ void ProcessDialogEvent()
 
 		case "hello_captain":
 			dialog.snd = "Voice\CLLA\CLLA004";
+
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "begin_2";

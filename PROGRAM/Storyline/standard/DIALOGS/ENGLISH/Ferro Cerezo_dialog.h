@@ -54,7 +54,7 @@ string DLG_TEXT[98] = {
 "Never mind who sent me. I want those papers.",
 "Pretending for a moment that I know what you're talking about, why would I give them to you? Do you even know what's in those papers?",
 "No. I only know that I need them.",
-"So the old hypocrite didn't even tell his errand boy how those papers discredit him? I knew he would be uneasy when he learned that proof of his money-lending had fallen into my hands.",
+"So the old hypocrite didn't even tell his errand #sboy# how those papers discredit him? I knew he would be uneasy when he learned that proof of his money-lending had fallen into my hands.",
 "If you know what those papers say, then I suppose the nature of our conversation will have to change.",
 "Let's do it this way: I'll buy the papers from you.",
 "What do you mean?",

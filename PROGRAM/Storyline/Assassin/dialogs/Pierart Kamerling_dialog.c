@@ -228,7 +228,9 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			ChangeCharacterAddressGroup(CharacterFromID("peasant"), "none", "", ""); // KK
 			pchar.quest.main_line = "to_douwesen_pirates";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestrecord("Where_are_i", 2);
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "blaze_to_incas_collection_begin_2":

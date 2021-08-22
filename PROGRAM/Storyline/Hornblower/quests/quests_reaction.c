@@ -11245,7 +11245,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.To_Guadeloupe_shore_Hogan.win_condition.l1.character = Pchar.id;
 			pchar.quest.To_Guadeloupe_shore_Hogan.win_condition.l1.location = "Guadeloupe_shore_01";
 			pchar.quest.To_Guadeloupe_shore_Hogan.win_condition = "To_Guadeloupe_shore_Hogan";
-			Locations[FindLocation("Charlestown_port")].vcskip = false;
+			DeleteAttribute(&Locations[FindLocation("Charlestown_port")],"vcskip");
 		break;
 
 		case "To_Guadeloupe_shore_Hogan":
@@ -11639,7 +11639,7 @@ void QuestComplete(string sQuestName)
 		case "Fight_the_French_Hogan2":
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);
-			LAi_group_SetCheck("FRANCE_SOLDIERS", "Three_French_Soldiers3");
+//			LAi_group_SetCheck("FRANCE_SOLDIERS", "Three_French_Soldiers3");
 
 			PChar.quest.KilledFighting.win_condition.l1 = "NPC_Death";
 			PChar.quest.KilledFighting.win_condition.l1.character = PChar.id;
@@ -14543,7 +14543,7 @@ void QuestComplete(string sQuestName)
 			EquipCharacterByItem(sld, "pistol1");
 			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "soldier3X";
-			PlaySound("AMBIENT\JAIL\Door_004.wav");
+			PlaySound("AMBIENT\JAIL\Door_003.wav");		// GR: was Door_004.wav, which doesn't exist
 			LAi_QuestDelay("Death_in_the_Battery2", 0.0);
 		break;
 
@@ -15784,9 +15784,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "assigned_to_atropos5":
-			ReceiveLetterOfMarque(ENGLAND);										// PB: Enable regular governor dialogs
-//			DeleteAttribute(PChar, "isnotcaptain");								// PB: Return to normal play
-			AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "1");	// PB: Enable changing nation relations
+			ReceiveLetterOfMarque(ENGLAND);							// PB: Enable regular governor dialogs
+//			DeleteAttribute(PChar, "isnotcaptain");						// PB: Return to normal play
+			AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "1");		// PB: Enable changing nation relations
 			GiveShip2Character(pchar, "HMS_Greyhound", "Atropos", -1, ENGLAND, true, true); // 6th Rate Frigate
 			AddQuestRecord("Old Friends - New Enemies", 19);
 			LAi_QuestDelay("End_of_story", 0.1);
@@ -15795,6 +15795,11 @@ void QuestComplete(string sQuestName)
 		case "End_of_story":
 			CloseQuestHeader("Old Friends - New Enemies");
 			LAi_QuestDelay("wolfes_ship", 0.1);
+
+			Locations[FindLocation("Santo_Domingo_town")].reload.l25.disable = 0;		// "Crystal Skull" sidequest now available
+
+//			ChangeCharacterAddressGroup(characterFromID("Sir Rodney Leighton"), "Redmond Naval HQ", "goto", "goto3");
+//			setCharacterShipLocation(characterFromID("Sir Rodney Leighton"), "Redmond_port");
 		break;
 
 		case "wolfes_ship":
@@ -16053,8 +16058,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 //			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur1";
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "officers", "reload1_2");
@@ -16062,8 +16067,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 //			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur2";
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "officers", "reload1_3");
@@ -16071,8 +16076,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 //			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur3";
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m4, "goto", "goto2");
@@ -16080,8 +16085,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 //			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur4";
 			LAi_QuestDelay("see_the_voltigeurs", 0.0);
@@ -16154,17 +16159,30 @@ void QuestComplete(string sQuestName)
 
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);
-			LAi_group_SetCheck("FRANCE_SOLDIERS", "end_of_skirmish1");
+//			LAi_group_SetCheck("FRANCE_SOLDIERS", "end_of_skirmish1");
 
 			PChar.quest.KilledFighting.win_condition.l1 = "NPC_Death";
 			PChar.quest.KilledFighting.win_condition.l1.character = PChar.id;
-			PChar.quest.KilledFighting.win_condition = "KilledFighting";		
+			PChar.quest.KilledFighting.win_condition = "KilledFighting";
+
+			PChar.quest.end_of_skirmish1.win_condition.l1 = "NPC_Death";
+			PChar.quest.end_of_skirmish1.win_condition.l1.character = "Lt. Uriah Quelp";
+			PChar.quest.end_of_skirmish1.win_condition.l2 = "NPC_Death";
+			PChar.quest.end_of_skirmish1.win_condition.l2.character = "voltigeur1";
+			PChar.quest.end_of_skirmish1.win_condition.l3 = "NPC_Death";
+			PChar.quest.end_of_skirmish1.win_condition.l3.character = "voltigeur2";
+			PChar.quest.end_of_skirmish1.win_condition.l4 = "NPC_Death";
+			PChar.quest.end_of_skirmish1.win_condition.l4.character = "voltigeur3";
+			PChar.quest.end_of_skirmish1.win_condition.l5 = "NPC_Death";
+			PChar.quest.end_of_skirmish1.win_condition.l5.character = "voltigeur4";
+			PChar.quest.end_of_skirmish1.win_condition = "end_of_skirmish1";	
 		break;
 
 		case "end_of_skirmish1":
 			LAi_SetOfficerType(characterFromID("Richard Sharpe"));
 			LAi_SetActorType(characterFromID("Rifleman Haggman"));
 			LAi_SetOfficerType(characterFromID("Patrick Harper"));
+			LAi_SetFightMode(PChar, false);
 			Characters[GetCharacterIndex("Rifleman Haggman")].Dialog.CurrentNode = "are_you_alright";
 			LAi_ActorDialog(characterFromID("Rifleman Haggman"),PChar,"end_of_skirmish2",5.0,5.0);
 		break;
@@ -16294,8 +16312,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur5";
 			sld = LAi_CreateFantomCharacter(false, -10, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "goto", "goto3");
@@ -16303,8 +16321,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur6";
 			sld = LAi_CreateFantomCharacter(false, -10, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "goto", "goto1");
@@ -16312,8 +16330,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur7";
 			sld = LAi_CreateFantomCharacter(false, -10, true, true, 0.25, Nations[ENGLAND].fantomModel.m4, "goto", "goto2");
@@ -16321,8 +16339,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur8";
 			sld = LAi_CreateFantomCharacter(false, -10, true, true, 0.25, Nations[ENGLAND].fantomModel.m5, "goto", "goto3");
@@ -16330,8 +16348,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur9";
 			sld = LAi_CreateFantomCharacter(false, -10, true, true, 0.25, Nations[ENGLAND].fantomModel.m6, "goto", "goto1");
@@ -16339,8 +16357,8 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(sld, "blade4");
 			EquipCharacterByItem(sld, "blade4");
 			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, GUN_ITEM_TYPE));
-			GiveItem2Character(sld, "LongRifle_C");
-			EquipCharacterByItem(sld, "LongRifle_C");
+			GiveItem2Character(sld, "LongRifle_H");
+			EquipCharacterByItem(sld, "LongRifle_H");
 			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
 			sld.id = "voltigeur10";
 
@@ -16559,6 +16577,9 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(characterFromID("Donatien Thibaud"), true);
 			RemovePassenger(pchar, characterFromID("Donatien Thibaud"));
 			CloseQuestHeader("Hunt the Traitors");
+			Characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_freeplay_dialog.c"; // Set up Pellew for "Natividad" quest
+			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.CurrentNode = "First time";
+			LAi_SetStayType(characterFromID("Sir Edward Pellew"));
 		break;
 
 		case "back_home":

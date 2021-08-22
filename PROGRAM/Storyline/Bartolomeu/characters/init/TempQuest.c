@@ -87,8 +87,8 @@ void CreateTempQuestCharacters(ref n)
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
 	ch.nodisarm	= 1;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -135,8 +135,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -176,8 +176,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -212,14 +212,14 @@ void CreateTempQuestCharacters(ref n)
 	ch.name = TranslateString("","Roxanne"); 
 	ch.lastname = TranslateString("","Lalliere");
 	ch.id		= "Roxanne Lalliere";
-	ch.model	= "9CATa";
+	ch.model	= "Roxanne";
 	ch.sex = "woman";
 	ch.sound_type = "pirate";
 	ch.nation = FRANCE;
 	GiveItem2Character(ch, "blthag02");
 	ch.equip.blade = "blthag02";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -272,8 +272,8 @@ void CreateTempQuestCharacters(ref n)
 	GiveItem2Character(ch, "blade31");
 	ch.equip.blade = "blade31";
 	ch.nodisarm	= 1;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -313,8 +313,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -545,8 +545,8 @@ void CreateTempQuestCharacters(ref n)
 	GiveItem2Character(ch, "blade11");
 	ch.equip.blade = "blade11";
 	ch.nodisarm	= 1;		
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -620,8 +620,8 @@ void CreateTempQuestCharacters(ref n)
 	GiveItem2Character(ch, "blade31");
 	ch.equip.blade = "blade31";
 	ch.nodisarm	= 1;			
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -695,8 +695,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -737,8 +737,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -819,8 +819,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -861,8 +861,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "bladec30");
 	ch.equip.blade = "bladec30";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -977,8 +977,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1026,8 +1026,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1075,8 +1075,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1117,8 +1117,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation	= SPAIN;
 	GiveItem2Character(ch, "bladec30");
 	ch.equip.blade = "bladec30";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1292,8 +1292,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1366,8 +1366,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2575,6 +2575,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Enrique Padilla_dialog.c";
 	ch.greeting = "Gr_isla muelle soldier";
+	ch.perks.list.BasicDefense = true;
+	ch.perks.list.AdvancedDefense = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;	
 	ch.rank 	= 10;
 	ch.reputation = "None";
 	ch.experience = "80";
@@ -3517,8 +3521,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);

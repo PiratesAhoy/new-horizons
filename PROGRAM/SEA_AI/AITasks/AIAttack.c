@@ -79,7 +79,7 @@ void AIAttack_GroupAttack(string sGroupAttacker, string sGroupAttacked, bool bAt
 		bTaskLock = true;
 	}
 
-	float fLeadership = MakeFloat(GetShipSkill(rCharacter2, SKILL_LEADERSHIP)) / SKILL_MAX;
+	float fLeadership = MakeFloat(GetShipSkill(rCharacter2, SKILL_LEADERSHIP)) / MAX_CHARACTER_SKILL;
 
 	float fTmp = fHPRatio2;// * Clampf(fLeadership + 0.01);
 
@@ -169,7 +169,7 @@ void AIAttack_CheckTask(string sGroupID)
 		float fAHPRatio1 = fHP1 / (fAHP1 + 0.0001);
 		float fHPRatio1 = fHP1 / (fHP2 + 0.0001);
 
-		float fLeadership = MakeFloat(GetShipSkill(rCharacter1, SKILL_LEADERSHIP)) / SKILL_MAX;
+		float fLeadership = MakeFloat(GetShipSkill(rCharacter1, SKILL_LEADERSHIP)) / MAX_CHARACTER_SKILL;
 
 		float fTmp = fAHPRatio1;// * Clampf(fLeadership + 0.01);
 

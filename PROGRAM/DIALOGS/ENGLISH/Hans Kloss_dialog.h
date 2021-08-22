@@ -1,4 +1,4 @@
-string DLG_TEXT[99] = { 
+string DLG_TEXT[101] = { 
 "I'm told you've gone to great lengths to request an audience. My name is ",
 ". Now, if you please, tell me the purpose of your visit, ",
 ".",
@@ -98,4 +98,6 @@ string DLG_TEXT[99] = {
 ", we must return to your father with this good news.",
 "I do not know who you really are, but attempting to impersonate an officer, even a Spanish one, is a serious offence. Leave now or I shall instruct the sergeant here to arrest you!",
 "Oops! <Thinks: I'd better put my uniform back on if I want him to believe I'm a soldier.>",
+"Why are you still here? Get out and go back to your own governor!",
+"I believe the ",
 };

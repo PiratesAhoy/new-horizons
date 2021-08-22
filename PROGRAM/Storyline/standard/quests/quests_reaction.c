@@ -709,6 +709,9 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.main_line = "GetAGramotaFromBerangere";
 			PChar.quest.Story_AskAboutBerangere = "3";
 			ChangeCharacterAddress(characterFromID("Amiel Berangere"), "Falaise_de_fleur_tavern_upstairs", "goto4");
+			LAi_SetCitizenType(characterFromID("Faust Gasquet"));// PW reset Faust from actor wait dialogue
+			LAi_group_MoveCharacter(characterFromID("Faust Gasquet"), "FRANCE_CITIZENS");// PW reset Faust from actor wait dialogue
+
 		break;
 
 		case "return_faust_to_citizen":
@@ -1087,6 +1090,9 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("CounterSpy")].Dialog.CurrentNode = "Met_Blaze";
 			DeleteAttribute(&Locations[FindLocation("Greenford_tavern")],"vcskip"); // NK
 			DeleteAttribute(&Locations[FindLocation("Greenford_port")],"vcskip"); // KK
+
+			Characters[GetCharacterIndex("Oweyn McDorey")].nation = ENGLAND;	// GR: So that he greets you properly when you go to the shipyard to hide
+			Characters[GetCharacterIndex("Oweyn McDorey")].greeting = "Gr_Oweyn McDorey";
 		break;
 
 		case "Ewan_Glover_exit_join":
@@ -2163,8 +2169,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_OfficersGoToTavernWithBlaze":
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			SetQuestHeader("Meet_Danielle_on_Muelle");
 			AddQuestRecord("Meet_Danielle_on_Muelle", 3);
+			Preprocessor_Remove("Danielle");
 			ChangeCharacterAddress(characterFromID("Danielle"), "None", "");
 			Pchar.Quest.Story_DanielleWaitsInMuelleTown.over = "yes";
 			characters[getCharacterIndex("Tiago Marquina")].location = "none";
@@ -2240,7 +2248,16 @@ void QuestComplete(string sQuestName)
 		case "Story_BlazeLeavesDanielleRoom":
 			LAi_SetPlayerType(pchar);
 			pchar.location.locator = "";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
+			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
+			Preprocessor_AddQuestData("Pronoun_upper", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle")))));
 			AddQuestRecord("Meet_Danielle_on_Muelle", 4);
+			Preprocessor_Remove("Pronoun_upper");
+			Preprocessor_Remove("pronoun3");
+			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("Danielle");
 			SetCurrentTime(9, 0);
 
 			RestorePassengers("blaze");
@@ -2405,7 +2422,9 @@ void QuestComplete(string sQuestName)
 			characters[GetCharacterIndex("Lighthouse_Guard_02")].location = "none";
 			characters[GetCharacterIndex("Lighthouse_Officer")].location = "none";
 
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("Meet_Danielle_on_Muelle",5);
+			Preprocessor_Remove("Danielle");
 
 			pchar.quest.Story_TalkAfterKillingSoldiersatLighthouse.win_condition.l1 = "location";
 			pchar.quest.Story_TalkAfterKillingSoldiersatLighthouse.win_condition.l1.location = "Oxbay_Lighthouse";
@@ -2434,6 +2453,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_AreYouReadyToCaptureGreenford":
+			if (!isofficer(CharacterFromID("Danielle")))	// GR: Make sure Danielle is officer, in case she has been replaced by sidequest character or random hired officer
+			{
+				PlaceCharacter(characterFromID("danielle"), "goto");
+				SetOfficersIndex(Pchar, 1, GetCharacterIndex("Danielle"));
+				LAi_SetOfficerType(characterFromID("danielle"));
+			}
 			Characters[GetCharacterIndex("Danielle")].Dialog.CurrentNode = "Are_we_ready";
 			LAi_ActorDialog(characterFromID("Danielle"), Pchar, "", 5.0, 1.0);
 		break;
@@ -2869,6 +2894,34 @@ void QuestComplete(string sQuestName)
 
 		case "Story_VoyageToKhaelRoaBegan":
 			// PB: Return Town to England to prevent errors -->
+			// GR: Capturing a town for Personal moves all its soldiers into group LAI_GROUP_PLAYER
+			// GR: If a character is in LAI_GROUP_PLAYER, 'bAllies(character)' is true
+			// GR: If 'bAllies(character)' is true, 'SetTownGarrisonForNation' doesn't change his uniform
+			// GR: So put all soldiers back into "ENGLAND_SOLDIERS" before capturing "Greenford" for ENGLAND
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_1"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_2"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_patrol_1"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_patrol_2"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Eng_soldier_40"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Eng_soldier_41"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_3"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_4"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_patrol_3"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_patrol_4"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_patrol_41"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_5"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_6"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_7"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_8"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_9"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_soldier_10"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Greenford Prison Commendant"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Eng_soldier_38"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Eng_soldier_39"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_exit_soldier_01"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Green_exit_soldier_02"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Mine_soldier_05"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(characterFromID("Mine_soldier_06"), "ENGLAND_SOLDIERS");
 			SetTownFortCommander("Greenford", characterFromID("Greenford Commander"));
 			CaptureTownForNation("Greenford", ENGLAND);
 			ChangeCharacterAddressGroup(characterFromID("Greenford Commander"), "Oxbay", "reload", "reload_fort1");
@@ -2894,8 +2947,10 @@ void QuestComplete(string sQuestName)
 			Islands[FindIsland("KhaelRoa")].filespath.models = "islands\KhaelRoa1";
 			Islands[FindIsland("KhaelRoa")].refl_model = "KhaelRoa1_refl";
 
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			SetQuestHeader("Sail_to_KhaelRoa");
 			AddQuestRecord("Sail_to_KhaelRoa", 1);
+			Preprocessor_Remove("Danielle");
 // NK -->
 			//Log_SetStringToLog("done");
 			ChangeCharacterAddress(characterFromID("Robert Christopher Silehard"), "none", "");
@@ -3158,8 +3213,10 @@ void QuestComplete(string sQuestName)
 			LAi_ActorRunToLocator(characterFromID("danielle"), "reload", "reload1", "", 5.0);
 			LAi_SetPlayerType(pchar);
 
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			SetQuestHeader("Repel_English_Attack");
 			AddQuestRecord("Repel_English_Attack", 1);
+			Preprocessor_Remove("Danielle");
 
 			/*Locations[FindLocation("Greenford_tavern")].reload.l1.name = "reload1";
 			Locations[FindLocation("Greenford_tavern")].reload.l1.go = "Greenford_port";
@@ -3178,9 +3235,17 @@ void QuestComplete(string sQuestName)
 			SetCrewQuantity(characterFromID("Henry Banfield"), 650);*/
 
 			Group_CreateGroup("Story_English_Squadron");
-			Group_AddCharacter("Story_English_Squadron", "Waulter Tomlison");
-			Group_AddCharacter("Story_English_Squadron", "Malcolm Hart");
-			Group_AddCharacter("Story_English_Squadron", "Henry Banfield");
+			Group_AddCharacter("Story_English_Squadron", "Waulter Tomlison");	// Battleship4 "Vengeance"
+			Group_AddCharacter("Story_English_Squadron", "Malcolm Hart");		// RN_Battleship "Desperate"
+			if(GetDifficulty() <= DIFFICULTY_MARINER)
+			{
+				Group_AddCharacter("Story_English_Squadron", "Wauter Keech");	// RN_Corvette "Black Prince"
+			}
+			else
+			{
+				Group_AddCharacter("Story_English_Squadron", "Henry Banfield");	// RN_Battleship "Monarch"
+				Group_AddCharacter("Story_English_Squadron", "Lewellyn Belt");	// Frigate1 "Meleager"
+			}
 
 			//SetCharacterRelationAsOtherCharacter(GetCharacterIndex("danielle"), GetMainCharacterIndex());
 			//SetCharacterRelationBoth(GetCharacterIndex("danielle"),GetMainCharacterIndex(),RELATION_FRIEND);
@@ -3198,8 +3263,18 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l1.character = "Waulter Tomlison";
 			Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l2 = "NPC_Death";
 			Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l2.character = "Malcolm Hart";
-			Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l3 = "NPC_Death";
-			Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l3.character = "Henry Banfield";
+			if(GetDifficulty() <= DIFFICULTY_MARINER)
+			{
+				Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l3 = "NPC_Death";
+				Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l3.character = "Wauter Keech";
+			}
+			else
+			{
+				Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l3 = "NPC_Death";
+				Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l3.character = "Henry Banfield";
+				Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l5 = "NPC_Death";
+				Pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l5.character = "Lewellyn Belt";
+			}
 // KK -->
 			pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l4 = "SeaEnter"; //condition to allow boarding all 3 ships PW
 			//pchar.quest.Story_RepelEnglishAssaultOnGreenford.win_condition.l4.location = "Oxbay";
@@ -3240,7 +3315,9 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(pchar);
 			Locations[FindLocation("Treasure_Alcove")].locators_radius.goto.goto3 = 5.0;
 
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("Into_the_temple",2); // NK
+			Preprocessor_Remove("Danielle");
 
 			Pchar.quest.Story_DanielleAndResearcherAppear.win_condition.l1 = "Location";
 			Pchar.quest.Story_DanielleAndResearcherAppear.win_condition.l1.location = "Treasure_Alcove";
@@ -3302,7 +3379,11 @@ void QuestComplete(string sQuestName)
 
 		case "Story_Escaped_from_temple":
 			PostEvent("DoInfoShower",100,"s","");
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
 			AddQuestRecord("Into_the_temple",5); // SA
+			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("Danielle");
 			ChangeCharacterAddressGroup(characterFromID("Danielle"), "KhaelRoa_port", "Officers", "Reload1_1");
 			ChangeCharacterAddressGroup(characterFromID("Researcher"), "KhaelRoa_port", "Officers", "Reload1_2");
 			DoQuestReloadToLocation("KhaelRoa_port", "Reload", "Reload1", "Story_GetOnBoardOnKhaelRoa");
@@ -3405,7 +3486,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_KillTheFinalBoss":
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("Into_the_temple",6); // SA
+			Preprocessor_Remove("Danielle");
 			iForceDetectionFalseFlag = 0; // KK
 			if (CheckAttribute(Pchar, "HaveArtefact")) DeleteAttribute(Pchar, "HaveArtefact"); // KK
 			bQuestDisableMapEnter = false;
@@ -3430,7 +3513,9 @@ void QuestComplete(string sQuestName)
 
 		case "end_game":
 			SetQuestHeader("After_Final");  // --> Cat for Danielle fix
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("After_Final", 1);
+			Preprocessor_Remove("Danielle");
 
 			Pchar.quest.Story_Take_Clement_Home.win_condition.l1 = "location";
 			Pchar.quest.Story_Take_Clement_Home.win_condition.l1.location = "Oxbay_Lighthouse";
@@ -3618,8 +3703,24 @@ void QuestComplete(string sQuestName)
 		case "out_from_quest_tavern_complete":
 			LAi_LocationFightDisable(&Locations[FindLocation("Quest_redmond_tavern")], true);
 			pchar.quest.main_line = "fawn_death";
+			Preprocessor_AddQuestData("Danielle", GetMyName(characterFromID("Danielle")));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(characterFromID("Danielle"))));
+			if (characters[GetCharacterIndex("Danielle")].sex == "woman")
+			{
+				Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
+				Preprocessor_AddQuestData("kid", XI_ConvertString("girl"));
+			}
+			else
+			{
+				Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
+				Preprocessor_AddQuestData("kid", XI_ConvertString("lad"));
+			}
 			AddQuestRecord("Blaze_out_from_silehard", 2);
 			LAi_QuestDelay("out_from_quest_tavern_complete_2", 3.0);
+			Preprocessor_Remove("kid");
+			Preprocessor_Remove("pronoun3");
+			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "out_from_quest_tavern_complete_2":
@@ -3682,8 +3783,10 @@ void QuestComplete(string sQuestName)
 		case "prepare_Edgar_to_Blaze_complete":
 			LAi_SetActorType(characterFromID("Edgar Attwood"));
 
+			Preprocessor_AddQuestData("Danielle", GetMyName(characterFromID("Danielle")));
 			AddQuestRecord("Blaze_out_from_silehard", 3);
 			CloseQuestHeader("Blaze_out_from_silehard");
+			Preprocessor_Remove("Danielle");
 			SetQuestHeader("Blaze_in_prison");
 			AddQuestRecord("Blaze_in_prison", 1);
 			//Выключаем выход из тюрьмы
@@ -3816,6 +3919,7 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(Pchar, "Quest.Story_OxbayCaptured");
 			// KK SetTownNation("Oxbay", ENGLAND);
 			CaptureTownForNation("Oxbay", ENGLAND); // KK
+		//	DeleteAttribute(characterFromID("Oxbay Commander"), "recognized"); // PB: Added to 'CaptureTownForNation' function itself
 			//Смена национальности форта Оксбэя
 			// KK Characters[GetCharacterIndex("Oxbay Commander")].nation = ENGLAND;
 			// KK Characters[GetCharacterIndex("Oxbay Commander")].model = "Soldier_Eng";
@@ -4736,6 +4840,10 @@ void QuestComplete(string sQuestName)
 			DoQuestReloadToLocation("Douwesen_town_exit", "goto", "goto2", "from_town_to_jungle_to_rheims_house_complete");
 			locations[FindLocation("Douwesen_town_exit")].reload.l1.disable = 1;
 			locations[FindLocation("Douwesen_town_exit")].reload.l2.disable = 1;
+
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			AddQuestrecord("again_find_rheims", 4);
+			Preprocessor_Remove("Danielle");
 		break;
 
 		//выходим в город и на нас нападют головорезы
@@ -4791,11 +4899,13 @@ void QuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(characterFromID("danielle"), pchar);
 			LAi_CharacterDisableDialog(characterFromID("Raoul Rheims"));
 			LAi_CharacterDisableDialog(characterFromID("Vincent Bethune"));
-			AddQuestrecord("again_find_rheims", 5);
 			pchar.quest.main_line = "to_rheims_house";
 		break;
 
 		case "kill_murderers_in_douwesen_town_exit_complete":
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			AddQuestrecord("again_find_rheims", 5);
+			Preprocessor_Remove("Danielle");
 			locations[FindLocation("Douwesen_town_exit")].reload.l1.disable = 0;
 			locations[FindLocation("Douwesen_town_exit")].reload.l2.disable = 0;
 			characters[GetCharacterIndex("murderer_in_douwesen_01")].location = "none";
@@ -5021,7 +5131,11 @@ void QuestComplete(string sQuestName)
 			pchar.quest.to_quest_muelle.win_condition.l1 = "location";
 			pchar.quest.to_quest_muelle.win_condition.l1.location = "Quest_Muelle_town_01";
 			pchar.quest.to_quest_muelle.win_condition = "to_quest_muelle_complete";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID("Danielle"))));
 			AddQuestRecord("search_danielle", 22);
+			Preprocessor_Remove("pronoun2");
+			Preprocessor_Remove("Danielle");
 			Locations[FindLocation("Oxbay_canyon")].reload.l3.disable = true;
 		break;
 
@@ -5138,7 +5252,9 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("danielle"));
 			LAi_ActorDialog(characterFromID("Danielle"), pchar, "", 5.0, 0);
 			LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("Revenge_for_Silehard", 4);
+			Preprocessor_Remove("Danielle");
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 5000);
@@ -5158,7 +5274,9 @@ void QuestComplete(string sQuestName)
 			pchar.quest.return_idol_from_frigate.over = "yes";
 			Island_SetReloadEnableGlobal("Oxbay", true);
 			bQuestDisableMapEnter = false;	//CTM
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("Revenge_for_Silehard", "8");
+			Preprocessor_Remove("Danielle");
 			ChangeCharacterAddress(characterFromID("researcher"), "oxbay_lighthouse", "goto24");
 			GiveItem2Character(pchar, "idol");
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Leadership", 30000); }
@@ -5395,11 +5513,12 @@ void QuestComplete(string sQuestName)
 
 			bQuestDisableMapEnter = false;
 			LAi_LocationFightDisable(&locations[Findlocation("pirate_tavern")], true);
-			pchar.ship.type = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].ship.type;
-			pchar.ship.name = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].ship.name;
-			pchar.ship.nation = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].nation; // KK
-			SetCrewQuantity(pchar, 200);
-			SetBaseShipData(pchar);
+//			pchar.ship.type = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].ship.type;
+//			pchar.ship.name = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].ship.name;
+//			pchar.ship.nation = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].nation; // KK
+//			SetCrewQuantity(pchar, 200);
+//			SetBaseShipData(pchar);
+			ExchangeCharacterShip(Pchar, characterFromID("Anacleto Rui Sa Pinto")); // GR: you're taking Anacleto's ship, so take it, don't fake it
 // KK -->
 			// crew need something to eat
 			AddCharacterGoods(pchar, GOOD_WHEAT, 70);
@@ -5413,12 +5532,17 @@ void QuestComplete(string sQuestName)
 			sld.dialog.filename = "anacleto_dialog.c";
 			sld.dialog.currentnode = "first time";
 			LAi_SetActorType(sld);
-			LAi_SetStayType(pchar);
-			LAi_SetPlayerType(pchar);
+//			LAi_SetStayType(pchar);
+//			LAi_SetPlayerType(pchar);
+			LAi_SetFightMode(PChar, false); // GR: If player kills Anacleto with one shot, player isn't automatically disarmed, so force it
+			LAi_SetActorType(PChar);
+			LAi_type_actor_Reset(PChar);
+			LAi_ActorWaitDialog(PChar, sld);
 			LAi_ActorDialog(sld, pchar, "sld_exit_from_pirate_tavern", 3.0, 1.0);
 		break;
 
 		case "sld_exit_from_pirate_tavern":
+			LAi_SetPlayerType(pchar);
 			LAi_ActorGoToLocation(characterFromID("temp_id_sld_fucker"), "reload", "reload1", "none", "", "", "", 10.0);
 		break;
 
@@ -5429,11 +5553,12 @@ void QuestComplete(string sQuestName)
 			Lai_SetPlayerType(pchar);
 // <-- KK
 			LAi_LocationFightDisable(&locations[Findlocation("pirate_tavern")], true);
-			pchar.ship.type = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].ship.type;
-			pchar.ship.name = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].ship.name;  // KK
-			pchar.ship.nation = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].nation; // KK
-			SetCrewQuantity(pchar, 200);
-			SetBaseShipData(pchar);
+//			pchar.ship.type = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].ship.type;
+//			pchar.ship.name = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].ship.name;  // KK
+//			pchar.ship.nation = characters[GetCharacterIndex("Anacleto Rui Sa Pinto")].nation; // KK
+//			SetCrewQuantity(pchar, 200);
+//			SetBaseShipData(pchar);
+			ExchangeCharacterShip(Pchar, characterFromID("Anacleto Rui Sa Pinto")); // GR: you're taking Anacleto's ship, so take it, don't fake it
 // KK -->
 			// crew need something to eat
 			AddCharacterGoods(pchar, GOOD_WHEAT, 70);
@@ -5678,7 +5803,9 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Leborio Drago"), pchar, "", 2.0, 1.0);
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Leadership", 15000); }
 			else { AddPartyExp(pchar, 15000); }
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("search_danielle", 16);
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "hired_leborio_complete":
@@ -5722,10 +5849,29 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Douwesen_shore_01")].reload.l2.disable = 0;
 			Locations[FindLocation("Douwesen_shore_02")].reload.l2.disable = 0;
 			pchar.quest.main_line = "danielle_speak_with_almost_dead_rheims_complete";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID("Danielle"))));
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman")
+			{
+				Preprocessor_AddQuestData("kid", XI_ConvertString("girl"));
+				Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
+			}
+			else
+			{
+				Preprocessor_AddQuestData("kid", XI_ConvertString("lad"));
+				Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
+			}
 			AddQuestRecord("again_find_rheims", 7);
 			CloseQuestHeader("again_find_rheims");
+			Preprocessor_Remove("pronoun3");
+			Preprocessor_Remove("kid");
+			Preprocessor_Remove("pronoun2");
+			Preprocessor_Remove("Danielle");
+
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			SetQuestHeader("search_danielle");
 			AddQuestrecord("search_danielle", 1);
+			Preprocessor_Remove("Danielle");
 			locCameraFollow();
 			restorepassengers(pchar.id);
 
@@ -5970,17 +6116,17 @@ void QuestComplete(string sQuestName)
 		case "monster_generate_in_alcove":
 			//ChangeCharacterAddressGroup(pchar, "Treasure_alcove", "teleport", "teleport0");
 
-			LAi_group_SetLookRadius("monsters", 30.0);
+			LAi_group_SetLookRadius(LAi_monsters_group, 30.0);
 			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "mummy", "goto", "monster1");
-			LAi_group_MoveCharacter(sld, "monsters");
+			LAi_group_MoveCharacter(sld, LAi_monsters_group);
 
 			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "mummy", "goto", "monster2");
-			LAi_group_MoveCharacter(sld, "monsters");
+			LAi_group_MoveCharacter(sld, LAi_monsters_group);
 
 			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "mummy", "goto", "monster3");
 			//LAi_SetMonkeyType(sld);
-			LAi_group_MoveCharacter(sld, "monsters");
-			LAi_group_FightGroups("monsters", LAI_GROUP_PLAYER, true);
+			LAi_group_MoveCharacter(sld, LAi_monsters_group);
+			LAi_group_FightGroups(LAi_monsters_group, LAI_GROUP_PLAYER, true);
 		break;
 
 		case "alistar_garcilaso_money":
@@ -6710,7 +6856,9 @@ void QuestComplete(string sQuestName)
 			{
 				TakeItemFromCharacter(pchar, "domingues_fucked");
 			}
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("search_danielle", 9);
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "edgar_go_on_the_port":
@@ -6758,7 +6906,9 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Muelle_town_02")].reload.l1.autoreload = "0";
 			Locations[FindLocation("Muelle_town_02")].reload.l1.label = "House of Sidonio Ogarrio."; // NK 05-07-19 add label
 			// NK <--
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("Where_are_i", 7);
+			Preprocessor_Remove("Danielle");
 			CloseQuestHeader("Where_are_i");
 			SetQuestHeader("Kill_Ogario");
 			AddQuestRecord("Kill_Ogario", 1);

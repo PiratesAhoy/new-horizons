@@ -15,6 +15,8 @@ void ProcessDialogEvent()
 	makearef(Diag, NPChar.Dialog);
 
 	Preprocessor_Add("Father", GetMyFirstNames(CharacterFromID("Father Bernard"), false));
+	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+	else Preprocessor_Add("child", XI_ConvertString("child"));
 	
 	switch(Dialog.CurrentNode)
 	{

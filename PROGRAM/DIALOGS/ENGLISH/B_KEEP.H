@@ -186,7 +186,7 @@ void ProcessDialogEvent()
 
 // give cannon to building for selfdefense                
 		case "cannon":
-			Dialog.text = "Absolutely, Sir! A cannon down here covering the entrance could blast any intruder to kingdom come." ;	// ccc feb06
+			Dialog.text = "Absolutely, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! A cannon down here covering the entrance could blast any intruder to kingdom come." ;	// ccc feb06
 			link.l1 = "Maybe, but I don't want to spend even more money here.";	// ccc feb06
 			link.l1.go = "exit";
 
@@ -199,7 +199,7 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(Pchar, -5000);
 			Pchar.Ship.crew.quantity = sti(Pchar.Ship.crew.quantity) -3;
 			lcn.building.(nr).interior = "cannon";
-			Dialog.text = "Yes, Sir, I know the mastersergeant of the local magazine quite well. For 5000 Gold he'd sell his whole ordinance. Just give me a few hours." ;
+			Dialog.text = "Yes, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", I know the mastersergeant of the local magazine quite well. For 5000 Gold he'd sell his whole ordinance. Just give me a few hours." ;
 			link.l1 = "That's the spirit, Marine! With your understanding of logistics you'll soon become corporal. (..if you live that long..)";
 			link.l1.go = "exit";
 		break;
@@ -222,7 +222,7 @@ void ProcessDialogEvent()
   	 		lcn.building.(nr).taxyear = GetDataYear();
 			lcn.building.(nr).taxMonth = GetDataMonth();
 			lcn.building.(nr).taxDay = GetDataDay();
-  			Dialog.text = "Aye, Sir, I'll call the Keeper of this Donjon. By the way, his ways are a bit a bit oldfash.. err.. traditional, has been living in this ancient Tower too long, if you ask me. But exactly that traditional attitude makes him a most reliable Keeper for your treasure. You can give him anything for safekeeping and be sure that he will give it back to you whenever you want it." ;
+  			Dialog.text = "Aye, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", I'll call the Keeper of this Donjon. By the way, his ways are a bit a bit oldfash.. err.. traditional, has been living in this ancient Tower too long, if you ask me. But exactly that traditional attitude makes him a most reliable Keeper for your treasure. You can give him anything for safekeeping and be sure that he will give it back to you whenever you want it." ;
   			link.l1 = "I hope so. Now where is that medievil factotum?";
   			link.l1.go = "items2";
 			}
@@ -241,7 +241,7 @@ void ProcessDialogEvent()
 			else
 		  {
   		  pchar.ship.crew.morale=makeint(stf(pchar.ship.crew.morale) -5 );  // punishment: crew moraledrop. Change figure to your liking
-  			Dialog.text = "Aye, Sir, your wish is my command. By the way, what about a little.. err.. reward? Wouldn't it be good for your troops' morale if honest loyal soldiers were rewarded?" ;
+  			Dialog.text = "Aye, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", your wish is my command. By the way, what about a little.. err.. reward? Wouldn't it be good for your troops' morale if honest loyal soldiers were rewarded?" ;
   			link.l1 = "Insolent bastard! Veiled demands? How dare you! Enough of that, I want to deal with my treasues. NOW!";
   			link.l1.go = "items";
 			}
@@ -249,7 +249,7 @@ void ProcessDialogEvent()
 
 		case "reward":
 			ChangeCharacterReputation(Pchar, 2);  // reward: reputation. Change figure to your liking
-			Dialog.text = "That's most generous of you, Sir. I'll tell everybody what a kind and caring commander you are, you can be sure of that!";
+			Dialog.text = "That's most generous of you, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ". I'll tell everybody what a kind and caring commander you are, you can be sure of that!";
 			link.l1 = "Oh, don't bother, I'm not so keen on my reputation. By the way, I grant you leave tonight. Why don't you go downtown, mingle with the townfolk, chat a lot... And now back to MY treasure, if you please.";
 			link.l1.go = "items";
 		break;
@@ -272,13 +272,13 @@ void ProcessDialogEvent()
 
 // random attacks
 		case "attack1":
-			Dialog.text = "Savage Akellani cannibals approaching, Sir! Oh, if we had only more of those bastions, stockades, mines and cannon...";
+			Dialog.text = "Savage Akellani cannibals approaching, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! Oh, if we had only more of those bastions, stockades, mines and cannon...";
 			link.l1 = RandSwear() + " Attention, soldier! Hold this position whatever happens. Keep up firing, don't let the enemy draw you into close combat. I will take care of the bladework...",
 			link.l1.go = "exit_attack1";
 		break;
 
 		case "attack2":
-			Dialog.text = "Francisco Pizarro the Younger and his horde of maurading conquistadores approaching, Sir! Lusting for blood, plunder and rape... Oh, if we had only more of those bastions, stockades, mines and cannon...";
+			Dialog.text = "Francisco Pizarro the Younger and his horde of maurading conquistadores approaching, " + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "! Lusting for blood, plunder and rape... Oh, if we had only more of those bastions, stockades, mines and cannon...";
 			link.l1 = RandSwear() + " Attention, soldier! Hold this position whatever happens. Keep up firing, don't let the enemy draw you into close combat. I will take care of the bladework...",
 			link.l1.go = "exit_attack2";
 		break;
@@ -329,7 +329,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "motion":
-			Dialog.text = LinkRandPhrase("Sir, we always stand to attention in a superiors presence. That's the drill, and the drill is everything.", "I have my eye on a suspicious target, and I don't want too loose it. 'Keep your aim, never flinch, never blink' our drillseargeant used to say.", "First rule of camouflage: movement attracts attention. So never move if you don't have to.");
+			Dialog.text = LinkRandPhrase(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ", we always stand to attention in a superior's presence. That's the drill, and the drill is everything.", "I have my eye on a suspicious target, and I don't want too lose it. 'Keep your aim, never flinch, never blink' our drill sergeant used to say.", "First rule of camouflage: movement attracts attention. So never move if you don't have to.");
 			link.l1 = "Allright, I understand... Carry on.";
 			link.l1.go = "exit";
 		break;

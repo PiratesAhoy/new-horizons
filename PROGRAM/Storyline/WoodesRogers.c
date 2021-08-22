@@ -49,4 +49,5 @@ void RegisterStoryline(int n)
 	AddStorylineVar(n, "GUNFIGHTER_PERK", "1");		// PB: Gun Fighter perk enabled for 6-shot pistols
 	AddStorylineVar(n, "START_MIN_LEVEL", "1");		// PB: Start storyline at rank 1
 	AddStorylineVar(n, "DYNAMIC_INTERFACES", "1");	// PB: Override default "Dynamic Interfaces" behaviour
+	AddStorylineVar(n, "ENABLE_BROTHEL", "1");		// PB: Brothel Mod always ON
 }

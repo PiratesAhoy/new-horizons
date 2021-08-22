@@ -13,6 +13,14 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	
 	switch(Dialog.CurrentNode)
@@ -125,14 +133,14 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) >= 5)
 			{
 				Dialog.snd = "voice\MUGR\MUGR009";
-				dialog.text = DLG_TEXT[24];
+				dialog.text = PersuasionSuccess + DLG_TEXT[24];
 				link.l1 = DLG_TEXT[25];
 				link.l1.go = "good_leadership_2";
 			}
 			else
 			{
 				Dialog.snd = "voice\MUGR\MUGR010";
-				dialog.text = DLG_TEXT[26];
+				dialog.text = PersuasionFailure + DLG_TEXT[26];
 				link.l1 = DLG_TEXT[27];
 				link.l1.go = "bad";
 				link.l2 = DLG_TEXT[28];

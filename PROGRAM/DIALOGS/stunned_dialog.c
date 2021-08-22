@@ -19,6 +19,10 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	string poor_fella;
+	if (NPChar.sex == "woman") poor_fella = DLG_TEXT[18];
+	else poor_fella = DLG_TEXT[4];
+
 	switch(Dialog.CurrentNode)
 	{
 		case "Exit":
@@ -140,7 +144,7 @@ void ProcessDialogEvent()
 				else
 				{
 					dialog.text = LinkRandPhrase(DLG_TEXT[1], DLG_TEXT[2], DLG_TEXT[3]);
-					Link.l1 = LinkRandPhrase(DLG_TEXT[4], DLG_TEXT[5], DLG_TEXT[6]);
+					Link.l1 = LinkRandPhrase(poor_fella, DLG_TEXT[5], DLG_TEXT[6]);
 					Link.l1.go = "loot";
 					if(CheckCharacterItem(Pchar, "potion1"))
 					{
@@ -171,7 +175,7 @@ void ProcessDialogEvent()
 //MAXIMUS 23.09.2006 [during abordage we can speak and interact with our stunned crewmembers and officers] <--
 					dialog.text = LinkRandPhrase(DLG_TEXT[1], DLG_TEXT[2], DLG_TEXT[3]);
 
-					Link.l1 = LinkRandPhrase(DLG_TEXT[4], DLG_TEXT[5], DLG_TEXT[6]);
+					Link.l1 = LinkRandPhrase(poor_fella, DLG_TEXT[5], DLG_TEXT[6]);
 					Link.l1.go = "loot";		// link for robbers
 
 					if(CheckCharacterItem(Pchar, "potion1")) // PB: Can't choose the repution option if you don't actually have a potion

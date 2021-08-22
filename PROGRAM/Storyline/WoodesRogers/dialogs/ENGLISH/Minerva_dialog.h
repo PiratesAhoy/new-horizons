@@ -1,4 +1,4 @@
-string DLG_TEXT[47] = {
+string DLG_TEXT[53] = {
 "What can I do for you Captain?",
 "Oh sorry to disturb you.",
 "How do I assemble the distillery apparatus?",
@@ -29,7 +29,7 @@ string DLG_TEXT[47] = {
 "Hello Minerva, where was his body found?",
 "He was working in the study when they killed him.",
 "I see, now let's leave.",
-"Oh I'd love to care of the Shop miss Rogers -",
+"Oh I'd love to take care of the Shop miss Rogers -",
 "- thank you so much!",
 "It's 'Gunner' -",
 "- there was one more loyal crewmember!",
@@ -46,6 +46,12 @@ string DLG_TEXT[47] = {
 "Hmm I see, the Governor's riddles continue...",
 "Yes, so I think I'm allowed to help you this much Captain: Right-hand items use F3 + F3, Left-hand items use F3 + fire pistol.",
 "Thanks Minerva, I'll write that down.",
+"Captain, I have been waiting for you so long.",
+"Hello Minerva, what are you doing here?",
+"I have the mixtures you produced earlier.",
+"Very good!",
+"Here you are, Captain Pyle. I have also unlocked to Rogers' secret storeroom.",
+"Yes! Now I can continue my work here.",
 
 
 };

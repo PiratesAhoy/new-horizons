@@ -60,8 +60,8 @@ int initialShip = -1;
 int idShipDescr = -1;
 int idModelDescr = -1;
 
-int tmpCharSkills[SKILL_MAX];
-float tmpCharBonusSkills[SKILL_MAX];
+int tmpCharSkills[NUM_DIFF_SKILLS];
+float tmpCharBonusSkills[NUM_DIFF_SKILLS];
 
 string ProfileName;
 aref arstart;
@@ -86,6 +86,7 @@ void InitInterface(string iniName)
 	GameInterface.SHIP.ImagesGroup.t3 = "SHIPS2";
 	GameInterface.SHIP.ImagesGroup.t4 = "SHIPS3";
 	GameInterface.SHIP.ImagesGroup.t5 = "SHIPS4";
+	GameInterface.SHIP.ImagesGroup.t6 = "SHIPS5";
 	GameInterface.SHIP.pic1.str1 = "";
 	GameInterface.SHIP.pic1.img1 = "ship back";
 	GameInterface.SHIP.pic1.tex1 = 0;
@@ -106,6 +107,7 @@ void InitInterface(string iniName)
 	GameInterface.SELECTPICT.ImagesGroup.t4 = "SHIPS2";
 	GameInterface.SELECTPICT.ImagesGroup.t5 = "SHIPS3";
 	GameInterface.SELECTPICT.ImagesGroup.t6 = "SHIPS4";
+	GameInterface.SELECTPICT.ImagesGroup.t7 = "SHIPS5";
 	GameInterface.SELECTPICT.BadTex1 = 0;
 	GameInterface.SELECTPICT.BadPic1 = "emptyface";
 	GameInterface.SELECTPICT.pic1.str1 = "";
@@ -117,7 +119,7 @@ void InitInterface(string iniName)
 	GameInterface.SELECTPICT.ListSize = 1;
 	GameInterface.SELECTPICT.NotUsed = 1;
 
-	for (slno = 0; slno < SKILL_MAX; slno++)
+	for (slno = 0; slno < NUM_DIFF_SKILLS; slno++)
 	{
 		tmpCharSkills[slno] = 1;
 		tmpCharBonusSkills[slno] = 1.0;
@@ -515,7 +517,7 @@ void ProcCommand()
 						if (CheckAttribute(&GameInterface, "CustomSkill.Value.v2")) DeleteAttribute(&GameInterface, "CustomSkill.Value.v2");
 						if (CheckAttribute(&GameInterface, "CustomSkill.Speed.s1")) DeleteAttribute(&GameInterface, "CustomSkill.Speed.s1");
 						if (CheckAttribute(&GameInterface, "CustomSkill.Speed.s2")) DeleteAttribute(&GameInterface, "CustomSkill.Speed.s2");
-						for (i = 0; i < SKILL_MAX; i++)
+						for (i = 0; i < NUM_DIFF_SKILLS; i++)
 						{
 							CharSkills[i] = tmpCharSkills[i];
 							CharBonusSkills[i] = tmpCharBonusSkills[i];
@@ -656,7 +658,7 @@ void ProcessStartGame()
 	// PB: Apply Player Type -->
 	SetupPlayerType();
 	CharPlayerType = tmpPlayerType;
-	for (int s = 0; s < SKILL_MAX; s++) {
+	for (int s = 0; s < NUM_DIFF_SKILLS; s++) {
 		CharSkills[s]		= tmpCharSkills[s];
 		CharBonusSkills[s]	= tmpCharBonusSkills[s];
 	}
@@ -1604,6 +1606,7 @@ void SetWindow(int iWindow)
 			GameInterface.SELECTPICT.ImagesGroup.t4 = "SHIPS2";
 			GameInterface.SELECTPICT.ImagesGroup.t5 = "SHIPS3";
 			GameInterface.SELECTPICT.ImagesGroup.t6 = "SHIPS4";
+			GameInterface.SELECTPICT.ImagesGroup.t7 = "SHIPS5";
 			GameInterface.SELECTPICT.BadTex1 = 1;
 			GameInterface.SELECTPICT.BadPic1 = "ship back";
 			GameInterface.SELECTPICT.pic1.str1 = "";
@@ -1720,7 +1723,7 @@ void SetWindow(int iWindow)
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "playertypedescription8", "", FONT_NORMAL, 162, 144, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "playertypedescription9", "", FONT_NORMAL, 162, 144, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("PLAYERTYPEIMAGES", false);
-			for (i = 0; i < SKILL_MAX; i++)
+			for (i = 0; i < NUM_DIFF_SKILLS; i++)
 			{
 				SetNodeUsing("SKILL_CHANGER" + i, false);
 				SetNodeUsing("SKILL_BUTTON" + i, false);
@@ -1850,6 +1853,7 @@ void SetWindow(int iWindow)
 			GameInterface.SELECTPICT.ImagesGroup.t4 = "SHIPS2";
 			GameInterface.SELECTPICT.ImagesGroup.t5 = "SHIPS3";
 			GameInterface.SELECTPICT.ImagesGroup.t6 = "SHIPS4";
+			GameInterface.SELECTPICT.ImagesGroup.t7 = "SHIPS5";
 			GameInterface.SELECTPICT.BadTex1 = 1;
 			GameInterface.SELECTPICT.BadPic1 = "ship back";
 			GameInterface.SELECTPICT.pic1.str1 = "";
@@ -1989,7 +1993,7 @@ void SetWindow(int iWindow)
 			SetNodeUsing("DIALOG_SELECT_BUTTON", true);
 			SetNodeUsing("PLAYERTPYPESCROLLBAR", true);
 			SetNodeUsing("PLAYERTYPEIMAGES", true);
-			for (i = 0; i < SKILL_MAX; i++)
+			for (i = 0; i < NUM_DIFF_SKILLS; i++)
 			{
 				SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "lblSkill" + i, TranslateString("", GetSkillName(i)), FONT_NORMAL, 300, 144 + (i * 26), COLOR_NORMAL, 0, SCRIPT_ALIGN_LEFT, true, 0.8, 0);
 				SetNodeUsing("SKILL_BUTTON" + i, true);
@@ -2621,7 +2625,7 @@ void SetupPlayerType()
 
 	CalculateBonuses(&curVal, &curspeed);
 
-	for (i = 0; i < SKILL_MAX; i++)
+	for (i = 0; i < NUM_DIFF_SKILLS; i++)
 	{
 		curskill = GetSkillName(i);
 		tmpCharSkills[i] = 1;
@@ -3293,7 +3297,7 @@ void ProcessSkillsValue(int iSkill, bool bRight)
 		if (CheckAttribute(&GameInterface, "CustomSkill.Value.v1") == true && sti(GameInterface.CustomSkill.Value.v1) == iSkill) DeleteAttribute(&GameInterface, "CustomSkill.Value.v1");
 		if (CheckAttribute(&GameInterface, "CustomSkill.Value.v2") == true && sti(GameInterface.CustomSkill.Value.v2) == iSkill) DeleteAttribute(&GameInterface, "CustomSkill.Value.v2");
 	}
-	for (i = 0; i < SKILL_MAX; i++)
+	for (i = 0; i < NUM_DIFF_SKILLS; i++)
 	{
 		SetSkillShow(i);
 	}
@@ -3334,7 +3338,7 @@ void ProcessSkillsSpeed(int iSkill)
 		if (CheckAttribute(&GameInterface, "CustomSkill.Speed.s2") == true && sti(GameInterface.CustomSkill.Speed.s2) == iSkill) DeleteAttribute(&GameInterface, "CustomSkill.Speed.s2");
 		SetSkillShow(iSkill);
 		SetNodeUsing(selector, false);
-		for (i = 0; i < SKILL_MAX; i++)
+		for (i = 0; i < NUM_DIFF_SKILLS; i++)
 		{
 			SetSelectable("SKILL_BUTTON" + i, tmpCharBonusSkills[i] == 1.0);
 		}
@@ -3344,7 +3348,7 @@ void ProcessSkillsSpeed(int iSkill)
 		tmpCharBonusSkills[iSkill] = bonusVal;
 		if (CheckAttribute(&GameInterface, "SELECTOR.used1")) DeleteAttribute(&GameInterface, "SELECTOR.used1");
 		if (CheckAttribute(&GameInterface, "CustomSkill.used1")) DeleteAttribute(&GameInterface, "CustomSkill.used1");
-		for (i = 0; i < SKILL_MAX; i++)
+		for (i = 0; i < NUM_DIFF_SKILLS; i++)
 		{
 			if (tmpCharBonusSkills[i] > 1.0) {
 				SetSelectable("SKILL_BUTTON" + i, true);
@@ -3366,7 +3370,7 @@ int GetFreeSkillPoints()
 	int i;
 	int ret = 10+ADD_SKILLPOINTS_PERLEVEL*1;
 	if (slno != FindDefaultStoryline()) ret = 10+ADD_SKILLPOINTS_PERLEVEL*5;
-	for (i = 0; i < SKILL_MAX; i++)
+	for (i = 0; i < NUM_DIFF_SKILLS; i++)
 	{
 		ret -= tmpCharSkills[i];
 	}

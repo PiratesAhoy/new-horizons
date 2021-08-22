@@ -21,7 +21,7 @@ string DLG_TEXT[40] = {
 "Aye, and a new name. Had to wipe the East India Trading Company's smell out of it.",
 "Ok then, you will now be taken to the prison while I get Cutler Beckett.",
 "Great...",
-"",
+"Well you see sailing under false colours is an offence, as of course is piracy, for it you will be hung. So you will now be taken to the prison while I get Cutler Beckett.",
 "",
 "",
 "",

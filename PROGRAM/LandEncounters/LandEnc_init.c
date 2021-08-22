@@ -68,11 +68,16 @@ int InitLandEncTemplates()
 	LandEncTemplate[n].enc5.StartTime = 22;
 	LandEncTemplate[n].enc5.EndTime = 6;
 //Keemo <--
-
+	
 	LandEncTemplate[n].enc6.type = "ENC_RAPERS";
-	LandEncTemplate[n].enc6.chance = 0.2;
 	LandEncTemplate[n].enc6.StartTime = 22;
 	LandEncTemplate[n].enc6.EndTime = 6;
+	LandEncTemplate[n].enc6.chance = 0.2;
+
+	LandEncTemplate[n].enc7.type = "ENC_DEFECTOR";
+	LandEncTemplate[n].enc7.StartTime = 22;
+	LandEncTemplate[n].enc7.EndTime = 6;
+	LandEncTemplate[n].enc7.chance = 0.1;
 
 	n = n + 1;
 
@@ -117,7 +122,7 @@ int InitLandEncTemplates()
 //---------------------------------------------------------------------------------------------
 // Viper - Rapers MOD Begin
 	LandEncTemplate[n].id = "jungle";
-	LandEncTemplate[n].quantity = 2;
+	LandEncTemplate[n].quantity = 3;
 
 
 	LandEncTemplate[n].enc1.type = "ENC_RAIDERS";
@@ -126,10 +131,15 @@ int InitLandEncTemplates()
 	LandEncTemplate[n].enc1.EndTime = 24;
 
 	LandEncTemplate[n].enc2.type = "ENC_RAPERS";
-	LandEncTemplate[n].enc2.chance = 0.1;
 	LandEncTemplate[n].enc2.StartTime = 16;
 	LandEncTemplate[n].enc2.EndTime = 6;
+	LandEncTemplate[n].enc2.chance = 0.1;
 
+	LandEncTemplate[n].enc3.type = "ENC_DEFECTOR";
+	LandEncTemplate[n].enc3.StartTime = 16;
+	LandEncTemplate[n].enc3.EndTime = 6;
+	LandEncTemplate[n].enc3.chance = 0.08;
+	
 	n = n + 1;
 // Viper - Rapers MOD End
 
@@ -494,6 +504,60 @@ int InitLandEncounters()
 	LandEncounters[n].char4.type = "actor";
 	LandEncounters[n].char4.Dialog = "Enc_Rapers_dialog.c";
 
+
+	n = n + 1;
+
+//----------------------------------------------------------------------------------------------
+
+	LandEncounters[n].id = "ENC_DEFECTOR";
+	LandEncounters[n].StartingQuest1 = "LandEnc_DefectorLogin";
+	LandEncounters[n].StartingQuest1.QuestType = "Location";
+	LAi_group_Register("ENC_DEFECTORS_GROUP");
+
+
+	LandEncounters[n].char1.modelQuantity = 1;
+	LandEncounters[n].char1.model1 = "Jungle_Defector";
+//	LandEncounters[n].char1.model1.sex = "woman";
+	LandEncounters[n].char1.friend = true;
+	LandEncounters[n].char1.cont = true;
+	LandEncounters[n].char1.pistol = false;
+	LandEncounters[n].char1.sword = false;
+	LandEncounters[n].char1.iscombat = -1; // could be false. NK 05-07-27
+	LandEncounters[n].char1.type = "actor";
+	LandEncounters[n].char1.Dialog = "Enc_Defector_dialog.c";
+
+
+
+	LandEncounters[n].char2.modelQuantity = 1;
+	LandEncounters[n].char2.model1 = "Raiders";
+	LandEncounters[n].char2.model1.sex = "Man";
+	LandEncounters[n].char2.cont = true;
+	LandEncounters[n].char2.pistol = 0.5; // NK
+	LandEncounters[n].char2.sword = true;
+	LandEncounters[n].char2.type = "actor";
+	LandEncounters[n].char2.Dialog = "Enc_DefectorPursuer_dialog.c";
+
+
+
+	LandEncounters[n].char3.modelQuantity = 1;
+	LandEncounters[n].char3.model1 = "Raiders";
+	LandEncounters[n].char3.model1.sex = "Man";
+	LandEncounters[n].char3.cont = true;
+	LandEncounters[n].char3.pistol = 0.5; // NK
+	LandEncounters[n].char3.sword = true;
+	LandEncounters[n].char3.type = "actor";
+	LandEncounters[n].char3.Dialog = "Enc_DefectorPursuer_dialog.c";
+
+
+
+	LandEncounters[n].char4.modelQuantity = 1;
+	LandEncounters[n].char4.model1 = "Raiders";
+	LandEncounters[n].char4.model1.sex = "Man";
+	LandEncounters[n].char4.cont = false;
+	LandEncounters[n].char4.pistol = 0.5; // NK
+	LandEncounters[n].char4.sword = true;
+	LandEncounters[n].char4.type = "actor";
+	LandEncounters[n].char4.Dialog = "Enc_DefectorPursuer_dialog.c";
 
 	n = n + 1;
 

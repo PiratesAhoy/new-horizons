@@ -182,5 +182,149 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
+
+		case "return_visit":
+			Dialog.snd = "voice\YEKI\YEKI001";
+			NextDiag.TempNode = "return_visit";
+			if (CheckAttribute(NPChar, "done_business"))
+			{
+				dialog.text = DLG_TEXT[43] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) + DLG_TEXT[44];
+				link.l1 = DLG_TEXT[45];
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[29];
+				link.l1 = DLG_TEXT[30];
+			}
+			link.l1.go = "return_visit2";
+		break;
+
+		case "return_visit2":
+			dialog.text = DLG_TEXT[31];
+			if (CheckAttribute(PChar, "abduction_need_pass"))
+			{
+				link.l1 = DLG_TEXT[32];
+				link.l1.go = "ardent_abduction_pass3";
+			}
+			if (CheckQuestAttribute("kapitein", "need_papers"))
+			{
+				link.l2 = DLG_TEXT[46];
+				link.l2.go = "kapitein_need_papers2";
+			}
+			link.l3 = DLG_TEXT[42];
+			link.l3.go = "exit";
+		break;
+
+		case "ardent_abduction_pass2":
+			Dialog.snd = "voice\YEKI\YEKI002";
+			dialog.text = DLG_TEXT[31];
+			link.l1 = DLG_TEXT[32];
+			link.l1.go = "ardent_abduction_pass3";
+		break;
+
+		case "ardent_abduction_pass3":
+			Dialog.snd = "voice\YEKI\YEKI003";
+			dialog.text = DLG_TEXT[33];
+			if (makeint(pchar.money >= 5000))
+			{
+				link.l1 = DLG_TEXT[34];
+				link.l1.go = "ardent_abduction_good_pass";
+			}
+			if (makeint(pchar.money >= 500))
+			{
+				link.l2 = DLG_TEXT[35];
+				link.l2.go = "ardent_abduction_cheap_pass";
+			}
+			link.l3 = DLG_TEXT[36];
+			link.l3.go = "Exit";
+		break;
+
+		case "ardent_abduction_good_pass":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, -5000);
+			dialog.text = DLG_TEXT[37];
+			AddDialogExitQuest("abduction_wait_for_pass");
+			link.l1 = DLG_TEXT[40];
+			link.l1.go = "Exit";
+			NextDiag.TempNode = "ardent_abduction_wait_for_pass";
+		break;
+
+		case "ardent_abduction_good_pass2":
+			GiveItem2Character(PChar, "PrisonPass");
+			NPChar.done_business = "true";
+			AddQuestRecord("Abduction", 12);
+			NextDiag.TempNode = "First time";
+			Dialog.snd = "voice\YEKI\YEKI004";
+			dialog.text = DLG_TEXT[39];
+			link.l1 = DLG_TEXT[40];
+			link.l1.go = "Exit";
+		break;
+
+		case "ardent_abduction_cheap_pass":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, -500);
+			GiveItem2Character(PChar, "FakePrisonPass");
+			NPChar.done_business = "true";
+			AddQuestRecord("Abduction", 13);
+			Dialog.snd = "voice\YEKI\YEKI004";
+			dialog.text = DLG_TEXT[38];
+			link.l1 = DLG_TEXT[40];
+			link.l1.go = "Exit";
+		break;
+
+		case "ardent_abduction_wait_for_pass":
+			NextDiag.TempNode = "ardent_abduction_wait_for_pass";
+			Dialog.snd = "voice\YEKI\YEKI005";
+			dialog.text = DLG_TEXT[41];
+			link.l1 = DLG_TEXT[42];
+			link.l1.go = "Exit";
+		break;
+
+		case "kapitein_need_papers2":
+			Dialog.snd = "voice\YEKI\YEKI002";
+			dialog.text = DLG_TEXT[47];
+			if (makeint(pchar.money >= 3000)) link.l1 = DLG_TEXT[48];
+			else link.l1 = DLG_TEXT[49];
+			AddDialogExitQuest("kapitein_wait_for_papers");
+			NextDiag.TempNode = "kapitein_wait_for_papers";
+			link.l1.go = "exit";
+		break;
+
+		case "kapitein_wait_for_papers":
+			Dialog.snd = "voice\YEKI\YEKI005";
+			NextDiag.TempNode = "kapitein_wait_for_papers";
+			dialog.text = DLG_TEXT[53];
+			link.l1 = DLG_TEXT[42];
+			link.l1.go = "exit";
+		break;
+
+		case "kapitein_document_done":
+			dialog.text = DLG_TEXT[50];
+			if (sti(PChar.money) >= 3000)
+			{
+				link.l1 = DLG_TEXT[51];
+				link.l1.go = "kapitein_pay_up";
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[49];
+				link.l1.go = "exit_kapitein_need_money";
+			}
+		break;
+
+		case "kapitein_pay_up":
+			dialog.text = DLG_TEXT[52] + GetMyLastName(PChar) + "!";
+			link.l1 = DLG_TEXT[40];
+			NPChar.done_business = "true";
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, -3000);
+			AddDialogExitQuest("kapitein_got_papers");
+			link.l1.go = "exit";
+		break;
+
+		case "exit_kapitein_need_money":
+			NextDiag.CurrentNode = "kapitein_document_done";
+			DialogExit();
+		break;
 	}
 }

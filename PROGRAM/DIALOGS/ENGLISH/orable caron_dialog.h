@@ -146,7 +146,7 @@ string DLG_TEXT[176] = {
 "Do you need a good boatswain?",
 "Is he aware you're recommending him? An accolade from you isn't exactly trustworthy, you know.",
 "I can't believe you would know a good boatswain. Farewell.",
-"You wound me, Monsieur!",
+"You wound me, #ssir#!",
 "All right, all right. Where is he?",
 "Life is tough, sonny. Goodbye!",
 "He's over on the south beach. Use the passage through the rocks past the Harbormaster's office.",

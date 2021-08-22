@@ -1,9 +1,20 @@
-string DLG_TEXT[6] = { 
+string DLG_TEXT[18] = { 
 "EEEK! What are you doing in my bedroom? Are you a thief? Please don't hurt me! I'll give you my jewels if you leave me alone.",
 "Believe me, I'm not going to hurt you, sweetheart! Quite the contrary, hehe...",
 "If I only had more time then I'd take something else from you, lass! But for now I'll be content with those jewels. Thank's a lot.",
-"Mylady, no jewels can be as beautiful as your lovely face! Your eyes shine brighter as the brightest diamond, and for just a smile from you will I gladly forfeit even the crownjewels. Keep your gems and a fond memory of me. So long.",
+"Mylady, no jewels can be as beautiful as your lovely face! Your eyes shine brighter than the brightest diamond, and for just a smile from you will I gladly forfeit even the crown jewels. Keep your gems and a fond memory of me. So long.",
 "You'd better run while you still can. I hear my husband coming home... with his bodyguards!",
 "BODYGUARDS? I'd love to chat a little longer, but I have pressing business elsewhere. Goodbye, Beauty!",
-
+"EEEK! Why is it always me? First a gang broke in here and stole my jewels, and now you're here as well? They even stole my favourite #sgem#! Just leave me alone, won't you?",
+"Oh, you shouldn't be all alone, dearie! I think I'll keep you company for a while, hee-hee...",
+"I think I met the gang who robbed you. One of them has chosen to give up the criminal life and gave me this. Would it be yours?",
+"Mylady, no jewels can be as beautiful as your lovely face! Your eyes shine brighter than the brightest diamond. If you would but smile just once, the memory of that smile is all I wish to take. May your fortune turn for the better. Farewell.",
+"Oh, thank you! That was ",
+"given to me by my late grandmother",
+"a gift from my husband on our first anniversary",
+"always the most beautiful thing I ever owned",
+". You are a true #sgentleperson# to return it to me. And I shall pray for the one who gave it to you, for success in an honest life.",
+"Then everything has turned out well. Goodbye.",
+"It has been a most pleasant conversation. But now perhaps it is best for you to leave.",
+"Of course. I don't want to overstay my welcome. Goodbye.",
 };

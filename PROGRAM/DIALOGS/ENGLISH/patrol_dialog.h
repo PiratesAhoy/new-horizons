@@ -9,18 +9,18 @@ string DLG_TEXT[23] = {
 "Oh, yes, of course, Sir! Here, my identification is in this purse, right below the 200 Gold. *WINK*",
 "If you don't get lost at once I will show you how quick I am... with my blade!",
 "Don't you dare to adress a superior in that manner again, you insolent hireling! Don't you know me? I am the Royal Inspector of His Majesty's Caribbean Regiments, and I have just arrived with the last ship to survey our troops here! Now don't molest me any longer, or you'll have to explain to your commander why I have missed my appointment with him!",
-"Ah, yes, the picture on the coins identifies you as a man who has a heart for underpaid guards, hehe. Allright, I'll let you pass, but only this time. And behave!",
+"Ah, yes, the picture on the coins identifies you as a #spronoun# who has a heart for underpaid guards, hehe. Alright, I'll let you pass, but only this time. And behave!",
 "Of course! Who do you think I am? A rogue? *WINK*",
 "I don't trust you! ALARM! RAISE THE MILITIA!",
 "Nice try, fella, but not with me! ALARM! A spy! Raise the Hue and Cry!",
 "What's this? ALARM! A pirate!",
 " Looks like my SKILLS were insufficient for THAT approach. Or was it just bad luck? Well",
 " I hope my fencing will be more successful than my playacting...",
-"Umm... err... I see. Sorry for having bothered you, Sir. Goodbye.",
+"Umm... err... I see. Sorry for having bothered you, #ssir#. Goodbye.",
 "Allright, carry on, and a quiet watch to you.",
 "Haven't you read the 'NO TRESPASSING' signs at the gate? This is a top secret Army fortification, and only soldiers of the elite Coastal Brigade may enter. Anyone else will be considered a spy! Especially certain privateering shipcaptains!",
 "Sign? Sorry, I can't read. And I have an urgent appointment with the royal inspector... eh, I mean I am the inspector and have...",
-"Any orders, Sir?",
+"Any orders, #ssir?#",
 "Nothing for now."
 
 };

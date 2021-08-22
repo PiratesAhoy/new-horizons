@@ -117,22 +117,22 @@ void ProcessDialogEvent()
 				{
 					if (PChar.sex == "man")
 					{
-						d.Text = DLG_TEXT[170] + DLG_TEXT[173] + DLG_TEXT[171] + DLG_TEXT[175] + DLG_TEXT[172];
+						d.Text = DLG_TEXT[170] + DLG_TEXT[173] + DLG_TEXT[171] + XI_ConvertString("fiance") + DLG_TEXT[172];
 					}
 					else
 					{
-						d.Text = DLG_TEXT[170] + DLG_TEXT[174] + DLG_TEXT[171] + DLG_TEXT[175] + "e" + DLG_TEXT[172];
+						d.Text = DLG_TEXT[170] + DLG_TEXT[174] + DLG_TEXT[171] + XI_ConvertString("fiancee") + DLG_TEXT[172];
 					}
 					if (!checkquestattribute("ardent_kidnap.wedding", "sad"))
 					{
 						PChar.quest.ardent_kidnap.wedding = "sad";
 						if (PChar.sex == "man")
 						{
-							Preprocessor_AddQuestData("gov_kid", "daughter");
+							Preprocessor_AddQuestData("gov_kid", XI_ConvertString("daughter"));
 						}
 						else
 						{
-							Preprocessor_AddQuestData("gov_kid", "son");
+							Preprocessor_AddQuestData("gov_kid", XI_ConvertString("son"));
 						}
 						AddQuestRecord("Kidnap", 18);
 						Preprocessor_Remove("gov_kid");

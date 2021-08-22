@@ -117,7 +117,7 @@ string DLG_TEXT[123] = {
 "Why you axx about dem, mistah? Dey mean nothin' but bad bidness.",
 "There's some women and money missing, and all evidence seems to point to them.",
 "Doze devils be bad bad bad, matey. You really goin' aftah dem?",
-"There's money and honour in it... savvy.",
+"There's money and honour in it, savvy?",
 "Dey kilt me bruthah, mistah. Ah hates dem worse den anyting, but Ah wouldn' go lookin' fo' dem fer all de gold in de Caribbean. But if ye be willin' t' die fer gold, matey, den go talk to Fathah Bernard on Por' Royah. He not a good man eithah, but he might know where dose devils be.",
 "Thank you.",
 "Aye, Jakob Nickerson. Just moved into town not too long ago. He does a fair job fixin' boats, plus he has a score to sell.",

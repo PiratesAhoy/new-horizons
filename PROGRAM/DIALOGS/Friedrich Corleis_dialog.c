@@ -17,6 +17,8 @@ void ProcessDialogEvent()
 	iDay = environment.date.day;
 	iMonth = environment.date.month;
 	string lastspeak_date = iday + " " + iMonth;
+	
+	
 
 	
 	switch(Dialog.CurrentNode)
@@ -51,6 +53,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\FRCO\FRCO002";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "quests";
@@ -228,7 +231,9 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			ChangeCharacterAddressGroup(CharacterFromID("peasant"), "none", "", ""); // KK
 			pchar.quest.main_line = "to_douwesen_pirates";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestrecord("Where_are_i", 2);
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "blaze_to_incas_collection_begin_2":
@@ -248,7 +253,7 @@ void ProcessDialogEvent()
 		case "blaze_to_incas_collection_begin_4":
 			dialog.snd = "Voice\FRCO\FRCO016";
 			dialog.text = DLG_TEXT[57];
-			link.l1 = pcharrepphrase(DLG_TEXT[58], DLG_TEXT[59]);
+			link.l1 = pcharrepphrase(DLG_TEXT[58], DLG_TEXT[59] + GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)) + ".";
 			link.l1.go = "blaze_to_incas_collection_begin_exit_1";
 		break;
 

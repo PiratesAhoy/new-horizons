@@ -74,7 +74,7 @@ void ProcessDialogEvent()
 			}
 			if(CheckQuestAttribute("henry_talk", "not_taking_Interceptor"))
 			{
-				dialog.text = DLG_TEXT[22] + pchar.lastname + DLG_TEXT[235];
+				dialog.text = DLG_TEXT[22] + " " + pchar.lastname + DLG_TEXT[235];
 				link.l1 = DLG_TEXT[236];
 				link.l1.go = "talk_of_war";
 			}
@@ -231,14 +231,29 @@ void ProcessDialogEvent()
 		case "Reckoning_best_result":
 			ChangeCharacterReputation(pchar, +6);
 			AddMoneyToCharacter(pchar, -50000);
-			dialog.text = DLG_TEXT[62];
-			link.l1 = DLG_TEXT[61];
-			link.l1.go = "Reckoning_best_result2";
+			if(HasThisShip("Black Pearl"))
+			{
+				dialog.text = DLG_TEXT[275];
+				link.l1 = DLG_TEXT[276];
+				link.l1.go = "Reckoning_best_result2_no_ship";
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[62];
+				link.l1 = DLG_TEXT[61];
+				link.l1.go = "Reckoning_best_result2";
+			}
 		break;
 
 		case "Reckoning_best_result2":
 			dialog.text = DLG_TEXT[96];
 			link.l1 = DLG_TEXT[97];
+			link.l1.go = "Reckoning_best_result3";
+		break;
+
+		case "Reckoning_best_result2_no_ship":
+			dialog.text = DLG_TEXT[274];
+			link.l1 = DLG_TEXT[277];
 			link.l1.go = "Reckoning_best_result3";
 		break;
 
@@ -578,8 +593,16 @@ void ProcessDialogEvent()
 		break;
 
 		case "Redmond_meet_after_Mings3":
-			GiveShip2Character(pchar, "WickedWench", "Wicked Wench",-1,ENGLAND,true,true);
-			dialog.text = DLG_TEXT[96];
+			if(HasThisShip("Black Pearl"))
+			{
+				dialog.text = DLG_TEXT[274];
+			}
+			else
+			{
+				GiveShip2Character(pchar, "WickedWench", "Wicked Wench",-1,ENGLAND,true,true);
+				PChar.quest.wench_given_by = "Beckett";
+				dialog.text = DLG_TEXT[96];
+			}
 			Link.l1 = DLG_TEXT[97];
 			Link.l1.go = "Redmond_meet_after_Mings4";
 		break;

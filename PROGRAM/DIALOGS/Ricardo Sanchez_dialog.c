@@ -271,7 +271,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\EMRI\EMRI013";
-				dialog.text = DLG_TEXT[52];
+				dialog.text = DLG_TEXT[52] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ".";
 				link.l1 = DLG_TEXT[53];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

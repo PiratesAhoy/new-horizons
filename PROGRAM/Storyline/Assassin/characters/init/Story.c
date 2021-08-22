@@ -85,8 +85,8 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Soldier_Spa2_16";
 	ch.sex = "man";
 	ch.sound_type = "soldier";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -131,8 +131,8 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Soldier_Spa3_16";
 	ch.sex = "man";
 	ch.sound_type = "soldier";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -177,8 +177,8 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Soldier_Spa4_16";
 	ch.sex = "man";
 	ch.sound_type = "soldier";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -223,8 +223,8 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Soldier_Spa5_16";
 	ch.sex = "man";
 	ch.sound_type = "soldier";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -269,8 +269,8 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Soldier_Spa6_16";
 	ch.sex = "man";
 	ch.sound_type = "soldier";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -315,8 +315,8 @@ void CreateStoryCharacters(ref n)
 	ch.model = "Soldier_Spa_16";
 	ch.sex = "man";
 	ch.sound_type = "soldier";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));

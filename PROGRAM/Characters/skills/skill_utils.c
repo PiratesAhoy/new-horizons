@@ -9,13 +9,13 @@ string PickSkillNoAutoLevel(ref chref)
 	float importance_total = stf(chref.skillimportancetotal);
 	if(importance_total < 1) return "freeskill";
 	int PickVal = rand(makeint(importance_total));
-	for(int n = 0; n < 10; n++)
+	for(int n = 0; n < NUM_DIFF_SKILLS; n++)
 	{
 		skill = GetSkillName(n);
 		importance = sti(chref.skill.(skill).importance);
 		if(PickVal <= importance)
 		{
-			if(GetCharacterSkill(chref, skill) >= SKILL_MAX)
+			if(GetCharacterSkill(chref, skill) >= MAX_CHARACTER_SKILL)
 			{
 				chref.skillimportancetotal = sti(chref.skillimportancetotal) - sti(chref.skill.(skill).importance);
 				chref.skill.(skill).importance = 0;
@@ -50,7 +50,7 @@ int GetCharacterSkill(ref character, string skillName)
 	int skillPoints = GetCharacterBaseSkill(character, skillName);
 	//Levis add a character based modifier also
 	skillPoints += GetCharacterCharMod(character, skillName);
-	skillPoints = iclamp(0, SKILL_MAX, skillPoints);
+	skillPoints = iclamp(0, MAX_CHARACTER_SKILL, skillPoints);
 	return skillPoints;
 }
 
@@ -158,7 +158,7 @@ void ResetEffectiveSkill(ref character, string skillName)
 
 void ResetEffectiveSkillAll(ref character)
 {
-	for(int i = 0; i < 10; i++)
+	for(int i = 0; i < NUM_DIFF_SKILLS; i++)
 	{
 		if(DEBUG_EXPERIENCE>1) trace("XP LOG: Reset effective skill "+GetSkillName(i));
 		ResetEffectiveSkill(character, GetSkillName(i));
@@ -206,7 +206,7 @@ int CalcCharacterSkill(ref character, string skillName)
 	{
 		skillPoints += sti(character.Skill.(skillName).modifier);
 	}
-	skillPoints = iclamp(0, SKILL_MAX, skillPoints);
+	skillPoints = iclamp(0, MAX_CHARACTER_SKILL, skillPoints);
 	return skillPoints;
 }
 
@@ -369,15 +369,10 @@ int CalcShipSkill(ref character, string skillName)
 // Set skill modifier from items
 int CalcSkillModifier(ref character, string skillName)
 {
-	int j, qty, idi;
-	float mod = 0; //Levis: changed to float
+	int j, qty;
+	int mod = 0;
 	ref itm;
-	string modid = "";
-	
-	//Levis first remove the old modifier
-	DeleteAttribute(character,"skill."+skillName+".modifier");
-	DeleteAttribute(character,"itemmods."+skillName);
-	
+
 	int iChrCabin = FindCharacterShipCabin(character); // KK
 	for(j = 0; j < SKILLITEMS_QUANTITY; j++)
 	{
@@ -397,42 +392,16 @@ int CalcSkillModifier(ref character, string skillName)
 			if(CheckAttribute(itm, "groupID") && IsCanEquiping(character, itm.groupID) && !IsEquipCharacterByItem(character, itmid))
 				continue; // if equipable and not equipped, skip // KK
 
-			// *.stack = num of item that can be stacked together. Default = false JRH
-			//Levis --> changed to fix the problem with overflowing the stack no applying any bonus
-			//Check if the player has enough items
-			if(qty >= sti(itm.skill.num))
-            {
-				//Check if bonusses stack
-				if(itm.skill.stack == true)			//JRH
-				{
-					//they stack so we can add the mod
-					mod += sti(itm.skill.(skillName)) * qty/sti(itm.skill.num);
-				}
-				else
-				{
-					//they don't stack so just add the mod once.
-					mod += sti(itm.skill.(skillName));
-				}
-				//Levis for difficulty sake we divide the mod by the difficultylevel
-				mod = mod/GetDifficulty():
-				//Levis let's store which item gives the boost so we can display this in the character interface
-				idi = 0;
-				while(CheckAttribute(character,"skill."+skillName+".modifier.id"+idi))
-				{
-					idi++;
-				}
-				modid = "id"+idi;
-				character.itemmods.(skillName).(modid) = mod;
-				character.itemmods.(skillName).(modid).desc = itm.id;
-           	}
-			//Levis <--
+			// *.stack = bool indicating if items can be stacked together. Default = false (JRH)
+			if(sti(itm.skill.stack) == false) qty = 1;
+			mod += sti(itm.skill.(skillName)) * qty; // PB: Used to end with '/sti(itm.skill.num)'
 		}
 	}
 
 //	mod = iclamp(-MAX_SKILL_INCREASE, MAX_SKILL_INCREASE, mod); // PB: Single line
-	mod = fclamp(-100, MAX_SKILL_INCREASE, mod);		//JRH for cursed coin
+	mod = iclamp(-100, MAX_SKILL_INCREASE, mod);				// JRH: for cursed coins
 	character.skill.(skillName).modifier = mod;
-	return rounddown(mod); //we return the modifier as an rounded integer so it can be handled internally like this.
+	return mod;
 }
 
 // Reset item skill modifier
@@ -445,7 +414,7 @@ void ResetSkillModifier(ref character, string skillName)
 
 void ResetSkillModifierAll(ref character)
 {
-	for(int i = 0; i < 10; i++)
+	for(int i = 0; i < NUM_DIFF_SKILLS; i++)
 	{
 		if(DEBUG_EXPERIENCE>1) trace("XP LOG: Reset skill modifier "+GetSkillName(i));
 		ResetSkillModifier(character, GetSkillName(i));
@@ -454,7 +423,7 @@ void ResetSkillModifierAll(ref character)
 
 void ResetPartySkillAll(ref character)
 {
-	for(int i = 0; i < 10; i++)
+	for(int i = 0; i < NUM_DIFF_SKILLS; i++)
 	{
 		if(DEBUG_EXPERIENCE>1) trace("XP LOG: Reset party skill "+GetSkillName(i));
 		ResetPartySkill(character, GetSkillName(i));

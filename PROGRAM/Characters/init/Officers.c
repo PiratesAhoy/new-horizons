@@ -122,7 +122,12 @@ void CreateOfficersCharacters(ref n)
 	ch.id		= "Lucas Da Saldanha";
 	ch.loyality = 10;
 	ch.alignment = "good";
-	ch.model = "lucas";
+	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+	{
+		ch.model = "lucas2";
+		GiveItem2Character(ch, "goldarmor");
+	}
+	else ch.model = "lucas";
 	ch.sex = "man";
 	ch.location	= "none";
 	ch.location.group = "goto";
@@ -466,6 +471,7 @@ void CreateOfficersCharacters(ref n)
 	ch.perks.freepoints = 1;	// KevAtl ditto
 	LAi_NoRebirthEnable(ch);
 	ch.isOfficer = true;
+	ch.questchar = true;		// GR: attempt to make his skills stick, otherwise leveling system resets them and he isn't Fencing 10 any more
 	AddGameCharacter(n, ch);
 
 	// Florens Clauss
@@ -578,8 +584,16 @@ void CreateOfficersCharacters(ref n)
 	GiveItem2Character(ch, "blade27");
 	ch.equip.blade = "blade27";
 	ch.nation	= PIRATE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -654,7 +668,28 @@ void CreateOfficersCharacters(ref n)
 	ch.money = "0";
 	ch.quest.meeting = "0";
 	ch.Ship.Name = "Arabella";
-	ch.Ship.Type = "SP_Postillionen";
+	switch(GetCurrentPeriod())
+	{
+		case PERIOD_EARLY_EXPLORERS:
+			ch.Ship.Type = 	"Caravel1";
+		break;
+		case PERIOD_THE_SPANISH_MAIN:
+			ch.Ship.Type = 	"Caravel1";
+		break;
+		case PERIOD_GOLDEN_AGE_OF_PIRACY:
+			ch.Ship.Type = 	"SP_Postillionen";
+		break;
+		case PERIOD_COLONIAL_POWERS:
+			ch.Ship.Type = 	"SP_Postillionen";
+		break;
+		case PERIOD_REVOLUTIONS:
+			ch.Ship.Type = 	"FastMerchantman1";
+		break;
+		case PERIOD_NAPOLEONIC:
+			ch.Ship.Type = 	"FastMerchantman1";
+		break;
+	}
+//	ch.Ship.Type = "SP_Postillionen";	// Only valid in "Golden Age of Piracy" and "Colonial Powers" periods
 	ch.Ship.Stopped = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;

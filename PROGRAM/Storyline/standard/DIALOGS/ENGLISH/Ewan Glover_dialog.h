@@ -3,7 +3,7 @@ string DLG_TEXT[71] = {
 ". I'm ",
 "Ewan Glover",
 "Ewan Glover",
-", captain of the sloop 'Albion'",
+", captain of the light naval brig 'Albion'",
 "Pleased to meet you, ",
 "Ewan Glover",
 ".",

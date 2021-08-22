@@ -1379,6 +1379,7 @@ void OpenBoxProcedure_BUG()
 				if(CheckAttribute(chr, "quest.attic_box2") && chr.quest.attic_box2 == "unlocked")
 				{
 					chr.quest.machete_hint = "done";
+					PlaySound("AMBIENT\JAIL\door_003.wav");
 					LaunchItemsBox(&ar);
 
 					LAi_QuestDelay("3_empty_sacks_attic_check", 1.0);
@@ -1497,7 +1498,9 @@ void OpenBoxProcedure_BUG()
 					}
 			break;
 		
-			case "box14": 	LaunchItemsBox(&ar); 
+			case "box14": 	
+					PlaySound("AMBIENT\JAIL\door_003.wav");
+					LaunchItemsBox(&ar); 
 					if(!CheckAttribute(chr,"sack_sequence") || chr.sack_sequence != "already_done")
 					{
 						LAi_QuestDelay("move_to_attic_box5", 0.1); 
@@ -1507,6 +1510,7 @@ void OpenBoxProcedure_BUG()
 			case "box5":
 					//same as box2 chest, at the very end
 
+					PlaySound("AMBIENT\JAIL\door_003.wav");
 					LaunchItemsBox(&ar);
 					if(!CheckAttribute(chr,"sack_sequence") || chr.sack_sequence != "already_done")
 					{
@@ -2655,7 +2659,7 @@ void OpenBoxProcedure_BUG()
 			case "box1":
 				if(Locations[FindLocation("Fort_Moultrie")].models.always.locators == "fort2_locators_GB4")
 				{
-					chr.quest.Fort_M_ladder_wall = "right":
+					chr.quest.Fort_M_ladder_wall = "right";
 					DoQuestReloadToLocation("Fort_Moultrie", "goto", "box41", "");
 				}
 				else

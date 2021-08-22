@@ -27,9 +27,9 @@ void CreateTempQuestCharacters(ref n)
 	ch.rank 	= 10;
 	ch.reputation = "45";
 	ch.experience = "0";
-//	ch.Ship.Name = "Unexpected"; // KK
-//	ch.Ship.Type = "RN_Poseidon"; // PB: To ensure he uses "Cabin1" aka. "Tut_deck"
-//	ch.Ship.Stopped = true; // KK
+	ch.Ship.Name = "Unexpected"; // KK
+	ch.Ship.Type = "RN_Poseidon"; // PB: To ensure he uses "Cabin1" aka. "Tut_deck"
+	ch.Ship.Stopped = true; // KK
 	ch.skill.Leadership = "10";
 	ch.skill.Fencing = "10";
 	ch.skill.Sailing = "0";
@@ -53,7 +53,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// Monkey
+				// Monkeys
 	ch.old.name = "Monkey";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Monkey");
@@ -77,6 +77,114 @@ void CreateTempQuestCharacters(ref n)
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 2000.0, 2000.0);
+	LAi_NoRebirthEnable(ch);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Monkey";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Monkey");
+	ch.lastname = "";
+	ch.id		= "Monkey2";
+	ch.model = "monkey";
+	ch.sex = "monkey";
+//	ch.ani   = "monkey";
+	ch.model.animation = "monkey";
+	ch.sound_type = "monkey";
+	ch.nation = PIRATE;
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Monkey_dialog.c";
+	ch.rank 	= 10;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.money = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 2000.0, 2000.0);
+	LAi_NoRebirthEnable(ch);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Monkey";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Monkey");
+	ch.lastname = "";
+	ch.id		= "Monkey3";
+	ch.model = "monkey";
+	ch.sex = "monkey";
+//	ch.ani   = "monkey";
+	ch.model.animation = "monkey";
+	ch.sound_type = "monkey";
+	ch.nation = PIRATE;
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Monkey_dialog.c";
+	ch.rank 	= 10;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.money = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 20000.0, 20000.0);
+	LAi_NoRebirthEnable(ch);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Monkey";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Monkey");
+	ch.lastname = "";
+	ch.id		= "Monkey4";
+	ch.model = "monkey";
+	ch.sex = "monkey";
+//	ch.ani   = "monkey";
+	ch.model.animation = "monkey";
+	ch.sound_type = "monkey";
+	ch.nation = PIRATE;
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Monkey_dialog.c";
+	ch.rank 	= 10;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.money = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 20000.0, 20000.0);
+	LAi_NoRebirthEnable(ch);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Monkey";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Monkey");
+	ch.lastname = "";
+	ch.id		= "Monkey5";
+	ch.model = "monkey";
+	ch.sex = "monkey";
+//	ch.ani   = "monkey";
+	ch.model.animation = "monkey";
+	ch.sound_type = "monkey";
+	ch.nation = PIRATE;
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Monkey_dialog.c";
+	ch.rank 	= 10;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.money = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 20000.0, 20000.0);
 	LAi_NoRebirthEnable(ch);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -275,7 +383,7 @@ void CreateTempQuestCharacters(ref n)
 	
 	ch.old.name = "White";
 	ch.old.lastname = "Crow";
-	ch.name = TranslateString("","White");
+	ch.name = TranslateString("","White1");
 	ch.lastname = TranslateString("","Crow");
 	ch.id		= "Quest_Indian7";
 	ch.model	= "Indian2";
@@ -308,7 +416,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.old.name = "Soaring";
 	ch.old.lastname = "Hawk";
 	ch.name = TranslateString("","Soaring");
-	ch.lastname = TranslateString("","Hawk");
+	ch.lastname = TranslateString("","Hawk1");
 	ch.id		= "Quest_Chief_Indian1";
 	ch.model	= "Indian1";
 	ch.sex = "man";
@@ -486,5 +594,312 @@ void CreateTempQuestCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
 	ch.greeting = "Gr_Douwesen Soldier";
 	AddGameCharacter(n, ch);
+
+    	ch.old.name = "Garfield";
+   	ch.old.lastname = "Leighton";
+   	ch.name    = TranslateString("","Garfield");
+   	ch.lastname    = TranslateString("","Leighton");
+   	ch.id        = "Garfield Leighton";
+    	ch.model    = "MorrisWilliams";
+    	ch.sex = "man";
+    	ch.sound_type = "seaman";
+	GiveItem2Character(ch, "blade11+2");
+	ch.equip.blade = "blade11";
+	GiveItem2Character(ch, "PiratesPistol+2");
+	ch.equip.gun = "PiratesPistol";
+	LAi_SetHP(ch, 540.0, 540.0);
+	ch.questchar = true;
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+    	ch.location    = "";
+    	ch.location.group = "";
+    	ch.location.locator = "";
+    	ch.Dialog.Filename = "Garfield Leighton_dialog.c";
+ 	ch.greeting = "Gr_Pirates vs Blaze";
+    	ch.nation = PIRATE;
+    	ch.rank    = 5;
+    	ch.reputation = "None";
+    	ch.experience = "0";
+    	ch.skill.Leadership = "1";
+    	ch.skill.Fencing = "10";
+    	ch.skill.Sailing = "1";
+    	ch.skill.Accuracy = "3";
+    	ch.skill.Cannons = "1";
+    	ch.skill.Grappling = "1";
+    	ch.skill.Repair = "1";
+    	ch.skill.Defence = "3";
+    	ch.skill.Commerce = "1";
+    	ch.skill.Sneak = "1";
+    	ch.money = "10";
+    	LAi_SetCivilianGuardianType(ch);
+//    	LAi_group_MoveCharacter(ch, "TORTUGA_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	AddGameCharacter(n, ch);
+
+    	ch.old.name = "Wilfred";
+   	ch.old.lastname = "Roscoe";
+   	ch.name    = TranslateString("","Wilfred");
+   	ch.lastname    = TranslateString("","Roscoe");
+   	ch.id        = "Wilfred Roscoe";
+    	ch.model    = "Pirat4";
+    	ch.sex = "man";
+    	ch.sound_type = "seaman";
+	LAi_SetHP(ch, 540.0, 540.0);
+	ch.questchar = true;
+    	ch.location    = "";
+    	ch.location.group = "";
+    	ch.location.locator = "";
+    	ch.Dialog.Filename = "Wilfred Roscoe_dialog.c";
+ 	ch.greeting = "Gr_Quest_Pirate_ 01";
+    	ch.nation = PIRATE;
+    	ch.rank    = 5;
+    	ch.reputation = "None";
+    	ch.experience = "0";
+    	ch.skill.Leadership = "1";
+    	ch.skill.Fencing = "6";
+    	ch.skill.Sailing = "1";
+    	ch.skill.Accuracy = "5";
+    	ch.skill.Cannons = "5";
+    	ch.skill.Grappling = "1";
+    	ch.skill.Repair = "1";
+    	ch.skill.Defence = "3";
+    	ch.skill.Commerce = "1";
+    	ch.skill.Sneak = "1";
+    	ch.money = "10";
+	LAi_SetCitizenType(ch);
+//    	LAi_group_MoveCharacter(ch, "TORTUGA_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	AddGameCharacter(n, ch);
+
+    	ch.old.name = "Felix";
+   	ch.old.lastname = "Prost";
+   	ch.name    = TranslateString("","Felix");
+   	ch.lastname    = TranslateString("","Prost");
+   	ch.id        = "Felix Prost";
+    	ch.model    = "bocman10";
+    	ch.sex = "man";
+    	ch.sound_type = "seaman";
+	LAi_SetHP(ch, 540.0, 540.0);
+	ch.questchar = true;
+    	ch.location    = "";
+    	ch.location.group = "";
+    	ch.location.locator = "";
+    	ch.Dialog.Filename = "Felix Prost_dialog.c";
+ 	ch.greeting = "Gr_frcrew member";
+    	ch.nation = FRANCE;
+    	ch.rank    = 5;
+    	ch.reputation = "None";
+    	ch.experience = "0";
+    	ch.skill.Leadership = "1";
+    	ch.skill.Fencing = "6";
+    	ch.skill.Sailing = "1";
+    	ch.skill.Accuracy = "5";
+    	ch.skill.Cannons = "5";
+    	ch.skill.Grappling = "1";
+    	ch.skill.Repair = "1";
+    	ch.skill.Defence = "3";
+    	ch.skill.Commerce = "1";
+    	ch.skill.Sneak = "1";
+    	ch.money = "10";
+	LAi_SetStayType(ch);
+    	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	AddGameCharacter(n, ch);
+
+    	ch.old.name = "Steven";
+   	ch.old.lastname = "Seagull";
+   	ch.name    = TranslateString("","Steven");
+   	ch.lastname    = TranslateString("","Seagull");
+   	ch.id        = "Steven Seagull";
+    	ch.model    = "diller";
+    	ch.sex = "man";
+    	ch.sound_type = "seaman";
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.questchar = true;
+    	ch.location    = "";
+    	ch.location.group = "";
+    	ch.location.locator = "";
+    	ch.Dialog.Filename = "crew_dialog.c";
+ 	ch.greeting = "Gr_Pieter Nolt";
+    	ch.nation = PIRATE;
+    	ch.rank    = 5;
+    	ch.reputation = "None";
+    	ch.experience = "0";
+    	ch.skill.Leadership = "1";
+    	ch.skill.Fencing = "3";
+    	ch.skill.Sailing = "1";
+    	ch.skill.Accuracy = "1";
+    	ch.skill.Cannons = "1";
+    	ch.skill.Grappling = "1";
+    	ch.skill.Repair = "1";
+    	ch.skill.Defence = "2";
+    	ch.skill.Commerce = "1";
+    	ch.skill.Sneak = "5";
+    	ch.money = "10";
+	LAi_SetStayType(ch);
+    	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	AddGameCharacter(n, ch);
+
+	 // Havana Admiral;
+	ch.old.name = "Jusepe";
+	ch.old.lastname = "Guimaraes";
+	ch.name 	= TranslateString("","Jusepe");
+	ch.lastname = TranslateString("","Guimaraes");
+	ch.id		= "Jusepe Guimaraes";
+	ch.model	= "Huber_Spa4_17";
+	ch.sex = "man";
+	ch.location	= "Havana_House_03";
+	ch.location.group = "sit";
+	ch.location.locator = "sit1";
+	ch.Dialog.Filename = "Jusepe Guimaraes_dialog.c";
+	ch.rank 	= 15;
+	ch.reputation = "80";
+	ch.experience = "0";
+	ch.skill.Leadership = "10";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "4";
+	ch.skill.Accuracy = "6";
+	ch.skill.Cannons = "4";
+	ch.skill.Grappling = "4";
+	ch.skill.Repair = "4";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "10";
+	ch.skill.Sneak = "0";
+	ch.money = "10000";
+	LAi_SetHuberType(ch);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);	
+	ch.greeting = "Gr_christofor manuel de alencar";
+	ch.nation = SPAIN;
+	SetRank(ch, SPAIN, 10);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Lazaro";
+	ch.old.lastname = "Trillo";
+	ch.name = TranslateString("","Lazaro");
+	ch.lastname = TranslateString("","Trillo");
+	ch.id		= "Spanish_Captain4";
+	ch.nation	= SPAIN;
+	ch.model	= "9JdSpa";
+	ch.sound_type = "soldier";
+//	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Spanish_Captain4_dialog.c";
+	ch.rank 	= 4;
+	ch.reputation = "70";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1000";
+	ch.Ship.Name = "Hasta";
+	ch.Ship.Type = "FastGalleon3";
+	ch.Ship.Stopped = true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.nation = SPAIN;
+	SetRank(ch, SPAIN, 5);
+//	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPPRIVATEER;
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Suarius";
+	ch.old.lastname = "Escudero";
+	ch.name = TranslateString("","Suarius");
+	ch.lastname = TranslateString("","Escudero");
+	ch.id		= "Spanish_Captain5";
+	ch.nation	= SPAIN;
+	ch.model	= "Espinosa";
+	ch.sound_type = "soldier";
+//	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Spanish_Captain4_dialog.c";
+	ch.rank 	= 4;
+	ch.reputation = "70";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1000";
+	ch.Ship.Name = "Neptuno";
+	ch.Ship.Type = "FastGalleon4";
+	ch.Ship.Stopped = true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.nation = SPAIN;
+	SetRank(ch, SPAIN, 5);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Elizabeth";
+	ch.old.lastname = "O'Brien";
+	ch.name = TranslateString("","Elizabeth");
+	ch.lastname = TranslateString("","O'Brien");
+	SetRankTitle(ch, TranslateString("", "Lady"));
+	ch.id		= "Elizabeth O_Brien";
+	ch.model	= "lady3";
+	ch.sex = "woman";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "governor_family_dialog.c";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	ch.greeting = "Gr_English_noblewoman";
+	AddGameCharacter(n, ch);
+
 
 }

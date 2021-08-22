@@ -8,7 +8,7 @@ string DLG_TEXT[56] = {
 "Ah, the governor mentioned there would be someone here to meet me. Would that be you?",
 "I guess so, ",
 ". I was told to meet an English captain named ",
-" and to show him where to land. \nOnce the location has been revealed, I'm to meet this captain on the shore of the landing site and lead him to a cave.",
+" and to show #spronoun2# where to land. \nOnce the location has been revealed, I'm to meet this captain on the shore of the landing site and lead #spronoun2# to a cave.",
 "I'm curious - why can't the soldiers enter the cave from here?",
 "Secrecy keeps the element of surprise on our side. The French have spies in #sGreenford#. If we head to the cave from here, the French will discover what we are up to. \nWe might get drawn into a battle, and if the French win, they might decide to take #sGreenford# as well.",
 "Hmm...I guess you are right. So when and where can we put the soldiers ashore?",

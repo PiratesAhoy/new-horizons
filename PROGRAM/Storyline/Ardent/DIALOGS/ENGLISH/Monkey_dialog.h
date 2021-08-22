@@ -1,4 +1,4 @@
-string DLG_TEXT[8] = {
+string DLG_TEXT[14] = {
 "Ook!",
 "What a cute little monkey!",
 "Eek!",
@@ -7,4 +7,10 @@ string DLG_TEXT[8] = {
 "Stop following me around!",
 "Eek ook!",
 "Get lost, scrawny monkey!",
+"Eek eek ook ook eek!",
+"You have to be kidding! I'm going to be stuck with a whole mob of you now, all screeching away!",
+"Eek ook ook EEEK!",
+"What's that? You're home now with your friends and I'm finally rid of you?",
+"EEEK EEEK!",
+"Oh. Sorry. Of course I didn't want to be rid of you, but it's nice you're where you want to be. Goodbye, little, er, 'friend'.",
 }

@@ -80,6 +80,9 @@ void ProcessDialogEvent()
 			}
 			if (pchar.quest.main_line == "after_library" && iTest < QUEST_COUNTER)
 			{
+				Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(CharacterFromID("Danielle"))));
+				if (Characters[GetCharacterIndex(DLG_TEXT[15])].sex == "woman") Preprocessor_Add("person", XI_ConvertString("girl"));
+				else Preprocessor_Add("person", XI_ConvertString("man"));
 				link.l1 = DLG_TEXT[14] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[15])]) + DLG_TEXT[17];
 				link.l1.go = "search_danielle";
 				iTest = iTest + 1;
@@ -338,7 +341,8 @@ void ProcessDialogEvent()
 
 		case "idol_2":
 			Dialog.snd = "voice\SIHA\SIHA015";
-			dialog.text = DLG_TEXT[75];
+			if (Characters[GetCharacterIndex("Danielle")].sex == "woman") dialog.text = DLG_TEXT[75];
+			else dialog.text = DLG_TEXT[125];
 			link.l1 = DLG_TEXT[76];
 			link.l1.go = "idol_3";
 		break;
@@ -365,6 +369,8 @@ void ProcessDialogEvent()
 
 		case "search_danielle":
 			Dialog.snd = "voice\SIHA\SIHA018";
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(CharacterFromID("Danielle"))));
 			dialog.text = DLG_TEXT[85];
 			link.l1 = DLG_TEXT[86];
 			link.l1.go = "search_danielle_2";
@@ -386,6 +392,9 @@ void ProcessDialogEvent()
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -1);
 			Dialog.snd = "voice\SIHA\SIHA020";
+			Preprocessor_Add("Pronoun_upper", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle")))));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(CharacterFromID("Danielle"))));
 			dialog.text = DLG_TEXT[91];
 			link.l1 = DLG_TEXT[92];
 			link.l1.go = "search_danielle_4";

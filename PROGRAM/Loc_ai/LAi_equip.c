@@ -96,6 +96,7 @@ void LAi_NPC_Equip(ref chr, int rank, bool isWeapons, float GunProb)
 		else
 		{
 			blade = "bladearrows"; //JRH: Make indians use arrow
+			GiveItem2Character(chr, "tomahawk"); // PB: Make sure they already have a Tomahawk
 		}
 		// Sulan <--
 
@@ -335,10 +336,16 @@ string LAi_NPC_EquipGunSelection(int rank)
 	}
 	//Log_SetStringToLog("Total avail = " + totalguns);
 	//sort guns high->low by minlevel
-	for(i = firstgun; i <= lastgun; i++)
-	gunsML[i - firstgun] = sti(Items[i].minlevel);
+//	for(i = firstgun; i <= lastgun; i++)
+//	gunsML[i - firstgun] = sti(Items[i].minlevel);
 
 	int x,y,holder,place;
+	for(x = 0; x < totalguns; x++)	// Better seeding of gunsML array
+	{
+		i = gunsID[x];
+		gunsML[x] = sti(Items[i].minlevel);
+	}
+
 	for(x = 0; x < totalguns; x++)
 	{
 		for(y = 0; y < totalguns-1; y++)

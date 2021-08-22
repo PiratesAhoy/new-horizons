@@ -55,6 +55,6 @@ string DLG_TEXT[58] = {
 "I see... Did he tell you more about his plans?",
 "He had a sister, monsieur. A sister who was a nun in a monastary.",
 "Please go on, this could be it! Where was that monastary?",
-"I think he mentioned *****",
+"I think he mentioned Cartagena.",
 "Thanks a lot monsieur for your time.",
 };

@@ -1,4 +1,4 @@
-string DLG_TEXT[25] = {
+string DLG_TEXT[26] = {
 "Shall we cut someone into pieces, captain?",
 "Certainly. Into tiny little pieces...",
 "Well, what have we here? A swordsman by the look of you, perhaps ",
@@ -24,5 +24,6 @@ string DLG_TEXT[25] = {
 "Would you be willing to consider an alternative that I suggest? Join me and my crew aboard my ship as an officer and let our former employer's men try and find you there. I can assure you that in my primary profession I am rarely at a loss for opponents, worthy or otherwise.",
 "I find there is the ring of merit in your suggestion, captain. Consider my sword as your own. I don't know how to advise regarding Santos, but for myself I'm sure I'll have a better life with him thinking that I'm dead. You should still see Santos for your payment, or he might suspect that something is amiss.",
 "I'm pleased to hear it. Welcome to my crew.",
+"Well, what have we here? A swordswoman by the look of you, perhaps ",
 
 };

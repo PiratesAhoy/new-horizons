@@ -175,6 +175,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].reload.l8.emerge = "reload1";
 	Locations[n].reload.l8.autoreload = "0";
 	Locations[n].reload.l8.label = "House.";
+	Locations[n].reload.l8.close_for_night = 1;
 
 	Locations[n].reload.l9.name = "reload8";
 	Locations[n].reload.l9.go = "Muelle_Store";
@@ -1177,6 +1178,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name#. Trade Square.";
 	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].vcskip = true; // PW clear the house of extra characters
 
 
 	Locations[n].island = "IslaMuelle"; // NK 04-08-29
@@ -1665,7 +1667,7 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].reload.l1.label = "#stown_name#. Center.";
 	LAi_LocationFightDisable(&Locations[n], false);
 
-	Locations[n].items.randitem1 = "pistol6";
+	locations[n].box2.items.pistol6_2 = 1;
 
 
 	Locations[n].island = "IslaMuelle"; // NK 04-08-29

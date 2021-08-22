@@ -172,10 +172,13 @@ void ProcessDialogEvent()
 		break;
 
 		case "exitsisters":
-			ChangeCharacterAddress(characterFromID("Annabella Brin"), "None", "");
-			SetCharacterRemovable(characterFromID("Annabella Brin"), true);
-			RemovePassenger(Pchar, characterFromID("Annabella Brin"));
-			RemoveCharacterCompanion(pchar, characterFromID("Annabella Brin"));			
+//			ChangeCharacterAddress(characterFromID("Annabella Brin"), "None", "");
+//			SetCharacterRemovable(characterFromID("Annabella Brin"), true);
+//			RemovePassenger(Pchar, characterFromID("Annabella Brin"));
+//			RemoveCharacterCompanion(pchar, characterFromID("Annabella Brin"));	
+			ChangeCharacterAddress(characterFromID("Annabella Brinkley"), "None", "");
+			SetCharacterRemovable(characterFromID("Annabella Brinkley"), true);
+			RemovePassenger(Pchar, characterFromID("Annabella Brinkley"));			
 			pchar.quest.Jacks_early_days = "about_to_go_down";		
 			LAi_SetActorType(characterFromID("Eng_soldier_39"));
 //			LAi_ActorAnimation(characterFromID("Eng_soldier_39"), "attack", "Get_arrested_in_Greenford", 1.0);		

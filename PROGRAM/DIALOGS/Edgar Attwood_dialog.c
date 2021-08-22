@@ -13,6 +13,14 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	
 	switch(Dialog.CurrentNode)
@@ -98,6 +106,7 @@ void ProcessDialogEvent()
 
 		case "to_hire_2":
 			dialog.snd = "Voice\EDAT\EDAT008";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[16];
 			if (makeint(pchar.money) >= 2000)
 			{
@@ -154,7 +163,7 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) > 4)
 			{
 				dialog.snd = "Voice\EDAT\EDAT015";
-				dialog.text = DLG_TEXT[31];
+				dialog.text = PersuasionSuccess + DLG_TEXT[31];
 				link.l1 = DLG_TEXT[32] + GetMyShipNameShow(PChar) + DLG_TEXT[33];
 				link.l1.go = "talk_in_prison_right_4";
 				AddQuestRecord("Blaze_in_prison", "2");
@@ -162,7 +171,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\EDAT\EDAT016";
-				dialog.text = DLG_TEXT[34];
+				dialog.text = PersuasionFailure + DLG_TEXT[34];
 				link.l1 = DLG_TEXT[35];
 				link.l1.go = "exit";
 				AddQuestRecord("Blaze_in_prison", 3);
@@ -178,7 +187,12 @@ void ProcessDialogEvent()
 		break;
 
 		case "exit_to_hire":
-			SetOfficersIndex(PChar, -1, sti(NPChar.index));
+//			SetOfficersIndex(PChar, -1, sti(NPChar.index));
+			if (SetOfficersIndex(PChar, -1, sti(NPChar.index)) == sti(NPChar.index))
+			{
+				AddPassenger(PChar, NPChar, 0); // GR: if unable to assign to free officer slot, make him passenger instead
+				Characters[sti(NPChar.index)].location = "none";
+			}
 			LAi_SetOfficerType(NPChar);
 			//ChangeCharacterAddress(npchar, "none", "none");
 			PlayStereoSound("INTERFACE\took_item.wav");
@@ -242,6 +256,7 @@ void ProcessDialogEvent()
 			LAi_SetOfficerType(NPChar);
 			LAi_SetPlayerType(PChar);
 			// NK <--
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.Text = DLG_TEXT[45];
 			Link.l1 = DLG_TEXT[46];
 			Link.l1.go = "exit";

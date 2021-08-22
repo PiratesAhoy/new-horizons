@@ -1,4 +1,4 @@
-string DLG_TEXT[112] = { 
+string DLG_TEXT[115] = { 
 "You'd better cut the chatter and get to work, buddy. The guards are watching us - you want to get the lash?",
 "You're right. I'll need my energy for the escape.",
 "Sorry?",
@@ -111,5 +111,7 @@ string DLG_TEXT[112] = {
 "So? What's your point?",
 "...",
 "...",
-
+"A man came here a couple of months ago and made a copy of those tablets. And just a few days ago, another lady came asking after them, too.",
+"Well, just a few days ago, a sharp young man was in here asking about the same fellow. I told him everything he wanted to know - he was much friendlier than you! So he may just find the man who copied the tablets first.",
+"Tough girl, are you?",
 };

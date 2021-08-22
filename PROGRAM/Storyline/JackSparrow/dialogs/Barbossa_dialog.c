@@ -438,7 +438,8 @@ void ProcessDialogEvent()
 		case "Begin_1":
 			Dialog.snd = "voice\VIBE\VIBE006";
 			dialog.text = DLG_TEXT[87];
-			link.l1 = DLG_TEXT[88] + GetMyFullName(PChar);
+//			link.l1 = DLG_TEXT[88] + GetMyFullName(PChar);	// GR: GetMyFullName includes rank with Brotherhood if you have one, e.g. Captain Freebooter Jack Sparrow
+			link.l1 = DLG_TEXT[88] + GetMySimpleName(PChar) + ".";
 			link.l1.go = "Begin_2";
 		break;
 

@@ -4,7 +4,7 @@ string DLG_TEXT[170] = {// -- Scheffnow -- 2004-01-14 -- ResetCharacterMod --
 ", captain and owner of the ship '",
 "'.",
 "Welcome to the house of our Lord, ", //4
-"my son. I'm glad to see a sailor who doesn't neglect his soul.",
+" my son. I'm glad to see a sailor who doesn't neglect his soul.",
 "Hello, ",
 ". So - are you here for confession?",
 "My son, I'm glad to see you and am ready to take your confession if you would freely give it. The Lord knows that sin is unavoidable in earthly life.",
@@ -32,7 +32,7 @@ string DLG_TEXT[170] = {// -- Scheffnow -- 2004-01-14 -- ResetCharacterMod --
 "There's more - my men and I have destroyed the sect.",
 "No. Thing is, there's a man who'd like to donate a certain amount of gold to your church. I'm fulfilling his request.",
 "Um... No. Let's change the subject, all right?", //32
-"The Lord has provided us with a miracle! However I have heard how you delt with my first request and can not have you getting away with impersinating a man of god, also it appears you still have the women with you. I think you are the kidnapper!",
+"The Lord has provided us with a miracle! However I have heard how you dealt with my first request and can not have you getting away with impersonating a man of god, also it appears you still have the women with you. I think you are the kidnapper!",
 "I'm so sorry but I'm afraid I have to get to Singapore to return the women and you can't stop me. (THINKS: Damn Ammand the Corsair must have told him).",
 "I suppose you have called the guards, I will escape for I'm Captain Jack Sparrow",
 "I don't believe it. This prisoner is one of those you've asked me to destroy.",
@@ -167,7 +167,7 @@ string DLG_TEXT[170] = {// -- Scheffnow -- 2004-01-14 -- ResetCharacterMod --
 "I should think the Lord would look kindly on ",
 "I'm doing well these days, so I'll give ",
 " gold pieces.",
-"The Lord has provided us with a miracle! However I have heard how you delt with my first request and can not have you getting away with impersonating a man of god.",
+"The Lord has provided us with a miracle! However I have heard how you dealt with my first request and can not have you getting away with impersonating a man of god.",
 "I am quite aware of this fact.",
 
 };

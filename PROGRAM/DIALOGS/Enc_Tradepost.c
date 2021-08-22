@@ -15,6 +15,8 @@ void ProcessDialogEvent()
 	PChar.storekeeper.Idx = -1;//MAXIMUS
 	ref lcn = &Locations[FindLocation(PChar.location)];
 	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+	
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
@@ -35,7 +37,7 @@ void ProcessDialogEvent()
 				GiveItemToTrader(npchar);
 				NPC_Meeting = "1"; 
 
-				Dialog.text = LinkRandPhrase(DLG_TEXT[0], DLG_TEXT[1], DLG_TEXT[2]);
+				Dialog.text = LinkRandPhrase(DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "?", DLG_TEXT[1], DLG_TEXT[2]);
 
 				link.l3 = DLG_TEXT[3];
 				link.l3.go = "shop";
@@ -45,7 +47,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				Dialog.text = LinkRandPhrase(DLG_TEXT[5], DLG_TEXT[6], DLG_TEXT[7]);
+				Dialog.text = LinkRandPhrase(DLG_TEXT[5] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "?", DLG_TEXT[6], DLG_TEXT[7]);
 
 				link.l3 = DLG_TEXT[8];
 				link.l3.go = "shop";

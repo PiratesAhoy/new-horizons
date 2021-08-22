@@ -14,7 +14,7 @@ string DLG_TEXT[25] = {
 "You won the duel. Kill me if you want!",
 "You are a brave and good fighter, I won't kill you. I would like you to be my officer!",
 "Working for pirates? That's impossible!",
-"You should waste your time working for the Spanish authorities. You earn but a miserable pay, for the risks you take. I'm a generous captain, join me. I reward loyalty and courage with gold.",
+"You shouldn't waste your time working for the Spanish authorities. You earn but a miserable pay, for the risks you take. I'm a generous captain, join me. I reward loyalty and courage with gold.",
 "Humm... Can I trust you?",
 "Talk to my officers, they will confirm what I said.",
 "After all, you did not kill me, so I trust you. I'm not against the idea of changing my life. Being an Officer of the Spanish crown is becoming very dangerous and I have no family left in Spain.",

@@ -1324,6 +1324,7 @@ trace("SetTownGarrisonForNation: town="+town+", 1st="+bFirstInit);
 		character = GetCharacter(n);
 		if (CheckAttribute(character, "location") == false || FindLocation(character.location) < 0 || GetTownGovernorIndex(town) == n || IsOfficer(character) == true) continue;
 		if (GetTownIDFromLocID(character.location) == town) {
+			if (bAllies(character)) continue; // PB: Skip any characters that are with the player
 			if (GetAttribute(character, "Dialog.Filename") != "tailor_dialog.c" || iNation != PERSONAL_NATION)	character.nation = iNation; // PB: Skip tailor nation change when taking town for yourself
 			if (isSoldier(character) != UNKNOWN_NATION) {
 				if (!CheckAttribute(character, "model.uniform")) continue;	// LDH  15Jan09
@@ -1349,7 +1350,6 @@ trace("SetTownGarrisonForNation: town="+town+", 1st="+bFirstInit);
 				}
 				LAi_group_MoveCharacter(character, GetSoldiersGroup(iNation));
 			} else {
-                if (bAllies(character)) continue; // PB: Skip any characters that are with the player
 				if (iNation != PERSONAL_NATION) {
 					if (bFirstInit) {
 						sNation = "n" + oldNation;
@@ -1515,6 +1515,7 @@ trace("CaptureTownForNation: town="+town+", 1st="+bFirstInit);
 	for (int i = 0; i < nforts; i++) {
 		ref fortchar = GetTownFortCommander(town, i);
 		fortchar.nation = iNation;
+		ResetCharacterMemory(fortchar); // PB
 		if (iNation != PERSONAL_NATION) SetModelFromID(fortchar, SelectSoldierModelByNation(iNation, "officer"));
 	}
 }

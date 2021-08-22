@@ -1,6 +1,6 @@
 string DLG_TEXT[12] = { 
-"Good day to you, sir! I am Gyles Bencroft, master navigator.",
-"Glad to meet you, Gyles. I'm Nathaniel Hawk, captain of the 'Victory.'",
+"! I am Gyles Bencroft, master navigator.",
+"Glad to meet you, Gyles. I'm #sPCharName#, captain of the '",
 "Well, hello again, captain! I thought you might change your mind about hiring me!",
 "As a matter of fact, I did. Welcome aboard!",
 "Sorry, but no. Goodbye.",

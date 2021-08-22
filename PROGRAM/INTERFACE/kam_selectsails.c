@@ -18,6 +18,7 @@ string SailDesc;
 #define SAILSCOLOUR_WHITE 0
 #define SAILSCOLOUR_RED   1
 #define SAILSCOLOUR_BLACK 2
+#define SAILSCOLOUR_TAN   3
 
 #define SAILSDESIGN_PLAIN   0
 #define SAILSDESIGN_NATION  1
@@ -33,10 +34,11 @@ bool hasSailModelTorn = true;
 bool hasSailColorWhite = true;
 bool hasSailColorRed = true;
 bool hasSailColorBlack = true;
+bool hasSailColorTan = true;
 bool hasSailNationLogo = true;
 bool HasSailPirateLogo = true;
 
-#define SAILSTYPE_SPECIAL_COUNT 12
+#define SAILSTYPE_SPECIAL_COUNT 13
 string SpecialSailsNormal[SAILSTYPE_SPECIAL_COUNT];
 string SpecialSailsEmblem[SAILSTYPE_SPECIAL_COUNT];
 string SpecialSailsDescr[SAILSTYPE_SPECIAL_COUNT];
@@ -95,6 +97,9 @@ void InitInterface(string iniName)
 	SpecialSailsNormal[11] = "sail_torn_red_qar.tga";
 	SpecialSailsEmblem[11] = "sail_torn_red_qar.tga";
 	SpecialSailsDescr[11] = "Red torn sails with holes characteristic to Queen Anne's Revenge."
+	SpecialSailsDescr[12] = "Junk sails for Empress without holes."
+	SpecialSailsNormal[12] = "sail_Empres2.tga";
+	SpecialSailsEmblem[12] = "sail_Empres2.tga";
 
 	CreateString(true, "SailTypeName", "", FONT_NORMAL, COLOR_NORMAL, 130, 55, SCRIPT_ALIGN_CENTER, 0.9);
 	CreateString(true, "SailModelName", "", FONT_NORMAL, COLOR_NORMAL, 130, 105, SCRIPT_ALIGN_CENTER, 0.9);
@@ -155,6 +160,7 @@ void FirstUpdate()
 					hasSailColorWhite = true;
 					hasSailColorRed = true;
 					hasSailColorBlack = true;
+					hasSailColorTan = true;
 					hasSailNationLogo = true;
 					hasSailPirateLogo = true;
 				break;
@@ -164,6 +170,7 @@ void FirstUpdate()
 					hasSailColorWhite = false;
 					hasSailColorRed = false;
 					hasSailColorBlack = false;
+					hasSailColorTan = false;
 					hasSailNationLogo = true;
 					hasSailPirateLogo = false;
 				break;
@@ -173,6 +180,7 @@ void FirstUpdate()
 					hasSailColorWhite = false;
 					hasSailColorRed = false;
 					hasSailColorBlack = false;
+					hasSailColorTan = false;
 					hasSailNationLogo = true;
 					hasSailPirateLogo = false;
 				break;
@@ -183,6 +191,7 @@ void FirstUpdate()
 					hasSailColorWhite = false;
 					hasSailColorRed = false;
 					hasSailColorBlack = false;
+					hasSailColorTan = false;
 					hasSailNationLogo = false;
 					hasSailPirateLogo = false;
 				break;
@@ -194,6 +203,7 @@ void FirstUpdate()
 			hasSailColorWhite = true;
 			hasSailColorRed = true;
 			hasSailColorBlack = true;
+			hasSailColorTan = true;
 			hasSailNationLogo = true;
 			hasSailPirateLogo = true;
 		break;
@@ -203,6 +213,7 @@ void FirstUpdate()
 			hasSailColorWhite = false;
 			hasSailColorRed = false;
 			hasSailColorBlack = false;
+			hasSailColorTan = false;
 			hasSailNationLogo = true;
 			hasSailPirateLogo = false;
 		break;
@@ -212,6 +223,7 @@ void FirstUpdate()
 			hasSailColorWhite = false;
 			hasSailColorRed = false;
 			hasSailColorBlack = false;
+			hasSailColorTan = false;
 			hasSailNationLogo = true;
 			hasSailPirateLogo = false;
 		break;
@@ -222,6 +234,7 @@ void FirstUpdate()
 			hasSailColorWhite = false;
 			hasSailColorRed = false;
 			hasSailColorBlack = false;
+			hasSailColorTan = false;
 			hasSailNationLogo = false;
 			hasSailPirateLogo = false;
 		break;
@@ -266,7 +279,7 @@ void UpdateDisplay()
 	} else {
 		SetNodeUsing("SAILMODEL_CHANGER", true);
 	}
-	if (!hasSailColorWhite && !hasSailColorRed && !hasSailColorBlack) {
+	if (!hasSailColorWhite && !hasSailColorRed && !hasSailColorBlack && !hasSailColorTan) {
 		GameInterface.strings.SailColorName = GetSailColorNameFromListNumber(SAILSCOLOUR_WHITE);
 		SetNodeUsing("SAILCOLOR_CHANGER", false);
 	} else {
@@ -357,6 +370,14 @@ void UpdateDisplay()
 					FileStr[1] += "black_";
 					FileStr[4] += "black_";
 					SailDesc += LanguageConvertString(tmpLangFileID,"black") + " ";
+				}
+			break;
+
+			case SAILSCOLOUR_TAN:
+				if (hasSailColorTan) {
+					FileStr[1] += "tan_";
+					FileStr[4] += "tan_";
+					SailDesc += LanguageConvertString(tmpLangFileID,"tan") + " ";
 				}
 			break;
 		}
@@ -588,6 +609,7 @@ void SetListMax()
 								case SAILSCOLOUR_WHITE:		ListMax = QTY_LOGOSAILS_WHOLE_WHITE;	break;
 								case SAILSCOLOUR_RED:		ListMax = QTY_LOGOSAILS_WHOLE_RED;	break;
 								case SAILSCOLOUR_BLACK:		ListMax = QTY_LOGOSAILS_WHOLE_BLACK;	break;
+								case SAILSCOLOUR_TAN:		ListMax = QTY_LOGOSAILS_WHOLE_TAN;	break;
 							}	
 						break;
 
@@ -596,6 +618,7 @@ void SetListMax()
 								case SAILSCOLOUR_WHITE:		ListMax = QTY_LOGOSAILS_TORN_WHITE;	break;
 								case SAILSCOLOUR_RED:		ListMax = QTY_LOGOSAILS_TORN_RED;	break;
 								case SAILSCOLOUR_BLACK:		ListMax = QTY_LOGOSAILS_TORN_BLACK;	break;
+								case SAILSCOLOUR_TAN:		ListMax = QTY_LOGOSAILS_TORN_TAN;	break;
 							}
 						break;
 					}
@@ -639,6 +662,7 @@ void IProcMouseClick()
 			hasSailColorWhite = true;
 			hasSailColorRed = true;
 			hasSailColorBlack = true;
+			hasSailColorTan = true;
 			hasSailNationLogo = true;
 			hasSailPirateLogo = true;
 		break;
@@ -648,6 +672,7 @@ void IProcMouseClick()
 			hasSailColorWhite = false;
 			hasSailColorRed = false;
 			hasSailColorBlack = false;
+			hasSailColorTan = false;
 			hasSailNationLogo = true;
 			hasSailPirateLogo = false;
 		break;
@@ -657,6 +682,7 @@ void IProcMouseClick()
 			hasSailColorWhite = false;
 			hasSailColorRed = false;
 			hasSailColorBlack = false;
+			hasSailColorTan = false;
 			hasSailNationLogo = true;
 			hasSailPirateLogo = false;
 		break;
@@ -667,6 +693,7 @@ void IProcMouseClick()
 			hasSailColorWhite = false;
 			hasSailColorRed = false;
 			hasSailColorBlack = false;
+			hasSailColorTan = false;
 			hasSailNationLogo = false;
 			hasSailPirateLogo = false;
 		break;
@@ -714,8 +741,11 @@ void DoSailModelChangeRight()
 void DoSailColorChangeLeft()
 {
 	curSailColor--;
-	if (curSailColor < 0) curSailColor = 2;
+	if (curSailColor < 0) curSailColor = 3;
 	switch (curSailColor) {
+		case SAILSCOLOUR_TAN:
+			if (!hasSailColorTan) { DoSailColorChangeLeft(); return; }
+		break;
 		case SAILSCOLOUR_RED:
 			if (!hasSailColorRed) { DoSailColorChangeLeft(); return; }
 		break;
@@ -729,8 +759,11 @@ void DoSailColorChangeLeft()
 void DoSailColorChangeRight()
 {
 	curSailColor++;
-	if (curSailColor > 2) curSailColor = 0;
+	if (curSailColor > 3) curSailColor = 0;
 	switch (curSailColor) {
+		case SAILSCOLOUR_TAN:
+			if (!hasSailColorTan) { DoSailColorChangeRight(); return; }
+		break;
 		case SAILSCOLOUR_RED:
 			if (!hasSailColorRed) { DoSailColorChangeRight(); return; }
 		break;
@@ -806,11 +839,12 @@ string GetSailModelNameFromListNumber(int number)
 string GetSailColorNameFromListNumber(int number)
 {
 	string tmpstr = "";
-	if (number < 0 || number > 2) number = 0;
+	if (number < 0 || number > 3) number = 0;
 	switch (number) {
 		case SAILSCOLOUR_WHITE: tmpstr = "White Sails"; break;
 		case SAILSCOLOUR_RED: tmpstr = "Crimson Sails"; break;
 		case SAILSCOLOUR_BLACK: tmpstr = "Black Sails"; break;
+		case SAILSCOLOUR_TAN: tmpstr =     "Tan Sails"; break;
 	}
 	int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
 	tmpstr = LanguageConvertString(tmpLangFileID, tmpstr);

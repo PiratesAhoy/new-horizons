@@ -162,7 +162,7 @@ string DLG_TEXT[174] = {
 "All right. Let's talk about something else, then.",
 "I see. Let's try another subject, then.",
 "Is there a blacksmith in this town?",
-"No sir, I apologize.",
+"No #ssir#, I apologize.",
 "And another thing, sir or madam.",
 "Um, that's all, folk.",
 "This blade of mine isn't fit for scraping pocks off a blind monkey's arse. Know anyone who could bring it up to snuff?",

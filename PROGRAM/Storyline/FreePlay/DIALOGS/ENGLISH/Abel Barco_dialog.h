@@ -1,0 +1,17 @@
+string DLG_TEXT[15] = {
+".....",
+".....",
+"I suppose you're working for Senorita Suarez...",
+"You're right.",
+"So, give me the ransom, Senor.",
+"Hold on my friend! I want to see his husband before.",
+"No, mate. You give me the ransom first and I'll accompany you to the place where he is.",
+"Alright, let me explain you. I'm not here to pay. If you want to live you're going to tell me where he is right now!",
+"Are you jocking! Damn it! Go to Hell!",
+"Stop! You won. Let me alive and I'll tell you where you can find him.",
+"That's better. So?",
+"He is imprisoned in a house near #sTortuga# dock. You cannot miss it. The door is always guarded by two men.",
+"Who is the leader of them?",
+"A French pirate, Captain Robert Acre. He has spend his last years kidnapping wealthy people in the Caribbean.",
+"Well, I'm going to stop his business. About you, I hope you aren't lying. Otherwise, I will come back and kill you definitively. Now, go away!",
+};

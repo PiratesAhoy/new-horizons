@@ -39,6 +39,8 @@ void ProcessDialogEvent()
 
 		case "node_1":
 			dialog.snd = pcharrepphrase("Voice\ANLE\ANLE002", "Voice\ANLE\ANLE003");
+			If (PChar.sex == "woman") Preprocessor_Add("noble", XI_ConvertString("gentlewoman"));
+			else Preprocessor_Add("noble", XI_ConvertString("gentleman"));
 			Dialog.text = pcharrepphrase(DLG_TEXT[6] + GetMyFullName(NPChar) + DLG_TEXT[7], DLG_TEXT[8]);
 			Link.l1 = pcharrepphrase(DLG_TEXT[9], DLG_TEXT[10]);
 			Link.l1.go =  "node_2";
@@ -439,6 +441,7 @@ void ProcessDialogEvent()
 
 		case "baldewyn_4":
 			dialog.snd = "Voice\ANLE\ANLE025";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[126] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[127];
 			link.l1 = DLG_TEXT[128];
 			link.l1.go = "exit";

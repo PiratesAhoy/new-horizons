@@ -1,4 +1,4 @@
-string DLG_TEXT[42] = {
+string DLG_TEXT[56] = {
 "Hello Captain Pyle, I have got something that you're looking for ... ",
 "Hello who are you, how do you know who I am and what I'm up to?",
 "Lots of questions - but you'll need the medicine chest first. Welcome back again.",
@@ -41,6 +41,19 @@ string DLG_TEXT[42] = {
 "Hmm, well ... ahh ... hmm?",
 "The two first lines are the sailors",
 "and the third line the officers.",
-
+"Hello again Captain. You are wounded - what happened?",
+"I was ambushed outside the shipyard. My officers were both killed. The bandits robbed me of almost everything.",
+"Very clever. And Rogers' Golden Key you hided under the bandana.",
+"How did you know that?",
+"And now you're about to explore the entire Caribbean, in search for the other map-pieces?",
+"Yes, I'm on my way.",
+"In the Sloop's cabin you'll find what you need for your journey, Captain.",
+"Aha, you knew I was going to be robbed and have placed those items there already.",	//49
+"...also of valuable metals. Those bars you might have taken for Lead or perhaps unclean Silver...",
+"Yes...",
+"It's nothing of that kind.",
+"No..?",
+"No, it's Platina!",
+"---",
 
 };

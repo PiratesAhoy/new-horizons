@@ -19,7 +19,7 @@ string DLG_TEXT[27] = {
 "A new fort in #sisland_Isla Muelle#? I've never heard that.",
 "Because the fort has been built far from the population.",
 "What do you mean?",
-"It's built in Aguadilla bay?",
+"It's built in Aguadilla bay.",
 "Aguadilla? Where is the location?",
 "On the north west coast.",
 "A smart idea. That region is uninhabited. Is the fort well-protected?",

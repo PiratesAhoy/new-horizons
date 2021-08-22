@@ -71,7 +71,7 @@ string DLG_TEXT[96] = {
 "Tough.",
 "Well, I have a mission if you are interested.",
 "Maybe. What is it exactly?",
-"Two months ago a convoy of French merchant ships left #sisland_Falaise De Fleur# to sail for #sHavana#. My daughter, Justine, was on board one of the ships. The convoy never arrived. After one month I sent my best captain to search for her. But I have heard no news from the 'La Foudre' since.",
+"Two months ago a convoy of French merchant ships left #sisland_Falaise De Fleur# to sail for #sHavana#. My daughter, Justine, was on board one of the ships. The convoy never arrived. After one month I sent my best captain to search for her. But I have heard no news from 'La Foudre' since.",
 "So you want me to search for both the frigate and the convoy? Why don't you send another ship of your own?",
 "Unfortunately I don't have the military resources to spare another one of my ships. With #sFalaise De Fleur# being the only colony on #sisland_Falaise De Fleur#, I would be looked down upon by my people if I were to compromise the safety of the colony for a personal cause.",
 "Very well, Sir. So now onto the things that matter. How much will you pay me if I bring back your daughter?",
@@ -94,6 +94,6 @@ string DLG_TEXT[96] = {
 "Goodbye Governor.",
 "...",
 "...",
-"Some time ago a convoy of French merchant ships left #sisland_Falaise De Fleur# to sail for #sHavana#. My daughter, Justine, was on board one of the ships. The convoy never arrived. After one month I sent my best captain to search for her. But I have heard no news from the 'La Foudre' since.",
+"Some time ago a convoy of French merchant ships left #sisland_Falaise De Fleur# to sail for #sHavana#. My daughter, Justine, was on board one of the ships. The convoy never arrived. After one month I sent my best captain to search for her. But I have heard no news from 'La Foudre' since.",
 
 };

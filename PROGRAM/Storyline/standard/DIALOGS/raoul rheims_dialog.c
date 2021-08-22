@@ -92,6 +92,8 @@ void ProcessDialogEvent()
 
 		case "danielle_speak_with_almost_dead_rheims_2":
 			Dialog.snd = "voice\RARH\RARH007";
+			if (PChar.sex == "woman") Preprocessor_Add("person", XI_ConvertString("girl"));
+			else Preprocessor_Add("person", XI_ConvertString("lad"));
 			dialog.text = DLG_TEXT[14] + characters[GetCharacterIndex(DLG_TEXT[15])].lastname + DLG_TEXT[16];
 			link.l1 = DLG_TEXT[17];
 			link.l1.go = "danielle_speak_with_almost_dead_rheims_3";
@@ -106,6 +108,8 @@ void ProcessDialogEvent()
 
 		case "danielle_speak_with_almost_dead_rheims_4":
 			Dialog.snd = "voice\RARH\RARH009";
+			if (PChar.sex == "woman") Preprocessor_Add("person", XI_ConvertString("girl"));
+			else Preprocessor_Add("person", XI_ConvertString("lad"));
 			dialog.text = DLG_TEXT[20];
 			link.l1 = DLG_TEXT[21];
 			link.l1.go = "danielle_speak_with_almost_dead_rheims_5";

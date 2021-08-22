@@ -15,6 +15,8 @@ void ProcessDialogEvent()
 
 	Npchar.nation = Characters[getCharacterIndex("St John's Commander")].nation;
 	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+	
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":

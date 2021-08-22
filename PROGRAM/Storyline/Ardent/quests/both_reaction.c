@@ -7,6 +7,8 @@ void BothQuestComplete(string sQuestName)
 	switch(sQuestName)
 	{
 		case "intro":
+//			PauseAllSounds();
+//			PlayStereoOGG("Ardent_start");
 			StartQuestMovie(true, true, true);
 
 			switch (GetCharacterShipCabin(PChar))
@@ -23,6 +25,7 @@ void BothQuestComplete(string sQuestName)
 				ChangeCharacterAddressGroup(CharacterFromID("Inquisitor"), "Tutorial_Deck", "reload", "reload1");
 			}
 
+			locations[FindLocation("Tutorial_Deck")].type = "Ardent_cabin";
 			LAi_SetActorType(characterFromID("Inquisitor"));
 			Characters[GetCharacterIndex("Inquisitor")].Dialog.CurrentNode = "start";
 			LAi_ActorDialog(characterfromID("Inquisitor"), pchar, "intro_done", 1.0, 1.0);
@@ -53,8 +56,11 @@ void BothQuestComplete(string sQuestName)
 				ChangeCharacterAddress(characterFromID("Giraldo Annibal"), "None", "");
 			}
 
-			LAi_Fade("", "");
-			LAi_QuestDelay("Arrested", 2.0);
+			if (!CheckQuestAttribute("cheating", "true"))
+			{
+				LAi_Fade("", "");
+				LAi_QuestDelay("Arrested", 2.0);
+			}
 		break;
 
 		case "Arrested":

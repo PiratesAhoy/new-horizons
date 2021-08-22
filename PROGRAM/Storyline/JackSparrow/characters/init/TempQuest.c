@@ -549,12 +549,13 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "Annamaria";
+	ch.old.name = "Anamaria";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Annamaria");
+	ch.name = TranslateString("","Anamaria");
 	ch.lastname = TranslateString("","");
 	ch.id		= "Annamaria";
-	ch.model = "Danblack";
+//	ch.model = "Danblack";
+	ch.model = "Anamaria";
 	ch.sex = "woman";
 //	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");		//JRH: was Piranha
@@ -3157,6 +3158,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.Flags.Personal.texture = 0;
 	ch.nation = PIRATE;
 	ch.rank 	= 1;
+	GiveItem2Character(ch, "bladeC36");
+	ch.equip.blade = "bladeC36";
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
@@ -3192,6 +3195,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Sao Feng's body_dialog.c";
 	ch.greeting = "Gr_Sao Feng's body";
 	ch.nation = HOLLAND;
+	GiveItem2Character(ch, "bladeC36");
+	ch.equip.blade = "bladeC36";
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";
@@ -3228,6 +3233,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Sao Feng's body_dialog.c";
 	ch.greeting = "Gr_Sao Feng's body";
 	ch.nation = PIRATE;
+	GiveItem2Character(ch, "bladeC36");
+	ch.equip.blade = "bladeC36";
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";
@@ -3372,7 +3379,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.name = TranslateString("","Jordano");
 	ch.lastname = "";
 	ch.id		= "Jordano";
-	ch.model = "Diller";  // Cat
+	ch.model = "Jordano";  // GR (was "Diller", originally was "man4")
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
 	LAi_NoRebirthEnable(ch);

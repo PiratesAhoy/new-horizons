@@ -265,7 +265,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\EMRI\EMRI013";
-				dialog.text = DLG_TEXT[47];
+				dialog.text = DLG_TEXT[47] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "."; // DeathDaisy: changed "young man" to sir/maam/monsieur
 				link.l1 = DLG_TEXT[48];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

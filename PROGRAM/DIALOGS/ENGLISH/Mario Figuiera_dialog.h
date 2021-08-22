@@ -1,4 +1,4 @@
-string DLG_TEXT[33] = {
+string DLG_TEXT[38] = {
 "Welcome to my tavern, stranger. My name is ",
 ", and by the look of you I'm guessing you're not here to drink.",
 "My name is ",
@@ -32,4 +32,9 @@ string DLG_TEXT[33] = {
 "Maybe later. Let me ask you about something else.",
 "Gentlemen, please! Cease this madness at once, or I'll have to call for the guards!",
 "Don't bother. I was just leaving.",
+"Do you know anyone who produces documents?",
+"Plenty, though they're all in #sDouwesen#.",
+"No, I'm thinking more of someone who isn't so official, doesn't ask questions, and probably wants a lot of money to not ask them.",
+"Ah, I see what you mean. No, there's nobody like that around here. But I heard tell that someone along those lines recently nearly got caught and took refuge in the buccaneer camp on #sisland_Hispaniola#.",
+"Thanks. I'll see if I can find him.",
 };

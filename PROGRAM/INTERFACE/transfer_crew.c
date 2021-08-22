@@ -21,7 +21,7 @@ void InitInterface_RR(string iniName,ref pCharacter,ref enemyCh)
 	string crewTransfer;
 	MainChar = GetMainCharacter();
 	FillCharactersList(pCharacter);
-
+	nCompanionIndex = sti(enemyCh.index); //PW: if two companions involved
 	xi_refMainChar = GetMainCharacter();
 	xi_refCharacter = pCharacter;
 
@@ -368,7 +368,8 @@ void ProcessChangeLeft()
 	if(GetCrewQuantity(refEnemyCharacter)<=0) return;
 	if(GetMaxCrewQuantity(xi_refCharacter)<=GetCrewQuantity(xi_refCharacter)) return;
 	// boal min crew on ship --> NK
-
+/* ----> PW just transfer until no crew or max on left ship reached
+// so block out all this checking below PW
 	// added after build 11 by KAM -->
 	ref MainChar = GetMainCharacter();
 	
@@ -408,7 +409,8 @@ void ProcessChangeLeft()
 		// added after build 11 by KAM -->
 	}
 	// <-- added after build 11 by KAM
-
+*/ //<---- end of blocked out code
+// PW then do the transfer - leaving the interface exit checks for minimum if you are keeping the ship
 	GameInterface.strings.Mincrewwarn = ""; // NK
 	// boal min crew on ship <-- NK
 	AddCharacterCrew(xi_refCharacter,1);

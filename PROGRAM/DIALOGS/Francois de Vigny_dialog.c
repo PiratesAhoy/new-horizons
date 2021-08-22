@@ -102,6 +102,7 @@ void ProcessDialogEvent()
 		case "quests":
 			iTest = 0;
 			dialog.snd = "Voice\EMRI\EMRI005";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			Dialog.text = DLG_TEXT[22];
 			if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))	// LDH was quest.quest.generate, fixed 01Jan09
 			{
@@ -230,7 +231,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\EMRI\EMRI013";
-				dialog.text = DLG_TEXT[42];
+				dialog.text = DLG_TEXT[42] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ".";
 				link.l1 = DLG_TEXT[43];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

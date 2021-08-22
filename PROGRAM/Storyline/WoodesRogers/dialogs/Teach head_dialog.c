@@ -2930,8 +2930,14 @@ void ProcessDialogEvent()
 
 				locations[FindLocation("wr_shop")].id.label = "Rogers' Paintings Furniture & Weapons";
 				locations[FindLocation("shipyard_stairs")].reload.l1.disable = 0;//back to shya
+				Locations[FindLocation("Redmond_shore_03")].models.always.locators = "shore10_l_JRH1";
 
 				Locations[FindLocation("wr_church_attic")].type = "Vane_jungle";
+
+				SetCharacterShipLocation(characterFromID("CoastBrother29"), "Redmond_shore_ship");//PrisonShip
+				SetCharacterShipLocation(characterFromID("CoastBrother30"), "Redmond_shore_ship");//PrisonShip
+				SetCharacterShipLocation(characterFromID("CoastBrother32"), "Redmond_shore_ship");//tartane2
+				SetCharacterShipLocation(characterFromID("CoastBrother33"), "Redmond_shore_03");//tartane2
 
 				ChangeCharacterAddressGroup(characterFromID("wr_boc4"), "none", "", "");
 				ChangeCharacterAddressGroup(characterFromID("wr_cor1_1"), "none", "", "");
@@ -2988,6 +2994,9 @@ void ProcessDialogEvent()
 				LAi_SetPriestType(CharacterFromID("Father Bernard"));
 				LAi_group_MoveCharacter(CharacterFromID("Father Bernard"), "ENGLAND_CITIZENS");
 
+				ChangeCharacterAddressGroup(CharacterFromID("wr_fwn"), "none", "", "");
+				ChangeCharacterAddressGroup(CharacterFromID("wr_sol6f77"), "none", "", "");
+
 				locations[FindLocation("Redmond_Town_01")].type = "blues_town";
 				locations[FindLocation("Redmond_Town_03")].type = "blues_town";
 				locations[FindLocation("Redmond_Town_04")].type = "blues_town";
@@ -3000,6 +3009,11 @@ void ProcessDialogEvent()
 				bDisableFastReload = 1;
 				Pchar.quest.disable_rebirth = true;
 				Pchar.quest.wr_terrace = "second_time";
+
+				//starts all step-backs in shipyard_shore, wr_port m fl
+				pchar.quest.3mainchar_gone.win_condition.l1 = "location";
+				pchar.quest.3mainchar_gone.win_condition.l1.location = "Shipyard_shore";
+				pchar.quest.3mainchar_gone.win_condition = "3mainchar_gone";
 			
 				pchar.quest.terrace_in1.win_condition.l1 = "locator";
 				pchar.quest.terrace_in1.win_condition.l1.location = "Redmond_town_04";

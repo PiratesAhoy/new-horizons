@@ -14,6 +14,10 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+
+	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+	else Preprocessor_Add("child", XI_ConvertString("child"));
+	Preprocessor_Add("person", PChar.sex);
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -147,12 +151,14 @@ void ProcessDialogEvent()
 
 		case "barkue_drown_2":
 			Dialog.snd = "voice\PADO\PADO008";
-			dialog.text = DLG_TEXT[23];
-			link.l1 = DLG_TEXT[24];
-			link.l1.go = "to_bernard";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 2500);
 			AddQuestRecord("ANIMISTS", 18);
+			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+			else Preprocessor_Add("child", XI_ConvertString("child"));
+			dialog.text = DLG_TEXT[23];
+			link.l1 = DLG_TEXT[24];
+			link.l1.go = "to_bernard";
 		break;
 
 		case "to_bernard":
@@ -189,13 +195,15 @@ void ProcessDialogEvent()
 
 		case "to_bernard_3":
 			Dialog.snd = "voice\PADO\PADO011";
-			dialog.text = DLG_TEXT[29];
-			link.l1 = DLG_TEXT[30];
-			link.l1.go = "exit";
 			pchar.quest.ANIMISTS = "letter_to_father_bernard";
 			AddDialogExitQuest("oops_ANIMISTS_want_letter_again");
 			GiveItem2Character(pchar, "letter_to_bernard");
 			AddQuestRecord("ANIMISTS", 20);
+			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+			else Preprocessor_Add("child", XI_ConvertString("child"));
+			dialog.text = DLG_TEXT[29];
+			link.l1 = DLG_TEXT[30];
+			link.l1.go = "exit";
 		break;
 
 		case "letter_good":
@@ -223,9 +231,6 @@ void ProcessDialogEvent()
 
 		case "letter_bad_3":
 			Dialog.snd = "voice\PADO\PADO015";
-			dialog.text = DLG_TEXT[38];
-			link.l1 = DLG_TEXT[39];
-			link.l1.go = "prepare_for_bark";
 			ChangeCharacterReputation(pchar, -5);
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 1000);
@@ -236,6 +241,11 @@ void ProcessDialogEvent()
 			}
 			else { AddPartyExp(pchar, 1500); }
 			AddQuestRecord("ANIMISTS", 12);
+			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+			else Preprocessor_Add("child", XI_ConvertString("child"));
+			dialog.text = DLG_TEXT[38];
+			link.l1 = DLG_TEXT[39];
+			link.l1.go = "prepare_for_bark";
 		break;
 
 		case "letter_bad_exit":

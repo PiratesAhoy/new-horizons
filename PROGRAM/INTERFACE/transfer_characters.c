@@ -343,7 +343,7 @@ void WasChange()
 
 			if (oldCurNode=="PASSENGERS_LIST" || nFourImageNum > 0)
 			{
-				for(n = 0; n < SKILL_MAX; n++)
+				for(n = 0; n < NUM_DIFF_SKILLS; n++)
 				{
 					skill = GetSkillName(n);
 					skillval = GetEffectiveSkill(CharRef,skill);
@@ -359,7 +359,7 @@ void WasChange()
 			}
 			else
 			{
-				for(n = 0; n < SKILL_MAX; n++)
+				for(n = 0; n < NUM_DIFF_SKILLS; n++)
 				{
 					skill = GetSkillName(n);
 					skillval = GetShipSkill(CharRef,skill);
@@ -379,7 +379,7 @@ void WasChange()
 		else
 		{
 			GameInterface.strings.CharacterName = XI_ConvertString("Summary Skills");
-			for(n = 0; n < SKILL_MAX; n++)
+			for(n = 0; n < NUM_DIFF_SKILLS; n++)
 			{
 				skill = GetSkillName(n);
 				skill = "Skill"+skill;

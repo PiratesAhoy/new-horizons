@@ -264,6 +264,7 @@ void ProcessDialogEvent()
 			GiveModel2Player("47YoungJack",false);
 			GiveModel2Player("depp",true);
 			GiveShip2Character(pchar,"WickedWench","Wicked Wench",-1,ENGLAND,true,true);
+			PChar.quest.wench_given_by = "Beckett";
 			SetCharacterShipLocation(Pchar, "Oxbay_lighthouse");
 			pchar.jack = "Meet_tia";
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
@@ -314,6 +315,7 @@ void ProcessDialogEvent()
 			GiveModel2Player("depp",false);
 			GiveModel2Player("Jack",true);
 			GiveShip2Character(pchar,"BlackPearl","Black Pearl",-1,PIRATE,true,true);
+			PChar.quest.wench_given_by = "Beckett";
 			pchar.Jack = "Pirate";
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
 			PChar.Flags.Personal.texture = 3;
@@ -364,6 +366,7 @@ void ProcessDialogEvent()
 			GiveModel2Player("depp",false);
 			GiveModel2Player("Jack",true);
 			GiveShip2Character(pchar,"BlackPearl","Black Pearl",-1,PIRATE,true,true);
+			PChar.quest.wench_given_by = "Beckett";
 			pchar.Jack = "Pirate";
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
 			PChar.Flags.Personal.texture = 3;
@@ -447,6 +450,7 @@ void ProcessDialogEvent()
 			GiveModel2Player("depp",false);
 			GiveModel2Player("Jack",true);
 			GiveShip2Character(pchar,"BlackPearl","Black Pearl",-1,PIRATE,true,true);
+			PChar.quest.wench_given_by = "Beckett";
 			pchar.jack = "Met_Tia";
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
 			PChar.Flags.Personal.texture = 3;

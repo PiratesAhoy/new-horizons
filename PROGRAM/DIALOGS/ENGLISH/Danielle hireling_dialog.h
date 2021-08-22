@@ -2,7 +2,7 @@ string DLG_TEXT[13] = {
 "Can't you see I'm busy?",
 "I'm sorry.",
 "To the devil with you!",
-"Please, sir, have mercy on me!",
+"Please, #ssir#, have mercy on me!",
 "Tell me, you foul beast - who sent you?",
 "Die, swine!",
 "Governor Silehard! He promised me lot of money in exchange for your head.",

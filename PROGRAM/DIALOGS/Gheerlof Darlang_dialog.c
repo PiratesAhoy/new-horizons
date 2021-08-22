@@ -284,7 +284,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\GHDA\GHDA013";
-				dialog.text = DLG_TEXT[38];
+				dialog.text = DLG_TEXT[38] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + ".";
 				link.l1 = DLG_TEXT[39];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

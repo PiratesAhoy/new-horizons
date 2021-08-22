@@ -7,6 +7,16 @@ void StartStoryLine()
 	string rldGroup = "reload";
 	string rldLocator = "reload1_back";
 
+	string cabinID = GetCharacterShipCabin(PChar);
+	if (cabinID != "Cabin_none")
+	{
+		iShipCaptain = GetMainCharacterIndex();
+		SetUpCabin(PChar);
+
+		Locations[FindLocation("Tutorial_deck")].models.always.l2 = "cabinchest";	//JRH
+		Locations[FindLocation("Tutorial_deck")].models.always.l3 = "trunk";		//JRH
+	}
+
 	// PB: Override Character Type -->
 	DeleteAttribute(PChar, "items");
 	GiveItem2Character(PChar, "map");
@@ -62,7 +72,9 @@ void StartStoryLine()
 	pchar.quest.TotBB_HtC.win_condition = "opening";
 	Locations[FindLocation("Tortuga_Port")].vcskip = true;
 	Locations[FindLocation("Tortuga_Tavern")].vcskip = true;
-	DisableFastTravel(true);
+//	DisableFastTravel(true);
+	bQuestDisableSeaEnter = true;
+	DeleteAttribute(&locations[FindLocation("Tortuga_port")], "reload.l6.goto_disable");	// Enable fast travel to tavern right away
 
 	pchar.quest.Sparrow_start.win_condition.l1 = "locator";
 	pchar.quest.Sparrow_start.win_condition.l1.location = "Cayman_Port";
@@ -127,6 +139,7 @@ void StartStoryLine()
 		ChangeCharacterAddress(characterFromID("ANIMISTS_06"), "none", "");
 		ChangeCharacterAddress(characterFromID("ANIMISTS_07"), "none", "");
 		ChangeCharacterAddress(characterFromID("ANIMISTS_08"), "none", "");
+		SetRumourState("Children_start", false);	// Disable standard rumour
 		// enabled in case "storm_complete"
 
 	// Sri Sumbhajee Angria – Saving Askays Brother

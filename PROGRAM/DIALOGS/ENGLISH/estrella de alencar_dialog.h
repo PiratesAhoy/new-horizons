@@ -83,7 +83,7 @@ string DLG_TEXT[95] = {
 "Santa Maria! Oh, gracias, thank you, mi Dios, gracias!",
 "M'Lady... M'Lady... Here... Here is your token back, and a handkerchief. Now dry your tears. He's all right.",
 "T-th-thank you, ",
-" Capitán. You are a kind man.",
+" Capitán. You are a kind #sperson#.",
 "There is more, Señora.",
 "I need to reward you, Capitán ",
 ".",

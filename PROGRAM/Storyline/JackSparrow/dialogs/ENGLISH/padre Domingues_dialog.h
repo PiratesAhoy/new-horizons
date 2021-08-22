@@ -132,10 +132,10 @@ string DLG_TEXT[145] = {
 "The women!",
 "Where are they?",
 "They've been holding the children on their ship! You must go after them!",
-"They are fine. Here's the keys I found on the leader. Get the ladies out of their cells now. Once I've delt with the ship I'll take you back to the church. I just have to talk to the women first.",
+"They are fine. Here's the keys I found on the leader. Get the ladies out of their cells now. Once I've dealt with the ship I'll take you back to the church. I just have to talk to the women first.",
 "I shall pray for you, my son.",
 "This is going to be a big fight, Padre. Pray for us all.",
-"Be careful, Captain. Their leader is wiley. There is a room behind that throne.",
+"Be careful, Captain. Their leader is wily. There is a room behind that throne.",
 "Hmm...", //137
 "I'm afraid ",
 " gold is all I can afford just now.",

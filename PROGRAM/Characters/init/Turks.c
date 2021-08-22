@@ -123,8 +123,16 @@ void CreateTurksCharacters(ref n)
 	ch.sound_type = "soldier";
 	GiveItem2Character(ch, "blade24");
 	ch.equip.blade = "blade24";
-	GiveItem2Character(ch, "pistol7");
-	ch.equip.gun = "pistol7";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol7");
+		ch.equip.gun = "pistol7";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol7a");
+		ch.equip.gun = "pistol7a";
+	}
 	ch.location	= "Turks_port";			//JRH: new Turks
 	ch.location.group = "goto";
 	ch.location.locator = "goto6";

@@ -41,7 +41,10 @@ void CalculateData(ref chref)
 	ref ctown = GetTownFromID(TownName);
 	int townsize = GetTownSize(TownName);
 	int troops = GetTownNumTroops(TownName);
-	UpdateRMRelation(GetMainCharacter(), nationType, makefloat(townsize+troops)/100.0);
+	if (!CheckAttribute(chref, "skipRM"))
+	{
+		UpdateRMRelation(GetMainCharacter(), nationType, makefloat(townsize+troops)/100.0);
+	}
 	nBooty = makeint(makefloat(GetTownGold(TownName)) * TOWN_GOLD_SACK_SCALAR * (0.75 + frand(0.25) + makefloat(GetShipSkill(GetMainCharacter(), SKILL_SNEAK)/20.0)));
 	SetTownGold(TownName, GetTownGold(TownName) - nBooty);
 	nExp = troops * 50;

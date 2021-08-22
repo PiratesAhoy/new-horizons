@@ -28,6 +28,7 @@ void InitInterface_RR(string iniName,ref pCharacter,ref enemyCh)
 
 	xi_refMainChar = GetMainCharacter();
 	xi_refCharacter = pCharacter;
+	nCompanionIndex = sti(enemyCh.index); //PW: if two companions involved
 
 	refMyCharacter = xi_refCharacter;
 	refEnemyCharacter = enemyCh;

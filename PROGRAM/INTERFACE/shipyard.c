@@ -18,7 +18,7 @@
 TIH <-- */
 
 //Levis for optimalization
-#define DEBUG_SHIPYARD_INTERFACE		0 	//(bool) set to 1 for debug messages
+#define DEBUG_SHIPYARD_INTERFACE		0	//(bool) set to 1 for debug messages
 
 // KK -->
 #define SCREEN_REPAIR         0
@@ -760,7 +760,7 @@ void UpdateFourData()
 		{
 			SetShowMode(ISHOW_MODE_VIEW);
 			makearef(arCurShip, Characters[cn].ship); // PRS3
-			SetViewShipData(cn, GetSellPrice(nCurFourNum,"includecargo"), 0); // TIH added handler Jul27'06 // PRS3 // KK
+			SetViewShipData(cn, GetSellPrice(nCurFourNum,"skipcargo"), 0); // TIH added handler Jul27'06 // PW: now "skipcargo"
 		}
 	}
 }
@@ -889,7 +889,7 @@ void SetViewShipData(int cn, int buyPrice, int Reduction) // modded to PRS3, add
 			else
 			{
 				if( CheckAttribute(GameInterface,"scrollitems."+(attributeName)+".navyship") && GameInterface.scrollitems.(attributeName).navyship==true )
-				{GameInterface.strings.NoBuyString = XI_ConvertString("Cannot Buy - Navy Ship");}
+				{GameInterface.strings.NoBuyString = XI_ConvertString("Cannot Buy - Rank Too Low");}
 				else
 				{GameInterface.strings.NoBuyString = XI_ConvertString("Cannot Buy - Tier Too High");}
 			}
@@ -1472,7 +1472,7 @@ void ProcessCommandExecute()
 					/*SetShowMode(ISHOW_MODE_SELL);
 					SetCurrentNode("OK_BUTTON");
 					makearef(arCurShip, Characters[GetCompanionIndex(mchr,nCurFourNum)].ship); // PRS3
-					GameInterface.strings.TradePrice = MakeMoneyShow(GetSellPrice(nCurFourNum,"includecargo"),MONEY_SIGN,MONEY_DELIVER);*/// TIH added handler Jul27'06
+					GameInterface.strings.TradePrice = MakeMoneyShow(GetSellPrice(nCurFourNum,"skipcargo"),MONEY_SIGN,MONEY_DELIVER);*/// TIH added handler Jul27'06 //PW was "includecargo" but would mask ship price so now skip even though currently commented out
 					ProcessSellShip();
 				}
 			} else {
@@ -1997,6 +1997,7 @@ void FillSScroll()
 	GameInterface.scrollitems.ImagesGroup.t3 = "SHIPS2";
 	GameInterface.scrollitems.ImagesGroup.t4 = "SHIPS3";
 	GameInterface.scrollitems.ImagesGroup.t5 = "SHIPS4";
+	GameInterface.scrollitems.ImagesGroup.t6 = "SHIPS5";
 
 	// TIH --> sy_rpg_style selection visual adjustment Jul27'06
 	if ( SY_RPG_STYLE ) {
@@ -2057,56 +2058,56 @@ void FillSScroll()
 							if(RANK_FOR_FIRST_RATE == 0 && !HaveLetterOfMarque(GetCurrentLocationNation()))
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 
-							if(RANK_FOR_FIRST_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) <= RANK_FOR_FIRST_RATE)
+							if(RANK_FOR_FIRST_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) < RANK_FOR_FIRST_RATE)
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 							break;
 						case 2:
 							if(RANK_FOR_SECOND_RATE == 0 && !HaveLetterOfMarque(GetCurrentLocationNation()))
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 
-							if(RANK_FOR_SECOND_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) <= RANK_FOR_SECOND_RATE)
+							if(RANK_FOR_SECOND_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) < RANK_FOR_SECOND_RATE)
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 							break;
 						case 3:
 							if(RANK_FOR_THIRD_RATE == 0 && !HaveLetterOfMarque(GetCurrentLocationNation()))
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 
-							if(RANK_FOR_THIRD_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) <= RANK_FOR_THIRD_RATE)
+							if(RANK_FOR_THIRD_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) < RANK_FOR_THIRD_RATE)
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 							break;
 						case 4:
 							if(RANK_FOR_FOURTH_RATE == 0 && !HaveLetterOfMarque(GetCurrentLocationNation()))
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 
-							if(RANK_FOR_FOURTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) <= RANK_FOR_FOURTH_RATE)
+							if(RANK_FOR_FOURTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) < RANK_FOR_FOURTH_RATE)
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 							break;
 						case 5:
 							if(RANK_FOR_FIFTH_RATE == 0 && !HaveLetterOfMarque(GetCurrentLocationNation()))
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 
-							if(RANK_FOR_FIFTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) <= RANK_FOR_FIFTH_RATE)
+							if(RANK_FOR_FIFTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) < RANK_FOR_FIFTH_RATE)
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 							break;
 						case 6:
 							if(RANK_FOR_SIXTH_RATE == 0 && !HaveLetterOfMarque(GetCurrentLocationNation()))
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 
-							if(RANK_FOR_SIXTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) <= RANK_FOR_SIXTH_RATE)
+							if(RANK_FOR_SIXTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) < RANK_FOR_SIXTH_RATE)
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 							break;
 						case 7:
 							if(RANK_FOR_SEVENTH_RATE == 0 && !HaveLetterOfMarque(GetCurrentLocationNation()))
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 
-							if(RANK_FOR_SEVENTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) <= RANK_FOR_SEVENTH_RATE)
+							if(RANK_FOR_SEVENTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) < RANK_FOR_SEVENTH_RATE)
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 							break;
 						case 8:
 							if(RANK_FOR_EIGHTH_RATE == 0 && !HaveLetterOfMarque(GetCurrentLocationNation()))
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 
-							if(RANK_FOR_EIGHTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) <= RANK_FOR_EIGHTH_RATE)
+							if(RANK_FOR_EIGHTH_RATE > 0 && GetRank(GetMainCharacter(), GetCurrentLocationNation()) < RANK_FOR_EIGHTH_RATE)
 							{GameInterface.scrollitems.(attributeName).navyship = true;}
 							break;
 					}
@@ -2228,6 +2229,7 @@ void FillShipAppearanceScroll()
 	GameInterface.scrollshipappearance.ImagesGroup.t4 = "SHIPS2";
 	GameInterface.scrollshipappearance.ImagesGroup.t5 = "SHIPS3";
 	GameInterface.scrollshipappearance.ImagesGroup.t6 = "SHIPS4";
+	GameInterface.scrollshipappearance.ImagesGroup.t7 = "SHIPS5";
 	GameInterface.scrollshipappearance.SpecTechniqueColor = argb(90,255,255,255);
 	GameInterface.scrollshipappearance.SpecTechniqueName = "iSpec1";
 	for (i = 0; i < SHIP_TYPES_QUANTITY; i++) {
@@ -2418,7 +2420,8 @@ void FillFourImages()
 	GameInterface.FourImage.ImagesGroup.t3 = "SHIPS2";
 	GameInterface.FourImage.ImagesGroup.t4 = "SHIPS3";
 	GameInterface.FourImage.ImagesGroup.t5 = "SHIPS4";
-	GameInterface.FourImage.ImagesGroup.t6 = "EMPTYFACE";
+	GameInterface.FourImage.ImagesGroup.t6 = "SHIPS5";
+	GameInterface.FourImage.ImagesGroup.t7 = "EMPTYFACE";
 	ref refMainCh = GetMainCharacter();
 	FillFaceList( "FourImage.ImagesGroup", refMainCh, 0 ); // officers
 	FillFaceList( "FourImage.ImagesGroup", refMainCh, 1 ); // companions
@@ -2484,7 +2487,7 @@ int GetScrollShipType(int scrollIdx)
 aref GetScrollShipAttr(int scrollIdx)
 {
 	if(DEBUG_SHIPYARD_INTERFACE) trace("GetScrollShipAttr");
-	if(scrollIdx<0 || scrollIdx>=GetAttributesNum(arShipList)) return NullCharacter;
+	if(scrollIdx<0 || scrollIdx>=GetAttributesNum(arShipList)) return &NullCharacter;
 	return GetAttributeN(arShipList,scrollIdx);
 }
 // PRS3 <--
@@ -2638,33 +2641,42 @@ int GetSellPrice(int fourIdx, string cargoHandler)
 	
 	price -= makeint(SellCannons(GetCharacter(cn), GetCannonQuantity(GetCharacter(cn)))); //Levis just use the cannon sell price instead of the delta
 	
-	if ( cargoHandler == "includecargo" ) {// TIH added handler Jul27'06
+	//Levis negative prices fix // PW: moved above cargo handler so you get cargo value plus minimum
+	if(price<(shipprice * 0.05))
+	{
+		price = makeint(shipprice * 0.05); //5% of shipprice is the minimum you will get.
+	}
+
+	if ( cargoHandler == "includecargo" ) // TIH added handler Jul27'06
+	{
 		if(gprice[fourIdx] == -1)
 		{
 			gprice[fourIdx] = 0;
 			// Viper - Add Cargo Value to Ship Price -->
-			int p, tQuantity;	ref refStore;
+			int p, tQuantity, Quantity, j ;	ref refStore;
 			ref refCharacter = GetCharacter(cn);
 			int curStoreIdx = GetCharacterCurrentStore(PChar);
 			makeref (refStore, Stores[curStoreIdx]);
 			for(i=0;i<GOODS_QUANTITY;i++)
 			{
+				// PW: Replacing Temp Fix -->
+				p = 0;
 				if( !GetStoreGoodsUsed(refStore,i) ) { continue; }
 				tQuantity = GetCargoGoods(refCharacter,i);
 				if( tQuantity==0 ) { continue; }
-				//p = GetGoodPriceByType(&refStore, PChar, i, tQuantity, PRICE_TYPE_SELL); // NK
-				int unitSize = sti(Goods[i].Units); //Levis: TempFix
-				p = makeint((tQuantity*GetStoreGoodsPrice(&refStore, i, PRICE_TYPE_SELL, PChar, 0) + unitSize-1) / unitSize); //Levis: TempFix
+				int unitSize = sti(Goods[i].Units); //PW replacing --> Levis: TempFix
+				Quantity = tQuantity/unitSize;
+				for(j=0;j<Quantity;j++)
+				{
+					if (tradeLow==false) p += makeint(GetStoreGoodsPrice(&refStore, i, PRICE_TYPE_SELL, PChar, j)); //PW replacing //Levis: TempFix
+					else p += makeint(GetStoreGoodsPrice(&refStore, i, PRICE_TYPE_SELL, PChar, j)/4*3);
+				}
+
 				gprice[fourIdx] += p;
+				// PW: Replacing Temp Fix <--
 			}
 		}
-	}
-	price += makeint(gprice[fourIdx]);
-
-	//Levis negative prices fix
-	if(price<(shipprice * 0.05))
-	{
-		price = makeint(shipprice * 0.05); //5% of shipprice is the minimum you will get.
+		price += makeint(gprice[fourIdx]);
 	}
 	return price;
 }
@@ -3255,14 +3267,16 @@ void ClampShipToType(ref chref)
 	int minnumdaysrations = 10;
 	for(i=0; i<GOODS_QUANTITY; i++)
 	{
-		int oldq, pricediff;
+		int oldq, pricediff, Quantity, j;
+		pricediff = 0;
 		int mcmoney = GetCharacterMoney(GetMainCharacter());
 		ref cstore = &Stores[GetCharacterCurrentStore(GetMainCharacter())];
         if(FOOD_ON == 1 && i == GOOD_WHEAT && gq[i] < makeint(sti(chref.ship.crew.quantity) * FOOD_PER_CREW * minnumdaysrations))
 		{
 			oldq = gq[i];
 			gq[i] = makeint(sti(chref.ship.crew.quantity) * FOOD_PER_CREW * minnumdaysrations); // 10 days worth of food in case of need.
-			pricediff = GetGoodPriceByType(&cstore, GetMainCharacter(), i, gq[i] - oldq, PRICE_TYPE_BUY);
+		//	pricediff = GetGoodPriceByType(&cstore, GetMainCharacter(), i, gq[i] - oldq, PRICE_TYPE_BUY); // PW: calc to match store
+			pricediff = GetStoreGoodsPrice(&cstore, i, PRICE_TYPE_BUY, GetMainCharacter(), gq[i] - oldq); // PW: calc to (roughly) match store ie same function call
 			// TIH --> fixed this so it doesn't plumment the player into debt ! Jul27'06
 			if(mcmoney > pricediff)
 			{
@@ -3292,7 +3306,14 @@ void ClampShipToType(ref chref)
         //if(FOOD_ON == 1 && oldq < gq[i]) {
         if(oldq < gq[i]) {
 			// sold some
-			pricediff = GetGoodPriceByType(&cstore, GetMainCharacter(), i, gq[i] - oldq, PRICE_TYPE_SELL);
+			//PW: method changed to equate to store prices -->
+			Quantity = (gq[i] - oldq)/sti( Goods[i].Units );
+			for(j=0; j<Quantity; j++)
+			{
+				if(tradeLow==false) pricediff += makeint(GetStoreGoodsPrice(&cstore, i, PRICE_TYPE_SELL, GetMainCharacter(), j));
+				else 	pricediff += makeint(GetStoreGoodsPrice(&cstore, i, PRICE_TYPE_SELL, GetMainCharacter(), j)/4*3);
+			}
+			// PW <--
 			AddStoreGoods(&cstore, i, gq[i] - oldq);
 			nStoreMoney -= pricediff;
 			AddMoneyToCharacter(GetMainCharacter(), pricediff);
@@ -3305,7 +3326,7 @@ void ClampShipToType(ref chref)
 			Log_SetStringToLog(TranslateString("","Too little room! Your purser makes an emergency sale of") + " " + (gq[i]-oldq) + " " + TranslateString("","units of") + " " + XI_ConvertString(Goods[i].Name) + " " + TranslateString("","from the") + " " + GetMyShipNameShow(chref) + " " + TranslateString("","for a total of") + " " + pricediff + " " + TranslateString("","Gold") + ".");
 		}
 	}
-
+	SetTownGold(sTownName, nStoreMoney); // PW: added because changes to store money from excess cargo were not saved on exiting shipyard
 	if( sti(chref.index)==GetMainCharacterIndex() )
 	{
 		if( CheckAttribute(chref,"location.old_from_sea") ) {
@@ -3873,8 +3894,17 @@ void ProcessBuyShip()
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "CONFIRM_NO_BUTTON");
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "CONFIRM_YES_BUTTON");
 			string text = "";
+			string acquired = "";
+			switch (ShipAcquiredState(arCurShip))
+			{
+				case "bought":	acquired = "owned ship ";		break;
+				case "taken":	acquired = "auction prize ";	break;
+				case "pirated":	acquired = "pirated ship ";		break;
+			}
+
 			if (EnableLimitedShipClass() && GetShipMinClassForCharacter(mchr) > sti(ShipsTypes[st].Class)) text = TranslateString("", "This officer has too low Leadership and Sailing skills to command this ship.") + GlobalStringConvert("newline");
 			text += TranslateString("", "Buy this ship for") + " " + MakeMoneyShow(buyPrice,MONEY_SIGN,MONEY_DELIVER) + "?";
+			if (sPrice>0) text += TranslateString("", " ") + GlobalStringConvert("newline") + acquired + "trade-in " + MakeMoneyShow(sPrice,MONEY_SIGN,MONEY_DELIVER) + "  new ship price " + MakeMoneyShow(bPrice,MONEY_SIGN,MONEY_DELIVER);
 			SetFormatedText("TEXTWINDOW", text);
 		}
 	/*} else {
@@ -3925,7 +3955,15 @@ void ProcessSellShip()
 			SetCurrentNode("CONFIRM_YES_BUTTON");
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "CONFIRM_NO_BUTTON");
 			SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "CONFIRM_YES_BUTTON");
-			string text = TranslateString("", "Sell this ship for") + " " + MakeMoneyShow(GetSellPrice(nCurFourNum,"skipcargo"),MONEY_SIGN,MONEY_DELIVER) + "?";
+			int shipCost1 = GetSellPrice(nCurFourNum,"includecargo");
+			string acquired = "";
+			switch (ShipAcquiredState(arCurShip))
+			{
+				case "bought":	acquired = "owned ship ";		break;
+				case "taken":	acquired = "auction prize ";	break;
+				case "pirated":	acquired = "pirated ship ";		break;
+			}
+			string text = TranslateString("", "Sell this ") + acquired + "for" + " " + MakeMoneyShow(GetSellPrice(nCurFourNum,"includecargo"),MONEY_SIGN,MONEY_DELIVER) + "?" + GlobalStringConvert("newline") + "of which " + MakeMoneyShow(shipCost1 - gPrice[nCurFourNum],MONEY_SIGN,MONEY_DELIVER) + " is ship and " + MakeMoneyShow((gPrice[nCurFourNum]),MONEY_SIGN,MONEY_DELIVER) + " is cargo";
 			SetFormatedText("TEXTWINDOW", text);
 		}
 		else
@@ -4432,7 +4470,7 @@ void ProcessInstallSU()
 	int cost = GetCostTun(cn, upgrade, PRICE_TYPE_BUY);
 	if (CheckTun(cn, upgrade))
 	{
-		UnApplyTun(cn, upgrade,0); // PB: Getting money back is handled by the function itself, PW: boolean added for NOT berthing removal
+		UnApplyTun(cn, upgrade,0); // PB: Getting money back is handled by the function itself, PW: boolean added for NOT berthing removal so it takes time in game
 	}
 	else
 	{
@@ -4450,7 +4488,7 @@ void ProcessInstallSU()
 	GameInterface.strings.Money = MakeMoneyShow(GetMyMoney(),MONEY_SIGN,MONEY_DELIVER);
 	GameInterface.strings.SMoney = MakeMoneyShow(nStoreMoney,MONEY_SIGN,MONEY_DELIVER);
 	// Screwface
-	shipwright.Money = GetCharacterMoney(shipwright) + cost;
+	//shipwright.Money = GetCharacterMoney(shipwright) + cost;//PW commented out: 4 lines above the money has already been put in the store money
 	DeleteAttribute(&GameInterface, "scrollshipupgrades");
 	FillShipUpgradesScroll();
 	nCurSUScrollNum = currentupgrade;

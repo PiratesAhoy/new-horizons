@@ -33,7 +33,7 @@ void RegisterStoryline(int n)
 		break;
 		// default:
 			sl.(sn).title = "Tales of a Sea Hawk";
-			sl.(sn).description = "As a new face in the Caribbean, you are determined to make a name for yourself through fair means or foul. You can try to convince yourself that you fight for riches and glory alone, but you came here for another reason. Will you manage to regain the affection of Danielle and win her heart back again? Or will you simply become another tortured soul; lost amongst these wild and dangerous islands, forced to seek fame and fortune as scant, cold comfort?";
+			sl.(sn).description = "As a new face in the Caribbean, you are determined to make a name for yourself through fair means or foul. You can try to convince yourself that you fight for riches and glory alone, but you came here for another reason. Will you manage to regain the affection of Danielle and win her heart back again? Or will you simply become another tortured soul; lost amongst these wild and dangerous islands, forced to seek fame and fortune as scant, cold comfort? (Or perhaps you'd prefer to play as Danielle...)";
 	}
 	AddStorylineVar(n, "ISLA_DE_MUERTE", "1");		// PB: Curse in effect and can visit Isla de Muerte
 	AddStorylineVar(n, "START_MIN_LEVEL", "1");		// PB: Start storyline at rank 1

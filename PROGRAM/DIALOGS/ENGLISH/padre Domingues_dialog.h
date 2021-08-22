@@ -1,9 +1,9 @@
 string DLG_TEXT[145] = {
-"Hello, my son. What brings you to the bosom of the Church? Did you come for confession, or perhaps to make a donation?",
+"Hello, my #schild#. What brings you to the bosom of the Church? Did you come for confession, or perhaps to make a donation?",
 "I have to speak with you, Padre.",
 "I'd like to make a donation, Padre.",
 "Just having a look around. I have to go.", //3
-"I'm listening, my son.",
+"I'm listening, my #schild#.",
 "I need access to the church library, Padre.",
 "I have those papers that were stolen from you.", //6
 "The papers you sent me to find now rest at the bottom of the sea - along with the one who stole them.",
@@ -12,7 +12,7 @@ string DLG_TEXT[145] = {
 "I'm afraid I wasn't able to fulfill your mission. By the time I reached the island, the 'Montanez' was already in combat with two pirate ships, and they sank her.", //10
 "I've carried out your assignment. The ship you asked me to escort is docked at the port.",
 "I don't have any business with you right now.",
-"You've done well, my son! Did your voyage go smoothly?",
+"You've done well, my #schild#! Did your voyage go smoothly?",
 "Not entirely. When I finally met the barque, it had been attacked by two pirate ships bent on sinking it at any cost.", //14
 "I thank the Lord you were delivered safely! Is there anything else?",
 "Yes, there was one other thing. The ship's captain set down some passenger at #sisland_Oxbay#...",
@@ -22,13 +22,13 @@ string DLG_TEXT[145] = {
 "Thank you, Padre. And what is this new task?",
 "My Lord - this is grave news indeed! Someone obviously knows of our plans and is actively opposing them. I pray there were survivors who reached shore and escaped being captured.", //21
 "I'm very sorry, Padre.",
-"None of that, my son. You did all you could, and I think it would be unfair not to pay you for your attempt to help the Holy Church.",
+"None of that, my #schild#. You did all you could, and I think it would be unfair not to pay you for your attempt to help the Holy Church.",
 "Thank you.",
 "Now, would you agree to carry out another mission for me?",
 "First, I'd like some questions answered, if you don't mind.",
 "Nothing extraordinary. Just take this letter to #sFatherBernard# on #sisland_Redmond#. And please be careful - make certain no one sees it but him! I now have reason to believe we have a traitor in our midst.",
 "It would seem so. I'll go now, if I may.", //28
-"Yes, and may the good Lord be with you, my son.",
+"Yes, and may the good Lord be with you, my #schild#.",
 "Amen to that, Padre.",
 "Let me see. Yes...yes, it's just as I thought! You've done well, but let me ask you a couple of questions.",
 "Of course. What would you like to know?",
@@ -37,7 +37,7 @@ string DLG_TEXT[145] = {
 "You noticed that, did you? I knew this wouldn't end well.", //35
 "So who opened it?",
 "They were waiting for me at the bay when I landed. I had no choice but to let them see the letter. Men in red robes...it was as if they knew I was going to land there!",
-"I see. This is easily forgiven, my son - especially since we foresaw this and wrote the letter in code. You've actually helped us to mislead our enemy. I'm pleased to pay you the sum I promised.",
+"I see. This is easily forgiven, my #schild# - especially since we foresaw this and wrote the letter in code. You've actually helped us to mislead our enemy. I'm pleased to pay you the sum I promised.",
 "Thank you.",
 "It's clear you feel no remorse for what you've done. That's your choice, of course. But I'll ask you to leave this church!", //40
 "As you wish.",
@@ -46,7 +46,7 @@ string DLG_TEXT[145] = {
 "Well, ",
 "Father Bernard",
 ", asked me to land at a secluded bay to escape trouble - but they were waiting for me there...",
-"Speak plainly in the Lord's house, my son. You're suggesting that...",
+"Speak plainly in the Lord's house, my #schild#. You're suggesting that...",
 "I'm suggesting nothing. I don't have enough evidence to accuse anyone. You have to agree, though, that this is very suspicious. At the bay, three men in red robes were waiting for me, and they were quite interested in the letter. So interested, in fact, that I was forced to kill them.", //48
 "I see that ",
 "Father Bernard",
@@ -66,14 +66,14 @@ string DLG_TEXT[145] = {
 "You should be glad your enemies won't be able to use them against you, Padre.",
 "That's true. But it's still a shame to lose them.",
 "I'm sorry. Does this mean I can't have access to the library?",
-"Perhaps it should - but you strike me as a man who would find a way regardless.",
+"Perhaps it should - but you strike me as a #sperson# who would find a way regardless.",
 "So, I may go in?",
 "Yes, you may. You've got the whole day for reading. It's strange, though - you're the second person who's wanted to get in there so badly.", //69
 "Thank you, Padre.",
 "Perfect! Please, give them to me right now.",
 "Here they are.",
 "Not so fast, Padre!", //73
-"What do you mean, my son?",
+"What do you mean, my #schild#?",
 "I've found out what kind of papers these are - so naturally their price has gone up.",
 "You're blackmailing me?!",
 "Did you think your priestly robes made you immune to a little honest extortion? If you don't want these papers to fall into the wrong hands, you'll give me access to the library and 5000 cash.",
@@ -81,7 +81,7 @@ string DLG_TEXT[145] = {
 "Well, let's just check these notes, shall we? Yes, here it is: '...17000 gold were given to equip the ship and hire sailors....' What I'm asking for is just a fraction of that amount.",
 "Enough! We may be heard. Here is your money. Now give me those papers!",
 "They're all yours. Now how about the library?", //81
-"You've done a fine job for the good of Church, my son. You will be rewarded.",
+"You've done a fine job for the good of Church, my #schild#. You will be rewarded.",
 "What about the library? May I go in there?",
 "Oh, yes. I'd forgotten about that. Of course you may go in. It's strange, though - you're the second person who's wanted to get in there so badly.",
 "Thank you, Padre.",
@@ -96,32 +96,32 @@ string DLG_TEXT[145] = {
 "So, you want me to find out if he has the papers - and bring them back to you if he does?",
 "Yes. They're very important documents. Leave no stone unturned in your search for them.",
 "Where can I find this man?",
-"I managed to find out that he has his own ship. It's a pinnace, if I am not mistaken. And he is often seen at #sConceicao# - he's probably involved in smuggling.",
+"I managed to find out that he has his own ship. It's a sloop, if I am not mistaken. And he is often seen at #sConceicao# - he's probably involved in smuggling.",
 "I'll find him. Will you allow me access to the library if I bring the papers back?", //98
 "Certainly. You'll be able to spend one full day in there, although I don't understand why a sailor would be interested in that.",
 "Bless me then, Padre, and I'll be on my way.",
-"Of course, my son. How much do you want to give?",
+"Of course, my #schild#. How much do you want to give?",
 "I am sorry, Padre, but I can't make a donation just now.",
 "I'm afraid 100 gold is all I can afford just now.",
 "I should think the Lord would look kindly on 1000 gold.",
 "I'm doing well these days, so I'll give 5000 gold piasters.",
-"It's your decision, my son. It's never too late to change - and keep in mind that all will be taken into account at the time of your death.",
+"It's your decision, my #schild#. It's never too late to change - and keep in mind that all will be taken into account at the time of your death.",
 "My death is still a long way off, God willing! Let's talk about something else.",
 "Sorry, Padre. I've got to go.",
-"I thank you for your gift in the name of the Holy Church, my son.",
+"I thank you for your gift in the name of the Holy Church, my #schild#.",
 "I need to talk to you, Padre.",
 "I'm sorry, Padre, but I've got to go.",
-"I thank you for your gift in the name of the Holy Church, my son.",
+"I thank you for your gift in the name of the Holy Church, my #schild#.",
 "I need to talk to you, Padre.",
 "I'm sorry, Padre, but I've got to go.",
-"I thank you for your gift in the name of the Holy Church, my son.",
+"I thank you for your gift in the name of the Holy Church, my #schild#.",
 "I need to talk to you, Padre.",
 "I'm sorry, Padre, but I've got to go.", //117
 "Yes, we believe it does. Are you investigating that yourself?",
 "I'm acting on behalf of the mothers of those children.",
-"Very kind of you to be so concerned, my son.",
-"Well, I'm also a practical man, Padre. Whatever puts gold in my pouch.",
-"I'll answer what I can, my son.", //122
+"Very kind of you to be so concerned, my #schild#.",
+"Well, I'm also a practical #sperson#, Padre. Whatever puts gold in my pouch.",
+"I'll answer what I can, my #schild#.", //122
 "Does this have anything to do with the missing children?",
 "Yes, we believe it does. Are you investigating that yourself?",
 "I'm acting on behalf of the mothers of those children.",
@@ -133,7 +133,7 @@ string DLG_TEXT[145] = {
 "Where are they?",
 "They've been holding the children on their ship! You must go after them!",
 "Too right. Here's the keys I found on the leader. Once I've dealt with the ship, I'll take you back to the church.",
-"I shall pray for you, my son.",
+"I shall pray for you, my #schild#.",
 "This is going to be a big fight, Padre. Pray for us all.",
 "Be careful, Captain. Their leader is wily. There is a room behind that throne.",
 "Hmm...", //137

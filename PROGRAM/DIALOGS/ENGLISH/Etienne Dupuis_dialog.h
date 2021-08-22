@@ -1,5 +1,5 @@
 string DLG_TEXT[23] = {
-"Stop, Monsieur! What are you doing here?",
+"Stop, #ssir#! What are you doing here?",
 "You arrested a man a few minutes ago in the brothel.",
 "Yes. So what?",
 "I want to talk to him. Is that possible?",
@@ -9,7 +9,7 @@ string DLG_TEXT[23] = {
 "Excellent. Now we're getting somewhere. Here's your 500 gold coins. Now let me in.",
 "That's quite a lot of gold you want. I'll be back later.",
 "Very well. I'll allow you in. But don't stay in there too long.",
-"No problem. I don't intend to remain in such a gloomy prison as this for longer than nescessary.",
+"No problem. I don't intend to remain in such a gloomy prison as this for longer than necessary.",
 "Goodbye and thanks for your visit. I'll make good use of your gold when the brothel opens again.",
 "Actually, I was wondering if you could do me one more favour. It'll gain you another 500 coins if you help me.",
 "Please tell me you don't want me to release the prisoner. I won't do that. Not even for 50000 gold coins. The governor would have me arrested immediately. And executed as well, most likely.",
@@ -19,7 +19,7 @@ string DLG_TEXT[23] = {
 "So are you ready to give me the money now?",
 "Yes. Here it is. Now let me in.",
 "You know very well what I mean.",
-"Hmm. If you give me 500 gold coins, that might convince me of your trustworthyness.",
+"Hmm. If you give me 500 gold coins, that might convince me of your trustworthiness.",
 "The only person with that power is the governor. Talk to him about it. But don't expect it to be cheap.",
 "Thanks. I'm going to PAY him a visit then.",
 

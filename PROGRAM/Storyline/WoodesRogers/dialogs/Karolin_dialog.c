@@ -38,31 +38,29 @@ void ProcessDialogEvent()
 				case "Kri_soldier_6": PlaySound("VOICE\ENGLISH\Dut_m_a_008.wav"); break;
 				case "Kri_soldier_7": PlaySound("VOICE\ENGLISH\Desmond Ray Beltrop.wav"); break;
 				case "Kri_soldier_8": PlaySound("VOICE\ENGLISH\Spa_m_a_029.wav"); break;
-				case "Kri_soldier_9": PlaySound("VOICE\ENGLISH\gm_crew1B.wav"); break;
+				case "Kri_soldier_9": PlaySound("VOICE\ENGLISH\Dut_m_a_043.wav"); break;
 				case "Kri_soldier_10": PlaySound("VOICE\ENGLISH\Spa_m_b_031.wav"); break;
 				case "Kri_soldier_11": PlaySound("VOICE\ENGLISH\Dut_m_a_032.wav"); break;
 				case "Kri_soldier_12": PlaySound("VOICE\ENGLISH\gm_crew7.wav"); break;
-
-			case "Kri_soldier_13": PlaySound("VOICE\ENGLISH\jrh_3.wav"); break;
-			case "Kri_soldier_14": PlaySound("VOICE\ENGLISH\gm_crew1C.wav"); break;
+				case "Kri_soldier_13": PlaySound("VOICE\ENGLISH\jrh_3.wav"); break;
+				case "Kri_soldier_14": PlaySound("VOICE\ENGLISH\gm_crew1C.wav"); break;
 				
-			case "Kri_gunner_1": PlaySound("VOICE\ENGLISH\gm_crew1A.wav"); break;
+				case "Kri_gunner_1": PlaySound("VOICE\ENGLISH\gm_crew1A.wav"); break;
 				case "Kri_gunner_2": PlaySound("VOICE\ENGLISH\Spa_m_a_031.wav"); break;
 				case "Kri_gunner_3": PlaySound("VOICE\ENGLISH\gr_friday4.wav"); break;
 				case "Kri_gunner_4": PlaySound("VOICE\ENGLISH\Spa_m_b_032.wav"); break;
 				case "Kri_gunner_5": PlaySound("VOICE\ENGLISH\defoe_psst.wav"); break;
-				case "Kri_gunner_6": PlaySound("VOICE\ENGLISH\Dut_m_a_035.wav"); break;
-
-			case "Kri_gunner_7": PlaySound("VOICE\ENGLISH\Dut_m_a_023.wav"); break;
-			case "Kri_gunner_8": PlaySound("VOICE\ENGLISH\pir_capMMM.wav"); break;
+				case "Kri_gunner_6": PlaySound("VOICE\ENGLISH\Dut_m_a_023.wav"); break;
+				case "Kri_gunner_7": PlaySound("VOICE\ENGLISH\Dut_m_a_035.wav"); break;
+				case "Kri_gunner_8": PlaySound("VOICE\ENGLISH\pir_capMMM.wav"); break;
+				case "Kri_gunner_9": PlaySound("VOICE\ENGLISH\jrh_6.wav"); break;
 
 				case "Kri_dragoon_1": PlaySound("VOICE\ENGLISH\Bolitho3.wav"); break;
 				case "Kri_dragoon_2": PlaySound("VOICE\ENGLISH\Spa_m_b_030.wav"); break;
 				case "Kri_dragoon_3": PlaySound("VOICE\ENGLISH\pir_capKK.wav"); break;
-				case "Kri_dragoon_4": PlaySound("VOICE\ENGLISH\gm_crew12A.wav"); break;
-
-			case "Kri_dragoon_5": PlaySound("VOICE\ENGLISH\Dut_m_a_043.wav"); break;
-			case "Kri_dragoon_6": PlaySound("VOICE\ENGLISH\Dut_m_a_025.wav"); break;
+				case "Kri_dragoon_4": PlaySound("VOICE\ENGLISH\black_witch_ahh.wav"); break;
+				case "Kri_dragoon_5": PlaySound("VOICE\ENGLISH\gm_crew1B.wav"); break;
+				case "Kri_dragoon_6": PlaySound("VOICE\ENGLISH\Dut_m_a_025.wav"); break;
 			}
 
 			int iPhrase = rand(10);
@@ -134,6 +132,62 @@ void ProcessDialogEvent()
 					link.l1 = DLG_TEXT[21];
 					link.l1.go = "exit";
 				break;
+			}
+		break;
+
+		case "password":
+			PlaySound("VOICE\ENGLISH\black_witch_ahh.wav");
+			dialog.text = DLG_TEXT[22];
+			if(CheckAttribute(Pchar, "Kr_password") && Pchar.Kr_password == "known")
+			{
+				link.l1 = DLG_TEXT[25];
+				link.l1.go = "password1";
+			}
+			else 
+			{
+				link.l1 = DLG_TEXT[24];
+				link.l1.go = "exit";
+				AddDialogExitQuest("fort_no_password_done");
+			}
+		break;
+
+		case "password1":
+			PlaySound("VOICE\ENGLISH\black_witch_what.wav");
+			dialog.text = DLG_TEXT[26];
+			link.l1 = DLG_TEXT[27];
+			link.l1.go = "password2";
+		break;
+
+		case "password2":
+			PlaySound("VOICE\ENGLISH\black_witch_ehh.wav");
+			dialog.text = DLG_TEXT[28];
+			link.l1 = DLG_TEXT[23];
+			link.l1.go = "exit";
+			AddDialogExitQuest("fort_password_done");
+		break;
+	
+		case "no_commander":
+			PlaySound("VOICE\ENGLISH\Dut_m_a_035.wav");
+			dialog.text = DLG_TEXT[29];
+			link.l1 = DLG_TEXT[30];
+			link.l1.go = "exit";
+			AddDialogExitQuest("no_commander_done");
+		break;
+	
+		case "jungle_path":
+			PlaySound("VOICE\ENGLISH\jrh_3.wav");
+			dialog.text = DLG_TEXT[31];
+			if(CheckAttribute(Pchar,"jungle_path") && Pchar.jungle_path == "know_how")
+			{
+				link.l1 = DLG_TEXT[32];
+				link.l1.go = "exit";
+				AddDialogExitQuest("jungle_path_known");
+			}
+			else 
+			{
+				link.l1 = DLG_TEXT[33];
+				link.l1.go = "exit";
+				AddDialogExitQuest("jungle_path_done");
 			}
 		break;
 

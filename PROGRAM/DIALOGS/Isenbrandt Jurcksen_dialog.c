@@ -13,6 +13,9 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
+	Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 
 	
 	switch(Dialog.CurrentNode)
@@ -74,6 +77,7 @@ void ProcessDialogEvent()
 			{
 				if (makeint(pchar.reputation) > 60 || makeint(pchar.reputation) < 30)
 				{
+					Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 					dialog.text = pcharrepphrase(DLG_TEXT[8] + GetMyName(Pchar) + DLG_TEXT[9], DLG_TEXT[10] + GetMyName(Pchar) + DLG_TEXT[11]);
 					link.l1 = pcharrepphrase(DLG_TEXT[12], DLG_TEXT[13]);
 					link.l1.go = "node_2";
@@ -94,6 +98,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "node_3":
+			if(PChar.sex == "woman") Preprocessor_Add("child", XI_ConvertString("girl"));
+			else Preprocessor_Add("child", XI_ConvertString("boy"));
 			dialog.text = DLG_TEXT[19];
 			link.l1 = DLG_TEXT[20] + characters[GetCharacterIndex(DLG_TEXT[21])].lastname + DLG_TEXT[22];
 			link.l1.go = "node_4";

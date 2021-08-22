@@ -751,6 +751,7 @@ void ProcessDialogEvent()
 			Link.l1.go = "incas_collection_complete_5";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			GiveShip2Character(pchar, "WickedWench", "Wicked Wench",-1,ENGLAND,true,true); // PB: Wicked Wench
+			PChar.quest.wench_given_by = "Silehard";
 			AddMoneyToCharacter(pchar, 10000);
 			if (AUTO_SKILL_SYSTEM)
 			{

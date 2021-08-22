@@ -282,6 +282,7 @@ void FillFourImages()
 	GameInterface.FourImage.ImagesGroup.t3 = "SHIPS2";
 	GameInterface.FourImage.ImagesGroup.t4 = "SHIPS3";
 	GameInterface.FourImage.ImagesGroup.t5 = "SHIPS4";
+	GameInterface.FourImage.ImagesGroup.t6 = "SHIPS5";
 	ref refMainCh = GetMainCharacter();
 	for(i=0; i<COMPANION_MAX; i++)
 	{
@@ -1022,7 +1023,7 @@ void SetSkillData()
 	int n;
 	if(cn==-1)
 	{
-		for(n = 0; n < SKILL_MAX; n++)
+		for(n = 0; n < NUM_DIFF_SKILLS; n++)
 		{
 			skill = GetSkillName(n);
 			GameInterface.strings.(skill) = 0;
@@ -1031,7 +1032,7 @@ void SetSkillData()
 	else
 	{
 		ref otherCh = GetCharacter(cn);
-		for(n = 0; n < SKILL_MAX; n++)
+		for(n = 0; n < NUM_DIFF_SKILLS; n++)
 		{
 			skill = GetSkillName(n);
 			int skillval = GetShipSkill(otherCh,skill);

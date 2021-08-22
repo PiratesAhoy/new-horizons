@@ -39,7 +39,7 @@ string DLG_TEXT[50] = {
 "I see. Well since I don't like to get involved in political situations, perhaps I should say farewell.",
 "Appeased? What a remarkable idea. Yes, I know for a fact that both the governor and his former first officer would be delighted to see him gone. They've ordered me to 'do something' with him, in fact. This may be a good solution for all.",
 "Well then it's settled. I'll take him with me when I leave, and he'll be my responsibility.",
-"You seem a respectable man, but I must admit I don't know you well enough to let you vouch for Fred Bob. Please don't be offended, ",
+"You seem a respectable #sgender#, but I must admit I don't know you well enough to let you vouch for Fred Bob. Please don't be offended, ",
 ", but he'll have to find another patron.",
 "Sorry to hear that. Well, goodbye, captain.",
 "Let me ask you something else, if I may.",

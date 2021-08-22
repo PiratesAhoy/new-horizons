@@ -810,7 +810,13 @@ ref BI_CommandEndChecking()
 		case "BI_QARSword":
 			BI_retComValue = 0;
 		break;
-// PB: Queen Anne's Revenge  <--
+// PB: Queen Anne's Revenge <--
+// C92: Sword of Triton Attack -->
+		case "BI_TritonAttack":
+            BI_retComValue = BI_COMMODE_ENEMY_SHIP_SELECT + BI_COMMODE_ALLLOCATOR_SELECT;
+            BattleInterface.Commands.KrakenAttack.EffectRadius    = 1.5*MIN_ENEMY_DISTANCE_TO_DISABLE_MAP_ENTER;
+		break;
+// C92: Sword of Triton Attack <--
 // TJ&PB: Neptune's Trident -->
 		case "BI_NeptuneTrident":
 			BI_retComValue = 0;
@@ -1188,6 +1194,17 @@ void BI_LaunchCommand()
 		}
 	break;
 // PB: Queen Anne's Revenge <--
+// C92: Sword of Triton Attack -->
+    case "BI_TritonAttack":
+		float fDamageMultiply = 0.5;
+		ref        rShip = GetShipByType(GetCharacterShipType(&Characters[targetNum]));
+		float fBaseSailHP = stf(rShip.SP);
+		MakeSailDmg(targetNum, fDamageMultiply * fBaseSailHP);
+		Ship_ApplyCrewHitpoints(GetCharacter(targetNum), fDamageMultiply * GetCrewQuantity(GetCharacter(targetNum)));
+		PChar.ship.speedburst = "QARSword";
+		PostEvent("SpeedBurstFinished",120000, "i", pchar);
+    break;
+// C92: Sword of Triton Attack <--
 // TJ&PB: Neptune's Trident -->
 	case "BI_NeptuneTrident":
 		pchar.skipWeatherLogs = true;
@@ -1446,6 +1463,7 @@ void BI_SetPossibleCommands()
 		BattleInterface.Commands.SubmergeDutchman.enable	= GetAttribute(mainCh, "ship.type") == "CursedDutchman";			// PB: Flying Dutchman
 		BattleInterface.Commands.PearlSweeps.enable			= BPSweepsEnabled();												// PB: Black Pearl
 		BattleInterface.Commands.QARSword.enable			= QARSwordEnabled();												// PB: Queen Anne's Revenge
+		BattleInterface.Commands.TritonAttack.enable		= QARSwordEnabled();								                // C92: Sword of Triton Attack
 		BattleInterface.Commands.NeptuneTrident.enable		= CheckCharacterItem(mainCh, "Trident_Neptune");					// TJ&PB: Neptune's Trident
 
 // FCoHS -->
@@ -1485,6 +1503,7 @@ void BI_SetPossibleCommands()
 		BattleInterface.Commands.SubmergeDutchman.enable	= false; // PB: Flying Dutchman
 		BattleInterface.Commands.PearlSweeps.enable			= false; // PB: Black Pearl
 		BattleInterface.Commands.QARSword.enable			= false; // PB: Queen Anne's Revenge
+		BattleInterface.Commands.TritonAttack.enable		= false; // C92: Sword of Triton Attack
 		BattleInterface.Commands.NeptuneTrident.enable		= false; // TJ&PB: Neptune's Trident
 // FCoHS -->
 		BattleInterface.Commands.FCoHS_Hail.enable			= false;
@@ -1612,6 +1631,12 @@ void BI_InitializeCommands()
 	BattleInterface.Commands.QARSword.event			= "BI_QARSword";
 	BattleInterface.Commands.QARSword.note			= LanguageConvertString(idLngFile, "sea_QARSword");
 // PB: Queen Anne's Revenge <--
+// C92: Sword of Triton Attack -->
+	BattleInterface.Commands.TritonAttack.enable	= false;
+	BattleInterface.Commands.TritonAttack.picNum	= 24;
+	BattleInterface.Commands.TritonAttack.event		= "BI_TritonAttack";
+	BattleInterface.Commands.TritonAttack.note		= LanguageConvertString(idLngFile, "sea_TritonAttack");
+// C92: Sword of Triton Attack <--
 // TJ&PB: Neptune's Trident -->
 	BattleInterface.Commands.NeptuneTrident.enable	= false;
 	BattleInterface.Commands.NeptuneTrident.picNum	= 23;

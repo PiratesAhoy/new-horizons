@@ -196,6 +196,39 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("Vane_mine_search26");
 		break;
 
+		case "about_Richards":
+			PlaySound("VOICE\ENGLISH\pir_capCC.wav");
+			Dialog.text = DLG_TEXT[12];
+			link.l1 = DLG_TEXT[13];
+			link.l1.go = "about_Richards1";
+		break;
+
+		case "about_Richards1":
+			PlaySound("VOICE\ENGLISH\pir_capMMM.wav");
+			Dialog.text = DLG_TEXT[14];
+			link.l1 = DLG_TEXT[15];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_Richards2");
+		break;
+
+		case "about_Richards9":
+			PlaySound("VOICE\ENGLISH\pir_capT.wav");
+			Dialog.text = DLG_TEXT[16];
+			link.l1 = DLG_TEXT[17];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_Richards10");
+		break;
+
+		case "I_am":
+			PlaySound("VOICE\ENGLISH\pir_capGGG.wav");
+			LAi_ActorTurnToCharacter(NPChar, characterFromID("pir_cap1"));
+
+			Dialog.text = DLG_TEXT[18];
+			link.l1 = DLG_TEXT[19];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Vane_rum_explosion11");
+		break;
+
 		case "Exit":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;

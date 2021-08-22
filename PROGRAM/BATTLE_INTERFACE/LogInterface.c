@@ -355,6 +355,12 @@ void CreateLandActionsEnvironment()
 	// PB: Treasure Chest locators <--
 
 	// JRH -->
+	if(Pchar.location == "Santo_Domingo_town")
+	{
+		if (CheckAttribute(PChar, "boxname") && Pchar.boxname == "box1") IActions.ActiveActions.OpenBox.IconNum	= 63;
+		if (CheckAttribute(PChar, "boxname") && Pchar.boxname == "box2") IActions.ActiveActions.OpenBox.IconNum	= 63;
+	}
+
 	if (Pchar.location == "Cartagena_center_facade") IActions.ActiveActions.OpenBox.IconNum	= 63;
 
 	if(Pchar.location == "Cartagena_hotel_room1")
@@ -964,6 +970,19 @@ void procUpdateTime()
 		int iday = GetDataDay();
 		sDateTimeDisplay = XI_ConvertString(GetDayName(GetWeekday(iday, imonth, iyear))) + ", " + GetHumanDate(iyear, imonth, iday);
 		if (sti(mchr.HasClock)) sDateTimeDisplay += " " + GetStringTime(stf(mchr.CurrentTime));
+		// DeathDaisy: approximate time of day when not having a clock
+		else{ 
+			string TimeOfDay;
+			if(GetTime() >= 22 || GetTime() < 3) TimeOfDay = XI_ConvertString("Night");
+			if(GetTime() >= 3 && GetTime() < 6) TimeOfDay = XI_ConvertString("Small Hours");
+			if(GetTime() >= 6 && GetTime() < 7) TimeOfDay = XI_ConvertString("Dawn");
+			if(GetTime() >= 7 && GetTime() < 10) TimeOfDay = XI_ConvertString("Morning");
+			if(GetTime() >= 10 && GetTime() < 14) TimeOfDay = XI_ConvertString("Midday");
+			if(GetTime() >= 14 && GetTime() < 18) TimeOfDay = XI_ConvertString("Afternoon");
+			if(GetTime() >= 18 && GetTime() < 21) TimeOfDay = XI_ConvertString("Evening");
+			if(GetTime() >= 21 && GetTime() < 22) TimeOfDay = XI_ConvertString("Dusk");
+			sDateTimeDisplay += ", " + FirstLetterUp(TimeOfDay);
+		}
 		// PB: Only show this if Various Logs are enabled -->
 		if(LogsToggle >= LOG_LACONIC) SendMessage(&IDateTimeDisplay, "lls", LOG_ADD_STRING, true, sDateTimeDisplay);
 		else SendMessage(&IDateTimeDisplay, "lls", LOG_ADD_STRING, true, "");

@@ -155,6 +155,7 @@ void ProcessDialogEvent()
 		
 		case "fb_node_8":
 			Characters[GetCharacterIndex("Fred Bob")].quest.help = "failed";
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			Dialog.Text = DLG_TEXT[40] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[41];
 			Link.l1 = DLG_TEXT[42];
 			Link.l1.go = "exit";

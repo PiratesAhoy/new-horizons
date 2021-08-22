@@ -1,4 +1,4 @@
-string DLG_TEXT[23] = {
+string DLG_TEXT[31] = {
 "Hello! I'm ",
 ", owner of the shipyard.",
 "Pleased to meet you. My name is ",
@@ -22,5 +22,13 @@ string DLG_TEXT[23] = {
 "DOCK BESIDE THE FORT?? Uhh... I just remember that I have... eeh... another pressing business I must attend to first. Goodbye.",
 "After closing this dialog, press ENTER to bring up the sail changing interface.",
 "Exit",
+"Normally I would hire someone local. But I see you have ",
+" with you. He's worked for me before and if he's chosen to join you then that's good enough for me.\nI've a small tartane under construction which needs some planking finished. Are you interested?",
+"Yes, I'll take the job.",
+"No, thanks.",
+"Very well, the tools are over there. The sooner you start, the sooner you finish!",
+"I'll get started now, then.",
+"You've made a good job of that! Here's #scash# gold.",
+"Thanks!",
 
 };

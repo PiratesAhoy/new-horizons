@@ -7,25 +7,30 @@ void Whr_SetAzmAng(){
 //	skyscheme = 0;		// if you want to test a specific sky scheme, set it here
 */
 	// PURSEON ========Begin Moon Phases at night code===========>
-	string moonpic = "weather\sun\glow\moonglowfull.tga";   //default in case moon state is not known
+	string widescreen = "";
+	float screen_x = stf(showWindow.width);
+	float screen_y = stf(showWindow.height);
+	float screen_ratio = screen_x/screen_y;
+	if(screen_ratio > 1.4){ widescreen = "\widescreen";}
+	string moonpic = "weather\sun\glow" + widescreen + "\moonglowfull.tga";   //default in case moon state is not known
 	switch (getMoonStateName(getMoonState())){
 		case FULL_MOON:
-			moonpic = "weather\sun\glow\moonglowfull.tga";
+			moonpic = "weather\sun\glow" + widescreen + "\moonglowfull.tga";
 		break;
 		case NEW_MOON:
-			moonpic = "weather\sun\glow\moonglownew.tga";
+			moonpic = "weather\sun\glow" + widescreen + "\moonglownew.tga";
 		break;
 		case QUARTER_ONE:
-			moonpic = "weather\sun\glow\moonglowwaxc.tga";
+			moonpic = "weather\sun\glow" + widescreen + "\moonglowwaxc.tga";
 		break;
 		case QUARTER_TWO:
-			moonpic = "weather\sun\glow\moonglowwax.tga";
+			moonpic = "weather\sun\glow" + widescreen + "\moonglowwax.tga";
 		break;
 		case QUARTER_THREE:
-			moonpic = "weather\sun\glow\moonglowwan.tga";
+			moonpic = "weather\sun\glow" + widescreen + "\moonglowwan.tga";
 		break;
 		case QUARTER_FOUR:
-			moonpic = "weather\sun\glow\moonglowwanc.tga";
+			moonpic = "weather\sun\glow" + widescreen + "\moonglowwanc.tga";
 		break;
 	}
 	switch( curTime ){
@@ -35,7 +40,7 @@ void Whr_SetAzmAng(){
 			Weathers.Sun.Ambient = argb(0,12,23,43);
 			Weathers.Sun.Glow.Enable = true;
 			Weathers.Sun.Glow.Dist = 3500.0; //Levis
-			Weathers.Sun.Glow.Size = 1250.0; //Levis
+			Weathers.Sun.Glow.Size = 150.0; //DeathDaisy
 			Weathers.Sun.Glow.RotateSpeed = 0.0;
 			Weathers.Sun.Glow.Texture = moonpic;
 			Weathers.Sun.Glow.DecayTime = 4.0;
@@ -61,7 +66,7 @@ void Whr_SetAzmAng(){
 			Weathers.Sun.Ambient = argb(0,12,23,43);
 			Weathers.Sun.Glow.Enable = true;
 			Weathers.Sun.Glow.Dist = 3500.0; //Levis
-			Weathers.Sun.Glow.Size = 1250.0; //Levis
+			Weathers.Sun.Glow.Size = 150.0; //DeathDaisy
 			Weathers.Sun.Glow.RotateSpeed = 0.0;
 			Weathers.Sun.Glow.Texture = moonpic;
 			Weathers.Sun.Glow.DecayTime = 4.0;
@@ -87,7 +92,7 @@ void Whr_SetAzmAng(){
 			Weathers.Sun.Ambient = argb(0,12,23,43);
 			Weathers.Sun.Glow.Enable = true;
 			Weathers.Sun.Glow.Dist = 3500.0; //Levis
-			Weathers.Sun.Glow.Size = 1250.0; //Levis
+			Weathers.Sun.Glow.Size = 150.0; //DeathDaisy
 			Weathers.Sun.Glow.RotateSpeed = 0.0;
 			Weathers.Sun.Glow.Texture = moonpic;
 			Weathers.Sun.Glow.DecayTime = 4.0;
@@ -113,7 +118,7 @@ void Whr_SetAzmAng(){
 			Weathers.Sun.Ambient = argb(0,12,23,43);
 			Weathers.Sun.Glow.Enable = true;
 			Weathers.Sun.Glow.Dist = 3500.0; //Levis
-			Weathers.Sun.Glow.Size = 1250.0; //Levis
+			Weathers.Sun.Glow.Size = 150.0; //DeathDaisy
 			Weathers.Sun.Glow.RotateSpeed = 0.0;
 			Weathers.Sun.Glow.Texture = moonpic;
 			Weathers.Sun.Glow.DecayTime = 4.0;
@@ -139,7 +144,7 @@ void Whr_SetAzmAng(){
 			Weathers.Sun.Ambient = argb(0,12,23,43);
 			Weathers.Sun.Glow.Enable = true;
 			Weathers.Sun.Glow.Dist = 3500.0; //Levis
-			Weathers.Sun.Glow.Size = 1250.0; //Levis
+			Weathers.Sun.Glow.Size = 150.0; //DeathDaisy
 			Weathers.Sun.Glow.RotateSpeed = 0.0;
 			Weathers.Sun.Glow.Texture = moonpic;
 			Weathers.Sun.Glow.DecayTime = 4.0;
@@ -165,7 +170,7 @@ void Whr_SetAzmAng(){
 			Weathers.Sun.Ambient = argb(0,12,23,43);
 			Weathers.Sun.Glow.Enable = true;
 			Weathers.Sun.Glow.Dist = 3500.0; //Levis
-			Weathers.Sun.Glow.Size = 1250.0; //Levis
+			Weathers.Sun.Glow.Size = 150.0; //DeathDaisy
 			Weathers.Sun.Glow.RotateSpeed = 0.0;
 			Weathers.Sun.Glow.Texture = moonpic;
 			Weathers.Sun.Glow.DecayTime = 4.0;
@@ -271,8 +276,9 @@ void Whr_SetAzmAng(){
 				Weathers.Sky.Dir = "weather\skies\Converted\Stormy 2\\";
 			}
 			if(wRain < 80){
-				Weathers.Sea.SunRoad.Color1 = argb(0,160,55,0);
-				Weathers.Sea.SunRoad.Color2 = argb(0,255,150,75);
+				//maybe still a bit yellow? works alright.DeathDaisy
+				Weathers.Sea.SunRoad.Color1 = argb(0,160,55,0);//changed from 0,160,55,0 which was too red for 9-10AM, both for the new sun and for realism.DeathDaisy
+				Weathers.Sea.SunRoad.Color2 = argb(0,255,200,90);// 0,255,150,75.DeathDaisy
 				Weathers.Sea.SunRoad.Power = 3.0;
 				Weathers.Sea.SunRoad.Start = 0.99;
 			}
@@ -574,7 +580,7 @@ void Whr_SetAzmAng(){
 			Weathers.Sun.Ambient = argb(0,12,23,43);
 			Weathers.Sun.Glow.Enable = true;
 			Weathers.Sun.Glow.Dist = 3500.0; //Levis
-			Weathers.Sun.Glow.Size = 1250.0; //Levis
+			Weathers.Sun.Glow.Size = 150.0; //DeathDaisy
 			Weathers.Sun.Glow.RotateSpeed = 0.0;
 			Weathers.Sun.Glow.Texture = moonpic;
 			Weathers.Sun.Glow.DecayTime = 4.0;
@@ -600,7 +606,7 @@ void Whr_SetAzmAng(){
 			Weathers.Sun.Ambient = argb(0,12,23,43);
 			Weathers.Sun.Glow.Enable = true;
 			Weathers.Sun.Glow.Dist = 3500.0; //Levis
-			Weathers.Sun.Glow.Size = 1250.0; //Levis
+			Weathers.Sun.Glow.Size = 150.0; //DeathDaisy
 			Weathers.Sun.Glow.RotateSpeed = 0.0;
 			Weathers.Sun.Glow.Texture = moonpic;
 			Weathers.Sun.Glow.DecayTime = 4.0;

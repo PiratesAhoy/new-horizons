@@ -1,4 +1,4 @@
-string DLG_TEXT[17] = {
+string DLG_TEXT[22] = {
 "Yes captain?",
 "No, stand at ease!",
 "I've got weapons for you!",
@@ -16,5 +16,10 @@ string DLG_TEXT[17] = {
 "And don't loose your time here!",
 "No need for that Captain. We've got weapons already. If you upgrade your weapons so do we.",
 "Hmm, well I thought... very good then!",
+"You must have gained some experience serving under me. But how good are you really?",
+"I am very pleased with your performance. Therefore I am promoting you to officer. Please collect your warrant papers from the ship's purser and meet me later.",
+"What do you think of my qualities, captain?",
+"I am well impressed. Therefore I am promoting you to officer. Please collect your warrant papers from the ship's purser and meet me later.",
+"You'll make a fine sailor; you can get back to work.",
 
 };

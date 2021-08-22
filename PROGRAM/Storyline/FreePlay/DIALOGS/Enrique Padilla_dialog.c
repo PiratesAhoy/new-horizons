@@ -12,6 +12,9 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	int iNation = sti(PChar.nation); // DeathDaisy
+	string sNation = iNation; // DeathDaisy
 
 
 	switch(Dialog.CurrentNode)
@@ -34,6 +37,13 @@ void ProcessDialogEvent()
 
 		case "begin_1":
 			dialog.snd = "Voice\CLLA\CLLA004";
+			// DeathDaisy -->
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
+			if(iNation == PERSONAL_NATION)
+				Preprocessor_Add("sir2", XI_ConvertString("sir"));
+			else
+				Preprocessor_Add("sir2", GetAddressForm(ADDR_POLITE, iNation, chrsex(NPChar)));
+			// DeathDaisy <--
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "begin_2";
@@ -48,6 +58,49 @@ void ProcessDialogEvent()
 
 		case "brokenout":
 			dialog.snd = "Voice\CLLA\CLLA004";
+			// DeathDaisy -->
+			switch(iNation)
+			{
+				case FRANCE:
+					Preprocessor_Add("attack", "HOMMES, ATTAQUE");
+				break;
+
+				case SPAIN:
+					Preprocessor_Add("attack", "HOMBRES, ATAQUE");
+				break;
+
+				case PORTUGAL:
+					Preprocessor_Add("attack", "HOMENS, ATAQUE");
+				break;
+
+				case HOLLAND:
+					Preprocessor_Add("attack", "MANNEN, AANVAL");
+				break;
+
+				case ENGLAND:
+					Preprocessor_Add("attack", "MEN, ATTACK");
+				break;
+
+				case PIRATE:
+					Preprocessor_Add("attack", DLG_TEXT[12]);
+				break;
+
+				case PERSONAL_NATION:
+					Preprocessor_Add("attack", DLG_TEXT[12]);
+				break;
+
+				case GUEST1_NATION:
+					if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
+					{
+						Preprocessor_Add("attack", "MÄN, ANGRIP");
+					}
+					else
+					{
+						Preprocessor_Add("attack", "MEN, ATTACK");
+					}
+				break;
+			}
+			// DeathDaisy <--
 			dialog.text = DLG_TEXT[5];
 			link.l1 = DLG_TEXT[6];
 			link.l1.go = "exit";

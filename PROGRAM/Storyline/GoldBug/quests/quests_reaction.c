@@ -14726,12 +14726,23 @@ void QuestComplete(string sQuestName)
 
 		case "Legrand_Pym_start1":
 			LAi_QuestDelay("switch_to_Legrand", 0.1);
+			LAi_QuestDelay("Legrand_Pym_start1_A", 0.2);
 			LAi_QuestDelay("Legrand_Pym_start2", 1.0);
+		break;
+
+		case "Legrand_Pym_start1_A":
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
 		break;
 
 		case "Legrand_Pym_start2":
 			TakenItems(Pchar, "BH_sketch", 1);
 			TakenItems(Pchar, "crypto2", 1);
+
+			EquipCharacterByItem(Pchar, "bladeX4");
+			TakenItems(Pchar, "letter_paper", -1);
+			TakenItems(Pchar, "bladewoodsack", -1);
+			TakenItems(Pchar, "bladecrypto_csk", -1);
+
 			DeleteQuestHeader("Useful_items");
 			DeleteQuestHeader("The_parchment");
 			DeleteQuestHeader("Searching_the_shores");
@@ -17365,6 +17376,7 @@ void QuestComplete(string sQuestName)
 
 
 			LAi_QuestDelay("switch_to_Jupiter", 0.01);
+			LAi_QuestDelay("jup_boat_mission0", 0.5);
 
 			LAi_SetStayType(Pchar);
 			ChangeCharacterAddressGroup(characterFromID("Legrand_copy"), "Fort_Moultrie_exit", "reload", "reload3");
@@ -17376,6 +17388,10 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(characterFromID("Legrand_copy"));
 
 			LAi_QuestDelay("jup_boat_mission1", 2.0);
+		break;
+
+		case "jup_boat_mission0":
+			TakeItemFromCharacter(Pchar, "wrinkled_paper" );
 		break;
 
 		case "jup_boat_mission1":

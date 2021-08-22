@@ -14,6 +14,7 @@ void CreateAntiguaCharacters(ref n)
 	ch.id		= "Antigua_Portadmiral";
 	ch.model	= "brtadm1_18"; // Thomas the Terror
 	ch.sex = "man";
+	ch.nation = ENGLAND;
 	ch.location	= "Antigua_mansion_study";
 	ch.location.group = "goto";
 	ch.location.locator = "goto3";
@@ -46,6 +47,7 @@ void CreateAntiguaCharacters(ref n)
 	ch.id		= "Antigua_Regulating";
 	ch.model	= "brtadm2_18"; // Thomas the Terror
 	ch.sex = "man";
+	ch.nation = ENGLAND;
 	ch.location	= "Antigua_Residence";
 	ch.location.group = "goto";
 	ch.location.locator = "goto8";

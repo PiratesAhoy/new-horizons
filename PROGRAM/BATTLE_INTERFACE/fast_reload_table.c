@@ -697,11 +697,11 @@ void initFastReloadTable()
 	curTable.l4.tex = FRT_RESIDENCE;
 	curTable.l4.note = FRN_RESIDENCE; // KK
 	curTable.l4.location = "Turks_townhall";
-/*
-	// loanshark GreatZen
+	// loanshark JRH
 	curTable.l5.pic = FRP_LOANSHARK;
 	curTable.l5.tex = FRT_LOANSHARK;
-	curTable.l5.location = "";*/
+	curTable.l5.note = FRN_LOANSHARK;
+	curTable.l5.location = "Turks_usurerhouse";
 	// church MAXIMUS
 	curTable.l6.pic = FRP_CHURCH;
 	curTable.l6.tex = FRT_CHURCH;
@@ -1007,6 +1007,10 @@ void initFastReloadTable()
 	curTable.l5.note = FRN_FORT;
 	curTable.l5.location = "Santo_Domingo_fakefort1";
 // <-- KK
+	curTable.l6.pic = FRP_LOANSHARK;
+	curTable.l6.tex = FRT_LOANSHARK;
+	curTable.l6.note = FRN_LOANSHARK;
+	curTable.l6.location = "Santo_Domingo_usurer";
 
 	makearef(curTable,objFastReloadTable.table.PoPrince);
 	// store

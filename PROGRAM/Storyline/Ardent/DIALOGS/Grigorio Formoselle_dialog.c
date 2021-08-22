@@ -16,13 +16,13 @@ void ProcessDialogEvent()
 
 	if (PChar.sex == "man")
 	{
-		gov_kid = "her";
-		merch_kid = "him";
+		gov_kid = XI_ConvertString("her");
+		merch_kid = XI_ConvertString("him");
 	}
 	else
 	{
-		gov_kid = "him";
-		merch_kid = "her";
+		gov_kid = XI_ConvertString("him");
+		merch_kid = XI_ConvertString("her");
 	}
 	
 	switch(Dialog.CurrentNode)
@@ -53,7 +53,7 @@ void ProcessDialogEvent()
 
 		case "first_delivery":
 			dialog.text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[2];
-			link.l1 = DLG_TEXT[3] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyFullName(characterFromID(PChar.quest.romance)) + ".";
+			link.l1 = DLG_TEXT[3] + GetMyFullName(characterFromID(PChar.quest.romance)) + ".";
 			link.l1.go = "first_delivery2";
 		break;
 
@@ -78,12 +78,13 @@ void ProcessDialogEvent()
 
 		case "second_delivery":
 			dialog.text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[2];
-			link.l1 = DLG_TEXT[14] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyFullName(characterFromID(PChar.quest.romance)) + DLG_TEXT[15];
+//			link.l1 = DLG_TEXT[14] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyFullName(characterFromID(PChar.quest.romance)) + DLG_TEXT[15];
+			link.l1 = DLG_TEXT[14] + GetMyFullName(characterFromID(PChar.quest.romance)) + DLG_TEXT[15];
 			link.l1.go = "second_delivery2";
 		break;
 
 		case "second_delivery2":
-			dialog.text = DLG_TEXT[16] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.villain), ADDR_CIVIL, false, false) + " " + GetMyFullName(characterFromID(PChar.quest.villain)) + DLG_TEXT[17] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyFullName(characterFromID(PChar.quest.romance)) + ".";
+			dialog.text = DLG_TEXT[16] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.villain), ADDR_CIVIL, false, false) + " " + GetMyFullName(characterFromID(PChar.quest.villain)) + DLG_TEXT[17] + GetMyFullName(characterFromID(PChar.quest.romance)) + ".";
 			link.l1 = DLG_TEXT[18];
 			AddDialogExitQuest("second_CourtingLetter_delivered");
 			link.l1.go = "exit";
@@ -132,20 +133,20 @@ void ProcessDialogEvent()
 		break;
 
 		case "ransom_exchange3":
-			dialog.text = DLG_TEXT[37] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMySimpleName(characterFromID(PChar.quest.romance)) + ".";
-			link.l1 = DLG_TEXT[38] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyFirstNames(characterFromID(PChar.quest.romance), false) + DLG_TEXT[39];
+			dialog.text = DLG_TEXT[37] + GetMyFullName(characterFromID(PChar.quest.romance)) + ".";
+			link.l1 = DLG_TEXT[38] + characters[getCharacterIndex(PChar.quest.romance)].title + " " + GetMyFirstNames(characterFromID(PChar.quest.romance), false) + DLG_TEXT[39];
 			link.l1.go = "ransom_exchange4";
 		break;
 
 		case "ransom_exchange4":
-			dialog.text = GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyFirstNames(characterFromID(PChar.quest.romance), false) + DLG_TEXT[40];
+			dialog.text = characters[getCharacterIndex(PChar.quest.romance)].title + " " + GetMyFirstNames(characterFromID(PChar.quest.romance), false) + DLG_TEXT[40];
 			link.l1 = "...";
 			AddDialogExitQuest("hostage_released");
 			link.l1.go = "exit";
 		break;
 
 		case "ransom_exchange5":
-			dialog.text = DLG_TEXT[41] + GetMyAddressForm(NPChar, characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMyFirstNames(characterFromID(PChar.quest.romance), false) + DLG_TEXT[42];
+			dialog.text = DLG_TEXT[41] + characters[getCharacterIndex(PChar.quest.romance)].title + " " + GetMyFirstNames(characterFromID(PChar.quest.romance), false) + DLG_TEXT[42];
 			link.l1 = DLG_TEXT[43];
 			link.l1.go = "ransom_exchange6";
 		break;
@@ -159,8 +160,8 @@ void ProcessDialogEvent()
 		case "assassination_examine_ring":
 			PreProcessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
 			PreProcessor_Add("romance", GetMyFullName(characterFromID(PChar.quest.romance)));
-			if (PChar.sex == "man") PreProcessor_Add("pronoun", "His");
-			else PreProcessor_Add("pronoun", "Her");
+			if (PChar.sex == "man") PreProcessor_Add("pronoun", XI_ConvertString("his"));
+			else PreProcessor_Add("pronoun", XI_ConvertString("her"));
 			dialog.text = DLG_TEXT[47];
 			link.l1 = DLG_TEXT[48];
 			link.l1.go = "exit";

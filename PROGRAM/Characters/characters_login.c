@@ -134,7 +134,8 @@ void SetUpCharacterWeapons(ref chr)
 	if (equipitm == "" && equipfound != "") {
 		EquipCharacterByItem(chr, equipfound);
      //JRH ammo mod -->
-		if (ENABLE_AMMOMOD) {	// LDH change
+		if (ENABLE_AMMOMOD && !IsOfficer(chr))	// LDH change, officer check added by Uzver
+		{
 			TakenItems(chr, "gunpowder", -6);
 			TakenItems(chr, "pistolbullets", -6);
 			TakenItems(chr, "gunpowder", 1 + rand(2));
@@ -168,6 +169,7 @@ void LogoffCharactersFromLocation(ref loc)
 		//	TraceAndLog("LogoffCharactersFromLocation clears " + GetMySimpleName(chr));
 			ClearCharacter(chr); // PB: Completely erase the unused character
 		}
+		if (CheckAttribute(chr, "ClearUponExit")) ClearCharacter(chr); // PB: Erase any character marked to be erased
 	}
 }
 // PB <--

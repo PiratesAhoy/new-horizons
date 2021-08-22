@@ -1015,7 +1015,12 @@ float GetLetterOfMarqueQuantity()
 int ProfessionalNavyNation()
 {
 	ref PChar = GetMainCharacter();
-	if (CheckAttribute(PChar, "professionalnavy"))	return sti(PChar.professionalnavy);
+	return ProfessionalNavyNationChar(Pchar);
+}
+
+int ProfessionalNavyNationChar(ref char)
+{
+	if (CheckAttribute(Char, "professionalnavy"))	return sti(Char.professionalnavy);
 	return UNKNOWN_NATION;
 }
 
@@ -1042,7 +1047,7 @@ int GetCurrentFlag()
 
 void HoistFlag(int iNation)
 {
-	int cc, compIdx;
+	int cc, compIdx, iNation1;
 	bool bPlayerCompanion;
 	bool bCompanionMutiny = false; // KK;
 	ref rCharacter;
@@ -1064,7 +1069,8 @@ void HoistFlag(int iNation)
 		}
 		else
 		{
-			if(GetNationRelation(iNation, sti(rCharacter.nation)) == RELATION_ENEMY)
+			iNation1 = iNation;
+			if(GetNationRelation(iNation1, sti(rCharacter.nation)) == RELATION_ENEMY)
 			{
 				SetMutineer(rCharacter, true);
 				bCompanionMutiny = true;
@@ -1334,6 +1340,21 @@ void InitGroups()
 	LAi_group_SetHearRadius("ENGLAND_CITIZENS", LAI_GROUP_DEF_HEAR);
 	LAi_group_SetSayRadius("ENGLAND_CITIZENS", LAI_GROUP_DEF_SAY);
 
+	LAi_group_SetAlarmReaction("SWEDEN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY, LAI_GROUP_FRIEND);
+	LAi_group_SetRelation("SWEDEN_CITIZENS", "SWEDEN_SOLDIERS", LAI_GROUP_FRIEND);
+	LAi_group_SetRelation("SWEDEN_SOLDIERS", "SWEDEN_SOLDIERS", LAI_GROUP_FRIEND);
+	LAi_group_SetRelation("SWEDEN_SOLDIERS", LAI_DEFAULT_GROUP, LAI_GROUP_FRIEND);
+	LAi_group_SetLookRadius("SWEDEN_SOLDIERS", LAI_GROUP_GRD_LOOK);
+	LAi_group_SetHearRadius("SWEDEN_SOLDIERS", LAI_GROUP_GRD_HEAR);
+	LAi_group_SetSayRadius("SWEDEN_SOLDIERS", LAI_GROUP_GRD_SAY);
+	LAi_group_SetAlarmReaction("SWEDEN_SOLDIERS", "SWEDEN_CITIZENS", LAI_GROUP_FRIEND, LAI_GROUP_FRIEND);
+	LAi_group_SetPriority("SWEDEN_CITIZENS", LAI_GROUP_PCITIZENS);
+	LAi_group_SetPriority("SWEDEN_SOLDIERS", LAI_GROUP_PGUARDS);
+
+	LAi_group_SetLookRadius("SWEDEN_CITIZENS", LAI_GROUP_DEF_LOOK);
+	LAi_group_SetHearRadius("SWEDEN_CITIZENS", LAI_GROUP_DEF_HEAR);
+	LAi_group_SetSayRadius("SWEDEN_CITIZENS", LAI_GROUP_DEF_SAY);
+	
 	LAi_group_SetAlarmReaction("AMERICA_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY, LAI_GROUP_FRIEND);
 	LAi_group_SetRelation("AMERICA_CITIZENS", "AMERICA_SOLDIERS", LAI_GROUP_FRIEND);
 	LAi_group_SetRelation("AMERICA_SOLDIERS", "AMERICA_SOLDIERS", LAI_GROUP_FRIEND);

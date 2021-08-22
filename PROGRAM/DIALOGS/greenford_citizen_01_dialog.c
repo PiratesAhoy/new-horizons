@@ -117,6 +117,7 @@ void ProcessDialogEvent()
 
 		case "researcher_bad":
 			dialog.snd = "Voice\GRCZ\GRCZ012";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[28];
 			link.l1 = DLG_TEXT[29];
 			link.l1.go = "researcher_bad_exit";

@@ -121,8 +121,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "recruiting":
-			if (PChar.sex == "man") Preprocessor_Add("pronoun", "his");
-			else Preprocessor_Add("pronoun", "her");
+			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
+			else Preprocessor_Add("pronoun", XI_ConvertString("her"));
 			dialog.text = DLG_TEXT[19];
 			link.l1 = DLG_TEXT[20];
 			link.l1.go = "challenge";

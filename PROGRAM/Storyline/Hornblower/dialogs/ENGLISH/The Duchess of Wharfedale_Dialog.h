@@ -3,7 +3,7 @@ string DLG_TEXT[50] = {
 "Hmm.. cough.. Your Ladyship!",
 "Will I be safe with this lieutenant, Captain Pellew? He looks nothing more than a boy!",
 "I Er.. assure you that I will do my utmost, your Grace.",
-"I am in your hands now Mr. Haitch. I may call you Mr. Haitch mayn't I? .",
+"I am in your hands now Mr. Haitch. I may call you Mr. Haitch mayn't I?",
 "Er.. Yes, your Grace. I er.. I think we should make ready for sea. Good day Sirs.",
 "How shall we get to England lieutenant? Which route shall we take?",
 "We shall sail nor east towards #sisland_Turks# Island and then nor, nor east to England.",

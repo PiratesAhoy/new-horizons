@@ -1,21 +1,22 @@
-string DLG_TEXT[18] = {
+string DLG_TEXT[19] = {
 " Oh, sorry, I didn't mean to disturb your sleep. Hmm, maybe I'd rather prolong it...",
 " *GROOAAAN*...",
 " Wah... Where... Who is that? I can't get up... what happened...",
 " Ooowww... my head! I can't move, my vision is blurred...",
-" Oooh, pooor fella! What happended to you? Some accident? Oooh, you've passed out again? So you won't mind if I take your gear and gold, eh? ... Thanks, and sleep well. ",
+" Oooh, poor fella! What happened to you? Some accident? Oooh, you've passed out again? So you won't mind if I take your gear and gold, eh? ... Thanks, and sleep well. ",
 " Ts ts... Totally drunk you are, eh? Disgusting! I'll better take your weapons into custody before you hurt yourself in your delirium. And I'll safeguard your money too, so that you can't waste it on even more rum... Shhh, I did that only for your own good. I bet you will be grateful if you wake up...",
 " Don't move, you've taken a heavy blow, so you must lie still till you have recovered somewhat. Come, I'll make you more comfortable, put your coat under your head... Let me remove your belt so that you can breathe... (and relieve you of gear and money, hehe) ",
-" Quick, take this potion and get up! ... There you are. I saw the rouge that did this to you. It's a scandal that such scum is allowed to roam this island. He ran that way, I'll try to catch him, see ya. ",
+" Quick, take this potion and get up! ... There you are. I saw the rogue that did this to you. It's a scandal that such scum is allowed to roam this island. He ran that way, I'll try to catch him, see ya. ",
 " My, my, you look really terrible! Here, drink this potion and you'll soon be allright again.",
 " Oh, I'm so sorry for this... eh... unfortunate misunderstanding. I didn't really mean to hurt YOU. Would you kindly accept my most humble apology, and this potion as compensation and consolation? ... Thank you for your understanding, and a good day to you. ",
 " I hear nothing... My eyes... All in fog...",
 " Help me stand up, captain.",
-" This son of whore didn't seem a strong man...",
+" This son of a whore didn't seem a strong man...",
 "You'll be delivered on our ship. Give me your weapon now. My sword is broken.",
-"Take a swig of this elixer.",
+"Take a swig of this elixir.",
 "Sorry fellow, now not a time for saving losers.",
 " En garde! We need this ship!",
 " En garde!",
+" Oooh, poor lassie! What happened to you? Some accident? Oooh, you've passed out again? So you won't mind if I take your gear and gold, eh? ... Thanks, and sleep well. ",
 
 };

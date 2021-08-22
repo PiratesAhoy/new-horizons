@@ -191,6 +191,7 @@ void ProcessDialogEvent()
 
 						// If the blade is average, show excellent, fine and good
 					case QUALITY_AVERAGE:
+						Preprocessor_Add("sir", GetMyAddressForm(NPChar, MainChar, ADDR_POLITE, false, false)); // DeathDaisy
 						Dialog.text = DLG_TEXT[9] + BladeName + DLG_TEXT[10];
 						if (PriceExcellent <= PlayerMoney)
 						{

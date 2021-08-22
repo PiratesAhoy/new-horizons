@@ -1,4 +1,4 @@
-string DLG_TEXT[23] = {
+string DLG_TEXT[24] = {
 "....",
 "....",
 "Can't you see I'm talking with my friend the shopkeeper?",
@@ -22,5 +22,5 @@ string DLG_TEXT[23] = {
 "Of course. But he didn't care. As long as the monster sinks only English ships, it is fine by him.",
 "Thanks a lot. I will pay a visit to Baie d'Orient. If your story is true, I should find some debris there.",
 "I am looking for the French frigate 'La Foudre'.",
-
+"Of course. But he didn't care. As long as the monster sinks only French ships, it is fine by him.",
 };

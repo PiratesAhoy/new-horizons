@@ -422,22 +422,33 @@ void OnQuestComplete(aref quest)
 		quest.over = "yes";
 		// PB: Error checking -->
 		ref PChar = GetMainCharacter();
+		PChar.quest.completed_win_condition = GetAttributeName(quest); //So we can check which quest send us here.
 		DeleteAttribute(PChar, "questnotfound");				// Make sure this is GONE!
 
 		// Common Quests
 		CommonQuestComplete(quest.win_condition);				// <-- Execute the actual quest case
 		if(!CheckAttribute(PChar, "questnotfound"))
 		{
+			DeleteAttribute(PChar, "quest.completed_win_condition"); //Levis remove it to be sure
 			trace("Quest name " + quest.win_condition + " FOUND in CommonQuestComplete");
 			return;
 		}
 		DeleteAttribute(PChar, "questnotfound");
 
 		// Main Quests
+		if (FindFile("PROGRAM\" + GetStorylinePath(FindCurrentStoryline()), "*.c", "SL_utils.c") != "")
+		{
+			if (!SegmentIsLoaded(GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c"))
+			{
+				trace("Loading " + GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c");
+				LoadSegment(GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c");
+			}
+		}
 		LoadStorylineFile("quests\", "quests_reaction.c");		// PB: To Prevent Errors
 		QuestComplete(quest.win_condition);						// <-- Execute the actual quest case
 		if(!CheckAttribute(PChar, "questnotfound"))
 		{
+			DeleteAttribute(PChar, "quest.completed_win_condition"); //Levis remove it to be sure
 			trace("Quest name " + quest.win_condition + " FOUND in QuestComplete");
 			return;
 		}
@@ -448,6 +459,7 @@ void OnQuestComplete(aref quest)
 		BothQuestComplete(quest.win_condition);					// <-- Execute the actual quest case
 		if(!CheckAttribute(PChar, "questnotfound"))
 		{
+			DeleteAttribute(PChar, "quest.completed_win_condition"); //Levis remove it to be sure
 			trace("Quest name " + quest.win_condition + " FOUND in BothQuestComplete");
 			return;
 		}
@@ -457,10 +469,12 @@ void OnQuestComplete(aref quest)
 		SideQuestComplete(quest.win_condition);				// <-- Execute the actual quest case
 		if(!CheckAttribute(PChar, "questnotfound"))
 		{
+			DeleteAttribute(PChar, "quest.completed_win_condition"); //Levis remove it to be sure
 			trace("Quest name " + quest.win_condition + " FOUND in SideQuestComplete");
 			return;
 		}
 		DeleteAttribute(PChar, "questnotfound");
+		DeleteAttribute(PChar, "quest.completed_win_condition"); //Levis remove it to be sure
 
 		TraceAndLog("ERROR - Quest name " + quest.win_condition + " NOT found in ANY function");
 		// PB: Error checking <--

@@ -263,7 +263,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[39];
+				dialog.text = DLG_TEXT[39] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + "."; // DeathDaisy: changed "my good man" to "Mister/Miss", because I got tired of "my good man/woman"
 				link.l1 = DLG_TEXT[40];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

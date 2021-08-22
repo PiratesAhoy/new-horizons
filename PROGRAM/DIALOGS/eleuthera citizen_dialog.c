@@ -193,6 +193,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "smithy":
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				d.Text = DLG_TEXT[163];
 				Link.l1 = DLG_TEXT[164];
 				Link.l1.go = "new question";

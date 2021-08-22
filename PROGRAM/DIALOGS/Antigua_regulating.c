@@ -21,6 +21,8 @@ void ProcessDialogEvent()
 	Npchar.nation = Characters[getCharacterIndex("St John's Commander")].nation;
 
 	int bribe = GetMaxCrewQuantity(pchar)*3;
+	
+	Preprocessor_Add("sir", FirstLetterUp(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false))); // DeathDaisy
 
 	switch(Dialog.CurrentNode)
 	{
@@ -35,40 +37,66 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
 
-			d.Text = DLG_TEXT[0];
-			if(sti(PChar.money)>bribe )
+			if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")))
 			{
-				Link.l0 = DLG_TEXT[1]+bribe+DLG_TEXT[2];
-				Link.l0.go = "bribe";
+				d.Text = DLG_TEXT[32] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[33];
+				Link.l1 = DLG_TEXT[5];
+				Link.l1.go = "admiral";
+				Link.l2 = DLG_TEXT[6];
+				Link.l2.go = "duty";
+				Link.l3 = DLG_TEXT[34];
+				Link.l3.go = "exit";
 			}
-			Link.l1 = DLG_TEXT[3];
-			if(GetRMRelation(Pchar, sti(NPChar.nation) ) < REL_NEUTRAL ) { Link.l1.go = "lomfalse"; }else{ Link.l1.go = "lomtrue"; }
-			Link.l12 = DLG_TEXT[4];
-			Link.l12.go = "deny";
-			Link.l13 = DLG_TEXT[5];
-			Link.l13.go = "admiral";
-			Link.l2 = DLG_TEXT[6];
-			Link.l2.go = "duty";
-			Link.l3 = Randswear()+DLG_TEXT[7];
-			Link.l3.go = "exit";
+			else
+			{
+				d.Text = DLG_TEXT[0];
+				if(sti(PChar.money)>bribe )
+				{
+					Link.l0 = DLG_TEXT[1]+bribe+DLG_TEXT[2];
+					Link.l0.go = "bribe";
+				}
+				Link.l1 = DLG_TEXT[3];
+				if(GetRMRelation(Pchar, sti(NPChar.nation) ) < REL_NEUTRAL ) { Link.l1.go = "lomfalse"; }else{ Link.l1.go = "lomtrue"; }
+				Link.l12 = DLG_TEXT[4];
+				Link.l12.go = "deny";
+				Link.l13 = DLG_TEXT[5];
+				Link.l13.go = "admiral";
+				Link.l2 = DLG_TEXT[6];
+				Link.l2.go = "duty";
+				Link.l3 = Randswear()+DLG_TEXT[7];
+				Link.l3.go = "exit";
+			}
 		break;
 
 		case "duty":
 			d.Text = DLG_TEXT[8];
+			Link.l1 = "";
 			Link.l1.go = "duty2";
 		break;
 
 		case "duty2":
-			d.Text = DLG_TEXT[31];
-			if(sti(PChar.money)>bribe )
+
+			if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")))
 			{
-				Link.l0 = DLG_TEXT[9]+bribe+DLG_TEXT[10];
-				Link.l0.go = "bribe";
+				d.Text = DLG_TEXT[35];
+				Link.l1 = DLG_TEXT[36];
+				Link.l1.go = "navy_recruit";
+				Link.l3 = DLG_TEXT[37];
+				Link.l3.go = "exit";
 			}
-			Link.l1 = DLG_TEXT[3];
-			if(GetRMRelation(Pchar, sti(NPChar.nation) ) < REL_NEUTRAL ) { Link.l1.go = "lomfalse"; }else{ Link.l1.go = "lomtrue"; }
-			Link.l3 = Randswear()+DLG_TEXT[7];
-			Link.l3.go = "exit";
+			else
+			{
+				d.Text = DLG_TEXT[31];
+				if(sti(PChar.money)>bribe )
+				{
+					Link.l0 = DLG_TEXT[9]+bribe+DLG_TEXT[10];
+					Link.l0.go = "bribe";
+				}
+				Link.l1 = DLG_TEXT[3];
+				if(GetRMRelation(Pchar, sti(NPChar.nation) ) < REL_NEUTRAL ) { Link.l1.go = "lomfalse"; }else{ Link.l1.go = "lomtrue"; }
+				Link.l3 = Randswear()+DLG_TEXT[7];
+				Link.l3.go = "exit";
+			}
 		break;
 
 		case "lomfalse":
@@ -96,6 +124,14 @@ void ProcessDialogEvent()
 			Link.l3.go = "exit";
 		break;
 
+		case "navy_recruit":
+			d.Text = DLG_TEXT[38];
+			link.l1 = DLG_TEXT[17];
+			link.l1.go = "trade";
+			Link.l3 = DLG_TEXT[15];
+			Link.l3.go = "exit";
+		break;
+
 		case "admiral":
 			d.Text = DLG_TEXT[18];
 			Link.l3 = DLG_TEXT[19];
@@ -113,12 +149,17 @@ void ProcessDialogEvent()
 		case "deny2":
 			if(frnd() < 0.3 )
 			{
+				// DeathDaisy -->
+				PreProcessor_Add("GENDERSubj", strupper(GetMyPronounSubj(PChar)));
+				PreProcessor_Add("GENDERObj", strupper(GetMyPronounObj(PChar)));
+				// DeathDaisy <--
 				d.Text = Randswear()+DLG_TEXT[23];
 				Link.l99 = Randswear()+DLG_TEXT[24];
 				Link.l99.go = "fight";
 			}
 			else
 			{
+				Preprocessor_Add("sir2", GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false)); // DeathDaisy
 				d.Text = DLG_TEXT[25];
 				link.l1 = DLG_TEXT[26];
 				link.l1.go = "trade";

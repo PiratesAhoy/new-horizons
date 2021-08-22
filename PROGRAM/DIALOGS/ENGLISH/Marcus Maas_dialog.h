@@ -1,11 +1,11 @@
-string DLG_TEXT[55] = {
+string DLG_TEXT[60] = {
 "Welcome to my tavern, stranger. My name is ",
 ". What brings you to my humble establishment? Do you need a place to rest?",
 "Thank you. My name is ",
 ". I'm here on business.",
 "My name is ",
 ", and you can spare your hospitality. I'm here on business.",
-"Welcome, sir! What do you want?",
+"Welcome, #ssir#! What do you want?",
 "I need some information, and I find the local innkeeper is usually the man to ask.",
 "I'm looking to hire some sailors for my ship.",
 "Point me to the patrons here who might be looking for a job. I need to add to my crew, and I don't mind if they're cutthroats.",
@@ -53,5 +53,10 @@ string DLG_TEXT[55] = {
 "The storekeeper is a friend of his. Perhaps you can find him there. They like to talk in the shop.",
 "Thanks a lot. I'll go and visit the store then.",
 "Can you help me with something? I'm looking for the French frigate 'La Foudre'. She was supposed to call in here.",
-"Wait a second! A fisherman saw a ship sinking off the coast during the storm. Perhaps it was the 'La Foudre'?",
+"Wait a second! A fisherman saw a ship sinking off the coast during the storm. Perhaps it was 'La Foudre'?",
+"Would you know if #svillain# has been in #sPhilipsburg# recently?",
+"No, I don't recall anyone by that name.",
+"Has anyone from the '#sship#' been in here, then?",
+"Not that I recall, no. Perhaps you could ask around at the port? Maybe someone there has seen either #svillain# or the '#sship#'.",
+"Thanks for your time, anyway. Yes, I shall see if anyone at the port can help.",
 };

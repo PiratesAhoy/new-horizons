@@ -99,39 +99,46 @@ void setIslandSmugglingPauses(ref sisland)
 			id = 0;
 			if(pickpauses[sti(id)] == TRUE)
 			{
-				sisland.smuggling.pause.(id).start = 7.0+((rand(11)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 8.0+((rand(11)*5)/60.0);
+				sisland.smuggling.pause.(id).start = 10.0+((rand(11)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 11.0+((rand(11)*5)/60.0);
 				sisland.smuggling.pause.(id).name = "breakfast";
 			}
 			id = 1;
 			if(pickpauses[sti(id)] == TRUE)
 			{
-				sisland.smuggling.pause.(id).start = 12.0+((rand(11)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 13.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).start = 15.0+((rand(11)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 16.0+((30+rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).name = "dinner";
 			}
 			id = 2;
 			if(pickpauses[sti(id)] == TRUE)
 			{
-				sisland.smuggling.pause.(id).start = 17.0+((rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 18.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).start = 19.0+((15+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 19.5+((15+rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).name = "tea time";
 			}
+			/*id = 3;
+			if(pickpauses[sti(id)] == TRUE)
+			{
+				sisland.smuggling.pause.(id).start = 21.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 22.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).name = "supper";
+			}*/
 		break;
 		
 		case FRANCE:
 			id = 0;
 			if(pickpauses[sti(id)] == TRUE)
 			{
-				sisland.smuggling.pause.(id).start = 7.0+((30+rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 8.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).start = 10.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 11.0+((30+rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).name = "petit déjeuner";
 			}
 			id = 1;
 			if(pickpauses[sti(id)] == TRUE)
 			{
-				sisland.smuggling.pause.(id).start = 12.0+((rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 14.0+((rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).start = 15.0+((rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 16.0+((rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).name = "déjeuner";
 			}
 			id = 2;
@@ -188,22 +195,22 @@ void setIslandSmugglingPauses(ref sisland)
 			id = 0;
 			if(pickpauses[sti(id)] == TRUE)
 			{
-				sisland.smuggling.pause.(id).start = 7.0+((30+rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 8.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).start = 9.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 10.0+((30+rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).name = "ontbijt";
 			}
 			id = 1;
 			if(pickpauses[sti(id)] == TRUE)
 			{
-				sisland.smuggling.pause.(id).start = 12.0+((rand(11)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 13.0+((rand(11)*5)/60.0);
+				sisland.smuggling.pause.(id).start = 15.0+((rand(11)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 16.0+((rand(11)*5)/60.0);
 				sisland.smuggling.pause.(id).name = "lunch";
 			}
 			id = 2;
 			if(pickpauses[sti(id)] == TRUE)
 			{
-				sisland.smuggling.pause.(id).start = 18.0+((rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 19.0+((30+rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).start = 20.0+((rand(5)*5)/60.0);
+				sisland.smuggling.pause.(id).end = 21.0+((30+rand(5)*5)/60.0);
 				sisland.smuggling.pause.(id).name = "avondeten";
 			}
 		break;
@@ -233,30 +240,100 @@ void setIslandSmugglingPauses(ref sisland)
 			}
 		break;
 		
-		case AMERICA:
-			id = 0;
-			if(pickpauses[sti(id)] == TRUE)
-			{
-				sisland.smuggling.pause.(id).start = 7.0+((30+rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 8.0+((30+rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).name = "breakfast";
+		case GUEST1_NATION:
+			if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS && SWEDEN_ALLOWED){
+				id = 0;
+				if(pickpauses[sti(id)] == TRUE){
+					sisland.smuggling.pause.(id).start =10.0+((15+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 11.0+((15+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "frukost";
+				}
+				id = 1;
+				if(pickpauses[sti(id)] == TRUE){
+					sisland.smuggling.pause.(id).start = 13.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 14.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "middag";
+				}
+				id = 2;
+				if(pickpauses[sti(id)] == TRUE){
+					sisland.smuggling.pause.(id).start = 20.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 21.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "kvällsvard";
+				}
 			}
-			id = 1;
-			if(pickpauses[sti(id)] == TRUE)
-			{
-				sisland.smuggling.pause.(id).start = 12.0+((rand(11)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 13.0+((rand(11)*5)/60.0);
-				sisland.smuggling.pause.(id).name = "lunch";
-			}
-			id = 2;
-			if(pickpauses[sti(id)] == TRUE)
-			{
-				sisland.smuggling.pause.(id).start = 18.0+((rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).end = 19.0+((30+rand(5)*5)/60.0);
-				sisland.smuggling.pause.(id).name = "dinner";
+			if(GetCurrentPeriod() >= PERIOD_REVOLUTIONS){
+				id = 0;
+				if(pickpauses[sti(id)] == TRUE)
+				{
+					sisland.smuggling.pause.(id).start = 9.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 10.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "breakfast";
+				}
+				id = 1;
+				if(pickpauses[sti(id)] == TRUE)
+				{
+					sisland.smuggling.pause.(id).start = 13.0+((rand(11)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 14.0+((rand(11)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "lunch";
+				}
+				id = 2;
+				if(pickpauses[sti(id)] == TRUE)
+				{
+					sisland.smuggling.pause.(id).start = 20.0+((rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 21.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "dinner";
+				}
 			}
 		break;
+		/*case AMERICA:
+				id = 0;
+				if(pickpauses[sti(id)] == TRUE)
+				{
+					sisland.smuggling.pause.(id).start = 9.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 10.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "breakfast";
+				}
+				id = 1;
+				if(pickpauses[sti(id)] == TRUE)
+				{
+					sisland.smuggling.pause.(id).start = 13.0+((rand(11)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 14.0+((rand(11)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "lunch";
+				}
+				id = 2;
+				if(pickpauses[sti(id)] == TRUE)
+				{
+					sisland.smuggling.pause.(id).start = 20.0+((rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 21.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "dinner";
+				}
+		break;*/
 	}
+	/*if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS && SWEDEN_ALLOWED){
+		switch(sti(sisland.smuggling_nation))
+		{
+			case SWEDEN:
+				id = 0;
+				if(pickpauses[sti(id)] == TRUE){
+					sisland.smuggling.pause.(id).start =10.0+((15+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 11.0+((15+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "frukost";
+				}
+				id = 1;
+				if(pickpauses[sti(id)] == TRUE){
+					sisland.smuggling.pause.(id).start = 13.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 14.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "middag";
+				}
+				id = 2;
+				if(pickpauses[sti(id)] == TRUE){
+					sisland.smuggling.pause.(id).start = 20.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).end = 21.0+((30+rand(5)*5)/60.0);
+					sisland.smuggling.pause.(id).name = "kvällsvard";
+				}
+			break;
+		}
+	}*/
 }
 
 void lockIslandContraband(ref sisland)
@@ -416,19 +493,57 @@ void setIslandSmugglingContraband(ref sisland)
 			}
 		break;
 		
-		case AMERICA:
-			idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_PAPRIKA);
-			idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_OIL);
-			if(sti(sisland.smuggling.state)>1)
-			{
-				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_LINEN);
+		case GUEST1_NATION:
+			if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS && SWEDEN_ALLOWED){
+				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND, idx, GOOD_LINEN);
+				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND, idx, GOOD_SILK);
+				if(sti(sisland.smuggling.state)>1){
+					idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND, idx, GOOD_SUGAR);
+				}
+				if(sti(sisland.smuggling.state)>3){
+					idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND, idx, GOOD_COFFEE);
+				}
 			}
-			if(sti(sisland.smuggling.state)>3)
-			{
-				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_ALE);
+			if(GetCurrentPeriod() >= PERIOD_REVOLUTIONS){
+				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_PAPRIKA);
+				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_OIL);
+				if(sti(sisland.smuggling.state)>1)
+				{
+					idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_LINEN);
+				}
+				if(sti(sisland.smuggling.state)>3)
+				{
+					idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_ALE);
+				}
 			}
 		break;
+		/*case AMERICA:
+				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_PAPRIKA);
+				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_OIL);
+				if(sti(sisland.smuggling.state)>1)
+				{
+					idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_LINEN);
+				}
+				if(sti(sisland.smuggling.state)>3)
+				{
+					idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND_NAME, idx, GOOD_ALE);
+				}
+		break;*/
 	}
+	/*if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS && SWEDEN_ALLOWED){
+		switch(sti(sisland.smuggling_nation)){
+			case SWEDEN:
+				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND, idx, GOOD_LINEN);
+				idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND, idx, GOOD_SILK);
+				if(sti(sisland.smuggling.state)>1){
+					idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND, idx, GOOD_SUGAR);
+				}
+				if(sti(sisland.smuggling.state)>3){
+					idx = AddTradeGood(sisland, TRADE_TYPE_CONTRABAND, idx, GOOD_COFFEE);
+				}
+			break;
+		}
+	}*/
 }
 
 int getIslandSmugglingPatrols(ref sisland)
@@ -794,18 +909,24 @@ void changeIslandSmugglingState(ref sisland, int change)
 	{
 		sisland.smuggling.state = SMUGGLING_NORMAL;
 	} 
-	string logTitle, logEntry;
+	string logTitle, logEntry,SmugglingState;
+	// DeathDaisy: Add smuggling state level info to rumours. TODO: make into ConvertString or whathaveyou.
+	if(sisland.smuggling.state == 1) SmugglingState = "lax";
+	if(sisland.smuggling.state == 2) SmugglingState = "normal";
+	if(sisland.smuggling.state == 3) SmugglingState = "tight";
+	if(sisland.smuggling.state == 4) SmugglingState = "very tight";
+	
 	if(change>0) 
 	{
 		logTitle = sisland.name+" increased coastguard patrol";
-		logEntry = "Due to recent smuggling, the coastguard decided to change the amount of patrolling on "+sisland.name+". They think the smugglers were onto their schedule and therefore able to get past them.";
+		logEntry = "Due to recent smuggling, the coastguard decided to change the amount of patrolling on "+sisland.name+". They think the smugglers were onto their schedule and therefore able to get past them. Security is now "+SmugglingState+".";
 		WriteNewLogEntry(logTitle, logEntry, "General", false);
 		if(DEBUG_SMUGGLING>0) trace("SMUGGLING increased state of "+sisland.id+" to: "+sisland.smuggling.state);
 	}
 	if(change<0) 
 	{
 		logTitle = sisland.name+" decreased coastguard patrol";
-		logEntry = "Due to a recent lack in smuggling, the coastguard decided to change the amount of patrolling on "+sisland.name+". It seems the coastguard was able to capture most smugglers so they decided to put some of the troops to better use.";
+		logEntry = "Due to a recent lack in smuggling, the coastguard decided to change the amount of patrolling on "+sisland.name+". It seems the coastguard was able to capture most smugglers so they decided to put some of the troops to better use. Coast guard patrol is now "+SmugglingState+".";
 		WriteNewLogEntry(logTitle, logEntry, "General", false);
 		if(DEBUG_SMUGGLING>0) trace("SMUGGLING decreased state of "+sisland.id+" to: "+sisland.smuggling.state);
 	}
@@ -859,42 +980,6 @@ int getIslandSmugglingState(ref sisland)
 	int state = 0;
 	if(CheckAttribute(sisland,"smuggling.state")) state = sti(sisland.smuggling.state);
 	return state;
-}
-
-int getIslandSmugglingStateTradebook(ref sisland, ref Character)
-{
-	//This returns the smuggling state of the island which is last known by the player. If not known it returns -1
-	int state = -1;
-	string islandid = sisland.id;
-	if(CheckAttribute(Character,"quest.smuggling_guild.patrolstates."+islandid+".state")) state = sti(Character.quest.smuggling_guild.patrolstates.(islandid).state);
-	return state;
-}
-
-string getIslandSmugglingDateTradebook(ref sisland, ref Character)
-{
-	//This returns the date when the smuggling state of the island which is last known by the player.
-	string date = "";
-	string islandid = sisland.id;
-	if(CheckAttribute(Character,"quest.smuggling_guild.patrolstates."+islandid+".date")) date = Character.quest.smuggling_guild.patrolstates.(islandid).date;
-	return date;
-}
-
-void updateIslandSmugglingStateTradebookAll(ref Character)
-{
-	//Updates all patrol states for the tradebook
-	for(int n=0; n<ISLANDS_QUANTITY; n++) 
-	{
-		updateIslandSmugglingStateTradebookIsland(GetIslandByIndex(n), Character);
-	}
-	DumpAttributes(Character);
-}
-
-void updateIslandSmugglingStateTradebookIsland(ref sisland, ref Character)
-{
-	//Updates a single island in the tradebook
-	string islandid = sisland.id;
-	Character.quest.smuggling_guild.patrolstates.(islandid).state = getIslandSmugglingState(sisland);
-	Character.quest.smuggling_guild.patrolstates.(islandid).date = GetHumanDate(GetDataYear(),GetDataMonth(),GetDataDay());
 }
 
 float getCoastGuardEncounterChance()
@@ -1005,12 +1090,18 @@ string GetPatrolTimeText(ref sisland, int best)
 	return "";
 }
 
-int GetBestSmugglingtime(ref sisland)
+int GetBestSmugglingtime(ref sisland,ref chr)
 {
 	//This Function returns the best time to smuggle
+	// DeathDaisy: Added character ref and extra modifiers
 	//First let's see if we get false information or not
-	float pluck = makefloat(CalcCharacterSkill(GetMainCharacter(),SKILL_SNEAK));
-	int badinfo_chance = makeint((SMUGGLING_PERCENTAGE_BAD_INFO/100.0) * (11-pluck)*10);
+	int cLuck = CalcCharacterSkill(chr,SKILL_SNEAK); // DeathDaisy: Changed from float to int since it will always be a round number
+	int cLeadership = CalcCharacterSkill(chr,SKILL_LEADERSHIP);
+	int badinfo_chance = makeint((SMUGGLING_PERCENTAGE_BAD_INFO/100)*(((11-cLuck)*5)-((11-cLeadership)*2)));
+	if(CheckCharacterPerk(chr,"Trustworthy")) badinfo_chance = badinfo_chance*0.7;
+	if(CheckCharacterPerk(chr,"IronWill")) badinfo_chance = badinfo_chance*0.8;
+	/*if(CheckCharacterPerk(chr,"Charisma")) badinfo_chance = badinfo_chance*0.5;
+	if(CheckCharacterPerk(chr,"WitCharm")) badinfo_chance = 0;*/
 //	trace("chance = "+badinfo_chance);
 	int besttime = 0;
 	aref patrols;
@@ -1097,35 +1188,6 @@ string getSmugglingStateDesc(int state)
 	return "a normal patrolling duty";
 }
 
-//TODO: This should be done by the ConvertString function
-string getSmugglingStateShortDesc(int state)
-{
-	//This function returns a nice text for the patrolling state.
-	switch (state)
-	{
-		case SMUGGLING_NONE:
-			return "None";
-		break;
-		
-		case SMUGGLING_LOW:
-			return "Low";
-		break;
-		
-		case SMUGGLING_NORMAL:
-			return "Avarage";
-		break;
-		
-		case SMUGGLING_MEDIUM:
-			return "High";
-		break;
-		
-		case SMUGGLING_HIGH:
-			return "Very High";
-		break;
-	}
-	return "Normal";
-}
-
 string CreatePatrolBook(ref sisland)
 {
 	//This function creates the patrol book
@@ -1176,17 +1238,20 @@ void StartCoastGuardCheck()
 void CheckCoastGuard()
 {
 	ref PChar = GetMainCharacter();
-	if(PChar.location == PChar.quest.contraband.CurrentPlace)
+	float chance_get_caught = GetEventData();
+	if(PChar.location == PChar.quest.contraband.CurrentPlace && !dialogRun && !dialogSelf)
 	{
-		float chance_get_caught = GetEventData();
 		if(Rand((100*SMUGGLING_TIME_CHANCE_MULT))<=chance_get_caught)
 		{
 			if(DEBUG_SMUGGLING>1) TraceAndLog("SMUGGLING Coastguard found you!");
 			Lai_QuestDelay("Rand_ContrabandInterruption",1.0);
-			StopCoastGuardCheck()
+			StopCoastGuardCheck();
 		}
 		if(DEBUG_SMUGGLING>1) TraceAndLog("SMUGGLING caught chance is "+chance_get_caught+" in "+(100*SMUGGLING_TIME_CHANCE_MULT));
 		if(DEBUG_SMUGGLING>1) TraceAndLog("SMUGGLING Evaded the Coastguard (for now)");
+	}
+	else{
+		if(DEBUG_SMUGGLING>1) TraceAndLog("SMUGGLING caught chance paused"); 
 	}
 	PostEvent("CheckCoastGuard",5000,"f",chance_get_caught);
 }
@@ -1195,6 +1260,7 @@ void StopCoastGuardCheck()
 {
 	if(DEBUG_SMUGGLING>1) TraceAndLog("SMUGGLING Stop event");
 	DelEventHandler("CheckCoastGuard","CheckCoastGuard");
+//	DelEventHandler("PauseCoastGuardCheck","PauseCoastGuardCheck");
 	DeleteAttribute(GetMainCharacter(),"postevent.CheckCoastGuard");
 }
 

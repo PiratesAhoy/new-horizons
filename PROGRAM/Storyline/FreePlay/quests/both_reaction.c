@@ -39,6 +39,9 @@ void BothQuestComplete(string sQuestName)
 // KK ----- Start Adventure -->
 
 		case "StartAdventure":
+// BoP ----- Start A family story Quest -->		
+            if (GetMySimpleName(PChar) == "José Joaquín Almeida"){LAi_QuestDelay("madero_start", 0.0);}
+// BoP <-- Start A family story Quest -----			
 			if(CheckQuestAttribute("Tut_start", "complete")) break;
 			if(PChar.location=="Tutorial_Deck") break;
 
@@ -142,27 +145,31 @@ void BothQuestComplete(string sQuestName)
 				LAi_SetImmortal(CharacterFromID("Malcolm Hatcher"), false);
 // KK -->
 				Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "start";
-				switch(CharPlayerType)
+				if (GetCharacterShipCabin(PChar) == "Cabin_none") // PB: Is this 'if' still necessary?
 				{
-					case PLAYER_TYPE_NAVAL_OFFICER:   /*nothing*/ break;
-					case PLAYER_TYPE_ROGUE:       /*nothing*/ break;
-					case PLAYER_TYPE_GAMBLER:     /*nothing*/ break;
-					case PLAYER_TYPE_AGENT:       /*nothing*/ break;
-					case PLAYER_TYPE_SMUGGLER:     /*nothing*/ break;
-					case PLAYER_TYPE_CURSED:     /*nothing*/ break;
-					case PLAYER_TYPE_CORSAIR:     /*nothing*/ break;
-					case PLAYER_TYPE_CASTAWAY:     /*nothing*/ break;
-					//default:
-					Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "OnMalcolmShip";
+					switch(CharPlayerType)
+					{
+						case PLAYER_TYPE_NAVAL_OFFICER:	/*nothing*/ break;
+						case PLAYER_TYPE_ROGUE:			/*nothing*/ break;
+						case PLAYER_TYPE_GAMBLER:		/*nothing*/ break;
+						case PLAYER_TYPE_AGENT:			/*nothing*/ break;
+						case PLAYER_TYPE_SMUGGLER:		/*nothing*/ break;
+						case PLAYER_TYPE_CURSED:		/*nothing*/ break;
+						case PLAYER_TYPE_CORSAIR:		/*nothing*/ break;
+						case PLAYER_TYPE_CASTAWAY:		/*nothing*/ break;
+						//default:
+						Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "OnMalcolmShip";
+					}
 				}
 // <-- KK
 				RemoveCharacterEquip(PChar, GUN_ITEM_TYPE );
 				playerGun   = PChar.start_weapon.gun;
-				if(playerGun != "") locations[FindLocation(PChar.location)].box1.items.(playerGun) = 1;
+				if(playerGun != "")
+					locations[FindLocation(PChar.location)].box1.items.(playerGun) = 1;
 				locations[FindLocation(PChar.location)].box1.items.spyglass1 = 1;
 
-				locations[FindLocation(PChar.location)].box1.money = 2500;
-				locations[FindLocation(PChar.location)].box1.items.relationbook = 1; // PB
+				TutDeck.box1.money = 2500;
+				TutDeck.box1.items.relationbook = 1; // PB
 				if(ENABLE_AMMOMOD)
 				{
 					TutDeck.WeaponsLocker.items.gunpowder = 6;
@@ -174,12 +181,14 @@ void BothQuestComplete(string sQuestName)
 					locations[FindLocation(PChar.location)].box1.items.pistolbullets = 6;
 				}
 
+				DeleteAttribute(TutDeck, "box2.items"); // JRH
+
 				PChar.quest.Tut_KillTutor.win_condition.l1 = "NPC_Death";
 				PChar.quest.Tut_KillTutor.win_condition.l1.character = "Malcolm Hatcher";
 				PChar.quest.Tut_KillTutor.win_condition = "Tut_KillTutor";
 			}
 
-			locations[FindLocation(PChar.location)].box1 = Items_MakeTime(0, 0, 1, 2003);
+			TutDeck.box1 = Items_MakeTime(0, 0, 1, 2003);
 
 // added by MAXIMUS [choose character mod] -->
 // KK -->
@@ -538,11 +547,7 @@ void BothQuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "HurtEnough";			
 			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "", 1.0, 1.0);		
-		//	Lai_QuestDelay("Tut_ReturnPlayer", 2.0);
-		break;
-
-		case "Tut_ReturnPlayer":
-			LAi_SetPlayerType(PChar);
+		//	Lai_QuestDelay("player_back", 2.0);
 		break;
 
 		case "Tut_StartSeriousFight":
@@ -568,7 +573,7 @@ void BothQuestComplete(string sQuestName)
 			Lai_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			LAi_SetFightMode(PChar, false);
 
-			Lai_QuestDelay("Tut_ReturnPlayer", 1.5);
+			Lai_QuestDelay("player_back", 1.5);
 			
 			Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "SeriousStopped";
 			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "", 1.0, 1.0);
@@ -600,7 +605,7 @@ void BothQuestComplete(string sQuestName)
 			Lai_ActorWaitDialog(PChar, CharacterFromID("Malcolm Hatcher"));
 			LAi_SetFightMode(PChar, false);
 
-			Lai_QuestDelay("Tut_ReturnPlayer", 1.5);
+			Lai_QuestDelay("player_back", 1.5);
 
 			LAi_group_SetRelation(LAI_GROUP_PLAYER, "tutorial", LAI_GROUP_FRIEND);
 			
@@ -1923,7 +1928,7 @@ void BothQuestComplete(string sQuestName)
 			PChar.quest.Tut_KillTutor.over = "yes";
 			locDisableUpdateTime = false;
 			Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "FinalStage";
-			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "Tut_ReturnPlayer", 4.0, 1.0);
+			LAi_ActorDialog(CharacterFromID("Malcolm Hatcher"), PChar, "player_back", 4.0, 1.0);
 		break;
 
 		case "Tut_SkipTutorialOnShip":
@@ -2023,6 +2028,7 @@ void BothQuestComplete(string sQuestName)
 
 			TutDeck.box1.money = makeint(0);
 			DeleteAttribute(TutDeck, "box1.items"); // PB
+			DeleteAttribute(TutDeck, "box2.items"); // JRH
 
 			QDeck = BOARDER_SPAREBLADE;
 			if (CheckAttribute(TutDeck, "WeaponsLocker.items." + QDeck) == false || TutDeck.WeaponsLocker.items.(QDeck) < 12)
@@ -2120,6 +2126,7 @@ void BothQuestComplete(string sQuestName)
 
 			TutDeck.box1.money = makeint(0);
 			DeleteAttribute(TutDeck, "box1.items"); // PB
+			DeleteAttribute(TutDeck, "box2.items"); // JRH
 // <-- KK
 
 			SetQuestHeader("Tutorial_SpyGlass");
@@ -2807,7 +2814,10 @@ void BothQuestComplete(string sQuestName)
 				// next section gives you a random amount of money and equipment
 				GiveItem2Character(PChar, "blade"+ (1+ rand(9)) );				// gives you blade1, blade2... or blade10
 				EquipCharacterByItem(PChar, FindCharacterItemByGroup(PChar,BLADE_ITEM_TYPE));	// PB: equips your blade
-				GiveItem2Character(PChar, "PISTOL"+ (1+ rand(1)) );				// PB: added to give you a default pistol too
+//				GiveItem2Character(PChar, "PISTOL"+ (1+ rand(1)) );				// PB: added to give you a default pistol too
+				string start_pistol = "PISTOL"+ (1+ rand(1));
+				if (GetCurrentPeriod() <= PERIOD_THE_SPANISH_MAIN && start_pistol == "PISTOL1") start_pistol = "PISTOL1A";
+				GiveItem2Character(PChar, start_pistol);					// GR: if in early periods, use alternative short pistol
 				EquipCharacterByItem(PChar, FindCharacterItemByGroup(PChar,GUN_ITEM_TYPE));	// PB: equips your pistol
 				GiveItem2Character(PChar, "Spyglass" + (1+rand(2)) );
 				EquipCharacterByItem(PChar, FindCharacterItemByGroup(PChar,SPYGLASS_ITEM_TYPE));// PB: equips your spyglass
@@ -2913,20 +2923,20 @@ void BothQuestComplete(string sQuestName)
 				break;
 
 				case 11:
-					loadPort = "Cayman_Shore_03";
+					loadPort = "Cayman_Shore_02";
 					loadTown = "Cayman_Shore_01"; // KK (separated from ship)
 					rldLocator = "reload1";
 				break;
 
 				case 12:
-					loadPort = "Hispaniola_shore_04"; // PB (separated from ship)
-					loadTown = "Hispaniola_shore_01";
+					loadPort = "Santo_Domingo_port";	// Ship to Santo Domingo
+					loadTown = "Hispaniola_shore_01";	// Player to Boca de Yuman
 					rldLocator = "reload1";
 				break;
 
 				case 13:
-					loadPort = "Hispaniola_shore_03";
-					loadTown = "Hispaniola_shore_02"; // KK (separated from ship)
+					loadPort = "PoPrince_Port";		// Ship to Port au Prince
+					loadTown = "Hispaniola_shore_02";	// Player to Boca de Hubon
 					rldLocator = "reload1";
 				break;
 
@@ -3317,6 +3327,7 @@ void BothQuestComplete(string sQuestName)
 			bChangeNation = true;
 // <-- KK
 			bDisableFastReload = 0;
+			TutDeck.reload.l1.disable = 0;	//PW remove locked cabin icon
 // added by MAXIMUS [choose character mod] <--
 		break;
 

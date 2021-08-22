@@ -40,6 +40,26 @@ void StartStoryLine()
 	PChar.isnotcaptain = true; // LDH 18Apr09
 // <-- SJG
 
+	int shipidx;
+	shipidx = GetShipIndex("US_SteamFrigate");
+	if (shipidx != -1)
+	{
+		ShipsTypes[shipidx].CanEncounter = false;
+		ShipsTypes[shipidx].CanBuy = false;
+	}
+	shipidx = GetShipIndex("FR_SteamFrigate");	
+	if (shipidx != -1)
+	{
+		ShipsTypes[shipidx].CanEncounter = false;
+		ShipsTypes[shipidx].CanBuy = false;
+	}
+	shipidx = GetShipIndex("RN_SteamFrigate");	
+	if (shipidx != -1)
+	{
+		ShipsTypes[shipidx].CanEncounter = false;
+		ShipsTypes[shipidx].CanBuy = false;
+	}
+
 	Reinit_KhaelRoa();
 
 //================================| BEGINNING QUESTS |================================//
@@ -69,6 +89,7 @@ void StartStoryLine()
 	SetNationRelationBoth(PORTUGAL, FRANCE,  RELATION_NEUTRAL);
 	SetNationRelationBoth(PORTUGAL, SPAIN,   RELATION_NEUTRAL);
 	SetNationRelationBoth(PORTUGAL, HOLLAND, RELATION_NEUTRAL);
+	Periods[GetCurrentPeriod()].Royal.Spain.Name = "Carlos IV"; // Joseph Napoleon Bonaparte didn't take the throne until 1808
 	LooseLetterOfMarque     (ENGLAND);		// Disable regular governor dialog
 	PChar.professionalnavy = ENGLAND ;		// Add this again as it was removed by the previous function
 	SetRelationsAsNation    (ENGLAND);		// Set nations as per selected nation
@@ -93,4 +114,6 @@ void StartStoryLine()
 	SetCharacterRemovable(characterFromID("Lt. Percy Buckland"), false);
 	SetCharacterShipLocation(characterfromID("Lt. Percy Buckland"), "Antigua_port");
 	Character_SetCompanionEnemyEnable(characterfromID("Lt. Percy Buckland"), true); // PB: Not linked to player!
+
+	Locations[FindLocation("Santo_Domingo_town")].reload.l25.disable = 1;		// Disable historian house in Santo Domingo to block "Crystal Skull" sidequest
 }

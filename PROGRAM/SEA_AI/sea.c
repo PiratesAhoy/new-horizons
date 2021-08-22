@@ -385,7 +385,7 @@ void Sea_MapEndFade()
 	ref PChar = GetMainCharacter();
 	if(CheckAttribute(PChar, "orgnation"))	// checks if you just hoisted Jolly Roger
 	{
-		HoistFlag(PChar.orgnation);
+		HoistFlag(sti(PChar.orgnation));
 		DeleteAttribute(PChar,"orgnation");	// so that rel resetting runs only once after flaghoisting
 		LogIt(TranslateString("", "You hide the Jolly Roger and hoist your former flag again"));
 	}

@@ -681,7 +681,7 @@ string PCharRepPhrase (string Var1, string Var2)
 {
 	ref pchar = GetMainCharacter();
 
-	if(makeint(pchar.reputation) < 41)
+	if(makeint(pchar.reputation) < REPUTATION_NEUTRAL)
 	{
 		return Var2;
 	}
@@ -1428,7 +1428,7 @@ string GetMyAddressForm(ref chr, ref pchr, int addrtype, bool fname, bool lname)
 		/*default:*/		retstr = GetAddressForm(addrtype, fakeNat, bsex);
 	}
 	if(fname) retstr += " " + GetMyName(pchr);
-	if(lname && lname && CheckAttribute(pchr, "middlename")) retstr += " " + pchr.middlename;
+	if(fname && lname && CheckAttribute(pchr, "middlename")) retstr += " " + pchr.middlename;
 	if(lname) retstr += " " + pchr.lastname;
 	return retstr;
 }
@@ -1467,7 +1467,7 @@ string GetCharacterAddressForm(ref chr, int addrtype, bool fname, bool lname)
 	
 	if(fname)
 		retstr += " " + chr.name;
-	if(lname && lname && CheckAttribute(chr, "middlename"))
+	if(fname && lname && CheckAttribute(chr, "middlename"))
 		retstr += " " + chr.middlename;
 	if(lname)
 		retstr += " " + chr.lastname;
@@ -1553,7 +1553,7 @@ string GetMyFullName(ref chr)
 	if(!CheckAttribute(chr,"lastname")) chr.lastname = name;
 
 	// PB: Include rank -->
-	if (CheckAttribute(chr, "nation") && HasRank(chr, sti(chr.nation))) {
+	if (CheckAttribute(chr, "nation") && HasRank(chr, sti(chr.nation)) && sti(chr.nation) != PIRATE) {
 		name = XI_ConvertString(GetRankName(chr, sti(chr.nation))) + " ";
 	}
 	// PB: Include rank <--

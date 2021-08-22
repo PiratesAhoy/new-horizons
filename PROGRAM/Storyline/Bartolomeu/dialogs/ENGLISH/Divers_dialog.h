@@ -71,7 +71,7 @@ string DLG_TEXT[110] = {
 "Yes, I know who you are. You're a maker of troubles since you came to Cartagena. I repeat for the last time, leave this square immediately otherwise your health could 'deteriorate' quickly.",
 "Enough of this mummery! Nobody can threaten me. En garde!",
 "Are you wounded? What's going on ?",
-"Finally, you came. Is it like that soldiers defend people attacked by brigands in Cartagena",
+"Finally, you came. Is it like that soldiers defend people attacked by brigands in Cartagena?",
 "Sorry, sir. That's the first time something so serious happens in the square.",
 "Be more vigilant for the next time and be happy I don't report your behaviour to the Governor when he comes back.",
 "My apologies, Sir. I won't commit such mistake again.",

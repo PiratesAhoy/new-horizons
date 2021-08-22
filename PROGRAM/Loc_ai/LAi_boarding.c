@@ -901,7 +901,7 @@ bool SurrenderAction(ref mchr, ref ch, string locationID, string homeLocator, st
 	string id = "surrender";
 	string desc = "This captain surrendered";
 	SetSkillCharMod(refEnCaptain, "Leadership", -1, id, desc); //Levis
-	SetSkillCharMod(refEnCaptain, "Grappling", -1, id, desc); //Levis
+//	SetSkillCharMod(refEnCaptain, "Grappling", -1, id, desc); //Levis, TY after poll generally agreed to remove this part of the modifier
 	
 	refEnCaptain.nodisarm = 1;
 	if (!CheckAttribute(refEnCaptain,"chr_ai.type")) refEnCaptain.chr_ai.type = "stay";
@@ -1628,7 +1628,10 @@ void LAi_SetBoardingActors(string locID, string chLocType, string enLocType)
 		SetRandomNameToCharacter(chr);
 		// PB: Set Boarder Nations <--
 
-		if(!IsShipMerchant(boarding_enemy)) GiveSoldierWeapon(chr, boarding_enemy_nation);	// ARF: Update Soldier Weapons
+/*		if(!IsShipMerchant(boarding_enemy) && boarding_enemy_nation != PIRATE && !CheckAttribute(boarding_enemy, "skipSoldierWeapons"))
+		{
+			GiveSoldierWeapon(chr, boarding_enemy_nation);	// ARF: Update Soldier Weapons
+		}*/
 
 		locnum++;
 		// PB: Don't reuse locators until needed -->
@@ -2481,7 +2484,7 @@ void MusketVolley(ref mchr, ref echr)
 	int leadership1 = GetShipSkill(echr, SKILL_LEADERSHIP);
 	int accuracy0 = GetShipSkill(mchr, SKILL_ACCURACY);
 	int accuracy1 = GetShipSkill(echr, SKILL_ACCURACY);
-	float delta = makefloat((leadership0 - leadership1) + (accuracy0 - accuracy1)) / (4.0 * SKILL_MAX);
+	float delta = makefloat((leadership0 - leadership1) + (accuracy0 - accuracy1)) / (4.0 * MAX_CHARACTER_SKILL);
 //	float delta = 0.0;
 	float killratio1 = 0.0;
 	float killratio2 = 0.0;
@@ -2513,12 +2516,12 @@ void MusketVolley(ref mchr, ref echr)
 	{
 		// musket fire effects have been moved from AIAbordage.c to here
 		int ecrew = GetCrewQuantity(chr2);
-		float fLuck = 0.5 * GetShipSkill(chr1, SKILL_SNEAK) / SKILL_MAX;
+		float fLuck = 0.5 * GetShipSkill(chr1, SKILL_SNEAK) / MAX_CHARACTER_SKILL;
 		float fShipDefense = 0.0;
 		if (GetOfficersPerkUsing(chr2, "BasicBattleState"))        fShipDefense = 0.15;
 		if (GetOfficersPerkUsing(chr2, "AdvancedBattleState"))     fShipDefense = 0.25;
 		if (GetOfficersPerkUsing(chr2, "ShipDefenceProfessional")) fShipDefense = 0.40;
-		float fCharDefence = makefloat(GetShipSkill(chr2, SKILL_DEFENCE)) / SKILL_MAX;
+		float fCharDefence = makefloat(GetShipSkill(chr2, SKILL_DEFENCE)) / MAX_CHARACTER_SKILL;
 
 		int musketkills = makeint(0.25*ecrew * (1.0+delta+fLuck-fShipDefense-fCharDefence)+0.5);
 		if (musketkills < 0) musketkills = 0;	// just in case

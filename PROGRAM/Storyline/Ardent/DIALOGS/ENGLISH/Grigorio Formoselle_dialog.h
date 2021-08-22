@@ -46,6 +46,6 @@ string DLG_TEXT[49] = {
 "Ah, yes. Here you are. ",
 " gold as agreed. And a warning from the governor. Though he would like you to spend the rest of your life hanging around in town somewhere, he advises that you never again set foot in #sSantiago#.",
 "If we're back to trading threats then note that I've faced that fort before, and I've been in and out of your residence. So if so much as one cannon fires, I'll be back for revenge. But if your word is good then it is indeed time to move on - there's no point in robbing someone who is fully alert and short of money because he's just been fleeced. Give my regards to the governor, and farewell!",
-"May I see that ring, please? Ah... that is the signet ring of #svillain#. #spronoun# courier carried such a ring to show that he was trusted to gain access to #sromance#.",
+"May I see that ring, please? Ah... that is the signet ring of #svillain# - #spronoun# courier carried such a ring to show that he was trusted to gain access to #sromance#.",
 "Meaning anyone who carries such a ring is employed by #svillain#.",
 }

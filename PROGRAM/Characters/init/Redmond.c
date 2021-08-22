@@ -958,7 +958,7 @@ void CreateRedmondCharacters(ref n)
 	ch.nation = ENGLAND;
 	ch.location	= "Redmond_town_03";
 	ch.location.group = "goto";
-	ch.location.locator = "goto46";
+	ch.location.locator = "goto44";
 	ch.Dialog.Filename = "Patrol_dialog.c";
 	ch.rank 	= 1;
 	ch.reputation = "None";
@@ -1905,8 +1905,16 @@ void CreateRedmondCharacters(ref n)
 	ch.nation = ENGLAND;
 	GiveItem2Character(ch, "Blade1");
 	ch.equip.blade = "Blade1";
-	GiveItem2Character(ch, "Pistol1");
-	ch.equip.gun = "Pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
      //JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));

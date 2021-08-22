@@ -38,6 +38,14 @@ int DEATHRATE = 40;
 bool ENABLE_WEAPONSMOD = true;
 	// 1: Weapons have different quality grades: from "Badly worn" to "Excellent"
 	// 0: Off, stock PotC
+	
+bool SWEDEN_ALLOWED = 0;
+	// 1: Sweden shows up in game
+	// 0: Sweden does not show up in game
+	
+bool PERSUASION_TAGS = 0;
+	// 1: [Persuasion Tags] show up in dialogue when a skill check/random roll happens
+	// 0: [Persuasion Tags] does not show up in dialogues
 
 
 // ======================================
@@ -61,6 +69,11 @@ int SAILHO_INFOLEVEL = 2;
 	// 0: Reports only "some ship"
 	// 1: Adds ship group type
 	// 2: Adds nationality
+
+bool RELATION_IGNORE_FRIENDLY = 1;
+	// Determines whether forts and ships will record you if you are friendly
+	// 0: Forts and ships will remember you even if you are not hostile
+	// 1: Forts and ships will only remember you if you are hostile
 
 
 // ======================================

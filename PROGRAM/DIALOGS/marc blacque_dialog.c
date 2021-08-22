@@ -80,7 +80,7 @@ void ProcessDialogEvent()
 			Dialog.text = GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[18])]) + DLG_TEXT[19];
 			link.l1 = DLG_TEXT[20];
 			link.l1.go = "family_3";
-			Characters[GetCharacterIndex("Rachel Blacque")].quest.badguy = "done";
+//			Characters[GetCharacterIndex("Rachel Blacque")].quest.badguy = "done";
 		break;
 
 		case "family_3":
@@ -225,7 +225,11 @@ void ProcessDialogEvent()
 					Dialog.snd3 = "voice\MABL\MABL022";
 					Dialog.text = randphrase(DLG_TEXT[63] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[64], DLG_TEXT[65] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[66], DLG_TEXT[67] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[68], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3);
 					link.l1 = DLG_TEXT[69];
-					link.l1.go = "Marc_Officer";
+					if (Characters[GetCharacterIndex("Rachel Blacque")].quest.badguy == "dead")
+					{
+						link.l1.go = "exit";
+					}
+					else link.l1.go = "Marc_Officer";
 				}
 			}
 			NextDiag.TempNode = "Second time";

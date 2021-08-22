@@ -15,6 +15,14 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	int iTest, iTime, iAddTime, NPC_meeting;
 
+	Preprocessor_Add("ladlass", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false));
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -434,7 +442,7 @@ void ProcessDialogEvent()
 			if (makeint(pchar.reputation) > 40 && CalcCharacterSkill(pchar, SKILL_LEADERSHIP) > 4)
 			{
 				dialog.snd = "Voice\INDI\INDI035";
-				dialog.text = DLG_TEXT[118];
+				dialog.text = PersuasionSuccess + DLG_TEXT[118];
 				link.l1 = DLG_TEXT[119];
 				link.l1.go = "blaze_search_rheims_3";
 				link.l2 = DLG_TEXT[120];
@@ -443,7 +451,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\INDI\INDI036";
-				dialog.text = DLG_TEXT[121];
+				dialog.text = PersuasionFailure + DLG_TEXT[121];
 				link.l1 = pcharrepphrase(DLG_TEXT[122], DLG_TEXT[123]);
 				link.l1.go = "ines_denied_exit";
 			}
@@ -497,14 +505,14 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) > 5)
 			{
 				dialog.snd = "Voice\INDI\INDI043";
-				dialog.text = DLG_TEXT[138];
+				dialog.text = PersuasionSuccess + DLG_TEXT[138];
 				link.l1 = DLG_TEXT[139];
 				link.l1.go = "blaze_search_rheims_6";
 			}
 			else
 			{
 				dialog.snd = "Voice\INDI\INDI044";
-				dialog.text = DLG_TEXT[140];
+				dialog.text = PersuasionFailure + DLG_TEXT[140];
 				link.l1 = DLG_TEXT[141];
 				link.l1.go = "blaze_search_rheims_10";
 			}

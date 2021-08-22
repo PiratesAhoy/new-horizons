@@ -29,7 +29,7 @@ string DLG_TEXT[32] = {
 "I refuse to trade with a person of your reputation and relations. Now get out, ",
 ", before I call the guards.",
 "Very well.",
-"Allright, my dock beside the fort is available for you. If you want I'll tell my dockmaster to tow your ship in there. Only then can I survey the damage and tell you how much time and money it'll take. ",
+"All right, my dock beside the fort is available for you. If you want, I'll tell my dockmaster to tow your ship in there. Only then can I survey the damage and tell you how much time and money it'll take. ",
 "DOCK BESIDE THE FORT?? Uhh... I just remember that I have... eeh... another pressing business I must attend to first. Goodbye.",
 
 };

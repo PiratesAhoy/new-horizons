@@ -1014,25 +1014,25 @@ void LocationInitAntigua(ref n)
 	Locations[n].environment.sea = "false";
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
-	Locations[n].reload.l1.go = "Antigua_Jungle_01";	// short curcuit ;)
+	Locations[n].reload.l1.go = "Antigua_Jungle_03";
 	Locations[n].reload.l1.emerge = "reload2";
 	Locations[n].reload.l1.autoreload = "1";
 	Locations[n].locators_radius.reload.reload1 = 4;
 
 	Locations[n].reload.l5.name = "reload1_back";
-	Locations[n].reload.l5.go = "Antigua_Jungle_01";	// short curcuit ;)
+	Locations[n].reload.l5.go = "Antigua_Jungle_03";
 	Locations[n].reload.l5.emerge = "reload2";
 	Locations[n].reload.l5.autoreload = "1";
 	Locations[n].locators_radius.reload.reload1_back = 1;
 
 	Locations[n].reload.l4.name = "reload2";
-	Locations[n].reload.l4.go = "Antigua_Jungle_01";	// short curcuit ;)
+	Locations[n].reload.l4.go = "Antigua_Jungle_03";
 	Locations[n].reload.l4.emerge = "reload1";
 	Locations[n].reload.l4.autoreload = "1";
 	Locations[n].locators_radius.reload.reload2 = 4;
 
 	Locations[n].reload.l2.name = "reload2_back";
-	Locations[n].reload.l2.go = "Antigua_Jungle_01";	// short curcuit ;)
+	Locations[n].reload.l2.go = "Antigua_Jungle_03";
 	Locations[n].reload.l2.emerge = "reload1";
 	Locations[n].reload.l2.autoreload = "1";
 	Locations[n].locators_radius.reload.reload2_back = 2;
@@ -1132,6 +1132,69 @@ void LocationInitAntigua(ref n)
 	Locations[n].reload.l6.label = "Jungle.";
 	Locations[n].locators_radius.reload.reload3_back = 3.0;
 
+
+	Locations[n].island = "Antigua";
+	n = n + 1;
+
+	//-------------------------------------------------
+	Locations[n].filespath.models = "locations\Outside\Jungle_1";
+
+	Locations[n].id = "Antigua_Jungle_03";
+	locations[n].id.label = "Jungle";
+	Locations[n].image = "Outside_Jungle_1.tga";
+	//Sound
+	locations[n].type = "Jungle";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "jungle01_l";
+	Locations[n].models.always.jungle = "jungle01";
+	Locations[n].models.always.grassPatch = "jungle01_g";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+	//Day
+	Locations[n].models.day.charactersPatch = "jungle01_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "jungle01_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Antigua_Jungle_01";
+	Locations[n].reload.l1.emerge = "reload2";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].locators_radius.reload.reload1 = 3.0;
+
+	Locations[n].reload.l2.name = "reload1_back";
+	Locations[n].reload.l2.go = "Antigua_Jungle_01";
+	Locations[n].reload.l2.emerge = "reload2";
+	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].locators_radius.reload.reload1_back = 3.0;
+
+	Locations[n].reload.l3.name = "reload2";
+	Locations[n].reload.l3.go = "Antigua_Jungle_01";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].locators_radius.reload.reload2 = 3.0;
+
+	Locations[n].reload.l4.name = "reload2_back";
+	Locations[n].reload.l4.go = "Antigua_Jungle_01";
+	Locations[n].reload.l4.emerge = "reload1";
+	Locations[n].reload.l4.autoreload = "1";
+	Locations[n].locators_radius.reload.reload2_back = 3.0;
 
 	Locations[n].island = "Antigua";
 	n = n + 1;

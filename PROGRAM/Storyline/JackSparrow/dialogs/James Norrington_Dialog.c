@@ -71,7 +71,8 @@ void ProcessDialogEvent()
 
 		case "Take_the_Interceptor":
 			dialog.text = DLG_TEXT[20];
-			link.l1 = DLG_TEXT[21] + GetMyFullName(PChar);
+//			link.l1 = DLG_TEXT[21] + GetMyFullName(PChar);
+			link.l1 = DLG_TEXT[21] + GetMySimpleName(PChar) + ".";
 			link.l1.go = "Take_the_Interceptor2";
 		break;
 
@@ -107,8 +108,10 @@ void ProcessDialogEvent()
 		
 		case "The_Governor_and_Norrington":
 			LAi_ActorGoToLocator(characterFromID("Malvert Mullroy"), "goto", "goto_44", "", -1);		
-			dialog.text = DLG_TEXT[32] + GetMyFullName(PChar);
-			link.l1 = DLG_TEXT[33] + GetMyFullName(PChar) + DLG_TEXT[34];
+//			dialog.text = DLG_TEXT[32] + GetMyFullName(PChar);	// GR: GetMyFullName includes your rank if you have one
+//			link.l1 = DLG_TEXT[33] + GetMyFullName(PChar) + DLG_TEXT[34];
+			dialog.text = DLG_TEXT[32] + GetMySimpleName(PChar) + ".";
+			link.l1 = DLG_TEXT[33] + GetMySimpleName(PChar) + DLG_TEXT[34];
 			link.l1.go = "Norrington_and_Governor";
 		break;
 		
@@ -138,7 +141,8 @@ void ProcessDialogEvent()
 		
 		case "Norrington_talk_2":
 			dialog.text = DLG_TEXT[2];
-			link.l1 = DLG_TEXT[3] + GetMyFullName(Pchar) + DLG_TEXT[4];
+//			link.l1 = DLG_TEXT[3] + GetMyFullName(Pchar) + DLG_TEXT[4];	// GR: GetMyFullName includes your rank if you have one
+			link.l1 = DLG_TEXT[3] + GetMySimpleName(Pchar) + DLG_TEXT[4];
 			link.l1.go = "Norrington_talk_3";		
 		break;
 
@@ -177,7 +181,8 @@ void ProcessDialogEvent()
 
 		case "Other_Island_Start":
 			dialog.text = DLG_TEXT[2];
-			link.l1 = DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4];
+//			link.l1 = DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4];	// GR: GetMyFullName includes your rank if you have one
+			link.l1 = DLG_TEXT[3] + GetMySimpleName(PChar) + DLG_TEXT[4];
 			link.l1.go = "captured2";
 		break;
 
@@ -265,7 +270,8 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
 			
-			dialog.text = DLG_TEXT[37] + GetMyFullName(PChar); 
+//			dialog.text = DLG_TEXT[37] + GetMyFullName(PChar);	// GR: GetMyFullName includes rank if you have one, e.g. Mr. Freebooter Jack Sparrow
+			dialog.text = DLG_TEXT[37] + GetMySimpleName(PChar) + "."; 
 			link.l1 = DLG_TEXT[38];
 			link.l1.go = "Begin_2";
 		break;
@@ -345,7 +351,8 @@ void ProcessDialogEvent()
 			
 		case "Goodbye_Commodore":
 			dialog.text = DLG_TEXT[58]; 
-			link.l1 = DLG_TEXT[59] + GetMyFullName(PChar);
+//			link.l1 = DLG_TEXT[59] + GetMyFullName(PChar);	// GR: GetMyFullName includes rank if you have one
+			link.l1 = DLG_TEXT[59] + GetMySimpleName(PChar) + ".";
 			link.l1.go = "exit";
 		break;
 	

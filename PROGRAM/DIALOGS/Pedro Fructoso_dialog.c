@@ -52,6 +52,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\FRCO\FRCO002";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "quests";
@@ -72,6 +73,11 @@ void ProcessDialogEvent()
 				link.l10 = DLG_TEXT[14];
 				link.l10.go = "convoy";
 			}
+			if (CheckQuestAttribute("kidnapping", "abel_barco"))
+			{
+				link.l1 = DLG_TEXT[54];
+				link.l1.go = "meet_abel";
+			}			
 			link.l99 = DLG_TEXT[15];
 			link.l99.go = "second time";
 		break;
@@ -294,15 +300,15 @@ void ProcessDialogEvent()
 		break;
 
 		case "free_drink2":
-			if (PChar.sex == "man")
+			if (PChar.sex == "woman")
 			{
-				gov_kid = "daughter";
-				merch_kid = "son";
+				gov_kid = XI_ConvertString("son");
+				merch_kid = XI_ConvertString("daughter");
 			}
 			else
 			{
-				gov_kid = "son";
-				merch_kid = "daughter";
+				gov_kid = XI_ConvertString("daughter");
+				merch_kid = XI_ConvertString("son");
 			}
 			dialog.text = DLG_TEXT[50] + gov_kid + DLG_TEXT[51] + merch_kid + DLG_TEXT[52];
 			link.l1 = DLG_TEXT[53];
@@ -324,5 +330,13 @@ void ProcessDialogEvent()
 
 			Diag.TempNode = "second time";
 		break;
+		
+		case "meet_abel":
+			dialog.snd = "Voice\CLLA\CLLA005";
+			dialog.text = DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
+			link.l1.go = "exit";
+			AddDialogExitQuest("encontrar_abel");			
+			break;		
 	}
 }

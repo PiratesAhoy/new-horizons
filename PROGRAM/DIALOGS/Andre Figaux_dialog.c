@@ -51,6 +51,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\FRCO\FRCO002";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "quests";
@@ -75,6 +76,13 @@ void ProcessDialogEvent()
 			{
 				link.l2 = DLG_TEXT[46];
 				link.l2.go = "tav_1";
+			}
+			if (CheckQuestAttribute("ardent_hunt_status", "ship_known_marigot"))
+			{
+				Preprocessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
+				Preprocessor_Add("ship", Characters[GetCharacterIndex(PChar.quest.villain)].Ship.Name);
+				link.l3 = DLG_TEXT[51];
+				link.l3.go = "ardent_hunt_marigot_tavern";
 			}
 			link.l99 = DLG_TEXT[15];
 			link.l99.go = "second time";
@@ -237,12 +245,13 @@ void ProcessDialogEvent()
 		break;
 
 		case "tav_2":
+			AddQuestRecord("Contact", 14);
 			dialog.snd = "Voice\REGR\REGR008";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[49];
 			link.l1 = DLG_TEXT[50];
 			link.l1.go = "exit";
 			PChar.quest.Firstcontact = "search2";
-			AddQuestRecord("Contact", 14);
 		break;
 
 		case "exit_sit":
@@ -295,6 +304,27 @@ void ProcessDialogEvent()
 					}
 				}
 			}
+		break;
+
+		case "ardent_hunt_marigot_tavern":
+			Preprocessor_Add("ship", Characters[GetCharacterIndex(PChar.quest.villain)].Ship.Name);
+			dialog.text = DLG_TEXT[52];
+			link.l1 = DLG_TEXT[53];
+			link.l1.go = "ardent_hunt_marigot_tavern2";
+		break;
+
+		case "ardent_hunt_marigot_tavern2":
+			Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			dialog.text = DLG_TEXT[54];
+			link.l1 = DLG_TEXT[55];
+			link.l1.go = "ardent_hunt_marigot_tavern3";
+		break;
+
+		case "ardent_hunt_marigot_tavern3":
+			dialog.text = DLG_TEXT[56];
+			link.l1 = DLG_TEXT[57];
+			AddDialogExitQuest("hunt_seen_battleship");
+			link.l1.go = "exit";
 		break;
 	}
 }

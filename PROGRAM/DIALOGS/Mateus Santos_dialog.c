@@ -127,6 +127,7 @@ void ProcessDialogEvent()
 
 		case "start3":
 			Dialog.snd = "voice\MASA\MASA011";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[36]+ Characters[GetCharacterIndex(DLG_TEXT[37])].name +DLG_TEXT[38];
 			link.l1 = DLG_TEXT[39];
 			link.l1.go = "start4";

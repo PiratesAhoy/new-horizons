@@ -106,6 +106,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "node_1":
+			Preprocessor_Add("pronoun", GetMyPronounObj(PChar));
 			Dialog.snd = "voice\STBO\STBO008";
 			dialog.text = DLG_TEXT[21];
 			link.l1 = DLG_TEXT[22];

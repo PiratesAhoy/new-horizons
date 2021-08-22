@@ -144,6 +144,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "continue":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			if (NPC_Meeting == "1")
 			{
 				d.Text = DLG_TEXT[27] + GetMyName(Pchar) + DLG_TEXT[28];

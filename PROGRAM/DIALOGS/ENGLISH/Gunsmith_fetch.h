@@ -1,9 +1,9 @@
 string DLG_TEXT[19] = {
 "Folks say you got a big order. Need help?",
-"Indeed I am sir. The store can't even keep up with my demand. Could you fetch me ",
+"Indeed I am, #ssir#. The store can't even keep up with my demand. Could you fetch me ",
 " I will pay you ",
 " gold coins. Please get it before ",
-"I'm your man. You will have those supplies in no time.",
+"I'm your #sgender#. You will have those supplies in no time.",
 "Sorry, I can't help you just yet.",
 "Too bad, I will need the supplies before ",
 "Have a good day.",

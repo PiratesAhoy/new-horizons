@@ -286,9 +286,9 @@ string GetItemBonuses(string id)
 		{
 			if(comma) tempstr += ", ";
 			comma = true;
-			if(CheckAttribute(itm,"skill."+skillName+".set")) { tempstr += itm.skill.(skillName).set + " " + XI_ConvertString(skillName); continue; } //Levis: I believe this isn't used, delete?
-			if(sti(itm.skill.(skillName)) > 0) { tempstr += "+" + itm.skill.(skillName) + "/" + GetDifficulty() + " " + XI_ConvertString(skillName);}
-			else { tempstr += itm.skill.(skillName) + "/" + GetDifficulty() + " " + XI_ConvertString(skillName); }
+			if(CheckAttribute(itm,"skill."+skillName+".set")) { tempstr += itm.skill.(skillName).set + " " + XI_ConvertString(skillName); continue; }
+			if(sti(itm.skill.(skillName)) > 0) { tempstr += "+" + itm.skill.(skillName) + " " + XI_ConvertString(skillName);}
+			else { tempstr += itm.skill.(skillName) + " " + XI_ConvertString(skillName); }
 		}
 	}
 	if(CheckAttribute(itm,"skill.num")) { if(sti(itm.skill.num)>1) { tempstr += "; " + XI_ConvertString("rrequired") + " " + itm.skill.num + " " + XI_ConvertString("required"); } }
@@ -805,12 +805,17 @@ string GetRandomGunForLevel(int minLevel, int maxLevel, int maxQuality)
       intRandGun--;
     }  
     // <-- Sulan      
-	if((refGun.id == "blank") || (!bFound)) refGun.id = "pistol1";	// ccc special weapons
+	if((refGun.id == "blank") || (!bFound))
+	{
+		if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) refGun.id = "pistol1";	// ccc special weapons
+		else refGun.id = "pistol1a";
+	}
 
 	if( Items_FindItem(refGun.id,&arItem)<=0 ) // Sulan - avoid invalid items
 	{
 		trace("Invalid item: "+refGun.id+" - not given to character.");
-		return "pistol1";
+		if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) return "pistol1";
+		else return "pistol1a";
 	}
 	else
 	{

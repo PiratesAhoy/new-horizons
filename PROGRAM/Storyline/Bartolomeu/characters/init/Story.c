@@ -17,8 +17,8 @@ void CreateStoryCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	ch.location	= "BC_Tavern";
 	ch.location.group = "sit";
 	ch.location.locator = "sit6";
@@ -55,8 +55,8 @@ void CreateStoryCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	ch.location	= "Buccaneers_Camp";
 	ch.location.group = "goto";
 	ch.location.locator = "goto39";
@@ -131,8 +131,8 @@ void CreateStoryCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -171,8 +171,8 @@ void CreateStoryCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -211,8 +211,8 @@ void CreateStoryCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);

@@ -536,6 +536,75 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);	
 
+	// Usurer at Turks
+	ch.old.name = "Jacquotte";
+	ch.old.lastname = "Delahaye";
+	ch.name 	= TranslateString("","Jacquotte");
+	ch.lastname 	= TranslateString("","Delahaye");
+	ch.id		= "Turks Usurer";
+	ch.model	= "TiaDalma";
+	ch.sex = "woman";
+	ch.act.type = "merchant";
+	ch.location = "Turks_UsurerHouse";
+	ch.location.group = "barmen";
+	ch.location.locator = "stay";
+	ch.dialog.filename = "Usurer_Dialog.c";
+	ch.greeting = "Gr_Witch";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "6";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "4";
+	ch.skill.Accuracy = "9";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "6";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "7";
+	ch.skill.Sneak = "8";
+	ch.quest.area = "Turks";
+	ch.money = "10";
+	LAi_SetStayType(ch);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+
+			// Usurer in Santo Domingo
+	ch.old.name = "Rodrigo";
+	ch.old.lastname = "Corrales";
+	ch.name = TranslateString("","Rodrigo");
+	ch.lastname = TranslateString("","Corrales");
+	ch.id = "Santo Domingo usurer";
+	ch.model = "bb_Knight";
+	ch.sound_type = "seaman";
+	ch.sex = "man";
+	ch.location = "Santo_Domingo_usurer";
+	ch.location.group = "barmen";
+	ch.location.locator = "stay";
+	ch.Dialog.Filename = "Usurer_Dialog.c";
+	ch.Dialog.CurrentNode = "First time";
+	ch.rank = 9;
+	ch.nation = SPAIN;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "6";
+	ch.skill.Sneak = "6";
+	ch.quest.area = "Tortuga";
+	ch.money = "10";
+	LAi_SetBarmanType(ch);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.greeting = "VOICE\" + LanguageGetLanguage() + "\Spa_m_b_001.wav";
+	AddGameCharacter(n, ch);
 
 //-----------------------------------представители контрабандистов в тавернах-------------
 //-----------------------------------представители контрабандистов в тавернах-------------

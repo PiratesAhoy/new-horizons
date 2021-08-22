@@ -75,7 +75,8 @@ void ProcessDialogEvent()
 
 		case "talk_1":
 			Dialog.snd = "voice\UNWO\UNWO005";
-			dialog.text = DLG_TEXT[9];
+			if (PChar.sex == "woman") dialog.text = DLG_TEXT[23];
+			else dialog.text = DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "talk_2";
 		break;
@@ -121,6 +122,7 @@ void ProcessDialogEvent()
 		
 		case "talk_6":  // --> cat
 			Dialog.snd = "voice\UNWO\UNWO006";
+			Preprocessor_Add("title", GetAddressForm(ADDR_POLITE, ENGLAND, PChar.sex == "woman"));
 			dialog.text = DLG_TEXT[19];
 			link.l1 = DLG_TEXT[20];
 			link.l1.go = "exit";

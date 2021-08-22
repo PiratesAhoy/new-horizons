@@ -1069,8 +1069,8 @@ void QuestComplete(string sQuestName)
 		case "barthubon":
 			GiveItem2Character(CharacterFromId("bart_pirate_06"), "blade10");
 			EquipCharacterByItem(CharacterFromId("bart_pirate_06"), "blade10");
-			GiveItem2Character(CharacterFromId("bart_pirate_06"), "pistol1");
-			EquipCharacterByItem(CharacterFromId("bart_pirate_06"), "pistol1");
+			GiveItem2Character(CharacterFromId("bart_pirate_06"), "pistol1a");
+			EquipCharacterByItem(CharacterFromId("bart_pirate_06"), "pistol1a");
 			ChangeCharacterAddressGroup(CharacterFromID("bart_pirate_06"), "Hispaniola_shore_02", "goto", "locator12");
 			LAi_SetActorType(characterFromID("bart_pirate_06"));
 			Characters[GetCharacterIndex("bart_pirate_06")].dialog.currentnode = "begin_5";
@@ -1335,7 +1335,7 @@ void QuestComplete(string sQuestName)
 			EquipCharacterByItem(pchar, BLADE_ITEM_TYPE);
 			EquipCharacterByItem(pchar, GUN_ITEM_TYPE);
 			EquipCharacterByItem(characterFromID("Emilio Soares"), "blade4");
-			EquipCharacterByItem(characterFromID("Emilio Soares"), "pistol1");
+			EquipCharacterByItem(characterFromID("Emilio Soares"), "pistol1a");
 
 			locations[FindLocation("Santo_Domingo_town_exit_1")].reload.l1.disable = 1;
 			Island_SetReloadEnableLocal("Hispaniola", "reload_3", false);
@@ -1642,13 +1642,13 @@ void QuestComplete(string sQuestName)
 		case "comecobat":
 			GiveItem2Character(CharacterFromId("Emilio Soares"), "blade10");
 			EquipCharacterByItem(characterFromID("Emilio Soares"), "blade10");
-			EquipCharacterByItem(characterFromID("Emilio Soares"), "pistol1");
+			EquipCharacterByItem(characterFromID("Emilio Soares"), "pistol1a");
 			GiveItem2Character(CharacterFromId("Benoit Belcour"), "blade10");
 			EquipCharacterByItem(characterFromID("Benoit Belcour"), "blade10");
-			EquipCharacterByItem(characterFromID("Benoit Belcour"), "pistol1");
+			EquipCharacterByItem(characterFromID("Benoit Belcour"), "pistol1a");
 			GiveItem2Character(CharacterFromId("Adriance Blind"), "blade10");
 			EquipCharacterByItem(characterFromID("Adriance Blind"), "blade10");
-			EquipCharacterByItem(characterFromID("Adriance Blind"), "pistol1");
+			EquipCharacterByItem(characterFromID("Adriance Blind"), "pistol1a");
 
 			LAi_group_MoveCharacter(characterFromID("soldat"), "PORTO_SOLDIERS");
 			LAi_group_MoveCharacter(characterFromID("soldat1"), "PORTO_SOLDIERS");
@@ -1787,8 +1787,9 @@ void QuestComplete(string sQuestName)
 			LAi_SetImmortal(characterFromID("Benoit Belcour"), false);
 			LAi_SetImmortal(characterFromID("Adriance Blind"), false);
 			Characters[GetCharacterIndex("Benoit Belcour")].dialog.filename = "Enc_Officer_dialog.c";
+			Characters[GetCharacterIndex("Benoit Belcour")].dialog.CurrentNode = "hired";			
 			Characters[GetCharacterIndex("Adriance Blind")].dialog.filename = "Enc_Officer_dialog.c";
-
+			Characters[GetCharacterIndex("Adriance Blind")].dialog.CurrentNode = "hired";
 			break;
 
 		case "quitterport5":
@@ -4033,7 +4034,7 @@ void QuestComplete(string sQuestName)
 
 		case "Esteban_fight":
 			LAi_ActorAttack(CharacterFromID("Juan Esteban"), PChar, "");
-			LAi_SetCheckMinHP(characterFromID("Juan Esteban"), 29.0, false, "Esteban_surrender");
+			LAi_SetCheckMinHP(characterFromID("Juan Esteban"), 75.0, false, "Esteban_surrender");//higher level to be sure not to kill him with a powerful weapon
 			break;
 
 		case "Esteban_surrender":
@@ -4677,9 +4678,9 @@ void QuestComplete(string sQuestName)
 			AddMoneyToCharacter(pchar, 60000);
 			AddQuestRecord("Silver_Train", "7");
 			CloseQuestHeader("Silver_Train");
-			LAi_ActorRunToLocation(characterFromID("Pirate kk"), "reload", "reload5_back", "none", "", "", "", 30.0);
-			LAi_ActorRunToLocation(characterFromID("Edwaert Mansveldt"), "reload", "reload4_back", "none", "", "", "", 30.0);
-			LAi_ActorRunToLocation(characterFromID("Henry Morgan"), "reload", "reload4_back", "none", "", "", "Morgan_at_Redmond", 30.0);
+			LAi_ActorRunToLocation(characterFromID("Pirate kk"), "reload", "reload5_back", "none", "", "", "", 5.0);
+			LAi_ActorRunToLocation(characterFromID("Edwaert Mansveldt"), "reload", "reload4_back", "none", "", "", "", 5.0);
+			LAi_ActorRunToLocation(characterFromID("Henry Morgan"), "reload", "reload4_back", "none", "", "", "Morgan_at_Redmond", 5.0);
 			RemoveCharacterCompanion(Pchar, characterFromID("Henry Morgan"));
 			setCharacterShipLocation(characterFromID("Henry Morgan"), "none");
 
@@ -5024,7 +5025,7 @@ void QuestComplete(string sQuestName)
 		case "fuir_avec_roxbis":
 			ChangeCharacterAddressGroup(CharacterFromID("Roxanne Lalliere"), "Quest_Fort_prison", "goto", "goto13");
 			SetOfficersIndex(PChar, -1, GetCharacterIndex("Roxanne Lalliere"));
-			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1");
+			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1a");
 			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "blade10");
 			Locations[FindLocation("Quest_FortVRight")].reload.l1.disable = 0;
 			Locations[FindLocation("Quest_FortVRight")].reload.l2.disable = 0;
@@ -5042,7 +5043,7 @@ void QuestComplete(string sQuestName)
 
 		case "meet_enrique_rox":
 			EquipCharacterByItem(characterFromID("Roxanne Lalliere"), "blthag02");
-			EquipCharacterByItem(characterFromID("Roxanne Lalliere"), "pistol1");
+			EquipCharacterByItem(characterFromID("Roxanne Lalliere"), "pistol1a");
 			ChangeCharacterAddressGroup(CharacterFromID("Enrique Padilla"), "Eleuthera_Jungle4", "goto", "goto8");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Soldier_spa_16", "goto", "goto7");
@@ -5182,7 +5183,7 @@ void QuestComplete(string sQuestName)
 
 		case "tuerdansprison_rox":
 			Locations[FindLocation("Havana_prison")].vcskip = true;
-			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1");
+			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1a");
 			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "blade10");
 			DoQuestReloadToLocation("Havana_prison", "goto", "goto18", "tuerdansprisonbis_rox");
 			break;
@@ -5206,7 +5207,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Emilio Soares"), "Cuba_shore_01", "goto", "goto13");
 			ChangeCharacterAddressGroup(CharacterFromID("Roxanne Lalliere"), "Cuba_shore_01", "goto", "goto51");
 			EquipCharacterByItem(characterFromID("Roxanne Lalliere"), "blthag02");
-			EquipCharacterByItem(characterFromID("Roxanne Lalliere"), "pistol1");
+			EquipCharacterByItem(characterFromID("Roxanne Lalliere"), "pistol1a");
 			Build_at("Eleuthera_Port", "Sign", "", -57.6, 2, 7.87, 0.24, "building");
 			Locations[FindLocation("Eleuthera_Port")].dangerous = true;
 			ChangeRMRelation(pchar, SPAIN, -20.0);
@@ -5234,7 +5235,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Eleuthera_Jungle4")].vcskip = true;
 			SetOfficersIndex(PChar, 1, GetCharacterIndex("Elting"));
 			SetOfficersIndex(PChar, 2, GetCharacterIndex("Roxanne Lalliere"));
-			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1");
+			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1a");
 			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "blade10");
 			DoQuestReloadToLocation("Eleuthera_Jungle4", "reload", "reload2", "meet_enrique");
 			break;
@@ -6872,6 +6873,7 @@ void QuestComplete(string sQuestName)
 
 		case "plaza_jump":
 			ChangeCharacterAddressGroup(CharacterFromID("Elting"), "Vera_Cruz_01", "goto", "goto92");
+			LAi_SetImmortal(CharacterFromID("Elting"), true);			
 			DoQuestReloadToLocation("Vera_Cruz_01", "goto", "goto107","plaza_jump10");
 			break;
 
@@ -6916,6 +6918,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "outside_vera":
+			LAi_SetImmortal(CharacterFromID("Elting"), false);		
 			SetCharacterShipLocation(characterFromID("Elting"), "Vera_Cruz_Beach");
 			DoQuestReloadToLocation("Vera_Cruz_Beach", "goto", "locator10","outside_verabis");
 			break;
@@ -8733,6 +8736,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "stroll_lucia":
+			ChangeCharacterAddress(characterFromID("Zacarias Amendola"), "none", "");// To be sure it won't appear again later in the square		
 			DoQuestReloadToLocation("Residence_Cartagena", "goto", "goto32" ,"stroll_lucia2");
 			break;
 
@@ -9975,6 +9979,11 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "deck_san_martin":
+			ChangeCharacterAddress(characterFromID("Alfonso Galindez"), "none", "");//Location Quest_ShipDeck6 also used by the Anaconda quest - character removed to be sure it will not appear there again
+			//-> Remove Elting to be sure it won't be with me before starting the fight in the fort
+			RemoveCharacterCompanion(pchar, characterFromID("Elting"));		
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Elting"));
+			//<- Remove Elting to be sure it won't be with me before starting the fight in the fort			
 			DoQuestReloadToLocation("Quest_ShipDeck6", "goto", "goto16" ,"deck_san_martin2");
 			break;
 

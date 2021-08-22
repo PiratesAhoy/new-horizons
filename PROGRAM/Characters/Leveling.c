@@ -39,7 +39,7 @@ object SkillBonus;
 #define NPC_ONE_BONUS_CHANCE			60		// INT - The chance an NPC will have only 1 bonus skill
 #define NPC_TWO_BONUS_CHANCE			30		// INT - The chance an NPC will have 2 bonus skills. If one and two aren't 100 together, there is a chance the NPC has no bonus skills.
 
-#define	POSTINIT_AMOUNT_PIECES			3		// INT - Divde the XP given to a character on a post init run by this. Make this higher to increase amount of FPS at load, but longer post init
+#define	POSTINIT_AMOUNT_PIECES			3		// INT - Divide the XP given to a character on a post init run by this. Make this higher to increase amount of FPS at load, but longer post init
 #define POSTINIT_AMOUNT_LEVELS			1		// INT - Amount of levels done simultaniously on post init. Higher is lower post init time but also lower FPS on load
 #define POSTINIT_MAX_ALLOW_LEVEL_POST	20		// INT - Characters higher then this level wont be going trough post init, lower this to get shorter post init but longer loading times
 
@@ -292,7 +292,10 @@ bool AddXPtoChar(ref chref, string expName, int _exp)
 			{
 				LevelText = GetMySimpleName(chref) + " " + TranslateString("","has gained a new level!") + " " + TranslateString("","(Now level") + " " + GetTotalRank(chref) + ")");
 				//This character has noone to choose his perks so we must do it for him.
-				SelectPerksForCharacter(chref, 2);
+				if(!bAllies(chref))
+				{
+					SelectPerksForCharacter(chref, 2);
+				}
 			}
 			// LDH 01May09
 			if(DEBUG_EXPERIENCE>0) Trace(LevelText);
@@ -364,7 +367,7 @@ bool AddXPtoSkillsMain(ref chref, string expName, int skillExp)
 	float importance_total = stf(chref.skillimportancetotal);
 	float mult;
 	float xp = 0;
-	for(int n = 0; n < 10; n++)
+	for(int n = 0; n < NUM_DIFF_SKILLS; n++)
 	{
 		skill = GetSkillName(n);
 		importance = sti(chref.skill.(skill).importance);
@@ -411,7 +414,7 @@ bool AddXPtoSkill(ref chref, string expName, int skillExp)
 		//Substract the xp needed to level up.
 		curSkill = curSkill-nextSkill;
 		//Add the level
-		if(GetCharacterSkill(chref, expName) >= SKILL_MAX)
+		if(GetCharacterSkill(chref, expName) >= MAX_CHARACTER_SKILL)
 		{
 			//We don't need any more XP on this skill
 			if(sti(chref.skill.(expName).importance) > 0)
@@ -479,16 +482,17 @@ void SetUpCharacterBonus(ref chr)
 	int val = rand(100);
 	aref Bonus, B_Skill;
 	string skillname;
-	string nation = chr.nation;
+	string nation = UNKNOWN_NATION;
+	if (CheckAttribute(chr, "nation")) nation = chr.nation; // PB: Prevent error logs!
 	numbonus = 0;
 	if(val < NPC_ONE_BONUS_CHANCE) numbonus = 1;
 	if(val < (NPC_ONE_BONUS_CHANCE+NPC_TWO_BONUS_CHANCE)) numbonus = 2;
 	if(DEBUG_EXPERIENCE>1) Trace("XP LOG: Setup Bonusses for: "+GetMySimpleName(chr)+" with "+numbonus+" bonusses and nation = "+nation);
 	int cval = 100;
-	bool picked[SKILL_MAX];
+	bool picked[NUM_DIFF_SKILLS];
 	for(int n = 0; n < numbonus; n++)
 	{
-		if(CheckAttribute(chr,"nation"))
+		if(nation != UNKNOWN_NATION)
 		{
 			//The total value of the bonus skills will always be 100 so we start with a random value under 100.
 			randval = rand(cval);
@@ -519,7 +523,7 @@ void SetUpCharacterBonus(ref chr)
 		else
 		{
 			skillname = GetSkillName(rand(9));
-			if(DEBUG_EXPERIENCE>1) trace("XP LOG: No nation set so picked "+skillname);
+			if(DEBUG_EXPERIENCE>1) trace("XP LOG: No nation set, so picked "+skillname);
 			chr.skill.(skillname).bonus = 1.25;
 		}
 	}
@@ -531,14 +535,12 @@ void SetUpCharacterBonus(ref chr)
 void InitBonusChances()
 {
 	string nation = ENGLAND;
-	trace("nation = "+nation);
 	string skill = SKILL_SAILING;
 	SkillBonus.(nation).(skill) = 65;
 	skill = SKILL_LEADERSHIP;
 	SkillBonus.(nation).(skill) = 35;
 	
 	nation = FRANCE;
-	trace("nation = "+nation);
 	skill = SKILL_DEFENCE;
 	SkillBonus.(nation).(skill) = 75;
 	skill = SKILL_REPAIR;
@@ -581,7 +583,7 @@ void InitBonusChances()
 
 void UpdateSkillImportance(ref chref, string expName, int skillExp)
 {
-	if(GetCharacterSkill(chref, expName) >= SKILL_MAX) return;
+	if(GetCharacterSkill(chref, expName) >= MAX_CHARACTER_SKILL) return;
 	//small bursts of experience will probably increase your importance more then one large burst.
 	//At least thats what this function is aiming for.
 	int nextSkill = makeint(CalculateSkillExperienceFromRank(sti(chref.skill.(expName))+1));
@@ -625,7 +627,7 @@ void SetCharSkillImportance(ref chref, int SkillVariation)
 	string skill;
 	int importance = 0;
 	int total = 0;
-	for(int n = 0; n < 10; n++)
+	for(int n = 0; n < NUM_DIFF_SKILLS; n++)
 	{
 		skill = GetSkillName(n);
 		//Check if a level has been set already
@@ -720,10 +722,7 @@ bool SelectPerksForCharacter(ref chref, int attempts)
 		return false;
 	}
 	if(!CheckAttribute(chref,"PerkTypes")) PrepareSelectPerksForCharacter(chref);
-	if(sti(chref.PerkTypes) <= 0) 
-	{
-		return false;
-	}
+	if(sti(chref.PerkTypes) <= 0) return false;
 	string typename;
 	int numperktypes = GetAttributesNum(PerkTypes);
 	if(DEBUG_PERKSELECT>1) Trace("PERK SELECT: Called SelectPerksForCharacter for: "+GetMySimpleName(chref));
@@ -944,9 +943,7 @@ void InitCharacterSkills(ref chref)
 			if(!dopost)
 			{
 				if(DEBUG_POSTINIT > 1)Trace("POSTINIT: do normal init");
-				trace("FREEPOINTS NOW: "+sti(chref.perks.FreePoints));
 				AddXPtoChar(chref, "", CalculateExperienceFromRank(rank)); //Bypassing multipliers and shared experience
-				trace("FREEPOINTS AFTER: "+sti(chref.perks.FreePoints));
 				FinishCharInit(chref);
 			}
 		}
@@ -981,7 +978,6 @@ void CheckCharacterSetup(ref chref)
 {
 	if (!CheckAttribute(chref,"id")) {chref.id = "without_id"; }
 	if (!CheckAttribute(chref,"Experience")) {chref.Experience = 1; }
-	if (!CheckAttribute(chref,"nation")) {trace("NO NATION!");}
 	if (!CheckAttribute(chref,"perks.FreePoints")){chref.perks.FreePoints = 1; }
 	if (!CheckAttribute(chref,"skill.freeskill")){chref.skill.freeskill = 0; }
 	if (!CheckAttribute(chref,"quest.officertype") || GetAttribute(chref,"quest.officertype") == "combat")
@@ -1026,8 +1022,15 @@ void CheckCharacterSetup(ref chref)
 //		if (sti(chref.Money) == 0) chref.Money = GetRandCharMoney(chref, makeint(Rand(8)+2));
 	}
 	//Checks for leaving officers
-	if (!CheckAttribute(chref,"loyality")) {chref.loyality = 5+rand(15); }
-	if (!CheckAttribute(chref,"alignment")) {if(rand(1)==1){chref.alignment = "good";}else{chref.alignment = "bad";}}
+	if (!CheckAttribute(chref,"questchar") && !CheckAttribute(chref,"loyality"))
+	{
+		chref.loyality = 5+rand(15);
+	}
+	if (!CheckAttribute(chref,"questchar") && !CheckAttribute(chref,"alignment"))
+	{
+		if(rand(1)==1) chref.alignment = "good";
+		else chref.alignment = "bad";
+	}
 	if (!CheckAttribute(chref,"homelocation")) 
 	{
 		int loc = FindLocation(chref.location);
@@ -1061,7 +1064,7 @@ int ResetSkillsandPerks(ref chref)
 	if(DEBUG_EXPERIENCE>1) trace("XP LOG: Character "+GetMySimpleName(chref)+" has been reset to 0"); //Show these always
 	string skill;
 	int skillrank = 0;
-	for(int n = 0; n < 10; n++)
+	for(int n = 0; n < NUM_DIFF_SKILLS; n++)
 	{
 		skill = GetSkillName(n);
 		skillrank += (sti(chref.skill.(skill))-1);
@@ -1354,7 +1357,7 @@ void RestoreCharacterEvents(ref chref)
 	//Restore the skills xp assignment
 	if(CheckAttribute(chref,"postevent.skills"))
 	{
-		for(i = 0; i < 10; i++)
+		for(i = 0; i < NUM_DIFF_SKILLS; i++)
 		{
 			string skillname = GetSkillName(i);
 			if(CheckAttribute(chref,"postevent.skills."+skillname))
@@ -1483,11 +1486,11 @@ int CalculateExperienceFromRank(int _Rank)
 int CalculateSkillExperienceFromRank(int rank)
 {
 	//makeint(((CalculateExperienceFromRank(rank)-CalculateExperienceFromRank(rank-1))*SKILL_NEXT_XP_MULT) / ADD_SKILLPOINTS_PERLEVEL
-	int maxexp = CalculateExperienceFromRank(makeint((10 * SKILL_MAX) / ADD_SKILLPOINTS_PERLEVEL)); //Take the XP needed for level all skillpoints are used
-	//We got 10 skills each going to SKILL_MAX we need to know how !SKILL_MAX so use a forloop.
+	int maxexp = CalculateExperienceFromRank(makeint((MAX_CHARACTER_SKILL * NUM_DIFF_SKILLS) / ADD_SKILLPOINTS_PERLEVEL)); //Take the XP needed for level all skillpoints are used
+	//We have NUM_DIFF_SKILLS skills each going to MAX_CHARACTER_SKILL. We need to know how !MAX_CHARACTER_SKILL, so use a for-loop.
 	int amskills = 0;
-	for(int n = 1; n < SKILL_MAX; n++) {amskills += pow(n,2);}
-	return makeint((maxexp/10) / amskills * pow((rank-1),2));
+	for(int n = 1; n < MAX_CHARACTER_SKILL; n++) {amskills += pow(n,2);}
+	return makeint((maxexp/NUM_DIFF_SKILLS) / amskills * pow((rank-1),2));
 }
 
 int GetTotalRank(ref chr)

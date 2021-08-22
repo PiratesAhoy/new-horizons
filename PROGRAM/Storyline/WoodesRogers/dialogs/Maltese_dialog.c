@@ -106,6 +106,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[32];
 			link.l1.go = "exit_clerk";
 			AddDialogExitQuest("start_Maltains_dialog_done");
+			AddDialogExitQuest("Malta_items1");
 		break;
 
 		case "got_all_books":
@@ -171,7 +172,7 @@ void ProcessDialogEvent()
 		case "prison_info4":
 			PlaySound("VOICE\ENGLISH\Eng_m_a_004.wav");
 			dialog.text = DLG_TEXT[25];
-			link.l1 = DLG_TEXT[26];
+			link.l1 = DLG_TEXT[26];			
 			link.l1.go = "prison_info5";
 		break;
 
@@ -185,6 +186,35 @@ void ProcessDialogEvent()
 		case "prison_info6":
 			PlaySound("VOICE\ENGLISH\Eng_m_a_002.wav");
 			dialog.text = DLG_TEXT[29];
+			link.l1 = DLG_TEXT[46];	
+			link.l1.go = "prison_info7";		
+		break;
+
+		case "prison_info7":
+			PlaySound("VOICE\ENGLISH\Eng_m_a_001.wav");
+			dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[41];
+			link.l1.go = "prison_info8";
+		break;
+
+		case "prison_info8":
+			PlaySound("VOICE\ENGLISH\Eng_m_a_003.wav");
+			dialog.text = DLG_TEXT[42];
+			link.l1 = DLG_TEXT[43];
+			link.l1.go = "prison_info9";
+		break;
+
+		case "prison_info9":
+			PlaySound("VOICE\ENGLISH\Eng_m_a_006.wav");
+			dialog.text = DLG_TEXT[44];
+			link.l1 = DLG_TEXT[18];
+			link.l1.go = "prison_info10";
+		break;
+
+		case "prison_info10":
+			PlaySound("AMBIENT\RESIDENCE\some1.wav");
+			PlaySound("AMBIENT\RESIDENCE\some1.wav");
+			dialog.text = DLG_TEXT[45];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "exit_governor";
 			AddDialogExitQuest("prison_info_done");

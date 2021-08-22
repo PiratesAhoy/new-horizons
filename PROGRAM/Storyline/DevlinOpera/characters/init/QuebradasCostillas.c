@@ -18,8 +18,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.location.locator = "goto1";
 	ch.Dialog.Filename = "Skull_dialog.c";
 	ch.nation = PIRATE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));

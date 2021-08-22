@@ -27,7 +27,7 @@ string DLG_TEXT[46] = {
 "I hear Sir Cutler Beckett has pulled his ship close into the harbour so that every one gets a good look at you hanging there tomorrow, as a warning to other pirates!",
 "Charming!",
 "You there! Come with me!",
-"Well, I would rather go the other way, but if you insist so persitantly...",
+"Well, I would rather go the other way, but if you insist so persistently...",
 "",
 "",
 "",

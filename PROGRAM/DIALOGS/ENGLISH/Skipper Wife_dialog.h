@@ -8,7 +8,7 @@ string DLG_TEXT[18] = {
 "Nothing! And I have 500 gold here to prove it.",
 "You are trying to rob me! Guards!",
 "Not good.",
-"You, you filthy bastard, you are here to rape me! Jan, Jan, help me! This man wants to rape me!",
+"You, you filthy #sbastard#, you are here to rape me! Jan, Jan, help me! This #sgender# wants to rape me!",
 "Mon Dieu, that was not what meant. Please, do not scream like that!",
 "Please don't kill me, I will give you anything!",
 "Too late, sorry!", 
@@ -16,6 +16,6 @@ string DLG_TEXT[18] = {
 "350 gold, that is everything I have got! Oh, and here have some jewels too, that is everything, please don't kill me!",
 "Non, not enough. Say goodbye!", 
 "Thank you! Now remember, I wasn't here!",
-"Owh, 500 gold?! No, you are right, you were doing absolutly nothing here. Bye, kind sir whom I have never met!",
+"Owh, 500 gold?! No, you are right, you were doing absolutly nothing here. Bye, kind #ssir# whom I have never met!",
 
 };

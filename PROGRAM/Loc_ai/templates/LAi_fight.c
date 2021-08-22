@@ -84,6 +84,16 @@ bool LAi_tmpl_SetFight(aref chr, aref target)
 	{
 		if(charge == 1.0) PostEvent("LongRifle_C_on_hip", 0, "i", chr);
 	}
+	
+	if(IsEquipCharacterByItem(chr, "LongRifle_H"))
+	{
+		if(charge == 1.0) PostEvent("LongRifle_H_on_hip", 0, "i", chr);
+	}
+
+	if(IsEquipCharacterByItem(chr, "battleax"))
+	{
+		PostEvent("bax_on_hip", 10, "i", chr);
+	}
 // <-- JRH
 
 	return true;
@@ -509,6 +519,17 @@ void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 		if(IsEquipCharacterByItem(chr, "LongRifle_C"))
 		{
 			PostEvent("LongRifle_C_on_back", 1000, "i", chr);
+			PostEvent("mguns_reset_check", 1000, "i", chr);
+		}
+		if(IsEquipCharacterByItem(chr, "LongRifle_H"))
+		{
+			PostEvent("LongRifle_H_on_back", 1000, "i", chr);
+			PostEvent("mguns_reset_check", 1000, "i", chr);
+		}
+
+		if(IsEquipCharacterByItem(chr, "battleax"))
+		{
+			PostEvent("bax_on_back", 1000, "i", chr);
 			PostEvent("mguns_reset_check", 1000, "i", chr);
 		}
 	// <-- JRH
@@ -1248,6 +1269,7 @@ int FindSwitchInPartner(ref chr)
 		aidx = sti(GetAttributeName(GetAttributeN(Allies2, i)));
 		ref ally = &characters[aidx];
 		//Do not switch with a supporting character
+		if(!CheckAttribute(ally,"chr_ai.tmpl.state")) ally.chr_ai.tmpl.state = "wait";
 		if(ally.chr_ai.tmpl.state != "support")
 		{
 			//Let's check if the character is at least a bit damaged else we don't need to switch in yet

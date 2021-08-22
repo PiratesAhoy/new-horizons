@@ -313,6 +313,7 @@ void ProcessDialogEvent()
 
 		case "gov_1":
 			dialog.snd = "Voice\REGR\REGR008";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[173];
 			link.l1 = DLG_TEXT[174];
 			link.l1.go = "gov_2";

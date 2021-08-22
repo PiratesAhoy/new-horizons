@@ -11,6 +11,14 @@ void ProcessDialogEvent() //Mosh D33
 	makearef(NextDiag, NPChar.Dialog);
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	switch(Dialog.CurrentNode)
 	{
@@ -53,7 +61,7 @@ void ProcessDialogEvent() //Mosh D33
 		case "node_1":
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) > 5)
 			{
-				dialog.text = DLG_TEXT[6];
+				dialog.text = PersuasionSuccess + DLG_TEXT[6];
 				link.l1 = DLG_TEXT[7];
 				link.l1.go = "Exit";
 				Pchar.quest.RheimsBook = "escape_from_prison";//For Mosh D34
@@ -61,7 +69,7 @@ void ProcessDialogEvent() //Mosh D33
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[8];
+				dialog.text = PersuasionFailure + DLG_TEXT[8];
 				link.l1 = DLG_TEXT[9];
 				link.l1.go = "node_2";
 			}
@@ -70,7 +78,7 @@ void ProcessDialogEvent() //Mosh D33
 		case "node_2":
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) >3)
 			{
-				dialog.text = DLG_TEXT[10];
+				dialog.text = PersuasionSuccess + DLG_TEXT[10];
 				link.l1 = DLG_TEXT[11];
 				link.l1.go = "exit";
 				Pchar.quest.RheimsBook = "escape_from_prison";//For Mosh D34
@@ -78,7 +86,7 @@ void ProcessDialogEvent() //Mosh D33
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[12];
+				dialog.text = PersuasionFailure + DLG_TEXT[12];
 				link.l1  = DLG_TEXT[13];
 				link.l1.go = "exit";
 				AddDialogExitQuest("second_guard");

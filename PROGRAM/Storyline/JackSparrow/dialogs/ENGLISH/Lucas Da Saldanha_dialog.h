@@ -29,7 +29,7 @@ string DLG_TEXT[37] = {
 " again?",
 "I don't see why not, we will sail to #sisland_Falaise De Fleur# soon.",
 "No, you sail with me now and I won't have one of my officers running off like a love sick puppy",
-"Captain, I think we should go and see the governer like Captain Maggee suggested.",
+"Captain, I think we should go and see the governor like Captain Maggee suggested.",
 "Yes, I think you might be right.",
 "Captain, we must find ",
 "Elizabeth Shaw",

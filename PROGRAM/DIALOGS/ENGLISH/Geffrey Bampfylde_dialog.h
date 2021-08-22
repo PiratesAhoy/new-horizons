@@ -9,7 +9,7 @@ string DLG_TEXT[20] = {
 "I know you're a loudmouth and a bore. If I may be frank, you're not the best looking fellow, either.",
 "How dare you?! ",
 "Bucho",
-", throw this man out!",
+", throw this #sgender# out!",
 "Bucho",
 " won't be much help to you after I run him through. Then you and I can take our time.",
 "Please, have mercy! I'll give you anything you want - just don't kill me!",

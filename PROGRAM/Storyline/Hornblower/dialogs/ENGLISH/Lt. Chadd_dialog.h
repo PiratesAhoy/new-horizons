@@ -3,7 +3,7 @@ string DLG_TEXT[40] = {
 "Yes thank you, Lieutenant.",
 "Good day, Sir. May I enquire as to the nature of your business?",
 "I am here for the examinations for lieutenant, Lieutenant.",
-"Ah! you are the last candidate. You will find the captain's in the office at the top of the stairs. You are to go straight in.",
+"Ah! you are the last candidate. You will find the captains in the office at the top of the stairs. You are to go straight in.",
 "Thank you, Lieutenant.",
 "Good day Midshipman. May I enquire as to the nature of your business?",
 "Good day Sir. I am here to collect some officers joining the Indefatigable. Here are the orders to that effect.",

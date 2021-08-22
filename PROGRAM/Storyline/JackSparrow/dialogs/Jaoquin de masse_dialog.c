@@ -82,6 +82,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Which_ship":
+			Preprocessor_Add("ship", PChar.ship.name);
 			dialog.text = DLG_TEXT[22];			/*18*/
 			link.l1 = DLG_TEXT[23];				/*19*/
 			link.l1.go = "exit_mefisto";

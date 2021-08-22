@@ -110,7 +110,8 @@ void ProcessDialogEvent()
 
 		case "begin_10":
 			dialog.snd = "Voice\CLLA\CLLA004";
-			dialog.text = DLG_TEXT[22] + GetMyFullName(PChar);
+//			dialog.text = DLG_TEXT[22] + GetMyFullName(PChar);	// GR: GetMyFullName includes rank if you have one, e.g. Captain Freebooter Jack Sparrow
+			dialog.text = DLG_TEXT[22] + GetMySimpleName(PChar) + ".";
 			link.l1 = DLG_TEXT[23];
 			link.l1.go = "begin_11";
 		break;

@@ -1,5 +1,5 @@
 string DLG_TEXT[76] = { 
-"Sir, are you Captain ",
+"#ssir#, are you Captain ",
 "?",
 "Who wants to know?",
 "I'm ",
@@ -46,7 +46,7 @@ string DLG_TEXT[76] = {
 "What can we do, then?",
 "We've got to let him know to find us somewhere else. Somewhere safe. Look, no one knows you here, right? You can go and tell the French captain I'll wait for him behind the tavern, by the city wall.",
 "I don't know. I'm not exactly incognito here. I've already been caught in one fight.",
-"Don't worry about that. The other participants are in no condition to speak now, are they? And as for",
+"Don't worry about that. The other participants are in no condition to speak now, are they? And as for ",
 "Everard Gordon",
 " he won't give you away. Besides, my friend - if you don't go, then we are out of options.",
 "Right. Fine. What's this Frenchman's name?",

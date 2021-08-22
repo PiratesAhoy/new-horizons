@@ -302,7 +302,7 @@ void LocationInitQuestLocations(ref n)
 	// -------------------------------------------------
 
 	Locations[n].id = "Quest_Indian_house";
-	locations[n].id.label = "House";
+	locations[n].id.label = "Chief's House";
 	Locations[n].filespath.models = "locations\inside\IndianHome";
 	Locations[n].image = "Inside_IndianHome.tga";
 
@@ -696,6 +696,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.label = "Residence.";
 	Locations[n].reload.l1.disable = 1;
 	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].vcskip = true;
 
 	Locations[n].island = "Cuba"; // GR 25-02-2016
 	n = n + 1;
@@ -704,7 +705,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].id = "Quest_Merchant_House";
 	locations[n].id.label = "House of Gilbert Downing";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
-	Locations[n].image = "Inside_Residence_BackHall.tga";
+	Locations[n].image = "Downing_House.tga";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -785,6 +786,73 @@ void LocationInitQuestLocations(ref n)
 
 
 	Locations[n].island = "Redmond"; // NK 04-08-29
+	n = n + 1;
+
+// Port au Prince townhall archive -------------------------------------------------
+	Locations[n].filespath.models = "locations\Inside\apothecary";	
+
+	Locations[n].id = "PoPrince_archive";
+	locations[n].id.label = "???";
+	Locations[n].image = "Inside_PaP_Archives.tga"; // KK
+	//Town sack
+	Locations[n].townsack = "Port au Prince"; 
+	//Sound
+	locations[n].type = "residence"; 
+	locations[n].fastreload = "Port au Prince";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "resp_l";
+	Locations[n].models.always.l1 = "ResP2";
+	Locations[n].models.always.window = "resp_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+
+	//Day
+	Locations[n].models.day.charactersPatch = "resp_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "resp_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\grms_";
+	//Reload map
+	Locations[n].reload.l1.name = "Reload1";
+	Locations[n].reload.l1.go = "PoPrince_Town";
+	Locations[n].reload.l1.emerge = "reload20";
+	Locations[n].reload.l1.autoreload = "0";
+	locations[n].id.label = "#stown_name#.";
+
+	Locations[n].island = "Hispaniola";
+
+	n = n + 1;
+
+	//Port Royale fort
+	Locations[n].id = "Quest_Fort";
+	locations[n].id.label = "Fort inside";
+	//Info
+	Locations[n].filespath.models = "locations\Fort_inside\Fort_1";
+	Locations[n].image = "Fort_Inside_Fort_1.tga";
+	//Sound
+	locations[n].type = "deck";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "fort1_l_GR";
+	Locations[n].models.always.l1 = "fort1";
+	//Day
+	Locations[n].models.day.charactersPatch = "fort1_p";
+	Locations[n].models.day.fonar = "fort1_fd";
+	//Night
+	Locations[n].models.night.charactersPatch = "fort1_p";
+	Locations[n].models.night.fonar = "fort1_fn";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	Locations[n].boarding = "fort";
+
+	Locations[n].island = "Redmond";
+	Locations[n].townsack = "Redmond";
 	n = n + 1;
 
 }

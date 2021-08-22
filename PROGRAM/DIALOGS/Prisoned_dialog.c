@@ -69,6 +69,14 @@ void ProcessDialogEvent()
 	if(CheckAttribute(NPChar,"questchar") && NPChar.questchar==true) { bAllowHireJoin = false; bAllowRelease = false; }
 	if(sti(GetStorylineVar(FindCurrentStoryline(), "NO_CREW_OR_OFFICERS")) == 1 || CheckAttribute(PChar, "isnotcaptain")) { bAllowHireJoin = false; }
 	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -188,7 +196,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "thank_you":
-			dialog.text = DLG_TEXT[45];
+			dialog.text = DLG_TEXT[45] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ".";
 			if(bAllowRelease)
 		    {
 				if(locationNation==PIRATE)
@@ -285,7 +293,18 @@ void ProcessDialogEvent()
 		break;
 
 		case "price":
-			dialog.Text = DLG_TEXT[17] + CalcEncOfficerPrice(NPChar) + DLG_TEXT[40];	// LDH 16Apr09
+			//DeathDaisy -->
+			string CaptSir;
+			if(PChar.sex == "woman")
+			{
+				CaptSir = XI_ConvertString("ma'am");
+			}
+			else
+			{
+				CaptSir = XI_ConvertString("sir");
+			}
+			// DeathDaisy <--
+			dialog.Text = DLG_TEXT[17] + CalcEncOfficerPrice(NPChar) + DLG_TEXT[40] + strlower(GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + XI_ConvertString("captain") + " " + strlower(CaptSir)) + "?";	// LDH 16Apr09 | DeathDaisy: added code to translate "Mr. Captain sir?" to the proper gender, it looks a bit silly with Miss Captain ma'am, but so does Mr. Captain sir honestly
 			Link.l1 = DLG_TEXT[18];
 			Link.l1.go = "trade";
 			Link.l2 = DLG_TEXT[19];
@@ -301,7 +320,7 @@ void ProcessDialogEvent()
 			if(ptest >= ntest && makeint(NPChar.quest.OfficerPrice) >= GetLevel(NPChar)*100 + ptest*16)
 			{
 				NPChar.quest.OfficerPrice = makeint(NPChar.quest.OfficerPrice) - ptest*16;
-				dialog.Text = DLG_TEXT[21] + CalcEncOfficerPrice(NPChar) + DLG_TEXT[40];	// LDH 16Apr09
+				dialog.Text = PersuasionSuccess + DLG_TEXT[21] + CalcEncOfficerPrice(NPChar) + DLG_TEXT[40];	// LDH 16Apr09
 				Link.l1 = DLG_TEXT[22];
 				Link.l1.go = "hire";				
 				Link.l2 = DLG_TEXT[20];
@@ -309,7 +328,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.Text = DLG_TEXT[23];
+				dialog.Text = PersuasionFailure + DLG_TEXT[23];
 				Link.l1 = DLG_TEXT[22];
 				Link.l1.go = "hire";				
 				Link.l2 = DLG_TEXT[20];
@@ -509,6 +528,7 @@ void ProcessDialogEvent()
 					RemovePassenger(PChar,NPChar);
 					DeleteAttribute(NPChar,"prisoned");
 					DeleteAttribute(NPChar,"standing");
+					NPChar.ClearUponExit = true; // PB: So this guy is cleared upon exit
 				break;
 
 				case LAI_TYPE_POOR:
@@ -535,6 +555,7 @@ void ProcessDialogEvent()
 					RemovePassenger(PChar,NPChar);
 					DeleteAttribute(NPChar,"prisoned");
 					DeleteAttribute(NPChar,"standing");
+					NPChar.ClearUponExit = true; // PB: So this guy is cleared upon exit
 				break;
 
 				case LAI_TYPE_POOR:
@@ -571,6 +592,7 @@ void ProcessDialogEvent()
 					RemovePassenger(PChar,NPChar);
 					DeleteAttribute(NPChar,"prisoned");
 					DeleteAttribute(NPChar,"standing");
+					NPChar.ClearUponExit = true; // PB: So this guy is cleared upon exit
 				break;
 
 				case LAI_TYPE_POOR:
@@ -595,6 +617,7 @@ void ProcessDialogEvent()
 					RemovePassenger(PChar,NPChar);
 					DeleteAttribute(NPChar,"prisoned");
 					DeleteAttribute(NPChar,"standing");
+					NPChar.ClearUponExit = true; // PB: So this guy is cleared upon exit
 				break;
 
 				case LAI_TYPE_POOR:

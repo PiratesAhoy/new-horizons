@@ -116,6 +116,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Random Drunk"), "none", "", "");
 			DisableFastTravel(false);
 			Locations[FindLocation("Tortuga_port")].reload.l2.disable = 0;
+			bQuestDisableSeaEnter = false;
 
 			DoQuestReloadToLocation("Cayman_Port", "reload", "sea", "_");
 		break;
@@ -137,6 +138,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Sparrow_start":
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
 			AlwaysRunToggle = false;
 			ChangeCharacterAddressGroup(characterFromID("Teague Sparrow"), "Grand_Cayman_townhall", "sit", "sit1");
 			LAi_SetSitType(characterfromID("Teague Sparrow"));
@@ -249,6 +252,7 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Thomas Tipman")].dialog.currentnode = "First time Cayman";
 
 			DisableFastTravel(false);
+			EndQuestMovie();
 
 			Pchar.quest.More_information_Cayman.win_condition.l1 = "location";
 			PChar.quest.More_information_Cayman.win_condition.l1.character = Pchar.id;
@@ -337,6 +341,7 @@ void QuestComplete(string sQuestName)
 
 			ChangeCharacterAddressGroup(CharacterFromID("Maykin Blundas"),"Oxbay_tavern", "goto", "goto16");
 
+			Locations[FindLocation("Oxbay_tavern")].vcskip = true;	// GR: See what happens if we vcskip the tavern *before* we get there!
 			Pchar.quest.Blundas_in_the_Tavern.win_condition.l1 = "location";
 			PChar.quest.Blundas_in_the_Tavern.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Blundas_in_the_Tavern.win_condition.l1.location = "Oxbay_tavern";
@@ -344,7 +349,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Blundas_in_the_Tavern":
-			Locations[FindLocation("Oxbay_tavern")].vcskip = true;
+//			Locations[FindLocation("Oxbay_tavern")].vcskip = true;	// GR: you're in the tavern, too late to vcskip
 
 			characters[GetCharacterIndex("Maykin Blundas")].Dialog.Filename = "Maykin Blundas_dialog.c";
 			Characters[GetCharacterIndex("Maykin Blundas")].dialog.currentnode = "First_meet_Blundas";
@@ -423,7 +428,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "On_to_the_Tavern":
-			Locations[FindLocation("Oxbay_tavern")].vcskip = true;
+//			Locations[FindLocation("Oxbay_tavern")].vcskip = true;	// GR: you're in the tavern, too late to vcskip
 			ChangeCharacterAddressGroup(CharacterFromID("Billy Brock"),"Oxbay_tavern", "goto", "goto21");
 			ChangeCharacterAddressGroup(characterFromID("Sir Christopher Mings"), "Oxbay_tavern", "sit", "sit5");
 			LAi_SetSitType(characterfromID("Sir Christopher Mings"));
@@ -472,8 +477,9 @@ void QuestComplete(string sQuestName)
 
 		case "StartTalkingInTavern":
 			SetCurrentTime(10, 0);
-			LAi_ActorDialogNow(Pchar, characterFromID("Sir Christopher Mings"), "", -1);
-			LAi_ActorDialog(characterFromID("Sir Christopher Mings"),PChar,"",1.0,1.0);
+//			LAi_ActorDialogNow(Pchar, characterFromID("Sir Christopher Mings"), "", -1);
+//			LAi_ActorDialog(characterFromID("Sir Christopher Mings"),PChar,"",1.0,1.0);
+			LAi_ActorDialogNow(Pchar, characterFromID("Sir Christopher Mings"), "Start_Again_in_Tavern", 1.0);
 			Characters[GetCharacterIndex("Sir Christopher Mings")].dialog.currentnode = "Introduction2";
 		break;
 
@@ -994,6 +1000,9 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Annabella Brinkley"),"QC_Pirate_house_inside", "goto", "goto2");
 			LAi_ActorAnimation(characterFromID("Annabella Brinkley"), "Lay_1", "", -1);
 
+			ChangeCharacterAddressGroup(CharacterFromID("Clint Eastwood"),"QC_Pirate_house", "goto", "citizen02");	// GR: Just in case you already killed Clint before starting this quest
+			LAi_SetCivilianPatrolType(CharacterFromID("Clint Eastwood"));
+
 			Pchar.quest.Found_dead_body.win_condition.l1 = "location";
 			PChar.quest.Found_dead_body.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Found_dead_body.win_condition.l1.location = "QC_Pirate_house_inside";
@@ -1156,7 +1165,7 @@ void QuestComplete(string sQuestName)
 
 			pchar.quest.The_sisters_found2.win_condition.l1 = "location";
 			pchar.quest.The_sisters_found2.win_condition.l1.location = "Mings_townhall";
-			pchar.quest.The_sisters_found2.win_condition = "The_sisters_found"
+			pchar.quest.The_sisters_found2.win_condition = "The_sisters_found";
 		break;
 
 // Brotherhood Quest Begins
@@ -1621,8 +1630,12 @@ void QuestComplete(string sQuestName)
 			AddQuestRecord("Beckett",11);
 			DisableFastTravel(false);
 			SetShipRemovable(pchar, true);
-			GiveShip2Character(pchar,"WickedWench","Wicked Wench",-1,ENGLAND,true,true);
-			SetCharacterShipLocation(Pchar, "Redmond_Port");
+			if (!HasThisShip("Black Pearl"))
+			{
+				GiveShip2Character(pchar,"WickedWench","Wicked Wench",-1,ENGLAND,true,true);
+				PChar.quest.wench_given_by = "Beckett";
+				SetCharacterShipLocation(Pchar, "Redmond_Port");
+			}
 			//DoQuestReloadToLocation("Redmond_town_01", "officers", "Door_2_3", "Save_the_Slaves2");
 			LAi_QuestDelay("Save_the_slaves2", 0.0);
 		break;
@@ -1912,6 +1925,7 @@ void QuestComplete(string sQuestName)
 			}
 			else { AddPartyExp(pchar, 3000); }
 			ChangeCharacterAddress(characterfromID("Tia Dalma"),"none", "");
+			CloseQuestHeader("Beckett");
 			//ChangeCharacterAddress(characterFromID("Jacinto Arcibaldo Barreto"), "None", "");
 			//ChangeCharacterAddressGroup(characterFromID("Sir Christopher Mings"), "Conceicao_townhall", "sit", "sit1");
 			//ChangeCharacterAddressGroup(characterFromID("Peter Willemoes"), "Conceicao_townhall", "goto", "goto2");
@@ -2098,10 +2112,14 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Mr. Gibbs"));
 			LAi_ActorGoToLocator(characterFromID("Mr. Gibbs"), "goto", "goto2", "", 5.0);
 
+			Locations[FindLocation("Guadeloupe_Jungle_03")].reload.l2.disable = 1;
+			Locations[FindLocation("Guadeloupe_Jungle_03")].reload.l4.disable = 1;
+
 			pchar.quest.Captured_on_Guadeloupe.win_condition.l1 = "locator";
 			pchar.quest.Captured_on_Guadeloupe.win_condition.l1.location = "Guadeloupe_Jungle_03";
 			pchar.quest.Captured_on_Guadeloupe.win_condition.l1.locator_group = "reload";
-			pchar.quest.Captured_on_Guadeloupe.win_condition.l1.locator = "reload5";
+//			pchar.quest.Captured_on_Guadeloupe.win_condition.l1.locator = "reload5";	// This is the small house in the clearing by the fort - why would you go there?
+			pchar.quest.Captured_on_Guadeloupe.win_condition.l1.locator = "Reload2_back";	// This is the exit towards the plantation
 			pchar.quest.Captured_on_Guadeloupe.win_condition = "Captured_on_Guadeloupe";
 		break;
 
@@ -2247,6 +2265,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Go_to_meet_Annamaria_First":
+			AddQuestRecord("The Brotherhood",20);
 			DisableFastTravel(false);
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Couch Captain Charles"));
 			RemovePassenger(Pchar, characterFromID("Couch Captain Charles"));
@@ -2289,6 +2308,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Nathan_Kell_in_Oxbay":
+			AddQuestRecord("The Brotherhood",21);
 			Pchar.quest.Meet_Nathan_Kell.win_condition.l1 = "location";
 			Pchar.quest.Meet_Nathan_Kell.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Meet_Nathan_Kell.win_condition.l1.location = "Greenford_town";
@@ -2643,6 +2663,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Turks_with_KK":
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 1500);
@@ -2672,6 +2694,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Back_to_Lighthouse_from_Turks":
+			DisableFastTravel(false);
+			EndQuestMovie();
 			RemoveCharacterCompanion(pchar, characterFromID("Konrad Kulczycki"));
 			RemoveCharacterCompanion(pchar, characterFromID("Petros"));
 			RemoveCharacterCompanion(pchar, characterFromID("Nathan Kell"));
@@ -2689,12 +2713,21 @@ void QuestComplete(string sQuestName)
 			LAi_ActorGoToLocator(characterFromID("Nathan Kell"), "goto", "P_goto11", "", 22.0);				//JRH new Turks
 			LAi_ActorGoToLocator(characterFromID("Petros"), "goto", "P_goto11", "", 22.0);
 			LAi_ActorGoToLocator(characterFromID("Konrad Kulczycki"), "goto", "P_goto11", "", 22.0);
-			LAi_ActorGoToLocator(characterFromID("Captain Damski"), "goto", "P_goto11", "Back_to_Lighthouse_from_Turks2", 22.0);
+//			LAi_ActorGoToLocator(characterFromID("Captain Damski"), "goto", "P_goto11", "Back_to_Lighthouse_from_Turks2", 22.0); // GR: Won't trigger if you go to sea before they've finished moving
+			LAi_ActorGoToLocator(characterFromID("Captain Damski"), "goto", "P_goto11", "", 22.0);
+
+			Pchar.quest.Back_to_Lighthouse_from_Turks2.win_condition.l1 = "location";
+			Pchar.quest.Back_to_Lighthouse_from_Turks2.win_condition.l1.location = "Turks";					// GR: Trigger next bit when you go to sea instead.
+			Pchar.quest.Back_to_Lighthouse_from_Turks2.win_condition = "Back_to_Lighthouse_from_Turks2";
+
+			Pchar.quest.Turks_taken_by_brotherhood.win_condition.l1 = "location";
+			Pchar.quest.Turks_taken_by_brotherhood.win_condition.l1.location = "Turks";
+			Pchar.quest.Turks_taken_by_brotherhood.win_condition = "Turks_taken_by_brotherhood";
 		break;
 
 		case "Back_to_Lighthouse_from_Turks2":
 			PChar.Turks = "Brotherhood";
-			LAi_QuestDelay("Turks_taken_by_brotherhood", 0.0);
+//			LAi_QuestDelay("Turks_taken_by_brotherhood", 0.0);		
 
 			pchar.quest.return_to_lighthouse_and_Annamaria.win_condition.l1 = "location";
 			pchar.quest.return_to_lighthouse_and_Annamaria.win_condition.l1.location = "Oxbay_lighthouse";
@@ -2702,6 +2735,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Turks_taken_by_brotherhood":
+			CloseQuestHeader("The Brotherhood");
 			LAi_SetSitType(characterFromID("Captain Damski"));
 			ChangeCharacterAddressGroup(characterFromID("Captain Damski"), "Turks_Townhall", "sit", "sit6");
 
@@ -3168,6 +3202,7 @@ void QuestComplete(string sQuestName)
 
 //Traps for not going to lighthouse first.
 		case "Straight_to_Beckett_Capture":
+			CloseQuestHeader("The Brotherhood");
 			SetShipRemovable(pchar, true);
 			GiveShip2Character(pchar,"HMS_Bounty","Lindesfarne",ENGLAND,-1,true,true);
 			Pchar.Quest.Oxbay_to_Beckett_Capture.over = "yes";
@@ -3186,6 +3221,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Oxbay_to_Beckett_Capture":
+			CloseQuestHeader("The Brotherhood");
 			Pchar.Quest.Straight_to_Beckett_Capture.over = "yes";
 			Pchar.Quest.Brotherhood_lighthouse_and_Annamaria.over = "yes";
 			SetShipRemovable(pchar, true);
@@ -3224,6 +3260,8 @@ void QuestComplete(string sQuestName)
 
 // Trap quest starts here vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 		case "Captured_on_Guadeloupe":
+			Locations[FindLocation("Guadeloupe_Jungle_03")].reload.l2.disable = 0;
+			Locations[FindLocation("Guadeloupe_Jungle_03")].reload.l4.disable = 0;
 			DisableFastTravel(true);
 			DisableMenuLaunch(true);
 			Pchar.Quest.Get_to_meet_Petros.over = "yes";
@@ -3501,6 +3539,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Leave_Brin_Oxbay":
+			CloseQuestHeader("My Early Days");
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Susan Shaypen"));
 			RemovePassenger(pchar, characterFromID("Susan Shaypen"));
 			ChangeCharacterAddressGroup(characterfromID("Susan Shaypen"), "Oxbay_town", "Officers", "Reload4_3");
@@ -3798,6 +3837,9 @@ void QuestComplete(string sQuestName)
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Bella Brin"));
 			SetOfficersIndex(Pchar, 3, getCharacterIndex("Annabella Brin"));
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Annabella Brinkley"));
+			SetCharacterRemovable(characterFromID("Bella Brin"), false);
+			SetCharacterRemovable(characterFromID("Annabella Brin"), false);
+			SetCharacterRemovable(characterFromID("Annabella Brinkley"), false);
 			ChangeCharacterAddressGroup(characterfromID("Susan Shaypen"), "QC_Town", "goto", "goto15");
 			LAi_QuestDelay("Back_to_Bridgetown", 0.0);
 		break;
@@ -3823,6 +3865,7 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Sneak", 50);
 			}
 			else { AddPartyExp(pchar, 1500); }
+			SetCharacterRemovable(characterFromID("Annabella Brinkley"), true);
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Annabella Brinkley"));
 			RemovePassenger(pchar, characterFromID("Annabella Brinkley"));
 			ChangeCharacterAddress(characterFromID("Annabella Brinkley"), "none", "");
@@ -3866,12 +3909,15 @@ void QuestComplete(string sQuestName)
 		case "Meet_Governor_Brin_Redmond":
 			Pchar.Quest.Meet_Governor_Brin_Redmond.over = "yes";
 			Pchar.Quest.Meet_Governor_Brin_RedmondA.over = "yes";
+			CloseQuestHeader("My Early Days");
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 1500);
 				AddPartyExpChar(pchar, "Sneak", 50);
 			}
 			else { AddPartyExp(pchar, 1500); }
+			SetCharacterRemovable(characterFromID("Bella Brin"), true);
+			SetCharacterRemovable(characterFromID("Annabella Brin"), true);
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Annabella Brin"));
 			RemovePassenger(pchar, characterFromID("Annabella Brin"));
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Bella Brin"));
@@ -4002,6 +4048,8 @@ void QuestComplete(string sQuestName)
 			DisableFastTravel(false);
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Bella Brin"));
 			SetOfficersIndex(Pchar, 3, getCharacterIndex("Annabella Brin"));
+			SetCharacterRemovable(characterFromID("Bella Brin"), false);
+			SetCharacterRemovable(characterFromID("Annabella Brin"), false);
 
 			Pchar.quest.Meet_Governor_Brin_RedmondA.win_condition.l1 = "location";
 			PChar.quest.Meet_Governor_Brin_RedmondA.win_condition.l1.character = Pchar.id;
@@ -4323,9 +4371,11 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "return_to_lighthouse_and_Annamaria": // Before the storm
+			CloseQuestHeader("Beckett");
 			ChangeCharacterAddressGroup(characterFromID("Cutler Beckett"), "Oxbay_lighthouse", "officers", "reload3_1");
 			ChangeCharacterAddressGroup(characterFromID("Eng_soldier_38"), "Oxbay_lighthouse", "officers", "reload3_2");
 			ChangeCharacterAddressGroup(characterFromID("Eng_soldier_39"), "Oxbay_lighthouse", "officers", "reload3_3");
+			SetCharacterRemovable(characterFromID("Annamaria"), true);
 			ChangeCharacterAddress(characterFromID("Annamaria"), "None", "");
 			LAi_QuestDelay("return_to_lighthouse_and_Annamaria2", 1.0);
 			SetNextWeather("Black Pearl Fight");
@@ -4477,6 +4527,7 @@ void QuestComplete(string sQuestName)
 			// Captain Maggee: Sumbhajee side quest available now
 			ChangeCharacterAddressGroup(CharacterFromID("Sumbhajee"), "Havana_Tavern", "sit", "sit12");
 			ChangeCharacterAddressGroup(CharacterFromID("Sumbhajee Aid1"), "Havana_Tavern", "goto", "goto7");
+			SetRumourState("Sao_Feng_start", true);		// GR: Replacement rumour for replacement sidequest
 			// Captain Maggee: Sao Feng side quest available now
 			pchar.quest.ANIMISTS = "1";
 			// Captain Maggee: Jocard side quest available now
@@ -4548,6 +4599,7 @@ void QuestComplete(string sQuestName)
 
 		case "Hunt_the_Volcano":
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Annamaria"));
+			SetCharacterRemovable(characterFromID("Annamaria"), false);
 			Pchar.Quest.Now_have_Aztec_Compass.over = "yes";
 			LAi_SetImmortal(characterFromID("Annamaria"), true);
 
@@ -4635,6 +4687,7 @@ void QuestComplete(string sQuestName)
 		case "Information_on_Barbossa2":
 			LAi_ActorGoToLocator(characterFromID("Turpin Cabanel"), "officers", "shipyard_2", "", 10.0);
 			ChangeCharacterAddressGroup(characterFromID("Barbossa"), "Falaise_de_fleur_shore", "goto", "locator5");
+			LAi_SetOfficerType(characterfromID("Annamaria"));
 
 			Pchar.quest.Barbossa_on_French_Beach.win_condition.l1 = "location";
 			Pchar.quest.Barbossa_on_French_Beach.win_condition.l1.location = "Falaise_de_fleur_shore";
@@ -5057,6 +5110,8 @@ void QuestComplete(string sQuestName)
 			DoQuestReloadToLocation("Deserted_Island_shore_01", "officers", "reload1_3", "Barbossa_leaves_for_now2");
 			LAi_SetPlayerType(pchar);
 			locations[FindLocation("Deserted_island_Jungle_01")].vcskip = true;
+
+			CloseQuestHeader("Aztec");
 		break;
 
 		case "Barbossa_leaves_for_now2":
@@ -5185,16 +5240,16 @@ void QuestComplete(string sQuestName)
 			if (IsBrothelEnabled()) 
 			{
 				ChangeCharacterAddressGroup(CharacterFromID("Captaine Chevalle"), "Tortuga_Brothel_room", "goto", "locator2");
-				Pchar.quest.meetturner.win_condition.l1 = "location";
-				Pchar.quest.meetturner.win_condition.l1.location = "Tortuga_Brothel_room";
-				PChar.quest.meetturner.win_condition = "MeetTurner";
+				Pchar.quest.MeetVillanueva.win_condition.l1 = "location";
+				Pchar.quest.MeetVillanueva.win_condition.l1.location = "Tortuga_Brothel_room";
+				PChar.quest.MeetVillanueva.win_condition = "MeetVillanueva";
 			}
 			else
 			{
 				ChangeCharacterAddressGroup(CharacterFromID("Captaine Chevalle"), "Tortuga_Townhall", "goto", "goto7");
-				Pchar.quest.meetturner.win_condition.l1 = "location";
-				Pchar.quest.meetturner.win_condition.l1.location = "Tortuga_Townhall";
-				PChar.quest.meetturner.win_condition = "MeetTurner";
+				Pchar.quest.MeetVillanueva.win_condition.l1 = "location";
+				Pchar.quest.MeetVillanueva.win_condition.l1.location = "Tortuga_Townhall";
+				PChar.quest.MeetVillanueva.win_condition = "MeetVillanueva";
 			}
 
 			AddQuestRecord("Chevalle", 11);
@@ -5261,7 +5316,15 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Annamaria"));
 			ChangeCharacterAddressGroup(characterfromID("Annamaria"), "Tortuga_tavern", "goto", "goto2");
 
-			LAi_QuestDelay("Pre_Tortuga_Meet_Annamaria_for_ship", 0.2);
+//			LAi_QuestDelay("Pre_Tortuga_Meet_Annamaria_for_ship", 0.2);
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(PChar, "ships_other", "ship3");
+			LAi_QuestDelay("Tortuga_Get_ready_for_Film1.5.2", 1.0);
+		break;
+
+		case "Tortuga_Get_ready_for_Film1.5.2":
+			Pchar.dialog.currentnode = "ship_stolen_tortuga";
+			LAi_ActorSelfDialog(Pchar, "Pre_Tortuga_Meet_Annamaria_for_ship");
 		break;
 
 		case "Tortuga_Get_ready_for_Film2":
@@ -5290,12 +5353,15 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Pre_Tortuga_Meet_Annamaria_for_ship":
+			LAi_SetPlayerType(pchar);
 			LAi_SetSitType(pchar);
 			LAi_QuestDelay("Tortuga_Meet_Annamaria_for_ship", 1.0);
 			DoQuestReloadToLocation("Tortuga_tavern", "candles", "sit4", "_");
 		break;
 
 		case "Tortuga_Meet_Annamaria_for_ship":
+			AddDataToCurrent(10,0,0, false);	// GR: It's supposed to be 10 years later, so make it 10 years later
+			logit("Ten years later...");
 			Characters[GetCharacterIndex("Storyteller")].dialog.currentnode = "Tavern_Story11";
 			LAi_ActorDialog(characterFromID("Storyteller"), pchar, "", 0.0, 0.0);
 		break;
@@ -5491,7 +5557,8 @@ void QuestComplete(string sQuestName)
 // SJG Optional Side quest with Norrington - after talk with Henry the beggar.
 		case "Dump_Interceptor_Quest":
 			Locations[FindLocation("Redmond_Town_01")].reload.l13.disable = false;
-			ChangeCharacterAddress(characterFromID("Robert Christopher Silehard"), "None", "");
+//			ChangeCharacterAddress(characterFromID("Robert Christopher Silehard"), "None", "");	// GR: Silehard isn't even in this story!
+//			ChangeCharacterAddress(characterFromID(GetTownGovernorID("Redmond")), "None", "");	// GR: Doesn't seem necessary as no other governor appears, but this would make any current governor disappear
 			Characters[GetCharacterIndex("James Norrington")].model = "Cpnorrington";
 			ChangeCharacterAddressGroup(characterfromID("James Norrington"),"redmond_residence", "goto", "goto2");
 			ChangeCharacterAddressGroup(characterfromID("Weatherby Swann"),"redmond_residence", "goto", "goto8");
@@ -5539,6 +5606,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorAttack(characterfromID("James Norrington"), pchar, "");
 			LAi_ActorAttack(characterfromID("Cutler Beckett"), pchar, "");
 			AddQuestRecord("Norrington", 6);
+			CloseQuestHeader("Norrington");
 		break;
 // side quest continues
 		case "Norrington_splutters":
@@ -5580,6 +5648,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_Town_01")].reload.l13.disable = false;
 			Locations[FindLocation("Redmond_Town_01")].reload.l14.disable = false;
 			Locations[FindLocation("Redmond_Town_01")].reload.l15.disable = false;
+			locations[FindLocation("Redmond_town_01")].reload.l5.disable = false;
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 2000);
@@ -5591,6 +5660,8 @@ void QuestComplete(string sQuestName)
 			pchar.quest.Turks_and_the_French = "powers_of_persuation";
 			LAi_SetPlayerType(pchar);
 			GiveShip2Character(pchar,"HMS_Surprise","Surprise",-1,ENGLAND,true,true);
+			PChar.location.from_sea = "Redmond_Port";				// GR: If your last visit to Jamaica was at a beach, game thinks you're still there
+			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "PChar");	// GR: Move to port which is where your new ship is supposed to be
 			AddPassenger(Pchar, characterFromID("James Norrington"), 0);
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("James Norrington"));
 			Characters[GetCharacterIndex("James Norrington")].Dialog.CurrentNode = "serving_as_a_pirate";
@@ -5638,6 +5709,7 @@ void QuestComplete(string sQuestName)
 		case "Norrington_sails_away":
 			LAi_ActorGoToLocator(characterFromID("James Norrington"), "reload", "reload1", "Norrington_sails_away2", -1);
 			AddQuestRecord("Norrington", "5");
+			CloseQuestHeader("Norrington");
 			LAi_SetPlayerType(pchar);
 		break;
 
@@ -5728,6 +5800,7 @@ void QuestComplete(string sQuestName)
 			else {AddPartyExp(pchar, 5000);}
 			iForceDetectionFalseFlag = -1;
 			HoistFlag(PIRATE);
+			Locations[FindLocation("Tortuga_Port")].vcskip = true;	// GR: Otherwise Mr. Gibbs may not show up
 			pchar.quest.Tortuga_for_Annamaria_after_Redmond.win_condition.l1 = "location";
 			pchar.quest.Tortuga_for_Annamaria_after_Redmond.win_condition.l1.location = "Tortuga_port";
 			pchar.quest.Tortuga_for_Annamaria_after_Redmond.win_condition = "Tortuga_for_Annamaria_after_Redmond";
@@ -6089,6 +6162,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Turner_and_me_take_ship":
+			PChar.location.from_sea = "Redmond_Port";				// GR: If your last visit to Jamaica was at a beach, game thinks you're still there
+			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "PChar");	// GR: Move to port which is where your new ship is supposed to be
 			SetCurrentTime(10, 0);
 			SetNextWeather("Blue Sky");
 			locations[FindLocation("Redmond_port")].reload.l5.disable = 0;
@@ -6113,6 +6188,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_Town_01")].reload.l13.disable = false;
 			Locations[FindLocation("Redmond_Town_01")].reload.l14.disable = false;
 			Locations[FindLocation("Redmond_Town_01")].reload.l15.disable = false;
+			locations[FindLocation("Redmond_town_01")].reload.l5.disable = false;
 			SetCurrentTime(10, 0);
 			SetNextWeather("Blue Sky");
 			pchar.quest.Turner = "Straight_from_Jail";
@@ -6138,6 +6214,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.Dauntless_vs_Int.win_condition.l1.location = "Redmond";
 			pchar.quest.Dauntless_vs_Int.win_condition = "Dauntless_vs_Int";
 
+			Locations[FindLocation("Tortuga_Port")].vcskip = true;	// GR: Otherwise Mr. Gibbs may not show up
 			pchar.quest.Tortuga_for_Annamaria_after_Redmond.win_condition.l1 = "location";
 			pchar.quest.Tortuga_for_Annamaria_after_Redmond.win_condition.l1.location = "Tortuga_port";
 			pchar.quest.Tortuga_for_Annamaria_after_Redmond.win_condition = "Tortuga_for_Annamaria_after_Redmond";
@@ -6309,6 +6386,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Goto Tortuga Tavern":
+			Locations[FindLocation("Tortuga_Port")].vcskip = true;
 			DoReloadCharacterToLocation("Tortuga_tavern", "candles", "sit4");
 			bSuppressResurrection = true;
 			LAi_SetActorType(pchar);
@@ -6444,11 +6522,13 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("crewman"));
 			LAi_ActorRunToLocation(characterFromID("crewman"), "reload", "reload2", "none", "", "", "", 6.0);
 			Characters[GetCharacterIndex("Mr. Gibbs")].dialog.currentnode = "begin_12";
+			LAi_SetActorType(characterFromID("Mr. Gibbs"));
 			LAi_ActorDialog(characterFromID("Mr. Gibbs"), pchar, "", 10.0, 10.0);
 		break;
 
 		case "directionislademuerta":
 			DeleteAttribute(pchar,"vcskip"); // PB
+			DeleteAttribute(Locations[FindLocation("Tortuga_Port")],"vcskip");
 
 			LAi_SetImmortal(Pchar, false);
 			//CloseQuestHeader("Times_with_Turner");
@@ -6582,15 +6662,18 @@ void QuestComplete(string sQuestName)
 // -->SJG
 		case "insertforchase":
 			GiveShip2Character(CharacterFromID("Mr. Gibbs"),"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
+			characters[GetCharacterIndex("Mr. Gibbs")].quest.old_group = GetAttribute(CharacterFromID("Mr. Gibbs"),"chr_ai.group");
+			LAi_group_MoveCharacter(CharacterFromID("Mr. Gibbs"), "QC_SOLDIERS");
 			DoQuestReloadToLocation("IslaDemuerte_shore_01", "goto", "citizen07", "insertforchase2");
 			RemovePassenger(pchar, characterFromID("Barbossa"));
 			RemoveCharacterCompanion(pchar, characterFromID("Barbossa"));
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Barbossa"));
 			LAi_SetActorType(characterFromID("Barbossa"));
+			ChangeCharacterAddress(characterFromID("Barbossa"), "none", "");					// GR: Make real Barbossa disappear so you aren't looking at yourself
 		break;
 
 		case "insertforchase2":
-			ChangeCharacterAddressGroup(CharacterFromID("Barbossa"),"IslaDemuerte_shore_01","goto","locator10");
+//			ChangeCharacterAddressGroup(CharacterFromID("Barbossa"),"IslaDemuerte_shore_01","goto","locator10");	// GR: Why? You're Barbossa now!
 			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Skel1", "goto", "locator08");
 			LAi_SetHP(sld, 100.0, 100.0);
 			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Skel2", "goto", "locator12");
@@ -6601,7 +6684,6 @@ void QuestComplete(string sQuestName)
 
 			SetCurrentTime(10.00, 0);
 			SetNextWeather("Blue Sky");
-			UpdateRelations();
 			Group_CreateGroup("Mr. Gibbs");
 			Group_AddCharacter("Mr. Gibbs", "Mr. Gibbs");
 			Group_SetGroupCommander("Mr. Gibbs", "Mr. Gibbs");
@@ -6611,9 +6693,13 @@ void QuestComplete(string sQuestName)
 			Sea_LoginGroupNow("Mr. Gibbs");
 			characters[GetCharacterIndex("Mr. Gibbs")].nosurrender = 2;
 			SetCharacterRelationBoth(GetCharacterIndex("Mr. Gibbs"),GetMainCharacterIndex(),RELATION_ENEMY);
-			if(GetRMRelation(PChar, PIRATE) > REL_WAR) SetRMRelation(PChar, PIRATE, REL_WAR);
+//			if(GetRMRelation(PChar, PIRATE) > REL_WAR) SetRMRelation(PChar, PIRATE, REL_WAR);	// GR: Not needed, "Mr. Gibbs" will be hostile anyway, and you might have earned some rank with Pirates by now
+			characters[GetCharacterIndex("Mr. Gibbs")].recognized = true;
 			Character_SetAbordageEnable(characterFromID("Mr. Gibbs"), false);
 			LAi_SetImmortal(characterFromID("Mr. Gibbs"), false); // PB: Just in case
+			UpdateRelations();
+
+			PChar.seamusic = "Black_Pearl";			// GR: normal music detection of battle isn't working so force it with custom music
 
 			Pchar.quest.InterceptorDestroyed.win_condition.l1 = "Ship_HP";
 			Pchar.quest.InterceptorDestroyed.win_condition.l1.character = "Mr. Gibbs";
@@ -6623,6 +6709,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "InterceptorDestroyed":
+			DeleteAttribute(PChar, "seamusic");
+			LAi_group_MoveCharacter(CharacterFromID("Mr. Gibbs"), characters[GetCharacterIndex("Mr. Gibbs")].quest.old_group);
+			DeleteAttribute(CharacterFromID("Mr. Gibbs"), "quest.old_group");
+			DeleteAttribute(CharacterFromID("Mr. Gibbs"), "recognized");
 			SetNextWeather("Blue Sky");
 			// PB: Back to Jack -->
 			PChar.name = "Jack";
@@ -6927,17 +7017,18 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Will Turner"),"Quest_Redmond_fort", "rld", "loc4");
 			ChangeCharacterAddressGroup(characterfromID("Red_soldier_1"), "Quest_Redmond_fort", "rld", "loc8");
 			ChangeCharacterAddressGroup(characterfromID("Red_soldier_2"), "Quest_Redmond_fort", "rld", "loc7");
-			ChangeCharacterAddressGroup(characterfromID("Eng Soldier for residence 01"), "Quest_Redmond_fort", "rld", "loc6");
+//			ChangeCharacterAddressGroup(characterfromID("Eng Soldier for residence 01"), "Quest_Redmond_fort", "rld", "loc6");
 			ChangeCharacterAddressGroup(characterfromID("Eng_soldier_1"), "Quest_Redmond_fort", "rld", "loc11");
 			ChangeCharacterAddressGroup(characterfromID("Eng_soldier_2"), "Quest_Redmond_fort", "rld", "loc12");
 			ChangeCharacterAddressGroup(characterfromID("Eng_soldier_3"), "Quest_Redmond_fort", "rld", "loc13");
+
 			LAi_SetActorType(characterFromID("James Norrington"));
 			LAi_SetActorType(characterFromID("Weatherby Swann"));
 			LAi_SetActorType(characterFromID("Laurence Bannerman"));
 			LAi_SetActorType(characterFromID("Will Turner"));
 			LAi_SetActorType(characterFromID("Red_soldier_1"));
 			LAi_SetActorType(characterFromID("Red_soldier_2"));
-			LAi_SetActorType(characterFromID("Eng Soldier for residence 01"));
+//			LAi_SetActorType(characterFromID("Eng Soldier for residence 01"));
 			LAi_SetActorType(characterFromID("Eng_soldier_1"));
 			LAi_SetActorType(characterFromID("Eng_soldier_2"));
 			LAi_SetActorType(characterFromID("Eng_soldier_3"));
@@ -6945,6 +7036,17 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Captured_and_sentence2":
+// GR: "Eng Soldier for residence 01" does not seem to exist, or to be needed elsewhere, so use a fantom for him
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m1, "rld", "loc6");
+			TakeItemFromCharacter(sld, CheckCharacterEquipByGroup(sld, BLADE_ITEM_TYPE));
+			GiveItem2Character(sld, "bladeC6");
+			EquipCharacterByItem(sld, "bladeC6");
+			sld.nation = ENGLAND;
+			SetRandomNameToCharacter(sld);
+			LAi_group_MoveCharacter(sld, "ENGLAND_SOLDIERS");
+			sld.id = "Eng Soldier for residence 01";
+			LAi_SetActorType(characterFromID("Eng Soldier for residence 01"));
+
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToCharacter(characterFromID("James Norrington"), PChar);
 			LAi_ActorTurnToCharacter(characterFromID("Weatherby Swann"), PChar);
@@ -7134,8 +7236,12 @@ void QuestComplete(string sQuestName)
 			//CloseQuestHeader("IslaDeMuerteI");
 			ChangeCharacterAddress(characterFromID("Barbossa"), "none", "");
 			ChangeCharacterAddress(characterFromID("Elizabeth Swann"), "none", "");
+ 			SetOfficersIndex(Pchar, 2, GetCharacterIndex("Annamaria"));	// GR: Anamaria appears on the Black Pearl in the "jack_exit_DMC" video, so make her an officer too
+			LAi_SetOfficerType(CharacterFromID("Annamaria"));
+			LAi_SetImmortal(CharacterFromID("Annamaria"), false);
  			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs"));
 			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
+			LAi_SetImmortal(CharacterFromID("Mr. Gibbs"), false);
 			//setCharacterShipLocation(pchar, "Redmond_shore_02");
 
 			ChangeCharacterAddressGroup(CharacterFromID("Laurence Bannerman"),"Grand_Cayman_store", "sit", "sit1");
@@ -7161,6 +7267,8 @@ void QuestComplete(string sQuestName)
 				LAi_QuestDelay("Sail_free_Jack", 0.0);
 			}
 			//<-- CTM
+
+			if(CheckQuestAttribute("animists", "completed")) CloseQuestHeader("Stolen");	// If "Animists" quest not complete, "Ship Stolen" questbook may be needed if Jaoquin de Masse steals your ship later
 		break;
 // Bartolomeu o Portugues COTBP Finishes Here
 		case "Sail_DMC_Jack":
@@ -7697,8 +7805,33 @@ void QuestComplete(string sQuestName)
 
 		//--> CTM
 		case "Lucas_Concern":
+			PChar.quest.Lucas_Concern2_tortuga.win_condition.l1 = "location"; // Check for arrival at Tortuga
+			PChar.quest.Lucas_Concern2_tortuga.win_condition.l1.location = "Tortuga_port";
+			PChar.quest.Lucas_Concern2_tortuga.win_condition = "Lucas_Concern2";
+
+			PChar.quest.Lucas_Concern2_nevis.win_condition.l1 = "location"; // Check for arrival at Nevis Pirate
+			PChar.quest.Lucas_Concern2_nevis.win_condition.l1.location = "QC_port";
+			PChar.quest.Lucas_Concern2_nevis.win_condition = "Lucas_Concern2";
+
+			PChar.quest.Lucas_Concern2_turks.win_condition.l1 = "location"; // Check for arrival at Turks Island
+			PChar.quest.Lucas_Concern2_turks.win_condition.l1.location = "Turks_port";
+			PChar.quest.Lucas_Concern2_turks.win_condition = "Lucas_Concern2";
+
+			Locations[FindLocation("Tortuga_port")].vcskip = true;
+
+		break;
+
+		case "Lucas_Concern2":
+			PChar.quest.Lucas_Concern2_tortuga.over = "yes";	// Cancel all location checks so you don't trigger this again by visiting another target
+			PChar.quest.Lucas_Concern2_nevis.over = "yes";
+			PChar.quest.Lucas_Concern2_turks.over = "yes";
+			DeleteAttribute(&Locations[FindLocation("Tortuga_port")],"vcskip");
+
 			if(FindFellowTravellers(PChar, CharacterFromId("Lucas Da Saldanha")) == FELLOWTRAVEL_OFFICER || FindFellowTravellers(PChar, CharacterFromId("Lucas Da Saldanha")) == FELLOWTRAVEL_PASSENGER)
 			{
+				StartQuestMovie(true, true, false);
+				DisableFastTravel(true);
+				if (!isofficer(CharacterFromID("Lucas Da Saldanha"))) PlaceCharacter(characterFromID("Lucas Da Saldanha"), "goto");
 				Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.CurrentNode = "concern";
 				LAi_SetActorType(CharacterFromID("Lucas Da Saldanha"));
 				LAi_ActorDialog(CharacterFromID("Lucas Da Saldanha"), PChar, "", 2.0, -1);
@@ -7730,6 +7863,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "reset_Lucas":
+			EndQuestMovie();
+			DisableFastTravel(false);
 			LAi_Type_Actor_Reset(CharacterFromID("Lucas Da Saldanha"));
 			SetOfficersIndex(PChar, 3, GetCharacterIndex("Lucas Da Saldanha"));
 		break;
@@ -7774,6 +7909,8 @@ void QuestComplete(string sQuestName)
 		//--> CTM
 			LAi_Type_Actor_Reset(CharacterFromID("Lucas Da Saldanha"));
 			SetOfficersIndex(PChar, 3, GetCharacterIndex("Lucas Da Saldanha"));
+			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.Filename = "Enc_Officer_dialog.c"; // PB
+			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.CurrentNode = "hired";
 			changeCharacterAddressGroup(CharacterFromID("Captain Maggee"), "Falaise_de_fleur_location_03", "goto", "locator21");
 			LAi_SetStayType(characterfromID("Joseph Claude Le Moigne"));
 			Characters[GetCharacterIndex("Joseph Claude Le Moigne")].dialog.CurrentNode = "First Time";
@@ -7845,6 +7982,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "crewmemberdead":
+			StartQuestMovie(true, false, false);
+			DisableFastTravel(true);
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[FRANCE].fantomModel.m2, "goto", "citizen07"); // PB
 			LAi_SetActorType(sld);
 			LAi_ActorSetLayMode(sld);
@@ -7858,6 +7997,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "jela":
+			DisableFastTravel(false);
+			EndQuestMovie();
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 1500);
@@ -8437,7 +8578,9 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Tia_and_Maggee.win_condition.l1.location = "Falaise_de_fleur_location_03";
 			PChar.quest.Tia_and_Maggee.win_condition = "Tia_and_Maggee";
 
-			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.CurrentNode = "First Time";
+//			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.CurrentNode = "First Time";
+			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.Filename = "Enc_Officer_dialog.c"; // PB
+			Characters[GetCharacterIndex("Lucas Da Saldanha")].dialog.CurrentNode = "hired";
 		break;
 
 		case "Tia_and_Maggee":
@@ -8462,10 +8605,19 @@ void QuestComplete(string sQuestName)
 		case "Tia_to_Davy":
 			//Sea_DeckStartNow(GetMainCharacterIndex(), GetCharacterShipQDeck(pchar));
 			string QDeck = GetCharacterShipQDeck(pchar);
-			DoQuestReloadToLocation(QDeck, "rld", "startloc", "Tia_to_Davy2");
+//			DoQuestReloadToLocation(QDeck, "rld", "startloc", "Tia_to_Davy2");	// Doesn't work if you direct-sail to next island
 
 			SetNextWeather("Day Storm");
 			//LAi_QuestDelay("Tia_to_Davy2", 1.0);
+			PChar.quest.Tia_to_Davy1_5.win_condition.l1 = "SeaEnter";
+			PChar.quest.Tia_to_Davy1_5.win_condition = "Tia_to_Davy1.5";
+		break;
+
+		case "Tia_to_Davy1.5":
+			DoReloadFromSeaToLocation(GetCharacterShipQDeck(PChar), "rld", "startloc");
+			PChar.quest.Tia_to_Davy2.win_condition.l1 = "location";
+			PChar.quest.Tia_to_Davy2.win_condition.l1.location = GetCharacterShipQDeck(PChar);
+			PChar.quest.Tia_to_Davy2.win_condition = "Tia_to_Davy2";
 		break;
 
 		case "Tia_to_Davy2":
@@ -8533,7 +8685,8 @@ void QuestComplete(string sQuestName)
 
 			LAi_ActorFollowEverywhere(characterFromID("Tia Dalma"), "", 60.0);
 
-			AddQuestRecord("Contact", 13);
+//			AddQuestRecord("Contact", 13);
+			AddQuestRecord("Contact", 15);	// GR: Line 13 is about Marigot governor.  Line 15 is about Tia Dalma.
 			CloseQuestHeader("Contact");
 		break;
 

@@ -88,7 +88,7 @@ void InitInterface_I(string iniName, int item)
 	//JRH -->
 	if (selection == BLADE_ITEM_TYPE || selection == ARMOR_ITEM_TYPE || selection == AMMUNITION_ITEM_TYPE || selection == FLASK_ITEM_TYPE || selection == POUCH_ITEM_TYPE || selection == BELT_ITEM_TYPE || selection == OPEN_ITEM_TYPE) selection = GUN_ITEM_TYPE;
 	if (selection == SPYGLASS_ITEM_TYPE  || selection == LOCKPICK_ITEM_TYPE || selection == CLOCK_ITEM_TYPE || selection == COMPASS_ITEM_TYPE || selection == DOCUMENT_ITEM_TYPE || selection == OUTFIT_ITEM_TYPE) selection = OBJECT_ITEM_TYPE;
-	if (selection == EQUIP_ITEM_TYPE || selection == EXAMINE_ITEM_TYPE) selection = QUEST_ITEM_TYPE;
+	if (selection == EQUIP_ITEM_TYPE || selection == EQUIP2_ITEM_TYPE || selection == EQUIP3_ITEM_TYPE || selection == EXAMINE_ITEM_TYPE) selection = QUEST_ITEM_TYPE;
 	//<-- JRH
 
 	FillSelectedScroll(selection);
@@ -286,7 +286,7 @@ if(comName=="activate" || comName=="click")
 	case "EQUIP_BUTTON":
 		if(comName=="activate" || comName=="click")
 		{
-
+//pär här
 		//JRH -->
 			ref PChar;
 			PChar = GetMainCharacter();
@@ -304,6 +304,8 @@ if(comName=="activate" || comName=="click")
 
 						TakeItemFromCharacter(Pchar, "ammobag2");
 						GiveItem2Character(Pchar, "ammobag1");
+
+						if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 					}
 				}
 			}
@@ -319,6 +321,8 @@ if(comName=="activate" || comName=="click")
 					{
 						TakeItemFromCharacter(Pchar, "ammobag2");
 						GiveItem2Character(Pchar, "ammobag1");
+
+						if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 					}
 				}
 			}
@@ -334,6 +338,8 @@ if(comName=="activate" || comName=="click")
 						{
 							TakeItemFromCharacter(Pchar, "ammobag2");
 							GiveItem2Character(Pchar, "ammobag1");
+
+							if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 						}
 					}
 				}
@@ -348,6 +354,8 @@ if(comName=="activate" || comName=="click")
 					{
 						TakeItemFromCharacter(Pchar, "ammobag1");
 						GiveItem2Character(Pchar, "ammobag2");
+
+						if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 					}
 				}
 			}
@@ -363,6 +371,8 @@ if(comName=="activate" || comName=="click")
 				TakeItemFromCharacter(Pchar, "ammopouch");
 				RemoveCharacterEquip(Pchar, FLASK_ITEM_TYPE);
 				TakeItemFromCharacter(Pchar, "powderflask");
+
+				if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 			}
 
 			if(itmName == "med_bag2_out")
@@ -499,6 +509,13 @@ if(comName=="activate" || comName=="click")
 				}
 			}
 
+			if(itmName == "doc60D")
+			{
+				PlaySound("INTERFACE\paper_small.wav");
+				TakeItemFromCharacter(Pchar, "doc60D");
+				GiveItem2Character(Pchar, "doc60A");
+			}
+
 			if(itmName == "doc2E")
 			{
 				PlaySound("INTERFACE\book_close.wav");
@@ -616,13 +633,13 @@ if(comName=="activate" || comName=="click")
 				else
 				{
 					//EQUIP
-					LAi_QuestDelay("indian_arrow_tomahawk_equip_check", 0.1);
+					LAi_QuestDelay("indian_arrows_equip_check", 0.1);
 				}
 			}
 		
-			if(itmName == "tomahawk")
+			if(HasSubStr(itmName, "pistol"))
 			{
-				if(IsEquipCharacterByItem(Pchar, "tomahawk"))
+				if(IsEquipCharacterByItem(Pchar, FindCharacterItemByGroup(&PChar, GUN_ITEM_TYPE)))
 				{
 					//RELEASE
 					//no problem
@@ -630,24 +647,11 @@ if(comName=="activate" || comName=="click")
 				else
 				{
 					//EQUIP
-					LAi_QuestDelay("indian_arrow_tomahawk_equip_check", 0.1);
-				}
-			}
-		
-			if(itmName != "pistolbow" || itmName != "blowgun")
-			{
-				if(HasSubStr(itmName, "pistol"))
-				{
-					if(IsEquipCharacterByItem(Pchar, FindCharacterItemByGroup(&PChar, GUN_ITEM_TYPE)))
+					if(itmName == "pistolbow" || itmName == "blowgun")
 					{
-						//RELEASE
-						//no problem				
+						//ok
 					}
-					else
-					{
-						//EQUIP
-						LAi_QuestDelay("indian_pistols_equip_check", 0.1);
-					}
+					else LAi_QuestDelay("indian_pistols_equip_check", 0.1);
 				}
 			}
 
@@ -1027,6 +1031,250 @@ if(comName=="activate" || comName=="click")
 				Pchar.p_case_status = "0";
 				ExtraUpdate = true; // PB
 			}
+
+			if(itmName == "flagchest_empty")
+			{
+				PlaySound("PEOPLE\clothes1.wav");
+				TakeItemFromCharacter(Pchar, "flagchest_empty");
+
+				if(CheckAttribute(Pchar,"equip.blade") && HasSubStr(Pchar.equip.blade, "bladeflag_"))
+			//	if (HasSubStr(Pchar.equip.blade, "bladeflag_"))
+				{
+					RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+					EquipCharacterByItem(Pchar, "bladeX4");
+				}
+				TakeItemFromCharacter(Pchar, "bladeflag_pir");
+				TakeItemFromCharacter(Pchar, "bladeflag_pir2");
+				TakeItemFromCharacter(Pchar, "bladeflag_HOL");
+				TakeItemFromCharacter(Pchar, "bladeflag_ENG");
+				TakeItemFromCharacter(Pchar, "bladeflag_FRA");
+				TakeItemFromCharacter(Pchar, "bladeflag_POR");
+				TakeItemFromCharacter(Pchar, "bladeflag_SPA");
+				TakeItemFromCharacter(Pchar, "bladeflag_PRE");
+				TakeItemFromCharacter(Pchar, "bladeflag_IRE");
+				TakeItemFromCharacter(Pchar, "bladeflag_SWE");
+				TakeItemFromCharacter(Pchar, "bladeflag_HOL2");
+				TakeItemFromCharacter(Pchar, "bladeflag_AME");
+				TakeItemFromCharacter(Pchar, "bladeflag_SPA2");
+
+				GiveItem2Character(Pchar, "flagchest_openB");
+
+				ExtraUpdate = true; // PB
+			}
+
+			if(itmName == "flagchest_openB")
+			{
+				PlaySound("INTERFACE\p_case_close.wav");
+				TakeItemFromCharacter(Pchar, "flagchest_openB");
+				GiveItem2Character(Pchar, "flagchest_closed");
+
+				ExtraUpdate = true; // PB
+			}
+
+			if(itmName == "book69C")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "book69C");
+				GiveItem2Character(Pchar, "book69A");	
+			}
+
+			if(itmName == "BB_hatA2")
+			{
+		//		PlaySound("PEOPLE\clothes1.wav");
+
+				if(IsEquipCharacterByItem(Pchar, "BB_hatA2"))
+				{
+					//RELEASE					
+
+					if(CheckAttribute(Pchar,"model"))
+					{
+						switch(Pchar.model)
+						{
+							case "Howard_Pyle_hat":
+								SetModel(Pchar, "Howard_Pyle", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							break;
+
+							case "Howard_Pyle_hat_b":
+								SetModel(Pchar, "Howard_Pyle_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							break;
+
+							case "Howard_Pyle_hat_a":
+								SetModel(Pchar, "Howard_Pyle_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+
+							break;
+						}
+					}
+				}
+				else 
+				{
+					//EQUIP
+
+					if(CheckAttribute(Pchar,"model"))
+					{
+						switch(Pchar.model)
+						{
+							case "Howard_Pyle":
+								SetModel(Pchar, "Howard_Pyle_hat", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							break;
+
+							case "Howard_Pyle_b":
+								SetModel(Pchar, "Howard_Pyle_hat_b", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							break;
+
+							case "Howard_Pyle_a":
+								SetModel(Pchar, "Howard_Pyle_hat_a", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+							break;
+						}
+					}	
+				}
+
+				LAi_QuestDelay("check_Pyle_hat", 0.01);	
+		
+			}
+
+			if(itmName == "paper_clip")
+			{
+				PlaySound("INTERFACE\water_tap.wav");
+				TakeItemFromCharacter(Pchar, "paper_clip");
+				GiveItem2Character(Pchar, "paper_clip2");
+
+		//		ExtraUpdate = true; // PB
+			}
+
+			if(itmName == "tailors_note")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "tailors_note");
+				GiveItem2Character(Pchar, "tailors_book");
+			}
+
+			if(itmName == "book70_0")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "book70_0");
+				TakeItemFromCharacter(Pchar, "book70_1");
+				GiveItem2Character(Pchar, "book70");
+			}
+
+			if(itmName == "book70_11")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "book70_10");
+				TakeItemFromCharacter(Pchar, "book70_11");
+				GiveItem2Character(Pchar, "book70");
+			}
+
+			if(itmName == "book71_10")
+			{
+				PlaySound("INTERFACE\paper.wav");
+				TakeItemFromCharacter(Pchar, "book71_10");
+				TakeItemFromCharacter(Pchar, "book71_11");
+				GiveItem2Character(Pchar, "book71_9");
+			}
+
+			if(itmName == "book71_23")
+			{
+				PlaySound("INTERFACE\paper.wav");
+				TakeItemFromCharacter(Pchar, "book71_22");
+				TakeItemFromCharacter(Pchar, "book71_23");
+				GiveItem2Character(Pchar, "book71_9");
+			}
+
+			if(itmName == "book72_richardsR")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "book72_richardsL");
+				TakeItemFromCharacter(Pchar, "book72_richardsR");
+				GiveItem2Character(Pchar, "book72_closed");
+			}
+
+			if(itmName == "bandages_trousersQ")
+			{
+				if(Pchar.model == "Howard_Pyle_1")
+				{
+					PlaySound("PEOPLE\clothes1.wav");
+					TakeItemFromCharacter(Pchar, "bandages_trousersQ");
+					SetModel(PChar, "Howard_Pyle_2", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+					LAi_QuestDelay("pchar_mhm", 0.01);
+				}	
+			}
+
+			if(itmName == "shirt_shoes")
+			{
+				if(Pchar.model == "Howard_Pyle_2")
+				{
+					PlaySound("PEOPLE\clothes1.wav");
+					TakeItemFromCharacter(Pchar, "shirt_shoes");
+					SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+					LAi_QuestDelay("pchar_mhm", 0.01);
+				}	
+			}
+
+			if(itmName == "socks_sewing")
+			{
+				if(Pchar.model == "Howard_Pyle_3")
+				{
+					PlaySound("PEOPLE\clothes1.wav");
+					TakeItemFromCharacter(Pchar, "socks_sewing");
+					SetModel(PChar, "Howard_Pyle_4", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+					LAi_QuestDelay("pchar_mhm", 0.01);
+				}	
+			}
+
+			if(itmName == "waistcoat")
+			{
+				if(Pchar.model == "Howard_Pyle_4")
+				{
+					PlaySound("PEOPLE\clothes1.wav");
+					TakeItemFromCharacter(Pchar, "waistcoat");
+					SetModel(PChar, "Howard_Pyle_5", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+					LAi_QuestDelay("pchar_mhm", 0.01);
+				}	
+			}
+
+			if(itmName == "sash")
+			{
+				if(Pchar.model == "Howard_Pyle_5")
+				{
+					PlaySound("PEOPLE\clothes1.wav");
+					TakeItemFromCharacter(Pchar, "sash");
+					SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+					LAi_QuestDelay("pchar_mhm", 0.01);
+				}	
+			}
+
+			if(itmName == "red_uniform")
+			{
+				PlaySound("PEOPLE\clothes1.wav");
+				TakeItemFromCharacter(Pchar, "red_uniform");
+				Pchar.quest.red_uniform = "yes";
+
+				if(CheckAttribute(Pchar,"model"))
+				{
+					switch(Pchar.model)
+					{
+						case "Pira4M_TUS_a":
+							SetModel(PChar, "ShkiperM_U_a", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+						break;
+
+						case "Pira4M_TUS_b":
+							SetModel(PChar, "ShkiperM_U_b", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+						break;
+
+						case "Pira4M_TUS":
+							SetModel(PChar, "ShkiperM_U", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+						break;
+					}
+				}
+				LAi_QuestDelay("pchar_very_nice", 1.0);
+				
+				LAi_QuestDelay("secret_room_finished_check", 0.1);
+			}
 //JRH equip
 		//<-- JRH
 
@@ -1180,6 +1428,7 @@ void I_ExamineItem()
 //JRH -->
 	ref PChar;
 	PChar = GetMainCharacter();
+/*
 	if(itmName == "notebook")
 	{
 		if(!CheckAttribute(Pchar,"quest.study_notebook") || Pchar.quest.study_notebook != "yes")
@@ -1187,7 +1436,7 @@ void I_ExamineItem()
 			LAi_QuestDelay("notebook", 0.1);
 		}
 	}
-
+*/
 
 
 //JRH -->
@@ -1610,6 +1859,45 @@ void I_ExamineItem()
 		return;
 	}
 
+	if(itmName == "doc60A")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "doc60A");
+		GiveItem2Character(Pchar, "doc60B");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc60B")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "doc60B");
+		GiveItem2Character(Pchar, "doc60C");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "doc60C")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "doc60C");
+		GiveItem2Character(Pchar, "doc60D");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
 	if(itmName == "book55A")
 	{
 		PlaySound("INTERFACE\button3.wav");
@@ -1920,6 +2208,890 @@ void I_ExamineItem()
 			LAi_QuestDelay("skeletons_talk", 1.0);
 		}
 	}
+
+	if(itmName == "flagchest_closed")
+	{
+		PlaySound("INTERFACE\p_case_open.wav");
+		TakeItemFromCharacter(Pchar, "flagchest_closed");
+		GiveItem2Character(Pchar, "flagchest_openA");
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "flagchest_openA")
+	{
+		PlaySound("PEOPLE\clothes1.wav");
+		TakeItemFromCharacter(Pchar, "flagchest_openA");
+		GiveItem2Character(Pchar, "flagchest_empty");
+
+		if(CheckAttribute(Pchar,"tower.flag"))
+		{
+			if(pchar.tower.flag != "pir") GiveItem2Character(Pchar, "bladeflag_pir");
+			if(pchar.tower.flag != "pir2") GiveItem2Character(Pchar, "bladeflag_pir2");
+			if(pchar.tower.flag != "HOL") GiveItem2Character(Pchar, "bladeflag_HOL");
+			if(pchar.tower.flag != "ENG") GiveItem2Character(Pchar, "bladeflag_ENG");
+			if(pchar.tower.flag != "FRA") GiveItem2Character(Pchar, "bladeflag_FRA");
+			if(pchar.tower.flag != "POR") GiveItem2Character(Pchar, "bladeflag_POR");
+			if(pchar.tower.flag != "SPA") GiveItem2Character(Pchar, "bladeflag_SPA");
+			if(pchar.tower.flag != "PRE") GiveItem2Character(Pchar, "bladeflag_PRE");
+			if(pchar.tower.flag != "IRE") GiveItem2Character(Pchar, "bladeflag_IRE");
+			if(pchar.tower.flag != "SWE") GiveItem2Character(Pchar, "bladeflag_SWE");
+			if(pchar.tower.flag != "HOL2") GiveItem2Character(Pchar, "bladeflag_HOL2");
+			if(pchar.tower.flag != "AME") GiveItem2Character(Pchar, "bladeflag_AME");
+			if(pchar.tower.flag != "SPA2") GiveItem2Character(Pchar, "bladeflag_SPA2");
+		}
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book69A")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "book69A");
+		GiveItem2Character(Pchar, "book69B");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "book69B")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book69B");
+		GiveItem2Character(Pchar, "book69C");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "BB_hatA1")
+	{
+		PlaySound("PEOPLE\clothes1.wav");
+		TakeItemFromCharacter(Pchar, "BB_hatA1");
+		GiveItem2Character(Pchar, "BB_hatB");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "BB_hatB")
+	{
+		PlaySound("PEOPLE\clothes1.wav");
+		TakeItemFromCharacter(Pchar, "BB_hatB");
+		GiveItem2Character(Pchar, "BB_hatC");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "BB_hatC")
+	{
+		PlaySound("PEOPLE\clothes1.wav");
+		PlaySound("INTERFACE\took_item.wav");
+		TakeItemFromCharacter(Pchar, "BB_hatC");
+		GiveItem2Character(Pchar, "BB_hatA2");
+		GiveItem2Character(Pchar, "BB_key");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "auction_list_roll")
+	{
+		PlaySound("INTERFACE\carpet_move.wav");
+		TakeItemFromCharacter(Pchar, "auction_list_roll");
+		GiveItem2Character(Pchar, "auction_list_open");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "auction_list_open")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		Pchar.Kr_quest = "6_locations";
+		Locations[FindLocation("Kristiania_center")].reload.l9.disable = 0;
+		locations[FindLocation("Kristiania_townhall_entre")].id.label = "Townhall office";
+		ChangeCharacterAddressGroup(CharacterFromID("Kr_chapel_monk"), "Kristiania_chapel", "goto", "goto12");
+
+		LAi_QuestDelay("switch_auction_lists", 0.1);
+	}
+
+	if(itmName == "tailors_book")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "tailors_book");
+		GiveItem2Character(Pchar, "tailors_note");
+
+		Pchar.jungle_path = "know_how";
+
+		//now the way to the red house is enabled
+		Locations[FindLocation("KR_jungle_8")].reload.l3.go = "KR_jungle_13";
+		Locations[FindLocation("KR_jungle_8")].reload.l3.emerge = "reload3";
+		Locations[FindLocation("KR_jungle_8")].reload.l5.go = "KR_jungle_13";
+		Locations[FindLocation("KR_jungle_8")].reload.l5.emerge = "reload3";
+
+		Locations[FindLocation("KR_jungle_10")].reload.l1.go = "KR_jungle_13";
+		Locations[FindLocation("KR_jungle_10")].reload.l1.emerge = "reload1";
+		Locations[FindLocation("KR_jungle_10")].reload.l6.go = "KR_jungle_13";
+		Locations[FindLocation("KR_jungle_10")].reload.l6.emerge = "reload1";
+
+		pchar.quest.check_logbook.win_condition.l1 = "location";
+		pchar.quest.check_logbook.win_condition.l1.location = "Redhouse_room";
+		pchar.quest.check_logbook.win_condition = "check_logbook";
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "book70_start")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "book70_start");
+		GiveItem2Character(Pchar, "book70_0");
+		GiveItem2Character(Pchar, "book70_1");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		TakeItemFromCharacter(Pchar, "book70");
+		GiveItem2Character(Pchar, "book70_0");
+		GiveItem2Character(Pchar, "book70_1");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_1")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_0"); 
+		TakeItemFromCharacter(Pchar, "book70_1");
+		GiveItem2Character(Pchar, "book70_2"); 
+		GiveItem2Character(Pchar, "book70_3");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_2")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_2"); 
+		TakeItemFromCharacter(Pchar, "book70_3");
+		GiveItem2Character(Pchar, "book70_0"); 
+		GiveItem2Character(Pchar, "book70_1");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_3")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_2"); 
+		TakeItemFromCharacter(Pchar, "book70_3");
+		GiveItem2Character(Pchar, "book70_4"); 
+		GiveItem2Character(Pchar, "book70_5");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_4")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_4"); 
+		TakeItemFromCharacter(Pchar, "book70_5");
+		GiveItem2Character(Pchar, "book70_2"); 
+		GiveItem2Character(Pchar, "book70_3");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_5")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_4"); 
+		TakeItemFromCharacter(Pchar, "book70_5");
+		GiveItem2Character(Pchar, "book70_6"); 
+		GiveItem2Character(Pchar, "book70_7");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_6")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_6"); 
+		TakeItemFromCharacter(Pchar, "book70_7");
+		GiveItem2Character(Pchar, "book70_4"); 
+		GiveItem2Character(Pchar, "book70_5");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_7")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_6"); 
+		TakeItemFromCharacter(Pchar, "book70_7");
+		GiveItem2Character(Pchar, "book70_8"); 
+		GiveItem2Character(Pchar, "book70_9");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_8")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_8"); 
+		TakeItemFromCharacter(Pchar, "book70_9");
+		GiveItem2Character(Pchar, "book70_6"); 
+		GiveItem2Character(Pchar, "book70_7");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_9")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_8"); 
+		TakeItemFromCharacter(Pchar, "book70_9");
+		GiveItem2Character(Pchar, "book70_10"); 
+		GiveItem2Character(Pchar, "book70_11");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book70_10")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book70_10"); 
+		TakeItemFromCharacter(Pchar, "book70_11");
+		GiveItem2Character(Pchar, "book70_8"); 
+		GiveItem2Character(Pchar, "book70_9");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_9_start")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_9_start");
+		GiveItem2Character(Pchar, "book71_10"); 
+		GiveItem2Character(Pchar, "book71_11");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_9")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_9");
+		GiveItem2Character(Pchar, "book71_10"); 
+		GiveItem2Character(Pchar, "book71_11");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_11")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_10");
+		TakeItemFromCharacter(Pchar, "book71_11");
+		GiveItem2Character(Pchar, "book71_12"); 
+		GiveItem2Character(Pchar, "book71_13");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_12")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_12");
+		TakeItemFromCharacter(Pchar, "book71_13");
+		GiveItem2Character(Pchar, "book71_10"); 
+		GiveItem2Character(Pchar, "book71_11");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_13")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_12");
+		TakeItemFromCharacter(Pchar, "book71_13");
+		GiveItem2Character(Pchar, "book71_14"); 
+		GiveItem2Character(Pchar, "book71_15");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_14")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_14");
+		TakeItemFromCharacter(Pchar, "book71_15");
+		GiveItem2Character(Pchar, "book71_12"); 
+		GiveItem2Character(Pchar, "book71_13");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_15")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_14");
+		TakeItemFromCharacter(Pchar, "book71_15");
+		GiveItem2Character(Pchar, "book71_16"); 
+		GiveItem2Character(Pchar, "book71_17");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_16")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_16");
+		TakeItemFromCharacter(Pchar, "book71_17");
+		GiveItem2Character(Pchar, "book71_14"); 
+		GiveItem2Character(Pchar, "book71_15");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_17")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_16");
+		TakeItemFromCharacter(Pchar, "book71_17");
+		GiveItem2Character(Pchar, "book71_18"); 
+		GiveItem2Character(Pchar, "book71_19");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_18")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_18");
+		TakeItemFromCharacter(Pchar, "book71_19");
+		GiveItem2Character(Pchar, "book71_16"); 
+		GiveItem2Character(Pchar, "book71_17");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_19")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_18");
+		TakeItemFromCharacter(Pchar, "book71_19");
+		GiveItem2Character(Pchar, "book71_20"); 
+		GiveItem2Character(Pchar, "book71_21");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_20")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_20");
+		TakeItemFromCharacter(Pchar, "book71_21");
+		GiveItem2Character(Pchar, "book71_18"); 
+		GiveItem2Character(Pchar, "book71_19");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_21")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_20");
+		TakeItemFromCharacter(Pchar, "book71_21");
+		GiveItem2Character(Pchar, "book71_22"); 
+		GiveItem2Character(Pchar, "book71_23");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book71_22")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book71_22");
+		TakeItemFromCharacter(Pchar, "book71_23");
+		GiveItem2Character(Pchar, "book71_20"); 
+		GiveItem2Character(Pchar, "book71_21");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book72_package")
+	{
+		PlaySound("PEOPLE\clothes1.wav");
+		TakeItemFromCharacter(Pchar, "book72_package");
+		GiveItem2Character(Pchar, "book72_closed"); 
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book72_closed")
+	{
+		if(CheckAttribute(Pchar,"note72") && Pchar.note72 == "read")
+		{
+			PlaySound("INTERFACE\book_open.wav");
+			TakeItemFromCharacter(Pchar, "book72_closed");
+			GiveItem2Character(Pchar, "book72_openL"); 
+			GiveItem2Character(Pchar, "book72_openR"); 
+			TakeItemFromCharacter(Pchar, "note72");
+		//	Pchar.note72 = "not_read";
+
+			PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+			InterfaceStack.SelectMenu_node = "I_ITEMS";
+			interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+			EndCancelInterface(false);
+			return;
+		}
+		else 
+		{
+			PlaySound("INTERFACE\paper_small.wav");
+			Pchar.note72 = "read";
+		}	
+	}
+
+	if(itmName == "book72_openL")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+	}
+
+	if(itmName == "book72_openR")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book72_openL");
+		TakeItemFromCharacter(Pchar, "book72_openR");
+		GiveItem2Character(Pchar, "book72_edenL"); 
+		GiveItem2Character(Pchar, "book72_edenR"); 
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book72_edenL")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+
+		if(!CheckAttribute(Pchar,"book72_edenL") || Pchar.book72_edenL != "read")
+		{
+			Pchar.book72_edenL = "read";
+			AddQuestRecord("Charles_Eden", "2");
+			Pchar.eden_info = "start";
+			ChangeCharacterAddressGroup(characterFromID("Edmund Christobel Shaw"), "Grand_Cayman_townhall", "goto", "goto12");
+			LAi_SetStayType(characterFromID("Edmund Christobel Shaw"));
+		}
+	}
+
+	if(itmName == "book72_edenR")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book72_edenL");
+		TakeItemFromCharacter(Pchar, "book72_edenR");
+		GiveItem2Character(Pchar, "book72_caesarL"); 
+		GiveItem2Character(Pchar, "book72_caesarR"); 
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book72_caesarL")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+
+		if(!CheckAttribute(Pchar,"book72_caesarL") || Pchar.book72_caesarL != "read")
+		{
+			Pchar.book72_caesarL = "read";
+			AddQuestRecord("Caesar", "3");
+		}
+	}
+
+	if(itmName == "book72_caesarR")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book72_caesarL");
+		TakeItemFromCharacter(Pchar, "book72_caesarR");
+		GiveItem2Character(Pchar, "book72_handsL"); 
+		GiveItem2Character(Pchar, "book72_handsR"); 
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book72_handsL")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+
+		if(!CheckAttribute(Pchar,"book72_handsL") || Pchar.book72_handsL != "read")
+		{
+			Pchar.book72_handsL = "read";
+			AddQuestRecord("Israel_Hands", "3");
+		
+			SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
+			Characters[GetCharacterIndex("Hands")].name = TranslateString("","Beggar");
+			Characters[GetCharacterIndex("Hands")].lastname = TranslateString("","");
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "beggar";
+			LAi_SetPoorType(CharacterFromID("Hands"));
+			ChangeCharacterAddressGroup(CharacterFromID("Hands"), "Willemstad_town_3", "officers", "reload7_1");
+
+			LAi_QuestDelay("start_Hands_Willemstad", 0.1);
+		}
+	}
+
+	if(itmName == "book72_handsR")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book72_handsL");
+		TakeItemFromCharacter(Pchar, "book72_handsR");
+		GiveItem2Character(Pchar, "book72_richardsL"); 
+		GiveItem2Character(Pchar, "book72_richardsR"); 
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book72_richardsL")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+
+		if(!CheckAttribute(Pchar,"book72_richardsL") || Pchar.book72_richardsL != "read")
+		{
+			Pchar.book72_richardsL = "read";
+			AddQuestRecord("Blackbeards_crew","3");
+
+			//open wr_cave_shore here
+			Island_SetReloadEnableLocal("Redmond", "reload_3", true);
+			Locations[FindLocation("wr_cave_shore")].models.always.locators = "Shore04_l_JRHsea";
+
+			LAi_QuestDelay("Vane_Richards_from game", 1.0);
+			LAi_QuestDelay("Vane_Richards_from_jumpstart_and_game", 2.0);
+		}
+	}
+
+	if(itmName == "newspaper1")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		Pchar.newspaper1 = "read";
+
+		LAi_QuestDelay("return_newspaper1", 0.1);
+		LAi_QuestDelay("read_all_newspapers", 0.1);
+	}
+	
+	if(itmName == "newspaper2")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+
+		if(!CheckAttribute(Pchar,"newspaper2") || Pchar.newspaper2 != "read")
+		{
+			Pchar.newspaper2 = "read";
+			AddQuestRecord("Caesar","2");
+			SetQuestHeader("Blackbeards_crew");
+			AddQuestRecord("Blackbeards_crew","1");
+		}
+
+		LAi_QuestDelay("return_newspaper2", 0.1);
+		LAi_QuestDelay("read_all_newspapers", 0.1);
+	}
+
+	if(itmName == "newspaper3")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		
+		if(!CheckAttribute(Pchar,"newspaper3") || Pchar.newspaper3 != "read")
+		{
+			Pchar.newspaper3 = "read";
+			AddQuestRecord("Richards","2");
+			AddQuestRecord("Israel_Hands","2");
+			AddQuestRecord("Blackbeards_crew","2");
+
+			ChangeCharacterAddressGroup(CharacterFromID("Odel"), "Smugglers_Tavern", "goto", "goto17");
+
+			pchar.quest.Odel_dialog.win_condition.l1 = "locator";
+			pchar.quest.Odel_dialog.win_condition.l1.location = "Smugglers_Tavern";
+			pchar.quest.Odel_dialog.win_condition.l1.locator_group = "goto";
+			pchar.quest.Odel_dialog.win_condition.l1.locator = "goto17";
+			pchar.quest.Odel_dialog.win_condition = "Odel_dialog";
+		}
+
+		LAi_QuestDelay("return_newspaper3", 0.1);
+		LAi_QuestDelay("read_all_newspapers", 0.1);
+	}
+
+	if(itmName == "bandages_trousersX")
+	{
+		PlaySound("PEOPLE\clothes1.wav");
+		PlaySound("INTERFACE\took_item.wav");
+		TakeItemFromCharacter(Pchar, "bandages_trousersX");
+		GiveItem2Character(Pchar, "bandages_trousersQ");
+		GiveItem2Character(Pchar, "key36");
+
+		SetLocatorRadius(locations[FindLocation("wr_farm_alchemy")], "box", "box8", 0.6);	
+		SetLocatorRadius(locations[FindLocation("wr_farm_alchemy")], "reload", "reload2", 0.0001);
+		SetLocatorRadius(locations[FindLocation("wr_farm_alchemy2")], "box", "box17", 0.7);	
+		SetLocatorRadius(locations[FindLocation("wr_farm_alchemy2")], "reload", "reload2", 0.0001);
+
+		Locations[FindLocation("wr_farm_alchemy")].locators_radius.box.box8 = 0.6;
+		Locations[FindLocation("wr_farm_alchemy")].locators_radius.reload.reload2 = 0.0001;
+		Locations[FindLocation("wr_farm_alchemy2")].locators_radius.box.box17 = 0.7;
+		Locations[FindLocation("wr_farm_alchemy2")].locators_radius.reload.reload2 = 0.0001;	
+
+
+		SetLocatorRadius(locations[FindLocation("wr_farm_servant")], "box", "box5", 0.7);	
+		SetLocatorRadius(locations[FindLocation("wr_farm_servant")], "reload", "reload2", 0.0001);
+		SetLocatorRadius(locations[FindLocation("wr_farm_alchemy2")], "box", "box18", 0.7);	
+		SetLocatorRadius(locations[FindLocation("wr_farm_alchemy2")], "reload", "reload3", 0.0001);		
+
+		Locations[FindLocation("wr_farm_servant")].locators_radius.box.box5 = 0.7;
+		Locations[FindLocation("wr_farm_servant")].locators_radius.reload.reload2 = 0.0001;
+		Locations[FindLocation("wr_farm_alchemy2")].locators_radius.box.box18 = 0.7;
+		Locations[FindLocation("wr_farm_alchemy2")].locators_radius.reload.reload3 = 0.0001;
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "package")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "package");
+		GiveItem2Character(Pchar, "notebook"); 
+		GiveItem2Character(Pchar, "sealed_map"); 
+
+	//	AddQuestRecord("Secrets", "6");
+			
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "notebook")
+	{
+		PlaySound("INTERFACE\book_open.wav");
+		if(!CheckAttribute(Pchar,"quest.study_notebook") || Pchar.quest.study_notebook != "yes")
+		{
+			Pchar.quest.study_notebook = "yes";
+			PlaySound("INTERFACE\notebook_01.wav");
+			PlaySound("INTERFACE\notebook_01.wav");
+
+			SetQuestHeader("Benjamin_Hornigold");
+			AddQuestRecord("Benjamin_Hornigold", "1");
+		//	CloseQuestHeader("Benjamin_Hornigold");
+
+			SetQuestHeader("Caesar");
+			AddQuestRecord("Caesar", "1");
+
+			SetQuestHeader("Israel_Hands");
+			AddQuestRecord("Israel_Hands", "1");
+
+			SetQuestHeader("Charles_Eden");
+			AddQuestRecord("Charles_Eden", "1");
+
+			SetQuestHeader("Richards");
+			AddQuestRecord("Richards", "1");
+
+			SetQuestHeader("Johnson");
+			AddQuestRecord("Johnson", "1");		//blank
+
+			LAi_QuestDelay("secret_room_finished_check", 0.1);
+		}
+	}
+
+	if(itmName == "sealed_map")
+	{
+		if(IsEquipCharacterByItem(Pchar, "folding_knife"))
+		{
+			PlaySound("INTERFACE\paper_small.wav");
+			TakeItemFromCharacter(Pchar, "sealed_map");
+			GiveItem2Character(Pchar, "mapBB1"); 
+
+			Logit(TranslateString("","You've received e new item"));
+			PlaySound("INTERFACE\important_item.wav");
+
+			if(!CheckAttribute(Pchar,"quest.study_mapBB1") || Pchar.quest.study_mapBB1 != "yes")
+			{
+		//		AddQuestRecord("Secrets", "7");
+				AddQuestRecord("Benjamin_Hornigold", "2");
+				CloseQuestHeader("Benjamin_Hornigold");
+				Pchar.quest.study_mapBB1 = "yes";
+			}
+		
+			LAi_QuestDelay("secret_room_finished_check", 0.1);
+		}
+		else PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+/*
+	if(itmName == "mapBB1")
+	{
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+	}
+*/
 //JRH examine
 	
 
@@ -2169,7 +3341,7 @@ void UpdateItemData()
 		&& itemARef.groupID!=FLASK_ITEM_TYPE && itemARef.groupID!=POUCH_ITEM_TYPE && itemARef.groupID!=LOCKPICK_ITEM_TYPE
 		&& itemARef.groupID!=CLOCK_ITEM_TYPE && itemARef.groupID!=COMPASS_ITEM_TYPE && itemARef.groupID!=BELT_ITEM_TYPE
 		&& itemARef.groupID!=DOCUMENT_ITEM_TYPE && itemARef.groupID!=OUTFIT_ITEM_TYPE
-		&& itemARef.groupID!=EQUIP_ITEM_TYPE) {
+		&& itemARef.groupID!=EQUIP_ITEM_TYPE && itemARef.groupID!=EQUIP2_ITEM_TYPE && itemARef.groupID!=EQUIP3_ITEM_TYPE) {
 			//JRH: new types
 			SetNodeUsing("EQUIP_BUTTON",false);
 			SetNodeUsing("EXAMINE_BUTTON", false);
@@ -2194,7 +3366,7 @@ void UpdateItemData()
 			if(itemARef.groupID==GUN_ITEM_TYPE || itemARef.groupID==BLADE_ITEM_TYPE || itemARef.groupID==ARMOR_ITEM_TYPE || itemARef.groupID==SPYGLASS_ITEM_TYPE
 			|| itemARef.groupID==FLASK_ITEM_TYPE || itemARef.groupID==POUCH_ITEM_TYPE || itemARef.groupID==LOCKPICK_ITEM_TYPE
 			|| itemARef.groupID==CLOCK_ITEM_TYPE || itemARef.groupID==COMPASS_ITEM_TYPE || itemARef.groupID==BELT_ITEM_TYPE
-			|| itemARef.groupID==OUTFIT_ITEM_TYPE || itemARef.groupID==EQUIP_ITEM_TYPE)
+			|| itemARef.groupID==OUTFIT_ITEM_TYPE || itemARef.groupID==EQUIP_ITEM_TYPE || itemARef.groupID==EQUIP2_ITEM_TYPE || itemARef.groupID==EQUIP3_ITEM_TYPE)
 			{
 				//JRH: new types
 				SetSelectable("EQUIP_BUTTON",true);
@@ -2295,8 +3467,8 @@ void IDoExit(int exitCode)
 	}*/
 	EndCancelInterface(true);
 // MAXIMUS interface MOD <--
-
-	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
+//pär här 2, moved up see pär här
+//	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 }
 
 void ProcEquipPress()
@@ -2477,7 +3649,7 @@ void FillSelectedScroll(string itemsID)
 				if(arItem.groupID==POTION_ITEM_TYPE) curItemID = POTION_ITEM_TYPE;
 				//if(arItem.groupID==SPYGLASS_ITEM_TYPE || arItem.groupID==FLASK_ITEM_TYPE || arItem.groupID==POUCH_ITEM_TYPE || arItem.groupID==LOCKPICK_ITEM_TYPE || arItem.groupID==CLOCK_ITEM_TYPE || arItem.groupID==COMPASS_ITEM_TYPE) { curItemID = OBJECT_ITEM_TYPE; }
 				if (arItem.groupID == MAP_ITEM_TYPE) curItemID = MAP_ITEM_TYPE; // KK
-				if(arItem.groupID==QUEST_ITEM_TYPE || arItem.groupID==EQUIP_ITEM_TYPE || arItem.groupID==EXAMINE_ITEM_TYPE) curItemID = QUEST_ITEM_TYPE;
+				if(arItem.groupID==QUEST_ITEM_TYPE || arItem.groupID==EQUIP_ITEM_TYPE || arItem.groupID==EQUIP2_ITEM_TYPE || arItem.groupID==EQUIP3_ITEM_TYPE || arItem.groupID==EXAMINE_ITEM_TYPE) curItemID = QUEST_ITEM_TYPE;
 				if(curItemID==itemsID)
 				{
 				//	if(curItemID==GUN_ITEM_TYPE && arItem.id=="bladeX4") continue;//MAXIMUS

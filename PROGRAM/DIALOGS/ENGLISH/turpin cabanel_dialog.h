@@ -97,7 +97,7 @@ string DLG_TEXT[102] = {
 "Virgile Boon",
 "",
 "Captain ",
-" as you can hear, your reputation has proceded you. That pirate was really hurting our trading routes, I am sure you will receive a warm welcome here where ever you go.",
+", as you can hear, your reputation has proceded you. That pirate was really hurting our trading routes, I am sure you will receive a warm welcome here where ever you go.",
 "Thank you kindly sir. Do you by chance know of the whereabouts of a Captain Barbossa?",
 "Captain Barbossa.. hmm.. Why, yes I do as it happens. You will find him in Octopus Bay. I am told it is his favourite fishing spot. You can get there by going though the town, across a small patch of jungle and you're there.",
 "Thank you sir. I will bid you adieu.",

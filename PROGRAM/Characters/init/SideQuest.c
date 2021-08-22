@@ -269,7 +269,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.name = TranslateString("","Jordano");
 	ch.lastname = "";
 	ch.id		= "Jordano";
-	ch.model = "Diller";  // Cat
+	ch.model = "Jordano";  // GR (was "Diller", originally was "man4")
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
 	LAi_NoRebirthEnable(ch);
@@ -700,9 +700,19 @@ void CreateSideQuestCharacters(ref n)
 	ch.sex = "man";
 	ch.sound_type = "priest";
 	ch.nation = PIRATE;
-	GiveItem2Character(ch, "blade20+2");
+	if (ENABLE_WEAPONSMOD)
+	{
+//		GiveItem2Character(ch, "blade20+2");	// Asiatic broadsword
+		GiveItem2Character(ch, "bladeC36+2");	// Katana
+	}
+	else
+	{
+//		GiveItem2Character(ch, "blade20");	// Asiatic broadsword
+		GiveItem2Character(ch, "bladeC36");	// Katana
+	}
 	GiveItem2Character(ch, "commonarmor");
-	ch.equip.blade = "blade20";
+//	ch.equip.blade = "blade20";
+	ch.equip.blade = "bladeC36";
 	ch.nodisarm	= 1;				// PB: Disable disarming
 	ch.location	= "Muelle_ANIMISTS";
 	ch.location.group = "goto";
@@ -1432,13 +1442,22 @@ void CreateSideQuestCharacters(ref n)
 	ch.name = TranslateString("","Joaquin");
 	ch.lastname = TranslateString("","Da Saldanha");
 	ch.id		= "Joaquin Da Saldanha";
-	ch.model = "admiral";
+	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.model = "spa_adm_18_2";
+	else ch.model = "admiral";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade33");
 	ch.equip.blade = "blade33";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1516,8 +1535,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "bladeC6");
 	ch.equip.blade = "bladeC6";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1561,8 +1588,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "bladeC6");
 	ch.equip.blade = "bladeC6";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1606,8 +1641,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -1814,8 +1857,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.id = "Antoine Chamfort";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1855,8 +1906,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade36");
 	ch.equip.blade = "blade36";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1895,17 +1954,30 @@ void CreateSideQuestCharacters(ref n)
 	ch.model	= "pirat1";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
-	GiveItem2Character(ch, "blade4");
-	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "blade4");
+		ch.equip.blade = "blade4";
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade10");
+		ch.equip.blade = "blade10";
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
 	//JRH ammo mod <--
-	ch.location	= "none";
-	ch.location.group = "";
-	ch.location.locator = "";
+//	ch.location	= "none";
+//	ch.location.group = "";
+//	ch.location.locator = "";
+	ch.location	= "Buccaneers_Camp";	// Put him there at game start so that Buccaneers Camp is more populated
+	ch.location.group = "goto";
+	ch.location.locator = "goto42";
 	ch.Dialog.Filename = "Buccaneers_dialog.c";
 	ch.rank 	= 6;
 	ch.reputation = "None";
@@ -1936,17 +2008,30 @@ void CreateSideQuestCharacters(ref n)
 	ch.model	= "pirat2";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
-	GiveItem2Character(ch, "blade4");
-	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "blade4");
+		ch.equip.blade = "blade4";
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade10");
+		ch.equip.blade = "blade10";
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
 	//JRH ammo mod <--
-	ch.location	= "none";
-	ch.location.group = "";
-	ch.location.locator = "";
+//	ch.location	= "none";
+//	ch.location.group = "";
+//	ch.location.locator = "";
+	ch.location	= "Buccaneers_Camp";
+	ch.location.group = "goto";
+	ch.location.locator = "goto12";
 	ch.Dialog.Filename = "Buccaneers_dialog.c";
 	ch.rank 	= 7;
 	ch.reputation = "None";
@@ -1978,15 +2063,26 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade7");
 	ch.equip.blade = "blade7";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
 	//JRH ammo mod <--
-	ch.location	= "none";
-	ch.location.group = "";
-	ch.location.locator = "";
+//	ch.location	= "none";
+//	ch.location.group = "";
+//	ch.location.locator = "";
+	ch.location	= "Buccaneers_Camp";
+	ch.location.group = "goto";
+	ch.location.locator = "goto15";
 	ch.Dialog.Filename = "Buccaneers_dialog.c";
 	ch.rank 	= 8;
 	ch.reputation = "None";
@@ -2059,8 +2155,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.Ship.AI.GroupName = "Davy Jones";
 	ch.Ship.AI.Task = "attack";
 	ch.nation	= PIRATE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2176,8 +2280,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2218,8 +2330,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2367,7 +2487,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.name = TranslateString("","Xabe");
 	ch.lastname = TranslateString("","Oraglio");
 	ch.id		= "Pirate Captain 01";
-	ch.model = "fisherman";
+	ch.model = "Monkey_D_Luffy"; // GR: was "fisherman", same as all the others
 	ch.sex = "man";
 	ch.sound_type = "pirate";
 	ch.Ship.AI.GroupName = "Enemy_Redmond_Smugglers";
@@ -2406,10 +2526,10 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 // Pirate Captain 02 - SMUGGLING FOR THOMAS O'REILY
-	ch.old.name = "Gyles";
-	ch.old.lastname = "Dubois";
-	ch.name = TranslateString("","Gyles");
-	ch.lastname = TranslateString("","Dubois");
+	ch.old.name = "Wadham";		// GR: was "Gyles"
+	ch.old.lastname = "Notley";	// GR: was "Dubois"
+	ch.name = TranslateString("","Wadham");
+	ch.lastname = TranslateString("","Notley");
 	ch.id		= "Pirate Captain 02";
 	ch.model = "fisherman";
 	ch.sex = "man";
@@ -2450,10 +2570,10 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 // Pirate Captain 03 - SMUGGLING FOR THOMAS O'REILY
-	ch.old.name = "Gyles";
-	ch.old.lastname = "Dubois";
-	ch.name = TranslateString("","Gyles");
-	ch.lastname = TranslateString("","Dubois");
+	ch.old.name = "Morland";	// GR: was "Gyles"
+	ch.old.lastname = "Haley";	// GR: was "Dubois"
+	ch.name = TranslateString("","Morland");
+	ch.lastname = TranslateString("","Haley");
 	ch.id		= "Pirate Captain 03";
 	ch.model = "fisherman";
 	ch.sex = "man";
@@ -2469,8 +2589,8 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "Quest_ships";
 	ch.location.locator = "quest_ship_11";//locator8
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Madonna";
-	ch.Ship.Type = "Barque1"; // PRS3
+	ch.Ship.Name = "Duquesa";	// GR - was "Madonna"
+	ch.Ship.Type = "BarqueHeavy";	// GR - was "Barque1"
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
 	ch.rank 	= 1;
@@ -2514,8 +2634,32 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.group = "Quest_ships";
 	ch.location.locator = "quest_ship_3";//locator8
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
-	ch.Ship.Name = "Madonna";
-	ch.Ship.Type = "Caravel1"; // PRS3
+//	ch.Ship.Name = "Madonna";			// GR: Almost all the ships in this quest were named "Madonna"!
+//	ch.Ship.Type = "Caravel1"; // PRS3		   GR: "Caravel1" doesn't exist beyond "Spanish Main"
+	ch.Ship.Name = "Comtesse";
+	switch(GetCurrentPeriod())
+	{
+		case PERIOD_EARLY_EXPLORERS:
+			ch.Ship.Type = 	"Caravel1";
+		break;
+		case PERIOD_THE_SPANISH_MAIN:
+			ch.Ship.Type = 	"Caravel1";
+		break;
+		case PERIOD_GOLDEN_AGE_OF_PIRACY:
+			ch.Ship.Type = 	"NL_CastelF";
+		break;
+		case PERIOD_COLONIAL_POWERS:
+			ch.Ship.Type = 	"NL_CastelF";
+		break;
+		case PERIOD_REVOLUTIONS:
+			ch.Ship.Type = 	"FastMerchantman2";
+			ch.Ship.Cannons.Type = CANNON_TYPE_LONG_LBS6;
+		break;
+		case PERIOD_NAPOLEONIC:
+			ch.Ship.Type = 	"FastMerchantman2";
+			ch.Ship.Cannons.Type = CANNON_TYPE_LONG_LBS6;
+		break;
+	}
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
 	ch.rank 	= 1;
@@ -2895,8 +3039,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.id		= "Pirates_7";
 	ch.model	= "man4";
 	ch.sex = "man";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -2986,7 +3138,10 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "quest_ship_2"; 		// Petros: was quest_ship_11
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
 	ch.Ship.Name = "Neptunus";
-	ch.Ship.Type = "PiratCorvette"; 			// was Corvette1
+	if (GetCurrentPeriod() < PERIOD_COLONIAL_POWERS)
+		ch.Ship.Type = "PiratFastGal";		// GR: more appropriate for earlier periods
+	else
+		ch.Ship.Type = "PiratCorvette"; 	// was Corvette1
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
 	ch.rank 	= 1;
@@ -3344,8 +3499,16 @@ void CreateSideQuestCharacters(ref n)
 	GiveItem2Character(ch, "bladeX1"); //SCM
 	ch.equip.blade = "bladeX1"; //SCM
 	ch.nodisarm	= 1;				// PB: Disable disarming
-	GiveItem2Character(ch, "pistol1+3"); //SCM
-	ch.equip.gun = "pistol1+3"; //SCM
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1+3"); //SCM
+		ch.equip.gun = "pistol1+3"; //SCM
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a+3");
+		ch.equip.gun = "pistol1a+3";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -3434,8 +3597,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "Larry"; //SCM
 	GiveItem2Character(ch, "blade6"); //SCM
 	ch.equip.blade = "blade6"; //SCM
-	GiveItem2Character(ch, "pistol1"); //SCM
-	ch.equip.gun = "pistol1"; //SCM
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1"); //SCM
+		ch.equip.gun = "pistol1"; //SCM
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -3524,8 +3695,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "Thug"; //SCM
 	GiveItem2Character(ch, "blade4"); //SCM
 	ch.equip.blade = "blade4"; //SCM
-	GiveItem2Character(ch, "pistol1"); //SCM
-	ch.equip.gun = "pistol1"; //SCM
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1"); //SCM
+		ch.equip.gun = "pistol1"; //SCM
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -3880,8 +4059,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "bladeC12");
 	ch.equip.blade = "bladeC12";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -4306,8 +4493,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.Dialog.Filename = "Lookout_dialog.c";
 	GiveItem2Character(ch, "blade36");
 	ch.equip.blade = "blade36";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -4415,8 +4610,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "bladeC6");
 	ch.equip.blade = "bladeC6";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -4535,8 +4738,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade11");
 	ch.equip.blade = "blade11";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -4577,8 +4788,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "bladeC6");
 	ch.equip.blade = "bladeC6";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -4620,8 +4839,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -4663,8 +4890,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -5038,8 +5273,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "none";
 	ch.Dialog.Filename = "Isenbrandt Jurcksen_dialog.c";
 	ch.nation = PIRATE;
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 1 + rand(2));
@@ -5336,8 +5579,16 @@ void CreateSideQuestCharacters(ref n)
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -5741,6 +5992,560 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
+	// Kapitein of Kralendijk sidequest
+	ch.old.name = "Willem";
+	ch.old.lastname = "Voigt";
+	ch.name = TranslateString("","Willem");
+	ch.lastname = TranslateString("","Voigt");
+	ch.id		= "Willem Voigt";
+	ch.model	= "man3_1";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "Philipsburg_tavern";
+	ch.location.group = "sit";
+	ch.location.locator = "sit13";
+	ch.Dialog.Filename = "Willem Voigt_dialog.c";
+	ch.greeting = "Gr_Peasant";
+	ch.nation = HOLLAND;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	LAi_SetSitType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "DOUWESEN_CITIZENS");
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	// Hornblower sidequest
+	ch.old.name = "Rodney";
+	ch.old.lastname = "Leighton";
+	ch.name = TranslateString("","Rodney");
+	ch.lastname = TranslateString("","Leighton");
+	ch.id		= "Sir Rodney Leighton";
+	ch.model = "brtadm3_18";
+	ch.sex = "man";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	GiveItem2Character(ch, "pistol1");
+	ch.equip.gun = "pistol1";
+	//JRH ammo mod -->
+	TakenItems(ch, "gunpowder", 6);
+	TakenItems(ch, "pistolbullets", 6);
+	//JRH ammo mod <--
+	ch.Dialog.Filename = "Sir Rodney Leighton_dialog.c";
+	ch.nation = ENGLAND;
+	ch.Ship.Name = "Ardent";
+	ch.Ship.Type = "HMS_Bellona";
+	ch.Ship.Stopped = true;
+	ch.rank 	= 20;
+	ch.reputation = "50";
+	ch.experience = "10";
+	ch.skill.Leadership = "8";
+	ch.skill.Fencing = "8";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "8";
+	ch.skill.Cannons = "8";
+	ch.skill.Grappling = "8";
+	ch.skill.Repair = "8";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "8";
+	ch.skill.Sneak = "8";
+	ch.money = "1000";
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHuberStayType(ch);
+	LAi_SetStayHuberPointMap(ch, "goto", "goto4");
+	LAi_SetStayHuberPointWindow(ch, "goto", "goto6");
+	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;
+	SetRank(ch, ENGLAND, 8);
+	SetRankTitle(ch, TranslateString("", "Sir"));
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Midshipman";
+	ch.old.lastname = "Longley";
+	ch.name = TranslateString("","Midshipman");
+	ch.lastname	= TranslateString("","Longley");
+	ch.id		= "Midshipman Longley";
+	ch.model	= "brtmds3_18";
+	ch.sex = "man";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	GiveItem2Character(ch, "pistol1");
+	ch.equip.gun = "pistol1";
+	//JRH ammo mod -->
+	TakenItems(ch, "gunpowder", 6);
+	TakenItems(ch, "pistolbullets", 6);
+	//JRH ammo mod <--
+	ch.Dialog.Filename = "Midshipman Longley_dialog.c";
+	ch.nation = ENGLAND;
+	ch.rank 	= 8;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_NAVIGATOR;
+	ch.questchar = true;
+//	SetRank(ch, ENGLAND, 1); // Not if his "name" is "Midshipman"
+	AddGameCharacter(n, ch);
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Lieutenant";
+	ch.old.lastname = "Gerard";
+	ch.name = TranslateString("","Lieutenant");
+	ch.lastname	= TranslateString("","Gerard");
+	ch.id		= "Lieutenant Gerard";
+	ch.model	= "brtlut2_18";
+	ch.sex = "man";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	GiveItem2Character(ch, "pistol1");
+	ch.equip.gun = "pistol1";
+	//JRH ammo mod -->
+	TakenItems(ch, "gunpowder", 6);
+	TakenItems(ch, "pistolbullets", 6);
+	//JRH ammo mod <--
+	ch.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+	ch.nation = ENGLAND;
+	ch.rank 	= 10;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "3";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "4";
+	ch.skill.Cannons = "4";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CANNONEER;
+	ch.questchar = true;
+//	SetRank(ch, ENGLAND, 3); // Not if his "name" is "Lieutenant"
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Julian";
+	ch.old.lastname = "Alvarado";
+	ch.name = TranslateString("","Julian");
+	ch.lastname = TranslateString("","Alvarado");
+	ch.id		= "El Supremo";
+	ch.model	= "El_Supremo";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "El Supremo_dialog.c";
+	ch.greeting = "Gr_El Supremo";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.Flags.Personal = 0;		// GR: Latin American blue/white flag
+	ch.Flags.Personal.texture = 5;
+	ch.reputation = "None";
+	ch.skipRM = true; // PB: Skip Relations Mod
+	ch.nosurrender = 2;
+	ch.experience = "0";
+	ch.skill.Leadership = "8";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	SetRankTitle(ch, TranslateString("", "Don"));
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Jose";
+	ch.old.lastname = "Hernandez";
+	ch.name = TranslateString("","Jose");
+	ch.lastname = TranslateString("","Hernandez");
+	ch.id		= "Jose Hernandez";
+	ch.model	= "fisherman";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Jose Hernandez_dialog.c";
+	ch.greeting = "Gr_Juan Hernandez";
+	ch.nation = PIRATE;
+	GiveItem2Character(ch, "blade47");
+	ch.equip.blade = "blade47";
+	ch.Ship.Name = "Valiente";
+	ch.Ship.Type = "Tartane1";
+	ch.Ship.Stopped = true;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "3";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "3";
+	ch.skill.Sneak = "3";
+	ch.money = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	SetRankTitle(ch, TranslateString("", "Don"));
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Cristobal";
+	ch.old.lastname = "Leon";
+	ch.name = TranslateString("","Cristobal");
+	ch.lastname = TranslateString("","Leon");
+	ch.id		= "Natividad_captain";
+	ch.nation	= SPAIN;
+	ch.model	= "spa_cpt_18";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade14");
+	ch.equip.blade = "blade14";
+	GiveItem2Character(ch, "pistol2");
+	ch.equip.gun = "pistol2";
+	//JRH ammo mod -->
+	TakenItems(ch, "gunpowder", 6);
+	TakenItems(ch, "pistolbullets", 6)
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+	ch.rank 	= 4;
+	ch.reputation = "70";
+	ch.experience = "0";
+	ch.skill.Leadership = "6";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1000";
+	ch.Ship.Name = "Natividad";
+	ch.Ship.Type = "SP_Natividad";
+	ch.Ship.Stopped = true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;
+	SetRank(ch, SPAIN, 6);
+	SetRankTitle(ch, TranslateString("", "Don"));
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Escovar";
+	ch.old.lastname = "Ententa";
+	ch.name = TranslateString("","Escovar");
+	ch.lastname = TranslateString("","Entenza");
+	ch.id		= "Spanish_lugger_captain";
+	ch.nation	= SPAIN;
+	ch.model	= "spa_lut1_18";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade47");
+	ch.equip.blade = "blade47";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Spanish lugger captain_dialog.c";
+	ch.greeting = "Gr_Jaoquin de masse";
+	ch.rank 	= 4;
+	ch.reputation = "70";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "2";
+	ch.skill.Accuracy = "2";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1000";
+	ch.Ship.Name = "Santiano";
+	ch.Ship.Type = "Lugger1";
+	ch.Ship.Stopped = true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;
+	SetRank(ch, SPAIN, 5);
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Señorita";
+	ch.old.lastname = "Hebe";
+	ch.name = TranslateString("","Señorita");
+	ch.lastname = TranslateString("","Hebe");
+	ch.id		= "Hebe";
+	ch.model	= "downgirl2";
+	ch.sex = "woman";
+	LAi_NoRebirthEnable(ch);
+	ch.sound_type = "female_citizen";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+	ch.greeting = "Gr_f_officer";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
+	// Crystal Skull sidequest
+	ch.old.name = "Constantino";
+	ch.old.lastname = "Avellán";
+	ch.name = TranslateString("","Constantino");
+	ch.lastname = TranslateString("","Avellán");
+	ch.id		= "Skull_Researcher";
+	ch.model = "9R_Purs";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location = "Santo_Domingo_Historian_House";
+	ch.location.group = "goto";
+	ch.location.locator = "goto3";
+	ch.Dialog.Filename = "skull_researcher_dialog.c";
+	ch.greeting = "Gr_researcher";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "5";
+	ch.skill.Sneak = "4";
+	ch.money = "0";
+	ch.quest.meeting = "0";
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_NoRebirthEnable(ch);
+	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
+	ch.nation = PIRATE;
+	ch.old.name = "Growling";
+	ch.old.lastname = "Bear";
+	ch.name = TranslateString("","Growling");
+	ch.lastname = TranslateString("","Bear");
+	ch.id		= "Carib_Warrior";
+	ch.model = "Native";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "goto8";
+	ch.Dialog.Filename = "Carib_Warrior_dialog.c";
+	ch.greeting = "Gr_Indian";
+	ch.rank 	= 5;
+	ch.reputation = "40";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "0";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "0";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "4";
+	ch.money = "0";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	ch.isIndian = true;
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
+	ch.quest.officertype = OFFIC_TYPE_RANDCHAR;
+	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Kicking";
+	ch.old.lastname = "Raven";
+	ch.name = TranslateString("","Kicking");
+	ch.lastname = TranslateString("","Raven");
+	ch.id		= "Carib_Chief";
+	ch.model	= "Native_Chief";
+	ch.sex = "man";
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "goto2";
+	ch.Dialog.Filename = "Carib_Chief_dialog.c";
+	ch.nation = PIRATE;
+	ch.rank 	= 7;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "0";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "0";
+	ch.skill.Grappling = "0";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "4";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	ch.money = "1";
+	ch.isIndian = true;
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
+	ch.quest.officertype = OFFIC_TYPE_RANDCHAR;
+	ch.greeting = "Gr_Indian";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Lewis";
+	ch.old.lastname = "Vickers";
+	ch.name = TranslateString("","Lewis");
+	ch.lastname = TranslateString("","Vickers");
+	ch.id = "Archaeologist_captain";
+	ch.model = "will_3";
+	ch.sex = "man";
+	ch.sound_type = "seaman";
+	LAi_NoRebirthEnable(ch);
+	ch.nation = PERSONAL_NATION;
+	GiveItem2Character(ch, "bladeC12");
+	ch.equip.blade = "bladeC12";
+	GiveItem2Character(ch, "pistol2");
+	ch.equip.gun = "pistol2";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+	//JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Archaeologist_captain_dialog.c";
+	ch.greeting = "Gr_Gyles Dubois";
+	ch.Ship.Name = "Ark Raider"; // KK	
+	if (GetCurrentPeriod() <= PERIOD_THE_SPANISH_MAIN)
+	{
+		ch.Ship.Type = "RN_Galeon_L";		
+		if(USE_REAL_CANNONS) ch.Ship.Cannons.Type = CANNON_TYPE_CARRONADE_LBS12;
+	}
+	else ch.Ship.Type = "BrigQeen1";
+	ch.Ship.Stopped = true;
+	ch.Flags.Pirate = 3;
+	ch.Flags.Pirate.texture = 0;
+	ch.Flags.Personal = 4;
+	ch.Flags.Personal.texture = 2;
+// KK -->
+	ch.Ship.EmblemedSails.normalTex = "sail_petros_blue_white.tga"; // PB
+	ch.Ship.EmblemedSails.nationFileName = "sail_petros_blue_white.tga"; // PB
+	ch.nosurrender = 2;
+// <-- KK
+	ch.skipRM = true; // PB: Skip Relations Mod
+	ch.rank 	= 1;
+	ch.reputation = "35";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "4";
+	ch.skill.Accuracy = "4";
+	ch.skill.Cannons = "4";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "2374";	// Why always use a nice round number?
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_NoRebirthEnable(ch);
+	ch.questchar = true;	// Stop levelling from messing him about
 	AddGameCharacter(n, ch);
 }
 	

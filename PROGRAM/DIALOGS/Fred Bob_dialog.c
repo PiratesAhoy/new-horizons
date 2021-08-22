@@ -11,6 +11,8 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 	
+	Preprocessor_Add("Civil", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false)); // DeathDaisy
+	
 	// RM -->
 	if(strcut(Dialog.CurrentNode, 0, 3) == "flag") // KK
 	{
@@ -529,8 +531,16 @@ void ProcessDialogEvent()
 			else { AddPartyExp(pchar, 750); }
 			GiveItem2Character(NPChar, "blade27");
 			NPChar.equip.blade = "blade27";
-			GiveItem2Character(NPChar, "pistol1");
-			NPChar.equip.gun = "pistol1";
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+			{
+				GiveItem2Character(NPChar, "pistol1");
+				NPChar.equip.gun = "pistol1";
+			}
+			else
+			{
+				GiveItem2Character(NPChar, "pistol1a");
+				NPChar.equip.gun = "pistol1a";
+			}
 
 		     //JRH ammo mod --->
 			if (ENABLE_AMMOMOD) {	// LDH change
@@ -580,7 +590,7 @@ void ProcessDialogEvent()
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
 			npchar.quest.help = "hired";
-//			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Fred Bob"));
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Fred Bob"));
 			AddPassenger(Pchar, characterFromID("Fred Bob"), 0);
 			AddQuestRecord("fred_bob", 7);
 			CloseQuestHeader("fred_bob");
@@ -675,6 +685,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "SalaryC":
+			// DeathDaisy -->
+			if(PChar.sex == "woman"){
+				Preprocessor_Add("sir", XI_ConvertString("ma'am"));
+			}
+			else{
+				Preprocessor_Add("sir", XI_ConvertString("sir"));
+			}
+			// DeathDaisy <--
 			d.Text = DLG_TEXT[191];
 			Link.l1 = DLG_TEXT[192];
 			Link.l1.go = "Exit";
@@ -687,6 +705,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "ArticlesC":
+			// DeathDaisy -->
+			if(PChar.sex == "woman"){
+				Preprocessor_Add("sir", XI_ConvertString("ma'am"));
+			}
+			else{
+				Preprocessor_Add("sir", XI_ConvertString("sir"));
+			}
+			// DeathDaisy <--
 			d.Text = DLG_TEXT[195];
 			Link.l1 = DLG_TEXT[192];
 			Link.l1.go = "Exit";
@@ -1069,7 +1095,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "injun":
-			d.Text = DLG_TEXT[291];
+			d.Text = DLG_TEXT[291] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + "!";
 			Pchar.model = "mummy";
 			facemaker(pchar);
 			Link.l1 = DLG_TEXT[292];

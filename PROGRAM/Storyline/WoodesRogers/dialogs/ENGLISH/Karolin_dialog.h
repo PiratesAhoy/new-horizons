@@ -1,4 +1,4 @@
-string DLG_TEXT[22] = { 
+string DLG_TEXT[34] = { 
 "Can't you see that I'm on duty! Don't bother me.",
 "All right, all right.",
 "Did you want to report some crime?",
@@ -21,5 +21,17 @@ string DLG_TEXT[22] = {
 "Sounds good, but I'll have to decline your offer. Army discipline doesn't agree with me.",
 "This heat.... I'd give anything to return back to the Europe, to the civilization...",
 "Yes, it doesn't look like this weather suits you.",
+"And the password is?",
+"LONG-TOUR-AHH!!!",
+"Hmm, I...",
+"Long tory yah!",			//25
+"Doesn't really sounds like it at all. Try again.",
+"Long torah. (this reminds me of school!)",
+"That was even worse.",
+"The Commander is not in his office...",
+"No problem.",				//30
+"Red House - sure you know the right path through the jungle, sir? It's a very dangerous place indeed.",
+"Yes thank you. I've got a description here.",
+"Hmm, you're right. I have no idea how to find it.",
 
 };

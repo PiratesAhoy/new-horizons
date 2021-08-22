@@ -64,6 +64,8 @@ void ProcessDialogEvent()
 
 	// Set blacksmith's price multiplier
 	float pricemult = 1.0/105.0;
+	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, MainChar, ADDR_POLITE, false, false)); // DeathDaisy
 
 	// Dialog.CurrentNode holds a value indicating where in the conversation we are,
 	// according to that value we will determine where to go next.
@@ -242,7 +244,7 @@ void ProcessDialogEvent()
 
 						// If the blade is excellent, refuse to repair (as there is nothing to repair...)
 					case QUALITY_EXELLENT:
-						Dialog.text = DLG_TEXT[15] + BladeName + DLG_TEXT[16];
+						Dialog.text = DLG_TEXT[15] + BladeName + ", " + GetMyAddressForm(NPChar, MainChar, ADDR_POLITE, false, false) + DLG_TEXT[16];
 						link.l1 = DLG_TEXT[34];
 						link.l1.go = "exit";
 						break;

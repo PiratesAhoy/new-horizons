@@ -58,5 +58,11 @@ void ProcessDialogEvent()
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
 		break;
+
+		case "sailing_together":
+			dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[11];
+			link.l1.go = "exit";
+		break;
 	}
 }

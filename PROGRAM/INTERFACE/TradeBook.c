@@ -160,10 +160,6 @@ void InitInterface_S(string iniName, string town)
 	CreateString(true,"Contraband25","",FONT_NORMAL,COLOR_NORMAL,462,383,SCRIPT_ALIGN_LEFT,0.8);
 	CreateString(true,"Contraband26","",FONT_NORMAL,COLOR_NORMAL,462,427,SCRIPT_ALIGN_LEFT,0.8);
 
-	//Levis add on for smuggling
-	CreateString(true,"Smuggling1","",FONT_NORMAL,COLOR_NORMAL,334,470,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Smuggling2","",FONT_NORMAL,COLOR_NORMAL,435,470,SCRIPT_ALIGN_LEFT,0.8);
-	
 	string groupIcons = "GOODS";
 	if(bNewIcons==true) groupIcons = "GOODS_NEW";
 
@@ -451,14 +447,6 @@ void XI_SetIslandData(int curStore)
 			GameInterface.strings.(strPrice) = "";
 			GameInterface.pictures.(picAttr).pic = "";
 		}
-	}
-	//Levis patrol schedule add-on:
-	int state = getIslandSmugglingStateTradebook(refIsland, GetMainCharacter());
-	if(state > -1)
-	{
-		string date = getIslandSmugglingDateTradebook(refIsland, GetMainCharacter());
-		GameInterface.strings.Smuggling1 = "Smuggling Risk:";
-		GameInterface.strings.Smuggling2 = getSmugglingStateShortDesc(state)+" ("+date+")";
 	}
 }
 

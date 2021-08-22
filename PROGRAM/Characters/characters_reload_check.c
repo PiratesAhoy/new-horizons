@@ -160,6 +160,7 @@ int chrCheckReloadLink(ref loc, string reloadLocatorName) // KK
 							if(goLoc.id == "Con_blacksmith") mc.reloadStatus = "ToGunsmith";	//JRH: gun
 						}
 					}
+					if (goLoc.type == "shipyard_bj") mc.reloadStatus = "ToShipyard";			//JRH for BJ
 					if (goLoc.type == "indian_shop") mc.reloadStatus = "ToIndianStore";			//JRH
 					if (goLoc.type == "tavern") {
 						if (HasSubStr(goLoc.id, "_Tavern")) mc.reloadStatus = "ToTavern";
@@ -169,14 +170,15 @@ int chrCheckReloadLink(ref loc, string reloadLocatorName) // KK
 					if (goLoc.type == "brothel") mc.reloadStatus = "ToBrothel";
 					if (goLoc.type == "residence" && HasSubStr(goLoc.id, "_townhall")) mc.reloadStatus = "ToResidence";
 					if (goLoc.type == "residence" && HasSubStr(goLoc.id, "_residence")) mc.reloadStatus = "ToResidence";
+					if (HasSubStr(goLoc.id, "Kristiania_townhall")) mc.reloadStatus = "ToResidence";//JRH
 					if (HasSubStr(goLoc.id, "_Usurer")) mc.reloadStatus = "ToUsurer";
 					if (HasSubStr(goLoc.id, "_gunsmith")) mc.reloadStatus = "ToGunsmith";		//JRH
 					if (HasSubStr(goLoc.id, "_surgeon") || HasSubStr(goLoc.id, "apothecary")) mc.reloadStatus = "ToDoctor";		//JRH
 					if (HasSubStr(goLoc.id, "_sailmaker")) mc.reloadStatus = "ToSailmaker";		//JRH
 					if (HasSubStr(goLoc.id, "_library")) mc.reloadStatus = "ToLibrary";			//JRH
 					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Opium Den") mc.reloadStatus = "ToOpium";			//JRH
-					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Abbey of the Maltese order") mc.reloadStatus = "ToMaltese";	//JRH				
-					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Order of Malta") mc.reloadStatus = "ToMaltese";		//JRH							//JRH
+					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Abbey of the Maltese order") mc.reloadStatus = "ToMaltese";	//JRH
+					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Order of Malta") mc.reloadStatus = "ToMaltese";		//JRH
 					if (CheckAttribute(goLoc, "id.label") && goLoc.id.label == "Naval academy") mc.reloadStatus = "ToAcademy";		//JRH
 					if (goLoc.id == "Antigua_Residence" || goLoc.id == "Greenford Naval HQ" 
 					 || goLoc.id == "Redmond Naval HQ" || goLoc.id == "Admiral_Office"
@@ -185,12 +187,14 @@ int chrCheckReloadLink(ref loc, string reloadLocatorName) // KK
 					if (goLoc.id == "DWIC") mc.reloadStatus = "ToDWIC";					//JRH
 					if (goLoc.type == "church" && HasSubStr(goLoc.id, "_church")) mc.reloadStatus = "ToChurch";
 					if (goLoc.type == "Turks_church") mc.reloadStatus = "ToChurch";			//JRH
+					if (goLoc.type == "Vane_chapel") mc.reloadStatus = "ToChurch";			//JRH
 					if (goLoc.type == "jail") mc.reloadStatus = "ToPrison";
 					if (goLoc.type == "military") {
 						if (HasSubStr(goLoc.id, "_fakefort")) mc.reloadStatus = "ToFort";
 						if (HasSubStr(goLoc.id, "_armory")) mc.reloadStatus = "ToArsenal";
 					}
-					if (goLoc.type == "town") mc.reloadStatus = "ToTown";
+					if (HasSubStr(goLoc.id, "Kristiania_Fort")) mc.reloadStatus = "ToFort";			//JRH
+					if (goLoc.type == "town" || goLoc.type == "silent_town" || goLoc.type == "silent_repair_town") mc.reloadStatus = "ToTown"; //JRH more types for Kristiania
 					if (goLoc.type == "jungle") mc.reloadStatus = "ToJungle";
 					if (goLoc.type == "port" && FindCurrentDeck() == "") mc.reloadStatus = "ToPort";
 					if (goLoc.type == "town" && HasSubStr(goLoc.id, "_port") && FindCurrentDeck() == "") mc.reloadStatus = "ToPort";

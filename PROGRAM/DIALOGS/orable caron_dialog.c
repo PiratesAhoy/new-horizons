@@ -419,6 +419,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "node_17":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			Dialog.Text = DLG_TEXT[147];
 			Link.l1 = DLG_TEXT[148];
 			Link.l1.go = "node_18";

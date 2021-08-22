@@ -13,6 +13,8 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 	
+	Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -44,6 +46,8 @@ void ProcessDialogEvent()
 			Pchar.quest.Carpenter1.win_condition.l1.character = "Blaze";
 			Pchar.quest.Carpenter1.win_condition.l1.location = "Falaise_de_fleur_Jungle";
 			Pchar.quest.Carpenter1.win_condition = "about_ruby";
+			
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 
 			d.Text = DLG_TEXT[0];
 			Link.l1 = DLG_TEXT[1];

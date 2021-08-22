@@ -1369,6 +1369,8 @@ void SetUpCabin(ref chr)
 		Locations[locID].image = "Cabin.tga";
 		Locations[locID].models.always.locators = "tut_Deck_ld";
 		Locations[locID].models.always.l1 = "tut_Deck";
+		Locations[locID].models.always.l2 = "cabinchest";		//JRH
+		Locations[locID].models.always.l3 = "trunk";			//JRH
 		Locations[locID].models.day.charactersPatch = "tut_Deck_p";
 		Locations[locID].models.day.fonar = "tut_Deck_fd";
 		Locations[locID].models.night.charactersPatch = "tut_Deck_p";

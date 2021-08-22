@@ -176,11 +176,12 @@ string GenerateTradeQuest(ref pchar, int iTradeNation, int iTradeGoods, float fp
 		if(!CheckAttribute(&Towns[i],"nation")) continue;
 		if(GetAttribute(&Towns[i],"skiptrade") == true) continue;//MAXIMUS: added for some towns (such as St. John's on Antigua)
 		if(sti(Towns[i].nation) != iTradeNation) continue;
+		if(GetIslandIDFromTown(Towns[i].id) == GetIslandIDFromTown(GetCurrentTownID())) continue;
 		friendlyTowns = StoreString(friendlyTowns,Towns[i].id);
 	}
 	if (friendlyTowns != "") {
 		sTown = GetRandSubString(friendlyTowns);
-		while (sTown == "" || HasSubStr(sTown, ",") || GetIslandIDFromTown(sTown) == GetIslandIDFromTown(GetCurrentTownId()))
+		while (sTown == "" || HasSubStr(sTown, ","))
 		{
 			sTown = GetRandSubString(friendlyTowns);
 		}
@@ -1004,7 +1005,8 @@ void InitAliceTownBrothel()
 void CheckGambledQuest()
 {
 	ref PChar = GetMainCharacter();
-	if(!HasSubStr(PChar.location,"tavern") && !CheckAttribute(PChar,"IsOnDeck"))
+//	if(!HasSubStr(PChar.location,"tavern") && !CheckAttribute(PChar,"IsOnDeck"))
+	if(!HasSubStr(PChar.location,"upstairs") && !CheckAttribute(PChar,"IsOnDeck"))
 	{
 		PChar.quest.not_to_the_ship_2.win_condition.l1 = "ExitFromLocation";
 		PChar.quest.not_to_the_ship_2.win_condition.l1.location = PChar.location;
@@ -2283,6 +2285,20 @@ void WriteLocatorGlobal(string locationID, string locatorGroup, string locatorNa
 	locations[FindLocation(locationID)].locators.(locatorGroup).(locatorName).radius = 1.5;
 }
 
+void ReadLocatorCoordinates(string locatorGroup, string locatorName, float posX, float posY, float posZ)
+{
+	ref lcn = &Locations[FindLocation(characters[GetMainCharacterIndex()].location)];
+	posX = 0.0;
+	posY = 0.0;
+	posZ = 0.0;
+	if (CheckAttribute(lcn,"locators." + locatorGroup + "." + locatorName))
+	{
+		posX = lcn.locators.(locatorGroup).(locatorName).x;
+		posY = lcn.locators.(locatorGroup).(locatorName).y;
+		posZ = lcn.locators.(locatorGroup).(locatorName).z;
+	}
+}
+
 void DeleteLocatorGlobal(string locationID, string locatorGroup, string locatorName)
 {
 	aref rootLocs;
@@ -3075,8 +3091,8 @@ bool FindLocalLanguage(string lang)
 {
 	string dir = "RESOURCE\INI\TEXTS\" + lang;
 	if (FindFile(dir, "*.ini", "common.ini") == "") return false;
-	if (CheckDirectory(dir, "*.txt") < 15) return false;
-	if (FindFile(dir + "\QUESTBOOK", "*.txt", "quests_texts.txt") == "") return false;
+//	if (CheckDirectory(dir, "*.txt") < 15) return false;								// PB: LESS than 15? Even ENGLISH has more now!
+//	if (FindFile(dir + "\QUESTBOOK", "*.txt", "quests_texts.txt") == "") return false;	// PB: English doesn't have this file either...
 	return true;
 }
 // <-- KK
@@ -3615,8 +3631,18 @@ void EncRecalcReloadToSea()
 
 			if(SAILHO_INFOLEVEL>=1)
 			{
-				if(isShipEncounterType>1) totalInfo = TranslateString("","Sail Ho! There's a battle up ahead sir, it looks like") + " " + totalInfo;
-				else totalInfo = TranslateString("","Sail Ho! It looks like") + " " + totalInfo;
+				// DeathDaisy -->
+				string PCharTitle = "sir";
+				switch(mc.sex){
+					case "woman":
+						PCharTitle = "ma'am";
+					break;
+				}
+				// DeathDaisy <--
+				if(isShipEncounterType>1){ totalInfo = TranslateString("","Sail Ho! There's a battle up ahead " + PCharTitle + ", it looks like") + " " + totalInfo;
+				}
+				else{ totalInfo = TranslateString("","Sail Ho! It looks like") + " " + totalInfo;
+				}
 			}
 			else
 			{

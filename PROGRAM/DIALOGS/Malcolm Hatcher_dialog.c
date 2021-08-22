@@ -29,9 +29,11 @@ void ProcessDialogEvent()
 	}
 // PB <--
 	
+	PreProcessor_Add("name", GetMyName(NPChar));
 	switch(Dialog.CurrentNode)
 		{
 			case "start":
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				Preprocessor_Add("enemy",GetNationDescByType(iNation));
 				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[1];
@@ -50,6 +52,7 @@ void ProcessDialogEvent()
 			break;
 
 			case "intro3":
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				dialog.text = DLG_TEXT[6];
 				link.l1 = DLG_TEXT[7];
 				link.l1.go = "intro4";
@@ -276,7 +279,7 @@ void ProcessDialogEvent()
 			break;
 
 			case "HurtEnough":
-				AddDialogExitQuest("Tut_ReturnPlayer");
+				AddDialogExitQuest("player_back");
 				dialog.text = DLG_TEXT[57];
 				link.l1 = DLG_TEXT[58];
 				link.l1.go = "Continue_ToSeriousFight";

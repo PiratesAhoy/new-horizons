@@ -29,7 +29,7 @@ string DLG_TEXT[141] = {
 "Yes - pretending it's your business - I am a captain. But how did you know that? And why do you care?",
 "I'm sorry. I've got no time to talk with you.",
 "I don't have time for the likes of you. Leave me alone!",
-"I consider it part of my job to know, just by looking at a man, what he does and what sort of fellow he is.",
+"I consider it part of my job to know, just by looking at a #sgender#, what #spronoun# does and what sort of fellow #spronoun# is.",
 "Part of your job? You don't look like a captain of the guard. No, you're most likely a banker.",
 "Oh, really? A man as sharp as you must be a captain of the guard. Or are you simply a money lender?",
 "Yes, well - that's an amusing parlor trick, I'm sure. But I've got business elsewhere.",

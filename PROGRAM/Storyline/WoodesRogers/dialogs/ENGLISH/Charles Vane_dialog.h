@@ -1,4 +1,4 @@
-string DLG_TEXT[155] = {
+string DLG_TEXT[165] = {
 "I'm the one in charge throughout these waters -",
 "- and I'll NEVER accept a pardon, not even a 'Woodes-Rogers'!",
 "... and how did you get here?!",
@@ -19,7 +19,7 @@ string DLG_TEXT[155] = {
 "(Guess I'm in real trouble now)",
 "Why not let this unknown Captain be the one who collects ",
 "the ransom for our dear 'guests' down in the cellar?",
-"Well then, what do you say Captain Pyle - interested in a little mission?",
+"Well then, what do you say Captain Pyle - interested in a little mission?",	//20
 "Never - I'm no pirate!",
 "Hmm, what's in it for me?",
 "It does looks like I have no choice!?",
@@ -39,7 +39,7 @@ string DLG_TEXT[155] = {
 "I really can't see why, but okey then.",
 "Now let me out of here.",
 "Just one thing clever young Captain. Don't try to be too smart and lead someone to us - if so the prisoners are dead!",
-"I see.",
+"I see.",									//40
 "First hand over your gold and those guns you've got there - they look a little familiar to me - take a look Calico Jack - don't you think we might have seen these ones before ...?",
 "(Oh no, here goes my gold and my pistol collection - so much work for nothing!) And what about the mission?",
 "Shut up you bastards - ",
@@ -59,7 +59,7 @@ string DLG_TEXT[155] = {
 "The captains here are very experienced sailors and have agreed to teach you three new skills.",
 "Well that was something!",
 "I can train your Basic Defence ability.",
-"I certainly say yes to that!",
+"I certainly say yes to that!",							//60
 "The captains think highly of you and maybe you have the chance to be a member of this party. ",
 "Well it does sound interesting...(Straight to the gallows, I'll suppose)",
 "We have discussed your story and there is one interesting detail concerning the Costbrothers - they had black monk's cowls you say!?",
@@ -79,7 +79,7 @@ string DLG_TEXT[155] = {
 "Excellent work - the brothers will vote you in for this Captain!",
 "Hmm, they look a little bit ... tired?",
 "I'll wake them up - this is going to be real funny -",
-"- see for yourself through that window ...",
+"- see for yourself through that window ...",					//80
 "That served them right! Now to another issue Captain.",
 "(Captain means he wants something from me again ...) Captain Vane, I've come here because I need help. They have killed Governor Rogers!",
 "Who did it - and I guess you're worried about your friends?",
@@ -99,7 +99,7 @@ string DLG_TEXT[155] = {
 "Please Captain Pyle you see how things are around here... Try to find the right coins and place them in the collection box.",
 "(Captain me again - must be hard being a Pirate Admiral with such colleagues) I'll see what I can do!",
 "Show me your wares.",
-"Very well.",
+"Very well.",									//100
 "Oh yes, I almost forgot it - maybe you'll have some use for this Captain...",
 "Huh? (What is he up to now.)",
 "You did it Captain! Now let's get out of here.",
@@ -119,7 +119,7 @@ string DLG_TEXT[155] = {
 "Now let's smoke them out like rats - ",
 "- we'll find them wherever they're hiding.",
 "Taylor you take the shop, La Buze the residence -",
-"- and Calico Jack the kitchen. Let's go!!",
+"- and Calico Jack the kitchen. Let's go!!",					//120
 "... but this time I'll make an exception:",
 "Selkirk has a very good reason for joining us Captains - he's the one who was marooned by Dampier!",
 "Listen carefully now: Calico Jack takes his group to the other side of the galleon - ",
@@ -139,8 +139,8 @@ string DLG_TEXT[155] = {
 "........ otherwise Captains hurry up now and search the galleon -",
 "- see if there are any open doors to those hiding cowards!",
 "She's going down, quick cut her loose -",
-"- if you want to save the corvette!",
-"Damn you fools! What are you complaining about -",
+"- if you want to save the corvette!",						//140
+"Damn you fools! What are you complaining about -",				
 "- we'll take this ship instead: a CORVETTE!!! One of the best ships in the entire caribbean.",
 "Watch your tounge Mr Quelch -",
 "- or you loose it!",
@@ -149,10 +149,20 @@ string DLG_TEXT[155] = {
 "Unless you don't want to join us Captain. A 'Gentleman of Fortune' - what do you say?",
 "Thank you, but I still have some business with the Rogers family. But It sounds very tempting...",
 "Oh yes Captain, this is for you. A carrier pigeon brought it here. Is it some kind of code?",
-"Hmm, I'm mot sure (what to tell him...), let me examine it closely. (something hidden in the game itself??) ",
+"Hmm, I'm mot sure (what to tell him...), let me examine it closely. (something hidden in the game itself??) ",		//150
 "Go on Captain, yo're doing very well indeed.",
 "Ahh, thank you Captain Vane.",
 "Just a detail - you can hand over those spare coins to me now.",
-"Alright, here you are... (I thought they were mine!)",
+"Alright, here you are... (I thought they were mine!)",				//154
+"What is it this time, Pyle?",
+"Edward Teach visited you not long before his last fight, right?",
+"What about it?",
+"Did this fellow Richards accompany him? He was Teach's lieutenant.",
+"Jack, see to that machine before you blow us all to hell!",
+"!!!",										//160
+"We have sailed with you for years",
+"and taken many fine prizes too.",
+"Return to your posts men -",
+"- Calico Jack is back again!",
 
 };

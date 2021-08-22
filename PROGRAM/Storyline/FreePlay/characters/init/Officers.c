@@ -400,4 +400,56 @@ void CreateOfficersCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_QMASTER;
 	ch.isOfficer = true;
 	AddGameCharacter(n, ch);
+
+	ch.old.name = "William";
+	ch.old.lastname = "Bush";
+	ch.name = TranslateString("","William");
+	ch.lastname = TranslateString("","Bush");
+	ch.id		= "Lt. William Bush";
+	ch.model = "BushLtn_18";
+	ch.sex = "man";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	GiveItem2Character(ch, "pistol1");
+	ch.equip.gun = "pistol1";
+	//JRH ammo mod -->
+	TakenItems(ch, "gunpowder", 6);
+	TakenItems(ch, "pistolbullets", 6);
+	//JRH ammo mod <--
+	ch.Dialog.Filename = "Lt. William Bush_dialog.c";
+	ch.nation = ENGLAND;
+	ch.rank 	= 20;
+	ch.reputation = "60";
+	ch.experience = "6";
+	ch.skill.Leadership = "7";
+	ch.skill.Fencing = "8";
+	ch.skill.Sailing = "7";
+	ch.skill.Accuracy = "7";
+	ch.skill.Cannons = "8";
+	ch.skill.Grappling = "8";
+	ch.skill.Repair = "8";
+	ch.skill.Defence = "7";
+	ch.skill.Commerce = "8";
+	ch.skill.Sneak = "8";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.Toughness = true;
+	ch.perks.list.CriticalHit = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.FastReload = true;
+	ch.perks.list.Disguiser = true;
+	ch.perks.list.BasicCommerce = true;
+	ch.perks.list.IronWill = true;
+	ch.money = "500";
+//	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_FIRSTMATE;
+	ch.questchar = true;
+	SetRank(ch, ENGLAND, 4);
+	AddGameCharacter(n, ch);
 }

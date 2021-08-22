@@ -75,19 +75,6 @@ float GetOfficerPriceMod(ref Officer)
 	return 1.0;
 }
 
-string GetOfficerPricture(ref Officer)
-{
-	if(CheckAttribute(Officer, "quest.officertype"))
-	{
-		if(CheckAttribute(OfficerTypes,Officer.quest.officertype+".picture"))
-		{
-			string officType = Officer.quest.officertype;
-			return OfficerTypes.(officType).picture;
-		}
-	}
-	return "interfaces\fighter.tga";
-}
-
 string GetBoardingCrewType(ref Captain)
 {
 	if(!CheckAttribute(Captain, "quest.officertype"))

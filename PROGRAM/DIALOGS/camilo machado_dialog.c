@@ -13,7 +13,20 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
-
+	// DeathDaisy -->
+	string Diminutive;
+	if(PChar.sex == "woman")
+	{
+		Diminutive = "girl";
+	}
+	else
+	{
+		Diminutive = "boy";
+	}
+	
+	Preprocessor_Add("boy", Diminutive);
+	Preprocessor_Add("gender", GetMyAddressForm(NPChar,PChar, ADDR_GENDER, false, false));
+	// DeathDaisy <--
 	
 	switch(Dialog.CurrentNode)
 	{

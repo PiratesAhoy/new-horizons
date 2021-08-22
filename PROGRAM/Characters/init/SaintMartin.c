@@ -58,8 +58,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -102,8 +110,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -148,8 +164,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -192,8 +216,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
@@ -237,8 +269,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
@@ -322,8 +362,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
@@ -368,8 +416,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -413,8 +469,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -458,8 +522,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -503,8 +575,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -551,8 +631,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -595,8 +683,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -639,8 +735,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -683,8 +787,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -858,8 +970,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -902,8 +1022,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -946,8 +1074,16 @@ void CreateSaintMartinCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -990,8 +1126,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -1034,8 +1178,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -1078,8 +1230,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -1122,8 +1282,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);
@@ -1165,8 +1333,16 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_CharacterReincarnationEx(ch, true, true, "monsters");
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.blade = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	if (ENABLE_AMMOMOD) {	// LDH change
 		TakenItems(ch, "gunpowder", 6);
 		TakenItems(ch, "pistolbullets", 6);

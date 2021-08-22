@@ -3,7 +3,7 @@ string DLG_TEXT[25] = {
 "Hello captain.",
 "Hello, I see you're travelling with Lucas.",
 "And what if I am?",
-"Something has happened to the governer's daughter. I think you should go and see Governer Le Moigne.",
+"Something has happened to the governor's daughter. I think you should go and see Governor Le Moigne.",
 "Ok, thanks for the advice.",
 "So what is up with the governor's daughter?",
 "She has disappeared. She went to #sHavana# and has not returned in two months. A frigate called 'La Foudre' was sent to find her and hasn't been heard of either.",
@@ -22,7 +22,7 @@ string DLG_TEXT[25] = {
 "I have business elsewhere, so I must leave.",
 "Goodbye again then Captain Maggee.",
 "I noticed the governor has been quite quiet recently, perhaps you know why?",
-"Yes I do... His daughter has disappeared on route to #sHavana# and he has also lost a frigate in the search, I have now been asked to search for her and the frigate as well now... savvy.",
-"Ok. Well, I'm sailing South East anyway, so if you want to sail with me I would welcome it. Oh by the way call me Captain Maggee.",
+"Yes I do... His daughter has disappeared on route to #sHavana# and he has also lost a frigate in the search. I have now been asked to search for her and the frigate as well now... savvy.",
+"Ok. Well, I'm sailing south-east anyway, so if you want to sail with me I would welcome it. Oh, by the way, call me Captain Maggee.",
 
 };

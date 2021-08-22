@@ -275,6 +275,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "report_node2":
+			Preprocessor_Add("person", PChar.sex);
 			dialog.text = DLG_TEXT[83] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[84];
 			link.l1 = DLG_TEXT[85];
 			link.l1.go = "report_node3";	

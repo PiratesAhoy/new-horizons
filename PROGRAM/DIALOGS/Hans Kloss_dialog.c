@@ -49,8 +49,16 @@ void ProcessDialogEvent()
 		case "quests":
 			if (CheckQuestAttribute("ardent_convoy", "Curacao"))
 			{
-				dialog.text = DLG_TEXT[70];
-				link.l1 = DLG_TEXT[71] + Characters[GetCharacterIndex("Convoy_Captain1")].Ship.Name + DLG_TEXT[72] + GetMyFullName(characterFromID(PChar.quest.romance)) + DLG_TEXT[73];
+				if (!LAi_IsDead(characterFromID(PChar.quest.romance)) && !CheckAttribute(PChar, "quest.spain_betrayal"))
+				{
+					dialog.text = DLG_TEXT[70];
+					link.l1 = DLG_TEXT[71] + Characters[GetCharacterIndex("Convoy_Captain1")].Ship.Name + DLG_TEXT[72] + GetMyFullName(characterFromID(PChar.quest.romance)) + DLG_TEXT[73];
+				}
+				else
+				{
+					dialog.text = DLG_TEXT[15];
+					link.l1 = DLG_TEXT[100] + Characters[GetCharacterIndex("Convoy_Captain1")].Ship.Name + DLG_TEXT[72] + GetMyFullName(characterFromID(PChar.quest.romance)) + DLG_TEXT[73];
+				}
 				link.l1.go = "ardent_convoy_need_proof";
 
 				if(PChar.sex == "man" && PChar.model != "Ardent_S")
@@ -82,6 +90,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_convoy_need_proof":
+			PChar.quest.ardent_convoy = "seen_curacao_governor";
 			dialog.text = DLG_TEXT[74];
 			link.l1 = DLG_TEXT[75];
 			link.l1.go = "ardent_convoy_governor_offended";
@@ -90,8 +99,30 @@ void ProcessDialogEvent()
 		case "ardent_convoy_governor_offended":
 			dialog.text = DLG_TEXT[76];
 			link.l1 = DLG_TEXT[77];
-			AddDialogExitQuest("convoy_partner_intervenes");
-			link.l1.go = "Exit";
+			if (!LAi_IsDead(characterFromID(PChar.quest.romance)) && !CheckAttribute(PChar, "quest.spain_betrayal")) 
+			{
+				AddDialogExitQuest("convoy_partner_intervenes");
+				link.l1.go = "ardent_convoy_exit_offended";
+			}
+			else
+			{
+				AddDialogExitQuest("convoy_prepare_to_depart_no_infiltrate");
+				Preprocessor_AddQuestData("romance", GetMySimpleName(characterFromID(PChar.quest.romance)));
+				AddQuestRecord("Convoy Strike", 12);
+				Preprocessor_Remove("romance");
+				link.l1.go = "ardent_convoy_exit_offended";
+			}
+		break;
+
+		case "ardent_convoy_exit_offended":
+			NextDiag.CurrentNode = "ardent_convoy_still_offended";
+			DialogExit();
+		break;
+
+		case "ardent_convoy_still_offended":
+			dialog.text = DLG_TEXT[99];
+			link.l1 = DLG_TEXT[65];
+			link.l1.go = "ardent_convoy_exit_offended";
 		break;
 
 		case "ardent_convoy_thats_different":
@@ -126,8 +157,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_convoy_give_regards":
-			if (PChar.sex == "man" && PChar.model != "Ardent_SF") Preprocessor_Add("relative", "daughter");
-			else Preprocessor_Add("relative", "son");
+			if (PChar.sex == "man" && PChar.model != "Ardent_SF") Preprocessor_Add("relative", XI_ConvertString("daughter"));
+			else Preprocessor_Add("relative", XI_ConvertString("son"));
 			dialog.text = DLG_TEXT[87];
 			link.l1 = DLG_TEXT[88];
 			link.l1.go = "exit";

@@ -101,7 +101,7 @@ string DLG_TEXT[174] = {
 "Edgar, I'm sorry for this intrusion.",
 "Not at all my friend. What can I do for you today?",		//100
 "Well, we're looking for some navigation instruments.",
-"The only thing I've got is an old an heavy Compass...",
+"The only thing I've got is an old and heavy Compass...",
 "Can we borrow it for a while?",
 "Of course, just a second...",
 "That's very kind of you Edgar.",

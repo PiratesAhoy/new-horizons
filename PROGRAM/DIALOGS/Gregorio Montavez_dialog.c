@@ -59,6 +59,7 @@ void ProcessDialogEvent()
 
 	case "begin_1":
 		dialog.snd = "Voice\CLLA\CLLA004";
+		Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false)); // DeathDaisy
 		dialog.text = DLG_TEXT[70];
 		link.l1 = DLG_TEXT[71];
 		link.l1.go = "begin_2";
@@ -354,6 +355,7 @@ void ProcessDialogEvent()
 		break;
 	case "begin_46":
 		dialog.snd = "Voice\CLLA\CLLA004";
+		Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 		dialog.text = DLG_TEXT[156];
 		link.l1 = DLG_TEXT[157];
 		link.l1.go = "begin_47";

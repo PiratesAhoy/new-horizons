@@ -156,17 +156,36 @@ void ProcessDialogEvent()
 			}
 //Lucas
 
-//Ardent kidnap
+//Ardent
 			if (CheckQuestAttribute("ardent_kidnap.find_merchant", "true"))
 			{
 				dialog.snd = "Voice\CHWI\CHWI005";
 				d.Text = DLG_TEXT[36];
-				if (PChar.sex == "man") Preprocessor_Add("kid", "lad");
-				else Preprocessor_Add("kid", "lass");
-				Link.l4 = DLG_TEXT[114];
-				Link.l4.go = "ardent_kidnap1";
+				if (PChar.sex == "man") Preprocessor_Add("kid", XI_ConvertString("lad"));
+				else Preprocessor_Add("kid", XI_ConvertString("lass"));
+				Link.l5 = DLG_TEXT[114];
+				Link.l5.go = "ardent_kidnap1";
 			}
-// Ardent kidnap
+
+			if (CheckQuestAttribute("abduction_status", "pirate_rescued"))
+			{
+				dialog.snd = "Voice\CHWI\CHWI005";
+				d.Text = DLG_TEXT[36];
+				if (PChar.sex == "man") Preprocessor_Add("person", XI_ConvertString("woman"));
+				else Preprocessor_Add("person", XI_ConvertString("man"));
+				Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
+				Link.l5 = DLG_TEXT[123];
+				Link.l5.go = "ardent_abduction1";
+			}
+
+			if (CheckQuestAttribute("ardent_kidnap.status", "deal_done"))
+			{
+				dialog.snd = "Voice\CHWI\CHWI005";
+				d.Text = DLG_TEXT[36];
+				link.l5 = DLG_TEXT[128];
+				link.l5.go = "ardent_kidnap_rescue1";
+			}
+// Ardent
 
 			Link.l99 = DLG_TEXT[38] + GetMyName(NPChar) + DLG_TEXT[39];
 			Link.l99.go = "No quest";
@@ -527,18 +546,18 @@ void ProcessDialogEvent()
 		break;
 	//<-- JRH
 
-// Ardent kidnap -->
+// Ardent -->
 		case "ardent_kidnap1":
 			DeleteQuestAttribute("ardent_kidnap.find_merchant");
 			if (PChar.sex == "man")
 			{
-				gov_kid = "daughter";
-				merch_kid = "son";
+				gov_kid = XI_ConvertString("daughter");
+				merch_kid = XI_ConvertString("son");
 			}
 			else
 			{
-				gov_kid = "son";
-				merch_kid = "daughter";
+				gov_kid = XI_ConvertString("son");
+				merch_kid = XI_ConvertString("daughter");
 			}
 			d.TEXT = DLG_TEXT[115] + GetMyFullName(CharacterFromID(PChar.quest.villain)) + ", " + merch_kid + DLG_TEXT[116] + GetMyFullName(CharacterFromID("Gilbert Downing")) + DLG_TEXT[117] + gov_kid + DLG_TEXT[118];
 			link.l1 = DLG_TEXT[119] + GetMyFullName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[120];
@@ -553,6 +572,46 @@ void ProcessDialogEvent()
 			Preprocessor_Remove("merchant");
 			link.l1.go = "exit";
 		break;
-// <-- Ardent kidnap
+
+		case "ardent_abduction1":
+			Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
+			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
+			d.Text = DLG_TEXT[124];
+			link.l1 = DLG_TEXT[125];
+			link.l1.go = "ardent_abduction2";
+		break;
+
+		case "ardent_abduction2":
+			Preprocessor_AddQuestData("romance", GetMySimpleName(CharacterFromID(PChar.quest.romance)));
+			Preprocessor_AddQuestData("villain", GetMySimpleName(CharacterFromID(PChar.quest.villain)));
+			AddQuestRecord("Abduction", 15);
+			Preprocessor_Remove("villain");
+			Preprocessor_Remove("romance");
+			Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
+			d.Text = DLG_TEXT[126];
+			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("she"));
+			else Preprocessor_Add("pronoun", XI_ConvertString("he"));
+			PChar.quest.abduction_status = "married_villain";
+			link.l1 = DLG_TEXT[127];
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_kidnap_rescue1":
+			PChar.quest.ardent_kidnap.status = "buy_wine";
+			Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
+			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
+			d.Text = DLG_TEXT[129];
+			link.l1 = DLG_TEXT[130];
+			link.l1.go = "ardent_kidnap_rescue2";
+		break;
+
+		case "ardent_kidnap_rescue2":
+			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
+			d.Text = DLG_TEXT[131];
+			link.l1 = DLG_TEXT[132];
+			AddDialogExitQuest("kidnap_rescue_goto_Downing_House");
+			link.l1.go = "exit";
+		break;
+// <-- Ardent
 	}
 }

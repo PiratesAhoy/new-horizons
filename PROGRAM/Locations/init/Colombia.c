@@ -63,7 +63,8 @@ void LocationInitColombia(ref n)
 	Locations[n].models.always.l6.uvslide.u0 = 0.04;
 	Locations[n].models.always.l6.uvslide.v0 = 0.01;
 	Locations[n].models.always.l6.level = 999;
-	Locations[n].models.always.l6.tech = "LocationWaterFall";		
+	Locations[n].models.always.l6.tech = "LocationWaterFall";
+	Locations[n].models.always.l7 = "Margarita_gate";		
 	//Day
 	Locations[n].models.day.charactersPatch = "Townhall_pd";
 	//Night
@@ -83,6 +84,13 @@ void LocationInitColombia(ref n)
 	Locations[n].reload.l10.label = "Town.";
 	Locations[n].reload.l10.name = "gate";
 	Locations[n].reload.l10.autoreload = "0";
+/*
+	Locations[n].reload.l9.go = "new cloister etc";
+	Locations[n].reload.l9.emerge = "";
+	Locations[n].reload.l9.label = "";
+	Locations[n].reload.l9.name = "reload9_back";		//use reload9 when coming from new cloister, JRH
+	Locations[n].reload.l9.autoreload = "0";
+*/
 
 	Build_at("Residence_Cartagena", "farm", "", -11.864, 7.01, -40.385, 1.7, "Building");
 	Build_at("Residence_Cartagena", "windmill", "", -18.434, 12, -55.73, 0.0, "Building");
@@ -397,7 +405,7 @@ void LocationInitColombia(ref n)
 
 	Locations[n].reload.l3.name = "Falaise_de_fleur_location_02_perechod";
 	Locations[n].reload.l3.go = "cloister_exit";
-	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.emerge = "goto7";		//was reload1
 	Locations[n].reload.l3.autoreload = "0";
 	Locations[n].reload.l3.label = "cloister.";
 /*
@@ -475,12 +483,15 @@ void LocationInitColombia(ref n)
 	Locations[n].townsack = "Cartagena";
 	locations[n].fastreload = "Cartagena";		
 	//Sound
-	locations[n].type = "town";
+	locations[n].type = "Chinese_garden";
+	
 	//Models
 	//Always
 	Locations[n].models.always.locators = "cloister_l";
 	Locations[n].models.always.town = "cloister_exit";
-
+	Locations[n].models.always.l1 = "Margarita_gate";
+	Locations[n].models.always.l2 = "new_wall";
+	
 	//Day
 	Locations[n].models.day.charactersPatch = "cloister_p";
 	//Night
@@ -496,9 +507,61 @@ void LocationInitColombia(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Cloister.";
 
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "hatch11_S";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.001;
+	Locations[n].items.randitem2 = "iron_gate_big";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.001;
+	Locations[n].items.randitem3 = "iron_gate_big";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.001;
+	Locations[n].items.randitem4 = "gatedoor_SPA";
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.001;
+	Locations[n].items.randitem5 = "tree1";
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.001;
+	Locations[n].items.randitem6 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.001;
+	Locations[n].items.randitem7 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem8 = 0.001;
+	Locations[n].items.randitem8 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem9 = 0.001;
+	Locations[n].items.randitem9 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem10 = 0.001;
+	Locations[n].items.randitem10 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem11 = 0.001;
+	Locations[n].items.randitem11 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem12 = 0.001;
+	Locations[n].items.randitem12 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem13 = 0.001;
+	Locations[n].items.randitem13 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem14 = 0.001;
+	Locations[n].items.randitem14 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem15 = 0.001;
+	Locations[n].items.randitem15 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem16 = 0.001;
+	Locations[n].items.randitem16 = "church_window";
+
+	Locations[n].locators_radius.randitem.randitem17 = 0.001;
+	Locations[n].items.randitem17 = "door_fort";
+
 	Locations[n].island = "Colombia"; // NK 04-08-29
 
 	Build_at("cloister_inside", "jungle2", "", -3.4676, 0, 26.249, 0.0, "Building");
+	Build_at("cloister_inside", "jungle2", "", 9.7, 0, 26.5, 0.0, "Building");
 
 	n = n + 1;
 
@@ -515,11 +578,15 @@ void LocationInitColombia(ref n)
 	Locations[n].townsack = "Cartagena";
 	locations[n].fastreload = "Cartagena";		
 	//Sound
-	locations[n].type = "town";
+	locations[n].type = "silent_town";
+
 	//Models
 	//Always
 	Locations[n].models.always.locators = "cloister_exit_l";
 	Locations[n].models.always.town = "cloister_exit";
+	Locations[n].models.always.l1 = "Margarita_gate";
+	Locations[n].models.always.l2 = "new_wall";
+	Locations[n].models.always.l3 = "stone_cross";
 
 	//Day
 	Locations[n].models.day.charactersPatch = "cloister_exit_p";
@@ -534,7 +601,7 @@ void LocationInitColombia(ref n)
 	Locations[n].reload.l1.emerge = "Falaise_de_fleur_location_02_perechod";
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Town.";
-    Locations[n].locators_radius.reload.reload1 = 1.5;	
+    	Locations[n].locators_radius.reload.reload1 = 1.5;	
 
 	Locations[n].reload.l2.name = "reload2";
 	Locations[n].reload.l2.go = "Cloister_inside";
@@ -542,9 +609,148 @@ void LocationInitColombia(ref n)
 	Locations[n].reload.l2.autoreload = "0";
 	Locations[n].reload.l2.label = "Cloister.";
 
+	//only in WoodesRogers quest
+	Locations[n].reload.l3.name = "reload3";
+	Locations[n].reload.l3.go = "Cloister_passage";
+	Locations[n].reload.l3.emerge = "goto1";
+	Locations[n].reload.l3.autoreload = "0";
+	Locations[n].reload.l3.label = "Cloister.";
+	Locations[n].locators_radius.reload.reload3 = 0.2;
+
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "Cloister_passage";
+	Locations[n].reload.l4.emerge = "goto2";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "Cloister.";
+	Locations[n].locators_radius.reload.reload4 = 1.0;
+
+	Locations[n].reload.l5.name = "reload5";
+	Locations[n].reload.l5.go = "BB_graveyard";
+	Locations[n].reload.l5.emerge = "reload2";
+	Locations[n].reload.l5.autoreload = "0";
+	Locations[n].reload.l5.label = "Cloister.";
+	Locations[n].locators_radius.reload.reload5 = 2.0;
+
+	Locations[n].locators_radius.box.box1 = 0.001;		//large to activate WoodesRogers entre	
+	Locations[n].locators_radius.box.box2 = 0.3;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "church_window";
+	
+	Locations[n].locators_radius.randitem.randitem2 = 0.001;
+	Locations[n].items.randitem2 = "iron_gate_big";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.001;
+	Locations[n].items.randitem3 = "iron_gate3";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.001;
+	Locations[n].items.randitem4 = "iron_gate3";
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.001;
+	Locations[n].items.randitem5 = "iron_gate45";
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.001;
+	Locations[n].items.randitem6 = "iron_gate3";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.001;
+	Locations[n].items.randitem7 = "iron_gate3";
+
+	Locations[n].locators_radius.randitem.randitem8 = 0.001;
+	Locations[n].items.randitem8 = "iron_gate3";
+
+	Locations[n].locators_radius.randitem.randitem9 = 0.001;
+	Locations[n].items.randitem9 = "gatedoor_SPA";
+
+	Locations[n].locators_radius.randitem.randitem10 = 0.001;
+	Locations[n].items.randitem10 = "tree1";
+
+	Locations[n].locators_radius.randitem.randitem11 = 0.001;
+	Locations[n].items.randitem11 = "iron_gate3";
+
+	Locations[n].locators_radius.randitem.randitem12 = 0.001;
+	Locations[n].items.randitem12 = "iron_gate3";
+
+	Locations[n].locators_radius.randitem.randitem13 = 0.001;
+	Locations[n].items.randitem13 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem14 = 0.001;
+	Locations[n].items.randitem14 = "well";
+
+	Locations[n].locators_radius.randitem.randitem15 = 0.001;
+	Locations[n].items.randitem15 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem16 = 0.001;
+	Locations[n].items.randitem16 = "palm2_big";
+
+	Locations[n].locators_radius.randitem.randitem17 = 0.001;
+	Locations[n].items.randitem17 = "palm2_big";
+
+	Locations[n].locators_radius.randitem.randitem18 = 0.001;
+	Locations[n].items.randitem18 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem19 = 0.001;
+	Locations[n].items.randitem19 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem20 = 0.001;
+	Locations[n].items.randitem20 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem21 = 0.001;
+	Locations[n].items.randitem21 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem22 = 0.001;
+	Locations[n].items.randitem22 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem23 = 0.001;
+	Locations[n].items.randitem23 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem24 = 0.001;
+	Locations[n].items.randitem24 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem25 = 0.001;
+	Locations[n].items.randitem25 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem26 = 0.001;
+	Locations[n].items.randitem26 = "wheelbarrow";
+
+	Locations[n].locators_radius.randitem.randitem27 = 0.001;
+	Locations[n].items.randitem27 = "ladder_biggest";
+
+	Locations[n].locators_radius.randitem.randitem28 = 0.001;
+	Locations[n].items.randitem28 = "palm2";
+
+	Locations[n].locators_radius.randitem.randitem29 = 0.001;
+	Locations[n].items.randitem29 = "wagon";
+
+	Locations[n].locators_radius.randitem.randitem30 = 0.001;
+	Locations[n].items.randitem30 = "palm2";
+
+	Locations[n].locators_radius.randitem.randitem31 = 0.001;
+	Locations[n].items.randitem31 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem32 = 0.001;
+	Locations[n].items.randitem32 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem33 = 0.001;
+	Locations[n].items.randitem33 = "church_window";
+
+	Locations[n].locators_radius.randitem.randitem34 = 0.001;
+	Locations[n].items.randitem34 = "hatch11_S";
+
+	Locations[n].locators_radius.randitem.randitem35 = 0.001;
+	Locations[n].items.randitem35 = "door_fort";
+	
 	Locations[n].island = "Colombia"; // NK 04-08-29
 
 	Build_at("cloister_exit", "jungle2", "", -3.4676, 0, 26.249, 0.0, "Building");
+	Build_at("cloister_exit", "jungle2", "", 9.7, 0, 26.5, 0.0, "Building");
+
+	Build_at("cloister_exit", "hedgerow2", "", -24.1, 0, 10.8, 0.8, "Building");
+	Build_at("cloister_exit", "hedgerow2", "", -24.1, 0, -7.5, 0.8, "Building");
+
+	Build_at("cloister_exit", "hedgerow", "", -22.6, 0, -26.1, 0.0, "Building");
+	Build_at("cloister_exit", "hedgerow", "", -6.9, 0, -26.1, 0.0, "Building");
+	Build_at("cloister_exit", "hedgerow", "", 9.1, 0, -26.1, 0.0, "Building");
+	Build_at("cloister_exit", "hedgerow", "", 24.8, 0, -26.1, 0.0, "Building");
 
 	n = n + 1;
 

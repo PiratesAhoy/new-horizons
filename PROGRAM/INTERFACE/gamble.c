@@ -1,7 +1,7 @@
 //=====| INTERFACE FOR GAMBLE IN TAVERN (written by MAXIMUS. INI files taken from SLiB addon and changed a little) |=====//
 #define MAX_CARDS	52
 
-string DLG_TEXT[118];// from Habitue_dialog.h
+string DLG_TEXT[121];// from Habitue_dialog.h
 
 object Cards[MAX_CARDS];
 
@@ -28,6 +28,11 @@ string GameName;
 string gambleID;
 string cardNames;
 string imageGroup;
+// DeathDaisy -->
+string you_lose = DLG_TEXT[36]; // "! You lose, lad/lass!"
+string you_lose2 = DLG_TEXT[54]; // "You've lost, lad/lass!"
+string lucky_man = DLG_TEXT[106]; // "... Lucky man/girl. Give me the card..."
+// DeathDaisy <-- Thanks GR!
 
 int curSkillValue1,curSkillValue2;
 
@@ -52,7 +57,23 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 	gameBet = 0;
 	infoText = "";
 	imageGroup = FindCardsForNation(gambleChar);// returns nation-description (british, spanish, etc.) plus "_cards"
-
+	
+	// DeathDaisy --> putting this here because playerChar isn't defined outside the function
+	if(playerChar.sex == "woman")
+	{
+		you_lose = DLG_TEXT[118];
+		you_lose2 = DLG_TEXT[119];
+		lucky_man = DLG_TEXT[120];
+	}
+	else
+	{
+		you_lose = DLG_TEXT[36];
+		you_lose2 = DLG_TEXT[54];
+		lucky_man = DLG_TEXT[106];
+	}
+	// DeathDaisy <-- Thanks GR!
+	// GR: setting default value outside this function didn't work.  Settings for male character now brought in here.
+	
 	playerChar.gamepoints = "0";
 	gambleChar.gamepoints = "0";
 
@@ -498,7 +519,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				{
 					if(sti(gambleChar.cards.value)>=sti(playerChar.cards.value))
 					{
-						infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + DLG_TEXT[36];
+						infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
 						VewGamble(infoText);
 						UpdateBet("lose");
 						return;
@@ -515,7 +536,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				{
 					if(sti(gambleChar.cards.value)==21)
 					{
-						infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + DLG_TEXT[36];
+						infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
 						VewGamble(infoText);
 						UpdateBet("lose");
 						return;
@@ -532,7 +553,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 
 			if(sti(gambleChar.cards.value)==21)
 			{
-				infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + DLG_TEXT[36];
+				infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
 				VewGamble(infoText);
 				UpdateBet("lose");
 				return;
@@ -554,7 +575,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 						{
 							if(sti(gambleChar.cards.value)>=sti(playerChar.cards.value))
 							{
-								infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + DLG_TEXT[36];
+								infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
 								VewGamble(infoText);
 								UpdateBet("lose");
 								return;
@@ -571,7 +592,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 						{
 							if(sti(gambleChar.cards.value)>=sti(playerChar.cards.value))
 							{
-								infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + DLG_TEXT[36];
+								infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
 								VewGamble(infoText);
 								UpdateBet("lose");
 								return;
@@ -599,7 +620,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				if(sti(playerChar.cards.value)==21)
 				{
 					SetNodeUsing("MYFACE",false);
-					SetFormatedText("INFO_TEXT", sti(playerChar.cards.value) + DLG_TEXT[106]);
+					SetFormatedText("INFO_TEXT", sti(playerChar.cards.value) + lucky_man);
 					bGambleMove = true;
 					bPlayerMove = false;
 					bFirst = false;
@@ -620,7 +641,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 						{
 							if(sti(gambleChar.cards.value)<=21)
 							{
-								infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + DLG_TEXT[36];
+								infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
 								VewGamble(infoText);
 								UpdateBet("lose");
 								return;
@@ -801,7 +822,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				if(iPCDice<makeint(playerChar.iEnemyDice))
 				{
 					bGambleMove = true;
-					infoText = iPCDice + DLG_TEXT[53] + DLG_TEXT[54];
+					infoText = iPCDice + DLG_TEXT[53] + you_lose2;
 					VewGamble(infoText);
 					UpdateBet("lose");
 					DeleteAttribute(playerChar, "iEnemyDice");
@@ -894,7 +915,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 
 		if(playerCount<gambleCount)
 		{
-			infoText = DLG_TEXT[101] + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo + DLG_TEXT[36];
+			infoText = DLG_TEXT[101] + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo + you_lose;
 			VewGamble(infoText);
 			UpdateBet("lose");
 			return;
@@ -920,7 +941,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 
 		if(ValidateCombination(playerChar)<=1)
 		{
-			infoText = DLG_TEXT[101] + XI_ConvertString(GetCardsCombination(gambleChar))  + cardsInCombo + DLG_TEXT[36];
+			infoText = DLG_TEXT[101] + XI_ConvertString(GetCardsCombination(gambleChar))  + cardsInCombo + you_lose;
 			UpdateBet("lose");
 		}
 		else
@@ -932,7 +953,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 			}
 			else
 			{
-				infoText = DLG_TEXT[101] + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo + DLG_TEXT[36];
+				infoText = DLG_TEXT[101] + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo + you_lose;
 				UpdateBet("lose");
 			}
 		}

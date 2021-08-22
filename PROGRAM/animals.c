@@ -208,6 +208,28 @@ void CreateAnimals(ref Location)
 				SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddRats", 50);
 			}
 		}
+
+		if(Location.id == "BB_prison_alcove")
+		{
+			crtAnimals = true;
+			if(crtAnimals) SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddRats", 2000);
+		}
+
+		if(Location.id == "BB_prison")
+		{
+			crtAnimals = true;
+			if(crtAnimals) SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddRats", 10);
+		}
+
+		if(Location.id == "BB_prison2")
+		{
+			crtAnimals = true;
+			if(crtAnimals) 
+			{
+				SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddRats", 300);
+				SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddLizards", 100);
+			}
+		}
 //<-- JRH	
 	}
 //JRH -->

@@ -56,6 +56,12 @@ void ProcessDialogEvent()
 				Link.l3 = DLG_TEXT[16];
 				Link.l3.go = "Node_Rys";
 			}
+			if(CheckQuestAttribute("ardent_hunt_status", "searching"))
+			{
+				Preprocessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
+				Link.l4 = DLG_TEXT[62];
+				Link.l4.go = "ardent_hunt_which_ship";
+			}
 		break;
 
 		case "node_3":
@@ -138,8 +144,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "node_Rys Bloom_4":
-			if (PChar.sex == "man") Preprocessor_Add("person", "man");
-			else Preprocessor_Add("person", "woman");
+			if (PChar.sex == "man") Preprocessor_Add("person", XI_ConvertString("man"));
+			else Preprocessor_Add("person", XI_ConvertString("woman"));
 			d.Text = DLG_TEXT[45] + GetMyName(Pchar) + DLG_TEXT[46];
 			Link.l1 = DLG_TEXT[47];
 			if(makeint(PChar.reputation)>=6)
@@ -167,6 +173,7 @@ void ProcessDialogEvent()
 
 		case "node_Rys Bloom_6":
 			Characters[GetCharacterIndex("Rys Bloom")].quest.help = "failed";
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[52] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[53];
 			Link.l1 = DLG_TEXT[54];
 			Link.l1.go = "exit";
@@ -191,6 +198,35 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[60];
 			Link.l1 = DLG_TEXT[61];
 			link.l1.go = "exitmoor";
+		break;
+
+		case "ardent_hunt_which_ship":
+			Preprocessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
+			if (Characters[GetCharacterIndex(PChar.quest.villain)].sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
+			else Preprocessor_Add("pronoun", XI_ConvertString("her"));
+			d.text = DLG_TEXT[63] + GetMyName(PChar) + DLG_TEXT[64];
+			link.l1 = DLG_TEXT[65];
+			link.l1.go = "ardent_hunt_which_ship2");
+		break;
+
+		case "ardent_hunt_which_ship2":
+			d.text = DLG_TEXT[66] + GetMyLastName(characterFromID(PChar.quest.villain)) + DLG_TEXT[67];
+			link.l1 = "...";
+			AddDialogExitQuest("hunt_laurence_goes_to_window");
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_hunt_which_ship3":
+			Preprocessor_AddQuestData("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
+			Preprocessor_AddQuestData("ship", Characters[GetCharacterIndex(PChar.quest.villain)].Ship.Name);
+			AddQuestRecord("Villain_Hunt", 3);
+			Preprocessor_Remove("ship");
+			Preprocessor_Remove("villain");
+			PChar.quest.ardent_hunt_status = "ship_known";
+			Preprocessor_Add("ship", Characters[GetCharacterIndex(PChar.quest.villain)].Ship.Name);
+			d.Text = DLG_TEXT[68];
+			link.l1 = DLG_TEXT[69];
+			link.l1.go = "exit";
 		break;
 
 		case "exitmoor":

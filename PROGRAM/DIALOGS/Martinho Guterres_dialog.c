@@ -271,7 +271,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[39];
+				dialog.text = DLG_TEXT[39] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + "."; // DeathDaisy: changed "young man"
 				link.l1 = DLG_TEXT[40];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

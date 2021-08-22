@@ -1,5 +1,5 @@
 string DLG_TEXT[43] = {
-"I know that ship, they say no one can catch her. But then there's them that says she aint a real ship.",
+"I know that ship, they say no one can catch her. But then there's them that says she ain't a real ship.",
 "Ah! She's real all right, sort of. But the Interceptor here is really fast is she?",
 "Oh yes, she's the fastest all right. And don't you keep edging towards her.. you're not allowed there mate.",
 "Oh! sorry... It's just that she's such a pretty boat, er ship.",
@@ -19,7 +19,7 @@ string DLG_TEXT[43] = {
 "How do I do that?",
 "By killing the three guards just around the corner from the beach. They are blocking my way to the jail where the slaves are being held,... and by the way, your crew may not help you.",
 "Why do I get the feeling that you could do that on your own, and that you don't need my help?",
-"Wisdom raises it's head again Captain. You are correct, I don't need your help, but I do need you to prove your words by deeds.",
+"Wisdom raises its head again Captain. You are correct, I don't need your help, but I do need you to prove your words by deeds.",
 "Why is that?",
 "Do the deed Captain, then return to me here and I will give you the answer.",
 "I am getting into something deep here I know, but, I don't like the idea of slaves, so I will return shortly.",

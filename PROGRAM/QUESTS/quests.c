@@ -744,6 +744,7 @@ bool ShipTempRemove(ref _refCharacter)
 	aref srcRef; makearef(srcRef, _refCharacter.Ship);
 
 	CopyAttributes(dstRef,srcRef);
+	DeleteAttribute(_refCharacter,"Ship");	// GR: Once your ship is copied into store, remove it
 	return true;
 }
 
@@ -752,13 +753,39 @@ bool ShipTempRemove(ref _refCharacter)
 bool RestoreTempRemovedShip(ref _refCharacter)
 {
 	if( !CheckAttribute(_refCharacter,"TmpShipHolder") ) return false;
+	DeleteAttribute(_refCharacter,"Ship");	// GR: Moved up here, used to be below 'aref' lines and caused game crash
 
 	aref dstRef; makearef(dstRef, _refCharacter.Ship);
 	aref srcRef; makearef(srcRef, _refCharacter.TmpShipHolder);
 
-	DeleteAttribute(_refCharacter,"Ship");
 	CopyAttributes(dstRef,srcRef);
 	DeleteAttribute(_refCharacter,"TmpShipHolder");
+	return true;
+}
+
+
+bool TempRemoveItems(ref _refCharacter) // GR: Similar to ShipTempRemove, stores character's items
+{
+	if( CheckAttribute(_refCharacter,"TmpItemHolder") ) return false;
+	if( !CheckAttribute(_refCharacter,"items") ) return false;
+
+	aref dstRef; makearef(dstRef, _refCharacter.TmpItemHolder);
+	aref srcRef; makearef(srcRef, _refCharacter.items);
+
+	CopyAttributes(dstRef,srcRef);
+	DeleteAttribute(_refCharacter,"items");
+	return true;
+}
+
+bool RestoreTempRemovedItems(ref _refCharacter) // GR: Similar to RestoreTempRemovedShip, restores character's items
+{
+	if( !CheckAttribute(_refCharacter,"TmpItemHolder") ) return false;
+	DeleteAttribute(_refCharacter,"items");
+	aref dstRef; makearef(dstRef, _refCharacter.items);
+	aref srcRef; makearef(srcRef, _refCharacter.TmpItemHolder);
+
+	CopyAttributes(dstRef,srcRef);
+	DeleteAttribute(_refCharacter,"TmpItemHolder");
 	return true;
 }
 
@@ -1468,6 +1495,14 @@ void CompleteQuestName(string sQuestName)
 		DeleteAttribute(PChar, "questnotfound");
 
 		// Main Quests
+		if (FindFile("PROGRAM\" + GetStorylinePath(FindCurrentStoryline()), "*.c", "SL_utils.c") != "")
+		{
+			if (!SegmentIsLoaded(GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c"))
+			{
+				trace("Loading " + GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c");
+				LoadSegment(GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c");
+			}
+		}
 		LoadStorylineFile("quests\", "quests_reaction.c");		// PB: To Prevent Errors
 		QuestComplete(sQuestName);								// <-- Execute the actual quest case
 		if(!CheckAttribute(PChar, "questnotfound"))
@@ -1478,6 +1513,14 @@ void CompleteQuestName(string sQuestName)
 		DeleteAttribute(PChar, "questnotfound");
 
 		// Both Quests
+		if (FindFile("PROGRAM\" + GetStorylinePath(FindCurrentStoryline()), "*.c", "SL_utils.c") != "")
+		{
+			if (!SegmentIsLoaded(GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c"))
+			{
+				trace("Loading " + GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c");
+				LoadSegment(GetStorylinePath(FindCurrentStoryline()) + "SL_utils.c");
+			}
+		}
 		LoadStorylineFile("quests\", "both_reaction.c");		// PB: To Prevent Errors
 		BothQuestComplete(sQuestName);							// <-- Execute the actual quest case
 		if(!CheckAttribute(PChar, "questnotfound"))
@@ -1884,7 +1927,7 @@ void UnloadStorylineFile(string FolderName, string FileName)
 	string segName = GetStorylinePath(FindCurrentStoryline()) + FolderName + FileName;
 //	if (SegmentIsLoaded(segName))
 //	{
-//		trace(segName + " was loaded, unloading now...");
+		trace(segName + " was loaded, unloading now...");
 		UnloadSegment(segName);
 //	}
 }

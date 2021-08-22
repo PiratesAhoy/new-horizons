@@ -58,7 +58,7 @@ void ProcessDialogEvent()
 		case "LoMb":
 // KK -->
 			Preprocessor_Add("gov_nation", XI_ConvertString(GetNationNameByType(iNation)));
-			if (CheckCharacterItem(PChar, "relationbook"))
+			if (CheckAttribute(PChar, "Got_Relation_Book"))
 			{
 				stemp = GetHostileNations(iNation);
 				if (stemp != "")
@@ -74,7 +74,7 @@ void ProcessDialogEvent()
 			SetRank(PChar, iNation, GetOldRank(PChar, iNation));
 			if(sti(PChar.reputation) >= REP_COMEBACKMIN && GetRank(PChar, iNation)) stemp += DLG_TEXT[44] + GetNationRoyalByType(iNation) + DLG_TEXT[45] + TranslateString(GetRankName(PChar, iNation),"");
 			dialog.Text = stemp;
-			if (CheckCharacterItem(PChar, "relationbook"))
+			if (CheckAttribute(PChar, "Got_Relation_Book"))
 			{
 				Link.l1 = DLG_TEXT[46];
 				Link.l1.go = "exit";
@@ -117,10 +117,34 @@ void ProcessDialogEvent()
 		case "promote":
 			NPChar.templand = GetCharacterLand(PChar);
 			Promote(&PChar, &NPChar, iNation);
-			dialog.text = DLG_TEXT[57] + TranslateString(GetRankName(PChar, iNation),"") + DLG_TEXT[58] + (GetCharacterLand(PChar) - sti(NPChar.templand)) + DLG_TEXT[59] + GetNationRoyalByType(iNation) + ".";
+			if (iNation == PIRATE)
+			{
+				dialog.text = LinkRandPhrase(DLG_TEXT[113] + TranslateString(GetRankName(PChar, iNation),"") + ".", DLG_TEXT[114] + TranslateString(GetRankName(PChar, iNation),"") + ".", DLG_TEXT[115] + TranslateString(GetRankName(PChar, iNation),"") + ".");
+			}
+			else
+			{
+				if (GetCharacterLand(PChar) - sti(NPChar.templand) > 0)
+				{
+					dialog.text = DLG_TEXT[57] + TranslateString(GetRankName(PChar, iNation),"") + DLG_TEXT[58] + (GetCharacterLand(PChar) - sti(NPChar.templand)) + DLG_TEXT[59] + GetNationRoyalByType(iNation) + ".";
+				}
+				else
+				{
+					dialog.text = DLG_TEXT[57] + TranslateString(GetRankName(PChar, iNation),"") + ".";
+				}
+			}
 			DeleteAttribute(NPChar,"templand");
 			Link.l1 = DLG_TEXT[60];
-			Link.l1.go = "exit";
+			if (GetMySimpleName(PChar) == "Horatio Hornblower" && iNation == ENGLAND && GetRank(PChar, ENGLAND) == 6) Link.l1.go = "Hornblower_ordered_to_Greenford";
+			else Link.l1.go = "exit";
+		break;
+
+		case "Hornblower_ordered_to_Greenford":
+			Preprocessor_Add("briefing_officer", GetMyFullName(CharacterFromID("Sir Edward Pellew")));
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
+			dialog.text = DLG_TEXT[110];
+			link.l1 = DLG_TEXT[111];
+			AddDialogExitQuest("Hornblower_initiate_Natividad");
+			link.l1.go = "exit";
 		break;
 
 		case "leave":
@@ -189,7 +213,8 @@ void ProcessDialogEvent()
 					otherquest = true;
 				}
 				//Added by Levis for the smuggler guild
-				if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest") && IsInServiceOf(iNation) && iNation != PIRATE)
+				if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_smuggling") && IsInServiceOf(iNation) && iNation != PIRATE)
+//				if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest") && IsInServiceOf(iNation) && iNation != PIRATE)
 				{
 					if(otherquest)	stemp = stemp + DLG_TEXT[81];
 					stemp = stemp + DLG_TEXT[82];
@@ -212,7 +237,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Smuggler_Accepted":
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[87];
 			link.l1 = DLG_TEXT[88];
 			link.l1.go = "Smuggler_Accepted_Exit";
@@ -231,24 +256,42 @@ void ProcessDialogEvent()
 		break;
 		
 		case "FirstSmugglingReport":
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[90] + DLG_TEXT[91] + 2500 + "." + DLG_TEXT[92];
 			link.l1 = DLG_TEXT[88];
-			link.l1.go = "exit";
+			if(CheckCharacterItem(Pchar,"smuggling_papers"))
+			{
+				link.l1.go = "FirstSmugglingReport2";
+			}
+			else
+			{
+				AddDialogExitQuest("Hand in First Smuggling Report");
+				link.l1.go = "exit";
+			}
+		break;
+		
+		case "FirstSmugglingReport2":
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
+			dialog.text = DLG_TEXT[108];
+			link.l1 = DLG_TEXT[109];
 			AddDialogExitQuest("Hand in First Smuggling Report");
+			link.l1.go = "exit";
 		break;
 		
 		case "BuyersList":
+			AddDialogExitQuest("Hand in Buyers List");
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[93] + DLG_TEXT[91] + 1500 + "." + DLG_TEXT[92];
 			link.l1 = DLG_TEXT[88];
 			link.l1.go = "exit";
-			AddDialogExitQuest("Hand in Buyers List");
 		break;
 		
 		case "SecondSmugglingReport":
+			AddDialogExitQuest("Hand in Second Smuggling Report");
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[94] + DLG_TEXT[91] + 3500 + "." + DLG_TEXT[92];
 			link.l1 = DLG_TEXT[88];
 			link.l1.go = "exit";
-			AddDialogExitQuest("Hand in Second Smuggling Report");
 		break;
 		
 		case "FinalReport":
@@ -340,9 +383,10 @@ void ProcessDialogEvent()
 
 		case "relationbook":
 			GiveItem2Character(pchar, "relationbook");
+			PChar.Got_Relation_Book = true;
 			dialog.Text = DLG_TEXT[78];
 			if (IsInServiceOf(iNation))		Link.l1 = DLG_TEXT[79];
-			else							Link.l1 = DLG_TEXT[60];
+			else					Link.l1 = DLG_TEXT[60];
 			Link.l1.go = "international relations";
 		break;
 
@@ -400,7 +444,7 @@ void ProcessDialogEvent()
 				Preprocessor_Add("gov_nation", XI_ConvertString(GetNationDescByType(iNation)));
 				if(iNation != PIRATE)
 				{
-					if (CheckCharacterItem(PChar, "relationbook"))
+					if (CheckAttribute(PChar, "Got_Relation_Book"))
 					{
 						Link.l3 = DLG_TEXT[27];
 						Link.l3.go =  "international relations";
@@ -432,7 +476,8 @@ void ProcessDialogEvent()
 						}
 						if (PromoteCanBe(PChar, iNation) && GetRMRelation(PChar, iNation) > RequiredNextRank(PChar, iNation)) {
 							if (GetMusicScheme() == "PGMUS") SetMusicNoPause("music_govreward"); // PG // KK
-							Link.l5 = DLG_TEXT[29];
+							if (iNation == PIRATE) link.l5 = DLG_TEXT[112];
+							else Link.l5 = DLG_TEXT[29];
 							Link.l5.go = "promote";
 						}
 						if(ProfessionalNavyNation() == iNation && CheckAttribute(PChar, "lost.ship.type") && GetCharacterShipID(PChar) == SHIP_LIFEBOAT)
@@ -452,7 +497,8 @@ void ProcessDialogEvent()
 				npchar.quest.meeting = "1";
 			}
 		} else {
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+			Preprocessor_Add("addr1", GetMyAddressForm(NPChar, PCHAR, ADDR_CIVIL, false, false));
+			Preprocessor_Add("addr2", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
 			dialog.text = DLG_TEXT[70];
 			link.a1 = DLG_TEXT[71];
 			link.a1.go = "Colony_management";
@@ -462,7 +508,8 @@ void ProcessDialogEvent()
 			link.l3.go = "exit";
 		}
 		//Levis if we got something to report, we don't need the quest dialog 
-		if(GetAttribute(pchar,"quest.smuggling_guild.governor_quest.town") == GetCurrentTownID())
+		if(GetAttribute(pchar,"quest.smuggling_guild.governor_smuggling.town") == GetCurrentTownID())
+//		if(GetAttribute(pchar,"quest.smuggling_guild.governor_quest.town") == GetCurrentTownID())
 		{
 			if(CheckCharacterItem(Pchar,"smuggling_first_report"))
 			{

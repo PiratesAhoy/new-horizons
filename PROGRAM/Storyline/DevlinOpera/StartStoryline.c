@@ -7,6 +7,16 @@ void StartStoryLine()
 	string rldGroup = "reload";
 	string rldLocator = "sea_1";
 
+	string cabinID = GetCharacterShipCabin(PChar);
+	if (cabinID != "Cabin_none")
+	{
+		iShipCaptain = GetMainCharacterIndex();
+		SetUpCabin(PChar);
+
+		Locations[FindLocation("Tutorial_deck")].models.always.l2 = "cabinchest";	//JRH
+		Locations[FindLocation("Tutorial_deck")].models.always.l3 = "trunk";		//JRH
+	}
+
 	TakeNItems(PChar, "spyglass2", 1);
 	TakeNItems(PChar, "medical1", 2); // PB
 	if (ENABLE_AMMOMOD)

@@ -665,7 +665,7 @@ void SD_GenSkills(ref NPchar) // This function is not yet 'set in stone', ongoin
 
 int SD_CalcSkills(int sp, int r) // This should generate characters with 10 across the board at high levels.
 {
-	int sm = SKILL_MAX-skillbase;
+	int sm = MAX_CHARACTER_SKILL-skillbase;
 	r++;
 	sp = makeint(sp/(10-r)); // Leadership gets top priority. Change, if you wish, to something like Accuracy for a laugh.
 	sp = makeint((sp-2) + rand(r+1));

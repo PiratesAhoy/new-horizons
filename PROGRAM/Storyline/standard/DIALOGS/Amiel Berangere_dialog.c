@@ -264,6 +264,7 @@ void ProcessDialogEvent()
 		
 		case "Second time_2":
 			dialog.snd = "Voice\AMBE\AMBE022";
+			Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[71];
 			Link.l1 = DLG_TEXT[72];
 			Link.l1.go = "exit";

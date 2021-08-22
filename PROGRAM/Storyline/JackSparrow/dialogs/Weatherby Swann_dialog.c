@@ -43,7 +43,7 @@ void ProcessDialogEvent()
 			}
 			if(CheckQuestAttribute("henry_talk", "Swann_and_French_attack_plan"))
 			{
-			dialog.text = DLG_TEXT[15] + pchar.lastname;
+			dialog.text = DLG_TEXT[15] + pchar.lastname + ".";
 			link.l1 = DLG_TEXT[16];
 			link.l1.go = "French_attack_plan2";
 			}
@@ -57,7 +57,8 @@ void ProcessDialogEvent()
 
 		case "speak1":
 			dialog.text = DLG_TEXT[2];
-			link.l1 = DLG_TEXT[3] + GetMyFullName(PChar);
+//			link.l1 = DLG_TEXT[3] + GetMyFullName(PChar);	// GR: GetMyFullName includes your rank if you have one
+			link.l1 = DLG_TEXT[3] + GetMySimpleName(PChar) + ".";
 			link.l1.go = "exitSwann1";
 		break;
 
@@ -192,7 +193,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "An_unholy_alliance":
-			dialog.text = DLG_TEXT[4] + GetMyFullName(PChar) + DLG_TEXT[5];
+//			dialog.text = DLG_TEXT[4] + GetMyFullName(PChar) + DLG_TEXT[5];	// GR: GetMyFullName includes your rank if you have one
+			dialog.text = DLG_TEXT[4] + GetMySimpleName(PChar) + DLG_TEXT[5];
 			link.l1 = DLG_TEXT[6];
 			link.l1.go = "An_unholy_alliance2";
 		break;		

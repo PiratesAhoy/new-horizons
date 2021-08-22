@@ -13,6 +13,14 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	
 	switch(Dialog.CurrentNode)
@@ -95,14 +103,14 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(pchar, SKILL_LEADERSHIP) >= 5)
 			{
 				dialog.snd = "Voice\GESE\GESE008";
-				dialog.text = DLG_TEXT[21];
+				dialog.text = PersuasionSuccess + DLG_TEXT[21];
 				link.l1 = DLG_TEXT[22];
 				link.l1.go = "hired";
 			}
 			else
 			{
 				dialog.snd = "Voice\GESE\GESE009";
-				dialog.text = DLG_TEXT[23];
+				dialog.text = PersuasionFailure + DLG_TEXT[23];
 				link.l1 = DLG_TEXT[24];
 				link.l1.go = "exit";
 				AddDialogExitQuest("serrao_wait_for_hire");
@@ -131,9 +139,8 @@ void ProcessDialogEvent()
 		case "hire_denied":
 			dialog.snd = "Voice\GESE\GESE010";
 			dialog.text = DLG_TEXT[25];
-			npchar.quest.hire = "wait";
 			link.l1 = DLG_TEXT[26];
-			link.l1.go = "exit";
+			link.l1.go = "exit_wait_for_hire";
 			link.l2 = DLG_TEXT[27];
 			link.l2.go = "fight_again";
 		break;
@@ -145,6 +152,13 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "exit_wait_for_hire":
+			AddDialogExitQuest("serrao_wait_for_hire");
+			npchar.quest.hire = "wait";
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;

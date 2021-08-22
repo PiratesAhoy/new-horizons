@@ -1,4 +1,4 @@
-string DLG_TEXT[308] = {
+string DLG_TEXT[311] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -287,7 +287,7 @@ string DLG_TEXT[308] = {
 "Capitaine Chevalle left my ship before I did and headed into #sTortuga#. Where could that crazy Frenchman have gone? I should check at the tavern.", 
 "Get back here! Savvy?",
 "...",
-"Hmmmm. My compass appears to be pointing at the Jolly Mon in the water, that is Annamaria's boat, maybe I can 'borrow' it!",
+"Hmmmm. My compass appears to be pointing at the Jolly Mon in the water, that is Anamaria's boat, maybe I can 'borrow' it!",
 "...",
 "Hmmmm. Well there is the Spanish ship and it is being attacked by ships with red sails!",
 "(THINKS: Maybe I should raise a Spanish flag so I'm not targeted by the forts.) Hoist a Spanish flag men!",
@@ -307,4 +307,7 @@ string DLG_TEXT[308] = {
 "SAIL US BACK TO THE INTERCEPTOR! NOW!",
 "No, wait! No-no. Oi! No-no! Wait, I said! Ahhhhh! Bugger! Now what?",
 "...",
+"(A judge announces your execution) : ",
+"Oh, bugger. It's getting so an honest pirate can't even moor his ship at #sTortuga# without some dishonest pirate stealing it.",
+"Nothing for it, then. I'll go to the tavern, get some rum, then maybe steal some honest pirate's ship.",
 };

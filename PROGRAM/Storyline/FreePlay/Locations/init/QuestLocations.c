@@ -113,4 +113,38 @@ void LocationInitQuestLocations(ref n)
 // <-- KK
 
 	n = n + 1;
+	
+	// -------------------------------------------------
+	Locations[n].filespath.models = "locations\Inside\mh3";
+	Locations[n].id = "Tortuga_Pirate_House";
+	locations[n].id.label = "House";
+	Locations[n].image = "Inside_mh3.tga";
+	//Sound
+	locations[n].type = "house";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "MH3_l";
+	Locations[n].models.always.house = "MH3";
+	Locations[n].models.always.window = "MH3_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "MH3_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "MH3_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\mumh3_";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "";
+	Locations[n].reload.l1.emerge = "";
+	Locations[n].reload.l1.autoreload = "0";
+	
+	Locations[n].vcskip = true; // KK
+	
+	n = n + 1;		
 	}

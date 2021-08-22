@@ -54,6 +54,8 @@ void CreateStoryCharacters(ref n)
 	ch.id		= "Louwe Louwman";
 	ch.model = "9S_Pir";
 	ch.sex = "man";
+	ch.loyality = 10;
+	ch.alignment = "good";
 	ch.sound_type = "male_citizen";
 	ch.location	= "Havana_prison";
 	ch.location.group = "goto";
@@ -94,6 +96,8 @@ void CreateStoryCharacters(ref n)
 	ch.id		= "Giraldo Annibal";
 	ch.model = "korsar1";
 	ch.sex = "man";
+	ch.loyality = 10;
+	ch.alignment = "good";
 	ch.sound_type = "male_citizen";
 	ch.location	= "Havana_prison";
 	ch.location.group = "goto";
@@ -134,6 +138,8 @@ void CreateStoryCharacters(ref n)
 	ch.id		= "Gheerkin Kamalaas";
 	ch.model = "33_Ronal2";
 	ch.sex = "man";
+	ch.loyality = 10;
+	ch.alignment = "bad";
 	ch.sound_type = "male_citizen";
 	ch.location	= "Havana_prison";
 	ch.location.group = "goto";
@@ -174,6 +180,8 @@ void CreateStoryCharacters(ref n)
 	ch.id		= "Morys Badlad";
 	ch.model = "corsair3";
 	ch.sex = "man";
+	ch.loyality = 10;
+	ch.alignment = "bad";
 	ch.sound_type = "male_citizen";
 	ch.location	= "Havana_prison";
 	ch.location.group = "goto";
@@ -362,7 +370,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("","Lucia");
 	ch.lastname = TranslateString("","de la Vega");
 	ch.id		= "Lucia de la Vega";
-	ch.model = "liz3";
+	ch.model = "Lucia_1";	// was "liz3"
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
 	ch.location	= "Quest_Santiago_Bedroom";
@@ -433,7 +441,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("","Valerie");
 	ch.lastname = TranslateString("","Downing");
 	ch.id		= "Valerie Downing";
-	ch.model = "Diz1";
+	ch.model = "lady1"; // was "Diz1"
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
 	ch.location	= "Quest_Merchant_House";
@@ -446,7 +454,7 @@ void CreateStoryCharacters(ref n)
 	ch.reputation = "30";
 	ch.experience = "15";
 	ch.skill.Leadership = "5";
-	ch.skill.Fencing = "8";
+	ch.skill.Fencing = "10";
 	ch.skill.Sailing = "5";
 	ch.skill.Accuracy = "5";
 	ch.skill.Cannons = "5";
@@ -455,6 +463,31 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Defence = "3";
 	ch.skill.Commerce = "4";
 	ch.skill.Sneak = "1";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	Ch.Perks.list.Toughness = true;
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade9+3");
+		GiveItem2Character(ch, "pistol9+3");
+		ch.equip.gun = "pistol9+3";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade9");
+		GiveItem2Character(ch, "pistol9");
+		ch.equip.gun = "pistol9";
+	}
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	ch.equip.blade = "blade9";
+	GiveItem2Character(ch, "goldarmor");
 	ch.money = "10000";
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -468,7 +501,7 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("","Piers");
 	ch.lastname = TranslateString("","Downing");
 	ch.id		= "Piers Downing";
-	ch.model = "Huber_Fra2_17";
+	ch.model = "PiersDowning";	// was "Huber_Fra2_17"
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
 	ch.location	= "Quest_Merchant_House";
@@ -481,7 +514,7 @@ void CreateStoryCharacters(ref n)
 	ch.reputation = "30";
 	ch.experience = "15";
 	ch.skill.Leadership = "5";
-	ch.skill.Fencing = "8";
+	ch.skill.Fencing = "10";
 	ch.skill.Sailing = "5";
 	ch.skill.Accuracy = "5";
 	ch.skill.Cannons = "5";
@@ -490,6 +523,31 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Defence = "3";
 	ch.skill.Commerce = "4";
 	ch.skill.Sneak = "1";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	Ch.Perks.list.Toughness = true;
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade9+3");
+		GiveItem2Character(ch, "pistol9+3");
+		ch.equip.gun = "pistol9+3";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade9");
+		GiveItem2Character(ch, "pistol9");
+		ch.equip.gun = "pistol9";
+	}
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	ch.equip.blade = "blade9";
+	GiveItem2Character(ch, "goldarmor");
 	ch.money = "10000";
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -527,9 +585,49 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "20000";
 	LAi_SetHuberType(ch);
-//	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 //	SetRankTitle(ch, TranslateString("", "Sir"));
+	AddGameCharacter(n, ch);
+
+// Spare officer, originally for "Abduction" quest in case Lucia / Edmundo is a companion captain
+	ch.nation = PIRATE;
+	ch.old.name = "Emmett";
+	ch.old.lastname = "Dawson";
+	ch.name = TranslateString("","Emmett");
+	ch.lastname = TranslateString("","Dawson");
+	ch.id		= "Emmett Dawson";
+	ch.model = "wf1blaze";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "None";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Enc_Officer_dialog.c";
+	ch.greeting = "Gr_Herald";
+	ch.rank 	= 5;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "2";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "2";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);		
+	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
+	ch.quest.officertype = OFFIC_TYPE_NAVIGATOR;
+	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
 }

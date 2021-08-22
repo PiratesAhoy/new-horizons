@@ -37,6 +37,7 @@ void ProcessDialogEvent()
 			if(CheckQuestAttribute("KillerStatus","defeat"))
 			{
 				dialog.snd = "Voice\DAHA\DAHA002";
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				Dialog.Text = DLG_TEXT[3];
 				Link.l1 = DLG_TEXT[4];
 				Link.l1.go = "KillerTalk_1";

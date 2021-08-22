@@ -332,12 +332,21 @@ void ProcessDialogEvent()
 		break;
 
 		case "resque_danielle_5":
+			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[95];
 			link.l1 = DLG_TEXT[96];
 			link.l1.go = "resque_danielle_6";
 		break;
 
 		case "resque_danielle_6":
+			// DeathDaisy -->
+			if(PChar.sex == "woman"){
+				Preprocessor_Add("gender", "Women like you"); 
+			}
+			else{
+				Preprocessor_Add("gender", FirstLetterUp(XI_ConvertString("Men")));
+			}
+			// DeathDaisy <--
 			dialog.text = DLG_TEXT[97];
 			link.l1 = DLG_TEXT[98];
 			link.l1.go = "resque_danielle_7";
@@ -356,6 +365,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "resque_danielle_9":
+			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[106];
 			link.l1 = DLG_TEXT[107];
 			link.l1.go = "resque_danielle_10";
@@ -414,10 +424,18 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[130];
 			link.l1.go = "officer_exit";
 			pchar.quest.main_line = "to_secret_redmond_shore";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("search_danielle", 23);
 			CloseQuestHeader("search_danielle");
+			Preprocessor_Remove("Danielle");
 			SetQuestHeader("revenge_for_silehard");
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("Pronoun_upper", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle")))));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
 			AddQuestRecord("revenge_for_silehard", 1);
+			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("Pronoun_upper");
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "officer_exit":
@@ -434,7 +452,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "DAGGER":
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestrecord("again_find_rheims", "6");
+			Preprocessor_Remove("Danielle");
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			AddDialogExitQuest("dagger");
@@ -494,7 +514,11 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[158] + characters[getCharacterIndex(DLG_TEXT[159])].name + DLG_TEXT[160];
 			link.l1 = DLG_TEXT[161];
 			link.l1.go = "blaze_search_rheims_with_danielle_6";
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
+			Preprocessor_AddQuestData("Pronoun", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle")))));
 			AddQuestrecord("again_find_rheims", "3");
+			Preprocessor_Remove("Pronoun");
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "blaze_search_rheims_with_danielle_6":
@@ -504,6 +528,7 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[163];
 				link.l1.go = "exit";
 				pchar.quest.main_line = "danielle_wait_for_remove_companion";
+				LAi_SetStayType(characterFromID("danielle"));
 			}
 			else
 			{
@@ -525,8 +550,17 @@ void ProcessDialogEvent()
 			link.l1  = DLG_TEXT[170];
 			link.l1.go = "first_exit_from_lighthouse";
 			pchar.quest.main_line = "blaze_again_find_rheims";
+			Preprocessor_AddQuestData("Danielle", GetMyName(NPChar));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(NPChar)));
+			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(NPChar)));
+			if (NPChar.sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
+			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
 			SetQuestHeader("again_find_rheims");
 			AddQuestRecord("again_find_rheims", "1");
+			Preprocessor_Remove("pronoun3");
+			Preprocessor_Remove("pronoun2");
+			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("Danielle");
 		break;
 
 		case "first_exit_from_lighthouse":
@@ -907,7 +941,8 @@ void ProcessDialogEvent()
 
 		case "AfterGreenfordSiege_1":
 			NextDiag.TempNode = "PayVisitToResearcher";
-			Dialog.Text = DLG_TEXT[317] + GetMyName(Pchar) + DLG_TEXT[318];
+			if (NPChar.sex == "woman") Dialog.Text = DLG_TEXT[317] + GetMyName(Pchar) + DLG_TEXT[318];
+			else Dialog.Text = DLG_TEXT[317] + GetMyName(Pchar) + DLG_TEXT[549];
 			Link.l1 = DLG_TEXT[319];
 			Link.l1.go = "AfterGreenfordSiege_exit";
 		break;
@@ -1125,15 +1160,19 @@ void ProcessDialogEvent()
 			EndQuestMovie();TrackQuestMovie("end","danielle_dialog.c -> We_Are_ready_exit");
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			SetQuestHeader("Capture_greenford");
 			AddQuestRecord("Capture_greenford", 2);
+			Preprocessor_Remove("Danielle");
 
 			AddDialogExitQuest("Story_GreenfordAssaultStarted");
 		break;
 
 		case "CaptureGreenford_exit":
+			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			SetQuestHeader("Capture_greenford");
 			AddQuestRecord("Capture_greenford", 1);
+			Preprocessor_Remove("Danielle");
 
 			Pchar.quest.Story_PrepareToSiegeGreenford.win_condition.l1 = "location";
 			Pchar.quest.Story_PrepareToSiegeGreenford.win_condition.l1.location = "Oxbay";
@@ -1190,6 +1229,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "After_Final2":
+			Preprocessor_Add("Danielle", GetMyName(NPChar));
 			Dialog.Text = DLG_TEXT[384] + GetMyName(Pchar) + DLG_TEXT[385];
 			Link.l1 = DLG_TEXT[386];
 			Link.l1.go = "After_Final3";			
@@ -1222,6 +1262,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "After_Final7":
+			Preprocessor_Add("Danielle", GetMyName(NPChar));
 			Dialog.Text = DLG_TEXT[397];
 			Link.l1 = DLG_TEXT[398];
 			Link.l1.go = "After_Final8";
@@ -1252,6 +1293,9 @@ void ProcessDialogEvent()
 		break;
 		
 		case "After_Final12":
+			if (NPChar.sex == "woman") Preprocessor_Add("kid", XI_ConvertString("girl"));
+			else Preprocessor_Add("kid", XI_ConvertString("lad"));
+			Preprocessor_Add("Danielle", GetMyName(NPChar));
 			Dialog.Text = DLG_TEXT[407];
 			Link.l1 = DLG_TEXT[408];
 			Link.l1.go = "After_Final13";
@@ -1264,12 +1308,20 @@ void ProcessDialogEvent()
 		break;
 		
 		case "After_Final14":
+			Preprocessor_Add("Danielle", GetMyName(NPChar));
+			Preprocessor_Add("pronoun2", GetMyPronounObj(PChar)); // DeathDaisy
 			Dialog.Text = DLG_TEXT[411] + GetMyName(Pchar) + DLG_TEXT[412];
 			Link.l1 = DLG_TEXT[413];
 			Link.l1.go = "After_Final15";
 		break;
 		
 		case "After_Final15":
+			if(PChar.sex == "woman"){
+				Preprocessor_Add("genders", XI_ConvertString("women"));
+			}
+			else{
+				Preprocessor_Add("genders", XI_ConvertString("men"));
+			}
 			Dialog.Text = DLG_TEXT[414];
 			Link.l1 = DLG_TEXT[415];
 			Link.l1.go = "After_Final16";
@@ -1361,6 +1413,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Danielle_departs5":
+			Preprocessor_Add("Danielle", GetMyName(NPChar));
 			Dialog.Text = DLG_TEXT[438];
 			Link.l1 = DLG_TEXT[439];
 			Link.l1.go = "Danielle_departs_exit";
@@ -1397,6 +1450,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Danielle_stays":
+			Preprocessor_Add("Danielle", GetMyName(NPChar));
 			NextDiag.TempNode = "Hired";
 			Dialog.Text = GetMyName(PChar) + DLG_TEXT[450];
 			Link.l1 = DLG_TEXT[451];
@@ -1407,8 +1461,13 @@ void ProcessDialogEvent()
 		break;
 
 		case "Danielle_immortal":
+			Preprocessor_AddQuestData("Danielle", GetMyName(NPChar));
+			if (NPChar.sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
+			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
 			AddQuestRecord("After_Final", 2);
-			CloseQuestHeader("After_Final");				
+			CloseQuestHeader("After_Final");
+			Preprocessor_Remove("pronoun3");
+			Preprocessor_Remove("Danielle");				
 			
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit();
@@ -1416,16 +1475,25 @@ void ProcessDialogEvent()
 		
 		case "Danielle_mortal":
 			LAi_SetImmortal(characterFromID("Danielle"), false);
+			Preprocessor_AddQuestData("Danielle", GetMyName(NPChar));
+			if (NPChar.sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
+			else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
 			AddQuestRecord("After_Final", 4);
-			CloseQuestHeader("After_Final");				
+			CloseQuestHeader("After_Final");
+			Preprocessor_Remove("pronoun3");
+			Preprocessor_Remove("Danielle");				
 
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit();
 		break;
 		
 		case "Danielle_departs_exit":
+			Preprocessor_AddQuestData("Danielle", GetMyName(NPChar));
+			Preprocessor_AddQuestData("Danielle Greene", GetMySimpleName(NPChar));
 			AddQuestRecord("After_Final", 3);
 			CloseQuestHeader("After_Final");
+			Preprocessor_Remove("Danielle Greene");
+			Preprocessor_Remove("Danielle");
 			AddDialogExitQuest("Story_Danielle_Departs_Exit");
 
 			Dialog.CurrentNode = Dialog.TempNode;

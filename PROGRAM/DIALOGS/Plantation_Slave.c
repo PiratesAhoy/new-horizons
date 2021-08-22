@@ -28,6 +28,7 @@ void ProcessDialogEvent()
 
 			if (GetAttribute(Pchar, "Slaves") == "free")
 			{
+					Preprocessor_Add("sir", strlower(GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false))); // DeathDaisy
 					dialog.text = DLG_TEXT[30];
 					link.l1 = DLG_TEXT[31];
 					link.l1.go = "exit";
@@ -58,6 +59,7 @@ void ProcessDialogEvent()
 				break;
 				
 				case 3:
+					Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 					dialog.text = DLG_TEXT[6];
 					link.l1 = DLG_TEXT[7];
 					link.l1.go = "exit";

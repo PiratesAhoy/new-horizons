@@ -65,6 +65,8 @@ void ProcessDialogEvent()
 
 	// Set blacksmith's price multiplier
 	float pricemult = 1.0/90.0;
+	
+	Preprocessor_Add("sir", GetMyAddressForm(NPChar, MainChar, ADDR_POLITE, false, false)); // DeathDaisy
 
 	// Dialog.CurrentNode holds a value indicating where in the conversation we are,
 	// according to that value we will determine where to go next.
@@ -234,7 +236,7 @@ void ProcessDialogEvent()
 
 						// If the gun is excellent, refuse to repair (as there is nothing to repair...)
 					case QUALITY_EXELLENT:
-						Dialog.text = DLG_TEXT[15] + GunName + DLG_TEXT[16];
+						Dialog.text = DLG_TEXT[15] + GunName + ", " + GetMyAddressForm(NPChar, MainChar, ADDR_POLITE, false, false) + DLG_TEXT[16];
 						link.l1 = DLG_TEXT[34];
 						link.l1.go = "exit";
 						break;
@@ -248,7 +250,7 @@ void ProcessDialogEvent()
 		Link.l95.go = "itemstrade";
 		if(needexit) // NK bugfix 05-05-11
 		{
-			Dialog.text = DLG_TEXT[25];
+			Dialog.text = GetMyAddressForm(NPChar, MainChar, ADDR_POLITE, false, false) + DLG_TEXT[25];
 			link.l99 = DLG_TEXT[21];
 			link.l99.go = "exit";
 		}

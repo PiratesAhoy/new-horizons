@@ -179,6 +179,18 @@ void LAi_type_officer_CharacterUpdate(aref chr, float dltTime)
 					PostEvent("LongRifle_C_on_back", 1000, "i", chr);
 					PostEvent("mguns_reset_check", 1000, "i", chr);
 				}
+
+				if(IsEquipCharacterByItem(chr, "LongRifle_H"))
+				{
+					PostEvent("LongRifle_H_on_back", 1000, "i", chr);
+					PostEvent("mguns_reset_check", 1000, "i", chr);
+				}
+
+				if(IsEquipCharacterByItem(chr, "battleax"))
+				{
+					PostEvent("bax_on_back", 1000, "i", chr);
+					PostEvent("mguns_reset_check", 1000, "i", chr);
+				}
 		// <-- JRH
 			}else{
 				if(LAi_tmpl_fight_IsGo(chr))

@@ -12,10 +12,10 @@ string DLG_TEXT[18] = {
 "My sister and I are very thankful for you Captain Jack Sparrow, we wish to go with you to the tavern!",
 "Ok, to the tavern it is ladies, and then the church to see Padre.",
 "Wow Captain Sparrow, we owe you two now.",
-"Thank you ladies for such good fun, lets go to the church now.",
+"Thank you ladies for such good fun, let's go to the church now.",
 "My sister and I are very thankful for you Captain Jack Sparrow, can we explore the beach please?",
 "Sure and maybe we can find a quiet spot to lay down.",
 "Wow Captain Sparrow, we owe you two now.",
-"Thank you ladies for such good fun, lets go to the church now.",
+"Thank you ladies for such good fun, let's go to the church now.",
 
 };

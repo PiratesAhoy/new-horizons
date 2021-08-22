@@ -27,7 +27,7 @@ string DLG_TEXT[31] = {
 "That's a very touching story. But I'm not sure it's touching enough to move me against a murderous mob.",
 "Oh, bless you! You're doing a very good thing!",
 "I'll do my best.",
-"Have you no heart, sir?! You're no better than those murderers building the fire!",
+"Have you no heart, #ssir#?! You're no better than those murderers building the fire!",
 "No heart?! I've got a heart like a whale! If I have to prove it to you, I will!",
 "I may be heartless, but I can't stand by and watch this happen. I'll help the old man if I can.",
 

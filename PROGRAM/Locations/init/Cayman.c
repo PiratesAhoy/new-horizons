@@ -159,6 +159,36 @@ void LocationInitCayman(ref n)
 	Locations[n].reload.l4.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l4.goto_disable = 1; // Screwface: Disable Go-To location
 
+	//only in WoodesRogers
+	Locations[n].reload.l22.name = "reload22";
+	Locations[n].reload.l22.go = "BB_Eden_estate";
+	Locations[n].reload.l22.emerge = "box23";
+	Locations[n].reload.l22.autoreload = "0";
+	Locations[n].reload.l22.label = "Estate.";
+	Locations[n].locators_radius.reload.reload22 = 0.2;
+
+	Locations[n].reload.l23.name = "reload23";
+	Locations[n].reload.l23.go = "Grand_Cayman_townhall";
+	Locations[n].reload.l23.emerge = "box1";
+	Locations[n].reload.l23.autoreload = "0";
+	Locations[n].reload.l23.label = "Residence.";
+	Locations[n].locators_radius.reload.reload23 = 0.2;	
+
+	Locations[n].locators_radius.box.box2 = 0.2;
+	Locations[n].locators_radius.box.box3 = 0.2;
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.01;
+	Locations[n].items.randitem2 = "door_N04";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.01;
+	Locations[n].items.randitem3 = "door_H1_small";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.01;
+	Locations[n].items.randitem4 = "ladder_very_big_45";
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.01;
+	Locations[n].items.randitem5 = "gatedoor_white_stone_90";
+
 	Locations[n].island = "Cayman"; // NK 04-08-29
 	n = n + 1;
 
@@ -373,8 +403,11 @@ void LocationInitCayman(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name#.";
 	Locations[n].locators_radius.reload.locator1 = 0.8;
-	LAi_LocationFightDisable(&Locations[n], true);
 
+	Locations[n].locators_radius.box.box1 = 0.001;		//used in WoodesRogers
+	Locations[n].locators_radius.goto.box1 = 0.001;		//used in WoodesRogers
+	
+	LAi_LocationFightDisable(&Locations[n], true);
 	Locations[n].island = "Cayman";
 	n = n + 1;
 // <-- KK
@@ -1650,7 +1683,7 @@ void LocationInitCayman(ref n)
 	LAi_LocationMonstersGen(&locations[n], true);
 	LAi_LocationSetMonstersTime(&locations[n], 0, 24);
 
-	Locations[n].items.randitem1 = "bladeC18";
+	Locations[n].items.randitem1 = "blade308";
 
 	Locations[n].island = "Cayman"; // NK 04-08-29
 	n = n + 1;

@@ -13,7 +13,16 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
-
+	
+	// DeathDaisy -->
+	string PCharDiminutive;
+	if(PChar.sex == "woman")
+		PCharDiminutive = "girl";
+	else
+		PCharDiminutive = "boy";
+	
+	Preprocessor_Add("diminutive", PCharDiminutive);
+	// DeathDaisy <--
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -37,10 +46,12 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 
 			//נאחדמגמנ ס בכויחמל
-			if (pchar.quest.main_line == "blaze_talk_with_beltrop")
+			if(CheckQuestAttribute("main_line", "blaze_talk_with_beltrop"))
+//			if (pchar.quest.main_line == "blaze_talk_with_beltrop")
 			// --> SJG
 			{
-				if(pchar.quest.henry_talk == "henry_quest_chat2")
+				if(CheckQuestAttribute("henry_talk", "henry_quest_chat2"))
+//				if(pchar.quest.henry_talk == "henry_quest_chat2")
 				{
 					ChangeCharacterAddress(CharacterFromID("Yusuf Rais"),"none", " ");
 					ChangeCharacterAddress(CharacterFromID("Barbossa"),"none", " ");
@@ -53,6 +64,7 @@ void ProcessDialogEvent()
 				else
 				{
 					dialog.snd = "Voice\CAMA\CAMA002";
+					Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false));
 					dialog.text = DLG_TEXT[2] + characters[GetCharacterIndex(DLG_TEXT[3])].lastname + DLG_TEXT[4];
 					link.l1 = pcharrepphrase(DLG_TEXT[5], DLG_TEXT[6]);
 					link.l1.go = "node_2";

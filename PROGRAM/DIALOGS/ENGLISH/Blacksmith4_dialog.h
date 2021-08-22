@@ -7,7 +7,7 @@
  */
 
 string DLG_TEXT[42] = {
-"Greetings, lad! Welcome to the shop of the finest metalworker in the entire Caribbean. I'm Mortimer Pitchblende, at your service. What can I do for you?",
+"Greetings, #sladlass#! Welcome to the shop of the finest metalworker in the entire Caribbean. I'm Mortimer Pitchblende, at your service. What can I do for you?",
 "Good day, Mortimer. Glad to hear the best was so quick and easy to find. How do you operate, exactly?",
 "Give me any sword you carry at your side, and I'll fire and pound it into proper shape - priced accordingly, of course. And, considering the long line of gentlefolk ahead of you, I'll only need three days to do it!",
 "Splendid. Have a look at this blade and tell me what you can do.",
@@ -21,7 +21,7 @@ string DLG_TEXT[42] = {
 "Not a bad ",
 ", captain; you seem to have taken care of it well. But there's always more a great smith such as myself can do.",
 "It's obvious you've taken quite good care of that ",
-" , sir - I'm proud of you. But what say you let me take it up one more notch, hm?",
+" , #stitle# - I'm proud of you. But what say you let me take it up one more notch, hm?",
 "Oh! Such a dazzling ",
 "! I can see my reflection in its blade, and it must be sharp enough to split a hair! I didn't craft this myself, did I? I'm afraid there's nothing more than can be done for it, not even by a fine smith like myself.",
 "You can prove your words, Mortimer, by proving my blade. Make it the strongest it can be, and I'll give you ",
@@ -30,9 +30,9 @@ string DLG_TEXT[42] = {
 "A middling quality sword will suffice, Mortimer. Take no offence, it's just that right now I can afford to spend no more than ",
 "Oops - no offence meant, of course.",
 "I see quality comes at a hefty price, and my purse cares not for a lofty reputation. Let me come back later so you can demonstrate your skill, Mortimer.",
-"All finished, captain! This is my finest work yet - I really hate to part with it. You'll notice I even spit-shined it for you, for free. Please come again whenever you need the services of the caribbean's most treasured sooty jewel.",
+"All finished, captain! This is my finest work yet - I really hate to part with it. You'll notice I even spit-shined it for you, for free. Please come again whenever you need the services of the Caribbean's most treasured sooty jewel.",
 "I'll do that, Mortimer. Oh, I see the spit's still fresh...",
-"Tsk tsk, captain, you know I can't work my magin on thin air. Do be so kind as to ready a blade, that I may astound you with my master-craftery.",
+"Tsk tsk, captain, you know I can't work my magic on thin air. Do be so kind as to ready a blade, that I may astound you with my master-craftery.",
 "Let me see what you have in stock.",
 " pieces of gold.",
 "I brought with me quite a lot of blades. Would you be able to put them all in a better condition?",

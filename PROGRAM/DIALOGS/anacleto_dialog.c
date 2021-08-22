@@ -55,10 +55,11 @@ void ProcessDialogEvent()
 		
 		case "artois_lay_2":
 			dialog.snd = "Voice\ANAC\ANAC005";
+			AddDialogExitQuest("fight_for_artois_with_child_of_giens");
+			Preprocessor_Add("pronoun2", GetMyPronounObj(PChar));
 			dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[9];
 			link.l1.go = "exit";
-			AddDialogExitQuest("fight_for_artois_with_child_of_giens");
 		break;
 		
 		case "doctor":
@@ -152,6 +153,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "prepare_convoy_quest_2":
+			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false));
 			dialog.text = DLG_TEXT[28];
 			link.l1 = DLG_TEXT[29];
 			link.l1.go = "prepare_convoy_quest_3";

@@ -50,6 +50,8 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 			
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+			
 			dialog.snd = "Voice\FRCO\FRCO002";
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];

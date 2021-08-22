@@ -20,7 +20,7 @@ string DLG_TEXT[143] = {
 "If the spaniards have settled the island, I think they must have found an anchorage, or made one, we can use it can't we?",
 "Yes, of course. And if your prisoner is right about the loot and we get our hands on it, what then...?",
 "The stolen silver will be sold at #sTortuga# and we'll fairly share the profits. Do we have an accord?",
-"Indeed, we could earn a lot.... Yes, we have an acord. When will you be ready to leave #sTortuga#?",
+"Indeed, we could earn a lot.... Yes, we have an accord. When will you be ready to leave #sTortuga#?",
 "I have the feeling that the expedition is too risky. You should look for someone else.",
 "Well captain, maybe I'll see you again one day.",
 "Maybe, goodbye!",

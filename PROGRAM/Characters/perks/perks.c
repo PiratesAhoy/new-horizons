@@ -69,9 +69,9 @@ void InitPerkTypes()
 	PerkTypes.(type).Skill.Fencing = 2;
 	
 	type = PERK_TYPE_PARTY;
-	PerkTypes.(type).Skill.Leadership = 2;
+	PerkTypes.(type).Skill.Leadership = 3;
 	PerkTypes.(type).Skill.Defence = 5;
-	PerkTypes.(type).Skill.Sneak = 3;
+	PerkTypes.(type).Skill.Sneak = 2;
 	
 	type = PERK_TYPE_REPAIR;
 	PerkTypes.(type).Skill.Repair = 7;

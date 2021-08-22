@@ -1355,7 +1355,8 @@ if (ENABLE_WEAPONSMOD)
 	ch.skill.Commerce = "10";
 	ch.skill.Sneak = "0";
 	ch.money = "100";
-	GiveItem2Character(ch, "blade13");
+	ch.greeting = "Gr_christofor manuel de alencar";	
+	GiveItem2Character(ch, "blade44");
 	ch.equip.blade = "blade44";
 	LAi_SetHuberStayType(ch);
 	LAi_SetHP(ch, 200.0, 200.0);

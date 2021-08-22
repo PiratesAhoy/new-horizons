@@ -53,6 +53,10 @@ void StartStoryLine()
 	if (cabinID != "Cabin_none") {
 		iShipCaptain = GetMainCharacterIndex();
 		SetUpCabin(PChar);
+
+		TutDeck.models.always.l2 = "cabinchest";			//JRH
+		TutDeck.models.always.l3 = "trunk";				//JRH
+
 		if (cabinID != "Tutorial_Deck") TutDeck.items.randitem1 = "";
 	} else {
 		SetModelFromID(ch, "Corsair5");
@@ -246,6 +250,23 @@ void StartStoryLine()
 	DeleteAttribute(PChar, "quest.Install_Voysey_And_Blythe");
 	characters[GetCharacterIndex("Edgar Attwood")].quest.to_hire = "0";
 	Characters[GetCharacterIndex("Arabella Silehard")].lastname = Characters[GetCharacterIndex("Robert Christopher Silehard")].lastname; // Name after actual governor
+	if (PChar.sex == "woman")
+	{
+		ch = CharacterFromID("Danielle");
+		ch.name = TranslateString("","Nathaniel");
+		ch.lastname = TranslateString("","Hawk");
+		ch.model.animation = "man";
+		ch.sex = "man";
+		ch.greeting = "Gr_Nathaniel";
+		switch(Rand(4))			// For a bit of fun, give Nathaniel a random choice of "Blaze" outfit
+    		{
+			case 0: SetModelFromID(ch, "Blaze"); break;
+			case 1: SetModelFromID(ch, "Blaze4"); break;
+			case 2: SetModelFromID(ch, "Blaze5"); break;
+			case 3: SetModelFromID(ch, "Blaze6"); break;
+			case 4: SetModelFromID(ch, "Blaze7"); break;
+    		}
+	}
 	// PB: Quest Corrections <--
 
 //===============================| QUESTS SECTION END |===============================//

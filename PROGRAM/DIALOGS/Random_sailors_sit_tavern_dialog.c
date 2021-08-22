@@ -166,6 +166,7 @@ void ProcessDialogEvent()
 						{
 							if (frnd()<makefloat(GetRank(pchar, sti(NPChar.nation)))/12.0 || frnd()<makefloat(GetRankFromPoints(GetScore(PChar)))/12.0) //MT: high-ranking officer with a nation or famous
 							{
+								Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 								Dialog.Text = DLG_TEXT[2]; //MT: all dialogues with Dialog.Text in front are the sailor's opening line
 							}
 							else //MT: if not famous
@@ -225,6 +226,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "engage":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			Dialog.Text = DLG_TEXT[23];
 			if(MAX_CREWMEMBERS<maxcrew && MAX_CREWMEMBERS<10)
 			{

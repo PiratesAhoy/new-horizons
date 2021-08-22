@@ -208,13 +208,14 @@ int GetCannonDeltaPrice(ref rChar,int nCannonType, int sq, int bq)
 //will reset to localship's max qty in each arc.
 void ResetCannons(ref ch)
 {
-	if(!CheckAttribute(ch,"ship.cannons.borts")) return;
+	//if(!CheckAttribute(ch,"ship.cannons.borts")) return; //Levis removed check because it's not needed.
 	aref arship; makearef(arship, ch.ship);
 	ref rship = GetShipByType(GetCharacterShipType(ch));
 	ch.ship.cannons.borts.cannonf.qty = GetLocalShipAttrib(&arship, &rship, "cannons.borts.cannonf.qty");
 	ch.ship.cannons.borts.cannonb.qty = GetLocalShipAttrib(&arship, &rship, "cannons.borts.cannonb.qty");
 	ch.ship.cannons.borts.cannonl.qty = GetLocalShipAttrib(&arship, &rship, "cannons.borts.cannonl.qty");
 	ch.ship.cannons.borts.cannonr.qty = GetLocalShipAttrib(&arship, &rship, "cannons.borts.cannonr.qty");
+	ch.ship.cannons.charge.type = DEFAULT_CHARGE; //Levis: added to make sure this is set.
 }
 
 // add all fixable cannons back to can qty, delete each fix attribute
@@ -366,12 +367,14 @@ int GetCannonType(int cannon_type)
 
 void SetNoneCannonsOnShip(ref ch)
 {
-	if (!CheckAttribute(ch,"ship.cannons.borts")) return;
-	aref arship; makearef(arship, ch.Ship);
+	//if (!CheckAttribute(ch,"ship.cannons.borts")) return;
+	// aref arship; makearef(arship, ch.Ship);
 	ch.Ship.Cannons.Borts.cannonf.qty = 0;
 	ch.Ship.Cannons.Borts.cannonb.qty = 0;
 	ch.Ship.Cannons.Borts.cannonl.qty = 0;
 	ch.Ship.Cannons.Borts.cannonr.qty = 0;
 	ch.Ship.Cannons.Type = CANNON_TYPE_NONECANNON;
+	ch.Ship.stats.CannonsQuantity = 0;
+	ch.ship.cannons.charge.type = DEFAULT_CHARGE;
 }
 // <-- KK

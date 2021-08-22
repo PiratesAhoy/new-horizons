@@ -7,6 +7,16 @@ void StartStoryLine()
 	string rldGroup = "reload";
 	string rldLocator = "reload2";
 
+	string cabinID = GetCharacterShipCabin(PChar);
+	if (cabinID != "Cabin_none")
+	{
+		iShipCaptain = GetMainCharacterIndex();
+		SetUpCabin(PChar);
+
+		Locations[FindLocation("Tutorial_deck")].models.always.l2 = "cabinchest";	//JRH
+		Locations[FindLocation("Tutorial_deck")].models.always.l3 = "trunk";		//JRH
+	}
+
 	DeleteAttribute(PChar, "items"); // PB: Override Character Type
 
 	TakeNItems(PChar, "blade6", 1);

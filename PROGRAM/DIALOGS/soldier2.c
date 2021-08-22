@@ -51,6 +51,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "meeting1":
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			d.Text = DLG_TEXT[5] + DLG_TEXT[7]; // NK
 			Link.l1 = DLG_TEXT[6];
 			Link.l1.go = "exit2";

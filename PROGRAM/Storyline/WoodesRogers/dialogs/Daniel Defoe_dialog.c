@@ -330,6 +330,38 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("drawing_room_map23");
 		break;
 
+		case "sloop3":
+			PlaySound("VOICE\ENGLISH\defoe_work.wav");
+			Dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "exit";
+			AddDialogExitQuest("sloop4");
+		break;
+
+		case "sloop5":
+			PlaySound("VOICE\ENGLISH\defoe_deal.wav");
+			Dialog.text = DLG_TEXT[60];
+			link.l1 = DLG_TEXT[61];
+			link.l1.go = "exit";
+			AddDialogExitQuest("sloop6");
+		break;
+
+		case "sloop7":
+			PlaySound("VOICE\ENGLISH\defoe_leave.wav");
+			Dialog.text = DLG_TEXT[62];
+			link.l1 = DLG_TEXT[63];
+			link.l1.go = "exit";
+			AddDialogExitQuest("sloop8");
+		break;
+
+		case "sloop9":
+			PlaySound("VOICE\ENGLISH\defoe_again.wav");
+			Dialog.text = DLG_TEXT[64];
+			link.l1 = DLG_TEXT[65];
+			link.l1.go = "exit";
+			AddDialogExitQuest("sloop10");
+		break;
+
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

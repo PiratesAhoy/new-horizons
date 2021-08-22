@@ -33,11 +33,15 @@ void ProcessDialogEvent()
 	makearef(Diag, NPChar.Dialog);
 
 	Preprocessor_Add("Father", GetMyFirstNames(CharacterFromID("Father Bernard"), false));
+	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+	else Preprocessor_Add("child", XI_ConvertString("child"));
 	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
+			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
+			else Preprocessor_Add("pronoun", XI_ConvertString("her"));
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
 			Dialog.defSnd = "dialogs\0\017";
@@ -58,6 +62,8 @@ void ProcessDialogEvent()
 			}
 			else
 			{
+				if (PChar.sex == "man") Preprocessor_Add("pronoun2", XI_ConvertString("his"));
+				else  Preprocessor_Add("pronoun2", XI_ConvertString("her"));
 				dialog.snd1 = "Voice\FATB\FATB002";
 				dialog.snd2 = "Voice\FATB\FATB003";
 				dialog.snd3 = "Voice\FATB\FATB004";
@@ -108,7 +114,8 @@ void ProcessDialogEvent()
 				itest = iTest + 1;
 			}
 
-			if (npchar.quest.church_help == "done" && pchar.quest.ANIMISTS == "FRIGATE_LOST")
+//			if (npchar.quest.church_help == "done" && pchar.quest.ANIMISTS == "FRIGATE_LOST")
+			if (npchar.quest.church_help == "done" && CheckQuestAttribute("ANIMISTS", "FRIGATE_LOST"))
 			{
 				link.l1 = DLG_TEXT[20];
 				link.l1.go = "ANIMISTS_letter";
@@ -144,6 +151,13 @@ void ProcessDialogEvent()
 				link.l3 = DLG_TEXT[31]; // NK
 				link.l3.go = "exit"; // NK
 				AddDialogExitQuest("artois_donate_done");
+			}
+			if (CheckAttribute(PChar, "quest.romance") && CheckAttribute(characterFromID(PChar.quest.romance), "married") && characters[getCharacterIndex(PChar.quest.romance)].married == MR_MARRIED && characters[getCharacterIndex(PChar.quest.romance)].married.id == characters[getCharacterIndex(PChar.quest.villain)].id && !CheckAttribute(characterFromID(PChar.quest.romance), "married.annulled") && characters[getCharacterIndex(PChar.quest.romance)].location == "Redmond_church")
+			{
+				Preprocessor_Add("romance", GetMyFullName(characterFromID(PChar.quest.romance)));
+				Preprocessor_Add("villain", GetMyFullName(characterFromID(PChar.quest.villain)));
+				link.l4 = DLG_TEXT[170];
+				link.l4.go = "ardent_abduction_sad_marriage1"; // NK
 			}
 // -- Scheffnow -- 2004-01-14 -- ResetCharacterMod -- start -----------
 			if(!AUTO_SKILL_SYSTEM) // El Rapido
@@ -287,11 +301,12 @@ void ProcessDialogEvent()
 		break;
 
 		case "letter_to_father_bernard_5":
+			AddDialogExitQuest("father_Gareth_stopping_us");
 			dialog.snd = "Voice\FATB\FATB022";
+			Preprocessor_Add("person", PChar.sex);
 			dialog.text = DLG_TEXT[59];
 			link.l1 = DLG_TEXT[60];
 			link.l1.go = "exit";
-			AddDialogExitQuest("father_Gareth_stopping_us");
 		break;
 
 		case "ANIMISTS_letter":
@@ -367,12 +382,14 @@ void ProcessDialogEvent()
 		break;
 			
 		case "ANIMISTS_letters_8":
-			dialog.text = DLG_TEXT[161];
-			link.l1 = DLG_TEXT[162];
-			link.l1.go = "exit";
 			AddQuestRecord("ANIMISTS", 8);
 			pchar.quest.ANIMISTS = "letter_to_domingues";
 			GiveItem2Character(pchar, "letter_to_domingues");
+			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+			else Preprocessor_Add("child", XI_ConvertString("child"));
+			dialog.text = DLG_TEXT[161];
+			link.l1 = DLG_TEXT[162];
+			link.l1.go = "exit";
 			pchar.quest.to_muelle_for_letter.win_condition.l1 = "location";
 			pchar.quest.to_muelle_for_letter.win_condition.l1.location = "IslaMuelle";
 			pchar.quest.to_muelle_for_letter.win_condition = "to_muelle_for_letter";
@@ -509,13 +526,15 @@ void ProcessDialogEvent()
 
 		case "church_help_6":
 			dialog.snd = "Voice\FATB\FATB042";
-			dialog.text = DLG_TEXT[112];
-			link.l1 = DLG_TEXT[113];
-			link.l1.go = "exit";
 			SetQuestHeader("Church_help");
 			AddQuestRecord("Church_help", 1);
 			npchar.quest.church_help = "to_greenford";
 			Preprocessor_Add("Father", GetMyFirstNames(CharacterFromID("Father Bernard"), false));
+			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
+			else Preprocessor_Add("child", XI_ConvertString("child"));
+			dialog.text = DLG_TEXT[112];
+			link.l1 = DLG_TEXT[113];
+			link.l1.go = "exit";
 		break;
 
 		case "No quest":
@@ -627,6 +646,66 @@ void ProcessDialogEvent()
 			LAi_SetPriestType(NPChar);
 		break;
 // <-- JRH
+
+// GR: Ardent storyline -->
+		case "ardent_abduction_sad_marriage1":
+			Preprocessor_Add("romance", GetMyFullName(characterFromID(PChar.quest.romance)));
+			if (PChar.sex == "man")
+			{
+				Preprocessor_Add("pronoun", XI_ConvertString("she"));
+				Preprocessor_Add("pronoun2", XI_ConvertString("her"));
+			}
+			else
+			{
+				Preprocessor_Add("pronoun", XI_ConvertString("he"));
+				Preprocessor_Add("pronoun2", XI_ConvertString("his"));
+			}
+			dialog.text = DLG_TEXT[171];
+			link.l1 = DLG_TEXT[172];
+			link.l1.go = "ardent_abduction_sad_marriage2";
+		break;
+
+		case "ardent_abduction_sad_marriage2":
+			Preprocessor_Add("romance", GetMyName(characterFromID(PChar.quest.romance)));
+			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("her"));
+			else Preprocessor_Add("pronoun", XI_ConvertString("his"));
+			dialog.text = DLG_TEXT[173];
+			link.l1 = DLG_TEXT[174];
+			link.l1.go = "ardent_abduction_sad_marriage3";
+		break;
+
+		case "ardent_abduction_sad_marriage3":
+			dialog.text = DLG_TEXT[175];
+			link.l1 = "...";
+			link.l1.go = "exit";
+			AddDialogExitQuest("abduction_confession_interlude");
+		break;
+
+		case "ardent_abduction_story_checks_out":
+			Preprocessor_Add("romance", GetMyName(characterFromID(PChar.quest.romance)));
+			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("she"));
+			else Preprocessor_Add("pronoun", XI_ConvertString("he"));
+			dialog.text = DLG_TEXT[176];
+			link.l1 = DLG_TEXT[178];
+			link.l1.go = "ardent_abduction_story_checks_out2";
+		break;
+
+		case "ardent_abduction_story_checks_out2":
+			dialog.text = DLG_TEXT[179];
+			link.l1 = "...";
+			link.l1.go = "exit";
+			AddDialogExitQuest("abduction_romance_will_pay");
+		break;
+
+		case "ardent_abduction_write_to_rome":
+			Preprocessor_Add("romance", GetMyName(characterFromID(PChar.quest.romance)));
+			Preprocessor_Add("villain", GetMyName(characterFromID(PChar.quest.villain)));
+			dialog.text = DLG_TEXT[180];
+			link.l1 = DLG_TEXT[181];
+			link.l1.go = "exit";
+		break;
+// <-- GR: Ardent storyline
+
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;

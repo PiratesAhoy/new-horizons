@@ -340,7 +340,7 @@ void SetVariable()
 //		SetNewPicture("TYPEPICT", "");
 //	} else {
 		if ( IsCompanion(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\blank_ship.tga");
-		/*if ( IsOfficer(xi_refCharacter) )
+		if ( IsOfficer(xi_refCharacter) )
 		{
 			if(CheckAttribute(xi_refCharacter,"quest.officertype"))
 			{
@@ -357,8 +357,7 @@ void SetVariable()
 					case "doctor": SetNewPicture("TYPEPICT", "interfaces\doctor.tga"); break;	
 				}
 			}
-		}*/
-		if ( IsOfficer(xi_refCharacter) ) SetNewPicture("TYPEPICT", GetOfficerPricture(xi_refCharacter)); //Levis put all images in 1 function
+		}
 		if ( IsOfficerCompanion(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isofficercompanion.tga");
 		if ( IsOnShoreLeave(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isonshoreleave.tga");
 		if ( IsOfficerOnShoreLeave(xi_refCharacter) ) SetNewPicture("TYPEPICT", "interfaces\kam_isofficeronshoreleave.tga");
@@ -448,7 +447,7 @@ void SetSkillShow(string skillName)
 	// InitInterface_R method, too)
 	GameInterface.strings.(skillName) = skillPoints; //+ " - " + CalcCharacterSkill(&xi_refCharacter, skillName);
 	int color = COLOR_NORMAL;
-	if(skillPoints == SKILL_MAX)
+	if(skillPoints == MAX_CHARACTER_SKILL)
 		color = COLOR_MONEY;
 	ChangeStringColor(skillName, SetAlphaIntoColor(color, GetAlphaFromSkill(skillPoints)));
 }

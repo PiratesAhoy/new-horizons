@@ -1,4 +1,4 @@
-string DLG_TEXT[58] = {
+string DLG_TEXT[66] = {
 "And who might you be?",
 "Captain Howard Pyle, at your service Sir.",
 "I am honored to meet you, please see if you could get us some rum from that big barrel by the fireplace.",
@@ -58,6 +58,14 @@ string DLG_TEXT[58] = {
 "Governor Alexander Spotswood of Virginia gave Lieutenant Robert Maynard the command of two sloops.  Maynard killed Teach and beheaded him, tied the 
 head to the bowsprit of his ship, and set sail for Virginia.",
 "I thought that was only a legend!",
+"Almost you say. Did they take your map-piece!?",
+"No, I had fastened it with tar under my foot. So even though they took my shoes they missed it!",
+"Oh come on, you know better than to ask that. By the way did you recieve the package I sent to the poor Governor?",
+"In fact I did. And those hints were really helpful...",
+"Maybe you should leave all those bottles and things here at the farm. We'll take care of it.",
+"Sure, why not.",
+"No, she didn't. Good luck, Captain.",
+"Thank you and Good Bye.",
 
 
 };

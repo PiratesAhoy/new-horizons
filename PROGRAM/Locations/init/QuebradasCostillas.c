@@ -990,6 +990,7 @@ void LocationInitQuebradasCostillas(ref n)
 	//Environment
 	locations[n].environment.weather = "true";
 	locations[n].environment.sea = "true";
+	Locations[n].MaxSeaHeight = 0.8;		//JRH: water was visible in town sometimes
 	//Reload map
 
 	locations[n].reload.l1.name = "reload1_back";
@@ -1104,11 +1105,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l17.emerge = "reload1";
 	locations[n].reload.l17.autoreload = "0";
 	locations[n].reload.l17.label = "Order of Malta only in WoodesRogers quest";	
-	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
-	{
-		Locations[n].reload.l17.close_for_day = 1;
-	}
-	else locations[n].reload.l17.disable = 1;
+	locations[n].reload.l17.disable = 1;			//JRH WoodesRogers: close_for_day after info from Hands
 
 	locations[n].reload.l18.name = "reload18";
 	locations[n].reload.l18.go = "bb_Maltains";
@@ -1116,7 +1113,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l18.autoreload = "0";
 	locations[n].reload.l18.label = "Order of Malta only in WoodesRogers quest";
 	locations[n].reload.l18.disable = 1;
-	
+
 	Locations[n].island = "QuebradasCostillas"; // NK 04-08-29
 	n = n + 1;
 
@@ -1483,7 +1480,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].reload.l1.go = "bb_Maltains_office";
 	Locations[n].reload.l1.emerge = "locator2";
 	Locations[n].reload.l1.autoreload = "0";
-	Locations[n].reload.l1.label = "Secret room only in WoodesRogers quest";
+	Locations[n].reload.l1.label = "Secret room only in Woodes Rogers storyline";
 	Locations[n].reload.l1.disable = true;			//only in WoodesRogers
 
 	LAi_LocationFightDisable(&Locations[n], true);

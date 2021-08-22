@@ -1173,7 +1173,231 @@ void ProcessDialogEvent()
 		AddDialogExitQuest("Deliver_6_malta_books");
 	break;
 
+	case "NS_up_shutter":
+		PlaySound("OBJECTS\VOICES\DEAD\male\dead7.wav");
+		Dialog.Text = DLG_TEXT[332];
+		Link.l1 = DLG_TEXT[333];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
 
+	case "NS_up_beam":
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		Dialog.Text = DLG_TEXT[334];
+		Link.l1 = DLG_TEXT[335];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "locked_shipyard":
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		Dialog.Text = DLG_TEXT[336];
+		Link.l1 = DLG_TEXT[337];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "salute":
+		PlaySound("VOICE\ENGLISH\blaze_heard_something.wav");
+		Dialog.Text = DLG_TEXT[338];
+		Link.l1 = DLG_TEXT[339];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "BB_tower_found":
+		PlaySound("OBJECTS\DUEL\man_attack6.wav");
+		Dialog.Text = DLG_TEXT[340];
+		if(CheckAttribute(Pchar, "BB_door") && Pchar.BB_door == "found")
+		{
+			Link.l1 = DLG_TEXT[342];
+			Link.l1.go = "exit";	
+		}
+		else 
+		{
+			Link.l2 = DLG_TEXT[341];
+			Link.l2.go = "exit";
+		}
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "see_oriel":
+		PlaySound("VOICE\ENGLISH\blaze_hah.wav");
+		Dialog.Text = DLG_TEXT[343];
+		Link.l1 = DLG_TEXT[344];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "cavalry":
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		Dialog.Text = DLG_TEXT[345];
+		Link.l1 = DLG_TEXT[346];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "single_silverbar_first":
+		PlaySound("VOICE\ENGLISH\blaze_mhm.wav");
+		Dialog.Text = DLG_TEXT[347];
+		Link.l1 = DLG_TEXT[348];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "after_single_goldbar":
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		Dialog.Text = DLG_TEXT[349];
+		Link.l1 = DLG_TEXT[350];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+		AddDialogExitQuest("pchar_lets_go");
+	break;
+
+	case "after_many_goldbars":
+		PlaySound("OBJECTS\SHIPCHARGE\gunner_fire.wav");
+		Dialog.Text = DLG_TEXT[351];
+		Link.l1 = DLG_TEXT[352];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("captain_around");
+	break;
+
+	case "stop_Caesar":
+		PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
+		Dialog.Text = DLG_TEXT[353];
+		Link.l1 = DLG_TEXT[354];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "gate_locked":
+		PlaySound("OBJECTS\VOICES\DEAD\male\dead7.wav");
+		Dialog.Text = DLG_TEXT[355];
+		Link.l1 = DLG_TEXT[356];
+		Link.l1.go = "gate_locked1";
+	break;
+
+	case "gate_locked1":
+		PlaySound("VOICE\ENGLISH\blaze_hah.wav");
+		Dialog.Text = DLG_TEXT[357];
+		Link.l1 = DLG_TEXT[358];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Turks_gate_locked1");
+	break;
+
+	case "gate_runaway":
+		PlaySound("OBJECTS\VOICES\DEAD\male\dead1.wav");
+		Dialog.Text = DLG_TEXT[359];
+		Link.l1 = DLG_TEXT[360];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+
+	case "gp_dry":
+		PlaySound("VOICE\ENGLISH\blaze_hah.wav");
+		Dialog.Text = DLG_TEXT[361];
+		Link.l1 = DLG_TEXT[362];
+		Link.l1.go = "gp_dry1";
+	break;
+
+	case "gp_dry1":
+		PlaySound("VOICE\ENGLISH\blaze_mhm.wav");
+		Dialog.Text = DLG_TEXT[363];
+		Link.l1 = DLG_TEXT[364];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+		AddDialogExitQuest("pchar_lets_go");
+	break;
+
+	case "wait_for_Richards":
+		PlaySound("VOICE\ENGLISH\gr_Teach4.wav");
+		Dialog.Text = DLG_TEXT[365];
+		Link.l1 = DLG_TEXT[366];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("wait_for_Richards_done");
+	break;
+
+	case "Richards_pistol":
+		PlaySound("VOICE\ENGLISH\gr_Teach2.wav");
+		Dialog.Text = DLG_TEXT[367];
+		Link.l1 = DLG_TEXT[368];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Richards_back17");
+	break;
+
+	case "all_abbess_items":
+		PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
+		Dialog.Text = DLG_TEXT[369];
+		Link.l1 = DLG_TEXT[370];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("all_abbess_items_done");
+	break;
+
+	case "door_where":
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		Dialog.Text = DLG_TEXT[371];
+		Link.l1 = DLG_TEXT[372];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Hands_door_where1");
+	break;
+
+	case "Caesars_map":
+		LAi_SetActorType(Pchar);
+		LAi_ActorTurnToCharacter(Pchar, characterFromID("Caesar"));
+		PlaySound("VOICE\ENGLISH\blaze_very_nice.wav");
+		Dialog.Text = DLG_TEXT[373];
+		Link.l1 = DLG_TEXT[374];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Caesars_map1");
+	break;
+
+	case "are_you_hands":
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		Dialog.Text = DLG_TEXT[375];
+		Link.l1 = DLG_TEXT[376];
+		Link.l1.go = "are_you_hands1";
+	break;
+
+	case "are_you_hands1":
+		PlaySound("VOICE\ENGLISH\blaze_hah.wav");
+		Dialog.Text = DLG_TEXT[377];
+		Link.l1 = DLG_TEXT[378];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+		AddDialogExitQuest("pchar_sigh");
+	break;
+
+	case "are_you_hands_yes":
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		Dialog.Text = DLG_TEXT[375];
+		Link.l1 = DLG_TEXT[376];
+		Link.l1.go = "are_you_hands_yes1";
+	break;
+
+	case "are_you_hands_yes1":
+		PlaySound("VOICE\ENGLISH\blaze_hah.wav");
+		Dialog.Text = DLG_TEXT[377];
+		Link.l1 = DLG_TEXT[379];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("beggar_is_Hands_prepare");
+	break;
+
+	case "whats_the meaning":
+		LAi_SetPoorType(Pchar);
+		PlaySound("VOICE\ENGLISH\Odel_who_you_are.wav");
+		Dialog.Text = DLG_TEXT[380];
+		Link.l1 = DLG_TEXT[381];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Hands_shot_scene36");
+	break;
+
+	case "Teach_saved_you":
+		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		Dialog.Text = DLG_TEXT[382];
+		Link.l1 = DLG_TEXT[383];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("back_to_Wstad2");
+	break;
 
 	}
 }

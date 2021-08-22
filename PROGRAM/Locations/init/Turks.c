@@ -138,6 +138,15 @@ void LocationInitTurks(ref n)
 	Locations[n].locators_radius.reload.reload5_back = 1.0;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l5.goto_disable = 1; // Screwface: Disable Go-To location
 
+	Locations[n].reload.l12.name = "reload6_back";
+	Locations[n].reload.l12.go = "Turks_usurerHouse";
+	Locations[n].reload.l12.emerge = "reload1";
+	Locations[n].reload.l12.autoreload = "0";
+	Locations[n].reload.l12.label = "Loanshark's Office.";
+	Locations[n].reload.l12.close_for_night = 1;
+	Locations[n].locators_radius.reload.reload6_back = 1.0;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l12.goto_disable = 1; // Screwface: Disable Go-To location
+
 	Locations[n].reload.l7.name = "reload7_back";
 	Locations[n].reload.l7.go = "Turks_church";
 	Locations[n].reload.l7.emerge = "reload1";
@@ -196,11 +205,28 @@ void LocationInitTurks(ref n)
 //JRH -->	
 	Locations[n].reload.l16.name = "reload_sewer";
 	Locations[n].reload.l16.go = "Turks_sewer";
-	Locations[n].reload.l16.emerge = "reload2";
+	Locations[n].reload.l16.emerge = "arrive";
 	Locations[n].reload.l16.autoreload = "1";			//1 first time
 	Locations[n].locators_radius.reload.reload_sewer = 0.0;		//1.0 later
 	Locations[n].reload.l16.disable = 1;
 
+	Locations[n].reload.l17.name = "reload_roof1";
+	Locations[n].reload.l17.go = "Turks_balcony_room";
+	Locations[n].reload.l17.emerge = "reload1";
+	Locations[n].reload.l17.autoreload = "0";			
+	Locations[n].locators_radius.reload.reload_roof1 = 0.6;	
+	Locations[n].locators_radius.reload.reload_roof2 = 0.6;
+	Locations[n].locators_radius.reload.reload_roof3 = 0.4;
+
+	Locations[n].locators_radius.box.box1 = 0.001;
+	Locations[n].locators_radius.box.box3 = 0.5;
+	Locations[n].locators_radius.box.box4 = 0.5;
+	Locations[n].locators_radius.box.box5 = 0.5;
+	Locations[n].locators_radius.box.box6 = 0.001;
+	Locations[n].locators_radius.box.box7 = 0.5;
+	Locations[n].locators_radius.box.box8 = 0.7;
+	Locations[n].locators_radius.box.box9 = 1.3;
+	Locations[n].locators_radius.box.box10 = 0.001;		//boat to cave
 	Locations[n].locators_radius.goto.P_goto11 = 1.0;
 	Locations[n].locators_radius.goto.steplockL = 0.2;
 	Locations[n].locators_radius.goto.steplockM = 0.2;
@@ -209,6 +235,12 @@ void LocationInitTurks(ref n)
 	Locations[n].locators_radius.goto.stepbackM = 0.3;
 	Locations[n].locators_radius.goto.stepbackR = 0.3;
 	Locations[n].locators_radius.goto.waterstop = 0.0;
+	Locations[n].locators_radius.quest.fight1 = 1.0;
+	Locations[n].locators_radius.quest.fight3 = 3.0;
+	Locations[n].locators_radius.quest.fight5 = 1.0;
+	Locations[n].locators_radius.quest.fight6 = 0.8;
+	Locations[n].locators_radius.quest.jump = 1.0;
+	Locations[n].locators_radius.quest.splash = 4.0;
 
 	Locations[n].locators_radius.randitem.randitem1 = 0.01;
 	Locations[n].items.randitem1 = "hatch11";
@@ -227,8 +259,78 @@ void LocationInitTurks(ref n)
 
 	Locations[n].locators_radius.randitem.randitem6 = 0.01;
 	Locations[n].items.randitem6 = "hatch11_T";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.001;
+	Locations[n].items.randitem7 = "mtoon_item";
+
+	Locations[n].locators_radius.randitem.randitem8 = 0.001;
+	Locations[n].items.randitem8 = "plank2_dark";			//ropes
+
+	Locations[n].locators_radius.randitem.randitem9 = 0.001;
+	Locations[n].items.randitem9 = "cannon1";
+
+	Locations[n].locators_radius.randitem.randitem10 = 0.001;
+	Locations[n].items.randitem10 = "plank1_dark";
+
+	Locations[n].locators_radius.randitem.randitem11 = 0.001;
+	Locations[n].items.randitem11 = "plank2_dark";			//ropes
+
+	Locations[n].locators_radius.randitem.randitem12 = 0.001;
+	Locations[n].items.randitem12 = "plank2_dark";			//ropes
+
+	Locations[n].locators_radius.randitem.randitem13 = 0.001;
+	Locations[n].items.randitem13 = "plank2_dark";			//ropes
+
+	Locations[n].locators_radius.randitem.randitem14 = 0.001;
+	Locations[n].items.randitem14 = "plank2_dark";			//ropes
+
+	Locations[n].locators_radius.randitem.randitem15 = 0.001;
+	Locations[n].items.randitem15 = "plank2_dark";			//ropes
+
+	Locations[n].locators_radius.randitem.randitem16 = 0.001;
+	Locations[n].items.randitem16 = "plank2_dark";			//ropes
 //<-- JRH
 	Locations[n].island = "Turks"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].id = "Turks_usurerhouse";
+	locations[n].id.label = "Loanshark's Office";
+	//Town sack
+	Locations[n].townsack = "Grand Turk"; 
+	//Sound
+	locations[n].type = "residence";
+	locations[n].fastreload = "Grand_Turk";
+
+	Locations[n].filespath.models = "locations\Inside\Bank";
+	Locations[n].image = "Inside_Bank.tga";
+	//Models
+	Locations[n].models.back = "..\back\inside_back_";
+	//Always
+	Locations[n].models.always.cave = "Bank";
+	Locations[n].models.always.locators = "Bank_locators";
+	Locations[n].models.always.window = "Bank_windows";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Bank_patch";
+	//Night
+	Locations[n].models.night.charactersPatch = "Bank_patch";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.emerge = "reload6_back";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.go = "Turks_port";
+	Locations[n].reload.l1.label = "#stown_name#";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Turks";
 	n = n + 1;
 
 	// -------------------------------------------------
@@ -755,7 +857,7 @@ void LocationInitTurks(ref n)
 	Locations[n].models.always.l3.level = 7;
 	Locations[n].models.always.l3.tech = "LocationModelBlend";
 	Locations[n].models.always.l4 = "town_walls";
-
+	Locations[n].models.always.l5 = "";			//gp_barrels in WoodesRogers
 
 	Locations[n].models.always.gate = "Margarita_gate";
 	Locations[n].models.always.gate.locator.group = "upgrades";
@@ -809,6 +911,13 @@ void LocationInitTurks(ref n)
 	Locations[n].reload.l6.label = "Old Fort.";
 	Locations[n].locators_radius.reload.reload1_back = 3.0;
 	Locations[n].reload.l6.disable = 0;
+
+	Locations[n].locators_radius.box.box1 = 0.0001;		//function box WoodesRogers
+	Locations[n].locators_radius.quest.safe1 = 4.0;
+	Locations[n].locators_radius.quest.safe2 = 4.0;	
+	Locations[n].locators_radius.quest.safe3 = 4.0;	
+	Locations[n].locators_radius.quest.safe4 = 4.0;	
+	Locations[n].locators_radius.quest.safe5 = 4.0;		
 
 	Locations[n].locators_radius.randitem.randitem2 = 0.01;
 	Locations[n].items.randitem2 = "lamp";
@@ -903,7 +1012,7 @@ void LocationInitTurks(ref n)
 	locations[n].townsack = "Grand Turk";
 
 	//Sound
-	locations[n].type = "jungle";
+	locations[n].type = "seashore_jungle";				//JRH, was jungle
 //	locations[n].fastreload = "Grand_Turk";
 	//LAi_LocationMonstersGen(&locations[n], true);
 	//LAi_LocationSetMonstersTime(&locations[n], 22, 6);
@@ -982,6 +1091,15 @@ void LocationInitTurks(ref n)
 	Locations[n].reload.l1.emerge = "reload2";
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name# Fort";
+
+	Locations[n].locators_radius.box.box7 = 0.001;			//large later in WoodesRogers
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;	//in WoodesRogers
+	Locations[n].items.randitem1 = "pistolbarrel_gpS";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.7;		//in WoodesRogers
+	Locations[n].items.randitem2 = "bladebarrel_gpS";
+
 
 	Locations[n].island = "Turks"; // NK 04-08-29
 	n = n + 1;

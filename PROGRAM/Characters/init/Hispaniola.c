@@ -861,8 +861,16 @@ void CreateHispaniolaCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	ch.location	= "tortuga_port";
 	ch.location.group = "goto";
 	ch.location.locator = "goto23";
@@ -1032,8 +1040,16 @@ void CreateHispaniolaCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade20");
 	ch.equip.blade = "blade20";
-	GiveItem2Character(ch, "pistol7");
-	ch.equip.gun = "pistol7";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol7");
+		ch.equip.gun = "pistol7";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol7a");
+		ch.equip.gun = "pistol7a";
+	}
 	if (ENABLE_AMMOMOD) {
 		TakenItems(ch, "gunpowder", 1 + rand(2));
 		TakenItems(ch, "pistolbullets", 1 + rand(2));
@@ -1231,8 +1247,16 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_CharacterReincarnation(ch, true, false);
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	ch.location	= "Tortuga_port";
 	ch.location.group = "soldiers";
 	ch.location.locator = "soldier1";
@@ -1276,8 +1300,16 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_CharacterReincarnation(ch, true, false);
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
+	{
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
 	ch.location	= "Tortuga_port";
 	ch.location.group = "soldiers";
 	ch.location.locator = "soldier2";
@@ -2554,7 +2586,8 @@ void CreateHispaniolaCharacters(ref n)
 	ch.location	= "Buccaneers_Camp";
 	ch.location.group = "goto";
 	ch.location.locator = "goto39";
-	ch.Dialog.Filename = "Buccaneers_dialog.c";
+//	ch.Dialog.Filename = "Buccaneers_dialog.c";
+	ch.Dialog.Filename = "BC_Citizens_dialog.c";
 	ch.nation = PIRATE;
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
@@ -2590,7 +2623,8 @@ void CreateHispaniolaCharacters(ref n)
 	ch.location	= "Buccaneers_Camp";
 	ch.location.group = "goto";
 	ch.location.locator = "goto36";
-	ch.Dialog.Filename = "Buccaneers_dialog.c";
+//	ch.Dialog.Filename = "Buccaneers_dialog.c";
+	ch.Dialog.Filename = "BC_Citizens_dialog.c";
 	ch.nation = PIRATE;
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
@@ -2648,5 +2682,40 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_NoRebirthEnable(ch);
 	ch.greeting = "Gr_Padre Domingues";
+	AddGameCharacter(n, ch);
+
+    	ch.old.name = "Pablo";
+   	ch.old.lastname = "Escriva";
+   	ch.name    = TranslateString("","Pablo");
+   	ch.lastname    = TranslateString("","Escriva");
+   	ch.id        = "Pablo Escriva";
+    	ch.model    = "9R_Purs";
+    	ch.sex = "man";
+    	ch.sound_type = "seaman";
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.questchar = true;
+    	ch.location    = "BC_ForgerHouse";
+    	ch.location.group = "goto";
+    	ch.location.locator = "goto5";
+    	ch.Dialog.Filename = "Pablo Escriva_dialog.c";
+ 	ch.greeting = "Gr_Francisco Cruz";
+    	ch.nation = PIRATE;
+    	ch.rank    = 5;
+    	ch.reputation = "40";
+    	ch.experience = "0";
+    	ch.skill.Leadership = "1";
+    	ch.skill.Fencing = "3";
+    	ch.skill.Sailing = "1";
+    	ch.skill.Accuracy = "1";
+    	ch.skill.Cannons = "1";
+    	ch.skill.Grappling = "1";
+    	ch.skill.Repair = "1";
+    	ch.skill.Defence = "2";
+    	ch.skill.Commerce = "7";
+    	ch.skill.Sneak = "7";
+    	ch.money = "10";
+	LAi_SetStayType(ch);
+    	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	AddGameCharacter(n, ch);
 }

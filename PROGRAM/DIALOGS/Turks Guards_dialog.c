@@ -40,7 +40,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "node_2":
-			dialog.text = DLG_TEXT[2];
+			dialog.text = DLG_TEXT[2] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + "!"; // DeathDaisy: added the gender thing
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "exit";
 		break;

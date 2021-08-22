@@ -1,4 +1,4 @@
-string DLG_TEXT[41] = { 
+string DLG_TEXT[48] = { 
 "What can I help you with? Medical care, spriritual consultation or military help?",
 "Oh, none. I'm looking for the governor. Is he around?",
 "Maybe he is. What if you do me a favour before I show you the way?",
@@ -28,8 +28,8 @@ string DLG_TEXT[41] = {
 "Yes...",
 "Later they were moved to a safer place - a real prison.",
 "Aha, and where would that be?",
-"The prison in....",
-"Thank you Governor for your time. Goodbye.",				//30
+"The prison no one ever has escaped from - the prison outside the Fort in Antigua.",
+"Thank you Governor for your time. Goodbye.",			//30
 "Just one more thing. The Order has among many other things a very valuable relic. Please don't try to steal it.",
 "Of course not. (very valuable hmm)",
 "Are you wounded or ill?",
@@ -40,5 +40,13 @@ string DLG_TEXT[41] = {
 "No, of course not Sir.",
 "Do you have any complaints about any of my men?",
 "Certainly not Captain.",
+"Hmm,... (so he can still be there) Do I have to pass through the Fort?",			//41
+"Certainly. Look we have a meeting here and you are interrupting us...",
+"Oh I'm really sorry for that. Just one more thing, Governor. If you would be so kind and helped me with a document of some kind...",
+"Alright maybe that's the quickest way. What was your name again?",
+"Very well. This paper will let you pass through the Fort and also visit the Prison.",
+"And all three were hanged later?",		//46
+"Only Stede Bonnet. One officer was killed and the third one pardoned.",
+
 
 };

@@ -143,7 +143,7 @@ void Whr_FogRainCheck(){
 			Weathers.Rain.MaxBlend = 95;
 			Weathers.Rain.DropLength = (1.5);
 			Weathers.Lightning.Enable = false;
-			Weathers.Rainbow.Enable = true;
+			if(theHour >= 6 && theHour < 20) {Weathers.Rainbow.Enable = true;}		//UZVER
 			Weathers.LightingLm = "storm";
 			Weathers.Sea.SunRoad.Color1 = argb(0,0,0,0);
 			Weathers.Sea.SunRoad.Color2 = argb(0,0,0,0);
@@ -195,9 +195,13 @@ void Whr_FogRainCheck(){
 				Weathers.Tornado = true;
 				Weathers.Lights = false;
 				if(!CheckAttribute(PChar, "skipWeatherLogs")) // PB
-				{
-					LogIt("Sir, she's coming onto blow!");
-				}
+				// DeathDaisy added a string here instead off GetMyAddressForm, because I thought it would be weird if your crew called you Señor or similar
+					string PCCaptainTitle;
+					if(PChar.sex == "woman")
+						PCCaptainTitle = "Ma'am";
+					else
+						PCCaptainTitle = "Sir";
+					LogIt(PCCaptainTitle + ", she's coming onto blow!");
 			}
 		}
 		Weathers.Rainbow.Texture = "weather\rainbow\rainbow.tga";

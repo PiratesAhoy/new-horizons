@@ -15,7 +15,7 @@ string DLG_TEXT[47] = {
 "No, I don't need your services.",
 "Me? You are kidding, captain, aren't you?",
 "Do I look like a frivolous fellow? How much do you want for your services?",
-"Just 1500 gold per month, sir, and I am completely at your service!",
+"Just 1500 gold per month, #ssir#, and I am completely at your service!",
 "All right, consider yourself hired. Welcome to our crew.",
 "I don't think that your services are worth that much money. Goodbye.",
 "Don't you understand? A new prisoner means that our governor will give us some money for his keep, and I'll snatch a part of it, heh-heh.",
@@ -44,7 +44,7 @@ string DLG_TEXT[47] = {
 "It's not just some fight, cap! It's a matter of honor. That guy called me a son of a jackal and a land-rat.",
 "No arguing! Get on the ship!",
 "A matter of honor? No one dares to insult my officers. En garde, scum.",
-"I thought you were a good man, cap...",
+"I thought you were a good #sgender#, cap...",
 "...",
 
 };

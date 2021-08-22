@@ -1,3 +1,7 @@
+// --> PW 12/2016 Build 14 4.1 ProcessTradeDecrease(),ProcessTradeIncrease(),ProcessSell() rewritten to allow multipliers and dynamic price changes
+// SellAllProcessReal(bool reset) revised to give same results as normal store transactions using same function calls 
+// minor changes to RefreshAllStrings () to conform <-- PW
+
 #define SHOW_MAIN	0
 #define SHOW_BUY	1
 #define SHOW_SELL	2
@@ -6,7 +10,7 @@
 #define HIGH_TRADE  3000	// LDH if trade is over this amount, it logs as a high value trade - 31Dec08
 
 int showType;
-int salePrice; //added by PW 
+
 int nCurScrollNum;
 string oldCurNode="";
 
@@ -155,34 +159,36 @@ void RefreshAllStrings()
 	    GameInterface.strings.GoodWeightSum = "" + GetGoodWeightByType(GetGoodsIndexForI(nCurScrollNum),nTradeQuantity);
 		// NK -->
 		int priceSum;
-		/*
-		if(showType==SHOW_BUY) {
-			priceSum = GetGoodPriceByType(&refStore, refCharacter, GetGoodsIndexForI(nCurScrollNum),nTradeQuantity,PRICE_TYPE_BUY);
-		} else {
-			priceSum = GetGoodPriceByType(&refStore, refCharacter, GetGoodsIndexForI(nCurScrollNum),nTradeQuantity,PRICE_TYPE_SELL);
-		}*/
-		if(showType == SHOW_BUY) { GameInterface.strings.CurPrice = MakeMoneyShow(GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -nTradeQuantity),MONEY_SIGN,MONEY_DELIVER);}
-		else { GameInterface.strings.CurPrice = salePrice ;}// Simpler method for selling prices PW
-		if(tradeLow==false) GameInterface.strings.priceSum = "" + nCurPrice;
-		else
+		
+		if(showType == SHOW_BUY)
 		{
-			if(showType == SHOW_BUY) GameInterface.strings.priceSum = "" + nCurPrice;
-			else GameInterface.strings.priceSum = "" + (nTradeQuantity/makeint(Goods[GetGoodsIndexForI(nCurScrollNum)].Units))*(GetStoreGoodsPrice(refStore,GetGoodsIndexForI(nCurScrollNum),PRICE_TYPE_SELL,GetMainCharacter(), nTradeQuantity)/4*3);
+			GameInterface.strings.CurPrice = MakeMoneyShow(GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -nTradeQuantity),MONEY_SIGN,MONEY_DELIVER);
 		}
+		if(showType == SHOW_SELL)
+		{
+			if(tradeLow==false)
+			{
+				GameInterface.strings.CurPrice = MakeMoneyShow(GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), nTradeQuantity-GetGoodsUnitSize()),MONEY_SIGN,MONEY_DELIVER);
+			}
+			else
+			{
+				GameInterface.strings.CurPrice = MakeMoneyShow((GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), nTradeQuantity-GetGoodsUnitSize())/4*3),MONEY_SIGN,MONEY_DELIVER);
+			}
+		}
+		if(showType == SHOW_BUY) GameInterface.strings.priceSum = "" + nCurPrice;
+		if(showType == SHOW_SELL) GameInterface.strings.priceSum = "" + nCurPrice;
 		if(nTradeQuantity > 0)
 		{
 			int moneyShow = 0;
-			// TIH --> div0 bugfix Jul20'06
 			float dividerByThis;
 			if ( GetGoodsUnitSize()>0 ) dividerByThis = nTradeQuantity/GetGoodsUnitSize();
 			if ( dividerByThis>0 ) moneyShow = MakeMoneyShow(makeint(nCurPrice/dividerByThis),MONEY_SIGN,MONEY_DELIVER);
-			// TIH <--
 			if(showType==SHOW_BUY) GameInterface.strings.priceSum = GameInterface.strings.priceSum + " (" + moneyShow + ")";
-			else
-			{
-				if(tradeLow==false) GameInterface.strings.priceSum = GameInterface.strings.priceSum + " (" + moneyShow + ")";
-				else GameInterface.strings.priceSum = GameInterface.strings.priceSum + " (" + MakeMoneyShow(GetStoreGoodsPrice(refStore,GetGoodsIndexForI(nCurScrollNum),PRICE_TYPE_SELL,GetMainCharacter(), nTradeQuantity)/4*3,MONEY_SIGN,MONEY_DELIVER) + ")";
-			}
+			if(showType == SHOW_SELL) GameInterface.strings.priceSum = GameInterface.strings.priceSum + " (" + moneyShow + ")";
+		//	{
+		//		if(tradeLow==false) GameInterface.strings.priceSum = GameInterface.strings.priceSum + " (" + moneyShow + ")";
+		//		else GameInterface.strings.priceSum = GameInterface.strings.priceSum + " (" + MakeMoneyShow(makeint((nCurPrice/4*3)/dividerByThis),MONEY_SIGN,MONEY_DELIVER) + ")";
+		//	}
 		}
 		else { GameInterface.strings.priceSum = GameInterface.strings.priceSum + " (0)"; }
 		// NK <--
@@ -204,7 +210,6 @@ void SetVariable()
 	nCurPrice = 0;
 	// NK <--
 	nTradeQuantity = 0;
-	salePrice = 0;
 }
 
 void FillScroll()
@@ -255,28 +260,25 @@ void FillScroll()
 
 void ProcessBuy()
 {
-//	EnableQuickControls(); // KK		// LDH is this really necessary? It messes up the options file and can crash the game - 31Jan09
 	nTradeQuantity = 0;
-	nCurPrice = 0; // NK
+	nCurPrice = 0; 
 	SetShowMode(SHOW_BUY);
 	RefreshAllStrings();
 }
-
 void ProcessSell()
 {
-//	EnableQuickControls(); // KK		// LDH is this really necessary? It messes up the options file and can crash the game - 31Jan09
-	// NK -->
-	salePrice = 0;
+	int i
+	int unitSize = GetGoodsUnitSize();
 	nTradeQuantity = 0;
 	nCurPrice = 0;
-//<-- new calculations using same function call as elsewhere in the file for getting linear average selling price PW
-	nTradeQuantity  = GetCargoGoods(refCharacter,GetGoodsIndexForI(nCurScrollNum));
-	nCurPrice = makeint( (GetStoreGoodsPrice(refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), 0) + GetStoreGoodsPrice(refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), GetCargoGoods(refCharacter, GetGoodsIndexForI(nCurScrollNum))) )/2);
-	salePrice = nCurPrice;
-	nCurPrice = salePrice * nTradeQuantity / GetGoodsUnitSize();
-//--> new calculations end PW
+	nTradeQuantity  = GetCargoGoods(refCharacter,GetGoodsIndexForI(nCurScrollNum))/unitSize;
+	for(i=0; i<nTradeQuantity; i++)
+	{
+		if(tradeLow==false) nCurPrice += makeint(GetStoreGoodsPrice(refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), i)) ;
+		else 	nCurPrice += makeint(GetStoreGoodsPrice(refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), i)/4*3) ;
+	}
+	nTradeQuantity  = nTradeQuantity  * unitSize;
 
-// NK <--
 	SetShowMode(SHOW_SELL);
 	RefreshAllStrings();
 }
@@ -311,8 +313,8 @@ void ProcessOk()
 		SetStoreGoods(refStore,GetGoodsIndexForI(nCurScrollNum),GetStoreGoodsQuantity(refStore,GetGoodsIndexForI(nCurScrollNum))+nTradeQuantity);
 		RemoveCharacterGoods(refCharacter,GetGoodsIndexForI(nCurScrollNum),nTradeQuantity);
 		// NK -->
-		if(tradeLow==false) exch = nCurPrice; //GetGoodPriceByType(&refStore, refCharacter, GetGoodsIndexForI(nCurScrollNum),nTradeQuantity,PRICE_TYPE_SELL);
-		else exch = nCurPrice/4*3;
+		exch = nCurPrice; //GetGoodPriceByType(&refStore, refCharacter, GetGoodsIndexForI(nCurScrollNum),nTradeQuantity,PRICE_TYPE_SELL);
+		
 		nPlayerMoney += exch;
 		nStoreMoney -= exch;
 		// NK <--
@@ -381,113 +383,99 @@ void ProcessCancel()
 
 void ProcessTradeDecrease()
 {
-// KK -->
+	int i
 	int mult = 1;
-//	if (GetQuickControl("alt")) mult = 100;
+	if (GetQuickControl("alt")) mult = 100;
 	if (GetQuickControl("shift")) mult = 10;
-	int unitSize = GetGoodsUnitSize() ;// mult removed to prevent price manipulation on inc / dec buy cycle PW
-// <-- KK
+	int unitSize = GetGoodsUnitSize();
+
 	if(showType==SHOW_BUY)
 	{
-		
-		// NK -->
-		if(nTradeQuantity - unitSize <= 0) { nTradeQuantity = 0; nCurPrice = 0; RefreshAllStrings(); return; }
-		nTradeQuantity -= unitSize;
-	
-		nCurPrice -= GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -nTradeQuantity); // KK //calc changed ,  mult removed to prevent price manipulation on inc dec cycle PW
-		/*if(nTradeQuantity / GetGoodsUnitSize() * GetGoodsUnitSize() != nTradeQuantity)
+		for(i=0; i<mult; i++)
 		{
-			nTradeQuantity = nTradeQuantity / GetGoodsUnitSize() * GetGoodsUnitSize();
-			nCurPrice = GetGoodPriceByType(refStore, GetMainCharacter(), GetGoodsIndexForI(nCurScrollNum), -nTradeQuantity, PRICE_TYPE_BUY);
-		}*/
+			if(nTradeQuantity - unitSize <= 0) { nTradeQuantity = 0; nCurPrice = 0; RefreshAllStrings(); continue; }
+			nTradeQuantity -= unitSize;
+			nCurPrice -= GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -nTradeQuantity - unitSize);
+		}
 	}
-	else
+	if(showType==SHOW_SELL)
 	{
-		unitSize = GetGoodsUnitSize() * mult; //PW
-
-// NK -->
-		if(nTradeQuantity - unitSize <= 0) return;
-		// if(nTradeQuantity - unitSize <= 0) { nTradeQuantity = 0; nCurPrice = 0; RefreshAllStrings(); return; }// resetting disturbs linear decrease/increase cycle on sell PW
-		nTradeQuantity -= unitSize;
-// KK -->
-		nCurPrice -= salePrice * mult; // simpler method PW
-
-		// <-- KK
-		/*if(nTradeQuantity / GetGoodsUnitSize() * GetGoodsUnitSize() != nTradeQuantity)
+		for(i=0; i<mult; i++)
 		{
-			nTradeQuantity = nTradeQuantity / GetGoodsUnitSize() * GetGoodsUnitSize();
-			nCurPrice = GetGoodPriceByType(refStore, GetMainCharacter(), GetGoodsIndexForI(nCurScrollNum), nTradeQuantity, PRICE_TYPE_SELL);
-		}*/
+			if(nTradeQuantity - unitSize <= 0) { nTradeQuantity = 0; nCurPrice = 0; RefreshAllStrings(); continue; }
+			nTradeQuantity -= unitSize;
+			if(tradeLow==false)
+			{
+				nCurPrice -= GetStoreGoodsPrice(refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), nTradeQuantity/ unitSize);
+			}
+			else
+			{
+				nCurPrice -= GetStoreGoodsPrice(refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), nTradeQuantity/ unitSize)/4*3;
+			}
+		}
 	}
-	// NK <--
 	RefreshAllStrings();
 }
 
 void ProcessTradeIncrease()
 {
-	if(nTradeQuantity <= 0) { nCurPrice = 0; } // NK
+	if(nTradeQuantity <= 0)  nCurPrice = 0;
 	int nCurQuantity = GetCargoGoods(refCharacter,GetGoodsIndexForI(nCurScrollNum));
-// KK -->
+	int i
 	int mult = 1;
-//	if (GetQuickControl("alt")) mult = 100;
+	if (GetQuickControl("alt")) mult = 100;
 	if (GetQuickControl("shift")) mult = 10;
-	int unitSize = GetGoodsUnitSize() * mult;
-// <-- KK
+	int unitSize = GetGoodsUnitSize();
 
 	if(showType==SHOW_BUY)
 	{
+		for(i=0; i<mult; i++)
+		{
+			int max1 = GetGoodQuantityByWeight(GetGoodsIndexForI(nCurScrollNum),GetCargoFreeSpace(refCharacter)+GetGoodWeightByType(GetGoodsIndexForI(nCurScrollNum),nCurQuantity)) - nCurQuantity;
+			// int max2 = GetGoodQuantityByPrice(&refStore, refCharacter, GetGoodsIndexForI(nCurScrollNum),nPlayerMoney,PRICE_TYPE_BUY);
+			int max3 = GetStoreGoodsQuantity(refStore,GetGoodsIndexForI(nCurScrollNum));
+			if(nTradeQuantity+unitSize>max1) continue; // calc altered to include unitSize for next increase PW
+			// if(nTradeQuantity+unitsSize>max2) return;
+			if(nTradeQuantity+ unitSize>max3) continue; // calc altered to include unitSize for next increase PW
+			// NK -->
+			if(GetGoodsIndexForI(nCurScrollNum) == GOOD_WHEAT)
+			{
+				if(GetStoreGoodsQuantity(&refStore, GetGoodsIndexForI(nCurScrollNum)) - nTradeQuantity <= tsize * MIN_FOOD_SCALAR) { return; }
+			}
+			// NK <--
 
-		int max1 = GetGoodQuantityByWeight(GetGoodsIndexForI(nCurScrollNum),GetCargoFreeSpace(refCharacter)+GetGoodWeightByType(GetGoodsIndexForI(nCurScrollNum),nCurQuantity)) - nCurQuantity;
-		// int max2 = GetGoodQuantityByPrice(&refStore, refCharacter, GetGoodsIndexForI(nCurScrollNum),nPlayerMoney,PRICE_TYPE_BUY);
-		int max3 = GetStoreGoodsQuantity(refStore,GetGoodsIndexForI(nCurScrollNum));
-		if(nTradeQuantity+unitSize>max1) return; // calc altered to include unitSize PW
-		// if(nTradeQuantity+unitsSize>max2) return;
-		if(nTradeQuantity+ unitSize>max3) return;// calc altered to include unitSize PW
-		// NK -->
-		if(GetGoodsIndexForI(nCurScrollNum) == GOOD_WHEAT)
-		{
-			if(GetStoreGoodsQuantity(&refStore, GetGoodsIndexForI(nCurScrollNum)) - nTradeQuantity <= tsize * MIN_FOOD_SCALAR) { return; }
-		}
-		// NK <--
+			// if(max1-nTradeQuantity < unitSize) unitSize = max1-nTradeQuantity; //dissallow partial units PW
+			//NK - if(max2-nTradeQuantity < unitSize) unitSize = max2-nTradeQuantity;
+			// if(max3-nTradeQuantity < unitSize) unitSize = max3-nTradeQuantity;//dissallow partial units PW
 
-		// if(max1-nTradeQuantity < unitSize) unitSize = max1-nTradeQuantity; //dissallow partial units PW
-		//NK - if(max2-nTradeQuantity < unitSize) unitSize = max2-nTradeQuantity;
-		// if(max3-nTradeQuantity < unitSize) unitSize = max3-nTradeQuantity;//dissallow partial units PW
-//PW-->
-		if (mult >1)
-		{
-			if(nCurPrice + mult * makeint((GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -nTradeQuantity) + GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), (-nTradeQuantity+unitSize)))/2)> nPlayerMoney) return; // NK
-			nTradeQuantity = nTradeQuantity + unitSize; // KK
-			nCurPrice += mult * makeint ((GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -nTradeQuantity) + GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(),(-nTradeQuantity+unitSize)))/2); // NK // KK//calc changed PW
+			if(nCurPrice + makeint (GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -( nTradeQuantity + unitSize)))  > nPlayerMoney) return;
+			nTradeQuantity = nTradeQuantity + unitSize;
+			nCurPrice += GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -(nTradeQuantity)) ;
 		}
-		else
-		{
-			if(nCurPrice + makeint (GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), nTradeQuantity ))  > nPlayerMoney) return; // NK//calc changed PW
-			nTradeQuantity = nTradeQuantity + unitSize; // KK
-			nCurPrice += makeint(GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), -(nTradeQuantity-unitSize))) ; // NK // KK//calc changed PW
-		}	
-//<--PW
 	}
 	if(showType==SHOW_SELL)
 	{
-		// NK -->
-		if(nTradeQuantity + unitSize > nCurQuantity) return; //calc altered PW
-		nTradeQuantity = nTradeQuantity + unitSize;
-		nCurPrice += salePrice * mult; //simpler process PW
+		for(i=0; i<mult; i++)
+		{
+			if(nTradeQuantity + unitSize > nCurQuantity) continue;
+
+			if(tradeLow==false)
+			{
+				if(nCurPrice + GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), nTradeQuantity/unitSize) >= nStoreMoney) return;
+			}
+			else
+			{
+				if(nCurPrice/4*3 + GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), nTradeQuantity/unitSize)/4*3 >= nStoreMoney) return;
+			}
+			int oldTQ = nTradeQuantity;
 	
-/* --> PW		if(tradeLow==false) { if(nCurPrice + GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), nTradeQuantity) >= nStoreMoney) return; }
-		else { if(nCurPrice/4*3 + GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), nTradeQuantity)/4*3 >= nStoreMoney) return; }
-		int oldTQ = nTradeQuantity;
-		// NK <--
-		nTradeQuantity = nTradeQuantity + unitSize;
-		if(nTradeQuantity>nCurQuantity) nTradeQuantity = nCurQuantity;
-// KK -->
-		if(tradeLow==false)
-			nCurPrice += mult * makeint(makefloat(nTradeQuantity)/ makefloat(oldTQ + unitSize)* makefloat(GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), oldTQ)));//calc changed PW
-		else
-			nCurPrice += mult * makeint(makefloat(nTradeQuantity)/ makefloat(oldTQ + unitSize)* makefloat(GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), oldTQ))/4*3); // NK//calc changed PW
-// <-- KK
-// PW -->*/
+			nTradeQuantity = nTradeQuantity + unitSize;
+
+			if(tradeLow==false)
+				nCurPrice += makeint(GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), oldTQ/unitSize));
+			else
+				nCurPrice += makeint(GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_SELL, GetMainCharacter(), oldTQ/unitSize)/4*3);
+		}
 	}
 	RefreshAllStrings();
 }
@@ -815,8 +803,9 @@ void SellAllProcess2()
 void SellAllProcessReal(bool reset)
 {
 	// NK <--
-	int c,i,m,p;
+	int c,i,m,p, j;
 	int tQuantity, needQty;
+	int Quantity;
 	string GoodStr;
 	ref mainRef = GetMainCharacter();
 	m = sti(mainRef.Money);
@@ -830,6 +819,7 @@ void SellAllProcessReal(bool reset)
 		GoodStr = Goods[i].name;
 // rewritten by MAXIMUS -->
 		int needMoney, buyQty;
+		int unitSize = sti( Goods[i].Units);
 //		tQuantity = GetCargoGoods(refCharacter,i);
 		// NK -->
 		if(reset)
@@ -847,8 +837,9 @@ void SellAllProcessReal(bool reset)
 							buyQty = 1+makeint(makefloat(GetCrewQuantity(refCharacter)) * FOOD_PER_CREW * WHEAT_DAYS * SupplyScalar); // TIH at least 1
 							if(GetStoreGoodsQuantity(refStore, i) - buyQty <= tsize * MIN_FOOD_SCALAR) buyQty = 0; // PW check town has food
 							if(GetStoreGoodsQuantity(refStore, i) < buyQty) buyQty = 0; //PW check store has quantity required
-							if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-							else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+							needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+							//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+							//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 							if(needMoney>nPlayerMoney) buyQty = 0;// PW
 							needQty = buyQty;//PW
 						}
@@ -860,36 +851,40 @@ void SellAllProcessReal(bool reset)
 						} else {
 							buyQty = 1+makeint(makefloat(GetCrewQuantity(refCharacter)) * FOOD_PER_CREW * RUM_DAYS * SupplyScalar); // TIH at least 1
 							if(GetStoreGoodsQuantity(refStore, i) < buyQty) buyQty = 0; //PW check store has quantity required
-							if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-							else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+							needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+							//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+							//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 							if(needMoney>nPlayerMoney) buyQty = 0;// PW
 							needQty = buyQty;//PW
 						}
 					}
 					if(i == GOOD_BALLS) 
 					{ 
-						buyQty = makeint(makefloat(GetMaxCannonQuantity(refCharacter)) * BALLS_PER * SupplyScalar); 
+						buyQty = unitSize * (1 + makeint(makefloat(GetMaxCannonQuantity(refCharacter)) * BALLS_PER * SupplyScalar / unitSize)); 
 						if(GetStoreGoodsQuantity(refStore, i) < buyQty) buyQty = 0; //PW check store has quantity required
-						if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-						else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+						needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+						//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+						//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 						if(needMoney>nPlayerMoney) buyQty = 0;//PW
 						needQty = buyQty; //PW
 					}
 					if(i == GOOD_GRAPES) 
 					{ 
-						buyQty = makeint(makefloat(GetMaxCannonQuantity(refCharacter)) * GRAPE_PER * SupplyScalar); 
+						buyQty = unitSize * (1 + makeint(makefloat(GetMaxCannonQuantity(refCharacter)) * GRAPE_PER * SupplyScalar / unitSize)); 
 						if(GetStoreGoodsQuantity(refStore, i) < buyQty) buyQty = 0; //PW check store has quantity required
-						if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-						else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+						needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+						//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+						//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 						if(needMoney>nPlayerMoney) buyQty = 0; //PW
 						needQty = buyQty; //PW
 					}
 					if(i == GOOD_KNIPPELS) 
 					{ 
-						buyQty = makeint(makefloat(GetMaxCannonQuantity(refCharacter)) * CHAIN_PER * SupplyScalar); 
+						buyQty = unitSize * (1 + makeint(makefloat(GetMaxCannonQuantity(refCharacter)) * CHAIN_PER * SupplyScalar / unitSize));
 						if(GetStoreGoodsQuantity(refStore, i) < buyQty) buyQty = 0; //PW check store has quantity required
-						if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-						else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+						needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+						//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+						//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 						if(needMoney>nPlayerMoney) needQty = 0; //PW
 						needQty = buyQty; //PW
 					}
@@ -898,10 +893,11 @@ void SellAllProcessReal(bool reset)
 						if (USE_REAL_CANNONS) { 
 							needQty = 0;// TIH do not autobuy bombs if the mod is ON - in case noTrade is not set  Jul14'06
 						} else {
-							buyQty = makeint(makefloat(GetMaxCannonQuantity(refCharacter)) * BOMBS_PER * SupplyScalar); 
+							buyQty = unitSize * (1 + makeint(makefloat(GetMaxCannonQuantity(refCharacter)) * BOMBS_PER * SupplyScalar / unitSize)); 
 							if(GetStoreGoodsQuantity(refStore, i) < buyQty) buyQty = 0; //PW check store has quantity required
-							if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-							else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+							needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+							//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+							//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 							if(needMoney>nPlayerMoney) needQty = 0; //PW
 							needQty = buyQty; //PW
 						}
@@ -920,10 +916,11 @@ void SellAllProcessReal(bool reset)
 							int shotQty = GetCargoGoods(refCharacter,GOOD_BALLS) + GetCargoGoods(refCharacter,GOOD_GRAPES) + GetCargoGoods(refCharacter,GOOD_KNIPPELS) + GetCargoGoods(refCharacter,GOOD_BOMBS);
 							int PowderPerShot = 0;
 							if(CheckAttribute(rCannon,"gunpowder")) PowderPerShot = sti(rCannon.gunpowder);
-							buyQty = makeint(POWDER_PER * shotQty * PowderPerShot * SupplyScalar);	// enough powder to fire POWDER_PER times the ammo you have on board
+							buyQty = unitSize *(1 + makeint(POWDER_PER * shotQty * PowderPerShot * SupplyScalar/unitSize));	// enough powder to fire POWDER_PER times the ammo you have on board
 							if(GetStoreGoodsQuantity(refStore, i) < buyQty) buyQty = 0; //PW check store has quantity required
-							if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-							else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+							needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+							//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+							//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 							if(needMoney>nPlayerMoney) buyQty = 0; //PW
 							needQty = buyQty;
 						}
@@ -932,16 +929,18 @@ void SellAllProcessReal(bool reset)
 					if(i == GOOD_SAILCLOTH) 
 					{ 
 						buyQty = makeint(makefloat(GetCharacterShipHP(refCharacter)) * SAIL_PER * SupplyScalar);// TIH RE-typo typo fix
-						if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-						else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+						needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+						//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+						//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 						if(needMoney>nPlayerMoney) needQty = 0;
 						else needQty = buyQty;
 					}
 					if(i == GOOD_PLANKS) 
 					{ 
 						buyQty = makeint(makefloat(GetCharacterShipHP(refCharacter)) * PLANKS_PER * SupplyScalar); 
-						if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL);
-						else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_SELL)/4*3;
+						needMoney = GetStoreGoodsPrice(&refStore, GetGoodsIndexForI(nCurScrollNum), PRICE_TYPE_BUY, GetMainCharacter(), buyQty/unitSize);
+						//if(tradeLow==false) needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY);
+						//else needMoney = GetGoodPriceByType(&refStore, mainRef, i, buyQty,PRICE_TYPE_BUY)/4*3;
 						if(needMoney>nPlayerMoney) needQty = 0;
 						else needQty = buyQty;
 					}
@@ -954,15 +953,25 @@ void SellAllProcessReal(bool reset)
 //		if( reset && needQty <= 0 ) { continue; }	// TIH bugfix [commented out by MAXIMUS for old-style AUTOBUY function]
 		if( reset && needQty > 0 )					// TIH bugfix
 		{
+			// PW: revised calculations -->
 			if(needQty > tQuantity)
 			{
+				int nTQ = 0;
 				tQuantity = needQty - tQuantity;
-				p = GetGoodPriceByType(&refStore, GetMainCharacter(), i, tQuantity, PRICE_TYPE_BUY); // NK
+				p=0;
+				Quantity = tQuantity/sti( Goods[i].Units ) ;
+				for(j=0; j<Quantity; j++)
+				{
+					nTQ = nTQ + sti( Goods[i].Units );
+					p += GetStoreGoodsPrice(refStore, i, PRICE_TYPE_BUY, GetMainCharacter(),-(nTQ));
+				//	p += GetGoodPriceByType(&refStore, GetMainCharacter(), i, j, PRICE_TYPE_BUY); // NK//PW
+				}
+			// PW: revised calculations <--
 				SetStoreGoods(refStore,i,GetStoreGoodsQuantity(refStore,i) - tQuantity);
 				SetCharacterGoods(refCharacter,i,needQty);
-				p = -p;
-				nPlayerMoney += p;
-				nStoreMoney -= p;
+				//p = -p;
+				nPlayerMoney -= p;
+				nStoreMoney += p;
 				c = c + p;
 				Log_SetStringToLog(XI_ConvertString(GoodStr) + ": " + tQuantity + " : " + p);
 				// LDH log high trades - 31Dec08
@@ -984,7 +993,7 @@ void SellAllProcessReal(bool reset)
 		}
 		if( tQuantity <= 0 ) { continue; }			// TIH bugfix
 		// NK <--
-
+		p=0;
 // LDH 26Nov06 replaced refCharacter with mainRef for quest goods
 		// TIH --> prevent the auto-sale of QUEST cargo from merchant jobs! Aug30'06
 		if (CheckAttribute(mainRef, "quest.generate_trade_quest.iQuantityGoods")) 
@@ -993,18 +1002,27 @@ void SellAllProcessReal(bool reset)
 			int iQuestTradeGoods = sti(mainRef.quest.generate_trade_quest.iTradeGoods);
 			if ( i == iQuestTradeGoods ) 
 			{
-				if ( tQuantity > iQuantityShipGoods ) { tQuantity = tQuantity - iQuantityShipGoods; }// sell off extra
+				if ( tQuantity > iQuantityShipGoods ) 
+				{
+					tQuantity = tQuantity - iQuantityShipGoods; // ready to sell off extra
+				}
 				else { continue; }// dont sell off what you need to complete the quest
 			}
 		}
 		//TIH <--
-
-		if(tradeLow==false) p = GetGoodPriceByType(&refStore, mainRef, i, tQuantity,PRICE_TYPE_SELL);
-		else 				p = GetGoodPriceByType(&refStore, mainRef, i, tQuantity,PRICE_TYPE_SELL)/4*3; // NK
+		//PW -->revised calculations
+		Quantity = tQuantity/sti( Goods[i].Units );
+		for(j=0; j<Quantity; j++)
+		{
+			if(tradeLow==false) p += makeint(GetStoreGoodsPrice(refStore, i, PRICE_TYPE_SELL, GetMainCharacter(), j));
+			else 				p += makeint(GetStoreGoodsPrice(refStore, i, PRICE_TYPE_SELL, GetMainCharacter(), j)/4*3); // NK
+		}
+		//tQuantity = tQuantity * GetGoodsUnitSize() ;
+//<--PW revised calculations
 		SetStoreGoods(refStore,i,GetStoreGoodsQuantity(refStore,i)+tQuantity);
 		RemoveCharacterGoods(refCharacter,i,tQuantity);
 
-		nPlayerMoney = nPlayerMoney + p;
+		nPlayerMoney += p;
 		nStoreMoney -= p; // NK
 		c = c + p;
 		Log_SetStringToLog(XI_ConvertString(GoodStr) + ": " + tQuantity + " : " + p);

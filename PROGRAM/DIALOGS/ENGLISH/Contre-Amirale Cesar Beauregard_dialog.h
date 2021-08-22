@@ -1,10 +1,10 @@
 string DLG_TEXT[37] = {
 ".....",
 ".....",
-"Monsieur, why are you disturbing me? I hope this is very important.",
+"#ssir#, why are you disturbing me? I hope this is very important.",
 "Bonjour monsieur, I am here to visit the Governor - Madame de Cussy.",
 "Bonjour monsieur, I am terribly sorry for interrupting you, but I wish an audience.",
-"I am sorry monsieur, but I am not the Governor. I am Contre-Amirale Cesar Beauregard, I have been sent by Louis XIV, himself assist our Governor to bring order in these buccaneer waters. Now tell me, why did you disturb me?",
+"I am sorry #ssir#, but I am not the Governor. I am Contre-Amirale Cesar Beauregard, I have been sent by Louis XIV, himself assist our Governor to bring order in these buccaneer waters. Now tell me, why did you disturb me?",
 "Work. I am seeking to aid France in her endeavours here.",
 "I am listening.",
 "In my travels, I have heard that the Spanish are treating French citizens with the utmost disregard.",

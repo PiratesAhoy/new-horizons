@@ -17,6 +17,14 @@ void ProcessDialogEvent()
 	iMonth = environment.date.month;
 	string lastspeak_date = iday + " " + iMonth;
 	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -446,14 +454,15 @@ void ProcessDialogEvent()
 			{
 				AddQuestRecord("Story_1stTaskReceived",2);
 				dialog.snd = "Voice\EVGO\EVGO027";
-				d.Text = DLG_TEXT[111];
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+				d.Text = PersuasionSuccess + DLG_TEXT[111];
 				Link.l1 = DLG_TEXT[112];
 				Link.l1.go = "exit";
 			}
 			else
 			{
 				dialog.snd = "Voice\EVGO\EVGO028";
-				d.Text = DLG_TEXT[113];
+				d.Text = PersuasionFailure + DLG_TEXT[113];
 				Link.l1 = DLG_TEXT[114];
 				Link.l1.go = "Story_1stTask_Male_14";
 				Link.l1 = DLG_TEXT[115];
@@ -492,7 +501,7 @@ void ProcessDialogEvent()
 				PlayStereoSound("INTERFACE\took_item.wav");
 				AddMoneyToCharacter(Pchar, -(10*(10 - CalcCharacterSkill(PChar,SKILL_COMMERCE)))); // NK
 				dialog.snd = "Voice\EVGO\EVGO031";	
-				d.Text = DLG_TEXT[122] + GetMyName(Pchar) + DLG_TEXT[123];
+				d.Text = DLG_TEXT[122] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) + DLG_TEXT[123];
 				Link.l1 = DLG_TEXT[124];
 				Link.l1.go = "exit";
 			}

@@ -332,8 +332,8 @@ void ProcessDialogEvent()
 
 		case "ANIMISTS_2":
 			Dialog.snd = "voice\SIHA\SIHA010";
-			dialog.text = DLG_TEXT[287] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[288])]) + DLG_TEXT[289];
-			link.l1 = DLG_TEXT[290];
+			dialog.text = DLG_TEXT[287] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[288])]) + DLG_TEXT[290];
+			link.l1 = DLG_TEXT[291];
 			link.l1.go = "exit";
 			pchar.quest.ANIMISTS = "after_samuelle";
 		break;

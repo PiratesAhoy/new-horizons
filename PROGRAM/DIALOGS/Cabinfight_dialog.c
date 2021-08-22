@@ -102,6 +102,14 @@ void ProcessDialogEvent()
 	else { bDeathFight = true; }
 	if(IsUsedAlliesModel(NPChar)) { bDeathFight = true; }//MAXIMUS: ally's twin will always be agressive [twin officers looks strange, not so?]
 //MAXIMUS: [if enemy captain is stronger than player, you'll fight with him] <--
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 	switch(Dialog.CurrentNode)
 	{
@@ -136,6 +144,7 @@ void ProcessDialogEvent()
 
 				// CTM for Sao Feng sidequest
 				case 2:
+					Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy: at least I think I added this
 					dialog.Text = DLG_TEXT[115];
 					Link.l1 = DLG_TEXT[93];
 					Link.l1.go = "exit_dark";
@@ -290,13 +299,13 @@ void ProcessDialogEvent()
 		case "officer":
 		    if(CalcCharacterSkill(NPChar,SKILL_LEADERSHIP)>CalcCharacterSkill(PChar,SKILL_LEADERSHIP))
 		    {
-				dialog.text = DLG_TEXT[25] + pNation + DLG_TEXT[26];
+				dialog.text = PersuasionFailure + DLG_TEXT[25] + pNation + DLG_TEXT[26];
 				link.l1 = DLG_TEXT[27];
 				link.l1.go = "kill";// pissy captains get dead! lol
 			}
 			else 
 			{
-				dialog.text = DLG_TEXT[28] + pNation + DLG_TEXT[29];
+				dialog.text = PersuasionSuccess + DLG_TEXT[28] + pNation + DLG_TEXT[29];
 				link.l1 = DLG_TEXT[30];
 				link.l1.go = "ShowSkills";
 				link.l2 = DLG_TEXT[31];
@@ -319,13 +328,13 @@ void ProcessDialogEvent()
 			realCrew = GetCrewQuantity(PChar);
 		    if(CalcCharacterSkill(NPChar,SKILL_LEADERSHIP)>CalcCharacterSkill(PChar,SKILL_LEADERSHIP))
 		    {
-				dialog.text = DLG_TEXT[25] + pNation + DLG_TEXT[26];
+				dialog.text = PersuasionFailure + DLG_TEXT[25] + pNation + DLG_TEXT[26];
 				link.l1 = DLG_TEXT[27];
 				link.l1.go = "kill";// pissy captains get dead! lol
 			}
 			else 
 			{
-				dialog.text = DLG_TEXT[28] + pNation + DLG_TEXT[29];
+				dialog.text = PersuasionSuccess + DLG_TEXT[28] + pNation + DLG_TEXT[29];
 				link.l1 = DLG_TEXT[30];
 				link.l1.go = "ShowSkills";
 				link.l2 = DLG_TEXT[31];
@@ -423,13 +432,13 @@ void ProcessDialogEvent()
 				{
 					NPChar.quest.OfficerPrice = makeint(NPChar.quest.OfficerPrice) - ptest*16;
 	//				dialog.Text = DLG_TEXT[42] + NPChar.quest.OfficerPrice + DLG_TEXT[38];
-					dialog.Text = DLG_TEXT[42] + CalcEncOfficerPrice(NPChar) + DLG_TEXT[38];		// LDH 16Apr09
+					dialog.Text = PersuasionSuccess + DLG_TEXT[42] + CalcEncOfficerPrice(NPChar) + DLG_TEXT[38];		// LDH 16Apr09
 					Link.l1 = DLG_TEXT[43];
 					Link.l1.go = "hire";
 				}
 				else
 				{
-					dialog.Text = DLG_TEXT[44];
+					dialog.Text = PersuasionFailure + DLG_TEXT[44];
 					Link.l1 = DLG_TEXT[40];
 					Link.l1.go = "hire";
 				}
@@ -464,7 +473,8 @@ void ProcessDialogEvent()
 			int enPower = sti(CalcCharacterSkill(NPChar,SKILL_LEADERSHIP) + CalcCharacterSkill(NPChar,SKILL_SNEAK) + CalcCharacterSkill(NPChar,SKILL_FENCING) + CalcCharacterSkill(NPChar,SKILL_CANNONS));
 			if(myPower<enPower)
 			{
-				dialog.text = DLG_TEXT[80];
+				Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)); // DeathDaisy
+				dialog.text = PersuasionFailure + DLG_TEXT[80];
 				link.l1 = DLG_TEXT[81];
 				link.l1.go = "officer";
 				link.l2 = DLG_TEXT[21] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + ".";
@@ -472,7 +482,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[78];
+				dialog.text = PersuasionSuccess + DLG_TEXT[78];
 				link.l1 = DLG_TEXT[79];
 				// link.l1.go = "Exit_companion";
 				link.l1.go = "exit_joined"; // Sulan 2010-06-12: Exit_companion causes CTD - reason so far unknown.
@@ -607,6 +617,8 @@ void ProcessDialogEvent()
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
+				if (NPChar.sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
+				else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
 				link.l4 = DLG_TEXT[76];
 				link.l4.go = "take_as_prisoner";
 			}
@@ -774,6 +786,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "kill":
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[66];
 			switch(Rand(1))
 			{
@@ -815,14 +828,14 @@ void ProcessDialogEvent()
 		// during sea battle with the ships of his compatriots. IT was my idea... I'll revive it, in course of time.
 
 			NPChar.quest.meeting = NPC_Meeting;
-			TIH_OfficerHiredProcess(NPChar, false, false, true, true, !UsableOfficer(NPChar));// bLowSalary, bAutoAssign, bPurgeCrud, bSetType, bCreateOfficer
-			DialogExit();
-			DialogMain(NPChar);//MAXIMUS
-
+			//Captains have some special perks so let's use them and never generate a new officer out of it. You can later assign them to a role if you want.
+			TIH_OfficerHiredProcess(NPChar, false, false, true, false, false);// bLowSalary, bAutoAssign, bPurgeCrud, bSetType, bCreateOfficer
+			//DialogMain(NPChar);//MAXIMUS //Levis: why would we need to talk to the guy after hireing automaticly?
 			boarding_enemy.status = "live";
 			boarding_enemy.position = "officer";
 			if(CheckAttribute(PChar, "TalkWithSurrenderedCaptain")) DeleteAttribute(PChar, "TalkWithSurrenderedCaptain"); // KK
 			LAi_EnableReload();// manual reload (allows looting of cabin before leaving)
+			DialogExit();
 		// TIH <-- adjusted method
 		break;
 

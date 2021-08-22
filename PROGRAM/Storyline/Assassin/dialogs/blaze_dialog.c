@@ -135,48 +135,6 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("blaze_fight_in_rheims_house_complete");
 		}
-		if (characters[GetCharacterIndex("Toff Oremans")].quest.daughter != "" && characters[GetCharacterIndex("Toff Oremans")].quest.daughter != "help_denied" && pchar.location == "Douwesen_port")
-		{
-			dialog.text = DLG_TEXT[40];
-			link.l1 = DLG_TEXT[41];
-			link.l1.go = "to_the_ship";
-			link.l2 = DLG_TEXT[42];
-			link.l2.go = "not_to_the_ship";
-		}
-		if (characters[getCharacterIndex("Toff Oremans")].quest.daughter == "bad_complete" || characters[getCharacterIndex("Toff Oremans")].quest.daughter == "good")
-		{
-			dialog.text = DLG_TEXT[43];
-			link.l1 = DLG_TEXT[44];
-			link.l1.go = "exit";
-			AddDialogExitQuest("teneken_in_the_ship");
-		}
-		if (CheckQuestAttribute("ANIMISTS", "letter_to_father_bernard"))
-		{
-			dialog.text = DLG_TEXT[45];
-			link.l1 = DLG_TEXT[46];
-			link.l1.go = "exit";
-		}
-		if (CheckQuestAttribute("ANIMISTS", "completed"))
-		{
-			dialog.text = DLG_TEXT[251];
-			link.l1 = DLG_TEXT[252];
-			link.l1.go = "exit";
-		}
-
-//Lucas
-
-		if (CheckQuestAttribute("Lucas", "ransom"))
-		{
-			dialog.text = DLG_TEXT[47];
-			link.l1 = DLG_TEXT[48];
-			link.l1.go = "Exit_sign";
-			link.l2 = DLG_TEXT[49];
-			link.l2.go = "Exit_eavesdrop";
-
-		}
-
-//Lucas
-
 	break;
 
 //SAVING TOFF'S DAUGHTER
@@ -207,6 +165,29 @@ void ProcessDialogEvent()
 		AddDialogExitQuest("not_to_the_ship");
 	break;
 //SAVING TOFF'S DAUGHTER
+
+	case "letter_to_father_bernard":
+		dialog.text = DLG_TEXT[45];
+		link.l1 = DLG_TEXT[46];
+		link.l1.go = "exit";
+		AddDialogExitQuest("to_the_muelle_church_with_letter2");
+	break;
+
+	case "Animists_killed":
+		dialog.text = DLG_TEXT[251];
+		link.l1 = DLG_TEXT[252];
+		link.l1.go = "exit";
+	break;
+
+//Lucas
+	case "Lucas":
+		dialog.text = DLG_TEXT[47];
+		link.l1 = DLG_TEXT[48];
+		link.l1.go = "Exit_sign";
+		link.l2 = DLG_TEXT[49];
+		link.l2.go = "Exit_eavesdrop";
+	break;
+//Lucas
 
 	case "goto_douwesen_tavern2_1":
 		dialog.text = DLG_TEXT[54] + characters[GetCharacterIndex(DLG_TEXT[55])].lastname + DLG_TEXT[56];

@@ -52,6 +52,7 @@ void QuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////
 
 		case "embora":
+			PChar.quest.disable_rebirth = true;
 			SetNextWeather("Foggy");
 			pchar.originalmodel = pchar.model
 			SetQuestHeader("Beginning_Rogue");
@@ -63,6 +64,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "meetcelestino":
+			DisableFastTravel(true);
             ChangeCharacterAddressGroup(CharacterFromID("Celestino Villalobos"), "Cuba_shore_03", "goto", "citizen01");
             LAi_SetActorType(characterFromID("Celestino Villalobos"));
 			LAi_ActorDialog(characterFromID("Celestino Villalobos"), pchar, "", 10.0, 1.0);
@@ -84,34 +86,33 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(PChar, false);
 			Locations[FindLocation("Cuba_shore_03")].reload.l1.disable = true;
 			Locations[FindLocation("Cuba_shore_03")].reload.l2.disable = true;
-
             ChangeCharacterAddressGroup(CharacterFromID("Enrique Padilla"), "Cuba_shore_03", "reload", "reload2_back");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Soldier_spa2_16", "reload", "reload2_back");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[SPAIN].fantomModel.m2, "reload", "reload2_back");
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "CUBAN_SOLDATS");
 			LAi_SetActorType(sld);
 			LAi_ActorFollow(sld, characterFromID("Enrique Padilla"), "", 10.0);
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Soldier_spa3_16", "reload", "reload2_back");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[SPAIN].fantomModel.m3, "reload", "reload2_back");
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "CUBAN_SOLDATS");
 			LAi_SetActorType(sld);
 			LAi_ActorFollow(sld, characterFromID("Enrique Padilla"), "", 10.0);
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Soldier_spa4_16", "reload", "reload2_back");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[SPAIN].fantomModel.m4, "reload", "reload2_back");
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "CUBAN_SOLDATS");
 			LAi_SetActorType(sld);
 			LAi_ActorFollow(sld, characterFromID("Enrique Padilla"), "", 10.0);
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Soldier_spa5_16", "reload", "reload2_back");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[SPAIN].fantomModel.m5, "reload", "reload2_back");
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "CUBAN_SOLDATS");
 			LAi_SetActorType(sld);
 			LAi_ActorFollow(sld, characterFromID("Enrique Padilla"), "", 10.0);
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Soldier_spa6_16", "reload", "reload2_back");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[SPAIN].fantomModel.m6, "reload", "reload2_back");
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "CUBAN_SOLDATS");
 			LAi_SetActorType(sld);
@@ -124,6 +125,15 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "LaCroix_jail":
+			if(GetCurrentFlag() != FRANCE)
+			{
+				sld = CharacterFromID("Bart Renault");
+				DeleteAttribute(sld, "questchar");
+				sld.nation = GetCurrentFlag();	// Bart is supposed to be the same nation as you
+				sld.nation.name = sld.nation;	// Necessary for "GetMyAddressForm" to work properly
+				SetRandomNameToCharacter(sld);	// Rename him to match his nationality
+			}
+
 			pchar.vcskip = true; // PB: Avoid unwanted characters in jail
 			DoQuestReloadToLocation("Havana_prison", "goto", "goto9","LaCroix_jail2");
 			Locations[FindLocation("Cuba_shore_03")].reload.l1.disable = false;
@@ -134,6 +144,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "LaCroix_jail2":
+			ChangeCharacterAddress(characterFromID("Enrique Padilla"), "None", "");
 			RemoveCharacterEquip(pchar, BLADE_ITEM_TYPE);
 			EnableEquip(pchar, BLADE_ITEM_TYPE, false);
 			EnableEquip(pchar, GUN_ITEM_TYPE, false);
@@ -324,6 +335,14 @@ void QuestComplete(string sQuestName)
 			pchar.quest.church.win_condition.l1 = "location";
 			pchar.quest.church.win_condition.l1.location = "Havana_church";
 			pchar.quest.church.win_condition = "church";
+
+			Pchar.quest.lecroix_remove_spaincommander.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.lecroix_remove_spaincommander.win_condition.l1.location = PChar.location;
+			Pchar.quest.lecroix_remove_spaincommander.win_condition = "lecroix_remove_spaincommander";
+		break;
+
+		case "lecroix_remove_spaincommander":
+			ChangeCharacterAddress(characterFromID("SpainCommander"), "None", "");
 		break;
 
 		case "church":
@@ -363,6 +382,9 @@ void QuestComplete(string sQuestName)
 			AddPassenger(Pchar, characterFromID("PadreGerardo"), 0);
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("PadreGerardo"));
 			LAi_SetOfficerType(characterFromID("PadreGerardo"));
+			Characters[GetCharacterIndex("PadreGerardo")].dialog.Filename = "Enc_Officer_dialog.c";
+			Characters[GetCharacterIndex("PadreGerardo")].dialog.CurrentNode = "hired";
+			Locations[FindLocation("Cuba_port")].vcskip = true;
 			pchar.quest.disguises.win_condition.l1 = "location";
 			pchar.quest.disguises.win_condition.l1 = "location";
 			pchar.quest.disguises.win_condition.l1.location = "Cuba_port";
@@ -387,6 +409,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "believedus":
+			DisableFastTravel(false);
+			PChar.quest.disable_rebirth = false;
 			HoistFlag(SPAIN);
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -401,12 +425,17 @@ void QuestComplete(string sQuestName)
 
 			LAi_SetPlayerType(pchar);
 			GiveModel2Player(pchar.originalmodel, true);
+            		SetModelfromArray(characterFromID("Crewmember_Havana"), GetModelIndex("Sailor4"));
+            		SetModelfromArray(characterFromID("Crewmember_Jean3"), GetModelIndex("Sailor6"));
+            		SetModelfromArray(characterFromID("Crewmember_Jean2"), GetModelIndex("Sailor3"));
+			SetModelfromArray(characterFromID("Crewmember_Jean1"), GetModelIndex("Sailor5"));
 			Locations[FindLocation("Havana_town_05")].reload.l3.disable = false;
 			GiveShip2Character(pchar,"PO_Fleut50","Miguel de Cervantes",-1,SPAIN,true,true);
 			PlaceFleetNearShore("Cuba_port");
 
 			QuestToSeaLogin_PrepareLoc("Cuba", "reload", "reload_3", false);
 			QuestToSeaLogin_Launch();
+			DeleteAttribute(&Locations[FindLocation("Cuba_port")],"vcskip");
 		break;
 
 		case "seeyou":
@@ -559,6 +588,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "captured_smuggler_ship2":
+			DisableFastTravel(false);
+			PChar.quest.disable_rebirth = false;
 			AddQuestRecord("Beginning_Rogue", 4);
 			CloseQuestHeader("Beginning_Rogue");
 			Locations[FindLocation("smuggler_ship")].reload.l1.disable = false;
@@ -567,6 +598,308 @@ void QuestComplete(string sQuestName)
 			QuestToSeaLogin_PrepareLoc("Cuba", "reload", "reload_2", false);
 			QuestToSeaLogin_Launch();
 		break;
+		
+///////////////////////////////////////////////////////////////
+///// A FAMILY' STORY
+///////////////////////////////////////////////////////////////
+
+		case "madero_start":
+			SetEnterLocationQuest("Conceicao_town", "madero_start_check", 0);
+		break;
+
+		case "madero_start_check":
+			if(makeint(PChar.rank) >= 10)
+			{
+				PlaceCharacter(characterFromID("Alonso Madero"), "goto");
+				LAi_SetActorType(characterFromID("Alonso Madero"));
+				Characters[GetCharacterIndex("Alonso Madero")].dialog.currentnode = "begin_1";
+				LAi_ActorDialog(characterFromID("Alonso Madero"), pchar, "", 2.0, 1.0);	
+			}
+		break;
+
+		case "recusar_oferta":
+			DeleteEnterLocationQuest("Conceicao_town", "madero_start_check");
+			LAi_SetActorType(characterFromID("Alonso Madero"));
+			LAi_ActorRunToLocation(characterFromID("Alonso Madero"), "reload", "reload4", "none", "", "", "", 0.0);	
+			break;
+
+		case "aceitar_oferta":
+			DeleteEnterLocationQuest("Conceicao_town", "madero_start_check");		
+			ChangeCharacterAddressGroup(CharacterFromID("Elvira Suarez"), "Suarez_House", "goto", "goto8");
+			LAi_SetActorType(characterFromID("Alonso Madero"));
+			LAi_ActorRunToLocation(characterFromID("Alonso Madero"), "reload", "reload4", "none", "", "", "", 0.0);
+			Characters[GetCharacterIndex("Elvira Suarez")].dialog.currentnode = "begin_1";			
+			SetQuestHeader("Family_Story");
+			AddQuestRecord("Family_Story", 1);			
+			break;
+
+		case "recusar_oferta_2":		
+			AddQuestRecord("Family_Story", 2);
+			CloseQuestHeader("Family_Story");
+			break;
+
+		case "aceitar_oferta_2":
+			PChar.quest.kidnapping = "abel_barco";
+			AddQuestRecord("Family_Story", 3);			
+			break;			
+
+		case "encontrar_abel":
+			Locations[FindLocation("Tortuga_port")].reload.l11.disable = 1;		
+			AddQuestRecord("Family_Story", 4);		
+			PChar.quest.kidnapping.over = "yes";		
+
+			PChar.quest.ver_abel.win_condition.l1 = "Timer";			
+			PChar.quest.ver_abel.win_condition.l1 = "Timer";
+			PChar.quest.ver_abel.win_condition.l1.date.day = GetAddingDataDay(0,0,1);
+			PChar.quest.ver_abel.win_condition.l1.date.month = GetAddingDataMonth(0,0,1);
+			PChar.quest.ver_abel.win_condition.l1.date.year = GetAddingDataYear(0,0,1);
+			PChar.quest.ver_abel.win_condition = "encontrar_abel_2";
+			break;
+			
+		case "encontrar_abel_2":
+			AddQuestRecord("Family_Story", 5);		
+			ChangeCharacterAddressGroup(CharacterFromID("Abel Barco"), "Santiago_town_exit2", "goto", "citizen03");
+			Characters[GetCharacterIndex("Abel Barco")].dialog.currentnode = "begin_1";	
+			break;
+
+		case "combater_abel":
+			LAi_SetImmortal(characterFromID("Abel Barco"), true);		
+			LAi_SetActorType(characterFromID("Abel Barco"));
+			LAi_ActorAttack(CharacterFromID("Abel Barco"), Pchar, "");
+		
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "pirat3", "goto", "locator8");
+			GiveItem2Character(sld,"blade2");
+			EquipCharacterByItem(sld,"blade2");
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "PIRATES_ABEL");
+
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "pirat4", "goto", "locator8");
+			GiveItem2Character(sld,"blade2");
+			EquipCharacterByItem(sld,"blade2");
+			LAi_SetHP(sld, 80.0, 80.0);
+			LAi_group_MoveCharacter(sld, "PIRATES_ABEL");
+
+			LAi_group_FightGroups("PIRATES_ABEL", LAI_GROUP_PLAYER, true);
+
+			LAi_group_SetCheck("PIRATES_ABEL", "desistir_abel");
+			break;
+
+		case "desistir_abel":
+			LAi_SetActorType(characterFromID("Abel Barco"));
+			Characters[GetCharacterIndex("Abel Barco")].dialog.currentnode = "begin_5";
+			LAi_ActorDialog(characterFromID("Abel Barco"), pchar, "", 2.0, 1.0);
+			break;
+
+		case "ir_tortuga":
+			Locations[FindLocation("Tortuga_port")].models.day.locators = "Tortuga_lBOP_day";
+			Locations[FindLocation("Tortuga_port")].models.night.locators = "Tortuga_lBOP_night";
+			Locations[FindLocation("Tortuga_port")].locators_radius.goto.goto40 = 2.0;			
+			ChangeCharacterAddressGroup(CharacterFromID("kidnapper_1"), "Tortuga_port", "reload", "brothel");	
+			ChangeCharacterAddressGroup(CharacterFromID("kidnapper_2"), "Tortuga_port", "goto", "goto34");
+			Characters[GetCharacterIndex("kidnapper_1")].dialog.currentnode = "begin_1";
+			Characters[GetCharacterIndex("kidnapper_2")].dialog.currentnode = "begin_1";			
+			AddQuestRecord("Family_Story", 6);	
+			LAi_SetActorType(characterFromID("Abel Barco"));
+			LAi_ActorRunToLocation(characterFromID("Abel Barco"), "reload", "reload2", "none", "", "", "", 4.0);
+			break;	
+			
+		case "ir_janela":
+			Characters[GetCharacterIndex("kidnapper_1")].dialog.currentnode = "First time";
+			Characters[GetCharacterIndex("kidnapper_2")].dialog.currentnode = "First time";		
+			AddQuestRecord("Family_Story", 7);
+
+			pchar.quest.ate_janela.win_condition.l1 = "locator";			
+			pchar.quest.ate_janela.win_condition.l1 = "locator";
+			pchar.quest.ate_janela.win_condition.l1.location = "Tortuga_port";
+			pchar.quest.ate_janela.win_condition.l1.locator_group = "goto";
+			pchar.quest.ate_janela.win_condition.l1.locator = "goto40";
+			pchar.quest.ate_janela.win_condition = "ir_suarez_quarto";
+            break;
+
+		case "ir_suarez_quarto":	
+            DoQuestReloadToLocation("Tortuga_Pirate_House", "goto", "goto1" ,"falar_suarez");
+            break;
+
+		case "falar_suarez":
+			ChangeCharacterAddressGroup(characterFromID("Fernando Suarez"), "Tortuga_Pirate_House", "reload", "reload1");
+			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_1";			
+			LAi_SetActorType(characterFromID("Fernando Suarez"));
+			LAi_ActorDialog(characterFromID("Fernando Suarez"), pchar, "", 5.0, 1.0);
+            break;
+
+		case "ir_santiago":
+			HoistFlag(PIRATE);			
+	        LAi_SetOfficerType(characterFromID("Fernando Suarez"));
+			SetOfficersIndex(PChar, -1, GetCharacterIndex("Fernando Suarez"));
+			GiveItem2Character(CharacterFromId("Fernando Suarez"), "blade44");
+			EquipCharacterByItem(CharacterFromId("Fernando Suarez"), "blade44");
+			GiveItem2Character(CharacterFromId("Fernando Suarez"), "pistol1");
+			EquipCharacterByItem(CharacterFromId("Fernando Suarez"), "pistol1");
+			
+			ChangeCharacterAddressGroup(CharacterFromID("kidnapper_1"), "none", "", "");	
+			ChangeCharacterAddressGroup(CharacterFromID("kidnapper_2"), "none", "", "");	
+			ChangeCharacterAddressGroup(CharacterFromID("kidnapper_3"), "none", "", "");
+			
+			QuestToSeaLogin_PrepareLoc("Hispaniola", "reload", "reload_7", true);
+			QuestToSeaLogin_Launch();
+			AddQuestRecord("Family_Story", 8);
+			
+			Pchar.quest.ate_santiago.win_condition.l1 = "location";
+			Pchar.quest.ate_santiago.win_condition.l1 = "location";
+			Pchar.quest.ate_santiago.win_condition.l1.location = "Santiago_port";
+			PChar.quest.ate_santiago.win_condition = "explicar_suarez";
+            break;
+
+		case "explicar_suarez":
+			Locations[FindLocation("Tortuga_port")].models.day.locators = "Tortuga_l_day";
+			Locations[FindLocation("Tortuga_port")].models.night.locators = "Tortuga_l_night";		
+            Locations[FindLocation("Santiago_Tavern")].vcskip = true;		
+			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_5";		
+			LAi_SetActorType(characterFromID("Fernando Suarez"));
+			LAi_ActorDialog(characterFromID("Fernando Suarez"), pchar, "", 5.0, 1.0);
+            break;
+			
+		case "ir_taberna":
+			RemovePassenger(pchar, characterFromID("Fernando Suarez"));
+			RemoveCharacterCompanion(pchar, characterFromID("Fernando Suarez"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Fernando Suarez"));
+            DoQuestReloadToLocation("Santiago_Tavern", "sit", "sit6" ,"ir_taberna2");
+            break;					
+			
+		case "ir_taberna2":	
+			ChangeCharacterAddressGroup(characterFromID("Fernando Suarez"), "Santiago_Tavern", "sit", "sit7");
+			LAi_SetActorType(characterFromID("Fernando Suarez"));
+			LAi_SetSitType(characterFromID("Fernando Suarez"));			
+			LAi_SetActorType(pchar);
+			LAi_ActorSetSitMode(pchar);
+			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_8";		
+			LAi_ActorWaitDialog(CharacterFromID("Fernando Suarez"), Pchar);
+			LAi_ActorDialog(pchar, characterFromID("Fernando Suarez"),"", 10.0, 10.0);
+            break;
+			
+		case "meet_chaparro":
+			DeleteAttribute(&Locations[FindLocation("Santiago_Tavern")],"vcskip");		
+		    LAi_SetPlayerType(pchar);
+			ChangeCharacterAddressGroup(CharacterFromID("Arnaldo Chaparro"), "Cartographer_House", "sit", "sit1");					
+            DoQuestReloadToLocation("Santiago_Tavern", "goto", "goto6" ,"meet_chaparro2");		
+            break;				
+
+		case "meet_chaparro2":	
+			ChangeCharacterAddressGroup(characterFromID("Fernando Suarez"), "Santiago_Tavern", "goto", "goto2");
+	        LAi_SetOfficerType(characterFromID("Fernando Suarez"));
+			SetOfficersIndex(PChar, -1, GetCharacterIndex("Fernando Suarez"));			
+			Characters[GetCharacterIndex("Arnaldo Chaparro")].dialog.currentnode = "begin_1";				
+			AddQuestRecord("Family_Story", 9);				
+            break;
+			
+		case "ir_ile_vache":
+			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_23";				
+			LAi_SetActorType(characterFromID("Fernando Suarez"));
+			LAi_ActorDialog(characterFromID("Fernando Suarez"), pchar, "", 5.0, 1.0);	
+            break;					
+
+		case "ir_ile_vache2":
+			LAi_SetActorType(characterFromID("Fernando Suarez"));		
+	        LAi_SetOfficerType(characterFromID("Fernando Suarez"));		
+			AddQuestRecord("Family_Story", 10);
+
+			Pchar.quest.ir_vache.win_condition.l1 = "location";			
+			Pchar.quest.ir_vache.win_condition.l1 = "location";
+			Pchar.quest.ir_vache.win_condition.l1.location = "Hispaniola_shore_04";
+			PChar.quest.ir_vache.win_condition = "search_bart";			
+            break;
+
+		case "search_bart":
+			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_24";				
+			LAi_SetActorType(characterFromID("Fernando Suarez"));
+			LAi_ActorDialog(characterFromID("Fernando Suarez"), pchar, "", 5.0, 1.0);	
+            break;
+
+		case "search_bart2":
+	        LAi_SetOfficerType(characterFromID("Fernando Suarez"));
+			
+			Pchar.quest.find_bart.win_condition.l1 = "location";			
+			Pchar.quest.find_bart.win_condition.l1 = "location";
+			Pchar.quest.find_bart.win_condition.l1.location = "Hispaniola_Grot";
+			PChar.quest.find_bart.win_condition = "encontrar_corpo";				
+            break;
+
+		case "encontrar_corpo":
+            LAi_SetStayType(characterFromID("Fernando Suarez"));		
+			ChangeCharacterAddressGroup(characterFromID("Fernando Suarez"), "Hispaniola_Grot", "monsters", "monster2");
+			sld = LAi_CreateFantomCharacter(false, 0, true, false, 0.25, "Skel3", "monsters", "monster4");
+		    sld.name = "Bartolomeu";
+			sld.lastname = "Portugues";			
+			LAi_SetActorType(sld);
+			LAi_ActorSetLayMode(sld);	
+			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_25";
+            break;
+
+		case "voltar_praia":
+			RemovePassenger(pchar, characterFromID("Fernando Suarez"));
+			RemoveCharacterCompanion(pchar, characterFromID("Fernando Suarez"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Fernando Suarez"));	
+            DoQuestReloadToLocation("Hispaniola_shore_04", "goto", "citizen08" ,"embarquar");		
+            break;
+
+		case "embarquar":
+			ChangeCharacterAddressGroup(characterFromID("Fernando Suarez"), "Hispaniola_shore_04", "goto", "locator12");			
+			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_27";				
+			LAi_SetActorType(characterFromID("Fernando Suarez"));
+			LAi_ActorDialog(characterFromID("Fernando Suarez"), pchar, "", 5.0, 1.0);	
+            break;
+
+		case "voltar_havana":
+	        LAi_SetOfficerType(characterFromID("Fernando Suarez"));
+			SetOfficersIndex(PChar, -1, GetCharacterIndex("Fernando Suarez"));				
+			Characters[GetCharacterIndex("Elvira Suarez")].dialog.currentnode = "begin_11";		
+			AddQuestRecord("Family_Story", 11);
+            break;
+
+		case "adeus_fernando":		
+			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_28";				
+			LAi_SetActorType(characterFromID("Fernando Suarez"));
+			LAi_ActorDialog(characterFromID("Fernando Suarez"), pchar, "", 5.0, 1.0);	
+            break;
+
+		case "deixar_suarez":
+			DisableFastTravel(true);
+			DisableMenuLaunch(true);		
+            LAi_SetCitizenType(characterFromID("Fernando Suarez"));		
+			PlayStereoSound("INTERFACE\took_item.wav");
+			GiveItem2Character(Pchar, "bladeBP");
+
+			Pchar.quest.fight_acre.win_condition.l1 = "location";			
+			Pchar.quest.fight_acre.win_condition.l1 = "location";
+			Pchar.quest.fight_acre.win_condition.l1.location = "Havana_Town_02";
+			PChar.quest.fight_acre.win_condition = "combat_acre";			
+            break;
+
+		case "combat_acre":
+			ChangeCharacterAddressGroup(characterFromID("Robert Acre"), "Havana_Town_02", "goto", "goto16");
+			
+			LAi_SetActorType(characterFromID("Robert Acre"));
+			LAi_NoRebirthEnable(characterFromID("Robert Acre"));
+			LAi_ActorAttack(CharacterFromID("Robert Acre"), Pchar, "");
+
+			pchar.quest.pirate_died.win_condition.l1 = "NPC_Death";
+			pchar.quest.pirate_died.win_condition.l1.character = "Robert Acre";
+			pchar.quest.pirate_died.win_condition = "final_estoria";
+            break;
+
+		case "final_estoria":
+			DisableFastTravel(false);
+			DisableMenuLaunch(false);		
+			Locations[FindLocation("Tortuga_port")].reload.l11.disable = 0;		
+			AddQuestRecord("Family_Story", 12);
+			CloseQuestHeader("Family_Story");
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 20000);
+				AddPartyExpChar(pchar, "Sneak", 200);
+			}
+			else { AddPartyExp(pchar, 20000); }			
+            break;			
 
 		PChar.questnotfound = true; // PB: Testing
 	}

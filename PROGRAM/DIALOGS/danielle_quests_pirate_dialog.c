@@ -32,6 +32,8 @@ void ProcessDialogEvent()
 
 			dialog.snd = "Voice\DAQU\DAQU001";
 			
+			Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
+			
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "exit";
@@ -51,7 +53,8 @@ void ProcessDialogEvent()
 				link.l1.go = "exit";
 				AddDialogExitQuest("fight_with_other_bandits_in_muelle_town_exit_3");
 			}
-			if (pchar.quest.gambling_with_girl == "prisoned")
+//			if (pchar.quest.gambling_with_girl == "prisoned")
+			if (CheckQuestAttribute("gambling_with_girl", "prisoned"))
 			{
 				dialog.snd = "Voice\DAQU\DAQU004";
 				dialog.text = DLG_TEXT[6];

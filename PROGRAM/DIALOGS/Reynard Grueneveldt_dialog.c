@@ -192,6 +192,7 @@ void ProcessDialogEvent()
 
 		case "ANIMISTS_2":
 			Dialog.snd = "voice\REGR\REGR016";
+			Preprocessor_Add("person", PChar.sex);
 			dialog.text = DLG_TEXT[40];
 			link.l1 = DLG_TEXT[41];
 			link.l1.go = "ANIMISTS_3";
@@ -302,6 +303,99 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[151];
 			link.l1.go = "exit";
 			AddDialogExitQuest("dehors_townhall");
+		break;
+
+		case "kapitein_arrest1":
+			link.l1 = GetMyFullName(CharacterFromID("Reynard Grueneveldt")) + DLG_TEXT[153];
+			if (PChar.model == Nations[HOLLAND].fantomModel.m0)
+			{
+				dialog.text = DLG_TEXT[152];
+				link.l1.go = "kapitein_arrest2";
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[0];
+				link.l1.go = "kapitein_rumbled";
+			}
+		break;
+
+		case "kapitein_arrest2":
+			dialog.text = DLG_TEXT[154];
+			link.l1 = DLG_TEXT[155];
+			link.l1.go = "kapitein_arrest3";
+		break;
+
+		case "kapitein_arrest3":
+			dialog.text = DLG_TEXT[156];
+			link.l1 = DLG_TEXT[157];
+			link.l1.go = "kapitein_arrest4";
+		break;
+
+		case "kapitein_arrest4":
+			dialog.text = DLG_TEXT[158];
+			link.l1 = DLG_TEXT[159];
+			AddDialogExitQuest("kapitein_goto_chest");
+			link.l1.go = "exit";
+		break;
+
+		case "kapitein_rumbled":
+			Preprocessor_Add("person", PChar.sex);
+			dialog.text = DLG_TEXT[160];
+			link.l1 = DLG_TEXT[161];
+			AddDialogExitQuest("kapitein_busted");
+			link.l1.go = "exit";
+		break;
+
+		case "kapitein_trial1":
+			dialog.text = GetMyFullName(PChar) + DLG_TEXT[162];
+			link.l1 = DLG_TEXT[163];
+			link.l1.go = "kapitein_trial2";
+		break;
+
+		case "kapitein_trial2":
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
+			dialog.text = DLG_TEXT[164] + GetMySimpleName(CharacterFromID("drunk_soldier")) + DLG_TEXT[165];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "kapitein_trial3":
+			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
+			if (PChar.sex == "woman") Preprocessor_Add("pronoun2", XI_ConvertString("her"));
+			else Preprocessor_Add("pronoun2", XI_ConvertString("his"));
+			dialog.text = DLG_TEXT[166] + GetMySimpleName(CharacterFromID("assisting_soldier")) + DLG_TEXT[167];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "kapitein_trial4":
+			dialog.text = "";
+			link.l1 = DLG_TEXT[168] + GetMySimpleName(CharacterFromID("assisting_soldier")) + DLG_TEXT[169];
+			link.l1.go = "kapitein_end_trial";
+		break;
+
+		case "kapitein_end_trial":
+			dialog.text = DLG_TEXT[170];
+			link.l1 = DLG_TEXT[171];
+			link.l1.go = "exit";
+		break;
+
+		case "kapitein_pardon":
+			dialog.text = DLG_TEXT[172] + GetMySimpleName(PChar) + DLG_TEXT[173];
+			link.l1 = DLG_TEXT[174];
+			link.l1.go = "kapitein_pardon2";
+		break;
+
+		case "kapitein_pardon2":
+			dialog.text = DLG_TEXT[175];
+			link.l1 = DLG_TEXT[176];
+			link.l1.go = "kapitein_pardon3";
+		break;
+
+		case "kapitein_pardon3":
+			dialog.text = DLG_TEXT[177];
+			link.l1 = DLG_TEXT[178];
+			link.l1.go = "exit";
 		break;
 	}
 }

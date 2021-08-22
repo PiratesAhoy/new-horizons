@@ -115,7 +115,12 @@ void ProcessDialogEvent()
 			}
 			else { AddPartyExp(pchar, 1000); }
 			npchar.quest.son = "done";
-			NextDiag.TempNode = "Fourth time";
+			if (Characters[GetCharacterIndex("Rachel Blacque")].quest.badguy == "dead")
+			{
+				NextDiag.TempNode = "Third time";
+				ChangeCharacterAddress(characterFromID("Marc Blacque"), "None", "");
+			}
+			else NextDiag.TempNode = "Fourth time";
 		break;
 		// BT  For hire of Marc -->
 		case "Third time":

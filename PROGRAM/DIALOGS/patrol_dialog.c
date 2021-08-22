@@ -64,6 +64,7 @@ void ProcessDialogEvent()
 					link.l1 = DLG_TEXT[5] + GetMyFullName(PChar) + DLG_TEXT[6];
 					link.l1.go = "sorry";
 				} else {
+					Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 					Dialog.text = DLG_TEXT[21];
 					link.l1 = DLG_TEXT[22];
 					link.l1.go = "Exit";
@@ -73,6 +74,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "bribe":
+			Preprocessor_Add("pronoun", GetMyAddressForm(npchar, pchar, ADDR_GENDER, false, false)); // DeathDaisy
 			AddMoneytoCharacter(Pchar, -200);
 			Dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];
@@ -98,6 +100,7 @@ void ProcessDialogEvent()
 		case "sorry":
 			if(lcn.type != "military" )
 			{
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
 				Dialog.text = DLG_TEXT[17];
 				link.l1 = DLG_TEXT[18];
 				link.l1.go = "exit";

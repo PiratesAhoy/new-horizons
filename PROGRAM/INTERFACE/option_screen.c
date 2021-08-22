@@ -3255,6 +3255,7 @@ void CreateScrollChanger(string optName)
 	GameInterface.SETTINGSSHIPSLIST.ImagesGroup.t3 = "SHIPS2";
 	GameInterface.SETTINGSSHIPSLIST.ImagesGroup.t4 = "SHIPS3";
 	GameInterface.SETTINGSSHIPSLIST.ImagesGroup.t5 = "SHIPS4";
+	GameInterface.SETTINGSSHIPSLIST.ImagesGroup.t6 = "SHIPS5";
 
 	for(int i=0; i<CheckForStringsCount("NEW_SHIP")+1; i++)
 	{

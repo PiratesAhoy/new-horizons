@@ -264,7 +264,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[39];
+				dialog.text = DLG_TEXT[39] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ".";
 				link.l1 = DLG_TEXT[40];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);

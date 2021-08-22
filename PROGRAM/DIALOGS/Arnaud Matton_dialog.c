@@ -17,6 +17,14 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	PChar.storekeeper.Idx = -1;//MAXIMUS
+	
+	// DeathDaisy: Persuasion tags for the skill checks, if enabled
+	string PersuasionSuccess = "";
+	string PersuasionFailure = "";
+	if(PERSUASION_TAGS){ 
+		PersuasionSuccess = XI_ConvertString("Persuasion_Success") + " ";
+		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
+	}
 
 
 	switch(Dialog.CurrentNode)
@@ -61,14 +69,39 @@ void ProcessDialogEvent()
 					link.l2 = pcharrepphrase(DLG_TEXT[16], DLG_TEXT[17]);
 					link.l2.go = "ransom_bad";
 				}
-				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "enemy_forever")
+				
+//PW ---> exceptions for Thomas O'Reily and store looting
+				if ((characters[GetCharacterIndex("Sabine Matton")].quest.hire == "enemy_forever") && (Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job == "1") && (GetSquadronGoods(PChar,GOOD_SILK)>= 200 ))
+				{
+					dialog.snd = "Voice\ARMA\ARMA006";
+					dialog.text = DLG_TEXT[315] + DLG_TEXT[57] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[58])]) + DLG_TEXT[60];
+					//dialog.text = DLG_TEXT[57] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[58])]) + DLG_TEXT[60];
+					
+					link.l1 = DLG_TEXT[311];
+					Link.l1.go = "First_job_done_enemy";
+					
+				}					
+
+				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "enemy_forever" && LAi_IsCapturedLocation)
+				{
+					dialog.snd = "Voice\ARMA\ARMA006";
+					dialog.text = DLG_TEXT[312];
+					link.l1 = DLG_TEXT[313];
+					Link.l1.go = "trade_1";
+					characters[GetCharacterIndex("Sabine Matton")].quest.hire = "done"; 
+				}
+
+			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "enemy_forever" && Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job != "1") //PW added extra condition
+				
+// PW <-- end exceptions for Thomas O'Reily and store looting
 				{
 					dialog.snd = "Voice\ARMA\ARMA006";
 					dialog.text = DLG_TEXT[18];
 					link.l1 = pcharrepphrase(DLG_TEXT[19], DLG_TEXT[20]);
 					link.l1.go = "exit";
 				}
-				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "danielle_on_ship_1")
+
+				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "danielle_on_ship") // Talisman: was "danielle_on_ship_1"
 				{
 					dialog.snd = "Voice\ARMA\ARMA007";
 					dialog.text = DLG_TEXT[21];
@@ -166,7 +199,9 @@ void ProcessDialogEvent()
 			//////////////////////////////
 			// Выдача квестов
 			//////////////////////////////
-			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "blaze_begin" && makeint(pchar.reputation) > 40) // NK bugfix
+			// Talisman:	update code to new version & lower player reputation requirement to activate low rep dialog options
+			//				since low rep male players still help Arnaud with Baldewyn, so Arnaud should trust them with Sabine
+			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "blaze_begin" && makeint(pchar.reputation) >= REPUTATION_SWINDLER) // Talisman: was '> 40'
 			{
 				Link.l6 = DLG_TEXT[163];
 				link.l6.go = "daughter";
@@ -310,6 +345,9 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[75];
 			link.l1 = pcharrepphrase(DLG_TEXT[76], DLG_TEXT[77]);
 			link.l1.go = "danielle_daughter_3";
+			link.l2 = pcharrepphrase(DLG_TEXT[316], DLG_TEXT[316]);//PW new case line added for Sabine to be officer
+			link.l2.go = "danielle_daughter_4";//PW new case line added for Sabine to be officer
+
 		break;
 
 		case "danielle_daughter_3":
@@ -317,10 +355,34 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[78];
 			link.l1 = pcharrepphrase(DLG_TEXT[79], DLG_TEXT[80]);
 			link.l1.go = "exit";
+//--->>> TALISMAN - add link to enable Arnaud to ask female player to take Sabine to Sylvie Bondies
+			link.l2 = pcharrepphrase(DLG_TEXT[309], DLG_TEXT[310]);
+			link.l2.go = "daughter_6";
+//<<<--- TALISMAN
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "done";
 			SetCharacterRemovable(characterFromID("Sabine Matton"), true);
 			RemovePassenger(pchar, &characters[GetCharacterIndex("Sabine Matton")]);
 			pchar.experience = makeint(pchar.experience) + 100;
+		break;
+
+		case "danielle_daughter_4"://PW new case line added for Sabine to be officer
+			dialog.snd = "Voice\ARMA\ARMA011";
+			dialog.text = DLG_TEXT[317];
+			link.l1 = pcharrepphrase(DLG_TEXT[318], DLG_TEXT[318]);
+			link.l1.go = "danielle_daughter_5";
+			
+		break;
+
+		case "danielle_daughter_5"://PW new case line added for Sabine to be officer
+			dialog.snd = "Voice\ARMA\ARMA011";
+			dialog.text = DLG_TEXT[319];
+			link.l1 = pcharrepphrase(DLG_TEXT[320], DLG_TEXT[320]);
+			link.l1.go = "exit";
+			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "done";
+			SetCharacterRemovable(characterFromID("Sabine Matton"), true); // PW these three lines //PW: to let Sabine become an active officer with dialogue
+			characters[GetCharacterIndex("Sabine Matton")].Dialog.Filename = "Enc_Officer_dialog.c"; //PW
+			characters[GetCharacterIndex("Sabine Matton")].Dialog.CurrentNode = "Hired"; //PW
+			AddDialogExitQuest("Sabines_new_outfit");	// GR: Sabine gets shipboard clothes
 		break;
 
 		case "ransom_bad":
@@ -335,6 +397,7 @@ void ProcessDialogEvent()
 			SetCharacterRemovable(characterFromID("Sabine Matton"), true); // PW these three lines //PW: to let Sabine become an active officer with dialogue
 			characters[GetCharacterIndex("Sabine Matton")].Dialog.Filename = "Enc_Officer_dialog.c"; //PW
 			characters[GetCharacterIndex("Sabine Matton")].Dialog.CurrentNode = "Hired"; //PW
+			AddDialogExitQuest("Sabines_new_outfit");	// GR: Sabine gets shipboard clothes
 			///////////////////////////////////////////////////////////////////////////
 			// Арно уходит, а за нами начинается охотиться 1 фрегат и 2 наемных убийцы, плюс Франция становится враждебной.
 			///////////////////////////////////////////////////////////////////////////
@@ -347,6 +410,8 @@ void ProcessDialogEvent()
 			link.l1.go = "ransom_money_1";
 			link.l2 = pcharrepphrase(DLG_TEXT[87], DLG_TEXT[88]);
 			link.l2.go = "ransom_bad";
+			PlayStereoSound("INTERFACE\took_item.wav");// PW moved from "ransom_money_1"
+			AddMoneyToCharacter(pchar, 5000);// PW moved from "ransom_money_1"
 		break;
 
 		case "ransom_money_1":
@@ -356,8 +421,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "was_captured_done";
 			ChangeCharacterReputation(pchar, -1);
-			PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneyToCharacter(pchar, 5000);
+			
 			SetCharacterRemovable(characterFromID("Sabine Matton"), true);
 			RemovePassenger(pchar, Characters[GetCharacterIndex("Sabine Matton")]);
 
@@ -373,6 +437,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[92];
 			link.l1 = pcharrepphrase(DLG_TEXT[93], DLG_TEXT[94]);
 			link.l1.go = "ransom_1";
+			Locations[FindLocation("Muelle_town_01")].reload.l8.disable = 1;//PW lock sylvies house now Sabine ransom dialogue triggered
 		break;
 
 		case "ransom_1":
@@ -404,6 +469,10 @@ void ProcessDialogEvent()
 			///////////////////////////////////////////////////////////////////////
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "enemy_forever";
 			ChangeCharacterReputation(pchar, -1);
+			SetCharacterRemovable(characterFromID("Sabine Matton"), true); // PW these three lines to let 						Sabine become an active officer with dialogue
+			characters[GetCharacterIndex("Sabine Matton")].Dialog.Filename = "Enc_Officer_dialog.c"; //PW
+			characters[GetCharacterIndex("Sabine Matton")].Dialog.CurrentNode = "Hired"; //PW
+			AddDialogExitQuest("Sabines_new_outfit");	// GR: Sabine gets shipboard clothes
 		break;
 
 		case "daughter_done":
@@ -413,6 +482,7 @@ void ProcessDialogEvent()
 			link.l1.go = "trade_guild";
 			link.l2 = pcharrepphrase(DLG_TEXT[108], DLG_TEXT[109]);
 			link.l2.go = "exit";
+			TakeItemFromCharacter(PChar, "Correspondence2");// PW placeholder remove Sylvie Bondies letter - awaiting "trade guild" extension
 			npchar.quest_begin = "0";
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "done";
 			characters[GetCharacterIndex("Sabine Matton")].quest.love = "1";
@@ -514,9 +584,10 @@ void ProcessDialogEvent()
 
 		case "daughter_9":
 			dialog.snd = "Voice\ARMA\ARMA031";
-			dialog.text = "...";
+			dialog.text = DLG_TEXT[138] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[139])]) + DLG_TEXT[141];
 			link.l1 = DLG_TEXT[142];
 			link.l1.go = "daughter_10";
+			GiveItem2Character(PChar, "Correspondence1"); // PW letter to Sylvie Bondies
 		break;
 
 		case "daughter_10":
@@ -560,9 +631,9 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "almost_done_1";
 			npchar.quest_begin = "0";
 			npchar.quest.money = "0";
-			Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
+			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "0") Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
 		break;
-
+)
 		case "baldewyn_work_done_one":
 			dialog.snd = "Voice\ARMA\ARMA035";
 			dialog.text = DLG_TEXT[156];
@@ -573,7 +644,7 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "almost_done_1";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -2000);
-			Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
+			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "0") Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
 		break;
 
 		case "money_1":
@@ -615,7 +686,7 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "wait_month"; //Fix:Storekeeper:19.09
 			npchar.quest_begin = "0";
 			npchar.quest.money = "0";
-			Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store"; //Fix:Storekeeper:19.09
+			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "0") Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
 		break;
 
 		case "baldewyn_guard":
@@ -628,13 +699,21 @@ void ProcessDialogEvent()
 			npchar.quest.money = "0";
 			Rumour[4].state = "active";
 			characters[GetCharacterIndex("Baldewyn Coffier")].location = "none"; //Fix
-			Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store"; //Fix
+			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "0") Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
 		break;
 
 		case "first_job_done":
 			Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job = "complete";
 			dialog.snd = "Voice\ARMA\ARMA041";
 			dialog.Text = DLG_TEXT[176];
+			Link.l1 = DLG_TEXT[177];
+			Link.l1.go = "First_job_done_1";
+		break;
+		
+		case "First_job_done_enemy":
+			Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job = "complete";
+			dialog.snd = "Voice\ARMA\ARMA041";
+			dialog.Text = DLG_TEXT[314];
 			Link.l1 = DLG_TEXT[177];
 			Link.l1.go = "First_job_done_1";
 		break;
@@ -868,14 +947,14 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(PChar,SKILL_COMMERCE) > 5) // NK
 			{
 				dialog.snd = "Voice\ARMA\ARMA062";
-				dialog.text = DLG_TEXT[233];
+				dialog.text = PersuasionSuccess + DLG_TEXT[233];
 				link.l1 = DLG_TEXT[234];
 				link.l1.go = "access_1";
 			}
 			else
 			{
 				dialog.snd = "Voice\ARMA\ARMA063";
-				dialog.text = DLG_TEXT[235];
+				dialog.text = PersuasionFailure + DLG_TEXT[235];
 				link.l1 = DLG_TEXT[236];
 				link.l1.go = "access";
 				link.l2 = DLG_TEXT[237];
@@ -969,7 +1048,7 @@ void ProcessDialogEvent()
 			if (CalcCharacterSkill(PChar,SKILL_COMMERCE) > 3)
 			{
 				dialog.snd = "Voice\ARMA\ARMA074";
-				dialog.text = DLG_TEXT[271];
+				dialog.text = PersuasionSuccess + DLG_TEXT[271];
 				link.l1 = DLG_TEXT[272];
 				link.l1.go = "baldewyn_6";
 				npchar.quest.money = "750";
@@ -979,12 +1058,12 @@ void ProcessDialogEvent()
 				if (makeint(pchar.reputation) > 50) // NK
 				{
 					dialog.snd = "Voice\ARMA\ARMA075";
-					dialog.text = DLG_TEXT[273];
+					dialog.text = PersuasionFailure + DLG_TEXT[273];
 				}
 				else
 				{
 					dialog.snd = "Voice\ARMA\ARMA076";
-					dialog.text = DLG_TEXT[274];
+					dialog.text = PersuasionFailure + DLG_TEXT[274];
 				}
 				link.l1 = DLG_TEXT[275];
 				link.l1.go = "baldewyn_6";
@@ -1062,7 +1141,7 @@ void ProcessDialogEvent()
 			npchar.quest.money = "0";
 			Rumour[4].state = "active";
 			characters[GetCharacterIndex("Baldewyn Coffier")].location = "none";
-			Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
+			// Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";// You didn't help with Baldewyn so no Sabine
 		break;
 
 		case "baldewyn_bye_2":
@@ -1087,14 +1166,14 @@ void ProcessDialogEvent()
 			npchar.quest.money = "0";
 			Rumour[4].state = "active";
 			characters[GetCharacterIndex("Baldewyn Coffier")].location = "none";
-			Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
+			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "0") Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
 		break;
 
 		case "baldewyn_bye_3":
 			if (CalcCharacterSkill(PChar,SKILL_COMMERCE) > 5)
 			{
 				dialog.snd = "Voice\ARMA\ARMA085";
-				dialog.text = DLG_TEXT[301] + makeint(npchar.quest.money) * 2 + DLG_TEXT[302];
+				dialog.text = PersuasionSuccess + DLG_TEXT[301] + makeint(npchar.quest.money) * 2 + DLG_TEXT[302];
 				link.l1 = DLG_TEXT[303];
 				link.l1.go = "exit";
 				link.l2 = DLG_TEXT[304];
@@ -1114,12 +1193,12 @@ void ProcessDialogEvent()
 				npchar.quest.money = "0";
 				Rumour[4].state = "active";
 				characters[GetCharacterIndex("Baldewyn Coffier")].location = "none";
-				Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
+				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "0") Characters[GetCharacterIndex("Sabine Matton")].location = "Falaise_De_Fleur_store";
 			}
 			else
 			{
 				dialog.snd = "Voice\ARMA\ARMA086";
-				dialog.text = DLG_TEXT[305];
+				dialog.text = PersuasionFailure + DLG_TEXT[305];
 				link.l1 = DLG_TEXT[306] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + DLG_TEXT[307];
 				link.l1.go = "exit";
 				link.l2 = DLG_TEXT[308];

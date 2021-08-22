@@ -583,7 +583,29 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("grandma_future_plans7");
 		break;
+	//--------------------------------------------------------------------------------
+		case "farm_sloop":
+			PlaySound("VOICE\ENGLISH\grandma_1.wav");
+			Dialog.text = DLG_TEXT[85];
+			link.l1 = DLG_TEXT[86];
+			link.l1.go = "farm_sloop1";
+		break;
 
+		case "farm_sloop1":
+			PlaySound("VOICE\ENGLISH\grandma_5.wav");
+			Dialog.text = DLG_TEXT[87];
+			link.l1 = DLG_TEXT[88];
+			link.l1.go = "farm_sloop2";
+		break;
+
+		case "farm_sloop2":
+			PlaySound("VOICE\ENGLISH\grandma_4.wav");
+			Dialog.text = DLG_TEXT[89];
+			link.l1 = DLG_TEXT[90];
+			link.l1.go = "exit";
+			AddDialogExitQuest("grandma_future_plans9");
+		break;
+	//--------------------------------------------------------------------------------
 		case "Claire_crew":
 			PlaySound("VOICE\ENGLISH\grandma_5.wav");
 			LAi_SetActorType(CharacterFromID("grandma"));
@@ -639,8 +661,62 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("drawing_room_map24");
 		break;
+	//--------------------------------------------------------------------------------
+		case "finale":
+			PlaySound("VOICE\ENGLISH\grandma_1.wav");
+			Dialog.text = DLG_TEXT[91];
+			link.l1 = DLG_TEXT[92];
+			link.l1.go = "finale1";
+		break;
+
+		case "finale1":
+			PlaySound("VOICE\ENGLISH\grandma_7.wav");
+			Dialog.text = DLG_TEXT[93];
+			link.l1 = DLG_TEXT[94];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_group");
+		break;
+
+		case "finale1_A":
+			PlaySound("VOICE\ENGLISH\grandma_4.wav");
+			Dialog.text = DLG_TEXT[103];
+			link.l1 = DLG_TEXT[104];
+			link.l1.go = "exit";
+			AddDialogExitQuest("monkey_protest");
+		break;
+
+		case "finale2":
+			PlaySound("VOICE\ENGLISH\grandma_6.wav");
+			Dialog.text = DLG_TEXT[95];
+			link.l1 = DLG_TEXT[96];
+			link.l1.go = "finale3";
+		break;
+
+		case "finale3":
+			PlaySound("VOICE\ENGLISH\grandma_3.wav");
+			Dialog.text = DLG_TEXT[97];
+			link.l1 = DLG_TEXT[98];
+			link.l1.go = "finale4";
+		break;
+
+		case "finale4":
+			PlaySound("VOICE\ENGLISH\grandma_7.wav");
+			Dialog.text = DLG_TEXT[99];
+			link.l1 = DLG_TEXT[100];
+			link.l1.go = "exit";
+			AddDialogExitQuest("claire_platina");
+		break;
+
+		case "finale5":
+			PlaySound("VOICE\ENGLISH\grandma_4.wav");
+			Dialog.text = DLG_TEXT[101];
+			link.l1 = DLG_TEXT[102];
+			link.l1.go = "exit";
+			AddDialogExitQuest("the_very_end");
+		break;
+
 	
-//---------------------------------------------------------------------------------
+	//---------------------------------------------------------------------------------
 		case "Exit_sit":
 			PlaySound("AMBIENT\SHOP\sigh2.wav");
 			LAi_SetSitType(CharacterFromID("grandma"));
