@@ -107,6 +107,32 @@ settingenable_weaponsmod3
 #Blade quality decreases over time and can break.
 Weapons can be repaired again at blacksmiths.
 }
+sweden_allowed{Allow Sweden}
+settingsweden_allowed1
+{
+Off (Stock PotC)
+}
+settingsweden_allowed2
+{
+Sweden shows up as a nation in game.
+}
+settingsweden_allowed3
+{
+#Enables Sweden as a nation in the game during the "The Spanish Main", "Golden Age of Piracy" and "Colonial Powers" eras. 
+}
+RELATION_IGNORE_FRIENDLY{Forts ignore you if friendly}
+settingRELATION_IGNORE_FRIENDLY1
+{
+Off - Forts and ships will remember you even if you are not hostile.
+}
+settingRELATION_IGNORE_FRIENDLY2
+{
+On - Forts and ships will only remember you if you are hostile.
+}
+settingRELATION_IGNORE_FRIENDLY3
+{
+#Unless enabled, forts will remember you even if you are not hostile. If their nation later becomes hostile to the nation they remember for you, they will attack.
+}
 wdmap_ship_show_mode{WorldMap Ships Info Level}
 settingwdmap_ship_show_mode1
 {
@@ -262,7 +288,20 @@ settingit_rpg_style3
 {
 #Take player's level into account for items available from vendors
 }
-salary_multiplier{Salary Mutiplier}
+persuasion_tags{Persuasion Tags}
+settingpersuasion_tags1
+{
+Persuasion Tags do not show up in dialogs (stock PotC)
+}
+settingpersuasion_tags2
+{
+[Persuasion Tags] show up in dialogues when the outcome is affected by skills or random rolls
+}
+settingpersuasion_tags3
+{
+#Enable or disable [Persuasion Tags] in dialogues influenced by character skill or chance
+}
+salary_multiplier{Salary Multiplier}
 settingsalary_multiplier1
 {
 Multiplier for Crew and Officer salary. 1 is stock PotC. 4 and above makes for a more interesting and challenging game.
@@ -288,6 +327,7 @@ You must have gunpowder and the right type of bullets in your PERSONAL INVENTORY
 settingenable_ammomod3
 {
 # Not to be confused with gunpowder for ships' CANNONS
+NOTE: Ammunition required for certain storylines.
 }
 corpsemode{Lootable Corpses}
 settingcorpsemode1

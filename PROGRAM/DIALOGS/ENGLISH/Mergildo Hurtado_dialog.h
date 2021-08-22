@@ -1,4 +1,4 @@
-string DLG_TEXT[11] = {
+string DLG_TEXT[15] = {
 "It's time we set sail.",
 "Agreed.",
 "Unless I'm mistaken, you're the captain we've been hoping to meet. Thank you for your help! If not for you, I'd be resting on the seabed with the rest of my crew.",
@@ -10,5 +10,8 @@ string DLG_TEXT[11] = {
 "Indeed. Can we depart now? I'd like to get you and your ship to safety as soon as possible.",
 "Nothing's holding me here now.",
 "Great! Let's waste no more time, then!",
-
+"That will not be possible. I can not join your fleet because you already have #snumships# ships.",
+"Oh! Wait here, then. I shall berth or sell one of my ships.",
+"It is now possible for me to join you. I would like to sail as soon as possible.",
+"You still have too many ships. I can not join your fleet.",
 };

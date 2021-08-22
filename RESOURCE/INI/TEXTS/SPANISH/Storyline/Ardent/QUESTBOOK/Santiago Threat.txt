@@ -1,0 +1,7 @@
+title=#sSantiago# bajo amenaza
+text.t1=#svillain# es ahora el gobernador de #sRedmond#, a sueldo de Francia. He prometido a #sromance# que navegaremos lo más rápido posible rumbo a #sSantiago#. No llegamos a tiempo para evitar la caída de #sRedmond#; si quiero evitar que tomen tambien #sSantiago#, no debo demorarme.
+text.t2=#svillain# es ahora el gobernador de #sRedmond#, a sueldo de Francia. Si no recuerdo mal, el comandante de la flota francesa en #sisland_Isla Mona# mencionó #sisland_Cuba#. Si ese es su próximo objetivo, entonces #sSantiago# puede estar en peligro. El gobernador podría recompensarme por esa información.
+text.t3=#sgovernor# quiere que intente descubirir los planes para el ataque sobre #sSantiago#. Los documentos estarán seguramente en la academia naval de #sPointe a Pitre#, #sisland_Guadeloupe#. Un pequeño robo nocturno a través de una ventana convenientemente situada es todo lo que se necesita.
+text.t4=¡He encontrado los planes de batalla para el ataque contra #sSantiago#! Ahora debo llevarlos de vuelta a #sgovernor#. Y cuanto antes; no servirán de nada si los franceses ya los han usado para atacar #sSantiago#...
+text.t5=#sgovernor# me ha recompensado por traerle los planes de batalla. Ahora quiere que se los lleve al almirante de #sHavana#.
+text.t6=El almirante no cree que pueda evitar la invasión de #starget#, así que debo ir allí y evacuar al gobernador.

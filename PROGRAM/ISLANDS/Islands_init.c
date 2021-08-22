@@ -443,6 +443,16 @@ void InitIslands()
 		rIsland.reload.l4.pic = 22;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
+		
+		rIsland.reload.l5.label = "Linda Praia";
+		rIsland.reload.l5.name = "reload_4";
+		rIsland.reload.l5.go = "Conceicao_Shore_03";
+		rIsland.reload.l5.emerge = "see";
+		rIsland.reload.l5.radius = 200.0;
+		rIsland.reload.l5.pic = 26;
+		rIsland.reload.l5.tex = "t2";
+		rIsland.reload.l5.enable = false;		
+		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To		
 
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
 		rIsland.InterfaceTextures.t1.h = 4;
@@ -982,7 +992,7 @@ void InitIslands()
 		rIsland.reload.l7.radius = 200.0;
 		rIsland.reload.l7.pic = 27;
 		rIsland.reload.l7.tex = "t2";
-		rIsland.reload.l7.enable = false;
+//		rIsland.reload.l7.enable = false;
 		rIsland.reload.l7.goto_enable = false; // PB
 
 		rIsland.reload.l8.label = "Playa de Sabana";

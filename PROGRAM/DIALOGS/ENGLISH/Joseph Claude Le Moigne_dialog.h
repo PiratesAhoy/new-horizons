@@ -18,7 +18,7 @@ string DLG_TEXT[183] = {
 "Talk? What do you take me for, ",
 "? I'm an officer of the state. I don't have time for idle chatter!",
 "I beg your pardon, sir. I'll go.",
-"I'm sorry, but I don't have anything to talk about right now",
+"I'm sorry, but I don't have anything to talk about right now, ",
 ".",
 "I am sorry, sir. I changed my mind.",
 "Yes, I think I can find you an assignment.",

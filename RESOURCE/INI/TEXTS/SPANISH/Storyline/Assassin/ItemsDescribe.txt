@@ -1,0 +1,59 @@
+itmname_order	{Órdenes de misión}
+itmdescr_order
+{
+Esta carta confirma que el capitán Aurelien Bergerat tiene la misión secreta de ayudar a la colonia portuguesa de Grenada, y que el gobernador de Martinica debe ayudarle. La carta está firmada por el rey Luis XIV.
+}
+
+itmname_report	{Informe}
+itmdescr_report
+{
+Este informe explica en detalle las actividades militares de estos últimos meses en Caimán, como los movimientos de barcos y tropas.
+}
+
+itmname_time_bomb	{Bomba de mecha larga}
+itmdescr_time_bomb
+{
+Es una granada grande con una mecha larga. Un modelo básico pero muy efectivo.
+}
+
+itmname_Gaga_Keys	{Llaves de Lady Gaga}
+itmdescr_Gaga_Keys
+{
+Las llaves de la casa de Lady Gaga. La casa está entre la iglesia y el ayuntamiento. 
+}
+
+itmname_Roche_letter	{Carta de Roche}
+itmdescr_Roche_letter
+{
+Una carta de Roche Brasiliano en la que revela que tiene que permanecer en Curaçao durante los próximos meses.
+}
+
+itmname_Medal_B	{Medalla de la Orden de Santiago}
+itmdescr_Medal_B
+{
+Esta medalla condecora a los que la reciben por sus acciones militares contra los enemigos de España.  
+}
+
+itmname_Pass	{Salvoconducto}
+itmdescr_Pass
+{
+Este pase te permite atracar y permanecer en Isla Mona durante la misión.
+}
+
+itmname_purse	{Bolsa}
+itmdescr_purse
+{
+Esta bolsa contiene 50000 monedas de oro para los indios de Aruba.
+}
+
+itmname_fougasse	{Fougasse}
+itmdescr_fougasse
+{
+Es un tipo de mina. Si se conecta a una puerta, explota cuando alguien la abre.
+}
+
+itmname_Medal_A	{Medalla del Rey Carlos II}
+itmdescr_Medal_A
+{
+Esta medalla es la más alta condecoración que pueden otorgar las autoridades españolas. Normalmente, solo los españoles pueden obtenerla.
+}

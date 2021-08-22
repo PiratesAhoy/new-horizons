@@ -2,14 +2,13 @@ void CreateStoryCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	//Vincent Bethune - убийца, нанятый губернатором.
 	ch.old.name = "Vincent";
 	ch.old.lastname = "Bethune";
 	ch.name = TranslateString("","Vincent");
-	ch.lastname = LanguageConvertString("","Bethune");
+	ch.lastname = TranslateString("","Bethune");
 	ch.id		= "Vincent Bethune";
 	ch.model	= "killer";
 	ch.sound_type = "pirate";
@@ -155,9 +154,11 @@ void CreateStoryCharacters(ref n)
 	ch.ShipSlot3.Name="NoName";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.StormProfessional = true;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -216,9 +217,11 @@ void CreateStoryCharacters(ref n)
 	ch.quest.killed.pirates = "0";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.StormProfessional = true;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -277,9 +280,11 @@ void CreateStoryCharacters(ref n)
 	ch.quest.killed.pirates = "0";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.StormProfessional = true;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -326,8 +331,8 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
-	ch.Ship.Name = "Soleil Royal";
-	ch.Ship.Type = "FR_SoleilRoyal"; // PRS3
+	ch.Ship.Name = "Fleuron";
+	ch.Ship.Type = "FR_Fleuron"; // GR: was "FR_SoleilRoyal" // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS24;
 	ch.ShipSlot1.Type=SHIP_NOTUSED;
@@ -338,9 +343,11 @@ void CreateStoryCharacters(ref n)
 	ch.ShipSlot3.Name="NoName";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.StormProfessional = true;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -387,7 +394,7 @@ void CreateStoryCharacters(ref n)
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
 	ch.Ship.Name = "Arsinoe";
-	ch.Ship.Type = "FR_WarGalleon"; // Thomas the Terror
+	ch.Ship.Type = "FR_Boussole"; // GR: was "FR_WarGalleon // Thomas the Terror
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24;
 	ch.ShipSlot1.Type=SHIP_NOTUSED;
@@ -399,9 +406,11 @@ void CreateStoryCharacters(ref n)
 	ch.quest.killed.pirates = "0";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.StormProfessional = true;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -448,7 +457,7 @@ void CreateStoryCharacters(ref n)
 	ch.money = QUEST_CHAR_MONEY; // PB
 	ch.nosurrender = 1; // TIH: wont give up easily
 	ch.Ship.Name = "l'Entreprise";
-	ch.Ship.Type = "FR_Derfflinger";
+	ch.Ship.Type = "RN_RaaFrigate"; // GR: was "FR_Derfflinger"
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS16;
 	ch.ShipSlot1.Type=SHIP_NOTUSED;
@@ -460,9 +469,11 @@ void CreateStoryCharacters(ref n)
 	ch.quest.killed.pirates = "0";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.StormProfessional = true;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -511,9 +522,11 @@ void CreateStoryCharacters(ref n)
 	ch.quest.killed.pirates = "0";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.StormProfessional = true;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -562,9 +575,11 @@ void CreateStoryCharacters(ref n)
 	ch.quest.killed.pirates = "0";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.StormProfessional = true;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -1749,20 +1764,22 @@ void CreateStoryCharacters(ref n)
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";
+	GiveItem2Character(ch, "MerchantsBlade");
+	ch.equip.blade = "MerchantsBlade";
 	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "4";
+	ch.skill.Fencing = "8";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
 	ch.skill.Cannons = "1";
 	ch.skill.Grappling = "1";
 	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "8";
 	ch.skill.Sneak = "1";
-	ch.money = "10";
+	ch.money = "15000";
 	LAi_SetmerchantType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetHP(ch, 800.0, 800.0);
 	LAi_NoRebirthEnable(ch);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);

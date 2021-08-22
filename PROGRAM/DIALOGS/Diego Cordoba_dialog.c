@@ -86,7 +86,7 @@ void ProcessDialogEvent()
                break;
                 
               case "begin_6":
-  
+			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
                         dialog.snd = "Voice\CLLA\CLLA004";
 			dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];

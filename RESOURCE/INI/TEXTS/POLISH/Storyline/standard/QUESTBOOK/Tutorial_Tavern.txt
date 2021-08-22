@@ -1,0 +1,3 @@
+title=Samouczek - Zatrudnianie za³ogi w tawernie
+text.t1=Niestety, straci³em paru majtków na morzu. Powinieniem poszukaÞ tawerny i zatrudniÞ nowych zanim wyp³yn×.
+text.t2=Zrobione!

@@ -18,6 +18,7 @@ ref procGetRiggingData()
 	int locidx = FindLoadedLocation();
 	bool PirateOverride = false;															// PB: For Pirate Flags on Forts and Ashore
 	ref chr;
+	ref PChar = GetMainCharacter();
 
 	string datName = GetEventData();
 	if (datName == "GetFlagTexNum") {
@@ -61,7 +62,9 @@ ref procGetRiggingData()
 			}
 		} else {
 			chr = GetCharacter(n);
-			PirateOverride = true;															// PB: For Pirate Flags on Forts and Ashore
+			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on")
+			{ PirateOverride = false; }	 //JRH
+			else PirateOverride = true;															// PB: For Pirate Flags on Forts and Ashore
 		}
 		n = sti(chr.nation);
 		switch (n)
@@ -73,9 +76,9 @@ ref procGetRiggingData()
 			case SPAIN:            retVal = 4;                                break;
 			case PIRATE:
 				if(PirateOverride) retVal = 6;												// PB: For Pirate Flags on Forts and Ashore
-				else			   retVal = GetPirateFlag(chr, &n);           break;
+				else	       retVal = GetPirateFlag(chr, &n);           break;
 			case GUEST1_NATION:    retVal = 5;                                break;
-			case GUEST2_NATION:    retVal = 6;                                break;
+			case GUEST2_NATION:    retVal = 7;                                break;		//JRH 7, was 6
 			case PRIVATEER_NATION: retVal = GetPersonalFlag(chr, &n);         break;
 			case UNKNOWN_NATION:   retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break;		//added by KAM		// changed after build 11 by KAM
 			case NEUTRAL_NATION:   retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break;		//added by KAM
@@ -156,6 +159,7 @@ void SetFortFlag(ref rModel)
 {
 	int i, idx, iNation;
 	ref chr;
+	ref Pchar = GetMaincharacter();
 	if (!CheckAttribute(rModel, "fortcmdridx")) return;
 	idx = sti(rModel.fortcmdridx);
 	if (idx < 0) return;
@@ -173,11 +177,19 @@ void SetFortFlag(ref rModel)
 	SendMessage(&FortFlag, "li", MSG_FLAG_DEL_GROUP, &rModel);
 	iNation = sti(chr.nation);
 	switch (iNation) {
-/*		case PIRATE:
-			GetPirateFlag(chr, &i);
-			SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
+
+		//ok for red, ok for standard
+		case PIRATE:
+			//JRH:
+			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on") 
+			{
+				GetPirateFlag(chr, &i);
+				SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
+			}
+			else SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &rModel, idx);
 		break;
-		case PRIVATEER_NATION:
+	
+/*		case PRIVATEER_NATION:
 			GetPersonalFlag(chr, &i);
 			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
 		break;*/
@@ -274,6 +286,7 @@ void SetTownFlag(ref loc, object mdl)
 	int i, idx, iNation;
 	string town;
 	ref chr;
+	ref Pchar = GetMaincharacter();
 	if (!CheckAttribute(loc, "townsack")) return;
 	SendMessage(&Flag, "li", MSG_FLAG_DEL_GROUP, &mdl);
 	SendMessage(&MerchantFlag, "li", MSG_FLAG_DEL_GROUP, &mdl);
@@ -295,11 +308,19 @@ void SetTownFlag(ref loc, object mdl)
 	if (idx < 0) idx = GetMainCharacterIndex();
 	chr = GetCharacter(idx); // PB
 	switch (iNation) {
-/*		case PIRATE:
-			GetPirateFlag(chr, &i);
-			SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
+		
+		//ok for red, ok for standard
+		case PIRATE:
+			//JRH:
+			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on") 
+			{
+				GetPirateFlag(chr, &i);
+				SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
+			}
+			else SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &mdl, idx);
 		break;
-		case PRIVATEER_NATION:
+		
+/*		case PRIVATEER_NATION:
 			GetPersonalFlag(chr, &i);
 			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
 		break;*/

@@ -50,7 +50,8 @@ void ProcessDialogEvent()
 
 		case "welcome_aboard2":
 			dialog.text = DLG_TEXT[3] + GetMyLastName(NPChar) + ". " + GetMyFullName(NPChar) + ".";
-			link.l1 = GetMyLastName(NPChar) + DLG_TEXT[4];
+			Preprocessor_Add("name", GetMyLastName(NPChar));
+			link.l1 = DLG_TEXT[4];
 			link.l1.go = "welcome_aboard3";
 		break;
 
@@ -196,6 +197,36 @@ void ProcessDialogEvent()
 		case "goodbye_hornblower":
 			dialog.text = DLG_TEXT[47] + your_rank_name + " " + GetMyLastName(PChar) + DLG_TEXT[48];
 			link.l1 = DLG_TEXT[49];
+			link.l1.go = "exit";
+		break;
+
+		case "meet_after_briefing":
+			dialog.text = DLG_TEXT[50] + GetMyLastName(PChar) + DLG_TEXT[51];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "meet_after_briefing2":
+			dialog.text = "";
+			link.l1 = DLG_TEXT[52];
+			link.l1.go = "thanks_for_bringing_me";
+		break;
+
+		case "thanks_for_bringing_me":
+			dialog.text = DLG_TEXT[53];
+			link.l1 = DLG_TEXT[54];
+			link.l1.go = "about_the_wedding";
+		break;
+
+		case "about_the_wedding":
+			dialog.text = DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
+			link.l1.go = "goodbye_again";
+		break;
+
+		case "goodbye_again":
+			dialog.text = DLG_TEXT[57] + GetMyName(PChar) + DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
 			link.l1.go = "exit";
 		break;
 	}

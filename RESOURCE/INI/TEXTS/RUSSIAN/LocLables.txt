@@ -1,0 +1,87 @@
+FaleDeFler{Фале де Флер}
+Falaise De Fleur{Фале де Флер}
+Falaise De Fleur Port{Порт Фале де Флер}
+Octopus Bay{Бухта Осьминога}
+Falaise De Fleur Fort{Форт Фале де Флер}
+Redmond{Рэдмонд}
+Redmond Port{Порт Рэдмонда}
+Devil's Throat{Глотка Дьявола}
+Rocky Shore{Скалистый Берег}
+Redmond Fort{Форт Рэдмонд}
+IslaMuelle{Исла Муэле}
+Isla Muelle Port{Порт Исла Муэле}
+Shore{Берег}
+Oyster Beach{Устричный Пляж}
+Isla Muelle Fort{Форт Исла Муэле}
+Oxbay{Оксбэй}
+Oxbay Port{Порт Оксбэя}
+Greenford Port{Порт Гринфорда}
+Gray Rock Bay{Залив Серой Скалы}
+Lighthouse{Маяк}
+Far Beach{Дальний Пляж}
+Greenford Fort{Форт Гринфорд}
+Oxbay Fort{Форт Оксбэй}
+Conceicao{Консейсао}
+Conceiзгo Port{Порт Консейсао}
+Sunny Haven{Солнечная Гавань}
+Leviathan Rock{Скала Левиафана}
+Conceiзгo Fort{Форт Консейсао}
+Douwesen{Дувезен}
+Douwesen Port{Порт Дувезена}
+Palm Beach{Пальмовый Пляж}
+Crab Cliffs{Крабовые Утёсы}
+Douwesen Fort{Форт Дувезен}
+QuebradasCostillas{Кебрадас Костиллас}
+Quebradas Costillas Port{Порт Кебрадас Костиллас}
+Charlestown{Чарльстаун}
+Charlestown Port{Порт Чарльстаун}
+KhaelRoa{Каэль Роа}
+Khael Roa Shore{Берег Каэль Роа}
+Cayman{Кайман}
+Grand Cayman{Гранд Кайман}
+Cayman Kai{Кайман Кай}
+Sand Bluff{Песчаный Обрыв}
+Eden Rock{Райская Скала}
+Grand Cayman Fort{Форт Гранд Кайман}
+Hispaniola{Испаньола}
+Port au prince{Порт-о-Пренс}
+Santo Domingo{Санто-Доминго}
+Tortuga{Тортуга}
+Boca de Yuman{Бока-Де-Юман}
+Boca de Hubon{Бока-Де-Хубон}
+Cape Francos{Мыс Франкос}
+Shore{Берег}
+Port au Prince Fort{Форт Порт-о-Пренс}
+Santo Domingo Fort{Форт Санто-Доминго}
+Cuba{Куба}
+Santiago{Сантьяго}
+Havana{Ла Гавана}
+Bahia de San Antonio{Байя де Сан-Антонио}
+Bahia de Moa{Байя де Моа}
+Playa de Sabana{Плайя де Сабана}
+Punta de Maisi{Пунта де Майси}
+Playa de Sierra Maestra{Плайя де Сьерра Маэстра}
+Peninsula de Zapata{Полуостров Сапата}
+Santiago Fort{Форт Сантьяго}
+Guadeloupe{Гваделупа}
+Pointe а Pitre{Пуэнт-а-Питр}
+Anse Casse-Bois{Таинственная Бухта}
+Pointe a pitre Fort{Форт Пуэнт-а-Питр}
+SaintMartin{Сен-Мартен}
+Simpson Bay{Бухта Симпсона}
+Baie Orient{Восточная Бухта}
+Fort St Louis{Форт Сент-Луис}
+Marigot{Мариго}
+Antigua{Антигуа}
+Fort James{Форт Джеймс}
+St John's{Сент-Джонс}
+Muscetto Cove{Мушкетная Бухта}
+Turks{Тёркс}
+Grand Turk{Гранд Тёрк}
+Turtle Bay{Черепаховая Бухта}
+White reefs{Белые Рифы}
+Sandy Point{Песчаная Коса}
+Birds Cove{Птичья Бухта}
+Fort{Форт}
+Bocht Van Hato{Бухта Ван Хато}
+Bullen Bay{Залив Буллена}

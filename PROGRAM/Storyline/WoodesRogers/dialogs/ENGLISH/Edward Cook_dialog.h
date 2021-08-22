@@ -1,4 +1,4 @@
-string DLG_TEXT[53] = {
+string DLG_TEXT[54] = {
 "Don't you dare to adress a First Mate in that manner again, you insolent hireling!",
 "Umm... err... I see. Goodbye.",
 "Hey, you there! You look suspicious to me. Who the hell are you? Show me your papers!",
@@ -52,5 +52,6 @@ string DLG_TEXT[53] = {
 "Alright boy, take these bottles and get lost - I sure have more important things to do.",
 "Well, this collection of remedys looks really good. You're able to obey orders after all!",
 "I don't like it at all but you're allowed to choose a blade from that wall behind you. Just give me the number of the blade and be quick about it.",
+"A very fine blade, youngster...",		//53
 
 };

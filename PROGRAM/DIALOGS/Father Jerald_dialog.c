@@ -14,9 +14,9 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 
-	Preprocessor_Add("Father", GetMyFirstNames(CharacterFromID("Father Bernard"), false));
-	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-	else Preprocessor_Add("child", XI_ConvertString("child"));
+	Preprocessor_Add("Father", GetMyFirstNames(NPChar, false));
+	if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+	else Preprocessor_Add("addr", XI_ConvertString("my child"));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -185,6 +185,7 @@ void ProcessDialogEvent()
 		case "letters_2_9":
 			AddQuestRecord("church_help", 6);
 			characters[GetCharacterIndex("Father Bernard")].quest.church_help = "without_letters";
+			TakeItemFromCharacter(PChar, "pornushka");
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();
@@ -226,6 +227,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[58];
 			Link.l1 = DLG_TEXT[59];
 			Link.l1.go = "No donation";
+			
 // NK -->
 			// TIH --> do once, and only up to a certain level due to limitations on game Aug29'06
 			int iRepRank = 150;
@@ -276,43 +278,76 @@ void ProcessDialogEvent()
 
 		case "donation paid_500":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    	PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
-			d.Text = DLG_TEXT[66];
-			Link.l1 = DLG_TEXT[67];
-			Link.l1.go = "quest lines";
-			Link.l2 = DLG_TEXT[68];
-			Link.l2.go = "exit";
+			dialog.text = DLG_TEXT[66];
+
+			if(CheckAttribute(PChar,"quest.mysterious_plants.donate") && sti(GetAttribute(PChar,"quest.mysterious_plants.donate")) < 1000)  //PW mysterious plants specific
+			{
+				Link.l1 = DLG_TEXT[84]
+				Link.l1.go = "donation paid_apothecary";
+			}
+			Link.l2 = DLG_TEXT[67];
+			Link.l2.go = "quest lines";
+			Link.l3 = DLG_TEXT[68];
+			Link.l3.go = "exit";
 			AddDialogExitQuest("donation");
+			
 		break;
 		
 		case "donation paid_2500":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		   	PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 2500 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[69];
-			Link.l1 = DLG_TEXT[70];
-			Link.l1.go = "quest lines";
-			Link.l2 = DLG_TEXT[71];
-			Link.l2.go = "exit";
+			if(CheckAttribute(PChar,"quest.mysterious_plants.donate") && sti(GetAttribute(PChar,"quest.mysterious_plants.donate")) < 1000)  //PW mysterious plants specific
+			{
+				Link.l1 = DLG_TEXT[84]
+				Link.l1.go = "donation paid_apothecary";
+			}
+			Link.l2 = DLG_TEXT[70];
+			Link.l2.go = "quest lines";
+			Link.l3 = DLG_TEXT[71];
+			Link.l3.go = "exit";
 			AddDialogExitQuest("donation");
 		break;
 		
 		case "donation paid_5000":
 			dialog.snd = "Voice\FATB\FATB046";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    	PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5))));
 			pchar.quest.donate = makeint(pchar.quest.donate) + 5000 * makeint(sqrt(sqrt(makeint(pchar.rank)^5)));
 			d.Text = DLG_TEXT[72];
-			Link.l1 = DLG_TEXT[73];
-			Link.l1.go = "quest lines";
-			Link.l2 = DLG_TEXT[74];
-			Link.l2.go = "exit";
+
+			if(CheckAttribute(PChar,"quest.mysterious_plants.donate") && sti(GetAttribute(PChar,"quest.mysterious_plants.donate")) < 1000)  //PW mysterious plants specific
+			{
+				Link.l1 = DLG_TEXT[84]
+				Link.l1.go = "donation paid_apothecary";
+			}
+			Link.l2 = DLG_TEXT[73];
+			Link.l2.go = "quest lines";
+			Link.l3 = DLG_TEXT[74];
+			Link.l3.go = "exit";
 			AddDialogExitQuest("donation");
 // NK <--
 		break;
+
+		case "donation paid_apothecary":
+			dialog.snd = "Voice\FATB\FATB046";
+			d.Text = DLG_TEXT[85];
+			Link.l1 = DLG_TEXT[86];
+			if(!CheckAttribute(PChar,"quest.telescope_quest.church") && !CheckAttribute(PChar,"quest.telescope_quest.returned_cross"))
+			{
+				Link.l1.go = "start telescope";
+			}
+			else
+			{
+				Link.l1.go = "exit";
+			}
+		break;
+
 
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;

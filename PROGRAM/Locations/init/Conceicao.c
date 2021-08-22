@@ -962,6 +962,7 @@ void LocationInitConceicao(ref n)
 	Locations[n].image = "Inside_StoreSmall.tga";
 
 	Locations[n].id = "Smugglers_Store";
+	locations[n].id.label = "#stown_name# store";
 
 	//Town sack
 	Locations[n].townsack = "Smugglers Lair"; // NK 04-08-29
@@ -1372,4 +1373,148 @@ void LocationInitConceicao(ref n)
 
 	Locations[n].island = "Conceicao"; // NK 04-08-29
 	n = n + 1;
+	
+	// -------------------------------------------------
+	Locations[n].filespath.models = "locations\Outside\Shore_11";
+
+	Locations[n].id = "Conceicao_Shore_03";
+	locations[n].id.label = "Linda Praia";
+	locations[n].worldmap = "MShore 2";
+	Locations[n].image = "Outside_Shore_11.tga";
+	//Sound
+	locations[n].type = "seashore";
+
+	//Models
+	//Always
+	Locations[n].models.always.l1 = "Shore11";
+	Locations[n].models.always.l1.foam = "1";	
+	Locations[n].models.always.locators = "Shore11_l";
+	Locations[n].models.always.tree = "tree";
+	//Day
+	Locations[n].models.day.charactersPatch = "walk_patch";
+	//Night
+	Locations[n].models.night.charactersPatch = "walk_patch";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+	//Reload map
+	Locations[n].reload.l1.name = "reload2";
+	Locations[n].reload.l1.go = "Bartolomeu_Mansion";
+	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload2 = 3.0;
+
+	Locations[n].reload.l3.name = "reload2_back";
+	Locations[n].reload.l3.go = "Bartolomeu_Mansion";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload2_back = 3.0;
+
+	Locations[n].reload.l2.name = "boat";
+	Locations[n].reload.l2.go = "Conceicao";
+	Locations[n].reload.l2.emerge = "reload_4";
+	Locations[n].reload.l2.autoreload = "0";
+	if (VISIT_DECK == 1)
+		Locations[n].reload.l2.label = "Ship.";
+	else
+		Locations[n].reload.l2.label = "Sea.";
+	Locations[n].locators_radius.reload.boat = 9.0;
+
+    Locations[n].items.randitem1 = "pistolgas";
+	Locations[n].island = "Conceicao"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+	Locations[n].filespath.models = "locations\Outside\Jungle_Bart";
+
+	Locations[n].id = "Bartolomeu_Mansion";
+	locations[n].id.label = "Jungle";
+	Locations[n].image = "Outside_Jungle_Bart.tga";
+	//Sound
+	locations[n].type = "jungle";
+	Locations[n].vcskip = true; // KK	
+
+	//Town sack
+	//Locations[n].townsack = "Quebradas Costillas";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Jungle05_l";
+	Locations[n].models.always.jungle = "Jungle05_signless";
+	Locations[n].models.always.grassPatch = "JUNGLE05_g";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+	Locations[n].models.always.ruinas = "ruinas";
+	Locations[n].models.always.ruinas.locator.group = "goto";
+	Locations[n].models.always.ruinas.locator.name = "citizen03";
+	Locations[n].models.always.coffre = "chest6U_vco";
+	Locations[n].models.always.coffre.locator.group = "goto";
+	Locations[n].models.always.coffre.locator.name = "citizen04";
+	Locations[n].models.always.fusil = "steplock_v3";
+	Locations[n].models.always.fusil.locator.group = "goto";
+	Locations[n].models.always.fusil.locator.name = "citizen08";
+	Locations[n].models.always.tent = "tent";
+	Locations[n].models.always.tent.locator.group = "goto";
+	Locations[n].models.always.tent.locator.name = "goto2";	
+	Locations[n].models.always.mortair = "mortair";
+	Locations[n].models.always.mortair.locator.group = "goto";
+	Locations[n].models.always.mortair.locator.name = "goto3";
+	Locations[n].models.always.bonfire = "bonfire";
+	Locations[n].models.always.bonfire.locator.group = "goto";
+	Locations[n].models.always.bonfire.locator.name = "goto4";
+	Locations[n].models.always.muskets = "muskets";
+	Locations[n].models.always.muskets.locator.group = "goto";
+	Locations[n].models.always.muskets.locator.name = "goto5";
+	Locations[n].models.always.muskets2 = "muskets";
+	Locations[n].models.always.muskets2.locator.group = "goto";
+	Locations[n].models.always.muskets2.locator.name = "goto6";	
+	Locations[n].models.always.s_tent = "supply_tent";
+	Locations[n].models.always.s_tent.locator.group = "goto";
+	Locations[n].models.always.s_tent.locator.name = "goto7";		
+	Locations[n].models.always.smg = "smg";
+	Locations[n].models.always.smg.locator.group = "goto";
+	Locations[n].models.always.smg.locator.name = "goto7";
+	Locations[n].models.always.baton = "baton";
+	Locations[n].models.always.baton.locator.group = "goto";
+	Locations[n].models.always.baton.locator.name = "goto8";	
+	//Day
+	Locations[n].models.day.charactersPatch = "Jungle05_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Jungle05_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Conceicao_Shore_03";
+	Locations[n].reload.l1.emerge = "reload2";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "Linda Praia.";
+	Locations[n].locators_radius.reload.Reload1 = 3.0;
+	
+	Locations[n].reload.l4.name = "reload1_back";
+	Locations[n].reload.l4.go = "Conceicao_Shore_03";
+	Locations[n].reload.l4.emerge = "reload2";
+	Locations[n].reload.l4.autoreload = "1";
+	Locations[n].reload.l4.label = "Linda Praia.";
+	Locations[n].locators_radius.reload.Reload1_back = 2.0;	
+
+	Locations[n].island = "Conceicao"; // NK 04-08-29
+	n = n + 1;
+	
+	Build_at("Bartolomeu_Mansion", "jungle2", "", 7.00, 0.00, 20.00, 2.82, "wild_jungles");		
+	Build_at("Bartolomeu_Mansion", "jungle2", "", 7.00, 0.00, 10.00, 2.82, "wild_jungles");	
+	Build_at("Bartolomeu_Mansion", "jungle2", "", 5.00, 0.00, 0.00, 2.82, "wild_jungles");	
+	Build_at("Bartolomeu_Mansion", "jungle2", "", 28.00, 0.00, -25.00, 2.82, "wild_jungles");	
+	Build_at("Bartolomeu_Mansion", "jungle2", "", 33.00, 0.00, -25.00, 2.82, "wild_jungles");	
+	Build_at("Bartolomeu_Mansion", "jungle2", "", -22.63, 0.00, -9.55, 2.82, "wild_jungles");
+	Build_at("Bartolomeu_Mansion", "jungle2", "", -7.29, 0.00, -17.25, 0.31, "wild_jungles");			
 }

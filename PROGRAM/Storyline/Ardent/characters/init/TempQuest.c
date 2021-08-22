@@ -3,13 +3,12 @@ void CreateTempQuestCharacters(ref n)
 
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 				// Inquisitor
 	ch.old.name = "Inquisitor";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Inquisitor");
+	ch.name = TranslateString("", "Inquisitor");
 	ch.lastname = "";
 	ch.id		= "Inquisitor";
 	ch.model = "ANIMISTS1";
@@ -56,7 +55,7 @@ void CreateTempQuestCharacters(ref n)
 				// Monkeys
 	ch.old.name = "Monkey";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Monkey");
+	ch.name = TranslateString("", "Monkey");
 	ch.lastname = "";
 	ch.id		= "Monkey";
 	ch.model = "monkey";
@@ -83,7 +82,7 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Monkey";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Monkey");
+	ch.name = TranslateString("", "Monkey");
 	ch.lastname = "";
 	ch.id		= "Monkey2";
 	ch.model = "monkey";
@@ -110,7 +109,7 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Monkey";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Monkey");
+	ch.name = TranslateString("", "Monkey");
 	ch.lastname = "";
 	ch.id		= "Monkey3";
 	ch.model = "monkey";
@@ -137,7 +136,7 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Monkey";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Monkey");
+	ch.name = TranslateString("", "Monkey");
 	ch.lastname = "";
 	ch.id		= "Monkey4";
 	ch.model = "monkey";
@@ -164,7 +163,7 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Monkey";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Monkey");
+	ch.name = TranslateString("", "Monkey");
 	ch.lastname = "";
 	ch.id		= "Monkey5";
 	ch.model = "monkey";
@@ -191,8 +190,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Crescent";
 	ch.old.lastname = "Moon";
-	ch.name = TranslateString("","Crescent");
-	ch.lastname = TranslateString("","Moon");
+	ch.name = TranslateString("Crescent", "Moon");
+	ch.lastname = "";
 	ch.id		= "Quest_Indian1";
 	ch.model	= "Indian3";
 	ch.sex = "man";
@@ -223,8 +222,8 @@ void CreateTempQuestCharacters(ref n)
 	
 	ch.old.name = "Rain";
 	ch.old.lastname = "Cloud";
-	ch.name = TranslateString("","Rain");
-	ch.lastname = TranslateString("","Cloud");
+	ch.name = TranslateString("Rain", "Cloud");
+	ch.lastname = "";
 	ch.id		= "Quest_Indian2";
 	ch.model	= "Indian1_2";
 	ch.sex = "man";
@@ -255,10 +254,10 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Golden";
 	ch.old.lastname = "Flower";
-	ch.name = TranslateString("","Golden");
-	ch.lastname = TranslateString("","Flower");
+	ch.name = TranslateString("Golden", "Flower");
+	ch.lastname = "";
 	ch.id		= "Quest_Indian3";
-	ch.model	= "Indian_girl1";
+	ch.model	= "Indian_girl2";
 	ch.sex = "woman";
 	ch.location	= "Quest_Arawak_Village";
 	ch.location.group = "goto";
@@ -287,8 +286,8 @@ void CreateTempQuestCharacters(ref n)
 	
 	ch.old.name = "Nervous";
 	ch.old.lastname = "Elk";
-	ch.name = TranslateString("","Nervous");
-	ch.lastname = TranslateString("","Elk");
+	ch.name = TranslateString("Nervous", "Elk");
+	ch.lastname = "";
 	ch.id		= "Quest_Indian4";
 	ch.model	= "Indian1_2";
 	ch.sex = "man";
@@ -319,8 +318,8 @@ void CreateTempQuestCharacters(ref n)
 	
 	ch.old.name = "Ringboned";
 	ch.old.lastname = "Wolf";
-	ch.name = TranslateString("","Ringboned");
-	ch.lastname = TranslateString("","Wolf");
+	ch.name = TranslateString("Ringboned", "Wolf");
+	ch.lastname = "";
 	ch.id		= "Quest_Indian5";
 	ch.model	= "Indian1_3";
 	ch.sex = "man";
@@ -351,8 +350,8 @@ void CreateTempQuestCharacters(ref n)
 	
 	ch.old.name = "Strong";
 	ch.old.lastname = "Deer";
-	ch.name = TranslateString("","Strong");
-	ch.lastname = TranslateString("","Deer");
+	ch.name = TranslateString("Strong", "Deer");
+	ch.lastname = "";
 	ch.id		= "Quest_Indian6";
 	ch.model	= "Indian1";
 	ch.sex = "man";
@@ -383,8 +382,8 @@ void CreateTempQuestCharacters(ref n)
 	
 	ch.old.name = "White";
 	ch.old.lastname = "Crow";
-	ch.name = TranslateString("","White1");
-	ch.lastname = TranslateString("","Crow");
+	ch.name = TranslateString("White","Crow");
+	ch.lastname = "";
 	ch.id		= "Quest_Indian7";
 	ch.model	= "Indian2";
 	ch.sex = "man";
@@ -415,8 +414,8 @@ void CreateTempQuestCharacters(ref n)
 	
 	ch.old.name = "Soaring";
 	ch.old.lastname = "Hawk";
-	ch.name = TranslateString("","Soaring");
-	ch.lastname = TranslateString("","Hawk1");
+	ch.name = TranslateString("Soaring","Hawk");
+	ch.lastname = "";
 	ch.id		= "Quest_Chief_Indian1";
 	ch.model	= "Indian1";
 	ch.sex = "man";
@@ -448,8 +447,8 @@ void CreateTempQuestCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Ronald";
 	ch.old.lastname = "McDonald";
-	ch.name = TranslateString("","Ronald");
-	ch.lastname = TranslateString("","McDonald");
+	ch.name = TranslateString("", "Ronald");
+	ch.lastname = TranslateString("", "McDonald");
 	ch.id		= "Ronald McDonald";
 	ch.model	= "Pirat9";
 	ch.sex = "man";
@@ -482,8 +481,8 @@ void CreateTempQuestCharacters(ref n)
 
     	ch.old.name = "Doolin";
    	ch.old.lastname = "Becart";
-   	ch.name    = TranslateString("","Doolin");
-   	ch.lastname    = TranslateString("","Becart");
+   	ch.name    = TranslateString("", "Doolin");
+   	ch.lastname    = TranslateString("", "Becart");
    	ch.id        = "Doolin Becart";
     	ch.model    = "fisherman1";
     	ch.sex = "man";
@@ -518,8 +517,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Grigorio";
 	ch.old.lastname = "Formoselle";
-	ch.name = TranslateString("","Grigorio");
-	ch.lastname = TranslateString("","Formoselle");
+	ch.name = TranslateString("", "Grigorio");
+	ch.lastname = TranslateString("", "Formoselle");
 	ch.id		= "Grigorio Formoselle";
 	ch.model = "man6_1";
 	ch.sex = "man";
@@ -552,8 +551,8 @@ void CreateTempQuestCharacters(ref n)
 // Dutch sergeant
 	ch.old.name = "Coenen";
 	ch.old.lastname = "Barberien";
-	ch.name = TranslateString("","Coenen");
-	ch.lastname = "Barberien";
+	ch.name = TranslateString("", "Coenen");
+	ch.lastname = TranslateString("", "Barberien");
 	ch.id		= "Dutch_sergeant";
 	ch.model	= "Offic_Hol_17";
 	ch.sound_type = "soldier";
@@ -597,8 +596,8 @@ void CreateTempQuestCharacters(ref n)
 
     	ch.old.name = "Garfield";
    	ch.old.lastname = "Leighton";
-   	ch.name    = TranslateString("","Garfield");
-   	ch.lastname    = TranslateString("","Leighton");
+   	ch.name    = TranslateString("", "Garfield");
+   	ch.lastname    = TranslateString("", "Leighton");
    	ch.id        = "Garfield Leighton";
     	ch.model    = "MorrisWilliams";
     	ch.sex = "man";
@@ -642,8 +641,8 @@ void CreateTempQuestCharacters(ref n)
 
     	ch.old.name = "Wilfred";
    	ch.old.lastname = "Roscoe";
-   	ch.name    = TranslateString("","Wilfred");
-   	ch.lastname    = TranslateString("","Roscoe");
+   	ch.name    = TranslateString("", "Wilfred");
+   	ch.lastname    = TranslateString("", "Roscoe");
    	ch.id        = "Wilfred Roscoe";
     	ch.model    = "Pirat4";
     	ch.sex = "man";
@@ -677,8 +676,8 @@ void CreateTempQuestCharacters(ref n)
 
     	ch.old.name = "Felix";
    	ch.old.lastname = "Prost";
-   	ch.name    = TranslateString("","Felix");
-   	ch.lastname    = TranslateString("","Prost");
+   	ch.name    = TranslateString("", "Felix");
+   	ch.lastname    = TranslateString("", "Prost");
    	ch.id        = "Felix Prost";
     	ch.model    = "bocman10";
     	ch.sex = "man";
@@ -712,8 +711,8 @@ void CreateTempQuestCharacters(ref n)
 
     	ch.old.name = "Steven";
    	ch.old.lastname = "Seagull";
-   	ch.name    = TranslateString("","Steven");
-   	ch.lastname    = TranslateString("","Seagull");
+   	ch.name    = TranslateString("", "Steven");
+   	ch.lastname    = TranslateString("", "Seagull");
    	ch.id        = "Steven Seagull";
     	ch.model    = "diller";
     	ch.sex = "man";
@@ -748,8 +747,8 @@ void CreateTempQuestCharacters(ref n)
 	 // Havana Admiral;
 	ch.old.name = "Jusepe";
 	ch.old.lastname = "Guimaraes";
-	ch.name 	= TranslateString("","Jusepe");
-	ch.lastname = TranslateString("","Guimaraes");
+	ch.name 	= TranslateString("", "Jusepe");
+	ch.lastname = TranslateString("", "Guimaraes");
 	ch.id		= "Jusepe Guimaraes";
 	ch.model	= "Huber_Spa4_17";
 	ch.sex = "man";
@@ -784,8 +783,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Lazaro";
 	ch.old.lastname = "Trillo";
-	ch.name = TranslateString("","Lazaro");
-	ch.lastname = TranslateString("","Trillo");
+	ch.name = TranslateString("", "Lazaro");
+	ch.lastname = TranslateString("", "Trillo");
 	ch.id		= "Spanish_Captain4";
 	ch.nation	= SPAIN;
 	ch.model	= "9JdSpa";
@@ -827,8 +826,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Suarius";
 	ch.old.lastname = "Escudero";
-	ch.name = TranslateString("","Suarius");
-	ch.lastname = TranslateString("","Escudero");
+	ch.name = TranslateString("", "Suarius");
+	ch.lastname = TranslateString("", "Escudero");
 	ch.id		= "Spanish_Captain5";
 	ch.nation	= SPAIN;
 	ch.model	= "Espinosa";
@@ -870,8 +869,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Elizabeth";
 	ch.old.lastname = "O'Brien";
-	ch.name = TranslateString("","Elizabeth");
-	ch.lastname = TranslateString("","O'Brien");
+	ch.name = TranslateString("", "Elizabeth");
+	ch.lastname = TranslateString("", "O'Brien");
 	SetRankTitle(ch, TranslateString("", "Lady"));
 	ch.id		= "Elizabeth O_Brien";
 	ch.model	= "lady3";
@@ -901,5 +900,115 @@ void CreateTempQuestCharacters(ref n)
 	ch.greeting = "Gr_English_noblewoman";
 	AddGameCharacter(n, ch);
 
+// Captain for Imperial Galleon quest 
+	ch.old.name = "Constantino";
+	ch.old.lastname = "de Malaspina";
+	ch.name = TranslateString("", "Constantino");
+	ch.lastname = TranslateString("", "de Malaspina");
+	ch.id		= "Imperial_Captain";
+	ch.nation	= SPAIN;
+	ch.model	= "hub_spa5";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade14+2");
+		GiveItem2Character(ch, "pistol27+2");
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade14");
+		GiveItem2Character(ch, "pistol27");
+	}
+	ch.equip.blade = "blade14";
+	ch.equip.gun = "pistol27";
+	GiveItem2Character(ch, "commonarmor");
+	ch.questchar = true;
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Imperial_Captain_dialog.c";
+	ch.rank 	= 4;
+	ch.reputation = REPUTATION_VERYGOOD;
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1000";
+	ch.Ship.Name = "San Lorenzo";
+	ch.Ship.Type = "FastGalleon5";
+	ch.Ship.Stopped = true;
+	ch.Flags.Pirate = 5;
+	ch.Flags.Pirate.texture = 2;
+	ch.Flags.Personal = 2;
+	ch.Flags.Personal.texture = 6;
+	ch.Ship.EmblemedSails.normalTex = "sail_weathered_common.tga"; // PB
+	ch.Ship.EmblemedSails.nationFileName = "sail_holy_roman_empire.tga"; // PB
+	ch.nosurrender = 2;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 540.0, 540.0);
+	ch.nation = PERSONAL_NATION;
+//	ch.nation = SPAIN;
+//	SetRank(ch, SPAIN, 5);
+//	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+// Imperial envoy
+	ch.old.name = "Maria";
+	ch.old.middlename = "Antonia";
+	ch.old.lastname = "of Austria";
+	ch.name = TranslateString("", "Maria");
+	ch.middlename = TranslateString("", "Antonia");
+	ch.lastname = TranslateString("", "of Austria");
+	ch.id		= "Imperial_envoy";
+	ch.model = "MariaAntonia";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "woman";
+	ch.sound_type = "female_citizen";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Imperial_envoy_dialog.c";
+	ch.greeting = "Gr_Arabella Silehard";
+	ch.nation = PERSONAL_NATION;
+	ch.Flags.Personal = 2;
+	ch.Flags.Personal.texture = 6;
+	ch.rank 	= 1;
+	ch.reputation = "60";
+	ch.experience = "6";
+	ch.skill.Leadership = "10";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "10";
+	ch.skill.Commerce = "10";
+	ch.skill.Sneak = "1";
+	ch.money = "1000";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.quest.officertype = OFFIC_TYPE_CIVILIAN;
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	SetRankTitle(ch, TranslateString("", "Electress"));
+	AddGameCharacter(n, ch);
 
 }

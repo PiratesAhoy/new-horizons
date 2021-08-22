@@ -1,0 +1,14 @@
+title=A Kidnapping
+text.t1=The King's envoy lost in the Caribbean! Heads will roll when the King finds out. It's up to me to help find him. I need to talk to the #sSanto Domingo# governor on the island #sisland_Hispaniola#.
+text.t2=My task is to search all the locations on the North coast of #sisland_Hispaniola#. I need to be search in from each anchorage along the coast and hope I'll find a lead.
+text.t3=Finally I found someone, a Spanish soldier! He was on a hidden beach with the ship sunken near the shore. The envoy has been kidnapped by the pirate Roche Brasiliano... Not good news for the authorities. 
+text.t4=Time has come to ask for some help in #sHavana# on #sisland_Cuba#.
+text.t5=I'll be helped by Nicholas Butcher in my mission. He's an experienced and clever mercenary. He confirms that the owner of a plantation on #sisland_Guadeloupe#, named Renouart Baumont, could help us.
+text.t6=Maybe I have a solid lead on Roche. He knows a prostitute in #sCharlestown# on #sisland_Quebradas Costillas# called Lady Gaga, lets hope he knows her very well.
+text.t7=Despite her poker face, I can read her. Let's go outside to prepare a plan.
+text.t8=Damn it! I failed my attempt and the mission by the way.
+text.t9=I need to go to #sWillemstad# on #sisland_Curacao# and look for more information about Roche.
+text.t10=It seems Roche lives in a village near the town. Let's check this!
+text.t11=The envoy is under way with Nicholas Butcher but my mission is not finished, I must capture Roche. He has left the Island, I will need to look for his ship at sea. That soldier on #sisland_Hispaniola# said he has a black fast galleon named 'Quick Death', where would he be going for a short trip?
+text.t12=Done! I captured Roche Brasiliano. Let's head to #sHavana# on #sisland_Cuba#, the Vice-Admiral will be waiting....I will greatly impress him if I land during the day for all to see...
+text.t13=One month I left Vice-Admiral Benavides. Time has come to return to Havana and see him again. He must have a new mission for me.

@@ -1,0 +1,29 @@
+itmname_Map_Doc_1 {Document Package}
+itmdescr_Map_Doc_1
+{
+A quarter of an old map to the treasure of Cortez which shows part of an island but not where it is.
+}
+
+itmname_Map_Doc_2 {Document Package}
+itmdescr_Map_Doc_2
+{
+A quarter of an old map to the treasure of Cortez which joins other map segment.
+}
+
+itmname_Map_Doc_3 {Document Package}
+itmdescr_Map_Doc_3
+{
+A quarter of an old map to the treasure of Cortez shows more of the island and part of a trail inland.
+}
+
+itmname_Map_Doc_4 {Document Package}
+itmdescr_Map_Doc_4
+{
+A quarter of an old map which shows the rest of the inland trail to the treasure of Cortez, books on currents and wind, but the co-ordinates of the island are missing.
+}
+
+itmname_small_chestJS	{Small Chest}
+itmdescr_small_chestJS
+{
+The documents in this chest prove that the ship that sank at Baie d'Orient was indeed the French frigate 'La Foudre'. It says: 'The ship is sinking. We are being dragged down. Now we will never find Miss Le Moigne. My governor will be so disappointed.' - Captain Patric Robert Sondre.
+}

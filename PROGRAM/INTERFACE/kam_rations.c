@@ -55,8 +55,8 @@ void KAM_UpdateDisplay()
 	int tmpMsgNum1 = makeint((makefloat(GetSquadronGoods(pchar, GOOD_WHEAT)) - tmpfood ) / (makefloat(allCrew) * FOOD_PER_CREW / stf(pchar.Crewstatus.foodrations)));
 	int tmpMsgNum2 = makeint((makefloat(GetSquadronGoods(pchar, GOOD_RUM)) - tmprum ) / (makefloat(allCrew) * FOOD_PER_CREW / stf(pchar.Crewstatus.rumrations)));
 
-	tempmessage1 = LanguageConvertString(tmpLangFileID,"FOOD rations are at") + " " + tempfr + " " + LanguageConvertString(tmpLangFileID,"level. On these rations, food in the hold is enough for") + " " + tmpMsgNum1 + " " + XI_ConvertString("days") + ".";
-	tempmessage2 = LanguageConvertString(tmpLangFileID,"RUM rations are at") + " " + temprr + " " + LanguageConvertString(tmpLangFileID,"level. On these rations, rum in the hold is enough for") + " " + tmpMsgNum2 + " " + XI_ConvertString("days") + ".";
+	tempmessage1 = LanguageConvertString(tmpLangFileID,"FOOD rations are at") + " " + tempfr + " " + LanguageConvertString(tmpLangFileID,"level. On these rations, food in the hold is enough for") + " " + tmpMsgNum1 + " " + GetLocalizedDayString(tmpMsgNum1) + "."; //MAXIMUS: XI_ConvertString("days") changed to LocalizedDay simply for literate spelling in russian
+	tempmessage2 = LanguageConvertString(tmpLangFileID,"RUM rations are at") + " " + temprr + " " + LanguageConvertString(tmpLangFileID,"level. On these rations, rum in the hold is enough for") + " " + tmpMsgNum2 + " " + GetLocalizedDayString(tmpMsgNum2) + "."; //MAXIMUS: XI_ConvertString("days") changed to LocalizedDay simply for literate spelling in russian
 	// TIH <--
 	SetFormatedText("TEXTWINDOW1",tempmessage1);
 	SetFormatedText("TEXTWINDOW2",tempmessage2);

@@ -1,0 +1,2 @@
+title=Notification - Crew Affairs
+text.t1=Morale is dropping because the crew is envious of the amount of money we have on board and wants to sign articles.

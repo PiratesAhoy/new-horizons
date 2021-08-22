@@ -10,7 +10,7 @@ string DLG_TEXT[19] = {
 "Sorry, but I have no time for this kind of work. Find someone else. Goodbye!",
 "Goodbye, Captain!",
 "She doesn't live in this island. In fact, she lives in #sHavana#.",
-"Humm... That's annoying. The journey is long from #sisland_Conceicao#.",
+"Humm... That's annoying. I did not intend to go to #sisland_Cuba# these next weeks.",
 "Indeed, but as I said you could earn a lot...",
 "I hope so. Well, I agree to help. We can weigh anchor now if you want.",
 "After all, I won't accept to help. Sorry, but find someone else. Goodbye!",

@@ -39,11 +39,20 @@ void StartStoryLine()
 	Locations[FindLocation("IslaMona_port_exit")].reload.l1.disable = 0;
 
 	iForceDetectionFalseFlag = -1;	//which will make everyone ALWAYS believe your false flag
+	DisableFastTravel(true);
 
-	DeleteAttribute(PChar, "quest.Install_Voysey_And_Blythe");										//disables sidequest in Nevis
-	DeleteAttribute(&Locations[FindLocation("QC_town")],"vcskip");									//disables sidequest in Nevis
-	ChangeCharacterAddress(characterFromID("Marc Blacque"), "none", ""); 							//disables Blaque sidequest in Port Royal 
+	DeleteAttribute(PChar, "quest.Install_Voysey_And_Blythe");								//disables sidequest in Nevis
+	DeleteAttribute(&Locations[FindLocation("QC_town")],"vcskip");								//disables sidequest in Nevis
+	ChangeCharacterAddress(characterFromID("Marc Blacque"), "none", ""); 							//disables Blaque sidequest in Port Royal
+	ChangeCharacterAddress(characterFromID("Milon Blacque"), "none", "");							//disables sidequest
+	ChangeCharacterAddress(characterFromID("Willem Voigt"), "none", "");							//disables sidequest
+	ChangeCharacterAddress(characterFromID("Rian Dekkers"), "none", "");							//disables sidequest
+	ChangeCharacterAddress(characterFromID("Janneke Blinkerhof"), "none", "");						//disables sidequest
+	ChangeCharacterAddress(characterFromID("Lisebet Schefold"), "none", "");						//disables sidequest
+
 	Characters[GetCharacterIndex("Thomas O'Reily")].Dialog.Filename = "Cornelis Huijser_dialog.c";	//disables O'Reilly sidequest in Port Royal
+
+	Stores[PIRATES_STORE].owner = "Peter Blowhorn";	//to enable trade with QC
 
 	GiveItem2Character(characterFromID("Brthug5"), "bladep2"); EquipCharacterbyItem(characterFromID("Brthug5"), "bladep2");
 	GiveItem2Character(characterFromID("Brthug5"), "pistolb1"); EquipCharacterbyItem(characterFromID("Brthug5"), "pistolb1");
@@ -80,8 +89,6 @@ void StartStoryLine()
 	GiveItem2Character(characterFromID("guncrew_4"), "pistolsponge"); EquipCharacterbyItem(characterFromID("guncrew_4"), "pistolsponge");
 	GiveItem2Character(characterFromID("gm_crew13"), "pistolsponge"); EquipCharacterbyItem(characterFromID("gm_crew13"), "pistolsponge");
 	GiveItem2Character(characterFromID("Richards"), "pistol205"); EquipCharacterbyItem(characterFromID("Richards"), "pistol205");
-	GiveItem2Character(characterFromID("Hands"), "pistol206"); EquipCharacterbyItem(characterFromID("Hands"), "pistol206");
-	GiveItem2Character(characterFromID("Caesar"), "pistol202"); EquipCharacterbyItem(characterFromID("Caesar"), "pistol202");
 	GiveItem2Character(characterFromID("black_servant1"), "bladep0"); EquipCharacterbyItem(characterFromID("black_servant1"), "bladep0");
 	GiveItem2Character(characterFromID("JRH"), "bladecompasses"); EquipCharacterbyItem(characterFromID("JRH"), "bladecompasses");
 	GiveItem2Character(characterFromID("gm_crew1"), "bladeboathook_1"); EquipCharacterbyItem(characterFromID("gm_crew1"), "bladeboathook_1");
@@ -105,6 +112,8 @@ void StartStoryLine()
 	GiveItem2Character(characterFromID("Kri_dragoon_4"), "pistol203"); EquipCharacterbyItem(characterFromID("Kri_dragoon_4"), "pistol203");
 	GiveItem2Character(characterFromID("Kri_dragoon_5"), "pistol203"); EquipCharacterbyItem(characterFromID("Kri_dragoon_5"), "pistol203");
 	GiveItem2Character(characterFromID("Kri_dragoon_6"), "pistol203"); EquipCharacterbyItem(characterFromID("Kri_dragoon_6"), "pistol203");
+	GiveItem2Character(characterFromID("devil"), "bladethunder"); EquipCharacterbyItem(characterFromID("devil"), "bladethunder");
+	GiveItem2Character(characterFromID("devil"), "pistollightning"); EquipCharacterbyItem(characterFromID("devil"), "pistollightning");
 
 	Locations[FindLocation("Redmond_Port")].models.always.locators = "RedPort_l_JRH0";
 	Locations[FindLocation("Redmond_Town_01")].models.always.locators = "Red01_l_JRH";
@@ -134,6 +143,11 @@ void StartStoryLine()
 	ChangeCharacterAddressGroup(characterFromID("John Clifford Brin"), "none", "", "");//default governor
 	ChangeCharacterAddressGroup(characterFromID("Red_soldier_3"), "none", "", "");//Naval HQ guard
 	ChangeCharacterAddressGroup(characterFromID("Red_soldier_4"), "none", "", "");//Naval HQ guard
+
+	ChangeCharacterAddressGroup(characterFromID("cloister_monk1"), "none", "", "");		//these 4 in all other storylines
+	ChangeCharacterAddressGroup(characterFromID("cloister_monk2"), "none", "", "");
+	ChangeCharacterAddressGroup(characterFromID("cloister_monk3"), "none", "", "");
+	ChangeCharacterAddressGroup(characterFromID("cloister_monk4"), "none", "", "");
 
 	Locations[FindLocation("QC_brothel")].models.always.locators = "LT_l_JRHbr";
 	locations[FindLocation("QC_brothel")].type = "brothel_QC";
@@ -227,12 +241,8 @@ void StartStoryLine()
 	EquipCharacterByItem(CharacterFromID("gm_crew13"), "pistolsponge");
 	GiveItem2Character(CharacterFromID("Richards"),"pistol205");
 	EquipCharacterByItem(CharacterFromID("Richards"), "pistol205");
-	GiveItem2Character(CharacterFromID("Hands"),"pistol206");
-	EquipCharacterByItem(CharacterFromID("Hands"), "pistol206");
-	GiveItem2Character(CharacterFromID("Caesar"),"pistol202");
-	EquipCharacterByItem(CharacterFromID("Caesar"), "pistol202");
-	GiveItem2Character(characterFromID("gm_crew1"), "bladeboathook_1");		
-	EquipCharacterbyItem(characterFromID("gm_crew1"), "bladeboathook_1");
+	//GiveItem2Character(characterFromID("gm_crew1"), "bladeboathook_1");		
+	//EquipCharacterbyItem(characterFromID("gm_crew1"), "bladeboathook_1");
 	GiveItem2Character(characterFromID("gm_crew2"), "bladeflag_pir");		
 	EquipCharacterbyItem(characterFromID("gm_crew2"), "bladeflag_pir");
 	GiveItem2Character(characterFromID("gm_crew5"), "bladeanchor");		
@@ -248,16 +258,16 @@ void StartStoryLine()
 
 	SetCharacterShipLocation(characterFromID("gm_crew1"), "swamp_island1");		//fallen_tree, diff pos
 	SetCharacterShipLocation(characterFromID("gm_crew2"), "swamp_island2");		//raft2
-	SetCharacterShipLocation(characterFromID("gm_crew3"), "mutiny_deck");		//boat beside ship
+	SetCharacterShipLocation(characterFromID("gm_crew3"), "mutiny_deckWR");		//boat beside ship
 	SetCharacterShipLocation(characterFromID("gm_crew4"), "swamp_island1");		//boat close to shore
 	SetCharacterShipLocation(characterFromID("gm_crew5"), "swamp_island1");		//sloop
 	SetCharacterShipLocation(characterFromID("gm_crew7"), "at_sea_in_fog");		//raft2 far out at sea
 	SetCharacterShipLocation(characterFromID("gm_crew8"), "at_sea_in_fog");		//HMS_Endeavour far out at sea
 //Q2
-	SetCharacterShipLocation(characterFromID("gm_crew11"), "bb_Eden_passage");
 	SetCharacterShipLocation(characterFromID("gm_crew12"), "BB_upper_cave");	//tartane50
 	SetCharacterShipLocation(characterFromID("gm_crew14"), "BB_isle");		//tartane50
-
+/*
+//replaced
 	SetCharacterShipLocation(characterFromID("gm_crew15"), "Kristiania_port");
 	SetCharacterShipLocation(characterFromID("gm_crew16"), "Kristiania_port");
 	SetCharacterShipLocation(characterFromID("gm_crew17"), "Kristiania_port");
@@ -267,9 +277,10 @@ void StartStoryLine()
 	SetCharacterShipLocation(characterFromID("gm_crew21"), "Kristiania_port");
 	SetCharacterShipLocation(characterFromID("gm_crew22"), "BB_prison_port");	//Gunboat at port
 	SetCharacterShipLocation(characterFromID("gm_crew23"), "BB_prison_port");	//Gunboat at prison
-
+*/
 	SetCharacterShipLocation(characterFromID("wr_mummy1"), "Kristiania_shipwreck");	//obj_raft3
-	SetCharacterShipLocation(characterFromID("wr_mummy2"), "Kristiania_port");	//obj_invisible	
+//replaced
+//	SetCharacterShipLocation(characterFromID("wr_mummy2"), "Kristiania_port");	//obj_invisible	
 	SetCharacterShipLocation(characterFromID("wr_mummy3"), "Turks_wreck_shore");	//obj_cutter_wreck
 	SetCharacterShipLocation(characterFromID("wr_mummy4"), "Turks_wreck_shore");	//obj_PrisonShip1
 	SetCharacterShipLocation(characterFromID("wr_mummy8"), "BB_sloop");		//cutter2 (Maynard's)
@@ -306,9 +317,44 @@ void StartStoryLine()
 	setCharacterShipLocation(characterFromID("Tor_soldier_6"), "Tortuga_tower");
 	setCharacterShipLocation(characterFromID("Tor_soldier_7"), "Tortuga_tower"); 	
 	setCharacterShipLocation(characterFromID("Tor_soldier_8"), "Tortuga_tower");
-	setCharacterShipLocation(characterFromID("Maltese_soldier1"), "bb_prison_port");
+//replaced
+//	setCharacterShipLocation(characterFromID("Maltese_soldier1"), "bb_prison_port");
 	setCharacterShipLocation(characterFromID("Maltese_soldier2"), "Antigua_port");
+	setCharacterShipLocation(characterFromID("Maltese_soldier3"), "BB_careen_shore");
+	setCharacterShipLocation(characterFromID("Maltese_soldier4"), "BB_careen_shore");	//boat1
+	setCharacterShipLocation(characterFromID("Maltese_soldier5"), "BB_careen_shore");	//boat2
+	setCharacterShipLocation(characterFromID("Maltese_soldier6"), "BB_careen_shore");	//boat3
+	setCharacterShipLocation(characterFromID("Maltese_soldier7"), "BB_careen_shore");	//boat4
+	setCharacterShipLocation(characterFromID("Maltese_governor"), "BB_careen_shore");	//boat5
+	setCharacterShipLocation(characterFromID("Maltese_red1"), "BB_careen_shore");
+	setCharacterShipLocation(characterFromID("Maltese_red2"), "BB_careen_shore");		//hit boat1
+	setCharacterShipLocation(characterFromID("Maltese_green"), "BB_careen_shore");		//hit boat2
+	setCharacterShipLocation(characterFromID("Maltese_black"), "BB_careen_shore");		//hit boat2
+	setCharacterShipLocation(characterFromID("Maltese_knight"), "BB_careen_shore");		//hit boat2
+	setCharacterShipLocation(characterFromID("Margaret_Pough"), "BB_careen_shore");	//boat3 empty stopped
+	setCharacterShipLocation(characterFromID("KR_indian_L"), "BB_careen_shore");	//boat4 empty stopped
+	setCharacterShipLocation(characterFromID("KR_indian_1"), "BB_careen_shore");	//boat5 empty stopped
 
+	setCharacterShipLocation(characterFromID("KR_indian_2"), "Kristiania_fort");	//Brig pos 1
+	setCharacterShipLocation(characterFromID("KR_indian_3"), "Kristiania_fort");	//Brig pos 2
+
+	setCharacterShipLocation(characterFromID("KR_cit3"), "Turks_sewer");		//skeleton
+	setCharacterShipLocation(characterFromID("KR_cit4"), "Turks_sewer");		//fur
+	setCharacterShipLocation(characterFromID("KR_cit5"), "Turks_sewer");		//wolfs_head
+
+	setCharacterShipLocation(characterFromID("KR_cit6"), "Kristiania_port");
+	setCharacterShipLocation(characterFromID("KR_cit7"), "Kristiania_port");
+	setCharacterShipLocation(characterFromID("KR_cit8"), "Kristiania_port");
+	setCharacterShipLocation(characterFromID("KR_cit9"), "Kristiania_port");
+	setCharacterShipLocation(characterFromID("KR_cit10"), "Kristiania_port");
+	setCharacterShipLocation(characterFromID("KR_cit11"), "Kristiania_port");
+	setCharacterShipLocation(characterFromID("KR_cit12"), "Kristiania_port");
+
+	setCharacterShipLocation(characterFromID("KR_cit13"), "BB_prison_port");
+	setCharacterShipLocation(characterFromID("KR_cit14"), "BB_prison_port");
+	setCharacterShipLocation(characterFromID("KR_cit15"), "BB_prison_port");
+	setCharacterShipLocation(characterFromID("KR_cit16"), "Kristiania_port");
+	
 	if(ENABLE_CHEATMODE) ChangeCharacterAddressGroup(characterFromID("Teach_head"), "mutiny_cabin", "goto", "head");
 
 	Locations[FindLocation("Redmond_Town_01")].reload.l13.disable = 1;		//governors residence
@@ -326,31 +372,30 @@ void StartStoryLine()
 //Quest 2
 	Pchar.quest.BB_isl1_ladder = "way_up";
 
-
-
 		Pchar.quest.WR_start = "1";	//normal quest start
 
-	//	Pchar.quest.WR_start = "30";	//Cayman town
- 	//	Pchar.quest.WR_start = "32";	//shortcut to Eden bribing scene
-	//	Pchar.quest.WR_start = "33";	//shortcut to Eden bribing scene, burning ship
+	//  Pchar.quest.WR_start = "30";	//Cayman town
+	//  Pchar.quest.WR_start = "31";	//shortcut start chapel
+ 	//	Pchar.quest.WR_start = "32";	//shortcut to Eden bribing scene		     only bribing + burning is ok, delete it
+	//	Pchar.quest.WR_start = "33";	//shortcut to Eden bribing scene, burning ship       NO, doesn't work at all,      delete it
 	//	Pchar.quest.WR_start = "35";	//Eden estate, to maze
 	
-	//	Pchar.quest.WR_start = "43";	//cave shore to Vane
-	//	Pchar.quest.WR_start = "45";	//french surgeons Tortuga
+	// 	Pchar.quest.WR_start = "43";	//cave shore to Vane
+	//  Pchar.quest.WR_start = "45";	//french surgeons Tortuga
 	//	Pchar.quest.WR_start = "46";	//tower open Tortuga
-	//	Pchar.quest.WR_start = "47";	//Richards Cartagena
-	//	Pchar.quest.WR_start = "49";	//Cloister fight	
+	//    Pchar.quest.WR_start = "47";	//Richards Cartagena
+	//	Pchar.quest.WR_start = "49";	//Cloister fight					//didn't work ok at all
 
 	//	Pchar.quest.WR_start = "50";	//Odel Smugglers_Tavern 
-	//	Pchar.quest.WR_start = "55";	//Caesar Maynard Citadel Rock
-	//	Pchar.quest.WR_start = "56";	//Caesar Turks start, to Fort
-	//	Pchar.quest.WR_start = "57";	//Caesar Turks roof tour	//not all info included
-	//	Pchar.quest.WR_start = "58";	//Caesar Turks cave		//not all info included
-	//	Pchar.quest.WR_start = "59";	//Turks wreck shore		//not all info included
+	//  Pchar.quest.WR_start = "55";	//Caesar Maynard Citadel Rock
+	//  Pchar.quest.WR_start = "56";	//Caesar Turks start, to Fort
+	//  Pchar.quest.WR_start = "57";	//Caesar Turks roof tour
+	//	Pchar.quest.WR_start = "58";	//Caesar Turks cave					//starts strange if officers with you, else ok!
+	//	Pchar.quest.WR_start = "59";	//Turks wreck shore
 
 	//	Pchar.quest.WR_start = "60";	//Hands Willemstad port Curacao
-	//	Pchar.quest.WR_start = "62";	//Hands Charleston Maltains
-	//	Pchar.quest.WR_start = "63";	//Hands Antigua port
+	//  Pchar.quest.WR_start = "62";	//Hands Charleston Maltains
+	//  Pchar.quest.WR_start = "63";	//Hands Antigua port
 	//	Pchar.quest.WR_start = "64";	//Hands port - alcove - prison
 	//	Pchar.quest.WR_start = "66";	//Hands alcove
 	//	Pchar.quest.WR_start = "68";	//Hands prison2
@@ -362,14 +407,22 @@ void StartStoryLine()
 	//	Pchar.quest.WR_start = "85";	//indian village
 	//	Pchar.quest.WR_start = "86";	//Red House
 		
-
 	//	Pchar.quest.WR_start = "90";	//BB island1
 	//	Pchar.quest.WR_start = "92";	//BB tower top
-	//	Pchar.quest.WR_start = "97";	//BB Isle	
-				
-	//	Pchar.quest.WR_start = "100";	//alchemy
-
+	//	Pchar.quest.WR_start = "97";	//BB Isle
 	
+	//	Pchar.quest.WR_start = "99";	//final boss				officers do not show up ok
+	//      Pchar.quest.WR_start = "100";	//after treasure
+	
+	//	Pchar.quest.WR_start = "105";	//careen shore
+	//	Pchar.quest.WR_start = "106";	//careen corvette
+		
+	//	Pchar.quest.WR_start = "109";	//start Q2
+	//	Pchar.quest.WR_start = "110";	//alchemy part 1
+	//	Pchar.quest.WR_start = "111";	//alchemy part 2
+
+	//	Pchar.quest.WR_start = "150";	//defoe tavern scene, Cartagena new cloister
+	//	Pchar.quest.WR_start = "151";	//defoe tavern scene, Turks fort
 
 
 	switch(Pchar.quest.WR_start)
@@ -383,11 +436,12 @@ void StartStoryLine()
 
 				SetCurrentTime(11.00, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";		
+				Pchar.quest.JRH_rain = "Clear";			
 
 				AddMoneyToCharacter(Pchar, 23);
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
+				GiveItem2Character(Pchar, "bladeX4");			//this was missing
 		
 				GiveItem2Character(Pchar, "pistolbbuss");
 				EquipCharacterByItem(Pchar, "pistolbbuss");
@@ -412,7 +466,7 @@ void StartStoryLine()
 			break;
 
 			case "30":
-			LAi_SetImmortal(pchar, true);		//temp
+		//	LAi_SetImmortal(pchar, true);		//temp
 				rldGroup = "reload";
 				sTeleportLocName = "Grand_Cayman_town";
 				rldLocator = "reload15";
@@ -427,9 +481,10 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 
 				SetModel(Pchar, "Howard_Pyle_3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
@@ -439,8 +494,12 @@ void StartStoryLine()
 				TakeNItems(Pchar,"pistolbullets", 6);
 				TakeNItems(PChar, "clock1",1);
 				EquipCharacterbyItem(PChar, "clock1");	
-			/*
-			//this is done from console instead
+				TakeNItems(Pchar,"medical1", 1);
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Cayman_port");
+			
+			//these 2 officers can be skipped here
 			AddPassenger(Pchar, characterFromID("Hands"), 0);
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
 			SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
@@ -448,18 +507,117 @@ void StartStoryLine()
 			AddPassenger(Pchar, characterFromID("Pell"), 0);
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Pell"));
 			SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
-			*/
+			
+			GiveItem2Character(characterFromID("Pell"), "blade4");
+			EquipCharacterByItem(characterFromID("Pell"), "blade4");
+			GiveItem2Character(characterFromID("Pell"), "piratespistol");
+			EquipCharacterByItem(characterFromID("Pell"), "piratespistol");
+			TakeNItems(characterFromID("Pell"),"gunpowder", 6);
+			TakeNItems(characterFromID("Pell"),"pistolbullets", 6);
+			
 				characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
 				characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
-
+			
 				Pchar.eden_info = "start";	//must be on for gove Shaw to open to estate
 				ChangeCharacterAddressGroup(characterFromID("Edmund Christobel Shaw"), "Grand_Cayman_townhall", "goto", "goto12");
 				LAi_SetStayType(characterFromID("Edmund Christobel Shaw"));
 
-				AddQuestRecord("Charles_Eden", "1"); AddQuestRecord("Charles_Eden", "2");
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2");
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
+			/*
+			//started from after governor Shaw Cayman dialog
+				LAi_QuestDelay("maze_gate1_down_check", 0.5);
+				LAi_QuestDelay("maze_gate2_down_check", 0.5);
+				LAi_QuestDelay("maze_F1_check", 0.5);
+				LAi_QuestDelay("maze_F2_check", 0.5);
+			*/
+
+
+			break;
+
+			case "31":
+				//chapel - bribing scene - wine cellar
+
+			LAi_SetImmortal(pchar, true);		//temp
+				rldGroup = "reload";
+				sTeleportLocName = "BB_Eden_chapel";
+				rldLocator = "reload1";
+
+				//these open to Estate
+				Locations[FindLocation("Grand_Cayman_townhall")].locators_radius.box.box1 = 0.8;
+				Locations[FindLocation("Grand_Cayman_townhall")].locators_radius.goto.box1 = 0.8;
+
+				SetCurrentTime(12, 0);
+				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+
+				SetModel(Pchar, "Howard_Pyle_3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "blade1");
+				EquipCharacterByItem(Pchar, "blade1");
+				GiveItem2Character(Pchar, "piratespistol");
+				EquipCharacterByItem(Pchar, "piratespistol");
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);
+				TakeNItems(PChar, "clock1",1);
+				EquipCharacterbyItem(PChar, "clock1");
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Cayman_port");
+
+				AddPassenger(Pchar, characterFromID("Hands"), 0);
+				SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+				SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
+
+				AddPassenger(Pchar, characterFromID("Pell"), 0);
+				SetOfficersIndex(Pchar, 2, getCharacterIndex("Pell"));
+				SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
+			
+				GiveItem2Character(characterFromID("Pell"), "blade4");
+				EquipCharacterByItem(characterFromID("Pell"), "blade4");
+				GiveItem2Character(characterFromID("Pell"), "piratespistol");
+				EquipCharacterByItem(characterFromID("Pell"), "piratespistol");
+				TakeNItems(characterFromID("Pell"),"gunpowder", 6);
+				TakeNItems(characterFromID("Pell"),"pistolbullets", 6);
+
+				ChangeCharacterAddressGroup(characterFromID("Caesar"), "BB_Eden_estate", "goto", "servant2");
+				SetModel(characterFromID("Caesar"), "black_servant2", "man", "man", 1.8, false);
+				RemoveCharacterEquip(characterFromID("Caesar"), GUN_ITEM_TYPE);
+				RemoveCharacterEquip(characterFromID("Caesar"), BLADE_ITEM_TYPE);
+				DeleteAttribute(characterFromID("Caesar"), "items");
+				LAi_SetStayType(characterFromID("Caesar"));
+				characters[GetCharacterIndex("Caesar")].name = "Servant";
+				GiveItem2Character(characterFromID("Caesar"), "machete");
+				EquipCharacterByItem(characterFromID("Caesar"), "machete");
+
+				characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
+				characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
+
+				Pchar.eden_info = "start";
+				ChangeCharacterAddressGroup(characterFromID("Edmund Christobel Shaw"), "Grand_Cayman_townhall", "goto", "goto12");
+				LAi_SetStayType(characterFromID("Edmund Christobel Shaw"));
+
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2"); AddQuestRecord("Charles_Eden","3"); 
+				AddQuestRecord("Charles_Eden","4"); AddQuestRecord("Charles_Eden","6"); AddQuestRecord("Charles_Eden","7"); 
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
+
+			LAi_QuestDelay("Margaret_Pough3_A", 0.5);		//places Pough and starts dialogs
 
 				LAi_QuestDelay("maze_gate1_down_check", 0.5);
 				LAi_QuestDelay("maze_gate2_down_check", 0.5);
+				LAi_QuestDelay("maze_F1_check", 0.5);
+				LAi_QuestDelay("maze_F2_check", 0.5);
 			break;
 
 			case "32":
@@ -479,8 +637,9 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
@@ -498,10 +657,19 @@ void StartStoryLine()
 				ChangeCharacterAddressGroup(characterFromID("Edmund Christobel Shaw"), "Grand_Cayman_townhall", "goto", "goto12");
 				LAi_SetStayType(characterFromID("Edmund Christobel Shaw"));
 
-				AddQuestRecord("Charles_Eden", "1"); AddQuestRecord("Charles_Eden", "2");
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2"); AddQuestRecord("Charles_Eden","3"); 
+				AddQuestRecord("Charles_Eden","4"); AddQuestRecord("Charles_Eden","6"); AddQuestRecord("Charles_Eden","7"); 
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
 
 				LAi_QuestDelay("maze_gate1_down_check", 0.5);
 				LAi_QuestDelay("maze_gate2_down_check", 0.5);
+				LAi_QuestDelay("maze_F1_check", 0.5);
+				LAi_QuestDelay("maze_F2_check", 0.5);
 
 				LAi_QuestDelay("Eden_bribing_scene", 1.0);
 			break;
@@ -523,8 +691,9 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
@@ -542,10 +711,19 @@ void StartStoryLine()
 				ChangeCharacterAddressGroup(characterFromID("Edmund Christobel Shaw"), "Grand_Cayman_townhall", "goto", "goto12");
 				LAi_SetStayType(characterFromID("Edmund Christobel Shaw"));
 
-				AddQuestRecord("Charles_Eden", "1"); AddQuestRecord("Charles_Eden", "2");
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2"); AddQuestRecord("Charles_Eden","3"); 
+				AddQuestRecord("Charles_Eden","4"); AddQuestRecord("Charles_Eden","6"); AddQuestRecord("Charles_Eden","7"); 
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
 
 				LAi_QuestDelay("maze_gate1_down_check", 0.5);
 				LAi_QuestDelay("maze_gate2_down_check", 0.5);
+				LAi_QuestDelay("maze_F1_check", 0.5);
+				LAi_QuestDelay("maze_F2_check", 0.5);
 			
 			ChangeCharacterAddressGroup(characterFromID("bb_crew5"), "BB_Eden_estate_wreck", "goto", "B_crew1");	
 			ChangeCharacterAddressGroup(characterFromID("Richards"), "BB_Eden_estate_wreck", "goto", "B_crew2");
@@ -572,12 +750,13 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 
 				Pchar.estate_direction = "Cayman_town";
 			//	Pchar.estate_direction = "Teach_house";		//tour very direct to Teach house
 			//	Pchar.estate_direction = "Knight_house";	//tour not finished
 			
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
@@ -590,6 +769,8 @@ void StartStoryLine()
 
 				LAi_QuestDelay("maze_gate1_down_check", 0.5);
 				LAi_QuestDelay("maze_gate2_down_check", 0.5);
+				LAi_QuestDelay("maze_F1_check", 0.5);
+				LAi_QuestDelay("maze_F2_check", 0.5);
 		
 				LAi_QuestDelay("Eden_steplocks", 0.1);
 			break;
@@ -606,7 +787,7 @@ void StartStoryLine()
 				SetCurrentTime(12, 0);
 			
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 		
 				Locations[FindLocation("wr_cave_shore")].locators_radius.reload.reload1 = 0.0001;
 				locations[FindLocation("wr_cave_shore")].reload.l2.disable = 1;
@@ -614,10 +795,11 @@ void StartStoryLine()
 				locations[FindLocation("wr_cave_shore")].reload.l11.disable = 0;
 				locations[FindLocation("wr_cave_shore")].reload.l111.disable = 0;
 
-				SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+					GiveItem2Character(Pchar, "map");
+					SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
-				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
-				SetCharacterShipLocation(Pchar, "wr_cave_shore");
+					GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+					SetCharacterShipLocation(Pchar, "wr_cave_shore");
 
 				GiveShip2Character(characterFromID("pir_cap2"),"obj_invisible","",-1,PIRATE,true,true);
 				GiveShip2Character(characterFromID("pir_cap3"),"obj_invisible","",-1,PIRATE,true,true);
@@ -687,34 +869,48 @@ void StartStoryLine()
 				ChangeCharacterAddressGroup(characterFromID("pir_cap31"), "none", "", "");
 				ChangeCharacterAddressGroup(characterFromID("pir_cap32"), "none", "", "");
 			
-				LAi_QuestDelay("Vane_Richards_from_jumpstart_and_game", 0.1);
+					LAi_QuestDelay("Vane_Richards_from_jumpstart_and_game", 0.1);
 			break;
 
 			case "45":
 				//french surgeons Tortuga
+			LAi_SetImmortal(pchar, true);	//temp
 				
 				sTeleportLocName = "Tortuga_townhall";	//to get JRH loc files from start
-			//	sTeleportLocName = "Tortuga_tower";
-			//	sTeleportLocName = "Tortuga_tower_stairs_B";
 				rldGroup = "reload";
-			//	rldLocator = "reload1";
 				rldLocator = "locator2";
-			//	rldLocator = "reloadQ4";
-			//	rldLocator = "reload4";
+			/*
+				sTeleportLocName = "Tortuga_port";
+				rldGroup = "reload";
+				rldLocator = "reload2_back";
+			*/	
 				SetCurrentTime(12, 0);
-			//	SetCurrentTime(2, 0);
-
+			
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 				//SetNextWeather("Heavy Storm");
 
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
-				GiveItem2Character(Pchar, "blade1");
-				EquipCharacterByItem(Pchar, "blade1");
+				GiveItem2Character(Pchar, "blade10");
+				EquipCharacterByItem(Pchar, "blade10");
 				GiveItem2Character(Pchar, "piratespistol");
 				EquipCharacterByItem(Pchar, "piratespistol");
 				TakeNItems(Pchar,"gunpowder", 6);
-				TakeNItems(Pchar,"pistolbullets", 6);	
+				TakeNItems(Pchar,"pistolbullets", 6);
+
+				SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Tortuga_port");
+
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2");
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
 				
 				LAi_QuestDelay("Tortuga_surgeons_start", 0.1);
 			break;
@@ -734,12 +930,13 @@ void StartStoryLine()
 				SetCurrentTime(12, 0);
 
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 				//SetNextWeather("Heavy Storm");
 
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
-				GiveItem2Character(Pchar, "blade1");
-				EquipCharacterByItem(Pchar, "blade1");
+				GiveItem2Character(Pchar, "blade10");
+				EquipCharacterByItem(Pchar, "blade10");
 				GiveItem2Character(Pchar, "piratespistol");
 				EquipCharacterByItem(Pchar, "piratespistol");
 				TakeNItems(Pchar,"gunpowder", 6);
@@ -756,7 +953,7 @@ void StartStoryLine()
 
 			case "47":
 				//Richards Cartagena
-		//LAi_SetImmortal(pchar, true);	//temp
+		LAi_SetImmortal(pchar, true);	//temp
 
 				Pchar.quest.disable_rebirth = true;
 
@@ -770,19 +967,56 @@ void StartStoryLine()
 			//SetCurrentTime(9, 0);
 			//SetCurrentTime(2, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+			//	//Pchar.quest.JRH_rain = "Clear";	
 
 				Locations[FindLocation("cloister_exit")].locators_radius.box.box1 = 2.0;	//opens WoodesRogers part
-				Pchar.monastary = "Sister_Richards";	
+				Pchar.monastary = "Sister_Richards";
 
+				Pchar.quest.tape_found.win_condition.l1 = "item";
+				Pchar.quest.tape_found.win_condition.l1.character = Pchar.id;
+				Pchar.quest.tape_found.win_condition.l1.item = "tape";
+				Pchar.quest.tape_found.win_condition = "tape_found";
+	
 				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");	
 				GiveItem2Character(Pchar, "piratespistol");
 				EquipCharacterByItem(Pchar, "piratespistol");
 				TakeNItems(Pchar,"gunpowder", 6);
-				TakeNItems(Pchar,"pistolbullets", 6);	
+				TakeNItems(Pchar,"pistolbullets", 6);
+
+				SetModel(PChar, "Howard_Pyle_4", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Cartagena_port");
+
+				AddPassenger(Pchar, characterFromID("Hands"), 0);
+				SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+				SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
+				characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("Hands"));
+
+				AddPassenger(Pchar, characterFromID("Caesar"), 0);
+				SetOfficersIndex(Pchar, 2, getCharacterIndex("Caesar"));
+				SetModel(characterFromID("Caesar"), "bb_Caesar", "man", "man", 1.8, false);
+				characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("Caesar"));
+
+				AddPassenger(Pchar, characterFromID("Pell"), 0);
+				SetOfficersIndex(Pchar, 3, getCharacterIndex("Pell"));
+				SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
+				characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("Pell"));
+
+				int i;
+				for(i=1; i<14; i++) AddQuestRecord("Richards", i); 
+
+				pchar.quest.monastary_no_officers.win_condition.l1 = "location";
+				pchar.quest.monastary_no_officers.win_condition.l1.location = "cloister_exit";
+				pchar.quest.monastary_no_officers.win_condition = "monastary_no_officers";
+
 			break;
 
 			case "49":
@@ -799,11 +1033,12 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 
 				Locations[FindLocation("cloister_exit")].locators_radius.box.box1 = 2.0;	//opens WoodesRogers part
 
-				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				SetModel(Pchar, "Howard_Pyle_3", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");	
@@ -811,7 +1046,7 @@ void StartStoryLine()
 				EquipCharacterByItem(Pchar, "piratespistol");
 				TakeNItems(Pchar,"gunpowder", 6);
 				TakeNItems(Pchar,"pistolbullets", 6);	
-				GiveItem2Character(Pchar, "mapBB5");
+				GiveItem2Character(Pchar, "mapBB4C");
 				TakeNItems(Pchar,"potionwine2", 2);
 
 				LAi_QuestDelay("abbess_map_given1", 0.1);
@@ -829,6 +1064,7 @@ void StartStoryLine()
 				SetNextWeather("Clear");
 
 			//these are for testing reasons
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
@@ -840,6 +1076,8 @@ void StartStoryLine()
 				AddQuestRecord("Blackbeards_crew","2");
 			
 				ChangeCharacterAddressGroup(CharacterFromID("Odel"), "Smugglers_Tavern", "goto", "goto17");
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Conceicao_port");
 
 			AddPassenger(Pchar, characterFromID("Hands"), 0);
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
@@ -850,7 +1088,7 @@ void StartStoryLine()
 
 			AddPassenger(Pchar, characterFromID("Pell"), 0);
 			SetOfficersIndex(Pchar, 3, getCharacterIndex("Pell"));
-			SetModel(characterFromID("Hands"), "bb_Pell", "man", "man", 1.8, false);
+			SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
 				
 				pchar.quest.Odel_dialog.win_condition.l1 = "locator";
 				pchar.quest.Odel_dialog.win_condition.l1.location = "Smugglers_Tavern";
@@ -861,25 +1099,41 @@ void StartStoryLine()
 			break;
 
 			case "55":
-				//Caesar Mayanard Citadel Rock				
+				//Caesar Mayanard Citadel Rock			
 
-				sTeleportLocName = "Eleuthera_tavern_upstairs";
+			/*	sTeleportLocName = "Eleuthera_tavern_upstairs";
 				rldGroup = "reload";
-				rldLocator = "reload3_back";
+				rldLocator = "reload3_back";		*/
+
+				sTeleportLocName = "Eleuthera_port";
+				rldGroup = "reload";
+				rldLocator = "reload1";
+
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
 
 				LAi_SetImmortal(pchar, true);
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
-				GiveItem2Character(Pchar, "blade27");
-				EquipCharacterByItem(Pchar, "blade27");
-				GiveItem2Character(Pchar, "pistolmtoon");
-				EquipCharacterByItem(Pchar, "pistolmtoon");
+				GiveItem2Character(Pchar, "blade10");
+				EquipCharacterByItem(Pchar, "blade10");
+				GiveItem2Character(Pchar, "PiratesPistol");
+				EquipCharacterByItem(Pchar, "PiratesPistol");
 				TakeNItems(Pchar,"gunpowder", 6);
-				TakeNItems(Pchar,"pistolgrapes", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);
+
+				//GiveItem2Character(Pchar, "bladespade");
+				//GiveItem2Character(Pchar, "bladeanchor_big");
+				//GiveItem2Character(Pchar, "bladelever");
+				
+
+
+				SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Eleuthera_port");
 
 			//	GiveItem2Character(Pchar, "bladelever");	//temp
-			//	GiveItem2Character(Pchar, "map");		//temp
 			//	GiveItem2Character(Pchar, "bladeanchor_big");
 			//	EquipCharacterByItem(Pchar, "bladeanchor_big");	
 
@@ -900,6 +1154,21 @@ void StartStoryLine()
 			characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
 			LAi_SetOfficerType(characterFromID("Pell"));
 
+				GiveItem2Character(characterFromID("Pell"), "blade4");
+				EquipCharacterByItem(characterFromID("Pell"), "blade4");
+				GiveItem2Character(characterFromID("Pell"), "piratespistol");
+				EquipCharacterByItem(characterFromID("Pell"), "piratespistol");
+				TakeNItems(characterFromID("Pell"),"gunpowder", 6);
+				TakeNItems(characterFromID("Pell"),"pistolbullets", 6);
+
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3"); AddQuestRecord("Caesar","4");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2");
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
+
 				LAi_QuestDelay("Citadel_rock_start", 0.1);
 			break;
 		
@@ -915,12 +1184,19 @@ void StartStoryLine()
 				rldGroup = "reload";
 				rldLocator = "reload1";
 
-				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
-				GiveItem2Character(Pchar, "blade1");
-				EquipCharacterByItem(Pchar, "blade1");	
+				SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "blade10");
+				EquipCharacterByItem(Pchar, "blade10");	
 				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "piratespistol");
+				EquipCharacterByItem(Pchar, "piratespistol");
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);	
 
-				AddQuestRecord("Caesar","5");
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Turks_port");
+
 				ChangeCharacterAddressGroup(characterFromID("shipwreck_trader"), "Turks_Fort_Office", "sit", "sit1");
 				Locations[FindLocation("Turks_Fort_Office")].locators_radius.sit.sit1 = 2.5;
 
@@ -929,17 +1205,38 @@ void StartStoryLine()
 			SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
 			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
 			LAi_SetOfficerType(characterFromID("Hands"));
-
+		/*
 			AddPassenger(Pchar, characterFromID("Caesar"), 0);
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Caesar"));
 			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
 			LAi_SetOfficerType(characterFromID("Caesar"));
+
+			Pchar.quest.hammer_gp = 0;
+			Pchar.killed_wr_officers = 1;
+			Pchar.Caesar_info = "yes";
 
 			AddPassenger(Pchar, characterFromID("Pell"), 0);
 			SetOfficersIndex(Pchar, 3, getCharacterIndex("Pell"));
 			SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
 			characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
 			LAi_SetOfficerType(characterFromID("Pell"));
+
+				GiveItem2Character(characterFromID("Pell"), "blade4");
+				EquipCharacterByItem(characterFromID("Pell"), "blade4");
+				GiveItem2Character(characterFromID("Pell"), "piratespistol");
+				EquipCharacterByItem(characterFromID("Pell"), "piratespistol");
+				TakeNItems(characterFromID("Pell"),"gunpowder", 6);
+				TakeNItems(characterFromID("Pell"),"pistolbullets", 6);
+		*/
+
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3"); AddQuestRecord("Caesar","4");
+				AddQuestRecord("Caesar","5");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2");
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
 
 				LAi_QuestDelay("Turks_armory", 0.1);
 
@@ -977,7 +1274,7 @@ void StartStoryLine()
 
 			case "57":
 				//Caesar Turks roof tour
-			LAi_SetImmortal(pchar, true);	//temp
+		//	LAi_SetImmortal(pchar, true);	//temp
 
 				Pchar.quest.disable_rebirth = true;
 				locations[FindLocation("Turks_port")].type = "silent_seashore";
@@ -990,10 +1287,17 @@ void StartStoryLine()
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
 
-				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
-				GiveItem2Character(Pchar, "blade1");
-				EquipCharacterByItem(Pchar, "blade1");
+				SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+			//	SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);	//testing as the last mission
+
+				GiveItem2Character(Pchar, "blade10");
+				EquipCharacterByItem(Pchar, "blade10");
+				GiveItem2Character(Pchar, "piratespistol");
+				EquipCharacterByItem(Pchar, "piratespistol");
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);
 				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "map");
 
 				Locations[FindLocation("Turks_tavern_kitchen")].reload.l5.disable = 0;
 
@@ -1014,6 +1318,20 @@ void StartStoryLine()
 			characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
 			LAi_SetOfficerType(characterFromID("Pell"));
 
+				Pchar.quest.hammer_gp = 0;
+				Pchar.killed_wr_officers = 1;
+			//	Pchar.killed_wr_officers = 3;		//testing as the last mission
+				Pchar.Caesar_info = "yes";
+	
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3"); AddQuestRecord("Caesar","4");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2");
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
+
+
 				pchar.quest.Turks_enemy0.win_condition.l1 = "locator";
 				pchar.quest.Turks_enemy0.win_condition.l1.location = "Turks_port";
 				pchar.quest.Turks_enemy0.win_condition.l1.locator_group = "quest";
@@ -1025,7 +1343,7 @@ void StartStoryLine()
 
 			case "58":
 				//Caesar Turks cave
-		//LAi_SetImmortal(pchar, true);	//temp
+		LAi_SetImmortal(pchar, true);	//temp
 
 				Pchar.quest.disable_rebirth = true;
 		locations[FindLocation("Turks_port")].type = "silent_seashore";
@@ -1042,14 +1360,33 @@ void StartStoryLine()
 				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
-				GiveItem2Character(Pchar, "bladeX4");	
+				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "map");	
 
 				Locations[FindLocation("Turks_tavern_kitchen")].reload.l5.disable = 0;
 				Locations[FindLocation("Turks_port")].models.day.charactersPatch = "Margarita_patch_roof";
 				Locations[FindLocation("Turks_port")].models.night.charactersPatch = "Margarita_patch_roof";
 
+				AddPassenger(Pchar, characterFromID("Hands"), 0);
+				SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+				SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
+				characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("Hands"));
+
+				AddPassenger(Pchar, characterFromID("Caesar"), 0);
+				SetOfficersIndex(Pchar, 2, getCharacterIndex("Caesar"));
+				characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("Caesar"));
+
+				AddPassenger(Pchar, characterFromID("Pell"), 0);
+				SetOfficersIndex(Pchar, 3, getCharacterIndex("Pell"));
+				SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
+				characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("Pell"));
+
 				Pchar.quest.hammer_gp = 0;
 				Pchar.killed_wr_officers = 1;
+				Pchar.Caesar_info = "yes";
 
 				pchar.quest.Turks_steplockM.win_condition.l1 = "locator";
 				pchar.quest.Turks_steplockM.win_condition.l1.location = "Turks_port";
@@ -1098,11 +1435,13 @@ void StartStoryLine()
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");	
 				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "map");
 
 				ChangeCharacterAddressGroup(characterFromID("shipwreck_trader"), "Turks_wreck_shore", "goto", "goto3");//temp for the icons
 				LAi_SetStayType(characterFromID("shipwreck_trader"));
 				Pchar.quest.hammer_gp = 0;
 				Pchar.killed_wr_officers = 1;
+				Pchar.Caesar_info = "yes";
 
 				LAi_QuestDelay("fall_to_sewer3", 0.1);
 			break;
@@ -1126,13 +1465,10 @@ void StartStoryLine()
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");	
 				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "map");
 
 				Pchar.killed_wr_officers = 1;
-
-				//from reading HOP (items.c)
-				Pchar.book72_handsL = "read";
-				AddQuestRecord("Israel_Hands", "3");
-		
+				
 				SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
 				Characters[GetCharacterIndex("Hands")].name = TranslateString("","Beggar");
 				Characters[GetCharacterIndex("Hands")].lastname = TranslateString("","");
@@ -1140,7 +1476,10 @@ void StartStoryLine()
 				LAi_SetPoorType(CharacterFromID("Hands"));
 				ChangeCharacterAddressGroup(CharacterFromID("Hands"), "Willemstad_town_3", "officers", "reload7_1");
 
-				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); 
+				//from reading HOP (items.c)
+				Pchar.book72_handsL = "read";
+				AddQuestRecord("Israel_Hands", "3");
 
 				LAi_QuestDelay("start_Hands_Willemstad", 0.1);
 			break;
@@ -1163,6 +1502,7 @@ void StartStoryLine()
 
 				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 				
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				EquipCharacterByItem(Pchar, "bladeX4");
 			//	GiveItem2Character(Pchar, "key34");
@@ -1211,16 +1551,22 @@ void StartStoryLine()
 				AddCharacterGoods(Pchar, GOOD_COTTON, 1);
 				AddCharacterGoods(Pchar, GOOD_COPRA, 1);
 				AddCharacterGoods(Pchar, GOOD_LEATHER, 1);
-
+				
 				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); 
 				AddQuestRecord("Israel_Hands","3"); AddQuestRecord("Israel_Hands","4");
-				
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2");
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
+
 				LAi_QuestDelay("start_Maltains", 0.1);
 			break;
 
 			case "63":
 				//Hands Antigua port - fort - prison
-		LAi_SetImmortal(pchar, true);	//temp
+		//LAi_SetImmortal(pchar, true);	//temp
 		//AddMoneyToCharacter(Pchar, 100000); //temp
 
 				Pchar.quest.disable_rebirth = true;
@@ -1231,12 +1577,28 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
+
+				Pchar.perks.list.BasicDefence = true;	
+				Pchar.perks.list.GunProfessional = true;
+				Pchar.perks.list.GunFighter = true;
+				Pchar.perks.list.IronWill = true;
 			
+				AddMoneyToCharacter(Pchar,-10000);
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
-				GiveItem2Character(Pchar, "blade1");
-				EquipCharacterByItem(Pchar, "blade1");
+				GiveItem2Character(Pchar, "blade10");
+				EquipCharacterByItem(Pchar, "blade10");
+			/*	GiveItem2Character(Pchar, "piratespistol");
+				EquipCharacterByItem(Pchar, "piratespistol");
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);		*/
 				GiveItem2Character(Pchar, "doc61");
+				TakeNItems(Pchar,"medical1", 1);
+
+				SetModel(PChar, "Howard_Pyle_4", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "Antigua_port");
 
 				AddPassenger(Pchar, characterFromID("Hands"), 0);
 				SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
@@ -1244,8 +1606,27 @@ void StartStoryLine()
 				characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
 				LAi_SetOfficerType(characterFromID("Hands"));
 
+			//could be here or not yet found
+			AddPassenger(Pchar, characterFromID("Caesar"), 0);
+			SetOfficersIndex(Pchar, 3, getCharacterIndex("Caesar"));
+			SetModel(characterFromID("Caesar"), "bb_Caesar", "man", "man", 1.8, false);
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Caesar"));
+
+				AddQuestRecord("Israel_Hands","1"); AddQuestRecord("Israel_Hands","2"); AddQuestRecord("Israel_Hands","3");
+				AddQuestRecord("Israel_Hands","4"); AddQuestRecord("Israel_Hands","5");
+				AddQuestRecord("Blackbeards_crew","1"); AddQuestRecord("Blackbeards_crew","2"); AddQuestRecord("Blackbeards_crew","3");
+				AddQuestRecord("Benjamin_Hornigold","1"); AddQuestRecord("Benjamin_Hornigold","2"); CloseQuestHeader("Benjamin_Hornigold");
+				AddQuestRecord("Caesar","1"); AddQuestRecord("Caesar","2"); AddQuestRecord("Caesar","3");
+				AddQuestRecord("Charles_Eden","1"); AddQuestRecord("Charles_Eden","2");
+				AddQuestRecord("Johnson","1"); AddQuestRecord("Johnson","2");
+				AddQuestRecord("Richards","1"); AddQuestRecord("Richards","2");
+
 				//this enables the prison tour
 				locations[FindLocation("Antigua_port")].models.always.locators = "StJohns_locators_JRH";
+
+				//this is only for testing prison escape route
+			//	locations[FindLocation("Antigua_port")].models.always.locators = "StJohns_locators_JRH2";
 
 				LAi_QuestDelay("prison_info_done5", 0.1);
 			break;
@@ -1256,10 +1637,6 @@ void StartStoryLine()
 
 				Pchar.quest.disable_rebirth = true;
 
-				//sTeleportLocName = "bb_prison_outskirt";
-				//rldGroup = "reload";
-				//rldLocator = "reload1";
-
 				sTeleportLocName = "bb_prison_port";
 				rldGroup = "reload";
 				rldLocator = "reload2";
@@ -1267,8 +1644,11 @@ void StartStoryLine()
 				//SetCurrentTime(18, 0);
 			SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 
+				SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
@@ -1277,7 +1657,7 @@ void StartStoryLine()
 				EquipCharacterByItem(Pchar, "piratespistol");
 				TakeNItems(Pchar,"gunpowder", 6);
 				TakeNItems(Pchar,"pistolbullets", 6);
-				TakeNItems(Pchar,"potion1", 2);	
+				TakeNItems(Pchar,"mecical1", 1);
 
 				LAi_QuestDelay("prison_info_done5", 0.1);
 			break;
@@ -1296,16 +1676,22 @@ void StartStoryLine()
 				//SetCurrentTime(18, 0);
 			SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
-
+				//Pchar.quest.JRH_rain = "Clear";	
 
 			//GiveItem2Character(Pchar, "bladesaw");
 			//GiveItem2Character(Pchar, "tool5");
 				GiveItem2Character(Pchar, "bladeX4");
-				GiveItem2Character(Pchar, "blade1");
-				EquipCharacterByItem(Pchar, "blade1");
-				
-				ChangeCharacterAddressGroup(CharacterFromID("Teach"), "BB_prison_outskirt", "officers", "reload2_2");
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "blade10");
+				EquipCharacterByItem(Pchar, "blade10");
+				GiveItem2Character(Pchar, "doc61");
+				GiveItem2Character(Pchar, "piratespistol");
+				EquipCharacterByItem(Pchar, "piratespistol");
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);
+				TakeNItems(Pchar,"medical1", 1);
+
+				SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
 				Pchar.quest.prison_pier = "phase0";
 				Pchar.quest.prison_elevator = "down";
@@ -1378,25 +1764,35 @@ void StartStoryLine()
 				rldGroup = "reload";
 				rldLocator = "reload1";
 
-				SetCurrentTime(18, 0);
+				SetCurrentTime(20, 0);
+			//	SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
+			//SetNextWeather("Heavy Storm");//temp test
 
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				GiveItem2Character(Pchar, "piratespistol");
 				
-				TakeNItems(Pchar,"gunpowder", 2);
-				TakeNItems(Pchar,"pistolbullets", 2);
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);
 				TakeNItems(Pchar,"cognac", 2);
 				GiveItem2Character(Pchar, "pistol203");
 				GiveItem2Character(Pchar, "ammobag1");
 				GiveItem2Character(Pchar, "bladeA4");
 				GiveItem2Character(Pchar, "doctortoolkit");
-			GiveItem2Character(Pchar, "key38");
+				TakeNItems(Pchar,"medical1", 1);
+			//GiveItem2Character(Pchar, "key38");
+			//GiveItem2Character(Pchar, "bladehammer");
+			//GiveItem2Character(Pchar, "bladesaw");
+			//GiveItem2Character(Pchar, "bladeaxe4");
+			//GiveItem2Character(Pchar, "map");			//temp
 
 				EquipCharacterByItem(Pchar, "bladeA4");
 				EquipCharacterByItem(Pchar, "pistol203");
+
+				SetModel(PChar, "Howard_Pyle_3", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
 				Pchar.quest.prison_pier = "phase0";
 				Pchar.quest.prison_elevator = "down";
@@ -1416,7 +1812,7 @@ void StartStoryLine()
 				pchar.quest.bb_prison_opening2.win_condition = "bb_prison_opening2";
 			
 				LAi_QuestDelay("prison_info_done5", 0.1);
-				LAi_QuestDelay("prison2_tools3_check", 0.5);
+				LAi_QuestDelay("prison2_tools3_check", 0.5);			
 			break;
 
 			case "80":
@@ -1436,36 +1832,89 @@ void StartStoryLine()
 			//SetCurrentTime(19, 0);			//testing bad randitems
 			//SetCurrentTime(7, 0);			//testing bad randitems
 				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+		//SetNextWeather("Heavy Rain");
+		//Pchar.quest.JRH_rain = "Heavy Rain";
 
-				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				SetModel(PChar, "Howard_Pyle_a", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 			//	ChangeCharacterAddressGroup(CharacterFromID("Teach"), "BB_island1", "goto", "citizen03");			
 				
-				AddMoneyToCharacter(Pchar, 4100);
+				Pchar.perks.list.BasicDefence = true;	
+				Pchar.perks.list.GunProfessional = true;
+				Pchar.perks.list.GunFighter = true;
+				Pchar.perks.list.IronWill = true;
+
+				AddMoneyToCharacter(Pchar, 1000);
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "bladeX4");
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
 			//	GiveItem2Character(Pchar, "bladelever3");
 			//	EquipCharacterByItem(Pchar, "bladelever3");
+			//	GiveItem2Character(Pchar, "pistolbelt");
+			//	EquipCharacterByItem(Pchar, "pistolbelt");
+				GiveItem2Character(Pchar, "pistol20");
+				EquipCharacterByItem(Pchar, "pistol20");
+				GiveItem2Character(Pchar, "ammobag2");
+				EquipCharacterByItem(Pchar, "ammobag2");
+				TakeNItems(Pchar,"gunpowder", 18);
+				TakeNItems(Pchar,"pistolbullets", 18);
 
+				TakeNItems(Pchar,"incense", 6);		//total 12
+				TakeNItems(Pchar,"myrrh", 3);		//total 4
+			//	LAi_SetHP(Pchar, 80.0, 80.0);
+				
 				AddCharacterGoods(Pchar, GOOD_COTTON, 1);
 				AddCharacterGoods(Pchar, GOOD_CHOCOLATE, 145);
 				AddCharacterGoods(Pchar, GOOD_SUGAR, 250);
-				
-				LAi_QuestDelay("KR_center_backloop1", 0.1);
-				LAi_QuestDelay("KR_center_backloop2", 0.1);
-				LAi_QuestDelay("KR_lower_backloop", 0.1);
+	
+			AddPassenger(Pchar, characterFromID("Hands"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+			SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Hands"));
+			TakeNItems(characterFromID("Hands"),"pistol206", -1);				//double pistols for some reason
 
-				LAi_QuestDelay("BB_tower_top_backloop", 0.1);
-				//LAi_QuestDelay("BB_tower_backloop", 0.1);	//only if door to upper cave is locked
-				
-				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
-				LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
-				LAi_QuestDelay("NS_locked_shipyard_start", 0.1);
-				LAi_QuestDelay("start_BB_flag", 0.1);
+			AddPassenger(Pchar, characterFromID("Caesar"), 0);
+			SetOfficersIndex(Pchar, 2, getCharacterIndex("Caesar"));
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Caesar"));
+			TakeNItems(characterFromID("Caesar"),"pistol202", -1);				//double pistols for some reason
+
+			AddPassenger(Pchar, characterFromID("Pell"), 0);
+			SetOfficersIndex(Pchar, 3, getCharacterIndex("Pell"));
+			SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
+			characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Pell"));
+
+			GiveItem2Character(characterFromID("Pell"), "blade4");
+			EquipCharacterByItem(characterFromID("Pell"), "blade4");
+			GiveItem2Character(characterFromID("Pell"), "piratespistol");
+			EquipCharacterByItem(characterFromID("Pell"), "piratespistol");
+			TakeNItems(characterFromID("Pell"),"gunpowder", 6);
+			TakeNItems(characterFromID("Pell"),"pistolbullets", 6);
+	
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
+
+				//these 4 to start_Kristiania
+				//LAi_QuestDelay("KR_center_backloop1", 0.1);
+				//LAi_QuestDelay("KR_center_backloop2", 0.1);
+				//LAi_QuestDelay("KR_lower_backloop", 0.1);
+				//LAi_QuestDelay("NS_locked_shipyard_start", 0.1);
+
 				LAi_QuestDelay("start_Kristiania", 0.1);
-				LAi_QuestDelay("pick_up_grotto_boom", 0.1);
-				LAi_QuestDelay("BB_lower_cave_steplock", 0.1);
-				LAi_QuestDelay("BB_lower_cave_fill_chests", 0.1);
-				LAi_QuestDelay("BB_lower_cave_deathtrap", 0.1);
+
+				//these 8 to fort_unlock2
+				//LAi_QuestDelay("BB_tower_top_backloop", 0.1);
+				//LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
+				//LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
+				//LAi_QuestDelay("start_BB_flag", 0.1);
+				//LAi_QuestDelay("pick_up_grotto_boom", 0.1);
+				//LAi_QuestDelay("BB_lower_cave_steplock", 0.1);
+				//LAi_QuestDelay("BB_lower_cave_deathtrap", 0.1);
+				//LAi_QuestDelay("BB_tower_backloop", 0.1);	//no, always "on", only locator changes in size
+
 			break;
 
 			case "82":
@@ -1485,11 +1934,17 @@ void StartStoryLine()
 			//	SetCurrentTime(8, 0);
 			//	SetCurrentTime(20, 0);
 				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
 
-				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);			
+				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				GiveItem2Character(Pchar, "map");			
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
 			GiveItem2Character(pchar, "switch_button");
+			//GiveItem2Character(pchar, "auction_list_roll");
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
 
 				AddCharacterGoods(Pchar, GOOD_COTTON, 1);
 				AddCharacterGoods(Pchar, GOOD_CHOCOLATE, 145);
@@ -1500,12 +1955,13 @@ void StartStoryLine()
 				LAi_QuestDelay("KR_lower_backloop", 0.1);
 
 				LAi_QuestDelay("BB_tower_top_backloop", 0.1);
-				//LAi_QuestDelay("BB_tower_backloop", 0.1);	//only if door to upper cave is locked
+			LAi_QuestDelay("BB_tower_backloop", 0.1);	//no, always "on", only locator changes in size
 				
 				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
 				LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
 
 				LAi_QuestDelay("NS_locked_shipyard_start", 0.1);
+			LAi_QuestDelay("start_BB_flag", 0.1);
 			
 				pchar.quest.see_oriel.win_condition.l1 = "locator";
 				pchar.quest.see_oriel.win_condition.l1.location = "Nueva_Suecia_upper_town";
@@ -1531,11 +1987,16 @@ void StartStoryLine()
 			//	SetCurrentTime(8, 0);
 			//	SetCurrentTime(20, 0);
 				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
 
-				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);			
+				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				GiveItem2Character(Pchar, "map");			
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
 			//GiveItem2Character(pchar, "switch_button");
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
 
 				AddCharacterGoods(Pchar, GOOD_COTTON, 1);
 				AddCharacterGoods(Pchar, GOOD_CHOCOLATE, 145);
@@ -1546,12 +2007,13 @@ void StartStoryLine()
 				LAi_QuestDelay("KR_lower_backloop", 0.1);
 
 				LAi_QuestDelay("BB_tower_top_backloop", 0.1);
-				//LAi_QuestDelay("BB_tower_backloop", 0.1);	//only if door to upper cave is locked
+			LAi_QuestDelay("BB_tower_backloop", 0.1);	//no, always "on", only locator changes in size
 				
 				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
 				LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
 
 				LAi_QuestDelay("NS_locked_shipyard_start", 0.1);
+		LAi_QuestDelay("start_BB_flag", 0.1);
 			break;
 
 			case "84":
@@ -1565,6 +2027,40 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";
+
+			GiveItem2Character(Pchar, "tailors_note");
+
+			Pchar.jungle_path = "know_how";
+			AddQuestRecord("KR_logbook","5");
+
+			//now the way to the red house is enabled
+			Locations[FindLocation("KR_jungle_8")].reload.l3.go = "KR_jungle_13";
+			Locations[FindLocation("KR_jungle_8")].reload.l3.emerge = "reload3";
+			Locations[FindLocation("KR_jungle_8")].reload.l5.go = "KR_jungle_13";
+			Locations[FindLocation("KR_jungle_8")].reload.l5.emerge = "reload3";
+
+			Locations[FindLocation("KR_jungle_10")].reload.l1.go = "KR_jungle_13";
+			Locations[FindLocation("KR_jungle_10")].reload.l1.emerge = "reload1";
+			Locations[FindLocation("KR_jungle_10")].reload.l6.go = "KR_jungle_13";
+			Locations[FindLocation("KR_jungle_10")].reload.l6.emerge = "reload1";
+
+			pchar.quest.check_logbook.win_condition.l1 = "location";
+			pchar.quest.check_logbook.win_condition.l1.location = "Redhouse_room";
+			pchar.quest.check_logbook.win_condition = "check_logbook";
+
+			pchar.quest.KR_indian_ambush.win_condition.l1 = "locator";
+			pchar.quest.KR_indian_ambush.win_condition.l1.location = "KR_jungle_9";
+			pchar.quest.KR_indian_ambush.win_condition.l1.locator_group = "goto";
+			pchar.quest.KR_indian_ambush.win_condition.l1.locator = "box9";
+			pchar.quest.KR_indian_ambush.win_condition = "KR_indian_ambush";
+
+				GiveItem2Character(Pchar, "blade1");
+				EquipCharacterByItem(Pchar, "blade1");
+				
+				GiveItem2Character(Pchar, "map");
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
 			break;
 
 			case "85":
@@ -1578,9 +2074,14 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
 
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
+				GiveItem2Character(Pchar, "map");
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
 
 				LAi_QuestDelay("KR_indian_ambush_start", 0.1);
 			break;			
@@ -1600,8 +2101,10 @@ void StartStoryLine()
 			//	SetCurrentTime(20, 0);
 			//	SetCurrentTime(8, 0);
 				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
 
-				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);			
+				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				GiveItem2Character(Pchar, "map");			
 				GiveItem2Character(Pchar, "blade1");
 				EquipCharacterByItem(Pchar, "blade1");
 		GiveItem2Character(Pchar, "tailors_book");
@@ -1609,24 +2112,25 @@ void StartStoryLine()
 				AddCharacterGoods(Pchar, GOOD_COTTON, 1);
 				AddCharacterGoods(Pchar, GOOD_CHOCOLATE, 145);
 				AddCharacterGoods(Pchar, GOOD_SUGAR, 250);
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
 				
 				LAi_QuestDelay("KR_center_backloop1", 0.1);
 				LAi_QuestDelay("KR_center_backloop2", 0.1);
 				LAi_QuestDelay("KR_lower_backloop", 0.1);
 
 				LAi_QuestDelay("BB_tower_top_backloop", 0.1);
-				//LAi_QuestDelay("BB_tower_backloop", 0.1);	//only if door to upper cave is locked
+			LAi_QuestDelay("BB_tower_backloop", 0.1);	//no, always "on", only locator changes in size
 				
 				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
 				LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
-
-				
 			break;
 
 			case "90":
 				//Q2: BB_island1
 		
-			LAi_SetImmortal(pchar, true);		//temp
+			//LAi_SetImmortal(pchar, true);		//temp
 				Pchar.quest.disable_rebirth = true;
 
 				sTeleportLocName = "BB_island1";
@@ -1634,31 +2138,68 @@ void StartStoryLine()
 				rldLocator = "reload1";
 
 				SetCurrentTime(12, 0);
-			//	SetCurrentTime(19, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 				
-				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				SetModel(PChar, "Howard_Pyle_hat_a", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
-			//	GiveItem2Character(Pchar, "bladeX4");
-			//	GiveItem2Character(Pchar, "blade5"); 
+				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "blade1"); 
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "ammobag2");
+				EquipCharacterByItem(Pchar, "ammobag2");
+				GiveItem2Character(Pchar, "BB_hatA2");
+				EquipCharacterByItem(Pchar, "BB_hatA2");
+				GiveItem2Character(Pchar, "pistol20");
+				EquipCharacterByItem(Pchar, "pistol20");
 				GiveItem2Character(Pchar, "bladeBB"); 
 				EquipCharacterbyItem(Pchar, "bladeBB");
 				GiveItem2Character(Pchar, "pistolbladeBB"); 
 				EquipCharacterbyItem(Pchar, "pistolbladeBB");
-			//	GiveItem2Character(Pchar, "pistolwhip"); 
-			//	EquipCharacterbyItem(Pchar, "pistolwhip");
-			//	TakeNItems(Pchar,"gunpowder", 24);
-			//	TakeNItems(Pchar,"pistolbullets", 24);
-			//	GiveItem2Character(Pchar, "pistol5"); 
-			//	EquipCharacterbyItem(Pchar, "pistol5");
-			//	GiveItem2Character(Pchar, "bladelever3");
-				
+				GiveItem2Character(Pchar, "flagchest_closed"); 
+				GiveItem2Character(Pchar, "BB_coin");
+				GiveItem2Character(Pchar, "book69A");
+				GiveItem2Character(Pchar, "BB_key");
+				GiveItem2Character(Pchar, "doc60A");
+				TakeNItems(Pchar,"pistolbullets", 18);
+				TakeNItems(Pchar,"gunpowder", 18);
+
+				TakeNItems(Pchar,"incense", 12);
+				TakeNItems(Pchar,"myrrh", 4);
 			
 				Pchar.skill.Defence = "5";
-				
-				ChangeCharacterAddressGroup(CharacterFromID("Teach"), "BB_island1", "goto", "citizen03");
 
+				Pchar.perks.list.BasicDefence = true;	
+				Pchar.perks.list.GunProfessional = true;
+				Pchar.perks.list.GunFighter = true;
+				Pchar.perks.list.IronWill = true;
+				
+				//ChangeCharacterAddressGroup(CharacterFromID("Teach"), "BB_island1", "goto", "citizen03");
+
+			AddPassenger(Pchar, characterFromID("Hands"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+			SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Hands"));
+
+			AddPassenger(Pchar, characterFromID("Caesar"), 0);
+			SetOfficersIndex(Pchar, 2, getCharacterIndex("Caesar"));
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Caesar"));
+
+			AddPassenger(Pchar, characterFromID("Pell"), 0);
+			SetOfficersIndex(Pchar, 3, getCharacterIndex("Pell"));
+			SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
+			characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Pell"));
+
+			GiveItem2Character(characterFromID("Pell"), "blade4");
+			EquipCharacterByItem(characterFromID("Pell"), "blade4");
+			GiveItem2Character(characterFromID("Pell"), "piratespistol");
+			EquipCharacterByItem(characterFromID("Pell"), "piratespistol");
+			TakeNItems(characterFromID("Pell"),"gunpowder", 6);
+			TakeNItems(characterFromID("Pell"),"pistolbullets", 6);
+				
 				AddMoneyToCharacter(Pchar,-10000);
 
 				AddCharacterGoods(Pchar, GOOD_GOLD, 1);
@@ -1667,18 +2208,21 @@ void StartStoryLine()
 				AddCharacterGoods(Pchar, GOOD_COTTON, 1);
 				AddCharacterGoods(Pchar, GOOD_CHOCOLATE, 145);
 				AddCharacterGoods(Pchar, GOOD_SUGAR, 250);
-				
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
+			
+		//	Pchar.quest.grotto_lever = "up";			//testing off now	
 				
 				LAi_QuestDelay("KR_center_backloop1", 0.1);
 				LAi_QuestDelay("KR_center_backloop2", 0.1);
 				LAi_QuestDelay("BB_tower_top_backloop", 0.1);
-				//LAi_QuestDelay("BB_tower_backloop", 0.1);	//only if door to upper cave is locked
+				LAi_QuestDelay("BB_tower_backloop", 0.1);	//always "on", only locator changes in size
 				
 				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
 				LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
 				LAi_QuestDelay("pick_up_grotto_boom", 0.1);
 				LAi_QuestDelay("BB_lower_cave_steplock", 0.1);
-				LAi_QuestDelay("BB_lower_cave_fill_chests", 0.1);
 				LAi_QuestDelay("BB_lower_cave_deathtrap", 0.1);
 				LAi_QuestDelay("start_BB_flag", 0.1);
 			break;
@@ -1694,15 +2238,15 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 				
 				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
 				ChangeCharacterAddressGroup(CharacterFromID("Teach"), "BB_tower", "goto", "goto4");
 
 			Pchar.boat.islet = "ready";				//testing
-
 			
+				GiveItem2Character(Pchar, "map");
 				GiveItem2Character(Pchar, "bladelever3");		
 				EquipCharacterbyItem(Pchar, "bladelever3");
 				GiveItem2Character(Pchar, "bladeflag_pir"); 
@@ -1729,17 +2273,18 @@ void StartStoryLine()
 				AddCharacterGoods(Pchar, GOOD_CHOCOLATE, 145);
 				AddCharacterGoods(Pchar, GOOD_SUGAR, 250);
 				
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
 				
 				LAi_QuestDelay("KR_center_backloop1", 0.1);
 				LAi_QuestDelay("KR_center_backloop2", 0.1);
 				LAi_QuestDelay("BB_tower_top_backloop", 0.1);
-				//LAi_QuestDelay("BB_tower_backloop", 0.1);	//only if door to upper cave is locked
+				LAi_QuestDelay("BB_tower_backloop", 0.1);	//always "on", only locator changes in size
 				
 				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
 				LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
 				LAi_QuestDelay("pick_up_grotto_boom", 0.1);
 				LAi_QuestDelay("BB_lower_cave_steplock", 0.1);
-				LAi_QuestDelay("BB_lower_cave_fill_chests", 0.1);
 				LAi_QuestDelay("BB_lower_cave_deathtrap", 0.1);
 
 				LAi_QuestDelay("start_BB_flag", 0.1);
@@ -1756,18 +2301,589 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
+
+				SetModel(PChar, "Howard_Pyle_hat_a", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				GiveItem2Character(Pchar, "map");
+			//	GiveItem2Character(Pchar, "pistolbelt");
+			//	EquipCharacterByItem(Pchar, "pistolbelt");
+				GiveItem2Character(Pchar, "pistol20");
+				EquipCharacterByItem(Pchar, "pistol20");
+				GiveItem2Character(Pchar, "ammobag2");
+				EquipCharacterByItem(Pchar, "ammobag2");
+				GiveItem2Character(Pchar, "BB_hatA2");
+				EquipCharacterByItem(Pchar, "BB_hatA2");
+				GiveItem2Character(Pchar, "BB_coin"); 
+				EquipCharacterByItem(Pchar, "BB_coin");
 
 				GiveItem2Character(Pchar, "book69A");
 				GiveItem2Character(Pchar, "BB_key");
+
+				Pchar.perks.list.BasicDefence = true;	
+				Pchar.perks.list.GunProfessional = true;
+				Pchar.perks.list.GunFighter = true;
+				Pchar.perks.list.IronWill = true;
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
+
+				LAi_QuestDelay("KR_center_backloop1", 0.1);
+				LAi_QuestDelay("KR_center_backloop2", 0.1);
+				LAi_QuestDelay("BB_tower_top_backloop", 0.1);
+			LAi_QuestDelay("BB_tower_backloop", 0.1);	//no, always "on", only locator changes in size
+				
+				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
+				LAi_QuestDelay("BB_lower_cave_backloop", 0.1);
+				LAi_QuestDelay("pick_up_grotto_boom", 0.1);
+				LAi_QuestDelay("BB_lower_cave_steplock", 0.1);
+				LAi_QuestDelay("BB_lower_cave_deathtrap", 0.1);
 			break;
+		
+			case "99":
+				//Q2: final boss
+
+				Pchar.quest.disable_rebirth = true;
+
+				sTeleportLocName = "BB_lower_cave";	//use console to get to burning_cave
+				rldGroup = "reload";
+				rldLocator = "reload1";
+
+				SetCurrentTime(12, 0);
+				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+
+				LAi_SetHP(Pchar, 80.0, 80.0);
+				SetModel(PChar, "Howard_Pyle_hat_a", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "bladeX4");		
+				GiveItem2Character(Pchar, "blade1");		
+				EquipCharacterByItem(Pchar, "blade1");
+				GiveItem2Character(Pchar, "pistol20");
+				EquipCharacterByItem(Pchar, "pistol20");
+				GiveItem2Character(Pchar, "ammobag2");
+				EquipCharacterByItem(Pchar, "ammobag2");
+				GiveItem2Character(Pchar, "BB_hatA2");
+				EquipCharacterByItem(Pchar, "BB_hatA2");
+				GiveItem2Character(Pchar, "BB_coin"); 
+				EquipCharacterByItem(Pchar, "BB_coin");
+				TakeNItems(Pchar,"pistolbullets", 18);
+				TakeNItems(Pchar,"gunpowder", 18);
 			
+				TakeNItems(Pchar,"incense", 10);		//new max
+				TakeNItems(Pchar,"myrrh", 4);			//new max
+				TakeNItems(Pchar,"potion1", 2);
+				TakeNItems(Pchar,"potion3", 1);
+			
+				Pchar.perks.list.BasicDefence = true;	
+				Pchar.perks.list.GunProfessional = true;
+				Pchar.perks.list.GunFighter = true;
+				Pchar.perks.list.IronWill = true;
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
+			
+				Pchar.protection = "off";
+				locations[FindLocation("BB_lower_cave")].models.always.locators = "grotto2_l_dry";
+				Locations[FindLocation("BB_lower_cave")].environment.sea = "false";
+
+				Locations[FindLocation("BB_tower")].locators_radius.reload.reload5 = 0.001;
+				Locations[FindLocation("BB_tower")].locators_radius.goto.goto2 = 0.7;
+
+				Locations[FindLocation("BB_island1")].models.always.l1 = "blade1";
+				Locations[FindLocation("BB_island1")].models.always.locators = "jungle07_l_JRH_open";	
+
+				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
+				//LAi_QuestDelay("pick_up_grotto_boom", 0.1);
+				LAi_QuestDelay("BB_lower_cave_deathtrap", 0.1);
+
+				pchar.quest.BB_lower_cave_backloop_A.win_condition.l1 = "locator";
+				pchar.quest.BB_lower_cave_backloop_A.win_condition.l1.location = "BB_lower_cave";
+				pchar.quest.BB_lower_cave_backloop_A.win_condition.l1.locator_group = "reload";
+				pchar.quest.BB_lower_cave_backloop_A.win_condition.l1.locator = "reload3";
+				pchar.quest.BB_lower_cave_backloop_A.win_condition = "BB_lower_cave_backloop_A";
+
+				pchar.quest.BB_lower_cave_steplock1.win_condition.l1 = "locator";
+				pchar.quest.BB_lower_cave_steplock1.win_condition.l1.location = "BB_lower_cave";
+				pchar.quest.BB_lower_cave_steplock1.win_condition.l1.locator_group = "goto";
+				pchar.quest.BB_lower_cave_steplock1.win_condition.l1.locator = "steplock";
+				pchar.quest.BB_lower_cave_steplock1.win_condition = "BB_lower_cave_steplock1";
+			break;
+
 			case "100":
-				//Q2: alchemy
+				//Q2: after treasure
+
+				Pchar.quest.disable_rebirth = true;
+
+				sTeleportLocName = "BB_lower_cave";	//use console to get to burning_cave
+				rldGroup = "reload";
+				rldLocator = "reload1";
+			
+				SetCurrentTime(12, 0);
+				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+
+				LAi_SetHP(Pchar, 80.0, 80.0);
+				SetModel(PChar, "Skel4", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "bladeX4");		
+				GiveItem2Character(Pchar, "blade1");		
+				GiveItem2Character(Pchar, "pistol20");
+				GiveItem2Character(Pchar, "ammobag1");
+				GiveItem2Character(Pchar, "BB_hatA2");
+				GiveItem2Character(Pchar, "BB_coin"); 
+				EquipCharacterByItem(Pchar, "BB_coin");
+				TakeNItems(Pchar,"pistolbullets", 18);
+				TakeNItems(Pchar,"gunpowder", 18);
+
+				GiveItem2Character(Pchar, "book73_closed");
+				GiveItem2Character(Pchar, "snakewand");
+				GiveItem2Character(Pchar, "pistolcenserD");
+
+				GiveItem2Character(Pchar, "BBDagger");
+				GiveItem2Character(Pchar, "toolbox_filled");
+				GiveItem2Character(Pchar, "bladepainting");
+				EquipCharacterByItem(Pchar, "bladepainting");
+				GiveItem2Character(Pchar, "pistolbook71");
+				EquipCharacterByItem(Pchar, "pistolbook71");
+
+				TakeNItems(Pchar,"incense", 3);
+				TakeNItems(Pchar,"myrrh", 2);
+
+				Pchar.perks.list.BasicDefence = true;	
+				Pchar.perks.list.GunProfessional = true;
+				Pchar.perks.list.GunFighter = true;
+				Pchar.perks.list.IronWill = true;
+
+			AddPassenger(Pchar, characterFromID("Hands"), 0);
+			SetOfficersIndex(Pchar, 1, getCharacterIndex("Hands"));
+			SetModel(characterFromID("Hands"), "bb_Hands2", "man", "man", 1.8, false);
+			characters[GetCharacterIndex("Hands")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Hands"));
+
+			AddPassenger(Pchar, characterFromID("Caesar"), 0);
+			SetOfficersIndex(Pchar, 2, getCharacterIndex("Caesar"));
+			characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Caesar"));
+
+			AddPassenger(Pchar, characterFromID("Pell"), 0);
+			SetOfficersIndex(Pchar, 3, getCharacterIndex("Pell"));
+			SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
+			characters[GetCharacterIndex("Pell")].dialog.CurrentNode = "neutral";
+			LAi_SetOfficerType(characterFromID("Pell"));
+
+			GiveItem2Character(characterFromID("Pell"), "blade4");
+			EquipCharacterByItem(characterFromID("Pell"), "blade4");
+			GiveItem2Character(characterFromID("Pell"), "piratespistol");
+			EquipCharacterByItem(characterFromID("Pell"), "piratespistol");
+			TakeNItems(characterFromID("Pell"),"gunpowder", 6);
+			TakeNItems(characterFromID("Pell"),"pistolbullets", 6);
+
+				GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "IslaMona_port");
+		
+				Pchar.protection = "off";
+				locations[FindLocation("BB_lower_cave")].models.always.locators = "grotto2_l_dry_H";
+				Locations[FindLocation("BB_lower_cave")].environment.sea = "false";
+
+				Locations[FindLocation("BB_tower")].locators_radius.reload.reload5 = 0.001;
+				Locations[FindLocation("BB_tower")].locators_radius.goto.goto2 = 0.7;
+				Locations[FindLocation("BB_island1")].models.always.locators = "Jungle07_l_JRH_open";
+				Locations[FindLocation("BB_island1")].models.always.l1 = "blade1";
+				Locations[FindLocation("BB_island1")].locators_radius.box.box1 = 0.0001;	
+
+				LAi_QuestDelay("BB_upper_cave_backloop", 0.1);
+				//LAi_QuestDelay("pick_up_grotto_boom", 0.1);
+				LAi_QuestDelay("BB_lower_cave_deathtrap", 0.1);
+
+				pchar.quest.BB_lower_cave_backloop_A.win_condition.l1 = "locator";
+				pchar.quest.BB_lower_cave_backloop_A.win_condition.l1.location = "BB_lower_cave";
+				pchar.quest.BB_lower_cave_backloop_A.win_condition.l1.locator_group = "reload";
+				pchar.quest.BB_lower_cave_backloop_A.win_condition.l1.locator = "reload3";
+				pchar.quest.BB_lower_cave_backloop_A.win_condition = "BB_lower_cave_backloop_A";
+
+				pchar.quest.BB_lower_cave_steplock1.win_condition.l1 = "locator";
+				pchar.quest.BB_lower_cave_steplock1.win_condition.l1.location = "BB_lower_cave";
+				pchar.quest.BB_lower_cave_steplock1.win_condition.l1.locator_group = "goto";
+				pchar.quest.BB_lower_cave_steplock1.win_condition.l1.locator = "steplock";
+				pchar.quest.BB_lower_cave_steplock1.win_condition = "BB_lower_cave_steplock1";
+			break;
+
+			case "105":
+				//Q2: careen shore
+		
+			//LAi_SetImmortal(pchar, true);		//temp
+				Pchar.quest.disable_rebirth = true;
+		
+				sTeleportLocName = "BB_careen_shore";
+			//	sTeleportLocName = "BB_isle";
+				rldGroup = "reload";
+				rldLocator = "reload1";
+			
+				SetCurrentTime(12, 0);
+				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+				WhrDeleteRainEnvironment();
+				SetNextWind("N",30);
+
+			//	SetModel(PChar, "Howard_Pyle_b", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+				SetModel(characterFromID("Hands"), "bb_hands2", "man", "man", 1.8, true);
+				SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, true);
+				Characters[GetCharacterIndex("Caesar")].dialog.CurrentNode  = "neutral";
+
+				Pchar.special_flag = "on";
+				CaptureTownForNation("Grand_Turk", PIRATE);
+				ref cmdr = CharacterFromID("Dante Siciliano");//ok here
+				cmdr.nation = PIRATE;
+				cmdr.Flags.Pirate = 4; cmdr.Flags.Pirate.texture = 2;
+		
+			//no map: to be found in corvette cabin
+				GiveItem2Character(Pchar, "bladeX4");
+				EquipCharacterbyItem(Pchar, "bladeX4");
+				LAi_SetActorType(Pchar);
+				LAi_ActorSetLayMode(Pchar);
+
+				LAi_QuestDelay("storm_careen", 1.0);
+
+				//GiveShip2Character(pchar,"SloopBermuda","Marquis",-1,PIRATE,true,true);		//only test
+		
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_1"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_2"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_3"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_4"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_5"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_6"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_7"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_8"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_9"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_10"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_11"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_12"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_13"), "BB_careen_shore", "quest", "mut");
+			ChangeCharacterAddressGroup(CharacterFromID("Mutineer_14"), "BB_careen_shore", "quest", "mut");//temp off
+
+				LAi_SetPoorType(CharacterFromID("Mutineer_1"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_2"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_3"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_4"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_5"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_6"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_7"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_8"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_9"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_10"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_11"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_12"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_13"));
+				LAi_SetPoorType(CharacterFromID("Mutineer_14"));
+
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_15"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_16"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_17"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_18"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_19"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_20"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_21"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_22"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_32"), "BB_careen_shore", "quest", "mut");//obs 32 instead of 23
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_24"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_25"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_26"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_27"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Mutineer_31"), "BB_careen_shore", "quest", "mut");
+
+		
+				ChangeCharacterAddressGroup(CharacterFromID("Fletcher Christian"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Constable Mills"), "BB_careen_shore", "quest", "mut");
+				ChangeCharacterAddressGroup(CharacterFromID("Midshipman Young"), "BB_careen_shore", "quest", "mut");
+		//characters[GetCharacterIndex("Maltese_soldier3")].Ship.Type = "Corvette2";	//temp start with corvette
+		
+				pchar.quest.careen_back1_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back1_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back1_A.win_condition.l1.locator_group = "quest";
+				pchar.quest.careen_back1_A.win_condition.l1.locator = "1";
+				pchar.quest.careen_back1_A.win_condition = "careen_back1_A";
+
+				pchar.quest.careen_back2_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back2_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back2_A.win_condition.l1.locator_group = "quest";
+				pchar.quest.careen_back2_A.win_condition.l1.locator = "2";
+				pchar.quest.careen_back2_A.win_condition = "careen_back2_A";
+
+				pchar.quest.careen_back3_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back3_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back3_A.win_condition.l1.locator_group = "quest";
+				pchar.quest.careen_back3_A.win_condition.l1.locator = "3";
+				pchar.quest.careen_back3_A.win_condition = "careen_back3_A";
+		
+				pchar.quest.careen_back4_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back4_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back4_A.win_condition.l1.locator_group = "quest";
+				pchar.quest.careen_back4_A.win_condition.l1.locator = "4";
+				pchar.quest.careen_back4_A.win_condition = "careen_back4_A";
+
+				pchar.quest.careen_back5_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back5_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back5_A.win_condition.l1.locator_group = "quest";
+				pchar.quest.careen_back5_A.win_condition.l1.locator = "5";
+				pchar.quest.careen_back5_A.win_condition = "careen_back5_A";
+
+				pchar.quest.careen_back6_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back6_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back6_A.win_condition.l1.locator_group = "quest";
+				pchar.quest.careen_back6_A.win_condition.l1.locator = "6";
+				pchar.quest.careen_back6_A.win_condition = "careen_back6_A";
+
+				pchar.quest.careen_back7_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back7_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back7_A.win_condition.l1.locator_group = "barmen";
+				pchar.quest.careen_back7_A.win_condition.l1.locator = "7";
+				pchar.quest.careen_back7_A.win_condition = "careen_back7_A";
+
+				pchar.quest.careen_back8_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back8_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back8_A.win_condition.l1.locator_group = "barmen";
+				pchar.quest.careen_back8_A.win_condition.l1.locator = "8";
+				pchar.quest.careen_back8_A.win_condition = "careen_back8_A";
+
+				pchar.quest.careen_back9_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back9_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back9_A.win_condition.l1.locator_group = "barmen";
+				pchar.quest.careen_back9_A.win_condition.l1.locator = "9";
+				pchar.quest.careen_back9_A.win_condition = "careen_back9_A";
+
+				pchar.quest.careen_back10_A.win_condition.l1 = "locator";
+				pchar.quest.careen_back10_A.win_condition.l1.location = "BB_careen_shore";
+				pchar.quest.careen_back10_A.win_condition.l1.locator_group = "quest";
+				pchar.quest.careen_back10_A.win_condition.l1.locator = "10";
+				pchar.quest.careen_back10_A.win_condition = "careen_back10_A";
+			break;
+
+			case "106":
+				//Q2: careen corvette
+		
+			//LAi_SetImmortal(pchar, true);		//temp
+				Pchar.quest.disable_rebirth = true;
+		
+				sTeleportLocName = "BB_careen_corvette";
+				rldGroup = "reload";
+				rldLocator = "reload1";
+				
+				SetCurrentTime(2, 0);
+				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+				WhrDeleteRainEnvironment();
+				SetNextWind("N",30);
+
+				DeleteAttribute(Pchar, "items");
+				GiveItem2Character(Pchar, "book71_9_start");
+				GiveItem2Character(Pchar, "picture8_A");
+			//no map: to be found in corvette cabin
+
+				DeleteAttribute(characterFromID("Caesar"), "items");
+				DeleteAttribute(characterFromID("mutineer_23"), "items");
+				DeleteAttribute(characterFromID("mutineer_19"), "items");
+
+				GiveItem2Character(pchar,"bladeX4");
+				EquipCharacterByItem(pchar, "bladeX4");
+				GiveItem2Character(characterFromID("Caesar"),"bladeX4");
+				EquipCharacterByItem(characterFromID("Caesar"), "bladeX4");
+				GiveItem2Character(characterFromID("mutineer_23"),"bladeX4");
+				EquipCharacterByItem(characterFromID("mutineer_23"), "bladeX4");
+				GiveItem2Character(characterFromID("mutineer_19"),"bladeX4");
+				EquipCharacterByItem(characterFromID("mutineer_19"), "bladeX4");
+
+				AddPassenger(Pchar, characterFromID("Caesar"), 0);
+				SetOfficersIndex(Pchar, 1, getCharacterIndex("Caesar"));
+				characters[GetCharacterIndex("Caesar")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("Caesar"));
+
+				AddPassenger(Pchar, characterFromID("mutineer_23"), 0);
+				SetOfficersIndex(Pchar, 2, getCharacterIndex("mutineer_23"));
+				characters[GetCharacterIndex("mutineer_23")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("mutineer_23"));
+
+				AddPassenger(Pchar, characterFromID("mutineer_19"), 0);
+				SetOfficersIndex(Pchar, 3, getCharacterIndex("mutineer_19"));
+				characters[GetCharacterIndex("mutineer_19")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("mutineer_19"));
+
+				LAi_QuestDelay("prepare_start_careen_corvette", 1.0);
+			break;
+
+			case "109":
+				//start Q2
+
+				sTeleportLocName = "Redmond_town_04";
+				rldGroup = "reload";
+				rldLocator = "reload2";
+
+				SetCurrentTime(12, 0);
+				SetNextWeather("Clear");
+
+				SetModel(PChar, "ShkiperM_UH_a", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+				AddMoneyToCharacter(Pchar, 2743);
+				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "bladeA5");
+				EquipCharacterbyItem(Pchar, "bladeA5");
+				GiveItem2Character(Pchar, "pistol20");
+				EquipCharacterbyItem(Pchar, "pistol20");
+				GiveItem2Character(Pchar, "ammobag2");
+				EquipCharacterbyItem(Pchar, "ammobag2");
+				GiveItem2Character(Pchar, "bladepclub203");
+				TakeNItems(Pchar,"pistolbullets", 18);
+				TakeNItems(Pchar,"gunpowder", 18);
+				GiveItem2Character(Pchar, "sewing_kit");
+				TakeNItems(Pchar,"tobacco", 4);
+				GiveItem2Character(Pchar, "spyglass2");
+				EquipCharacterbyItem(Pchar, "spyglass2");
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "mapBB1");
+				GiveItem2Character(Pchar, "chinatiger");
+				GiveItem2Character(Pchar, "key17");
+
+				Pchar.mapBB1 = "info";
+				AddQuestRecord("Benjamin_Hornigold", "3");
+				CloseQuestHeader("Benjamin_Hornigold");
+
+				SetQuestHeader("Caesar");
+				AddQuestRecord("Caesar", "1");
+
+				SetQuestHeader("Israel_Hands");
+				AddQuestRecord("Israel_Hands", "1");
+
+				SetQuestHeader("Charles_Eden");
+				AddQuestRecord("Charles_Eden", "1");
+
+				SetQuestHeader("Richards");
+				AddQuestRecord("Richards", "1");
+
+				SetQuestHeader("Johnson");
+				AddQuestRecord("Johnson", "1");	
+
+				AddPassenger(Pchar, characterFromID("gm_crew1"), 0);
+				SetOfficersIndex(Pchar, 1, getCharacterIndex("gm_crew1"));
+				characters[GetCharacterIndex("gm_crew1")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("gm_crew1"));
+
+				AddPassenger(Pchar, characterFromID("gm_crew20"), 0);
+				SetOfficersIndex(Pchar, 2, getCharacterIndex("gm_crew20"));
+				characters[GetCharacterIndex("gm_crew20")].dialog.CurrentNode = "neutral";
+				LAi_SetOfficerType(characterFromID("gm_crew20"));
+
+				int iNation;
+				iNation = sti(PChar.nation);
+				PChar.templand = GetCharacterLand(PChar);
+				AddLandToCharacter(&Pchar, "Redmond", iNation, 50);
+				DeleteAttribute(PChar,"templand");
+
+				int curExp = sti(Pchar.Experience);
+				int nextExp = CalculateExperienceFromRank(sti(Pchar.rank)+7);
+				int addExp = nextExp-curExp;
+				AddCharacterExpNS(Pchar, addExp);
+				Pchar.perks.freepoints = 0;//this takes away the added perk
+
+				Pchar.perks.list.BasicDefence = true;	
+				Pchar.perks.list.GunProfessional = true;
+				Pchar.perks.list.IronWill = true;
+				Pchar.perks.list.GunFighter = true;
+
+				ChangeCharacterAddressGroup(characterFromID("wr_man3"), "none", "", "");	//terrace guard
+				ChangeCharacterAddressGroup(characterFromID("wr_pir7"), "none", "", "");	//terrace guard
+				ChangeCharacterAddressGroup(characterFromID("wr_sol6f77"), "none", "", "");	//shore 03 guard
+				ChangeCharacterAddressGroup(characterFromID("wr_fwn"), "none", "", "");		//shore 03 guard
+
+				locations[FindLocation("wr_crew")].id.label = "Crew's quarter";
+
+				Locations[FindLocation("Redmond_UsurerHouse")].models.always.locators = "SS_l_JRH3";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l1.disable = 0;		//to town
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.disable = 1;		//to library
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l4.disable = 1;		//to behind counter
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l6.disable = 1;		//to cellar
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l7.disable = 1;		//to town behind counter
+				locations[FindLocation("Redmond_UsurerHouse")].type = "house";			//reset
+
+				locations[FindLocation("Loanshark_cellar")].id.label = "Loanshark cellar";
+				locations[FindLocation("wr_library")].id.label = "Woodes Rogers' library";
+
+				locations[FindLocation("Shop_stairs")].id.label = "Rogers' Paintings Furniture & Weapons";
+
+				Locations[FindLocation("Redmond_Town_01")].models.always.locators = "Red01_l_JRH7";	//was 6
+				Locations[FindLocation("Redmond_Town_01")].reload.l18.disable = 1;		//window
+				Locations[FindLocation("Redmond_Town_01")].reload.l23.disable = 1;		//gate terrace
+				Locations[FindLocation("Redmond_Town_01")].reload.l26.disable = 1;		//tavern storeroom
+				Locations[FindLocation("Redmond_Town_01")].reload.l27.disable = 1;		//Rogers shop
+				Locations[FindLocation("Redmond_Town_01")].reload.l20.disable = 1;		//LS back door
+			//	Locations[FindLocation("Redmond_Town_01")].reload.l9.close_for_night = 1;	//shipyard
+				Locations[FindLocation("Redmond_shipyard")].reload.l2.disable = 0;		//shipyard stairs
+				locations[FindLocation("shipyard_stairs")].id.label = "Shipyard stairs";
+				Locations[FindLocation("Shipyard_shore")].reload.l1.disable = 1;		//to docks
+				Locations[FindLocation("Shipyard_shore")].reload.l2.disable = 1;		//to docks
+		
+				Locations[FindLocation("Redmond_tavern")].models.always.locators = "LT_l_JRH3";
+				Locations[FindLocation("Redmond_tavern")].reload.l3.disable = 1;		//balcony: officer problems
+				Locations[FindLocation("Redmond_tavern")].reload.l4.disable = 1;		//counter: officer problems
+				Locations[FindLocation("Redmond_tavern")].reload.l6.disable = 1;		//tavern storeroom
+
+				locations[FindLocation("Tavern_storeroom")].id.label = "Tavern storeroom";
+				locations[FindLocation("wr_kitchen")].id.label = "Woodes Rogers' kitchen";
+
+				Locations[FindLocation("Redmond_Town_01")].reload.l13.disable = 0;	//to governor's residence
+				Locations[FindLocation("Redmond_Port")].reload.l6.disable = 0;		//to harbour office
+				Locations[FindLocation("Redmond_Port")].reload.l4.disable = 1;		//to my ship
+
+				locations[FindLocation("Redmond_church")].reload.l1.disable = 0;
+				locations[FindLocation("Redmond_church")].reload.l2.disable = 1;
+				locations[FindLocation("Redmond_church")].reload.l3.disable = 1;
+				locations[FindLocation("church_choir")].id.label = "Port Royal Church Choir";
+				locations[FindLocation("wr_crypt")].id.label = "Port Royal catacombs";
+
+				Locations[FindLocation("Redmond_town_exit_2")].models.always.locators = "Redexit2_l_JRH";
+				locations[FindLocation("Redmond_town_exit_2")].reload.l5.disable = 1;		//to well
+				Locations[FindLocation("Redmond_Town_exit_2")].reload.l1.disable = 0;		//to town
+
+				Locations[FindLocation("Shipyard_shore")].models.always.locators = "FFport02_l_JRH_out";
+				locations[FindLocation("Shipyard_shore")].type = "silent_town";
+				Locations[FindLocation("Redmond_shore_02")].models.always.locators = "shore03_l";
+
+				locations[FindLocation("Redmond_Town_01")].type = "blues_town";
+				locations[FindLocation("Redmond_Town_03")].type = "blues_town";
+				locations[FindLocation("Redmond_Town_04")].type = "blues_town";
+				locations[FindLocation("Redmond_Port")].type = "blues_port";	
+
+				Pchar.quest.Rdm_officiant = "Claire";
+
+				pchar.quest.Shipyard_shore_ambush.win_condition.l1 = "location";
+				pchar.quest.Shipyard_shore_ambush.win_condition.l1.location = "Redmond_town_04";
+				pchar.quest.Shipyard_shore_ambush.win_condition = "to_the_farm";
+
+				pchar.quest.wrport_backloop7_A.win_condition.l1 = "locator";
+				pchar.quest.wrport_backloop7_A.win_condition.l1.location = "wr_port";
+				pchar.quest.wrport_backloop7_A.win_condition.l1.locator_group = "reload";
+				pchar.quest.wrport_backloop7_A.win_condition.l1.locator = "reload7";
+				pchar.quest.wrport_backloop7_A.win_condition = "wrport_backloop7_A";
+
+				pchar.quest.wrport_backloop8_A.win_condition.l1 = "locator";
+				pchar.quest.wrport_backloop8_A.win_condition.l1.location = "wr_port";
+				pchar.quest.wrport_backloop8_A.win_condition.l1.locator_group = "reload";
+				pchar.quest.wrport_backloop8_A.win_condition.l1.locator = "reload8";
+				pchar.quest.wrport_backloop8_A.win_condition = "wrport_backloop8_A";
+
+				pchar.quest.alchemy_fire_level_down1.win_condition.l1 = "location";
+				pchar.quest.alchemy_fire_level_down1.win_condition.l1.location = "wr_farm_alchemy";
+				pchar.quest.alchemy_fire_level_down1.win_condition = "alchemy_fire_level_down1";
+			break;
+
+			case "110":
+				//Q2: alchemy part 1
 		//LAi_SetImmortal(pchar, true);	//temp
 	Pchar.quest.disable_rebirth = true;
 	//DeleteAttribute(PChar, "quest.disable_rebirth");
-	ChangeCharacterAddressGroup(CharacterFromID("Minerva"), "wr_port", "goto", "goto20");	//temp
+	//ChangeCharacterAddressGroup(CharacterFromID("Minerva"), "wr_port", "goto", "goto20");	//temp
+	ChangeCharacterAddressGroup(CharacterFromID("JRH"), "wr_port", "goto", "goto20");	//temp
 
 				sTeleportLocName = "wr_port";
 				rldGroup = "reload";
@@ -1775,17 +2891,19 @@ void StartStoryLine()
 
 				SetCurrentTime(12, 0);
 				SetNextWeather("Clear");
-				Pchar.quest.JRH_rain = "Clear";
+				//Pchar.quest.JRH_rain = "Clear";	
 
 				SetModel(PChar, "Howard_Pyle_1", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 				GiveItem2Character(Pchar, "bladeX4");
-			EquipCharacterbyItem(Pchar, "bladeX4");
-				GiveItem2Character(Pchar, "key17");		//kept from WR1
-				GiveItem2Character(Pchar, "mapBB1");		//kept from WR1
-				
-				SetQuestHeader("Benjamin_Hornigold");
-				AddQuestRecord("Benjamin_Hornigold", "1");
-				AddQuestRecord("Benjamin_Hornigold", "2");
+				EquipCharacterbyItem(Pchar, "bladeX4");
+		//		GiveItem2Character(Pchar, "key17");		//kept from WR1
+		//		GiveItem2Character(Pchar, "mapBB1");		//kept from WR1
+				GiveItem2Character(PChar, "long_johns");
+				GiveItem2Character(PChar, "bandana");
+			//no map yet: to be found in small sloop's cabin
+
+				Pchar.mapBB1 = "info";
+				AddQuestRecord("Benjamin_Hornigold", "3");
 				CloseQuestHeader("Benjamin_Hornigold");
 
 				SetQuestHeader("Caesar");
@@ -2106,7 +3224,7 @@ void StartStoryLine()
 				pchar.quest.wrport_backloop8_A.win_condition.l1.locator_group = "reload";
 				pchar.quest.wrport_backloop8_A.win_condition.l1.locator = "reload8";
 				pchar.quest.wrport_backloop8_A.win_condition = "wrport_backloop8_A";
-
+			/*
 				pchar.quest.wrport_backloop4_A.win_condition.l1 = "locator";
 				pchar.quest.wrport_backloop4_A.win_condition.l1.location = "wr_port";
 				pchar.quest.wrport_backloop4_A.win_condition.l1.locator_group = "reload";
@@ -2136,7 +3254,7 @@ void StartStoryLine()
 				pchar.quest.wrport_backloop10_A.win_condition.l1.locator_group = "reload";
 				pchar.quest.wrport_backloop10_A.win_condition.l1.locator = "reload10";
 				pchar.quest.wrport_backloop10_A.win_condition = "wrport_backloop10_A";
-
+			*/
 				//----------------------------------------------------------------
 
 				pchar.quest.alchemy2_fire_level_down1.win_condition.l1 = "location";
@@ -2167,6 +3285,275 @@ void StartStoryLine()
 				pchar.quest.woodstop.win_condition.l1.locator = "woodstop";
 				pchar.quest.woodstop.win_condition = "woodback";
 			break;
+
+			case "111":
+				//Q2: alchemy part 2
+			
+				sTeleportLocName = "wr_port";
+				rldGroup = "reload";
+				rldLocator = "sea";
+			
+				SetCurrentTime(12, 0);
+				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+
+				SetModel(PChar, "Howard_Pyle_hat_a", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+
+			//no map: replaced by mapWR5
+				GiveItem2Character(Pchar, "mapWR5");
+				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "blade11");
+				EquipCharacterbyItem(Pchar, "blade11");
+				GiveItem2Character(Pchar, "pistol6");
+				EquipCharacterbyItem(Pchar, "pistol6");
+				TakeNItems(pchar, "gunpowder", 4);
+				TakeNItems(pchar, "pistolbullets", 4);
+				GiveItem2Character(Pchar, "pistolbelt");
+				EquipCharacterByItem(Pchar, "pistolbelt");
+				GiveItem2Character(Pchar, "ammobag2");
+				EquipCharacterByItem(Pchar, "ammobag2");
+				GiveItem2Character(Pchar, "BB_hatA2");
+				EquipCharacterByItem(Pchar, "BB_hatA2");
+
+				AddMoneyToCharacter(Pchar,-10000);
+				GiveItem2Character(Pchar, "potionrum");
+
+				GiveItem2Character(Pchar, "spyglass3");			//from Bolitho corvette
+				EquipCharacterbyItem(Pchar, "spyglass3");
+				GiveItem2Character(Pchar, "sextant");
+				EquipCharacterbyItem(Pchar, "sextant");
+				GiveItem2Character(Pchar, "compass2");
+				EquipCharacterbyItem(Pchar, "compass2");
+				GiveItem2Character(Pchar, "map");
+				
+				GiveItem2Character(Pchar, "book71_9_start");
+				GiveItem2Character(Pchar, "picture8_A");
+
+				DeleteAttribute(Pchar,"ship");
+				GiveShip2Character(pchar,"Corvette2","Den svenske islandsfararen",-1,PIRATE,true,true);
+				SetCharacterShipLocation(Pchar, "wr_port");
+				
+				DeleteAttribute(Pchar,"nation");
+				Pchar.nation = ENGLAND;
+
+				Island_SetReloadEnableLocal("Redmond", "reload_1", true);	//to wr_port
+				Locations[FindLocation("wr_port")].models.always.locators = "QCport_l_JRHsea";
+
+				ChangeCharacterAddressGroup(characterFromID("wr_sol6f77"), "none", "", "");		//boatshore
+				ChangeCharacterAddressGroup(characterFromID("wr_fwn"), "none", "", "");			//boatshore
+				Locations[FindLocation("Redmond_shore_03")].models.always.locators = "shore10_l_JRH1";
+				Locations[FindLocation("Redmond_shore_03")].locators_radius.reload.reload1 = 0.001;
+				Locations[FindLocation("wr_farm_booty")].models.always.locators = "sklad_locators_JRH2";
+				Locations[FindLocation("wr_farm_bedroom")].reload.l2.disable = 0;
+				Locations[FindLocation("wr_farm_corridor")].filespath.textures = "locations\inside\Corridor\normal";
+				Locations[FindLocation("wr_farm_corridor")].locators_radius.box.box1 = 0.001;
+				Locations[FindLocation("wr_farm_corridor")].models.always.locators = "storeSmall_locators_JRH_normal";
+				Locations[FindLocation("wr_farm_corridor")].reload.l5.disable = 0;
+				Locations[FindLocation("wr_farm_servant")].models.always.locators = "sh_l_JRH2_open";
+				Locations[FindLocation("wr_farm_servant")].reload.l2.disable = 0;
+				Locations[FindLocation("wr_farm_alchemy")].reload.l2.disable = 0;
+				Locations[FindLocation("wr_farm_alchemy")].reload.l3.disable = 0;
+				Locations[FindLocation("wr_farm_alchemy")].locators_radius.box.box6 = 0.0001;
+				Locations[FindLocation("wr_farm_alchemy")].locators_radius.reload.reload1 = 0.6;
+				locations[FindLocation("wr_farm_alchemy")].models.always.l9 = "cauldron3_w";
+				locations[FindLocation("wr_farm_alchemy")].models.always.l10 = "retort_E0";
+				locations[FindLocation("wr_farm_alchemy")].models.always.l11 = "top3";
+				locations[FindLocation("wr_farm_alchemy")].models.always.l12 = "glass_tube3";
+
+				Locations[FindLocation("wr_farm_alchemy2")].reload.l1.disable = 0;
+				Locations[FindLocation("wr_farm_alchemy2")].reload.l2.disable = 0;
+				Locations[FindLocation("wr_farm_alchemy2")].reload.l3.disable = 0;
+				locations[FindLocation("wr_farm_booty2")].id.label = "Rogers' secret storeroom";
+
+				locations[FindLocation("wr_farm_servant")].id.label = "Minervas room";
+				locations[FindLocation("wr_farm_corridor")].id.label = "Rogers' passage";
+
+				Locations[FindLocation("wr_farm_alchemy")].locators_radius.box.box7 = 0.5;	//mixtable big bottle
+				locations[FindLocation("wr_farm_alchemy")].models.always.l16 = "bottle_LE0";	//should be on here
+				locations[FindLocation("wr_farm_alchemy")].models.always.l15 = "hatch7";
+
+				Locations[FindLocation("wr_farm_kitchen")].items.randitem1 = "key8";		//invisible model
+				Locations[FindLocation("wr_farm_bedroom")].items.randitem7 = "key8";
+				Locations[FindLocation("wr_farm_corridor")].models.always.l1 = "";
+				Locations[FindLocation("wr_farm_servant")].items.randitem6 = "key8";
+				Locations[FindLocation("wr_farm_servant")].items.randitem7 = "key8";
+				Locations[FindLocation("wr_farm_alchemy")].items.randitem6 = "key8";
+
+				Locations[FindLocation("wr_farm_kitchen")].locators_radius.randitem.randitem1 = 0.0001;
+				Locations[FindLocation("wr_farm_bedroom")].locators_radius.randitem.randitem7 = 0.0001;
+				Locations[FindLocation("wr_farm_servant")].locators_radius.randitem.randitem6 = 0.0001;
+				Locations[FindLocation("wr_farm_servant")].locators_radius.randitem.randitem7 = 0.0001;
+				Locations[FindLocation("wr_farm_alchemy")].locators_radius.randitem.randitem6 = 0.0001;
+				Locations[FindLocation("wr_farm_alchemy2")].locators_radius.box.box17 = 0.0001;
+				Locations[FindLocation("wr_farm_alchemy2")].locators_radius.box.box18 = 0.0001;
+	
+				Pchar.quest.distillery_items = "open";
+				//Pchar.quest.farm_water = "off";
+				Pchar.quest.alchemy_lever = "down";
+				Pchar.quest.alchemy_plank = "up";
+				Pchar.quest.apparatus_level = "glass_tube";		
+				Pchar.quest.farmbooty_fillbottle = "off";
+				Pchar.quest.apparatus_liquid = "none";
+				Pchar.quest.apparatus_cooling = "2";
+				Pchar.quest.mixtable_bottle = "ME0";
+				pchar.quest.Minerva = "arrived";
+				Pchar.quest.cauldron = "water";
+				Pchar.quest.retort = "yes";
+				Pchar.quest.block_water = "yes";
+		
+				//new attributes Q2
+				Pchar.alchemy2_grinder = "empty";
+				Pchar.use_only_big_bottle = "yes";
+				Pchar.quest.qbook_receiver = "done";
+				Pchar.quest.distillery_items_Q2 = "open";
+
+				pchar.quest.wrport_backloop7_A.win_condition.l1 = "locator";
+				pchar.quest.wrport_backloop7_A.win_condition.l1.location = "wr_port";
+				pchar.quest.wrport_backloop7_A.win_condition.l1.locator_group = "reload";
+				pchar.quest.wrport_backloop7_A.win_condition.l1.locator = "reload7";
+				pchar.quest.wrport_backloop7_A.win_condition = "wrport_backloop7_A";
+
+				pchar.quest.wrport_backloop8_A.win_condition.l1 = "locator";
+				pchar.quest.wrport_backloop8_A.win_condition.l1.location = "wr_port";
+				pchar.quest.wrport_backloop8_A.win_condition.l1.locator_group = "reload";
+				pchar.quest.wrport_backloop8_A.win_condition.l1.locator = "reload8";
+				pchar.quest.wrport_backloop8_A.win_condition = "wrport_backloop8_A";
+
+				pchar.quest.alchemy2_fire_level_down1.win_condition.l1 = "location";
+				pchar.quest.alchemy2_fire_level_down1.win_condition.l1.location = "wr_farm_alchemy2";
+				pchar.quest.alchemy2_fire_level_down1.win_condition = "alchemy2_fire_level_down1";
+			
+				pchar.quest.ovenstop1.win_condition.l1 = "locator";
+				pchar.quest.ovenstop1.win_condition.l1.location = "wr_farm_alchemy2";
+				pchar.quest.ovenstop1.win_condition.l1.locator_group = "goto";
+				pchar.quest.ovenstop1.win_condition.l1.locator = "ovenstop1";
+				pchar.quest.ovenstop1.win_condition = "ovenback1";
+
+				pchar.quest.ovenstop2.win_condition.l1 = "locator";
+				pchar.quest.ovenstop2.win_condition.l1.location = "wr_farm_alchemy2";
+				pchar.quest.ovenstop2.win_condition.l1.locator_group = "goto";
+				pchar.quest.ovenstop2.win_condition.l1.locator = "ovenstop2";
+				pchar.quest.ovenstop2.win_condition = "ovenback2";
+
+				pchar.quest.ovenstop3.win_condition.l1 = "locator";
+				pchar.quest.ovenstop3.win_condition.l1.location = "wr_farm_alchemy2";
+				pchar.quest.ovenstop3.win_condition.l1.locator_group = "goto";
+				pchar.quest.ovenstop3.win_condition.l1.locator = "ovenstop3";
+				pchar.quest.ovenstop3.win_condition = "ovenback2";
+
+				pchar.quest.woodstop.win_condition.l1 = "locator";
+				pchar.quest.woodstop.win_condition.l1.location = "wr_farm_alchemy2";
+				pchar.quest.woodstop.win_condition.l1.locator_group = "goto";
+				pchar.quest.woodstop.win_condition.l1.locator = "woodstop";
+				pchar.quest.woodstop.win_condition = "woodback";
+			
+				LAi_QuestDelay("return_farm_items_new_game", 0.1);
+			break;
+
+			case "150":
+				//defoe tavern scene
+				//Cartagena new cloister
+
+				LAi_SetImmortal(pchar, true);	//temp
+
+				Pchar.quest.disable_rebirth = true;
+
+				sTeleportLocName = "new_cloister_garden";
+
+				rldGroup = "reload";
+				rldLocator = "reload1";
+
+				SetCurrentTime(11, 0);
+				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+
+				SetModel(Pchar, "Howard_Pyle", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "blade1");
+				EquipCharacterByItem(Pchar, "blade1");	
+				GiveItem2Character(Pchar, "piratespistol");
+				EquipCharacterByItem(Pchar, "piratespistol");
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);	
+				
+				TakeNItems(Pchar,"potionwine2", 2);
+
+			//	Pchar.mapBB4C = "info";		//Nevis	(Richards)
+			//	Pchar.mapBB2B = "info";		//Barbados (Caesar)
+			//	Pchar.mapBB5B = "info";		//Cayman (Hands)
+
+				GiveItem2Character(Pchar, "mapBB1");
+					GiveItem2Character(Pchar, "mapBB2A");		//alternative Barbados
+				//GiveItem2Character(Pchar, "mapBB2B");
+				GiveItem2Character(Pchar, "mapBB3T");
+				GiveItem2Character(Pchar, "mapBB4C");
+					GiveItem2Character(Pchar, "mapBB5A");		//alternative Cayman
+				//GiveItem2Character(Pchar, "mapBB5B");
+
+				ChangeCharacterAddressGroup(CharacterFromID("Defoe"), "new_cloister_garden", "quest", "defoe");
+				LAi_SetSitType(CharacterFromID("Defoe"));
+				Characters[GetCharacterIndex("Defoe")].dialog.CurrentNode  = "neutral";//if spoken to before the auto dialog starts
+		
+				pchar.quest.defoe_sit_down.win_condition.l1 = "locator";
+				pchar.quest.defoe_sit_down.win_condition.l1.location = "new_cloister_garden";
+				pchar.quest.defoe_sit_down.win_condition.l1.locator_group = "quest";
+				pchar.quest.defoe_sit_down.win_condition.l1.locator = "defoe";
+				pchar.quest.defoe_sit_down.win_condition = "defoe_sit_down";
+			break;
+
+			case "151":
+				//defoe tavern scene
+				//Turks fort
+
+				LAi_SetImmortal(pchar, true);	//temp
+
+				Pchar.quest.disable_rebirth = true;
+
+				sTeleportLocName = "Turks_old_Fort";
+
+				rldGroup = "reload";
+				rldLocator = "reload2";
+
+				SetCurrentTime(11, 0);
+				SetNextWeather("Clear");
+				//Pchar.quest.JRH_rain = "Clear";	
+
+				SetModel(Pchar, "Howard_Pyle", Pchar.model.animation, Pchar.sex, stf(Pchar.model.height), true);
+				GiveItem2Character(Pchar, "map");
+				GiveItem2Character(Pchar, "bladeX4");
+				GiveItem2Character(Pchar, "blade1");
+				EquipCharacterByItem(Pchar, "blade1");	
+				GiveItem2Character(Pchar, "piratespistol");
+				EquipCharacterByItem(Pchar, "piratespistol");
+				TakeNItems(Pchar,"gunpowder", 6);
+				TakeNItems(Pchar,"pistolbullets", 6);	
+				
+				TakeNItems(Pchar,"potionwine2", 2);
+
+				Pchar.mapBB4C = "info";		//Nevis	(Richards)
+				Pchar.mapBB2B = "info";		//Barbados (Caesar)
+				Pchar.mapBB5B = "info";		//Cayman (Hands)
+
+				GiveItem2Character(Pchar, "mapBB1");
+					//GiveItem2Character(Pchar, "mapBB2A");		//alternative Barbados
+				GiveItem2Character(Pchar, "mapBB2B");
+				GiveItem2Character(Pchar, "mapBB3T");
+				GiveItem2Character(Pchar, "mapBB4C");
+					//GiveItem2Character(Pchar, "mapBB5A");		//alternative Cayman
+				GiveItem2Character(Pchar, "mapBB5B");
+
+				ChangeCharacterAddressGroup(CharacterFromID("Defoe"), "Turks_old_Fort", "quest", "defoe");
+				LAi_SetSitType(CharacterFromID("Defoe"));
+				Characters[GetCharacterIndex("Defoe")].dialog.CurrentNode  = "neutral";//if spoken to before the auto dialog starts
+				locations[FindLocation("Turks_old_fort")].type = "silent_seashore";
+			
+				pchar.quest.defoe_sit_down.win_condition.l1 = "locator";
+				pchar.quest.defoe_sit_down.win_condition.l1.location = "Turks_old_Fort";
+				pchar.quest.defoe_sit_down.win_condition.l1.locator_group = "quest";
+				pchar.quest.defoe_sit_down.win_condition.l1.locator = "defoe";
+				pchar.quest.defoe_sit_down.win_condition = "defoe_sit_down";
+			break;
 	}
 
 
@@ -2183,6 +3570,16 @@ void StartStoryLine()
 	PChar.quest.Tortuga_atmosphere.win_condition.l1.location = "Tortuga_port";
 	PChar.quest.Tortuga_atmosphere.win_condition = "Tortuga_atmosphere";
 	//Tortuga Atmosphere
+
+	//JRH: Cartagena New_cloister
+	pchar.quest.cloister_start.win_condition.l1 = "location";
+	pchar.quest.cloister_start.win_condition.l1.location = "new_cloister_garden";
+	pchar.quest.cloister_start.win_condition = "cloister_start";
+
+	pchar.quest.maze_fountain.win_condition.l1 = "location";
+	pchar.quest.maze_fountain.win_condition.l1.location = "BB_Eden_maze";
+	pchar.quest.maze_fountain.win_condition = "maze_fountain";
+
 //===============================| QUESTS SECTION END |===============================//
 
 	ReloadProgressUpdate();

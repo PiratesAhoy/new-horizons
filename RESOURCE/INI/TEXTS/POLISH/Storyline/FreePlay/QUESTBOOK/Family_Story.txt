@@ -1,0 +1,17 @@
+title=A family story
+text.t1=Her husband seems to be a rich man. This could be a juicy mission! Her house is in front of the #sHavana# townhall. Let's go there quickly because the journey is long.
+text.t2=I rejected the Elvira's offer. Too dangerous like mission for the money earned. She'll have to find an another privateer.
+text.t3=I've accepted the mission. My first task is to speak with the tavern keeper of #sSantiago#.
+text.t4=Good! I'll meet the pirate tomorrow in the outskirts of this town (Port side). He must think I'm here to pay the ransom but he's wrong...
+text.t5=Abel must be waiting for me now. Time to see him!
+text.t6=The Elvira's husband is imprisoned near #sTortuga# dock and it seems I'll have to face many guards to free him.
+text.t7=I'm quite sure it's the house I'm looking for. As I thought, the house is well-guarded. I cannot enter by the door. I need to find another way to free the prisoner. Something more discreet. Maybe through a window?
+text.t8=Finally, it was easier than I thought. However, surprisingly, Fernando refuses to come back to #sHavana#. Before that, he wants to go again to #sSantiago#. He said he'll explain better the reason when arriving to the town.
+text.t9=I've never thought I could meet a relative of Bartolomeu o Portuguese, the most successful Portuguese pirate of the Caribbean's history. Now, my next step is to see Arnaldo Chaparro. He's a cartographer and lives in a house with a terrestrial globe over the door. It's opposite the blacksmith in the center of this town.
+text.t10=The clue about the Bartolomeu's corpse is thin. However, let's go to Ile a Vache, a small island just South of Hispaniola.
+text.t11=Let's see Elvira in #sHavana#! No doubt, she'll be happy to see her husband again. And in my case, a juicy reward is waiting for me.
+text.t12=Damn it! Just after leaving the Fernando Suarez's house, Robert Acre, the leader of this group of kidnappers, tried to kill me like retaliation. He guessed I'll be back home with Fernando and waited for the right moment. At least now, he will never threaten Fernando again.
+text.t13=Damn it! Just after leaving the Fernando Suarez's house, Robert Acre, the leader of this group of kidnappers, tried to kill me like retaliation. He guessed I'll be back home with Fernando and waited for the right moment. At least now, he will never threaten Fernando again. Now, I should pay a visit to the Bartolomeu's mansion. I have the feeling I could find something out there. Let's go to the bay on the west coast of #sisland_Conceicao#.
+text.t14=Alright. I'm safe here. What will I do? Will I wait more time or will I go back to the Bartolomeu's mansion now? Let's be smart...
+text.t15=I knew the key could be useful! I opened with it a box buried in the ground and found inside a fantastic rifle. This weapon must have been belonged to Bartolomeu himself! Let's get out from here quickly. At anytime, the French guards can see me.
+text.t16=What a bad luck! After fighting a group of French soldiers on the beach, the enemy ship of this expedition force attacked me. Fortunately, I've successfully won the battle. My visit to the Bartolomeu's mansion was very dangerous. But at least, I have a great rifle that belonged to a famous compatriot!",   

@@ -37,6 +37,13 @@ void ProcessDialogEvent()
 		PersuasionFailure = XI_ConvertString("Persuasion_Failure") + " ";
 	}
 
+	NPChar.deliver_cargo = GOOD_CLOTHES;	// GR: was GOOD_SILK which is import at Jamaica and export at Martinique!  GOOD_CLOTHES is export at Jamaica.
+	NPChar.deliver_amount = 250;		// GR: x3 = 750 space, was 200 which for silk is x4 = 800 space
+	NPChar.smuggle_cargo = GOOD_CINNAMON; 	// GR: was GOOD_EBONY.  Ebony isn't contraband at Martinique, cinnamon is.
+	NPChar.smuggle_amount = 300;		// GR: was 134 but smuggler's ship only had 100, ebony weighs 6 cwt/unit, cinnamon weighs 2 cwt/unit.  Need to keep total of six hundred cwt as questbook says "six hundred cwt" in words, not numbers.
+	NPChar.smuggle_cargo2 = GOOD_SANDAL;	// GR: secondary cargo given to player after boarding smuggler's ship
+	NPChar.smuggle_amount2 = 50;		// GR: sandal weighs 4 cwt/unit.  Need to keep total of two hundred cwt to match questbook.
+
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -110,7 +117,7 @@ void ProcessDialogEvent()
 					dialog.snd1 = "";
 					dialog.snd2 = "";
 					dialog.snd3 = "";
-					d.Text = RandPhrase(TimeGreeting() + DLG_TEXT[8] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + DLG_TEXT[9] + GetMyName(Pchar) + DLG_TEXT[10], DLG_TEXT[11] + GetMyName(Pchar) + DLG_TEXT[12], DLG_TEXT[13], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
+					d.Text = RandPhrase(TimeGreeting() + DLG_TEXT[8] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[9] + GetMyName(Pchar) + DLG_TEXT[10], DLG_TEXT[11] + GetMyName(Pchar) + DLG_TEXT[12], DLG_TEXT[13], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 					if(TradeCheck(PChar, NPChar, false))
 					{
 						Link.l1 = DLG_TEXT[14];
@@ -135,7 +142,6 @@ void ProcessDialogEvent()
 				}
 				if (Characters[GetCharacterIndex("Milon Blacque")].quest.son == "2") // NK - && iTest < QUEST_COUNTER)
 				{
-					Characters[GetCharacterIndex("Milon Blacque")].quest.son = "money";
 					link.l3 = DLG_TEXT[37];
 					link.l3.go = "marc";
 				}
@@ -198,7 +204,7 @@ void ProcessDialogEvent()
 					Link.l1 = DLG_TEXT[25];
 					Link.l1.go = "contraband";
 				}
-				if (GetSquadronFreeSpace(pchar, GOOD_SILK) > 200 && NPChar.quest.first_job == "0")
+				if (GetSquadronFreeSpace(pchar, sti(NPChar.deliver_cargo)) > sti(NPChar.deliver_amount) && NPChar.quest.first_job == "0")
 				{
 					Link.l1 = DLG_TEXT[26];
 					Link.l1.go = "first_job";
@@ -207,16 +213,23 @@ void ProcessDialogEvent()
 			}
 			if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))	// LDH was quest.quest.generate, fixed 01Jan09
 			{
-				int iQuantityShipGoods = pchar.quest.generate_trade_quest_progress.iQuantityGoods;
-				int iQuestTradeGoods = pchar.quest.generate_trade_quest_progress.iTradeGoods;
+				int iQuantityShipGoods = sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods);
+				int iQuestTradeGoods = sti(pchar.quest.generate_trade_quest_progress.iTradeGoods);
 			}
 			if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
 			{
-				if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods && pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+				if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
 				{
 					dialog.text = DLG_TEXT[27];
 					link.l2 = DLG_TEXT[28];
-					link.l2.go = "generate_quest_2";
+					if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
+					{
+						link.l2.go = "generate_quest_2";
+					}
+					else
+					{
+						link.l2.go = "cargo_missing";
+					}
 				}
 			}
 			else
@@ -259,7 +272,6 @@ void ProcessDialogEvent()
 			}
 			if (Characters[GetCharacterIndex("Milon Blacque")].quest.son == "2") // NK - && iTest < QUEST_COUNTER)
 			{
-				Characters[GetCharacterIndex("Milon Blacque")].quest.son = "money";
 				link.l3 = DLG_TEXT[37];
 				link.l3.go = "marc";
 			}
@@ -296,7 +308,7 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						if (GetSquadronFreeSpace(pchar, GOOD_EBONY) < 134)
+						if (GetSquadronFreeSpace(pchar, sti(NPChar.smuggle_cargo)) < (sti(NPChar.smuggle_amount) * 4/3 + 1))	// Add an extra 1/3 to allow for secondary cargo, +1 to round up
 						{
 							dialog.text = DLG_TEXT[230];
 							link.l1 = DLG_TEXT[231];
@@ -345,6 +357,7 @@ void ProcessDialogEvent()
 
 		case "contraband_5":
 			dialog.text = DLG_TEXT[64];
+			Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
 			link.l1 = pcharrepphrase(DLG_TEXT[65], DLG_TEXT[66]);
 			link.l1.go = "contraband_6";
 		break;
@@ -421,8 +434,10 @@ void ProcessDialogEvent()
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, sti(NPChar.money.quest));
 			npchar.quest.contraband = "done";
-			AddQuestRecord("Thomas_OReily_contraband", 4);
+			Preprocessor_AddQuestData("Thomas", GetMyName(NPChar));
+			AddQuestRecord("Thomas_OReily_contraband", 5);
 			CloseQuestHeader("Thomas_OReily_contraband");
+			Preprocessor_Remove("Thomas");
 		break;
 
 		case "contraband_15":
@@ -430,8 +445,10 @@ void ProcessDialogEvent()
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();
 			npchar.quest.contraband = "done";
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			AddQuestRecord("Thomas_OReily_contraband", 6); //Changed to 6 by Levis. If I read the quest right this is the correct questrecord
 			CloseQuestHeader("Thomas_OReily_contraband");
+			Preprocessor_Remove("Thomas");
 		break;
 
 		case "contraband_money":
@@ -452,7 +469,17 @@ void ProcessDialogEvent()
 		break;
 
 		case "first_job":
-			d.Text = DLG_TEXT[111];
+			if(GetNationRelation(GetTownNation("Falaise de Fleur"), GetTownNation("Redmond")) == RELATION_ENEMY)
+			{
+				Preprocessor_Add("nationF", GetNationNameByType(GetTownNation("Falaise de Fleur")));
+				Preprocessor_Add("nationR", GetNationNameByType(GetTownNation("Redmond")));
+				d.Text = DLG_TEXT[111];
+			}
+			else
+			{
+				Preprocessor_Add("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
+				d.Text = DLG_TEXT[234];
+			}
 			Link.l1 = DLG_TEXT[112];
 			Link.l1.go = "first_job_1";
 			Link.l2 = DLG_TEXT[113];
@@ -505,31 +532,53 @@ void ProcessDialogEvent()
 		case "first_job_5":
 			NPChar.quest.first_job = "1";
 			NPChar.money.quest = "1500";
+			// NK -->
+			Preprocessor_AddQuestData("Thomas O'Reily",GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("Arnaud Matton",GetMyFullName(CharacterFromID("Arnaud Matton")));
+			Preprocessor_AddQuestData("Thomas",GetMyName(NPChar));
+			Preprocessor_AddQuestData("amount",NPChar.deliver_amount);
+			Preprocessor_AddQuestData("cargo",TranslateString("", Goods[sti(NPChar.deliver_cargo)].name));
+			SetQuestHeader("Thomas_delivery");
+			AddQuestRecord("Thomas_delivery", 1);
+			Preprocessor_Remove("cargo");
+			Preprocessor_Remove("amount");
+			Preprocessor_Remove("Thomas");
+			Preprocessor_Remove("Arnaud Matton");
+			Preprocessor_Remove("Thomas O'Reily");
+			// NK <--
+			Preprocessor_Add("Arnaud Matton",GetMyFullName(CharacterFromID("Arnaud Matton")));
 			d.Text = DLG_TEXT[134] + GetMyName(Pchar) + DLG_TEXT[135];
-			AddCharacterGoods(pchar, GOOD_SILK, 200);
+			AddCharacterGoods(pchar, sti(NPChar.deliver_cargo), sti(NPChar.deliver_amount));
 			Link.l1 = DLG_TEXT[136];
 			Link.l1.go = "trade";
 			Link.l2 = DLG_TEXT[137] + GetMyName(NPChar) + DLG_TEXT[138];
 			Link.l2.go = "exit";
-			// NK -->
-			SetQuestHeader("Thomas_delivery");
-			AddQuestRecord("Thomas_delivery", 1);
-			// NK <--
 		break;
 
 		case "first_job_6":
 			NPChar.quest.first_job = "1";
 			NPChar.money.quest = "2000"; //NK, fix, was still 1500 for some reason.
+			// NK -->
+			Preprocessor_AddQuestData("Thomas O'Reily",GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("Arnaud Matton",GetMyFullName(CharacterFromID("Arnaud Matton")));
+			Preprocessor_AddQuestData("Thomas",GetMyName(NPChar));
+			Preprocessor_AddQuestData("amount",NPChar.deliver_amount);
+			Preprocessor_AddQuestData("cargo",TranslateString("", Goods[sti(NPChar.deliver_cargo)].name));
+			SetQuestHeader("Thomas_delivery");
+			AddQuestRecord("Thomas_delivery", 1);
+			Preprocessor_Remove("cargo");
+			Preprocessor_Remove("amount");
+			Preprocessor_Remove("Thomas");
+			Preprocessor_Remove("Arnaud Matton");
+			Preprocessor_Remove("Thomas O'Reily");
+			// NK <--
+			Preprocessor_Add("Arnaud Matton",GetMyFullName(CharacterFromID("Arnaud Matton")));
 			d.Text = DLG_TEXT[139] + GetMyName(Pchar) + DLG_TEXT[140];
-			AddCharacterGoods(pchar, GOOD_SILK, 200); //NK they left this out.
+			AddCharacterGoods(pchar, sti(NPChar.deliver_cargo), sti(NPChar.deliver_amount)); //NK they left this out.
 			Link.l1 = DLG_TEXT[141];
 			Link.l1.go = "trade";
 			Link.l2 = DLG_TEXT[142] + GetMyName(NPChar) + DLG_TEXT[143];
 			Link.l2.go = "exit";
-			// NK -->
-			SetQuestHeader("Thomas_delivery");
-			AddQuestRecord("Thomas_delivery", 1);
-			// NK <--
 		break;
 
 		case "first_job_complete":
@@ -553,8 +602,10 @@ void ProcessDialogEvent()
 			Link.l2 = DLG_TEXT[154] + GetMyName(NPChar) + DLG_TEXT[155];
 			Link.l2.go = "exit";
 			// NK -->
+			Preprocessor_AddQuestData("Thomas",GetMyName(NPChar));
 			AddQuestRecord("Thomas_delivery", 3);
 			CloseQuestHeader("Thomas_delivery");
+			Preprocessor_Remove("Thomas");
 			// NK <--
 		break;
 
@@ -587,6 +638,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "marc":
+			Characters[GetCharacterIndex("Milon Blacque")].quest.son = "money";
+			Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			Dialog.text = DLG_TEXT[167];
 			link.l1 = DLG_TEXT[168];
 			link.l1.go = "marc_1";
@@ -611,6 +664,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "marc_4":
+			Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			Dialog.text = DLG_TEXT[175];
 			link.l1 = DLG_TEXT[176];
 			link.l1.go = "exit";
@@ -626,9 +680,13 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[179];
 			link.l1.go = "exit";
 			PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneyToCharacter(pchar, -3000);
+			AddMoneyToCharacter(PChar, -3000);
 			Characters[GetcharacterIndex("Milon Blacque")].quest.son = "money_done";
+			Preprocessor_AddQuestData("O'Reily", GetMyLastName(NPChar));
+			Preprocessor_AddQuestData("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			AddQuestRecord("Blacques", 10); // NK
+			Preprocessor_Remove("Marc");
+			Preprocessor_Remove("O'Reily");
 		break;
 
 		case "generate_quest":
@@ -639,6 +697,7 @@ void ProcessDialogEvent()
 				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
+					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
 					dialog.text = DLG_TEXT[180];
 					link.l1 = DLG_TEXT[181];
 					link.l1.go = "exit";
@@ -731,6 +790,15 @@ void ProcessDialogEvent()
 				TradeQuestDone();
 			}
 			AddDialogExitQuest("close_trade_quest");
+		break;
+
+		case "cargo_missing":
+			AddQuestRecord("trade", 3);
+			Preprocessor_Add("quantity", sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods));
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(pchar.quest.generate_trade_quest_progress.iTradeGoods)].name));
+			dialog.text = DLG_TEXT[232];
+			link.l1 = DLG_TEXT[233];
+			link.l1.go = "exit";
 		break;
 
 	}

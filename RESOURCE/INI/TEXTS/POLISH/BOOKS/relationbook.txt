@@ -1,0 +1,50 @@
+TEXT	{
+
+Wrogo›Þ na morzu:
+
+Forty i statki na morzu mog¹ byÞ dla ciebie wrogo nastawione z nast×puj¹cych powodów:
+- S¹ wrogo nastawieni do narodu, którego flaga lecisz
+- S¹ dla ciebie wrogo nastawieni i rozpoznali ci× pod fa³szyw¹ flag¹
+- Pami×taj¹, ¿e jeste› wrogi podczas poprzedniego spotkania
+- Celowo otworzy³e› na nich ogieð
+
+Celowe strzelanie do przyjaznych statków lub przypadkowe trafienie ich zmniejsza twoj¹ reputacj×.
+
+-----------------------------------------
+Fa³szywe flagi:
+
+U¿ycie fa³szywych flag w celu uzyskania przewagi taktycznej przed bitw¹ lub wej›cia do portu wroga pod os³on¹ jest ca³kowicie legalne. Jeste› zobowi¹zany do podniesienia swojej prawdziwej flagi (lub przynajmniej wrogiej flagi do celu) przed otwarciem ognia.
+
+Forty i statki mog¹ zobaczyÞ, jak zmieniasz flag×, je›li jeste› w zasi×gu widzenia. Ostrzegam, forty widz¹ d³ug¹ drog×. Je›li fort raz zobaczy ci× pod wrog¹ flag¹, zapami×ta i rozpozna ci×. Dlatego, je›li zamierzasz wej›Þ do wrogiego portu pod fa³szyw¹ flag¹, pami×taj, aby wyci¹gn¹Þ swoj¹ fa³szyw¹ flag× z dala od wybrze¿a.
+
+Je›li zosta³e› rozpoznany, istnieje kilka sposobów unikni×cia dalszego rozpoznania:
+- Zawrzyj pokój z narodem, choÞby tylko na tyle d³ugo, aby prowadziÞ swój biznes w porcie i bezpiecznie wyjechaÞ.
+- Zdob¹dŸ inny typ statku. Fort pami×ta twój statek, wi×c je›li nie masz ju¿ tego typu statku, fort ju¿ ci× nie rozpozna. (Nie wystarczy odmalowaÞ statku lub oddaÞ go podw³adnemu oficerowi. Je›li fort zobaczy ten statek lub jakikolwiek statek tego samego typu w dowolnym miejscu floty, zostaniesz rozpoznany.)
+
+
+-----------------------------------------
+Nieodpowiednie akty:
+
+W zale¿no›ci od sytuacji, mo¿esz pope³niaÞ niepos³uszeðstwo, gdy schwytasz lub zatopisz nie-pirackie statki. Poni¿sze s¹ uwa¿ane za takie przez cywilizowane narody ›wiata i s¹ wymienione w kolejno›ci wa¿no›ci:
+- Nie mia³e› listu marynarki wojennej ani komisji marynarki wojennej, a zatem nie ma powodu prawnego do ataku
+- Lata³e› flag¹ piratów
+- Zaatakowa³e› naród, z którym by³e› neutralny lub przyjazny
+- Lata³e› flag¹ przyjazn¹ dla zaatakowanego statku
+
+W zale¿no›ci od powagi twoich dzia³að mo¿esz zostaÞ uznany za zdrajc× w nie-pirackich miastach. W przypadku typowych dzia³að, których nie mo¿na odczytaÞ, mo¿e to troch× potrwaÞ. Jednak du¿e przest×pstwa s¹ uwa¿ane za akt piractwa i wp³ywaj¹ na twoje stosunki ze wszystkimi narodami.
+
+Zawsze mo¿na podnie›Þ kolejn¹ flag× w bitwie, co mo¿e oznaczaÞ ró¿nic× mi×dzy twoimi dzia³aniami uznanymi za legalne lub powa¿ny akt piractwa. S³u¿y on do zachowania ostro¿no›ci, zw³aszcza gdy jest rozpoznawany za podrzucanie fa³szywej flagi.
+
+-----------------------------------------
+Stosunki mi×dzynarodowe:
+
+Zdobywanie punktów z dowolnym narodem wymaga do³¹czenia do ich szeregów jako korsarz lub oficer marynarki lub do³¹czenia do Bractwa Piratów. Tak d³ugo, jak s³u¿ysz jednemu narodowi, twoje w³asne stosunki s¹ powi¹zane z tym narodem. Chocia¿ mo¿esz do³¹czyÞ do tylu narodów, ile chcesz w tym samym czasie, zmniejsza to liczb× punktów uzyskiwanych dzi×ki twoim dzia³aniom.
+
+Narody ›wiata sprzeciwiaj¹ si× wszelkim dzia³aniom przeciwko ich sojusznikom. Dlatego wa¿ne jest, aby byÞ na bie¿¹co z nowo›ciami w tawernie. Mo¿e to staÞ si× szczególnie skomplikowane, je›li obs³ugujesz wiele narodów jednocze›nie.
+
+-----------------------------------------
+Jeðcy wojenni:
+
+Oficerowie marynarki i korsarze s¹ zobowi¹zani do traktowania wi×Ÿniów z szacunkiem. Wymaganie okupu za ich uwolnienie jest dopuszczalne. Wykonywanie ich nie jest. Je›li masz zwyczaj wykonywania egzekucji na wi×Ÿniach, mo¿esz straciÞ awanse i ostatecznie mo¿esz ca³kowicie straciÞ prowizj×. (Jednak oficerowie marynarki wojennej i korsarze nie b×d¹ karani za wieszanie piratów).
+
+}

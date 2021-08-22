@@ -1,0 +1,6 @@
+title=El secreto de la mazmorra
+text.t1=Al parecer queda mucho vino sobrante de las celebraciones de la boda de #sromance# y #svillain#. Quizás pueda comprarlo barato y venderlo en algún otro sitio con un buen beneficio.
+text.t2=Mi gozo en un pozo. #svillain# ha tenido la misma idea.
+text.t3=Según la leyenda, la casa de #svillain# perteneció a la Inquisición Española, igual que la mazmorra que hay al lado. ¡Tiene que haber algún botín de la Inquisición ahí abajo!
+text.t4=¡No he encontrado nada de oro pero he encontrado a #sromance#! Puede que haya una recompensa por devolver#spronoun# a casa.
+text.t5=No habrá ninguna recompensa por devolver a #sromance# a casa. Pero existe la posibilidad de un premio mucho mayor...

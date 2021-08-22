@@ -15,5 +15,5 @@ text.t13=The poor old man was simply crushed by the sad news of his son's death.
 text.t14=I couldn't deliver the ransom on time, and the kidnappers killed Lucas. I think I had better not show my face around any of the Spanish islands anytime soon. They won't ask questions...they'll just hang me.
 text.t15=Lucas asked me if we could sail to #sFalaise De Fleur# on #sisland_Falaise De Fleur# to see Miss Justine Le Moigne again, I told him we could.
 text.t16=Lucas asked me if we could sail to #sFalaise De Fleur# on #sisland_Falaise De Fleur# to see Miss Justine Le Moigne again, I told him he had to give the relationship up now he's an officer onboard my ship.
-text.t17=Ran into a man by the name of Captain Maggee when making port in #sFalaise De Fleur#, he told me to go and see the governer, Sir Joseph Claude Le Moigne.
+text.t17=Ran into a man by the name of Captain Maggee when making port in #sFalaise De Fleur#, he told me to go and see the governor, Sir Joseph Claude Le Moigne.
 text.t18=Turns out that his daughter has disappeared, the same daughter that Lucas had a relationship with. I decided I would help find Le Moigne's daughter even if it is just to make Lucas happy. The governer also offered a good sum of money to get her back.

@@ -12,6 +12,8 @@ void ProcessDialogEvent()
 	makearef(Link, Dialog.Links);
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
+
+	Preprocessor_Add("usurer", GetMyFullName(CharacterFromID("Alice Usurer")));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -181,25 +183,20 @@ void ProcessDialogEvent()
 					Link.l2 = DLG_TEXT[96] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[97])]) + DLG_TEXT[99];
 					Link.l2.go = "localtrader";
 				}
-				// RobC/Alan_Smithee Blacksmiths -->
-				if (ENABLE_WEAPONSMOD)
-				{
-				//	Link.l3 = DLG_TEXT[162];
-				//	Link.l3.go = "smithy";
-				}
-				// RobC/Alan_Smithee Blacksmiths <--
+				Link.l3 = DLG_TEXT[162];
+				Link.l3.go = "usurer";
 				Link.l4 = DLG_TEXT[100];
-				Link.l4.go = "new question";
+				Link.l4.go = "exit";
 		break;
 		
-		case "smithy":
+		case "usurer":
 				d.Text = DLG_TEXT[163];
+				Preprocessor_Add("sir2", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 				Link.l1 = DLG_TEXT[164];
 				Link.l1.go = "new question";
 				Link.l2 = DLG_TEXT[165];
 				Link.l2.go = "exit";
 		break;
-// <-- RobC/A_S 'smiths
 
 		case "governor":
 				d.Text = DLG_TEXT[101];
@@ -230,18 +227,20 @@ void ProcessDialogEvent()
 			dialog.snd2 = "";
 			dialog.snd3 = "";
 			d.Text = RandPhrase(DLG_TEXT[110] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname + DLG_TEXT[111], DLG_TEXT[112] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[113], DLG_TEXT[114] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[115], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3);
-			Link.l1 = DLG_TEXT[116];
-			Link.l1.go = "town_tavern";
+			if(GetAttribute(NPChar, "location") != "Alice_Tavern")
+			{
+				Link.l1 = DLG_TEXT[116];
+				Link.l1.go = "town_tavern";
+			}
 			Link.l2 = DLG_TEXT[117];
 			Link.l2.go = "town_shipyard";
 			Link.l3 = DLG_TEXT[118];
 			Link.l3.go = "town_store";
-			// RobC/Alan_Smithee Blacksmiths -->
 			Link.l4 = DLG_TEXT[166];
-			Link.l4.go = "town_smith";
+			Link.l4.go = "town_usurer";
 		break;
 
-		case "town_smith":
+		case "town_usurer":
 			d.Text = DLG_TEXT[167];
 			Link.l1 = DLG_TEXT[168];
 			Link.l1.go = "exit";
@@ -250,7 +249,6 @@ void ProcessDialogEvent()
 			Link.l3 = DLG_TEXT[170];
 			Link.l3.go = "town_store";
 		break;
-//<-- RobC/A_S 'smiths
 
 		case "town_tavern":
 			d.Text = DLG_TEXT[119];
@@ -261,18 +259,21 @@ void ProcessDialogEvent()
 			Link.l3 = DLG_TEXT[122];
 			Link.l3.go = "town_store";
 			Link.l4 = DLG_TEXT[166];
-			Link.l4.go = "town_smith";
+			Link.l4.go = "town_usurer";
         	DeleteAttribute(&locations[FindLocation("Alice_Port")], "reload.l4.goto_disable"); // BOP: Unlock Fast Travel
 		break;
 
 		case "town_shipyard":
-			d.Text = DLG_TEXT[123] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[124]
-			Link.l1 = DLG_TEXT[125];
-			Link.l1.go = "town_tavern";
+			d.Text = DLG_TEXT[123] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[124];
+			if(GetAttribute(NPChar, "location") != "Alice_Tavern")
+			{
+				Link.l1 = DLG_TEXT[125];
+				Link.l1.go = "town_tavern";
+			}
 			Link.l2 = DLG_TEXT[126];
 			Link.l2.go = "town_store";
 			Link.l4 = DLG_TEXT[166];
-			Link.l4.go = "town_smith";
+			Link.l4.go = "town_usurer";
 			Link.l3 = DLG_TEXT[127];
 			Link.l3.go = "exit";
     		DeleteAttribute(&locations[FindLocation("Alice_Port")], "reload.l5.goto_disable"); // BOP: Unlock Fast Travel
@@ -282,10 +283,13 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[128] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[129])]) + DLG_TEXT[131];
 			Link.l1 = DLG_TEXT[132];
 			Link.l1.go = "town_shipyard";
-			Link.l2 = DLG_TEXT[133];
-			Link.l2.go = "town_tavern";
+			if(GetAttribute(NPChar, "location") != "Alice_Tavern")
+			{
+				Link.l2 = DLG_TEXT[133];
+				Link.l2.go = "town_tavern";
+			}
 			Link.l4 = DLG_TEXT[166];
-			Link.l4.go = "town_smith";
+			Link.l4.go = "town_usurer";
 			Link.l3 = DLG_TEXT[134];
 			Link.l3.go = "exit";
             DeleteAttribute(&locations[FindLocation("Alice_Port")], "reload.l6.goto_disable"); // BOP: Unlock Fast Travel

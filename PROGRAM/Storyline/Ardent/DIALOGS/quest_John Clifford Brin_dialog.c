@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_you_defeated_warship":
-			Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 			dialog.text = DLG_TEXT[14] + GetMyRespectfullyName(PChar) + DLG_TEXT[15];
 			link.l1 = DLG_TEXT[16];
 			link.l1.go = "finale_new_deal";
@@ -132,7 +132,17 @@ void ProcessDialogEvent()
 
 		case "finale_reward_for_warship":
 			PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneytoCharacter(PChar, 200000);
+			if (CheckAttribute(PChar, "quest.finale_fort_reward"))
+			{
+				dialog.text = DLG_TEXT[26];
+				AddMoneytoCharacter(PChar, sti(PChar.quest.finale_fort_reward));
+				DeleteQuestAttribute("finale_fort_reward");
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[58];
+				AddMoneytoCharacter(PChar, 200000);
+			}
 			Preprocessor_Add("villain", GetMySimpleName(characterFromID(PChar.quest.villain)));
 			dialog.text = DLG_TEXT[26];
 			makeref(ch, Characters[GetCharacterIndex(PChar.quest.villain)]);
@@ -142,7 +152,7 @@ void ProcessDialogEvent()
 				if (CheckAttribute(ch, "quest.place_of_death") && ch.quest.place_of_death == "ship");
 				{
 					Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.villain))));
-					Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+					Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 					link.l1 = DLG_TEXT[27] + DLG_TEXT[28];
 				}
 				link.l1.go = "finale_reward_for_villain";
@@ -163,21 +173,21 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_now_about_warship":
-			Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 			dialog.text = DLG_TEXT[31];
 			link.l1 = DLG_TEXT[32];
 			link.l1.go = "finale_commandeer_warship";
 		break;
 
 		case "finale_commandeer_warship":
-			Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 			dialog.text = DLG_TEXT[33];
 			link.l1 = DLG_TEXT[34];
 			link.l1.go = "finale_cannot_be_serious";
 		break;
 
 		case "finale_cannot_be_serious":
-			Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 			dialog.text = DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			link.l1.go = "finale_just_joking";
@@ -228,7 +238,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "finale_already_have_LOM":
-			Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 			dialog.text = DLG_TEXT[49];
 			link.l1 = DLG_TEXT[78] + DLG_TEXT[48];
 			AddDialogExitQuest("finale_port_royale_finished_rewards");
@@ -270,9 +280,17 @@ void ProcessDialogEvent()
 
 		case "finale_reward_for_warship2":
 			PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneytoCharacter(PChar, 200000);
-			if (CheckAttribute(PChar, "quest.finale_fort_reward")) dialog.text = DLG_TEXT[26];
-			else dialog.text = DLG_TEXT[58];
+			if (CheckAttribute(PChar, "quest.finale_fort_reward"))
+			{
+				dialog.text = DLG_TEXT[26];
+				AddMoneytoCharacter(PChar, sti(PChar.quest.finale_fort_reward));
+				DeleteQuestAttribute("finale_fort_reward");
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[58];
+				AddMoneytoCharacter(PChar, 200000);
+			}
 			if (HaveLetterOfMarque(ENGLAND))
 			{
 				link.l1 = DLG_TEXT[30] + " " + DLG_TEXT[48];
@@ -300,7 +318,8 @@ void ProcessDialogEvent()
 
 		case "finale_you_would_let_villain_kill_me":
 			Preprocessor_Add("villain", GetMySimpleName(CharacterFromID(PChar.quest.villain)));
-			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.villain))));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(characterFromID(PChar.quest.villain))));
+			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.villain))));
 			dialog.text = DLG_TEXT[59];
 			link.l1 = DLG_TEXT[60];
 			link.l1.go = "finale_why_trust_you";
@@ -345,7 +364,7 @@ void ProcessDialogEvent()
 
 		case "finale_dont_believe_you":
 			Preprocessor_Add("person", PChar.sex);
-			Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 			if (HaveLetterOfMarque(ENGLAND)) dialog.text = DLG_TEXT[71] + DLG_TEXT[73] + DLG_TEXT[74];
 			else dialog.text = DLG_TEXT[71] + DLG_TEXT[72] + DLG_TEXT[74];
 			link.l1 = DLG_TEXT[75];
@@ -365,7 +384,7 @@ void ProcessDialogEvent()
 				if (CheckAttribute(ch, "quest.place_of_death") && ch.quest.place_of_death == "ship");
 				{
 					Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.villain))));
-					Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+					Preprocessor_Add("warship", PChar.quest.French_flagship.name);
 					link.l1 = DLG_TEXT[27] + DLG_TEXT[28];
 				}
 				link.l1.go = "finale_reward_for_villain";

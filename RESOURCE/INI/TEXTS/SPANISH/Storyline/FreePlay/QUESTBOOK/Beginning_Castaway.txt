@@ -1,0 +1,3 @@
+title=Un golpe de mala suerte
+text.t1=Fue mi culpa por ir a ver al capit·n para quejarme por la tormenta. Poco me imaginaba lo peligroso que era. En cuanto volvÅÌ a salir a cubierta, una enorme ola me arrastrÛ por encima de la borda. Supongo que tengo suerte de seguir con vida.
+text.t2=Con todas mis posesiones en mi camarote y el barco sabe Dios dÛnde, no me queda nada en este mundo. Pero vi que uno de los botes salvavidas cayÛ por la borda al mismo tiempo que yo. Tiene que estar por aqui cerca...

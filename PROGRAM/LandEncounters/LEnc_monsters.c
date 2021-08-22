@@ -1312,6 +1312,22 @@ void LEnc_MonstersLoginCorrectParams(ref location, aref chr, string group, strin
 			case "Bedroom":
 				chr.dialog.filename = "Enc_Bedroom_dialog.c";
 			 	GiveItem2Character(chr, "jewelry"+ makeint(1 + rand(15)) );	// jun05 booty for stealing
+				if(CheckAttribute(chr, "id"))
+				{
+					mchr.quest.LandEnc_ladykiller.win_condition.l1 = "NPC_death";	// GR: why can't modders be consistent and always use PChar? Anyway, this is revenge if you kill the lady in the bedroom
+					mchr.quest.LandEnc_ladykiller.win_condition.l1.character = chr.id;
+
+					mchr.quest.LandEnc_ladykiller.win_condition.l2 = "location";
+					mchr.quest.LandEnc_ladykiller.win_condition.l2.character = mchr.id;
+					mchr.quest.LandEnc_ladykiller.win_condition.l2.location = chr.location;	// When you leave bedroom, character seems to "die" and trigger revenge, so only trigger if she dies in bedroom
+					mchr.quest.LandEnc_ladykiller.win_condition = "LandEnc_ladykiller";
+					mchr.quest.bedroomlady = chr.id;
+					mchr.quest.bedroomlady.location = chr.location;
+
+//					mchr.quest.LandEnc_cancel_ladykiller.win_condition.l1 = "ExitFromLocation";
+//					mchr.quest.LandEnc_cancel_ladykiller.win_condition.l1.location = chr.location;
+//					mchr.quest.LandEnc_cancel_ladykiller.win_condition = "LandEnc_cancel_ladykiller";
+				}
 			break;
 	
 			case "Tradepost":
@@ -1409,7 +1425,7 @@ void LAi_CreateFantomGroup(string modeltype, int bmax, string mainrel, string np
 
 	// LAi Group
 	string group = "ambush";
-	if(modeltype == "Soldiers" || modeltype == "Navy_office4" || HasSubStr(modeltype, "Soldier")) // PB: Add ANY soldiers
+	if(modeltype == "Soldiers" || modeltype == "Navy_office4" || modeltype == "Merchant_Officers" || HasSubStr(modeltype, "Soldier")) // PB: Add ANY soldiers
 	{
 		group = GetSoldiersGroup(iNation);	// ccc Nov05: Make local guards if modeltype is "Soldiers"
 		if (gunID == "") gunID = "All";	// PB: Soldiers always get guns

@@ -399,6 +399,11 @@ void KB_AddCharacter(string c)
 			if(bKeyboardShift) KeyboardStringLeft += toupperpol(c);
 			else KeyboardStringLeft += c;
 		break;
+		case "Swedish":
+			if(bKeyboardAlt) c = GetDiacriticalChar(c, "Swedish");
+			if(bKeyboardShift) KeyboardStringLeft += toupperswe(c);
+			else KeyboardStringLeft += c;
+		break;
 		// default:
 			if(bKeyboardShift) KeyboardStringLeft += touppereng(c);
 			else KeyboardStringLeft += c;

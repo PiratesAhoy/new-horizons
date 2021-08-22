@@ -140,7 +140,7 @@ void LocationInitAruba(ref n)
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
 	Locations[n].reload.l1.go = "Aruba_Jungle_01";
-	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.emerge = "reload3";
 	Locations[n].reload.l1.autoreload = "1";
 	Locations[n].locators_radius.reload.reload1 = 2;
 	Locations[n].reload.l1.label = "Jungle.";
@@ -150,7 +150,7 @@ void LocationInitAruba(ref n)
 	Locations[n].reload.l2.emerge = "reload3_back";
 	Locations[n].reload.l2.autoreload = "1";
 	Locations[n].locators_radius.reload.reload2 = 2;
-	Locations[n].reload.l2.label = "Leviathan Rock.";
+	Locations[n].reload.l2.label = "#stown_name# port.";
 
 	Locations[n].reload.l4.name = "reload1_back";
 	Locations[n].reload.l4.go = "Aruba_Jungle_01";
@@ -164,7 +164,7 @@ void LocationInitAruba(ref n)
 	Locations[n].reload.l5.emerge = "reload3_back";
 	Locations[n].reload.l5.autoreload = "1";
 	Locations[n].locators_radius.reload.reload2_back = 2;
-	Locations[n].reload.l5.label = "Leviathan Rock.";
+	Locations[n].reload.l5.label = "#stown_name# port.";
 
 	Locations[n].reload.l3.name = "reload3";
 	Locations[n].reload.l3.go = "Oranjestad_town";
@@ -267,7 +267,7 @@ void LocationInitAruba(ref n)
 	Locations[n].filespath.models = "locations\Inside\ResidenceSmall1";	
 
 	Locations[n].id = "Oranjestad_townhall";
-	locations[n].id.label = "Oranjestad Townhall";
+	locations[n].id.label = "#stown_name# Townhall";
 	Locations[n].image = "Inside_ResidenceSmall1.tga";
 	//Town sack
 	Locations[n].townsack = "Oranjestad"; // NK - "Oxbay";
@@ -352,7 +352,7 @@ void LocationInitAruba(ref n)
 	Locations[n].filespath.models = "locations\Inside\MediumTavern";
 
 	Locations[n].id = "Oranjestad_tavern";
-	locations[n].id.label = "Oranjestad Tavern";
+	locations[n].id.label = "#stown_name# tavern";
 	Locations[n].image = "Inside_MediumTavern.tga";
 
 	//Town sack
@@ -488,12 +488,38 @@ void LocationInitAruba(ref n)
 	Locations[n].locators_radius.reload.reload2 = 2.5;
 	Locations[n].reload.l2.label = "Rocky Cove.";
 
-	Locations[n].reload.l3.name = "reload3";
-	Locations[n].reload.l3.go = "Oranjestad_exit";
-	Locations[n].reload.l3.emerge = "reload1";
-	Locations[n].reload.l3.autoreload = "1";
-	Locations[n].locators_radius.reload.reload3 = 2.5;
-	Locations[n].reload.l3.label = "Jungle.";
+	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		Locations[n].reload.l3.name = "reload3";
+		Locations[n].reload.l3.go = "Aruba_shore2";
+		Locations[n].reload.l3.emerge = "reload2";
+		Locations[n].reload.l3.autoreload = "1";
+		Locations[n].locators_radius.reload.reload3 = 2.5;
+		Locations[n].reload.l3.label = "Jungle.";
+
+		Locations[n].reload.l5.name = "reload3_back";
+		Locations[n].reload.l5.go = "Aruba_shore2";
+		Locations[n].reload.l5.emerge = "reload2";
+		Locations[n].reload.l5.autoreload = "1";
+		Locations[n].locators_radius.reload.reload3_back = 3;
+		Locations[n].reload.l5.label = "Jungle.";
+	}
+	else
+	{
+		Locations[n].reload.l3.name = "reload3";
+		Locations[n].reload.l3.go = "Oranjestad_exit";
+		Locations[n].reload.l3.emerge = "reload1";
+		Locations[n].reload.l3.autoreload = "1";
+		Locations[n].locators_radius.reload.reload3 = 2.5;
+		Locations[n].reload.l3.label = "Jungle.";
+
+		Locations[n].reload.l5.name = "reload3_back";
+		Locations[n].reload.l5.go = "Oranjestad_exit";
+		Locations[n].reload.l5.emerge = "reload1";
+		Locations[n].reload.l5.autoreload = "1";
+		Locations[n].locators_radius.reload.reload3_back = 3;
+		Locations[n].reload.l5.label = "Jungle.";
+	}
 
 	Locations[n].reload.l4.name = "reload2_back";
 	Locations[n].reload.l4.go = "Aruba_shore";
@@ -501,13 +527,6 @@ void LocationInitAruba(ref n)
 	Locations[n].reload.l4.autoreload = "1";
 	Locations[n].locators_radius.reload.reload2_back = 2.5;
 	Locations[n].reload.l4.label = "Rocky Shore.";
-
-	Locations[n].reload.l5.name = "reload3_back";
-	Locations[n].reload.l5.go = "Oranjestad_exit";
-	Locations[n].reload.l5.emerge = "reload1";
-	Locations[n].reload.l5.autoreload = "1";
-	Locations[n].locators_radius.reload.reload3_back = 3;
-	Locations[n].reload.l5.label = "Jungle.";
 
 	Locations[n].reload.l6.name = "reload1_back";
 	Locations[n].reload.l6.go = "Arawak_Village";
@@ -525,7 +544,7 @@ void LocationInitAruba(ref n)
 
 	Locations[n].id = "Aruba_shore";
 	locations[n].id.label = "Rocky Cove."; // KK
-	locations[n].worldmap = "CShore 2";
+	locations[n].worldmap = "ArubaShore";
 	Locations[n].image = "Outside_Shore_4.tga";
 	Locations[n].name = "Rocky Cove";
 	//Sound
@@ -887,7 +906,7 @@ void LocationInitAruba(ref n)
 	Locations[n].island = "Aruba"; // NK 04-08-29
 	n = n + 1;	
 	
-	// ----------------- Philipsburg_Dungeon --------------------
+	// ----------------- Aruba_Dungeon --------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_1";
 	Locations[n].id = "Aruba_Dungeon";
 	Locations[n].image = "Inside_Dungeon_1.tga";
@@ -929,6 +948,61 @@ void LocationInitAruba(ref n)
 */
 
 	Locations[n].items.randitem1 = "blade20";
+
+	Locations[n].island = "Aruba";
+	n = n + 1;
+
+
+	//  -------- Sandy Beach -----------------------------------------
+	Locations[n].id = "Aruba_shore2";
+	locations[n].id.label = "Sandy Beach."; // KK
+	locations[n].worldmap = "ArubaShore2";
+	Locations[n].filespath.models = "locations\Outside\Shore_6";
+	Locations[n].image = "Outside_Shore_6.tga";
+	Locations[n].name = "Sandy Beach";
+	//Sound
+	locations[n].type = "seashore";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Shore06_l";
+	Locations[n].models.always.shore = "Shore06";
+	Locations[n].models.always.shore.foam = "1";
+	Locations[n].models.always.seabed = "Shore06_sb";
+	Locations[n].models.always.seabed.foam = "1";
+	//Locations[n].models.always.grassPatch = "Shore06_g";
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Shore06_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Shore06_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload2";
+	Locations[n].reload.l1.go = "Aruba_Jungle_01";
+	Locations[n].reload.l1.emerge = "reload3";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].locators_radius.reload.reload1 = 2;
+	Locations[n].reload.l1.label = "Jungle.";
+
+	Locations[n].reload.l3.name = "Reload2_back";
+	Locations[n].reload.l3.go = "Aruba_Jungle_01";
+	Locations[n].reload.l3.emerge = "reload3";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].locators_radius.reload.Reload2_back = 5;
+
+	Locations[n].reload.l2.name = "boat";
+	Locations[n].reload.l2.go = "Aruba";
+	Locations[n].reload.l2.emerge = "reload_1";
+	Locations[n].reload.l2.autoreload = "0";
+	if (VISIT_DECK == 1)
+		Locations[n].reload.l2.label = "Ship.";
+	else
+		Locations[n].reload.l2.label = "Sea.";
+	Locations[n].locators_radius.reload.boat = 11.0;
 
 	Locations[n].island = "Aruba";
 	n = n + 1;

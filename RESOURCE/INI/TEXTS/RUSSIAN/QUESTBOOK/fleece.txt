@@ -1,0 +1,7 @@
+title=Side Quest - Fleecing a Governor
+text.t1=In #sPhilipsburg# tavern I met a man named Willem Voigt with a remarkably simple plan to rob a governor.
+text.t2=The plan sounded stupidly simple. If he wants to get himself arrested for stupidity, he can do it without me.
+text.t3=The plan may be simple but I reckon if we have the nerve, we can pull it off. We disguise ourselves as soldiers, march into #sDouwesen# town hall, pretend to arrest the governor for fraud, and confiscate his cashbox as 'evidence'.
+text.t4=Willem Voigt was recognised as a regular swindler and arrested. Fortunately he backed up my story that I only let him book passage on my ship and am not his accomplice, so the guards let me go.
+text.t5=Willem Voigt was killed when we tried to leave #sPhilipsburg# by the landward gate.
+text.t6=Willem Voigt refused to follow me through the tunnel to #sMarigot#.

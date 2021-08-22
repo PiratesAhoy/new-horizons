@@ -1,0 +1,12 @@
+title=Motín.
+text.t1=Me han transferido al Renoun. Debo encontrar a Archie en la taberna y luego dirigirnos al Cuartel General Naval de #sGreenford#.
+text.t2=El guardiamarina Wellard se ha incorporado al navío y Sharpe ha sido ascendido a sargento.
+text.t3=El capitán Sawyer ha hecho que muelan a palos a Wellard. Hay algo que no está bien con el capitán, pero no puedo decir nada a nadie todavía.
+text.t4=Nos hemos reunido con el capitán Sawyer. Parece haber cambiado, y no para mejor.
+text.t5=El teniente Bush se ha incorporado al navío. Tengo que ir al timón.
+text.t6=El capitán se ha caído en la bodega y está incapacitado para mandar el navío. El teniente Buckland ha asumido el mando.
+text.t7=Estábamos intentando capturar el fuerte español cuando Archie y yo hemos sido arrestados.
+text.t8=Los prisioneros españoles se han hecho con el control del Renown. Debemos abordarlo y recuperarlo.
+text.t9=Hemos recuperado el navío. Ahora nos dirigimos a #sRedmond#; veremos lo que nos espera allí.
+text.t10=.
+text.t11=.

@@ -30,7 +30,8 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 			
-			if (TradeCheck(PChar, NPChar, true)) { // NK
+			if (TradeCheck(PChar, NPChar, true))
+			{ // NK
 				if (npchar.quest.meeting == "0")
 				{
 					dialog.snd = "Voice\GHDA\GHDA001";
@@ -43,7 +44,9 @@ void ProcessDialogEvent()
 				}
 				NextDiag.TempNode = "Second time";
 			// NK -->
-			} else {
+			}
+			else
+			{
 				dialog.text = DLG_TEXT[42] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[43];
 				Link.l1 = DLG_TEXT[44];
 				Link.l1.go = "exit";
@@ -84,14 +87,17 @@ void ProcessDialogEvent()
 		break;
 
 		case "second time":
-			if(TradeCheck(PChar, NPChar, true)) { // NK
+			if(TradeCheck(PChar, NPChar, true))
+			{ // NK
 				dialog.snd = pcharrepphrase("Voice\GHDA\GHDA002", "Voice\GHDA\GHDA003");
 // KK -->
 				if (!LAi_IsCapturedLocation) {
 					dialog.text = pcharrepphrase(DLG_TEXT[5] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[6], DLG_TEXT[7]); // NK
 					Link.l1 = pcharrepphrase(DLG_TEXT[8] + npchar.name + DLG_TEXT[9], DLG_TEXT[10]); 
 					link.l1.go = "node_1";
-				} else {
+				}
+				else
+				{
 					dialog.text = DLG_TEXT[69];
 					Link.l1 = DLG_TEXT[70]; 
 					link.l1.go = "trade_1";
@@ -159,17 +165,24 @@ void ProcessDialogEvent()
 			iTest = 0;
 			if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))	// LDH was quest.quest.generate, fixed 01Jan09
 			{
-				int iQuantityShipGoods = pchar.quest.generate_trade_quest_progress.iQuantityGoods;
-				int iQuestTradeGoods = pchar.quest.generate_trade_quest_progress.iTradeGoods;
+				int iQuantityShipGoods = sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods);
+				int iQuestTradeGoods = sti(pchar.quest.generate_trade_quest_progress.iTradeGoods);
 			}
 			if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
 			{
-				if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods && pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+				if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
 				{
 					dialog.snd = "Voice\GHDA\GHDA006";
 					dialog.text = DLG_TEXT[19];
 					link.l1 = DLG_TEXT[20];
-					link.l1.go = "generate_quest_2";
+					if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
+					{
+						link.l1.go = "generate_quest_2";
+					}
+					else
+					{
+						link.l1.go = "cargo_missing";
+					}
 				}
 			}
 			else
@@ -192,6 +205,7 @@ void ProcessDialogEvent()
 				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
+					Preprocessor_Add("nation_name", GetNationNameByType(sti(NPChar.nation)));
 					dialog.snd = "Voice\GHDA\GHDA007";
 					dialog.text = DLG_TEXT[23];
 					link.l1 = DLG_TEXT[24];
@@ -291,6 +305,17 @@ void ProcessDialogEvent()
 				TradeQuestDone();
 			}
 			AddDialogExitQuest("close_trade_quest");
+		break;
+
+		case "cargo_missing":
+			AddQuestRecord("trade", 3);
+			Preprocessor_Add("ladlass", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false));
+			Preprocessor_Add("quantity", sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods));
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(pchar.quest.generate_trade_quest_progress.iTradeGoods)].name));
+			dialog.snd = "Voice\GHDA\GHDA013";
+			dialog.text = DLG_TEXT[74];
+			link.l1 = DLG_TEXT[75];
+			link.l1.go = "exit";
 		break;
 		
 		case "no_quests":

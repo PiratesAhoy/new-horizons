@@ -67,6 +67,8 @@ void ProcessDialogEvent()
 
 	// Dialog.CurrentNode holds a value indicating where in the conversation we are,
 	// according to that value we will determine where to go next.
+
+	Preprocessor_Add("name", GetMyName(NPChar));
 	switch(Dialog.CurrentNode)
 	{
 		// Exit from the dialog
@@ -96,6 +98,7 @@ void ProcessDialogEvent()
 		// Blacksmith tells the main char about his trade (and use in the game)
 	case "Introduction":
 		NPCDialog.TempNode = "SelectFix"; // NK
+		Preprocessor_Add("fullname", GetMyFullName(NPChar));
 		Dialog.text = DLG_TEXT[2];
 		link.l1 = DLG_TEXT[3];
 		link.l1.go = "SelectFix";

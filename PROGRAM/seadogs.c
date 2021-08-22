@@ -528,6 +528,7 @@ void SaveGame_continue()
 	string qsFileName = "-=" + sCurProfile + "=- QuickSave";
 	string saveQSFullName = savePath + "\" + qsFileName;
 // <-- KK
+	PChar.savelang = GetInterfaceLanguage(); // MAXIMUS 20.08.2018 used for localization
 
 	SaveEngineState(saveFullName);
 	ISetSaveData(saveFullName, saveData);
@@ -554,6 +555,7 @@ void SaveGame_continue()
 	}
 	DeleteAttribute(PChar, "KrakenAttack");		// PB: Kraken Attack
 	DeleteAttribute(PChar, "ship.speedburst");	// PB: Black Pearl & Queen Anne's Revenge
+	DeleteAttribute(PChar, "savelang"); // MAXIMUS 20.08.2018 used for localization
 // <-- KK
 	ResumePostInit(); //Levis
 }
@@ -894,6 +896,8 @@ void NewGame()
 {
 	GetLanguageParameters();
 	Trace("Gauging: start new game");
+	bChangeNation = true;
+	trace("bChangeNation set to 'true'");
 	DeleteEntities();
 	DelEventHandler("frame","NewGame");
 
@@ -902,7 +906,8 @@ void NewGame()
 	string TextureFolder = "RESOURCE\Textures\Loading\"+ LanguageGetLanguage() +"\";
 	ref model = ModelFromID(CharModel);
 	if (CheckAttribute(model, "loadingScreen"))	LoadingScreen = model.loadingScreen;
-	if(FindFile(TextureFolder, "*.tx", LoadingScreen+".tx") == "") LoadingScreen = "new_game.tga";
+//	if(FindFile(TextureFolder, "*.tx", LoadingScreen+".tx") == "") LoadingScreen = "new_game.tga";
+	if(FindReloadPicture(LoadingScreen) == "") LoadingScreen = "new_game.tga";//MAXIMUS 25.04.2019: method FindFile not works with localization
 	// PB: Storyline Specific Start New Game Screens <--
 
 	CreateEntity(&LanguageObject,"obj_strservice");
@@ -1495,6 +1500,13 @@ void ProcessControls()
 						{
 							PostEvent("bax_on_back", 1000, "i", PChar);
 						}
+			
+						if(IsEquipCharacterByItem(PChar, "witcher_steel-2") || IsEquipCharacterByItem(PChar, "witcher_steel-1") 
+						|| IsEquipCharacterByItem(PChar, "witcher_steel") || IsEquipCharacterByItem(PChar, "witcher_steel+1") 
+						|| IsEquipCharacterByItem(PChar, "witcher_steel+2") || IsEquipCharacterByItem(PChar, "witcher_steel+3"))
+						{
+							PostEvent("witcher_steel_on_back", 1000, "i", PChar);
+						}
 
 						PostEvent("mguns_reset_check", 1000, "i", PChar);	//JRH: shouldn't matter what kind of gun pchar is equipped with
 					}
@@ -1583,6 +1595,13 @@ void ProcessControls()
 						if(IsEquipCharacterByItem(PChar, "battleax"))
 						{
 							PostEvent("bax_on_hip", 10, "i", PChar);
+						}
+				
+						if(IsEquipCharacterByItem(PChar, "witcher_steel-2") || IsEquipCharacterByItem(PChar, "witcher_steel-1") 
+						|| IsEquipCharacterByItem(PChar, "witcher_steel") || IsEquipCharacterByItem(PChar, "witcher_steel+1") 
+						|| IsEquipCharacterByItem(PChar, "witcher_steel+2") || IsEquipCharacterByItem(PChar, "witcher_steel+3"))
+						{
+							PostEvent("witcher_steel_on_hip", 10, "i", PChar);
 						}
 					}
 
@@ -2002,8 +2021,8 @@ void ProcessControls()
 				// ccc firedrill
 				if(bSeaActive == true && bAbordageStarted == false && FIREDAMAGE > 1) { // checks if you are in sailing mode MAR18
 					Log_SetStringToLog(TranslateString("","All hands execute fire drill ! NOW !!")); // just a screenmessage
-					if (FD_REQUIRE_DEFENCE == 0 || CheckOfficersPerk(PChar,"BasicBattleState")) {
-						// starts firedrill only if you have shipdefence ability
+					if (FD_REQUIRE_DEFENCE == 0 || CheckOfficersPerk(PChar,"BasicDamageControl")) {
+						// starts firedrill only if you have damage control ability
 						// or this check is turned off in BS.h -tih
 						PChar.firedrill = 1; // adds attribute to player as "marker" that firedrill is ordered
 						if (IsPerkIntoList("FireOnShip")) DelPerkFromActiveList("FireOnShip"); // KK

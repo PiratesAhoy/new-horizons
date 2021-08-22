@@ -1,0 +1,224 @@
+About_Build
+{
+Pirates of the Caribbean: New Horizons
+
+This being a large modification to the original 2003 game, there is a lot to know about the game and a lot of things that may not be immediately apparent.
+
+Therefore, we have compiled these Tips & Tricks for all players. There are probably some things mentioned that you didn't already know and can help enhance your game experience.
+
+Have fun with the game!
+
+}
+
+B_1{Introduction}
+About_Build_1_d{INTRODUCTION}
+About_Build_1
+{
+
+Made for the original 2003 Akella game "Pirates of the Caribbean", this modpack has been in development ever since the release of Build 13 in early 2007. We have come a long way since then, adding much new content and many new features, some of which were thought to be impossible to achieve even by the original game developers themselves.
+
+The intention is to provide as full a pirate game experience as possible, both more realistic, but also more fun. New features include more storylines, historical detail, abilities for free play, variety and more customization than ever before. Not to mention that the graphics have also been improved upon, mainly with new models and textures, but also the sea itself and anywhere else that we could manage.
+}
+
+B_2{Resolution}
+About_Build_2_d{RESOLUTION and OTHER ADVANCED SETTINGS}
+About_Build_2
+{
+
+Edit engine.ini in your main game folder manually with Notepad. Set screen_x and screen_y to your desktop resolution.
+
+Recommend setting fullscreen to 0. This makes the game run in windowed mode and allows you to Alt+Tab in and out.
+
+If you do not like the "Tips" during game loading, set numoftips to 0.
+}
+
+B_3{Shore}
+About_Build_3_d{SHORE and LAND FIGHTS}
+About_Build_3
+{
+
+- If you're lost in a town, some citizens can show you the way.
+
+- Practicing your melee-skill is the key to survive. At the beginning, try to land a few hits and if your health is going down, run away! The skill increases with every hit.
+
+- items that provide skill bonuses will do that also if you put them in the ship-chest. So you don't have to carry them around all the time.
+
+- Dodging is very helpful when fighting multiple foes.
+
+- Bandage rolls and other medications can be bought from merchants on the streets and in the store. They will save your live!
+
+- Don't forget that you can take crewmembers with you at land explores. Especially at the beginning of a game it's helpfull, because you won't have officers.
+
+- Always watch your ammunition and powder for guns!
+
+- With some large guns, you can enter the "shotgun-mode" by pressing [TAB] when you have drawn your sword. You shoot with [Q]
+
+- Be sure to look in the inventory after a fight. Maybe one of the enemies dropped a weapon better than yours! You can also press [F] for fast equip the best weapon you have (works also during fights).
+
+}
+
+B_4{Sea}
+About_Build_4_d{SAILING and SEA BATTLES}
+About_Build_4
+{
+
+- Hired officers contribute their skills also if they're not in your "active" officer party. Note that they only contribute the skills that are correct for their type. In the Passengers interface, you can reassign officers, see their effective skills. The total effect of player + officers is shown as the player skills in the Passengers interface
+
+- Always check if your ship is in need of repairs! You can also upgrade your ship at the shipyard to make it stronger, more agile or faster.
+
+- A ship needs enough crew in order to sail and fight properly!
+
+- Hire a gunner as early as possible to perform better in naval battles. He will also equip you with new ammunition if you enter your ship's deck, otherwise you have to resupply yourself at the powder storage in the cargo hold.
+
+- Hiring a doctor with a good defence skill and having medicine on board will decrease after-battle casualties. Wounded crew are shown as [healthy crew] / [wounded crew] in F2>Ship.
+
+- Don't forget that your crew needs food and rum to survive. You can change the foodrations if it gets critical. Also you need cannonballs and powder in order to load your cannons.
+
+- Double rum rations will increase your crew's morale, but they might get into a drunken brawl.
+
+- The way your ship and enemy ship are positioned on the world map is the same as on open sea. So turn your ship into a good position on the world map before starting the fight! A good starting position can be a huge advantage.
+
+- You can change the appearance of your sails in F2>Ship>Sails.
+
+- If the odds in a seabattle are totally against you, load chains and try to break the enemy's masts. It'll be way easier to escape.
+
+- Boarding will be much easier with a crew with good morale. Also, it is very effective to load grapes and fire a few salvos before boarding.
+
+- Boarding crew uses armour and potions that you stock in the weaponslocker. If you don't put any weapons in the weaponslocker, they will use Cutlasses.
+
+- Later in the game, your crew will be generated with better skills and abilities and then they might use guns that require the Gunman ability. But not at the start.
+
+- When you try to board, watch your speed! It can be deadly to pass by a ship's side.
+
+- Your crew can use the weapons, guns, armor and medications in your weaponslocker when boarding. This can be the difference between victory and loss!
+
+- In Realistic and Iron Man Mode you need a compass and a sextant in order to see your ship on the archipelago map (default key M). Also, in every mode, they increase your sailing skill.
+
+- In order to execute a firedrill, you need the perk "Basic Ship Defence". The default key for this is C.
+
+- You can fly other nations' flags through F2>Relations. If it is a false flag, you can be recognized. The chance for this increases if you are famous and as you get closer to friendly ships that are of an enemy nation. Flying your Personal flag, the sea relations will be the same as your real relations.
+
+- Steamship engines needs planks to work
+
+}
+
+B_5{Additional}
+About_Build_5_d{ADDITIONAL NOTES}
+About_Build_5
+{
+
+- Don't forget to save often (Quicksave: F5). You'll never know what will happen next.
+
+- You can customize your game in the additional game settings.
+
+- You can also go into InternalSettings.h in [Game-Folder]\PROGRAM, which you can open with WordPad.
+WARNING! You can mess things up there! If you edit this file, please follow the instructions at the end of every line! If there's no description, leave it.
+
+- At the bottom of the mentioned file, you can enable/disable the sidestep ([A] and [D]). We couldn't make the collision control work, so you can slide through the world. Default setting: disabled.
+
+- You can change the appearance of your sails in F2>Ship>Sails.
+
+- Why are there two numbers for skills on the character sheet?
+The first is the character's "native" skill; the second is the skill after bonuses and penalties from items AND/OR ship class have been taken into account.
+
+- If you're confused on island names and positions, consult the Archipelago Map in F2>Inventory>Maps. You can also buy island maps from the item traders, which will give you town and shore positions and names.
+
+- My reputation is horrible. How can I change what people think about me?
+Firstly, you probably didn't know what caused this. Your reputation goes down when:
+> You failed to pay off a loan from the loan shark "on time".
+> You failed to deliver cargo "on time".
+> You hit or killed civilians or merchants.
+> Your landing party and/or officers hurt or killed a civilian. Note, this can happen even at a distance if your officers use guns.
+> You fired on a friendly or neutral ship.
+> You basically did the evil thing in a certain situation.
+To fix this, do the obvious thing: good deeds. talking to people and helping them, rescuing shipwreck survivors, finishing quests you still have going which give you a reputation bonus, etc.
+}
+
+B_6{Secrets}
+About_Build_6_d{SECRET CONTENT}
+About_Build_6
+{
+
+- Captain Hendrick Vanderdecken sells very special and cursed ships. He lives on an island that cannot be found, except by those who already know where it is. You can get there by getting a famous item from a well-known character in a well-known location from the Pirates of the Caribbean films.
+
+- A tough gun-slinger has decided to hide away from the world in a house in the jungle somewhere. But rumour has it that he has a "magic" gun of some kind.
+
+- There is a secret hide-out you can use to lie low in a cave on an uninhabited island.
+
+- The Apothecary in Bridgetown offers interesting options, such as increasing your maximum health. Pay him a visit to find out what is required.
+
+- There are some strange coins from a well-known movie out in the carribbean. It is told that whoever finds and carries one with him/her, a terrible curse will fall upon him/her (and the crew if there a coins in the weaponslocker).
+
+- The Opium Den on Jamaica offers skill-enhancing tattoos.
+
+- In the Revolutions and Napoleonic time periods, you can leave mines in the sea to destroy your enemies.
+}
+
+B_7{Issues}
+About_Build_7_d{KNOWN ISSUES and WORKAROUNDS}
+About_Build_7
+{
+
+- Save often. (Quicksave F5) The game usually is very stable, but remember that this is a MOD from private people!
+
+- I CAN'T CONTINUE TO THE NEXT BOARDING DECK
+Press [F12] to force the game to enable the reload. It should now possible to continue.
+
+- I CAN NO LONGER MOVE AT ALL
+You have probably been set to Actor Type through the code. Press [F12] to return to Player Type.
+
+}
+
+B_8{Cheats}
+About_Build_8_d{CHEATMODE}
+About_Build_8
+{
+
+To use the cheatmode, set ENABLE_CHEATMODE to 1 at the bottom of PROGRAM\InternalSettings.h . This enables the following key commands:
+
+Numpad 0 = Character:	God Mode
+Numpad 1 = Scroll Characters LEFT
+Numpad 2 = Select Main Character
+Numpad 3 = Scroll Characters RIGHT
+Numpad 4 = Character:	Level-Up
+Numpad 5 = Character:	Fake Level Up
+Numpad 6 = Player:		+ 100000 Gold and + 10000 Wealth
+Numpad 7 = Character:	Cycle through reputations (increase/decrease reputation)
+Numpad 8 = Disable worldmap storms and ships chasing you
+Numpad 9 = Trigger enemy attack (cheatmode not required)
+TAB = Shotgun Mode: If you have a shotgun, musket or Jack Sparrow's pistol equipped in Fight Mode
+
+This also enables these "Story Helpers" that allow you to skip to various parts of the storylines:
+- Woodes Rogers: Blackbeard's Head in the opening cabin scene
+- Assassin: Sailor that approaches you on the dock
+- Bartolomeu: Pierre Delacroix that approaches when you enter town
+- Jack Sparrow: Random Drunk sitting in the tavern in Tortuga
+- Hornblower: C.S. Forester who stands near a house at the beginning of the story
+}
+
+B_9{Support}
+About_Build_9_d{SUPPORT AND TROUBLESHOOTING}
+About_Build_9
+{
+
+Use the compile.log, system.log and possible error.log from your main game folder to provide more details when asking for help. Also mention your graphics (GFX) card, installation folder and modpack version.
+
+To find out your GFX card, press Windows Button+R, then type "dxdiag" followed by "OK". This will run the DirectX diagnostic tool that provides a lot of relevant details.
+
+}
+
+B_10{Additional Info}
+About_Build_10_1
+{
+PiratesAhoy! Site and Forum:
+}
+
+About_Build_10_2
+{
+Mod DataBase Profile:
+}
+
+About_Build_10_3
+{
+Walkthroughs:
+}

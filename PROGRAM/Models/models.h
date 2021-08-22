@@ -1,4 +1,4 @@
-#define MAX_MODELS			1200 // Talisman was 600
+#define MAX_MODELS			1500 // Talisman was 600
 #define MAX_MODELSLOTS		5
 #define DEFAULT_ANI			"man"
 #define DEFAULT_HEIGHT		1.8

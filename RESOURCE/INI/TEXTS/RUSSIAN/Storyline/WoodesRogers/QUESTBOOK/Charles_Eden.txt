@@ -1,0 +1,11 @@
+title=Charles Eden
+text.t1=Governor, his administration was marked by the arrest of the pirate Edward Teach. Eden had offered Teach the royal pardon.
+text.t2=Charles Eden was Governor in Grand Cayman. He also was the owner of an Estate, but exactly where on that island? 
+text.t3=
+text.t4=
+text.t5=
+text.t6=
+text.t7=
+text.t8=
+text.t9=
+text.t10=

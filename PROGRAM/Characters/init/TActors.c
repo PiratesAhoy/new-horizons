@@ -2,14 +2,13 @@ void CreateTActorsCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_1";
 	ch.model	= "pirat1";
 	ch.sex = "man";
@@ -50,8 +49,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_2";
 	ch.model	= "pirat2";
 	ch.sex = "man";
@@ -92,8 +91,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_3";
 	ch.model	= "pirat3";
 	ch.sex = "man";
@@ -134,8 +133,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_4";
 	ch.model	= "pirat4";
 	ch.sex = "man";
@@ -176,8 +175,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_5";
 	ch.model	= "pirat5";
 	ch.sex = "man";
@@ -218,8 +217,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_6";
 	ch.model	= "pirat6";
 	ch.sex = "man";
@@ -260,8 +259,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_7";
 	ch.model	= "pirat7";
 	ch.sex = "man";
@@ -302,8 +301,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_8";
 	ch.model	= "pirat8";
 	ch.sex = "man";
@@ -344,8 +343,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_9";
 	ch.model	= "pirat9";
 	ch.sex = "man";
@@ -386,8 +385,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
 	ch.id		= "Treas_Pirate_10";
 	ch.model	= "pirat10";
 	ch.sex = "man";
@@ -428,8 +427,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_1";
 	ch.model	= "Bocman";
 	ch.sex = "man";
@@ -464,8 +463,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_2";
 	ch.model	= "Sailor4";
 	ch.sex = "man";
@@ -501,8 +500,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_3";
 	ch.model	= "Sailor5";
 	ch.sex = "man";
@@ -538,8 +537,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_4";
 	ch.model	= "Sailor6";
 	ch.sex = "man";
@@ -575,8 +574,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_5";
 	ch.model	= "Sailor7";
 	ch.sex = "man";
@@ -612,8 +611,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_6";
 	ch.model	= "Pirtt7";
 	ch.sex = "man";
@@ -649,8 +648,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_7";
 	ch.model	= "Sailor1";
 	ch.sex = "man";
@@ -686,8 +685,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_8";
 	ch.model	= "Bocman3";
 	ch.sex = "man";
@@ -723,8 +722,8 @@ void CreateTActorsCharacters(ref n)
 			//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_9";
 	ch.model	= "Black_corsair";
 	ch.sex = "man";
@@ -760,8 +759,8 @@ void CreateTActorsCharacters(ref n)
 		//
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Treas_Crewmember_10";
 	ch.model	= "50evl2in";
 	ch.sex = "man";

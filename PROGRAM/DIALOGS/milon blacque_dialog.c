@@ -50,8 +50,12 @@ void ProcessDialogEvent()
 			Dialog.snd = "voice\MIBL\MIBL003";
 			Dialog.Text = DLG_TEXT[6];
 			// NK -->
+			Preprocessor_AddQuestData("Blacque", GetMyLastName(CharacterFromID("Marc Blacque")));
+			Preprocessor_AddQuestData("Milon Blacque", GetMyFullName(NPChar));
 			SetQuestHeader("Blacques");
 			AddQuestRecord("Blacques", 2);
+			Preprocessor_Remove("Milon Blacque");
+			Preprocessor_Remove("Blacque");
 			// NK <--
 			Link.l1 = DLG_TEXT[7];
 			Link.l1.go = "Exit";
@@ -84,6 +88,10 @@ void ProcessDialogEvent()
 
 		case "letter":
 			Dialog.snd = "voice\MIBL\MIBL005";
+			Preprocessor_AddQuestData("Marc", GetMyName(CharacterFromID("Marc Blacque")));
+			AddQuestRecord("Blacques", 16);
+			Preprocessor_Remove("Marc");
+			Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			Dialog.text = DLG_TEXT[15];
 			link.l1 = DLG_TEXT[16];
 			link.l1.go = "exit";
@@ -94,20 +102,24 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 1);
 			}
 			else { AddPartyExp(pchar, 100); }
-			AddQuestRecord("Blacques", 16);
 			// NK <--
 			npchar.quest.son = "letter_return";
 		break;
 
 		case "rescue":
 			Dialog.snd = "voice\MIBL\MIBL006";
+			Preprocessor_AddQuestData("Marc", GetMyName(CharacterFromID("Marc Blacque")));
+			Preprocessor_AddQuestData("Milon", GetMyName(NPChar));
+			AddQuestRecord("Blacques", 12); // NK
+			Preprocessor_Remove("Milon");
+			Preprocessor_Remove("Marc");
+			Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			Dialog.text = DLG_TEXT[17];
 			link.l1 = DLG_TEXT[18];
 			link.l1.go = "exit";
 			ChangeCharacterAddress(characterFromID("Marc Blacque"), "Falaise_de_fleur_port_01", "carpenter2");
 			RemovePassenger(pchar, characterFromID("Marc Blacque"));
 			ChangeCharacterReputation(pchar, 1);
-			AddQuestRecord("Blacques", 12); // NK
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 1000);
@@ -130,7 +142,9 @@ void ProcessDialogEvent()
 			if(!CheckAttribute(NPChar,"donetemp"))
 			{
 				NPChar.donetemp = 1;
+				Preprocessor_AddQuestData("Milon", GetMyName(NPChar));
 				AddQuestRecord("Blacques", 14);
+				Preprocessor_Remove("Milon");
 				CloseQuestHeader("Blacques");
 			}
 			link.l1.go = "exit";
@@ -139,6 +153,7 @@ void ProcessDialogEvent()
 		
 		case "Fourth time":
 			Dialog.snd = "voice\MIBL\MIBL006";
+			Preprocessor_Add("Milon", GetMyName(NPChar));
 			Dialog.text = DLG_TEXT[22];
 			link.l1 = DLG_TEXT[23];
 			ChangeCharacterAddress(characterFromID("Marc Blacque"), "Falaise_De_Fleur_Store", "goto5");	
@@ -147,6 +162,8 @@ void ProcessDialogEvent()
 
 		case "Marc1":
 			Dialog.snd = "voice\MIBL\MIBL006";
+			Preprocessor_Add("Rachel", GetMyName(CharacterFromID("Rachel Blacque")));
+			Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			Dialog.text = DLG_TEXT[24];
 			link.l1 = DLG_TEXT[25];
 			link.l1.go = "Marc2";
@@ -154,6 +171,7 @@ void ProcessDialogEvent()
 		
 		case "Marc2":
 			Dialog.snd = "voice\MIBL\MIBL006";
+			Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			Dialog.text = DLG_TEXT[26];
 			link.l1 = DLG_TEXT[27];
 			link.l1.go = "Third time";

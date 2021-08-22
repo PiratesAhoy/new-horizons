@@ -20,7 +20,7 @@ string DLG_TEXT[41] = {
 "I'd like to think so, although at times I wonder...",
 "...or the sea devil! I've heard he looks favorably on bold sailors and he keeps them safe from harm!",
 "I don't believe I've heard that tale before.",
-"What tale? Jovannie Speckled from the brig 'Ardent' told me saw the sea devil himself!",
+"What tale? Jovannie Speckled from the brig 'Ardent' told me he saw the sea devil himself!",
 "Saw the devil? Through the bottom of a bottle of rum, I'll wager.",
 "No, captain. He swore he hadn't touched a drop.",
 "Wait for me here, men!",

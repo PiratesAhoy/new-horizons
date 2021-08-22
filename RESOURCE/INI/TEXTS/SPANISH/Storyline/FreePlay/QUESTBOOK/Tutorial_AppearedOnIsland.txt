@@ -1,0 +1,4 @@
+title=Arribada a #sisland#
+text.t1=Tras sobrevivir un ataque pirata, por fin he arribado a #sisland#. Gracias a Dios, la carga del barco está intacta.
+text.t2=Tras sobrevivir un ataque pirata, por fin he arribado a #sisland#.
+text.t3=Tras arrebatarle el control del barco al capitán, así se pudra, hemos arribado a #sisland# en Nevis, en el lado opuesto de la isla de donde está Charlestown. Voy a dejar que desembarque todo aquel que no quiera navegar conmigo. Yo he elegido este camino, ellos no. La mayoría tiene familias en casa a las que quieren volver a ver, y muchos siguen siendo leales a la Corona, por mal que los hayan tratado. Cada uno tiene sus gustos, supongo...

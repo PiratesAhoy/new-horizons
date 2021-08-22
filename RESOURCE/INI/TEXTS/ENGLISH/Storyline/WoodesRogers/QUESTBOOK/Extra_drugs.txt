@@ -10,3 +10,4 @@ text.t8=Any other drugs or medical items are of interest! Charles Vane.
 text.t9=I have to search grandma Rogers' bedroom later.
 text.t10=Fried-Egg may have some medicine, but where is he?
 text.t11=Maybe I should take a look around the shipyard while waiting.
+text.t12=I have to talk to all Rogers' family, friends and officers. They may have something useful for the medicine chest!

@@ -727,7 +727,7 @@ void CreateStoreOwnersCharacters(ref n)
 	ch.name = TranslateString("","Thomas");
 	ch.lastname = TranslateString("","O'Reily");
 	ch.id		= "Thomas O'Reily";
-	ch.model	= "9R_Purs"; // Estharos Change from man2 to this model
+	ch.model	= "9S_Nav"; // Grey Roger / Bathtub Pirate, change from "9R_Purs"; // Estharos Change from man2 to this model
 	ch.sex = "man";
 	ch.location	= "Redmond_Store";
 	ch.location.group = "sit";

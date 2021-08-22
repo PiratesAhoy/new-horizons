@@ -1,0 +1,4 @@
+title=Misión general - Transportar mercancías a #stown#.
+text.t1=Tengo que llevar #dquantity# quintales (qq) de #scargo# a #stown#, en #sisland#, antes del #sdeadline#, para el propietario de la tienda, #sstore_owner#.
+text.t2=El plazo para realizar esta entrega ha expirado. Aun así, será mejor que entregue la mercancía si quiero que me vuelvan a contratar para este tipo de trabajo.
+text.t3=¡Falta parte del cargamento que se suponía que tenía que entregar! Tendré que comprar más para reemplazar lo que falta, y rápìdo, si no quiero pasarme de la fecha límite.

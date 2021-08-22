@@ -193,6 +193,11 @@ int rounddown(float num)
 	else return makeint(num) - 1;*/
 }
 
+float roundto(float num, int decimals)
+{
+	return makefloat(round(num*pow(10,decimals)))/pow(10,decimals);
+}
+
 // new 05-04-05
 int round(float num)
 {
@@ -723,6 +728,9 @@ string toupper(string c)
 		case ILANG_POL:
 			return toupperpol(c);
 		break;
+		case ILANG_SWE:
+			return toupperswe(c);
+		break;
 	}
 	return touppereng(c);
 }
@@ -745,6 +753,9 @@ string tolower(string c)
 		break;
 		case ILANG_POL:
 			return tolowerpol(c);
+		break;
+		case ILANG_SWE:
+			return tolowerswe(c);
 		break;
 	}
 	return tolowereng(c);
@@ -1086,7 +1097,7 @@ string toupperpol(string c)
 	switch(c)
 	{
 		case "¹": return "¥"; break;
-		case "å": return "þ"; break;
+		case "Þ": return "þ"; break;
 		case "×": return "½"; break;
 		case "³": return "£"; break;
 		case "ð": return "ý"; break;
@@ -1103,7 +1114,7 @@ string tolowerpol(string c)
 	switch(c)
 	{
 		case "¥": return "¹"; break;
-		case "þ": return "å"; break;
+		case "þ": return "Þ"; break;
 		case "½": return "×"; break;
 		case "£": return "³"; break;
 		case "ý": return "ð"; break;
@@ -1114,6 +1125,29 @@ string tolowerpol(string c)
 	}
 	return tolowereng(c);
 }
+
+string toupperswe(string c)
+{
+	switch(c)
+	{
+		case "å": return "§"; break;
+		case "ä": return "Ä"; break;
+		case "ö": return "Ö"; break;
+	}
+	return touppereng(c);
+}
+
+string tolowerswe(string c)
+{
+	switch(c)
+	{
+		case "§": return "å"; break;
+		case "Ä": return "ä"; break;
+		case "Ö": return "ö"; break;
+	}
+	return tolowereng(c);
+}
+
 
 // Returns characteristic letter for language when ALT is pressed together with "c"
 string GetDiacriticalChar(string c, string lang)
@@ -1162,7 +1196,7 @@ string GetDiacriticalChar(string c, string lang)
 		case "Polish":
 			switch (c) {
 				case "a": return "¹"; break;
-				case "c": return "å"; break;
+				case "c": return "Þ"; break;
 				case "e": return "×"; break;
 				case "l": return "³"; break;
 				case "n": return "ð"; break;
@@ -1170,6 +1204,13 @@ string GetDiacriticalChar(string c, string lang)
 				case "s": return "›"; break;
 				case "x": return "Ÿ"; break;
 				case "z": return "ž"; break;
+			}
+		break;
+		case "Swedish":
+			switch (c) {
+				case "q": return "å"; break;
+				case "a": return "ä"; break;
+				case "o": return "ö"; break;
 			}
 		break;
 	}
@@ -1402,6 +1443,7 @@ string ChrFromCode(int code)
 		case 252: return "ü"; break;
 		case 253: return "ý"; break;
 		case 254: return "þ"; break;
+		case 255: return "ÿ"; break; // was lost
 	}
 	return "";
 }
@@ -1595,14 +1637,15 @@ int ascii(string chr)
 		case "ü": return 252; break;
 		case "ý": return 253; break;
 		case "þ": return 254; break;
+		case "ÿ": return 255; break; // was lost
 	}
 	return 0;
 }
 
 string GetCursorSymbol()
 {
-	if (bKeyboardOverwriteMode) return "€";
-	return "ÿ";
+	if (bKeyboardOverwriteMode) return "<";
+	return "|";
 }
 // <-- KK
 
@@ -1781,7 +1824,26 @@ string GetHumanDate(int year, int month, int day)
 	if (day == 1 || day == 21 || day == 31) sufix = "st";
 	if (day == 2 || day == 22) sufix = "nd";
 	if (day == 3 || day == 23) sufix = "rd";
-	return XI_ConvertString("g_month_" + month) + " " + day + XI_ConvertString(sufix) + ", " + year; // PB: Formatting changed to appear more historically appropriate
+	string formatted = XI_ConvertString("g_month_" + month) + " " + day + XI_ConvertString(sufix) + ", " + year; // PB: Formatting changed to appear more historically appropriate
+	//MAXIMUS 22.04.2019: different formatting for different languages ==> 
+	int ifcelng = GetInterfaceLanguage();
+	switch (ifcelng) {
+		case ILANG_RUS:
+			formatted =  day + XI_ConvertString(sufix) + " " + XI_ConvertString("g_month_" + month) + " " + year + XI_ConvertString("yr");
+		break;
+		case ILANG_FRA:
+		break;
+		case ILANG_GER:
+		break;
+		case ILANG_SPA:
+		break;
+		case ILANG_POL:
+		break;
+		case ILANG_SWE:
+		break;
+	}
+	return formatted:
+	//MAXIMUS 22.04.2019: different formatting for different languages <==
 }
 // <-- KK
 
@@ -2002,9 +2064,19 @@ void Preprocessor_Init()
 	Preprocessor_Save("uncursed_ship", "Crimson Blood");	// PB: For Jack Sparrow storyline
 	if (GetCharacterIndex("Father Bernard") >= 0) // PB: Not initialized yet the first time this function is called
 	{
-		Preprocessor_Save("FatherBernard",	GetMySimpleName(CharacterFromID("Father Bernard")));  // GR: For "Church Help"
-		Preprocessor_Save("FatherJerald",	GetMySimpleName(CharacterFromID("Father Jerald")));  // and "Animists"
-		Preprocessor_Save("FatherGareth",	GetMySimpleName(CharacterFromID("Father Gareth")));  // side quests.
+		if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)						// GR: moved here from "Periods.c"
+		{
+			Characters[GetCharacterIndex("Father Bernard")].name = TranslateString("","Padre");	// Override random first name
+			Characters[GetCharacterIndex("Father Jerald")].name = TranslateString("","Padre");	// Override random first name
+			Characters[GetCharacterIndex("pater Jourdain")].name = TranslateString("","Padre");	// Override random first name
+			ref ch = CharacterFromID("Father Gareth");
+			ch.nation = GetTownNation("Redmond");
+			SetRandomNameToCharacter(ch);
+			ch.name = "Padre"; // Override random first name
+		}
+		Preprocessor_Save("FatherBernard",	GetMySimpleName(CharacterFromID("Father Bernard")));	// GR: For "Church Help"
+		Preprocessor_Save("FatherJerald",	GetMySimpleName(CharacterFromID("Father Jerald")));	// and "Animists"
+		Preprocessor_Save("FatherGareth",	GetMySimpleName(CharacterFromID("Father Gareth")));	// side quests.
 	}
 }
 
@@ -2036,12 +2108,12 @@ void InitStorylines()
 		// PB: Disable certain storylines -->
 		send  = strcut(sfile, strlen(sfile) - 6, strlen(sfile) - 3);
 		if (send == "_off")		continue;
-		else					n++;
 		// PB: Disable certain storylines <--
 
 		if (LoadSegment("Storyline\" + sfile)) {
 			RegisterStoryline(n); // PB: was i
 			UnloadSegment("Storyline\" + sfile);
+			n++;
 		}
 	}
 }
@@ -2257,12 +2329,14 @@ void RefreshStorylines()
 	CopyAttributes(tsl, sl);
 	DeleteAttribute(sl, "");
 	int num = GetAttributesNum(tsl);
-	for (int i = 0; i < num; i++) {
+	for (int i = 0; i < num; i++)
+	{
 		aref arsl = GetAttributeN(tsl, i);
 		string sfile = "Storyline\" + arsl.dir;
 		sfile = strcut(sfile, 0, strlen(sfile) - 2) + ".c";
 
-		if (LoadSegment(sfile)) {
+		if (LoadSegment(sfile))
+		{
 			RegisterStoryline(i);
 			UnloadSegment(sfile);
 		}
@@ -2314,6 +2388,9 @@ string GetInterfaceLanguageName(int lnginterface)
 		break;
 		case ILANG_POL:
 			slname = "Polish";
+		break;
+		case ILANG_SWE:
+			slname = "Swedish";
 		break;
 	}
 	return slname;

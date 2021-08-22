@@ -32,6 +32,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "voice\MAXW\MAXW001";
 
+			Preprocessor_Add("sir", FirstLetterUp(GetAddressForm(ADDR_POLITE, ENGLAND, chrsex(PChar))));
 			d.Text = DLG_TEXT[0];
 			Link.l1 = DLG_TEXT[1];
 			Link.l1.go = "continue"; 
@@ -58,14 +59,14 @@ void ProcessDialogEvent()
 		break;
 		
 		case "continue3":
+			AddQuestrecord("nigel", 25);
 			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[9];
 			link.l1.go = "exit";
-			characters[GetCharacterIndex("Lambrecht Fobes")].dialog.currentnode = "continue";
+//			characters[GetCharacterIndex("Lambrecht Fobes")].dialog.currentnode = "continue";
 			pchar.quest.nigel_away_for_ship = "talk_with_clauss";
 			npchar.location = "none";
-			AddQuestrecord("nigel", 25);
 		break;
 	}
 }

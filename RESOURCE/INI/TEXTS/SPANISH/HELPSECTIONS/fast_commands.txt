@@ -1,0 +1,27 @@
+fast_commands_title
+{
+Comandos de accion caliente
+}
+
+fast_commands_info
+{
+????Los iconos de comando de accion en caliente aparecen en la esquina superior izquierda de la pantalla. Solo un comando puede ser Caliente a la vez y se mostrara con un icono. Si no hay un icono alli, eso significa que ninguna Accion en caliente podria realizarse en este lugar o en este momento.
+
+????Existen diferentes Comandos de Accion Caliente por mar y por tierra.
+
+????Mientras el jugador esta en el mar, puede usar los siguientes comandos de Accion Caliente (foto 1 de izquierda a derecha):
+??- Amarrar a una orilla o al muelle de la ciudad (disponible si la nave del jugador esta cerca de un lugar de amarre y no hay enemigos alrededor).
+??- Iniciar embarque (disponible cuando la nave enemiga esta muy cerca del jugador). Comienza a abordar con la nave enemiga mas cercana.
+??- Mapa del mundo abierto (disponible cuando no hay naves enemigas alrededor). Abrir la pantalla del mapa mundial.
+??- Intercambio o recarga (disponible cuando el barco de un companero esta cerca del jugador y no hay enemigos alrededor). Abre pantalla de intercambio. El jugador puede intercambiar tripulaciones, aviones, mercancias de un barco a otro. Tambien puede reemplazar al capitan o incluso intercambiar barcos.
+
+Mientras el jugador esta en tierra puede usar los siguientes comandos de Accion Caliente (foto 2 de izquierda a derecha):
+??- Cerradura cerrada. Este icono aparece cuando el jugador esta parado cerca de una puerta o compuerta que esta cerrada. Este icono solo proporciona informacion, y no pasa nada si el jugador presiona la tecla "Accion caliente".
+??- Cerradura abierta. Este icono significa que el jugador esta parado frente a la puerta o compuerta abierta y despues de presionar la tecla "Accion caliente", el jugador ingresara a la siguiente ubicacion.
+??- Usar / Tomar objeto. Este icono muestra que puedes tomar algo o hacer algo en este lugar. Todo se hara automaticamente despues de usar la tecla "Accion caliente". Tambien este comando se usa para colocar objetos en cofres o para sacarlos de cofres.
+??- Mira. El icono muestra que puedes inspeccionar el elemento o personaje que estas cerca.
+??- Hablar. El icono muestra que puedes iniciar una conversacion con un hombre parado frente a ti.
+??- Navegar lejos. El icono muestra que aqui el jugador puede ir a su barco y abandonar esta isla.
+
+????El comando "Accion caliente" se puede realizar con la tecla "Accion caliente".
+}

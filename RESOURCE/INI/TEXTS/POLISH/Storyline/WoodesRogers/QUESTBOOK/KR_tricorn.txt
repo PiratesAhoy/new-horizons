@@ -1,0 +1,11 @@
+title=Tricorn - Tailor
+text.t1=The Tailor's shop is in the Upper Town of Nueva Sucia.
+text.t2=The Tailor's private room is the one with an orial. I have to climb the roofs to get there. But where do you start?
+text.t3=A Tricorn is sold to the Tailor.
+text.t4=I've got the Tricorn.
+text.t5=Yes! There was a Key hidden inside.
+text.t6=
+text.t7=
+text.t8=
+text.t9=
+text.t10=

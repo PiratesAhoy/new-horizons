@@ -1,0 +1,1938 @@
+Delete savefile confirm{Вы действительно хотите удалить эту запись?}
+Overwrite savefile confirm{Вы действительно хотите перезаписать эту запись?}
+Low storage and unable save create{Недостаточно места на диске что бы создать файл в этом слоте.}
+Load game confirm{Вы действительно хотите загрузить эту запись?}
+Unable to Load save game{Невозможно загрузить эту запись.}
+save game limit {Вы превысили количество разрешенных сохраниений. Удалите одну из записей, прежде, чем сохранить новую.}
+You can't save while sailing or boarding!{Вы не можете сохраниться в открытом море или во время абордажа!}
+on ship in{На корабле}
+#sisland_name# Waters{Воды острова #sisland_name#}
+
+Salary info {Ваша команда требует оплаты за месяц. Вы выдадите ее?}
+
+New game confirm{Вы действительно хотите начать новую игру?}
+
+Insert Disk Ok {Пожалуйста, вставьте 1-й диск с игрой "Пираты Карибского Моря" и нажмите <ОК> для запуска игры, или <Выход> для отмены.}
+
+Buy cannons confirm1{Вы действительно хотите совершить покупку -}
+Buy cannons confirm2{Добавляя орудия меньшего калибра Вы уменьшите огневую мощь Вашего корабля до}
+Buy cannons confirm3{-го калибра. Вы согласны?}
+Buy cannons confirm4{обавляя орудия большего калибра Вы не увеличите огневую мощь Вашего корабля до}
+Transfer cannons confirm1{Вы уверены, что хотите перенести орудия -}
+Transfer cannons confirm2{на корабль}
+Transfer cannons confirm3{By transferring cannons equal or less than the maximum caliber you will get cannons of}
+Transfer cannons confirm4{By transferring cannons more than the maximum caliber you will get cannons of}
+Exit from cannons confirm{Покупка не подтверждена. Вы уверены, что хотите прекратить торговлю?}
+Adding{Можно докупить орудия вместо повреждённых.}
+Exit from abordage confirm{Вы действительно хотите покинуть этот корабль?}
+Exit from fortabordage confirm{Вы действительно хотите прекратить грабёж форта?}
+Exit from exchange confirm{Вы действительно хотите закончить обыск?}
+Not enough crew assigned{Оставлен минимальный экипаж!}
+Min crew reached{Свободных матросов не осталось!}
+This officer has too low Leadership and Sailing skills to command this ship. Assign anyway?{Персонаж имеет слишком низкие навыки Лидерство и Навигация. Все равно хотите назначить?}
+You can't command a fleet until reaching level{Вы не можете командовать флотом до достижения уровня}
+Leadership. Assign anyway?{Лидерства. Все равно назначить?}
+'s current colours{сейчас под флагом}
+is known as{известен как}
+Raise{Поднять}
+have been installed{установлены}
+on to the ship{на корабль}
+Notown{Вы не владелец этого корабля!}
+Nomoney{Недостаточно денег!}
+NoCannons{Никаких орудий на корабле не установлено!}
+Installed{Орудия уже установлены!}
+Bigcaliber{Слишком большой калибр!}
+CanBuyMax{Вы можете купить максимум}
+cannons.{орудий.}
+Repairs are completed{Ремонт завершен. Корабль простоял в доках}
+later.{дн.}
+Not enough food! Your purser makes an emergency purchase of{Не хватает провизии! Ваш казначей срочно приобретает}
+days' rations for the crew of the{дн. рацион для команды корабля}
+for a cost of{. Потрачено}
+Too little room! Your purser makes an emergency sale of{Слишком мало рома! Выш казначей срочно продаёт}
+units of{единиц}
+from the{с корабля}
+for a total of{. Выручено}
+You are low on food! Purser could not buy more because you are low on money!{Не хватает провизии! Ваш казначей не может купить больше, поскольку у Вас не хватает денег!}
+
+tax_none{Нет}
+tax_low{Мало}
+tax_normal{Нормально}
+tax_high{Много}
+tax_plunder{Очень много}
+
+This officer can command ships up to tier{Этот офицер может командовать судами до класса}
+
+Broken{В непригодном состоянии -}
+Badly worn{В сильно потасканном состоянии -}
+Worn{В потасканном состоянии -}
+Good{В неплохом состоянии -}
+Fine{В хорошем состоянии -}
+Exellent{В превосходном состоянии -}
+Average{В нормальном состоянии -}
+Broken {В непригодном состоянии -}
+Badly worn {В сильно потасканном состоянии -}
+Worn {В потасканном состоянии -}
+Good {В неплохом состоянии -}
+Fine {В хорошем состоянии -}
+Exellent {В превосходном состоянии -}
+Average {В нормальном состоянии -}
+
+Qual{Квал.}
+a{}
+a broken{поломанное оружие}
+a badly worn{сильно потасканное оружие -}
+a worn{потасканное оружие -}
+an average{среднепотасканное оружие -}
+a good{неплохое оружие -}
+a fine{отличное оружие -}
+an excellent{превосходное оружие -}
+You don't have{Предмет}
+to equip{отсутствует}
+You equipped{Взят на вооружение предмет}
+All hands execute fire drill ! NOW !!{Всем гасить огонь! Немедленно!!!}
+Sails and cartridges jettisoned.{Паруса и кассеты за борт.}
+?? Captain, what's a firedrawl ?{А как это - гасить огонь, капитан?}
+Your crew seems to lack SHIPDEFENCE ability...{Похоже, Вашей команде не хватает умения "Профессионал по защите корабля"...}
+Used potion{Использована микстура}
+You equipped{У Вас в руках}
+You don't have a regular blade to equip.{У Вас нет клинков!}
+You don't have a regular gun to equip.{У Вас нет пистолетов!}
+You equipped a cobblestone.{Вы взяли булыжник!}
+You don't have a cobblestone to equip.{У Вас нет булыжника!}
+You equipped a sandbag.{Вы взяли мешочек с песком!}
+You don't have a sandbag to equip.{У Вас нет мешочка с песком!}
+You equipped an etherbottle.{Вы взяли бутыль с дурманящим газом!}
+You don't have an etherbottle to equip.{У Вас нет бутыли с дурманящим газом!}
+You equipped a thief's knife.{Вы взяли Воровской Нож!}
+You don't have a thief's knife to equip.{У Вас нет Воровского Ножа!}
+You equipped a poisoned throwingknife.{Вы взяли Метательный Нож!}
+You don't have a poisoned throwingknife to equip.{У Вас нет Метательного Ножа!}
+You equipped a stinkpot.{Вы взяли "Гадюку"!}
+You don't have a stinkpot to equip.{У Вас нет "Гадюки"!}
+You equipped a grenade.{Вы взяли гранату!}
+You don't have a grenade to equip.{У Вас нет гранаты!}
+You equipped your trusty fists.{Ну что, поработаем кулаками?!}
+What the heck? You don't have your trusty fists???{Что это за фигня!? У тебя нет кулаков!!!???}
+You manage to launch a boat in the last moment.{В последний момент Вам удалось спустить на воду шлюпку.}
+With a few mates you escape from disaster.{С несколькими помошниками Вы спаслись.}
+'Cap'n, we are giving you and your cronies this boat.{Кэп! Мы дадим тебе и твоим псам эту лодку.}
+If you're careful, you just might make it.{Если повезёт - вы доберётесь до ближайшего острова.}
+But given your past performance you'll all starve'{Но, в память о твоих "заслугах", вы не получите и крошки хлеба.}
+You regain consciousness after a long feverish sleep{Вы приходите в себя после долгого лихорадочного сна...}
+Fire has reached the{На корабле}
+'s powder magazine!{горит пороховой склад!!!}
+One fire doused!{Один пожар потушен!}
+men burnt{человек обгорело...}
+Fire still burning! Execute firedrill procedure immediately!{Пожар продолжается! Нажмите "С" для тушения!}
+Strike all sail!{Убрать все паруса!}
+Battle sails!{Основные паруса!}
+Make all sail!{Поднять все паруса!}
+We're sinking!{Корабль тонет!}
+You need a sheltered anchorage for repairs!{Для ремонта придётся встать на стоянку!}
+Health Up{Поправка здоровья}
+You are cured from poison{Отравление излечено}
+has been sunk by{пущен ко дну! Отличился -}
+has been sunk by the{пущен ко дну! Отличился -}
+God gained{Бог получил}
+Total XP{опыта}
+Hand of God{Господь}
+Victim poisoned !{Жертва отравлена!}
+WHACK! You knocked out your opponent!{СИЛЬНЕЙШИЙ УДАР! Противник в отключке!}
+Opponent disarmed !{Противник обезоружен!}
+One of your officers was disarmed!{Один из Ваших офицеров обезоружен!}
+You were disarmed!{Вы были разоружены!}
+The Merchant Guild's watchmen are very vigilant...{Сторожа Торговой Гидьдии очень бдительны...}
+The Garrison Commander sent immediate reinforcements...{Командующий Гаррисон послал за подкреплением...}
+Weapon misfired & blew up !{Осечка!}
+Robbing helpless citizens isn't good for your reputation !{Грабить честных горожан? Не очень-то это хорошо для Вашей репутации!}
+has gained a new level!{получил новый уровень!}
+(Now level{(Текущий уровень}
+CHANGE REP FOR PLAYER:{ИЗМЕНЕНИЕ РЕПУТАЦИИ:}
+for attacking friends{для атаки союзников}
+has been captured by{был захвачен}
+New captain{Новый капитан}
+Gained{получил}
+You smell some gunpowder about...{Запахло порохом...}
+You catch a glint of cold steel.{Холодно сверкнул клинок...}
+You take item{Вы получили предмет}
+You give item{Вы отдали предмет}
+has been occupied by{захвачен}
+England{Англия}
+Britain{Великобритания}
+France{Франция}
+Spain{Испания}
+Pirate{Пираты}
+Holland{Голландия}
+Portugal{Португалия}
+English{Английскими}
+French{Французскими}
+Spanish{Испанскими}
+Pirates{Пиратскими}
+Dutch{Голландскими}
+Portuguese{Португальскими}
+British{Британскими}
+Neutral{нейтральное отношение}
+Wary{осторожное отношение}
+Hostile{враждебное отношение}
+Letter of Marque{корсарский патент}
+ALARM !  AN AMBUSH !!!!{ТРЕВОГА! ЗАСАДА!!!}
+Gamlet{Разговаривать с трупами своих врагов?! Ваше имя не Гамлет, случайно?}
+NoItems{С этого трупа брать нечего}
+Captain, we have only{Капитан, через}
+days worth of rum left!{дня у нас закончится ром!}
+Captain, we're out of rum!{На корабле закончился ром!}
+days worth of food left!{дня у нас закончится провизия!}
+Captain, we're out of food!{На корабле закончилась провизия!}
+Food Qty{Запасов провизии}
+Rum Qty{Запасов рома}
+good for{количество дней до окончания запасов -}
+Drunken brawl breaks out, morale plummets!{Ваши пьяные головорезы устроили побоище, мораль команды падает!}
+Each crewman's share is now{Доля каждого члена команды составляет в среднем}
+x average for this time.{ на текущий момент.}
+crew have died from starvation.{чл. экипажа Вы потеряли по причине голода.}
+We've been out{Количество дней проведённых в экспедиции -}
+The crew now has{Мораль команды}
+days out.{прошло дней -}
+You made{Доход от Ваших плантаций}
+gold from your estates.{золота.}
+gold as taxes from controlled towns.{золота в виде налогов с захваченных городов.}
+Colony of{Колония}
+captured by{захвачена}
+Your prisoner{Ваш пленник}
+jumped overboard and escaped!{сбежал! Прыгнул за борт и скрылся!}
+Sir, the{Кэп! На корабле}
+Ma'am, the{Мэм! На корабле}
+has struck her colors!{подняли белый флаг!}
+has struck her colors to the enemy!{решили атаковать нас!}
+Fire! Execute firedrill procedure!{Корабль горит! Нажмите "С", чтобы отправить всех на его тушение!}
+We lost a cannon! From the{Мы потеряли орудие!}
+We think we can fix it, captain.{Думаю, мы сможем всё починить, кэп.}
+We knocked out one of{Мы вышибли одну из пушек на корабле}
+'s{!}
+guns!{капитан!}
+port{По левому борту}
+starboard{По правому борту}
+bow{Носовое}
+stern{Кормовое}
+days.{дней.}
+Reinitializing...{Обновление...}
+LOADED NEW INTERFACE{УСТАНОВЛЕН НОВЫЙ ИНТЕРФЕЙС}
+LOADED OLD INTERFACE{УСТАНОВЛЕН СТАРЫЙ ИНТЕРФЕЙС}
+Character Tables...{Персонажи...}
+Ships...{Корабли...}
+Kell-Mudd Ships Changes...{Изменения кораблей Kell-Mudd...}
+Cannon...{Пушки...}
+Weather...{Погода...}
+Encounters...{События...}
+Land Encounters...{События на суше...}
+Nations...{Нации...}
+Rumors...{Слухи...}
+Fast Travel...{Быстрые переходы...}
+FBQ characters and items already initialised.{Персонажи и предметы FBQ уже установлены}
+Initialising new FBQ characters and items...{Устанавливаются новые персонажи и предметы FBQ...}
+Towns...{Города...}
+Stores...{Магазины...}
+Always run is now on{"Бег всегда" включен}
+Always run is now off{"Бег всегда" выключен}
+Log level is now set to{Уровень журнала установлен в}
+Mantrap set! grp:{Ловушка устанолена! Группа:}
+port authority{администрация порта забрала}
+from your party in berthing duties.{от вашей добычи в качестве портового налога.}
+You pay{Вы выплачиваете сумму в}
+to the crew and officers you have{золотом команде и офицерам,}
+on shore leave at{оставленным в порту}
+FAILED{ПРОВАЛЕНО}
+You haven't the file{Нет файла}
+You can't save while carrying a holy relic! Give it to a monk{Вы не можете сохраняться пока у Вас в руках Священная Реликвия. Сначала доставьте её монаху.}
+You can't save or load until{Вы не можете сохранить игру, пока}
+leaves.{не покинет Вас.}
+NewSave{Новая запись}
+God mode{Режим бога}
+Shotgun mode{Дробовик}
+Worldmap encounters{Показ событий на карте}
+Fake Level Up{Новый уровень (Умения)}
+Error updating passenger, is passenger{Обновление невозможно. Пассажир}
+(no ships berthed at{( порт}
+){)}
+(empty slot){(пустая ячейка)}
+New captain{Новый капитан}
+(CHOOSE A CAPTAIN){(ВЫБРАТЬ КАПИТАНА)}
+(no available captains){(нет доступных капитанов)}
+Currently a passenger{В данный момент пассажир}
+Currently an officer{В данный момент офицер}
+Currently captain of the ship being relaunched{Капитан корабля будет отозван}
+Currently captain of the ship going on shore leave{Капитан корабля будет оставлен на берегу}
+Ship is to be LAID UP at{Корабль будет ЗАКОНСЕРВИРОВАН в порту}
+Ship is to be put on SHORE LEAVE at{Корабль будет ОСТАВЛЕН В ПОРТУ}
+(CLICK TO VIEW){(ЩЁЛКНУТЬ ДЛЯ ПРОСМОТРА)}
+Days in berth{Дней на стоянке}
+Calculated daily (now due{Вычисляется ежедневно (сейчас составляет}
+Crew & officers' pay{Оплата команде и офицерам}
+Calculated monthly (now due{Вычисляется ежемесячно (сейчас составляет}
+Choose a companion slot in which to relaunch this ship:{Выберите компаньонскую ячейку для этого корабля:}
+Swap with the{Обмен с кораблём}
+Relaunch into empty companion slot{В компаньонскую ячейку}
+(flagship slot){(флагманская ячейка)}
+(You may not swap with the{(Нельзя произвести обмен с кораблём}
+Choose a ship to berth at{Выберите корабль, чтобы оставить его в порту}
+(You may not berth the{(Вы не можете поставить на стоянку корабль}
+Currently in companion slot{Находится в компаньонской ячейке}
+Choose a berthing slot at{Выберите стояночную ячейку в порту}
+Swap with{Обмен с кораблём}
+Berth ship in empty slot{Поставить корабль в пустую ячейку}
+Falaise de Fleur{Фале Де Флер}
+Redmond{Рэдмонд}
+Isla Muelle{Исла Муэле}
+Oxbay{Оксбэй}
+Greenford{Гринфорд}
+Conceiзгo{Консейсао}
+Conceicao{Консейсао}
+Douwesen{Дувезен}
+Quebradas Costillas{Кебрадас Костиллас}
+Khael Roa{Каэль Роа}
+Cayman{Кайман}
+Hispaniola{Испаньола}
+Cuba{Куба}
+Guadeloupe{Гваделупа}
+Saint Martin{Сен-Мартен}
+Antigua{Антигуа}
+Turks{Тёркс}
+Grand Cayman{Гранд Кайман}
+Marigot{Мариго}
+Havana{Ла Гавана}
+Santiago{Сантьяго}
+St John's{Сент-Джонс}
+St John's port{порт Сент-Джонс}
+St John's port.{порт Сент-Джонс}
+Pointe a pitre{Пуэнт-а-Питр}
+Port au prince{Порт-о-Пренс}
+Santo Domingo{Санто-Доминго}
+Tortuga{Тортуга}
+Grand Turk{Гранд Тёрк}
+Initial location{Начальное местоположение}
+Laid up{Законсервирован}
+On shore leave{Оставлен на берегу}
+(error){(ошибка)}
+island{на острове}
+island.{на острове}
+Choosing captain for ship being relaunched, the{Выбор капитана для корабля, отзываемого со стоянки -}
+Choosing captain for ship going on shore leave, the{Выбор капитана для корабля, оставляемого на стоянке -}
+at{в порту}
+on{}
+Ship is currently{Корабль находится}
+Ship is to be RELAUNCHED into companion slot{Корабль будет ОТОЗВАН в компаньонскую ячейку}
+Current captain{Капитан}
+Ship is currently in companion slot{Корабль находится в компаньонской ячейке}
+empty companion slot{пустая компаньонская ячейка}
+empty berthing slot{пустая стояночная ячейка}
+You have signed articles with your crew.{Вы подписали договор с командой.}
+This means{Это значит, что команда получает долю добычи после каждой экспедиции. Если Вы устали от каперства, то можете платить команде регулярное жалованье. Мораль команды будет более стабильной, хотя и не будет такой высокой, как при дележе добычи.}
+Note: Before you can do this, you must divide the plunder.{Имейте в виду! Перед тем, как сделать это, Вы должны поделиться добычей.}
+WARNING! A proportion of the crew will desert if you do this.{Имейте в виду! Часть команды покинет корабль, если Вы сделаете это!}
+Your crew is currently paid by regular salary.{Ваша команда получает регулярное жалованье.}
+The alternative{Вы можете подписать договор с командой. Это значит, что Вы должны делиться добычей с командой после каждой экспедиции (у любого ростовщика). После подписания договора, мораль Вашей команды будет намного выше, чем раньше. Правда будет трудновато поддерживать её на таком уровне!}
+FULL{КАК ОБЫЧНО.}
+HALF{В ДВА РАЗА РЕЖЕ.}
+DOUBLE{ВДВОЕ БОЛЬШЕ.}
+NORMAL{КАК ОБЫЧНО.}
+FOOD rations are at{Будем кормить}
+level. On these rations, food in the hold is enough for{С таким рационом, еды нам хватит на}
+RUM rations are at{}
+level. On these rations, rum in the hold is enough for{С таким рационом, рома нам хватит на}
+Emblem{Символ}
+Special Sail{Специальные паруса}
+sails with pirate emblem.{паруса с пиратскими символами.}
+sails with national emblem.{паруса с национальным гербом}
+
+Black tattered sails characteristic to Black Pearl.{Паруса Черной Жемчужины}
+Whole black sails characteristic to Black Pearl.{Целые черные паруса как на Черной жемчужине.}
+Black patched sails used on Black Pearl under Captain Jack Sparrow command.{Черные исправленные паруса, используемые на Черной Жемчужине под командой Капитана Джека Воробья.}
+White sails with blue stripes as used by the notorious pirate Barbarossa.{Белые паруса с синими полосами.}
+Red sails with yellow stripes as used by the notorious Petros the Pirate.{Красные паруса с желтыми полосками, какие использовал пресловутый пират Петрос.}
+Red sails with black stripes as used by the notorious Petros the Pirate.{Красные паруса с черными полосками, какие использовал пресловутый пират Петрос.}
+White sails with blue stripes as used by the notorious Petros the Pirate.{Красные паруса с синими полосками, какие использовал пресловутый пират Петрос.}
+Khaki whole sails as seen on the Flying Dutchman under the command of captain Will Turner.{Паруса как на ЛетучемГолландце под командованием капитана Уилла Тернера.}
+Green torn sails as seen on the Flying Dutchman under the command of captain Davy Jones.{Паруса как на Летучем Голландце под командованием капитана Дэви Джонса.}
+Catholic sails with a picture of the Virgin Mary.{Католические паруса с изображением Девы Марии.}
+Red torn sails with holes characteristic to Queen Anne's Revenge.{Красные порванные паруса, как на корабле Месть королевы Анны.}
+Junk sails for Empress.{Парусиновый хлам.}
+Junk sails for Empress without holes.{Парусиновый хлам без дыр.}
+Sails with the coat of arms of Castile-Leon.{Sails with the coat of arms of Castile-Leon.}
+Sails with the coat of arms of the Holy Roman Empire.{Sails with the coat of arms of the Holy Roman Empire.}
+National Emblem{Герб}
+sails, without emblem.{Паруса, без эмблем.}
+Plain{Чистые}
+black{чёрные}
+crimson{бордовые}
+tan{желто-коричневые}
+white{белые}
+Torn{Рваные}
+Whole{Целые}
+Default Sails{Обычные паруса}
+Standard Sails{Обычные паруса}
+Normal Sails{Обычные паруса}
+Pure White Sails{Белоснежные паруса}
+Weathered Sails{Обветренные паруса}
+Special Sails{Специальные паруса}
+Whole Sails{Целые паруса}
+Torn Sails{Рваные паруса}
+White Sails{Белые паруса}
+Crimson Sails{Темно-красные паруса}
+Tan Sails{Желто-коричневые паруса}
+Black Sails{Черные паруса}
+Pirate Emblem{Пиратская эмблема}
+Pure White{Белоснежный}
+Weathered{Обветренные}
+of{из}
+You have hoisted a Pirate flag! Argh!{Вы подняли пиратский флаг! Аргкх!}
+Plain Sails Selected{Выбраны чистые паруса}
+Sails Selected{паруса}
+Secret Chest{Секретный Сундучок}
+Chest{Сундук}
+You've dropped through a trapdoor into the{Вы упали через люк в}
+Ladder to attic{Лестница на чердак}
+You've found{Вы нашли}
+Gold{золотых монет}
+Do you want to leave this place for good?{Вы хотите покинуть это место навсегда?}
+You could pry this door open, but you never know what's waiting behind!{Из любопытства Вы могли бы открыть эту дверь, но что Вас ожидает за ней?}
+Weaponslocker. Boarders use these arms, so stock it well!{Оружейный шкаф. Оружие необходимо при абордаже, так что храните его получше!}
+Weaponslocker. You can find something interesting here!{Оружейный шкаф. В нём может быть кое-что интересное!}
+Random locs disabled!{Произвольные локации отключены!}
+Your prying knife slips from the lock... into your hand!{Ваш нож соскальзывает с замка... прямо в Вашу руку!}
+You try to pick the lock with your knife... in vain!{Вы пытаетесь открыть замок своим ножом... тщетно!}
+Your lockpick broke and got stuck in the lock!{Ваша отмычка сломалась и застряла в замке!}
+This lock will not open. There seems to be a lockpick stuck in it.{Этот замок не откроется. кажется, там, застряла отмычка.}
+You failed to open the lock with your lockpick. Better try again.{Открыть не удалось. Попробуйте еще раз.}
+Boobytrapped{Ловушка}
+There's an error in the location init code in{Ошибка в коде инициализации локации в}
+Your musket fire kills{Мушкетным залпом убито}
+Enemy crewmen{матросов вражеского корабля}
+Enemy musket fire kills{Мушкетным залпом убито}
+Your crewmen{нашей команды}
+Player Morale{Мораль Игрока}
+Slips by the armor!{Клинок скользнул по кирасе!}
+Stopped by armor!{Кираса сдержала удар!}
+Reduced by armor!{Кираса ослабила удар!}
+an Indian artifact{Индейский артефакт}
+You got{Вы получили}
+You got the beast's hide!{Вы получили шкуру зверя!}
+Visions of kingdom come fill your blood-deprived brain{Видения загробного мира заполняют Ваш обескровленный мозг}
+Will that lovely angel save you ?{Спасёт ли Вас этот милый ангел?}
+Or will you join the demons of the netherworld ?{Или же Вы присоединитесь к демонам преисподней?}
+You rescued Edgar Attwood!{Вы спасли Эдгара Этвуда!}
+Already boarded this ship!{Мы уже берем на абордаж этот корабль!}
+survivors rescued{чел. взято на борт}
+colors sighted at{флагами. Корабль приписан к порту}
+Sail to{Доплыть до}
+Too close! Can't use sail-to. You must sail manually.{Слишком близко! Придётся доплыть обычным способом.}
+Enemy ship will outpace us! Can't use sail-to. You must sail manually.{Вражеский корабль опередит нас! Придётся доплыть обычным способом.}
+Wait a sec while I get out the chart, captain!{Обождите секунду, капитан! Дайте оглядеться.}
+Your crewman{Ваш матрос}
+from the locker{из шкафа}
+skill has improved to{улучшено до}
+Open Sea{Открытое Море}
+merchants{торговцы}
+merchants with a light escort{торговцы с небольшим сопровождением}
+a single merchant with heavy escort{один торговец с серьёзным сопровождением}
+a small patrol{небольшой патруль}
+warships{военные корабли}
+small craft{небольшой корабль}
+a rag-tag bunch{отборные подонки}
+a group of merchants{несколько торговцев}
+an escorted group of merchants{несколько торговцев с сопровождением}
+a convoy{конвой}
+a large patrol{большой патруль}
+a small fleet{небольшая флотилия}
+a battle fleet{военная флотилия}
+a scratch patrol{случайный патруль}
+ship{судно}
+ships{кораблей}
+flying the colors of{под флагами}
+flying the Jolly Roger{с Весёлым Роджером на флагштоке}
+Sail Ho! There's a battle up ahead sir, it looks like{Похоже на сражение, кэп!}
+Sail Ho! There's a battle up ahead ma'am, it looks like{Похоже на сражение мэм!}
+Sail Ho! It looks like{По-моему, это}
+Sail Ho! And gunfire, there's a battle up ahead!{Паруса на горизонте! И пушечная пальба! Дерутся}
+Sail Ho!{Паруса на горизонте!}
+Engage{Будем драться}
+The crew of your{Ваша команда}
+commanded by{которой руководил}
+revolted, but the mutiny was successfully scotched{восстала, но мятеж был успешно подавлен}
+mutinied and turned against you{взбунтовались и выступила против вас}
+Captain{Капитан}
+of the{ }
+does not approve of your actions and turned against you{взбунтовались и выступила против вас}
+Captain, we're out of crew!{Все матросы сдохли от голода!}
+Captain, we're out of food!{На корабле закончилась еда!}
+Captain, we're out of rum!{На корабле закончился ром!}
+Choosing outfit for{Смена внешнего вида -}
+The thief spreads the news{Имейте в виду -}
+that you receive stolen goods.{у Вас краденая вещь.}
+This meeting has really lightened you...{Вы чувствуете облегчение после этой встречи...}
+This meeting has really enlightened you...{Вы чувствуете себя более просвещённым...}
+For five hours are you being lectured on{Пять часов Вы усердно изучали}
+This has improved your{Это улучшило Ваш}
+skill{навык}
+New ship characters...{Новые люди на корабле...}
+
+There are not enough Grapeshots{У Вас недостаточно картечи!}
+There are not enough Pistolbullets{У вас закончились пули!}
+There are no Grapeshots left{У Вас закончилась картечь!}
+There are no Musketbullets left{У Вас закончились мушкетные пули!}
+There is not enough Gunpowder{У Вас недостаточно пороха!}
+There is no Gunpowder left{У Вас закончился порох!}
+There is no Incense left{У Вас не осталось благовоний!}
+There are no Pistolbullets left{У Вас закончились пистолетные пули!}
+There are no Cartridges left{Пыжи закончились!}
+There are no Paper Cartridges left{Бумага для пыжей закончилась}
+There are no Percussion Caps left{У вас закончились пистоны}
+There are no Arrows left{У вас закончились стрелы!}
+There are no{У Вас нет}
+and gunpowder{и пороха}
+left{!}
+You have taken{Вы пополнили запас}
+Equip the Ammunition Pouch!{Надета патронная сумка!}
+Equip the Gunpowder Flask!{Надета фляжка с порохом!}
+Mustering those drunken tars takes till nightfall...{Вы до ночи будете собирать этих пьяных головорезов...}
+Donation of personal wealth to crew{Поощрить команду из личного кармана}
+will be notified of all sightings{будет уведомлен обо всех встреченных судах}
+won't be notified of too-powerful sightings{не будет уведомлен о слишком мощных судах}
+Done loading{Загрузка завершена}
+Battle-interface commands on{Морской командный интерфейс на}
+Land-interface commands on{Сухопутный командный интерфейс на}
+Islands and locations names on{Названия островов и локаций на}
+language...{языке...}
+Characters names on{Имена персонажей на}
+You get your blade back one day later.{Вы получите свой клинок через один день.}
+You get your gun back one day later.{Вы получите своё оружие через один день.}
+You wait here{Вам придётся подождать}
+for ship repairs{пока не починят Ваш корабль}
+Contraband transfer was interrupted by Coastal Guards{Сделка прервана появлением Береговой Стражи}
+FIRST CONTRABAND GOOD SELECTED TO TRADE IS:{ПЕРВЫЙ КОНТРАБАНДНЫЙ ТОВАР:}
+FIRST CONTRABAND GOOD PRICE IS:{ЦЕНА ПЕРВОГО КОНТРАБАНДНОГО ТОВАРА:}
+CONTRABAND ONBOARD COUNTER HAS VALUE:{ОБЩЕЕ КОЛИЧЕСТВО КОНТРАБАНДЫ НА БОРТУ:}
+QUANTITY OF FIRST CONTRABAND GOOD ONBOARD:{КОЛИЧЕСТВО ПЕРВОГО КОНТРАБАНДНОГО ТОВАРА НА БОРТУ:}
+INDEX OF FIRST CONTRABAND IS:{ИНДЕКС ПЕРВОЙ КОНТРАБАНДЫ:}
+THERE ARE SOME MORE CONTRABAND GOODS{ЕСТЬ ЕЩЁ НЕМНОГО КОНТРАБАНДНОГО ТОВАРА}
+ONLY ONE CONTRABAND GOOD IS AVAILABLE{ДОСТУПЕН ТОЛЬКО ОДИН КОНТРАБАНДНЫЙ ТОВАР}
+Donation of personal wealth to crew{Поощрить команду из собственных средств}
+You have hoisted a Pirate flag! Argh!{Вы подняли пиратский флаг! Аррргх!}
+You've dropped through a trapdoor into a cave...{Через дыру в полу Вы провалились в пещеру...}
+Secret Hide{Секретное Укрытие}
+You've dropped through a trapdoor into the crypt...{Через дыру в полу Вы провалились в склеп...}
+You've dropped through a trapdoor into the undercroft...{Через дыру в полу Вы провалились в подвал со сводами...}
+The vapour makes you stronger but has a side effect...{Пар делает вас, сильнее, но имеет побочный эффект...}
+Among THIS handful of earth you find a piece of mineral{В этой горсти земли Вы находите кусок минерала...}
+What am I going to dig with? My HANDS? I need a spade!{Чем копать? Руками? Мне нужна лопата!}
+How am I going to pry this loose? I think a pickaxe should do the trick!{Мне нужна кирка!}
+You must dig DEEPER !{Вы должны рыть ГЛУБЖЕ!}
+On THIS shovelload blinks a jewel..{В ЭТОЙ кучке земли на лопате сверкнул драгоценный камень...}
+The sword of a buried abbot{Клинок похороненного аббата...}
+An artefact from the temple that once stood here{Артефакт из храма, когда-то стоявшего здесь...}
+You plunge into the remains of a halfdecayed plaguevictim..{Вы наткнулись на полуразложившиеся останки жертвы чумы...}
+Someone's buried here.. but he aint dead!!{Кто-то похоронен тут... Но он не мёртв!!!}
+A file of LIVING Maltese knights comes to exorcise their crypt{Документы ЖИВЫХ Мальтийских рыцарей, прибывших для изгнания нечистой силы из их склепа...}
+You might be exorcised as well..{Возможно, Вы тоже будете изгнаны...}
+The grandmaster himself checks his treasure..{Хозяин сам проверяет своё сокровище...}
+Your spade hits a stone and breaks..{Ваш клинок ударяется о камень и ломается...}
+You dig up a treasurechest{Вы выкопали сундук с сокровищами...}
+An  Akkelani witchdoctor. Mummified.. but spitting VENOM !{Колдун Акеллани. Мумифицирован... но плюётся ЯДОМ!}
+Looks like someone has been digging here..{Похоже, кто-то уже копал здесь...}
+Do you want to dig as well? With your SWORD{Вы тоже хотите рыть? Своим клинком}
+TAVERNBRAWL{КАБАЦКАЯ ЗАВАРУХА}
+AMBUSH{ЗАСАДА}
+MILITARY RAID{ВОЕННЫЙ НАЛЕТ}
+ALERT{ТРЕВОГА}
+PIRATES RAID{ПИРАТСКИЙ НАЛЁТ}
+You are ALONE now. No other LIVING soul dares to enter here..{Вы сейчас ОДИН. Ни одна ЖИВАЯ душа не рискнёт войти сюда...}
+The warriormonk disappears... like the smoke of a long forgotten pyre...{Воинственный монах исчезает... подобно дыму давно забытого погребального огня...}
+The weird monk reveals his true nature..{Ужасный монах показал своё истинное лицо..}
+Old vag gone at the moment, but...burglers!{Старого бродяги сейчас нет, но... взломщики!}
+We are recognized, captain!{Мы разоблачены, капитан!}
+Cabin for captives can be here{Здесь может быть помещение для пленных}
+Prisoners{Все пленные находятся в трюме. С ними можно разговаривать и, при условии, что Ваш Авторитет выше, нанимать в качестве офицеров.}
+You hide the Jolly Roger and hoist your former flag again{Вы спустили Весёлого Роджера и подняли Ваш обычный флаг}
+CaptainMoney1{Вам досталось}
+CaptainMoney2{пиастров из сундука капитана.}
+Carefully! It's a very dangerous barrel!!!{Осторожно! Это очень опасная бочка!!!}
+Captain, we're out of gunpowder!{Кэп! У нас закончился порох!!!}
+GUNPOWDER STORAGE. Be careful with opened fire!{ПОРОХОВОЙ СКЛАД. Будьте осторожны с открытым огнём!}
+save_You can't save{Вы не можете сохнаниться}
+save_now{сейчас}
+save_while sailing{во время плавания}
+save_while boarding{абордажа}
+save_while sailing or boarding{во время плавания или абордажа}
+save_on deck{на палубе}
+Type{Тип}
+Points{Единиц}
+trade_ship{торговля}
+war_ship{война}
+
+Brothel{Бордель}
+Tutorial Deck{Тренировочная Палуба}
+Tutorial_Deck{Тренировочная Палуба}
+Loanshark's Office{Контора ростовщика}
+Loanshark's backdoor{Задняя дверь в конторе ростовщика}
+Room in #stown_name# tavern{#stown_name#. Комната в таверне}
+#stown_name# tavern{#stown_name#. Таверна}
+#stown_name# store{#stown_name#. Магазин}
+#stown_name# shipyard{#stown_name#. Верфь}
+#stown_name# townhall{#stown_name#. Резиденция}
+#stown_name# residence{#stown_name#. Дом}
+#stown_name# prison{#stown_name#. Тюрьма}
+#stown_name# brothel{#stown_name#. Бордель}
+Exit from #stown_name#{#stown_name#. Выход из города}
+#stown_name# Outskirts{#stown_name#. Городские окраины}
+#stown_name# Dungeon{#stown_name#. Подземелье}
+#stown_name#{#stown_name#}
+#stown_name# town{Город #stown_name#}
+#stown_name# Port{#stown_name#. Порт}
+#stown_name#. Center{#stown_name#. Центр города}
+#stown_name#. Trade Square{#stown_name#. Центральная площадь}
+Room in #stown_name# brothel{#stown_name#. Комната в борделе}
+#stown_name# Fort{Форт колонии #stown_name#}
+Underworld{Подземелье}
+Shipyard{Верфь}
+Shipwright's Office{Офис Кораблестроителя}
+Tavern{Таверна}
+Store{Магазин}
+Jungle{Джунгли}
+House{Дом}
+Tailor's Shop{Магазин Портного}
+Mansion{Особняк}
+SeaPort{Порт}
+SeaFort{Форт}
+Cave{Пещера}
+Sea{Море}
+Ship{Корабль}
+Pitfall!!!!{Провал!!!}
+#sisland_name# jungle{#sisland_name#. Джунгли}
+#sisland_name# jungles{#sisland_name#. Джунгли}
+Far Beach{Далекий берег}
+#sisland_name# shore{Берег острова #sisland_name#}
+#sisland_name# cave entrance{#sisland_name#. Вход в пещеру}
+#sisland_name# Plantation Residence{#sisland_name#. Резиденция плантаций}
+Gray Rock Bay{Залив Серой Скалы}
+To #stown_name#{К городу #stown_name#}
+Study{Кабинет}
+Hall{Зал}
+Bedroom{Спальня}
+MILITARY AREA. NO TRESPASSING!{АРМЕЙСКИЙ ОБЪЕКТ! НЕ ПРИБЛИЖАТЬСЯ!}
+Danger! Abbey out of repair!{Осторожно! Аббатство давно не ремонтировалось!}
+Naval officers only!{Только для морских офицеров!}
+Towncenter{Городской центр}
+Warehouse{Склад}
+Abbey of the Maltese order{Аббатство Мальтийского ордена}
+Greenford{Гринфорд}
+Greenford port{Порт Гринфорда}
+Exit from Greenford{Выход из Гринфорда}
+Greenford shipyard{Верфь Гринфорда}
+Greenford store{Магазин Гринфорда}
+Greenford tavern{Таверна Гринфорда}
+Room in Greenford tavern{Комната в таверне Гринфорда}
+#sisland_name# canyon{#sisland_name#. Каньон}
+#sisland_name# lighthouse{#sisland_name#. Маяк}
+#sisland_name# lighthouse Inside{#sisland_name#. Внутри маяка}
+#sisland_name# mine{#sisland_name#. Шахта}
+#sisland_name# cavern{#sisland_name#. Пещера}
+#stown_name# church{#stown_name#. Церковь}
+Sewer{Сточная труба}
+Abandoned mine{Заброшенная шахта}
+Town{Город}
+Dutch West India Company{Голландская Вест-Индская компания}
+
+Brothel.{Бордель}
+Loanshark's Office.{Контора ростовщика}
+Loanshark's backdoor.{Задняя дверь в конторе ростовщика}
+Room in #stown_name# tavern.{#stown_name#. Комната в таверне}
+#stown_name# tavern.{#stown_name#. Таверна}
+#stown_name# store.{#stown_name#. Магазин}
+#stown_name# shipyard.{#stown_name#. Верфь}
+#stown_name# townhall.{#stown_name#. Резиденция}
+#stown_name# residence.{#stown_name#. Резиденция}
+#stown_name# prison.{#stown_name#. Тюрьма}
+#stown_name# brothel. {#stown_name#. Бордель}
+Exit from #stown_name#.{#stown_name#. Выход из города}
+#stown_name# Outskirts.{#stown_name#. Городские окраины}
+#stown_name# Dungeon.{#stown_name#. Подземелье}
+#stown_name#.{#stown_name#}
+#stown_name# town.{Город #stown_name#}
+#stown_name# Port.{#stown_name#. Порт}
+#stown_name#. Center.{#stown_name#. Центр города}
+#stown_name#. Trade Square.{#stown_name#. Торговая Площадь}
+Room in #stown_name# brothel.{#stown_name#. Комната в борделе}
+#stown_name# Fort.{Форт колонии #stown_name#}
+Underworld.{Подземелье}
+Shipyard.{Верфь}
+Tavern.{Таверна}
+Store.{Магазин}
+Jungle.{Джунгли}
+House.{Дом}
+Tailor's Shop.{Магазин портного}
+Mansion.{Особняк}
+SeaPort.{Порт}
+Cave.{Пещера}
+Sea.{Море}
+Ship.{Корабль}
+Pitfall!!!!.{Провал!!!}
+#sisland_name# jungle.{#sisland_name#. Джунгли}
+#sisland_name# jungles.{#sisland_name#. Джунгли}
+Far Beach.{Дальний Берег}
+#sisland_name# shore.{Берег острова #sisland_name#}
+#sisland_name# cave entrance.{#sisland_name#. Вход в пещеру}
+Gray Rock Bay.{Залив Серой Скалы}
+To #stown_name#.{К городу #stown_name#}
+Study.{Кабинет}
+Hall.{Зал}
+Bedroom.{Спальня}
+MILITARY AREA! NO TRESPASSING!.{АРМЕЙСКИЙ ОБЪЕКТ! НЕ ПРИБЛИЖАТЬСЯ!}
+Towncenter.{Центр города}
+Warehouse.{Склад}
+Abbey of the Maltese order.{Аббатство Мальтийского Ордена}
+#sisland_name# canyon.{#sisland_name#. Каньон}
+#sisland_name# lighthouse.{#sisland_name#. Внутри маяка}
+#sisland_name# lighthouse Inside.{#sisland_name#. Внутри маяка}
+#sisland_name# mine.{#sisland_name#. Шахта}
+#sisland_name# cavern.{#sisland_name#. Пещера}
+#stown_name# church.{#stown_name#. Церковь}
+Sewer.{Коллектор}
+Abandoned mine.{Заброшенная шахта}
+Town.{Город}
+
+Khael Roa Shore{Берег Каэль Роа}
+Incas Temple{Храм инков}
+Maze{Лабиринт}
+Alcove{Альков}
+
+Khael Roa Shore.{Берег Khael Roa}
+Incas Temple.{Храм инков}
+Maze.{Лабиринт}
+Alcove.{Альков}
+
+Pirate Chief's House{Дом главаря пиратов}
+House of leader #stown_name# pirates{#stown_name#. Дом главаря пиратов}
+Room{Комната}
+Entrance to strange house{Вход в странный дом}
+Enter{Войти}
+Inside strange house{Внутри странного дома}
+Exit{Выход}
+
+Pirate Chief's House.{Дом главаря пиратов}
+House of leader #stown_name# pirates.{#stown_name#. Дом главаря пиратов}
+Room.{Комната}
+Entrance to strange house.{Вход в странный дом}
+Enter.{Войти}
+Inside strange house.{Внутри странного дома}
+Exit.{Выход}
+Loanshark{Ростовщик}
+Loanshark.{Ростовщик}
+Residence{Резиденция}
+Residence.{Резиденция}
+
+Boarding deck{Схватка на палубе}
+Fort inside{Внутри форта}
+Boarding town{Захват колонии}
+
+Boarding deck.{Схватка на палубе}
+Fort inside.{Внутри форта}
+Boarding town.{Захват колонии}
+
+House of Am?rigo Vieira{Дом Америго Виера}
+Smithy{Кузница}
+Sunny Haven{Солнечная Гавань}
+Hidden Cave{Скрытая пещера}
+Exit from Smugglers Lair{Выход из убежища контрабандистов}
+Leviathan Rock{Скала Левиафана}
+Chief's House{Дом главаря}
+Rheims' House{Дом Реймса}
+Rheims' House Window{Окно в доме Реймса}
+Smugglers Tavern{Таверна контрабандистов}
+House of Leader of smugglers{Дом главаря контрабандистов}
+Rheims house in #stown_name#{#stown_name#. Дом Реймса}
+
+House of Am?rigo Vieira.{Дом Америго Виера}
+Smithy.{Кузница}
+Sunny Haven.{Солнечная Гавань}
+Hidden Cave.{Скрытая пещера}
+Exit from Smugglers Lair.{Выход из убежища контрабандистов}
+Leviathan Rock.{Скала Левиафана}
+Smugglers Lair.{Убежище контрабандистов}
+Chief's House.{Дом главаря}
+Rheims' House.{Дом Реймса}
+Rheims' House Window.{Окно в доме Реймса}
+Smugglers Tavern.{Таверна контрабандистов}
+House of Leader of smugglers.{Дом главаря контрабандистов}
+Rheims house in #stown_name#.{#stown_name#. Дом Реймса}
+
+#stown_name#. Slums{#stown_name#. Трущобы}
+Beach{Пляж}
+#sisland_name# beach{#sisland_name#. Пляж}
+Head port house{Дом начальника порта}
+Center{Городской Центр}
+Octopus Bay{Бухта Осьминога}
+House in #stown_name#{#stown_name#. Дом}
+Old Bridge{Старый мост}
+
+#stown_name#. Slums.{#stown_name#. Трущобы}
+Beach.{Пляж}
+#sisland_name# beach.{#sisland_name#. Пляж}
+Head port house.{Дом начальника порта}
+Center.{Городской Центр}
+Octopus Bay.{Бухта Осьминога}
+House in #stown_name#.{#stown_name#. Дом}
+
+Trade Square{Торговая площадь}
+House of Mateus Santos{Дом Матеуса Сантоса}
+Damski's House{Дом Damski}
+House of Sidonio Ogarrio{Дом Сидонио Огаррио}
+Sea Passage{Проход к морю}
+#sisland_name# passage{#sisland_name#. Проход}
+Oyster Beach{Устричный Пляж}
+Entrace to #sisland_name# cave{#sisland_name#. Вход в пещеру}
+Shore{Берег}
+ANIMISTS Lair{Убежище АНИМИСТОВ}
+
+Trade Square.{Торговая площадь}
+House of Mateus Santos.{Дом Матеуса Сантоса}
+House of Sidonio Ogarrio.{Дом Сидонио Огаррио}
+Sea Passage.{Проход к морю}
+#sisland_name# passage.{#sisland_name#. Проход}
+Oyster Beach.{Устричный Пляж}
+Entrace to #sisland_name# cave.{#sisland_name#. Вход в пещеру}
+Shore.{Берег}
+ANIMISTS Lair.{Убежище АНИМИСТОВ}
+
+Prison{Тюрьма}
+Devil's Throat{Глотка Дьявола}
+Rocky Shore{Скалистый Берег}
+Dungeon{Подземелье}
+
+Prison.{Тюрьма}
+Devil's Throat.{Глотка Дьявола}
+Rocky Shore.{Скалистый Берег}
+Dungeon.{Подземелье}
+
+Ship deck{Палуба}
+Cannons deck{Орудийная палуба}
+Main Cannons Deck{Главная орудийная палуба}
+Upper Cannons Deck{Верхняя орудийная палуба}
+Lower Cannons Deck{Нижняя орудийная палуба}
+Gunpowder Storage{Пороховой погреб}
+Cargo Hold{Трюм}
+1st Cargo Hold{1-й грузовой отсек}
+2nd Cargo Hold{2-й грузовой отсек}
+Captain's Cabin{Каюта капитана}
+Crew's Quarters{Кубрик}
+Quarterdeck{Квартердек}
+
+Cannons deck.{Орудийная палуба}
+Lower cannons deck.{Нижняя орудийная палуба}
+Gunpowder storage.{Пороховой погреб}
+Cargo hold.{Трюм}
+Captain's cabin.{Каюта капитана}
+Crew's quarters.{Кубрик}
+Quarterdeck.{Квартердек}
+
+Passage{Проход}
+Old Fort{Старый форт}
+Turtle Bay{Черепаховая Бухта}
+Inside House{Внутри дома}
+Birds Cove{Птичья Бухта}
+Pirate Lair{Пиратская Берлога}
+
+Passage.{Проход}
+Old Fort.{Старый форт}
+Turtle Bay.{Черепаховая Бухта}
+Inside House.{Внутри дома}
+Birds Cove.{Птичья Бухта}
+Pirate Lair.{Пиратская Берлога}
+
+White Bay.{Белый Залив}
+White Bay{Белый Залив}
+
+White Bay.{Белый Залив}
+White Bay{Белый Залив}
+
+Exit from #stown_name#{#stown_name#. Выход из города}
+#sisland_name# Cavern{#sisland_name#. Пещера}
+Pirate Fort{Пиратский форт}
+House of leader of #sisland_name# pirates{#sisland_name#. Дом главаря пиратов}
+Palm Beach{Пальмовый Берег}
+Crab Cliffs{Крабовые Утёсы}
+House in Jungle{Дом в джунглях}
+Rheims house on #sisland_name#{#sisland_name#. Дом Реймса}
+Room in Pirate tavern{Комната в пииратской таверне}
+The cavern{Пещера}
+#sisland_name# shore ship{#sisland_name#. Разбитый корабль}
+
+Exit from #stown_name#.{#stown_name#. Выход из города}
+#stown_name# Cavern.{#stown_name#. Пещера}
+Pirate Fort.{Пиратский форт}
+House of leader of #sisland_name# pirates.{#sisland_name#. Дом главаря пиратов}
+Palm Beach.{Пальмовый Пляж}
+Crab Cliffs.{Крабовые Утёсы}
+House in Jungle.{Дом в джунглях}
+Rheims house on #sisland_name#.{#sisland_name#. Дом Реймса}
+Room in Pirate tavern.{Комната в пииратской таверне}
+The cavern.{Пещера}
+#sisland_name# shore ship.{#sisland_name#. Разбитый корабль}
+
+in the town of #slocname#{в колонии #slocname#}
+at the shore of #slocname#{на побережье #slocname#}
+near the citygates of #slocname#{возле городских ворот #slocname#}
+on the causeway of #slocname#{на улице #slocname#}
+somewhere in #slocname#{где-то в #slocname#}
+on #slocname#{на #slocname#}
+somewhere in the jungles of #slocname#{где-то в джунглях #slocname#}
+
+Douwesen_port{#stown_name#. Порт}
+Douwesen_shore_01{#sisland_name#. Пальмовый Берег}
+Douwesen_shore_02{#sisland_name#. Крабовые Утёсы}
+Muelle_port{#stown_name#. Порт}
+Muelle_shore{#sisland_name#. Устричный Пляж}
+Falaise_de_fleur_port_01{#stown_name#. Порт}
+Falaise_de_fleur_shore{#sisland_name#. Залив Осьминога}
+QC_port{#stown_name#. Порт}
+KhaelRoa_port{#sisland_name#. Берег}
+Conceicao_port{#stown_name#. Порт}
+Conceicao_shore_01{#sisland_name#. Солнечная Гавань}
+Conceicao_shore_02{#sisland_name#. Скала Левиафана}
+REDMOND_PORT{#stown_name#. Порт}
+Redmond_Shore_01{#sisland_name#. Глотка Дьявола}
+Redmond_Shore_02{#sisland_name#. Скалистый Берег}
+Greenford_port{#stown_name#. Порт}
+Oxbay_port{#stown_name#. Порт}
+Oxbay_shore_02{#sisland_name#. Залив Серой Скалы}
+Oxbay_lighthouse{#sisland_name#. Маяк}
+Oxbay_Shore_01{#sisland_name#. Дальний Пляж}
+Oxbay_suburb{#stown_name#. Пригород}
+Greenford_suburb{#stown_name#. Пригород}
+
+Tradepost{Торговый пост}
+Inn{Гостиница}
+Simpson Bay{Бухта Симпсона}
+Baie Orient{Восточная Бухта}
+Cellar{Погреб}
+Muscetto Cove{Мушкетная Бухта}
+Mixteca Bay{Залив Микстека}
+Darien Beach{Пляж Дариен}
+
+Tradepost.{Торговый пост}
+Inn.{Гостиница}
+Simpson Bay.{Бухта Симпсона}
+Baie Orient.{Восточная Бухта}
+Cellar.{Погреб}
+Muscetto Cove.{Мушкетная Бухта}
+
+Cape Francos{Мыс Фрэнкос}
+Cape Francos.{Мыс Фрэнкос}
+Temple{Храм}
+Temple.{Храм}
+Cave entrance{Вход в пещеру}
+Cave entrance.{Вход в пещеру}
+Grot{Грот}
+Grot.{Грот}
+Buccaneers Camp{Лагерь буканьеров}
+Buccaneers Camp.{Лагерь буканьеров}
+Village{Поселение}
+Village.{Поселение}
+
+Barracks{Казармы}
+Church{Церковь}
+Entrance to plantation{Вход на плантацию}
+Anse Casse-Bois{Таинственная Бухта}
+
+Barracks.{Бараки}
+Church.{Церковь}
+Entrance to plantation.{Вход на плантацию}
+Anse Casse-Bois.{Таинственная Бухта}
+
+Storehouse{Склад}
+Storehouse.{Склад}
+Guardhouse{Караульное помещение}
+Guardhouse.{Караульное помещение}
+Naval academy{Морская Академия}
+Naval academy.{Морская Академия}
+For mature men only!{Только для взрослых мужчин!}
+Brothel Bedroom{Спальня Развлечений}
+Brothel Bedroom.{Спальня Развлечений}
+Lighthouse{Маяк}
+Lighthouse.{Маяк}
+Arsenal{Бараки}
+Arsenal.{Бараки}
+
+To Fort{К форту}
+Cayman Kai{Кайман Кай}
+#sisland_name# Grot entrance{#sisland_name#. Вход в грот}
+Entrance to house{Вход в дом}
+Inside house{Внутри дома}
+#sisland_name# underground{#sisland_name#. Подземелье}
+Naval officers only!{Только для морских офицеров!}
+
+To Fort.{К форту}
+Cayman Kai.{Кайман Кай}
+#sisland_name# Grot entrance.{#sisland_name#. Вход в грот}
+Entrance to house.{Вход в дом}
+Inside house.{Внутри дома}
+#sisland_name# underground.{#sisland_name#. Подземелье}
+Naval officers only!{Только для морских офицеров!}
+
+NoCannons{Орудий не осталось!}
+Enough{Вы не можете установить больше орудий!}
+
+There is no building ground left anymore!{Земли под застройку не осталось!}
+Switch to first-person-view if your avatar is inside of the building{Переключитесь на Вид От Первого Лица, если Ваш персонаж внутри здания}
+There is no building ground free at{Нет свободного участка в местности}
+Buildings for Greater Oxbay locs{Здания для новых локаций на Оксбэе.}
+BK Keeper initialised.{Создан хранитель.}
+You chat on for hours and learn a lot{Вы провели много часов за беседой и многое узнали}
+After 24hrs are you fit again, even stronger than before.{Через 24 часа Вы снова на ногах, и даже сильнее, чем прежде.}
++ 1 max HP{+ 1 к максимальному здоровью}
+You have learned a lot about woundtreatment.{Вы многое узнали об исцелении ран.}
+You wake up feeling feverish.{Вы проснулись в лихорадке.}
+Your wounds burn like fire!{Ваши раны горят, как в огне!}
+about the town.{о городе.}
+Your victim produces{Вы получили от Вашей жертвы}
+Your conduct didn't improve your reputation{Ваше поведение не улучшило Вашу репутацию}
+Mustering those drunken tars takes till nightfall...{Вы до ночи будете собирать этих пьяных головорезов...}
+
+For mature men only!{Только для взрослых мужчин!}
+Brothel Bedroom{Спальня Развлечений}
+Naval academy{Морская академия}
+Storehouse{Склад}
+
+You wait here 5 days{Вы остались здесь на 5 дней}
+You spend 1 day in the house{Вы провели 1 день в этом доме}
+You spend 1 day in{Вы проводите 1 день в}
+A few days later{Несколько дней спустя}
+You wait here 1 day for ship repairs{Вы задержались на 1 день для ремонта корабля}
+You wait here 5 days for ship repairs{Вы задержались на 5 дней для ремонта корабля}
+You wait here 10 days for ship repairs{Вы задержались на 10 дней для ремонта корабля}
+You wait here all a month for ship repairs{Вы задержались на месяц для ремонта корабля}
+Captain, we killed and fished for{Капитан! Сегодня мы добыли рыбы и дичи на}
+rations today{рационов}
+but{но}
+men were killed by wild jungle or disappeared..{человек погибли или потерялись...}
+You you stand guard for hours.{На несколько часов Вы становитесь охранником.}
+It may be time to claim your reward.{Пришло время получить вознаграждение.}
+The Keeper disappears without word or sound, as if the ancient walls had swallowed him...{Хранитель исчезает беззвучно, как будто древние стены поглотили его...}
+here{здесь}
+
+low_trade_1{Мне крайним образом нужны Ваши услуги. Я могу продать Вам свой товар ниже Вашей обычной цены. Что скажете?}
+low_trade_2{Вы меня заинтересовали. Только помалкиваёте об этом, договорились?}
+low_trade_3{Я вам не враг. Давайте приступим к делу.}
+low_trade_4{Пожалуй, я повременю с торговлей.}
+low_trade_5{Что ж, тогда покажите Ваш товар.}
+low_trade_6{Смотрите сами, товар первосортный.}
+
+high_trade_1{Мне крайним образом нужны Ваши услуги. Я заплачу Вам вдвое дороже. Что скажете?}
+high_trade_2{Вы меня заинтересовали. Только помалкиваёте об этом, договорились?}
+high_trade_3{Я вам не враг. Давайте приступим к делу.}
+high_trade_4{Пожалуй, я повременю с ремонтом.}
+high_trade_5{Что ж, тогда начнём.}
+high_trade_6{Точно, хватит болтать. Займись-ка ремонтом моего корабля.}
+high_trade_7{Я хочу добавить пушек, а может и поменять их...}
+
+You refilled your{Вы пополнили боекомплект}
+The Gunner has provided you with{Артиллерист обеспечил Вас боекомплектом}
+Ammunition.{Амуниция.}
+Ammunition!{Амуниция!}
+Executed Console{Команда консоли выполнена}
+Your shore party has been resupplied with Ammunition!{Ваша группа снова пополнила Боеприпасами!}
+
+Your new tattoo looks splendid and inspiring!{Ваша новая татуировка выглядит роскошной и вдохновляющей!}
+But it took a bit of life out of you...{Но процедура отняла у Вас немного здоровья...}
+Your new tattoo looks nice, but...{Ваша новая татуировка выглядит чудесно, но...}
+the infected needle made you sick!{Вы заболели из-за грязной иглы!}
+Plus the procedure took some life out of you...{Плюс к этому процедура отняла у Вас немного здоровья...}
+
+Crew begins transfer of{Команда начала погрузку}
+cwt of cargo.{ц. груза.}
+Transfer takes roughly a day{Погрузка займёт приблизительно один день}
+Transfer takes roughly{Погрузка займёт приблизительно}
+Transfer takes roughly an hour{Погрузка займёт приблизительно один час}
+
+You get your blade back three days later.{Вы получите свой клинок через три дня.}
+You get your blade back two days later.{Вы получите свой клинок через два дня.}
+
+You have hoisted a Pirate flag! Argh!{Мы подняли пиратский флаг!}
+No Balls to Load{На корабле нет ядер}
+No Grapes to Load{На корабле нет картечи}
+No Chains to Load{На корабле нет книппелей}
+No Bombs to Load{На корабле нет бомб}
+
+There's a cave entrance in the Cliff!{Под утёсом виднеется вход в пещеру!}
+NoGambleMoney{Эй! У тебя нет денег?! Возвращайся, когда хоть немного разбогатеешь, или сделай правильный выбор.}
+NoGamblerMoney{Похоже, ты не сильно богат. Хорошо, мы уменьшим ставку.}
+GambleBetMin{Хотите играть на минимальной ставке? Как пожелаете...}
+FirstTimePlayingBlackJack{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. Щелкните левой кнопкой мыши на картах - чтобы начать игру. Щелкните левой кнопкой мыши по портретам - чтобы заставить героя двигаться.}
+FirstTimePlayingPoker{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. Щелкните левой кнопкой мыши на картах - чтобы начать игру. Щелкните левой кнопкой мыши по портретам - чтобы заставить героя играть. Щелкните левой кнопкой мыши на любой из ваших карт - чтобы изменить эту карту.}
+FirstTimePlayingDumb{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. Щелкните левой кнопкой мыши на картах - чтобы начать игру. Щелкните левой кнопкой мыши на любой из ваших карт - сделать ход.}
+FirstTimePlayingDice{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. По кружке - чтобы начать игру.}
+Exit from gamble confirm{Вы действительно хотите покинуть эту игру?}
+CrewMutinyLeavesShip{Команда покидает ваш корабль!}
+CrewMutinyArticles1{Вы нарушаете условия нашего соглашения, капитан. Если не заплатите нам}
+CrewMutinyArticles2{золота и не дадите нам небольшую бочку рома, мы прокатим вас на ядре!}
+CrewMutinyArticles3{Хорошо, капитан. Выполняйте условия нашего соглашения в будущем, и вы не будете разочарованы...}
+CrewMutinyArticles4{Нет рома...}
+CrewMutinyArticles5{Ваши карманы пусты...}
+GainedPerk{получена новая способность -}
+PlaguevictimsGrave{Проклятие? Могила жертв чумы? Вдруг, вы внезапно чувствуете себя ужасно больным!}
+Petit Tabac{Петит Табак}
+Battle_Rocks{Петит Табак}
+Isla De Muerte{Исла Де Муерте}
+IslaDeMuerte{Исла Де Муерте}
+Deserted shore{Пустынный берег}
+Dead Man's Bay{Залив Мертвеца}
+Witch's Rock{Скала Ведьмы}
+Strange sail to the{Странный парус}
+Captain, a hint:{Капитан, совет:}
+of_island{}
+lies nothing but open sea!{вранье ничего, кроме открытого моря!}
+North{Север}
+South{Юг}
+West{Запад}
+East{Восток}
+Northeast{Северо-восток}
+Northwest{Северо-запад}
+Southeast{Юго-восток}
+Southwest{Юго-запад}
+No island within reach{Нет острова в пределах видимости}
+Enter the map to sail to some island{Выйдете на Глобальную карту, чтобы быстро передвигаться между островами}
+in sight{в поле зрения}
+to the{}
+Captain, there is something drifting in the water{Капитан, что-то дрейфует в воде}
+Something is drifting there, DEAD AHEAD,{Что-то дрейфует там, прямо по курсу,}
+Captain, a boat{Капитан, лодка}
+Captain, a native raft{Капитан, плот}
+Captain, a dismasted vessel{Капитан, разбитый корабль}
+You don't have enough gunpowder for a mine{Вам не хватает пороха для шахты}
+A mine{Шахта}
+Collision with a drifting trunk !{Столкновение с дрейфующим бревном!}
+You find some votive items on an Indian ceremonial raft{Вы нашли странные рикуальные предметы на индийском церемониальном плоту}
+You find some burial objects on a witch doctor's funeral raft{Вы нашли странные погребальные дары на похоронном плоту знахарки}
+You find some burial objects on a voodoo priest's funeral raft{Вы нашли странные погребальные дары на похоронном плоту жреца вуду}
+This Indian funeral raft has already been plundered...{Этот индийский похоронный плот уже был разграблен...}
+You find some jewels on an abandoned packet boat{Вы находите драгоценности на брошенном пакетботе}
+You find some money on an abandoned packet boat{Вы находите немного денег на оставленном пакетботе}
+You find some ordinance on an abandoned ammo tender{Вы находите неизвестное постановление на брошенном тендере}
+Someone has already emptied this abandoned hulk...{Кто - то уже разграбил эту оставленную громадину...}
+Directsail mod active{Прямой парус мод активирован}
+Directsail mod deactivated{Прямой парус мод деактивирован}
+Directsail toggled, press 0 to enable{Прямой парус мод переключается, нажмите "0", чтобы включить}
+
+Portugese Blacksmith{Португальская Кузница}
+French Blacksmith{Французская Кузница}
+Spanish Blacksmith{Испанская Кузница}
+Redmond Blacksmith{Кузница Рэдмонда}
+Opium Den{Курилка}
+Dutch Blacksmith{Голландская Кузница}
+Pirate Blacksmith{Пиратская Кузница}
+Apothecary{Аптека}
+Eden Rock{Райская Скала}
+Sand Bluff{Песчаный Утес}
+Study{Академия}
+Undercroft{Подвал со сводами}
+Yard{Двор}
+Outskirts{Городские окраины}
+Bahia de Moa{Баия-де-Моа}
+Guadeloupe lighthouse{Маяк Гваделупы}
+Redmond Townhall. Silehards's Bedroom{Резиденция Рэдмонда. Спальня Сайлхарда}
+Pirate bark{Пиратский Барк}
+Gamboa ship{Корабль Гамбоа}
+Kidnappers' Hideout, 2nd floor{Убежище похитителей, 2-й этаж}
+House of Geffrey Bampfylde{Дом Джефри Бампфилда}
+Room in Marigot tavern{Комната в таверне Мэригот}
+Mine{Шахта}
+Sandy Point{Сенди Поинт}
+White Reefs{Белые Рифы}
+Wreckage shore{Берег Крушений}
+
+Portugese Blacksmith.{Португальская Кузница}
+French Blacksmith.{Французская Кузница}
+Spanish Blacksmith.{Испанская Кузница}
+Redmond Blacksmith.{Кузница Рэдмонда}
+Opium Den.{Курилка}
+Dutch Blacksmith.{Голландская Кузница}
+Pirate Blacksmith.{Пиратская Кузница}
+Apothecary.{Аптека}
+Eden Rock.{Райская Скала}
+Sand Bluff.{Песчаный Утес}
+Study.{Академия}
+Undercroft.{Подвал со сводами}
+Yard.{Двор}
+Outskirts.{Городские окраины}
+Bahia de Moa.{Баия-де-Моа}
+Guadeloupe lighthouse.{Маяк Гваделупы}
+Redmond Townhall. Silehards's Bedroom.{Резиденция Рэдмонда. Спальня Сайлхарда}
+Pirate bark.{Пиратский Барк}
+Gamboa ship.{Корабль Гамбоа}
+Kidnappers' Hideout, 2nd floor.{Убежище похитителей, 2-й этаж}
+House of Geffrey Bampfylde.{Дом Джефри Бампфилда}
+Room in Marigot tavern.{Комната в таверне Мэригот}
+Mine.{Шахта}
+Sandy Point.{Сенди Поинт}
+White Reefs.{Белые Рифы}
+Wreckage shore.{Берег Крушений}
+Boca de Yuman{Бока Де Юман}
+Boca de Hubon{Бока Де Хубон}
+Bahia de San Antonio{Баия-де-Сан-Антонио}
+Playa de Sabana{Плайя-де-Сабана}
+Punta de Maisi{Пюнта де Мези}
+Playa de Sierra Maestra{Плайя де Сьерра-Маэстра}
+Peninsula de Zapata{Полуостров де Сапата}
+Fort St Louis{Форт Сан-Луис}
+Fort James{Форт Джеймс}
+Fort{Форт}
+Terks{Теркс}
+Hidden Coast{Скрытое Побережье}
+Pirate Port{Порт пиратов}
+Fort Amsterdam{Форт Амстердам}
+Sent{Сен-Мартен}
+Navy Office{Управление флота}
+Tortuga prison{Тюрьма Тортуги}
+Tortuga Townhall{Резиденция Тортуги}
+House of Pablo Escriva.{Дом Пабло Эскрива.}
+
+have declared a ceasefire!{объявили о перемирие!}
+have formed an alliance!{заключили союз!}
+have declared war on each other!{объявили войну!}
+have broken their alliance but are currently peaceful!{разорвали союз, но сохраняют перемирие!}
+have broken their alliance and are now at war!{разорвали союз, и теперь в состоянии войны!}
+
+My dear, I'm totally enchanted!  May I spend a few moments of your precious time?{Мои дорогие, я совершенно очарован!  Могу ли я потратить несколько минут вашего драгоценного времени?}
+You take the wind right out of my sails!  Would you do me the pleasure of some conversation?{Вы забираете ветер прямо из моего паруса! Не могли бы вы уделить время на разговор?}
+I am delighted to have the opportunity to be here with you.  Might you indulge a lonely sailor?{Я очень рад иметь возможность быть здесь с вами. Может вы присоединитесь к одинокому морякум?}
+You are as radiant as a summer's sunset out at sea!  May I become better acquainted with you?{Вы так же, как сияющий летний закат в море!  Могу ли я поближе познакомиться с вами?}
+This lowly seaman is at a loss for words.  Speak, I pray, that I might know you better!{Этот скромный моряк, просто нет слов.  Говорите, я молюсь, чтобы смог узнать тебя получше!}
+I would be honored and delighted to share a few moments of time with you, dear lady!{Я удостоился бы чести и восхищался проведявременя с вами, дорогая леди!}
+I must leave with the tide, dear one...  But until then, might we share some companionable moments?{Я должен уйти с приливом, дорогая...  Но до тех пор, могли бы мы насладиться моментом?}
+The sea calls, and I must build a future.  Until the next tide, would you indulge a weary sailor?{Море зовет, и я должен построить свое будущее. До следующего прилива, займетесь ли вы  усталым моряком?}
+My dear, I'm just a master and commander.  Tell me about yourself, everything, I'd love to know!{Моя дорогая, я - только владелец и командующий.  Расскажите мне о себе, все, что я хотел бы знать!}
+There are any wondrous things at sea, from mighty ships to flying fish. But none so lovely as your smile!{Есть много чудес на море, от могучего судна до летучей рыбы. Но ничто так не прекрастно, как твоя улыбка!}
+I hesitate to be so bold, but I am lost without you.  Would you complete me by consenting to be my bride?{Я смущаюсь быть настолько смелым, но я потерян без вас. Вы согласны стать моей невестой?}
+I used to think that I was happy at sea, but I would be much happier knowing that you waited at my home port.  Would you be my wife?{Раньше я думал, что был счастлив на море, но я был бы гораздо счастливее, зная, что вы ждете, меня дома в порту. Хотите быть моей женой?}
+I...  I'm at a loss for words... Ha'hmmm...  I have this ring here, you see, and I...  Would you marry me?{Я...  Я не нахожу слов... Ха... Хм...  У меня есть это кольцо, видите, и я...  Пожалуйста, женитесь на мне?}
+Dear lady, I have trod decks riddled with shot without the depth of fear I feel now.  Please ease my soul and tell me that you'll marry me!{Дорогая леди, я прошел через многое... Пожалуйста освободите мою душу и скажите, что вы женитесь на мне!}
+
+cplates_desc{Медные пластины снижают скорость обрастания днища водорослями и повышает прочность корпуса}
+bcannons_desc{Для тех, кто мог их себе позволить, бронзовые пушки более точные, по сравнению с железными.}
+gchasers_desc{Бронзовые орудия имеют лучшую точность, а это важный параметр при преследовании.}
+nsails_desc{Традиционно, паруса делали из полотна. Эти легкие паруса из американского хлопока будут способствовать увеличению скорости.}
+ltopmasts_desc{Увеличение высоты мачты принесет плюсы в виде парусов и, следовательно, скорости.}
+stays_desc{Дополнительные паруса, в пролетах между мачтами или от мачт до палубы, помогут плаванию против ветра.}
+rhull_desc{Сооруженное на скорую руку структурное подкрепление, делает ваше судно чуть более стойким  против шторма и попадания ядер.}
+flushed_desc{'Облегчение' включает в себя удаление надстройки судна, делая более "похожим на фрегат". Это позволяет уменьшить вес корабля,что влияет на мореходность.}
+
+Swamp Island{Подтопленный остров}
+Swamp Wreck{Обломки}
+Store upstairs{Складская лестница}
+Woodes Rogers' bedroom{Спальня Вудса Роджерса}
+Caroline K's bedroom{Спальня Каролины}
+Woodes Rogers' kitchen{Кухня Вудса Роджерса}
+Woodes Rogers' food cellar{Продуктовый склад}
+Tavern storeroom{Склад таверны}
+Charles Windem's room{Комната Чарльза Виндема}
+Woodes Rogers' library{Библиотека Вудса Роджера}
+Caroline K's drawing room{Гостиная Каролины К}
+Woodes Rogers' study{Секретная комната Роджерса}
+Woodes Rogers' secret room{Резиденция Роджерса}
+Woodes Rogers' residence{Подвал ростовщика}
+Loanshark cellar{Подвал ростовщика}
+Woodes Rogers' booty room{Комната добычи Роджерса}
+Fried Egg's Room{Комната Яичницы}
+Shipyard stairs{Лестница верфи}
+Shipyard shore{Береговая верфь}
+Redmond shore{Берег Рэдмонда}
+Woodes Rogers' port{Порт Роджерса}
+Woodes Rogers' armory{Оружейный склад Роджерса}
+Gunpowder storage{Пороховой погреб}
+Crew's quarter{Кают-кампания}
+Gunroom{Оружейная}
+Storeroom attic{Чердак магазина}
+Rogers' Paintings Furniture & Weapons{Мебель, картины и оружие Роджерса}
+Shop office{Офис магазина}
+Dave Edna's Room{Комната Дэйва Эдны}
+Grandmother Rogers' room{Комната бабушки Роджерса}
+Guard room{Караулка}
+Woodes Rogers' prison{Тюрьма Роджерса}
+Port Royal old mine{Старая шахта Порт Рояла}
+Cannon tower{Пушечная башня}
+Cave shore{Пещера на берегу}
+Blue cavern{Голубая пещера}
+Outside pirate church{Выход из пиратской церкви}
+Entrance to church attic{Вход на церковный чердак}
+Outside pirate church{Выход из пиратской церкви}
+Church attic{Церковный чердак}
+Sacristy{Ризница}
+Pirate church{Церковь пиратов}
+Chapel stairs{Лестница часовни}
+Chapel{Часовня}
+Temple stairs{Лестница храма}
+Temple{Храм}
+Port Royal catacombs{Катакомбы Порт Рояла}
+Prison ships{Тюремный корабль}
+Boat shore{Лодка у берега}
+Small fort{Небольшой форт}
+Shipyard shore{Верфь на берегу}
+Docks{Доки}
+De Foe's home{Дом Де Фо}
+Roger's wine cellar{Винный погреб Роджерса}
+Church wine cellar{Церковный винный погреб}
+Port Royal Church Choir{Церковный Хор Порт Рояла}
+Port Royal Military Head Quarter{Военная база Порт Рояла}
+Grandma's stairs{Лестница бабушки}
+
+Rogers' kitchen{Кухня Роджерса}
+Rogers' bedroom{Спальня Роджерса}
+Rogers' passage{Коридор}
+Minervas room{Комната Минервы}
+Rogers' bootyroom{Комната добычи Роджерса}
+Rogers' laboratory{Лаборатория Роджерса}
+Wood tower{Деревянная башня}
+
+You equipped a Powder Flask and an Ammunition Pouch.{Вы надели пороховницу и мешочек для боеприпасов}
+If I push the fat trader I can take his cutlass!{Если я завалю этого толстяка, то могу взять его тесак!}
+Maybe there's something under this body too?{Может быть под этим телом что то есть?}
+CLOSED BECAUSE OF ILLNESS - Charles Windem innkeeper{ЗАКРЫТО ИЗ-ЗА БОЛЕЗНИ владельца гостиницы Чарльза Виндема}
+TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager{СКОРО ОТКРОЕТСЯ. Робин Коррик - управляющий банком}
+There sure is a lot of rum stacked in here{Там наверняка поместится много рома}
+My barrel is filled with rum!{Бочка заполнена ромом!}
+You can't carry these tools without a real Carpenter's Chest.{Вы не можете носить эти инструменты без плотнецкого ящика.}
+Collect all the Carpenter's Tools - maybe you find something useful!{Соберите все протницкие инструменты - возможно, найдете что-то полезное!}
+Now get the Carpenter's Chest!{Теперь возьмите плотницкий ящик!}
+I found a big key in one of his pockets!{В одном из его карманов я нашел большой ключ!}
+The Carpenter's Chest is now filled up!{Плотнецкий ящик полностью укомплектован!}
+Hmm, the other lock is not opened yet{Хмм, другой замок не открыть}
+Woodes Rogers' kitchen{Кухна Роджерса}
+Erotica{Эротика}
+Geography and Meteorology{География и Метеорология}
+Mathematics, Physics and Chemistry{Математика, Физика и Химия}
+Shipbuilding{Судостроение}
+Trade and Economics{Торговля и Экономика}
+Navigation and Seamanship{Навигация и Мореплавание}
+Sea Battles{Морские Сражения}
+Philosophy and Psychology{Философия и Психология}
+Architecture, Town Planning and Fortifications{Архитектура, Градостроительство и Укрепления}
+Poetry and Love Songs{Поэзия и песни о любви}
+Medicine{Медицина}
+Law{Законы}
+Antiques and Jewels{Антиквариат и Драгоценности}
+Travels around the world{Путешествия}
+History and Biographies{История и Биография}
+Maps and Documents{Карты и Документы}
+Alchemy and Mysticism{Алхимия и Мистика}
+Novels about Hidden Treasure{Романы о спратанных сокровищах}
+Remember to return all books to their right places!{Не забудьте вернуть все книги свои места!}
+Law book placed{Книга о Законах на своем месте}
+History book placed{Книга История на своем месте}
+RUM has started to drip into the Barrel!{РОМ начал капать в боченок!}
+After one hour - least{Через час}
+The Barrel is now filled with RUM ...{Бочка заполнилна РОМОМ...}
+Sea Battles book placed{Книга Морские сражения на своем месте}
+Medicine book placed{Книга Медицина на своем месте}
+A note falls out of the Medicine book!{Выпадает записка из книги по медицине!}
+Treasure Tale placed{Книга о Сокровищах на своем месте}
+Chemistry book placed{Книга о Химии на своем месте}
+I have repaired Dampier's book!{Я восстановил книгу Дампира!}
+A small key is attached to the inside of the cover of the Chemistry book!{Маленький ключ прикреплен к внутренней стороне обложки книги по химии!}
+Erotic book placed{Книга о Эротике на своем месте}
+You need something to carry the books in!{Нужно что-то, куда эти книги можно положить!}
+History book picked up{Книга о Истории на своем месте}
+Water tank{Бак для воды}
+Molasses tank{Резервуар с патокой}
+Water valve{Водный клапан}
+The lever is not working!!!{Рычаг не работает!!!}
+
+That island is the only land in sight. I have to get there!{На горизонте виднеется остров. Надо найти способ туда добраться!}
+Hmm, this tree is floating, how can I get it to sea?{Хм, это дерево плавает, может я смогу дотолкать его к морю?}
+Yes, I can push tree to the shore!{Да, Я могу подтолкнуть дерево к берегу!}
+This tar is really heavy - and I don't need it...{Эта смола действительно тяжелая - мне она не нужна...}
+It's an ordinary lock here.{Обычный замок.}
+It's an ordinary lock to the right.{Справа обычный замок.}
+It's a large lock to the left.{Слева обычный замок.}
+This beam is too heavy, I must find something to use as a lever.{Этот брус слишком тяжел, нужно найти что-то, что можно использовать как рычаг.}
+If I only could push this beam a little.{Если бы немного сдвинуть этот брус...}
+No lock but it's stuck, maybe I can pry it open with any sharp and strong item.{Возможно я смогу его открыть любым острым и прочным предметом.}
+It's unlocked but somehow the mechanism is jammed.{Эх, механизм заклинело...}
+No lock - and no handle either, how do I open it?{Ни замка, ни ручки. И как это открыть?}
+Have to be careful - that beam rests only on a small piece of wood.{Надо быть осторожным, брус еле держится.}
+This 'lock' is so simple that I could pick it with a fork!{Этот 'замок' настолько прост, что его можно открыть хоть вилкой!}
+Not a chance!{Ни в коем случае!}
+The Carpenter's Chest is filled up!{Плотнецкий ящик заполнен!}
+The chest is blocked by a lot of goods.{Ящик завален хламом.}
+
+
+Choose ONE picture.{Выберите ОДНУ картинку.}
+Yes, this picture seems to be the right one!{Да, этот портрет, кажется и нужен!}
+Now I need some glue to repair the Book.{Теперь мне нужно немного клея.}
+No this is not the right picture.{Нет, это не то что нужно.}
+Maybe I should cut him down.{Возможно мне нужно его обрезать.}
+That barrel could be useful but I can't remove it with my bare hands from the gibbet.{Этот боченок может оказаться полезным, но мне не оттащить его от виселицы голыми руками.}
+Ok, there might be skeletons in here...{Здесь могут быть скелеты...}
+...and how do I frighten them away with fire!?{...и как я могу отпугнуть из огнем!?}
+Hmm, very foggy now - maybe the Skeletons can't see me?{Хмм, сейчас видимость ограничена и возможно, скелеты меня не заметят?}
+The corpse is too heavy walking around with.{С этим трупом слишком тяжело ходить.}
+Maybe these poles and planks could be of some help.{Возможно я могу что нибудь использовать из этих досок.}
+I need something with a hook to get those boxes.{Мне нужно что-то с крюком, чтобы достать те коробки.}
+If I just had something to carry this chest with!{Если бы у меня что нибудь было, для того чтобы носить этот ящик!}
+I could use a box or bag or anything to carry this in.{Для этого мне может понадобится ящик или сумка.}
+I'll need a foodchest first.{Сперва мне нужен сундук для еды.}
+No, I can't carry the medicine stuff too.{Нет, я не могу таскать лекарства в руках.}
+I can't lock the chest. The key and the entire lock are missing!{Я не могу закрыть сундук. Ключ и замок отсутствуют!}
+You have learned the 'Master Gunfighter' ability{Вы изучили навык 'Мастер стрельбы'}
+You have learned the 'Professional Gunman' ability{Вы изучили навык 'Профессионального Бандита'}
+You have learned the 'Gunman' ability{Вы изучили навык 'Бандита'}
+You have learned the 'Basic Defence' ability{Вы изучили навык 'Основной защиты' }
+You have learned the 'Iron Will' ability{Вы изучили навык 'Железная воля' }
+You have learned the 'Light Repairs' ability{Вы изучили навык 'Легкий ремонт' }
+You have learned the 'Quick Repairs' ability{Вы изучили навык 'Быстрый ремонт' }
+You have learned the 'Basic Ship Defence' ability{Вы изучили навык 'Основная защита корабля' }
+You have learned the 'Advanced Ship Defence' ability{Вы изучили навык 'Продвинутая защита корабля' }
+You have learned the 'Professional Ship Defence' ability{Вы изучили навык 'Проффесионал по защите корабля' }
+You have learned the 'Shared Experience' ability{Вы изучили навык 'Обмен опытом' }
+You have learned the 'Fire-ship' ability{Вы изучили навык 'Брандер' }
+You have learned the 'Landing Party' ability{Вы изучили навык 'Высадка союзного десанта' }
+You have learned the 'Land Owner' ability{Вы изучили навык 'Землевладелец' }
+You have learned the 'Basic Commerce' ability{Вы изучили навык 'Базовая торговля' }
+You have learned the 'Advanced Commerce' ability{Вы изучили навык 'Продвинутая торговля' }
+You have learned the 'Trustworthy Lad' ability{Вы изучили навык 'Вызывающий доверие' }
+You have learned the 'Long Range Boarding' ability{Вы изучили навык 'Абордаж с большого расстояния' }
+You have learned the 'Musket Volley' ability{Вы изучили навык 'Мушкетный залп' }
+You have learned the 'Master Of Boarding' ability{Вы изучили навык 'Мастерский абордаж' }
+You have learned the 'Instant Boarding' ability{Вы изучили навык 'Абордаж по выбору' }
+You have learned the 'Speed Increase' ability{Вы изучили навык 'Увеличение Скорости корабля' }
+You have learned the 'Maneuverability' ability{Вы изучили навык 'Увеличение маневренности корабля' }
+You have learned the 'Storm Helmsman' ability{Вы изучили навык 'Плавание в штормах' }
+You have learned the 'Quick Turn-Around' ability{Вы изучили навык 'Маневренный разворот корабля' }
+You have learned the 'Sense Fairway' ability{Вы изучили навык 'Маневры на мелководье' }
+You have learned the 'Sea Wolf' ability{Вы изучили навык 'Морской волк' }
+You have learned the 'Advanced defence' ability{Вы изучили навык 'Навык продвинутой защиты' }
+You have learned the 'Toughness' ability{Вы изучили навык 'Стойкость' }
+You have learned the 'Rush' ability{Вы изучили навык 'Раж' }
+You have learned the 'Critical Hit' ability{Вы изучили навык 'Критический удар' }
+You have learned the 'SwordplayProfessional' ability{Вы изучили навык 'Профессиональный фехтовальщик' }
+You have learned the 'Fast Reload' ability{Вы изучили навык 'Быстрая перезарядка' }
+You have learned the 'Pre-reloading' ability{Вы изучили навык 'Предварительная перезарядка' }
+You have learned the 'Increased Ship Damage' ability{Вы изучили навык 'Увеличенные повреждения корпусу' }
+You have learned the 'Increased Sail Damage' ability{Вы изучили навык 'Увеличенные повреждения парусам' }
+You have learned the 'Increased Crew Damage' ability{Вы изучили навык 'Увеличенные повреждения команде' }
+You have learned the 'Critical Shot' ability{Вы изучили навык 'Критический Выстрел'}
+You have learned the 'Increased Volley Range' ability{Вы изучили навык 'Увеличеннное растояние выстрела' }
+You have learned the 'Professional Cannoneer' ability{Вы изучили навык 'Проффесиональный канонир' }
+
+You have received Cotton, Chocolate and Sugar goods.{Вы получили товары - Хлопок, Какао и Сахар.}
+You have received Cotton and Chocolate goods.{Вы получили товары - Хлопок и Какао.}
+You have received Cotton and Sugar goods.{Вы получили товары - Хлопок, Какао и Сахар.}
+You have received Cotton goods.{Вы получили товар - Хлопок.}
+You have received Chocolate and Sugar goods.{Вы получили товары - Какао и Сахар.}
+You have received Chocolate goods.{Вы получил товар - Какао.}
+You have received Sugar goods.{Вы получили товар - Сахар.}
+Yes, I have got a 'Woodes-Rogers'!{Да, у меня есть 'Вуде-Роджерс'!}
+
+They are really heavy - one set is enough!{Они действительно тяжелые - одного - достаточно!}
+One retort is enough!{Одной реторты достаточно!}
+One top is enough!{Одной крышки!}
+One glass tube is enough!{Одной стеклянной трубки - достаточно!}
+One empty bottle is enough!{Одной пустой бутылки - достаточно!}
+One Champagne bottle is enough!{Одной бутылки Шампанского - достаточно!}
+
+I can't remove that plank with my bare hands.{Я не могу убрать эту доску голыми руками.}
+This heavy cast iron door has a copper lock{Эта тяжелая дверь имеет медный замок}
+This heavy cast iron door has a silver lock{Эта тяжелая дверь имеет золотой замок}
+This heavy cast iron door has a gold lock{Пахнет чистым спиртом.}
+It smells like Pure Alcohol.{Это пахнет как чистым алкоголем.}
+It smells like Sulfuric Acid.{Пахнет серной кислотой.}
+It smells like Nitric Acid.{Пахнет азотной кислотой.}
+It smells like Hydrochloricic Acid.{Пахнет соляной кислокой.}
+I have made Cognac!{Я сделал коньяк!}
+I have made Diluted Sulfuric Acid!{Я сделал разбавленную серную кислоту!}
+I have made Aqua Fortis!{Я сделал Аква Фортис!}
+I have made Aqua Regis!{Я сделал Аква Реджис!}
+
+Cabin{Каюта}
+Prize ships{Призовые корабли}
+Prize ship{призовой корабль}
+Galley{Камбуз}
+Officer's cabin{Каюта офицеров}
+Captain's deck{Палуба капитана}
+Captain's cabin{Каюта капитана}
+Cannonball storage{Орудийный склад}
+Water supply{Водоснабжение}
+Wad of rugs supply{Пыж из ковра}
+Where is my Priming horn?{Где мой рожок для пороха?}
+Cannonball storage is empty!!{Ядер нет!!}
+
+Contemporary Notorious Pirates{Современные печально известные Пираты}
+Practical Alchemy{Практическая Алхимия}
+Selkirk research{Исследования Селкирка}
+Roger's journals: A Cruising Voyage Round the World{Журналы Роджерcа: Кругосветное путешествие}
+
+The door is locked from the other side with the key still in the lock.{Дверь заперта с другой стороны, а ключ все еще в замке.}
+I don't bother to carry these bottles any more!!!{Я больше не хочу таскать эти бутылки!!!}
+I need a blade to open that box!{Мне нужно что-то острое чтобы открыть эту коробку!}
+No, the elevator is to heavy!{Нет, лифт слишком тяжелый!}
+No, the barrel is to heavy!{Нет, бочка слишком тяжелая!}
+I need something to make ONE pack of all these clothes!{Мне нужно что-то, во что можно завернуть эти одежны!}
+I need something to put up all these things in!{Мне нужно куда-то положить все эти вещи!}
+Nothing but coins can be placed in the collection box!{Только монеты можно класть в ящик для пожертвований!}
+The Moidor is too large!{Мойдор слишком большой!}
+This coin fell through the box to the floor!{Эта монета провалилась под ящик на пол!}
+Hmm, that hatch is too high up.{Хм, этот люк слишком высокj.}
+One musket is missing!{Один мушкет отсутствует!}
+Gunpowder must be wet!{Порох не должен быть влажным!}
+Finally I got some dry gunpowder!{Наконец я получил немного сухого пороха!}
+I'll wake you up mister!{Я разбужу вас мистер!}
+No idea Captain - this boat is far too heavy!!{Плохая идея, капитан - лодка слишком тяжелая, нужны еще люди!!}
+Hmm. That's not a good idea{Хмм, плохая идея}
+No, they have nailed down the planks!{Нет, они прибили доски!}
+I put away the Wine now - Maybe I'll need it further on.{Я оставил вино - возможно оно еще пригодится.}
+I put away the Cognac now - Maybe I'll need it further on.{Я оставил коньяк - возможно он еще пригодится.}
+It's wine!{Тут вино!}
+It has stopped.{Остановился.}
+The lock is too rusty - I can't move the key.{Замок слишком ржавый - я не могу повернуть ключ.}
+Neither lock nor handle. How do I open it?{Ручки нет. И как его открыть?}
+The pieces-of-eight vary too much in weight to be of any use!{Песо разные по величине, не думаю что они пригодятся!}
+Alright, I can weigh all the coins - and then what?{Я могу взвесить все монеты - и что потом?}
+Scales hmm...?{Весы хм...?}
+'Call mates'{'Вызов помошников'}
+'Carry on'{'Продолжить'}
+'The side'{'по борту'}
+'Away boat'{'Шлюпки на воду'}
+Now, how did THAT happened??{Как ЭТО случилось??}
+I have opened the sealed paper - let's see what it is!{Я открыл запечатанные бумаги - посмотрим, что в них!}
+I have opened the package - let's see what's inside!{Я открыл сверток - посмотрим что - внутри!}
+I have 3 sailors left to hire.{Я могу нанять ТРЕХ матросов.}
+I have 2 sailors left to hire.{Я могу нанять ДВУХ матросов.}
+I have 1 sailor left to hire.{Я могу нанять ОДНОГО матроса.}
+I have 2 officers left to hire.{Я могу нанять ДВУХ офицеров.}
+I have 1 officer left to hire.{Я могу нанять ОДНОГО офицера.}
+I need more logs to build a raft.{Для плота нужно больше бревен.}
+That was it. I'll go back to Charles Vane.{Вот и все. Можно возвращаться к Чарльзу Вэйну.}
+Maybe the Captains in the Sacristy know more...{Возможно капитаны в ризнице знают больше...}
+Maybe the Captains in the Church know more...{Возможно капитаны в церкви знают больше..}
+What? There should be TWO prisoners in the last cell!{Что? В последней камере должны быть ДВА пленника!}
+Oh no, I have to start all over again!{О, нет, я должен начать все сначала!}
+Okay, I'm in the Shop now. Where am I supposed to use the padlock?{Я сейчас в магазине. Что я должен закрыть на замок?}
+I saw no gun at all in there. Did I miss it?{Я не видел там вообще никакого оружия. Что-то упустил?}
+Now I can open the Chemistry shelf.{Теперь я могу открыть полку химии.}
+Now I can't remove the chain - I need something to pick the lock with.{Я не могу снять цепь, нужно чем-то сломать замок.}
+Now where did HE come from!?{Откуда он взялся!?}
+There's a chest - but how do I get to it?{Там есть сундук, но как до него добраться?}
+Yes! It's open now but I cannot see the chest any longer...{Да! Я открыл ее, но теперь не видно сундука...}
+That could maybe be the way in?{Куда может вести этот путь?}
+No, it's not heavy enough!{Нет, слишком тяжелая!}
+Oh yes! I knew it was something hidden in here.{О, да! Я знал, что здесь что-то скрыто.}
+I have found an axe that obviously has been used to cut off heads. Is that what I have to do?{Я нашел топор, который, очевидно,использовался чтобы рубить головы. И что с ним делать?}
+Is this skull really heavy enough for the steplock in the cell?{Череп сможет удержать нажимную плиту в камере?}
+The niche stays open now but how can I reach the Chest?{Ниша открыта, но как добраться до сундука?}
+Never mind - let's see what that Monkey is up to...{Куда бежит обезьяна...}
+Yes, the fire scared them away!{Да, огонь отпугнул их!}
+I'm gonna search this new shaft thoroughly at low tide!{Я осмотрю эту шахту во время отлива!}
+What's wrong with the lights - did the Monkey turned them out?{Что случилось с огнем - обезьяна постаралась?}
+Wonder what I'm supposed to do with that Saw?{Интересно, что мне делать с этой пилой?}
+I got a plank, maybe I can use it in a similar way as the skull??{Я получил доску, может быть, может мне использовать ее так же, как и череп??}
+No, I can't remove that thing whatever it is.{Нет, я не могу убрать эту вещь.}
+What have they done here - nailed the cupboard?{Что они сделали - прибили шкаф?}
+No effect - the mechanism is not activated.{Нет эффекта - не механизм не активирован.}
+That's it! But how do I release the Mine?{Вот и все! Но как мне выбраться из шахты?}
+There's a steplock under the box.{Под коробкой есть нажимная плита.}
+Not much of a mechanism left here. The Pinions and the Wheel are all missing.{Не хватает деталей. Зубчатые шестерни и колесо отсутствуют.}
+But I guess it's the Galley.{Предполагаю, что это камбуз.}
+Okay, I got these ropes - but I'm not sure where to use them.{Я получил веревки - но куда их применить.}
+Hmm, maybe I can make them go all the way down into the hold?{Хмм, может бать, я смогу полностью спустить их в трюм?}
+Hmm, they go all the way down into the hold?{Хмм, они полностью спустятся в трюм?}
+Oh!! It's really hot and stuffy in here - think I have to open the window!{Оу!! Здесь действительно жарко и душно - думаю,стоит открыть окно!}
+And..?{И..?}
+This heavy cast iron door has a silver lock{У этой тяжелой двери серебряный замок}
+There's something under the elevator!{Под лифтом что-есть есть!}
+How can two planks help me get the Tool from the elevator?{Как две доски помогут мне достать инструмент из под лифта?}
+Not exactly what I had in mind!{Не совсем то, что я думал!}
+I think I can reach the Tool now!{Теперь, думаю, можно дотянуться до инструмента!}
+Hmm, is that what I'm looking for?{Хмм, это то, что я искал?}
+There is that Belt again!{Там кобура!}
+I can use a heavy pistol as a Club!{Я могу использовать тяжелый пистолет как дубинку!}
+I can throw my Pistols on the enemies!{Я могу кидать пистолеты во врагов!}
+A Barrel on an Elevator - what am I supposed to do?{Бочка на лифте - что с ней можно сделать?}
+Aha, there's a Steplock under the Elevator!{Ага, под Лифтом есть нажимная плита!}
+Guess this is the way out from here.{Предполагаю, что выход здесь.}
+By the sound three gates opened.{По звуку - открылись три двери.}
+A door opened - Which one?{Дверь открылась - которая?}
+No this was not what I expected. I have to try that lever on the Ship once more!{Не совсем то, что я ожидал. Попробую потянуть за корабль еще разок!}
+I'll try the megaphone on the Shore - maybe someone can here me?{Покричу в рупор на берегу - может кто услышит?}
+Hope they are sending a boat!{Надеюсь, они пришлют лодку!}
+The Chest from the Blue Cavern - and it's stuck under the Boat!{Сундук из Голубой пещеры застрял под лодкой!}
+Can I balance on the edging to the Musket?{Пройтись за мушкетом по окантовке?}
+Hah, I took your Blade!{Ха, я взял ваш клинок!}
+Hah, I took all your Blades!{Ха, я взял все ваши клинки!}
+There's something in the fire.{В огне что-то есть.}
+Not here I said!{Не здесь я сказал!}
+
+Sullivan shore{Берег Салливана}
+Sullivan jungle{Джунгли Салливана}
+Legrands backyard{Задний двор Легранда}
+Legrands house{Дом Легранда}
+Legrands kitchen{Кухня Легранда}
+Legrands food cellar{Продовольственный подвал Легранда}
+Legrands boathouse{Эллинг Легранд}
+Fort Moultrie Village{Деревня форта Моултри}
+Fort Moultrie store{Магазин форта Моултри}
+Room{Комната}
+Staff only{Служебное помещение}
+Summer cottage{Летний дом}
+Fort Moultrie exit{Выход форта Моултри}
+Fort Moultrie{Форт Моултри}
+Lieutenant G:s house{Дом Лейтенанта G:s}
+Lieutenant G:s office{Офис Лейтенанта G:s}
+Lieutenant G:s bedroom{Спальня Лейтенанта G:s}
+Fort Moultrie shore{Берег форта Моултри}
+Charleston{Чарлстон}
+Charleston port{Чарлстонский порт}
+Charleston port tavern{Чарлстонская таверна}
+Charleston town{Город Чарлстон}
+Charleston shipyard{Чарлстонская верфь}
+Charleston townhall{Чарлстонская резиденция}
+Charleston store{Чарлстонский магазин}
+Charleston blacksmith{Чарлстонский кузнец}
+Post Office{Почта}
+Poe's house{Дом По}
+Poe's bedroom{Спальня По}
+Exit from Charleston{Выход из Чарлстона}
+Charleston swamp{Чарлстонское болото}
+Charleston passage{Проход в Чарлстон}
+Charleston shore{Берег Чарлстона}
+Bishops Hostel{Общежитие Епископа}
+Bessop Plantation{Плантация Бишопа}
+
+
+
+It's too high, I can't climb the rocks.{Слишком высоко, я не могу подняться на скалы.}
+Oxbay? Greenford? What are they talking about?{Оксбэй? Гринфорд? О чем они говорят?}
+That was close - I'll remember not to go there again!{Было близко - я не хочу туда снова идти!}
+It's getting worse and worse...{Все хуже и хуже...}
+The bridge is rotten, I'll have to fix it somehow.{Мост гнилой, я должен буду зафиксировать его так или иначе.}
+The bridge is rotten, I have to be careful.{Мост гнилой, я должен быть осторожным.}
+Charleston...{Чарлстон...}
+There is not enough wood left!{Есть недостаточно покинутого леса!}
+No, the water isn't warm enough.{Нет, вода не достаточно теплая.}
+No, I'll burn the parchment to ashes.{Нет, я сожгу пергамент дотла.}
+I need something to carry the wood in.{Мне нужно что-то, чтобы нести лес в.}
+The sack is full - let's go home!{Мешок полон - давайте пойдем домой!}
+I've got a collection of shells - let's go home!{У меня есть коллекция раковин - давайте пойдем домой!}
+That really helped - now let's see if there are more secrets to be found on the parchment.{Это действительно помогло - теперь, давайте посмотрим, есть ли больше тайн, которые будут найдены на пергаменте.}
+So that's how it happened! The heat revealed a death's-head on the other side of the parchment!{Таким образом, это - то, как это произошло! Высокая температура показала череп с другой стороны пергамента!}
+More heat and now there's a goat together with a death's-head!{Больше высокой температуры и теперь есть коза вместе с черепом!}
+Okay, there's the goat and the death's-head again!{Хорошо, есть коза и череп снова!}
+I knew it! There are some some figures arranged in lines!{Я знал это! Есть немного некоторые числа, устроенные в линиях!}
+Yes yes yes. I knew there was more. A lot of characters are rudely traced between the Death's-head and the Goat!{Да да да. Я знал, что было больше. Много знаков грубо прослежено между Черепом и Козой!}
+Ouch, I'll burn my fingers.{Ай, я сожгу пальцы.}
+The remnants of the hull of what appear to have been a ship's long boat.{Остатки корпуса какой, кажется, были баркасом судна.}
+The last storm must have brought it here.{Последний шторм, должно быть, принес его здесь.}
+I'll need a leaf, or something of that nature, by which to take hold of it.{Мне будет нужен лист или что-то вроде той природы, по которой можно захватить его.}
+Jupiter look! It's a Gold-Bug!{Взгляд Юпитера! Это - Жук-листоед!}
+Ouch, the Gold-Bug gave me a sharp bite!{Ай, Жук-листоед дал мне острый укус!}
+OPEN ONLY DURING TOURIST SEASON{ОТКРОЙТЕСЬ ТОЛЬКО В ТЕЧЕНИЕ ТУРИСТИЧЕСКОГО СЕЗОНА}
+Hmm, it's only glowing...?{Хм, это только пылает...?}
+Only ashes left - I'll need new wood!{Только пепел уехал - мне будет нужна новая древесина!}
+Two empty barrels.{Два пустых барреля.}
+Some empty bottles.{Некоторые пустые бутылки.}
+It's flour in these sacks.{Это - мука в этих мешках.}
+Good beer!{Хорошее пиво!}
+What a stench!{Какое зловоние!}
+No, I don't bother to take anything.{Нет, я не потрудился брать что-либо.}
+No, I only keep the Ovenproof Dish.{Нет, я только держу Жаростойкое Блюдо.}
+Yes, it's Cognac!{Да, это - Коньяк!}
+No, nothing behind the curtain.{Нет, ничто позади занавеса.}
+No, I only keep the Cipher Book.{Нет, я только держу Книгу Шифра.}
+No, I only keep the Hairpin.{Нет, я только держу Шпильку.}
+I can't believe it! She's knows what I'm trying to do!{Я не могу верить ему! Она, знает то, что я пытаюсь сделать!}
+No, I can never climb up the way I came down.{Нет, я никогда не могу взбираться по способу, которым я снизился.}
+No, I'm not going back. The metal door locked behind me.{Нет, я не возвращаюсь. Металлическая дверь заперта позади меня.}
+William Kidd 1645 - 1701{Уильям Кид 1645 - 1701}
+C. Auguste Dupin has earned this certificate for...{C. Огюст Дюпен заработал это свидетельство для...}
+Fort Moultrie{Форт Moultrie}
+Edgar Allan Poe{Эдгар Аллан По}
+Whaling{Охота на китов}
+Caves{Пещеры}
+Piracy{Пиратство}
+Cannibalism{Людоедство}
+Newfoundland Dogs{Собаки ньюфаундленда}
+Nantucket Whaling Ships{Китобойные суда Нантакета}
+The Brig Grampus{Бриг 'Касатка'}
+The magnet makes something move inside.{Магнит заставляет что-то двигаться внутри.}
+Yes, with the Magnet I got a Key out of the collection box.{Да, при помощи магнита мне удалось достать ключ из ящика для пожертвований.}
+Private.{Личное.}
+Textiles.{Текстиль.}
+A photo of Edgar{Фотография Эдгара}
+The painting is signed by Frans Hals 1641{Картина подписана Франсом Халсом 1641}
+Hmm, many notes, letters and books here{Хм, здесь много заметок, писем и книг.}
+The Narrative of Arthur Gordon Pym of Nantucket{Повествование Артура Гордона 'Пим Нантакет'}
+A hairpin - what use can I have of this little thing?{Заколка - какая польза от этой мелочи?}
+I could need a Saw here.{Мне может понадобиться пила.}
+I have already placed wood in here.{Тут уже есть дрова.}
+The fire has almost gone out - I need more wood.{Огонь почти потух - мне нужно больше дров.}
+I have already got some wood.{У меня уже есть немного дров.}
+This will take time - I'll do something else meanwhile.{Это займет время - я сделаю что-то еще между тем.}
+I need a Ladle to scoop the Charcoal from the fireplace.{Мне нужен Ковш, чтобы выкопать Древесный уголь от камина.}
+I need a Jar to collect the Charcoal.{Мне нужна Фляга, чтобы собрать Древесный уголь.}
+The Sack is only half filled with Nitre.{Мешок только наполовину заполнен Nitre.}
+The Jar is only half filled with Charcoal.{Фляга только наполовину заполнена Древесным углем.}
+I need a Broom to sweep the Pyrite Dust from the floor.{Мне нужна Метла, чтобы охватить Пыль Пирита от пола.}
+I need a Box to collect the Pyrite Dust.{Мне нужна Коробка, чтобы собрать Пыль Пирита.}
+The Box is only half filled with Pyrite Dust.{Коробка только наполовину заполнена Пылью Пирита.}
+I need an Empty Bucket to get the Salpeter from the Tub.{Мне нужно Пустое Ведро, чтобы получить Селитру от Ванны.}
+There is some Salpeter in the water but not enough.{Есть некоторая Селитра в воде, но недостаточно.}
+The Salpeter is not dry yet.{Селитра еще не суха.}
+There is no Salpeter here yet - only water.{Еще нет никакой Селитры здесь - только вода.}
+It's here on the planks they let the Salpeter dry.{Это находится здесь на досках, которые они позволяют Селитре высушить.}
+No, I have enough pyrite on the floor already.{Нет, у меня уже есть достаточно пирита на полу.}
+I need a tool to smash the Pyrite stones to dust.{Мне нужен инструмент, чтобы разбить камни Пирита, чтобы вычистить.}
+There are still some stones left.{Есть все еще некоторые оставленные камни.}
+No, I have filled the distillery with Pyrite Dust already.{Нет, я уже наполнил ликероводочный завод Пылью Пирита.}
+Now it's just to collect the Pyrite Dust.{Теперь это должно только собрать Пыль Пирита.}
+The Basket is only half filled with Sulphur.{Корзина только наполовину заполнена Серой.}
+No, I'm not sure that's the right mix.{Нет, я не уверен, что это - правильное соединение.}
+Oh no - I lost all the Gunpowder on the floor!{О нет - я потерял весь Порох на полу!}
+The Barrel isn't filled yet.{Баррель еще не заполнен.}
+I have to grind all first.{Я должен размолоть все сначала.}
+I have already filled that Barrel, it's just to pick it up.{Я уже заполнил тот Баррель, он должен только взять его.}
+I have already done that.{Я уже сделал это.}
+There's nothing to grind yet.{Нет ничего, чтобы размолоть все же.}
+Water is already added.{Вода уже добавлена.}
+In the Gunpowder Mill now:{В Заводе Пороха теперь:}
+water{вода}
+nothing{ничто}
+I can get rid of bad Mixtures here.{Я могу избавиться от плохих Смесей здесь.}
+Yes! I made it - now to the Restaurant.{Да! Я сделал его - теперь в Ресторан.}
+I have made Gunpowder but there's still some in the Mill - enough for another barrel.{Я сделал Порох, но есть все еще некоторые в Заводе - достаточно для другого барреля.}
+That's Salpeter Soot alright!{Это - Сажа Селитры хорошо!}
+That's Sulfur Soot alright!{Это - Сажа Серы хорошо!}
+It's going to take time to get all that water boiling - I'll do something else meanwhile.{Это собирается занять время, чтобы получить все это кипение воды - я сделаю что-то еще между тем.}
+It's going to take time to solve all Salpeter - I'll do something else meanwhile.{Это собирается занять время, чтобы решить всю Селитру - я сделаю что-то еще между тем.}
+It's going to take time to dry the Salpeter on the planks - I'll do something else meanwhile.{Это собирается занять время, чтобы высушить Селитру на досках - я сделаю что-то еще между тем.}
+It's going to take time to distill the Sulphur - I'll do something else meanwhile.{Это собирается занять время, чтобы дистиллировать Серу - я сделаю что-то еще между тем.}
+No, I don't know how to go on. I have to visit the Restaurant.{Нет, я не знаю, как продолжить. Я должен посетить Ресторан.}
+I have made Gunpowder for Fireworks but there's still some in the Mill.{Я сделал Порох для Фейерверка, но в Заводе есть все еще некоторые.}
+I have made Gunpowder but NOT the right type.{Я сделал Порох, но НЕ правильный тип.}
+I have missed something.{Я пропустил что-то.}
+There's no Barrel on the floor.{На полу нет никакого Барреля.}
+No no no, I forgot to add Sulfur Dust!{Нет нет не, я забыл добавлять Пыль Серы!}
+No no no, I forgot to add Water!{Нет нет не, я забыл добавлять Воду!}
+I have added Water to the Big Barrel.{Я добавил Воду к Большому Баррелю.}
+I got what I need of missing Tools. To the workshops!{Я получил то, в чем я нуждаюсь недостающих Инструментов. К цехам!}
+The Lever must have fallen to the ground.{Рычаг, должно быть, упал на землю.}
+No, the Lever is missing.{Нет, Рычаг отсутствует.}
+I need a Ladder to place the Rope.{Мне нужна Лестница, чтобы поместить Веревку.}
+With a Rope I could get down from this cliff.{С Веревкой я мог спуститься с этого утеса.}
+No, I can't climb the rope carrying this Ladder.{Нет, я не могу подняться на веревку, несущую эту Лестницу.}
+The Rope isn't long enough - I'll brake my bones.{Веревка не достаточно длинна - я буду тормозить кости.}
+Not a chance - the Barrel is too heavy.{Не шанс - Баррель слишком тяжел.}
+Hmm, I can't get the Cork out.{Хм, я не могу вывести Пробку.}
+The Ladder is stuck under the Barrel.{Лестница застревает под Баррелем.}
+The Ladder is still stuck somehow! How do I lift it?{Лестница все еще застревает так или иначе! Как я снимаю его?}
+The Ladder is stuck under the bridge now!{Лестница застревает под мостом теперь!}
+No, it's locked from the inside. I have to brake it.{Нет, это заперто с внутренней части. Я должен тормозить его.}
+I'll use the butt-end of my pistol.{Я буду использовать концовку своего пистолета.}
+Yes, I'll try this on the Cell door!{Да, я попробую это на двери Клетки!}
+I shouldn't have done that. Hope no one heard it.{Я не должен был делать этого. Надеюсь, что никто не слышал его.}
+They went to sleep again. Let's go!{Они заснули снова.Вперед!}
+Hmm, I have to find another way into the Church.{Хм, я должен найти иначе в церковь.}
+No, there's nothing here.{Нет, здесь ничего нет.}
+
+Moon Status{Сейчас}
+New Moon{новолуние}
+Waxing crescent moon{растущий полумесяц}
+Waxing moon{растущая луна}
+Full Moon{полнолуние}
+Waning moon{убывающая луна}
+Waning crescent moon{убывающий полумесяц}
+
+No, I can never climb the rope carrying this Ladder.{Нет, я никогда не могу подниматься на веревку, несущую эту Лестницу.}
+Maybe if I tie the Ladder to the rope and pull it up from the top.{Возможно, если я связываю Лестницу с веревкой и тяну его от вершины.}
+Yes, now I can extend the rope with the Ladder.{Да, теперь я могу расширить веревку с Лестницей.}
+And now the Ladder!{И теперь Лестница!}
+No, that crate is too heavy.{Нет, тот ящик слишком тяжел.}
+No, it's to steep - I have to find another way up.{Нет, это должно погрузиться - я должен найти иначе.}
+Visitors to the Tavern - please use the door to the left.{Посетители Таверны - пожалуйста, используйте дверь налево.}
+STRIKE - Brothel closed.{ЗАБАСТОВКА - Бордель закрылся.}
+Storeroom.{Складское помещение.}
+Winecellar.{Винный погреб.}
+Hmm, nothing of use here.{Хмм, ничего полезного тут нет.}
+Servants.{Слуги.}
+What am I doing wrong?{Что я делаю неправильно?}
+It's no idea - the sack is empty.{Это не идея - мешок пуст.}
+There's something behind here but the hatch is stuck.{Здесь что-то есть, но люк застрял.}
+No, it's locked to the Study!{Нет, заблокировано для изучения!}
+No, I have to try something else!{Нет, нужно попробовать что-то еще!}
+I don't know what to place here.{Я не знаю, что поместить сюда.}
+I need a Flint too!{Мне нужно еще и огниво!}
+This Ring is eating all my Power!{Это кольцо забирает всю мою силу!}
+Now I only need Fire.{Теперь мне нужен лишь огонь.}
+I have to find another way down.{Мне нужно найти другой путь вниз.}
+To Mr Poe's house now!{Теперь - в дом мистера По!}
+East tower{Восточная башня}
+South tower{Южная башня}
+Hmm, what are they doing? Something's hanging down from that tree.{Хм, что они делают? Что-то свисает с этого дерева.}
+
+There are no Rockets left{Ракет не осталось}
+TossItemInterface{Вы уверены, что хотите бросить этот предмет?}
+Jupiter for God's sake - don't alarm the Maroons.{Юпитер, ради бога, не тревожь маронов.}
+Yes! I got a Spade from that thug.{Да! Тот головорез отдал мне лопату.}
+I have to run to the raft! But where is Jupiter?{Нужно бежать к плоту! Но где Юпитер?}
+No, I take only one Musketoon.{Нет, я беру только мушкетон.}
+Oh yes, the Sails!{Ах да, паруса!}
+That Machete was just crap!{То мачете было просто дерьмом!}
+That's enough of Empty Sacks!{Тут достаточно пустых мешков!}
+I found de Key.{Это ключ!}
+A Tree must have fallen and blocked de Door!!{Дерево, должно быть, упало и заблокировало дверь!}
+No, the door isn't locked but something is blocking it.{Нет, дверь не заперта, но что-то блокирует её.}
+I'm not sure what to do with this item.{Непонятно, что делать с этим предметом.}
+Maybe something is missing?{Возможно, чего-то не хватает?}
+No, it's locked!{Нет, заперто!}
+That lock looks very simple - maybe I can pick it open?{Эот замок выглядит достаточно простым - возможно, я смогу его открыть?}
+Hope that Ladder leads to the Church.{Надеюсь, лестница ведёт к церкви.}
+No, that one is already dead.{Нет, этот уже мертв.}
+Finally, they have stopped the repairs.{Они остановили ремонтные работы наконец.}
+The door isn't locked but blocked.{Дверь не заперта, но заблокирована.}
+What is it - an old Cutlass?{Что это - старое мачете?}
+I need something to carry the Treasure in.{Мне нужно что-то, чтобы занести Сокровище внутрь.}
+We have to get the rest of the Treasure first.{Сначала нужно получить остальную часть Сокровища.}
+No, I have already done that.{Нет, это уже сделано.}
+Now when it's clean, maybe I should heat it up again?{Теперь, когда всё очищено, возможно, нужно подогреть его снова?}
+No, I don't want to boil the Parchment!{Нет, я не хочу кипятить Пергамент!}
+No, let's go on instead.{Нет, лучше продолжим.}
+
+West crescent{Западный полумесяц}
+East crescent{Восточный полумесяц}
+West wing{Западное крыло}
+East wing{Восточное крыло}
+Rotunda upper levels{Ротонда: верхние уровни}
+Rotunda middle levels{Ротонда: средние уровни}
+Rotunda lower levels{Ротонда: нижние уровни}
+I'll need a Rope here.{Мне понадобится веревка.}
+Dormitorium{Общая комната}
+Cellarium{Кладовая}
+Chapter-house{Здание капитула}
+Scriptorium{Помещение для переписывания рукописей}
+Cloister{Монастырь}
+Infirmary{Лазарет}
+Lavatorium{Умывальня}
+Sacristy{Ризница}
+
+Something under that straw?{Что-то под той соломой?}
+No, I'll only cut myself on those shards.{Нет, я только порежусь на тех черепках.}
+The bell is too heavy - can't move it. I need something heavy to hit it with.{Звонок слишком тяжел - не может переместить его. Мне нужно что-то тяжелое, чтобы поразить его.}
+Poor nun!{Бедная монахиня!}
+
+But it's something under it!{But it's something under it!}
+One wine bottle in each hand is enough!{One wine bottle in each hand is enough!}
+Hmm, I could place some goods on the elevator.{Hmm, I could place some goods on the elevator.}
+No, the elevator isn't heavy enough.{No, the elevator isn't heavy enough.}
+Now let's fill the barrel up.{Now let's fill the barrel up.}
+
+I don't need to carry these newspapers around.{I don't need to carry these newspapers around.}
+Better study them or return them to the counter.{Better study them or return them to the counter.}
+I don't need more wood at the moment.{I don't need more wood at the moment.}
+No, I havn't processed the content yet.{No, I havn't processed the content yet.}
+I can grind stones here.{I can grind stones here.}
+I think I'll use the Big Bottle for Mixtures instead.{I think I'll use the Big Bottle for Mixtures instead.}
+I think I'll use the Small Bottle for Mixtures instead.{I think I'll use the Small Bottle for Mixtures instead.}
+I think that's the right mixture.{I think that's the right mixture.} 
+A Small Bottle will do here.{A Small Bottle will do here.}
+A clean piece of Cloth as a filter is needed here.{A clean piece of Cloth as a filter is needed here.}
+Two Salt Jars are enough!{Two Salt Jars are enough!}
+One Filter is enough!{One Filter is enough!}
+One Calcium Sack is enough!{One Calcium Sack is enough!}
+Two Coal Jars are enough!{Two Coal Jars are enough!}
+One Nitre Sack is enough!{One Nitre Sack is enough!}
+One Limestone Basket is enough!{One Limestone Basket is enough!}
+One Camel Dung Bucket is enough!{One Camel Dung Bucket is enough!}
+One Sulphur Basket is enough!{One Sulphur Basket is enough!}
+Two Wax Jars are enough!{Two Wax Jars are enough!}
+One Antimony Basket is enough!{One Antimony Basket is enough!}
+One Black Antimony Basket is enough!{One Black Antimony Basket is enough!}
+One Mercury Oxide Basket is enough!{One Mercury Oxide Basket is enough!}
+It's gas in the bottle.{It's gas in the bottle.}
+Oh no, there's no gas left in the bottle!{Oh no, there's no gas left in the bottle!}
+I have made Sodium Carbonate!{I have made Sodium Carbonate!}
+I have made Liquor Hepatis!{I have made Liquor Hepatis!}
+I have made Black Pulvis Solaris!{I have made Black Pulvis Solaris!}
+I have made Red Pulvis Solaris!{I have made Red Pulvis Solaris!}
+I have made Pulvis Solaris!{I have made Pulvis Solaris!}
+I have made Sulfur Auretum!{I have made Sulfur Auretum!}
+I think I'll make some more Sulfur Auretum first.{I think I'll make some more Sulfur Auretum first.}
+Let's keep it on the table.{Let's keep it on the table.}
+I need only half of that!{I need only half of that!}
+Oh no, I forgot to use a clean filter and lost the mixture!{Oh no, I forgot to use a clean filter and lost the mixture!}
+No,I have to apply the wax to the gases, not the other way around.{No,I have to apply the wax to the gases, not the other way around.}
+That metal looks like Lead. Supposed to become Gold?{That metal looks like Lead. Supposed to become Gold?}
+No, it looks more like unclean Silver. If all that could be Gold!{No, it looks more like unclean Silver. If all that could be Gold!}
+Just one drop...{Только одну каплю...}
+I'll use more this time. Five drops perhaps.{В этот раз попробую больше. Пять капель, возможно.}
+
+Yes! That was the last ghost. Maybe the indian wants to talk to me now...{Yes! That was the last ghost. Maybe the indian wants to talk to me now...}
+Cartagena Hotel{Cartagena Hotel}
+Suarez's house{Дом Суареса}
+Cartographer's House{Дом картографа}
+No, it's stuck in the sand.{No, it's stuck in the sand.}
+Order of Malta only in WoodesRogers quest{Order of Malta only in WoodesRogers quest}
+Order of Malta{Order of Malta}
+It's not time for any meal now.{It's not time for any meal now.}
+Hey, it's occupied.{Hey, it's occupied.}
+No, I'm only allowed to take books and documents.{No, I'm only allowed to take books and documents.}
+I guess a lever should be placed here.{I guess a lever should be placed here.}
+I guess the other blade should be placed here.{I guess the other blade should be placed here.}
+Something's missing here for sure.{Something's missing here for sure.}
+It's something inside.{It's something inside.}
+I need a small hook to reach it.{I need a small hook to reach it.}
+Nueva Suecia upper town{Nueva Suecia upper town}
+Nueva Suecia lower town{Nueva Suecia lower town}
+It's just about too high.{It's just about too high.}
+It's time to go downstairs and visit Caroline in her Drawing Room.{Пришло время спуститься вниз и посетить Кэролайн в ее гостиной.}
+It's a trap! I have to creep under the musket.{Это ловушка! Нужно проползти под мушкетом.}
+I have not looted Dampier!{Нужно обыскать Дампира!}
+That boat could be the way back to the Port.{Эта лодка поможет мне вернуться в порт.}
+The Gate is blocking the way out.{Ворота блокируют выход.}
+It's blunt. It's worthless!{It's blunt. It's worthless!}
+There it is. The exit!{There it is. The exit!}
+Three officers with a total of 5 shares. Add to that the 28 shares for the sailors. But first I have to...{Three officers with a total of 5 shares. Add to that the 28 shares for the sailors. But first I have to...}
+Now let's see, the Sloop's guns are only 9-pounders but the Corvette could easily have 12-pounders.{Now let's see, the Sloop's guns are only 9-pounders but the Corvette could easily have 12-pounders.}
+So they may knock out our guns while we'll just hit the sea.{So they may knock out our guns while we'll just hit the sea.}
+But the worst scenario would be if they destroy the Sloop!{But the worst scenario would be if they destroy the Sloop!}
+Then we're stuck on this isolated shore...{Then we're stuck on this isolated shore...}
+What if they attack with Boats? That vessel can have a very large crew!{What if they attack with Boats? That vessel can have a very large crew!}
+Maybe that's our best chance. They can't fire the ship cannons but we can hit the Boats!!{Maybe that's our best chance. They can't fire the ship cannons but we can hit the Boats!!}
+I hear church bells - I must have been completely knocked out!{I hear church bells - I must have been completely knocked out!}
+No, the Painting is too big to carry around. Maybe if I could cut the canvas out.{No, the Painting is too big to carry around. Maybe if I could cut the canvas out.}
+No, I'll save that to later{No, I'll save that to later}
+Oh yes, I have forgotten the Painting!{Oh yes, I have forgotten the Painting!}
+Oh yes, I have forgotten the Book!{Oh yes, I have forgotten the Book!}
+
+You have been given a lockpick.{Вы получили отмычку.}
+Run! They're after you!{Бегите! Вас преследуют!}
+Someone heard that window break!{Кто-то услышал звук разбитого окна!}
+A few minutes later...{Прошло несколько минут...}
+
+A French infantry unit suddenly appears and attacks you!{На Вас нападают внезапно появившиеся французские пехотинцы!}
+Several Conquistadores attack you!{Несколько конкистадоров нападают на Вас!}
+
+Officer Boarding True{Офицер примет участие в абордаже}
+Officer Boarding False{Офицер не будет участвовать в абордаже}
+SmugglingAmount{Доход от контрабанды:}
+SmugglingState{Количество патрулей:}
+lax{простой}
+normal{обычной}
+tight{сложной}
+very tight{очень сложной}
+Increase_Patrol{increased coastguard patrol}
+Increase_Message1{Due to recent smuggling, the coastguard decided to change the amount of patrolling on }
+Increase_Message2{. They think the smugglers were onto their schedule and therefore able to get past them. Security is now }
+Decrease_Patrol{decreased coastguard patrol}
+Decrease_Message1{Due to a recent lack of smuggling, the coastguard decided to change the amount of patrolling on }
+Decrease_Message2{. It seems the coastguard was able to capture most smugglers so they decided to put some of the troops to better use. Coast guard patrol is now }
+Patrol_None{no duty, we need the troops elsewhere}
+Patrol_Low{low patrolling duty}
+Patrol_Normal{normal patrolling duty}
+Patrol_Medium{alert, the amount of contraband on the island starts to get too much}
+Patrol_High{high alert, despite previous measures contraband still finds its way to this island}

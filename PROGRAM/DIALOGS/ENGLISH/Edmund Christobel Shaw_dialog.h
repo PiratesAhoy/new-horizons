@@ -101,7 +101,7 @@ string DLG_TEXT[114] = {
 "I'm sorry, Governor, but I have to decline. I cannot spare the time required for such an endeavour.",
 "Thank you ever so much! Please make finding my daughter your highest priority, captain.",
 "I'll do my best, sir.",
-"I understand, captain. Hopefuly I will find another privateer willing to do the job.",
+"I understand, captain. Hopefully I will find another privateer willing to do the job.",
 "The best of luck, governor.",
 "Thank God! You brought my daughter back!",
 "Indeed Governor, but the pirate who kidnapped your daughter also came here!",

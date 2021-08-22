@@ -11,7 +11,7 @@ string DLG_TEXT[20] = {
 "Very well.",
 "Here take these - ",
 "- you'll look exactly like monks ...",
-"Ha, you again. I can't believe it - you ruined your uniform again!",
+"Ha, it's you, Captain Pyle. I can't believe it - you ruined your uniform again!",
 "Hmm yes... I was ambushed.",
 "If you sit down the rum will be ready in just a moment.",
 "Okay, but I...",

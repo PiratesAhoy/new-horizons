@@ -192,6 +192,27 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
 	
+	model.description =  "His name was Geralt of Rivia, he was a Witcher, a professional monster slayer and the adoptive father of Ciri Riannon.";
+	model.id	   =  "Geralt";
+	model.FaceId	= 585;
+	model.nation	  =  PERSONAL_NATION;
+	model.price	   =  5000;
+	model.assigned	=  true;
+	model.name = "Geralt";
+	model.lastname = "of Rivia";
+	model.Flags.Pirate = 0;
+	model.Flags.Personal = 45;
+	model.loadingScreen = "Quest_Geralt.tga";
+	model.playertype = PLAYER_TYPE_ADVENTURER;
+	model.storytitle = "Travelling Worlds";
+	model.storytext = "Take the role of Geralt of Rivia, a Witcher. A mutant, trained to kill monsters since childhood. Thrust into a different world and separated from your loved ones, you now search for your daughter in the Caribbean. Whether you find her or not, is a mystery...";
+	model.ship = "Lugger1";
+	model.shipname = "Roach";
+	model.date.day = 16;
+	model.date.month = 6;
+	model.date.year = 1754;
+	AddCharacterModel(model);
+	
 	// DeathDaisy: Morgen - Quest Character
 	model.description	=	"A pale witch in a black dress who probably does not get enough sleep.";
 	model.id			=	"witchgirl";
@@ -209,15 +230,30 @@ void InitModels(bool isstart)
 	model.ani	=	"woman_sit";	
 	AddCharacterModel(model);
 
+	model.description = "This elegant green dress is studded with pearls and trimmed with lace.";
+	model.id	= "Lady04_ab";
+	model.FaceID	= 580;
+	model.nation	= ENGLAND;
+	model.price	= 10000;
+	model.assigned	= true;
+	model.sex	= "woman";
+	model.ani	= "woman_ab_PoTC";
+//	model.status	=  "C_III"; // added as an identifier, for assigning another animation to the new models
+	model.height	= 1.75;
+	model.ismansion		=  true;//Pretty woman, must be a governor's niece or wife
+	AssignModelTypeNatMask(isstart, model, "Rich_Citizens", 1.0, GetNationStringNorthEuroFr());
+	AddCharacterModel(model);
+
 	// assign as captain only -->
-	model.description =  "He's big, he's bad, but most of all he is loyal to those who deserve it.";
-	model.id       =  "33_Ronal2";
+	model.description =  "He's big, he's bad, and he can out-drink anyone!";
+	model.id	=  "33_Ronal2";
 	model.FaceId	= 225;
-	model.nation      =  PIRATE;
-	model.price       =  2000;
-	model.assigned    =  true;
-	model.ani         =  "33_Ronald";
-	model.height      =  2.10;
+	model.nation	=  PIRATE;
+	model.price	=  2000;
+	model.assigned	=  true;
+	model.ani	=  "33_Ronald";
+	model.height	=  2.10;
+	model.name	= "Ron";
 	AssignModelTypeNation(isstart, model, "Captains", 1.0, PIRATE);
 	AddCharacterModel(model);
 	// <-- assign as captain only
@@ -857,12 +893,40 @@ void InitModels(bool isstart)
 	model.date.year = 1798;
 	AddCharacterModel(model);
 
-	model.description =  "I want to look like Lady Barbara Wellesley.";
-	model.id	   =  "LadyBarbara";
-	model.FaceId	= 117;
-	model.nation	  =  BROKEN;
-	model.price	   =  3000;
+	model.description =  "I want to look like Captain Horatio Hornblower, R.N.";
+	model.id	   =  "brtHCap_18";
+	model.FaceId	= 463;
+	model.minlevel     =  15;
+	model.minrank     =  6;
+	model.nation	  =  ENGLAND;
+	model.price	   =  7000;
 	model.assigned	=  true;
+	model.name = "Horatio";
+	model.lastname = "Hornblower";
+	model.loadingScreen = "Quest_Hornblower.tga";
+	model.playertype = PLAYER_TYPE_NAVAL_OFFICER;
+	model.difficulty = DIFFICULTY_SEADOG;
+	model.Flags.Pirate = 23;
+	model.Flags.Personal = 25;
+	model.ship = "RN_Essex";
+	model.shipname = "Lydia";
+	model.date.hour = 10;
+	model.date.min = 24;
+	model.date.sec = 42;
+	model.date.day = 18;
+	model.date.month = 6;
+	model.date.year = 1798;
+	AddCharacterModel(model);
+
+	model.description =  "I want to look like Lady Barbara Wellesley.";
+	model.id	=  "Lady_Barbara_Wellesley";
+	model.FaceId	= 117;
+	model.nation	=  BROKEN;
+	model.price	=  3000;
+	model.assigned	=  true;
+	model.sex	= "woman";
+	model.ani	= "woman_ab_PoTC";
+	model.height	= 1.75;
 	AddCharacterModel(model);
 
 	model.description =  "I want to look like Lieutenant Bush.";
@@ -1150,6 +1214,21 @@ void InitModels(bool isstart)
 	model.sex		= "woman";
 	model.ani		= "woman_sit";
 	model.height		= 1.75;
+	model.assigned		= true;
+	model.period = "" + PERIOD_THE_SPANISH_MAIN + PERIOD_GOLDEN_AGE_OF_PIRACY + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
+	AddCharacterModel(model);
+	// <-- no model assignment quest character
+
+	// no model assignment quest character -->
+	model.description	= "A shopkeeper's daughter has run away to sea.";
+	model.id		= "SabineM3";
+	model.FaceId		= 593;
+	model.nation		= SPAIN;
+	model.price		= 2000;
+	model.sex		= "woman";
+	model.ani		= "woman_sit";
+	model.height		= 1.75;
+	model.period = "" + PERIOD_EARLY_EXPLORERS;
 	model.assigned		= true;
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
@@ -2326,9 +2405,28 @@ void InitModels(bool isstart)
 	model.ship = SHIP_CURSED;
 	model.shipname = "Black Pearl";
 	model.Flags.Pirate = 0;
-	model.Flags.Personal = 2;
+	model.Flags.Personal = 11;
 	model.date.hour = 22;
 	model.date.year = 1740;
+	AddCharacterModel(model);
+
+	model.description =  "They're more like guidelines...";
+	model.id	  =  "Barbossa2";
+	model.FaceId	  =  393;
+	model.nation	  =  ENGLAND;
+	model.price	  =  1000;
+	model.assigned	  =  true;
+	model.name	  = "Hector";
+	model.lastname	  = "Barbossa";
+	model.storytitle  = "On Stranger Tides";
+	model.storytext	  = "Are your days of pirating truly behind you? Or do you serve the crown for your own ulterior motives?";
+	model.playertype  = PLAYER_TYPE_CORSAIR;
+	model.ship	  = "RN_Surprise";
+	model.shipname	  = "Providence";
+	model.Flags.Pirate = 0;
+	model.Flags.Personal = 11;
+	model.date.hour	  = 9;
+	model.date.year	  = 1744;
 	AddCharacterModel(model);
 
 	model.description =  "Is it true what they say about redheads? Why don't you come here and find out, cur!";
@@ -2498,7 +2596,7 @@ void InitModels(bool isstart)
 	model.playertype  = PLAYER_TYPE_CORSAIR;
 	model.ship = "QueenAnnesRevenge";
 	model.shipname = "Queen Anne's Revenge";
-	model.Flags.Pirate = 5;
+	model.Flags.Pirate = 20;
 	model.Flags.Personal = 2;
 	model.date.year = 1740;
 	AddCharacterModel(model);
@@ -2573,6 +2671,18 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	model.name = "Nathaniel";
 	model.lastname = "Hawk";
+	model.playertype  = PLAYER_TYPE_MERCHANT;
+	model.difficulty = DIFFICULTY_LANDLUBBER;
+	model.Flags.Pirate = 15;
+	model.Flags.Personal = 14;
+	model.ship = "LuggerVML";
+	model.shipname = "Sea Horse";
+	model.date.hour = 10;
+	model.date.min = 24;
+	model.date.sec = 42;
+	model.date.day = 16;
+	model.date.month = 4;
+	model.date.year = 1750;
 	AddCharacterModel(model);
 
 	// Thomas the Terror -->
@@ -2678,7 +2788,43 @@ void InitModels(bool isstart)
 	model.lastname = "Hawk";
 	AddCharacterModel(model);
 
-	model.description =  "I have a somewhat black mood today, have you something that compliment that?";
+	model.description =  "An adventurer from the Italic peninsula, in search of glory in the Caribbean.";
+	model.id	   =  "Sergio";
+	model.FaceId	= 16;
+	model.nation	  =  PERSONAL_NATION;
+	model.price	   =  300;
+	model.assigned	=  true;
+	model.playertype = PLAYER_TYPE_ADVENTURER;
+	model.name = "Sergio";
+	model.lastname = "The SeaWolf";
+	model.Flags.Personal = 4;
+	AddCharacterModel(model);
+
+        model.description =  "An adventurer from the Italic peninsula, in search of glory in the Caribbean.";
+	model.id	   =  "Sergio1";
+	model.FaceId	= 16;
+	model.nation	  =  PERSONAL_NATION;
+	model.price	   =  400;
+	model.assigned	=  true;
+	model.playertype = PLAYER_TYPE_ADVENTURER;
+	model.name = "Sergio";
+	model.lastname = "The SeaWolf";
+	model.Flags.Personal = 4;
+	AddCharacterModel(model);
+
+	model.description =  "An adventurer from the Italic peninsula, in search of glory in the Caribbean.";
+	model.id	   =  "Sergio2";
+	model.FaceId	= 16;
+	model.nation	  =  PERSONAL_NATION;
+	model.price	   =  500;
+	model.assigned	=  true;
+	model.playertype = PLAYER_TYPE_ADVENTURER;
+	model.name = "Sergio";
+	model.lastname = "The SeaWolf";
+	model.Flags.Personal = 4;
+	AddCharacterModel(model);
+
+	model.description =  "I have a somewhat black mood today, have you something that compliments that?";
 	model.id	   =  "Blaze5";
 	model.FaceId	= 16;
 	model.nation	  =  PERSONAL_NATION;
@@ -3212,31 +3358,29 @@ void InitModels(bool isstart)
 	AssignModelType(isstart, model, OFFIC_TYPE_CANNONEER, 1.0);
 	AddCharacterModel(model);
 
-	// Armor Mod -->
-	/*model.description =  "Crew cut, grey trousers, red leather boots and a shirt that fits loose and will show off some muscles!";
-	model.id          =  "capstan_A1";
+	model.description =  "Crew cut, grey trousers, red leather boots and a shirt that fits loose and will show off some muscles!";
+	model.id          =  "capstan1";
 	model.FaceId	  = "301";
-	model.nation      =  BROKEN; // we autoassign it elsewhere
+	model.nation      =  ENGLAND;
 	model.price       =  5000;
 	model.assigned    =  true;
 	AddCharacterModel(model);
 
 	model.description =  "Crew cut, grey trousers, dark brown leather boots, a shirt that fits loose, a waistcoat and sword belt and the kid gloves are off.";
-	model.id          =  "capstan_A2";
+	model.id          =  "capstan2";
 	model.FaceId	  = "301";
-	model.nation      =  BROKEN; // we autoassign it elsewhere
+	model.nation      =  ENGLAND;
 	model.price       =  10000;
 	model.assigned	   =  true;
 	AddCharacterModel(model);
 
 	model.description =  "Crew cut, grey trousers, dark leather gold trim boots and a shirt that fits loose, a waistcoat and headband, bare knuckled. He makes a good Pirate!";
-	model.id          =  "capstan_A3";
+	model.id          =  "capstan3";
 	model.FaceId	  = "301";
-	model.nation      =  BROKEN; // we autoassign it elsewhere
+	model.nation      =  ENGLAND;
 	model.price       =  15000;
 	model.assigned    =  true;
-	AddCharacterModel(model);*/
-	// <-- Armor Mod
+	AddCharacterModel(model);
 
 	// no model assignment quest character -->
 	model.description =  "This pirate resembles one famous pennyless French Captain";
@@ -3721,6 +3865,29 @@ void InitModels(bool isstart)
 	model.date.year = 1691;
 	AddCharacterModel(model);
 
+	model.description	= "Shave and a haircut - two grand. You'd hardly recognise Charles Ardent!"
+	model.id		=  "ArdentM_2"; // Based on "Blaze_NB"
+	model.FaceId		=  586;
+	model.nation		=  BROKEN; // Assigned during story
+	model.price		=  2000;
+	model.assigned		=  true;
+	model.name		= "Charles";
+	model.lastname		= "Ardent";
+	AddCharacterModel(model);
+
+	model.description	=  "Helen Ardent - in a dress?";
+	model.id		=  "ArdentF_2"; // Based on "towngirl4" with texture from AoP lady_5"
+	model.FaceId		=  587;
+	model.nation		=  BROKEN; // Assigned during story
+	model.price		=  2400;
+	model.sex		=  "woman";
+	model.ani		=  "woman_sit";
+	model.height		=  1.75;
+	model.name		= "Helen";
+	model.lastname		= "Ardent";
+	model.assigned		=  true;
+	AddCharacterModel(model);
+
 	model.description	=  "This ornate dress with golden trimming is very suitable for the daughter of a governor.";
 	model.id		=  "Lucia_1";
 	model.FaceId		=  360;
@@ -3754,7 +3921,7 @@ void InitModels(bool isstart)
 	model.sex		=  "woman";
 	model.ani		=  "woman_sit";
 	model.height		=  1.75;
-	model.FaceId		=  360;
+	model.FaceId		=  588;
 	model.nation		=  BROKEN; // Assigned during story
 	model.price		=  2000;
 	model.assigned		=  true;
@@ -3823,6 +3990,51 @@ void InitModels(bool isstart)
 	model.date.year = 1671;
 	AddCharacterModel(model);
 
+	model.description	=  "An intricately decorated brown outfit for a veteran adventurer.";
+	model.id		=  "Montoya";
+	model.FaceId		=  573;
+	model.nation		=  SPAIN;
+	model.price		=  5000;
+	model.assigned		=  true;
+	model.height		=  1.85;
+	model.sex		=  "man";
+	model.ani		=  "Rousselet";
+	model.status		=  "C_III"; // added as an identifier, for assigning another animation to the new models
+	model.playertype  	= PLAYER_TYPE_ADVENTURER;
+	AddCharacterModel(model);
+
+	model.description	=  "A purple dress with lace trim and a lot of jewellery. She must be very important, very rich, or both.";
+	model.id		=  "MariaAntonia";
+	model.FaceId		=  575;
+	model.nation		=  HOLLAND; // made buyable
+	model.price		=  20000;
+	model.assigned		=  true;
+	model.sex		=  "woman";
+	model.ani		=  "woman_sit";
+	model.height		=  1.75;
+	model.iscombat		=  false;
+	model.playertype	= PLAYER_TYPE_SOCIAL_CLIMBER;
+	model.Flags.Pirate	= 9;
+	model.Flags.Personal	= 44;
+	AddCharacterModel(model);
+
+	model.description =  "A distinguished look for an important person - a governor or admiral, perhaps.";
+	model.id	   =  "hub_spa5"; // Based on "hub_spa2" with parts from others
+	model.FaceId	= 574;
+	model.nation	  =  SPAIN;
+	model.price	   =  10000;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "A wealthy man's dark green suit with gold buttons and a medallion.";
+	model.id	   =  "hub_por2"; // Retexture of "hub_spa3" with face from "huber_por2"
+	model.FaceId	= 576;
+	model.nation	  =  PORTUGAL;
+	model.price	   =  10000;
+	model.assigned	=  true;
+	model.playertype  = PLAYER_TYPE_SOCIAL_CLIMBER;
+	AddCharacterModel(model);
+
 	model.description =  "Charles Ardent has 'borrowed' a Spanish uniform.";
 	model.id	=  "Ardent_S"; // Based on "Offic_spa_17"
 	model.FaceId	= 244;
@@ -3857,6 +4069,14 @@ void InitModels(bool isstart)
 	model.sex       =  "woman";
 	model.height      =  1.75;
 	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description	=  "A blue sleeveless shirt, beard and scar for a tough guy who has stayed alive for a long time and plans to keep doing it!";
+	model.id		=  "Louwman";
+	model.FaceId		= 577;
+	model.nation		= PIRATE;
+	model.price		= 400;
+	model.assigned		= true;
 	AddCharacterModel(model);
 
 	model.description =  "I feel like James Norrington today, I need a fine Captain uniform. And don't forget the wig!";
@@ -3961,6 +4181,8 @@ void InitModels(bool isstart)
 	model.name = "Danielle";
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelType(isstart, model, "Upper_Citizens", 1.0);
+	AssignModelType(isstart, model, OFFIC_TYPE_NAVIGATOR, 1.0);
+	AssignModelType(isstart, model, OFFIC_TYPE_CANNONEER, 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "Looking real good in her hot red outfit.";
@@ -3975,6 +4197,24 @@ void InitModels(bool isstart)
 	model.name = "Danielle";
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelType(isstart, model, "Rich_Citizens", 1.0);
+	AssignModelType(isstart, model, OFFIC_TYPE_NAVIGATOR, 1.0);
+	AssignModelType(isstart, model, OFFIC_TYPE_FIRSTMATE, 1.0);
+	AddCharacterModel(model);
+
+	model.description =  "Golden decorations adorn this white blouse - what there is of it!";
+	model.id    	  =  "Lukreci";
+	model.FaceId	  =  578;
+	model.nation      =  PORTUGAL;
+	model.price       =  3500;
+	model.assigned    =  true;
+	model.sex         =  "woman";
+	model.ani         =  "woman_sit";
+	model.height      =  1.75;
+	model.name = "Lucrezia";
+	AssignModelType(isstart, model, "women", 1.0);
+	AssignModelType(isstart, model, "Upper_Citizens", 1.0);
+	AssignModelType(isstart, model, OFFIC_TYPE_DOCTOR, 1.0);
+	AssignModelType(isstart, model, OFFIC_TYPE_NAVIGATOR, 1.0);
 	AddCharacterModel(model);
 
 	// no model assignment quest character -->
@@ -4162,6 +4402,20 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);*/
 	// <-- Armor Mod
 
+	model.description	=  "The son of a French nobleman, who became a well known captain after coming to the Caribbean in quite hasty circumstances.";
+	model.id		=  "Sharl";
+	model.FaceId		=  595;
+	model.nation		=  FRANCE;
+	model.price		=  1000;
+	model.assigned		=  true;
+	model.height		=  1.85;
+	model.sex		=  "man";
+	model.ani		=  "Blaze";
+	model.status		=  "C_III"; // added as an identifier, for assigning another animation to the new models
+	model.name = "Charles";
+	model.lastname = "de Maure";
+	AddCharacterModel(model);
+
 	// no model assignment quest character -->
 	model.description =  "How about a nice young impressionable cabin boy type?";
 	model.id       =  "Diller";
@@ -4324,6 +4578,18 @@ void InitModels(bool isstart)
 	AssignModelTypeNation(isstart, model, "Lower_Citizens", 0.03, FRANCE);
 	AddCharacterModel(model);
 
+	model.description	=  "Have you a nice green dress like the one worn by the tavern girl in Cartagena?";
+	model.id		=  "Jimena";	// Specifically for Cartagena tavern 2, not to appear randomly - GR
+	model.FaceId		=  589;
+	model.nation		=  SPAIN;
+	model.price		=  8000;
+	model.assigned		=  true;
+	model.height		=  1.72;
+	model.sex		=  "woman";
+	model.ani		=  "woman_sit";
+	model.iscombat		=  -1;
+	AddCharacterModel(model);
+
 	model.description	=  "A dark red dress with blue sleeves and skirt marks its owner as a woman of wealth.";
 	model.id		=  "lady1";	// Based on AoP "lady1" texture modified onto "towngirl5" model
 	model.FaceId		=  359;
@@ -4353,11 +4619,25 @@ void InitModels(bool isstart)
 	model.assigned		=  true;
 	model.height		=  1.75;
 	model.sex		=  "woman";
-//	model.ani			=  "towngirl";
+//	model.ani		=  "towngirl";
 	model.ani		=  "woman_sit";
 	model.iscombat		=  -1;
 	model.ismansion		=  true;//Could be a governor's wife
-//	AssignModelTypeNatMask(isstart, model, "Rich_Citizens", 1.0, GetNationStringNorthEuroFr());
+	AddCharacterModel(model);
+
+	model.description	=  "This light blue dress with white trimmings would suit any lady from a wealthy family.";
+	model.id		=  "lady6";	// Based on AoP "lady6" texture modified onto "towngirl7" model
+	model.FaceId		=  591;
+	model.nation		=  ENGLAND;
+	model.price		=  9000;
+	model.assigned		=  true;
+	model.height		=  1.75;
+	model.sex		=  "woman";
+//	model.ani		=  "towngirl";
+	model.ani		=  "woman_sit";
+	model.iscombat		=  -1;
+	model.ismansion		=  true;//Could be a governor's wife
+	AssignModelTypeNatMask(isstart, model, "Rich_Citizens", 1.0, GetNationStringNorthEuroFr());
 	AddCharacterModel(model);
 
 	// Thomas the Terror EITC officers -->
@@ -4416,6 +4696,96 @@ void InitModels(bool isstart)
 	model.playertype  = PLAYER_TYPE_MERCHANT;
 	AddCharacterModel(model);
 	// <-- Thomas the Terror EITC officers
+
+	// GhostOfDeath91 EITC soldiers -->
+	model.description =  "A proud officer of the EITC's own regiment.";
+	model.id          =  "Offic_EITC";
+	model.FaceId      =  572;
+	model.minrank     =  5;
+	model.nation      =  ENGLAND;
+	model.price       =  2000;
+	model.assigned    =  true;
+	model.playertype  = PLAYER_TYPE_MILITARY;
+	AssignModelType(isstart, model, "Merchant_Officers", 1.0);
+	AddCharacterModel(model);
+
+	model.description =  "A soldier of the EITC's own regiment, with long, dark sideburns.";
+	model.id          =  "Soldier_EITC";
+	model.FaceId      =  572;
+	model.minrank     =  1;
+	model.nation      =  ENGLAND;
+	model.price       =  1000;
+	model.assigned    =  true;
+	model.playertype  = PLAYER_TYPE_MILITARY;
+	AssignModelType(isstart, model, "Merchant_Soldiers", 1.0);
+	AddCharacterModel(model);
+
+	model.description =  "A fresh-faced young soldier of the EITC's own regiment.";
+	model.id          =  "Soldier_EITC2";
+	model.FaceId      =  572;
+	model.minrank     =  1;
+	model.nation      =  ENGLAND;
+	model.price       =  1000;
+	model.assigned    =  true;
+	model.playertype  = PLAYER_TYPE_MILITARY;
+	AssignModelType(isstart, model, "Merchant_Soldiers", 1.0);
+	AddCharacterModel(model);
+
+	model.description =  "A soldier of the EITC's own regiment with a neatly trimmed moustache.";
+	model.id          =  "Soldier_EITC3";
+	model.FaceId      =  572;
+	model.minrank     =  1;
+	model.nation      =  ENGLAND;
+	model.price       =  1000;
+	model.assigned    =  true;
+	model.playertype  = PLAYER_TYPE_MILITARY;
+	AssignModelType(isstart, model, "Merchant_Soldiers", 1.0);
+	AddCharacterModel(model);
+
+	model.description =  "A soldier of the EITC's own regiment. Have the barber trim the goatee!";
+	model.id          =  "Soldier_EITC4";
+	model.FaceId      =  572;
+	model.minrank     =  1;
+	model.nation      =  ENGLAND;
+	model.price       =  1000;
+	model.assigned    =  true;
+	model.playertype  = PLAYER_TYPE_MILITARY;
+	AssignModelType(isstart, model, "Merchant_Soldiers", 1.0);
+	AddCharacterModel(model);
+
+	model.description =  "A soldier of the EITC's own regiment. The barber is just down the street.";
+	model.id          =  "Soldier_EITC5";
+	model.FaceId      =  572;
+	model.minrank     =  1;
+	model.nation      =  ENGLAND;
+	model.price       =  1000;
+	model.assigned    =  true;
+	model.playertype  = PLAYER_TYPE_MILITARY;
+	AssignModelType(isstart, model, "Merchant_Soldiers", 1.0);
+	AddCharacterModel(model);
+
+	model.description =  "A soldier of the EITC's own regiment who takes as much care of his beard as his equipment.";
+	model.id          =  "Soldier_EITC6";
+	model.FaceId      =  572;
+	model.minrank     =  1;
+	model.nation      =  ENGLAND;
+	model.price       =  1000;
+	model.assigned    =  true;
+	model.playertype  = PLAYER_TYPE_MILITARY;
+	AssignModelType(isstart, model, "Merchant_Soldiers", 1.0);
+	AddCharacterModel(model);
+
+	model.description =  "A soldier of the EITC's own regiment with fair hair and sideburns.";
+	model.id          =  "Soldier_EITC7";
+	model.FaceId      =  572;
+	model.minrank     =  1;
+	model.nation      =  ENGLAND;
+	model.price       =  1000;
+	model.assigned    =  true;
+	model.playertype  = PLAYER_TYPE_MILITARY;
+	AssignModelType(isstart, model, "Merchant_Soldiers", 1.0);
+	AddCharacterModel(model);
+	// <-- GhostOfDeath91 EITC soldiers
 
 	// no model assignment quest character -->
 	model.description	=  "Spanish grandee in the past, he was forced to leave the country. Hates englishmen and... friends betrayers.";
@@ -4702,6 +5072,16 @@ void InitModels(bool isstart)
 	model.name = "Gherarde";
 	model.lastname = "de Jongh";
 	AddCharacterModel(model);
+
+	model.description	= "I want to look like Guibert Daudet.";
+	model.id		= "Guibert_Daudet";
+	model.FaceId		= 594;
+	model.nation		= FRANCE;
+	model.price		= 200;
+	model.assigned		= true;
+	model.name		= "Guibert";
+	model.lastname		= "Daudet";
+	AddCharacterModel(model);
 	// <-- For the Bartolomeu o Portugues quest
 
 	// assign as captain only -->
@@ -4717,6 +5097,19 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	AddCharacterModel(model);
 	// <-- assign as captain only
+
+	model.description =  "If you want to know what the future holds for you, this woman can tell you - for a hand full of silver.";
+	model.id	=  "gipsygirl";
+	model.FaceId	= 581;
+	model.nation	=  SPAIN;
+	model.price	=  1600;
+	model.height	=  1.75;
+	model.sex	=  "woman";
+//	model.ani =  "towngirl";
+	model.ani	=  "woman_sit";
+	model.assigned	=  true;
+	AssignModelType(isstart, model, "women", 1.0);
+	AddCharacterModel(model);
 
 	model.description =  "Phinneas Wake, the Gypsy Captain, has spent a long time prowling the Spanish Main... and has the scars to prove it!";
 	model.id	   =  "gypsycaptain";
@@ -5116,6 +5509,16 @@ void InitModels(bool isstart)
 	model.shipname = "Jamaica Merchant";
 	AddCharacterModel(model);
 	// <-- For the Bartolomeu o Portugues quest
+	
+	// For a Family story quest -->
+	model.description =  "A very wealthy-looking guy you could easily imagine to be a Spanish merchant.";
+	model.id	   =  "FernandoSuarez";
+	model.FaceId	= 584;
+	model.nation	  =  SPAIN;
+	model.price	   =  2750;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+	// <-- For a Family story quest	
 
 	model.description =  "An eldery beggar, who spent all his money on women and booze. But still a good poet!";
 	model.id	   =  "HenryBeggar";
@@ -5344,6 +5747,17 @@ void InitModels(bool isstart)
 	AssignModelType(isstart, model, "Indians", 1.0);
 	AddCharacterModel(model);
 
+	model.description =  "A woman from a native village, in traditional dress.";
+	model.id	   =  "Indian_girl2";
+	model.FaceId	= 596;
+	model.price	   =  100;
+	model.height	  =  1.75;
+	model.sex =  "woman";
+	model.ani		=  "woman_sit";
+	model.assigned	=  true;
+	AssignModelType(isstart, model, "Indians", 1.0);
+	AddCharacterModel(model);
+
 	model.description =  "An elderly Indian.";
 	model.id	   =  "Indian1";
 	model.FaceId	= 240;
@@ -5427,7 +5841,7 @@ void InitModels(bool isstart)
 
 	model.description =  "The best gunsmith in the Caribbean, if you please!";
 	model.id	   =  "Jack_Rackham";
-	model.FaceId	= 11; // TALISMAN changed was 60
+	model.FaceId	= 537; // TALISMAN changed was 60, JRH changed was 11
 	model.nation	  =  PIRATE;
 	model.price	   =  1500;
 	model.assigned	=  true;
@@ -5659,6 +6073,8 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelTypeNatMask(isstart, model, "Rich_Citizens", 1.0, GetNationStringNorthEuro());
+	AssignModelType(isstart, model, OFFIC_TYPE_NAVIGATOR, 1.0);
+	AssignModelType(isstart, model, OFFIC_TYPE_QMASTER, 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "This nice golden dress will so accentuate those lovely blonde curls so that no one would think of telling a blonde joke...";
@@ -5792,7 +6208,7 @@ void InitModels(bool isstart)
 	AssignModelType(isstart, model, OFFIC_TYPE_QMASTER, 1.0);
 	AddCharacterModel(model);
 
-	model.description =  "White long-sleeved shirt, closed vest...  Sure you've seen it before, Thomas O'Reily of Redmond wears such a suit!";
+	model.description =  "White long-sleeved shirt, closed vest... Just the right thing to blend in well with the village idiots.";
 	model.id	   =  "Man2";
 	model.FaceId	= 26;
 	model.nation	  =  HOLLAND;
@@ -5883,23 +6299,23 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "A humble man born in Vlissingen as son of a beer porter. Yet with the makings of greatness!";
-	model.id	   =  "DeRuyter";
+	model.id	=  "DeRuyter";
 	model.FaceId	= 109;
-	model.minlevel     =  8;
-	model.minrank	 =  4;
-	model.nation	  =  HOLLAND;
-	model.price	   =  900;
+	model.minlevel	=  8;
+	model.minrank	=  4;
+	model.nation	=  HOLLAND;
+	model.price	=  900;
 	model.assigned	=  true;
-	model.name = "Michiel";
-	model.lastname = "de Ruyter";
+	model.name	= "Michiel";
+	model.lastname	= "de Ruyter";
 	model.storytitle = "Bestevaêr";
 	model.storytext = "Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!";
 	model.playertype = PLAYER_TYPE_NAVAL_OFFICER;
-	model.ship = "NL_NeptunusE";
-	model.shipname = "Neptunus";
+	model.ship	= "NL_NeptunusE";
+	model.shipname	= "Neptunus";
 	model.Flags.Pirate = 23;
 	model.Flags.Personal = 32;
-	model.date.year = 1632;
+	model.date.year	= 1652;
 	AddCharacterModel(model);
 
 	model.description =  "This simple dark vested suit cries out 'success' without crying it too loudly.";
@@ -7086,6 +7502,31 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
 
+	model.description =  "This sailor has a grey jacket with golden trim and leather shoulder patches. And who needs a beard when you have sideburns like that?";
+	model.id	   =  "Almeida";
+	model.FaceId	= 582;
+	model.nation	  =  PORTUGAL;
+	model.price	   =  1200;
+	model.assigned	=  true;
+	model.ani	=  "Rousselet";
+	model.status	=  "C_III"; // added as an identifier, for assigning another animation to the new models
+	model.name = "José";
+	model.middlename = "Joaquím";
+	model.lastname = "Almeida";
+	model.storytitle = "Rustic Sea Wolf";
+	model.storytext = "I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character)";
+	model.playertype = PLAYER_TYPE_CORSAIR;
+	model.ship = "US_Schooner47";
+	model.shipname = "Caroline";
+	model.Flags.Pirate = 24;
+	model.Flags.Personal = 35;
+	model.date.month = 6;
+	model.date.year = 1812;
+	AssignModelTypeNatMask(isstart, model, "Sailors", 1.0, GetNationStringSouthEuro());
+	AssignModelType(isstart, model, OFFIC_TYPE_CANNONEER, 1.0);
+	AssignModelType(isstart, model, OFFIC_TYPE_ABORDAGE, 1.0);
+	AddCharacterModel(model);
+
 	model.description =  "A stripped short sleeve shirt, light brown vest, and bandanna to accent the dark hair and beart. An eyepatch is probably called for, but I don't seem to see one...";
 	model.id	   =  "Sailor";
 	model.FaceId	= 3;
@@ -7123,18 +7564,7 @@ void InitModels(bool isstart)
 	model.nation	  =  PORTUGAL;
 	model.price	   =  120;
 	model.assigned	=  true;
-    model.name = "José";
-    model.middlename = "Joaquín";
-	model.lastname = "Almeida";
-    model.storytitle = "Rustic Sea Wolf";
-    model.storytext = "I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character)";
-    model.playertype = PLAYER_TYPE_CORSAIR;
-    model.ship = "US_Schooner47";
-    model.shipname = "Caroline";
-    model.Flags.Pirate = 24;
-	model.Flags.Personal = 35;
-    model.date.month = 6;
-    model.date.year = 1812;
+	model.playertype = PLAYER_TYPE_SAILOR;
 	AssignModelType(isstart, model, "Sailors", 1.0);
 	AssignModelType(isstart, model, OFFIC_TYPE_ABORDAGE, 1.0);
 	AddCharacterModel(model);
@@ -9509,13 +9939,29 @@ void InitModels(bool isstart)
 	model.description =  "This fine dress is a perfect match for the dark eyes and hair of a girl from warm lands.";
 	model.id	   =  "towngirl1_2";
 	model.FaceId	= 269;
-	model.nation	  =  SPAIN; // made buyable
+	model.nation	  =  PORTUGAL; // made buyable
 	model.price	   =  1000;
 	model.assigned	=  true;
 	model.sex		 =  "woman";
 //	model.ani		 =  "towngirl";
 	model.ani		=  "woman_sit";
 	model.height	  =  1.75;
+	model.iscombat = false;
+	AssignModelType(isstart, model, "women", 1.0);
+	AssignModelTypeNatMask(isstart, model, "Upper_Citizens", 1.0, GetNationStringSouthEuro());
+	AssignModelTypeNation(isstart, model, "Upper_Citizens", 0.1, PIRATE);
+	AddCharacterModel(model);
+
+	model.description	= "This gold and red dress should turn a few heads in any Spanish town.";
+	model.id		= "towngirl1_3";
+	model.FaceId		= 583;
+	model.nation		= SPAIN; // made buyable
+	model.price		= 1000;
+	model.assigned		= true;
+	model.sex		= "woman";
+//	model.ani		= "towngirl";
+	model.ani		= "woman_sit";
+	model.height		=  1.75;
 	model.iscombat = false;
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelTypeNatMask(isstart, model, "Upper_Citizens", 1.0, GetNationStringSouthEuro());
@@ -9648,6 +10094,22 @@ void InitModels(bool isstart)
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelType(isstart, model, "Lower_Citizens", 1.0);
 	AssignModelTypeNation(isstart, model, "Lower_Citizens", 0.05, PIRATE);
+	AddCharacterModel(model);
+
+	model.description =  "This dress features a light, cool upper; an elaborate brown bodice; and a green skirt to finish.";
+	model.id	   =  "towngirl7_2";
+	model.FaceId		= 579;
+	model.nation		=  SPAIN; // made buyable
+	model.price		=  1000;
+	model.assigned		=  true;
+	model.sex		=  "woman";
+//	model.ani		=  "towngirl";
+	model.ani		=  "woman_sit";
+	model.height		=  1.75;
+	model.iscombat = false;
+	AssignModelType(isstart, model, "women", 1.0);
+	AssignModelTypeNatMask(isstart, model, "Middle_Citizens", 1.0, GetNationStringSouthEuro());
+	AssignModelTypeNation(isstart, model, "Middle_Citizens", 0.05, PIRATE);
 	AddCharacterModel(model);
 
 // JMV's USA officer models recoded by Jack Davidson using JMV's textures based on original Akella models -->
@@ -9786,6 +10248,26 @@ void InitModels(bool isstart)
 	model.date.year = 1750;
 	AddCharacterModel(model);
 
+	// no model assignment quest character -->
+	model.description =  "Death is only the beginning.";
+	model.id          =  "Orellana";
+	model.FaceId      =  590;
+	model.nation      =  SPAIN;
+	model.price       =  5000;
+	model.assigned    =  true;
+	model.name = "Ricardo";
+	model.lastname = "Orellana";
+	model.storytitle = "The Devil's Ship";
+	model.storytext = "You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.";
+	model.ship = "CursedMariana";
+	model.shipname = "Mariana";
+	model.playertype = PLAYER_TYPE_CURSED;
+	model.Flags.Pirate = 15;
+	model.Flags.Personal = 46;
+	model.date.hour = 22;
+	model.date.year = 1715;
+	AddCharacterModel(model);
+	
 	// Armor Mod -->
 	/*model.description =  "A nice little brown outfit, with a hat pinned up on the side and a steel cuirass, like Will Turner the swordsmith was wearing at the dock the other day!";
 	model.id	   =  "will_A1";
@@ -9943,8 +10425,10 @@ void InitModels(bool isstart)
 	model.FaceId	= 262;
 	model.nation	  =  CURSED;
 	model.assigned	=  true;
+	model.camouflage = true; // PB: Everyone is Enemy
 	model.sex		 =  "skeleton";
 	model.ani		 =  "man"; // was skeleton
+	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "Your second basic collection of animated old bones covered in seaweed.";
@@ -9952,8 +10436,10 @@ void InitModels(bool isstart)
 	model.FaceId	= 263;
 	model.nation	  =  CURSED;
 	model.assigned	=  true;
+	model.camouflage = true; // PB: Everyone is Enemy
 	model.sex		 =  "skeleton";
 	model.ani		 =  "man"; // was skeleton
+	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "Your third basic collection of animated old bones covered in seaweed.";
@@ -9961,8 +10447,10 @@ void InitModels(bool isstart)
 	model.FaceId	= 264;
 	model.nation	  =  CURSED;
 	model.assigned	=  true;
+	model.camouflage = true; // PB: Everyone is Enemy
 	model.sex		 =  "skeleton";
 	model.ani		 =  "man"; // was skeleton
+	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "Your fourth basic collection of animated old bones covered in seaweed.";
@@ -9970,8 +10458,10 @@ void InitModels(bool isstart)
 	model.FaceId	= 265;
 	model.nation	  =  CURSED;
 	model.assigned	=  true;
+	model.camouflage = true; // PB: Everyone is Enemy
 	model.sex		 =  "skeleton";
 	model.ani		 =  "man"; // was skeleton
+	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "Your fifth basic collection of animated old bones covered in seaweed.";
@@ -9979,8 +10469,10 @@ void InitModels(bool isstart)
 	model.FaceId	= 153;
 	model.nation	  =  CURSED;
 	model.assigned	=  true;
+	model.camouflage = true; // PB: Everyone is Enemy
 	model.sex		 =  "skeleton";
 	model.ani		 =  "man"; // was skeleton
+	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "A very strange collection of animated bones, was it ever human.";
@@ -9992,6 +10484,7 @@ void InitModels(bool isstart)
 	model.camouflage = true; // PB: Everyone is Enemy
 	model.sex		 =  "skeleton";
 	model.ani		 =  "man"; // was skeleton
+	AssignModelType(isstart, model, "Ghost", 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "I need to kill a lot of people, but very quietly!";
@@ -10273,7 +10766,7 @@ void InitModels(bool isstart)
 	model.loadingScreen = "Character_BraveBlackFlag.tga";
 	model.playertype = PLAYER_TYPE_REBEL;
 	model.difficulty = DIFFICULTY_SEADOG;
-	model.Flags.Pirate = 20;
+	model.Flags.Pirate = 5;
 	model.Flags.Personal = 30;
 	model.ship = "BrigRoyal";
 	model.shipname = "Defiance";
@@ -10778,6 +11271,13 @@ void InitModels(bool isstart)
 
 	model.description =  "";
 	model.id	   =  "Howard_Pyle_hat_a";
+	model.FaceId	= 488;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "invisible";
 	model.FaceId	= 488;
 	model.nation	  =  BROKEN;
 	model.assigned	=  true;
@@ -12254,6 +12754,15 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	AddCharacterModel(model);
 
+	//Israel Hands, one leg english officer
+	model.description =  "";
+	model.id	   =  "bb_Hands2_officer";
+	model.FaceId	= 535;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+
 	//Richards
 	model.description =  "";
 	model.id	   =  "bb_Richards";
@@ -12270,10 +12779,26 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	AddCharacterModel(model);
 
+	//Pell, english officer
+	model.description =  "";
+	model.id	   =  "bb_Pell_officer";
+	model.FaceId	= 400;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
 	//Pell prisoner
 	model.description =  "";
 	model.id	   =  "bb_Pell_prisoner";
-	model.FaceId	= 400;
+	model.FaceId	= 401;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	//capJRMM as english soldier
+	model.description =  "";
+	model.id          =  "bb_qm_soldier";
+	model.FaceId      =  563;
 	model.nation	  =  BROKEN;
 	model.assigned	=  true;
 	AddCharacterModel(model);
@@ -12311,7 +12836,7 @@ void InitModels(bool isstart)
 	//Caesar
 	model.description =  "";
 	model.id	   =  "bb_Caesar";
-	model.FaceId	= 194;
+	model.FaceId	= 597;
 	model.nation	  =  BROKEN;
 	model.assigned	=  true;
 	AddCharacterModel(model);
@@ -12327,7 +12852,7 @@ void InitModels(bool isstart)
 	//Caesar as black servant
 	model.description =  "";
 	model.id	   =  "black_servant2";
-	model.FaceId	= 194;
+	model.FaceId	= 597;
 	model.nation	  =  BROKEN;
 	model.assigned	=  true;
 	AddCharacterModel(model);
@@ -12595,6 +13120,13 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "";
+	model.id	   =  "priest_inq";
+	model.FaceId	= 551;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+	
+	model.description =  "";
 	model.id	   =  "inquisition_priest";
 	model.FaceId	= 550;
 	model.nation	  =  BROKEN;
@@ -12759,6 +13291,30 @@ void InitModels(bool isstart)
 	model.date.month = 10;
 	model.date.year = 1682;
 	AddCharacterModel(model);
+
+	// PB: Piet Hein Character Addition Tutorial -->
+	model.description	= "A Dutch admiral and privateer for the Dutch Republic during the Eighty Years' War. The first and the last to capture a large part of a Spanish treasure fleet from America.";
+	model.id		= "Piet_Hein";
+	model.FaceId		=  592;
+	model.nation		=  HOLLAND;
+	model.price		=  11509524;				// guilders of booty in gold, silver, and other expensive trade goods
+	model.assigned		=  true;
+	model.name		= "Piet";
+	//model.middlename	= "Pieterszoon";
+	model.lastname		= "Hein";
+	model.storytitle	= "De Zilvervloot";			// http://www.goudenboekjes.nl/product/de-zilvervloot-piet-hein
+	model.storytext		= "'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piets eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?";
+	model.playertype	=  PLAYER_TYPE_CORSAIR;		// start with Letter of Marque/Kapersbrief
+	model.difficulty	=  DIFFICULTY_LANDLUBBER;	// fun for the kids!
+	model.ship		= "NL_NeptunusE";			// 
+	model.shipname		= "Neptunus";				// in 1618, when he was captain of the Neptunus, both he and his ship were pressed into service by the Republic of Venice.
+	model.Flags.Pirate	=     1;					// former PiratesAhoy! logo seems fitting
+	model.Flags.Personal	=     9;					// flag of my dear 'ol Amsterdam
+	model.date.day		=     8;					// my birthday
+	model.date.month	=    10;					// because why not?
+	model.date.year		=  1626;					// Smack-dab in the middle of The Spanish Main period
+	AddCharacterModel(model);
+	// PB: Piet Hein Character Addition Tutorial <--
 
 	model.description =  "";
 	model.id	   =  "zombie1";
@@ -12937,6 +13493,31 @@ void InitModels(bool isstart)
 	model.playertype  = PLAYER_TYPE_MILITARY;
 	model.period = "" + PERIOD_THE_SPANISH_MAIN;
 	AssignModelTypeNation(isstart, model, "Soldiers", 1.0, sti(model.nation));
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Offic_Swe_18";
+	model.FaceId	= 390;
+	model.minrank	 =  1;
+	model.nation	  =  SWEDEN;
+	model.assigned	=  true;
+	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY + PERIOD_COLONIAL_POWERS;
+	AssignModelTypeNation(isstart, model, "Land_Officers", 1.0, SWEDEN);
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Offic_Swe2_18";
+	model.FaceId	= 391;
+	model.minrank	 =  1;
+	model.nation	  =  SWEDEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Grenadier_Swe_18";
+	model.FaceId	= 217;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
 	AddCharacterModel(model);
 
 	model.description =  "";
@@ -13130,8 +13711,8 @@ void InitModels(bool isstart)
 	model.minrank	 =  1;
 	model.nation	  =  SWEDEN;
 	model.assigned	=  true;
-	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY + PERIOD_COLONIAL_POWERS;
-	AssignModelTypeNation(isstart, model, "Land_Officers", 1.0, SWEDEN);
+//	model.period = "" + PERIOD_GOLDEN_AGE_OF_PIRACY + PERIOD_COLONIAL_POWERS;
+//	AssignModelTypeNation(isstart, model, "Land_Officers", 1.0, SWEDEN);
 	AddCharacterModel(model);
 
 	model.description =  "";
@@ -13254,8 +13835,29 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "";
-	model.id	   =  "Barbossa2";
-	model.FaceId	= 393;
+	model.id	   =  "offic_eng2_17";
+	model.FaceId	= 99;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "devil";
+	model.FaceId	= 402;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "conquistador";
+	model.FaceId	= 544;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "SkelZ";
+	model.FaceId	= 403;
 	model.nation	  =  BROKEN;
 	model.assigned	=  true;
 	AddCharacterModel(model);

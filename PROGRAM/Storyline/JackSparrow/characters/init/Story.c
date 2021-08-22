@@ -38,8 +38,8 @@ void CreateStoryCharacters(ref n)
 
 	ch.old.name = "Random";
 	ch.old.lastname = "Drunk";
-	ch.name = TranslateString("","Random");
-	ch.lastname = TranslateString("","Drunk");
+	ch.name = TranslateString("Random","Drunk");
+	ch.lastname = "";
 	ch.id		= "Random Drunk";
 	ch.model	= "50FatJack";
 	ch.sex = "man";

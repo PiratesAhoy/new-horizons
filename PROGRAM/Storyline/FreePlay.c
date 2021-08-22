@@ -15,7 +15,7 @@ void RegisterStoryline(int n)
 	sl.(sn).start.nation = ENGLAND;
 	sl.(sn).start.playertype = PLAYER_TYPE_REBEL;
 	sl.(sn).start.difficulty = DIFFICULTY_SEADOG;
-	sl.(sn).start.Flags.Pirate = 20;
+	sl.(sn).start.Flags.Pirate = 5;
 	sl.(sn).start.Flags.Personal = 30;
 	sl.(sn).start.ship = "BrigRoyal";
 	sl.(sn).start.shipname = "Defiance";

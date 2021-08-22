@@ -1,0 +1,6 @@
+title=Alchemy - open the Silver lock
+text.t1=I have to find something that dissolves Silver.
+text.t2=I have Aqua Fortis - and it can dissolve Silver!!
+text.t3= 
+text.t4=
+text.t5=

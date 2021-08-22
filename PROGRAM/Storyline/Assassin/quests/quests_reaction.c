@@ -10,7 +10,7 @@ void QuestComplete(string sQuestName)
 	int iTradeGoods, iQuantityGoods, iTradeNation;
 	string homelocation, homegroup, homelocator, tavernfriend;
 // KK -->
-	int cc;
+	int cc, n;
 	int canQty = 0;
 	int crewQty = 0;
 	ref port;
@@ -842,12 +842,16 @@ void QuestComplete(string sQuestName)
 			QuestToSeaLogin_Launch();
 			AddQuestRecord("Alliance", "8");			
 
-            Characters[GetCharacterIndex("Aurelien Bergerat")].nation = PERSONAL_NATION;
-            Characters[GetCharacterIndex("Aurelien Bergerat")].ship.name = "A Desconhecida";			
+//			Characters[GetCharacterIndex("Aurelien Bergerat")].nation = PERSONAL_NATION;	// GR: If you're hostile to Portugal, the fort attacks this ship
+			Characters[GetCharacterIndex("Aurelien Bergerat")].nation = PRIVATEER_NATION;	// PRIVATEER_NATIOn uses Personal flag but isn't you, so can have different relations
+			SetNationRelationBoth(PORTUGAL, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(FRANCE, PRIVATEER_NATION, RELATION_NEUTRAL);
+			SetNationRelationBoth(SPAIN, PRIVATEER_NATION, RELATION_NEUTRAL);
+			Characters[GetCharacterIndex("Aurelien Bergerat")].ship.name = "A Desconhecida";			
 			Group_CreateGroup("Aurelien_Ship"); 
-    		Group_AddCharacter("Aurelien_Ship", "Aurelien Bergerat");
-    		Group_SetGroupCommander("Aurelien_Ship", "Aurelien Bergerat");
-     		Group_SetAddress("Aurelien_Ship", "Conceicao", "Quest_ships","quest_ship_7");
+			Group_AddCharacter("Aurelien_Ship", "Aurelien Bergerat");
+			Group_SetGroupCommander("Aurelien_Ship", "Aurelien Bergerat");
+			Group_SetAddress("Aurelien_Ship", "Conceicao", "Quest_ships","quest_ship_7");
 			characters[GetCharacterIndex("Aurelien Bergerat")].nosurrender = 2;
 			Character_SetAbordageEnable(characterFromID("Aurelien Bergerat"), false);
 			
@@ -2663,15 +2667,26 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "ir_mona":
-            Locations[FindLocation("IslaMona_port")].models.always.fort = "fortress";
-            Locations[FindLocation("IslaMona_port")].models.always.fort .locator.group = "ships_other";
-            Locations[FindLocation("IslaMona_port")].models.always.fort .locator.name = "ship_8";
-            SetCharacterShipLocation(characterFromID("Randolf Blecher"), "IslaMona_port");			
+			PChar.quest.disable_rebirth = true;
+			Locations[FindLocation("IslaMona_port")].models.always.fort = "fortress";
+			Locations[FindLocation("IslaMona_port")].models.always.fort .locator.group = "ships_other";
+			Locations[FindLocation("IslaMona_port")].models.always.fort .locator.name = "ship_8";
+			SetCharacterShipLocation(characterFromID("Randolf Blecher"), "IslaMona_port");
+
+			Characters[GetCharacterIndex("Randolf Blecher")].nation = ENGLAND;
+			Characters[GetCharacterIndex("Wilfred Burman")].nation = ENGLAND;
+			SetModelFromID(CharacterFromID("Wilfred Burman"), "Offic_Eng_16");
+			for(n = 1; n <=20; n++)
+			{
+				sld = characterFromID("Mona_patrol_" + n);
+				sld.nation = ENGLAND;
+				SetModelFromID(sld, "Soldier_Eng"+(rand(4)+2)+"_16");
+			}		
 			
 			Island_SetReloadEnableLocal("IslaMona", "reload_1", true);		
 			Islands[FindIsland("IslaMona")].reload.l1.goto_enable = true;
 			
-            SetCompanionIndex(Pchar, -1, GetCharacterIndex("Wilfred Larner"));			
+            		SetCompanionIndex(Pchar, -1, GetCharacterIndex("Wilfred Larner"));			
 			SetCharacterRemovable(characterFromID("Wilfred Larner"), false);
 			AddCharacterGoods(characterFromID("Wilfred Larner"), GOOD_FRUITS, 100);
 			AddCharacterGoods(characterFromID("Wilfred Larner"), GOOD_SUGAR, 50);
@@ -2694,23 +2709,35 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "arrived_islamona":
-        	SetCurrentTime(17.00, 0);		
+			if (!isOfficer(characterFromID("Chico Cois")))
+			{
+				LAi_SetActorType(characterFromID("Chico Cois"));	// GR: necessary to make him appear
+           			ChangeCharacterAddressGroup(CharacterFromID("Chico Cois"), "IslaMona_port", "officers", "reload3_3");
+				LAi_SetOfficerType(characterFromID("Chico Cois"));	// GR: must be *after* 'ChangeCharacterAddressGroup'
+			}
+
+        		SetCurrentTime(17.00, 0);		
 			Locations[FindLocation("IslaMona_port")].reload.l1.disable = 1;
 			Locations[FindLocation("IslaMona_port")].reload.l3.disable = 1;
 			Locations[FindLocation("IslaMona_port")].reload.l6.disable = 1;			
 			Locations[FindLocation("IslaMona_port_exit")].reload.l2.disable = 1;
 			Locations[FindLocation("IslaMona_port_exit")].reload.l4.disable = 1;				
 			pchar.quest.larner_died.over = "yes";
-            ChangeCharacterAddressGroup(CharacterFromID("Wilfred Larner"), "IslaMona_port", "goto", "goto2");
+           		ChangeCharacterAddressGroup(CharacterFromID("Wilfred Larner"), "IslaMona_port", "goto", "goto2");
 			Characters[GetCharacterIndex("Wilfred Larner")].dialog.currentnode = "begin_4";
 			LAi_SetActorType(characterFromID("Wilfred Larner"));
 			LAi_ActorDialog(characterFromID("Wilfred Larner"), pchar, "", 15.0, 1.0);			
 		break;
 
 		case "ver_IMPA":
+			if (!isOfficer(characterFromID("Chico Cois")))
+			{
+				SetOfficersIndex(Pchar, 3, GetCharacterIndex("Chico Cois"));
+//				LAi_SetOfficerType(characterFromID("Chico Cois"));
+			}
 			Locations[FindLocation("IslaMona_Headport_house")].vcskip = true;
 			RemoveCharacterCompanion(Pchar, characterFromID("Wilfred Larner"));				
-            LAi_SetActorType(characterfromID("Wilfred Larner"));
+            		LAi_SetActorType(characterfromID("Wilfred Larner"));
 			LAi_ActorRunToLocation(characterfromID("Wilfred Larner"), "reload", "reload6", "none", "", "", "", 25.0);
 			LAi_SetActorType(characterFromID("Chico Cois"));
 			Characters[GetCharacterIndex("Chico Cois")].dialog.currentnode = "begin_51";			
@@ -2858,6 +2885,7 @@ void QuestComplete(string sQuestName)
     	break;
 
     	case "fuir_IslaMonabis":
+			PChar.quest.disable_rebirth = false;
 			Island_SetReloadEnableLocal("IslaMona", "reload_1", false);
 			Islands[FindIsland("IslaMona")].reload.l1.goto_enable = false;		
             ChangeCharacterAddressGroup(CharacterFromID("Chico Cois"), "Cabin_small", "goto", "goto2");      
@@ -3039,7 +3067,8 @@ void QuestComplete(string sQuestName)
 	        LAi_ActorDialog(characterFromID("Salvadore Benavides"), pchar, "", 1.0, 0.0);			
 		break;			
 		
-		case "Cuban_villagebis3":		
+		case "Cuban_villagebis3":
+		PChar.quest.disable_rebirth = true;		
              DoQuestReloadToLocation("Smugglers_Fort", "reload", "reload1", "Cuban_village_fight");		
 		break;
 
@@ -3156,7 +3185,8 @@ void QuestComplete(string sQuestName)
 	        LAi_ActorDialog(characterFromID("Enrique Padilla"), pchar, "", 3.0, 2.0);			
 		break;
 
-		case "back_residence":		
+		case "back_residence":
+		PChar.quest.disable_rebirth = false;		
             DoQuestReloadToLocation("Havana_House_03", "reload", "reload1","back_residencebis");		
 		break;	
 
@@ -3780,6 +3810,7 @@ void QuestComplete(string sQuestName)
 		case "quitter_saojorge":			
  			LAi_SetPlayerType(PChar);
 			SetOfficersIndex(PChar, -1, GetCharacterIndex("Chico Cois"));
+			AddPassenger(Pchar, characterFromID("Chico Cois"), 0);		// GR: in case you have a full set of officers so Chico can't be assigned as officer
 			LAi_SetOfficerType(characterFromID("Chico Cois"));
 	        LAi_SetActorType(characterFromID("Nicholas Butcher"));		
 			LAi_ActorFollowEverywhere(characterFromID("Nicholas Butcher"), "", 60.0);
@@ -4142,6 +4173,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Eleuthera_Jungle4")].vcskip = true;		
 			SetOfficersIndex(PChar, 1, GetCharacterIndex("Bartolomeu"));
 			SetOfficersIndex(PChar, 2, GetCharacterIndex("Roxanne Lalliere"));
+			GiveItem2Character(CharacterFromId("Roxanne Lalliere"), "blade10");
 			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1a");
 			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "blade10");
             DoQuestReloadToLocation("Eleuthera_Jungle4", "reload", "reload2", "meet_enrique");			
@@ -5006,11 +5038,13 @@ void QuestComplete(string sQuestName)
         break;
 
         case "relever_bart2":
-              LAi_SetPlayerType(Pchar);
-              LAi_SetOfficerType(CharacterFromID("Bartolomeu"));
+		LAi_SetPlayerType(Pchar);
+		LAi_SetOfficerType(CharacterFromID("Bartolomeu"));
+		if (!CheckCharacterItem(CharacterFromID("Bartolomeu"), "bladeBP")) GiveItem2Character(CharacterFromID("Bartolomeu"), "bladeBP");
+		EquipCharacterByItem(CharacterFromID("Bartolomeu"), "bladeBP");
 
-    		  LAi_group_FightGroups("VERA_SOLDIERS", LAI_GROUP_PLAYER, true);
-		      LAi_group_SetCheck("VERA_SOLDIERS", "relever_bart3");				  
+		LAi_group_FightGroups("VERA_SOLDIERS", LAI_GROUP_PLAYER, true);
+		LAi_group_SetCheck("VERA_SOLDIERS", "relever_bart3");				  
         break;
 
         case "relever_bart3":

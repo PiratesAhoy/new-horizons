@@ -1,0 +1,22 @@
+string DLG_TEXT[19] = {
+"¿Qué es lo que quieres? Tengo una prisión que dirigir, ya sabes.",
+"Lo siento, te dejaré en paz.",
+"Lo siento, señor, pero creo que un hombre que está a punto de ser transportado a un campo de esclavos es inocente.",
+"Me temo, Capitán Jack Sparrow, que sabemos de su disfraz",
+"¿Qué? ¿Cómo?",
+"¿Inocente dices? ¿Cómo se llama este hombre?",
+"Sí, lo sé, señor. Se llama Pusasn. Es un hombre indio que está aquí por negocios.",
+"Ah. ¡¿Ese hombre?! ¿Y qué quieres que diga? Por lo que sé, merece ser un esclavo...",
+"Podría estar equivocado. Por lo menos creo que está siendo usado en la forma de esclavitud incorrecta. Deseo tenerlo como esclavo personal (PIENSA: Tal vez pueda liberarlo de esta manera).",
+"Ah, ah, ah. ¿Estás seguro de eso? ¿Podría llamar al capitán de la nave para discutir los términos?",
+"Si no le importa, iré a verlo en privado. Nadie sabrá de su participación. Si me entrega al hombre, su relación con él y con el gobernador permanecerá intacta, ya que sólo se sabrá mi participación y la de él.",
+"Hmmm... Eso no es irracional. De hecho, no arriesgo nada en este caso. Puede intentar ir y persuadirlo de que le entregue ese tal Pusasn a usted. Si su misión termina con éxito, siéntase libre de hacer lo que quiera con él.",
+"Gracias, señor.",
+"Encontramos sin ropa a uno de mis amigos y a un oficial en un callejón. Nos contaron la historia y a partir de ella descubrí quién eres... ¡pirata!",
+"¡Bueno, eso no es nada bueno! Pero me temo que deberías haber traído más de dos guardias.",
+"¿Por qué? ¡Estás bajo arresto, Sparrow!",
+"¡Caballeros... este será el día que siempre recordarán como el día que casi ATRAPAN al Capitán - Jack - Sparrow!",
+"Bienvenido a la prisión de la #sHavana#, señor. ¿Puedo ayudarle?",
+"No. Gracias.",
+
+};

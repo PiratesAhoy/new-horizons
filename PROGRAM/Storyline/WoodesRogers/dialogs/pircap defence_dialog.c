@@ -35,7 +35,7 @@ void ProcessDialogEvent()
 			{
 				if(CheckAttribute(Pchar,"quest.Bperks") && Pchar.quest.Bperks >= 1)
 				{
-					if(CheckCharacterPerk(Pchar, "ShipDefenceProfessional"))
+					if(CheckCharacterPerk(Pchar, "ProfessionalDamageControl"))
 					{
 						//Gow
 						Dialog.text = DLG_TEXT[0];
@@ -44,7 +44,7 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						if(CheckCharacterPerk(Pchar, "AdvancedBattleState"))
+						if(CheckCharacterPerk(Pchar, "AdvancedDamageControl"))
 						{
 							LAi_SetStayType(CharacterFromID("pir_cap11"));
 							LAi_SetActorType(CharacterFromID("pir_cap11"));
@@ -59,7 +59,7 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						if(CheckCharacterPerk(Pchar, "BasicBattleState"))
+						if(CheckCharacterPerk(Pchar, "BasicDamageControl"))
 						{
 							LAi_SetStayType(CharacterFromID("pir_cap11"));
 							LAi_SetActorType(CharacterFromID("pir_cap11"));
@@ -111,28 +111,28 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_defence1":
-			Pchar.perks.list.BasicBattleState = true;
+			Pchar.perks.list.BasicDamageControl = true;
 			Pchar.quest.Bperks = makeint(Pchar.quest.Bperks)-1;	
 		
-			AddDialogExitQuest("perk_BasicBattleState");
+			AddDialogExitQuest("perk_BasicDamageControl");
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
 
 		case "Exit_defence2":
-			Pchar.perks.list.AdvancedBattleState = true;
+			Pchar.perks.list.AdvancedDamageControl = true;
 			Pchar.quest.Bperks = makeint(Pchar.quest.Bperks)-1;
 
-			AddDialogExitQuest("perk_AdvancedBattleState");
+			AddDialogExitQuest("perk_AdvancedDamageControl");
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
 
 		case "Exit_defence3":
-			Pchar.perks.list.ShipDefenceProfessional = true;
+			Pchar.perks.list.ProfessionalDamageControl = true;
 			Pchar.quest.Bperks = makeint(Pchar.quest.Bperks)-1;
 
-			AddDialogExitQuest("perk_ShipDefenceProfessional");
+			AddDialogExitQuest("perk_ProfessionalDamageControl");
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;

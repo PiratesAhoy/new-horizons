@@ -133,7 +133,8 @@ void ProcessDialogEvent()
 			switch(sti(NPChar.nation))
 			{
 				// no Spa or Por female voices! using a second Dutch one for now.
-				case ENGLAND: NPChar.greeting = "Gr_greenford_citizen_01"; break;
+//				case ENGLAND: NPChar.greeting = "Gr_greenford_citizen_01"; break;
+				case ENGLAND: NPChar.greeting = "Gr_f_officer_English"; break; // Grey Roger: replaces one citizen phrase with new audio files
 				case FRANCE: NPChar.greeting = "Gr_Sylvie Bondies"; break;
 				//case SPAIN: NPChar.greeting = "Gr_Jaoquin de masse"; break;
 				case PIRATE: NPChar.greeting = "Gr_greenford_citizen_01"; break;
@@ -591,7 +592,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[72];
 			Link.l1 = DLG_TEXT[50];
 			Link.l1.go = "Exit";
-			SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
+			SetSquadronCrewQuantityRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
 			ResetAllLengths(PChar);
 			PChar.articles = false;
 		break;
@@ -600,7 +601,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[73];
 			Link.l1 = DLG_TEXT[50];
 			Link.l1.go = "Exit";
-			SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
+			SetSquadronCrewQuantityRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
 			ResetAllLengths(PChar);
 			PChar.articles = true;
 			DeleteAttribute(PChar, "repeat_salary_payment"); // PB
@@ -1197,8 +1198,14 @@ void ProcessDialogEvent()
 			Link.l2.go = "rations";
 			if(CheckAttribute(PChar, "articles") && sti(PChar.articles))
 			{
-				Link.l3 = DLG_TEXT[83];
-				Link.l3.go = "SalaryC";
+				//  && FindCurrentDeck() == "ShipDeck"
+				If (NPChar.quest.officertype == OFFIC_TYPE_QMASTER && bCanEnterToLand)
+				{
+					Link.l3 = DLG_TEXT[199] + GetMyAddressForm(PChar, NPChar, ADDR_CIVIL, false, true) + DLG_TEXT[200];
+					Link.l3.go = "Divide Plunder";
+				}
+				Link.l6 = DLG_TEXT[83];
+				Link.l6.go = "SalaryC";
 			}
 			else
 			{
@@ -1226,6 +1233,89 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[50];
 			Link.l1.go = "exit";
 		break;
+//PW--->whole section copied from usurer dialog		
+		case "Divide Plunder":
+		//case "qmdivide_choose"://PW whole section copied from usurer dialog qm added for unique case names - much redundant but check it works
+			//may add in port new expedition choice later
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[211];
+			link.l1 = DLG_TEXT[212];
+			link.l1.go = "qmdivide_only_money";
+			//link.l2 = DLG_TEXT[213];
+			//link.l2.go = "qmdivide_new_expedition";
+		break;
+
+		case "qmdivide_only_money":
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[214] + DLG_TEXT[215] + MakeMoneyShow(GetCrewShare(PChar),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[216] +
+			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[217] + MakeMoneyShow(makeint(GetPersonalShareC(PChar)*(0.75 + makefloat(GetFoodEver()) * 0.25)),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[218] + DLG_TEXT[219] + MakeMoneyShow(makeint(makefloat(GetCharacterMoney(PChar)) * LEFTOVER_SHARE),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[220];
+			Link.l1 = DLG_TEXT[206];
+			Link.l1.go = "qmdivide2";
+			Link.l2 = DLG_TEXT[207];
+			Link.l2.go = "Exit_qmnoChange";
+		break;
+
+		case "qmdivide_new_expedition":
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[221] + MakeMoneyShow(GetCrewShare(PChar),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[202] + 
+			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[203] + MakeMoneyShow(makeint(GetPersonalShareC(PChar)*(0.75 + makefloat(GetFoodEver()) * 0.25)),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[204] + MakeMoneyShow(makeint(makefloat(GetCharacterMoney(PChar)) * LEFTOVER_SHARE),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[205];
+			Link.l1 = DLG_TEXT[206];
+			Link.l1.go = "qmdivide1";
+			Link.l2 = DLG_TEXT[207];
+			Link.l2.go = "Exit_qmnoChange";
+		break;
+
+/*		case "qmdivide":
+			Dialog.snd = "voice\USDI\USDI034";
+			// LDH fix for odd money display 10Sep06
+			d.Text = DLG_TEXT[201] + MakeMoneyShow(GetCrewShare(PChar),MONEY_SIGN,MONEY_DELIVER)+ DLG_TEXT[202] + 
+			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[203] + MakeMoneyShow(makeint(GetPersonalShareC(PChar)*(0.75 + makefloat(GetFoodEver()) * 0.25)),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[204] + MakeMoneyShow(makeint(makefloat(GetCharacterMoney(PChar)) * LEFTOVER_SHARE),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[205];
+			Link.l1 = DLG_TEXT[206];
+			Link.l1.go = "qmdivide1";
+			Link.l2 = DLG_TEXT[207];
+			Link.l2.go = "Exit_qmnoChange";
+		break; */
+
+		case "qmdivide1":
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[208] + 
+			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[209];
+			Link.l1 = DLG_TEXT[210];
+			Link.l1.go = "Exit_qmnoChange";
+			DividePlunder(pchar,true);
+			// NK new delay section 05-04-17
+			if(REFIT_TIME)
+			{
+				PChar.updatedays = REFIT_TIME;
+				PChar.updatedays.disableDCU = true;
+				PChar.updatedays.disableIT = true;
+				AddDialogExitQuest("DPFader");
+			}
+			/*PChar.disableDCU = true;
+			int a;
+			if(CheckAttribute(ShipLookupTable,"itemtraders")) ShipLookupTable.itemtraders = 0;
+			
+			for(int dn = 0; dn < REFIT_TIME -1; dn++) { AddTimeToCurrent(24, 0); }
+			if(CheckAttribute(ShipLookupTable,"itemtraders")) ShipLookupTable.itemtraders = 1;
+			AddTimeToCurrent(24, 0);
+			DeleteAttribute(&PChar,"disableDCU");
+			//WaitDate("", 0, 2, 0, 0, 0); // NK 05-04-16*/
+		break;
+
+		case "qmdivide2":		// GR: same as "qmdivide1" but without the delay
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[222] + 
+			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[223];
+			Link.l1 = DLG_TEXT[224];
+			Link.l1.go = "Exit_qmnoChange";
+			DividePlunder(pchar,false);
+		break;
+
+		case "exit_qmNoChange":
+			Diag.CurrentNode = Diag.TempNode;
+			DialogExit();
+		break;
+//PW <-- block copied from usurer_dialog.c
 
 		case "personal_status":
 			Diag.TempNode = "Hired";

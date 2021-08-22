@@ -183,6 +183,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[74];
 			link.l1.go = "exit";
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "captured_by_blaze";
+			TakeItemFromCharacter(Pchar, "Correspondence1");// PW remove Arnaud letter
 			///////////////////////////////////////////
 			// Убрать сабину и перегрузить локацию
 			///////////////////////////////////////////

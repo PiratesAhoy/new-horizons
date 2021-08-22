@@ -1,0 +1,10 @@
+title=The Apprenticeship
+text.t1=Chico Cois said during the voyage the real name of the spy is Dominico Cuellar but he's called Richard Carver on the island. He usually works in the fort but he lives in the house just outside the town; let's go there.
+text.t2=My plan is simple. I will wait for the English captain Harold Flesher near the port gate and when he appears I will follow and kill him before he reaches the Townhall.
+text.t3=That's done! He has just joined his ancestors. I must return to Dominico's house.
+text.t4=Time has come to take the report back to the Vice-Admiral in #sHavana# on #sisland_Cuba#.
+text.t5=A spy - Pelagius Lizarraga - disappeared in #sOxbay# on #sisland_Oxbay#. I need to find him there and bring him back to #sHavana# on #sisland_Cuba#.
+text.t6=I found him! He was jailed in the sewer by a group of brigands. Now to sail back to #sHavana# on #sisland_Cuba#.
+text.t7=5000 gold coins again! The Vice-Admiral seems to have a lot of cash. I won't complain of course.
+text.t8=The name of this guy is Gabriel Brugera. He must be in the #sPort au Prince# Fort. I'm going to smoke him like a salmon!
+text.t9=Done! He didn't have a chance. Time to get back to #sHavana# on #sisland_Cuba#, a nice reward will be waiting for me.

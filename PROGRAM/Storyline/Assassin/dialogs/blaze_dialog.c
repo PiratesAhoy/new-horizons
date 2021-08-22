@@ -1013,6 +1013,52 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[292];
      		Link.l1.go = "exit";
 		AddDialogExitQuest("morro_topf");
-	break;			
+	break;
+
+
+// The Kapitein of Kralendijk
+	case "kapitein_decision":
+		Preprocessor_Add("proposer", GetMySimpleName(characterFromID("Willem Voigt")));
+		Dialog.text = DLG_TEXT[293];
+		Link.l1 = DLG_TEXT[294];
+		Link.l1.go = "exit_kapitein_go_ahead";
+		Link.l2 = DLG_TEXT[295];
+		Link.l2.go = "exit";
+	break;
+
+	case "kapitein_steal_uniform":
+		Dialog.Text = DLG_TEXT[296];
+		Link.l1 = DLG_TEXT[297];
+		Link.l1.go = "exit";
+	break;
+
+	case "exit_kapitein_go_ahead":
+		AddDialogExitQuest("kapitein_start_quest");
+		DialogExit();
+		NextDiag.CurrentNode = NextDiag.TempNode;
+	break;
+// The Kapitein of Kralendijk
+
+// Crystal Skull
+	case "crysskull_stuck_in_cave":
+		Dialog.Text = DLG_TEXT[298];
+		Link.l1 = "...";
+		Link.l1.go = "exit";
+	break;
+// Crystal Skull
+
+// Colombian Silver
+	case "colombian_silver_first_sighting":
+		Dialog.Text = DLG_TEXT[299];
+		Link.l1 = DLG_TEXT[300];
+		Link.l1.go = "exit";
+	break;
+
+	case "colombian_silver_battle_over":
+		Dialog.Text = DLG_TEXT[301];
+		Link.l1 = DLG_TEXT[302];
+		Link.l1.go = "exit";
+	break;
+// Colombian Silver	
 	}
 }

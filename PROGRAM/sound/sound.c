@@ -202,7 +202,9 @@ void SetSchemeForLocation(ref loc)
 						SetMusicAlarm("music_swe_town"); 
 					} else{	SetMusicAlarm("music_usa_town"); }
 				break;
-				case PERSONAL_NATION:	SetMusicAlarm("music_personal_town"); break; // DeathDaisy: added music for personal colonies
+				case PERSONAL_NATION:	SetMusicAlarm("music_personal_town"); 
+							if(HasSubStr(loc.id,"Kristiania"  )) SetMusicAlarm("Rogers_gunroom"); 	//JRH for Spanish part of Kristiania
+				break; // DeathDaisy: added music for personal colonies
 			}
 // <-- KK
 			//a simple virtual sailor change <--
@@ -235,7 +237,7 @@ void SetSchemeForLocation(ref loc)
 					//SetMusicAlarm("music_eng_town");										//placeholder, doesn't work without it
 					SetMusicAlarm("music_personal_town"); // DeathDaisy: added music for personal colonies
 					if(HasSubStr(loc.id,"Nueva_Suecia")) SetMusicAlarm("Rogers_gunroom"); 	//JRH for Spanish part of Kristiania
-					if(HasSubStr(loc.id,"Kristiania"  )) SetMusicAlarm("music_swe_town"); 	//JRH for Spanish part of Kristiania
+					if(HasSubStr(loc.id,"Kristiania"  )) SetMusicAlarm("music_swe_town"); 	//JRH for Swedish part of Kristiania
 				break;
 			}
 // <-- KK
@@ -623,6 +625,12 @@ void SetSchemeForLocation(ref loc)
 			SetSoundScheme("house");
 			SetMusicAlarm("Claire_theme");
 			break;
+		case "Claire_outside":
+			ResetSoundScheme();
+			SetTimeScheme("land");
+			SetWeatherScheme("distant_seashore");	
+			SetMusicAlarm("Claire_theme");
+			break;
 		case "Defoe_cabin":
 			SetSoundScheme("house");
 			SetMusicAlarm("Defoe_theme");
@@ -651,10 +659,41 @@ void SetSchemeForLocation(ref loc)
 			SetWeatherScheme("seashore_weather");
 			SetMusicAlarm("indian_theme");
 			break;
+		case "rush_seashore":
+			ResetSoundScheme();
+			SetTimeScheme("land");
+			SetWeatherScheme("seashore_weather");
+			SetMusicAlarm("rush_seashore");
+			break;
+		case "attack_seashore":
+			ResetSoundScheme();
+			SetTimeScheme("land");
+			SetWeatherScheme("seashore_weather");
+			SetMusicAlarm("attack_seashore");
+			break;
 		case "silent_seashore":
 			ResetSoundScheme();
 			SetTimeScheme("land");
 			SetWeatherScheme("seashore_weather");
+			break;
+		case "silent_distant_seashore":
+			ResetSoundScheme();
+			SetTimeScheme("land");
+			SetWeatherScheme("distant_seashore");
+			break;
+		case "silent_cabin":
+			SetSoundScheme("below_deck");
+			SetMusicAlarm("silence");
+			break;
+		case "silent_deck":
+			SetSoundScheme("below_deck");
+			SetMusicAlarm("silence");
+			SetWeatherScheme("distant_seashore");
+			break;
+		case "silent_sneaking_deck":
+			SetSoundScheme("below_deck");
+			SetMusicAlarm("night_sneaking");
+			SetWeatherScheme("distant_seashore");
 			break;
 		case "Rogers_ships":
 			ResetSoundScheme();
@@ -680,6 +719,10 @@ void SetSchemeForLocation(ref loc)
 			SetSoundScheme("shop");
 			SetMusicAlarm("choir");
 			break;
+		case "angels_choir":
+			SetSoundScheme("silent_location");
+			SetMusicAlarm("choir");
+			break;
 		case "Estate_sneaking":
 			SetSoundScheme("house");
 			SetMusicAlarm("night_sneaking");
@@ -687,6 +730,14 @@ void SetSchemeForLocation(ref loc)
 		case "Swe_inside":
 			SetSoundScheme("shop");
 			SetMusicAlarm("Swe_inside");
+			break;
+		case "burning_cave":
+			SetSoundScheme("crypt2");
+			SetMusicAlarm("burning_cave");
+			break;
+		case "silent_burning_cave":
+			SetSoundScheme("crypt2");
+			SetMusicAlarm("silence");
 			break;
 	// GOLDBUG -->
 	
@@ -814,6 +865,26 @@ void SetSchemeForLocation(ref loc)
 				else 
 				{
 					SetSoundScheme("Chinese_garden");
+				}
+			}
+			SetTimeScheme("land");
+			SetWeatherScheme("land");
+			SetMusicAlarm("silence");
+			break;
+		case "Cloister_garden":
+			if(Whr_IsStorm() || Whr_IsRain())
+			{
+				ResetSoundScheme();
+			}
+			else 
+			{
+				if (Whr_IsNight())
+				{
+					SetSoundScheme("jungle");
+				}
+				else 
+				{
+					SetSoundScheme("Cloister_garden");
 				}
 			}
 			SetTimeScheme("land");
@@ -1236,10 +1307,14 @@ void SetMusic(string name)
 			if (musicnumber > num) musicnumber = 1;
 			pchar.musicnumber.(name) = musicnumber;
 		}
-		string lnode = "f" + musicnumber;
+
+		aref MusicNode = GetAttributeN(MusicRef, musicnumber-1);
+		music_name = MusicNode.name;
+
+//		string lnode = "f" + musicnumber;
 //		string lnode = "l" + (rand(num - 1) + 1);	// the above code replaces this
 
-		music_name = MusicRef.(lnode).name;
+//		music_name = MusicRef.(lnode).name;
 
 //TraceAndLog("MUSIC: scheme = " + name + ", name = " + music_name + ", (" + musicnumber + " of " + num + ")");	// LDH 13Feb09
 	}
@@ -1498,8 +1573,9 @@ int GetMusicSchemeCount()
 
 void UpdateSound()
 {
+trace("UpdateSound: musicName = '" + musicName + "'");
 	string mid = musicName;
-	ResetSound();
+	if (!CheckAttribute(&Globalsettings, "nomusicinterrupt")) ResetSound(); //MAXIMUS 02.05.2019: for preventing music interruption in main menu
 	Alias_Init();
 	SetMusic(mid);
 }

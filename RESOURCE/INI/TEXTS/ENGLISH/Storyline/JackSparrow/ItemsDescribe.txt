@@ -25,5 +25,5 @@ A quarter of an old map which shows the rest of the inland trail to the treasure
 itmname_small_chestJS	{Small Chest}
 itmdescr_small_chestJS
 {
-The documents in this chest prove that the ship that sank at Baie d'Orient was indeed the French frigate 'La Foudre'. It says: 'The ship is sinking. We are being dragged down. Now we will never find Miss Le Moigne. My governor will be so disappointed.' - Captain Patric Robert Sondre.
+The documents in this chest prove that the ship that sank at Baie d'Orient was indeed the French frigate 'La Foudre'. It says: 'The ship is sinking. We are being dragged down. Now we will never find Miss Le Moigne. My governor will be so disappointed.' - Capitaine Fabion le George.
 }

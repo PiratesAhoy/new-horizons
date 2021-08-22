@@ -196,6 +196,62 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[34];
 			link.l1.go = "Exit";
 		break;
+
+		case "sad_news1":
+			dialog.text = DLG_TEXT[35];
+			link.l1 = DLG_TEXT[36];
+			link.l1.go = "sad_news2";
+		break;
+
+		case "sad_news2":
+			dialog.text = DLG_TEXT[37];
+			link.l1 = DLG_TEXT[38];
+			link.l1.go = "sad_news3";
+		break;
+
+		case "sad_news3":
+			dialog.text = DLG_TEXT[39];
+			link.l1 = DLG_TEXT[40];
+			GiveItem2Character(PChar, "MariasLetter");
+			link.l1.go = "where_child";
+		break;
+
+		case "where_child":
+			dialog.text = DLG_TEXT[41];
+			link.l1 = "...";
+			AddDialogExitQuest("upstairs_to_kid");
+			link.l1.go = "exit";
+		break;
+
+		case "fine_boy":
+			dialog.text = "";
+			link.l1 = DLG_TEXT[42];
+			link.l1.go = "read_letter";
+		break;
+
+		case "read_letter":
+			dialog.text = DLG_TEXT[43];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "in_the_dark":
+			dialog.text = DLG_TEXT[44];
+			link.l1 = DLG_TEXT[45];
+			link.l1.go = "messenger_letter";
+		break;
+
+		case "messenger_letter":
+			dialog.text = DLG_TEXT[46];
+			link.l1 = DLG_TEXT[47];
+			link.l1.go = "report_to_HQ";
+		break;
+
+		case "report_to_HQ":
+			dialog.text = DLG_TEXT[48];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
 	}
 }
 

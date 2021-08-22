@@ -2134,6 +2134,12 @@ void BothQuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Mergildo Hurtado"), "none", "");
 		break;
 
+		case "to_barkue_too_many_ships":		// GR: if you have too many ships, stand up so you can go to shipyard to dispose of one
+			ChangeCharacterAddressGroup(PChar, "Santiago_tavern", "tables", "table5");
+			LAi_SetPlayerType(PChar);
+			Characters[GetCharacterIndex("Mergildo Hurtado")].dialog.currentnode = "too_many_ships_recheck";
+		break;
+
 		case "oops_ANIMISTS_want_letter_again":
 			DisableFastTravel(true);
 			pchar.quest.animists_again_meeting_us.win_condition.l1 = "location";
@@ -2586,6 +2592,7 @@ void BothQuestComplete(string sQuestName)
 			ChangeCharacterReputation(pchar, 10);
 			bQuestDisableMapEnter = false
 			Island_SetReloadEnableGlobal("Turks", true);
+			ItemSetPrice("animists_amulet", 1);	// GR: can now dump Animist amulet into a chest
 //			CloseQuestHeader("Sao Feng");
 
 			if (GetAttribute(pchar, "Blood") == "0")
@@ -2934,6 +2941,7 @@ void BothQuestComplete(string sQuestName)
 			RemovePassenger(pchar, characterFromID("Jaoquin de masse"));
 			RemoveCharacterCompanion(pchar, characterFromID("Jaoquin de masse"));
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Jaoquin de masse"));
+			if (CheckAttribute(PChar, "quest.cotbp_done")) CloseQuestHeader("Stolen");
 		break;
 
 		case "Jaoquin_sails":
@@ -2959,6 +2967,7 @@ void BothQuestComplete(string sQuestName)
 			pchar.stolen = "1";
 
 			AddQuestRecord("Stolen", 1);
+			if (CheckAttribute(PChar, "quest.cotbp_done")) CloseQuestHeader("Stolen");
 
 			LAi_SetActorType(pchar);
 			pchar.dialog.currentnode = "His_stealing_our_ship";
@@ -3513,7 +3522,11 @@ void BothQuestComplete(string sQuestName)
 
 		case "before_shore_ship2":
 			AddPassenger(Pchar, characterFromID("Bos'un"), 0);
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Bos'un"));
+			if (SetOfficersIndex(Pchar, -1, GetCharacterIndex("Bos'un")) == GetCharacterIndex("Bos'un"))
+			{
+				if (GetOfficersIndex(PChar, 3) == GetCharacterIndex("Gentleman Jocard")) SetOfficersIndex(Pchar, 2, GetCharacterIndex("Bos'un"));
+				else SetOfficersIndex(Pchar, 3, GetCharacterIndex("Bos'un"));
+			}
 		break;
 
 		case "shore_ship":
@@ -3557,8 +3570,8 @@ void BothQuestComplete(string sQuestName)
 				LAi_SetHP(sld, 100.0, 100.0);
 				sld.Dialog.Filename = "Bos'un_dialog.c";
 				sld.id = "Nigel"
-				sld.name = "Nigel";
-				sld.lastname = "the Slave";
+				sld.name = TranslateString("","Nigel");
+				sld.lastname = TranslateString("","the Slave");
 				LAi_SetImmortal(characterFromID("Nigel"), true);
 			}
 
@@ -3577,6 +3590,11 @@ void BothQuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Slaver5"), "SHIP_SLAVERS2");
 			LAi_group_MoveCharacter(characterFromID("Gentleman Jocard"), "PLAYER1");
 			LAi_group_MoveCharacter(characterFromID("Bos'un"), "PLAYER2");
+
+			LAi_SetActorType(CharacterfromID("Gentleman Jocard"));
+			LAi_SetActorType(CharacterfromID("Bos'un"));
+			LAi_ActorAttack(CharacterFromID("Gentleman Jocard"), CharacterFromID("Slaver5"), "");
+			LAi_ActorAttack(CharacterFromID("Bos'un"), CharacterFromID("Slaver4"), "");
 
 			LAi_group_FightGroups("SHIP_SLAVERS1", "PLAYER1", true);
 			LAi_group_FightGroups("SHIP_SLAVERS2", "PLAYER2", true);
@@ -3637,13 +3655,17 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "Eleuthera_Options":
+			DisableFastTravel(true);						// Prevent player from leaving before
+			Locations[FindLocation("Douwesen_shore_ship")].reload.l1.disable = 1;	// Bos'un has had his next dialog
+			Locations[FindLocation("Douwesen_shore_ship")].reload.l2.disable = 1;
 			LAi_SetActorType(characterfromID("Gentleman Jocard"));
 			LAi_ActorRunToLocation(characterFromID("Gentleman Jocard"), "reload", "reload1", "none", "", "", "Jocard_Ranger", 0.0);
-			Characters[GetCharacterIndex("Gentleman Jocard")].model = "Corsair1_3";
-			Characters[GetCharacterIndex("Gentleman Jocard")].headmodel = "h_Corsair1_3";
+//			Characters[GetCharacterIndex("Gentleman Jocard")].model = "Corsair1_3";
+//			Characters[GetCharacterIndex("Gentleman Jocard")].headmodel = "h_Corsair1_3";
 		break;
 
 		case "Jocard_Ranger":
+			SetModelFromID(CharacterFromID("Gentleman Jocard"), "Corsair1_3");
 			ChangeCharacterAddress(characterfromID("Gentleman Jocard"),"none", "");
 			RemovePassenger(pchar, characterFromID("Gentleman Jocard"));
 			SetCompanionIndex(Pchar, -1, GetCharacterIndex("Gentleman Jocard"));
@@ -3656,7 +3678,10 @@ void BothQuestComplete(string sQuestName)
 			pchar.Alantic_PL = "Black_Jocard";
 		break;
 
-		case "To_Eleuthera":
+		case "To_Eleuthera":								// Triggered by dialog with Bos'un
+			DisableFastTravel(false);						// Dialog done, you can leave now
+			Locations[FindLocation("Douwesen_shore_ship")].reload.l1.disable = 0;
+			Locations[FindLocation("Douwesen_shore_ship")].reload.l2.disable = 0;
 			LAi_SetOfficerType(characterFromID("Bos'un"));
 
 			pchar.quest.Jocard_follow.win_condition.l1 = "location";
@@ -3677,6 +3702,7 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "Jocard_follow":
+			LAi_SetActorType(CharacterfromID("Gentleman Jocard"));
 			LAi_ActorFollowEverywhere(characterFromID("Gentleman Jocard"), "", 60.0);
 		break;
 
@@ -3870,8 +3896,9 @@ void BothQuestComplete(string sQuestName)
 			pchar.quest.wrong_Eleuthera1.over = "yes";
 			pchar.quest.wrong_Eleuthera2.over = "yes";
 
-			LAi_SetActorType(characterfromID("Gentleman Jocard"));
-			LAi_ActorDialog(characterFromID("Gentleman Jocard"),PChar,"",10.0,10.0);
+			ChangeCharacterAddressGroup(CharacterFromID("Gentleman Jocard"), "Eleuthera_Tavern", "goto", "goto2");
+			LAi_SetActorType(CharacterfromID("Gentleman Jocard"));
+			LAi_ActorDialog(CharacterFromID("Gentleman Jocard"),PChar,"",10.0,10.0);
 			Characters[GetCharacterIndex("Gentleman Jocard")].dialog.currentnode = "In Tavern";
 
 			pchar.quest.right_Eleuthera2.win_condition.l1 = "location";
@@ -4086,6 +4113,12 @@ void BothQuestComplete(string sQuestName)
 					AddQuestRecord("Slaver", 4);
 					//pchar.quest.Nigel_lost = "1";
 
+					if (!IsOfficer(CharacterFromID("Slaver")))			// GR: This case can trigger if he is a passenger but not an officer
+					{								// GR: "To_Ship_Slaver" relies on him being an officer, so if he is not,
+						PlaceCharacter(CharacterFromID("Slaver"), "goto");	// GR: force him to become an officer
+						SetOfficersIndex(PChar, 3, GetCharacterIndex("Slaver"));
+					}
+
 					//LAi_SetActorType(Pchar);
 					//Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
 					//Pchar.dialog.currentnode = "nigel_lost";
@@ -4190,7 +4223,13 @@ void BothQuestComplete(string sQuestName)
 		case "Killing_PL_fin":
 			pchar.Alantic_PL = "none";
 			pchar.Slaves = "free";
-			if (GetAttribute(Pchar, "Turks") == "Brotherhood") AddQuestRecord("Slaver", 8);
+			if (GetAttribute(Pchar, "Turks") == "Brotherhood")
+			{
+				AddQuestRecord("Slaver", 8);
+				StoreDialog(CharacterFromID("Nathan Kell"));
+				Characters[GetCharacterIndex("Nathan Kell")].dialog.filename = "Nathan Kell_dialog.c";
+				Characters[GetCharacterIndex("Nathan Kell")].dialog.currentnode = "Jocard_dead";
+			}
 			else
 			{
 				characters[GetCharacterIndex("Slave5")].dialog.filename = "Gentleman Jocard_dialog.c";
@@ -4201,10 +4240,19 @@ void BothQuestComplete(string sQuestName)
 			LAi_ActorDialog(CharacterFromID("Slave5"), PChar, "", 100.0, 100.0);
 		break;
 
+		case "Killing_PL_talked_to_Kell":
+//			Characters[GetCharacterIndex("Nathan Kell")].dialog.filename = "Nathan Kell (GOV)_dialog.c";
+			RestoreDialog(CharacterFromID("Nathan Kell"));
+			AddQuestRecord("Slaver", 9);
+			PChar.Alantic_PL = "none1";
+		break;
+
 		case "reset_slave5":	// Triggered by dialog with "Slave5" if he has just become Gentleman Jocard
 			characters[GetCharacterIndex("Slave5")].dialog.filename = "Plantation_Slave.c";
 			characters[getCharacterIndex("Slave5")].dialog.currentnode = "First time";
 			AddQuestRecord("Slaver", 11);
+			CloseQuestHeader("Slaver");
+			AddQuestRecord("Pirate Lord", 13);
 		break;
 
 		case "slaves_run":	// Triggered by dialog with "Slave5"
@@ -4227,7 +4275,8 @@ void BothQuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Slave7"));
 			if (GetAttribute(Pchar, "Alantic_PL") == "Black_Jocard")
 			{
-				LAi_ActorRunToLocation(characterFromID("Slave7"), "reload", "reload2_back", "none", "", "", "Jocard_deck", 100.0);
+//				LAi_ActorRunToLocation(characterFromID("Slave7"), "reload", "reload2_back", "none", "", "", "Jocard_deck", 100.0);
+				LAi_ActorRunToLocation(characterFromID("Slave7"), "goto", "goto27", "none", "", "", "Jocard_deck", 100.0);
 			}
 			else
 			{

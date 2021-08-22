@@ -1,10 +1,10 @@
 title=Johnson
 text.t1= ???
-text.t2=
-text.t3=
-text.t4=
-text.t5=
-text.t6=
+text.t2=Johnson is not a crewmember.
+text.t3='Captain' Charles Johnson is a pseudonym for Daniel Defoe.
+text.t4=I've got the last map!
+text.t5=The letters  A, N  and a marked port  Bullen Bay  is there. But on which island is that?
+text.t6=It's Curacao island!
 text.t7=
 text.t8=
 text.t9=

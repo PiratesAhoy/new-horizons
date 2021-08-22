@@ -10,4 +10,4 @@
 #define QUEST_MESSAGE10 "To a pirate who has no mercy in his"
 #define QUEST_MESSAGE11 "wicked heart we give a secret reward!"
 #define QUEST_MESSAGE12 "Sorry, you have too many officers! Fire one or more of your officers and try again!"
-#define QUEST_MESSAGE13 "Zaid gives you a very usefull spyglass!"
+#define QUEST_MESSAGE13 "Zaid gives you a very useful spyglass!"

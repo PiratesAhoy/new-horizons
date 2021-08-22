@@ -64,7 +64,7 @@ string DLG_TEXT[117] = {
 "And then?",
 "And then...something happened. Now all of the young lads are preparing to leave town on some campaign with him. The cooper's son had quite a row with his father, and left home. The cooper was pretty angry about that, and went to speak with our man of mystery - but soon ran out of the man's house as if a thousand devils were after him.\nThat very night the cooper got some rot gut rum somewhere, got horribly drunk, and ended up drowned. What was he thinking, walking by the pier at night, when he could hardly walk at all?! And, you know something? His son didn't seem to care.",
 "That is strange, indeed. Where can I find this lad?",
-"The cooper's son? He'll be wandering around town somewhere. He's been at loose ends since the robed man disappeared.",
+"The cooper's son? He'll be wandering around town somewhere. He's been at loose ends since the masked man disappeared.",
 "I'll find him. What's his name?",
 "Jordano",
 "is his name. Nice-looking lad, just like his father, the poor soul. We'll miss the cooper; he was a good man.", // <-- edited by Cat for Animists Quest fix

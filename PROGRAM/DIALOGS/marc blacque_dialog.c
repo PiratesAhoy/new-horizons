@@ -101,8 +101,26 @@ void ProcessDialogEvent()
 
 		case "story":
 			Dialog.snd = "voice\MABL\MABL008";
-			Dialog.text = DLG_TEXT[27];
+			Preprocessor_AddQuestData("Thomas O'Reily", GetMyFullName(CharacterFromID("Thomas O'Reily")));
+			Preprocessor_AddQuestData("O'Reily", GetMyLastName(CharacterFromID("Thomas O'Reily")));
+			Preprocessor_AddQuestData("Marc Blacque", GetMyFullName(NPChar));
 			AddQuestRecord("Blacques", 9); // NK
+			Preprocessor_Remove("Marc Blacque");
+			Preprocessor_Remove("O'Reily");
+			Preprocessor_Remove("Thomas O'Reily");
+			Preprocessor_Add("Thomas O'Reily", GetMyFullName(CharacterFromID("Thomas O'Reily")));
+			Preprocessor_Add("O'Reily", GetMyLastName(CharacterFromID("Thomas O'Reily")));
+			if(GetNationRelation(GetTownNation("Falaise de Fleur"), GetTownNation("Redmond")) == RELATION_ENEMY)
+			{
+				Preprocessor_Add("nationF", GetNationNameByType(GetTownNation("Falaise de Fleur")));
+				Preprocessor_Add("nationR", GetNationNameByType(GetTownNation("Redmond")));
+				Dialog.text = DLG_TEXT[27];
+			}
+			else
+			{
+				Preprocessor_Add("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
+				Dialog.text = DLG_TEXT[81];
+			}
 			Link.l1 = DLG_TEXT[28];
 			link.l1.go = "letter";
 			Link.l2 = DLG_TEXT[29];
@@ -114,6 +132,7 @@ void ProcessDialogEvent()
 
 		case "letter":
 			Dialog.snd = "voice\MABL\MABL009";
+			Preprocessor_Add("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			Dialog.text = DLG_TEXT[31];
 			link.l1 = DLG_TEXT[32];
 			link.l1.go = "letter_1";
@@ -124,7 +143,9 @@ void ProcessDialogEvent()
 		case "letter_1":
 			Dialog.snd = "voice\MABL\MABL010";
 			Characters[GetCharacterIndex("Milon Blacque")].quest.son = "letter";
+			Preprocessor_AddQuestData("Marc", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 15); // NK
+			Preprocessor_Remove("Marc");
 			Dialog.text = DLG_TEXT[34];
 			link.l1 = DLG_TEXT[35];
 			link.l1.go = "exit";
@@ -141,9 +162,14 @@ void ProcessDialogEvent()
 
 		case "resque":
 			Dialog.snd = "voice\MABL\MABL012";
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
+			Preprocessor_AddQuestData("Marc", GetMyName(NPChar));
+			AddQuestRecord("Blacques", 17); // NK
+			Preprocessor_Remove("Marc");
+			Preprocessor_Remove("Thomas");
+			Preprocessor_Add("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			Dialog.text = DLG_TEXT[39] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[40];
 			Link.l1 = DLG_TEXT[41];
-			AddQuestRecord("Blacques", 17); // NK
 			Link.l1.go = "exit";
 			if (makeint(PChar.money) > 2500)
 			{
@@ -154,6 +180,7 @@ void ProcessDialogEvent()
 
 		case "resque_1":
 			Dialog.snd = "voice\MABL\MABL013";
+			Preprocessor_Add("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			Dialog.text = DLG_TEXT[43];
 			Link.l1 = DLG_TEXT[44];
 			link.l1.go = "resque_2";
@@ -167,14 +194,19 @@ void ProcessDialogEvent()
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 500);
 			Characters[GetCharacterIndex("Milon Blacque")].quest.son = "2";
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
+			Preprocessor_AddQuestData("Marc", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 18); // NK
+			Preprocessor_Remove("Marc");
+			Preprocessor_Remove("Thomas");
 		break;
 
 		case "Second time":
+			Preprocessor_Add("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			if (Characters[GetCharacterIndex("Milon Blacque")].quest.son == "2")
 			{
 				Dialog.snd = "voice\MABL\MABL015";
-				Dialog.text = TimeGreeting() + DLG_TEXT[47] GetMyFullName(PChar) + DLG_TEXT[48];
+				Dialog.text = TimeGreeting() + DLG_TEXT[47] + GetMyFullName(PChar) + DLG_TEXT[48];
 				Link.l1 = DLG_TEXT[49];
 				link.l1.go = "exit";
 			}
@@ -258,7 +290,9 @@ void ProcessDialogEvent()
 				}
 				else { AddPartyExp(pchar, 1000); }
 				NPChar.lettertemp = 1;
-				AddQuestRecord("Blacques", 19);
+				Preprocessor_AddQuestData("Marc", GetMyName(NPChar));
+				AddQuestRecord("Blacques", 19); // NK
+				Preprocessor_Remove("Marc");
 			}
 			// NK <--
 			link.l1 = DLG_TEXT[74];
@@ -275,7 +309,9 @@ void ProcessDialogEvent()
 			Characters[GetCharacterIndex("Milon Blacque")].quest.son = "done";
 			ChangeCharacterReputation(pchar, -1);
 			// NK -->
-			AddQuestRecord("Blacques", 20);
+			Preprocessor_AddQuestData("Marc", GetMyName(NPChar));
+			AddQuestRecord("Blacques", 20); // NK
+			Preprocessor_Remove("Marc");
 			CloseQuestHeader("Blacques");
 			// NK <--
 		break;
@@ -283,7 +319,9 @@ void ProcessDialogEvent()
 		case "Exit2":
 			Characters[GetCharacterIndex("Milon Blacque")].quest.son = "rescue";
 			AddPassenger(pchar, npchar, 0);
+			Preprocessor_AddQuestData("Marc", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 11); // NK
+			Preprocessor_Remove("Marc");
 			npchar.location = "none";
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
@@ -292,7 +330,7 @@ void ProcessDialogEvent()
 // NK -->
 		case "exit3":
 			Characters[GetCharacterIndex("Milon Blacque")].quest.son = "done";
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    	PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -500);
 			CloseQuestHeader("Blacques");
 			DialogExit();
@@ -300,6 +338,7 @@ void ProcessDialogEvent()
 		break;
 // NK <--
         case "Marc_Officer":
+			Preprocessor_Add("Marc", GetMyName(NPChar));
 			dialog.snd = "Voice\CLLA\CLLA004";
 			dialog.text = DLG_TEXT[78];
 			link.l1 = DLG_TEXT[79];

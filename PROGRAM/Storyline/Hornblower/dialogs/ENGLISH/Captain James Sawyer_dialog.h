@@ -30,7 +30,7 @@ string DLG_TEXT[59] = {
 "Sir?",
 "I know your type Mr. Hornblower... clawing their way to success on the backs of their comrades and superiors. Only their way will do.",
 "Captain, I protest!",
-"Here that Doctor Clive? Already he protests my authority!",
+"Hear that Doctor Clive? Already he protests my authority!",
 "Captain!",
 "Enough Hornblower! ... And who are these 'gentlemen' you have in tow?",
 "Acting Lieutenant Archie Kennedy and Midshipman Henry Wellard, Sir.",

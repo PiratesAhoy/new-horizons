@@ -1,0 +1,27 @@
+fast_commands_title
+{
+Hot Action Commands
+}
+
+fast_commands_info
+{
+    Ikony poleceð Hot Action pojawiaj¹ si× w lewym górnym rogu ekranu. Tylko jedna komenda može byÞ Hot na raz i b×dzie wy›wietlana przez ikon×. Je›li nie ma tam žadnej ikony, oznacza to, že w tym miejscu lub o tej godzinie nie možna by³o wykonaÞ žadnej akcji Hot.
+
+    Istniej¹ róžne gor¹ce rozkazy akcji dla morza i l¹du.
+
+    Podczas gdy gracz jest na morzu, može korzystaÞ z nast×puj¹cych poleceð Hot Action (rys.1 od lewej do prawej):
+  - Cumowanie do molo na brzegu lub w mie›cie (dost×pne, je›li statek gracza znajduje si× w pobližu miejsca cumowania i nie ma w pobližu wrogów).
+  - Rozpocznij wej›cie na pok³ad (dost×pne, gdy wrogi statek jest bardzo blisko gracza). Rozpocznij wej›cie na pok³ad z najbližszym wrogim statkiem.
+  - Otwarta mapa ›wiata (dost×pna, gdy w pobližu nie ma statków wroga). Otwórz ekran Mapa ›wiata.
+  - Wymiana lub prze³adowanie (dost×pne, gdy statek towarzysza znajduje si× blisko gracza i nie ma w pobližu wrogów). Otwiera ekran wymiany. Gracz može wymieniaÞ za³og×, oficerów, towary z jednego statku na inny. Može równiež zast¹piÞ kapitana lub nawet wymieniÞ statki.
+
+Podczas gdy gracz znajduje si× na l¹dzie, može korzystaÞ z nast×puj¹cych poleceð Hot Action (rys.2 od lewej do prawej):
+  - Zamkni×ty zamek. Ta ikona pojawia si×, gdy gracz stoi w pobližu zamkni×tych drzwi lub bramy. Ta ikona dostarcza tylko informacji i nic si× nie dzieje, je›li gracz naci›nie klawisz „Hot Action”.
+  - Otwarty zamek. Ta ikona oznacza, že ??gracz stoi przed otwartymi drzwiami lub bram¹ i po naci›ni×ciu przycisku „Hot Action” gracz wejdzie do nast×pnej lokacji.
+  - Užyj / WeŸ przedmiot. Ikony te pokazuj¹, že možesz wzi¹Þ co› lub zrobiÞ co› w tym miejscu. Wszystko zostanie wykonane automatycznie po užyciu klawisza „Hot action”. To polecenie s³užy równiež do umieszczania przedmiotów w skrzyniach lub zabierania ich ze skrzyð.
+  - Popatrz. Ikona pokazuje, že možesz sprawdziÞ przedmiot lub postaÞ stoj¹c¹ w pobližu.
+  - Rozmowa. Ikona pokazuje, že možesz rozpocz¹Þ rozmow× z m×žczyzn¹ stoj¹cym przed tob¹.
+  - Odp³yn¹Þ. Ikona pokazuje, že tutaj gracz može udaÞ si× na swój statek i opu›ciÞ t× wysp×.
+
+    Polecenie „Hot Action” možna wykonaÞ za pomoc¹ klawisza Akcji .
+}

@@ -51,7 +51,7 @@ string DLG_TEXT[65] = {
 "Landing party's ready captain.",
 "Mr. Matthews. You will stay at the boat with the marines, once we've landed, to cover our retreat. Now, we need a volunteer to carry the explosives.",
 "We will wait here for you, sir.",
-"Good Matthews. Be prepared, set up a defensive line with the marines. I'm sure the French wont be far behind us, once they hear the bang.",
+"Good Matthews. Be prepared, set up a defensive line with the marines. I'm sure the French won't be far behind us, once they hear the bang.",
 "You can rely on us, Captain.",
 "I know I can Matthews. Well, we'd better be off to the lighthouse.",
 "Where's the Captain, sir?",

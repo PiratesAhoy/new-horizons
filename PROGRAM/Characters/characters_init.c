@@ -90,8 +90,18 @@ void CreateCharacters()
 	switch(CharPlayerType)
 	{
 		case PLAYER_TYPE_ADVENTURER:
-			if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "bladeC2+2");
-			else					GiveItem2Character(ch, "bladeC2");
+			if(GetMySimpleOldName(ch) == "Geralt of Rivia")
+			{
+				ch.shiplog.Title.log0 = "Travelling Worlds";
+				ch.shiplog.Entry.log0 = "Ciri and I were on the hunt for a 'dragon' that had killed five villagers. However we knew that our employer was most probably mistaken and that the monster was probably a Wyvern or something similar. When we went to investigate, we were surprised, although no dragon, the beast was still very dangerous, it was a Manticore, one of the most dangerous beasts the world has to offer. I had killed one of them in the past, but this time something was troubling me and i made a mistake. Ciri quickly grabbed me and teleported us to a different world, saving my life. But we were separated once more."
+				if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "witcher_steel+2");
+				else			GiveItem2Character(ch, "witcher_steel");
+			}
+			else
+			{
+				if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "bladeC2+2");
+				else			GiveItem2Character(ch, "bladeC2");
+			}
 			GiveItem2Character(ch, "pistol5");
 		break;
 		case PLAYER_TYPE_AGENT:
@@ -111,12 +121,18 @@ void CreateCharacters()
 		break;
 		case PLAYER_TYPE_CORSAIR:
 			ch.shiplog.Entry.log0 = "This is a truly momentous occasion. I have worked towards this since I went on account all those years back as a young, know-nothing scallywag with more spine than brains. The crew has elected me captain, replacing our departed leader who lost his head to a cannon ball during our last cruise. Bad for him, good for me. The old man was a good captain and ran a tight ship but I’ve always had my own ideas about how things should be done. Now I get to see if I’m right!";
-			if (CharFirstName == "Blackbeard")
+			switch(GetMySimpleOldName(ch))
 			{
-				GiveItem2Character(ch, "Blade_Triton");
-			}
-			else
-			{
+				case "Blackbeard":
+					GiveItem2Character(ch, "Blade_Triton");
+				break;
+
+				case "Piet Hein":
+					GiveItem2Character(ch, "blade26");
+					GiveItem2Character(ch, "luckydimeA");
+				break;
+
+				// default
 				if (GetCurrentPeriod() < PERIOD_GOLDEN_AGE_OF_PIRACY)
 				{
 					if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "blade21+2");
@@ -215,33 +231,37 @@ void CreateCharacters()
 			GiveItem2Character(ch, "book3");
 		break;
 		case PLAYER_TYPE_REBEL:
-			if(CharFirstName == "Hilda Sparre"){
+			if(GetMySimpleOldName(ch) == "Hilda Sparre")
+			{
 				ch.shiplog.Title.log0 = "Arrived in the New World";
 				ch.shiplog.Entry.log0 =  "That fool of a King and his predecessors would erode our rights, the rights of our blood tracing back to times immemorial. The realm was a bloody mess because the crown could not handle the finances of the realm. The new and growing number of lower nobles screaming for what was rightfully ours. 'Please, the war is so expensive, think of the realm'. Give them a finger and they take the whole hand. It had to stop. But it all went wrong so very fast.\n\n Me and some like-minded people I confided in had plans: Depose the King, push someone else's claim to the throne, someone who saw the worth of what we and our ancestors had done for the realm. But somehow the crown found us out. There is little doubt in my mind we were betrayed. A death sentence was a matter of fact.\n\n Thankfully I still had enough loyal friends and family that I could escape the country and get myself here to the New World. I am still hunted, Sweden's allies will not give me a warm welcome, and neither will her enemies. Their loss, I say. \n\nLo, I got myself a ship with what little wealth I had left, and now it is time to show my true mettle and prove that this noblewoman can claw her way back to greatness on her own merit. Time for adventure!";
 				GiveItem2Character(ch, "clock1");
-				if(ENABLE_WEAPONSMOD){
+				if(ENABLE_WEAPONSMOD)
+				{
 					GiveItem2Character(ch, "bladeC2+1");
 					GiveItem2Character(ch, "pistol2+1");
 				}
-				else{
+				else
+				{
 					GiveItem2Character(ch, "bladeC2");
 					GiveItem2Character(ch, "pistol2");
 				}
 			}
-			else{
-				ch.shiplog.Entry.log0 = "Ever since I was a child I have been restless and unable to tolerate injustice. I have fought in many wars across the old world and been on the losing side of all of them. I am without regret or apology however. I have stayed true to what I believe in and never compromised my integrity for coin or comfort. Still, I know when it is time to move on and so I have done just that. It is off to the new world for me. If I can't make Europe a better place perhaps there is still time to make the Americas one.";
-			
-			if(ENABLE_WEAPONSMOD)
-			{
-				GiveItem2Character(ch, "bladeC2+1");
-				GiveItem2Character(ch, "PiratesPistol+1");
-			}
 			else
 			{
-				GiveItem2Character(ch, "bladeC2");
-				GiveItem2Character(ch, "PiratesPistol");
-			}
-			GiveItem2Character(ch, "cheaparmor");
+				ch.shiplog.Entry.log0 = "Ever since I was a child I have been restless and unable to tolerate injustice. I have fought in many wars across the old world and been on the losing side of all of them. I am without regret or apology however. I have stayed true to what I believe in and never compromised my integrity for coin or comfort. Still, I know when it is time to move on and so I have done just that. It is off to the new world for me. If I can't make Europe a better place perhaps there is still time to make the Americas one.";
+			
+				if(ENABLE_WEAPONSMOD)
+				{
+					GiveItem2Character(ch, "bladeC2+1");
+					GiveItem2Character(ch, "PiratesPistol+1");
+				}
+				else
+				{
+					GiveItem2Character(ch, "bladeC2");
+					GiveItem2Character(ch, "PiratesPistol");
+				}
+				GiveItem2Character(ch, "cheaparmor");
 			}
 		break;
 		case PLAYER_TYPE_ROGUE:
@@ -308,7 +328,7 @@ void CreateCharacters()
 			GiveItem2Character(ch, "jewelry7");
 		break;
 		case PLAYER_TYPE_SWORD_MASTER:
-			if (GetMySimpleName(ch) == "Bohdan Aleskeevich Voronov" && ch.nation == PERSONAL_NATION)
+			if (GetMySimpleOldName(ch) == "Bohdan Aleskeevich Voronov" && ch.nation == PERSONAL_NATION)//MAXIMUS 08.05.2019: GetMySimpleName will return TRANSLATED name, so - for other langs this code will not work.
 			{
 				ch.shiplog.Entry.log0 = "Ten years since the death of our leader, Stenka Rasin, some of us have finally made it to the Caribbean. We have gathered our possessions and sold them to raise money to buy a ship. I have been chosen as the captain. Now we shall seek our fortune on the seas, and perhaps one day return to our beloved motherland.";
 				if(ENABLE_WEAPONSMOD) GiveItem2Character(ch, "blade41+3");
@@ -330,13 +350,23 @@ void CreateCharacters()
 			{
 				ch.shiplog.Entry.log0 = "I have started a new logbook. The old one contained too many painful memories. This new one will soon be filled with records of fear and terror that I shall reign upon all those who dare cross me at sea!";
 				GiveItem2Character(ch, "Davy_Chest");
+				ch.boardingmodels = "Davycrew";
 			}
 			else
 			{
-				ch.shiplog.Entry.log0 = "Perhaps we should not have been so greedy at Isla de Muerta as it turns out the treasure was cursed. The only way to lift it is to return 882 coins to the chest in the cave.";
-				GiveItem2Character(ch, "aztec_compass");
-				GiveItem2Character(ch, "cursedcoin");
-				ch.gibbs = 1; // Removes Mr. Gibbs from the Tortuga Tavern
+				if(HasSubStr(CharShipType, "Mariana"))
+				{
+					ch.shiplog.Entry.log0 = "Originally a Navy Officer, I was accused of treason by having a relationship with a privateer who had been taken prisoner by the Admiral during an attack. I was also arrested and tortured by the Inquisition. To save us, I made a pact with Padre Melquíades de Vázquez. In exchange for a grace for me and my lover, I had to serve the Inquisition and extend its influence in the New World. I didn't know I had just sold my soul to the Devil at that time. Shortly after my first mission, my love succumbed to the Black Death and was the only victim. Realizing that the Demon had betrayed me, I decided to steal a ship and flee Cartagena to take my revenge on him. But the crew began to fall mysteriously ill and died quickly. Then strange events occurred, it was like moving shadows, or sinister whispers. Those who had escaped the disease were swept away by madness and killed each other or put an end to their day...";
+					GiveItem2Character(ch, "Devil_Contract");
+					ch.boardingmodels = "Ghost";
+				}
+				else
+				{
+					ch.shiplog.Entry.log0 = "Perhaps we should not have been so greedy at Isla de Muerta as it turns out the treasure was cursed. The only way to lift it is to return 882 coins to the chest in the cave.";
+					GiveItem2Character(ch, "aztec_compass");
+					GiveItem2Character(ch, "cursedcoin");
+					ch.gibbs = 1; // Removes Mr. Gibbs from the Tortuga Tavern
+				}
 			}
 		break;
 		case PLAYER_TYPE_MILITARY:
@@ -498,12 +528,12 @@ void CreateCharacters()
 	ch.quest.Got_Pirate_Book.win_condition = "Got_Pirate_Book";
 	// GR: Pirate Tutorial <--
 
-	// Levis: Opium Smuggling -->
+/*	// Levis: Opium Smuggling -->
 	ch.quest.Opium_set_first_ambush.win_condition.l1 = "item";
 	ch.quest.Opium_set_first_ambush.win_condition.l1.character = ch.id;
 	ch.quest.Opium_set_first_ambush.win_condition.l1.item = "opium";
 	ch.quest.Opium_set_first_ambush.win_condition = "Opium_set_first_ambush";
-	// Levis: Opium Smuggling <--
+	// Levis: Opium Smuggling <-- */
 
 	// RM -->
 	ch.wealth = 500; // PB: Players can use the cheatmode for this

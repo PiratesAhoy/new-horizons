@@ -1,0 +1,132 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| Assassin.c |=====}
+Johan{Йоган}
+Elting{Элтинг}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+
+{=====| Story.c |=====}
+Salvadore{}
+Benavides{Бенавидес}
+Soldier{}
+Indian{Индеец}
+Street{Уличный}
+Merchant{Торговец}
+Chief{Вождь}
+
+{=====| TempQuest.c |=====}
+Enrique{Энрике}
+Padilla{Падилья}
+Baltasar{Бальтазар}
+Salgada{Сальгада}
+Captain{Капитан}
+Damski{Damski}
+Chico{Чико}
+Cois{Коис}
+Dominico{Доминико}
+Cuellar{Куэльяр}
+Harold{}
+Flesher{Флешер}
+Pelagius{Пелагий}
+Lizarraga{Лизаррага}
+Gabriel{Габриэль}
+Brugera{Бругера}
+Tello{}
+Basadre{}
+Aurelien{}
+Bergerat{}
+Ambroz{Амброз}
+Bricenos{Бриценос}
+Mateus{Матеус}
+Santos{Сантос}
+Desiree'{Дезире'}
+Muerte{Муэрте}
+Thug{Громила}
+Vassal{Вассал}
+Bethune{Битюн}
+Daryl{Дэрил}
+Larry{Ларри}
+Thomas the{}
+Terror{}
+Camille{Камилла}
+Leone{Леоне}
+Prisoner{}
+Geffrey{Джеффри}
+Bampfylde{Бампфилд}
+Bucho{Бучо}
+Pepin{Пепин}
+Bertillon{Бертильон}
+Bertillon's guard{Охранник Бертильона}
+Vito{Вито}
+Amerigo{Америго}
+Vieira{Виейра}
+Nicholas{Николас}
+Butcher{}
+Roche{Роше}
+Brasiliano{}
+Renouart{}
+Baumont{}
+Lady{}
+Gaga{}
+Blaas{}
+Davids{}
+Paul{}
+Brink{}
+Sampson{}
+Burrell{}
+Cesario{}
+de Rosas{}
+Hans{Ханс}
+Delorme{}
+Rabel{}
+Chardon{}
+Jeremy{}
+Tripper{}
+Clement{}
+Bossicar{}
+Wilfred{Уилфред}
+Larner{}
+Bartolomeu{}
+o Portugues{}
+Emilio{Эмилио}
+Soares{Соарес}
+Henry{Генри}
+Morgan{}
+Berend{}
+de Voor{}
+Leonardo{Леонардо}
+Corrales{}
+Andrew{}
+Parson{}
+William{Уильям}
+Cotter{}
+Roxanne{}
+Lalliere{}
+Guibert{Гиберт}
+Daudet{}
+Diablo{}
+Villalobos{}
+Pirate{Пират}
+Capitan{}
+Caceres{}
+
+{=====| TempQuestEnemy.c |=====}
+Gilles{Жиль}
+Chennault{}
+Aimery{}
+Bourgouin{}
+d'Aigreville{}
+Barnabas{}
+Delbridge{}
+David{Дэвид}
+Fewster{}
+Laurence{Лоурэнс}
+Damson{}
+Grigorio{Григорио}
+Cadena{}
+Bautista{}
+Lozano{}
+
+{=====| 143 characters |=====}

@@ -220,7 +220,7 @@ void ProcessCommandExecute()
 	string comName = GetEventData();
 	string nodName = GetEventData();
 	if(comName!="click") return;
-	if (!bRMouseDown) return;
+//	if (!bRMouseDown) return; // PB: Add functionality to left button too
 
 	for(int i=0; i<ISLANDS_QUANTITY+2; i++)
 	{
@@ -241,26 +241,49 @@ void ShowIslandInfo(int Idx)
 
 	string isIsland = Islands[isIdx].id;
 	
-	for(int c=1; c<10; c++)
+	string itmName = "map" + isIsland;
+	
+	// PB: On left-click, try to open Island Map -->
+	ref PChar = GetMainCharacter();
+	if (!bRMouseDown)
 	{
-		string cityNum = "city"+c;
-		if(CheckAttribute(worldMap,"islands."+isIsland+".locations."+cityNum+".label.text") && CheckAttribute(worldMap,"islands."+isIsland+".locations."+cityNum+".real") && CheckAttribute(worldMap,"islands."+isIsland+".locations."+cityNum+".label.icon"))
+		if (CheckCharacterItem(PChar, itmName) == true)
 		{
-			string colonyName = worldMap.islands.(isIsland).locations.(cityNum).name;
-			string colonyId = worldMap.islands.(isIsland).locations.(cityNum).name;
-			colonyNation = sti(worldMap.islands.(isIsland).locations.(cityNum).label.icon);
-			if (colonyNation == 8)	colonyNation = PERSONAL_NATION;
-			if(Idx==9 && cityNum=="city3") { sText1 += ""; colonyNation = sti(worldMap.islands.(isIsland).locations.city2.label.icon); }
-			else sText1 += TranslateString("", FindTownName(colonyId))+" - "+XI_ConvertString(GetNationNameByType(colonyNation)) +"                                                                                             ";
-			if(Idx==22 && cityNum=="city3") { sHeader = FindTownName(colonyId); isIsland = worldMap.islands.(isIsland).locations.(cityNum).name; sText1 = TranslateString("", FindTownName(colonyId))+" - "+XI_ConvertString(GetNationNameByType(colonyNation)); } // Tortuga
+			aref itmRef;
+			if (Items_FindItem(itmName, &itmRef) >= 0 && CheckAttribute(itmRef, "index")) GameInterface.ItemIdx = itmRef.index;
+			
+			PChar.from_map = true;
+			
+			PostEvent("LaunchIAfterFrame",1,"sl", "I_MAP", 2);
+			InterfaceStack.SelectMenu_node = "I_MAP";
+			interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+			EndCancelInterface(false);
 		}
 	}
-	if(Idx!=22) // For all except Tortuga
+	// PB: On left-click, try to open Island Map <--
+	else
 	{
-		colonyNation = Islands[isIdx].smuggling_nation;
-		sHeader = TranslateString("", FindIslandName(sHeader));
+		for(int c=1; c<10; c++)
+		{
+			string cityNum = "city"+c;
+			if(CheckAttribute(worldMap,"islands."+isIsland+".locations."+cityNum+".label.text") && CheckAttribute(worldMap,"islands."+isIsland+".locations."+cityNum+".real") && CheckAttribute(worldMap,"islands."+isIsland+".locations."+cityNum+".label.icon"))
+			{
+				string colonyName = worldMap.islands.(isIsland).locations.(cityNum).name;
+				string colonyId = worldMap.islands.(isIsland).locations.(cityNum).name;
+				colonyNation = sti(worldMap.islands.(isIsland).locations.(cityNum).label.icon);
+				if (colonyNation == 8)	colonyNation = PERSONAL_NATION;
+				if(Idx==9 && cityNum=="city3") { sText1 += ""; colonyNation = sti(worldMap.islands.(isIsland).locations.city2.label.icon); }
+				else sText1 += TranslateString("", FindTownName(colonyId))+" - "+XI_ConvertString(GetNationNameByType(colonyNation)) +"                                                                                             ";
+				if(Idx==22 && cityNum=="city3") { sHeader = FindTownName(colonyId); isIsland = worldMap.islands.(isIsland).locations.(cityNum).name; sText1 = TranslateString("", FindTownName(colonyId))+" - "+XI_ConvertString(GetNationNameByType(colonyNation)); } // Tortuga
+			}
+		}
+		if(Idx!=22) // For all except Tortuga
+		{
+			colonyNation = Islands[isIdx].smuggling_nation;
+			sHeader = TranslateString("", FindIslandName(sHeader));
+		}
+		CreateTooltip(sHeader, sText1, colonyNation);
 	}
-	CreateTooltip(sHeader, sText1, colonyNation);
 }
 
 void CreateTooltip(string header, string text1, int colonyNation)

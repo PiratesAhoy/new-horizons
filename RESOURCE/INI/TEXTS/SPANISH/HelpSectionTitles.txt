@@ -1,0 +1,44 @@
+sea_minimap
+{
+  Minimapa de navegación.
+
+}
+ship_commands
+{
+  Menú de comandos de control del barco del jugador y de los acompañantes.
+
+}
+fast_commands
+{
+  Icono del comando de "Acción rápida".
+
+}
+sea_aim
+{
+  Este círculo indica dónde dispararán los cañones de tu barco.
+
+}
+alarm_indicator
+{
+  Indicador de alarma.
+
+}
+land_commands
+{
+  Muestra la condición del grupo del jugador y comandos que pueden darse a sus oficiales.
+
+}
+WorldMap_Date_Clock
+{
+  La fecha y la hora del juego pueden verse en el mapa.
+
+}
+WorldMap_Compas
+{
+  Brújula en el mapa.
+
+}
+Dialog_window
+{
+  Ventana de diálogo.
+}

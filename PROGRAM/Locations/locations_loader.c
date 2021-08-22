@@ -679,6 +679,18 @@ bool LoadLocation(ref loc)
 	PostEvent("CheckTimeScale", 1000); // PB: Keep previous time scale
 	if (BUILDING_COLLISION) PostEvent("StartCollideCheck", 1000); //Levis
 
+	// MAXIMUS 20.08.2018 used for localization -->
+	if(CheckAttribute(mainCharacter, "savelang"))
+	{
+		if(sti(mainCharacter.savelang)!=sti(GetInterfaceLanguage()))
+		{
+		PostEvent("ChangeLanguage", 0, "ls", sti(mainCharacter.savelang), "");
+			UpdateCharactersNames();
+		}
+		DeleteAttribute(mainCharacter, "savelang");
+	}
+	// MAXIMUS 20.08.2018 used for localization <--
+
 	//Levis moved it here for better timing
 	StartPostInitChars();
 	

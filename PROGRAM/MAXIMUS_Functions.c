@@ -154,11 +154,13 @@ bool bAllies(ref chr)
 /*=======================================================|QUESTS  SECTION|=======================================================*/
 string GenerateMR(ref PChar, ref NPChar)
 {
+	string mr_3 = "MR_3";
+	if (PChar.sex == "woman") mr_3 = "MR_3M";
 	PChar.quest.RemoveMRs.win_condition.l1 = "ExitFromLocation";
 	PChar.quest.RemoveMRs.win_condition.l1.location = PChar.location;
 	PChar.quest.RemoveMRs.win_condition = "RemoveMRs";
 
-	return XI_ConvertString("MR_1") + " " + GetMyRespectfullyName(PChar) + XI_ConvertString("MR_2") + " " + XI_ConvertString(NPChar.currentMR.relationtype) + " " + Characters[GetCharacterIndex(NPChar.currentMR)].name + XI_ConvertString("MR_3");
+	return XI_ConvertString("MR_1") + " " + GetMyRespectfullyName(PChar) + XI_ConvertString("MR_2") + " " + XI_ConvertString(NPChar.currentMR.relationtype) + " " + Characters[GetCharacterIndex(NPChar.currentMR)].name + XI_ConvertString(mr_3);
 }
 
 string GenerateTradeQuest(ref pchar, int iTradeNation, int iTradeGoods, float fprice, float tprice, bool bMain)// moved here from traders dialogs
@@ -2071,25 +2073,28 @@ string GetMyFullOldName(ref chr)
 string GetMySimpleOldName(ref chr)
 {
 	string name = "";
-	if(!CheckAttribute(chr,"old.name")) chr.old.name = name;
-	if(!CheckAttribute(chr,"old.lastname")) chr.old.lastname = name;
-	if(CheckAttribute(chr,"name") && chr.old.name=="") chr.old.name = chr.name;
-	if(CheckAttribute(chr,"lastname") && chr.old.lastname=="") chr.old.lastname = chr.lastname;
-	if(CheckAttribute(chr,"old.firstname"))
-	{
-		if(CheckAttribute(chr,"old.middlename")) name += chr.old.middlename;
-		else name += chr.old.firstname;
-	}
-	else
-	{
-		name += chr.old.name;
-		if(CheckAttribute(chr,"old.middlename"))
-		{
-			if(name!="") name += " " + chr.old.middlename;
+	string tmpName = "";
+	string tmpLastname = "";
+	if (!CheckAttribute(chr,"old.name")) tmpName = name; else tmpName = chr.old.name; 
+	if (!CheckAttribute(chr,"old.lastname")) tmpLastname = name; else tmpLastname = chr.old.lastname;
+	if (CheckAttribute(chr,"old.firstname")) {
+		name = chr.old.firstname;
+		if (CheckAttribute(chr,"old.middlename") == true && chr.old.middlename != "") {
+			if (name != "") name += " "+chr.old.middlename;
 			else name += chr.old.middlename;
 		}
+	} else {
+		if (tmpName != "") name += tmpName;
+		if (CheckAttribute(chr, "old.middlename") && chr.old.middlename != "") {
+			if (name != "") name += " "+chr.old.middlename;
+		}
 	}
-	if(chr.old.lastname!="") name += " " + chr.old.lastname;
+
+	if(!HasSubStr(tmpLastname,"<") && !HasSubStr(tmpLastname,">") && tmpLastname!="") {
+		if (name != "") name += " "+tmpLastname;
+		else name += tmpLastname;
+	}
+
 	return name;
 }
 
@@ -2184,6 +2189,16 @@ string FirstLetterUp(string strData)
 	if (len == 1) return ToUpperEng(strData);
 // <-- KK
 	return ToUpperEng(strleft(strData,1))+strcut(strData,1,strlen(strData)-1);
+}
+
+string FirstLetterDown(string strData)
+{
+// KK -->
+	if (strData == "") return "";
+	int len = strlen(strData);
+	if (len == 1) return ToLowerEng(strData);
+// <-- KK
+	return ToLowerEng(strleft(strData,1))+strcut(strData,1,strlen(strData)-1);
 }
 
 string GetLingvo(string strData)
@@ -2957,6 +2972,12 @@ void GetLanguageParameters()
 	switch (ifcelng) {
 		case ILANG_RUS:
 			LanguageSetLanguage("Russian");
+			if(LoadSegment("Characters\Russian\Characters_names_ru.c"))
+			{
+				InitCharactersNamesRu();
+				UnloadSegment("Characters\Russian\Characters_names_ru.c");
+			}
+			return;
 		break;
 		case ILANG_FRA:
 			LanguageSetLanguage("French");
@@ -2970,21 +2991,19 @@ void GetLanguageParameters()
 		case ILANG_POL:
 			LanguageSetLanguage("Polish");
 		break;
+		case ILANG_SWE:
+			LanguageSetLanguage("Swedish");
+		break;
 		// default:
 			LanguageSetLanguage("English");
 	}
 
-	if (ifcelng == ILANG_RUS) {
-		if(LoadSegment("Characters\Russian\Characters_names_ru.c"))
-		{
-		  InitCharactersNamesRu();
-		  UnloadSegment("Characters\Russian\Characters_names_ru.c");
-		}
-	} else {
+	if(ifcelng!=ILANG_RUS)
+	{
 		if(LoadSegment("Characters\Characters_names.c"))
 		{
-		  InitCharactersNames();
-		  UnloadSegment("Characters\Characters_names.c");
+			InitCharactersNames();
+			UnloadSegment("Characters\Characters_names.c");
 		}
 	}
 // <-- KK
@@ -3004,8 +3023,24 @@ void InitLocalization()
 	if (LogsToggle == LOG_VERBOSE) Log_SetStringToLog(TranslateString("","Land-interface commands on") + " " + XI_ConvertString("be_"+LanguageGetLanguage()) + " " + TranslateString("","language..."));
 
 	//LanguageCloseFile(tmpLangFileID);
-	UpdateCharactersNames();
+	//UpdateCharactersNames();
 }
+
+// MAXIMUS 20.08.2018 used for localization -->
+#event_handler("ChangeLanguage", "SetLanguage");
+void SetLanguage()
+{
+	int lngIdx = GetEventData();
+	string isLang = GetEventData();
+
+	if(lngIdx==sti(GetInterfaceLanguage())) return;
+
+	iLangInterface = lngIdx;
+	SetKeyboardLayout(lngIdx);
+	InitLocalization();
+	trace("Localized labels were translated to "+GetInterfaceLanguageName(lngIdx)+"!");
+}
+// MAXIMUS 20.08.2018 used for localization <--
 
 void ResetKeyboardCharacters(string curLanguage)
 {
@@ -3086,6 +3121,92 @@ void ResetKeyboardCharacters(string curLanguage)
 	}
 }
 
+//MAXIMUS: text can be added into the special file, or into the one single standard file for all storylines
+string GetTranslatedStoryLine(int idx, string strName)
+{
+	if(strName=="" || idx<=-1) return strName;
+	string filePath = GetStorylinePath(idx);
+	int tmpNameFileID = -1;
+	string tmpName = "";
+
+	if(FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage()+"\"+filePath, "*.txt", "storyline_strings.txt") != "")
+	{
+		tmpNameFileID = LanguageOpenFile(filePath + "storyline_strings.txt");
+		tmpName = LanguageConvertString(tmpNameFileID, strName);
+	}
+
+	if(tmpName=="" && FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage()+"\Storyline", "*.txt", "storyline_strings.txt") != "")//also translated text can be in one single file for all storylines
+	{
+		tmpNameFileID = LanguageOpenFile("Storyline\storyline_strings.txt");
+		tmpName = LanguageConvertString(tmpNameFileID, strName);
+	}
+
+	if(tmpName=="" && FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
+	{
+		tmpNameFileID = LanguageOpenFile("interface_strings.txt");
+		tmpName = LanguageConvertString(tmpNameFileID, strName);
+	}
+
+	LanguageCloseFile(tmpNameFileID);
+
+	if(tmpName=="") tmpName = TranslateString("", strName);//final search in all known files
+
+	if(tmpName=="") return strName;
+	return tmpName;
+}
+
+string GetTranslatedPeriod(string strName)
+{
+	if(strName=="") return strName;
+	int tmpNameFileID = -1;
+	string tmpName = "";
+
+	if(FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "periods_strings.txt") != "")
+	{
+		tmpNameFileID = LanguageOpenFile("periods_strings.txt");
+		tmpName = LanguageConvertString(tmpNameFileID, strName);
+	}
+
+	if(tmpName=="" && FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
+	{
+		tmpNameFileID = LanguageOpenFile("interface_strings.txt");
+		tmpName = LanguageConvertString(tmpNameFileID, strName);
+	}
+
+	LanguageCloseFile(tmpNameFileID);
+
+	if(tmpName=="") tmpName = TranslateString("", strName);//final search in all known files
+
+	if(tmpName=="") return strName;
+	return tmpName;
+}
+
+string GetTranslatedLog(string strLog)
+{
+	if(strLog=="") return strLog;
+	int tmpLogFileID = -1;
+	string tmpLog = "";
+
+	if(FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "shipslog_strings.txt") != "")
+	{
+		tmpLogFileID = LanguageOpenFile("shipslog_strings.txt");
+		tmpLog = LanguageConvertString(tmpLogFileID, strLog);
+	}
+
+	if(tmpLog=="" && FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
+	{
+		tmpLogFileID = LanguageOpenFile("interface_strings.txt");
+		tmpLog = LanguageConvertString(tmpLogFileID, strLog);
+	}
+
+	LanguageCloseFile(tmpLogFileID);
+
+	if(tmpLog=="") tmpLog = TranslateString("", strLog);//final search in all known files
+
+	if(tmpLog=="") return strLog;
+	return tmpLog;
+}
+
 // KK -->
 bool FindLocalLanguage(string lang)
 {
@@ -3099,7 +3220,7 @@ bool FindLocalLanguage(string lang)
 
 void UpdateCharactersNames()
 {
-	int tmpNameFileID = LanguageOpenFile("characters_names.txt");
+//	int tmpNameFileID = LanguageOpenFile(GetStorylinePath(FindCurrentStoryline()) + "characters_names.txt");
 	for(int j=0; j<TOTAL_CHARACTERS; j++)
 	{
 		ref ch = GetCharacter(j);
@@ -3130,16 +3251,23 @@ void UpdateCharactersNames()
 		}
 		// PB: This randomizes character names on Start New Game when a previous game was already started -->
 		//     Replacing LanguageConvertString with TranslateString does work, but slows down the starting of the game
-/*		if(CheckAttribute(ch,"name"))
+		// MAXIMUS: fixes were added and now names are permanent
+		//     Was modifed TranslateString, which searching needed names in two places first - main character_names.txt and StoryLine characters_names.txt. Looks like starting new game is not slowing down anymore
+		bool bOldNamed = true;
+		if(CheckAttribute(ch,"name"))
 		{
 			if(ch.name=="") continue;
-			if(!CheckAttribute(ch,"old.name"))
+
+			if(!CheckAttribute(ch,"old.name")) bOldNamed = false;
+			if(bOldNamed==true && ch.old.name=="") bOldNamed = false;
+			if(bOldNamed==false)
 			{
+				ch.old.name = ch.name;
 				isFstName = ch.name;
-				ch.old.name = isFstName;
+				bOldNamed = true;
 			}
-			else isFstName = ch.old.name;
-			if(LanguageConvertString(tmpNameFileID,isFstName)=="")
+			isFstName = ch.old.name;
+			if(TranslateString("", isFstName)=="")
 			{
 				if(bPass)
 				{
@@ -3159,8 +3287,9 @@ void UpdateCharactersNames()
 					if(LanguageGetLanguage()!="Russian") ch.name = strcut(XI_ConvertString(isFstName),1,strlen(XI_ConvertString(isFstName))-1);
 					else ch.name = XI_ConvertString(isFstName);
 				}
-				else ch.name = LanguageConvertString(tmpNameFileID,isFstName);
+				else ch.name = TranslateString("", isFstName);
 			}
+			ch.name = TranslateString("", ch.name);
 //			trace(" * NAME - " + ch.name);
 			DeleteAttribute(ch,"name.assigned");
 		}
@@ -3168,12 +3297,16 @@ void UpdateCharactersNames()
 		if(CheckAttribute(ch,"middlename"))
 		{
 			if(ch.middlename=="") continue;
-			if(!CheckAttribute(ch,"old.middlename"))
+
+			if(!CheckAttribute(ch,"old.middlename")) bOldNamed = false;
+			if(bOldNamed==true && ch.old.middlename=="") bOldNamed = false;
+			if(bOldNamed==false)
 			{
+				ch.old.middlename = ch.middlename;
 				isMdlName = ch.middlename;
-				ch.old.middlename = isMdlName;
+				bOldNamed = true;
 			}
-			else isMdlName = ch.old.middlename;
+			isMdlName = ch.old.middlename;
 
 			ch.middlename = TranslateString("", isMdlName); // KK
 //			trace(" * MIDDLE NAME - " + ch.middlename);
@@ -3182,26 +3315,32 @@ void UpdateCharactersNames()
 		if(CheckAttribute(ch,"lastname"))
 		{
 			if(ch.lastname=="") continue;
-			if(bPass) continue;
-			if(!CheckAttribute(ch,"old.lastname"))
+
+			if(!CheckAttribute(ch,"old.lastname")) bOldNamed = false;
+			if(bOldNamed==true && ch.old.lastname=="") bOldNamed = false;
+			if(bOldNamed==false)
 			{
+				ch.old.lastname = ch.lastname;
 				isLstName = ch.lastname;
-				ch.old.lastname = isLstName;
+				bOldNamed = true;
 			}
-			else isLstName = ch.old.lastname;
-			if(CheckAttribute(ch,"old.name"))
-			{
+			isLstName = ch.old.lastname;
+//			if(CheckAttribute(ch,"old.name"))
+//			{
 				if(ch.old.name=="Regulating") isLstName = "R" + isLstName;
-			}
-			if(LanguageConvertString(tmpNameFileID,isLstName)=="")
+//			}
+			if(TranslateString("", isLstName)=="")
 			{
+				if(bPass) continue;
 				ch.lastname.assigned = true;
 				SetRandomNameToCh(ch);
 			}
 			else
 			{
-				ch.lastname = LanguageConvertString(tmpNameFileID,isLstName);
+				if(bPass) continue;
+				ch.lastname = TranslateString("", isLstName);
 			}
+			ch.lastname = TranslateString("", ch.lastname);
 //			trace(" * LAST NAME - " + ch.lastname);
 			DeleteAttribute(ch,"lastname.assigned");
 		}
@@ -3209,15 +3348,19 @@ void UpdateCharactersNames()
 		if(CheckAttribute(ch,"nickname"))
 		{
 			if(ch.nickname=="") continue;
-			if(!CheckAttribute(ch,"old.lastname"))
+
+			if(!CheckAttribute(ch,"old.nickname")) bOldNamed = false;
+			if(bOldNamed==true && ch.old.nickname=="") bOldNamed = false;
+			if(bOldNamed==false)
 			{
+				ch.old.nickname = ch.nickname;
 				isNikName = ch.nickname;
-				ch.old.nickname = isNikName;
+				bOldNamed = true;
 			}
-			else isNikName = ch.old.nickname;
-			ch.nickname = LanguageConvertString(tmpNameFileID,isNikName);
+			isNikName = ch.old.nickname;
+			ch.nickname = TranslateString("", ch.nickname);
 //			trace(" * NIKNAME - " + ch.nickname);
-		}*/
+		}
 		// PB: This randomizes character names on Start New Game when a previous game was already started <--
 		if(CheckAttribute(ch,"nation"))
 		{
@@ -3243,7 +3386,8 @@ void UpdateCharactersNames()
 			}
 		}
 	}
-	LanguageCloseFile(tmpNameFileID);
+	trace("Characters names were translated to "+GetInterfaceLanguageName(sti(GetInterfaceLanguage()))+"!");
+//	LanguageCloseFile(tmpNameFileID);
 }
 
 void SetRandomNameToCh(ref rCharacter)

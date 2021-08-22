@@ -1,0 +1,7 @@
+title=#sSantiago# Threatened
+text.t1=#svillain# is now the governor of #sRedmond#, in the pay of France. I have promised #sromance# that we will sail quickly to #sSantiago#. We were not in time to prevent the fall of #sRedmond#; if I want to prevent #sSantiago# from being taken as well, I must not delay.
+text.t2=#svillain# is now the governor of #sRedmond#, in the pay of France. If I remember correctly, the commander of the French fleet at #sisland_Isla Mona# mentioned #sisland_Cuba#. If that is their next target then #sSantiago# may be in the firing line. The governor might reward me for that information.
+text.t3=#sgovernor# wants me to try to find plans for the attack on #sSantiago#, which are likely to be in the naval building in #sPointe a Pitre#, #sisland_Guadeloupe#. A bit of night-time burglary through a convenient window is probably what is needed.
+text.t4=I found the battle plans for the attack on #sSantiago#! Now to get them back to #sgovernor#. Quickly, too - they won't be much use if the French have already used them to attack #sSantiago#...
+text.t5=#sgovernor# rewarded me for bringing back the battle plans. Now he wants me to take them to the admiral in #sHavana#.
+text.t6=The admiral does not believe he can prevent the French invasion of #starget#, so I am to go there and evacuate the governor.

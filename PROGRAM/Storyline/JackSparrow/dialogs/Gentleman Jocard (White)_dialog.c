@@ -32,6 +32,13 @@ void ProcessDialogEvent()
 			DialogExit();
 		break;
 
+		case "exit_not_killing_PL":
+			AddDialogExitQuest("not_killing_PL");
+			Diag.CurrentNode = "First Time";
+			NPChar.quest.meeting = NPC_Meeting;
+			DialogExit();
+		break;
+
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -46,8 +53,7 @@ void ProcessDialogEvent()
 			{
 				d.Text = DLG_TEXT[0];
 				Link.l1 = DLG_TEXT[1];
-				Link.l1.go = "exit";
-				AddDialogExitQuest("not_killing_PL");
+				Link.l1.go = "exit_not_killing_PL";
 
 //				if (GetAttribute(Pchar, "Jack") == "Pirate_Lord" && GetAttribute(Pchar, "Turks") == "Brotherhood")
 				{

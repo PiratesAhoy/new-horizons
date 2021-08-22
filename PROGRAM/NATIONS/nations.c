@@ -273,7 +273,8 @@ string InvalidNation(int iNationType)
 	string nationText = "";
 	if (iNationType == NEUTRAL_NATION)							return "neutral";	// KAM
 	if (iNationType == PERSONAL_NATION)							return "personal";	// KK
-	if (iNationType < -1 && iNationType >= NATIONS_QUANTITY)	return "unknown";	// NK
+	if (iNationType == PRIVATEER_NATION)							return "privateer";	// GR
+	if (iNationType < -1 || iNationType >= NATIONS_QUANTITY)	return "unknown";	// NK
 	return nationText;
 }
 // <-- KK
@@ -302,7 +303,7 @@ string GetNationOfficialNameByType(int iNationType)
 
 ref GetNationByType(int iNationType)
 {
-	if (iNationType < 0) iNationType = PIRATE;		// LDH fix
+	if (iNationType < 0 || iNationType >= NATIONS_QUANTITY) iNationType = PIRATE;		// LDH fix
 	return &Nations[iNationType];
 }
 
@@ -322,11 +323,16 @@ string GetNationDescByType(int iNationType)
 // KK -->
 //NEW PROPERTY: Periods[n].Royal.(nation) = title, i.e. 'His Most Christian Majesty Charlie the _great'
 //this returns it.
+// MAXIMUS 14.08.2019: changes for translation were added
 string GetNationRoyalByType(int iNationType)
 {
 	string sNation, sRet;
 	ref rPeriod; makeref(rPeriod, Periods[GetCurrentPeriod()]);
 	sRet = "";
+
+	int tmpRoyalFileID = -1; // MAXIMUS 14.08.2019: changes for translation
+	if(FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "periods_strings.txt") != "") tmpRoyalFileID = LanguageOpenFile("periods_strings.txt"); // MAXIMUS 14.08.2019: changes for translation
+
 	if (iNationType >= 0 && iNationType < NATIONS_QUANTITY)	// LDH fix for iNationType < 0
 	{
 		sNation = GetNationIDByType(iNationType);
@@ -336,8 +342,16 @@ string GetNationRoyalByType(int iNationType)
 		}
 		if (CheckAttribute(rPeriod, "Royal." + sNation + ".Name"))
 		{
-			if(sRet == "")	sRet  =       rPeriod.Royal.(sNation).Name;
-			else			sRet += " " + rPeriod.Royal.(sNation).Name;
+			if(sRet == "")	
+			{
+				sRet  =       rPeriod.Royal.(sNation).Name;
+				if(tmpRoyalFileID!=-1) sRet = LanguageConvertString(tmpRoyalFileID, sRet); // MAXIMUS 14.08.2019: changes for translation
+			}
+			else
+			{
+				if(tmpRoyalFileID!=-1) sRet += " " + LanguageConvertString(tmpRoyalFileID, rPeriod.Royal.(sNation).Name); // MAXIMUS 14.08.2019: changes for translation
+				else sRet += " " + rPeriod.Royal.(sNation).Name;
+			}
 		}
 		if(sRet == "") sRet = XI_ConvertString("unknown");
 	}
@@ -472,7 +486,10 @@ int RMGetHighestRelation(ref char)
 //gets cost for amnesty
 int RMAmnestyCost(ref ch, int iNation)
 {
-	return makeint(sqrt(stf(ch.rank)) * makefloat(GetRMRelation(ch, iNation)) / stf(ch.reputation) * 15000.0 / 100.0) * 100;
+	int CostValue;
+	CostValue = makeint(sqrt(stf(ch.rank)) * makefloat(GetRMRelation(ch, iNation)) / stf(ch.reputation) * 15000.0 / 100.0) * 100;
+	if (sti(GetAttribute(ch, "executions")) > 0) CostValue = CostValue - 1000 * sti(GetAttribute(ch, "executions"));
+	return CostValue;
 }
 
 //sets amnesty with iNation
@@ -480,6 +497,7 @@ void RMAmnesty(ref ch, int iNation)
 {
 	SetRMRelation(ch, iNation, REL_AMNESTY);
 	ResetForts(iNation); // PB: Use separate function
+	ch.executions = 0;
 	//SetRMKills(ch, iNation, 0);
 }
 
@@ -807,6 +825,7 @@ int GetLoMCost(int iNation)
 	ref PChar = GetMainCharacter();
 	int CostValue = (5.0 - GetRMRelation(PChar, iNation))*LOM_COST;
 	if (CostValue < LOM_COST) CostValue = LOM_COST; // PB: Just in case
+	if (sti(GetAttribute(PChar, "executions")) > 0) CostValue = CostValue + 1000 * sti(GetAttribute(PChar, "executions"));
 	return CostValue;
 }
 
@@ -1039,6 +1058,34 @@ bool IsInServiceOf(int iNation)
 	return false;
 }
 // PB <--
+
+//GR -->
+void Process_Execution(int exec_score)
+{
+	ref PChar = GetMainCharacter();
+	int Execution_Limit = 10;
+	int i;
+	string sLogTitle, sLogEntry;
+	if(!CheckAttribute(PChar, "executions")) PChar.executions = exec_score;
+	else PChar.executions = sti(PChar.executions) + exec_score;
+	if(sti(GetAttribute(PChar, "executions")) >= Execution_Limit && CheckAttribute(PChar, "executions_warned"))	// GR: you've already been warned about executing prisoners and done it anyway
+	{
+		for (i=0; i<NATIONS_QUANTITY; i++)							// Check all nations
+		{
+			if (i == PIRATE || i == PERSONAL_NATION) continue;				// Executions don't get you kicked out of pirates or your own service
+			if (HaveLetterOfMarque(i) || ProfessionalNavyNation() == i)
+			{
+				LeaveService(PChar, i, false);
+			}
+		}
+		PChar.executions = 0;
+		SetServedNation(PIRATE);								// If you're going to behave like a pirate, you can become one!
+		sLogTitle = "Marked as a Pirate";
+		sLogEntry = "The civilised nations of the world consider me a pirate in consequence of my actions. I had better tread carefully around them if I want to avoid getting my head in a noose. Joining the Brethren of the Coast could be rather profitable. And they don't care what I do to prisoners!";
+		WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+	}
+}
+// GR <--
 
 int GetCurrentFlag()
 {
@@ -1276,9 +1323,9 @@ void InitGroups()
 	LAi_group_SetPriority("DOUWESEN_CITIZENS", LAI_GROUP_PCITIZENS);
 	LAi_group_SetPriority("DOUWESEN_SOLDIERS", LAI_GROUP_PGUARDS);
 
-	LAi_group_SetLookRadius("DOUWESEN_SOLDIERS", LAI_GROUP_DEF_LOOK);
-	LAi_group_SetHearRadius("DOUWESEN_SOLDIERS", LAI_GROUP_DEF_HEAR);
-	LAi_group_SetSayRadius("DOUWESEN_SOLDIERS", LAI_GROUP_DEF_SAY);
+	LAi_group_SetLookRadius("DOUWESEN_CITIZENS", LAI_GROUP_DEF_LOOK);
+	LAi_group_SetHearRadius("DOUWESEN_CITIZENS", LAI_GROUP_DEF_HEAR);
+	LAi_group_SetSayRadius("DOUWESEN_CITIZENS", LAI_GROUP_DEF_SAY);
 
 	LAi_group_SetAlarmReaction("DOUWESEN_PIRATE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY, LAI_GROUP_FRIEND);
 	LAi_group_SetRelation("DOUWESEN_PIRATE_SOLDIERS", "DOUWESEN_PIRATE_SOLDIERS", LAI_GROUP_FRIEND);

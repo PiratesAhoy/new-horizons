@@ -2400,6 +2400,9 @@ if ( CCC_PITFALLS > 0 ) // TIH proper toggle
 	locations[n].label = "House начальника рудников";
 	Locations[n].filespath.models = "locations\inside\smallhome";
 	Locations[n].image = "Inside_Smallhome.tga";
+
+	Locations[n].vcskip = true;
+
 	//Sound
 	locations[n].type = "house";
 	//Models

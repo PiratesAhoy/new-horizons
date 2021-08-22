@@ -38,7 +38,8 @@ sea_FCoHS_Contact {Visit Ship}
 sea_KrakenAttack {Summon Kraken}
 sea_SubmergeDutchman {Submerge/Emerge}
 sea_PearlSweeps {Run Out Sweeps}
-sea_QARSword {Sword of Triton}
+sea_QARSword {Speed Burst}
+sea_TritonAttack {Rigging Attack}
 sea_NeptuneTrident {Neptune's Trident}
 
 sea_EnglishFlag {England}

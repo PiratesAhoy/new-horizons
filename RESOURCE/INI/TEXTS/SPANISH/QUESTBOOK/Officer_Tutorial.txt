@@ -1,0 +1,3 @@
+title=Tutorial: Los consejos del viejo capitán
+text.t1=Cococí a un oficial en la taberna y, caundo intentaba convencerlo para enrolarse conmigo, un viejo capitán se me acercó. Me dijo que los oficiales de ahora ya no son lo que eran. Hoy en día todos los oficiales están especializados en aspectos diferentes. Se ofreció a enseñarme más cosas sobre los distintos tipos de oficiales. Debería ir a #sOranjestad# y reunirme con él antes de que pasen tres meses.
+text.t2=Por ahora el capitán no puede enseñarme nada. Debería volver a intentarlo después de la próxima actualización.

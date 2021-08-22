@@ -120,6 +120,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[36];
 			link.l1.go = "exit";
 //			characters[GetCharacterIndex("Patric Cardone")].quest.teodoro = "5";
+			Preprocessor_AddQuestData("Raoul Calmes", GetMyFullName(NPChar));
 			if (characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers != "0")
 			{
 				characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "letters_1";
@@ -130,6 +131,7 @@ void ProcessDialogEvent()
 				characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "letters";
 				AddQuestRecord("Patric", 8); // NK
 			}
+			Preprocessor_Remove("Raoul Calmes");
 		break;
 
 		case "fight":

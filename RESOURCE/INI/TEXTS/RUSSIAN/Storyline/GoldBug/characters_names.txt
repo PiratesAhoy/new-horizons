@@ -1,0 +1,127 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| GoldBug.c |=====}
+William{Уильям}
+Legrand{Легран}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+Edgar Allan{Эдгар Алан}
+Poe{По}
+Jupiter{Юпитер}
+
+{=====| TempQuest.c |=====}
+C. Auguste{}
+Dupin{}
+Arthur Gordon{}
+Pym{}
+Lieutenant{Лейтенант}
+G{}
+Medicine{}
+Woman{}
+Hans{Ханс}
+Pfaall{}
+Wilson{}
+Ethelred{}
+Usher{}
+Fortunato{}
+Summer{}
+visitor{}
+Soldier{}
+Bartender{}
+Sergeant{}
+Corporal{}
+Sailor{Моряк}
+Claude{Клод}
+Frollo{}
+Landlady{}
+Natalia{Наталиа}
+Decoteau{Декото}
+Serena{Серена}
+Tisserand{Тиссеранд}
+Celia{Селия}
+Hilder{Хилдер}
+Mummy{}
+Citizen{}
+Axel{}
+von Fersen{}
+Doctor{}
+KP{}
+Street{Уличный}
+Merchant{Торговец}
+Shipyard{}
+Owner{}
+Harbour{}
+Master{}
+Bank{}
+Clerk{}
+Blacksmith{}
+Storeowner{}
+Governor Thomas{}
+Bennet{}
+The Chinese{}
+Man{}
+Black Magic Woman{}
+Plantation{}
+Guard{}
+Captain William{}
+Kidd{}
+Howard{}
+Pyle{}
+Caroline{}
+K{}
+Friday{Пятница}
+Alexander{Александр}
+Selkirk{Селкирк}
+Grandma{Бабушка}
+Rogers{Роджерс}
+Dave{Дэйв}
+Edna{Эдна}
+Nathaniel{Натаниэль}
+Hawk{Хок}
+Danielle{Даниэль}
+Fawn{Фавн}
+Steven{Стивен}
+Maturin{}
+Jack{Джек}
+Aubrey{Обри}
+Sparrow{Воробей}
+Elizabeth{Элизабет}
+Swann{Суонн}
+Hector{Гектор}
+Barbossa{Барбосса}
+Will{Уилл}
+Turner{Тёрнер}
+Beatrice{Беатрис}
+Devlin{Девлин}
+Jean{Жан}
+de la Croix{де ла Круа}
+Horatio{Горацио}
+Hornblower{Хорнблауэр}
+Archie{Арчи}
+Kennedy{Кеннеди}
+Edward{Эдвард}
+Pellew{Пеллью}
+Bush{Буш}
+Richard{Ричард}
+Sharpe{Шарп}
+Patrick{Патрик}
+Harper{Харпер}
+Haggman{Хаггман}
+Harris{Харрис}
+Lafitte{Лафитт}
+Bartolomeu{Бартоломео}
+o Portugues{Португальский}
+Emilio{Эмилио}
+Soares{Соарес}
+Johan{Йоган}
+Elting{Элтинг}
+Maroon{Марон}
+Deserter{Дезертир}
+Thug{Громила}
+Bandit{Бандит}
+Priest{Священник}
+Zombie{Зомби}
+Buccaneer{Буканьер}
+
+{=====| 191 characters |=====}

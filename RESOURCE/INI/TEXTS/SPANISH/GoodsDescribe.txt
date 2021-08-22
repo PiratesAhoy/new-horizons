@@ -1,0 +1,226 @@
+Balls	{Balas rasas}
+Balls_descr
+{
+El tipo de munición de cañón más común, estas pesadas bolas de hierro fundido provocan un daño considerable a los barcos enemigos. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#
+}
+
+
+Grapes	{Metralla}
+Grapes_descr
+{
+Cartuchos de pequeñas balas de hierro disparadas por los cañones para barrer las cubiertas de un barco enemigo a corto alcance, con efectos devastadores en la tripulación. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#
+}
+
+
+Knippels {Palanquetas}
+Knippels_descr
+{
+Dos bolas o medias bolas de hierro fundido conectadas por una gruesa cadena o una barra. Se usan para destruir las velas y los mástiles de los barcos enemigos. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#
+}
+
+
+Bombs {Bombas}
+Bombs_descr
+{
+Rellenas de pólvora, estas balas huecas causan graves daños al casco del barco enemigo. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#
+}
+
+
+Sailcloth {Lona}
+Sailcloth_descr
+{
+Tejido resistente que puedes usar para reparar tus velas.
+}
+
+
+Planks {Tablas}
+Planks_descr
+{
+Puedes tapar agujeros en el casco de tu barco con estas tablas de madera.
+}
+
+
+Wheat {Trigo}
+Wheat_descr
+{
+Cereal usado para hacer pan y para elaborar varias bebidas alcohólicas.
+}
+
+
+Ebony {Ébano}
+Ebony_descr
+{
+Un valioso y exótico tipo de madera negra, de particular dureza y densidad.
+}
+
+Chocolate {Chocolate}
+Chocolate_descr
+{
+El manjar preferido de las niñas mimadas de la nobleza de todo el mundo.
+}
+
+
+Sugar {Azúcar}
+Sugar_descr
+{
+La cosa más dulce del mundo.
+}
+
+
+Wine {Vino}
+Wine_descr
+{
+Zumo de uva fermentado, apreciado por muchos por su delicado sabor y capacidad intoxicante.
+}
+
+
+Linen {Lino}
+Linen_descr
+{
+Una tela usada para hacer ropa.
+}
+
+
+Rum {Ron}
+Rum_descr
+{
+La escasez de esta bebida en un viaje largo puede ocasionar un motín.
+}
+
+
+Tobacco {Tabaco}
+Tobacco_descr
+{
+El aromático tesoro del Nuevo Mundo.
+}
+
+
+Coffee {Café}
+Coffee_descr
+{
+Los granos de café se usan para preparar una bebida amarga.
+}
+
+
+Mahogany {Caoba}
+Mahogany_descr
+{
+Un tipo de madera preciosa con un característico color rojizo.
+}
+
+
+Cinnamon {Canela}
+Cinnamon_descr
+{
+Naciones enteras han sido masacradas solo para poseer esta especia.
+}
+
+
+Copra {Copra}
+Copra_descr
+{
+Pulpa de coco seca.
+}
+
+
+Paprika {Pimentón}
+Paprika_descr
+{
+El pimiento es un ingrediente de muchas ensaladas y guisos; seco y convertido en polvo, se convierte en un apreciado condimento.
+}
+
+
+Fruits {Frutas}
+Fruits_descr
+{
+Frutos variados de plantas tropicales.
+}
+
+
+Ale {Cerveza}
+Ale_descr
+{
+Una bebida alcohólica ligera elaborada con lúpulo y malta.
+}
+
+
+Silk {Seda}
+Silk_descr
+{
+Una tela fina, ligera y extremadamente cara.
+}
+
+
+Clothes {Ropa}
+Clothes_descr
+{
+Bastas ropas de arpillera para la gente humilde de las colonias.
+}
+
+
+Cotton {Algodón}
+Cotton_descr
+{
+Materia prima usada para elaborar tela.
+}
+
+
+Sandal {Sándalo}
+Sandal_descr
+{
+Un tipo de madera preciosa. Usada en decoración y para la producción de incienso.
+}
+
+
+Leather {Cuero}
+Leather_descr
+{
+Pieles curtidas de animales.
+}
+
+
+Oil {Aceite}
+Oil_descr
+{
+El aceite de oliva se usa para cocinar muchos platos diferentes.
+}
+
+Gunpowder {Pólvora}
+Gunpowder_descr
+{
+Inventada en China, la pólvora es necesaria para los cañones de un barco. Sin ella, estarán más callados que los peces. Cualquier capitán debe asegurarse de que queda pólvora en su bodega y reaprovisionar su santabárbara regularmente. Puedes lanzar un barril con 300 unidades como mina anti-barco (Tecla 9 en el mar).
+}
+
+// from SLiB by Jack Davidson -->
+
+Gold {Oro}
+Gold_descr
+{
+Aurum. Un metal precioso amarillo extraido de las minas de las colonias.
+}
+
+Silver {Plata}
+Silver_descr
+{
+Argentum. Un metal precioso blanco extraido de las minas de las colonias.
+}
+
+Bricks {Ladrillos}
+Bricks_descr
+{
+Grandes ladrillos de construcción, moldeados con arcilla y piedras y usados para la construcción de fuertes y edificios urbanos.
+}
+
+// from SLiB by Jack Davidson <--
+
+Medicines {Medicamentos}
+Medicines_descr
+{
+Medicamentos necesaios para el tratamiento de las enfermedades. Ayudarán a salvar a los heridos y sanar a los enfermos durante la navegación.
+}
+
+Ration {Comida}
+Ration_descr
+{
+Queso, pan, legumbres, carne salada... todo lo necesario para alimentarse.
+}

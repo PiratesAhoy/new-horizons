@@ -72,7 +72,7 @@ string DLG_TEXT[130] = {
 "I don't think I want to do that you jumped up little midshipman. And as for you Sharpe!",
 "Ah! So if we were on the beach, the French could double back behind us and counter attack the town with us out of the way.",
 "So that's why they ran so quickly when we attacked them. To draw us away from the town.",
-"It is indeed pleasure to be sailing with you Commander, and before we start, may I say something?",
+"It is indeed a pleasure to be sailing with you Commander, and before we start, may I say something?",
 "Indeed you may.",
 "I regret to say that I believe there is a traitor in our midst, and worse than that that, I believe him to be actually in the Navy!",
 "Go on.",

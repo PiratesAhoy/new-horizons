@@ -24,19 +24,24 @@ void StartStoryLine()
 	TakeItemFromCharacter(PChar, PChar.start_weapon.gun);
 	TakeItemFromCharacter(PChar, "spyglass2");
 	// PB: Override Character Type <--
-	if(GetMySimpleName(pchar) == "Morgen le Fay" && pchar.model == "WitchGirl"){
+	if(GetMySimpleOldName(pchar) == "Morgen le Fay" && pchar.model == "WitchGirl"){
 		if(ENABLE_WEAPONSMOD) PChar.start_weapon.blade = "blade308-1";
 		else PChar.start_weapon.blade = "blade308";
 	}
-	if(GetMySimpleName(pchar) == "Ciri Riannon" && pchar.model == "CiriWitcher"){
+	if(GetMySimpleOldName(pchar) == "Ciri Riannon" && pchar.model == "CiriWitcher"){
 		if(ENABLE_WEAPONSMOD) PChar.start_weapon.blade = "bladeCiri+2";
 		else PChar.start_weapon.blade = "bladeCiri";
-	}													 
+	}
+
+//	if(GetMySimpleOldName(pchar) == "Geralt of Rivia" && pchar.model == "Geralt"){
+//		if(ENABLE_WEAPONSMOD) PChar.start_weapon.blade = "witcher_steel+2";
+//		else PChar.start_weapon.blade = "witcher_steel";
+//	}
 
 	switch(CharPlayerType)
 	{
 		case PLAYER_TYPE_REBEL:
-			if (GetMySimpleName(PChar) == "Julian McAllister" || pchar.model == "47_JRMMSub")
+			if (GetMySimpleOldName(PChar) == "Julian McAllister" || pchar.model == "47_JRMMSub")
 			{
 				GiveModel2Player("47_Blaze_brtlt",false);
 				GiveModel2Player("Blaze4",false);
@@ -51,7 +56,7 @@ void StartStoryLine()
 				GiveModel2Player("Corsair4_J",false);
 			}
 			
-			if (GetMySimpleName(PChar) == "Julian McAllister" && iNation == ENGLAND)
+			if (GetMySimpleOldName(PChar) == "Julian McAllister" && iNation == ENGLAND)
 			{
 				GiveItem2Character(PChar,"luckcharm");
 
@@ -72,6 +77,8 @@ void StartStoryLine()
 				ch.skill.Leadership = "5";
 				ch.skill.Accuracy = "1";
 				ch.skill.Cannons = "1";
+				ch.old.name = "Robert";
+				ch.old.lastname = "Fletcher";
 				ch.name = TranslateString("","Robert");
 				ch.lastname = TranslateString("","Fletcher");
 				SetModelfromArray(ch, GetModelIndex("pir_cap6"));
@@ -86,8 +93,10 @@ void StartStoryLine()
 				ch.Dialog.Filename = "Robert Fletcher_dialog.c";
 				ch.nation = iNation;
 				ch.professionalnavy = iNation;
-				if (GetMySimpleName(PChar) == "Horatio Hornblower" && iNation == ENGLAND)
+				if (GetMySimpleOldName(PChar) == "Horatio Hornblower" && iNation == ENGLAND)
 				{
+					ch.old.name = "Edward";
+					ch.old.lastname = "Pellew";
 					ch.name = TranslateString("","Edward");
 					ch.lastname = TranslateString("","Pellew");
 					SetRank(ch, iNation, 7);
@@ -144,6 +153,8 @@ void StartStoryLine()
 			ch.nation = iNation;
 			if (iNation == FRANCE)
 			{
+				ch.old.name = "Elbaron";
+				ch.old.lastname = "Caron";
 				ch.name = TranslateString("","Elbaron");
 				ch.lastname = TranslateString("","Caron");
 				SetModelfromArray(ch, GetModelIndex("50M5"));
@@ -162,6 +173,8 @@ void StartStoryLine()
 			ch.nation = iNation;
 			if (iNation == FRANCE)
 			{
+				ch.old.name = "Elbaron";
+				ch.old.lastname = "Caron";
 				ch.name = TranslateString("","Elbaron");
 				ch.lastname = TranslateString("","Caron");
 				SetModelfromArray(ch, GetModelIndex("50M5"));
@@ -174,8 +187,10 @@ void StartStoryLine()
 		break;
 
 		case PLAYER_TYPE_SWORD_MASTER:
-			if (GetMySimpleName(PChar) == "Bohdan Aleskeevich Voronov" && iNation == PERSONAL_NATION)
+			if (GetMySimpleOldName(PChar) == "Bohdan Aleskeevich Voronov" && iNation == PERSONAL_NATION)
 			{
+				ch.old.name = "Taras";
+				ch.old.lastname = "Bulba";
 				ch.name = TranslateString("","Taras");
 				ch.lastname = TranslateString("","Bulba");
 				SetModelfromArray(ch, GetModelIndex("mongol"));
@@ -194,7 +209,7 @@ void StartStoryLine()
 			// Admiral
 			ch = CharacterFromID("Malcolm Hatcher");
 			ch.Dialog.Filename = "Robert Fletcher_dialog.c";
-			if (GetMySimpleName(PChar) == "Jean Lafitte" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+			if (GetMySimpleOldName(PChar) == "Jean Lafitte" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
 				iNation = AMERICA;
 			if (PChar.model == "Milady") GiveModel2Player("Milady2",false);
 			if (PChar.model == "Milady2") GiveModel2Player("Milady",false);														// Encourage play for America
@@ -211,18 +226,22 @@ void StartStoryLine()
 				break;
 				case FRANCE:
 					SetModelfromArray(ch, GetModelIndex("fra_cpt2_18"));
-					if (GetMySimpleName(PChar) == "Milady de Winter")
+					if (GetMySimpleOldName(PChar) == "Milady de Winter")
 					{
 						SetModelfromArray(ch, GetModelIndex("Maltese"));
+						ch.old.name = "Cardinal";
+						ch.old.lastname = "Richelieu";
 						ch.name = TranslateString("","Cardinal");
 						ch.lastname = TranslateString("","Richelieu");
 						PChar.reputation = REPUTATION_HORROR;
 						DeleteAttribute(ch, "nations."+ ch.professionalnavy + ".Rank");
 						DeleteAttribute(ch, "professionalnavy");
 					}
-					if (GetMySimpleName(PChar) == "Comte de Rochefort")
+					if (GetMySimpleOldName(PChar) == "Comte de Rochefort")
 					{
 						SetModelfromArray(ch, GetModelIndex("Cardinal"));
+						ch.old.name = "Cardinal";
+						ch.old.lastname = "Mazarin";
 						ch.name = TranslateString("","Cardinal");
 						ch.lastname = TranslateString("","Mazarin");
 						DeleteAttribute(ch, "nations."+ ch.professionalnavy + ".Rank");
@@ -243,11 +262,15 @@ void StartStoryLine()
 				break;
 				case PIRATE:
 					SetModelfromArray(ch, GetModelIndex("CaptainTeague"));
+					ch.old.name = "Teague";
+					ch.old.lastname = "Sparrow";
 					ch.name = TranslateString("","Teague");
 					ch.lastname = TranslateString("","Sparrow");
 				break;
 				case PERSONAL_NATION:
 					SetModelfromArray(ch, GetModelIndex("hadoque"));
+					ch.old.name = "François";
+					ch.old.lastname = "de Hadoque";
 					ch.name = TranslateString("","François");
 					ch.lastname = TranslateString("","de Hadoque");
 				break;
@@ -261,27 +284,41 @@ void StartStoryLine()
 			if(CheckCharacterItem(PChar, "Davy_Chest"))
 			{
 				SetModelfromArray(ch, GetModelIndex("davy1"));
-				ch.name = "Koleniko";
+				ch.old.name = "Koleniko";
+				ch.old.lastname = "";
+				ch.name = TranslateString("","Koleniko");
 				ch.lastname = "";
 			}
 			else
 			{
-				if (PChar.ship.type == SHIP_CURSED) GiveShip2Character(PChar,"BlackPearl",PreprocessText("#scursed_ship#"),-1,PIRATE,true,true); // So you can actually lift the curse
-				locations[FindLocation("Grotto")].box1.items.cursedcoin = 0;
-				TutDeck.WeaponsLocker.items.cursedcoin = GetCursedCoinCount() - 1 - GetDifficulty()*2;
-
-				// Ragetti
-				if (GetMySimpleName(PChar) == "Hector Barbossa")
+				if (CheckCharacterItem(PChar, "Devil_Contract"))
 				{
-					SetModelfromArray(ch, GetModelIndex("Ragetti"));
-					ch.name = "Ragetti";
+					SetModelfromArray(ch, GetModelIndex("priest_inq"));
+					ch.name = TranslateString("","Mephistopheles");
 					ch.lastname = "";
+					PChar.reputation = REPUTATION_HORROR;
 				}
 				else
 				{
-					SetModelfromArray(ch, GetModelIndex("BadV"));
-					DeleteAttribute(ch, "questchar")
-					SetRandomNameToCharacter(ch);
+					if (PChar.ship.type == SHIP_CURSED) GiveShip2Character(PChar,"BlackPearl",PreprocessText("#scursed_ship#"),-1,PIRATE,true,true); // So you can actually lift the curse
+					locations[FindLocation("Grotto")].box1.items.cursedcoin = 0;
+					TutDeck.WeaponsLocker.items.cursedcoin = GetCursedCoinCount() - 1 - GetDifficulty()*2;
+
+					// Ragetti
+					if (GetMySimpleOldName(PChar) == "Hector Barbossa")
+					{
+						SetModelfromArray(ch, GetModelIndex("Ragetti"));
+						ch.old.name = "Ragetti";
+						ch.old.lastname = "";
+						ch.name = TranslateString("","Ragetti");
+						ch.lastname = "";
+					}
+					else
+					{
+						SetModelfromArray(ch, GetModelIndex("BadV"));
+						DeleteAttribute(ch, "questchar")
+						SetRandomNameToCharacter(ch);
+					}
 				}
 			}
 		break;
@@ -1073,7 +1110,7 @@ void StartStoryLine()
 		SetNationRelationBoth(ENGLAND, FRANCE, RELATION_FRIEND);
 		SetNationRelationBoth(FRANCE, HOLLAND, RELATION_ENEMY);
 	}
-	if (GetMySimpleName(PChar) == "Michiel de Ruyter" && iNation == HOLLAND)
+	if (GetMySimpleOldName(PChar) == "Michiel de Ruyter" && iNation == HOLLAND)
 	{
 		SetNationRelationBoth(ENGLAND, HOLLAND, RELATION_ENEMY);
 	}
@@ -1268,7 +1305,7 @@ void StartStoryLine()
 		case PLAYER_TYPE_CORSAIR:
 			if (iNation != PIRATE)
 			{
-				if (GetMySimpleName(PChar) == "José Joaquín Almeida" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+				if (GetMySimpleOldName(PChar) == "José Joaquím Almeida" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
 				{
 					iNation = AMERICA;
 					SetServedNation(iNation);

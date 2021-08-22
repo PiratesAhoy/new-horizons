@@ -78,9 +78,9 @@ void InitGoods()
 	Goods[GOOD_KNIPPELS].Cost		= 10 * GOODS_PRICE_SCALAR;  // Sulan (20)
 	Goods[GOOD_KNIPPELS].Weight		= 3;
 	Goods[GOOD_KNIPPELS].Units		= 20;
+	Goods[GOOD_KNIPPELS].SpeedV0  = 0.85; // TIH gameplay adjustment Aug24'06 // was 0.9 // GR: wasn't defined at all if not USE_REAL_CANNONS, now moved outside condition
 	if(USE_REAL_CANNONS)
 	{
-		Goods[GOOD_KNIPPELS].SpeedV0  = 0.85; // TIH gameplay adjustment Aug24'06 // was 0.9
 		Goods[GOOD_KNIPPELS].DamageHull = 4.0;
 		Goods[GOOD_KNIPPELS].DamageRig  = 10.0;
 		Goods[GOOD_KNIPPELS].DamageCrew = 1.0;

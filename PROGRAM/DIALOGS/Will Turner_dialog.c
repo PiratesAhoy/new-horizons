@@ -430,6 +430,7 @@ void ProcessDialogEvent()
 		case "On_the_Beach_with_Gibbs":
 			dialog.text = DLG_TEXT[97];
 			link.l1 = DLG_TEXT[98];
+           		AddDialogExitQuest("muerte_with_Gibbs_and_Turner2");
 			link.l1.go = "exit";		
 		break;
 

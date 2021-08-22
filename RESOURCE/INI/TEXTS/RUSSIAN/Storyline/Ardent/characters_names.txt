@@ -1,0 +1,163 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| Ardent.c |=====}
+Charles{Чарльз}
+Ardent{Ардент}
+
+{=====| StartStoryline.c |=====}
+William{Уильям}
+McMurrough{МакМарра}
+O'Brien{О'Брайен}
+
+{=====| quests_reaction.c |=====}
+de la Vega{де ла Вега}
+Two Dogs{Два Пса}
+Fighting{Дерущихся}
+not-Fighting{не-Дерущихся}
+Carlos{Карлос}
+Ardenta{Ардота}
+Indian{Индеец}
+Cardinal{Кардинал}
+Ximinez{Хименес}
+Fang{Фанг}
+
+{=====| Story.c |=====}
+Indian Warrior{Индейский Воин}
+Louwe{Лау}
+Louwman{Лауман}
+Giraldo{Жиральдо}
+Annibal{Аннибал}
+Gheerkin{Геркан}
+Kamalaas{Камаллас}
+Morys{Морис}
+Badlad{Бадлад}
+Ralph{Ральф}
+Partridge{Партридж}
+Coper{Копер}
+Blumberger{Блумбергер}
+Amtуnio{Амтиньо}
+Guajira{Гуахира}
+Ayol{Айол}
+Bacha{Баша}
+Lucнa{Люсия}
+Edmundo{Эдмундо}
+Valerie{Валери}
+Downing{Даунинг}
+Piers{Пирс}
+Gilbert{Гилберт}
+Emmett{Эммет}
+Dawson{Доусон}
+
+{=====| TempQuest.c |=====}
+Inquisitor{Инквизитор}
+Monkey{Обезьяна}
+Crescent{Растущая}
+Moon{Луна}
+Rain{Грозовая}
+Cloud{Туча}
+Golden{Золотой}
+Flower{Цветок}
+Nervous{Нервный}
+Elk{Лось}
+Ringboned{Мозоленогий}
+Wolf{Волк}
+Strong{Сильный}
+Deer{Олень}
+White1{Белый}
+Crow{Ворон}
+Soaring{Парящий}
+Hawk1{Ястреб}
+Ronald{Рональд}
+McDonald{МакДональд}
+Doolin{Дулин}
+Becart{Бекарт}
+Grigorio{Григорио}
+Formoselle{Формозель}
+Coenen{Конэн}
+Barberien{Барбнриен}
+Garfield{Гарфилд}
+Leighton{Лейтон}
+Wilfred{Уилфред}
+Roscoe{Роско}
+Felix{Феликс}
+Prost{Прост}
+Steven{Стивен}
+Seagull{Сигал}
+Jusepe{Джузепе}
+Guimaraes{Гимарайнш}
+Lazaro{Лазаро}
+Trillo{Трилло}
+Suarius{Суариус}
+Escudero{Эскудеро}
+Elizabeth{Элизабет}
+Constantino{Константин}
+de Malaspina{Маласпинский}
+Maria{Мария}
+Antonia{Антуанетта}
+of Austria{Австрийская}
+
+{=====| TempQuestEnemy.c |=====}
+Guard{Стражник}
+1{1-й}
+2{2-й}
+3{3-й}
+Atanagildo{Атанагильдо}
+Galнndez{Галинде}
+Eldo{Елдо}
+Fiz{Фиц}
+Javier{Хавьер}
+Mendieta{Мендита}
+Felipe{Фелипе}
+Becerra{Вецерра}
+Basilio{Базилио}
+Carretero{Карретеро}
+Esteban{Эстебан}
+Rovapera{Ровапера}
+Mauricio{Маурисио}
+Juradu{Жюраду}
+Malbert{Малберт}
+Sangier{Сонжи}
+Randolph{Рэндольф}
+Waghorn{Ваджхорн}
+Leonard{Леонард}
+Bowyer{Бойер}
+Marvin{Марвин}
+Corker{Коркер}
+James{Джеймс}
+Haresign{Асайн}
+Guinemant{Гинемо}
+Lavignen{Лавиньен}
+Valerian{Валериан}
+Decaux{Деко}
+Arnald{Арнальд}
+Rimeaux{Римо}
+Bruyant{Брайант}
+Moncoutie{Монкутье}
+Philip{Филип}
+de Malvoisin{де Мальвозан}
+Franзois-Louis{Франсуа-Луи}
+Rousselet{Русселе}
+de Chвteaurenault{де Шато-Рено}
+4{4-й}
+Guibert{Гиберт}
+Mollaret{Молларе}
+Guillaume{Гильям}
+Suguenot{Сюгно}
+Louis{Луи}
+Erignac{Эриньяк}
+Corin{Корин}
+Arzillires{Арзиллирес}
+Renouart{Ренуар}
+Bonnefroy{Боннефруа}
+Jaime{Хайме}
+Lezcano{Лескано}
+Pelayo{Пелайо}
+Nъсez{Нусез}
+Emiliano{Эмильяно}
+de Guzmбn{де Гузман}
+Gilles{Жиль}
+Clouzot{Клозу}
+
+{=====| 90 characters |=====}
+
+{=====| Other |=====}
+Helen{Хелен}

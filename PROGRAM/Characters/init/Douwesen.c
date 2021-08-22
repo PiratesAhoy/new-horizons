@@ -12,11 +12,13 @@ void CreateDouwesenCharacters(ref n)
 	{
 		ch.name = TranslateString("","Todredus");
 		ch.lastname = TranslateString("","Ordialds");
+		ch.nation = SPAIN;
 	}
 	else
 	{
 		ch.name = TranslateString("","Toff");
 		ch.lastname = TranslateString("","Oremans");
+		ch.nation = HOLLAND;
 	}
 	ch.id		= "Toff Oremans";
 	ch.model	= "man5_1";
@@ -27,7 +29,6 @@ void CreateDouwesenCharacters(ref n)
 	ch.location.locator = "sit4";
 	ch.Dialog.Filename = "Toff Oremans_dialog.c";
 	ch.greeting = "Gr_Toff Oremans";
-	ch.nation = HOLLAND;
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";
@@ -56,23 +57,23 @@ void CreateDouwesenCharacters(ref n)
 	{
 		ch.name = TranslateString("","Taresa");
 		ch.lastname = TranslateString("","Ordialds");
+		ch.nation = SPAIN;
 	}
 	else
 	{
 		ch.name = TranslateString("","Tanneken");
 		ch.lastname = TranslateString("","Oremans");
+		ch.nation = HOLLAND;
 	}
 	ch.id		= "Tanneken Oremans";
 	ch.model	= "towngirl2_1";
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
-	ch.greeting = "Dut_f_a_001.wav";//MAXIMUS: it works by this way?????
 	ch.location	= "none";
 	ch.location.group = "sit";
 	ch.location.locator = "sit3";
 	ch.Dialog.Filename = "Tanneken Oremans_dialog.c";
 	ch.greeting = "Gr_Tanneken Oremans";
-	ch.nation = HOLLAND;
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";

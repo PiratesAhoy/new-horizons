@@ -34,7 +34,7 @@ string DLG_TEXT[51] = {
 "Tell me, what is your beloved's name? And where might I find him?",
 "His name is ",
 "Raymond Bouchez",
-" and he was last seen at one of the French colonies, I believe. It seems to me, it was at #sisland_Falaise de Fleur#.",
+" and he was last seen at one of the #snation# colonies, I believe. It seems to me, it was at #sisland_Falaise de Fleur#.",
 "Then let's be on our way. By the way, my cabin will be wholly for your needs...",
 "(To Raymond) - My love, I've found you at last! But...who is this woman beside you?!",
 "...",

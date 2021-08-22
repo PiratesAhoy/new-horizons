@@ -2,14 +2,13 @@ void CreateSideQuestCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 			// Rian Dekkers -- towngirl1
 	ch.old.name = "Rian";
 	ch.old.lastname = "Dekkers";
-	ch.name = TranslateString("","Rian");
-	ch.lastname = TranslateString("","Dekkers");
+	ch.name = TranslateString("", "Rian");
+	ch.lastname = TranslateString("", "Dekkers");
 	ch.id		= "Rian Dekkers";
 	ch.model	= "towngirl1";
 	ch.sex = "woman";
@@ -38,13 +37,14 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetStayType(ch); // Petros: Was LAi_SetMerchantType(ch);
 	LAi_SetLoginTime(ch, 0.6, 22.0);//MAXIMUS: women near town hall at night look very strange
 //	ch.questchar = true;//MAXIMUS: identifier for captives, commented out by Grey Roger to allow name to change
+	LAi_group_MoveCharacter(ch, "UNHAPPY_WOMEN"); // Grey Roger: giving them their own AI group prevents confusion from fights with other groups
 	AddGameCharacter(n, ch);
 
-			// Janneke Blinkerhof -- towngirl1
+			// Janneke Blinkerhof -- towngirl2
 	ch.old.name = "Janneke";
 	ch.old.lastname = "Blinkerhof";
-	ch.name = TranslateString("","Janneke");
-	ch.lastname = TranslateString("","Blinkerhof");
+	ch.name = TranslateString("", "Janneke");
+	ch.lastname = TranslateString("", "Blinkerhof");
 	ch.id		= "Janneke Blinkerhof";
 	ch.model	= "towngirl2";
 	ch.sex = "woman";
@@ -73,13 +73,14 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetStayType(ch); // Petros: Was LAi_SetMerchantType(ch);
 	LAi_SetLoginTime(ch, 0.6, 22.0);//MAXIMUS: women near town hall at night look very strange
 //	ch.questchar = true;//MAXIMUS: identifier for captives, commented out by Grey Roger to allow name to change
+	LAi_group_MoveCharacter(ch, "UNHAPPY_WOMEN"); // Grey Roger: giving them their own AI group prevents confusion from fights with other groups
 	AddGameCharacter(n, ch);
 
-			// Lisebet Schefold -- towngirl1
+			// Lisebet Schefold -- towngirl3
 	ch.old.name = "Lisebet";
 	ch.old.lastname = "Schefold";
-	ch.name = TranslateString("","Lisebet");
-	ch.lastname = TranslateString("","Schefold");
+	ch.name = TranslateString("", "Lisebet");
+	ch.lastname = TranslateString("", "Schefold");
 	ch.id		= "Lisebet Schefold";
 	ch.model	= "towngirl3";
 	ch.sex = "woman";
@@ -108,13 +109,14 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetStayType(ch); // Petros: Was LAi_SetMerchantType(ch);
 	LAi_SetLoginTime(ch, 0.6, 22.0);
 //	ch.questchar = true;//MAXIMUS: identifier for captives, commented out by Grey Roger to allow name to change
+	LAi_group_MoveCharacter(ch, "UNHAPPY_WOMEN"); // Grey Roger: giving them their own AI group prevents confusion from fights with other groups
 	AddGameCharacter(n, ch);
 
 			// Gheraed Drabbe -- man3
 	ch.old.name = "Gheraed";
 	ch.old.lastname = "Drabbe";
-	ch.name = TranslateString("","Gheraed");
-	ch.lastname = TranslateString("","Drabbe");
+	ch.name = TranslateString("", "Gheraed");
+	ch.lastname = TranslateString("", "Drabbe");
 	ch.id		= "Gheraed Drabbe";
 	ch.model	= "man3";
 	ch.sex = "man";
@@ -148,8 +150,8 @@ void CreateSideQuestCharacters(ref n)
 			// Balltesar Figueiredo -- man3
 	ch.old.name = "Balltesar";
 	ch.old.lastname = "Figueiredo";
-	ch.name = TranslateString("","Balltesar");
-	ch.lastname = TranslateString("","Figueiredo");
+	ch.name = TranslateString("", "Balltesar");
+	ch.lastname = TranslateString("", "Figueiredo");
 	ch.id		= "Balltesar Figueiredo";
 	ch.model	= "man2";
 	ch.sex = "man";
@@ -183,8 +185,8 @@ void CreateSideQuestCharacters(ref n)
 			// Father Gareth -- man3
 	ch.old.name = "Father";
 	ch.old.lastname = "Gareth";
-	ch.name = TranslateString("","Father");
-	ch.lastname = TranslateString("","Gareth");
+	ch.name = TranslateString("", "Father");
+	ch.lastname = TranslateString("", "Gareth");
 	ch.id		= "Father Gareth";
 	ch.model	= "monk2";
 	ch.sex = "man";
@@ -219,8 +221,8 @@ void CreateSideQuestCharacters(ref n)
 				// Mergildo Hurtado - êàïèòàí áàðêà ñî ñâÿùåííèêàìè
 	ch.old.name = "Mergildo";
 	ch.old.lastname = "Hurtado";
-	ch.name = TranslateString("","Mergildo");
-	ch.lastname = TranslateString("","Hurtado");
+	ch.name = TranslateString("", "Mergildo");
+	ch.lastname = TranslateString("", "Hurtado");
 	ch.id		= "Mergildo Hurtado";
 	ch.model	= Nations[SPAIN].fantomModel.m0; // PB
 	ch.sex = "man";
@@ -266,7 +268,7 @@ void CreateSideQuestCharacters(ref n)
 				// Jordano - ñûí êóçíåöà íà Ìóýëå
 	ch.old.name = "Jordano";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Jordano");
+	ch.name = TranslateString("", "Jordano");
 	ch.lastname = "";
 	ch.id		= "Jordano";
 	ch.model = "Jordano";  // GR (was "Diller", originally was "man4")
@@ -304,8 +306,8 @@ void CreateSideQuestCharacters(ref n)
 				//Yedam Kinne - äèâåò â Ãðèíôîðäå - ïîääåëûâàåò äîêóìåíòû è ïîä÷åðêè.
 	ch.old.name = "Yedam";
 	ch.old.lastname = "Kinne";
-	ch.name = TranslateString("","Yedam");
-	ch.lastname = TranslateString("","Kinne");
+	ch.name = TranslateString("", "Yedam");
+	ch.lastname = TranslateString("", "Kinne");
 	ch.id		= "Yedam Kinne";
 	ch.model	= "man6_1";
 	ch.sound_type = "pirate";
@@ -342,7 +344,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_01";
 	ch.model = "ANIMISTS2";
@@ -381,7 +383,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_02";
 	ch.model = "ANIMISTS2";
@@ -420,7 +422,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_03";
 	ch.model = "ANIMISTS2";
@@ -459,10 +461,10 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_04";
-	ch.model = "ANIMISTSt2";
+	ch.model = "ANIMISTS2";
 	ch.sex = "man";
 	ch.sound_type = "priest";
 	ch.nation = PIRATE;
@@ -498,7 +500,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_05";
 	ch.model = "ANIMISTS2";
@@ -537,7 +539,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_06";
 	ch.model = "ANIMISTS2";
@@ -576,7 +578,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_07";
 	ch.model = "ANIMISTS2";
@@ -615,7 +617,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_08";
 	ch.model = "ANIMISTS2";
@@ -654,9 +656,9 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Animist";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Animist");
+	ch.name = TranslateString("", "Animist");
 	ch.lastname = "";
-	ch.id		= "ANIMISTS_08";
+	ch.id		= "ANIMISTS_09";
 	ch.model = "ANIMISTS2";
 	ch.sex = "man";
 	ch.sound_type = "priest";
@@ -693,7 +695,7 @@ void CreateSideQuestCharacters(ref n)
 				// Dark teacher
 	ch.old.name = "Dark Teacher";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Dark Teacher");
+	ch.name = TranslateString("", "Dark Teacher");
 	ch.lastname = "";
 	ch.id		= "Dark Teacher";
 	ch.model = "ANIMISTS1";
@@ -747,7 +749,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_01";
 	ch.model = "ANIMISTS2";
@@ -801,7 +803,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_02";
 	ch.model = "ANIMISTS2";
@@ -856,7 +858,7 @@ void CreateSideQuestCharacters(ref n)
 				// 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_03";
 	ch.model = "ANIMISTS2";
@@ -895,7 +897,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_04";
 	ch.model = "ANIMISTS2";
@@ -950,7 +952,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_05";
 	ch.model = "ANIMISTS2";
@@ -1002,7 +1004,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_06";
 	ch.model = "ANIMISTS2";
@@ -1041,7 +1043,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_07";
 	ch.model = "ANIMISTS2";
@@ -1094,7 +1096,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_08";
 	ch.model = "ANIMISTS2";
@@ -1146,7 +1148,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_09";
 	ch.model = "ANIMISTS2";
@@ -1185,7 +1187,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_10";
 	ch.model = "ANIMISTS2";
@@ -1238,7 +1240,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Mystery Man";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Mystery Man");
+	ch.name = TranslateString("", "Mystery Man");
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_11";
 	ch.model = "ANIMISTS2";
@@ -1290,7 +1292,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Teacher";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Teacher");
+	ch.name = TranslateString("", "Teacher");
 	ch.lastname = "";
 	ch.id		= "Teacher";
 	ch.model = "ANIMISTS2";
@@ -1330,8 +1332,8 @@ void CreateSideQuestCharacters(ref n)
 // Eng Captain Near FdF - SINK THE PIRATE CORVETTE
 	ch.old.name = "Simon";
 	ch.old.lastname = "Blunden";
-	ch.name = TranslateString("","Simon");
-	ch.lastname = TranslateString("","Blunden");
+	ch.name = TranslateString("", "Simon");
+	ch.lastname = TranslateString("", "Blunden");
 	ch.id		= "Eng Captain Near FdF";
 	ch.model = "corsair1_2";			// Petros: was "Offic_eng"
 	ch.sex = "man";
@@ -1399,7 +1401,7 @@ void CreateSideQuestCharacters(ref n)
 // ïåðâûé íàéìèò ãóáåðíàòîðà äëÿ íàïàäåíèÿ íà Äàíèåëü
 	ch.old.name = "killer";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","killer");
+	ch.name = TranslateString("", "killer");
 	ch.lastname = "";
 	ch.id		= "danielle_quests_killer_1";
 	ch.model	= "chameleon";
@@ -1439,10 +1441,10 @@ void CreateSideQuestCharacters(ref n)
 // Joaquin Da Saldanha - FIND THE MISSING SON OF THE SPANISH ADMIRAL (Lucas Da Saldanha quest)
 	ch.old.name = "Joaquin";
 	ch.old.lastname = "Da Saldanha";
-	ch.name = TranslateString("","Joaquin");
-	ch.lastname = TranslateString("","Da Saldanha");
+	ch.name = TranslateString("", "Joaquin");
+	ch.lastname = TranslateString("", "Da Saldanha");
 	ch.id		= "Joaquin Da Saldanha";
-	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.model = "spa_adm_18_2";
+	if (GetCurrentPeriod() >= PERIOD_COLONIAL_POWERS) ch.model = "spa_adm_18_2";
 	else ch.model = "admiral";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
@@ -1492,8 +1494,8 @@ void CreateSideQuestCharacters(ref n)
 // Arabella Silehard - FIND THE MISSING SON OF THE SPANISH ADMIRAL (Lucas Da Saldanha quest)
 	ch.old.name = "Arabella";
 	ch.old.lastname = "Silehard";
-	ch.name = TranslateString("","Arabella");
-	ch.lastname = TranslateString("","Silehard");
+	ch.name = TranslateString("", "Arabella");
+	ch.lastname = TranslateString("", "Silehard");
 	ch.id		= "Arabella Silehard";
 	ch.model = "towngirl1";
 	ch.sex = "woman";
@@ -1527,7 +1529,7 @@ void CreateSideQuestCharacters(ref n)
 // Arabella's Guard 1 - FIND THE MISSING SON OF THE SPANISH ADMIRAL (Lucas Da Saldanha quest)
 	ch.old.name = "Arabella's guard";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Arabella's guard");
+	ch.name = TranslateString("", "Arabella's guard");
 	ch.lastname = "";
 	ch.id		= "Arabella's guard 1";
 	ch.model	= Nations[ENGLAND].fantomModel.m0; // PB
@@ -1580,7 +1582,7 @@ void CreateSideQuestCharacters(ref n)
 // Arabella's Guard 2 - FIND THE MISSING SON OF THE SPANISH ADMIRAL (Lucas Da Saldanha quest)
 	ch.old.name = "Arabella's guard";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Arabella's guard");
+	ch.name = TranslateString("", "Arabella's guard");
 	ch.lastname = "";
 	ch.id		= "Arabella's guard 2";
 	ch.model	= Nations[ENGLAND].fantomModel.m0; // PB
@@ -1633,8 +1635,8 @@ void CreateSideQuestCharacters(ref n)
 // Ransom Pirate 1 - FIND THE MISSING SON OF THE SPANISH ADMIRAL (Lucas Da Saldanha quest)
 	ch.old.name = "Billy";
 	ch.old.lastname = "Brock";
-	ch.name = TranslateString("","Billy");
-	ch.lastname = TranslateString("","Brock");
+	ch.name = TranslateString("", "Billy");
+	ch.lastname = TranslateString("", "Brock");
 	ch.id		= "Billy Brock";
 	ch.model = "BillyBrock";
 	ch.sex = "man";
@@ -1686,8 +1688,8 @@ void CreateSideQuestCharacters(ref n)
 // Ransom Pirate 2 - FIND THE MISSING SON OF THE SPANISH ADMIRAL (Lucas Da Saldanha quest)
 	ch.old.name = "Snorri";
 	ch.old.lastname = "Baldursson";
-	ch.name = TranslateString("","Snorri");
-	ch.lastname = TranslateString("","Baldursson");
+	ch.name = TranslateString("", "Snorri");
+	ch.lastname = TranslateString("", "Baldursson");
 	ch.id		= "Snorri Baldursson";
 	ch.model = "sailor6";
 	ch.sex = "man";
@@ -1722,8 +1724,8 @@ void CreateSideQuestCharacters(ref n)
 // Ransom Pirate 3 - FIND THE MISSING SON OF THE SPANISH ADMIRAL (Lucas Da Saldanha quest)
 	ch.old.name = "Francis";
 	ch.old.lastname = "Snake";
-	ch.name = TranslateString("","Francis");
-	ch.lastname = TranslateString("","Snake");
+	ch.name = TranslateString("", "Francis");
+	ch.lastname = TranslateString("", "Snake");
 	ch.id		= "Francis Snake";
 	ch.model = "corsair1_1";
 	ch.sex = "man";
@@ -1762,8 +1764,8 @@ void CreateSideQuestCharacters(ref n)
 // Angelique Moulin - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
 	ch.old.name = "Angelique";
 	ch.old.lastname = "Moulin";
-	ch.name = TranslateString("","Angelique");
-	ch.lastname = TranslateString("","Moulin");
+	ch.name = TranslateString("", "Angelique");
+	ch.lastname = TranslateString("", "Moulin");
 	ch.id		= "Angelique Moulin";
 	ch.model = "towngirl6";
 	ch.sex = "woman";
@@ -1797,8 +1799,8 @@ void CreateSideQuestCharacters(ref n)
 // François Moulin - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
 	ch.old.name = "François";
 	ch.old.lastname = "Moulin";
-	ch.name = TranslateString("","François");
-	ch.lastname = TranslateString("","Moulin");
+	ch.name = TranslateString("", "François");
+	ch.lastname = TranslateString("", "Moulin");
 	ch.id	 = "Francois Moulin";
 	ch.model = "old_man1";
 	ch.sex = "man";
@@ -1834,8 +1836,8 @@ void CreateSideQuestCharacters(ref n)
 	ch.old.lastname = "Chamfort";
 	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
 	{
-		ch.name = TranslateString("","Antonio");
-		ch.lastname = TranslateString("","Chamot");
+		ch.name = TranslateString("", "Antonio");
+		ch.lastname = TranslateString("", "Chamot");
 		GiveItem2Character(ch, "blade47");
 		ch.equip.blade = "blade47";
 		ch.nation = SPAIN;
@@ -1845,8 +1847,8 @@ void CreateSideQuestCharacters(ref n)
 	}
 	else
 	{
-		ch.name = TranslateString("","Antoine");
-		ch.lastname = TranslateString("","Chamfort");
+		ch.name = TranslateString("", "Antoine");
+		ch.lastname = TranslateString("", "Chamfort");
 		GiveItem2Character(ch, "bladeC6");
 		ch.equip.blade = "bladeC6";
 		ch.nation = FRANCE;
@@ -1868,8 +1870,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -1898,8 +1902,8 @@ void CreateSideQuestCharacters(ref n)
 // Robert Durand - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
 	ch.old.name = "Robert";
 	ch.old.lastname = "Durand";
-	ch.name = TranslateString("","Robert_fr");
-	ch.lastname = TranslateString("","Durand");
+	ch.name = TranslateString("", "Robert_fr");
+	ch.lastname = TranslateString("", "Durand");
 	ch.id		= "Robert Durand";
 	ch.model	= "mongol";
 	ch.sex = "man";
@@ -1917,8 +1921,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -1948,7 +1954,7 @@ void CreateSideQuestCharacters(ref n)
 //  Buccaneer - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "buccaneer_01";
 	ch.model	= "pirat1";
@@ -1969,8 +1975,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 //	ch.location	= "none";
 //	ch.location.group = "";
@@ -2002,7 +2010,7 @@ void CreateSideQuestCharacters(ref n)
 //  Buccaneer - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "buccaneer_02";
 	ch.model	= "pirat2";
@@ -2023,8 +2031,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 //	ch.location	= "none";
 //	ch.location.group = "";
@@ -2055,7 +2065,7 @@ void CreateSideQuestCharacters(ref n)
 //  Buccaneer - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "buccaneer_03";
 	ch.model	= "pirat3";
@@ -2074,8 +2084,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 //	ch.location	= "none";
 //	ch.location.group = "";
@@ -2110,8 +2122,8 @@ void CreateSideQuestCharacters(ref n)
 // Reynoud Verheugen - ELIZABETH SHAW'S DISAPPEARENCE (Davy Jones First Contact quest)
 	ch.old.name = "Reynoud";
 	ch.old.lastname = "Verheugen";
-	ch.name = TranslateString("","Reynoud");
-	ch.lastname = TranslateString("","Verheugen");
+	ch.name = TranslateString("", "Reynoud");
+	ch.lastname = TranslateString("", "Verheugen");
 	ch.id		= "Reynoud Verheugen";
 	ch.model	= "fisherman1";
 	ch.sex = "man";
@@ -2144,8 +2156,8 @@ void CreateSideQuestCharacters(ref n)
 // Davy Jones - ELIZABETH SHAW'S DISAPPEARENCE (Davy Jones First Contact quest)
 	ch.old.name = "Davy";
 	ch.old.lastname = "Jones";
-	ch.name = TranslateString("","Davy");
-	ch.lastname = TranslateString("","Jones");
+	ch.name = TranslateString("", "Davy");
+	ch.lastname = TranslateString("", "Jones");
 	ch.id		= "Davy Jones";
 	ch.model	= "davyjones";
 	ch.sex = "man";
@@ -2166,8 +2178,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -2205,14 +2219,15 @@ void CreateSideQuestCharacters(ref n)
 // Octave Fabre - ELIZABETH SHAW'S DISAPPEARENCE (Davy Jones First Contact quest)
 	ch.old.name = "Octave";
 	ch.old.lastname = "Fabre";
-	ch.name = TranslateString("","Octave");
-	ch.lastname = TranslateString("","Fabre");
+	ch.name = TranslateString("", "Octave");
+	ch.lastname = TranslateString("", "Fabre");
 	ch.id		= "Octave Fabre";
 	ch.model = "Fra_adm_18"; // PB
 	ch.location	= "none";
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Octave Fabre_dialog.c";
+	ch.nation = FRANCE;
 	ch.rank 	= 30;
 	ch.reputation = "60";
 	ch.experience = "0";
@@ -2237,8 +2252,8 @@ void CreateSideQuestCharacters(ref n)
 // Elizabeth Shaw - ELIZABETH SHAW'S DISAPPEARENCE (Davy Jones First Contact quest)
 	ch.old.name = "Elizabeth";
 	ch.old.lastname = "Shaw";
-	ch.name = TranslateString("","Elizabeth");
-	ch.lastname = TranslateString("","Shaw");
+	ch.name = TranslateString("", "Elizabeth");
+	ch.lastname = TranslateString("", "Shaw");
 	ch.id		= "Elizabeth Shaw";
 	ch.model = "50_Rachel";
 	ch.sex = "woman";
@@ -2272,7 +2287,7 @@ void CreateSideQuestCharacters(ref n)
 //  Davy's crewmember1 - ELIZABETH SHAW'S DISAPPEARENCE (Davy Jones First Contact quest)
 	ch.old.name = "Palafico"; // PB
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Palafico"); // PB
+	ch.name = TranslateString("", "Palafico"); // PB
 	ch.lastname = "";
 	ch.id		= "Davycrew_01";
 	ch.model	= "davy4";
@@ -2291,8 +2306,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -2322,8 +2339,8 @@ void CreateSideQuestCharacters(ref n)
 //  Davy's crewmember2 - ELIZABETH SHAW'S DISAPPEARENCE (Davy Jones First Contact quest)
 	ch.old.name = "Jimmy";
 	ch.old.lastname = "Legs";
-	ch.name = TranslateString("","Jimmy"); // PB
-	ch.lastname = TranslateString("","Legs"); // PB
+	ch.name = TranslateString("", "Jimmy"); // PB
+	ch.lastname = TranslateString("", "Legs"); // PB
 	ch.id		= "Davycrew_02";
 	ch.model	= "davy5";
 	ch.sex = "man";
@@ -2341,8 +2358,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -2373,8 +2392,8 @@ void CreateSideQuestCharacters(ref n)
 // Bart Cooke - SMUGGLING FOR THOMAS O'REILY
 	ch.old.name = "Bart";
 	ch.old.lastname = "Cooke";
-	ch.name = TranslateString("","Bart");
-	ch.lastname = TranslateString("","Cooke");
+	ch.name = TranslateString("", "Bart");
+	ch.lastname = TranslateString("", "Cooke");
 	ch.id		= "Bart Cooke";
 	ch.model = "man4";
 	ch.sex = "man";
@@ -2384,7 +2403,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.location	= "none";
 	ch.location.group = "goto";
 	ch.location.locator = "none";
-	ch.Dialog.Filename = "Stephan Bonser_dialog.c";
+	ch.Dialog.Filename = "Bart_Cooke_dialog.c";
 	ch.greeting = "Gr_Stephan Bonser";
 	ch.rank 	= 1;
 	ch.reputation = "22";
@@ -2410,8 +2429,8 @@ void CreateSideQuestCharacters(ref n)
 // Wally Cutty - SMUGGLING FOR THOMAS O'REILY
 	ch.old.name = "Wally";
 	ch.old.lastname = "Cutty";
-	ch.name = TranslateString("","Wally");
-	ch.lastname = TranslateString("","Cutty");
+	ch.name = TranslateString("", "Wally");
+	ch.lastname = TranslateString("", "Cutty");
 	ch.id		= "Wally Cutty";
 	ch.model = "korsar";
 	ch.sex = "man";
@@ -2447,8 +2466,8 @@ void CreateSideQuestCharacters(ref n)
 // Bill Jellybones - SMUGGLING FOR THOMAS O'REILY
 	ch.old.name = "Bill";
 	ch.old.lastname = "Jellybones";
-	ch.name = TranslateString("","Bill");
-	ch.lastname = TranslateString("","Jellybones");
+	ch.name = TranslateString("", "Bill");
+	ch.lastname = TranslateString("", "Jellybones");
 	ch.id		= "Bill Jellybones";
 	ch.model = "fisherman";
 	ch.sex = "man";
@@ -2484,8 +2503,8 @@ void CreateSideQuestCharacters(ref n)
 // Pirate Captain 01 - SMUGGLING FOR THOMAS O'REILY
 	ch.old.name = "Xabe";
 	ch.old.lastname = "Oraglio";
-	ch.name = TranslateString("","Xabe");
-	ch.lastname = TranslateString("","Oraglio");
+	ch.name = TranslateString("", "Xabe");
+	ch.lastname = TranslateString("", "Oraglio");
 	ch.id		= "Pirate Captain 01";
 	ch.model = "Monkey_D_Luffy"; // GR: was "fisherman", same as all the others
 	ch.sex = "man";
@@ -2500,7 +2519,8 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "quest_ship_11";//locator8
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
 	ch.Ship.Name = "Fast Death";
-	ch.Ship.Type = "Brig1"; // PRS3
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) ch.Ship.Type = "Carrack";
+	else ch.Ship.Type = "Brig1"; // PRS3
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
 	ch.rank 	= 1;
@@ -2528,8 +2548,8 @@ void CreateSideQuestCharacters(ref n)
 // Pirate Captain 02 - SMUGGLING FOR THOMAS O'REILY
 	ch.old.name = "Wadham";		// GR: was "Gyles"
 	ch.old.lastname = "Notley";	// GR: was "Dubois"
-	ch.name = TranslateString("","Wadham");
-	ch.lastname = TranslateString("","Notley");
+	ch.name = TranslateString("", "Wadham");
+	ch.lastname = TranslateString("", "Notley");
 	ch.id		= "Pirate Captain 02";
 	ch.model = "fisherman";
 	ch.sex = "man";
@@ -2572,8 +2592,8 @@ void CreateSideQuestCharacters(ref n)
 // Pirate Captain 03 - SMUGGLING FOR THOMAS O'REILY
 	ch.old.name = "Morland";	// GR: was "Gyles"
 	ch.old.lastname = "Haley";	// GR: was "Dubois"
-	ch.name = TranslateString("","Morland");
-	ch.lastname = TranslateString("","Haley");
+	ch.name = TranslateString("", "Morland");
+	ch.lastname = TranslateString("", "Haley");
 	ch.id		= "Pirate Captain 03";
 	ch.model = "fisherman";
 	ch.sex = "man";
@@ -2590,7 +2610,8 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "quest_ship_11";//locator8
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
 	ch.Ship.Name = "Duquesa";	// GR - was "Madonna"
-	ch.Ship.Type = "BarqueHeavy";	// GR - was "Barque1"
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) ch.Ship.Type = "PO_Caravel50";
+	else ch.Ship.Type = "BarqueHeavy";	// GR - was "Barque1"
 	ch.Ship.Stopped = true;
 	// KNB ch.Ship.Cannons.Type = CANNON_TYPE_CANNON_LBS16;
 	ch.rank 	= 1;
@@ -2617,8 +2638,8 @@ void CreateSideQuestCharacters(ref n)
 // Pirate Captain 04 - SMUGGLING FOR THOMAS O'REILY
 	ch.old.name = "Gyles";
 	ch.old.lastname = "Dubois";
-	ch.name = TranslateString("","Gyles");
-	ch.lastname = TranslateString("","Dubois");
+	ch.name = TranslateString("", "Gyles");
+	ch.lastname = TranslateString("", "Dubois");
 	ch.id		= "Pirate Captain 04";
 	ch.model = "fisherman";
 	ch.sex = "man";
@@ -2686,8 +2707,8 @@ void CreateSideQuestCharacters(ref n)
 				// Henry Peat
 	ch.old.name = "Henry";
 	ch.old.lastname = "Peat";
-	ch.name = TranslateString("","Henry");
-	ch.lastname = TranslateString("","Peat");
+	ch.name = TranslateString("", "Henry");
+	ch.lastname = TranslateString("", "Peat");
 	ch.id		= "Henry Peat";
 	ch.model = "old_man2";
 	ch.sex = "man";
@@ -2721,8 +2742,8 @@ void CreateSideQuestCharacters(ref n)
 				// Gordon Carpenter
 	ch.old.name = "Gordon";
 	ch.old.lastname = "Carpenter";
-	ch.name = TranslateString("","Gordon");
-	ch.lastname = TranslateString("","Carpenter");
+	ch.name = TranslateString("", "Gordon");
+	ch.lastname = TranslateString("", "Carpenter");
 	ch.id		= "Gordon Carpenter";
 	ch.model = "bocman4";
 	ch.sex = "man";
@@ -2756,7 +2777,7 @@ void CreateSideQuestCharacters(ref n)
 				// ANIMISTS
 	ch.old.name = "Dark Captain";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Dark Captain");
+	ch.name = TranslateString("", "Dark Captain");
 	ch.lastname = "";
 	ch.id		= "Dark Captain";
 	ch.model = "ANIMISTS2";
@@ -2773,10 +2794,13 @@ void CreateSideQuestCharacters(ref n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Gyles Dubois_dialog.c";
 	ch.Ship.Name = "Mefisto";
+	ch.Ship.Type = "Frigate_sat"; // PRS3
 	if (GetCurrentPeriod() < PERIOD_GOLDEN_AGE_OF_PIRACY)
-		ch.Ship.Type = "FleutWarSat"; // Grey Roger: alternative for early periods
-	else
-		ch.Ship.Type = "Frigate_sat"; // PRS3
+		ch.Ship.Type = "FleutWarSat";		// Grey Roger: alternative for early periods
+	if (GetCurrentPeriod() == PERIOD_REVOLUTIONS)
+		ch.Ship.Type = "PiratFrigateSat";	// The Nameless Pirate: alternative for Revolutions period
+	if (GetCurrentPeriod() == PERIOD_NAPOLEONIC)
+		ch.Ship.Type = "Sat_Essex";		// Grey Roger: alternative for Napoleonic period
 	ch.Ship.Stopped = true;
 	ch.Flags.Pirate = 6; // GR: Animists Pirate Flag
 	ch.Flags.Pirate.texture = 1;
@@ -2808,8 +2832,8 @@ void CreateSideQuestCharacters(ref n)
 				// Giraldo Figuiera
 	ch.old.name = "Giraldo";
 	ch.old.lastname = "Figuiera";
-	ch.name = TranslateString("","Giraldo");
-	ch.lastname = TranslateString("","Figuiera");
+	ch.name = TranslateString("", "Giraldo");
+	ch.lastname = TranslateString("", "Figuiera");
 	ch.id		= "Giraldo Figuiera";
 	ch.model = "corsair2";	// KevAtl 08-26-2007 fix missing char model
 	ch.sex = "man";
@@ -2854,8 +2878,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "1";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","1");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = TranslateString("", "1");
 	ch.id		= "Pirates_1";
 	ch.model	= "korsar";
 	ch.sound_type = "pirate";
@@ -2891,8 +2915,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "2";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","2");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = TranslateString("", "2");
 	ch.id		= "Pirates_2";
 	ch.model	= "corsair2";
 	ch.sound_type = "pirate";
@@ -2928,8 +2952,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "3";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","3");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = TranslateString("", "3");
 	ch.id		= "Pirates_3";
 	ch.model	= "corsair1";
 	ch.sound_type = "pirate";
@@ -2969,8 +2993,8 @@ void CreateSideQuestCharacters(ref n)
 			// Friedrich Maxwell
 	ch.old.name = "Friedrich";
 	ch.old.lastname = "Maxwell";
-	ch.name = TranslateString("","Friedrich");
-	ch.lastname = TranslateString("","Maxwell");
+	ch.name = TranslateString("", "Friedrich");
+	ch.lastname = TranslateString("", "Maxwell");
 	ch.id		= "Friedrich Maxwell";
 	ch.model	= "corsair3";
 	ch.sex = "man";
@@ -3002,8 +3026,8 @@ void CreateSideQuestCharacters(ref n)
 			// Luis Meranda
 	ch.old.name = "Luis";
 	ch.old.lastname = "Meranda";
-	ch.name = TranslateString("","Luis");
-	ch.lastname = TranslateString("","Meranda");
+	ch.name = TranslateString("", "Luis");
+	ch.lastname = TranslateString("", "Meranda");
 	ch.id		= "Luis Meranda";
 	ch.model	= "man1";
 	ch.sex = "man";
@@ -3034,8 +3058,8 @@ void CreateSideQuestCharacters(ref n)
 			// Pirates_7 --
 	ch.old.name = "Pirate";
 	ch.old.lastname = "seven";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","seven");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = TranslateString("", "seven");
 	ch.id		= "Pirates_7";
 	ch.model	= "man4";
 	ch.sex = "man";
@@ -3088,8 +3112,8 @@ void CreateSideQuestCharacters(ref n)
 				// Claudio Murena.
 	ch.old.name = "Claudio";
 	ch.old.lastname = "Murena";
-	ch.name = TranslateString("","Claudio");
-	ch.lastname = TranslateString("","Murena");
+	ch.name = TranslateString("", "Claudio");
+	ch.lastname = TranslateString("", "Murena");
 	ch.id		= "Claudio Murena";
 	ch.model = "man2";
 	ch.sex = "man";
@@ -3121,8 +3145,8 @@ void CreateSideQuestCharacters(ref n)
 				// Ethilrede Claar - ïèðàò, êîòîðûé ïðîäàë â ðàáñòâî îäíîãî èç íàøèõ îôèöåðîâ () Leborio Drago
 	ch.old.name = "Ethilrede";
 	ch.old.lastname = "Claar";
-	ch.name = TranslateString("","Ethilrede");
-	ch.lastname = TranslateString("","Claar");
+	ch.name = TranslateString("", "Ethilrede");
+	ch.lastname = TranslateString("", "Claar");
 	ch.id		= "Ethilrede Claar";
 	ch.model = "corsair2"; // KevAtl 08-26-2007 fix missing char model
 	ch.sex = "man";
@@ -3173,8 +3197,8 @@ void CreateSideQuestCharacters(ref n)
 					// Martin Warner.
 	ch.old.name = "Martin";
 	ch.old.lastname = "Warner";
-	ch.name = TranslateString("","Martin");
-	ch.lastname = TranslateString("","Warner");
+	ch.name = TranslateString("", "Martin");
+	ch.lastname = TranslateString("", "Warner");
 	ch.id		= "Martin Warner";
 	ch.model	= Nations[ENGLAND].fantomModel.m2; // PB
 	ch.sex = "man";
@@ -3206,8 +3230,8 @@ void CreateSideQuestCharacters(ref n)
 				// Jack Greenfield.
 	ch.old.name = "Jack";
 	ch.old.lastname = "Greenfield";
-	ch.name = TranslateString("","Jack");
-	ch.lastname = TranslateString("","Greenfield");
+	ch.name = TranslateString("", "Jack");
+	ch.lastname = TranslateString("", "Greenfield");
 	ch.id		= "Jack Greenfield";
 	ch.model	= Nations[ENGLAND].fantomModel.m3; // PB
 	ch.sex = "man";
@@ -3316,8 +3340,8 @@ void CreateSideQuestCharacters(ref n)
 				// Ambroz Bricenos
 	ch.old.name = "Ambroz";
 	ch.old.lastname = "Bricenos";
-	ch.name = TranslateString("","Ambroz");
-	ch.lastname = TranslateString("","Bricenos");
+	ch.name = TranslateString("", "Ambroz");
+	ch.lastname = TranslateString("", "Bricenos");
 	ch.id		= "Ambroz Bricenos";
 	ch.model = "Storeman";
 	ch.sex = "man";
@@ -3361,8 +3385,8 @@ void CreateSideQuestCharacters(ref n)
 				// Mateus Santos
 	ch.old.name = "Mateus";
 	ch.old.lastname = "Santos";
-	ch.name = TranslateString("","Mateus");
-	ch.lastname = TranslateString("","Santos");
+	ch.name = TranslateString("", "Mateus");
+	ch.lastname = TranslateString("", "Santos");
 	ch.id		= "Mateus Santos";
 	ch.model = "Assassin"; //SCM
 	ch.sex = "man";
@@ -3407,8 +3431,8 @@ void CreateSideQuestCharacters(ref n)
 				// Thug 1
 	ch.old.name = "Desiree'"; //SCM
 	ch.old.lastname = "Muerte"; //SCM
-	ch.name = TranslateString("","Desiree'"); //SCM
-	ch.lastname = TranslateString("","Muerte"); //SCM
+	ch.name = TranslateString("", "Desiree'"); //SCM
+	ch.lastname = TranslateString("", "Muerte"); //SCM
 	ch.id		= "Desiree' Muerte"; //SCM
 	ch.model = "mowngirl7"; //SCM
 	ch.sex = "woman"; //SCM
@@ -3445,7 +3469,7 @@ void CreateSideQuestCharacters(ref n)
 				// Thug 2
 	ch.old.name = "Thug";
 	ch.old.lastname = " ";
-	ch.name = TranslateString("","Thug");
+	ch.name = TranslateString("", "Thug");
 	ch.lastname = " ";
 	ch.id		= "Thug2";
 	ch.model = "pirat6"; //SCM
@@ -3490,8 +3514,8 @@ void CreateSideQuestCharacters(ref n)
 				// Thug 3
 	ch.old.name = "Thug";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Vassal"); //SCM
-	ch.lastname = TranslateString("","Bethune"); //SCM
+	ch.name = TranslateString("", "Vassal"); //SCM
+	ch.lastname = TranslateString("", "Bethune"); //SCM
 	ch.id		= "Thug3";
 	ch.model = "killer"; //SCM
 	ch.sex = "man";
@@ -3544,7 +3568,7 @@ void CreateSideQuestCharacters(ref n)
 				// Thug 4 //SCM
 	ch.old.name = "Daryl"; //SCM
 	ch.old.lastname = " ";
-	ch.name = TranslateString("","Daryl"); //SCM
+	ch.name = TranslateString("", "Daryl"); //SCM
 	ch.lastname = " ";
 	ch.id		= "Thug4"; //SCM
 	ch.model = "pirat2"; //SCM
@@ -3589,7 +3613,7 @@ void CreateSideQuestCharacters(ref n)
 				// Thug 5 //SCM
 	ch.old.name = "Larry"; //SCM
 	ch.old.lastname = " ";
-	ch.name = TranslateString("","Larry"); //SCM
+	ch.name = TranslateString("", "Larry"); //SCM
 	ch.lastname = " ";
 	ch.id		= "Thug5"; //SCM
 	ch.model = "bugmanpirat14"; //SCM
@@ -3642,7 +3666,7 @@ void CreateSideQuestCharacters(ref n)
 				// Thug 6 //SCM
 	ch.old.name = "Daryl"; //SCM
 	ch.old.lastname = " ";
-	ch.name = TranslateString("","Daryl"); //SCM
+	ch.name = TranslateString("", "Daryl"); //SCM
 	ch.lastname = " ";
 	ch.id		= "Thug6"; //SCM
 	ch.model = "korsar1"; //SCM
@@ -3687,7 +3711,7 @@ void CreateSideQuestCharacters(ref n)
 				// Thug 7 //SCM
 	ch.old.name = "Thug";
 	ch.old.lastname = " ";
-	ch.name = TranslateString("","Thug");
+	ch.name = TranslateString("", "Thug");
 	ch.lastname = " ";
 	ch.id		= "Thug7"; //SCM
 	ch.model = "pirat8"; //SCM
@@ -3740,7 +3764,7 @@ void CreateSideQuestCharacters(ref n)
 				// Thug 8 //SCM
 	ch.old.name = "Thug";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Thug");
+	ch.name = TranslateString("", "Thug");
 	ch.lastname = " ";
 	ch.id		= "Thug8"; //SCM
 	ch.model = "pirat9"; //SCM
@@ -3785,8 +3809,8 @@ void CreateSideQuestCharacters(ref n)
 				// Captain Jack Sparrow //SCM
 	ch.old.name = "Captain Jack";
 	ch.old.lastname = "Sparrow";
-	ch.name = TranslateString("","Captain Jack");
-	ch.lastname = TranslateString("","Sparrow");
+	ch.name = TranslateString("", "Captain Jack");
+	ch.lastname = TranslateString("", "Sparrow");
 	ch.id		= "Thug9"; //SCM
 	ch.model = "depp"; //SCM
 	ch.sex = "man";
@@ -3820,8 +3844,8 @@ void CreateSideQuestCharacters(ref n)
 				// Leone's Daughter Camille //SCM
 	ch.old.name = "Camille"; //SCM
 	ch.old.lastname = "Leone"; //SCM
-	ch.name = TranslateString("","Camille"); //SCM
-	ch.lastname = TranslateString("","Leone"); //SCM
+	ch.name = TranslateString("", "Camille"); //SCM
+	ch.lastname = TranslateString("", "Leone"); //SCM
 	ch.id		= "Camille Leone"; //SCM
 	ch.model = "mowngirl5"; //SCM
 	ch.sex = "woman"; //SCM
@@ -3855,7 +3879,7 @@ void CreateSideQuestCharacters(ref n)
 				// Pris 1 //SCM
 	ch.old.name = "Prisoner";
 	ch.old.lastname = " ";
-	ch.name = TranslateString("","Prisoner");
+	ch.name = TranslateString("", "Prisoner");
 	ch.lastname = " ";
 	ch.id		= "Pris1"; //SCM
 	ch.model = "rabblack"; //SCM
@@ -3887,7 +3911,7 @@ void CreateSideQuestCharacters(ref n)
 				// Pris 2 //SCM
 	ch.old.name = "Prisoner";
 	ch.old.lastname = " ";
-	ch.name = TranslateString("","Prisoner");
+	ch.name = TranslateString("", "Prisoner");
 	ch.lastname = " ";
 	ch.id		= "Pris2"; //SCM
 	ch.model = "rabblack_1"; //SCM
@@ -3979,8 +4003,8 @@ void CreateSideQuestCharacters(ref n)
 				// Geffrey Bampfylde
 	ch.old.name = "Geffrey";
 	ch.old.lastname = "Bampfylde";
-	ch.name = TranslateString("","Geffrey");
-	ch.lastname = TranslateString("","Bampfylde");
+	ch.name = TranslateString("", "Geffrey");
+	ch.lastname = TranslateString("", "Bampfylde");
 	ch.id		= "Geffrey Bampfylde";
 	ch.model = "Nobleman";
 	ch.sex = "man";
@@ -4014,7 +4038,7 @@ void CreateSideQuestCharacters(ref n)
 				// Bucho
 	ch.old.name = "Bucho";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Bucho");
+	ch.name = TranslateString("", "Bucho");
 	ch.lastname = " ";
 	ch.id		= "Bucho";
 	ch.model = "man4";
@@ -4051,8 +4075,8 @@ void CreateSideQuestCharacters(ref n)
 				// Pepin Bertillon
 	ch.old.name = "Pepin";
 	ch.old.lastname = "Bertillon";
-	ch.name = TranslateString("","Pepin");
-	ch.lastname = TranslateString("","Bertillon");
+	ch.name = TranslateString("", "Pepin");
+	ch.lastname = TranslateString("", "Bertillon");
 	ch.id		= "Pepin Bertillon";
 	ch.model = "Pirat4";
 	ch.sex = "man";
@@ -4104,7 +4128,7 @@ void CreateSideQuestCharacters(ref n)
 				// Bertillon's guard 1
 	ch.old.name = "Bertillon's guard";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Bertillon's guard");
+	ch.name = TranslateString("", "Bertillon's guard");
 	ch.lastname = " ";
 	ch.id		= "Bertillon's guard1";
 	ch.model = "pirat7";
@@ -4141,7 +4165,7 @@ void CreateSideQuestCharacters(ref n)
 				// Bertillon's guard 2
 	ch.old.name = "Bertillon's guard";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Bertillon's guard");
+	ch.name = TranslateString("", "Bertillon's guard");
 	ch.lastname = " ";
 	ch.id		= "Bertillon's guard2";
 	ch.model = "pirat5";
@@ -4178,8 +4202,8 @@ void CreateSideQuestCharacters(ref n)
 				// Vito Leone
 	ch.old.name = "Vito";
 	ch.old.lastname = "Leone";
-	ch.name = TranslateString("","Vito");
-	ch.lastname = TranslateString("","Leone");
+	ch.name = TranslateString("", "Vito");
+	ch.lastname = TranslateString("", "Leone");
 	ch.id		= "Vito Leone";
 	ch.model = "Vito";
 	ch.sex = "man";
@@ -4215,7 +4239,7 @@ void CreateSideQuestCharacters(ref n)
 			//  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_01";
 	ch.model	= "pirat1";
@@ -4248,7 +4272,7 @@ void CreateSideQuestCharacters(ref n)
 			//  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_02";
 	ch.model	= "pirat2";
@@ -4281,7 +4305,7 @@ void CreateSideQuestCharacters(ref n)
 			//  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_03";
 	ch.model	= "pirat3";
@@ -4314,7 +4338,7 @@ void CreateSideQuestCharacters(ref n)
 			//  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_04";
 	ch.model	= "pirat4";
@@ -4347,7 +4371,7 @@ void CreateSideQuestCharacters(ref n)
 			//  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_05";
 	ch.model	= "pirat5";
@@ -4380,7 +4404,7 @@ void CreateSideQuestCharacters(ref n)
 			//  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_06";
 	ch.model	= "pirat6";
@@ -4412,8 +4436,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Emilio";
 	ch.old.lastname = "Soares";
-	ch.name = TranslateString("","Emilio");
-	ch.lastname = TranslateString("","Soares");
+	ch.name = TranslateString("", "Emilio");
+	ch.lastname = TranslateString("", "Soares");
 	ch.id		= "Emilio Soares";
 	ch.model	= "Emilio1"; // Thomas the Terror
 	ch.sex = "man";
@@ -4445,8 +4469,8 @@ void CreateSideQuestCharacters(ref n)
 		
 	ch.old.name = "Juan";
 	ch.old.lastname = "Hernandez";
-	ch.name = TranslateString("","Juan");
-	ch.lastname = TranslateString("","Hernandez");
+	ch.name = TranslateString("", "Juan");
+	ch.lastname = TranslateString("", "Hernandez");
 	ch.id		= "Juan Hernandez";
 	ch.model	= "fisherman";
 	ch.sex = "man";
@@ -4481,7 +4505,7 @@ void CreateSideQuestCharacters(ref n)
 			//  lookout
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "lookout";
 	ch.model	= "pirat1";
@@ -4504,8 +4528,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.rank 	= 3;
 	ch.reputation = "None";
@@ -4560,8 +4586,10 @@ void CreateSideQuestCharacters(ref n)
 	ch.equip.gun = "pistol5+1";
 	// PB <--
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.nation	= HOLLAND;
 	ch.rank 	= 40;
@@ -4602,8 +4630,8 @@ void CreateSideQuestCharacters(ref n)
 	
 	ch.old.name = "Diego";
 	ch.old.lastname = "Cordoba";
-	ch.name = TranslateString("","Diego");
-	ch.lastname = TranslateString("","Cordoba");
+	ch.name = TranslateString("", "Diego");
+	ch.lastname = TranslateString("", "Cordoba");
 	ch.id		= "Diego Cordoba";
 	ch.model	= Nations[SPAIN].fantomModel.m0; // PB
 	ch.sex = "man";
@@ -4621,8 +4649,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.nation	= SPAIN;
 	ch.location	= "none";
@@ -4653,7 +4683,7 @@ void CreateSideQuestCharacters(ref n)
 		
 	ch.old.name = "Captain";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Captain");
+	ch.name = TranslateString("", "Captain");
 	ch.lastname = "";
 	ch.id		= "Captain";
 	ch.nation	= SPAIN;
@@ -4695,8 +4725,8 @@ void CreateSideQuestCharacters(ref n)
 				// Cecile Bienbonne
 	ch.old.name = "Cecile";
 	ch.old.lastname = "Bienbonne";
-	ch.name = "Cecile";
-	ch.lastname = "Bienbonne";
+	ch.name = TranslateString("", "Cecile");
+	ch.lastname = TranslateString("", "Bienbonne");
 	ch.id		= "Cecile Bienbonne";
 	ch.model = "imgovwife";
 	ch.sex = "woman";
@@ -4730,8 +4760,8 @@ void CreateSideQuestCharacters(ref n)
 	                       // Francisco Cruz	
 	ch.old.name = "Francisco";
 	ch.old.lastname = "Cruz";
-	ch.name = "Francisco";
-	ch.lastname = "Cruz";
+	ch.name = TranslateString("", "Francisco");
+	ch.lastname = TranslateString("", "Cruz");
 	ch.id		= "Francisco Cruz";
 	ch.model	= "Francisco_Cruz";
 	ch.sex = "man";
@@ -4749,8 +4779,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -4772,7 +4804,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Sneak = "1";
 	ch.money = "0";
 	LAi_SetCivilianGuardianType(ch); // PB
-	LAi_SetLoginTime(ch, 8.0, 20.0);
+	LAi_SetLoginTime(ch, 6.0, 22.0);
 	LAi_SetHP(ch, 50.0, 50.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
@@ -4780,8 +4812,8 @@ void CreateSideQuestCharacters(ref n)
 	                       // Etienne Dupuis	
 	ch.old.name = "Etienne";
 	ch.old.lastname = "Dupuis";
-	ch.name = "Etienne";
-	ch.lastname = "Dupuis";
+	ch.name = TranslateString("", "Etienne");
+	ch.lastname = TranslateString("", "Dupuis");
 	ch.id		= "Etienne Dupuis";
 	ch.model	= Nations[FRANCE].fantomModel.m3; // PB
 	ch.sex = "man";
@@ -4799,8 +4831,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.nation = FRANCE;
 	ch.location	= "none";
@@ -4831,8 +4865,8 @@ void CreateSideQuestCharacters(ref n)
 	                       // Pedro Rivera	
 	ch.old.name = "Pedro";
 	ch.old.lastname = "Rivera";
-	ch.name = "Pedro";
-	ch.lastname = "Rivera";
+	ch.name = TranslateString("", "Pedro");
+	ch.lastname = TranslateString("", "Rivera");
 	ch.id		= "Pedro Rivera";
 	ch.model	= "wurmwoode";
 	ch.sex = "man";
@@ -4850,8 +4884,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -4882,8 +4918,8 @@ void CreateSideQuestCharacters(ref n)
 	                          // Jean Dusac
 	ch.old.name = "Jean";
 	ch.old.lastname = "Dusac";
-	ch.name = "Jean";
-	ch.lastname = "Dusac";
+	ch.name = TranslateString("", "Jean");
+	ch.lastname = TranslateString("", "Dusac");
 	ch.id		= "Jean Dusac";
 	ch.model	= "pirtt7";
 	ch.sex = "man";
@@ -4901,8 +4937,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--	
 	ch.location	= "none";
 	ch.location.group = "";
@@ -4934,8 +4972,8 @@ void CreateSideQuestCharacters(ref n)
 	                       // Konrad Kulczycki
 	ch.old.name = "Konrad";
 	ch.old.lastname = "Kulczycki";
-	ch.name = TranslateString("","Konrad");
-	ch.lastname = TranslateString("","Kulczycki");
+	ch.name = TranslateString("", "Konrad");
+	ch.lastname = TranslateString("", "Kulczycki");
 	ch.id		= "Konrad Kulczycki";
 	ch.model	= "Corsair4"; // KK
 	ch.sex = "man";
@@ -4973,7 +5011,7 @@ void CreateSideQuestCharacters(ref n)
 	
 	ch.old.name = "Silver";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Silver");
+	ch.name = TranslateString("", "Silver");
 	ch.lastname = "";
 	ch.id		= "Silver";
 	ch.model	= "Hugnt18";
@@ -4991,7 +5029,7 @@ void CreateSideQuestCharacters(ref n)
 			// Larrouse_pirate_01 copy of quest_pirate_01
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "Larrouse_pirate_01";  // TALISMAN was quest_pirate_01
 	ch.model = "korsar";
@@ -5031,7 +5069,7 @@ void CreateSideQuestCharacters(ref n)
 					// Larrouse_smuggler_01 copy of quest_smuggler_01
 	ch.old.name = "Smuggler";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Smuggler");
+	ch.name = TranslateString("", "Smuggler");
 	ch.lastname = "";
 	ch.id		= "Larrouse_smuggler_01"; // TALISMAN was quest_smuggler_01
 	ch.model = "corsair2";
@@ -5069,7 +5107,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Nathaniel's Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Nathaniel's Crewmember");
+	ch.name = TranslateString("", "Nathaniel's Crewmember");
 	ch.lastname = "";
 	ch.id		= "Blaze_Crewmember_01";
 	ch.model	= "bocman";
@@ -5104,7 +5142,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Nathaniel's Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Nathaniel's Crewmember");
+	ch.name = TranslateString("", "Nathaniel's Crewmember");
 	ch.lastname = "";
 	ch.id		= "Blaze_Crewmember_02";
 	ch.model	= "korsar";
@@ -5139,7 +5177,7 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Nathaniel's Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Nathaniel's Crewmember");
+	ch.name = TranslateString("", "Nathaniel's Crewmember");
 	ch.lastname = "";
 	ch.id		= "Blaze_Crewmember_03";
 	ch.model	= "Black_Corsair";
@@ -5175,8 +5213,8 @@ void CreateSideQuestCharacters(ref n)
 	// Clair Larrouse
 	ch.old.name = "Clair";
 	ch.old.lastname = "Larrouse";
-	ch.name = TranslateString("","Clair");
-	ch.lastname = TranslateString("","Larrousse");
+	ch.name = TranslateString("", "Clair");
+	ch.lastname = TranslateString("", "Larrousse");
 	ch.id		= "Clair Larrouse";
 	ch.model = "corsair1_1";
 	ch.sex = "man";
@@ -5224,7 +5262,7 @@ void CreateSideQuestCharacters(ref n)
 				// France_bukaner_01
 	ch.old.name = "France_bukaner_01";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","France_bukaner_01");
+	ch.name = TranslateString("", "France_bukaner_01");
 	ch.lastname = "";
 	ch.id		= "France_bukaner_01";
 	ch.model = "man2";
@@ -5264,7 +5302,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.old.name = "Skull";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Skull");
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Skull";
 	ch.model	= "Skull";
 	ch.sex = "man";
@@ -5325,8 +5363,8 @@ void CreateSideQuestCharacters(ref n)
 	                       // Will Turner	
 	ch.old.name = "Will";
 	ch.old.lastname = "Turner";
-	ch.name = TranslateString("","Will");
-	ch.lastname = TranslateString("","Turner");
+	ch.name = TranslateString("", "Will");
+	ch.lastname = TranslateString("", "Turner");
 	ch.id		= "Will Turner";
 	ch.nation	= ENGLAND;
 	ch.sound_type = "seaman";
@@ -5337,8 +5375,10 @@ void CreateSideQuestCharacters(ref n)
 	GiveItem2Character(ch, "pistol5");
 	ch.equip.gun = "pistol5";
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -5383,16 +5423,18 @@ void CreateSideQuestCharacters(ref n)
 				   // Elizabeth Swann
 	ch.old.name = "Elizabeth";
 	ch.old.lastname = "Swann";
-	ch.name = TranslateString("","Elizabeth");
-	ch.lastname = TranslateString("","Swann");
+	ch.name = TranslateString("", "Elizabeth");
+	ch.lastname = TranslateString("", "Swann");
 	ch.id		= "Elizabeth Swann";
 	ch.model = "liz1"; // PB
 	ch.nation	= ENGLAND;
 	ch.sex = "woman";
 	ch.sound_type = "pirate";
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -5430,9 +5472,9 @@ void CreateSideQuestCharacters(ref n)
 	ch.old.name = "Contre-Amirale";
 	ch.old.middlename = "Cesar";
 	ch.old.lastname = "Beauregard";
-	ch.name = TranslateString("","Contre-Amirale");
-	ch.middlename = TranslateString("","Cesar");
-	ch.lastname = TranslateString("","Beauregard");
+	ch.name = TranslateString("", "Contre-Amirale");
+	ch.middlename = TranslateString("", "Cesar");
+	ch.lastname = TranslateString("", "Beauregard");
 	ch.id		= "Contre-Amirale";
 	ch.model = "huber_fra";
 	ch.sex = "man";
@@ -5464,8 +5506,8 @@ void CreateSideQuestCharacters(ref n)
 	//Bonaire Docker
 	ch.old.name = "Dockworker";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Dockworker");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Dockworker");
+	ch.lastname = "";
 	ch.id		= "Docker";
 	ch.model	= "man5";
 	ch.sex = "man";
@@ -5500,8 +5542,8 @@ void CreateSideQuestCharacters(ref n)
 	//Captain's Wife
 	ch.old.name = "Maartje";
 	ch.old.lastname = "Hesselink";
-	ch.name = TranslateString("","Maartje");
-	ch.lastname = TranslateString("","Hesselink");
+	ch.name = TranslateString("", "Maartje");
+	ch.lastname = TranslateString("", "Hesselink");
 	ch.id		= "Skipper Wife";
 	ch.model	= "towngirl2";
 	ch.sex = "woman";
@@ -5535,8 +5577,8 @@ void CreateSideQuestCharacters(ref n)
 	//Skipper's wife lover
 	ch.old.name = "Jan";
 	ch.old.lastname = "Barendsz";
-	ch.name = TranslateString("","Jan");
-	ch.lastname = TranslateString("","Barendsz");
+	ch.name = TranslateString("", "Jan");
+	ch.lastname = TranslateString("", "Barendsz");
 	ch.id		= "Cheater";
 	ch.model	= "killer";
 	ch.sex = "man";
@@ -5571,8 +5613,8 @@ void CreateSideQuestCharacters(ref n)
 // Havana_Crewmember
 	ch.old.name = "Geoffroi";
 	ch.old.lastname = "Albeille";
-	ch.name = TranslateString("","Geoffroi");
-	ch.lastname = TranslateString("","Albeille");
+	ch.name = TranslateString("", "Geoffroi");
+	ch.lastname = TranslateString("", "Albeille");
 	ch.id		= "Crewmember_Havana";
 	ch.model	= "Sailor4";
 	ch.sex = "man";
@@ -5590,8 +5632,10 @@ void CreateSideQuestCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -5621,8 +5665,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Barend";
 	ch.old.lastname = "Hesselink";
-	ch.name = TranslateString("","Barend");
-	ch.lastname = TranslateString("","Hesselink");
+	ch.name = TranslateString("", "Barend");
+	ch.lastname = TranslateString("", "Hesselink");
 	ch.id		= "Skipper";
 	ch.model	= "man8";
 	ch.sex = "man";
@@ -5633,8 +5677,10 @@ void CreateSideQuestCharacters(ref n)
 	GiveItem2Character(ch, "pistol2");
 	ch.equip.gun = "pistol2";
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "none";
 	ch.location.group = "";
@@ -5669,8 +5715,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Barend";
 	ch.old.lastname = "Hesselink";
-	ch.name = TranslateString("","Barend");
-	ch.lastname = TranslateString("","Hesselink");
+	ch.name = TranslateString("", "Barend");
+	ch.lastname = TranslateString("", "Hesselink");
 	ch.id		= "Skipper1";
 	ch.model	= "man8";
 	ch.sex = "man";
@@ -5681,8 +5727,10 @@ void CreateSideQuestCharacters(ref n)
 	GiveItem2Character(ch, "pistol2");
 	ch.equip.gun = "pistol2";
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.Ship.Name = "Vogelstruijs";	
 	ch.Ship.Type = "Pinnace2";		
@@ -5743,8 +5791,10 @@ void CreateSideQuestCharacters(ref n)
 	ch.equip.gun = "pistol5+1";
 	// PB <--
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.rank 	= 40;
 	// PB -->
@@ -5819,7 +5869,7 @@ void CreateSideQuestCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Surgeon");
+	ch.name = TranslateString("", "Surgeon");
 	ch.lastname = "";
 	ch.id		= "hotel_ghost2";
 	ch.model = "wr_mummy2";
@@ -5854,7 +5904,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Priest");
+	ch.name = TranslateString("", "Priest");
 	ch.lastname = "";
 	ch.id		= "hotel_ghost3";
 	ch.model = "wr_mummy3";
@@ -5889,7 +5939,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Captain");
+	ch.name = TranslateString("", "Captain");
 	ch.lastname = "";
 	ch.id		= "hotel_ghost6";
 	ch.model = "wr_mummy6";
@@ -5924,7 +5974,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Boatswain");
+	ch.name = TranslateString("", "Boatswain");
 	ch.lastname = "";
 	ch.id		= "hotel_ghost7";
 	ch.model = "wr_mummy7";
@@ -5959,7 +6009,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Navigator");
+	ch.name = TranslateString("", "Navigator");
 	ch.lastname = "";
 	ch.id		= "hotel_ghost8";
 	ch.model = "wr_mummy8";
@@ -5997,8 +6047,8 @@ void CreateSideQuestCharacters(ref n)
 	// Kapitein of Kralendijk sidequest
 	ch.old.name = "Willem";
 	ch.old.lastname = "Voigt";
-	ch.name = TranslateString("","Willem");
-	ch.lastname = TranslateString("","Voigt");
+	ch.name = TranslateString("", "Willem");
+	ch.lastname = TranslateString("", "Voigt");
 	ch.id		= "Willem Voigt";
 	ch.model	= "man3_1";
 	ch.sex = "man";
@@ -6032,8 +6082,8 @@ void CreateSideQuestCharacters(ref n)
 	// Hornblower sidequest
 	ch.old.name = "Rodney";
 	ch.old.lastname = "Leighton";
-	ch.name = TranslateString("","Rodney");
-	ch.lastname = TranslateString("","Leighton");
+	ch.name = TranslateString("", "Rodney");
+	ch.lastname = TranslateString("", "Leighton");
 	ch.id		= "Sir Rodney Leighton";
 	ch.model = "brtadm3_18";
 	ch.sex = "man";
@@ -6045,8 +6095,10 @@ void CreateSideQuestCharacters(ref n)
 	GiveItem2Character(ch, "pistol1");
 	ch.equip.gun = "pistol1";
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.Dialog.Filename = "Sir Rodney Leighton_dialog.c";
 	ch.nation = ENGLAND;
@@ -6094,8 +6146,10 @@ void CreateSideQuestCharacters(ref n)
 	GiveItem2Character(ch, "pistol1");
 	ch.equip.gun = "pistol1";
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.Dialog.Filename = "Midshipman Longley_dialog.c";
 	ch.nation = ENGLAND;
@@ -6137,8 +6191,10 @@ void CreateSideQuestCharacters(ref n)
 	GiveItem2Character(ch, "pistol1");
 	ch.equip.gun = "pistol1";
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
 	ch.nation = ENGLAND;
@@ -6166,8 +6222,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Julian";
 	ch.old.lastname = "Alvarado";
-	ch.name = TranslateString("","Julian");
-	ch.lastname = TranslateString("","Alvarado");
+	ch.name = TranslateString("", "Julian");
+	ch.lastname = TranslateString("", "Alvarado");
 	ch.id		= "El Supremo";
 	ch.model	= "El_Supremo";
 	ch.sex = "man";
@@ -6201,12 +6257,13 @@ void CreateSideQuestCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	SetRankTitle(ch, TranslateString("", "Don"));
+	LAi_NoRebirthEnable(ch);
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Jose";
 	ch.old.lastname = "Hernandez";
-	ch.name = TranslateString("","Jose");
-	ch.lastname = TranslateString("","Hernandez");
+	ch.name = TranslateString("", "Jose");
+	ch.lastname = TranslateString("", "Hernandez");
 	ch.id		= "Jose Hernandez";
 	ch.model	= "fisherman";
 	ch.sex = "man";
@@ -6245,8 +6302,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Cristobal";
 	ch.old.lastname = "Leon";
-	ch.name = TranslateString("","Cristobal");
-	ch.lastname = TranslateString("","Leon");
+	ch.name = TranslateString("", "Cristobal");
+	ch.lastname = TranslateString("", "Leon");
 	ch.id		= "Natividad_captain";
 	ch.nation	= SPAIN;
 	ch.model	= "spa_cpt_18";
@@ -6258,8 +6315,10 @@ void CreateSideQuestCharacters(ref n)
 	GiveItem2Character(ch, "pistol2");
 	ch.equip.gun = "pistol2";
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6)
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	ch.nodisarm	= 1;				// PB: Disable disarming
 	ch.location	= "";
 	ch.location.group = "";
@@ -6293,8 +6352,8 @@ void CreateSideQuestCharacters(ref n)
 
 	ch.old.name = "Escovar";
 	ch.old.lastname = "Ententa";
-	ch.name = TranslateString("","Escovar");
-	ch.lastname = TranslateString("","Entenza");
+	ch.name = TranslateString("", "Escovar");
+	ch.lastname = TranslateString("", "Entenza");
 	ch.id		= "Spanish_lugger_captain";
 	ch.nation	= SPAIN;
 	ch.model	= "spa_lut1_18";
@@ -6517,6 +6576,7 @@ void CreateSideQuestCharacters(ref n)
 	}
 	else ch.Ship.Type = "BrigQeen1";
 	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 65;
 	ch.Flags.Pirate = 3;
 	ch.Flags.Pirate.texture = 0;
 	ch.Flags.Personal = 4;
@@ -6545,6 +6605,640 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_NoRebirthEnable(ch);
+	ch.questchar = true;	// Stop levelling from messing him about
+	AddGameCharacter(n, ch);
+
+	// Colombian Silver sidequest
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "CS_soldier_01";
+	ch.model = 1; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+//	LAi_CharacterReincarnation(ch, true, false);
+	Lai_SetImmortal(ch, true);
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "CS_soldier_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = SPAIN;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "CS_soldier_02";
+	ch.model = 2; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+//	LAi_CharacterReincarnation(ch, true, false);
+	Lai_SetImmortal(ch, true);
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "CS_soldier_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = SPAIN;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "CS_soldier_03";
+	ch.model = 3; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+//	LAi_CharacterReincarnation(ch, true, false);
+	Lai_SetImmortal(ch, true);
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "CS_soldier_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = SPAIN;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "CS_soldier_04";
+	ch.model = 4; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+//	LAi_CharacterReincarnation(ch, true, false);
+	Lai_SetImmortal(ch, true);
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "CS_soldier_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = SPAIN;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "CS_soldier_05";
+	ch.model = 5; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_CharacterReincarnation(ch, true, false);
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Isla Muelle soldier_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = SPAIN;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "CS_soldier_06";
+	ch.model = 6; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+//	LAi_CharacterReincarnation(ch, true, false);
+	Lai_SetImmortal(ch, true);
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Isla Muelle soldier_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = SPAIN;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "CS_tavern_officer";
+	ch.model = 0; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	if (ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade33+2");	// Moorish Sabre
+		ch.equip.blade = "blade33+2";
+		GiveItem2Character(ch, "pistol27+1");	// Miquelet
+		ch.equip.gun = "pistol27+1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade33");	// Moorish Sabre
+		ch.equip.blade = "blade33";
+		GiveItem2Character(ch, "pistol27");	// Miquelet
+		ch.equip.gun = "pistol27";
+	}
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+	//JRH ammo mod <--
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "CS_officer_dialog.c";
+	ch.rank 	= 4;
+	ch.nation = SPAIN;
+	ch.reputation = "None";
+	ch.experience = "10000";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1000";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_NoRebirthEnable(ch);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Gilberto";
+	ch.old.lastname = "Solano";
+	ch.name = TranslateString("","Gilberto");
+	ch.lastname = TranslateString("","Solano");
+	ch.id		= "CS_Spanish_Captain1";
+	ch.nation	= SPAIN;
+	ch.model	= "Espinosa";
+	ch.model.animation = "Blaze";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if (ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade14+2");
+		ch.equip.blade = "blade14+2";
+		GiveItem2Character(ch, "pistol8+1");
+		ch.equip.gun = "pistol8+1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade14");
+		ch.equip.blade = "blade14";
+		GiveItem2Character(ch, "pistol8");
+		ch.equip.gun = "pistol8";
+	}
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+	//JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "isla muelle soldier_dialog.c";
+	ch.rank 	= 6;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "6";
+	ch.skill.Cannons = "6";
+	ch.skill.Grappling = "4";
+	ch.skill.Repair = "4";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = 4000 + rand(1000);	
+	ch.Ship.Name = "Santa Matilde";
+	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "Galeon50";
+	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "FR_Fleuron";
+	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FR_Superbe";
+	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 70;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.nation = SPAIN;
+	SetRank(ch, SPAIN, 7);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;	// Stop levelling from messing him about
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Rafael";
+	ch.old.lastname = "Patiño";
+	ch.name = TranslateString("","Rafael");
+	ch.lastname = TranslateString("","Patiño");
+	ch.id		= "CS_Spanish_Captain2";
+	ch.nation	= SPAIN;
+	ch.model	= "9JdSpa";
+	ch.sound_type = "soldier";
+//	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if (ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade44+2");
+		ch.equip.blade = "blade44+2";
+		GiveItem2Character(ch, "PiratesPistol+1");
+		ch.equip.gun = "PiratesPistol+1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade44");
+		ch.equip.blade = "blade44";
+		GiveItem2Character(ch, "PiratesPistol");
+		ch.equip.gun = "PiratesPistol";
+	}
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+	//JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "isla muelle soldier_dialog.c";
+	ch.rank 	= 5;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "4";
+	ch.skill.Repair = "4";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = 2500 + rand(1000);	
+	ch.Ship.Name = "María Santísima";
+	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
+	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "WallerPinnace";
+	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FR_BattleFrigate";
+	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 70;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 150.0, 150.0);
+	ch.nation = SPAIN;
+	SetRank(ch, SPAIN, 6);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;	// Stop levelling from messing him about
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Miguel";
+	ch.old.lastname = "Angulo";
+	ch.name = TranslateString("","Miguel");
+	ch.lastname = TranslateString("","Angulo");
+	ch.id		= "CS_Spanish_Captain3";
+	ch.nation	= SPAIN;
+	ch.model	= GetRandomModelForTypeExSubCheck(true, "Captains", "man", SPAIN);;
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if (ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade47+1");
+		ch.equip.blade = "blade47+2";
+		GiveItem2Character(ch, "pistol27+1");
+		ch.equip.gun = "pistol27+1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade47");
+		ch.equip.blade = "blade47";
+		GiveItem2Character(ch, "pistol27");
+		ch.equip.gun = "pistol27";
+	}
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+	//JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "isla muelle soldier_dialog.c";
+	ch.rank 	= 5;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "4";
+	ch.skill.Repair = "4";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = 1500 + rand(1000);	
+	ch.Ship.Name = "Cardenal Cisneros";
+	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
+	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "WallerPinnace";
+	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FR_BattleFrigate";
+	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 70;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 150.0, 150.0);
+	ch.nation = SPAIN;
+	SetRank(ch, SPAIN, 6);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;	// Stop levelling from messing him about
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Donato";
+	ch.old.lastname = "Elcano";
+	ch.name = TranslateString("","Donato");
+	ch.lastname = TranslateString("","Elcano");
+	ch.id		= "CS_Spanish_Captain4";
+	ch.nation	= SPAIN;
+	ch.model	= GetRandomModelForTypeExSubCheck(true, "Captains", "man", SPAIN);;
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if (ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "bladeC26+1");
+		ch.equip.blade = "bladeC26+1";
+		GiveItem2Character(ch, "PiratesPistol+1");
+		ch.equip.gun = "PiratesPistol+1";
+	}
+	else
+	{
+		GiveItem2Character(ch, "bladeC26");
+		ch.equip.blade = "bladeC26";
+		GiveItem2Character(ch, "PiratesPistol");
+		ch.equip.gun = "PiratesPistol";
+	}
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+	//JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "isla muelle soldier_dialog.c";
+	ch.rank 	= 5;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "4";
+	ch.skill.Repair = "4";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = 1500 + rand(1000);	
+	ch.Ship.Name = "Ángel de la Guarda";
+	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
+	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "Frigate1";
+	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "SP_Surprise";
+	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 70;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 150.0, 150.0);
+	ch.nation = SPAIN;
+	SetRank(ch, SPAIN, 5);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;	// Stop levelling from messing him about
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Leonardo";
+	ch.old.lastname = "Echevarría";
+	ch.name = TranslateString("","Leonardo");
+	ch.lastname = TranslateString("","Echevarría");
+	ch.id		= "CS_Spanish_Captain5";
+	ch.nation	= SPAIN;
+	ch.model	= GetRandomModelForTypeExSubCheck(true, "Captains", "man", SPAIN);
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if (ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade46+2");
+		ch.equip.blade = "blade46+2";
+		if (GetCurrentPeriod() <= PERIOD_THE_SPANISH_MAIN)
+		{
+			GiveItem2Character(ch, "pistol7a+2");
+			ch.equip.gun = "pistol7a+2";
+		}
+		else
+		{
+			GiveItem2Character(ch, "pistol7+2");
+			ch.equip.gun = "pistol7+2";
+		}
+	}
+	else
+	{
+		GiveItem2Character(ch, "bladeC26");
+		ch.equip.blade = "bladeC26";
+		if (GetCurrentPeriod() <= PERIOD_THE_SPANISH_MAIN)
+		{
+			GiveItem2Character(ch, "pistol7a");
+			ch.equip.gun = "pistol7a";
+		}
+		else
+		{
+			GiveItem2Character(ch, "pistol7");
+			ch.equip.gun = "pistol7";
+		}
+	}
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+	//JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "isla muelle soldier_dialog.c";
+	ch.rank 	= 5;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "4";
+	ch.skill.Repair = "4";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = 1500 + rand(1000);	
+	ch.Ship.Name = "Septentrión";
+	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "FastGalleon1";
+	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "Frigate1";
+	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "SP_Surprise";
+	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 70;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 150.0, 150.0);
+	ch.nation = SPAIN;
+	SetRank(ch, SPAIN, 5);
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	ch.questchar = true;	// Stop levelling from messing him about
 	AddGameCharacter(n, ch);
 }

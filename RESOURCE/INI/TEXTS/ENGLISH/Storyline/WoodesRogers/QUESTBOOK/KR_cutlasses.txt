@@ -1,0 +1,11 @@
+title=Two Cutlasses - Fort Commander
+text.t1=The Fort gate is found at the end of the town center.
+text.t2=The password is 'Långtora'.
+text.t3=Two cutlasses are sold to the Fort Commander.
+text.t4=I've got the two Cutlasses!
+text.t5=
+text.t6=
+text.t7=
+text.t8=
+text.t9=
+text.t10=

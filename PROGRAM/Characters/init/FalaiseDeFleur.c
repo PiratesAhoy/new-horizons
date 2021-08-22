@@ -89,7 +89,14 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.name = TranslateString("","Rachel");
 	ch.lastname = TranslateString("","Blacque");
 	ch.id		= "Rachel Blacque";
-	ch.model = "towngirl1";
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		ch.model = "towngirl1_2";
+	}
+	else
+	{
+		ch.model = "towngirl1";
+	}
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
 	ch.location	= "Falaise_de_fleur_location_04";
@@ -147,22 +154,38 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-    ch.questchar = true;
+//    	ch.questchar = true;	// GR: Disable so he can be renamed in "Early Explorers"
 	ch.quest.meeting = "0";
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	AddGameCharacter(n, ch);
 
 // Sabine Matton - SABINE MATTON
-	ch.old.name = "Sabine";
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		ch.old.name = "Sabina";
+		ch.old.nickname = "Sabi";
+		ch.name = TranslateString("","Sabina");
+		ch.nickname = TranslateString("","Sabi");
+		ch.nation = SPAIN;
+		LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+//		ch.FaceId = 15;
+		ch.model = "towngirl1_2";
+	}
+	else
+	{
+		ch.old.name = "Sabine";
+		ch.old.nickname = "Sabie";
+		ch.name = TranslateString("","Sabine");
+		ch.nickname = TranslateString("","Sabie");
+		ch.nation = FRANCE;
+		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
+//		ch.FaceId = 15;
+		ch.model = "towngirl1";
+	}
 	ch.old.lastname = "Matton";
-	ch.old.nickname = "Sabie";
-	ch.name = TranslateString("","Sabine");
-	ch.nickname = TranslateString("","Sabie");
-	ch.lastname = TranslateString("","Matton");
+	ch.lastname = TranslateString("","Matton");	// GR: in "Early Explorers", this will be changed to match Arnaud Matton in "Periods.c"
 	ch.id		= "Sabine Matton";
-	ch.FaceId = 15;
-	ch.model = "towngirl1";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
 	ch.location	= "none";
@@ -170,7 +193,6 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.location.locator = "goto2"; // NK
 	ch.Dialog.Filename = "Sabine Matton_dialog.c";
 	ch.greeting = "Gr_Sabine Matton";
-	ch.nation = FRANCE;
 	ch.rank 	= 1;
 	ch.reputation = "40";
 	ch.experience = "0";
@@ -194,7 +216,6 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.quest.NoRaise = true;
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	AddGameCharacter(n, ch);
 
 	// Raoul Calmes (контрабандист в доме) озвучка готова.
@@ -459,8 +480,22 @@ void CreateFalaiseDeFleurCharacters(ref n)
 			// Hardouin Aufort (офицер) озвучка готова
 	ch.old.name = "Hardouin";
 	ch.old.lastname = "Aufort";
-	ch.name = TranslateString("","Hardouin");
-	ch.lastname = TranslateString("","Aufort");
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		ch.name = TranslateString("","Hortensio");
+		ch.lastname = TranslateString("","Crespo");
+		ch.nation = SPAIN;
+		ch.greeting = "Gr_Jaoquin de masse";
+		LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	}
+	else
+	{
+		ch.name = TranslateString("","Hardouin");
+		ch.lastname = TranslateString("","Aufort");
+		ch.nation = FRANCE;
+		ch.greeting = "Gr_hardouin aufort";
+		LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
+	}
 	ch.id		= "Hardouin Aufort";
 	ch.model = 0; // PB
 	ch.sex = "man";
@@ -468,11 +503,15 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_CharacterReincarnation(ch, true, true);
 	if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY)
 	{
+		GiveItem2Character(ch, "blade4");
+		ch.equip.blade = "blade4";
 		GiveItem2Character(ch, "pistol1");
 		ch.equip.gun = "pistol1";
 	}
 	else
 	{
+		GiveItem2Character(ch, "blade36");
+		ch.equip.blade = "blade36";
 		GiveItem2Character(ch, "pistol1a");
 		ch.equip.gun = "pistol1a";
 	}
@@ -482,14 +521,10 @@ void CreateFalaiseDeFleurCharacters(ref n)
 		TakenItems(ch, "pistolbullets", 1 + rand(2));
 	}
      //JRH ammo mod <--
-	GiveItem2Character(ch, "blade4");
-	ch.equip.blade = "blade4";
 	ch.location	= "Falaise_de_fleur_location_03";
 	ch.location.group = "goto";
 	ch.location.locator = "soldier04";
 	ch.Dialog.Filename = "Hardouin Aufort_dialog.c";
-	ch.greeting = "Gr_hardouin aufort";
-	ch.nation = FRANCE;
 	ch.rank 	= 5;
 	ch.reputation = "52";
 	ch.experience = "0";
@@ -506,9 +541,9 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.money = "10";
 	ch.quest.meeting = "0";
 	LAi_SetPatrolType(ch);
+	ch.questchar = true;		// GR: so that name is fixed for Fred Bob's joke
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 120.0, 120.0);
-	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
 	LAi_SetImmortal(ch, true);
 	AddGameCharacter(n, ch);
 
@@ -1084,7 +1119,14 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.name = TranslateString("","Virginie_fr");
 	ch.lastname = TranslateString("","Ruinart");
 	ch.id		= "Virginie Ruinart";
-	ch.model = "towngirl1";
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		ch.model = "towngirl1_3";
+	}
+	else
+	{
+		ch.model = "towngirl1";
+	}
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
 	ch.location	= "Falaise_de_fleur_location_03";
@@ -1436,7 +1478,14 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.name = TranslateString("","Gentile");
 	ch.lastname = TranslateString("","Hurtis");
 	ch.id		= "Gentile Hurtis";
-	ch.model = "towngirl1";
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		ch.model = "towngirl1_3";
+	}
+	else
+	{
+		ch.model = "towngirl1";
+	}
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
 	ch.location	= "Falaise_de_fleur_location_05";

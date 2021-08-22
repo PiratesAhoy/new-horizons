@@ -34,6 +34,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\BACO\BACO001";
+			Preprocessor_Add("monsieur", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
 			Dialog.Text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[1];
 			if (npchar.quest.hire == "arno")
 			{

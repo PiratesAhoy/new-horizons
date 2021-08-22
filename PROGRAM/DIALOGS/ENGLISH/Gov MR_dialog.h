@@ -1,4 +1,4 @@
-string DLG_TEXT[69] = {
+string DLG_TEXT[80] = {
 "Hello, ",
 ". And what is your name?",
 "May I know your name, ",
@@ -27,14 +27,14 @@ string DLG_TEXT[69] = {
 ", and I'm so happy to meet you",
 "! Oh, I'm so very happy to make your acquaintance! Why, everyone's heard of your dashing exploits!",
 "The pleasure is all mine, m'lady.",
-"((( You make pleasant conversation with the lady. )))",
+"((( You make pleasant conversation with the #slady#. )))",
 "...",
 "((( The governor's ",
-" is overwhelmed by your wit and charm. She agrees to gather information for you at the governor's court. )))",
+" is overwhelmed by your wit and charm. #spronoun# agrees to gather information for you at the governor's court. )))",
 "And I know just the place, too!",
 "Lead on!",
 "You have captured my heart, ",
-", but my suitor is a very jealous man. I am sure he will challenge you to a duel...",
+", but my suitor is a very jealous #sman#. I am sure #spronoun# will challenge you to a duel...",
 "Very well. Our love for each other will shield me...",
 "Ah. Then I am afraid I must withdraw...",
 "Oh! That's very nice, ",
@@ -68,6 +68,16 @@ string DLG_TEXT[69] = {
 "Er... yes, I will.",
 ", take this ring as a sign of my love and fidelity. In the name of the Father, and of the Son, and of the Holy Spirit.",
 "Arrr!",
-
+"Well, I don't know if this will interest you, but I overheard a conversation between my father and a Spanish envoy. The silver train, carrying all the silver from Spain's colonies in South America, is on its way to #sCartagena#.",
+"You know how the Spanish gather all the silver from their South American colonies and send it home in a big fleet? That fleet has been sighted on its way to #sCartagena#. So the silver is probably on its way there as well.",
+"Something interesting came up in conversation after dinner last night. The silver train is on its way to #sCartagena# right now, carrying all the silver from the Spanish colonies in South America!",
+"Thank you, my dear! That certainly is interesting. I shall need to make my own preparations for that silver train!",
+"The silver train will certainly be well guarded and I doubt I'd be able to take it. But thank you for telling me anyway.",
+"I'd rather not make an enemy of Spain by trying to attack their silver train.",
+"Perhaps I forgot to tell you, but I hold the position of ",
+" with Spain. You should be more careful with their secrets, my dear!",
+"The pleasure is all mine, good sir.",
+"'s love is for me alone, madam! En garde!",
+"Good sir, I am afraid the sea calls me and I cannot be ashore enough to be the wife you deserve.",
 };
 

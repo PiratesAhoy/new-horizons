@@ -1,0 +1,11 @@
+title=La alianza
+text.t1=El vicealmirante sospecha que Francia ha formado una alianza con Portugal. Tello Basadre será mi informante en esta misión. Trabaja como estibador en #sMarigot#, en #sisland_Saint Martin# , y vive en una casa detrás del ayuntamiento. Debería dirigirme allí cuando haya terminado el trabajo.
+text.t2=Tengo que ir a #sisland_Falaise de Fleur# para confirmar que el navío de línea francés está realmente allí. Espero que no sea demasiado tarde. 
+text.t3=Tello Basadre tenía razón. 'La Fougueuse' está en el puerto. Ahora tengo que averiguar cuál es su misión. Puede que algunos de sus marineos o soldados estén en la taberna, unas pocas botellas de ron deberían bastar para aflojarles las lenguas. 
+text.t4=¡Lo encontré! Ahora sólo tengo que salir del ayuntamiento por la ventana y reunirme con Chico en el barco.
+text.t5=Chico se ha pasado una hora por la ciudad buscando información acerca del capitán francés. Epero que encuentre algo útil.
+text.t6=Llevo escondiéndome en esta iglesia veinte minutos. Parece que ahora todo está tranquilo. Es hora de reunirme con Chico en la Bahía del Pulpo. Pero antes de eso, tengo que asegurarme de que el capitán Aurelien Bergerat está realmente muerto.
+text.t7=¡Impresionante! Chico Cois es un auténtico experto en explosivos. El capitán y sus guardias han quedado hechos pedazos. No debería permanecer aquí, alguien podría haberme visto cerca del lugar de la explosión y haber avisado a los guardias.
+text.t8=¡Qué mala suerte! Ahora tendré que encontrar la forma de detener a los franceses en #sConceicao#, en #sisland_Conceicao#.
+text.t9=¡Hecho! 'La Fougueuse' se está hundiendo. Ahora puedo volver a #sHavana#, en #sisland_Cuba#; el vicealmirante estará satisfecho.
+text.t10=He perdido demasiado tiempo de camino a #sisland_Falaise de Fleur#. El navío de línea debe haber zarpado de #sisland_Falaise de Fleur#. He fracasado en mi misión, el vicealmirante me hará ahorcar si me atrapa, será mejor que me mantenga lejos de los españoles.

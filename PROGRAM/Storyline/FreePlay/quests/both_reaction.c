@@ -40,7 +40,7 @@ void BothQuestComplete(string sQuestName)
 
 		case "StartAdventure":
 // BoP ----- Start A family story Quest -->		
-            if (GetMySimpleName(PChar) == "José Joaquín Almeida"){LAi_QuestDelay("madero_start", 0.0);}
+            if (GetMySimpleOldName(PChar) == "José Joaquím Almeida"){LAi_QuestDelay("madero_start", 0.0);}
 // BoP <-- Start A family story Quest -----			
 			if(CheckQuestAttribute("Tut_start", "complete")) break;
 			if(PChar.location=="Tutorial_Deck") break;
@@ -247,13 +247,20 @@ void BothQuestComplete(string sQuestName)
 					Preprocessor_AddQuestData("island", FindTownName("Oxbay")); // KK
 				// TIH <--
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadPort = "QC_port";
+				gotoLocator = "goto18";
+				Preprocessor_AddQuestData("island", FindTownName("Quebradas Costillas")); // KK
+				TakeNItems(CharacterFromID("Kate Blowhorn"), "spyglass2", 1); // Etharos remove Peter to replace by Kate
+			}
 			Locations[FindLocation(loadPort)].locators_radius.goto.(gotoLocator) = 3.0;
 			SetQuestHeader(questRecord);
 			if (CharPlayerType == PLAYER_TYPE_REBEL)
 			{
 				AddQuestRecord(questRecord, 3);
 
-				if (GetMySimpleName(PChar) == "Julian McAllister" && GetRMRelation(PChar, ENGLAND) == REL_MIN)
+				if (GetMySimpleOldName(PChar) == "Julian McAllister" && GetRMRelation(PChar, ENGLAND) == REL_MIN)
 				{
 					//Levis setting up the officers right:
 
@@ -453,6 +460,14 @@ void BothQuestComplete(string sQuestName)
 					loadShipyard = "Oxbay_shipyard";
 					Preprocessor_AddQuestData("island", FindTownName("Oxbay")); // KK
 				// TIH <--
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadPort = "QC_port";
+				loadTavern = "QC_Tavern";
+				loadStore = "QC_store";
+				loadShipyard = "QC_Shipyard";
+				Preprocessor_AddQuestData("island", FindTownName("Quebradas Costillas")); // KK
 			}
 // added by MAXIMUS [choose character mod] <--
 
@@ -770,6 +785,12 @@ void BothQuestComplete(string sQuestName)
 					Locations[FindLocation(loadPort)].reload.l2.disable = 1;
 				// TIH <--
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadPort = "QC_port";
+				rldLocator = "reload1";
+				Locations[FindLocation(loadPort)].reload.l2.disable = 1;
+			}
 
 			Locations[FindLocation(loadPort)].reload.l1.disable = 1;
 			Locations[FindLocation(loadPort)].reload.l3.disable = 1;
@@ -864,6 +885,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: gotoLocator = "goto10"; loadPort = "Eleuthera_Port"; break;
 				case PERSONAL_NATION: gotoLocator = "goto18"; loadPort = "Oxbay_port"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				gotoGroup = "reload"; gotoLocator = "goto4"; loadPort = "QC_port";
+			}
 
 			Locations[FindLocation(loadPort)].locators_radius.(gotoGroup).(gotoLocator) = 2.0;
 // added by MAXIMUS [choose character mod] <--
@@ -879,6 +904,10 @@ void BothQuestComplete(string sQuestName)
 				break;
 				// default:
 					Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "NowLetsBuyASpyglass";
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				Characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "ToQCTown";
 			}
 // <-- KK
 			LAi_SetFightMode(PChar, false);
@@ -908,40 +937,57 @@ void BothQuestComplete(string sQuestName)
 // added by MAXIMUS [choose character mod] <--
 
 // KK -->
-			switch (GetCurrentFlag())
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
 			{
-				case FRANCE:
-					LAi_ActorGoToLocation(CharacterFromID("Malcolm Hatcher"), gotoGroup, gotoLocator, "Falaise_de_fleur_location_02", "officers", "Falaise_de_fleur_location_02_01_1", "Tut_OpenFdFEntrance", 1000);
-					PChar.quest.Tut_ToFdFSuburb.win_condition.l1 = "location";
-					PChar.quest.Tut_ToFdFSuburb.win_condition.l1.character = PChar.id;
-					PChar.quest.Tut_ToFdFSuburb.win_condition.l1.location = "Falaise_de_fleur_location_02";
-					PChar.quest.Tut_ToFdFSuburb.win_condition = "Tut_ToFdFSuburb";
+				gotoGroup = "reload";
+				gotoLocator = "reload3_back";
+				loadPort = "QC_port";
 
-					characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "NowLetsBuyASpyglass";
-				break;
-				case PIRATE:
-					LAi_ActorGoToLocation(CharacterFromID("Malcolm Hatcher"), gotoGroup, gotoLocator, "QC_town_exit", "goto", "goto12", "Tut_OpenQCJungle", 100);
-					PChar.quest.Tut_ToQCJungle.win_condition.l1 = "location";
-					PChar.quest.Tut_ToQCJungle.win_condition.l1.character = PChar.id;
-					PChar.quest.Tut_ToQCJungle.win_condition.l1.location = "QC_town_exit";
-					PChar.quest.Tut_ToQCJungle.win_condition = "Tut_ToQCJungle";
+				LAi_ActorGoToLocation(CharacterFromID("Malcolm Hatcher"), gotoGroup, gotoLocator, "QC_town_exit", "goto", "goto12", "Tut_OpenQCJungle", 100);
+				PChar.quest.Tut_ToQCJungle.win_condition.l1 = "location";
+				PChar.quest.Tut_ToQCJungle.win_condition.l1.character = PChar.id;
+				PChar.quest.Tut_ToQCJungle.win_condition.l1.location = "QC_town_exit";
+				PChar.quest.Tut_ToQCJungle.win_condition = "Tut_ToQCJungle";
 
-					characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "NoStallsOnQC";
-				break; 
-				// default:
-					LAi_ActorgoToLocator(CharacterFromID("Malcolm Hatcher"), gotoGroup, gotoLocator, "TurnToPlayer", 0);
+				characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "NoStallsOnQC";
+			}
+			else
+			{
+				switch (GetCurrentFlag())
+				{
+					case FRANCE:
+						LAi_ActorGoToLocation(CharacterFromID("Malcolm Hatcher"), gotoGroup, gotoLocator, "Falaise_de_fleur_location_02", "officers", "Falaise_de_fleur_location_02_01_1", "Tut_OpenFdFEntrance", 1000);
+						PChar.quest.Tut_ToFdFSuburb.win_condition.l1 = "location";
+						PChar.quest.Tut_ToFdFSuburb.win_condition.l1.character = PChar.id;
+						PChar.quest.Tut_ToFdFSuburb.win_condition.l1.location = "Falaise_de_fleur_location_02";
+						PChar.quest.Tut_ToFdFSuburb.win_condition = "Tut_ToFdFSuburb";
 
-					PChar.quest.Tut_ToTheTown.win_condition.l1 = "locator";
-					PChar.quest.Tut_ToTheTown.win_condition.l1.character = PChar.id;
-					PChar.quest.Tut_ToTheTown.win_condition.l1.location = loadPort;
-					PChar.quest.Tut_ToTheTown.win_condition.l1.locator_group = gotoGroup;
-					PChar.quest.Tut_ToTheTown.win_condition.l1.locator = gotoLocator;
-					PChar.quest.Tut_ToTheTown.win_condition.l2 = "locator";
-					PChar.quest.Tut_ToTheTown.win_condition.l2.character = "Malcolm Hatcher";
-					PChar.quest.Tut_ToTheTown.win_condition.l2.location = loadPort;
-					PChar.quest.Tut_ToTheTown.win_condition.l2.locator_group = gotoGroup;
-					PChar.quest.Tut_ToTheTown.win_condition.l2.locator = gotoLocator;
-					PChar.quest.Tut_ToTheTown.win_condition = "Tut_ToTheTown";
+						characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "NowLetsBuyASpyglass";
+					break;
+					case PIRATE:
+						LAi_ActorGoToLocation(CharacterFromID("Malcolm Hatcher"), gotoGroup, gotoLocator, "QC_town_exit", "goto", "goto12", "Tut_OpenQCJungle", 100);
+						PChar.quest.Tut_ToQCJungle.win_condition.l1 = "location";
+						PChar.quest.Tut_ToQCJungle.win_condition.l1.character = PChar.id;
+						PChar.quest.Tut_ToQCJungle.win_condition.l1.location = "QC_town_exit";
+						PChar.quest.Tut_ToQCJungle.win_condition = "Tut_ToQCJungle";
+
+						characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "NoStallsOnQC";
+					break; 
+					// default:
+						LAi_ActorgoToLocator(CharacterFromID("Malcolm Hatcher"), gotoGroup, gotoLocator, "TurnToPlayer", 0);
+
+						PChar.quest.Tut_ToTheTown.win_condition.l1 = "locator";
+						PChar.quest.Tut_ToTheTown.win_condition.l1.character = PChar.id;
+						PChar.quest.Tut_ToTheTown.win_condition.l1.location = loadPort;
+						PChar.quest.Tut_ToTheTown.win_condition.l1.locator_group = gotoGroup;
+						PChar.quest.Tut_ToTheTown.win_condition.l1.locator = gotoLocator;
+						PChar.quest.Tut_ToTheTown.win_condition.l2 = "locator";
+						PChar.quest.Tut_ToTheTown.win_condition.l2.character = "Malcolm Hatcher";
+						PChar.quest.Tut_ToTheTown.win_condition.l2.location = loadPort;
+						PChar.quest.Tut_ToTheTown.win_condition.l2.locator_group = gotoGroup;
+						PChar.quest.Tut_ToTheTown.win_condition.l2.locator = gotoLocator;
+						PChar.quest.Tut_ToTheTown.win_condition = "Tut_ToTheTown";
+				}
 			}
 // <-- KK
 		break;
@@ -951,15 +997,19 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "Tut_ToTheTown":
-			switch(GetCurrentFlag())
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod())) LAi_QuestDelay("Tut_MalcolmShowsTheStore", 0.0);
+			else
 			{
-				case FRANCE:
-					LAi_ActorGoToLocator(CharacterFromID("Malcolm Hatcher"), "goto", "locator11", "Tut_FollowTheSpyglass", 50.); // KK
-				break;
-				case PIRATE:
-					LAi_QuestDelay("Tut_MalcolmShowsTheStore", 0.0); // KK
-				break;
-				PChar.quest.Tut_FollowTheSpyglass.win_condition = "Tut_FollowTheSpyglass";
+				switch(GetCurrentFlag())
+				{
+					case FRANCE:
+						LAi_ActorGoToLocator(CharacterFromID("Malcolm Hatcher"), "goto", "locator11", "Tut_FollowTheSpyglass", 50.); // KK
+					break;
+					case PIRATE:
+						LAi_QuestDelay("Tut_MalcolmShowsTheStore", 0.0); // KK
+					break;
+					PChar.quest.Tut_FollowTheSpyglass.win_condition = "Tut_FollowTheSpyglass";
+				}
 			}
 		break;
 
@@ -1164,6 +1214,11 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: rldLocator = "Reload6_back"; loadPort = "Eleuthera_Port"; break;
 				case PERSONAL_NATION: rldLocator = "Reload1"; loadPort = "Oxbay_port"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "Reload1";
+				loadPort = "QC_town_exit";
+			}
 // added by MAXIMUS [choose character mod] <--
 			chrEnableReloadLocator(loadPort, rldLocator, true);
 		break;
@@ -1205,6 +1260,11 @@ void BothQuestComplete(string sQuestName)
 					Locations[FindLocation(loadPort)].reload.l6.disable = 0;
 				break;
 				case PERSONAL_NATION: loadPort = "Oxbay_port"; Locations[FindLocation(loadPort)].reload.l2.disable = 0; break; // KK
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadPort = "QC_port";
+				Locations[FindLocation(loadPort)].reload.l2.disable = 0;
 			}
 
 			Locations[FindLocation(loadPort)].reload.l1.disable = 0;
@@ -1341,6 +1401,17 @@ void BothQuestComplete(string sQuestName)
 					Locations[FindLocation(loadTown)].reload.l14.disable = 1;
 				// TIH <--
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadTown = "QC_town";
+				loadStore = "QC_store";
+				rldLocator = "reload5";
+				gotoLocator = "locator7";
+
+				Locations[FindLocation(loadTown)].reload.l5.disable = 1;
+				Locations[FindLocation(loadTown)].reload.l6.disable = 1;
+				Locations[FindLocation(loadTown)].reload.l7.disable = 1;
+			}
 
 			Locations[FindLocation(loadTown)].reload.l1.disable = 1;
 			Locations[FindLocation(loadTown)].reload.l2.disable = 1;
@@ -1371,6 +1442,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: rldLocator = "reload6_back"; loadTown = "Eleuthera_Port"; break;
 				case PERSONAL_NATION: rldLocator = "reload15"; loadTown = "Oxbay_town"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "reload5"; loadTown = "QC_town";
+			}
 
 			chrEnableReloadLocator(loadTown, rldLocator, true);
 // added by MAXIMUS [choose character mod] <--
@@ -1390,6 +1465,10 @@ void BothQuestComplete(string sQuestName)
 				case PORTUGAL: rldLocator = "reload1"; loadStore = "Conceicao_Store"; break;
 				case AMERICA: rldLocator = "reload1_back"; loadStore = "Eleuthera_store"; break;
 				case PERSONAL_NATION: rldLocator = "locator2"; loadStore = "Oxbay_store"; break; // KK
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "locator2"; loadStore = "QC_store";
 			}
 			chrEnableReloadLocator(loadStore, rldLocator, false);
 // added by MAXIMUS [choose character mod] <--
@@ -1416,6 +1495,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: rldLocator = "reload1_back"; loadTown = "Eleuthera_Port"; gotoGroup = "officers"; gotoLocator = "reload6_1"; break;
 				case PERSONAL_NATION: rldLocator = "locator2"; loadTown = "Oxbay_town"; gotoLocator = "goto26"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "locator2"; loadTown = "QC_town"; gotoLocator = "goto7";
+			}
 // added by MAXIMUS [choose character mod] <--
 			LAi_ActorGoToLocation(CharacterFromID("Malcolm Hatcher"), "Reload", rldLocator, loadTown, gotoGroup, gotoLocator, "Tut_FreeFromStore", 0);
 			
@@ -1438,6 +1521,10 @@ void BothQuestComplete(string sQuestName)
 				case PORTUGAL: rldLocator = "reload1"; loadStore = "Conceicao_Store"; break;
 				case AMERICA: rldLocator = "reload1_back"; loadStore = "Eleuthera_store"; break;
 				case PERSONAL_NATION: rldLocator = "locator2"; loadStore = "Oxbay_store"; break; // KK
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "locator2"; loadStore = "QC_store";
 			}
 // added by MAXIMUS [choose character mod] <--
 			chrEnableReloadLocator(loadStore, rldLocator, true);
@@ -1549,6 +1636,14 @@ void BothQuestComplete(string sQuestName)
 					Locations[FindLocation(loadTown)].reload.l14.disable = 1;
 				// TIH <--
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadTown = "QC_town";
+
+				Locations[FindLocation(loadTown)].reload.l5.disable = 1;
+				Locations[FindLocation(loadTown)].reload.l6.disable = 1;
+				Locations[FindLocation(loadTown)].reload.l7.disable = 1;
+			}
 
 			Locations[FindLocation(loadTown)].reload.l1.disable = 1;
 			Locations[FindLocation(loadTown)].reload.l2.disable = 1;
@@ -1618,6 +1713,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: loadTown = "Eleuthera_Port"; rldLocator = "reload4_back"; loadTavern = "Eleuthera_tavern"; gotoLocator = "goto10"; break;
 				case PERSONAL_NATION: loadTown = "Oxbay_town"; rldLocator = "Reload13"; loadTavern = "Oxbay_tavern"; gotoLocator = "goto20"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadTown = "QC_town"; rldLocator = "reload2"; loadTavern = "QC_Tavern"; gotoLocator = "goto6";
+			}
 
 			LAi_ActorgoToLocation(CharacterFromID("Malcolm Hatcher"), "Reload", rldLocator, loadTavern, "goto", gotoLocator, "Tut_TavernOpened", 0);
 
@@ -1645,6 +1744,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: rldLocator = "reload4_back"; loadTown = "Eleuthera_Port"; break;
 				case PERSONAL_NATION: rldLocator = "reload13"; loadTown = "Oxbay_town"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "reload2"; loadTown = "QC_town";
+			}
 // added by MAXIMUS [choose character mod] <--
 			chrEnableReloadLocator(loadTown, rldLocator, true);
 		break;
@@ -1663,6 +1766,10 @@ void BothQuestComplete(string sQuestName)
 				case PORTUGAL: rldLocator = "reload1"; loadTavern = "Conceicao_Tavern"; break;
 				case AMERICA: rldLocator = "reload2_back"; loadTavern = "Eleuthera_tavern"; break;
 				case PERSONAL_NATION: rldLocator = "reload1"; loadTavern = "Oxbay_tavern"; break; // KK
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "reload1"; loadTavern = "QC_Tavern";
 			}
 // added by MAXIMUS [choose character mod] <--
 			chrEnableReloadLocator(loadTavern, rldLocator, false);
@@ -1687,6 +1794,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: rldLocator = "Reload2_back"; loadTown = "Eleuthera_port"; gotoGroup = "officers"; gotoLocator = "reload4_1"; break;
 				case PERSONAL_NATION: rldLocator = "Reload1"; loadTown = "Oxbay_town"; gotoLocator = "goto41"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "Reload1"; loadTown = "QC_town"; gotoLocator = "goto12";
+			}
 // added by MAXIMUS [choose character mod] <--
 			LAi_ActorGoToLocation(CharacterFromID("Malcolm Hatcher"), "Reload", rldLocator, loadTown, gotoGroup, gotoLocator, "Tut_FreeFromTavern", 0);
 			
@@ -1709,6 +1820,10 @@ void BothQuestComplete(string sQuestName)
 				case PORTUGAL: rldLocator = "Reload1"; loadTavern = "Conceicao_Tavern"; break;
 				case AMERICA: rldLocator = "Reload2_back"; loadTavern = "Eleuthera_tavern"; break;
 				case PERSONAL_NATION: rldLocator = "Reload1"; loadTavern = "Oxbay_tavern"; break; // KK
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "Reload1"; loadTavern = "QC_Tavern";
 			}
 // added by MAXIMUS [choose character mod] <--
 			chrEnableReloadLocator(loadTavern, rldLocator, true);
@@ -1798,6 +1913,7 @@ void BothQuestComplete(string sQuestName)
 					Locations[FindLocation(loadTown)].reload.l14.disable = 1;
 				// TIH <--
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod())) loadTown = "QC_town";	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
 
 			Locations[FindLocation(loadTown)].reload.l1.disable = 1;
 			Locations[FindLocation(loadTown)].reload.l2.disable = 1;
@@ -1828,6 +1944,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: loadTown = "Eleuthera_Port"; rldLocator = "reload5_back"; loadShipyard = "Eleuthera_shipyard"; gotoGroup = "reload"; gotoLocator = "reload1_back"; break;
 				case PERSONAL_NATION: loadTown = "Oxbay_town"; rldLocator = "Reload3"; loadShipyard = "Oxbay_shipyard"; gotoLocator = "goto1"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadTown = "QC_town"; rldLocator = "Reload4"; loadShipyard = "QC_Shipyard"; gotoLocator = "goto7";
+			}
 // added by MAXIMUS [choose character mod] <--
 			LAi_ActorgoToLocation(CharacterFromID("Malcolm Hatcher"), "Reload", rldLocator, loadShipyard, gotoGroup, gotoLocator, "Tut_ShipyardOpened", 0);
 			
@@ -1851,6 +1971,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: rldLocator = "reload5_back"; loadTown = "Eleuthera_Port"; break;
 				case PERSONAL_NATION: rldLocator = "Reload3"; loadTown = "Oxbay_town"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "Reload4"; loadTown = "QC_town";
+			}
 // added by MAXIMUS [choose character mod] <--
 			//Locations[FindLocation("Oxbay_town")].reload.l7.disable = 0;
 			chrEnableReloadLocator(loadTown, rldLocator, true);
@@ -1872,6 +1996,10 @@ void BothQuestComplete(string sQuestName)
 					Locations[FindLocation(loadShipyard)].locators_radius.(gotoGroup).(gotoLocator) = 2.0;
 				break;
 				case PERSONAL_NATION: rldLocator = "reload1"; loadShipyard = "Oxbay_shipyard"; break; // KK
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "locator2"; loadShipyard = "QC_Shipyard";
 			}
 // added by MAXIMUS [choose character mod] <--
 			chrEnableReloadLocator(loadShipyard, rldLocator, false);
@@ -1896,6 +2024,10 @@ void BothQuestComplete(string sQuestName)
 				case AMERICA: rldLocator = "reload5_back"; loadTown = "Eleuthera_Port"; gotoGroup = "officers"; gotoLocator = "reload5_1"; break;
 				case PERSONAL_NATION: rldLocator = "reload1"; loadTown = "Oxbay_town"; gotoLocator = "goto23"; break; // KK
 			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "locator2"; loadTown = "QC_town"; gotoLocator = "goto5";
+			}
 // added by MAXIMUS [choose character mod] <--
 			LAi_ActorGoToLocation(CharacterFromID("Malcolm Hatcher"), "Reload", rldLocator, loadTown, gotoGroup, gotoLocator, "Tut_FreeFromShipyard", 0);
 			SetNextWeather("Blue Sky"); // KK
@@ -1919,6 +2051,10 @@ void BothQuestComplete(string sQuestName)
 				case PORTUGAL: rldLocator = "reload1"; loadShipyard = "Conceicao_Shipyard"; break;
 				case AMERICA: rldLocator = "reload1_back"; loadShipyard = "Eleuthera_shipyard"; break;
 				case PERSONAL_NATION: rldLocator = "reload1"; loadShipyard = "Oxbay_shipyard"; break; // KK
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				rldLocator = "locator2"; loadShipyard = "QC_Shipyard";
 			}
 // added by MAXIMUS [choose character mod] <--
 			chrEnableReloadLocator(loadShipyard, rldLocator, true);
@@ -1997,6 +2133,12 @@ void BothQuestComplete(string sQuestName)
 					loadPort = "Oxbay_port";
 				break;
 // <-- KK
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadPort = "QC_port";
+				gotoGroup = "reload"; 
+				gotoLocator = "reload3_back";
 			}
 			Locations[FindLocation(loadPort)].locators_radius.(gotoGroup).(gotoLocator) = 0.5;
 			CloseQuestHeader(questRecord);
@@ -2092,7 +2234,14 @@ void BothQuestComplete(string sQuestName)
 					rldLocator = "reload2";
 				break;
 			}
-
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadPort = "QC_port";
+				loadTown = "QC_town";
+				gotoGroup = "reload"; 
+				gotoLocator = "reload3_back";
+				rldLocator = "reload1"; 
+			}
 // KK -->
 			PChar.quest.TavernSitWaiting.win_condition.l1 = "ExitFromLocation";
 			PChar.quest.TavernSitWaiting.win_condition.l1.character = PChar.id;
@@ -2332,6 +2481,22 @@ void BothQuestComplete(string sQuestName)
 					Locations[FindLocation(loadTown)].reload.l13.disable = 0;
 					Locations[FindLocation(loadTown)].reload.l14.disable = 0;
 				// TIH <--
+			}
+			if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	// GR: If your chosen nation has no starting island, you start at Pirate Settlement
+			{
+				loadTown = "QC_town";
+				loadPort = "QC_port";
+				gotoGroup = "reload"; 
+				gotoLocator = "reload3_back";
+
+				Locations[FindLocation(loadPort)].reload.l2.disable = 0;
+
+				Locations[FindLocation("QC_town_exit")].reload.l1.disable = 0;
+				Locations[FindLocation("QC_town_exit")].reload.l2.disable = 0;
+				Locations[FindLocation("QC_town_exit")].reload.l3.disable = 0;
+				Locations[FindLocation("QC_town_exit")].reload.l4.disable = 0;
+				Locations[FindLocation("QC_town_exit")].reload.l5.disable = 0;
+				Locations[FindLocation("QC_town_exit")].reload.l6.disable = 0;
 			}
 
 			Locations[FindLocation(loadPort)].reload.l1.disable = 0;
@@ -2597,7 +2762,7 @@ void BothQuestComplete(string sQuestName)
 
 				case PLAYER_TYPE_AGENT:
 					questRecord = "Agent_Continue";
-					if (GetMySimpleName(PChar) == "Jean Lafitte" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+					if (GetMySimpleOldName(PChar) == "Jean Lafitte" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
 					{
 						iNation = AMERICA;
 						SetServedNation(iNation);
@@ -2608,7 +2773,7 @@ void BothQuestComplete(string sQuestName)
 
 				case PLAYER_TYPE_SMUGGLER:
 					questRecord = "Smuggler_Continue";
-					if (GetMySimpleName(PChar) == "Jean Lafitte" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+					if (GetMySimpleOldName(PChar) == "Jean Lafitte" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
 					{
 						iNation = AMERICA;
 						SetServedNation(iNation);
@@ -2622,7 +2787,7 @@ void BothQuestComplete(string sQuestName)
 
 				case PLAYER_TYPE_CURSED:
 					questRecord = "Cursed_Continue";
-					if(CheckCharacterItem(PChar, "Davy_Chest"))
+					if(CheckCharacterItem(PChar, "Davy_Chest") || CheckCharacterItem(PChar, "Devil_Contract"))
 						iNation = PERSONAL_NATION;
 					else
 					{
@@ -2692,9 +2857,18 @@ void BothQuestComplete(string sQuestName)
 						switch(CharPlayerType)
 						{
 							case PLAYER_TYPE_CURSED:
-								loadPort = "KhaelRoa_port";
-								gotoGroup = "Quest_Ships";
-								rldLocator = "Quest_Ship_5";
+								if(HasSubStr(CharShipType, "Mariana"))
+								{
+									loadPort = "Cartagena_Port";
+									gotoGroup = "Quest_Ships";
+									rldLocator = "Quest_Ship_5";
+								}
+								else
+								{
+									loadPort = "KhaelRoa_port";
+									gotoGroup = "Quest_Ships";
+									rldLocator = "Quest_Ship_5";
+								}
 							break;
 							//default:
 							loadPort = "Cuba_shore_03";
@@ -2764,10 +2938,10 @@ void BothQuestComplete(string sQuestName)
 
 		case "Cursed_Continue":
 			SetQuestHeader("Beginning_Cursed");
-			if(CheckCharacterItem(PChar, "Davy_Chest"))
-				AddQuestRecord("Beginning_Cursed", 2);
-			else
-				AddQuestRecord("Beginning_Cursed", 1);
+			i = 1;
+			if(CheckCharacterItem(PChar, "Davy_Chest")) i = 2;
+			if(CheckCharacterItem(PChar, "Devil_Contract")) i = 3;
+			AddQuestRecord("Beginning_Cursed", i);
 			CloseQuestHeader("Beginning_Cursed");
 		break;
 
@@ -2881,8 +3055,8 @@ void BothQuestComplete(string sQuestName)
 				break;
 
 				case 4:
-					loadPort = "QC_Shore1"; // PB (separated from ship)
-					loadTown = "QC_port";
+					loadPort = "QC_port"; // PB (separated from ship)
+					loadTown = "QC_Shore1";
 					rldLocator = "reload1";
 				break;
 
@@ -2911,9 +3085,18 @@ void BothQuestComplete(string sQuestName)
 				break;
 
 				case 9:
-					loadPort = "Antigua_port"; // KK (separated from ship)
-					loadTown = "Antigua_shore";
-					rldLocator = "reload1";
+					if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+					{
+						loadPort = "Aruba_shore2";	// GR: Antigua disabled in Early Explorers
+						loadTown = "Aruba_shore";
+						rldLocator = "see";
+					}
+					else
+					{
+						loadPort = "Antigua_port"; // KK (separated from ship)
+						loadTown = "Antigua_shore";
+						rldLocator = "reload1";
+					}
 				break;
 
 				case 10:
@@ -2947,21 +3130,40 @@ void BothQuestComplete(string sQuestName)
 				break;
 
 				case 15:
-					loadPort = "Guadeloupe_Port"; // PB (separated from ship)
+					if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) loadPort = "Guadeloupe_shore_02"; // GR: no town in Early Explorers
+					else loadPort = "Guadeloupe_Port"; // PB (separated from ship)
 					loadTown = "Guadeloupe_shore_01";
 					rldLocator = "see";
 				break;
 
 				case 16:
-					loadPort = "SaintMartin_shore_02"; // PB (separated from ship)
-					loadTown = "SaintMartin_shore_01";
-					rldLocator = "reload1";
+					if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+					{
+						loadPort = "Aruba_shore";	// GR: Saint Martin disabled in Early Explorers
+						loadTown = "Aruba_shore2";
+						rldLocator = "reload1";
+					}
+					else
+					{
+						loadPort = "SaintMartin_shore_02"; // PB (separated from ship)
+						loadTown = "SaintMartin_shore_01";
+						rldLocator = "reload1";
+					}
 				break;
 
 				case 17:
-					loadPort = "SaintMartin_shore_01";
-					loadTown = "SaintMartin_shore_02"; // KK (separated from ship)
-					rldLocator = "see";
+					if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+					{
+						loadPort = "Cartagena_Port";	// GR: Saint Martin disabled in Early Explorers
+						loadTown = "Colombia_shore";
+						rldLocator = "reload1";
+					}
+					else
+					{
+						loadPort = "SaintMartin_shore_01";
+						loadTown = "SaintMartin_shore_02"; // KK (separated from ship)
+						rldLocator = "see";
+					}
 				break;
 
 				case 18:
@@ -2996,6 +3198,7 @@ void BothQuestComplete(string sQuestName)
 			}
 			DoQuestReloadToLocation(loadTown, "reload", rldLocator, "stormystart4");
 			PlaceFleetNearShore(loadPort); // KK
+			SafePortLeave(GetLocationNationFromID(loadPort), false);	// GR: use false flag if you end up at a hostile port
 
 			PostEvent("DoInfoShower",500,"s","");	//TIH - clears black screen
 		break;

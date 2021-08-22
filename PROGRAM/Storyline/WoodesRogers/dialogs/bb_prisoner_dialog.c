@@ -83,12 +83,12 @@ void ProcessDialogEvent()
 				break;
 
 				case "bb_maroon3":
-					PlaySound("VOICE\ENGLISH\pir_capJ.wav");
+					PlaySound("VOICE\ENGLISH\pir_capMMM.wav");
 				break;
 
 				case "bb_maroon4":
-					PlaySound("VOICE\ENGLISH\pir_capMMM.wav");
-				break;
+					PlaySound("VOICE\ENGLISH\pir_capJ.wav");
+				break;				
 			}
 
 			int iPhrase = rand(6);
@@ -127,6 +127,15 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 
 			Diag.TempNode = "First Time";
+		break;
+
+		case "maroons_free":
+			PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+			dialog.text = DLG_TEXT[8];
+			link.l1 = DLG_TEXT[9];
+			link.l1.go = "exit";
+
+			Diag.TempNode = "maroons_free";
 		break;
 
 		case "exit":

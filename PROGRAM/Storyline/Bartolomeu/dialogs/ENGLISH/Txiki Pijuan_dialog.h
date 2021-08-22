@@ -24,7 +24,7 @@ string DLG_TEXT[44] = {
 "Can't you forget about all this? Pedro Rivera is a dangerous man and not to be meddled with. He alone is worth 5 crewmembers. He will kill anyone without hesitation. If he sees me with you, I'll be dead within seconds!",
 "Don't worry. I know what I'm doing. I have a plan. And you can stay out of the dangerous parts if you feel so obliged. I'll talk to the prison guard to arrange your release now. Goodbye.",
 "Wait! Please allow me to be your officer after you captured the 'Santiago'! I love the ship, even though I hate her current captain. I don't want to part with her.",
-"Very well then. But you'll need to cut down on the rum. I will not have an agressive drunk aboard any of my ships. And you will also need to show a little backbone! Courage doesn't seem to be one of your main strengths, I can't have you running away as soon as we try to board a tartane! Think on that while I'm talking to the guard!",
+"Very well then. But you'll need to cut down on the rum. I will not have an aggressive drunk aboard any of my ships. And you will also need to show a little backbone! Courage doesn't seem to be one of your main strengths, I can't have you running away as soon as we try to board a tartane! Think on that while I'm talking to the guard!",
 "TXIKI IS FREE! Thank you, MY captain.",
 "You are free, yes. And your release cost me a lot of money, so don't try anything funny. Now it's time for you to deliver on your part, so listen closely. You will go back to the 'Santiago' and inform the crew that the innkeeper is giving out free rum tonight to celebrate his daughter's marriage.",
 "Free rum! I like this idea! I'll be looking forward to tonight then!",

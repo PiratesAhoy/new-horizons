@@ -1,0 +1,14 @@
+title=Misión general: Tesoro perdido en #sisland#.
+text.t1=Hay un cofre del tesoro escondido en algún lugar de la selva cerca de la señal y los dos caminos.
+text.t2=Hay un cofre del tesoro escondido en algún lugar de la mazmorra de #sOxbay#.
+text.t3=Desde el fondeadero de la Roca del Leviatán, se puede llegar a una gruta donde hay un tesoro escondido.
+text.t4=A través del agujero en el acantilado, se puede llegar a una cueva donde hay un tesoro escondido.
+text.t5=Encuentra el barco naufragado en una playa de #sisland_Turks#. El tesoro está en un cofre entre los restos del naufragio.
+text.t6=En la costa salvaje de la Bahía de San Antonio. En frente de los acantilados. El tesoro está escondido cerca de la roca grande.
+text.t7=Después del puente y la caverna de Punta Arenas, encuentra la roca pequeña cerca de un árbol.
+text.t8=Desembarca en Cayo Caiman. El tesoro está escondido en una caverna en la selva.
+text.t9=Desembarca en el Acantilado de las Arenas. Hay una entrada oculta a una caverna en algún lugar de la selva. El tesoro está escondido en la cueva.
+text.t10=Hay un cofre del tesoro escondido en algún lugar de la playa de Boca de Hubon.
+text.t11=Hay un cofre del tesoro escondido en las ruinas del faro.
+text.t12=Así que una cueva..., puede que tenga que llevar un pico.
+text.t13=Parece que una pala me sería útil.

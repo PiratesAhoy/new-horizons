@@ -33,11 +33,12 @@ void ProcessDialogEvent()
 
 			if(CheckAttribute(Pchar,"quest.pircap_perks") && Pchar.quest.pircap_perks == "start")
 			{
-				if(CheckCharacterPerk(Pchar, "GunFighter"))
+				if(GetAttribute(pchar, "GunF") == "done")				
 				{
 					Dialog.text = DLG_TEXT[0];
 					link.l1 = DLG_TEXT[1];
 					link.l1.go = "exit";
+					AddDialogExitQuest("Pchar_playertype");
 				}
 				else
 				{
@@ -49,13 +50,13 @@ void ProcessDialogEvent()
 						LAi_SetActorType(CharacterFromID("pir_cap23"));
 						LAi_ActorTurnToCharacter(characterFromID("pir_cap23"), Pchar);
 
+					Pchar.GunF = "done";
 						Pchar.perks.list.GunFighter = true;
 						Pchar.quest.Aperks = makeint(Pchar.quest.Aperks)-1;
 						Dialog.text = DLG_TEXT[4];
 						link.l1 = DLG_TEXT[5];
 						link.l1.go = "exit";
 						AddDialogExitQuest("perk_gunfighter");
-						
 					}
 					else
 					{

@@ -1,4 +1,4 @@
-string DLG_TEXT[170] = {
+string DLG_TEXT[182] = {
 ". What is it, ",
 "?",
 "May I help you, ",
@@ -29,7 +29,7 @@ string DLG_TEXT[170] = {
 "It's impossible to find anything in this maze! Where is...",
 "I'm as lost as a drunken navigator. Again!",
 "You look like a local. Tell me where I can find...",
-"Please tell me how to get to...",
+"Please tell me how to get to...",					//30
 "I've had a rotten day, so you'll save us both grief if you'll just tell me how to find...",
 "I'd like your opinion on a local citizen.",
 "I need to know whatever you can tell me about someone who lives here in town.",
@@ -49,7 +49,7 @@ string DLG_TEXT[170] = {
 "?",
 "What interests you, captain?",
 "What do you want from me?",
-"Towns like this are always swimming with gossip. Give me the highlights.",
+"Towns like this are always swimming with gossip. Give me the highlights.",	//50
 "Has anything interesting happened around here lately?",
 "I just want to know what's going on in the neighborhood. Someone's swindled a friend? Someone's been killed? The innkeeper's really a woman? You get my drift.",
 "How can I get to...",
@@ -153,7 +153,7 @@ string DLG_TEXT[170] = {
 "Thank you very much, farewell.",
 "I don't know how he does it, but our harbormaster makes it his job to know of every mariner in the archipelago.",
 "I see. One more question, if you don't mind, please?",
-"Thank you for your time. Bye.",
+"Thank you for your time. Bye.",		//154
 "Fred Bob? The boatswain? He's awfully hard to understand, but my brother knows him well. He's not a mutineer. That officer has it all wrong. We all hope the governor sets him free. He belongs on a ship, not in the stockade.",
 "Fine man, excellent mariner. I don't believe for one minute that he threatened mutiny.",
 "Ehm... I plumb forgot who I was going to inquire of. Just give me a second and it'll come back to me...",
@@ -169,5 +169,20 @@ string DLG_TEXT[170] = {
 "To whom might I entrust my sword? Its once-fine edge has gotten a bit dulled.",
 " We have a population of ",
 " citizens.",
+"I'm looking for a Monastary.",					//170
+"We have three Monastaries here in Cartagena. Which one are you interested in?",	//171
+"Uhh...ehrr.. which ones are there?",				//172
+"There is the Cloister, the New Cloister and the Abbey.",	//173
+"Please tell me more about them.",				//174
+"In the Cloister is a very silent monk order. The New Cloister I'm not sure about but the Abbey I've heard, is for nuns.",	//175
+"Yes! It's a nun I'm searching for. How do I get to the Abbey?",			//176
+"From the Port take to the left. In the next part of the town take to the right.",	//177
+"Okay. Port - left - right and there's the Abbey.",		//178
+"Hmm not quite. First you'll find the Cloister...",		//179
+"Yes..?",			//180
+"The Abbey is found beyond the Cloister. You have to pass through it somewhow.",	//181
+
+
+
 
 };

@@ -45,7 +45,7 @@ string DLG_TEXT[53] = {
 "I know the Fleet's Captain, Captain Villalobos, must see the Governor tomorrow morning. I'll also be in the townhall. Some of the ships need to be repaired before leaving Havana. It seems they have met a tempest during the voyage.",
 "We can confirm. We've even had to call in at #sisland_Khael Roa#.",
 "I still need a confirmation of the damages but I bet two weeks for their stay.",
-"(Elting to Damski) Humm... The best solution would be to kidnapp him after the meeting and before he joins his crew in the port. Without forgetting, we need to be discreet if we don't want all the guards of this town attacking us.",
+"(Elting to Damski) Humm... The best solution would be to kidnap him after the meeting and before he joins his crew in the port. Without forgetting, we need to be discreet if we don't want all the guards of this town attacking us.",
 "I'll leave the townhall before him seeing he'll have another topics to talk to the Governor. I could be with you to warn of his arrival.",
 "(Elting to Damski) Alright, I think we have a plan. Can we stay in your house until tomorrow morning?",
 "Of course.",

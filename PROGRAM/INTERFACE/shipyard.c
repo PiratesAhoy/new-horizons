@@ -3477,6 +3477,7 @@ void DoCannonRepair(ref chref)
 // KK -->
 void SetFleetAtShipyard()
 {
+	if (VanderdeckenShipyard()) return; // PB: Abort this if you're at Isla da Muerte
 	if(DEBUG_SHIPYARD_INTERFACE) trace("SetFleetAtShipyard");
 	ref mchref = GetMainCharacter();
 	ref rTown = GetCurrentTown();
@@ -3667,7 +3668,7 @@ bool IsEnableSellShip()
 		GameInterface.strings.HelpString = "Cannot Sell - Contraband on board";
 		return false;
 	}
-	if(IsMainCharacter(chref) && ProfessionalNavyNation() != UNKNOWN_NATION)
+	if(IsMainCharacter(chref) && ProfessionalNavyNation() != UNKNOWN_NATION && GetRank(PChar, GetServedNation()) < 10)
 	{
 		return false;
 	}
@@ -3871,7 +3872,7 @@ void ProcessBuyShip()
 {
 	if(DEBUG_SHIPYARD_INTERFACE) trace("ProcessBuyShip");
 	ref mchr = GetMainCharacter();
-	if(ProfessionalNavyNation() != UNKNOWN_NATION)
+	if(ProfessionalNavyNation() != UNKNOWN_NATION && GetRank(GetMainCharacter(), GetServedNation()) < 10)
 	{
 		return;
 	}

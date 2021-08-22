@@ -3847,7 +3847,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].items.randitem5 = "key8";				//invisible
 
 	Locations[n].locators_radius.randitem.randitem6 = 0.1;
-	Locations[n].items.randitem6 = "roll_of_planks1";		//what?
+	Locations[n].items.randitem6 = "key8";				//invisible
 
 	Locations[n].locators_radius.randitem.randitem7 = 0.1;
 	Locations[n].items.randitem7 = "key8";				//invisible
@@ -4807,24 +4807,13 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].models.always.river.uvslide.v0 = -0.1;
 	Locations[n].models.always.river.uvslide.v1 = 0.15;
 	Locations[n].models.always.river.tech = "LocationWaterFall";
-/*
-	Locations[n].models.always.l5 = "water1";			//high
-	//Locations[n].models.always.l5.uvslide.u0 = 0.0005;		//upwards
-	//Locations[n].models.always.l5.uvslide.v0 = 0.2;		//upwards
-		//Locations[n].models.always.l5.uvslide.u0 = 0.2;			//rotating
-		//Locations[n].models.always.l5.uvslide.v0 = 0.0005;			//rotating
-	//Locations[n].models.always.l5.uvslide.u0 = 0.2;		//upwards	
-	//Locations[n].models.always.l5.uvslide.v0 = 0.2;		//upwards
-		//Locations[n].models.always.l5.uvslide.u0 = 0.0005;		//no movement at all		
-		//Locations[n].models.always.l5.uvslide.v0 = 0.0005;		//no movement at all
-	//Locations[n].models.always.l5.uvslide.u0 = 0.0005;		//upwards	
-	//Locations[n].models.always.l5.uvslide.v0 = 0.2;		//upwards
-		//Locations[n].models.always.l5.uvslide.u0 = 0.3;				//no
 
+	Locations[n].models.always.l5 = "water1";
+	Locations[n].models.always.l5.uvslide.u0 = -0.0005;
+	Locations[n].models.always.l5.uvslide.v0 = -0.2;
 	Locations[n].models.always.l5.level = 999;
-		//Locations[n].models.always.l5.level = 50;		//no diff
 	Locations[n].models.always.l5.tech = "LocationWaterFall";
-*/
+
 	Locations[n].models.always.l6 = "water02";			//flat circle
 	Locations[n].models.always.l6.uvslide.u0 = 0.04;
 	Locations[n].models.always.l6.uvslide.v0 = 0.01;
@@ -7571,10 +7560,10 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].items.randitem3 = "mine";
 
 	Locations[n].locators_radius.randitem.randitem4 = 0.001;
-	Locations[n].items.randitem4 = "roll_of_planks1";
+	Locations[n].items.randitem4 = "key8";				//was roll_of_planks1
 	
 	Locations[n].locators_radius.randitem.randitem5 = 0.001;
-	Locations[n].items.randitem5 = "roll_of_planks2";
+	Locations[n].items.randitem5 = "key8";				//was roll_of_planks2
 
 	Locations[n].locators_radius.randitem.randitem6 = 0.001;
 	Locations[n].items.randitem6 = "barrel3";

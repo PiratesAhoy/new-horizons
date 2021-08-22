@@ -28,6 +28,9 @@ void ProcessDialogEvent()
 		NPChar.enemy_nation = iNation;
 	}
 // PB <--
+
+	int fakeflag = GetCurrentFlag();
+	if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod())) fakeflag = PIRATE;	// GR: if your nation has no colonies then you're in the pirate store on Nevis
 	
 	PreProcessor_Add("name", GetMyName(NPChar));
 	switch(Dialog.CurrentNode)
@@ -812,13 +815,14 @@ void ProcessDialogEvent()
 			break;
 
 			case "GuideToSpyglass":
-				if (GetCurrentFlag() != FRANCE && GetCurrentFlag() != PIRATE)
+				if (fakeflag != FRANCE && fakeflag != PIRATE)
 					AddDialogExitQuest("Tut_GuideToSpyglass");
 				else
 					AddDialogExitQuest("Tut_ToTheTown");
-					dialog.text = DLG_TEXT[140];
-					link.l1 = DLG_TEXT[141];
-					link.l1.go = "Exit";
+
+				dialog.text = DLG_TEXT[140];
+				link.l1 = DLG_TEXT[141];
+				link.l1.go = "Exit";
 			break;
 
 			case "HereAretheTraders":
@@ -834,7 +838,7 @@ void ProcessDialogEvent()
 				{
 					dialog.text = DLG_TEXT[143];
 					link.l1 = DLG_TEXT[144];
-					if (GetCurrentFlag() == PIRATE)
+					if (fakeflag == PIRATE)
 						link.l1.go = "NowGoTotheStore_1";
 					else
 					{
@@ -862,7 +866,7 @@ void ProcessDialogEvent()
 			case "ContinueWithoutSpyglass":
 				dialog.text = DLG_TEXT[150];
 				link.l1 = DLG_TEXT[144];
-				if (GetCurrentFlag() == PIRATE)
+				if (fakeflag == PIRATE)
 				{
 					PChar.quest.ContinueWithoutSpyglass = "1";
 					link.l1.go = "NowGoTotheStore_1";
@@ -880,7 +884,7 @@ void ProcessDialogEvent()
 
 			case "GoToStore":
 				AddDialogExitQuest("Tut_ReloadToOxbay");
-				if (GetCurrentFlag() == FRANCE)
+				if (fakeflag == FRANCE)
 					dialog.text = DLG_TEXT[151];
 				else
 					dialog.text = DLG_TEXT[152];
@@ -905,13 +909,13 @@ void ProcessDialogEvent()
 
 			case "MoreDetailsOnTrade":
 				AddDialogExitQuest("Tut_StartTrading");
-				if (GetCurrentFlag() != PIRATE || CheckQuestAttribute("ContinueWithoutSpyglass", "1"))
+				if (fakeflag != PIRATE || CheckQuestAttribute("ContinueWithoutSpyglass", "1"))
 					dialog.text = DLG_TEXT[157];
 				else
 					dialog.text = DLG_TEXT[159];
 				if (GetCargoGoods(Pchar, CharGood1) != 0) dialog.text = dialog.text + XI_ConvertString(Goods[CharGood1].name);
 				if (GetCargoGoods(Pchar, CharGood2) != 0 && CharGood2 != CharGood1) dialog.text = dialog.text + DLG_TEXT[158] + XI_ConvertString(Goods[CharGood2].name);
-				if (GetCurrentFlag() != PIRATE || CheckQuestAttribute("ContinueWithoutSpyglass", "1"))
+				if (fakeflag != PIRATE || CheckQuestAttribute("ContinueWithoutSpyglass", "1"))
 					dialog.text = dialog.text + DLG_TEXT[160];
 				else
 					DeleteQuestAttribute("ContinueWithoutSpyglass");
@@ -958,7 +962,7 @@ void ProcessDialogEvent()
 						link.l2 = DLG_TEXT[171];
 						link.l2.go = "Skip_TutorialInTown";
 					}
-				if (GetCurrentFlag() == FRANCE) dialog.text = dialog.text + DLG_TEXT[295];
+//				if (GetCurrentFlag() == FRANCE) dialog.text = dialog.text + DLG_TEXT[295];
 			break;
 
 			case "GoodsSoldInStore_1":
@@ -1053,7 +1057,7 @@ void ProcessDialogEvent()
 				link.l6 = DLG_TEXT[199];
 				link.l6.go = "Direct_Sailing";
 				link.l7 = DLG_TEXT[200];
-				link.l7.go = "Moralee";
+				link.l7.go = "Morale";
 				link.l8 = DLG_TEXT[201];
 				link.l8.go = "Flags";
 				link.l9 = DLG_TEXT[202];
@@ -1084,7 +1088,7 @@ void ProcessDialogEvent()
 					link.l5 = DLG_TEXT[199];
 					link.l5.go = "Direct_Sailing";
 					link.l6 = DLG_TEXT[200];
-					link.l6.go = "Moralee";
+					link.l6.go = "Morale";
 					link.l7 = DLG_TEXT[201];
 					link.l7.go = "Flags";
 					link.l8 = DLG_TEXT[202];
@@ -1138,7 +1142,7 @@ void ProcessDialogEvent()
 				link.l6 = DLG_TEXT[199];
 				link.l6.go = "Direct_Sailing";
 				link.l7 = DLG_TEXT[200];
-				link.l7.go = "Moralee";
+				link.l7.go = "Morale";
 				link.l8 = DLG_TEXT[201];
 				link.l8.go = "Flags";
 				link.l9 = DLG_TEXT[202];
@@ -1168,7 +1172,7 @@ void ProcessDialogEvent()
 				link.l6 = DLG_TEXT[199];
 				link.l6.go = "Direct_Sailing";
 				link.l7 = DLG_TEXT[200];
-				link.l7.go = "Moralee";
+				link.l7.go = "Morale";
 				link.l8 = DLG_TEXT[201];
 				link.l8.go = "Flags";
 				link.l9 = DLG_TEXT[202];
@@ -1186,7 +1190,7 @@ void ProcessDialogEvent()
 				link.l4 = DLG_TEXT[199];
 				link.l4.go = "Direct_Sailing";
 				link.l5 = DLG_TEXT[200];
-				link.l5.go = "Moralee";
+				link.l5.go = "Morale";
 				link.l6 = DLG_TEXT[201];
 				link.l6.go = "Flags";
 				link.l7 = DLG_TEXT[202];
@@ -1202,7 +1206,7 @@ void ProcessDialogEvent()
 				link.l3 = DLG_TEXT[199];
 				link.l3.go = "Direct_Sailing";
 				link.l4 = DLG_TEXT[200];
-				link.l4.go = "Moralee";
+				link.l4.go = "Morale";
 				link.l5 = DLG_TEXT[201];
 				link.l5.go = "Flags";
 				link.l6 = DLG_TEXT[195];

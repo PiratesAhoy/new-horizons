@@ -1,4 +1,4 @@
-string DLG_TEXT[46] = { 
+string DLG_TEXT[54] = { 
 "Can't you see that I'm on duty! Don't bother me.",
 "All right, all right.",
 "Did you want to report some crime?",
@@ -26,9 +26,9 @@ string DLG_TEXT[46] = {
 "Papers... hah. May be all right - or not. That name sounds very piracy... piratesey... pirashy... ehh...",//24
 "Yes...? (How hard can it be)",
 "What's your business in the Fort, 'Captain'?",								//26
-"I'm just passing the Fort to the Prison. I'm been doing some research.",
+"I'm just passing the Fort to the Prison. I'm doing some research...",
 "No. You can't do that without a Pass!",								//28
-"I see. But that's just what I've got here, soldier. Signed by Sir William Stapelton himself!!",	
+"I see. But that's just what I've got here, soldier. Signed by Sir William Stapleton himself!!",	
 "More papers, hah. Take a look at this, Frank... Best to be sure.",	//30
 "Is there something wrong?",
 "Well... ehh... ehh, I think it's a correct document. But... the Pass is for you alone Captain.",
@@ -42,8 +42,16 @@ string DLG_TEXT[46] = {
 "What about it?",				//40
 "Can I have it back, please.",
 "Certainly not. You have used it and I have accepted it. Now get out of my sight.",	//42
-"But I'll need it on my way back through the Fort. Without it the soldiers will attack me!",
-"I tell you what: I really don't care. Get lost or you'll be attacked now!!",		//44
-"(have to solve that later on)",
+"But I'll need it on my way back through the Fort. ",
+"I tell you what: I really don't care.",		//44
+"Without it the soldiers will attack me!",		//45
+"If you want to survive don't try to steal or touch anything!",
+"Of course not. (Hmm, we'll see about that...)",
+"I heard something. Is there someone up there?",
+"(oh oh)",
+"Interesting enough when Took finds out -",
+"- hurry up now!!!",
+"You just killed another visitor in this prison. Get lost or YOU will be attacked!!",		//52
+"--- (oh oh)",		//53
 
 };

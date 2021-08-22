@@ -84,7 +84,7 @@ void ProcessDialogEvent()
 	//-----------------------------------------------------------------------------------------------
 
 		case "Caesar1":
-			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Caesar"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("fake_Caesar"));
 
 			PlaySound("VOICE\ENGLISH\gr_Teach6.wav");
 			Dialog.text = DLG_TEXT[10];
@@ -94,7 +94,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Caesar2":
-			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Caesar"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("fake_Caesar"));
 
 			PlaySound("VOICE\ENGLISH\gr_Teach8.wav");
 			Dialog.text = DLG_TEXT[12];
@@ -104,7 +104,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Caesar3":
-			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Caesar"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("fake_Caesar"));
 
 			PlaySound("VOICE\ENGLISH\gr_Teach4.wav");
 			Dialog.text = DLG_TEXT[14];
@@ -114,7 +114,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Caesar4":
-			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("Caesar"));
+			LAi_ActorTurnToCharacter(characterFromID("Teach"), characterFromID("fake_Caesar"));
 
 			PlaySound("VOICE\ENGLISH\gr_Teach7.wav");
 			Dialog.text = DLG_TEXT[16];
@@ -263,6 +263,111 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[41];
 			link.l1.go = "exit";
 			AddDialogExitQuest("Hands_shot_scene41");
+		break;
+
+		case "Teach_tavern":
+			PlaySound("VOICE\ENGLISH\gr_Teach2.wav");
+		//	PlaySound("VOICE\ENGLISH\Eden_so.wav");
+			Dialog.text = DLG_TEXT[44];
+			link.l1 = DLG_TEXT[45];
+			link.l1.go = "Teach_tavern1";
+		break;
+
+		case "Teach_tavern1":
+			PlaySound("VOICE\ENGLISH\gr_Teach13.wav");
+			Dialog.text = DLG_TEXT[46];
+			link.l1 = DLG_TEXT[47];
+			link.l1.go = "Teach_tavern2";
+		break;
+
+		case "Teach_tavern2":
+			PlaySound("VOICE\ENGLISH\pir_capR3.wav");
+			Dialog.text = DLG_TEXT[48];
+			link.l1 = DLG_TEXT[49];
+			link.l1.go = "Teach_tavern3";
+		break;
+
+		case "Teach_tavern3":
+			PlaySound("VOICE\ENGLISH\gr_Teach7.wav");
+			Dialog.text = DLG_TEXT[50];
+			link.l1 = DLG_TEXT[51];
+			link.l1.go = "Teach_tavern4";
+		break;
+
+		case "Teach_tavern4":
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead1.wav");
+			Dialog.text = DLG_TEXT[52];
+			link.l1 = DLG_TEXT[53];
+			link.l1.go = "Teach_tavern5";
+		break;
+
+		case "Teach_tavern5":
+			PlaySound("VOICE\ENGLISH\gr_Teach14.wav");
+			Dialog.text = DLG_TEXT[54];
+			link.l1 = DLG_TEXT[55];
+			link.l1.go = "Teach_tavern6";
+		break;
+
+		case "Teach_tavern6":
+			PlaySound("VOICE\ENGLISH\pir_capR4.wav");
+			Dialog.text = DLG_TEXT[56];
+			link.l1 = DLG_TEXT[57];
+			link.l1.go = "Teach_tavern7";
+		break;
+
+		case "Teach_tavern7":
+			PlaySound("VOICE\ENGLISH\gr_Teach12.wav");
+			Dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "Teach_tavern8";
+		break;
+
+		case "Teach_tavern8":
+			AddQuestRecord("Blackbeards_tower","8");
+
+			PlaySound("VOICE\ENGLISH\gr_Teach11.wav");
+			Dialog.text = DLG_TEXT[60];
+			link.l1 = DLG_TEXT[61];
+			link.l1.go = "Teach_tavern9";
+		break;
+
+		case "Teach_tavern9":
+			PlaySound("VOICE\ENGLISH\gr_Teach8.wav");
+			Dialog.text = DLG_TEXT[62];
+			link.l1 = DLG_TEXT[63];
+			link.l1.go = "exit";
+			AddDialogExitQuest("defoe_map15");
+		break;
+
+		case "Teach_tavern10":
+			PlaySound("VOICE\ENGLISH\gr_Teach4.wav");
+			Dialog.text = DLG_TEXT[64];
+			link.l1 = DLG_TEXT[65];
+			link.l1.go = "exit";
+			AddDialogExitQuest("defoe_map20");
+		break;
+
+		case "Teach_tavern11":
+			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+			Dialog.text = DLG_TEXT[66];
+			link.l1 = DLG_TEXT[67];
+			link.l1.go = "Teach_tavern12";
+		break;
+
+		case "Teach_tavern12":
+			PlaySound("VOICE\ENGLISH\gr_Teach2.wav");
+			Dialog.text = DLG_TEXT[68];
+			link.l1 = DLG_TEXT[69];
+			link.l1.go = "exit";
+			AddDialogExitQuest("defoe_map25");
+		break;
+
+		case "babble_or_drink":
+			PlaySound("VOICE\ENGLISH\gr_Teach1.wav");
+			Dialog.text = DLG_TEXT[70];
+			link.l1 = DLG_TEXT[71];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Hands_shot_sceneB");
 		break;
 
 		case "Exit":

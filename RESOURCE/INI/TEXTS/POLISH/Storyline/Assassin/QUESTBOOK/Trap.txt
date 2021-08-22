@@ -1,0 +1,16 @@
+title=The Bartolomeu's trap
+text.t1=I've had to accept a new mission despite I wasn't motivated after what happened in Oranjestad. My next target is Bartolomeu o Portugues, the famous Portuguese pirate. Captain Butcher is already looking for him. I must see him in #sIsla Muelle#.
+text.t2=A lead, finally. Captain Butcher thinks we only need to see a friend of Charles Baxter in the pirate settlement of #sisland_Quebradas Costillas# to have a lucky break of finding Bartolomeu.
+text.t3=Captain Butcher was right. We found a former Baxter's crewmember in the pirate settlement. He said Bartolomeu worked for the governor of #sisland_Conceicao#. Certainly, we'll find more information in #sConceicao#. I'll start my search there talking to the tavern keeper.
+text.t4=I've captured the Bartolomeu's officer, Emilio Soares. However, I don't know where Bartolomeu is. Let's return to Havana and take advice from Vice-Admiral Benavides.
+text.t5=The Vice-Admiral gave me an essential information. Roxanne Lalliere, his best friend, is in mission at Alice town. However, before going there, I must see the governor of Puerto la Cruz. His help could be useful.
+text.t6=The Governor suggested I talk to William Cotter, an English officer working for him. He could help us in the Lalliere's kidnapping. I should find him patrolling the streets of Alice town.
+text.t7=A night, while I was in the Eleuthera fort, I saw Bartolomeu trying to release Roxanne Lalliere from the prison. After accepting his offer of partnership, we discreetly went out the fort. Unfortunately, we met Padilla and his men short after in the jungle. They have been killed in a fight. Now, we can go to Alice town.
+text.t8=Next stop, Havana. Emilio is jailed there. We'll land first at Bahia de San Antonio.
+text.t9=After releasing Emilio Soares, I killed Vice-Admiral Benavides when he entered his residence. Let's go to #sRedmond# to decide our future.
+text.t10=Roxanne returned to #sFalaise de Fleur# while Bartolomeu went for new adventures. In my case, I decided to start a new life in #sisland_Douwesen#.
+text.t11=A night, while I was in the Eleuthera fort, I saw Bartolomeu trying to release Roxanne Lalliere from the prison. He didn't convinced me of leaving the Spanish service and I had to kill him. Short after, Captain Padilla arrived and he decided we should return to Havana as quickly as possible.
+text.t12=Finally, I'm a free man! The nightmare is over and I can manage my life as I like.
+
+ 
+

@@ -1,0 +1,9 @@
+title=In business with Beckett and the East India Trading Company
+text.t1=My next job is to go to #sisland_Antiqua# for goods, sell them at #sGreenford# on #sisland_Oxbay#, buy gold and then back to #sRedmond#. 
+text.t2=My next job is to go to #sisland_Antiqua# for goods, sell them at #sGreenford# on #sisland_Oxbay# and buy gold with the money. Plus going to #sOxbay# town to spy for the Governor, then back to #sRedmond#.
+text.t3=I have successfully completed my first run for the Company. It counted as two, #sisland_Antiqua# and #sGreenford# on #sisland_Oxbay#, so I was paid double! This isn't making sense though as the value of the gold surely doesn't carry enough profit to cover what Sir Cutler is paying me?
+text.t4=I am off to #sisland_Oxbay# to get a packet from the shipyard owner in #sOxbay#. I may have to go in through #sGreenford# and cross the island by land.
+text.t5=I have got the packet from Owen McDorey.
+text.t6=I have got the packet from Owen McDorey. I have sewn it into the lining of my jacket for safety.
+text.t7=I have been given a packet for Lord Beckett by the #sisland_Antiqua# Victualler. I opened it carefully so I could seal it again without anyone knowing it was opened. It seems to be part of an Aztec map.
+text.t8=I am off to #sisland_Falaise de Fleur# to get a packet from the shipyard owner there. I also have to sink a French escort.

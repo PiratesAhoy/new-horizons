@@ -596,7 +596,8 @@ void CreateOxbayCharacters(ref n)
 	ch.name 	= TranslateString("","Lavinia");
 	ch.lastname 	= TranslateString("","Ault");
 	ch.id		= "Lavinia Ault";
-	ch.model	= "towngirl1";
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) ch.model = "towngirl1_3";
+	else ch.model = "towngirl1";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
 	ch.location	= "Oxbay_town";
@@ -2218,7 +2219,8 @@ void CreateOxbayCharacters(ref n)
 	ch.name 	= TranslateString("","Audrey");
 	ch.lastname = TranslateString("","Proude");
 	ch.id		= "Audrey Proude";
-	ch.model	= "towngirl1";
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) ch.model = "towngirl1_2";
+	else ch.model = "towngirl1";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
 	ch.location	= "Greenford_town";
@@ -3051,8 +3053,21 @@ void CreateOxbayCharacters(ref n)
 	//Steven Mather-Wren in Apothecary, by Alan_Smithee
 	ch.old.name = "Steven";
 	ch.old.lastname = "Mather-Wren";
-	ch.name 	= TranslateString("","Steven");
-	ch.lastname 	= TranslateString("","Mather-Wren");
+	LAi_SetHuberType(ch);
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		ch.name 	= TranslateString("","Juan");
+		ch.lastname 	= TranslateString("","Hacepoco");
+		ch.nation = SPAIN;
+		LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	}
+	else
+	{
+		ch.name 	= TranslateString("","Steven");
+		ch.lastname 	= TranslateString("","Mather-Wren");
+		ch.nation = ENGLAND;
+		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	}
 	ch.id		= "Apothecary";
 	ch.model	= "apothecary";
 	ch.sex = "man";
@@ -3065,7 +3080,6 @@ void CreateOxbayCharacters(ref n)
 	ch.Dialog.Filename.quest = "apothecary_quest.c";
 	ch.greeting = "Gr_Oxbay Citizen";
 	ch.rank 	= 1;
-	ch.nation = ENGLAND;
 	ch.reputation = "None";
 	ch.experience = "0";
 	ch.skill.Leadership = "1";
@@ -3079,9 +3093,7 @@ void CreateOxbayCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-    ch.questchar = true;
-	LAi_SetHuberType(ch);
-	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+    	ch.questchar = true;
 	AddGameCharacter(n, ch);
 // <-- ditto
 }

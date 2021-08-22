@@ -94,7 +94,7 @@ perkImprovePotions
 {
 Healing potions will be 10% more effective for the complete party.
 }
-perkToughnessLocked
+perkImprovePotionsLocked
 {
 Help the apothecary when it needs some goods | Healing potions will be 10% more effective for the complete party.
 }
@@ -147,26 +147,53 @@ perkSailingProfessional
 The character's ship speed and maneuverability are increased by 20%. On the world map, the character gets a 50% chance of being able to skip a random encounter. In that case, a "Skip encounter" icon appears and the "Enter" key can be pressed to skip the encounter.
 }
 
-BasicBattleState	{Basic Ship defence}
-perkBasicBattleState
+BasicDamageControl	{Damage Control}
+perkBasicDamageControl
 {
-The character's ship takes 15% less damage from enemy fire. Also allows the character to execute fire drills if the ship is on fire.
+The character's ship takes 15% less hull damage from enemy fire. Also allows the character to execute fire drills if the ship is on fire.
 }
 
-AdvancedBattleState	{Advanced Ship defence}
-perkAdvancedBattleState
+AdvancedDamageControl	{Improved Damage Control}
+perkAdvancedDamageControl
 {
-The character's ship takes 25% less damage from enemy fire.
+The character's ship takes 25% less hull damage from enemy fire.
 }
-perkAdvancedBattleStateLocked
+perkAdvancedDamageControlLocked	
 {
-Find a book to unlock | The character's ship takes 25% less damage from enemy fire.
+Find a book to unlock | The character's ship takes 25% less hull damage from enemy fire.
 }
 
-ShipDefenceProfessional	{Professional Ship defence}
-perkShipDefenceProfessional
+ProfessionalDamageControl	{Professional Damage Control}
+perkProfessionalDamageControl
 {
-The character's ship takes 40% less damage from enemy fire and has a drastically reduced chance to be critically hit.
+The character's ship takes 40% less hull damage from enemy fire and has a drastically reduced chance to be critically hit.
+}
+
+
+BasicFirstAid	{First Aid}
+perkBasicFirstAid	
+{
+The character's ship takes 15% less crew damage from enemy fire. It will also prevent 15% damage from musket volleys.
+}
+
+
+AdvancedFirstAid	{Improved First Aid}
+perkAdvancedFirstAid	
+{
+The character's ship takes 30% less crew damage from enemy fire. It will also prevent 30% damage from musket volleys.
+}
+
+Rigging		{Patcher}
+perkRigging
+{
+The character's ship takes 20% less sail damage from enemy fire.
+}
+
+
+RiggingAdvance	{Sail Master}
+perkRiggingAdvance	
+{
+The character's ship takes 40% less sail damage from enemy fire.
 }
 
 FastReload	{Fast Reload}
@@ -240,7 +267,7 @@ You can get this from a captain of an enemy ship if you are civilized | The rang
 MusketsShoot	{Musket Volley}
 perkMusketsShoot
 {
-Right before boarding an enemy ship, the character's crew fires muskets. This salvo kills 25% of the enemy's crew minus any defence bonuses.
+Right before boarding an enemy ship, the character's crew fires muskets. This salvo kills some of the enemy's crew, depending on the size of the character's crew, minus any defence bonuses.
 }
 
 GrapplingProfessional	{Master of Boarding}
@@ -304,7 +331,7 @@ You are a master in disguises, which decreases the chance of your false flag bei
 ImproveSmuggling	{Evade Coast Guard}
 perkImproveSmuggling
 {
-There is a large chance that if the coast guard finds you they will be in a smaller group then usual. And the chance they find you at all is reduced with 5%. The chance to be caught when smuggling opium is reduced with 10%.
+There is a large chance that if the coast guard finds you they will be in a smaller group then usual. And the chance they find you at all is reduced with 5%.
 }
 perkImproveSmugglingLocked
 {
@@ -315,7 +342,6 @@ AdvanceSmuggling	{Advanced Smuggling}
 perkAdvanceSmuggling
 {
 The smugglers like you so much they will pay you 15% more for your goods. And the chance the coastguard finds you is reduced with another 10%. The chance of coastguard ships appearing after getting caught is also reduced by 50%.
-The chance to be caught when smuggling opium is reduced with another 15%.
 }
 
 BasicCommerce	{Basic Commerce}

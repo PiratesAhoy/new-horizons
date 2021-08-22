@@ -33,6 +33,7 @@ void ProcessDialogEvent()
 			Dialog.Text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[1];
 			if (characters[GetCharacterIndex("Milon Blacque")].quest.son == "letter_return" && NPChar.quest.letter != "done") //NK so you can only give it once
 			{
+				Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 				link.l1 = DLG_TEXT[2];
 				link.l1.go = "letter";
 //NK add badguy quest back so you can still complete it even with letter -->
@@ -93,8 +94,12 @@ void ProcessDialogEvent()
 							Link.l3.go = "problems";
 						}
 						// NK -->
+						Preprocessor_AddQuestData("Blacque", GetMyLastName(CharacterFromID("Marc Blacque")));
+						Preprocessor_AddQuestData("Rachel Blacque", GetMyFullName(NPChar));
 						SetQuestHeader("Blacques");
 						AddQuestRecord("Blacques", 1);
+						Preprocessor_Remove("Rachel Blacque");
+						Preprocessor_Remove("Blacque");
 						// NK <--
 					}
 				}
@@ -113,6 +118,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "voice\RABL\RABL001";
 
+			Preprocessor_Add("Rachel", GetMyName(NPChar));
 			Dialog.text = DLG_TEXT[93];
 			link.l1 = DLG_TEXT[94];
 			link.l1.go = "exit";
@@ -264,12 +270,18 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[67];
 			Link.l1 = DLG_TEXT[68];
 			NPChar.quest.badguy = "1";
+			Preprocessor_AddQuestData("Orable Caron", GetMySimpleName(CharacterFromID("Orable Caron")));
+			Preprocessor_AddQuestData("Rachel", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 5); // NK
+			Preprocessor_Remove("Rachel");
+			Preprocessor_Remove("Orable Caron");
 			Link.l1.go = "exit";
 		break;
 
 		case "problems_7":
+			Preprocessor_AddQuestData("Rachel", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 8); // NK
+			Preprocessor_Remove("Rachel");
 			Dialog.snd = "voice\RABL\RABL017";
 			Dialog.text = DLG_TEXT[69] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[70];
 			//ChangeCharacterAddress(characterFromID("Orable caron"), "none", ""); //NK move Rachel to port, and set so you can't keep saying you've delt with Orable and get more rep.
@@ -295,7 +307,9 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, -100);
+			Preprocessor_AddQuestData("Rachel", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 6); // NK
+			Preprocessor_Remove("Rachel");
 			NPChar.quest.badguy = "money";
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -318,6 +332,7 @@ void ProcessDialogEvent()
 
 		case "letter_1":
 			Dialog.snd = "voice\RABL\RABL020";
+			Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			Dialog.text = DLG_TEXT[77];
 			link.l1 = DLG_TEXT[78];
 			link.l1.go = "letter_2";
@@ -356,7 +371,12 @@ void ProcessDialogEvent()
 		break;
 
 		case "resque_1":
+			Preprocessor_AddQuestData("Marc", GetMyName(CharacterFromID("Marc Blacque")));
+			Preprocessor_AddQuestData("Rachel", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 13); // NK
+			Preprocessor_Remove("Rachel");
+			Preprocessor_Remove("Marc");
+			Preprocessor_Add("Marc", GetMyName(CharacterFromID("Marc Blacque")));
 			if (makeint(pchar.reputation) < 51)
 			{
 				Dialog.snd = "voice\RABL\RABL025";

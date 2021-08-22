@@ -474,7 +474,7 @@ void LocationInitTurks(ref n)
 	Locations[n].id = "Turks_tavern_kitchen";
 	locations[n].id.label = "Kitchen - staff only";
 	Locations[n].filespath.models = "locations\inside\flamhouse";
-	Locations[n].image = "wr_kitchen.tga";
+	Locations[n].image = "Inside_Flamhouse_Kitchen.tga";
 
 	//Town sack
 	Locations[n].townsack = "Redmond";
@@ -554,7 +554,7 @@ void LocationInitTurks(ref n)
 
 	Locations[n].id = "Turks_tavern_bedroom";
 	locations[n].id.label = "Private";
-	Locations[n].image = "Inside_Shipyard3.tga";
+	Locations[n].image = "Inside_JinoRoom.tga";
 
 	//Town sack
 	Locations[n].townsack = "Grand Turk";
@@ -1032,6 +1032,7 @@ void LocationInitTurks(ref n)
 	Locations[n].models.always.fn = "FortVRight_fn";
 	//Locations[n].models.always.lAttack = "FortVRight_lAttack";
     //Locations[n].models.always.patch = "FortVRight_patch";
+	Locations[n].models.always.l2 = "bench";
 
 	//Day
 	Locations[n].models.day.charactersPatch = "FortVRight_patch";
@@ -1057,6 +1058,11 @@ void LocationInitTurks(ref n)
 	Locations[n].reload.l2.autoreload = "0";
 	Locations[n].reload.l2.label = "Office";
 	Locations[n].locators_radius.reload.reload1_back = 1;
+
+	Locations[n].locators_radius.quest.defoe = 2.0;
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.001;
+	Locations[n].items.randitem3 = "bench";
 
 	Locations[n].island = "Turks";
    	n = n + 1;

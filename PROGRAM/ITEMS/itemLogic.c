@@ -392,7 +392,10 @@ void Item_OnPickItem()
 				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "wood_short_logs" || Items[sti(activeLocation.(activeRandItemAttribute))].id == "wood4_item"
 				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "pole3_small" || Items[sti(activeLocation.(activeRandItemAttribute))].id == "spyglass6"
 				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "sail" || Items[sti(activeLocation.(activeRandItemAttribute))].id == "sack3"
-				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "boom_item")
+				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "boom_item" || Items[sti(activeLocation.(activeRandItemAttribute))].id == "FransHals_45"
+				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "censer_item" || Items[sti(activeLocation.(activeRandItemAttribute))].id == "chair"
+				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "toolbox_item" || Items[sti(activeLocation.(activeRandItemAttribute))].id == "ladder_very_big"
+				|| Items[sti(activeLocation.(activeRandItemAttribute))].id == "pillow1")
 				{
 
 				}
@@ -2218,7 +2221,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 	if(_location.id=="Grotto")		needRespawn = false; // PB: Cursed Coins
 	if(_location.id=="Roa_Cabin")	needRespawn = false; // JRH: Place your own things in Roa_cabin
 	if(_location.id=="Muelle04_HouseInsideR6") needRespawn = false; // GR: special pistol
-
+	
 	//respawn items in box
 	if (needRespawn || isAbordageBox)
 	{
@@ -2321,18 +2324,15 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 		if(_location.id=="GB_Charleston_governor_kitchen")spawnItemsCount = 0;
 		if(_location.id=="GB_Charleston_store")spawnItemsCount = 0;
 
-		if(_location.id=="bb_Eden_estate")spawnItemsCount = 0;
 		if(_location.id=="bb_Eden_bedroom1")spawnItemsCount = 0;
 		if(_location.id=="bb_Eden_kitchen")spawnItemsCount = 0;
 		if(_location.id=="bb_Eden_attic2")spawnItemsCount = 0;
 		if(_location.id=="bb_Eden_attic3")spawnItemsCount = 0;
 		if(_location.id=="bb_Eden_bedroom2")spawnItemsCount = 0;
 		if(_location.id=="bb_Eden_dining_room")spawnItemsCount = 0;
-		if(_location.id=="bb_isle_passage")spawnItemsCount = 0;
 		if(_location.id=="Kristiania_townhall_entre")spawnItemsCount = 0;
 		if(_location.id=="Kristiania_shipyard")spawnItemsCount = 0;
-		if(_location.id=="Redhouse_entre")spawnItemsCount = 0;
-
+		
 		if(_location.id=="Mayan_village")
 		{
 			spawnItemsCount = 0;
@@ -2357,6 +2357,12 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box1.items.indian13 = 1;
 		}
 
+		if(_location.id=="bb_Eden_estate")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box20.items.incense = 1;
+		}
+
 		if(_location.id=="bb_Eden_office")
 		{
 			spawnItemsCount = 0;
@@ -2367,9 +2373,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box2.items.picture3 = 1;
 			locations[FindLocation(chr.location)].box2.items.picture5 = 1;
 			locations[FindLocation(chr.location)].box2.items.picture6 = 1;
-			locations[FindLocation(chr.location)].box3.items.mapCayman = 1;
-			locations[FindLocation(chr.location)].box3.items.mapAntigua = 1;
-			locations[FindLocation(chr.location)].box3.items.mapEleuthera = 1;
+			locations[FindLocation(chr.location)].box3.items.contract1 = 1;		//Eden sold his soul
 			locations[FindLocation(chr.location)].box5.money = 500;
 		}
 
@@ -2382,12 +2386,17 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box3.items.herbs = 1;
 		}
 
-		if(_location.id=="bb_Eden_garden_house")spawnItemsCount = 0;
+		if(_location.id=="BB_Teach_drawing_room")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.incense = 1;
+		}
 
 		if(_location.id=="Kristiania_townhall")
 		{
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box3.items.doc60A = 1;
+			locations[FindLocation(chr.location)].box6.items.incense = 1;
 		}
 
 		if(_location.id=="Kristiania_fort_commander")
@@ -2395,6 +2404,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box2.items.bladeBB = 1;
 			locations[FindLocation(chr.location)].box2.items.pistolbladeBB = 1;
+	//		locations[FindLocation(chr.location)].box3.items.incense = 1;
 		}
 
 		if(_location.id=="Kristiania_shipwreck")
@@ -2402,6 +2412,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box2.items.switch_button = 1;
 			locations[FindLocation(chr.location)].box4.items.flagchest_closed = 1;
+			locations[FindLocation(chr.location)].box6.items.incense = 1;
 		}
 
 		if(_location.id=="Kristiania_cathedral")
@@ -2413,6 +2424,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 		if(_location.id=="NS_hidden_town_priest")
 		{
 			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box3.items.incense = 1;
 			locations[FindLocation(chr.location)].box4.items.paper_clip = 1;
 		}
 
@@ -2420,6 +2432,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 		{
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box1.items.tailors_book = 1;
+	//		locations[FindLocation(chr.location)].box3.items.incense = 1;
 		}
 
 		if(_location.id=="Oriel_room")
@@ -2429,10 +2442,22 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box3.items.key35 = 1;
 		}
 
+		if(_location.id=="Redhouse_entre")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.incense = 1;
+		}
+
 		if(_location.id=="Redhouse_room")
 		{
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box1.items.book69A = 1;
+		}
+
+		if(_location.id=="bb_isle_passage")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.myrrh = 1;
 		}
 
 		if(_location.id=="bb_isle_hut")
@@ -2441,6 +2466,20 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box8.items.bladelever3 = 1;
 		}
 
+		if(_location.id=="bb_lower_cave")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box6.items.gold_bars = 211;
+			locations[FindLocation(chr.location)].box7.items.gold_coins = 2718;
+			locations[FindLocation(chr.location)].box8.items.silver_bars = 103;
+			locations[FindLocation(chr.location)].box9.items.valuable_weapons = 52;
+		}
+	
+		if(_location.id=="bb_burning_cave")
+		{
+			spawnItemsCount = 0;
+		}
+	
 		if(_location.id=="bb_Maltains")
 		{
 			spawnItemsCount = 0;
@@ -2459,13 +2498,15 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box8.items.Malta_censer = 1;
 			
 			locations[FindLocation(chr.location)].box30.items.Malta_poison = 1;
+			locations[FindLocation(chr.location)].box30.items.incense = 1;
 		}
 
 		if(_location.id=="Citadel_tower_bedroom")
 		{
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box1.items.potionrum = 2;
-			locations[FindLocation(chr.location)].box2.items.book13 = 1;
+			locations[FindLocation(chr.location)].box2.items.gunpowder = 6;
+			locations[FindLocation(chr.location)].box2.items.pistolbullets = 6;
 			locations[FindLocation(chr.location)].box3.items.key30 = 1;
 		}
 
@@ -2478,7 +2519,8 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 		if(_location.id=="Turks_balcony_room")
 		{
 			spawnItemsCount = 0;
-			locations[FindLocation(chr.location)].box1.items.medical1 = 2;
+			locations[FindLocation(chr.location)].box1.items.medical1 = 1;
+			locations[FindLocation(chr.location)].box1.items.incense = 1;
 		}
 
 		if(_location.id=="Cartagena Hotel")
@@ -2733,6 +2775,12 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box4.items.indian4 = 1;
 		}
 
+		if(_location.id=="Tortuga_gunsmith_kitchen")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.incense = 1;
+		}
+
 		if(_location.id=="Oranjestad_store_02")
 		{
 			spawnItemsCount = 0;
@@ -2755,9 +2803,18 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box1.items.gunpowder = 12;
 			locations[FindLocation(chr.location)].box1.items.pistolbullets = 12;
-			locations[FindLocation(chr.location)].box2.items.powderflask = 1;
-			locations[FindLocation(chr.location)].box2.items.ammopouch = 1;
+		//	locations[FindLocation(chr.location)].box2.items.powderflask = 1;
+		//	locations[FindLocation(chr.location)].box2.items.ammopouch = 1;
 			locations[FindLocation(chr.location)].box3.items.longrifle_w = 1;
+		}
+
+		if(_location.id=="Turks_wreck_shore")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.medical1 = 1;
+			locations[FindLocation(chr.location)].box1.items.jewelry12 = 1;
+			locations[FindLocation(chr.location)].box2.items.indian4 = 1;
+			locations[FindLocation(chr.location)].box2.items.tobacco = 2;
 		}
 
 		if(_location.id=="BB_sloop_wreck_cabin")
@@ -2779,18 +2836,35 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box7.items.key3 = 1;
 		}
 
+		if(_location.id=="BB_prison2")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box11.items.bladeclub = 4;
+			locations[FindLocation(chr.location)].box11.items.myrrh = 1;
+		}
+
 		if(_location.id=="BB_prison_officer")
 		{
 			spawnItemsCount = 0;
-
+			locations[FindLocation(chr.location)].box5.items.mapBB5A = 1;
+			locations[FindLocation(chr.location)].box6.items.Pell_outfit = 1;
+			locations[FindLocation(chr.location)].box6.items.medical2 = 1;
+			locations[FindLocation(chr.location)].box13.items.bladeclub = 1;
+			locations[FindLocation(chr.location)].box13.items.pistolwhip = 1;
+			locations[FindLocation(chr.location)].box13.items.key38 = 1;
 		}
 
-		if(_location.id=="BB_graveyard") spawnItemsCount = 0;
+		if(_location.id=="BB_graveyard") 
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box2.items.tape = 1;
+		}
 	
 		if(_location.id=="BB_abbess")
 		{
 			spawnItemsCount = 0;
-			locations[FindLocation(chr.location)].box1.items.crypt_sketch = 1;
+		//	locations[FindLocation(chr.location)].box1.items.crypt_sketch = 1;
+			locations[FindLocation(chr.location)].box1.items.mapBB4A = 1;
 		}
 			
 		if(_location.id=="BB_church_room")
@@ -2823,7 +2897,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box1.items.potionwine2 = 2;
 		}
 
-		if(_location.id=="BB_misericord")
+		if(_location.id=="BB_abbey_cell")
 		{
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box4.items.pistolcenser = 1;
@@ -2839,6 +2913,18 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box1.items.pistolbottlew5 = 1;
 			locations[FindLocation(chr.location)].box2.items.bladebottlew5 = 1;
 			locations[FindLocation(chr.location)].box2.items.pistolbottlew5 = 1;
+		}
+
+		if(_location.id=="cloister_exit")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box2.items.incense = 1;
+		}
+
+		if(_location.id=="BB_tower")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.myrrh = 1;
 		}
 
 		if(_location.id=="wr_farm_kitchen")
@@ -2877,6 +2963,7 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box3.items.pistolfunnel = 1;
 			locations[FindLocation(chr.location)].box3.items.bladebottle_CE0 = 9;
 			locations[FindLocation(chr.location)].box19.items.book70_start = 1;
+			locations[FindLocation(chr.location)].box19.items.myrrh = 1;
 		}
 
 		if(_location.id=="wr_farm_booty")
@@ -2884,8 +2971,8 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			spawnItemsCount = 0;
 			locations[FindLocation(chr.location)].box5.items.bladebottle_BE0 = 8;
 			locations[FindLocation(chr.location)].box7.items.pistolbucket_dung = 4;
-			locations[FindLocation(chr.location)].box7.items.pistolstonebasket_G = 6;
 			locations[FindLocation(chr.location)].box7.items.pistolsulphur_WR = 5;
+			locations[FindLocation(chr.location)].box7.items.pistolstonebasket_G = 6;
 		}
 
 		if(_location.id=="wr_farm_booty2")
@@ -2896,6 +2983,48 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 			locations[FindLocation(chr.location)].box3.items.pistolstonebasket_M = 4;
 			locations[FindLocation(chr.location)].box3.items.pistolstonebasket_B = 5;
 			locations[FindLocation(chr.location)].box1.items.pistolstonebasket_R = 4;
+		}
+
+		if(_location.id=="BB_careen_blockhouse")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.medical1 = 2;
+			locations[FindLocation(chr.location)].box1.items.medical2 = 1;
+			locations[FindLocation(chr.location)].box1.items.pistol3 = 1;
+		}
+
+		if(_location.id=="BB_careen_holdS")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.gunpowder = 1620;
+			locations[FindLocation(chr.location)].box1.items.pistolbullets = 500;
+			locations[FindLocation(chr.location)].box1.items.pistolgrapes = 380;
+			locations[FindLocation(chr.location)].box1.items.musketbullets = 946;
+		}
+
+		if(_location.id=="BB_careen_capmd_2")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.sextant = 1;
+			locations[FindLocation(chr.location)].box1.items.compass2 = 1;
+			locations[FindLocation(chr.location)].box1.items.pistol6 = 1;
+			locations[FindLocation(chr.location)].box2.items.potionrum = 2;
+			locations[FindLocation(chr.location)].box2.items.blade11 = 1;
+			locations[FindLocation(chr.location)].box3.items.map = 1;
+			
+			locations[FindLocation(chr.location)].box5.items.blade4 = 163;
+			locations[FindLocation(chr.location)].box5.items.blade1 = 12;
+			locations[FindLocation(chr.location)].box6.items.piratespistol = 58;
+			locations[FindLocation(chr.location)].box7.items.pistol5 = 12;
+			locations[FindLocation(chr.location)].box7.items.pistolmket = 20;
+			locations[FindLocation(chr.location)].box8.items.pistolgrenade = 10;
+			locations[FindLocation(chr.location)].box8.items.pistolstink = 10;
+		}
+
+		if(_location.id=="BB_careen_capsm")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.tobacco = 2;
 		}
 
 //		if(_location.id=="Muelle04_HouseInsideR6") locations[FindLocation(chr.location)].box2.items.pistol62 = 1;

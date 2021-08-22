@@ -1,0 +1,17 @@
+title=Mi primer barco
+text.t1=Me han transferido al 'Indefatigable', al mando del capitán Pellew debido al asunto de Clayton. Por suerte, Archie también ha sido transferido. 
+text.t2=He tenido otro encontronazo con Jack Simpson. Tengo que tener cuidado con él. El capitán me ha dejado al mando del barco con órdenes de poner rumbo a #sCharlestown#, en la isla de #sisland_Quebradas Costillas#. El rumbo a seguir es al este por el sur.
+text.t3=Hemos arribado a #sCharlestown#. Ahora tengo que dirigir las reparaciones del barco. también necesitamos reponer pólvora.
+text.t4=El capitán nos ha informado de que nuestras órdenes son bloquear a los barcos franceses en #sisland_Falaise de Fleur#. En particular, debemos encontrar al 'Téméraire'. El rumbo a seguir es oeste desde aquí hasta que dejemos atrás #sisland_Guadeloupe#, después oeste suroeste hasta #sisland_Falaise de Fleur#.
+text.t5=Hemos hundido al 'Téméraire'. Nuestras órdenes ahora son navegar rumbo a #sCharlestown#.
+text.t6=Se me ha ordenado asistir a una reunión con el capitán Sawyer en la taberna.
+text.t7=Debemos conducir el barco a #sGreenford# para recoger a algunos oficiales. Recogeremos al capitán cuando volvamos.
+text.t8=Después de un desagradable viaje desde Inglaterra a bordo del 'Justinian', con el mareo y los abusos constantes de Simpson, hemos llegado al Caribe. Por desgracia, debo permanecer a bordo del 'Justinian', en la guardia de Simpson.
+text.t9=Kennedy, Clayton y yo debemos ir a recibir nuestras instrucciones al Cuartel General Naval. Se encuentra aquí, en la ciudad principal. 
+text.t10=Otro ataque de Simpson sin provocación. Voy a desafiarlo a un duelo. Tengo que elegir el momento adecuado para que no pueda escaparse.
+text.t11=He recogido a los oficiales. Ahora puedo regresar a #sCharlestown#.
+text.t12=¡Clayton está muerto! Yo había desafiado a Simpson a un duelo, pero Clayton me dejó inconsciente y ocupó mi lugar, y ahora ha muerto. Simpson va diciendo por ahí que los dos lo atacamos, pero miente. Tengo que ser paciente. Ya llegará mi turno. Mientras tanto, navegaremos hacia #sRedmond#, en #sisland_Redmond#.
+text.t13=¡Oh, cielos! Esta mañana me he puesto enfermo otra vez, así que llego tarde a una reunión en la Academia Naval. Será mejor que la encuentre rápido.
+text.t14=Debemos ir al astillero para instalar en el barco cañones de mayor calibre.
+text.t15=Los cañones grandes ya estarán instalados cuando tengamos que hacernos a la mar. Ahora debemos poner rumbo a Anse Casse Bois, en #sisland_Guadeloupe#, donde desembarcaremos suministros para los agentes que tenemos allí.
+

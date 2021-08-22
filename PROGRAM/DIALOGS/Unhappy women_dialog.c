@@ -46,7 +46,8 @@ void ProcessDialogEvent()
 				link.l1.go = "exit";
 				pchar.quest.ANIMISTS.over = "yes";
 			}
-			if (CheckQuestAttribute("ANIMISTS", "completed") && npchar.quest.ANIMISTS != "completed")
+//			if (CheckQuestAttribute("ANIMISTS", "completed") && npchar.quest.ANIMISTS != "completed")
+			if (CheckQuestAttribute("ANIMISTS", "completed") && GetAttribute(NPChar, "quest.ANIMISTS") != "completed")
 			{
 				Dialog.snd = "voice\UNWO\UNWO003";
 				dialog.text = DLG_TEXT[5];

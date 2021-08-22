@@ -1,0 +1,18 @@
+string DLG_TEXT[16] = {
+"!Que casualidad verle aqui, capitan!",
+"Que pequeno es el mundo, ?no?",
+"!Hola! Yo soy",
+". Tienes algo que quiero: una calavera de cristal ambar, para ser precisos. Entregamelo, por favor",
+"Yo soy",
+"y esto es",
+". Acabamos de matar a una banda, presumiblemente la tuya. Entonces, ?por que te dariamos el craneo ahora?",
+"Porque tengo un canon afuera. La tripulacion tiene ordenes de que si no salgo, ileso, llevando la calavera de ambar, deben derribar esta cueva sobre sus cabezas. Luego excavaremos la cueva y tomaremos el craneo de sus cuerpos destrozados",
+"Y se supone que debemos tomarte la palabra de que tienes un canon?",
+"Son luchadores competentes. Como dijiste, derrotaste a mi grupo de busqueda. ?Estaria aqui sola si no tuviera ese seguro?",
+"Muy bien, digamos que te creemos. ?Como sabemos que no dispararas en cuanto salgas de la cueva?",
+"Dinero, querida persona. Los disparos de canon no son baratos. Ademas, hay mucha tierra sin usar por ahi. Si las autoridades de #snationdesc# no quieren explotarlo, tal vez yo pueda.",
+"Puntos justos",
+"Una sabia decision. Ahora sea sabio de nuevo y no trate de salir de la cueva por lo menos durante 10 minutos. Adios.",
+"Hasta que nos volvamos a ver, Capitan",
+" Aqui esta el craneo",
+}

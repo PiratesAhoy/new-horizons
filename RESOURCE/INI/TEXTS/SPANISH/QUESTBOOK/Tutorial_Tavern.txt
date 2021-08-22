@@ -1,0 +1,3 @@
+title=Tutorial - Hire some crew at the tavern
+text.t1=Por desgracia, hemos perdido algunos marineros en combate. Debo encontrar una taberna para contratar nuevos tripulantes antes de zarpar.
+text.t2=Asunto arregaldo.

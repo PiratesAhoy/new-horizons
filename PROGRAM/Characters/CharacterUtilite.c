@@ -306,7 +306,7 @@ int GetSquadronGoods(ref _refCharacter,int _Goods)
 		if(cn!=-1)
 		{
 			chref = GetCharacter(cn);
-			if (IsTrader(chref)) continue; // KK
+			if (IsTrader(chref) && _Goods != GOOD_WHEAT && _Goods != GOOD_RUM) continue; // KK, modified by GR to allow food and rum to be included
 			if( GetRemovable(chref) || _Goods == GOOD_WHEAT || _Goods == GOOD_RUM) // LDH 13Oct06 fix for quest ships
 			{
 				retVal = retVal + GetCargoGoods(chref,_Goods);
@@ -357,6 +357,7 @@ bool AddCharacterGoods(ref _refCharacter,int _Goods,int _Quantity)
 		if (cn < 0) continue;
 		ch = GetCharacter(cn);
 	//	if (IsTrader(ch)) continue; // KK - PB: Quest traders need cargo too
+		if (i > 0 && !GetRemovable(ch)) continue;	// GR: don't add cargo to a locked companion
 		freeQuantity = GetGoodQuantityByWeight( _Goods, GetCargoFreeSpace(ch) );
 		if(freeQuantity>=_Quantity)
 		{
@@ -401,6 +402,7 @@ int RemoveCharacterGoods(ref _refCharacter,int _Goods,int _Quantity)
 		if(cn!=-1)
 		{
 			if (IsTrader(GetCharacter(cn))) continue; // KK
+			if (i > 0 && !GetRemovable(GetCharacter(cn))) continue; // GR: don't take goods from locked companion
 			curQuantity = sti( Characters[cn].Ship.Cargo.Goods.(goodsName) );
 			if(curQuantity>=_Quantity)
 			{
@@ -843,10 +845,25 @@ string GetCharacterOfficerType(ref _refCharacter)
 int GetWoundedHealedPerDay(ref _refCharacter)
 {
 	int healing_rate = HEALED_PER_DAY;
-	if(CharacterHasOfficerType(_refCharacter, OFFIC_TYPE_DOCTOR))
-		healing_rate = healing_rate + CharacterGetOfficerSkill(_refCharacter, OFFIC_TYPE_DOCTOR, "defence");
 	if(GetCargoGoods(_refCharacter, GOOD_TREATMENT) > 0)
 		healing_rate = healing_rate + HEALED_WITH_MEDS;
+	if(CharacterHasOfficerType(_refCharacter, OFFIC_TYPE_DOCTOR))
+	{
+		healing_rate = healing_rate + CharacterGetOfficerSkill(_refCharacter, OFFIC_TYPE_DOCTOR, "defence");
+		if(CheckCharacterPerk(_refCharacter, "AdvancedFirstAid"))
+		{
+			healing_rate = healing_rate + 2;
+			trace("2 more healed due to Advanced First Aid");
+		}
+		else
+		{
+			if(CheckCharacterPerk(_refCharacter, "BasicFirstAid"))
+			{
+				healing_rate = healing_rate + 1;
+				trace("1 more healed due to Basic First Aid");
+			}
+		}
+	}
 	return makeint(0.5 * healing_rate + rand(healing_rate));
 }
 
@@ -855,9 +872,14 @@ int GetWoundedKilledPerDay(ref _refCharacter)
 	int death_rate = KILLED_PER_DAY;
 	if(CharacterHasOfficerType(_refCharacter, OFFIC_TYPE_DOCTOR))
 		death_rate = death_rate - CharacterGetOfficerSkill(_refCharacter, OFFIC_TYPE_DOCTOR, "defence");
+
+	if (GetOfficersPerkUsing(_refCharacter, "BasicFirstAid")) death_rate = death_rate - 2;
+	if (GetOfficersPerkUsing(_refCharacter, "AdvancedFirstAid")) death_rate = death_rate - 2;
+
 	if(GetCargoGoods(_refCharacter, GOOD_TREATMENT) > 0)
 		death_rate = death_rate - HEALED_WITH_MEDS;
-	return makeint(0.5 * death_rate + rand(death_rate));
+	if(death_rate <= 0) return 0;
+	else return makeint(0.5 * death_rate + rand(death_rate));
 }
 
 bool CharacterHasOfficerType(ref _refCharacter, string OfficerType)
@@ -1134,7 +1156,7 @@ string GetCrewShareName(float csr)
 }
 
 // DIVIDE THE PLUNDER
-void DividePlunder(ref PChar)
+void DividePlunder(ref PChar, bool bNewExp)
 {
 	int cn,j,q;
 	ref chref,chref2;
@@ -1186,13 +1208,16 @@ void DividePlunder(ref PChar)
 	pchar.money = makeint(makefloat(GetCharacterMoney(PChar)) * LEFTOVER_SHARE);
 	SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * stf(PChar.Crewstatus.lastcsr) * (1.0 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/5.0));
 	// new to reset ship goods qtys, repair, etc. NK 05-04-24
-	for(q = 0; q < COMPANION_MAX; q++)
+	if(bNewExp)	// GR: Only repair and restock ship if starting a new expedition
 	{
-		cn = GetCompanionIndex(&PChar,q);
-		if(cn!=-1)
+		for(q = 0; q < COMPANION_MAX; q++)
 		{
-			chref = GetCharacter(cn);
-			ResetShip(&chref)
+			cn = GetCompanionIndex(&PChar,q);
+			if(cn!=-1)
+			{
+				chref = GetCharacter(cn);
+				ResetShip(&chref)
+			}
 		}
 	}
 	// NK <--
@@ -1592,9 +1617,29 @@ int RemovePassenger(ref _refCharacter,ref _refPassenger)
 	RemoveOfficersIndex(_refCharacter,sti(_refPassenger.index));
 	int PsgQuantity = GetPassengersQuantity(_refCharacter);
 	int psgNum = GetPassengerNumber(_refCharacter,sti(_refPassenger.index));
+	aref tmpRef;
+
+	if(psgNum==-1)	// GR: if actual _refPassenger not found, see if a prisoner clone with the same name exists
+	{
+trace("RemovePassenger: Actual passenger '" + GetMySimpleName(_refPassenger) + "' with model '" + GetAttribute(_refPassenger,"model") + "' not found, searching for prisoner clone");
+		int cn;
+		ref cr;
+		for(i=0; i<PsgQuantity; i++)
+		{
+			cn = GetPassenger(_refCharacter,i);
+			if(cn==-1) break;
+			cr = GetCharacter(cn);
+			if(HasSubStr(GetAttribute(cr,"id"), "Enc_CabinCaptain") && GetMySimpleName(cr) == GetMySimpleName(_refPassenger) && GetAttribute(cr,"model") == GetAttribute(_refPassenger,"model"))
+			{
+				psgNum = i;
+				if (CheckAttribute(cr, "passenger")) DeleteAttribute(cr, "passenger");
+				break;
+			}
+		}
+	}
+
 	if(psgNum==-1) return PsgQuantity;
 
-	aref tmpRef;
 	makearef(tmpRef,_refCharacter.Fellows.Passengers);
 	string inPsgAttrName,outPsgAttrName;
 	for(i=(psgNum+1); i<PsgQuantity; i++)
@@ -2463,7 +2508,11 @@ int Promote(ref char, ref gov, int iNation)
 {
 	bool InTutDeck = false;
 	if (GetAttribute(char, "location") == "Tutorial_Deck") InTutDeck = true;
-	if (!InTutDeck) ChangeCharacterReputation(char, 5); //Add some reputation gain -Levis
+	if (!InTutDeck)
+	{
+		if(iNation == PIRATE && GetCharacterReputation(char) <= REPUTATION_RASCAL) ChangeCharacterReputation(char, -5); // Evil pirates lose reputation! - GR
+		else ChangeCharacterReputation(char, 5); //Add some reputation gain -Levis
+	}
 	string sNation = iNation;
 	int curRank = GetRank(char, iNation);
 	if(curRank >= sti(Nations[iNation].Ranks.Quantity)) return false;
@@ -2471,7 +2520,8 @@ int Promote(ref char, ref gov, int iNation)
 	curRank++;
 	SetRank(char, iNation, curRank); // PB: was	char.nations.(sNation).Rank = curRank;
 	GivePromotionReward(iNation); // PB
-	bool NoLandGiven = ProfessionalNavyNation() != UNKNOWN_NATION && curRank < 7;
+//	bool NoLandGiven = ProfessionalNavyNation() != UNKNOWN_NATION && curRank < 7;
+	bool NoLandGiven = curRank < 7;	// GR: no land for navy OR privateers until you are landed gentry
 	if(NoLandGiven || iNation == PIRATE)
 	{
 		if (!InTutDeck) WriteNewLogEntry("Promoted to "+GetNationDescByType(iNation)+" "+GetRankNameDirect(char, iNation, currank),"My dedication and faithful service for "+GetNationNameByType(iNation)+" have earned me the rank of "+GetRankNameDirect(char, iNation, currank)+".","Personal",true);
@@ -2594,6 +2644,12 @@ bool LeaveService(ref char, int iNation, bool override)
 		{
 			RemoveLandFromCharacterNation(&char, iNation); // KK
 			curRank = 0;
+
+			if (sti(GetAttribute(char, "knighted")) == iNation) // GR: if you have an honorific prefix from this nation, lose it
+			{
+				DeleteAttribute(char, "knighted");
+				DeleteAttribute(char, "Title");
+			}
 		}
 // KK -->
 		makearef(arTmp, char.nations.(sNation));
@@ -2986,7 +3042,7 @@ bool TradeCheck(ref char, ref merch, bool first)
 	int rep = sti(char.reputation);
 	float rel = 0.0;
 	// PURSEON -->
-	if(first)
+	if(first || !CheckAttribute(merch, "traderelation"))
 	{
 		rel = GetRMRelation(GetMainCharacter(), mNation);
 		if(GetNationRelation(pNation, mNation) < RELATION_ENEMY && pNation != PERSONAL_NATION)		// your flag is NOT hostile to the merchant
@@ -3363,7 +3419,7 @@ bool TakeNItems(ref _refCharacter,string itemName, int n)
 			string strTemp = GetSymbol(itemName, strLen(itemName)-1);
 			if (strTemp == "+" || strTemp == "-")
 			{
-				itemName = strLeft(itemName, strLen(itemName-2));
+				itemName = strLeft(itemName, strLen(itemName)-2);
 				rc = Items_FindItem(itemName,&arItm);
 				if (rc < 0)
 					trace("WARNING!!! Item id = "+itemName+" not implemented");
@@ -3496,6 +3552,11 @@ int GetCharacterCurrentIsland(ref _refCharacter)
 	if (curLoc == "" && CheckAttribute(_refCharacter, "location"))		curLoc = _refCharacter.location;
 	// PB: Make this work for companion ships while ashore too <--
 	int locidx = FindLocation(curLoc);
+
+	if (GetIslandIdxByLocationIdx(locidx) < 0 && IsCompanion(_refCharacter))	// GR: if we can't work out a companion's island, it's probably the same as yours
+	{
+		locidx = FindLocation(Characters[GetMainCharacterIndex()].location);
+	}
 	if (locidx < 0) return -1;
 	return GetIslandIdxByLocationIdx(locidx);
 // <-- KK
@@ -3602,7 +3663,8 @@ float GetCharPriceMod(ref ch, int priceType, bool summ, bool bShipyard)
 				if (bShipyard)		skillModify = SHIPYARD_SHIP_SELL_MULT;															// skills don't affect shipyard transactions
 				else				skillModify = makefloat(((SHIPYARD_PIRATEDSHIP_SELL_MULT+SHIPYARD_BOUGHTSHIP_SELL_MULT)/2));	// 50% commission
 			}*/
-			if (!bShipyard && HasMerchantPassport(ch))	// PB: Honest merchants don't pay commission outside the shipyard
+//			if (!bShipyard && HasMerchantPassport(ch))	// PB: Honest merchants don't pay commission outside the shipyard
+			if (!bShipyard && HasMerchantPassport(ch) && !IsInAnyService())	// GR: navy and privateers don't get the merchant trade benefit
 			{
 				bCheckSkills = false;
 				skillModify  = 1.0;																									// skills don't affect store transactions
@@ -3787,7 +3849,10 @@ string FindCharacterItemByGroup(ref chref, string groupID)
 			if( !CheckAttribute(refItm,"chargeQ") ) { continue; }// invalid gun
 			if( sti(refItm.chargeQ) >  1 && !IsCharacterPerkOn(chref,"Gunman") ) { continue; }// no requisite
 			if( sti(refItm.chargeQ) >= 4 && !IsCharacterPerkOn(chref,"GunProfessional") ) { continue; }// no requisite
-			if( sti(refItm.chargeQ) >= 6 && !IsCharacterPerkOn(chref,"GunFighter") ) { continue; }//JRH BB6
+			if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)
+			{
+				if( sti(refItm.chargeQ) >= 6 && !IsCharacterPerkOn(chref,"GunFighter") ) { continue; }//JRH BB6
+			}
 		}
 
 		// now we compare by 'n', but using different arrays to do it
@@ -4477,8 +4542,10 @@ bool IsTrader(ref _refCharacter)
 
 	// PB: Just check single character officer type -->
 	if (GetAttribute(_refCharacter, "quest.officertype") == OFFIC_TYPE_TRADER)	return true;
-	else																		return false;
+//	else										return false;
 	// PB: Just check single character officer type <--
+	// GR: this doesn't work on "Quest trader" if levelling has turned him into a different captain
+	if (strlower(GetAttribute(_refCharacter, "id")) == "quest trader")		return true;
 /*
 	// PB: What was this supposed to be doing?
 	ref mc = GetMainCharacter();
@@ -4486,8 +4553,8 @@ bool IsTrader(ref _refCharacter)
 	{
 		if (GetCompanionIndex(mc, i) == findIdx && CheckAttribute(&Characters[findIdx], "quest.officertype") == true && Characters[findIdx].quest.officertype == OFFIC_TYPE_TRADER) return true;
 	}
-	return false;
 */
+	return false;
 }
 
 int GetShipMinClassForCharacter(ref _refCharacter)

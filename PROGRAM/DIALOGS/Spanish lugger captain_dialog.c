@@ -57,7 +57,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "new allies":
-			dialog.text = your_rank_name + DLG_TEXT[7];
+			Preprocessor_Add("rank", your_rank_name);
+			dialog.text = DLG_TEXT[7];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "too good";
 		break;
@@ -93,8 +94,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "adios":
+			Preprocessor_Add("name", GetMyLastName(CharacterFromID(PChar.quest.Hornblower_officer)));
 			dialog.text = "";
-			link.l1 = GetMyLastName(CharacterFromID(PChar.quest.Hornblower_officer)) + DLG_TEXT[20];
+			link.l1 = DLG_TEXT[20];
 			link.l1.go = "exit";
 		break;
 	}

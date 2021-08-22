@@ -18,6 +18,9 @@ void ProcessDialogEvent()
 	makearef(Link, Dialog.Links);
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
+
+	bool governor_smuggling = false;
+	if (CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling") && PChar.quest.smuggling_guild.governor_smuggling != "report_made" && PChar.quest.smuggling_guild.governor_smuggling != "report_handed_in" && GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.island") == FindIslandByLocation(PChar.location)) governor_smuggling = true;	// GR: you are smuggling for a governor and are on the right island
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -28,14 +31,27 @@ void ProcessDialogEvent()
 		case "Finish_exit":
 			AddPartyExpChar(pchar, SKILL_COMMERCE, 50*makeint(PChar.rank));
 			AddPartyExpChar(pchar, SKILL_SNEAK, 10*makeint(PChar.rank));
-		    PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneyToCharacter(Pchar, makeint(Pchar.quest.Contraband.sum));
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(Pchar, sti(PChar.quest.Contraband.sum));
+			PChar.quest.smuggling_guild.last_deal = sti(PChar.quest.Contraband.sum);
 
-			d.Text = DLG_TEXT[53];
-			Link.l1 = DLG_TEXT[54];
-			Link.l1.go = "Leave_goods";
-			Link.l2 = DLG_TEXT[55];
-			Link.l2.go = "Exit_betray";			
+			if (governor_smuggling)
+			{
+				PChar.quest.smuggling_guild.governor_smuggling.money = PChar.quest.Contraband.sum;
+				d.Text = DLG_TEXT[53];
+				Link.l1 = DLG_TEXT[54];
+				Link.l1.go = "Leave_goods_governor";
+				Link.l2 = DLG_TEXT[70];
+				Link.l2.go = "Arrest_smugglers";
+			}
+			else
+			{
+				d.Text = DLG_TEXT[53];
+				Link.l1 = DLG_TEXT[54];
+				Link.l1.go = "Leave_goods";
+				Link.l2 = DLG_TEXT[55];
+				Link.l2.go = "Exit_betray";
+			}
 		break;
 
 		case "No_ship_1":
@@ -85,6 +101,17 @@ void ProcessDialogEvent()
 			Link.l2.go = "Buy";
 		break;
 
+		case "Leave_goods_governor":
+			PChar.quest.smuggling_guild.governor_smuggling.goods_left = true;
+			total_smuggle = sti(PChar.quest.smuggling_guild.governor_smuggling.amount);
+			RemoveCharacterGoods(PChar, sti(PChar.quest.smuggling_guild.governor_smuggling.goods), sti(PChar.quest.smuggling_guild.governor_smuggling.amount));
+			d.Text = DLG_TEXT[56];
+			Link.l1 = DLG_TEXT[57];
+			Link.l1.go = "Exit_Complete";
+			Link.l2 = DLG_TEXT[58];
+			Link.l2.go = "Buy";
+		break;
+
 
 		case "Buy":
 			d.Text = DLG_TEXT[59];
@@ -94,10 +121,17 @@ void ProcessDialogEvent()
 			Link.l2.go = "Exit_Complete";				
 		break;
 
+		case "Arrest_smugglers":
+			Preprocessor_Add("person", XI_ConvertString(GetMyPronounObj(PChar)));
+			d.Text = DLG_TEXT[71];
+			Link.l1 = DLG_TEXT[72];
+			Link.l1.go = "Exit_arrest";
+		break;
+
 		case "Exit_buy":
 			//Levis coastguard will always try to get you -->
 			AddQuestRecord(questname, 5);
-			AddDialogExitQuest("Made First Smuggling Report");
+//			AddDialogExitQuest("Made First Smuggling Report");
 			/*if(Rand(100)<=chance_get_caught)
 			{
 				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"Contraband transfer was interrupted by Coastal Guards"));
@@ -181,6 +215,39 @@ void ProcessDialogEvent()
 			LAi_group_FightGroups(LAI_GROUP_PLAYER, "Smugglers", true);
 		break;
 		
+		case "Exit_arrest":
+			//Levis coastguard will always try to get you -->
+
+			//Coastguard will always try to get you.
+			ChangeSmugglerLiking(PChar, -10); //Add liking - not much, no survivors but they know something went wrong
+			Diag.CurrentNode = Diag.TempNode;
+			NPChar.quest.meeting = NPC_Meeting;
+			DialogExit();
+
+			DeleteAttribute(Pchar, "quest.Contraband.active");
+			DeleteAttribute(Pchar, "quest.Contraband.counter");
+			DeleteAttribute(Pchar, "quest.Contraband.price1");
+			DeleteAttribute(Pchar, "quest.Contraband.price2");
+			DeleteAttribute(Pchar, "quest.Contraband.price3");
+			DeleteAttribute(Pchar, "quest.Contraband.price4");
+			DeleteAttribute(Pchar, "quest.Contraband.goodsIDX1");
+			DeleteAttribute(Pchar, "quest.Contraband.goodsIDX2");
+			DeleteAttribute(Pchar, "quest.Contraband.goodsIDX3");
+			DeleteAttribute(Pchar, "quest.Contraband.goodsIDX4");
+			DeleteAttribute(Pchar, "quest.Contraband.sum");
+			DeleteAttribute(Pchar, "quest.Contraband.Skip1");
+			DeleteAttribute(Pchar, "quest.Contraband.Skip2");
+			DeleteAttribute(Pchar, "quest.Contraband.Skip3");
+			DeleteAttribute(Pchar, "quest.Contraband.Skip4");
+
+			Pchar.quest.Rand_Smuggling.over = "yes";
+			RemoveSmugglersFromShore();
+
+			AddQuestRecord("governor_smuggling", 4);
+			LAi_group_FightGroups(LAI_GROUP_PLAYER, "Smugglers", true);
+			AddDialogExitQuest("arrest_smugglers_fight");
+		break;
+		
 		case "Exit_betray":
 			//Levis coastguard will always try to get you -->
 			AddQuestRecord(questname, 9);
@@ -261,7 +328,7 @@ void ProcessDialogEvent()
 		
 		case "Exit_Complete":
 			//Levis coastguard will always try to get you -->
-			AddQuestRecord(questname, 5);
+			if (!governor_smuggling) AddQuestRecord(questname, 5);
 			/*if(Rand(100)<=chance_get_caught)
 			{
 				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"Contraband transfer was interrupted by Coastal Guards"));
@@ -407,79 +474,110 @@ void ProcessDialogEvent()
 			//Levis let liking influence price -->
 			price_multiplier = price_multiplier*(1+((CheckSmugglerLiking(Pchar)-50)*SMUGGLING_PRICE_INC_PER_LIKE));
 			//<-- Levis let liking influence price
-			shit = FindFirstContrabandGoods(Pchar);
-			if(shit != -1) 
+
+			if (governor_smuggling)
 			{
-				Pchar.quest.Contraband.goodsIDX1 = shit;
-				Pchar.quest.Contraband.price1 = makeint(GetCurrentIslandGoodsPrice(shit)*price_multiplier); //changed 1.5 to price_multiplier -Levis
-				Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) + 1;
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"FIRST CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(Pchar.quest.Contraband.goodsIDX1)].name);
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"FIRST CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"CONTRABAND ONBOARD COUNTER HAS VALUE:") + " " + Pchar.quest.Contraband.Counter); 
-			}
-			shit = FindNextContrabandGoods(Pchar);
-			if(shit != -1) 
-			{
-				Pchar.quest.Contraband.goodsIDX2 = shit;
-				Pchar.quest.Contraband.price2 = makeint(GetCurrentIslandGoodsPrice(shit)*price_multiplier); //changed 1.5 to price_multiplier -Levis
-				Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) + 1;
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(Pchar.quest.Contraband.goodsIDX1)].name);
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"CONTRABAND ONBOARD COUNTER HAS VALUE:") + " " + Pchar.quest.Contraband.Counter); 
-			}
-			shit = FindNextContrabandGoods(Pchar);
-			if(shit != -1) 
-			{
-				Pchar.quest.Contraband.goodsIDX3 = shit;
-				Pchar.quest.Contraband.price3 = makeint(GetCurrentIslandGoodsPrice(shit)*price_multiplier); //changed 1.5 to price_multiplier -Levis
-				Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) + 1;		
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(Pchar.quest.Contraband.goodsIDX1)].name);
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"CONTRABAND ONBOARD COUNTER HAS VALUE:") + " " + Pchar.quest.Contraband.Counter); 
-			}
-			shit = FindNextContrabandGoods(Pchar);
-			if(shit != -1) 
-			{
-				Pchar.quest.Contraband.goodsIDX4 = shit;
-				Pchar.quest.Contraband.price4 = makeint(GetCurrentIslandGoodsPrice(shit)*price_multiplier); //changed 1.5 to price_multiplier -Levis
-				Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) + 1;
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(Pchar.quest.Contraband.goodsIDX1)].name);
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"CONTRABAND ONBOARD COUNTER HAS VALUE:") + " " + Pchar.quest.Contraband.Counter); 
-			}
-			if(FindFirstContrabandGoods(Pchar) != -1)
-			{
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"QUANTITY OF FIRST CONTRABAND GOOD ONBOARD:") + " " + GetCargoGoods(Pchar,makeint(Pchar.quest.Contraband.goodsIDX1)));
-				if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"INDEX OF FIRST CONTRABAND IS:") + " " + Pchar.quest.Contraband.goodsIDX1);
-				Pchar.quest.Contraband.Sum = makeint(Pchar.quest.Contraband.price1)*GetSquadronGoods(Pchar,makeint(Pchar.quest.Contraband.goodsIDX1));
-				Dialog.snd = "voice\SMSH\SMSH009";
-				d.Text = DLG_TEXT[21] + GetSquadronGoods(Pchar,FindFirstContrabandGoods(Pchar)) + " " + XI_ConvertString(Goods[makeint(Pchar.quest.Contraband.goodsIDX1)].name) + DLG_TEXT[22] + Pchar.quest.Contraband.price1 + DLG_TEXT[23] + pchar.quest.contraband.sum + DLG_TEXT[24];
-				Link.l1 = DLG_TEXT[25];
-				setContrabandCurPrice(&Islands[GetCharacterCurrentIsland(Pchar)], sti(Pchar.quest.Contraband.goodsIDX1), sti(Pchar.quest.Contraband.price1)) //Levis Traderbook Addon
-				Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) - 1; 
-				if(Pchar.quest.Contraband.Counter != "0")
+				if (GetSquadronGoods(PChar, sti(PChar.quest.smuggling_guild.governor_smuggling.goods)) >= sti(PChar.quest.smuggling_guild.governor_smuggling.amount))
 				{
-					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"THERE ARE SOME MORE CONTRABAND GOODS"));
-					Link.l1.go = "SecondGoods";
-					Link.l2 = DLG_TEXT[62];
-					Link.l2.go = "Skip1";					
+					Pchar.quest.Contraband.price1 = makeint(GetCurrentIslandGoodsPrice(sti(PChar.quest.smuggling_guild.governor_smuggling.goods))*price_multiplier); //changed 1.5 to price_multiplier -Levis
+
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"FIRST CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(PChar.quest.smuggling_guild.governor_smuggling.goods)].name);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"FIRST CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"QUANTITY OF FIRST CONTRABAND GOOD ONBOARD:") + " " + PChar.quest.smuggling_guild.governor_smuggling.amount);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"INDEX OF FIRST CONTRABAND IS:") + " " + PChar.quest.smuggling_guild.governor_smuggling.goods);
+
+					Pchar.quest.Contraband.Sum = makeint(Pchar.quest.Contraband.price1)*sti(PChar.quest.smuggling_guild.governor_smuggling.amount);
+					Dialog.snd = "voice\SMSH\SMSH009";
+					d.Text = DLG_TEXT[21] + PChar.quest.smuggling_guild.governor_smuggling.amount + " " + XI_ConvertString(Goods[makeint(PChar.quest.smuggling_guild.governor_smuggling.goods)].name) + DLG_TEXT[22] + Pchar.quest.Contraband.price1 + DLG_TEXT[23] + pchar.quest.contraband.sum + DLG_TEXT[24];
+					Link.l1 = DLG_TEXT[25];
+					setContrabandCurPrice(&Islands[GetCharacterCurrentIsland(Pchar)], sti(PChar.quest.smuggling_guild.governor_smuggling.goods), sti(Pchar.quest.Contraband.price1)) //Levis Traderbook Addon
+					Link.l1.go = "Finish";
 				}
 				else
 				{
-					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"ONLY ONE CONTRABAND GOOD IS AVAILABLE"));
-					Link.l1.go = "Finish";
+					Preprocessor_Add("amount", PChar.quest.smuggling_guild.governor_smuggling.amount);
+					Preprocessor_Add("cargo", Goods[sti(PChar.quest.smuggling_guild.governor_smuggling.goods)].name);
+					Dialog.snd = "voice\SMSH\SMSH010";
+					d.Text = DLG_TEXT[73];
+					Link.l1 = DLG_TEXT[28];
+					Link.l1.go = "NoGoods";				
 				}
-				Link.l3 = DLG_TEXT[26];
-				Link.l3.go = "Cancellation";
 			}
 			else
 			{
-				Dialog.snd = "voice\SMSH\SMSH010";
-				d.Text = DLG_TEXT[27];
-				Link.l1 = DLG_TEXT[28];
-				Link.l1.go = "NoGoods";				
-			}
-			
+				shit = FindFirstContrabandGoods(Pchar);
+				if(shit != -1) 
+				{
+					Pchar.quest.Contraband.goodsIDX1 = shit;
+					Pchar.quest.Contraband.price1 = makeint(GetCurrentIslandGoodsPrice(shit)*price_multiplier); //changed 1.5 to price_multiplier -Levis
+					Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) + 1;
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"FIRST CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(Pchar.quest.Contraband.goodsIDX1)].name);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"FIRST CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"CONTRABAND ONBOARD COUNTER HAS VALUE:") + " " + Pchar.quest.Contraband.Counter); 
+				}
+				shit = FindNextContrabandGoods(Pchar);
+				if(shit != -1) 
+				{
+					Pchar.quest.Contraband.goodsIDX2 = shit;
+					Pchar.quest.Contraband.price2 = makeint(GetCurrentIslandGoodsPrice(shit)*price_multiplier); //changed 1.5 to price_multiplier -Levis
+					Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) + 1;
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(Pchar.quest.Contraband.goodsIDX1)].name);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"CONTRABAND ONBOARD COUNTER HAS VALUE:") + " " + Pchar.quest.Contraband.Counter); 
+				}
+				shit = FindNextContrabandGoods(Pchar);
+				if(shit != -1) 
+				{
+					Pchar.quest.Contraband.goodsIDX3 = shit;
+					Pchar.quest.Contraband.price3 = makeint(GetCurrentIslandGoodsPrice(shit)*price_multiplier); //changed 1.5 to price_multiplier -Levis
+					Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) + 1;		
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(Pchar.quest.Contraband.goodsIDX1)].name);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"CONTRABAND ONBOARD COUNTER HAS VALUE:") + " " + Pchar.quest.Contraband.Counter); 
+				}
+				shit = FindNextContrabandGoods(Pchar);
+				if(shit != -1) 
+				{
+					Pchar.quest.Contraband.goodsIDX4 = shit;
+					Pchar.quest.Contraband.price4 = makeint(GetCurrentIslandGoodsPrice(shit)*price_multiplier); //changed 1.5 to price_multiplier -Levis
+					Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) + 1;
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD SELECTED TO TRADE IS:") + " " + goods[sti(Pchar.quest.Contraband.goodsIDX1)].name);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"NEXT CONTRABAND GOOD PRICE IS:") + " " + Pchar.quest.Contraband.price1);
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"CONTRABAND ONBOARD COUNTER HAS VALUE:") + " " + Pchar.quest.Contraband.Counter); 
+				}
+				if(FindFirstContrabandGoods(Pchar) != -1)
+				{
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"QUANTITY OF FIRST CONTRABAND GOOD ONBOARD:") + " " + GetCargoGoods(Pchar,makeint(Pchar.quest.Contraband.goodsIDX1)));
+					if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"INDEX OF FIRST CONTRABAND IS:") + " " + Pchar.quest.Contraband.goodsIDX1);
+					Pchar.quest.Contraband.Sum = makeint(Pchar.quest.Contraband.price1)*GetSquadronGoods(Pchar,makeint(Pchar.quest.Contraband.goodsIDX1));
+					Dialog.snd = "voice\SMSH\SMSH009";
+					d.Text = DLG_TEXT[21] + GetSquadronGoods(Pchar,FindFirstContrabandGoods(Pchar)) + " " + XI_ConvertString(Goods[makeint(Pchar.quest.Contraband.goodsIDX1)].name) + DLG_TEXT[22] + Pchar.quest.Contraband.price1 + DLG_TEXT[23] + pchar.quest.contraband.sum + DLG_TEXT[24];
+					Link.l1 = DLG_TEXT[25];
+					setContrabandCurPrice(&Islands[GetCharacterCurrentIsland(Pchar)], sti(Pchar.quest.Contraband.goodsIDX1), sti(Pchar.quest.Contraband.price1)) //Levis Traderbook Addon
+					Pchar.quest.Contraband.Counter = makeint(Pchar.quest.Contraband.Counter) - 1; 
+					if(Pchar.quest.Contraband.Counter != "0")
+					{
+						if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"THERE ARE SOME MORE CONTRABAND GOODS"));
+						Link.l1.go = "SecondGoods";
+						Link.l2 = DLG_TEXT[62];
+						Link.l2.go = "Skip1";					
+					}
+					else
+					{
+						if(DEBUG_SMUGGLING>2) trace(LanguageConvertString(tmpLangFileID,"ONLY ONE CONTRABAND GOOD IS AVAILABLE"));
+						Link.l1.go = "Finish";
+					}
+					Link.l3 = DLG_TEXT[26];
+					Link.l3.go = "Cancellation";
+				}
+				else
+				{
+					Dialog.snd = "voice\SMSH\SMSH010";
+					d.Text = DLG_TEXT[27];
+					Link.l1 = DLG_TEXT[28];
+					Link.l1.go = "NoGoods";				
+				}
+			}			
 		break;
 
 		case "SecondGoods":

@@ -1,0 +1,23 @@
+string DLG_TEXT[21] = {
+"Encontre este libro raro y pense que podrias saber que es.",
+"Dejame ver, #schild#. Hmmm... esto es muy especial! Creo que se lo que tienes aqui, mi #schild#, pero no me siento comodo hablando de esto contigo. ?Tal vez primero podrias mostrarme una senal de buena fe?",
+"Que dices si dono algo de dinero a la iglesia?",
+"Se que ya has dado mucho, pero hay una cosa mas que tengo que pedirte.",
+"Que es lo que necesitas?",
+"Como usted ha notado, el Caribe todavia esta lleno de todo tipo de cosas paganas. Algunas de las faltan que viven en las islas son poseidas por demonios. Asi que nuestros exorcistas tienen su trabajo para ellos. Pero no todos regresan a salvo a casa.",
+"Me preguntan que hacer un exorcismo?",
+"No, por supuesto que no mi #schild#. Hacer eso lleva anos de practica. Tengo algo mas simple para ti en mente. Requerimos una Santa Cruz para realizar un Exor habitable, pero nos hemos estado quedando sin ellos y tomara al menos unos meses mas antes de que llegue un nuevo suministro del Vaticano. Sin embargo, he visto que tambien se venden en los mercados y tiendas de todo el Caribe. Podrias traerme uno de esos?",
+"Eso No deberia ser un problema.",
+"Lo siento, pero pense que tenias un trabajo de verdad para mi. Bye!",
+"Oh, muchas gracias! Por favor devuelva la Cruz tan pronto como sea posible. Dios te bendiga en este viaje.",
+"Volvere antes de que te des cuenta!",
+"He traido el articulo que me pediste.",
+"Muchas gracias, esto realmente podria salvar la vida de la gente de aqui. Como recompensa especial, puedes tener este articulo. Debo admitir que no se lo que realmente hace. Uno de nuestros mejores exorcistas lo hizo despues de encontrar algunos dibujos en las bovedas del Vaticano. Dicen que es una invencion de alguien que vivio en Florencia hace muchos anos. Si quieres saber mas sobre este tema, es posible que pueda localizar a este exorcista personalmente.",
+"Donde podria encontrarlo?",
+"Fue visto por ultima vez en ",
+"asi que creo que deberias mirar alli. Normalmente puedes encontrarlo si buscas lo raro y peligroso ya que su trabajo es deshacerse de ellos. Puede que no aprecie que te di este articulo ya que fue hecho para el. Pero le haremos otro cuando lo necesite.",
+"Muchas gracias. Ciertamente buscare alli.",
+"Bueno, encontre un libro con cosas raras que le mostre a la iglesia. Todavia tienen que decirme que es esto.",
+"!Ah, ya se lo que es esto! Este libro contiene todo tipo de exorcismos. Parece que nuestro valiente Mister Winchester finalmente encontro a su rival. Por ahora tambien he descubierto lo que el articulo que tienes se supone que hacer. Puede anadir esto al arma que nuestro querido Senor Winchester llevaba. Esto deberia permitirte apuntar mejor con el. Espero que hayas encontrado su arma tambien, de lo contrario tal vez quieras volver y mirar un poco mas de cerca.",
+"Muchas gracias por la informacion."
+};

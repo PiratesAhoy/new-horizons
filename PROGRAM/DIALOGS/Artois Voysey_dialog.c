@@ -126,7 +126,7 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\ARVO\ARVO010";
 			dialog.text = DLG_TEXT[21];
 			link.l1 = DLG_TEXT[22];
-			if (GetNationRelation2MainCharacter(PORTUGAL) == RELATION_ENEMY)
+			if (GetNationRelation2MainCharacter(GetTownNation("Conceicao")) == RELATION_ENEMY)
 			{
 				link.l1.go = "continue7";
 			}

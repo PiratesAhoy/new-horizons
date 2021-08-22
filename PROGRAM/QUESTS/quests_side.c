@@ -2,12 +2,13 @@ void SideQuestComplete(string sQuestName)
 {
 	ref PChar, sld, NPChar, lcn;
 // KK -->
-	int iPassenger, cidx, i, j, indianid;
+	int iPassenger, cidx, i, j, n, indianid;
 	float locx, locy, locz, parx, pary, parz;
 	float x1,x2,y1,y2,z1,z2,x,y,z;
-	string homelocation, homegroup, homelocator, attr, locatorName, deck;
+	string homelocation, homegroup, homelocator, attr, locatorName, deck, shipname;
 // <-- KK
-
+	ref ch;
+	int limit;
 	PChar = GetMainCharacter();
 
 	switch(sQuestName)
@@ -138,31 +139,73 @@ void SideQuestComplete(string sQuestName)
 				pchar.quest.smuggling_guild.have_met = true;
 			}
 			ref gov_town = GetCurrentTown();
-			Preprocessor_AddQuestData("town", FindTownName(gov_town.id));
-//			if (!CheckAttribute(PChar,"QuestInfo.governor_smuggling")) 
-			SetQuestHeader("governor_smuggling");
-			AddQuestRecord("governor_smuggling", 1);
-			Preprocessor_Remove("town");
-			if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest"))
+			if (!CheckAttribute(PChar,"quest.smuggling_guild.governor_quest"))
 			{
-				pchar.quest.smuggling_guild.governor_quest = true;
-				pchar.quest.smuggling_guild.governor_quest.town = gov_town.id;
-				pchar.quest.smuggling_guild.governor_quest.nation = gov_town.nation;
+				PChar.quest.smuggling_guild.governor_quest = true;
+				PChar.quest.smuggling_guild.governor_quest.town = gov_town.id;
+				PChar.quest.smuggling_guild.governor_quest.nation = gov_town.nation;
 			}
+			NPChar = GetTownGovernor(gov_town.id);
 			PChar.quest.smuggling_guild.governor_smuggling = "accepted";
 			PChar.quest.smuggling_guild.governor_smuggling.town = gov_town.id;
 			PChar.quest.smuggling_guild.governor_smuggling.nation = gov_town.nation;
-			GiveItem2Character(pchar,"smuggling_papers");
+			PChar.quest.smuggling_guild.governor_smuggling.island = FindIslandByLocation(PChar.location);
+			PChar.quest.smuggling_guild.governor_smuggling.governor = GetTownGovernorID(gov_town.id);
+			PChar.quest.smuggling_guild.governor_smuggling.goods = NPChar.quest.smuggle.goods;
+			PChar.quest.smuggling_guild.governor_smuggling.amount = 300/sti(GetAttribute(Goods[sti(PChar.quest.smuggling_guild.governor_smuggling.goods)], "weight"));
+			GiveItem2Character(PChar,"smuggling_papers");
+			AddCharacterGoods(PChar, sti(PChar.quest.smuggling_guild.governor_smuggling.goods), sti(PChar.quest.smuggling_guild.governor_smuggling.amount));
+
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID(PChar.quest.smuggling_guild.governor_smuggling.governor)));
+			Preprocessor_AddQuestData("town", FindTownName(PChar.quest.smuggling_guild.governor_smuggling.town));
+			Preprocessor_AddQuestData("island", FindIslandName(PChar.quest.smuggling_guild.governor_smuggling.island));
+			Preprocessor_AddQuestData("amount", PChar.quest.smuggling_guild.governor_smuggling.amount);
+			Preprocessor_AddQuestData("cargo", Goods[sti(PChar.quest.smuggling_guild.governor_smuggling.goods)].name);
+//			if (!CheckAttribute(PChar,"QuestInfo.governor_smuggling")) 
+			SetQuestHeader("governor_smuggling");
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(NPChar)));
+			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(NPChar)));
+			Preprocessor_AddQuestData("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
+			Preprocessor_AddQuestData("pronoun1U", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(NPChar))));
+			AddQuestRecord("governor_smuggling", 1);
+			Preprocessor_Remove("pronoun1U");
+			Preprocessor_Remove("pronoun3");
+			Preprocessor_Remove("pronoun2");
+			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("cargo");
+			Preprocessor_Remove("amount");
+			Preprocessor_Remove("island");
+			Preprocessor_Remove("town");
+			Preprocessor_Remove("governor");
+
+			PChar.quest.governor_smuggling_time_up.win_condition.l1 = "Timer";
+			PChar.quest.governor_smuggling_time_up.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up.win_condition.l1.date.year = GetAddingDataYear(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up.win_condition = "governor_smuggling_time_up";
+		break;
+
+		case "governor_smuggling_time_up":
+			if(CheckCharacterItem(PChar,"smuggling_first_report")) TakeItemFromCharacter(PChar,"smuggling_first_report");
+			if(CheckCharacterItem(PChar,"smuggling_papers")) TakeItemFromCharacter(PChar,"smuggling_papers");	// GR: these documents are worthless now, so dump them
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID(PChar.quest.smuggling_guild.governor_smuggling.governor)));
+			Preprocessor_AddQuestData("nation", GetNationOfficialNameByType(sti(PChar.quest.smuggling_guild.governor_smuggling.nation)));
+			AddQuestRecord("governor_smuggling", 9);
+			CloseQuestHeader("governor_smuggling");
+			Preprocessor_Remove("nation");
+			Preprocessor_Remove("governor");
+			LeaveService(PChar, sti(PChar.quest.smuggling_guild.governor_smuggling.nation), true);
+			DeleteAttribute(PChar, "quest.smuggling_guild.governor_smuggling");
 		break;
 		
 		case "Smugglers Opium Discovery":
-			if(!CheckAttribute(pchar,"quest.smuggling_guild.have_met"))
+			if(!CheckAttribute(PChar,"quest.smuggling_guild.have_met"))
 			{
 				SetQuestHeader("smuggleguild");
 				AddQuestRecord("smuggleguild", 1);
-				pchar.quest.smuggling_guild.have_met = true;
+				PChar.quest.smuggling_guild.have_met = true;
 			}
-			if(!CheckAttribute(pchar,"quest.smuggling_guild.opium_explain"))
+			if(!CheckAttribute(PChar,"quest.smuggling_guild.opium_explain"))
 			{
 				if (!CheckAttribute(PChar,"QuestInfo.opium_smuggling")) SetQuestHeader("opium_smuggling");
 				AddQuestRecord("opium_smuggling", 1);
@@ -217,11 +260,41 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.opium_smuggling.Encountered_Opium_Guard = true;
 			AddQuestRecord("opium_smuggling", 5);
 		break;
+
+		case "arrest_smugglers_fight":
+			PChar.quest.arrest_smugglers_fight_over.win_condition.l1 = "NPC_Death";
+			PChar.quest.arrest_smugglers_fight_over.win_condition.l1.character = "Rand_Smug01";
+			PChar.quest.arrest_smugglers_fight_over.win_condition.l2 = "NPC_Death";
+			PChar.quest.arrest_smugglers_fight_over.win_condition.l2.character = "Rand_Smug02";
+			PChar.quest.arrest_smugglers_fight_over.win_condition.l3 = "NPC_Death";
+			PChar.quest.arrest_smugglers_fight_over.win_condition.l3.character = "Rand_Smug03";
+			PChar.quest.arrest_smugglers_fight_over.win_condition = "arrest_smugglers_fight_over";
+
+			PChar.quest.arrest_smugglers_fight_over.fail_condition.l1 = "ExitFromLocation";
+			PChar.quest.arrest_smugglers_fight_over.fail_condition.l1.location = PChar.location;
+			PChar.quest.arrest_smugglers_fight_over.fail_condition = "arrest_smugglers_ran_away";
+		break;
+
+		case "arrest_smugglers_fight_over":
+			PChar.quest.smuggling_guild.governor_smuggling.arrested = "kill";
+			AddQuestRecord("governor_smuggling", 5);
+			GiveItem2Character(PChar,"smuggling_first_report");
+			PChar.quest.smuggling_guild.governor_quest.made_first_report = true;
+			PChar.quest.smuggling_guild.governor_smuggling = "report_made";
+		break;
+
+		case "arrest_smugglers_ran_away":
+			ChangeSmugglerLiking(PChar, -40); //Add liking - you didn't kill them all so now they know you're a government agent
+			AddQuestRecord("governor_smuggling", 6);
+			GiveItem2Character(PChar,"smuggling_first_report");
+			PChar.quest.smuggling_guild.governor_quest.made_first_report = true;
+			PChar.quest.smuggling_guild.governor_smuggling = "report_made";
+		break;
 		
 		case "Made First Smuggling Report":
 //			if(CheckAttribute(pchar,"quest.smuggling_guild.governor_quest"))
-			if(CheckAttribute(PChar,"quest.smuggling_guild.governor_smuggling") && sti(GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.nation")) == GetSmugglingNation())
-			{
+//			if(CheckAttribute(PChar,"quest.smuggling_guild.governor_smuggling") && sti(GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.nation")) == GetSmugglingNation())
+//			{
 //				if(!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest.made_first_report"))
 				if(!CheckCharacterItem(PChar,"smuggling_first_report"))
 				{
@@ -230,31 +303,101 @@ void SideQuestComplete(string sQuestName)
 					pchar.quest.smuggling_guild.governor_quest.made_first_report = true;
 					PChar.quest.smuggling_guild.governor_smuggling = "report_made";
 				}
-			}
+//			}
 		break;
 		
 		case "Hand in First Smuggling Report":
-//			ChangeRMRelation(pchar, sti(pchar.quest.smuggling_guild.governor_quest.nation), 5);
-			ChangeRMRelation(pchar, sti(pchar.quest.smuggling_guild.governor_quest.nation), 2);
-			AddMoneyToCharacter(pchar, 2500);
-			AddXP(pchar, SKILL_SNEAK, 1000, XP_GROUP_OFFIC);
-			TakeItemFromCharacter(pchar,"smuggling_first_report");
-			if(CheckCharacterItem(Pchar,"smuggling_papers")) TakeItemFromCharacter(pchar,"smuggling_papers");	// GR: take away the papers so you can't keep using them.  If you want them again, ask the governor for another job!
-			AddQuestRecord("governor_smuggling", 3);
-			CloseQuestHeader("governor_smuggling");
-			pchar.quest.smuggling_guild.governor_quest.gave_first_report = true;
+//			ChangeRMRelation(PChar, sti(PChar.quest.smuggling_guild.governor_quest.nation), 5);			// GR: Rewards now handled in "governor.c" depending on what you did to smugglers
+//			AddMoneyToCharacter(PChar, 2500);
+//			AddXP(PChar, SKILL_SNEAK, 1000, XP_GROUP_OFFIC);
+			PChar.quest.governor_smuggling_time_up.over = "yes";							// GR: cancel timer
+			TakeItemFromCharacter(PChar,"smuggling_first_report");
+			if(CheckCharacterItem(PChar,"smuggling_papers")) TakeItemFromCharacter(PChar,"smuggling_papers");	// GR: take away the papers so you can't keep using them.  If you want them again, ask the governor for another job!
+			PChar.quest.smuggling_guild.governor_quest.gave_first_report = true;
 			PChar.quest.smuggling_guild.governor_smuggling = "report_handed_in";
-			PChar.quest.close_governor_smuggling.win_condition.l1 = "MapEnter";
-			pchar.quest.close_governor_smuggling.win_condition.l2 = "Timer";
-			pchar.quest.close_governor_smuggling.win_condition.l2.date.day   = GetAddingDataDay  (0, 0, 3);
-			pchar.quest.close_governor_smuggling.win_condition.l2.date.month = GetAddingDataMonth(0, 0, 3);
-			pchar.quest.close_governor_smuggling.win_condition.l2.date.year  = GetAddingDataYear (0, 0, 3);
-			PChar.quest.close_governor_smuggling.win_condition = "close_governor_smuggling";
+			if (!CheckAttribute(PChar, "quest.governor_smuggling.recover_cargo") && !CheckAttribute(PChar, "quest.governor_smuggling.recover_money"))
+			{
+				Preprocessor_AddQuestData("pronoun", GetMyPronounSubj(CharacterFromID(PChar.quest.smuggling_guild.governor_smuggling.governor)));
+				AddQuestRecord("governor_smuggling", 3);
+				Preprocessor_Remove("pronoun");
+				LAi_QuestDelay("close_governor_smuggling", 0.0);
+			}
 		break;
 
 		case "close_governor_smuggling":
+			NPChar = CharacterFromID(PChar.quest.smuggling_guild.governor_smuggling.governor); 
+			if (CheckAttribute(NPChar, "original_TempNode"))	// GR: attribute set by "governor.c" if you owed cargo or money
+			{
+				NPChar.Dialog.TempNode = NPChar.original_TempNode;
+				NPChar.Dialog.CurrentNode = NPChar.original_TempNode;
+				DeleteAttribute(NPChar, "original_TempNode");
+			}
+			CloseQuestHeader("governor_smuggling");
+			PChar.quest.delete_governor_smuggling.win_condition.l1 = "MapEnter";
+			PChar.quest.delete_governor_smuggling.win_condition.l2 = "Timer";
+			PChar.quest.delete_governor_smuggling.win_condition.l2.date.day   = GetAddingDataDay  (0, 0, 3);
+			PChar.quest.delete_governor_smuggling.win_condition.l2.date.month = GetAddingDataMonth(0, 0, 3);
+			PChar.quest.delete_governor_smuggling.win_condition.l2.date.year  = GetAddingDataYear (0, 0, 3);
+			PChar.quest.delete_governor_smuggling.win_condition = "delete_governor_smuggling";
+		break;
+
+		case "delete_governor_smuggling":
 			DeleteQuestHeader("governor_smuggling");
 			DeleteAttribute(PChar, "quest.smuggling_guild.governor_smuggling");
+		break;
+
+		case "governor_smuggling_recover_cargo":
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID(PChar.quest.governor_smuggling.recover_cargo.governor)));
+			Preprocessor_AddQuestData("amount", PChar.quest.governor_smuggling.recover_cargo.amount);
+			Preprocessor_AddQuestData("cargo", Goods[sti(PChar.quest.governor_smuggling.recover_cargo.goods)].name);
+			Preprocessor_AddQuestData("deadline", GetHumanDate(GetAddingDataYear(0, 1, 0), GetAddingDataMonth(0, 1, 0), GetAddingDataDay(0, 1, 0)));
+			Preprocessor_AddQuestData("nation", GetNationOfficialNameByType(sti(PChar.quest.smuggling_guild.governor_smuggling.nation)));
+			AddQuestRecord("governor_smuggling", 7);
+			Preprocessor_Remove("nation");
+			Preprocessor_Remove("deadline");
+			Preprocessor_Remove("cargo");
+			Preprocessor_Remove("amount");
+			Preprocessor_Remove("governor");
+			PChar.quest.governor_smuggling_time_up_cargo.win_condition.l1 = "Timer";
+			PChar.quest.governor_smuggling_time_up_cargo.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up_cargo.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up_cargo.win_condition.l1.date.year = GetAddingDataYear(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up_cargo.win_condition = "governor_smuggling_time_up_cargo";
+		break;
+
+		case "governor_smuggling_recover_money":
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID(PChar.quest.governor_smuggling.recover_money.governor)));
+			Preprocessor_AddQuestData("money", PChar.quest.governor_smuggling.recover_money.amount);
+			Preprocessor_AddQuestData("deadline", GetHumanDate(GetAddingDataYear(0, 1, 0), GetAddingDataMonth(0, 1, 0), GetAddingDataDay(0, 1, 0)));
+			Preprocessor_AddQuestData("nation", GetNationOfficialNameByType(sti(PChar.quest.smuggling_guild.governor_smuggling.nation)));
+			AddQuestRecord("governor_smuggling", 8);
+			Preprocessor_Remove("nation");
+			Preprocessor_Remove("deadline");
+			Preprocessor_Remove("money");
+			Preprocessor_Remove("governor");
+			PChar.quest.governor_smuggling_time_up_money.win_condition.l1 = "Timer";
+			PChar.quest.governor_smuggling_time_up_money.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up_money.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up_money.win_condition.l1.date.year = GetAddingDataYear(0, 1, 0);
+			PChar.quest.governor_smuggling_time_up_money.win_condition = "governor_smuggling_time_up_money";
+		break;
+
+		case "governor_smuggling_time_up_cargo":
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID(PChar.quest.governor_smuggling.recover_cargo.governor)));
+			AddQuestRecord("governor_smuggling", 10);
+			Preprocessor_Remove("governor");
+			LeaveService(PChar, sti(PChar.quest.governor_smuggling.recover_cargo.nation), true);
+			DeleteQuestAttribute("governor_smuggling");
+			CloseQuestHeader("governor_smuggling");
+		break;
+
+		case "governor_smuggling_time_up_money":
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID(PChar.quest.governor_smuggling.recover_money.governor)));
+			AddQuestRecord("governor_smuggling", 11);
+			Preprocessor_Remove("governor");
+			LeaveService(PChar, sti(PChar.quest.governor_smuggling.recover_money.nation), true);
+			DeleteQuestAttribute("governor_smuggling");
+			CloseQuestHeader("governor_smuggling");
 		break;
 		
 		case "Hand in Buyers List":
@@ -301,8 +444,8 @@ void SideQuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////
 
 		case "Learned About Apothecary":
-			SetQuestHeader("plants");
-			AddQuestRecord("plants", 1);
+			//SetQuestHeader("plants");
+			//AddQuestRecord("plants", 1);
 			pchar.quest.mysterious_plants.learned = true;
 		break;
 		
@@ -317,13 +460,20 @@ void SideQuestComplete(string sQuestName)
 		break;
 		
 		case "Decline Donate Apothecary":
+			DeleteAttribute(&PChar,"quest.mysterious_plants.donate");
+			pchar.quest.mysterious_plants.declined = true;
+
+
+			if (!CheckAttribute(pchar,"quest.mysterious_plants.pay_church"))
+			{
 			DisableFastTravel(true);
 			DisableMenuLaunch(true);
-			pchar.quest.mysterious_plants.declined = true;
+			
 			Locations[FindLocation("Greenford_town")].vcskip = true; //Added to make sure the questscene works
 			pchar.quest.meet_church_people.win_condition.l1 = "ExitFromLocation";
 			pchar.quest.meet_church_people.win_condition.l1.location = "apothecary";
 			pchar.quest.meet_church_people.win_condition = "Meet Church People";
+			}
 		break;
 		
 		case "Meet Church People":
@@ -339,7 +489,7 @@ void SideQuestComplete(string sQuestName)
 			sld = LAi_CreateFantomCharacterExOt(false, OFFIC_TYPE_CIVILIAN, GetRandomRank(true, OFFIC_TYPE_CIVILIAN, 0), true, 0.75, "monk", "reload", "reload15");
 			sld.Dialog.Filename = "apothecary_quest.c";
 			sld.Dialog.CurrentNode = "Mob Leader";
-			GiveItem2Character(sld,"albatross"); //Just some fun and incase the apothecary gets closed you can practise how to get rid of it
+			//GiveItem2Character(sld,"albatross"); //Just some fun and in case the apothecary gets closed you can practise how to get rid of it
 			Pchar.quest.mysterious_plants.mob.priest = sld.index;
 			LAi_SetActorType(sld);
 			LAi_group_MoveCharacter(sld, "Mob");
@@ -358,10 +508,10 @@ void SideQuestComplete(string sQuestName)
 		
 		case "mob part 2":
 			int nummob = GetDifficulty() + 2 + Rand(3);
-			if((nummob + LAi_numloginedcharacters) > 31)
+			if((nummob + LAi_numloginedcharacters) > (MAX_LOGINED_CHARACTERS_IN_LOCATION-1))
 			{
 				trace("MADE MOB SMALLER TO KEEP SLOTS FREE");
-				nummob = LAi_numloginedcharacters-30;
+				nummob = LAi_numloginedcharacters-(MAX_LOGINED_CHARACTERS_IN_LOCATION-2);
 			}
 			for (i = 0; i <= nummob; i++)
 			{
@@ -382,7 +532,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_ActorDialog(sld, Pchar, "", 1.0, 0);
 		break;
 		
-		case "Apothecary Fight Mob":
+		case "Apothecary Fight Mob"://PW third dialogue branch
 			//We fight the mob
 			LAi_group_FightGroups(LAI_GROUP_PLAYER, "Mob", true);
 			LAi_SetPlayerType(Pchar);
@@ -395,7 +545,7 @@ void SideQuestComplete(string sQuestName)
 				}
 			}
 			PChar.locationLock = true;
-			ChangeRMRelation(pchar, GetCurrentLocationNation(), -20);
+			ChangeRMRelation(pchar, GetCurrentLocationNation(), -20);//PW loss of relations for fighting citizens (even a lynch mob!!)
 			AddQuestRecord("plants", 4);
 			PChar.quest.apothecary_fight_mob.win_condition.l1 = "Group_Death";
 			PChar.quest.apothecary_fight_mob.win_condition.l1.group = "Mob";
@@ -434,10 +584,10 @@ void SideQuestComplete(string sQuestName)
 			sld = GetTownOfficiant("Greenford");
 			LAi_type_actor_Reset(sld);
 			LAi_ActorRunToLocator(sld, "reload", "reload13", "", -1);
-			pchar.quest.mysterious_plants.steven_left = true;
-			pchar.quest.mysterious_plants.officiant_buys_albatros = true;
+			pchar.quest.plants.steven_left = true;//PW not used (so far) shortened to plants to persist after quest
+			pchar.quest.plants.officiant_buys_albatros = true;
 			DeleteAttribute(&Stores[GREENFORD_STORE],"apothecary"); //Remove from array so fetchquest wont pick it anymore
-			DeleteAttribute(&PChar,"quest.mysterious_plants.mob");
+			DeleteAttribute(&PChar,"quest.mysterious_plants");//PW tidy up all attributes in tree
 			LAi_QuestDelay("Reset Officiant",3);
 		break;
 		
@@ -452,7 +602,7 @@ void SideQuestComplete(string sQuestName)
 			DisableMenuLaunch(false);
 		break;
 		
-		case "Apothecary Pay":
+		case "Apothecary Pay"://PW second dialogue branch - originally not available if pchar less than 1000 coins
 			LAi_SetPlayerType(Pchar);
 			DisableFastTravel(false);
 			DisableMenuLaunch(false);
@@ -465,7 +615,8 @@ void SideQuestComplete(string sQuestName)
 				}
 			}
 			locations[FindLocation("Greenford_town")].reload.l18.disable = 0;
-			PChar.quest.mysterious_plants.donate = 1000;
+			//PChar.quest.mysterious_plants.donate = 1000;//PW dialogue change to intention to donate in case PChar doesn't have 1000 - you have to return and talk to apothecary to continue
+			//PW originally if had less than 1000 didn't get this option so apothecary going to close either other way you could proceed.
 			sld = &characters[sti(Pchar.quest.mysterious_plants.mob.priest)];
 			LAi_type_actor_Reset(sld);
 			LAi_ActorRunToLocation(sld, "reload", "reload15", "none", "", "", "Remove Mob", 45.0);
@@ -477,7 +628,7 @@ void SideQuestComplete(string sQuestName)
 				LAi_ActorRunToLocator(sld, "officers", "reload15_3", "", -1);
 			}
 			AddQuestRecord("plants", 5);
-			pchar.quest.mysterious_plants.pay_church = true;
+			pchar.quest.mysterious_plants.pay_church = true;//PW seems not used = now used to prevent mob again in second branch (loop round donate or not)
 		break;
 		
 		case "Remove Mob":
@@ -492,7 +643,7 @@ void SideQuestComplete(string sQuestName)
 			}
 		break;
 		
-		case "Apothecary BOOM":
+		case "Apothecary BOOM"://PW first dialogue branch
 			LAi_ActorRunToLocator(pchar, "officers", "reload13_3", "Enter Apothecary", -1);
 		break;
 		
@@ -520,10 +671,13 @@ void SideQuestComplete(string sQuestName)
 				LAi_type_actor_Reset(sld);
 				//LAi_ActorFollow(sld, &characters[sti(Pchar.quest.mysterious_plants.mob.priest)], "", 10);
 				LAi_ActorRunToLocator(sld, "reload", "reload13", "", -1);
+
 			}
 			LAi_QuestDelay("Apothecary fight",3);
-			ChangeCharacterReputation(PChar, -5);
+			ChangeCharacterReputation(PChar, -5);// PW hit on reputation for just standing aside 
 			pchar.quest.mysterious_plants.pillage = true;
+			//PW this timer is for next day, OK if you are hit by blast and out of it (or leave location) but too late if you weren't
+			//PW placed immediate questbook update if not hit by blast and stop timer to prevent duplicate entry later in "officiant Leaves"
 			PChar.quest.Steven_dead.win_condition.l1 = "Timer";
 			PChar.quest.Steven_dead.win_condition.l1.date.day = GetAddingDataDay(0, 0, 1);
 			PChar.quest.Steven_dead.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 1);
@@ -576,16 +730,16 @@ void SideQuestComplete(string sQuestName)
 				float distance = GetDistance2D(locx, locz, parx, parz);
 				if(distance < 2.0)
 				{
-					LAi_QuestDelay("Apothecary blown away by blast",0);
+					LAi_QuestDelay("Apothecary blown away by blast",0);//PW close to explosion branch
 				}
 				else
 				{
-					LAi_QuestDelay("Apothecary leave",1);
+					LAi_QuestDelay("Apothecary leave",1);//PW not close enough to blast for PChar knockout branch
 				}
 			}
 		break;
 		
-		case "Apothecary blown away by blast":
+		case "Apothecary blown away by blast"://PW close to explosion branch
 			LAi_SetLayType(Pchar);
 			LAi_fade("Apothecary Move to Tavern", "");
 			WaitDate("", 0,0,1,0,0);
@@ -609,6 +763,7 @@ void SideQuestComplete(string sQuestName)
 			ResurrectingOfficiant.Dialog.CurrentNode = "Hit by Blast";
 			SetSkillCharMod(PChar, "Fencing", -2, "BlowDamage", "A large explosion hit you"); //Levis
 			SetSkillCharMod(PChar, "Defence", -1, "BlowDamage", "A large explosion hit you"); //Levis
+			//PW (Note) No further hit on reputation because you tried to go back in to stop the mob			
 			LAi_QuestDelay("ResurrectionEvent_BlazeWakes",0);
 			DisableFastTravel(true);
 			pchar.quest.Reset_Officiant_after_Boom.win_condition.l1 = "ExitFromLocation";
@@ -616,7 +771,7 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.Reset_Officiant_after_Boom.win_condition = "Reset Officiant";
 		break;
 		
-		case "Apothecary leave":
+		case "Apothecary leave"://PW not close enough to blast for PChar knockout branch
 			if(pchar.location == "Greenford_town") //Incase we leave
 			{
 				PlayStereoSound("OBJECTS\ABORDAGE\abordage_loosing.wav");
@@ -636,7 +791,7 @@ void SideQuestComplete(string sQuestName)
 				ChangeCharacterAddressGroup(sld,pchar.location,"reload","reload13");
 				parx = stf(loadedLocation.locators.reload.reload13.x);
 				pary = stf(loadedLocation.locators.reload.reload13.y);
-				parz = stf(loadedLocation.locators.reload.reload13.z);
+				parz = stf(loadedLocation.locators.reload.reload13.z)+0.43;
 				//check if a buildingslot is free
 				lcn = &Locations[FindLocation(pchar.location)];
 				int nr = -1;
@@ -649,20 +804,51 @@ void SideQuestComplete(string sQuestName)
 					}
 				}
 				attr = "building."+nr+".building";
+
 				Build(attr, "roche", "", parx, pary, parz, PI, "buildings");
 				LAi_ActorRunToLocation(sld, "reload", "reload15", "none", "", "", "", 45.0);
+				LAi_QuestDelay("Officiant turns up",3);//PW added 2 cases so officiant can tell you about albatross
 			}
 			DeleteAttribute(&PChar,"quest.mysterious_plants.mob");
+			
 		break;
 		
+		case "Officiant turns up"://PW new case if PChar not hit by blast so officiant can tell you about albatross
+			sld = GetTownOfficiant("Greenford");
+			ChangeCharacterAddressGroup(sld,"Greenford_town","goto","goto15");
+			sld.Dialog.Filename = "apothecary_quest.c";
+			sld.Dialog.CurrentNode = "officiant Leave";
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToLocator(Pchar,"goto","goto15");
+			LAi_ActorWaitDialog(PChar, sld);
+			LAi_ActorDialog(sld,pchar,"",1.0,0);
+		break;
+
+		case "officiant Leaves"://PW new case if PChar not hit by blast so officiant can tell you about albatross
+			AddQuestRecord("plants",50);
+			ChangeCharacterReputation(PChar, -5);//PW hit on reputation for standing aside and not going to help
+			CloseQuestHeader("plants");
+			PChar.quest.plants.steven_dead = true;
+			LAi_ActorTurnToLocator(Pchar,"reload","reload13");
+			sld = GetTownOfficiant("Greenford");
+			LAi_type_actor_Reset(sld);
+			LAi_ActorRunToLocator(sld, "reload", "reload13", "", -1);
+			pchar.quest.plants.officiant_buys_albatros = true;
+			DeleteAttribute(&Stores[GREENFORD_STORE],"apothecary"); //Remove from array so fetchquest wont pick it anymore
+			DeleteAttribute(&PChar,"quest.mysterious_plants");//PW tidy up all attributes in tree
+			DeleteAttribute(&PChar,"quest.Steven_dead.win_condition");//PW stop timer from calling "Apothecary Steven Dead":
+			LAi_QuestDelay("Reset Officiant",3);
+		break;
+
 		case "Apothecary Steven Dead":
 			AddQuestRecord("plants", 7);
-			ChangeCharacterReputation(PChar, -5);
+			//ChangeCharacterReputation(PChar, -5);//PW No added hit on reputation you went back to try and intervene
 			CloseQuestHeader("plants");
-			PChar.quest.mysterious_plants.steven_dead = true;
-			pchar.quest.mysterious_plants.officiant_buys_albatros = true;
+			PChar.quest.plants.steven_dead = true;
+			pchar.quest.plants.officiant_buys_albatros = true;
 			DeleteAttribute(&Stores[GREENFORD_STORE],"apothecary"); //Remove from array so fetchquest wont pick it anymore
-			DeleteAttribute(&PChar,"quest.mysterious_plants.mob");
+			DeleteAttribute(&PChar,"quest.mysterious_plants");//PW tidy up all attributes in tree
+
 		break;
 		
 		case "Apothecary Talk Business":
@@ -674,12 +860,14 @@ void SideQuestComplete(string sQuestName)
 		case "Apothecary Decline Business":
 			AddQuestRecord("plants", 11);
 			CloseQuestHeader("plants");
+			DeleteAttribute(&PChar,"quest.mysterious_plants");//PW tidy up all attributes in tree
+			Pchar.quest.plants = "done";//PW check that quest "done"for no further re=loop dialogs
 		break;
 		
 		case "Talk Business Accept":
 			//Create a crewmember to talk to the captain
 			AddXP(pchar, SKILL_COMMERCE, 1000, XP_GROUP_OFFIC);
-			sld = LAi_CreateFantomCharacterExOt(true, GetBoardingCrewType(PChar), sti(pchar.rank), false, 0.0, LAi_GetBoardingModel(PChar, ""), "reload", "reload1");
+			sld = LAi_CreateFantomCharacterExOt(true, GetBoardingCrewType(PChar), sti(pchar.rank), true, 0.0, LAi_GetBoardingModel(PChar, ""), "reload", "reload1");
 			LAi_StoreFantom(sld);
 			EquipFromLocker(sld);
 			CheckCharacterCurse(sld);
@@ -728,7 +916,10 @@ void SideQuestComplete(string sQuestName)
 			DeleteAttribute(&Locations[FindLocation("Greenford_town")],"vcskip");
 			ChangeCharacterAddressGroup(&characters[sti(PChar.quest.mysterious_plants.crewmember)],pchar.location,"goto","goto38");
 			indianid = 1+rand(2);
-			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "indian"+indianid, "goto", "goto30");
+			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, false, 1.0, "indian"+indianid, "goto", "goto30");
+			TakeItemFromCharacter(sld,"tomahawk");//PW kills crewmember too quickly with this
+			GiveItem2Character(sld,"pistolbow");//PW make sure he has bow for collector since weapons now false
+			GiveItem2Character(sld,"blade5");//PW indian will (eventually) win the fight with this if pchar does not help
 			LAi_SetWarriorType(sld);
 			LAi_SetWarriorType(&characters[sti(PChar.quest.mysterious_plants.crewmember)]);
 			LAi_group_MoveCharacter(&characters[sti(PChar.quest.mysterious_plants.crewmember)], "crewmember");
@@ -752,7 +943,8 @@ void SideQuestComplete(string sQuestName)
 				pchar.ship.crew.morale = sti(pchar.ship.crew.morale) - 10; //Drop in morale
 				AddQuestRecord("plants", 13);
 				PChar.quest.mysterious_plants.crewmembers_killed_by_indians = sti(GetAttribute(PChar,"quest.mysterious_plants.crewmembers_killed_by_indians")) + 1;
-				PChar.quest.mysterious_plants.crewmember_killed = true;
+				PChar.quest.mysterious_plants.crewmember.killed = true;
+				
 				AddXP(pchar, SKILL_FENCING, 500, XP_GROUP_OFFIC);
 			}
 			else
@@ -762,10 +954,11 @@ void SideQuestComplete(string sQuestName)
 				sld.Dialog.CurrentNode = "Saved from Natives";
 				LAi_ActorWaitDialog(PChar,sld);
 				LAi_ActorDialog(sld, PChar, "", 1.0, 0);
-				PChar.quest.mysterious_plants.crewmember_killed = false;
+				PChar.quest.mysterious_plants.crewmember.killed = false;
 				AddXP(pchar, SKILL_LEADERSHIP, 1500, XP_GROUP_OFFIC);
 				AddXP(pchar, SKILL_FENCING, 500, XP_GROUP_OFFIC);
 			}
+			PChar.quest.mysterious_plants.crewmember.attacked_tell_steven = true;
 			LAi_UnStoreFantom(sld);
 			DisableFastTravel(false);
 			PChar.quest.Indian_Attack_Expired.win_condition.l1 = "Timer";
@@ -777,13 +970,14 @@ void SideQuestComplete(string sQuestName)
 		
 		case "Crewmember Attack Expired for Guards":
 			PChar.quest.mysterious_plants.crewmember_killed.expired = true;
+			DeleteAttribute(&PChar,"quest.mysterious_plants.crewmember.attacked_tell_steven");//PW if day passed too late for steven too
 		break;
 		
 		case "Apothecary Crewmember goes to ship":
 			LAi_SetPlayerType(PChar);
 			AddQuestRecord("plants", 14);
 			LAi_ActorRunToLocation(&characters[sti(PChar.quest.mysterious_plants.crewmember)], "reload", "reload1", "none", "", "", "", 45.0);
-			DeleteAttribute(&PChar,"quest.mysterious_plants.crewmember");
+			//DeleteAttribute(&PChar,"quest.mysterious_plants.crewmember");
 		break;
 		
 		case "Reported Indians to guards":
@@ -794,66 +988,75 @@ void SideQuestComplete(string sQuestName)
 		break;
 		
 		case "Ship Guarded":
-			for (i = 0; i <= 4; i++)
-			{
-				if(CheckAttribute(PChar,"quest.Kill_Indian_Guards"+i))
+			If (CheckAttribute(PChar,"quest.mysterious_plants.guard_ship"))//PW else truce in place now so no indians
+			{	
+				for (i = 0; i <= 4; i++)
+				{
+					if(CheckAttribute(PChar,"quest.Kill_Indian_Guards"+i))
 					DeleteAttribute(PChar,"quest.Kill_Indian_Guards"+i);
-			}
-			int numindians = 2+rand(2);
-			int level = 10;
-			for (i = 0; i <= numindians; i++)
-			{
-				indianid = 1+rand(2);
-				if(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed") > 6)
-				{
-					level = 10 + 6-sti(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed"))*2; //The level will increase at some point so this isn't an infinite XP farm
 				}
-				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", level, true, 1.0, "indian"+indianid, "goto", LAi_FindRandomLocator("goto"));
-				if(rand(99>50) || GetAttribute(Pchar,"quest.mysterious_plants.indians.killed") > 3)
+				int numindians = 2+rand(2);
+				int level = 10;
+				for (i = 0; i <= numindians; i++)
 				{
-					//LAi_SetWarriorType(sld);
-					//LAi_warrior_SetStay(sld, 1);
-					LAi_SetCivilianGuardianType(sld);
-				}
-				else
-				{
-					LAi_SetPoorType(sld);
-				}
-				sld.Dialog.Filename = "Indian Guard.c";
-				sld.Dialog.CurrentNode = "First time";
-				LAi_group_MoveCharacter(sld, "IndianGuards"+i);
-				LAi_group_SetRelation("IndianGuards"+i, LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL);
-				//LAi_group_SetAlarmReaction("IndianGuards"+i, LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL, LAI_GROUP_ENEMY);
-				if(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed") > 8)
-				{
-					LAi_group_FightGroups("IndianGuards"+i, LAI_GROUP_PLAYER,true);
-					LAi_group_FightGroups(LAI_GROUP_PLAYER, "IndianGuards"+i,true);
-					if(!CheckAttribute(pchar,"quest.mysterious_plants.indians.onsight"))
+					indianid = 1+rand(2);
+					if(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed") > 6)
 					{
-						AddQuestRecord("plants",32);
-						pchar.quest.mysterious_plants.indians.onsight = true;
+						level = 10 + 6-sti(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed"))*2; //The level will increase at some point so this isn't an infinite XP farm
+					}
+					sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", level, true, 1.0, "indian"+indianid, "goto", LAi_FindRandomLocator("goto"));
+					//GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
+
+					if(rand(99>50) || GetAttribute(Pchar,"quest.mysterious_plants.indians.killed") > 3)
+					{
+						//LAi_SetWarriorType(sld);
+						//LAi_warrior_SetStay(sld, 1);
+						LAi_SetCivilianGuardianType(sld);
+					}
+					else
+					{
+						LAi_SetPoorType(sld);
+					}
+					sld.Dialog.Filename = "Indian Guard.c";
+					sld.Dialog.CurrentNode = "First time";
+					LAi_group_MoveCharacter(sld, "IndianGuards"+i);
+					LAi_group_SetRelation("IndianGuards"+i, LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL);
+					//LAi_group_SetAlarmReaction("IndianGuards"+i, LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL, LAI_GROUP_ENEMY);
+
+					if(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed") > 8) 
+					{
+						LAi_group_FightGroups("IndianGuards"+i, LAI_GROUP_PLAYER,true);
+						LAi_group_FightGroups(LAI_GROUP_PLAYER, "IndianGuards"+i,true);
+						if(!CheckAttribute(pchar,"quest.mysterious_plants.indians.onsight"))
+						{
+							AddQuestRecord("plants",32);
+							pchar.quest.mysterious_plants.indians.onsight = true;
+						}
+					}
+
+					if(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed") > 30) //Killing all ambushes and doing the smugglers quest will still not get you over this number. So if you do you are just killing them for fun and/or XP so you deserve to get punished
+					{
+						LAi_SetImmortal(sld,true); //You asked for it
+					}
+					string conditioncase = "Kill_Indian_Guards"+i;
+
+					Pchar.quest.(conditioncase).win_condition.l1 = "NPC_Death";
+					Pchar.quest.(conditioncase).win_condition.l1.character = sld.id;
+					Pchar.quest.(conditioncase).win_condition = "Kill Indian Guard";
+				}
+				for (i = 0; i <= numindians; i++)
+				{
+					for (j = 0; j <= numindians; j++)
+					{
+						LAi_group_SetRelation("IndianGuards"+i, "IndianGuards"+j, LAI_GROUP_NEUTRAL);
+						//LAi_group_SetAlarmReaction("IndianGuards"+i, "IndianGuards"+j, LAI_GROUP_ENEMY, LAI_GROUP_ENEMY);
 					}
 				}
-				if(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed") > 30) //Killing all ambushes and doing the smugglers quest will still not get you over this number. So if you do you are just killing them for fun and/or XP so you deserve to get punished
-				{
-					LAi_SetImmortal(sld,true); //You asked for it
-				}
-				string conditioncase = "Kill_Indian_Guards"+i;
-				Pchar.quest.(conditioncase).win_condition.l1 = "NPC_Death";
-				Pchar.quest.(conditioncase).win_condition.l1.character = sld.id;
-				Pchar.quest.(conditioncase).win_condition = "Kill Indian Guard";
+
+				pchar.quest.Apothecary_Guard_Ship_reset.win_condition.l1 = "ExitFromLocation";
+				pchar.quest.Apothecary_Guard_Ship_reset.win_condition.l1.location = "Greenford_port";
+				pchar.quest.Apothecary_Guard_Ship_reset.win_condition = "Set Guard Again";
 			}
-			for (i = 0; i <= numindians; i++)
-			{
-				for (j = 0; j <= numindians; j++)
-				{
-					LAi_group_SetRelation("IndianGuards"+i, "IndianGuards"+j, LAI_GROUP_NEUTRAL);
-					//LAi_group_SetAlarmReaction("IndianGuards"+i, "IndianGuards"+j, LAI_GROUP_ENEMY, LAI_GROUP_ENEMY);
-				}
-			}
-			pchar.quest.Apothecary_Guard_Ship_reset.win_condition.l1 = "ExitFromLocation";
-			pchar.quest.Apothecary_Guard_Ship_reset.win_condition.l1.location = "Greenford_port";
-			pchar.quest.Apothecary_Guard_Ship_reset.win_condition = "Set Guard Again";
 		break;
 		
 		case "Set Guard Again":
@@ -861,6 +1064,7 @@ void SideQuestComplete(string sQuestName)
 			DeleteAttribute(&pchar,"quest.Kill_Indian_Guards0");
 			DeleteAttribute(&pchar,"quest.Kill_Indian_Guards1");
 			DeleteAttribute(&pchar,"quest.Kill_Indian_Guards2");
+			DeleteAttribute(&pchar,"quest.Kill_Indian_Guards3");
 			if(CheckAttribute(PChar,"quest.mysterious_plants.guard_ship"))
 			{
 				Pchar.quest.Apothecary_Guard_Ship.win_condition.l1 = "location";
@@ -881,6 +1085,8 @@ void SideQuestComplete(string sQuestName)
 		case "Apothecary Meet In Tavern":
 			AddQuestRecord("plants", 16);
 			pchar.quest.mysterious_plants.heard_job = "talk to captain";
+			//DisableFastTravel(true);
+			//DisableMenuLaunch(true);
 			Pchar.quest.Apothecary_Meet_Tavern.win_condition.l1 = "location";
 			Pchar.quest.Apothecary_Meet_Tavern.win_condition.l1.character = PChar.id;
 			Pchar.quest.Apothecary_Meet_Tavern.win_condition.l1.location = "Greenford_tavern";
@@ -889,12 +1095,17 @@ void SideQuestComplete(string sQuestName)
 		
 		case "Apothecary Set Up Meeting Captain":
 			indianid = 1+rand(2);
-			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "indian"+indianid, "reload", "reload2");
+			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "indian"+indianid, "goto", "goto8");
+			//sld.id = "IndianSpy";
+			GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 			Pchar.quest.mysterious_plants.indianspy = sld.index;
 			LAi_SetStayType(sld);
 			LAi_StoreFantom(sld);
 			sld.Dialog.Filename = "Indian Guard.c";
 			sld.Dialog.CurrentNode = "First time";
+			//pchar.quest.apothecary_killed_spy.win_condition.l1 = "NPC_Death";//PW moved from case Apothecary indian left
+		//	pchar.quest.apothecary_killed_spy.win_condition.l1.character = sld.id;
+			//pchar.quest.apothecary_killed_spy.win_condition.l1.character = "Apothecary Killed Indian Spy";
 			sld = characterFromID("Robert Cook");
 			LAi_SetStayType(sld);
 			ChangeCharacterAddressGroup(sld,pchar.location,"goto","goto2");
@@ -914,18 +1125,21 @@ void SideQuestComplete(string sQuestName)
 		break;
 		
 		case "Apothecary Trigger Indian":
+			locations[FindLocation("Greenford_suburb")].reload.l8.disable = 1;//PW lock warehouse to stop you going ahead before the indian once you know where
+			locations[FindLocation("Greenford_suburb")].reload.l13.disable = 1;//PW lock warehouse to stop you going ahead before the indian once you know where
 			LAi_ActorTurnToLocator(pchar,"goto","goto8");
 			sld = &characters[sti(Pchar.quest.mysterious_plants.indianspy)];
 			LAi_SetActorType(sld);
+			LAi_QuestDelay("turn_to_indianspy",1);
 			LAi_ActorRunToLocation(sld,"reload","reload1","none","","","Apothecary Indian Left",10);
 			LAi_QuestDelay("turn_to_indianspy",2);		//JRH: see what that indian's up to
 			LAi_QuestDelay("turn_to_indianspy",3);
 			LAi_QuestDelay("turn_to_indianspy",4);
-			LAi_QuestDelay("turn_to_indianspy",5);
-			LAi_QuestDelay("turn_to_indianspy",6);
-			LAi_QuestDelay("turn_to_indianspy",7);
-			LAi_QuestDelay("turn_to_indianspy",8);
-			LAi_QuestDelay("turn_to_indianspy",9);
+			//LAi_QuestDelay("turn_to_indianspy",5);
+			//LAi_QuestDelay("turn_to_indianspy",6);
+			//LAi_QuestDelay("turn_to_indianspy",7);
+			//LAi_QuestDelay("turn_to_indianspy",8);
+			//LAi_QuestDelay("turn_to_indianspy",9);
 		break;
 	//JRH -->
 		case "turn_to_indianspy":
@@ -940,32 +1154,64 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.apothecary_follow_indian.win_condition.l1 = "ExitFromLocation";
 			pchar.quest.apothecary_follow_indian.win_condition.l1.location = "Greenford_tavern";
 			pchar.quest.apothecary_follow_indian.win_condition = "Apothecary Follow Indian";
-			pchar.quest.apothecary_killed_spy.win_condition.l1 = "NPC_Death";
-			PChar.quest.apothecary_killed_spy.win_condition.l1.character = &characters[sti(Pchar.quest.mysterious_plants.indianspy)].id;
-			pchar.quest.apothecary_killed_spy.win_condition.l1.character = "Apothecary Killed Indian Spy";
+			pchar.quest.killed_spy.win_condition.l1 = "NPC_Death";//PW doesn't currently work?
+			PChar.quest.killed_spy.win_condition.l1.character = &characters[sti(Pchar.quest.mysterious_plants.indianspy)].id;
+			pchar.quest.killed_spy.win_condition.l1.character = "Apothecary Killed Indian Spy";
 		break;
 		
-		case "Apothecary Found Follow":
+		case "Apothecary Found Follow"://PW called from indian guard dialog
 			DeleteAttribute(&Locations[FindLocation("Greenford_town")],"vcskip");
-			DeleteAttribute(&pchar,"quest.mysterious_plants.indianspy");
-			LAi_UnStoreFantom(&characters[sti(Pchar.quest.mysterious_plants.indianspy)]);
+			//DeleteAttribute(&pchar,"quest.mysterious_plants.indianspy");
+			//LAi_UnStoreFantom(&characters[sti(Pchar.quest.mysterious_plants.indianspy)]);
 			AddQuestRecord("plants", 18);
+			//locations[FindLocation("Greenford_suburb")].reload.l8.disable = 0;//PW unlock warehouse now
+			//locations[FindLocation("Greenford_suburb")].reload.l13.disable = 0;//PW unlock warehouse now
 		break;
-		
+	
+
 		case "Apothecary Killed Indian Spy":
-			DeleteAttribute(&pchar,"quest.mysterious_plants.indianspy");
+			DeleteAttribute(&Locations[FindLocation("Greenford_town")],"vcskip");
+			DeleteAttribute(&Locations[FindLocation("Greenford_suburb")],"vcskip");//PW could have reached here before killed
+			
 			LAi_UnStoreFantom(&characters[sti(Pchar.quest.mysterious_plants.indianspy)]);
+			DeleteAttribute(&pchar,"quest.mysterious_plants.indianspy");
 			i = sti(GetAttribute(Pchar,"quest.mysterious_plants.indians.killed")) + 1;
 			Pchar.quest.mysterious_plants.indians.killed = i;
-			AddQuestRecord("plants", 21);
+			PChar.quest.mysterious_plants.spy.killed = true;//PW attribute for conversation with steven to setup warehouse etc
+			AddQuestRecord("plants", 41);
+			//if(!pchar.location == "Greenford_suburb")
+			
+			DeleteAttribute(pchar,"quest.Apothecary_indian_detour");//PW stop blockade indian so not set twice depending where you killed spy
+			//StopBlockadeCheck("Greenford_suburb");
+		//	Building_delete(&Locations[FindLocation("Greenford_suburb")], pchar.quest.mysterious_plants.baricade.l1);
+		//	Building_delete(&Locations[FindLocation("Greenford_suburb")], pchar.quest.mysterious_plants.baricade.l2);
+		//	Building_delete(&Locations[FindLocation("Greenford_suburb")], pchar.quest.mysterious_plants.baricade.l3);
+		//	Building_delete(&Locations[FindLocation("Greenford_suburb")], pchar.quest.mysterious_plants.baricade.l4);
+			locations[FindLocation("Greenford_suburb")].reload.l8.disable = 0;//PW unlock warehouse now
+			locations[FindLocation("Greenford_suburb")].reload.l13.disable = 0;//PW unlock warehouse now
 		break;
 		
 		case "Apothecary Follow Indian":
-			if(CheckAttribute(pchar,"quest.mysterious_plants.indianspy"))
+			if(pchar.location == "Greenford_town") //PW To check you left tavern after indian(not went up to room or fast travel to ship)
 			{
-				ChangeCharacterAddressGroup(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"Greenford_town","reload","reload7");
-				LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"goto","goto14","",20);
-				LAi_QuestDelay("Apothecary Follow Indian 2",8);
+				if(CheckAttribute(pchar,"quest.mysterious_plants.indianspy"))
+				{
+					//ChangeCharacterAddressGroup(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"Greenford_town","reload","reload7");
+					ChangeCharacterAddressGroup(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"Greenford_town","goto","goto14");
+					
+					LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"goto","goto30","",20);
+					sld = &characters[sti(Pchar.quest.mysterious_plants.indianspy)];
+					LAi_SetActorType(sld);		
+					sld.Dialog.Filename = "Indian Guard.c";
+					sld.Dialog.CurrentNode = "Following";
+					SetCharacterTask_None(sld);
+					LAi_SetActorType(sld);
+					LAi_ActorDialog(sld, Pchar, "Apothecary Follow Indian 2",10, 0);
+				}
+			}
+			else  //PW stuff to set warehouse scene if you didn't follow indian
+			{
+					pchar.quest.mysterious_plants.No_Follow = true;//PW Setting attribute opens dialogue line with Steven - reset done through that otherwise not reset
 			}
 		break;
 		
@@ -973,7 +1219,7 @@ void SideQuestComplete(string sQuestName)
 			if(CheckAttribute(pchar,"quest.mysterious_plants.indianspy"))
 			{
 				LAi_type_actor_Reset(&characters[sti(Pchar.quest.mysterious_plants.indianspy)]);
-				LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"goto","goto38","",20);
+				LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"goto","goto33","",8);
 				LAi_QuestDelay("Apothecary Follow Indian 3",7);
 			}
 		break;
@@ -991,7 +1237,7 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.apothecary_follow_indian.win_condition = "Apothecary Follow Indian 5";
 		break;
 		
-		case "Apothecary Build Obstacles":
+		case "Apothecary Build Obstacles"://PW blockade to stop direct access to warehouse rear
 			lcn = &Locations[FindLocation("Greenford_suburb")];
 			cidx = -1;
 			for(i = 1; i<=MAXBUILDINGS; i++)
@@ -1041,22 +1287,54 @@ void SideQuestComplete(string sQuestName)
 			lcn.building.(buildingid).z = 34.571;
 			lcn.building.(buildingid).ay = 0;
 			lcn.building.(buildingid).aigroup = "blockade";
+			//TraceAndLog("blockade");
+			If ((CheckAttribute(PChar,"quest.mysterious_plants.No_Follow"))  || (CheckAttribute(PChar,"quest.mysterious_plants.spy.killed")))
+				{
+				LAi_QuestDelay("Setup Warehouse",0);
+				DeleteAttribute(&pchar, "quest.mysterious_plants.No_Follow");
+				DeleteAttribute(&pchar, "quest.mysterious_plants.spy.killed");
+				//TraceAndLog("blockade2");
+				}
 		break;
 		
 		case "Apothecary Follow Indian 5":
-			DeleteAttribute(&Locations[FindLocation("Greenford_suburb")],"vcskip");
+			LAi_type_actor_Reset(&characters[sti(Pchar.quest.mysterious_plants.indianspy)]);
+			DeleteAttribute(&Locations[FindLocation("Greenford_town")],"vcskip");// PW restore NPCs in town area
+			
+			sld = &characters[sti(Pchar.quest.mysterious_plants.indianspy)];
+				if(LAi_IsDead(sld))//PW in case you kill the indian "spy" in greenford town (condition didn't seem to work?)
+				{
+					LAi_QuestDelay("Apothecary Killed Indian Spy",0);
+				}
 			if(pchar.location == "Greenford_suburb" && CheckAttribute(pchar,"quest.mysterious_plants.indianspy"))
+			//PW called on exit from greenford town activates if you followed indian to suburb (ie first exit you use from town during follow)
 			{
-				ChangeCharacterAddressGroup(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"Greenford_suburb","reload","reload_3_3_back");
-				LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"goto","goto14","",20);
-				LAi_QuestDelay("Apothecary Follow Indian 6",10);
-				StartBlockadeCheck("Greenford_suburb");
-				pchar.quest.Apothecary_indian_detour.win_condition.l1 = "locator";
-				pchar.quest.Apothecary_indian_detour.win_condition.l1.location = pchar.location;
-				pchar.quest.Apothecary_indian_detour.win_condition.l1.locator_group = "reload";
-				pchar.quest.Apothecary_indian_detour.win_condition.l1.locator = "door_15";
-				pchar.quest.Apothecary_indian_detour.win_condition = "Apothecary Not This Way";
+				
+				
+					LAi_type_actor_Reset(&characters[sti(Pchar.quest.mysterious_plants.indianspy)]);
+					ChangeCharacterAddressGroup(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"Greenford_suburb","reload","door_3");//PW was reload_3_3_back
+					LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"goto","goto14","",20);
+					LAi_QuestDelay("Apothecary Follow Indian 6",10);
+					//StartBlockadeCheck("Greenford_suburb");//PW moved to next case since get reduction in response due to running check
+				
+					pchar.quest.Apothecary_indian_detour.win_condition.l1 = "locator";
+					pchar.quest.Apothecary_indian_detour.win_condition.l1.location = pchar.location;
+					pchar.quest.Apothecary_indian_detour.win_condition.l1.locator_group = "reload";
+					pchar.quest.Apothecary_indian_detour.win_condition.l1.locator = "door_15";
+					pchar.quest.Apothecary_indian_detour.win_condition = "Apothecary Not This Way";
 			}
+			else
+			{
+			//PW stuff to reset warehouse scene if you lost the indian by entering some other location than suburb 
+			//PW Setting attribute opens dialogue line with Steven - reset done through that otherwise not reset
+			//PW blockade should already be set (but not checked)
+			
+			PChar.quest.mysterious_plants.Lost_Indian = true;
+			//TraceAndLog("lost indian");
+			//AddQuestRecord("plants", 18);
+			}
+
+
 		break;
 		
 		case "Apothecary Follow Indian 6":
@@ -1066,6 +1344,8 @@ void SideQuestComplete(string sQuestName)
 				LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"goto","goto22","",20);
 				LAi_QuestDelay("Apothecary Follow Indian 7",15);
 			}
+			StartBlockadeCheck("Greenford_suburb");//PW moved from previous case
+			pchar.quest.mysterious_plants.blockade = "set";
 		break;
 		
 		case "Apothecary Follow Indian 7":
@@ -1081,7 +1361,7 @@ void SideQuestComplete(string sQuestName)
 			if(CheckAttribute(pchar,"quest.mysterious_plants.indianspy"))
 			{
 				LAi_type_actor_Reset(&characters[sti(Pchar.quest.mysterious_plants.indianspy)]);
-				LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"officers","door_1_3","",20);
+				LAi_ActorRunToLocator(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"officers","door_1_3","",10);
 				LAi_QuestDelay("Apothecary Follow Indian 9",1);
 			}
 		break;
@@ -1092,23 +1372,87 @@ void SideQuestComplete(string sQuestName)
 				LAi_type_actor_Reset(&characters[sti(Pchar.quest.mysterious_plants.indianspy)]);
 				LAi_ActorRunToLocation(&characters[sti(Pchar.quest.mysterious_plants.indianspy)],"reload","door_1","none","","","Apothecary Follow Indian End",20);
 			}
+			locations[FindLocation("Greenford_suburb")].reload.l8.disable = 0;//PW unlock warehouse now
+			locations[FindLocation("Greenford_suburb")].reload.l13.disable = 0;//PW unlock warehouse now
 		break;
 		
 		case "Apothecary Follow Indian End":
+			
+			DeleteAttribute(&Locations[FindLocation("Greenford_suburb")],"vcskip");//PW restore NPCs in suburb now
 			DoQuickSave();			//JRH: as it crashes in the warehouse sometimes
+			sld = &characters[sti(Pchar.quest.mysterious_plants.indianspy)];
+			if(LAi_IsDead(sld))//PW in case you kill the indian "spy" in Greenford_suburb (condition didn't seem to work?)
+			{
+				LAi_QuestDelay("Apothecary Killed Indian Spy",0);
+			}
+			else
+			{
 			AddQuestRecord("plants", 19);
 			AddXP(pchar, SKILL_ACCURACY, 500, XP_GROUP_OFFIC);
 			AddXP(pchar, SKILL_SNEAK, 750, XP_GROUP_OFFIC);
 			Locations[FindLocation("greenford_warehouse")].vcskip = true;
+			
+			Pchar.quest.mysterious_plants.setwarehouse = true;
 			Pchar.quest.Apothecary_Enter_Warehouse.win_condition.l1 = "location";
 			Pchar.quest.Apothecary_Enter_Warehouse.win_condition.l1.character = PChar.id;
 			Pchar.quest.Apothecary_Enter_Warehouse.win_condition.l1.location = "greenford_warehouse";
 			Pchar.quest.Apothecary_Enter_Warehouse.win_condition = "Apothecary entered warehouse";
+			}
 		break;
 		
-		case "Reported Indians in Warehouse":
+
+				
+		case "Setup Warehouse"://PW setup warehouse (after dialog with steven) if you lost,killed or didn't follow indian 
+			pchar.quest.Apothecary_indian_detour.win_condition.l1 = "locator";
+			pchar.quest.Apothecary_indian_detour.win_condition.l1.location = "Greenford_suburb";
+			pchar.quest.Apothecary_indian_detour.win_condition.l1.locator_group = "reload";
+			pchar.quest.Apothecary_indian_detour.win_condition.l1.locator = "door_15";
+			pchar.quest.Apothecary_indian_detour.win_condition = "Apothecary Not This Way";
+
+			Pchar.quest.Apothecary_Enter_Warehouse.win_condition.l1 = "location";
+			Pchar.quest.Apothecary_Enter_Warehouse.win_condition.l1.character = PChar.id;
+			Pchar.quest.Apothecary_Enter_Warehouse.win_condition.l1.location = "greenford_warehouse";
+			Pchar.quest.Apothecary_Enter_Warehouse.win_condition = "Apothecary entered warehouse";
+			
+			AddQuestRecord("plants", 42);
+			DeleteAttribute(&Locations[FindLocation("Greenford_town")],"vcskip");// PW restore NPCs in town area
+			locations[FindLocation("Greenford_suburb")].reload.l8.disable = 0;//PW unlock warehouse now
+			locations[FindLocation("Greenford_suburb")].reload.l13.disable = 0;//PW unlock warehouse now
+			Locations[FindLocation("Greenford_suburb")].vcskip = true;
+			Locations[FindLocation("greenford_warehouse")].vcskip = true;
+			//PW use below attribute to prevent you telling greenford commander you followed indian to warehouse
+			//will wipe when enter the warehouse (you then would have something to report)
+			Pchar.quest.apothecary_no_follow_indian.win_condition.l1 = "location";
+			Pchar.quest.apothecary_no_follow_indian.win_condition.l1.character = PChar.id;
+			Pchar.quest.apothecary_no_follow_indian.win_condition.l1.location = "greenford_warehouse";
+			Pchar.quest.apothecary_no_follow_indian.win_condition = "Setup Warehouse3";
+					
+//PW I think blockade check has to be set when in the location to function properly	
+			pchar.quest.blockade.win_condition.l1 = "location";
+			Pchar.quest.blockade.win_condition.l1.character = PChar.id;
+			pchar.quest.blockade.win_condition.l1.location = "Greenford_suburb";
+			pchar.quest.blockade.win_condition = "Reset Blockade";
+			
+		break;
+
+		case "Reset Blockade"://PW I think it has to be set when in the location to function properly
+			if (!CheckAttribute (pchar,"quest.mysterious_plants.blockade"))
+			{
+				StartBlockadeCheck("Greenford_suburb");
+		
+				//TraceAndLog("test blockade");
+			}
+		break;
+
+		case "Setup Warehouse3"://PW 
+			//PW just do something here really to do with removing apothecary_no_follow_indian.win_condition
+			DeleteAttribute(&pchar, "quest.mysterious_plants.Lost_Indian");
+		break;
+
+
+		case "Reported Indians in Warehouse"://Report to Greenford commander clears warehouse scenes
 			DeleteAttribute(&Pchar,"quest.Apothecary_Enter_Warehouse");
-			DeleteAttribute(&Locations[FindLocation("greenford_warehouse")],"vcskip");
+			
 			LAi_QuestDelay("Apothecary Remove Baricade",0);
 			PChar.quest.mysterious_plants.indians.safe = true;
 			PChar.quest.mysterious_plants.reported_crime.inwarehouse = true;
@@ -1117,12 +1461,13 @@ void SideQuestComplete(string sQuestName)
 			AddXP(pchar, SKILL_LEADERSHIP, 1000, XP_GROUP_OFFIC);
 		break;
 		
-		case "Apothecary Not This Way":
+		case "Apothecary Not This Way"://PW indian guarding warehouse rear
 			LAi_SetActorType(Pchar);
 			if(!CheckAttribute(Pchar,"quest.mysterious_plants.guardwarehouse"))
 			{
 				indianid = 1+rand(2);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 1, true, 1.0, "indian"+indianid, "reload", "reload_1");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				Pchar.quest.mysterious_plants.guardwarehouse = sld.index;
 				LAi_StoreFantom(sld);
 			}
@@ -1139,13 +1484,13 @@ void SideQuestComplete(string sQuestName)
 			LAi_ActorDialog(sld,pchar,"",1.0,0);
 		break;
 		
-		case "Apothecary seen by guard warehouse":
+		case "Apothecary seen by guard warehouse"://PW indian guarding warehouse rear
 			LAi_ActorRunToLocator(PChar,"reload","reload_1","Apothecary let's try it again",-1);
 			sld = &characters[sti(Pchar.quest.mysterious_plants.guardwarehouse)];
 			LAi_ActorRunToLocator(sld,"reload","door_14","",-1);
 		break;
 		
-		case "Apothecary let's try it again":
+		case "Apothecary let's try it again"://PW indian guarding warehouse rear
 			sld = &characters[sti(Pchar.quest.mysterious_plants.guardwarehouse)];
 			ChangeCharacterAddressGroup(sld,"none","","");
 			LAi_SetPlayerType(PChar);
@@ -1163,37 +1508,44 @@ void SideQuestComplete(string sQuestName)
 		
 		case "Apothecary entered warehouse":
 			//First check trough which door we came
+			StopBlockadeCheck ("Greenford_suburb");
 			DeleteAttribute(&Locations[FindLocation("greenford_warehouse")],"vcskip");
 			if(PChar.location.locator == "reload1")
 			{
 				//Front Door: This means ambush time
 				//Lock the doors
+
 				Locations[FindLocation(PChar.location)].reload.l1.disable = true;
-				Locations[FindLocation(PChar.location)].reload.l1.disable = true;
+				Locations[FindLocation(PChar.location)].reload.l2.disable = true;//PW was duplicate l1
 				//Make the ambush 12 8 7 6
 				indianid = 1+rand(2);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian"+indianid, "goto", "goto2");
 				GiveItem2Character(sld,"indian_treasure_note");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				LAi_group_MoveCharacter(sld, "Indian Ambush");
 				Pchar.quest.mysterious_plants.indianambush.indian0 = sld.index;
 				indianid = 1+rand(2);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian"+indianid, "goto", "goto12");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				LAi_group_MoveCharacter(sld, "Indian Ambush");
 				Pchar.quest.mysterious_plants.indianambush.indian1 = sld.index;
 				indianid = 1+rand(2);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian"+indianid, "goto", "goto8");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				LAi_group_MoveCharacter(sld, "Indian Ambush");
 				Pchar.quest.mysterious_plants.indianambush.indian2 = sld.index;
 				indianid = 1+rand(2);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian"+indianid, "goto", "goto7");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				LAi_group_MoveCharacter(sld, "Indian Ambush");
 				Pchar.quest.mysterious_plants.indianambush.indian3 = sld.index;
 				indianid = 1+rand(2);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian"+indianid, "goto", "goto6");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				LAi_group_MoveCharacter(sld, "Indian Ambush");
 				Pchar.quest.mysterious_plants.indianambush.indian4 = sld.index;
 				//Only get help if you saved your crewmember
-				if(CheckAttribute(Pchar,"quest.mysterious_plants.crewmember_killed"))
+				if(GetAttribute(Pchar,"quest.mysterious_plants.crewmember.killed") == false)
 				{
 					LAi_QuestDelay("PreProcess Cavalry Apothecary",0); //Let's generate the characters already
 					LAi_QuestDelay("Apothecary enter the Cavalry",20); //You have to survive 20 seconds
@@ -1213,6 +1565,7 @@ void SideQuestComplete(string sQuestName)
 				LAi_QuestDelay("Apothecary Sneak in Warehouse",0);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian1", "goto", "goto1");
 				GiveItem2Character(sld,"indian_treasure_note");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				LAi_SetActorType(sld);
 				LAi_ActorTurnToLocator(sld,"reload","reload1");
 				sld.Dialog.Filename = "apothecary_quest.c";
@@ -1220,6 +1573,7 @@ void SideQuestComplete(string sQuestName)
 				LAi_group_MoveCharacter(sld, "Indian Ambush");
 				indianid = 1+rand(2);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian2", "goto", "goto2");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				LAi_ActorTurnToLocator(sld,"goto","goto1");
 				Pchar.quest.mysterious_plants.indianambush.indian1 = sld.index;
 				sld.Dialog.Filename = "apothecary_quest.c";
@@ -1227,10 +1581,12 @@ void SideQuestComplete(string sQuestName)
 				LAi_group_MoveCharacter(sld, "Indian Ambush");
 			}
 			LAi_QuestDelay("Apothecary Remove Baricade",0);
+			DeleteAttribute(&PChar,"quest.mysterious_plants.crewmember.killed");//PW moved here so .Killed can persist up to here if you want to tell Greenford_commander up to here
+			pchar.quest.mysterious_plants.reported_crime = false;//PW so that attribute exists if you didn't report before now you don't report the crewmember attack but either their use of the warehouse or conversation.
 		break;
 		
 		case "PreProcess Cavalry Apothecary":
-			for (i = 0; i <= 15; i++)
+			for (i = 0; i <= 8; i++)//PW some comments that warehouse far too crowded was 15 now 8
 			{
 				sld = LAi_CreateFantomCharacterExOt(true, GetBoardingCrewType(PChar), sti(pchar.rank), false, 0.0, LAi_GetBoardingModel(PChar, ""), "goto", "goto11");
 				EquipFromLocker(sld);
@@ -1304,7 +1660,7 @@ void SideQuestComplete(string sQuestName)
 			else
 			{
 				//Still need to set the one who talked to us back to warrior type
-				crewhelpid3 = "crewmember"+15;
+				crewhelpid3 = "crewmember"+8;//PW changed to match earlier loop number change was 15 now 8
 				sld = &characters[sti(Pchar.quest.mysterious_plants.crewhelp.(crewhelpid3))];
 				LAi_SetWarriorType(sld);
 			}
@@ -1334,7 +1690,7 @@ void SideQuestComplete(string sQuestName)
 			//Have dialog with crewmember again
 			if(CheckAttribute(Pchar,"quest.mysterious_plants.crewmembers_helped_ambush"))
 			{
-				string crewhelpid6 = "crewmember"+15;
+				string crewhelpid6 = "crewmember"+8;//PW match loop size was 15 now 8
 				sld = &characters[sti(Pchar.quest.mysterious_plants.crewhelp.(crewhelpid6))];
 				sld.Dialog.CurrentNode = "Won Ambush";
 				LAi_SetActorType(Pchar);
@@ -1354,8 +1710,9 @@ void SideQuestComplete(string sQuestName)
 			}
 			//Unlock Doors Again
 			Locations[FindLocation(PChar.location)].reload.l1.disable = false;
-			Locations[FindLocation(PChar.location)].reload.l1.disable = false;
+			Locations[FindLocation(PChar.location)].reload.l2.disable = false;//PW was duplicate l1
 			//Some cleanup
+			DeleteAttribute(&Locations[FindLocation("greenford_warehouse")],"vcskip");
 			pchar.quest.Apothecary_Exit_Warehouse.win_condition.l1 = "ExitFromLocation";
 			pchar.quest.Apothecary_Exit_Warehouse.win_condition.l1.location = Pchar.location;
 			pchar.quest.Apothecary_Exit_Warehouse.win_condition = "Apothecary Exit Warehouse 3";
@@ -1385,6 +1742,7 @@ void SideQuestComplete(string sQuestName)
 		case "Apothecary Exit Warehouse 3":
 			DeleteAttribute(&Pchar,"quest.mysterious_plants.crewhelp");
 			DeleteAttribute(&Pchar,"quest.mysterious_plants.indianambush");
+			DeleteAttribute(&Locations[FindLocation("greenford_warehouse")],"vcskip");
 			PChar.quest.mysterious_plants.indians.safe = true;
 		break;
 		
@@ -1445,6 +1803,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_group_FightGroups(LAI_GROUP_PLAYER, "Indian Ambush", true);
 			AddQuestRecord("plants", 25);
 			DeleteAttribute(&Pchar,"quest.mysterious_plants.indianambush");
+			DeleteAttribute(&Locations[FindLocation("greenford_warehouse")],"vcskip");
 			Pchar.quest.Killed_Indian_Ambush.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Killed_Indian_Ambush.win_condition.l1.character = sld.id;
 			Pchar.quest.Killed_Indian_Ambush.win_condition = "Apothecary Killed Indians Afterall";
@@ -1463,6 +1822,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_group_FightGroups(LAI_GROUP_PLAYER, "Indian Ambush", true);
 			AddQuestRecord("plants", 27);
 			DeleteAttribute(&Pchar,"quest.mysterious_plants.indianambush");
+			DeleteAttribute(&Locations[FindLocation("greenford_warehouse")],"vcskip");
 			Pchar.quest.Killed_Indian_Ambush.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Killed_Indian_Ambush.win_condition.l1.character = sld.id;
 			Pchar.quest.Killed_Indian_Ambush.win_condition = "Apothecary Killed Indians Afterall";
@@ -1482,6 +1842,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetPlayerType(Pchar);
 			DoQuestReloadToLocation("Greenford_suburb", "reload", "door_14", "");
 			DeleteAttribute(&Pchar,"quest.mysterious_plants.indianambush");
+			DeleteAttribute(&Locations[FindLocation("greenford_warehouse")],"vcskip");
 			PChar.quest.mysterious_plants.indians.safe = true;
 			PChar.quest.mysterious_plants.indians.overheard = true;
 			AddXP(pchar, SKILL_SNEAK, 1500, XP_GROUP_OFFIC);
@@ -1499,7 +1860,7 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.mysterious_plants.reported_crime.withproof = true;
 			ChangeRMRelation(PChar, GetCurrentLocationNation(), 14);
 			AddQuestRecord("plants", 30);
-			AddQuestRecord("indian_treasure", 7);
+			AddQuestRecord("indian_treasure", 8);
 			CloseQuestHeader("indian_treasure");
 			AddXP(pchar, SKILL_LEADERSHIP, 1500, XP_GROUP_OFFIC);
 		break;
@@ -1542,6 +1903,7 @@ void SideQuestComplete(string sQuestName)
 			{
 				indianid = 1+rand(2);
 				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian"+indianid, "goto", "goto8");
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
 				attr = "indian"+i;
 				pchar.quest.mysterious_plants.indianambush.(attr) = sld.index;
 				LAi_SetWarriorType(sld);
@@ -1558,6 +1920,9 @@ void SideQuestComplete(string sQuestName)
 		
 		case "Apothecary Arrived at Lighthouse":
 			//Some cleanup if you didn't follow the indian
+			DeleteAttribute(&PChar,"quest.mysterious_plants.No_Follow");//PW added attributes
+			DeleteAttribute(&PChar,"quest.mysterious_plants.Lost_Indian");//PW added attributes
+			DeleteAttribute(&Locations[FindLocation("Greenford_warehouse")],"vcskip");
 			LAi_QuestDelay("Apothecary Remove Baricade",0);
 			//Let's see how you did
 			if(CheckAttribute(PChar,"quest.mysterious_plants.indians.safe") && !isDay() && pchar.location.from_sea != "Oxbay_Lighthouse")
@@ -1574,6 +1939,7 @@ void SideQuestComplete(string sQuestName)
 				LAi_SetActorType(pchar);
 				LAi_ActorTurnToLocator(pchar,"ships_other","ship_1");
 				Ship_Detonate(characterFromID("Robert Cook"), false, false);
+				Ship_Serious_Boom(1, 1, 1);
 				LAi_QuestDelay("Apothecary Explosion Again",2);
 				LAi_QuestDelay("Apothecary Seen Ship Blow Up",4);
 			}
@@ -1581,6 +1947,7 @@ void SideQuestComplete(string sQuestName)
 		
 		case "Apothecary Explosion Again":
 			Ship_Detonate(characterFromID("Robert Cook"), false, false);
+			Ship_Serious_Boom(1, 1, 1);
 		break;
 		
 		case "Apothecary Seen Ship Blow Up":
@@ -1617,11 +1984,12 @@ void SideQuestComplete(string sQuestName)
 		
 		case "Apothecary Lighthouse Give Up":
 			AddQuestRecord("plants", 31);
-			PChar.quest.mysterious_plants.give_up = true;
+			PChar.quest.mysterious_plants.give_up = "true";
 		break;
 		
 		case "At Steven while Giving Up 1":
 			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD, "isIndian","","", 20, true, 1.0, "indian1", "reload", "reload1");
+			GiveItem2Character(sld,"tomahawk");
 			LAi_StoreFantom(sld);
 			LAi_SetActorType(sld);
 			LAi_SetActorType(PChar);
@@ -1657,11 +2025,13 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetPlayerType(pchar);
 			AddQuestRecord("plants",33);
 			CloseQuestHeader("plants");
-			DeleteAttribute(&pchar,"quest.mysterious_plants.guard_ship");
+			DeleteAttribute(&pchar,"quest.mysterious_plants");//PW tidy up all attributes in tree
+			Pchar.quest.plants = "done";//PW prevent repeat start dialogs
+			
 		//JRH-->
 			sld = &characters[GetCharacterIndex("Apothecary")];	
 			LAi_SetSitType(sld);						//dialog wasn't possible
-			DeleteAttribute(pchar,"quest.mysterious_plants.give_up");	//dialog repeated give up thing
+			pchar.quest.mysterious_plants.give_up = "false";	//dialog repeated give up thing //PW keep attribute for extended opium fetch
 		//<--JRH
 		break;
 		
@@ -1678,7 +2048,16 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.Indians_Attack_No_Opium.win_condition = "Failed To Deliver Opium To Indians";
 			sld = &characters[sti(PChar.quest.mysterious_plants.give_up.indian)];
 			LAi_ActorRunToLocation(sld, "reload", "reload1", "none", "", "", "Indian left steven for Cartagena", 45.0);
+			//PW-->
+			sld = &characters[GetCharacterIndex("Apothecary")];	
+			LAi_SetSitType(sld);						//dialog wasn't possible
+			pchar.quest.mysterious_plants.give_up = "false";	//PW dialog repeated give up but want to leave give up extension fetch opium effects
+			DeleteAttribute(&pchar,"quest.mysterious_plants.guard_ship");
+			//DeleteAttribute(pchar,"quest.mysterious_plants.heard_job");//PW for payback dialog in Cartagena to work
+			
+		//<--PW
 		break;
+
 		
 		case "Indian left steven for Cartagena":
 			LAi_SetPlayerType(pchar);
@@ -1690,7 +2069,7 @@ void SideQuestComplete(string sQuestName)
 			sld = &characters[sti(PChar.quest.mysterious_plants.give_up.indian)];
 			ChangeCharacterAddressGroup(sld,"Cartagena Hotel", "goto", "goto1");
 			LAi_SetStayType(sld);
-			sld.Dialog.CurrentNode = "Pay Opium";
+			sld.Dialog.CurrentNode = "Bring Opium";
 			pchar.quest.Add_Native_In_Hotel.win_condition.l1 = "ExitFromLocation";
 			pchar.quest.Add_Native_In_Hotel.win_condition.l1.location = "Cartagena Hotel";
 			pchar.quest.Add_Native_In_Hotel.win_condition = "Place Indian In Hotel Again";
@@ -1716,10 +2095,13 @@ void SideQuestComplete(string sQuestName)
 		break;
 		
 		case "Indians will slay you now!":
+/* -->PW this code in abeyance until impact across storylines better evaluated
 			for (i = 0; i < 1; i++)
 			{
 				indianid = 1+rand(2);
-				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian"+indianid, "reload", LAi_FindRandomLocator("reload"));
+				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 20, true, 1.0, "indian"+indianid, "reload",LAi_FindRandomLocator("reload")); 				
+				GiveItem2Character(sld,"tomahawk");//PW make doubly sure they are always armed!!
+				LAi_FindRandomLocator("reload"));
 				if(rand(99) > 50)
 				{
 					TakeNItems(sld,"curare",1+rand(4));
@@ -1740,13 +2122,28 @@ void SideQuestComplete(string sQuestName)
 				lx.disable = true;
 			}
 			LAi_group_FightGroups(LAI_GROUP_PLAYER, "Indian Ambush", true);
+// <--PW this code in abeyance until impact across storylines better evaluated
+*/
+			DeleteAttribute(&pchar,"quest.Add_Native_In_Hotel");//PW remove payback indian from Cartagena Hotel
+			sld = &characters[sti(PChar.quest.mysterious_plants.give_up.indian)];//PW remove payback indian from Cartagena Hotel
+			ChangeCharacterAddressGroup(sld,"none", "", "");	//PW remove payback indian from Cartagena Hotel
+			LAi_UnStoreFantom(sld);//PW remove payback indian from Cartagena Hotel
+			LAi_SetPlayerType(pchar);
+			
 			DeleteAttribute(&pchar,"vcskip");
-			DeleteAttribute(&pchar,"quest.mysterious_plants.give_up");
-			AddQuestRecord("plants",36);
+			DeleteAttribute(&pchar,"quest.mysterious_plants");//PW tidy up all attributes in tree
+			AddQuestRecord("plants",40);// PW should be 36 if Indian Ambush is active (final attack if no opium delivery)
 			CloseQuestHeader("plants");
+			Pchar.quest.plants = "done";
+						
+			
+/*
+// --> PW this code in abeyance until impact across storylines better evaluated
 			PChar.quest.wow_you_won_from_ambush.win_condition.l1 = "Group_Death";
 			PChar.quest.wow_you_won_from_ambush.win_condition.l1.group = "Indian Ambush";
 			PChar.quest.wow_you_won_from_ambush.win_condition = "Release Location from Indian Ambush";
+// <--PW this code in abeyance until impact across storylines better evaluated
+*/ 
 		break;
 		
 		case "Release Location from Indian Ambush":
@@ -1758,15 +2155,20 @@ void SideQuestComplete(string sQuestName)
 			}
 		break;
 		
-		case "Give Up Completed in Cartagena":
+		case "Give Up Completed in Cartagena"://given opium compensation
 			sld = &characters[sti(PChar.quest.mysterious_plants.give_up.indian)];
+			LAi_SetActorType(sld);
+			TakeNItems(Pchar, "opium", -(sti(GetAttribute(PChar,"quest.mysterious_plants.give_up.amount"))));
+			LAi_ActorRunToLocation(sld, "reload", "reload1", "none", "", "", "", 45.0);//PW remove indian
+
 			LAi_UnStoreFantom(sld);
 			LAi_SetPlayerType(pchar);
 			AddQuestRecord("plants",35);
 			CloseQuestHeader("plants");
-			DeleteAttribute(&pchar,"quest.mysterious_plants.guard_ship");
-			DeleteAttribute(&pchar,"quest.mysterious_plants.give_up");
+			DeleteAttribute(&pchar,"quest.mysterious_plants");//PW tidy up all attributes in tree
+			Pchar.quest.plants = "done";//PW avoid repeat start quest dialog
 			DeleteAttribute(&pchar,"quest.Indians_Attack_No_Opium");
+			DisableFastTravel(false);// PW unblock fast travel in case still set
 		break;
 		
 		case "Depart To Columbia for Apothecary":
@@ -1784,8 +2186,17 @@ void SideQuestComplete(string sQuestName)
 		
 		case "Sail To Cartagena for Apothecary":
 			DoQuestReloadToLocation("Cartagena_port","reload","reload1","_");
-			WaitDate("", 0,0,20,0,0);
-			StoreCharacterShip(pchar);
+			DisableFastTravel(true);// PW block fast travel to ships
+			//StoreCharacterShip(pchar);//PW included in loop for companions (so their crew don't starve either)
+			shipname = GetMyShipName(PChar);
+			for (i = 0; i < COMPANION_MAX; i++) {
+				limit = GetCompanionIndex(PChar, i);
+				if (limit < 0) continue;
+				ch = GetCharacter(limit);
+				StoreCharacterShip(ch);
+			}	
+			Pchar.Ship.Name	= shipname;
+			WaitDate("", 0,0,20,12,0);// PW AFTER we have stored the ship(s), + 12 hours so daytime
 			sld = characterFromID("Robert Cook");
 			SetCharacterShipLocation(sld, "Cartagena_port");
 			LAi_type_actor_Reset(sld);
@@ -1832,16 +2243,21 @@ void SideQuestComplete(string sQuestName)
 		
 		case "Return to Greenford for Apothecary":
 			LAi_QuestDelay("Finish Beggar Find",0);
-			RestoreCharacterShip(pchar);
+			
+			//Locations[FindLocation("Greenford_port")].reload.l1.disable = 0;
+			DisableFastTravel(false);// PW remove block on fast travel (to ships)
+			//RestoreCharacterShip(pchar);//PW not used here to reduce food use and possible deaths and mutiny
 			sld = characterFromID("Robert Cook");
 			SetCharacterShipLocation(sld, "Greenford_port");
 			ChangeCharacterAddressGroup(sld,"Greenford_port","goto","goto21");
-			SetCharacterShipLocation(Pchar, "Greenford_Port");			//JRH pchar ship not there?
+			SetCharacterShipLocation(Pchar, "Greenford_port");			//JRH pchar ship not there?
+			WaitDate("", 0,0,20,0,0);
 			DoQuestReloadToLocation("Greenford_port","reload","reload1","Returned in Greenford for Apothecary Arive");
 		break;
 		
 		case "Returned in Greenford for Apothecary Arive":
-			WaitDate("", 0,0,20,0,0);
+			
+			//WaitDate("", 0,0,20,0,0);//PW moved earlier case
 			sld = characterFromID("Robert Cook");
 			LAi_SetActorType(sld);
 			LAi_SetActorType(pchar);
@@ -1852,6 +2268,13 @@ void SideQuestComplete(string sQuestName)
 		break;
 //pär
 		case "Returned in Greenford for Apothecary":
+			//RestoreCharacterShip(pchar);//PW moved to reduce food use and possible deaths and mutiny and in loop
+			for (i = 0; i < COMPANION_MAX; i++) {//PW now loop for whole pchar fleet
+				limit = GetCompanionIndex(PChar, i);
+				if (limit < 0) continue;
+				ch = GetCharacter(limit);
+				RestoreCharacterShip(ch);
+			}		
 			sld = characterFromID("Robert Cook");
 			LAi_type_actor_Reset(sld);
 			LAi_SetPlayerType(pchar);
@@ -1860,7 +2283,6 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.mysterious_plants.heard_job = "Returned";
 			AddQuestRecord("plants",43);
 			TakeItemFromCharacter(pchar, "hotel_keys");
-
 			LAi_QuestDelay("dusty_plants",2);
 		break;
 
@@ -1939,6 +2361,7 @@ void SideQuestComplete(string sQuestName)
 		case "Got information from Indian Beggar":
 			AddQuestRecord("plants",38);
 			GiveItem2Character(pchar,"hotel_flyer");
+			DeleteAttribute(&Pchar,"quest.Killed_Beggar_Cartagena");//PW prevent qb entry "you killed..."
 			AddXP(pchar, SKILL_LEADERSHIP, 500, XP_GROUP_OFFIC);
 			AddXP(pchar, SKILL_SNEAK, 800, XP_GROUP_OFFIC);
 			LAi_QuestDelay("Finish Beggar Find",0);
@@ -2397,12 +2820,16 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "Plants_end":
-			Pchar.quest.mysterious_plants.heard_job = "finished_now";
+			Pchar.quest.mysterious_plants.heard_job = "finished_now";//PW not used??
 			AddQuestRecord("plants",49);
 			CloseQuestHeader("plants");
 			TakeNItems(Pchar, "ayahuasca", -4);
 			TakeNItems(Pchar, "doctortoolkit", 1);
 			AddXP(pchar, SKILL_SNEAK, 10000, XP_GROUP_OFFIC);
+			DeleteAttribute(&pchar,"quest.mysterious_plants");//PW tidy up all attributes in tree
+			Pchar.quest.plants = "done";//PW prevent repeat dialogs (restart)
+			
+           		
 		break;
 //pär
 
@@ -2410,7 +2837,7 @@ void SideQuestComplete(string sQuestName)
 ///// Smugglers: Thomas O Reily is annoying
 ///////////////////////////////////////////////////////////////
 
-		case "Set Up Meeting Beach Thomas":
+		case "Set up Meeting Beach Thomas":
 			PChar.quest.Thomas_See_Deal_expire.win_condition.l1 = "Timer";
 			PChar.quest.Thomas_See_Deal_expire.win_condition.l1.date.day = GetAddingDataDay(0,0,2);
 			PChar.quest.Thomas_See_Deal_expire.win_condition.l1.date.month = GetAddingDataMonth(0,0,2);
@@ -2422,22 +2849,30 @@ void SideQuestComplete(string sQuestName)
 		break;
 		
 		case "Thomas Makes Deal Natives":
-			if(!isDay())
+			if(CheckAttribute(PChar,"quest.smuggling_guild.quests.see_thomas_make_deal.meet_at_beach"))//PW check if Failed because of 2 day timer without this would happen if onshore at night later since set
 			{
-				ChangeCharacterAddressGroup(CharacterFromID("Thomas O'Reily"),"Oxbay_shore_02","goto","citizen07");
-				LAi_SetActorType(CharacterFromID("Thomas O'Reily"));
-				LAi_ActorTurnToLocator(CharacterFromID("Thomas O'Reily"),"goto","goto08");
-				sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "indian1", "goto", "citizen08");
-				PChar.quest.smuggling_guild.quests.see_thomas_make_deal.indian = sld.index;
-				LAi_SetActorType(sld);
-				LAi_ActorTurnToLocator(sld,"goto","goto07");
-				LAi_SetActorType(pchar);
-				PChar.quest.smuggling_guild.quests.see_thomas_make_deal = true;
-				LAi_QuestDelay("Thomas Makes Deal Natives 2",3);
-			}
-			else
-			{
-				LAi_QuestDelay("Set Up Meeting Beach Thomas Again",0);
+				if(!isDay())
+				{
+					if(PChar.location.locator == "reload1")
+					{
+						ChangeCharacterAddressGroup(PChar,"Oxbay_shore_02","goto","citizen06");
+					}
+	
+					ChangeCharacterAddressGroup(CharacterFromID("Thomas O'Reily"),"Oxbay_shore_02","goto","citizen07");
+					LAi_SetActorType(CharacterFromID("Thomas O'Reily"));
+					LAi_ActorTurnToLocator(CharacterFromID("Thomas O'Reily"),"goto","goto08");
+					sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", 10, true, 1.0, "indian1", "goto", "citizen08");
+					PChar.quest.smuggling_guild.quests.see_thomas_make_deal.indian = sld.index;
+					LAi_SetActorType(sld);
+					LAi_ActorTurnToLocator(sld,"goto","goto07");
+					LAi_SetActorType(pchar);
+					PChar.quest.smuggling_guild.quests.see_thomas_make_deal = true;
+					LAi_QuestDelay("Thomas Makes Deal Natives 2",3);
+				}
+				else
+				{
+					LAi_QuestDelay("Set Up Meeting Beach Thomas Again",0);
+				}
 			}
 		break;
 		
@@ -2490,6 +2925,8 @@ void SideQuestComplete(string sQuestName)
 			AddQuestRecord("smuggle_ThomasOReily", 2);
 			CloseQuestHeader("smuggle_ThomasOReily");
 			ChangeSmugglerLiking(pchar,10);
+			TakeNItems(PChar, "meds1", 1);//PW now get first med as "reward"
+			DeleteAttribute(pchar,"quest.smuggling_guild.quests.see_thomas_make_deal.time_to_report");
 			AddXP(pchar, SKILL_LEADERSHIP, 400, XP_GROUP_OFFIC);
 			AddXP(pchar, SKILL_SNEAK, 400, XP_GROUP_OFFIC);
 		break;
@@ -2500,6 +2937,8 @@ void SideQuestComplete(string sQuestName)
 
 		case "Smugglers Request Collector":
 			LAi_QuestDelay("learn about smugglers", 0.0);
+			if(PChar.location.locator == "reload4")
+			{
 			sld = &characters[GetCharacterIndex("Greenford_Smuggler")];
 			ChangeCharacterAddressGroup(sld,"Greenford_port","goto","goto4");
 			sld.Dialog.CurrentNode = "Request for Collector 1";
@@ -2508,14 +2947,37 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetActorType(sld);
 			LAi_ActorWaitDialog(PChar, sld);
 			LAi_ActorDialog(sld,pchar,"",0.5,0);
+			}			
+			if(PChar.location.locator == "reload1")//PW via fast travel to your ship then shore
+			{
+			sld = &characters[GetCharacterIndex("Greenford_Smuggler")];
+			ChangeCharacterAddressGroup(sld,"Greenford_port","goto","goto21");
+			sld.Dialog.CurrentNode = "Request for Collector 1";
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar,"goto","goto20");
+			LAi_SetActorType(sld);
+			LAi_ActorWaitDialog(PChar, sld);
+			LAi_ActorDialog(sld,pchar,"",0.5,0);
+			}	
 			PChar.quest.mysterious_plants.met_smuggler = true;
 			PChar.quest.smuggle_collector.made_offer_collector = true;
 			Locations[FindLocation(PChar.location)].reload.l2.disable = true;		//JRH: temp disabled to avoid too quick reload back to town (getting stuck)
 		break;
 		
 		case "Smugglers Collector Meet in Tavern":
+			
+			if(PChar.location.locator == "reload4")
+			{
 			sld = &characters[GetCharacterIndex("Greenford_Smuggler")];
-			LAi_ActorRunToLocator(PChar,"goto","goto4","Smugglers Collector Meet in Tavern 2",3.0);
+			LAi_ActorRunToLocator(sld,"reload","reload4","Smugglers Collector Meet in Tavern 2",3.0);
+			LAi_ActorRunToLocator(PChar,"goto","goto4","",20);
+			}
+			if(PChar.location.locator == "reload1")
+			{
+			sld = &characters[GetCharacterIndex("Greenford_Smuggler")];
+			LAi_ActorRunToLocator(sld,"goto","goto4","Smugglers Collector Meet in Tavern 2",3.0);
+			LAi_ActorRunToLocator(PChar,"goto","goto20","",20);
+			}
 			SetQuestHeader("smuggle_collector");
 			AddQuestRecord("smuggle_collector", 1);
 		break;
@@ -2556,7 +3018,7 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.smuggle_collector_expire.win_condition.l1.date.day = GetAddingDataDay(0,2,0);
 			PChar.quest.smuggle_collector_expire.win_condition.l1.date.month = GetAddingDataMonth(0,2,0);
 			PChar.quest.smuggle_collector_expire.win_condition.l1.date.year = GetAddingDataYear(0,2,0);
-			PChar.quest.smuggle_collector_expire.win_condition = "possible_for_resque_artois";
+			PChar.quest.smuggle_collector_expire.win_condition = "Failed Collectors Offer";
 		break;
 		
 		case "Failed Collectors Offer":
@@ -2579,17 +3041,23 @@ void SideQuestComplete(string sQuestName)
 		break;
 		
 		case "Finish Collector Quest Smugglers":
-			ChangeSmugglerLiking(pchar, 5);
+			ChangeSmugglerLiking(pchar, 10);//PW was 5 but this is a crappy deal you accepted so they should be more pleased
+			// so you gained 15 overall, could have lost 10 on rejecting quest at all or 15 if accepted and then ignored/failed
 			TakeNItems(PChar, "pistolbow", -10);
-			TakeNItems(PChar, "tar", 5);
-			AddMoneyToCharacter(pchar, 200);
+			TakeNItems(PChar, "meds2", 1);//PW get 2nd med rather than 5 tar (so ammo mod off covered)
+			AddMoneyToCharacter(pchar, 500);
 			AddQuestRecord("smuggle_collector", 8);
-			AddQuestRecord("smuggle_collector", 9);		//JRH: hint return to apothecary
+
+			if(CheckAttribute(Pchar,"quest.mysterious_plants.guard_ship"))//PW if plants not finished
+			{
+				AddQuestRecord("smuggle_collector", 9);		//JRH: hint return to apothecary
+			}
 			CloseQuestHeader("smuggle_collector");
 			DeleteAttribute(PChar,"quest.smuggle_collector.meet_buyer");
 			pchar.quest.smuggling_guild.quests.collector = true;
 			AddXP(pchar, SKILL_COMMERCE, 2500, XP_GROUP_OFFIC);
 			AddXP(pchar, SKILL_SNEAK, 1000, XP_GROUP_OFFIC);
+			DeleteAttribute(PChar, "quest.smuggle_collector_expire");	// PW stop timer from calling "Failed Collectors Offer"
 		break;
 ///////////////////////////////////////////////////////////////
 ///// Indian Treasure Side Quest
@@ -2630,8 +3098,8 @@ void SideQuestComplete(string sQuestName)
 			}
 			HideTreasureAtLocation("Greenford_suburb", x, y, z, "Minersspade", "Open Indian Treasure");
 			AddItemToTreasureAtLocation("Greenford_suburb", "vegetal", 10);
-			AddItemToTreasureAtLocation("Greenford_suburb", "quiver", 1);
-			AddItemToTreasureAtLocation("Greenford_suburb", "curare", 4);
+			if (ENABLE_AMMOMOD) AddItemToTreasureAtLocation("Greenford_suburb", "quiver", 1);//won't get if ammo off?
+			AddItemToTreasureAtLocation("Greenford_suburb", "meds3", 1);//PW med3 rather than curare (so ammo mod off covered)
 			AddItemToTreasureAtLocation("Greenford_suburb", "indian14", 1);
 		break;
 		
@@ -2639,8 +3107,8 @@ void SideQuestComplete(string sQuestName)
 			x = 17.455; y=2.0268; z=72.565;
 			HideTreasureAtLocation("Greenford_suburb", x, y, z, "Minersspade", "Open Indian Treasure");
 			AddItemToTreasureAtLocation("Greenford_suburb", "vegetal", 10);
-			AddItemToTreasureAtLocation("Greenford_suburb", "quiver", 1);
-			AddItemToTreasureAtLocation("Greenford_suburb", "curare", 4);
+			if (ENABLE_AMMOMOD) AddItemToTreasureAtLocation("Greenford_suburb", "quiver", 1);
+			AddItemToTreasureAtLocation("Greenford_suburb", "meds3", 1);//PW med3 rather than curare (so ammo mod off covered)
 			AddItemToTreasureAtLocation("Greenford_suburb", "indian14", 1);
 		break;
 		
@@ -2700,6 +3168,7 @@ void SideQuestComplete(string sQuestName)
 			AddXP(pchar, SKILL_ACCURACY, 500, XP_GROUP_PARTY);
 			pchar.quest.telescope_quest.finished = true;
 			TakeItemFromCharacter(pchar, "book_exorcist"); // PB: Remove superfluous item
+			TakeNItems(PChar, "meds4", 1);//PW get 4th med as swap
 		break
 
 ///////////////////////////////////////////////////////////////
@@ -2798,6 +3267,7 @@ void SideQuestComplete(string sQuestName)
 // <-- KK
 
 		case "kill_him_all_in_gamboa_ship_complete":
+			PChar.quest.BlazeKilledFightingWithGamboa.over = "yes";
 			LAi_QuestDelay("kill_him_all_in_gamboa_ship_2_complete", 2.0);
 		break;
 
@@ -2931,8 +3401,13 @@ void SideQuestComplete(string sQuestName)
 
 			UpdateRelations();
 
+			Preprocessor_AddQuestData("Joseph Claude Le Moigne", GetMyFullName(CharacterFromID("Joseph Claude Le Moigne")));
+			Preprocessor_AddQuestData("French", GetNationDescByType(GetTownNation("Falaise de Fleur")));
 			SetQuestHeader("Hire_by_france_for_defeat_england_corvette");
 			AddQuestRecord("Hire_by_france_for_defeat_england_corvette", 1);
+			Preprocessor_Remove("French");
+			Preprocessor_Remove("Joseph Claude Le Moigne");
+
 			pchar.quest.killing_pirate_near_fdf.win_condition.l1 = "NPC_death";
 			pchar.quest.killing_pirate_near_fdf.win_condition.l1.character = "Eng Captain Near FdF";
 			pchar.quest.killing_pirate_near_fdf.win_condition = "killing_pirate_near_fdf";
@@ -3084,6 +3559,18 @@ void SideQuestComplete(string sQuestName)
 			characters[GetCharacterIndex("Zaid Murro")].quest.bandits = "3";
 		break;
 
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Raoul Calmes fight scene (moved from "standard" quest code by Grey Roger)
+/////////////////////////////////////////////////////////////////////////////
+
+		case "raoul_calmes_fight":
+			LAi_LocationFightDisable(&Locations[FindLocation("house_of_smuggler_in_FiF")], false);
+			LAi_SetActorType(CharacterFromID("raoul calmes"));
+			LAi_ActorAttack(CharacterfromID("raoul calmes"), pchar, "");
+			Characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "letters_1";
+		break;
 
 ///////////////////////////////////////////////////////////////
 // HELP THE BOATSWAIN + HELP THE LADY (CatalinaThePirate FB Quest)
@@ -3784,7 +4271,9 @@ void SideQuestComplete(string sQuestName)
 			LAi_QuestDelay("Hit_timer2", 0.0);
 
 			//Add journal entry
+			Preprocessor_AddQuestData("Geffrey Bampfylde", GetMyFullName(CharacterFromID("Geffrey Bampfylde")));
 			AddQuestRecord("Hitman", 5);
+			Preprocessor_Remove("Geffrey Bampfylde");
 		break;
 
 		case "Hit_Geffrey":
@@ -3843,7 +4332,9 @@ void SideQuestComplete(string sQuestName)
 			Pchar.quest.Hit_timer2.over = "yes";
 
 			//Add journal entry
+			Preprocessor_AddQuestData("Bampfylde", GetMyLastName(CharacterFromID("Geffrey Bampfylde")));
 			AddQuestRecord("Hitman", 7);
+			Preprocessor_Remove("Bampfylde");
 
 			//Give XP
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Leadership", 3000); }
@@ -3915,7 +4406,9 @@ void SideQuestComplete(string sQuestName)
 			//LAi_QuestDelay("Hit_timer3", 0.0); //SCM
 
 			//Add journal entry
+			Preprocessor_AddQuestData("Bampfylde", GetMyLastName(CharacterFromID("Geffrey Bampfylde")));
 			AddQuestRecord("Hitman", 8);
+			Preprocessor_Remove("Bampfylde");
 		break;
 
 		case "Hit_goto_QC_port":
@@ -4215,7 +4708,9 @@ void SideQuestComplete(string sQuestName)
 			Pchar.quest.Hit_timer5.over = "yes";
 
 			//Add journal entry
+			Preprocessor_AddQuestData("person", XI_ConvertString(PChar.sex));
 			AddQuestRecord("Hitman", 18);
+			Preprocessor_Remove("person");
 		break;
 
 		case "Hit_Mateus":
@@ -4265,9 +4760,9 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetStayType(CharacterFromID("Thug3")); //SCM
 			ChangeCharacterAddressGroup(CharacterFromID("Thug3"), "Muelle_church", "goto", "goto5"); //SCM
 
-			PChar.quest.Hit_congrats.win_condition.l1 = "locator";
+			PChar.quest.Hit_congrats.win_condition.l1 = "location"; // GR: was "locator", which doesn't work if 'win_condition.l1.locator' is commented out
 			PChar.quest.Hit_congrats.win_condition.l1.location = "Muelle_church";
-			PChar.quest.Hit_congrats.win_condition.l1.locator_group = "goto";
+			// PChar.quest.Hit_congrats.win_condition.l1.locator_group = "goto";
 			//PChar.quest.Hit_congrats.win_condition.l1.locator = "goto7"; //SCM
 			PChar.quest.Hit_congrats.win_condition.l1.character = PChar.id;
 			PChar.quest.Hit_congrats.win_condition = "Hit_congrats";
@@ -4287,15 +4782,15 @@ void SideQuestComplete(string sQuestName)
 		// dialog exit from Vito
 			LAi_SetPlayerType(PChar);
 			LAi_SetActorType(CharacterFromID("Vito Leone"));
-			LAi_ActorGoToLocation(CharacterFromID("Vito Leone"), "reload", "reload2", "none", "", "", "Hit_complete_end", 2.0); //SCM
+			LAi_ActorGoToLocation(CharacterFromID("Vito Leone"), "reload", "reload2", "none", "", "", "Hit_complete_end", 3.0); //SCM
 			LAi_SetActorType(CharacterFromID("Desiree' Muerte")); //SCM
-			LAi_ActorGoToLocation(CharacterFromID("Desiree' Muerte"), "reload", "reload2", "none", "", "", "Hit_complete_end", 2.0); //SCM
+			LAi_ActorGoToLocation(CharacterFromID("Desiree' Muerte"), "reload", "reload2", "none", "", "", "", 3.0); //SCM
 			LAi_SetActorType(CharacterFromID("Thug3")); //SCM
-			LAi_ActorGoToLocation(CharacterFromID("Thug3"), "reload", "reload2", "none", "", "", "Hit_complete_end", 2.0); //SCM
+			LAi_ActorGoToLocation(CharacterFromID("Thug3"), "reload", "reload2", "none", "", "", "", 3.0); //SCM
 			LAi_SetHuberStayType(characterFromID("Thug9")); //SCM
 			ChangeCharacterAddressGroup(CharacterFromID("Thug9"), "Muelle_church", "goto", "goto1"); //SCM
 			LAi_SetActorType(CharacterFromID("Thug9"));  //SCM
-			LAi_ActorRunToLocation(CharacterFromID("Thug9"), "reload", "reload1", "none", "", "", "Hit_complete_end", 2.0); //SCM
+			LAi_ActorRunToLocation(CharacterFromID("Thug9"), "reload", "reload1", "none", "", "", "", 2.0); //SCM
 		break;
 
 		case "Hit_complete_end":
@@ -4310,6 +4805,35 @@ void SideQuestComplete(string sQuestName)
 			CloseQuestHeader("Hitman");
 		break;
 
+		// GR: Easter Egg if you have a "Black Pearl" or variant -->
+		case "Hit_Sparrow_runs_away":
+			ch = CharacterFromID("Thug9");
+			LAi_SetActorType(ch);
+			ChangeCharacterAddressGroup(ch, "Hit_passage", "goto", "goto14");
+			LAi_ActorRunToLocation(ch, "reload", "Reload10", "none", "", "", "", 20.0);
+			ch.nation = PIRATE;
+			ch.flags.pirate = 6;
+			ch.flags.pirate.texture = 0;
+			GiveShip2Character(ch,GetCharacterShipID(PChar),PChar.Ship.Name,-1,PIRATE,true,true);
+			GiveShip2Character(PChar,"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
+			SetCharacterShipLocation(ch, "Muelle_port");
+			ShipsTypes[GetShipIndex(GetCharacterShipID(ch))].jetty = false;	// Otherwise stolen Pearl appears moored at jetty
+			ch.sailaway = true;
+			PChar.quest.Hit_Steal_Ship.win_condition.l1 = "location";
+			PChar.quest.Hit_Steal_Ship.win_condition.l1.location = GetCharacterShipLocation(PChar);
+			PChar.quest.Hit_Steal_Ship.win_condition = "Hit_Steal_Ship";
+		break;
+
+		case "Hit_Steal_Ship":
+			ch = CharacterFromID("Thug9");
+			ChangeCharacterAddress(ch, "none", "");
+			SetCharacterShipLocation(ch, "none");
+
+			LAi_SetActorType(PChar);
+			PChar.dialog.currentnode = "Sparrow_steals_ship";
+			LAi_ActorSelfDialog(PChar, "player_back");
+		break;
+		// <-- GR: Easter Egg if you have a "Black Pearl" or variant
 
 ///////////////////////////////////////////////////////////////
 // Peter Blood by Bartolomeu o Portugues
@@ -4351,9 +4875,9 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Bartolomeu O Portugues"));
 			LAi_SetImmortal(CharacterFromID("Bartolomeu o Portugues"), 1);
 			LAi_ActorFollowEverywhere(characterFromID("Bartolomeu o Portugues"), "", 60.0);
-			DisableFastTravel(true);
-			DisableMenuLaunch(true);
-			bSuppressResurrection = true;
+//			DisableFastTravel(true);
+//			DisableMenuLaunch(true);
+//			bSuppressResurrection = true;
 			SetQuestHeader("Bartolomeu");
 			AddQuestRecord("Bartolomeu", 1);
 			Pchar.quest.Bartolomeu.win_condition.l1 = "location";
@@ -4363,6 +4887,9 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "essai":
+			DisableFastTravel(true);
+			DisableMenuLaunch(true);
+			bSuppressResurrection = true;
 			SetCurrentTime(12, 0);
 			LAi_SetActorType(characterFromID("Bartolomeu O Portugues"));
 			Characters[GetCharacterIndex("Bartolomeu o Portugues")].dialog.currentnode = "came";
@@ -4752,6 +5279,10 @@ void SideQuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Bartolomeu o Portugues")].dialog.currentnode = "crewship";
 			LAi_ActorDialog(characterFromID("Bartolomeu o Portugues"), PChar, "", 1.0, 1.0);
 			AddQuestRecord("Bartolomeu", 6);
+
+			DisableFastTravel(false);
+			DisableMenuLaunch(false);
+			bSuppressResurrection = false;
 		break;
 
 		case "walkcrew":
@@ -4785,6 +5316,10 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "mercenaires":
+			DisableFastTravel(true);
+			DisableMenuLaunch(true);
+			bSuppressResurrection = true;
+
 			Locations[FindLocation("Redmond_Town_01")].reload.l1.disable = true;
 			Locations[FindLocation("Redmond_Town_01")].reload.l2.disable = true;
 			Locations[FindLocation("Redmond_Town_01")].reload.l3.disable = true;
@@ -5191,6 +5726,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "Turks_fin_timer":
 			Characters[GetCharacterIndex("Pieter Boelen")].Location = "none";
+			LAi_SetCivilianGuardianType(CharacterFromID("Pieter Boelen"));	// GR: otherwise he may follow you forever
 			Characters[GetCharacterIndex("Diego Cordoba")].Location = "none";
 			PChar.quest.Turkshelp = "end";
 			PChar.quest.Turkshelp.over = "yes";
@@ -5422,7 +5958,7 @@ void SideQuestComplete(string sQuestName)
 
 			if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
 			{
-			Locations[FindLocation("Cuba_Jungle_03")].locators_radius.goto.citizen010 = 2.0;				
+				Locations[FindLocation("Cuba_Jungle_03")].locators_radius.goto.citizen010 = 2.0;				
 				
 				pchar.quest.epeeperdue.win_condition.l1 = "locator";
 				pchar.quest.epeeperdue.win_condition.l1.location = "Cuba_Jungle_03";
@@ -5432,7 +5968,7 @@ void SideQuestComplete(string sQuestName)
 			}
 			else
 			{
-			Locations[FindLocation("Antigua_Jungle_01")].locators_radius.goto.citizen010 = 2.0;				
+				Locations[FindLocation("Antigua_Jungle_01")].locators_radius.goto.citizen010 = 2.0;				
 				
 				pchar.quest.epeeperdue.win_condition.l1 = "locator";
 				pchar.quest.epeeperdue.win_condition.l1.location = "Antigua_Jungle_01";
@@ -5443,10 +5979,12 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "cachette":
-			LAi_SetActorType(Pchar);
-			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
-			Pchar.dialog.currentnode = "Francis_sword";
-			LAi_ActorSelfDialog(Pchar, "player_back");
+			LAi_SetActorType(PChar);
+			PChar.Temp.self.dialog = PChar.dialog.currentnode;
+			PChar.dialog.currentnode = "Francis_sword";
+			LAi_ActorSelfDialog(PChar, "player_back");
+			if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) ItemSetPrice("old_journal2", 1);
+			else ItemSetPrice("old_journal", 1);
 		break;
 
 		case "jelaifini":
@@ -6341,6 +6879,7 @@ void SideQuestComplete(string sQuestName)
 			AddMoneyToCharacter(pchar, 40000);
 			AddQuestRecord("Contact", 8);
 			CloseQuestHeader("Contact");
+			ItemSetPrice("small_chest", 1);		// GR: can now dump chest into a chest
 		break;
 
 
@@ -6367,13 +6906,11 @@ void SideQuestComplete(string sQuestName)
 		//	locations[FindLocation("Tortuga_town_01")].reload.l6.disable = 0;
 			locations[FindLocation("Tortuga_port")].reload.l18.disable = 0;			//JRH: moved Will Turner's house
 			// PB -->
-//			Characters[GetCharacterIndex("Elizabeth Swann")].model = "lizswann";		//GR: use new pirate Elizabeth Swann model
-//			Characters[GetCharacterIndex("Elizabeth Swann")].model.ani = "woman_sit";
-			SetModelFromID(CharacterFromID("Elizabeth Swann"), "lizswann");
-			GiveItem2Character(GetCharacterIndex("Elizabeth Swann"), "blade6");
-			GiveItem2Character(GetCharacterIndex("Elizabeth Swann"), "pistol7");
-			Characters[GetCharacterIndex("Elizabeth Swann")].equip.blade = "blade6";
-			Characters[GetCharacterIndex("Elizabeth Swann")].equip.gun = "pistol7";
+			SetModelFromID(CharacterFromID("Elizabeth Swann"), "lizswann");			//GR: use new pirate Elizabeth Swann model
+			GiveItem2Character(CharacterFromID("Elizabeth Swann"), "blade6");
+			GiveItem2Character(CharacterFromID("Elizabeth Swann"), "pistol7");
+			EquipCharacterByItem(CharacterFromID("Elizabeth Swann"), "blade6");
+			EquipCharacterByItem(CharacterFromID("Elizabeth Swann"), "pistol7");
 			Characters[GetCharacterIndex("Elizabeth Swann")].nation	= PIRATE;
 			// PB <--
 			ChangeCharacterAddressGroup(CharacterFromID("Will Turner"), "Will_Turner_house_inside", "goto", "goto2");
@@ -6884,8 +7421,8 @@ void SideQuestComplete(string sQuestName)
 		case "leaveswann":
 			if(AUTO_SKILL_SYSTEM)
 			{
-				AddPartyExpChar(pchar, "Leadership", 25000);
-				AddPartyExpChar(pchar, "Sneak", 200);
+				AddPartyExpChar(PChar, "Leadership", 25000);
+				AddPartyExpChar(PChar, "Sneak", 200);
 			}
 			else { AddPartyExp(pchar, 25000); }
 
@@ -6894,10 +7431,16 @@ void SideQuestComplete(string sQuestName)
 			AddQuestRecord("Jackpot", 8);
 			CloseQuestHeader("Jackpot");
 			LAi_ActorRunToLocation(characterFromID("Konrad Kulczycki"), "reload", "reload5_back", "none", "", "", "", 5.0);
-			LAi_ActorRunToLocation(characterFromID("Elizabeth Swann"), "reload", "gate", "none", "", "", "", 5.0);
-			LAi_ActorRunToLocation(characterFromID("Will Turner"), "reload", "gate", "none", "", "", "", 5.0);
-			RemoveCharacterCompanion(Pchar, characterFromID("Will Turner"));
-			setCharacterShipLocation(characterFromID("Will Turner"), "none");
+			SetCharacterRemovable(CharacterFromID("Elizabeth Swann"), true);
+			LAi_SetImmortal(CharacterFromID("Elizabeth Swann"), false);
+			SetOfficersIndex(CharacterFromID("Will Turner"),1, GetCharacterIndex("Elizabeth Swann"));
+			LAi_SetActorType(CharacterFromID("Elizabeth Swann"));
+			LAi_ActorRunToLocation(CharacterFromID("Elizabeth Swann"), "reload", "gate", "none", "", "", "", 5.0);
+			LAi_ActorRunToLocation(CharacterFromID("Will Turner"), "reload", "gate", "none", "", "", "", 5.0);
+			RemoveCharacterCompanion(PChar, characterFromID("Will Turner"));
+			setCharacterShipLocation(CharacterFromID("Will Turner"), "none");
+			SetCharacterRemovable(CharacterFromID("Will Turner"), true);
+			LAi_SetImmortal(CharacterFromID("Will Turner"), false);
 		break;
 
 
@@ -7125,6 +7668,12 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetPlayerType(pchar);
 			characters[GetCharacterIndex("Mergildo Hurtado")].location = "Greenford_tavern";
 			ChangeCharacterAddress(characterFromID("Mergildo Hurtado"), "none", "");
+		break;
+
+		case "to_barkue_too_many_ships":		// GR: if you have too many ships, stand up so you can go to shipyard to dispose of one
+			ChangeCharacterAddressGroup(PChar, "Greenford_tavern", "goto", "goto5");
+			LAi_SetPlayerType(PChar);
+			Characters[GetCharacterIndex("Mergildo Hurtado")].dialog.currentnode = "too_many_ships_recheck";
 		break;
 
 		case "oops_ANIMISTS_want_letter_again":
@@ -7502,6 +8051,7 @@ void SideQuestComplete(string sQuestName)
 			bQuestDisableMapEnter = false
 			Island_SetReloadEnableGlobal("IslaMuelle", true);
 			AddQuestRecord("ANIMISTS", 42);
+			ItemSetPrice("animists_amulet", 1);	// GR: can now dump Animist amulet into a chest
 //			CloseQuestHeader("ANIMISTS");
 
 // CTM -->
@@ -7516,16 +8066,31 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "womens_leave_town":
+			if(GetMusicScheme() == "Hearts")
+			{
+				PauseAllSounds();
+				PlayStereoOGG("Dawn_at_the_Bay");
+			}
+
 			ChangeCharacterReputation(pchar, 4);
 			LAi_SetActorType(characterFromID("Rian Dekkers"));
 			LAi_SetActorType(characterFromID("Janneke Blinkerhof"));
 			LAi_SetActorType(characterFromID("Lisebet Schefold"));
-//			LAi_ActorGoToLocation(characterFromID("Rian Dekkers"), "reload", "reload1", "none", "", "", "", 15.0);
-//			LAi_ActorGoToLocation(characterFromID("Janneke Blinkerhof"), "reload", "reload1", "none", "", "", "", 15.0);
-//			LAi_ActorGoToLocation(characterFromID("Lisebet Schefold"), "reload", "reload1", "none", "", "", "", 15.0);
 			LAi_ActorGoToLocation(characterFromID("Rian Dekkers"), "reload", "reload9", "none", "", "", "", 60.0);			// GR: The women have just been told their children are in port,
-			LAi_ActorGoToLocation(characterFromID("Janneke Blinkerhof"), "reload", "reload9", "none", "", "", "", 60.0);	// GR: so make them go to the port, and give them time to get there.
+			LAi_ActorGoToLocation(characterFromID("Janneke Blinkerhof"), "reload", "reload9", "none", "", "", "", 60.0);		// GR: so make them go to the port, and give them time to get there.
 			LAi_ActorGoToLocation(characterFromID("Lisebet Schefold"), "reload", "reload9", "none", "", "", "", 60.0);
+			PChar.quest.womens_left_town.win_condition.l1 = "ExitFromLocation";							// GR: When you leave the town area, make the women disappear
+			PChar.quest.womens_left_town.win_condition.l1.location = PChar.location;						// GR: so they aren't still walking to the port if you leave the island
+			PChar.quest.womens_left_town.win_condition = "womens_left_town";							// GR: and then return later.
+		break;
+
+		case "womens_left_town":
+			LAi_SetStayType(CharacterFromID("Rian Dekkers"));
+			LAi_SetStayType(CharacterFromID("Janneke Blinkerhof"));
+			LAi_SetStayType(CharacterFromID("Lisebet Schefold"));
+			changeCharacterAddress(CharacterFromID("Rian Dekkers"), "none", "");
+			changeCharacterAddress(CharacterFromID("Janneke Blinkerhof"), "none", "");
+			changeCharacterAddress(CharacterFromID("Lisebet Schefold"), "none", "");
 		break;
 
 // --> CatalinaThePirate Fix for Animist Quest
@@ -7928,6 +8493,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_type_actor_Reset(CharacterFromID("Francis Snake"));
 			LAi_ActorGoToLocation(CharacterFromID("Billy Brock"), "reload", "reload1", "none", "", "", "", 3.0);
 			LAi_ActorGoToLocation(CharacterFromID("Francis Snake"), "reload", "reload1", "none", "", "", "Lucas_talk1", 4.0);
+			ChangeCharacterAddressGroup(CharacterFromID("Snorri Baldursson"), "none", "", "");
 		break;
 
 		case "Lucas_talk1":
@@ -8098,14 +8664,30 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Bart Cooke"), "Redmond_Shore_02", "goto4");
 			ChangeCharacterAddress(characterFromID("Wally Cutty"), "Redmond_Shore_02", "goto6");
 			ChangeCharacterAddress(characterFromID("Bill Jellybones"), "Redmond_Shore_02", "goto5");
+			string smuggle_goods = Goods[sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_cargo)].name);
+			string smuggle_goods2 = Goods[sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_cargo2)].name);
+
+			Preprocessor_AddQuestData("Thomas O'Reily", GetMyFullName(CharacterFromID("Thomas O'Reily")));
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
+			Preprocessor_AddQuestData("Andre Juliao", GetMyFullName(CharacterFromID("Andre Juliao")));
+			Preprocessor_AddQuestData("smuggle_goods", TranslateString("", smuggle_goods));
+			Preprocessor_AddQuestData("smuggle_goods2", TranslateString("", smuggle_goods2));
 			SetQuestHeader("Thomas_OReily_contraband");
 			AddQuestRecord("Thomas_OReily_contraband", 1);
+			Preprocessor_Remove("smuggle_goods2");
+			Preprocessor_Remove("smuggle_goods");
+			Preprocessor_Remove("Andre Juliao");
+			Preprocessor_Remove("Thomas");
+			Preprocessor_Remove("Thomas O'Reily");
+
 			LAi_QuestDelay("learn about smugglers", 0.0);
 		break;
 
 		case "thomas_contraband_12_exit":
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			AddQuestRecord("Thomas_OReily_contraband", 3);
-			AddCharacterGoods(characterFromID("Pirate Captain 04"),GOOD_EBONY,100);
+			Preprocessor_Remove("Thomas");
+			AddCharacterGoods(characterFromID("Pirate Captain 04"), sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_cargo), sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_amount));
 			pchar.quest.thomas_contraband_12_exit_2.win_condition.l1 = "location";
 			pchar.quest.thomas_contraband_12_exit_2.win_condition.l1.location = "Redmond";
 			pchar.quest.thomas_contraband_12_exit_2.win_condition = "thomas_contraband_12_exit_2";
@@ -8131,7 +8713,7 @@ void SideQuestComplete(string sQuestName)
 				NPChar.flags.personal.texture = 1;
 			}
 			NPChar.skipRM = true;
-			NPChar.nosurrender = 2;
+			NPChar.nosurrender = 1;
 
 			Group_CreateGroup("Smugglers_squadron2");
 			Group_AddCharacter("Smugglers_squadron2", "Pirate Captain 04");
@@ -8179,7 +8761,9 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Wally Cutty"));
 			LAi_SetActorType(characterFromID("Bill Jellybones"));
 
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			AddQuestRecord("Thomas_OReily_contraband", 2);
+			Preprocessor_Remove("Thomas");
 			ChangeSmugglerLiking(pchar, -20); //Add liking
 			LAi_ActorAttack(characterFromID("Bart Cooke"), pchar, "");
 			LAi_ActorAttack(characterFromID("Wally Cutty"), pchar, "");
@@ -8196,7 +8780,9 @@ void SideQuestComplete(string sQuestName)
 			LAi_RemoveCheckMinHP(characterFromID("Bill Jellybones"));
 			ChangeSmugglerLiking(pchar, 10);
 			characters[GetCharacterIndex("Thomas O'Reily")].quest.contraband = "done";
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			AddQuestRecord("Thomas_OReily_contraband", 7);
+			Preprocessor_Remove("Thomas");
 			CloseQuestHeader("Thomas_OReily_contraband");
 			pchar.quest.exit_from_redmond_shore_02.win_condition.l1 = "location";
 			pchar.quest.exit_from_redmond_shore_02.win_condition.l1.location = "Redmond";
@@ -8255,10 +8841,14 @@ void SideQuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////
 
 		case "lucient_bescanceny_fight":
-			LAi_setActorType(characterFromID("lucien bescanceny"));
-			LAi_ActorAttack(characterfromID("lucien bescanceny"), pchar, "");
+			LAi_setActorType(CharacterFromID("Lucien Bescanceny"));
+			LAi_ActorAttack(CharacterFromID("Lucien Bescanceny"), PChar, "");
 			Characters[GetCharacterIndex("Patric Cardone")].quest.teodoro = "5";// NK thanks to Taghmon
+			Preprocessor_AddQuestData("Lucien", GetMyName(CharacterFromID("Lucien Bescanceny")));
+			Preprocessor_AddQuestData("Patric", GetMyName(CharacterFromID("Patric Cardone")));
 			AddQuestRecord("Patric", 5); // NK
+			Preprocessor_Remove("Patric");
+			Preprocessor_Remove("Lucien");
 		break;
 
 		case "andre_juliao_fight_1":
@@ -8410,15 +9000,34 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetOfficerType(characterFromID("Artois Voysey"));
 			characters[GetCharacterIndex("Artois Voysey")].Dialog.Filename = "Enc_Officer_dialog.c"; // KK
 			characters[GetCharacterIndex("Artois Voysey")].Dialog.CurrentNode = "Hired"; // KK
+
+			PChar.quest.Artois_dead.win_condition.l1 = "NPC_Death";
+			PChar.quest.Artois_dead.win_condition.l1.character = "Artois Voysey";
+			PChar.quest.Artois_dead.win_condition = "Artois_dead";
 		break;
 
 		case "Voysey_listed_2":
 			LAi_SetImmortal(characterFromID("Artois Voysey"), false);
 
-			LAi_SetPlayerType(Pchar);
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Artois Voysey"));
+			LAi_SetPlayerType(PChar);
+			SetOfficersIndex(PChar, -1, GetCharacterIndex("Artois Voysey"));
+			AddPassenger(PChar, characterFromID("Artois Voysey"), 0);	// GR: make sure he joins you if you have a full set of officers already
 			characters[GetCharacterIndex("Artois Voysey")].Dialog.Filename = "Enc_Officer_dialog.c"; // KK
 			characters[GetCharacterIndex("Artois Voysey")].Dialog.CurrentNode = "Hired"; // KK
+
+			PChar.quest.Artois_dead.over = "yes";
+		break;
+
+		case "Artois_dead":
+			Pchar.quest.Artois_Voysey.over = "yes";
+			pchar.quest.shoot_in_artois.over = "yes";
+			pchar.quest.shoot_in_artois1.over = "yes";
+			pchar.quest.shoot_in_artois2.over = "yes";
+			pchar.quest.shoot_in_artois3.over = "yes";
+			pchar.quest.shoot_in_artois4.over = "yes";
+			pchar.quest.shoot_in_artois5.over = "yes";
+			AddQuestRecord("artois", 21);
+			CloseQuestHeader("Artois");
 		break;
 
 		case "Artois_missed":
@@ -8608,8 +9217,8 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "portugal_becomes_neutral":
-			if(GetRMRelation(PChar, PORTUGAL) < REL_AMNESTY) SetRMRelation(PChar, PORTUGAL, REL_AMNESTY); // RM - SetNationRelation2MainCharacter(PORTUGAL, RELATION_NEUTRAL);
-			LAi_group_SetRelation("CONCEICAO_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL);
+			if(GetRMRelation(PChar, GetTownNation("Conceicao")) < REL_AMNESTY) SetRMRelation(PChar, GetTownNation("Conceicao"), REL_AMNESTY); // RM - SetNationRelation2MainCharacter(PORTUGAL, RELATION_NEUTRAL);
+			LAi_group_SetRelation(GetTownSoldierGroup("Conceicao"), LAI_GROUP_PLAYER, LAI_GROUP_NEUTRAL);
 		break;
 
 		case "Artois_resque_in_jungles":
@@ -8798,7 +9407,7 @@ void SideQuestComplete(string sQuestName)
 			CreateParticleSystemOnLocator(homelocation, homelocator, "gunfire");
 			LAi_SetActorType(characterFromID("Artois Voysey"));
 			LAi_ActorAnimation(characterFromID("Artois Voysey"), "death_1", "almost_killed_artois", 4.0);
-			Play3DSound("pistol_shot", locx, locy, locz);	// LDH 23Mar09
+			Play3DSound("pistol_shot_original", locx, locy, locz);	// LDH 23Mar09	// was "pistol_shot" but that just goes "click"
 		break;
 
 		case "almost_killed_artois":
@@ -8844,9 +9453,10 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "exit_doctor_good":
-			environment.date.day = GetAddingDataDay(0,0,14);
-			environment.date.month = GetAddingDataMonth(0,0,14);
-			environment.date.year = GetAddingDataYear(0,0,14);
+//			environment.date.day = GetAddingDataDay(0,0,14);	// GR: this does not change the date on the worldmap so going
+//			environment.date.month = GetAddingDataMonth(0,0,14);	//     to worldmap puts the date back before the 14 day wait
+//			environment.date.year = GetAddingDataYear(0,0,14);
+			AddDataToCurrent(0, 0, 14, false);			// GR: use proper function.  Updates disabled so the crew doesn't starve
 			AddQuestRecord("artois", 16);
 			homelocation = pchar.quest.location;
 			homelocator = pchar.quest.locator;
@@ -9072,8 +9682,9 @@ void SideQuestComplete(string sQuestName)
 		case "Blythe_Battle":
 			if (characters[GetCharacterIndex("Nigel Blythe")].ship.type != SHIP_NOTUSED_TYPE_NAME && (FindFellowTravellers(PChar, CharacterFromId("Nigel Blythe")) == FELLOWTRAVEL_COMPANION)) // PS
 			{
-				RemoveCharacterCompanion(Pchar, characterFromID("Nigel Blythe"));
-				SetCharacterRemovable(characterFromID("Nigel Blythe"), true); // NK
+				RemoveCharacterCompanion(PChar, characterFromID("Nigel Blythe"));
+				SetCharacterRemovable(CharacterFromID("Nigel Blythe"), true); // NK
+				LAi_group_MoveCharacter(CharacterFromID("Nigel Blythe"), "SPAIN_CITIZENS");	// GR: necessary to prevent CTD due to Blythe being in LAI_GROUP_PLAYER
 
 				AddQuestrecord("nigel", 16);
 				bQuestDisableMapEnter = true;
@@ -9086,7 +9697,7 @@ void SideQuestComplete(string sQuestName)
 				SetCharacterRelationBoth(GetCharacterIndex("Nigel Blythe"),GetCharacterIndex("Pirates_7"),RELATION_ENEMY);
 
 				Group_CreateGroup("Nigel Blythe");
-				Group_AddCharacter("Nigel Blythe", "Nigel Blythe");
+				Group_AddCharacter("Nigel Blythe", "Nigel Blythe");				// GR: if Blythe is in LAI_GROUP_PLAYER, this fails
 				Group_SetGroupCommander("Nigel Blythe", "Nigel Blythe");
 				Group_SetTaskAttack("Nigel Blythe", "Smugglers_corvette", true);
 				Group_SetPursuitGroup("Nigel Blythe", PLAYER_GROUP);
@@ -9146,6 +9757,7 @@ void SideQuestComplete(string sQuestName)
 			{
 				bQuestDisableMapEnter = false;
 				AddQuestrecord("nigel", 17);
+	  			CloseQuestHeader("nigel");
 			}
 			pchar.quest.Battle.over = "yes";
 			pchar.quest.Battle1.over = "yes";
@@ -9202,7 +9814,7 @@ void SideQuestComplete(string sQuestName)
 	 	LAi_QuestDelay("nigel_killed", 1.0);
 	  break;
 
-	  case "nigel_kiled":
+	  case "nigel_killed":
 	  	LAi_KillCharacter(characterFromID("nigel blythe"));
 	  	AddQuestrecord("nigel", 20);
 	  	CloseQuestHeader("nigel");
@@ -9285,6 +9897,7 @@ void SideQuestComplete(string sQuestName)
 				Pchar.Temp.Officer.dialognode = characters[GetOfficersIndex(Pchar, 1)].dialog.currentnode;
 				sld.Dialog.Filename = "to_say.c";
 				characters[GetOfficersIndex(Pchar, 1)].dialog.currentnode = "First time";
+				LAi_SetActorType(sld);
 				LAi_ActorDialog(&Characters[GetOfficersIndex(Pchar, 1)], pchar, "", 10.0, 10.0);
 				LAi_QuestDelay("Muelle_Blythe2", 10.0);
 			}
@@ -9297,6 +9910,7 @@ void SideQuestComplete(string sQuestName)
 					Pchar.Temp.Officer.dialognode = characters[GetOfficersIndex(Pchar, 2)].dialog.currentnode;
 					sld.Dialog.Filename = "to_say.c";
 					characters[GetOfficersIndex(Pchar, 2)].dialog.currentnode = "First time";
+					LAi_SetActorType(sld);
 					LAi_ActorDialog(&Characters[GetOfficersIndex(Pchar, 2)], pchar, "", 10.0, 10.0);
 					LAi_QuestDelay("Muelle_Blythe3", 4.0);
 				}
@@ -9309,6 +9923,7 @@ void SideQuestComplete(string sQuestName)
 						Pchar.Temp.Officer.dialognode = characters[GetOfficersIndex(Pchar, 3)].dialog.currentnode;
 						sld.Dialog.Filename = "to_say.c";
 						characters[GetOfficersIndex(Pchar, 3)].dialog.currentnode = "First time";
+						LAi_SetActorType(sld);
 						LAi_ActorDialog(&Characters[GetOfficersIndex(Pchar, 3)], pchar, "", 10.0, 10.0);
 						LAi_QuestDelay("Muelle_Blythe4", 4.0);
 					}
@@ -9321,18 +9936,21 @@ void SideQuestComplete(string sQuestName)
 			sld = &Characters[GetOfficersIndex(Pchar, 1)];
 			sld.Dialog.Filename = Pchar.Temp.Officer.dialog;
 			characters[GetOfficersIndex(Pchar, 1)].dialog.currentnode = Pchar.Temp.Officer.dialognode;
+			LAi_SetOfficerType(sld);
 		break;
 
 		case "Muelle_Blythe3":
-			sld = &Characters[GetOfficersIndex(Pchar, 1)];
+			sld = &Characters[GetOfficersIndex(Pchar, 2)];
 			sld.Dialog.Filename = Pchar.Temp.Officer.dialog;
 			characters[GetOfficersIndex(Pchar, 1)].dialog.currentnode = Pchar.Temp.Officer.dialognode;
+			LAi_SetOfficerType(sld);
 		break;
 
 		case "Muelle_Blythe4":
-			sld = &Characters[GetOfficersIndex(Pchar, 1)];
+			sld = &Characters[GetOfficersIndex(Pchar, 3)];
 			sld.Dialog.Filename = Pchar.Temp.Officer.dialog;
 			characters[GetOfficersIndex(Pchar, 1)].dialog.currentnode = Pchar.Temp.Officer.dialognode;
+			LAi_SetOfficerType(sld);
 		break;
 
 
@@ -9419,6 +10037,16 @@ void SideQuestComplete(string sQuestName)
 			Pchar.quest.Nigel_Blythe3.win_condition.l1 = "location";
 			Pchar.quest.Nigel_Blythe3.win_condition.l1.location = "IslaMuelle";
 			Pchar.quest.Nigel_Blythe3.win_condition = "Blythe_gone_ship";
+		break;
+
+		case "Nigel_Blythe_prepare_removal":
+			PChar.quest.Nigel_Blythe_removal.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.Nigel_Blythe_removal.win_condition.l1.location = PChar.location;
+			PChar.quest.Nigel_Blythe_removal.win_condition = "Nigel_Blythe_removal";
+		break;
+
+		case "Nigel_Blythe_removal":
+			ChangeCharacterAddress(characterFromID("Nigel Blythe"), "none", "");
 		break;
 
 		case "Nigel_dissmissed":
@@ -9565,6 +10193,9 @@ void SideQuestComplete(string sQuestName)
 			else { AddPartyExp(pchar, 25000); }
 			AddQuestrecord("nigel", 28);
 			CloseQuestHeader("nigel");
+			SetCharacterRemovable(CharacterFromID("Florens Clauss"), true);
+			Characters[GetCharacterIndex("Florens Clauss")].dialog.Filename = "Enc_Officer_dialog.c"; // GR
+			Characters[GetCharacterIndex("Florens Clauss")].dialog.CurrentNode = "hired";
 		break;
 
 		///////////////////////////////////////////////////////////////
@@ -9711,21 +10342,30 @@ void SideQuestComplete(string sQuestName)
 			// 1 enemy soldier
 			LAi_SetOfficerType(characterFromID("Claire Larrouse"));
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m1, "goto", "goto9"); // PB
+			n = GetTownNation("Greenford");
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m1, "goto", "goto9"); // PB
 			// NK - LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "goto", "goto9"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m2, "goto", "goto9"); // PB
 			// NK - LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "goto", "goto9"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m3, "goto", "goto9"); // PB
 			// NK - LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m4, "goto", "goto9"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m4, "goto", "goto9"); // PB
 			// NK - LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
 			LAi_group_MoveCharacter(characterFromID("mine_soldier_05"), "MINE_KEEPERS");
 			LAi_group_MoveCharacter(characterFromID("mine_soldier_06"), "MINE_KEEPERS");
@@ -9854,9 +10494,9 @@ void SideQuestComplete(string sQuestName)
 			locations[FindLocation("Oxbay_canyon")].reload.l3.disable = 0; 
 			locations[FindLocation("Oxbay_canyon")].reload.l4.disable = 0;
 			CloseQuestHeader("larrouse");
-			
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_05"), "ENGLAND_SOLDIERS");
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_06"), "ENGLAND_SOLDIERS");
+
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_05"), GetTownSoldierGroup("Greenford"));
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_06"), GetTownSoldierGroup("Greenford"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_05"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_06"));
 		break;
@@ -9874,8 +10514,8 @@ void SideQuestComplete(string sQuestName)
 			locations[FindLocation("Oxbay_canyon")].reload.l4.disable = 0;
 			CloseQuestHeader("larrouse");
 			
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_05"), "ENGLAND_SOLDIERS");
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_06"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_05"), GetTownSoldierGroup("Greenford"));
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_06"), GetTownSoldierGroup("Greenford"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_05"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_06"));
 		break;
@@ -9893,8 +10533,8 @@ void SideQuestComplete(string sQuestName)
 			locations[FindLocation("Oxbay_canyon")].reload.l4.disable = 0;
 			CloseQuestHeader("larrouse");
 			
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_05"), "ENGLAND_SOLDIERS");
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_06"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_05"), GetTownSoldierGroup("Greenford"));
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_06"), GetTownSoldierGroup("Greenford"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_05"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_06"));
 			
@@ -9918,8 +10558,11 @@ void SideQuestComplete(string sQuestName)
 			locations[FindLocation("Oxbay_jungle_02")].reload.l2.disable = 1;
 			locations[FindLocation("Oxbay_jungle_02")].reload.l3.disable = 1;
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m1, "goto", "citizen03"); // PB
+			n = GetTownNation("Greenford");
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m1, "goto", "citizen03"); // PB
 			sld.id = "soldier1";
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 			LAi_SetActorType(sld);
 			// NK - LAi_SetHP(sld, 80.0, 80.0);
 			LAi_SetCheckMinHP(sld, LAi_GetCharacterHP(sld)-1.0, false, "fight_in_jungles"); // NK
@@ -9927,8 +10570,10 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.kill_konvoyer_01.win_condition.l1.character = "soldier1";
 			pchar.quest.kill_konvoyer_01.win_condition = "kill_konvoyer_01";
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "goto", "citizen08"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m2, "goto", "citizen08"); // PB
 			sld.id = "soldier2";
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 			LAi_SetActorType(sld);
 			// NK - LAi_SetHP(sld, 80.0, 80.0);
 			LAi_SetCheckMinHP(sld, LAi_GetCharacterHP(sld)-1.0, false, "fight_in_jungles"); // NK
@@ -9936,8 +10581,10 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.kill_konvoyer_02.win_condition.l1.character = "soldier2";
 			pchar.quest.kill_konvoyer_02.win_condition = "kill_konvoyer_02";
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "goto", "citizen07"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m3, "goto", "citizen07"); // PB
 			sld.id = "soldier3";
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 			LAi_SetActorType(sld);
 			// NK - LAi_SetHP(sld, 80.0, 80.0);
 			LAi_SetCheckMinHP(sld, LAi_GetCharacterHP(sld)-1.0, false, "fight_in_jungles"); // NK
@@ -9945,8 +10592,10 @@ void SideQuestComplete(string sQuestName)
 			pchar.quest.kill_konvoyer_03.win_condition.l1.character = "soldier3";
 			pchar.quest.kill_konvoyer_03.win_condition = "kill_konvoyer_03";
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m4, "goto", "citizen04"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m4, "goto", "citizen04"); // PB
 			sld.id = "soldier4";
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 			LAi_SetActorType(sld);
 			// NK - LAi_SetHP(sld, 80.0, 80.0);
 			LAi_SetCheckMinHP(sld, LAi_GetCharacterHP(sld)-1.0, false, "fight_in_jungles"); // NK
@@ -10061,8 +10710,8 @@ void SideQuestComplete(string sQuestName)
 			LAi_LocationMonstersGen(&locations[FindLocation("Oxbay_jungle_02")], true);
 			//pchar.reputation = makeint(pchar.reputation) - 5;
 			ChangeCharacterReputation(pchar, -10);
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_05"), "ENGLAND_SOLDIERS");
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_06"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_05"), GetTownSoldierGroup("Greenford"));
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_06"), GetTownSoldierGroup("Greenford"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_05"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_06"));
 			LAi_SetImmortal(characterfromID("Claire Larrouse"), false);
@@ -10134,23 +10783,36 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "fighting_in_shore_2":
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m1, "reload", "reload2_back"); // PB
+			n = GetTownNation("Greenford");
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m1, "reload", "reload2_back"); // PB
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m2, "reload", "reload2_back"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m2, "reload", "reload2_back"); // PB
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m3, "reload", "reload2_back"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m3, "reload", "reload2_back"); // PB
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m4, "reload", "reload2_back"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m4, "reload", "reload2_back"); // PB
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m5, "reload", "reload2_back"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m5, "reload", "reload2_back"); // PB
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
-			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[ENGLAND].fantomModel.m6, "reload", "reload2_back"); // PB
+			/*NK*/ sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[n].fantomModel.m6, "reload", "reload2_back"); // PB
 			LAi_group_MoveCharacter(sld, "MINE_KEEPERS");
+			sld.nation = n;
+			SetRandomNameToCharacter(sld);
 
 			LAi_group_FightGroups("MINE_KEEPERS", LAI_GROUP_PLAYER, true);
 
@@ -10173,7 +10835,9 @@ void SideQuestComplete(string sQuestName)
 
 		case "fight_in_shore_2_completed":
 			LAi_SetStayType(pchar);
+			Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation("Greenford")));
 			AddQuestRecord("larrouse", 11);
+			Preprocessor_Remove("nation");
 			characters[GetCharacterIndex("Claire Larrouse")].dialog.currentnode = "fight_in_shore_completed";
 			LAi_SetActorType(characterFromID("Claire Larrouse"));
 			LAi_ActorDialog(characterFromID("Claire Larrouse"), pchar, "player_back", 4.0, 1.0);
@@ -10225,10 +10889,15 @@ void SideQuestComplete(string sQuestName)
 			characters[GetCharacterIndex("Claire Larrouse")].location = "none";
 			//pchar.reputation = makeint(pchar.reputation) + 1;
 			ChangeCharacterReputation(pchar, -5);
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_05"), "ENGLAND_SOLDIERS");
-			LAi_group_MoveCharacter(characterFromID("mine_soldier_06"), "ENGLAND_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_05"), GetTownSoldierGroup("Greenford"));
+			LAi_group_MoveCharacter(CharacterFromID("mine_soldier_06"), GetTownSoldierGroup("Greenford"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_05"));
 			LAi_NoRebirthDisable(characterFromID("mine_soldier_06"));
+		break;
+
+		case "Claire_hired":
+			Characters[GetCharacterIndex("Claire Larrouse")].dialog.Filename = "Enc_Officer_dialog.c"; // GR
+			Characters[GetCharacterIndex("Claire Larrouse")].dialog.CurrentNode = "hired";
 		break;
 
 		/////////////////////////////////////////////////////////////////////////
@@ -10288,10 +10957,11 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("guy_in_tavern1"));
 
 			LAi_SetActorType(CharacterFromID("Edgar Attwood"));
-			LAi_SetActorType(Pchar);
-			LAi_ActorWaitDialog(CharacterFromID("Edgar Attwood"), Pchar);
-			characters[GetCharacterIndex("Edgar Attwood")].dialog.currentnode = "Setup1";
-			LAi_ActorDialog(pchar, CharacterFromID("Edgar Attwood"), "", 10, 10);
+			LAi_SetActorType(PChar);
+			LAi_ActorWaitDialog(CharacterFromID("Edgar Attwood"), PChar);
+			Characters[GetCharacterIndex("Edgar Attwood")].Dialog.Filename = "Edgar Attwood_dialog.c";
+			Characters[GetCharacterIndex("Edgar Attwood")].dialog.currentnode = "Setup1";
+			LAi_ActorDialog(PChar, CharacterFromID("Edgar Attwood"), "", 10, 10);
 
 		break;
 
@@ -10944,6 +11614,7 @@ void SideQuestComplete(string sQuestName)
 			AddQuestRecord("Vogelstruijs", 10);
 			CloseQuestHeader("Vogelstruijs");
 			Characters[GetCharacterIndex("Contre-Amirale")].dialog.currentnode = "nothing";
+			ItemSetPrice("SpanishLetter", 1);	// GR: can now dump letter into a chest
 
 			Pchar.quest.Remove_Amirale.win_condition.l1 = "ExitFromLocation";
 			Pchar.quest.Remove_Amirale.win_condition.l1.location = pchar.location;
@@ -10962,7 +11633,7 @@ void SideQuestComplete(string sQuestName)
 			waitdate("", 0, 0, 3, 0, 0);
 			SetCurrentTime(10.00, 0);
 			LAi_Fade("", "");
-			logit("Three days later...");
+			Logit(TranslateString("","Three days later..."));
 			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(pchar, "Repair", 500);
 			else AddPartyExp(pchar, 500);
 			Characters[GetCharacterIndex("Jean Filaut")].dialog.currentnode = "job_done";
@@ -10975,8 +11646,16 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "Sabines_new_outfit": //GR: Sabine Matton is now your officer and gets shipboard clothes
-			SetModelfromID(CharacterFromID("Sabine Matton"), "SabineM2");
-			GiveModel2Player("towngirl1", false); // GR: Get Sabine's original dress as well.
+			if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+			{
+				SetModelfromID(CharacterFromID("Sabine Matton"), "SabineM3");
+				GiveModel2Player("towngirl1_2", false); // GR: Get original dress as well
+			}
+			else
+			{
+				SetModelfromID(CharacterFromID("Sabine Matton"), "SabineM2");
+				GiveModel2Player("towngirl1", false); // GR: Get Sabine's original dress as well
+			}
 		break;
 
 ///////////////////////////////////////////////////////////////////////
@@ -11087,8 +11766,8 @@ void SideQuestComplete(string sQuestName)
 			EndQuestMovie();
 			if (PChar.location == "Philipsburg_port")
 			{
-				LAi_ActorGoToLocation(CharacterFromID("Laurens-Jan Revenboer"), "reload", "Reload9_back", "none", "", "", "", 30);
-				LAi_ActorGoToLocation(CharacterFromID("Willem Voigt"), "reload", "Reload9_back", "none", "", "", "", 30);
+				LAi_ActorGoToLocation(CharacterFromID("Laurens-Jan Revenboer"), "reload", "reload4", "none", "", "", "", 30);
+				LAi_ActorGoToLocation(CharacterFromID("Willem Voigt"), "reload", "reload4", "none", "", "", "", 30);
 			}
 			else
 			{
@@ -11615,7 +12294,7 @@ void SideQuestComplete(string sQuestName)
 			EndQuestMovie();
 			AddQuestRecord("kapitein", 19);
 			CloseQuestHeader("kapitein");
-			string fame_name = "extra_fame" + HOLLAND
+			string fame_name = "extra_fame" + HOLLAND;
 			x = stf(GetAttribute(PChar, fame_name));
 			if (x < 0) PChar.(fame_name) = 50.0;	// You just became famous because your exploits have been noticed by very important people and made all the news
 			else PChar.(fame_name) = x + 50.0;
@@ -11673,7 +12352,7 @@ void SideQuestComplete(string sQuestName)
 			locations[FindLocation("Dining_Room")].id.label = "Don Julian Alvarado's Quarters";
 			Locations[FindLocation("Prison_Shore")].reload.l2.disable = 1;
 
-			Pchar.quest.hornblower_cuba_arrival.win_condition.l1 = "Location";
+			PChar.quest.hornblower_cuba_arrival.win_condition.l1 = "Location";
 			PChar.quest.hornblower_cuba_arrival.win_condition.l1.location = "Cuba";
 			PChar.quest.hornblower_cuba_arrival.win_condition = "hornblower_cuba_arrival";
 
@@ -11822,12 +12501,12 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetActorType(sld);
 			LAi_ActorTurnToLocator(sld, "goto", "goto7");
 			sld.id = "rebel_guard2";
-			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "prison_3", "goto", "goto6");
+			sld = LAi_CreateFantomCharacter(false, 1, true, false, 0.0, "prison_3", "goto", "goto6");
 			LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
 			sld.id = "prisoner1";
 			LAi_SetActorType(sld);
 			LAi_ActorTurnToLocator(sld, "goto", "goto6");
-			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "prison_5", "goto", "goto7");
+			sld = LAi_CreateFantomCharacter(false, 1, true, false, 0.0, "bb_Pell_prisoner", "goto", "goto7");
 			LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
 			LAi_SetActorType(sld);
 			LAi_ActorTurnToLocator(sld, "goto", "goto7");
@@ -12219,6 +12898,8 @@ void SideQuestComplete(string sQuestName)
 //			ChangeCharacterAddressGroup(CharacterFromID("Marsh"), "ShipDeck2", "rld", "loc12");
 //			LAi_SetWarriorType(CharacterFromID("Marsh"));
 //			LAi_group_MoveCharacter(CharacterFromID("Marsh"), LAI_GROUP_PLAYER);
+			LAi_SetImmortal(CharacterFromID("Styles"), true);
+			LAi_SetImmortal(CharacterFromID("Matthews"), true);
 /*			PChar.quest.Hornblower_Natividad_alarm1.win_condition.l1 = "locator";
 			PChar.quest.Hornblower_Natividad_alarm1.win_condition.l1.location = "ShipDeck2";
 			PChar.quest.Hornblower_Natividad_alarm1.win_condition.l1.locator_group = "rld";
@@ -12464,12 +13145,16 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Midshipman Longley"), "None", "");
 			SetCharacterRemovable(characterFromID("Lt. William Bush"), true);
 			LAi_SetImmortal(characterfromID("Lt. William Bush"), false);
+			LAi_SetImmortal(CharacterFromID("Styles"), false);
+			LAi_SetImmortal(CharacterFromID("Matthews"), false);
 			bQuestDisableSeaEnter = false;
 			DisableFastTravel(false);
 
 			ExchangeCharacterShip(PChar, characterFromID("El Supremo"));
 //			PChar.ship.name = PChar.quest.oldship.name;
 			DeleteQuestAttribute("oldship.name");
+			DeleteQuestAttribute("oldship");
+			DeleteQuestAttribute("cannon_number");
 			AddQuestRecord("Natividad", 7);
 
 			Characters[GetCharacterIndex("El Supremo")].Flags.Personal = 0;
@@ -12485,6 +13170,9 @@ void SideQuestComplete(string sQuestName)
 
 			QuestToSeaLogin_PrepareLoc("Cuba", "reload", "reload_9", false);
 			QuestToSeaLogin_Launch();
+
+			LAi_LocationFightDisable(&Locations[FindLocation("ShipDeck2")], false);
+			ChangeCharacterAddress(CharacterFromID("Jose Hernandez"), "None", "");
 
 			PChar.quest.Hornblower_Muelle_arrival.win_condition.l1 = "location";
 			PChar.quest.Hornblower_Muelle_arrival.win_condition.l1.location = "IslaMuelle";
@@ -12822,6 +13510,7 @@ void SideQuestComplete(string sQuestName)
 			DeleteQuestAttribute("old_model");
 			DeleteQuestAttribute("old_name");
 			DeleteQuestAttribute("old_lastname");
+			DeleteQuestAttribute("hornblower_officer");
 			SetCharacterShipLocation(characterFromID("Spanish_lugger_captain"), "None");
 			DoQuestReloadToLocation("ShipDeck1", "rld", "loc2", "Hornblower_back_to_muelle_sea2");
 		break;
@@ -12913,6 +13602,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "Hornblower_to_deck_after_Natividad_battle":
+			ChangeCharacterAddress(CharacterFromID("El Supremo"), "None", "");
 //			SetCharacterToNearLocatorFromMe("Oldroyd", 3);
 			LAi_SetActorType(characterFromID("Oldroyd"));			
 			Characters[GetCharacterIndex("Oldroyd")].dialog.Filename = "Hornblower_quest_minors_dialog.c";
@@ -12997,14 +13687,16 @@ void SideQuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "how_did_you_know";
 			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "",5.0,5.0);
 			SetCharacterRemovable(characterFromID("Midshipman Longley"), true);
-			RemoveOfficersIndex(pchar, GetCharacterIndex("Midshipman Longley"));
-			RemovePassenger(pchar, characterFromID("Midshipman Longley"));
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Midshipman Longley"));
+			RemovePassenger(PChar, characterFromID("Midshipman Longley"));
 			bQuestDisableAllCommands = false;
 			bQuestDisableSeaEnter = false;
 			DisableFastTravel(false);
 		break;
 
 		case "Hornblower_return_to_barbados":
+			DeleteQuestAttribute("natividad_group");
+			DeleteQuestAttribute("spanish_lugger_group");
 			SetNextWeather("Clear");
 			AddDataToCurrent(0, 0, 1, true);
 			SetCurrentTime(10, 0);
@@ -13080,7 +13772,7 @@ void SideQuestComplete(string sQuestName)
 		case "Hornblower_barbara_to_leighton2":
 			LAi_SetActorType(characterFromID("Lady Barbara Wellesley"));
 			Characters[GetCharacterIndex("Lady Barbara Wellesley")].dialog.CurrentNode = "sweet_leighton";
-			LAi_ActorDialog(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_leighton_to_barbara2",5.0,5.0);
+			LAi_ActorDialogNow(characterFromID("Lady Barbara Wellesley"), PChar, "Hornblower_leighton_to_barbara2",1.0);
 		break;
 
 		case "Hornblower_leighton_to_barbara2":
@@ -13119,6 +13811,7 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Sir Edward Pellew"), "Greenford_Station", "goto", "goto7");
 			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.Filename = "Sir Edward Pellew_freeplay_dialog.c";
 			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.CurrentNode = "great_report";
+
 			PChar.quest.Hornblower_report_to_Admiralty.win_condition.l1 = "location";
 			PChar.quest.Hornblower_report_to_Admiralty.win_condition.l1.character = PChar.id;
 			Pchar.quest.Hornblower_report_to_Admiralty.win_condition.l1.location = "Greenford Naval HQ";
@@ -13147,8 +13840,8 @@ void SideQuestComplete(string sQuestName)
 
 		case "Hornblower_report_to_Admiralty2":
 			PChar.quest.Hornblower_admirals_meeting.win_condition.l1 = "location";
-			Pchar.quest.Hornblower_admirals_meeting.win_condition.l1.location = "Greenford_Station";
-			Pchar.quest.Hornblower_admirals_meeting.win_condition = "Hornblower_admirals_meeting";
+			PChar.quest.Hornblower_admirals_meeting.win_condition.l1.location = "Greenford_Station";
+			PChar.quest.Hornblower_admirals_meeting.win_condition = "Hornblower_admirals_meeting";
 		break;
 
 		case "Hornblower_Eccleston_sits":	// Triggered by dialog with Lt. Eccleston
@@ -13156,6 +13849,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "Hornblower_admirals_meeting":
+			Locations[FindLocation("Greenford_Station")].reload.l1.disable = 1;	// Lock door so you can't leave, re-enter, and see admirals facing the wrong way
 			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, "brtadm1_18", "goto", "goto8");
 			sld.id = "Admiral Boulton";
 			sld.name = "Rear Admiral";
@@ -13169,17 +13863,30 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "Hornblower_get_Sutherland":
+			Locations[FindLocation("Greenford_Station")].reload.l1.disable = 0;	// Unlock door to get out
+			Locations[FindLocation("Greenford Naval HQ")].reload.l2.disable = 1;	// Lock other side of door to prevent getting back in
 			Preprocessor_AddQuestData("old_ship", PChar.ship.name);
 			AddQuestRecord("Natividad", 11);
 			Preprocessor_Remove("old_ship");
 			CloseQuestHeader("Natividad");
-			GiveShip2Character(pchar,"RN_Superbe","Sutherland",-1,FRANCE,true,true);
+			GiveShip2Character(PChar,"RN_Superbe","Sutherland",-1,FRANCE,true,true);
+			PChar.quest.Hornblower_reset_Greenford_HQ.win_condition.l1 = "Location";
+			PChar.quest.Hornblower_reset_Greenford_HQ.win_condition.l1.location = "Oxbay";
+			PChar.quest.Hornblower_reset_Greenford_HQ.win_condition = "Hornblower_reset_Greenford_HQ";
+		break;
+
+		case "Hornblower_reset_Greenford_HQ":
+			Locations[FindLocation("Greenford Naval HQ")].reload.l2.disable = 0;
+			ChangeCharacterAddress(CharacterFromID("Sir Rodney Leighton"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Captain Keene"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Sir Edward Pellew"), "None", "");
 		break;
 
 // Arrival at port: 1:11:30 in video
 // Return home: 1:14:50
 // Report to Admiralty: 1:18:42
 // Admirals: Leighton, Elliot, Boulton, McCartney (Hornblower was one of McCartney's midshipmen, recognises Hornblower, makes improper comment about girls at sea)
+// Signal from flagship, captains come aboard: 1:21:15.  Bush on starboard stair to upper deck, Hornblower centre-rear of main deck
 
 /*		case "hornblower_restore_sea_and_fasttravel":
 			bQuestDisableSeaEnter = false;
@@ -13188,7 +13895,7 @@ void SideQuestComplete(string sQuestName)
 		break; */
 
 		case "hornblower_execution":	// Triggered by dialog with "El Supremo" if you fail to deliver weapons or capture "Natividad"
-			pchar.quest.disable_rebirth = true;
+			PChar.quest.disable_rebirth = true;
 			PostEvent("LAi_event_GameOver", 0, "s", "mutiny");
 		break;
 
@@ -13293,9 +14000,6 @@ void SideQuestComplete(string sQuestName)
 				PChar.quest.crysskull_poison_player.win_condition.l1.date.day = GetAddingDataDay(0,2,0);
 				PChar.quest.crysskull_poison_player.win_condition.l1.date.month = GetAddingDataMonth(0,2,0);
 				PChar.quest.crysskull_poison_player.win_condition.l1.date.year = GetAddingDataYear(0,2,0);
-//				PChar.quest.crysskull_poison_player.win_condition.l1.date.day = GetAddingDataDay(0,0,1);	// 1 day to poison effect
-//				PChar.quest.crysskull_poison_player.win_condition.l1.date.month = GetAddingDataMonth(0,0,1);	// for testing
-//				PChar.quest.crysskull_poison_player.win_condition.l1.date.year = GetAddingDataYear(0,0,1);
 				PChar.quest.crysskull_poison_player.win_condition = "crysskull_poison_player";
 			}
 			LAi_QuestDelay("crysskull_warrior_joins", 0.2);
@@ -13309,6 +14013,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "crysskull_warrior_joins2":
 			SetOfficersIndex(PChar, -1, GetCharacterIndex("Carib_Warrior"));
+			AddPassenger(PChar, CharacterFromID("Carib_Warrior"), 0);
 			SetCharacterRemovable(characterFromID("Carib_Warrior"), false);
 			LAi_SetImmortal(characterfromID("Carib_Warrior"), true);
 			DisableFastTravel(false);
@@ -13334,7 +14039,7 @@ void SideQuestComplete(string sQuestName)
 			Preprocessor_Remove("warrior");
 			AddQuestRecord("crystal_skull", 4);
 
-			setCharacterShipLocation(characterFromID("Archaeologist_captain"), "Falaise_de_fleur_shore");
+			SetCharacterShipLocation(characterFromID("Archaeologist_captain"), "Falaise_de_fleur_shore");
 			Locations[FindLocation("Falaise_de_fleur_port_01")].dangerous = true;
 			Locations[FindLocation("Falaise_de_fleur_port_02")].dangerous = true;
 			Locations[FindLocation("Falaise_de_fleur_port_01")].reload.l1.disable = 1;
@@ -13355,16 +14060,16 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.crysskull_ffsoldier4_talks.win_condition = "crysskull_ffsoldier4_talks";
 
 			PChar.quest.crysskull_Carib_warrior_on_ship.win_condition.l1 = "location";
-			Pchar.quest.crysskull_Carib_warrior_on_ship.win_condition.l1.location = "Guadeloupe";
-			Pchar.quest.crysskull_Carib_warrior_on_ship.win_condition = "crysskull_Carib_warrior_on_ship";
+			PChar.quest.crysskull_Carib_warrior_on_ship.win_condition.l1.location = "Guadeloupe";
+			PChar.quest.crysskull_Carib_warrior_on_ship.win_condition = "crysskull_Carib_warrior_on_ship";
 
 			PChar.quest.crysskull_beach_arrival.win_condition.l1 = "location";
-			Pchar.quest.crysskull_beach_arrival.win_condition.l1.location = "Falaise_de_fleur_shore";
-			Pchar.quest.crysskull_beach_arrival.win_condition = "crysskull_beach_arrival";
+			PChar.quest.crysskull_beach_arrival.win_condition.l1.location = "Falaise_de_fleur_shore";
+			PChar.quest.crysskull_beach_arrival.win_condition = "crysskull_beach_arrival";
 
 			PChar.quest.crysskull_port_arrival.win_condition.l1 = "location";
-			Pchar.quest.crysskull_port_arrival.win_condition.l1.location = "Falaise_de_fleur_port_01";
-			Pchar.quest.crysskull_port_arrival.win_condition = "crysskull_port_arrival";
+			PChar.quest.crysskull_port_arrival.win_condition.l1.location = "Falaise_de_fleur_port_01";
+			PChar.quest.crysskull_port_arrival.win_condition = "crysskull_port_arrival";
 		break;
 
 		case "crysskull_Carib_warrior_on_ship":
@@ -13406,7 +14111,7 @@ void SideQuestComplete(string sQuestName)
 			if(IsEntity(&worldMap))
 			{
 				PChar.quest.crysskull_delay_poison_sea.win_condition.l1 = "SeaEnter";
-				Pchar.quest.crysskull_delay_poison_sea.win_condition = "crysskull_delay_poison_sea";
+				PChar.quest.crysskull_delay_poison_sea.win_condition = "crysskull_delay_poison_sea";
 			}
 			else
 			{ 
@@ -13455,8 +14160,13 @@ void SideQuestComplete(string sQuestName)
 				if (SetOfficersIndex(PChar, -1, GetCharacterIndex("Carib_Warrior")) == GetCharacterIndex("Carib_Warrior"))
 				{
 					if (CheckAttribute(PChar, "quest.crysskull.hostage.slot")) i = sti(PChar.quest.crysskull.hostage.slot);
-					else i = OFFICER_MAX - 1;
-					SetOfficersIndex(PChar, i, GetCharacterIndex("Carib_Warrior"));
+					else
+					{
+						i = OFFICER_MAX - 1;
+						cidx = SetOfficersIndex(PChar, i, GetCharacterIndex("Carib_Warrior"));
+						PChar.quest.crysskull.replaced_officer.id = cidx;
+						PChar.quest.crysskull.replaced_officer.slot = OFFICER_MAX - 1;
+					}
 				}
 			}
 			LAi_SetActorType(characterFromID("Carib_Warrior"));
@@ -13468,8 +14178,8 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Carib_Warrior"));
 			LAi_ActorGoToLocator(characterFromID("Carib_Warrior"), "reload", "reload3_back", "", 300.0);
 			PChar.quest.crysskull_cave_arrival.win_condition.l1 = "location";
-			Pchar.quest.crysskull_cave_arrival.win_condition.l1.location = "FalaiseDeFleur_Grot";
-			Pchar.quest.crysskull_cave_arrival.win_condition = "crysskull_cave_arrival";
+			PChar.quest.crysskull_cave_arrival.win_condition.l1.location = "FalaiseDeFleur_Grot";
+			PChar.quest.crysskull_cave_arrival.win_condition = "crysskull_cave_arrival";
 		break;
 
 		case "crysskull_cave_arrival":
@@ -13477,8 +14187,8 @@ void SideQuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "bridge_warning";
 			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_reset_carib_warrior",5.0,5.0);
 			PChar.quest.crysskull_bridge_arrival.win_condition.l1 = "location";
-			Pchar.quest.crysskull_bridge_arrival.win_condition.l1.location = "FalaiseDeFleur_Bridge";
-			Pchar.quest.crysskull_bridge_arrival.win_condition = "crysskull_bridge_arrival";
+			PChar.quest.crysskull_bridge_arrival.win_condition.l1.location = "FalaiseDeFleur_Bridge";
+			PChar.quest.crysskull_bridge_arrival.win_condition = "crysskull_bridge_arrival";
 		break;
 
 		case "crysskull_reset_carib_warrior":
@@ -13503,17 +14213,17 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.crysskull_bridge_trap2.win_condition = "crysskull_bridge_trap";
 
 			PChar.quest.crysskull_jungle_arrival.win_condition.l1 = "location";
-			Pchar.quest.crysskull_jungle_arrival.win_condition.l1.location = "FalaiseDeFleur_jungle_01";
-			Pchar.quest.crysskull_jungle_arrival.win_condition = "crysskull_jungle_arrival";
+			PChar.quest.crysskull_jungle_arrival.win_condition.l1.location = "FalaiseDeFleur_jungle_01";
+			PChar.quest.crysskull_jungle_arrival.win_condition = "crysskull_jungle_arrival";
 		break;
 
 		case "crysskull_bridge_trap":
-			Lai_KillCharacter(Pchar);
+			Lai_KillCharacter(PChar);
 			LAi_QuestDelay("crysskull_bridge_trap_game_over", 5.0);
 		break;
 
 		case "crysskull_bridge_trap_game_over":
-			pchar.quest.disable_rebirth = true
+			PChar.quest.disable_rebirth = true;
 			PostEvent("LAi_event_GameOver", 0, "s", "sea");
 		break;
 
@@ -13536,8 +14246,8 @@ void SideQuestComplete(string sQuestName)
 		case "crysskull_jungle_arrival":
 			LAi_SetOfficerType(CharacterFromID("Carib_Warrior"));
 			PChar.quest.crysskull_jungle2_arrival.win_condition.l1 = "location";
-			Pchar.quest.crysskull_jungle2_arrival.win_condition.l1.location = "FalaiseDeFleur_jungle_02";
-			Pchar.quest.crysskull_jungle2_arrival.win_condition = "crysskull_jungle_arrival2";
+			PChar.quest.crysskull_jungle2_arrival.win_condition.l1.location = "FalaiseDeFleur_jungle_02";
+			PChar.quest.crysskull_jungle2_arrival.win_condition = "crysskull_jungle_arrival2";
 		break;
 
 		case "crysskull_jungle_arrival2":
@@ -13580,13 +14290,13 @@ void SideQuestComplete(string sQuestName)
 
 			Characters[GetCharacterIndex("Skull_Researcher")].dialog.CurrentNode = "welcome_back";
 
-			Pchar.quest.crysskull_you_stole_skull.win_condition.l1 = "item";
-			Pchar.quest.crysskull_you_stole_skull.win_condition.l1.item = "cryskull";
-			Pchar.quest.crysskull_you_stole_skull.win_condition = "crysskull_you_stole_skull";
+			PChar.quest.crysskull_you_stole_skull.win_condition.l1 = "item";
+			PChar.quest.crysskull_you_stole_skull.win_condition.l1.item = "cryskull";
+			PChar.quest.crysskull_you_stole_skull.win_condition = "crysskull_you_stole_skull";
 
 			PChar.quest.crysskull_jungle1_return.win_condition.l1 = "location";
-			Pchar.quest.crysskull_jungle1_return.win_condition.l1.location = "FalaiseDeFleur_jungle_01";
-			Pchar.quest.crysskull_jungle1_return.win_condition = "crysskull_jungle1_return";
+			PChar.quest.crysskull_jungle1_return.win_condition.l1.location = "FalaiseDeFleur_jungle_01";
+			PChar.quest.crysskull_jungle1_return.win_condition = "crysskull_jungle1_return";
 		break;
 
 		case "crysskull_you_stole_skull":
@@ -13607,15 +14317,21 @@ void SideQuestComplete(string sQuestName)
 			StartQuestMovie(true, false, false);
 			LAi_group_MoveCharacter(sld, LAi_monsters_group);
 			LAi_group_FightGroups(LAi_monsters_group, LAI_GROUP_PLAYER, true);
-			pchar.quest.crysskull_you_killed_carib_warrior.win_condition.l1 = "NPC_Death";
-			pchar.quest.crysskull_you_killed_carib_warrior.win_condition.l1.character = "Carib_Warrior";
-			pchar.quest.crysskull_you_killed_carib_warrior.win_condition = "crysskull_you_killed_carib_warrior";
+			PChar.quest.crysskull_you_killed_carib_warrior.win_condition.l1 = "NPC_Death";
+			PChar.quest.crysskull_you_killed_carib_warrior.win_condition.l1.character = "Carib_Warrior";
+			PChar.quest.crysskull_you_killed_carib_warrior.win_condition = "crysskull_you_killed_carib_warrior";
 		break;
 
 		case "crysskull_you_killed_carib_warrior":
 			EndQuestMovie();
 			LAi_QuestDelay("crysskull_reset_falaise_de_fleur", 0.1);
 			PChar.quest.crysskull_carib_in_santo_domingo.over = "yes";
+			if (CheckAttribute(PChar, "quest.crysskull.replaced_officer"))
+			{
+				PChar.quest.crysskull_return_replaced_officer.win_condition.l1 = "location";
+				PChar.quest.crysskull_return_replaced_officer.win_condition.l1.location = "FalaiseDeFleur";
+				PChar.quest.crysskull_return_replaced_officer.win_condition = "crysskull_return_replaced_officer";
+			}
 		break;
 
 		case "crysskull_jungle1_return":
@@ -13637,8 +14353,8 @@ void SideQuestComplete(string sQuestName)
 			EndQuestMovie();
 			AddQuestRecord("crystal_skull", 7);
 			PChar.quest.crysskull_bridge_return.win_condition.l1 = "location";
-			Pchar.quest.crysskull_bridge_return.win_condition.l1.location = "FalaiseDeFleur_Bridge";
-			Pchar.quest.crysskull_bridge_return.win_condition = "crysskull_bridge_return";
+			PChar.quest.crysskull_bridge_return.win_condition.l1.location = "FalaiseDeFleur_Bridge";
+			PChar.quest.crysskull_bridge_return.win_condition = "crysskull_bridge_return";
 		break;
 
 		case "crysskull_bridge_return":
@@ -13650,8 +14366,8 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Archaeologist_captain"), "FalaiseDeFleur_Grot", "officers", "reload2_2");
 
 			PChar.quest.crysskull_cave_return.win_condition.l1 = "location";
-			Pchar.quest.crysskull_cave_return.win_condition.l1.location = "FalaiseDeFleur_Grot";
-			Pchar.quest.crysskull_cave_return.win_condition = "crysskull_cave_return";
+			PChar.quest.crysskull_cave_return.win_condition.l1.location = "FalaiseDeFleur_Grot";
+			PChar.quest.crysskull_cave_return.win_condition = "crysskull_cave_return";
 		break;
 
 		case "crysskull_carib_warrior_shows_way_back":
@@ -13758,7 +14474,7 @@ void SideQuestComplete(string sQuestName)
 				{
 					if(GetOfficersIndex(PChar, i) != -1)
 					{
-						speaker = characters[GetOfficersIndex(Pchar, i)].id;
+						speaker = Characters[GetOfficersIndex(PChar, i)].id;
 						break;
 					}
 				}
@@ -13819,9 +14535,9 @@ void SideQuestComplete(string sQuestName)
 			DisableFastTravel(false);
 			LAi_LocationFightDisable(&Locations[FindLocation("FalaiseDeFleur_Grot")], false);
 
-			Pchar.quest.crysskull_seafight_setup.win_condition.l1 = "location";
-			Pchar.quest.crysskull_seafight_setup.win_condition.l1.location = "FalaiseDeFleur";
-			Pchar.quest.crysskull_seafight_setup.win_condition = "crysskull_seafight_setup";
+			PChar.quest.crysskull_seafight_setup.win_condition.l1 = "location";
+			PChar.quest.crysskull_seafight_setup.win_condition.l1.location = "FalaiseDeFleur";
+			PChar.quest.crysskull_seafight_setup.win_condition = "crysskull_seafight_setup";
 		break;
 
 		case "crysskull_seafight_setup":
@@ -13989,6 +14705,18 @@ void SideQuestComplete(string sQuestName)
 			LAi_ActorFollow(sld, characterFromID("Carib_Chief"), "", 30.0);
 			LAi_QuestDelay("crysskull_reset_falaise_de_fleur", 0.1);
 			PChar.quest.crysskull_carib_in_santo_domingo.over = "yes";
+
+			if (CheckAttribute(PChar, "quest.crysskull.replaced_officer") && !isofficer(Characters[sti(PChar.quest.crysskull.replaced_officer.id)]))
+			{
+				PChar.quest.crysskull_return_replaced_officer.win_condition.l1 = "location";
+				PChar.quest.crysskull_return_replaced_officer.win_condition.l1.location = "Guadeloupe";
+				PChar.quest.crysskull_return_replaced_officer.win_condition = "crysskull_return_replaced_officer";
+			}
+		break;
+
+		case "crysskull_return_replaced_officer":
+			SetOfficersIndex(PChar, sti(PChar.quest.crysskull.replaced_officer.slot), sti(PChar.quest.crysskull.replaced_officer.id));
+			DeleteQuestAttribute("crysskull.replaced_officer");
 		break;
 
 		case "crysskull_Carib_Warrior_reports":		// Triggered by dialog with "Carib_Chief" if "Carib_Warrior" is alive to make the report
@@ -14013,7 +14741,7 @@ void SideQuestComplete(string sQuestName)
 			PlayStereoSound("INTERFACE\important_item.wav");
 			TakeItemFromCharacter(PChar, "cryskull");
 			PChar.quest.crys_skull_status = "traded";
-			ChangeCharacterReputation(pchar, 3);
+			ChangeCharacterReputation(PChar, 3);
 			OfficersReaction("good");
 			if (PChar.quest.crysskull.ultimatum == "hostage")
 			{
@@ -14033,9 +14761,9 @@ void SideQuestComplete(string sQuestName)
 			EndQuestMovie();
 			DisableFastTravel(false);
 			LAi_QuestDelay("crysskull_Carib_Chief_fetches_reward", 0.1);
-			Pchar.quest.crysskull_remove_Caribs.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.crysskull_remove_Caribs.win_condition.l1 = "ExitFromLocation";
 			PChar.quest.crysskull_remove_Caribs.win_condition.l1.location = PChar.location;
-			Pchar.quest.crysskull_remove_Caribs.win_condition = "crysskull_remove_Caribs";
+			PChar.quest.crysskull_remove_Caribs.win_condition = "crysskull_remove_Caribs";
 		break;
 
 		case "crysskull_Carib_Chief_fetches_reward":
@@ -14084,7 +14812,7 @@ void SideQuestComplete(string sQuestName)
 
 			PChar.quest.crysskull_remove_Caribs_and_hostage.win_condition.l1 = "ExitFromLocation";
 			PChar.quest.crysskull_remove_Caribs_and_hostage.win_condition.l1.location = PChar.location;
-			Pchar.quest.crysskull_remove_Caribs_and_hostage.win_condition = "crysskull_remove_Caribs_and_hostage";
+			PChar.quest.crysskull_remove_Caribs_and_hostage.win_condition = "crysskull_remove_Caribs_and_hostage";
 
 			LAi_group_SetRelation(LAi_monsters_group, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			LAi_group_FightGroups(LAi_monsters_group, LAI_GROUP_PLAYER, true);
@@ -14128,10 +14856,14 @@ void SideQuestComplete(string sQuestName)
 				if (!LAi_isDead(NPChar))
 				{
 					SetOfficersIndex(PChar, i, cidx);
-					for (i = 0; i<GetPassengersQuantity(pchar); i++)	// Everyone rated for "loyality" gets an increase because you put yourself at risk to save an officer
+					for (j = 0; j < GetPassengersQuantity(PChar); j++)	// Everyone rated for "loyality" gets an increase because you put yourself at risk to save an officer
 					{
-						NPChar = characters[GetPassenger(PChar, i)];
-						if(CheckAttribute(NPChar, "loyality")) NPChar.loyality = makeint(NPChar.loyality) + 1;
+						iPassenger = GetPassenger(PChar, j);
+						if(iPassenger != -1)
+						{
+							sld = GetCharacter(iPassenger);
+							if(CheckAttribute(sld, "loyality")) sld.loyality = sti(sld.loyality) + 1;
+						}
 					}
 					Preprocessor_AddQuestData("hostage", GetMyFullName(NPChar));
 					AddQuestRecord("crystal_skull", 18);
@@ -14194,6 +14926,1218 @@ void SideQuestComplete(string sQuestName)
 
 ///////////////////////////////////////////////////////////////////////
 // The Quest for the Crystal Skull - end
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+// Colombian Silver
+///////////////////////////////////////////////////////////////////////
+
+		case "colombian_silver_prepare_taverns":		// Triggered by "Gov MR_dialog.c"
+			PChar.quest.colombian_silver.status = "start";
+			Locations[FindLocation("Cartagena_tavern")].vcskip = true;
+			SetRandomNameToCharacter(CharacterFromID("CS_soldier_01"));
+			ChangeCharacterAddressGroup(CharacterFromID("CS_soldier_01"), "Cartagena_tavern", "sit", "sit17");
+			LAi_SetSitType(CharacterFromID("CS_soldier_01"));
+			SetRandomNameToCharacter(CharacterFromID("CS_soldier_02"));
+			ChangeCharacterAddressGroup(CharacterFromID("CS_soldier_02"), "Cartagena_tavern", "sit", "sit19");
+			LAi_SetSitType(CharacterFromID("CS_soldier_02"));
+			SetRandomNameToCharacter(CharacterFromID("CS_soldier_03"));
+			ChangeCharacterAddressGroup(CharacterFromID("CS_soldier_03"), "Cartagena_tavern", "sit", "sit22");
+			LAi_SetSitType(CharacterFromID("CS_soldier_03"));
+			SetRandomNameToCharacter(CharacterFromID("CS_soldier_04"));
+			ChangeCharacterAddressGroup(CharacterFromID("CS_soldier_04"), "Cartagena_tavern", "sit", "sit23");
+			LAi_SetSitType(CharacterFromID("CS_soldier_04"));
+			SetRandomNameToCharacter(CharacterFromID("CS_soldier_05"));
+			ChangeCharacterAddressGroup(CharacterFromID("CS_soldier_05"), "Cartagena_tavern2", "goto", "goto4");
+			LAi_SetCivilianPatrolType(CharacterFromID("CS_soldier_05"));
+			GiveSoldierWeapon(CharacterFromID("CS_soldier_05"), SPAIN);
+			SetRandomNameToCharacter(CharacterFromID("CS_tavern_officer"));
+			ChangeCharacterAddressGroup(CharacterFromID("CS_tavern_officer"), "Cartagena_tavern2", "sit", "sit4");
+			LAi_SetSitType(CharacterFromID("CS_tavern_officer"));
+
+			Group_CreateGroup("Cartagena Silver Fleet");
+			Group_AddCharacter("Cartagena Silver Fleet", "CS_Spanish_Captain1");
+			Group_AddCharacter("Cartagena Silver Fleet", "CS_Spanish_Captain2");
+			Group_AddCharacter("Cartagena Silver Fleet", "CS_Spanish_Captain3");
+			Group_AddCharacter("Cartagena Silver Fleet", "CS_Spanish_Captain4");
+			Group_SetGroupCommander("Cartagena Silver Fleet", "CS_Spanish_Captain1");
+			Group_SetAddress("Cartagena Silver Fleet", "Colombia", "Quest_Ships","Quest_ship_11");
+			Group_CreateGroup("Cartagena Silver Fleet2");
+			Group_AddCharacter("Cartagena Silver Fleet2", "CS_Spanish_Captain5");
+			Group_SetGroupCommander("Cartagena Silver Fleet2", "CS_Spanish_Captain5");
+			Group_SetAddress("Cartagena Silver Fleet2", "Colombia", "Quest_Ships","Quest_ship_2");
+			SetCharacterShipLocation(CharacterFromID("CS_Spanish_Captain1"), "Cartagena_port");
+			SetCharacterShipLocation(CharacterFromID("CS_Spanish_Captain2"), "Cartagena_port");
+			SetCharacterShipLocation(CharacterFromID("CS_Spanish_Captain3"), "Cartagena_port");
+			SetCharacterShipLocation(CharacterFromID("CS_Spanish_Captain4"), "Cartagena_port");
+		break;
+
+		case "colombian_silver_reject_quest":		// Triggered by "Gov MR_dialog.c"
+			SetQuestHeader("colombian_silver");
+			if(GetRMRelation(PChar, SPAIN) >= REL_AMNESTY) AddQuestRecord("colombian_silver", 20);
+			else AddQuestRecord("colombian_silver", 19);
+			CloseQuestHeader("colombian_silver");
+			PChar.quest.colombian_silver.status = "reject";
+			PChar.quest.colombian_silver_reset_quest.win_condition.l1 = "Timer";
+			PChar.quest.colombian_silver_reset_quest.win_condition.l1.date.day = GetAddingDataDay(1,0,0);
+			PChar.quest.colombian_silver_reset_quest.win_condition.l1.date.month = GetAddingDataMonth(1,0,0);
+			PChar.quest.colombian_silver_reset_quest.win_condition.l1.date.year = GetAddingDataYear(1,0,0);
+			PChar.quest.colombian_silver_reset_quest.win_condition = "colombian_silver_reset_quest";
+		break;
+
+		case "colombian_silver_reset_quest":
+			DeleteQuestAttribute("colombian_silver");	// Wipe "PChar.quest.colombian_silver" so that "Gov MR_dialog.c" can trigger the quest again
+			DeleteQuestHeader("colombian_silver");		// Wipe the questbook too, so that it can be restarted
+		break;
+
+		case "colombian_silver_join_soldier":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, -2);
+			LAi_Fade("colombian_silver_join_soldier2", "colombian_silver_talk_soldier");
+		break;
+		
+		case "colombian_silver_join_soldier2":
+			LAi_SetActorType(PChar);
+			LAi_ActorSetSitMode(PChar);
+			switch(PChar.quest.colombian_silver.tavern1_friend)
+			{
+				case "CS_soldier_01": ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "sit", "sit20"); break;
+				case "CS_soldier_02": ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "sit", "sit18"); break;
+				case "CS_soldier_03": ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "sit", "sit24"); break;
+				case "CS_soldier_04": ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "sit", "sit21"); break;
+				ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "sit", "sit20");
+			}
+		break;
+
+		case "colombian_silver_talk_soldier":
+			sld = CharacterFromID(PChar.quest.colombian_silver.tavern1_friend);
+			sld.dialog.CurrentNode = "why_are_you_here";
+			LAi_ActorDialogNow(PChar, sld, "", -1);
+		break;
+
+		case "colombian_silver_leave_soldier":
+			LAi_SetPlayerType(PChar);
+			switch(PChar.quest.colombian_silver.tavern1_friend)
+			{
+				case "CS_soldier_01": ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "tables", "table5"); break;
+				case "CS_soldier_02": ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "tables", "table5"); break;
+				case "CS_soldier_03": ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "tables", "table6"); break;
+				case "CS_soldier_04": ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "tables", "table6"); break;
+				ChangeCharacterAddressGroup(PChar, "Cartagena_tavern", "tables", "table5");
+			}
+		break;
+
+		case "colombian_silver_join_officer":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, -2);
+			LAi_Fade("colombian_silver_join_officer2", "colombian_silver_talk_officer");
+		break;
+		
+		case "colombian_silver_join_officer2":
+			LAi_SetActorType(PChar);
+			LAi_ActorSetSitMode(PChar);
+			ChangeCharacterAddressGroup(PChar, "Cartagena_tavern2", "sit", "sit5");
+		break;
+
+		case "colombian_silver_talk_officer":
+			sld = CharacterFromID("CS_tavern_officer");
+			sld.dialog.CurrentNode = "generous";
+			LAi_ActorDialogNow(PChar, sld, "", -1);	// Triggers "colombian_silver_tavern2_soldier_leaves", also sets "colombian_silver.status" to either "arrest_inside" or "arrest_outside" depending on whether you choose to leave
+		break;
+
+		case "colombian_silver_tavern2_soldier_leaves":
+			sld = CharacterFromID("CS_soldier_05");
+			LAi_SetActorType(sld);
+			LAi_ActorGoToLocation(sld, "reload", "reload1", "none", "", "", "colombian_silver_soldier_left_tavern", 10.0);
+			if (CheckQuestAttribute("colombian_silver.status", "arrest_outside"))	// You chose to end the conversation with the officer prematurely
+			{
+//				LAi_QuestDelay("colombian_silver_leave_officer", 0.1);		// Stand up
+				LAi_SetPlayerType(PChar);
+				ChangeCharacterAddressGroup(PChar, "Cartagena_tavern2", "tables", "table4");
+				LAi_QuestDelay("colombian_silver_jimena_talks", 0.1);		// Jimena tries to talk to you before you leave
+				Locations[FindLocation("Cartagena_Center")].vcskip = true;
+				PChar.quest.colombian_silver_exit_tavern2.win_condition.l1 = "location";
+				PChar.quest.colombian_silver_exit_tavern2.win_condition.l1.location = "Cartagena_Center";
+				PChar.quest.colombian_silver_exit_tavern2.win_condition = "colombian_silver_exit_tavern2";
+			}
+			else LAi_QuestDelay("colombian_silver_talk_officer2", 0.1);
+		break;
+
+		case "colombian_silver_talk_officer2":
+			sld = CharacterFromID("CS_tavern_officer");
+			sld.dialog.CurrentNode = "delay_for_squad";
+			LAi_ActorDialogNow(PChar, sld, "", -1);
+		break;
+
+//		case "colombian_silver_leave_officer":
+//			LAi_SetPlayerType(PChar);
+//			ChangeCharacterAddressGroup(PChar, "Cartagena_tavern2", "tables", "table4");
+//		break;
+
+		case "colombian_silver_soldier_left_tavern":
+			PChar.quest.colombian_silver.soldier_left_tavern = "true";
+		break;
+
+		case "colombian_silver_exit_tavern2":
+			LAi_QuestDelay("colombian_silver_reset_tavern1", 0.1);
+			DeleteAttribute(&Locations[FindLocation("Cartagena_Center")],"vcskip");
+			if(CheckQuestAttribute("colombian_silver.soldier_left_tavern", "true"))
+			{
+				DisableFastTravel(true);
+				LAi_QuestDelay("colombian_silver_fight_outside_tavern", 0.0);
+				LAi_QuestDelay("colombian_silver_officer_joins_fight", 2.0);
+			}
+			else
+			{
+				LAi_SetGuardianType(CharacterFromID("CS_soldier_05"));
+			}
+			ChangeCharacterAddress(CharacterFromID("CS_soldier_05"), "None", "");
+
+			NPChar = CharacterFromID("Cartagena_officiant2");		// Jimena tried to talk to you about buying wine before you left
+			NPChar.Dialog.Filename = "eng_officiant_dialog.c";		// so reset her to normal tavern girl dialog and movement
+			NPChar.dialog.CurrentNode = "First time";
+			LAi_SetWaitressType(NPChar);
+			if(!CheckQuestAttribute("colombian_silver.status", "buy_wine"))	// If you left the tavern before Jimena talked to you, set her up to try again
+			{
+				Locations[FindLocation("Cartagena_tavern2")].reload.l1.disable = 1;
+				PChar.quest.colombian_silver_jimena_talks.win_condition.l1 = "location";
+				PChar.quest.colombian_silver_jimena_talks.win_condition.l1.location = "Cartagena_tavern2";
+				PChar.quest.colombian_silver_jimena_talks.win_condition = "colombian_silver_jimena_talks";
+			}
+		break;
+
+		case "colombian_silver_arrest_inside":
+			DisableFastTravel(true);
+			LAi_QuestDelay("colombian_silver_reset_tavern1", 0.1);
+			LAi_SetPlayerType(PChar);
+			ChangeCharacterAddressGroup(PChar, "Cartagena_tavern2", "goto", "goto4");
+
+			sld = CharacterFromID("CS_tavern_officer");
+			ChangeCharacterAddressGroup(sld, "Cartagena_tavern2", "tables", "table4");
+			LAi_SetActorType(sld);
+			LAi_ActorAttack(sld, PChar, "");
+			LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+
+			sld = CharacterFromID("CS_soldier_05");
+			ChangeCharacterAddressGroup(sld, "Cartagena_tavern2", "reload", "reload1");
+			LAi_SetActorType(sld);
+			LAi_ActorAttack(sld, PChar, "");
+			LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+
+			LAi_SetImmortal(CharacterfromID("Cartagena_officiant2"), true);		// Prevent Jimena from being killed in the fight as she's needed for the next bit
+			for (i=1; i<=4; i++)
+			{
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, Nations[SPAIN].fantomModel.m1, "reload", "reload1");
+				sld.id = "CS_Ambusher" +i;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				GiveSoldierWeapon(sld, SPAIN);
+				LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+			}
+			Locations[FindLocation("Cartagena_tavern2")].reload.l1.disable = 1;
+			DisableFastTravel(true);
+			LAi_group_SetRelation("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("SPAIN_SOLDIERS", "colombian_silver_fight_inside_tavern_over");
+		break;
+
+		case "colombian_silver_fight_inside_tavern_over":
+			PChar.quest.colombian_silver.status = "arrest_defeated";
+			Locations[FindLocation("Cartagena_tavern2")].reload.l1.disable = 1;
+			LAi_QuestDelay("colombian_silver_jimena_talks", 0.1);
+		break;
+
+		case "colombian_silver_reset_tavern1":
+			DeleteAttribute(&Locations[FindLocation("Cartagena_tavern")],"vcskip");
+			ChangeCharacterAddress(CharacterFromID("CS_soldier_01"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("CS_soldier_02"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("CS_soldier_03"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("CS_soldier_04"), "None", "");
+		break;
+
+		case "colombian_silver_fight_outside_tavern":
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, Nations[SPAIN].fantomModel.m1, "officers", "reload4_1");
+			sld.id = "CS_Ambusher1";
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, Nations[SPAIN].fantomModel.m2, "officers", "reload4_2");
+			sld.id = "CS_Ambusher2";
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, Nations[SPAIN].fantomModel.m3, "officers", "reload4_3");
+			sld.id = "CS_Ambusher3";
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, Nations[SPAIN].fantomModel.m4, "goto", "goto27");
+			sld.id = "CS_Ambusher4";
+			for (i=1; i<=4; i++)
+			{
+				sld = CharacterFromID("CS_Ambusher" + i);
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				GiveSoldierWeapon(sld, SPAIN);
+				LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+				attr = "l"+i;
+				PChar.quest.colombian_silver_fight_outside_tavern_over.win_condition.(attr) = "NPC_Death";
+				PChar.quest.colombian_silver_fight_outside_tavern_over.win_condition.(attr).character = "CS_Ambusher" + i;
+			}
+			PChar.quest.colombian_silver_fight_outside_tavern_over.win_condition = "colombian_silver_fight_outside_tavern_over";
+
+			StartQuestMovie(true, false, false);
+			LAi_group_SetRelation("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, true);
+		break;
+
+		case "colombian_silver_officer_joins_fight":
+			sld = CharacterFromID("CS_tavern_officer");
+			ChangeCharacterAddressGroup(sld, "Cartagena_Center", "reload", "reload5");
+			LAi_SetActorType(sld);
+			LAi_ActorAttack(sld, PChar, "");
+		break;
+
+		case "colombian_silver_fight_outside_tavern_over":
+			EndQuestMovie();
+			DisableFastTravel(false);
+			PChar.quest.colombian_silver.status = "arrest_defeated";
+		break;
+
+		case "colombian_silver_jimena_talks":
+			DisableFastTravel(true);
+			LAi_LocationFightDisable(&Locations[FindLocation("Cartagena_tavern2")], true);
+			LAi_SetFightMode(PChar, false);
+			NPChar = CharacterFromID("Cartagena_officiant2");
+			LAi_SetImmortal(NPChar, false);
+			NPChar.Dialog.Filename = "CS_Jimena_dialog.c";
+			NPChar.dialog.CurrentNode = "overheard";
+			LAi_SetActorType(NPChar);
+			LAi_ActorDialog(NPChar, PChar, "",20.0,20.0);
+		break;
+
+		case "colombian_silver_after_talk_jimena":	// Triggered by dialog with Jimena Lopez
+			PChar.quest.colombian_silver.status = "buy_wine";
+			Locations[FindLocation("Cartagena_tavern2")].reload.l1.disable = 0;
+			LAi_LocationFightDisable(&Locations[FindLocation("Cartagena_tavern2")], false);
+			DisableFastTravel(false);
+			NPChar = CharacterFromID("Cartagena_officiant2");
+			NPChar.Dialog.Filename = "eng_officiant_dialog.c";
+			NPChar.dialog.CurrentNode = "First time";
+			LAi_SetWaitressType(NPChar);
+		break;
+
+		case "colombian_silver_prepare_jimena_for_room":
+			PChar.quest.colombian_silver_jimena_in_room.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_jimena_in_room.win_condition.l1.location = "Cartagena_upstairs2";
+			PChar.quest.colombian_silver_jimena_in_room.win_condition = "colombian_silver_prepare_jimena_for_room2";
+		break;
+
+		case "colombian_silver_prepare_jimena_for_room2":
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(PChar, "goto", "goto4", "colombian_silver_jimena_in_room", 5.0);
+		break;
+
+		case "colombian_silver_jimena_in_room":
+			DisableFastTravel(true);
+			NPChar = CharacterFromID("Cartagena_officiant2");
+			LAi_ActorWaitDialog(PChar, NPChar);
+			ChangeCharacterAddressGroup(NPChar, "Cartagena_upstairs2", "reload", "reload1");
+			NPChar.Dialog.Filename = "CS_Jimena_dialog.c";
+			switch(GetAttribute(PChar, "quest.colombian_silver.status"))
+			{
+				case "buy_wine": NPChar.dialog.CurrentNode = "talk_privately"; break;
+				case "got_medicine": NPChar.dialog.CurrentNode = "you_have_medicine"; break;
+				NPChar.dialog.CurrentNode = "talk_privately"; break;
+			}
+			LAi_SetActorType(NPChar);
+			LAi_ActorDialog(NPChar, PChar, "colombian_silver_after_jimena_in_room",5.0,5.0);
+		break;
+
+		case "colombian_silver_after_jimena_in_room":
+			NPChar = CharacterFromID("Cartagena_officiant2");
+			LAi_SetActorType(NPChar);
+			LAi_ActorGoToLocation(NPChar, "reload", "reload1", "none", "", "", "", 10.0);
+			LAi_SetPlayerType(PChar);
+			DisableFastTravel(false);
+			PChar.quest.colombian_silver_after_jimena_in_room2.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.colombian_silver_after_jimena_in_room2.win_condition.l1.location = PChar.location;
+			PChar.quest.colombian_silver_after_jimena_in_room2.win_condition = "colombian_silver_after_jimena_in_room2";
+		break;
+
+		case "colombian_silver_after_jimena_in_room2":
+			LAi_QuestDelay("colombian_silver_reset_tavern1", 0.1);
+			NPChar = CharacterFromID("Cartagena_officiant2");
+			NPChar.Dialog.Filename = "eng_officiant_dialog.c";
+			NPChar.Dialog.CurrentNode = "First time";
+			NPChar.Dialog.TempNode = "First time";
+			ChangeCharacterAddressGroup(NPChar, "Cartagena_tavern2", "goto", "goto3");
+			LAi_SetWaitressType(NPChar);
+		break;
+
+		case "colombian_silver_check_return_with_medicine":	// Triggered by dialog with Jimena in tavern room
+			NPChar = CharacterFromID("Cartagena_officiant2");
+			Preprocessor_AddQuestData("name", GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("firstname", GetMyName(NPChar));
+			AddQuestRecord("colombian_silver", 2);
+			Preprocessor_Remove("firstname");
+			Preprocessor_Remove("name");
+			PChar.quest.colombian_silver_to_tavern_with_medicine.win_condition.l1 = "party_goods";
+			PChar.quest.colombian_silver_to_tavern_with_medicine.win_condition.l1.goods = GOOD_TREATMENT;
+			PChar.quest.colombian_silver_to_tavern_with_medicine.win_condition.l1.operation = ">=";
+			PChar.quest.colombian_silver_to_tavern_with_medicine.win_condition.l1.quantity = 100;
+			PChar.quest.colombian_silver_to_tavern_with_medicine.win_condition.l2 = "location";
+			PChar.quest.colombian_silver_to_tavern_with_medicine.win_condition.l2.location = "Cartagena_tavern2";
+			PChar.quest.colombian_silver_to_tavern_with_medicine.win_condition = "colombian_silver_to_tavern_with_medicine";
+		break;
+
+		case "colombian_silver_to_tavern_with_medicine":
+			PChar.quest.colombian_silver.status = "got_medicine";
+			NPChar = CharacterFromID("Cartagena_officiant2");
+			NPChar.Dialog.Filename = "CS_Jimena_dialog.c";
+			NPChar.Dialog.TempNode = "too_busy_to_talk";
+			NPChar.Dialog.CurrentNode = "too_busy_to_talk";
+		break;
+
+		case "colombian_silver_jimena_sets_up_deal":		// Triggered by dialog with Jimena in tavern room
+			Preprocessor_AddQuestData("name", GetMyFullName(CharacterFromID("Cartagena_officiant2")));
+			AddQuestRecord("colombian_silver", 3);
+			Preprocessor_Remove("name");
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition.l1 = "Timer";
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition.l1.date.day = GetAddingDataDay(0,0,2);
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition.l1.date.month = GetAddingDataMonth(0,0,2);
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition.l1.date.year = GetAddingDataYear(0,0,2);
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition.l2 = "location";
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition.l2.location = "Colombia_shore";
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition = "colombian_silver_meet_indians_on_beach";
+		break;
+
+		case "colombian_silver_meet_indians_on_beach":
+			LAi_LocationFightDisable(&Locations[FindLocation("Colombia_shore")], true);
+			LAi_SetFightMode(PChar, false);
+			DisableFastTravel(true);
+			StartQuestMovie(false, false, false);
+			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", GetRandomRank(false, OFFIC_TYPE_GUARD, 0), true, 1.0, "Indian1_1", "goto", "locator27");
+			sld.id = "Shore Indian 1";
+			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", GetRandomRank(false, OFFIC_TYPE_GUARD, 0), true, 1.0, "Indian1_2", "goto", "goto35");
+			sld.id = "Shore Indian 2";
+			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", GetRandomRank(false, OFFIC_TYPE_GUARD, 0), true, 1.0, "Indian1_3", "goto", "goto41");
+			sld.id = "Shore Indian 3";
+			sld = LAi_CreateFantomCharacterExOtAt(false, OFFIC_TYPE_GUARD,"isIndian","","", GetRandomRank(false, OFFIC_TYPE_GUARD, 0), true, 1.0, "Indian2", "goto", "goto42");
+			sld.id = "Shore Indian 4";
+			for (i=1; i<=4; i++)
+			{
+				sld = CharacterFromID("Shore Indian " + i);
+				sld.name = "Shore";
+				sld.lastname = "Indian";
+				LAi_group_MoveCharacter(sld, "SPAIN_CITIZENS");
+				LAi_SetActorType(sld);
+				LAi_ActorTurnToCharacter(sld, PChar);
+			}
+			sld = CharacterFromID("Columbian_Indian1");
+			ChangeCharacterAddressGroup(sld, "Colombia_shore", "goto", "goto14");
+			LAi_SetActorType(sld);
+			LAi_ActorTurnToCharacter(sld, PChar);
+			LAi_SetStayType(sld);
+			sld.Dialog.Filename = "CS_Indian_dialog.c";
+			sld.Dialog.CurrentNode = "have_you_medicine";
+		break;
+
+		case "colombian_silver_reset_indians1":			// Triggered by dialog with Indian on shore if your ship is not at the shore
+			LAi_LocationFightDisable(&Locations[FindLocation("Colombia_shore")], false);
+			DisableFastTravel(false);
+			EndQuestMovie();
+			PChar.quest.colombian_silver_reset_indians2.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_reset_indians2.win_condition.l1.location = "Colombia";
+			PChar.quest.colombian_silver_reset_indians2.win_condition = "colombian_silver_reset_indians2";
+		break;
+
+		case "colombian_silver_reset_indians2":
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition.l1.location = "Colombia_shore";
+			PChar.quest.colombian_silver_meet_indians_on_beach.win_condition = "colombian_silver_meet_indians_on_beach";
+		break;
+
+		case "colombian_silver_unload_medicine":	// Triggered by dialog with Indian on shore
+			PChar.quest.colombian_silver.status = "unloaded_medicine";
+			RemoveCharacterGoods(PChar, GOOD_TREATMENT, 100);
+			WaitDate("", 0, 0, 0, 1, rand(30));
+			DoQuestReloadToLocation("Colombia_shore", "reload", "reload1", "colombian_silver_medicine_unloaded");
+		break;
+
+		case "colombian_silver_medicine_unloaded":
+			AddQuestRecord("colombian_silver", 4);
+			sld = CharacterFromID("Columbian_Indian1");
+			ChangeCharacterAddressGroup(sld, "Colombia_shore", "goto", "goto18");
+			sld.Dialog.CurrentNode = "follow_me";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld, PChar, "",5.0,5.0);
+		break;
+
+		case "colombian_silver_indians_leave_shore":	// Triggered by dialog with "Columbian_Indian1" if you admit to not having enough medicine
+			AddQuestRecord("colombian_silver", 21);
+			CloseQuestHeader("colombian_silver");
+			LAi_LocationFightDisable(&Locations[FindLocation("Colombia_shore")], false);
+			EndQuestMovie();
+			LAi_SetActorType(CharacterFromID("Columbian_Indian1"));
+			LAi_ActorGoToLocation(CharacterFromID("Columbian_Indian1"), "reload", "reload2_back", "none", "", "", "", 60.0);
+			for (i=1; i<=4; i++)
+			{
+				sld = CharacterFromID("Shore Indian " + i);
+				LAi_SetActorType(sld);
+				LAi_ActorGoToLocation(sld, "reload", "reload2_back", "none", "", "", "", 60.0);
+			}
+			PChar.quest.colombian_silver_reset_indian1.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.colombian_silver_reset_indian1.win_condition.l1.location = PChar.location;
+			PChar.quest.colombian_silver_reset_indian1.win_condition = "colombian_silver_reset_indian1";
+		break;
+
+		case "colombian_silver_reset_indian1":
+			sld = CharacterFromID("Columbian_Indian1");
+			ChangeCharacterAddressGroup(sld, "Colombian_Indian_Village", "goto", "goto7");
+			sld.Dialog.Filename = "Enc_Walker.c";
+			LAi_SetWarriorTypeNoGroup(sld);
+			LAi_warrior_DialogEnable(sld, true);
+		break;
+
+		case "colombian_silver_follow_indian1":
+			if(CheckQuestAttribute("colombian_silver.status", "not_unloaded_medicine"))
+			{
+				if(GetSquadronGoods(PChar, GOOD_TREATMENT) >= 100) AddQuestRecord("colombian_silver", 5);
+				else AddQuestRecord("colombian_silver", 6);
+			}
+			LAi_LocationFightDisable(&Locations[FindLocation("Colombia_shore")], false);
+			EndQuestMovie();
+			LAi_SetActorType(CharacterFromID("Columbian_Indian1"));
+			LAi_ActorGoToLocator(CharacterFromID("Columbian_Indian1"), "reload", "reload2_back", "", 60.0);
+
+			Locations[FindLocation("Colombia_Jungle_04")].vcskip = true;
+			PChar.quest.colombian_silver_to_jungle04.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_to_jungle04.win_condition.l1.location = "Colombia_Jungle_04";
+			PChar.quest.colombian_silver_to_jungle04.win_condition = "colombian_silver_to_jungle04";
+		break;
+
+		case "colombian_silver_to_jungle04":
+			sld = CharacterFromID("Columbian_Indian1");
+			ChangeCharacterAddressGroup(sld, "Colombia_Jungle_04", "reload", "reload3");
+			LAi_SetActorType(sld);
+			LAi_type_actor_Reset(sld);
+			LAi_ActorGoToLocator(sld, "goto", "citizen07", "colombian_silver_to_jungle04_2", 25.0);
+			DeleteAttribute(&Locations[FindLocation("Colombia_Jungle_04")],"vcskip");
+			Locations[FindLocation("Colombia_Jungle_04")].reload.l5.disable = 1;
+			Locations[FindLocation("Colombia_Jungle_04")].reload.l6.disable = 1;
+			Locations[FindLocation("Colombia_Jungle_01")].vcskip = true;
+			PChar.quest.colombian_silver_to_jungle01.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_to_jungle01.win_condition.l1.location = "Colombia_Jungle_01";
+			PChar.quest.colombian_silver_to_jungle01.win_condition = "colombian_silver_to_jungle01";
+		break;
+
+		case "colombian_silver_to_jungle04_2":		// Two-stage goto needed because going directly to "reload2_back" takes Indian on an odd route
+			sld = CharacterFromID("Columbian_Indian1");
+			LAi_SetActorType(sld);
+			LAi_type_actor_Reset(sld);
+			LAi_ActorGoToLocator(sld, "reload", "reload2_back", "", 90.0);
+		break;
+
+		case "colombian_silver_to_jungle01":
+			sld = CharacterFromID("Columbian_Indian1");
+			ChangeCharacterAddressGroup(sld, "Colombia_Jungle_01", "reload", "reload1");
+			LAi_SetActorType(sld);
+			LAi_type_actor_Reset(sld);
+			LAi_ActorGoToLocator(sld, "reload", "reload3_back", "", 60.0);
+			Locations[FindLocation("Colombia_Jungle_04")].reload.l5.disable = 0;
+			Locations[FindLocation("Colombia_Jungle_04")].reload.l6.disable = 0;
+			DeleteAttribute(&Locations[FindLocation("Colombia_Jungle_01")],"vcskip");
+			Locations[FindLocation("Colombia_swamp")].vcskip = true;
+			Locations[FindLocation("Colombia_Jungle_01")].reload.l3.disable = 1;
+			Locations[FindLocation("Colombia_Jungle_01")].reload.l4.disable = 1;
+			PChar.quest.colombian_silver_to_swamp.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_to_swamp.win_condition.l1.location = "Colombia_swamp";
+			PChar.quest.colombian_silver_to_swamp.win_condition = "colombian_silver_to_swamp";
+		break;
+
+		case "colombian_silver_to_swamp":
+			Locations[FindLocation("Colombia_Jungle_01")].reload.l3.disable = 0;
+			Locations[FindLocation("Colombia_Jungle_01")].reload.l4.disable = 0;
+			StartQuestMovie(true, false, false);
+			sld = CharacterFromID("Columbian_Indian1");
+			LAi_type_actor_Reset(sld);
+			ChangeCharacterAddressGroup(sld, "Colombia_swamp", "reload", "reload2");
+			LAi_ActorGoToLocator(sld, "reload", "reload1_back", "", 60.0);
+			DeleteAttribute(&Locations[FindLocation("Colombia_swamp")],"vcskip");
+			LAi_QuestDelay("colombian_silver_bitten", 10.0);
+		break;
+
+		case "colombian_silver_bitten":
+			if(Pchar.sex == "man") {PlaySound("OBJECTS\DUEL\man_hit5.wav");}
+			else{PlaySound("OBJECTS\DUEL\woman_hit3.wav");}
+			LAi_SetActorType(PChar);
+			LAi_ActorAnimation(PChar, "death_1", "colombian_silver_bitten2", 2.0);
+		break;
+
+		case "colombian_silver_bitten2":
+			LAi_ActorAnimation(PChar, "Lay_1", "", -1);
+			LAi_QuestDelay("colombian_silver_bitten3", 2.0);
+		break;
+
+		case "colombian_silver_bitten3":
+			AddQuestRecord("colombian_silver", 7);
+			cidx = -1;
+			for(i = OFFICER_MAX; i>=1; i--)
+			{
+				if(GetOfficersIndex(PChar, i) > 0)
+				{
+					cidx = GetOfficersIndex(PChar, i);
+					PChar.quest.colombian_silver.medicine_getter.slot = i;
+				}
+			}
+			if (cidx > 0)
+			{
+				NPChar = GetCharacter(cidx);
+				RemoveOfficersIndex(PChar, cidx);
+				ChangeCharacterAddressGroup(NPChar, "Colombian_Indian_Village", "goto", "goto42");
+			}
+			PChar.quest.colombian_silver.medicine_getter = cidx;
+			Locations[FindLocation("Colombian_Indian_Village")].reload.l1.disable = 1;
+			Locations[FindLocation("Colombian_Indian_Village")].reload.l2.disable = 1;
+			DoQuestReloadToLocation("Colombian_Indian_Village", "goto", "goto39", "colombian_silver_prepare_to_heal");
+		break;
+
+		case "colombian_silver_prepare_to_heal":
+			sld = CharacterFromID("Columbian_Indian1");
+			ChangeCharacterAddressGroup(sld, "Colombian_Indian_Village", "goto", "goto7");
+			LAi_SetWarriorTypeNoGroup(sld);
+			LAi_warrior_DialogEnable(sld, true);
+			LAi_SetPlayerType(PChar);
+			cidx = sti(PChar.quest.colombian_silver.medicine_getter);
+			if(sti(cidx) > 0)
+			{
+				NPChar = GetCharacter(cidx);
+				SetOfficersIndex(PChar, sti(PChar.quest.colombian_silver.medicine_getter.slot), cidx);
+			}
+			else
+			{
+				NPChar = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "sailor15", "goto", "goto42");
+				NPChar.id = "medicine_getter";
+				NPChar.nation = PChar.nation;
+				SetRandomNameToCharacter(NPChar);
+			}
+			EndQuestMovie();
+
+			NPChar = CharacterFromID("Columbian_Indian6");
+			ChangeCharacterAddressGroup(NPChar, "Colombian_Indian_Village", "goto", "character8");
+			NPChar.Dialog.Filename = "CS_Indian_dialog.c";
+			NPChar.Dialog.CurrentNode = "bitten";
+			LAi_SetActorType(NPChar);
+			LAi_ActorDialog(NPChar, PChar, "",5.0,5.0);	// Triggers "colombian_silver_heal_from_bite", "colombian_silver_order_medicine" or "colombian_silver_poisoned"
+		break;							// depending on whether you have already delivered medicine or how much you have
+
+		case "colombian_silver_order_medicine":
+			cidx = sti(PChar.quest.colombian_silver.medicine_getter);
+			if(cidx > 0)
+			{
+				NPChar = GetCharacter(cidx);
+				StoreDialog(NPChar);
+			}
+			else NPChar = CharacterFromID("medicine_getter");
+			NPChar.Dialog.Filename = "CS_crew_dialog.c";
+			NPChar.Dialog.CurrentNode = "order_medicine";
+			LAi_SetActorType(NPChar);
+			LAi_ActorDialog(NPChar, PChar, "colombian_silver_order_medicine2",5.0,5.0);
+		break;
+
+		case "colombian_silver_order_medicine2":
+			cidx = sti(PChar.quest.colombian_silver.medicine_getter);
+			if(cidx > 0) NPChar = GetCharacter(cidx);
+			else NPChar = CharacterFromID("medicine_getter");
+			LAi_SetActorType(NPChar);
+			LAi_ActorGoToLocation(NPChar, "reload", "reload1", "none", "", "", "", 10.0);
+			LAi_QuestDelay("colombian_silver_order_medicine3", 10.0);
+		break;
+
+		case "colombian_silver_order_medicine3":
+			WaitDate("", 0, 0, 0, 1, rand(30));
+			cidx = sti(PChar.quest.colombian_silver.medicine_getter);
+			if(cidx > 0)
+			{
+				NPChar = GetCharacter(cidx);
+				RestoreDialog(NPChar);
+			}
+			LAi_Fade("colombian_silver_order_medicine4", "colombian_silver_heal_from_bite");
+		break;
+
+		case "colombian_silver_order_medicine4":
+			if(GetSquadronGoods(PChar, GOOD_TREATMENT) >= 100)
+			{
+				AddQuestRecord("colombian_silver", 8);
+				PChar.quest.colombian_silver.status = "unloaded_medicine";
+				RemoveCharacterGoods(PChar, GOOD_TREATMENT, 100);
+			}
+			if(PChar.quest.colombian_silver.status == "paid_difference")
+			{
+				AddQuestRecord("colombian_silver", 9);
+				RemoveCharacterGoods(PChar, GOOD_TREATMENT, sti(GetSquadronGoods(PChar, GOOD_TREATMENT)));
+			}
+		break;
+
+		case "colombian_silver_poisoned":
+			LAi_KillCharacter(PChar);
+			LAi_QuestDelay("colombian_silver_poisoned_game_over", 5.0);
+		break;
+
+		case "colombian_silver_poisoned_game_over":
+			PChar.quest.disable_rebirth = true;
+			PostEvent("LAi_event_GameOver", 0, "s", "land");
+		break;
+
+		case "colombian_silver_heal_from_bite":
+			cidx = sti(GetAttribute(PChar, "quest.colombian_silver.medicine_getter"));
+			if(cidx > 0)
+			{
+				NPChar = GetCharacter(cidx);
+				RemoveOfficersIndex(PChar, cidx);
+			}
+			DoQuestReloadToLocation("Colombian_Indian_Village", "goto", "goto39", "colombian_silver_heal_from_bite2");
+		break;
+
+		case "colombian_silver_heal_from_bite2":
+			cidx = sti(GetAttribute(PChar, "quest.colombian_silver.medicine_getter"));
+			if(cidx > 0)
+			{
+				NPChar = GetCharacter(cidx);
+				ChangeCharacterAddressGroup(NPChar, "Colombian_Indian_Village", "goto", "goto42");
+				SetOfficersIndex(PChar, sti(PChar.quest.colombian_silver.medicine_getter.slot), cidx);
+			}
+
+			Locations[FindLocation("Colombian_Indian_Village")].reload.l1.disable = 0;
+			Locations[FindLocation("Colombian_Indian_Village")].reload.l2.disable = 0;
+
+			sld = CharacterFromID("Columbian_Indian1");
+			LAi_SetActorType(sld);
+			if(CheckQuestAttribute("colombian_silver.status", "unloaded_medicine") || CheckQuestAttribute("colombian_silver.status", "paid_difference"))
+			{
+				sld.Dialog.CurrentNode = "go_to_Spanish";
+				Build_at("Colombia_Jungle_02", "Totem3", "", -26.0, 0.0, -18.5, 0.0, "");	// Indians like you, so mark the way back to the village
+			}
+			else
+			{
+				AddQuestRecord("colombian_silver", 10);
+				sld.Dialog.CurrentNode = "back_to_jungle";
+			}
+			LAi_ActorDialog(sld, PChar, "colombian_silver_leave_indian_village",5.0,5.0);
+		break;
+
+		case "colombian_silver_leave_indian_village":
+			LAi_SetActorType(CharacterFromID("Columbian_Indian1"));
+			LAi_ActorGoToLocator(CharacterFromID("Columbian_Indian1"), "reload", "reload1", "", 30.0);
+
+			Locations[FindLocation("Colombia_Jungle_02")].vcskip = true;
+			PChar.quest.colombian_silver_to_jungle02.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_to_jungle02.win_condition.l1.location = "Colombia_Jungle_02";
+			PChar.quest.colombian_silver_to_jungle02.win_condition = "colombian_silver_to_jungle02";
+		break;
+
+		case "colombian_silver_to_jungle02":
+			DeleteAttribute(&Locations[FindLocation("Colombia_Jungle_02")],"vcskip");
+			Locations[FindLocation("Colombia_swamp")].vcskip = true;
+			sld = CharacterFromID("Columbian_Indian1");
+			ChangeCharacterAddressGroup(sld, "Colombia_Jungle_02", "reload", "reload1");
+			LAi_SetActorType(sld);
+			LAi_type_actor_Reset(sld);
+			if(CheckQuestAttribute("colombian_silver.status", "unloaded_medicine") || CheckQuestAttribute("colombian_silver.status", "paid_difference"))
+			{
+				LAi_ActorGoToLocator(sld, "reload", "reload3_back", "", 60.0);
+				Locations[FindLocation("Colombia_Jungle_02")].reload.l1.disable = 0;	// Indians are your friends now, so you can return to the village
+				Locations[FindLocation("Colombia_Jungle_02")].reload.l2.disable = 0;
+				Locations[FindLocation("Colombia_Jungle_02")].reload.l3.disable = 1;
+				Locations[FindLocation("Colombia_Jungle_02")].reload.l4.disable = 1;
+				Locations[FindLocation("Colombia_swamp")].vcskip = true;
+				PChar.quest.colombian_silver_return_swamp.win_condition.l1 = "location";
+				PChar.quest.colombian_silver_return_swamp.win_condition.l1.location = "Colombia_swamp";
+				PChar.quest.colombian_silver_return_swamp.win_condition = "colombian_silver_return_swamp";
+			}
+			else
+			{
+				sld.Dialog.CurrentNode = "go_away";
+				LAi_ActorDialog(sld, PChar, "colombian_silver_indian_returns_to_village",5.0,5.0);
+			}
+		break;
+
+		case "colombian_silver_indian_returns_to_village":
+			sld = CharacterFromID("Columbian_Indian1");
+			LAi_SetActorType(sld);
+			LAi_type_actor_Reset(sld);
+			LAi_ActorGoToLocation(sld, "reload1_back", "reload1", "none", "", "", "", 10.0);
+			PChar.quest.colombian_silver_reset_indian1.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.colombian_silver_reset_indian1.win_condition.l1.location = PChar.location;
+			PChar.quest.colombian_silver_reset_indian1.win_condition = "colombian_silver_reset_indian1";
+		break;
+
+		case "colombian_silver_return_swamp":
+			Locations[FindLocation("Colombia_Jungle_02")].reload.l3.disable = 0;
+			Locations[FindLocation("Colombia_Jungle_02")].reload.l4.disable = 0;
+			Locations[FindLocation("Colombia_swamp")].reload.l1.disable = 0;
+			Locations[FindLocation("Colombia_swamp")].reload.l2.disable = 0;
+			Locations[FindLocation("Colombia_swamp")].reload.l3.disable = 1;
+			Locations[FindLocation("Colombia_swamp")].reload.l4.disable = 1;
+			Locations[FindLocation("Colombia_swamp")].reload.l5.disable = 1;
+			Locations[FindLocation("Colombia_swamp")].reload.l6.disable = 1;
+			sld = CharacterFromID("Columbian_Indian1");
+			LAi_type_actor_Reset(sld);
+			ChangeCharacterAddressGroup(sld, "Colombia_swamp", "reload", "reload3");
+			LAi_ActorGoToLocator(sld, "reload", "reload1_back", "", 60.0);
+			DeleteAttribute(&Locations[FindLocation("Colombia_swamp")],"vcskip");
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.locators = "Jungle07_l_GR";
+			Locations[FindLocation("Colombia_Jungle_03")].vcskip = true;
+			Locations[FindLocation("Colombia_Jungle_03")].locators_radius.goto.citizen013 = 4.0;
+			PChar.quest.colombian_silver_arrive_jungle_03.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_arrive_jungle_03.win_condition.l1.location = "Colombia_Jungle_03";
+			PChar.quest.colombian_silver_arrive_jungle_03.win_condition = "colombian_silver_arrive_jungle_03";
+		break;
+
+		case "colombian_silver_arrive_jungle_03":
+			Locations[FindLocation("Colombia_swamp")].reload.l3.disable = 0;
+			Locations[FindLocation("Colombia_swamp")].reload.l4.disable = 0;
+			Locations[FindLocation("Colombia_swamp")].reload.l5.disable = 0;
+			Locations[FindLocation("Colombia_swamp")].reload.l6.disable = 0;
+//			Locations[FindLocation("Colombia_Jungle_03")].reload.l1.disable = 1;
+//			Locations[FindLocation("Colombia_Jungle_03")].reload.l2.disable = 1;
+			sld = CharacterFromID("Columbian_Indian1");
+			LAi_type_actor_Reset(sld);
+			ChangeCharacterAddressGroup(sld, "Colombia_Jungle_03", "goto", "citizen09");
+			sld.Dialog.CurrentNode = "go_away_friend";
+			LAi_ActorDialog(sld, PChar, "colombian_silver_prepare_ambush",5.0,5.0);
+		break;
+
+		case "colombian_silver_prepare_ambush":
+			AddQuestRecord("colombian_silver", 11);
+			SetCharacterShipLocation(CharacterFromID("CS_Spanish_Captain5"), "Colombia_shore");	// Put a Spanish ship near the beach
+			sld = CharacterFromID("Columbian_Indian1");
+			LAi_SetActorType(sld);
+			LAi_type_actor_Reset(sld);
+			LAi_ActorGoToLocation(sld, "reload1_back", "reload1", "none", "", "", "", 5.0);
+			WaitDate("", 0, 0, 0, 2, rand(30));
+			DoQuestReloadToLocation("Colombia_Jungle_03", "reload", "reload1", "colombian_silver_prepare_ambush2");
+		break;
+
+		case "colombian_silver_prepare_ambush2":
+			ChangeCharacterAddressGroup(CharacterFromID("CS_soldier_01"), "Colombia_Jungle_03", "goto", "goto3");
+			ChangeCharacterAddressGroup(CharacterFromID("CS_soldier_02"), "Colombia_Jungle_03", "goto", "goto3");
+			LAi_SetActorType(CharacterFromID("CS_soldier_01"));
+			LAi_ActorGoToLocator(CharacterFromID("CS_soldier_01"), "reload", "reload2_back", "", 60.0);
+			LAi_SetActorType(CharacterFromID("CS_soldier_02"));
+			LAi_ActorGoToLocator(CharacterFromID("CS_soldier_02"), "reload", "reload2_back", "", 60.0);
+
+			PChar.quest.colombian_silver_advance_guard_spotted1.win_condition.l1 = "locator";
+			PChar.quest.colombian_silver_advance_guard_spotted1.win_condition.l1.location = "Colombia_Jungle_03";
+			PChar.quest.colombian_silver_advance_guard_spotted1.win_condition.l1.locator_group = "goto";
+			PChar.quest.colombian_silver_advance_guard_spotted1.win_condition.l1.locator = "citizen013";
+			PChar.quest.colombian_silver_advance_guard_spotted1.win_condition = "colombian_silver_advance_guard_spotted1";
+
+			LAi_QuestDelay("colombian_silver_reset_indian1", 0.0);
+			LAi_QuestDelay("colombian_silver_advance_guard_spotted1", 10.0);
+		break;
+
+		case "colombian_silver_advance_guard_spotted1":
+			if(!CheckQuestAttribute("colombian_silver.status", "advance_guard_spotted"))
+			{
+				LAi_SetActorType(PChar);
+				cidx = -1;
+				for(i = OFFICER_MAX; i>=1; i--)
+				{
+					if(GetOfficersIndex(PChar, i) > 0)
+					{
+						cidx = GetOfficersIndex(PChar, i);
+						PChar.quest.colombian_silver.ambush_officer.slot = i;
+					}
+				}
+				if(cidx > 0)
+				{
+					NPChar = GetCharacter(cidx);
+					PChar.quest.colombian_silver.ambush_officer = NPChar.id;
+					StoreDialog(NPChar);
+					NPChar.Dialog.Filename = "CS_crew_dialog.c";
+					NPChar.Dialog.CurrentNode = "first_sighting";
+					LAi_ActorWaitDialog(PChar, NPChar);
+					LAi_SetActorType(NPChar);
+					LAi_ActorDialog(NPChar, PChar, "colombian_silver_advance_guard_spotted2",5.0,5.0);
+				}
+				else
+				{
+					PChar.dialog.currentnode = "colombian_silver_first_sighting";
+					LAi_ActorSelfDialog(PChar, "colombian_silver_advance_guard_spotted2");
+				}
+				PChar.quest.colombian_silver.status = "advance_guard_spotted";
+				PChar.quest.colombian_silver_advance_guard_spotted1.over = "yes";
+			}
+		break;
+
+		case "colombian_silver_advance_guard_spotted2":
+			if(CheckAttribute(PChar, "quest.colombian_silver.ambush_officer"))
+			{
+				NPChar = CharacterFromID(PChar.quest.colombian_silver.ambush_officer);
+				LAi_SetOfficerType(NPChar);
+				RestoreDialog(NPChar);
+			}
+			LAi_SetPlayerType(PChar);
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey1 = "donkey_loaded";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey1.locator.group = "goto";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey1.locator.name = "goto4";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey2 = "donkey_loaded";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey2.locator.group = "goto";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey2.locator.name = "goto5";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey3 = "donkey_loaded";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey3.locator.group = "goto";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey3.locator.name = "goto6";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey4 = "donkey_loaded";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey4.locator.group = "goto";
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.donkey4.locator.name = "goto7";
+
+			for(i=10; i<=14; i++)
+			{
+				attr = "goto" + i;
+				Locations[FindLocation("Colombia_Jungle_03")].locators_radius.goto.(attr) = 12.0;
+			}
+
+			DoQuestReloadToLocation("Colombia_Jungle_03", "reload", "reload4", "colombian_silver_advance_guard_spotted3");
+		break;
+
+		case "colombian_silver_advance_guard_spotted3":
+			LAi_SetGuardianType(CharacterFromID("CS_soldier_01"));
+			LAi_SetGuardianType(CharacterFromID("CS_soldier_02"));
+
+			for(i=1; i<=8; i++)
+			{
+				if(i == 8) attr = "m" + (i-7);
+				else attr = "m" + (i-1);
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, Nations[SPAIN].fantomModel.(attr), "goto", "goto" + (i+7));
+				sld.id = "CS_Silver" + i;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				GiveSoldierWeapon(sld, SPAIN);
+				LAi_SetGuardianType(sld);
+				LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+			}
+
+			if(CheckAttribute(PChar, "quest.colombian_silver.ambush_officer"))
+			{
+				NPChar = CharacterFromID(PChar.quest.colombian_silver.ambush_officer)
+				StoreDialog(NPChar);
+				NPChar.Dialog.Filename = "CS_crew_dialog.c";
+				NPChar.Dialog.CurrentNode = "second_sighting";
+				LAi_SetActorType(PChar);
+				LAi_ActorWaitDialog(PChar, NPChar);
+				LAi_SetActorType(NPChar);
+				LAi_ActorDialog(NPChar, PChar, "colombian_silver_set_ambush_triggers",5.0,5.0);
+			}
+			else LAi_QuestDelay("colombian_silver_set_ambush_triggers", 0.0);
+		break;
+
+		case "colombian_silver_set_ambush_triggers":
+			if(CheckAttribute(PChar, "quest.colombian_silver.ambush_officer"))
+			{
+				NPChar = CharacterFromID(PChar.quest.colombian_silver.ambush_officer);
+				LAi_SetOfficerType(NPChar);
+				RestoreDialog(NPChar);
+				LAi_SetPlayerType(PChar);
+			}
+
+			for(i=1; i<=5; i++)
+			{
+				attr = "colombian_silver_ambush_loctrigger" + i;
+				PChar.quest.(attr).win_condition.l1 = "locator";
+				PChar.quest.(attr).win_condition.l1.location = "Colombia_Jungle_03";
+				PChar.quest.(attr).win_condition.l1.locator_group = "goto";
+				PChar.quest.(attr).win_condition.l1.locator = "goto" + (i+9);
+				PChar.quest.(attr).win_condition = "colombian_silver_ambush";
+			}
+
+			for(i=1; i<=8; i++)
+			{
+				sld = CharacterFromID("CS_Silver" + i);
+				LAi_SetCheckMinHP(sld, LAi_GetCharacterHP(sld)-1.0, false, "colombian_silver_ambush");
+			}
+		break;
+
+		case "colombian_silver_ambush":
+			PChar.quest.colombian_silver_ambush_loctrigger1.over = "yes";
+			PChar.quest.colombian_silver_ambush_loctrigger2.over = "yes";
+			PChar.quest.colombian_silver_ambush_loctrigger3.over = "yes";
+			PChar.quest.colombian_silver_ambush_loctrigger4.over = "yes";
+			PChar.quest.colombian_silver_ambush_loctrigger5.over = "yes";
+			for(i=8; i<=15; i++)
+			{
+				attr = "goto" + i;
+				Locations[FindLocation("Colombia_Jungle_03")].locators_radius.goto.(attr) = 1.0;
+			}
+
+			for(i=1; i<=8; i++)
+			{
+				LAi_RemoveCheckMinHP(CharacterFromID("CS_Silver" + i));
+			}
+
+			LAi_group_SetRelation("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("SPAIN_SOLDIERS", "colombian_silver_convoy_ambush_over");
+
+			PChar.quest.colombian_silver_ambush_failed.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.colombian_silver_ambush_failed.win_condition.l1.location = PChar.location;
+			PChar.quest.colombian_silver_ambush_failed.win_condition = "colombian_silver_ambush_failed";
+
+			PChar.quest.colombian_silver_return_to_beach.win_condition.l1 = "location";
+			PChar.quest.colombian_silver_return_to_beach.win_condition.l1.location = "Colombia_shore";
+			PChar.quest.colombian_silver_return_to_beach.win_condition = "colombian_silver_return_to_beach";
+
+			DeleteAttribute(&Locations[FindLocation("Colombia_Jungle_03")],"vcskip");
+
+			SetCharacterShipLocation(CharacterFromID("CS_Spanish_Captain5"), "Colombia_shore");
+			PChar.quest.colombian_silver.fleet_ready = "true";
+		break;
+
+		case "colombian_silver_ambush_failed":
+			LAi_group_RemoveCheck("SPAIN_SOLDIERS");
+			AddQuestRecord("colombian_silver", 13);
+			ChangeCharacterAddress(CharacterFromID("CS_soldier_01"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("CS_soldier_02"), "None", "");
+			PChar.quest.colombian_silver.status = "ambush_failed";
+			for(i=1; i<=4; i++)
+			{
+				attr = "models.always.donkey" + i;
+				DeleteAttribute(Locations[FindLocation("Colombia_Jungle_03")], attr);		// Remove donkeys from "Colombia_Jungle_03"
+			}
+		break;
+
+		case "colombian_silver_convoy_ambush_over":
+			PChar.quest.colombian_silver_ambush_failed.over = "yes";
+			PChar.quest.colombian_silver.got_silver = "true";
+			AddQuestRecord("colombian_silver", 12);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Sneak", 2000);
+				AddPartyExpChar(PChar, "", 200);
+			}
+			else { AddPartyExp(PChar, 2000); }
+			for(i = OFFICER_MAX; i>=1; i--)
+			{
+				if(GetOfficersIndex(PChar, i) > 0)
+				{
+					cidx = GetOfficersIndex(PChar, i);
+					PChar.quest.colombian_silver.ambush_officer.slot = i;
+				}
+			}
+			LAi_SetActorType(PChar);
+			if(cidx > 0)
+			{
+				NPChar = GetCharacter(cidx);
+				PChar.quest.colombian_silver.ambush_officer = NPChar.id;
+				StoreDialog(NPChar);
+				NPChar.Dialog.Filename = "CS_crew_dialog.c";
+				NPChar.Dialog.CurrentNode = "battle_over";
+				LAi_ActorWaitDialog(PChar, NPChar);
+				LAi_SetActorType(NPChar);
+				LAi_ActorDialog(NPChar, PChar, "colombian_silver_convoy_ambush_over2",5.0,5.0);
+			}
+			else
+			{
+				DeleteAttribute(PChar, "quest.colombian_silver.ambush_officer");
+				PChar.dialog.currentnode = "colombian_silver_battle_over";
+				LAi_ActorSelfDialog(PChar, "colombian_silver_convoy_ambush_over2");
+			}
+		break;
+
+		case "colombian_silver_convoy_ambush_over2":
+			if(CheckAttribute(PChar, "quest.colombian_silver.ambush_officer"))
+			{
+				NPChar = CharacterFromID(PChar.quest.colombian_silver.ambush_officer);
+				LAi_SetOfficerType(NPChar);
+				RestoreDialog(NPChar);
+			}
+			LAi_SetPlayerType(PChar);
+
+			Locations[FindLocation("Colombia_Jungle_03")].models.always.locators = "Jungle07_l";
+			Locations[FindLocation("Colombia_Jungle_04")].models.always.locators = "Jungle02_l_GR2";
+			for(i=1; i<=4; i++)
+			{
+				attr = "models.always.donkey" + i;
+				DeleteAttribute(Locations[FindLocation("Colombia_Jungle_03")], attr);		// Remove donkeys from "Colombia_Jungle_03"
+				Locations[FindLocation("Colombia_Jungle_04")].(attr) = "donkey_loaded";		// Set up donkeys in "Colombia_Jungle_04" ready for next battle scene
+				Locations[FindLocation("Colombia_Jungle_04")].(attr).locator.group = "goto";
+				Locations[FindLocation("Colombia_Jungle_04")].(attr).locator.name = "goto" + (i+1);
+			}
+			DeleteAttribute(&Locations[FindLocation("Colombia_Jungle_03")],"vcskip");
+//			Locations[FindLocation("Colombia_Jungle_03")].reload.l1.disable = 0;
+//			Locations[FindLocation("Colombia_Jungle_03")].reload.l2.disable = 0;
+			DoQuestReloadToLocation("Colombia_Jungle_04", "reload", "reload4", "colombian_silver_counterattack_setup");
+		break;
+
+		case "colombian_silver_counterattack_setup":
+			for(i=1; i<=6; i++)
+			{
+				attr = "m" + (i-1);
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.0, Nations[SPAIN].fantomModel.(attr), "reload", "reload1_back");
+				sld.id = "CS_Silver2_" + i;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				GiveSoldierWeapon(sld, SPAIN);
+				LAi_SetGuardianType(sld);
+				LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+			}
+			LAi_SetActorType(PChar);
+			LAi_QuestDelay("colombian_silver_convoy_turn_to_counterattack", 0.0);
+		break;
+
+		case "colombian_silver_convoy_turn_to_counterattack":
+			LAi_group_SetRelation("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("SPAIN_SOLDIERS", "colombian_silver_convoy_counterattack_over");
+
+			LAi_ActorTurnToLocator(PChar, "reload", "reload1_back");
+			LAi_QuestDelay("colombian_silver_convoy_counterattack2", 0.5);
+		break;
+
+		case "colombian_silver_convoy_counterattack2":
+			LAi_SetPlayerType(PChar);
+			PChar.quest.colombian_silver_ran_from_counterattack.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.colombian_silver_ran_from_counterattack.win_condition.l1.location = PChar.location;
+			PChar.quest.colombian_silver_ran_from_counterattack.win_condition = "colombian_silver_ran_from_counterattack";
+		break;
+
+		case "colombian_silver_ran_from_counterattack":
+			LAi_group_RemoveCheck("SPAIN_SOLDIERS");
+			AddQuestRecord("colombian_silver", 15);
+			PChar.quest.colombian_silver.status = "counterattack_succeeded";
+			DeleteQuestAttribute("colombian_silver.got_silver");
+			LAi_QuestDelay("colombian_silver_remove_jungle_04_donkeys", 0.0);
+		break;
+
+		case "colombian_silver_convoy_counterattack_over":
+			AddQuestRecord("colombian_silver", 14);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Fencing", 2000);
+				AddPartyExpChar(PChar, "", 200);
+			}
+			else { AddPartyExp(PChar, 2000); }
+			PChar.quest.colombian_silver_ran_from_counterattack.over = "yes";
+			PChar.quest.colombian_silver.status = "counterattack_defeated";
+			LAi_QuestDelay("colombian_silver_remove_jungle_04_donkeys", 0.0);
+		break;
+
+		case "colombian_silver_remove_jungle_04_donkeys":
+			for(i=1; i<=4; i++)
+			{
+				attr = "models.always.donkey" + i;
+				DeleteAttribute(Locations[FindLocation("Colombia_Jungle_04")], attr);		// Remove donkeys from "Colombia_Jungle_04"
+			}
+		break;
+
+		case "colombian_silver_return_to_beach":
+			DisableFastTravel(false);
+			if(CheckQuestAttribute("colombian_silver.got_silver", "true"))
+			{
+				for(i = OFFICER_MAX; i>=1; i--)
+				{
+					if(GetOfficersIndex(PChar, i) > 0)
+					{
+						cidx = GetOfficersIndex(PChar, i);
+					}
+				}
+				if(cidx > 0)
+				{
+					LAi_SetActorType(PChar);
+					NPChar = GetCharacter(cidx);
+					PChar.quest.colombian_silver.beach_officer = NPChar.id;
+					StoreDialog(NPChar);
+					NPChar.Dialog.Filename = "CS_crew_dialog.c";
+					NPChar.Dialog.CurrentNode = "on_shore";
+					LAi_ActorWaitDialog(PChar, NPChar);
+					LAi_SetActorType(NPChar);
+					LAi_ActorDialog(NPChar, PChar, "colombian_silver_convoy_reset_beach_officer",5.0,5.0);
+				}
+
+				AddQuestRecord("colombian_silver", 16);
+				AddCharacterGoods(PChar, GOOD_SILVER, 300);
+				if(AUTO_SKILL_SYSTEM)					// Extra XP if you succeeded in bringing back the silver
+				{
+					AddPartyExpChar(PChar, "Leadership", 5000);
+					AddPartyExpChar(PChar, "", 500);
+				}
+				else {AddPartyExp(PChar, 5000);}
+			}
+			if(AUTO_SKILL_SYSTEM)					// Basic XP for making it back to the beach
+			{
+				AddPartyExpChar(PChar, "Leadership", 5000);
+				AddPartyExpChar(PChar, "", 500);
+			}
+			else {AddPartyExp(PChar, 5000);}
+
+			if(CheckQuestAttribute("colombian_silver.fleet_ready", "true"))
+			{
+				AddQuestRecord("colombian_silver", 17);
+				PChar.quest.colombian_silver_sea_battle.win_condition.l1 = "location";
+				PChar.quest.colombian_silver_sea_battle.win_condition.l1.location = "Colombia";
+				PChar.quest.colombian_silver_sea_battle.win_condition = "colombian_silver_sea_battle";
+			}
+
+			PChar.quest.colombian_silver_escaped_to_sea.win_condition.l1 = "MapEnter";
+			PChar.quest.colombian_silver_escaped_to_sea.win_condition = "colombian_silver_escaped_to_sea";
+		break;
+
+		case "colombian_silver_convoy_reset_beach_officer":
+			NPChar = CharacterFromID(PChar.quest.colombian_silver.beach_officer);
+			LAi_SetOfficerType(NPChar);
+			RestoreDialog(NPChar);
+			LAi_SetPlayerType(PChar);
+		break;
+
+		case "colombian_silver_sea_battle":
+			i = Group_FindGroup("Cartagena Silver Fleet");
+			if (i >= 0) Group_DeleteGroupIndex(i);
+
+			i = Group_FindGroup("Cartagena Silver Fleet2");
+			if (i >= 0) Group_DeleteGroupIndex(i);
+
+			Group_CreateGroup("Cartagena Silver Fleet");
+			Group_AddCharacter("Cartagena Silver Fleet", "CS_Spanish_Captain1");
+			Group_AddCharacter("Cartagena Silver Fleet", "CS_Spanish_Captain2");
+			Group_AddCharacter("Cartagena Silver Fleet", "CS_Spanish_Captain3");
+			Group_AddCharacter("Cartagena Silver Fleet", "CS_Spanish_Captain4");
+			Group_SetGroupCommander("Cartagena Silver Fleet", "CS_Spanish_Captain1");
+			Group_SetAddress("Cartagena Silver Fleet", "Colombia", "Quest_Ships","Quest_ship_11");
+			Characters[GetCharacterIndex("CS_Spanish_Captain1")].recognized = true;
+			Characters[GetCharacterIndex("CS_Spanish_Captain2")].recognized = true;
+			Characters[GetCharacterIndex("CS_Spanish_Captain3")].recognized = true;
+			Characters[GetCharacterIndex("CS_Spanish_Captain4")].recognized = true;
+			Group_SetTaskAttack("Cartagena Silver Fleet",  PLAYER_GROUP, true);
+			Group_LockTask("Cartagena Silver Fleet");
+
+			Group_CreateGroup("Cartagena Silver Fleet2");
+			Group_AddCharacter("Cartagena Silver Fleet2", "CS_Spanish_Captain5");
+			Group_SetGroupCommander("Cartagena Silver Fleet2", "CS_Spanish_Captain5");
+			Group_SetAddress("Cartagena Silver Fleet2", "Colombia", "Quest_Ships","Quest_ship_2");
+			Characters[GetCharacterIndex("CS_Spanish_Captain5")].recognized = true;
+			Group_SetPursuitGroup("Cartagena Silver Fleet2", PLAYER_GROUP);
+			Group_SetTaskAttack("Cartagena Silver Fleet2",  PLAYER_GROUP, true);
+			Group_LockTask("Cartagena Silver Fleet2");
+
+			Characters[GetCharacterIndex("CS_Spanish_Captain1")].Ship.crew.morale = 85;
+			Characters[GetCharacterIndex("CS_Spanish_Captain2")].Ship.crew.morale = 75;
+			Characters[GetCharacterIndex("CS_Spanish_Captain3")].Ship.crew.morale = 75;
+			Characters[GetCharacterIndex("CS_Spanish_Captain4")].Ship.crew.morale = 75;
+			Characters[GetCharacterIndex("CS_Spanish_Captain5")].Ship.crew.morale = 75;
+
+			sld = characterFromID("Cartagena Commander");
+			sld.PlayerNation = PIRATE;
+			sld.PlayerShip = GetCharacterShipModel(PChar);
+		break;
+
+		case "colombian_silver_escaped_to_sea":
+			if(GetRMRelation(PChar, SPAIN) > REL_WAR) SetRMRelation(PChar, SPAIN, REL_WAR);
+			CloseQuestHeader("colombian_silver");
+			i = Group_FindGroup("Cartagena Silver Fleet");
+			if (i >= 0) Group_DeleteGroupIndex(i);
+
+			i = Group_FindGroup("Cartagena Silver Fleet2");
+			if (i >= 0) Group_DeleteGroupIndex(i);
+			for(i=1; i<=5; i++)
+			{
+				ChangeCharacterAddress(CharacterFromID("CS_Spanish_Captain"+i), "None", "");
+			}
+		break;
+
+///////////////////////////////////////////////////////////////////////
+// Colombian Silver - end
 ///////////////////////////////////////////////////////////////////////
 
 		PChar.questnotfound = true; // PB: Testing

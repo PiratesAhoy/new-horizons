@@ -68,7 +68,7 @@ void ProcessDialogEvent()
 				// NK -->
 				else
 				{
-					Link.l2 = DLG_TEXT[133]"Tell me about the colony.";
+					Link.l2 = DLG_TEXT[144];
 					Link.l2.go = "colony";
 				}
 			}

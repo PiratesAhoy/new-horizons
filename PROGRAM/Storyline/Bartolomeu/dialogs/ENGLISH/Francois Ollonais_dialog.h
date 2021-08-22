@@ -18,7 +18,7 @@ string DLG_TEXT[74] = {
 "These magical powers are very likely a myth. I just hope the buyer will believe in them so that we can sell the statuette for a higher price.",
 "We'll see. Now, all the details are resolved, could you tell us if you found any information about the idol?",
 "No, none at the moment. I think only the governor and his most important officers are in possession of the information.",
-"*Ironical tone* Don't tell me you think to interogate the governor..",
+"*Ironical tone* Don't tell me you think to interrogate the governor..",
 "Not the governor but his right-hand man, the commander of the garrison, Luis Perdiguero.",
 "This task is extremely dangerous.",
 "I didn't say it wasn't. In fact, the commander lives in a building next to the Townhall. Our advantage is that he is not guarded by soldiers.",

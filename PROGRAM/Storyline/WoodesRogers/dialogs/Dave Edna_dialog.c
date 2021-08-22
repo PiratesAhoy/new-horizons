@@ -228,6 +228,32 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("drawing_room_map21");
 		break;
 
+		case "FH_painting":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("grandma"));
+			LAi_SetActorType(characterFromID("grandma"));
+			LAi_ActorTurnToCharacter(characterFromID("grandma"), NPchar);
+			PlaySound("VOICE\ENGLISH\G_tell_you_what.wav");
+			Dialog.text = DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44];
+			link.l1.go = "FH_painting1";
+		break;
+
+		case "FH_painting1":
+			PlaySound("VOICE\ENGLISH\G_good_work.wav");
+			Dialog.text = DLG_TEXT[45];
+			link.l1 = DLG_TEXT[46];
+			link.l1.go = "FH_painting2";
+		break;
+
+		case "FH_painting2":
+			PlaySound("VOICE\ENGLISH\Herrick2.wav");
+			Dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "exit";
+			AddDialogExitQuest("grandma_cheer3");
+		break;
+
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

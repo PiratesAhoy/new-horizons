@@ -799,7 +799,7 @@ void LocationInitCuba(ref n)
 	n = n + 1;
 	
 	// -------------------------------------------------
-	Locations[n].filespath.models = "locations\Inside\Residence3_red";
+	Locations[n].filespath.models = "locations\Inside\Residence3_Spa";
 
 	Locations[n].id = "Suarez_House";
 	locations[n].id.label = "House";
@@ -1785,6 +1785,39 @@ void LocationInitCuba(ref n)
 	Locations[n].environment.sea = "false";
 
 	//Reload map
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "BART_PUZZLES")) > 0)
+	{
+		Locations[n].reload.l2.name = "reload2";
+		Locations[n].reload.l2.go = "Santiago_outskirts";	// Bartolomeu storyline: link to outskirts with warehouses
+		Locations[n].reload.l2.emerge = "reload1";
+		Locations[n].reload.l2.autoreload = "1";
+		Locations[n].reload.l2.label = "Santiago outskirts";
+		Locations[n].locators_radius.reload.Reload2 = 3.0; 
+
+		Locations[n].reload.l4.name = "reload2_back";
+		Locations[n].reload.l4.go = "Santiago_outskirts";
+		Locations[n].reload.l4.emerge = "reload1";
+		Locations[n].reload.l4.autoreload = "1";
+		Locations[n].reload.l4.label = "Santiago outskirts";
+		Locations[n].locators_radius.reload.reload2_back = 2.0;
+	}
+	else
+	{
+		Locations[n].reload.l2.name = "reload2";
+		Locations[n].reload.l2.go = "Santiago_town_exit1";	// Other storylines: link to normal outskirts
+		Locations[n].reload.l2.emerge = "reload1";
+		Locations[n].reload.l2.autoreload = "1";
+		Locations[n].reload.l2.label = "Santiago outskirts";
+		Locations[n].locators_radius.reload.Reload2 = 3.0;
+
+		Locations[n].reload.l4.name = "reload2_back";
+		Locations[n].reload.l4.go = "Santiago_town_exit1";
+		Locations[n].reload.l4.emerge = "reload1";
+		Locations[n].reload.l4.autoreload = "1";
+		Locations[n].reload.l4.label = "Santiago outskirts";
+		Locations[n].locators_radius.reload.reload2_back = 2.0;
+	}
+
 	Locations[n].reload.l1.name = "reload1";
 	Locations[n].reload.l1.go = "Cuba_Shore_05";
 	Locations[n].reload.l1.emerge = "reload2";
@@ -1792,27 +1825,12 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l1.label = "Playa de Sierra Maestra";
 	Locations[n].locators_radius.reload.Reload1 = 3.0;
 
-	Locations[n].reload.l2.name = "reload2";
-	Locations[n].reload.l2.go = "Santiago_outskirts";
-	Locations[n].reload.l2.emerge = "reload1";
-	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].reload.l2.label = "Santiago outskirts";
-	Locations[n].locators_radius.reload.Reload2 = 3.0;
-
 	Locations[n].reload.l3.name = "reload1_back";
 	Locations[n].reload.l3.go = "Cuba_Shore_05";
 	Locations[n].reload.l3.emerge = "reload2";
 	Locations[n].reload.l3.autoreload = "1";
 	Locations[n].reload.l3.label = "Playa de Sierra Maestra";
 	Locations[n].locators_radius.reload.reload1_back = 2.0;
-
-	Locations[n].reload.l4.name = "reload2_back";
-	Locations[n].reload.l4.go = "Santiago_outskirts";
-	Locations[n].reload.l4.emerge = "reload1";
-	Locations[n].reload.l4.autoreload = "1";
-	Locations[n].reload.l4.label = "Santiago outskirts";
-	Locations[n].locators_radius.reload.reload2_back = 2.0;
-
 
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;
@@ -1864,7 +1882,7 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Santiago.";
 	Locations[n].locators_radius.reload.Reload2_back = 3;
-	Locations[n].reload.l1.disable = 1;
+//	Locations[n].reload.l1.disable = 1;
 
 	Locations[n].reload.l11.name = "Reload2";
 	Locations[n].reload.l11.go = "Santiago_town_01";
@@ -1872,7 +1890,7 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l11.autoreload = "0";
 	Locations[n].reload.l11.label = "Santiago.";
 	Locations[n].locators_radius.reload.Reload2 = 3;
-	Locations[n].reload.l11.disable = 1;
+//	Locations[n].reload.l11.disable = 1;
 
 	Locations[n].reload.l2.name = "Reload1";
 	Locations[n].reload.l2.go = "Cuba_Jungle_04";
@@ -1893,12 +1911,14 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l4.emerge = "reload1";
 	Locations[n].reload.l4.autoreload = "0";
 	Locations[n].reload.l4.label = "Warehouse.";
+	Locations[n].reload.l4.disable = 1;
 
 	Locations[n].reload.l5.name = "Reload4";
 	Locations[n].reload.l5.go = "Santiago_warehouse_02";
 	Locations[n].reload.l5.emerge = "reload1";
 	Locations[n].reload.l5.autoreload = "0";
 	Locations[n].reload.l5.label = "Warehouse.";
+	Locations[n].reload.l5.disable = 1;
 
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;
@@ -1910,15 +1930,16 @@ void LocationInitCuba(ref n)
 
 	Locations[n].id = "Cuba_Shore_06";
 	locations[n].id.label = "Peninsula de Zapata"; // KK
+	Locations[n].name = "Peninsula de Zapata";
 	locations[n].worldmap = "CubShore 6";
 
 	//Sound
 	locations[n].type = "port";
 	//locations[n].fastreload = "Havana"; // PB: Definitely NOT "QC"!
-	LAi_LocationFantomsGen(&locations[n], true);
+//	LAi_LocationFantomsGen(&locations[n], true);
 	//Models
 	//Always
-	Locations[n].models.always.locators = "QCport_l";
+	Locations[n].models.always.locators = "QCport_l_smg";
 	Locations[n].models.always.port = "QCport";
 	Locations[n].models.always.port.foam = "1";
 	Locations[n].models.always.sb = "QCport_sb";
@@ -1973,6 +1994,7 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l4.label = "Exit from Cave";
 	Locations[n].locators_radius.reload.reload3_back = 1.0;
 
+	Locations[n].vcskip = true; // KK
 
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;
@@ -2433,7 +2455,15 @@ void LocationInitCuba(ref n)
 	Locations[n].models.always.tree = "tree";
 	//Locations[n].models.always.grassPatch = "SCport_g";
 	Locations[n].models.always.add2 = "xiao";
-	Locations[n].models.always.add3 = "pole";	
+	Locations[n].models.always.add3 = "pole";
+	Locations[n].models.always.add4 = "chimneys";	//JRH-->
+	Locations[n].models.always.add5 = "palmsPA";		
+	Locations[n].models.always.add6 = "palmsPB";		
+	Locations[n].models.always.add7 = "cannons";		
+	Locations[n].models.always.add8 = "wagons";		
+	Locations[n].models.always.add9 = "boats";		
+	Locations[n].models.always.add10 = "ladder";	//<--JRH	
+
 	//Day
 	//Locations[n].models.day.fonar = "OXport_fd";
 	Locations[n].models.day.charactersPatch = "walk_patch";
@@ -2511,7 +2541,15 @@ void LocationInitCuba(ref n)
 	Locations[n].models.always.city = "SC_center";
 	Locations[n].models.always.add = "light";
 	Locations[n].models.always.tree = "tree";
-	Locations[n].models.always.add2 = "xiao";		
+	Locations[n].models.always.add2 = "xiao";
+	Locations[n].models.always.add3 = "store_stuff";	//JRH-->
+	Locations[n].models.always.add4 = "chimneys";
+	Locations[n].models.always.add5 = "palms";
+	Locations[n].models.always.add6 = "town_stuff";
+	Locations[n].models.always.add7 = "diagonal";
+	Locations[n].models.always.add8 = "wheelbarrow";
+	Locations[n].models.always.add9 = "";			//<--JRH "globe" later, shows the way to the cartographer
+
 		//Day
 //	Locations[n].models.day.fonar = "FF02_fd";
 	Locations[n].models.day.charactersPatch = "walk_patch";
@@ -2531,11 +2569,22 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name# Port.";
 
-	Locations[n].reload.l2.name = "reload2";
-	Locations[n].reload.l2.go = "Santiago_town_exit1";
-	Locations[n].reload.l2.emerge = "reload2";
-	Locations[n].reload.l2.autoreload = "0";
-	Locations[n].reload.l2.label = "Outskirts.";
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "BART_PUZZLES")) > 0)
+	{
+		Locations[n].reload.l2.name = "reload2";
+		Locations[n].reload.l2.go = "Santiago_outskirts";	// Bartolomeu storyline: use outskirts location with warehouses
+		Locations[n].reload.l2.emerge = "reload2";
+		Locations[n].reload.l2.autoreload = "0";
+		Locations[n].reload.l2.label = "Outskirts.";
+	}
+	else
+	{
+		Locations[n].reload.l2.name = "reload2";
+		Locations[n].reload.l2.go = "Santiago_town_exit1";	// Any other storyline: use normal outskirts location
+		Locations[n].reload.l2.emerge = "reload2";
+		Locations[n].reload.l2.autoreload = "0";
+		Locations[n].reload.l2.label = "Outskirts.";
+	}
 
 	Locations[n].reload.l4.name = "reload4";
 	Locations[n].reload.l4.go = "Santiago_townhall";
@@ -2574,6 +2623,9 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l8.autoreload = "0";
 	Locations[n].reload.l8.label = "Cartographer's House";
 	Locations[n].reload.l8.close_for_night = 1;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.01;
+	Locations[n].items.randitem1 = "WallMap";
 
 	Locations[n].island = "Cuba";
 	n = n + 1;
@@ -2625,8 +2677,8 @@ void LocationInitCuba(ref n)
 	// ----------------------------------------------------
 	Locations[n].id = "Santiago_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].filespath.models = "locations\inside\Residence1";
-	Locations[n].image = "Inside_Residence1.tga";
+	locations[n].filespath.models = "locations\inside\ResidenceA01";
+	locations[n].image = "Inside_ResidencA1.tga";
 
 	//Town sack
 	Locations[n].townsack = "Santiago";
@@ -2636,16 +2688,16 @@ void LocationInitCuba(ref n)
 	locations[n].fastreload = "Santiago";
 	//Models
 	//Always
-	Locations[n].models.always.locators = "res01_l";
-	Locations[n].models.always.jungle = "res01";
-	Locations[n].models.always.window = "res01_w";
-	Locations[n].models.always.window.tech = "LocationWindows";
-	Locations[n].models.always.window.level = 50;
+	locations[n].models.always.locators = "Residence01_locators";
+	locations[n].models.always.l1 = "Residence01";
+	locations[n].models.always.window = "residence01_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 50;
 	//Day
-	Locations[n].models.day.charactersPatch = "res01_p";
+	locations[n].models.day.charactersPatch = "Residence01_patch";
 
 	//Night
-	Locations[n].models.night.charactersPatch = "res01_p";
+	locations[n].models.night.charactersPatch = "Residence01_patch";
 
 	//Environment
 	Locations[n].environment.weather = "false";
@@ -2833,19 +2885,24 @@ void LocationInitCuba(ref n)
 	// -------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Inside\Pirate_House";
+	Locations[n].filespath.textures = "locations\Inside\Pirate_House";
 
 	Locations[n].id = "Cartographer_House";
 	locations[n].id.label = "Cartographer's House";
-	Locations[n].image = "Inside_Pirate_House.tga";
+	Locations[n].image = "Inside_cartographer.tga";
 	//Sound
 	locations[n].type = "house";
 	//Models
 	//Always
-	Locations[n].models.always.locators = "pirh_l";
+	Locations[n].models.always.locators = "pirh_l_cartographer";
 	Locations[n].models.always.house = "pirh";
-	Locations[n].models.always.window = "pirh_w";
+	Locations[n].models.always.l2 = "plank";
+	Locations[n].models.always.l3 = "map_rolls";
+	
+	Locations[n].models.always.window = "pirh_w4";
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 50;
+
 	//Day
 	Locations[n].models.day.charactersPatch = "pirh_p";
 
@@ -2855,7 +2912,8 @@ void LocationInitCuba(ref n)
 	//Environment
 	Locations[n].environment.weather = "false";
 	Locations[n].environment.sea = "false";
-	Locations[n].models.back = "back\qcpirh_";
+//	Locations[n].models.back = "back\qcpirh_";
+	Locations[n].models.back = "back\mumh3_";		//more spanish, 3 is ok
 
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
@@ -2864,6 +2922,9 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Exit.";
 
+	Locations[n].locators_radius.randitem.randitem1 = 0.01;
+	Locations[n].items.randitem1 = "WallMap";
+	
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;	
 
@@ -2912,17 +2973,17 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l1.label = "#stown_name#.";
 
 	Locations[n].reload.l2.name = "Reload1";
-	Locations[n].reload.l2.go = "";
-	Locations[n].reload.l2.emerge = "";
+	Locations[n].reload.l2.go = "Cuba_Jungle_04";
+	Locations[n].reload.l2.emerge = "reload2";
 	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].reload.l2.label = "";
+	Locations[n].reload.l2.label = "Jungle";
 	Locations[n].locators_radius.reload.reload1 = 3.0;
 
 	Locations[n].reload.l3.name = "Reload1_back";
-	Locations[n].reload.l3.go = "";
-	Locations[n].reload.l3.emerge = "";
+	Locations[n].reload.l3.go = "Cuba_Jungle_04";
+	Locations[n].reload.l3.emerge = "reload2";
 	Locations[n].reload.l3.autoreload = "1";
-	Locations[n].reload.l3.label = "";
+	Locations[n].reload.l3.label = "Jungle";
 	Locations[n].locators_radius.reload.Reload1_back = 2.0;
 
 	Locations[n].island = "Cuba";
@@ -3173,8 +3234,8 @@ void LocationInitCuba(ref n)
 	//Models
 	//Always
 	Locations[n].models.always.locators = "Res05_l";
-	Locations[n].models.always.l1 = "Res05";
-	Locations[n].models.always.window = "Res05_w";
+	Locations[n].models.always.l1 = "ResX5"; // ccc may07 Location Remodeling Campaign
+	Locations[n].models.always.window = "ResX5_w";
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 50;
 
@@ -3252,4 +3313,8 @@ void LocationInitCuba(ref n)
 
 	Build_at("Santiago_warehouse_02", "bale", "", 1.9, 0, -7.1347, -1.47, "Building");
 	Build_at("Santiago_warehouse_02", "bale", "", 4.7356, 0, 2.08, -1.47, "Building");
+
+	Build_at("Santiago_port", "gallows", "", -70.9, 14.5, -76.8, 0.43, "building");		//JRH
+	Build_at("Santiago_town_01", "keep", "", 35.0, 6.0, -79.0, 0.0, "building");		//JRH
+	Build_at("Santiago_town_01", "keep", "", 57.0, 6.0, -1.0, 0.0, "building");		//JRH
 }

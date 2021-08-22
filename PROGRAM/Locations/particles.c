@@ -30,7 +30,8 @@ void CreateParticles(ref Location)
 			|| Location.id=="Legrands_kitchen" || Location.id=="Fort_Moultrie_village" || Location.id=="Fort_Moultrie_exit" || Location.id=="GB_chinese_nitre"
 			|| Location.id=="Bessop_plantation" || Location.id=="Oranjestad_port" || Location.id=="Oranjestad_store_02" || Location.id=="BB_graveyard"
 			|| Location.id=="BB_isle" || Location.id=="Kristiania_jungle_house" || Location.id=="KR_jungle_9" || Location.id=="wr_church_outside"
-			|| Location.id=="BB_QAR_deck" || Location.id=="BB_QAR_cabin" || Location.id=="BB_Eden_estate")
+			|| Location.id=="BB_QAR_deck" || Location.id=="BB_QAR_cabin" || Location.id=="BB_Eden_estate" || Location.id=="BB_Eden_maze"
+			|| Location.id=="BB_careen_shore" || Location.id=="BB_burning_cave")
 			{
 				CreateParticleSystem("smoke",stf(locator.x),stf(locator.y),stf(locator.z),-1.57,0,0,0);
 			}
@@ -57,6 +58,18 @@ void CreateParticles(ref Location)
 		{
 			locator = GetAttributeN(locator_group, n);
 			CreateParticleSystem("smoke",stf(locator.x),stf(locator.y),stf(locator.z),-1.57,0,0,0);	
+		}
+//JRH <--
+	}
+
+	if(CheckAttribute(Location, "locators.smoke_day"))
+	{
+		makearef(locator_group, location.locators.smoke_day);
+		num = GetAttributesNum(locator_group);
+		for(n = 0; n < num; n++)
+		{
+			locator = GetAttributeN(locator_group, n);
+			if(IsDay()) CreateParticleSystem("smoke",stf(locator.x),stf(locator.y),stf(locator.z),-1.57,0,0,0);	
 		}
 //JRH <--
 	}

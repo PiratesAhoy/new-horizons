@@ -10,6 +10,7 @@ void InitInterface(string iniName)
 	CreateStringCheckCase(true,"Message",XI_ConvertString("INSTALL_ERROR"),"interface_title",COLOR_NORMAL,320,160,SCRIPT_ALIGN_CENTER,0.9,true);
 	CreateString(true,"line1","You MUST install using the Installer EXE!",FONT_NORMAL,COLOR_NORMAL,320,210,SCRIPT_ALIGN_CENTER,0.8);
 	CreateString(true,"line2","Do *not* use the default Program Files folder",FONT_NORMAL,COLOR_NORMAL,320,240,SCRIPT_ALIGN_CENTER,0.8);
+	CreateString(true,"line3","Do *not* manually extract the 'b14_beta4_final.tar' file",FONT_NORMAL,COLOR_NORMAL,320,270,SCRIPT_ALIGN_CENTER,0.8);
 
 	SetEventHandler("QuitPress","QuitPress",0);
 }

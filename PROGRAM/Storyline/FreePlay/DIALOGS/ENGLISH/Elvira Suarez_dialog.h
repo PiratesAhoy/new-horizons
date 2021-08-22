@@ -2,7 +2,7 @@ string DLG_TEXT[24] = {
 ".....",
 ".....",
 "Who are you, Senor?",
-"I'm Captain Joaquim de Almeida. I met an employee of your husband's trade company in #sConceicao#.",
+"I'm Captain Joaquim de Almeida. I met an employee of your husband's trade company in #sEleuthera#.",
 "Thanks to God, you're here! My husband is in danger and I thought you could be the right man to deal with this situation.",
 "What happened to your husband?",
 "My husband went to #sSantiago# for business but he was captured by pirates and now they ask a ransom if I want to see him alive.",

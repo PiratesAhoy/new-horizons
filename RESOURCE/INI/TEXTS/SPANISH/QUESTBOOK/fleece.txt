@@ -1,0 +1,7 @@
+title=Misión secundaria - Desplumar a un gobernador
+text.t1=En la taberna de #sPhilipsburg#, he conocido a un hombre llamado Willem Voigt con un plan asombrosamente simple para robar a un gobernador.
+text.t2=El plan suena estúpidamente simple. Si quiere hacerse arrestar por estúpido, puede hacerlo sin mí.
+text.t3=Puede que el plan sea simple, pero creo que si no nos dejamos llevar por el nerviosismo, podemos hacerlo funcionar. Nos disfrazamos de soldados, irrumpimos en el ayuntamiento de #sDouwesen# fingimos arrestar al gobernador por fraude, y confiscamos sus arcas como 'prueba'.
+text.t4=Willem Voigt ha sido reconocido como un timador habitual y arrestado. Por suerte, ha confirmado mi historia de que no soy su cómplice y solo lo acepté como pasajero a bordo de mi barco, así que los guardias me han dejado marchar.
+text.t5=Willem Voigt resultó muerto cuando intentábamos salir de #sPhilipsburg# por la puerta que lleva tierra adentro.
+text.t6=Willem Voigt se ha negado a seguirme por el túnel que conduce a #sMarigot#.

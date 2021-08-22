@@ -671,6 +671,7 @@ int TranslateNationCode(int nationCode)
 	case NEUTRAL_NATION: return 8; break;	// added by KAM
 	case UNKNOWN_NATION: return 8; break;	// added by KAM
 	case PERSONAL_NATION: return 9; break; // KK
+	case PRIVATEER_NATION: return 9; break; // added by GR
 	}
 
 	return -1;	// added by KAM

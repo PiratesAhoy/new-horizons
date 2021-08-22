@@ -21,11 +21,11 @@ void ProcessDialogEvent()
 //---> PW once monks have got to relic choice case skip early dialogue / shared dialogue file
 		if (CheckAttribute(PChar,"NoSave.CarryRelic") && PChar.NoSave.CarryRelic != "none")
 		{
-			NextDiag.CurrentNode = "Next time after select_relic";
+			Dialog.CurrentNode = "Next time after select_relic";
 		}
 		if (CheckAttribute(PChar,"NoSave.CarryRelic") && PChar.NoSave.CarryRelic == "none")
 		{
-			NextDiag.CurrentNode = "Next time after reject_relic";
+			Dialog.CurrentNode = "Next time after reject_relic";
 		}
 	}
   // <--- PW end - once monks have got to relic case skip early dialogue / shared dialogue file	
@@ -65,104 +65,102 @@ void ProcessDialogEvent()
 			}
 		break;
 
-        case "how_should_a_monk_look_like":
+		case "how_should_a_monk_look_like":
 			Dialog.Text = DLG_TEXT[3];
-            Link.l1     = DLG_TEXT[4];
-            Link.l1.go  = "look_like_answer_ok";
-            Link.l2     = DLG_TEXT[5];
-            Link.l2.go  = "look_like_answer_uncertain";
-            Link.l3     = DLG_TEXT[6];
-            Link.l3.go  = "look_like_answer_dull";
+			Link.l1     = DLG_TEXT[4];
+			Link.l1.go  = "look_like_answer_ok";
+			Link.l2     = DLG_TEXT[5];
+			Link.l2.go  = "look_like_answer_uncertain";
+			Link.l3     = DLG_TEXT[6];
+			Link.l3.go  = "look_like_answer_dull";
 		break;
 
-        case "look_like_answer_uncertain":
+		case "look_like_answer_uncertain":
 			NextDiag.TempNode = "Next time after look_like_answer_uncertain";
 			Dialog.Text = DLG_TEXT[7];
-            Link.l1     = DLG_TEXT[8];
-            Link.l1.go  = "exit";
+			Link.l1     = DLG_TEXT[8];
+			Link.l1.go  = "exit";
 		break;
 
-        case "Next time after look_like_answer_uncertain":
+		case "Next time after look_like_answer_uncertain":
 			NextDiag.TempNode = "Next time after look_like_answer_uncertain";
 			Dialog.Text = DLG_TEXT[9];
-            Link.l1     = DLG_TEXT[4];
-            Link.l1.go  = "look_like_answer_ok";
-            Link.l2     = DLG_TEXT[10];
-            Link.l2.go  = "look_like_answer_uncertain";
-            Link.l3     = DLG_TEXT[6];
-            Link.l3.go  = "look_like_answer_dull";
+			Link.l1     = DLG_TEXT[4];
+			Link.l1.go  = "look_like_answer_ok";
+			Link.l2     = DLG_TEXT[10];
+			Link.l2.go  = "look_like_answer_uncertain";
+			Link.l3     = DLG_TEXT[6];
+			Link.l3.go  = "look_like_answer_dull";
 		break;
 
-        case "look_like_answer_dull":
+		case "look_like_answer_dull":
 			NextDiag.TempNode = "Next time after look_like_answer_dull";
 			Dialog.Text = DLG_TEXT[11];
-            Link.l1     = DLG_TEXT[12];
-            Link.l1.go  = "exit";
-            if(GetCharacterEquipByGroup(&PChar, BLADE_ITEM_TYPE) != "bladeX4") // PB: Can't threaten monk with fists equiped (and can't have them stolen)
-            {
+			Link.l1     = DLG_TEXT[12];
+			Link.l1.go  = "exit";
+			if(GetCharacterEquipByGroup(&PChar, BLADE_ITEM_TYPE) != "bladeX4") // PB: Can't threaten monk with fists equiped (and can't have them stolen)
+			{
 				Link.l2     = DLG_TEXT[13];
 				Link.l2.go  = "answer_dull_steal_weapon_1";
-            }
-
+			}
 		break;
 
-        case "Next time after look_like_answer_dull":
+		case "Next time after look_like_answer_dull":
 			Dialog.Text = DLG_TEXT[14];
-            Link.l1     = DLG_TEXT[15];
-            Link.l1.go  = "apologizes_accepted";
+			Link.l1     = DLG_TEXT[15];
+			Link.l1.go  = "apologizes_accepted";
 		break;
 
-        case "apologizes_accepted":
-
-		// ccc fix oct06, give weapons back
-		if (IsCharacterEquipByGroup(NPChar,BLADE_ITEM_TYPE))
-		{
-			blade = GetCharacterEquipByGroup(NPChar,BLADE_ITEM_TYPE);
-			RemoveCharacterEquip(NPChar, BLADE_ITEM_TYPE);
-			TakeItemFromCharacter(NPChar, blade);
-			GiveItem2Character(PChar, blade);
-			EquipCharacterByItem(PChar, blade);
-		}
-		if (IsCharacterEquipByGroup(NPChar,GUN_ITEM_TYPE))
-		{
-			gun = GetCharacterEquipByGroup(NPChar,GUN_ITEM_TYPE);
-			RemoveCharacterEquip(NPChar, GUN_ITEM_TYPE);
-			TakeItemFromCharacter(NPChar, gun);
-			GiveItem2Character(PChar, gun);
-			EquipCharacterByItem(PChar, gun);
-			// ccc, returning of ammo left out deliberately, the ammostealing never worked in the first place anyway
-		}
-		// ccc end
+		case "apologizes_accepted":
+			// ccc fix oct06, give weapons back
+			if (IsCharacterEquipByGroup(NPChar,BLADE_ITEM_TYPE))
+			{
+				blade = GetCharacterEquipByGroup(NPChar,BLADE_ITEM_TYPE);
+				RemoveCharacterEquip(NPChar, BLADE_ITEM_TYPE);
+				TakeItemFromCharacter(NPChar, blade);
+				GiveItem2Character(PChar, blade);
+				EquipCharacterByItem(PChar, blade);
+			}
+			if (IsCharacterEquipByGroup(NPChar,GUN_ITEM_TYPE))
+			{
+				gun = GetCharacterEquipByGroup(NPChar,GUN_ITEM_TYPE);
+				RemoveCharacterEquip(NPChar, GUN_ITEM_TYPE);
+				TakeItemFromCharacter(NPChar, gun);
+				GiveItem2Character(PChar, gun);
+				EquipCharacterByItem(PChar, gun);
+				// ccc, returning of ammo left out deliberately, the ammostealing never worked in the first place anyway
+			}
+			// ccc end
 
 			Dialog.Text = DLG_TEXT[16];
-            Link.l1     = DLG_TEXT[4];
-            Link.l1.go  = "look_like_answer_ok";
-            Link.l2     = DLG_TEXT[5];
-            Link.l2.go  = "look_like_answer_uncertain";
+			Link.l1     = DLG_TEXT[4];
+			Link.l1.go  = "look_like_answer_ok";
+			Link.l2     = DLG_TEXT[5];
+			Link.l2.go  = "look_like_answer_uncertain";
 		break;
 
-        case "answer_dull_steal_weapon_1":
+		case "answer_dull_steal_weapon_1":
 			Dialog.Text = DLG_TEXT[17];
-            Link.l1     = DLG_TEXT[18];
-            Link.l1.go  = "answer_dull_steal_weapon_2";
+			Link.l1     = DLG_TEXT[18];
+			Link.l1.go  = "answer_dull_steal_weapon_2";
 		break;
 
-        case "answer_dull_steal_weapon_2":
-            if (IsCharacterEquipByGroup(PChar,BLADE_ITEM_TYPE))
-            {
-                blade = GetCharacterEquipByGroup(PChar,BLADE_ITEM_TYPE);
-                RemoveCharacterEquip(PChar, BLADE_ITEM_TYPE);
-                TakeItemFromCharacter(PChar, blade);
-    		    GiveItem2Character(NPChar, blade);
-    		    EquipCharacterByItem(NPChar, blade);
-            }
-            if (IsCharacterEquipByGroup(PChar,GUN_ITEM_TYPE))
-            {
-                gun = GetCharacterEquipByGroup(PChar,GUN_ITEM_TYPE);
-                RemoveCharacterEquip(PChar, GUN_ITEM_TYPE);
-                TakeItemFromCharacter(PChar, gun);
-    		    GiveItem2Character(NPChar, gun);
-    		    EquipCharacterByItem(NPChar, gun);
+		case "answer_dull_steal_weapon_2":
+			if (IsCharacterEquipByGroup(PChar,BLADE_ITEM_TYPE))
+			{
+				blade = GetCharacterEquipByGroup(PChar,BLADE_ITEM_TYPE);
+				RemoveCharacterEquip(PChar, BLADE_ITEM_TYPE);
+				TakeItemFromCharacter(PChar, blade);
+				GiveItem2Character(NPChar, blade);
+ 				EquipCharacterByItem(NPChar, blade);
+			}
+			if (IsCharacterEquipByGroup(PChar,GUN_ITEM_TYPE))
+			{
+				gun = GetCharacterEquipByGroup(PChar,GUN_ITEM_TYPE);
+				RemoveCharacterEquip(PChar, GUN_ITEM_TYPE);
+				TakeItemFromCharacter(PChar, gun);
+				GiveItem2Character(NPChar, gun);
+				EquipCharacterByItem(NPChar, gun);
 
 				//JRH ammo mod -->
 				if (ENABLE_AMMOMOD) {	// LDH change
@@ -184,11 +182,11 @@ void ProcessDialogEvent()
 				}
   				//JRH ammo mod <--
 
-    	    }
+			}
 			NextDiag.TempNode = "Next time after look_like_answer_dull";
 			Dialog.Text = DLG_TEXT[19];
-            Link.l1     = DLG_TEXT[20];
-            Link.l1.go  = "exit";
+			Link.l1     = DLG_TEXT[20];
+			Link.l1.go  = "exit";
 		break;
 
         case "look_like_answer_ok":

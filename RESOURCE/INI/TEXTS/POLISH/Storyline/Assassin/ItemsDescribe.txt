@@ -1,0 +1,59 @@
+itmname_order	{Order of Mission}
+itmdescr_order
+{
+This letter confirms captain Aurelien Bergerat has the secret mission of helping the Portuguese colony of Grenada and the governor of Martinique must help him. Letter signed by King Louis XIV.
+}
+
+itmname_report	{Report}
+itmdescr_report
+{
+This report explains in detail the military activities these last months on Cayman, like ships and troops.
+}
+
+itmname_time_bomb	{Time-Bomb}
+itmdescr_time_bomb
+{
+It's a big grenade with a long fuse. A basic model but very effective.
+}
+
+itmname_Gaga_Keys	{Lady Gaga's Keys}
+itmdescr_Gaga_Keys
+{
+The keys of the Lady Gaga's house. The house is between the Church and the Townhall. 
+}
+
+itmname_Roche_letter	{Roche's letter}
+itmdescr_Roche_letter
+{
+A letter from Roche Brasiliano that he reveals he has to stay on Curacao over the next months.
+}
+
+itmname_Medal_B	{Medal of the Santiago's Order}
+itmdescr_Medal_B
+{
+This Medal rewards people for their military action against the enemies of Spain.  
+}
+
+itmname_Pass	{Free-Pass}
+itmdescr_Pass
+{
+This pass lets you moor and stay on Isla Mona during the mission.
+}
+
+itmname_purse	{Purse}
+itmdescr_purse
+{
+This purse contains 50 000 gold coins for the indians of Aruba.
+}
+
+itmname_fougasse	{Fougasse}
+itmdescr_fougasse
+{
+It's a kind of Mine. Linked to a door, it explodes when someone opens it.
+}
+
+itmname_Medal_A	{Medal of King Charles II}
+itmdescr_Medal_A
+{
+This medal is the most important reward that can be given by the Spanish authorities. Normally, only Spaniards can get it.
+}

@@ -1,4 +1,4 @@
-void LocationInitColombia(ref n)
+﻿void LocationInitColombia(ref n)
 {
 	// -------------------------------------------------
 	Locations[n].id = "Residence_Cartagena";
@@ -84,13 +84,12 @@ void LocationInitColombia(ref n)
 	Locations[n].reload.l10.label = "Town.";
 	Locations[n].reload.l10.name = "gate";
 	Locations[n].reload.l10.autoreload = "0";
-/*
-	Locations[n].reload.l9.go = "new cloister etc";
-	Locations[n].reload.l9.emerge = "";
+
+	Locations[n].reload.l9.go = "new_cloister_garden";
+	Locations[n].reload.l9.emerge = "reload1";
 	Locations[n].reload.l9.label = "";
 	Locations[n].reload.l9.name = "reload9_back";		//use reload9 when coming from new cloister, JRH
 	Locations[n].reload.l9.autoreload = "0";
-*/
 
 	Build_at("Residence_Cartagena", "farm", "", -11.864, 7.01, -40.385, 1.7, "Building");
 	Build_at("Residence_Cartagena", "windmill", "", -18.434, 12, -55.73, 0.0, "Building");
@@ -251,7 +250,7 @@ void LocationInitColombia(ref n)
 	Locations[n].image = "Town_Redmond_Town_01_Cartagena.tga";
 
 	Locations[n].id = "Cartagena_town_01";
-	locations[n].id.label = "Cartagena town";
+	locations[n].id.label = "#stown_name# town";
 	locations[n].worldmap = "Cartagena";
 
 	//Town sack
@@ -263,7 +262,7 @@ void LocationInitColombia(ref n)
 	//Models
 	//Always
 	Locations[n].models.always.L1 = "Red01";
-	Locations[n].models.always.locators = "Red01_l_xb";
+	Locations[n].models.always.locators = "Red01_l_cg";
 	Locations[n].models.always.grassPatch = "Red01_g";
 	Locations[n].models.always.palace = "Palais";
 	Locations[n].models.always.palace.locator.group = "randitem";
@@ -289,6 +288,7 @@ void LocationInitColombia(ref n)
 	Locations[n].models.always.river.uvslide.v0 = -0.1;
 	Locations[n].models.always.river.uvslide.u1 = 0.15;
 	Locations[n].models.always.river.tech = "LocationRiver";
+	Locations[n].models.always.L2 = "gate";
 
 	//Day
 	Locations[n].models.day.fonar = "Red01_fd";
@@ -314,6 +314,20 @@ void LocationInitColombia(ref n)
 	Locations[n].reload.l2.autoreload = "1";
 	Locations[n].reload.l2.label = "Town.";
 	Locations[n].locators_radius.reload.reload_1_4_back = 2.0;
+
+	Locations[n].reload.l3.name = "reload_1_3";
+	Locations[n].reload.l3.go = "Cartagena_Exit";
+	Locations[n].reload.l3.emerge = "reload2";
+	Locations[n].reload.l3.autoreload = "0";
+	Locations[n].reload.l3.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload_1_3 = 3.0;
+
+	Locations[n].reload.l4.name = "reload_1_3_back";
+	Locations[n].reload.l4.go = "Cartagena_Exit";
+	Locations[n].reload.l4.emerge = "reload2";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload_1_3_back = 3.0;
 
 	Locations[n].reload.l5.name = "reload_from_port";
 	Locations[n].reload.l5.go = "Cartagena_port";
@@ -354,7 +368,7 @@ void LocationInitColombia(ref n)
 
 	// Cartagena_town_02 -------------------------------------------------
 	Locations[n].id = "Cartagena_town_02";
-	locations[n].id.label = "Cartagena town.";
+	locations[n].id.label = "#stown_name# town.";
 	locations[n].worldmap = "Cartagena";
 	Locations[n].image = "Town_FalaiseDeFleur_town_01_Spain.tga";
 
@@ -587,6 +601,7 @@ void LocationInitColombia(ref n)
 	Locations[n].models.always.l1 = "Margarita_gate";
 	Locations[n].models.always.l2 = "new_wall";
 	Locations[n].models.always.l3 = "stone_cross";
+	Locations[n].models.always.l4 = "cabinchest";
 
 	//Day
 	Locations[n].models.day.charactersPatch = "cloister_exit_p";
@@ -632,7 +647,7 @@ void LocationInitColombia(ref n)
 	Locations[n].locators_radius.reload.reload5 = 2.0;
 
 	Locations[n].locators_radius.box.box1 = 0.001;		//large to activate WoodesRogers entre	
-	Locations[n].locators_radius.box.box2 = 0.3;
+	Locations[n].locators_radius.box.box2 = 0.8;
 
 	Locations[n].locators_radius.randitem.randitem1 = 0.001;
 	Locations[n].items.randitem1 = "church_window";
@@ -1009,7 +1024,7 @@ void LocationInitColombia(ref n)
 
 	// -------------------------------------------------
 //	Locations[n].filespath.models = "locations\Inside\Residence3";
-	Locations[n].filespath.models = "locations\Inside\Residence3_red";
+	Locations[n].filespath.models = "locations\Inside\Residence3_Spa";
 
 	Locations[n].id = "Governor_Daughter_House";
 	locations[n].id.label = "House";
@@ -1101,7 +1116,7 @@ void LocationInitColombia(ref n)
 
  	//-------------------------------------------------
 	Locations[n].id = "Cartagena_Townhall";
-	locations[n].id.label = "Townhall";
+	locations[n].id.label = "#stown_name# townhall";
 	Locations[n].filespath.models = "locations\inside\Residence_BackHall";
 	Locations[n].image = "Inside_Residence_BackHall.tga";
 
@@ -1145,7 +1160,7 @@ void LocationInitColombia(ref n)
 	Locations[n].image = "Town_Cartagena_Town.tga";
 
 	Locations[n].id = "Cartagena_Center";
-	locations[n].id.label = "Cartagena town.";
+	locations[n].id.label = "#stown_name# town";
 	locations[n].worldmap = "Cartagena";
 
 	//Town sack
@@ -1153,7 +1168,7 @@ void LocationInitColombia(ref n)
 	locations[n].fastreload = "Cartagena";		
 	//Sound
 	locations[n].type = "town";
-	LAi_LocationFantomsGen(&locations[n], true);	
+	LAi_LocationFantomsGen(&locations[n], true);
 	//Models
 	//Always
 	Locations[n].models.always.locators = "cartTown_l";
@@ -1441,7 +1456,7 @@ void LocationInitColombia(ref n)
 	Locations[n].image = "secret_passage.tga";
 
 	//Town sack
-	Locations[n].townsack = "Redmond";
+	Locations[n].townsack = "Cartagena";
 
 	//Sound
 	locations[n].type = "silent_loghouse";	
@@ -1816,8 +1831,102 @@ void LocationInitColombia(ref n)
 	LAi_LocationFightDisable(&Locations[n], true);
 
 	Locations[n].island = "Colombia"; // NK 04-08-29
-	n = n + 1;	
+	n = n + 1;
 
+    // -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\town_Douwesen\exit";
+	Locations[n].filespath.textures = "locations\SPAIN";
+
+	Locations[n].id = "Cartagena_exit";
+	locations[n].id.label = "Exit from #stown_name#";
+	Locations[n].image = "Town_Cartagena_Exit.tga";
+
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+
+	//Sound
+	locations[n].type = "jungle";
+//	locations[n].fastreload = "Cartagena";
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+	//Models
+	//Always
+	Locations[n].models.always.locators = "DouExit_l";
+
+	Locations[n].models.always.Waterfall1 = "waterfall";
+    Locations[n].models.always.Waterfall1.uvslide.u0 = 0.3;
+	Locations[n].models.always.Waterfall1.tech = "LocationWaterFall";
+	Locations[n].models.always.Waterfall1.level = 50;
+    //Locations[n].models.always.Waterfall2 = "waterfall1";
+    //Locations[n].models.always.Waterfall2.uvslide.u0 = 0.4;
+	//Locations[n].models.always.Waterfall2.tech = "LocationWaterFall";
+	//Locations[n].models.always.Waterfall2.level = 51;
+    Locations[n].models.always.Waterfall3 = "waterfall2";
+    Locations[n].models.always.Waterfall3.uvslide.u0 = 0.2;
+	Locations[n].models.always.Waterfall3.tech = "LocationWaterFall";
+	Locations[n].models.always.Waterfall3.level = 52;
+
+	Locations[n].models.always.exit = "DouExit";
+	Locations[n].models.always.grassPatch = "DouExit_g";
+	Locations[n].models.always.l0 = "plan_4";
+	Locations[n].models.always.l0.level = 9;
+	Locations[n].models.always.l0.tech = "LocationModelBlend";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 8;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 7;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 6;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+
+	//Day
+	Locations[n].models.day.charactersPatch = "DouExit_p";
+	Locations[n].models.day.fonar = "DouExit_fd";
+	//Night
+	Locations[n].models.night.charactersPatch = "DouExit_p";
+	Locations[n].models.night.fonar = "DouExit_fn";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "Reload2";
+	Locations[n].reload.l1.go = "Cartagena_town_01";
+	Locations[n].reload.l1.emerge = "reload_1_3";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#.";
+
+	Locations[n].reload.l2.name = "Reload1";
+	Locations[n].reload.l2.go = "Colombia_Jungle_05";
+	Locations[n].reload.l2.emerge = "reload2";
+	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].locators_radius.reload.reload1 = 4;
+	Locations[n].reload.l2.label = "#sisland_name# jungles";
+
+	Locations[n].reload.l3.name = "Reload1_back";
+	Locations[n].reload.l3.go = "Colombia_Jungle_05";
+	Locations[n].reload.l3.emerge = "reload2";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].locators_radius.reload.Reload1_back = 4;
+	Locations[n].reload.l3.label = "#sisland_name# jungles";
+
+/*
+	Locations[n].reload.l4.name = "Reload6";
+	Locations[n].reload.l4.go = "Douwesen_Cavern";	// For future use: define a location behind the waterfall and rename this locator
+	Locations[n].reload.l4.emerge = "reload1";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "????";
+*/
+
+
+	Locations[n].island = "Colombia"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
 	Locations[n].id = "Colombia_shore";
 	locations[n].id.label = "Dolphin Sands."; // Pillat
 	locations[n].worldmap = "Colombia_shore";
@@ -1846,32 +1955,32 @@ void LocationInitColombia(ref n)
 	Locations[n].environment.sea = "true";
 
 	//Reload map
-	/*Locations[n].reload.l1.name = "reload2";
-	Locations[n].reload.l1.go = "Falaise_De_Fleur_Jungle";
-	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.name = "reload2";
+	Locations[n].reload.l1.go = "Colombia_Jungle_04";
+	Locations[n].reload.l1.emerge = "reload3";
 	Locations[n].reload.l1.autoreload = "1";
-	Locations[n].reload.l1.label = "Jungle.";
+	Locations[n].reload.l1.label = "#sisland_name# jungles";
 	Locations[n].locators_radius.reload.locator3 = 1;
 
 	Locations[n].reload.l3.name = "Reload2_back";
-	Locations[n].reload.l3.go = "Colombia";
-	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.go = "Colombia_Jungle_04";
+	Locations[n].reload.l3.emerge = "reload3";
 	Locations[n].reload.l3.autoreload = "1";
-	Locations[n].reload.l3.label = "Jungle.";
-	Locations[n].locators_radius.reload.Reload2_back = 5;*/ //Pillat: Add Jungle Locations for Colombia first
+	Locations[n].reload.l3.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload2_back = 5;
 
-	Locations[n].reload.l1.name = "boat";
-	Locations[n].reload.l1.go = "Colombia";
-	Locations[n].reload.l1.emerge = "reload_2";
-	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l2.name = "boat";
+	Locations[n].reload.l2.go = "Colombia";
+	Locations[n].reload.l2.emerge = "reload_2";
+	Locations[n].reload.l2.autoreload = "0";
 	if (VISIT_DECK == 1)
-		Locations[n].reload.l1.label = "Ship.";
+		Locations[n].reload.l2.label = "Ship.";
 	else
-		Locations[n].reload.l1.label = "Sea.";
+		Locations[n].reload.l2.label = "Sea.";
 	Locations[n].locators_radius.reload.boat = 11.0;
 
 	Locations[n].island = "Colombia"; // NK 04-08-29
-	n = n + 1;	
+	n = n + 1;
 	
 	//-----------------------------------------
 	//Hotel
@@ -2039,6 +2148,1548 @@ void LocationInitColombia(ref n)
 	Locations[n].island = "Colombia";
 	
 	n = n + 1;
+
+    //------------------------------------------------------------------------------
+    //NEW CLOISTER
+
+	Locations[n].filespath.models = "locations\Town_Cartagena\New_cloister";
+	Locations[n].image = "Town_Cartagena_New_Cloister_Outside.tga";
+
+	Locations[n].vcskip = true;
+
+	Locations[n].id = "new_cloister_garden";
+	locations[n].id.label = "New Cloister Garden";
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+	locations[n].fastreload = "Cartagena";		
+	//Sound
+	locations[n].type = "Cloister_garden";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "new_cloister_l_outer";
+	Locations[n].models.always.town = "new_cloister";
+
+	Locations[n].models.always.l1 = "Margarita_gate";
+	Locations[n].models.always.l2 = "graveyard_trees";
+	Locations[n].models.always.l3 = "church_door";
+	Locations[n].models.always.l4 = "Palms_stones_apples_bushes";
+	Locations[n].models.always.l5 = "stone_path";
+	Locations[n].models.always.l6 = "white_buildings";
+	Locations[n].models.always.l7 = "clocktower";
+	Locations[n].models.always.l8 = "plants_oriel_trees1";
+
+	//Day
+	Locations[n].models.day.fonar = "lamps_outside_fd";
+	Locations[n].models.day.charactersPatch = "new_cloister_garden_p";
+	//Night
+	Locations[n].models.night.fonar = "lamps_outside_fn";
+	Locations[n].models.night.charactersPatch = "new_cloister_garden_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Residence_Cartagena";
+	Locations[n].reload.l1.emerge = "reload9";
+	Locations[n].reload.l1.autoreload = "0";
+    	Locations[n].locators_radius.reload.reload1 = 1.5;	
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "new_cloister_inside";
+	Locations[n].reload.l2.emerge = "reload1_back";
+	Locations[n].reload.l2.autoreload = "0";
+
+	Locations[n].reload.l5.name = "reload5";
+	Locations[n].reload.l5.go = "new_cloister_chapel";
+	Locations[n].reload.l5.emerge = "reload1";
+	Locations[n].reload.l5.autoreload = "0";
+
+	Locations[n].reload.l6.name = "reload6";
+	Locations[n].reload.l6.go = "new_cloister_inside";
+	Locations[n].reload.l6.emerge = "reload4";
+	Locations[n].reload.l6.autoreload = "0";
+
+	Locations[n].locators_radius.quest.defoe = 1.5;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.01;
+	Locations[n].items.randitem1 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.01;
+	Locations[n].items.randitem2 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.01;	
+	Locations[n].items.randitem3 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.01;		
+	Locations[n].items.randitem4 = "tree2";				
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.01;
+	Locations[n].items.randitem5 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.01;
+	Locations[n].items.randitem6 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.01;
+	Locations[n].items.randitem7 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem8 = 0.01;
+	Locations[n].items.randitem8 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem9 = 0.01;
+	Locations[n].items.randitem9 = "ladder_very_big";
+
+	Locations[n].locators_radius.randitem.randitem10 = 0.01;
+	Locations[n].items.randitem10 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem11 = 0.01;
+	Locations[n].items.randitem11 = "irongates";
+
+	Locations[n].locators_radius.randitem.randitem12 = 0.01;
+	Locations[n].items.randitem12 = "irongates";
+
+	Locations[n].locators_radius.randitem.randitem13 = 0.01;
+	Locations[n].items.randitem13 = "irongates";
+
+	Locations[n].locators_radius.randitem.randitem14 = 0.01;
+	Locations[n].items.randitem14 = "irongates";
+
+	Locations[n].locators_radius.randitem.randitem15 = 0.01;
+	Locations[n].items.randitem15 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem16 = 0.01;	
+	Locations[n].items.randitem16 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem17 = 0.01;		
+	Locations[n].items.randitem17 = "tree2";			
+
+	Locations[n].locators_radius.randitem.randitem18 = 0.01;
+	Locations[n].items.randitem18 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem19 = 0.01;
+	Locations[n].items.randitem19 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem20 = 0.01;
+	Locations[n].items.randitem20 = "wagon";
+
+	Locations[n].locators_radius.randitem.randitem21 = 0.01;		
+	Locations[n].items.randitem21 = "tree2";				
+
+	Locations[n].locators_radius.randitem.randitem22 = 0.01;
+	Locations[n].items.randitem22 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem23 = 0.01;
+	Locations[n].items.randitem23 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem24 = 0.01;
+	Locations[n].items.randitem24 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem25 = 0.01;
+	Locations[n].items.randitem25 = "wood_pier";
+
+	Locations[n].locators_radius.randitem.randitem26 = 0.01;
+	Locations[n].items.randitem26 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem27 = 0.01;
+	Locations[n].items.randitem27 = "wood_pier";
+
+	Locations[n].locators_radius.randitem.randitem28 = 0.01;
+	Locations[n].items.randitem28 = "wood_pier";
+
+	Locations[n].locators_radius.randitem.randitem29 = 0.01;		
+	Locations[n].items.randitem29 = "wood_pier";				
+
+	Locations[n].locators_radius.randitem.randitem30 = 0.01;
+	Locations[n].items.randitem30 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem31 = 0.01;
+	Locations[n].items.randitem31 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem32 = 0.01;
+	Locations[n].items.randitem32 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem33 = 0.01;
+	Locations[n].items.randitem33 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem34 = 0.01;
+	Locations[n].items.randitem34 = "door_window";
+
+	Locations[n].locators_radius.randitem.randitem35 = 0.01;
+	Locations[n].items.randitem35 = "ladder_very_big";
+
+	Locations[n].locators_radius.randitem.randitem36 = 0.01;
+	Locations[n].items.randitem36 = "ladder_big";
+
+	Locations[n].locators_radius.randitem.randitem37 = 0.01;
+	Locations[n].items.randitem37 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem38 = 0.01;
+	Locations[n].items.randitem38 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem39 = 0.01;
+	Locations[n].items.randitem39 = "distillery";
+
+	Locations[n].locators_radius.randitem.randitem40 = 0.01;
+	Locations[n].items.randitem40 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem41 = 0.01;
+	Locations[n].items.randitem41 = "Bench";
+	
+	Locations[n].locators_radius.randitem.randitem42 = 0.01;
+	Locations[n].items.randitem42 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem43 = 0.01;
+	Locations[n].items.randitem43 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem44 = 0.01;
+	Locations[n].items.randitem44 = "gatedoor_WT1";
+
+	Locations[n].locators_radius.randitem.randitem45 = 0.01;
+	Locations[n].items.randitem45 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem46 = 0.01;
+	Locations[n].items.randitem46 = "jars";
+
+	Locations[n].locators_radius.randitem.randitem47 = 0.01;
+	Locations[n].items.randitem47 = "pole1";
+
+	Locations[n].locators_radius.randitem.randitem48 = 0.01;
+	Locations[n].items.randitem48 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem49 = 0.01;
+	Locations[n].items.randitem49 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem50 = 0.01;
+	Locations[n].items.randitem50 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem51 = 0.01;
+	Locations[n].items.randitem51 = "hut";
+
+	Locations[n].locators_radius.randitem.randitem52 = 0.01;
+	Locations[n].items.randitem52 = "rum_party1";
+
+	Locations[n].locators_radius.randitem.randitem53 = 0.01;
+	Locations[n].items.randitem53 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem54 = 0.01;
+	Locations[n].items.randitem54 = "chair";
+
+	Locations[n].locators_radius.randitem.randitem55 = 0.01;
+	Locations[n].items.randitem55 = "roll_of_planks1";
+
+	Locations[n].locators_radius.randitem.randitem56 = 0.01;
+	Locations[n].items.randitem56 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem57 = 0.01;
+	Locations[n].items.randitem57 = "smuggler_goods";
+
+	Locations[n].locators_radius.randitem.randitem58 = 0.01;
+	Locations[n].items.randitem58 = "wheelbarrow";
+
+	Locations[n].locators_radius.randitem.randitem59 = 0.01;
+	Locations[n].items.randitem59 = "tree_barrel";
+
+	Locations[n].locators_radius.randitem.randitem60 = 0.01;
+	Locations[n].items.randitem60 = "toolbox_item";
+
+	Locations[n].locators_radius.randitem.randitem61 = 0.01;
+	Locations[n].items.randitem61 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem62 = 0.01;
+	Locations[n].items.randitem62 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem63 = 0.01;
+	Locations[n].items.randitem63 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem64 = 0.01;
+	Locations[n].items.randitem64 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem65 = 0.01;
+	Locations[n].items.randitem65 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem66 = 0.01;
+	Locations[n].items.randitem66 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem67 = 0.01;
+	Locations[n].items.randitem67 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem68 = 0.01;
+	Locations[n].items.randitem68 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem69 = 0.01;
+	Locations[n].items.randitem69 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem70 = 0.01;
+	Locations[n].items.randitem70 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem71 = 0.01;
+	Locations[n].items.randitem71 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem72 = 0.01;
+	Locations[n].items.randitem72 = "chimney";
+
+	Locations[n].locators_radius.randitem.randitem73 = 0.01;
+	Locations[n].items.randitem73 = "chimney";
+
+	Locations[n].locators_radius.randitem.randitem74 = 0.01;
+	Locations[n].items.randitem74 = "door_N13";
+
+	Locations[n].locators_radius.randitem.randitem75 = 0.01;
+	Locations[n].items.randitem75 = "ladder_hold";
+
+	Locations[n].locators_radius.randitem.randitem76 = 0.01;
+	Locations[n].items.randitem76 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem77 = 0.01;
+	Locations[n].items.randitem77 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem78 = 0.01;
+	Locations[n].items.randitem78 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem79 = 0.01;
+	Locations[n].items.randitem79 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem80 = 0.01;
+	Locations[n].items.randitem80 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem81 = 0.01;
+	Locations[n].items.randitem81 = "tree_barrel";
+
+	Locations[n].locators_radius.randitem.randitem82 = 0.01;
+	Locations[n].items.randitem82 = "wheelbarrow";
+
+	Locations[n].locators_radius.randitem.randitem83 = 0.01;
+	Locations[n].items.randitem83 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem84 = 0.01;
+	Locations[n].items.randitem84 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem85 = 0.01;
+	Locations[n].items.randitem85 = "chest6U_vco";
+
+	Locations[n].locators_radius.randitem.randitem86 = 0.01;
+	Locations[n].items.randitem86 = "jars";
+
+	Locations[n].island = "Colombia"; // NK 04-08-29
+
+	n = n + 1;
+
+	Build_at("new_cloister_garden", "warehouse", "", 66.0, 0.1, -10., 0.0, "Building");
+	Build_at("new_cloister_garden", "hedgerow", "", -29, -0.3, -75.7, 0.0, "Building");
+	Build_at("new_cloister_garden", "hedgerow", "", -29.0, -0.1, -64.7, 0.0, "Building");
+	Build_at("new_cloister_garden", "hedgerow", "", -29.0, -0.1, -53.7, 0.0, "Building");
+	Build_at("new_cloister_garden", "hedgerow", "", -29.0, -0.1, -42.7, 0.0, "Building");
+	Build_at("new_cloister_garden", "hedgerow", "", -29.0, -0.1, -31.7, 0.0, "Building");
+
+	//------------------------------------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Town_Cartagena\New_cloister";
+	Locations[n].image = "Town_Cartagena_New_Cloister_Outside.tga";
+
+	Locations[n].vcskip = true;
+
+	Locations[n].id = "new_cloister_graveyard";
+	locations[n].id.label = "Graveyard";
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+	locations[n].fastreload = "Cartagena";		
+	//Sound
+	locations[n].type = "Cloister_garden";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "new_cloister_l_outer";
+	Locations[n].models.always.town = "new_cloister";
+
+	Locations[n].models.always.l1 = "Margarita_gate";
+	Locations[n].models.always.l2 = "graveyard_trees";
+	Locations[n].models.always.l3 = "church_door";
+	Locations[n].models.always.l4 = "Palms_stones_apples_bushes";
+	Locations[n].models.always.l5 = "stone_path";
+	Locations[n].models.always.l6 = "white_buildings";
+	Locations[n].models.always.l7 = "clocktower";
+	Locations[n].models.always.l8 = "plants_oriel_trees1";
+
+	//Day
+	Locations[n].models.day.fonar = "lamps_outside_fd";
+	Locations[n].models.day.charactersPatch = "new_cloister_graveyard_p";
+	//Night
+	Locations[n].models.night.fonar = "lamps_outside_fn";
+	Locations[n].models.night.charactersPatch = "new_cloister_graveyard_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l3.name = "reload3";
+	Locations[n].reload.l3.go = "new_cloister_inside";
+	Locations[n].reload.l3.emerge = "reload2";
+	Locations[n].reload.l3.autoreload = "0";
+
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "new_cloister_crypt2_1";
+	Locations[n].reload.l4.emerge = "reload1";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.disable = true;			//only in Assassin storyline
+    	
+	Locations[n].locators_radius.randitem.randitem1 = 0.01;
+	Locations[n].items.randitem1 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.01;
+	Locations[n].items.randitem2 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.01;	
+	Locations[n].items.randitem3 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.01;		
+	Locations[n].items.randitem4 = "tree2";				
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.01;
+	Locations[n].items.randitem5 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.01;
+	Locations[n].items.randitem6 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.01;
+	Locations[n].items.randitem7 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem8 = 0.01;
+	Locations[n].items.randitem8 = "horse_fence";
+
+	Locations[n].locators_radius.randitem.randitem9 = 0.01;
+	Locations[n].items.randitem9 = "ladder_very_big";
+
+	Locations[n].locators_radius.randitem.randitem10 = 0.01;
+	Locations[n].items.randitem10 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem11 = 0.01;
+	Locations[n].items.randitem11 = "irongates";
+
+	Locations[n].locators_radius.randitem.randitem12 = 0.01;
+	Locations[n].items.randitem12 = "irongates";
+
+	Locations[n].locators_radius.randitem.randitem13 = 0.01;
+	Locations[n].items.randitem13 = "irongates";
+
+	Locations[n].locators_radius.randitem.randitem14 = 0.01;
+	Locations[n].items.randitem14 = "irongates";
+
+	Locations[n].locators_radius.randitem.randitem15 = 0.01;
+	Locations[n].items.randitem15 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem16 = 0.01;	
+	Locations[n].items.randitem16 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem17 = 0.01;		
+	Locations[n].items.randitem17 = "tree2";			
+
+	Locations[n].locators_radius.randitem.randitem18 = 0.01;
+	Locations[n].items.randitem18 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem19 = 0.01;
+	Locations[n].items.randitem19 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem20 = 0.01;
+	Locations[n].items.randitem20 = "wagon";
+
+	Locations[n].locators_radius.randitem.randitem21 = 0.01;		
+	Locations[n].items.randitem21 = "tree2";				
+
+	Locations[n].locators_radius.randitem.randitem22 = 0.01;
+	Locations[n].items.randitem22 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem23 = 0.01;
+	Locations[n].items.randitem23 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem24 = 0.01;
+	Locations[n].items.randitem24 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem25 = 0.01;
+	Locations[n].items.randitem25 = "wood_pier";
+
+	Locations[n].locators_radius.randitem.randitem26 = 0.01;
+	Locations[n].items.randitem26 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem27 = 0.01;
+	Locations[n].items.randitem27 = "wood_pier";
+
+	Locations[n].locators_radius.randitem.randitem28 = 0.01;
+	Locations[n].items.randitem28 = "wood_pier";
+
+	Locations[n].locators_radius.randitem.randitem29 = 0.01;		
+	Locations[n].items.randitem29 = "wood_pier";				
+
+	Locations[n].locators_radius.randitem.randitem30 = 0.01;
+	Locations[n].items.randitem30 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem31 = 0.01;
+	Locations[n].items.randitem31 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem32 = 0.01;
+	Locations[n].items.randitem32 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem33 = 0.01;
+	Locations[n].items.randitem33 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem34 = 0.01;
+	Locations[n].items.randitem34 = "door_window";
+
+	Locations[n].locators_radius.randitem.randitem35 = 0.01;
+	Locations[n].items.randitem35 = "ladder_very_big";
+
+	Locations[n].locators_radius.randitem.randitem36 = 0.01;
+	Locations[n].items.randitem36 = "ladder_big";
+
+	Locations[n].locators_radius.randitem.randitem37 = 0.01;
+	Locations[n].items.randitem37 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem38 = 0.01;
+	Locations[n].items.randitem38 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem39 = 0.01;
+	Locations[n].items.randitem39 = "distillery";
+
+	Locations[n].locators_radius.randitem.randitem40 = 0.01;
+	Locations[n].items.randitem40 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem41 = 0.01;
+	Locations[n].items.randitem41 = "Bench";
+	
+	Locations[n].locators_radius.randitem.randitem42 = 0.01;
+	Locations[n].items.randitem42 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem43 = 0.01;
+	Locations[n].items.randitem43 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem44 = 0.01;
+	Locations[n].items.randitem44 = "gatedoor_WT1";
+
+	Locations[n].locators_radius.randitem.randitem45 = 0.01;
+	Locations[n].items.randitem45 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem46 = 0.01;
+	Locations[n].items.randitem46 = "jars";
+
+	Locations[n].locators_radius.randitem.randitem47 = 0.01;
+	Locations[n].items.randitem47 = "pole1";
+
+	Locations[n].locators_radius.randitem.randitem48 = 0.01;
+	Locations[n].items.randitem48 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem49 = 0.01;
+	Locations[n].items.randitem49 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem50 = 0.01;
+	Locations[n].items.randitem50 = "window2";
+
+	Locations[n].locators_radius.randitem.randitem51 = 0.01;
+	Locations[n].items.randitem51 = "hut";
+
+	Locations[n].locators_radius.randitem.randitem52 = 0.01;
+	Locations[n].items.randitem52 = "rum_party1";
+
+	Locations[n].locators_radius.randitem.randitem53 = 0.01;
+	Locations[n].items.randitem53 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem54 = 0.01;
+	Locations[n].items.randitem54 = "chair";
+
+	Locations[n].locators_radius.randitem.randitem55 = 0.01;
+	Locations[n].items.randitem55 = "roll_of_planks1";
+
+	Locations[n].locators_radius.randitem.randitem56 = 0.01;
+	Locations[n].items.randitem56 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem57 = 0.01;
+	Locations[n].items.randitem57 = "smuggler_goods";
+
+	Locations[n].locators_radius.randitem.randitem58 = 0.01;
+	Locations[n].items.randitem58 = "wheelbarrow";
+
+	Locations[n].locators_radius.randitem.randitem59 = 0.01;
+	Locations[n].items.randitem59 = "tree_barrel";
+
+	Locations[n].locators_radius.randitem.randitem60 = 0.01;
+	Locations[n].items.randitem60 = "toolbox_item";
+
+	Locations[n].locators_radius.randitem.randitem61 = 0.01;
+	Locations[n].items.randitem61 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem62 = 0.01;
+	Locations[n].items.randitem62 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem63 = 0.01;
+	Locations[n].items.randitem63 = "barrel3";
+
+	Locations[n].locators_radius.randitem.randitem64 = 0.01;
+	Locations[n].items.randitem64 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem65 = 0.01;
+	Locations[n].items.randitem65 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem66 = 0.01;
+	Locations[n].items.randitem66 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem67 = 0.01;
+	Locations[n].items.randitem67 = "tree2";
+
+	Locations[n].locators_radius.randitem.randitem68 = 0.01;
+	Locations[n].items.randitem68 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem69 = 0.01;
+	Locations[n].items.randitem69 = "spanish_church";
+
+	Locations[n].locators_radius.randitem.randitem70 = 0.01;
+	Locations[n].items.randitem70 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem71 = 0.01;
+	Locations[n].items.randitem71 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem72 = 0.01;
+	Locations[n].items.randitem72 = "chimney";
+
+	Locations[n].locators_radius.randitem.randitem73 = 0.01;
+	Locations[n].items.randitem73 = "chimney";
+
+	Locations[n].locators_radius.randitem.randitem74 = 0.01;
+	Locations[n].items.randitem74 = "door_N13";
+
+	Locations[n].locators_radius.randitem.randitem75 = 0.01;
+	Locations[n].items.randitem75 = "ladder_hold";
+
+	Locations[n].locators_radius.randitem.randitem76 = 0.01;
+	Locations[n].items.randitem76 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem77 = 0.01;
+	Locations[n].items.randitem77 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem78 = 0.01;
+	Locations[n].items.randitem78 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem79 = 0.01;
+	Locations[n].items.randitem79 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem80 = 0.01;
+	Locations[n].items.randitem80 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem81 = 0.01;
+	Locations[n].items.randitem81 = "tree_barrel";
+
+	Locations[n].locators_radius.randitem.randitem82 = 0.01;
+	Locations[n].items.randitem82 = "wheelbarrow";
+
+	Locations[n].locators_radius.randitem.randitem83 = 0.01;
+	Locations[n].items.randitem83 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem84 = 0.01;
+	Locations[n].items.randitem84 = "Bench";
+
+	Locations[n].locators_radius.randitem.randitem85 = 0.01;
+	Locations[n].items.randitem85 = "chest6U_vco";
+
+	Locations[n].island = "Colombia"; // NK 04-08-29
+
+	n = n + 1;
+
+	Build_at("new_cloister_graveyard", "warehouse", "", 66.0, 0.1, -10., 0.0, "Building");
+	Build_at("new_cloister_graveyard", "hedgerow", "", -29.0, -0.3, -75.7, 0.0, "Building");
+	Build_at("new_cloister_graveyard", "hedgerow", "", -29.0, -0.1, -64.7, 0.0, "Building");
+	Build_at("new_cloister_graveyard", "hedgerow", "", -29.0, -0.1, -53.7, 0.0, "Building");
+	Build_at("new_cloister_graveyard", "hedgerow", "", -29.0, -0.1, -42.7, 0.0, "Building");
+	Build_at("new_cloister_graveyard", "hedgerow", "", -29.0, -0.1, -31.7, 0.0, "Building");
+
+	 //------------------------------------------------------------------------------
+//pär
+	Locations[n].filespath.models = "locations\Town_Cartagena\New_cloister";
+	Locations[n].image = "Town_Cartagena_New_Cloister_Inside.tga";
+
+	Locations[n].vcskip = true;
+
+	Locations[n].id = "new_cloister_inside";
+	locations[n].id.label = "Cloister yard";
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+		
+	//Sound
+	locations[n].type = "Cloister_garden";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "new_cloister_l_inner";
+	Locations[n].models.always.town = "new_cloister";	
+
+	Locations[n].models.always.l1 = "fontain1";
+	Locations[n].models.always.l1.locator.group = "quest";
+	Locations[n].models.always.l1.locator.name = "quest1";
+	Locations[n].models.always.l1.uvslide.u0 = 0.0005;
+	Locations[n].models.always.l1.uvslide.v0 = 0.2;
+	Locations[n].models.always.l1.level = 999;
+	Locations[n].models.always.l1.tech = "LocationWaterFall";
+	
+	Locations[n].models.always.l2 = "fontain2";
+	Locations[n].models.always.l2.locator.group = "quest";
+	Locations[n].models.always.l2.locator.name = "quest2";
+	Locations[n].models.always.l2.uvslide.u0 = 0.04;
+	Locations[n].models.always.l2.uvslide.v0 = 0.01;
+	Locations[n].models.always.l2.level = 999;
+	Locations[n].models.always.l2.tech = "LocationWaterFall";
+
+	Locations[n].models.always.l3 = "fontain_model";
+	Locations[n].models.always.l4 = "clocktower";
+	Locations[n].models.always.l5 = "Palms_stones_apples_bushes";
+
+	//Day
+	Locations[n].models.day.fonar = "lamps_inside_fd";
+	Locations[n].models.day.charactersPatch = "new_cloister_inner_p";
+	//Night
+	Locations[n].models.night.fonar = "lamps_inside_fn";
+	Locations[n].models.night.charactersPatch = "new_cloister_inner_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "new_cloister_garden";
+	Locations[n].reload.l1.emerge = "reload2_back";
+	Locations[n].reload.l1.autoreload = "0";
+    	Locations[n].locators_radius.reload.reload1 = 1.5;
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "new_cloister_graveyard";
+	Locations[n].reload.l2.emerge = "reload3_back";
+	Locations[n].reload.l2.autoreload = "0";
+
+	Locations[n].reload.l3.name = "reload3";
+	Locations[n].reload.l3.go = "new_cloister_room";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "0";
+	Locations[n].reload.l3.disable = true;			//only in Assassin storyline
+
+	Locations[n].reload.l4.name = "reload4";
+	Locations[n].reload.l4.go = "new_cloister_garden";
+	Locations[n].reload.l4.emerge = "reload6";
+	Locations[n].reload.l4.autoreload = "0";
+
+	Locations[n].locators_radius.quest.F1 = 2.0;
+	Locations[n].locators_radius.quest.F2 = 2.0;
+	Locations[n].locators_radius.quest.F3 = 2.0;
+	Locations[n].locators_radius.quest.F4 = 2.0;
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.01;
+	Locations[n].items.randitem1 = "door_N13";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.01;
+	Locations[n].items.randitem2 = "pole1";
+
+	Locations[n].locators_radius.randitem.randitem3 = 0.01;
+	Locations[n].items.randitem3 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.01;
+	Locations[n].items.randitem4 = "door_fort_high";
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.01;
+	Locations[n].items.randitem5 = "door_H1_45";
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.01;
+	Locations[n].items.randitem6 = "door_H1_45";
+	
+	Locations[n].locators_radius.randitem.randitem7 = 0.01;
+	Locations[n].items.randitem7 = "plank2_very_long";
+
+	Locations[n].locators_radius.randitem.randitem8 = 0.01;
+	Locations[n].items.randitem8 = "door_N13";
+
+	Locations[n].locators_radius.randitem.randitem9 = 0.01;
+	Locations[n].items.randitem9 = "door_N13";
+
+	Locations[n].locators_radius.randitem.randitem10 = 0.01;
+	Locations[n].items.randitem10 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem11 = 0.01;
+	Locations[n].items.randitem11 = "bench";
+
+	Locations[n].locators_radius.randitem.randitem12 = 0.01;
+	Locations[n].items.randitem12 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem13 = 0.01;
+	Locations[n].items.randitem13 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem14 = 0.01;
+	Locations[n].items.randitem14 = "church_window_small";
+	
+	Locations[n].island = "Colombia"; // NK 04-08-29
+
+	n = n + 1;
+
+//--------------------------------------------------------------------------	
+
+	Locations[n].filespath.models = "locations\Inside\Crypt2_1";	
+	Locations[n].image = "wr_crypt2_1.tga";
+
+	Locations[n].id = "new_cloister_crypt2_1";
+	locations[n].id.label = "Crypt";
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+	//Sound
+	locations[n].type = "crypt";			
+
+	//Models
+	//Always
+	Locations[n].models.always.l1 = "crypt_2_1_inside";
+	
+	//Day
+	Locations[n].models.day.locators = "crypt_2_1_inside_ld_BOP";
+	Locations[n].models.day.charactersPatch = "crypt_2_1_inside_patch";
+	
+	//Night
+	Locations[n].models.night.locators = "crypt_2_1_inside_ln_BOP";
+	Locations[n].models.night.charactersPatch = "crypt_2_1_inside_patch";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";	
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "new_cloister_graveyard";
+	Locations[n].reload.l1.emerge = "Reload4_back";
+	Locations[n].reload.l1.autoreload = "0";
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "new_cloister_crypt2_2A";
+	Locations[n].reload.l2.emerge = "Reload1";
+	Locations[n].reload.l2.autoreload = "0";
+	
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
+//--------------------------------------------------------------------------	
+
+	Locations[n].filespath.models = "locations\Inside\Crypt2_2";	
+	Locations[n].image = "wr_crypt2_2.tga";
+
+	Locations[n].id = "new_cloister_crypt2_2A";
+	locations[n].id.label = "Crypt";
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+	//Sound
+	locations[n].type = "crypt";			
+
+	//Models
+	//Always
+	Locations[n].models.always.l1 = "crypt_2_2_inside";
+	Locations[n].models.always.locators = "crypt_2_2_inside_locators_BOP";
+	
+	//Day
+	Locations[n].models.day.charactersPatch = "crypt_2_2_inside_patch";
+	
+	//Night
+	Locations[n].models.night.charactersPatch = "crypt_2_2_inside_patch";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";	
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "new_cloister_crypt2_1";
+	Locations[n].reload.l1.emerge = "Reload2";
+	Locations[n].reload.l1.autoreload = "0";
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "new_cloister_crypt2_2B";
+	Locations[n].reload.l2.emerge = "Reload3";
+	Locations[n].reload.l2.autoreload = "0";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	LAi_LocationFantomsGen(&locations[n], false);
+	Locations[n].vcskip = true;
+	Locations[n].monsters = 0;
+
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------	
+
+	Locations[n].filespath.models = "locations\Inside\Crypt2_2";	
+	Locations[n].image = "wr_abbey_cell.tga";
+
+	Locations[n].id = "new_cloister_crypt2_2B";
+	locations[n].id.label = "Cell";
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+	//Sound
+	locations[n].type = "crypt";			
+
+	//Models
+	//Always
+	Locations[n].models.always.l1 = "crypt_2_2_inside";
+	Locations[n].models.always.locators = "crypt_2_2_inside_locators_BOP";
+	
+	//Day
+	Locations[n].models.day.charactersPatch = "crypt_2_2_inside_patch";
+	
+	//Night
+	Locations[n].models.night.charactersPatch = "crypt_2_2_inside_patch";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";	
+
+	//Reload map
+	Locations[n].reload.l3.name = "reload3";
+	Locations[n].reload.l3.go = "new_cloister_crypt2_2A";
+	Locations[n].reload.l3.emerge = "Reload2";
+	Locations[n].reload.l3.autoreload = "0";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	LAi_LocationFantomsGen(&locations[n], false);
+	Locations[n].vcskip = true;
+	Locations[n].monsters = 0;
+
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	Locations[n].id = "New_cloister_chapel";
+	locations[n].id.label = "Chapel";
+	Locations[n].image = "Inside_Church_2.tga";
+	Locations[n].filespath.models = "locations\inside\Church_2\\";
+	
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+
+	//Sound
+	locations[n].type = "Vane_chapel";
+
+	//Models
+	//Always
+	Locations[n].models.always.city = "Church2";
+	Locations[n].models.always.locators = "Church2_l";
+	Locations[n].models.always.window = "church2_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "Church2_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "Church2_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "New_cloister_garden";
+	Locations[n].reload.l1.emerge = "reload5_back";
+	Locations[n].reload.l1.autoreload = "0";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
+	//--------------------------------------------------------------------------
+
+	Locations[n].id = "New_cloister_room";
+	locations[n].id.label = "Room";
+	Locations[n].filespath.models = "locations\inside\Tavern_room";
+	Locations[n].image = "Inside_Tavern_Room.tga";
+
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+
+	//Sound
+	locations[n].type = "silent_residence";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "tavern_room_locators";
+	Locations[n].models.always.l1 = "Tavern_room";
+	Locations[n].models.always.window = "Tavern_room_window";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "Tavern_room_patch";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "Tavern_room_patch";	
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\redmh_";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1_back";
+	Locations[n].reload.l1.go = "New_cloister_inside";
+	Locations[n].reload.l1.emerge = "Reload3";
+	Locations[n].reload.l1.autoreload = "0";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
+
+
+	// -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Outside\Jungle3";
+
+	Locations[n].id = "Colombia_Jungle_01";
+	locations[n].id.label = "#sisland_name# jungles";
+	Locations[n].image = "Outside_Jungle3.tga";
+	//Sound
+	locations[n].type = "jungle";
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "jungle3_locators";
+	Locations[n].models.always.jungle = "jungle3";
+	Locations[n].models.always.grassPatch = "jungle3_grass";
+	Locations[n].models.always.l1 = "plan1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+	//Day
+	Locations[n].models.day.charactersPatch = "jungle3_patch";
+	//Night
+	Locations[n].models.night.charactersPatch = "jungle3_patch";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Colombia_Jungle_04";
+	Locations[n].reload.l1.emerge = "reload2";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload1 = 1.0;
+
+	Locations[n].reload.l2.name = "reload1_back";
+	Locations[n].reload.l2.go = "Colombia_Jungle_04";
+	Locations[n].reload.l2.emerge = "reload2";
+	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].reload.l2.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload1_back = 2.0;
+
+	Locations[n].reload.l3.name = "reload2";
+	Locations[n].reload.l3.go = "Colombia_Jungle_02";
+	Locations[n].reload.l3.emerge = "reload2";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload2 = 3.0;
+
+	Locations[n].reload.l4.name = "reload2_back";
+	Locations[n].reload.l4.go = "Colombia_Jungle_02";
+	Locations[n].reload.l4.emerge = "reload2";
+	Locations[n].reload.l4.autoreload = "1";
+	Locations[n].reload.l4.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload2_back = 3.0;
+
+	Locations[n].reload.l5.name = "reload3";
+	Locations[n].reload.l5.go = "Colombia_swamp";
+	Locations[n].reload.l5.emerge = "reload2";
+	Locations[n].reload.l5.autoreload = "1";
+	Locations[n].reload.l5.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload3 = 3.0;
+
+	Locations[n].reload.l6.name = "reload3_back";
+	Locations[n].reload.l6.go = "Colombia_swamp";
+	Locations[n].reload.l6.emerge = "reload2";
+	Locations[n].reload.l6.autoreload = "1";
+	Locations[n].reload.l6.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload3_back = 3.0;
+
+	Locations[n].island = "Colombia"; // NK 04-08-29
+	n = n + 1;
+
+	// -------------------------------------------------
+	Locations[n].filespath.models = "locations\Outside\Jungle_6";
+
+    	Locations[n].id = "Colombia_swamp";
+	locations[n].id.label = "#sisland_name# jungles";
+	Locations[n].image = "Outside_Colombia_Swamp.tga";
+	//Sound
+	locations[n].type = "Jungle";
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Jungle06_l";
+	Locations[n].models.always.jungle = "Jungle06";
+	Locations[n].models.always.grassPatch = "JUNGLE06_g";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Jungle06_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Jungle06_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+	Locations[n].environment.swamp = "true"; // PB: Swamps
+	Locations[n].MaxSeaHeight = 0.6; // screwface
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Colombia_Jungle_03";
+	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload1 = 4;
+	Locations[n].reload.l1.disable = 1;	// Not available until after "Colombian Silver" sidequest
+
+	Locations[n].reload.l2.name = "reload1_back";
+	Locations[n].reload.l2.go = "Colombia_Jungle_03";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].reload.l2.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload1_back = 4;
+	Locations[n].reload.l2.disable = 1;	// Not available until after "Colombian Silver" sidequest
+
+	Locations[n].reload.l3.name = "reload2";
+	Locations[n].reload.l3.go = "Colombia_Jungle_01";
+	Locations[n].reload.l3.emerge = "reload3";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload2 = 4;
+
+	Locations[n].reload.l4.name = "reload2_back";
+	Locations[n].reload.l4.go = "Colombia_Jungle_01";
+	Locations[n].reload.l4.emerge = "reload3";
+	Locations[n].reload.l4.autoreload = "1";
+	Locations[n].reload.l4.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload2_back = 3;
+
+	Locations[n].reload.l5.name = "reload3";
+	Locations[n].reload.l5.go = "Colombia_Jungle_02";
+	Locations[n].reload.l5.emerge = "reload3";
+	Locations[n].reload.l5.autoreload = "1";
+	Locations[n].reload.l5.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload3 = 4;
+
+	Locations[n].reload.l6.name = "reload3_back";
+	Locations[n].reload.l6.go = "Colombia_Jungle_02";
+	Locations[n].reload.l6.emerge = "reload3";
+	Locations[n].reload.l6.autoreload = "1";
+	Locations[n].reload.l6.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload3_back = 4;
+
+	Locations[n].island = "Colombia";
+
+	n = n + 1;
+
+	// -------------------------------------------------
+	Locations[n].filespath.models = "locations\Outside\Jungle_2";
+
+    	Locations[n].id = "Colombia_Jungle_02";
+	locations[n].id.label = "#sisland_name# jungles";
+	Locations[n].image = "Outside_Jungle2.tga";
+	//Sound
+	locations[n].type = "Jungle";
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "JUNGLE02_l_GR";
+	Locations[n].models.always.jungle = "jungle02_no_statue";
+	Locations[n].models.always.grassPatch = "JUNGLE02_g";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Jungle02_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Jungle02_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Colombian_Indian_Village";
+	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "Indian Village.";
+	Locations[n].locators_radius.reload.reload1 = 4;
+	Locations[n].reload.l1.disable = true;		// No access to village until allowed by "Colombian Silver" quest
+
+	Locations[n].reload.l2.name = "reload1_back";
+	Locations[n].reload.l2.go = "Colombian_Indian_Village";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].reload.l2.label = "Indian Village.";
+	Locations[n].locators_radius.reload.reload1_back = 4;
+	Locations[n].reload.l2.disable = true;		// No access to village until allowed by "Colombian Silver" quest
+
+	Locations[n].reload.l3.name = "reload2";
+	Locations[n].reload.l3.go = "Colombia_Jungle_01";
+	Locations[n].reload.l3.emerge = "reload2";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload2 = 4;
+
+	Locations[n].reload.l4.name = "reload2_back";
+	Locations[n].reload.l4.go = "Colombia_Jungle_01";
+	Locations[n].reload.l4.emerge = "reload2";
+	Locations[n].reload.l4.autoreload = "1";
+	Locations[n].reload.l4.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload2_back = 3;
+
+	Locations[n].reload.l5.name = "reload3";
+	Locations[n].reload.l5.go = "Colombia_swamp";
+	Locations[n].reload.l5.emerge = "reload3";
+	Locations[n].reload.l5.autoreload = "1";
+	Locations[n].reload.l5.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload3 = 4;
+
+	Locations[n].reload.l6.name = "reload3_back";
+	Locations[n].reload.l6.go = "Colombia_swamp";
+	Locations[n].reload.l6.emerge = "reload3";
+	Locations[n].reload.l6.autoreload = "1";
+	Locations[n].reload.l6.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload3_back = 4;
+
+	Locations[n].island = "Colombia";
+
+ 	Build_at("Colombia_Jungle_02", "jungle2", "", -16.0, -0.23, -16.0, 1.5, "wild_jungles");
+ 	Build_at("Colombia_Jungle_02", "jungle2", "", -14.0, -0.23, -16.0, -1.5, "wild_jungles");
+
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Outside\Jungle_7";
+
+	Locations[n].id = "Colombia_Jungle_03";
+	locations[n].id.label = "#sisland_name# jungles";
+	Locations[n].image = "Outside_Jungle_7.tga";
+	//Sound
+	locations[n].type = "jungle";
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Jungle07_l";
+	Locations[n].models.always.jungle = "Jungle07";
+	Locations[n].models.always.grassPatch = "JUNGLE07_g";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Jungle07_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Jungle07_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Colombia_swamp";
+	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload1 = 4;
+
+	Locations[n].reload.l2.name = "reload1_back";
+	Locations[n].reload.l2.go = "Colombia_swamp";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].reload.l2.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload1_back = 1;
+
+	Locations[n].reload.l3.name = "reload2";
+	Locations[n].reload.l3.go = "Colombia_Jungle_05";
+	Locations[n].reload.l3.emerge = "reload3";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload3 = 4;
+
+	Locations[n].reload.l4.name = "reload2_back";
+	Locations[n].reload.l4.go = "Colombia_Jungle_05";
+	Locations[n].reload.l4.emerge = "reload3";
+	Locations[n].reload.l4.autoreload = "1";
+	Locations[n].reload.l4.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload3_back = 2;
+
+	Locations[n].island = "Colombia";
+
+	Build_at("Colombia_Jungle_03", "jungle2", "", 0.3, 0.45, 11.0, 0, "wild_jungles");
+	Build_at("Colombia_Jungle_03", "jungle2", "", -0.3, 0.45, 16.0, 3, "wild_jungles");
+	Build_at("Colombia_Jungle_03", "jungle2", "", -6.0, 0.80, -0.5, -0.2, "wild_jungles");
+	Build_at("Colombia_Jungle_03", "jungle2", "", 8.5, 2.0, -4.5, 3.65, "wild_jungles");
+
+	n = n + 1;
+
+
+	// -------------------------------------------------
+	Locations[n].filespath.models = "locations\Outside\Jungle_2";
+
+    	Locations[n].id = "Colombia_Jungle_04";
+	locations[n].id.label = "#sisland_name# jungles";
+	Locations[n].image = "Outside_Jungle2.tga";
+	//Sound
+	locations[n].type = "Jungle";
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "JUNGLE02_l_GR";
+	Locations[n].models.always.jungle = "jungle02_no_statue";
+	Locations[n].models.always.grassPatch = "JUNGLE02_g";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Jungle02_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Jungle02_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Colombia_Jungle_05";
+	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload1 = 4;
+
+	Locations[n].reload.l2.name = "reload1_back";
+	Locations[n].reload.l2.go = "Colombia_Jungle_05";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].reload.l2.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload1_back = 4;
+
+	Locations[n].reload.l3.name = "reload2";
+	Locations[n].reload.l3.go = "Colombia_Jungle_01";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload2 = 4;
+
+	Locations[n].reload.l4.name = "reload2_back";
+	Locations[n].reload.l4.go = "Colombia_Jungle_01";
+	Locations[n].reload.l4.emerge = "reload1";
+	Locations[n].reload.l4.autoreload = "1";
+	Locations[n].reload.l4.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.reload2_back = 3;
+
+	Locations[n].reload.l5.name = "reload3";
+	Locations[n].reload.l5.go = "Colombia_shore";
+	Locations[n].reload.l5.emerge = "reload2";
+	Locations[n].reload.l5.autoreload = "1";
+	Locations[n].reload.l5.label = "Dolphin Sands.";
+	Locations[n].locators_radius.reload.reload3 = 4;
+
+	Locations[n].reload.l6.name = "reload3_back";
+	Locations[n].reload.l6.go = "Colombia_shore";
+	Locations[n].reload.l6.emerge = "reload2";
+	Locations[n].reload.l6.autoreload = "1";
+	Locations[n].reload.l6.label = "Dolphin Sands.";
+	Locations[n].locators_radius.reload.reload3_back = 4;
+
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Outside\Jungle_5";
+	Locations[n].filespath.textures = "locations\SPAIN";
+
+	Locations[n].id = "Colombia_Jungle_05";
+	locations[n].id.label = "#sisland_name# jungles";
+	Locations[n].image = "Outside_Jungle_5.tga";
+	//Sound
+	locations[n].type = "jungle";
+	LAi_LocationMonstersGen(&locations[n], true);
+	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Jungle05_l";
+	Locations[n].models.always.jungle = "jungle05_signless";
+	Locations[n].models.always.grassPatch = "JUNGLE05_g";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Jungle05_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Jungle05_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Colombia_Jungle_04";
+	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload1 = 3.0;
+
+	Locations[n].reload.l2.name = "reload1_back";
+	Locations[n].reload.l2.go = "Colombia_Jungle_04";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].reload.l2.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload1_back = 2.0;
+
+	Locations[n].reload.l3.name = "reload2";
+	Locations[n].reload.l3.go = "Cartagena_Exit";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload2 = 3.0;
+
+	Locations[n].reload.l4.name = "reload2_back";
+	Locations[n].reload.l4.go = "Cartagena_Exit";
+	Locations[n].reload.l4.emerge = "reload1";
+	Locations[n].reload.l4.autoreload = "1";
+	Locations[n].reload.l4.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload2_back = 2.0;
+
+	Locations[n].reload.l5.name = "reload3";
+	Locations[n].reload.l5.go = "Colombia_Jungle_03";
+	Locations[n].reload.l5.emerge = "reload2";
+	Locations[n].reload.l5.autoreload = "1";
+	Locations[n].reload.l5.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload3 = 3.0;
+	Locations[n].reload.l5.disable = 1;	// Not available until after "Colombian Silver" sidequest
+
+	Locations[n].reload.l6.name = "reload3_back";
+	Locations[n].reload.l6.go = "Colombia_Jungle_03";
+	Locations[n].reload.l6.emerge = "reload2";
+	Locations[n].reload.l6.autoreload = "1";
+	Locations[n].reload.l6.label = "#sisland_name# jungles";
+	Locations[n].locators_radius.reload.Reload3_back = 2.0;
+	Locations[n].reload.l6.disable = 1;	// Not available until after "Colombian Silver" sidequest
+
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
+	// -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Indian Village";
+	Locations[n].filespath.textures = "locations\NATIVES";
+
+	Locations[n].id = "Colombian_Indian_Village";
+	locations[n].id.label = "Indian Village";
+	Locations[n].image = "Native_village.tga";
+
+	//Town sack
+	Locations[n].townsack = "Cartagena"; // NK 04-08-29
+
+	//Sound
+	locations[n].type = "KR_jungle";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Empty_l";
+	Locations[n].models.always.town = "Empty";
+	Locations[n].models.always.grasspatch = "pif_g";
+	Locations[n].models.always.l1 = "pif_b01";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "pif_b02";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "pif_b03";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+	Locations[n].models.always.l4 = "pif_b04";
+	Locations[n].models.always.l4.level = 6;
+	Locations[n].models.always.l4.tech = "LocationModelBlend";
+
+
+	//Day
+	Locations[n].models.day.charactersPatch = "PiF_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "PiF_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "Reload1";
+	Locations[n].reload.l1.go = "Colombia_Jungle_02";
+	Locations[n].reload.l1.emerge = "Reload1";
+	Locations[n].reload.l1.label = "Jungle.";
+	Locations[n].reload.l1.autoreload = 1;
+	Locations[n].locators_radius.reload.reload1 = 1;
+
+	Locations[n].reload.l2.name = "Reload1_back";
+	Locations[n].reload.l2.go = "Colombia_Jungle_02";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.label = "Jungle.";
+	Locations[n].reload.l2.autoreload = 1;
+	Locations[n].locators_radius.reload.reload1_back = 2;
+
+	Locations[n].island = "Colombia"; // NK 04-08-29
+
+	Build_at("Colombian_Indian_Village", "Tipi3", "", 3.5, -0.4, -11.0, 1.0, "");
+	Build_at("Colombian_Indian_Village", "Tipi2", "", 9.0, 0.0, 4.0, 0.0, "");
+	Build_at("Colombian_Indian_Village", "Tipi2", "", 18.05, -0.0, -2.0, 3.0, "");
+	Build_at("Colombian_Indian_Village", "Tipi3", "", 21.0, -0.5, -9.0, 0.5, "");
+	Build_at("Colombian_Indian_Village", "Tipi3", "", -1.0, -0.5, 2.0, 0.5, "");
+
+	n = n + 1;
+
 }
 
 

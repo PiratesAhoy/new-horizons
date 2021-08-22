@@ -34,10 +34,11 @@ void ProcessDialogEvent()
 
                 if (PChar.quest.Firstcontact == "oldadmiral")
 			{
-			dialog.snd = "Voice\CLLA\CLLA004";
-			dialog.text = DLG_TEXT[2];
-			link.l1 = DLG_TEXT[3];
-			link.l1.go = "begin_1";	
+				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
+				dialog.snd = "Voice\CLLA\CLLA004";
+				dialog.text = DLG_TEXT[2];
+				link.l1 = DLG_TEXT[3];
+				link.l1.go = "begin_1";	
 			}
 		break;
                  

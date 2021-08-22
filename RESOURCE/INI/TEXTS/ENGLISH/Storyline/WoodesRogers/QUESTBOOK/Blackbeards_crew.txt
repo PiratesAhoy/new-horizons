@@ -1,0 +1,6 @@
+title=Blackbeard's crew
+text.t1=Only 13 out of 14 were hanged. Who survived?
+text.t2=Samuel Odel, from Smugglers Lair on La Grenade stood trial for piracy in Williamsburg, Virginia, 1718. Acquitted. He if anyone must know more about Teach's crew.
+text.t3=Teach visited Charles Vane in October 1718. Not long before the death of Teach. I know where to find Vane!
+text.t4=Smugglers Lair can be found via the jungle from any port, shore or town.
+text.t5=Maybe I should start with a visit to Vane. It's on this island!

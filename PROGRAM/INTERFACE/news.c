@@ -98,20 +98,20 @@ void CreateLogHeadersList()
   { 
     tmp = "log"+i;
     if(!CheckAttribute(&myCh, "shiplog.Date."+tmp)) break; // break in case of errors
-    tmpLogTitle = myCh.shiplog.Date.(tmp) + "        " + myCh.shiplog.Title.(tmp);   
+    tmpLogTitle = myCh.shiplog.Date.(tmp) + "        " + GetTranslatedLog(myCh.shiplog.Title.(tmp)); // MAXIMUS 27.06.2019: localization
     if( tmpLogTitle == "")
     {
       continue;   
     }
     else
-    {    
+    {
       if(myCh.shiplog.Category.(tmp) == "General")
-      {                          
+      {
         SendMessage(&GameInterface, "lsle", MSG_INTERFACE_MSG_TO_NODE, "SHIPSLOG_WINDOW", 0, &tmpLogTitle);
-      }  
-    }  
-    SetLogVisible();
-  }    		
+      }
+    }
+  }
+  SetLogVisible(); //Levis: moved outside the forloop as this function takes all log entries anyways
 }
 
 

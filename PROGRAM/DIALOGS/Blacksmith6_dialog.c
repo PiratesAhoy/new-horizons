@@ -66,6 +66,9 @@ void ProcessDialogEvent()
 	float pricemult = 1.0/105.0;
 	
 	Preprocessor_Add("sir", GetMyAddressForm(NPChar, MainChar, ADDR_POLITE, false, false)); // DeathDaisy
+	Preprocessor_Add("Pickfurt", GetMyLastName(NPChar)); // GR: character gets a random name in "Early Explorers"
+	Preprocessor_Add("Tomasina", GetMyName(NPChar));
+	Preprocessor_Add("Tomasina Pickfurt", GetMySimpleName(NPChar));
 
 	// Dialog.CurrentNode holds a value indicating where in the conversation we are,
 	// according to that value we will determine where to go next.

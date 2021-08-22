@@ -1,0 +1,7 @@
+title=La captura del 'Anaconda'
+text.t1=Sabía que era una buena idea buscar presas cerca de #sisland_Isla Muelle#. Di caza a un galeón ligero, y tras un duro combate, me hice con él. Hay algunas mercancías de valor en la bodega. Boca de Hubon no es un lugar seguro por ahora. Tengo que vender la carga en #sisland_Redmond# y hacer reparaciones.
+text.t2=¡Maldición! Los españoles me atraparon antes de que alcanzara la seguridad del puerto de #sisland_Redmond#. Pero la suerte me acompaña, y me escapé de mis captores en el puerto de #sSanto Domingo#, llegando a nado hasta Boca de Yuman con Emilio. Ahora tengo que ir a la aldea y encontrar ayuda.
+text.t3=Por fin, me encontré con un pescador en la aldea. Me esperará en Boca de Yuman. Después, solo tengo que navegar hasta Boca de Hubon y buscar a Eugene en el campamento bucanero. Estoy seguro de que me ayudará.
+text.t4=¡Está hecho! He contratado a dos piratas experimentados que me ha presentado Eugene. Esperaba algo más,  pero que con estos hombres será suficiente. A decir verdad, ya tengo un plan para recuperar mi barco. Pero para eso, primero tengo que ir a la iglesia de la aldea.
+text.t5=Ahora, si llevamos estos hábitos, podemos entrar en #sSanto Domingo# y en su puerto, sin tener que abrirnos paso luchando. Mi galeón está esperando a que lo rescatemos.
+text.t6=¡Sí! Por fin, tengo de nuevo mi barco. Salgamos cuanto antes del puerto y del alcance de sus cañones. Lo mejor será poner rumbo a #sisland_Khael Roa#, un buen terreno de caza de presas enemigas.

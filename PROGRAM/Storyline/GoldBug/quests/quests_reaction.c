@@ -1,4 +1,4 @@
-
+﻿
 GetTime(){ return stf(Environment.time); }
 
 void QuestComplete(string sQuestName)
@@ -5211,6 +5211,7 @@ void QuestComplete(string sQuestName)
 			LAi_QuestDelay("step_back_church1", 0.1);
 		break;
 */
+/*
 		case "step_back_church2":
 			pchar.quest.step_back_church2_A.win_condition.l1 = "locator";
 			pchar.quest.step_back_church2_A.win_condition.l1.location = "GB_Charleston_church";
@@ -5238,7 +5239,7 @@ void QuestComplete(string sQuestName)
 			
 			LAi_QuestDelay("step_back_church3", 0.1);
 		break;
-
+*/
 		case "magnet_key":
 			Logit(TranslateString("","Yes, with the Magnet I got a Key out of the collection box."));
 			PlaySound("OBJECTS\DUEL\man_attack6.wav");
@@ -7025,13 +7026,13 @@ void QuestComplete(string sQuestName)
 	else
 	{
 		if(makefloat(Pchar.quest.store_charcoal) + makefloat(Pchar.quest.mix_charcoal) > 0)
-		{ LogIt(makefloat(Pchar.quest.store_charcoal) + makefloat(Pchar.quest.mix_charcoal) + " charcoal"); }
+		{ LogIt(makefloat(Pchar.quest.store_charcoal) + makefloat(Pchar.quest.mix_charcoal) + " " + TranslateString("","charcoal")); }
 
 		if(makefloat(Pchar.quest.store_nitre) + makefloat(Pchar.quest.mix_nitre) > 0)
-		{ LogIt(makefloat(Pchar.quest.store_nitre) + makefloat(Pchar.quest.mix_nitre) + " nitre"); }
+		{ LogIt(makefloat(Pchar.quest.store_nitre) + makefloat(Pchar.quest.mix_nitre) + " " + TranslateString("","nitre")); }
 
 		if(makefloat(Pchar.quest.store_sulfur) + makefloat(Pchar.quest.mix_sulfur) > 0)
-		{ LogIt(makefloat(Pchar.quest.store_sulfur) + makefloat(Pchar.quest.mix_sulfur) + " sulfur"); }
+		{ LogIt(makefloat(Pchar.quest.store_sulfur) + makefloat(Pchar.quest.mix_sulfur) + " " + TranslateString("","sulfur")); }
 
 		if(makefloat(Pchar.quest.water_risk) == 0)
 		{ Logit(TranslateString("","water")); }
@@ -12003,7 +12004,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.leave_female_slave.win_condition.l1.locator = "door_in";
 			pchar.quest.leave_female_slave.win_condition = "leave_female_slave";
 		break;
-
+//pär door
 		case "leave_female_slave":
 	//LogIt("leave_female_slave");
 			ChangeCharacterAddressGroup(Pchar, "Bessop_plantation", "goto", "barrack_out");
@@ -12024,6 +12025,8 @@ void QuestComplete(string sQuestName)
 			LAi_ActorTurnToLocator(characterFromID("Bessop_guard2"), "goto", "look_FW");
 			LAi_SetStayType(characterFromID("Bessop_guard1"));
 			LAi_SetStayType(characterFromID("Bessop_guard2"));
+	
+		Pchar.quest.bessop_pchar_safe = "no";			//bugfix 2(2): when loading this quicksave guards always attacked immediately
 			Pchar.quest.guard_attacking = "no";		//enable new reaction
 		
 			LAi_QuestDelay("leave_female_slave1", 0.5);
@@ -12540,12 +12543,14 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialogNow(characterFromID("f_slave1"), pchar, "", 0.1);
 			LAi_ActorWaitDialog(Pchar, characterFromID("f_slave1"));
 		break;
-
+//pär save
 		case "witch_is_drawing_done":
 			PlaySound("INTERFACE\paper_small.wav");
 			GiveItem2Character(Pchar, "BH_sketch");
 			LAi_SetStayType(characterFromID("f_slave1"));
 			LAi_SetPlayerType(pchar);
+
+		Pchar.quest.bessop_pchar_safe = "yes";				//bugfix 1(2): when loading this quicksave guards always attacked immediately
 		
 			InterfaceStates.Buttons.Save.enable = 1;
 			DoQuickSave();
@@ -14409,6 +14414,7 @@ void QuestComplete(string sQuestName)
 			SetNextWeather("Blue Sky");
 			LAi_SetPlayerType(pchar);
 
+	InterfaceStates.Buttons.Save.enable = 0;			//bugfix: a loaded savegame here disabled the boat to Fort_Moultrie_shore, enabled again at the shore
 			Pchar.quest.Jupiter_switch3 = "yes";		//updates questbook for Jupiter character
 			Pchar.quest.Fort_visit = "2";
 			
@@ -14431,8 +14437,8 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.boathouse = "return";
 			Pchar.quest.Fort_M_flag_pos = "none";
 
-		Pchar.quest.Fort_M_south_wall_right = "open";
-		Pchar.quest.Fort_M_south_wall_left = "open";
+			Pchar.quest.Fort_M_south_wall_right = "open";
+			Pchar.quest.Fort_M_south_wall_left = "open";
 
 			locations[FindLocation("Sullivan_jungle1")].type = "Sullivan_jungle";
 			locations[FindLocation("Sullivan_jungle2")].type = "Sullivan_jungle";
@@ -18633,7 +18639,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("pchar_puh", 1.5);
 			LAi_QuestDelay("knitting_basket_pick_up", 0.1);	
-
+		/*
 			pchar.quest.step_back_church2_A.win_condition.l1 = "locator";
 			pchar.quest.step_back_church2_A.win_condition.l1.location = "GB_Charleston_church";
 			pchar.quest.step_back_church2_A.win_condition.l1.locator_group = "goto";
@@ -18645,6 +18651,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.step_back_church3_A.win_condition.l1.locator_group = "goto";
 			pchar.quest.step_back_church3_A.win_condition.l1.locator = "plank3A";
 			pchar.quest.step_back_church3_A.win_condition = "step_back_church3_A";
+		*/
 		break;
 	//----------------------------------------------------------------------------
 		case "zombie1_voice":

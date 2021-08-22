@@ -1,0 +1,4 @@
+title=Tutorial - Dealing with International Relations
+text.t1=It seems my last action at sea has met with some important consequences. As I do not want to make enemies by accident, I had better find out how to deal with the various nations I will encounter at sea. Perhaps I can convince one of the towns' governors to provide me with some advice. In the meantime, I may want to tread more carefully.
+text.t2=I am even at risk of losing my Merchant License if I do such a thing again.
+text.t3=I have received a book containing various details about nation relations. That should help me avoid being branded a pirate. If I so choose, that is...

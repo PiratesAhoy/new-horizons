@@ -359,6 +359,8 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "attack":
+			locations[FindLocation("Santiago_outskirts")].reload.l1.disable = 1;
+			locations[FindLocation("Santiago_outskirts")].reload.l11.disable = 1;
 			locations[FindLocation("Santiago_outskirts")].reload.l3.disable = 1;
 			locations[FindLocation("Santiago_outskirts")].reload.l4.disable = 1;
 			locations[FindLocation("Santiago_outskirts")].reload.l5.disable = 1;
@@ -1763,6 +1765,7 @@ void QuestComplete(string sQuestName)
 
 		case "quitterport4":
 			SetRMRelation(PChar, SPAIN, REL_AMNESTY);
+			HoistFlag(SPAIN);
 			SetCharacterRelationBoth(GetCharacterIndex("Santo Domingo Commander"), GetMainCharacterIndex(), RELATION_FRIEND);
 
 			AddQuestRecord("Anaconda_Capture","6");
@@ -4026,10 +4029,12 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "Ver_Esteban":
-			PlaceCharacter(characterFromID("Juan Esteban"), "goto");
-			LAi_SetActorType(characterFromID("Juan Esteban"));
+			PlaceCharacter(CharacterFromID("Juan Esteban"), "goto");
+			GiveItem2Character(CharacterFromID("Juan Esteban"), "goldarmor");
+			EquipCharacterByItem(CharacterFromID("Juan Esteban"), "goldarmor");
+			LAi_SetActorType(CharacterFromID("Juan Esteban"));
 			Characters[GetCharacterIndex("Juan Esteban")].dialog.currentnode = "begin_1";
-			LAi_ActorDialog(characterFromID("Juan Esteban"), pchar, "", 10.0, 1.0);
+			LAi_ActorDialog(CharacterFromID("Juan Esteban"), pchar, "", 10.0, 1.0);
 			break;
 
 		case "Esteban_fight":
@@ -4963,7 +4968,12 @@ void QuestComplete(string sQuestName)
 
 		case "dentro_forte":
 			AddQuestRecord("Hunter", "9");
-			GiveItem2Character(CharacterFromId("Fort Captain"), "Fort_Keys");
+//			GiveItem2Character(CharacterFromId("Fort Captain"), "Fort_Keys");	// Stealing his keys may not work if he's under too many soldier corpses, or if corpse looting is disabled
+
+			PChar.quest.fort_captain_dead.win_condition.l1 = "NPC_Death";		// Instead, give keys to player when Fort Captain dies
+			PChar.quest.fort_captain_dead.win_condition.l1.character = "Fort Captain";
+			PChar.quest.fort_captain_dead.win_condition = "fort_captain_dead";
+
 			DoQuestReloadToLocation("Quest_FortVRight", "goto", "goto80", "_");
 			LAi_SetCheckMinHP(Pchar, LAi_GetCharacterHP(Pchar)-1.0, true, "atacasoldatos");
 
@@ -4985,6 +4995,10 @@ void QuestComplete(string sQuestName)
 			LAi_RemoveCheckMinHP(Pchar);
 			LAi_SetImmortal(Pchar, false);
 			break;
+
+		case "fort_captain_dead":
+			GiveItem2Character(PChar, "Fort_Keys");
+		break;
 
 		case "open_fortjailbis":
 			ChangeCharacterAddressGroup(CharacterFromID("Roxanne Lalliere"), "Quest_Fort_prison", "goto", "goto9");
@@ -5236,6 +5250,7 @@ void QuestComplete(string sQuestName)
 			SetOfficersIndex(PChar, 1, GetCharacterIndex("Elting"));
 			SetOfficersIndex(PChar, 2, GetCharacterIndex("Roxanne Lalliere"));
 			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "pistol1a");
+			GiveItem2Character(CharacterFromId("Roxanne Lalliere"), "blade10");
 			EquipCharacterByItem(CharacterFromId("Roxanne Lalliere"), "blade10");
 			DoQuestReloadToLocation("Eleuthera_Jungle4", "reload", "reload2", "meet_enrique");
 			break;
@@ -5707,12 +5722,14 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Ferro Carriles"));
 			LAi_ActorFollowEverywhere(characterFromID("Ferro Carriles"), "", 60.0);
 
+			Locations[FindLocation("Tortuga_Port")].vcskip = true;
 			Pchar.quest.revenir_tortue.win_condition.l1 = "location";
 			Pchar.quest.revenir_tortue.win_condition.l1.location = "Tortuga_Port";
 			Pchar.quest.revenir_tortue.win_condition = "paymaster_tortuga";
 			break;
 
 		case "paymaster_tortuga":
+			DeleteAttribute(&Locations[FindLocation("Tortuga_port")],"vcskip");
 			ChangeCharacterAddressGroup(characterFromID("Bertrand Ogeron"), "Tortuga_Port", "goto", "goto20");
 			LAi_SetStayType(characterFromID("Bertrand Ogeron"));
 			LAi_SetActorType(characterFromID("Martin de Urquiza"));
@@ -7187,7 +7204,8 @@ void QuestComplete(string sQuestName)
 			WaitDate("", 0,0,1,0,0);
 			SetCurrentTime(13, 0);
 			ChangeCharacterAddressGroup(CharacterFromID("Henry Morgan"), "Quest_Cabin2", "rld", "aloc2");
-			ChangeCharacterAddressGroup(CharacterFromID("Bartolomeu"), "Quest_Cabin2", "rld", "aloc1");
+//			ChangeCharacterAddressGroup(CharacterFromID("Bartolomeu"), "Quest_Cabin2", "rld", "aloc1");
+			ChangeCharacterAddressGroup(CharacterFromID("Elting"), "Quest_Cabin2", "rld", "aloc1");
 			Characters[GetCharacterIndex("Henry Morgan")].dialog.currentnode = "begin_48";
 			LAi_SetStayType(CharacterFromID("Henry Morgan"));
 			LAi_SetActorType(Pchar);
@@ -8075,7 +8093,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "abandon_ilotbis21":
-			pchar.sailaway = false;
+			DeleteAttribute(pchar, "sailaway");
 			LAi_SetActorType(pchar);
 			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "abandonar_bart2";
 			LAi_ActorSelfDialog(pchar, "");
@@ -8345,7 +8363,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(characterFromID("Augusto Queiroz"));
 			Characters[GetCharacterIndex("Augusto Queiroz")].dialog.currentnode = "begin_10";
 			SetCharacterShipLocation(Pchar, "Conceicao_Port");
-			pchar.sailaway = false;
+			DeleteAttribute(pchar, "sailaway");
 			break;
 
 		case "aller_cartagena":
@@ -11840,6 +11858,9 @@ void QuestComplete(string sQuestName)
 			EquipCharacterByItem(Pchar, "bladeX4");
 			GiveItem2Character(pchar, "LongRifle_BT");
 			EquipCharacterByItem(pchar, "LongRifle_BT");
+			TakeItemFromCharacter(CharacterFromID("Elting"), "bladeX4");
+			if (!CheckCharacterItem(CharacterFromID("Elting"), "Blade_ProudOfAnvil")) GiveItem2Character(CharacterFromID("Elting"), "Blade_ProudOfAnvil");
+			EquipCharacterByItem(CharacterFromID("Elting"), "Blade_ProudOfAnvil");
 
 			LAi_group_FightGroups("OUTSIDE_FORT_SOLDIER9", "DUTCH_TROOPS", true);
 			LAi_group_SetCheck("OUTSIDE_FORT_SOLDIER9", "outside_fort61");

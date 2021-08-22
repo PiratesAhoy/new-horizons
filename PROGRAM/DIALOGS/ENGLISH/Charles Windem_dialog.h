@@ -1,4 +1,4 @@
-string DLG_TEXT[133] = {
+string DLG_TEXT[137] = {
 "Welcome, ",
 ". Consider yourself at home, my friend - and think of me as family!",
 "Uh...yeah. Thanks. I'm ",
@@ -115,8 +115,12 @@ string DLG_TEXT[133] = {
 "I'll be back soon.",
 "What's this I hear about some local rich #skid# marrying into Spanish nobility?",
 "It's true! ",
+", son",
+", daughter",
 " of the merchant ",
-", is engaged to the ",
+", is engaged to ",
+"the daughter",
+"the son",
 " of the governor of #sSantiago#.",
 "Where does ",
 " live? I'd like to offer my congratulations in person, maybe also offer my services.",
@@ -130,6 +134,6 @@ string DLG_TEXT[133] = {
 "Has anything interesting been happening in #sRedmond# lately?",
 "Well, there was the marriage of #sromance# to #svillain#. The wedding itself happened in #sSantiago# but there was a reception party here, too.",
 "That must have been quite a party!",
-"Yes, #svillain# brought in a load of French wine. Don't ask me how he got it, what with the war.\nBut because of the war, a lot of patriotic people didn't touch it, which was good for me because they came here to drink instead.\nMaybe you could pick up the wine on the cheap and sell it somewhere else.",
+"Yes, #svillain# brought in a load of French wine. Don't ask me how #spronoun# got it, what with the war.\nBut because of the war, a lot of patriotic people didn't touch it, which was good for me because they came here to drink instead.\nMaybe you could pick up the wine on the cheap and sell it somewhere else.",
 "Interesting idea. I'll have to see about that. Thanks!",
 };

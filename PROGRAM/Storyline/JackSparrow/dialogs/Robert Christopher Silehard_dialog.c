@@ -14,6 +14,14 @@ void ProcessDialogEvent()
 	string sNation = iNation;
 	int iTest;
 
+// MAXIMUS 30.05.2019: all bottom strings were missed ==>
+	string stemp = "";
+	string iDay, iMonth;
+	iDay = environment.date.day;
+	iMonth = environment.date.month;
+	string lastspeak_date = iday + " " + iMonth;
+// MAXIMUS 30.05.2019: <==
+
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча

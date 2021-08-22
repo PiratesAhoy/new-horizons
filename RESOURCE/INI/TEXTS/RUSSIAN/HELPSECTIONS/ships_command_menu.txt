@@ -1,0 +1,25 @@
+ships_command_title
+{
+Ship command icon menu
+}
+
+ships_command_info
+{
+    Ship command icon menu (Pic.1) is situated in left bottom corner of the screen. Basically, it shows icons of player and his companion ships (if any). First player must select a ship he wants to give a command. Use left/right keys to do that. Currently selected ship will be highlighted with yellow color. Then press Activate Command key to confirm selection. A number in left upper corner of the icon shows ship class (1st class is most powerful). Above ship icon there could be some graphical info on this ship conditon (it depends on what Spyglass player has). This info is represented with three stripes - white, blue and red: white shows sails condition, blue shows crew number and red shows ship hull condition.
+
+    After you selected the ship for the command you see a list of possible commands that could be given to that ship (Pic.2). All possible commands are listed on pic.3 from left to right accordingly:
+  - "Moor ashore" (only for player's ship): can be used only when player's ship is near some shore where player can land. Transfers player from ship to land;
+  - "Board" (only for player's ship): if there is an enemy ship close to player's ship this command will initialize boarding action with that ship;
+  - "Sail to place/ship" (only for player's ship): if possible, player's ship will instantly reach some other ship or sail to some place. This command saves a lot of real time, especially if there is no enemy around;
+  - "Land troops" (only for player's ship): After player destroyed most fort cannons with cannon fire he can land troops to that fort (his ship should be close to the fort enough). When player selects it you'll start a melee fight with fort garrison (very same to boarding) and if you win, the fort will be considered captured;
+  - "World Map" (only for player's ship): If there is no enemies around player goes to World Map screen;
+  - "Exchange goods/crew" (only for player's ship): With this command player can exchange ship crew and goods with a ship of any of his companion (ships must be close to each other like for boarding);
+  - "Attack enemy" (Companion's ship only): After that player must select a target he wants to attack. Then chosen companion ship will attack selected target that could be a fort or a ship;
+  - "Defend" (Companion's ship only): Companion's ship will protect and defend selected target. Target can be an ally ship or fort;
+  - "Sail away" (Companion's ship only): That's an order to leave battle field and sail away. After receiving this order companion's ship will try to sail as far as she can from enemy ships or forts, but she won't go out of player's view distance;
+  - "Lay to drift" (Companion's ship only): Companion's ship will strike down sails and stops any movement or activity. Crew of this ship considered as surrendered.
+  - "Reload Cannons" (only for player's ship): Change cannons rounds type on player's ship. One of the following round types can be selected (pic.4): cannonballs, shrapnel, knippels and bombs. A number above round type icon shows how many rounds of this type player has onboard.
+  - "Sails conrtol" (only for player's ship): Configure sails (pic.5): set full sails, strike sails and set battle sails. Battle sails provides medium sailing speed with good maneuverability. Full sails - maximal sailing speed but worse maneuverability.
+
+    Some commands requires a selection of target also. For example, "Sail to" command requires to select ship, that could be firendly of hostile, or even a shore or town. When player selects target for sailig to, minimap centers on selected target, so player can see where his ship will be after he confirm the command.
+}

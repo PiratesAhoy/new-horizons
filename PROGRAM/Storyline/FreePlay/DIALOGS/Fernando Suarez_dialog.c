@@ -241,9 +241,49 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\CLLA\CLLA005";
 			dialog.text = DLG_TEXT[58];
 			link.l1 = DLG_TEXT[59];
+			link.l1.go = "begin_30";
+            ref rIsland = GetIslandByID("Conceicao");
+            if ((sti(GetAttribute(rIsland, "smuggling_nation")) == ENGLAND) && (GetNationRelation(ENGLAND, FRANCE) == RELATION_ENEMY))
+             {			
+			link.l2 = DLG_TEXT[60];
+			link.l2.go = "begin_31";
+             }			 
+			break;
+
+		case "begin_30":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;		
+			AddDialogExitQuest("deixar_suarez");	
+			break;
+
+		case "begin_31":
+			dialog.snd = "Voice\CLLA\CLLA005";
+			dialog.text = DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "begin_32";
+			break;
+
+		case "begin_32":
+			dialog.snd = "Voice\CLLA\CLLA005";
+			dialog.text = DLG_TEXT[63];
+			link.l1 = DLG_TEXT[64];
+			link.l1.go = "begin_33";
+			break;	
+
+		case "begin_33":
+			dialog.snd = "Voice\CLLA\CLLA005";
+			dialog.text = DLG_TEXT[65];
+			link.l1 = DLG_TEXT[66];
+			link.l1.go = "begin_34";
+			break;	
+			
+		case "begin_34":
+			dialog.snd = "Voice\CLLA\CLLA005";
+			dialog.text = DLG_TEXT[67];
+			link.l1 = DLG_TEXT[68];
 			link.l1.go = "exit";
-			AddDialogExitQuest("deixar_suarez");					
-			break;			
+			AddDialogExitQuest("deixar_suarezB");			
+			break;				
 			
 		case "Exit":
 			DialogExit();

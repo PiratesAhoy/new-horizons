@@ -194,7 +194,7 @@ string DLG_TEXT[230] = {
 "I need to earn quickly enough money. Maybe, you could give me a mission as you did in the past.",
 "In fact, Captain, you came at the right moment. I've got a very important mission.",
 "What is it exactly?",
-"Let me explain. Two weeks ago a small Portuguese fleet captured off #sisland_IslaMuelle# a Spanish warship coming from Spain.",
+"Let me explain. Two weeks ago a small Portuguese fleet captured off #sisland_Isla Muelle# a Spanish warship coming from Spain.",
 "So?",
 "Aboard, there was an envoy of the King who had to go to Cartagena for a mission. He had with him a letter from the King himself. His mission was to check the town defences recently improved and know the real situation of Cartagena in many aspects.",
 "Where is he?",

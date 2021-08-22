@@ -1,0 +1,46 @@
+ALeadership_Header{Leadership}
+ALeadership_Descr{Leadership indicates how strongly you influence people around you, and how well you are able to achieve your goals.}
+ALeadership_Img{leadership skill icon}
+AFencing_Header{Melee}
+AFencing_Descr{The Fencing skill is important for any captain, as your survival often depends on how well you can swing a blade.}
+AFencing_Img{fencing skill icon}
+ASailing_Header{Navigation}
+ASailing_Descr{Navigation indicates how good you are at controlling your ship. It influences your ship's speed and manoeuvrability.}
+ASailing_Img{sailing skill icon}
+ACannons_Header{Cannons}
+ACannons_Descr{This skill controls the reloading speed of your cannons and the grouping of their shots.}
+ACannons_Img{cannons skill icon}
+AAccuracy_Header{Accuracy}
+AAccuracy_Descr{The skill of timing the moment when a salvo will inflict maximum damage to the enemy. The higher this skill, the more accurate your gunners are.}
+AAccuracy_Img{accuracy skill icon}
+AGrappling_Header{Grappling}
+AGrappling_Descr{The skill at choosing the optimal distance, angle and speed for boarding ships, as well as keeping your boarding party together.}
+AGrappling_Img{grappling skill icon}
+ADefence_Header{defence}
+ADefence_Descr{The crew-quarters' level of comfort, hygiene and the capacity to heal the wounded all help reduce losses from heated battles.}
+ADefence_Img{deffence skill icon}
+ARepair_Header{Repair}
+ARepair_Descr{Intimate knowledge of your ship and her construction allows you to utilise your repair crews better, improving the efficiency of their work.}
+ARepair_Img{repair skill icon}
+ACommerce_Header{Commerce}
+ACommerce_Descr{Skill at haggling, assessing the value of goods and making business contacts. Helps you strike better trade deals.}
+ACommerce_Img{commerce skill icon}
+ASneak_Header{Luck}
+ASneak_Descr{Luck, precognition or danger sense - whatever you call it, the more you improve this skill, the luckier you get.}
+ASneak_Img{sneak skill icon}
+AFacePict_Descr{This is character #sname#}
+change_outfit_Header{Change outfit}
+change_outfit_Descr{This button allows you to change the look of yourself and your officers.}
+Ranks_Header{Status info}
+Ranks_Descr{This columns describes the current status and rank of #sPChar# for a given nation. Light green text means awaiting promotion.}
+Relations_Header{Nations relations}
+Relations_Descr{This table shows known international relations between nations.}
+Attitude_Header{Nations attitude}
+Attitude_Descr{This column shows nations' attitude towards #sPChar#.}
+Nation_Descr{This #sColumn_Row# shows #sNationOf# relations with other nations.}
+RelFlag_Header{Relation based on flag}
+RelFlag_Descr{This column shows nations' attitude to #sPChar#'s current flag.}
+Checkbox_nation_Header{Hoist flag}
+Checkbox_nation_Descr{Click this to hoist #sFlagOf# flag.}
+Change_Flag_Header{Select flag}
+Change_Flag_Descr{Click this to select another #sFlagOf# flag.}

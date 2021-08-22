@@ -1,0 +1,224 @@
+About_Build
+{
+Pirates of the Caribbean: New Horizons
+
+Al ser esta una gran modificación sobre el juego origial de 2003, hay muchas cosas que saber sobre el juego y muchas cosas que pueden no resultar aparentes a simple vista.
+
+Por esta razón, hemos reunido estas Pistas y Trucos para todos los jugadores. Probablemente aquí se mencionan algunas cosas que no sabías y que pueden ayudarte a mejorar tu experiencia de juego.
+
+¡Diviértete con el juego!
+
+}
+
+B_1{Introducción}
+About_Build_1_d{INTRODUCCIÓN}
+About_Build_1
+{
+
+Creada para el juego original de Akella de 2003 "Pirates of the Caribbean" (comercializado en español como "Piratas del Caribe"), esta compilación de mods ha estado en desarrollo desde la publicación del Build 13 a principios de 2007. Hemos recorrido un largo camino desde entonces, añadiendo mucho contenido nuevo y nuevas mecánicas de juego, algunas de las cuales incluso los desarrolladores del juego original creían que eran imposibles de implementar.
+
+La intención es proporcionar una experiencia de juego pirata lo más completa posible, más realista pero también más divertida. Entre las nuevas características se incluyen nuevas historias o campañas jugables, detalles históricos, la posibilidad de jugar en modo libre, con más variedad y posibilidades de personalización que nunca. Por no mencionar que los gráficos también han sido mejorados, sobre todo con nuevos modelos y texturas, pero también en el aspecto del mar, y en todo lo que hemos podido.
+}
+
+B_2{Resolución}
+About_Build_2_d{RESOLUCIÓN y OTRAS OPCIONES AVANZADAS}
+About_Build_2
+{
+
+Edita manualmente engine.ini en la carpeta principal del juego con el Bloc de notas. Cambia los números en las lineas screen_x y screen_y para adecuarse a la resolución de tu escritorio.
+
+Se recomienda poner la opción fullscreen a 0. Esto hará que el juego se ejecute en modo ventana y te permitirá usar Alt+Tab para minimizar y maximizar.
+
+Si no quieres ver las "Pistas" durante las pantallas de carga, pon numoftips a 0.
+}
+
+B_3{Tierra firme}
+About_Build_3_d{TIERRA FIRME y COMBATES TERRESTRES}
+About_Build_3
+{
+
+- Si te pierdes en una ciudad, algunos ciudadanos pueden darte indicaciones.
+
+- Practicar tu destreza de esgrima es la clave para sobrevivir. Al prinicpio intenta acertar algunos golpes y si tu salud disminuye mucho, ¡sal corriendo! La destreza aumenta con cada golpe.
+
+- Los objetos que proporcionan bonificaciones a las destrezas, lo harán también si los pones en el cofre del barco, en tu cámara del capitán. Así no tienes que llevarlos encima todo el tiempo.
+
+- Esquivar es muy útil cuando estás luchando contra varios enemigos.
+
+- Los rollos de vendas y otras medicinas pueden comprarse a mercaderes callejeros o en la tienda. ¡Te salvarán la vida!
+
+- No olvides que puedes llevar contigo a miembros de tu tripulación cuando vas a tierra firme. Esto es especialmente útil al principio de una partida, porque no tendrás oficiales. Habla con tus marineros en cubierta para que te acompañen.
+
+- Vigila siempre tus reservas de munición y pólvora para las pistolas.
+
+- Con algunas armas grandes, puedes entrar en el "modo escopeta" pulsando [TAB] cuando tu espada esté desenvainada. Para disparar pulsa [Q]
+
+- Asegúrate de mirar el inventario despues de un combate. Puede que uno de tus enemigos haya dejado un arma mejor que la tuya. También puedes pulsar [F] para equipar rápidamente la mejor arma que tengas (también funciona durante el combate).
+
+}
+
+B_4{Mar}
+About_Build_4_d{NAVEGACIÓN y BATALLAS NAVALES}
+About_Build_4
+{
+
+- Los oficiales enrolados contribuyen con sus destrezas aunque no estén en tu grupo de oficiales "activos". Ten en cuenta que solo contribuyen con las destrezas que corresponden a su especialidad. En la interfaz de Pasajeros, puedes reasignar oficiales, ver sus destrezas efectivas, etc. El efecto total de jugador + oficiales se muestra como las destrezas del jugador en la interfaz de Pasajeros.
+
+- Comprueba siempre si tu barco necesita reparaciones. También puedes mejorar tu barco en el astillero, para hacerlo más resistente, más maniobrable o mas rápido.
+
+- Un barco necesita suficiente tripulación para poder navegar y combatir con efectividad.
+
+- Enrola a un artillero lo antes posible para mejorar tu eficacia en las batallas navales. También te equipará con nueva munición para tus armas de mano si entras en la cubierta de tu barco; si no, tendrás que reabastecerte personalmente en la santabárbara, en la bodega.
+
+- Enrolar a un cirujano con una buena destreza de defensa y llevar medicamentos a bordo disminuirá las bajas después de una batalla. Los tripulantes heridos se muestran en [sanos] / [heridos] en F2>Barco.
+
+- No olvides que tu tripulación necesita comida y ron para sobrevivir. Puedes cambiar las raciones si la situación se pone crítica. También necesitas balas de cañón y pólvora para poder cargar tus cañones.
+
+- Las raciones dobles de ron aumentarán la moral de tu tripulación, pero puede que provoquen una pelea de borrachos.
+
+- La forma en que tu barco y el barco enemigo están posiconados en el mapa de navegación es la misma que en mar abierto. Así que asegúrate de poner tu barco en una buena posición en el mapa antes de entrar en combate. Una buena posición inicial puede ser una gran ventaja.
+
+- Puedes cambiar la apariencia de tus velas en F2>Barco>Velas.
+
+- Si la suerte en una batalla se pone en tu contra, carga los cañones con palanquetas e intenta derribar los mástiles del enemigo. Así te será mucho más fácil escapar.
+
+- Abordar será mucho más fácil si tienes una tripulación con buena moral. Además, es muy efectivo cargar los cañones con metralla y disparar un par de andanadas antes de abordar.
+
+- La brigada de abordaje usa armas, armaduras y pociones que deposites en el armero, en tu cámara del capitán. Si no pones ningún arma en el armero, usarán alfanjes.
+
+- A medida que avanza el juego tu tripulación se generará con mejores destrezas y habilidades y entonces podrán usar armas de fuego que requieran la habilidad Pistolero. Pero no al principio de la partida.
+
+- Cuando intentes abordar, vigila tu velocidad. Puede ser un error mortal pasar de largo y exponer tu popa al costado de un barco enemigo.
+
+- Durante el abordaje, tu tripulación puede usar armas, armaduras y medicinas almacenadas en tu armero. Esto puede significar la diferencia entre victoria y derrota.
+
+- En los modos Realista y Iron Man necesitas una brújula, un cronómetro y un sextante para poder ver tu posición en el mapa del archipiélago (tecla por defecto [M]). Además, en cualquier modo, estos objetos mejoran tu destreza de navegación.
+
+- Para ejecutar un zafarrancho de incendio, necesitas la habilidad "Defensa naval basica". La tecla por defecto es [C].
+
+- Puedes ondear la bandera de otra nación a través de F2>Relaciones. Si es una bandera falsa, puede que te reconozcan. La posibilidad de que esto ocurra aumenta a medida que crece tu fama o a medida que te acercas mucho a los barcos enemigos a los que pretendes engañar. Si ondeas tu bandera personal, tus relaciones en el mar serán las mismas que las reales.
+
+- Los motores de vapor necesitan tablas para funcionar.
+
+}
+
+B_5{Adicional}
+About_Build_5_d{NOTAS ADICIONALES}
+About_Build_5
+{
+
+- No olvides guardar a menudo (Guardado rapido: F5). Nunca sabes lo que puede pasar.
+
+- Puedes personalizar tu juego en las opciones de juego adicionales.
+
+- También puedes entrar en InternalSettings.h en [Carpeta del juego]\PROGRAM, que pudes abrir con WordPad, Bloc de Notas, etc.
+¡¡ADVERTENCIA!! Puedes cargarte algo si no sabes lo que haces. Si editas este archivo, por favor, sigue las instrucciones que se dan al final de cada línea. Si no hay ninguna descripción, déjalo como está.
+
+- Al final de este archivo, puedes activar/desactivar el paso lateral ([A] y [D]). No hemos podido hacer que funcione el control de colisiones, así que puede que atravieses el terreno sólido si lo usas. Opción por defecto: desactivado.
+
+- Puedes cambiar la apariencia de tus velas en F2>Barco>Velas.
+
+- ¿Por qué hay dos números para las destrezas en la hoja de personaje?
+El primero es la destreza "básica" del personaje; el segundo es la destreza después de aplicar las bonificaciones y penalizaciones añadidas por objetos y/o clase de barco.
+
+- Si los nombres y posiciones de las islas te confunden, consulta el mapa del archipiélago en F2>Inventario>Mapas o [M]. También puedes comprar mapas de las distintas islas a los mercaderes, que te darán el nombre y la posición de las ciudades y los fondeaderos de la costa.
+
+- Mi reputación es horrible. ¿Cómo puedo cambiar lo que la gente piensa de mí?
+En primer lugar, es posible que no sepas qué es lo que lo ha causado. Tu reputacion baja cuando:
+> No pagas un préstamo del prestamista a tiempo.
+> No llevas un cargamento de mercancías a tiempo.
+> Atacas o matas a civiles o marcaderes.
+> Tu brigada de desembarco y/o oficiales hieren o matan a civiles. Ten en cuenta que esto puede ocurrir incluso a distancia si tus oficiales usan armas de fuego.
+> Abres fuego contra un barco neutral o aliado.
+> Tomas la decision "malvada" en una determianda situacion.
+Para arreglar la situación, haz lo obvio: buenas obras. Hablar con la gente y ayudarla, rescatar náufragos, terminar misiones que te den una bonificación de reputación, etc.
+}
+
+B_6{Secretos}
+About_Build_6_d{CONTENIDO SECRETO}
+About_Build_6
+{
+
+- El capitán Hendrick Vanderdecken vende barcos muy especiales, y malditos. Vive en una isla que no puede encontrarse, salvo por aquéllos que ya saben dónde está. Puedes llegar allí consiguiendo un famoso objeto de cierto famoso personaje en cierto famoso lugar de las películas de Piratas del Caribe.
+
+- Un duro pistolero ha decidido escnderse lejos del mundo en una cabaña en algun lugar de la jungla. Pero el rumor dice que tiene algún tipo de arma "mágica".
+
+- Hay un escondite secreto que puedes usar para pasar desapercibido en una cueva de una isla deshabitada.
+
+- El boticario en Bridgetown ofrece opciones interesantes, con efectos como mejorar tu salud máxima. Hazle una visita para saber qué necesita.
+
+- En el Caribe hay unas monedas extrañas procedentes de una conocida película. Se dice que quien encuentre una y la lleve consigo, atraerá sobre sí una terrible maldición (y sobre su tripulación si hay monedas en el armero).
+
+- El fumadero de opio de Jamaica ofrece tatuajes que mejoran las destrezas.
+
+- En las épocas de las Revoluciones y Napoleónica, puedes dejar minas en el mar para destruir a tus enemgios.
+}
+
+B_7{Problemas}
+About_Build_7_d{PROBLEMAS CONOCIDOS y SOLUCIONES}
+About_Build_7
+{
+
+- Guarda la partida a menudo. (Guardado rápido, F5). El juego es en general muy estable, pero recuerda que esto es un MOD hecho por gente aficionada.
+
+- NO PUEDO CONTINUAR HACIA LA SIGUIENTE CUBIERTA DE ABORDAJE
+Pulsa [F12] para forzar al juego a recargar. Entonces debería ser posible continuar.
+
+- NO PUEDO MOVERME
+Probablemente el código del juego te haya establecido como Actor Type. Pulsa [F12] para volver a Player Type.
+
+}
+
+B_8{Trucos}
+About_Build_8_d{TRUCOS}
+About_Build_8
+{
+
+Para usar el modo de trucos, cambia la línea ENABLE_CHEATMODE de 0 a 1 al final del archivo PROGRAM\InternalSettings.h . Esto habilita los siguientes comandos de teclas:
+
+Numpad 0 = Persoanje:	Modo Dios
+Numpad 1 = Rotar personajes a la izquierda
+Numpad 2 = Seleccionar personaje principal
+Numpad 3 = Rotar personajes a la derecha
+Numpad 4 = Personaje:	Subir de nivel
+Numpad 5 = Personaje:	Falsa Subida de nivel
+Numpad 6 = Jugador:		+ 100000 oro y + 10000 riqueza
+Numpad 7 = Personaje:	Cambiar reputación (aumentar/disminuir reputación)
+Numpad 8 = Desactivar las tormentas y los barcos persiguiéndote en el mapa de navegación
+Numpad 9 = Provocar ataque enemigo (no necesita modo de trucos)
+TAB = Modo escopeta: si tienes una escopeta, mosquete o la pistola de Jack Sparrow equipada durante un combate
+
+Esto también activa los "ayudantes de historia" que te permiten saltarte las distintas partes de las historias:
+- Woodes Rogers: Cabeza de Barbabnegra en la escena incial en la cámara
+- Asesino: Marinero que se te acerca en el muelle
+- Bartolomeu: Pierre Delacroix que se te acerca cuando entras en la ciudad
+- Jack Sparrow: Borracho sentado en la taberna de Tortuga
+- Hornblower: C.S. Forester que está de pie junto a una casa al principio de la historia
+}
+
+B_9{Soporte}
+About_Build_9_d{SOPORTE Y RESOLUCIÓN DE PROBLEMAS}
+About_Build_9
+{
+
+Usa el compile.log, system.log y si lo hay, el error.log que podrás encontrar en la carpeta principal del juego para proporcionar más detalles cuando pidas ayuda. Indica también tu tarjeta gráfica (GFX), ruta de instalación y versión del mod.
+
+Para averiguar cuál es tu tarjeta gráfica, pulsa el botón de Windows+R, escribe "dxdiag" y pulsa "aceptar". Así ejecutarás la herramienta de diagnóstico de DirectX, que proporciona muchos detalles relevantes.
+
+}
+
+B_10{Información adicional (en inglés}
+About_Build_10_1
+{
+PiratesAhoy! (Web y Foros):
+}
+
+About_Build_10_2
+{
+Perfil en Mod DataBase:
+}
+
+About_Build_10_3
+{
+Guías de misiones:
+}

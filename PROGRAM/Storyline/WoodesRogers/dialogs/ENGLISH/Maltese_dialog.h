@@ -42,7 +42,7 @@ string DLG_TEXT[48] = {
 "Certainly not Captain.",
 "Hmm,... (so he can still be there) Do I have to pass through the Fort?",			//41
 "Certainly. Look we have a meeting here and you are interrupting us...",
-"Oh I'm really sorry for that. Just one more thing, Governor. If you would be so kind and helped me with a document of some kind...",
+"Oh I'm really sorry for that. Just one more thing, Governor. If you would be so kind and provide me with a document of some kind...",
 "Alright maybe that's the quickest way. What was your name again?",
 "Very well. This paper will let you pass through the Fort and also visit the Prison.",
 "And all three were hanged later?",		//46

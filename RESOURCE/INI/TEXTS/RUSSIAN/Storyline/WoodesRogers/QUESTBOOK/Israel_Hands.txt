@@ -1,0 +1,11 @@
+title=Israel Hands
+text.t1=(also known as Basilica Hands). Sailing master for Teach and Captain of the sloop "Adventure". After death of Teach Hands was captured in Bath, North Carolina.
+text.t2=He was tried for piracy in Williamsburg in 1718 and convicted but was pardoned in the very last moment. Could he still be alive somewhere?
+text.t3=Hands may be alive! He was seen as a beggar in Willemstad, Curacao some time ago.
+text.t4=
+text.t5=
+text.t6=
+text.t7=
+text.t8=
+text.t9=
+text.t10=

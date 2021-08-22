@@ -2,14 +2,13 @@ void CreateArubaCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	// governor
 	ch.old.name = "Hendrick";
 	ch.old.lastname = "van der Kuylen";
-	ch.name = TranslateString("","Hendrick");
-	ch.lastname = TranslateString("","van der Kuylen");
+	ch.name = TranslateString("", "Hendrick");
+	ch.lastname = TranslateString("", "van der Kuylen");
 	ch.id		= "Hendrick van der Kuylen";
 	ch.model	= "Storeman";
 	ch.sex = "man";
@@ -44,8 +43,8 @@ void CreateArubaCharacters(ref n)
 // Oranjestad Citizens
 	ch.old.name = "Nicolaas";
 	ch.old.lastname = "Bos";
-	ch.name = TranslateString("","Nicolaas");
-	ch.lastname = TranslateString("","Bos");
+	ch.name = TranslateString("", "Nicolaas");
+	ch.lastname = TranslateString("", "Bos");
 	ch.id		= "Nicolaas Bos";
 	ch.model	= "man8";
 	ch.sex = "man";
@@ -76,8 +75,8 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Richard";
 	ch.old.lastname = "Citroen";
-	ch.name = TranslateString("","Richard");
-	ch.lastname = TranslateString("","Citreon");
+	ch.name = TranslateString("", "Richard");
+	ch.lastname = TranslateString("", "Citreon");
 	ch.id		= "Richard Citreon";
 	ch.model	= "sailor1";
 	ch.sex = "man";
@@ -108,8 +107,8 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Rosa";
 	ch.old.lastname = "Vos";
-	ch.name = TranslateString("","Nicolaas");
-	ch.lastname = TranslateString("","Vos");
+	ch.name = TranslateString("", "Rosa");
+	ch.lastname = TranslateString("", "Vos");
 	ch.id		= "Rosa Vos";
 	ch.model	= "Danblack";
 	ch.sex = "woman";
@@ -140,8 +139,8 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Rodolf";
 	ch.old.lastname = "Meer";
-	ch.name = TranslateString("","Rodolf");
-	ch.lastname = TranslateString("","Meer");
+	ch.name = TranslateString("", "Rodolf");
+	ch.lastname = TranslateString("", "Meer");
 	ch.id		= "Rodolf Meer";
 	ch.model	= "pirat1";
 	ch.sex = "man";
@@ -172,8 +171,8 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Grote";
 	ch.old.lastname = "Beer";
-	ch.name = TranslateString("","Grote");
-	ch.lastname = TranslateString("","Beer");
+	ch.name = TranslateString("", "Grote");
+	ch.lastname = TranslateString("", "Beer");
 	ch.id		= "Grote Beer";
 	ch.model	= "Indian3";
 	ch.sex = "man";
@@ -205,8 +204,8 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Kleine";
 	ch.old.lastname = "Beer";
-	ch.name = TranslateString("","Kleine");
-	ch.lastname = TranslateString("","Beer");
+	ch.name = TranslateString("", "Kleine");
+	ch.lastname = TranslateString("", "Beer");
 	ch.id		= "Kleine Beer";
 	ch.model	= "Indian2";
 	ch.sex = "man";
@@ -238,8 +237,8 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Oude";
 	ch.old.lastname = "Beer";
-	ch.name = TranslateString("","Oude");
-	ch.lastname = TranslateString("","Beer");
+	ch.name = TranslateString("", "Oude");
+	ch.lastname = TranslateString("", "Beer");
 	ch.id		= "Oude Beer";
 	ch.model	= "Indian3";
 	ch.sex = "man";
@@ -271,8 +270,8 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Kapitein";
 	ch.old.lastname = "Bontekoe";
-	ch.name = TranslateString("","Kapitein");
-	ch.lastname = TranslateString("","Bontekoe");
+	ch.name = TranslateString("", "Kapitein");
+	ch.lastname = TranslateString("", "Bontekoe");
 	ch.id		= "Kapitein Bontekoe";
 	ch.model	= "capitan";
 	ch.sex = "man";
@@ -304,8 +303,8 @@ void CreateArubaCharacters(ref n)
 		// the new oranjestad port needs more people now
 	ch.old.name = "Jacomina";
 	ch.old.lastname = "Boymans";
-	ch.name = TranslateString("","Jacomina");
-	ch.lastname = TranslateString("","Boymans");
+	ch.name = TranslateString("", "Jacomina");
+	ch.lastname = TranslateString("", "Boymans");
 	ch.id		= "Jacomina Boymans";
 	ch.model	= "towngirl1";
 	ch.sex = "woman";
@@ -337,8 +336,8 @@ void CreateArubaCharacters(ref n)
 	// Levis, Librarian:
 	ch.old.name = "Leo";
 	ch.old.lastname = "Visscher";
-	ch.name = "Leo";
-	ch.lastname = "Visscher";
+	ch.name = TranslateString("", "Leo");
+	ch.lastname = TranslateString("", "Visscher");
 	ch.id		= "Officer_Tutorial_Captain";
 	ch.model	= "Huber_Hol1_17";
 	ch.headmodel = "Huber_Hol1_17";
@@ -412,7 +411,7 @@ void CreateArubaCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Aruba_soldier1";
 	ch.model	= 2;
 	ch.sex = "man";
@@ -448,7 +447,7 @@ void CreateArubaCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Aruba_soldier1";
 	ch.model	= "Soldier_hol2";
 	ch.sex = "man";
@@ -484,7 +483,7 @@ void CreateArubaCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Aruba_soldier1"; //Port guard
 	ch.model	= "Soldier_hol2";
 	ch.sex = "man";
@@ -520,7 +519,7 @@ void CreateArubaCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Aruba_soldier3"; //Port guard
 	ch.model	= "Soldier_hol2";
 	ch.sex = "man";
@@ -556,7 +555,7 @@ void CreateArubaCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Aruba_soldier4"; //Port guard
 	ch.model	= "Soldier_hol2";
 	ch.sex = "man";
@@ -592,7 +591,7 @@ void CreateArubaCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Aruba_soldier5"; //Port guard
 	ch.model	= "Soldier_hol2";
 	ch.sex = "man";
@@ -628,7 +627,7 @@ void CreateArubaCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Aruba_soldier6"; //Port guard
 	ch.model	= "Soldier_hol2";
 	ch.sex = "man";
@@ -663,8 +662,8 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Arawak";
 	ch.old.lastname = "Indian";
-	ch.name = TranslateString("","Arawak");
-	ch.lastname = TranslateString("","Indian");
+	ch.name = TranslateString("Arawak", "Indian");
+	ch.lastname = "";
 	ch.id		= "Indian1";
 	ch.model	= "Indian3";
 	ch.sex = "man";
@@ -694,10 +693,10 @@ void CreateArubaCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 	
-		ch.old.name = "Arawak";
+	ch.old.name = "Arawak";
 	ch.old.lastname = "Indian";
-	ch.name = TranslateString("","Arawak");
-	ch.lastname = TranslateString("","Indian");
+	ch.name = TranslateString("Arawak", "Indian");
+	ch.lastname = "";
 	ch.id		= "Indian2";
 	ch.model	= "Indian1_2";
 	ch.sex = "man";
@@ -729,9 +728,9 @@ void CreateArubaCharacters(ref n)
 
 	ch.old.name = "Arawak";
 	ch.old.lastname = "Indian";
-	ch.name = TranslateString("","Arawak");
-	ch.lastname = TranslateString("","Indian");
-	ch.id		= "Indian4";
+	ch.name = TranslateString("Arawak", "IndianF");
+	ch.lastname = "";
+	ch.id		= "Indian3";
 	ch.model	= "Indian_girl1";
 	ch.sex = "woman";
 	ch.location	= "Arawak_Village";
@@ -762,9 +761,9 @@ void CreateArubaCharacters(ref n)
 	
 	ch.old.name = "Arawak";
 	ch.old.lastname = "Indian";
-	ch.name = TranslateString("","Arawak");
-	ch.lastname = TranslateString("","Indian");
-	ch.id		= "Indian2";
+	ch.name = TranslateString("Arawak", "Indian");
+	ch.lastname = "";
+	ch.id		= "Indian4";
 	ch.model	= "Indian1_2";
 	ch.sex = "man";
 	ch.location	= "Arawak_Village";
@@ -795,9 +794,9 @@ void CreateArubaCharacters(ref n)
 	
 	ch.old.name = "Arawak";
 	ch.old.lastname = "Indian";
-	ch.name = TranslateString("","Arawak");
-	ch.lastname = TranslateString("","Indian");
-	ch.id		= "Indian3";
+	ch.name = TranslateString("Arawak", "Indian");
+	ch.lastname = "";
+	ch.id		= "Indian5";
 	ch.model	= "Indian1_3";
 	ch.sex = "man";
 	ch.location	= "Arawak_Village";
@@ -828,9 +827,9 @@ void CreateArubaCharacters(ref n)
 	
 	ch.old.name = "Arawak";
 	ch.old.lastname = "Indian";
-	ch.name = TranslateString("","Arawak");
-	ch.lastname = TranslateString("","Indian");
-	ch.id		= "Indian1";
+	ch.name = TranslateString("Arawak", "Indian");
+	ch.lastname = "";
+	ch.id		= "Indian6";
 	ch.model	= "Indian1";
 	ch.sex = "man";
 	ch.location	= "Arawak_Village";
@@ -861,9 +860,9 @@ void CreateArubaCharacters(ref n)
 	
 	ch.old.name = "Arawak";
 	ch.old.lastname = "Indian";
-	ch.name = TranslateString("","Arawak");
-	ch.lastname = TranslateString("","Indian");
-	ch.id		= "Indian5";
+	ch.name = TranslateString("Arawak", "Indian");
+	ch.lastname = "";
+	ch.id		= "Indian7";
 	ch.model	= "Indian2";
 	ch.sex = "man";
 	ch.location	= "Arawak_Village";
@@ -894,8 +893,8 @@ void CreateArubaCharacters(ref n)
 	
 	ch.old.name = "Arawak";
 	ch.old.lastname = "Chief";
-	ch.name = TranslateString("","Arawak");
-	ch.lastname = TranslateString("","Chief");
+	ch.name = TranslateString("Arawak", "Chief");
+	ch.lastname = "";
 	ch.id		= "Chief_Indian1";
 	ch.model	= "Indian1";
 	ch.sex = "man";

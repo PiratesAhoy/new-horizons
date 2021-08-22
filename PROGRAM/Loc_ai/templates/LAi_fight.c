@@ -94,6 +94,13 @@ bool LAi_tmpl_SetFight(aref chr, aref target)
 	{
 		PostEvent("bax_on_hip", 10, "i", chr);
 	}
+
+	if(IsEquipCharacterByItem(chr, "witcher_steel-2") || IsEquipCharacterByItem(chr, "witcher_steel-1") 
+	|| IsEquipCharacterByItem(chr, "witcher_steel") || IsEquipCharacterByItem(chr, "witcher_steel+1") 
+	|| IsEquipCharacterByItem(chr, "witcher_steel+2") || IsEquipCharacterByItem(chr, "witcher_steel+3"))
+	{
+		PostEvent("witcher_steel_on_hip", 10, "i", chr);
+	}
 // <-- JRH
 
 	return true;
@@ -530,6 +537,14 @@ void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 		if(IsEquipCharacterByItem(chr, "battleax"))
 		{
 			PostEvent("bax_on_back", 1000, "i", chr);
+			PostEvent("mguns_reset_check", 1000, "i", chr);
+		}
+	
+		if(IsEquipCharacterByItem(chr, "witcher_steel-2") || IsEquipCharacterByItem(chr, "witcher_steel-1") 
+		|| IsEquipCharacterByItem(chr, "witcher_steel") || IsEquipCharacterByItem(chr, "witcher_steel+1") 
+		|| IsEquipCharacterByItem(chr, "witcher_steel+2") || IsEquipCharacterByItem(chr, "witcher_steel+3"))
+		{
+			PostEvent("witcher_steel_on_back", 1000, "i", chr);
 			PostEvent("mguns_reset_check", 1000, "i", chr);
 		}
 	// <-- JRH

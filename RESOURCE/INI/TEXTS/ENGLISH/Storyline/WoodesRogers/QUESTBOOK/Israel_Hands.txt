@@ -1,11 +1,21 @@
 title=Israel Hands
-text.t1=(also known as Basilica Hands). Sailing master for Teach. After death of Teach Hands was captured in Bath, North Carolina. He was tried for piracy in Williamsburg, Virginia, in 1718.
-text.t2=
-text.t3=
-text.t4=
-text.t5=
-text.t6=
-text.t7=
-text.t8=
-text.t9=
-text.t10=
+text.t1=(also known as Basilica Hands). Sailing master for Teach and Captain of the sloop "Adventure". After death of Teach Hands was captured in Bath, North Carolina.
+text.t2=He was tried for piracy in Williamsburg in 1718 and convicted but was pardoned in the very last moment. Could he still be alive somewhere?
+text.t3=Hands may be alive! He was seen as a beggar in Willemstad, Curacao some time ago.
+text.t4=Major Stede Bonnet stole the map from Hands. He was hanged in Charleston 1718 by Governor Sir William Stapelton.
+text.t5=Bonnet spent some time in jail on Antigua before the trial. A very scary Prison at Sea located just outside the Fort. One of his officers may still be there!
+text.t6=Bonnet bribed the officer Tookerman to get out of the prison with "a paper". The map may still be in Took's office!
+text.t7=I have to search for an exit in this part of the prison. The running water is an idea.
+text.t8=Yes! I've got the map Stede Bonnet stole from Israel Hands.
+text.t9=I have found the exit! Now I just have to get rid of the water.
+text.t10=I need Tools here!
+text.t11=The water has slowed down - it's more transparent now.
+text.t12=It's easier to search Took's room now without the drunkard.
+text.t13=I can see a letter R but no marked port. It's soiled by blood.
+text.t14=I can see the letters  R  and  I. A marked port shines through the blood. On the very east of Cayman Island.
+text.t15=The governor is visiting the Maltains. The old-fashioned guards show the way.
+text.t16=The Maltains is only open at night.
+
+
+
+

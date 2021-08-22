@@ -1,0 +1,3 @@
+title=Samouczek - Naprawa mojego uszkodzego statku
+text.t1=Kad³ub i takielunek s¹ zniszczone, wi×c wymagaj¹ naprawy w stoczni zanim opuszcz× wysp×.
+text.t2=Zrobione!

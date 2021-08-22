@@ -6,7 +6,7 @@ string DLG_TEXT[31] = {
 "I’m an officer with Roxanne Lalliere. I also participated in the Santiago mission, Don't you remember?",
 "Ohh... Sorry, I don’t remember you. Happy to meet you er... again. I'm looking for Roxanne, I need to tell her about something important.",
 "Something terrible has happened. I, and her crew, don’t know where she is now.",
-"What do you mean, what has hapened?!",
+"What do you mean, what has happened?!",
 "Yesterday, Roxanne was kidnapped!! A small group of men carried her off into the jungle. I was with her, we put up a great fight. Unfortunately, I was stunned and couldn’t stop them.",
 "Damn it! I knew it was going to happen, but not so soon.",
 "I don’t understand. What did you know?",

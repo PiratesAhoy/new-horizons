@@ -2,14 +2,13 @@ void CreateTempQuestEnemyCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 //--------------------------------Soldiers-------------------------------
 	ch.old.name = "Prison";
 	ch.old.lastname = "Guard";
-	ch.name = TranslateString("","Prison");
-	ch.lastname = TranslateString("","Guard");
+	ch.name = TranslateString("Prison", "Guard");
+	ch.lastname = "";
 	ch.id		= "Prison_Guard_Spa1";
 	ch.model	= 1; // PB
 	ch.sound_type = "pirate";
@@ -46,8 +45,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Prison";
 	ch.old.lastname = "Guard";
-	ch.name = TranslateString("","Prison");
-	ch.lastname = TranslateString("","Guard");
+	ch.name = TranslateString("Prison", "Guard");
+	ch.lastname = "";
 	ch.id		= "Prison_Guard_Spa2";
 	ch.model	= 1; // PB
 	ch.sound_type = "pirate";
@@ -85,8 +84,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // Arnold McGill
 	ch.old.name = "Arnold";
 	ch.old.lastname = "McGill";
-	ch.name = TranslateString("","Arnold");
-	ch.lastname = TranslateString("","McGill");
+	ch.name = TranslateString("", "Arnold");
+	ch.lastname = TranslateString("", "McGill");
 	ch.id		= "Smuggler";
 	ch.model	= "pirat13";
 	ch.sex = "man";
@@ -138,8 +137,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	// Watch
 	ch.old.name = "Smuggler";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Smuggler");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Smuggler");
+	ch.lastname = "";
 	ch.id		= "Watch";
 	ch.model	= "pirat2";
 	ch.sex = "man";
@@ -174,8 +173,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 		// Smuggler1
 	ch.old.name = "Smuggler";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Smuggler");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Smuggler");
+	ch.lastname = "";
 	ch.id		= "Smuggler1";
 	ch.model	= "pirat4";
 	ch.sex = "man";
@@ -215,8 +214,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	// Smuggler2
 	ch.old.name = "Smuggler";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Smuggler");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Smuggler");
+	ch.lastname = "";
 	ch.id		= "Smuggler2";
 	ch.model	= "pirat5";
 	ch.sex = "man";
@@ -256,8 +255,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	// Smuggler1
 	ch.old.name = "Smuggler";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Smuggler");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Smuggler");
+	ch.lastname = "";
 	ch.id		= "Smuggler3";
 	ch.model	= "pirat6";
 	ch.sex = "man";
@@ -481,6 +480,59 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
+	
+// Renouart Larrouse
+	ch.old.name = "Renouart";
+	ch.old.lastname = "Larrouse";
+	ch.name = TranslateString("","Renouart");
+	ch.lastname = TranslateString("","Larrouse");
+	ch.id		= "Renouart Larrouse";
+	ch.model	= "Offic_Fra_19";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	ch.nation	= FRANCE;
+	GiveItem2Character(ch, "blade25");
+	ch.equip.blade = "blade25";
+	GiveItem2Character(ch, "pistol6");
+	ch.equip.gun = "pistol6";
+	//JRH ammo mod -->
+	TakenItems(ch, "gunpowder", 6);
+	TakenItems(ch, "pistolbullets", 6);
+	//JRH ammo mod <--
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Cabinfight_dialog.c";
+	ch.rank 	= 10;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.greeting = "Gr_falaise de fleur soldier";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "4";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "2";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10000";
+	ch.Ship.Name = "Victorieuse";
+	ch.Ship.Type = "FR_Razee";
+	ch.Ship.Stopped = true;
+	ch.ShipSlot1.Type=SHIP_NOTUSED;
+	ch.ShipSlot1.Name="NoName";
+	ch.ShipSlot2.Type=SHIP_NOTUSED;
+	ch.ShipSlot2.Name="NoName";
+	ch.ShipSlot3.Type=SHIP_NOTUSED;
+	ch.ShipSlot3.Name="NoName";
+	ch.quest.killed.pirates = "0";
+	LAi_NoRebirthEnable(ch);
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 120.0, 120.0);
+	AddGameCharacter(n, ch);	
 	//<- Characters for the 'A Family Story' side-quest		
 //====================================================================================================================
 }

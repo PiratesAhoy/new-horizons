@@ -225,7 +225,7 @@ void ProcessDialogEvent()
 			else
 			{
 				LAi_warrior_DialogEnable(CharacterFromID("Greenford Prison Commendant"), true);//PW: Enable dialog for replacement warden
-				Characters[GetCharacterIndex("Greenford Prison Commeadant")].Dialog.Filename = "Greenford Commander_dialog.c";
+				Characters[GetCharacterIndex("Greenford Prison Commendant")].Dialog.Filename = "Greenford Commander_dialog.c";
 				Dialog.snd = "voice\SIHA\SIHA004";
 				dialog.text = DLG_TEXT[46];
 				link.l1 = DLG_TEXT[47];

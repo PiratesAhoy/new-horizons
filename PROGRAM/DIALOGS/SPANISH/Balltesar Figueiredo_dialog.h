@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = { 
+"!Tu! !Fuera!",
+"...",
+"Bueno, mira quien es! Tal vez usted va a comprar una bebida para el mejor navegador en este asqueroso archipielago? O, al menos, no peor!",
+"Lo siento. No creo que nos hayamos conocido.",
+"Aun mejor! !Celebraremos nuestra nueva amistad!",
+"Estoy mas interesado en la informacion en este momento. Me pregunto si su nave alguna vez ha atravesado una nave de guerra negra con velas esto.",
+"Estoy feliz de responder preguntas hasta que las ese cambien-siempre y cuando tenga una taza de Ron ante mi.",
+"Aqui esta tu Ron. Veamos si te suelta la lengua.",
+"?Que tal si te abofeteo? Como seria eso?",
+"Ahhh. Buen ron!",
+"No has respondido a mi pregunta.",
+"?Pregunta? !Ah, la nave de guerra negra! Si. Lo vi tan claramente como te veo ahora. Si nuestras bodegas no talla vacias, dudo que estuviera aqui para hablar con usted. Afortunadamente para mis camaradas y para mi, las bodegas de la nave deben haber estado llenas, y fuimos capaces de escabullirnos. \nStrange nombre, segun recuerdo. Ninguno que habia oido antes. Mefisto .",
+"Entonces, ?la nave negra persiguio? ?Y adonde fue cuando se hizo evidente que no podia hundir su nave?",
+"?Quien sabe? Cuando se decidio a renunciar a perseguir a nosotros, parecia que se dirigian hacia el Norte. Eran montanas piratas, asi que apuesto a que planean aterrizar en el asentamiento pirata de #sisland_Quebradas Costillas#.",
+"Gracias. Disfruta tu Ron.",
+"Si. Eso tambien podria funcionar. Quiza nos olvidemos del Ron.",
+"No respondiste mi pregunta.",
+
+};

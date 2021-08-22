@@ -1,0 +1,8 @@
+title=Collection box
+text.t1=I have to put some coins (the right ones!?) in the collection box. Will this help me to find a way out of here?
+text.t2=The coins are all from different nations.
+text.t3=The number of gold coins are two.
+text.t4=Use nothing but round coins.
+text.t5=There is one single copper coin.
+text.t6=There should be seven coins in the box, no more no less.
+text.t7=A pigeon brought me a letter - I'll see what it can be.

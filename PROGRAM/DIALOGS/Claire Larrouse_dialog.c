@@ -15,6 +15,7 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 
 	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
+	Preprocessor_Add("English", GetNationDescByType(GetTownNation("Greenford")));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -399,7 +400,8 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddQuestRecord("larrouse", 14);
 			AddDialogExitQuest("from_shore_to_ship");
-			SetCharacterRemovable(npchar, true);
+			AddDialogExitQuest("Claire_hired");
+			SetCharacterRemovable(NPChar, true);
 		break;
 
 		case "not_hire":

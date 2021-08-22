@@ -1,6 +1,6 @@
-string DLG_TEXT[50] = {
+string DLG_TEXT[54] = {
 "Hello. I am an officer ",
-" of His Majesty of France.",
+" of His Majesty of #snation#.",
 "My name is ",
 ".",
 "Did you approach me for a friendly chat, or do you have some actual business with me? ",
@@ -34,7 +34,7 @@ string DLG_TEXT[50] = {
 "I've come to talk with you about Fred Bob.",
 "Ah the mutineer. Sad case, really. I don't believe he did it. Neither does the governor, if you come right down to it. He'd be happy to let the man go.",
 "Then why is Fred Bob still in the stockade?",
-"The governor is new here, and still worried about keeping his job. Fred Bob's former first officer has a lot of influence back in France.",
+"The governor is new here, and still worried about keeping his job. Fred Bob's former first officer has a lot of influence back in #snation#.",
 "Do you think he'd be appeased if I offered to become responsible for Fred Bob and hire him onto my ship?",
 "I see. Well since I don't like to get involved in political situations, perhaps I should say farewell.",
 "Appeased? What a remarkable idea. Yes, I know for a fact that both the governor and his former first officer would be delighted to see him gone. They've ordered me to 'do something' with him, in fact. This may be a good solution for all.",
@@ -49,5 +49,8 @@ string DLG_TEXT[50] = {
 "I don't think either you nor I will be sorry we've helped him.",
 "Good fortune and a strong wind at your back, captain.",
 "Thank you, captain. Good fortune and a strong garrison at yours.",
-
+"Indeed. Well, I visited him while I was looking for the relics for ",
+". He attacked me and I had to kill him. Before he died, he confessed that he hid the statuettes in his house.",
+"Alright, I'll go and search his house. But if this is some sort of scam...",
+"Wait... Cris... Ummm, Crespo, yes of course! Are you the Captain of the Guard?",
 };

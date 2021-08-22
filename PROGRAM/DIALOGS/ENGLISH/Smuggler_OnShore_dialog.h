@@ -1,4 +1,4 @@
-string DLG_TEXT[68] = {
+string DLG_TEXT[76] = {
 "What are you doing here?",
 "Relax, I've brought the goods!",
 "What do you think? I brought the goods!",
@@ -46,8 +46,8 @@ string DLG_TEXT[68] = {
 " total. That all right?",
 "Yep.",
 "No deal. I'll look for another buyer.",
-"No luck? You arrange a meeting and then just say 'no luck'? Get out of here. You'd be wise to honor your deals in the future!",
-"You were expecting honor among thieves? That's funny.",
+"No luck? You arrange a meeting and then just say 'no luck'? Get out of here. You'd be wise to honour your deals in the future!",
+"You were expecting honour among thieves? That's funny.",
 "The total sum is ",
 " gold. Your money, our goods!",
 "Deal!",
@@ -66,5 +66,13 @@ string DLG_TEXT[68] = {
 "Let's continue, shall we?",
 "You skipped everything! Do I look like an idiot you can fool around?",
 "How did you get those guards away? That was too easy! You will betray us won't you? En Garde!",
-"No... No... WAIT!"
+"No... No... WAIT!",
+"By order of the governor, you are under arrest. Drop your weapons and proceed to the boat!",
+"And be taken to be hanged? Not likely! Get #sperson#, lads!",
+"Thank you. Now that you have proven yourselves to be smugglers, you are under arrest!",
+"A government agent! Kill #sperson#, mates!",
+"Then die like the criminal dogs you are!",
+"Why are you here? We were told to expect #samount# of #scargo#. Why do you not have it?",
+"Why are you still here? We have no further business with you. Leave, now!",
+"Alright, I'm going.",
 };

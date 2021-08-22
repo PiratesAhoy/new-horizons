@@ -1,0 +1,6 @@
+title=Tincture of Laudenum
+text.t1=Have to find this medicine.
+text.t2=I'll get this medicine in exchange of - a violin!!
+text.t3=Yes, a violin - hope the apothecary will be happy with it.
+text.t4=Done!
+text.t5=The boatswain Mr Pope is in the port to meet the apothecary from Greenford.

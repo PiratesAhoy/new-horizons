@@ -75,12 +75,6 @@ void StartStoryLine()
 	Locations[FindLocation("PoPrince_town")].reload.l40.label = "???";
 	Locations[FindLocation("PoPrince_town")].reload.l40.disable = 1;
 	locations[FindLocation("PoPrince_archive")].id.label = "???";
-//	Locations[FindLocation("Buccaneers_Camp")].reload.l4.name = "reload2";
-//	Locations[FindLocation("Buccaneers_Camp")].reload.l4.go = "BC_ForgerHouse";
-//	Locations[FindLocation("Buccaneers_Camp")].reload.l4.emerge = "Reload1";
-//	Locations[FindLocation("Buccaneers_Camp")].reload.l4.label = "House of Pablo Escriva.";
-//	Locations[FindLocation("Buccaneers_Camp")].reload.l4.autoreload = "0";
-//	Locations[FindLocation("Buccaneers_Camp")].reload.l4.disable = 1;
 
 	ref lcn = &Locations[FindLocation("IslaMona_fort")];					// Remove big cannons
 	for(int i = 1; i<=MAXBUILDINGS; i++)
@@ -90,6 +84,17 @@ void StartStoryLine()
 			Building_delete(lcn, "" + i);
 		}
 	}
+
+	makeref(lcn, Locations[FindLocation("IslaMona_port")]);					// Wipe the tower and warehouse
+	for(i = 1; i<=MAXBUILDINGS; i++)
+	{
+		if( CheckAttribute(lcn,"building."+i+".building") )
+		{
+			Building_delete(lcn, "" + i);
+		}
+	}
+	Build_at("IslaMona_port", "warehouse_destroyed", "", 5.867, 11.604, -70.479, 0, "building");
+	Locations[FindLocation("IslaMona_port")].image = "Outside_Mona.tga";
 
 	Locations[FindLocation("Hispaniola_Temple")].reload.l2.name = "reload2";		// Open up Hispaniola temple
 	Locations[FindLocation("Hispaniola_Temple")].reload.l2.go = "Quest_Hispaniola_Labirint_1";
@@ -124,6 +129,7 @@ void StartStoryLine()
 
 	ChangeCharacterAddress(characterFromID("Horacio de la Vega"), "None", "");		// Whoever this guy is, he's not an admiral!
 	Locations[FindLocation("Havana_House_03")].id.label = "Admiralty";			// "Vice Admiral's Residence" now becomes "Admiralty"
+	Locations[FindLocation("Havana_House_03")].image = "Inside_Havana_Admiralty.tga";
 	Locations[FindLocation("Havana_Town_01")].reload.l13.label = "Admiralty";
 
 	CaptureTownForNation("Khael Roa", PIRATE);
@@ -131,9 +137,11 @@ void StartStoryLine()
 
 	Reinit_KhaelRoa();									// Just in case anyone wants to visit Cozumel, use the accessible version
 
+/*
 	ref tmpref; makeref(tmpref, Music_Alias);						// Set up additional sound tracks
 	tmpref.music_map.f3.name = "MUSIC\Beneath The Southern Cross.ogg";			// GR: Victory at Sea
 	tmpref.music_day_sailing.f5.name = "MUSIC\Mare Nostrum.ogg";				// GR: Victory at Sea
+*/
 
 //================================| BEGINNING QUESTS |================================//
 

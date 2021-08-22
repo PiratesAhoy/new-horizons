@@ -1,11 +1,11 @@
-#define MONK_OXBAY			"in the town of #sOxbay#"
+#define MONK_OXBAY		"in the town of #sOxbay#"
 #define MONK_REDMOND		"at the shore of #sisland_Redmond#"
 #define MONK_CONCEICAO		"near the citygates of #sisland_Conceicao#"
-#define MONK_MUELLE			"on the causeway of #sisland_Isla Muelle#"
-#define MONK_FLEUR			"somewhere in #sFalaise de Fleur#"
+#define MONK_MUELLE		"on the causeway of #sisland_Isla Muelle#"
+#define MONK_FLEUR		"somewhere on #sisland_Falaise de Fleur#"
 #define MONK_QUEBRADAS		"on #sisland_Quebradas Costillas#"
-#define MONK_DOUWESEN		"somewhere in the jungles of #sDouwesen#"
-#define MONK_COUNT			7
+#define MONK_DOUWESEN		"somewhere in the jungles of #sisland_Douwesen#"
+#define MONK_COUNT		7
 
 
 void InitNoSaveMod()

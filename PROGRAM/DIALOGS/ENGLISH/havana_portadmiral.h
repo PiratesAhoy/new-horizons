@@ -103,7 +103,7 @@ string DLG_TEXT[118] = {
 "I can tell by your face that you have a question to ask of me.",
 "How did you guess? I'm looking for a frigate sent here by the #sFalaise de Fleur# governor.",
 "'La Foudre' moored here just recently. Why do you ask?",
-"I'm looking for the daughter of Governor Le Moigne. She left for Havana over two months ago and...",
+"I'm looking for the daughter of Governor Le Moigne. She left for #sHavana# over two months ago and...",
 "Say no more. The captain of the frigate explained everything already.",
 "I think Governor Le Moigne worries too much.",
 "Don't be so hasty to say that. After the crew left Havana they were to go to Saint Martin to see if they could provide any aid to their struggle with the Dutch. It seems more is going on than just a missing governor's daughter. At the coast of Hispaniola 'La Foudre's' captain found the debris of the convoy. They had been caught up in a violent storm, during which a pirate ship appeared and sank the entire convoy.",
@@ -116,6 +116,6 @@ string DLG_TEXT[118] = {
 "It's Davy Jones! He did it! Can you spare me some ships?",
 "I'm afraid not.",
 "Bugger!",
-"I'm looking for the daughter of Governor Le Moigne. She left for Havana some time ago and...",
+"I'm looking for the daughter of Governor Le Moigne. She left for #sHavana# some time ago and...",
 
 };

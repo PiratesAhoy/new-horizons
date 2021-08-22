@@ -1,0 +1,2 @@
+title=Repeler a la escuadra inglesa que ataca #sGreenford#.
+text.t1=Al parecer, Silehard no se ha tomado bien que hayamos tomado su colonia. Un marinero me ha informado de que el gobernador ha reunido tropas y de que la escuadra inglesa está de camino a #sGreenford#. Nos espera una terrible batalla. #sDanielle# estará al mando del fuerte, y yo me enfrentaré al enemigo desde el alcázar de mi barco, como siempre.

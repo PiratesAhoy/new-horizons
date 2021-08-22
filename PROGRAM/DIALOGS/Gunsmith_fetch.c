@@ -76,6 +76,7 @@ void ProcessDialogEvent()
 			PChar.fetchquestcompleted = sti(PChar.fetchquestcompleted) + 1;
 			if(!CheckAttribute(PChar,"fetchquestcompleted_gunsmith")) PChar.fetchquestcompleted_gunsmith = 0;
 			PChar.fetchquestcompleted_gunsmith = sti(PChar.fetchquestcompleted_gunsmith) + 1;
+			PChar.quest.(questbookname).over = "yes"; // GR: cancel quest fail timer
 		break;
 		
 		case "fetch quest failed":

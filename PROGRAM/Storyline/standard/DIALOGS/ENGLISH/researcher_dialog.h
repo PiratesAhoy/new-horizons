@@ -1,4 +1,4 @@
-string DLG_TEXT[137] = {
+string DLG_TEXT[140] = {
 "Oh, friend, I'm afraid I'm too busy to speak at the moment. I've got a new idea, and I'm a bit distracted.",
 "Sounds good. Just be careful, and don't blow us all up.",
 "Help me! Help me!",
@@ -92,7 +92,7 @@ string DLG_TEXT[137] = {
 "We'll repair the ship and prepare for sail.",
 "Ah, it's you, captain! I've almost finished the translation. I need one more week and I'll be done.",
 "We can't wait. Why don't you continue translating during the voyage?",
-"Yes, that's a good idea, why not? will I get a headache when I am sailing? I guess not.... Do I get sea-sick? No, I don't think so.... All right, I agree. But, now I'm curious...what's the hurry?",
+"Yes, that's a good idea, why not? Will I get a headache when I am sailing? I guess not.... Do I get sea-sick? No, I don't think so.... All right, I agree. But, now I'm curious...what's the hurry?",
 "I suppose the battle in the harbour went unnoticed, so perhaps I should explain...",
 "A battle? What battle? In which harbor?",
 "...Governor Silehard is not going to make us a present of the colony...and I suspect he plans to hang us at the first opportunity.",
@@ -136,5 +136,7 @@ string DLG_TEXT[137] = {
 "Clement, if anyone can do it, you can. Thanks again for your help.",
 "...",
 "Clement?",
-
+"Could you take me back to my lighthouse, please, ",
+"? I really do need to study all the notes I've been taking.",
+"Certainly, Clement.",
 };

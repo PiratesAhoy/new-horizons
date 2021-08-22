@@ -35,7 +35,7 @@ void LocationInitSideQuestLocations(ref n)
 
 	Locations[n].id = "Quest_Cayman_Port";
 	locations[n].id.label = "Grand Cayman Port";
-	Locations[n].image = "Town_FalaiseDeFleur_Port2.tga";
+	Locations[n].image = "Town_FalaiseDeFleur_Port2_England.tga";
 
 	//Town sack
 	Locations[n].townsack = "Grand Cayman";

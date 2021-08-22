@@ -33,6 +33,10 @@ void ProcessDialogEvent()
 		case "reputation":
 			TakeItemFromCharacter(pchar, "potion1" );	// one potion for victim(if you have one)
 			//ChangeCharacterReputation(pchar, 1);		// reward for being helpful
+			if(GetCharacterReputation(PChar) < REPUTATION_GOOD) // GR: Only get the increase if you're less than Matey
+			{
+				ChangeCharacterReputation(PChar, 1);
+			}
 			/*NPChar.dialog.filename = NPChar.stuntime.dialog.filename;	// restores original dialog
 			LAi_SetCitizenTypeNoGroup(NPchar);	// makes character walk again, but not very agile
 			DeleteAttribute(NPChar,"stuntime");	// removes "stunned" tag*/
@@ -73,7 +77,7 @@ void ProcessDialogEvent()
 				else{PlaySound("OBJECTS\Voices\dead\male\dead1.wav");}
 
 				PlaySound("INTERFACE\took_item.wav");
-				if(!LAi_group_IsEnemy(pchar,npchar) )  // rephit for robbing neutrals ???  NOT SURE ABOUT GAMEBALANCE
+				if(!LAi_group_IsEnemy(PChar,NPChar) && !CheckAttribute(NPChar, "pickgold"))  // rephit for robbing neutrals ???  NOT SURE ABOUT GAMEBALANCE.  GR: no rephit if NPChar robbed you
 				{
 					ChangeCharacterReputation(pchar, -1);
 					Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"Robbing helpless citizens isn't good for your reputation !"));
@@ -88,7 +92,7 @@ void ProcessDialogEvent()
 				else{PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_f_c_016.wav");}
 				LAi_group_SetRelation(LAI_DEFAULT_GROUP, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 				LAi_group_SetRelation(LAI_GROUP_GUARDS, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
-				ChangeCharacterReputation(pchar, -3);		// rephit for being caught
+				if (!CheckAttribute(NPchar, "pickgold")) ChangeCharacterReputation(pchar, -3);		// rephit for being caught, not if NPChar robbed you
 				SoldierReinforcements(NPChar); //PB: If you loot a town guard
 				Diag.CurrentNode = Diag.TempNode;	// restores the current node of the original dialog
 				DialogExit();
@@ -144,7 +148,8 @@ void ProcessDialogEvent()
 				else
 				{
 					dialog.text = LinkRandPhrase(DLG_TEXT[1], DLG_TEXT[2], DLG_TEXT[3]);
-					Link.l1 = LinkRandPhrase(poor_fella, DLG_TEXT[5], DLG_TEXT[6]);
+					if (sti(GetAttribute(NPChar, "pickgold")) > 0) Link.l1 = LinkRandPhrase(DLG_TEXT[19], DLG_TEXT[20], DLG_TEXT[21]);
+					else Link.l1 = LinkRandPhrase(poor_fella, DLG_TEXT[5], DLG_TEXT[6]);
 					Link.l1.go = "loot";
 					if(CheckCharacterItem(Pchar, "potion1"))
 					{
@@ -175,7 +180,8 @@ void ProcessDialogEvent()
 //MAXIMUS 23.09.2006 [during abordage we can speak and interact with our stunned crewmembers and officers] <--
 					dialog.text = LinkRandPhrase(DLG_TEXT[1], DLG_TEXT[2], DLG_TEXT[3]);
 
-					Link.l1 = LinkRandPhrase(poor_fella, DLG_TEXT[5], DLG_TEXT[6]);
+					if (sti(GetAttribute(NPChar, "pickgold")) > 0) Link.l1 = LinkRandPhrase(DLG_TEXT[19], DLG_TEXT[20], DLG_TEXT[21]);
+					else Link.l1 = LinkRandPhrase(poor_fella, DLG_TEXT[5], DLG_TEXT[6]);
 					Link.l1.go = "loot";		// link for robbers
 
 					if(CheckCharacterItem(Pchar, "potion1")) // PB: Can't choose the repution option if you don't actually have a potion

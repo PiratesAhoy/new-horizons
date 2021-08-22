@@ -58,8 +58,8 @@ void ProcessDialogEvent()
                 
                 case "begin_4":
 			dialog.snd = "Voice\CLLA\CLLA004";
-			dialog.text = DLG_TEXT[8];
-			link.l1 = DLG_TEXT[9];
+			dialog.text = DLG_TEXT[8] + "\n" + DLG_TEXT[9];
+			link.l1 = DLG_TEXT[1];
 			link.l1.go = "exit";
                     
 		break;

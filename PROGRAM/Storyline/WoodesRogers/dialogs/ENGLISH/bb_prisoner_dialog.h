@@ -1,4 +1,4 @@
-string DLG_TEXT[8] = {
+string DLG_TEXT[10] = {
 "Get me out of here!",
 "I'm innocent, innocent do you hear me?",
 "It was all a mistake. I didn't kill anyone.",
@@ -7,6 +7,8 @@ string DLG_TEXT[8] = {
 "I'm already dead.",
 "Are you the lawyer?",
 "Sorry, the wrong person.",
+"We follow you, Captain.",
+"Very good.",
 
 
 };

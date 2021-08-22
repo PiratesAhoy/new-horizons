@@ -1,0 +1,11 @@
+title=Flagchest - Shipyard owner
+text.t1=The Shipyard is found in the Lower Town of Nueva Suecia. The sign says 'Astillero'.
+text.t2=If I could reach the bell over the Shipyard door - maybe the owner thinks it's a fire alarm?
+text.t3=A Flagchest is sold to the Shipyard owner.
+text.t4=I've got the Flagchest.
+text.t5=
+text.t6=
+text.t7=
+text.t8=
+text.t9=
+text.t10=

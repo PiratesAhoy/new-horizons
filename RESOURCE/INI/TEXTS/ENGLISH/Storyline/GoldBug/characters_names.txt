@@ -1,0 +1,128 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| GoldBug.c |=====}
+William{William}
+Legrand{Legrand}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+Edgar Allan{Edgar Allan}
+Poe{Poe}
+Jupiter{Jupiter}
+
+{=====| TempQuest.c |=====}
+C. Auguste{C. Auguste}
+Dupin{Dupin}
+Arthur Gordon{Arthur Gordon}
+Pym{Pym}
+Lieutenant{Lieutenant}
+G{G}
+Medicine{Medicine}
+Woman{Woman}
+Medicine Woman{Medicine Woman}
+Hans{Hans}
+Pfaall{Pfaall}
+Wilson{Wilson}
+Ethelred{Ethelred}
+Usher{Usher}
+Fortunato{Fortunato}
+Summer{Summer}
+visitor{visitor}
+Soldier{Soldier}
+Bartender{Bartender}
+Sergeant{Sergeant}
+Corporal{Corporal}
+Sailor{Sailor}
+Claude{Claude}
+Frollo{Frollo}
+Landlady{Landlady}
+Natalia{Natalia}
+Decoteau{Decoteau}
+Serena{Serena}
+Tisserand{Tisserand}
+Celia{Celia}
+Hilder{Hilder}
+Mummy{Mummy}
+Citizen{Citizen}
+Axel{Axel}
+von Fersen{von Fersen}
+Doctor{Doctor}
+KP{KP}
+Street{Street}
+Merchant{Merchant}
+Shipyard{Shipyard}
+Owner{Owner}
+Harbour{Harbour}
+Master{Master}
+Bank{Bank}
+Clerk{Clerk}
+Blacksmith{Blacksmith}
+Storeowner{Storeowner}
+Governor Thomas{Governor Thomas}
+Bennet{Bennet}
+The Chinese{The Chinese}
+Man{Man}
+Black Magic Woman{Black Magic Woman}
+Plantation{Plantation}
+Guard{Guard}
+Captain William{Captain William}
+Kidd{Kidd}
+Howard{Howard}
+Pyle{Pyle}
+Caroline{Caroline}
+K{K}
+Friday{Friday}
+Alexander{Alexander}
+Selkirk{Selkirk}
+Grandma{Grandma}
+Rogers{Rogers}
+Dave{Dave}
+Edna{Edna}
+Nathaniel{Nathaniel}
+Hawk{Hawk}
+Danielle{Danielle}
+Fawn{Fawn}
+Steven{Steven}
+Maturin{Maturin}
+Jack{Jack}
+Aubrey{Aubrey}
+Sparrow{Sparrow}
+Elizabeth{Elizabeth}
+Swann{Swann}
+Hector{Hector}
+Barbossa{Barbossa}
+Will{Will}
+Turner{Turner}
+Beatrice{Beatrice}
+Devlin{Devlin}
+Jean{Jean}
+de la Croix{de la Croix}
+Horatio{Horatio}
+Hornblower{Hornblower}
+Archie{Archie}
+Kennedy{Kennedy}
+Edward{Edward}
+Pellew{Pellew}
+Bush{Bush}
+Richard{Richard}
+Sharpe{Sharpe}
+Patrick{Patrick}
+Harper{Harper}
+Haggman{Haggman}
+Harris{Harris}
+Lafitte{Lafitte}
+Bartolomeu{Bartolomeu}
+o Portugues{o Portugues}
+Emilio{Emilio}
+Soares{Soares}
+Johan{Johan}
+Elting{Elting}
+Maroon{Maroon}
+Deserter{Deserter}
+Thug{Thug}
+Bandit{Bandit}
+Priest{Priest}
+Zombie{Zombie}
+Buccaneer{Buccaneer}
+
+{=====| 191 characters |=====}

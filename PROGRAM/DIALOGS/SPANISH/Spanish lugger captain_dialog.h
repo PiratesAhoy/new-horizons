@@ -1,0 +1,23 @@
+string DLG_TEXT[21] = {
+"Buenos dias, Señor.",
+"Buenos dias, Sir.",
+", Capitania en la mas catolica Armada de su Majestad. ", // Dialogo comienza a las 35:50 en la pelicula
+"Si.",
+"¡Oh, gracias al Cielo te hemos encontrado a tiempo, ",
+"! ¡Podrias haber elegidos en la falta de nuestra nave Natividad antes de que pudiera traerte las maravillosas noticias!",
+"¿Noticias?",
+"¡#srank#, s doy la bienvenida como el nuevo aliado de Espana! Durante semanas, su pais y el mio han sido hermanos de armas contra Napoleon. ¡Juntos, con la ayuda de Dios, lo destruiremos!",
+"...",
+"¡Oh, tal vez usted piensa que es demasiado bueno para ser verdad! Aqui hay una carta de su Almirantazgo.",
+"Er... agradecer. Er... Con permiso. ¡Sr. Bush!",
+"El mes pasado, Napoleon secuestro a nuestro rey y puso a su propio hermano en el trono de Espana. Nuestro gobierno en el exilio inmediatamente concluyo una alianza con su Majestad britanica. Ahora entiendes mi temor de que podrias haber encontrado el 'Natividad'. Su capitan tambien ignora la nueva alianza.",
+"Se... er... sucede, Senor, que la semana pasada nos encontramos con el 'Natividad'.",
+"¡Ja, ja, ja! Sabios para mostrar los talones, ",
+". Ella es el doble de tu fuerza. ¡Imaginate lo que habria pasado! ¡Madre de Dios!",
+"Nos... er... capturo la' Natividad', Señor.",
+"¿Que? ¡Oh, Jo Jo Jo! Imposible! ¡Estas bromeando!",
+"Nunca he sido mas serio en mi vida.",
+"¡Oh, Capitán, Capitán, no puede ser verdad! ¿Le diste el 'Natividad' al Rebelde Don Julian? ¡Pero hace una semana ya eran nuestros aliados! ¡Santa Maria! ¿Te das cuenta de lo que has hecho? ¡No tenemos otro barco cerca de #sisland_Cuba#! ¡Quemaran nuestros puertos, saquearan todas nuestras ciudades!",
+"Soy muy consciente de la situacion.",
+"¡#sname#! ... Si voy a adelantar a Natividad, debo pedirle que se vaya de inmediato. Adios, Señores. ¿Sr. Bush, quiere acompanar a estos Caballeros?",
+}

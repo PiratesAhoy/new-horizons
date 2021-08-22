@@ -18,7 +18,7 @@ string DLG_TEXT[32] = {
 "The entrance to Charles Town was protected by a Fort high on a cliff. A Fort that could sink all the ships any minute...",
 "Yes...",
 "The medicines didn't help my brother...",
-"I'm sorry to hear that Sister. Are you willing to trade the map-piece to me?",
+"I'm sorry to hear that Sister. Are you willing to trade the map to me?",
 "Certainly not.",
 "Why not?",
 "Because I don't have it any longer.",

@@ -1,4 +1,4 @@
-string DLG_TEXT[46] = { 
+string DLG_TEXT[48] = { 
 "Pleased to meet you, ",
 ". I'm ",
 ", and I'm at your service.",
@@ -23,7 +23,7 @@ string DLG_TEXT[46] = {
 "I was asked to deliver some cargo to you.",
 "Might you be in need of a captain, sir? I have an excellent ship, and I can deliver any cargo, anywhere you like.",
 "I've got no time to talk right now.",
-"No, I don't need your services. Not while you're sinking English ships.",
+"No, I don't need your services. Not while you're sinking #snation_desc# ships.",
 "In that case, goodbye.",
 "I'm sorry, but I don't have anything for you at the moment.",
 "I'll come back later, then.",
@@ -45,5 +45,6 @@ string DLG_TEXT[46] = {
 "I refuse to trade with a person of your reputation and relations. Now get out, ",
 ", before I call the guards.",
 "Very well.",
-
+"Yes, I'm expecting #squantity# cwt of #scargo#. Do you have it?",
+"Umm... some of it appears to have been misplaced. Don't worry, I'll replace what was lost and bring it to you!",
 };

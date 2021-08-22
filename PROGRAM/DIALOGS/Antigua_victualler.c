@@ -32,8 +32,8 @@ void ProcessDialogEvent()
 	// PB: Moved above -->
 	if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))
 	{
-		int iQuantityShipGoods = pchar.quest.generate_trade_quest_progress.iQuantityGoods;
-		int iQuestTradeGoods = pchar.quest.generate_trade_quest_progress.iTradeGoods;
+		int iQuantityShipGoods = sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods);
+		int iQuestTradeGoods = sti(pchar.quest.generate_trade_quest_progress.iTradeGoods);
 	}
 	// PB: Moved above <--
 
@@ -95,17 +95,24 @@ void ProcessDialogEvent()
 					Link.l4 = Randswear()+DLG_TEXT[6];
 					Link.l4.go = "exit";
 				}
-				// PB: Able to skip past the Navy difficulties if you have a cargo to deliver -->
-				if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
+			}
+			// PB: Able to skip past the Navy difficulties if you have a cargo to deliver -->
+			if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
+			{
+				if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
 				{
-					if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods && pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+					link.l3 = DLG_TEXT[48];
+					if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
 					{
-						link.l3 = DLG_TEXT[48];
 						link.l3.go = "generate_quest_2";
 					}
+					else
+					{
+						link.l3.go = "cargo_missing";
+					}
 				}
-				// PB: Able to skip past the Navy difficulties if you have a cargo to deliver <--
 			}
+			// PB: Able to skip past the Navy difficulties if you have a cargo to deliver <--
 		break;
 
 		case "duty":
@@ -341,11 +348,18 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[46];
 			if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
 			{
-				if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods && pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+				if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
 				{
 					dialog.text = DLG_TEXT[47];
 					link.l1 = DLG_TEXT[48];
-					link.l1.go = "generate_quest_2";
+					if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
+					{
+						link.l1.go = "generate_quest_2";
+					}
+					else
+					{
+						link.l1.go = "cargo_missing";
+					}
 				}
 			}
 			else
@@ -368,6 +382,7 @@ void ProcessDialogEvent()
 				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
+					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
 					dialog.text = DLG_TEXT[51];
 					link.l1 = DLG_TEXT[52];
 					link.l1.go = "exit";
@@ -466,6 +481,15 @@ void ProcessDialogEvent()
 			D.text = DLG_TEXT[41];
 			Link.l1 = DLG_TEXT[42];
 			Link.l1.go = "node_1";
+		break;
+
+		case "cargo_missing":
+			AddQuestRecord("trade", 3);
+			Preprocessor_Add("quantity", sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods));
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(pchar.quest.generate_trade_quest_progress.iTradeGoods)].name));
+			dialog.text = DLG_TEXT[72];
+			link.l1 = DLG_TEXT[73];
+			link.l1.go = "exit";
 		break;
 		// <-- ES add to fix trade quest
 		case "fight":

@@ -54,8 +54,10 @@ void InitPeriods()
 	period.Relations.Holland.Portugal = RELATION_ENEMY;
 	period.Islands.Redmond.Name = "Santiago";
 	period.Islands.Redmond.smuggling_nation = SPAIN;
+	period.Islands.FalaiseDeFleur.Name = "Martinica";
+	period.Islands.FalaiseDeFleur.smuggling_nation = SPAIN;
 	period.Islands.Oxbay.Name = "Los Barbados";
-	period.Islands.Oxbay.smuggling_nation = PORTUGAL;
+	period.Islands.Oxbay.smuggling_nation = SPAIN;
 	period.Islands.Conceicao.Name = "Camahogne";
 	period.Islands.Douwesen.Name = "Isla do Palo Brasil";
 	period.Islands.Douwesen.smuggling_nation = SPAIN;
@@ -63,21 +65,64 @@ void InitPeriods()
 	period.Islands.QuebradasCostillas.smuggling_nation = SPAIN;
 	period.Islands.Antigua.smuggling_nation = SPAIN;
 	period.Islands.Antigua.disable = true;
+	period.Islands.Antigua.Model = "Antigua_townless";
 	period.Islands.Cayman.Name = "Las Tortugas";
 	period.Islands.Cayman.smuggling_nation = SPAIN;
 	period.Islands.Cuba.Name = "Isla Juana";
+
 	period.Islands.Guadeloupe.Name = "Santa Maria de Guadalupe de Extremadura";
 	period.Islands.Guadeloupe.smuggling_nation = SPAIN;
-	period.Islands.Guadeloupe.disable = true;
+	period.Islands.Guadeloupe.Model = "Guadelupa_townless";
+	period.Islands.Guadeloupe.towns.quantity = 1;
+	period.Islands.Guadeloupe.towns.1 = "";
+	period.Islands.Guadeloupe.reload.l1.label = "Bahía Grande";
+	period.Islands.Guadeloupe.reload.l1.name = "reload_2";
+	period.Islands.Guadeloupe.reload.l1.go = "Guadeloupe_shore_02";
+	period.Islands.Guadeloupe.reload.l1.emerge = "reload1";
+	period.Islands.Guadeloupe.reload.l1.radius = 200.0;
+	period.Islands.Guadeloupe.reload.l1.pic = 27;
+	period.Islands.Guadeloupe.reload.l1.tex = "t2";
+	period.Islands.Guadeloupe.reload.l1.goto_enable = false;
+	period.Islands.Guadeloupe.reload.l2.label = "Ensenada del Bosque Quebrado";
+	period.Islands.Guadeloupe.reload.l2.name = "reload_3";
+	period.Islands.Guadeloupe.reload.l2.go = "Guadeloupe_shore_01";
+	period.Islands.Guadeloupe.reload.l2.emerge = "see";
+	period.Islands.Guadeloupe.reload.l2.radius = 200.0;
+	period.Islands.Guadeloupe.reload.l2.pic = 20;
+	period.Islands.Guadeloupe.reload.l2.tex = "t2";
+	period.Islands.Guadeloupe.reload.l2.goto_enable = false;
+//	period.Islands.Guadeloupe.disable = true;
+
 	period.Islands.SaintMartin.Name = "Isla de San Martin";
 	period.Islands.SaintMartin.smuggling_nation = SPAIN;
+	period.Islands.SaintMartin.Model = "Sent_townless";
 	period.Islands.SaintMartin.disable = true;
 	period.Islands.Turks.Name = "San Salvador";
 	period.Islands.Turks.smuggling_nation = SPAIN;
 	period.Islands.Eleuthera.smuggling_nation = SPAIN;
-	period.Islands.Aruba.Name = "";
+
+//	period.Islands.Aruba.Name = "";
 	period.Islands.Aruba.smuggling_nation = SPAIN;
-	period.Islands.Aruba.disable = true;
+//	period.Islands.Aruba.disable = true;
+	period.Islands.Aruba.towns.quantity = 1;
+	period.Islands.Aruba.towns.1 = "";
+	period.Islands.Aruba.reload.l1.label = "Sandy Beach";
+	period.Islands.Aruba.reload.l1.name = "reload_1";
+	period.Islands.Aruba.reload.l1.go = "Aruba_shore2";
+	period.Islands.Aruba.reload.l1.emerge = "reload1";
+	period.Islands.Aruba.reload.l1.radius = 200.0;
+	period.Islands.Aruba.reload.l1.pic = 21;
+	period.Islands.Aruba.reload.l1.tex = "t2";
+	period.Islands.Aruba.reload.l1.goto_enable = false;
+	period.Islands.Aruba.reload.l2.label = "Rocky Cove";
+	period.Islands.Aruba.reload.l2.name = "reload_3";
+	period.Islands.Aruba.reload.l2.go = "Aruba_shore";
+	period.Islands.Aruba.reload.l2.emerge = "see";
+	period.Islands.Aruba.reload.l2.radius = 200.0;
+	period.Islands.Aruba.reload.l2.pic = 30;
+	period.Islands.Aruba.reload.l2.tex = "t2";
+	period.Islands.Aruba.reload.l2.goto_enable = false;
+
 	period.Islands.Curacao.Name = "";
 	period.Islands.Curacao.smuggling_nation = SPAIN;
 	period.Islands.Curacao.disable = true;
@@ -91,15 +136,17 @@ void InitPeriods()
 	period.Towns.Douwesen.nation = SPAIN;
 	period.Towns.Douwesen.gov.name = "Juan";
 	period.Towns.Douwesen.gov.lastname = "de Ávila";
+	period.Towns."Falaise de Fleur".Name = "San Pedro";
+	period.Towns."Falaise de Fleur".nation = SPAIN;
 	period.Towns."Falaise de Fleur".gov.name = "Antonio";
-	period.Towns."Falaise de Fleur".gov.lastname = "de Cháves";
+	period.Towns."Falaise de Fleur".gov.lastname = "de las Casas";
 	period.Towns."Isla Muelle".gov.name = "Juan";
 	period.Towns."Isla Muelle".gov.middlename = "Ponce";
 	period.Towns."Isla Muelle".gov.lastname = "de León";
-	period.Towns.Oxbay.Name = "Sao Luis";
-	period.Towns.Oxbay.nation = PORTUGAL;
+	period.Towns.Oxbay.Name = "San Luis";
+	period.Towns.Oxbay.nation = SPAIN;
 	period.Towns.Greenford.Name = "Santa Ines";
-	period.Towns.Greenford.nation = PORTUGAL;
+	period.Towns.Greenford.nation = SPAIN;
 	period.Towns.Redmond.Name = "Villa de la Vega";
 	period.Towns.Redmond.nation = SPAIN;
 	period.Towns.Redmond.gov.name = "Juan";
@@ -357,6 +404,7 @@ void InitPeriods()
 	period.Islands.Conceicao.Name = "La Grenade";
 	period.Islands.Hispaniola.smuggling_nation = FRANCE;
 	period.Islands.Colombia.Name = "New Granada";
+	period.Islands.Turks.smuggling_nation = PIRATE;			// Grey Roger: to match Grand Turk nation
 	period.Towns."Isla Muelle".gov.name = "Juan";
 	period.Towns."Isla Muelle".gov.middlename = "José";
 	period.Towns."Isla Muelle".gov.lastname = "Colomo";
@@ -443,9 +491,10 @@ void InitPeriods()
 	period.Islands.Hispaniola.smuggling_nation = FRANCE;
 	period.Islands.Eleuthera.smuggling_nation = AMERICA;
 	period.Islands.Colombia.Name = "New Granada";
+	period.Islands.Turks.smuggling_nation = ENGLAND;		// Grey Roger: to match Grand Turk nation
 	period.Towns."Falaise de Fleur".gov.name = "Ulysses";
 	period.Towns."Falaise de Fleur".gov.lastname = "FitzMaurice";
-	period.Towns."Isla Muelle".gov.name = "Miguel ";
+	period.Towns."Isla Muelle".gov.name = "Miguel";
 	period.Towns."Isla Muelle".gov.lastname = "de Musesas";
 	period.Towns.Conceicao.Name = "Saint George";
 	period.Towns.Conceicao.nation = ENGLAND;
@@ -529,6 +578,7 @@ void InitPeriods()
 	period.Islands.Battle_Rocks.smuggling_nation = ENGLAND;
 	period.Islands.Hispaniola.smuggling_nation = FRANCE;
 	period.Islands.Eleuthera.smuggling_nation = AMERICA;
+	period.Islands.Turks.smuggling_nation = ENGLAND;		// Grey Roger: to match Grand Turk nation
 	period.Towns."Falaise de Fleur".gov.name = "Louis Thomas";
 	period.Towns."Falaise de Fleur".gov.middlename = "Villaret";
 	period.Towns."Falaise de Fleur".gov.lastname = "de Joyeuse";
@@ -652,6 +702,23 @@ void InitTownNationalities()
 		locations[FindLocation("Conceicao_port")].filespath.textures = "locations\ENGLAND";
 		locations[FindLocation("Conceicao_town")].image = "Town_Conceicao_Town_England.tga";
 		locations[FindLocation("Conceicao_town")].filespath.textures = "locations\ENGLAND";
+	}
+	if(GetTownNation("Falaise de Fleur") == SPAIN)
+	{
+		locations[FindLocation("Falaise_de_fleur_port_01")].image = "Town_FalaiseDeFleur_Port_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_port_01")].filespath.textures = "locations\SPAIN";
+		locations[FindLocation("Falaise_de_fleur_port_02")].image = "Town_FalaiseDeFleur_Port2_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_port_02")].filespath.textures = "locations\SPAIN";
+		locations[FindLocation("Falaise_de_fleur_location_02")].image = "Town_FalaiseDeFleur_Town_01_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_location_02")].filespath.textures = "locations\SPAIN";
+		locations[FindLocation("Falaise_de_fleur_location_03")].image = "Town_FalaiseDeFleur_Town_02_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_location_03")].filespath.textures = "locations\SPAIN";
+		locations[FindLocation("Falaise_de_fleur_location_04")].image = "Town_FalaiseDeFleur_Town_03_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_location_04")].filespath.textures = "locations\SPAIN";
+		locations[FindLocation("Falaise_de_fleur_location_05")].image = "Town_FalaiseDeFleur_Town_04_Spa.tga";
+		locations[FindLocation("Falaise_de_fleur_location_05")].filespath.textures = "locations\SPAIN";
+		locations[FindLocation("Falaise_De_Fleur_Jungle")].image = "Town_FalaiseDeFleur_Exit_Spa.tga";
+		locations[FindLocation("Falaise_De_Fleur_Jungle")].filespath.textures = "locations\SPAIN";
 	}
 
 	switch(GetCurrentPeriod())
@@ -793,15 +860,26 @@ void InitTownNationalities()
 	PChar.quest.Santiago_start.skip = "yes";
 	//Santiago quest
 
+	//JRH: Cartagena New_cloister
+	PChar.quest.cloister_start.win_condition.l1 = "location";
+	PChar.quest.cloister_start.win_condition.l1.location = "new_cloister_garden";
+	PChar.quest.cloister_start.win_condition = "cloister_start";
+
 	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
 	{
-		Characters[GetCharacterIndex("Father Bernard")].name = "Padre"; // Override random first name
-		Characters[GetCharacterIndex("Father Jerald")].name = "Padre"; // Override random first name
+		/* GR: Moved to "Preprocessor_Init()" in "utils.c" so that "Padre" is set up before preprocessing
+		Characters[GetCharacterIndex("Father Bernard")].name = TranslateString("","Padre"); // Override random first name
+		Characters[GetCharacterIndex("Father Jerald")].name = TranslateString("","Padre"); // Override random first name
+		Characters[GetCharacterIndex("pater Jourdain")].name = TranslateString("","Padre"); // Override random first name
 		ref ch = CharacterFromID("Father Gareth");
 		ch.nation = GetTownNation("Redmond");
 		SetRandomNameToCharacter(ch);
 		ch.name = "Padre"; // Override random first name
+		*/
 		ChangeCharacterAddress(characterFromID("Contre-Amirale"), "none", ""); //Sinking the Vogelstruijs
+		Characters[GetCharacterIndex("Milon Blacque")].lastname = GetMyLastName(CharacterFromID("Marc Blacque"));	// Saga of the Blacque Family
+		Characters[GetCharacterIndex("Rachel Blacque")].lastname = GetMyLastName(CharacterFromID("Marc Blacque"));	// All family members have same last name
+		Characters[GetCharacterIndex("Sabine Matton")].lastname = GetMyLastName(CharacterFromID("Arnaud Matton"));
 	}
 	else
 	{
@@ -896,7 +974,7 @@ void GiveSoldierWeapon(ref curchar, int iNation)
 					// default:
 					SoldierBlade = "blade10";								// ARF: Piranha (not available after Golden Age of Piracy)
 				}
-				SoldierGun   = "pistolmtoon";
+				SoldierGun   = "Arguebuse";
 			break;
 			case PERIOD_THE_SPANISH_MAIN:
 				switch(iNation)
@@ -1003,7 +1081,8 @@ bool NationNoIsland(int iNation, int curPeriod)
 	switch(curPeriod)
 	{
 		case PERIOD_EARLY_EXPLORERS:
-			if (iNation == ENGLAND || iNation == HOLLAND)	NoIsland = true;
+			if (iNation == ENGLAND || iNation == HOLLAND || iNation == FRANCE)	NoIsland = true;
+			// Force France to start at Tortuga as Martinique is now Spanish
 		break;
 		// England is friendly to Portugal, so this is OK
 	/*	case PERIOD_REVOLUTIONS:
@@ -1013,5 +1092,9 @@ bool NationNoIsland(int iNation, int curPeriod)
 			if (iNation == PORTUGAL)						NoIsland = true;
 		break;*/
 	}
+
+	if (curPeriod >= PERIOD_THE_SPANISH_MAIN && curPeriod <= PERIOD_COLONIAL_POWERS && iNation == SWEDEN) NoIsland = true;
+	// Otherwise Sweden, being GUEST1_NATION same as America, starts at Eleuthera, which may be hostile
+
 	return NoIsland;
 }

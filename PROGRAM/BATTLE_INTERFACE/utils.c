@@ -203,8 +203,8 @@ float ProcessSailRepair(ref chref, float repPercent)
 	float dmg = 100.0-GetSailPercent(chref);
 	if(dmg==0.0) return 0.0;
 	if(repPercent>dmg) repPercent=dmg;
-
-	float fMakeRepair = repPercent;
+	float maxShipSP = GetCharacterShipSP(chref); // new line by PaterBrown. Serge Grey have made tests ;)
+	float fMakeRepair = (repPercent * maxShipSP)/100; // new line, was float fMakeRepair = repPercent;
 	int i,j,rq,gq;
 	aref arRoot,arGroup,arSail;
 	string tmpstr;
@@ -249,10 +249,9 @@ float ProcessSailRepair(ref chref, float repPercent)
 		if (sti(chref.index) == GetMainCharacterIndex())		// LDH 24Jan09
 			Trace("Repair & Defence skill added in ProcessSailRepair: " + repPercent + " actual " + makeint(repPercent + 0.5));
 		int AddSkill = makeint(repPercent + 0.5);  if (AddSkill < 20) AddSkill = 20;
-		AddPartyExpChar(chref, "Repair", AddSkill));
+		AddPartyExpChar(chref, "Repair", AddSkill); //Serge Grey: deleted excessive char ")".
 		AddPartyExpChar(chref, "Defence", AddSkill);
 	}
-
 	return repPercent;
 }
 

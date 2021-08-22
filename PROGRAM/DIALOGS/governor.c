@@ -23,6 +23,13 @@ void ProcessDialogEvent()
 	string sNation = iNation;
 	// RM <--
 	string stemp = ""; // KK
+	string sLogTitle, sLogEntry;
+
+	int smugglegoods, smuggleamount, smuggleweight, smugglemoney;
+	int base_reward = 10;		// Percentage of value of contraband smuggled for governor if you just report smugglers
+	int arrest_reward = 50;		// Percentage of value of contraband smuggled for governor if you arrested smugglers yourself
+	int minimum_reward =2500;	// Minimum reward for governor smuggling if cargo is too low value for percentage reward
+	string islandID;
 
 	// PG -->
 	if(GetMusicScheme() == "PGMUS") { // KK
@@ -72,7 +79,8 @@ void ProcessDialogEvent()
 			}
 			AddMoneyToCharacter(PChar, -GetLoMCost(iNation));
 			SetRank(PChar, iNation, GetOldRank(PChar, iNation));
-			if(sti(PChar.reputation) >= REP_COMEBACKMIN && GetRank(PChar, iNation)) stemp += DLG_TEXT[44] + GetNationRoyalByType(iNation) + DLG_TEXT[45] + TranslateString(GetRankName(PChar, iNation),"");
+			PChar.executions = 0;
+			if(sti(PChar.reputation) >= REP_COMEBACKMIN && GetRank(PChar, iNation)) stemp += DLG_TEXT[44] + GetNationRoyalByType(iNation) + DLG_TEXT[45] + TranslateString(GetRankName(PChar, iNation),"") + ".";
 			dialog.Text = stemp;
 			if (CheckAttribute(PChar, "Got_Relation_Book"))
 			{
@@ -115,27 +123,36 @@ void ProcessDialogEvent()
 		break;
 
 		case "promote":
-			NPChar.templand = GetCharacterLand(PChar);
-			Promote(&PChar, &NPChar, iNation);
-			if (iNation == PIRATE)
+			if(iNation != PIRATE && sti(GetAttribute(PChar, "executions")) >= 10)
 			{
-				dialog.text = LinkRandPhrase(DLG_TEXT[113] + TranslateString(GetRankName(PChar, iNation),"") + ".", DLG_TEXT[114] + TranslateString(GetRankName(PChar, iNation),"") + ".", DLG_TEXT[115] + TranslateString(GetRankName(PChar, iNation),"") + ".");
+				dialog.text = DLG_TEXT[116];
+				link.l1 = DLG_TEXT[117];
+				link.l1.go = "executions_warning";
 			}
 			else
 			{
-				if (GetCharacterLand(PChar) - sti(NPChar.templand) > 0)
+				NPChar.templand = GetCharacterLand(PChar);
+				Promote(&PChar, &NPChar, iNation);
+				if (iNation == PIRATE)
 				{
-					dialog.text = DLG_TEXT[57] + TranslateString(GetRankName(PChar, iNation),"") + DLG_TEXT[58] + (GetCharacterLand(PChar) - sti(NPChar.templand)) + DLG_TEXT[59] + GetNationRoyalByType(iNation) + ".";
+					dialog.text = LinkRandPhrase(DLG_TEXT[113] + TranslateString(GetRankName(PChar, iNation),"") + ".", DLG_TEXT[114] + TranslateString(GetRankName(PChar, iNation),"") + ".", DLG_TEXT[115] + TranslateString(GetRankName(PChar, iNation),"") + ".");
 				}
 				else
 				{
-					dialog.text = DLG_TEXT[57] + TranslateString(GetRankName(PChar, iNation),"") + ".";
+					if (GetCharacterLand(PChar) - sti(NPChar.templand) > 0)
+					{
+						dialog.text = DLG_TEXT[57] + TranslateString(GetRankName(PChar, iNation),"") + DLG_TEXT[58] + (GetCharacterLand(PChar) - sti(NPChar.templand)) + DLG_TEXT[59] + GetNationRoyalByType(iNation) + ".";
+					}
+					else
+					{
+						dialog.text = DLG_TEXT[57] + TranslateString(GetRankName(PChar, iNation),"") + ".";
+					}
 				}
+				DeleteAttribute(NPChar,"templand");
+				Link.l1 = DLG_TEXT[60];
+				if (GetMySimpleOldName(PChar) == "Horatio Hornblower" && iNation == ENGLAND && GetRank(PChar, ENGLAND) == 6) Link.l1.go = "Hornblower_ordered_to_Greenford";
+				else Link.l1.go = "exit";
 			}
-			DeleteAttribute(NPChar,"templand");
-			Link.l1 = DLG_TEXT[60];
-			if (GetMySimpleName(PChar) == "Horatio Hornblower" && iNation == ENGLAND && GetRank(PChar, ENGLAND) == 6) Link.l1.go = "Hornblower_ordered_to_Greenford";
-			else Link.l1.go = "exit";
 		break;
 
 		case "Hornblower_ordered_to_Greenford":
@@ -213,14 +230,20 @@ void ProcessDialogEvent()
 					otherquest = true;
 				}
 				//Added by Levis for the smuggler guild
-				if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_smuggling") && IsInServiceOf(iNation) && iNation != PIRATE)
+				if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_smuggling") && IsInServiceOf(iNation) && iNation != PIRATE && !CheckAttribute(PChar, "quest.governor_smuggling.recover_cargo") && !CheckAttribute(PChar, "quest.governor_smuggling.recover_money"))
 //				if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest") && IsInServiceOf(iNation) && iNation != PIRATE)
 				{
-					if(otherquest)	stemp = stemp + DLG_TEXT[81];
-					stemp = stemp + DLG_TEXT[82];
-					link.l2 = DLG_TEXT[83];
-					link.l2.go = "smuggler guild";
-					otherquest = true;
+					islandID = FindIslandByLocation(PChar.location);
+					if (islandID != "") smugglegoods = getRandomContrabandGood(GetIslandByID(islandID));
+					if (smugglegoods > 0)
+					{
+						NPChar.quest.smuggle.goods = smugglegoods;
+						if(otherquest)	stemp = stemp + DLG_TEXT[81];
+						stemp = stemp + DLG_TEXT[82];
+						link.l2 = DLG_TEXT[83];
+						link.l2.go = "smuggler guild";
+						otherquest = true;
+					}
 				}
 				if (!IsInServiceOf(iNation) && iNation != PERSONAL_NATION) stemp = stemp + " " + DLG_TEXT[102];
 				if (otherquest) dialog.text = stemp;
@@ -229,14 +252,29 @@ void ProcessDialogEvent()
 		
 		//Added by Levis for the smugglers guild -->
 		case "smuggler guild":
-			dialog.text = DLG_TEXT[84];
-			link.l1 = DLG_TEXT[85];
-			link.l1.go = "Smuggler_Accepted";
-			link.l2 = DLG_TEXT[86];
-			link.l2.go = "Smuggler_Refused";
+			smugglegoods = sti(GetAttribute(NPChar, "quest.smuggle.goods"));
+			smuggleweight = sti(GetAttribute(Goods[smugglegoods], "weight"));
+			if (GetSquadronFreeSpace(PChar, smugglegoods)*smuggleweight >= 300)
+			{
+				NPChar.quest.smuggle.amount = 300/smuggleweight;
+				dialog.text = DLG_TEXT[84];
+				link.l1 = DLG_TEXT[85];
+				link.l1.go = "Smuggler_Accepted";
+				link.l2 = DLG_TEXT[86];
+				link.l2.go = "Smuggler_Refused";
+			}
+			else
+			{
+				DeleteAttribute(NPChar, "quest.smuggle");
+				dialog.text = DLG_TEXT[121];
+				link.l1 = DLG_TEXT[122];
+				link.l1.go = "exit";
+			}
 		break;
 		
 		case "Smuggler_Accepted":
+			Preprocessor_Add("amount", NPChar.quest.smuggle.amount);
+			Preprocessor_Add("cargo", Goods[sti(GetAttribute(NPChar, "quest.smuggle.goods"))].name);
 			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[87];
 			link.l1 = DLG_TEXT[88];
@@ -250,6 +288,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Smuggler_Refused":
+			DeleteAttribute(NPChar, "quest.smuggle");
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			AddDialogExitQuest("Smuggler Guild Refused Governor");
 			DialogExit();
@@ -302,6 +341,281 @@ void ProcessDialogEvent()
 		break;
 		
 		//Added by Levis for the smugglers guild <--
+
+		// Added by Grey Roger for smuggling for governor -->
+
+		case "smuggling_check_cargo":
+			Preprocessor_Add("amount", NPChar.quest.smuggle.amount);
+			Preprocessor_Add("cargo", Goods[sti(GetAttribute(NPChar, "quest.smuggle.goods"))].name);
+			Preprocessor_Add("addr", GetMyAddressForm(NPChar, PChar, ADDR_TITLE, false, false));
+			if(CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling.arrested")) stemp = DLG_TEXT[124];
+			else stemp = DLG_TEXT[90];
+			stemp = stemp + DLG_TEXT[125];
+			if (GetSquadronGoods(PChar, sti(PChar.quest.smuggling_guild.governor_smuggling.goods)) >= sti(PChar.quest.smuggling_guild.governor_smuggling.amount))
+			{
+				stemp = stemp + DLG_TEXT[126];
+				dialog.text = stemp;
+				link.l1 = DLG_TEXT[127];
+				RemoveCharacterGoods(PChar, sti(PChar.quest.smuggling_guild.governor_smuggling.goods), sti(PChar.quest.smuggling_guild.governor_smuggling.amount));
+			}
+			else
+			{
+				stemp = stemp + DLG_TEXT[128];
+				dialog.text = stemp;
+				link.l1 = DLG_TEXT[129];
+				AddDialogExitQuest("governor_smuggling_recover_cargo");
+				PChar.quest.governor_smuggling.recover_cargo = true;
+				PChar.quest.governor_smuggling.recover_cargo.goods = PChar.quest.smuggling_guild.governor_smuggling.goods;
+				PChar.quest.governor_smuggling.recover_cargo.amount = PChar.quest.smuggling_guild.governor_smuggling.amount;
+				PChar.quest.governor_smuggling.recover_cargo.governor = NPChar.id;
+				PChar.quest.governor_smuggling.recover_cargo.nation = NPChar.nation;
+			}
+			if (sti(GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.money")) > 0)
+			{
+				NPChar.quest.cargo_checked = true;
+				link.l1.go = "smuggling_check_money";
+			}
+			else
+			{
+				if (CheckAttribute(PChar, "quest.governor_smuggling.recover_cargo"))
+				{
+					if(CheckCharacterItem(Pchar,"smuggling_papers"))
+					{
+						link.l1.go = "FirstSmugglingReport2";
+					}
+					else
+					{
+						AddDialogExitQuest("Hand in First Smuggling Report");
+						link.l1.go = "exit";
+					}
+					if (!CheckAttribute(NPChar, "original_TempNode")) NPChar.original_TempNode = NextDiag.TempNode;
+					NextDiag.TempNode = "smuggling_return_cargo";
+				}
+				else
+				{
+					link.l1.go = "smuggling_reward";
+				}
+			}
+		break;
+
+		case "smuggling_check_money":
+			smugglemoney = sti(PChar.quest.smuggling_guild.governor_smuggling.money);
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+			Preprocessor_Add("money", PChar.quest.smuggling_guild.governor_smuggling.money);
+			if (CheckAttribute(NPChar, "quest.cargo_checked"))
+			{
+				stemp = DLG_TEXT[131];
+				DeleteAttribute(NPChar, "quest.cargo_checked")
+			}
+			else
+			{
+				if(CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling.arrested")) stemp = DLG_TEXT[124];
+				else stemp = DLG_TEXT[90];
+				stemp = stemp + DLG_TEXT[130];
+			}
+			dialog.text = stemp;
+			if(sti(PChar.money) >= smugglemoney)
+			{
+				PlayStereoSound("INTERFACE\took_item.wav");
+				AddMoneyToCharacter(PChar, -1 * smugglemoney);
+				link.l1 = DLG_TEXT[132];
+				if (CheckAttribute(PChar, "quest.governor_smuggling.recover_cargo"))
+				{
+					if(CheckCharacterItem(PChar,"smuggling_papers"))
+					{
+						link.l1.go = "FirstSmugglingReport2";
+					}
+					else
+					{
+						AddDialogExitQuest("Hand in First Smuggling Report");
+						link.l1.go = "exit";
+					}
+					if (!CheckAttribute(NPChar, "original_TempNode")) NPChar.original_TempNode = NextDiag.TempNode;
+					NextDiag.TempNode = "smuggling_return_cargo";
+				}
+				else link.l1.go= "smuggling_reward";
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[133];
+				link.l1.go = "smuggling_owe_money";
+			}
+		break;
+
+		case "smuggling_owe_money":
+			Preprocessor_Add("money", PChar.quest.smuggling_guild.governor_smuggling.money);
+			dialog.text = DLG_TEXT[134];
+			AddDialogExitQuest("governor_smuggling_recover_money");
+			PChar.quest.governor_smuggling.recover_money = true;
+			PChar.quest.governor_smuggling.recover_money.amount = PChar.quest.smuggling_guild.governor_smuggling.money;
+			PChar.quest.governor_smuggling.recover_money.governor = NPChar.id;
+			PChar.quest.governor_smuggling.recover_money.nation = NPChar.nation;
+			link.l1 = DLG_TEXT[135];
+			if(CheckCharacterItem(PChar,"smuggling_papers"))
+			{
+				link.l1.go = "FirstSmugglingReport2";
+			}
+			else
+			{
+				AddDialogExitQuest("Hand in First Smuggling Report");
+				link.l1.go = "exit";
+			}
+			if (!CheckAttribute(NPChar, "original_TempNode")) NPChar.original_TempNode = NextDiag.TempNode;
+			NextDiag.TempNode = "smuggling_return_money";
+		break;
+
+		case "smuggling_return_cargo":
+			Preprocessor_Add("amount", PChar.quest.governor_smuggling.recover_cargo.amount);
+			Preprocessor_Add("cargo", Goods[sti(GetAttribute(PChar, "quest.governor_smuggling.recover_cargo.goods"))].name);
+			dialog.text = DLG_TEXT[143];
+			if (GetSquadronGoods(PChar, sti(PChar.quest.governor_smuggling.recover_cargo.goods)) >= sti(PChar.quest.governor_smuggling.recover_cargo.amount))
+			{
+				link.l1 = DLG_TEXT[144];
+				link.l1.go = "smuggling_return_cargo2";
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[145];
+				link.l1.go = "smuggling_still_not_returned";
+			}
+		break;
+
+		case "smuggling_return_cargo2":
+			RemoveCharacterGoods(PChar, sti(PChar.quest.governor_smuggling.recover_cargo.goods), sti(PChar.quest.governor_smuggling.recover_cargo.amount));
+			DeleteAttribute(PChar, "quest.governor_smuggling.recover_cargo");	// Wipe the attributes which say you owe the governor some cargo
+			PChar.quest.governor_smuggling_time_up_cargo.over = "yes";		// Cancel the timer which penalises you for not returning cargo
+			stemp = DLG_TEXT[146];
+			if (CheckAttribute(PChar, "quest.governor_smuggling.recover_money"))	// Check if you also have money to return
+			{
+				Preprocessor_Add("money", sti(PChar.quest.governor_smuggling.recover_money.amount));
+				stemp = stemp + "\n" + DLG_TEXT[148];
+				if (sti(PChar.money) >= sti(PChar.quest.governor_smuggling.recover_money.amount))
+				{
+					link.l1 = DLG_TEXT[149];
+					link.l1.go = "smuggling_return_money2";
+				}
+				else
+				{
+					if (!CheckAttribute(NPChar, "original_TempNode")) NPChar.original_TempNode = NextDiag.TempNode;
+					NextDiag.TempNode = "smuggling_return_money";
+					link.l1 = DLG_TEXT[150];
+					link.l1.go = "smuggling_still_not_returned";
+				}
+			}
+			else
+			{
+				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+				stemp = stemp + DLG_TEXT[147];
+				link.l1 = DLG_TEXT[154];
+				link.l1.go = "exit";
+				AddDialogExitQuest("close_governor_smuggling");
+			}
+			dialog.text = stemp;
+		break;
+
+		case "smuggling_return_money":
+			Preprocessor_Add("money", sti(PChar.quest.governor_smuggling.recover_money.amount));
+			dialog.text = DLG_TEXT[148];
+			if (sti(PChar.money) >= sti(PChar.quest.governor_smuggling.recover_money.amount))
+			{
+				link.l1 = DLG_TEXT[149];
+				link.l1.go = "smuggling_return_money2";
+			}
+			else
+			{
+				if (!CheckAttribute(NPChar, "original_TempNode")) NPChar.original_TempNode = NextDiag.TempNode;
+				NextDiag.TempNode = "smuggling_return_money";
+				link.l1 = DLG_TEXT[150];
+				link.l1.go = "smuggling_still_not_returned";
+			}
+		break;
+
+		case "smuggling_return_money2":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, -1 * sti(PChar.quest.governor_smuggling.recover_money.amount));
+			DeleteAttribute(PChar, "quest.governor_smuggling.recover_money");	// Wipe the attributes which say you owe the governor some money
+			PChar.quest.governor_smuggling_time_up_money.over = "yes";		// Cancel the timer which penalises you for not returning money
+			stemp = DLG_TEXT[151];
+			if (CheckAttribute(PChar, "quest.governor_smuggling.recover_cargo"))	// Check if you also have cargo to return
+			{
+				Preprocessor_Add("amount", PChar.quest.governor_smuggling.recover_cargo.amount);
+				Preprocessor_Add("cargo", Goods[sti(GetAttribute(PChar, "quest.governor_smuggling.recover_cargo.goods"))].name);
+				stemp = stemp + DLG_TEXT[143];
+				if (GetSquadronGoods(PChar, sti(PChar.quest.governor_smuggling.recover_cargo.goods)) >= sti(PChar.quest.governor_smuggling.recover_cargo.amount))
+				{
+					link.l1 = DLG_TEXT[144];
+					link.l1.go = "smuggling_return_cargo2";
+				}
+				else
+				{
+					link.l1 = DLG_TEXT[145];
+					link.l1.go = "smuggling_still_not_returned";
+					if (!CheckAttribute(NPChar, "original_TempNode")) NPChar.original_TempNode = NextDiag.TempNode;
+					NextDiag.TempNode = "smuggling_return_cargo";
+				}
+			}
+			else
+			{
+				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+				stemp = stemp + DLG_TEXT[147];
+				link.l1 = DLG_TEXT[154];
+				link.l1.go = "exit";
+				AddDialogExitQuest("close_governor_smuggling");
+			}
+			dialog.text = stemp;
+		break;
+
+		case "smuggling_still_not_returned":
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+			dialog.text = DLG_TEXT[153];
+			link.l1 = DLG_TEXT[154];
+			link.l1.go = "exit";
+		break;
+
+		case "smuggling_reward":
+			int final_reward;
+			string smuggling_reward;
+			smugglemoney = sti(PChar.quest.smuggling_guild.governor_smuggling.money);
+			stemp = DLG_TEXT[136];
+			if(CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling.arrested"))
+			{
+				AddXP(PChar, SKILL_SNEAK, 1000, XP_GROUP_OFFIC);
+				stemp = stemp + DLG_TEXT[138];
+				final_reward = smugglemoney * arrest_reward / 100;
+				smuggling_reward = arrest_reward + DLG_TEXT[139] + final_reward + DLG_TEXT[140];
+				ChangeRMRelation(PChar, sti(PChar.quest.smuggling_guild.governor_smuggling.nation), 2);
+			}
+			else
+			{
+				AddXP(PChar, SKILL_SNEAK, 500, XP_GROUP_OFFIC);
+				stemp = stemp + DLG_TEXT[137];
+				final_reward = smugglemoney * base_reward / 100;
+				smuggling_reward = base_reward + DLG_TEXT[139] + final_reward + DLG_TEXT[140];
+				ChangeRMRelation(PChar, sti(pchar.quest.smuggling_guild.governor_quest.nation), 1);
+			}
+			if (final_reward < minimum_reward)
+			{
+				final_reward = minimum_reward;
+				smuggling_reward = DLG_TEXT[141] + final_reward + DLG_TEXT[142];
+			}
+			stemp = stemp + smuggling_reward;
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, final_reward);
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+			dialog.text = stemp;
+			link.l1 = DLG_TEXT[88];
+			if(CheckCharacterItem(PChar,"smuggling_papers"))
+			{
+				link.l1.go = "FirstSmugglingReport2";
+			}
+			else
+			{
+				AddDialogExitQuest("Hand in First Smuggling Report");
+				link.l1.go = "exit";
+			}	
+		break;
+
+		// <-- Added by Grey Roger for smuggling for governor
 
 		case "kill_pirate":
 			GenerateQuestShip("Quest pirate", iNation); // PB: Use Generic Function
@@ -431,6 +745,22 @@ void ProcessDialogEvent()
 			LaunchCaptureColony(PChar, GetCurrentTownID());
 		break;
 // <-- KK
+
+// GR -->
+		case "executions_warning":
+			PChar.executions_warned = true;	// Note the fact that you have been warned
+			PChar.executions = 0;		// Reset counter so you aren't punished again unless you've been executing more prisoners
+			SetRMRelation(PChar, iNation, RequiredNextRankDirect(GetRank(PChar, iNation)));	// Reset relation points to base level for current rank
+			PlaySound("INTERFACE\notebook_01.wav");
+			sLogTitle = "Prisoner Executions";
+			sLogEntry = "The " + GetNationDescByType(iNation) + " government did not take kindly to my treatment of prisoners. I had better stop executing them if I want to remain in the service of " + GetNationNameByType(iNation) + ".";
+			WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+			dialog.text = DLG_TEXT[118];
+			if (GetLetterOfMarqueQuantity() > 1) dialog.text = DLG_TEXT[118] + DLG_TEXT[119];
+			link.l1 = DLG_TEXT[120];
+			link.l1.go = "exit";
+		break;
+// <-- GR
 	}
 	//Taken from switch so it works in both instances
 	if (Dialog.CurrentNode == "Second time" || Dialog.CurrentNode == "First Time")
@@ -513,10 +843,20 @@ void ProcessDialogEvent()
 		{
 			if(CheckCharacterItem(Pchar,"smuggling_first_report"))
 			{
-				link.l2 = DLG_TEXT[89];
+				if(CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling.arrested"))
+				{
+					link.l2 = DLG_TEXT[123];
+				}
+				else
+				{
+					link.l2 = DLG_TEXT[89];
+				}
 				link.l2.go = "FirstSmugglingReport";
+				if (sti(GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.money")) > 0) link.l2.go = "smuggling_check_money";
+				if (!CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling.goods_left")) link.l2.go = "smuggling_check_cargo";
 			}
 		}
+
 		if(GetAttribute(pchar,"quest.smuggling_guild.governor_quest.town") == GetCurrentTownID())
 		{
 			if(CheckCharacterItem(Pchar,"opiumlist") && !CheckAttribute(pchar,"quest.smuggling_guild.governor_quest.gave_buyers_list"))

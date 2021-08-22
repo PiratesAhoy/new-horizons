@@ -2,13 +2,12 @@ void CreateTempQuestEnemyCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	ch.old.name = "Ronald";
 	ch.old.lastname = "Blacklock";
-	ch.name 	= TranslateString("","Ronald");
-	ch.lastname 	= TranslateString("","Blacklock");
+	ch.name 	= TranslateString("", "Ronald");
+	ch.lastname 	= TranslateString("", "Blacklock");
 	ch.id		= "Greenford Prison Commendant";
 	ch.model	= "Offic_eng_18";
 	ch.sex = "man";
@@ -51,7 +50,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Eng_soldier_39";
 	ch.model	= "soldier_eng5";
@@ -88,7 +87,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Eng_soldier_38";
 	ch.model	= "soldier_eng5";
@@ -125,7 +124,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "guard_church1";
 	ch.model = Nations[ENGLAND].fantomModel.m2; // PB
@@ -180,7 +179,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "guard_church2";
 	ch.model = Nations[ENGLAND].fantomModel.m3; // PB
@@ -234,7 +233,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "guard_church3";
 	ch.model = Nations[ENGLAND].fantomModel.m4; // PB
@@ -273,8 +272,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Lieutenant";
 	ch.old.lastname = "Harris";
-	ch.name = TranslateString("","Lieutenant");
-	ch.lastname = TranslateString("","Harris");
+	ch.name = TranslateString("", "Lieutenant");
+	ch.lastname = TranslateString("", "Harris");
 	ch.id		= "Lighthouse_officer";
 	ch.model	= 1; // PB
 	ch.nation = ENGLAND;
@@ -311,8 +310,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Captain";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Captain");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Captain");
+	ch.lastname = "";
 	ch.id		= "Quest_frigate_captain";
 	ch.nation	= FRANCE;
 	ch.model	= "capitan";
@@ -354,8 +353,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 					// Bernardo Gamboa - испанец. корсар на службе голландии
 	ch.old.name = "Spanish";
 	ch.old.lastname = "Lieutenant";
-	ch.name = TranslateString("","Spanish");
-	ch.lastname = TranslateString("","Lieutenant");
+	ch.name = TranslateString("Spanish", "Lieutenant");
+	ch.lastname = "";
 	ch.id		= "Bernardo Gamboa";
 	ch.model = "spa_lut1_18";
 	ch.sex = "man";
@@ -399,8 +398,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 				// Port Solider
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Sp_pris_guard1";
 	ch.model = "soldier_spa3_18";
 	ch.sex = "man";
@@ -409,7 +408,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = PIRATE;
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	ch.greeting = "Gr_Redmond Solider";
+	ch.greeting = "Gr_isla muelle soldier";
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
@@ -436,8 +435,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 				// Port Solider
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Solider");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Sp_pris_guard2";
 	ch.model = "soldier_spa4_18";
 	ch.sex = "man";
@@ -446,7 +445,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = PIRATE;
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
-	ch.greeting = "Gr_Redmond Solider";
+	ch.greeting = "Gr_isla muelle soldier";
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
@@ -473,7 +472,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	//Soldier in prison
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Havana_Prison_Sold1";
 	ch.model	= 6; // PB
@@ -512,7 +511,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	//Soldier in prison
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Havana_Prison_Sold2";
 	ch.model	= 4; // PB
@@ -550,8 +549,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Prison";
 	ch.old.lastname = "Commendant";
-	ch.name 	= TranslateString("","Prison");
-	ch.lastname 	= TranslateString("","Commendant");
+	ch.name 	= TranslateString("Prison", "Commendant");
+	ch.lastname 	= "";
 	ch.id		= "Havana Prison Commendant";
 	ch.model	= "spa_cpt_18";
 	ch.sex = "man";
@@ -594,8 +593,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Spanish";
 	ch.old.lastname = "Officer";
-	ch.name 	= TranslateString("","Spanish");
-	ch.lastname 	= TranslateString("","Officer");
+	ch.name 	= TranslateString("Spanish", "Officer");
+	ch.lastname 	= "";
 	ch.id		= "random_spain_off";
 	ch.model	= "spa_cpt1_18";
 	ch.sex = "man";
@@ -642,8 +641,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 					// Corentin Lucay - помощник пердыдущего перса
 	ch.old.name = "Spanish";
 	ch.old.lastname = "Midshipman";
-	ch.name = TranslateString("","Spanish");
-	ch.lastname = TranslateString("","Midshipman");
+	ch.name = TranslateString("Spanish", "Midshipman");
+	ch.lastname = "";
 	ch.id		= "Corentin Lucay";
 	ch.model = "spa_mds1_18";
 	ch.sex = "man";
@@ -681,8 +680,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // Sao Feng quest -->
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Larry";
 	ch.model	= "Sailor16";
 	ch.sound_type = "pirate";
@@ -718,8 +717,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Mr.";
 	ch.old.lastname = "Mercer";
-	ch.name = TranslateString("","Mr.");
-	ch.lastname = TranslateString("","Mercer");
+	ch.name = TranslateString("", "Mr.");
+	ch.lastname = TranslateString("", "Mercer");
 	ch.id		= "Mr Mercer";
 	ch.model	= "Corsair1";
 	ch.sound_type = "pirate";
@@ -755,8 +754,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "3";
-	ch.name = TranslateString("","Pirate");
-	ch.lastname = TranslateString("","3");
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = TranslateString("", "3");
 	ch.id		= "Pirates_3";
 	ch.model	= "corsair1";
 	ch.sound_type = "pirate";
@@ -792,8 +791,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	// Gentleman Jocard (White).
 	ch.old.name = "Gentleman";
 	ch.old.lastname = "Jocard";
-	ch.name = TranslateString("","Gentleman");
-	ch.lastname = TranslateString("","Jocard");
+	ch.name = TranslateString("", "Gentleman");
+	ch.lastname = TranslateString("", "Jocard");
 	ch.id		= "Gentleman Jocard (White)";
 	ch.model = "Huber_Fra4_17";
 	ch.sex = "man";

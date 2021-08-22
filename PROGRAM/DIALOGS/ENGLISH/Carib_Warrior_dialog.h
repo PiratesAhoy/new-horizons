@@ -15,7 +15,7 @@ string DLG_TEXT[59] = {
 "Maybe someone has moved there since your people left? They might have repaired it.",
 "If no holes in bridge, be careful of people on other island.",
 "Great. If the bridge isn't dangerous then the island is.",
-"Walk near side of bridge, not in middle. Side strengthened by rope. Middle not strenghtened by anything.",
+"Walk near side of bridge, not in middle. Side strengthened by rope. Middle not strengthened by anything.",
 "Yes, I can see. Some planks are broken in the middle. They're probably the ones I don't want to walk on.",
 "Skull somewhere near here. I will find it. You keep watch.",
 "Shouldn't I help search?",

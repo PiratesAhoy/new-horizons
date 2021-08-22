@@ -1,0 +1,27 @@
+fast_commands_title
+{
+Hot Action Commands
+}
+
+fast_commands_info
+{
+    Hot Action command icons appear at the top left corner of the screen. Only one command could be Hot at a time and it will be shown by icon. If there is no icon there, that means that none of Hot Action could be performed at this place or at this time.
+
+    There different Hot Action Commands for sea and for land.
+
+    While player is at sea he can use following Hot Action commands (pic.1 from left to right):
+  - Moor to a shore or town pier (available if player's ship is close to a mooring place and there is no enemies around).
+  - Start Boarding (available when enemy ship is very close to player's). Start boarding with closest enemy ship.
+  - Open World Map (available when no enemy ships are around). Open World Map screen.
+  - Exchange or Reloading (available when a companion's ship is close to player's and there is no enemies around). Opens exchange screen. Player can exchange crew, offciers, goods from one ship to another. Also he can replace the captain or even swap ships.
+
+	While player is on land he can use following Hot Action commands (pic.2 from left to right):
+  - Closed Lock. This icon appears when player is standing near a door or gate that are closed. This icon only provides an info, and nothing happens if player press "Hot Action" key.
+  - Opened Lock. This icon means that player is standing in front of open door or gate and after hitting "Hot Action" key player will enter to the next location.
+  - Use/Take item. This icons shows that you can take something or do something at this place. All will be done automatically after using "Hot action" key. Also this command is used for putting items to chests or taking them from chests.
+  - Look. Icon shows that you can inspect the item or character you're standing near.
+  - Talk. Icon shows that you can start a talk with a man standing in front of you.
+  - Sail away. Icon shows that here player can go to his ship and leave this island.
+
+    "Hot Action" command could be perform with "Hot Action" key.
+}

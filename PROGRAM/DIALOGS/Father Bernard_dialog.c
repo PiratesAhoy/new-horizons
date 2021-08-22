@@ -33,15 +33,16 @@ void ProcessDialogEvent()
 	makearef(Diag, NPChar.Dialog);
 
 	Preprocessor_Add("Father", GetMyFirstNames(CharacterFromID("Father Bernard"), false));
-	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-	else Preprocessor_Add("child", XI_ConvertString("child"));
+	if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+	else Preprocessor_Add("addr", XI_ConvertString("my child"));
 	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
 		case "First time":
-			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
-			else Preprocessor_Add("pronoun", XI_ConvertString("her"));
+//			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("his"));
+//			else Preprocessor_Add("pronoun", XI_ConvertString("her"));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounPossessive(PChar)));
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
 			Dialog.defSnd = "dialogs\0\017";
@@ -62,11 +63,14 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				if (PChar.sex == "man") Preprocessor_Add("pronoun2", XI_ConvertString("his"));
-				else  Preprocessor_Add("pronoun2", XI_ConvertString("her"));
+//				if (PChar.sex == "man") Preprocessor_Add("pronoun2", XI_ConvertString("his"));
+//				else  Preprocessor_Add("pronoun2", XI_ConvertString("her"));
+				Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounPossessive(PChar)));
 				dialog.snd1 = "Voice\FATB\FATB002";
 				dialog.snd2 = "Voice\FATB\FATB003";
 				dialog.snd3 = "Voice\FATB\FATB004";
+				if (PChar.sex == "man") Preprocessor_Add("addr_upper", FirstLetterUp(XI_ConvertString("my son")));
+				else Preprocessor_Add("addr_upper", FirstLetterUp(XI_ConvertString("my child")));
 				d.Text = RandPhrase(DLG_TEXT[4] + GetMyName(Pchar) + DLG_TEXT[5], DLG_TEXT[6] + GetMyName(Pchar) + DLG_TEXT[7], DLG_TEXT[8], &dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 				Link.l1 = GetMyFullName(NPChar) + DLG_TEXT[9];
 				Link.l1.go = "donation";
@@ -136,6 +140,7 @@ void ProcessDialogEvent()
 				dialog.text = DLG_TEXT[27];
 				link.l1 = DLG_TEXT[28];
 				link.l1.go = "exit";
+				AddQuestRecord("ANIMISTS", 33);		// GR: moved here from case "to_prison_for_teacher_3" so that questbook is updated when you receive letter
 				GiveItem2Character(pchar, "letter_prison");
 				pchar.quest.ANIMISTS = "to_prison_for_teacher_3";
 			}
@@ -228,7 +233,6 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			pchar.quest.ANIMISTS = "to_prison_for_teacher_2";
 			AddDialogExitQuest("wait_in_church_for_letters");
-			AddQuestRecord("ANIMISTS", 33);
 		break;
 
  		case "kill_all_ANIMISTS_in_churcha":  //
@@ -385,8 +389,8 @@ void ProcessDialogEvent()
 			AddQuestRecord("ANIMISTS", 8);
 			pchar.quest.ANIMISTS = "letter_to_domingues";
 			GiveItem2Character(pchar, "letter_to_domingues");
-			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-			else Preprocessor_Add("child", XI_ConvertString("child"));
+			if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+			else Preprocessor_Add("addr", XI_ConvertString("my child"));
 			dialog.text = DLG_TEXT[161];
 			link.l1 = DLG_TEXT[162];
 			link.l1.go = "exit";
@@ -418,7 +422,8 @@ void ProcessDialogEvent()
 		case "church_help_good":
 			dialog.snd = "Voice\FATB\FATB032";
 			dialog.text = DLG_TEXT[89];
-			link.l1 = DLG_TEXT[90];
+			if (NPChar.quest.church_help == "without_letters") link.l1 = DLG_TEXT[182] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[86])]) + DLG_TEXT[183];
+			else link.l1 = DLG_TEXT[90];
 			link.l1.go = "church_help_good_2";
 		break;
 
@@ -431,7 +436,6 @@ void ProcessDialogEvent()
 //			link.l2.go = "ANIMISTS_letter_2";  // --> Cat
 			AddQuestRecord("church_help", 13);
 			CloseQuestHeader("church_help");
-			npchar.quest.church_help = "done";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 2500);
 			if(AUTO_SKILL_SYSTEM)
@@ -442,7 +446,8 @@ void ProcessDialogEvent()
 			else { AddPartyExp(pchar, 5000); }
 			ChangeCharacterReputation(pchar, 5);
 			ChangeCharacterAddress(characterFromID("Gilbert Ballester"), "none", "none");
-			TakeItemFromCharacter(pchar, "pornushka");
+			if (NPChar.quest.church_help != "without_letters") TakeItemFromCharacter(pchar, "pornushka");
+			npchar.quest.church_help = "done";
 			SetRumourState("Children_GreenChurch", false); // NK
 			Preprocessor_Add("Father", GetMyFirstNames(CharacterFromID("Father Bernard"), false));
 		break;
@@ -450,7 +455,8 @@ void ProcessDialogEvent()
 		case "church_help_bad":
 			dialog.snd = "Voice\FATB\FATB034";
 			dialog.text = DLG_TEXT[93];
-			link.l1 = DLG_TEXT[94];
+			if (NPChar.quest.church_help == "without_letters") link.l1 = DLG_TEXT[184] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[86])]) + DLG_TEXT[185];
+			else link.l1 = DLG_TEXT[94];
 			link.l1.go = "church_help_bad_2";
 		break;
 
@@ -463,7 +469,6 @@ void ProcessDialogEvent()
 //			link.l2.go = "ANIMISTS_letter_2";  // --> Cat
 			AddQuestRecord("church_help", 14);
 			CloseQuestHeader("church_help");
-			npchar.quest.church_help = "done";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 2500);
 			if(AUTO_SKILL_SYSTEM)
@@ -474,13 +479,14 @@ void ProcessDialogEvent()
 			else { AddPartyExp(pchar, 2000); }
 			ChangeCharacterAddress(characterFromID("father jerald"), "none", "none");
 			characters[GetCharacterIndex("Gilbert Ballester")].dialog.filename = "father jerald_dialog.c";
-			TakeItemFromCharacter(pchar, "pornushka");
+			if (NPChar.quest.church_help != "without_letters") TakeItemFromCharacter(pchar, "pornushka");
+			npchar.quest.church_help = "done";
 			SetRumourState("Children_GreenChurch", false); // NK
 			Preprocessor_Add("Father", GetMyFirstNames(CharacterFromID("Father Bernard"), false));
 		break;
 
 		case "church_help":
-			if (makeint(pchar.reputation) >=60)
+			if (makeint(pchar.reputation) >= (REPUTATION_GOOD + REPUTATION_PLAIN)/2)
 			{
 				dialog.snd = "Voice\FATB\FATB036";
 				dialog.text = DLG_TEXT[97];
@@ -530,8 +536,8 @@ void ProcessDialogEvent()
 			AddQuestRecord("Church_help", 1);
 			npchar.quest.church_help = "to_greenford";
 			Preprocessor_Add("Father", GetMyFirstNames(CharacterFromID("Father Bernard"), false));
-			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-			else Preprocessor_Add("child", XI_ConvertString("child"));
+			if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+			else Preprocessor_Add("addr", XI_ConvertString("my child"));
 			dialog.text = DLG_TEXT[112];
 			link.l1 = DLG_TEXT[113];
 			link.l1.go = "exit";
@@ -666,15 +672,18 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_abduction_sad_marriage2":
-			Preprocessor_Add("romance", GetMyName(characterFromID(PChar.quest.romance)));
-			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("her"));
-			else Preprocessor_Add("pronoun", XI_ConvertString("his"));
+			Preprocessor_Add("romance", GetMyName(CharacterFromID(PChar.quest.romance)));
+//			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("her"));
+//			else Preprocessor_Add("pronoun", XI_ConvertString("his"));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounPossessive(CharacterFromID(PChar.quest.romance))));
 			dialog.text = DLG_TEXT[173];
 			link.l1 = DLG_TEXT[174];
 			link.l1.go = "ardent_abduction_sad_marriage3";
 		break;
 
 		case "ardent_abduction_sad_marriage3":
+			if (PChar.sex == "man") Preprocessor_Add("romance_child", XI_ConvertString("my child"));
+			else Preprocessor_Add("romance_child", XI_ConvertString("my son"));
 			dialog.text = DLG_TEXT[175];
 			link.l1 = "...";
 			link.l1.go = "exit";
@@ -683,8 +692,9 @@ void ProcessDialogEvent()
 
 		case "ardent_abduction_story_checks_out":
 			Preprocessor_Add("romance", GetMyName(characterFromID(PChar.quest.romance)));
-			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("she"));
-			else Preprocessor_Add("pronoun", XI_ConvertString("he"));
+//			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("she"));
+//			else Preprocessor_Add("pronoun", XI_ConvertString("he"));
+			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID(PChar.quest.romance))));
 			dialog.text = DLG_TEXT[176];
 			link.l1 = DLG_TEXT[178];
 			link.l1.go = "ardent_abduction_story_checks_out2";
@@ -785,6 +795,8 @@ void ProcessDialogEvent()
              }
              else
              {
+		if (PChar.sex == "man") Preprocessor_Add("addr_upper", FirstLetterUp(XI_ConvertString("my son")));
+		else Preprocessor_Add("addr_upper", FirstLetterUp(XI_ConvertString("my child")));
                 d.Text     = DLG_TEXT[148] +
                              intResetPrice + 
                              DLG_TEXT[149]
@@ -861,9 +873,13 @@ void ProcessDialogEvent()
         if ( IsCharacterPerkOn(PChar,"MusketsShoot") )            { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"GrapplingProfessional") )   { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"InstantBoarding") )         { intFreePerks++; }
-        if ( IsCharacterPerkOn(PChar,"BasicBattleState") )        { intFreePerks++; }
-        if ( IsCharacterPerkOn(PChar,"AdvancedBattleState") )     { intFreePerks++; }
-        if ( IsCharacterPerkOn(PChar,"ShipDefenceProfessional") ) { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"BasicDamageControl") )        { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"AdvancedDamageControl") )     { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"ProfessionalDamageControl") ) { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"BasicFirstAid") )		  { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"AdvancedFirstAid") )	  { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"Rigging") )        	  { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"RiggingAdvance") )          { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"LightRepair") )             { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"InstantRepair") )           { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"ShipSpeedUp") )             { intFreePerks++; }
@@ -906,9 +922,13 @@ void ProcessDialogEvent()
         DeleteAttribute(PChar,"perks.list.MusketsShoot");
         DeleteAttribute(PChar,"perks.list.GrapplingProfessional");
         DeleteAttribute(PChar,"perks.list.InstantBoarding");
-        DeleteAttribute(PChar,"perks.list.BasicBattleState");
-        DeleteAttribute(PChar,"perks.list.AdvancedBattleState");
-        DeleteAttribute(PChar,"perks.list.ShipDefenceProfessional");
+        DeleteAttribute(PChar,"perks.list.BasicDamageControl");
+        DeleteAttribute(PChar,"perks.list.AdvancedDamageControl");
+        DeleteAttribute(PChar,"perks.list.ProfessionalDamageControl");
+        DeleteAttribute(PChar,"perks.list.BasicFirstAid");
+        DeleteAttribute(PChar,"perks.list.AdvancedFirstAid");
+        DeleteAttribute(PChar,"perks.list.Rigging");
+        DeleteAttribute(PChar,"perks.list.RiggingAdvance");
         DeleteAttribute(PChar,"perks.list.LightRepair");
         DeleteAttribute(PChar,"perks.list.InstantRepair");
         DeleteAttribute(PChar,"perks.list.ShipSpeedUp");
@@ -932,6 +952,7 @@ void ProcessDialogEvent()
         /*intHealthPoints = 50 + (Rank * (4 + GetDifficulty() + ((GetDifficulty()-1)*4)));
         LAi_SetHP(PChar,LAi_GetCharacterHP(PChar),makefloat(intHealthPoints));*/
         ResetHP(&PChar);
+	Preprocessor_Add("person", XI_ConvertString(PChar.sex));
         d.Text     = DLG_TEXT[146];
         Link.l1    = DLG_TEXT[147];
         Link.l1.go = "ExitToCharacterSheet";

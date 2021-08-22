@@ -1,0 +1,11 @@
+title=Hunt the Traitors.
+text.t1=Wolfe may be in a sloop named 'Loup-Garou' near #sisland_Falaise de Fleur#. I don't like the idea of searching for him in town so I shall attempt to find this ship at sea near the island.
+text.t2=I've captured Thomas Wolfe aboard a stolen French sloop. I should take him to #sGreenford# prison.
+text.t3=Wolfe is safely locked up.
+text.t4=Now I need to ask the prison commandant to release Wolfe.
+text.t5=Wolfe has been released into my custody. Now we sail to Boca de Yuman on #sisland_Hispaniola#.
+text.t6=Wolfe says Quelp is to meet him near a windmill.
+text.t7=Quelp plotted to attack Eleuthera using French Voltigeurs disguised in British uniform so that America would declare war on Britain. Quelp and Wolfe are dead but Sharpe thinks there are more Voltigeurs nearby. But where? Not back at the beach, obviously...
+text.t8=We killed the rest of the Voltigeurs and captured their officer. Now back to Bridgetown. Admiral Pellew will certainly be interested in these events!
+text.t9=Lieutenant Sharpe and the Chosen Men are leaving for Europe so we shall probably not see them again. Meanwhile I should report to the Admiral in Naval HQ. I should also visit my wife.
+text.t10=While we were on land, a French patrol frigate found the 'Atropos'. After we were back aboard we defeated her.

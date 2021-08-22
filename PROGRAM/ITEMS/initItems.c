@@ -90,7 +90,8 @@ void InitItems()  // economics adjusted by BB & Sulan 2011-08
   n = InitQuestItem(n,"SpanishLetter",	"SpanishLetter",		"",	 		4,  14,		0,0,	"","",	"","",		"","",""	);
   n = InitQuestItem(n,"EITC_Passport",	"EITC_Passport",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For Cutler Beckett
   n = InitQuestItem(n,"Trade_Passport",	"Trade_Passport",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For player types
-  n = InitQuestItem(n,"Davy_Chest",		"Davy_Chest",			"",		 "AS",	 8,		0,0,	"","",	"","",		"","",""	); // PB: For player types
+  n = InitQuestItem(n,"Davy_Chest",		"Davy_Chest",			"",		 "AS",	 8,		0,0,	"","",	"","",		"","",""	); // PB: Davy Jones
+  n = InitQuestItem(n,"Devil_Contract", 	"Devil_Contract",		"",		4,	3,		0,0,	"","",	"","",		"","",""	); // PB: For Ricardo Orellana
   n = InitQuestItem(n,"Correspondence1",	"Correspondence1",		"",	 		4,  14,		0,0,	"","",	"","",		"","",""	); //PW letter1 for arnaud/sabine matton sidequest
   n = InitQuestItem(n,"Correspondence2", "Correspondence2",		"",	 		4,  14,		0,0,	"","",	"","",		"","",""	); //PW letter2 for arnaud/sabine matton sidequest
   n = InitQuestItem(n,"cryskull",	"cryskull",		 "cryskul",   12,    8,	    0,0,	"","",	"","",		"","",""	); // GR: amber skull for "Crystal Skull" sidequest
@@ -113,14 +114,14 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestBlade(n, "bladep202",	              "bladep202", 	"", "",  "", "",      "", "", 	  "", 0,   0);    //fake Teach pistol (right hand)
   n = InitQuestBlade(n, "bladep203", 	              "bladep203", 	"", "",  "", "",      "", "", 	  "", 0,   0);    //fake Teach pistol (right hand) 
   n = InitQuestBlade(n, "bladep204", 	              "bladep204", 	"", "",  "", "",      "", "", 	  "", 0,   0);    //fake Teach pistol (right hand) 
-  n = InitQuestBlade(n, "bladep205",	              "bladep205", 	"", "",  "", "",      "", "", 	  "", 0,   0);    //fake Teach pistol (right hand)
+  n = InitQuestBlade(n, "bladep205",	              "bladep205",   "JRH", 13,  "", "",      "", "", 	  "", 0,   0);    //fake Teach pistol (right hand)
   n = InitQuestBlade(n, "bladearmchair",             "armchair01",      "", "",  "", "",      "", "", 	  "", 0,   1);    //armchair
 
-  n = InitQuestBlade(n, "bladeA2", 	                "bladeA2",  "JRH4",  5,   10, 12,     15, 10, 	  "", 0,   1);    //AOP blade2 rapier POTC blade2-type
-  n = InitQuestBlade(n, "bladeA4", 	                "bladeA4",  "JRH4",  4,   10, 12,     15, 10, 	  "", 0,   1);    //AOP blade4 rapier red/yellow
-  n = InitQuestBlade(n, "bladeA5", 	                "bladeA5",  "JRH4",  2,   27, 37,     32, 27, 	  "", 3,   1);    //AOP blade5 short broad sabre/cutlass
-  n = InitQuestBlade(n, "bladeA11", 	               "bladeA11",  "JRH4",  3,   10, 12,     15, 10, 	  "", 0,   1);    //AOP blade11 black rapier
-  n = InitQuestBlade(n, "bladeA17", 	               "bladeA17",  "JRH4",  1,   10, 12,     15, 10, 	  "", 0,   1);    //AOP blade17 very long yellow sabre
+//  n = InitQuestBlade(n, "bladeA2", 	                "bladeA2",  "JRH4",  5,   10, 12,     15, 10, 	  "", 0,   1);    //AOP blade2 rapier POTC blade2-type
+//  n = InitQuestBlade(n, "bladeA5", 	                "bladeA4",  "JRH4",  4,   10, 12,     15, 10, 	  "", 0,   1);    //AOP blade4 rapier red/yellow       		//obs bladeA4 & A5 have switched id
+//  n = InitQuestBlade(n, "bladeA4", 	                "bladeA5",  "JRH4",  2,   27, 37,     32, 27, 	  "", 3,   1);    //AOP blade5 short broad sabre/cutlass	//obs bladeA4 & A5 have switched id
+//  n = InitQuestBlade(n, "bladeA11", 	               "bladeA11",  "JRH4",  3,   10, 12,     15, 10, 	  "", 0,   1);    //AOP blade11 black rapier
+//  n = InitQuestBlade(n, "bladeA17", 	               "bladeA17",  "JRH4",  1,   10, 12,     15, 10, 	  "", 0,   1);    //AOP blade17 very long yellow sabre
   n = InitQuestBlade(n, "bladeaxe4", 	                   "axe4",  "JRH2", 14,   10, 12,     15, 10, 	  "", 0,   0);    //execution axe
   n = InitQuestBlade(n, "bladeaxe5", 	                   "axe5",  "JRH2", 15,   10, 12,     15, 10, 	  "", 0,   0);    //small axe in temple (AOP axes unvisible)
 
@@ -169,6 +170,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestBlade(n, "bladewad", 	               "bladewad",      "", "",   "", "",      0,  0, 	  "", 0,   0);    //wad for cannon crew
   n = InitQuestBlade(n, "bladepowderhornA",         "powderhornA", "JRH10", 11,   "", "",      0,  0, 	  "", 0,   1);    //powderhorn pchar (fightmode)
   n = InitQuestBlade(n, "bladepowderhornP",         "powderhornP", "JRH10", 11,   "", "",      0,  0, 	  "", 0,   1);    //powderhorn pchar (not fightmode)
+  n = InitQuestBlade(n, "bladepowderhornN",         "powderhornN", "JRH10", 11,   "", "",      0,  0, 	  "", 0,   1);    //powderhorn npc:s careen_shore
 
   n = InitQuestBlade(n, "bladepinion_small",  "bladepinion_small", "JRH10",  6,   "", "",      0,  0, 	  "", 0,   1);    //
   n = InitQuestBlade(n, "bladepinion_large",  "bladepinion_large", "JRH10",  7,   "", "",      0,  0, 	  "", 0,   1);    //
@@ -223,6 +225,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestBlade(n, "bladeflag_HOL2",        "bladeflag_HOL2", "JRH32", 10,    0,  0,      0,  0, 	  "", 0,   1);    //
   n = InitQuestBlade(n, "bladeflag_AME",          "bladeflag_AME", "JRH32", 11,    0,  0,      0,  0, 	  "", 0,   1);    //
   n = InitQuestBlade(n, "bladeflag_SPA2",        "bladeflag_SPA2", "JRH32", 12,    0,  0,      0,  0, 	  "", 0,   1);    //
+  n = InitQuestBlade(n, "bladepainting",          "bladepainting",  "JRH6",  8,    0,  0,      0,  0, 	  "", 0,   1);    //Frans Hals rolled
 
   n = InitQuestBlade(n, "bladechest_red",        "bladechest_red", "JRH16",  7,    0,  0,      0,  0, 	  "", 0,   0);    //blue cavern chest
   n = InitQuestBlade(n, "bladeboathook_1",      "bladeboathook_1", "JRH16",  8,    0,  0,      0,  0, 	  "", 0,   0);    //passive mode
@@ -278,6 +281,9 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestBlade(n, "bladeBB", 	                "bladeBB", "JRH33",  1,   22, 37,     40, 40, 	  "", 5,   0);    //Teach's cutlass
   n = InitQuestBlade(n, "bladelever3",		    "bladelever3", "JRH33",  2,    3,  3,      1,  1, 	  "", 0,   0);    //outside BB upper cave
   n = InitQuestBlade(n, "blade_gp_dry",		   "blade_gp_dry", "JRH37",  7,    3,  3,      1,  1, 	  "", 0,   0);    //
+  n = InitQuestBlade(n, "BBdagger",	               "BBdagger", "JRH28", 16,    6, 15,     30,  4, 	  "", 0,   0);    //BB treasure to cut out painting
+  n = InitQuestBlade(n, "bladechair", 	             "bladechair", "LEVIS",  5,    5, 10,      0,  5, 	  "", 0,   0);    //burning cave
+  n = InitQuestBlade(n, "pitchfork", 	              "pitchfork", "JRH38",  8,   20, 20,     15, 10, 	  "", 0,   0);    //careen corvette
 
 //GoldBug
   n = InitQuestBlade(n, "bladeemptysack",                 "sack2", "JRH3",  10,    1,  1,      0,  0,     "", 0,   0);    //for driftwood
@@ -339,6 +345,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestBlade(n, "treasurechest_red",  "treasurechest_red", "JRH16",  7,    0,  0,      0,  0, 	  "", 0,   0);    //closed red chest
 
   n = InitQuestBlade(n, "bladewoodX", 	              "wood_pile",  "JRH3",  7,    5, 10,      0,  5, 	  "", 0,   0);    //lots of wood
+
 
   //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   // QUEST GUNS:           			 		                       Accuracy
@@ -469,8 +476,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestGun(n, "pistolfunnel",	 "pistolfunnel",    "JRH30",  2,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy2
   n = InitQuestGun(n, "pistolcloth",	 "pistolcloth",     "JRH30",  3,    "", "",      "", 1, 0.1,	 "", "",               	   "",                "", 1);    //alchemy
   n = InitQuestGun(n, "pistolbladeBB",	 "pistolbladeBB",   "JRH33",  1,    "", "",     100, 1, 0.1,	 "", "",               	   "",                "", 0);    //
-
-
+  n = InitQuestGun(n, "pistolbook71",    "pistolbook71",    "JRH35", 15,    "", "", 	"",  0, "",	 "", "", 		   "",                "", 0);    //
 
 //GoldBug
   n = InitQuestGun(n, "revolver",	 "revolver",        "JRH19",  1,    40, 60,      65, 6,   8,	 "", "", "OBJECTS\DUEL\pistol_medium2.wav", "ca", 0);    //
@@ -563,6 +569,8 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBLDexterior(n,"shipyard",   "b_shipyard",   "B_worker",     "B_shipyard.c",     40, 10000,  5,   1.0, 2.0,  0, 20 );  // shipyard added Feb06
   n = InitBLDexterior(n,"shipyard2",  "b_shipyard",   "B_worker",     "B_shipyard2.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // PB: Shipyard that doesn't function
   n = InitBLDexterior(n,"warehouse",  "b_warehouse",  "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // warehouse  added Feb06
+  n = InitBLDexterior(n,"warehouse_destroyed","b_warehouse_destroyed",
+						      "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // ruined warehouse added 24/9/20
   n = InitBLDexterior(n,"keep",       "B_keep",       "B_soldier",    "b_keep.c",         30, 20000, 15,   1.0, 2.0,  0, 20 );  // keep
   n = InitBLDexterior(n,"tower",      "B_tower",      "B_soldier",    "b_keep.c",         30, 20000, 15,   1.0, 2.0,  0, 20 );  // Tower (old Keep)
   n = InitBLDexterior(n,"bastion",    "B_town",       "B_soldier",    "b_fortification.c",30, 10000, 15,   1.0, 2.0,  0, 20 );  // bastion
@@ -606,6 +614,13 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBLDexterior(n,"dovecote",   "b_dovecote",   "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // JRH special for quest in Tortuga
   n = InitBLDexterior(n,"stone_floor","b_stone_floor","B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // JRH special for quest in Tortuga
 
+  n = InitBLDexterior(n,"Totem1",     "B_Totem1",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );  // Indian totems
+  n = InitBLDexterior(n,"Totem2",     "B_Totem2",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
+  n = InitBLDexterior(n,"Totem3",     "B_Totem3",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
+  n = InitBLDexterior(n,"Totem4",     "B_Totem4",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
+  n = InitBLDexterior(n,"Tipi2",      "B_tipi2",       "B_invisible",  "",                 5,  1000,  5,   1.0, 2.0,  0, 20 );	// Indian tepee
+  n = InitBLDexterior(n,"Tipi3",      "B_tipi3",       "B_invisible",  "",                 5,  1000,  5,   1.0, 2.0,  0, 20 );	// Indian tepee
+
   //-----------------------------------------------------------------------------------------------------------------------------
   // BUILDING     ItemIndex                                  planks         Charges              Accuracy
   // INTERIORS        | ID                  modelID            |   money       |  Speed      maxDmg  |
@@ -629,9 +644,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   // BUILDING ITEMS JRH:	itmID
   //	              ItemIndex  |     		    	         model
   //----------------------|------|---------------------------------|----------------------------------------------------------------
-if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0
-|| sti(GetStorylineVar(FindCurrentStoryline(), "BART_PUZZLES")) > 0)
-{
+//all items are available for all storylines JRH
   n = InitBuildingItemJRH(n,	"toolchest1",  			"toolchest"); 		//Carpenter´s chest - start mode
 
   n = InitBuildingItemJRH(n,	"brF4R",  			"Flotsam4R"); 		//broken roof pieces
@@ -644,6 +657,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"brF15Down",			"Flotsam15Down");
   n = InitBuildingItemJRH(n,	"brF16",  			"Flotsam16");
   n = InitBuildingItemJRH(n,	"brF17",  			"Flotsam17");
+  n = InitBuildingItemJRH(n,	"brF17W",  			"Flotsam17_wreck");
   n = InitBuildingItemJRH(n,	"brF17R", 			"Flotsam17R");
   n = InitBuildingItemJRH(n,	"brF7R",  			"Flotsam7R");		//broken roof pieces
 
@@ -694,6 +708,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"gatedoor_PRI",			"gatedoor_PRI");	//prison office
 
   n = InitBuildingItemJRH(n,	"gatefloor_w",			"gatefloor_w");		//horizontal
+  n = InitBuildingItemJRH(n,	"gatefloor_w2",			"gatefloor_w2");	//horizontal, no handles
   n = InitBuildingItemJRH(n,	"gateroof_white_stone",		"gateroof_white_stone");//horizontal, upside down
   n = InitBuildingItemJRH(n,	"gateroof_wood",		"gateroof_wood");	//attic_stairs + animists_stairs
 
@@ -765,9 +780,13 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 
   n = InitBuildingItemJRH(n,	"rope_horizontal",		"ROPE_horizontal");
   n = InitBuildingItemJRH(n,	"rope_vertical",		"ROPE_vertical");
-  n = InitBuildingItemJRH(n,	"rope_vertical_long",		"ROPE_vertical_long");	//very long, Bishops Hostel
+  n = InitBuildingItemJRH(n,	"rope_vertical_long",		"ROPE_vertical_long");	//very long, Bishops Hostel 
+  n = InitBuildingItemJRH(n,	"rope_horizontal_long",		"ROPE_horizontal_long");//very long, careen shore  
+  n = InitBuildingItemJRH(n,	"rope_45_long",			"ROPE_45_long");	//careen shore
   n = InitBuildingItemJRH(n,	"rope_vertical_bright",		"ROPE_vertical_bright");
   n = InitBuildingItemJRH(n,	"hook",				"hook");
+
+  n = InitBuildingItemJRH(n,	"chain_horizontal",		"CHAIN_horizontal");	//BB_careen_holdS
 
   n = InitBuildingItemJRH(n,	"mast_bridge",			"Flotsam14R_dark");	//mast as a bridge
   n = InitBuildingItemJRH(n,	"lever_up",			"lever_up");
@@ -793,6 +812,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"bookshelf4",			"bookshelf4");		//brighter bookshelf, using backside
   n = InitBuildingItemJRH(n,	"textile",			"textile");		//textile tilted: tent
   n = InitBuildingItemJRH(n,	"textile2",			"textile2");		//textile tilted: carpet
+  n = InitBuildingItemJRH(n,	"textileA",			"textileA");		//textile: sailcloth
   n = InitBuildingItemJRH(n,	"textileB",			"textileB");		//textile: curtain
   n = InitBuildingItemJRH(n,	"clock",			"clock");
   n = InitBuildingItemJRH(n,	"clock_big",			"clock_big");
@@ -831,6 +851,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"plank2",			"plank2");		//bladeplank flat
   n = InitBuildingItemJRH(n,	"plank2_dark",			"plank2_dark");		//bladeplank flat
   n = InitBuildingItemJRH(n,	"plank2_long",			"plank2_long");		//big plank flat (hold)
+  n = InitBuildingItemJRH(n,	"plank2_very_long_dark",	"plank2_very_long_dark");//careen_shore
   n = InitBuildingItemJRH(n,	"plank3",			"plank3");		//bladeplank 45 up
   n = InitBuildingItemJRH(n,	"temp_plank0",			"temp_plank0");		//2 planks together under elevator (switch to blade resp pistolplank2 when picked up)
   n = InitBuildingItemJRH(n,	"skull2",			"skull2");		//(vertical) blocking floor hatch in cell
@@ -886,6 +907,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"fish02",			"fish02");		//galleon deck prow
   n = InitBuildingItemJRH(n,	"cauldron1",			"cauldron1");		//farm_kitchen
   n = InitBuildingItemJRH(n,	"hammock",			"hammock");		//hold_second
+  n = InitBuildingItemJRH(n,	"hammock_ropes",		"hammock_ropes");	//careen deck1
   n = InitBuildingItemJRH(n,	"qcport",			"qcport");		//
   n = InitBuildingItemJRH(n,	"qcport_plan3",			"qcport_plan3");	//
   n = InitBuildingItemJRH(n,	"swamp_island1",		"swamp_island1");	//
@@ -920,6 +942,17 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"flute",			"flute");		//church_choir
   n = InitBuildingItemJRH(n,	"sheet_music",			"sheet_music");		//church_choir
   n = InitBuildingItemJRH(n,	"pillow",			"pillow");		//church_choir
+  n = InitBuildingItemJRH(n,	"pillow1",			"pillow1");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"pillow1_u",			"pillow1_u");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"pillow2",			"pillow2");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"pillow2_u",			"pillow2_u");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"pillow3",			"pillow3");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"pillow3_u",			"pillow3_u");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"Lo_jrh_1",			"Lo_jrh_1");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"Lo_jrh_2",			"Lo_jrh_2");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"Lo_jrh_3",			"Lo_jrh_3");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"Lo_jrh_4",			"Lo_jrh_4");		//BB_careen_deck1
+  n = InitBuildingItemJRH(n,	"Lo_jrh_5",			"Lo_jrh_5");		//BB_careen_deck1
 
   n = InitBuildingItemJRH(n,	"rum_party1",			"rum_party1");		//church outside, QAR
   n = InitBuildingItemJRH(n,	"rum_party1_dark",		"rum_party1_dark");	//QAR
@@ -959,7 +992,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"stoneblock",			"stoneblock");		//BB cave off pist
   n = InitBuildingItemJRH(n,	"gatedoor_KRI",			"gatedoor_KRI");	//Kristiania
   n = InitBuildingItemJRH(n,	"spanish_church",		"spanish_church");	//Kristiania
-  n = InitBuildingItemJRH(n,	"church_window",		"church_window");	//Kristiania
+ 
   n = InitBuildingItemJRH(n,	"swedish_stonehouse",		"swedish_stonehouse");	//Kristiania
   n = InitBuildingItemJRH(n,	"fort_tower",			"fort_tower");		//Kristiania
   n = InitBuildingItemJRH(n,	"fort_tower_wall",		"fort_tower_wall");	//Kristiania	
@@ -978,8 +1011,9 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"2_sacks",			"2_sacks");		//BB treasure
   n = InitBuildingItemJRH(n,	"cherub",			"cherub");		//BB treasure
   n = InitBuildingItemJRH(n,	"FransHals_45",			"FransHals_45");	//BB treasure
+  n = InitBuildingItemJRH(n,	"FransHals_frame45",		"FransHals_frame45");	//BB treasure
+  n = InitBuildingItemJRH(n,	"censer_item",			"censer_item");		//BB treasure
 
-  n = InitBuildingItemJRH(n,	"hatch11_S",			"hatch11_S");		//BB cave
   n = InitBuildingItemJRH(n,	"fireplace_wood",		"fireplace_wood");	//BB cave
   n = InitBuildingItemJRH(n,	"ropes_blocks",			"ropes_blocks");	//BB cave
   n = InitBuildingItemJRH(n,	"ropes_blocks_small",		"ropes_blocks_small");	//BOP pyramid
@@ -1003,13 +1037,14 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"door_wreck",			"door_wreck");		//Kristiania_port
   n = InitBuildingItemJRH(n,	"door_N13",			"door_N13");		//gps hold_wreck
   n = InitBuildingItemJRH(n,	"hatch12G",			"hatch12G");		//hold_wreck
+  n = InitBuildingItemJRH(n,	"hatch12G_U",			"hatch12G_U");		//hold careen corvette
   n = InitBuildingItemJRH(n,	"AltarPicture",			"AltarPicture");	//Abbess room
+
   n = InitBuildingItemJRH(n,	"roll_of_rolls",		"roll_of_rolls");	//Tortuga sailmaker
   n = InitBuildingItemJRH(n,	"sailcloth_wall",		"sailcloth_wall");	//Tortuga sailmaker
   n = InitBuildingItemJRH(n,	"sailcloth_floor",		"sailcloth_floor");	//Tortuga sailmaker
   n = InitBuildingItemJRH(n,	"wood_floor",			"wood_floor");		//Tortuga small woddhouse
 
-  n = InitBuildingItemJRH(n,	"iron_gate3",			"iron_gate3");		//Estate maze
   n = InitBuildingItemJRH(n,	"door_green",			"door_green");		//Estate maze
   n = InitBuildingItemJRH(n,	"door_window",			"door_window");		//Estate maze
   n = InitBuildingItemJRH(n,	"door_window2",			"door_window2");	//Kristiania
@@ -1022,6 +1057,17 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 
   n = InitBuildingItemJRH(n,	"carpet4S",			"carpet4S");		//jrh room
   n = InitBuildingItemJRH(n,	"IronMaiden",			"IronMaiden");		//prison2
+  n = InitBuildingItemJRH(n,	"bonfire",			"bonfire");		//careen_shore
+  n = InitBuildingItemJRH(n,	"derrick_broken",		"derrick_broken");	//careen_shore
+
+  n = InitBuildingItemJRH(n,	"guillotine",			"guillotine");		//dungeon_5
+  n = InitBuildingItemJRH(n,	"prison_bars_big",		"prison_bars_big");	//dungeon_5
+  n = InitBuildingItemJRH(n,	"AltarPicture_big",		"AltarPicture_big");	//dungeon_5
+  n = InitBuildingItemJRH(n,	"green2",			"green2");		//dungeon_5
+  n = InitBuildingItemJRH(n,	"gatedoor_open",		"gatedoor_open");	//dungeon_5
+  n = InitBuildingItemJRH(n,	"irongates",			"irongates");		//dungeon_5
+  n = InitBuildingItemJRH(n,	"irongates_open",		"irongates_open");	//dungeon_5
+  n = InitBuildingItemJRH(n,	"pitchfork_item",		"pitchfork_item");	//capmd_2
 
 //goldbug
   n = InitBuildingItemJRH(n,	"tipi",				"tipi");
@@ -1033,14 +1079,14 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"door_U1",			"door_U1");		//Legrands house
   n = InitBuildingItemJRH(n,	"door_attic",			"door_attic");		//Legrands house
   n = InitBuildingItemJRH(n,	"door_fort",			"door_fort");		//white fort towers
-  n = InitBuildingItemJRH(n,	"wheelbarrow",			"wheelbarrow");
+
   n = InitBuildingItemJRH(n,	"door_barn",			"door_barn");
   n = InitBuildingItemJRH(n,	"door_PL",			"door_PL");		//plantation dark storerooms
   n = InitBuildingItemJRH(n,	"chimney",			"chimney");		//Chinatown
   n = InitBuildingItemJRH(n,	"stonewall45",			"stonewall45");	
   n = InitBuildingItemJRH(n,	"shipwreck3",			"shipwreck3");		//Sullivan shore2
   n = InitBuildingItemJRH(n,	"windmill_mast",		"windmill_mast");	//Sullivan shore2
-  n = InitBuildingItemJRH(n,	"palm2",			"palm2");		//Charleston
+ 
   n = InitBuildingItemJRH(n,	"palm3",			"palm3");
   n = InitBuildingItemJRH(n,	"derrick_45",			"derrick_45");
 
@@ -1076,7 +1122,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"hatch11V_O",			"hatch11V_O");		//Chinatown
   n = InitBuildingItemJRH(n,	"hatch15",			"hatch15");		//Dupin office
  
-  n = InitBuildingItemJRH(n,	"roll_of_planks1",		"roll_of_planks1");	//1 pile of planks
+  n = InitBuildingItemJRH(n,	"roll_of_planks1",		"roll_of_planks");	//1 pile of planks
   n = InitBuildingItemJRH(n,	"roll_of_planks2",		"roll_of_planks2");	//1 pile of planks
 
   n = InitBuildingItemJRH(n,	"doubledoor_45",		"doubledoor_45");	//Charleston Pym's house
@@ -1089,8 +1135,6 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 
   n = InitBuildingItemJRH(n,	"carpet3",			"carpet3");		//Dupin_office
   
-  n = InitBuildingItemJRH(n,	"tree1",			"tree1");		//Chinatown
- 
   n = InitBuildingItemJRH(n,	"tree3",			"tree3");		//Bishops Hostel
   n = InitBuildingItemJRH(n,	"tree_barrel",			"tree_barrel");		//Chinatown
   n = InitBuildingItemJRH(n,	"2_tubs1",			"2_tubs1");		//Chinatown
@@ -1124,6 +1168,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"1_lanternF_day",		"1_lanternF_day");	//Chinatown
 
   n = InitBuildingItemJRH(n,	"gibbet",			"gibbet");		//Charleston shore
+  n = InitBuildingItemJRH(n,	"gibbet_high",			"gibbet_high");		//Kristiania_port
   n = InitBuildingItemJRH(n,	"walk_plank",			"walk_plank");		//Bishops Hostel
   n = InitBuildingItemJRH(n,	"walk_plank_180",		"walk_plank_180");	//Bishops Hostel
   
@@ -1144,10 +1189,12 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"fallen_tree2",			"fallen_tree2");	//storm Legrand's Hut
   n = InitBuildingItemJRH(n,	"sack3",			"sack3");		//treasure style sack
   n = InitBuildingItemJRH(n,	"FWchest",			"FWchest");		//fireworks chest in chinaroom
+  n = InitBuildingItemJRH(n,	"toolbox_item",			"toolbox");		//dungeon_5
+  n = InitBuildingItemJRH(n,	"porthole",			"porthole");		//inside careen shore blockhouse
 	
-}
 
 //items here: common or quest + common use 
+//all items are available for all storylines JRH
  n = InitBuildingItemJRH(n,	"chimney_45",			"chimney_45");		//Tortuga
  n = InitBuildingItemJRH(n,	"chimney_45_night",		"chimney_45_night");	//Tortuga
  n = InitBuildingItemJRH(n,	"chimney_pot",			"chimney_pot");		//Tortuga + Legrands house
@@ -1187,12 +1234,15 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
  n = InitBuildingItemJRH(n,	"2_lanternsC_night",		"2_lanternsC_night");	//Tortuga
  n = InitBuildingItemJRH(n,	"2_lanternsC_day",		"2_lanternsC_day");	//Tortuga
 
- n = InitBuildingItemJRH(n,	"watchtower",			"watchtower");		//Tortuga
+ n = InitBuildingItemJRH(n,	"watchtower",			"watchtower");		//Tortuga + careen shore
+ n = InitBuildingItemJRH(n,	"watchtower_damaged",		"watchtower_damaged");  //careen shore
+ n = InitBuildingItemJRH(n,	"watchtower_roof",		"watchtower_roof");  	//careen shore
  n = InitBuildingItemJRH(n,	"gatedoor_shipyard",		"gatedoor_shipyard");	//Tortuga
  n = InitBuildingItemJRH(n,	"hatch16_T",			"hatch16_T");		//Tortuga shipyard
  n = InitBuildingItemJRH(n,	"hatch16_V",			"hatch16_V");		//Tortuga shipyard
  n = InitBuildingItemJRH(n,	"door_Tortuga",			"door_Tortuga");	//Tortuga shipyard
  n = InitBuildingItemJRH(n,	"door_Tortuga2",		"door_Tortuga2");	//Tortuga loanshark
+ n = InitBuildingItemJRH(n,	"door_TortugaT",		"door_TortugaT");	//90, prison2 stairs
  
  n = InitBuildingItemJRH(n,	"carpet2",			"carpet2");		//Claire's room + Tortuga loanshark, hotel
  n = InitBuildingItemJRH(n,	"gatedoor_Mine_dark",		"gatedoor_Mine_dark");	//corridor dark
@@ -1204,9 +1254,8 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
  n = InitBuildingItemJRH(n,	"door_N06T",			"door_N06T");		//mine, turned 90 degrees + Tortuga
  n = InitBuildingItemJRH(n,	"gatedoor_fta",		        "gatedoor_fta");	//Goldbug + Tortuga
 
- n = InitBuildingItemJRH(n,	"tree2",			"tree2");		//Chinatown + Tortuga
  n = InitBuildingItemJRH(n,	"tree2_night",			"tree2_night");		//Tortuga
- n = InitBuildingItemJRH(n,	"palm2_big",			"palm2_big");		//Tortuga
+
  n = InitBuildingItemJRH(n,	"palm2_big_night",		"palm2_big_night");	//Tortuga
  n = InitBuildingItemJRH(n,	"ship_building",		"ship_building");	//Tortuga
  n = InitBuildingItemJRH(n,	"ship_building_night",		"ship_building_night");	//Tortuga
@@ -1258,7 +1307,17 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
  n = InitBuildingItemJRH(n,	"small_planks",			"small_planks");	//Citadel
  n = InitBuildingItemJRH(n,	"bench",			"bench");		//Fort Moultrie, cloister
  n = InitBuildingItemJRH(n,	"armchair02",			"armchair02");		//red armchair
+ n = InitBuildingItemJRH(n,	"WallMap",			"WallMap");		//Cartographer Santiago
 
+ n = InitBuildingItemJRH(n,	"tree1",			"tree1");		//Chinatown, cloister
+ n = InitBuildingItemJRH(n,	"church_window",		"church_window");	//Kristiania, cloister
+ n = InitBuildingItemJRH(n,	"church_window_small",		"church_window_small");	//new_cloister BOP
+ n = InitBuildingItemJRH(n,	"palm2",			"palm2");		//Charleston, cloister
+ n = InitBuildingItemJRH(n,	"palm2_big",			"palm2_big");		//Tortuga, cloister
+ n = InitBuildingItemJRH(n,	"tree2",			"tree2");		//Chinatown, Tortuga, cloister
+ n = InitBuildingItemJRH(n,	"wheelbarrow",			"wheelbarrow");		//cloister
+ n = InitBuildingItemJRH(n,	"iron_gate3",			"iron_gate3");		//Estate maze, cloister
+ n = InitBuildingItemJRH(n,	"hatch11_S",			"hatch11_S");		//BB cave, cloister
   //--------------------------------------------------------------------------------------------------------------------------------
   // JRH <--
 
@@ -1386,6 +1445,86 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.nation                  = "";
   n++;
 
+// JRH: snakewand
+  makeref(itm,Items[n]);
+  itm.id                      = "snakewand";
+  itm.skiptrade               = true;
+  itm.skipsell                = true;
+  itm.skiprand                = true;
+  itm.skipequip               = true;
+  itm.groupID                 = BLADE_ITEM_TYPE;
+  itm.name                    = "itmname_snakewand";
+  itm.describe                = "itmdescr_snakewand";
+  itm.folder                  = "ammo";
+  itm.model                   = "OtherItemsJRH/snakewand";
+  itm.picIndex                = 16;
+  itm.picTexture              = "ITEMS_JRH37";  
+  itm.price                   = 0;
+  itm.piercing                = 60;
+  itm.block                   = 30;
+  itm.minlevel                = 99;
+  itm.rare                    = 0.00;
+  itm.param.time              = 0.1;
+  itm.param.colorstart        = argb(64, 64, 64, 64);
+  itm.param.colorend          = argb(0, 32, 32, 32);
+  itm.nation                  = PIRATE;
+  n++;
+
+// JRH: bladethunder
+  makeref(itm,Items[n]);
+  itm.id                      = "bladethunder";
+  itm.skiptrade               = true;
+  itm.skipsell                = true;
+  itm.skiprand                = true;
+  itm.skipequip               = true;
+  itm.groupID                 = BLADE_ITEM_TYPE;
+  //itm.name                    = "itmname_tridentNeptune";
+  //itm.describe                = "itmdescr_tridentNeptune";
+  itm.folder                  = "ammo";
+  itm.model                   = "OtherItemsJRH/bladethunder";
+  //itm.picIndex                = 7;
+  //itm.picTexture              = "ITEMS_AS";
+  itm.price                   = 800000;
+  //itm.dmg_min                 = 30.0;
+  //itm.dmg_max                 = 50.0;
+  itm.piercing                = 60;
+  itm.block                   = 30;
+  itm.minlevel                = 99;
+  itm.rare                    = 0.00;
+  itm.param.time              = 0.1;
+  itm.param.colorstart        = argb(64, 64, 64, 64);
+  itm.param.colorend          = argb(0, 32, 32, 32);
+  itm.nation                  = PIRATE;
+  n++;
+
+// JRH: pistollightning
+  makeref(itm,Items[n]);
+  itm.id                      = "pistollightning";
+  itm.enblrld     	      = true; 
+  //itm.sound                   = "OBJECTS\DUEL\electricity.wav";//JRH
+  itm.shottype                = "";    //JRH
+  itm.skiptrade               = true;    // you can sell the item
+  itm.skipsell                = true;    // PB: make them buyable
+  itm.skiprand                = true;
+  itm.skipequip               = true;
+  itm.groupID                 = GUN_ITEM_TYPE;
+  //itm.name                    = "itmname_pistolmaquahuitl";
+  //itm.describe                = "itmdescr_pistolmaquahuitl";
+  itm.folder                  = "ammo";
+  itm.model                   = "OtherItemsJRH/pistollightning";
+  //itm.picIndex                = 5;
+  //itm.picTexture              = "ITEMS_BOP";
+  itm.price                   = 1;
+  itm.chargeQ                 = 1;
+  itm.chargespeed             = 3;   
+  //itm.dmg_min                 = 10.0;			
+  //itm.dmg_max                 = 20.0;
+  itm.accuracy                = 100;   
+  itm.rare                    = 0.00;
+  itm.minlevel                = 14;			
+  itm.nation                  = "";
+  n++;
+
 // JRH: Blowgun
   makeref(itm,Items[n]);
   itm.id                      = "blowgun";
@@ -1476,6 +1615,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.id                      = "holy_water";
 //  itm.sound                   = "OBJECTS\duel\holy_water.wav";
   itm.throw_HW                = 1;
+  itm.enblrld   	      = true;			//temp testing
   itm.skiptrade               = true;
   itm.skipsell                = true;
   itm.skiprand                = true;
@@ -2385,8 +2525,8 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.describe = "itmdescr_pistoldart";
   itm.folder = "ammo";
   itm.model  = "PoisenedDagger";
-  itm.picIndex = 4;
-  itm.picTexture = "ITEMS_ccc";
+  itm.picIndex = 16;
+  itm.picTexture = "ITEMS_JRH28";
   itm.price = 1;
   itm.chargeQ = 1;
   itm.chargespeed = 0.5;
@@ -2440,6 +2580,80 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.chargespeed = 0.1;
   itm.dmg_min = 10.0;
   itm.dmg_max = 20.0;
+  itm.accuracy = 80;
+  itm.rare = 0.00;	// should be unique
+  n++;
+
+//JRH pistolcenser for protection only
+  makeref(itm,Items[n]);
+  itm.id = "pistolcenserD";			//for defensive use
+  itm.enblrld     	      = true;
+  itm.shottype                = "inc";
+  itm.sound = "OBJECTS\DUEL\censer.wav";
+  itm.skipsell = true;	// you can't buy it or sell it
+  itm.skiprand = true;
+  itm.groupID = GUN_ITEM_TYPE;
+  itm.name = "itmname_pistolcenserD";
+  itm.describe = "itmdescr_pistolcenserD";
+  itm.folder = "Ammo";
+  itm.model = "OtherItemsJRH\pistolcenser";
+  itm.picIndex = 11;
+  itm.picTexture = "ITEMS_JRH14";
+  itm.price = 1;
+  itm.chargeQ = 1;
+  itm.chargespeed = 0.2;
+  itm.dmg_min = 0.0;
+  itm.dmg_max = 0.0;
+  itm.accuracy = 100;
+  itm.rare = 0.00;	// should be unique
+  n++;
+
+//JRH pistolcenser without incense
+  makeref(itm,Items[n]);
+  itm.id = "pistolcenserE";			//for defensive use
+  itm.enblrld     	      = true;
+  itm.shottype                = "";
+  //itm.sound = "OBJECTS\DUEL\censer.wav";
+  itm.skiptrade               = false;  //BB you can sell the item
+  itm.skipsell                = true;   // you can't buy it
+  itm.skiprand                = true;   // you can't randomly find it
+  itm.skipequip               = false;
+  itm.groupID = GUN_ITEM_TYPE;
+  itm.name = "itmname_pistolcenserE";
+  itm.describe = "itmdescr_pistolcenserE";
+  itm.folder = "Ammo";
+  itm.model = "OtherItemsJRH\pistolcenser_empty";
+  itm.picIndex = 15;
+  itm.picTexture = "ITEMS_JRH36";
+  itm.price = 450;
+  itm.chargeQ = 0;
+  itm.chargespeed = 0.1;
+  itm.dmg_min = 0.0;
+  itm.dmg_max = 0.0;
+  itm.accuracy = 0;
+  itm.rare = 0.00;	// should be unique
+  n++;
+
+  // Hand cannon
+  makeref(itm,Items[n]);
+  itm.id = "pistolcannon";
+  itm.multidmg                = 1;
+  itm.shottype                = "pg6";
+  //itm.sound = "OBJECTS\SHIPCHARGE\CR24C.wav";		//+ additional sound in LAi_events
+  itm.skipsell = true;	// you can't buy it or sell it
+  itm.skiprand = true;
+  itm.groupID = GUN_ITEM_TYPE;
+  itm.name = "itmname_pistolcannon";
+  itm.describe = "itmdescr_pistolcannon";
+  itm.folder = "Ammo";
+  itm.model = "OtherItemsJRH\pistolcannon";
+  itm.picIndex = 11;
+  itm.picTexture = "ITEMS_JRH37";
+  itm.price = 0;
+  itm.chargeQ = 1;
+  itm.chargespeed = 40.0;
+  itm.dmg_min = 200.0;
+  itm.dmg_max = 400.0;
   itm.accuracy = 80;
   itm.rare = 0.00;	// should be unique
   n++;
@@ -2923,8 +3137,9 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBlade(n, "bladeC10","bladeC10",               21,  11,  0.50,   5,  209, 15.0, 25.0, 27, 18,  "",        2,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN); // Falchion (CoAS Metazot)//BB
   n = InitBlade(n, "bladeC11","bladeC11",               21,  13,  0.20,   8,  449, 17.0, 22.0, 30, 32,  "",        5,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Milanese longsword(CoAS Metazot)//BB model is very long(so now a longsword)
   n = InitBlade(n, "bladeC12","bladeC12",               21,  12,  0.20,  10,  483, 14.0, 35.0, 37, 19,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Katzbalger (CoAS Metazot)//BB
+  n = InitBlade(n, "bladeC17","bladeC17",               25,   2,  0.00,  10, 3420, 24.0, 62.0, 39, 45,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_COLONIAL_POWERS); // Flamberge Rapier // GR - for "Ardent" storyline
   n = InitBlade(n, "bladeC18","bladeC18",               21,  10,  0.20,  10,  590, 25.0, 39.0, 39, 20,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Shellcup Falchion (CoAS Metazot)//BB
-  n = InitBlade(n, "bladeC23","bladeC23",                9,   8,  0.15,  99, 5532, 36.0, 50.0, 48, 37,  SPAIN,     4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Toledo rapier (CoAS GoF) // GR - for "Ardent" storyline
+  n = InitBlade(n, "bladeC23","bladeC23",                9,   8,  0.00,  99, 5532, 36.0, 50.0, 48, 37,  SPAIN,     4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Toledo rapier (CoAS GoF) // GR - for "Ardent" storyline
   n = InitBlade(n, "bladeC26","bladeC26",               21,  16,  0.15,  11,  516, 19.0, 31.0, 40, 25,  "",        2,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Pappenheimer Rapier (CoAS Metazot)//BB
   n = InitBlade(n, "bladeC30","bladeC30",               21,   8,  0.25,  13, 1651, 19.0, 29.0, 46, 29,  "",        4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Swept Hilt Rapier  (CoAS Metazot)//BB
   n = InitBlade(n, "bladeC33","bladeC33",               21,   9,  0.20,   9,  588, 14.0, 26.0, 30, 45,  HOLLAND,   3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Germanic Baskethilt Sword (CoAS Metazot)//BB
@@ -2932,6 +3147,14 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBlade(n, "bladeC36","bladeC36",                9,   5,  0.00,  99, 8000, 15.0, 30.0, 30, 40,  PIRATE,    3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Katana //JRH, fix in items_utilite.c
   n = InitBlade(n, "blade308","blade308",                9,   6,  0.00,  99, 5500, 27.0, 42.0, 45, 37,  "",        4,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Based on Anathros, Sword of the Earth from "Two Worlds" // GR
   n = InitBlade(n, "bladeCiri","CiriSword",              9,   7,  0.00,  99, 8000, 15.0, 30.0, 30, 40,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Ciri's sword from Witcher 3 // DeathDaisy 
+  n = InitBlade(n, "witcher_steel","witcher_steel_back", 25,  1,  0.00,  99, 8000, 15.0, 30.0, 30, 40,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Flambard used by Geralt // Grey Roger/The Nameless Pirate
+  
+  n = InitBlade(n, "bladeA2","bladeA2", 	     "JRH4",  5,  0.00,  99, 1000, 21.0, 39.0, 28, 13,  "",        1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest
+  n = InitBlade(n, "bladeA4","bladeA4", 	     "JRH4",  4,  0.00,  99, 1000, 21.0, 26.0, 28, 13,  "",        3,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest
+  n = InitBlade(n, "bladeA5","bladeA5", 	     "JRH4",  2,  0.00,  99, 1000, 21.0, 26.0, 42, 13,  "",        1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest  
+  n = InitBlade(n, "bladeA17","bladeA17", 	     "JRH4",  1,  0.00,  99, 1000, 21.0, 26.0, 28, 20,  "",        1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest
+
+  n = InitBlade(n, "bladeA11","bladeA11", 	     "JRH4",  3,  0.00,  99,  200, 10.0, 12.0, 15, 10,  "",        0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest
 
   n = InitBlade(n, "Barmansknife","Barmansknife",       22,   7,  0.90,   1,    5,  3.0,  9.0, 20,  3,  PIRATE,    0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Breadknife (SuperDurnius)//BB USE AS BASE VALUE FOR ECONOMY (CHEAPEST)
   n = InitBlade(n, "Guestsknife","Guestsknife",         22,   6,  0.90,   1,    9,  3.0, 11.0, 25,  4,  PIRATE,    0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Knife (SuperDurnius)//BB
@@ -2966,7 +3189,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitGun(n,"DuelPistol","DuelPistol",	 21,  1, 0.01,	16,   4000, 75.0,135.0,   80, 1, 12, "", "OBJECTS\DUEL\pistol_big.wav",    "pb",     0,    PERIOD_COLONIAL_POWERS,	PERIOD_NAPOLEONIC);  // Duelling Pistol (GR)
   n = InitGun(n,"pistolmtoon", "musketoon_back",  8,  9, 0.08,  17,   2968, 75.0,125.0,   60, 1, 24, "", "OBJECTS\DUEL\pistol_mtoon.wav",  "pg2",    1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC);  // JRH: model was Musketoon
   n = InitGun(n,"pistol9", "pistol9a",            9,  2, 0.10,  30,   5000, 50.0,150.0,   70, 2, 28, "", "OBJECTS\DUEL\pistol_big.wav",    "pb",     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC);  // old Brace of Large Pistols (Alan Smithee) now brace of Horse Pistols (JRMM)
-  n = InitGun(n,"pistolmket",  "musket_back",     8, 10, 0.05,  20,   3245,150.0,250.0,   60, 1, 30, "", "", 				               "mb",     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC);  // JRH: model was Musket, sound played in LAi_events
+  n = InitGun(n,"pistolmket",  "musket_back",     8, 10, 0.05,  20,   3245,150.0,250.0,   60, 1, 30, "", "", 				   "mb",     1,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC);  // JRH: model was Musket, sound played in LAi_events
   n = InitGun(n,"pistol10", "pistol10",        "JD",  5, 0.02,  99,   6572, 60.0, 90.0,   60, 1,  1, "", "OBJECTS\DUEL\pistol_shotgun.wav","pg",     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // Pump Shotgun SLiB  LDH fix sound error
   n = InitGun(n,"pistol25", "pistol5b",          24,  9, 0.02,  54,   9999, 50.0,150.0,   70, 4, 14, "", "OBJECTS\DUEL\pistol_big.wav",    "pb",     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC);  // Brace of four Horse Pistols (JRMM)
   n = InitGun(n,"pistol26", "pistol26",          24, 10, 0.02,  24,   9999, 30.0, 60.0,   30, 4, 35, "", "OBJECTS\DUEL\pistol_grape.wav",  "pg",     0,    PERIOD_NAPOLEONIC, 	        PERIOD_NAPOLEONIC);  // Four-barrel Grapeshot Pistol (JRH)
@@ -2978,13 +3201,14 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitGun(n,"LongRifle_BT","LongRifle_BT_back","BOP2",10,0.00,99,12000,150.0,250.0,   80, 1,  1, "", "OBJECTS\DUEL\pistol_medium2.wav",  "",     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Custom quest musket for BOP, with telescope
   n = InitGun(n,"LongRifle_W", "LongRifle_W_back", "BOP2", 7,0.00,99,    0,150.0,250.0,   80, 1, 30, "", "OBJECTS\DUEL\pistol_medium2.wav", "pb2",   1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Custom quest musket for WR
   n = InitGun(n,"LongRifle_WT","LongRifle_WT_back","BOP2", 8,0.00,99,    0,150.0,250.0,   80, 1, 30, "", "OBJECTS\DUEL\pistol_medium2.wav", "pb2",   1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC);  // JRH: Custom quest musket for WR, with telescope
-  n = InitGun(n,"LongRifle_H", "LongRifle_H_back", "BOP2",16,0.02,25, 4000,150.0,250.0,  120, 1, 35, "", "OBJECTS\DUEL\pistol_musket2.wav", "pb2",   1,    PERIOD_NAPOLEONIC,      	PERIOD_NAPOLEONIC);  // TY: Baker Rifle for Hornblower and Napoleonic 
+  n = InitGun(n,"LongRifle_H", "LongRifle_H_back", "BOP2",16,0.02,25, 4000,150.0,250.0,  120, 1, 35, "", "OBJECTS\DUEL\pistol_musket2.wav", "pb2",   1,    PERIOD_NAPOLEONIC,      	PERIOD_NAPOLEONIC);  // TY: Baker Rifle for Hornblower and Napoleonic
+  n = InitGun(n,"pistolcollier","pistolcollier", 21,  5, 0.00,  99,   9999, 40.0,120.0,   50, 6, 12, "", "OBJECTS\DUEL\pistol_medium.wav", "pb",     0,    PERIOD_NAPOLEONIC,      	PERIOD_NAPOLEONIC);  // GR: Collier revolver
   
   n = InitGun(n,"pistol11", "pistol11",     "JRH28",  6, 0.15,   4,   750, 40.0, 60.0,   80, 1, 14, "", "OBJECTS\DUEL\pistol_medium.wav", "pb",      0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN);	// JRH: wheellock
   n = InitGun(n,"pistol12", "pistol12",     "JRH28",  7, 0.05,   9,  1500, 40.0, 60.0,   80, 2, 28, "", "OBJECTS\DUEL\pistol_medium3.wav","pb",      0,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN);	// JRH: wheellock expensive pair
   n = InitGun(n,"pistol13", "pistol13_back","JRH28",  8, 0.10,  14,  2000, 75.0,125.0,   80, 1, 24, "", "OBJECTS\DUEL\pistol_medium.wav", "pb2",     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN);	// JRH: Short wheellock musket 
   n = InitGun(n,"Arguebuse", "Arguebuse_back",    "JRH28", 1, 0.15,17,2000,100.0,200.0,  40, 1, 24, "", "OBJECTS\DUEL\pistol_big2.wav",   "mb",      1,    PERIOD_EARLY_EXPLORERS,      PERIOD_THE_SPANISH_MAIN);	// JRH: Arguebuse
-  n = InitGun(n,"pistolmketB",  "musketB_back",   "JRH28", 4, 0.05,20,4000,150.0,250.0,  60, 1, 30, "", "", 				              "mb",      1,    PERIOD_REVOLUTIONS,          PERIOD_NAPOLEONIC);  		// JRH: Musket with bayonet, sound played in LAi_events 
+  n = InitGun(n,"pistolmketB",  "musketB_back",   "JRH28", 4, 0.05,20,4000,150.0,250.0,  60, 1, 30, "", "", 				  "mb",      1,    PERIOD_REVOLUTIONS,          PERIOD_NAPOLEONIC);  		// JRH: Musket with bayonet, sound played in LAi_events 
  //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -3018,10 +3242,12 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
     n = InitAmmoMod(n,"ammobag1",AMMUNITION_ITEM_TYPE,    "JRH",   3,  0.00,  3,    75,    1,1,1);// Quest Ammo Bag not equipable
     n = InitAmmoMod(n,"ammobag2",     POUCH_ITEM_TYPE,	  "JRH",   3,  0.00,  3,    75,    1,1,0);// Quest Ammo Bag
     n = InitAmmoMod(n,"pistolbelt",   BELT_ITEM_TYPE,	  "JRH",  15,  0.00,  3,     0,    1,1,0);// Quest item
+    n = InitAmmoMod(n,"pistolcannon1",AMMUNITION_ITEM_TYPE,"JRH37",11, 0.00,  3,     0,    1,1,1);// Quest Pistolcannon not equipable
     n = InitAmmoMod(n,"fake_pclub",AMMUNITION_ITEM_TYPE, "JRH4",  16,  0.00,  1,     1,    1,1,1);// Quest special disable equip
     n = InitAmmoMod(n,"fake_anchor",AMMUNITION_ITEM_TYPE,"JRH4",   8,  0.00,  1,     1,    1,1,1);// Quest special disable equip
     n = InitAmmoMod(n,"cartridges",AMMUNITION_ITEM_TYPE,"JRH19",   2,  0.00,  1,    20,    1,1,1);// for revolver
     n = InitAmmoMod(n,"nails",     AMMUNITION_ITEM_TYPE,"JRH24",   7,  0.00,  1,     5,    1,1,1);// instead of pistolgrapes	
+    n = InitAmmoMod(n,"incense",   AMMUNITION_ITEM_TYPE,"JRH36",  11,  0.00,  1,     1,    1,1,1);// for pistolcenserD
     n = InitAmmoMod(n,"p_package",    OPEN_ITEM_TYPE,   "JRH27",   1,  0.00,  1,     1,    1,1,1);//
     n = InitAmmoMod(n,"p_case_C",     OPEN_ITEM_TYPE,   "JRH27",   2,  0.00,  1,     1,    1,1,1);// closed
     n = InitAmmoMod(n,"p_case_3",     OPEN_ITEM_TYPE,   "JRH27",   9,  0.00,  1,     1,    1,1,1);// open filled
@@ -3040,7 +3266,10 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
     n = InitAmmoMod(n,"flagchest_closed",OPEN_ITEM_TYPE,"JRH32",  13,  0.00,  1,     1,    1,1,1);// 
     n = InitAmmoMod(n,"flagchest_openA", OPEN_ITEM_TYPE,"JRH32",  14,  0.00,  1,     1,    1,1,1);//
     n = InitAmmoMod(n,"flagchest_openB", BELT_ITEM_TYPE,"JRH32",  14,  0.00,  1,     1,    1,1,1);//
-    n = InitAmmoMod(n,"flagchest_empty",BELT_ITEM_TYPE, "JRH32",  15,  0.00,  1,     1,    1,1,1);//  
+    n = InitAmmoMod(n,"flagchest_empty", BELT_ITEM_TYPE,"JRH32",  15,  0.00,  1,     1,    1,1,1);// 
+
+    n = InitAmmoMod(n,"toolbox_filled", OPEN_ITEM_TYPE, "JRH36",  16,  0.00,  1,     1,    1,1,1);// 
+    n = InitAmmoMod(n,"toolbox_empty",   BELT_ITEM_TYPE, "JRH36",  16,  0.00,  1,     1,    1,1,1);// 
   }
   }
   //----------------------------------------------------------------------------------------------------------------------
@@ -3122,6 +3351,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
     n = InitPotion(n,"tobacco",     "",   "JRH11",  2,	0.80,  0,   150, 2.5,  0, 2, 0,  15.0,  0,    1,1,1);// JRH quest potion
     n = InitPotion(n,"sewing_kit",  "",   "JRH11",  1,	0.30,  0,   425, 1.5,  1, 2, 0,  45.0,  4,    1,1,1);// JRH quest potion
     n = InitPotion(n,"cognac", 	    "",   "JRH12", 12,	0.20,  3,   500, 0.4,  4, 2, 0,  90.0,  4,    1,1,1);// JRH drinkable cognac
+    n = InitPotion(n,"myrrh",       "",   "JRH36", 12,  0.15, 10,     0, 2.5,  3, 2, 0, 100.0,  0,    1,1,1);// JRH myrrh for special use
   }
   if(sti(GetStorylineVar(FindCurrentStoryline(), "BART_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0
   || sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
@@ -3139,6 +3369,11 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   // SPECIAL ITEMS:
   //-----------|------|------|----------|---|----|-----|-----|----|----|--|--|----|---|---|---|---|---|---|---|---|---|---|---|---|---|-------------------------------
   n = InitItem(n,"cursedcoin", "",      4, 15, 0.10,   5,   1500, 0,   1, 1, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1);
+
+  n = InitItem(n,"luckydimeA", "","JRH38",  9, 0.10,   5,   1500, 0,   1, 1, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);
+  n = InitItem(n,"luckydimeB", "","JRH38", 10, 0.10,   5,   1500, 0,   1, 1, 1,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);
+
+
   n = InitItem(n,"lockpick",    "",     8,  8, 0.10,   5,    110, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0, +1,  0,  0,  0,  1); // Lockpick
   n = InitItem(n,"ayahuasca", "", "Levis",  1, 0.00,   1,      1, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Ayahuasca
   n = InitItem(n,"opium", "", 	  "Levis",  2, 0.00,   1,      0, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  0,  1); // Opium
@@ -3192,7 +3427,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   // Smuggling Quest items
   //----------------------------------------------------------------------------------------------------------------------------------------------------------------- 
   n = InitItem(n,"smugglingbook", "",        13, 9, 0.05, 1,  200, 0,   1, 0, 1, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Smuggling Tutorial
-  n = InitItem(n,"smugglingbook2", "",       13,10, 0.01, 1, 1800, 0,   1, 0, 1, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Opium Tutorial
+//  n = InitItem(n,"smugglingbook2", "",       13,10, 0.01, 1, 1800, 0,   1, 0, 1, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Opium Tutorial
   n = InitItem(n,"opiumlist", "",            13, 8, 0.01, 1,    0, 0,   1, 0, 1, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1);// Opium List
   n = InitItem(n,"smuggling_papers", "",      4, 8, 0.00, 1,    0, 0,   0, 0, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1); // Smuggling
   n = InitItem(n,"smuggling_first_report", "",4, 9, 0.00, 1,    0, 0,   0, 0, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1); // Smuggling Report
@@ -3204,7 +3439,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   {
   n = InitItem(n,"skillbook1", "",     13, 4,   0.10,  1,   1875, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Unlock Advance Defence
   n = InitItem(n,"skillbook2", "",     13,14,   0.02,  6,   3165, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Unlock Gun Professional
-  n = InitItem(n,"skillbook3", "",     13,10,   0.05,  4,   2550, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Unlock Advance Battlestate
+  n = InitItem(n,"skillbook3", "",     13,10,   0.05,  4,   2550, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Unlock Advanced Damage Control
   n = InitItem(n,"skillbook4", "",     13, 8,   0.01, 10,   3715, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0);// Unlock Cannon Professional
   }
   // PB: SuperDurnius' work on books is now used; number 16 remain unused but could be used for future books
@@ -3311,6 +3546,10 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitItem(n,"coin16",	"",    "JRH15", 16, 0.00, 0,  187, 0,  1, 0, 0,	  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1);//portuguese gold
   n = InitItem(n,"coin4_bad",	"",    "JRH14", 14, 0.00, 0,    0, 0,  1, 0, 0,	  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1);//spanish piece of eight, not of any use
 
+  n = InitItem(n, "gold_bars", "",     "JRH37", 12, 0.18, 0,12500, 0,  1, 0, 0,	  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//JRH BB treasure
+  n = InitItem(n, "silver_bars", "",   "JRH37", 13, 0.18, 0,12500, 0,  1, 0, 0,	  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//JRH BB treasure
+  n = InitItem(n, "gold_coins", "",    "JRH37", 14, 0.18, 0,12500, 0,  1, 0, 0,	  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//JRH BB treasure
+  n = InitItem(n, "valuable_weapons","","JRH37",15, 0.18, 0,12500, 0,  1, 0, 0,	  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//JRH BB treasure
 }
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -3684,22 +3923,25 @@ void InitWeaponItemArrays()
         blade.minlevel    = 99;
       }
       // PB: Unique Blades <--
-      switch(id)
-      {
-        case "blade1" :   		blade.param.time  = 0.05;	break;  // special case
-        case "blade24":   		blade.param.time  = 0.05;	break;  // special case
-	case "bladeC36":   		QualitySkipRand = true;		break;  // special case, JRH (only in stores)
-		case "bladeclub":		blade.sound = "OBJECTS\DUEL\club2.wav";	break;//JRH
+	switch(id)
+	{
+		case "blade1" :		blade.param.time  = 0.05;		break;  // special case
+        	case "blade24":		blade.param.time  = 0.05;		break;  // special case
+		case "bladeC36":	QualitySkipRand = true;			break;  // special case, JRH (only in stores)
+		case "bladeclub":	blade.sound = "OBJECTS\DUEL\club2.wav";	break;//JRH
 		// PB: Who would want to buy this? -->
-		case "Barmansknife":	QualitySkipSell = true;		break;
-		case "Guestsknife":		QualitySkipSell = true;		break;
+		case "Barmansknife":
+			QualitySkipSell = true;		
+			if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) QualitySkipTrade = true;
+		break;
+		case "Guestsknife":	QualitySkipSell = true;		break;
 		case "MerchantsBlade":	QualitySkipSell = true;		break;
 		case "Merchantsdagger":	QualitySkipSell = true;		break;
-		case "Minersaxe":		QualitySkipSell = true;		break;
-		case "Minerscrow":		QualitySkipSell = true;		break;
+		case "Minersaxe":	QualitySkipSell = true;		break;
+		case "Minerscrow":	QualitySkipSell = true;		break;
 		case "Piratesdagger":	QualitySkipSell = true;		break;
 		// PB: Who would want to buy this? <--
-      }
+	}
       if ( IT_RPG_STYLE && QualityRare < IT_WEAP_RARITY_CUTOFF ) blade.skipsell = true; // TIH do not ever sell extremely rare items
       if (sti(blade.skipsell) != 1 && i<5) blade.replacewith = GetWeaponIDByQuality(id, i+1); // NK 05-04-06 so that if a weapon sellability gets lost due to quality upping (or they buy a -2 or -1 one), we replace with the next up.
       // PB: Disarm mode toggles -->
@@ -3778,7 +4020,8 @@ void InitWeaponItemArrays()
 		case "blade24":			blade.param.time  = 0.05;	break;			// special case
 		case "bladeC36":   		blade.skiprand    = true;	break;  		// special case, JRH (only in stores)
 		// PB: Who would want to buy this? -->
-		case "Barmansknife":	blade.skipsell = true;		break;
+		case "Barmansknife":	blade.skipsell = true;		
+		if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) blade.SkipTrade = true; break;
 		case "Guestsknife":		blade.skipsell = true;		break;
 		case "MerchantsBlade":	blade.skipsell = true;		break;
 		case "Merchantsdagger":	blade.skipsell = true;		break;
@@ -3818,36 +4061,44 @@ bool IsWeaponUnique(string id)
   bool isUnique = false;
   switch(id)
   {
-    case "blade18":     isUnique = true;        break;  // Saber of Nicholas Sharp    - Quest only blade
-    case "blade24":     isUnique = true;        break;  // English Officer's Saber    - English presentation blade
-    case "blade22":     isUnique = true;        break;  // Corsair's Pride            - English presentation blade
-    case "blade23":     isUnique = true;        break;  // Dutch Admiralty Sword      - Dutch presentation blade
-    case "blade26":     isUnique = true;        break;  // Solingen Rapier            - Dutch presentation blade
-    case "blade9":      isUnique = true;        break;  // French Admiralty Rapier    - French presentation blade
-    case "blade25":     isUnique = true;        break;  // French Nobility Sword      - French presentation blade
-    case "blade33":     isUnique = true;        break;  // Moorish Saber              - Spanish presentation blade
-    case "blade14":     isUnique = true;        break;  // Spanish Nobility Longsword - Spanish presentation blade
-    case "blade29":     isUnique = true;        break;  // Portugese Officer's Sword  - Portugese presentation blade
-    case "blade32":     isUnique = true;        break;  // Damascus Shamshir          - Portugese presentation blade
-	case "blade43":     isUnique = true;        break;  // US Cavalry Saber           - American presentation blade
-    case "blade34":     isUnique = true;        break;  // Dragon's Head              - Pirate special blade
-    case "bladeC23":	isUnique = true;	break;	// Toledo rapier              - For "Ardent" storyline only
-    case "bladeC36":	isUnique = true;	break;	// Katana	              - Japanese import
-    case "blade308":	isUnique = true;	break;	// Based on Anathros	      - From "Two Worlds"
-    case "bladeCiri":	isUnique = true;	break;	// Ciri's Blade		      - Forged by gnomes
-    case "tomahawk_chief":  isUnique = true;        break;  // Chief's tomahawk for "Crystal Skull" sidequest  
-    case "pistol10":    isUnique = true;        break;  // Shotgun
-    case "pistol62":    isUnique = true;        break;  // Special dual-barrel pistol - Easter egg in San Juan residence
-    case "LongRifle_BT":isUnique = true;        break;  // Bartolomeu
-    case "LongRifle_C": isUnique = true;        break;  // All Storylines
-    case "LongRifle_CT":isUnique = true;        break;  // All Storylines
-    case "LongRifle_W": isUnique = true;        break;  // WoodesRogers
-    case "LongRifle_WT":isUnique = true;        break;  // WoodesRogers
-    case "pistolbow":   isUnique = true;        break;  // Bow
-    case "pistolwhip":  isUnique = true;        break;  // Bartolomeu
-    case "machete":     isUnique = true;        break;  // JRH
-    case "blademketB":  isUnique = true;        break;  // JRH
-    case "blademketK":  isUnique = true;        break;  // JRH
+	case "blade18":		isUnique = true;        break;  // Saber of Nicholas Sharp    - Quest only blade
+	case "blade24":		isUnique = true;        break;  // English Officer's Saber    - English presentation blade
+	case "blade22":		isUnique = true;        break;  // Corsair's Pride            - English presentation blade
+	case "blade23":		isUnique = true;        break;  // Dutch Admiralty Sword      - Dutch presentation blade
+	case "blade26":		isUnique = true;        break;  // Solingen Rapier            - Dutch presentation blade
+	case "blade9":		isUnique = true;        break;  // French Admiralty Rapier    - French presentation blade
+	case "blade25":		isUnique = true;        break;  // French Nobility Sword      - French presentation blade
+	case "blade33":		isUnique = true;        break;  // Moorish Saber              - Spanish presentation blade
+	case "blade14":		isUnique = true;        break;  // Spanish Nobility Longsword - Spanish presentation blade
+	case "blade29":		isUnique = true;        break;  // Portugese Officer's Sword  - Portugese presentation blade
+	case "blade32":		isUnique = true;        break;  // Damascus Shamshir          - Portugese presentation blade
+	case "blade43":		isUnique = true;        break;  // US Cavalry Saber           - American presentation blade
+	case "blade34":		isUnique = true;        break;  // Dragon's Head              - Pirate special blade
+	case "bladeC17":	isUnique = true;	break;	// Flamberge rapier           - For "Ardent" storyline only
+	case "bladeC23":	isUnique = true;	break;	// Toledo rapier              - For "Ardent" storyline only
+	case "bladeC36":	isUnique = true;	break;	// Katana	              - Japanese import
+	case "blade308":	isUnique = true;	break;	// Based on Anathros	      - From "Two Worlds"
+	case "bladeCiri":	isUnique = true;	break;	// Ciri's Blade		      - Forged by gnomes
+	case "witcher_steel":	isUnique = true;	break;	// Geralt's steel flambard
+	case "tomahawk_chief":  isUnique = true;        break;  // Chief's tomahawk for "Crystal Skull" sidequest  
+	case "pistol10":	isUnique = true;        break;  // Shotgun
+	case "pistol62":	isUnique = true;        break;  // Special dual-barrel pistol - Easter egg in San Juan residence
+	case "LongRifle_BT":	isUnique = true;        break;  // Bartolomeu
+	case "LongRifle_C":	isUnique = true;        break;  // All Storylines
+	case "LongRifle_CT":	isUnique = true;        break;  // All Storylines
+	case "LongRifle_W":	isUnique = true;        break;  // WoodesRogers
+	case "LongRifle_WT":	isUnique = true;        break;  // WoodesRogers
+	case "pistolbow":	isUnique = true;        break;  // Bow
+	case "pistolwhip":	isUnique = true;        break;  // Bartolomeu
+	case "machete":		isUnique = true;        break;  // JRH
+	case "blademketB":	isUnique = true;        break;  // JRH
+	case "blademketK":	isUnique = true;        break;  // JRH
+	case "collier":		isUnique = true;        break;  // Collier revolver
+	case "bladeA2":		isUnique = true;        break;  // JRH WR quest
+	case "bladeA4":		isUnique = true;        break;  // JRH WR quest
+	case "bladeA5":		isUnique = true;        break;  // JRH WR quest
+	case "bladeA11":	isUnique = true;        break;  // JRH WR quest
+	case "bladeA17":	isUnique = true;        break;  // JRH WR quest
   }
   return isUnique;
 }
@@ -4226,107 +4477,94 @@ int InitQuestItem(  ref ItemIndex, string id, string txtname, string model,
   qstitm.groupID    = QUEST_ITEM_TYPE;//MAXIMUS
   switch(id)
   {
-	case "skull_ring":				qstitm.groupID		= EQUIP_ITEM_TYPE;		  
-		    	     				qstitm.skipequip	= false;				break;
-	case "Montejo_Book":			qstitm.skill.Sneak	= +1;
-		    	     				qstitm.skipequip	= false;				break;
+	case "skull_ring":			qstitm.groupID		= EQUIP_ITEM_TYPE;		  
+		    	     							qstitm.skipequip = false;	break;
+	case "Montejo_Book":							qstitm.skill.Sneak = +1;
+		    	     							qstitm.skipequip = false;	break;
 	case "moccasins":   			qstitm.groupID		= EQUIP_ITEM_TYPE;		  
-		    	     				qstitm.skipequip	= false;				break;
-	case "mayan_compass":   		qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;	
-	case "empty_pipe": 	    		qstitm.price		= 1; 	  				break;
+		    	     							qstitm.skipequip = false;	break;
+	case "mayan_compass":   		qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;	
+	case "empty_pipe": 	    						qstitm.price = 1; 	  	break;
 	case "filled_pipe": 			qstitm.groupID		= EQUIP_ITEM_TYPE;		  
-		    	     				qstitm.skipequip	= false;				break;
+		    	     							qstitm.skipequip = false;	break;
 	case "dried_mushrooms": 		qstitm.groupID		= EXAMINE_ITEM_TYPE;
-									qstitm.price		= 1; 					break;	
-	case "pulverized_mushrooms": 	qstitm.groupID		= EQUIP_ITEM_TYPE;		  
-		            				qstitm.skipequip	= false;		
-									qstitm.price		= 1;					break;
-	case "crypto1":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: crypto start
-	case "crypto2":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: crypto solved
-	case "book52":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: book + freq. table
-	case "book53":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: open book
-	case "book54":					qstitm.groupID		= EQUIP_ITEM_TYPE;	break;  // JRH: freq. table
-	case "wrinkled_paper":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: wrinkled paper
-	case "bird_sketch_doc":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: sketch of a bird, now enabled to see backside
-	case "BH_sketch_out":			qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH: BH sketch, now enabled to roll
-	case "rolled_paper":			qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH: BH sketch rolled
-	case "rolled_paper_gp":			qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH: BH sketch rolled & filled with gp
-	case "med_bag1_doc_NO":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: med bag
-	case "med_bag1_doc_YES":		qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: med bag
-	case "med_bag1_out":			qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH: med bag
-	case "med_bag2_doc":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: med bag + itms
-	case "med_bag2_out":			qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH: med bag + itms
-	case "crypto_excel":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH: crypto excel info
-	case "detective_kit1":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH
-	case "detective_kit2":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH
-	case "detective_kit3":			qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH
-	case "detective_kit4":			qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH
-	case "detective_kit5":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH
-	case "doc1A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH closed note
-	case "doc1B":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH open note
-	case "doc2A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH closed folder
-	case "doc2B":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH semi open folder
-	case "doc2E":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH left side: recipe gpF
-	case "doc3C":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH right side: recipe gpS
-	case "doc3D":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH right side: mix instr.
-	case "doc4A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH closed burned book
-	case "doc4B":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH open burned book
-	case "doc5A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH bottle
-	case "doc5B":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH closed scroll
-	case "doc5C":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH open scroll
-	case "doc6A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH closed envelope
-	case "doc6B":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH open envelope
-	case "doc6C":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH yellow paper
-	case "bagcompass4":				qstitm.groupID		= POUCH_ITEM_TYPE;		break;  // JRH Compass in a bag
-	case "book55A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH Whaling
-	case "book55B":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH Whaling
-	case "book55C":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH Whaling
-	case "book55D":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH Whaling
-	case "book61A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH
-	case "book61B":					qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH
-	case "book61C1":				qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH
-	case "book61C2":				qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH
+										qstitm.price = 1; 		break;	
+	case "pulverized_mushrooms": 		qstitm.groupID		= EQUIP_ITEM_TYPE;		  
+		            							qstitm.skipequip = false;		
+										qstitm.price = 1;		break;
+	case "crypto1":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: crypto start
+	case "crypto2":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: crypto solved
+	case "book52":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: book + freq. table
+	case "book53":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: open book
+	case "book54":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH: freq. table
+	case "wrinkled_paper":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: wrinkled paper
+	case "bird_sketch_doc":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: sketch of a bird, now enabled to see backside
+	case "BH_sketch_out":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH: BH sketch, now enabled to roll
+	case "rolled_paper":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH: BH sketch rolled
+	case "rolled_paper_gp":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH: BH sketch rolled & filled with gp
+	case "med_bag1_doc_NO":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: med bag
+	case "med_bag1_doc_YES":		qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: med bag
+	case "med_bag1_out":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH: med bag
+	case "med_bag2_doc":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: med bag + itms
+	case "med_bag2_out":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH: med bag + itms
+	case "crypto_excel":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH: crypto excel info
+	case "detective_kit1":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH
+	case "detective_kit2":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH
+	case "detective_kit3":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH
+	case "detective_kit4":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH
+	case "detective_kit5":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH
+	case "doc1A":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH closed note
+	case "doc1B":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH open note
+	case "doc2A":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH closed folder
+	case "doc2B":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH semi open folder
+	case "doc2E":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH left side: recipe gpF
+	case "doc3C":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH right side: recipe gpS
+	case "doc3D":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH right side: mix instr.
+	case "doc4A":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH closed burned book
+	case "doc4B":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH open burned book
+	case "doc5A":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH bottle
+	case "doc5B":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH closed scroll
+	case "doc5C":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH open scroll
+	case "doc6A":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH closed envelope
+	case "doc6B":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH open envelope
+	case "doc6C":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH yellow paper
+	case "bagcompass4":			qstitm.groupID		= POUCH_ITEM_TYPE;			break;  // JRH Compass in a bag
+	case "book55A":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH Whaling
+	case "book55B":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH Whaling
+	case "book55C":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH Whaling
+	case "book55D":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH Whaling
+	case "book61A":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH
+	case "book61B":				qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH
+	case "book61C1":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH
+	case "book61C2":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH
 
-	case "knitting_basket":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;
-	case "knitting":				qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;
-	case "needles":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;
-	case "yarn":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;
-	case "pliers":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;
-	case "magnet":					qstitm.groupID		= EQUIP_ITEM_TYPE;		break;
-	case "poe_manuscript":			qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;
-	case "doc60A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;
-						 			qstitm.price		= 1;					break;  // JRH WR closed envelope
-	case "doc60B":					qstitm.groupID		= EXAMINE_ITEM_TYPE;
-									qstitm.price		= 1;					break;  // JRH WR open envelope
-	case "doc60C":					qstitm.groupID		= EXAMINE_ITEM_TYPE;
-									qstitm.price		= 1;					break;  // JRH WR letter front side
-    case "doc60D":					qstitm.groupID		= EQUIP_ITEM_TYPE;
-									qstitm.price		= 1;					break;  // JRH WR letter back side
-	case "book69A":					qstitm.groupID		= EXAMINE_ITEM_TYPE;
-						 			qstitm.price		= 1;					break;  // JRH Teach's logbook
-	case "book69B":					qstitm.groupID		= EXAMINE_ITEM_TYPE;
-						 			qstitm.price		= 1;					break;  // JRH Teach's logbook
-	case "book69C":					qstitm.groupID		= EQUIP_ITEM_TYPE;
-						 			qstitm.price		= 1;					break;  // JRH Teach's logbook
-	case "BB_hatA1":				qstitm.groupID		= EXAMINE_ITEM_TYPE;
-						 			qstitm.price		= 1;					break;  // JRH Teach's hat
-	case "BB_hatB":					qstitm.groupID		= EXAMINE_ITEM_TYPE;
-						 			qstitm.price		= 1;					break;  // JRH Teach's hat
-	case "BB_hatC":					qstitm.groupID		= EXAMINE_ITEM_TYPE;
-						 			qstitm.price		= 1;					break;  // JRH Teach's hat
-	case "BB_key":					qstitm.price		= 1;					break;  // JRH Teach's hat
-	case "BB_hatA2":				qstitm.groupID		= EQUIP3_ITEM_TYPE;
-						 			qstitm.price		= 1;
-									qstitm.skill.leadership = +1;				break;  // JRH Teach's hat
-	case "BB_coin":					qstitm.groupID		= EQUIP2_ITEM_TYPE;
-									qstitm.skill.sneak	= +1;					break;  // JRH Teach's amulet
-	case "paper_clip":				qstitm.groupID		= EQUIP_ITEM_TYPE;		break;  // JRH
-	case "auction_list_roll":		qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH
-	case "auction_list_open":		qstitm.groupID		= EXAMINE_ITEM_TYPE;	break;  // JRH
-	case "tailors_book":			qstitm.groupID		= EXAMINE_ITEM_TYPE;
-									qstitm.price		= 1;					break;  // JRH
-	case "tailors_note":			qstitm.groupID		= EQUIP_ITEM_TYPE;
-									qstitm.price		= 1;					break;  // JRH
+	case "knitting_basket":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;
+	case "knitting":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;
+	case "needles":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;
+	case "yarn":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;
+	case "pliers":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;
+	case "magnet":				qstitm.groupID		= EQUIP_ITEM_TYPE;			break;
+	case "poe_manuscript":			qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;
+	case "doc60A":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH WR closed envelope
+	case "doc60B":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH WR open envelope
+	case "doc60C":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH WR letter front side
+        case "doc60D":				qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;  // JRH WR letter back side
+	case "book69A":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH Teach's logbook
+	case "book69B":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH Teach's logbook
+	case "book69C":				qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;  // JRH Teach's logbook
+	case "BB_hatA1":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH Teach's hat
+	case "BB_hatB":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH Teach's hat
+	case "BB_hatC":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH Teach's hat
+	case "BB_key":									     qstitm.price = 1;	break;  // JRH Teach's hat
+	case "BB_hatA2":			qstitm.groupID		= EQUIP3_ITEM_TYPE;  qstitm.price = 1;
+										qstitm.skill.leadership = +1;	break;  // JRH Teach's hat
+	case "BB_coin":				qstitm.groupID		= EQUIP2_ITEM_TYPE;
+										qstitm.skill.sneak= +1;		break;  // JRH Teach's amulet
+	case "paper_clip":			qstitm.groupID		= EQUIP_ITEM_TYPE;			break;  // JRH
+	case "auction_list_roll":		qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH
+	case "auction_list_open":		qstitm.groupID		= EXAMINE_ITEM_TYPE;			break;  // JRH
+	case "tailors_book":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH
+	case "tailors_note":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;  // JRH
 
 	case "book70_start":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH burned alchemy book
 	case "book70":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;  // JRH burned alchemy book
@@ -4381,12 +4619,24 @@ int InitQuestItem(  ref ItemIndex, string id, string txtname, string model,
 	case "shirt_shoes":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
 	case "socks_sewing":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
 	case "waistcoat":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
-	case "sash":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+	case "sash":				qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
 
 	case "package":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
 	case "notebook":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
 	case "sealed_map":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
 	case "red_uniform":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+
+	case "book73_closed":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
+	case "book73_open":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+	
+	case "megaphone":								     qstitm.price = 1;	break;
+	case "boathook":								     qstitm.price = 1;	break;
+	case "spyglass5":								     qstitm.price = 1;	break;
+	case "long_johns":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
+	case "long_johns_map":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
+	case "bandana":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
+	case "bandana_key":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
+    	case "MariasLetter":	qstitm.groupID = BOOK_ITEM_TYPE;	qstitm.QuestName = "hornblower_read_marias_letter";	qstitm.text = "MariasLetter";	break;  // GR: Letter from Maria from shortly before she died: Hornblower storyline
   }
   if ( setshown == 1 ) qstitm.shown = shownval;
 
@@ -4535,9 +4785,10 @@ int InitPotion(
   {
 	case "medical1":   potionitm.potion.sound = "PEOPLE\clothes2.wav";  break; 	
  	case "medical2":   potionitm.potion.sound = "INTERFACE\cauterization.wav"; break; 
-    case "sewing_kit": potionitm.potion.sound = "INTERFACE\sewing.wav";  break; 	
+    	case "sewing_kit": potionitm.potion.sound = "INTERFACE\sewing.wav";  break; 	
  	case "tobacco":    potionitm.potion.sound = "INTERFACE\chewing.wav";  break; 
-	case "herbs":      potionitm.potion.sound = "INTERFACE\chewing.wav";  break; 		
+	case "herbs":      potionitm.potion.sound = "INTERFACE\chewing.wav";  break; 
+	case "myrrh":      potionitm.potion.sound = "INTERFACE\chewing.wav";  break; 		
   }
 //<-- JRH
   potionIndex++;
@@ -4631,7 +4882,11 @@ int InitItem( ref   ItemIndex,
     case "book6"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Morgan's Mast Mashing
     case "book7"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Morgan's Almanac
     case "book8"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Pirating With Petros
-    case "book9"   : genitm.groupID = BOOK_ITEM_TYPE;     genitm.text = "cookbook"; break;  // Cooking With Albatross - PB: Clue about "Dead Albatross" effect
+    case "book9":						  // Cooking With Albatross - PB: Clue about "Dead Albatross" effect
+	genitm.groupID = BOOK_ITEM_TYPE;
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) genitm.text = "cookbook_early";
+	else genitm.text = "cookbook";
+    break;
     case "book10"  : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Definitive Defence
     case "book11"  : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Fighting Forts
     case "book12"  : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Great Gun Sights
@@ -4641,16 +4896,19 @@ int InitItem( ref   ItemIndex,
 //	case "notebook": genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // JRH: notebook
     case "red_uniform": genitm.groupID = OUTFIT_ITEM_TYPE;break;  // JRH: red uniform
 	case "smugglingbook": 	genitm.groupID = BOOK_ITEM_TYPE;      genitm.QuestName = "Read_Smuggling_Book";		genitm.text = "smugglingbook"; 				break; // Smuggling tutorial book
-	case "smugglingbook2": 	genitm.groupID = BOOK_ITEM_TYPE;      genitm.text = "smugglingbook2"; 				break; // Smuggling opium tutorial 
-	case "opiumlist": 		genitm.groupID = BOOK_ITEM_TYPE;      genitm.text = "opiumlist"; 					break; // Smuggling opium tutorial book
+//	case "smugglingbook2": 	genitm.groupID = BOOK_ITEM_TYPE;      genitm.text = "smugglingbook2"; 				break; // Smuggling opium tutorial 
+	case "opiumlist": 	genitm.groupID = BOOK_ITEM_TYPE;      genitm.text = "opiumlist"; 				break; // Smuggling opium tutorial book
 	case "relationbook":  	genitm.groupID = BOOK_ITEM_TYPE;      genitm.QuestName = "Read_Relation_Book";		genitm.text = "relationbook"; 			break; // Nation relations tutorial book
 	case "piratebook":  	genitm.groupID = BOOK_ITEM_TYPE;      genitm.QuestName = "Read_Pirate_Book";		genitm.text = "piratebook"; genitm.sneaky = true;	break; // Pirate tutorial book
 	case "book_exorcist": 	genitm.groupID = BOOK_ITEM_TYPE;      genitm.QuestName = "Telescope_Found_Book";	genitm.text = "book_exorcist";			break; // Levis: For telescope unlocking
 	case "skillbook1":    	genitm.groupID = BOOK_ITEM_TYPE;      genitm.UnlockedPerk = "AdvancedDefence";		genitm.text = "skillbook1";				break; // Levis
 	case "skillbook2":    	genitm.groupID = DOCUMENT_ITEM_TYPE;  genitm.UnlockedPerk = "GunProfessional";		break; // Levis Skillbook 2
-	case "skillbook3":    	genitm.groupID = BOOK_ITEM_TYPE;      genitm.UnlockedPerk = "AdvancedBattleState";	genitm.text = "skillbook3";				break; // Levis
+	case "skillbook3":    	genitm.groupID = BOOK_ITEM_TYPE;      genitm.UnlockedPerk = "AdvancedDamageControl";	genitm.text = "skillbook3";				break; // Levis
 	case "skillbook4":    	genitm.groupID = DOCUMENT_ITEM_TYPE;  genitm.UnlockedPerk = "CannonProfessional";	break; // Levis Skillbook 4
 	case "indian_treasure_note": genitm.groupID = BOOK_ITEM_TYPE; genitm.QuestName = "Found Treasure Note"; 	genitm.text = "indian_treasure_note";	break; //Levis: Indian Treasure
+
+	case "luckydimeA":	genitm.groupID = FLIP_ITEM_TYPE;      genitm.skill.Sneak = +2;				genitm.skill.hidden = true;	break;	//JRH easter-egg
+	case "luckydimeB":	genitm.groupID = FLIP_ITEM_TYPE;      genitm.skill.Sneak = +2;				genitm.skill.hidden = true;  	break;	//JRH easter-egg
   }
 
   //genitm.shown    = false;
@@ -4901,9 +5159,9 @@ int InitQuestBlade( 	ref	ItemIndex,
 
 	switch(id)
   	{
-		case "bladeflint":     blade.fist = true;						break; //JRH
-		case "bladeplank2":    blade.sound = "OBJECTS\DUEL\plank.wav";	break; //JRH
-		case "bladespade":     blade.sound = "PEOPLE\spade.wav";		break; //JRH
+		case "bladeflint":	blade.fist = true;			break; //JRH
+		case "bladeplank2":	blade.sound = "OBJECTS\DUEL\plank.wav";	break; //JRH
+		case "bladespade":	blade.sound = "PEOPLE\spade.wav";	break; //JRH
 	}
 
 	BladeIndex++;
@@ -5423,18 +5681,12 @@ int InitMaps(int n)
 	curMap.skipsell = true;
 	curMap.labels = "";
 	makearef(labels, curMap.labels);
-	labels.Oxbay.label = FindIslandName("Oxbay");
-	labels.Oxbay.pos.x = 293;
-	labels.Oxbay.pos.y = 379;
-	labels.Conceicao.label = FindIslandName("Conceicao");
-	labels.Conceicao.pos.x = 210;
-	labels.Conceicao.pos.y = 358;
 	n = InitMap(n, curMap);
 
-	curMap.id = "mapBB2";					//Caesar
-	curMap.name = "itmname_mapBB2";
-	curMap.describe = "itmdescr_mapBB2";
-	curMap.island = "Map piece 2";
+	curMap.id = "mapBB2A";					//Caesar dirty map
+	curMap.name = "itmname_mapBB2A";
+	curMap.describe = "itmdescr_mapBB2A";
+	curMap.island = "Map piece 2A";
 	curMap.location = TranslateString("", "Map piece");
 	curMap.picIndex = 2;
 	curMap.picTexture = "items_maps2";
@@ -5443,21 +5695,12 @@ int InitMaps(int n)
 	curMap.skipsell = true;
 	curMap.labels = "";
 	makearef(labels, curMap.labels);
-	labels.Douwesen.label = FindIslandName("Douwesen");
-	labels.Douwesen.pos.x = 213;
-	labels.Douwesen.pos.y = 269;
-	labels.Aruba.label = FindIslandName("Aruba");
-	labels.Aruba.pos.x = 219;
-	labels.Aruba.pos.y = 209;
-	labels.Curacao.label = FindIslandName("Curacao");
-	labels.Curacao.pos.x = 290;
-	labels.Curacao.pos.y = 296;
 	n = InitMap(n, curMap);
 
-	curMap.id = "mapBB3";					//Eden
-	curMap.name = "itmname_mapBB3";
-	curMap.describe = "itmdescr_mapBB3";
-	curMap.island = "Map piece 3";
+	curMap.id = "mapBB2B";					//Caesar clean map
+	curMap.name = "itmname_mapBB2B";
+	curMap.describe = "itmdescr_mapBB2B";
+	curMap.island = "Map piece 2B";
 	curMap.location = TranslateString("", "Map piece");
 	curMap.picIndex = 3;
 	curMap.picTexture = "items_maps2";
@@ -5466,21 +5709,12 @@ int InitMaps(int n)
 	curMap.skipsell = true;
 	curMap.labels = "";
 	makearef(labels, curMap.labels);
-	labels.KhaelRoa.label = FindIslandName("Khael Roa");
-	labels.KhaelRoa.pos.x = 202;
-	labels.KhaelRoa.pos.y = 144;
-	labels.Cayman.label = FindIslandName("Cayman");
-	labels.Cayman.pos.x = 271;
-	labels.Cayman.pos.y = 157;
-	labels.Eleuthera.label = FindIslandName("Eleuthera");
-	labels.Eleuthera.pos.x = 230;//275;
-	labels.Eleuthera.pos.y = 89;
 	n = InitMap(n, curMap);
 
-	curMap.id = "mapBB4";					//Hands
-	curMap.name = "itmname_mapBB4";
-	curMap.describe = "itmdescr_mapBB4";
-	curMap.island = "Map piece 4";
+	curMap.id = "mapBB3";					//Eden, island unknown
+	curMap.name = "itmname_mapBB3";
+	curMap.describe = "itmdescr_mapBB3";
+	curMap.island = "Map piece 3";
 	curMap.location = TranslateString("", "Map piece");
 	curMap.picIndex = 4;
 	curMap.picTexture = "items_maps2";
@@ -5489,18 +5723,26 @@ int InitMaps(int n)
 	curMap.skipsell = true;
 	curMap.labels = "";
 	makearef(labels, curMap.labels);
-	labels.Turks.label = FindIslandName("Turks");
-	labels.Turks.pos.x = 439;
-	labels.Turks.pos.y = 90;
-	labels.Tortuga.label = FindIslandName("Tortuga");
-	labels.Tortuga.pos.x = 428;
-	labels.Tortuga.pos.y = 128;
 	n = InitMap(n, curMap);
 
-	curMap.id = "mapBB5";					//Richards
-	curMap.name = "itmname_mapBB5";
-	curMap.describe = "itmdescr_mapBB5";
-	curMap.island = "Map piece 5";
+	curMap.id = "mapBB3T";					//Eden, island known
+	curMap.name = "itmname_mapBB3T";
+	curMap.describe = "itmdescr_mapBB3T";
+	curMap.island = "Map piece 3";
+	curMap.location = TranslateString("", "Map piece");
+	curMap.picIndex = 24;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 1000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapBB4A";					//Richards left half
+	curMap.name = "itmname_mapBB4A";
+	curMap.describe = "itmdescr_mapBB4A";
+	curMap.island = "Map piece 4";
 	curMap.location = TranslateString("", "Map piece");
 	curMap.picIndex = 5;
 	curMap.picTexture = "items_maps2";
@@ -5509,21 +5751,26 @@ int InitMaps(int n)
 	curMap.skipsell = true;
 	curMap.labels = "";
 	makearef(labels, curMap.labels);
-	labels.Redmond.label = FindIslandName("Redmond");
-	labels.Redmond.pos.x = 315;//344;
-	labels.Redmond.pos.y = 200;//194;
-	labels.IslaMuelle.label = FindIslandName("Isla Muelle");
-	labels.IslaMuelle.pos.x = 435;//468;
-	labels.IslaMuelle.pos.y = 270;//259;
-	labels.Hispaniola.label = FindIslandName("Hispaniola");
-	labels.Hispaniola.pos.x = 415;//446;
-	labels.Hispaniola.pos.y = 178;//168;
 	n = InitMap(n, curMap);
 
-	curMap.id = "mapBB6";					//Johnson
-	curMap.name = "itmname_mapBB6";
-	curMap.describe = "itmdescr_mapBB6";
-	curMap.island = "Map piece 6";
+	curMap.id = "mapBB4A_back";				//Richards left half, sketch on backside
+	curMap.name = "itmname_mapBB4A_back";
+	curMap.describe = "itmdescr_mapBB4A_back";
+	curMap.island = "Map piece 4";
+	curMap.location = TranslateString("", "Map piece");
+	curMap.picIndex = 14;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 1000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapBB4B";					//Richards right half
+	curMap.name = "itmname_mapBB4B";
+	curMap.describe = "itmdescr_mapBB4B";
+	curMap.island = "Map piece 4";
 	curMap.location = TranslateString("", "Map piece");
 	curMap.picIndex = 6;
 	curMap.picTexture = "items_maps2";
@@ -5532,21 +5779,146 @@ int InitMaps(int n)
 	curMap.skipsell = true;
 	curMap.labels = "";
 	makearef(labels, curMap.labels);
-	labels.QuebradasCostillas.label = FindIslandName("Quebradas Costillas");
-	labels.QuebradasCostillas.pos.x = 400;//454;
-	labels.QuebradasCostillas.pos.y = 345;//338;
-	labels.FalaiseDeFleur.label = FindIslandName("Falaise De Fleur");
-	labels.FalaiseDeFleur.pos.x = 345;//378;
-	labels.FalaiseDeFleur.pos.y = 400;//383;
-	labels.Guadeloupe.label = FindIslandName("Guadeloupe");
-	labels.Guadeloupe.pos.x = 380;//418;
-	labels.Guadeloupe.pos.y = 369;
-	labels.Antigua.label = FindIslandName("Antigua");
-	labels.Antigua.pos.x = 440;//459;
-	labels.Antigua.pos.y = 410;//381;
-	labels.SaintMartin.label = FindIslandName("Saint Martin");
-	labels.SaintMartin.pos.x = 435;//497;
-	labels.SaintMartin.pos.y = 330;//331;
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapBB4C";					//Richards repaired map
+	curMap.name = "itmname_mapBB4C";
+	curMap.describe = "itmdescr_mapBB4C";
+	curMap.island = "Map piece 4";
+	curMap.location = TranslateString("", "Map piece");
+	curMap.picIndex = 7;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 1000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapBB5A";					//Hands bloody map
+	curMap.name = "itmname_mapBB5A";
+	curMap.describe = "itmdescr_mapBB5A";
+	curMap.island = "Map piece 5";
+	curMap.location = TranslateString("", "Map piece");
+	curMap.picIndex = 8;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 1000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapBB5B";					//Hands clean map
+	curMap.name = "itmname_mapBB5B";
+	curMap.describe = "itmdescr_mapBB5B";
+	curMap.island = "Map piece 5";
+	curMap.location = TranslateString("", "Map piece");
+	curMap.picIndex = 16;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 1000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapBB6";					//Johnson, island unknown
+	curMap.name = "itmname_mapBB6";
+	curMap.describe = "itmdescr_mapBB6";
+	curMap.island = "Map piece 6";
+	curMap.location = TranslateString("", "Map piece");
+	curMap.picIndex = 15;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 1000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapBB6T";					//Johnson, island known
+	curMap.name = "itmname_mapBB6T";
+	curMap.describe = "itmdescr_mapBB6T";
+	curMap.island = "Map piece 6";
+	curMap.location = TranslateString("", "Map piece");
+	curMap.picIndex = 23;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 1000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapWR1";					//blue letters
+	curMap.name = "itmname_mapWR1";
+	curMap.describe = "itmdescr_mapWR1";
+	curMap.island = "Archipelago";
+	curMap.location = TranslateString("", "Archipelago");
+	curMap.picIndex = 9;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 2000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapWR2";					//red pins
+	curMap.name = "itmname_mapWR2";
+	curMap.describe = "itmdescr_mapWR2";
+	curMap.island = "Archipelago";
+	curMap.location = TranslateString("", "Archipelago");
+	curMap.picIndex = 10;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 2000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapWR3";					//lines attempt1
+	curMap.name = "itmname_mapWR3";
+	curMap.describe = "itmdescr_mapWR3";
+	curMap.island = "Archipelago";
+	curMap.location = TranslateString("", "Archipelago");
+	curMap.picIndex = 11;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 2000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapWR4";					//lines attempt2
+	curMap.name = "itmname_mapWR4";
+	curMap.describe = "itmdescr_mapWR4";
+	curMap.island = "Archipelago";
+	curMap.location = TranslateString("", "Archipelago");
+	curMap.picIndex = 12;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 2000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapWR5";					//lines attempt3
+	curMap.name = "itmname_mapWR5";
+	curMap.describe = "itmdescr_mapWR5";
+	curMap.island = "Archipelago";
+	curMap.location = TranslateString("", "Archipelago");
+	curMap.picIndex = 13;
+	curMap.picTexture = "items_maps2";
+	curMap.price = 2000;
+	curMap.skiptrade = true;
+	curMap.skipsell = true;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
 	n = InitMap(n, curMap);
 	//<-- JRH
 

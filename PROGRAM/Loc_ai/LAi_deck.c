@@ -1497,7 +1497,7 @@ void PlaceOfficersToDeck(string deckType)
 								}
 								else
 								{
-									if(tmpChr.quest.officertype==OFFIC_TYPE_ABORDAGE || tmpChr.quest.officertype==OFFIC_TYPE_CANNONEER || tmpChr.quest.officertype==OFFIC_TYPE_CAPNAVY) // KK
+									if(tmpChr.quest.officertype==OFFIC_TYPE_ABORDAGE || tmpChr.quest.officertype==OFFIC_TYPE_CANNONEER || tmpChr.quest.officertype==OFFIC_TYPE_CAPNAVY || tmpChr.quest.officertype==OFFIC_TYPE_QMASTER) // KK - PW added QM
 									{
 										CharacterIntoLocationLocator(_curCharIdx, mchr.location);
 										LAi_SetCivilianPatrolType(tmpChr);
@@ -1549,7 +1549,7 @@ void PlaceOfficersToDeck(string deckType)
 								}
 								else
 								{
-									if(tmpChr.quest.officertype==OFFIC_TYPE_ABORDAGE || tmpChr.quest.officertype==OFFIC_TYPE_CANNONEER || tmpChr.quest.officertype==OFFIC_TYPE_CAPNAVY) // KK
+									if(tmpChr.quest.officertype==OFFIC_TYPE_ABORDAGE || tmpChr.quest.officertype==OFFIC_TYPE_CANNONEER || tmpChr.quest.officertype==OFFIC_TYPE_CAPNAVY || tmpChr.quest.officertype==OFFIC_TYPE_QMASTER) // KK - PW added QM
 									{
 										CharacterIntoLocationLocator(_curCharIdx, mchr.location);
 										LAi_SetCivilianPatrolType(tmpChr);

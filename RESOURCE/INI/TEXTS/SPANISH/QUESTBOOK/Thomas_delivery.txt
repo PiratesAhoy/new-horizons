@@ -1,0 +1,4 @@
+title=Misión Secundaria: Transportar mercancía para Thomas O'Reily
+text.t1=Thomas O'Reily me ha ofrecido una modesta suma de oro a cambio de llevar un cargamento de #samount# unidades de #scargo# a la ciudad francesa de #sFalaise de Fleur#, en #sisland_Falaise de Fleur#, para un tal Arnaud Matton. Thomas ha sido mezquino con el pago, pero he aceptado el encargo porque tengo el presentimiento de que puede haber negocios más rentables en el futuro si hago esto...
+text.t2=Arnaud estaba seguro de que Thomas se la había jugado, teniendo en cuenta toda esa hostilidad entre Francia e Inglaterra. Bueno, es hora de volver y recoger mi recompensa de manos de Thomas. Y luego, a ver qué me depara el futuro.
+text.t3=Esto ha sido fácil. Thomas he quedado contento al saber que sus mercancías han llegado a #sFalaise de Fleur#, pero tendré que hablar con él acerca de otro trabajo más adelante. Creo que Thomas puede estar guardándose algo interesante en la manga.

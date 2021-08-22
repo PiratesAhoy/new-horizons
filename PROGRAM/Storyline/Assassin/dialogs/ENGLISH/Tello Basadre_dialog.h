@@ -6,7 +6,7 @@ string DLG_TEXT[18] = {
 "Yes. But you did not answer my question.",
 "Like you, I work for Benavides and he wants you to help me.",
 "What's going on that the Vice-Admiral wants my help? Anything important?",
-"Maybe. He thinks the French are helping #sisland_Conceicao#. Did you note the arrival of some military or supply ships from France recently.",
+"Maybe. He thinks the French are helping #sisland_Conceicao#. Did you note the arrival of some military or supply ships from France recently?",
 "Last week, yes. A warship and a lineship...",
 "Interesting. They were together?",
 "Yes. But they only stayed three days in #sMarigot#. Just to resupply and then they left the island.",

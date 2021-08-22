@@ -1,0 +1,16 @@
+title=Misión general: Contrabando en #sisland#.
+text.t1=He hablado con un contrabandista en la taberna. Dijo que me puede ayudar a vender mi mercancía pero que primero debo aprender a evitar a las patrullas guardacostas. Luego podré hablar con él otra vez.
+text.t2=Encontré un guardia que estaba fuera de servicio. A cambio de algo de dinero, me dijo que la mejor hora sería #stime#. Puede que tenga que esperar hasta ese momento, debería hablar con uno de mis marineros en cubierta.
+text.t3=Encontré un guardia que se creyó mi historia de que quería hacer una tranquila excursión junto al mar. Debería presentarme en el lugar #stime#. Puede que tenga que esperar hasta ese momento, debería hablar con uno de mis marineros en cubierta.
+text.t4=No me he presentado como pormetí que haría, así que el trato se ha cancelado.
+text.t5=Hice el trato con los contrabandistas y saqué un buen beneficio.
+text.t6=¡Maldición! Los guardacostas me han descubierto, tendré que salir de esta luchando, me temo.
+text.t7=Parece que los contrbandistas no estaban muy contentos conmigo, y han intentado matarme.
+text.t8=He cancelado el trato con los contrabandistas. Aunque no parecían muy contentos, me dejaron marchar.
+text.t9=He engañado a los contrabandistas. Me he quedado con su dinero pero también con las mercancías.
+text.t10=Sé con seguridad cuándo será más seguro hacer el intercambio, así que los contrabandistas me han dicho que debo ir a #slocation#. 
+text.t11=He ordenado a uno de mis oficiales que vaya a #slocation# y observe las idas y venidas de los guardias. Debería estar de vuelta mañana. Podria esperar aquí o hacer alguna otra cosa entretanto.
+text.t12=Encontré un guardia que estaba fuera de servicio y quería jugar una partida de cartas. Después de ganarle, me dijo que la mejor hora para ir es #stime#. Puede que tenga que esperar un tiempo, debería hablar con uno de mis marineros en cubierta.
+text.t13=Mi oficial ha vuelto y dice que #stime# es el mejor momento para hacer contrabando. Puede que tenga que esperar un tiempo, debería hablar con uno de mis marineros en cubierta.
+text.t14=Me temo que hayan capturado a mi oficial o algo peor, ya que no ha aparecido.
+text.t15=Este asunto del contrabando suena demasiado peligroso para mí, de modo que he cancelado el acuerdo. Espero que los contrabandostas me perdonen en caso de que quiera volver a intentarlo más tarde.

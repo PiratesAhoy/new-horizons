@@ -46,7 +46,7 @@ string DLG_TEXT[54] = {
 ". Are you here on business again?",
 "Yes, I need you to produce another document for me.",
 "Papers showing me to be a newly commissioned kapitein in the garrison of #sDouwesen#.",
-"#sDouwesen#? I used to live there. I am rather familiar with their military paperwork. Give me a day and I should be have your commissioning papers ready. The price will be 3000 gold.",
+"#sDouwesen#? I used to live there. I am rather familiar with their military paperwork. Give me a day and I should have your commissioning papers ready. The price will be 3000 gold.",
 "I can afford that. See you tomorrow.",
 "I don't have that much right now, but I'll get it. And I'll be back to collect the papers when I have the money.",
 "You are here to collect your papers, yes? Have you the money?",

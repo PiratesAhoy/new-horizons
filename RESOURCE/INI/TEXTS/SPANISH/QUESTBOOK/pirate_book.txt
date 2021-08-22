@@ -1,0 +1,3 @@
+title=Tutorial: Bajo la bandera negra
+text.t1=He cometido un notorio acto de piratería, así que ahora se me considera pirata. Las Armadas de todos los países me perseguirán. Será mejor que aprenda todos los trucos del 'oficio' si quiero evitar la soga del verdugo.
+text.t2=He adquirido un libro con todo tipo de pistas útiles. Con eso, un buen barco, una tripulación leal y una botella de ron, debería bastar para mantenerme un paso por delante de los cazadores de piratas.

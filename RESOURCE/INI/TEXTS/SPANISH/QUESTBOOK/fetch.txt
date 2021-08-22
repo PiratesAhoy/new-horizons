@@ -1,0 +1,5 @@
+title=Misión general: Ayudar al #stype# de #stown#.
+text.t1=El #stype# de #stown# me ha encargado conseguir #damount# unidades de #sgood# y llevárselas a cambio de #dmoney# piezas de oro. Pero tengo que entregar el cargamento antes del #sdate# o no recibiré nada.
+text.t2=He entregado una parte de la cantidad requerida pero todavía debo entregar el resto.
+text.t3=He completado el encargo.
+text.t4=No he conseguido entregar las mercancías a tiempo.

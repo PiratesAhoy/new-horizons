@@ -33,7 +33,7 @@ void ProcessDialogEvent()
 
 			if(CheckAttribute(Pchar,"quest.pircap_perks") && Pchar.quest.pircap_perks == "start")
 			{
-				if(CheckCharacterPerk(Pchar, "IronWill"))
+				if(GetAttribute(pchar, "IronW") == "done")
 				{
 					Dialog.text = DLG_TEXT[0];
 					link.l1 = DLG_TEXT[1];
@@ -45,6 +45,7 @@ void ProcessDialogEvent()
 					LAi_SetActorType(CharacterFromID("pir_cap16"));
 					LAi_ActorTurnToCharacter(characterFromID("pir_cap16"), Pchar);
 
+				Pchar.IronW = "done";
 					Pchar.perks.list.IronWill = true;
 					Pchar.quest.Aperks = makeint(Pchar.quest.Aperks)-1;
 					Dialog.text = DLG_TEXT[4];

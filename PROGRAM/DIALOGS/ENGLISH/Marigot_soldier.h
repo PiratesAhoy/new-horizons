@@ -11,7 +11,7 @@ string DLG_TEXT[52] = {
 "Umm.. Hit or run, that is now the question...",
 "Only a very narrow and dangerous one: you must evade the Dutch patrols and geuzen. But the worst danger is the Dutch artillery in the field fortifications beside their camp. \nHave a look at their positions... Damme, what's going on there.. Lots of activity.. An attack?? ALARM! The Dutchies attack!",
 "Could THAT be the way out of here?",
-"Oh, swell, yet another suicidal breakout attempt? SIGH Well, can't be helped, orders are orders. Allright, we'll feint an attack, the Dutch will sure as hell counterattack, a lot of good men will die, and you MIGHT get trough if you exploit the general confusion.",
+"Oh, swell, yet another suicidal breakout attempt? SIGH Well, can't be helped, orders are orders. Alright, we'll feint an attack, the Dutch will sure as hell counterattack, a lot of good men will die, and you MIGHT get through if you exploit the general confusion.",
 "Come on, don't gripe, such is life in the army: 99 percent boring waiting and one percent bloody confusion. Let's go then.",
 "DLG_TEXT[14]",
 "DLG_TEXT[15]",

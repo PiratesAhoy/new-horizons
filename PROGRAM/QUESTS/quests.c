@@ -139,8 +139,20 @@ bool CheckQuestRecord(aref qref,string textId)
 	}
 	else return false; //*/
 	//bool retVal = SendMessage(&GameInterface,"las",MSG_INTERFACE_CHECK_QRECORD,qref,textId);
-	bool retVal = hasSubStr(qref.Text, textId + ","); // KK
+// This version falsely passes if it is looking for textId 2 and finds textId 22
+/*	bool retVal = hasSubStr(qref.Text, textId + ","); // KK
 	if (!retVal) retVal = hasSubStr(qref.Text, "," + textId); // KK
+	return retVal; */
+
+	bool retVal = false;
+	if(!CheckAttribute(qref,"Text")) return false;
+	if(qref.Text == textID) retVal = true;					// Check if textID is the only record present
+	if(!retVal)
+	{
+		string strpatch = "*" +qref.Text + "*";				// Put markers at start and end of qref.Text, then check if textID is at either end
+		retVal = hasSubstr(strpatch, "*" + textID + ",") || hasSubstr(strpatch, "," + textID + "*");
+		if(!retVal) retVal = hasSubstr(qref.text, "," + textID + ",");	// Check if textID is somewhere in the middle
+	}
 	return retVal;
 }
 void SetQuestHeader(string idQuest)

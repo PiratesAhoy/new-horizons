@@ -25,6 +25,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\HAAU\HAAU001";
+			Preprocessor_Add("nation", GetNationNameByType(GetTownNation("Falaise de Fleur")));
 			Dialog.Text = DLG_TEXT[0] + GetMyFullName(NPChar) + DLG_TEXT[1];
 			Link.l1 = DLG_TEXT[2] + GetMyFullName(PChar) + DLG_TEXT[3];
 			link.l1.go = "Second time";
@@ -47,15 +48,16 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\HAAU\HAAU003";
 			Dialog.text = DLG_TEXT[7] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[8];
 			if(characters[GetCharacterIndex("Fred Bob")].quest.help == "agreed")  // <-- Cat Fred Bob quest 
-				{
-					Link.l1 = DLG_TEXT[30];
-					Link.l1.go = "fb_node_4"; 
-				}   // <-- Cat Fred Bob quest
+			{
+				if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) Link.l1 = DLG_TEXT[53];
+				else Link.l1 = DLG_TEXT[30];
+				Link.l1.go = "fb_node_4"; 
+			}   // <-- Cat Fred Bob quest
 			else
-				{
+			{
 				link.l1 = DLG_TEXT[9];
 				link.l1.go = "exit";
-				}
+			}
 		break;
 
 		case "teodoro":
@@ -82,8 +84,16 @@ void ProcessDialogEvent()
 		case "teodoro_3":
 			dialog.snd = "Voice\HAAU\HAAU007";
 			Dialog.text = DLG_TEXT[22];
-			link.l1 = DLG_TEXT[23];
-			Link.l1.go = "teodoro_4";
+			if (LAi_IsDead(Characters[GetCharacterIndex(DLG_TEXT[19])]))
+			{
+				link.l1 = DLG_TEXT[50] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[12])]) + DLG_TEXT[51];
+				link.l1.go = "teodoro_6";
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[23];
+				Link.l1.go = "teodoro_4";
+			}
 		break;
 
 		case "teodoro_4":
@@ -102,7 +112,8 @@ void ProcessDialogEvent()
 
 		case "teodoro_6":
 			dialog.snd = "Voice\HAAU\HAAU010";
-			Dialog.text = DLG_TEXT[28];
+			if (LAi_IsDead(Characters[GetCharacterIndex(DLG_TEXT[19])])) Dialog.text = DLG_TEXT[52];
+			else Dialog.text = DLG_TEXT[28];
 			Link.l1 = DLG_TEXT[29];
 			link.l1.go = "exit";
 			Characters[GetCharacterIndex("Patric Cardone")].dialog.currentnode = "Teodoro_completed";
@@ -128,6 +139,7 @@ void ProcessDialogEvent()
 		
 		case "fb_node_6":
 			dialog.snd = "Voice\HAAU\HAAU006";
+			Preprocessor_Add("nation", GetNationNameByType(GetTownNation("Falaise de Fleur")));
 			Dialog.text = DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			if(makeint(PChar.reputation)>=6)

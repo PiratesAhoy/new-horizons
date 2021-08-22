@@ -1,0 +1,9 @@
+title=The Duchess and the Devil.
+text.t1=I have to take the Duchess of Wharfedale to England and also carry some secret documents. We must make ready for sea.
+text.t2=We have been captured by the Spanish and put in prison. I need to look around and think of a way to escape.
+text.t3=I have found Archie, but he is in a bad way. I can't leave him here, so escape is out of the question for now.
+text.t4=The Duchess has turned up at the prison. We can go for a walk on the beach together as I need to know if she still has my documents. We need to go to the shore so the guards can't hear us talking.
+text.t5=I have been invited to dinner with the Don and the Duchess.
+text.t6=The Duchess has gone and she still has my documents.
+text.t7=The Duchess and the documents are safe. The crew and I must return to the prison as I gave my word we would return.
+text.t8=We have been released by the Spanish. We must go to the beach to get back to the 'Indy'.

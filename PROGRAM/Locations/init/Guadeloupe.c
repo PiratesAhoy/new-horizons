@@ -612,12 +612,66 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].reload.l1.label = "Jungle.";
 	Locations[n].locators_radius.reload.Reload1 = 3.0;
 
-	Locations[n].reload.l2.name = "reload2";
-	Locations[n].reload.l2.go = "Guadeloupe_Plantation"; // Screwface : was "Pointe_a_pitre_town_exit";
-	Locations[n].reload.l2.emerge = "Reload2"; // was "reload1";
-	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].reload.l2.label = "Exit from #stown_name#.";
-	Locations[n].locators_radius.reload.Reload2 = 3.0;
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		Locations[n].reload.l1.name = "reload1";
+		Locations[n].reload.l1.go = "Guadeloupe_shore_01";
+		Locations[n].reload.l1.emerge = "locator3";
+		Locations[n].reload.l1.autoreload = "1";
+		Locations[n].reload.l1.label = "Ensenada del Bosque Quebrado.";
+		Locations[n].locators_radius.reload.Reload1 = 3.0;
+
+		Locations[n].reload.l4.name = "reload1_back";
+		Locations[n].reload.l4.go = "Guadeloupe_shore_01";
+		Locations[n].reload.l4.emerge = "locator3";
+		Locations[n].reload.l4.autoreload = "1";
+		Locations[n].reload.l4.label = "Ensenada del Bosque Quebrado.";
+		Locations[n].locators_radius.reload.Reload1_back = 2.0;
+
+		Locations[n].reload.l2.name = "reload2";
+		Locations[n].reload.l2.go = "Guadeloupe_shore_02";
+		Locations[n].reload.l2.emerge = "reload2";
+		Locations[n].reload.l2.autoreload = "1";
+		Locations[n].reload.l2.label = "Bahía Grande.";
+		Locations[n].locators_radius.reload.reload2 = 3.0;
+
+		Locations[n].reload.l5.name = "reload2_back";
+		Locations[n].reload.l5.go = "Guadeloupe_shore_02";
+		Locations[n].reload.l5.emerge = "reload2";
+		Locations[n].reload.l5.autoreload = "1";
+		Locations[n].reload.l5.label = "Bahía Grande.";
+		Locations[n].locators_radius.reload.Reload3_back = 2.0;
+	}
+	else
+	{
+		Locations[n].reload.l1.name = "reload1";
+		Locations[n].reload.l1.go = "Guadeloupe_Jungle_03";
+		Locations[n].reload.l1.emerge = "reload2";
+		Locations[n].reload.l1.autoreload = "1";
+		Locations[n].reload.l1.label = "Jungle.";
+		Locations[n].locators_radius.reload.Reload1 = 3.0;
+
+		Locations[n].reload.l4.name = "reload1_back";
+		Locations[n].reload.l4.go = "Guadeloupe_Jungle_03";
+		Locations[n].reload.l4.emerge = "reload2";
+		Locations[n].reload.l4.autoreload = "1";
+		Locations[n].reload.l4.label = "Jungle.";
+		Locations[n].locators_radius.reload.Reload1_back = 2.0;
+
+		Locations[n].reload.l2.name = "reload2";
+		Locations[n].reload.l2.go = "Guadeloupe_Plantation"; // Screwface : was "Pointe_a_pitre_town_exit";
+		Locations[n].reload.l2.emerge = "Reload2"; // was "reload1";
+		Locations[n].reload.l2.autoreload = "1";
+		Locations[n].reload.l2.label = "Exit from #stown_name#.";
+		Locations[n].locators_radius.reload.Reload2 = 3.0;
+
+		Locations[n].reload.l5.name = "reload2_back";
+		Locations[n].reload.l5.go = "Guadeloupe_Plantation"; // Screwface : was "Pointe_a_pitre_town_exit";
+		Locations[n].reload.l5.emerge = "Reload2"; // was "reload1";
+		Locations[n].reload.l5.autoreload = "1";
+		Locations[n].reload.l5.label = "Exit from #stown_name#.";
+		Locations[n].locators_radius.reload.Reload2_back = 2.0;
+	}
 
 	Locations[n].reload.l3.name = "reload3";
 	Locations[n].reload.l3.go = "Guadeloupe_Jungle_02";
@@ -625,20 +679,6 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].reload.l3.autoreload = "1";
 	Locations[n].reload.l3.label = "Jungle.";
 	Locations[n].locators_radius.reload.Reload3 = 3.0;
-
-	Locations[n].reload.l4.name = "reload1_back";
-	Locations[n].reload.l4.go = "Guadeloupe_Jungle_03";
-	Locations[n].reload.l4.emerge = "reload2";
-	Locations[n].reload.l4.autoreload = "1";
-	Locations[n].reload.l4.label = "Jungle.";
-	Locations[n].locators_radius.reload.Reload1_back = 2.0;
-
-	Locations[n].reload.l5.name = "reload2_back";
-	Locations[n].reload.l5.go = "Guadeloupe_Plantation"; // Screwface : was "Pointe_a_pitre_town_exit";
-	Locations[n].reload.l5.emerge = "Reload2"; // was "reload1";
-	Locations[n].reload.l5.autoreload = "1";
-	Locations[n].reload.l5.label = "Exit from #stown_name#.";
-	Locations[n].locators_radius.reload.Reload2_back = 2.0;
 
 	Locations[n].reload.l6.name = "reload3_back";
 	Locations[n].reload.l6.go = "Guadeloupe_Jungle_02";
@@ -695,13 +735,6 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].reload.l1.label = "Jungle.";
 	Locations[n].locators_radius.reload.Reload1 = 3.0;
 
-	Locations[n].reload.l2.name = "reload2";
-	Locations[n].reload.l2.go = "Guadeloupe_Lighthouse";
-	Locations[n].reload.l2.emerge = "reload1";
-	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].reload.l2.label = "#sisland_name# lighthouse."; // KK
-	Locations[n].locators_radius.reload.Reload2 = 3.0;
-
 	Locations[n].reload.l3.name = "reload1_back";
 	Locations[n].reload.l3.go = "Guadeloupe_Jungle_01";
 	Locations[n].reload.l3.emerge = "reload3";
@@ -709,12 +742,22 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].reload.l3.label = "Jungle.";
 	Locations[n].locators_radius.reload.reload1_back = 2.0;
 
-	Locations[n].reload.l4.name = "reload2_back";
-	Locations[n].reload.l4.go = "Guadeloupe_Lighthouse";
-	Locations[n].reload.l4.emerge = "reload1";
-	Locations[n].reload.l4.autoreload = "1";
-	Locations[n].reload.l4.label = "#sisland_name# lighthouse."; // KK
-	Locations[n].locators_radius.reload.reload2_back = 2.0;
+	if (GetCurrentPeriod() != PERIOD_EARLY_EXPLORERS)
+	{
+		Locations[n].reload.l2.name = "reload2";
+		Locations[n].reload.l2.go = "Guadeloupe_Lighthouse";
+		Locations[n].reload.l2.emerge = "reload1";
+		Locations[n].reload.l2.autoreload = "1";
+		Locations[n].reload.l2.label = "#sisland_name# lighthouse."; // KK
+		Locations[n].locators_radius.reload.Reload2 = 3.0;
+
+		Locations[n].reload.l4.name = "reload2_back";
+		Locations[n].reload.l4.go = "Guadeloupe_Lighthouse";
+		Locations[n].reload.l4.emerge = "reload1";
+		Locations[n].reload.l4.autoreload = "1";
+		Locations[n].reload.l4.label = "#sisland_name# lighthouse."; // KK
+		Locations[n].locators_radius.reload.reload2_back = 2.0;
+	}
 
 	Locations[n].island = "Guadeloupe";
 	n = n + 1;
@@ -829,7 +872,8 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].reload.l3.go = "Guadeloupe_shore_01";
 	Locations[n].reload.l3.emerge = "locator3";
 	Locations[n].reload.l3.autoreload = "1";
-	Locations[n].reload.l3.label = "Anse Casse-Bois.";		//spell-checked by KAM // KK
+	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) Locations[n].reload.l3.label = "Ensenada del Bosque Quebrado.";
+	else Locations[n].reload.l3.label = "Anse Casse-Bois.";		//spell-checked by KAM // KK
 	Locations[n].locators_radius.reload.reload3 = 3.0;
 
 	Locations[n].reload.l4.name = "Reload2_back";
@@ -843,7 +887,8 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].reload.l5.go = "Guadeloupe_shore_01";
 	Locations[n].reload.l5.emerge = "locator3";
 	Locations[n].reload.l5.autoreload = "1";
-	Locations[n].reload.l5.label = "Anse Casse-Bois.";		//spell-checked by KAM // KK
+	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) Locations[n].reload.l5.label = "Ensenada del Bosque Quebrado.";
+	else Locations[n].reload.l5.label = "Anse Casse-Bois.";		//spell-checked by KAM // KK
 	Locations[n].locators_radius.reload.Reload3_back = 2.0;
 
 	Locations[n].island = "Guadeloupe";
@@ -934,10 +979,18 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].filespath.models = "locations\Outside\Shore_4";
 
 	Locations[n].id = "Guadeloupe_shore_01";
-	locations[n].id.label = "Anse Casse-Bois.";		//spell-checked by KAM // KK
 	locations[n].worldmap = "GuadShore 1";
 	Locations[n].image = "Outside_Shore_4.tga";
-	Locations[n].name = "Anse Casse-Bois";
+	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		locations[n].id.label = "Ensenada del Bosque Quebrado.";
+		Locations[n].name = "Ensenada del Bosque Quebrado";
+	}
+	else
+	{
+		locations[n].id.label = "Anse Casse-Bois.";		//spell-checked by KAM // KK
+		Locations[n].name = "Anse Casse-Bois";
+	}
 	//Sound
 	locations[n].type = "seashore";
 
@@ -968,19 +1021,38 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].environment.sea = "true";
 	//Reload map
 
-	Locations[n].reload.l1.name = "locator3";
-	Locations[n].reload.l1.go = "Guadeloupe_Jungle_03";
-	Locations[n].reload.l1.emerge = "reload3";
-	Locations[n].reload.l1.autoreload = "1";
-	Locations[n].locators_radius.reload.locator3 = 3;
-	Locations[n].reload.l1.label = "Jungle.";
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		Locations[n].reload.l1.name = "locator3";
+		Locations[n].reload.l1.go = "Guadeloupe_Jungle_01";
+		Locations[n].reload.l1.emerge = "reload1";
+		Locations[n].reload.l1.autoreload = "1";
+		Locations[n].reload.l1.label = "Jungle.";
+		Locations[n].locators_radius.reload.locator3 = 3.0;
 
-	Locations[n].reload.l3.name = "locator3_back";
-	Locations[n].reload.l3.go = "Guadeloupe_Jungle_03";
-	Locations[n].reload.l3.emerge = "reload3";
-	Locations[n].reload.l3.autoreload = "1";
-	Locations[n].locators_radius.reload.locator3_back = 1;
-	Locations[n].reload.l3.label = "Jungle.";
+		Locations[n].reload.l3.name = "locator3_back";
+		Locations[n].reload.l3.go = "Guadeloupe_Jungle_01";
+		Locations[n].reload.l3.emerge = "reload1";
+		Locations[n].reload.l3.autoreload = "1";
+		Locations[n].reload.l3.label = "Jungle.";
+		Locations[n].locators_radius.reload.locator3_back = 1;
+	}
+	else
+	{
+		Locations[n].reload.l1.name = "locator3";
+		Locations[n].reload.l1.go = "Guadeloupe_Jungle_03";
+		Locations[n].reload.l1.emerge = "reload3";
+		Locations[n].reload.l1.autoreload = "1";
+		Locations[n].locators_radius.reload.locator3 = 3;
+		Locations[n].reload.l1.label = "Jungle.";
+
+		Locations[n].reload.l3.name = "locator3_back";
+		Locations[n].reload.l3.go = "Guadeloupe_Jungle_03";
+		Locations[n].reload.l3.emerge = "reload3";
+		Locations[n].reload.l3.autoreload = "1";
+		Locations[n].locators_radius.reload.locator3_back = 1;
+		Locations[n].reload.l3.label = "Jungle.";
+	}
 
 	Locations[n].reload.l2.name = "boat";
 	Locations[n].reload.l2.go = "Guadeloupe";
@@ -1497,4 +1569,73 @@ void LocationInitguadeloupe(ref n)
 	Build_at("Guadeloupe_Jungle_01", "jungle", "", -0.11, 0.32, 8.45, -0.01, "wild_jungles");
 	Build_at("Guadeloupe_Jungle_01", "jungle", "", 2.57, 0.09, -7.64, 1.45, "wild_jungles");
 	Build_at("Guadeloupe_Jungle_01", "jungle", "", 0.47, 0.50, -13.45, -3.10, "wild_jungles");
+
+	// -------------------------------------------------
+
+	Locations[n].filespath.models = "locations\Outside\Shore_5";
+
+	Locations[n].id = "Guadeloupe_shore_02";
+	locations[n].id.label = "Bahía Grande"; // KK
+	Locations[n].image = "Outside_Shore_5.tga";
+	Locations[n].name = "Bahía Grande";
+	locations[n].worldmap = "GuadShore 2";
+
+	//Sound
+	locations[n].type = "seashore";
+
+	Locations[n].townsack = "Falaise de Fleur"; // KK
+	//Models
+	//Always
+	Locations[n].models.always.jungle = "Shore05";
+	Locations[n].models.always.jungle.foam = "1";
+	Locations[n].models.always.locators = "Shore05_l";
+	Locations[n].models.always.grassPatch = "Shore05_g";
+	Locations[n].models.always.seabed = "Shore05_sb";
+	Locations[n].models.always.seabed.foam = "1";
+	Locations[n].models.always.l1 = "plan_1";
+	Locations[n].models.always.l1.level = 9;
+	Locations[n].models.always.l1.tech = "LocationModelBlend";
+	Locations[n].models.always.l2 = "plan_2";
+	Locations[n].models.always.l2.level = 8;
+	Locations[n].models.always.l2.tech = "LocationModelBlend";
+	Locations[n].models.always.l3 = "plan_3";
+	Locations[n].models.always.l3.level = 7;
+	Locations[n].models.always.l3.tech = "LocationModelBlend";
+
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Shore05_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Shore05_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+	//Reload map
+	Locations[n].reload.l1.name = "reload2";
+	Locations[n].reload.l1.go = "Guadeloupe_Jungle_01";
+	Locations[n].reload.l1.emerge = "reload2";
+	Locations[n].reload.l1.autoreload = "1";
+	Locations[n].reload.l1.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload2 = 3;
+
+	Locations[n].reload.l3.name = "reload2_back";
+	Locations[n].reload.l3.go = "Guadeloupe_Jungle_01";
+	Locations[n].reload.l3.emerge = "reload2";
+	Locations[n].reload.l3.autoreload = "1";
+	Locations[n].reload.l3.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload2_back = 3;
+
+	Locations[n].reload.l2.name = "boat";
+	Locations[n].reload.l2.go = "Guadeloupe";
+	Locations[n].reload.l2.emerge = "reload_2";
+	Locations[n].reload.l2.autoreload = "0";
+	if (VISIT_DECK == 1)
+		Locations[n].reload.l2.label = "Ship.";
+	else
+		Locations[n].reload.l2.label = "Sea.";
+	Locations[n].locators_radius.reload.boat = 9.0;
+
+
+	Locations[n].island = "Guadeloupe"; // NK 04-08-29
+	n = n + 1;
 }

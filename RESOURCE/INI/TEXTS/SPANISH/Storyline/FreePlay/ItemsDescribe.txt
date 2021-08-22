@@ -1,0 +1,5 @@
+itmname_SpanishLetter	{Carta española}
+itmdescr_SpanishLetter
+{
+Este documento, firmado por el vicealmirante Salvatore, prueba que el 'Vogelstruijs' trasnporta municiones para la conquista de #sRedmond# y tiene que llevar su carga hasta #sSanto Domingo#.
+}

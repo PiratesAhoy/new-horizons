@@ -2019,6 +2019,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.money = "200";
 	LAi_SetPoorType(ch);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	AddGameCharacter(n, ch);
 
 	//Smoker in Opium Den
@@ -2052,6 +2053,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.money = "600";
 	LAi_SetPoorType(ch);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	AddGameCharacter(n, ch);
 
 	//Smoker in Opium Den
@@ -2085,6 +2087,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.money = "500";
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	AddGameCharacter(n, ch);
 // <-- ditto
 

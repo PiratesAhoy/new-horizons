@@ -31,7 +31,7 @@ string DLG_TEXT[37] = {
 "Fine. I'll do that. I can't help someone who won't be helped.",
 "You're looking for a sign from God, but you refuse to see it when it may be right in front of you. I'm no angel, madam, but you say you need money to cure your son. I can give it to you, and - God willing - your son will be healed.",
 "You say you need money to heal your son. I don't have it now, but I'll get it. Somehow, I'll get it, and I'll bring it to you. That's the only miracle I can offer.",
-"Please, #ssir#. Don't toy with me. You only make matters worse. No man on the face of this cursed earth would give a stranger that kind of money.",
+"Please, #ssir#. Don't toy with me. You only make matters worse. No one on the face of this cursed earth would give a stranger that kind of money.",
 "I'm pleased to prove you wrong. Here is 1000 gold exactly. That should be enough to heal your son.",
 "Yes. You've lost your faith in both God and Man. I see that now. I'll not waste my time trying to prove you wrong. Goodbye.",
 "You give me this money and ask nothing in return?",

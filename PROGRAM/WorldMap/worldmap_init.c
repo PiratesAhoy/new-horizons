@@ -1011,18 +1011,32 @@ void wdmInitWorldMap()
 
 	//City
 	//Name
-	worldMap.islands.Guadeloupe.locations.city1.name = "Pointe a Pitre";
-	worldMap.islands.Guadeloupe.locations.city1.real = "Pointe a Pitre";
+	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		worldMap.islands.Guadeloupe.locations.city1.name = "GuadShore 2";
+		worldMap.islands.Guadeloupe.locations.city1.modelName = "leaf";
+		worldMap.islands.Guadeloupe.locations.city1.label.text = "Bahía Grande";
+		worldMap.islands.Guadeloupe.locations.city1.label.icon = -1;
+
+		worldMap.islands.Guadeloupe.locations.city2.label.text = "Ensenada del Bosque Quebrado";
+	}
+	else
+	{
+		worldMap.islands.Guadeloupe.locations.city1.name = "Pointe a Pitre";
+		worldMap.islands.Guadeloupe.locations.city1.real = "Pointe a Pitre";
+		worldMap.islands.Guadeloupe.locations.city1.modelName = "town";
+		wdmSetIcon("Pointe a Pitre", FindTownName("Pointe a Pitre"), GetTownNation("Pointe a Pitre")); // KK
+
+		worldMap.islands.Guadeloupe.locations.city2.label.text = "Anse Casse-Bois";
+	}
 	//Geometry parameters
 	worldMap.islands.Guadeloupe.locations.city1.position.x = -715.3181;
 	worldMap.islands.Guadeloupe.locations.city1.position.y = 4.0855;
 	worldMap.islands.Guadeloupe.locations.city1.position.z = 3.3855;
 	worldMap.islands.Guadeloupe.locations.city1.position.ay = 2.5765;
-	worldMap.islands.Guadeloupe.locations.city1.modelName = "town";
 	worldMap.islands.Guadeloupe.locations.city1.visible = "false";
 	worldMap.islands.Guadeloupe.locations.city1.move = "false";
 	//Label
-	wdmSetIcon("Pointe a Pitre", FindTownName("Pointe a Pitre"), GetTownNation("Pointe a Pitre")); // KK
 	worldMap.islands.Guadeloupe.locations.city1.label.visible = "false";
 	// initial ship location
 	worldMap.islands.Guadeloupe.locations.city1.ship.pos.x = -717.0381; // KK
@@ -1038,7 +1052,6 @@ void wdmInitWorldMap()
 	worldMap.islands.Guadeloupe.locations.city2.visible = "false";
 	worldMap.islands.Guadeloupe.locations.city2.move = "false";
 	//Label
-	worldMap.islands.Guadeloupe.locations.city2.label.text = "Anse Casse-Bois";
 	worldMap.islands.Guadeloupe.locations.city2.label.icon = -1;
 	worldMap.islands.Guadeloupe.locations.city2.label.visible = "false";
 	// initial ship location
@@ -1452,14 +1465,26 @@ void wdmInitWorldMap()
 
 	//City
 	//Name
-	worldMap.islands.Aruba.locations.city1.name = "Oranjestad";
-	worldMap.islands.Aruba.locations.city1.real = "Oranjestad";
+	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+	{
+		worldMap.islands.Aruba.locations.city1.name = "ArubaShore2";
+		worldMap.islands.Aruba.locations.city1.modelName = "leaf";
+
+		worldMap.islands.Aruba.locations.city1.label.text = "Sandy Beach";
+		worldMap.islands.Aruba.locations.city1.label.icon = -1;
+	}
+	else
+	{
+		worldMap.islands.Aruba.locations.city1.name = "Oranjestad";
+		worldMap.islands.Aruba.locations.city1.real = "Oranjestad";
+
+		worldMap.islands.Aruba.locations.city1.modelName = "town";
+	}
 	//Geometry parameters
 	worldMap.islands.Aruba.locations.city1.position.x = -177.4276;
 	worldMap.islands.Aruba.locations.city1.position.y = 3.9001;
 	worldMap.islands.Aruba.locations.city1.position.z = 573.0608;
 	worldMap.islands.Aruba.locations.city1.position.ay = 1.5765;
-	worldMap.islands.Aruba.locations.city1.modelName = "town";
 	worldMap.islands.Aruba.locations.city1.visible = "false";
 	worldMap.islands.Aruba.locations.city1.move = "false";
 	//Label

@@ -1,0 +1,5 @@
+itmname_SpanishLetter	{Spanish Letter}
+itmdescr_SpanishLetter
+{
+This document, signed by Vice-Admiral Salvatore, proves that the 'Vogelstruijs' is carrying ammunition for the conquest of #sRedmond# and is to deliver the cargo to #sSanto Domingo#.
+}

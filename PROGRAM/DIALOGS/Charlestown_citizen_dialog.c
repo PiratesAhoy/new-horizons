@@ -270,7 +270,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "town_shipyard";
 			Link.l3 = DLG_TEXT[136];
 			Link.l3.go = "town_store";
-            DeleteAttribute(&locations[FindLocation("Charlestown_port")], "reload.l6.goto_disable"); // BOP: Unlock Fast Travel
+			DeleteAttribute(&locations[FindLocation("Charlestown_port")], "reload.l4.goto_disable"); // BOP: Unlock Fast Travel
 		break;
 
 		case "town_shipyard":
@@ -281,7 +281,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "town_store";
 			Link.l3 = DLG_TEXT[140];
 			Link.l3.go = "exit";
-            DeleteAttribute(&locations[FindLocation("Charlestown_port")], "reload.l3.goto_disable"); // BOP: Unlock Fast Travel
+			DeleteAttribute(&locations[FindLocation("Charlestown_port")], "reload.l5.goto_disable"); // BOP: Unlock Fast Travel
 		break;
 
 		case "town_store":
@@ -292,7 +292,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "town_tavern";
 			Link.l3 = DLG_TEXT[145];
 			Link.l3.go = "exit";
-            DeleteAttribute(&locations[FindLocation("Charlestown_port")], "reload.l4.goto_disable"); // BOP: Unlock Fast Travel
+			DeleteAttribute(&locations[FindLocation("Charlestown_port")], "reload.l6.goto_disable"); // BOP: Unlock Fast Travel
 		break;
 
 		case "colony":

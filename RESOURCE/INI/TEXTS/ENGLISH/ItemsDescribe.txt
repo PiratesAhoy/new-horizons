@@ -88,6 +88,24 @@ itmdescr_Davy_Chest
 This chest contains the still-beating heart of the captain of the Flying Dutchman. Carrying this indicates that you are cursed to sail the Seven Seas, never to set foot ashore and to ferry the souls of those who died at sea.
 }
 
+itmname_Devil_Contract {The Devil's Contract}
+itmdescr_Devil_Contract
+{
+This document, signed by Mephistopheles, proves that you have made a contract with the devil. Carrying this indicates that you are cursed to reap souls for Hell and are bound to your ship for eternity.
+}
+
+itmname_Correspondence1 {Letter to Sylvie Bondies}
+itmdescr_Correspondence1
+{
+Correspondence between Arnaud Matton and Sylvie Bondies regarding Sabine.
+}
+itmname_Correspondence2 {Letter to Arnaud Matton}
+itmdescr_Correspondence2
+{
+Correspondence between Sylvie Bondies and Arnaud Matton regarding Sabine.
+}
+
+
 itmname_blade1	{Saber}
 itmdescr_blade1
 {
@@ -145,7 +163,7 @@ A fine rapier, a presentation from the French Crown.
 itmname_blade10	{Piranha}
 itmdescr_blade10
 {
-A bloodthirsty-looking short sword of fine steel. Not made for defence, but it's bite more than makes up for that.
+A bloodthirsty-looking short sword of fine steel. Not made for defence, but its bite more than makes up for that.
 }
 
 itmname_blade11	{Highlander}
@@ -157,7 +175,7 @@ This Scottish broadsword is a perfect match for a man with a fiery temper. A tad
 itmname_blade12	{Arabic Scimitar}
 itmdescr_blade12
 {
-A broad sabre from the hot forges of Damascus. Sharp and light despite it's impressive size, this blade can easily cut silk and nails alike.
+A broad sabre from the hot forges of Damascus. Sharp and light despite its impressive size, this blade can easily cut silk and nails alike.
 }
 
 itmname_blade13	{Dueling Rapier}
@@ -317,7 +335,13 @@ A Double-edged blade with three large and two small fullers, s-shaped quillions 
 itmname_bladeC6	{Smallsword}
 itmdescr_bladeC6
 {
-The smallsword is the common dueling weapon. It is not merely a side arm, but rather an essential part of a gentleman's wardrobe. Despite the name, smallswords can be quite long. It refers to the width of the blade rather than it's length and is one of the steps taken between the sword and the rapier.
+The smallsword is the common dueling weapon. It is not merely a side arm, but rather an essential part of a gentleman's wardrobe. Despite the name, smallswords can be quite long. It refers to the width of the blade rather than its length and is one of the steps taken between the sword and the rapier.
+}
+
+itmname_bladeC17	{Flamberge Rapier}
+itmdescr_bladeC17
+{
+When parrying, the undulating blade of this rapier causes unpleasant vibration in the attacker's sword. The weapon is probably of German origin. 
 }
 
 itmname_bladeC18	{Shellcup Falchion}
@@ -332,6 +356,11 @@ itmdescr_bladeC2
 This is a quarter hilt Venetian sword. Two distinct aspects to this design are the steel grip and a wide back-blade with double fullers down the spine. The single-edged blade is heavy and broad enough to justify classifying it as a side sword.
 }
 
+itmname_bladeC23 {Toledo rapier}
+itmdescr_bladeC23 {
+A rapier of the Toledo masters, with a light yet rather sturdy blade. Favoured weapon of Spanish duellists. 
+}
+
 itmname_bladeC26	{Pappenheimer Rapier}
 itmdescr_bladeC26
 {
@@ -341,7 +370,7 @@ A 45-inch blade with a special hilt design that excels at protecting your hand d
 itmname_bladeC30	{Swept Hilt Rapier}
 itmdescr_bladeC30
 {
-Although designed to be used as a defensive weapon in combination with a dagger, this sword works quite well on it's own. 
+Although designed to be used as a defensive weapon in combination with a dagger, this sword works quite well on its own. 
 }
 
 itmname_bladeC33	{Walloon Sword}
@@ -354,6 +383,30 @@ itmname_bladeC35	{Hibernian}
 itmdescr_bladeC35
 {
 This is an Irish-made, 32 inch, high-quality steel side sword with a heavy, double-edged blade.
+}
+
+itmname_bladeC36 	{Katana}
+itmdescr_bladeC36 
+{
+The Katana Sword is a light Japanese sword. It is good for both fast attacks and blocking thanks to the long, exceptionally sharp blade.
+}
+
+itmname_blade308 	{Sword of the Earth}
+itmdescr_blade308 
+{
+Designed for the fantasies of an eccentric nobleman, this longsword with its unusual crossguard is nevertheless an effective weapon.
+}
+
+itmname_bladeCiri  {Ciri's Steel Blade}
+itmdescr_bladeCiri 
+{
+While not forged from silver, this is still an exquisite blade for hunting men and monsters alike.
+}
+
+itmname_witcher_steel  {Geralt's Steel Flambard}
+itmdescr_witcher_steel 
+{
+This Flambard was forged in Toussaint by grandmaster smith Lazare Lafargue, shortly before Geralt and Ciri left their world and came to the Caribbean.
 }
 
 // Russian mod -->
@@ -397,7 +450,7 @@ Mêlée weapon widely used by the heavy Cavalry of the Polish Hussars. The long, t
 itmname_blade43	{US Cavalry Sabre}
 itmdescr_blade43
 {
-Finely crafted Sabre of the US Cavalry. With it's long, durable, razor sharp single-edged blade, this sword is forged using the latest techniques of smithing.
+Finely crafted Sabre of the US Cavalry. With its long, durable, razor sharp single-edged blade, this sword is forged using the latest techniques of smithing.
 }
 
 itmname_blade42	{Jack Sparrow's Cutlass}
@@ -421,13 +474,13 @@ The Shashka, meaning 'Long Knife', is favored by Russian Cossack regiments due t
 itmname_blade45	{'Crab Claw' BroadSword}
 itmdescr_blade45
 {
-Ancient and rare, this heavy double-edged weapon is of unknown origin but can cut and parry sufficiently despite it's great age.
+Ancient and rare, this heavy double-edged weapon is of unknown origin but can cut and parry sufficiently despite its great age.
 }
 
 itmname_blade46	{'Dragon' Shortsword}
 itmdescr_blade46
 {
-Ancient but effective short double-edged weapon. It lends it's name from the dragon motif forged into it's hilt.
+Ancient but effective short double-edged weapon. It lends its name from the dragon motif forged into its hilt.
 }
 
 itmname_blade47	{Light Tizona}
@@ -465,7 +518,7 @@ Ornate Dress Sword from the Royal Courts of Paris. Maybe you can impress your op
 itmname_bladeFD	{Francis Drake's Sword}
 itmdescr_bladeFD
 {
-I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by François Moulin. It's at least a century old and is covered in a blue-green patina. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its' history.
+I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by François Moulin. It's at least a century old and is ornately engraved. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its history.
 }
 
 
@@ -525,7 +578,7 @@ Initially designed for Count William V of Holland, this ceremonial sword feature
 itmname_bladeaxe1 {Axe}
 itmdescr_bladeaxe1
 {
-Commonly used for chopping wood, the axe could also be used as a melee weapon. It's lack of defensive capability is made up for by it weight and destructive power.
+Commonly used for chopping wood, the axe could also be used as a melee weapon. Its lack of defensive capability is made up for by it weight and destructive power.
 }
 
 itmname_bladeaxe2 {Boarding Axe}
@@ -583,10 +636,16 @@ itmdescr_pistol1
 A small, cheap pistol. More of a melee weapon than a gun, frequently used to deliver a gutshot to unsuspecting foes.
 }
 
-itmname_pistol2	{Dueling pistol}
+itmname_pistol1a	{Short pistol}
+itmdescr_pistol1a
+{
+A cheap short-barrelled pistol. Only good for killing sparrows. Point-blank.
+}
+
+itmname_pistol2	{Long pistol}
 itmdescr_pistol2
 {
-A well-crafted pistol with a long barrel that improves accuracy. Decent range and punch, but it reloads slower than the short pistol.
+A common pistol with a long barrel. Decent range and punch, but it reloads slowly and is not too accurate.
 }
 
 itmname_pistol3	{Grapeshot pistol}
@@ -595,10 +654,16 @@ itmdescr_pistol3
 A genuine hand cannon that does damage to multiple enemies at once. Formidable stopping power, but it lacks range and accuracy.
 }
 
-itmname_pistol4	{Pepperbox}
+itmname_pistol4	{Quad-barrel pistol}
 itmdescr_pistol4
 {
 Four pistols in one. Long reloading time, but it's definitely worth it. 'Professional Gunman' ability is required to use this pistol.
+}
+
+itmname_DuelPistol {Duelling pistol}
+itmdescr_DuelPistol
+{
+A well-crafted pistol with a long barrel. Accurate and well balanced, this is the weapon of choice for settling matters of honour.
 }
 
 itmname_pistol5	{Horse pistol}
@@ -613,6 +678,12 @@ itmdescr_pistol6
 An excellent pistol with two barrels. For those cases when one bullet just isn't enough. 'Gunman' ability is required to use this pistol.
 }
 
+itmname_pistol6_2	{Double barrel pistol}
+itmdescr_pistol6_2
+{
+An ornate pistol with two barrels. The ivory grip is made to resemble a falcon's head. 'Gunman' ability is required to use this pistol.
+}
+
 itmname_pistol25	{Brace of four horse pistols}
 itmdescr_pistol25
 {
@@ -625,6 +696,12 @@ itmdescr_pistol26
 With four barrels loaded with grapeshots you can do a lot of damage to multiple enemies at once. 'Professional Gunman' ability required.
 }
 
+itmname_pistol27	{Miquelet pistol}
+itmdescr_pistol27
+{
+This Spanish pistol is not especially accurate but is hard hitting. The mechanism is an early form of flintlock.
+}
+
 itmname_pistol3_14	{Jack's Lucky Flintlock}
 itmdescr_pistol3_14
 {
@@ -634,7 +711,7 @@ This beautiful, but plain-decorated pistol, comes from the British colonies of I
 itmname_pistol4_1	{Mercenary's pistol}
 itmdescr_pistol4_1
 {
-A Quad-barrel pistol but bigger and more powerful than a normal one. It can kill a large amount enemies in only a few seconds. Highly prized by the Spanish mercenaries.
+A Quad-barrel pistol but bigger and more powerful than a normal one. It can kill a large amount of enemies in only a few seconds. Highly prized by the Spanish mercenaries.
 }
 
 itmname_Sparrow_Ring {Silver Ring}
@@ -655,6 +732,12 @@ itmname_pistol7	{Brace of Small Pistols}
 itmdescr_pistol7
 {
 A strap of three quick-draw handguns. More decorative than powerful, they were formerly used by French nobility for duels. Requires 'Gunman' ability.
+}
+
+itmname_pistol7a	{Brace of Short Pistols}
+itmdescr_pistol7a
+{
+A strap of three quick-draw handguns. Now you can shoot a flock of sparrows, if they sit still. Requires 'Gunman' ability.
 }
 
 itmname_pistol8	{Brace of Flintlock Pistols}
@@ -700,7 +783,7 @@ This is a sniper's favourite weapon.
 itmname_LongRifle_W		{Long Rifle}
 itmdescr_LongRifle_W
 {
-This unique weapon can be equipped with a Telescope for increased accuracy. 
+This powerful weapon has silver inlays. Of Arabic origin?
 }
 
 itmname_LongRifle_WT	{Long Rifle with Telescope}
@@ -709,7 +792,23 @@ itmdescr_LongRifle_WT
 This is a sniper's favourite weapon. 
 }
 
+itmname_LongRifle_H		{Long Rifle}
+itmdescr_LongRifle_H
+{
+A Baker Rifle, a flintlock rifle used by the British army during the Napoleonic wars.
+}
+
 // <-- JRH: Long Rifle end
+
+// GR: Collier revolver for use by Clint Eastwood -->
+
+itmname_pistolcollier	{Collier Revolver}
+itmdescr_pistolcollier
+{
+An ornate version of an early revolver produced by Elisha Collier. (Requires 'Professional Gunman' ability.)
+}
+
+// <-- GR: Collier revolver
 
 // BOP and JRH: Indian Weapons -->
 
@@ -756,6 +855,16 @@ If you throw it from some distance the victim won't realize where it came from. 
 }
 
 // BOP and JRH: Indian Weapons <--
+
+// GR: ceremonial tomahawk for "Crystal Skull" sidequest -->
+
+itmname_tomahawk_chief		{Chief's Tomahawk}
+itmdescr_tomahawk_chief
+{
+If you have this then you are lucky enough to have survived being hit by it, or even luckier to have been given it.
+}
+
+// GR: ceremonial tomahawk for "Crystal Skull" sidequest <--
 
 // KevAtl SLiB Shotgun 09-03-2007 <--
 
@@ -815,16 +924,16 @@ itmdescr_blademketB
 Musket with a Socket Bayonet allowing the Musket to be loaded and fired without removing the Bayonet.  
 }
 
-itmname_pistol11			{Pistol}
+itmname_pistol11			{Wheellock Pistol}
 itmdescr_pistol11
 {
 An early Pistol with Wheellock mechanism.
 }
 
-itmname_pistol12			{Pair of Pistols}
+itmname_pistol12			{Pair of Wheellock Pistols}
 itmdescr_pistol12
 {
-An excellent pair of rich ornamented Wheellock Pistols. 'Gunman' ability required.
+An excellent pair of richly ornamented Wheellock Pistols. 'Gunman' ability required.
 }
 
 itmname_pistol13			{Short Musket}
@@ -846,7 +955,7 @@ The original use for this knife is slicing bread, but with a little skill it can
 itmname_Merchantsdagger	{Merchants Dagger}
 itmdescr_Merchantsdagger
 {
-This dagger is favoured by merchants who need to travel through dangerous sites. Thanks to it's size, it can be easily hidden. Good for surprise attacks and discouraging any remaining foes from attacking you. Until they discover the weapon's lacking defensive capabilities.
+This dagger is favoured by merchants who need to travel through dangerous sites. Thanks to its size, it can be easily hidden. Good for surprise attacks and discouraging any remaining foes from attacking you. Until they discover the weapon's lacking defensive capabilities.
 }
 
 itmname_GuestsKnife	{Knife}
@@ -864,7 +973,7 @@ A woodcutters best friend. Trees or enemies, this tool makes no distinction.
 itmname_Minerscrow	{Shovel}
 itmdescr_Minerscrow
 {
-Mostly used by farmers and slaves to cultivate the field. With it's sharp edge, it has no problem 'cultivating' your foe's skull.
+Mostly used by farmers and slaves to cultivate the field. With its sharp edge, it has no problem 'cultivating' your foe's skull.
 }
 
 itmname_Minerspick	{Pickaxe}
@@ -1298,6 +1407,12 @@ itmdescr_blueskull
 This is the main skull of the Mayan crystal skulls for the sacred ritual. 
 }
 
+itmname_cryskull	{Crystal Skull}
+itmdescr_cryskull
+{
+A lifesize model skull made of some sort of crystal. 
+}
+
 itmname_mineral15	{Piece of Native Platinum}
 itmdescr_mineral15
 {
@@ -1316,6 +1431,20 @@ itmname_CursedCoin		{Mysterious Coin}
 itmdescr_CursedCoin
 {
 Large golden coin with an Aztec skull depiction. It gives off an aura of great ancient power. Rumour has it that these originate from an island that cannot be found, except by those who already know where it is. Perhaps some drunken pirate knows more about this.
+}
+
+itmname_luckydimeA	{"Lucky" Dime}
+itmdescr_luckydimeA
+{
+An American silver Seated Liberty Dime from 1875.
+When it's hard to make decisions - flip the coin! 
+}
+
+itmname_luckydimeB	{"Lucky" Dime}
+itmdescr_luckydimeB
+{
+An American silver Seated Liberty Dime from 1875.
+When it's hard to make decisions - flip the coin! 
 }
 
 // -- Scheffnow -- 2004-01-17 -- NoSaveModeMod -- start ---------------
@@ -2019,7 +2148,7 @@ This is considered contraband, so I'll have a hard time evading the town guards 
 
 itmname_map {Archipelago map}
 itmdescr_map {
-Map of the Carribbean.
+Map of the Caribbean.
 }
 
 itmname_mapIsland {#slocation# map}

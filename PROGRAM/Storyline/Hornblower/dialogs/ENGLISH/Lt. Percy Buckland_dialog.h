@@ -49,9 +49,9 @@ string DLG_TEXT[55] = {
 "Well Gentlemen, I am pleased that the Captain is alive, but I must now assume the mantle of command.",
 "I think it would be better if you were to address me as Captain, Mr Hornblower.",
 "Good, good. Now to my plan. We have reached Playa de Sabana. I intend that we blast the fort to kingdom come from here in the bay.",
-"Captain... The fort is high on a cliff we won't be able to elevate the guns high enough.",
+"Captain... The fort is high on a cliff. We won't be able to elevate the guns high enough.",
 "Oh! And what would you suggest Mr. Hornblower?",
-"That we take a landing party on shore and make a land assault. That way we don't risk the ship.... Captain",
-"Yes, yes. That is what I was about to propose. Then make ready. Mr. Bush, Mr. Hornblower, Mr Kennedy get the men ready we will launch the boats at once.",
+"That we take a landing party on shore and make a land assault. That way we don't risk the ship.... Captain.",
+"Yes, yes. That is what I was about to propose. Then make ready. Mr. Bush, Mr. Hornblower, Mr Kennedy get the men ready, we will launch the boats at once.",
 "Sir, I protest! I had just had the weight of commanding the ship thrust upon me. I had to plan the fort attack. All of which would not have happened if the Captain had not been pushed down the hold by Lieutenant Horatio Hornblower!",
 };

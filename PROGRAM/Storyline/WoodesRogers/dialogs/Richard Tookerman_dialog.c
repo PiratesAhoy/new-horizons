@@ -70,9 +70,6 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("Pell_story_interrupted_done");
 		break;
-
-
-		
 		
 		case "Exit":
 			DialogExit();

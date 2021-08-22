@@ -1,0 +1,12 @@
+title=Charles Eden
+text.t1=Governor, his administration was marked by the arrest of the pirate Edward Teach. Eden had offered Teach the royal pardon.
+text.t2=Charles Eden was Governor in Grand Cayman. He also was the owner of an Estate, but exactly where on that island? The new Governor would know.
+text.t3=Maybe Eden's map-piece is in his office.
+text.t4=The exit to the Garden is behind the curtain in the Hall.
+text.t5=I have got another map-piece! The one Teach bribed Governor Charles Eden with.
+text.t6=Mrs Pough will try to open some doors in the Estate for me.
+text.t7=Israel Hands knows a way into the Office through the Winer Cellars. I'll follow him.
+text.t8=I'll return later when I have more information. Guess it's the Office that's important.
+text.t9=
+text.t10=
+

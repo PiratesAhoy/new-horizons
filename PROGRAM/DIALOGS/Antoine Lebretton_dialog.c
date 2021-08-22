@@ -514,7 +514,16 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[154];
 			link.l1.go = "teodoro_6";
 			Characters[GetCharacterIndex("Patric Cardone")].quest.teodoro = "4";
+
+			Preprocessor_AddQuestData("Antoine Lebretton", GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("Lucien Bescanceny", GetMyFullName(CharacterFromID("Lucien Bescanceny")));
+			Preprocessor_AddQuestData("Antoine", GetMyName(NPChar));
+			Preprocessor_AddQuestData("Bescanceny", GetMyLastName(CharacterFromID("Lucien Bescanceny")));
 			AddQuestRecord("Patric", 4); // NK
+			Preprocessor_Remove("Bescanceny");
+			Preprocessor_Remove("Antoine");
+			Preprocessor_Remove("Lucien Bescanceny");
+			Preprocessor_Remove("Antoine Lebretton");
 		break;
 
 		case "teodoro_6":

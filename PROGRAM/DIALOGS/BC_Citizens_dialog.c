@@ -117,7 +117,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "town_store":
-			if(GetMySimpleName(NPChar) == "Bryan the Disgruntled") Preprocessor_Add("other", GetMySimpleName(CharacterFromID("Bloody Norm Kidd")));
+			if(GetMySimpleOldName(NPChar) == "Bryan the Disgruntled") Preprocessor_Add("other", GetMySimpleName(CharacterFromID("Bloody Norm Kidd")));
 			else Preprocessor_Add("other", GetMySimpleName(CharacterFromID("Bryan the Disgruntled")));
 			dialog.text = DLG_TEXT[21];
 			link.l1 = DLG_TEXT[22];

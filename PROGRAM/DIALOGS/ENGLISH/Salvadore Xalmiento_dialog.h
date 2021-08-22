@@ -1,4 +1,4 @@
-string DLG_TEXT[59] = {
+string DLG_TEXT[62] = {
 "Welcome to my tavern, stranger. My name is ",
 ". What brings you to my humble establishment? Do you need a place to rest?",
 "Thank you. My name is ",
@@ -58,4 +58,7 @@ string DLG_TEXT[59] = {
 "Has there been an English convoy here lately?",
 "Yes, a few days ago. Some of the officers were in here, and by the looks of them they'd already done some drinking in the other tavern. They had a few more drinks, then headed for the hotel.",
 "Thanks! I'll see if anyone at the hotel remembers them.",
+"I've heard a rumour that the silver train is on its way here. Do you know anything about that?",
+"Hush! Do not talk about the silver train here!\nDo you see that officer? If he suspects that you are taking an interest in the silver train, he will take an interest in you. When he takes an interest in people, they tend to 'disappear'.",
+"Thanks for the warning.",
 };

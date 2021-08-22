@@ -193,6 +193,7 @@ void ProcessDialogEvent()
 			Link.l2 = DLG_TEXT[407];
 			Link.l2.go = "exit";
 			NPChar.dialog.Filename = "John Clifford Brin_dialog.c"; // PB
+			AddDialogExitQuest("Story_Reward_For_Silehard");	// GR: moved here from "NGservice" so that it triggers whether you accept job offer or not
 		break;
 
 		case "NGservice":
@@ -203,7 +204,7 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[414];
 			Link.l1.go = "exit"
 			SetRank(&PChar, iNation, GetOldRank(PChar, iNation));
-			AddDialogExitQuest("Story_Reward_For_Silehard");
+//			AddDialogExitQuest("Story_Reward_For_Silehard");
 		break;
 // NK <--
 		case "No quest":
@@ -574,6 +575,30 @@ void ProcessDialogEvent()
 			AddQuestRecord("Blaze_out_from_silehard", 1);
 			AddDialogExitQuest("exit_from_silehard_complete");
 			AddDialogExitQuest("player_back");
+		break;
+
+		case "2nd_Task_no_ship":		// GR: Triggered if player has hidden or sold the frigate which is supposed to be delivered to Silehard
+			d.Text = GetMyFullName(CharacterFromID("Rabel Iverneau")) + DLG_TEXT[418] + XI_ConvertString("FrigateAdv") + DLG_TEXT[419];
+			Link.l1 = DLG_TEXT[420];
+			Link.l1.go = "2nd_Task_no_ship_2";
+		break;
+
+		case "2nd_Task_no_ship_2":
+			d.Text = DLG_TEXT[421] + GetNationRoyalByType(ENGLAND) + DLG_TEXT[422] + XI_ConvertString("FrigateAdv") + DLG_TEXT[423];
+			Link.l1 = DLG_TEXT[424] + XI_ConvertString("FrigateAdv") + ".";
+			Link.l1.go = "2nd_Task_exit_no_ship";
+			AddDialogExitQuest("Story_go_get_frigate");
+		break;
+
+		case "2nd_Task_no_ship_3":
+			d.Text = DLG_TEXT[425] + GetMyName(PChar) + DLG_TEXT[426] + XI_ConvertString("FrigateAdv") + ".";
+			Link.l1 = DLG_TEXT[427];
+			Link.l1.go = "2nd_Task_exit_no_ship";
+		break;
+
+		case "2nd_Task_exit_no_ship":
+			Diag.CurrentNode = "2nd_Task_no_ship_3";
+			DialogExit();
 		break;
 
 //!!!!__________BY ARTEM!!!!!!!!!!!!!!

@@ -1236,7 +1236,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.sex = "man";
 	ch.location	= "Santiago_townhall";
 	ch.location.group = "sit";
-	ch.location.locator = "sit2";
+	ch.location.locator = "sit1";
 	ch.Dialog.Filename = "Javier Balboa_dialog.c";
 	ch.Dialog.Filename.GroupDialog = "governor.c";
 	ch.nation = SPAIN;
@@ -2125,6 +2125,102 @@ if (ENABLE_WEAPONSMOD)
     LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	AddGameCharacter(n, ch);
 
+	ch.old.name = "Eustacio";
+	ch.old.lastname = "Ocampo";
+	ch.name    = TranslateString("","Eustacio");
+	ch.lastname    = TranslateString("","Ocampo");
+	ch.id        = "Eustacio Ocampo";
+	ch.model    = "Fatman2";
+	ch.sex = "man";
+	ch.sound_type = "seaman";
+	ch.location    = "Santiago_Town_01";
+	ch.location.group = "goto";
+	ch.location.locator = "goto18";
+	ch.Dialog.Filename = "Santiago citizen_dialog.c";
+ 	ch.greeting = "Gr_isla muelle citizen";
+	ch.nation = SPAIN;
+	ch.rank    = 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetCitizenType(ch);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
+   
+	ch.old.name = "Patricia";
+	ch.old.lastname = "Santángel";
+	ch.name    = TranslateString("","Patricia");
+	ch.lastname    = TranslateString("","Santángel");
+	ch.id        = "Patricia Santangel";
+	ch.model    = "towngirl7_2";
+	ch.sex = "woman";
+	ch.sound_type = "female_citizen";
+	ch.location    = "Santiago_Town_01";
+	ch.location.group = "goto";
+	ch.location.locator = "goto49";
+	ch.Dialog.Filename = "Santiago citizen_dialog.c";
+ 	ch.greeting = "Gr_Sylvie Bondies";
+	ch.nation = SPAIN;
+	ch.rank    = 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetCitizenType(ch);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
+   
+	ch.old.name = "Isidoro";
+	ch.old.lastname = "Figueroa";
+	ch.name    = TranslateString("","Isidoro");
+	ch.lastname    = TranslateString("","Figueroa");
+	ch.id        = "Isidoro Figueroa";
+	ch.model    = "Man9";
+	ch.sex = "man";
+	ch.sound_type = "seaman";
+	ch.location    = "Santiago_Town_01";
+	ch.location.group = "goto";
+	ch.location.locator = "goto43";
+	ch.Dialog.Filename = "Santiago citizen_dialog.c";
+ 	ch.greeting = "Gr_isla muelle citizen";
+	ch.nation = SPAIN;
+	ch.rank    = 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetCitizenType(ch);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
+
     ch.old.name = "Padre";
     ch.old.lastname = "Magarino";
     ch.name = TranslateString("","Padre");
@@ -2159,4 +2255,42 @@ if (ENABLE_WEAPONSMOD)
     LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
     ch.greeting = "Gr_second_spaniard_priest";
     AddGameCharacter(n, ch);
+    // --> RobC/Alan_Smithee Blacksmith mod
+    if (ENABLE_WEAPONSMOD)
+    {
+    	//  Blacksmith 
+    	ch.old.name = "Micael";
+    	ch.old.lastname = "Salinas";
+    	ch.name = TranslateString("","Micael");
+    	ch.lastname = TranslateString("","Salinas");
+    	ch.id		= "Santiago_blacksmith";
+    	ch.model	= "blacksmith1";
+    	ch.sound_type = "male_citizen";
+    	ch.sex = "man";
+    	ch.location	= "Santiago_town_01";
+    	ch.location.group = "merchant";
+    	ch.location.locator = "merchant1";
+    	ch.Dialog.Filename = "Blacksmith8_dialog.c";
+    	ch.Dialog.Filename.Groupdialog = "Blacksmith_fetch.c";
+    	ch.greeting = "Gr_zaid murro";
+    	ch.nation = SPAIN;
+    	ch.rank 	= 1;
+    	ch.reputation = "None";
+    	ch.experience = "0";
+    	ch.skill.Leadership = "1";
+    	ch.skill.Fencing = "1";
+    	ch.skill.Sailing = "1";
+    	ch.skill.Accuracy = "1";
+    	ch.skill.Cannons = "1";
+    	ch.skill.Grappling = "1";
+    	ch.skill.Repair = "1";
+    	ch.skill.Defence = "1";
+    	ch.skill.Commerce = "1";
+    	ch.skill.Sneak = "1";
+    	ch.money = "1";
+    	LAi_SetStayType(ch); // LDH: Keep him from walking around all the time
+    	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+    	AddGameCharacter(n, ch);
+    }
+    // <-- RobC/Alan_Smithee Blacksmith mod
 }

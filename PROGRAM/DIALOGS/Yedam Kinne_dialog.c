@@ -201,7 +201,7 @@ void ProcessDialogEvent()
 
 		case "return_visit2":
 			dialog.text = DLG_TEXT[31];
-			if (CheckAttribute(PChar, "abduction_need_pass"))
+			if (CheckAttribute(PChar, "quest.abduction_need_pass"))
 			{
 				link.l1 = DLG_TEXT[32];
 				link.l1.go = "ardent_abduction_pass3";

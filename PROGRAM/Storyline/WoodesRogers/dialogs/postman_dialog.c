@@ -48,7 +48,8 @@ void ProcessDialogEvent()
 			PlaySound("VOICE\ENGLISH\Dupin_get_to_work.wav");
 			Dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
-			link.l1.go = "package2";
+			link.l1.go = "exit";
+			AddDialogExitQuest("postman_sign");
 		break;
 
 		case "package2":

@@ -85,7 +85,7 @@ void ProcessDialogEvent()
 
 		case "music3":
 			//weapons 2
-			TakeNItems(Pchar,"blade1", -8);
+			TakeNItems(Pchar,"blade1-2", -8);
 			TakeNItems(Pchar,"pistol2", -8);
 			if(!IsEquipCharacterByItem(Pchar, "pistol20"))
 			{

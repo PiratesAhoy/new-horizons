@@ -64,6 +64,8 @@ void ProcessDialogEvent()
 
 	// Set blacksmith's price multiplier
 	float pricemult = 1.0/60.0;
+	Preprocessor_Add("fullname", GetMyFullName(NPChar));					// GR: name changes when he's Spanish in "Early Explorers" period
+	Preprocessor_Add("firstname", GetMyFirstNames(NPChar, false));
 
 	// Dialog.CurrentNode holds a value indicating where in the conversation we are,
 	// according to that value we will determine where to go next.

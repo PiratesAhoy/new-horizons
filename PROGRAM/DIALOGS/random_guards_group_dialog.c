@@ -315,7 +315,7 @@ void ProcessDialogEvent()
 				Preprocessor_Add("patroltime",patroltime);
 				trace("PersuasionChance: "+PersuasionChance+ " Dice: "+ ThreeDice + ". Persuasion Success!");
 				Dialog.Text = PersuasionSuccess + DLG_TEXT[54] + PatrolState;
-				Link.l1 = DLG_TEXT[62];
+				Link.l1 = DLG_TEXT[61];
 				Link.l1.go = "exit";
 				Pchar.quest.Contraband.Talked = true;
 				AddPartyExpChar(pchar, SKILL_SNEAK, 200);
@@ -341,7 +341,7 @@ void ProcessDialogEvent()
 		case "persuadeguard4":
 			if(getSmugglingState(smugisland) == 1) PatrolState = DLG_TEXT[44];
 			if(getSmugglingState(smugisland) == 2) PatrolState = DLG_TEXT[45];
-			if(getSmugglingState(smugisland) == 3) PatrolState = DLG_TEXT[48];
+			if(getSmugglingState(smugisland) == 3) PatrolState = DLG_TEXT[46];
 			if(getSmugglingState(smugisland) == 4) PatrolState = DLG_TEXT[56];
 				
 			// DeathDaisy: Roll 3 six-sided dice to determine success for a nice bell curve

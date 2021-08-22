@@ -187,11 +187,27 @@ void InitInterface_B(string iniName, bool isSave)
 	if (bThisSave) {
 		// scheffnow -->
 		ref PMainCharacter = GetMainCharacter();
-		if (CheckAttribute(PMainCharacter,"NoSave.CarryRelic") == true && PMainCharacter.NoSave.CarryRelic != "none") {
-			bNightmareMode = true;
-			GameInterface.strings.NoSave = TranslateString("","You can't save while carrying a holy relic! Give it to a monk") + " " + PMainCharacter.NoSave.ReleaseMonkLocation + "."; // NK
-			EnableString("NoSave");
-		} 
+		if (HasSubStr(PMainCharacter.location, "church"))
+		{
+		if (HasSubStr(PMainCharacter.location, "Greenford_M"))
+			{		
+			if (CheckAttribute(PMainCharacter,"NoSave.CarryRelic") == true && PMainCharacter.NoSave.CarryRelic != "none") 
+				{
+				bNightmareMode = true;
+				GameInterface.strings.NoSave = TranslateString("","You can't save while carrying a holy relic in this old abbey! Give it to a monk") + " " + PMainCharacter.NoSave.ReleaseMonkLocation + "."; // NK
+				EnableString("NoSave");
+				}
+			}
+		}
+		else
+		{
+			if (CheckAttribute(PMainCharacter,"NoSave.CarryRelic") == true && PMainCharacter.NoSave.CarryRelic != "none") 
+			{
+				bNightmareMode = true;
+				GameInterface.strings.NoSave = TranslateString("","You can't save while carrying a holy relic! Give it to a monk") + " " + PMainCharacter.NoSave.ReleaseMonkLocation + "."; // NK
+				EnableString("NoSave");
+			}
+		}  
 		// scheffnow <--
 		// PB -->
 		if (CheckAttribute(PMainCharacter,"NoSave.Custom")) {

@@ -1,0 +1,11 @@
+title=Side Quest - Opium smuggling for me.
+text.t1=I have acquired some opium. Good chance the smugglers will be interested in this. I should ask them about it.
+text.t2=The smugglers told me about opium smuggling. I've got a list of clients in the Caribbean and they gave me a book to explain how it works.
+text.t3=I should report this list of clients I've got to the governor. He might be very interested!
+text.t4=I need to be careful. It seems that the smugglers keep close contact with each other. When I do them wrong, it will affect my relation with them.
+text.t5=I've learned that opium smuggling isn't as easy as it looked. A guard approached me and asked me about the goods I was carying. I handled the situation though.
+text.t6=I now know how the opium smuggling works in the Caribbean. I've written a report to hand over to the governor.
+text.t7=The governor was surprised to see the list with all opium buyers. He thinks it will come in handy battling the smugglers.
+text.t8=The governor was pleased to see the report and I received a nice reward. I should investigate further to see if I can find any further clues.
+text.t9=I've finished the task for the governor for the time being, but there might be more in the future!
+text.t10=The smugglers told me this opium has some weird effects. If I want to learn more about it, I should ask someone who knows a lot about medicine.

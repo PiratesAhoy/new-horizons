@@ -120,7 +120,8 @@ void ProcessDialogEvent()
 			PlaySound("VOICE\ENGLISH\Chadd02.wav");
 			dialog.text = DLG_TEXT[23];
 			link.l1 = DLG_TEXT[24];
-			link.l1.go = "Exit_Signal_is_Correct";
+//			link.l1.go = "Exit_Signal_is_Correct";	// "Exit_Signal_is_Correct" does not exist
+			link.l1.go = "Exit";
 		break;
 
 		case "Report_to_HQ":

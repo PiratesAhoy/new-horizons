@@ -1,4 +1,4 @@
-string DLG_TEXT[60] = {
+string DLG_TEXT[62] = {
 "What do you want?",
 "You can see this fellow is not resisting. I won't let you kill an unarmed man. Drop your sword.",
 "You're doing fine. Carry on.",
@@ -59,5 +59,6 @@ string DLG_TEXT[60] = {
 "Only 100 tons, cap.",
 "Hmm. All right, we've got space for that. Now get back to the ship!",
 "You're mad! Where am I going to put it, in my cabin?! You've got half an hour to cancel this deal!",
-
+"Oh, come on, cap, don't make such a fuss. So, this Harry hasn't got any more than a piddling little ship... a fluyt or maybe a small galleon, I don't know for sure.\nAnd the local governor has offered 3000 gold for his head. We'll get another 10000 if we sink him within a month.",
+"A fluyt or maybe a small galleon?! Nigel, are completely out of your mind?! To hell with this bet!",
 };

@@ -14,6 +14,8 @@ void ProcessDialogEvent()
 	iMonth = environment.date.month;
 	string lastspeak_date = iday + " " + iMonth;
 
+	int iQuantityShipGoods, iQuestTradeGoods;
+
 	ref PChar;
 	PChar = GetMainCharacter();
 	PChar.storekeeper.Idx = -1;//MAXIMUS
@@ -71,7 +73,7 @@ void ProcessDialogEvent()
 				}
 				
 //PW ---> exceptions for Thomas O'Reily and store looting
-				if ((characters[GetCharacterIndex("Sabine Matton")].quest.hire == "enemy_forever") && (Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job == "1") && (GetSquadronGoods(PChar,GOOD_SILK)>= 200 ))
+				if ((characters[GetCharacterIndex("Sabine Matton")].quest.hire == "enemy_forever") && (Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job == "1") && (GetSquadronGoods(PChar,sti(Characters[GetCharacterIndex("Thomas O'Reily")].deliver_cargo) >= sti(Characters[GetCharacterIndex("Thomas O'Reily")].deliver_amount) )))
 				{
 					dialog.snd = "Voice\ARMA\ARMA006";
 					dialog.text = DLG_TEXT[315] + DLG_TEXT[57] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[58])]) + DLG_TEXT[60];
@@ -99,6 +101,26 @@ void ProcessDialogEvent()
 					dialog.text = DLG_TEXT[18];
 					link.l1 = pcharrepphrase(DLG_TEXT[19], DLG_TEXT[20]);
 					link.l1.go = "exit";
+
+// GR ---> Exception for cargo quest to Arnaud
+					if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
+					{
+						if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+						{
+							link.l2 = DLG_TEXT[326];
+							iQuantityShipGoods = sti(GetAttribute(PChar, "quest.generate_trade_quest_progress.iQuantityGoods"));
+							iQuestTradeGoods = sti(GetAttribute(PChar, "quest.generate_trade_quest_progress.iTradeGoods"));
+							if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
+							{
+								link.l2.go = "generate_quest_2";
+							}
+							else
+							{
+								link.l2.go = "cargo_missing";
+							}
+						}
+					}
+// GR <--- End exception for cargo quest to Arnaud
 				}
 
 				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "danielle_on_ship") // Talisman: was "danielle_on_ship_1"
@@ -117,6 +139,29 @@ void ProcessDialogEvent()
 				{
 					Link.l2 = TranslateString("","low_trade_1");
 					Link.l2.go = "low_price";
+				}
+			//	GR: allow "Cargo for Thomas O'Reily" quest even if TradeCheck failed
+				if (Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job == "1" && GetSquadronGoods(PChar,sti(Characters[GetCharacterIndex("Thomas O'Reily")].deliver_cargo)) >= sti(Characters[GetCharacterIndex("Thomas O'Reily")].deliver_amount))
+				{
+					Link.l4 = DLG_TEXT[321] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[58])]) + DLG_TEXT[60];
+					Link.l4.go = "First_job_done";
+				}
+
+				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "danielle_on_ship") // Talisman: was "danielle_on_ship_1"
+				{
+					dialog.snd = "Voice\ARMA\ARMA007";
+					dialog.text = DLG_TEXT[21];
+					link.l1 = pcharrepphrase(DLG_TEXT[22], DLG_TEXT[23]);
+					link.l1.go = "exit";
+					link.l2 = pcharrepphrase(DLG_TEXT[24], DLG_TEXT[25]);
+					link.l2.go = "danielle_daughter_1";
+				}
+
+			//	GR: allow ransom of Sabine Matton even if TradeCheck failed
+				if (characters[GetCharacterIndex("Sabine Matton")].quest.hire == "captured_by_blaze" || characters[GetCharacterIndex("Sabine Matton")].quest.hire == "captured_by_blaze_again")
+				{
+					Link.l5 = pcharrepphrase(DLG_TEXT[67], DLG_TEXT[68]);
+					Link.l5.go = "ransom";
 				}
 			}
 			// NK
@@ -213,17 +258,24 @@ void ProcessDialogEvent()
 			}
 			if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))	// LDH was quest.quest.generate, fixed 01Jan09
 			{
-				int iQuantityShipGoods = pchar.quest.generate_trade_quest_progress.iQuantityGoods;
-				int iQuestTradeGoods = pchar.quest.generate_trade_quest_progress.iTradeGoods;
+				iQuantityShipGoods = sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods);
+				iQuestTradeGoods = sti(pchar.quest.generate_trade_quest_progress.iTradeGoods);
 			}
 			if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
 			{
-				if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods && pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+				if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
 				{
 					dialog.snd = "Voice\ARMA\ARMA009";
 					dialog.text = DLG_TEXT[28];
 					link.l1 = DLG_TEXT[29];
-					link.l1.go = "generate_quest_2";
+					if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
+					{
+						link.l1.go = "generate_quest_2";
+					}
+					else
+					{
+						link.l1.go = "cargo_missing";
+					}
 				}
 			}
 			else
@@ -292,7 +344,7 @@ void ProcessDialogEvent()
 				link.l3.go = "redmond_quest";
 				iTest = iTest + 1;
 			}
-			if (Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job == "1" && GetSquadronGoods(PChar,GOOD_SILK)>= 200 && iTest < QUEST_COUNTER) //NK so it's the same quest attrib as Thomas gives you
+			if (Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job == "1" && GetSquadronGoods(PChar,sti(Characters[GetCharacterIndex("Thomas O'Reily")].deliver_cargo)) >= sti(Characters[GetCharacterIndex("Thomas O'Reily")].deliver_amount) && iTest < QUEST_COUNTER) //NK so it's the same quest attrib as Thomas gives you
 			{
 				Link.l4 = pcharrepphrase(DLG_TEXT[57] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[58])]) + DLG_TEXT[60], GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[61])]) + DLG_TEXT[62]);
 				Link.l4.go = "First_job_done";
@@ -534,6 +586,7 @@ void ProcessDialogEvent()
 
 		case "daughter_3":
 			dialog.snd = "Voice\ARMA\ARMA025";
+			Preprocessor_Add("Sabine", GetMyName(CharacterFromID("Sabine Matton")));
 			dialog.text = DLG_TEXT[120];
 			link.l1 = DLG_TEXT[121];
 			link.l1.go = "daughter_4";
@@ -705,7 +758,17 @@ void ProcessDialogEvent()
 		case "first_job_done":
 			Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job = "complete";
 			dialog.snd = "Voice\ARMA\ARMA041";
-			dialog.Text = DLG_TEXT[176];
+			if(GetNationRelation(GetTownNation("Falaise de Fleur"), GetTownNation("Redmond")) == RELATION_ENEMY)
+			{
+				Preprocessor_Add("nationF", GetNationNameByType(GetTownNation("Falaise de Fleur")));
+				Preprocessor_Add("nationR", GetNationNameByType(GetTownNation("Redmond")));
+				dialog.Text = DLG_TEXT[176];
+			}
+			else
+			{
+				Preprocessor_Add("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
+				dialog.Text = DLG_TEXT[324];
+			}
 			Link.l1 = DLG_TEXT[177];
 			Link.l1.go = "First_job_done_1";
 		break;
@@ -713,7 +776,17 @@ void ProcessDialogEvent()
 		case "First_job_done_enemy":
 			Characters[GetCharacterIndex("Thomas O'Reily")].quest.first_job = "complete";
 			dialog.snd = "Voice\ARMA\ARMA041";
-			dialog.Text = DLG_TEXT[314];
+			if(GetNationRelation(GetTownNation("Falaise de Fleur"), GetTownNation("Redmond")) == RELATION_ENEMY)
+			{
+				Preprocessor_Add("nationF", GetNationNameByType(GetTownNation("Falaise de Fleur")));
+				Preprocessor_Add("nationR", GetNationNameByType(GetTownNation("Redmond")));
+				dialog.Text = DLG_TEXT[314];
+			}
+			else
+			{
+				Preprocessor_Add("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
+				dialog.Text = DLG_TEXT[325];
+			}
 			Link.l1 = DLG_TEXT[177];
 			Link.l1.go = "First_job_done_1";
 		break;
@@ -726,14 +799,31 @@ void ProcessDialogEvent()
 		break;
 
 		case "First_job_done_2":
-			RemoveCharacterGoods(PChar,GOOD_SILK, 200); //NK why he removes the others I don't know
+			RemoveCharacterGoods(PChar,sti(Characters[GetCharacterIndex("Thomas O'Reily")].deliver_cargo), sti(Characters[GetCharacterIndex("Thomas O'Reily")].deliver_amount)); //NK why he removes the others I don't know
 			//RemoveCharacterGoods(PChar,GOOD_RUM, 100);
 			//RemoveCharacterGoods(PChar,GOOD_PAPRIKA, 100);
 			dialog.snd = "Voice\ARMA\ARMA043";
 			dialog.Text = DLG_TEXT[181] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + GetMyName(PChar) + DLG_TEXT[182];
 			Link.l1 = DLG_TEXT[183];
 			Link.l1.go = "exit";
-			AddQuestRecord("Thomas_delivery", 2); // NK
+			Preprocessor_AddQuestData("Arnaud", GetMyName(NPChar));
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
+			if(GetNationRelation(GetTownNation("Falaise de Fleur"), GetTownNation("Redmond")) == RELATION_ENEMY)
+			{
+				Preprocessor_AddQuestData("nationF", GetNationNameByType(GetTownNation("Falaise de Fleur")));
+				Preprocessor_AddQuestData("nationR", GetNationNameByType(GetTownNation("Redmond")));
+				AddQuestRecord("Thomas_delivery", 2); // NK
+				Preprocessor_Remove("nationR");
+				Preprocessor_Remove("nationF");
+			}
+			else
+			{
+				Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
+				AddQuestRecord("Thomas_delivery", 4); // NK
+				Preprocessor_Remove("nation");
+			}
+			Preprocessor_Remove("Thomas");
+			Preprocessor_Remove("Arnaud");
 		break;
 
 		case "redmond_quest":
@@ -753,6 +843,7 @@ void ProcessDialogEvent()
 				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
+					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
 					dialog.snd = "Voice\ARMA\ARMA045";
 					dialog.text = DLG_TEXT[187];
 					link.l1 = DLG_TEXT[188];
@@ -1204,6 +1295,16 @@ void ProcessDialogEvent()
 				link.l2 = DLG_TEXT[308];
 				link.l2.go = "baldewyn_bye_2";
 			}
+		break;
+
+		case "cargo_missing":
+			AddQuestRecord("trade", 3);
+			Preprocessor_Add("quantity", sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods));
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(pchar.quest.generate_trade_quest_progress.iTradeGoods)].name));
+			dialog.snd = "Voice\ARMA\ARMA051";
+			dialog.text = DLG_TEXT[322];
+			link.l1 = DLG_TEXT[323];
+			link.l1.go = "exit";
 		break;
 
 		case "Exit":

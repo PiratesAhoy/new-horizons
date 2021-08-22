@@ -294,7 +294,10 @@ string FindLockerItemByGroup(ref chref, string groupID)
 					if( !CheckAttribute(refItm,"chargeQ") ) { continue; }// invalid gun
 					if( sti(refItm.chargeQ) >= 2 && !IsCharacterPerkOn(chref,"Gunman") )			{ continue; }// no requisite
 					if( sti(refItm.chargeQ) >= 4 && !IsCharacterPerkOn(chref,"GunProfessional") )	{ continue; }// no requisite
-					if( sti(refItm.chargeQ) >= 6 && !IsCharacterPerkOn(chref,"GunFighter") )		{ continue; }// no requisite
+					if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)
+					{
+						if( sti(refItm.chargeQ) >= 6 && !IsCharacterPerkOn(chref,"GunFighter") )		{ continue; }// no requisite
+					}
 				}
 
 				// now we compare by 'n', but using sorted arrays to do it
@@ -551,12 +554,15 @@ void MerchantGuildAttack(aref enemy, bool bKill)
 	ref PChar = GetMainCharacter();
 	int iNation = sti(GetAttribute(enemy,"nation"));
 
-	int numGuards = 30 - LAi_numloginedcharacters;		// LDH - changed from 32 to TIH's original 30
+	int numGuards = MAX_LOGINED_CHARACTERS_IN_LOCATION-2 - LAi_numloginedcharacters;		// LDH - changed from 32 to TIH's original 30
 	if (numGuards > 5 ) numGuards = 5;
 	if (numGuards > 0 )
 	{
 		Logit(TranslateString("","The Merchant Guild's watchmen are very vigilant..."));
-		LAi_CreateFantomGroup("Navy_office4", numGuards, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, iNation, OFFIC_TYPE_GUARD, 0,  true, "", "", "", "");
+//		LAi_CreateFantomGroup("Navy_office4", numGuards, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, iNation, OFFIC_TYPE_GUARD, 0,  true, "", "", "", "");
+		LAi_CreateFantomGroup("Merchant_Officers", 1, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, iNation, OFFIC_TYPE_GUARD, 0,  true, "", "", "", "");
+		if (numGuards > 1) LAi_CreateFantomGroup("Merchant_Soldiers", numGuards-1, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, iNation, OFFIC_TYPE_GUARD, 0,  true, "", "", "", "");
+//		LAi_CreateFantomGroup("Merchant_Soldiers", numGuards, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, iNation, OFFIC_TYPE_GUARD, 0,  true, "", "", "", "");
 
 		if(!CheckAttribute(PChar, "locationLock"))
 		{
@@ -593,7 +599,7 @@ void SoldierReinforcements(ref refCharacter)
 		if(!HasSubStr(GetAttribute(refCharacter, "location"), "port") && !HasSubStr(GetAttribute(refCharacter, "location"), "town"))	return;
 	}
 
-	int numGuards = 30 - LAi_numloginedcharacters;		// LDH - changed from 32 to TIH's original 30
+	int numGuards = MAX_LOGINED_CHARACTERS_IN_LOCATION-2 - LAi_numloginedcharacters;		// LDH - changed from 32 to TIH's original 30
 	if (numGuards > 1 ) numGuards = 1;					// PB: was 2
 	if (numGuards > 0 )
 	{

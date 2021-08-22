@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = { 
+"¡Puede conseguirlo aquí! ¡El mejor equipamiento para el viajero bien pertrechado! ¡Todo lo que necespta para un largo viaje!",
+"Veamos qué es lo que tiene.",
+"Hoy no, gracias.",
+"Bueno, estoy buscando algunos instrumentos de navegación...",
+"Por desgracia, la Armada está en el puerto y ha comprado todos los objetos de ese tipo.",
+"Hum, ¿conoce algún otro lugar donde podría encontrar algo como un catalejo?",
+"No se han visto catalejos en esta ciudad desde hace años, pero tal vez pueda probar suerte con Mr. Pym. Quizás todavía tenga algunas cosas de cuando se hizo a la mar en sus años mozos.",
+"¿Se refiere a Arthur Gordon Pym?",
+"El mismo. ¿Acaso ha oído hablar de él?",
+"Oh, nada más que rumores..., pero todos malos, me temo.",
+"Bah, eso no puede ser verdad. Le aseguro que Mr. Pym es un ciudadano muy respetado.",
+"Muy bien, ¿dónde vive?",
+"Tendrá que pasar la tienda del sastre para encontrar la casa de Mr. Pym.",
+"¿Y el sastre está...?",
+"Muy cerca de la entrada a Chinatown.",
+"Ya veo, adiós entonces.",
+"¿No ve ada que le interese?",
+
+};

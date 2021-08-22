@@ -1,0 +1,11 @@
+land_commands_title
+{
+Party Condition
+}
+
+land_commands_info
+{
+    PostaÞ gracza i stan jego družyny možna zobaczyÞ w lewym dolnym rogu ekranu podczas chodzenia po l¹dzie (Rys. 1). Gracz widzi twarze swojej postaci i oficerów oraz dwa paski nad nimi. Niebieski pasek reprezentuje stan za³adowania pistoletu postaci (jeœli taki posiada), a czerwony to stan zdrowia postaci.
+    Prze³adowanie pistoletu i uzupe³nienie zdrowia wymaga czasu.
+    Równiež tutaj znajduje si× menu poleceð, bardzo podobne do menu ikony polecenia statku. Menu možna otworzyÞ klawiszem Command. Z tego menu možesz užyÞ polecenia Szybka podróž do niektórych lokalizacji (rys.2). Miejsca te s¹ wymienione na rys.3. S¹ to (od lewej do prawej oznacza sklep odgórny) sklep, stocznia, tawerna, rezydencja gubernatora i port, w którym znajduje si× statek gracza. Korzystanie z tego menu jest ca³kowicie takie samo, jak przy užyciu menu Ikona polecenia wysy³ki.
+}

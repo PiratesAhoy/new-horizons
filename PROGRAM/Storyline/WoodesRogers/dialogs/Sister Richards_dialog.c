@@ -66,7 +66,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "Richards5":
-			PlaySound("VOICE\ENGLISH\Eng_f_c_006.wav");
+	//		PlaySound("VOICE\ENGLISH\Eng_f_c_006.wav");
+			PlaySound("VOICE\ENGLISH\gr_wench3_sigh.wav");
 			dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];
 			link.l1.go = "Richards6";

@@ -1,4 +1,4 @@
-string DLG_TEXT[57] = {
+string DLG_TEXT[60] = {
 "Welcome to my tavern, stranger. My name is ",
 ". What brings you to my humble establishment? Do you need a place to rest?",
 "Thank you. My name is ",
@@ -49,8 +49,11 @@ string DLG_TEXT[57] = {
 ". Have a free drink thanks to our governor!",
 "I'm ",
 ". Why such generosity?",
-"His ",
-" has just got engaged to the ",
+"His daughter",
+"His son",
+" has just got engaged to ",
+"the son",
+"the daughter",
 " of some rich Englishman over in #sRedmond#. So everyone gets one free drink on condition they raise their glasses to the happy couple.",
 "Well in that case, long life and happiness to the pair of them - cheers!",
 "I'm working for Lady Suarez. I want to speak with Abel Barco. Do you know him?",

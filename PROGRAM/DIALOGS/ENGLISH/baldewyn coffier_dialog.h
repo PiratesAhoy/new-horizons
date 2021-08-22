@@ -20,7 +20,7 @@ string DLG_TEXT[141] = {
 "Yes. I think you'd be a fine addition to my crew.",
 "Oh, here you are. I was just wondering when you were going to appear.",
 "Judging by your happy face, I can see you've got your business back, haven't you?",
-"I'm sorry, monsieur -- I mistook you for another man.",
+"I'm sorry, #smonsieur# -- I mistook you for another man.",
 "I'm just passing by. I've got no time for the likes of you.",
 "Very well. But if you should need a paymaster someday, I'm the man for the job.",
 "Yeah, I'll keep that in mind.",

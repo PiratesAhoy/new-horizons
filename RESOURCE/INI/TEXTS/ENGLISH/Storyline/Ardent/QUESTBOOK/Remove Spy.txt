@@ -1,0 +1,7 @@
+title=To Catch a Spy
+text.t1=#sadmiral# knows there is a new French spy in #sIsla Muelle# and has given me the job of finding the spy. This will be easy as it was I who put the spy there, so I had better remove him before #sadmiral# learns that! The spy is #sspy#, probably still posing as #sdocker#. First I should speak to the governor of #sIsla Muelle#. #sadmiral# has given me a document to show him.
+text.t2=As #sspy# is pretending to be #sdocker#, I'm going to play along. I'll offer him a job to unload some cargo, then trap him when he is aboard my ship.
+text.t3=First I shall release #sdocker#. Then I shall bring him to the port guards as evidence that #sspy# is impersonating him. The guards can deal with the spy.
+text.t4=That worked! #sspy# preferred to die fighting rather than risk giving anything away under interrogation, which suits me as it means he can't tell anyone who brought him to #sIsla Muelle#. #sdocker# is free and has returned to work. I can now report back to the local governor, and then to #sadmiral#.
+text.t5=After a bit of confusion as to which #sdocker# was the real one, #sspy# swallowed poison rather than be captured. That suits me as it means he can't tell anyone who brought him to #sIsla Muelle#. I can now report back to the local governor, and then to #sadmiral#.
+text.t6=Though #sadmiral# would have preferred to have #sspy# alive for interrogation, he was pleased that I had caught the spy. I have been well rewarded. And #sadmiral# need never know how #sspy# got to #sIsla Muelle# in the first place!

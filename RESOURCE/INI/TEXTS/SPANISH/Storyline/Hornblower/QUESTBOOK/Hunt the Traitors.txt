@@ -1,0 +1,11 @@
+title=Caza a los traidores.
+text.t1=Wolfe podría estar a bordo de un balandro llamado 'Loup-Garou' cerca de #sisland_Falaise de Fleur#. No me gusta la idea de buscarlo por la ciudad, así que intentaré encontrar este barco en las aguas cercanas a la isla.
+text.t2=He capturado a Thomas Wolfe a bordo de un balandro francés robado. Debería conducirlo a la prisión de #sGreenford#.
+text.t3=Wolfe ha sido encarcelado.
+text.t4=Ahora debo solicitar al comandante de la prisión que libere a Wolfe.
+text.t5=Wolfe ha sido puesto bajo mi custodia. Ahora zarpamos rumbo a Boca de Yuman, en #sisland_Hispaniola#.
+text.t6=Wolfe dice que Quelp debe reunirse con él cerca de un molino de viento.
+text.t7=Quelp planeaba atacar Eleuthera usando Voltigeurs franceses vestidos con uniformes británicos para que los Estados Unidos declararan la guerra a Gran Bretaña. Quelp y Wolfe están muertos pero Sharpe cree que puede haber más Voltigeurs en la zona. ¿Pero dónde? Obviamente, no en la playa...
+text.t8=Hemos matado al resto de los Voltigeurs y capturado a su oficial. Ahora debemos volver a Bridgetown. El Almirante Pellew sin duda estará interesado en estos acontecimientos.
+text.t9=El teniente Sharpe y sus tiradores de élite van a volver a Europa, así que probablemente no volveremos a verlos. Entretanto, debería presentarme ante el Almirante en el Cuartel General Naval. También debería hacer una visita a mi esposa.
+text.t10=Mientras estábamos en tierra, una fragata francesa de patrulla encontró el 'Atropos'. Una vez que estuvimos a bordo, conseguimos derrotarla.

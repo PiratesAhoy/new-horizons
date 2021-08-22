@@ -1,0 +1,132 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| Assassin.c |=====}
+Johan{Johan}
+Elting{Elting}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+
+{=====| Story.c |=====}
+Salvadore{Salvadore}
+Benavides{Benavides}
+Soldier{Soldier}
+Indian{Indian}
+Street{Street}
+Merchant{Merchant}
+Chief{Chief}
+
+{=====| TempQuest.c |=====}
+Enrique{Enrique}
+Padilla{Padilla}
+Baltasar{Baltasar}
+Salgada{Salgada}
+Captain{Captain}
+Damski{Damski}
+Chico{Chico}
+Cois{Cois}
+Dominico{Dominico}
+Cuellar{Cuellar}
+Harold{Harold}
+Flesher{Flesher}
+Pelagius{Pelagius}
+Lizarraga{Lizarraga}
+Gabriel{Gabriel}
+Brugera{Brugera}
+Tello{Tello}
+Basadre{Basadre}
+Aurelien{Aurelien}
+Bergerat{Bergerat}
+Ambroz{Ambroz}
+Bricenos{Bricenos}
+Mateus{Mateus}
+Santos{Santos}
+Desiree'{Desiree'}
+Muerte{Muerte}
+Thug{Thug}
+Vassal{Vassal}
+Bethune{Bethune}
+Daryl{Daryl}
+Larry{Larry}
+Thomas the{Thomas the}
+Terror{Terror}
+Camille{Camille}
+Leone{Leone}
+Prisoner{Prisoner}
+Geffrey{Geffrey}
+Bampfylde{Bampfylde}
+Bucho{Bucho}
+Pepin{Pepin}
+Bertillon{Bertillon}
+Bertillon's guard{Bertillon's guard}
+Vito{Vito}
+Amerigo{Amerigo}
+Vieira{Vieira}
+Nicholas{Nicholas}
+Butcher{Butcher}
+Roche{Roche}
+Brasiliano{Brasiliano}
+Renouart{Renouart}
+Baumont{Baumont}
+Lady{Lady}
+Gaga{Gaga}
+Blaas{Blaas}
+Davids{Davids}
+Paul{Paul}
+Brink{Brink}
+Sampson{Sampson}
+Burrell{Burrell}
+Cesario{Cesario}
+de Rosas{de Rosas}
+Hans{Hans}
+Delorme{Delorme}
+Rabel{Rabel}
+Chardon{Chardon}
+Jeremy{Jeremy}
+Tripper{Tripper}
+Clement{Clement}
+Bossicar{Bossicar}
+Wilfred{Wilfred}
+Larner{Larner}
+Bartolomeu{Bartolomeu}
+o Portugues{o Portugues}
+Emilio{Emilio}
+Soares{Soares}
+Henry{Henry}
+Morgan{Morgan}
+Berend{Berend}
+de Voor{de Voor}
+Leonardo{Leonardo}
+Corrales{Corrales}
+Andrew{Andrew}
+Parson{Parson}
+William{William}
+Cotter{Cotter}
+Roxanne{Roxanne}
+Lalliere{Lalliere}
+Guibert{Guibert}
+Daudet{Daudet}
+Diablo{Diablo}
+Villalobos{Villalobos}
+Pirate{Pirate}
+Capitan{Capitan}
+Caceres{Caceres}
+
+{=====| TempQuestEnemy.c |=====}
+Gilles{Gilles}
+Chennault{Chennault}
+Aimery{Aimery}
+Bourgouin{Bourgouin}
+d'Aigreville{d'Aigreville}
+Barnabas{Barnabas}
+Delbridge{Delbridge}
+David{David}
+Fewster{Fewster}
+Laurence{Laurence}
+Damson{Damson}
+Grigorio{Grigorio}
+Cadena{Cadena}
+Bautista{Bautista}
+Lozano{Lozano}
+
+{=====| 143 characters |=====}

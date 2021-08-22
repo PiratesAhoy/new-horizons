@@ -15,8 +15,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Al_Street_merchant_1";
 	ch.model	= "Man1_2"; // Estharos Change from Man1_2 to this model
 	ch.sex = "man";
@@ -47,8 +47,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
     ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Al_Street_merchant_2";
 	ch.model = "bocman10"; // Estharos Change from fatman1 to this model
 	ch.sex = "man";
@@ -79,8 +79,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
     ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Al_Street_merchant_3";
 	ch.model	= "bocman8"; 
 	ch.sex = "man";
@@ -111,8 +111,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Al_Street_merchant_4";
 	ch.model	= "towngirl3"; 
 	ch.sex = "woman";
@@ -181,8 +181,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Conceicao_Street_merchant_1";
 	ch.model	= "fisherman"; // Estharos Change from Sailor3 to this model
 	ch.sound_type = "merchant";
@@ -216,8 +216,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Douwesen_Street_merchant_1";
 	ch.model	= "man1_1"; // Estharos Change from Sailor3 to this model
 	ch.sound_type = "merchant";
@@ -249,8 +249,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Douwesen_Street_merchant_2";
 	ch.model	= "chelovek"; // Estharos Change from Chelovek1 to this model
 	ch.sound_type = "merchant";
@@ -284,8 +284,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
     ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "El_Street_merchant_1";
 	ch.model	= "towngirl6"; 
 	ch.sex = "woman";
@@ -316,8 +316,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
     ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "El_Street_merchant_2";
 	ch.model	= "chelovek1"; // Estharos Change from Man1_2 to this model
 	ch.sex = "man";
@@ -348,8 +348,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
     ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "El_Street_merchant_3";
 	ch.model	= "Sailor1"; 
 	ch.sex = "man";
@@ -380,8 +380,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "El_Street_Merchant_4";
 	ch.model = "sailor6"; // Estharos Change from fatman1 to this model
 	ch.sex = "man";
@@ -413,8 +413,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "FF_Street_merchant_1";
 	ch.model	= "chelovek1"; // Estharos Change from Man1_2 to this model
 	ch.sound_type = "merchant";
@@ -485,8 +485,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Greenford_Street_merchant_1";
 	ch.model	= "fatman1"; 
 	ch.sound_type = "merchant";
@@ -518,8 +518,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Greenford_Street_merchant_2";
 	ch.model	= "Mongol"; // Estharos Change from towngirl3 to this model
 	ch.sound_type = "merchant";
@@ -551,8 +551,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Greenford_Street_merchant_3";
 	ch.model	= "Pirat1"; // Estharos Change from towngirl5 to this model
 	ch.sound_type = "merchant";
@@ -584,8 +584,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Greenford_Street_merchant_4";
 	ch.model	= "Pirat12"; // Estharos Change from man3_1 to this model
 	ch.sound_type = "merchant";
@@ -619,8 +619,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Muelle_Street_merchant_1";
 	ch.model	= "Man4"; // Estharos Change from Man2 to this model
 	ch.sound_type = "merchant";
@@ -652,8 +652,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Muelle_Street_merchant_2";
 	ch.model	= "Man5_1"; // Estharos Change from Man5 to this model
 	ch.sound_type = "merchant";
@@ -685,8 +685,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Muelle_Street_merchant_3";
 	ch.model	= "Sailor4"; // Estharos Change from Sailor6 to this model
 	ch.sound_type = "merchant";
@@ -718,8 +718,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Muelle_Street_merchant_4";
 	ch.model	= "sailor5"; // Estharos Change from Old_man1 to this model
 	ch.sound_type = "merchant";
@@ -756,8 +756,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Oxbay_Street_merchant_1";
 	ch.model	= "fisherman1"; // Estharos Change from Fatman2_1 to this model
 	ch.sound_type = "merchant";
@@ -789,8 +789,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Oxbay_Street_merchant_2"; // KK
 	ch.model	= "Man5_1"; // Estharos Change from Man1_2 to this model
 	ch.sound_type = "merchant";
@@ -1194,8 +1194,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Willemstad_Street_merchant_1";
 	ch.model	= "fatman"; 
 	ch.sound_type = "merchant";
@@ -1227,8 +1227,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Willemstad_Street_merchant_2";
 	ch.model	= "Chameleon"; // Estharos Change from towngirl2 to this model
 	ch.sound_type = "merchant";
@@ -1262,8 +1262,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Cartagena_Street_merchant_1";
 	ch.model	= "Man4";
 	ch.sound_type = "merchant";
@@ -1295,8 +1295,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Cartagena_Street_merchant_2";
 	ch.model	= "Man5_1";
 	ch.sound_type = "merchant";
@@ -1328,8 +1328,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Cartagena_Street_merchant_3";
 	ch.model	= "Sailor4";
 	ch.sound_type = "merchant";
@@ -1361,8 +1361,8 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street","Merchant");
+	ch.lastname = "";
 	ch.id		= "Cartagena_Street_merchant_4";
 	ch.model	= "sailor5"; // Estharos Change from Old_man1 to this model
 	ch.sound_type = "merchant";
@@ -1394,10 +1394,10 @@ void CreateStreetMerchantsCharacters(ref n)
 
 	//=============================| Santiago Port |=============================//
 
-	ch.old.name = "Street";
-	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Rafael";
+	ch.old.lastname = "Pinto";
+	ch.name = TranslateString("","Rafael");
+	ch.lastname = TranslateString("","Pinto");
 	ch.id		= "Santiago_Street_merchant_1";
 	ch.model	= "Old_man1"; // GR: Took up residence in Santiago after being kicked out of IslaMuelle
 	ch.sound_type = "merchant";
@@ -1425,5 +1425,75 @@ void CreateStreetMerchantsCharacters(ref n)
 	ch.money = "10";
 	LAi_SetMerchantType(ch);
 	LAi_SetHP(ch, 80.0, 80.0);
-	AddGameCharacter(n, ch);	
+	AddGameCharacter(n, ch);
+
+	//=============================| Santiago Town |=============================//
+
+	ch.old.name = "Hugo";
+	ch.old.lastname = "Aguayo";
+	ch.name = TranslateString("","Hugo");
+	ch.lastname = TranslateString("","Aguayo");
+	ch.id		= "Santiago_street_merchant_2";
+	ch.model	= "50Evl2in";
+	ch.sound_type = "merchant";
+	ch.sex = "man";
+	ch.location = "Santiago_Town_01";
+	ch.location.group = "merchant";
+	ch.location.locator = "merchant2";
+	ch.dialog.filename = "Item Trader_Dialog.c";
+	ch.greeting = "Gr_isla muelle citizen";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "6";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "4";
+	ch.skill.Accuracy = "9";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "6";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "7";
+	ch.skill.Sneak = "8";
+	ch.quest.area = "Santiago";
+	ch.money = "10";
+	LAi_SetMerchantType(ch);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+
+	//=============================| Havana Port |=============================//
+
+	ch.old.name = "Rosa";
+	ch.old.lastname = "Zambrano";
+	ch.name = TranslateString("","Rosa");
+	ch.lastname = TranslateString("","Zambrano");
+	ch.id		= "Rosa Zambrano";
+	ch.model	= "gipsygirl";
+	ch.sound_type	= "female_citizen";
+	ch.sex		= "woman";
+	ch.location	= "Cuba_Port";
+	ch.location.group = "goto";
+	ch.location.locator = "cityzen_4";
+	ch.Dialog.Filename = "Item trader_dialog.c";
+ 	ch.greeting = "Gr_Sylvie Bondies";
+	ch.nation	= SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "6";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "4";
+	ch.skill.Accuracy = "9";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "6";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "7";
+	ch.skill.Sneak = "8";
+	ch.quest.area = "Havana";
+	ch.money = "10";
+	LAi_SetMerchantType(ch);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
 }

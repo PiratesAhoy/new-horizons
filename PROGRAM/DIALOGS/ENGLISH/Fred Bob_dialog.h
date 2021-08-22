@@ -1,4 +1,4 @@
-string DLG_TEXT[295] = {
+string DLG_TEXT[298] = {
 "Aye, Fred Bob be a tellin' de crew tew hoist ",
 " colors.",
 "Thank you.",
@@ -294,6 +294,7 @@ string DLG_TEXT[295] = {
 "Aiyeeee!",
 "Aye, Fred Bob'll be havin' de clothes ready fer ye.",
 "Thanks.",
-
-
+"Head fer de middle of town in de part whar de Governor's Mansion be. He usually be strollin' about gawkin' after de ladies an' a hagglin' wid dem street merchants! His name be Crispy or sumthin' like dat.",
+"Ummm, Crispy?",
+"Dat's wat his men be callin' him, anyway. Crispy. Fred Bob heard dem talkin' one night.",
 };

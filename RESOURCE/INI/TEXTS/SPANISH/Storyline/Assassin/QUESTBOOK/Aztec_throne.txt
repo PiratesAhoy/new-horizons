@@ -1,0 +1,12 @@
+title=El tesoro azteca
+text.t1=Hice bien en ir a ver a Morgan. Me ha dicho que los españoles han encontrado un valioso tesoro azteca cerca de Vera Cruz. He aceptado trabajar para él. Tendré la oportunidad de volver a ver a Bartolomeu. (Pista: ve a #sisland_Khael Roa# para aparecer en Vera Cruz) 
+text.t2=¡Maldita sea! Parece que la Flota de la Plata ya está aquí. Más malas noticias: el barco de Bartolomeu no está en el puerto. Sin embargo, espero encontrarlo en la ciudad.
+text.t3=Perdimos a la Flota de vista durante una tempestad. Bartolomeu cree que debe haberse refugiado en La Habana. ¡Rumbo a Cuba!
+text.t4=He visto a la Flota entrando en el puerto de La Habana. Tengo que informar a Morgan y al gobernador. Próxima escala: #sRedmond#.
+text.t5=Preocupado por las noticias, Morgan ha decidido que debemos ir inmediatamente a Cuba. Allí me dará nuevas instrucciones.
+text.t6=Una nueva misión para Bartolomeu y para mí. Debemos averiguar dónde custodian el tesoro, y cuántos días permanecerá en Cuba. El capitán Damski podría ser nuestro informante. Sé que vive en una casa entre la puerta del puerto y la iglesia de La Habana.
+text.t7=Antes de destruir los cañones, debo matara todos los guardias sin que me detecten. ¡Vamos a ello!
+text.t8=Todos los guardias están muertos. Ahora puedo sabotear los cañones. Empezaré por el que está cerca del lugar donde he empezado la misión. Cuando me haya encargado de los cañones, terminaré el trabajo con el bastión. (Pista: las bombas se colocarán automáticamente al caminar detrás de los cañones y el bastión)
+text.t9=¡Lo hemos conseguido! Hemos robado un fabuloso tesoro en uno de los fuertes españoles más formidables. Gracias a esta hazaña, nos hemos ganado un hueco entre las leyendas de la piratería. Sin duda, el gobernador de #sRedmond# nos felicitará.
+text.t10=Esta expedición ha sido muy lucrativa. He ganado 150.000 piezas de oro, y ganaré mucho más cuando el trono sea vendido. Ahora, volveré a #sDouwesen# para descansar, lo mismo que piensan hacer Morgan y Bartolomeu. Puede que vuelva a ver a Bartolomeu en el futuro.
+text.t11=¡Maldita sea! Los soldados me descubrieron. Dieron la alarma y tuve que salir huyendo antes de que me alcanzaran las tropas españolas. No sé qué ha sido de Bartolomeu y Morgan. Pero lo que sí sé es que no tendremos otra oportunidad de robar el tesoro azteca.   

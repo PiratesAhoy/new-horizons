@@ -38,8 +38,8 @@ void ProcessDialogEvent()
 			// ccc Dec 05 You are recognized for your pirating actions
 			if(GetServedNation() == PIRATE && GetCurrentLocationNation() != PIRATE)	// PB: Link this to acting as a pirate
 			{
-				Dialog.Text = "If I were you, captain " + GetMyFullName(PChar) + ", I'd return immediately to my ship and sail far away from these shores!";
-				Link.l1 = "And why should I do that?";
+				Dialog.Text = DLG_TEXT[0] + GetMyFullName(PChar) + DLG_TEXT[1];
+				Link.l1 = DLG_TEXT[2];
 				Link.l1.go = "why";
 				switch(makeint(Npchar.nation))
 				{
@@ -56,28 +56,28 @@ void ProcessDialogEvent()
 			{
 				if (HaveLetterOfMarque(sti(Npchar.nation)))
 				{
-					text = "Dear friend ! You're always the welcome in this colony ! How are you and what wind lead you on this shore.";
-					text = text + " Can i hope that you bring us some smuggling's goods you have taken to our enemies and you want to donate to our town.";
-					text = text + " Of course we'll pay you a good sum to assume your war damages. Our governor will be proud to be our friend ! believe me.";
-					text = text + " You could become a honour citizen of the town ! What do you think about that captain ? ";
+					text = DLG_TEXT[3];
+					text = text + DLG_TEXT[4];
+					text = text + DLG_TEXT[5];
+					text = text + DLG_TEXT[6];
 					Dialog.Text = text;
 					if(CheckAttribute(Pchar, "quest.Contraband.Active") && Pchar.quest.Contraband.Active == true)
 					{
-						Link.l2 = "Sorry but I have other engagements to honour.";
+						Link.l2 = DLG_TEXT[7];
 						Link.l2.go = "exit";						
 					}
 					else
 					{
 						if(FindFirstContrabandGoods(PChar) != -1)
 						{
-							Link.l1 = "I have this kind of goods in my hold. What's your proposition ?";
+							Link.l1 = DLG_TEXT[8];
 							Link.l1.go = "Price";
-							Link.l2 = "Sorry but i'm not interested.";
+							Link.l2 = DLG_TEXT[9];
 							Link.l2.go = "exit";
 						}
 						else
 						{
-							Link.l1 = "Sorry but i haven't this kind of goods in my hold.";
+							Link.l1 = DLG_TEXT[10];
 							Link.l1.go = "exit";
 						}
 					}
@@ -102,13 +102,13 @@ void ProcessDialogEvent()
 						{
 							if(Makeint(NPchar.nation) == PIRATE)
 							{
-								Dialog.Text = "You ! You'll never leave this island alive mate !";
-								Link.l1 = "We are recognized  !";
+								Dialog.Text = DLG_TEXT[11];
+								Link.l1 = DLG_TEXT[12];
 							}
 							else
 							{
-								Dialog.Text = "Damned ! That's you ! You'll never leave this island alive ! Alert ! Guards ! Guards !";
-								Link.l1 = "We are recognized  !";
+								Dialog.Text = DLG_TEXT[13];
+								Link.l1 = DLG_TEXT[14];
 							}
 							link.l1.go = "exit";
 							switch(makeint(Npchar.nation))
@@ -149,8 +149,8 @@ void ProcessDialogEvent()
 									case 4 : if(Npchar.sex=="man"){PlaySound("VOICE\" + LanguageGetLanguage() + "\Dut_m_a_008.wav");}nationhim="dutch";break;
 									case 5 : if(Npchar.sex=="man"){PlaySound("VOICE\" + LanguageGetLanguage() + "\Por_m_a_007.wav");}nationhim="portuguese";break;
 								}
-								Dialog.Text = "Captain "  + GetMyFullName(PChar) + " i presume ! you are " + nationme + ". I don't like " + nationme + " bastards ! I'll wait for you on sea ! Farewell !";
-								Link.l1 = "It will be your end.";
+								Dialog.Text = DLG_TEXT[15] + GetMyFullName(PChar) + DLG_TEXT[16] + nationme + DLG_TEXT[17] + nationme + DLG_TEXT[18];
+								Link.l1 = DLG_TEXT[19];
 								Link.l1.go = "exit";
 								Diag.TempNode = "exit";
 								SetCoastalEnemy(Npchar.model, Npchar.sex, GetMyName(NPChar), Npchar.lastname);
@@ -159,28 +159,28 @@ void ProcessDialogEvent()
 							{
 								if(makeint(NPchar.nation) != PIRATE)
 								{
-									text = "Captain " + GetMyFullName(PChar) + " i presume ! Our local governor is ready to close his eyes about some of your actions against our nation that we could called Piracy actions.";
-									text = text + " Our colony need some type of goods to grow and prosper. Perhap's have you captured some smuggling's goods during your actions.";
-									text = text + " If you accepted to sell its to our town with a cheap price, our governor could speak in your favour and improve your relations towards the crown.";
-									text = text + " People would look you more like a merchant instead of an... enemy ! What do you think about that captain ? ";
+									text = DLG_TEXT[20] + GetMyFullName(PChar) + DLG_TEXT[21];
+									text = text + DLG_TEXT[22];
+									text = text + DLG_TEXT[23];
+									text = text + DLG_TEXT[24];
 									Dialog.Text = text;
 									if(CheckAttribute(Pchar, "quest.Contraband.Active") && Pchar.quest.Contraband.Active == true)
 									{
-										Link.l2 = "Sorry but i have other engagements to honour.";
+										Link.l2 = DLG_TEXT[25];
 										Link.l2.go = "exit";								
 									}
 									else
 									{
 										if(FindFirstContrabandGoods(PChar) != -1)
 										{
-											Link.l1 = "I have this kind of goods in my hold. What's your proposition ?";
+											Link.l1 = DLG_TEXT[26];
 											Link.l1.go = "Price";
-											Link.l2 = "Sorry but i'm not interested.";
+											Link.l2 = DLG_TEXT[27];
 											Link.l2.go = "exit";
 										}
 										else
 										{
-											Link.l1 = "Sorry but i haven't this kind of goods in my hold.";
+											Link.l1 = DLG_TEXT[28];
 											Link.l1.go = "exit";
 										}
 									}
@@ -188,8 +188,8 @@ void ProcessDialogEvent()
 								}
 								else
 								{
-									Dialog.Text = "Captain " + GetMyFullName(PChar) + "! What winds led you on this cutthroat island?";
-									Link.l1 = "Some personal business..";
+									Dialog.Text = DLG_TEXT[29] + GetMyFullName(PChar) + DLG_TEXT[30];
+									Link.l1 = DLG_TEXT[31];
 									Link.l1.go = "exit";
 									Diag.TempNode = "first time";
 								}
@@ -210,8 +210,8 @@ void ProcessDialogEvent()
 						MyFlag = GetCurrentFlag();
 						if(GetFlagRMRelation(sti(Npchar.nation)) <= REL_WAR && rand(10)>8)
 						{
-							Dialog.Text = "Your nation is enemy of mine captain ! I'll wait for you on sea ! Farewell";
-							Link.l1 = "It will be your end.";
+							Dialog.Text = DLG_TEXT[32];
+							Link.l1 = DLG_TEXT[33];
 							Link.l1.go = "exit";
 							switch(makeint(Npchar.nation))
 							{
@@ -229,8 +229,8 @@ void ProcessDialogEvent()
 						{
 							if(rand(10)>8)
 							{
-								Dialog.Text = "Don't..disturb...me mate ! I don't want to talk !";
-								Link.l1 = "keep sleeping matey..";
+								Dialog.Text = DLG_TEXT[34];
+								Link.l1 = DLG_TEXT[35];
 								Link.l1.go = "exit";
 								switch(makeint(Npchar.nation))
 								{
@@ -249,28 +249,28 @@ void ProcessDialogEvent()
 								{
 									if(rand(10)>7)
 									{
-										text = "You seems to be a captain ! Our governor is always glad to offer his favors to able captains who can offer their help to our colony.";
-										text = text + " Our town need some type of goods to grow and prosper. Perhap's have you captured some smuggling's goods to our enemies during your actions.";
-										text = text + " If you accepted to sell its to our town with a cheap price, our governor could speak in your favour and improve your relations towards the crown.";
-										text = text + " People would look you more like a merchant instead of an... enemy ! What do you think about that captain ? ";
+										text = DLG_TEXT[36];
+										text = text + DLG_TEXT[37];
+										text = text + DLG_TEXT[38];
+										text = text + DLG_TEXT[39];
 										Dialog.Text = text;
 										if(CheckAttribute(Pchar, "quest.Contraband.Active") && Pchar.quest.Contraband.Active == true)
 										{
-											Link.l2 = "Sorry but i have other engagements to honour.";
+											Link.l2 = DLG_TEXT[40];
 											Link.l2.go = "exit";								
 										}
 										else
 										{
 											if(FindFirstContrabandGoods(PChar) != -1)
 											{
-												Link.l1 = "I have this kind of goods in my hold. What's your proposition ?";
+												Link.l1 = DLG_TEXT[41];
 												Link.l1.go = "Price";
-												Link.l2 = "Sorry but i'm not interested.";
+												Link.l2 = DLG_TEXT[42];
 												Link.l2.go = "exit";
 											}
 											else
 											{
-												Link.l1 = "Sorry but i haven't this kind of goods in my hold.";
+												Link.l1 = DLG_TEXT[43];
 												Link.l1.go = "exit";
 											}
 										}
@@ -278,17 +278,17 @@ void ProcessDialogEvent()
 									}
 									else	
 									{
-										Dialog.Text = "Yes ? What do you want captain ?";
-										link.l1 = "It seems you are sitting to our table ! That's a problem between us ! Are you captain of a ship ? We could solve it at sea ! How about a challenge ?";
+										Dialog.Text = DLG_TEXT[44];
+										link.l1 = DLG_TEXT[45];
 										link.l1.go = "defi";
-										link.l2 = "Sorry for disturbing captain !";
+										link.l2 = DLG_TEXT[46];
 										link.l2.go = "exit";
 									}
 								}
 								else
 								{
-									Dialog.Text = "Good day captain ! What wind lead you on this cutthroat island ?";
-									Link.l1 = "Some personnal buisness..";
+									Dialog.Text = DLG_TEXT[47];
+									Link.l1 = DLG_TEXT[48];
 									Link.l1.go = "exit";
 									Diag.TempNode = "first time";
 								}
@@ -310,8 +310,8 @@ void ProcessDialogEvent()
 
 
 		case "why":
-				Dialog.Text = "I'm the captain of a good ship and i will never be in peace as long as you will on these earth ! I promise ! I'll see you on the sea Captain ! Farewell !";
-				Link.l1 = "We'll see !";
+				Dialog.Text = DLG_TEXT[49];
+				Link.l1 = DLG_TEXT[50];
 				Link.l1.go = "exit";
 				SetCoastalEnemy(Npchar.model, Npchar.sex, GetMyName(NPChar), Npchar.lastname);
 				if(rand(5)==0){LAi_LocationFightDisable(&locations[FindLocation(Pchar.location)], false);Random_Raid("soldiers",5,makeint(NPchar.nation),LAI_GROUP_ENEMY,LAI_GROUP_NEUTRAL,"");}
@@ -348,24 +348,24 @@ void ProcessDialogEvent()
 					sum = sum + price;
 				}
 				sum = Makeint(sum/2);
-				Dialog.Text = "We can offer you the sum of " + sum + " gold in exchange of all the smuggling's goods you have in your hold !";
-				Link.l1 = "Well. If that can improve relations between me and your country, why not ?";
+				Dialog.Text = DLG_TEXT[51] + sum + DLG_TEXT[52];
+				Link.l1 = DLG_TEXT[53];
 				Link.l1.go = "accept";
-				Link.l2 = "Sorry but for this sum, i prefer to keep my goods ! Farewell !";
+				Link.l2 = DLG_TEXT[54];
 				Link.l2.go = "exit";
 				Npchar.money = sum;
 		break;
 
 		case "accept":
-				Dialog.Text = "That's good captain ! The governor will be satisfied with this news and believe well that he will be grateful for that ! Here's your money !";
-				Link.l1 = "Thanks.";
+				Dialog.Text = DLG_TEXT[55];
+				Link.l1 = DLG_TEXT[56];
 				Link.l1.go = "exit";
 				sum = Npchar.money;
 				PlayStereoSound("INTERFACE\took_item.wav");
 				AddMoneyToCharacter(pchar, sti(sum));
 				AddMoneyToCharacter(Npchar, -sti(sum));
 				float points = stf(sum/4000);
-				ChangeRMRelation(pchar, sti(Npchar.nation), -points); // PB: was UpdateRMRelation
+				ChangeRMRelation(pchar, sti(Npchar.nation), points); // PB: was UpdateRMRelation
 
 				if(FindFirstContrabandGoods(Pchar) != -1) 
 				{
@@ -438,26 +438,26 @@ void ProcessDialogEvent()
 		break;
 
 		case "defi":
-				Dialog.Text = "Yes, i'm the captain of a good ship ! You can see her in the port and I serve the crown of this colony.";
-				Link.l1 = "Your governor will see your body hanged on my mast from the shore ! I'll wait you on sea captain ! Farewell !";
+				Dialog.Text = DLG_TEXT[57];
+				Link.l1 = DLG_TEXT[58];
 				Link.l1.go = "defi2";
-				Link.l2 = "Sorry for disturbing captain !";
+				Link.l2 = DLG_TEXT[59];
 				Link.l2.go = "exit";
 		break;
 
 		case "defi2":
 				if(rand(2)==0)
 				{
-					Dialog.Text = "I'm a corsar of the king and i accept your challenge mister ! You'll regret what you said.";
-					Link.l1 = "Ha ! I'll sink you with pleasure !";
+					Dialog.Text = DLG_TEXT[60];
+					Link.l1 = DLG_TEXT[61];
 					Link.l1.go = "exit";
 					SetCoastalEnemy(Npchar.model, Npchar.sex, GetMyName(NPChar), Npchar.lastname);
 					Diag.TempNode = "exit";
 				}
 				else
 				{
-					Dialog.Text = "But i'm only a single merchant who just want to drink in peace ! Why do you want to kill me ? Help ! Help ! Is there somedy to help me ?";
-					Link.l1 = "Shut up coward !";
+					Dialog.Text = DLG_TEXT[62];
+					Link.l1 = DLG_TEXT[63];
 					Link.l1.go = "exit";
 					if(rand(5)==0){LAi_LocationFightDisable(&locations[FindLocation(Pchar.location)], false);Random_Raid("soldiers",5,makeint(NPchar.nation),LAI_GROUP_ENEMY,LAI_GROUP_NEUTRAL,"");}
 					Diag.TempNode = "exit";

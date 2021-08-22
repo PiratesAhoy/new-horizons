@@ -2,13 +2,12 @@ void CreateRedmondCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	ch.old.name = "Henry";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Henry");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Henry");
+	ch.lastname = "";
 	ch.id		= "Henry";
 	ch.model	= "HenryBeggar"; // Thomas the Terror
 	ch.sound_type = "poorman";
@@ -41,8 +40,8 @@ void CreateRedmondCharacters(ref n)
 
 	ch.old.name = "Weatherby";
 	ch.old.lastname = "Swann";
-	ch.name 	= TranslateString("","Weatherby");
-	ch.lastname 	= TranslateString("","Swann");
+	ch.name 	= TranslateString("", "Weatherby");
+	ch.lastname 	= TranslateString("", "Swann");
 	ch.id		= "Weatherby Swann";
 	ch.model	= "Modyford"; // PB
 	ch.model.animation = "new_man"; // PB
@@ -78,8 +77,8 @@ void CreateRedmondCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Red_soldier_1";
 	ch.model	= 2;
 	ch.sound_type = "soldier";

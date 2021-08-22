@@ -1,0 +1,155 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| Ardent.c |=====}
+Charles{Charles}
+Ardent{Ardent}
+
+{=====| StartStoryline.c |=====}
+William{William}
+McMurrough{McMurrough}
+O'Brien{O'Brien}
+
+{=====| quests_reaction.c |=====}
+de la Vega{de la Vega}
+Two Dogs{Dos Perros}
+Fighting{Que Pelean}
+not-Fighting{Que No Pelean}
+Carlos{Carlos}
+Ardenta{Ardenta}
+Indian{Indio}
+Cardinal{Cardenal}
+Ximinez{Ximinez}
+Fang{Fang}
+
+{=====| Story.c |=====}
+Indian Warrior{Guerrero indio}
+Louwe{Louwe}
+Louwman{Louwman}
+Giraldo{Giraldo}
+Annibal{Annibal}
+Gheerkin{Gheerkin}
+Kamalaas{Kamalaas}
+Morys{Morys}
+Badlad{Badlad}
+Ralph{Ralph}
+Partridge{Partridge}
+Coper{Coper}
+Blumberger{Blumberger}
+Amtónio{Amtónio}
+Guajira{Guajira}
+Ayol{Ayol}
+Bacha{Bacha}
+Lucía{Lucía}
+Edmundo{Edmundo}
+Valerie{Valerie}
+Downing{Downing}
+Piers{Piers}
+Gilbert{Gilbert}
+Emmett{Emmett}
+Dawson{Dawson}
+
+{=====| TempQuest.c |=====}
+Inquisitor{Inquisidor}
+Monkey{Mono}
+Crescent Moon{Luna Creciente}
+Rain Cloud{Nube De Lluvia}
+Golden Flower{Flor Dirada}
+Nervous Elk{Ciervo Nervioso}
+Ringboned Wolf{Lobo Huesudo}
+Strong Deer{Corzo Fuerte}
+White Crow{Cuervo Blanco}
+Soaring Hawk{Halcón En El Cielo}
+Ronald{Ronald}
+McDonald{McDonald}
+Doolin{Doolin}
+Becart{Becart}
+Grigorio{Grigorio}
+Formoselle{Formoselle}
+Coenen{Coenen}
+Barberien{Barberien}
+Garfield{Garfield}
+Leighton{Leighton}
+Wilfred{Wilfred}
+Roscoe{Roscoe}
+Felix{Felix}
+Prost{Prost}
+Steven{Steven}
+Seagull{Seagull}
+Jusepe{Jusepe}
+Guimaraes{Guimaraes}
+Lazaro{Lazaro}
+Trillo{Trillo}
+Suarius{Suarius}
+Escudero{Escudero}
+Elizabeth{Elizabeth}
+Constantino{Constantino}
+de Malaspina{de Malaspina}
+Maria{Maria}
+Antonia{Antonia}
+of Austria{de Austria}
+
+{=====| TempQuestEnemy.c |=====}
+Guard{Guardia}
+1{1}
+2{2}
+3{3}
+Atanagildo{Atanagildo}
+Galíndez{Galíndez}
+Eldo{Eldo}
+Fiz{Fiz}
+Javier{Javier}
+Mendieta{Mendieta}
+Felipe{Felipe}
+Becerra{Becerra}
+Basilio{Basilio}
+Carretero{Carretero}
+Esteban{Esteban}
+Rovapera{Rovapera}
+Mauricio{Mauricio}
+Juradu{Juradu}
+Malbert{Malbert}
+Sangier{Sangier}
+Randolph{Randolph}
+Waghorn{Waghorn}
+Leonard{Leonard}
+Bowyer{Bowyer}
+Marvin{Marvin}
+Corker{Corker}
+James{James}
+Haresign{Haresign}
+Guinemant{Guinemant}
+Lavignen{Lavignen}
+Valerian{Valerian}
+Decaux{Decaux}
+Arnald{Arnald}
+Rimeaux{Rimeaux}
+Bruyant{Bruyant}
+Moncoutie{Moncoutie}
+Philip{Philip}
+de Malvoisin{de Malvoisin}
+François-Louis{François-Louis}
+Rousselet{Rousselet}
+de Châteaurenault{de Châteaurenault}
+4{4}
+Guibert{Guibert}
+Mollaret{Mollaret}
+Guillaume{Guillaume}
+Suguenot{Suguenot}
+Louis{Louis}
+Erignac{Erignac}
+Corin{Corin}
+Arzillires{Arzillires}
+Renouart{Renouart}
+Bonnefroy{Bonnefroy}
+Jaime{Jaime}
+Lezcano{Lezcano}
+Pelayo{Pelayo}
+Núñez{Núñez}
+Emiliano{Emiliano}
+de Guzmán{de Guzmán}
+Gilles{Gilles}
+Clouzot{Clouzot}
+
+{=====| 90 characters |=====}
+
+{=====| Other |=====}
+Helen{Helen}

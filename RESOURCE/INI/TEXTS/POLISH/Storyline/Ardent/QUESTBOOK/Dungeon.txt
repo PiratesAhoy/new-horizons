@@ -1,0 +1,6 @@
+title=The Dungeon's Secret
+text.t1=Apparently there's a lot of unused wine left over from the celebration of the wedding of #sromance# to #svillain#. Maybe I can buy it cheap and then sell it somewhere else for profit.
+text.t2=So much for that. #svillain# has had the same idea.
+text.t3=According to legend, the house of #svillain# used to belong to the Spanish Inquisition, and so did the dungeon next door. There may be some Inquisition loot down there!
+text.t4=I haven't found any gold but I have found #sromance#! Perhaps there's a reward for taking #spronoun# home.
+text.t5=There won't be a reward for taking #sromance# home. But there's a chance of a much bigger prize...

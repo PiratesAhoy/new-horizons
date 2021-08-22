@@ -451,6 +451,18 @@ float Ship_MastDamage()
 					bidx = -1;
 				}
 			}
+
+/*			if(USE_REAL_CANNONS)	// Reduce effects of perks	// wasn't included in effects of original Ship Defence perks
+			{
+				if (sti(GetAttribute(rCharacter, "TmpPerks.Rigging")))		fMult *= 0.85; // -15%
+				if (sti(GetAttribute(rCharacter, "TmpPerks.RiggingAdvance")))	fMult *= 0.75; // -25%
+			}
+			else
+			{
+				if (sti(GetAttribute(rCharacter, "TmpPerks.Rigging")))		fMult *= 0.8; // -20%
+				if (sti(GetAttribute(rCharacter, "TmpPerks.RiggingAdvance")))	fMult *= 0.6; // -40%
+			} */
+
 			switch (iBallType)
 			{
 				case GOOD_BALLS:
@@ -2456,7 +2468,9 @@ void Ship_ApplyCrewHitpoints(ref rOurCharacter, float fCrewHP)
 		ref loc = &locations[FindLocation("Tutorial_Deck")];
 		if(bAllies(rOurCharacter))
 		{
-			for (int i = 1; i < GetCompanionQuantity(GetMainCharacter()); i++) {
+			for (int i = 1; i < COMPANION_MAX; i++)
+			{
+				if (GetCompanionIndex(GetMainCharacter(), i) < 0) continue;
 				ch = GetCharacter(GetCompanionIndex(GetMainCharacter(), i));
 				if(rOurCharacter.index == ch.index)
 				{
@@ -2482,10 +2496,20 @@ void Ship_ApplyCrewHitpoints(ref rOurCharacter, float fCrewHP)
 	float fMultiply;
 	float fskillDefence = stf(rOurCharacter.TmpSkill.Defence); // KK
 	int iskillDefence = GetShipSkill(rOurCharacter, SKILL_DEFENCE); // PB
+	float fFirstAid = 1.0;
 	if (USE_REAL_CANNONS)
+	{
 		fMultiply = Bring2Range(1.0, 0.5, 0.0, 1.0, fskillDefence); // KNB was from 1.0x to 0.2x damage
+		if (sti(GetAttribute(rOurCharacter, "TmpPerks.BasicFirstAid")))			fFirstAid = 0.85;	// 15%
+		if (sti(GetAttribute(rOurCharacter, "TmpPerks.AdvancedFirstAid")))	  	fFirstAid = 0.7;	// 30%
+	}
 	else
+	{
 		fMultiply = Bring2Range(1.0, 0.2, 0.0, 1.0, fskillDefence);
+		if (sti(GetAttribute(rOurCharacter, "TmpPerks.BasicFirstAid")))			fFirstAid = 0.80;	// 20%
+		if (sti(GetAttribute(rOurCharacter, "TmpPerks.AdvancedFirstAid")))	  	fFirstAid = 0.65;	// 35%
+	}
+	fMultiply = fMultiply * fFirstAid;
 //NK -->
 	//aref arship; makearef(arship, rOurCharacter.ship); // PRS3
 	fMultiply *= (0.25 * (stf(rOurCharacter.Ship.Crew.Quantity) / makefloat(GetMinCrewQuantity(rOurCharacter)))); // PRS3
@@ -2499,6 +2523,9 @@ void Ship_ApplyCrewHitpoints(ref rOurCharacter, float fCrewHP)
 // KK & PB -->
 	if (IsMainCharacter(rOurCharacter) || IsCompanion(rOurCharacter)) {
 		int wounded = casualties - randnorm(casualties, iskillDefence);
+		if (sti(GetAttribute(rOurCharacter, "TmpPerks.AdvancedFirstAid"))) 		{wounded += 2.0;}	// 2 more wounded instead of dead
+		else {if (sti(GetAttribute(rOurCharacter, "TmpPerks.BasicFirstAid")))		 wounded += 1.0;}	// 1
+		wounded = makeint(wounded + 0.5);	// round appropriately after FirstAid perks have added a fraction
 		if (wounded > casualties) wounded = casualties;
 		if (wounded > 0) AddCharacterWoundedCrew(rOurCharacter, wounded);
 		else wounded = 0;
@@ -2536,9 +2563,9 @@ void Ship_ApplyHullHitpoints(ref rOurCharacter, float fHP, int iKillStatus, int 
 			if (sti(Characters[iKillerCharacterIndex].TmpPerks.CannonProfessional)) fPlus = 0.2; //0.3
 		}
 
-		if (sti(GetAttribute(rOurCharacter, "TmpPerks.BasicBattleState"))) 			fMinus = 0.08; //0.15
-		if (sti(GetAttribute(rOurCharacter, "TmpPerks.AdvancedBattleState")))	  	fMinus = 0.15; //0.25
-		if (sti(GetAttribute(rOurCharacter, "TmpPerks.ShipDefenceProfessional")))	fMinus = 0.25; //0.40
+		if (sti(GetAttribute(rOurCharacter, "TmpPerks.BasicDamageControl"))) 		fMinus = 0.08; //0.15
+		if (sti(GetAttribute(rOurCharacter, "TmpPerks.AdvancedDamageControl")))	  	fMinus = 0.15; //0.25
+		if (sti(GetAttribute(rOurCharacter, "TmpPerks.ProfessionalDamageControl")))	fMinus = 0.25; //0.40
 	}
 	// KNB <--
 	else
@@ -2549,9 +2576,9 @@ void Ship_ApplyHullHitpoints(ref rOurCharacter, float fHP, int iKillStatus, int 
 			if (sti(Characters[iKillerCharacterIndex].TmpPerks.CannonProfessional)) fPlus = 0.3;
 		}
 
-		if (sti(rOurCharacter.TmpPerks.BasicBattleState))			fMinus = 0.15;
-		if (sti(rOurCharacter.TmpPerks.AdvancedBattleState))		fMinus = 0.25;
-		if (sti(rOurCharacter.TmpPerks.ShipDefenceProfessional))	fMinus = 0.40;
+		if (sti(rOurCharacter.TmpPerks.BasicDamageControl))		fMinus = 0.15;
+		if (sti(rOurCharacter.TmpPerks.AdvancedDamageControl))		fMinus = 0.25;
+		if (sti(rOurCharacter.TmpPerks.ProfessionalDamageControl))	fMinus = 0.40;
 	}
 
 	if (LAi_IsDead(rOurCharacter)) { return; }
@@ -2923,7 +2950,7 @@ void ShipDead(int iDeadCharacterIndex, int iKillStatus, int iKillerCharacterInde
 					if(CheckAttribute(rDead,"Points")) points = stf(rDead.Points);
 					string ship_type = "";
 					if (CheckAttribute(rDead,"FantomType")) ship_type = TranslateString("",rDead.FantomType + "_ship");
-					TraceAndLog(TranslateString("","Type") + ": " + ship_type + " " + TranslateString("","ship") + ". " + TranslateString("","Points") + ": " + points);	// LDH 31Jan09
+					TraceAndLog(TranslateString("","Type") + ": " + ship_type + ". " + TranslateString("","Points") + ": " + points);	// LDH 31Jan09
 					if (CheckAttribute(rDead, "betrayed"))	rMainCharacter.traitor = true; // PB: Temporary attribute, will be deleted in the next function
 					bPirated = UpdateRMRelation(rMainCharacter, iNation, points);
 				}
@@ -3124,7 +3151,7 @@ bool ShipTaken(int iDeadCharacterIndex, int iKillStatus, int iKillerCharacterInd
 				if (CheckAttribute(rDead,"Points")) points = stf(rDead.Points);
 				string ship_type = "";
 				if (CheckAttribute(rDead,"FantomType")) ship_type = TranslateString("",rDead.FantomType + "_ship");
-				TraceAndLog(TranslateString("","Type") + ": " + ship_type + " " + TranslateString("","ship") + ". " + TranslateString("","Points") + ": " + points);	// LDH 31Jan09
+				TraceAndLog(TranslateString("","Type") + ": " + ship_type + ". " + TranslateString("","Points") + ": " + points);	// LDH 31Jan09
 				if (CheckAttribute(rDead, "betrayed"))	rMainCharacter.traitor = true; // PB: Temporary attribute, will be deleted in the next function
 				bPirated = UpdateRMRelation(rMainCharacter, iNation, points);
 			}
@@ -3424,7 +3451,7 @@ void Ship_HullHitEvent()
 	}
 	// PB: Queen Anne's Revenge <--
 
-	if (sti(rOurCharacter.TmpPerks.ShipDefenceProfessional) && frnd() < PROSHIPDEF_NOCRITCH) { bSeriousBoom = false; }				// no seriouse boom, NK 05-04-19 add setting
+	if (sti(rOurCharacter.TmpPerks.ProfessionalDamageControl) && frnd() < PROSHIPDEF_NOCRITCH) { bSeriousBoom = false; }				// no seriouse boom, NK 05-04-19 add setting
 
 	if (!bDead)
 	{
@@ -3434,8 +3461,10 @@ void Ship_HullHitEvent()
 		else
 			fCrewDamage = stf(rBall.DamageCrew) * fCannonDamageMultiply * AIShip_isPerksUse(rBallCharacter.TmpPerks.CrewDamageUp, 1.0, 1.15);
 // KK -->
+//		fCrewDamage = FRAND(fCrewDamage);						// GR: this sets the damage to a random amount between 0 and calculated damage
+//		fCrewDamage = 0.5*fCrewDamage+frand(0.5*fCrewDamage)+frand(0.5*fCrewDamage);	// this sets the damage to a random amount between 0.5* and 1.5* calculated damage - reported as being excessive
+		fCrewDamage = 0.1*fCrewDamage+frand(0.5*fCrewDamage)+frand(0.5*fCrewDamage);	// this sets the damage to a random amount between 0.1* and 1.1* calculated damage
 //trace("fCrewDamage="+fCrewDamage);
-		fCrewDamage = FRAND(fCrewDamage);
 		int iRelation = SeaAI_GetRelation(iOurCharacterIndex, GetMainCharacterIndex());
 		if (IsMainCharacter(rBallCharacter))
 		{
@@ -3535,6 +3564,7 @@ void Ship_FireDamage()
 	int iTime = 1000 + rand(500);
 
 	fHP = fHP * FIREDAMAGE; // ccc firedrill MAR18 // KK
+	float fFirstAid = 1.0;
 
 	// if abordage or interface launched
 	if (!bAbordageStarted && !sti(InterfaceStates.Launched))
@@ -3582,7 +3612,7 @@ void Ship_FireDamage()
 		if(iOurCharacterIndex != GetMainCharacterIndex())
 		{
 			ismc = false;
-			float stopch = stf(GetAttribute(rOurCharacter, "TmpPerks.BasicBattleState")) * AI_FIREDRILL_CHANCE * bring2Range(0.1, 2.0, 0.0, 1.0, stf(rOurCharacter.TmpSkill.Leadership)); // yes, leadership. Persuading men to brave the fire.
+			float stopch = stf(GetAttribute(rOurCharacter, "TmpPerks.BasicDamageControl")) * AI_FIREDRILL_CHANCE * bring2Range(0.1, 2.0, 0.0, 1.0, stf(rOurCharacter.TmpSkill.Leadership)); // yes, leadership. Persuading men to brave the fire.
 			//trace("Firedrill: char " + rOurCharacter.id + " of " + rOurCharacter.ship.name + " has a fire. Chance to stop is " + stopch);
 			if(frnd() < stopch) { dofiredrill = true; }
 		}
@@ -3593,6 +3623,9 @@ void Ship_FireDamage()
 // KK -->
 			int casualties = 0;
 			casualties = makeint(sti(rOurCharacter.Ship.Crew.Quantity)* rand(3)/100 );	// a few firefighters may die
+			if (sti(GetAttribute(rOurCharacter, "TmpPerks.BasicFirstAid")))		fFirstAid = 0.85;	// 15%
+			if (sti(GetAttribute(rOurCharacter, "TmpPerks.AdvancedFirstAid")))	fFirstAid = 0.7;	// 30%
+			casualties = makeint(casualties*fFirstAid + 0.5);
 			RemoveCharacterCrew(rOurCharacter,casualties);
 // <-- KK
 
@@ -4787,6 +4820,19 @@ void Ship_UpdateParameters()
 	}
 	// PB: Black Pearl <--
 
+	// PB: Devils Ship -->
+	if(HasCharacterShipAttribute(rCharacter, "devil_trail"))
+	{
+		int (puffs_per_second = 10);
+		if(SeaCameras.Camera == "SeaDeckCamera")	puffs_per_second = 1;
+		for (i=0; i < puffs_per_second; i++)
+		{
+			PostEvent("CreateCursedDevilFog", delay, "i", rCharacter);
+			delay = delay + 1000/puffs_per_second;
+		}
+	}
+	// PB: Devils Ship <--
+
 // do damage if ship hull < 10%, sinking
 	float fBaseSailHP = stf(rShip.SP);
 	float fBaseShipHP = stf(rShip.HP); // PRS3 // KK
@@ -4934,7 +4980,7 @@ void Ship_UpdateParameters()
 
 // Apply arcade mode
 // NK switch to using defines -->
-	if (iRealismMode == 0)
+	if (iRealismMode == 0 && !REALISTIC_SHIP_INERTIA)
 	{
 		arCharShip.MaxSpeedZ = ARCADE_MULT_SPEED * stf(arCharShip.MaxSpeedZ);
 		arCharShip.MaxSpeedY =	ARCADE_MULT_TURN* stf(arCharShip.MaxSpeedY);
@@ -5081,9 +5127,13 @@ void Ship_UpdatePerks()
 	aTmpPerks.LongRangeGrappling		= CheckOfficersPerk(rCharacter, "LongRangeGrappling");
 	aTmpPerks.MusketsShoot				= CheckOfficersPerk(rCharacter, "MusketsShoot");				// !!!!
 	aTmpPerks.GrapplingProfessional		= CheckOfficersPerk(rCharacter, "GrapplingProfessional");
-	aTmpPerks.BasicBattleState			= CheckOfficersPerk(rCharacter, "BasicBattleState");
-	aTmpPerks.AdvancedBattleState		= CheckOfficersPerk(rCharacter, "AdvancedBattleState");
-	aTmpPerks.ShipDefenceProfessional	= CheckOfficersPerk(rCharacter, "ShipDefenceProfessional");
+	aTmpPerks.BasicDamageControl			= CheckOfficersPerk(rCharacter, "BasicDamageControl");
+	aTmpPerks.AdvancedDamageControl			= CheckOfficersPerk(rCharacter, "AdvancedDamageControl");
+	aTmpPerks.ProfessionalDamageControl		= CheckOfficersPerk(rCharacter, "ProfessionalDamageControl");
+	aTmpPerks.BasicFirstAid				= CheckOfficersPerk(rCharacter, "BasicFirstAid");
+	aTmpPerks.AdvancedFirstAid			= CheckOfficersPerk(rCharacter, "AdvancedFirstAid");
+	aTmpPerks.Rigging				= CheckOfficersPerk(rCharacter, "Rigging");
+	aTmpPerks.RiggingAdvance			= CheckOfficersPerk(rCharacter, "RiggingAdvance");
 	aTmpPerks.ShipSpeedUp				= CheckOfficersPerk(rCharacter, "ShipSpeedUp");
 	aTmpPerks.ShipTurnRateUp			= CheckOfficersPerk(rCharacter, "ShipTurnRateUp");
 	aTmpPerks.StormProfessional			= CheckOfficersPerk(rCharacter, "StormProfessional");			// !!!!
@@ -5572,6 +5622,7 @@ void ShipMutiny()
 					if(IsTrader(chref))
 					{
 						LAi_SetStayType(chref);
+						chref.Dialog.Filename = "Cabinfight_dialog.c";
 						mchref.quest.generate_convoy_quest.board = true;
 						ChangeCharacterReputation(mchref, -10);
 						DoQuestCheckDelay("convoy_failed", 0.0);

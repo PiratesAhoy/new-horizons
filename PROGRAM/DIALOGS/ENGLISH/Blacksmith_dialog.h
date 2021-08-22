@@ -7,9 +7,9 @@
  */
 
 string DLG_TEXT[37] = {
-"Hello captain, pleased to meet you. I'm Boudewijn Smidt, the local blacksmith.",
+"Hello captain, pleased to meet you. I'm #sfullname#, the local blacksmith.",
 "A blacksmith eh? So what exactly is it that you do? Can you repair anything for me?",
-"Ah yes, of course I can, mijnheer! I can repair any sword you bring to me. Just equip the sword that needs fixing, and I'll fix it for you. The price varies for each type of sword and level of damage, but I can fix every sword in one day.",
+"Ah yes, of course I can, #ssir#! I can repair any sword you bring to me. Just equip the sword that needs fixing, and I'll fix it for you. The price varies for each type of sword and level of damage, but I can fix every sword in one day.",
 "Good, let's get down to business!",
 "Thanks, I'll keep it in mind! Goodbye.",
 "Wow, your ",

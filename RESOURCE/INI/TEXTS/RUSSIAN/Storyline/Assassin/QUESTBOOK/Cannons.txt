@@ -1,0 +1,10 @@
+title=The cannons of Mona
+text.t1=I have to blow up the cannons of #sisland_Isla Mona#... Giving me this kind of mission, I must be the Vice-Admiral's most valuable mercenary. I should take advantage of that in the future.... But for now, let's meet Pelagius on #sisland_Antigua#.
+text.t2=This mission is not easy but the Admiral wants to test me. Let's go to #sisland_Guadeloupe# and make some holes in the Belleville's hull.
+text.t3=Done! Let's return to #sisland_Antigua# and meet the Admiral again.
+text.t4=A new mission but this one on #sisland_Khael Roa#. Captain Tripper will be my partner. Let's hope I won't have to wait many months before going to #sisland_Isla Mona#.
+text.t5=When we were leaving the island, a French warship attacked us. Fortunately, thanks to the help of Captain Tripper, I won the battle. Let's make all speed to #sisland_Antigua#, #sisland_Khael Roa# is too dangerous. 
+text.t6=Finally!! I've been given a mission to Isla Mona. I need to talk to Wilfred Larner, the captain of the merchant ship.
+text.t7=A great explosion! The British will suffer this loss for a long time. Vice-Admiral Benavides will be very pleased that the mission was a complete success. If he is happy - I will be richer.
+text.t8=I regret having spoken the mission to #sisland_Khael Roa#. Now, my mission is to capture the pride of the French fleet - La Couronne. What rotten luck! Let's hope the English will help me in this task.
+text.t9=Yes! La Couronne is mine. Let's moor this amazing ship at Havana.

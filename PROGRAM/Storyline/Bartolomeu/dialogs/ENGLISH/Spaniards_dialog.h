@@ -70,7 +70,7 @@ string DLG_TEXT[80] = {
 "Hello matey! What do you want to drink?",
 "In fact, I want an information. I'd like to know if at the moment there is someone in your tavern that works in the fort.",
 "A soldier, you mean?",
-"No, a civilian. Certainly, there are no-military people working in the fort.",
+"No, a civilian. Certainly, there are non-military people working in the fort.",
 "Yes, of course. I know Agilo Casamayor, he's a cook. But, he has just left my tavern.",
 "Where did he go?",
 "He went home.",

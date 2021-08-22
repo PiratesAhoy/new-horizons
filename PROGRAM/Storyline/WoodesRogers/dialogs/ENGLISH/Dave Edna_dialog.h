@@ -1,4 +1,4 @@
-string DLG_TEXT[43] = {
+string DLG_TEXT[49] = {
 "Oh, you must be the brave young captain who saved poor Caroline?",
 "Indeed I am, now tell me what kind of place this is! (And why you are dressed up in that funny way)",
 "This kind Sir is the finest shop in the entire archipelago - we sell all kind of weapons, furniture and paintings here.",  
@@ -42,5 +42,13 @@ string DLG_TEXT[43] = {
 "No where is he?",
 "He's living in the Governors Bootyroom.",
 "Okay. (I know where that is)",
+"This signature here... FH 1634. You know what it means?",	//43
+"Enligthen us please, Dave.",			//44
+"It means the dutch painter Frans Hals and the year is also very good so I believe it to be genuine.",	//45
+"And of some value perhaps?",			//46
+"Some value...? Miss Rogers, -",		//47
+"- it's worth a fortune!!!",			//48
+
+
 
 };

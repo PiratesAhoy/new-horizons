@@ -194,6 +194,7 @@ void ProcessDialogEvent()
 		
 		case "smithy":
 				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+				Preprocessor_Add("sir2", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 				d.Text = DLG_TEXT[163];
 				Link.l1 = DLG_TEXT[164];
 				Link.l1.go = "new question";
@@ -231,15 +232,26 @@ void ProcessDialogEvent()
 			dialog.snd2 = "";
 			dialog.snd3 = "";
 			d.Text = RandPhrase(DLG_TEXT[110] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname + DLG_TEXT[111], DLG_TEXT[112] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[113], DLG_TEXT[114] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[115], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3);
-			Link.l1 = DLG_TEXT[116];
-			Link.l1.go = "town_tavern";
-			Link.l2 = DLG_TEXT[117];
-			Link.l2.go = "town_shipyard";
-			Link.l3 = DLG_TEXT[118];
-			Link.l3.go = "town_store";
+			Link.l1 = DLG_TEXT[117];
+			Link.l1.go = "town_shipyard";
+			Link.l2 = DLG_TEXT[118];
+			Link.l2.go = "town_store";
+			if(Rand(1) == 0)
+			{
+				Link.l3 = DLG_TEXT[116];
+				Link.l3.go = "town_tavern";
+			}
 			// RobC/Alan_Smithee Blacksmiths -->
-			Link.l4 = DLG_TEXT[166];
-			Link.l4.go = "town_smith";
+			if(Rand(1) == 0)
+			{
+				Link.l4 = DLG_TEXT[166];
+				Link.l4.go = "town_smith";
+			}
+			else
+			{
+				link.l4 = DLG_TEXT[174];
+				link.l4.go = "town_usurer";
+			}
 		break;
 
 		case "town_smith":
@@ -254,22 +266,34 @@ void ProcessDialogEvent()
 //<-- RobC/A_S 'smiths
 
 		case "town_tavern":
-			d.Text = DLG_TEXT[119];
-			Link.l1 = DLG_TEXT[120];
-			Link.l1.go = "exit";
-			Link.l2 = DLG_TEXT[121];
-			Link.l2.go = "town_shipyard";
-			Link.l3 = DLG_TEXT[122];
-			Link.l3.go = "town_store";
-			Link.l4 = DLG_TEXT[166];
-			Link.l4.go = "town_smith";
-            DeleteAttribute(&locations[FindLocation("Eleuthera_Port")], "reload.l4.goto_disable"); // BOP: Unlock Fast Travel
+			if (GetAttribute(NPChar, "location") != "Eleuthera_Tavern")
+			{
+				d.Text = DLG_TEXT[119];
+				Link.l1 = DLG_TEXT[120];
+				Link.l1.go = "exit";
+				Link.l2 = DLG_TEXT[121];
+				Link.l2.go = "town_shipyard";
+				Link.l3 = DLG_TEXT[122];
+				Link.l3.go = "town_store";
+				Link.l4 = DLG_TEXT[166];
+				Link.l4.go = "town_smith";
+            			DeleteAttribute(&locations[FindLocation("Eleuthera_Port")], "reload.l4.goto_disable"); // BOP: Unlock Fast Travel
+			}
+			else
+			{
+				d.text = DLG_TEXT[177];
+				Link.l1 = DLG_TEXT[178];
+				Link.l1.go = "exit";
+			}
 		break;
 
 		case "town_shipyard":
-			d.Text = DLG_TEXT[123] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[124]
-			Link.l1 = DLG_TEXT[125];
-			Link.l1.go = "town_tavern";
+			d.Text = DLG_TEXT[123] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[124];
+			if (GetAttribute(NPChar, "location") != "Eleuthera_Tavern")
+			{
+				Link.l1 = DLG_TEXT[125];
+				Link.l1.go = "town_tavern";
+			}
 			Link.l2 = DLG_TEXT[126];
 			Link.l2.go = "town_store";
 			Link.l4 = DLG_TEXT[166];
@@ -283,13 +307,27 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[128] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[129])]) + DLG_TEXT[131];
 			Link.l1 = DLG_TEXT[132];
 			Link.l1.go = "town_shipyard";
-			Link.l2 = DLG_TEXT[133];
-			Link.l2.go = "town_tavern";
+			if (GetAttribute(NPChar, "location") != "Eleuthera_Tavern")
+			{
+				Link.l2 = DLG_TEXT[133];
+				Link.l2.go = "town_tavern";
+			}
 			Link.l4 = DLG_TEXT[166];
 			Link.l4.go = "town_smith";
 			Link.l3 = DLG_TEXT[134];
 			Link.l3.go = "exit";
             DeleteAttribute(&locations[FindLocation("Eleuthera_Port")], "reload.l6.goto_disable"); // BOP: Unlock Fast Travel
+		break;
+
+		case "town_usurer":
+			Preprocessor_Add("usurer", GetMyFullName(CharacterFromID("Eleuthera Usurer")));
+			d.Text = DLG_TEXT[175];
+			Link.l1 = DLG_TEXT[176];
+			Link.l1.go = "exit";
+			Link.l2 = DLG_TEXT[169];
+			Link.l2.go = "town_shipyard";
+			Link.l3 = DLG_TEXT[170];
+			Link.l3.go = "town_store";
 		break;
 
 		case "colony":

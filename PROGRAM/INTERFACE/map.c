@@ -30,8 +30,20 @@ void IDoExit(int exitCode)
 	DelEventHandler("exitCancel","ProcessCancelExit");
 	DelEventHandler("ievnt_command","ProcessCancelExit");
 
-	PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
-	InterfaceStack.SelectMenu_node = "I_ITEMS";
+	// PB: Return to Archipelago Map -->
+	ref chm = GetMainCharacter();
+	if (CheckAttribute(chm, "from_map"))
+	{
+		PostEvent("LaunchIAfterFrame",1,"sl", "A_MAP", 2);
+		InterfaceStack.SelectMenu_node = "A_MAP";
+		DeleteAttribute(chm, "from_map");
+	}
+	// PB: Return to Archipelago Map <--
+	else
+	{
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+	}
 	interfaceResultCommand = exitCode;
 	EndCancelInterface(false);
 }

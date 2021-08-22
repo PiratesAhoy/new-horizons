@@ -1,0 +1,4 @@
+title=Esperar nuevas órdenes de Silehard.
+text.t1=Silehard me ha ordenado que participe en la liberación de #sOxbay#, en #sisland_Oxbay#. Por desgracia, no me queda otra elección; todas las entradas a la ciudad están bloqueadas. Lo único que puedo hacer es esperar sus órdenes en la taberna.
+text.t2=¡Diablos! ¡Los soldados ingleses nos han atacado a #sDanielle# y a mí! #sDanielle#, como era de esperar, desapareció justo después de la lucha. Creo que me oculta algo. Pobre #skid#, casi perdió la cabeza cuando mataron a Ralph, #spronoun3# contramaestre. Es una lástima; era un buen hombre. En cualquier caso, tengo que descubrir qué está pasando.
+text.t3=Debería haber escuchado a #sDanielle# y haber salido de la taberna. En cuanto #sDanielle# se ha ido, los soldados han entrado en la taberna y me han ordenado que tire mis armas. Había cuatro, así que tenían ventaja, y no he tenido más remedio que rendirme. ¿Qué diablos pasa?

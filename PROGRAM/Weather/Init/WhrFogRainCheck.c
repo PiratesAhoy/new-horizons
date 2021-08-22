@@ -1,4 +1,4 @@
-void Whr_FogRainCheck(){
+﻿void Whr_FogRainCheck(){
 //JL -------------------------------------------------------------
 
 //  LDH more fog in mornings - 26Feb09
@@ -16,6 +16,7 @@ void Whr_FogRainCheck(){
 				wRain = 0;
 				Fog = 0;
 				//Log_SetStringToLog("JRH_rain = Clear");
+				WhrDeleteRainEnvironment();			//JRH added june 2019	
 			break;
 
 			case "Cloudy":

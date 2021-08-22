@@ -44,7 +44,7 @@ string DLG_TEXT[129] = {
 "Sorry to keep you, but there's another thing...",
 "Aye, Jakob Nickerson. Just moved into town not too long ago. He does a fair job fixin' boats, plus he has a score to sell.",
 "Good. Something else?",
-"Ha, that'd be old Blowhorn. He'll cheat ya crooked if he can... and that's as good as ye get even if he likes ya.",
+"Not 'he', 'she'. Old Peter Blowhorn retired years ago. His daughter Kate runs the store now. Doesn't cheat ya like old Pete did - well, she don't want ya taking yer business to #sCharlestown#, does she?",
 "I see. I have another question for you.",
 "Good to hear. Cheerio.",
 "Heh, I see where yer going with this -- followin' yer bowspirit into a friendly port, eh mate, huh, eh? A little of the ol' nudge-nudge, wink-wink, eh friend? heh... Anyway, Celestine -- for that's the 'spectable mistruss's name -- keeps a fine stable o' pretty mares, she does. I think you'll enjoy a visit.",

@@ -267,6 +267,9 @@ void StartStoryLine()
 			case 4: SetModelFromID(ch, "Blaze7"); break;
     		}
 	}
+
+	SetModelfromID(CharacterFromID("Joaquin Da Saldanha"), "admiral");	// Restore Lucas and admiral to original models
+	SetModelfromID(CharacterFromID("Lucas Da Saldanha"), "lucas");
 	// PB: Quest Corrections <--
 
 //===============================| QUESTS SECTION END |===============================//

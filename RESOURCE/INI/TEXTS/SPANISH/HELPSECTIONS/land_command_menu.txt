@@ -1,0 +1,11 @@
+land_commands_title
+{
+Condicion de la fiesta
+}
+
+land_commands_info
+{
+???? El personaje del jugador y la condicion de su grupo se pueden ver en la esquina inferior izquierda de la pantalla mientras se camina en tierra (Pic.1). El jugador ve caras de su personaje y sus oficiales, y dos franjas sobre ellos. La franja azul representa el estado de carga de la pistola de personajes (si tiene uno), y el rojo es la salud del personaje.
+???? La recarga de la pistola y la reposicion de la salud llevan tiempo.
+???? Tambien aqui hay un menu de comandos, muy parecido al menu de iconos de comando de envio. El menu se puede abrir con la tecla Comando. Desde ese menu puede usar el comando Viaje rapido a algunas ubicaciones (foto 2). Esos lugares se enumeran en la imagen.3 Estos son (de izquierda a derecha significa arriba-abajo) almacen, astillero, taberna, residencia del gobernador y puerto donde se encuentra el barco del jugador. Usar este menu es absolutamente lo mismo que usar el menu Icono de comando de envio.
+}

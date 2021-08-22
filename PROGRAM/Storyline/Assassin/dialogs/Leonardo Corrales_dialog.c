@@ -29,8 +29,10 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
                         dialog.snd = "Voice\CLLA\CLLA001";
-			dialog.text = LinkRandPhrase(DLG_TEXT[0], DLG_TEXT[1], DLG_TEXT[2], DLG_TEXT[3]);
-			link.l1 = LinkRandPhrase(DLG_TEXT[4], DLG_TEXT[5]);
+//			dialog.text = LinkRandPhrase(DLG_TEXT[0], DLG_TEXT[1], DLG_TEXT[2], DLG_TEXT[3]);
+//			link.l1 = LinkRandPhrase(DLG_TEXT[4], DLG_TEXT[5]);
+			dialog.text = LinkRandPhrase(DLG_TEXT[0], DLG_TEXT[1], DLG_TEXT[3]);
+			link.l1 = LinkRandPhrase(DLG_TEXT[4], DLG_TEXT[4], DLG_TEXT[5]);
 			link.l1.go = "exit";
 
                        break;

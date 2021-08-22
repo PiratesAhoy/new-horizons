@@ -298,11 +298,11 @@ trace("crewRatio="+crewRatio+", actLoyal="+actLoyal+", actMutiny="+actMutiny+", 
 				string lastname = chr.lastname;
 				chrHP = stf(chr.chr_ai.hp);
 				LAi_KillCharacter(chr);
-				chr = LAi_CreateFantomCharacterEx(true, 0, true, true, 0.25, model, ani, chLocType, chLocLoc + pos);
+				chr = LAi_CreateFantomCharacterEx(true, 0, true, true, 0.25, model, chLocType, chLocLoc + pos);
 				if(SendMessage(chr, "lss", MSG_CHARACTER_ENTRY_TO_LOCATION, chLocType, chLocLoc + pos)==false)
 				{
 					DeleteCharacter(chr);
-					chr = LAi_CreateFantomCharacterEx(true, 0, true, true, 0.25, model, ani, chLocType, chLocLoc + pos);
+					chr = LAi_CreateFantomCharacterEx(true, 0, true, true, 0.25, model, chLocType, chLocLoc + pos);
 				}
 				LAi_group_MoveCharacter(chr, LAI_GROUP_BRDENEMY);
 				LAi_SetCurHP(chr, chrHP);//Sets an actual HP

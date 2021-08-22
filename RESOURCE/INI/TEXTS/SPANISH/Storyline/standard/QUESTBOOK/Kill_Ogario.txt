@@ -1,0 +1,5 @@
+title=Matar a Sidonio Ogarrio.
+text.t1=Wilfred Bythesea me ha encomendado la misión de matar a un hombre llamado Sidonio Ogarrio, que vive en #sIsla Muelle#, en #sisland_Isla Muelle#. Su casa está en la plaza que hay detrás de la taberna.
+text.t2=Tras llegar a #sIsla Muelle#, he llevado a cabo la sencilla misión de eliminar a Sidonio Ogarrio, a pesar de los esfuerzos de sus guardaespaldas.
+text.t3=No me apetecía matar a Sidonio Ogarrio.
+text.t4=He informado a Wilfred Bythesea del fin de Sidonio Ogarrio. Parecía muy aliviado.

@@ -1,4 +1,4 @@
-string DLG_TEXT[18] = { 
+string DLG_TEXT[21] = { 
 "EEEK! What are you doing in my bedroom? Are you a thief? Please don't hurt me! I'll give you my jewels if you leave me alone.",
 "Believe me, I'm not going to hurt you, sweetheart! Quite the contrary, hehe...",
 "If I only had more time then I'd take something else from you, lass! But for now I'll be content with those jewels. Thank's a lot.",
@@ -17,4 +17,7 @@ string DLG_TEXT[18] = {
 "Then everything has turned out well. Goodbye.",
 "It has been a most pleasant conversation. But now perhaps it is best for you to leave.",
 "Of course. I don't want to overstay my welcome. Goodbye.",
+"I've heard of you! You murder women in their bedrooms! HELP!",
+"I'm sorry! I won't do it again, I promise!",
+"You should have kept your mouth shut!",
 };

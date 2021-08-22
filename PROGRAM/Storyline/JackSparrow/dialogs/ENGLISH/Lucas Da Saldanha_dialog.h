@@ -6,7 +6,7 @@ string DLG_TEXT[37] = {
 "Please, tell me who you are. Why did you save me?",
 "We'll talk later. For now, let's get out of here. I have no desire to chat with a French guard.",
 "Who are you, anyway?",
-"I'm ",
+"I'm Captain ",
 ". Your father was very concerned about your disappearance, and he sent me to find you.",
 "I see. I was on my way to see him when I ran into the trouble you've just rescued me from. I owe you my life.",
 "Don't thank me. I was well-paid for my efforts.",

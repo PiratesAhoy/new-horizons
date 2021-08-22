@@ -1,0 +1,13 @@
+title=Pirate Lords of the world.
+text.t1=On arriving in the Caribbean I have seen my father. He is one of the nine Pirate Lords.
+text.t2=Barbossa is the Pirate Lord of the Caspian Sea. I wonder if he knows my father? Still, it seems that I might have a part of this treasure map, very interesting. .
+text.t3=Barbossa is the Pirate Lord of the Caspian Sea. I wonder if he knows my father?
+text.t4=I ran into my father after helping the Pirate Lord, Sao Feng. He had heard of my adventures and decided to give me his piece of eight. I am now the Pirate Lord of the Caribbean!
+text.t5=The Pirate Lord of the South China Sea, Sao Feng, wants me to help him find his bodyguards.
+text.t6=The Pirate Lord of the Black Sea, Ammand the Corsair, wants me to help him get some money off a priest.
+text.t7=The Pirate Lord of the Mediterranean Sea, Capitaine Chevalle, wants me to help him find his lost crewmates.
+text.t8=The Pirate Lord of the Adriatic Sea, Eduardo Villanauva, wants me and Capitaine Chevalle to team up with him to find a treasure on #sisland_Battle Rocks#.
+text.t9=The Pirate Lord of the Indian Ocean, Sri Sumbhajee Angria (through his aid Askay), wants me to help him get his other aid (Puasan) back off slavers.
+text.t10=I have killed the Pirate Lord of the Atlantic Ocean, Gentleman Jocard, and have given his piece of eight to Gombo the Slave, who has changed his name to Gentleman Jocard in honour of our defeat of his former master.
+text.t11=I have killed the Pirate Lord of the Atlantic Ocean, Gentleman Jocard, and have given his piece of eight to Cap'n Drow, a member of the Brotherhood I have experience with.
+text.t12=I have met the Pirate Lord of the Atlantic Ocean, Gentleman Jocard, although I dont think he is worthy of the title I wouldn't dare taking on a pirate lord.

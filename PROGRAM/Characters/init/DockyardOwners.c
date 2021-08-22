@@ -8,15 +8,14 @@ void CreateDockYardOwnersCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	//===============================| Alice Town |===============================//
 
 	ch.old.name = "Patrick";
 	ch.old.lastname = "Webster";
-	ch.name 	= TranslateString("","Patrick");
-	ch.lastname 	= TranslateString("","Webster");
+	ch.name 	= TranslateString("", "Patrick");
+	ch.lastname 	= TranslateString("", "Webster");
 	ch.id		= "Patrick Webster";
 	ch.model = "bocman8";
 	ch.sex = "man";
@@ -49,8 +48,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Dockyard";
 	ch.old.lastname = "Comissioner";
-	ch.name 	= TranslateString("","Dockyard");
-	ch.lastname 	= TranslateString("","Comissioner");
+	ch.name 	= TranslateString("", "Dockyard");
+	ch.lastname 	= TranslateString("", "Comissioner");
 	ch.id		= "Antigua_Dockyard";
 	ch.model	= "brtcpt1_18"; // Thomas the Terror
 	ch.sex = "man";
@@ -84,8 +83,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Hugh";
 	ch.old.lastname = "Chadman";
-	ch.name = TranslateString("","Hugh");
-	ch.lastname = TranslateString("","Chadman");
+	ch.name = TranslateString("", "Hugh");
+	ch.lastname = TranslateString("", "Chadman");
 	ch.id		= "Hugh Chadman";
 	ch.model	= "sailor10"; // Estharos Change from Chelovek1 to this model
 	ch.sex = "man";
@@ -118,8 +117,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Humberto";
 	ch.old.lastname = "de Paiva";
-	ch.name = TranslateString("","Humberto");
-	ch.lastname = TranslateString("","de Paiva");
+	ch.name = TranslateString("", "Humberto");
+	ch.lastname = TranslateString("", "de Paiva");
 	ch.id		= "Humberto de Paiva";
 	ch.model = "bocman10"; // Estharos Change from man6_1 to this model
 	ch.sex = "man";
@@ -154,8 +153,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Lambrecht";
 	ch.old.lastname = "Fobes";
-	ch.name = TranslateString("","Lambrecht");
-	ch.lastname = TranslateString("","Fobes");
+	ch.name = TranslateString("", "Lambrecht");
+	ch.lastname = TranslateString("", "Fobes");
 	ch.id		= "Lambrecht Fobes";
 	ch.model	= "33_Ronald"; // Estharos Change from Old_man1 to this model
 	ch.model.animation = "33_Ronald";
@@ -190,8 +189,8 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Philippe";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Philippe");
-	ch.lastname 	= TranslateString("","");
+	ch.name 	= TranslateString("", "Philippe");
+	ch.lastname 	= "";
 	ch.id		= "Philippe";
 	ch.model = "33_Ronald";
 	ch.model.animation = "33_Ronald";
@@ -225,8 +224,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Jean";
 	ch.old.lastname = "Filaut";
-	ch.name = TranslateString("","Jean");
-	ch.lastname = TranslateString("","Filaut");
+	ch.name = TranslateString("", "Jean");
+	ch.lastname = TranslateString("", "Filaut");
 	ch.id		= "Jean Filaut";
 	ch.model	= "bocman16"; // Estharos Change from man6 to this model
 	ch.sex = "man";
@@ -260,8 +259,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Fletcher";
 	ch.old.lastname = "Rosewood";
-	ch.name 	= TranslateString("","Fletcher");
-	ch.lastname 	= TranslateString("","Rosewood");
+	ch.name 	= TranslateString("", "Fletcher");
+	ch.lastname 	= TranslateString("", "Rosewood");
 	ch.id		= "Fletcher Rosewood";
 	ch.model	= "33_Ronal2"; // Estharos Change from Bocman3 to this model
 	ch.headmodel = "h_33_Ronal2"; // Estharos Change from h_Bocman3 to this model
@@ -295,8 +294,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "David";
 	ch.old.lastname = "Fairweather";
-	ch.name 	= TranslateString("","David");
-	ch.lastname = TranslateString("","Fairweather");
+	ch.name 	= TranslateString("", "David");
+	ch.lastname = TranslateString("", "Fairweather");
 	ch.id		= "David Fairweather";
 	ch.model	= "bocman18"; // Estharos Change from man1 to this model
 	ch.sex = "man";
@@ -329,8 +328,8 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Esteban";
 	ch.old.lastname = "Castillo";
-	ch.name = TranslateString("","Esteban");
-	ch.lastname = TranslateString("","Castillo");
+	ch.name = TranslateString("", "Esteban");
+	ch.lastname = TranslateString("", "Castillo");
 	ch.id		= "Esteban Castillo";
 	ch.model	= "sailor7"; // Estharos Change from old_man1 to this model
 	ch.sex = "man";
@@ -365,10 +364,10 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Jorge";
 	ch.old.lastname = "Suarez";
-	ch.name = TranslateString("","Jorge");
-	ch.lastname = TranslateString("","Suarez");
+	ch.name = TranslateString("", "Jorge");
+	ch.lastname = TranslateString("", "Suarez");
 	ch.id		= "Jorge Suarez";
-	ch.model	= "capstan_A3"; // Estharos Change from man6 to this model
+	ch.model	= "capstan3"; // Estharos Change from man6 to this model
 	ch.sex = "man";
 	ch.location	= "Havana_Shipyard";
 	ch.location.group = "sit";
@@ -399,8 +398,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Maurice";
 	ch.old.lastname = "Dupont";
-	ch.name = TranslateString("","Maurice");
-	ch.lastname = TranslateString("","Dupont");
+	ch.name = TranslateString("", "Maurice");
+	ch.lastname = TranslateString("", "Dupont");
 	ch.id		= "Maurice Dupont";
 	ch.model	= "Pirat8"; // Estharos Change from man2 to this model
 	ch.sex = "man";
@@ -468,8 +467,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Oweyn";
 	ch.old.lastname = "McDorey";
-	ch.name 	= TranslateString("","Oweyn");
-	ch.lastname 	= TranslateString("","McDorey");
+	ch.name 	= TranslateString("", "Oweyn");
+	ch.lastname 	= TranslateString("", "McDorey");
 	ch.id		= "Oweyn McDorey";
 	ch.model	= "bocman"; // Estharos Change from Sailor6 to this model
 	ch.sex = "man";
@@ -503,8 +502,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Arendt";
 	ch.old.lastname = "Verheugen";
-	ch.name = TranslateString("","Arendt");
-	ch.lastname = TranslateString("","Verheugen");
+	ch.name = TranslateString("", "Arendt");
+	ch.lastname = TranslateString("", "Verheugen");
 	ch.id		= "Arendt Verheugen";
 	ch.model	= "Old_man2"; // Estharos Change from man1 to this model
 	ch.sex = "man";
@@ -538,8 +537,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Prosper";
 	ch.old.lastname = "Fraigneau";
-	ch.name 	= TranslateString("","Prosper");
-	ch.lastname 	= TranslateString("","Fraigneau");
+	ch.name 	= TranslateString("", "Prosper");
+	ch.lastname 	= TranslateString("", "Fraigneau");
 	ch.id		= "Prosper Fraigneau";
 	ch.model	= "man1"; // Estharos Change from Corsair4 to this model
 	ch.headmodel = "h_man1"; // Estharos Change from h_Corsair4 to this model
@@ -574,8 +573,8 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Benoit";
 	ch.old.lastname = "Bertignac";
-	ch.name 	= TranslateString("","Benoit");
-	ch.lastname 	= TranslateString("","Bertignac");
+	ch.name 	= TranslateString("", "Benoit");
+	ch.lastname 	= TranslateString("", "Bertignac");
 	ch.id		= "Benoit Bertignac";
 	ch.model	= "capstan"; // Estharos Change from Searcher to this model
 	ch.headmodel = "h_capstan";
@@ -610,8 +609,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Jakob";
 	ch.old.lastname = "Nickerson";
-	ch.name = TranslateString("","Jakob");
-	ch.lastname = TranslateString("","Nickerson");
+	ch.name = TranslateString("", "Jakob");
+	ch.lastname = TranslateString("", "Nickerson");
 	ch.id		= "Jakob Nickerson";
 	ch.model	= "pirat15"; // Estharos Change from pirat4 to this model
 	ch.sex = "man";
@@ -648,8 +647,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Roger";
 	ch.old.lastname = "Murray";
-	ch.name = TranslateString("","Roger");
-	ch.lastname = TranslateString("","Murray");
+	ch.name = TranslateString("", "Roger");
+	ch.lastname = TranslateString("", "Murray");
 	ch.id		= "Roger Murray";
 	ch.model	= "9R_Carp"; // Estharos Change from man1 to this model
 	ch.sex = "man";
@@ -682,8 +681,8 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Pablo";
 	ch.old.lastname = "Duarte";
-	ch.name = TranslateString("","Pablo");
-	ch.lastname = TranslateString("","Duarte");
+	ch.name = TranslateString("", "Pablo");
+	ch.lastname = TranslateString("", "Duarte");
 	ch.id		= "Pablo Duarte";
 	ch.model	= "Sailor16"; // Estharos Change from man6 to this model
 	ch.sex = "man";
@@ -716,8 +715,8 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Teodinus";
 	ch.old.lastname = "Serrano";
-	ch.name 	= TranslateString("","Teodinus");
-	ch.lastname 	= TranslateString("","Serrano");
+	ch.name 	= TranslateString("", "Teodinus");
+	ch.lastname 	= TranslateString("", "Serrano");
 	ch.id		= "Teodinus Serrano";
 	ch.model = "man6"; // Estharos Change from Storeman2 to this model
 	ch.sex = "man";
@@ -751,8 +750,8 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Adhemar";
 	ch.old.lastname = "Bertillon";
-	ch.name 	= TranslateString("","Adhemar");
-	ch.lastname 	= TranslateString("","Bertillon");
+	ch.name 	= TranslateString("", "Adhemar");
+	ch.lastname 	= TranslateString("", "Bertillon");
 	ch.id		= "Adhemar Bertillon";
 	ch.model	= "capitan";
 	ch.sex = "man";
@@ -792,8 +791,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Maarten";
 	ch.old.lastname = "Verlinden";
-	ch.name 	= TranslateString("","Maarten");
-	ch.lastname = TranslateString("","Verlinden");
+	ch.name 	= TranslateString("", "Maarten");
+	ch.lastname = TranslateString("", "Verlinden");
 	ch.id		= "Maarten Verlinden";
 	ch.model	= "bocman3"; // Estharos Change from bocman1 to this model
 	ch.sex = "man";
@@ -830,8 +829,8 @@ void CreateDockYardOwnersCharacters(ref n)
 	
 	ch.old.name = "Gheret";
 	ch.old.lastname = "Bogardus";
-	ch.name = TranslateString("","Gheret");
-	ch.lastname = TranslateString("","Bogardus");
+	ch.name = TranslateString("", "Gheret");
+	ch.lastname = TranslateString("", "Bogardus");
 	ch.id		= "Gheret Bogardus";
 	ch.model	= "Pirtt7"; // Estharos Change from Sailor19 to this model
 	ch.sex = "man";
@@ -863,8 +862,8 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Hendrick";
 	ch.old.lastname = "Vanderdecken";
-	ch.name 	= TranslateString("","Hendrick");
-	ch.lastname 	= TranslateString("","Vanderdecken");
+	ch.name 	= TranslateString("", "Hendrick");
+	ch.lastname 	= TranslateString("", "Vanderdecken");
 	ch.id		= "Hendrick Vanderdecken";
 	ch.model = "Vanderdecken";
 	ch.sex = "man";
@@ -899,8 +898,8 @@ void CreateDockYardOwnersCharacters(ref n)
 
 	ch.old.name = "Ricardo";
 	ch.old.lastname = "Ordiales";
-	ch.name = TranslateString("","Ricardo");
-	ch.lastname = TranslateString("","Ordiales");
+	ch.name = TranslateString("", "Ricardo");
+	ch.lastname = TranslateString("", "Ordiales");
 	ch.id		= "Ricardo Ordiales";
 	ch.model	= "sailor13";
 	ch.sex = "man";

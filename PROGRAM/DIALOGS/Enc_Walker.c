@@ -1295,6 +1295,7 @@ void ProcessDialogEvent()
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"You got") + " " +  NPChar.pickgold + " " + XI_ConvertString("gold."));
 				if(AUTO_SKILL_SYSTEM) { AddPartyExPChar(PChar, "Sneak", 100+pickgold/4)); }
 				else { AddPartyExp(PChar, 100+pickgold/4)); }
+				DeleteAttribute(NPChar, "pickgold");	// GR: "pickgold" is checked in "stunned_dialog.c" so you don't lose rep for mugging a pickpocket.  Lose rep if you mug him after he gives your money back.
 			}
 			d.Text = DLG_TEXT[248];
 			Link.l2 = LinkRandPhrase(DLG_TEXT[249], DLG_TEXT[250], DLG_TEXT[251]);
@@ -1329,6 +1330,7 @@ void ProcessDialogEvent()
 				Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"You got") + " " + pickgold + " " + XI_ConvertString("gold."));
 				if(AUTO_SKILL_SYSTEM) { AddPartyExPChar(PChar, "Sneak", 100+makeint(pickgold/4))); }
 				else { AddPartyExp(PChar, 100+makeint(pickgold/4))); }
+				DeleteAttribute(NPChar, "pickgold");	// GR: "pickgold" is checked in "stunned_dialog.c" so you don't lose rep for mugging a pickpocket.  Lose rep if you mug him after he gives your money back.
 				d.Text = DLG_TEXT[245];
 				Link.l1 = DLG_TEXT[247];
 				Link.l1.go = "donation";
@@ -1366,10 +1368,10 @@ void ProcessDialogEvent()
 			{
 				ChangeCharacterReputation(PChar, 2);
 			}
-		    PlayStereoSound("INTERFACE\took_item.wav");
-		    // TIH --> to prevent giving all your money back to the bastard! Aug29''06
-		    int donationSum = 50 + rand(300);
-		    if ( sti(PChar.money) < donationSum ) donationSum = makeint(sti(PChar.money) / 2);
+			PlayStereoSound("INTERFACE\took_item.wav");
+			// TIH --> to prevent giving all your money back to the bastard! Aug29''06
+			int donationSum = 50 + rand(300);
+			if ( sti(PChar.money) < donationSum ) donationSum = makeint(sti(PChar.money) / 2);
 			AddMoneytoCharacter(PChar, -donationSum);
 			AddMoneytoCharacter(NPChar, donationSum);
 			// TIH <--

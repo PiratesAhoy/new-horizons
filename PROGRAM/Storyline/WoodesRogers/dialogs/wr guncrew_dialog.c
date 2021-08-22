@@ -494,6 +494,18 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("anvil_push");
 		break;
 
+		case "neutral":
+			if(NPChar.id == "guncrew_1") PlaySound("VOICE\ENGLISH\guncrew_1.wav");
+			if(NPChar.id == "guncrew_2") PlaySound("VOICE\ENGLISH\guncrew_2.wav");
+			if(NPChar.id == "guncrew_3") PlaySound("VOICE\ENGLISH\guncrew_3.wav");
+			if(NPChar.id == "guncrew_4") PlaySound("VOICE\ENGLISH\guncrew_4.wav");
+
+			Dialog.text = DLG_TEXT[16];		
+			link.l1 = DLG_TEXT[37];			
+			link.l1.go = "exit";
+			Diag.TempNode = "neutral";
+		break;
+
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

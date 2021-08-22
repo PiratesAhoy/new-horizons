@@ -1,0 +1,16 @@
+title=El Hostal del Obispo
+text.t1=No hay ningún 'Hostal del Obispo' (Bishop's Hostel), pero hay un lugar llamado 'Bessop's Castle'.
+text.t2=Saliendo de Charleston, buscar un camino inmediatemnte a la derecha.
+text.t3=Después del puente, girar a la izquierda y caminar por lo alto del acantilado.
+text.t4=En realidad no es ni un castillo ni un hostal, sino una alta formación rocosa.
+text.t5=Ahí está, la roca es igual que la del dibujo. Ahora tengo que encontrar la forma de subir hasta ella.
+text.t6=He encontrado la 'Silla del Diablo', no hay duda.
+text.t7=Volvamos a la 'Silla del Diablo'.
+text.t8=¡Una calavera en un árbol! Tiene que ser eso, ahora estoy buscando un árbol muy alto. El tronco es diferente al de los demás árboles, ¡es marrón!
+text.t9=Sí, he encontrado el lugar. Esto requerirá herramientas, armas y la ayuda de Mr. Poe. Volvamos junto a él, a Charleston. 
+text.t10=Me reuniré con Mr. Poe fuera de las puertas de la ciudad cuando haya encontrado lo que necesito.
+text.t11=Se supone que tengo que llevar nuestro bote a ese 'Hostal del Obispo'.
+text.t12=Me reuniré con Mr. Legrand fuera de las puertas de la ciudad cuando haya encontrado lo que necesito.
+text.t13=La munición para esta bueva pistola de percusión era un poco complicada, pero ahora ya estoy listo para reunirme con mi amigo William a las afueras de la ciudad.
+text.t14=En marcha al 'Hostal del Obispo'. Espero que Júpiter haya sabido llegar allí.
+text.t15=Volvamos al árbol, ahora que tenemos todo tipo de herramientas necesarias.

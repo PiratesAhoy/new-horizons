@@ -1,17 +1,18 @@
 void QuestComplete(string sQuestName)
 {
-	ref PChar, sld, ch;
+	ref PChar, NPChar, sld, ch, ImpShip;
 // KK -->
 	int iPassenger, cidx, iHP, cc, crew_lost, crew_left, i, n;
 	ref officer1, officer2, romance, villain, arrester, crewref;
 	int officer1idx, officer2idx, romanceidx, villainidx, arresteridx, crewidx;
 	float locx, locy, locz;
-	string speaker, homelocation, homegroup, homelocator, gov_kid, merch_kid, romance_name, villain_name, normal_dialog, romance_pronoun1, romance_pronoun2, villain_pronoun, temp;
+	string speaker, homelocation, homegroup, homelocator, gov_kid, merch_kid, romance_name, villain_name, normal_dialog, romance_pronoun1, romance_pronoun2, romance_pronoun3, villain_pronoun, temp, attr, cabin;
 	int canQty = 0;
 	int crewQty = 0;
 	int survivors = 0;
 // <-- KK
 	aref arship; // PB
+	aref PChar_land, PChar_quest_land;
 
 	PChar = GetMainCharacter();
 
@@ -20,10 +21,10 @@ void QuestComplete(string sQuestName)
 	officer1idx = getCharacterIndex("Louwe Louwman");
 	officer2idx = getCharacterIndex("Giraldo Annibal");
 
-	if (PChar.name == "Charles" && PChar.sex != "man") GiveModel2Player("Ardent", true);
-	if (PChar.name == "Helen" && PChar.sex != "woman") GiveModel2Player("Ardent_F", true);
+	if (PChar.old.name == "Charles" && PChar.sex != "man") GiveModel2Player("Ardent", true);
+	if (PChar.old.name == "Helen" && PChar.sex != "woman") GiveModel2Player("Ardent_F", true);
 
-	if (checkquestattribute("alignment", "evil"))
+	if (CheckQuestAttribute("alignment", "evil"))
 	{
 		officer1 = characterFromID("Gheerkin Kamalaas");
 		officer2 = characterFromID("Morys Badlad");
@@ -40,9 +41,6 @@ void QuestComplete(string sQuestName)
 		LAi_SetStayType(characterfromID("Piers Downing"));
 		gov_kid = XI_ConvertString("daughter");
 		merch_kid = XI_ConvertString("son");
-		romance_pronoun1 = XI_ConvertString("her");
-		romance_pronoun2 = XI_ConvertString("she");
-		villain_pronoun = XI_ConvertString("him");
 	}
 	else
 	{
@@ -53,10 +51,11 @@ void QuestComplete(string sQuestName)
 		LAi_SetStayType(characterfromID("Valerie Downing"));
 		gov_kid = XI_ConvertString("son");
 		merch_kid = XI_ConvertString("daughter");
-		romance_pronoun1 = XI_ConvertString("him");
-		romance_pronoun2 = XI_ConvertString("he");
-		villain_pronoun = XI_ConvertString("her");
 	}
+	romance_pronoun1 = XI_ConvertString(GetMyPronounSubj(romance));
+	romance_pronoun2 = XI_ConvertString(GetMyPronounObj(romance));
+	romance_pronoun3 = XI_ConvertString(GetMyPronounPossessive(romance));
+	villain_pronoun = XI_ConvertString(GetMyPronounObj(villain));
 	PChar.quest.romance = romance.id;
 	PChar.quest.villain = villain.id;
 	LAi_SetActorType(villain);
@@ -102,6 +101,11 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(characterfromID("Havana Prison Commandant"), "compass2");
 			GiveItem2Character(characterfromID("Havana Prison Commandant"), "clock1");
 			GiveItem2Character(characterfromID("Havana Prison Commandant"), "SecurityLetter");
+
+			Characters[GetCharacterIndex("Spanish_guard1")].issoldier = 0;	// So they aren't assigned to the wrong AI group and don't attack prematurely if you murder the warden
+			Characters[GetCharacterIndex("Spanish_guard2")].issoldier = 0;
+			Characters[GetCharacterIndex("Spanish_guard3")].issoldier = 0;
+			Characters[GetCharacterIndex("Warden")].pickgold = 0;		// Give him the pickpocket attribute so you don't lose reputation for stunning and robbing the warden
 
 			Pchar.quest.get_monkey.win_condition.l1 = "locator";
 			Pchar.quest.get_monkey.win_condition.l1.location = "Cuba_Jungle_02";
@@ -178,8 +182,8 @@ void QuestComplete(string sQuestName)
 			EquipCharacterByItem(PChar, "bladeX2");
 			LAi_LocationFightDisable(&Locations[FindLocation("Havana_prison")], false);
 			LAi_QuestDelay("Still_stuck", 0.0);
-			if(GetDifficulty() <= DIFFICULTY_MARINER) logit("HINT: If that warden comes close enough to the bars, you can mug him!");
-			Pchar.quest.got_the_key.win_condition.l1 = "item";
+			if(GetDifficulty() <= DIFFICULTY_MARINER) logit(TranslateString("","HINT: If that warden comes close enough to the bars, you can mug him!"));
+			PChar.quest.got_the_key.win_condition.l1 = "item";
 			PChar.quest.got_the_key.win_condition.l1.character = Pchar.id;
 			Pchar.quest.got_the_key.win_condition.l1.item = "key4";
 			Pchar.quest.got_the_key.win_condition = "got_the_key";
@@ -190,31 +194,46 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "warden_dead":
-			ChangeCharacterAddressGroup(characterfromID("Warden"), "Havana_prison", "reload", "reload12");
+			ChangeCharacterAddressGroup(CharacterfromID("Warden"), "Havana_prison", "reload", "reload12");
+			if(CORPSEMODE < 2)					// If corpse looting is disabled, give the equipment to the player
+			{
+				GiveItem2Character(PChar, "key4");
+				GiveItem2Character(PChar, "blade4");
+				GiveItem2Character(PChar, "jerkin");
+
+				PChar.quest.got_the_key.over = "yes";
+				LAi_QuestDelay("warden_dead2", 0.5);
+			}
+		break;
+
+		case "warden_dead2":
+			LAi_SetActorType(PChar);
+			PChar.dialog.CurrentNode = "get_wardens_stuff";
+			LAi_ActorSelfDialog(PChar, "got_the_key");
 		break;
 
 		case "Still_stuck":
-			logit("Crew remaining: " + PChar.quest.crew_left);
+			logit(TranslateString("","Crew remaining:") + " " + PChar.quest.crew_left);
 			LAi_SetActorType(characterFromID("Warden"));
 			LAi_ActorGoToLocator(characterfromID("Warden"), "reload", "reload12", "feeding_time", 30.0);
 		break;
 
 		case "feeding_time":
-			LAi_ActorTurnToCharacter(characterFromID("Warden"), (Pchar));
-			if (!CheckAttribute(characterfromID("Warden"), "stuntime"))
+			LAi_ActorTurnToCharacter(CharacterFromID("Warden"), (Pchar));
+			if (!CheckAttribute(CharacterfromID("Warden"), "stuntime") && !LAi_IsDead(CharacterFromID("Warden")))
 			{
 				characters[GetCharacterIndex("Warden")].Dialog.Filename = "Warden_dialog.c";
 				Characters[GetCharacterIndex("Warden")].dialog.CurrentNode = "feeding";
-				LAi_ActorDialog(characterFromID("Warden"),PChar,"",5.0,5.0);
+				LAi_ActorDialog(CharacterFromID("Warden"),PChar,"",5.0,5.0);
 				LAi_QuestDelay("Warden_leaves", 10.0);
 			}
 		break;
 
 		case "Warden_leaves":
-			if (!CheckAttribute(characterfromID("Warden"), "stuntime"))
+			if (!CheckAttribute(CharacterfromID("Warden"), "stuntime") && !LAi_IsDead(CharacterFromID("Warden")))
 			{
-				LAi_SetActorType(characterFromID("Warden"));
-				LAi_ActorGoToLocator(characterfromID("Warden"), "officers", "reload1_2", "next_day", 30.0);
+				LAi_SetActorType(CharacterFromID("Warden"));
+				LAi_ActorGoToLocator(CharacterfromID("Warden"), "officers", "reload1_2", "next_day", 30.0);
 			}
 		break;
 
@@ -222,7 +241,7 @@ void QuestComplete(string sQuestName)
 			LAi_Fade("", "");
 			WaitDate("", 0, 0, 1, 0, 0);
 			crew_lost = rand(5);
-			logit(crew_lost + " crew died of maltreatment");
+			logit(crew_lost + " " + TranslateString("","crew died of maltreatment"));
 			crew_left = PChar.quest.crew_left;
 			crew_left = crew_left - crew_lost;
 			if (crew_left < 0) crew_left = 0;
@@ -243,10 +262,9 @@ void QuestComplete(string sQuestName)
 
 			arrester = characterFromID(PChar.quest.arresterid);
 			arresteridx = GetCharacterIndex(PChar.quest.arresterid);
-//			LAi_LocationFightDisable(&Locations[FindLocation("Havana_prison")], true);
 			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], true);
 			LAi_SetFightMode(PChar, false);
-			if (PChar.location == "Havana_prison" && !LAi_IsDead(characterFromID("Warden")))
+			if (PChar.location == "Havana_prison" && !LAi_IsDead(CharacterFromID("Warden")))
 			{
 				LAi_SetActorType(characterFromID("Warden"));
 				LAi_ActorGoToLocator(characterfromID("Warden"), "officers", "reload1_2", "", 30.0);
@@ -267,20 +285,22 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "hung at dawn":
-			pchar.disable_rebirth = true;
+			PChar.quest.disable_rebirth = true;
 			PostEvent("LAi_event_GameOver", 0, "s", "mutiny");
 		break;
 
 		case "got_the_key":
+			LAi_SetPlayerType(PChar);
+			LAi_SetFightMode(PChar, false);
 			ChangeCharacterAddressGroup(PChar, "Havana_prison", "reload", "reload12");
-			ChangeCharacterAddressGroup(characterfromID("Havana Prison Commandant"), "Havana_prison", "officers", "reload1_1");
+			ChangeCharacterAddressGroup(CharacterfromID("Havana Prison Commandant"), "Havana_prison", "officers", "reload1_1");
 			LAi_SetGuardianType(characterFromID("Havana Prison Commandant"));
 			if (!LAi_IsDead(characterFromID("Warden")))
 			{
 				LAi_SetStunnedTypeNoGroup(characterFromID("Warden"));
 				ChangeCharacterAddressGroup(characterFromID("Warden"), "Havana_prison", "goto", "goto24");
 			}
-			if(GetDifficulty() <= DIFFICULTY_MARINER) logit("HINT: You aren't well armed and your officers aren't armed at all. Take all the help you can get!");
+			if(GetDifficulty() <= DIFFICULTY_MARINER) logit(TranslateString("","HINT: You aren't well armed and your officers aren't armed at all. Take all the help you can get!"));
 
 			Pchar.quest.release_officer1.win_condition.l1 = "locator";
 			Pchar.quest.release_officer1.win_condition.l1.location = "Havana_prison";
@@ -370,20 +390,45 @@ void QuestComplete(string sQuestName)
 		case "guards_dead":
 			LAi_SetOfficerType(officer1);
 			LAi_SetOfficerType(officer2);
+/*
 			PChar.quest.escaped.win_condition.l1 = "location";
 			PChar.quest.escaped.win_condition.l1.character = PChar.id;
 			Pchar.quest.escaped.win_condition.l1.location = "Havana_town_05";
 			Pchar.quest.escaped.win_condition = "escaped";
+*/
 		break;
 
 		case "fight_commandant":
 			LAi_SetActorType(characterFromID("Havana Prison Commandant"));
 			LAi_ActorAttack(characterfromID("Havana Prison Commandant"), PChar, "");
+			PChar.quest.commandant_dead.win_condition.l1 = "NPC_Death";
+			PChar.quest.commandant_dead.win_condition.l1.character = "Havana Prison Commandant";
+			PChar.quest.commandant_dead.win_condition = "commandant_dead";
+		break;
+
+		case "commandant_dead":
+			if(CORPSEMODE < 2)					// If corpse looting is disabled, give the equipment to the player
+			{
+				LAi_QuestDelay("take_stuff_from_commandant", 0.0);
+			}
+		break;
+
+		case "take_stuff_from_commandant":
+			GiveItem2Character(PChar, "key3");
+			GiveItem2Character(PChar, "spyglass2");
+			GiveItem2Character(PChar, "compass2");
+			GiveItem2Character(PChar, "clock1");
+			GiveItem2Character(PChar, "SecurityLetter");
 		break;
 
 		case "got_the_big_key":
 			Locations[FindLocation("Havana_prison")].reload.l1.disable = 0;
 			AddQuestRecord("Imprisoned", 3);
+
+			PChar.quest.escaped.win_condition.l1 = "location";
+			PChar.quest.escaped.win_condition.l1.character = PChar.id;
+			PChar.quest.escaped.win_condition.l1.location = "Havana_town_05";
+			PChar.quest.escaped.win_condition = "escaped";
 		break;
 
 		case "got_the_security_letter":
@@ -419,7 +464,7 @@ void QuestComplete(string sQuestName)
 				characters[officer2idx].Dialog.Filename = "officer2_dialog.c";
 				Characters[officer2idx].dialog.CurrentNode = "Nice guy";
 				LAi_ActorDialog(officer2,PChar,"escaped2",0.0,0.0);
-				ChangeCharacterReputation(pchar, 8);
+				ChangeCharacterReputation(PChar, 5);
 			}
 			if (PChar.quest.alignment == "evil" && LAi_IsDead(characterFromID("Warden")) && isofficer(officer2))
 			{
@@ -427,16 +472,19 @@ void QuestComplete(string sQuestName)
 				characters[officer2idx].Dialog.Filename = "officer2_dialog.c";
 				Characters[officer2idx].dialog.CurrentNode = "Nasty guy";
 				LAi_ActorDialog(officer2,PChar,"escaped2",0.0,0.0);
-				ChangeCharacterReputation(pchar, -5);
+				ChangeCharacterReputation(PChar, -2);
 			}
-			ChangeCharacterAddress(characterFromID("Havana Prison Commandant"), "None", "");
-			ChangeCharacterAddress(characterFromID("Spanish_guard1"), "None", "");
-			ChangeCharacterAddress(characterFromID("Spanish_guard2"), "None", "");
-			ChangeCharacterAddress(characterFromID("Spanish_guard3"), "None", "");
-			if (!LAi_IsDead(characterFromID("Warden")))
+			ChangeCharacterAddress(CharacterFromID("Havana Prison Commandant"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Spanish_guard1"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Spanish_guard2"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Spanish_guard3"), "None", "");
+			Characters[GetCharacterIndex("Spanish_guard1")].issoldier = 1;
+			Characters[GetCharacterIndex("Spanish_guard2")].issoldier = 1;
+			Characters[GetCharacterIndex("Spanish_guard3")].issoldier = 1;
+			if (!LAi_IsDead(CharacterFromID("Warden")))
 			{
-				LAi_SetCitizenTypeNoGroup(characterFromID("Warden"));
-				ChangeCharacterAddressGroup(characterFromID("Warden"), "Havana_prison", "goto", "goto23");
+				LAi_SetCitizenTypeNoGroup(CharacterFromID("Warden"));
+				ChangeCharacterAddressGroup(CharacterFromID("Warden"), "Havana_prison", "goto", "goto23");
 			}
 
 			Locations[FindLocation("Havana_Outskirts")].vcskip = true; // Prevent random bandits from making Two Dogs look silly when he ignores them
@@ -457,6 +505,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterfromID("Spanish_guard2"), "Cuba_port", "officers", "Door_1_2");
 			ChangeCharacterAddressGroup(characterfromID("Spanish_guard3"), "Cuba_port", "officers", "Door_1_3");
 
+			PChar.quest.pursuers = "counting";
 			LAi_QuestDelay("Pursuers", 0.0);
 		break;
 
@@ -465,7 +514,6 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Pursuers":
-			PChar.quest.pursuers = "counting";
 			Pchar.quest.pursuit_new_location.win_condition.l1 = "ExitFromLocation";
 			PChar.quest.pursuit_new_location.win_condition.l1.location = PChar.location;
 			Pchar.quest.pursuit_new_location.win_condition = "pursuit_new_location";
@@ -482,21 +530,17 @@ void QuestComplete(string sQuestName)
 
 				case "active":
 					PChar.quest.pursuers = "idle";
-					LAi_QuestDelay("Pursuers", 0.0);
 				break;
 
 				case "idle":
-					LAi_QuestDelay("Pursuers", 0.0);
-//					PChar.quest.pursuers = "counting";
+					PChar.quest.pursuers = "counting";
 				break;
 
 				case "cancel":
 					PChar.quest.pursuers = "idle";
-					LAi_QuestDelay("Pursuers", 0.0);
 				break;
-
-				Pchar.quest.pursuit_new_location.over = "no";
 			}
+			LAi_QuestDelay("Pursuers", 0.0);
 		break;
 
 		case "Pursuers2":
@@ -510,10 +554,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "left_Havana":
-//			PChar.quest.pursuers = "cancel";
-//			PChar.quest.pursuit_new_location.over = "yes";
-			DeleteQuestAttribute("pursuers");
-			DeleteQuestAttribute("pursuit_new_location");
+			PChar.quest.pursuers = "cancel";
+			PChar.quest.pursuit_new_location.over = "yes";
 			if (isofficer(characterFromID("Two Dogs")))
 			{
 				LAi_SetActorType(characterFromID("Two Dogs"));
@@ -532,10 +574,8 @@ void QuestComplete(string sQuestName)
 		case "port_bad":
 			Locations[FindLocation("Cuba_port")].reload.l1.disable = 1;
 			DisableFastTravel(true);
-//			PChar.quest.pursuers = "cancel";
-//			PChar.quest.pursuit_new_location.over = "yes";
-			DeleteQuestAttribute("pursuers");
-			DeleteQuestAttribute("pursuit_new_location");
+			PChar.quest.pursuers = "cancel";
+			PChar.quest.pursuit_new_location.over = "yes";
 
 			LAi_SetActorType(characterFromID("Spanish_Captain1"));
 			characters[GetCharacterIndex("Spanish_Captain1")].Dialog.Filename = "Spanish_Captain1_dialog.c";
@@ -569,15 +609,15 @@ void QuestComplete(string sQuestName)
 			LAi_SetGuardianType(characterfromID("Spanish_guard2"));
 			LAi_SetGuardianType(characterfromID("Spanish_guard3"));
 
-			TakeItemFromCharacter(Pchar, "key3");
-			TakeItemFromCharacter(Pchar, "key4");
+			TakeItemFromCharacter(PChar, "key3");
+			TakeItemFromCharacter(PChar, "key4");
 			RemoveCharacterEquip(PChar, "pistolmket");
 			RemoveCharacterEquip(PChar, "pistolmketB");
-			TakeItemFromCharacter(Pchar, "pistolmket");
-			TakeItemFromCharacter(Pchar, "pistolmketB");
-			if (!CheckCharacterItem(pchar, "pistolrock")) GiveItem2Character(pchar, "pistolrock");
-			EquipCharacterByItem(pchar, "bladeX4");
-			EquipCharacterByItem(pchar, "pistolrock");
+			TakeItemFromCharacter(PChar, "pistolmket");
+			TakeItemFromCharacter(PChar, "pistolmketB");
+			if (!CheckCharacterItem(PChar, "pistolrock")) GiveItem2Character(PChar, "pistolrock");
+			EquipCharacterByItem(PChar, "bladeX4");
+			EquipCharacterByItem(PChar, "pistolrock");
 			PChar.quest.got_the_key.over = "no";
 			PChar.quest.got_the_big_key.over = "no";
 			if (!LAi_IsDead(characterFromID("Warden")))
@@ -623,9 +663,13 @@ void QuestComplete(string sQuestName)
 			AddQuestRecord("Take Two Dogs Home", 2);
 			CloseQuestHeader("Take Two Dogs Home");
 			DeleteQuestAttribute("take_two_dogs_home");
+			PChar.quest.two_dogs_is_home.over = "yes";
 		break;
 
 		case "Cuba_Jungle_01":
+			DeleteQuestAttribute("pursuers");
+			DeleteQuestAttribute("pursuit_new_location");
+
 			Locations[FindLocation("Cuba_Jungle_01")].reload.l5.disable = 1;
 			if (isofficer(characterFromID("Two Dogs")))
 			{
@@ -664,6 +708,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "slave_camp":
+			PChar.quest.disable_rebirth = true;
 			Locations[FindLocation("Smugglers_Fort")].reload.l5.disable = 1;
 			Locations[FindLocation("Cuba_Jungle_03")].reload.l2.disable = 0;
 			LAi_SetFightMode(PChar, false);
@@ -786,8 +831,8 @@ void QuestComplete(string sQuestName)
 			crew_left = crew_left - crew_lost;
 			if (crew_left < 0) crew_left = 0; // Shouldn't be possible! Take no chances anyway.
 			PChar.quest.crew_left = crew_left;
-			logit(crew_lost + " crew died in the battle");
-			logit("Crew remaining: " + PChar.quest.crew_left);
+			logit(crew_lost + " " + TranslateString("","crew died in the battle"));
+			logit(TranslateString("","Crew remaining:") + " " + PChar.quest.crew_left);
 
 			if (survivors > 0)
 			{
@@ -807,7 +852,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Spanish_guard1"), "None", "");
 			ChangeCharacterAddress(characterFromID("Spanish_guard2"), "None", "");
 			ChangeCharacterAddress(characterFromID("Spanish_guard3"), "None", "");
-			logit("I'm taking one of the soldier's uniforms. A disguise might be useful later.");
+			logit(TranslateString("","I'm taking one of the soldier's uniforms. A disguise might be useful later."));
 			if (PChar.sex == "man") GiveModel2Player("Ardent_S", false);
 			else GiveModel2Player("Ardent_SF", false);
 			if (!LAi_IsDead(characterFromID("Ayol Bacha")))
@@ -852,6 +897,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "back_to_jungle":
+			PChar.quest.disable_rebirth = false;
 			if (LAi_IsDead(characterFromID("Ralph Partridge"))) ChangeCharacterAddress(characterFromID("Ralph Partridge"), "None", "");
 			if (LAi_IsDead(characterFromID("Coper Blumberger"))) ChangeCharacterAddress(characterFromID("Coper Blumberger"), "None", "");
 			if (LAi_IsDead(characterFromID("Amtónio Guajira"))) ChangeCharacterAddress(characterFromID("Amtónio Guajira"), "None", "");
@@ -873,6 +919,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "two_dogs_betrayed":
+			PChar.quest.two_dogs_is_home.over = "yes";
 			AddQuestRecord("Take Two Dogs Home", 3);
 			CloseQuestHeader("Take Two Dogs Home");
 			SetCharacterRemovable(characterFromID("Two Dogs"), true);
@@ -888,13 +935,11 @@ void QuestComplete(string sQuestName)
 			CloseQuestHeader("Crew Rescue");
 			if(AUTO_SKILL_SYSTEM)
 			{
-				AddPartyExpChar(pchar, "Leadership", 1000);
+				AddPartyExpChar(PChar, "Leadership", 1000);
 				AddPartyExpChar(PChar, "", 100);
-				AddPartyExpChar(pchar, "Fencing", 100);
-//				AddPartyExpChar(pchar, "Leadership", 1500);
-//				AddPartyExpChar(pchar, "Fencing", 50);
+				AddPartyExpChar(PChar, "Fencing", 100);
 			}
-			else {AddPartyExp(pchar, 1500);}
+			else {AddPartyExp(PChar, 1500);}
 			LAi_SetFightMode(PChar, false);
 
 			speaker = "";
@@ -1055,6 +1100,10 @@ void QuestComplete(string sQuestName)
 			AddCharacterGoods(PChar, GOOD_PLANKS, 6);
 			SetCrewQuantity(PChar, sti(PChar.quest.crew_left));
 			setCharacterShipLocation(Pchar, "Cuba_port");
+
+// Disable sea access to Playa de Sierra Maestra so you can only land at Santiago port or Bahia de Moa which leads to Santiago port.
+			Island_SetReloadEnableLocal("Cuba", "reload_8", false);
+			Islands[FindIsland("Cuba")].reload.l7.goto_enable = false;
 		break;
 
 		case "port_good":
@@ -1124,22 +1173,15 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "congratulated_governor":
+			Preprocessor_AddQuestData("name", GetMyName(romance));
 			if (PChar.sex == "man")
 			{
-				gov_kid = XI_ConvertString("daughter");
-				merch_kid = XI_ConvertString("son");
+				AddQuestRecord("Kidnap", 3);
 			}
 			else
 			{
-				gov_kid = XI_ConvertString("son");
-				merch_kid = XI_ConvertString("daughter");
+				AddQuestRecord("Kidnap", 4);
 			}
-			Preprocessor_AddQuestData("gov_kid", gov_kid);
-			Preprocessor_AddQuestData("merch_kid", merch_kid);
-			Preprocessor_AddQuestData("name", GetMyName(romance));
-			AddQuestRecord("Kidnap", 3);
-			Preprocessor_Remove("gov_kid");
-			Preprocessor_Remove("merch_kid");
 			Preprocessor_Remove("name");
 			PChar.quest.ardent_kidnap = "Met_governor";
 
@@ -1176,18 +1218,18 @@ void QuestComplete(string sQuestName)
 
 		case "rob_store":
 			LAi_SetPlayerType(PChar);
-			Pchar.quest.board_brig.win_condition.l1 = "locator";
-			Pchar.quest.board_brig.win_condition.l1.location = "Santiago_town_01";
-			Pchar.quest.board_brig.win_condition.l1.locator_group = "reload";
-			Pchar.quest.board_brig.win_condition.l1.locator = "reload6";
-			Pchar.quest.board_brig.win_condition.l2 = "Time";
-			Pchar.quest.board_brig.win_condition.l2.time = DAY_TIME_NIGHT;
-			Pchar.quest.board_brig.win_condition = "rob_store2";
+			Pchar.quest.rob_store2.win_condition.l1 = "locator";
+			Pchar.quest.rob_store2.win_condition.l1.location = "Santiago_town_01";
+			Pchar.quest.rob_store2.win_condition.l1.locator_group = "reload";
+			Pchar.quest.rob_store2.win_condition.l1.locator = "reload6";
+			Pchar.quest.rob_store2.win_condition.l2 = "Time";
+			Pchar.quest.rob_store2.win_condition.l2.time = DAY_TIME_NIGHT;
+			Pchar.quest.rob_store2.win_condition = "rob_store2";
 		break;
 
 		case "rob_store2":
 			PlaySound("AMBIENT\TOWN\window_dog.wav");
-			logit("You broke the window and grabbed the map. Now RUN!");
+			logit(TranslateString("","You broke the window and grabbed the map. Now RUN!"));
 			GiveItem2Character(PChar,"mapCuba");
 			LAi_QuestDelay("guards_respond", 12.0);
 		break;
@@ -1207,12 +1249,12 @@ void QuestComplete(string sQuestName)
 // Re-route Cuba_Jungle_04 to lead to normal Santiago exit, and open up Santiago exit to Cuba_Jungle_04.
 // This allows you to walk between Santiago and Playa de Sierra Maestra.
 			Locations[FindLocation("Santiago_town_exit1")].reload.l3.go = "Cuba_Jungle_04";
-			Locations[FindLocation("Santiago_town_exit1")].reload.l3.emerge = "reload2_back";
+			Locations[FindLocation("Santiago_town_exit1")].reload.l3.emerge = "reload2";
 			Locations[FindLocation("Santiago_town_exit1")].reload.l3.autoreload = "1";
 			Locations[FindLocation("Santiago_town_exit1")].reload.l3.label = "Jungle";
 
 			Locations[FindLocation("Cuba_Jungle_04")].reload.l4.go = "Santiago_town_exit1";
-			Locations[FindLocation("Cuba_Jungle_04")].reload.l4.emerge = "reload1_back";
+			Locations[FindLocation("Cuba_Jungle_04")].reload.l4.emerge = "reload1";
 			Locations[FindLocation("Cuba_Jungle_04")].reload.l4.autoreload = "1";
 			Locations[FindLocation("Cuba_Jungle_04")].reload.l4.label = "Santiago outskirts";
 		break;
@@ -1392,7 +1434,8 @@ void QuestComplete(string sQuestName)
 			EquipCharacterByItem(sld,"blade4");
 			GiveItem2Character(sld, "Pistol2");
 			EquipCharacterByItem(sld,"Pistol2");
-			if (ENABLE_AMMOMOD) {	// LDH change
+			if (ENABLE_AMMOMOD)
+			{	// LDH change
 				TakenItems(sld, "gunpowder", 1 + rand(2));
 				TakenItems(sld, "pistolbullets", 1 + rand(2));
 			}
@@ -1433,15 +1476,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "ship_is_ours":
+			if (GetCharacterShipType(PChar) == SHIP_NOTUSED) Locations[FindLocation("Santiago_port")].reload.l2.olddisablevalue = 0; // Fix for locked port if you sold the original tartane
 			LAi_SetPlayerType(PChar);
+			GiveShip2Character(PChar,"Shnyava2","Tonina",CANNON_TYPE_CARRONADE_LBS12,SPAIN,false,true);
 			Locations[FindLocation("Quest_Cabin")].reload.l1.disable = 0;
 			Locations[FindLocation("Santiago_port")].reload.l2.disable = 0;
-			GiveShip2Character(PChar,"Shnyava2","Tonina",CANNON_TYPE_CARRONADE_LBS12,SPAIN,false,true);
 			AddCharacterGoods(PChar, GOOD_RUM, 20);
 			AddCharacterGoods(PChar, GOOD_WHEAT, 40);
 			AddCharacterGoods(PChar, GOOD_SAILCLOTH, 20);
 			AddCharacterGoods(PChar, GOOD_PLANKS, 20);
-			setCharacterShipLocation(Pchar, "Santiago_port");
+			SetCharacterShipLocation(PChar, "Santiago_port");
 			makearef(arShip, PChar.ship.stats);
 			arship.MaxCaliber = 6;
 			SetCrewQuantity(PChar, sti(PChar.quest.crew_left));
@@ -1455,24 +1499,13 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(PChar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Quest_ShipDeck4")], true);
 			Locations[FindLocation("Quest_ShipDeck4")].reload.l1.disable = 1;
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[SPAIN].fantomModel.m1, "goto", "goto3");
-			GiveItem2Character(sld,"blade4");
-			EquipCharacterByItem(sld,"blade4");
-			LAi_SetHP(sld, 180.0, 180.0);
-			LAi_group_MoveCharacter(sld, "CARGO_SOLDIERS");
-			sld.id = "ship_guard1";
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, Nations[SPAIN].fantomModel.m2, "goto", "goto4");
-			GiveItem2Character(sld,"blade4");
-			EquipCharacterByItem(sld,"blade4");
-			LAi_SetHP(sld, 180.0, 180.0);
-			LAi_group_MoveCharacter(sld, "CARGO_SOLDIERS");
-			sld.id = "ship_guard2";
-
-			LAi_SetActorType(characterFromID("ship_guard1"));
-			characters[GetCharacterIndex("ship_guard1")].Dialog.Filename = "guard_dialog.c";
-			Characters[GetCharacterIndex("ship_guard1")].dialog.CurrentNode = "snow_brig_check";
-			LAi_ActorDialog(characterFromID("ship_guard1"), PChar, "", 10.0, 10.0); // Exits to "back_to_prison" or "ship_is_ours3"
+			ChangeCharacterAddressGroup(CharacterfromID("Spanish_soldier1"), "Quest_ShipDeck4", "goto", "goto3");
+			ChangeCharacterAddressGroup(CharacterfromID("Spanish_soldier2"), "Quest_ShipDeck4", "goto", "goto4");
+			LAi_SetActorType(CharacterFromID("Spanish_soldier1"));
+			characters[GetCharacterIndex("Spanish_soldier1")].Dialog.Filename = "guard_dialog.c";
+			Characters[GetCharacterIndex("Spanish_soldier1")].dialog.CurrentNode = "snow_brig_check";
+			LAi_ActorDialog(characterFromID("Spanish_soldier1"), PChar, "", 10.0, 10.0); // Exits to "back_to_prison" or "ship_is_ours3"
 
 		break;
 
@@ -1487,8 +1520,6 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Leadership", 1000);
 				AddPartyExpChar(PChar, "", 100);
 				AddPartyExpChar(pchar, "Sneak", 100);
-//				AddPartyExpChar(pchar, "Leadership", 1500);
-//				AddPartyExpChar(pchar, "Sneak", 50);
 			}
 			else {AddPartyExp(pchar, 1500);}
 			if (checkquestattribute("payroll_ship", "active")) AddQuestRecord("Payroll Ship", 6);
@@ -1497,6 +1528,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "restore_officers":
+			ChangeCharacterAddress(CharacterfromID("Spanish_soldier1"), "None", "");
+			ChangeCharacterAddress(CharacterfromID("Spanish_soldier2"), "None", "");
+			characters[GetCharacterIndex("Spanish_soldier1")].Dialog.Filename = "Soldier_dialog.c";
+			characters[GetCharacterIndex("Spanish_soldier1")].Dialog.Filename = "Soldier_dialog.c";
 			setCharacterShipLocation(Pchar, "Santiago_port");
 			Locations[FindLocation("Santiago_port")].reload.l2.disable = 0;
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Sailor1", "reload", "reload1");
@@ -1530,7 +1565,7 @@ void QuestComplete(string sQuestName)
 				Characters[crewidx].Dialog.CurrentNode = "crew_returning";
 				LAi_ActorDialog(crewref, pchar, "crew_returning", 5.0, 5.0);
 			}
-			else logit ("That looks like the original crew returning. Better get aboard and get out of here!");
+			else logit(TranslateString("","That looks like the original crew returning. Better get aboard and get out of here!"));
 		break;
 
 		case "crew_returning":
@@ -1573,7 +1608,7 @@ void QuestComplete(string sQuestName)
 			}
 			else
 			{
-				logit("Now to wait for the 'Siroco'...");
+				logit(TranslateString("","Now to wait for the 'Siroco'..."));
 				LAi_QuestDelay("ready_for_payroll_ship3", 0.0);
 			}
 			PChar.quest.payroll_ship_timer2.over = "yes";
@@ -1655,8 +1690,6 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Leadership", 1200);
 				AddPartyExpChar(PChar, "", 120);
 				AddPartyExpChar(pchar, "Sneak", 120);
-//				AddPartyExpChar(pchar, "Leadership", 2000);
-//				AddPartyExpChar(pchar, "Sneak", 100);
 			}
 			else {AddPartyExp(pchar, 1500);}
 			AddMoneyToCharacter(pchar, 10000);
@@ -1843,7 +1876,7 @@ void QuestComplete(string sQuestName)
 
 		case "seen_rug2":
 			LAi_SetPlayerType(PChar);
-			logit("Maybe there's something in that room with the wall markings...");
+			logit(TranslateString("","Maybe there's something in that room with the wall markings..."));
 		break;
 
 		case "got_the_rug":
@@ -1855,6 +1888,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "mauricio_steals_ship":
+			if(GetAttribute(romance, "location") == "Tutorial_Deck")	// Fix for "romance" disappearing from cabin while you are on Doolin's tartane
+			{
+				romance.quest.saved_location = GetAttribute(romance, "location");
+				romance.quest.saved_group = GetAttribute(romance, "location.group");
+				romance.quest.saved_locator = GetAttribute(romance, "location.locator");
+			}
 			ExchangeCharacterShip(Pchar, characterFromID("Mauricio Juradu"));
 			setCharacterShipLocation(characterFromID("Mauricio Juradu"), "Hispaniola_shore_02");
 			ChangeCharacterAddressGroup(characterFromID("Doolin Becart"), "Hispaniola_shore_03", "goto", "citizen05");
@@ -1952,6 +1991,20 @@ void QuestComplete(string sQuestName)
 			ExchangeCharacterShip(Pchar, characterFromID("Mauricio Juradu"));
 			PChar.quest.disable_rebirth = false;
 			AddQuestRecord("Mayan Temple", 5);
+
+			if(CheckAttribute(romance, "quest.saved_location"))	// This was set in "mauricio_steals_ship" if "romance" was in your cabin when you went on Doolin Becart's tartane
+			{
+				Pchar.quest.romance_back_to_cabin.win_condition.l1 = "ExitFromLocation";
+				PChar.quest.romance_back_to_cabin.win_condition.l1.location = PChar.location;
+				Pchar.quest.romance_back_to_cabin.win_condition = "romance_back_to_cabin";
+			}
+		break;
+
+		case "romance_back_to_cabin":
+			ChangeCharacterAddressGroup(romance, romance.quest.saved_location, romance.quest.saved_group, romance.quest.saved_locator);
+			DeleteAttribute(romance, "quest.saved_location");
+			DeleteAttribute(romance, "quest.saved_group");
+			DeleteAttribute(romance, "quest.saved_locator");
 		break;
 
 		case "rug_to_chief":
@@ -1973,14 +2026,14 @@ void QuestComplete(string sQuestName)
 			else
 			{
 				GiveItem2Character(PChar,"jewelry16");
+				if (!CheckCharacterItem(PChar, "pistolbow")) GiveItem2Character(PChar,"pistolbow");
+				GiveItem2Character(PChar,"bladearrows");		// Arrows are not given to Indians if ammo mod is disabled, but they are still defined, and one is needed for bow rescue
 			}
 			if(AUTO_SKILL_SYSTEM)
 			{
-				AddPartyExpChar(pchar, "Leadership", 1200);
+				AddPartyExpChar(PChar, "Leadership", 1200);
 				AddPartyExpChar(PChar, "", 120);
 				AddPartyExpChar(pchar, "Sneak", 120);
-//				AddPartyExpChar(pchar, "Leadership", 2000);
-//				AddPartyExpChar(pchar, "Sneak", 100);
 			}
 			else {AddPartyExp(pchar, 1500);}
 			if (checkquestattribute("take_two_dogs_home", "complete"))
@@ -2000,6 +2053,8 @@ void QuestComplete(string sQuestName)
 		case "two_dogs_rejoins":
 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Two Dogs"));
 			LAi_SetOfficerType(CharacterFromId("Two Dogs"));
+			Characters[GetCharacterIndex("Two Dogs")].dialog.Filename = "Enc_Officer_dialog.c";
+			Characters[GetCharacterIndex("Two Dogs")].dialog.CurrentNode = "hired";
 		break;
 
 		case "two_dogs_no_rejoin":
@@ -2017,6 +2072,8 @@ void QuestComplete(string sQuestName)
 		break
 
 		case "kidnap_breakin3":
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
 			ChangeCharacterAddressGroup(romance, "Quest_Santiago_Bedroom", "goto", "goto5");
 			LAi_SetActorType(characterFromID("Grigorio Formoselle"));
 			Characters[GetCharacterIndex("Grigorio Formoselle")].dialog.CurrentNode = "break-in";
@@ -2030,6 +2087,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kidnap_breakin5":
+			Pchar.quest.seen_window.over = "yes";
 			Characters[romanceidx].dialog.CurrentNode = "intruder";
 			LAi_SetActorType(romance);
 			LAi_ActorDialog(romance,PChar,"kidnap_escape",10.0,10.0);
@@ -2039,7 +2097,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
 			ChangeCharacterAddressGroup(characterfromID("Javier Balboa"), "Santiago_townhall", "goto", "goto3");
 			LAi_SetActorType(characterfromID("Javier Balboa"));
-			DoQuestReloadToLocation("Santiago_townhall", "goto", "goto8", "kidnap_escape2");
+			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload2", "kidnap_escape2");
 			ChangeCharacterAddressGroup(characterfromID("Spanish_guard1"), "Santiago_townhall", "goto", "goto11");
 			ChangeCharacterAddressGroup(characterfromID("Spanish_guard2"), "Santiago_townhall", "goto", "goto12");
 			LAi_SetGuardianType(characterfromID("Spanish_guard1"));
@@ -2047,9 +2105,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kidnap_escape2":
+			EndQuestMovie();
 			DisableFastTravel(true);
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "kidnap_threaten";
-			LAi_ActorDialog(characterFromID("Javier Balboa"),PChar,"",5.0,5.0);
+			LAi_ActorDialog(characterFromID("Javier Balboa"),PChar,"kidnap_governor_returns_to_standpoint",1.0,1.0);
 			LAi_SetActorType(romance);
 			LAi_ActorFollowEverywhere(romance, "", 10.0);
 			PChar.quest.kidnap_escape3.win_condition.l1 = "location";
@@ -2074,7 +2133,17 @@ void QuestComplete(string sQuestName)
 			PChar.quest.kidnap_hostage_dead.win_condition.l1.character = romance.id;
 			PChar.quest.kidnap_hostage_dead.win_condition = "hostage_dead";
 
-			Locations[FindLocation("Redmond_town_03")].reload.l9.disable = 1; // If you have kidnapped Lucia / Edmundo then you won't get to do the courier jobs
+			Locations[FindLocation("Redmond_town_03")].reload.l9.disable = 1; // If you have kidnapped Lucía / Edmundo then you won't get to do the courier jobs
+		break;
+
+		case "kidnap_governor_returns_to_standpoint":
+			LAi_SetActorType(characterfromID("Javier Balboa"));
+			LAi_ActorGoToLocator(characterFromID("Javier Balboa"), "goto", "goto3", "kidnap_governor_returns_to_standpoint2",20.0);
+		break;
+
+		case "kidnap_governor_returns_to_standpoint2":
+			LAi_SetActorType(characterfromID("Javier Balboa"));
+			LAi_ActorTurnToLocator(characterFromID("Javier Balboa"), "reload", "reload1");
 		break;
 
 		case "kidnap_escape3":
@@ -2090,6 +2159,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(characterfromID("Javier Balboa"), "bladeC23+2");
 			GiveItem2Character(characterfromID("Javier Balboa"), "goldarmor");
 			EquipCharacterByItem(characterfromID("Javier Balboa"),"bladeC23");
+			EquipCharacterByItem(characterfromID("Javier Balboa"),"goldarmor");
 			LAi_SetHP(characterfromID("Javier Balboa"), 500.0, 500.0);
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "revenge";
 			LAi_SetStayType(characterFromID("Javier Balboa"));
@@ -2152,7 +2222,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Cuba_shore_02")].reload.l2.disable = 0;
 			characters[GetCharacterIndex("Santiago_soldier_05")].Dialog.Filename = "Isla Muelle soldier_dialog.c";
 			Preprocessor_AddQuestData("name", GetMySimpleName(romance));
-			AddQuestRecord("Kidnap", 7);
+			AddQuestRecord("Kidnap", 8);
 			Preprocessor_Remove("name");
 			CloseQuestHeader("Kidnap");
 			DeleteQuestAttribute("ardent_kidnap");
@@ -2175,7 +2245,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(romance, "None", "");
 			characters[GetCharacterIndex("Santiago_soldier_05")].Dialog.Filename = "Isla Muelle soldier_dialog.c";
 			Preprocessor_AddQuestData("name", GetMySimpleName(romance));
-			AddQuestRecord("Kidnap", 4);
+			AddQuestRecord("Kidnap", 5);
 			Preprocessor_Remove("name");
 			CloseQuestHeader("Kidnap");
 			DeleteQuestAttribute("ardent_kidnap");
@@ -2207,13 +2277,13 @@ void QuestComplete(string sQuestName)
 				ChangeCharacterAddressGroup(romance, "Tutorial_Deck", "reload", "reload1");
 			}
 			Preprocessor_AddQuestData("name", GetMySimpleName(romance));
-			Preprocessor_AddQuestData("pronoun", romance_pronoun1);
-			AddQuestRecord("Kidnap", 5);
+			Preprocessor_AddQuestData("pronoun", romance_pronoun2);
+			AddQuestRecord("Kidnap", 6);
 			Preprocessor_Remove("name");
 			Preprocessor_Remove("pronoun");
 			Locations[FindLocation("Santiago_port")].reload.l2.disable = 0;
 			Locations[FindLocation("Cuba_shore_02")].reload.l2.disable = 0;
-			Characters[romanceidx].dialog.CurrentNode = "letter";
+			Characters[romanceidx].dialog.CurrentNode = "no_escape";
 			PChar.quest.ardent_kidnap.voyage_stage = 0;
 			PChar.quest.voyage_stage1.win_condition.l1 = "Timer";
 			PChar.quest.voyage_stage1.win_condition.l1.date.day = GetAddingDataDay(0, 0, 7);
@@ -2257,7 +2327,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(romance, false);
 			ChangeCharacterAddress(romance, "None", "");
 			Preprocessor_AddQuestData("name", GetMySimpleName(romance));
-			AddQuestRecord("Kidnap", 6);
+			AddQuestRecord("Kidnap", 7);
 			Preprocessor_Remove("name");
 			Locations[FindLocation("Santiago_port")].reload.l2.disable = 0;
 			Locations[FindLocation("Cuba_shore_02")].reload.l2.disable = 0;
@@ -2291,7 +2361,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.town_battle.win_condition = "raise_alarm";
 		break;
 
-		case "governors_revenge_fetch_romance":	// Triggered by dialog with "Javier Balboa" if you ransomed Lucia / Edmundo, rescued them from Downing dungeon, and don't have them as officer
+		case "governors_revenge_fetch_romance":	// Triggered by dialog with "Javier Balboa" if you ransomed Lucía / Edmundo, rescued them from Downing dungeon, and don't have them as officer
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "revenge_failed_to_fetch";
 			PChar.quest.governors_revenge_fetch_romance2.win_condition.l1 = "location";
 			PChar.quest.governors_revenge_fetch_romance2.win_condition.l1.location = "Santiago_town_01";
@@ -2307,7 +2377,7 @@ void QuestComplete(string sQuestName)
 		case "governors_revenge_fetch_romance3":
 			if (isofficer(romance))
 			{
-				ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
+				ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto2");
 				if (CheckQuestAttribute("ardent_convoy", "battle_over")) Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "revenge_romance_with_you";
 				else Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "kidnap_rescue_return";
 				StartQuestMovie(true, true, false);
@@ -2451,6 +2521,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(characterfromID("Javier Balboa"), "bladeC23+2");
 			GiveItem2Character(characterfromID("Javier Balboa"), "goldarmor");
 			EquipCharacterByItem(characterfromID("Javier Balboa"),"bladeC23");
+			EquipCharacterByItem(characterfromID("Javier Balboa"),"goldarmor");
 			LAi_SetHP(characterfromID("Javier Balboa"), 500.0, 500.0);
 			LAi_LocationFightDisable(&Locations[FindLocation("Santiago_townhall")], true);
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "revenge";
@@ -2471,8 +2542,6 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Grigorio Formoselle"), "Cuba_Shore_05", "goto", "citizen09");
 			ChangeCharacterAddressGroup(characterFromID("Spanish_guard1"), "Cuba_Shore_05", "goto", "citizen05");
 			ChangeCharacterAddressGroup(characterFromID("Spanish_guard2"), "Cuba_Shore_05", "goto", "citizen06");
-			LAi_SetActorType(romance);
-			LAi_ActorFollowEverywhere(romance, "", 5.0);
 			Characters[GetCharacterIndex("Grigorio Formoselle")].dialog.CurrentNode = "ransom_exchange";	// You will initiate dialog, which exits to "hostage_released"
 			PChar.quest.ransom_accept_setup2.win_condition.l1 = "location";
 			PChar.quest.ransom_accept_setup2.win_condition.l1.location = "Cuba_Shore_05";
@@ -2480,6 +2549,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "ransom_accept_setup2":
+			ChangeCharacterAddressGroup(romance, "Cuba_Shore_05", "goto", "locator28");
 			LAi_SetActorType(romance);
 			LAi_ActorFollowEverywhere(romance, "", 5.0);
 			LAi_SetActorType(characterfromID("Grigorio Formoselle"));
@@ -2536,9 +2606,9 @@ void QuestComplete(string sQuestName)
 			ch.perks.list.SwordplayProfessional = true;
 			ch.perks.list.CriticalHit = true;
 			Ch.Perks.list.Toughness = true;
-			GiveItem2Character(characterfromID("Javier Balboa"), "blade33+3");
-			GiveItem2Character(characterfromID("Javier Balboa"), "goldarmor");
-			EquipCharacterByItem(characterfromID("Javier Balboa"),"blade33");
+//			GiveItem2Character(characterfromID("Javier Balboa"), "blade33+3");
+//			GiveItem2Character(characterfromID("Javier Balboa"), "goldarmor");
+//			EquipCharacterByItem(characterfromID("Javier Balboa"),"blade33");
 			LAi_SetHP(characterfromID("Javier Balboa"), 500.0, 500.0);
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "revenge";
 			LAi_ActorTurnToLocator(characterFromID("Javier Balboa"), "reload", "reload1");
@@ -2574,7 +2644,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "letter_complete":
-			SetModelFromID(romance, PChar.quest.romance_model);
+			if(CheckAttribute(PChar, "quest.romance_model")) SetModelFromID(romance, PChar.quest.romance_model);
 			Characters[romanceidx].dialog.CurrentNode = "letter_done";
 		break;
 
@@ -2582,7 +2652,7 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "hostage_free";
 			GiveItem2Character(PChar, "ExplainLetter");
 			Preprocessor_AddQuestData("name", GetMySimpleName(romance));
-			Preprocessor_AddQuestData("pronoun", romance_pronoun1);
+			Preprocessor_AddQuestData("pronoun", romance_pronoun2);
 			AddQuestRecord("Kidnap", 14);
 			Preprocessor_Remove("name");
 			Preprocessor_Remove("pronoun");
@@ -2622,8 +2692,8 @@ void QuestComplete(string sQuestName)
 			LAi_QuestDelay("recruit_complete", 0.0);
 		break;
 
-		case "recruit_carpenter":
-			romance.quest.officertype = OFFIC_TYPE_CARPENTER;
+		case "recruit_quartermaster":	// was "recruit_carpenter", but excuse about fixing sails doesn't work with new perks
+			romance.quest.officertype = OFFIC_TYPE_QMASTER;
 			LAi_QuestDelay("recruit_complete", 0.0);
 		break;
 
@@ -2676,8 +2746,8 @@ void QuestComplete(string sQuestName)
 			PChar.quest.abduction_officer_santiago_beach2.win_condition.l1.location = "Cuba_shore_05";
 			PChar.quest.abduction_officer_santiago_beach2.win_condition = "abduction_officer_arrived";
 
-			Locations[FindLocation("Cuba_port")].vcskip = true;	// Otherwise too many random people in Havana means Lucia / Edmundo can't spawn
-			Locations[FindLocation("Cuba_shore_02")].vcskip = true;	// Otherwise Lucia / Edmundo strolls past random bandits at Bahia de Moa
+			Locations[FindLocation("Cuba_port")].vcskip = true;	// Otherwise too many random people in Havana means Lucía / Edmundo can't spawn
+			Locations[FindLocation("Cuba_shore_02")].vcskip = true;	// Otherwise Lucía / Edmundo strolls past random bandits at Bahia de Moa
 			Locations[FindLocation("Muelle_shore")].vcskip = true;	// Ditto for Oyster Beach
 			PChar.quest.abduction_officer_havana.win_condition.l1 = "location"; // Check for arrival at Havana and related beaches
 			PChar.quest.abduction_officer_havana.win_condition.l1.location = "Cuba_port";
@@ -2711,8 +2781,8 @@ void QuestComplete(string sQuestName)
 			Preprocessor_AddQuestData("name", GetMySimpleName(romance));
 			AddQuestRecord("Kidnap", 13);
 			Preprocessor_Remove("name");
-			LAi_SetActorType(romance);
-			LAi_ActorFollowEverywhere(romance, "", 1.0);
+//			LAi_SetActorType(romance);
+//			LAi_ActorFollowEverywhere(romance, "", 1.0);
 			PChar.quest.release_guest_port.win_condition.l1 = "location";
 			PChar.quest.release_guest_port.win_condition.l1.location = "Muelle_port";
 			PChar.quest.release_guest_port.win_condition = "release_guest_in_port";
@@ -2797,7 +2867,7 @@ void QuestComplete(string sQuestName)
 
 		case "reset_governor":
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "First time";
-			ChangeCharacterAddressGroup(characterFromID("Javier Balboa"), "Santiago_townhall", "sit", "sit2");
+			ChangeCharacterAddressGroup(characterFromID("Javier Balboa"), "Santiago_townhall", "sit", "sit1");
 			LAi_SetHuberType(characterFromID("Javier Balboa"));
 		break;
 
@@ -2840,11 +2910,12 @@ void QuestComplete(string sQuestName)
 		case "second_CourtingLetter_delivered2":
 			characters[romanceidx].dialog.CurrentNode = "second_CourtingLetter_delivered";
 			Pchar.quest.kidnap_breakin.over = "yes"; // You don't need to break in, you've got into the bedroom with the letter
+			Pchar.quest.seen_window.over = "yes";
 		break;
 // When the second letter is delivered, dialog will exit to "second_CourtingLetter_return_with_answer", "second_CourtingLetter_kidnap", or "second_CourtingLetter_bow_escape"
 
 		case "second_CourtingLetter_return_with_answer":
-			DoQuestReloadToLocation("Santiago_townhall", "goto", "goto8", "second_CourtingLetter_return_with_answer2");
+			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload2", "second_CourtingLetter_return_with_answer2");
 		break;
 
 		case "second_CourtingLetter_return_with_answer2":
@@ -2867,7 +2938,7 @@ void QuestComplete(string sQuestName)
 				Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload3 = 5.0;
 				Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload5 = 5.0;
 			}
-			DoQuestReloadToLocation("Santiago_townhall", "goto", "goto8", "kidnap_escape2");
+			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload2", "kidnap_escape2");
 		break;
 
 // Most of the kidnap is identical to the night-time one except that the outside guard will behave differently
@@ -3058,11 +3129,12 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.bow_escape_shoot_bow.win_condition.l4.locator_group = "goto";
 			Pchar.quest.bow_escape_shoot_bow.win_condition.l4.locator = "goto10";
 			PChar.quest.bow_escape_shoot_bow.win_condition = "bow_escape_shoot_bow";
-			DoQuestReloadToLocation("Santiago_townhall", "goto", "goto8", "second_CourtingLetter_bow_escape2");
+			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload2", "second_CourtingLetter_bow_escape2");
 		break;
 
 		case "second_CourtingLetter_bow_escape2":
 			Preprocessor_AddQuestData("romance", GetMySimpleName(romance));
+/*
 			if (PChar.sex == "man")
 			{
 				Preprocessor_AddQuestData("pronoun1", "she");
@@ -3073,6 +3145,9 @@ void QuestComplete(string sQuestName)
 				Preprocessor_AddQuestData("pronoun1", "he");
 				Preprocessor_AddQuestData("pronoun2", "him");
 			}
+*/
+			Preprocessor_AddQuestData("pronoun1", romance_pronoun1);
+			Preprocessor_AddQuestData("pronoun2", romance_pronoun2);
 			AddQuestRecord("Kidnap", 26);
 			Preprocessor_Remove("romance");
 			Preprocessor_Remove("pronoun1");
@@ -3289,11 +3364,13 @@ void QuestComplete(string sQuestName)
 			RestoreDialog(ch);
 			LAi_SetCitizenType(ch);
 			Preprocessor_AddQuestData("romance", GetMySimpleName(romance));
+			Preprocessor_AddQuestData("romance1", GetMyName(romance));
 			if (PChar.sex == "man") Preprocessor_AddQuestData("pronoun", "she");
 			else Preprocessor_AddQuestData("pronoun", "he");
 			SetQuestHeader("Abduction");
 			AddQuestRecord("Abduction", 1);
 			Preprocessor_Remove("pronoun");
+			Preprocessor_Remove("romance1");
 			Preprocessor_Remove("romance");
 		break;
 
@@ -3526,6 +3603,8 @@ void QuestComplete(string sQuestName)
 			Preprocessor_Remove("governor");
 			PChar.quest.abduction_status = "seen_governor";
 			Locations[FindLocation("Redmond_Dungeon_2")].models.always.locators = "d02_l_GR";
+			Locations[FindLocation("Redmond_Dungeon_2")].locators_radius.randitem.randitem2 = 0.01;
+			Locations[FindLocation("Redmond_Dungeon_2")].items.randitem2 = "door_GR_d2";
 			Locations[FindLocation("Redmond_Dungeon_2")].reload.l2.name = "reload2";
 			Locations[FindLocation("Redmond_Dungeon_2")].reload.l2.go = "Quest_Cellar_Prison";
 			Locations[FindLocation("Redmond_Dungeon_2")].reload.l2.emerge = "reload10";
@@ -3871,7 +3950,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "abduction_pass_ready":
-			logit("Yedam Kinne should have finished with the pass by now.");
+			logit(TranslateString("","Yedam Kinne should have finished with the pass by now."));
 			Characters[GetCharacterIndex("Yedam Kinne")].dialog.CurrentNode = "ardent_abduction_good_pass2";
 		break;
 
@@ -4070,8 +4149,7 @@ void QuestComplete(string sQuestName)
 		case "abduction_set_up_church":
 			Preprocessor_AddQuestData("romance", GetMySimpleName(romance));
 			Preprocessor_AddQuestData("villain", GetMySimpleName(villain));
-			if (PChar.sex == "man") Preprocessor_AddQuestData("pronoun", "her");
-			else Preprocessor_AddQuestData("pronoun", "him");
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounObj(romance)));
 			AddQuestRecord("Abduction", 18);
 			Preprocessor_Remove("pronoun");
 			Preprocessor_Remove("villain");
@@ -4138,6 +4216,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "abduction_back_home":
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(PChar, "goto", "goto6", "abduction_back_home2", 65.0);
+		break;
+
+		case "abduction_back_home2":
+			LAi_SetPlayerType(PChar);
 			LAi_SetActorType(characterFromID("Javier Balboa"));
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "abduction_return";
 			LAi_ActorDialog(CharacterFromID("Javier Balboa"),PChar,"abduction_romance_accuses",5.0,5.0);
@@ -4207,6 +4291,8 @@ void QuestComplete(string sQuestName)
 
 		case "kidnap_rescue_port_royale_witness_speaks":
 			Locations[FindLocation("Redmond_Dungeon_2")].models.always.locators = "d02_l_GR";
+			Locations[FindLocation("Redmond_Dungeon_2")].locators_radius.randitem.randitem2 = 0.01;
+			Locations[FindLocation("Redmond_Dungeon_2")].items.randitem2 = "door_GR_d2";
 			Locations[FindLocation("Redmond_Dungeon_2")].reload.l2.name = "reload2";
 			Locations[FindLocation("Redmond_Dungeon_2")].reload.l2.go = "Quest_Cellar_Prison";
 			Locations[FindLocation("Redmond_Dungeon_2")].reload.l2.emerge = "reload10";
@@ -4273,7 +4359,7 @@ void QuestComplete(string sQuestName)
 		case "kidnap_rescue_return_santiago_townhall":
 			if (isofficer(romance))
 			{
-				ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
+				ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto2");
 			}
 			else
 			{
@@ -4520,7 +4606,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetImmortal(CharacterFromID("Javier Balboa"), true);
 
 			Locations[FindLocation("Santiago_church")].locators_radius.goto.goto11 = 2.0;
-			logit("Time to go to church!");
+			logit(TranslateString("","Time to go to church!"));
 			Pchar.quest.Wedding_ceremony.win_condition.l1 = "locator";
 			Pchar.quest.Wedding_ceremony.win_condition.l1.location = "Santiago_church";
 			Pchar.quest.Wedding_ceremony.win_condition.l1.locator_group = "goto";
@@ -4547,13 +4633,17 @@ void QuestComplete(string sQuestName)
 			LAi_ActorFollowEverywhere(romance, "", 5.0);
 			if (PChar.sex == "man")
 			{
-				PChar.quest.bride = GetMyFullName(romance);
-				PChar.quest.groom = GetMyFullName(PChar);
+//				PChar.quest.bride = GetMyFullName(romance);
+//				PChar.quest.groom = GetMyFullName(PChar);
+				PChar.quest.bride = GetMyFormalName(romance);
+				PChar.quest.groom = GetMyFormalName(PChar);
 			}
 			else
 			{
-				PChar.quest.bride = GetMyFullName(PChar);
-				PChar.quest.groom = GetMyFullName(romance);
+//				PChar.quest.bride = GetMyFullName(PChar);
+//				PChar.quest.groom = GetMyFullName(romance);
+				PChar.quest.bride = GetMyFormalName(PChar);
+				PChar.quest.groom = GetMyFormalName(romance);
 			}
 			LAi_SetActorType(characterFromID("Padre Magarino"));
 			characters[GetCharacterIndex("Padre Magarino")].Dialog.Filename = "Padre Magarino_dialog.c";
@@ -4604,9 +4694,10 @@ void QuestComplete(string sQuestName)
 			{
 
 				LAi_SetActorType(characterFromID("Padre Magarino"));
-				LAi_SetActorType(PChar);
 				Characters[GetCharacterIndex("Padre Magarino")].dialog.CurrentNode = "wedding_consent3";
-				LAi_ActorDialog(PChar,characterFromID("Padre Magarino"),"Wedding_consent3_answer",5.0,5.0);
+//				LAi_SetActorType(PChar);
+//				LAi_ActorDialog(PChar,characterFromID("Padre Magarino"),"Wedding_consent3_answer",5.0,5.0);
+				LAi_ActorDialog(characterFromID("Padre Magarino"),PChar,"Wedding_consent3_answer",5.0,5.0);
 			}
 		break;
 
@@ -4639,7 +4730,6 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Padre Magarino"));
 			Characters[GetCharacterIndex("Padre Magarino")].dialog.CurrentNode = "her_vow";
 			LAi_ActorDialog(characterFromID("Padre Magarino"),PChar,"",5.0,5.0); // If you are man, exits to "Wedding_vow_her_answer", otherwise exits to "Wedding_bless_rings"
-//			LAi_ActorDialog(characterFromID("Padre Magarino"),PChar,"Wedding_bless_rings",5.0,5.0);
 		break;
 
 		case "Wedding_bless_rings":
@@ -4657,9 +4747,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Wedding_final_blessing":
-			LAi_SetActorType(characterFromID("Padre Magarino"));
+			LAi_SetActorType(CharacterFromID("Padre Magarino"));
 			Characters[GetCharacterIndex("Padre Magarino")].dialog.CurrentNode = "final_blessing";
-			LAi_ActorDialog(characterFromID("Padre Magarino"),PChar,"Wedding_done",5.0,5.0);
+			LAi_ActorDialog(CharacterFromID("Padre Magarino"),PChar,"Wedding_done",5.0,5.0);
 		break;
 
 		case "Wedding_done":
@@ -4669,7 +4759,8 @@ void QuestComplete(string sQuestName)
 			{
 				crewref = characterFromID(PChar.quest.wedding_escort);
 				crewidx = GetCharacterIndex(PChar.quest.wedding_escort);
-				PChar.quest.normal_dialog = characters[crewidx].Dialog.Filename;
+//				PChar.quest.normal_dialog = characters[crewidx].Dialog.Filename;
+				StoreDialog(crewref);
 				LAi_SetActorType(crewref);
 				ChangeCharacterAddressGroup(crewref, "Santiago_church", "goto", "goto7");
 				characters[crewidx].Dialog.Filename = "crew_dialog.c";
@@ -4688,7 +4779,8 @@ void QuestComplete(string sQuestName)
 			{
 				crewref = characterFromID(PChar.quest.wedding_escort);
 				crewidx = GetCharacterIndex(PChar.quest.wedding_escort);
-				characters[crewidx].Dialog.Filename = PChar.quest.normal_dialog;
+//				characters[crewidx].Dialog.Filename = PChar.quest.normal_dialog;
+				RestoreDialog(crewref);
 				SetCharacterRemovable(crewref, true);
 			}
 			StoreOfficers(PChar.id);
@@ -4718,7 +4810,6 @@ void QuestComplete(string sQuestName)
 			characters[romanceidx].pcounter = 0;
 			if (PChar.sex == "man") characters[romanceidx].middlename = TranslateString("","Ardent");
 			else PChar.middlename = TranslateString("","de la Vega");
-//			LAi_SetStayType(romance);
 			PChar.married = MR_MARRIED;
 			PChar.married.id = characters[romanceidx].id;
 
@@ -4726,10 +4817,12 @@ void QuestComplete(string sQuestName)
 			LAi_ActorFollowEverywhere(romance, "", 10.0);
 			LAi_SetActorType(CharacterFromID("Javier Balboa"));
 			LAi_ActorFollowEverywhere(CharacterFromID("Javier Balboa"), "", 10.0);
+
 			Pchar.quest.return_to_residence.win_condition.l1 = "location";
 			PChar.quest.return_to_residence.win_condition.l1.character = Pchar.id;
 			Pchar.quest.return_to_residence.win_condition.l1.location = "Santiago_townhall";
 			Pchar.quest.return_to_residence.win_condition = "return_to_residence";
+
 			Pchar.quest.leave_church.win_condition.l1 = "location";
 			Pchar.quest.leave_church.win_condition.l1.location = "Santiago_town_01";
 			Pchar.quest.leave_church.win_condition = "leave_church";
@@ -4748,6 +4841,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "leave_church":
+   			LAi_SetPriestType(CharacterFromID("Padre Magarino"));
 			LAi_SetActorType(romance);
 			LAi_SetActorType(characterFromID("Javier Balboa"));
             		LAi_ActorGoToLocation(romance, "reload", "reload4", "none", "", "", "", 120.0);
@@ -4766,7 +4860,9 @@ void QuestComplete(string sQuestName)
 			if (checkattribute(romance, "middlename")) ch.middlename = romance.middlename;
 			LAi_SetActorType(characterFromID("Javier Balboa"));
 			ChangeCharacterAddressGroup(characterfromID("Javier Balboa"), "Santiago_townhall", "goto", "goto3");
-			LAi_QuestDelay("return_to_residence2", 1.0);
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(PChar, "goto", "goto6", "return_to_residence2", 65.0);
+
 			DeleteQuestAttribute("marriage_status");
 			DeleteQuestAttribute("marriage_money");
 			DeleteQuestAttribute("wedding_escort");
@@ -4775,6 +4871,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "return_to_residence2":
+			LAi_SetPlayerType(PChar);
 			LAi_SetActorType(characterfromID("Javier Balboa"));
 			LAi_SetActorType(romance);
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "enjoy_reception";
@@ -4784,8 +4881,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "bypass_reception":
+			SetCurrentTime(21, rand(10));
 			ChangeCharacterAddressGroup(romance, "Quest_Santiago_Bedroom", "goto", "goto5");
-			DoQuestReloadToLocation("Santiago_townhall", "goto", "goto8", "reception_done");
+			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload3", "reception_done");
 		break;
 
 		case "reception_done":
@@ -4794,6 +4892,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "prepare_for_bed":
+			SetCurrentTime(21, 10 + rand(10));
 			DoQuestReloadToLocation("Quest_Santiago_Bedroom", "reload", "reload1", "bedtime_chat");
 		break;
 
@@ -4821,10 +4920,10 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
 //			ChangeCharacterAddressGroup(characterfromID("Javier Balboa"), "Santiago_townhall", "goto", "goto3");
 //			LAi_SetStayType(characterfromID("Javier Balboa"));
-			ChangeCharacterAddressGroup(characterFromID("Javier Balboa"), "Santiago_townhall", "sit", "sit2");
+			ChangeCharacterAddressGroup(characterFromID("Javier Balboa"), "Santiago_townhall", "sit", "sit1");
 			LAi_SetHuberType(characterFromID("Javier Balboa"));
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "enjoy_reception";
-			DoQuestReloadToLocation("Santiago_townhall", "goto", "goto8", "morning_after_wedding2");
+			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload2", "morning_after_wedding2");
 		break;
 
 		case "morning_after_wedding2":
@@ -5006,20 +5105,20 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "finale_marriage_return_to_priest":
-					if (CheckAttribute(PChar,"quest.wedding_escort") && PChar.quest.wedding_escort != "")
-					{
-						crewref = characterFromID(PChar.quest.wedding_escort);
-						crewidx = GetCharacterIndex(PChar.quest.wedding_escort);
-						ChangeCharacterAddressGroup(crewref, "Santiago_church", "sit", "sit13");
-						LAi_SetActorType(crewref);
-						LAi_ActorSetSitMode(crewref);
-					}
+			if (CheckAttribute(PChar,"quest.wedding_escort") && PChar.quest.wedding_escort != "")
+			{
+				crewref = characterFromID(PChar.quest.wedding_escort);
+				crewidx = GetCharacterIndex(PChar.quest.wedding_escort);
+				ChangeCharacterAddressGroup(crewref, "Santiago_church", "sit", "sit13");
+				LAi_SetActorType(crewref);
+				LAi_ActorSetSitMode(crewref);
+			}
 
-					LAi_SetActorType(characterFromID("Javier Balboa"));
-					ChangeCharacterAddressGroup(characterFromID("Javier Balboa"), "Santiago_church", "sit", "sit3");
-					LAi_ActorSetSitMode(characterFromID("Javier Balboa"));
-					PauseAllSounds();
-					PlayStereoOGG("wedding2");
+			LAi_SetActorType(characterFromID("Javier Balboa"));
+			ChangeCharacterAddressGroup(characterFromID("Javier Balboa"), "Santiago_church", "sit", "sit3");
+			LAi_ActorSetSitMode(characterFromID("Javier Balboa"));
+			PauseAllSounds();
+			PlayStereoOGG("wedding2");
 			LAi_SetActorType(PChar);
 //			LAi_ActorFollow(PChar, characterFromID("Padre Magarino"), "Wedding_consent3_answer", 10.0);
 			LAi_ActorFollow(PChar, characterFromID("Padre Magarino"), "finale_priest_gives_way", 10.0);
@@ -5027,6 +5126,8 @@ void QuestComplete(string sQuestName)
 
 		case "assassination_attempt":
 			ChangeCharacterAddressGroup(characterfromID("Malbert Sangier"), "Santiago_town_01", "goto", "goto9");
+			LAi_SetActorType(characterFromID("Grigorio Formoselle"));
+			LAi_ActorGoToLocator(characterFromID("Grigorio Formoselle"), "reload", "reload3", "",5.0);
 			LAi_QuestDelay("assassination_attempt2", 2.00);
 		break;
 
@@ -5037,6 +5138,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "assassination_attempt3":
+			LAi_SetActorType(characterFromID("Grigorio Formoselle"));
+			LAi_ActorTurnToCharacter(characterFromID("Grigorio Formoselle"), characterfromID("fake_romance"));
 			Locations[FindLocation("Santiago_townhall")].reload.l1.disable = 0;
 //			Lai_KillCharacter(romance);
 			LAi_KillCharacter(characterfromID("fake_romance"));
@@ -5066,7 +5169,7 @@ void QuestComplete(string sQuestName)
 
 		case "assassination_grigorio_moves":
 			LAi_SetActorType(characterFromID("Grigorio Formoselle"));
-			LAi_ActorRunToLocator(characterFromID("Grigorio Formoselle"), "goto", "goto9", "",10.0);
+			LAi_ActorRunToLocator(characterFromID("Grigorio Formoselle"), "goto", "goto9", "",60.0);
 		break;
 
 		case "assassination_malbert_attacks":
@@ -5130,7 +5233,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetGuardianType(characterfromID("Santiago_soldier_05"));
 			characters[GetCharacterIndex("Santiago_soldier_05")].Dialog.Filename = "Isla Muelle soldier_dialog.c";
 			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
-			DoQuestReloadToLocation("Santiago_townhall", "goto", "goto8", "assassination_fade_to_next_day2");
+			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload2", "assassination_fade_to_next_day2");
 		break;
 
 		case "assassination_fade_to_next_day2":
@@ -5217,7 +5320,8 @@ void QuestComplete(string sQuestName)
 		break; */
 
 		case "convoy_Abequa_speaks":	// Triggered by dialog with Mary Seacole
-			PChar.quest.normal_dialog = characters[GetCharacterIndex("Abequa")].Dialog.Filename;
+//			PChar.quest.normal_dialog = characters[GetCharacterIndex("Abequa")].Dialog.Filename;
+			StoreDialog(CharacterFromID("Abequa"));
 			characters[GetCharacterIndex("Abequa")].Dialog.Filename = "Abequa_dialog.c";
 			LAi_SetActorType(CharacterFromID("Abequa"));
 			Characters[GetCharacterIndex("Abequa")].dialog.CurrentNode = "ardent_convoy_was_here";
@@ -5230,7 +5334,8 @@ void QuestComplete(string sQuestName)
 
 		case "convoy_reset_Abequa":
 			LAi_SetStayType(CharacterFromID("Abequa"));
-			characters[GetCharacterIndex("Abequa")].Dialog.Filename = PChar.quest.normal_dialog;
+			RestoreDialog(CharacterFromID("Abequa"));
+//			characters[GetCharacterIndex("Abequa")].Dialog.Filename = PChar.quest.normal_dialog;
 //			ChangeCharacterAddressGroup(CharacterFromID("Abequa"), "Cartagena Hotel", "goto", "character2");
 //			LAi_SetOfficerType(romance);
 		break;
@@ -5256,6 +5361,9 @@ void QuestComplete(string sQuestName)
 				SetCharacterShipLocation(PChar, "Willemstad_port");
 				if(!isofficer(romance)) SetOfficersIndex(Pchar, 3, romanceidx);
 				SetCharacterRemovable(romance, false);
+				if (CheckAttribute(romance, "AbordageMode")) romance.quest.old_abordagemode = romance.AbordageMode;
+				else romance.quest.old_abordagemode = 0;
+				romance.AbordageMode = 1;
 				ChangeCharacterAddressGroup(romance, GetCharacterShipCabin(PChar), "rld", "startloc");
 				StartQuestMovie(true, true, false);
 				DoReloadFromSeaToLocation(GetCharacterShipCabin(PChar), "reload", "reload1");
@@ -5297,8 +5405,6 @@ void QuestComplete(string sQuestName)
 		case "convoy_plan1_no_good":
 			ChangeCharacterAddressGroup(romance, GetCharacterShipCabin(PChar), "rld", "startloc");
 			DoQuestReloadToLocation(GetCharacterShipCabin(PChar), "reload", "reload1", "convoy_plan_attack2");
-//			DoReloadFromSeaToLocation("Tutorial_Deck", "reload", "reload1");
-//			LAi_QuestDelay("convoy_plan_attack2", 1.0);
 		break;
 
 		case "convoy_plan_attack2":
@@ -5321,7 +5427,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "convoy_arrive_port2":
-			if(PChar.model == "Ardent_SF") logit("This uniform is uncomfortable, being made for a man, but I'd better wear it whenever I need to talk to the governor.");
+			if(PChar.model == "Ardent_SF") logit(TranslateString("","This uniform is uncomfortable, being made for a man, but I'd better wear it whenever I need to talk to the governor."));
 //			LAi_SetOfficerType(romance);
 			ChangeCharacterAddressGroup(CharacterFromID("Dutch_sergeant"), "Willemstad_townhall", "goto", "goto2");
 			characters[GetCharacterIndex("Dutch_sergeant")].Dialog.Filename = "guard_dialog.c";
@@ -5355,7 +5461,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "convoy_Willemstad_Shipyard":
-			SetCharacterRemovable(romance, true); // In case you put Lucia / Edmundo in command of a ship
+			SetCharacterRemovable(romance, true); // In case you put Lucía / Edmundo in command of a ship
 			Pchar.quest.back_in_Willemstad_town.win_condition.l1 = "location";
 			Pchar.quest.back_in_Willemstad_town.win_condition.l1.location = "Willemstad_town";
 			Pchar.quest.back_in_Willemstad_town.win_condition = "convoy_back_in_Willemstad_town";
@@ -5413,8 +5519,8 @@ void QuestComplete(string sQuestName)
 				PChar.middlename = "";
 			}
 			PChar.quest.original_lastname = PChar.lastname;
-			PChar.name = "Carlos";
-			PChar.lastname = "Ardenta";
+			PChar.name = TranslateString("","Carlos");
+			PChar.lastname = TranslateString("","Ardenta");
 			characters[GetCharacterIndex("Hans Kloss")].dialog.CurrentNode = "ardent_convoy_fake_intro";
 		break;
 
@@ -5472,7 +5578,6 @@ void QuestComplete(string sQuestName)
 		case "convoy_back_to_port":
 			StartQuestMovie(true, true, false);
 			DisableFastTravel(true);
-//			LAi_SetOfficerType(romance);
 			LAi_SetActorType(CharacterFromID("Dutch_sergeant"));
 			characters[GetCharacterIndex("Dutch_sergeant")].Dialog.Filename = "guard_dialog.c";
 			Characters[GetCharacterIndex("Dutch_sergeant")].dialog.CurrentNode = "convoy_search";
@@ -5525,7 +5630,6 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("Dutch_sergeant"));
             		LAi_ActorGoToLocation(characterFromID("Dutch_sergeant"), "reload", "sea_back", "none", "", "", "", 90.0);
 //			Locations[FindLocation("Willemstad_port")].reload.l5.disable = 0;
-//			LAi_SetOfficerType(romance);
 			Locations[FindLocation("Quest_Seadogs")].vcskip = true;
 
 			Pchar.quest.convoy_board_ship.win_condition.l1 = "locator";
@@ -5556,6 +5660,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "convoy_report_found_romance":
+			romance.quest.equipped_blade = GetCharacterEquipByGroup(romance, BLADE_ITEM_TYPE);
+			romance.quest.equipped_gun = GetCharacterEquipByGroup(romance, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(romance, BLADE_ITEM_TYPE);
+			RemoveCharacterEquip(romance, GUN_ITEM_TYPE);
 			LAi_SetActorType(CharacterFromID("Dutch_sergeant"));
 			Characters[GetCharacterIndex("Dutch_sergeant")].dialog.CurrentNode = "convoy_found_romance";
 			LAi_ActorDialog(CharacterFromID("Dutch_sergeant"),PChar,"convoy_arrest_captain",5.0,5.0);
@@ -5576,8 +5684,10 @@ void QuestComplete(string sQuestName)
 		case "convoy_return_to_residence":
 			RestoreOfficers(PChar.id);
 			LAi_SetOfficerType(romance);
-//			LAi_SetActorType(romance);
-//			LAi_ActorFollowEverywhere(romance, "", 5.0);
+			if (CheckAttribute(romance, "quest.equipped_blade") && romance.quest.equipped_blade != "") EquipCharacterByItem(romance, romance.quest.equipped_blade);
+			if (CheckAttribute(romance, "quest.equipped_gun") && romance.quest.equipped_gun != "") EquipCharacterByItem(romance, romance.quest.equipped_gun);
+			DeleteAttribute(romance, "quest.equipped_blade");
+			DeleteAttribute(romance, "uest.equipped_gun");
 			ChangeCharacterAddressGroup(CharacterFromID("Dutch_sergeant"), "Willemstad_townhall", "goto", "goto2");
 			if (PChar.sex == "man") GiveModel2Player("Ardent_S", true);
 			else GiveModel2Player("Ardent_SF", true);
@@ -5594,8 +5704,6 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "convoy_return_to_residence2":
-//			LAi_SetActorType(romance);
-//			LAi_ActorFollowEverywhere(romance, "", 5.0);
 			ChangeCharacterAddress(CharacterFromID("Convoy_Captain1"), "None", "");
 			AddPassenger(PChar, CharacterFromID("Convoy_Captain1"), 1);
 			Characters[GetCharacterIndex("Hans Kloss")].dialog.CurrentNode = "ardent_convoy_successful";
@@ -5614,7 +5722,7 @@ void QuestComplete(string sQuestName)
 				PChar.middlename = PChar.quest.original_middlename;
 				DeleteQuestAttribute("original_middlename");
 			}
-			DeleteQuestAttribute("original_firstname");
+			DeleteQuestAttribute("original_name");
 			DeleteQuestAttribute("original_lastname");
 			if (CheckQuestAttribute("revenge_type", "kidnap_rescue")) LAi_QuestDelay("convoy_final_preparations2", 1.0);
 			else
@@ -5684,7 +5792,6 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "convoy_prepare_to_depart":
-//			LAi_SetOfficerType(romance);
 			Pchar.quest.convoy_battle1.win_condition.l1 = "location";
 			Pchar.quest.convoy_battle1.win_condition.l1.location = "";
 			Pchar.quest.convoy_battle1.win_condition = "convoy_setup_battle";
@@ -5751,7 +5858,7 @@ void QuestComplete(string sQuestName)
 		case "convoy_final_briefing":
 			SetModelFromID(romance, PChar.quest.romance_model);
 			DeleteQuestAttribute("romance_model");
-			if (!isofficer(romance)) SetOfficersIndex(Pchar, 3, romanceidx);	// Just in case you've somehow managed to replace Lucia / Edmundo
+			if (!isofficer(romance)) SetOfficersIndex(Pchar, 3, romanceidx);	// Just in case you've somehow managed to replace Lucía / Edmundo
 			ChangeCharacterAddressGroup(romance, GetCharacterShipCabin(PChar), "rld", "startloc");
 			DoQuestReloadToLocation(GetCharacterShipCabin(PChar), "reload", "reload1", "convoy_final_briefing2");
 		break;
@@ -5760,7 +5867,7 @@ void QuestComplete(string sQuestName)
 			if (PChar.sex == "woman")
 			{
 				GiveModel2Player("Ardent_F", true);
-				logit("Finally! Out of that ill-fitting uniform and back into my proper clothes.");
+				logit(TranslateString("","Finally! Out of that ill-fitting uniform and back into my proper clothes."));
 			}
 			LAi_SetActorType(romance);
 			Characters[romanceidx].dialog.CurrentNode = "convoy_after_governor";
@@ -5824,8 +5931,8 @@ void QuestComplete(string sQuestName)
 			Group_SetTaskAttack("Downing Convoy", PLAYER_GROUP, true);
 			Group_LockTask("Downing Convoy");
 			characters[GetCharacterIndex("Convoy_Captain2")].nosurrender = 2;
-			DeleteAttribute(CharacterFromID("Convoy_Captain3"), "questchar");	// Make the captain a regular character who can be hired, ransomed or released
-			DeleteAttribute(CharacterFromID("Convoy_Captain4"), "questchar");
+//			DeleteAttribute(CharacterFromID("Convoy_Captain3"), "questchar");	// Make the captain a regular character who can be hired, ransomed or released
+//			DeleteAttribute(CharacterFromID("Convoy_Captain4"), "questchar");
 
 //			UpdateRelations();
 			SetRMRelation(characterFromID("Convoy_Captain2"), SPAIN, REL_WAR);
@@ -5859,7 +5966,7 @@ void QuestComplete(string sQuestName)
 			if (PChar.sex == "woman" && PChar.model == "Ardent_SF")
 			{
 				GiveModel2Player("Ardent_F", true);
-				logit("Finally! Out of that ill-fitting uniform and back into my proper clothes.");
+				logit(TranslateString("","Finally! Out of that ill-fitting uniform and back into my proper clothes."));
 			}
 			bQuestDisableMapEnter = true;
 			PChar.quest.convoy_battle_location = PChar.location;
@@ -5878,8 +5985,8 @@ void QuestComplete(string sQuestName)
 			Group_LockTask("Downing Convoy");
 			characters[GetCharacterIndex("Convoy_Captain1")].nosurrender = 2;
 			characters[GetCharacterIndex("Convoy_Captain2")].nosurrender = 2;
-			DeleteAttribute(CharacterFromID("Convoy_Captain3"), "questchar");	// Make the captain a regular character who can be hired, ransomed or released
-			DeleteAttribute(CharacterFromID("Convoy_Captain4"), "questchar");
+//			DeleteAttribute(CharacterFromID("Convoy_Captain3"), "questchar");	// Make the captain a regular character who can be hired, ransomed or released
+//			DeleteAttribute(CharacterFromID("Convoy_Captain4"), "questchar");
 
 			SetRMRelation(characterFromID("Convoy_Captain1"), SPAIN, REL_WAR);
 			SetRMRelation(characterFromID("Convoy_Captain2"), SPAIN, REL_WAR);
@@ -5887,6 +5994,12 @@ void QuestComplete(string sQuestName)
 			SetRMRelation(characterFromID("Convoy_Captain4"), SPAIN, REL_WAR);
 			SetNationRelationBoth(ENGLAND, SPAIN, RELATION_ENEMY);
 			HoistFlag(SPAIN);
+
+			Characters[GetCharacterIndex("Convoy_Captain1")].recognized = true;
+			Characters[GetCharacterIndex("Convoy_Captain2")].recognized = true;
+			Characters[GetCharacterIndex("Convoy_Captain3")].recognized = true;
+			Characters[GetCharacterIndex("Convoy_Captain4")].recognized = true;
+
 			Pchar.quest.convoy_battle_over.win_condition.l1 = "NPC_Death";
 			Pchar.quest.convoy_battle_over.win_condition.l1.character = "Convoy_Captain1";
 			Pchar.quest.convoy_battle_over.win_condition.l2 = "NPC_Death";
@@ -5907,11 +6020,18 @@ void QuestComplete(string sQuestName)
 			AddMoneyToCharacter(pchar, 400000 + rand(200000));
 			if(AUTO_SKILL_SYSTEM)
 			{
-				AddPartyExpChar(pchar, "Leadership", 5000);
+				AddPartyExpChar(PChar, "Leadership", 5000);
 				AddPartyExpChar(PChar, "", 500);
-				AddPartyExpChar(pchar, "Sailing", 500);
+				AddPartyExpChar(PChar, "Sailing", 500);
 			}
-			else {AddPartyExp(pchar, 6000);}
+			else AddPartyExp(PChar, 6000);
+
+			if(!LAi_IsDead(romance) && CheckAttribute(romance, "quest.old_abordagemode"))
+			{
+				romance.AbordageMode = sti(romance.quest.old_abordagemode);
+				DeleteAttribute(romance, "quest.old_abordagemode");
+			}
+
 //			if(CheckQuestAttribute("revenge_type", "kidnap_rescue") && !CheckQuestAttribute("kidnap_convoy", "true"))
 			if(CheckQuestAttribute("revenge_type", "kidnap_rescue"))
 			{
@@ -5944,25 +6064,28 @@ void QuestComplete(string sQuestName)
 				}
 				else
 				{
-					if (LAi_IsDead(romance)) Preprocessor_AddQuestData("failure", GetMyName(romance) + "'s death");
+					Preprocessor_AddQuestData("governor", GetMySimpleName(characterFromID("Javier Balboa")));
+					if (LAi_IsDead(romance))
+					{
+						Preprocessor_AddQuestData("romance", GetMyName(romance));
+						AddQuestRecord("Convoy Strike", 13);
+					}
 					else
 					{
-						Preprocessor_AddQuestData("failure", "back");
+						AddQuestRecord("Convoy Strike", 22);
 						Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "spain_betrayal";
 					}
-					Preprocessor_AddQuestData("governor", GetMySimpleName(characterFromID("Javier Balboa")));
-					AddQuestRecord("Convoy Strike", 13);
 					CloseQuestHeader("Convoy Strike");
 					Preprocessor_Remove("governor");
-					Preprocessor_Remove("failure");
 				}
+				ChangeCharacterAddressGroup(characterfromID("Javier Balboa"), "Santiago_townhall", "goto", "goto3");
 				LAi_SetHuberStayType(CharacterFromID("Javier Balboa"));
 			}
 
-			if (!LAi_IsDead(CharacterFromID("Convoy_Captain1")))
-			{
-				DeleteAttribute(CharacterFromID("Convoy_Captain1"), "questchar");	// Make the captain a regular character who can be hired, ransomed or released
-			}
+//			if (!LAi_IsDead(CharacterFromID("Convoy_Captain1")))
+//			{
+//				DeleteAttribute(CharacterFromID("Convoy_Captain1"), "questchar");	// Make the captain a regular character who can be hired, ransomed or released
+//			}
 
 			PChar.quest.mona_attack_triggers.win_condition.l1 = "Timer";
 			PChar.quest.mona_attack_triggers.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
@@ -5972,7 +6095,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "convoy_report_to_santiago":
-			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
+			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto2");
 			RemoveOfficersIndex(pchar, romanceidx);
 			LAi_SetActorType(romance);
 			LAi_ActorFollowEverywhere(romance, "", 10.0);
@@ -6000,7 +6123,8 @@ void QuestComplete(string sQuestName)
 
 		case "convoy_wait_a_day":
 			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
-			DoQuestReloadToLocation("Santiago_townhall", "goto", "goto8", "convoy_next_day_townhall");
+			ChangeCharacterAddressGroup(characterfromID("Javier Balboa"), "Santiago_townhall", "goto", "goto3");
+			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload2", "convoy_next_day_townhall");
 		break;
 
 		case "convoy_next_day_townhall":
@@ -6067,6 +6191,10 @@ void QuestComplete(string sQuestName)
 				PChar.quest.convoy_romance_into_dress.win_condition.l1.location = "Cuba";
 				PChar.quest.convoy_romance_into_dress.win_condition = "convoy_romance_into_dress";
 			}
+
+			Pchar.quest.convoy_reset_governor.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.convoy_reset_governor.win_condition.l1.location = "Santiago_townhall";
+			Pchar.quest.convoy_reset_governor.win_condition = "reset_governor";
 		break;
 
 		case "convoy_romance_into_dress":
@@ -6168,9 +6296,13 @@ void QuestComplete(string sQuestName)
 		case "convoy_santiago_residence_finale":
 			Locations[FindLocation("Santiago_townhall")].reload.l1.disable = 1;
 			DisableFastTravel(true);
-			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
+			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto2");
 			LAi_SetActorType(romance);
 			LAi_ActorFollowEverywhere(romance, "", 10.0);
+
+			Pchar.quest.convoy_reset_governor2.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.convoy_reset_governor2.win_condition.l1.location = "Santiago_townhall";
+			Pchar.quest.convoy_reset_governor2.win_condition = "reset_governor";
 		break;
 
 		case "convoy_ending":	// Triggered by dialog with "Javier Balboa"
@@ -6193,7 +6325,7 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Commerce", 100);
 			}
 			else {AddPartyExp(pchar, 1200);}
-			LAi_SetHuberStayType(CharacterFromID("Javier Balboa"));
+//			LAi_SetHuberStayType(CharacterFromID("Javier Balboa"));
 			LAi_SetOfficerType(romance);
 			SetCharacterRemovable(romance, true);
 			DeleteAttribute(PChar, "quest.ardent_convoy");
@@ -6226,7 +6358,7 @@ void QuestComplete(string sQuestName)
 			else
 			{
 //				LAi_SetActorType(romance);
-//          			LAi_ActorGoToLocation(romance, "reload", "reload1", "none", "", "", "", 10.0);
+//          			LAi_ActorGoToLocation(romance, "reload", "reload2", "none", "", "", "", 10.0);
 				Pchar.quest.convoy_ending_remove_romance.win_condition.l1 = "ExitFromLocation";
 				PChar.quest.convoy_ending_remove_romance.win_condition.l1.location = PChar.location;
 				Pchar.quest.convoy_ending_remove_romance.win_condition = "convoy_ending_remove_romance";
@@ -6244,7 +6376,7 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Commerce", 100);
 			}
 			else {AddPartyExp(pchar, 1200);}
-			LAi_SetHuberStayType(CharacterFromID("Javier Balboa"));
+//			LAi_SetHuberStayType(CharacterFromID("Javier Balboa"));
 			DeleteAttribute(PChar, "quest.ardent_convoy");
 			PChar.quest.convoy_romance_dead.over = "yes";
 			PChar.quest.romance_dead.win_condition.l1 = "NPC_Death";
@@ -6269,7 +6401,7 @@ void QuestComplete(string sQuestName)
 			else
 			{
 				Preprocessor_AddQuestData("romance", GetMyName(romance));
-				Preprocessor_AddQuestData("governor", GetMySimpleName(characterFromID("Javier Balboa")));
+				Preprocessor_AddQuestData("governor", GetMySimpleName(CharacterFromID("Javier Balboa")));
 				AddQuestRecord("Convoy Strike", 11);
 				Preprocessor_Remove("governor");
 				Preprocessor_Remove("romance");
@@ -6395,6 +6527,14 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(&Locations[FindLocation("Tortuga_port")],"vcskip");
 			Locations[FindLocation(PChar.quest.mona_attack.tavern)].vcskip = true;
 			ChangeCharacterAddressGroup(characterfromID("Wilfred Roscoe"), PChar.location, "goto", PChar.quest.mona_attack.pirate_locator);
+			LAi_SetActorType(PChar);
+			LAi_SetActorType(characterfromID("Wilfred Roscoe"));
+			LAi_ActorFollow(characterFromID("Wilfred Roscoe"), PChar, "", 5.0);
+			LAi_ActorFollow(PChar, characterFromID("Wilfred Roscoe"), "mona_attack_roscoe_meeting", 5.0);
+		break;
+
+		case "mona_attack_roscoe_meeting":
+			LAi_SetPlayerType(PChar);
 			LAi_SetActorType(characterfromID("Wilfred Roscoe"));
 			Characters[GetCharacterIndex("Wilfred Roscoe")].dialog.CurrentNode = "mona_attack_meeting_in_port";
 			LAi_ActorDialog(characterfromID("Wilfred Roscoe"),PChar,"mona_attack_tavern_chat",30.0,30.0);
@@ -6483,6 +6623,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "mona_attack_beach_battle":
+			PChar.quest.disable_rebirth = true;
 			StartQuestMovie(true, true, false);
 			DisableFastTravel(true);
 			bQuestDisableSeaEnter = true;
@@ -6676,11 +6817,8 @@ void QuestComplete(string sQuestName)
 				cc = -1;
 				for (n=1; n<COMPANION_MAX; n++)
 				{
-					if(GetCompanionIndex(PChar, n) != -1)
-					{
-						cc = GetCompanionIndex(PChar, n);
-						break;
-					}
+					cc = GetCompanionIndex(PChar, n);
+					if(cc != -1 && characters[cc].id != "Imperial_Captain") break;
 				}
 				if (cc > 0)
 				{
@@ -6688,7 +6826,8 @@ void QuestComplete(string sQuestName)
 					ch = CharacterFromID(PChar.quest.mona_attack.fleet_commander);
 					ChangeCharacterAddressGroup(CharacterFromID(PChar.quest.mona_attack.fleet_commander), "IslaMona_port", "goto", "goto2");
 					LAi_SetStayType(ch);
-					PChar.quest.normal_dialog = ch.Dialog.Filename;
+					StoreDialog(ch);
+//					PChar.quest.normal_dialog = ch.Dialog.Filename;
 					ch.Dialog.Filename = "crew_dialog.c";
 					ch.dialog.CurrentNode = "mona_attack_detach_fleet";
 					AddQuestRecord("Isla Mona Attack", 8);
@@ -6705,12 +6844,13 @@ void QuestComplete(string sQuestName)
 			AddPassenger(PChar, CharacterFromID("French_Captain1"), 1);
 			LAi_SetImmortal(CharacterFromID("French_Captain1"), false);
 
-			DeleteAttribute(CharacterFromID("French_Captain1"), "questchar");	// Make the captain a regular character who can be hired, ransomed or released
+//			DeleteAttribute(CharacterFromID("French_Captain1"), "questchar");	// Make the captain a regular character who can be hired, ransomed or released
 		break;
 
 		case "mona_attack_detach_fleet": // Triggered by dialog with a companion officer
-			characters[GetCharacterIndex(PChar.quest.mona_attack.fleet_commander)].Dialog.Filename = PChar.quest.normal_dialog;
-			LAi_SetCitizenType(characterFromID(PChar.quest.mona_attack.fleet_commander));
+//			characters[GetCharacterIndex(PChar.quest.mona_attack.fleet_commander)].Dialog.Filename = PChar.quest.normal_dialog;
+			RestoreDialog(CharacterFromID(PChar.quest.mona_attack.fleet_commander));
+			LAi_SetCitizenType(CharacterFromID(PChar.quest.mona_attack.fleet_commander));
 			AddQuestRecord("Isla Mona Attack", 5);
 			PChar.quest.mona_attack_detach_fleet2.win_condition.l1 = "ExitFromLocation";
 			PChar.quest.mona_attack_detach_fleet2.win_condition.l1.location = PChar.location;
@@ -6902,7 +7042,7 @@ void QuestComplete(string sQuestName)
 			else
 			{
 				GiveModel2Player("Ardent_FrF", true);
-				logit("Again I have to wear a man's uniform. Better than letting the French see me in my usual outfit, I suppose...");
+				logit(TranslateString("","Again I have to wear a man's uniform. Better than letting the French see me in my usual outfit, I suppose..."));
 			}
 		break;
 
@@ -6981,6 +7121,8 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.mona_attack_go_to_flagship.win_condition.l1.locator_group = "reload";
 			Pchar.quest.mona_attack_go_to_flagship.win_condition.l1.locator = "boat";
 			PChar.quest.mona_attack_go_to_flagship.win_condition = "mona_attack_go_to_flagship";
+			GiveItem2Character(villain, "goldarmor");
+			EquipCharacterByItem(villain, "goldarmor");
 		break;
 
 		case "mona_attack_go_to_flagship":
@@ -7032,6 +7174,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "mona_attack_return_to_ship":
+			PChar.quest.disable_rebirth = false;
 			AddQuestRecord("Isla Mona Attack", 11);
 			SetQuestHeader("Treachery");
 			Preprocessor_AddQuestData("villain", GetMySimpleName(villain));
@@ -7109,7 +7252,7 @@ void QuestComplete(string sQuestName)
 
 		case "mona_attack_helen_changes_back":
 			GiveModel2Player("Ardent_F", true);
-			logit("Back to my own ship and back to my own clothes!");
+			logit(TranslateString("","Back to my own ship and back to my own clothes!"));
 		break;
 
 		case "mona_attack_leave_french_fleet":
@@ -7136,14 +7279,10 @@ void QuestComplete(string sQuestName)
 			if (Characters[GetMainCharacterIndex()].location == "") Sea_LoginGroupNow("French Fleet1");
 			Group_SetTaskAttack("French Fleet1", PLAYER_GROUP, true);
 			Group_LockTask("French Fleet1");
-/*			SetRMRelation(characterFromID("French_Captain2"), SPAIN, REL_WAR);
-			SetRMRelation(characterFromID("French_Captain3"), SPAIN, REL_WAR);
-			SetRMRelation(characterFromID("French_Contre-Amiral"), SPAIN, REL_WAR);
-			SetRMRelation(characterFromID("French_Contre-Amiral"), ENGLAND, REL_WAR);
-			SetRMRelation(characterFromID("French_Contre-Amiral"), HOLLAND, REL_WAR);
-			SetRMRelation(characterFromID("French_Contre-Amiral"), PORTUGAL, REL_WAR);
-			SetRMRelation(characterFromID("French_Contre-Amiral"), PIRATE, REL_WAR);
-			UpdateRelations(); */
+			characters[GetCharacterIndex("French_Contre-Amiral")].recognized = true;
+			characters[GetCharacterIndex("French_Captain2")].recognized = true;
+			characters[GetCharacterIndex("French_Captain3")].recognized = true;
+			UpdateRelations();
 			RefreshBattleInterface(true);
 			DeleteAttribute(PChar, "Flags.UseNavalFlag");
 			if (!CheckAttribute(PChar, "quest.mona_attack.fleet_commander"))
@@ -7218,10 +7357,17 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.mona_attack_Marigot.over = "yes";
 			PChar.quest.mona_attack_leave_french_fleet.over = "yes";
 			PChar.quest.mona_attack_defeat_French_fleet.over = "yes";
+			i = Group_FindGroup("French Fleet1");
+			if (i >= 0)
+			{
+				trace("mona_attack_rejoin_fleet: 'French Fleet1' no longer required, being deleted");
+				Group_DeleteGroupIndex(i);
+			}
 			StartQuestMovie(true, true, false);
 			DisableFastTravel(true);
 			ch = CharacterFromID(PChar.quest.mona_attack.fleet_commander);
-			PChar.quest.normal_dialog = ch.Dialog.Filename;
+//			PChar.quest.normal_dialog = ch.Dialog.Filename;
+			StoreDialog(ch);
 			ch.Dialog.Filename = "crew_dialog.c";
 			ch.dialog.CurrentNode = "mona_attack_rejoin_fleet";
 			LAi_SetActorType(ch);
@@ -7241,8 +7387,9 @@ void QuestComplete(string sQuestName)
 					if (HasSubStr(PChar.quest.mona_attack.(temp), "Enc_Officer")) LAi_UnStoreFantom(CharacterFromID(PChar.quest.mona_attack.(temp))); // Cancel protection
 				}
 			}
-			LAi_SetActorType(characterFromID(PChar.quest.mona_attack.fleet_commander));
-			characters[GetCharacterIndex(PChar.quest.mona_attack.fleet_commander)].Dialog.Filename = PChar.quest.normal_dialog;
+			LAi_SetActorType(CharacterFromID(PChar.quest.mona_attack.fleet_commander));
+//			characters[GetCharacterIndex(PChar.quest.mona_attack.fleet_commander)].Dialog.Filename = PChar.quest.normal_dialog;
+			RestoreDialog(CharacterFromID(PChar.quest.mona_attack.fleet_commander));
             		LAi_ActorGoToLocation(characterFromID(PChar.quest.mona_attack.fleet_commander), "reload", "reload1", "None", "", "", "", 30.0);
 			AddQuestRecord("Isla Mona Attack", 14);
 			CloseQuestHeader("Isla Mona Attack");
@@ -7314,7 +7461,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.ardent_treachery_status = "successful";
 			CaptureTownForNation("Redmond", FRANCE);
 			Islands[FindIsland("Redmond")].smuggling_nation = FRANCE;
-			ChangeCharacterAddress(characterFromID(Towns[GetTownIndex("Redmond")].gov), "none", "");
+			ChangeCharacterAddress(CharacterFromID(Towns[GetTownIndex("Redmond")].gov), "none", "");
 			ChangeCharacterAddressGroup(villain, "redmond_residence", "goto", "goto8");
 			Characters[villainidx].nation = FRANCE;
 			Characters[villainidx].dialog.currentnode = "treachery_governor";
@@ -7343,7 +7490,7 @@ void QuestComplete(string sQuestName)
 			if (isofficer(romance) && PChar.quest.alignment == "good") ChangeCharacterAddressGroup(romance, "redmond_residence", "goto", "goto4");
 		break;
 
-		case "treachery_villain_invites_romance":	// Triggered by dialog with Piers / Valerie Downing if Lucia / Edmundo is with you
+		case "treachery_villain_invites_romance":	// Triggered by dialog with Piers / Valerie Downing if Lucía / Edmundo is with you
 			characters[romanceidx].dialog.CurrentNode = "treachery_reject_villain";
 			LAi_SetActorType(romance);
 //			LAi_ActorDialog(romance,PChar,"treachery_romance_rejects_villain",5.0,5.0); // Doesn't seem to lead to next quest case if 'AddDialogExitQuest' present in dialog
@@ -7377,7 +7524,7 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("Redmond_Residence")], true);
 		break;
 
-		case "threat_goto_santiago": // Triggered by dialog with Lucia / Edmundo if present when you visit townhall
+		case "threat_goto_santiago": // Triggered by dialog with Lucía / Edmundo if present when you visit townhall
 			Pchar.quest.threat_romance_goto_Santiago.win_condition.l1 = "location";
 			Pchar.quest.threat_romance_goto_Santiago.win_condition.l1.location = "Redmond_Town_01";
 			Pchar.quest.threat_romance_goto_Santiago.win_condition = "threat_romance_goto_Santiago";
@@ -7536,12 +7683,13 @@ void QuestComplete(string sQuestName)
 			if (!LAi_IsDead(characterfromID("Eng_soldier_3"))) speaker = "Eng_soldier_3";
 			if (speaker !="")
 			{
-				PChar.quest.normal_dialog = characters[GetCharacterIndex(speaker)].Dialog.Filename;
+//				PChar.quest.normal_dialog = characters[GetCharacterIndex(speaker)].Dialog.Filename;
+				StoreDialog(CharacterFromID(speaker));
 				PChar.quest.treachery_survivor = speaker;
 				LAi_SetActorType(characterFromID(speaker));
 				Characters[GetCharacterIndex(speaker)].Dialog.Filename = "guard_dialog.c";
 				Characters[GetCharacterIndex(speaker)].dialog.CurrentNode = "treachery_survivor";
-				LAi_ActorDialog(characterFromID(speaker),PChar,"treachery_confirmation2",30.0,30.0);
+				LAi_ActorDialog(CharacterFromID(speaker),PChar,"treachery_confirmation2",30.0,30.0);
 			}
 			else
 			{
@@ -7552,7 +7700,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "treachery_confirmation2":
-			Characters[GetCharacterIndex(PChar.quest.treachery_survivor)].Dialog.Filename = "PChar.quest.normal_dialog";
+//			Characters[GetCharacterIndex(PChar.quest.treachery_survivor)].Dialog.Filename = "PChar.quest.normal_dialog";
+			RestoreDialog(CharacterFromID(PChar.quest.treachery_survivor));
 			DeleteQuestAttribute("treachery_survivor");
 			EndQuestMovie();
 			DisableFastTravel(false);
@@ -7801,7 +7950,8 @@ void QuestComplete(string sQuestName)
 
 		case "hunt_guadeloupe_arrest2":
 			ch = CharacterFromID("Guadeloupe_guard_1");
-			PChar.quest.normal_dialog = ch.Dialog.Filename;
+//			PChar.quest.normal_dialog = ch.Dialog.Filename;
+			StoreDialog(ch);
 			ch.Dialog.Filename = "guard_dialog.c";
 			ch.dialog.CurrentNode = "hunt_guard_arrest";
 			LAi_SetActorType(ch);
@@ -7826,8 +7976,9 @@ void QuestComplete(string sQuestName)
 			if (CheckAttribute(PChar, "quest.cancel_SetCheckMinHP")) Pchar.quest.cancel_SetCheckMinHP.over = "yes";
 			Locations[FindLocation("PaP_prison")].locators_radius.reload.reload12 = 2.0;
 			ch = CharacterFromID("Guadeloupe_guard_1");
-			ch.Dialog.Filename = PChar.quest.normal_dialog;
-			ch.dialog.CurrentNode = "First time";
+//			ch.Dialog.Filename = PChar.quest.normal_dialog;
+//			ch.dialog.CurrentNode = "First time";
+			RestoreDialog(ch);
 			LAi_SetGuardianType(ch);
 			DoQuestReloadToLocation("PaP_prison", "goto", "goto24", "to_guadeloupe_prison2");
 		break;
@@ -7977,18 +8128,18 @@ void QuestComplete(string sQuestName)
 
 				if (GetCharacterShipLocation(PChar) == "Guadeloupe_Port")
 				{
-					Pchar.quest.hunt_arrested_on_ship.win_condition.l1 = "locator";
-					Pchar.quest.hunt_arrested_on_ship.win_condition.l1.location = "Guadeloupe_Port";
-					Pchar.quest.hunt_arrested_on_ship.win_condition.l1.locator_group = "reload";
-					Pchar.quest.hunt_arrested_on_ship.win_condition.l1.locator = "reload2_back";
+					PChar.quest.hunt_arrested_on_ship.win_condition.l1 = "locator";
+					PChar.quest.hunt_arrested_on_ship.win_condition.l1.location = "Guadeloupe_Port";
+					PChar.quest.hunt_arrested_on_ship.win_condition.l1.locator_group = "reload";
+					PChar.quest.hunt_arrested_on_ship.win_condition.l1.locator = "reload2_back";
 					PChar.quest.hunt_arrested_on_ship.win_condition = "hunt_arrested_on_ship";
 				}
 				else
 				{
-					Pchar.quest.hunt_arrested_on_ship_beach.win_condition.l1 = "locator";
-					Pchar.quest.hunt_arrested_on_ship_beach.win_condition.l1.location = "Guadeloupe_shore_01";
-					Pchar.quest.hunt_arrested_on_ship_beach.win_condition.l1.locator_group = "reload";
-					Pchar.quest.hunt_arrested_on_ship_beach.win_condition.l1.locator = "boat";
+					PChar.quest.hunt_arrested_on_ship_beach.win_condition.l1 = "locator";
+					PChar.quest.hunt_arrested_on_ship_beach.win_condition.l1.location = "Guadeloupe_shore_01";
+					PChar.quest.hunt_arrested_on_ship_beach.win_condition.l1.locator_group = "reload";
+					PChar.quest.hunt_arrested_on_ship_beach.win_condition.l1.locator = "boat";
 					PChar.quest.hunt_arrested_on_ship_beach.win_condition = "hunt_arrested_on_ship";
 				}
 			}
@@ -8002,7 +8153,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "guadeloupe_prison_out_of_cells":
-			logit("You found all your weapons.");
+			logit(TranslateString("","You found all your weapons."));
 			PlayStereoSound("interface\important_item.wav");
 			RemoveCharacterEquip(PChar, GUN_ITEM_TYPE);
 			RemoveCharacterEquip(PChar, BLADE_ITEM_TYPE);
@@ -8116,16 +8267,16 @@ void QuestComplete(string sQuestName)
 		case "hunt_out_of_academy":
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 	        	LAi_SetCheckMinHP(Pchar, LAi_GetCharacterHP(Pchar)-5.0, false, "hunt_back_in_prison");
-			Pchar.quest.cancel_SetCheckMinHP.win_condition.l1 = "location";
-			Pchar.quest.cancel_SetCheckMinHP.win_condition.l1.location = "Guadeloupe";
+			PChar.quest.cancel_SetCheckMinHP.win_condition.l1 = "location";
+			PChar.quest.cancel_SetCheckMinHP.win_condition.l1.location = "Guadeloupe";
 			PChar.quest.cancel_SetCheckMinHP.win_condition = "cancel_SetCheckMinHP";
 		break;
 
 		case "threat_out_of_academy":
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
-	        	LAi_SetCheckMinHP(Pchar, LAi_GetCharacterHP(Pchar)-5.0, false, "to_guadeloupe_prison1");
-			Pchar.quest.cancel_SetCheckMinHP.win_condition.l1 = "location";
-			Pchar.quest.cancel_SetCheckMinHP.win_condition.l1.location = "Guadeloupe";
+	        	LAi_SetCheckMinHP(PChar, LAi_GetCharacterHP(Pchar)-5.0, false, "to_guadeloupe_prison1");
+			PChar.quest.cancel_SetCheckMinHP.win_condition.l1 = "location";
+			PChar.quest.cancel_SetCheckMinHP.win_condition.l1.location = "Guadeloupe";
 			PChar.quest.cancel_SetCheckMinHP.win_condition = "cancel_SetCheckMinHP";
 		break;
 
@@ -8429,7 +8580,7 @@ void QuestComplete(string sQuestName)
 		case "hunt_get_equipment":
 			RestoreTempRemovedItems(PChar);
 			PlayStereoSound("interface\important_item.wav");
-			logit("You found your equipment. Equip some of it!");
+			logit(TranslateString("","You found your equipment. Equip some of it!"));
 			EndQuestMovie();
 			DisableFastTravel(true);
 			PChar.vcskip = "true";
@@ -8480,7 +8631,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(PChar, false);
 			Locations[FindLocation("PoPrince_Port")].reload.l4.disable = 1;		// Lock ship
 			bQuestDisableSeaEnter = true;
-			Locations[FindLocation("Buccaneers_Camp")].reload.l4.disable = 0;	// Unlock forger's house - not needed if Lucia or Edmundo is with you but allow it anyway
+			Locations[FindLocation("Buccaneers_Camp")].reload.l4.disable = 0;	// Unlock forger's house - not needed if Lucía or Edmundo is with you but allow it anyway
 			PChar.quest.ardent_hunt_status = "need_forger";
 			if (isofficer(romance))
 			{
@@ -8604,8 +8755,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "hunt_unlock_backdoor":
-			logit("The lock on this door must date back to the time when this town was Spanish.");
-			logit("It opens with the same key that you used to escape from Havana prison!");
+			logit(TranslateString("","The lock on this door must date back to the time when this town was Spanish."));
+			logit(TranslateString("","It opens with the same key that you used to escape from Havana prison!"));
 			TakeItemFromCharacter(PChar, "key3");	// Key will not be needed again, so dump it to tidy inventory
 			PlaySound("PEOPLE\lockpick2.wav");
 			Locations[FindLocation("PoPrince_town")].reload.l40.disable = false;
@@ -8810,7 +8961,8 @@ void QuestComplete(string sQuestName)
 
 			crewidx = GetCharacterIndex(PChar.quest.speaker);
 			crewref = CharacterFromID(PChar.quest.speaker);
-			PChar.quest.normal_dialog = characters[crewidx].Dialog.Filename;
+//			PChar.quest.normal_dialog = characters[crewidx].Dialog.Filename;
+			StoreDialog(crewref);
 			LAi_SetActorType(crewref);
 			characters[crewidx].Dialog.Filename = "crew_dialog.c";
 			characters[crewidx].dialog.CurrentNode = "hunt_rescue_crew_from_prison";
@@ -8819,7 +8971,8 @@ void QuestComplete(string sQuestName)
 
 		case "hunt_rescue_crew_from_prison2":
 			LAi_SetCitizenType(CharacterFromID(PChar.quest.speaker));
-			characters[GetCharacterIndex(PChar.quest.speaker)].Dialog.Filename = PChar.quest.normal_dialog;
+//			characters[GetCharacterIndex(PChar.quest.speaker)].Dialog.Filename = PChar.quest.normal_dialog;
+			RestoreDialog(CharacterFromID(PChar.quest.speaker));
 			LAi_SetActorType(characterfromID("Fort_guard"));
 			characters[GetCharacterIndex("Fort_guard")].Dialog.Filename = "guard_dialog.c";
 			characters[GetCharacterIndex("Fort_guard")].dialog.CurrentNode = "hunt_fort_what_business";
@@ -8841,7 +8994,8 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("PoPrince_fakefort3")], true);
 			crewidx = GetCharacterIndex(PChar.quest.speaker);
 			crewref = CharacterFromID(PChar.quest.speaker);
-			PChar.quest.normal_dialog = characters[crewidx].Dialog.Filename;
+//			PChar.quest.normal_dialog = characters[crewidx].Dialog.Filename;
+			StoreDialog(crewref);
 			LAi_SetActorType(crewref);
 			characters[crewidx].Dialog.Filename = "crew_dialog.c";
 			characters[crewidx].dialog.CurrentNode = "hunt_rescue_crew_what_now";
@@ -8849,7 +9003,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "hunt_fort_violent_escape2":
-			characters[GetCharacterIndex(PChar.quest.speaker)].Dialog.Filename = PChar.quest.normal_dialog;
+//			characters[GetCharacterIndex(PChar.quest.speaker)].Dialog.Filename = PChar.quest.normal_dialog;
+			RestoreDialog(CharacterFromID(PChar.quest.speaker));
 			LAi_LocationFightDisable(&Locations[FindLocation("PoPrince_fakefort3")], false);
 			EndQuestMovie();
 			RestorePassengers(PChar.id);
@@ -8919,7 +9074,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.hunt_romance_forges_papers.over = "yes";	// Clear out any quest checks which may be left if you started
 			PChar.quest.hunt_forger_next_day.over = "yes";		// to get forgery and then switched to violent escape
 //			Locations[FindLocation("Buccaneers_Camp")].reload.l4.disable = 1;	// Re-lock forger's house
-			if (isofficer(romance))					// Also reset "romance" in case Lucia/Edmundo is still in "follow" mode
+			if (isofficer(romance))					// Also reset "romance" in case Lucía/Edmundo is still in "follow" mode
 			{
 				LAi_SetOfficerType(romance); 
 				SetCharacterRemovable(romance, true);
@@ -8967,7 +9122,8 @@ void QuestComplete(string sQuestName)
 			{
 				crewidx = GetCharacterIndex(PChar.quest.speaker);
 				crewref = CharacterFromID(PChar.quest.speaker);
-				PChar.quest.normal_dialog = characters[crewidx].Dialog.Filename;
+//				PChar.quest.normal_dialog = characters[crewidx].Dialog.Filename;
+				StoreDialog(crewref);
 				characters[crewidx].Dialog.Filename = "crew_dialog.c";
 				characters[crewidx].dialog.CurrentNode = "hunt_rescue_glad_to_be_out";
 				LAi_SetActorType(crewref);
@@ -8998,7 +9154,8 @@ void QuestComplete(string sQuestName)
 
 		case "hunt_out_of_fort2":
 			LAi_SetOfficerType(CharacterFromId(PChar.quest.speaker));
-			characters[GetCharacterIndex(PChar.quest.speaker)].Dialog.Filename = PChar.quest.normal_dialog;
+//			characters[GetCharacterIndex(PChar.quest.speaker)].Dialog.Filename = PChar.quest.normal_dialog;
+			RestoreDialog(CharacterFromId(PChar.quest.speaker));
 			DeleteQuestAttribute("speaker");
 		break;
 
@@ -9056,6 +9213,10 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("French_Captain2")].recognized = true;
 			Characters[GetCharacterIndex("French_Captain3")].recognized = true;
 
+			PChar.quest.French_flagship.type = GetCharacterShipModel(characterfromID("French_Amiral"));
+			PChar.quest.French_flagship.name = Characters[GetCharacterIndex("French_Amiral")].Ship.Name;
+			PChar.quest.French_flagship.cabin = GetCharacterShipCabin(CharacterfromID("French_Amiral"));
+
 			PChar.quest.French_flagship_down.win_condition.l1 = "NPC_death";
 			Pchar.quest.French_flagship_down.win_condition.l1.character = "French_Amiral";
 			Pchar.quest.French_flagship_down.win_condition = "French_flagship_down";
@@ -9106,9 +9267,9 @@ void QuestComplete(string sQuestName)
 			PChar.location.from_sea = "REDMOND_PORT";
 			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "PChar");
 
-			if (!HasThisShip(GetCharacterShipModel(characterfromID("French_Amiral"))))
+			if (!HasThisShip(PChar.quest.French_flagship.type))
 			{
-				Preprocessor_AddQuestData("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+				Preprocessor_AddQuestData("warship", PChar.quest.French_flagship.name);
 				Preprocessor_AddQuestData("villain", GetMyFullName(villain));
 				Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(villain)));
 				Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(villain)));
@@ -9150,8 +9311,8 @@ void QuestComplete(string sQuestName)
 				}
 				else
 				{
-					ChangeCharacterAddressGroup(villain, GetCharacterShipCabin(characterfromID("French_Amiral")), "rld", "startloc");
-					DoReloadFromSeaToLocation(GetCharacterShipCabin(characterfromID("French_Amiral")), "reload", "reload1");
+					ChangeCharacterAddressGroup(villain, PChar.quest.French_flagship.cabin, "rld", "startloc");
+					DoReloadFromSeaToLocation(PChar.quest.French_flagship.cabin, "reload", "reload1");
 					Characters[villainidx].dialog.CurrentNode = "finale_challenge_to_duel";
 					LAi_QuestDelay("finale_duel_on_ship", 1.0);
 				}
@@ -9187,6 +9348,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "finale_duel_on_ship_fight":
+			LAi_NoRebirthEnable(villain);
 			LAi_SetActorType(villain);
 			LAi_ActorAttack(villain, PChar, "");
 			PChar.quest.finale_duel_on_ship_fight_over.win_condition.l1 = "NPC_death";
@@ -9195,11 +9357,13 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "finale_duel_on_ship_fight_over":
-			Preprocessor_AddQuestData("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			Preprocessor_AddQuestData("warship", PChar.quest.French_flagship.name);
 			Preprocessor_AddQuestData("villain", GetMyFullName(villain));
 			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(villain)));
-			if (PChar.location == GetCharacterShipCabin(PChar)) AddQuestRecord("Battle Royale", 26);
-			else AddQuestRecord("Battle Royale", 8);
+//			if (PChar.location == GetCharacterShipCabin(PChar)) AddQuestRecord("Battle Royale", 26);
+//			else AddQuestRecord("Battle Royale", 8);
+			if (PChar.location == PChar.quest.French_flagship.cabin) AddQuestRecord("Battle Royale", 8);
+			else AddQuestRecord("Battle Royale", 26);
 			Preprocessor_Remove("pronoun2");
 			Preprocessor_Remove("villain");
 			Preprocessor_Remove("warship");
@@ -9215,7 +9379,7 @@ void QuestComplete(string sQuestName)
 				}
 				else
 				{
-					Preprocessor_AddQuestData("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+					Preprocessor_AddQuestData("warship", PChar.quest.French_flagship.name);
 					AddQuestRecord("Battle Royale", 15);
 					Preprocessor_Remove("warship");
 					DoQuestReloadToLocation("REDMOND_PORT", "reload", "sea_1_back", "finale_return_to_port_royale");
@@ -9228,6 +9392,7 @@ void QuestComplete(string sQuestName)
 				Preprocessor_Remove("governor");
 				DoQuestReloadToLocation("Santiago_port", "reload", "reload2_back", "finale_return_to_Santiago");
 			}
+			if (!LAi_IsDead(romance) && GetAttribute(romance, "married.id") == Characters[villainidx].id) Characters[romanceidx].married = MR_SINGLE;
 		break;
 
 		case "finale_port_royale_evacuation_setup":
@@ -9389,7 +9554,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "finale_port_royale_fort_battle_over":
-			ChangeCharacterAddressGroup(characterfromID("Redmond Commander"), "Quest_Fort", "reload", "reloadc1");
+			ChangeCharacterAddressGroup(CharacterfromID("Redmond Commander"), "Quest_Fort", "reload", "reloadc1");
 			LAi_QuestDelay("finale_port_royale_fort_battle_over2", 0.1);
 		break;
 
@@ -9397,14 +9562,14 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(PChar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Quest_Fort")], true);
 			LAi_SetActorType(CharacterFromID("Redmond Commander"));
-			characters[GetCharacterIndex("Redmond Commander")].Dialog.Filename = "guard_dialog.c";
+			Characters[GetCharacterIndex("Redmond Commander")].Dialog.Filename = "guard_dialog.c";
 			Characters[GetCharacterIndex("Redmond Commander")].dialog.CurrentNode = "finale_port_royale_fort_battle_over";
 			LAi_ActorDialog(CharacterFromID("Redmond Commander"),PChar,"finale_port_royale_return_to_residence",10.0,10.0);
 		break;
 
 		case "finale_port_royale_return_to_residence":
 			AddQuestRecord("Battle Royale", 11);
-			ChangeCharacterAddress(characterFromID("Redmond Commander"), "None", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Redmond Commander"), "Redmond", "reload", "reload_fort1");
 			LAi_LocationFightDisable(&Locations[FindLocation("Quest_Fort")], false);
 			DoQuestReloadToLocation("Redmond_residence", "reload", "reload1", "finale_port_royale_residence_after_fort_battle");
 		break;
@@ -9468,10 +9633,10 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(PChar, false);
 			if(ispassenger(characterfromID("John Clifford Brin")))
 			{
-				SetCharacterRemovable(characterFromID("John Clifford Brin"), true);
-				SetCharacterRemovable(characterFromID("Elizabeth O_Brien"), true);
-				RemovePassenger(PChar, characterfromID("John Clifford Brin"));
-				RemovePassenger(PChar, characterFromID("Elizabeth O_Brien"));
+				SetCharacterRemovable(CharacterFromID("John Clifford Brin"), true);
+				SetCharacterRemovable(CharacterFromID("Elizabeth O_Brien"), true);
+				RemovePassenger(PChar, CharacterfromID("John Clifford Brin"));
+				RemovePassenger(PChar, CharacterFromID("Elizabeth O_Brien"));
 				LAi_QuestDelay("finale_reset_port_royale_governor", 0.1);
 			}
 			if (CheckQuestAttribute("governor_hostage", "John Clifford Brin"))
@@ -9540,16 +9705,17 @@ void QuestComplete(string sQuestName)
 			LAi_SetImmortal(CharacterFromID("John Clifford Brin"), true);
 			LAi_SetCitizenType(CharacterFromID("John Clifford Brin"));
 			LAi_SetImmortal(villain, false);
+			LAi_NoRebirthEnable(villain);
 			LAi_SetActorType(villain);
 			LAi_ActorAttack(villain, PChar, "");
-			PChar.quest.finale_duel_on_ship_fight_over.win_condition.l1 = "NPC_death";
-			Pchar.quest.finale_duel_on_ship_fight_over.win_condition.l1.character = Characters[villainidx].id;
-			Pchar.quest.finale_duel_on_ship_fight_over.win_condition = "finale_port_royale_residence_duel_over";
+			PChar.quest.finale_port_royale_residence_duel_over.win_condition.l1 = "NPC_death";
+			Pchar.quest.finale_port_royale_residence_duel_over.win_condition.l1.character = Characters[villainidx].id;
+			Pchar.quest.finale_port_royale_residence_duel_over.win_condition = "finale_port_royale_residence_duel_over";
 		break;
 
 		case "finale_port_royale_residence_duel_over":
 			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("John Clifford Brin")));
-			Preprocessor_AddQuestData("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
+			Preprocessor_AddQuestData("warship", PChar.quest.French_flagship.name);
 			Preprocessor_AddQuestData("villain", GetMyFullName(villain));
 			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(villain)));
 			AddQuestRecord("Battle Royale", 13);
@@ -9601,11 +9767,11 @@ void QuestComplete(string sQuestName)
 			DisableFastTravel(false);
 			if(AUTO_SKILL_SYSTEM)
 			{
-				AddPartyExpChar(pchar, "Leadership", 4000);
+				AddPartyExpChar(PChar, "Leadership", 4000);
 				AddPartyExpChar(PChar, "", 500);
-				AddPartyExpChar(pchar, "Sneak", 500);
+				AddPartyExpChar(PChar, "Sneak", 500);
 			}
-			else {AddPartyExp(pchar, 5000);}
+			else {AddPartyExp(PChar, 5000);}
 		break;
 
 		case "finale_reset_port_royale_governor":
@@ -9629,6 +9795,12 @@ void QuestComplete(string sQuestName)
 			{
 				ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
 				LAi_SetCitizenType(romance);
+			}
+			if(isofficer(romance) || ispassenger(romance))
+			{
+				PChar.quest.romance_to_townhall.win_condition.l1 = "location";
+				PChar.quest.romance_to_townhall.win_condition.l1.location = "Santiago_townhall";
+				PChar.quest.romance_to_townhall.win_condition = "romance_to_townhall";
 			}
 			PChar.quest.finale_evacuate_santiago = "go_get_him";
 		break;
@@ -9733,6 +9905,8 @@ void QuestComplete(string sQuestName)
 				AddPassenger(PChar, romance, 0);
 				SetCharacterRemovable(romance, false);
 			}
+			ChangeCharacterAddressGroup(characterFromID("Javier Balboa"), "Santiago_townhall", "sit", "sit1");
+			LAi_SetHuberType(characterFromID("Javier Balboa"));
 			LAi_QuestDelay("finale_evacuate_santiago_prepare_for_french_fleet", 0.1);
 		break;
 
@@ -9776,6 +9950,10 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(characterfromID("French_Contre-Amiral"));
 			LAi_SetStayType(characterfromID("French_Captain2"));
 			LAi_SetStayType(characterfromID("French_Captain3"));
+
+			PChar.quest.French_flagship.type = GetCharacterShipModel(characterfromID("French_Amiral"));
+			PChar.quest.French_flagship.name = Characters[GetCharacterIndex("French_Amiral")].Ship.Name;
+			PChar.quest.French_flagship.cabin = GetCharacterShipCabin(CharacterfromID("French_Amiral"));
 
 			PChar.quest.French_flagship_down.win_condition.l1 = "NPC_death";
 			Pchar.quest.French_flagship_down.win_condition.l1.character = "French_Amiral";
@@ -9832,7 +10010,7 @@ void QuestComplete(string sQuestName)
 				bQuestDisableMapEnter = false;
 				PChar.location.from_sea = "Santiago_port";
 				
-				if (!HasThisShip(GetCharacterShipModel(characterfromID("French_Amiral"))))
+				if (!HasThisShip(PChar.quest.French_flagship.type))
 				{
 					ChangeCharacterAddressGroup(villain, GetCharacterShipCabin(PChar), "rld", "startloc");
 					DoReloadFromSeaToLocation(GetCharacterShipCabin(PChar), "reload", "reload1");
@@ -9841,8 +10019,8 @@ void QuestComplete(string sQuestName)
 				}
 				else
 				{
-					ChangeCharacterAddressGroup(villain, GetCharacterShipCabin(characterfromID("French_Amiral")), "rld", "startloc");
-					DoReloadFromSeaToLocation(GetCharacterShipCabin(characterfromID("French_Amiral")), "reload", "reload1");
+					ChangeCharacterAddressGroup(villain, PChar.quest.French_flagship.cabin, "rld", "startloc");
+					DoReloadFromSeaToLocation(PChar.quest.French_flagship.cabin, "reload", "reload1");
 					Characters[villainidx].dialog.CurrentNode = "finale_challenge_to_duel";
 					LAi_QuestDelay("finale_duel_on_ship", 1.0);
 				}
@@ -9884,15 +10062,16 @@ void QuestComplete(string sQuestName)
 					LAi_ActorFollowEverywhere(romance, "", 10.0);
 				}
 			}
-			Pchar.quest.romance_to_townhall.win_condition.l1 = "location";
-			Pchar.quest.romance_to_townhall.win_condition.l1.location = "Santiago_townhall";
-			Pchar.quest.romance_to_townhall.win_condition = "romance_to_townhall";
+			PChar.quest.romance_to_townhall.win_condition.l1 = "location";
+			PChar.quest.romance_to_townhall.win_condition.l1.location = "Santiago_townhall";
+			PChar.quest.romance_to_townhall.win_condition = "romance_to_townhall";
 		break;
 
 		case "romance_to_townhall":
-			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
+			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto2");
 			if (!isofficer(romance))
 			{
+				ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
 				PChar.quest.romance_disappears.win_condition.l1 = "location";
 				PChar.quest.romance_disappears.win_condition.l1.location = "Cuba";
 				PChar.quest.romance_disappears.win_condition = "romance_disappears";
@@ -9956,8 +10135,8 @@ void QuestComplete(string sQuestName)
 
 // Tidy up left-over attributes
 			DeleteQuestAttribute("normal_dialog");
-			DeleteQuestAttribute("revenge_type");
 			DeleteQuestAttribute("abduction_status");
+			DeleteQuestAttribute("assassination");
 			DeleteQuestAttribute("convoy");
 			DeleteQuestAttribute("ardent_treachery_status");
 			DeleteQuestAttribute("treachery_peace_england");
@@ -9967,10 +10146,18 @@ void QuestComplete(string sQuestName)
 			DeleteQuestAttribute("invasion_status");
 			DeleteQuestAttribute("finale_galleons");
 			DeleteQuestAttribute("finale_galleons_assigned_by");
+//			DeleteQuestAttribute("French_flagship");
 
-			DisableTownCapture("Redmond", false);
+			if (CheckCharacterItem(PChar, "BattleOrders"))	ItemSetPrice("BattleOrders", 1); // Can now drop surplus quest items. (Can NOT dump your wedding ring!)
+			if (CheckCharacterItem(PChar, "BattleOrders2"))	ItemSetPrice("BattleOrders2", 1);
+			if (CheckCharacterItem(PChar, "key3"))		ItemSetPrice("key3", 1);
+			if (CheckCharacterItem(PChar, "SignetRing"))	ItemSetPrice("SignetRing", 1);
+
+			DisableTownCapture("Redmond", false);						// Unlock Port Royale and Santiago for player capture
 			DisableTownCapture("Santiago", false);
-			AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "1");
+			AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "1");		// International relations can now change randomly
+
+			PChar.quest.imperial_escort_enable = true;					// Unlock "Imperial Escort" extra quest
 
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -10121,6 +10308,13 @@ void QuestComplete(string sQuestName)
 
 		case "museum_gilbert_opens_door3":
 			PlaySound("PEOPLE\lock_open.wav");
+
+			Locations[FindLocation("Quest_Merchant_House")].reload.l2.name = "reload3";	// Duplicated from case "abduction_found_romance" in case you have not already been to the dungeon
+			Locations[FindLocation("Quest_Merchant_House")].reload.l2.go = "Quest_Cellar_Prison";
+			Locations[FindLocation("Quest_Merchant_House")].reload.l2.emerge = "reload1";
+			Locations[FindLocation("Quest_Merchant_House")].reload.l2.autoreload = "0";
+			Locations[FindLocation("Quest_Merchant_House")].reload.l2.label = "Old Inquisition prison.";
+
 			locations[FindLocation("Quest_Merchant_House")].reload.l2.disable = 0;
 			Locations[FindLocation("Quest_Cellar_Prison")].locators_radius.reload.reload6 = 2.5;
 			LAi_QuestDelay("museum_gilbert_sends_you_in", 3.0);
@@ -10239,6 +10433,3455 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(CharacterFromID("Inquisitor"), "None", "");
 			EndQuestMovie();
 			DisableFastTravel(false);
+		break;
+
+		case "imperial_escort_to_sanjuan":	// Triggered by dialog with Jusepe Guimaraes
+			DeleteQuestAttribute("imperial_escort_enable");
+			NPChar = CharacterFromID("Imperial_Captain");
+			GiveShip2Character(NPChar, "FastGalleon5", "San Lorenzo", -1, SPAIN, true, true);
+			NPChar.Ship.EmblemedSails.normalTex = "sail_weathered_common.tga";
+			NPChar.Ship.EmblemedSails.nationFileName = "sail_holy_roman_empire.tga";
+
+//			Maximum upgrades to escort ship
+			stripUpgradesBerth(GetCharacterIndex("Imperial_Captain"));	// First remove any randomly existing upgrades
+			applytunspeed(NPChar,"cplates",CPSPEEDRANGEMAX+1,CPSPEEDRANGEMAX);
+			applytunturning(NPChar,"cplates",CPTURNINGRANGEMAX+1,CPTURNINGRANGEMAX);
+			applytuninertia(NPChar,"cplates",CPINERTIARANGEMAX,CPINERTIARANGEMAX);
+
+			applytunhullhp(NPChar,"rhull",RHHULLHPRANGEMAX,RHHULLHPRANGEMAX);
+			applytuninertia(NPChar,"rhull",RHINERTIARANGEMAX,RHINERTIARANGEMAX);		
+			applytunupcaliber(NPChar,"rhull",RHCALIBERADD);
+
+			applytunspeed(NPChar,"nsails",NSSPEEDRANGEMAX+1,NSSPEEDRANGEMAX);
+			applytuninertia(NPChar,"nsails",NSINERTIARANGEMAX,NSINERTIARANGEMAX);		
+			applytunsailhp(NPChar,"nsails",NSSAILHPRANGEMAX,NSSAILHPRANGEMAX);
+
+//			applytunspeed(NPChar,"ltopmasts",TMSPEEDRANGEMAX+1,TMSPEEDRANGEMAX);
+//			applytuninertia(NPChar,"ltopmasts",TMINERTIARANGEMAX,TMINERTIARANGEMAX);		
+//			applytunsailcrit(NPChar,"ltopmasts",TMSAILCRIT);
+
+			applytunturning(NPChar,"stays",SSTURNINGRANGEMAX+1,SSTURNINGRANGEMAX);
+			applytuntack(NPChar,"stays",SSTACKRANGEMAX,SSTACKRANGEMIN);
+
+			NPChar.ship.tune.bcannons.on = 1;
+			NPChar.ship.tune.gchasers.on = 1;
+	
+			makeref(ImpShip,ShipsTypes[GetShipIndex("FastGalleon5")]);	// Use Holy Roman Empire sails for Imperial ship
+			ImpShip.EmblemedSails.normalTex = "sail_weathered_common.tga";
+			ImpShip.EmblemedSails.nationFileName = "sail_holy_roman_empire.tga";
+
+			PChar.quest.imperial_escort.ship_name = NPChar.Ship.Name;
+			if(!CheckAttribute(PChar, "QuestInfo.Imperial Escort")) SetQuestHeader("Imperial Escort");
+			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+			Preprocessor_AddQuestData("captain", GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("ship", PChar.quest.imperial_escort.ship_name);
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
+			AddQuestRecord("Imperial Escort", 1);
+			Preprocessor_Remove("governor");
+			Preprocessor_Remove("ship");
+			Preprocessor_Remove("captain");
+			Preprocessor_Remove("admiral");
+			setCharacterShipLocation(NPChar, "Muelle_port");
+			LAi_SetImmortal(NPChar, true);
+			ChangeCharacterAddressGroup(NPChar, "Muelle_port", "goto", "goto8");
+			LAi_SetStayType(NPChar);
+			NPChar.dialog.CurrentNode = "Meeting_in_San_Juan";
+		break;
+
+		case "imperial_escort_meeting_in_cabin":
+			cabin = GetCharacterShipCabin(CharacterFromID("Imperial_Captain"));
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_Captain"), cabin, "rld", "aloc0");
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_envoy"), cabin, "rld", "aloc1");
+			StoreOfficers(PChar.id);
+			DoQuestReloadToLocation(cabin, "reload", "reload1", "imperial_escort_meeting_in_cabin2");
+		break;
+
+		case "imperial_escort_meeting_in_cabin2":
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.CurrentNode = "introduce_envoy";
+			LAi_ActorDialog(characterfromID("Imperial_Captain"), PChar, "imperial_escort_envoy_answers", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_envoy_answers":
+			LAi_SetActorType(characterFromID("Imperial_envoy"));
+			Characters[GetCharacterIndex("Imperial_envoy")].Dialog.CurrentNode = "envoy_intro";
+			LAi_ActorDialog(characterfromID("Imperial_envoy"), PChar, "imperial_escort_emperors_daughter", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_emperors_daughter":
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.CurrentNode = "not_just_lady";
+			LAi_ActorDialog(characterfromID("Imperial_Captain"), PChar, "imperial_escort_apologise", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_apologise":
+			LAi_SetActorType(characterFromID("Imperial_envoy"));
+			Characters[GetCharacterIndex("Imperial_envoy")].Dialog.CurrentNode = "no_offence";
+			LAi_ActorDialog(characterfromID("Imperial_envoy"), PChar, "imperial_escort_meeting_in_cabin_end", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_meeting_in_cabin_end":
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.CurrentNode = "mission_significance";
+			LAi_ActorDialog(characterfromID("Imperial_Captain"), PChar, "", 5.0, 5.0);	// Exits to "imperial_escort_wait_till_morning_San_Juan" or "imperial_escort_to_San_Juan_residence"
+		break;
+
+		case "imperial_escort_wait_till_morning_San_Juan":
+			LAi_Fade("", "");
+			WaitDate("", 0, 0, 1, 0, 0);
+			SetCurrentTime(10.00, 0);
+			LAi_QuestDelay("imperial_escort_next_day_San_Juan", 2.0);
+		break;
+
+		case "imperial_escort_next_day_San_Juan":
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.CurrentNode = "escort_to_san_juan_residence";
+			LAi_ActorDialog(characterfromID("Imperial_Captain"), PChar, "", 5.0, 5.0);	// Exits to "imperial_escort_to_San_Juan_residence"
+		break;
+
+		case "imperial_escort_to_San_Juan_residence":
+			RestoreOfficers(PChar.id);
+			DoQuestReloadToLocation("Muelle_port", "reload", "reload3_back", "imperial_escort_to_San_Juan_residence2");
+		break;
+
+		case "imperial_escort_to_San_Juan_residence2":
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			Preprocessor_AddQuestData("captain", GetMyFullName(CharacterFromID("Imperial_Captain")));
+			Preprocessor_AddQuestData("ship", Characters[GetCharacterIndex("Imperial_Captain")].Ship.Name);
+			AddQuestRecord("Imperial Escort", 2);
+			Preprocessor_Remove("ship");
+			Preprocessor_Remove("captain");
+			Preprocessor_Remove("envoy");
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_Captain"), "Muelle_port", "goto", "goto10");
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_envoy"), "Muelle_port", "goto", "character4");
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			LAi_ActorFollowEverywhere(characterFromID("Imperial_Captain"), "", 10.0);
+			LAi_SetActorType(characterFromID("Imperial_envoy"));
+			LAi_ActorFollowEverywhere(characterFromID("Imperial_envoy"), "", 10.0);
+			Locations[FindLocation("Muelle_town_04")].locators_radius.reload.reload5 = 5.0;
+			Locations[FindLocation("Muelle_town_04")].reload.l5.disable = 1;
+
+			PChar.quest.imperial_escort_close_San_Juan_residence_approach.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_close_San_Juan_residence_approach.win_condition.l1.location = "Muelle_town_04";
+			PChar.quest.imperial_escort_close_San_Juan_residence_approach.win_condition = "imperial_escort_close_San_Juan_residence_approach";
+
+			PChar.quest.imperial_escort_to_San_Juan_residence3.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_to_San_Juan_residence3.win_condition.l1.location = "Muelle_town_04";
+			PChar.quest.imperial_escort_to_San_Juan_residence3.win_condition.l1.locator_group = "reload";
+			PChar.quest.imperial_escort_to_San_Juan_residence3.win_condition.l1.locator = "reload5";
+			PChar.quest.imperial_escort_to_San_Juan_residence3.win_condition = "imperial_escort_to_San_Juan_residence3";
+
+			PChar.quest.imperial_escort_envoy_dead.win_condition.l1 = "NPC_death";
+			Pchar.quest.imperial_escort_envoy_dead.win_condition.l1.character = "Imperial_envoy";
+			Pchar.quest.imperial_escort_envoy_dead.win_condition = "imperial_escort_bad_stuff";
+		break;
+
+		case "imperial_escort_close_San_Juan_residence_approach":
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
+		break;
+
+		case "imperial_escort_to_San_Juan_residence3":
+			Locations[FindLocation("Muelle_town_04")].locators_radius.reload.reload5 = 1.0;
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.CurrentNode = "san_juan_residence_arrived";
+			LAi_ActorDialog(characterfromID("Imperial_Captain"), PChar, "imperial_escort_to_San_Juan_residence_arrived", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_to_San_Juan_residence_arrived":
+			EndQuestMovie();
+			DisableFastTravel(false);
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			LAi_SetActorType(characterFromID("Imperial_envoy"));
+            		LAi_ActorGoToLocation(characterFromID("Imperial_Captain"), "reload", "reload5", "None", "", "", "", 10.0);
+            		LAi_ActorGoToLocation(characterFromID("Imperial_envoy"), "reload", "reload5", "None", "", "", "", 10.0);
+			LAi_SetLoginTime(characterFromID("Imperial_Captain"), 6.0, 22.0);
+			PChar.quest.imperial_escort_ready_to_sail.win_condition.l1 = "Timer";
+			PChar.quest.imperial_escort_ready_to_sail.win_condition.l1.date.day = GetAddingDataDay(0, 0, 1);
+			PChar.quest.imperial_escort_ready_to_sail.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 1);
+			PChar.quest.imperial_escort_ready_to_sail.win_condition.l1.date.year = GetAddingDataYear(0, 0, 1);
+			PChar.quest.imperial_escort_ready_to_sail.win_condition = "imperial_escort_ready_to_sail";
+		break;
+
+		case "imperial_escort_ready_to_sail":
+			Locations[FindLocation("Muelle_town_04")].reload.l5.disable = 0;
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_Captain"), "Muelle_port", "goto", "goto8");
+			LAi_SetStayType(characterFromID("Imperial_Captain"));
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.CurrentNode = "sail_to_santo_domingo";
+		break;
+
+		case "imperial_escort_sail_to_santo_domingo":	// triggered by dialog with "Imperial_Captain"
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			Preprocessor_AddQuestData("ship", Characters[GetCharacterIndex("Imperial_Captain")].Ship.Name);
+			AddQuestRecord("Imperial Escort", 3);
+			Preprocessor_Remove("ship");
+			Preprocessor_Remove("envoy");
+			Locations[FindLocation("Muelle_town_04")].reload.l5.disable = 0;
+			SetCompanionIndex(PChar, -1, GetCharacterIndex("Imperial_Captain"));
+			SetCharacterRemovable(characterFromID("Imperial_Captain"), false);
+			LAi_SetLoginTime(characterFromID("Imperial_Captain"), 0.0, 24.0);
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.TempNode = "First time";
+			Characters[GetCharacterIndex("Imperial_Captain")].location = "none";
+
+			PChar.quest.imperial_escort.French_Ambush_Captain4_assigned = true;
+			if(GetDifficulty() >= DIFFICULTY_SEADOG)
+			{
+				i = 8;
+				for (n = COMPANION_MAX - 1; n >= 0; n--)
+				{
+					cidx = GetCompanionIndex(GetMainCharacter(), n);
+					if (cidx >= 0)
+					{
+						crewref = GetCharacter(cidx);
+						if (GetCharacterShipClass(crewref) > 0 ) cc = GetCharacterShipClass(crewref);
+						if (cc < i) i = cc;
+					}
+				}
+				if (i <= 2)
+				{
+					PChar.quest.imperial_escort.French_Ambush_Captain1_assigned = true;
+					if (GetCompanionQuantity(PChar) < 4) DeleteQuestAttribute("imperial_escort.French_Ambush_Captain4_assigned");
+				}
+			}
+
+			PChar.quest.imperial_escort_mona_battle_setup.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_mona_battle_setup.win_condition.l1.location = "IslaMona";
+			PChar.quest.imperial_escort_mona_battle_setup.win_condition = "imperial_escort_mona_battle_setup";
+
+			PChar.quest.imperial_escort_hisp_battle_setup.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_hisp_battle_setup.win_condition.l1.location = "Hispaniola";
+			PChar.quest.imperial_escort_hisp_battle_setup.win_condition = "imperial_escort_hisp_battle_setup";
+
+			LAi_SetImmortal(characterFromID("Imperial_Captain"), false);
+			PChar.quest.imperial_escort_battle_over.fail_condition.l1 = "NPC_death";
+			Pchar.quest.imperial_escort_battle_over.fail_condition.l1.character = "Imperial_Captain";
+			Pchar.quest.imperial_escort_battle_over.fail_condition = "imperial_escort_battle_lost";
+		break;
+
+		case "imperial_escort_mona_battle_setup":
+			PChar.quest.imperial_escort_battle_location = PChar.location;
+//			Island_SetReloadEnableGlobal(PChar.quest.imperial_escort_battle_location, false);
+
+			Group_CreateGroup("imperial_escort_ambush");
+			Group_AddCharacter("imperial_escort_ambush", "French_Ambush_Captain2");
+			Group_AddCharacter("imperial_escort_ambush", "French_Ambush_Captain3");
+			if (CheckAttribute(PChar, "quest.imperial_escort.French_Ambush_Captain4_assigned")) Group_AddCharacter("imperial_escort_ambush", "French_Ambush_Captain4");
+			if (CheckAttribute(PChar, "quest.imperial_escort.French_Ambush_Captain1_assigned"))
+			{
+				Group_AddCharacter("imperial_escort_ambush", "French_Ambush_Captain1");
+				Group_SetGroupCommander("imperial_escort_ambush", "French_Ambush_Captain1");
+			}
+			else Group_SetGroupCommander("imperial_escort_ambush", "French_Ambush_Captain2");
+			characters[GetCharacterIndex("French_Ambush_Captain1")].nosurrender = 2;
+			characters[GetCharacterIndex("French_Ambush_Captain2")].nosurrender = 2;
+			Group_SetAddress("imperial_escort_ambush", PChar.quest.imperial_escort_battle_location, "Quest_ships", "Quest_Ship_1");
+			Group_SetTaskAttack("imperial_escort_ambush",  PLAYER_GROUP, true);
+			Group_SetPursuitGroup("imperial_escort_ambush", PLAYER_GROUP);
+			Group_LockTask("imperial_escort_ambush"); 
+			Sea_LoginGroupNow("imperial_escort_ambush");
+			PChar.quest.imperial_escort_battle.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_battle.win_condition.l1.location = PChar.quest.imperial_escort_battle_location;
+			PChar.quest.imperial_escort_battle.win_condition = "imperial_escort_battle";
+		break;
+
+		case "imperial_escort_hisp_battle_setup":
+			PChar.quest.imperial_escort_mona_battle_setup.over = "yes";
+			i = Group_FindGroup("imperial_escort_ambush");
+			if (i >= 0) Group_DeleteGroupIndex(i);
+			PChar.quest.imperial_escort_ambush_commander = "";
+			if (CheckAttribute(PChar, "quest.imperial_escort.French_Ambush_Captain4_assigned") && !LAi_IsDead(characterfromID("French_Ambush_Captain4")))
+			{
+				Group_AddCharacter("imperial_escort_ambush", "French_Ambush_Captain4");
+				PChar.quest.imperial_escort_ambush_commander = "French_Ambush_Captain4";
+			}
+			for (n=3; n>1; n--)
+			{
+				temp = "French_Ambush_Captain" + n;
+				if (!LAi_IsDead(characterfromID(temp)))
+				{
+					Group_AddCharacter("imperial_escort_ambush", temp);
+					PChar.quest.imperial_escort_ambush_commander = temp;
+				}
+			}
+			if (CheckAttribute(PChar, "quest.imperial_escort.French_Ambush_Captain1_assigned") && !LAi_IsDead(characterfromID("French_Ambush_Captain1")))
+			{
+				Group_AddCharacter("imperial_escort_ambush", "French_Ambush_Captain1");
+				PChar.quest.imperial_escort_ambush_commander = "French_Ambush_Captain1";
+			}
+
+			if(PChar.quest.imperial_escort_ambush_commander != "")
+			{
+				bQuestDisableMapEnter = true;
+				PChar.quest.imperial_escort_battle_location = PChar.location;
+//				Island_SetReloadEnableGlobal(PChar.quest.imperial_escort_battle_location, false);
+//				LAi_SetImmortal(characterFromID("Imperial_Captain"), false);
+				Group_SetGroupCommander("imperial_escort_ambush", PChar.quest.imperial_escort_ambush_commander);
+				Characters[GetCharacterIndex(PChar.quest.imperial_escort_ambush_commander)].nosurrender = 2;
+				Group_SetTaskAttack("imperial_escort_ambush",  PLAYER_GROUP, true);
+				Group_SetPursuitGroup("imperial_escort_ambush", PLAYER_GROUP);
+				Group_LockTask("imperial_escort_ambush");
+				Group_SetAddress("imperial_escort_ambush", PChar.quest.imperial_escort_battle_location, "Quest_ships", "Quest_Ship_1"); 
+				Sea_LoginGroupNow("imperial_escort_ambush");
+				PChar.quest.imperial_escort_battle.win_condition.l1 = "location";
+				PChar.quest.imperial_escort_battle.win_condition.l1.location = PChar.quest.imperial_escort_battle_location;
+				PChar.quest.imperial_escort_battle.win_condition = "imperial_escort_battle";
+			}
+			else
+			{
+				i = Group_FindGroup("imperial_escort_ambush");
+				if (i >= 0) Group_DeleteGroupIndex(i);
+			}
+		break;
+
+		case "imperial_escort_battle":
+			characters[GetCharacterIndex("French_Ambush_Captain1")].nosurrender = 2;
+			if (CheckAttribute(PChar, "quest.imperial_escort.French_Ambush_Captain1_assigned") && !LAi_IsDead(characterfromID("French_Ambush_Captain1")))
+			{
+				characters[GetCharacterIndex("French_Ambush_Captain2")].nosurrender = 2;
+				characters[GetCharacterIndex("French_Ambush_Captain3")].nosurrender = 2;
+				characters[GetCharacterIndex("French_Ambush_Captain4")].nosurrender = 2;
+
+				PChar.quest.imperial_escort_flagship_down.win_condition.l1 = "NPC_death";
+				Pchar.quest.imperial_escort_flagship_down.win_condition.l1.character = "French_Ambush_Captain1";
+				Pchar.quest.imperial_escort_flagship_down.win_condition = "imperial_escort_flagship_down";
+			}
+			else
+			{
+				DeleteAttribute(CharacterFromID("French_Ambush_Captain2"), "nosurrender");
+				DeleteAttribute(CharacterFromID("French_Ambush_Captain3"), "nosurrender");
+				DeleteAttribute(CharacterFromID("French_Ambush_Captain4"), "nosurrender");
+			} 
+
+			Characters[GetCharacterIndex("French_Ambush_Captain1")].recognized = true;
+			Characters[GetCharacterIndex("French_Ambush_Captain2")].recognized = true;
+			Characters[GetCharacterIndex("French_Ambush_Captain3")].recognized = true;
+			Characters[GetCharacterIndex("French_Ambush_Captain4")].recognized = true;
+
+			if (CheckAttribute(PChar, "quest.imperial_escort.French_Ambush_Captain1_assigned") && !LAi_IsDead(characterfromID("French_Ambush_Captain1")))
+			{
+				PChar.quest.imperial_escort_battle_over.win_condition.l1 = "NPC_death";
+				Pchar.quest.imperial_escort_battle_over.win_condition.l1.character = "French_Ambush_Captain1";
+			} 
+			if (!LAi_IsDead(characterfromID("French_Ambush_Captain2")))
+			{
+				PChar.quest.imperial_escort_battle_over.win_condition.l2 = "NPC_death";
+				Pchar.quest.imperial_escort_battle_over.win_condition.l2.character = "French_Ambush_Captain2";
+			}
+			if (!LAi_IsDead(characterfromID("French_Ambush_Captain3")))
+			{
+				PChar.quest.imperial_escort_battle_over.win_condition.l3 = "NPC_death";
+				Pchar.quest.imperial_escort_battle_over.win_condition.l3.character = "French_Ambush_Captain3";
+			}
+			if (CheckAttribute(PChar, "quest.imperial_escort.French_Ambush_Captain4_assigned") && !LAi_IsDead(characterfromID("French_Ambush_Captain4")))
+			{
+				PChar.quest.imperial_escort_battle_over.win_condition.l4 = "NPC_death";
+				Pchar.quest.imperial_escort_battle_over.win_condition.l4.character = "French_Ambush_Captain4";
+			} 
+			pchar.quest.imperial_escort_battle_over.win_condition.l5 = "SeaEnter";
+			Pchar.quest.imperial_escort_battle_over.win_condition = "imperial_escort_battle_over";
+		break;
+
+		case "imperial_escort_flagship_down":
+			if (!LAi_IsDead(characterfromID("French_Ambush_Captain2"))) DeleteAttribute(&characters[GetCharacterIndex("French_Ambush_Captain2")], "nosurrender");
+			if (!LAi_IsDead(characterfromID("French_Ambush_Captain3"))) DeleteAttribute(&characters[GetCharacterIndex("French_Ambush_Captain3")], "nosurrender"); 
+			if (!LAi_IsDead(characterfromID("French_Ambush_Captain4"))) DeleteAttribute(&characters[GetCharacterIndex("French_Ambush_Captain4")], "nosurrender");
+		break;
+
+		case "imperial_escort_battle_over":
+			AddQuestRecord("Imperial Escort", 5);
+			bQuestDisableMapEnter = false;
+//			Island_SetReloadEnableGlobal("IslaMona", true);
+//			Island_SetReloadEnableGlobal("Hispaniola", true);
+
+			PChar.quest.imperial_escort_santo_domingo_arrival.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_santo_domingo_arrival.win_condition.l1.location = "Santo_Domingo_port";
+			PChar.quest.imperial_escort_santo_domingo_arrival.win_condition = "imperial_escort_Santo_Domingo_arrival";
+		break;
+
+		case "imperial_escort_battle_lost":
+			Preprocessor_AddQuestData("ship", Characters[GetCharacterIndex("Imperial_Captain")].Ship.Name);
+			AddQuestRecord("Imperial Escort", 4);
+			Preprocessor_Remove("ship");
+			PChar.quest.imperial_escort_mona_battle_setup.over = "yes";	// In case the galleon is sunk in battle before you reach Isla Mona
+			PChar.quest.imperial_escort_hisp_battle_setup.over = "yes";	// In case the galleon is sunk in battle before you reach Hispaniola
+			bQuestDisableMapEnter = false;
+//			Island_SetReloadEnableGlobal("IslaMona", false);
+//			Island_SetReloadEnableGlobal("Hispaniola", false);
+			LAi_KillCharacter(characterfromID("Imperial_envoy"));
+		break; 
+
+		case "imperial_escort_bad_stuff":
+			PChar.quest.imperial_escort_close_San_Juan_residence_approach.over = "yes";	// Only necessary in case "Imperial_envoy" manages to be killed by random thugs on the way to San Juan residence
+			PChar.quest.imperial_escort_to_San_Juan_residence3.over = "yes";		//
+			Locations[FindLocation("Muelle_town_04")].reload.l5.disable = 0;		//
+
+			PChar.quest.imperial_escort_Santo_Domingo_attack.over = "yes"; 			// In case "Imperial_envoy" is killed by random thugs or assassins on the way to Santo Domingo residence
+			PChar.quest.imperial_escort_to_Santo_Domingo_residence.over = "yes";		//
+			Locations[FindLocation("Santo_Domingo_town")].reload.l4.disable = 0;		//
+
+/*			if (PChar.location == "Isla Mona")
+			{
+				bQuestDisableMapEnter = false;
+				Island_SetReloadEnableGlobal("IslaMona", false);
+			}
+			if (PChar.location == "Hispaniola")
+			{
+				bQuestDisableMapEnter = false;
+				Island_SetReloadEnableGlobal("Hispaniola", false);
+			} */
+
+			if (PChar.location == Characters[GetCharacterIndex("Imperial_Captain")].location && !LAi_IsDead(characterFromID("Imperial_Captain")))
+			{
+				StartQuestMovie(true, true, false);
+				DisableFastTravel(true);
+				LAi_SetImmortal(CharacterFromID("Imperial_Captain"), false);
+				LAi_SetActorType(characterFromID("Imperial_Captain"));
+				LAi_ActorAttack(characterfromID("Imperial_Captain"), PChar, "");
+				PChar.quest.imperial_escort_bad_stuff_captain_dead.win_condition.l1 = "NPC_death";
+				PChar.quest.imperial_escort_bad_stuff_captain_dead.win_condition.l1.character = "Imperial_Captain";
+				PChar.quest.imperial_escort_bad_stuff_captain_dead.win_condition = "imperial_escort_bad_stuff_captain_dead";
+			}
+
+			SetRMRelation(PChar, SPAIN, REL_WAR);
+			ChangeCharacterReputation(PChar, -10);
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 33);
+			Preprocessor_Remove("envoy");
+
+			PChar.quest.imperial_escort_bad_stuff_arrest1.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_bad_stuff_arrest1.win_condition.l1.location = "Cuba_port";
+			PChar.quest.imperial_escort_bad_stuff_arrest1.win_condition = "imperial_escort_bad_stuff_arrest1";
+
+			PChar.quest.imperial_escort_bad_stuff_arrest2.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_bad_stuff_arrest2.win_condition.l1.location = "Santiago_port";
+			PChar.quest.imperial_escort_bad_stuff_arrest2.win_condition = "imperial_escort_bad_stuff_arrest2";
+
+			PChar.quest.imperial_escort_bad_stuff_arrest3.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_bad_stuff_arrest3.win_condition.l1.location = "Muelle_port";
+			PChar.quest.imperial_escort_bad_stuff_arrest3.win_condition = "imperial_escort_bad_stuff_arrest3";
+
+			PChar.quest.imperial_escort_bad_stuff_arrest4.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_bad_stuff_arrest4.win_condition.l1.location = "Santo_Domingo_port";
+			PChar.quest.imperial_escort_bad_stuff_arrest4.win_condition = "imperial_escort_bad_stuff_arrest4";
+
+			PChar.quest.imperial_escort_bad_stuff_arrest4.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_bad_stuff_arrest4.win_condition.l1.location = "Cartagena_port";
+			PChar.quest.imperial_escort_bad_stuff_arrest4.win_condition = "imperial_escort_bad_stuff_arrest4";
+		break;
+
+		case "imperial_escort_bad_stuff_captain_dead":
+			DisableFastTravel(false);
+			EndQuestMovie();
+		break;
+
+		case "imperial_escort_bad_stuff_arrest1":
+			PChar.quest.arresters_location = "Cuba_port";
+			PChar.quest.arresters_group = "goto";
+			PChar.quest.arresters_locator = "goto_16";
+			LAi_QuestDelay("imperial_escort_bad_stuff_arrested", 0.1);
+		break;
+
+		case "imperial_escort_bad_stuff_arrest2":
+			PChar.quest.arresters_location = "Santiago_port";
+			PChar.quest.arresters_group = "goto";
+			PChar.quest.arresters_locator = "goto24";
+			LAi_QuestDelay("imperial_escort_bad_stuff_arrested", 0.1);
+		break;
+
+		case "imperial_escort_bad_stuff_arrest3":
+			PChar.quest.arresters_location = "Muelle_port";
+			PChar.quest.arresters_group = "reload";
+			PChar.quest.arresters_locator = "reload2";
+			LAi_QuestDelay("imperial_escort_bad_stuff_arrested", 0.1);
+		break;
+
+		case "imperial_escort_bad_stuff_arrest4":
+			PChar.quest.arresters_location = "Santo_Domingo_port";
+			PChar.quest.arresters_group = "goto";
+			PChar.quest.arresters_locator = "goto12";
+			LAi_QuestDelay("imperial_escort_bad_stuff_arrested", 0.1);
+		break;
+
+		case "imperial_escort_bad_stuff_arrest5":
+			PChar.quest.arresters_location = "Cartagena_port";
+			PChar.quest.arresters_group = "reload";
+			PChar.quest.arresters_locator = "reload2";
+			LAi_QuestDelay("imperial_escort_bad_stuff_arrested", 0.1);
+		break;
+
+		case "imperial_escort_bad_stuff_arrested":
+			PChar.quest.imperial_escort_bad_stuff_arrest1.over = "yes";
+			PChar.quest.imperial_escort_bad_stuff_arrest2.over = "yes";
+			PChar.quest.imperial_escort_bad_stuff_arrest3.over = "yes";
+			PChar.quest.imperial_escort_bad_stuff_arrest4.over = "yes";
+			PChar.quest.imperial_escort_bad_stuff_arrest5.over = "yes";
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
+			for (n=1; n<7; n++)
+			{
+				temp = "m" + (rand(5) + 1);
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[SPAIN].fantomModel.(temp), PChar.quest.arresters_group, PChar.quest.arresters_locator);
+				LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+				GiveSoldierWeapon(sld, SPAIN);
+				sld.id = "soldier" + n;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				LAi_SetActorType(sld);
+				LAi_ActorFollow(sld, PChar, "", 60.0);
+			}
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[SPAIN].fantomModel.m0, PChar.quest.arresters_group, PChar.quest.arresters_locator);
+			LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+			GiveSoldierWeapon(sld, SPAIN);
+			sld.id = "soldier" + n;
+			sld.nation = SPAIN;
+			SetRandomNameToCharacter(sld);
+			sld.Dialog.Filename = "guard_dialog.c";
+			sld.dialog.CurrentNode = "imperial_escort_arrest";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld,PChar,"imperial_escort_bad_stuff_arrested2",60.0,60.0);
+		break;
+
+		case "imperial_escort_bad_stuff_arrested2":
+			DisableFastTravel(true);
+			Locations[FindLocation("Havana_prison")].vcskip = true;
+			Locations[FindLocation("Havana_prison")].models.always.locators = "Pri_l_GR";
+			Locations[FindLocation("Havana_prison")].locators_radius.goto.goto26 = 1.5;
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard1"), "Havana_prison", "goto", "goto14");
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard2"), "Havana_prison", "goto", "goto16");
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard3"), "Havana_prison", "goto", "goto17");
+			LAi_SetGuardianType(characterfromID("Spanish_guard1"));
+			LAi_SetGuardianType(characterfromID("Spanish_guard2"));
+			LAi_SetGuardianType(characterfromID("Spanish_guard3"));
+			PChar.quest.old_blade = GetCharacterEquipByGroup(PChar, BLADE_ITEM_TYPE);
+			PChar.quest.old_gun = GetCharacterEquipByGroup(PChar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(PChar, BLADE_ITEM_TYPE);
+			RemoveCharacterEquip(PChar, GUN_ITEM_TYPE);
+			EnableEquip(pchar, BLADE_ITEM_TYPE, false);
+			EnableEquip(pchar, GUN_ITEM_TYPE, false);
+			TempRemoveItems(PChar);
+			DoQuestReloadToLocation("Havana_prison", "goto", "goto24", "imperial_escort_bad_stuff_in_jail");
+		break;
+
+		case "imperial_escort_bad_stuff_in_jail":
+			if(IsOfficer(romance) || IsCompanion(romance))
+			{
+				PChar.quest.rescuer = PChar.quest.romance;
+				SetCharacterRemovable(romance, false);
+				StoreDialog(romance);
+				romance.dialog.Filename = "romance_dialog.c";
+			}
+			else PChar.quest.rescuer = "Grigorio Formoselle";
+// PChar.quest.rescuer = "Grigorio Formoselle";	// for testing
+			StorePassengers(PChar.id);
+			if (LAi_IsDead(characterfromID("Imperial_envoy")))
+			{
+				ChangeCharacterAddressGroup(characterfromID("Jusepe Guimaraes"), "Havana_prison", "officers", "reload1_1");
+				LAi_SetActorType(characterfromID("Jusepe Guimaraes"));
+				LAi_ActorGoToLocator(characterfromID("Jusepe Guimaraes"), "reload", "reload12", "imperial_escort_sentenced_to_death", 30.0);
+			}
+			if (CheckQuestAttribute("imperial_escort.status", "envoy taken") || CheckQuestAttribute("imperial_escort.status", "ship_missing"))
+			{
+				if (CheckQuestAttribute("imperial_escort.status", "envoy taken"))
+				{
+					Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+					Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+					AddQuestRecord("Imperial Escort", 10);
+					Preprocessor_Remove("admiral");
+					Preprocessor_Remove("envoy");
+					SetCharacterRemovable(CharacterFromID("Imperial_Captain"), true);
+					RemoveCharacterCompanion(PChar, CharacterFromID("Imperial_Captain"));
+					ChangeCharacterAddressGroup(CharacterFromID("Imperial_Captain"), "Havana_prison", "goto", "goto10");
+					LAi_SetCitizenType(CharacterFromID("Imperial_Captain"));
+					SetCharacterShipLocation(CharacterFromID("Imperial_Captain"), "Cuba_port");
+				}
+				else
+				{
+					Preprocessor_AddQuestData("ship", PChar.quest.imperial_escort.ship_name);
+					Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+					Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+					AddQuestRecord("Imperial Escort", 9);
+					Preprocessor_Remove("admiral");
+					Preprocessor_Remove("envoy");
+					Preprocessor_Remove("ship");
+				}
+				NPChar = CharacterFromID("Warden");
+				if (NPChar.location == "Havana_prison" && !LAi_IsDead(NPChar)) LAi_fade("", "imperial_escort_warden_reunion");
+				else LAi_Fade("imperial_escort_time_in_jail", "imperial_escort_admiral_arrives");
+			}
+		break;
+
+		case "imperial_escort_time_in_jail":
+			WaitDate("", 0, 0, 1 + rand(3), 0, 0);
+			SetCurrentTime(10, 10);
+		break;
+
+		case "imperial_escort_admiral_arrives":
+			ChangeCharacterAddressGroup(characterfromID("Jusepe Guimaraes"), "Havana_prison", "officers", "reload1_1");
+			LAi_SetActorType(characterfromID("Jusepe Guimaraes"));
+			LAi_ActorGoToLocator(characterfromID("Jusepe Guimaraes"), "reload", "reload12", "imperial_escort_new_evidence", 30.0);
+		break;
+
+		case "imperial_escort_sentenced_to_death":
+			LAi_SetActorType(characterfromID("Jusepe Guimaraes"));
+			LAi_ActorTurnToCharacter(CharacterfromID("Jusepe Guimaraes"), (Pchar));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_execution";
+			LAi_ActorDialog(CharacterfromID("Jusepe Guimaraes"),PChar,"hung at dawn",5.0,5.0);
+		break;
+
+		case "imperial_escort_Santo_Domingo_arrival":
+			bQuestDisableMapEnter = false;
+			bQuestDisableSeaEnter = true;
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_Captain"), "Santo_Domingo_port", "goto", "goto20");
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_envoy"), "Santo_Domingo_port", "goto", "goto21");
+			LAi_group_MoveCharacter(CharacterFromID("Imperial_Captain"), LAI_GROUP_PLAYER);
+			LAi_group_MoveCharacter(CharacterFromID("Imperial_envoy"), LAI_GROUP_PLAYER);
+			LAi_SetActorType(CharacterFromID("Imperial_Captain"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Imperial_Captain"), "", 10.0);
+			LAi_SetActorType(CharacterFromID("Imperial_envoy"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Imperial_envoy"), "", 10.0);
+			Locations[FindLocation("Santo_Domingo_town")].locators_radius.reload.reload27 = 5.0;
+			Locations[FindLocation("Santo_Domingo_town")].reload.l4.disable = 1;
+			Locations[FindLocation("Santo_Domingo_town")].locators_radius.goto.goto10 = 9.0;
+
+			PChar.quest.imperial_escort_Santo_Domingo_attack_setup.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_Santo_Domingo_attack_setup.win_condition.l1.location = "Santo_Domingo_town";
+			PChar.quest.imperial_escort_Santo_Domingo_attack_setup.win_condition = "imperial_escort_Santo_Domingo_attack_setup";
+		break;
+
+		case "imperial_escort_Santo_Domingo_attack_setup":
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
+			for (n=1; n<5; n++)
+			{
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.5, GetRandomModelForType(true, "Outlaws"), "reload", "reload6");
+				LAi_group_MoveCharacter(sld, LAI_GROUP_MONSTERS);
+				sld.id = "Assassin" + n;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+			}
+			LAi_SetOfficerType(characterFromID("Imperial_Captain"));
+			LAi_SetImmortal(characterFromID("Imperial_Captain"), true);
+			LAi_SetHP(characterFromID("Imperial_envoy"), 500.0, 500.0);
+			Pchar.quest.imperial_escort_Santo_Domingo_attack.win_condition.l1 = "locator";
+			Pchar.quest.imperial_escort_Santo_Domingo_attack.win_condition.l1.location = "Santo_Domingo_town";
+			Pchar.quest.imperial_escort_Santo_Domingo_attack.win_condition.l1.locator_group = "goto";
+			Pchar.quest.imperial_escort_Santo_Domingo_attack.win_condition.l1.locator = "goto10";
+			Pchar.quest.imperial_escort_Santo_Domingo_attack.win_condition = "imperial_escort_Santo_Domingo_attack";
+		break;
+
+		case "imperial_escort_Santo_Domingo_attack":
+			Locations[FindLocation("Santo_Domingo_town")].locators_radius.goto.goto10 = 1.0;
+			LAi_group_SetRelation(LAI_GROUP_MONSTERS, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAI_GROUP_MONSTERS, LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck(LAI_GROUP_MONSTERS, "imperial_escort_Santo_Domingo_attack_defeated");
+			Characters[GetCharacterIndex("Jaime Lezcano")].model.animation = "Rousselet";
+			LAi_QuestDelay("imperial_escort_agent_attacks", 5.0);
+		break;
+
+		case "imperial_escort_Santo_Domingo_attack_defeated":
+			switch(GetAttribute(PChar, "quest.imperial_escort.status"))
+			{
+				case "envoy taken":
+					LAi_SetFightMode(PChar, false);
+					LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], true);
+					LAi_SetActorType(CharacterFromID("Imperial_Captain"));
+					Characters[GetCharacterIndex("Imperial_Captain")].dialog.CurrentNode = "envoy_taken";
+					LAi_ActorDialog(CharacterfromID("Imperial_Captain"),PChar,"imperial_escort_captain_follows",5.0,5.0);
+				break;
+
+				case "envoy_safe":
+					LAi_SetFightMode(PChar, false);
+					LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], true);
+					LAi_SetActorType(CharacterFromID("Imperial_Captain"));
+					Characters[GetCharacterIndex("Imperial_Captain")].dialog.CurrentNode = "envoy_safe";
+					LAi_ActorDialog(CharacterfromID("Imperial_Captain"),PChar,"",5.0,5.0);	// Exits to "imperial_escort_Santo_Domingo_residence_approach"
+				break;
+
+				if(Characters[GetCharacterIndex("Jaime Lezcano")].location == PChar.location)
+				{
+					LAi_SetImmortal(characterFromID("Jaime Lezcano"), false);
+					LAi_SetImmortal(characterFromID("Imperial_envoy"), false);
+					LAi_SetActorType(CharacterFromID("Imperial_Captain"));
+					LAi_ActorAttack(characterfromID("Imperial_Captain"), CharacterFromID("Jaime Lezcano"), "");
+					LAi_SetCheckMinHP(characterFromID("Jaime Lezcano"), LAi_GetCharacterHP(characterFromID("Jaime Lezcano"))-2, false, "imperial_escort_agent_flees");
+				}
+				else
+				{
+					LAi_SetOfficerType(characterFromID("Imperial_Captain"));
+//					LAi_SetImmortal(characterFromID("Imperial_Captain"), false);
+				}
+				PChar.quest.imperial_escort.status = "attack defeated";
+			}
+		break;
+
+		case "imperial_escort_captain_back":
+			LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], false);
+			LAi_SetOfficerType(characterFromID("Imperial_Captain"));
+			LAi_SetImmortal(characterFromID("Imperial_Captain"), false);
+		break;
+
+		case "imperial_escort_captain_follows":
+			LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], false);
+			LAi_SetActorType(CharacterFromID("Imperial_Captain"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Imperial_Captain"), "", 10.0);
+		break;
+
+		case "imperial_escort_agent_attacks":
+			LAi_SetImmortal(characterFromID("Jaime Lezcano"), true);
+			LAi_SetImmortal(characterFromID("Imperial_envoy"), true);
+			ChangeCharacterAddressGroup(characterfromID("Jaime Lezcano"), "Santo_Domingo_town", "officers", "reload1_2");
+			LAi_SetHP(characterFromID("Jaime Lezcano"), 500.0, 500.0);
+			GiveItem2Character(CharacterFromID("Jaime Lezcano"), "bladeclub");
+			EquipCharacterByItem(CharacterFromID("Jaime Lezcano"), "bladeclub");
+			GiveItem2Character(CharacterFromID("Imperial_envoy"), "blade37");	// or "bladeX4", which is fists, which often stuns the agent
+			EquipCharacterByItem(CharacterFromID("Imperial_envoy"), "blade37");
+			LAi_SetActorTypeNoGroup(CharacterFromID("Imperial_envoy"));
+			LAi_SetActorTypeNoGroup(CharacterFromID("Jaime Lezcano"));
+			LAi_ActorFollow(CharacterFromID("Jaime Lezcano"), characterFromID("Imperial_envoy"), "imperial_escort_agent_attacks2", 10.0);
+		break;
+
+		case "imperial_escort_agent_attacks2":
+			LAi_group_MoveCharacter(characterfromID("Jaime Lezcano"), "Imperial_Escort_Agent");
+			LAi_ActorAttack(characterfromID("Jaime Lezcano"), CharacterFromID("Imperial_envoy"), "");
+			PlaySound("VOICE\ENGLISH\Dut_f_a_009.wav");
+			LAi_QuestDelay("imperial_escort_envoy_defends", 0.0);
+		break;
+
+		case "imperial_escort_envoy_defends":
+			LAi_SetActorTypeNoGroup(CharacterFromID("Imperial_envoy"));
+			LAi_ActorAttack(characterfromID("Imperial_envoy"), CharacterFromID("Jaime Lezcano"), "");
+			LAi_QuestDelay("imperial_escort_agent_attack_resolved", 5.0);
+		break;
+
+		case "imperial_escort_agent_attack_resolved":
+			if(rand(9) == 0) LAi_QuestDelay("imperial_escort_agent_flees", 0.0);
+			else LAi_QuestDelay("imperial_escort_envoy_taken", 0.0);
+		break;
+
+		case "imperial_escort_envoy_taken":
+			LAi_SetImmortal(characterFromID("Jaime Lezcano"), false);
+			LAi_SetImmortal(characterFromID("Imperial_envoy"), false);
+			LAi_SetActorTypeNoGroup(CharacterFromID("Imperial_envoy"));
+			LAi_SetActorTypeNoGroup(CharacterFromID("Jaime Lezcano"));
+			LAi_SetCheckMinHP(characterFromID("Jaime Lezcano"), LAi_GetCharacterHP(characterFromID("Jaime Lezcano"))-2, false, "imperial_escort_agent_flees");
+			LAi_ActorGoToLocator(characterfromID("Imperial_envoy"), "reload", "reload1", "", 75.0);
+            		LAi_ActorGoToLocation(CharacterFromID("Jaime Lezcano"), "reload", "reload1", "None", "", "", "imperial_escort_envoy_taken2", 45.0);
+		break;
+
+		case "imperial_escort_envoy_taken2":
+			ChangeCharacterAddress(CharacterFromID("Imperial_envoy"), "None", "");
+			LAi_SetStayType(CharacterFromID("Imperial_envoy"));
+			if(CheckQuestAttribute("imperial_escort.status", "attack defeated"))
+			{
+				LAi_SetFightMode(PChar, false);
+				LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], true);
+				LAi_SetActorType(CharacterFromID("Imperial_Captain"));
+				Characters[GetCharacterIndex("Imperial_Captain")].dialog.CurrentNode = "envoy_taken";
+				LAi_ActorDialog(CharacterfromID("Imperial_Captain"),PChar,"imperial_escort_captain_follows",5.0,5.0);
+			}
+			PChar.quest.imperial_escort.status = "envoy taken";
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_envoy_taken";
+			EndQuestMovie();
+			DisableFastTravel(false);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 2500);
+				AddPartyExpChar(PChar, "", 1250);
+				AddPartyExpChar(PChar, "Sneak", 1250);
+			}
+			else {AddPartyExp(PChar, 5000);}
+
+			bQuestDisableSeaEnter = false;
+			Locations[FindLocation("Santo_Domingo_town")].locators_radius.reload.reload27 = 1.0;
+			Locations[FindLocation("Santo_Domingo_town")].reload.l4.disable = 0;
+		break;
+
+		case "imperial_escort_agent_flees":
+//			LAi_RemoveCheckMinHP(CharacterFromID("Imperial_envoy"));
+			LAi_RemoveCheckMinHP(CharacterFromID("Jaime Lezcano"));
+			LAi_SetImmortal(characterFromID("Jaime Lezcano"), false);
+			LAi_SetImmortal(characterFromID("Imperial_envoy"), false);
+			LAi_SetActorTypeNoGroup(CharacterFromID("Imperial_envoy"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Imperial_envoy"), "", 10.0);
+			if(CheckQuestAttribute("imperial_escort.status", "attack defeated"))
+			{
+				LAi_SetFightMode(PChar, false);
+				LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], true);
+				LAi_SetActorType(CharacterFromID("Imperial_Captain"));
+				Characters[GetCharacterIndex("Imperial_Captain")].dialog.CurrentNode = "envoy_safe";
+				LAi_ActorDialog(CharacterfromID("Imperial_Captain"),PChar,"",5.0,5.0);	// Exits to "imperial_escort_Santo_Domingo_residence_approach"
+			}
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			LAi_ActorAnimation(CharacterFromID("Jaime Lezcano"), "run", "imperial_escort_agent_flees2", 0.01);
+//			LAi_QuestDelay("imperial_escort_agent_flees2", 0.0);
+		break;
+
+		case "imperial_escort_agent_flees2":
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			LAi_SetImmortal(characterFromID("Jaime Lezcano"), true);
+            		LAi_ActorRunToLocation(CharacterFromID("Jaime Lezcano"), "reload", "reload1", "None", "", "", "", 60.0);
+			PChar.quest.imperial_escort.status = "envoy_safe";
+		break;
+
+		case "imperial_escort_Santo_Domingo_residence_approach":
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 7);
+			Preprocessor_Remove("envoy");
+			LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], false);
+			if(!LAi_IsDead(CharacterFromID("Imperial_envoy")))
+			{
+				LAi_SetActorType(CharacterFromID("Imperial_Captain"));
+				LAi_ActorFollowEverywhere(CharacterFromID("Imperial_Captain"), "", 10.0);
+				LAi_SetActorType(CharacterFromID("Imperial_envoy"));
+				LAi_ActorFollowEverywhere(CharacterFromID("Imperial_envoy"), "", 10.0);
+
+				PChar.quest.imperial_escort_to_Santo_Domingo_residence.win_condition.l1 = "locator";
+				PChar.quest.imperial_escort_to_Santo_Domingo_residence.win_condition.l1.location = "Santo_Domingo_town";
+				PChar.quest.imperial_escort_to_Santo_Domingo_residence.win_condition.l1.locator_group = "reload";
+				PChar.quest.imperial_escort_to_Santo_Domingo_residence.win_condition.l1.locator = "reload27";
+				PChar.quest.imperial_escort_to_Santo_Domingo_residence.win_condition = "imperial_escort_to_Santo_Domingo_residence";
+			}
+			else
+			{
+				EndQuestMovie();
+				DisableFastTravel(false);
+			}
+		break;
+
+		case "imperial_escort_to_Santo_Domingo_residence":
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], true);
+			Locations[FindLocation("Santo_Domingo_town")].locators_radius.reload.reload27 = 1.0;
+			LAi_SetActorType(characterFromID("Imperial_envoy"));
+			Characters[GetCharacterIndex("Imperial_envoy")].Dialog.CurrentNode = "Santo_Domingo_residence_safe";
+			LAi_ActorDialog(characterfromID("Imperial_envoy"), PChar, "imperial_escort_to_Santo_Domingo_residence2", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_to_Santo_Domingo_residence2":
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.CurrentNode = "Santo_Domingo_residence_arrived";
+			LAi_ActorDialog(characterfromID("Imperial_Captain"), PChar, "imperial_escort_to_Santo_Domingo_residence3", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_to_Santo_Domingo_residence3":
+			LAi_SetActorType(characterFromID("Imperial_envoy"));
+			Characters[GetCharacterIndex("Imperial_envoy")].Dialog.CurrentNode = "Santo_Domingo_residence_safe2";
+			LAi_ActorDialog(characterfromID("Imperial_envoy"), PChar, "imperial_escort_to_Santo_Domingo_residence4", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_to_Santo_Domingo_residence4":
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			Characters[GetCharacterIndex("Imperial_Captain")].Dialog.CurrentNode = "Santo_Domingo_residence_arrived2";
+			LAi_ActorDialog(characterfromID("Imperial_Captain"), PChar, "imperial_escort_Santo_Domingo_residence_arrived", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_Santo_Domingo_residence_arrived":
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 5000);
+				AddPartyExpChar(PChar, "", 2500);
+				AddPartyExpChar(PChar, "Sneak", 2500);
+			}
+			else {AddPartyExp(PChar, 10000);}
+			LAi_LocationFightDisable(&Locations[FindLocation("Santo_Domingo_town")], false);
+			EndQuestMovie();
+			DisableFastTravel(false);
+			LAi_SetActorType(characterFromID("Imperial_Captain"));
+			LAi_SetActorType(characterFromID("Imperial_envoy"));
+            		LAi_ActorGoToLocation(characterFromID("Imperial_Captain"), "reload", "reload27", "None", "", "", "", 10.0);
+            		LAi_ActorGoToLocation(characterFromID("Imperial_envoy"), "reload", "reload27", "None", "", "", "", 10.0);
+
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			Preprocessor_AddQuestData("day", GetHumanDate(GetAddingDataYear(0, 0, 2), GetAddingDataMonth(0, 0, 2), GetAddingDataDay(0, 0, 2)));
+			AddQuestRecord("Imperial Escort", 51);
+			Preprocessor_Remove("day");
+			Preprocessor_Remove("envoy");
+
+			PChar.quest.imperial_escort_ship_disappears.win_condition.l1 = "Timer";
+			PChar.quest.imperial_escort_ship_disappears.win_condition.l1.date.day = GetAddingDataDay(0, 0, 2);
+			PChar.quest.imperial_escort_ship_disappears.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 2);
+			PChar.quest.imperial_escort_ship_disappears.win_condition.l1.date.year = GetAddingDataYear(0, 0, 2);
+			PChar.quest.imperial_escort_ship_disappears.win_condition = "imperial_escort_ship_disappears";
+		break;
+
+		case "imperial_escort_ship_disappears":
+			Preprocessor_AddQuestData("captain", GetMyLastName(CharacterFromID("Imperial_Captain")));
+			AddQuestRecord("Imperial Escort", 52);
+			Preprocessor_Remove("captain");
+			PChar.quest.imperial_escort.shiptype = GetCharacterShipModel(CharacterfromID("Imperial_Captain"));
+			PChar.quest.imperial_escort.shipname = Characters[GetCharacterIndex("Imperial_Captain")].Ship.Name;
+			PChar.quest.imperial_escort.shipcabin = GetCharacterShipCabin(CharacterfromID("Imperial_Captain"));
+			SetCharacterRemovable(CharacterFromID("Imperial_Captain"), true);
+			RemoveCharacterCompanion(PChar, CharacterFromID("Imperial_Captain"));
+			ExchangeCharacterShip(CharacterFromID("Imperial_Captain"), CharacterFromID("Pelayo Nunez"));
+//			setCharacterShipLocation(CharacterFromID("Pelayo Nunez"), "Cuba_Shore_06");
+			LAi_type_actor_Reset(CharacterFromID("Imperial_Captain"));
+			LAi_type_actor_Reset(CharacterFromID("Imperial_envoy"));
+			ChangeCharacterAddress(CharacterFromID("Imperial_Captain"), "None", "");
+			SetCharacterShipLocation(CharacterFromID("Imperial_Captain"), "None");
+			ChangeCharacterAddress(CharacterFromID("Imperial_envoy"), "None", "");
+			PChar.quest.imperial_escort.status = "ship_missing";
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_ship_missing";
+			PChar.quest.imperial_escort_ship_disappears2.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_ship_disappears2.win_condition.l1.location = "Santo_Domingo_port";
+			PChar.quest.imperial_escort_ship_disappears2.win_condition = "imperial_escort_ship_disappears2";
+		break;
+
+		case "imperial_escort_ship_disappears2":
+			Pchar.dialog.CurrentNode = "imperial_escort_ship_missing";
+			LAi_SetActorType(PChar);
+			LAi_ActorSelfDialog(PChar, "imperial_escort_ship_disappears3");
+		break;
+
+		case "imperial_escort_ship_disappears3":
+			Preprocessor_AddQuestData("ship", PChar.quest.imperial_escort.ship_name);
+			AddQuestRecord("Imperial Escort", 8);
+			Preprocessor_Remove("ship");
+			Lai_SetPlayerType(PChar);
+			bQuestDisableSeaEnter = false;
+			Locations[FindLocation("Santo_Domingo_town")].locators_radius.reload.reload27 = 1.0;
+			Locations[FindLocation("Santo_Domingo_town")].reload.l4.disable = 0;
+		break;
+
+		case "imperial_escort_warden_reunion":	// Triggered by prison sequence if warden is alive, and PChar.quest.imperial_escort.status is either "envoy taken" or "ship_missing"
+			LAi_SetActorType(characterFromID("Warden"));
+			LAi_ActorGoToLocator(characterfromID("Warden"), "reload", "reload12", "imperial_escort_warden_reunion2", 30.0);
+		break;
+
+		case "imperial_escort_warden_reunion2":
+			LAi_ActorTurnToCharacter(characterFromID("Warden"), (Pchar));
+			if (!CheckAttribute(characterfromID("Warden"), "stuntime"))
+			{
+				characters[GetCharacterIndex("Warden")].Dialog.Filename = "Warden_dialog.c";
+				Characters[GetCharacterIndex("Warden")].dialog.CurrentNode = "not_again";
+				LAi_ActorDialogNow(characterFromID("Warden"),PChar,"imperial_escort_warden_leaves",1.0);
+			}
+		break;
+
+		case "imperial_escort_warden_leaves":
+			LAi_SetActorType(characterfromID("Warden"));
+			LAi_ActorGoToLocator(characterfromID("Warden"), "goto", "goto22", "imperial_escort_warden_leaves2", 10.0);
+		break;
+
+		case "imperial_escort_warden_leaves2":
+//			LAi_SetCitizenType(CharacterFromID("Warden"));
+			LAi_SetStunnedTypeNoGroup(characterFromID("Warden"));
+			LAi_Fade("imperial_escort_time_in_jail", "imperial_escort_admiral_arrives");
+		break;
+
+		case "imperial_escort_new_evidence":	// Triggered by prison sequence if PChar.quest.imperial_escort.status is either "envoy taken" or "ship_missing"
+			LAi_SetActorType(characterfromID("Jusepe Guimaraes"));
+			LAi_ActorTurnToCharacter(CharacterfromID("Jusepe Guimaraes"), (Pchar));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_development";
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar, "imperial_escort_admiral_leaves", 1.0);
+		break;
+
+		case "imperial_escort_admiral_leaves":
+			LAi_SetActorType(characterfromID("Jusepe Guimaraes"));
+			LAi_ActorGoToLocator(characterfromID("Jusepe Guimaraes"), "officers", "reload1_1", "imperial_escort_admiral_leaves2", 10.0);
+		break;
+
+		case "imperial_escort_admiral_leaves2":
+			if(CheckAttribute(PChar, "land"))
+			{
+				makearef(PChar_land, PChar.land);
+				// PChar.quest.imperial_escort.land = "";
+				makearef(PChar_quest_land, PChar.quest.imperial_escort.land);
+				CopyAttributes(PChar_quest_land, PChar_land);
+			}
+			PChar.quest.imperial_escort.old_spain_relation = GetRMRelation(PChar, SPAIN);
+			PChar.quest.imperial_escort.old_spain_rank = GetRank(PChar, SPAIN);
+			if(CheckAttribute(PChar, "knighted"))
+			{
+				PChar.quest.imperial_escort.old_knighted = PChar.knighted;
+				PChar.quest.imperial_escort.old_title = PChar.title;
+			}
+
+			if(CheckAttribute(PChar, "quest.betrayed_spain") || CheckAttribute(PChar, "quest.betrayed_spain1"))
+			{
+				PChar.quest.betrayed_spain.over = "yes";
+				PChar.quest.betrayed_spain1.over = "yes";
+			}
+			LeaveService(PChar, SPAIN, true);
+			if (CheckQuestAttribute("background", "pirate")) HoistFlag(PIRATE);
+			ChangeCharacterAddressGroup(characterfromID("Jusepe Guimaraes"), "Havana_House_03", "sit", "sit1");
+			LAi_SetHuberType(characterfromID("Jusepe Guimaraes"));
+
+			NPChar = CharacterFromID("Emiliano de Guzmán");
+			ChangeCharacterAddress(CharacterFromID(Towns[GetTownIndex("Santiago")].gov), "none", "");
+			ChangeCharacterAddressGroup(NPChar, "Santiago_townhall", "sit", "sit1");
+			LAi_SetHuberType(NPChar);
+			Towns[GetTownIndex("Santiago")].gov = "Emiliano de Guzmán";
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 1;	// Lock Santiago townhall so you can't face Emiliano de Guzmán until the right time
+
+			LAi_Fade("imperial_escort_next_night_in_jail", "imperial_escort_rescuer_arrives");
+		break;
+
+		case "imperial_escort_next_night_in_jail":
+			WaitDate("", 0, 0, 1, 0, 0);
+			SetCurrentTime(23, rand(59));
+		break;
+
+		case "imperial_escort_rescuer_arrives":
+			LAi_SetStunnedTypeNoGroup(characterFromID("Spanish_guard1"));
+			LAi_SetStunnedTypeNoGroup(characterFromID("Spanish_guard2"));
+			LAi_SetStunnedTypeNoGroup(characterFromID("Spanish_guard3"));
+//			LAi_SetStunnedTypeNoGroup(characterFromID("Havana Prison Commandant"));
+			LAi_SetActorType(characterFromID("Havana Prison Commandant"));
+			LAi_ActorAnimation(characterFromID("Havana Prison Commandant"), "Lay_1", "", -1);
+			NPChar = CharacterFromID(PChar.quest.rescuer);
+			ChangeCharacterAddressGroup(NPChar, PChar.location, "officers", "reload1_1");
+			LAi_SetImmortal(NPChar, true);		// Make sure rescuer survives walk through jungle and is available for explanation
+			LAi_SetActorType(NPChar);
+			LAi_ActorGoToLocator(NPChar, "reload", "reload12", "imperial_escort_rescued", 30.0);
+		break;
+
+		case "imperial_escort_rescued":
+			NPChar = CharacterFromID(PChar.quest.rescuer);
+			LAi_SetActorType(NPChar);
+			LAi_ActorTurnToCharacter(NPChar, (PChar));
+			NPChar.dialog.CurrentNode = "imperial_escort_jailbreak";
+			LAi_ActorDialogNow(NPChar, PChar, "imperial_escort_rescued2", 1.0);
+		break;
+
+		case "imperial_escort_rescued2":
+			PlaySound("PEOPLE\lockpick2.wav");
+//			LAi_Fade("imperial_escort_rescued3", "imperial_escort_rescued4");
+			LAi_QuestDelay("imperial_escort_rescued3", 1.0);
+		break;
+
+		case "imperial_escort_rescued3":
+			ChangeCharacterAddressGroup(CharacterFromID(PChar.quest.rescuer), "Havana_prison", "goto", "goto23");
+			DoQuestReloadToLocation("Havana_prison", "reload", "reload12", "imperial_escort_rescued4");
+//			ChangeCharacterAddressGroup(PChar, "Havana_prison", "reload", "reload12");
+		break;
+
+		case "imperial_escort_rescued4":
+			PChar.quest.imperial_escort_get_stuff.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_get_stuff.win_condition.l1.location = "Havana_prison";
+			PChar.quest.imperial_escort_get_stuff.win_condition.l1.locator_group = "goto";
+			PChar.quest.imperial_escort_get_stuff.win_condition.l1.locator = "goto26";
+			PChar.quest.imperial_escort_get_stuff.win_condition = "guadeloupe_prison_out_of_cells";	// Re-use same code as Guadeloupe prison escape to return your equipment
+
+			PChar.quest.imperial_escort_remind_stuff.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_remind_stuff.win_condition.l1.location = "Havana_town_05";
+			Pchar.quest.imperial_escort_remind_stuff.win_condition = "imperial_escort_remind_stuff";
+
+			LAi_QuestDelay("imperial_escort_reset_rescuer", 1.0);
+		break;
+
+		case "imperial_escort_remind_stuff":
+			NPChar = CharacterFromID(PChar.quest.rescuer);
+			LAi_SetActorType(NPChar);
+			LAi_ActorTurnToCharacter(NPChar, (PChar));
+			NPChar.dialog.CurrentNode = "imperial_escort_remind_stuff";
+			LAi_ActorDialog(NPChar, PChar, "imperial_escort_reset_rescuer", 5.0, 5.0);	// Exits to "imperial_escort_ships_impounded" if you got your stuff or don't want it, otherwise just exits so you can go back and get it
+
+			if(CheckAttribute(PChar, "quest.imperial_escort_get_stuff"))
+			{
+				PChar.quest.imperial_escort_rescued4.win_condition.l1 = "location";
+				PChar.quest.imperial_escort_rescued4.win_condition.l1.location = "Havana_prison";
+				Pchar.quest.imperial_escort_rescued4.win_condition = "imperial_escort_rescued4";
+			}
+		break;
+
+		case "imperial_escort_reset_rescuer":
+			NPChar = CharacterFromID(PChar.quest.rescuer);
+			if(PChar.quest.rescuer == PChar.quest.romance)
+			{
+				SetOfficersIndex(PChar, 3, GetCharacterIndex(PChar.quest.rescuer));
+				LAi_SetOfficerType(NPChar);
+			}
+			else
+			{
+				LAi_type_Actor_Reset(NPChar);
+				LAi_ActorFollowEverywhere(NPChar, "", 5.0);
+			}
+		break;
+
+		case "imperial_escort_ships_impounded":		// Triggered by dialog with rescuer
+			PChar.quest.imperial_escort_get_stuff.over = "yes";
+			PChar.quest.imperial_escort_rescued4.over = "yes";
+			Locations[FindLocation("Havana_town_05")].reload.l4.disable = 1;
+			NPChar = CharacterFromID(PChar.quest.rescuer);
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "imperial_escort_ships_impounded";
+			LAi_ActorDialog(NPChar, PChar, "imperial_escort_reset_rescuer", 5.0, 5.0);
+
+			DisableFastTravel(true);
+			bQuestDisableSeaEnter = true;
+			Locations[FindLocation("Cuba_port")].reload.l2.disable = 1;
+			Locations[FindLocation("Cuba_port")].reload.l3.disable = 1;
+			Locations[FindLocation("Cuba_port")].reload.l4.disable = 1;
+			Locations[FindLocation("Cuba_port")].reload.l5.disable = 1;
+
+			PChar.quest.port_bad.win_condition.l1 = "location";
+			PChar.quest.port_bad.win_condition.l1.location = "Cuba_port";
+			PChar.quest.port_bad.win_condition = "port_bad";
+
+			ChangeCharacterAddressGroup(characterfromID("Spanish_Captain1"), "Cuba_port", "goto", "goto_2");
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard1"), "Cuba_port", "officers", "Door_1_1");
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard2"), "Cuba_port", "officers", "Door_1_2");
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard3"), "Cuba_port", "officers", "Door_1_3");
+
+// Ships storage copied from case "mona_attack_detach_fleet2".  To restore, see case "mona_attack_rejoin_fleet2"
+			PChar.quest.imperial_escort.original_fleet_size = GetCompanionQuantity(PChar);
+			for (n=1; n<COMPANION_MAX; n++)
+			{
+				cc = GetCompanionIndex(PChar,n);
+				temp = "companion" + n;
+				if (cc > 0)
+				{
+					PChar.quest.imperial_escort.(temp) = characters[cc].id;
+					if (HasSubStr(PChar.quest.imperial_escort.(temp), "Enc_Officer")) LAi_StoreFantom(CharacterFromId(PChar.quest.imperial_escort.(temp))); // Prevent character from being overwritten by another "Enc_Officer"
+					RemoveCharacterCompanion(PChar, characters[cc]);
+				}
+				else PChar.quest.imperial_escort.(temp) = "*NULL*";
+			}
+			ExchangeCharacterShip(PChar, CharacterFromID("Grigorio Formoselle"));
+			GiveShip2Character(PChar, "Barque1", "Mayordomo", -1, SPAIN, true, true);
+			SetCharacterShipLocation(PChar, "Cuba_Shore_03");
+
+			PChar.quest.imperial_escort_goto_beach.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_goto_beach.win_condition.l1.location = "Cuba_Shore_03";
+			PChar.quest.imperial_escort_goto_beach.win_condition = "imperial_escort_goto_beach";
+		break;
+
+		case "imperial_escort_goto_beach":
+			NPChar = CharacterFromID(PChar.quest.rescuer);
+			LAi_SetImmortal(NPChar, false);
+			LAi_SetFightMode(PChar, false);
+			LAi_type_actor_Reset(PChar);
+			LAi_ActorWaitDialog(PChar, NPChar);
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "imperial_escort_explanation";
+			LAi_ActorDialog(NPChar, PChar, "imperial_escort_borrow_ship", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_borrow_ship":
+			Preprocessor_AddQuestData("rescuer", GetMyFullName(CharacterFromID(PChar.quest.rescuer)));
+			Preprocessor_AddQuestData("rescuer1", GetMyName(CharacterFromID(PChar.quest.rescuer)));
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 11);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("governor");
+			Preprocessor_Remove("rescuer1");
+			Preprocessor_Remove("rescuer");
+			DisableFastTravel(false);
+			bQuestDisableSeaEnter = false;
+			LAi_SetPlayerType(PChar);
+			NPChar = CharacterFromID(PChar.quest.rescuer);
+			if(PChar.quest.rescuer == PChar.quest.romance)
+			{
+				SetCharacterRemovable(NPChar, true);
+				SetOfficersIndex(PChar, 3, GetCharacterIndex(PChar.quest.rescuer));
+				LAi_SetOfficerType(NPChar);
+				RestoreDialog(NPChar);
+			}
+			else
+			{
+				LAi_SetActorType(NPChar);
+          			LAi_ActorGoToLocation(NPChar, "reload", "reload2_back", "none", "", "", "", 120.0);
+				Pchar.quest.imperial_escort_grigorio_home.win_condition.l1 = "ExitFromLocation";
+				PChar.quest.imperial_escort_grigorio_home.win_condition.l1.location = PChar.location;
+				Pchar.quest.imperial_escort_grigorio_home.win_condition = "imperial_escort_grigorio_home";
+			}
+
+			PChar.quest.port_bad.over = "yes";
+			ChangeCharacterAddress(characterFromID("Spanish_Captain1"), "None", "");
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard1"), "Havana_prison", "goto", "goto14");
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard2"), "Havana_prison", "goto", "goto16");
+			ChangeCharacterAddressGroup(characterfromID("Spanish_guard3"), "Havana_prison", "goto", "goto17");
+			LAi_SetGuardianType(characterfromID("Spanish_guard1"));
+			LAi_SetGuardianType(characterfromID("Spanish_guard2"));
+			LAi_SetGuardianType(characterfromID("Spanish_guard3"));
+			LAi_SetHuberType(characterfromID("Havana Prison Commandant"));
+			Locations[FindLocation("Havana_town_05")].reload.l4.disable = 0;
+			Locations[FindLocation("Cuba_port")].reload.l2.disable = 0;
+			Locations[FindLocation("Cuba_port")].reload.l3.disable = 0;
+			Locations[FindLocation("Cuba_port")].reload.l4.disable = 0;
+			Locations[FindLocation("Cuba_port")].reload.l5.disable = 0;
+
+			ChangeCharacterAddressGroup(characterfromID("Garfield Leighton"), "Tortuga_Tavern", "goto", "goto6");
+			LAi_group_MoveCharacter(characterfromID("Garfield Leighton"), "TORTUGA_CITIZENS");
+			Characters[GetCharacterIndex("Garfield Leighton")].dialog.CurrentNode = "imperial_escort_meeting";
+		break;
+
+		case "imperial_escort_grigorio_home":
+			ChangeCharacterAddressGroup(CharacterFromID("Grigorio Formoselle"), "Santiago_townhall", "goto", "goto10");
+			LAi_SetGuardianTypeNoGroup(CharacterFromID("Grigorio Formoselle"));
+		break;
+
+		case "imperial_escort_visit_Tortuga_governor":		// Triggered by dialog with Garfield Leighton
+			Preprocessor_AddQuestData("pirate", GetMyFullName(CharacterFromID("Garfield Leighton")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 12);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("pirate");
+			PChar.quest.imperial_escort.status = "goto_tortuga";
+			StoreDialog(CharacterFromID("Bertrand Ogeron"));
+			characters[GetCharacterIndex("Bertrand Ogeron")].Dialog.Filename = "quest_Bertrand Ogeron_dialog.c";
+			Pchar.quest.imperial_escort_remove_leighton.win_condition.l1 = "MapEnter";
+			Pchar.quest.imperial_escort_remove_leighton.win_condition = "imperial_escort_remove_leighton";
+		break;
+
+		case "imperial_escort_remove_leighton":
+			ChangeCharacterAddress(characterFromID("Garfield Leighton"), "None", "");
+		break;
+
+		case "imperial_escort_tortuga_tailor_setup":
+			StoreDialog(CharacterFromID("Guy Lafleur"));
+			characters[GetCharacterIndex("Guy Lafleur")].Dialog.Filename = "quest_Guy Lafleur_dialog.c";
+			Pchar.quest.imperial_escort_restore_tortuga_tailor.win_condition.l1 = "MapEnter";
+			Pchar.quest.imperial_escort_restore_tortuga_tailor.win_condition = "imperial_escort_restore_tortuga_tailor";
+		break;
+
+		case "imperial_escort_restore_tortuga_tailor":
+			Pchar.quest.imperial_escort_restore_tortuga_tailor.over = "yes";	// restore quest not needed if triggered by dialog
+			RestoreDialog(CharacterFromID("Guy Lafleur"));
+		break;
+
+		case "imperial_escort_visit_Port_au_Prince_governor":	// Triggered by dialog with Bertrand Ogeron
+			if(GetRMRelation(PChar, FRANCE) > REL_WAR) AddQuestRecord("Imperial Escort", 13);
+			else AddQuestRecord("Imperial Escort", 14);
+			RestoreDialog(CharacterFromID("Bertrand Ogeron"));
+			PChar.quest.imperial_escort.status = "goto_port_au_prince";
+			StoreDialog(CharacterFromID("Isabelle de Cussy"));
+			characters[GetCharacterIndex("Isabelle de Cussy")].Dialog.Filename = "quest_Isabelle de Cussy_dialog.c";
+			PChar.quest.imperial_escort_PoP_townhall.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_PoP_townhall.win_condition.l1.location = "PoPrince_townhall";
+			PChar.quest.imperial_escort_PoP_townhall.win_condition = "imperial_escort_PoP_townhall";
+		break;
+
+		case "imperial_escort_PoP_townhall":
+			DisableFastTravel(true);
+		break;
+
+		case "imperial_escort_PoP_townhall_arrest":	// triggered by dialog with Isabelle de Cussy
+			LAi_LocationFightDisable(&Locations[FindLocation("PoPrince_townhall")], false);
+			Locations[FindLocation("PoPrince_townhall")].reload.l1.disable = 1;
+			LAi_SetImmortal(characterFromID("Isabelle de Cussy"), true);
+			LAi_SetImmortal(characterFromID("Contre-Amirale"), true);
+			for (n=1; n<4; n++)
+			{
+				temp = "m" + (rand(5) + 1);
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[FRANCE].fantomModel.(temp), "reload", "reload1");
+				LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+				GiveSoldierWeapon(sld, FRANCE);
+				sld.id = "soldier" + n;
+				sld.nation = FRANCE;
+				SetRandomNameToCharacter(sld);
+			}
+			for (n=4; n<7; n++)
+			{
+				temp = "m" + (rand(5) + 1);
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[FRANCE].fantomModel.(temp), "reload", "reload2");
+				LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+				GiveSoldierWeapon(sld, FRANCE);
+				sld.id = "soldier" + n;
+				sld.nation = FRANCE;
+				SetRandomNameToCharacter(sld);
+			}
+			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("FRANCE_SOLDIERS", "imperial_escort_PoP_townhall_arrest_battle_won");
+		break;
+
+		case "imperial_escort_PoP_townhall_arrest_battle_won":
+			Locations[FindLocation("PoPrince_townhall")].reload.l1.disable = 0;
+//			PChar.quest.imperial_escort_PoP_townhall_arrest_escaped.over = "yes";
+			LAi_LocationFightDisable(&Locations[FindLocation("PoPrince_townhall")], true);
+			LAi_SetFightMode(PChar, false);
+		break;
+
+		case "imperial_escort_prepare_for_PoP_ambush":		// Triggered by dialog with Isabelle de Cussy
+			Locations[FindLocation("PoPrince_town")].vcskip = true;
+			DisableFastTravel(true);
+			TakeItemFromCharacter(CharacterFromID("Jaime Lezcano"), "bladeclub");
+			EquipCharacterByItem(CharacterFromID("Jaime Lezcano"), FindCharacterItemByGroup(CharacterFromID("Jaime Lezcano"), BLADE_ITEM_TYPE));
+			EquipCharacterByItem(CharacterFromID("Jaime Lezcano"), FindCharacterItemByGroup(CharacterFromID("Jaime Lezcano"), GUN_ITEM_TYPE));
+			PChar.quest.imperial_escort_setup_PoP_ambush.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_setup_PoP_ambush.win_condition.l1.location = "PoPrince_town";
+			PChar.quest.imperial_escort_setup_PoP_ambush.win_condition = "imperial_escort_setup_PoP_ambush";
+
+			PChar.quest.imperial_escort_reset_PoPrince_townhall.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_reset_PoPrince_townhall.win_condition.l1.location = "Hispaniola";
+			PChar.quest.imperial_escort_reset_PoPrince_townhall.win_condition = "imperial_escort_reset_PoPrince_townhall";
+		break;
+
+		case "imperial_escort_reset_PoPrince_townhall":
+//			Locations[FindLocation("PoPrince_town")].reload.l6.disable = 0;
+			RestoreDialog(CharacterFromID("Isabelle de Cussy"));
+		break;
+
+		case "imperial_escort_setup_PoP_ambush":
+			DeleteAttribute(&Locations[FindLocation("PoPrince_town")],"vcskip");
+			StartQuestMovie(true, true, false);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.33, "capstan2", "goto", "goto26");
+			LAi_group_MoveCharacter(sld, "Imperial_Escort_Agent");
+			sld.id = "ie_thug1";
+			sld.nation = SPAIN;
+			SetRandomNameToCharacter(sld);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.33, "bocman1", "goto", "goto5");
+			LAi_group_MoveCharacter(sld, "Imperial_Escort_Agent");
+			sld.id = "ie_thug2";
+			sld.nation = SPAIN;
+			SetRandomNameToCharacter(sld);
+			sld = LAi_CreateFantomCharacter(false, 2, true, true, 0.33, "man1_1", "goto", "goto10");
+			LAi_group_MoveCharacter(sld, "Imperial_Escort_Agent");
+			sld.id = "ie_thug3";
+			sld.nation = SPAIN;
+			SetRandomNameToCharacter(sld);
+/*			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.33, "50M5", "goto", "goto4");
+			LAi_group_MoveCharacter(sld, "Imperial_Escort_Agent");
+			sld.id = "ie_thug4";
+			sld.nation = SPAIN;
+			SetRandomNameToCharacter(sld);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.33, "Black_Corsair", "officers", "reload12_3");
+			LAi_group_MoveCharacter(sld, "Imperial_Escort_Agent");
+			sld.id = "ie_thug5";
+			sld.nation = SPAIN;
+			SetRandomNameToCharacter(sld);
+			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.33, "pirat8", "officers", "reload4_1");
+			LAi_group_MoveCharacter(sld, "Imperial_Escort_Agent");
+			sld.id = "ie_thug6";
+			sld.nation = SPAIN;
+			SetRandomNameToCharacter(sld);
+*/
+
+			ChangeCharacterAddressGroup(characterfromID("Jaime Lezcano"), "PoPrince_town", "goto", "goto18");
+			LAi_SetImmortal(CharacterFromID("Jaime Lezcano"), true);
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			Characters[GetCharacterIndex("Jaime Lezcano")].Dialog.CurrentNode = "imperial_escort_arrest1";
+			LAi_ActorDialog(characterfromID("Jaime Lezcano"), PChar, "imperial_escort_PoP_ambush", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_PoP_ambush":
+//			for(n=1; n<7; n++)
+			for(n=1; n<4; n++)
+			{
+				sld = CharacterFromID("ie_thug" + n);
+				LAi_group_MoveCharacter(sld, "Imperial_Escort_Agent");
+				attr = "l" + n;
+				PChar.quest.imperial_escort_PoP_ambush_battle_won.win_condition.(attr) = "NPC_Death";
+				PChar.quest.imperial_escort_PoP_ambush_battle_won.win_condition.(attr).character = "ie_thug" + n;
+			}
+			LAi_group_MoveCharacter(characterfromID("Jaime Lezcano"), "Imperial_Escort_Agent");
+			LAi_group_SetRelation("Imperial_Escort_Agent", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups("Imperial_Escort_Agent", LAI_GROUP_PLAYER, true);
+//			LAi_group_SetCheck("Imperial_Escort_Agent", "imperial_escort_PoP_ambush_battle_won");
+			PChar.quest.imperial_escort_PoP_ambush_battle_won.win_condition = "imperial_escort_PoP_ambush_battle_won";
+		break;
+
+		case "imperial_escort_PoP_ambush_battle_won":
+			EndQuestMovie();
+			DisableFastTravel(false);
+			LAi_LocationFightDisable(&Locations[FindLocation("PoPrince_town")], true);
+			LAi_SetFightMode(PChar, false);
+			LAi_group_SetRelation("Imperial_Escort_Agent", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
+			LAi_QuestDelay("imperial_escort_PoP_ambush_battle_won2", 0.1);
+		break;
+
+		case "imperial_escort_PoP_ambush_battle_won2":
+			for(n=1; n<OFFICER_MAX; n++)
+			{
+				cc = GetOfficersIndex(PChar, n);
+				if(cc != -1)
+				{
+					LAi_SetFightMode(Characters[cc], false);
+					LAi_SetOfficerType(Characters[cc]);
+				}
+			}
+			Characters[GetCharacterIndex("Jaime Lezcano")].nation = PIRATE;
+			LAi_SetActorType(characterFromID("Jaime Lezcano"));
+			Characters[GetCharacterIndex("Jaime Lezcano")].Dialog.CurrentNode = "imperial_escort_ambush_surrender";
+			LAi_ActorDialog(characterfromID("Jaime Lezcano"), PChar, "imperial_escort_agent_captured", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_agent_captured":
+			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			switch(GetAttribute(PChar, "quest.imperial_escort.disguise"))
+			{
+				case "failed":
+					AddQuestRecord("Imperial Escort", 15);
+				break;
+
+				case "soldier":
+					AddQuestRecord("Imperial Escort", 16);
+				break;
+			}
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("governor");
+			Preprocessor_Remove("evilgov");
+			Preprocessor_Remove("agent");
+			SetCharacterRemovable(CharacterFromID("Jaime Lezcano"), false);
+			AddPassenger(PChar, CharacterFromID("Jaime Lezcano"), 1);
+			Characters[GetCharacterIndex("Jaime Lezcano")].quest.no_escape = true;
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			LAi_ActorFollow(CharacterFromID("Jaime Lezcano"), PChar, "", 5.0);
+
+			PChar.quest.imperial_escort_remove_agent.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.imperial_escort_remove_agent.win_condition.l1.location = PChar.location;
+			Pchar.quest.imperial_escort_remove_agent.win_condition = "imperial_escort_remove_agent";
+
+			SetCharacterShipLocation(CharacterFromID("Pelayo Nunez"), "Cuba_Shore_06");
+			PChar.quest.imperial_escort_ship_setup.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_ship_setup.win_condition.l1.location = "Cuba";
+			PChar.quest.imperial_escort_ship_setup.win_condition = "imperial_escort_ship_setup";
+		break;
+
+
+		case "imperial_escort_remove_agent":
+			LAi_LocationFightDisable(&Locations[FindLocation("PoPrince_town")], false);
+			LAi_SetStayType(CharacterFromID("Jaime Lezcano"));
+			ChangeCharacterAddress(CharacterFromID("Jaime Lezcano"), "None", "");
+		break;
+
+		case "imperial_escort_spy_intro":
+			ChangeCharacterAddressGroup(characterfromID("Gilles Clouzot"), "PoPrince_townhall", "reload", "reload2");
+			LAi_SetActorType(CharacterFromID("Gilles Clouzot"));
+			Characters[GetCharacterIndex("Gilles Clouzot")].Dialog.CurrentNode = "First time";
+			LAi_ActorDialog(characterfromID("Gilles Clouzot"), PChar, "imperial_escort_spy_intro2", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_spy_intro2":
+			LAi_SetActorType(CharacterFromID("Isabelle de Cussy"));
+			Characters[GetCharacterIndex("Isabelle de Cussy")].Dialog.CurrentNode = "imperial_escort_what_use_is_he";
+			LAi_ActorDialogNow(CharacterfromID("Isabelle de Cussy"), PChar, "imperial_escort_spy_intro3", 2.0);
+		break;
+
+		case "imperial_escort_spy_intro3":
+			LAi_SetActorType(CharacterFromID("Gilles Clouzot"));
+			Characters[GetCharacterIndex("Gilles Clouzot")].Dialog.CurrentNode = "imperial_escort_transport_to_muelle";
+			LAi_ActorDialog(characterfromID("Gilles Clouzot"), PChar, "imperial_escort_spy_with_me", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_spy_with_me":
+			AddPassenger(PChar, CharacterFromID("Gilles Clouzot"), 0);
+			LAi_SetActorType(CharacterFromID("Gilles Clouzot"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Gilles Clouzot"), "", 10.0);
+			LAi_SetStayType(CharacterfromID("Isabelle de Cussy"));
+
+			PChar.quest.imperial_escort_leave_PoP_townhall.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.imperial_escort_leave_PoP_townhall.win_condition.l1.location = PChar.location;
+			Pchar.quest.imperial_escort_leave_PoP_townhall.win_condition = "imperial_escort_leave_PoP_townhall";
+		break;
+
+		case "imperial_escort_leave_PoP_townhall":
+			Preprocessor_AddQuestData("PoPgovernor", GetMyFullName(CharacterFromID("Isabelle de Cussy")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 17);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("governor");
+			DisableFastTravel(false);
+
+			PChar.quest.imperial_escort_spy_aboard.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_spy_aboard.win_condition.l1.location = "Hispaniola";
+			PChar.quest.imperial_escort_spy_aboard.win_condition = "imperial_escort_spy_aboard";
+
+			PChar.quest.imperial_escort_find_Uasco.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_find_Uasco.win_condition.l1.location = "Muelle_port";
+			PChar.quest.imperial_escort_find_Uasco.win_condition = "imperial_escort_find_Uasco";
+		break;
+
+		case "imperial_escort_spy_aboard":
+			RestoreDialog(CharacterFromID("Isabelle de Cussy"));
+			LAi_SetStayType(CharacterFromID("Gilles Clouzot"));
+			ChangeCharacterAddress(characterFromID("Gilles Clouzot"), "None", "");
+			Preprocessor_AddQuestData("docker", GetMyFullName(CharacterFromID("Uasco Mazinho")));
+			Preprocessor_AddQuestData("spy", GetMyFullName(CharacterFromID("Gilles Clouzot")));
+			AddQuestRecord("Imperial Escort", 18);
+			Preprocessor_Remove("spy");
+			Preprocessor_Remove("docker");
+		break;
+
+		case "imperial_escort_find_Uasco":
+			StoreDialog(CharacterFromID("Uasco Mazinho"));
+			characters[GetCharacterIndex("Uasco Mazinho")].Dialog.Filename = "quest_Uasco Mazinho_dialog.c";
+			Characters[GetCharacterIndex("Uasco Mazinho")].Dialog.CurrentNode = "imperial_escort_load_my_cargo1";
+		break;
+
+		case "imperial_escort_uasco_to_ship":
+			Locations[FindLocation("Muelle_port")].reload.l1.disable = 1;
+			DisableFastTravel(true);
+			bQuestDisableSeaEnter = true;
+			LAi_SetActorType(CharacterFromID("Uasco Mazinho"));
+			LAi_ActorFollow(CharacterFromID("Uasco Mazinho"), PChar, "", 5.0);
+			PChar.quest.imperial_escort_uasco_aboard.win_condition.l1 = "Location";
+			PChar.quest.imperial_escort_uasco_aboard.win_condition.l1.location = GetCharacterShipQDeck(PChar);
+			Pchar.quest.imperial_escort_uasco_aboard.win_condition = "imperial_escort_uasco_aboard";
+		break;
+
+		case "imperial_escort_uasco_aboard":
+			DisableFastTravel(false);
+			ChangeCharacterAddressGroup(CharacterfromID("Uasco Mazinho"), "Hold1", "rld", "loc1");
+			LAi_SetLoginTime(CharacterFromID("Uasco Mazinho"), 0.0, 24.0);
+			LAi_SetStayType(CharacterFromID("Uasco Mazinho"));
+			Characters[GetCharacterIndex("Uasco Mazinho")].Dialog.CurrentNode = "imperial_escort_where_is_cargo";
+		break;
+
+		case "imperial_escort_uasco_prisoner":
+			LAi_SetActorType(CharacterfromID("Uasco Mazinho"));
+			LAi_ActorAnimation(CharacterfromID("Uasco Mazinho"), "Ground_SitDown", "imperial_escort_uasco_sat", 3.5);
+			Locations[FindLocation("Muelle_port")].reload.l1.disable = 0;
+			PChar.quest.imperial_escort_uasco_aboard.win_condition.l1 = "Location";
+			PChar.quest.imperial_escort_uasco_aboard.win_condition.l1.location = "Muelle_port";
+			Pchar.quest.imperial_escort_uasco_aboard.win_condition = "imperial_escort_uasco_prisoner2";
+		break;
+
+		case "imperial_escort_uasco_sat":
+			LAi_SetActorType(CharacterfromID("Uasco Mazinho"));
+			LAi_SetPoorType(CharacterfromID("Uasco Mazinho"));
+		break;
+
+		case "imperial_escort_uasco_prisoner2":
+//			ChangeCharacterAddress(CharacterFromID("Uasco Mazinho"), "None", "");
+//			AddPassenger(PChar, CharacterFromID("Uasco Mazinho"), 1);
+//			SetCharacterRemovable(characterFromID("Uasco Mazinho"), false);
+			Characters[GetCharacterIndex("Uasco Mazinho")].Dialog.Filename = "quest_Uasco Mazinho_dialog.c";
+			Characters[GetCharacterIndex("Uasco Mazinho")].Dialog.CurrentNode = "imperial_escort_prisoner";
+			ChangeCharacterAddressGroup(CharacterFromID("Gilles Clouzot"), "Muelle_port", "goto", "goto8");
+			LAi_SetActorType(CharacterFromID("Gilles Clouzot"));
+			Characters[GetCharacterIndex("Gilles Clouzot")].Dialog.CurrentNode = "imperial_escort_spy_ashore";
+			LAi_ActorDialog(characterfromID("Gilles Clouzot"), PChar, "imperial_escort_spy_ashore", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_spy_ashore":
+			bQuestDisableSeaEnter = false;
+			Preprocessor_AddQuestData("docker", GetMyFullName(CharacterFromID("Uasco Mazinho")));
+			Preprocessor_AddQuestData("spy", GetMyFullName(CharacterFromID("Gilles Clouzot")));
+			if(GetRMRelation(PChar, FRANCE) <= REL_WAR) AddQuestRecord("Imperial Escort", 20);
+			else AddQuestRecord("Imperial Escort", 19);
+			Preprocessor_Remove("spy");
+			Preprocessor_Remove("docker");
+			sld = CharacterFromID("Gilles Clouzot");
+			sld.name = GetMyName(CharacterFromID("Uasco Mazinho"));
+			sld.lastname = GetMyLastName(CharacterFromID("Uasco Mazinho"));
+			sld.Dialog.Filename = "Isla Muelle citizen_dialog.c";
+			sld.Dialog.CurrentNode = "First time";
+			sld.greeting = "Gr_isla muelle citizen";
+			LAi_SetCitizenType(sld);
+			LAi_group_MoveCharacter(sld, "SPAIN_CITIZENS");
+			LAi_SetImmortal(sld, true);
+			RemovePassenger(PChar, sld);
+
+			StoreDialog(CharacterFromID("Isabelle de Cussy"));
+			characters[GetCharacterIndex("Isabelle de Cussy")].Dialog.Filename = "quest_Isabelle de Cussy_dialog.c";
+			characters[GetCharacterIndex("Isabelle de Cussy")].Dialog.CurrentNode = "imperial_escort_return_from_muelle";
+		break;
+
+		case "imperial_escort_governor_says_cuba":	// Triggered by dialog with Isabelle de Cussy
+//			if(CheckQuestAttribute("imperial_escort.status", "ship_missing"))
+			if(GetCharacterShipModel(CharacterfromID("Pelayo Nunez")) == GetAttribute(PChar, "quest.imperial_escort.shiptype"))
+			{
+				Preprocessor_AddQuestData("PoPgovernor", GetMyFullName(CharacterFromID("Isabelle de Cussy")));
+				Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+				Preprocessor_AddQuestData("ship", PChar.quest.imperial_escort.ship_name);
+				AddQuestRecord("Imperial Escort", 21);
+				Preprocessor_Remove("ship");
+				Preprocessor_Remove("envoy");
+				Preprocessor_Remove("PoPgovernor");
+			}
+			else
+			{
+				Preprocessor_AddQuestData("PoPgovernor", GetMyFullName(CharacterFromID("Isabelle de Cussy")));
+				Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+				AddQuestRecord("Imperial Escort", 22);
+				Preprocessor_Remove("envoy");
+				Preprocessor_Remove("PoPgovernor");
+			}
+
+			LAi_SetActorType(CharacterFromID("Isabelle de Cussy"));
+			PChar.quest.imperial_escort_restore_PoP_governor.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_restore_PoP_governor.win_condition.l1.location = "Hispaniola";
+			PChar.quest.imperial_escort_restore_PoP_governor.win_condition = "imperial_escort_restore_PoP_governor";
+
+			SetCharacterShipLocation(CharacterFromID("Pelayo Nunez"), "Cuba_Shore_06");
+			PChar.quest.imperial_escort_ship_setup.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_ship_setup.win_condition.l1.location = "Cuba";
+			PChar.quest.imperial_escort_ship_setup.win_condition = "imperial_escort_ship_setup";
+		break;
+
+		case "imperial_escort_restore_PoP_governor":
+			LAi_SetStayType(CharacterFromID("Isabelle de Cussy"));
+			RestoreDialog(CharacterFromID("Isabelle de Cussy"));
+		break;
+
+		case "imperial_escort_ship_setup":
+			Group_CreateGroup("agent_ship");
+			Group_AddCharacter("agent_ship", "Pelayo Nunez");
+			Group_SetGroupCommander("agent_ship", "Pelayo Nunez");
+
+			Group_SetTaskNone("agent_ship");
+			Group_LockTask("agent_ship");
+			Group_SetAddress("agent_ship", "Cuba", "Quest_ships", "Quest_ship_14");
+			Sea_LoginGroupNow("agent_ship");
+
+			NPChar = CharacterFromID("Pelayo Nunez");
+			NPChar.recognized = true;
+			NPChar.nation = PRIVATEER_NATION;
+			NPChar.skipRM = true;
+//			NPChar.flags.personal = 6;
+//			NPChar.flags.personal.texture = 3;
+			NPChar.skipRM = true;
+			NPChar.nosurrender = 1;
+			PChar.quest.imperial_escort.agent_shiptype = GetCharacterShipModel(CharacterfromID("Pelayo Nunez"));
+
+			PChar.quest.imperial_escort_defeat_ship.win_condition.l1 = "Character_Capture";
+			PChar.quest.imperial_escort_defeat_ship.win_condition.l1.character = "Pelayo Nunez";
+			PChar.quest.imperial_escort_defeat_ship.win_condition.l2 = "SeaEnter";
+			PChar.quest.imperial_escort_defeat_ship.win_condition = "imperial_escort_defeat_ship";
+			PChar.quest.imperial_escort_defeat_ship1.win_condition.l1 = "NPC_Death";
+			PChar.quest.imperial_escort_defeat_ship1.win_condition.l1.character = "Pelayo Nunez";
+			PChar.quest.imperial_escort_defeat_ship1.win_condition.l2 = "SeaEnter";
+			PChar.quest.imperial_escort_defeat_ship1.win_condition = "imperial_escort_defeat_ship";
+		break;
+
+		case "imperial_escort_defeat_ship":
+			PChar.quest.imperial_escort_defeat_ship.over = "yes";
+			PChar.quest.imperial_escort_defeat_ship1.over = "yes";
+//			if(CheckQuestAttribute("imperial_escort.status", "ship_missing"))
+			if(GetAttribute(PChar, "quest.imperial_escort.agent_shiptype") == GetAttribute(PChar, "quest.imperial_escort.shiptype"))
+			{
+				Preprocessor_AddQuestData("ship", PChar.quest.imperial_escort.ship_name);
+				Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+				AddQuestRecord("Imperial Escort", 23);
+				Preprocessor_Remove("envoy");
+				Preprocessor_Remove("ship");
+			}
+			else
+			{
+				Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+				AddQuestRecord("Imperial Escort", 24);
+				Preprocessor_Remove("envoy");
+			}
+			Locations[FindLocation("Cuba_exit_grot")].vcskip = true;
+			Locations[FindLocation("Cuba_exit_grot")].locators_radius.officers.reload1_1 = 5.0;
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.emerge = "reload1_back";
+
+			Locations[FindLocation("Cuba_exit_grot")].models.always.locators = "Cave_l_GR";
+			Locations[FindLocation("Cuba_Grot")].models.always.locators = "Grot_l_GR";
+
+			PChar.quest.imperial_escort_outside_kidnap_cave.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_outside_kidnap_cave.win_condition.l1.location = "Cuba_exit_grot";
+			PChar.quest.imperial_escort_outside_kidnap_cave.win_condition = "imperial_escort_outside_kidnap_cave";
+		break;
+
+		case "imperial_escort_outside_kidnap_cave":
+			Locations[FindLocation("Cuba_Grot")].vcskip = true;
+			Locations[FindLocation("Cuba_Grot")].locators_radius.officers.reload3_1 = 3.0;
+			Locations[FindLocation("Cuba_Grot")].image = "Inside_Kidnap_Cave.tga";
+
+			TakeItemFromCharacter(CharacterFromID("Imperial_envoy"), FindCharacterItemByGroup(CharacterFromID("Imperial_envoy"), BLADE_ITEM_TYPE));
+			RemoveCharacterEquip(CharacterFromID("Imperial_envoy"), BLADE_ITEM_TYPE);
+
+			if(IsOfficer(romance) && romance.location == PChar.location)
+			{
+				LAi_SetActorType(romance);
+				romance.Dialog.Filename = "romance_dialog.c";
+				romance.dialog.CurrentNode = "imperial_escort_kidnappers_cave";
+				LAi_ActorDialog(romance,PChar,"",5.0,5.0);	// Exits to "imperial_escort_havana_for_ether" or "imperial_escort_outside_kidnap_cave2"
+			}
+			else
+			{
+				speaker = Get_Speaker();
+				if (speaker != "")
+				{
+					crewref = characterFromID(speaker);
+					crewidx = GetCharacterIndex(speaker);
+					StoreDialog(crewref);
+					LAi_SetActorType(crewref);
+					characters[crewidx].Dialog.Filename = "crew_dialog.c";
+					Characters[crewidx].Dialog.CurrentNode = "imperial_escort_cave_tactics";
+					LAi_ActorDialog(crewref, PChar, "imperial_escort_outside_kidnap_cave2", 5.0, 5.0);
+				}
+				else
+				{
+					Pchar.dialog.CurrentNode = "imperial_escort_at_cave";
+					LAi_SetActorType(PChar);
+					LAi_ActorSelfDialog(PChar, "imperial_escort_outside_kidnap_cave2");
+				}
+			}
+		break;
+
+		case "imperial_escort_outside_kidnap_cave2":
+			LAi_SetPlayerType(PChar);
+			if(IsOfficer(romance) && romance.location == PChar.location && GetAttribute(PChar, "quest.imperial_escort.cave_climber") != romance.id) LAi_SetOfficerType(romance);
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_envoy"),"Cuba_Grot", "officers", "reload3_2");
+			if(CheckCharacterItem(PChar, "pistolgas"))
+			{
+				NPChar = CharacterFromID("Imperial_envoy");
+				LAi_SetActorType(NPChar);
+				LAi_ActorAnimation(NPChar, "Lay_2", "", -1);
+				NPChar.stunned = true;
+				if(IsPrisoner(CharacterFromID("Jaime Lezcano")))
+				{
+					PChar.quest.imperial_escort_inside_kidnap_cave_case1.win_condition.l1 = "location";
+					PChar.quest.imperial_escort_inside_kidnap_cave_case1.win_condition.l1.location = "Cuba_Grot";
+					PChar.quest.imperial_escort_inside_kidnap_cave_case1.win_condition = "imperial_escort_inside_kidnap_cave_case1";
+				}
+				else
+				{
+					PChar.quest.imperial_escort_inside_kidnap_cave_case2.win_condition.l1 = "location";
+					PChar.quest.imperial_escort_inside_kidnap_cave_case2.win_condition.l1.location = "Cuba_Grot";
+					PChar.quest.imperial_escort_inside_kidnap_cave_case2.win_condition = "imperial_escort_inside_kidnap_cave_case2";
+				}
+				PChar.quest.imperial_escort_throw_etherbomb.win_condition.l1 = "locator";
+				PChar.quest.imperial_escort_throw_etherbomb.win_condition.l1.location = "Cuba_exit_grot";
+				PChar.quest.imperial_escort_throw_etherbomb.win_condition.l1.locator_group = "officers";
+				PChar.quest.imperial_escort_throw_etherbomb.win_condition.l1.locator = "reload1_1";
+				PChar.quest.imperial_escort_throw_etherbomb.win_condition = "imperial_escort_throw_etherbomb";
+			}
+			else
+			{
+				if(IsPrisoner(CharacterFromID("Jaime Lezcano")))
+				{
+					PChar.quest.imperial_escort_inside_kidnap_cave_case3.win_condition.l1 = "location";
+					PChar.quest.imperial_escort_inside_kidnap_cave_case3.win_condition.l1.location = "Cuba_Grot";
+					PChar.quest.imperial_escort_inside_kidnap_cave_case3.win_condition = "imperial_escort_inside_kidnap_cave_case3";
+				}
+				else
+				{
+					PChar.quest.imperial_escort_inside_kidnap_cave_case4.win_condition.l1 = "location";
+					PChar.quest.imperial_escort_inside_kidnap_cave_case4.win_condition.l1.location = "Cuba_Grot";
+					PChar.quest.imperial_escort_inside_kidnap_cave_case4.win_condition = "imperial_escort_inside_kidnap_cave_case4";
+				}
+			}
+		break;
+
+		case "imperial_escort_havana_for_ether":
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.disable = 1;
+			LAi_SetOfficerType(romance);
+			SetCharacterRemovable(romance, false);
+			PChar.quest.imperial_escort.romance_slot = -1;
+			for(i=1; i<OFFICER_MAX; i++)				// Find which slot Lucía/Edmundo is occupying in case you manage to displace them by recruiting a new officer
+			{
+				if(GetOfficersIndex(PChar,i) == romanceidx) PChar.quest.imperial_escort.romance_slot = i;
+			}
+
+			Preprocessor_AddQuestData("romance", GetMyFullName(romance));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			Preprocessor_AddQuestData("pronoun2", XI_ConvertString(GetMyPronounObj(romance)));
+			AddQuestRecord("Imperial Escort", 31);
+			Preprocessor_Remove("pronoun2");
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("romance");
+
+			Locations[FindLocation("Cuba_Port")].locators_radius.goto.cityzen_4 = 5.0;
+			PChar.quest.imperial_escort_havana_arrival_for_ether.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_havana_arrival_for_ether.win_condition.l1.location = "Cuba_Port";
+			PChar.quest.imperial_escort_havana_arrival_for_ether.win_condition = "imperial_escort_havana_arrival_for_ether";
+
+			PChar.quest.imperial_escort_romance_dead.win_condition.l1 = "NPC_Death";
+			PChar.quest.imperial_escort_romance_dead.win_condition.l1.character = romance.id;
+			PChar.quest.imperial_escort_romance_dead.win_condition = "imperial_escort_romance_dead";
+		break;
+
+		case "imperial_escort_romance_dead":
+			PChar.quest.imperial_escort_havana_arrival_for_ether.over = "yes";
+			PChar.quest.imperial_escort_havana_trader_approach.over = "yes";
+			Preprocessor_AddQuestData("romance", GetMyFullName(romance));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 30);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("romance");
+			PChar.quest.imperial_escort_outside_kidnap_cave.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_outside_kidnap_cave.win_condition.l1.location = "Cuba_exit_grot";
+			PChar.quest.imperial_escort_outside_kidnap_cave.win_condition = "imperial_escort_outside_kidnap_cave";
+		break;
+
+		case "imperial_escort_havana_arrival_for_ether":
+			StartQuestMovie(false, false, false);
+			DisableFastTravel(true);
+			if(!IsOfficer(romance) || romance.location != PChar.location)	// If Lucía/Edmundo has somehow been displaced, put them back
+			{
+				SetOfficersIndex(PChar, sti(PChar.quest.imperial_escort.romance_slot), romanceidx);
+				ChangeCharacterAddressGroup(romance,"Cuba_Port", "officers", "Sea_2_"+PChar.quest.imperial_escort.romance_slot);
+			}
+			PChar.quest.imperial_escort_havana_trader_approach.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_havana_trader_approach.win_condition.l1.location = "Cuba_Port";
+			PChar.quest.imperial_escort_havana_trader_approach.win_condition.l1.locator_group = "goto";
+			PChar.quest.imperial_escort_havana_trader_approach.win_condition.l1.locator = "cityzen_4";
+			PChar.quest.imperial_escort_havana_trader_approach.win_condition = "imperial_escort_havana_trader_approach";
+		break;
+
+		case "imperial_escort_havana_trader_approach":
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToCharacter(PChar, romance);
+			LAi_ActorWaitDialog(PChar, romance);
+			PChar.quest.imperial_escort_romance_dead.over = "yes";
+			LAi_SetActorType(romance);
+			romance.Dialog.Filename = "romance_dialog.c";
+			romance.dialog.CurrentNode = "imperial_escort_let_me_talk";
+			LAi_ActorDialog(romance,PChar,"imperial_escort_romance_to_trader",5.0,5.0);
+		break;
+
+		case "imperial_escort_romance_to_trader":
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToCharacter(PChar, CharacterFromID("Rosa Zambrano"));
+			LAi_SetActorType(romance);
+			LAi_ActorGoToLocator(romance, "goto", "goto_61", "imperial_escort_romance_to_trader2", 10.0);
+		break;
+
+		case "imperial_escort_romance_to_trader2":
+			LAi_SetActorType(romance);
+			LAi_SetActorType(CharacterFromID("Rosa Zambrano"));
+			LAi_ActorTurnToCharacter(romance, CharacterFromID("Rosa Zambrano"));
+			LAi_ActorWaitDialog(CharacterFromID("Rosa Zambrano"), romance);
+			LAi_ActorDialogNow(romance, CharacterFromID("Rosa Zambrano"),"",5.0);
+			LAi_QuestDelay("imperial_escort_romance_back_from_trader", 7.0);
+		break;
+
+		case "imperial_escort_romance_back_from_trader":
+			LAi_SetPlayerType(PChar);
+			LAi_SetMerchantType(CharacterFromID("Rosa Zambrano"));
+			LAi_SetActorType(romance);
+			romance.dialog.CurrentNode = "imperial_escort_bought_ether";
+			LAi_ActorDialog(romance,PChar,"imperial_escort_finished_with_trader",5.0,5.0);
+		break;
+
+		case "imperial_escort_finished_with_trader":
+			EndQuestMovie();
+			DisableFastTravel(false);
+			Locations[FindLocation("Cuba_Port")].locators_radius.goto.cityzen_4 = 1.0;
+			LAi_SetOfficerType(romance);
+			SetCharacterRemovable(romance, true);
+			PlayStereoSound("INTERFACE\important_item.wav");
+			GiveItem2Character(PChar, "pistolgas");
+			Preprocessor_AddQuestData("romance", GetMyFullName(romance));
+			AddQuestRecord("Imperial Escort", 32);
+			Preprocessor_Remove("romance");
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.disable = 0;
+			PChar.quest.imperial_escort_return_kidnap_cave.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_return_kidnap_cave.win_condition.l1.location = "Cuba_exit_grot";
+			PChar.quest.imperial_escort_return_kidnap_cave.win_condition = "imperial_escort_return_kidnap_cave";
+		break;
+
+		case "imperial_escort_return_kidnap_cave":
+			if(IsOfficer(romance) && romance.location == PChar.location)
+			{
+				LAi_SetActorType(romance);
+				romance.dialog.CurrentNode = "imperial_escort_cave_return";
+				LAi_ActorDialog(romance,PChar,"imperial_escort_outside_kidnap_cave2",5.0,5.0);
+			}
+			else
+			{
+				Pchar.dialog.CurrentNode = "imperial_escort_at_cave";
+				LAi_SetActorType(PChar);
+				LAi_ActorSelfDialog(PChar, "imperial_escort_outside_kidnap_cave2");
+			}
+		break;
+
+		case "imperial_escort_throw_etherbomb":
+			PChar.quest.old_gun = GetCharacterEquipByGroup(PChar, GUN_ITEM_TYPE);
+			EquipCharacterByItem(PChar,"pistolgas");
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToLocator(PChar, "reload", "reload1_back");
+			LAi_QuestDelay("imperial_escort_throw_etherbomb2", 1.0);
+		break;
+
+		case "imperial_escort_throw_etherbomb2":
+//			LAi_SetPlayerType(PChar);
+//			LAi_SetFightMode(PChar, true);
+//			LAi_QuestDelay("imperial_escort_throw_etherbomb3", 1.0);
+			LAi_ActorAnimation(PChar, "shot", "imperial_escort_throw_etherbomb3", -1);
+		break;
+
+		case "imperial_escort_throw_etherbomb3":
+			LAi_SetPlayerType(PChar);
+			PlaySound("OBJECTS\SHIPCHARGE\ship_bow.wav");
+			TakeItemFromCharacter(Pchar, "pistolgas");
+			CreateParticleSystem("cancloud" , 10.0, -1.25, -15.58, 0.0, 0.0, 0.0, 1);	// Based on "reload1_back"
+//			CreateParticleSystem("cancloud" , 9.58, -3.19, -12.24, 0.0, 0.0, 0.0, sti(20) );	// Based on "reload1"
+			LAi_QuestDelay("imperial_escort_throw_etherbomb4", 1.0);
+		break;
+
+		case "imperial_escort_throw_etherbomb4":
+			LAi_SetFightMode(PChar, false);
+			if (PChar.quest.old_gun != "") EquipCharacterByItem(PChar,PChar.quest.old_gun);
+			DeleteQuestAttribute("old_gun");
+			if(IsOfficer(romance) && romance.location == PChar.location)
+			{
+				LAi_SetActorType(PChar);
+				LAi_ActorWaitDialog(PChar, romance);
+				LAi_SetActorType(romance);
+				romance.Dialog.Filename = "romance_dialog.c";
+				romance.dialog.CurrentNode = "imperial_escort_clear_air";
+				LAi_ActorDialog(romance,PChar,"imperial_escort_clear_cloud",5.0,5.0);
+			}
+			else
+			{
+				PChar.dialog.CurrentNode = "imperial_escort_clear_air";
+				LAi_SetActorType(PChar);
+				LAi_ActorSelfDialog(PChar, "imperial_escort_clear_cloud");
+			}
+		break;
+
+		case "imperial_escort_clear_cloud":
+			LAi_SetPlayerType(PChar);
+			if(IsOfficer(romance)) LAi_SetOfficerType(romance);
+			LAi_Fade("", "");
+			WaitDate("", 0, 0, 0, 0, 2);
+			DeleteParticles();
+		break;
+
+		case "imperial_escort_inside_kidnap_cave_case1":
+			for (n=1; n<5; n++)
+			{
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.5, "pirat"+(rand(8)+1), "monsters", "monster" + n);
+				sld.id = "Kidnapper " + n;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				i = rand(1) + 1;
+				LAi_SetActorType(sld);
+				LAi_ActorAnimation(sld, "Lay_" + i, "", -1);
+			}
+			StartQuestMovie(true, false, false);
+			DisableFastTravel(true);
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Cuba_Grot")], true);
+			PChar.quest.imperial_escort_found_envoy.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_found_envoy.win_condition.l1.location = "Cuba_Grot";
+			PChar.quest.imperial_escort_found_envoy.win_condition.l1.locator_group = "officers";
+			PChar.quest.imperial_escort_found_envoy.win_condition.l1.locator = "reload3_1";
+			PChar.quest.imperial_escort_found_envoy.win_condition = "imperial_escort_found_envoy";
+		break;
+
+		case "imperial_escort_found_envoy":
+			if(IsOfficer(romance) && romance.location == PChar.location)
+			{
+				LAi_SetActorType(romance);
+				romance.Dialog.Filename = "romance_dialog.c";
+				romance.dialog.CurrentNode = "imperial_escort_in_cave_no_agent";
+				LAi_ActorDialog(romance,PChar,"imperial_escort_leave_cave",5.0,5.0);
+			}
+			else
+			{
+				PChar.dialog.CurrentNode = "imperial_escort_in_cave_no_agent";
+				LAi_SetActorType(PChar);
+				LAi_ActorSelfDialog(PChar, "imperial_escort_leave_cave");
+			}
+		break;
+
+		case "imperial_escort_inside_kidnap_cave_case2":
+			ChangeCharacterAddressGroup(CharacterFromID("Jaime Lezcano"),"Cuba_Grot", "officers", "reload3_1");
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Jaime Lezcano"), CharacterFromID("Imperial_envoy"));
+
+			for (n=1; n<5; n++)
+			{
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.5, "pirat"+(rand(8)+1), "monsters", "monster" + n);
+				sld.id = "Kidnapper " + n;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				i = rand(1) + 1;
+				LAi_SetActorType(sld);
+				LAi_ActorAnimation(sld, "Lay_" + i, "", -1);
+			}
+
+			StartQuestMovie(true, false, false);
+			DisableFastTravel(true);
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Cuba_Grot")], true);
+			Characters[GetCharacterIndex("Jaime Lezcano")].Dialog.CurrentNode = "imperial_escort_negotations_in_cave";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition.l1.location = "Cuba_Grot";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition.l1.locator_group = "officers";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition.l1.locator = "reload3_1";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition = "imperial_escort_agent_speaks_in_cave";
+		break;
+
+		case "imperial_escort_inside_kidnap_cave_case3":
+			Locations[FindLocation("Cuba_Grot")].reload.l1.disable = 1;
+			Locations[FindLocation("Cuba_Grot")].reload.l2.disable = 1;
+			LAi_SetActorType(CharacterFromID("Imperial_envoy"));
+			LAi_ActorTurnToCharacter(characterFromID("Imperial_envoy"), PChar);
+			for (n=1; n<5; n++)
+			{
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.5, "pirat"+(rand(8)+1), "monsters", "monster" + n);
+				sld.id = "Kidnapper " + n;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+			}
+			PChar.quest.imperial_escort_negotiate_kidnappers_in_cave.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_negotiate_kidnappers_in_cave.win_condition.l1.location = "Cuba_Grot";
+			PChar.quest.imperial_escort_negotiate_kidnappers_in_cave.win_condition.l1.locator_group = "officers";
+			PChar.quest.imperial_escort_negotiate_kidnappers_in_cave.win_condition.l1.locator = "reload3_1";
+			PChar.quest.imperial_escort_negotiate_kidnappers_in_cave.win_condition = "imperial_escort_negotiate_kidnappers_in_cave";
+		break;
+
+		case "imperial_escort_inside_kidnap_cave_case4":
+			ChangeCharacterAddressGroup(CharacterFromID("Jaime Lezcano"),"Cuba_Grot", "officers", "reload3_1");
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Jaime Lezcano"), CharacterFromID("Imperial_envoy"));
+
+			for (n=1; n<5; n++)
+			{
+				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.5, "pirat"+(rand(8)+1), "monsters", "monster" + n);
+				sld.id = "Kidnapper " + n;
+				sld.nation = SPAIN;
+				SetRandomNameToCharacter(sld);
+				LAi_SetActorType(sld);
+			}
+
+			StartQuestMovie(true, false, false);
+			DisableFastTravel(true);
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Cuba_Grot")], true);
+			Characters[GetCharacterIndex("Jaime Lezcano")].Dialog.CurrentNode = "imperial_escort_deception_in_cave1";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition.l1.location = "Cuba_Grot";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition.l1.locator_group = "officers";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition.l1.locator = "reload3_1";
+			PChar.quest.imperial_escort_agent_speaks_in_cave.win_condition = "imperial_escort_agent_speaks_in_cave";
+		break;
+
+		case "imperial_escort_agent_speaks_in_cave":
+			if(!CheckAttribute(CharacterFromID("Imperial_envoy"), "stunned"))
+			{
+				LAi_SetActorType(CharacterFromID("Imperial_envoy"));
+				LAi_ActorTurnToCharacter(characterFromID("Imperial_envoy"), PChar);
+			}
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			LAi_ActorDialogNow(CharacterFromID("Jaime Lezcano"),PChar,"",1.0);	// Dialog.CurrentNode set at case "imperial_escort_inside_kidnap_cave_case2" or "imperial_escort_inside_kidnap_cave_case4"
+		break;
+
+		case "imperial_escort_leave_cave_for_negotiation":				// Triggered by dialog with Jaime Lezcano if you had no ether bottle
+			ChangeCharacterAddressGroup(CharacterFromID("Jaime Lezcano"),"Cuba_exit_grot", "goto", "goto6");
+			Locations[FindLocation("Cuba_exit_grot")].locators_radius.officers.reload1_1 = 1.0;
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.disable = 1;
+			DoQuestReloadToLocation("Cuba_exit_grot", "reload", "reload1", "imperial_escort_outside_cave_for_negotiation");
+		break;
+
+		case "imperial_escort_leave_cave":						// Triggered by dialog with Jaime Lezcano, with "romance", or with yourself
+			EndQuestMovie();
+			LAi_SetPlayerType(PChar);
+			if(IsPassenger(CharacterFromID("Jaime Lezcano")) && !IsPrisoner(CharacterFromID("Jaime Lezcano")))
+			{
+				LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+				ChangeCharacterAddressGroup(CharacterFromID("Jaime Lezcano"),"Cuba_exit_grot", "goto", "goto6");
+			}
+			if(Characters[GetCharacterIndex("Jaime Lezcano")].location == "Cuba_Grot") ChangeCharacterAddress(CharacterFromID("Jaime Lezcano"), "None", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_envoy"),"Cuba_exit_grot", "goto", "goto5");
+			Locations[FindLocation("Cuba_exit_grot")].locators_radius.officers.reload1_1 = 1.0;
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.disable = 1;
+			DoQuestReloadToLocation("Cuba_exit_grot", "reload", "reload1", "imperial_escort_outside_cave_after_release");
+		break;
+
+		case "imperial_escort_outside_cave_after_release":
+			if(IsOfficer(romance)) LAi_SetOfficerType(romance);
+			if(CheckAttribute(CharacterFromID("Imperial_envoy"), "stunned")) DeleteAttribute(CharacterFromID("Imperial_envoy"), "stunned");
+			LAi_SetActorType(CharacterFromID("Imperial_envoy"));
+			Characters[GetCharacterIndex("Imperial_envoy")].Dialog.CurrentNode = "outside_cave_after_ether";
+			LAi_ActorDialog(CharacterfromID("Imperial_envoy"), PChar, "imperial_escort_walk_to_beach", 1.0, 1.0);
+		break;
+
+		case "imperial_escort_walk_to_beach":
+			DisableFastTravel(false);
+			sld = CharacterFromID("Jaime Lezcano");
+			if(sld.location == PChar.location)
+			{
+				if (isofficer(sld))
+				{
+					LAi_SetOfficerType(sld);
+				}
+				else
+				{
+					LAi_SetActorType(sld);
+					LAi_ActorFollowEverywhere(sld, "", 5.0);
+				}
+			}
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollowEverywhere(NPChar, "", 10.0);
+			LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
+			AddPassenger(PChar, NPChar, 0);
+			SetCharacterRemovable(NPChar, false);
+			NPChar.AbordageMode = 0;
+			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 28);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("governor");
+			Preprocessor_Remove("evilgov");
+			Preprocessor_Remove("agent");
+
+			if (CheckAttribute(PChar, "quest.imperial_escort.cave_climber"))
+			{
+				LAi_QuestDelay("imperial_escort_call_climber_down", 0.3);
+			}
+			LAi_QuestDelay("imperial_escort_after_rescue", 0.0);
+		break;
+
+		case "imperial_escort_outside_cave_for_negotiation":
+			if(ENABLE_WEAPONSMOD)
+			{
+				EquipCharacterByItem(CharacterFromID("Jaime Lezcano"),"pistol25+2");
+			}
+			else
+			{
+				EquipCharacterByItem(CharacterFromID("Jaime Lezcano"),"pistol25");
+			}
+			EquipCharacterByItem(CharacterFromID("Jaime Lezcano"),"commonarmor");
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			Characters[GetCharacterIndex("Jaime Lezcano")].Dialog.CurrentNode = "imperial_escort_negotiations_outside_cave1";
+			LAi_ActorDialog(CharacterfromID("Jaime Lezcano"), PChar, "", 5.0, 5.0);	// Exits to "imperial_escort_agent_returns_to_cave" or "imperial_escort_fight_agent"
+		break;
+
+		case "imperial_escort_agent_returns_to_cave":
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+          		LAi_ActorGoToLocation(CharacterFromID("Jaime Lezcano"), "reload", "reload1_back", "none", "", "", "imperial_escort_agent_returns_to_cave2", 30.0);
+		break;
+
+		case "imperial_escort_agent_returns_to_cave2":
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(PChar, "goto", "goto6", "imperial_escort_agent_returns_to_cave3", 10.0);
+		break;
+
+		case "imperial_escort_agent_returns_to_cave3":
+			LAi_ActorTurnToLocator(PChar, "reload", "reload1_back");
+			LAi_Fade("", "imperial_escort_agent_returns_from_cave");
+			WaitDate("", 0, 0, 0, 0, rand(4)+3);
+		break;
+
+		case "imperial_escort_agent_returns_from_cave":
+			LAi_ActorWaitDialog(PChar, CharacterFromID("Jaime Lezcano"));
+			Logit(TranslateString("","A few minutes later..."));
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			ChangeCharacterAddressGroup(CharacterFromID("Jaime Lezcano"),"Cuba_exit_grot", "officers", "reload1_1");
+			ChangeCharacterAddressGroup(CharacterFromID("Imperial_envoy"),"Cuba_exit_grot", "reload", "reload1_back");
+			LAi_SetActorType(CharacterFromID("Imperial_envoy"));
+			LAi_ActorFollow(CharacterFromID("Imperial_envoy"), CharacterFromID("Jaime Lezcano"), "", 5.0);
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			Characters[GetCharacterIndex("Jaime Lezcano")].Dialog.CurrentNode = "imperial_escort_return_from_cave";
+			LAi_ActorDialog(CharacterfromID("Jaime Lezcano"), PChar, "imperial_escort_agent_returns_from_cave2", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_agent_returns_from_cave2":
+			LAi_SetPlayerType(PChar);
+			EndQuestMovie();
+			DisableFastTravel(false);
+			LAi_SetActorType(CharacterFromID("Imperial_envoy"));
+			Characters[GetCharacterIndex("Imperial_envoy")].Dialog.CurrentNode = "outside_cave_no_ether";
+			LAi_ActorDialog(CharacterfromID("Imperial_envoy"), PChar, "imperial_escort_walk_to_beach", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_fight_agent":
+			LAi_SetImmortal(CharacterFromID("Jaime Lezcano"), false);
+			LAi_NoRebirthEnable(CharacterFromID("Jaime Lezcano"));
+			LAi_group_MoveCharacter(CharacterFromID("Jaime Lezcano"), LAI_GROUP_MONSTERS);
+			LAi_group_SetRelation(LAI_GROUP_MONSTERS, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAI_GROUP_MONSTERS, LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck(LAI_GROUP_MONSTERS, "imperial_escort_agent_defeated_outside_cave");
+		break;
+
+		case "imperial_escort_agent_defeated_outside_cave":
+			EndQuestMovie();
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.disable = 0;
+			PChar.quest.imperial_escort_inside_kidnap_cave_case3.win_condition.l1 = "location";			// Into cave with active kidnappers and no agent, same situation as if agent is your prisoner and you have no ether bottle
+			PChar.quest.imperial_escort_inside_kidnap_cave_case3.win_condition.l1.location = "Cuba_Grot";		// So re-use quest case for that situation
+			PChar.quest.imperial_escort_inside_kidnap_cave_case3.win_condition = "imperial_escort_inside_kidnap_cave_case3";
+		break;
+
+		case "imperial_escort_negotiate_kidnappers_in_cave":
+			sld = CharacterFromID("Kidnapper 1");
+			LAi_SetActorType(sld);
+			sld.Dialog.Filename = "kidnappers_dialog.c";
+			sld.dialog.CurrentNode = "negotiate";
+			LAi_ActorDialog(sld,PChar,"",5.0,5.0);		// Exits to "imperial_escort_surrender_in_cave" or "imperial_escort_fight_in_cave"
+		break;
+
+		case "imperial_escort_surrender_in_cave":
+			AddCharacterCrew(PChar, 4);
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.disable = 1;
+			Locations[FindLocation("Cuba_Grot")].reload.l1.disable = 0;
+			Locations[FindLocation("Cuba_Grot")].reload.l2.disable = 0;
+			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 40);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("agent");
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "inside_cave_what_next1a";
+			LAi_ActorDialog(NPChar, PChar, "imperial_escort_envoy_follows_in_cave", 5.0, 5.0);
+
+			if (CheckAttribute(PChar, "quest.imperial_escort.cave_climber"))
+			{
+				PChar.quest.imperial_escort_prepare_recall_climber.win_condition.l1 = "location";
+				PChar.quest.imperial_escort_prepare_recall_climber.win_condition.l1.location = "Cuba_exit_grot";
+				PChar.quest.imperial_escort_prepare_recall_climber.win_condition = "imperial_escort_prepare_recall_climber";
+			}
+		break;
+
+		case "imperial_escort_fight_in_cave":
+			if(CheckAttribute(PChar, "quest.imperial_escort.cave_climber"))
+			{
+				sld = CharacterFromID(PChar.quest.imperial_escort.cave_climber);
+				ChangeCharacterAddressGroup(sld, "Cuba_Grot", "goto", "goto1");
+				SetOfficersIndex(PChar, sti(PChar.quest.imperial_escort.cave_climber_slot), GetCharacterIndex(PChar.quest.imperial_escort.cave_climber));
+				DeleteQuestAttribute("imperial_escort.cave_climber_slot");
+				DeleteQuestAttribute("imperial_escort.cave_climber");
+			}
+			LAi_LocationFightDisable(&Locations[FindLocation("Cuba_Grot")], false);
+			for (n=1; n<5; n++)
+			{
+				sld = CharacterFromID("Kidnapper " + n);
+				LAi_group_MoveCharacter(sld, LAI_GROUP_MONSTERS);
+			}
+			LAi_group_SetRelation(LAI_GROUP_MONSTERS, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAI_GROUP_MONSTERS, LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck(LAI_GROUP_MONSTERS, "imperial_escort_cave_battle_over");
+			PChar.quest.imperial_escort_envoy_saved_in_cave.win_condition.l1 = "NPC_Death";
+			PChar.quest.imperial_escort_envoy_saved_in_cave.win_condition.l1.character = "Kidnapper 2";
+			PChar.quest.imperial_escort_envoy_saved_in_cave.win_condition.l2 = "NPC_Death";
+			PChar.quest.imperial_escort_envoy_saved_in_cave.win_condition.l2.character = "Kidnapper 4";
+			PChar.quest.imperial_escort_envoy_saved_in_cave.win_condition = "imperial_escort_envoy_saved_in_cave";
+			LAi_QuestDelay("imperial_escort_envoy_dead_in_cave", 60.0);
+		break;
+
+		case "imperial_escort_envoy_dead_in_cave":
+			if(!CheckAttribute(PChar, "quest.imperial_escort.envoy_survives_battle") || sti(PChar.quest.imperial_escort.envoy_survives_battle) == false)
+			{
+				LAi_KillCharacter(characterfromID("Imperial_envoy"));
+				PChar.quest.imperial_escort_envoy_saved_in_cave.over = "yes";
+			}
+		break;
+
+		case "imperial_escort_envoy_saved_in_cave":
+			PChar.quest.imperial_escort_envoy_dead_in_cave.over = "yes";
+			PChar.quest.imperial_escort.envoy_survives_battle = true;
+		break;
+
+		case "imperial_escort_cave_battle_over":
+			Locations[FindLocation("Cuba_Grot")].reload.l1.disable = 0;
+			Locations[FindLocation("Cuba_Grot")].reload.l2.disable = 0;
+			if(!LAi_IsDead(CharacterFromID("Imperial_envoy")))
+			{
+				LAi_SetActorType(PChar);
+				LAi_ActorTurnToCharacter(PChar, CharacterFromID("Imperial_envoy"));
+				LAi_ActorWaitDialog(PChar, CharacterFromID("Imperial_envoy"));
+				PChar.quest.imperial_escort_envoy_dead_in_cave.over = "yes";
+				PChar.quest.imperial_escort.envoy_survives_battle = true;
+				Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
+				Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+				AddQuestRecord("Imperial Escort", 38);
+				Preprocessor_Remove("envoy");
+				Preprocessor_Remove("agent");
+				NPChar = CharacterFromID("Imperial_envoy");
+				LAi_SetActorType(NPChar);
+				NPChar.Dialog.CurrentNode = "inside_cave_what_next";
+				LAi_ActorDialog(NPChar, PChar, "imperial_escort_envoy_follows_in_cave", 5.0, 5.0);
+			}
+			else
+			{
+				Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
+				Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+				AddQuestRecord("Imperial Escort", 39);
+				Preprocessor_Remove("envoy");
+				Preprocessor_Remove("agent");
+			}
+		break;
+
+		case "imperial_escort_envoy_follows_in_cave":
+			LAi_SetPlayerType(PChar);
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollowEverywhere(NPChar, "", 5.0);
+			LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
+			AddPassenger(PChar, NPChar, 0);
+			SetCharacterRemovable(NPChar, false);
+			NPChar.AbordageMode = 0;
+			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 41);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("governor");
+			Preprocessor_Remove("evilgov");
+			Preprocessor_Remove("agent");
+
+			LAi_QuestDelay("imperial_escort_after_rescue", 0.0);
+		break;
+
+		case "imperial_escort_officer_prepare_climb_cave":			// Intermediate step needed for officers other than 'romance' who got here from
+			LAi_QuestDelay("imperial_escort_officer_climbs_cave", 0.1);	// "crew_dialog.c", which also calls "reset_crewmember", which puts them in officer mode
+		break;
+
+		case "imperial_escort_officer_climbs_cave":
+			if(CheckAttribute(PChar, "quest.imperial_escort.cave_climber"))
+			{
+				StartQuestMovie(true, false, false);
+				DisableFastTravel(true);
+				sld = CharacterFromID(PChar.quest.imperial_escort.cave_climber);
+				LAi_SetActorType(sld);
+				LAi_ActorRunToLocator(sld, "goto", "goto4", "imperial_escort_officer_climbs_cave2", 20.0);
+			}
+		break;
+
+		case "imperial_escort_officer_climbs_cave2":
+			ChangeCharacterAddress(CharacterFromID(PChar.quest.imperial_escort.cave_climber), "None", "");
+			LAi_Fade("", "imperial_escort_officer_climbs_cave3");
+			WaitDate("", 0, 0, 0, 0, rand(3)+2);
+		break;
+
+		case "imperial_escort_officer_climbs_cave3":
+			n = 1;
+			cidx = GetCharacterIndex(PChar.quest.imperial_escort.cave_climber);
+			for(i=0;i<OFFICER_MAX;i++)
+			{
+				if(GetOfficersIndex(PChar,i) == cidx) n = i;
+			}
+			PChar.quest.imperial_escort.cave_climber_slot = n;
+			RemoveOfficersIndex(PChar, cidx);
+			ChangeCharacterAddressGroup(CharacterFromID(PChar.quest.imperial_escort.cave_climber),"Cuba_exit_grot", "goto", "goto12");
+			LAi_QuestDelay("imperial_escort_officer_climbs_cave4", 0.5);
+		break;
+
+		case "imperial_escort_officer_climbs_cave4":
+			sld = CharacterFromID(PChar.quest.imperial_escort.cave_climber);
+			LAi_SetActorType(sld);
+			LAi_ActorAttack(sld, PChar, "");
+			EndQuestMovie();
+			DisableFastTravel(false);
+		break;
+
+		case "imperial_escort_prepare_recall_climber":
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(PChar, "goto", "goto6", "imperial_escort_call_climber_down", 10.0);
+		break;
+
+		case "imperial_escort_call_climber_down":
+			LAi_SetPlayerType(PChar);
+			sld = CharacterFromID(PChar.quest.imperial_escort.cave_climber);
+			StoreDialog(sld);
+			sld.Dialog.Filename = "crew_dialog.c";
+			sld.Dialog.CurrentNode = "imperial_escort_down_from_cave";
+			LAi_SetActorType(sld);
+			LAi_ActorDialogNow(sld, PChar,"imperial_escort_officer_back_from_cave",1.0);
+		break;
+
+		case "imperial_escort_officer_back_from_cave":
+			LAi_Fade("", "imperial_escort_officer_back_from_cave2");
+			WaitDate("", 0, 0, 0, 0, 1);
+			SetOfficersIndex(PChar, sti(PChar.quest.imperial_escort.cave_climber_slot), GetCharacterIndex(PChar.quest.imperial_escort.cave_climber));
+		break;
+
+		case "imperial_escort_officer_back_from_cave2":
+			sld = CharacterFromID(PChar.quest.imperial_escort.cave_climber);
+			ChangeCharacterAddressGroup(sld,"Cuba_exit_grot", "goto", "goto4");
+			RestoreDialog(sld);
+			DeleteQuestAttribute("imperial_escort.cave_climber_slot");
+			DeleteQuestAttribute("imperial_escort.cave_climber");
+		break;
+
+		case "imperial_escort_agent_joins_crew":	// Triggered by dialog with Jaime Lezcano if it leads to him joining as officer
+			NPChar = CharacterFromID("Jaime Lezcano");
+			if (GetOfficersIndex(PChar, 3) == GetCharacterIndex(romance.id)) SetOfficersIndex(PChar, 2, GetCharacterIndex("Jaime Lezcano"));
+			else SetOfficersIndex(PChar, 3, GetCharacterIndex("Jaime Lezcano"));
+			LAi_SetOfficerType(NPChar);
+			AddPassenger(PChar, NPChar, 0);
+			SetCharacterRemovable(NPChar, false);
+			LAi_SetImmortal(NPChar, false);
+			LAi_NoRebirthEnable(NPChar);
+			AddCharacterCrew(PChar, 4);
+		break;
+
+		case "imperial_escort_agent_to_tortuga":	// Triggered by dialog with Jaime Lezcano if it leads to promise to take him to Tortuga
+			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 25);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("agent");
+			AddPassenger(PChar, CharacterFromID("Jaime Lezcano"), 0);
+			SetCharacterRemovable(CharacterFromID("Jaime Lezcano"), false);
+			PChar.quest.imperial_escort_agent_aboard.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_agent_aboard.win_condition.l1.location = "Cuba";
+			PChar.quest.imperial_escort_agent_aboard.win_condition = "imperial_escort_agent_aboard";
+
+			PChar.quest.imperial_escort_agent_at_tortuga.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_agent_at_tortuga.win_condition.l1.location = "Tortuga_port";
+			PChar.quest.imperial_escort_agent_at_tortuga.win_condition = "imperial_escort_agent_at_tortuga";
+			Locations[FindLocation("Tortuga_Port")].vcskip = true;
+		break;
+
+		case "imperial_escort_agent_aboard":
+			LAi_type_actor_Reset(CharacterFromID("Jaime Lezcano"));
+			ChangeCharacterAddress(CharacterFromID("Jaime Lezcano"), "None", "");
+		break;
+
+		case "imperial_escort_agent_at_tortuga":
+			locations[FindLocation("Tortuga_port")].reload.l1.disable = 1;
+			locations[FindLocation("Tortuga_port")].reload.l2.disable = 1;
+			SetCharacterRemovable(CharacterFromID("Jaime Lezcano"), true);
+			RemovePassenger(PChar, CharacterFromID("Jaime Lezcano"));
+			PlaceCharacter(CharacterFromID("Jaime Lezcano"), "goto");
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			LAi_SetActorType(CharacterFromID("Jaime Lezcano"));
+			Characters[GetCharacterIndex("Jaime Lezcano")].Dialog.CurrentNode = "imperial_escort_tortuga_arrival";
+			LAi_ActorDialog(CharacterfromID("Jaime Lezcano"), PChar, "imperial_escort_agent_at_tortuga2", 20.0, 20.0);
+		break;
+
+		case "imperial_escort_agent_at_tortuga2":
+			locations[FindLocation("Tortuga_port")].reload.l1.disable = 0;
+			locations[FindLocation("Tortuga_port")].reload.l2.disable = 0;
+			DeleteAttribute(&Locations[FindLocation("Tortuga_port")],"vcskip");
+			Characters[GetCharacterIndex("Jaime Lezcano")].location = "none";
+			LAi_SetCitizenType(CharacterFromID("Jaime Lezcano"));
+			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
+			AddQuestRecord("Imperial Escort", 29);
+			Preprocessor_Remove("agent");
+		break;
+
+		case "imperial_escort_after_rescue":
+			Locations[FindLocation("Cuba_port")].vcskip = true;
+			Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload4 = 3.0;
+			PChar.quest.imperial_escort_reset_cave.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_reset_cave.win_condition.l1.location = "Cuba";
+			PChar.quest.imperial_escort_reset_cave.win_condition = "imperial_escort_reset_cave";
+
+			PChar.quest.imperial_escort_after_rescue_havana_port.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_after_rescue_havana_port.win_condition.l1.location = "Cuba_port";
+			PChar.quest.imperial_escort_after_rescue_havana_port.win_condition = "imperial_escort_after_rescue_havana_port";
+
+			PChar.quest.imperial_escort_after_rescue_havana_town.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_after_rescue_havana_town.win_condition.l1.location = "Havana_town_05";
+			PChar.quest.imperial_escort_after_rescue_havana_town.win_condition = "imperial_escort_after_rescue_havana_town";
+
+			PChar.quest.imperial_escort_after_rescue_santiago_port.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_after_rescue_santiago_port.win_condition.l1.location = "Santiago_port";
+			PChar.quest.imperial_escort_after_rescue_santiago_port.win_condition = "imperial_escort_after_rescue_santiago_port";
+
+			PChar.quest.imperial_escort_after_rescue_santiago_town.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_after_rescue_santiago_town.win_condition.l1.location = "Santiago_town_01";
+			PChar.quest.imperial_escort_after_rescue_santiago_town.win_condition = "imperial_escort_after_rescue_santiago_town";
+		break;
+
+		case "imperial_escort_reset_cave":
+			LAi_LocationFightDisable(&Locations[FindLocation("Cuba_Grot")], false);
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.disable = 0;
+			Locations[FindLocation("Cuba_exit_grot")].reload.l3.emerge = "reload1";
+			Locations[FindLocation("Cuba_Grot")].image = "Inside_Grot.tga";
+			Locations[FindLocation("Cuba_Grot")].models.always.locators = "Grot_l";
+			DeleteAttribute(&Locations[FindLocation("Cuba_Grot")],"vcskip");
+			DeleteAttribute(&Locations[FindLocation("Cuba_exit_grot")],"vcskip");
+		break;
+
+		case "imperial_escort_after_rescue_havana_port":
+			PChar.quest.imperial_escort_after_rescue_havana_town.over = "yes";
+			PChar.quest.imperial_escort_after_rescue_santiago_port.over = "yes";
+			PChar.quest.imperial_escort_after_rescue_santiago_town.over = "yes";
+			PChar.quest.arresters_location = "Cuba_port";
+			PChar.quest.arresters_group = "goto";
+			PChar.quest.arresters_locator = "goto_16";
+			DeleteAttribute(&Locations[FindLocation("Cuba_port")],"vcskip");
+			LAi_QuestDelay("imperial_escort_after_rescue_arrest", 0.1);
+		break;
+
+		case "imperial_escort_after_rescue_havana_town":
+			PChar.quest.imperial_escort_after_rescue_havana_port.over = "yes";
+			PChar.quest.imperial_escort_after_rescue_santiago_port.over = "yes";
+			PChar.quest.imperial_escort_after_rescue_santiago_town.over = "yes";
+			PChar.quest.arresters_location = "Havana_town_05";
+			PChar.quest.arresters_group = "goto";
+			PChar.quest.arresters_locator = "goto_18";
+			DeleteAttribute(&Locations[FindLocation("Cuba_port")],"vcskip");
+			LAi_QuestDelay("imperial_escort_after_rescue_arrest", 0.1);
+		break;
+
+		case "imperial_escort_after_rescue_santiago_port":
+			PChar.quest.imperial_escort_after_rescue_santiago_town.over = "yes";
+			PChar.quest.arresters_location = "Santiago_port";
+			PChar.quest.arresters_group = "goto";
+			if (PChar.location.from_sea == "Cuba_shore_02") PChar.quest.arresters_locator = "goto27";
+			else PChar.quest.arresters_locator = "goto7";
+			LAi_QuestDelay("imperial_escort_after_rescue_arrest", 0.1);
+		break;
+
+		case "imperial_escort_after_rescue_santiago_town":
+			PChar.quest.imperial_escort_after_rescue_santiago_port.over = "yes";
+			PChar.quest.arresters_location = "Santiago_town_01";
+			PChar.quest.arresters_group = "goto";
+			PChar.quest.arresters_locator = "goto49";
+			LAi_QuestDelay("imperial_escort_after_rescue_arrest", 0.1);
+		break;
+
+		case "imperial_escort_after_rescue_arrest":
+			ChangeCharacterAddressGroup(CharacterFromID("Emiliano de Guzmán"), "Santiago_townhall", "goto", "goto3");
+			LAi_SetHuberStayType(CharacterFromID("Emiliano de Guzmán"));
+			TakeItemFromCharacter(CharacterFromID("Emiliano de Guzmán"), FindCharacterItemByGroup(CharacterFromID("Emiliano de Guzmán"), BLADE_ITEM_TYPE));
+			if (ENABLE_WEAPONSMOD)
+			{
+				GiveItem2Character(CharacterFromID("Emiliano de Guzmán"),"bladeC17+2");
+				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmán"),"bladeC17+2");
+			}
+			else
+			{
+				GiveItem2Character(CharacterFromID("Emiliano de Guzmán"),"bladeC17");
+				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmán"),"bladeC17");
+			}
+			if (!CheckCharacterItem(CharacterFromID("Emiliano de Guzmán"), "goldarmor"))
+			{
+				GiveItem2Character(CharacterFromID("Emiliano de Guzmán"), "goldarmor");
+				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmán"), "goldarmor");
+			}
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].perks.list.BasicDefence = true;		// Need to assign abilities here because levelling system fouls them up earlier
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].perks.list.AdvancedDefence = true;
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].perks.list.SwordplayProfessional = true;
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].perks.list.CriticalHit = true;
+			NPChar = CharacterFromID("Imperial_envoy");
+			if (NPChar.location != PChar.location)
+			{
+				PlaceCharacter(NPChar, "goto");
+				LAi_SetActorType(NPChar);
+				LAi_ActorFollowEverywhere(NPChar, "", 5.0);
+			}
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], true);
+
+			for (n=1; n<=4; n++)
+			{
+
+				sld = CharacterFromID("Spanish_soldier" + n);
+				ChangeCharacterAddressGroup(sld, PChar.location, PChar.quest.arresters_group, PChar.quest.arresters_locator);
+				if (n == 1) SetModelFromID(sld, Nations[SPAIN].fantomModel.m0);
+				else
+				{
+					temp = "m" + (rand(5) + 1);
+					SetModelFromID(sld, Nations[SPAIN].fantomModel.(temp));
+				}
+				sld.Dialog.Filename = "guard_dialog.c";
+				LAi_group_MoveCharacter(sld, "SPAIN_SOLDIERS");
+				GiveSoldierWeapon(sld, SPAIN);
+				sld.nation = SPAIN;
+				DeleteAttribute(sld, "questchar");
+				SetRandomNameToCharacter(sld);
+				sld.questchar = true;
+				LAi_SetActorType(sld);
+				LAi_ActorFollow(sld, PChar, "", 60.0);
+			}
+
+			sld = CharacterFromID("Spanish_soldier1");
+			if(PChar.location == "Santiago_port" || PChar.location == "Santiago_town_01")
+			{
+				sld.dialog.CurrentNode = "imperial_escort_santiago_arrest";
+				LAi_SetActorType(sld);
+				LAi_ActorDialog(sld,PChar,"imperial_escort_after_rescue_arrest2",60.0,60.0);
+			}
+			else
+			{
+				sld.dialog.CurrentNode = "imperial_escort_havana_arrest";
+				LAi_SetActorType(sld);
+				LAi_ActorDialog(sld,PChar,"imperial_escort_brought_to_admiral",60.0,60.0);
+			}
+		break;
+
+		case "imperial_escort_after_rescue_arrest2":
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "santiago_guard";
+			LAi_ActorDialog(NPChar, PChar, "imperial_escort_after_rescue_arrest3", 5.0, 5.0);
+//			LAi_ActorDialogNow(NPChar, PChar,"imperial_escort_after_rescue_arrest3",1.0);
+		break;
+
+		case "imperial_escort_after_rescue_arrest3":
+			sld = CharacterFromID("Spanish_soldier1");
+			sld.dialog.CurrentNode = "imperial_escort_santiago_arrest2";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld,PChar,"imperial_escort_after_rescue_arrest4",5.0,5.0);
+		break;
+
+		case "imperial_escort_after_rescue_arrest4":
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "santiago_guard2";
+			LAi_ActorDialogNow(NPChar, PChar,"imperial_escort_after_rescue_arrest5",1.0);
+		break;
+
+		case "imperial_escort_after_rescue_arrest5":
+			sld = CharacterFromID("Spanish_soldier1");
+			sld.dialog.CurrentNode = "imperial_escort_santiago_arrest3";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld,PChar,"imperial_escort_after_rescue_onto_townhall",5.0,5.0);
+		break;
+
+		case "imperial_escort_after_rescue_onto_townhall":
+			EndQuestMovie();
+			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], false);
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 1;	// Lock Santiago townhall so you can't go in before talking to Electress Maria Antonia
+			for (n=1; n<=4; n++)
+			{
+				sld = CharacterFromID("Spanish_soldier" + n);
+				LAi_SetActorType(sld);
+          			LAi_ActorGoToLocation(sld, "reload", "reload1", "none", "", "", "", 120.0);
+			}
+//			DeleteQuestAttribute("arresterid");
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "santiago_on_to_townhall";
+			LAi_ActorDialog(NPChar, PChar, "imperial_escort_after_rescue_onto_townhall2", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_after_rescue_onto_townhall2":
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollowEverywhere(NPChar, "", 5.0);
+			LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
+
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 42);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("evilgov");
+
+			PChar.quest.imperial_escort_after_rescue_onto_townhall3.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_after_rescue_onto_townhall3.win_condition.l1.location = "Santiago_town_01";
+			PChar.quest.imperial_escort_after_rescue_onto_townhall3.win_condition.l1.locator_group = "reload";
+			PChar.quest.imperial_escort_after_rescue_onto_townhall3.win_condition.l1.locator = "reload4";
+			PChar.quest.imperial_escort_after_rescue_onto_townhall3.win_condition = "imperial_escort_after_rescue_onto_townhall3";
+		break;
+
+		case "imperial_escort_after_rescue_onto_townhall3":
+			Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload4 = 1.0;
+			LAi_SetActorType(PChar);
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_ActorTurnToCharacter(PChar,NPChar);
+			LAi_ActorWaitDialog(PChar, NPChar);
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "santiago_townhall_approach";
+			LAi_ActorDialog(NPChar, PChar, "imperial_escort_after_rescue_onto_townhall4", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_after_rescue_onto_townhall4":
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;	// Unlock Santiago townhall so you can confront Emiliano de Guzmán
+			Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload4 = 1.0;
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(CharacterFromID("Imperial_envoy"));
+
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].dialog.CurrentNode = "revenge";
+			PChar.quest.imperial_escort_setup_guzman.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_setup_guzman.win_condition.l1.location = "Santiago_townhall";
+			PChar.quest.imperial_escort_setup_guzman.win_condition = "imperial_escort_setup_guzman";
+
+			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l1.location = "Santiago_town_01";
+			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l1.locator_group = "reload";
+			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l1.locator = "reload4";
+			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l2 = "NPC_Death";
+			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l2.character = "Emiliano de Guzmán";
+			PChar.quest.imperial_escort_guzman_defeated_1.win_condition = "imperial_escort_guzman_defeated_1";
+		break;
+
+		case "imperial_escort_brought_to_admiral":
+			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], false);
+			Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload4 = 1.0;	// Was set to 3.0 in case you went there first with Maria Antonia, not needed now
+			if(GetDayTime() == DAY_TIME_NIGHT)
+			{
+				WaitDate("", 0, 0, 1, 0, 0);
+				SetCurrentTime(10, 0);
+			}
+			DoQuestReloadToLocation("Havana_House_03", "reload", "reload1", "imperial_escort_brought_to_admiral2");
+		break;
+
+		case "imperial_escort_brought_to_admiral2":
+			NPChar = CharacterFromID("Imperial_envoy");
+			ChangeCharacterAddressGroup(NPChar,"Havana_House_03", "goto", "goto1");
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollowEverywhere(NPChar, "", 5.0);
+//			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[SPAIN].fantomModel.m1, "goto", "goto4");
+//			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[SPAIN].fantomModel.m2, "goto", "goto6");
+//			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[SPAIN].fantomModel.m0, "goto", "goto7");
+//			PChar.quest.arresterid = sld.id;
+//			sld.name = PChar.quest.imperial_escort.arrester_name;
+//			sld.lastname = PChar.quest.imperial_escort.arrester_lastname;
+			ChangeCharacterAddressGroup(CharacterFromID("Spanish_soldier1"), "Havana_House_03", "goto", "goto1");
+			ChangeCharacterAddressGroup(CharacterFromID("Spanish_soldier2"), "Havana_House_03", "goto", "goto4");
+			ChangeCharacterAddressGroup(CharacterFromID("Spanish_soldier3"), "Havana_House_03", "goto", "goto6");
+			ChangeCharacterAddressGroup(CharacterFromID("Spanish_soldier4"), "Havana_House_03", "goto", "goto7");
+			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier2"));
+			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier3"));
+			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier4"));
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator(PChar, "goto", "goto8", "imperial_escort_brought_to_admiral3", 25.0);
+		break;
+
+		case "imperial_escort_brought_to_admiral3":
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(CharacterFromID("Jusepe Guimaraes"));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_youre_back";
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_envoy_to_admiral",1.0);
+		break;
+
+		case "imperial_escort_envoy_to_admiral":
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "believe_ardent";
+			LAi_ActorDialogNow(NPChar, PChar,"imperial_escort_admiral_to_envoy",1.0);
+		break;
+
+		case "imperial_escort_admiral_to_envoy":
+			LAi_SetActorType(CharacterFromID("Jusepe Guimaraes"));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_good_case";
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_envoy_demands_justice",1.0);
+		break;
+
+		case "imperial_escort_envoy_demands_justice":
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "demand_justice";
+			LAi_ActorDialogNow(NPChar, PChar,"imperial_escort_restoration",1.0);
+		break;
+
+		case "imperial_escort_restoration":
+			SetRank(PChar, SPAIN, sti(PChar.quest.imperial_escort.old_spain_rank));
+			SetRMRelation(PChar, SPAIN, stf(PChar.quest.imperial_escort.old_spain_relation));
+			if(CheckAttribute(PChar, "quest.imperial_escort.land"))
+			{
+				makearef(pchar_land, PChar.land);
+				makearef(pchar_quest_land, PChar.quest.imperial_escort.land);
+				CopyAttributes(pchar_land, pchar_quest_land);
+			}
+
+			if(CheckAttribute(PChar, "quest.imperial_escort.old_knighted"))
+			{
+				PChar.knighted = PChar.quest.imperial_escort.old_knighted;
+				SetRankTitle(PChar, TranslateString("", PChar.quest.imperial_escort.old_title));
+			}
+			RestorePassengers(PChar.id);
+
+			if (isofficer(CharacterFromID("Jaime Lezcano")))
+			{
+				SetCharacterRemovable(CharacterFromID("Jaime Lezcano"), true);
+				Characters[GetCharacterIndex("Jaime Lezcano")].dialog.Filename = "Enc_Officer_dialog.c";
+				Characters[GetCharacterIndex("Jaime Lezcano")].dialog.CurrentNode = "hired";
+			}
+
+			PChar.quest.imperial_escort.grigorio_ship = "None";
+			PChar.quest.imperial_escort.galleon = "None";
+
+			i = 0;
+			for (n=1; n<COMPANION_MAX; n++)
+			{
+				attr = "quest.imperial_escort.companion" + n;
+				if (GetAttribute(PChar, attr) != "*NULL*" && GetAttribute(PChar, attr) != "-1") i++;
+			}
+			PChar.quest.imperial_escort.original_companions_number = i;
+
+			for (n = COMPANION_MAX - 1; n >= 0; n--)
+			{
+				cidx = GetCompanionIndex(GetMainCharacter(), n);
+				if (cidx >= 0)
+				{
+					crewref = GetCharacter(cidx);
+					if (GetCharacterShipID(crewref) == "Barque1" && CheckAttribute(crewref, "id")) PChar.quest.imperial_escort.grigorio_ship = crewref.id;
+					if (GetCharacterShipID(crewref) == "FastGalleon5" && CheckAttribute(crewref, "id")) PChar.quest.imperial_escort.galleon = crewref.id;
+				}
+			}
+	
+			makeref(ImpShip,ShipsTypes[GetShipIndex("FastGalleon5")]);	// Remove Holy Roman Empire from general "FastGalleon5"
+//			DeleteAttribute(ImpShip, "EmblemedSails.normalTex");
+//			DeleteAttribute(ImpShip, "EmblemedSails.nationFileName");
+			DeleteAttribute(ImpShip, "EmblemedSails");
+
+			LAi_SetActorType(CharacterFromID("Jusepe Guimaraes"));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_that_seems_fair";
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_envoy_to_admiral_again",1.0);		// Exits, triggers "imperial_escort_go_get_guzman" if Emiliano de Guzmán is still alive
+
+// See cases "imperial_escort_admiral_leaves2" and "imperial_escort_ships_impounded"
+		break;
+
+		case "imperial_escort_envoy_to_admiral_again":
+			if(PChar.quest.imperial_escort.galleon != "None")
+			{
+				NPChar = CharacterFromID("Imperial_envoy");
+				LAi_SetActorType(NPChar);
+				NPChar.Dialog.CurrentNode = "keep_galleon";
+				LAi_ActorDialogNow(NPChar, PChar, "", 1.0);	// If you have the 'San Lorenzo', exits to "imperial_escort_keep_galleon" or "imperial_escort_admiral_restores_ships"
+			}
+			else LAi_QuestDelay("imperial_escort_farewell_envoy", 0.1);
+		break;
+
+		case "imperial_escort_go_get_guzman":
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+			AddQuestRecord("Imperial Escort", 47);
+			Preprocessor_Remove("admiral");
+			Preprocessor_Remove("evilgov");
+			PChar.quest.imperial_escort.arrest_guzman = true;
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;		// Unlock Santiago townhall so you can confront Emiliano de Guzmán
+			Locations[FindLocation("Santiago_town_01")].reload.l4.close_for_night = 0;	// by day or night
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].dialog.CurrentNode = "arrest";
+			LAi_QuestDelay("imperial_escort_soldiers_join", 0.5);
+			PChar.quest.imperial_escort_setup_guzman.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_setup_guzman.win_condition.l1.location = "Santiago_townhall";
+			PChar.quest.imperial_escort_setup_guzman.win_condition = "imperial_escort_setup_guzman";
+
+//			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1 = "NPC_Death";
+//			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1.character = "Emiliano de Guzmán";
+//			PChar.quest.imperial_escort_guzman_defeated_2.win_condition = "imperial_escort_guzman_defeated_2";
+		break;
+
+		case "imperial_escort_keep_galleon":
+			PChar.quest.imperial_escort.keep_galleon = true;
+			LAi_SetActorType(CharacterFromID("Jusepe Guimaraes"));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_deny_galleon";
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_envoy_insists_galleon",1.0);
+		break;
+
+		case "imperial_escort_envoy_insists_galleon":
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "report_admiral_good";
+			LAi_ActorDialogNow(NPChar, PChar,"imperial_escort_admiral_flattered",1.0);
+		break;
+
+		case "imperial_escort_admiral_flattered":
+			LAi_SetActorType(CharacterFromID("Jusepe Guimaraes"));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_flattered";
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_envoy_insists_galleon2",1.0);
+		break;
+
+		case "imperial_escort_envoy_insists_galleon2":
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "report_admiral_bad";
+			LAi_ActorDialogNow(NPChar, PChar,"imperial_escort_admiral_allows_galleon",1.0);
+		break;
+
+		case "imperial_escort_admiral_allows_galleon":
+			LAi_SetActorType(CharacterFromID("Jusepe Guimaraes"));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_find_new_ship";
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_farewell_envoy",1.0);
+		break;
+
+		case "imperial_escort_farewell_envoy":
+			NPChar = CharacterFromID("Imperial_envoy");
+			RemovePassenger(PChar, NPChar);
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "farewell";
+			LAi_ActorDialogNow(NPChar, PChar,"imperial_escort_admiral_restores_ships",1.0);
+		break;
+
+		case "imperial_escort_admiral_restores_ships":
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+          		LAi_ActorGoToLocation(NPChar, "reload", "reload1", "none", "", "", "", 60.0);
+			SetCharacterShipLocation(CharacterFromID("Imperial_Captain"), "None");
+			ChangeCharacterAddress(CharacterFromID("Imperial_Captain"), "None", "");
+			LAi_SetActorType(CharacterFromID("Jusepe Guimaraes"));
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_payment";
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_end",1.0);	// All code for restoring ships is in "Jusepe Guimaraes_dialog.c"
+		break;
+
+		case "imperial_escort_end":
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 44);
+			Preprocessor_Remove("envoy");
+			EndQuestMovie();
+			DisableFastTravel(false);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 10000);
+				AddPartyExpChar(PChar, "", 5000);
+				AddPartyExpChar(PChar, "Sneak", 5000);
+			}
+			else {AddPartyExp(PChar, 20000);}
+			LAi_SetHuberStayType(CharacterFromID("Jusepe Guimaraes"));
+
+			PChar.quest.imperial_escort_end2.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.imperial_escort_end2.win_condition.l1.location = PChar.location;
+			Pchar.quest.imperial_escort_end2.win_condition = "imperial_escort_end2";
+		break;
+
+		case "imperial_escort_end2":
+			LAi_SetHuberType(CharacterFromID("Jusepe Guimaraes"));
+			if (!CheckAttribute(PChar, "quest.imperial_escort.arrest_guzman") || sti(PChar.quest.imperial_escort.arrest_guzman) != true)
+			{
+				LAi_QuestDelay("imperial_escort_remove_soldiers", 0.1);
+				Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+				Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
+				AddQuestRecord("Imperial Escort", 49);
+				Preprocessor_Remove("governor");
+				Preprocessor_Remove("evilgov");
+				CloseQuestHeader("Imperial Escort");
+			}
+		break;
+
+		case "imperial_escort_soldiers_join":
+			for (n=1; n<=4; n++)
+			{
+
+				sld = CharacterFromID("Spanish_soldier" + n);
+//				PlaceCharacter(sld, "goto");
+				LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
+				LAi_SetActorType(sld);
+				LAi_ActorFollowEverywhere(sld, "", 10.0);
+			}
+			PChar.quest.imperial_escort_soldiers_detach.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_soldiers_detach.win_condition.l1.location = "Cuba";
+			PChar.quest.imperial_escort_soldiers_detach.win_condition = "imperial_escort_soldiers_detach";
+		break;
+
+		case "imperial_escort_soldiers_detach":
+			for (n=1; n<=4; n++)
+			{
+
+				sld = CharacterFromID("Spanish_soldier" + n);
+				LAi_type_actor_Reset(sld);
+				ChangeCharacterAddress(sld, "None", "");
+			}
+
+			PChar.quest.imperial_escort_soldiers_rejoin1.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_soldiers_rejoin1.win_condition.l1.location = "Cuba_shore_02";	// Bahia de Moa
+			PChar.quest.imperial_escort_soldiers_rejoin1.win_condition = "imperial_escort_soldiers_rejoin";
+
+			PChar.quest.imperial_escort_soldiers_rejoin2.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_soldiers_rejoin2.win_condition.l1.location = "Cuba_shore_05";	// Playa de Sierra Maestra
+			PChar.quest.imperial_escort_soldiers_rejoin2.win_condition = "imperial_escort_soldiers_rejoin";
+
+			PChar.quest.imperial_escort_soldiers_rejoin3.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_soldiers_rejoin3.win_condition.l1.location = "Santiago_port";
+			PChar.quest.imperial_escort_soldiers_rejoin3.win_condition = "imperial_escort_soldiers_rejoin";
+		break;
+
+		case "imperial_escort_soldiers_rejoin":
+			PChar.quest.imperial_escort_soldiers_rejoin1.over = "yes";
+			PChar.quest.imperial_escort_soldiers_rejoin2.over = "yes";
+			PChar.quest.imperial_escort_soldiers_rejoin3.over = "yes";
+
+			for (n=1; n<=4; n++)
+			{
+
+				sld = CharacterFromID("Spanish_soldier" + n);
+				PlaceCharacter(sld, "goto");
+				LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
+				LAi_SetActorType(sld);
+				LAi_ActorFollowEverywhere(sld, "", 10.0);
+			}
+			DisableFastTravel(true);
+			bQuestDisableSeaEnter = true;
+			Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload4 = 3.0;
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 1;	// Lock Santiago townhall so you can't go in before talking to soldiers
+
+			PChar.quest.imperial_escort_soldiers_outside_townhall.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_soldiers_outside_townhall.win_condition.l1.location = "Santiago_town_01";
+			PChar.quest.imperial_escort_soldiers_outside_townhall.win_condition.l1.locator_group = "reload";
+			PChar.quest.imperial_escort_soldiers_outside_townhall.win_condition.l1.locator = "reload4";
+			PChar.quest.imperial_escort_soldiers_outside_townhall.win_condition = "imperial_escort_soldiers_outside_townhall";
+		break;
+
+		case "imperial_escort_soldiers_outside_townhall":
+			Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload4 = 1.0;
+			for (n=2; n<=4; n++)
+			{
+
+				sld = CharacterFromID("Spanish_soldier" + n);
+				LAi_SetActorType(sld);
+				LAi_ActorFollow(sld, CharacterFromID("Spanish_soldier1"), "", 10.0);
+			}
+			LAi_SetActorType(CharacterFromID("Spanish_soldier1"));
+			Characters[GetCharacterIndex("Spanish_soldier1")].dialog.CurrentNode = "imperial_escort_outside_santiago_townhall";
+			LAi_ActorDialog(CharacterFromID("Spanish_soldier1"), PChar,"imperial_escort_soldiers_outside_townhall2",5.0, 5.0);
+		break;
+
+		case "imperial_escort_soldiers_outside_townhall2":
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;	// Unlock Santiago townhall so you can confront Emiliano de Guzmán
+			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier1"));
+			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier2"));
+			LAi_SetActorType(CharacterFromID("Spanish_soldier3"));
+			LAi_SetActorType(CharacterFromID("Spanish_soldier4"));
+          		LAi_ActorGoToLocation(CharacterFromID("Spanish_soldier3"), "reload", "reload4", "None", "", "", "", 20.0);
+          		LAi_ActorGoToLocation(CharacterFromID("Spanish_soldier4"), "reload", "reload4", "None", "", "", "", 20.0);
+
+			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1.location = "Santiago_town_01";
+			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1.locator_group = "reload";
+			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1.locator = "reload4";
+			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l2 = "NPC_Death";
+			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l2.character = "Emiliano de Guzmán";
+			PChar.quest.imperial_escort_guzman_defeated_2.win_condition = "imperial_escort_guzman_defeated_2";
+		break;
+
+		case "imperial_escort_setup_guzman":
+			ChangeCharacterAddress(CharacterFromID("Spanish_soldier1"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Spanish_soldier2"), "None", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Spanish_soldier3"), "Santiago_townhall", "goto", "goto11");
+			ChangeCharacterAddressGroup(CharacterFromID("Spanish_soldier4"), "Santiago_townhall", "goto", "goto12");
+			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier3"));
+			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier4"));
+		break;
+
+		case "imperial_escort_fight_guzman":	// Triggered by dialog with Emiliano de Guzmán
+			LAi_LocationFightDisable(&Locations[FindLocation("Santiago_townhall")], false);
+			LAi_SetActorType(CharacterFromID("Emiliano de Guzmán"));
+			LAi_SetImmortal(CharacterFromID("Emiliano de Guzmán"), false);
+			LAi_NoRebirthEnable(CharacterFromID("Emiliano de Guzmán"));
+			LAi_group_MoveCharacter(CharacterFromID("Emiliano de Guzmán"), LAI_GROUP_MONSTERS);
+			if (CheckAttribute(PChar, "quest.imperial_escort.guards_join_guzman") && sti(PChar.quest.imperial_escort.guards_join_guzman) == true)
+			{
+				LAi_group_MoveCharacter(CharacterFromID("Spanish_soldier3"), LAI_GROUP_MONSTERS);
+				LAi_group_MoveCharacter(CharacterFromID("Spanish_soldier4"), LAI_GROUP_MONSTERS);
+			}
+			LAi_group_SetRelation(LAI_GROUP_MONSTERS, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_FightGroups(LAI_GROUP_MONSTERS, LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck(LAI_GROUP_MONSTERS, "imperial_escort_guzman_fight_over");
+		break;
+
+		case "imperial_escort_guzman_fight_over":
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Santiago_townhall")], true);
+		break;
+
+		case "imperial_escort_guzman_defeated_1":
+			NPChar = CharacterFromID("Imperial_envoy");
+			PlaceCharacter(NPChar, "goto");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "guzman_dead_goto_havana";
+			LAi_ActorDialog(NPChar, PChar, "imperial_escort_guzman_defeated_1a", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_guzman_defeated_1a":
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+			AddQuestRecord("Imperial Escort", 43);
+			Preprocessor_Remove("envoy");
+			Preprocessor_Remove("evilgov");
+
+			NPChar = CharacterFromID("Imperial_envoy");
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollowEverywhere(NPChar, "", 5.0);
+			LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
+			DisableFastTravel(false);
+		break;
+
+		case "imperial_escort_guzman_defeated_2":
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+			AddQuestRecord("Imperial Escort", 48);
+			Preprocessor_Remove("admiral");
+			Preprocessor_Remove("evilgov");
+			DisableFastTravel(false);
+			bQuestDisableSeaEnter = false;
+			Locations[FindLocation("Santiago_town_01")].reload.l4.close_for_night = 1;	// Townhall back to closing at night
+
+			sld = CharacterFromID("Spanish_soldier1");
+			PlaceCharacter(sld, "goto");
+			LAi_SetActorType(sld);
+			sld.Dialog.CurrentNode = "imperial_escort_after_santiago_townhall";
+			LAi_ActorDialog(sld, PChar, "imperial_escort_guzman_defeated_2a", 5.0, 5.0);
+
+			PChar.quest.imperial_escort_remove_soldiers.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.imperial_escort_remove_soldiers.win_condition.l1.location = PChar.location;
+			Pchar.quest.imperial_escort_remove_soldiers.win_condition = "imperial_escort_remove_soldiers";
+		break;
+
+		case "imperial_escort_guzman_defeated_2a":
+			LAi_SetActorType(CharacterFromID("Spanish_soldier1"));
+          		LAi_ActorGoToLocation(CharacterFromID("Spanish_soldier1"), "reload", "reload4", "None", "", "", "", 20.0);
+		break;
+
+		case "imperial_escort_remove_soldiers":
+			for (n=1; n<=4; n++)
+			{
+
+				sld = CharacterFromID("Spanish_soldier" + n);
+				LAi_type_actor_Reset(sld);
+				ChangeCharacterAddress(sld, "None", "");
+			}
+		break;
+
+		case "imperial_escort_restore_santiago_governor":	// Triggered by dialog with Jusepe Guimaraes
+			NPChar = CharacterFromID("Javier Balboa");
+			ChangeCharacterAddress(CharacterFromID("Emiliano de Guzmán"), "none", "");
+			ChangeCharacterAddressGroup(NPChar, "Santiago_townhall", "sit", "sit1");
+			LAi_SetHuberType(NPChar);
+			Towns[GetTownIndex("Santiago")].gov = "Javier Balboa";
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
+			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
+			AddQuestRecord("Imperial Escort", 49);
+			Preprocessor_Remove("governor");
+			Preprocessor_Remove("evilgov");
+			CloseQuestHeader("Imperial Escort");
+		break;
+
+		case "imperial_escort_go_get_spy":			// Triggered by dialog with Jusepe Guimaraes if Gilles Clouzot is in San Juan port
+			PChar.quest.imperial_escort.spy_search = "find_spy";
+			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+			Preprocessor_AddQuestData("docker", GetMyFullName(CharacterFromID("Uasco Mazinho")));
+			Preprocessor_AddQuestData("spy", "Gilles Clouzot");
+			SetQuestHeader("Remove Spy");
+			AddQuestRecord("Remove Spy", 1);
+			Preprocessor_Remove("spy");
+			Preprocessor_Remove("docker");
+			Preprocessor_Remove("admiral");
+			GiveItem2Character(PChar, "AdmiralLetter");
+		break;
+
+		case "imperial_escort_prepare_lure_spy_aboard":		// Triggered by dialog with Christofor Manuel de Alencar
+			Preprocessor_AddQuestData("docker", GetMyFullName(CharacterFromID("Uasco Mazinho")));
+			Preprocessor_AddQuestData("spy", "Gilles Clouzot");
+			AddQuestRecord("Remove Spy", 2);
+			Preprocessor_Remove("spy");
+			Preprocessor_Remove("docker");
+			PChar.quest.imperial_escort.spy_search = "lure_spy_aboard";
+			sld = CharacterFromID("Gilles Clouzot");
+			sld.Dialog.Filename = "Gilles Clouzot_dialog.c";
+			sld.Dialog.CurrentNode = "imperial_escort_fake_uasco";
+			sld.greeting = "Gr_isla muelle citizen";
+			LAi_SetCitizenType(sld);
+			LAi_SetImmortal(sld, true);
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].Dialog.CurrentNode = "imperial_escort_spy_result";
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].Dialog.TempNode = "imperial_escort_spy_result";
+		break;
+
+		case "imperial_escort_spy_follows_to_ship":		// Triggered by dialog with Gilles Clouzot posing as Uasco Mazinho
+			bQuestDisableSeaEnter = true;
+			locations[FindLocation("Muelle_port")].reload.l1.disable = 1;
+			LAi_SetActorType(CharacterFromID("Gilles Clouzot"));
+			LAi_ActorFollow(CharacterFromID("Gilles Clouzot"), PChar, "", 10.0);
+//			LAi_ActorFollowEverywhere(CharacterFromID("Gilles Clouzot"), "", 5.0);
+
+			PChar.quest.imperial_escort_with_spy_to_deck1.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_with_spy_to_deck1.win_condition.l1.location = "Muelle_port";
+			PChar.quest.imperial_escort_with_spy_to_deck1.win_condition.l1.locator_group = "reload";
+			PChar.quest.imperial_escort_with_spy_to_deck1.win_condition.l1.locator = "reload1_back";
+			PChar.quest.imperial_escort_with_spy_to_deck1.win_condition = "imperial_escort_with_spy_to_deck";
+
+			PChar.quest.imperial_escort_with_spy_to_deck3.win_condition.l1 = "locator";
+			PChar.quest.imperial_escort_with_spy_to_deck3.win_condition.l1.location = "Muelle_port";
+			PChar.quest.imperial_escort_with_spy_to_deck3.win_condition.l1.locator_group = "reload";
+			PChar.quest.imperial_escort_with_spy_to_deck3.win_condition.l1.locator = "reload3_back";
+			PChar.quest.imperial_escort_with_spy_to_deck3.win_condition = "imperial_escort_with_spy_to_deck";
+		break;
+
+		case "imperial_escort_with_spy_to_deck":
+			PChar.quest.imperial_escort_with_spy_to_deck1.over = "yes";
+			PChar.quest.imperial_escort_with_spy_to_deck3.over = "yes";
+			ChangeCharacterAddressGroup(CharacterFromID("Gilles Clouzot"), GetCharacterShipQDeck(PChar), "reload", "reload1");
+			DoQuestReloadToLocation(GetCharacterShipQDeck(PChar), "rld", "startloc", "imperial_escort_with_spy_to_deck2");
+		break;
+
+		case "imperial_escort_with_spy_to_deck2":
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
+			sld = CharacterFromID("Gilles Clouzot");
+			LAi_SetActorType(sld);
+//			PlaceCharacter(sld, "goto");
+			if (PChar.model == "ArdentM_2" || PChar.model == "ArdentF_2") sld.Dialog.CurrentNode = "imperial_escort_deck_disguised";
+			else sld.Dialog.CurrentNode = "imperial_escort_deck";
+			LAi_ActorDialog(sld, PChar, "imperial_escort_spy_fight_deck", 10.0, 10.0);
+		break;
+
+		case "imperial_escort_spy_fight_deck":
+			sld = CharacterFromID("Gilles Clouzot");
+			sld.name = TranslateString("", "Gilles");
+			sld.lastname = TranslateString("", "Clouzot");
+			sld.Dialog.Filename = "Gilles Clouzot_dialog.c";
+			sld.greeting = "Gr_Etienne Dupuis";
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			LAi_SetImmortal(sld, false);
+			LAi_NoRebirthEnable(sld);
+
+			if(ENABLE_WEAPONSMOD)
+			{
+				GiveItem2Character(sld, "pistol1a+3");
+				EquipCharacterByItem(sld,"pistol1a+3");
+			}
+			else
+			{
+				GiveItem2Character(sld, "pistol1a");
+				EquipCharacterByItem(sld,"pistol1a");
+			}
+			GiveItem2Character(sld, "Piratesdagger");
+			EquipCharacterByItem(sld,"Piratesdagger");
+			LAi_SetActorType(sld);
+			LAi_ActorAttack(sld, PChar, "");
+			PChar.quest.imperial_escort_spy_defeated.win_condition.l1 = "NPC_Death";
+			PChar.quest.imperial_escort_spy_defeated.win_condition.l1.character = "Gilles Clouzot";
+			PChar.quest.imperial_escort_spy_defeated.win_condition = "imperial_escort_spy_defeated";
+		break;
+
+		case "imperial_escort_spy_defeated":
+			PChar.quest.imperial_escort.spy_search = "spy_dead_aboard";
+			DoQuestReloadToLocation("Hold1", "rld", "startloc", "imperial_escort_to_uasco_after_spy_defeated");
+		break;
+
+		case "imperial_escort_to_uasco_after_spy_defeated":
+			Characters[GetCharacterIndex("Uasco Mazinho")].Dialog.Filename = "quest_Uasco Mazinho_dialog.c";
+			Characters[GetCharacterIndex("Uasco Mazinho")].Dialog.CurrentNode = "imperial_escort_release";
+			LAi_SetActorType(PChar);
+			LAi_ActorDialog(PChar, CharacterFromID("Uasco Mazinho"), "imperial_escort_release_uasco_after_spy_defeated", 10.0, 10.0);
+		break;
+
+		case "imperial_escort_release_uasco_after_spy_defeated":
+			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+			Preprocessor_AddQuestData("docker", GetMyFullName(CharacterFromID("Uasco Mazinho")));
+			Preprocessor_AddQuestData("spy", GetMyFullName(CharacterFromID("Gilles Clouzot")));
+			AddQuestRecord("Remove Spy", 4);
+			Preprocessor_Remove("spy");
+			Preprocessor_Remove("docker");
+			Preprocessor_Remove("admiral");
+			LAi_SetPlayerType(PChar);
+			EndQuestMovie();
+			DisableFastTravel(false);
+			locations[FindLocation("Muelle_port")].reload.l1.disable = 0;
+			bQuestDisableSeaEnter = false;
+			Characters[GetCharacterIndex("Christofor Manuel De Alencar")].Dialog.CurrentNode = "ardent_imperial_escort_after_spy";
+			ChangeCharacterAddressGroup(CharacterFromID("Uasco Mazinho"), "Muelle_port", "goto", "goto5");
+			DoQuestReloadToLocation("Muelle_port", "reload", "reload3_back", "imperial_escort_uasco_is_going_home");
+		break;
+
+		case "imperial_escort_uasco_is_going_home":
+			NPChar = CharacterFromID("Uasco Mazinho");
+			LAi_SetCitizenType(NPChar);
+			LAi_group_MoveCharacter(NPChar, "SPAIN_CITIZENS");
+			NPChar.Dialog.Filename = "Isla Muelle citizen_dialog.c";
+			NPChar.Dialog.CurrentNode = "First time";
+			NPChar.quest.meeting = "1";
+			LAi_SetLoginTime(NPChar, 6.0, 22.0);
+		break;
+
+		case "imperial_escort_prepare_bring_uasco_ashore":	// Triggered by dialog with Christofor Manuel de Alencar
+			Preprocessor_AddQuestData("docker", GetMyFullName(CharacterFromID("Uasco Mazinho")));
+			Preprocessor_AddQuestData("spy", "Gilles Clouzot");
+			AddQuestRecord("Remove Spy", 3);
+			Preprocessor_Remove("spy");
+			Preprocessor_Remove("docker");
+
+			bQuestDisableSeaEnter = true;
+			PChar.quest.imperial_escort.spy_search = "bring_uasco_ashore";
+			Characters[GetCharacterIndex("Uasco Mazinho")].Dialog.Filename = "quest_Uasco Mazinho_dialog.c";
+			Characters[GetCharacterIndex("Uasco Mazinho")].Dialog.CurrentNode = "imperial_escort_release";
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].Dialog.CurrentNode = "imperial_escort_spy_result";
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].Dialog.TempNode = "imperial_escort_spy_result";
+		break;
+
+		case "imperial_escort_uasco_follow_ashore":		// Triggered by dialog with Uasco Mazinho
+			LAi_SetActorType(CharacterFromID("Uasco Mazinho"));
+			LAi_ActorAnimation(CharacterFromID("Uasco Mazinho"), "Ground_StandUp", "imperial_escort_uasco_follow_ashore2", 3.5);
+			PChar.quest.imperial_escort_soldiers_ready_for_spy_arrest.win_condition.l1 = "location";
+			PChar.quest.imperial_escort_soldiers_ready_for_spy_arrest.win_condition.l1.location = "Muelle_port";
+			PChar.quest.imperial_escort_soldiers_ready_for_spy_arrest.win_condition = "imperial_escort_soldiers_ready_for_spy_arrest";
+		break;
+
+		case "imperial_escort_uasco_follow_ashore2":
+			NPChar = CharacterFromID("Uasco Mazinho");
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollowEverywhere(NPChar, "", 5.0);
+		break;
+
+		case "imperial_escort_soldiers_ready_for_spy_arrest":
+			NPChar = CharacterFromID("Uasco Mazinho");
+			if (NPChar.location != PChar.location)
+			{
+				PlaceCharacter(NPChar, "goto");
+				LAi_SetActorType(NPChar);
+				LAi_ActorFollowEverywhere(NPChar, "", 5.0);
+			}
+			locations[FindLocation("Muelle_port")].reload.l1.disable = 1;
+			for (n=1; n<=2; n++)
+			{
+
+				sld = CharacterFromID("spain_soldier_0" + n);
+				StoreDialog(sld);
+				sld.Dialog.Filename = "guard_dialog.c";
+				sld.Dialog.CurrentNode = "imperial_escort_report_crime";
+			}
+		break;
+
+		case "imperial_escort_guard_arrests_spy":		// Triggered by dialog with either of the San Juan port guards
+			DisableFastTravel(true);
+			sld = CharacterFromID(PChar.quest.imperial_escort.spy_arrester);
+			NPChar = CharacterFromID("Gilles Clouzot");
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToCharacter(PChar, NPChar);
+			LAi_SetActorType(sld);
+			LAi_ActorFollow(sld, NPChar, "imperial_escort_guard_arrests_spy2", 30.0);
+		break;
+
+		case "imperial_escort_guard_arrests_spy2":
+			NPChar = CharacterFromID("Gilles Clouzot");
+			sld = CharacterFromID(PChar.quest.imperial_escort.spy_arrester);
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollow(NPChar, CharacterFromID("Uasco Mazinho"), "imperial_escort_mix_uascos", 30.0);
+			LAi_SetActorType(sld);
+			LAi_ActorFollow(sld, NPChar, "", 10.0);
+		break;
+
+		case "imperial_escort_mix_uascos":
+			StartQuestMovie(true, true, false);
+			GiveItem2Character(CharacterFromID("Gilles Clouzot"), "bladeX4");
+			EquipCharacterByItem(CharacterFromID("Gilles Clouzot"), "bladeX4");
+			GiveItem2Character(CharacterFromID("Uasco Mazinho"), "bladeX4");
+			EquipCharacterByItem(CharacterFromID("Uasco Mazinho"), "bladeX4");
+			LAi_SetActorType(CharacterFromID("Uasco Mazinho"));
+			LAi_SetActorType(CharacterFromID("Gilles Clouzot"));
+			LAi_ActorAttack(CharacterFromID("Gilles Clouzot"), CharacterFromID("Uasco Mazinho"), "");
+			LAi_ActorAttack(CharacterFromID("Uasco Mazinho"), CharacterFromID("Gilles Clouzot"), "");
+			LAi_QuestDelay("imperial_escort_sort_uascos_out", 3.0);
+		break;
+
+		case "imperial_escort_sort_uascos_out":
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(CharacterFromID("Uasco Mazinho"));
+			LAi_SetActorType(CharacterFromID("Gilles Clouzot"));
+			LAi_SetActorType(CharacterFromID("spain_soldier_01"));
+			LAi_SetActorType(CharacterFromID("spain_soldier_02"));
+			sld = CharacterFromID(PChar.quest.imperial_escort.spy_arrester);
+			sld.Dialog.CurrentNode = "imperial_escort_which_one_is_spy";
+			LAi_ActorDialog(sld, PChar, "imperial_escort_sort_uascos_out2", 10.0, 10.0);
+		break;
+
+		case "imperial_escort_sort_uascos_out2":
+			if (PChar.quest.imperial_escort.spy_arrester == "spain_soldier_01") sld = CharacterFromID("spain_soldier_02");
+			else sld = CharacterFromID("spain_soldier_01");
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToCharacter(PChar, sld);
+			LAi_ActorWaitDialog(PChar, sld);
+			LAi_SetActorType(sld);
+			sld.Dialog.CurrentNode = "imperial_escort_which_one_is_spy2";
+			LAi_ActorDialog(sld, PChar, "imperial_escort_sort_uascos_out3", 10.0, 10.0);
+		break;
+
+		case "imperial_escort_sort_uascos_out3":
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(CharacterFromID("Uasco Mazinho"));
+			LAi_SetActorType(CharacterFromID("Gilles Clouzot"));
+			LAi_SetActorType(CharacterFromID("spain_soldier_01"));
+			LAi_ActorGoToLocator(CharacterFromID("spain_soldier_01"), "goto", "goto3", "", 10.0);
+			LAi_ActorFollow(CharacterFromID("Gilles Clouzot"), CharacterFromID("spain_soldier_01"), "", 5.0);
+			LAi_SetActorType(CharacterFromID("spain_soldier_02"));
+			LAi_ActorGoToLocator(CharacterFromID("spain_soldier_02"), "goto", "goto2", "", 10.0);
+			LAi_ActorFollow(CharacterFromID("Uasco Mazinho"), CharacterFromID("spain_soldier_02"), "", 5.0);
+			LAi_QuestDelay("imperial_escort_uasco1_answer", 10.0);
+		break;
+
+		case "imperial_escort_uasco1_answer":
+			LAi_SetActorType(CharacterFromID("spain_soldier_01"));
+			Characters[GetCharacterIndex("spain_soldier_01")].Dialog.CurrentNode = "imperial_escort_spy_answer1";
+			LAi_ActorDialog(CharacterFromID("spain_soldier_01"), PChar, "imperial_escort_uasco2_answer", 10.0, 10.0);
+			LAi_SetActorType(CharacterFromID("spain_soldier_02"));
+			LAi_ActorFollow(CharacterFromID("spain_soldier_02"), PChar, "", 10.0);
+		break;
+
+		case "imperial_escort_uasco2_answer":
+			LAi_SetActorType(CharacterFromID("spain_soldier_02"));
+			Characters[GetCharacterIndex("spain_soldier_02")].Dialog.CurrentNode = "imperial_escort_spy_answer2";
+			LAi_ActorDialog(CharacterFromID("spain_soldier_02"), PChar, "imperial_escort_spy_revealed", 10.0, 10.0);
+		break;
+
+		case "imperial_escort_spy_revealed":
+			sld = CharacterFromID("Gilles Clouzot");
+			sld.name = TranslateString("", "Gilles");
+			sld.lastname = TranslateString("", "Clouzot");
+			sld.Dialog.Filename = "Gilles Clouzot_dialog.c";
+			sld.greeting = "Gr_Etienne Dupuis";
+			LAi_group_MoveCharacter(sld, "FRANCE_SOLDIERS");
+			LAi_SetImmortal(sld, false);
+			LAi_NoRebirthEnable(sld);
+			LAi_SetImmortal(CharacterFromID("Uasco Mazinho"), false);
+			LAi_SetActorType(CharacterFromID("spain_soldier_01"));
+			Characters[GetCharacterIndex("spain_soldier_01")].Dialog.CurrentNode = "imperial_escort_spy_revealed";
+			LAi_ActorDialog(CharacterFromID("spain_soldier_01"), PChar, "imperial_escort_spy_revealed2", 10.0, 10.0);
+		break;
+
+		case "imperial_escort_spy_revealed2":
+			NPChar = (CharacterFromID("Gilles Clouzot"));
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "imperial_escort_spy_rumbled";
+			LAi_ActorDialogNow(NPChar, PChar, "imperial_escort_spy_suicide",1.0);
+		break;
+
+		case "imperial_escort_spy_suicide":
+			if(ENABLE_WEAPONSMOD)								// Give him some concealed weapons for player to loot
+			{
+				GiveItem2Character(CharacterFromID("Gilles Clouzot"), "pistol1a+3");
+			}
+			else
+			{
+				GiveItem2Character(CharacterFromID("Gilles Clouzot"), "pistol1a");
+			}
+			GiveItem2Character(CharacterFromID("Gilles Clouzot"), "Piratesdagger");
+			PChar.quest.imperial_escort.spy_search = "spy_dead_ashore";
+			LAi_KillCharacter(characterfromID("Gilles Clouzot"));
+			LAi_SetActorType(CharacterFromID("spain_soldier_01"));
+			Characters[GetCharacterIndex("spain_soldier_01")].Dialog.CurrentNode = "imperial_escort_spy_poisoned";
+			LAi_ActorDialog(CharacterFromID("spain_soldier_01"), PChar, "imperial_escort_reset_muelle_after_spy_dies", 5.0, 5.0);
+		break;
+
+		case "imperial_escort_reset_muelle_after_spy_dies":
+			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+			Preprocessor_AddQuestData("docker", GetMyFullName(CharacterFromID("Uasco Mazinho")));
+			Preprocessor_AddQuestData("spy", GetMyFullName(CharacterFromID("Gilles Clouzot")));
+			AddQuestRecord("Remove Spy", 5);
+			Preprocessor_Remove("spy");
+			Preprocessor_Remove("docker");
+			Preprocessor_Remove("admiral");
+			for (n=1; n<=2; n++)
+			{
+
+				sld = CharacterFromID("spain_soldier_0" + n);
+				RestoreDialog(sld);
+				LAi_SetGuardianType(sld);
+			}
+			bQuestDisableSeaEnter = false;
+			EndQuestMovie();
+			DisableFastTravel(false);
+			locations[FindLocation("Muelle_port")].reload.l1.disable = 0;
+			LAi_QuestDelay("imperial_escort_uasco_is_going_home", 0.5);
+			Characters[GetCharacterIndex("Christofor Manuel De Alencar")].Dialog.CurrentNode = "ardent_imperial_escort_after_spy";
+
+			PChar.quest.imperial_escort_reset_uasco_locator.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.imperial_escort_reset_uasco_locator.win_condition.l1.location = PChar.location;
+			Pchar.quest.imperial_escort_reset_uasco_locator.win_condition = "imperial_escort_reset_uasco_locator";
+		break;
+
+		case "imperial_escort_reset_uasco_locator":
+			ChangeCharacterAddressGroup(CharacterFromID("Uasco Mazinho"), "Muelle_port", "goto", "goto5");
+			LAi_SetCitizenType(CharacterFromID("Uasco Mazinho"));
+		break;
+
+		case "imperial_escort_spy_reward":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneytoCharacter(PChar, 50000);
+			ChangeRMRelation(PChar, SPAIN, 5.0);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(PChar, "Leadership", 2500);
+				AddPartyExpChar(PChar, "", 1250);
+				AddPartyExpChar(PChar, "Sneak", 1250);
+			}
+			else {AddPartyExp(PChar, 5000);}
+			TakeItemFromCharacter(PChar, "AdmiralLetter");
+			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
+			Preprocessor_AddQuestData("spy", GetMyFullName(CharacterFromID("Gilles Clouzot")));
+			AddQuestRecord("Remove Spy", 6);
+			CloseQuestHeader("Remove Spy");
+			Preprocessor_Remove("spy");
+			Preprocessor_Remove("admiral");
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].Dialog.TempNode = "First time";
+			Characters[GetCharacterIndex("Jusepe Guimaraes")].Dialog.CurrentNode = "First time";
+		break;
+
+
+		case "reset_crewmember":
+			if (CheckAttribute(PChar, "quest.speaker") && PChar.quest.speaker != "")
+			{
+				crewref = characterFromID(PChar.quest.speaker);
+				crewidx = GetCharacterIndex(PChar.quest.speaker);
+				RestoreDialog(crewref);
+				LAi_SetOfficerType(CharacterFromId(characters[crewidx].id));
+				DeleteQuestAttribute("speaker");
+			}
 		break;
 
 

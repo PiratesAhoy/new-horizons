@@ -670,11 +670,6 @@ void SetCurrentDate(int day, int month, int year)
 
 void SetCurrentTime(int hour, int minutes)
 {
-/*	Environment.date.hour = hour;
-	Environment.date.min = minutes;
-	Environment.time = hour + makeint(makefloat(minutes) / 60.0); // KK
-	worldMap.date.hour = hour;
-	worldMap.date.min = minutes; */
 	minutes = iclamp(0,59,minutes);
 	hour = iclamp(0,23,hour);
 	Environment.date.hour = hour;

@@ -67,9 +67,9 @@ void ProcessDialogEvent()
 			{
 				if(CheckAttribute(Pchar, "Tassistent") && Pchar.Tassistent == "yes")
 				{
-					PlaySound("VOICE\ENGLISH\fre_m_c_005.wav");		
-					dialog.text = DLG_TEXT[38];
-					link.l1 = DLG_TEXT[39];  
+					PlaySound("VOICE\ENGLISH\fre_m_c_008.wav");		
+					dialog.text = DLG_TEXT[10];
+					link.l1 = DLG_TEXT[11];  
 					link.l1.go = "exit";
 					AddDialogExitQuest("leave_french_surgeon1"); 
 				}
@@ -234,9 +234,19 @@ void ProcessDialogEvent()
 			PlaySound("VOICE\ENGLISH\fre_m_c_005.wav");		
 			dialog.text = DLG_TEXT[38];
 			link.l1 = DLG_TEXT[39];  
-			link.l1.go = "exit";
-			AddDialogExitQuest("leave_french_surgeon1"); 
+			link.l1.go = "french_surgeon1_H";
 		break;
+
+		case "french_surgeon1_H":
+			PlaySound("VOICE\ENGLISH\fre_m_c_008.wav");
+			dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[11];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("leave_french_surgeon1");
+		break;
+
+
+
 
 	//----------------------------------------------------------------
 

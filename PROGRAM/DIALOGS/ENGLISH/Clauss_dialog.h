@@ -5,7 +5,7 @@ string DLG_TEXT[16] = {
 "I'm looking for that rascal Nigel, and you're my last hope to find him.",
 "That's true. But I owe some gold to one old geezer here....",
 "Forget about it. Here is your debt note. Now you're free of your debt.",
-"Huh! You're a quick one, mister. Maybe you'll find a place for me on your boat? I'm not the worst boatswain here. I've spent twenty years at sea.",
+"Huh! You're a quick one, #smister#. Maybe you'll find a place for me on your boat? I'm not the worst boatswain here. I've spent twenty years at sea.",
 "Why not? But tell me first - where is Nigel?",
 "Want to get your revenge? He told everyone here that he has stolen a ship from some wim... captain.",
 "Curses! I'll skin him alive. I'll cut his heart out with a spoon!",

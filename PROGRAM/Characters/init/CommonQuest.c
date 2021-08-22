@@ -54,7 +54,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.old.name = "Blackbeard";
 	ch.old.lastname = "";
 	ch.name = TranslateString("","Blackbeard");
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Blackbeard";
 	ch.model	= "Blackbeard";
 	ch.sex = "man";

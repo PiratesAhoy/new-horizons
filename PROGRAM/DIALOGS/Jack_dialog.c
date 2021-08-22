@@ -32,6 +32,21 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
+
+			if (GetCharacterShipModel(PChar) == "Black Pearl" || GetCharacterShipID(PChar) == SHIP_CURSED)
+			{
+				if(PChar.sex == "woman") dialog.text = DLG_TEXT[2] + DLG_TEXT[4] + DLG_TEXT[5];
+				else dialog.text = DLG_TEXT[2] + DLG_TEXT[3] + DLG_TEXT[5];
+				link.l1 = DLG_TEXT[6];
+				link.l1.go = "locked_in_here";
+			}
+		break;
+
+		case "locked_in_here":
+			dialog.text = DLG_TEXT[7];
+			link.l1 = DLG_TEXT[8];
+			AddDialogExitQuest("Hit_Sparrow_runs_away");
+			link.l1.go = "Exit";
 		break;
 
 		case "Exit":

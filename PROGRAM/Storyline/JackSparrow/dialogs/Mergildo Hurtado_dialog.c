@@ -60,7 +60,8 @@ void ProcessDialogEvent()
 			Dialog.snd = "voice\MEHU\MEHU004";
 			dialog.text = DLG_TEXT[8] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[9];
 			link.l1 = DLG_TEXT[10];
-			link.l1.go = "to_barkue_5";
+			if (GetCompanionQuantity(PChar) < COMPANION_MAX) link.l1.go = "to_barkue_5";
+			else link.l1.go = "too_many_ships";
 		break;
 
 		case "to_barkue_5":
@@ -74,6 +75,41 @@ void ProcessDialogEvent()
 			SetCompanionIndex(pchar, -1, GetCharacterIndex(npchar.id));
 			SetCharacterRemovable(npchar, false);
 		break;
+
+// GR: fix for Mergildo unable to join you if you have a full fleet -->
+		case "too_many_ships":
+			int numships = GetCompanionQuantity(PChar);
+			Dialog.snd = "voice\MEHU\MEHU004";
+			Preprocessor_Add("numships", numships);
+			dialog.text = DLG_TEXT[18];
+			link.l1 = DLG_TEXT[19];
+			AddDialogExitQuest("to_barkue_too_many_ships");
+			NextDiag.TempNode = "too_many_ships_recheck";
+			link.l1.go = "exit";
+		break;
+
+		case "too_many_ships_recheck":
+			Dialog.snd = "voice\MEHU\MEHU005";
+			if (GetCompanionQuantity(PChar) < COMPANION_MAX)
+			{
+				dialog.text = DLG_TEXT[20];
+				link.l1 = DLG_TEXT[12];
+				link.l1.go = "exit";
+				PChar.quest.ANIMISTS = "to_barkue_complete";
+				AddDialogExitQuest("to_barkue_complete");
+				NPChar.location = "none";
+				SetCompanionIndex(PChar, -1, GetCharacterIndex(NPChar.id));
+				SetCharacterRemovable(NPChar, false);
+				bQuestDisableSeaEnter = false;	// Mergildo should now join you, so unlock sea
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[14];
+				link.l1 = DLG_TEXT[21];
+				link.l1.go = "exit";
+			}
+		break;
+// <-- GR: end of fix
 
 		case "Aye_Captain":
 			Dialog.text = DLG_TEXT[13];

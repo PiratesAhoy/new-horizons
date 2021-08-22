@@ -55,6 +55,7 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("Smugglers Collector Meet in Tavern");
 			Diag.TempNode = "Meeting";
 			NPChar.quest.made_offer_collector = true;
+			DeleteAttribute(&PChar,"quest.mysterious_plants.crewmember.attacked_tell_steven");
 		break;
 		
 		case "Offer Collector":
@@ -171,6 +172,7 @@ void ProcessDialogEvent()
 					Link.l1 = DLG_TEXT[7];
 					Link.l1.go = "Meeting_3";
 				}
+/*
 				if(CheckCharacterItem(Pchar,"opium") || CheckSmugglerLiking(pchar) >= 75)
 				{
 					if(!CheckAttribute(pchar,"quest.smuggling_guild.opium_explain"))
@@ -187,6 +189,7 @@ void ProcessDialogEvent()
 						}
 					}
 				}
+*/
 				//Levis: Collector sidequest
 				if(CheckAttribute(PChar,"quest.smuggle_collector.made_offer_collector"))
 				{
@@ -264,6 +267,7 @@ void ProcessDialogEvent()
 				Link.l1 = DLG_TEXT[10];
 				Link.l1.go = "Meeting_1";
 			}
+/*
 			if(CheckCharacterItem(Pchar,"opium") || CheckSmugglerLiking(pchar) >= 75)
 			{
 				if(!CheckAttribute(pchar,"quest.smuggling_guild.opium_explain"))
@@ -280,6 +284,7 @@ void ProcessDialogEvent()
 					}
 				}
 			}
+*/
 			//Levis: Collector sidequest
 			if(CheckAttribute(PChar,"quest.smuggle_collector.made_offer_collector"))
 			{

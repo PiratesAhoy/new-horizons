@@ -1,0 +1,11 @@
+title=Payroll Ship
+text.t1=The commandant of #sHavana# prison had a letter asking him to provide security troops for a ship carrying a payroll from #sHavana# to #sSantiago#. I'll need to find out more about this ship if I'm to help myself to that payroll...
+text.t2=Now to head for the tavern. If the payroll ship's captain is there, perhaps he will tell me about it if he thinks I'm one of the commandant's security troops.
+text.t3=Now to head for the tavern. If the payroll ship's captain is there, perhaps he will yield to my feminine wiles.
+text.t4=The ship is the 'Siroco'. She sails for #sSantiago# in two weeks. So that is how long I have to get to #sSantiago# and find a suitable ship to attack her.
+text.t5=Playa de Sierra Maestra is near #sSantiago# so from there I should be able to intercept the 'Siroco' whichever route she takes around #sisland_Cuba#.
+text.t6=We've got a nice little brig. But if the payroll ship has a security force aboard, I had better bring my own ship's crew up to full strength. #sRedmond# isn't too far away, perhaps we can get some recruits there.
+text.t7=The 'Siroco' has probably sailed by now. We had better sail to Playa de Sierra Maestra and keep watch for her.
+text.t8=Too late. The payroll ship will undoubtedly be safely in #sSantiago# harbour by now.
+text.t9=We've done it! The 'Siroco' is taken, and so is the payroll. We are back in business! But #sSantiago# fort will recognise this ship, so if I want to return to #sSantiago# then I'd best moor at Bahia de Moa and walk in. Or get a different ship.
+text.t10=The 'Siroco' has probably sailed by now. I really need a map of #sisland_Cuba#'s waters. The store in #sSantiago# must have one; if he won't sell it to me, I'll get it some other way.

@@ -10,7 +10,8 @@ void ProcessDialogEvent()
 	makearef(NextDiag, NPChar.Dialog);
 
 	ref PChar = GetMainCharacter();
-
+	int iNation = sti(NPChar.nation);
+	
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -55,7 +56,155 @@ void ProcessDialogEvent()
 			}
 			link.l99 = DLG_TEXT[13];
 			link.l99.go = "exit";
+			
+// Side quest Verginie - Salonikasurf
+			if (CheckQuestAttribute("gambling_with_girl", "gambled") || CheckQuestAttribute("gambling_with_girl", "prisoned") || CheckQuestAttribute("gambling_with_girl", "to_hovernor_2"))
+			{
+				if (CheckQuestAttribute("gambling_with_girl", "to_hovernor_2") && GetNationRelation2MainCharacter(iNation) == RELATION_ENEMY)
+				{
+					//прощают
+					dialog.text = DLG_TEXT[96];
+					link.l1 = DLG_TEXT[97];
+					link.l1.go = "forgive";
+					AddQuestRecord("gambled_girl", 13);
+					CloseQuestHeader("gambled_girl");
+				}
+				else
+				{
+					if (GetNationRelation2MainCharacter(iNation) == RELATION_ENEMY)
+					{
+						//позвол¤ют уйти
+						dialog.text = DLG_TEXT[98];
+						link.l1 = DLG_TEXT[99] + GetCharacterFullName(DLG_TEXT[100]) + DLG_TEXT[101];
+						link.l1.go = "ransom";
+						AddQuestRecord("gambled_girl", 15);
+						CloseQuestHeader("gambled_girl");
+					}
+					else
+					{
+						//обычный разговор
+						dialog.text = DLG_TEXT[102];
+						link.l1 = DLG_TEXT[103] + GetCharacterFullName(DLG_TEXT[104]) + DLG_TEXT[105];
+						link.l1.go = "virginie";
+						AddQuestRecord("gambled_girl", 14);
+						CloseQuestHeader("gambled_girl");
+					}
+				}
+			}			
 		break;
+
+		case "virginie":
+			dialog.text = DLG_TEXT[106];
+			link.l1 = DLG_TEXT[107];
+			link.l1.go = "ransom_2";
+			link.l2 = DLG_TEXT[108];
+			link.l2.go = "virginie_2";
+		break;
+
+		case "virginie_2":
+			dialog.text = DLG_TEXT[109];
+			link.l1 = DLG_TEXT[110] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[111])]) + DLG_TEXT[112];
+			link.l1.go = "virginie_3";
+		break;
+
+		case "virginie_3":
+			dialog.text = DLG_TEXT[113];
+			link.l1 = DLG_TEXT[114];
+			link.l1.go = "exit";
+			pchar.quest.gambling_with_girl = "done";
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, 4000);
+			if(GetRMRelation(PChar, iNation) < REL_NEUTRAL) SetRMRelation(PChar, iNation, REL_NEUTRAL); // RM
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 2800);
+				AddPartyExpChar(pchar, "Sneak", 28);
+			}
+			else { AddPartyExp(pchar, 2800); }
+			AddDialogExitQuest("remove_virginie_complete"); // PB
+			break;
+		case "ransom":
+			dialog.text = DLG_TEXT[115];
+			link.l1 = DLG_TEXT[116];
+			link.l1.go = "ransom_2";
+		break;
+
+		case "ransom_2":
+			dialog.text = DLG_TEXT[117];
+			link.l1 = DLG_TEXT[118];
+			link.l1.go = "ransom_3";
+		break;
+
+		case "ransom_3":
+			dialog.text = DLG_TEXT[119];
+			link.l1 = DLG_TEXT[120];
+			link.l1.go = "ransom_4";
+		break;
+
+		case "ransom_4":
+			dialog.text = DLG_TEXT[121];
+			link.l1 = DLG_TEXT[122];
+			link.l1.go = "ransom_5";
+		break;
+
+		case "ransom_5":
+			dialog.text = DLG_TEXT[123];
+			link.l1 = DLG_TEXT[124];
+			link.l1.go = "ransom_6";
+		break;
+
+		case "ransom_6":
+			dialog.text = DLG_TEXT[125];
+			link.l1 = DLG_TEXT[126];
+			link.l1.go = "exit";
+			pchar.quest.gambling_with_girl = "done";
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, 7000);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 1600);
+				AddPartyExpChar(pchar, "Sneak", 16);
+			}
+			else { AddPartyExp(pchar, 1600); }
+			pchar.quest.remove_virginie.win_condition.l1 = "location";
+			pchar.quest.remove_virginie.win_condition.l1.location = "FalaiseDeFleur";
+			pchar.quest.remove_virginie.win_condition = "remove_virginie_complete";
+			ChangeCharacterAddress(characterFromID("Virginie d'Espivant"), "Falaise_de_fleur_location_03", "locator9");
+			LAi_SetCitizenType(characterFromID("Virginie d'Espivant"));
+			if(GetRMRelation(PChar, iNation) > REL_WAR) SetRMRelation(&PChar, iNation, REL_WAR); // RM
+			LeaveService(&PChar, iNation, true);
+		break;
+
+		case "forgive":
+			dialog.text = DLG_TEXT[127];
+			link.l1 = DLG_TEXT[128];
+			link.l1.go = "forgive_2";
+		break;
+
+		case "forgive_2":
+			dialog.text = DLG_TEXT[129];
+			link.l1 = DLG_TEXT[130];
+			link.l1.go = "forgive_3";
+		break;
+
+		case "forgive_3":
+			dialog.text = DLG_TEXT[131];
+			link.l1 = DLG_TEXT[132];
+			link.l1.go = "exit";
+			pchar.quest.gambling_with_girl = "done";
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, 4000);
+			if(GetRMRelation(PChar, iNation) < REL_AMNESTY) SetRMRelation(PChar, iNation, REL_AMNESTY); // RM
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 2500);
+				AddPartyExpChar(pchar, "Sneak", 25);
+			}
+			else { AddPartyExp(pchar, 2500); }
+			AddDialogExitQuest("remove_virginie_complete"); // PB
+		break;
+		
+// Side quest Verginie - Salonikasurf		
 
 		case "gov_1":
 			dialog.snd = "Voice\REGR\REGR008";

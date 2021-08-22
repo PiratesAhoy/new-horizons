@@ -59,7 +59,14 @@ void ProcessDialogEvent()
 						if (CheckCharacterItem(Pchar,"jewelry9"))																			// Have the item
 						{
 							Link.l1 = DLG_TEXT[12];
-							Link.l1.go = "bring cross";
+							if(CheckAttribute(PChar,"quest.telescope_quest.bookseen"))
+							{
+								Link.l1.go = "cross for telescope";	
+							}
+							else
+							{
+								Link.l1.go = "bring cross";
+							}
 						}
 					}
 				}
@@ -87,7 +94,14 @@ void ProcessDialogEvent()
 		case "start telescope":
 			dialog.Text = DLG_TEXT[5];
 			Link.l1 = DLG_TEXT[6];
+			if(CheckAttribute(PChar,"quest.telescope_quest.foundbook"))
+			{
+			Link.l1.go = "get telescope";
+			}
+			else
+			{
 			Link.l1.go = "next telescope";
+			}
 		break;
 		
 		case "next telescope":
@@ -97,7 +111,26 @@ void ProcessDialogEvent()
 			Link.l2 = DLG_TEXT[9];
 			Link.l2.go = "exit";
 		break;
-		
+
+		case "get telescope":
+			dialog.Text = DLG_TEXT[21];
+			if (CheckCharacterItem(Pchar,"jewelry9"))
+				{
+				Link.l1 = DLG_TEXT[24];
+				Link.l1.go = "cross for telescope";
+				}
+				else
+				{
+				pchar.quest.telescope_quest.bookseen = true;
+				Link.l1 = DLG_TEXT[25];
+				Link.l1.go = "accept fetch";
+				Link.l2 = DLG_TEXT[26];
+				Link.l2.go = "swap book";
+				}
+			
+
+		Break;
+
 		case "accept fetch":
 			dialog.Text = DLG_TEXT[10];
 			Link.l1 = DLG_TEXT[11];
@@ -109,6 +142,8 @@ void ProcessDialogEvent()
 			TakeItemFromCharacter(Pchar,"jewelry9");
 			pchar.quest.telescope_quest.returned_cross = true;																				// PB: Mark this as completed!
 			dialog.Text = DLG_TEXT[13];
+			
+
 			if(CheckAttribute(PChar,"quest.telescope_quest.foundbook"))																		// Just returned the cross and already found the book
 			{
 				Link.l1 = DLG_TEXT[18];
@@ -122,6 +157,18 @@ void ProcessDialogEvent()
 			GiveItem2Character(pchar, "telescope");																							// Give the telescope
 		break;
 		
+		case "cross for telescope":
+			TakeItemFromCharacter(Pchar,"jewelry9");
+			pchar.quest.telescope_quest.returned_cross = true;																				// PB: Mark this as completed!
+			dialog.Text = DLG_TEXT[27];
+			Link.l1 = DLG_TEXT[28];
+			Link.l1.go = "swap book";	
+			GiveItem2Character(pchar, "telescope");
+			AddQuestRecord("telescope", 5);	
+		break;
+
+
+
 		case "info location":
 			dialog.Text = DLG_TEXT[15] + FindTownName("Greenford") + DLG_TEXT[16];
 			Link.l1 = DLG_TEXT[17];
@@ -132,10 +179,17 @@ void ProcessDialogEvent()
 		case "get explanation":
 			dialog.Text = DLG_TEXT[19];
 			Link.l1 = DLG_TEXT[20];
+			Link.l1.go = "swap book";
+			AddQuestRecord("telescope", 5);	
+		break;
+
+		case "swap book":
+			dialog.Text = DLG_TEXT[22];
+			Link.l1 = DLG_TEXT[23];
 			Link.l1.go = "exit";
+			pchar.quest.telescope_quest.returned_cross = true;
 			AddDialogExitQuest("telescope finish");
 		break;
-		
 		//Levis find telescope <--
 	}
 }

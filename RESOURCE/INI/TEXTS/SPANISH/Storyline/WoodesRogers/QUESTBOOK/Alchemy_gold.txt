@@ -1,0 +1,6 @@
+title=Alquimia: abrir la cerradura de oro
+text.t1=Tengo que encontrar algo que disuelva el oro.
+text.t2=He conseguido Aqua Reigis, ¡y puede disolver el oro!
+text.t3= 
+text.t4=
+text.t5=

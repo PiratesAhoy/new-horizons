@@ -173,7 +173,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "capture_Natividad":
-			dialog.text = your_rank_name + DLG_TEXT[37];
+			Preprocessor_Add("rank", your_rank_name);
+			dialog.text = DLG_TEXT[37];
 			link.l1 = DLG_TEXT[38];
 			link.l1.go = "capture_Natividad2";
 		break;

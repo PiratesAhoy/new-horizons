@@ -3,7 +3,7 @@ string DLG_TEXT[110] = {
 "Hello Sir, Are you Eugene Martin?",
 "Ah Oui, Yes! How do you know my name? Why are you here?",
 "I met Pierre Delacroix at #sPort au Prince#. He said that, maybe, you were looking to hire suitable Captains for your ships.",
-"That Pierre, a good man, always on the lookout for new arrivals to the archipeligo for me, I have a few positions, what experience do you have as a Captain?",
+"That Pierre, a good man, always on the lookout for new arrivals to the archipelago for me, I have a few positions, what experience do you have as a Captain?",
 "I was Captain of a merchant ship for years in Portugal, I gave up that miserable life to make my fortune here.",
 "Humm..previous experience and a desire for quick coin. You realize, my friend, I don't sell legal goods....",
 "I understand. But, you pay according to the high risk for this work, do you not?",

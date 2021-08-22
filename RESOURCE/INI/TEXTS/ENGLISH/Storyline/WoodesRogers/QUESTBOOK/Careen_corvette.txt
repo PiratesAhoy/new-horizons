@@ -1,0 +1,12 @@
+title=Careen corvette
+text.t1=The hatch in the ceiling is probably leading to the Captain's cabin. But I'll need a long tool to open it.
+text.t2=I have found a (locked) way down to the slaves.
+text.t3=There's a Pitchfork! But how do I get to it?
+text.t4=I'll search for the Gunpowder Storage.
+text.t5=There are some prisoners here. Hopefully the next door is to the slave compartment.
+text.t6=I must hurry up and block that door before someone enters.
+text.t7=
+text.t8=
+text.t9=
+text.t10=
+

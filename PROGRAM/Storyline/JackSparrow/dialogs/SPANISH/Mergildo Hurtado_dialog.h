@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"Es hora de que zarpemos.",
+"Conforme.",
+"A menos que me equivoque, usted es el capitán que esperábamos conocer. ¡Gracias por su ayuda! Si no fuera por usted, estaría descansando en el lecho marino con el resto de mi tripulación.",
+"Sí. Perdí muchos hombres buenos de mi propia tripulación. Después de una de las andanadas, uno de mis hombres fue golpeado con trozos de madera voladores en ambos brazos y en el ojo.",
+"¿Él está bien?",
+"Larry perdió ambos brazos y su ojo derecho, pobre tipo. Sus días de navegación han terminado. ¿Pero por qué decidió echar el ancla aquí? Tengo órdenes de escoltarte a #sIsla Muelle#.",
+"Tuve que llevar a un pasajero a tierra. Yo también tengo órdenes, ya ves.",
+"No me dijeron nada sobre eso - pero es justo. Es tu negocio, no el mío.",
+"Así es, ",
+". Cada uno de nosotros tiene sus deberes, y no necesitamos discutirlos.",
+"En efecto. ¿Podemos irnos ahora? Me gustaría ponerlos a usted y a su nave a salvo tan pronto como sea posible.",
+"Nada me retiene ahora aquí.",
+"¡Genial! Entonces no perdamos más tiempo",
+"¡Sí, capitán!",
+"Los tenemos a todos, capitán, es libre de escapar.",
+"¡¿Qué estás haciendo aquí?!",
+"Devolviendo el favor. Dejé a nuestro amigo maltés y luego vi a ese hombre y a los soldados esperándote fuera de la iglesia. Así que decidí seguirlo y atacar en el momento oportuno.",
+"Gracias, amigo mío. Es muy de agradecer.",
+
+};

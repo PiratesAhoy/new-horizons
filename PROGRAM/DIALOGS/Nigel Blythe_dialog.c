@@ -174,8 +174,16 @@ void ProcessDialogEvent()
 		break;
 		
 		case "con_parri_4":
-			dialog.text = DLG_TEXT[32];
-			link.l1 = DLG_TEXT[33];
+			if (GetCurrentPeriod() < PERIOD_COLONIAL_POWERS)
+			{
+				dialog.text = DLG_TEXT[60];	// GR: alternative text for "a fluyt or maybe a small galleon"
+				link.l1 = DLG_TEXT[61];		// instead of "a corvette or a frigate"
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[32];
+				link.l1 = DLG_TEXT[33];
+			}
 			link.l1.go = "con_parri_off";
 			link.l2 = DLG_TEXT[34];
 			link.l2.go = "con_parri_5";
@@ -183,7 +191,8 @@ void ProcessDialogEvent()
 		
 		case "con_parri_off":
 			DialogExit();
-			AddQuestrecord("nigel", 12);
+			if (GetCurrentPeriod() < PERIOD_COLONIAL_POWERS) AddQuestrecord("nigel", 29);
+			else AddQuestrecord("nigel", 12);
 			AddDialogExitQuest("nigel_third_encounter");
 			ChangeCharacterReputation(pchar, -2);			
 			characters[GetCharacterIndex("Nigel Blythe")].loyality = makeint(characters[GetCharacterIndex("Nigel Blythe")].loyality) - 1;
@@ -252,7 +261,8 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[52];
 			link.l1.go = "exit";
 			AddDialogExitQuest("nigel_fourth_encounter");
-		//	SetCompanionIndex(Pchar, -1, GetCharacterIndex("Nigel Blythe")); // CTM
+			AddDialogExitQuest("Nigel_Blythe_prepare_removal");
+			SetCompanionIndex(Pchar, -1, GetCharacterIndex("Nigel Blythe")); // CTM
 		//	SetCharacterRemovable(characterFromID("Nigel Blythe"), false); // PB
 		break;
 

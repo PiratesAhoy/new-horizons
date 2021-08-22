@@ -317,8 +317,8 @@ void DoViewDescribe()
 	//Levis add perk cost -->
 	int cost = GetPerkCost(strPerkName);
 	string namestring = LanguageConvertString(lngFileID, strPerkName);
-	if (cost==1) { namestring = namestring+" ("+GetPerkCost(strPerkName)+" Point)"; } 
-	else { namestring = namestring+" ("+GetPerkCost(strPerkName)+" Points)"; }
+	if (cost==1) { namestring = namestring+" ("+GetPerkCost(strPerkName)+" "+TranslateString("", "Point")+")"; } 
+	else { namestring = namestring+" ("+GetPerkCost(strPerkName)+" "+TranslateString("", "Points")+")"; }
 	
 	//<--Levis add perk cost
 	SendMessage(&GameInterface,"lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE,"PERK_NAME",0,"PerkName", namestring, FONT_NORMAL,

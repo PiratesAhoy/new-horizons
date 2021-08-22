@@ -12,6 +12,10 @@
 
 #define MAX_PAGES_QUANTITY	4
 
+#define MAX_LANGUAGES        6
+#define MAX_KEYBOARD_LAYOUTS 7
+
+
 float i_fCurMusic;
 float i_fCurSound;
 float i_fCurDialog;
@@ -327,6 +331,7 @@ void IDoExit(int exitCode)
 	ControlsMakeInvert();
 	// Screwface
 	string storyline = GetStoryline(CurrentStoryline);
+	GlobalSettings.nomusicinterrupt = true; //MAXIMUS 02.05.2019: for preventing music interruption in main menu
 	InitGlobalOptions(); // Screwface
 	ref gopt; makeref(gopt, GlobalSettings);
 	ReadMainOptions(&gopt);
@@ -334,6 +339,7 @@ void IDoExit(int exitCode)
 	gopt.profile.(storyline) = CurrentProfile;
 	//gopt.profile.(storyline).len = stringlen;
 	WriteMainOptions(gopt);
+	DeleteAttribute(GlobalSettings, "nomusicinterrupt"); //MAXIMUS 02.05.2019: for preventing music interruption in main menu
 	if (isBSChanged) BS_Reinit();	// KK
 
 //	ClearEvents();					// PB: This causes the "stuck with all menu options" bug
@@ -696,6 +702,8 @@ if(comName=="activate" || comName=="click")
 		LanguageSetLanguage(GetInterfaceLanguageName(iSelectedInterfaceLanguage));
 		SetInterfaceLanguage(iSelectedInterfaceLanguage);
 		SetKeyboardLayout(iSelectedKeyboardLayout);
+		GetLanguageParameters();
+		UpdateCharactersNames();
 		AdditionalShow();
 	break;
 
@@ -3833,8 +3841,9 @@ void DoMusicSchemeChangeLeft()
 	while (true)
 	{
 		music_scheme--;
-		if (music_scheme < 0) music_scheme = 5;
-		if (music_scheme == 0 || CheckDirectory("RESOURCE\Sounds\MUSIC\" + GetMusicScheme(), "*.ogg") > 0) break;
+//		if (music_scheme < 0) music_scheme = 5;
+		if (music_scheme < 0) music_scheme = GetMusicSchemeCount()-1;
+		if (music_scheme == 0 || CheckDirectory("RESOURCE\Sounds\MUSIC\" + GetMusicSchemeResDir(), "*.ogg") > 0) break;
 	}
 	GameInterface.Strings.MusicScheme = GetMusicSchemeName(music_scheme);
 }
@@ -3844,8 +3853,9 @@ void DoMusicSchemeChangeRight()
 	while (true)
 	{
 		music_scheme++;
-		if (music_scheme > 5) music_scheme = 0;
-		if (music_scheme == 0 || CheckDirectory("RESOURCE\Sounds\MUSIC\" + GetMusicScheme(), "*.ogg") > 0) break;
+//		if (music_scheme > 5) music_scheme = 0;
+		if (music_scheme >= GetMusicSchemeCount()) music_scheme = 0;
+		if (music_scheme == 0 || CheckDirectory("RESOURCE\Sounds\MUSIC\" + GetMusicSchemeResDir(), "*.ogg") > 0) break;
 	}
 	GameInterface.Strings.MusicScheme = GetMusicSchemeName(music_scheme);
 }
@@ -3855,7 +3865,7 @@ void ProcessLanguageLeft()
 	while (true) {
 		iSelectedInterfaceLanguage--;
 		if (iSelectedInterfaceLanguage < 0) {
-			iSelectedInterfaceLanguage = 0;
+			iSelectedInterfaceLanguage = MAX_LANGUAGES - 1;
 			break;
 		}
 		if (FindLocalLanguage(GetInterfaceLanguageName(iSelectedInterfaceLanguage))) break;
@@ -3865,13 +3875,27 @@ void ProcessLanguageLeft()
 
 void ProcessLanguageRight()
 {
-	int i = 0;
-	while (i < LanguageQty - 1) {
+// KK -->
+	// We _need_ to cycle through even unavailable languages; otherwise we won't be able to select an existing one if they're translated in "correct" order - a "gap" in translated texts.
+	while (GetInterfaceLanguageName(iSelectedInterfaceLanguage + 1) != "English")
+	{
+		/*if (GetInterfaceLanguageName(iSelectedInterfaceLanguage) == "English")
+			iSelectedInterfaceLanguage++;*/
 		iSelectedInterfaceLanguage++;
-		i++;
-		if (FindLocalLanguage(GetInterfaceLanguageName(iSelectedInterfaceLanguage))) break;
+		if (iSelectedInterfaceLanguage >= MAX_LANGUAGES)
+		{
+			iSelectedInterfaceLanguage = 0;
+			break;
+		}
+		if (FindLocalLanguage(GetInterfaceLanguageName(iSelectedInterfaceLanguage)))
+		{
+			break;
+		}
 	}
-	GameInterface.strings.LanguagesList = XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedInterfaceLanguage));
+	// MAXIMUS: changed it, because we don't need changer for nonexistent translation and interfaces. Only presented languages will be shown
+	/*if (LanguageQty == 0 || GetInterfaceLanguageName(iSelectedInterfaceLanguage + 1) != "English") if(FindLocalLanguage(GetInterfaceLanguageName(iSelectedInterfaceLanguage + 1))) { iSelectedInterfaceLanguage++; }*/
+// <-- KK
+	GameInterface.strings.LanguagesList = XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedInterfaceLanguage));				
 }
 
 void ProcessKeyboardLayoutLeft()
@@ -3883,7 +3907,7 @@ void ProcessKeyboardLayoutLeft()
 
 void ProcessKeyboardLayoutRight()
 {
-	if (iSelectedKeyboardLayout == 0 || GetInterfaceLanguageName(iSelectedKeyboardLayout + 1) != "English") iSelectedKeyboardLayout++;
+	if (GetInterfaceLanguageName(iSelectedKeyboardLayout + 1) != "English" && iSelectedKeyboardLayout < MAX_KEYBOARD_LAYOUTS) iSelectedKeyboardLayout++;
 	GameInterface.strings.KeyboardLayoutList = XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedKeyboardLayout));
 }
 // <-- KK

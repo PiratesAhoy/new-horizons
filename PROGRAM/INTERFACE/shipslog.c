@@ -24,9 +24,9 @@ void InitInterface(string iniName)
 
 	CreateString(false, "LogEntry_Title", "", FONT_SHIPSLOG, COLOR_WHITE, 320, 62, SCRIPT_ALIGN_CENTER, 1.0);	
 	CreateString(false, "LogEntry_Date", "", FONT_SHIPSLOG, COLOR_WHITE, 75, 62, SCRIPT_ALIGN_LEFT, 1.0);	
-	CreateString(false, "NewLogEntry_Title_Label", "Log Title", FONT_SHIPSLOG, COLOR_GRAY, 10, 90, SCRIPT_ALIGN_LEFT, 0.7)
-	CreateString(false, "NewLogEntry_Entry_Label", "Log Entry", FONT_SHIPSLOG, COLOR_GRAY, 10, 135, SCRIPT_ALIGN_LEFT, 0.7)
-	CreateString(true, "NewLog", "Write new log entry", FONT_SHIPSLOG, COLOR_GRAY, 140, 435, SCRIPT_ALIGN_LEFT, 1.3)
+	CreateString(false, "NewLogEntry_Title_Label", XI_ConvertString("Log Title"), FONT_SHIPSLOG, COLOR_GRAY, 10, 90, SCRIPT_ALIGN_LEFT, 0.7) // MAXIMUS 27.06.2019: localization
+	CreateString(false, "NewLogEntry_Entry_Label", XI_ConvertString("Log Entry"), FONT_SHIPSLOG, COLOR_GRAY, 10, 135, SCRIPT_ALIGN_LEFT, 0.7) // MAXIMUS 27.06.2019: localization
+	CreateString(true, "NewLog", XI_ConvertString("Write new log entry"), FONT_SHIPSLOG, COLOR_GRAY, 140, 435, SCRIPT_ALIGN_LEFT, 1.3) // MAXIMUS 27.06.2019: localization
 
 	CreateString(true, "Stat_Kills", GetStatistics("Kills"), FONT_SHIPSLOG, COLOR_WHITE, 657, 340, SCRIPT_ALIGN_CENTER, 0.5);	
 	CreateString(true, "Stat_ShipsSunk", GetStatistics("ShipsSunk"), FONT_SHIPSLOG, COLOR_WHITE, 657, 400, SCRIPT_ALIGN_CENTER, 0.5);
@@ -328,7 +328,7 @@ void CreateLogHeadersList()
 	{ 
 		tmp = "log"+i;
 		if(!CheckAttribute(&myCh, "shiplog.Date."+tmp)) break; // break in case of errors
-		tmpLogTitle = myCh.shiplog.Date.(tmp) + "        " + myCh.shiplog.Title.(tmp);   
+		tmpLogTitle = myCh.shiplog.Date.(tmp) + "        " + GetTranslatedLog(myCh.shiplog.Title.(tmp)); // MAXIMUS 27.06.2019: localization
 		if( tmpLogTitle == "")
 		{
 			continue;   
@@ -514,11 +514,12 @@ void DisplayLogText()
 	}
 
 	GameInterface.strings.LogEntry_Date = tmpLogDate;
-	GameInterface.strings.LogEntry_Title = tmpLogTitle;
+	GameInterface.strings.LogEntry_Title = GetTranslatedLog(tmpLogTitle); // MAXIMUS 27.06.2019: localization
 	EnableString("LogEntry_Date");
 	EnableString("LogEntry_Title");
 
-	SetFormatedLogText("LOGENTRY_TEXT", tmpLogEntry);
+	SendMessage(&GameInterface,"lss",MSG_INTERFACE_SET_FORMATEDTEXT,"LOGENTRY_TEXT",""); // MAXIMUS 12.08.2019: fix - after reopen log, the log text was doubled
+	SetFormatedLogText("LOGENTRY_TEXT", GetTranslatedLog(tmpLogEntry)); // MAXIMUS 27.06.2019: localization
 	SetFormatedLogText("LOGENTRY_TEXT", " ");			// PB
 
 	// Hide the icons

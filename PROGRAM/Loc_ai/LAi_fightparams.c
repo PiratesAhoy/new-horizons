@@ -445,6 +445,10 @@ float LAi_GunReloadSpeed(aref chr)
 						ammoName2 = "caps_box_O";
 						if(gpb == 0 || cap == 0) return 0.0;
 					break;
+					case "pg6":
+						ammoName = "pistolgrapes";
+						if(pg <= 5 || gp <= 5) return 0.0;
+					break;				
 				}
 				if(!CheckAttribute(chr,"Items.gunpowder")) chr.Items.gunpowder = 0;
 				if(!CheckAttribute(chr,"Items."+ammoName) || sti(chr.Items.gunpowder)==0)
@@ -776,7 +780,7 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 	//Проверим на смерть
 	LAi_CheckKillCharacter(enemy);
 	//Есть ли оружие у цели
-	bool isSetBalde = (SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
+	bool isSetBalde = (CheckAttribute(enemy, "equip.blade") == true);//(SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
 	//Начисляем опыта
 	if(critical > 0.0) damage = critical; // So EXP calculation takes critical damage into account
 	float exp = LAi_BladeCalcExperience(attack, enemy, damage);
@@ -790,10 +794,27 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 			// ccc mar05 REPLOSS tweak added
 			if(enemy.chr_ai.group != LAi_monsters_group)
 			{
-				if(sti(attack.index) == GetMainCharacterIndex()) LogIt("CHANGE REP for player: " + -REPLOSS*3 + " - undrawn blade 1"); 	// LDH 19Dec08
+				if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS*3 + " - " + TranslateString("","undrawn blade 1")); 	// LDH 19Dec08
 				LAi_ChangeReputation(attack, - REPLOSS*3); // NK tempfix for un-drawn blades 04-17
-				if(IsMainCharacter(attack)) GuardsAttackOpium(); //All near guards will attack you now. -Levis
+				if(IsMainCharacter(attack))		 //All near guards will attack you now. -Levis
+				{
+					LAi_group_FightGroups(LAI_GROUP_PLAYER, GetSoldiersGroup(GetCurrentLocationNation()), true);
+				}
 			}
+		}
+		// GR: REPLOSS for killing a stunned character
+		if(CheckAttribute(enemy, "stuntime"))
+		{
+			if(enemy.chr_ai.group != LAi_monsters_group)
+			{
+				if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS*3 + " - " + TranslateString("","stunned victim"));
+				LAi_ChangeReputation(attack, - REPLOSS*3);
+				if(IsMainCharacter(attack) && !CheckAttribute(enemy,"pickgold")) //All near guards will attack you now. -Levis
+				{
+					LAi_group_FightGroups(LAI_GROUP_PLAYER, GetSoldiersGroup(GetCurrentLocationNation()), true);
+				}
+			}
+			exp = 0.0;
 		}
 	}
 	//if(AUTO_SKILL_SYSTEM) { if(!LAi_IsDead(enemy)) { AddCharacterExpChar(enemy, "Defence", MakeInt(stf(exp*0.5 + 0.5))/2); } }// MAXIMUS! //Levis we moved this to when its really blocked
@@ -802,8 +823,18 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 		// ccc mar05 REPLOSS tweak added
 		if(enemy.chr_ai.group != LAi_monsters_group)
 		{
-			if(sti(attack.index) == GetMainCharacterIndex()) LogIt("CHANGE REP for player: " + -REPLOSS + " - undrawn blade 2"); 	// LDH 19Dec08
-			LAi_ChangeReputation(attack, - REPLOSS); // NK tempfix for un-drawn blades 04-17
+			if (CheckAttribute(enemy, "attacked_you")) // GR: No reploss if enemy attacked you.  If player attacks enemy who attacked you and is now running, show warning
+			{
+				if (sti(GetAttribute(attack, "index")) == GetMainCharacterIndex()) logit(TranslateString("", "Enemy lost weapon, trying to run!"));
+			}
+			else
+			{
+				if (!CheckAttribute(enemy,"pickgold") || GetCharacterEquipByGroup(attack, BLADE_ITEM_TYPE) != "bladeX3") // GR: no reploss if he robbed you and you use a thief's knife
+				{
+					if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS + " - " + TranslateString("","undrawn blade 2")); 	// LDH 19Dec08
+					LAi_ChangeReputation(attack, - REPLOSS); // NK tempfix for un-drawn blades 04-17
+				}
+			}
 		}
 		exp = 0.0;
 	}
@@ -948,9 +979,26 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 			// ccc mar05 REPLOSS tweak added
 			if(enemy.chr_ai.group != LAi_monsters_group)
 			{
-				if(sti(attack.index) == GetMainCharacterIndex()) LogIt("CHANGE REP for player: " + -REPLOSS*3 + " - firing on undrawn blade 1"); 	// LDH 19Dec08
+				if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS*3 + " - " + TranslateString("","firing on undrawn blade 1")); 	// LDH 19Dec08
 				LAi_ChangeReputation(attack, - REPLOSS*3); // NK tempfix for un-drawn blades 04-17
-				if(IsMainCharacter(attack)) GuardsAttackOpium(); //All near guards will attack you now. -Levis
+				if(IsMainCharacter(attack))		//All near guards will attack you now. -Levis
+				{
+					LAi_group_FightGroups(LAI_GROUP_PLAYER, GetSoldiersGroup(GetCurrentLocationNation()), true);
+				}
+			}
+			exp = exp*0.05;
+		}
+		// GR: REPLOSS for killing a stunned character
+		if(CheckAttribute(enemy, "stuntime"))
+		{
+			if(enemy.chr_ai.group != LAi_monsters_group)
+			{
+				if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS*3 + " - " + TranslateString("","stunned victim"));
+				LAi_ChangeReputation(attack, - REPLOSS*3);
+				if(IsMainCharacter(attack) && !CheckAttribute(enemy,"pickgold"))	//All near guards will attack you now. -Levis
+				{
+					LAi_group_FightGroups(LAI_GROUP_PLAYER, GetSoldiersGroup(GetCurrentLocationNation()), true);
+				}
 			}
 			exp = exp*0.05;
 		}
@@ -965,7 +1013,7 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 			if(enemy.chr_ai.group != LAi_monsters_group)
 			{
 				if(sti(attack.index) == GetMainCharacterIndex())
-					LogIt("CHANGE REP for player: " + -REPLOSS + " - firing on undrawn blade 2"); 	// LDH 19Dec08
+					LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS + " - " + TranslateString("","firing on undrawn blade 2")); 	// LDH 19Dec08
 				LAi_ChangeReputation(attack, -REPLOSS); // NK tempfix for un-drawn blades 04-17
 			}
 		}

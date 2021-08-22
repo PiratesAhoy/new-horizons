@@ -1,0 +1,7 @@
+title=Saving Askay's brother
+text.t1=Askay, the aide of Sri Sumbhajee, told me that his brother was kidnapped by some Spaniard in Holland's service. I think I should deal with that problem and help this man return home.
+text.t2=The Prison Commendant told me I could try and persuade the prison ship's captain to allow me to take Pusasn as a slave. Lets hope that I can so I can release him to Sri Sumbhajee and his brother.
+text.t3=This Spaniard was unforgivably rude with me. So I killed him and his officer. The brother is saved.
+text.t4=This Spaniard was unforgivably rude with me. But when his men realized that I was here by the order of the governor, they slew their captain and left.
+text.t5=The Prison Commendant realised I was in disguise and came to intercept me on the jetty. Too bad for him. I had to kill him and two soldiers.
+text.t6=I've "gotten" a new Pistol! I took it from Sri Sumbhajee after his aide couldn't pay me for my troubles in saving his brother.

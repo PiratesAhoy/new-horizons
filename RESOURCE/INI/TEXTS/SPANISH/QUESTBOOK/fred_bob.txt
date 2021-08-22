@@ -1,0 +1,10 @@
+title=Misión secundaria: Ayudar al contramaestre
+text.t1=¡Qué personaje tan extraño es ese Orable Caron! No sé si puedo fiarme de él. Bueno, iré a la playa al sur del puerto de #sFalaise de Fleur#, en #sisland_Falaise de Fleur#, para ver si puedo encontrar un nuevo contramaestre.
+text.t2=El contramaestre es un poco difícil de entender, pero parece un buen hombre. Tengo que hablar con el capitán de la guardia, si lo encuentro, para ver si puedo conseguir que este hombre sea indultado.
+text.t3=He conocido al contramaestre y no hay manera de entenderlo. Tendré que pensármelo pero no creo que pueda ayudarlo.
+text.t4=He hablado con el contramaestre y parece sincero, pero no puedo ir por ahí arriesgando mi reputación por alquien a quien no conozco. Una pena, pero realmente no se puede hacer nada más.
+text.t5=He hablado con Aufort y no hay nada que hacer. De modo que el contramaestre seguirá bajo custodia.
+text.t6=He hablado con Aufort y he tenido suerte. El contramaestre es libre, a condición de que me lo lleve conmigo. Creo que el tipo estará muy contento de volver a hacerse a la mar.
+text.t7=Fred Bob dice que lleva una carta que debe ser entregada a una mujer noble en #sIsla Muelle#, en la isla de #sisland_Isla Muelle#. Ella debería estar esperando en la iglesia que está cerca del ayuntamiento. Me pregunto cuál es el significado de todo esto.
+text.t8=Es una lástima, la verdad. Me gustaría ayudar al contramaestre pero las cosas no han salido bien. Tal vez lo vuelva a intentar cuando mi reputación sea mejor.
+text.t9=No puedo entender ni una palabra de lo que dice este hombre. Tal vez lo intente en otra ocasión. O no.

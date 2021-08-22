@@ -1,0 +1,226 @@
+Balls	{Cannonballs}
+Balls_descr
+{
+The most common type of cannon ammunition, these heavy cast-iron balls deliver solid damage to enemy ships. Damage: Hull-#f.2DamageHull#, Rig-#f.2DamageRig#, Crew-#f.2DamageCrew#
+}
+
+
+Grapes	{Grapes}
+Grapes_descr
+{
+Clusters of iron shot fired from cannon to sweep the decks of an enemy ship at short range, with terrible effect on the crew. Damage: Hull-#f.2DamageHull#, Sails-#f.2DamageRig#, Crew-#f.2DamageCrew#
+}
+
+
+Knippels {Knippels}
+Knippels_descr
+{
+Cast-iron pigs connected with a thick chain. Used to destroy an enemy ship's sails and masts. Damage: Hull-#f.2DamageHull#, Sails-#f.2DamageRig#, Crew-#f.2DamageCrew#
+}
+
+
+Bombs {Bombs}
+Bombs_descr
+{
+Stuffed with powder, these cannonballs deal heavy damage to the enemy ship's hull. Damage: Hull-#f.2DamageHull#, Sails-#f.2DamageRig#, Crew-#f.2DamageCrew#
+}
+
+
+Sailcloth {Sailcloth}
+Sailcloth_descr
+{
+Durable cloth that you can use to repair your sails.
+}
+
+
+Planks {Planks}
+Planks_descr
+{
+You can patch holes in your ship's hull with these wooden planks.
+}
+
+
+Wheat {Wheat}
+Wheat_descr
+{
+Used to make bread and brew various alcoholic beverages.
+}
+
+
+Ebony {Ebony}
+Ebony_descr
+{
+A rare and valuable type of blackwood, of particular hardness and density.
+}
+
+Chocolate {Chocolate}
+Chocolate_descr
+{
+The favorite delicacy of coddled noblewomen worldwide.
+}
+
+
+Sugar {Sugar}
+Sugar_descr
+{
+The sweetest thing in the world.
+}
+
+
+Wine {Wine}
+Wine_descr
+{
+Fermented grape juice favored by many for its fine taste and intoxicating qualities.
+}
+
+
+Linen {Linen}
+Linen_descr
+{
+A fabric used to make clothes.
+}
+
+
+Rum {Rum}
+Rum_descr
+{
+A shortage of this fine drink during a long voyage may easily lead to mutiny.
+}
+
+
+Tobacco {Tobacco}
+Tobacco_descr
+{
+The aromatic treasure of the New World.
+}
+
+
+Coffee {Coffee}
+Coffee_descr
+{
+Coffee beans are used to brew a bitter tonic drink.
+}
+
+
+Mahogany {Mahogany}
+Mahogany_descr
+{
+A precious type of wood with a characteristic reddish color.
+}
+
+
+Cinnamon {Cinnamon}
+Cinnamon_descr
+{
+Whole nations were slaughtered just to possess this spice.
+}
+
+
+Copra {Copra}
+Copra_descr
+{
+Dried coconut kernel.
+}
+
+
+Paprika {Paprika}
+Paprika_descr
+{
+Sweet pepper, an ingredient of many salads.
+}
+
+
+Fruits {Fruits}
+Fruits_descr
+{
+Various fruits of tropical plants.
+}
+
+
+Ale {Ale}
+Ale_descr
+{
+A mild alcoholic beverage brewed from hops and malt.
+}
+
+
+Silk {Silk}
+Silk_descr
+{
+A fine, light, and extremely expensive fabric.
+}
+
+
+Clothes {Clothes}
+Clothes_descr
+{
+Crude sacking clothes for the simple folk of the colonies.
+}
+
+
+Cotton {Cotton}
+Cotton_descr
+{
+Raw material used to make fabrics.
+}
+
+
+Sandal {Sandal}
+Sandal_descr
+{
+A precious type of wood. Used for decorative purposes and for the production of incense.
+}
+
+
+Leather {Leather}
+Leather_descr
+{
+Cured animal hides.
+}
+
+
+Oil {Oil}
+Oil_descr
+{
+Olive oil is used in cooking many different kinds of dishes.
+}
+
+Gunpowder {Gunpowder}
+Gunpowder_descr
+{
+Invented in China, gunpowder is needed for a ship's cannons. Without it they'll be quiet as the fishes. The captain will need to make sure there is still gunpowder in his cargo hold and fill up the supply regularly. You can launch a barrel with 300 units as anti-ship mine (Key 9 at sea).
+}
+
+// from SLiB by Jack Davidson -->
+
+Gold {Gold}
+Gold_descr
+{
+Aurum. A precious yellow metal extracted from the mines of the archipelago.
+}
+
+Silver {Silver}
+Silver_descr
+{
+Argentum. A precious white metal extracted from the mines of the archipelago.
+}
+
+Bricks {Bricks}
+Bricks_descr
+{
+Large building blocks moulded from clay and stones and used for the construction of forts and urban buildings.
+}
+
+// from SLiB by Jack Davidson <--
+
+Medicines {Medicaments}
+Medicines_descr
+{
+Medicaments needed for treatment of any disease. They'll help to rescue injured and heal the diseased crewmembers during sailing.
+}
+
+Ration {Food}
+Ration_descr
+{
+Cheese, bread, apples, salted meat... All, what's possible to eat.
+}

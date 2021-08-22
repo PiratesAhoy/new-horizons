@@ -66,6 +66,16 @@ void ProcessDialogEvent()
 		break;
 		
 		case "continue4":
+			if(PChar.sex == "woman")
+			{
+				Preprocessor_Add("pronoun1", FirstLetterUp(XI_ConvertString("her")));
+				Preprocessor_Add("pronoun2", XI_ConvertString("her"));
+			}
+			else
+			{
+				Preprocessor_Add("pronoun1", FirstLetterUp(XI_ConvertString("his")));
+				Preprocessor_Add("pronoun2", XI_ConvertString("his"));
+			}
 			dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];
 			link.l1.go = "continue5";

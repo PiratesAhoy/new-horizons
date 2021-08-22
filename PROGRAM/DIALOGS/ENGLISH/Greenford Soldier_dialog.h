@@ -19,7 +19,7 @@ string DLG_TEXT[88] = {
 "And you call this doing your duty? Look, you wouldn't want to miss capturing some dangerous criminal like myself, would you? Ha-ha!",
 "You look pretty healthy. Don't you want to join our army? We've got lots of room in our barracks, good food, rum for free.",
 "Sounds good, but I'll have to decline your offer. I don't fancy army discipline.",
-"This heat.... I'd give anything to return to my lovely Portugal.",
+"This heat.... I'd give anything to return to dear old England.",
 "Yes, it doesn't look like this weather suits you.",
 "I need your help to save one man.",
 "I want to know more about what's going on in the town recently.",

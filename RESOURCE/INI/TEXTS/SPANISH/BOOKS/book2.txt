@@ -1,0 +1,34 @@
+TEXT	{
+Teorema: Todos los números son igual a cero.
+Prueba: Supongamos que a=b. Entonces
+a = b
+a^2 = ab
+a^2 - b^2 = ab - b^2
+(a + b)(a - b) = b(a - b)
+a + b = b
+a = 0
+Por lo tanto, si a + b = b, y a = b, entonces b + b = b, y 2b = b, lo que significa que 2 = 1 y tu bergantín de dos palos es en realidad una tartana de un solo palo.
+-------------------------
+Jack Sparrow y sus dos tenientes pasan una noche en la taberna de Tortuga, donde les cobran 10 piezas de oro a cada uno (5 por la tarifa normal de la taberna y 5 por la compañía nocturna de la moza de la taberna). Sigue siendo más barato que ir al burdel, así que Jack toma 10 piezas de oro de cada teniente y otras 10 de su propio bolsillo, y entrega el total de 30 piezas de oro. A la mañana siguiente, la moza dice que había olvidado que hay una oferta especial para grupos, son solo 25 piezas de oro en total, y devuelve 5 piezas de oro a Jack. Jack pone 1 pieza de oro en su bolsillo, devuelve 1 pieza de oro a cada uno de sus tenientes y le da las otras dos a la moza. Hay dos problemas con esta historia. Uno es que Jack Sparrow, habiendo caído en sus manos 5 piezas de oro, nunca se sepraría de ellas por propia voluntad. El otro es que cada hombre ha pagado un total de 9 piezas de oro, que junto a las 2 que Jack devolvió a la moza, hace un total de 29 piezas de oro. ¿Dónde está la moneda restante?
+-------------------------
+Barbanegra: "Piensa en un número entre 1 y 10, pero no me digas cuál es."
+Pirata 1: "Lo tengo."
+Barbanegra: "Tu número es 4."
+Pirata 1: "No, en realidad es 6."
+Barbanegra: "Respuesta incorrecta." <BANG> "Piensa en un número entre 1 y 10, pero no me digas cuál es."
+Pirata 2: "Lo tengo."
+Barbanegra: "Tu número es 7."
+Pirata 2: "Estaba pensando en 3, pero de repente estoy pensando en 7."
+-------------------------
+Teorema: Todos los números son iguales.
+Prueba: Elige aleatoriamente a y b, y supón que t = a + b. Entonces
+a + b = t
+(a + b)(a - b) = t(a - b)
+a^2 - b^2 = ta - tb
+a^2 - ta = b^2 - tb
+a^2 - ta + (t^2)/4 = b^2 - tb + (t^2)/4
+(a - t/2)^2 = (b - t/2)^2
+a - t/2 = b - t/2
+a = b
+Por lo tanto, todos los números son lo mismo y las matemáticas no tienen sentido. Lo que significa que es hora de dejar este libro y volver al timón antes de chocar con esa roca a proa.
+}

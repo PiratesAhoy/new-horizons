@@ -323,6 +323,19 @@ void LAi_CharacterAttack()
 		Locations[FindLocation(mainCh.location)].reload.l7.disable = 0;
 		attack.chapel_window = "broken";
 	}
+
+	if(CheckAttribute(enemy, "id") && enemy.id == "painting_target")
+	{
+		PlaySound("OBJECTS\DUEL\pistol_out1.wav");
+		SetLocatorRadius(locations[FindLocation(attack.location)], "box", "box15", 0.0001);
+		Locations[FindLocation("bb_lower_cave")].locators_radius.box.box15 = 0.0001;
+		LAi_SetPlayerType(attack);
+		LAi_SetFightMode(attack, false);
+		LAi_LocationFightDisable(&Locations[FindLocation(attack.location)], true);
+		ChangeCharacterAddressGroup(characterFromID("painting_target"), "none", "", "");
+		
+		LAi_QuestDelay("prepare_FH_painting_check", 0.1);
+	}
 //<-- JRH
 
 	// ccc special weapon assembly kit start
@@ -499,7 +512,7 @@ void LAi_CharacterAttack()
 				}
 			}
 		}
-		bool isSetBalde = (SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
+		bool isSetBalde = (CheckAttribute(enemy, "equip.blade") == true);//(SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
 		int erank = makeint(enemy.rank);
 		//float exp = damage*((1.0 + erank*0.5)/(1.0 + rank*0.5)) * sqrt(erank); //Levis this is done in fight params already
 		if(!isSetBalde)
@@ -509,9 +522,19 @@ void LAi_CharacterAttack()
 			{
 				if(!CheckAttribute(enemy,"corpse")) enemy.corpse = false; //Fix by levis
 				if(enemy.corpse==false) //Levis: fix so you won't get reploss from hitting corpses
-				{
-					if(sti(attack.index) == GetMainCharacterIndex()) LogIt("CHANGE REP for player: " + -REPLOSS + " - undrawn blade 2"); 	// LDH 19Dec08
-					LAi_ChangeReputation(attack, - REPLOSS); // NK tempfix for un-drawn blades 04-17
+				{					
+					if (CheckAttribute(enemy, "attacked_you")) // GR: No reploss if enemy attacked you.  If player attacks enemy who attacked you and is now running, show warning
+					{
+						if (sti(GetAttribute(attack, "index")) == GetMainCharacterIndex()) logit(TranslateString("", "Enemy lost weapon, trying to run!"));
+					}
+					else
+					{
+						if (!CheckAttribute(enemy,"pickgold") || GetCharacterEquipByGroup(attack, BLADE_ITEM_TYPE) != "bladeX3") // GR: no reploss if he robbed you and you use a thief's knife
+						{
+							if(GetAttribute(attack, "index") && sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS + " - " + TranslateString("","undrawn blade 2")); 	// LDH 19Dec08
+							LAi_ChangeReputation(attack, - REPLOSS); // NK tempfix for un-drawn blades 04-17
+						}
+					}
 				}
 			}
 			//exp = 0.0;
@@ -688,6 +711,41 @@ void LAi_CharacterAttack()
 				LAi_LocationFightDisable(&Locations[FindLocation("wr_cave_shore")], true);
 
 				LAi_QuestDelay("Bunce_wakes_up", 1.0);
+			}
+		}
+	}
+
+	if(CheckAttribute(weapon, "id") && weapon.id == "bladethunder")
+	{
+		if(CheckAttribute(enemy, "protection") && enemy.protection == "off")
+		{
+			GetCharacterPos(enemy, &u, &v, &w);
+			CreateParticleSystem("blast" , u, v+1.2, w, 0.0, 0.0, 0.0, sti(20) );		//effect on pchar (enemy)
+			PlaySound("NATURE\thunder1.wav");
+			LAi_ApplyCharacterDamage(enemy, 30 + rand(10));					//was 30 + rand(20)
+		}
+	}
+
+	if(CheckAttribute(weapon, "id") && weapon.id == "snakewand")
+	{
+		if(CheckAttribute(enemy, "id") && enemy.id == "devil")
+		{
+			GetCharacterPos(enemy, &u, &v, &w);
+			CreateParticleSystem("artifact_very_short" , u, v+1.2, w, 0.0, 0.0, 0.0, sti(20) );
+			PlaySound("OBJECTS\DUEL\snakewand.wav");
+			PlaySound("OBJECTS\DUEL\boom.wav");
+			attack.snakewand_hits = sti(attack.snakewand_hits) + 1;
+
+			LAi_QuestDelay("count_snakewand_hits", 0.1);
+		}
+		else
+		{
+			if(IsMainCharacter(attack))
+			{
+				LAi_SetFightMode(attack, false);
+				LAi_SetPlayerType(attack);
+				
+				LAi_QuestDelay("pchar_huh", 1.0);
 			}
 		}
 	}
@@ -929,9 +987,11 @@ void LAi_CharacterBlock()
 
 			if(BladeBreak)
 			{
-				if(sti(enemy.index) == GetMainCharacterIndex()){
+				if(sti(enemy.index) == GetMainCharacterIndex())
+				{
 					Continue_Bladedamage = false;
-					LogIt("Your blade decreased in quality!"); }
+					LogIt(TranslateString("", "Your blade decreased in quality!"));
+				}
 				if(CheckAttribute(enemy, "nodisarm")) Continue_Bladedamage = false;
 				if(enemy.chr_ai.group == LAI_GROUP_PLAYER) Continue_Bladedamage = false;
 				if(bAbordageStarted) Continue_Bladedamage = false;
@@ -939,6 +999,7 @@ void LAi_CharacterBlock()
 				if(Continue_Bladedamage && rand(1) > 0)
 				{
 					LAi_SetCitizenTypeNoGroup(enemy);
+					enemy.attacked_you = true;
 				}
 				else
 				{
@@ -1109,6 +1170,19 @@ void LAi_CharacterBlock()
 	if( CheckAttribute(weapon3, "sound" ) ) { PlaySound( weapon3.sound ); }
 		// plays soundfile if defined in items\itemsinit.c
 
+	if(CheckAttribute(weapon3, "id") && weapon3.id == "bladethunder")
+	{
+		if(CheckAttribute(enemy, "protection") && enemy.protection == "off")
+		{
+			float u, v, w;
+			GetCharacterPos(enemy, &u, &v, &w);
+			CreateParticleSystem("blast" , u, v+1.2, w, 0.0, 0.0, 0.0, sti(20) );		//effect on pchar (enemy)
+			PlaySound("NATURE\thunder1.wav");
+			LAi_ApplyCharacterDamage(enemy, 30 + rand(10));					//was 30 + rand(20)
+		}
+	}
+
+
 	if(BladeID == "blademketB" || BladeID == "blademketK") PlaySound("PEOPLE\wood1.wav");
    	//<-- JRH
 
@@ -1213,6 +1287,8 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 	float ay;
 	GetCharacterAy(attack, &ay);
 
+	int inc;	//incense for pistolcenserD
+
 	if(isFindedEnemy == 0)
 	{
 		//здесь можно поднимать тревогу в случае близкого выстрела
@@ -1251,14 +1327,42 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			{
 				PlaySound("OBJECTS\duel\sword_wind.wav");
 			}
-
-			if(GetAttribute(weapon, "id") == "pistolcenser")
+		
+			if(GetAttribute(weapon, "id") == "pistolcenserD")
 			{
-				PlaySound("OBJECTS\DUEL\censer.wav");
-				GetCharacterPos(attack, &u, &v, &w);
-				CreateParticleSystem("gunfire" , u, v+1.2, w, 0.0, 0.0, 0.0, sti(20) );
-			}
+				inc = GetCharacterItem(attack, "incense");
+				if(inc >= 1)
+				{
+					TakeNItems(attack,"incense", -1);
+					PlaySound("OBJECTS\DUEL\censer.wav");
+					GetCharacterPos(attack, &u, &v, &w);
+					CreateParticleSystem("gunfire" , u, v+1.2, w, 0.0, 0.0, 0.0, sti(20) );
+					attack.protection = "on";
+					logit("ON");
+					//PlaySound("OBJECTS\duel\chalice.wav");
 
+					LAi_QuestDelay("pchar_protection_off", 3.0);
+
+					inc = GetCharacterItem(attack, "incense");
+					if(inc >= 1)
+					{
+						//ok
+					}
+					else
+					{	
+						RemoveCharacterEquip(attack, GUN_ITEM_TYPE);
+						TakeItemFromCharacter(attack, "pistolcenserD");
+						GiveItem2Character(attack, "pistolcenserE");
+						EquipCharacterByItem(attack, "pistolcenserE");
+
+						if(IsMainCharacter(attack))
+						{
+							if(inc == 0) Log_SetStringToLog(TranslateString("","There is no Incense left"));
+						}
+					}
+				}
+			}
+		
 			if(IsCharacterPerkOn(attack, "Gunfighter") && attack.chr_ai.charge >= "2")
 			{
 				attack.chr_ai.charge = charge + 1.0;
@@ -1339,6 +1443,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 	int ro;
 	int gpb;	//paper cartridges = gp + pb
 	int cap;	//percussion caps
+//	int inc;	//incense for pistolcenserD
 
 	float dist = GetDistance2D(x, z, u, w);		//JRH revolver effect
 	if (dist == 0.0) dist = 0.1;				// PB: Avoid "Divide by zero"
@@ -1968,8 +2073,119 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 						{
 							if(IsMainCharacter(attack))
 							{
-								if(gp <= 2) Log_SetStringToLog(TranslateString("","There is not enough Gunpowder"));
+								if(gp == 0) Log_SetStringToLog(TranslateString("","There is no Gunpowder left"));
+								if(gp == 1 || gp == 2) Log_SetStringToLog(TranslateString("","There is not enough Gunpowder"));
 								if(ro == 0) Log_SetStringToLog(TranslateString("","There are no Rockets left"));
+							}
+						}
+					}
+				break;
+
+				case "pg6":
+					//for hand cannon
+				
+					gp = GetCharacterItem(attack, "gunpowder");
+					pg = GetCharacterItem(attack, "pistolgrapes");
+					if(gp >=6 && pg >= 6)
+					{
+						TakeNItems(attack,"gunpowder", -6);
+
+						if(CheckAttribute(attack,"quest.wet_gp") && attack.quest.wet_gp == "yes")
+						{
+							//don't consume grapes
+						}
+						else 
+						{
+							PlaySound("OBJECTS\SHIPCHARGE\CR24C.wav");
+							PlaySound("OBJECTS\SHIPCHARGE\CR24C.wav");
+
+							CreateParticleSystem("gunfire_red" , alpha, v+1.4, beta, 0.0, ay, 0.0, sti(20) );
+							CreateParticleSystem("gunfire_red" , alpha, v+1.5, beta, 0.0, ay, 0.0, sti(20) );
+							CreateParticleSystem("gunfire_red" , alpha, v+1.6, beta, 0.0, ay, 0.0, sti(20) );
+							CreateParticleSystem("MMcancloud" , alpha, v+1.4, beta, 0.0, 0.0, 0.0, sti(20) );
+							CreateParticleSystem("MMcancloud" , alpha, v+1.4, beta, 0.0, 0.0, 0.0, sti(20) );
+							CreateParticleSystem("gunfire_small" , alpha, v+1.4, beta, 0.0, 0.0, 0.0, sti(20) );
+							CreateParticleSystem("gunfire_small" , alpha-0.5, v+1.5, beta-0.5, 0.0, 0.0, 0.0, sti(20) );
+							CreateParticleSystem("gunfire_small" , alpha-0.3, v+1.6, beta-0.3, 0.0, 0.0, 0.0, sti(20) );
+
+							TakeNItems(attack,"pistolgrapes", -6);	//shot!
+							LAi_ApplyCharacterDamage(attack, 10.0);
+					//		LAi_SetPoorType(attack);
+							LAi_QuestDelay("pchar_oh", 2.5);
+					//		LAi_QuestDelay("recoil_sound", 2.5);
+					//		LAi_QuestDelay("pchar_playertype", 5.0);
+						}
+
+						gp = GetCharacterItem(attack, "gunpowder");
+						pg = GetCharacterItem(attack, "pistolgrapes");
+						if(gp >=6 && pg >= 6)
+						{
+							//ok
+						}
+						else
+						{
+							if(IsMainCharacter(attack))
+							{
+								if(gp <= 5) 
+								{	
+									if(gp == 0) {Log_SetStringToLog(TranslateString("","There is no Gunpowder left"));}
+									else Log_SetStringToLog(TranslateString("","There is not enough Gunpowder"));
+								}
+								if(pg <= 5) 
+								{
+									if(pg == 0) {Log_SetStringToLog(TranslateString("","There are no Grapeshots left"));}
+									else Log_SetStringToLog(TranslateString("","There are not enough Grapeshots"));
+								}
+							}
+						}
+					}
+					else
+					{
+						weapon.misfunction21 = 100;	//misf needed to avoid normal pistol sound
+						if(IsMainCharacter(attack))
+						{
+							if(gp <= 5) Log_SetStringToLog(TranslateString("","There is not enough Gunpowder"));
+							if(pg <= 5) Log_SetStringToLog(TranslateString("","There are not enough Grapeshots"));
+							if(gp == 0) Log_SetStringToLog(TranslateString("","There is no Gunpowder left"));
+							if(pg == 0) Log_SetStringToLog(TranslateString("","There are no Grapeshots left"));
+
+						//	if(GetAttribute(weapon,"model") == "musketoon")		PostEvent("mtoon_on_back", 1000, "i", attack);
+						//	if(GetAttribute(weapon,"model") == "blunder1_10")	PostEvent("bbuss_on_back", 1000, "i", attack);
+						}
+					}
+				break;
+
+				case "inc":
+					//incense for pistolcenserD
+
+					inc = GetCharacterItem(attack, "incense");
+					if(inc >= 1)
+					{
+						TakeNItems(attack,"incense", -1);
+						PlaySound("OBJECTS\DUEL\censer.wav");
+						GetCharacterPos(attack, &u, &v, &w);
+						CreateParticleSystem("gunfire" , u, v+1.2, w, 0.0, 0.0, 0.0, sti(20) );
+						attack.protection = "on";
+						logit("ON");
+						//PlaySound("OBJECTS\duel\chalice.wav");
+
+						LAi_QuestDelay("pchar_protection_off", 3.0);
+
+						inc = GetCharacterItem(attack, "incense");
+						if(inc >= 1)
+						{
+							//ok
+						}
+						else
+						{	
+							RemoveCharacterEquip(attack, GUN_ITEM_TYPE);
+							TakeItemFromCharacter(attack, "pistolcenserD");
+							GiveItem2Character(attack, "pistolcenserE");
+							EquipCharacterByItem(attack, "pistolcenserE");
+
+							if(IsMainCharacter(attack))
+							{
+								if(inc == 0) Log_SetStringToLog(TranslateString("","There is no Incense left"));
 							}
 						}
 					}
@@ -2167,6 +2383,16 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 				}
 			}
 			//<-- JRH added for NPC:s rockets
+		
+			if(GetAttribute(weapon, "id") == "pistollightning")
+			{
+				if(CheckAttribute(enemy, "protection") && enemy.protection == "off")
+				{
+					CreateParticleSystem("canfire2" , x, y+2.0, z, 5.1, y+1.2, 0.0, sti(20) );		//lightning
+					PlaySound("OBJECTS\DUEL\electricity.wav");
+					LAi_ApplyCharacterDamage(enemy, 10 + rand(10));
+				}
+			}
 		}
 
 		//this goes for all (mainchar, officers, NPC:s)
@@ -2202,6 +2428,16 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 
 				LAi_QuestDelay("close_crypt1_box", 1.5);
 			}
+		/*
+			if(IsMainCharacter(attack))
+			{
+				attack.protection = "on";
+				logit("ON");
+				//PlaySound("OBJECTS\duel\chalice.wav");
+
+				LAi_QuestDelay("pchar_protection_off", 3.0);
+			}
+		*/
 		}
 
 		if(weapon.id == "LongRifle_H" || weapon.id == "LongRifle_W" || weapon.id == "LongRifle_WT")
@@ -2578,13 +2814,16 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 	if(CheckAttribute(weapon, "misfire") && rand(100)<sti(weapon.misfire) )
 		// if a weapon can misfire & chance for that, as defined in items\itemsinit.c
 	{
-		Log_SetStringToLog(TranslateString("","Weapon misfired & blew up !"));
-		Explosion (attack, rand(20));			// New "explosion" function hurts weaponuser
-  		if(GetCharacterItem(attack, weaponID) <= 1) RemoveCharacterEquip(attack, weapon.groupID);	// unequips thrown weapon
-               	TakeItemFromCharacter(attack, weaponID );	// deletes exploded weapon from inventory
-		LAi_CharacterPlaySound(attack, "OBJECTS\duel\sword_fallen.wav");//MAXIMUS
-		//LanguageCloseFile(tmpLangFileID);
-		return;
+		if(attack.location != "BB_careen_shore")								//can give problems in WR2
+		{
+			Log_SetStringToLog(TranslateString("","Weapon misfired & blew up !"));
+			Explosion (attack, rand(20));			// New "explosion" function hurts weaponuser
+  			if(GetCharacterItem(attack, weaponID) <= 1) RemoveCharacterEquip(attack, weapon.groupID);	// unequips thrown weapon
+               		TakeItemFromCharacter(attack, weaponID );	// deletes exploded weapon from inventory
+			LAi_CharacterPlaySound(attack, "OBJECTS\duel\sword_fallen.wav");//MAXIMUS
+			//LanguageCloseFile(tmpLangFileID);
+			return;
+		}
 	}
 
 	if(CheckAttribute(weapon, "id"))
@@ -2631,6 +2870,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 	}
 
 	int damagetoapply = 0;
+	ref mainCh = GetMainCharacter();
 	if( CheckAttribute(weapon, "multidmg" ) )	// next section runs only if chr near target shall be hurt
 	{
 		int num = FindNearCharacters(enemy, 2.5, -1.0, -1.0, 0.001, false, true);
@@ -2679,7 +2919,6 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 				if(CheckAttribute(weapon, "stun.duration")) tduration = sti(weapon.stun.duration);
 				//MAXIMUS: during fight, character can join to his crew. Sometimes it may be helpful -->
 				bool bPlayer = false;
-				ref mainCh = GetMainCharacter();
 				if(CheckAttribute(&findCh, "chr_ai.group") && findCh.chr_ai.group==LAI_GROUP_PLAYER)
 				{
 					if(sti(mainCh.skill.Leadership)>sti(findCh.skill.Leadership)) bPlayer = true;
@@ -2731,11 +2970,11 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 				bPlayer = false;
 				if(CheckAttribute(enemy, "chr_ai.group") && enemy.chr_ai.group==LAI_GROUP_PLAYER)
 				{
-					if(sti(mainCh.skill.Leadership)>sti(enemy.skill.Leadership)) bPlayer = true;
+					if(sti(mainCh.skill.Leadership)>sti(GetAttribute(enemy, "skill.Leadership"))) bPlayer = true;
 				}
 				else
 				{
-					if(sti(mainCh.skill.Leadership)<sti(enemy.skill.Leadership)) bPlayer = true;
+					if(sti(mainCh.skill.Leadership)<sti(GetAttribute(enemy, "skill.Leadership"))) bPlayer = true;
 				}
 				LAi_Stunned_StunCharacter(enemy, duration, true, STUN_STARS, bPlayer);
 				//MAXIMUS: during fight, character can join to his crew. Sometimes it may be helpful <--
@@ -3394,6 +3633,10 @@ void LAi_Character_Dead_Event() // should never be run when CORPSEMODE == 3. NK 
 				 	chr.money = 30;
 				}
 				else chr.money = 0;
+
+				if(CheckAttribute(chr,"id") && chr.id == "wr_fralut") {TakenItems(chr, "blade3carpets", -2);}
+				if(CheckAttribute(chr,"id") && chr.id == "wr_mong") {TakenItems(chr, "bladebarrel", -1); TakenItems(chr, "pistolbarrel", -1);}
+				if(CheckAttribute(chr,"id") && chr.id == "wr_pir4") {TakenItems(chr, "bladeglobe", -1);}
 			}
 
 			if(chr.location == "Charleston_shore")
@@ -3434,7 +3677,11 @@ void LAi_Character_Dead_Event() // should never be run when CORPSEMODE == 3. NK 
 
 			if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)
 			{
-				if(chr.location == "wr_wine_cellar") chr.money = 0;
+				if(chr.location == "wr_wine_cellar") 
+				{
+					chr.money = 0;
+					if(CheckAttribute(chr,"id") && chr.id == "wr_fatj") {TakenItems(chr, "bladebasket", -1);}
+				}
 				if(chr.location == "wr_ships" || chr.location == "wr_gall_captain" || chr.location == "wr_corv_capmd")
 					ChangeCharacterAddressGroup(chr, "none", "", "");
 			}

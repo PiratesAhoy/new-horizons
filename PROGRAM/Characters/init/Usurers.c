@@ -2,14 +2,13 @@ void CreateUsurersCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 		//Ростовщик в Редмонде
 	ch.old.name = "Robyn";
 	ch.old.lastname = "Corrick";
-	ch.name 	= TranslateString("","Robyn");
-	ch.lastname 	= TranslateString("","Corrick");
+	ch.name 	= TranslateString("", "Robyn");
+	ch.lastname 	= TranslateString("", "Corrick");
 	ch.id		= "Redmond Usurer";
 	ch.model	= "Man2";
 	ch.sex = "man";
@@ -34,15 +33,15 @@ void CreateUsurersCharacters(ref n)
 	ch.skill.Sneak = "8";
 	ch.quest.area = "redmond";
 	ch.money = "10";
-	LAi_SetSitType(ch);
+	LAi_SetStayType(ch);	// GR: was LAi_SetSitType but nothing for him to sit on
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
 	//Guadeloupe
 	ch.old.name = "Archibald";
 	ch.old.lastname = "Gripsou";
-	ch.name 	= TranslateString("","Archibald");
-	ch.lastname 	= TranslateString("","Gripsou");
+	ch.name 	= TranslateString("", "Archibald");
+	ch.lastname 	= TranslateString("", "Gripsou");
 	ch.id		= "Guadeloupe Usurer";
 	ch.model	= "Corsair5";
 	ch.sex = "man";
@@ -74,8 +73,8 @@ void CreateUsurersCharacters(ref n)
 	//Eleuthera
 	ch.old.name = "Stephen";
 	ch.old.lastname = "Bairnsfather";
-	ch.name 	= TranslateString("","Stephen");
-	ch.lastname 	= TranslateString("","Bairnsfather");
+	ch.name 	= TranslateString("", "Stephen");
+	ch.lastname 	= TranslateString("", "Bairnsfather");
 	ch.id		= "Eleuthera Usurer";
 	ch.model	= "Man2";
 	ch.sex = "man";
@@ -107,8 +106,8 @@ void CreateUsurersCharacters(ref n)
 	//Charlestown
 	ch.old.name = "Angus";
 	ch.old.lastname = "McDuck";
-	ch.name 	= TranslateString("","Angus");
-	ch.lastname 	= TranslateString("","McDuck");
+	ch.name 	= TranslateString("", "Angus");
+	ch.lastname 	= TranslateString("", "McDuck");
 	ch.id		= "Charlestown Usurer";
 	ch.model	= "Man2";
 	ch.sex = "man";
@@ -138,10 +137,10 @@ void CreateUsurersCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//Alice_town_usurer
-	ch.old.name = "Robyn";
+	ch.old.name = "Victor";
 	ch.old.lastname = "Corrick";
-	ch.name 	= TranslateString("","Robyn");
-	ch.lastname 	= TranslateString("","Corrick");
+	ch.name 	= TranslateString("", "Victor");
+	ch.lastname 	= TranslateString("", "Corrick");
 	ch.id		= "Alice Usurer";
 	ch.model	= "Man2";
 	ch.sex = "man";
@@ -166,15 +165,15 @@ void CreateUsurersCharacters(ref n)
 	ch.skill.Sneak = "8";
 	ch.quest.area = "Alice";
 	ch.money = "10";
-	LAi_SetSitType(ch);
+	LAi_SetBarmanType(ch);	// GR: was LAi_SetSitType but nothing for him to sit on
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
 	//Ростовщик в Оксбэе
 	ch.old.name = "Diarmuid";
 	ch.old.lastname = "Sargent";
-	ch.name 	= TranslateString("","Diarmuid");
-	ch.lastname 	= TranslateString("","Sargent");
+	ch.name 	= TranslateString("", "Diarmuid");
+	ch.lastname 	= TranslateString("", "Sargent");
 	ch.id		= "Oxbay Usurer";
 	ch.model	= "Storeman";
 	ch.sex = "man";
@@ -206,8 +205,8 @@ void CreateUsurersCharacters(ref n)
 		//Ростовщик в Гринфорде
 	ch.old.name = "Kermit";
 	ch.old.lastname = "Proudfoot";
-	ch.name 	= TranslateString("","Kermit");
-	ch.lastname 	= TranslateString("","Proudfoot");
+	ch.name 	= TranslateString("", "Kermit");
+	ch.lastname 	= TranslateString("", "Proudfoot");
 	ch.id		= "Greenford Usurer";
 	ch.model	= "Storeman";
 	ch.sex = "man";
@@ -238,8 +237,8 @@ void CreateUsurersCharacters(ref n)
 			//Ростовщик в Фале де Флер
 	ch.old.name = "Mercadier";
 	ch.old.lastname = "Nadeau";
-	ch.name 	= TranslateString("","Mercadier");
-	ch.lastname 	= TranslateString("","Nadeau");
+	ch.name 	= TranslateString("", "Mercadier");
+	ch.lastname 	= TranslateString("", "Nadeau");
 	ch.id		= "FF Usurer";
 	ch.model	= "Fatman2";
 	ch.sex = "man";
@@ -271,8 +270,8 @@ void CreateUsurersCharacters(ref n)
 			// Ростовщик в Консейсао
 	ch.old.name = "Feliciano";
 	ch.old.lastname = "Pombal";
-	ch.name 	= TranslateString("","Feliciano");
-	ch.lastname 	= TranslateString("","Pombal");
+	ch.name 	= TranslateString("", "Feliciano");
+	ch.lastname 	= TranslateString("", "Pombal");
 	ch.id		= "Conceicao Usurer";
 	ch.model	= "Chameleon";
 	ch.sex = "man";
@@ -304,8 +303,8 @@ void CreateUsurersCharacters(ref n)
 			//Ростовщик в Дувезене
 	ch.old.name = "Klaas";
 	ch.old.lastname = "Ramaalas";
-	ch.name 	= TranslateString("","Klaas");
-	ch.lastname 	= TranslateString("","Ramaalas");
+	ch.name 	= TranslateString("", "Klaas");
+	ch.lastname 	= TranslateString("", "Ramaalas");
 	ch.id		= "Douwesen Usurer";
 	ch.model	= "Searcher";
 	ch.sex = "man";
@@ -337,8 +336,8 @@ void CreateUsurersCharacters(ref n)
 			// Ростовщик в Исла Муэлье
 	ch.old.name = "Silvestre";
 	ch.old.lastname = "Nabarro";
-	ch.name 	= TranslateString("","Silvestre");
-	ch.lastname 	= TranslateString("","Nabarro");
+	ch.name 	= TranslateString("", "Silvestre");
+	ch.lastname 	= TranslateString("", "Nabarro");
 	ch.id		= "Muelle Usurer";
 	ch.model	= "Old_man1";
 	ch.sex = "man";
@@ -370,8 +369,8 @@ void CreateUsurersCharacters(ref n)
 			// Ростовщик в Кебрадас Костиллас
 	ch.old.name = "Vistremiro";
 	ch.old.lastname = "Monteiro";
-	ch.name 	= TranslateString("","Vistremiro");
-	ch.lastname 	= TranslateString("","Monteiro");
+	ch.name 	= TranslateString("", "Vistremiro");
+	ch.lastname 	= TranslateString("", "Monteiro");
 	ch.id		= "Quebradas Costillas Usurer"; // KK
 	ch.model	= "Black_Corsair";
 	ch.sex = "man";
@@ -403,8 +402,8 @@ void CreateUsurersCharacters(ref n)
 			// Usurer on Tortuga
 	ch.old.name = "Louis";
 	ch.old.lastname = "Nadeau";
-	ch.name = TranslateString("","Louis");
-	ch.lastname = TranslateString("","Nadeau");
+	ch.name = TranslateString("", "Louis");
+	ch.lastname = TranslateString("", "Nadeau");
 	ch.id = "Tortuga usurer";
 	ch.model = "Man2";
 	ch.sound_type = "seaman";
@@ -436,7 +435,7 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
 
-	// Usurer at Aruba
+/*	// Usurer at Aruba - disabled until someone defines location "Oranjestad_UsurerHouse"
 	ch.old.name = "Maarten";
 	ch.old.lastname = "Peterson";
 	ch.name 	= TranslateString("","Maarten");
@@ -468,13 +467,13 @@ void CreateUsurersCharacters(ref n)
 	LAi_SetStayType(ch);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_CITIZENS");
 	LAi_SetHP(ch, 80.0, 80.0);
-	AddGameCharacter(n, ch);
+	AddGameCharacter(n, ch); */
 
 	// Usurer at Willemstad
 	ch.old.name = "Adelheyd";
 	ch.old.lastname = "Berchoven";
-	ch.name 	= TranslateString("","Adelheyd");
-	ch.lastname 	= TranslateString("","Berchoven");
+	ch.name 	= TranslateString("", "Adelheyd");
+	ch.lastname 	= TranslateString("", "Berchoven");
 	ch.id		= "Willemstad Usurer";
 	ch.model	= "Searcher";
 	ch.sex = "man";
@@ -506,8 +505,8 @@ void CreateUsurersCharacters(ref n)
 	// Usurer at Cartagena
 	ch.old.name = "Todredus";
 	ch.old.lastname = "Cojuango";
-	ch.name 	= TranslateString("","Todredus");
-	ch.lastname 	= TranslateString("","Cojuango");
+	ch.name 	= TranslateString("", "Todredus");
+	ch.lastname 	= TranslateString("", "Cojuango");
 	ch.id		= "Cartagena Usurer";
 	ch.model	= "old_man1";
 	ch.sex = "man";
@@ -539,8 +538,8 @@ void CreateUsurersCharacters(ref n)
 	// Usurer at Turks
 	ch.old.name = "Jacquotte";
 	ch.old.lastname = "Delahaye";
-	ch.name 	= TranslateString("","Jacquotte");
-	ch.lastname 	= TranslateString("","Delahaye");
+	ch.name 	= TranslateString("", "Jacquotte");
+	ch.lastname 	= TranslateString("", "Delahaye");
 	ch.id		= "Turks Usurer";
 	ch.model	= "TiaDalma";
 	ch.sex = "woman";
@@ -1327,7 +1326,7 @@ void CreateUsurersCharacters(ref n)
 
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "Willemstad_Smuggler";
 	ch.model = "pirat9";
@@ -1367,7 +1366,7 @@ void CreateUsurersCharacters(ref n)
 	
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "Charlestown_Smuggler";
 	ch.model = "pirat8";
@@ -1408,7 +1407,7 @@ void CreateUsurersCharacters(ref n)
 
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "Cartagena_Smuggler";
 	ch.model = "pirat5";
@@ -1448,7 +1447,7 @@ void CreateUsurersCharacters(ref n)
 //JRH -->
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "Eleuthera_Smuggler";
 	ch.model = "pir_cap4";
@@ -1487,7 +1486,7 @@ void CreateUsurersCharacters(ref n)
 
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "Alice_Smuggler";
 	ch.model = "pir_cap7";
@@ -1526,7 +1525,7 @@ void CreateUsurersCharacters(ref n)
 
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "Turks_Smuggler";
 	ch.model = "pir_cap30";

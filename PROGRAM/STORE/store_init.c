@@ -132,6 +132,7 @@ void StoreInit()
 	Stores[SANTO_DOMINGO_STORE].owner	= "Pedro Ortega"; // KK
 	Stores[SANTO_DOMINGO_STORE].dockyard = "Teodinus Serrano"; // KK
 	Stores[SANTO_DOMINGO_STORE].tavern = "Rodrigo Ramos"; // KK
+	Stores[SANTO_DOMINGO_STORE].usurer = "Santo Domingo usurer"; // GR
 	STORE_QUANTITY++; // NK 05-03-30 use int qty and oversized array
 
 	// Grand Cayman
@@ -215,6 +216,7 @@ void StoreInit()
 	Stores[SANTIAGO_STORE].owner	=	"Jose Zugarro";
 	Stores[SANTIAGO_STORE].dockyard = "Pablo Duarte";
 	Stores[SANTIAGO_STORE].tavern = "Pedro Fructoso"; // KK
+	Stores[SANTIAGO_STORE].blacksmith = "Santiago_blacksmith"; // GR
 	STORE_QUANTITY++;
 
 	// Charlestown
@@ -245,6 +247,7 @@ void StoreInit()
 
 	Stores[BUCCANEERS_CAMP_STORE].Island	= "Hispaniola";
 	Stores[BUCCANEERS_CAMP_STORE].group	= "Buccaneers Camp";
+	Stores[BUCCANEERS_CAMP_STORE].owner	= "Eugene Martin";
 	Stores[BUCCANEERS_CAMP_STORE].tavern = "Florentin Destot"; // KK
 	STORE_QUANTITY++;
 // <-- KK

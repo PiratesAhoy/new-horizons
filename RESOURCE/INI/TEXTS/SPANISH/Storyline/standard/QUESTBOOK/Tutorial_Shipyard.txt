@@ -1,0 +1,3 @@
+title=Tutorial: Reparar los daños sufridos en una tormenta
+text.t1=El casco y el aparejo resultaron dañados durante el viaje, así que debo mandar repararlos en el astillero antes de abandonar la isla.
+text.t2=Asunto arregaldo.

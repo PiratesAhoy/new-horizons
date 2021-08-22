@@ -1,0 +1,17 @@
+title=A family story
+text.t1 = Su esposo parece ser un hombre rico. !Esta podria ser una mision jugosa! Su casa esta frente al ayuntamiento #sHavana#. Vayamos rapido porque el viaje es largo.
+text.t2 = Rechazo la oferta de Elvira. Demasiado peligroso como la mision por el dinero ganado. Ella tendra que encontrar otro corsario.
+text.t3 = He aceptado la mision. Mi primera tarea es hablar con el encargado de la taberna de #sSantiago#.
+text.t4 = !Bien! Me reunire con el pirata manana en las afueras de esta ciudad (lado del puerto). El debe pensar que estoy aqui para pagar el rescate, pero esta equivocado ...
+text.t5 = Abel debe esperarme ahora. !Hora de verlo!
+text.t6 = El esposo de Elvira esta preso cerca del #sTortuga# dock y parece que tendre que enfrentar a muchos guardias para liberarlo.
+text.t7 = Estoy bastante seguro de que es la casa que estoy buscando. Como pense, la casa esta bien custodiada. No puedo entrar por la puerta. Necesito encontrar otra forma de liberar al prisionero. Algo mas discreto. Tal vez a traves de una ventana?
+text.t8 = Finalmente, fue mas facil de lo que pensaba. Sin embargo, sorprendentemente, Fernando se niega a regresar a #sHavana#. Antes de eso, quiere volver a #sSantiago#. Dijo que explicara mejor la razon al llegar al pueblo.
+text.t9 = Nunca pense que podria conocer a un pariente de Bartolomeu o Portuguese, el pirata portugues mas exitoso de la historia del Caribe. Ahora, mi siguiente paso es ver a Arnaldo Chaparro. Es cartografo y vive en una casa con un globo terrestre sobre la puerta. Esta enfrente del herrero en el centro de esta ciudad.
+text.t10 = La pista sobre el cadaver de Bartolomeu es delgada. Sin embargo, vamos a Ile a Vache, una pequena isla al sur de Hispaniola.
+text.t11 = Veamos a Elvira en #sHavana#! Sin duda, estara feliz de ver a su marido de nuevo. Y en mi caso, me espera una jugosa recompensa.
+text.t12 = !Maldita sea! Poco despues de salir de la casa de Fernando Suarez, Robert Acre, el lider de este grupo de secuestradores, intento matarme como represalia. Supuso que volveria a casa con Fernando y espero el momento adecuado. Al menos ahora, nunca volvera a amenazar a Fernando.
+text.t13 = !Maldita sea! Poco despues de salir de la casa de Fernando Suarez, Robert Acre, el lider de este grupo de secuestradores, intento matarme como represalia. Supuso que volveria a casa con Fernando y espero el momento adecuado. Al menos ahora, nunca volvera a amenazar a Fernando. Ahora, deberia hacer una visita a la mansion de Bartolomeu. Tengo la sensacion de que podria encontrar algo por ahi. Vayamos a la bahia en la costa oeste de #sisland_Conceicao#.
+text.t14 = Muy bien. Estoy a salvo aqui. ?Que hare? ?Esperare mas tiempo o volvere a la mansion de Bartolomeu ahora? Seamos inteligentes ...
+text.t15 = !Sabia que la clave podria ser util! Abri con ella una caja enterrada en el suelo y encontre dentro de un rifle fantastico. !Esta arma debe haber pertenecido al mismo Bartolomeu! Salgamos de aqui rapidamente. En cualquier momento, los guardias franceses pueden verme.
+text.t16 = !Que mala suerte! Despues de luchar contra un grupo de soldados franceses en la playa, el barco enemigo de esta fuerza de expedicion me ataco. Afortunadamente, he ganado la batalla con exito. Mi visita a la mansion de Bartolomeu fue muy peligrosa. !Pero al menos, tengo un gran rifle que pertenecia a un compatriota famoso! ",

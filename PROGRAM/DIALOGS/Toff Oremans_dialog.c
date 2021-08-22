@@ -113,7 +113,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "daughter_3":
-			if (makeint(pchar.reputation >50))
+			if (makeint(pchar.reputation >=REPUTATION_GOOD))
 			{
 				Dialog.snd = "voice\TOOR\TOOR008";
 				dialog.text = DLG_TEXT[18];

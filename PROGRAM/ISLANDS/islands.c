@@ -177,7 +177,7 @@ string FindIslandName(string islandid)
 void AddIsland(ref n, ref island, object locator)
 {
 	int i, inum, t, j, jnum, k;
-	string sattr, st, sval;
+	string sattr, st, sval, sIslandID;
 	ref rIsland, chr, rPeriod;
 	aref arTmps, arTmp, arNodes, arNode;
 	bool bIsTown = false;
@@ -186,11 +186,14 @@ void AddIsland(ref n, ref island, object locator)
 	makeref(rPeriod, Periods[GetCurrentPeriod()]);
 	DeleteAttribute(rIsland, "");
 	CopyAttributes(rIsland, island);
+
+	sIslandID = rIsland.id;
 	if (CheckAttribute(island, "towns")) {
 		DeleteAttribute(rIsland, "towns");
 		if(!IsIslandDisabled(rIsland.id))
 		{
-			makearef(arTmps, island.towns);
+			if (CheckAttribute(rPeriod, "Islands." + sIslandID + ".towns")) makearef(arTmps, rPeriod.Islands.(sIslandID).towns);
+			else makearef(arTmps, island.towns);
 			inum = GetAttributesNum(arTmps);
 			t = 1;
 			st = t;
@@ -210,7 +213,8 @@ void AddIsland(ref n, ref island, object locator)
 		DeleteAttribute(rIsland, "reload");
 		if(!IsIslandDisabled(rIsland.id))
 		{
-			makearef(arTmps, island.reload);
+			if (CheckAttribute(rPeriod, "Islands." + sIslandID + ".reload")) makearef(arTmps, rPeriod.Islands.(sIslandID).reload);
+			else makearef(arTmps, island.reload);
 			inum = GetAttributesNum(arTmps);
 			t = 1;
 			st = "l" + t;
@@ -256,12 +260,11 @@ void AddIsland(ref n, ref island, object locator)
 		}
 	}
 
-	sattr = rIsland.id;
-	if (CheckAttribute(rPeriod, "Islands." + sattr + ".Name"))
-		rIsland.name = rPeriod.Islands.(sattr).Name;
+	if (CheckAttribute(rPeriod, "Islands." + sIslandID + ".Name"))
+		rIsland.name = rPeriod.Islands.(sIslandID).Name;
 	else
 	{
-		switch (sattr)
+		switch (sIslandID)
 		{
 			case "Conceicao":           rIsland.name = "Grenada";      break;
 			case "Douwesen":            rIsland.name = "Bonaire";      break;
@@ -275,11 +278,11 @@ void AddIsland(ref n, ref island, object locator)
 			case "Battle_Rocks":        rIsland.name = "Petit Tabac";  break;
 			case "IslaMona":            rIsland.name = "Isla Mona";    break;
 			// default:
-			                            rIsland.name = sattr;
+			                            rIsland.name = sIslandID;
 		}
 	}
 
-	if (CheckAttribute(rPeriod, "Islands." + sattr + ".smuggling_nation")) rIsland.smuggling_nation = rPeriod.Islands.(sattr).smuggling_nation;
+	if (CheckAttribute(rPeriod, "Islands." + sIslandID + ".smuggling_nation")) rIsland.smuggling_nation = rPeriod.Islands.(sIslandID).smuggling_nation;
 
 	if(IsIslandDisabled(rIsland.id))
 	{
@@ -291,6 +294,8 @@ void AddIsland(ref n, ref island, object locator)
 		if (!CheckAttribute(rIsland, "reload_enable")) rIsland.reload_enable = true;
 		if (!CheckAttribute(rIsland, "visible")) rIsland.visible = true;
 	}
+
+	if (CheckAttribute(rPeriod, "Islands." + sIslandID + ".Model")) rIsland.model = rPeriod.Islands.(sIslandID).Model;
 
 	SendMessage(&locator, "le", LM_LOCATE_I, rIsland);
 

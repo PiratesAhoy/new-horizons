@@ -558,6 +558,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[124];			
 			link.l1 = DLG_TEXT[125];
 			link.l1.go = "exit";
+			AddDialogExitQuest("info_last_reward");
 			AddDialogExitQuest("teleport_to_tartane");
 		break;
 
@@ -567,6 +568,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[124];			
 			link.l1 = DLG_TEXT[125];
 			link.l1.go = "exit";
+			AddDialogExitQuest("info_last_reward");
 			AddDialogExitQuest("collect_more_drugs");
 		break;
 

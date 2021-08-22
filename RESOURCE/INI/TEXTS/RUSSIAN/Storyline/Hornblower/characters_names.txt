@@ -1,0 +1,116 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| Hornblower.c |=====}
+Horatio{Горацио}
+Hornblower{Хорнблауэр}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+Jack{Джек}
+Hammond{Хэммонд}
+Lt. William{Лт. Уильям}
+Bush{Буш}
+Thomas{Томас}
+Wolfe{Вольф}
+Matthews{Мэтьюс}
+Lt.{Лт.}
+Chadd{Чад}
+
+{=====| Story.c |=====}
+Keene{Кин}
+Edward{Эдвард}
+Pellew{Пеллью}
+Dreadnought{Дредноут}
+Foster{Фостер}
+Black Charlie{Чёрный Чарли}
+Harvey{Харви}
+Simpson{Симпсон}
+Clayton{Клейтон}
+Hunter{Хантер}
+Henry{Генри}
+Wellard{Вэйлард}
+Helmsman{Рулевой}
+Styles{Стайлс}
+Perrin{Перрин}
+Oldroyd{Олдройд}
+Marsh{Марш}
+Eccleston{Экклстон}
+Smug{Кон}
+Larr{Трабанда}
+Big{Верзила}
+Bryan{Брайан}
+James{Джеймс}
+Sawyer{Сойер}
+Percy{Перси}
+Buckland{Бакленд}
+Ebeneezer{Эбенизер}
+Bracegirdle{Брейсгедл}
+William{Уильям}
+Uriah{Урия}
+Quelp{Келп}
+The Earl of{Граф}
+Edrington{Эдрингтон}
+Arthur{Артур}
+Wellesley{Уэлсли}
+Chumley{Чамли}
+Barbara{Барбара}
+Maria{Мария}
+Mason{Мэйсон}
+The Duchess of{Герцогиня}
+Wharfedale{Ворфдейл}
+Teresa{Тереза}
+Moreno{Морино}
+Etienne{Этьен}
+de Vergasse{де Вергасс}
+Archie{Арчи}
+Kennedy{Кеннеди}
+Clive{Клайв}
+Don{Дон}
+Masseredo{Мессаиду}
+Francisco Manuel{Франсиско Мануэль}
+Ortega{Ортега}
+Richard{Ричард}
+Sharpe{Шарп}
+Patrick{Патрик}
+Harper{Харпер}
+Higgins{Хиггинс}
+Cooper{Купер}
+Haggman{Хагмен}
+Harris{Харрис}
+Tanner{Таннер}
+Baker{Бейкер}
+Fisher{Фишер}
+Williams{Вильямс}
+Norton{Нортон}
+Brown{Браун}
+Evans{Эванс}
+Archer{Арчер}
+Tongue{Болтун}
+Mansfield{Мансфилд}
+Perkins{Перкинс}
+Dunnitt{Даннитт}
+Hogan{Хоган}
+Murray{Мюррэй}
+Hew{Хью}
+Dalrymple{Далримпл}
+Wilks{Уилкс}
+Tompkins{Томпкинс}
+Stanley{Стенли}
+Hughes{Хьюз}
+Guerilla{Партизан}
+One{первый}
+Two{второй}
+Three{третий}
+Donatien{Донасьё}
+Thibaud{Тибо}
+
+{=====| TempQuest.c |=====}
+Captain{Капитан}
+Simon{Саймон}
+Blunden{Бланден}
+Cecil Scott{Сесиль Скотт}
+Forester{Форестер}
+Capitaine{Капитан}
+de Corvette{3 ранга}
+
+{=====| 86 characters |=====}

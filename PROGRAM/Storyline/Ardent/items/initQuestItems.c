@@ -28,6 +28,14 @@ void InitQuestItems()
 	n = InitQuestItem(n,"BattleOrders2",	"BattleOrders2",	"",	"GR",   7,	0,0,	"",	"",	"","",	"","",""); // Battle orders for attack on Santiago
 	n = InitQuestItem(n,"fake_fort_release","fake_fort_release",	"",	"GR",   6,	0,0,	"",	"",	"","",	"","",""); // Forged release papers for a prisoner
 	n = InitQuestItem(n,"medal1",		"medal1",		"",	 "8",   3,	0,0,	"",	"",	"","",	"","",""); // Medal received for delivering battle orders to Santiago governor
+	n = InitQuestItem(n,"AdmiralLetter",	"AdmiralLetter",	"",	  4,   13,	0,0,	"",	"",	"","",	"","",""); // Letter from Admiral of Havana giving you authority
+
+  //-----------------------------------------------------------------------------------------------------------------------------
+  // BUILDING     ItemIndex                                  planks         Charges              Accuracy
+  // INTERIORS        | ID                  modelID            |   money       |  Speed      maxDmg  |
+  //                  |  |                     |               |    |   crew   |   |   minDmg  |     |
+  //------------------|--|---------------------|---------------|----|----|-----|---|-----|-----|-----|---------------------------
+  n = InitBLDinterior(n,"door_GR_d2",         "door_GR_d2",    1,  5000, 5,    1, 10,  200.0,300.0,  70 );   // Hidden door to Old Inquisition Dungeon
 
   //------------------------------------------------------------------------------------SKILL ITEM SETTINGS-------------------------------------------
   // GENERAL:  ItemIndex                   picIndex          Price        numneeded  leader      accuracy    repair       sneak   skiptrade

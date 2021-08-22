@@ -1,0 +1,12 @@
+title=Davy Jones
+text.t1=Tengo trece años para arreglar mis problemas. El primero de ellos es volver a encontrar a Barbossa. Debería probar suerte en la taberna de #sTortuga#, justo en frente de las costas de #sisland_Hispaniola#. Pero quizás primero debería explorar el Caribe.
+text.t2=¡Ha sido un encuentro de lo más extraño! ¿Mi alma a cambio de trece años junto a mi querido barco? Por supuesto, me he negado, y ahora me las arreglaré por mi cuenta. Tendré que buscar mi fortuna partiendo de la nada, por lo que parece. Pero si decido cambiar de idea, esa criatura me dijo que podría encontrarla en su escondrijo secreto, cerca de un templo nativo.
+text.t3=Volví a reunirme con Davy Jones, y él rescató mi barco (al que he decidido rebautizar como Perla Negra) de las profundidades, como prueba de su agradecimiento. Todavía tengo un problema: volver a encontrar a Barbossa. Debería probar suerte en la taberna de #sTortuga#, justo en frente de las costas de #sisland_Hispaniola#. Pero quizás primero debería explorar el Caribe.
+text.t4=.
+text.t5=.
+text.t6=.
+text.t7=.
+text.t8=.
+text.t9=.
+text.t10=.
+ 

@@ -1,0 +1,25 @@
+title=The Brotherhood
+text.t1=He hablado con Sir Christopher Mings y voy a convertirme en miembro de la Hermandad. Él dice que son bucaneros, no piratas. 
+text.t2=Sir Christopher dice que vaya a ver a un tal Sir Cutler Beckett en la taberna, y que trabaje para él hasta que me dé un trabajo para ir a ver a una tal Tía Dalma en #sisland_Antigua#. Entonces, debo traerle a Sir Christopher lo que sea que encuentre allí. 
+text.t3=Parece que he pasado algo por alto en #sisland_Antigua#, así que debería volver allí a ver si puedo averiguar qué es lo que tengo que traer de vuelta.
+text.t4=Tengo un fragmento del mapa del tesoro de Cortés y una extraña brújula. Creo que es hora de volver a ver a Mings.
+text.t5=Así que tengo que ir a #sisland_Quebradas Costillas# a buscar a la familia de la señorita Brin. Sé que hay un asentamiento pirata allí.
+text.t6=Ahora tengo una elección: #sisland_Quebradas Costillas# o Bahía Roca Gris. Bueno, la bahía está más cerca, pero prometí ayudar a Annabella. Decisiones, decisiones...
+text.t7=¡Ahora trabajo con una agente de la Hacienda Real! Y ella quiere que vayamos a #sTortuga#, al norte de #sisland_Hispaniola#, bajo bandera pirata. Espero que esto no se complique demasiado.
+text.t8=¡He perdido mi barco! Pero tengo los diamentes, y puedo usar parte de ellos para comprar un barco nuevo hasta que vuelva a dar alcance a Shaypen. Quizás debería poner rumbo a #sisland_Quebradas Costillas# después de todo, pero tal vez necesite una nueva identidad; en tal caso debería volver primero a #sOxbay#. Más decisiones.
+text.t9=Hemos averiguado que Brinkley se dirige a una isla holandesa. Bill el Botas dice que deberíamos navegar hacia #sWillemstad#, en #sisland_Curacao#.
+text.t10=He matado a una agente de la Hacienda Real. Eso no me hará quedar bien. Será mejor que vea lo que puedo averiguar sobre la fmmilia Brin en el asentamiento pirata.
+text.t11=Tengo que escoltar a Peter Willemoes a #sisland_Guadeloupe# para reunirse con el capitán Petros.
+text.t12=Finalmente tengo lo que necesito para Sir Christopher, así que tengo que volver para reunirme con él en #sOxbay#, en #sisland_Oxbay#.
+text.t13=Ya tengo una brújula, así que estoy seguro de que no necesito otra. Volveré a #sOxbay#, en #sisland_Oxbay#, con lo que tengo.
+text.t14=Bueno, hemos llegado a #sPointe a Pitre#, en #sisland_Guadeloupe#. He dejado al señor Gibbs que vaya a la taberna. Podemos unirnos a él más tarde, o tal vez ahora mismo, tengo un poco de sed...
+text.t15=Tenemos que navegar hasta Anse Casse-Bois, y después buscar al capitán Petros en la plantación que hay allí.
+text.t16=Petros quiere que intente rescatar a algunos miembros de la Hermandad que están prisioneros en #sisland_Isla Muelle#. Iré hasta allí y preguntaré en la taberna de #sIsla Muelle#. Allí la gente se entera de todo.
+text.t17=Esto es una locura. No puedo quedarme aquí sentado. Creo que debería registar las otras bahías y calas de esta isla. Nunca se sabe, podría encontrar algo que me ayude.
+text.t18=Me encontré con Barbossa mientras buscaba al pirata fugado. Dijo que debería navegar hasta una isla o una casa. No se puede navegar hasta una casa, así que tendrá que ser una isla.
+text.t19=He encontrado a Couch Captain Charles, es hora de devolverlo a la Hermandad, en la plantación de Petros en #sisland_Guadeloupe#.
+text.t20=Tengo que encontrar a Nathan Kell, pero sólo Anamaria sabe dónde está. Así que primero tengo que reunirme con ella en el faro de #sisland_Oxbay#.
+text.t21=Anamaria me dijo que Nathan Kell está en algún lugar de #sGreenford#. Pero debo tener cuidado porque mientras busco a Nathan Kell, Cutler Beckett me busca a mí.
+
+
+

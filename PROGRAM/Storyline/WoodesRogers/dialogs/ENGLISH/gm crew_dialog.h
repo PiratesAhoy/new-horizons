@@ -1,4 +1,4 @@
-string DLG_TEXT[64] = {
+string DLG_TEXT[69] = {
 "Maybe you need an officer, captain?",
 "An officer? And what can you do?",
 "I've heard that you need sailors.",
@@ -63,5 +63,10 @@ string DLG_TEXT[64] = {
 "I can tell you a lot about managing the crew on your ship.",
 "I'm an excellent sailor and I will share my secrets that will help you better guide your ship.",
 "Does it really matter Captain - you'll get a musician as well!",
+"Captain Pyle!",				//64
+"I know you - from grandma Rogers' crew recruitment. What are you up to here, sonny?",	//65
+"Here - a letter for you.",			//66
+"Okay? Shouldn't you be at school?",		//67
+"At your service, Captain.",			//68
 
 };

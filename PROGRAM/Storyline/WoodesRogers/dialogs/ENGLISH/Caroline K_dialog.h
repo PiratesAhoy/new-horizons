@@ -1,4 +1,4 @@
-string DLG_TEXT[204] = {
+string DLG_TEXT[208] = {
 "Oh, Captain I am so unhappy ...",
 "What can I do for you girl?",
 "That is not a concern of mine!",
@@ -203,5 +203,9 @@ string DLG_TEXT[204] = {
 "Nothing to talk about. (But it hurts like hell)",
 "I'm really not allowed to help you this much but you have to find a way to unlock my fathers bedroom.",
 "Thanks Caroline.",
+"Just a second. Look what I found on that greedy shopkeeper's body.",	//204
+"That's a lot of money, Caroline.",					//205
+"Yes Captain. And I think you should have them.",			//206
+"This is really too much...",						//207
 
 };

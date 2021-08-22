@@ -2,14 +2,13 @@ void CreateStoryCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	 // Salvadore Benavides
 	ch.old.name = "Salvadore";
 	ch.old.lastname = "Benavides";
-	ch.name 	= TranslateString("","Salvadore");
-	ch.lastname = TranslateString("","Benavides");
+	ch.name 	= TranslateString("", "Salvadore");
+	ch.lastname = TranslateString("", "Benavides");
 	ch.id		= "Salvadore Benavides";
 	ch.model	= "Salvadore";
 	ch.sex = "man";
@@ -41,7 +40,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldat_01";
 	ch.model = "Soldier_Spa_16";
@@ -79,7 +78,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldat_02";
 	ch.model = "Soldier_Spa2_16";
@@ -125,7 +124,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldat_03";
 	ch.model = "Soldier_Spa3_16";
@@ -171,7 +170,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldat_04";
 	ch.model = "Soldier_Spa4_16";
@@ -217,7 +216,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldat_05";
 	ch.model = "Soldier_Spa5_16";
@@ -263,7 +262,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldat_06";
 	ch.model = "Soldier_Spa6_16";
@@ -309,7 +308,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldat_07";
 	ch.model = "Soldier_Spa_16";
@@ -355,7 +354,7 @@ void CreateStoryCharacters(ref n)
 			// Soldier
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz Soldier 01";
 	ch.model = 1; // PB
@@ -394,7 +393,7 @@ void CreateStoryCharacters(ref n)
 			// Soldier
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz Soldier 02";
 	ch.model = 2; // PB
@@ -433,7 +432,7 @@ void CreateStoryCharacters(ref n)
 			// Soldier
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz Soldier 03";
 	ch.model = 5; // PB
@@ -472,7 +471,7 @@ void CreateStoryCharacters(ref n)
 			// patrol
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz patrol 01";
 	ch.model = 4; // PB
@@ -511,7 +510,7 @@ void CreateStoryCharacters(ref n)
 			// patrol
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz patrol 02";
 	ch.model = 3; // PB
@@ -551,7 +550,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz Soldier 04";
 	ch.model = 2; // PB
@@ -590,7 +589,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz Soldier 05";
 	ch.model = 3; // PB
@@ -629,7 +628,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz patrol 03";
 	ch.model = 6; // PB
@@ -668,7 +667,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz patrol 04";
 	ch.model = 4; // PB
@@ -707,7 +706,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz patrol 05";
 	ch.model = 3; // PB
@@ -746,7 +745,7 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Vera Cruz patrol 06";
 	ch.model = 6; // PB
@@ -785,8 +784,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Indian";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Indian");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Indian");
+	ch.lastname = "";
 	ch.id		= "Indian 1";
 	ch.model = "Indian1_1";
 	ch.sex = "man";
@@ -820,8 +819,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Indian";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Indian");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Indian");
+	ch.lastname = "";
 	ch.id		= "Indian 2";
 	ch.model = "Indian1_2";
 	ch.sex = "man";
@@ -855,8 +854,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Indian";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Indian");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Indian");
+	ch.lastname = "";
 	ch.id		= "Indian 3";
 	ch.model = "Indian1_3";
 	ch.sex = "man";
@@ -890,8 +889,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Indian";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Indian");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Indian");
+	ch.lastname = "";
 	ch.id		= "Indian 4";
 	ch.model = "Indian2";
 	ch.sex = "man";
@@ -925,8 +924,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Indian";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Indian");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Indian");
+	ch.lastname = "";
 	ch.id		= "Indian 5";
 	ch.model = "Indian3";
 	ch.sex = "man";
@@ -960,8 +959,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Indian";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Indian");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Indian");
+	ch.lastname = "";
 	ch.id		= "Indian 6";
 	ch.model = "Indian_girl1";
 	ch.sex = "woman";
@@ -994,7 +993,7 @@ void CreateStoryCharacters(ref n)
 	//beggar indian
 	ch.old.name = "Indian";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Indian");
+	ch.name = TranslateString("", "Indian");
 	ch.lastname = "";
 	ch.id		= "IndianBeggar";
 	ch.model	= "Native"; 
@@ -1027,8 +1026,8 @@ void CreateStoryCharacters(ref n)
 
 	ch.old.name = "Street";
 	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "VeraCruz_Street_merchant";
 	ch.model	= "Man2";
 	ch.sound_type = "merchant";
@@ -1062,8 +1061,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = HOLLAND;
 	ch.old.name = "Indian";
 	ch.old.lastname = "Chief";
-	ch.name = TranslateString("","Indian");
-	ch.lastname = TranslateString("","Chief");
+	ch.name = TranslateString("Indian", "Chief");
+	ch.lastname = "";
 	ch.id		= "Indian Chief";
 	ch.model = "Native_Chief";
 	ch.sex = "man";
@@ -1111,7 +1110,7 @@ void CreateStoryCharacters(ref n)
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
-	ch.Dialog.Filename = " ";
+	ch.Dialog.Filename = "";
 	ch.rank 	= 4;
 	ch.reputation = "70";
 	ch.experience = "0";
@@ -1137,7 +1136,7 @@ void CreateStoryCharacters(ref n)
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
-	ch.Dialog.Filename = " ";
+	ch.Dialog.Filename = "";
 	ch.reputation = "70";
 	ch.experience = "0";
 	ch.Ship.Name = "Le Malicieux";

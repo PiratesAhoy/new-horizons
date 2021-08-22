@@ -1,0 +1,43 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| DevlinOpera.c |=====}
+Beatrice{Beatrice}
+Devlin{Devlin}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+
+{=====| QuebradasCostillas.c |=====}
+Skull{Skull}
+
+{=====| Story.c |=====}
+Mystery{Mystery}
+Messenger{Messenger}
+Emmanuel{Emmanuel}
+Bonnie{Bonnie}
+Short Jack{Short Jack}
+Gold{Gold}
+Couch Captain{Couch Captain}
+Charles{Charles}
+Sir Christopher{Sir Christopher}
+Mings{Mings}
+Nathan{Nathan}
+Kell{Kell}
+Petros{Petros}
+Thomas the{Thomas the}
+Terror{Terror}
+John Paul{John Paul}
+Jones{Jones}
+Captain{Captain}
+Maximus{Maximus}
+High Sea{High Sea}
+Lass{Lass}
+Catalina{Catalina}
+the Pirate{the Pirate}
+Morgan{Morgan}
+Bartholomew{Bartholomew}
+Roberts{Roberts}
+Merciless{Merciless}
+Mark{Mark}
+
+{=====| 18 characters |=====}

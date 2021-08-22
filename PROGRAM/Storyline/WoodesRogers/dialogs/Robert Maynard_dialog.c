@@ -59,8 +59,15 @@ void ProcessDialogEvent()
 		break;
 
 		case "anchor":
-			PlaySound("VOICE\ENGLISH\Maynard_very_well.wav");
+			PlaySound("VOICE\ENGLISH\Maynard_very_good.wav");
 			dialog.text = DLG_TEXT[8];
+			link.l1 = DLG_TEXT[30];
+			link.l1.go = "anchor1";
+		break;
+
+		case "anchor1":
+			PlaySound("VOICE\ENGLISH\Maynard_I_said.wav");
+			dialog.text = DLG_TEXT[31];
 			link.l1 = DLG_TEXT[9];
 			link.l1.go = "exit";
 			AddDialogExitQuest("maynard_tower");

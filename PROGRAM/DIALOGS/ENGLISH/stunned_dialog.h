@@ -1,4 +1,4 @@
-string DLG_TEXT[19] = {
+string DLG_TEXT[22] = {
 " Oh, sorry, I didn't mean to disturb your sleep. Hmm, maybe I'd rather prolong it...",
 " *GROOAAAN*...",
 " Wah... Where... Who is that? I can't get up... what happened...",
@@ -18,5 +18,7 @@ string DLG_TEXT[19] = {
 " En garde! We need this ship!",
 " En garde!",
 " Oooh, poor lassie! What happened to you? Some accident? Oooh, you've passed out again? So you won't mind if I take your gear and gold, eh? ... Thanks, and sleep well. ",
-
+"Well, what have we here? A pocket full of stolen money? And some of it is mine. I'll just confiscate the whole lot.",
+"Here's a piece of friendly advice. If you want to keep your fingers, keep them out of other people's pockets. Especially mine.",
+"It's just not your day, is it? First you help yourself to someone else's money. Then you fall over, hit your head, pass out, and lose all that money. Poetic justice, I call it.",
 };

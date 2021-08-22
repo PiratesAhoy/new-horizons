@@ -29,7 +29,7 @@ string DLG_TEXT[37] = {
 "That much? It looks like I'll be spending the night in the tavern hall.",
 "For what - the governor's residence? No, thanks.",
 "All right, I'll think about it.",
-"You are late, sir! Most of the crew have gone aboard!\You should better wait till morning! Maybe you could stay overnight instead? ",
+"You are late, sir! Most of the crew have gone aboard!\nYou should better wait till morning! Maybe you could stay overnight instead? ",
 "Do you have a free room?",
 "No. I have another question.",
 "Leave the serving wench alone. The working girls are... wherever the brothel is.",

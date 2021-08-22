@@ -1,0 +1,12 @@
+title=La liberación de los esclavos.
+text.t1=En #sOranjestad#, en #sisland_Aruba#, vi a dos hombres luchando en medio de la calle. Decidí intervenir. Después de matar al atacante, descubrí que el hombre al que salvé era un negrero.
+text.t2=He decidido incorporarlo a mi tripulación como oficial, con la esperanza de que me conduzca a liberar a los esclavos.
+text.t3=Ese tipo me ofreció sus servicios como oficial, pero tengo mis reservas sobre él y sobre la idea de que pueda servirme para liberar a los esclavos, así que le he dicho que mi tripulación ya está completa.
+text.t4=Cuando llegué a #sDouwesen#, en #sisland_Douwesen#, el negrero me contó una extraña historia sobre los restos de un naufragio detrás de una catarata. Puede que no esté de más echar un vistazo.
+text.t5=¡El oro estaba allí! Ahora sé que la plantación con los esclavos está en #sisland_Eleuthera#. El próximo paso es intentar liberarlos. 
+text.t6=El negrero se ha adelantado hasta la plantación, y seguramente ha ido a la casa del propietario. Debería seguir sus pasos.
+text.t7=¡El propietario de la plantación es uno de los grandes Señores Piratas! No puedo enfrentarme a él.
+text.t8=Me he enfrentado al Señor Pirata y a todos sus hombres, y los he matado. Ahora los esclavos son libres. También tengo su real de a ocho, tal vez debería ir a ver a Nathan Kell en #sisland_Turks#, para buscar a alguien digno de ser un nuevo Señor Pirata.
+text.t9=Nathan Kell ha sugerido que vaya al fuerte y le dé el real de a ocho a Cap'n Drow.
+text.t10=Le he dado el real de a ocho a Cap'n Drow. A cambio, le he robado un anillo que tenía en su mesa.
+text.t11=Me he enfrentado al Señor Pirata y a todos sus hombres, y los he matado. Ahora los esclavos son libres. Le he dado el real de a ocho de Jocard al líder de los esclavos. Ahora él es el nuevo Caballero Jocard, Señor Pirata del Atlántico.

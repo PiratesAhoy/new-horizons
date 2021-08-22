@@ -3,6 +3,7 @@
 void InitMusic()
 {
 	ref tmpref; makeref(tmpref, Music_Alias);
+	DeleteAttribute(tmpref, "");
 
 	//============ MAIN MENU ========================
 	// added by NK so it can be done in code.
@@ -12,7 +13,7 @@ void InitMusic()
 	tmpref.music_main_theme.f1.name = "MUSIC\Main_Theme.ogg";
 
 	//============ BARTOLOMEU MAIN THEME ==============
-    tmpref.music_Bart_main_theme.f1.name = "MUSIC\Hispaniola.ogg";
+	tmpref.music_Bart_main_theme.f1.name = "MUSIC\Hispaniola.ogg";
 
 	//=========================| WOODES ROGERS QUEST |========================//JRH -->
 	tmpref.silence.f1.name = "MUSIC\silence.ogg";
@@ -48,7 +49,7 @@ void InitMusic()
 
 	tmpref.Blackbeard_scene.f1.name = "MUSIC\Blackbeard.ogg";
 
-    tmpref.San_Felipe_scene.f1.name = "MUSIC\San_Felipe.ogg";
+	tmpref.San_Felipe_scene.f1.name = "MUSIC\San_Felipe.ogg";
 
 	tmpref.blue_cavern.f1.name = "MUSIC\blue_cavern.ogg";
 
@@ -81,6 +82,12 @@ void InitMusic()
 	tmpref.choir.f1.name = "MUSIC\choir.ogg";
 
 	tmpref.Swe_inside.f1.name = "MUSIC\Swe_inside.ogg";
+
+	tmpref.burning_cave.f1.name = "MUSIC\burning_cave.ogg";
+
+	tmpref.rush_seashore.f1.name = "MUSIC\Bitva2.ogg";
+
+	tmpref.attack_seashore.f1.name = "MUSIC\cutthroats.ogg";
 
 	//=========================| WOODES ROGERS QUEST |========================//<-- JRH
 
@@ -116,21 +123,32 @@ void InitMusic()
 	//============================| GOLDBUG QUEST |===========================//<-- JRH
 
 	//===========================| Hornblower Quest |===========================// Grey Roger -->
-	tmpref.Hornblower_start.f1.name = "MUSIC\Hornblower_start.ogg";
-	tmpref.Hornblower_end.f1.name = "MUSIC\Hornblower_end.ogg";
+	if (FindCurrentStoryline() == FindStoryline("Hornblower"))
+	{
+		trace("Adding Hornblower tracks");
+		tmpref.Hornblower_start.f1.name = "MUSIC\Hornblower_start.ogg";
+		tmpref.Hornblower_end.f1.name = "MUSIC\Hornblower_end.ogg";
 
-	tmpref.Sharpe_verse1.f1.name = "MUSIC\sharpe_verse_1.ogg";
-	tmpref.Sharpe_verse8.f1.name = "MUSIC\sharpe_verse_8.ogg";
+		tmpref.Sharpe_verse1.f1.name = "MUSIC\sharpe_verse_1.ogg";
+		tmpref.Sharpe_verse8.f1.name = "MUSIC\sharpe_verse_8.ogg";
+	}
 
 	tmpref.wedding.f1.name = "MUSIC\prince_of_denmark_march.ogg";
 
 	//===========================| Hornblower Quest |===========================//<-- Grey Roger
 
 	//=============================| Ardent Quest |=============================// Grey Roger -->
+	if (FindCurrentStoryline() == FindStoryline("Ardent"))
+	{
+		trace("Adding Ardent tracks");
+		tmpref.Ardent_start.f1.name = "MUSIC\The Song Of The High Seas.ogg";			// GR: Victory at Sea
+		tmpref.Ardent_end.f1.name = "MUSIC\Victory At Sea.ogg";					// GR: Victory at Sea
+
+		tmpref.music_map.f3.name = "MUSIC\Beneath The Southern Cross.ogg";			// GR: Victory at Sea
+		tmpref.music_day_sailing.f5.name = "MUSIC\Mare Nostrum.ogg";				// GR: Victory at Sea
+	}
 
 	tmpref.wedding2.f1.name = "MUSIC\Pachelbel_Canon.ogg";
-	tmpref.Ardent_start.f1.name = "MUSIC\The Song Of The High Seas.ogg";					// GR: Victory at Sea
-	tmpref.Ardent_end.f1.name = "MUSIC\Victory At Sea.ogg";							// GR: Victory at Sea
 
 	//=============================| Ardent Quest |=============================// Grey Roger <--
 	//=============================| Jack Sparrow |=============================// Grey Roger -->
@@ -184,6 +202,7 @@ void InitMusic()
 
 	tmpref.music_tavern_pirate.f1.name = "MUSIC\YoHo_instrumental.ogg";				// PB: PotC
 	tmpref.music_tavern_pirate.f2.name = "MUSIC\YoHo_With_Vocals.ogg";				// PB: PotC
+	tmpref.music_tavern_pirate.f2.name = "MUSIC\YoHo2.ogg";
 	
 	// DeathDaisy: copies of the regular tavern music, so you can add your own
 	tmpref.music_tavern_personal.f1.name = "MUSIC\PersonalNation\personal_tavern1.ogg";
@@ -306,6 +325,7 @@ void InitMusic()
 void RegisterMusicScheme()
 {
 	ref rms; makeref(rms, registered_music_schemes);
+	DeleteAttribute(rms, "");
 	string lnode = "l0";
 	rms.(lnode).id = "standard";
 	rms.(lnode).resdir = "";

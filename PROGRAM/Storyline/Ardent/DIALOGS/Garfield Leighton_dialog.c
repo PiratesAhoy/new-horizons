@@ -10,7 +10,7 @@ void ProcessDialogEvent()
 	makearef(Link, Dialog.Links);
 	makearef(Diag, NPChar.Dialog);
 
-	string kid, pronoun;
+	string governors_kid, pronoun;
 	ref PChar;
 	PChar = GetMainCharacter();
 
@@ -22,12 +22,12 @@ void ProcessDialogEvent()
 
 	if (PChar.sex == "man")
 	{
-		kid = XI_ConvertString("daughter");
+		governors_kid = DLG_TEXT[57];
 		pronoun = XI_ConvertString("her");
 	}
 	else
 	{
-		kid = XI_ConvertString("son");
+		governors_kid = DLG_TEXT[58];
 		pronoun = XI_ConvertString("him");
 	}
 	
@@ -59,8 +59,8 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[34];
-				link.l1 = DLG_TEXT[35];
+				dialog.text = DLG_TEXT[37];
+				link.l1 = DLG_TEXT[38];
 				AddDialogExitQuest("meet_Mary_Wood");
 			}
 			link.l1.go = "Exit";
@@ -87,12 +87,12 @@ void ProcessDialogEvent()
 		break;
 
 		case "abduction_request_help":
-			Preprocessor_Add("kid", kid);
 			Preprocessor_Add("pronoun", pronoun);
 			if (pirate_relation == RELATION_FRIEND)
 			{
 				dialog.text = DLG_TEXT[10];
-				link.l1 = DLG_TEXT[14];
+				if (PChar.sex == "woman") link.l1 = DLG_TEXT[14] + DLG_TEXT[16] + DLG_TEXT[17];
+				else link.l1 = DLG_TEXT[14] + DLG_TEXT[15] + DLG_TEXT[17];
 				link.l1.go = "abduction_whodunnit";
 			}
 			else
@@ -104,36 +104,36 @@ void ProcessDialogEvent()
 		break;
 
 		case "abduction_you_offer_deal":
-			Preprocessor_Add("kid", kid);
 			Preprocessor_Add("pronoun", pronoun);
 			dialog.text = DLG_TEXT[13];
-			link.l1 = DLG_TEXT[14];
+			if (PChar.sex == "woman") link.l1 = DLG_TEXT[14] + DLG_TEXT[16] + DLG_TEXT[17];
+			else link.l1 = DLG_TEXT[14] + DLG_TEXT[15] + DLG_TEXT[17];
 			link.l1.go = "abduction_whodunnit";
 		break;
 
 		case "abduction_whodunnit":
-			Preprocessor_Add("kid", kid);
+			Preprocessor_Add("governors_kid", governors_kid);
 			Preprocessor_Add("pronoun", pronoun);
-			dialog.text = DLG_TEXT[15];
-			link.l1 = DLG_TEXT[16];
+			dialog.text = DLG_TEXT[18];
+			link.l1 = DLG_TEXT[19];
 			link.l1.go = "abduction_he_offers_deal";
 		break;
 
 		case "abduction_he_offers_deal":
 			if (pirate_relation == RELATION_FRIEND)
 			{
-				dialog.text = DLG_TEXT[17] + DLG_TEXT[18] + GetMySimpleName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[19] + GetMyName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[20];
+				dialog.text = DLG_TEXT[20] + DLG_TEXT[21] + GetMySimpleName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[22] + GetMyName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[23];
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[17] + DLG_TEXT[21] + GetMySimpleName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[22] + GetMyName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[23];
+				dialog.text = DLG_TEXT[20] + DLG_TEXT[24] + GetMySimpleName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[25] + GetMyName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[26];
 			}
 			Preprocessor_AddQuestData("pirate", GetMySimpleName(characterfromID("Wilfred Roscoe")));
 			AddQuestRecord("Abduction", 6);
 			Preprocessor_Remove("pirate");
 			PChar.quest.abduction_status = "rescue_pirate";
 			AddDialogExitQuest("abduction_guadeloupe_setup");
-			link.l1 = DLG_TEXT[24];
+			link.l1 = DLG_TEXT[27];
 			link.l1.go = "exit_not_done";
 		break;
 
@@ -142,10 +142,10 @@ void ProcessDialogEvent()
 			{
 				if (PChar.sex == "man") PreProcessor_Add("ladlass", XI_ConvertString("lad"));
 				else PreProcessor_Add("ladlass", XI_ConvertString("lass"));
-				dialog.text = DLG_TEXT[25];
+				dialog.text = DLG_TEXT[28];
 			}
-			else dialog.text = DLG_TEXT[26];
-			link.l1 = DLG_TEXT[27] + GetMySimpleName(characterFromID("Wilfred Roscoe")) + ".";
+			else dialog.text = DLG_TEXT[29];
+			link.l1 = DLG_TEXT[30] + GetMySimpleName(characterFromID("Wilfred Roscoe")) + ".";
 			link.l1.go = "exit_not_done";
 		break;
 
@@ -160,22 +160,22 @@ void ProcessDialogEvent()
 			if (PChar.sex == "man")
 			{
 				PreProcessor_Add("person", XI_ConvertString("woman"));
-				Preprocessor_Add("kid", XI_ConvertString("daughter"));
+				Preprocessor_Add("governors_kid", governors_kid);
 			}
 			else
 			{
 				PreProcessor_Add("person", XI_ConvertString("man"));
-				Preprocessor_Add("kid", XI_ConvertString("son"));
+				Preprocessor_Add("governors_kid", governors_kid);
 			}
 			if (pirate_relation == RELATION_FRIEND)
 			{
-				dialog.text = DLG_TEXT[28] + GetMyName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[29];
-				link.l1 = DLG_TEXT[30];
+				dialog.text = DLG_TEXT[31] + GetMyName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[32];
+				link.l1 = DLG_TEXT[33];
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[31] + GetMyName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[32];
-				link.l1 = DLG_TEXT[33];
+				dialog.text = DLG_TEXT[34] + GetMyName(characterFromID("Wilfred Roscoe")) + DLG_TEXT[35];
+				link.l1 = DLG_TEXT[36];
 			}
 			AddDialogExitQuest("abduction_roscoe_joins_leighton");
 			link.l1.go = "exit";
@@ -184,6 +184,62 @@ void ProcessDialogEvent()
 		case "exit_not_done":
 			Diag.CurrentNode = "abduction_still_here";
 			DialogExit();
+		break;
+
+		case "imperial_escort_meeting":
+			if(pirate_relation != RELATION_ENEMY)
+			{
+				if(IsOfficer(CharacterFromID(PChar.quest.romance)) && !CheckQuestAttribute("revenge_type", "kidnap_rescue") && !CheckQuestAttribute("revenge_type", "kidnap_rescue_convoy_agreed") && !CheckQuestAttribute("revenge_type", "assassin"))
+				{
+					Preprocessor_Add("governors_kid", governors_kid);
+					dialog.text = DLG_TEXT[39] + GetMyName(PChar) + DLG_TEXT[41];
+					link.l1 = DLG_TEXT[42] + GetMyFullName(CharacterFromID(PChar.quest.romance)) + ".";
+					link.l1.go = "imperial_escort_introduce_romance";
+				}
+				else
+				{
+					dialog.text = DLG_TEXT[39] + GetMyName(PChar) + DLG_TEXT[40];
+					link.l1 = DLG_TEXT[47];
+					link.l1.go = "imperial_escort_whodunnit";
+				}
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[45] + GetMyLastName(PChar) + DLG_TEXT[46];
+				link.l1 = DLG_TEXT[47];
+				link.l1.go = "imperial_escort_whodunnit";
+			}
+		break;
+
+		case "imperial_escort_introduce_romance":
+			dialog.text = DLG_TEXT[43] + GetMyName(CharacterFromID(PChar.quest.romance)) + DLG_TEXT[44];
+			link.l1 = DLG_TEXT[47];
+			link.l1.go = "imperial_escort_whodunnit";
+		break;
+
+		case "imperial_escort_whodunnit":
+			dialog.text = DLG_TEXT[48];
+			link.l1 = DLG_TEXT[49];
+			link.l1.go = "imperial_escort_ransom";
+		break;
+
+		case "imperial_escort_ransom":
+			dialog.text = DLG_TEXT[50];
+			link.l1 = DLG_TEXT[51];
+			link.l1.go = "imperial_escort_no_pirate";
+		break;
+
+		case "imperial_escort_no_pirate":
+			dialog.text = DLG_TEXT[52];
+			link.l1 = DLG_TEXT[53];
+			link.l1.go = "imperial_escort_maybe_france";
+		break;
+
+		case "imperial_escort_maybe_france":
+			dialog.text = DLG_TEXT[54] + GetMyFullName(GetTownGovernor("Tortuga")) + DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
+			AddDialogExitQuest("imperial_escort_visit_Tortuga_governor");
+			link.l1.go = "exit";
 		break;
 	}
 }

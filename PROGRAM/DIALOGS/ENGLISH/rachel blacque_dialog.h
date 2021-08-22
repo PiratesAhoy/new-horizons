@@ -1,7 +1,7 @@
 string DLG_TEXT[95] = {
 "Hello, ",
 ", I am sorry but I'm in a hurry and I can't talk with you.",
-"Excuse me, this will only take a moment. Do you have a brother whose name is Marc?",
+"Excuse me, this will only take a moment. Do you have a brother whose name is #sMarc#?",
 "But, wait! I've got news about your brother.",
 "Hello, ",
 ", I wanted to let you know that ",
@@ -76,7 +76,7 @@ string DLG_TEXT[95] = {
 "You're welcome. Goodbye.",
 "I had a brother. He died 5 years ago...",
 "Hmm...that's strange...if he died, then how could he give me a letter?",
-"A letter? From Marc? He's alive? Where is he?",
+"A letter? From #sMarc#? He's alive? Where is he?",
 "Hey, hey, calm down. I gave the letter to your father. He seemed very happy to know that his son was safe and sound.",
 "Where is he? Why hasn't he written for so long? Why didn't he come here?",
 "I gave the letter to your crazy father, and if you want to know how your brother is, then I suppose you could go home and read it there.",
@@ -90,9 +90,9 @@ string DLG_TEXT[95] = {
 "I'm not. Your brother is chatting nicely with your father in the port now...",
 "And why should I believe you? This is all a part of a cruel joke!",
 "Don't think me such a brute! Perhaps you should go see for yourself before making such remarks. Good-bye.",
-"Oh, my God! Marc is back after all these years?!",
+"Oh, my God! #sMarc# is back after all these years?!",
 "Yes, he's back. Now go to and see for yourself.",
 "Hello Captain, always so nice to see you. How have you been?",
-"Rachel, you look lovelier every time I see you.",
+"#sRachel#, you look lovelier every time I see you.",
 
 };

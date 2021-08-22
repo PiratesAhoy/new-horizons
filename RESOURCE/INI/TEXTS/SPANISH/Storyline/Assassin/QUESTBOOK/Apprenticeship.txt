@@ -1,0 +1,10 @@
+title=El aprendizaje
+text.t1=Chico Cois dijo durante el viaje que el verdadero nombre del espía es Dominico Cuéllar,  pero que en la isla lo conocen como Richard Carver. Habitualmente trabaja en el fuerte, pero vive en la casa que está justo fuera de la ciudad; allí hay que ir.
+text.t2=Mi plan es simple. Esperaré al capitán inglés Harold Flesher cerca de la puerta del puerto, y cuando aparezca lo seguiré y lo mataré antes de que llegue al ayuntamiento.
+text.t3=¡Está hecho! Acaba de reunirse con sus ancestros. Yo debo volver a casa de Dominico.
+text.t4=Ha llegado el momento de llevar el informe al vicealmirante en #sHavana#, en #sisland_Cuba#.
+text.t5=Un espía, Pelagius Lizárraga, ha desaparecido en #sOxbay#, en #sisland_Oxbay#. Tengo que encontrarlo allí y traerlo de vuelta a #sHavana#, en #sisland_Cuba#.
+text.t6=¡Lo he encontrado! Lo había encerrado en las cloacas un grupo de bandidos. Ahora pongamos rumbo a #sHavana#, en #sisland_Cuba#.
+text.t7=¡Otras 5000 monedas de oro! El vicealmirante parece tener mucho dinero. No es que yo tenga queja, por supuesto.
+text.t8=El nombre de este tipo es Gabriel Bruguera. Tiene que estar en el fuerte de #sPort au Prince#. ¡Lo voy a dejar tieso como un palo!
+text.t9=¡Hecho! El pobre no tuvo ninguna oportunidad. Hora de volver a #sHavana#, en #sisland_Cuba#, donde me espera una buena recompensa.

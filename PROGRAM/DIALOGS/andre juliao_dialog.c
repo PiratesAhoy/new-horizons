@@ -17,7 +17,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
-	
+	int smuggle_cargo, smuggle_amount, smuggle_cargo2, smuggle_amount2;
+
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
@@ -56,8 +57,13 @@ void ProcessDialogEvent()
 			}
 			if ((characters[GetCharacterIndex("Thomas O'Reily")].quest.contraband == "boarding")&&(iTest < QUEST_COUNTER))
 			{
-				if (GetSquadronGoods(pchar, GOOD_EBONY) >= 100 && GetSquadronGoods(pchar, GOOD_SANDAL) >= 50)
+				smuggle_cargo = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_cargo);
+				smuggle_amount = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_amount);
+				smuggle_cargo2 = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_cargo2);
+				smuggle_amount2 = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_amount2);
+				if (GetSquadronGoods(pchar, smuggle_cargo) >= smuggle_amount && GetSquadronGoods(pchar, smuggle_cargo2) >= smuggle_amount2)
 				{
+					Preprocessor_Add("nation", GetNationDescByType(GetTownNation("Redmond")));
 					link.l2 = pcharrepphrase(DLG_TEXT[6], DLG_TEXT[7]);
 					link.l2.go = "contraband";
 					iTest = iTest + 1;
@@ -78,7 +84,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[16];
 			link.l1 = DLG_TEXT[17];
 			link.l1.go = "contraband_2";
-			AddQuestRecord("Thomas_OReily_contraband", 5);
+//			AddQuestRecord("Thomas_OReily_contraband", 5);
 		break;
 
 		case "contraband_2":
@@ -86,10 +92,22 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[18];
 			link.l1 = pcharrepphrase(DLG_TEXT[19], DLG_TEXT[20]);
 			link.l1.go = "exit";
-			RemoveCharacterGoods(GetMainCharacter(), GOOD_SANDAL, 50); //NK Remove goods
-			RemoveCharacterGoods(GetMainCharacter(), GOOD_EBONY, 100);
+			smuggle_cargo = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_cargo);
+			smuggle_amount = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_amount);
+			smuggle_cargo2 = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_cargo2);
+			smuggle_amount2 = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_amount2);
+			RemoveCharacterGoods(GetMainCharacter(), smuggle_cargo2, smuggle_amount2); //NK Remove goods
+			RemoveCharacterGoods(GetMainCharacter(), smuggle_cargo, smuggle_amount);
 			characters[GetCharacterIndex("Thomas O'Reily")].quest.contraband = "almost_done";
+
+			Preprocessor_AddQuestData("Andre Juliao", GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("Andre", GetMyName(NPChar));
+			Preprocessor_AddQuestData("Thomas", GetMyName(CharacterFromID("Thomas O'Reily")));
 			AddQuestRecord("Thomas_OReily_contraband", 4);
+			Preprocessor_Remove("Thomas");
+			Preprocessor_Remove("Andre");
+			Preprocessor_Remove("Andre Juliao");
+
 			if (Characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers == "0") Characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "1"; // NK
 		break;
 
@@ -177,7 +195,7 @@ void ProcessDialogEvent()
 
 		case "right_2":
 			dialog.snd = "Voice\ANJU\ANJU016";
-			dialog.text = DLG_TEXT[44] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[45])]) + DLG_TEXT[46];
+			dialog.text = DLG_TEXT[44] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[45])]) + DLG_TEXT[46];
 			link.l1 = DLG_TEXT[47];
 			link.l1.go = "right_3";
 		break;

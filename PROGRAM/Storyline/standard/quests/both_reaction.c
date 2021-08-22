@@ -2696,43 +2696,45 @@ void BothQuestComplete(string sQuestName)
 			}
 		    //JRH ammo mod <---
 
-			DeleteAttribute(PChar,"vcskip"); // NK 04-06
-			SetNextWeather("Day Storm");	// Sets stormy weather
+			DeleteAttribute(PChar,"vcskip");	// NK 04-06
+			SetNextWeather("Day Storm");		// Sets stormy weather
 
-			switch(rand(STORMY_START_CHOICES) )	// ccc mar 06  New islands
+			if(STORMY_START_CHOICES > 19) i = 19;	// GR: don't allow Cozumel because it starts with
+			else i = STORMY_START_CHOICES;		//     the inaccessible island model
+			switch(rand(i) )			// ccc mar 06  New islands
 			{
 				case 0:
-					loadPort = "Douwesen_shore_01";
+					loadPort = "Douwesen_shore_02"; // PB (separated from ship)
 					loadTown = "Douwesen_shore_01";
 					rldLocator = "reload1";
 				break;
 
 				case 1:
-					loadPort = "Conceicao_shore_01";
+					loadPort = "Conceicao_shore_02"; // PB (separated from ship)
 					loadTown = "Conceicao_shore_01";
 					rldLocator = "reload1";
 				break;
 
 				case 2:
-					loadPort = "Falaise_de_fleur_shore";
+					loadPort = "Falaise_de_fleur_port_01"; // PB (separated from ship)
 					loadTown = "Falaise_de_fleur_shore";
 					rldLocator = "reload1";
 				break;
 
 				case 3:
-					loadPort = "Muelle_shore";
+					loadPort = "Muelle_port"; // PB (separated from ship)
 					loadTown = "Muelle_shore";
 					rldLocator = "reload3";
 				break;
 
 				case 4:
-					loadPort = "QC_port";
+					loadPort = "QC_Shore1"; // PB (separated from ship)
 					loadTown = "QC_port";
 					rldLocator = "reload1";
 				break;
 
 				case 5:
-					loadPort = "Redmond_shore_01";
+					loadPort = "Redmond_shore_02"; // PB (separated from ship)
 					loadTown = "Redmond_shore_01";
 					rldLocator = "reload1";
 				break;
@@ -2786,19 +2788,19 @@ void BothQuestComplete(string sQuestName)
 				break;
 
 				case 14:
-					loadPort = "Cuba_shore_01";
+					loadPort = "Cuba_Shore_04"; // PB (separated from ship)
 					loadTown = "Cuba_shore_01";
 					rldLocator = "reload1";
 				break;
 
 				case 15:
-					loadPort = "Guadeloupe_shore_01";
+					loadPort = "Guadeloupe_Port"; // PB (separated from ship)
 					loadTown = "Guadeloupe_shore_01";
 					rldLocator = "see";
 				break;
 
 				case 16:
-					loadPort = "SaintMartin_shore_01";
+					loadPort = "SaintMartin_shore_02"; // PB (separated from ship)
 					loadTown = "SaintMartin_shore_01";
 					rldLocator = "reload1";
 				break;
@@ -2816,7 +2818,7 @@ void BothQuestComplete(string sQuestName)
 				break;
 
 				case 19:
-					loadPort = "Oxbay_shore_01";
+					loadPort = "Oxbay_shore_02"; // PB (separated from ship)
 					loadTown = "Oxbay_shore_01";
 					rldLocator = "see";
 				break;
@@ -2835,6 +2837,7 @@ void BothQuestComplete(string sQuestName)
 
 			DoQuestReloadToLocation(loadTown, "reload", rldLocator, "_");
 			PlaceFleetNearShore(loadPort); // KK
+			SafePortLeave(GetLocationNationFromID(loadPort), false);	// GR: use false flag if you end up at a hostile port
 
 			PostEvent("DoInfoShower",500,"s","");	//TIH - clears black screen
 		break;

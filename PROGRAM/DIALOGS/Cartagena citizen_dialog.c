@@ -240,6 +240,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "town_shipyard";
 			Link.l3 = DLG_TEXT[112];
 			Link.l3.go = "town_store";
+
 			// RobC/Alan_Smithee Blacksmiths -->
 			if (ENABLE_WEAPONSMOD)
 			{
@@ -247,6 +248,14 @@ void ProcessDialogEvent()
 				Link.l4.go = "town_smithy";
 			}
 			// RobC/Alan_Smithee Blacksmiths <--
+
+			//JRH: WoodesRogers2 -->
+			if(GetAttribute(Pchar, "monastary") == "Sister_Richards")
+			{
+				Link.l5 = DLG_TEXT[170];
+				Link.l5.go = "monastary";
+			}
+			//JRH: WoodesRogers2 <--
 		break;
 
 		case "town_smithy":
@@ -297,6 +306,43 @@ void ProcessDialogEvent()
 			Link.l3 = DLG_TEXT[124];
 			Link.l3.go = "exit";
 			DeleteAttribute(&locations[FindLocation("Cartagena_Center")], "reload.l4.goto_disable"); // BOP: Unlock Fast Travel
+		break;
+
+		case "monastary":
+			d.Text = DLG_TEXT[171];
+			Link.l1 = DLG_TEXT[172];
+			Link.l1.go = "monastary1";
+		break;
+
+		case "monastary1":
+			d.Text = DLG_TEXT[173];
+			Link.l1 = DLG_TEXT[174];
+			Link.l1.go = "monastary2";
+		break;
+
+		case "monastary2":
+			d.Text = DLG_TEXT[175];
+			Link.l1 = DLG_TEXT[176];
+			Link.l1.go = "monastary3";
+		break;
+
+		case "monastary3":
+			d.Text = DLG_TEXT[177];
+			Link.l1 = DLG_TEXT[178];
+			Link.l1.go = "monastary4";
+		break;
+
+		case "monastary4":
+			d.Text = DLG_TEXT[179];
+			Link.l1 = DLG_TEXT[180];
+			Link.l1.go = "monastary5";
+		break;
+
+		case "monastary5":
+			d.Text = DLG_TEXT[181];
+			Link.l1 = DLG_TEXT[154];
+			Link.l1.go = "exit";
+			AddDialogExitQuest("Abbey_info");
 		break;
 
 		case "colony":

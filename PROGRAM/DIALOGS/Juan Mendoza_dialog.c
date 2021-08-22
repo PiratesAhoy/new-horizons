@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------|иалог первый - первая встреча
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -30,37 +30,37 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
-			if(TradeCheck(PChar, NPChar, true)) { // NK
-
-			if (npchar.quest.meeting == "0")
-			{
-				dialog.snd = "Voice\EMRI\EMRI001";
-				Dialog.Text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[1] + GetMyFullName(NPChar) + DLG_TEXT[2];
-				Link.l1 = pcharrepphrase(DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4], DLG_TEXT[5] + GetMyFullName(PChar) + DLG_TEXT[6]);
-				link.l1.go = "node_3";
-			}
-			else
-			{
-				dialog.snd = "Voice\EMRI\EMRI002";
-				dialog.text = DLG_TEXT[7] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[8];
-				Link.l1 = pcharrepphrase(DLG_TEXT[9], DLG_TEXT[10]); 
-				link.l1.go = "node_3";
-			}
+			if(TradeCheck(PChar, NPChar, true))
+			{ // NK
+				if (npchar.quest.meeting == "0")
+				{
+					dialog.snd = "Voice\EMRI\EMRI001";
+					Dialog.Text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[1] + GetMyFullName(NPChar) + DLG_TEXT[2];
+					Link.l1 = pcharrepphrase(DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4], DLG_TEXT[5] + GetMyFullName(PChar) + DLG_TEXT[6]);
+					link.l1.go = "node_3";
+				}
+				else
+				{
+					dialog.snd = "Voice\EMRI\EMRI002";
+					dialog.text = DLG_TEXT[7] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[8];
+					Link.l1 = pcharrepphrase(DLG_TEXT[9], DLG_TEXT[10]); 
+					link.l1.go = "node_3";
+				}
 			// NK -->
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[52] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[53];
-				Link.l1 = DLG_TEXT[54];
+				dialog.text = DLG_TEXT[47] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[48];
+				Link.l1 = DLG_TEXT[49];
 				Link.l1.go = "exit";
 				if(sti(PChar.Skill.Commerce)>=5)
 				{
 					Link.l2 = TranslateString("","low_trade_1");
 					Link.l2.go = "low_price";
 				}
-				NextDiag.TempNode = "First time";
 			}
 			// NK <--
+			NextDiag.TempNode = "First time";
 		break;
 
 		case "low_price":
@@ -120,8 +120,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "items":
-			if (!CheckAttribute(npchar, "quest.item_date") || npchar.quest.item_date != lastspeak_date)
-			// PB: Prevent error
+			if (!CheckAttribute(npchar, "quest.item_date") || npchar.quest.item_date != lastspeak_date) // KK
 			{
 				GiveItemToTrader(npchar);
 				npchar.quest.item_date = lastspeak_date;
@@ -139,17 +138,24 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[22];
 			if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))	// LDH was quest.quest.generate, fixed 01Jan09
 			{
-				int iQuantityShipGoods = pchar.quest.generate_trade_quest_progress.iQuantityGoods;
-				int iQuestTradeGoods = pchar.quest.generate_trade_quest_progress.iTradeGoods;
+				int iQuantityShipGoods = sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods);
+				int iQuestTradeGoods = sti(pchar.quest.generate_trade_quest_progress.iTradeGoods);
 			}
 			if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
 			{
-				if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods && pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+				if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
 				{
 					dialog.snd = "Voice\EMRI\EMRI006";
 					dialog.text = DLG_TEXT[23];
 					link.l1 = DLG_TEXT[24];
-					link.l1.go = "generate_quest_2";
+					if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
+					{
+						link.l1.go = "generate_quest_2";
+					}
+					else
+					{
+						link.l1.go = "cargo_missing";
+					}
 				}
 			}
 			else
@@ -160,10 +166,10 @@ void ProcessDialogEvent()
 					link.l1.go = "generate_quest";
 				}
 			}
-			link.l99 = DLG_TEXT[27];
+			link.l99 = DLG_TEXT[26];
 			Link.l99.go = "no_quests";
 		break;
-		
+
 		case "generate_quest":
 			if(!CheckAttribute(npchar,"quest.trade_date")) npchar.quest.trade_date = ""; // added by MAXIMUS
 			if(npchar.quest.trade_date != lastspeak_date)
@@ -172,9 +178,10 @@ void ProcessDialogEvent()
 				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
+					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
 					dialog.snd = "Voice\EMRI\EMRI007";
-					dialog.text = DLG_TEXT[32];
-					link.l1 = DLG_TEXT[33];
+					dialog.text = DLG_TEXT[27];
+					link.l1 = DLG_TEXT[28];
 					link.l1.go = "exit";
 				}
 				else
@@ -183,8 +190,8 @@ void ProcessDialogEvent()
 					if (iTradeNation < 0)
 					{
 						dialog.snd = "Voice\EMRI\EMRI008";
-						dialog.text = DLG_TEXT[34];
-						link.l1 = DLG_TEXT[35];
+						dialog.text = DLG_TEXT[29];
+						link.l1 = DLG_TEXT[30];
 						link.l1.go = "exit";
 					}
 					else
@@ -192,25 +199,25 @@ void ProcessDialogEvent()
 						//проверяем импорт/экспорт
 						float fprice, tprice;
 						// NK redo this to take price into account 05-05-12 -->
-						int iTradeGoods = GenerateGoodForTrade(sti(NPChar.nation), iTradeNation, &fprice, &tprice); // TIH nation fix Aug30'06 // KK
+						int iTradeGoods = GenerateGoodForTrade(sti(NPChar.nation), iTradeNation, &fprice, &tprice); // KK
 						string sNation = GenerateTradeQuest(pchar, iTradeNation, iTradeGoods, fprice, tprice, true);// MAXIMUS: all was moved into MAXIMUS_Functions.c - returns translated string
 						//проверяем свободное место (при этом должно вмещаться по меньшей мере 100 единиц выбранного груза
 						if (GetSquadronFreeSpace(pchar, iTradeGoods) < 100 || sNation=="")
 						{
 							dialog.snd = "Voice\EMRI\EMRI009";
-							dialog.text = DLG_TEXT[36];
-							link.l1 = DLG_TEXT[37];
+							dialog.text = DLG_TEXT[31];
+							link.l1 = DLG_TEXT[32];
 							link.l1.go = "exit";
 						}
 						else
 						{
 							dialog.snd = "Voice\EMRI\EMRI010";
-							dialog.text = DLG_TEXT[38] + sNation + DLG_TEXT[39] + pchar.quest.generate_trade_quest_progress.iMoney + DLG_TEXT[40];
+							dialog.text = DLG_TEXT[33] + sNation + DLG_TEXT[34] + pchar.quest.generate_trade_quest_progress.iMoney + DLG_TEXT[35];
 							link.l1 = XI_ConvertString("quest_map");
 							link.l1.go = "exit_map";
-							link.l2 = DLG_TEXT[41];
+							link.l2 = DLG_TEXT[36];
 							link.l2.go = "exit_trade";
-							link.l3  = DLG_TEXT[42];
+							link.l3  = DLG_TEXT[37];
 							link.l3.go = "exit";
 						}
 					}
@@ -219,8 +226,8 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\EMRI\EMRI011";
-				dialog.text = DLG_TEXT[43];
-				link.l1 = DLG_TEXT[44];
+				dialog.text = DLG_TEXT[38];
+				link.l1 = DLG_TEXT[39];
 				link.l1.go = "exit";
 			}
 		break;
@@ -234,14 +241,14 @@ void ProcessDialogEvent()
 		case "after_map":
 			dialog.snd = "Voice\EMRI\EMRI010";
 			dialog.text = XI_ConvertString("quest_talk")+" "+GetMyName(PChar)+"?";
-			link.l1 = DLG_TEXT[41];
+			link.l1 = DLG_TEXT[36];
 			link.l1.go = "exit_trade";
 			link.l2 = XI_ConvertString("quest_map");
 			link.l2.go = "exit_map";
-			link.l3  = DLG_TEXT[42];
+			link.l3  = DLG_TEXT[37];
 			link.l3.go = "exit";
 		break;
-		
+
 		case "exit_trade":
 			AddDialogExitQuest("trade_quest_open");
 			NextDiag.CurrentNode = NextDiag.TempNode;
@@ -252,8 +259,8 @@ void ProcessDialogEvent()
 			if (pchar.quest.generate_trade_quest_progress == "failed")
 			{
 				dialog.snd = "Voice\EMRI\EMRI012";
-				dialog.text = DLG_TEXT[45];
-				link.l1 = DLG_TEXT[46];
+				dialog.text = DLG_TEXT[40];
+				link.l1 = DLG_TEXT[41];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, -1);
 				// PB: Enable Future Ones -->
@@ -264,19 +271,29 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.snd = "Voice\EMRI\EMRI013";
-				dialog.text = DLG_TEXT[47] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ".";
-				link.l1 = DLG_TEXT[48];
+				dialog.text = DLG_TEXT[42] + GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false) + ".";
+				link.l1 = DLG_TEXT[43];
 				link.l1.go = "exit";
 				ChangeCharacterReputation(pchar, 1);
 				TradeQuestDone();
 			}
 			AddDialogExitQuest("close_trade_quest");
 		break;
+
+		case "cargo_missing":
+			AddQuestRecord("trade", 3);
+			Preprocessor_Add("quantity", sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods));
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(pchar.quest.generate_trade_quest_progress.iTradeGoods)].name));
+			dialog.snd = "Voice\EMRI\EMRI013";
+			dialog.text = DLG_TEXT[50];
+			link.l1 = DLG_TEXT[51];
+			link.l1.go = "exit";
+		break;
 		
 		case "no_quests":
 			dialog.snd = "Voice\EMRI\EMRI014";
-			dialog.text = DLG_TEXT[49];
-			link.l1 = pcharrepphrase(DLG_TEXT[50], DLG_TEXT[51]);
+			dialog.text = DLG_TEXT[44];
+			link.l1 = pcharrepphrase(DLG_TEXT[45], DLG_TEXT[46]);
 			link.l1.go = "node_3";
 		break;
 

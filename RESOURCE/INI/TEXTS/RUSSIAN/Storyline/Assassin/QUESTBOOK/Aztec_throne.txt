@@ -1,0 +1,12 @@
+title=The Aztec treasure
+text.t1=I was right to see Morgan. He told me the Spanish has found a valuable Aztec treasure near Vera Cruz. I agreed to work for him. I'll have the opportunity to see Bartolomeu again. (Hint: Go to #sisland_Khael Roa# in order to be reloaded in Vera Cruz) 
+text.t2=Damn it! It seems the Silver Fleet is already here. Another bad news, the Bartolomeu' ship is not in the port. However, I hope I'll see him in the town.
+text.t3=We lost the Fleet during a tempest. Bartolomeu thinks she must make for Havana. Let's go to Cuba!
+text.t4=I saw the Fleet entering the Havana port. I need to inform Morgan and the Governor. Next stop : #sRedmond#.
+text.t5=Worried by the news, Morgan decided we should immediately go to Cuba. There, he will give me new instructions.
+text.t6=A new task for me and Bartolomeu. We must know where the treasure is guarded and how many days it will stay in Cuba. Captain Damski could be our informer. I know he lives in a house between the port gates and the Havana Church.
+text.t7=Before destroying the cannons, I must kill all the guards without being detected. Let's do it!
+text.t8=All the guards are dead. Now, I can sabotage the cannons. I'll start by the one near the location I started the mission. After destroying the cannons, I'll finish my work with the bastion. (Hint: the bombs will be automatically laid when you walk behind the cannons and bastion)
+text.t9=We did it! We stole a fabulous treasure in one of the best Spanish forts. Thanks to this feat, we enter in the pirates' legend. No doubt, the Governor of #sRedmond# will congratulate us.
+text.t10=This expedition was very lucrative. I've earned 150 000 gold coins and I'll earn much more when the throne is sold. Now, I return to #sDouwesen# to rest as Morgan and Bartolomeu are thinking of doing too. Maybe in the future, I'll see Bartolomeu again.
+text.t11=Damn it! I was detected by the soldiers. They raised the alarm and I've had to run away before the Spanish troops attack me. I don't know what happened to Bartolomeu and Morgan. But, I'm sure I won't have a new opportunity for stealing the Aztec treasure!   

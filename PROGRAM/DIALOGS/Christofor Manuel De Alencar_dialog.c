@@ -53,7 +53,73 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[13] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[14];
 			link.l1 = DLG_TEXT[15];
 			link.l1.go = "exit";
+
+// Ardent "Imperial Escort" quest" --->
+			if (CheckCharacterItem(PChar, "AdmiralLetter") && CheckQuestAttribute("imperial_escort.spy_search", "find_spy"))
+			{
+				link.l3 = DLG_TEXT[98] + GetMyFullName(CharacterFromID("Jusepe Guimaraes")) + DLG_TEXT[99];
+				link.l3.go = "ardent_imperial_escort_what_your_purpose";
+			}
 		break;
+// <--- Ardent "Imperial Escort" quest"
+
+
+// Ardent "Imperial Escort" quest" --->
+		case "ardent_imperial_escort_what_your_purpose":
+			dialog.text = DLG_TEXT[100];
+			link.l1 = "...";
+			link.l1.go = "ardent_imperial_escort_what_your_purpose2";
+		break;
+
+		case "ardent_imperial_escort_what_your_purpose2":
+			dialog.text = DLG_TEXT[101];
+			link.l1 = DLG_TEXT[102] + GetMyFullName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[103];
+			link.l1.go = "ardent_imperial_escort_smart_as_weevil";
+		break;
+
+		case "ardent_imperial_escort_smart_as_weevil":
+			dialog.text = DLG_TEXT[104];
+			link.l1 = DLG_TEXT[105] + GetMySimpleName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[106] + GetMyFullName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[107];
+			link.l1.go = "ardent_imperial_escort_choose_method";
+		break;
+
+		case "ardent_imperial_escort_choose_method":
+			dialog.text = DLG_TEXT[108];
+			link.l1 = DLG_TEXT[109] + GetMySimpleName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[110];
+			link.l1.go = "ardent_imperial_escort_get_him_on_ship";
+			link.l2 = DLG_TEXT[111] + GetMySimpleName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[112];
+			link.l2.go = "ardent_imperial_escort_get_him_in_port";
+		break;
+
+		case "ardent_imperial_escort_get_him_on_ship":
+			dialog.text = DLG_TEXT[113];
+			link.l1 = DLG_TEXT[114] + DLG_TEXT[115];
+			AddDialogExitQuest("imperial_escort_prepare_lure_spy_aboard");
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_imperial_escort_get_him_in_port":
+			dialog.text = DLG_TEXT[116];
+			link.l1 = DLG_TEXT[117] + DLG_TEXT[115];
+			AddDialogExitQuest("imperial_escort_prepare_bring_uasco_ashore");
+			link.l1.go = "exit";
+		break;
+
+		case "ardent_imperial_escort_after_spy":
+			dialog.text = DLG_TEXT[118] + GetRankName(PChar, sti(NPChar.nation)) + DLG_TEXT[119];
+			if (CheckQuestAttribute("imperial_escort.spy_search", "spy_dead_aboard")) link.l1 = DLG_TEXT[120];
+			else link.l1 = DLG_TEXT[121];
+			link.l1.go = "ardent_imperial_escort_no_interrogation";
+		break;
+
+		case "ardent_imperial_escort_no_interrogation":
+			dialog.text = DLG_TEXT[122];
+			link.l1 = DLG_TEXT[123];
+			link.l1.go = "exit";
+			link.l2 = DLG_TEXT[124];
+			link.l2.go = "quests";
+		break;
+// <--- Ardent "Imperial Escort" quest"
 
 		case "Exit":
 			DialogExit();

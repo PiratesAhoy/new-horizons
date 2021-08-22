@@ -1,0 +1,9 @@
+title=Get details from the governor.
+text.t1=#sDanielle# proposed to use a secret bay hidden behind the reefs to get to #sRedmond# on #sisland_Redmond#. #sPronoun_upper# said #spronoun# knows how to get there through the big crack in the rocks.
+text.t2=We decided to sneak into Silehard's house at night.
+text.t3=The scoundrel Silehard has slipped away. So, unfortunately, we didn't get the information we're looking for. Worse still, he will undoubtedly send out a warrant for our arrest. English ports will no longer be safe for us, so we had better escape quickly to our ships while we still can!
+text.t4=We decided to separate. #sDanielle# is going to sail to #sIsla Muelle# on #sisland_Isla Muelle# to find the original of the legend, while I will sail to #sGreenford# on #sisland_Oxbay# and try to get the information from the soldiers about the idol that was supposed to be at the house of the late Rheims' navigator.
+text.t5=I got to #sGreenford# and talked to the soldier. I learned that some captain has the idol. I can find this captain in prison.
+text.t6=From the conversation with the tavern-keeper, I learned that some captain has the idol. I can find the captain in prison.
+text.t7=Silehard is one step ahead of me. The idol is on a ship, and the guard captain has an order to arrest everyone interested in the idol. I need to hurry to the port and try to catch the English ship with the idol on board.
+text.t8=It was a hot battle! It's no easy feat to take an English frigate protected by a fort! I am most pleased with my victory, and my prize - the idol. Now I must go meet #sDanielle# at the lighthouse.

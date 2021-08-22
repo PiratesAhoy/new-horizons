@@ -110,49 +110,49 @@ void ProcessDialogEvent()
 			{
 				case "WR_beggar1": 
 					if(!CheckAttribute(Pchar,"beggar1") || Pchar.beggar1 != "done")
-					{ AddDialogExitQuest("are_you_Hands"); }
+					{ AddDialogExitQuest("are_you_Hands_delay"); }
 					Pchar.beggar1 = "done";	
 				break;
 
 				case "WR_beggar2":
 					if(!CheckAttribute(Pchar,"beggar2") || Pchar.beggar2 != "done")
-					{ AddDialogExitQuest("are_you_Hands"); }
+					{ AddDialogExitQuest("are_you_Hands_delay"); }
 					Pchar.beggar2 = "done";	
 				break;
 
 				case "WR_beggar3":
 					if(!CheckAttribute(Pchar,"beggar3") || Pchar.beggar3 != "done")
-					{ AddDialogExitQuest("are_you_Hands"); }
+					{ AddDialogExitQuest("are_you_Hands_delay"); }
 					Pchar.beggar3 = "done";	
 				break;
 
 				case "WR_beggar4":  
 					if(!CheckAttribute(Pchar,"beggar4") || Pchar.beggar4 != "done")
-					{ AddDialogExitQuest("are_you_Hands"); }
+					{ AddDialogExitQuest("are_you_Hands_delay"); }
 					Pchar.beggar4 = "done";	
 				break;
 
 				case "WR_beggar5":  
 					if(!CheckAttribute(Pchar,"beggar5") || Pchar.beggar5 != "done")
-					{ AddDialogExitQuest("are_you_Hands"); }
+					{ AddDialogExitQuest("are_you_Hands_delay"); }
 					Pchar.beggar5 = "done";	
 				break;
 
 				case "WR_beggar6":  
 					if(!CheckAttribute(Pchar,"beggar6") || Pchar.beggar6 != "done")
-					{ AddDialogExitQuest("are_you_Hands"); }
+					{ AddDialogExitQuest("are_you_Hands_delay"); }
 					Pchar.beggar6 = "done";	
 				break;
 
 				case "WR_beggar7":  
 					if(!CheckAttribute(Pchar,"beggar7") || Pchar.beggar7 != "done")
-					{ AddDialogExitQuest("are_you_Hands"); }
+					{ AddDialogExitQuest("are_you_Hands_delay"); }
 					Pchar.beggar7 = "done";	
 				break;
 
 				case "WR_beggar8":  
 					if(!CheckAttribute(Pchar,"beggar8") || Pchar.beggar8 != "done")
-					{ AddDialogExitQuest("are_you_Hands"); }
+					{ AddDialogExitQuest("are_you_Hands_delay"); }
 					Pchar.beggar8 = "done";	
 				break;
 			}

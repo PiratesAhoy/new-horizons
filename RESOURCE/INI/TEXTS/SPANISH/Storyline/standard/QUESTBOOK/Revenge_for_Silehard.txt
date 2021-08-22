@@ -1,0 +1,9 @@
+title=Conseguir información del gobernador.
+text.t1=#sDanielle# ha sugerido utilizar una bahía secreta oculta detrás de los arrecifes para llegar a #sRedmond#, en #sisland_Redmond#.  Dice que sabe cómo llegar hasta allí a través de una gran grieta en las rocas.
+text.t2=Hemos decidido colarnos por la noche en casa de Silehard.
+text.t3=El canalla de Silehard ha escapado. Por desgracia no hemos conseguido la información que buscamos. Peor aún, sin duda decretará una orden para nuestro arresto. Los puertos ingleses ya no serán seguros para nosotros, así que será mejor que escapemos a nuestros barcos cuanto antes, ahora que todavía podemos.
+text.t4=Hemos decidido separarnos. #sDanielle# va a zarpar rumbo a #sIsla Muelle#, en #sisland_Isla Muelle# para buscar la leyenda original y yo saldré hacia #sGreenford#, en #sisland_Oxbay# para intentar que los soldados me den información sobre el ídolo que tenía que estar en casa del piloto del difunto Rheims.
+text.t5=He ido a #sGreenford# y he hablado con el soldado. He descubierto que hay un capitán que tiene el ídolo. Puedo encontrar a este capitán en la prisión.
+text.t6=Tras hablar con el tabernero, he averiguado que hay un capitán que tiene el ídolo. Puedo encontrar al capitán en la prisión.
+text.t7=Silehard va un paso por delante de mí. El ídolo está en un barco y el capitán de la guardia tiene órdenes de arrestar a todo el que se interese por el ídolo. Tengo que apresurarme hacia el puerto e intentar apresar el barco inglés que lleva el ídolo a bordo.
+text.t8=¡Ha sido una batalla dura! ¡No es fácil apresar una fragata inglesa protegida por un fuerte! Estoy muy feliz por mi victoria..., y por mi premio, el ídolo. Ahora debo ir a reunirme con #sDanielle# en el faro.

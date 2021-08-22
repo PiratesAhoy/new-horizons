@@ -267,9 +267,18 @@ void ProcessDialogEvent()
 			DoReloadCharacterToLocation("Santiago_port", "reload", "reload2");
 			HoistFlag(SPAIN);
 
-			if (ENABLE_WEAPONSMOD) GiveItem2Character(PChar, "blade44+1");
-			else GiveItem2Character(PChar, "blade44");
+			if (ENABLE_WEAPONSMOD)
+			{
+				GiveItem2Character(PChar, "blade44+1");
+				EquipCharacterByItem(PChar, "blade44+1");
+			}
+			else
+			{
+				GiveItem2Character(PChar, "blade44");
+				EquipCharacterByItem(PChar, "blade44");
+			}
 			GiveItem2Character(PChar, "PiratesPistol");
+			EquipCharacterByItem(PChar, "PiratesPistol");
 			//JRH ammo mod -->
 			if (ENABLE_AMMOMOD)
 			{
@@ -277,10 +286,13 @@ void ProcessDialogEvent()
 				TakenItems(PChar, "pistolbullets", 6);
 			}
 			//JRH ammo mod <--
-			GiveItem2Character(Pchar, "spyglass2");
-			GiveItem2Character(Pchar, "compass2");
-			GiveItem2Character(Pchar, "clock1");
-			AddMoneyToCharacter(pchar, 1000);
+			GiveItem2Character(PChar, "spyglass2");
+			GiveItem2Character(PChar, "compass2");
+			GiveItem2Character(PChar, "clock1");
+			EquipCharacterByItem(PChar, "spyglass2");
+			EquipCharacterByItem(PChar, "compass2");
+			EquipCharacterByItem(PChar, "clock1");
+			AddMoneyToCharacter(PChar, 1000);
 
 			EndQuestMovie();
 			AddDialogExitQuest("mona_attack_triggers");

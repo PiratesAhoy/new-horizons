@@ -31,15 +31,16 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
-			if(TradeCheck(PChar, NPChar, true)) { // NK
-			if (npchar.quest.meeting == "0")
-			{
-				Dialog.snd = "voice\PEBL\PEBL001";
-				Dialog.Text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[1] + GetMyFullName(NPChar) + DLG_TEXT[2];
-				Link.l1 = DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4];
-				link.l1.go = "node_1";
-			}
-			NextDiag.TempNode = "Second time";
+			if(TradeCheck(PChar, NPChar, true))
+			{ // NK
+				if (npchar.quest.meeting == "0")
+				{
+					Dialog.snd = "voice\PEBL\PEBL001";
+					Dialog.Text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[1] + GetMyFullName(NPChar) + DLG_TEXT[2];
+					Link.l1 = DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4];
+					link.l1.go = "node_1";
+				}
+				NextDiag.TempNode = "Second time";
 			// NK -->
 			}
 			else
@@ -148,15 +149,22 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[19];
 			if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))	// LDH was quest.quest.generate, fixed 01Jan09
 			{
-				int iQuantityShipGoods = pchar.quest.generate_trade_quest_progress.iQuantityGoods;
-				int iQuestTradeGoods = pchar.quest.generate_trade_quest_progress.iTradeGoods;
+				int iQuantityShipGoods = sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods);
+				int iQuestTradeGoods = sti(pchar.quest.generate_trade_quest_progress.iTradeGoods);
 			}
 			if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
 			{
-				if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods && pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+				if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
 				{
 					link.l1 = DLG_TEXT[34];
-					link.l1.go = "generate_quest_2";
+					if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
+					{
+						link.l1.go = "generate_quest_2";
+					}
+					else
+					{
+						link.l1.go = "cargo_missing";
+					}
 				}
 			}
 			else
@@ -166,6 +174,11 @@ void ProcessDialogEvent()
 					link.l1 = DLG_TEXT[35];
 					link.l1.go = "generate_quest";
 				}
+			}
+			if (CheckQuestAttribute("nigel_away_for_ship", "talk_with_clauss"))
+			{
+				link.l2 = DLG_TEXT[21];
+				link.l2.go = "clauss";
 			}
 			link.l99 = DLG_TEXT[36];
 			Link.l99.go = "exit";
@@ -179,6 +192,7 @@ void ProcessDialogEvent()
 				//проверка враждебности нам страны торговца
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY) // KK
 				{
+					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
 					dialog.snd = "Voice\EMRI\EMRI007";
 					dialog.text = DLG_TEXT[37];
 					link.l1 = DLG_TEXT[38];
@@ -278,6 +292,44 @@ void ProcessDialogEvent()
 				TradeQuestDone();
 			}
 			AddDialogExitQuest("close_trade_quest");
+		break;
+
+		case "cargo_missing":
+			AddQuestRecord("trade", 3);
+			Preprocessor_Add("ladlass", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false));
+			Preprocessor_Add("quantity", sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods));
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(pchar.quest.generate_trade_quest_progress.iTradeGoods)].name));
+			dialog.snd = "Voice\EMRI\EMRI013";
+			dialog.text = DLG_TEXT[57];
+			link.l1 = DLG_TEXT[58];
+			link.l1.go = "exit";
+		break;
+
+		case "clauss":
+			dialog.text = DLG_TEXT[22];
+			link.l1 = DLG_TEXT[23];
+			link.l1.go = "clauss_2";
+		break;
+		
+		case "clauss_2":
+			dialog.text = DLG_TEXT[24];
+			if (makeint(pchar.money >=2632))
+			{
+				link.l1 = DLG_TEXT[25];
+				link.l1.go = "clauss_3";
+			}
+			link.l2 = DLG_TEXT[26];
+			link.l2.go = "exit";
+		break;
+		
+		case "clauss_3":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, -2632);
+			dialog.text = DLG_TEXT[27];
+			link.l1 = DLG_TEXT[28];
+			link.l1.go = "exit";
+			AddDialogExitQuest("clauss_to_tavern");
+			DeleteQuestAttribute("nigel_away_for_ship");
 		break;
 
 		case "Exit":

@@ -72,6 +72,7 @@ void ProcessDialogEvent()
 		case "to_home":
 			Dialog.snd = "voice\VIDE\VIDE003";
 			dialog.text = DLG_TEXT[7];
+			Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
 			if (GetNationRelation2MainCharacter(FRANCE) == RELATION_ENEMY)
 			{
 				link.l1 = DLG_TEXT[8];
@@ -85,6 +86,7 @@ void ProcessDialogEvent()
 			}
 			pchar.quest.gambling_with_girl = "to_hovernor_2";
 			AddQuestRecord("gambled_girl", 10);
+			Preprocessor_Remove("nation");
 		break;
 
 		case "to_home_bad":
@@ -111,7 +113,9 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 20);
 			}
 			else { AddPartyExp(pchar, 2000); }
+			Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
 			AddQuestRecord("gambled_girl", 12);
+			Preprocessor_Remove("nation");
 		break;
 
 		case "she_story":
@@ -175,6 +179,7 @@ void ProcessDialogEvent()
 
 		case "she_story_9":
 			Dialog.snd = "voice\VIDE\VIDE014";
+			Preprocessor_Add("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
 // PB -->
 		//	Why bother doing all this? The guy is only ever at Martinique anyway
 		//	string island = FindIslandName(Islands[GetCharacterCurrentIsland(CharacterFromID("Raymond Bouchez"))].id); // KK

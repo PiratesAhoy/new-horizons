@@ -391,8 +391,9 @@ void ProcessDialogEvent()
 
 		case "town_whores":
 			Preprocessor_Add("gender", GetCharacterAddressForm(PChar, ADDR_GENDER, false, false)); // DeathDaisy
-			if (PChar.sex == "woman") Preprocessor_Add("pronounobj", XI_ConvertString("her")); // DeathDaisy
-			else Preprocessor_Add("pronounobj", XI_ConvertString("his")); // DeathDaisy
+//			if (PChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her")); // DeathDaisy
+//			else Preprocessor_Add("pronoun3", XI_ConvertString("his")); // DeathDaisy
+			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));	// GR: new function to help with translations
 			dialog.text = DLG_TEXT[85];
 			link.l1 = DLG_TEXT[86];
 			link.l1.go = "whores2";

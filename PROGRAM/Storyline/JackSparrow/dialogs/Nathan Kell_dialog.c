@@ -140,5 +140,30 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
+
+		case "Jocard_dead":
+			dialog.text = DLG_TEXT[32];
+			link.l1 = DLG_TEXT[33];
+			link.l1.go = "Jocard_dead2";
+		break;
+
+		case "Jocard_dead2":
+			dialog.text = DLG_TEXT[34];
+			link.l1 =DLG_TEXT[35];
+			link.l1.go = "Jocard_dead3";
+		break;
+
+		case "Jocard_dead3":
+			dialog.text = DLG_TEXT[36];
+			link.l1 =DLG_TEXT[37];
+			link.l1.go = "Jocard_dead4";
+		break;
+
+		case "Jocard_dead4":
+			dialog.text = DLG_TEXT[38];
+			link.l1 =DLG_TEXT[39];
+			AddDialogExitQuest("Killing_PL_talked_to_Kell");
+			link.l1.go = "exit";
+		break;
 	}
 }

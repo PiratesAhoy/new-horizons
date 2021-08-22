@@ -39,6 +39,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "caught_in_port":
+			Preprocessor_Add("gender", PChar.sex);
 			PlaySound("VOICE\ENGLISH\Spa_m_b_043.wav");
 			dialog.text = DLG_TEXT[7];			
 			link.l1 = DLG_TEXT[8];

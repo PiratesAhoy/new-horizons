@@ -1,0 +1,6 @@
+title=Open the Mine
+text.t1=The Boatswain Mr Hynde demands pure gold to open the Mine.
+text.t2=There's a chest - but how do I get to it?
+text.t3=Yes! It's open now but I cannot see the chest any longer...
+text.t4=He also told me there is Rum to be found in the Food Cellar.
+text.t5=

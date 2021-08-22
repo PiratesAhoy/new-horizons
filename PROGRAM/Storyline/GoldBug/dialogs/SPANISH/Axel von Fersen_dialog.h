@@ -1,0 +1,30 @@
+string DLG_TEXT[25] = {
+"Ah, Mr. Legrand, ahí está. ¿Ha conseguido resolver el rompecabezas?",
+"¿¿Qué?? ¿Cómo demonios puede saber usted nada sobre eso? (¿Quién es este petimetre?)",
+"No me reocnoce usted. Pero nos hemos visto antes...",
+"(Puede que su cara me resulte familiar, pero...) Lo siento, no recuerdo...",
+"Olvídelo. ¿Ha comprobado ya esa parte donde pone 'SE.ENTH'? ¿Ya sabe qué letra representa la 'R'?",
+"Bueno, yo... no estoy del todo seguro...",
+"Tal vez debería volver a intentarlo. No olvide consultar el libro de misiones.",
+"Veré qué puedo hacer...",		
+"Sí, es la 'B'",	
+"Sí, es la 'C'",
+"Sí, es la 'F'",
+"Sí, es la 'J'",
+"Sí, es la 'K'",		
+"Sí, es la 'P'",
+"Sí, es la 'Q'",
+"Sí, es la 'V'",
+"Sí, es la 'W'",	
+"Sí, es la 'X'",
+"Sí, es la 'Y'",	
+"Sí, es la 'Z'",
+"Sí, por supuesto que sí. ¿Qué opina de '2'?",
+"En efecto, aparece en varias ocasiones. Ahora solo quedan dos letras. Las dos se usan en una única ocasión. Probemos primero con '.'.",
+"Es usted muy listo, Mr. Legrand. Solo falta una letra y es bastante fácil. '_' tiene que ser...",
+"¡Enhorabuena, ha encontrado todas las letras! ¿Por qué no va a ver si Mr. Poe ha regresado a casa?",
+"Gracias, y adiós (me sigue recordando a alguien...).",
+
+
+
+};

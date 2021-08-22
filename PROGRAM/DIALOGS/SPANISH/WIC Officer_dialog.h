@@ -1,0 +1,18 @@
+string DLG_TEXT[17] = { 
+"Buenos dias. Mi nombre es ",
+"y yo soy el representante de la West India Trading Company. Que te trae a mi Escritorio?",
+"Mi nombre es ",
+". Hay un favor que me gustaria pedirle.",
+"Espera, esto es una oficina? Debo haber tomado un camino equivocado en alguna parte. Despedir.",
+"Pregunta. Pero por favor, sea breve. Hay mucho mas papeleo en mi Escritorio.",
+"Papeleo? !Si, el papeleo! Eso es exactamente con lo que necesito ayuda. Me gustaria evitar pagar Comision por la venta de mi cargamento.",
+"Ah, eso suena como una buena idea. Eso tambien debe evitar que su tripulacion de querer firmar articulos con ellos y es solo un pequeno paso de alli a la pirateria!",
+"!Parece que hablamos el mismo idioma! Mientras mas ganancias y menos piratas se aprovechen de los barcos mercantes, mejor.",
+"Aunque, por supuesto, estoy muy feliz de ayudar a un companero comerciante, usted debe entender que hay algunos... gastos administrativos. Puedo hacer lo que me pides, pero te costara 1.000.000 de piezas de oro.",
+"Me imagino que el precio esta tan inflado como prueba de que realmente soy serio acerca de ser un comerciante respetable? Eso es comprensible. Parece que tenemos un trato.",
+"Eso suena muy divertido. ?Que tal si me voy y te dejo ir a tus propios asuntos? Gracias y adios.",
+"Piratear buques mercantes? No, no querriamos eso en absoluto. Sin embargo, me acaba de dar una idea totalmente distinta. Me ire ahora...",
+"Esperar? Que? Cuan....? Pedazo de papel? ?Mucho oro??? Creo que ire a Turquia el boticario ahora.",
+"!Ahi lo tienes! Firmado, sellado y todo oficial. Pero adviertan que su licencia sera revocada inmediatamente despues de un entiendo sin competencia.",
+"Comprensible. Estoy seguro de que disfrutare mi tiempo como comerciante ejercitos. Ha sido un placer hacer negocios con usted.",
+};

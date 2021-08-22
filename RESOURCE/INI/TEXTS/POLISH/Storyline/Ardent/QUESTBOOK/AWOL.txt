@@ -1,0 +1,3 @@
+title=Missing Officer
+text.t1=#sromance# has not returned to the ship - #spronoun#'s probably still in town somewhere. I should check the tavern.
+text.t2=It seems #sromance# has not jumped ship voluntarily. The alternative is even worse, though...

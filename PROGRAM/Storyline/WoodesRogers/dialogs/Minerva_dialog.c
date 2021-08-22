@@ -469,13 +469,29 @@ void ProcessDialogEvent()
 		break;
 
 		case "alchemy_part2_A":
-			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
-			Dialog.text = DLG_TEXT[49];
-			link.l1 = DLG_TEXT[50];
+			PlaySound("VOICE\ENGLISH\Fre_f_a_007.wav");
+			Dialog.text = DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
 			link.l1.go = "alchemy_part2_B";
 		break;
 
 		case "alchemy_part2_B":
+			SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+			RemoveCharacterEquip(Pchar, POUCH_ITEM_TYPE );
+			RemoveCharacterEquip(Pchar, BELT_ITEM_TYPE );
+			RemoveCharacterEquip(Pchar, EQUIP3_ITEM_TYPE );
+			TakeItemFromCharacter(Pchar, "ammobag2" );
+			TakeItemFromCharacter(Pchar, "pistolbelt" );
+			TakeItemFromCharacter(Pchar, "BB_hatA2" );
+			PlaySound("PEOPLE\clothes1.wav");
+
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			link.l1.go = "alchemy_part2_C";
+		break;
+
+		case "alchemy_part2_C":
 			PlaySound("INTERFACE\glass2.wav");
 			GiveItem2Character(Pchar, "bladebottle_CV1_sc");
 			GiveItem2Character(Pchar, "bladebottle_CT1_nitr");
@@ -484,12 +500,278 @@ void ProcessDialogEvent()
 			PlaySound("VOICE\ENGLISH\Fre_f_a_005.wav");
 			Dialog.text = DLG_TEXT[51];
 			link.l1 = DLG_TEXT[52];
+			link.l1.go = "alchemy_part2_D";
+		break;
+
+		case "alchemy_part2_D":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[53];
+			link.l1 = DLG_TEXT[54];
 			link.l1.go = "exit";
 			AddDialogExitQuest("Minerva_alchemy2_done");
 		break;
 
 	//---------------------------------------------------------------------------------------
-	
+
+		case "Minerva_Q2":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_006.wav");
+			Dialog.text = DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "alchemy_Q2";
+		break;
+
+		case "alchemy_Q2":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_002.wav");
+			Dialog.text = DLG_TEXT[57];
+			
+			if(GetAttribute(Pchar, "smugglers_lair") == "info")
+			{
+				//don't repeat this question - it's in the questbook
+			}
+			else
+			{
+				if(GetAttribute(Pchar, "newspaper3") == "read")
+				{
+					Pchar.smugglers_lair = "info";
+					link.l0 = DLG_TEXT[96];
+					link.l0.go = "smugglers_lair";
+				}
+			}
+			link.l1 = DLG_TEXT[80];
+			link.l1.go = "trismegistus";
+			link.l2 = DLG_TEXT[86];
+			link.l2.go = "ingredients";
+			link.l3 = DLG_TEXT[98];
+			link.l3.go = "sulfuric_acid";
+			link.l4 = DLG_TEXT[58];
+			link.l4.go = "crucible";
+			link.l5 = DLG_TEXT[63];
+			link.l5.go = "grinding";
+			link.l6 = DLG_TEXT[64];
+			link.l6.go = "filtration";
+			link.l7 = DLG_TEXT[90];
+			link.l7.go = "mixing";
+			link.l8 = DLG_TEXT[92];
+			link.l8.go = "secret";
+			link.l9 = DLG_TEXT[94];
+			link.l9.go = "advice";
+			link.l10 = DLG_TEXT[88];
+			link.l10.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "smugglers_lair":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[97];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+			AddQuestRecord("Blackbeards_crew", "4");
+		break;
+
+		case "secret":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[93];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "trismegistus":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[81];
+			if(CheckCharacterItem(Pchar,"book70_start") || CheckCharacterItem(Pchar,"book70") || CheckCharacterItem(Pchar,"book70_0")
+			|| CheckCharacterItem(Pchar,"book70_2") || CheckCharacterItem(Pchar,"book70_4") || CheckCharacterItem(Pchar,"book70_6")
+			|| CheckCharacterItem(Pchar,"book70_8") || CheckCharacterItem(Pchar,"book70_10"))
+			{
+				link.l1 = DLG_TEXT[69];
+				link.l1.go = "exit";
+			}
+			else
+			{
+				link.l2 = DLG_TEXT[82];
+				link.l2.go = "trismegistus_search";
+			}
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "trismegistus_search":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[83];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "ingredients":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[87];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "sulfuric_acid":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_005.wav");
+			Dialog.text = DLG_TEXT[99];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "crucible":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[59];
+			link.l1 = DLG_TEXT[60];
+			link.l1.go = "crucible_fill";
+			link.l2 = DLG_TEXT[65];
+			link.l2.go = "crucible_firewood";
+			link.l3 = DLG_TEXT[66];
+			link.l3.go = "crucible_wheel";
+			link.l4 = DLG_TEXT[67];
+			link.l4.go = "crucible_receiver";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "crucible_fill":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[68];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "crucible_firewood":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[70];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+
+			if(CheckCharacterItem(Pchar,"book70_start") || CheckCharacterItem(Pchar,"book70") || CheckCharacterItem(Pchar,"book70_0")
+			|| CheckCharacterItem(Pchar,"book70_2") || CheckCharacterItem(Pchar,"book70_4") || CheckCharacterItem(Pchar,"book70_6")
+			|| CheckCharacterItem(Pchar,"book70_8") || CheckCharacterItem(Pchar,"book70_10"))
+			{
+
+			}
+			else
+			{
+				link.l2 = DLG_TEXT[89];
+				link.l2.go = "firewood_book";
+			}
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "firewood_book":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_007.wav");
+			Dialog.text = DLG_TEXT[83];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "crucible_wheel":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[71];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "crucible_receiver":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[72];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			link.l2 = DLG_TEXT[84];
+			link.l2.go = "crucible_funnel";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "crucible_funnel":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_007.wav");
+			Dialog.text = DLG_TEXT[85];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "grinding":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[59];
+			link.l1 = DLG_TEXT[73];
+			link.l1.go = "grinding_fill";
+			link.l2 = DLG_TEXT[74];
+			link.l2.go = "grinding_crank";
+			link.l3 = DLG_TEXT[75];
+			link.l3.go = "grinding_receiver";
+		break;
+
+		case "grinding_fill":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[76];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "grinding_crank":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[77];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "grinding_receiver":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[78];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "filtration":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[79];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			link.l2 = DLG_TEXT[84];
+			link.l2.go = "filtration_filter";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "filtration_filter":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[85];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "mixing":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[91];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "secret":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_001.wav");
+			Dialog.text = DLG_TEXT[93];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
+		case "advice":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
+			Dialog.text = DLG_TEXT[95];
+			link.l1 = DLG_TEXT[6];
+			link.l1.go = "exit";
+			Diag.TempNode = "alchemy_Q2";
+		break;
+
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

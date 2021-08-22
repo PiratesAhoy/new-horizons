@@ -51,6 +51,20 @@ void DailyCrewUpdate()
 
 	//JA 1Dec06 reworked Food & Rum system -->
 	//food
+
+		// GR: If you have the "Cooking With Albatross" book and an albatross, cook it
+		bool HaveCookBook = CheckCharacterItem(PChar, "book9");		// Do you have the cookbook?
+		int PCabin = FindCharacterShipCabin(PChar);
+		if (!HaveCookBook && PCabin >= 0 && CheckAttribute(&Locations[PCabin], "box1.items.book9")) // If not, is it in your ship's chest?
+		{
+			HaveCookBook = true;
+		}
+		if (HaveCookBook && CheckCharacterItem(PChar, "albatross"))
+		{
+			TakeItemFromCharacter(PChar, "albatross");
+			AddCharacterGoods(PChar, GOOD_WHEAT, 2);
+		}
+
 		int foodQ = GetSquadronGoods(pchar, GOOD_WHEAT);
 		float foodRatio[4];
 		int ft[4];
@@ -399,8 +413,10 @@ void DailyCrewUpdate()
 				LogIt("Captain, " + makeint((1-uncursed_percentage)*100) + "% of the crew is cursed due to " + CursedCoins + " Aztec coins");
 			}
 
-			for (i = 0; i < GetCompanionQuantity(pchar); i++) {
-				chref = GetCharacter(GetCompanionIndex(GetMainCharacter(), sti(i)));
+			for (i = 0; i < COMPANION_MAX; i++)
+			{
+				if (GetCompanionIndex(PChar, i) < 0) continue;
+				chref = GetCharacter(GetCompanionIndex(PChar, i));
 				if(CheckCharacterItem(chref,"cursedcoin"))
 				{
 					if(!CheckAttribute(chref, "curseddays"))	chref.curseddays = 0;
@@ -483,7 +499,7 @@ void DailyCrewUpdate()
 					if(!CheckAttribute(pchar, "articles_note"))
 					{
 						pchar.articles_note = true;																					// PB: Show this only once
-						LogIt("Captain, the crew is envious of the amount of money we have on board and wants to sign articles");	// PB: Log message added + effect increased to become visible
+						LogIt(TranslateString("","Captain, the crew is envious of the amount of money we have on board and wants to sign articles"));	// PB: Log message added + effect increased to become visible
 						SetQuestHeader("crew_affairs");																				// PB: Add to Questbook too
 						AddQuestRecord("crew_affairs", 1);																			// PB: Add to Questbook too
 					}
@@ -525,18 +541,20 @@ void DailyCrewUpdate()
 
 				// LDH make companion ship morale change like player ship morale - 27Jan09
 				// This way you don't have captured ships going from Treacherous to Heroic in one jump
-				if(!CheckAttribute(chref, "Ship.Crew.Morale"))	chref.Ship.Crew.Morale = 45;									// PB: To fix missed attribute
-				morale = sti(chref.Ship.Crew.Morale);																			// companion ship previous morale
+				if(!CheckAttribute(chref, "Ship.Crew.Morale"))	chref.Ship.Crew.Morale = 45;						// PB: To fix missed attribute
+				morale = sti(chref.Ship.Crew.Morale);											// companion ship previous morale
 
 				// PB: Use Companion Skills and Reputation for Morale -->
 				int diff = 0;
 				int player_rep = GetCharacterReputation(pchar);
 				int compan_rep = GetCharacterReputation(chref);
-				PerkIron = GetCharacterPerkUsing(chref,"IronWill");																// check captain ONLY
-				skillLead = GetEffectiveSkill(chref,SKILL_LEADERSHIP);															// check captain ONLY
-				moralemod = 0.6 + (stf(skillLead) + stf(PerkIron)*5)/20;														// calculated same as player
-				moralemod = moralemod * moralescale;																			// apply food and rum modifiers
-				moralemod = norm_morale * moralemod;																			// apply leadership and perks for companion
+				PerkIron = GetCharacterPerkUsing(chref,"IronWill");									// check captain ONLY
+				if(player_rep >= REPUTATION_NEUTRAL && compan_rep >= REPUTATION_NEUTRAL) ResetEffectiveSkill(chref, SKILL_LEADERSHIP);	// Without this reset, leadership is 0!
+				if(player_rep <= REPUTATION_NEUTRAL && compan_rep <= REPUTATION_NEUTRAL) ResetEffectiveSkill(chref, SKILL_LEADERSHIP);	// Only apply leadership bonus if companion and player reputations do not conflict
+				skillLead = GetEffectiveSkill(chref,SKILL_LEADERSHIP);									// check captain ONLY
+				moralemod = 0.6 + (stf(skillLead) + stf(PerkIron)*5)/20;								// calculated same as player
+				moralemod = moralemod * moralescale;											// apply food and rum modifiers
+				moralemod = norm_morale * moralemod;											// apply leadership and perks for companion
 				if(ProfessionalNavyNation() == UNKNOWN_NATION)
 				{
 					if(player_rep > REPUTATION_NEUTRAL && compan_rep < REPUTATION_NEUTRAL)
@@ -625,9 +643,7 @@ void DailyCrewUpdate()
 	//ASVS - playing main_theme music mod <---
 
 // KK & PB -->
-	int wounded_total = 0;
-	int healed_total = 0;
-	int killed_total = 0;
+		
 	for (i = 0; i < COMPANION_MAX; i++)
 	{
 		cn = GetCompanionIndex(pchar, i);
@@ -645,15 +661,16 @@ void DailyCrewUpdate()
 			RemoveCharacterWoundedCrew(chref, killed_qty);
 
 			if (GetCargoGoods(chref, GOOD_TREATMENT) > 0) RemoveCharacterGoods(chref, GOOD_TREATMENT, 1);
-
-			wounded_total = wounded_total + GetWoundedCrewQuantity(chref);
-			healed_total  = healed_total  + healed_qty;
-			killed_total  = killed_total  + killed_qty;
+		
+			if (GetWoundedCrewQuantity(chref) > 0 || healed_qty > 0 || killed_qty > 0)
+			{
+				LogIt(GetWoundedCrewQuantity(chref) + " wounded crewmembers: " + healed_qty + " healed and " + killed_qty + " died from gangrene on "+GetMyShipNameShow(chref)+".");
+			} // Serge Grey: moved and changed for ship's name outputting (24.05.2018).
 		}
+
 	}
-	if (wounded_total > 0 || healed_total > 0 || killed_total > 0) {
-		LogIt(wounded_total + " wounded crewmembers: " + healed_total + " healed and " + killed_total + " died from gangrene.");
-	}
+
+		
 // KK & PB <--
 
 // KK -->
@@ -670,7 +687,7 @@ void DailyCrewUpdate()
 		{
 			chref = GetCharacter(cn);
 			//MAXIMUS: [if player wants to release captive in location of his nation, he doesn't want to escape anymore]
-			if(IsPrisoner(chref) && !CheckAttribute(chref,"released"))
+			if(IsPrisoner(chref) && !CheckAttribute(chref,"released") && !CheckAttribute(chref,"quest.no_escape"))	// GR: new attribute "quest.no_escape" for quest prisoners who must not escape due to plot
 			{
 				int tmpransom = GetPrisonRansomCost(chref);// NK 04-10-25 change so escape only near shore, make sure ransom increases
 				chref.ransom = makeint(stf(chref.ransom) * RANSOM_INC) +1;
@@ -683,6 +700,7 @@ void DailyCrewUpdate()
 					if(frnd() < ESCAPE_CHANCE * (1.0 + makefloat(GetShipSkill(chref, SKILL_SNEAK))) / (1.0 + makefloat(skillLuck))) // was CalcCharacterSkill(pchar, SKILL_SNEAK)
 					{
 						DeleteAttribute(chref,"prisoned");
+						if(GetMySimpleOldName(chref) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 						RemovePassenger(pchar,chref);
 						DeleteAttribute(chref,"ransom"); // NK
 						ChangeCharacterAddressGroup(chref, "None", "", "");

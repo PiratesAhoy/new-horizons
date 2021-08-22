@@ -1,0 +1,11 @@
+title=Misión secundaria - Vogelstruijs
+text.t1=El Contre-Amirale Cesar Beauregard me ha ordenado interceptar a un contrabandista holandés cargado con municiones que los españoles piensan usar para retomar #sRedmond#. Según las fuentes del Contre-Amirale, el barco se llama 'Vogelstruijs' y está anclado en #sDouwesen#.
+text.t2=Un estibador de #sDouwesen# me ha dicho que el capitán del 'Vogelstruijs' vive en una casa aquí en #sDouwesen#. Tal vez debería hacer una visita a la casa y registrarla en busca de pistas.
+text.t3=Lo he encontrado. Esto es incluso mejor que un diario de a bordo, el muy idiota guardaba los documentos oficales en su armario. ¡Vaya criminal más patético!
+text.t4=¡Malditta sea! La mujer del capitán me descubrió. Llamó a los guardias y tuve que matarlos. De ahora en adelante debo tener mucho más cuidado con los holandeses. 
+text.t5=¡Malditta sea! La mujer del capitán me descubrió. Se puso a chillar que quería deshonrarla. Pero es ella la que estaba cometiendo adulterio, ha mandado a su amante contra mí. Lo he matado, así que ya no seguirá engañando a su marido. 
+text.t6=¡Malditta sea! La mujer del capitán me descubrió. Tuve que matarla, no puedo dejar testigos. 
+text.t7=¡Malditta sea! La mujer del capitán me descubrió. Amenacé con matarla, ella me suplicó que no lo hiciera e incluso me dio dinero y algunas joyas. ¡Debería hacer esto más a menudo! 
+text.t8=Con todo resuelto, debo llevar esta información al Contre-Amirale.
+text.t9=¡Eso sí que ha sido una buena explosion! Me pregunto cuántos barriles de pólvora transportaba el 'Vogelstruijs'. Ahora, volveré para informar al Contre-Amirale.
+text.t10=El Contre-Amirale ha quedado muy contento con las noticias de la destrucción del 'Vogelstruijs'. Me ha pagado las otras 2500 piezas de a ocho y me ha dado permiso para retirarme.

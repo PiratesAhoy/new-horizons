@@ -1,0 +1,9 @@
+title=Rescue researcher
+text.t1=When I got out of #sGreenford#'s jail on #sisland_Oxbay#, I witnessed a group of cutthroats trying to burn one old man. One woman came to me and asked me to help her save the old man because the soldiers refused to help.
+text.t2=When I got out of #sGreenford#'s jail on #sisland_Oxbay#, I witnessed a group of cutthroats trying to burn one old man. A woman came to me and asked me to help her save the old man because the soldiers refuse to do it. I am not crazy enough to fight a crowd of people in order to rescue some old duffer.
+text.t3=Such rotten luck! As soon as that tender-hearted woman left me, this worthless scum started bothering me. I asked him to leave me alone, and just wanted to leave, but that worthless cur hit me.
+text.t4=I forced the noisy crowd to disperse.
+text.t5=People are so easily manipulated. All I needed was a few coins to persuade the crowd to go to the tavern and drink instead of burning the old man.
+text.t6=By talking to the soldiers I realized they had no intention of helping the poor old man. In any case, I found a solution. I decided to distribute a few coins, and it worked like a charm - the crowd has dispersed.
+text.t7=By talking to the soldiers I realized they had no intention of helping the poor old man. But I managed to change their minds by persuading them that such behavior discredits them.
+text.t8=The old man I saved turned out to be peculiar little fellow. Calls himself a 'researcher'. I suppose he must be one of those 'natural philosophers' - mad as a March hare, no doubt. When he found out I was a captain, he immediately got a notion to perform an experiment on my ship. In order to distract him from such unsound ideas, I agreed to go to his house with him.

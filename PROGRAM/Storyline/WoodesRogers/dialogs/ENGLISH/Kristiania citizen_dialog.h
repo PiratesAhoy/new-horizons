@@ -1,4 +1,4 @@
-string DLG_TEXT[52] = { 
+string DLG_TEXT[55] = { 
 "New here?",
 "Indeed I am. May I ask you a question?",
 "Certainly. Are you lost in Kristiania?",
@@ -7,7 +7,7 @@ string DLG_TEXT[52] = {
 "Is that so. Could you please give me some directions then...",
 "Sure. It's very easy. The exit is close to the only brick house in the town Center.",
 "(This sounds too easy. Maybe it has been explored years go.) Ahh.. right. And thank you.",
-"The auction is over. You just missed it.",
+"The auction is over. You just missed it.",	//8
 "Very well, I'm not interested in antiques.", 
 "You found the entrance to Blackbeard's Tower you say. And yes, we have all been there trying to open the door.",
 "It looked like a lever should be placed to unlock it.",
@@ -27,7 +27,7 @@ string DLG_TEXT[52] = {
 "And the Tailor where do I find him?",			//25
 "Do you know of a building called the Red House?",
 "The Townhall is the big stone building in the town center. It's always guarded by dragoons.",
-"Thank you, I'll find it.",
+"Thank you.",
 "Governor Hinrich Adolph Walter lives in the Townhall building.",
 "Is he german?",					//30
 "He was born in Germany, but his beautiful wife Anna Helena Trafvenfeldt is from Sweden.",
@@ -51,5 +51,8 @@ string DLG_TEXT[52] = {
 "I guess that's something.",
 "Yes, but be careful - the jungle is both like a maze and there may also be hostile indians.",	//50
 "Thanks for the warning.",
+"Do you know the way to the Fort?",
+"Of course. You find the gate at the far end of the town center.",
+"Oh never mind, I think I'll find my way.",
 
 };

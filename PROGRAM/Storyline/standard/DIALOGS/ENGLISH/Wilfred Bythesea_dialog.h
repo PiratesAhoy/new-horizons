@@ -25,7 +25,7 @@ string DLG_TEXT[28] = {
 "Great! Then I'll give you the ship and you'll take care of ",
 "Sidonio Ogarrio",
 "Sidonio Ogarrio",
-" on #sIsla Muelle#.",
+" on #sIsla Muelle#. He lives in a small square behind the tavern.",
 "All right. I accept.",
 
 };

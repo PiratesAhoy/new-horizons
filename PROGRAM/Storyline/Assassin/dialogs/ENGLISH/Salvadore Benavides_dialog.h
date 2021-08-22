@@ -86,7 +86,7 @@ string DLG_TEXT[247] = {
 "Did he work for you?",
 "No. He worked for the governor of #sisland_Isla Muelle# a few years ago. But, his enthusiasm for killing all and sundry reflected badly on our nation and he was let go. Afterwards, he created a society of assassins for hire, he has no morals. He has recently been working for the English and has killed some important Spanish officials.",
 "... and he is still working for our enemies?",
-"Yes, by the way it is his men that do the killing, he is the head and we need to cut of the head.",
+"Yes, by the way it is his men that do the killing, he is the head and we need to cut off the head.",
 "Do you know where he lives?",
 "Unfortunately, no. He regularly changes his headquarters. Our agents have found out that a pirate living in #sTortuga# may know where he is, or how to contact him.",
 "This pirate, how would he know?",

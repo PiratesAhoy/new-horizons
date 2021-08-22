@@ -1,0 +1,17 @@
+title=Mis primeros días
+text.t1=Bueno, aquí estoy, libre de ataduras y normas, y dispuesto a lograr fama y fortuna. El mejor lugar para buscar una aventura que se ajuste a mis propósitos será la taberna, según creo, pero puedo echar un vistazo primero a lo que venden los mercaderes ambulantes del puerto, hablar con algunos coloridos personajes locales, y después visitaré la taberna. 
+text.t2=Esto parece una oportunidad para ganar dinero fácil. ¿Qué problemas me puede traer ayudar a una damisela en apuros? 
+text.t3=Tenemos que ir a #sGreenford#. Puedo ir por tierra o por mar. Del modo que sea, no deberíamos tardar mucho, pero sé que será más cómodo y seguro para la dama si vamos por mar.
+text.t4=La taberna parece el lugar lógico por el que empezar, deberíamos visitarla.
+text.t5=#sisland_Quebradas Costillas# es donde tengo que buscar a la familia de la señorita Brin. Sé que allí hay un asentamiento pirata.
+text.t6=Ahora se me presenta una elección: #sisland_Quebradas Costillas# o Bahía Roca Gris. Bueno, la bahía está más cerca, pero prometí ayudar a Annabella. Decisiones, decisiones...
+text.t7=¡Ahora trabajo con una agente de la Hacienda Real! Y ella quiere que vayamos a #sTortuga#, al norte de #sisland_Hispaniola#, bajo bandera pirata. Espero que esto no se complique demasiado.
+text.t8=¡He perdido mi barco! Pero tengo los diamentes, y puedo usar parte de ellos para comprar un barco nuevo hasta que vuelva a dar alcance a Shaypen. Quizás debería poner rumbo a #sisland_Quebradas Costillas# después de todo, pero necesito un nuevo barco; en tal caso debería volver primero a #sOxbay#. Más decisiones.
+text.t9=Hemos averiguado que Brinkley se dirige a una isla holandesa. Bill el Botas dice que deberíamos navegar hacia #sWillemstad#, en #sisland_Curacao#.
+text.t10=He agredido a una agente de la Hacienda Real. Eso no me hará quedar bien. Será mejor que vea lo que puedo averiguar sobre la fmmilia Brin en el asentamiento pirata.
+text.t11=Me he reencontrado con mi padre después de muchos años. Es un pirata y está preocupado por algo que va a pasar aquí, quiere mi ayuda. No esty nada seguro de esto, yo no soy un pirata. Me han hablado de los problemas que se avecinan. Demasiada información por el momento. Creo que me iré a #sOxbay#, en #sisland_Oxbay#, y que sea lo que Dios quiera.
+text.t12=He conocido a Thomas the Terror, parece que es un miembro de la Hermandad. Vamos a navegar juntos hasta #sOxbay#. Ma ha dicho que debemos poner rumbo sur una vez hayamos salido del puerto, hasta que alcancemos #sisland_Curacao#. Dejando la isla por babor, navegaremos rumbo sur sureste hacia #sisland_Oxbay#.
+text.t13=Bueno, aquí estoy, libre de ataduras y normas, y dispuesto a lograr fama y fortuna. Tengo que hablar con algunas personas en el puerto, echar un vistazo a lo que tienen los mercaderes, y después pasar por la taberna a buscar alguna aventura.
+text.t14=empty.
+text.t15=empty.
+text.t16=empty.

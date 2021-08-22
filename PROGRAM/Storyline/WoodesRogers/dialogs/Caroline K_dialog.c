@@ -521,8 +521,24 @@ void ProcessDialogEvent()
 		break;
 
 		case "QC_outside_gate_talk_2":
+			PlaySound("VOICE\ENGLISH\gr_wench3_pos.wav");
 			dialog.text = DLG_TEXT[108];
 			link.l1 = DLG_TEXT[109];
+			link.l1.go = "money_found";
+		break;
+
+		case "money_found":
+			PlaySound("VOICE\ENGLISH\gr_wench3_mhm.wav");
+			dialog.text = DLG_TEXT[204];
+			link.l1 = DLG_TEXT[205];
+			link.l1.go = "money_found_1";
+		break;
+
+		case "money_found_1":
+			PlaySound("INTERFACE\coins8.wav");
+			AddMoneyToCharacter(Pchar,2372);
+			dialog.text = DLG_TEXT[206];
+			link.l1 = DLG_TEXT[207];
 			link.l1.go = "QC_outside_gate_talk_3";
 		break;
 

@@ -399,7 +399,8 @@ void ProcessDialogEvent()
 		case "church_help_good":
 			dialog.snd = "Voice\FATB\FATB032";
 			dialog.text = DLG_TEXT[89];
-			link.l1 = DLG_TEXT[90];
+			if (NPChar.quest.church_help == "without_letters") link.l1 = DLG_TEXT[170] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[86])]) + DLG_TEXT[171];
+			else link.l1 = DLG_TEXT[90];
 			link.l1.go = "church_help_good_2";
 		break;
 
@@ -411,7 +412,6 @@ void ProcessDialogEvent()
 			AddQuestRecord("Ammand", 13);
 			CloseQuestHeader("Ammand");
 			pchar.church = "1";
-			npchar.quest.church_help = "done";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 2500);
 			if(AUTO_SKILL_SYSTEM)
@@ -422,14 +422,16 @@ void ProcessDialogEvent()
 			else { AddPartyExp(pchar, 5000); }
 			ChangeCharacterReputation(pchar, 5);
 			ChangeCharacterAddress(characterFromID("Gilbert Ballester"), "none", "none");
-			TakeItemFromCharacter(pchar, "pornushka");
+			if (NPChar.quest.church_help != "without_letters") TakeItemFromCharacter(pchar, "pornushka");
+			npchar.quest.church_help = "done";
 			SetRumourState("Children_GreenChurch", false); // NK
 		break;
 
 		case "church_help_bad":
 			dialog.snd = "Voice\FATB\FATB034";
 			dialog.text = DLG_TEXT[93];
-			link.l1 = DLG_TEXT[94];
+			if (NPChar.quest.church_help == "without_letters") link.l1 = DLG_TEXT[172] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[86])]) + DLG_TEXT[173];
+			else link.l1 = DLG_TEXT[94];
 			link.l1.go = "church_help_bad_2";
 		break;
 
@@ -440,7 +442,6 @@ void ProcessDialogEvent()
 			link.l2.go = "exit";
 			AddQuestRecord("Ammand", 14);
 			CloseQuestHeader("Ammand");
-			npchar.quest.church_help = "done";
 			pchar.church = "1";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 2500);
@@ -452,7 +453,8 @@ void ProcessDialogEvent()
 			else { AddPartyExp(pchar, 2000); }
 			ChangeCharacterAddress(characterFromID("father jerald"), "none", "none");
 			characters[GetCharacterIndex("Gilbert Ballester")].dialog.filename = "father jerald_dialog.c";
-			TakeItemFromCharacter(pchar, "pornushka");
+			if (NPChar.quest.church_help != "without_letters") TakeItemFromCharacter(pchar, "pornushka");
+			npchar.quest.church_help = "done";
 			SetRumourState("Children_GreenChurch", false); // NK
 		break;
 
@@ -769,9 +771,13 @@ void ProcessDialogEvent()
         if ( IsCharacterPerkOn(PChar,"MusketsShoot") )            { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"GrapplingProfessional") )   { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"InstantBoarding") )         { intFreePerks++; }
-        if ( IsCharacterPerkOn(PChar,"BasicBattleState") )        { intFreePerks++; }
-        if ( IsCharacterPerkOn(PChar,"AdvancedBattleState") )     { intFreePerks++; }
-        if ( IsCharacterPerkOn(PChar,"ShipDefenceProfessional") ) { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"BasicDamageControl") )        { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"AdvancedDamageControl") )     { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"ProfessionalDamageControl") ) { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"BasicFirstAid") )		  { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"AdvancedFirstAid") )	  { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"Rigging") )        	  { intFreePerks++; }
+        if ( IsCharacterPerkOn(PChar,"RiggingAdvance") )          { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"LightRepair") )             { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"InstantRepair") )           { intFreePerks++; }
         if ( IsCharacterPerkOn(PChar,"ShipSpeedUp") )             { intFreePerks++; }

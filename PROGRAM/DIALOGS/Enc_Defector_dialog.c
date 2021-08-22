@@ -102,7 +102,8 @@ void ProcessDialogEvent()
 					Preprocessor_Add("gem", GetItemNameByID(gemtype));
 					PlayStereoSound("INTERFACE\important_item.wav");
 					GiveItem2Character(PChar, gemtype);
-					if (FindIslandByLocation(PChar.location) == "Oxbay") PChar.quest.defector_gemtype = gemtype;
+					PChar.quest.defector_gemtype = gemtype;
+					PChar.quest.defector_island = FindIslandByLocation(PChar.location);
 					d.Text = DLG_TEXT[14];
 					Link.l1 = DLG_TEXT[15];
 					Link.l1.go = "Exit_1";

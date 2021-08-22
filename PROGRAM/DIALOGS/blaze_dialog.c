@@ -1061,6 +1061,36 @@ void ProcessDialogEvent()
 	break;		
 //Cartagena quest
 
+//->A Family' Story Quest
+	case "Dead_Patrol":
+		Dialog.Text = DLG_TEXT[356];
+		Link.l1 = DLG_TEXT[357];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("meet_french");
+	break;
+
+	case "See_French_Camp":
+		Dialog.Text = DLG_TEXT[358];
+		Link.l1 = DLG_TEXT[359];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("find_chest");
+	break;
+	
+	case "See_French_Camp_Bis":
+		Dialog.Text = DLG_TEXT[358];
+		Link.l1 = DLG_TEXT[360];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("voltar_mais_tarde");
+	break;	
+
+	case "Key_Chest":
+		Dialog.Text = DLG_TEXT[361];
+		Link.l1 = DLG_TEXT[362];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("search_rifle");
+	break;	
+//<-A Family' Story Quest
+
 	case "mushroom_vision":
 		PlaySound("VOICE\ENGLISH\blaze_hah.wav");
 		Dialog.Text = DLG_TEXT[316];
@@ -1132,73 +1162,127 @@ void ProcessDialogEvent()
 	break;
 
 	case "sidequest_Admiralty_letter":
-		Dialog.Text = DLG_TEXT[342];
-		Link.l1 = DLG_TEXT[343];
+		Dialog.Text = DLG_TEXT[343];
+		Link.l1 = DLG_TEXT[344];
 		Link.l1.go = "exit";
 	break;
 //Hornblower
 
 // Ardent
-	case "nothing_in_Santiago":
+	case "get_wardens_stuff":
 		Dialog.Text = DLG_TEXT[323];
+		Link.l1 = "";
+		Link.l1.go = "exit";
+	break;
+
+	case "nothing_in_Santiago":
+		Dialog.Text = DLG_TEXT[324];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "attack_brig":
-		Dialog.Text = DLG_TEXT[324];
+		Dialog.Text = DLG_TEXT[325];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "find_papers":
-		Dialog.Text = DLG_TEXT[325];
+		Dialog.Text = DLG_TEXT[326];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "rob_store":
-		if (IsDay()) Dialog.Text = DLG_TEXT[326];
-		else Dialog.text = DLG_TEXT[327];
+		if (IsDay()) Dialog.Text = DLG_TEXT[327];
+		else Dialog.text = DLG_TEXT[328];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "arrow_through_window":
-		Dialog.Text = DLG_TEXT[328];
+		Dialog.Text = DLG_TEXT[329];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "stop_peeking":
-		Dialog.Text = DLG_TEXT[329];
+		Dialog.Text = DLG_TEXT[330];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "abduction_move_ship":
-		Dialog.Text = DLG_TEXT[330];
+		Dialog.Text = DLG_TEXT[331];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "threat_found_orders":
-		Dialog.Text = DLG_TEXT[336];
+		Dialog.Text = DLG_TEXT[337];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "hunt_found_orders":
 		Preprocessor_Add("villain", GetMySimpleName(characterFromID(PChar.quest.villain)));
-		Dialog.Text = DLG_TEXT[331];
+		Dialog.Text = DLG_TEXT[332];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "hunt_how_to_save_crew":
-		Dialog.Text = DLG_TEXT[335];
+		Dialog.Text = DLG_TEXT[336];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "hunt_residence_backdoor":
-		if (GetDayTime() == DAY_TIME_NIGHT) Dialog.Text = DLG_TEXT[332];
-		else Dialog.Text = DLG_TEXT[332] + DLG_TEXT[333];
+		if (GetDayTime() == DAY_TIME_NIGHT) Dialog.Text = DLG_TEXT[333];
+		else Dialog.Text = DLG_TEXT[333] + DLG_TEXT[334];
+		Link.l1 = "";
 		Link.l1.go = "exit";
 	break;
 
 	case "hunt_found_signature":
-		Dialog.Text = DLG_TEXT[334];
+		Dialog.Text = DLG_TEXT[335];
+		Link.l1 = "";
+		Link.l1.go = "exit";
+	break;
+
+	case "imperial_escort_ship_missing":
+		Dialog.Text = DLG_TEXT[346] + PChar.quest.imperial_escort.shipname + DLG_TEXT[347] + GetMyLastName(CharacterFromID("Imperial_Captain")) + DLG_TEXT[348];
+		Link.l1 = DLG_TEXT[349];
+		Link.l1.go = "exit";
+	break;
+
+	case "imperial_escort_at_cave":
+		Preprocessor_Add("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+		Dialog.Text = DLG_TEXT[350];
+		if(CheckCharacterItem(PChar, "pistolgas"))
+		{
+			Link.l1 = DLG_TEXT[351];
+		}
+		else
+		{
+			Link.l1 = DLG_TEXT[352];
+		}
+		Link.l1.go = "exit";
+	break;
+
+	case "imperial_escort_clear_air":
+		Dialog.Text = DLG_TEXT[353];
+		Link.l1 = "...";
+		Link.l1.go = "exit";
+	break;
+
+	case "imperial_escort_in_cave_no_agent":
+		Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+		AddQuestRecord("Imperial Escort", 27);
+		Preprocessor_Remove("envoy");
+		Preprocessor_Add("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
+		Dialog.Text = DLG_TEXT[354];
+		Link.l1 = DLG_TEXT[355];
 		Link.l1.go = "exit";
 	break;
 
@@ -1207,16 +1291,16 @@ void ProcessDialogEvent()
 // The Kapitein of Kralendijk
 	case "kapitein_decision":
 		Preprocessor_Add("proposer", GetMySimpleName(characterFromID("Willem Voigt")));
-		Dialog.text = DLG_TEXT[337];
-		Link.l1 = DLG_TEXT[338];
+		Dialog.text = DLG_TEXT[338];
+		Link.l1 = DLG_TEXT[339];
 		Link.l1.go = "exit_kapitein_go_ahead";
-		Link.l2 = DLG_TEXT[339];
+		Link.l2 = DLG_TEXT[340];
 		Link.l2.go = "exit";
 	break;
 
 	case "kapitein_steal_uniform":
-		Dialog.Text = DLG_TEXT[340];
-		Link.l1 = DLG_TEXT[341];
+		Dialog.Text = DLG_TEXT[341];
+		Link.l1 = DLG_TEXT[342];
 		Link.l1.go = "exit";
 	break;
 
@@ -1229,10 +1313,32 @@ void ProcessDialogEvent()
 
 // Crystal Skull
 	case "crysskull_stuck_in_cave":
-		Dialog.Text = DLG_TEXT[344];
+		Dialog.Text = DLG_TEXT[345];
 		Link.l1 = "...";
 		Link.l1.go = "exit";
 	break;
 // Crystal Skull
+
+// Colombian Silver
+	case "colombian_silver_first_sighting":
+		Dialog.Text = DLG_TEXT[363];
+		Link.l1 = DLG_TEXT[364];
+		Link.l1.go = "exit";
+	break;
+
+	case "colombian_silver_battle_over":
+		Dialog.Text = DLG_TEXT[365];
+		Link.l1 = DLG_TEXT[366];
+		Link.l1.go = "exit";
+	break;
+// Colombian Silver
+
+// Hitman Easter Egg
+	case "Sparrow_steals_ship":
+		Dialog.Text = DLG_TEXT[367];
+		Link.l1 = DLG_TEXT[368];
+		Link.l1.go = "exit";
+	break;
+// Hitman Easter Egg
 	}
 }

@@ -174,7 +174,7 @@ void ProcessDialogEvent()
 				if (PChar.sex == "man") Preprocessor_Add("person", XI_ConvertString("woman"));
 				else Preprocessor_Add("person", XI_ConvertString("man"));
 				Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
-				Link.l5 = DLG_TEXT[123];
+				Link.l5 = DLG_TEXT[127];
 				Link.l5.go = "ardent_abduction1";
 			}
 
@@ -182,7 +182,7 @@ void ProcessDialogEvent()
 			{
 				dialog.snd = "Voice\CHWI\CHWI005";
 				d.Text = DLG_TEXT[36];
-				link.l5 = DLG_TEXT[128];
+				link.l5 = DLG_TEXT[132];
 				link.l5.go = "ardent_kidnap_rescue1";
 			}
 // Ardent
@@ -551,22 +551,22 @@ void ProcessDialogEvent()
 			DeleteQuestAttribute("ardent_kidnap.find_merchant");
 			if (PChar.sex == "man")
 			{
-				gov_kid = XI_ConvertString("daughter");
-				merch_kid = XI_ConvertString("son");
+				merch_kid = DLG_TEXT[116];
+				gov_kid = DLG_TEXT[120];
 			}
 			else
 			{
-				gov_kid = XI_ConvertString("son");
-				merch_kid = XI_ConvertString("daughter");
+				merch_kid = DLG_TEXT[117];
+				gov_kid = DLG_TEXT[121];
 			}
-			d.TEXT = DLG_TEXT[115] + GetMyFullName(CharacterFromID(PChar.quest.villain)) + ", " + merch_kid + DLG_TEXT[116] + GetMyFullName(CharacterFromID("Gilbert Downing")) + DLG_TEXT[117] + gov_kid + DLG_TEXT[118];
-			link.l1 = DLG_TEXT[119] + GetMyFullName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[120];
+			d.TEXT = DLG_TEXT[115] + GetMyFullName(CharacterFromID(PChar.quest.villain)) + merch_kid + DLG_TEXT[118] + GetMyFullName(CharacterFromID("Gilbert Downing")) + DLG_TEXT[119] + gov_kid + DLG_TEXT[122];
+			link.l1 = DLG_TEXT[123] + GetMyFullName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[124];
 			link.l1.go = "ardent_kidnap2";
 		break;
 
 		case "ardent_kidnap2":
-			d.Text = DLG_TEXT[121];
-			link.l1 = DLG_TEXT[122];
+			d.Text = DLG_TEXT[125];
+			link.l1 = DLG_TEXT[126];
 			Preprocessor_AddQuestData("merchant", GetMyFullName(CharacterFromID("Gilbert Downing")));
 			AddQuestRecord("Kidnap", 19);
 			Preprocessor_Remove("merchant");
@@ -576,8 +576,8 @@ void ProcessDialogEvent()
 		case "ardent_abduction1":
 			Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
 			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
-			d.Text = DLG_TEXT[124];
-			link.l1 = DLG_TEXT[125];
+			d.Text = DLG_TEXT[128];
+			link.l1 = DLG_TEXT[129];
 			link.l1.go = "ardent_abduction2";
 		break;
 
@@ -588,11 +588,12 @@ void ProcessDialogEvent()
 			Preprocessor_Remove("villain");
 			Preprocessor_Remove("romance");
 			Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
-			d.Text = DLG_TEXT[126];
+			d.Text = DLG_TEXT[130];
 			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("she"));
 			else Preprocessor_Add("pronoun", XI_ConvertString("he"));
 			PChar.quest.abduction_status = "married_villain";
-			link.l1 = DLG_TEXT[127];
+			Locations[FindLocation("Redmond_town_03")].reload.l9.disable = 0; // Re-open house of Gilbert Downing
+			link.l1 = DLG_TEXT[131];
 			link.l1.go = "exit";
 		break;
 
@@ -600,16 +601,18 @@ void ProcessDialogEvent()
 			PChar.quest.ardent_kidnap.status = "buy_wine";
 			Preprocessor_Add("romance", GetMyFullName(CharacterFromID(PChar.quest.romance)));
 			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
-			d.Text = DLG_TEXT[129];
-			link.l1 = DLG_TEXT[130];
+			d.Text = DLG_TEXT[133];
+			link.l1 = DLG_TEXT[134];
 			link.l1.go = "ardent_kidnap_rescue2";
 		break;
 
 		case "ardent_kidnap_rescue2":
 			Preprocessor_Add("villain", GetMyFullName(CharacterFromID(PChar.quest.villain)));
-			d.Text = DLG_TEXT[131];
-			link.l1 = DLG_TEXT[132];
+			Preprocessor_Add("pronoun", GetMyPronounSubj(CharacterFromID(PChar.quest.villain)));
+			d.Text = DLG_TEXT[135];
+			link.l1 = DLG_TEXT[136];
 			AddDialogExitQuest("kidnap_rescue_goto_Downing_House");
+			Locations[FindLocation("Redmond_town_03")].reload.l9.disable = 0;
 			link.l1.go = "exit";
 		break;
 // <-- Ardent

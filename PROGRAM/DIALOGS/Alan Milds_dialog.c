@@ -191,17 +191,24 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[23];
 			if (CheckAttribute(pchar, "quest.generate_trade_quest_progress.iQuantityGoods"))	// LDH was quest.quest.generate, fixed 01Jan09
 			{
-				int iQuantityShipGoods = pchar.quest.generate_trade_quest_progress.iQuantityGoods;
-				int iQuestTradeGoods = pchar.quest.generate_trade_quest_progress.iTradeGoods;
+				int iQuantityShipGoods = sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods);
+				int iQuestTradeGoods = sti(pchar.quest.generate_trade_quest_progress.iTradeGoods);
 			}
 			if (CheckQuestAttribute("generate_trade_quest_progress", "begin") || CheckQuestAttribute("generate_trade_quest_progress",  "failed"))
 			{
-				if (GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods && pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
+				if (pchar.quest.generate_trade_quest_progress.iTradeColony == GetCurrentTownID() && CheckAttribute(PChar, "quest.generate_trade_quest_progress.iTradeExp"))
 				{
 					dialog.snd = "Voice\EMRI\EMRI006";
 					dialog.text = DLG_TEXT[24];
 					link.l1 = DLG_TEXT[25];
-					link.l1.go = "generate_quest_2";
+					if(GetSquadronGoods(pchar, iQuestTradeGoods) >= iQuantityShipGoods)
+					{
+						link.l1.go = "generate_quest_2";
+					}
+					else
+					{
+						link.l1.go = "cargo_missing";
+					}
 				}
 			}
 			else
@@ -227,6 +234,7 @@ void ProcessDialogEvent()
 				//    
 				if (GetNationRelation2MainCharacter(GetTownNation(GetTownIDFromLocID(NPChar.location))) == RELATION_ENEMY) // KK
 				{
+					Preprocessor_Add("nation_desc", GetNationDescByType(sti(NPChar.nation)));
 					dialog.snd = "Voice\ALMI\ALMI009";
 					dialog.text = DLG_TEXT[28];
 					link.l1 = DLG_TEXT[29];
@@ -350,6 +358,15 @@ void ProcessDialogEvent()
 			Link.l1.go = "No quest";
 		break;
 
+		case "cargo_missing":
+			AddQuestRecord("trade", 3);
+			Preprocessor_Add("quantity", sti(pchar.quest.generate_trade_quest_progress.iQuantityGoods));
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(pchar.quest.generate_trade_quest_progress.iTradeGoods)].name));
+			dialog.snd = "Voice\ALMI\ALMI015";
+			dialog.text = DLG_TEXT[56];
+			link.l1 = DLG_TEXT[57];
+			link.l1.go = "exit";
+		break;
 
 	}
 	LanguageCloseFile(tmpLangFileID);

@@ -1,5 +1,5 @@
 string DLG_TEXT[24] = {
-"Welcome to the Lord's house, my #schild#. How can I help you?",
+"Welcome to the Lord's house, #saddr#. How can I help you?",
 "...",
 "I'd like to ask you some questions about the priest named ",
 "Father Jerald",
@@ -23,5 +23,4 @@ string DLG_TEXT[24] = {
 "Thanks for your help.",
 "Innocent? Who are you going to believe? These locals, who got the father's story while he was drunk as a skunk - or I, who give you proof you can hold in your hands?",
 "I haven't decided yet. But I'll investigate your story - and you may rest assured that the guilty parties in this matter will be punished.",
-
 };

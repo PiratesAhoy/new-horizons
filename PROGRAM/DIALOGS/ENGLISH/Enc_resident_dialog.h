@@ -84,7 +84,7 @@ string DLG_TEXT[100] = {
 "Have I already told you that I am the best bodyguard in town? Do you know someone who needs protection?",
 "Good that you ask. There have recently been cases of burglary in the neighbourhood. Someone broke into several houses by lifting tiles from the roof and climbing into the attic. Would you guard my house this night? Tomorrow you'll get a nice reward for breakfast.",
 "I would certainly sleep better if you would guard my house tonight. Times are unsafe, and those stupid guards are unable to keep order. Only yesterday a mob set fire to the attic of a house down the alley because the owner refused to pay protection money. Would you guard my house this night? In the morning I'll reward you lavishly.",
-"Well, you could protect me tonight against a mob of thugs who terrorize the neighborhood. Would you believe it, two nights ago they climbed over the roof into poor parson William's bedroomwindow beat him up and abused his wife. Terrible times! Your presence would make me sleep a lot better, and I'll pay for your effort.",
+"Well, you could protect me tonight against a mob of thugs who terrorize the neighborhood. Would you believe it, two nights ago they climbed over the roof into poor parson William's bedroom window, beat him up and abused his wife. Terrible times! Your presence would make me sleep a lot better, and I'll pay for your effort.",
 "Of course will I protect a friend in danger. Rest assured, you will be perfectly safe tonight.",
 "Don't worry, I'll stay overnight and you will be perfectly safe.",
 "No thug or burglar will dare to enter this house while I am here. Have a good night.",

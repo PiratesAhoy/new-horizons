@@ -205,6 +205,14 @@ void ProcessDialogEvent()
 		break;
 	
 		case "choose_blade":
+			if(CheckCharacterItem(Pchar,"bladeA17") || CheckCharacterItem(Pchar,"bladeA5") || CheckCharacterItem(Pchar,"bladeA11")
+			|| CheckCharacterItem(Pchar,"bladeA4") || CheckCharacterItem(Pchar,"bladeA2")) 
+			{
+				Dialog.text = DLG_TEXT[53];
+				link.l1.go = "exit";
+				return;
+			}
+
 			Dialog.text = DLG_TEXT[11];
 			if(CheckAttribute(Pchar,"quest.wr_bladeA17") && Pchar.quest.wr_bladeA17 == "0")
 			{

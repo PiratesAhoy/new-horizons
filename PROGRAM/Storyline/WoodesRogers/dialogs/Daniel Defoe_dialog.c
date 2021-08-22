@@ -35,14 +35,13 @@ void ProcessDialogEvent()
 
 		if(CheckAttribute(Pchar,"quest.defoes_cabin") && Pchar.quest.defoes_cabin == "talk_over")
 		{
-			PlaySound("VOICE\ENGLISH\defoe_again.wav");	
-			NPChar.dlgover = true;
-			Diag.TempNode = "First time";
-			DialogExit();
+			PlaySound("VOICE\ENGLISH\defoe_meet.wav");
+			Dialog.text = DLG_TEXT[8];
+			link.l1 = DLG_TEXT[9];
+			link.l1.go = "exit";
 		}
 		else
 		{
-
 			if (pchar.location == "wr_chapel")
 			{
 				PlaySound("VOICE\ENGLISH\defoe_meet.wav");
@@ -316,6 +315,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Bellamys_story1":
+			PlaySound("VOICE\ENGLISH\defoe_work.wav");
 			Dialog.text = DLG_TEXT[54];
 			link.l1 = DLG_TEXT[55];
 			link.l1.go = "exit";
@@ -345,14 +345,19 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("sloop6");
 		break;
-
+//pär wr_port
 		case "sloop7":
+	ChangeCharacterAddressGroup(characterFromID("Minerva"), "wr_port", "reload", "reload2");
+	RemoveCharacterEquip(characterFromID("Minerva"), GUN_ITEM_TYPE);
+	RemoveCharacterEquip(characterFromID("Minerva"), BLADE_ITEM_TYPE);	
+
 			PlaySound("VOICE\ENGLISH\defoe_leave.wav");
 			Dialog.text = DLG_TEXT[62];
 			link.l1 = DLG_TEXT[63];
 			link.l1.go = "exit";
 			AddDialogExitQuest("sloop8");
 		break;
+//break here ........................................................................................
 
 		case "sloop9":
 			PlaySound("VOICE\ENGLISH\defoe_again.wav");
@@ -362,9 +367,370 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("sloop10");
 		break;
 
+		case "sit_down":
+			ChangeCharacterAddressGroup(NPChar, pchar.location, "goto", "defoe_stay");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPChar, PChar);
+
+			PlaySound("VOICE\ENGLISH\defoe_welcome.wav");
+			Dialog.text = DLG_TEXT[66];
+			link.l1 = DLG_TEXT[67];
+			link.l1.go = "exit";
+			AddDialogExitQuest("defoe_sit_down1");
+		break;
+
+		case "Claire_told_me":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+			ChangeCharacterAddressGroup(NPChar, pchar.location, "quest", "defoe");
+
+			PlaySound("VOICE\ENGLISH\defoe_hero.wav");
+			Dialog.text = DLG_TEXT[68];
+			link.l1 = DLG_TEXT[69];
+			link.l1.go = "Claire_told_me1";
+		break;
+
+		case "Claire_told_me1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+
+			PlaySound("VOICE\ENGLISH\defoe_work.wav");
+			Dialog.text = DLG_TEXT[70];
+			link.l1 = DLG_TEXT[71];
+			link.l1.go = "Claire_told_me2";
+		break;
+
+		case "Claire_told_me2":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+
+			PlaySound("VOICE\ENGLISH\defoe_meet.wav");
+			Dialog.text = DLG_TEXT[72];
+			link.l1 = DLG_TEXT[73];
+			link.l1.go = "Claire_told_me3";
+		break;
+	
+		case "Claire_told_me3":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+
+			PlaySound("VOICE\ENGLISH\defoe_feast.wav");
+			Dialog.text = DLG_TEXT[74];
+			link.l1 = DLG_TEXT[75];
+			link.l1.go = "Claire_told_me4";
+		break;
+
+		case "Claire_told_me4":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+
+			PlaySound("AMBIENT\SHOP\cough.wav");
+			PlaySound("AMBIENT\SHOP\cough.wav");
+			Dialog.text = DLG_TEXT[76];
+			link.l1 = DLG_TEXT[77];
+			link.l1.go = "Claire_told_me5";
+		break;
+
+		case "Claire_told_me5":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+
+			PlaySound("VOICE\ENGLISH\defoe_sorry.wav");
+			Dialog.text = DLG_TEXT[78];
+			link.l1 = DLG_TEXT[79];
+			link.l1.go = "Claire_told_me6";
+		break;
+
+		case "Claire_told_me6":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+
+			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+			Dialog.text = DLG_TEXT[80];
+			link.l1 = DLG_TEXT[81];
+			link.l1.go = "Claire_told_me7";
+		break;
+
+		case "Claire_told_me7":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+
+			PlaySound("OBJECTS\DUEL\man_hit1.wav");
+			Dialog.text = DLG_TEXT[82];
+			link.l1 = DLG_TEXT[83];
+			link.l1.go = "exit";
+			AddDialogExitQuest("defoe_map2");
+		break;
+
+		case "make_a_deal":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+			ChangeCharacterAddressGroup(NPChar, pchar.location, "quest", "defoe");
+
+			PlaySound("VOICE\ENGLISH\defoe_deal.wav");
+			Dialog.text = DLG_TEXT[84];
+			link.l1 = DLG_TEXT[85];
+			link.l1.go = "exit";
+			AddDialogExitQuest("return_to_defoe2");
+		break;
+
+		case "defoe_checks_maps":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+			ChangeCharacterAddressGroup(NPChar, pchar.location, "quest", "defoe");
+
+			if(GetAttribute(Pchar, "mapBB4C") != "info")
+			{
+				if(GetAttribute(Pchar, "mapBB2B") != "info" && GetAttribute(Pchar, "mapBB5B") != "info")
+				{
+					//4 + 2 + 5
+
+					PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+					Dialog.text = DLG_TEXT[96];
+					link.l1 = DLG_TEXT[91];
+					link.l1.go = "exit";
+					AddDialogExitQuest("3_map_problems_check");
+				}
+				else
+				{
+					if(GetAttribute(Pchar, "mapBB2B") != "info")
+					{
+						//4 + 2
+					
+						PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+						Dialog.text = DLG_TEXT[95];
+						link.l1 = DLG_TEXT[91];
+						link.l1.go = "exit";
+						AddDialogExitQuest("3_map_problems_check");
+					}
+					else
+					{
+						if(GetAttribute(Pchar, "mapBB5B") != "info")
+						{
+							//4 + 5
+
+							PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+							Dialog.text = DLG_TEXT[94];
+							link.l1 = DLG_TEXT[91];
+							link.l1.go = "exit";
+							AddDialogExitQuest("3_map_problems_check");
+						}
+						else
+						{
+							//4
+							
+							PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+							Dialog.text = DLG_TEXT[86];
+							link.l1 = DLG_TEXT[87];
+							link.l1.go = "exit";
+							AddDialogExitQuest("3_map_problems_check");
+						}
+					}
+				}
+			}
+			else
+			{
+				if(GetAttribute(Pchar, "mapBB2B") != "info" && GetAttribute(Pchar, "mapBB5B") != "info")
+				{
+					//2 + 5
+
+					PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+					Dialog.text = DLG_TEXT[93];
+					link.l1 = DLG_TEXT[91];
+					link.l1.go = "exit";
+					AddDialogExitQuest("3_map_problems_check");
+				}
+				else
+				{
+					if(GetAttribute(Pchar, "mapBB2B") != "info")
+					{
+						//2
+
+						PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+						Dialog.text = DLG_TEXT[90];
+						link.l1 = DLG_TEXT[91];
+						link.l1.go = "exit";
+						AddDialogExitQuest("3_map_problems_check");
+					}
+					else
+					{
+						if(GetAttribute(Pchar, "mapBB5B") != "info")
+						{
+							//5
+
+							PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+							Dialog.text = DLG_TEXT[92];
+							link.l1 = DLG_TEXT[91];
+							link.l1.go = "exit";
+							AddDialogExitQuest("3_map_problems_check");
+						}
+						else
+						{
+							//no problems continue
+
+							PlaySound("VOICE\ENGLISH\defoe_work.wav");
+							Dialog.text = DLG_TEXT[88];
+							link.l1 = DLG_TEXT[89];
+							link.l1.go = "exit";
+							AddDialogExitQuest("return_to_defoe4");
+						}
+					}
+				}
+			}
+		break;
+
+		case "merge_map_info":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+			ChangeCharacterAddressGroup(NPChar, pchar.location, "quest", "defoe");
+
+			PlaySound("VOICE\ENGLISH\defoe_hero.wav");
+			Dialog.text = DLG_TEXT[97];
+			link.l1 = DLG_TEXT[98];
+			link.l1.go = "merge_map_info1";
+		break;
+
+		case "merge_map_info1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+
+			PlaySound("VOICE\ENGLISH\defoe_work.wav");
+			Dialog.text = DLG_TEXT[99];
+			link.l1 = DLG_TEXT[100];
+			link.l1.go = "exit";
+			AddDialogExitQuest("return_to_defoe7");
+		break;
+
+		case "all_names_on_one_map":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+			ChangeCharacterAddressGroup(NPChar, pchar.location, "quest", "defoe");
+
+			PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+			Dialog.text = DLG_TEXT[101];
+			link.l1 = DLG_TEXT[102];
+			link.l1.go = "exit";
+			AddDialogExitQuest("return_to_defoe10");
+		break;
+
+		case "right_lines":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "quest", "pyle_look");
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToLocator(NPchar, "quest", "defoe_look");
+	
+			LAi_SetSitType(Pchar);
+			LAi_SetSitType(NPchar);
+			ChangeCharacterAddressGroup(NPChar, pchar.location, "quest", "defoe");
+
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
+			Dialog.text = DLG_TEXT[103];
+			link.l1 = DLG_TEXT[104];
+			link.l1.go = "exit";
+			AddDialogExitQuest("return_to_defoe28");
+		break;
+
+		case "Pyle_to_IslaMona":
+			PlaySound("VOICE\ENGLISH\defoe_leave.wav");
+			Dialog.text = DLG_TEXT[105];
+			link.l1 = DLG_TEXT[106];
+			link.l1.go = "Pyle_to_IslaMona1";
+		break;
+
+		case "Pyle_to_IslaMona1":
+			PlaySound("VOICE\ENGLISH\defoe_sorry.wav");
+			Dialog.text = DLG_TEXT[107];
+			link.l1 = DLG_TEXT[108];
+			link.l1.go = "exit";
+			AddDialogExitQuest("return_to_defoe34");
+		break;
+
+		case "my_share":
+			PlaySound("VOICE\ENGLISH\defoe_psst.wav");
+			Dialog.text = DLG_TEXT[109];
+			link.l1 = DLG_TEXT[110];
+			link.l1.go = "exit";
+			Diag.TempNode = "my_share";
+		break;
+
+		case "neutral":
+			PlaySound("VOICE\ENGLISH\defoe_meet.wav");
+			Dialog.text = DLG_TEXT[111];
+			link.l1 = DLG_TEXT[112];
+			link.l1.go = "exit";
+			Diag.TempNode = "neutral";
+		break;
+			
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
 		break;
 	}
 }
+                                                                                                                                                                                                                                                                                             

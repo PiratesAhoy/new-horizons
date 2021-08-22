@@ -1,0 +1,7 @@
+title=Misión secundaria: Salvar a la hija de #sToff#.
+text.t1=#sToffOremans# me ha dicho que su hija ha sido secuestrada por un pirata español al servicio del gobernador de #sDouwesen#. Creo que debería hacerme cargo de este problema y ayudar a esa chica a volver a casa.
+text.t2=El gobernador me ha dado instrucciones para investigar este caso, y si mi investigación da frutos, habrá una recompensa.
+text.t3=Ese español fue tremendamente grosero conmigo. Así que lo maté a el y a su oficial. La muchacha está a salvo.
+text.t4=Ese español fue tremendamente grosero conmigo. Pero cuando sus hombres supieron que venía por orden del gobernador, asesinaron a su capitán y huyeron.
+text.t5=El gobernador me ha pagado mi recompensa: nada del otro mundo, por supuesto.
+text.t6=Me he hecho con el sable de Nicolas Sharp. #sToffOremans#, el padre de la muchacha, me lo ha regalado, y hay algo en este arma que me hace pensar que realmente perteneció al legendario pirata.

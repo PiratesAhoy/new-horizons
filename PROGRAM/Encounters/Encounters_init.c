@@ -221,6 +221,12 @@ void InitEncounters()
 	rEnc.MinRank = 1;
 	rEnc.Type = ENCOUNTER_WAR;
 	Enc_ExcludeNation(rEnc, PIRATE);
+	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS)	// Only Spain and Portugal had large fleets in 16th century
+	{
+		Enc_ExcludeNation(rEnc, ENGLAND);
+		Enc_ExcludeNation(rEnc, FRANCE);
+		Enc_ExcludeNation(rEnc, HOLLAND);
+	}
 
 	Enc_AddClasses(rEnc, 1, 0, 0, 5, 6);
 	Enc_AddClasses(rEnc, 2, 0, 0, 5, 5);
@@ -312,7 +318,12 @@ void InitEncounters()
 	rEnc.MinRank = 1;
 	Enc_AddShips(rEnc, "War", 2, 8);
 	Enc_ExcludeNation(rEnc, PIRATE);
-	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS || GetCurrentPeriod() >= PERIOD_NAPOLEONIC) Enc_ExcludeNation(rEnc, HOLLAND);
+	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS)	// England, France and Holland had no large fleets in 16th century
+	{
+		Enc_ExcludeNation(rEnc, ENGLAND);
+		Enc_ExcludeNation(rEnc, FRANCE);
+		Enc_ExcludeNation(rEnc, HOLLAND);
+	}
 	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS || GetCurrentPeriod() >= PERIOD_NAPOLEONIC) Enc_ExcludeNation(rEnc, PORTUGAL);
 
 	Enc_AddClasses(rEnc, 1, 0, 0, 5, 6);
@@ -334,6 +345,8 @@ void InitEncounters()
 	Enc_ExcludeNation(rEnc, PIRATE);
 	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS || GetCurrentPeriod() >= PERIOD_NAPOLEONIC) Enc_ExcludeNation(rEnc, HOLLAND);
 	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS || GetCurrentPeriod() >= PERIOD_NAPOLEONIC) Enc_ExcludeNation(rEnc, PORTUGAL);
+	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS) Enc_ExcludeNation(rEnc, ENGLAND);
+	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS) Enc_ExcludeNation(rEnc, FRANCE);
 
 	Enc_AddClasses(rEnc, 2, 0, 0, 3, 5);
 	Enc_AddClasses(rEnc, 4, 0, 0, 2, 5);
@@ -353,6 +366,11 @@ void InitEncounters()
 	Enc_ExcludeNation(rEnc, PIRATE);
 	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS || GetCurrentPeriod() >= PERIOD_NAPOLEONIC) Enc_ExcludeNation(rEnc, HOLLAND);
 	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS || GetCurrentPeriod() >= PERIOD_NAPOLEONIC) Enc_ExcludeNation(rEnc, PORTUGAL);
+	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS)	// England and France had no large fleets in 16th century
+	{
+		Enc_ExcludeNation(rEnc, ENGLAND);
+		Enc_ExcludeNation(rEnc, FRANCE);
+	}
 
 	Enc_AddClasses(rEnc, 3, 0, 0, 3, 4);
 	Enc_AddClasses(rEnc, 4, 0, 0, 2, 3);
@@ -402,6 +420,11 @@ void InitEncounters()
 	Enc_ExcludeNation(rEnc, PIRATE);
 	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS || GetCurrentPeriod() >= PERIOD_NAPOLEONIC) Enc_ExcludeNation(rEnc, HOLLAND);
 	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS || GetCurrentPeriod() >= PERIOD_NAPOLEONIC) Enc_ExcludeNation(rEnc, PORTUGAL);
+	if(GetCurrentPeriod() <= PERIOD_EARLY_EXPLORERS)	// England and France had no large fleets in 16th century
+	{
+		Enc_ExcludeNation(rEnc, ENGLAND);
+		Enc_ExcludeNation(rEnc, FRANCE);
+	}
 
 	Enc_AddClasses(rEnc, 3, 0, 0, 4, 6);
 	Enc_AddClasses(rEnc, 5, 0, 0, 3, 6);

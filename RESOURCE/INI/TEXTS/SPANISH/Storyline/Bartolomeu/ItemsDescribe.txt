@@ -1,0 +1,242 @@
+Potion parameters{Remedio médico}
+health value{Salud}
+weapon blade parameters{Arma: daño.min/max #ddmg_min#/#ddmg_max#, penetrante #dpiercing#%, bloqueo #dblock#%.}
+weapon gun parameters{Arma: daño.min/max #ddmg_min#/#ddmg_max#, recarga #dchargespeed#sec, precisión #daccuracy#%.}
+weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / % de daño recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
+
+itmname_Letter_Governor	{Carta para el gobernador de #sDouwesen#}
+itmdescr_Letter_Governor
+{
+Esta carta escrita por el gobernador de #sConceicao# tiene como obejtivo pedir el apoyo de los holandeses para un posible ataque sobre Cartagena.
+}
+
+itmname_Letter_King	{Carta para el gobernador de Cartagena}
+itmdescr_Letter_King
+{
+Carta escrita por el Rey de España, ordenando que se informe a su emisario de la situación en Cartegena.
+}
+
+itmname_darien_idol	{Ídolo de Darien}
+itmdescr_darien_idol
+{
+Este ídolo dorado pertenece a una tribu de caníbales. Representa a su dios de la guerra. Quien lo robe tendrá problemas.
+}
+
+itmname_navy_papers	{Papeles de la Armada}
+itmdescr_navy_papers
+{
+Estos documentos confirman que trabajas para la Armada portuguesa y que cuentas con su protección frente a los piratas y los enemigos de Portugal.
+}
+
+itmname_Letter_Spy	{Carta para el espía}
+itmdescr_Letter_Spy
+{
+Gracias a esta carta, el espía en San Juan te ayudará en tu búsqueda.
+}
+
+itmname_Fort_Keys	{Llaves del fuerte}
+itmdescr_Fort_Keys
+{
+Las llaves de la prisión. Puedes encontrar el calabozo bajando las escaleras. 
+}
+
+itmname_muerte_map	{Mapa de la Isla de Muerta}
+itmdescr_muerte_map
+{
+Este es el mapa de una isla llamada Isla de Muerta. La isla está a una gran distancia al sur de Cayman.
+}
+
+itmname_Animist_cloth		{Hábito de monje}
+itmdescr_Animist_cloth
+{
+Unas vestiduras de monje del mismo estilo que las mías. Perfectas para Elting cuando escapemos de este horrible lugar.
+}
+
+itmname_key3			{Llave grande}
+itmdescr_key3
+{
+¿Es la llave que abre la puerta?
+}
+
+itmname_key4			{Llave pequeña}
+itmdescr_key4
+{
+Esta llave parece indicada para abrir una de las celdas de este lugar.
+}
+
+itmname_Montejo_Book {Libro secreto de Montejo}
+itmdescr_Montejo_Book
+{
+Este viejo libro perteneció al famoso conquistador Francisco de Montejo y Alvárez, que intentó conquistar el oeste de Yucatán.
+}
+
+itmname_skull_ring		{Anillo de calavera}
+itmdescr_skull_ring
+{
+El anillo tiene un aspecto malvado, ¿te condederá algún poder extraordinario, o lo contrario?
+}
+
+itmname_moccasins		{Mocasines}
+itmdescr_moccasins
+{
+Estos mocasines pertenecieron una vez a Ciervo Saltador. ¿Te podrían ser útiles a ti?  
+}
+
+itmname_mayan_compass		{Brújula maya}
+itmdescr_mayan_compass
+{
+¡Qué secretos encerrará este disco de piedra grabada?
+}
+
+itmname_filled_pipe		{Pipa cargada}
+itmdescr_filled_pipe
+{
+La pipa de maiz está llena de hongos secos y pulverizados.
+}
+
+itmname_dried_mushrooms		{Hongos secos}
+itmdescr_dried_mushrooms
+{
+¿Matamoscas y dos boletus?
+}
+
+itmname_pulverized_mushrooms	{Hongos pulveriados}
+itmdescr_pulverized_mushrooms
+{
+Los hongos están listos para la pipa.
+}
+
+//JRH Cartagena items -->
+
+itmname_bladecannon_ball	{Bala de cañón}
+itmdescr_bladecannon_ball
+{
+¡Esta es muy pesada!
+}
+
+itmname_bladeclockkey		{Llave}
+itmdescr_bladeclockkey
+{
+Ouch, todavía está caliente.
+}
+
+itmname_bladelever		{Palanca}
+itmdescr_bladelever
+{
+Hum, ¿Dónde debería poner esto?
+}
+
+itmname_bladefire_irons		{Atizadores}
+itmdescr_bladefire_irons
+{
+¿Vale? A la chimenea, pues.
+}
+
+//<-- JRH Cartagena items
+
+itmname_bladeacid		{Ácido}
+itmdescr_bladeacid
+{
+Una botella de ácido de color venenoso. Sabe Dios para qué usaba esto el sacerdote.
+}
+
+itmname_bladepclub203		{Pistola garrote}
+itmdescr_bladepclub203
+{
+Una pistola pesada puede usarse como garrote. Hace más daño que tus puños desnudos.
+}
+
+itmname_pistol203 		{Pistola}
+itmdescr_pistol203
+{
+Un arma pesada que parece haber sido usada como un garrote.
+}
+
+itmname_pistolmaquahuitl	{Maquahuitl}
+itmdescr_pistolmaquahuitl
+{
+Este Maquahuitl está maldito y puede invocar al dios del trueno Chaac.
+}
+
+itmname_halberd			{Alabarda oxidada}
+itmdescr_halberd
+{
+Una antigua pero poderosa arma... o lo era, antes de que la herrumbre acabara con ella.
+}
+
+itmname_bladeflint		{Pedernal}
+itmdescr_bladeflint
+{
+Combinado con un eslabón, sirve para hacer fuego.
+}
+
+itmname_pistolsteel		{Eslabón}
+itmdescr_pistolsteel
+{
+Combinado con un pedernal, sirve para hacer fuego.
+}
+
+itmname_empty_pipe		{Pipa vacía}
+itmdescr_empty_pipe
+{
+Una pipa de maiz vacía.
+}
+
+itmname_calabash		{Calabaza llena de antídoto}
+itmdescr_calabash
+{
+Este líquido desconocido cura el veneno.
+}
+
+itmname_herbs			{Bolsa de hierbas}
+itmdescr_herbs
+{
+Una mezcla de hierbas que cura heridas leves.
+}
+
+itmname_blowgun			{Cerbatana}
+itmdescr_blowgun
+{
+Los mayas usaban la cerbatana para cazar pájaros y pequeños animales. Tiene un compartimento para los dardos venenosos acoplado al tubo. 
+}
+
+itmname_arrows2			{Dardos envenenados}
+itmdescr_arrows2	
+{
+Algunas culturas impregnan las puntas de sus dardos en curare u otros venenos para paralizar al objetivo.
+}
+
+itmname_shield_hand		{Escudo}
+itmdescr_shield_hand	
+{
+Este escudo de madera puede proteger contra muchas armas. Especialmente útil para defenderse de los ataques con flechas.
+}
+
+itmname_shield_back		{Escudo}
+itmdescr_shield_back	
+{
+Este escudo de madera puede proteger cintra muchas armas. Especialmente útil para defenderse de los ataques con flechas.
+}
+
+itmname_pistolrocket	{Lanzacohetes}
+itmdescr_pistolrocket
+{
+Básicamente, un cilindro de metal unido a un palo de bambú. Puede hacer mucho daño a un grupo de enemigos, pero también a ti, si estás demasiado cerca. 
+}
+
+itmname_rockets			{Cohetes}
+itmdescr_rockets
+{
+Munición para el lanzacohees. También necesitarás pólvora para disparar estos proyectiles. 
+}
+
+itmname_rocketbag		{Bolsa para cohetes}
+itmdescr_rocketbag
+{
+Con la bolsa para cohetes, puedes llevar encima ocho cohetes; sin ella, solo dos. 
+}
+
+itmname_pistolwhip		{Látigo}
+itmdescr_pistolwhip
+{
+Un látigo de una sola cola, hecho de cuero trenzado, diseñado para trabajar con el ganado. Úsalo para desarmar a tus enemigos.

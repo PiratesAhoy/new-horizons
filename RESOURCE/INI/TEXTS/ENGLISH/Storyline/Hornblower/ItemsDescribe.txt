@@ -1,0 +1,6 @@
+
+itmname_MariasLetter		{Letter from Maria}
+itmdescr_MariasLetter
+{
+A letter from Maria, written shortly before she died.
+}

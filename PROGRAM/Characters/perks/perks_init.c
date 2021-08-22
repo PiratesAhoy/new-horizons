@@ -134,26 +134,45 @@ void extrnInitPerks()
 
 	// Ship Combat Abilities
 	//==========================================================================
-	ChrPerksList.list.BasicBattleState.descr = "perkBasicBattleState";
-	ChrPerksList.list.BasicBattleState.cost = 1; // Levis
-	ChrPerksList.list.BasicBattleState.type = PERK_TYPE_SEACOMBAT; //Levis
+	ChrPerksList.list.BasicDamageControl.descr = "perkBasicDamageControl";
+	ChrPerksList.list.BasicDamageControl.cost = 1; // Levis
+	ChrPerksList.list.BasicDamageControl.type = PERK_TYPE_SEACOMBAT; //Levis
 
-	ChrPerksList.list.AdvancedBattleState.descr = "perkAdvancedBattleState";
-	ChrPerksList.list.AdvancedBattleState.condition.BasicBattleState = true;
-	ChrPerksList.list.AdvancedBattleState.Rank = 10; // KK
-	ChrPerksList.list.AdvancedBattleState.disable.iRealismMode = 2; //Levis
-	ChrPerksList.list.AdvancedBattleState.disable.REALISTIC_ABILITIES = 2; //Levis
-	ChrPerksList.list.AdvancedBattleState.cost = 3; // Levis set from 2 to 3 El Rapido
-	ChrPerksList.list.AdvancedBattleState.locked = true; //Levis
-	ChrPerksList.list.AdvancedBattleState.type = PERK_TYPE_SEADEFENCE; //Levis
+	ChrPerksList.list.AdvancedDamageControl.descr = "perkAdvancedDamageControl";
+	ChrPerksList.list.AdvancedDamageControl.condition.BasicDamageControl = true;
+	ChrPerksList.list.AdvancedDamageControl.Rank = 10; // KK
+	//ChrPerksList.list.AdvancedDamageControl.disable.iRealismMode = 2; //Levis: they are now more realistic so let's include them again
+	//ChrPerksList.list.AdvancedDamageControl.disable.REALISTIC_ABILITIES = 2; //Levis: they are now more realistic so let's include them again
+	ChrPerksList.list.AdvancedDamageControl.cost = 2; // Levis set back to 2 because it's weaker now
+	ChrPerksList.list.AdvancedDamageControl.locked = true; //Levis
+	ChrPerksList.list.AdvancedDamageControl.type = PERK_TYPE_SEACOMBAT; //Levis
 
-	ChrPerksList.list.ShipDefenceProfessional.descr = "perkShipDefenceProfessional";
-	ChrPerksList.list.ShipDefenceProfessional.condition.AdvancedBattleState = true;
-	ChrPerksList.list.ShipDefenceProfessional.rank = 15; // KK
-	ChrPerksList.list.ShipDefenceProfessional.disable.iRealismMode = 2; //Levis
-	ChrPerksList.list.ShipDefenceProfessional.disable.REALISTIC_ABILITIES = 2; //Levis
-	ChrPerksList.list.ShipDefenceProfessional.cost = 4; // Levis set from 3 to 4 El Rapido
-	ChrPerksList.list.ShipDefenceProfessional.type = PERK_TYPE_SEADEFENCE; //Levis
+	ChrPerksList.list.ProfessionalDamageControl.descr = "perkProfessionalDamageControl";
+	ChrPerksList.list.ProfessionalDamageControl.condition.AdvancedDamageControl = true;
+	ChrPerksList.list.ProfessionalDamageControl.rank = 15; // KK
+	ChrPerksList.list.ProfessionalDamageControl.disable.iRealismMode = 2; //Levis
+	ChrPerksList.list.ProfessionalDamageControl.disable.REALISTIC_ABILITIES = 2; //Levis
+	ChrPerksList.list.ProfessionalDamageControl.cost = 3; // Levis set to 3 because it's weaker now
+	ChrPerksList.list.ProfessionalDamageControl.type = PERK_TYPE_SEACOMBAT; //Levis
+	
+	ChrPerksList.list.BasicFirstAid.descr = "perkBasicFirstAid";
+	ChrPerksList.list.BasicFirstAid.cost = 1;
+	ChrPerksList.list.BasicFirstAid.type = PERK_TYPE_SEACOMBAT;
+	
+	ChrPerksList.list.AdvancedFirstAid.descr = "perkAdvancedFirstAid";
+	ChrPerksList.list.AdvancedFirstAid.cost = 3;
+	ChrPerksList.list.AdvancedFirstAid.rank = 15;
+	ChrPerksList.list.AdvancedFirstAid.condition.BasicFirstAid = true;
+	ChrPerksList.list.AdvancedFirstAid.type = PERK_TYPE_SEACOMBAT;
+	
+	ChrPerksList.list.Rigging.descr = "perkRigging";
+	ChrPerksList.list.Rigging.cost = 1;
+	ChrPerksList.list.Rigging.type = PERK_TYPE_SEACOMBAT;
+	
+	ChrPerksList.list.RiggingAdvance.descr = "perkRiggingAdvance";
+	ChrPerksList.list.RiggingAdvance.cost = 3;
+	ChrPerksList.list.RiggingAdvance.condition.Rigging = true;
+	ChrPerksList.list.RiggingAdvance.type = PERK_TYPE_SEACOMBAT;
 
 	ChrPerksList.list.FastReload.descr = "perkFastReload";
 	ChrPerksList.list.FastReload.cost = 2; // Levis
@@ -212,8 +231,8 @@ void extrnInitPerks()
 	ChrPerksList.list.CannonProfessional.type = PERK_TYPE_SEACOMBAT; //Levis
 
 	ChrPerksList.list.LongRangeGrappling.descr = "perkLongRangeGrappling";
-	ChrPerksList.list.LongRangeGrappling.disable.iRealismMode = 2; //Levis
-	ChrPerksList.list.LongRangeGrappling.disable.REALISTIC_ABILITIES = 2; //Levis
+//	ChrPerksList.list.LongRangeGrappling.disable.iRealismMode = 2; //Levis, disable disabled by Grey Roger because this perk is needed by "MusketShoot"
+//	ChrPerksList.list.LongRangeGrappling.disable.REALISTIC_ABILITIES = 2; //Levis
 	ChrPerksList.list.LongRangeGrappling.cost = 3; // Levis
 	ChrPerksList.list.LongRangeGrappling.locked = true; //Levis
 	ChrPerksList.list.LongRangeGrappling.type = PERK_TYPE_BOARDING; //Levis

@@ -1,2 +1,25 @@
 title=Caesar
 text.t1=A Negro. Member of Teach's crew. Was much liked and trusted by Teach.
+text.t2=Hanged in Williamsburg 1719. Where in the Caribbean did he hide his map?
+text.t3=Teach placed a crewmember, a trusted negro, in the hold with a lighted match. Very likely to be Caesar.
+text.t4=Lieutenant Maynard kept Teach's fourth sloop. He's living in Citadel Rock, Eleuthera. There may be a way from the Tavern to the Citadel.
+text.t5=Maynard sold the sloop to a shipwreck dealer in Grand Turk port. He's office is in the old Fort. To the left when you exit the Town to the jungle.
+text.t6=Explosives yes. Must be something useful in the Armory.
+text.t7=I'll find the way to the shipwrecks via the Tavern kitchen and a bedroom upstairs.
+text.t8=I'll need a workbench but also tools and maybe some liquid to process this pile of dried Gunpowder.
+text.t9=I have got Caesar's map!
+text.t10=Caesar survived! That's why the numbers of the hanged pirates didn't match in the newspaper.
+text.t11=There may be something of value in the shipwreck traders bedroom.
+text.t12=I have to return to Turks and the Sloop wreck. Caesar's map may still be in the Gunpowder Storage.
+text.t13=I have to find the Sloop wreck first. Caesar's map may still be in the Gunpowder Storage.
+text.t14=Maynard is locked in by bandits. The leader is a monk who's got a lever I'll need.
+text.t15=The Citadel is damaged so I can only get him out via the upper door of the tower.
+text.t16=I can use the anchor to block the bridge. It's possible to walk around the bay on the cliffs!
+text.t17=There's a port  Gray Rock Bay  marked on the map. I can't see any blue letters though, it's too dirty.
+text.t18=When most of the dirt is gone I can see the letters  I  and  A  .
+text.t19=I have to search the wreck and the shore for tools and a liquid.
+text.t20=I'll return to the gunpowder storage when I have more information.
+
+
+
+

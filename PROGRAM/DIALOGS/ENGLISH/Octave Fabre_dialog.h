@@ -21,6 +21,6 @@ string DLG_TEXT[23] = {
 "Let's have a look what's in this chest.",
 "(There are some papers inside)",
 ": 'The ship is sinking. We are being dragged down. Now we will never find Miss Shaw. My governor will be so disappointed.' - Captain Thomas Boulden Thompson",
-": 'The ship is sinking. We are being dragged down. Now we will never find Miss le Moigne. My governor will be so disappointed.' - Captain Fabion le George",
+": 'The ship is sinking. We are being dragged down. Now we will never find Miss le Moigne. My governor will be so disappointed.' - Capitaine Fabion le George",
 
 };

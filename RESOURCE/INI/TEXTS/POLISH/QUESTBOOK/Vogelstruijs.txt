@@ -1,0 +1,11 @@
+title=Side Quest - Vogelstruijs
+text.t1=Contre-Amirale Cesar Beauregard has ordered me to intercept a Dutch smuggler loaden with ammunition for the Spanish, to retake #sRedmond#. According to the sources of the Contre-Amirale, the ship is called 'Vogelstruijs' and it is moored at #sDouwesen#.
+text.t2=A docker in #sDouwesen# told me that the captain of the 'Vogelstruijs' lives in a house somewhere here in #sDouwesen#. Perhaps I should pay it a visit and search it for some clues.
+text.t3=Found it! This is even better than a logbook, he kept the official documents in his cupboard! What a lousy criminal.
+text.t4=Damn, I was caught by the captain's wife! She called the guards! I had to kill them. From now on, I should be a lot more carefull when I am around Dutchmen. 
+text.t5=Damn, I was caught by the captain's wife! She yelled that I wanted to rape her. But she was the one commiting adultry, she sent her secret lover after me. I have killed him, so she can't cheat anymore on her husband. 
+text.t6=Damn, I was caught by the captain's wife! I had to kill her, I can leave no witnesses. 
+text.t7=Damn, I was caught by the captain's wife! I threatened to kill her, she started to beg me not to and even gave me money and some jewels. I should try this more often! 
+text.t8=Everything settled. I should now bring this piece of information to the Contre-Amirale.
+text.t9=Now that was an explosion! I wonder how many barrels of gunpowder the 'Vogelstruijs transported. Now let's go back to the Contre-Amirale.
+text.t10=He was very happy with the news about the demise of the 'Vogelstruijs'. He gave me the other 2500 pieces of eight and told me I was free to go.

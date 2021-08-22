@@ -56,7 +56,7 @@ void ProcessDialogEvent()
 				link.l1.go = "about_hire_4";
 			}
 			link.l99 = DLG_TEXT[6];
-			link.l99.go = "exit";
+			link.l99.go = "exit_wait_for_hire";
 			NextDiag.TempNode = "first time";
 		break;
 

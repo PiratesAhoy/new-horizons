@@ -102,7 +102,7 @@ void chrCharacterEntryToLocator()
 				if(locator == "monster1"){ group = "reload"; }
 				break;
 			case "Greenford_M_church":
-				if(locator == "Goto2")
+				if(locator == "reload2")
 				{ 
 				    group = "reload"; 
 				    if(mc.sex == "woman") PlaySound("OBJECTS\VOICES\DEAD\female\dead_wom1.wav");

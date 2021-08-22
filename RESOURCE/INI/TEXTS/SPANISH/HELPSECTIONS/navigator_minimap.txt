@@ -1,0 +1,22 @@
+minimap_title
+{
+Minimapa de navegacion
+}
+minimap_info
+{
+????El minimapa de navegacion (foto 1) aparece solo en el mar. Muestra la velocidad actual de la nave y el viento, tipo redondo que se cargo en los canones de las naves y la recarga del estado de los canones para cada lado. Tambien brujula y direccion del viento y disposicion de la isla y objetos aliados y hostiles alrededor de la nave del jugador.
+
+????El numero superior izquierdo en el minimapa es la velocidad del viento, el numero superior derecho - la velocidad actual del barco. Estos parametros tambien se representan graficamente: el sector interior azul en el lado izquierdo de minmap es la velocidad del viento, y el sector amarillo a la derecha es la velocidad del barco.
+
+????El estado de recarga de los canones se muestra mediante cuatro sectores verdes (o rojos, si todavia no estan cargados) alrededor del minimapa. En consecuencia, los sectores superior, inferior, izquierdo y derecho representan el estado de carga de los canones de proa, popa, larboard y estribor en consecuencia. El pequeno icono en la esquina inferior derecha del minimapa muestra el tipo de ronda actual del canon. Los posibles tipos de rondas se pueden ver en la foto 2 y son knippels, bombas, balas de canon y metralla en consecuencia de izquierda a derecha. Cuando no hay suficientes rondas de tipo seleccionado para cargar todos los canones, ese icono comienza a parpadear.
+
+????El circulo exterior del minimapa es una brujula. Gira alrededor del minimapa, ya que la ubicacion de la nave del jugador en la minimapa es fija: la proa de la nave del jugador siempre mira hacia arriba y hacia la popa hacia abajo.
+
+????La direccion del viento se representa con una flecha blanca que atraviesa el centro del minimapa.
+
+????Las zonas de disparo de los canones de proa, popa y tabla se muestran con sectores transparentes blancos.
+
+????En el minimapa, el jugador puede ver una isla sobre la que navega su barco. Tambien todas las otras naves que estan dentro de la visualizacion de la posicion, apareceran en el minimapa. Las naves de aliados se muestran con verde, los enemigos - con rojo y los objetos neutrales son grises (foto 3)
+
+????Puede cambiar la escala de minimapa con las teclas de zoom de minimapa.
+}

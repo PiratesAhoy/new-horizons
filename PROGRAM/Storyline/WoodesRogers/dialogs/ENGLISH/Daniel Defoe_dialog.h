@@ -1,4 +1,4 @@
-string DLG_TEXT[66] = {
+string DLG_TEXT[113] = {
 "And who might you be?",
 "Captain Howard Pyle, at your service Sir.",
 "I am honored to meet you, please see if you could get us some rum from that big barrel by the fireplace.",
@@ -55,17 +55,62 @@ string DLG_TEXT[66] = {
 "Please go on, this is exciting... ",
 "Hornigold left New Providence Island with Edward Teach (Blackbeard) among his crew. After capturing a sloop, Teach was given command of the prize. In the spring of the year 1717, they seized a large French ship...",
 "Yes...?",
-"Governor Alexander Spotswood of Virginia gave Lieutenant Robert Maynard the command of two sloops.  Maynard killed Teach and beheaded him, tied the 
-head to the bowsprit of his ship, and set sail for Virginia.",
+"Governor Alexander Spotswood of Virginia gave Lieutenant Robert Maynard the command of two sloops. Maynard killed Teach and beheaded him, tied the head to the bowsprit of his ship, and set sail for Virginia.",
 "I thought that was only a legend!",
-"Almost you say. Did they take your map-piece!?",
-"No, I had fastened it with tar under my foot. So even though they took my shoes they missed it!",
-"Oh come on, you know better than to ask that. By the way did you recieve the package I sent to the poor Governor?",
-"In fact I did. And those hints were really helpful...",
-"Maybe you should leave all those bottles and things here at the farm. We'll take care of it.",
+"Almost you say. Did they take your map!?",
+"No, I had hidden it behind a patch on my underwear. So even though they took my trousers they missed it!",
+"Oh come on, you know better than to ask. By the way did you recieve the package I sent to the poor Governor?",
+"In fact I did. Thanks a lot.",
+"Maybe you should leave all those bottles and things here at the farm. Minerva takes care of all.",
 "Sure, why not.",
-"No, she didn't. Good luck, Captain.",
+"No, she didn't. Let's return to Port Royale now, Claire. Good luck, Captain.",
 "Thank you and Good Bye.",
-
+"Ahh, Captain. Please have a seat.",		//66
+"Mister De Foe..?",
+"She also told me you may now have found almost all maps - right?",		//68
+"That's right - only one is still missing. The 'Johnson' map, whoever he was.",
+"Maybe I could help you with that last map...",		//70
+"I'm listening. (How is that possible - or does he really know something?)",
+"You see I once met Edward Teach...",				//72
+"How come? (I have to pull every word out of him)",
+"I made interviews with many of the most notorious pyrates for a book project.",	//74
+"'Most Notorious Pyrates'. Now that sounds like a real book title. There was a copy in Woodes Rogers' library.",
+"Good to hear, young man, good to hear. The rumour had it that Teach had bought a house in Bath, North Carolina.",			//76
+"So you went there to visit him? (come on old man)",
+"Well I... you must remember he had a reputation of being a very violent man. I didn't dare to go to his house.",//78
+"I see. But you met him...? (for God's sake man)",
+"I went to the local tavern instead and hoped for the best.",				//80
+"And? (get to it will you)",
+"Who do you think I met?!",				//82
+"Please tell me. (Could it be Blackbeard!!!)",
+"And I am willing to contribute with my map for a share of the treasure.",		//84
+"Very good! Look, here's what I've found out so far.",
+"Hmm, maybe you should examine the Nevis map more closely.",			//86
+"Alright, I'll do that.",
+"Very good, Captain Pyle. Here's my map, can you decide which island it could be?",	//88
+"Sure, hand it over.",
+"Hmm, maybe you should examine the Barbados map more closely.",			//90
+"I'll see what I can do.",							//91
+"Hmm, maybe you should examine the Cayman map more closely.",			//92
+"Hmm, maybe you should examine the Barbados and Cayman maps more closely.",		//93
+"Hmm, maybe you should examine the Cayman and Nevis maps more closely.",		//94
+"Hmm, maybe you should examine the Barbados and Nevis maps more closely.",		//95
+"Hmm, maybe you should examine the Barbados, Cayman and Nevis maps more closely.",	//96
+"Oh come on. We've got a lot of information now. But it's spread out on the six maps.",	//97
+"Yes..?",
+"We could gather it all on one map. Let's start with the letters. They don't make much sense as it is. Give me all the maps and also your archipelago map, Captain Pyle.",	//99
+"Of course, but do you have a pen and ink? (now that was real stupid - he's an author!)",	//100
+"Here, your map with all the blue letters. See what you can make of it.",		//101
+"Alright.",
+"I found something - this could be it!",	//103
+"Let me see...",				//104
+"I see that you're in a hurry to search for 'Blackbeard's tower'.",	//105
+"Of course. Why don't you join me, mister De Foe?",			//106
+"Ohh, I'm more of a researcher, Captain Pyle. Let's hope you find a swedish colony there. Goodbye.",				//107
+"Yes, or at least the town called Kristiania. Goodbye.",		//108
+"Don't forget my share of what you may find, Captain Pyle.",		//109
+"Of course not, mister De Foe.",					//110
+"Ahh, Captain Pyle, did not see you there.",	//111
+"Hello mister De Foe.",				//112
 
 };

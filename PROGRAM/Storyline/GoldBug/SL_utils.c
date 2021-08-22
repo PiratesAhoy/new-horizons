@@ -3168,6 +3168,7 @@ void OpenBoxProcedure_BUG()
 			break;
 
 			case "box1":
+		InterfaceStates.Buttons.Save.enable = 1;	//reset for temp disabled savegame, caused trouble with the boat to FM_shore
 				DoQuestReloadToLocation("Fort_Moultrie_shore", "goto", "box3", "FM_sh_turn_to_cit1");//was box2
 			break;
 
@@ -12948,6 +12949,9 @@ void CreateLandActionsEnvironment_BUG()
 					}
 					else IActions.ActiveActions.OpenBox.IconNum    = 1;
 				}
+				if(Pchar.boxname == "box8" || Pchar.boxname == "box9" || Pchar.boxname == "box10"
+				|| Pchar.boxname == "box11" || Pchar.boxname == "box12" || Pchar.boxname == "box13") 
+					IActions.ActiveActions.OpenBox.IconNum    = 1;
 			}
 
 			if(Pchar.location == "Fort_Moultrie_gunpowder")
@@ -12995,7 +12999,7 @@ void CreateLandActionsEnvironment_BUG()
 				{
 					if(Pchar.boxname == "box42" || Pchar.boxname == "box44" || Pchar.boxname == "box56"
 					|| Pchar.boxname == "box45" || Pchar.boxname == "box46" || Pchar.boxname == "box47"
-					|| Pchar.boxname == "box48" || Pchar.boxname == "box49") 
+					|| Pchar.boxname == "box48" || Pchar.boxname == "box49" || Pchar.boxname == "box3") 
 					IActions.ActiveActions.OpenBox.IconNum    = 0;
 				}
 				else
@@ -13020,7 +13024,7 @@ void CreateLandActionsEnvironment_BUG()
 						else IActions.ActiveActions.OpenBox.IconNum    = 63;
 					}
 				}
-				else
+			/*	else
 				{
 					if(Pchar.boxname == "box3")
 					{
@@ -13030,7 +13034,7 @@ void CreateLandActionsEnvironment_BUG()
 						}
 						else IActions.ActiveActions.OpenBox.IconNum    = 1;
 					}
-				}
+				}   */
 				else
 				{
 					if(Pchar.boxname == "box6")

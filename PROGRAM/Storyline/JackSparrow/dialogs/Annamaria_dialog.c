@@ -51,7 +51,10 @@ void ProcessDialogEvent()
 
 		case "ChatterOn_2":
 			GiveItem2Character(Pchar,"aztec_compass");
-			GiveShip2Character(pchar,"Tartane50","Jolly Mon",-1,PIRATE,true,true);
+			GiveShip2Character(pchar,"Tartane50","Jolly Mon",-1,PIRATE,true,true);	// PB: But the pirates approve
+			PChar.Flags.Personal = 0;	// GR: Pennant for this flag is the same as the one seen in the film
+			PChar.Flags.Personal.texture = 3;
+			if(GetRMRelation(PChar, PIRATE) > REL_WAR) HoistFlag(PERSONAL_NATION);
 			AddDialogExitQuest("Tortuga_Meet_Annamaria_for_ship4");
 			SetCharacterShipLocation(Pchar, "Tortuga_Port");
             dialog.snd = "Voice\CLLA\CLLA004";

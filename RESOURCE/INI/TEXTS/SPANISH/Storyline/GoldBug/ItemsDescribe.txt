@@ -1,0 +1,1730 @@
+Potion parameters{Remedio médico}
+health value{Salud}
+weapon blade parameters{Arma: daño mín./máx. #ddmg_min#/#ddmg_max#, penetrante #dpiercing#%, bloqueo #dblock#%.}
+weapon gun parameters{Arma: daño mín./máx. #ddmg_min#/#ddmg_max#, recarga #dchargespeed# s, precisión #daccuracy#%.}
+weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / % de daño recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
+
+//..........................BLADE ITEMS START.........................................
+
+itmname_bladeskull1	{Calvaera}
+itmdescr_bladeskull1
+{
+¿Para qué habrá usado este objeto tan macabro?. 
+}
+
+itmname_bladerammer		{Atacador}
+itmdescr_bladerammer
+{
+Una herramienta de artillero. 
+}
+
+itmname_bladeplank2		{Tabla}
+itmdescr_bladeplank2
+{
+Una tabla pesada. 
+}
+
+itmname_bladeirontool		{Herramienta}
+itmdescr_bladeirontool
+{
+Podría usarse como una pata de cabra. 
+}
+
+itmname_bladeemptysack_P	{Saco vacío}
+itmdescr_bladeemptysack_P
+{
+Un viejo saco con sitio para meter muchos libros.
+}
+
+itmname_bladesemifullsack_P	{Saco con algunos libros}
+itmdescr_bladesemifullsack_P
+{
+El saco con algunos libros dentro. ¿Es lo bastante pesado?
+}
+
+itmname_bladefullsack_P		{Saco lleno de libros}
+itmdescr_bladefullsack_P
+{
+Ahora el saco está lleno de libros. ¿Es lo bastante pesado?
+}
+
+itmname_bladeemptysack_B	{Saco vacío}
+itmdescr_bladeemptysack_B
+{
+Un viejo saco con sitio para meter cuatro pájaros.
+}
+
+itmname_bladebirdsack		{Saco llenos de pájaros}
+itmdescr_bladebirdsack
+{
+Ahora tengo suficiente para una o dos comidas.
+}
+
+itmname_bladecauldron		{Caldero}
+itmdescr_bladecauldron
+{
+Un pesado caldero de hierro fundido.
+}
+
+itmname_bladecauldron_w		{Caldero}
+itmdescr_bladecauldron_w
+{
+El caldero está lleno de agua.
+}
+
+itmname_bladeemptysack		{Saco vacío}
+itmdescr_bladeemptysack
+{
+Un viejo saco con sitio para meter nueve trozos de leña.
+}
+
+itmname_bladewoodsack		{Saco lleno de leña}
+itmdescr_bladewoodsack
+{
+Ahora tengo suficiente leña para encender un nuevo fuego.
+}
+
+itmname_bladefryingpan		{Plato}
+itmdescr_bladefryingpan
+{
+Un gran plato para hornear.
+}
+
+itmname_bladefish		{Pez grande}
+itmdescr_bladefish
+{
+Un pez grande y delicioso..., si no hubiera sido almacenado durante días en este sótano, con el calor del Caribe.
+}
+
+itmname_bladeflag_usa		{Bandera del fuerte}
+itmdescr_bladeflag_usa
+{
+La bandera de las barras y estrellas.
+}
+
+itmname_bladespyglass6		{Catalejo}
+itmdescr_bladespyglass6
+{
+Un largo catalejo estaba escondido dentro de la bandera enrollada.
+}
+
+itmname_bladeoilbottle		{Botella de aceite}
+itmdescr_bladeoilbottle
+{
+Una botella llena del mejor aceite de oliva.
+}
+
+itmname_bladebarrel		{Barril de ron}
+itmdescr_bladebarrel
+{
+Un pequeño barril lleno del mejor ron de todo el Caribe, destilado por un experto (ejem).
+}
+
+itmname_bladebarrel_gp0		{Barril vacío}
+itmdescr_bladebarrel_gp0
+{
+
+}
+
+itmname_bladebarrel_gpW		{Barril de pólvora}
+itmdescr_bladebarrel_gpW
+{
+No, la mezcla no está bien hecha. Tengo que deshacerme de ella.
+}
+
+itmname_bladebarrel_gpS		{Barril de pólvora}
+itmdescr_bladebarrel_gpS
+{
+Pólvora corriente para todo tipo de armas.
+}
+
+itmname_bladebarrel_gpF		{Barril de pólvora}
+itmdescr_bladebarrel_gpF
+{
+Pólvora especial para fuegos artificiales.
+}
+
+itmname_bladelockpick		{Ganzúa}
+itmdescr_bladelockpick
+{
+Dos pequeños hierros que podrían usarse como herramientas de cerrajería.
+}
+
+itmname_bladewood_short		{Leña}
+itmdescr_bladewood_short
+{
+Hum, también tengo que partir la leña.
+}
+
+itmname_bladewood4		{Leña}
+itmdescr_bladewood4
+{
+Bien, creo que esto valdrá para la chimenea.
+}
+
+itmname_sledgehammer		{Mazo}
+itmdescr_sledgehammer
+{
+Con este mazo puedo romper cualquier cosa.
+}
+
+itmname_bladepickaxe1		{Herramienta}
+itmdescr_bladepickaxe1
+{
+Una larga herramienta de jardinería (?), o quizás algo usado en minería. 
+}
+
+itmname_bladehammer		{Martillo}
+itmdescr_bladehammer
+{
+Un martillo corto pero muy pesado. 
+}
+
+itmname_bladesaw		{Sierra}
+itmdescr_bladesaw
+{
+Una robusta herramienta de carpintero. 
+}
+
+itmname_bladeladle		{Badil}
+itmdescr_bladeladle
+{
+Un badil de metal cubierto de hollín, para recoger carbón o brasas. 
+}
+
+itmname_bladebroom		{Escoba}
+itmdescr_bladebroom
+{
+Ahora puedo adecentar el lugar. 
+}
+
+itmname_bladeladder2		{Escalera de mano}
+itmdescr_bladeladder2
+{
+La gran escalera de mano que encontré en la caverna.
+}
+
+itmname_clubmusketoon		{Garrote de mosquetón}
+itmdescr_clubmusketoon
+{
+Un mosquetón usado como un garrote muy pesado.
+}
+
+itmname_bladeanchor		{Ancla}
+itmdescr_bladeanchor
+{
+Una pequeña pero pesada ancla, ¿cómo ha podido acabar en la tienda del sastre? 
+}
+
+itmname_bladeboom		{Botavara}
+itmdescr_bladeboom
+{
+Sólo un trozo de madera, no es un arma muy peligrosa. 
+}
+
+itmname_bladepaperroll		{Rollo de papel}
+itmdescr_bladepaperroll
+{
+Lo pondré en el suelo y usaré el yesquero para encenderlo.
+}
+
+itmname_bladespade		{Pala}
+itmdescr_bladespade
+{
+Mejor que nada como arma.
+}
+
+itmname_bladepickaxe2		{Pico}
+itmdescr_bladepickaxe2
+{
+Una herrmaienta larga y afilada usada en minería. 
+}
+
+itmname_machete		 	{Machete}
+itmdescr_machete
+{
+Usado para cortar caña de azúcar.
+}
+
+itmname_holy_water		 {Agua bendita}
+itmdescr_holy_water
+{
+Mi única protección contra zombis y otros no-muertos.
+}
+
+itmname_bladelever		 {Palanca}
+itmdescr_bladelever
+{
+Supongo que hará falta en algún sitio.
+}
+//..........................BLADE ITEMS END............................................
+
+//..........................BLADECRYPTO START..........................................
+
+itmname_crypto			{Pergamino}
+itmdescr_crypto
+{
+El pergamino sucio que encontré en la orilla.
+}
+
+itmname_bladecrypto_d		{Pergamino}
+itmdescr_bladecrypto_d
+{
+El pergamino sucio que encontré en la orilla.
+}
+
+itmname_bladecrypto_dl		{Pergamino}
+itmdescr_bladecrypto_dl
+{
+Mi dibujo del escarabajo de oro en el pergamino sucio.
+}
+
+itmname_bladecrypto_ds		{Pergamino}
+itmdescr_bladecrypto_ds
+{
+Mi dibujo del escarabajo de oro, ¡pero en la otra cara ahora hay una calavera!
+}
+
+itmname_bladecrypto_dsk		{Pergamino}
+itmdescr_bladecrypto_dsk
+{
+Junto a la calavera... ¿una cabra?
+}
+
+itmname_bladecrypto_cl		{Pergamino}
+itmdescr_bladecrypto_cl
+{
+Mi dibujo del escarabajo de oro en el pergamino enjuagado.
+}
+
+itmname_bladecrypto_csk		{Pergamino}
+itmdescr_bladecrypto_csk
+{
+Aquí están otra vez la calavera y la cabra.
+}
+
+itmname_bladecrypto_cskp	{Pergamino}
+itmdescr_bladecrypto_cskp
+{
+Además de la calavera y la cabra, también hay algunos caracteres ordenados en líneas.
+}
+
+itmname_bladecrypto_cskt	{Pergamino}
+itmdescr_bladecrypto_cskt
+{
+Hay muchos caracteres trazados toscamente entre la calavera y la cabra.
+}
+
+//..........................BLADECRYPTO END............................................
+
+//..........................BLADEBOTTLES START.........................................
+
+itmname_bladebottle_CB2		{Coñac}
+itmdescr_bladebottle_CB2
+{
+Si lo almacenas durante diez años o así, quizás podría llamarse coñac. Ahora tiene un sabor muy fuerte y... poco usual.  
+}
+
+itmname_Cognac			{¿Coñac?}
+itmdescr_Cognac
+{
+Si lo almacenas durante diez años o así, quizás podría llamarse coñac. Ahora tiene un sabor muy fuerte y... poco usual.  
+}
+
+itmname_bladebottle_CE0		{Botella pequeña}
+itmdescr_bladebottle_CE0
+{
+Una pequeña botella vacía.
+}
+
+itmname_bladebottle_AC2		{Botella pequeña}
+itmdescr_bladebottle_AC2
+{
+Una pequeña botella llena de carbón vegetal. 
+}
+
+itmname_bladebottle_AG2		{Botella pequeña}
+itmdescr_bladebottle_AG2
+{
+Una pequela botella llena de una mezcla de carbón vegetal y salitre. 
+}
+
+itmname_bladebottle_AN2		{Botella pequeña}
+itmdescr_bladebottle_AN2
+{
+Una pequeña botella llena de salitre. 
+}
+
+itmname_bladebottle_AS2		{Botella pequeña}
+itmdescr_bladebottle_AS2
+{
+Una pequeña botella llena de azufre. 
+}
+
+itmname_bladebottle_AY2		{Botella pequeña}
+itmdescr_bladebottle_AY2
+{
+Una pequeña botella llena de una mezcla de azufre y salitre. 
+}
+
+itmname_bladebottle_AZ2		{Botella pequeña}
+itmdescr_bladebottle_AZ2
+{
+Una pequeña botella llena de una mezcla de azufre y carbón vegetal. 
+}
+
+itmname_bladebottle_BE0		{Botella grande}
+itmdescr_bladebottle_BE0
+{
+Una gran botella vacía.
+}
+
+itmname_bladebottle_BC2		{Botella grande}
+itmdescr_bladebottle_BC2
+{
+Una gran botella llena de carbón vegetal. 
+}
+
+itmname_bladebottle_BG2		{Botella grande}
+itmdescr_bladebottle_BG2
+{
+Una gran botella llena de una mezcla de carbón vegetal y salitre. 
+}
+
+itmname_bladebottle_BN2		{Botella grande}
+itmdescr_bladebottle_BN2
+{
+Una gran botella llena de salitre. 
+}
+
+itmname_bladebottle_BS2		{Botella grande}
+itmdescr_bladebottle_BS2
+{
+Una gran botella llena de azufre. 
+}
+
+itmname_bladebottle_BY2		{Botella grande}
+itmdescr_bladebottle_BY2
+{
+Una gran botella llena de una mezcla de azufre y salitre. 
+}
+
+itmname_bladebottle_BZ2		{Botella grande}
+itmdescr_bladebottle_BZ2
+{
+Una gran botella llena de una mezcla de azufre y carbón vegetal. 
+}
+
+itmname_bladebottle_BC1		{Botella grande}
+itmdescr_bladebottle_BC1
+{
+Una gran botella medio llena de carbón vegetal. 
+}
+
+itmname_bladebottle_BG1		{Botella grande}
+itmdescr_bladebottle_BG1
+{
+Una gran botella medio llena de una mezcla de carbón vegetal y salitre. 
+}
+
+itmname_bladebottle_BN1		{Botella grande}
+itmdescr_bladebottle_BN1
+{
+Una gran botella medio llena de salitre. 
+}
+
+itmname_bladebottle_BS1		{Botella grande}
+itmdescr_bladebottle_BS1
+{
+Una gran botella medio llena de azufre. 
+}
+
+itmname_bladebottle_BY1		{Botella grande}
+itmdescr_bladebottle_BY1
+{
+Una gran botella medio llena de una mezcla de azufre y salitre. 
+}
+
+itmname_bladebottle_BZ1		{Botella grande}
+itmdescr_bladebottle_BZ1
+{
+Una gran botella medio llena de una mezcla de azufre y carbón vegetal. 
+}
+
+//..........................BLADEBOTTLES END.........................................
+
+//..........................GUN ITEMS START..........................................
+
+itmname_pistolFWchest		{Fuegos artificiales}
+itmdescr_pistolFWchest
+{
+Un cofre lleno de artefactos pirotécnicos. Los cohetes tienen nombres grandilocuentes como Sol Rojo, Lluvia de Fuego, Anillo Ardiente, Cruz Dorada y Anémona Azul.
+}
+
+itmname_blowgun			{Cerbatana}
+itmdescr_blowgun
+{
+Los mayas usaban la cerbatana para cazar pájaros y pequeños animales. Tiene un compartimento para los dardos venenosos acoplado al tubo. 
+}
+
+itmname_pistoltinderbox		{Yesquero}
+itmdescr_pistoltinderbox
+{
+Un yesquero que parece una pequeña pistola.
+}
+
+itmname_revolver 		{Revólver}
+itmdescr_revolver
+{
+Patente americana nr 138 para un 'arma de tambor giratorio', por Samuel Colt.
+}
+
+itmname_pistol204_P 		{Pistola}
+itmdescr_pistol204_P
+{
+Una pistola de dos cañones con llave de percusión.
+}
+
+itmname_pistolbedlinen		{Ropa de cama}
+itmdescr_pistolbedlinen
+{
+Tres rollos de ropa de cama. ¿Tal vez despiden un leve olor a moho?
+}
+
+itmname_pistolsalt		{Sal}
+itmdescr_pistolsalt
+{
+Un frasco lleno de sal normal y corriente.
+}
+
+itmname_pistolbucket_empty	{Cubo vacío}
+itmdescr_pistolbucket_empty
+{
+
+}
+
+itmname_pistolbucket_water	{Cubo}
+itmdescr_pistolbucket_water
+{
+Un cubo lleno de agua.
+}
+
+itmname_pistolbucket_nitre	{Cubo}
+itmdescr_pistolbucket_nitre
+{
+Un cubo lleno de salitre.
+}
+
+itmname_pistolhand2		{}
+itmdescr_pistolhand2
+{
+.
+}
+
+itmname_pistolnitre_E		{Saco vacío}
+itmdescr_pistolnitre_E
+{
+
+}
+
+itmname_pistolnitre_H		{Saco de salitre}
+itmdescr_pistolnitre_H
+{
+Un saco de cuero medio lleno de salitre.
+}
+
+itmname_pistolnitre_big_F	{Saco de salitre}
+itmdescr_pistolnitre_big_F
+{
+Un saco de cuero lleno de salitre.
+}
+
+itmname_pistolsulphur_E		{Cesta vacía}
+itmdescr_pistolsulphur_E
+{
+
+}
+
+itmname_pistolsulphur_H		{Cesta de azufre}
+itmdescr_pistolsulphur_H
+{
+Una cesta medio llena de azufre.
+}
+
+itmname_pistolsulphur_F		{Cesta de azufre}
+itmdescr_pistolsulphur_F
+{
+Una cesta llena de azufre.
+}
+
+itmname_pistolcharcoal_E	{Tarro vacío}
+itmdescr_pistolcharcoal_E
+{
+
+}
+
+itmname_pistolcharcoal_H	{Tarro de carbón vegetal}
+itmdescr_pistolcharcoal_H
+{
+Un tarro medio lleno de carbón vegetal.
+}
+
+itmname_pistolcharcoal_F	{Tarro de carbón vegetal}
+itmdescr_pistolcharcoal_F
+{
+Un tarro lleno de carbón vegetal.
+}
+
+itmname_pistolpyrite_E		{Caja vacía}
+itmdescr_pistolpyrite_E
+{
+
+}
+
+itmname_pistolpyrite_H		{Caja de pirita}
+itmdescr_pistolpyrite_H
+{
+Una caja medio llena de polvo de pirita.
+}
+
+itmname_pistolpyrite_F		{Caja de pirita}
+itmdescr_pistolpyrite_F
+{
+Una caja llena de polvo de pirita.
+}
+
+itmname_pistolbarrel_gp0	{Barril vacío}
+itmdescr_pistolbarrel_gp0
+{
+
+}
+
+itmname_pistolbarrel_gpW	{Barril de pólvora}
+itmdescr_pistolbarrel_gpW
+{
+No, la mezcla no está bien hecha. Tengo que deshacerme de ella.
+}
+
+itmname_pistolbarrel_gpS	{Barril de pólvora}
+itmdescr_pistolbarrel_gpS
+{
+Pólvora corriente para todo tipo de armas.
+}
+
+itmname_pistolbarrel_gpF	{Barril de pólvora}
+itmdescr_pistolbarrel_gpF
+{
+Pñolvora especial para fuegos artificiales.
+}
+
+itmname_pistolsextant2 		{Sextante}
+itmdescr_pistolsextant2
+{
+El sextante de Arthur Gordon Pym.
+}
+
+//..........................GUN ITEMS END.............................................
+//..........................AMMO ITEMS START..........................................
+
+itmname_arrows2			{Dardos envenenados}
+itmdescr_arrows2	
+{
+Algunas culturas impregnan las puntas de sus dardos en curare u otros venenos para paralizar al objetivo.
+}
+
+itmname_cartridges 		{Cartuchos}
+itmdescr_cartridges
+{
+Forma de munición que une la bala y la pólvora en un solo paquete. Para el revólver. 
+}
+
+itmname_nails 			{Clavos}
+itmdescr_nails
+{
+Tal vez se puedan usar en vez de metralla para el mosquetón.
+}
+
+itmname_bagcompass4 		{Brújula}
+itmdescr_bagcompass4
+{
+Una pesada brújula de barco, con bolsa incluida.
+}
+
+itmname_p_package 		{Paquete}
+itmdescr_p_package
+{
+La recompensa de Claude Frollo. ¿Qué puede ser?
+}
+
+itmname_p_case_C 		{Estuche}
+itmdescr_p_case_C
+{
+Un bonito estuche de caoba.  
+}
+
+itmname_p_case_3 		{Estuche de pistola}
+itmdescr_p_case_3
+{
+Un estuche de pistola para un caballero, con todas sus herramientas y equipo de mantenimiento.
+}
+
+itmname_p_case_2A 		{Estuche de pistola}
+itmdescr_p_case_2A
+{
+Un estuche de pistola para un caballero, con todas sus herramientas y equipo de mantenimiento.
+}
+
+itmname_p_case_2B 		{Estuche de pistola}
+itmdescr_p_case_2B
+{
+Un estuche de pistola para un caballero, con todas sus herramientas y equipo de mantenimiento.
+}
+
+itmname_p_case_2C		{Estuche de pistola}
+itmdescr_p_case_2C
+{
+Un estuche de pistola para un caballero, con todas sus herramientas y equipo de mantenimiento.
+}
+
+itmname_p_case_1A 		{Estuche de pistola}
+itmdescr_p_case_1A
+{
+Un estuche de pistola para un caballero, con todas sus herramientas y equipo de mantenimiento.
+}
+
+itmname_p_case_1B 		{Estuche de pistola}
+itmdescr_p_case_1B
+{
+Un estuche de pistola para un caballero, con todas sus herramientas y equipo de mantenimiento.
+}
+
+itmname_p_case_1C		{Estuche de pistola}
+itmdescr_p_case_1C
+{
+Un estuche de pistola para un caballero, con todas sus herramientas y equipo de mantenimiento.
+}
+
+itmname_p_case_0		{Estuche de pistola}
+itmdescr_p_case_0
+{
+Un estuche de pistola para un caballero, con todas sus herramientas y equipo de mantenimiento.
+}
+
+itmname_cart_box_C		{Caja de cartuchos}
+itmdescr_cart_box_C
+{
+Cartuchos resistentes a la humedad. Manufacturados por D.C. Sage & Co
+}
+
+itmname_cart_box_O		{Cartuchos}
+itmdescr_cart_box_O
+{
+Cartuchos de papel que contienen pólvora y una bala de pistola. 18 grs, calibre 44/100. Patente de Hotchkiss.
+}
+
+itmname_caps_box_C		{Caja de cápsulas fulminantes}
+itmdescr_caps_box_C
+{
+Cápsulas fulminantes (o pistones) para pistola Colt, fabricados por Eley Bros. Londres.
+}
+
+itmname_caps_box_O		{Cápsulas fulminantes}
+itmdescr_caps_box_O
+{
+Las cápsulas fulminantes solo fallan en uno de cada cien disparos.
+}
+
+//..........................AMMO ITEMS END............................................
+//..........................OTHER ITEMS START.........................................
+
+
+itmname_marsh_hen		{Gallineta de agua}
+itmdescr_marsh_hen
+{
+La isla de Sullivan es un conocido hábitat de la gallineta de agua.
+}
+
+itmname_shell1			{Concha}
+itmdescr_shell1
+{
+Una bonita concha que he encontrado en la orilla del mar.
+}
+
+itmname_shell2			{Concha}
+itmdescr_shell2
+{
+Una bonita concha que he encontrado en la orilla del mar.
+}
+
+itmname_shell3			{Concha}
+itmdescr_shell3
+{
+Una bonita concha que he encontrado en la orilla del mar.
+}
+
+itmname_shell4			{Concha}
+itmdescr_shell4
+{
+Una bonita concha que he encontrado en la orilla del mar.
+}
+
+itmname_shell5			{Concha}
+itmdescr_shell5
+{
+Una bonita concha que he encontrado en la orilla del mar.
+}
+
+itmname_shell6			{Concha}
+itmdescr_shell6
+{
+Una bonita concha que he encontrado en la orilla del mar.
+}
+
+itmname_shell_collection	{Colección de conchas}
+itmdescr_shell_collection
+{
+Esta colección de conchas sería la envidia del mismísimo Swammerdamm.
+}
+
+itmname_inkpen			{Pluma y tinta}
+itmdescr_inkpen
+{
+Nada más, nada menos.
+}
+
+itmname_1_log			{Madera de deriva}
+itmdescr_1_log
+{
+Un trozo de madera que he encontrado en la orilla.
+}
+
+itmname_bigfish			{Pez grande}
+itmdescr_bigfish
+{
+Un pez grande y delicioso..., si se cocina hoy.
+}
+
+itmname_meat			{Boucan}
+itmdescr_meat
+{
+Una especialidad de Tortuga. Carne ahumada por cazadores, también conocidos como bucaneros. Pero, ¿y ese olor?  
+}
+
+itmname_2winebottles		{Dos botellas de vino}
+itmdescr_2winebottles
+{
+Vino francés de la mejor calidad, aunque un poco caliente.
+}
+
+itmname_bread			{Galleta de barco}
+itmdescr_bread
+{
+Pan recocido para mantenerse fresco durante largos viajes por mar. ¡Pero no se ha mantenido! Hay algo moviéndose dentro.  
+}
+
+itmname_ale			{Cerveza}
+itmdescr_ale
+{
+Una bebida fuerte, ¿venida de Inglaterra? Ciudado, esta cerveza se te puede subir a la cabeza fácilmente.  
+}
+
+itmname_tankard			{Jarra}
+itmdescr_tankard
+{
+Una jarra grande de hojalata, ¿tal vez valga algún dinero? 
+}
+
+itmname_fish			{Pescado}
+itmdescr_fish
+{
+Puede que el pescado sea bueno para el cerebro, pero aburre comerlo día tras día.
+}
+
+itmname_coin7			{Moneda}
+itmdescr_coin7
+{
+Una moneda china de latón.
+}
+
+itmname_foreign_items		{Colección de curiosidades}
+itmdescr_foreign_items
+{
+Algunas baratijas de poco valor y, en su mayor parte, de origen extranjero.
+}
+
+itmname_tobacco			{Tabaco}
+itmdescr_tobacco
+{
+Trozos de tabaco trenzado.
+}
+
+itmname_goldbug2		{Escarabajo de oro}
+itmdescr_goldbug2
+{
+El escarabajo de oro está cuidadosamente envuelto en un trozo de papel.
+}
+
+itmname_tin_jug			{Vaso de hojalata}
+itmdescr_tin_jug
+{
+Un pequeño vaso de hojalata.
+}
+
+itmname_plate			{Plato}
+itmdescr_plate
+{
+Porcelana azul importada por la Compañía de las Indias Orientales. 
+}
+
+itmname_copper_cauldron		{Caldero}
+itmdescr_copper_cauldron
+{
+Un pesado caldero de cobre. 
+}
+
+itmname_chain			{Grilletes con cadenas}
+itmdescr_chain
+{
+Equipo básico del prisionero. Debería intentar endosárselos a cualquiera en la camareta...
+}
+
+itmname_medicine_leaves		{Hojas medicinales}
+itmdescr_medicine_leaves
+{
+Estas hojas pueden protegerte contra los malos espíritus e inspirar tu imaginación.   
+}
+
+itmname_Poes_clothes		{Ropas}
+itmdescr_Poes_clothes
+{
+   
+}
+
+itmname_Poes_urn		{Urna}
+itmdescr_Poes_urn
+{
+   
+}
+
+itmname_Poes_books		{Libros}
+itmdescr_Poes_books
+{
+   
+}
+
+itmname_gibbet_rope		{Cuerda larga}
+itmdescr_gibbet_rope
+{
+La cuerda larga que encontré en la cueva de los cimarrones.   
+}
+
+itmname_fort_rope		{Cuerda larga}
+itmdescr_fort_rope
+{
+La cuerda larga que compré en Fort Moultrie.   
+}
+
+itmname_cork			{Corcho}
+itmdescr_cork
+{
+El corcho del barril.   
+}
+
+itmname_corkscrew		{Sacacorchos}
+itmdescr_corkscrew
+{
+Un sacacorchos normal y corriente.   
+}
+
+itmname_picture3		{Mapa}
+itmdescr_picture3
+{
+El mapa de una ciudad fortificada: Caletum. ¿Calais?
+}
+
+itmname_picture5		{Inventario}
+itmdescr_picture5
+{
+Esto es un inventario del patrimonio de la casa.
+}
+
+itmname_picture6		{Lista}
+itmdescr_picture6
+{
+Una lista de suministros para la guarnición.
+}
+
+itmname_glasses			{Gafas}
+itmdescr_glasses
+{
+Un par de gafas desgastadas pero buenas.
+}
+
+itmname_blue_uniform	        {Uniforme completo}
+itmdescr_blue_uniform
+{
+El mejor uniforme del teniente G. Parece nuevo.
+}
+
+itmname_G_journal		{Diario}
+itmdescr_G_journal
+{
+Diario del teniente G. Habla sobre todo de animales.
+}
+
+itmname_G_letter1		{Papeles}
+itmdescr_G_letter1
+{
+Una carta muy privada.
+}
+
+itmname_G_letter2		{Documento}
+itmdescr_G_letter2
+{
+Una carta muy privada.
+}
+
+itmname_G_letter3		{Carta}
+itmdescr_G_letter3
+{
+Una carta muy privada.
+}
+
+itmname_sailbag			{Bolsa de velas}
+itmdescr_sailbag
+{
+Estas velas son muy pesadas.
+}
+
+itmname_pistol_package		{Paquete}
+itmdescr_pistol_package
+{
+El paquete que recibí en el burdel. Es del sacerdote, Claude Frollo.
+}
+
+itmname_calabash		{Calabaza llena de antídoto}
+itmdescr_calabash
+{
+Este líquido desconocido cura el veneno.
+}
+
+itmname_herbs			{Bolsa de hierbas}
+itmdescr_herbs
+{
+Una mezcla de hierbas que cura heridas leves.
+}
+
+//..........................OTHER ITEMS END.........................................
+
+//..........................BOOKS DOCUMENTS START...................................
+
+itmname_letter_paper		{Papel para cartas}
+itmdescr_letter_paper
+{
+Unas pocas hojas de sucio papel para cartas con el membrete del hotel.
+}
+
+itmname_crypto1			{Texto cifrado}
+itmdescr_crypto1
+{
+He copiado los caracteres del pergamino. Como cualquiera puede deducir, encierran algún tipo de significado.
+}
+
+itmname_crypto2			{Texto cifrado}
+itmdescr_crypto2
+{
+El texto completo dividido en frases por Mr. Poe. 'Un buen vaso en el Hostal del Obispo, en la Silla del Diablo. Cuarenta y un grados, trece minutos. Norte-nordeste. Tronco principal, séptima rama, lado este. Tirar desde el ojo izquierdo de la calavera. Una línea recta desde el árbol siguiendo el tiro, cincuenta pies hacia afuera'.
+}
+
+itmname_book52 			{Unas pocas palabras sobre escritura secreta}
+itmdescr_book52
+{
+Un ensayo de Edgar Allan Poe. Dentro del libro hay un papel doblado. 
+}
+
+itmname_book53 			{Unas pocas palabras sobre escritura secreta}
+itmdescr_book53
+{
+Subrayado en rojo: de todas las palabras en la lengua inglesa, el artículo 'THE' es la más común; observemos, por lo tanto, si no hay repeticiones de tres caracteres cualesquiera en el mismo orden de colocación. Si descubrimos tales repeticiones de letras, así ordenadas, lo más probable será que representen la palabra 'THE'. 
+}
+
+itmname_book54 			{Tabla de frecuencias}
+itmdescr_book54
+{
+En inglés, la letra más frecuente es la 'E'. Después, la sucesión es como sigue: a o i d h n r s t u y c f g l m w b k p q x z. La 'E' predomina de forma tan marcada que es raro ver una frase, de cualquier extensión, en la que no sea la letra mas prevalente. 
+}
+
+itmname_book26			{El esqueleto humano}
+itmdescr_book26
+{
+Un manual para los 206 huesos del ser humano. Ilustrado.
+}
+
+itmname_book27			{Chymist}
+itmdescr_book27
+{
+Una obra alemana de química publicada en Leipzig en 1729. Parece que trata sobre minerales y vegetales 
+}
+
+itmname_book33			{Geografien}
+itmdescr_book33
+{
+Un libro de texto escolar viejo y muy básico, ¿escrito en algún idioma nórdico?
+}
+
+itmname_book21			{Libro de estatutos}
+itmdescr_book21
+{
+Resumen de los estatutos de las Indias Occidentales Británicas. La cubierta está desgastada pero, ¿ha sido abierto alguna vez?
+}
+
+itmname_doc1A			{Papel doblado}
+itmdescr_doc1A
+{
+
+}
+
+itmname_doc1B			{Nota}
+itmdescr_doc1B
+{
+Objetos de la mano detecha: F3 + F3; objetos de la mano izquierda: F3 + disparar pistola.//JRH
+}
+
+itmname_doc2A			{Carpeta}
+itmdescr_doc2A
+{
+
+}
+
+itmname_doc2B			{Carpeta}
+itmdescr_doc2B
+{
+
+}
+
+itmname_doc2C			{Ilustración}
+itmdescr_doc2C
+{
+¿Una ilustración de una rueda? No sé. Pero en la página de la derecha hay algo escrito.
+}
+
+itmname_doc3C			{Receta para pólvora estándar}
+itmdescr_doc3C
+{
+6 partes de salitre, 1 parte carbón vegetal y 1 parte de azufre.
+}
+
+itmname_doc2D			{Página en blanco}
+itmdescr_doc2D
+{
+
+}
+
+itmname_doc3D			{Mezclando ingredientes}
+itmdescr_doc3D
+{
+Recuerda siempre mezclar carbón vegetal con salitre para obtener hollín de salitre, y azufre con salitre para obtener hollín de azufre. Haz esto antes de molerlo y será seguro.
+}
+
+itmname_doc2E			{Receta de pólvora de combustión lenta}
+itmdescr_doc2E
+{
+4 partes de salitre, 2 partes de carbón vegetal y dos partes de azufre.
+}
+
+itmname_doc4A			{Libro viejo}
+itmdescr_doc4A
+{
+Un libro muy desgastado.
+}
+
+itmname_doc4B			{Cómo quemar carbón vegetal}
+itmdescr_doc4B
+{
+1. Serrar los troncos
+2. Cortar la leña
+3. Ponerla en la chimenea y
+4. Prenderle fuego
+5. Cuando haya ardido hasta convertirse en carbón, recogerlo de la chimenea
+}
+
+itmname_doc5A			{Mensaje en una botella}
+itmdescr_doc5A
+{
+Una botella con un papel sellado en su interior.
+}
+
+itmname_doc5B			{Pergamino}
+itmdescr_doc5B
+{
+¡Ahora leamos ese mensaje!
+}
+
+itmname_doc5C			{Cómo extraer salitre}
+itmdescr_doc5C
+{
+1. Preparar poniendo más leña en el horno
+2. Llenar recipiente 1 y esperar a que hierva
+3. Llenar recipiente 2 y esperar a que disuelva el salitre
+4 .Llenar recipiente 3 y llenar un cubo con la solución resultante
+5. Esparcir el líquido sobre las tablas y esperar a que se seque
+6. Rascar el salitre de las tablas
+}
+
+itmname_doc6A			{Sobre}
+itmdescr_doc6A
+{
+¿Hay algo dentro?
+}
+
+itmname_doc6B			{Carta}
+itmdescr_doc6B
+{
+¿De qué va todo esto?
+}
+
+itmname_doc6C			{Cómo destilar azufre}
+itmdescr_doc6C
+{
+1. Colocar piedras de pirita sobre las tablas
+2. Machacarlas con cuidado para obterne polvo de pirita
+3. Recoger el polvo de pirita y
+4. Colocarlo en el alambique
+5. Llenar el alambique con agua del patio
+6. Poner en marcha el alambique y esperar a que se procese
+7. Recoger el azufre destilado
+}
+
+itmname_goldbug			{Escarabajo de oro}
+itmdescr_goldbug
+{
+Un escarabajo de una especie que creo ser totalmente nueva.
+}
+
+itmname_wrinkled_paper		{Trozo de papel}
+itmdescr_wrinkled_paper
+{
+Un trozo de papel en el que estaba envuelto el escarabajo.
+}
+
+itmname_bird_sketch		{Dibujo}
+itmdescr_bird_sketch
+{
+Un dibujo infantil de un pájaro negro. ¿Pero qué pájaro se supone que es?
+}
+
+itmname_bird_sketch_doc		{Dibujo de un cuervo}
+itmdescr_bird_sketch_doc
+{
+¿Tal vez el reverso esté lo bastante limpio como para hacer otro dibujo?
+}
+
+itmname_bird_backside		{Papel en blanco}
+itmdescr_bird_backside
+{
+El reverso del dibujo del cuervo.
+}
+
+itmname_BH_sketch		{Dibujo}
+itmdescr_BH_sketch
+{
+La hechicera negra me ha hecho este dibujo de una roca a la que llaman Bessop's Castle.
+}
+
+itmname_BH_sketch_out		{Dibujo}
+itmdescr_BH_sketch_out
+{
+Puedo enrollar este papel para encender la pólvora.
+}
+
+itmname_rolled_paper		{Rollo de papel}
+itmdescr_rolled_paper
+{
+Lo llenaré de pólvora.
+}
+
+itmname_rolled_paper_gp		{Bomba casera}
+itmdescr_rolled_paper_gp
+{
+La colocaré en el suelo y usaré el yesquero para encenderla.
+}
+
+itmname_book55A			{Moby Dick}
+itmdescr_book55A
+{
+La novela sobre el capitán Ahab persiguiendo a la ballena blanca, de Herman Melville.
+}
+
+itmname_book55B			{Moby Dick}
+itmdescr_book55B
+{
+Eso sí que es una ballena grande.
+}
+
+itmname_book55C			{Moby Dick}
+itmdescr_book55C
+{
+¡Hay algo escondido dentro!
+}
+
+itmname_book55D			{Moby Dick}
+itmdescr_book55D
+{
+
+}
+
+itmname_book56			{Colección de Jules Verne}
+itmdescr_book56
+{
+"Le Tour du Monde en Quatre-Vingt Jours"
+"Voyage au Centre de la Terre"
+"Hector Servadac: Voyages et aventures à travers le monde solaire"
+"Michel Strogoff: Moscou-Irkutsk"
+"L'île mystérieuse"
+}
+
+itmname_book57			{Famosas cuevas subterráneas}
+itmdescr_book57
+{
+"1. Cuevas Mulu, Borneo"
+"2. Gruta de Jeita, Líbano"
+"3. Cavernas Carlsbad, Nuevo México"
+"4. Cuevas Skocjan, Eslovenia"
+"5. Cueva de Majlis al Jinn, Omán"
+"6. Cuevas Waitomo, Nueva Zelanda"
+"7. Río subterráneo de Puerto Princesa, Filipinas"
+"8. Cueva de los Cristales, norte de México"	
+"9. Cueva Flauta de Junco, sur de China"
+}
+
+itmname_book58			{Tema: canibalismo}
+itmdescr_book58
+{
+"Hansel y Gretel", de los hermanos Grimm.
+"Robinson Crusoe", de Daniel Defoe, dos volúmenes.
+"Cocinando con Hannibal Lecter" nueva versión extendida, 1400 páginas.
+}
+
+itmname_book59			{Cuatro clásicos sobre piratas}
+itmdescr_book59
+{
+"Motín en la Bounty", de Charles Nordhoff y James Norman Hall.
+"El corsario", de Frederick Marryat. 
+"El pirata rojo", de James Fenimore Cooper.
+"La fragata oscura", de Charles Boardman Hawes.
+}
+
+itmname_book60			{Perros de Terranova}
+itmdescr_book60
+{
+Una pila de papeles con notas sobre los perros favoritos de Pym. Incluye un retrato de "Tiger".
+}
+
+itmname_book61A			{Libro}
+itmdescr_book61A
+{
+El libro tiene un icono en la portada. ¿Una Biblia?
+}
+
+itmname_book61B			{Libro de himnos}
+itmdescr_book61B
+{
+No, es un libro de himnos, 'Missa in Discantu'. Hay algo escondido dentro.
+}
+
+itmname_book61C1		{Cartas}
+itmdescr_book61C1
+{
+Hum, aquí hay una colección de cartas. El 'documento' del sacerdote.
+}
+
+itmname_book61C2		{Cartas}
+itmdescr_book61C2
+{
+Las cartas del sacerdote.
+}
+
+itmname_book61D			{Carta de amor}
+itmdescr_book61D
+{
+Una carta muy comprometedora para un sacerdote. Así que por eso quería rcuperar el libro con tanta urgencia.
+}
+
+itmname_sergeants_note		{Nota del sargento}
+itmdescr_sergeants_note
+{
+Esta nota me autoriza a recibir un revólver, munición, y una cuerda larga, al presentarla al cabo en la armería.
+}
+
+itmname_poe_manuscript		{Manuscrito de Poe}
+itmdescr_poe_manuscript
+{
+Veamos qué es lo que ha escrito Mr. Poe... (copia en español en 'carpeta de instalación del juego\PROGRAM\Storyline\GoldBug\dialogs\SPANISH')
+}
+//..........................BOOKS DOCUMENTS END.....................................
+
+//..........................MEDICINE BAG START......................................
+
+itmname_med_bag1_obj		{Bolsa de medicinas}
+itmdescr_med_bag1_obj
+{
+La bolsa de medicinas está vacía.
+}
+
+itmname_med_bag1_doc_NO		{Bolsa de medicinas}
+itmdescr_med_bag1_doc_NO
+{
+La bolsa de medicinas que me dio la mujer india. La examinaré cuando vuelva a casa o...
+}
+
+itmname_med_bag1_doc_YES	{Bolsa de medicinas}
+itmdescr_med_bag1_doc_YES
+{
+La bolsa de medicinas que me dio la mujer india. ¡Veamos qué hay dentro!
+}
+
+itmname_med_bag1_out		{Bolsa de medicinas}
+itmdescr_med_bag1_out
+{
+La bolsa de medicinas que me dio la mujer india. Al equiparla, incrementa mi Suerte en +2.
+}
+
+itmname_med_bag2_doc		{Objetos medicinales}
+itmdescr_med_bag2_doc
+{
+Una pluma de halcón, una piña piñonera y una piedra azul, que podría ser lapislázuli. También hay un papel doblado: ¿un mensaje? 
+}
+
+itmname_med_bag2_obj		{Objetos medicinales}
+itmdescr_med_bag2_obj
+{
+Los cuatro objetos que he visto antes. 
+}
+
+itmname_med_bag2_out		{Objetos medicinales}
+itmdescr_med_bag2_out
+{
+Creo que volveré a poner los objetos en la bolsa de medicinas. 
+}
+
+itmname_crypto_excel		{Papel cuadriculado}
+itmdescr_crypto_excel
+{
+Un gran papel cuadriculado que viene con una pequeña nota y un dibujo. El dibujo es ¿un pirata ahorcado? La nota tiene una letra muy pequeña... (ver 'carpeta de instalación del juego\RESOURCE\INI\TEXTS\SPANISH\Storyline\GoldBug\QUESTBOOK') 
+}
+
+//..........................MEDICINE BAG END........................................
+
+//..........................DETECTVE KIT START......................................
+
+itmname_detective_kit1		{Equipo de detective}
+itmdescr_detective_kit1
+{
+La caja de herramientas está cerrada.   
+}
+
+itmname_detective_kit2		{Equipo de detective}
+itmdescr_detective_kit2
+{
+¡He logrado abrir la caja con una horquilla! Dentro hay un montón de llaves.   
+}
+
+itmname_detective_kit3		{Equipo de detective}
+itmdescr_detective_kit3
+{
+La caja está abierta pero vacía. Tengo que conseguir seis objetos para llenarla.   
+}
+
+itmname_detective_kit4		{Equipo de detective}
+itmdescr_detective_kit4
+{
+La caja está llena. Sólo tengo que cerrarla y entregársela a Mr. Dupin.   
+}
+
+itmname_detective_kit5		{Equipo de detective}
+itmdescr_detective_kit5
+{
+La caja está llena. Puedo sacar los objetos si quiero.   
+}
+
+itmname_D_feather		{Cepillo de plumas}
+itmdescr_D_feather
+{
+Una pequeña pluma usada como cepillo. ¿Para tomar huellas dactilares?   
+}
+
+itmname_D_scissors		{Tijeras}
+itmdescr_D_scissors
+{
+Un par de tijeras. ¿Para uso médico?   
+}
+
+itmname_D_compasses		{Compases}
+itmdescr_D_compasses
+{
+Un par de compases. Resultan útiles para examinar un mapa.   
+}
+
+itmname_D_scalpel		{Escalpelo}
+itmdescr_D_scalpel
+{
+Un escalpelo muy afilado. Tengo que tener cuidado para no cortarme.   
+}
+
+itmname_D_magnifying		{Lupa}
+itmdescr_D_magnifying
+{
+La lupa es la herramienta mejor conocida de los investigadores privados.   
+}
+
+itmname_D_tweezers		{Pinzas}
+itmdescr_D_tweezers
+{
+Un par de pinzas. Para recoger pruebas muy pequeñas.   
+}
+
+itmname_D_hairpin		{Horquilla de pelo}
+itmdescr_D_hairpin
+{
+Una horquilla de pelo normal y corriente, ¿qué uso puede tener?
+}
+
+itmname_D_key23			{Llaves}
+itmdescr_D_key23
+{
+Una colección de cinco llaves, ¿qué es lo que abren?   
+}
+
+//..........................DETECTVE KIT END........................................
+
+//..........................KEYS START..............................................
+
+itmname_key2			{Llave de cofre}
+itmdescr_key2
+{
+Una llave normal para un cofre.
+}
+
+itmname_key7			{Llave}
+itmdescr_key7
+{
+Una llave con el símbolo de una casa.
+}
+
+itmname_key20			{Llave}
+itmdescr_key20
+{
+Una llave vieja.
+}
+
+itmname_key21			{Llave}
+itmdescr_key21
+{
+La llave de mi habitación.
+}
+
+itmname_key22			{Llave}
+itmdescr_key22
+{
+La llave de la sacristía.
+}
+
+itmname_key24			{Llave negra}
+itmdescr_key24
+{
+
+}
+
+itmname_key25			{Llave de oro}
+itmdescr_key25
+{
+
+}
+
+itmname_key26			{Llave de plata}
+itmdescr_key26
+{
+
+}
+
+itmname_key27			{Llave roja}
+itmdescr_key27
+{
+
+}
+
+itmname_key28			{Llave del burdel}
+itmdescr_key28
+{
+Una bonita llave unida a una campanilla.
+}
+
+itmname_key29			{Llave}
+itmdescr_key29
+{
+Una llave con un carrete de hilo vacío. 
+}
+
+itmname_key30			{Llave}
+itmdescr_key30
+{
+Una gran llave marcada "Cueva". 
+}
+
+itmname_key31			{Llave}
+itmdescr_key31
+{
+¿Una llave unida a una pieza de ajedrez? 
+}
+
+itmname_key32			{Llaves de la prisión}
+itmdescr_key32
+{
+Llaves para las seis celdas de la prisión. 
+}
+
+//..........................KEYS END..............................................
+
+//..........................CHURCH ITEMS START....................................
+
+itmname_measuring_tape		{Cinta métrica}
+itmdescr_measuring_tape
+{
+Una cinta métrica de 15 pies (5 metros).
+}
+
+itmname_peg			{Estaca}
+itmdescr_peg
+{
+Una pequeña estaca de madera.
+}
+
+itmname_knitting_basket		{Cesta pequeña}
+itmdescr_knitting_basket
+{
+Alguien se la ha olvidado en la iglesia. ¿Qué hay dentro?
+}
+
+itmname_knitting		{Juego de costura}
+itmdescr_knitting
+{
+Una madeja de cordel con dos agujas.
+}
+
+itmname_yarn			{Madeja de cordel}
+itmdescr_yarn
+{
+Una madeja de cordel, sí. ¿Y?
+}
+
+itmname_needles			{Agujas}
+itmdescr_needles
+{
+¿Quizás podría usarlas como ganzúas para abrir cerraduras?
+}
+
+itmname_needles2		{Ganzúas}
+itmdescr_needles2
+{
+Las agujas convertidas en ganzúas.
+}
+
+itmname_magnet			{Imán}
+itmdescr_magnet
+{
+Un imán muy fino.
+}
+
+itmname_magnet2			{Imán}
+itmdescr_magnet2
+{
+Hay un cordel unido al imán.
+}
+
+itmname_pliers			{Par de tenazas}
+itmdescr_pliers
+{
+Una herramienta común. ¿Cómo puedo usarla?
+}
+
+itmname_potionwine2		{Vino de misa}
+itmdescr_potionwine2
+{
+Parece vino tinto normal y corriente.
+}
+
+itmname_fake_candelabre		{Candelabro}
+
+itmname_wax_candles		{Velas de cera}
+
+itmname_fake_chalice		{Cáliz}
+
+itmname_altar_bread		{Pan de misa}
+itmdescr_altar_bread
+{
+Pobre bastardo; sin nada que comer salvo estas obleas secas.
+}
+
+itmname_flyswatter        {Matamoscas}
+
+itmname_shrine			{Relicario}
+
+itmname_jewelcross		{Cruz enjoyada}
+
+itmname_cowl			{Capucha}
+
+itmname_fake_censer		{Incensario}
+
+//..........................CHURCH ITEMS END....................................
+//........................TREASURE ITEMS START..................................
+
+itmname_mixed_treasure		{Tesoro}
+itmdescr_mixed_treasure
+{
+En un instante, un tesoro de incalculable valor apareció refulgente ante nosotros. 
+Los rayos del sol caían en el hoyo, haciendo brotar destellos y brillos 
+de un montón confuso de oro y de joyas, que cegaban nuestros ojos. 
+}
+
+itmname_emptysack		{Saco vacío}
+itmdescr_emptysack
+{
+Un viejo saco vacío.
+}
+
+itmname_treasuresack		{Saco lleno}
+itmdescr_treasuresack
+{
+Parte del tesoro en un saco.
+}
+
+itmname_treasure1		{Ponchera prodigiosa}
+itmname_treasure2		{Incensario}
+itmname_treasure3		{Ópalo}
+itmname_treasure4		{Elefante}
+
+itmname_treasure5		{Anillo grande}
+itmname_treasure6		{Anillo pequeño}
+itmname_treasure7		{Anillo}
+itmname_treasure8		{Cadena pequeña}
+
+itmname_treasure9		{Reloj grande}
+itmname_treasure10		{Reloj pequeño}
+itmname_treasure11		{Reloj mediano}
+itmname_treasure12		{Cadena suntuosa}
+
+itmname_treasure13		{Crucifijo francés}
+itmname_treasure14		{Crucifijo pequeño}
+itmname_treasure15		{Crucifijo grande}
+itmname_treasure16		{Cadena pesada}
+
+itmname_incas_collection	{Colección de tesoros incas}
+itmname_sword_handle1		{Mango de espada}
+itmname_sword_handle2		{Mango de espada}
+
+itmname_coin3			{Doblón}
+itmname_coin5			{Guinea}
+itmname_coin9			{Cequí}
+itmname_coin12			{Louis d'Or}
+itmname_coin13			{Gulden}
+itmname_coin16			{Moidoro}

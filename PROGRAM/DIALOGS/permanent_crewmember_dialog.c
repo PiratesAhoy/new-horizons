@@ -17,8 +17,12 @@ void ProcessDialogEvent()
 	int loc_id = FindLocation(PChar.location);
 	NPChar.quest.officertype = OFFIC_TYPE_ABORDAGE;
 	if(!CheckAttribute(NPChar, "quest.OfficerPrice")) NPChar.quest.OfficerPrice = GetBaseOfficerPrice(NPChar);
-	int min_off_price = makeint( 1000 * sqrt(sti(NPChar.rank)) );
-	if(sti(NPChar.quest.OfficerPrice) < min_off_price) NPChar.quest.OfficerPrice = min_off_price; // PB: Increased salary for better crewmember as officer
+
+	if(GetCharacterReputation(PChar) >= REPUTATION_GOOD) NPChar.alignment = "good";		// GR: set character's alignment to match yours.
+	if(GetCharacterReputation(PChar) <= REPUTATION_SWINDLER) NPChar.alignment = "bad";	// He's supposed to be someone you know
+	int loyality = MakeInt(GetAttribute(NPChar, "loyality"));				// so make sure he's loyal.
+	if(loyality < 10) NPChar.loyality = 10;
+
 
 	switch(Dialog.CurrentNode)
 	{

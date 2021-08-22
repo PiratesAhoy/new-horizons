@@ -1,0 +1,3 @@
+title=Sabotage #stown#
+text.t1=He arribado a #sisland# bajo una bandera falsa y tengo la misión de causar tanto caos como pueda. Sin embargo, soy un hombre libre y muy capaz de decidir por mEmismo lo que hacer.
+text.t2=He arribado a #sisland# bajo una bandera falsa y tengo la misión de causar tanto caos como pueda. Sin embargo, soy una mujer libre y muy capaz de decidir por mEmisma lo que hacer.

@@ -161,12 +161,18 @@ void RefreshAllStrings()
 		{
 			// scheffnow - weaponsmod -->
 			string sIName = "";
-			if (CheckAttribute(refitm, "QualityName"))
+			if (CheckAttribute(refitm, "QualityName")) sIName = TranslateString("", "q"+refitm.QualityName); // LDH added quality "q" translation string - 07May09
+
+			// MAXIMUS 31.05.2019: corrected for russian spelling ==>
+			switch(LanguageGetLanguage())
 			{
-				// LDH added quality "q" translation string - 07May09
-				sIName = TranslateString("", "q"+refitm.QualityName) + " ";
+				case "Russian":
+					GameInterface.strings.ItemsName = GetAssembledString(TranslateString("", refitm.name), refitm) + " " + sIName;
+				break;
+				GameInterface.strings.ItemsName = sIName + " " + GetAssembledString(TranslateString("", refitm.name), refitm);
 			}
-			GameInterface.strings.ItemsName = sIName + GetAssembledString(TranslateString("", refitm.name), refitm);
+			// MAXIMUS 31.05.2019: corrected for russian spelling <==
+
 			// scheffnow - weaponsmod <--
 		} else {
 			GameInterface.strings.ItemsName = "";
@@ -440,7 +446,7 @@ void FillSelectedScroll()
 					}
 // KK -->
 					name = "";
-					if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name
+					//if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name // MAXIMUS 31.05.2019: corrected for russian spelling
 					if (GetAttribute(arItem,"groupID") == QUEST_ITEM_TYPE)
 					{
 						name += PreprocessText(TranslateString("", arItem.name)); // PB
@@ -449,6 +455,20 @@ void FillSelectedScroll()
 					{
 						name += GetAssembledString(TranslateString("", arItem.name), arItem); // Levis
 					}
+
+					// MAXIMUS 31.05.2019: corrected for russian spelling ==>
+					if (CheckAttribute(arItem, "QualityName"))
+					{
+						switch(LanguageGetLanguage())
+						{
+							case "Russian":
+								name = name + " " + TranslateString("", "q"+arItem.QualityName);
+							break;
+							name = TranslateString("", "q"+arItem.QualityName) + " " + name; // PB: Correct quality name //default for English
+						}
+					}
+					// MAXIMUS 31.05.2019: corrected for russian spelling <==
+
 					if(DynamicInterfaceLevel() > 1) GameInterface.itemslist.(attributeName).str2 = "#" + name; // PB: Dynamic Interfaces
 // <-- KK
 					GameInterface.itemslist.(attributeName).img3 = GetItemStatus(itemName, true);
@@ -475,7 +495,7 @@ void FillSelectedScroll()
 					GameInterface.itemslist.(attributeName).itemID = arItem.id;
 // KK -->
 					name = "";
-					if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name
+					//if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name // MAXIMUS 31.05.2019: corrected for russian spelling
 					if (GetAttribute(arItem,"groupID") == QUEST_ITEM_TYPE)
 					{
 						name += PreprocessText(TranslateString("", arItem.name)); // PB
@@ -484,6 +504,20 @@ void FillSelectedScroll()
 					{
 						name += GetAssembledString(TranslateString("", arItem.name), arItem); // Levis
 					}
+
+					// MAXIMUS 31.05.2019: corrected for russian spelling ==>
+					if (CheckAttribute(arItem, "QualityName"))
+					{
+						switch(LanguageGetLanguage())
+						{
+							case "Russian":
+								name = name + " " + TranslateString("", "q"+arItem.QualityName);
+							break;
+							name = TranslateString("", "q"+arItem.QualityName) + " " + name; // PB: Correct quality name //default for English
+						}
+					}
+					// MAXIMUS 31.05.2019: corrected for russian spelling <==
+
 					if(DynamicInterfaceLevel() > 1) GameInterface.itemslist.(attributeName).str2 = "#" + name; // PB: Dynamic Interfaces
 // <-- KK
 					GameInterface.itemslist.(attributeName).img3 = GetItemStatus(itemName, true);
@@ -535,7 +569,7 @@ void FillSelectedScroll()
 					GameInterface.itemslist.(attributeName).itemID = arItem.id;
 // KK -->
 					name = "";
-					if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name
+					//if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name // MAXIMUS 31.05.2019: corrected for russian spelling
 					if (GetAttribute(arItem,"groupID") == QUEST_ITEM_TYPE)
 					{
 						name += PreprocessText(TranslateString("", arItem.name)); // PB
@@ -544,6 +578,20 @@ void FillSelectedScroll()
 					{
 						name += GetAssembledString(TranslateString("", arItem.name), arItem); // Levis
 					}
+
+					// MAXIMUS 31.05.2019: corrected for russian spelling ==>
+					if (CheckAttribute(arItem, "QualityName"))
+					{
+						switch(LanguageGetLanguage())
+						{
+							case "Russian":
+								name = name + " " + TranslateString("", "q"+arItem.QualityName);
+							break;
+							name = TranslateString("", "q"+arItem.QualityName) + " " + name; // PB: Correct quality name //default for English
+						}
+					}
+					// MAXIMUS 31.05.2019: corrected for russian spelling <==
+
 					if(DynamicInterfaceLevel() > 1) GameInterface.itemslist.(attributeName).str2 = "#" + name; // PB: Dynamic Interfaces
 // <-- KK
 					GameInterface.itemslist.(attributeName).img3 = GetItemStatus(itemName, true);
@@ -575,7 +623,7 @@ void FillSelectedScroll()
 					}
 // KK -->
 					name = "";
-					if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name
+					//if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name // MAXIMUS 31.05.2019: corrected for russian spelling
 					if (GetAttribute(arItem,"groupID") == QUEST_ITEM_TYPE)
 					{
 						name += PreprocessText(TranslateString("", arItem.name)); // PB
@@ -584,6 +632,20 @@ void FillSelectedScroll()
 					{
 						name += GetAssembledString(TranslateString("", arItem.name), arItem); // Levis
 					}
+
+					// MAXIMUS 31.05.2019: corrected for russian spelling ==>
+					if (CheckAttribute(arItem, "QualityName"))
+					{
+						switch(LanguageGetLanguage())
+						{
+							case "Russian":
+								name = name + " " + TranslateString("", "q"+arItem.QualityName);
+							break;
+							name = TranslateString("", "q"+arItem.QualityName) + " " + name; // PB: Correct quality name //default for English
+						}
+					}
+					// MAXIMUS 31.05.2019: corrected for russian spelling <==
+
 					if(DynamicInterfaceLevel() > 1) GameInterface.itemslist.(attributeName).str2 = "#" + name; // PB: Dynamic Interfaces
 // <-- KK
 					GameInterface.itemslist.(attributeName).img3 = GetItemStatus(itemName, true);
@@ -1128,38 +1190,38 @@ void DoTradeOperation()
 					break;
 
 					case "def1":
-						if(CheckCharacterPerk(mchref, "ShipDefenceProfessional"))
+						if(CheckCharacterPerk(mchref, "ProfessionalDamageControl"))
 						{
-							DeleteAttribute(mchref,"perks.list.ShipDefenceProfessional");
+							DeleteAttribute(mchref,"perks.list.ProfessionalDamageControl");
 						}
 						else
 						{
-							if(CheckCharacterPerk(mchref, "AdvancedBattleState"))
+							if(CheckCharacterPerk(mchref, "AdvancedDamageControl"))
 							{
-								DeleteAttribute(mchref,"perks.list.AdvancedBattleState");
+								DeleteAttribute(mchref,"perks.list.AdvancedDamageControl");
 							}
 						}
 						else
 						{
-							DeleteAttribute(mchref,"perks.list.BasicBattleState");
+							DeleteAttribute(mchref,"perks.list.BasicDamageControl");
 						}
 						mchref.quest.drawing_kit = "none";
 					break;
 
 					case "def2":
-						if(CheckCharacterPerk(mchref, "ShipDefenceProfessional"))
+						if(CheckCharacterPerk(mchref, "ProfessionalDamageControl"))
 						{
-							DeleteAttribute(mchref,"perks.list.ShipDefenceProfessional");
+							DeleteAttribute(mchref,"perks.list.ProfessionalDamageControl");
 						}
 						else
 						{
-							DeleteAttribute(mchref,"perks.list.AdvancedBattleState");
+							DeleteAttribute(mchref,"perks.list.AdvancedDamageControl");
 						}
 						mchref.quest.drawing_kit = "none";
 					break;
 
 					case "def3":
-						DeleteAttribute(mchref,"perks.list.ShipDefenceProfessional");
+						DeleteAttribute(mchref,"perks.list.ProfessionalDamageControl");
 						mchref.quest.drawing_kit = "none";
 					break;
 				}

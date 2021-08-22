@@ -1,0 +1,2 @@
+title=Nota histórica
+text.t1=Varios buques de guerra recibirían más tarde el nombre de 'Ardent'. Uno de ellos, botado en 1764, fue el primero de una clase de navíos de línea de tercera clase; otro navío de esta clase fue el 'HMS Indefatigable', que fue reconvertido en una fragata 'razee' (así llamadas porque eran navíos 'rebajados', a los que se retiraba la cubierta superior, dejándolos con una sola cubierta) de 44 cañones. Podrás ver este barco si juegas a la historia 'Hornblower'.

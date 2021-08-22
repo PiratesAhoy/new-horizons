@@ -135,6 +135,23 @@ void ProcessDialogEvent()
 			}
 		break;
 
+		case "grenadier":
+			PlaySound("trep\soldier\6.wav");
+			dialog.text = DLG_TEXT[20];
+			link.l1 = DLG_TEXT[37];
+			link.l1.go = "exit";
+			Diag.TempNode = "grenadier";
+		break;
+
+		case "grenadier_hello":
+			PlaySound("trep\soldier\6.wav");
+			dialog.text = DLG_TEXT[20];
+			link.l1 = DLG_TEXT[37];
+			link.l1.go = "exit";
+			Diag.TempNode = "grenadier";
+			AddDialogExitQuest("Pyle_to_Mona65");
+		break;
+
 		case "password":
 			PlaySound("VOICE\ENGLISH\black_witch_ahh.wav");
 			dialog.text = DLG_TEXT[22];
@@ -148,6 +165,7 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[24];
 				link.l1.go = "exit";
 				AddDialogExitQuest("fort_no_password_done");
+				AddDialogExitQuest("Fort_knowledge");
 			}
 		break;
 
@@ -175,21 +193,55 @@ void ProcessDialogEvent()
 		break;
 	
 		case "jungle_path":
-			PlaySound("VOICE\ENGLISH\jrh_3.wav");
-			dialog.text = DLG_TEXT[31];
 			if(CheckAttribute(Pchar,"jungle_path") && Pchar.jungle_path == "know_how")
 			{
+				PlaySound("VOICE\ENGLISH\jrh_3.wav");
+				dialog.text = DLG_TEXT[31];
 				link.l1 = DLG_TEXT[32];
 				link.l1.go = "exit";
 				AddDialogExitQuest("jungle_path_known");
 			}
 			else 
 			{
-				link.l1 = DLG_TEXT[33];
-				link.l1.go = "exit";
-				AddDialogExitQuest("jungle_path_done");
+				if(CheckAttribute(Pchar,"BB_RH_exit") && Pchar.BB_RH_exit == "knowledge")
+				{
+					PlaySound("VOICE\ENGLISH\jrh_6.wav");
+					dialog.text = DLG_TEXT[34];
+					link.l1 = DLG_TEXT[1];
+					link.l1.go = "exit";
+					AddQuestRecord("KR_logbook","1");
+					AddQuestRecord("KR_logbook","2");
+					AddQuestRecord("KR_logbook","4");
+					AddDialogExitQuest("jungle_path_done");
+				}
+				else
+				{
+					if(CheckAttribute(Pchar,"KR_6loc") && Pchar.KR_6loc == "knowledge")
+					{
+						PlaySound("VOICE\ENGLISH\jrh_3.wav");
+						dialog.text = DLG_TEXT[31];
+						link.l1 = DLG_TEXT[33];
+						link.l1.go = "exit";
+						Pchar.BB_RH_exit = "knowledge";
+						AddQuestRecord("KR_logbook","1");
+						AddQuestRecord("KR_logbook","2");
+						AddQuestRecord("KR_logbook","4");
+						AddDialogExitQuest("jungle_path_done");
+					}
+					else
+					{
+						PlaySound("VOICE\ENGLISH\jrh_3.wav");
+						dialog.text = DLG_TEXT[35];
+						link.l1 = DLG_TEXT[36];
+						link.l1.go = "exit";
+						AddDialogExitQuest("jungle_path_done");
+					}
+				}
 			}
 		break;
+
+		
+
 
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;

@@ -1,5 +1,5 @@
 string DLG_TEXT[10] = {
-"Sir, don't you remember me?",
+"#ssir#, don't you remember me?",
 "Umm...to be honest, no.",
 "I'm a sailor from Nigel Blythe's ship. He mutinied and sailed here for his old crew. The idea of serving under him didn't quite appeal to me, so I've gone ashore.",
 "Such luck! Is Nigel still here?",

@@ -1,4 +1,4 @@
-string DLG_TEXT[170] = {// -- Scheffnow -- 2004-01-14 -- ResetCharacterMod --
+string DLG_TEXT[174] = {// -- Scheffnow -- 2004-01-14 -- ResetCharacterMod --
 ", my son! How may this humble servant of our Lord help you?", 
 "I'm ",
 ", captain and owner of the ship '",
@@ -169,5 +169,8 @@ string DLG_TEXT[170] = {// -- Scheffnow -- 2004-01-14 -- ResetCharacterMod --
 " gold pieces.",
 "The Lord has provided us with a miracle! However I have heard how you dealt with my first request and can not have you getting away with impersonating a man of god.",
 "I am quite aware of this fact.",
-
+"I have no physical evidence. The assistant priest showed me letters which he claimed were written by ",
+" to a young woman, but I found that he had forged them. He is behind these rumours.",
+"I have no physical evidence. The assistant priest gave me letters which ",
+" had written to a young woman. They so disgusted me that I burned them.",
 };

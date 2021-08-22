@@ -26,18 +26,19 @@ void InitQuestItems()
 	n = InitQuestItem(n,"key9",		"key9",			"",	"JRH7",	9,	0,0,	"","",	"","",	"","",""); //key collection to chests in shop
 	n = InitQuestItem(n,"key10",		"key10",		"",	"JRH7",	10,	0,0,	"","",	"","",	"","",""); //small key to study chest	
 	n = InitQuestItem(n,"key11",		"key11",		"",	"JRH7",	11,	0,0,	"","",	"","",	"","",""); //small key to surgkit (in the back of medchest)
-	n = InitQuestItem(n,"key12",		"key12",	"chest2_vco",	"JRH7",	12,	0,0,	"","",	"","",	"","",""); //mine tunnel1
-	n = InitQuestItem(n,"key13",		"key13",	"chest2_vco",	"JRH7",	13,	0,0,	"","",	"","",	"","",""); //mine tunnel2
-	n = InitQuestItem(n,"key14",		"key14",	"chest2_vco",	"JRH7",	14,	0,0,	"","",	"","",	"","",""); //mine tunnel3	
+	n = InitQuestItem(n,"key12",		"key12",	"chest2_vco",	"JRH7",	12,	0,0,	"","",	"","",	"","",""); //mine tunnel2
+	n = InitQuestItem(n,"key13",		"key13",	"chest2_vco",	"JRH7",	13,	0,0,	"","",	"","",	"","",""); //mine tunnel3
+	n = InitQuestItem(n,"key14",		"key14",	"chest2_vco",	"JRH7",	14,	0,0,	"","",	"","",	"","",""); //mine tunnel1	
 	n = InitQuestItem(n,"key15",		"key15",		"",	"JRH7",	15,	0,0,	"","",	"","",	"","",""); //key collection to chests in food cellar
 	n = InitQuestItem(n,"key16",		"key16",	"keymiddle",	"JRH7",	16,	0,0,	"","",	"","",	"","",""); //Eden tunnel
-	n = InitQuestItem(n,"key17",		"key17",		"",	"JRH11",5,	0,0,	"","",	"","",	"","",""); //key to counter in study
+	n = InitQuestItem(n,"key17",		"key17",		"",	"JRH11",5,	0,0,	"","",	"","",	"","",""); //key to counter in study & counter in farm bedroom
 	n = InitQuestItem(n,"key18",		"key18",		"",	"JRH12",11,	0,0,	"","",	"","",	"","",""); //key in corridor	
 	n = InitQuestItem(n,"key19",		"key19",	"keymiddle",	"JRH16",12,	0,0,	"","",	"","",	"","",""); //key to flag chest
 	n = InitQuestItem(n,"key30",		"key30",        "keymiddle",    "JRH17",15,	0,0,	"","",	"","",	"","",""); //to tunnel from Citadel Rock also used in GoldBug to Maroon Cave
 	n = InitQuestItem(n,"key35",		"key35",		"",	"JRH7",	7,	0,0,	"","",	"","",	"","",""); //Kristiania oriel room
 	n = InitQuestItem(n,"key36",		"key36",		"",	"JRH30",16,	0,0,	"","",	"","",	"","",""); //farm key quest2
-	n = InitQuestItem(n,"key37",		"key37",		"",	"JRH37",6,	0,0,	"","",	"","",	"","",""); //not used yet	
+	n = InitQuestItem(n,"key37",		"key37",		"",	"JRH37",6,	0,0,	"","",	"","",	"","",""); //not used yet
+	n = InitQuestItem(n,"key39",		"key39",	"keymiddle",	"JRH38",7,	0,0,	"","",	"","",	"","",""); //careen corvette convicts
 
 	n = InitQuestItem(n,"dummy_belt",	"",		"dummy_belt",	    "", "",	0,0,	"","",	"","",	"","",""); //Blackbeard´s Belt (empty) on dummy
 
@@ -80,6 +81,7 @@ void InitQuestItems()
 	n = InitQuestItem(n,"picture6",		"picture6",		"",	"JRH6",	6,	0,0,	"","",	"","",	"","",""); //document ripped out	
 	n = InitQuestItem(n,"picture7",		"picture7",		"",	"JRH6",	7,	0,0,	"","",	"","",	"","",""); //Dampier portrait
 	n = InitQuestItem(n,"picture8",		"picture8",		"",	"JRH6",	8,	0,0,	"","",	"","",	"","",""); //Frans Hals portrait
+	n = InitQuestItem(n,"picture8_A",	"picture8_A",		"",	"JRH6",	8,	0,0,	"","",	"","",	"","",""); //Frans Hals painting cut out
 	n = InitQuestItem(n,"picture9",		"picture9",		"",	"JRH6",	9,	0,0,	"","",	"","",	"","",""); //skeleton
 	n = InitQuestItem(n,"picture10",	"picture10",		"",	"JRH6",	10,	0,0,	"","",	"","",	"","",""); //alchemist	
 	n = InitQuestItem(n,"picture11",	"picture11",		"",	"JRH6",	11,	0,0,	"","",	"","",	"","",""); //astrology
@@ -161,6 +163,7 @@ void InitQuestItems()
 //	n = InitQuestItem(n,"lever",		"lever",		"",    "JRH10",	10,	0,0,	"","",	"","",	"","",""); //study, replaced by bladelever InitItems
 
 	n = InitQuestItem(n,"mtoon_item",	"",	       "musketoon",          8,	9,	0,0,	"","",	"","",	"","",""); //QC_store
+	n = InitQuestItem(n,"mket_item",	"",	       "musket",             8,	10,	0,0,	"","",	"","",	"","",""); //careen shore
 //Q2
 	n = InitQuestItem(n,"mdchest_broken",	"",	  "mdchest_broken",	    "", "",	0,0,	"","",	"","",	"","",""); //alcove
 	n = InitQuestItem(n,"key33",		"key33",  	"keygrand",	"JRH5", 12,	0,0,	"","",	"","",	"","",""); //monastary crypt
@@ -171,7 +174,8 @@ void InitQuestItems()
 	n = InitQuestItem(n,"silvercross",	"silvercross",		"",          1,	 9,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"rosary",		"rosary",		"",    "JRH12",	15,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"icon",		"icon",			"",    "JRH12",	16,	0,0,	"","",	"","",	"","","");
-	n = InitQuestItem(n,"crypt_sketch",	"crypt_sketch",		"",     "JRH8",	 4,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"tape",		"tape",			"",    "JRH11",	16,	0,0,	"","",	"","",	"","",""); //first aid plaster tape and 2 bandages
+//	n = InitQuestItem(n,"crypt_sketch",	"crypt_sketch",		"",     "JRH8",	 4,	0,0,	"","",	"","",	"","",""); //replaced by backside of mapBB4A
         n = InitQuestItem(n,"corkscrew",	"corkscrew",            "",    "JRH24",	 6,	0,0,	"","",	"","",	"","","");
 	
 	n = InitQuestItem(n,"key34",		"key34",		"",    "JRH31", 15,	0,0,	"","",	"","",	"","",""); //Maltese key
@@ -229,7 +233,7 @@ void InitQuestItems()
 	n = InitQuestItem(n,"book70_10",	"book70_10",    	"",    "JRH34", 11,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"book70_11",	"book70_11",    	"",    "JRH34", 12,	0,0,	"","",	"","",	"","","");
 
-	n = InitQuestItem(n,"book71_9_start",	"book71_9_start",    	"",    "JRH35", 15,	0,0,	"","",	"","",	"","",""); //ripped alchemy book
+	n = InitQuestItem(n,"book71_9_start",	"book71_9_start", "book71",    "JRH35", 15,	0,0,	"","",	"","",	"","",""); //ripped alchemy book
 	n = InitQuestItem(n,"book71_9",		"book71_9",    		"",    "JRH35", 15,	0,0,	"","",	"","",	"","",""); //ripped alchemy book
 	n = InitQuestItem(n,"book71_10",	"book71_10",    	"",    "JRH35",  1,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"book71_11",	"book71_11",    	"",    "JRH35",  2,	0,0,	"","",	"","",	"","","");	
@@ -271,9 +275,28 @@ void InitQuestItems()
 	n = InitQuestItem(n,"sash",        	"sash",    		"",    "JRH37",  5,	0,0,	"","",	"","",	"","","");
 
 	n = InitQuestItem(n,"gpmap",        	"",    		   "gpmap",         "", "",	0,0,	"","",	"","",	"","","");	//temp map piece hidden in gp-store
-	n = InitQuestItem(n,"doc61",		"doc61",		"",    "JRH37",	 8,	0,0,	"","",	"","",	"","",""); 	//from gov Stapelton
+	n = InitQuestItem(n,"doc61",		"doc61",		"",    "JRH37",	 8,	0,0,	"","",	"","",	"","",""); 	//from gov Stapleton
 	n = InitQuestItem(n,"Pell_outfit",	"Pell_outfit",		"",    "JRH37",	 9,	0,0,	"","",	"","",	"","","");
 	n = InitQuestItem(n,"key38",		"key38",  	 	"",    "JRH37", 10,	0,0,	"","",	"","",	"","",""); 	//prison2 keys
+
+	n = InitQuestItem(n,"idol",		"incas_idol",	   "stat1",	4,	 4,	0,0,	"","",	"","",	"","","");	//burning cave item
+	n = InitQuestItem(n,"icollection",	"incas_collection",     "",	4,	 5,	0,0,	"","",	"","",	"","","");	//burning cave item
+	n = InitQuestItem(n,"contract1",	"contract1",		"",    "JRH30",	15,	0,0,	"","",	"","",	"","",""); 	//burning cave item
+	n = InitQuestItem(n,"contract2",	"contract2",		"",    "JRH31",	16,	0,0,	"","",	"","",	"","",""); 	//burning cave item
+	n = InitQuestItem(n,"contract3",	"contract3",		"",    "JRH35",	16,	0,0,	"","",	"","",	"","",""); 	//burning cave item
+	n = InitQuestItem(n,"book73_closed",	"book73_closed",  "book73",    "JRH38",	 1,	0,0,	"","",	"","",	"","",""); 	//Fibonacci
+	n = InitQuestItem(n,"book73_open",	"book73_open",		"",    "JRH38",	 2,	0,0,	"","",	"","",	"","",""); 	//Fibonacci
+
+	n = InitQuestItem(n,"long_johns",	"long_johns",		"",    "JRH38",	 3,	0,0,	"","",	"","",	"","",""); 	//
+	n = InitQuestItem(n,"long_johns_map",	"long_johns_map",	"",    "JRH38",	 4,	0,0,	"","",	"","",	"","",""); 	//
+	n = InitQuestItem(n,"bandana",		"bandana",		"",    "JRH38",	 5,	0,0,	"","",	"","",	"","",""); 	//
+	n = InitQuestItem(n,"bandana_key",	"bandana_key",		"",    "JRH38",	 6,	0,0,	"","",	"","",	"","",""); 	//
+
+	n = InitQuestItem(n,"LOM_swe",		"LOM_swe",		"",    "JRH38",	 11,	0,0,	"","",	"","",	"","",""); 	//swedish Letter of Marque
+	n = InitQuestItem(n,"letter_cartagena",	"letter_cartagena",	"",    "JRH38",	 12,	0,0,	"","",	"","",	"","","");
+	n = InitQuestItem(n,"letter_turks",	"letter_turks",		"",    "JRH38",	 12,	0,0,	"","",	"","",	"","","");
+
+
 
 
 	QUESTITEMS_QUANTITY = n;

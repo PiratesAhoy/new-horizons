@@ -10,7 +10,7 @@ string DLG_TEXT[47] = {
 " can conquer Cuba, Spain will have to take ships and soldiers from Napoleon to preserve her colonies.",
 "Mr. Bush, here are the keys to my dispatch box containing the Admiralty's orders. If I'm not back aboard by midnight, you'll assume command.",
 "Not back aboard, sir? But you said they were on our side.",
-"War breed strange allies, Mr. Bush.",
+"War breeds strange allies, Mr. Bush.",
 "Prepare the boats for storing ship, Mr. Bush. There are enough provisions coming aboard to make us independent for two months. Our cargo goes ashore.",
 "Aye aye, sir.",
 "Oh, and Mr. Bush, there's a Spanish ship of 60 guns due here before dawn. Send your best lookout to the top of that hill to warn us of the enemy's approach.",

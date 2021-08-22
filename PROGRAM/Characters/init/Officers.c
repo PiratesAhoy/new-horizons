@@ -46,7 +46,8 @@ void CreateOfficersCharacters(ref n)
 	ch.perks.list.IronWill = true;
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.LightRepair = true;
 	ch.perks.list.SharedExperience = true;
 	ch.money = "122";
@@ -122,7 +123,7 @@ void CreateOfficersCharacters(ref n)
 	ch.id		= "Lucas Da Saldanha";
 	ch.loyality = 10;
 	ch.alignment = "good";
-	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+	if (GetCurrentPeriod() >= PERIOD_COLONIAL_POWERS)
 	{
 		ch.model = "lucas2";
 		GiveItem2Character(ch, "goldarmor");
@@ -557,7 +558,8 @@ void CreateOfficersCharacters(ref n)
 	ch.quest.to_hire = "0";
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	LAi_SetCitizenType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
@@ -595,8 +597,10 @@ void CreateOfficersCharacters(ref n)
 		ch.equip.gun = "pistol1a";
 	}
 	//JRH ammo mod -->
-	TakenItems(ch, "gunpowder", 6);
-	TakenItems(ch, "pistolbullets", 6);
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6);
+	}
 	//JRH ammo mod <--
 	ch.location	= "Grand_Cayman_Tavern";
 	ch.location.group = "goto";
@@ -697,7 +701,8 @@ void CreateOfficersCharacters(ref n)
 	ch.perks.list.CriticalHit = true;
 	ch.perks.list.Gunman = true;
 	ch.perks.list.HullDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.quest.officertype = OFFIC_TYPE_NAVIGATOR;
 	ch.quest.officerprice = "500";
 	LAi_SetMerchantType(ch);

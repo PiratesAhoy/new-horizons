@@ -1,0 +1,10 @@
+title=Helping Two Pirates
+text.t1=I have nothing to lose for going to #sisland_Battle Rocks#. And if Captain Eduardo Villanueva is right, it could be the jackpot! Let's weigh anchor, I'm eager to be there.
+text.t2=What was this story! Silver at #sisland_Battle Rocks#! The only things I believe I could find there, are mosquitos snakes and diseases. After all, I'm going to capture some enemy ships and forget this odd story. 
+text.t3=What rotten luck! First we lost time to find a shore and now we fought a group of indians. I hope the situation will improve.
+text.t4=Good news! We have the confirmation. There is a mine on #sisland_Battle Rocks#. A fugitive called Франсуа де Хадоке told it us. Nevertheless, the mine is well-protected but the opposite would have been amazing.
+text.t5=The Spanish camp was hidden in the jungle. After a risky attack, we defeated the enemy. We did the same at the mine to free the Франсуа де Хадоке's friends. However, I expected to look for the silver in the camp when I learned it was en route to a secret port. Fortunately, we have the opportunity to arrive there before the silver train.
+text.t6=Arrived at the Spanish Port and found a French ship in port the 'Единорог', Франсуа де Хадоке and I boarded the ship and captured it, coming back to shore we were located by a soldier hidden in the small fort. He succeeded in warning the convoy and we have had to fight the Spanish and French soldiers. But it was worth it. The silver was really there. After a long walk through the jungle, the silver is in the ships' hold. Now, we just need to reach #sTortuga# off #sisland_Hispaniola#.
+text.t7=On arriving back to #sTortuga#, капитан Шеваль and Captain Villanueva got into an argument so Франсуа де Хадоке and I decided to make a run for it to #sisland_Turks#.
+text.t8=I sailed with Франсуа де Хадоке to #sisland_Turks# Island where I gave him the 'Единорог' and some of the gold we got from the expedition. I walked away with 60 000 gold coins.
+

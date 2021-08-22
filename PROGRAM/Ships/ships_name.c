@@ -89,6 +89,11 @@ void InitRandomShipsNames()
 	n = AddStr2Array(&sRndShpPiName, n, "Sprightly,Spy,Squirrel,Stag,Standard,Starling,Success,Sultan,Sumter,Surprise,Susan,Tarantula,Velasco,Velosa,Vencedor,Venganza,Venus,Vincejo,Vivo,Voader,Vermont");
 	n = AddStr2Array(&sRndShpPiName, n, "Cour Valant,Delight,Delivery,Desire,Fancy,Flying Dragon,Flying Horse,Flying King,Gift,Good Fortune,Mayflower,Night Rambler,Rising Sun,Sea King,Sudden Death,Whydah,Snap Dragon");
 	n = AddStr2Array(&sRndShpPiName, n, "La Mort,La Faucheuse,Enfer,Immortel,Le Terrible,Le Sans Pitié,Épopée,Épervier,La Frayeur,Épilogue,Le Satan,Le Diable,Insoumis,Le Mort Vivant,Angoisse,Le Désinvolte,Le Larcin");
+	n = AddStr2Array(&sRndShpPiName, n, "Devil,Demon,Sea Devil,Sea Demon,Ocean Devil,Ocean Demon,Merciless,Plaguebringer,Black Queen,Black King,Red Queen,Fishking,Hunter,Avenger,Blackdeath,Infection");
+	n = AddStr2Array(&sRndShpPiName, n, "Seawitch,Grey Witch,Red Witch,Black Witch,Black Knight,Nightstalker,Stealthy,Sneaky,Deathbringer,Golden King,Golden Queen,Hawk,Seawolf,Blackshark,Red Shark,Nightwolf,Wolf,Predator");
+	n = AddStr2Array(&sRndShpPiName, n, "Old Hag,Ocean Hag,Seagiant,Black Giant,Deathwish,Glorious,Infamous,Bad luck,Revenge,Goldseeker,Ruby,Emerald,Sapphire,Diamond,Black Diamond,Red Blood,Bloodred");
+	n = AddStr2Array(&sRndShpPiName, n, "Vampire,Nightlord,Nightlady,Empty Pockets,Forsaken,Topaz,Bloodred Garnet,Lucky,Fortunate,Abyss,Hellraiser,Headless Rider,Ghost,Misty,Poisonous,Snakebite,Venom,Lupus");
+	n = AddStr2Array(&sRndShpPiName, n, "Sinner,Heretic,Hand of Midas,Troublemaker,Trouble,Swift Danger,Dangerous,Silent Thief,Intruder,Veni Vidi Vici,Media Nox,Orcus,Exitus,Pestilentia");
 //	n = AddStr2Array(&sRndShpPiName, n, "Black Heart,Blarney Cock");	// LDH if this line is being used, delete it - 04Jan09
 		
 	// Holland names

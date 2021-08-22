@@ -180,11 +180,12 @@ bool AddXP(ref chref, string expName, int _exp, string group)
 	//Now handle the companions
 	if(group == XP_GROUP_PARTY)
 	{
-		capt = GetCharacter(FindCommanderIndex(chref));												// Get the commander of the fleet
-		for (i = 0; i <= GetCompanionQuantity(capt); i++) {
+		capt = GetCharacter(FindCommanderIndex(chref));										// Get the commander of the fleet
+		for (i = 0; i < COMPANION_MAX; i++)
+		{
 			cn = GetCompanionIndex(capt, i);
 			if (cn < 0) continue;
-			chr = GetCharacter(cn);																	// Reference to the character
+			chr = GetCharacter(cn);												// Reference to the character
 			if(DEBUG_EXPERIENCE>1) Trace("XP LOG: Loop "+i+", Checking Companion "+GetMySimpleName(chr)+" with id "+chr.id);
 			if(AddXP(chr, expName, _exp, XP_GROUP_OFFIC)) LevelUp = true;							// Add the XP to the companion and maybe his officers
 		}
@@ -1030,6 +1031,10 @@ void CheckCharacterSetup(ref chref)
 	{
 		if(rand(1)==1) chref.alignment = "good";
 		else chref.alignment = "bad";
+	}
+	if (!CheckAttribute(chref,"questchar") && !CheckAttribute(chref,"reputation"))
+	{
+		chref.reputation = rand(20) + rand(20) + rand(20) + rand(20) + 5;	// If reputation not already set, this should give a random number between 5 and 85, biased towards average of 45 i.e. neutral
 	}
 	if (!CheckAttribute(chref,"homelocation")) 
 	{

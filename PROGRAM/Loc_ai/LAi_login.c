@@ -76,9 +76,9 @@ bool LAi_CharacterLogin(aref chr, string locID)
 	}
 	if(!isLogin) return false;
 	//≈сли персонажей больше максимального числа, незагружаем больше
-	if(LAi_numloginedcharacters >= 32)
+	if(LAi_numloginedcharacters >= MAX_LOGINED_CHARACTERS_IN_LOCATION)
 	{
-		Trace("LAi_CharacterLogin -> many logined characters in location (>32)");
+		Trace("LAi_CharacterLogin -> many logined characters in location (>" + MAX_LOGINED_CHARACTERS_IN_LOCATION + ")");
 		return false;
 	}
 	//”станавливаем необходимые пол€, если надо

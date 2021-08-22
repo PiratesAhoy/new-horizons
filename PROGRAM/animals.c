@@ -200,7 +200,7 @@ void CreateAnimals(ref Location)
 			}
 		}
 
-		if(Location.id == "BB_misericord")
+		if(Location.id == "BB_abbey_cell")
 		{
 			crtAnimals = true;
 			if(crtAnimals)
@@ -229,6 +229,28 @@ void CreateAnimals(ref Location)
 				SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddRats", 300);
 				SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddLizards", 100);
 			}
+		}
+
+		if(Location.id == "BB_lower_cave")
+		{
+			crtAnimals = true;
+			if(crtAnimals) SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddRats", 5);
+		}
+
+		if(Location.id == "BB_burning_cave")
+		{
+			crtAnimals = true;
+			if(crtAnimals) 
+			{
+				SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddRats", 600);
+				SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddLizards", 400);
+			}
+		}
+
+		if(Location.id == "BB_careen_holdP")
+		{
+			crtAnimals = true;
+			if(crtAnimals) SendMessage(Location, "lsl", MSG_LOCATION_EX_MSG, "AddRats", rand(4) + rand(4));
 		}
 //<-- JRH	
 	}

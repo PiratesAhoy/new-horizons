@@ -1,0 +1,15 @@
+string DLG_TEXT[13] = {
+"Leave me alone, I'm off duty.",
+"Oh, don't worry about me.",
+"Do you mind if I join you? Perhaps I can get you a drink?",
+"That's good of you. If you're buying, certainly you can join me!",
+"Barkeeper! Two mugs of rum, please!",
+"So, friend, what brings you to here?",
+"Various business. How about you? You're not one of the #sCartagena# garrison, are you?",
+"No, friend. We're from the Tierra Firme Fleet. We're stuck here until our cargo arrives.",
+"What sort of cargo?",
+"Ah, wouldn't you like to know? Well, even if I were to tell you that it's all the silver from across this continent, it would do you no good! No pirate ever challenges our fleet and lives!",
+"I'm sure of that! Anyway, how long are you stuck here?",
+"I have no idea. Tomorrow, next week, next month... only our officers know. And they won't drink with the likes of us!\nOne of them even went all the way into town to the other tavern just to avoid being in the same place as us common scum. Bastards!",
+"Yes, I know the type. Here, have another drink on me. But now I must be going.", 
+}

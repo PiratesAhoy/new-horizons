@@ -64,8 +64,11 @@ void ProcessDialogEvent()
 			link.l1.go = "Exit_kill";
 			link.l2 = DLG_TEXT[15];
 			link.l2.go = "cash";
-			link.l3 = DLG_TEXT[16];
-			link.l3.go = "Exit_spare";
+			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			{
+				link.l3 = DLG_TEXT[16];
+				link.l3.go = "Exit_spare";
+			}
 		break;
 
 		case "cash":
@@ -75,8 +78,11 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(PChar, 5000);
 			dialog.snd = "Voice\GEBA\GEBA007";
 			dialog.text = DLG_TEXT[17];
-			link.l1 = DLG_TEXT[18];
-			link.l1.go = "Exit_spare_cash";
+			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			{
+				link.l1 = DLG_TEXT[18];
+				link.l1.go = "Exit_spare_cash";
+			}
 			link.l2 = DLG_TEXT[19];
 			link.l2.go = "Exit_kill_cash";
 
@@ -107,7 +113,7 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 
-			ChangeCharacterReputation(pchar, -10);
+			ChangeCharacterReputation(pchar, -15);
 
 			AddDialogExitQuest("Hit_kill_Geffrey");
 

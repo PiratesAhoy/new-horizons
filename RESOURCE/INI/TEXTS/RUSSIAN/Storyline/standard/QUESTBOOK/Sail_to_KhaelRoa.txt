@@ -1,0 +1,2 @@
+title=Sail to #sisland_Khael Roa# with Danielle and Aurentius.
+text.t1=The English squadron lies at the bottom of #sGreenford#'s harbor. The fish will feast well. We doubt we could repulse a second attack, so we'd best take our expert on native languages aboard and make sail for #sisland_Khael Roa#. He can finish his translations during the voyage.

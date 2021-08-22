@@ -187,16 +187,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "go_to_governor":
-			if (PChar.sex == "man")
-			{
-				PreProcessor_Add("noun", XI_ConvertString("man"));
-				PreProcessor_Add("relation", XI_ConvertString("son"));
-			}
-			else
-			{
-				PreProcessor_Add("noun", XI_ConvertString("woman"));
-				PreProcessor_Add("relation", XI_ConvertString("daughter"));
-			}
+			Preprocessor_Add("noun", XI_ConvertString(PChar.sex));
+			if (PChar.sex == "man") PreProcessor_Add("relation-in-law", DLG_TEXT[204]);
+			else PreProcessor_Add("relation-in-law", DLG_TEXT[205]);
 			dialog.text = DLG_TEXT[56];
 			link.l1 = DLG_TEXT[57];
 			link.l1.go = "exit";
@@ -554,6 +547,117 @@ void ProcessDialogEvent()
 			link.l1 = "...";
 			link.l1.go = "exit";
 		break;
+
+		case "imperial_escort_arrest":
+			dialog.text = DLG_TEXT[160] + GetMyFullName(PChar) + DLG_TEXT[161];
+			link.l1 = DLG_TEXT[162];
+			link.l1.go = "imperial_escort_arrest2";
+		break;
+
+		case "imperial_escort_arrest2":
+			dialog.text = DLG_TEXT[163];
+			link.l1 = DLG_TEXT[164];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_santiago_arrest":
+			dialog.text = DLG_TEXT[165] + GetMyFullName(PChar) + DLG_TEXT[166] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[167];
+			link.l1 = DLG_TEXT[168];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_santiago_arrest2":
+			dialog.text = DLG_TEXT[169];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_santiago_arrest3":
+			dialog.text = DLG_TEXT[170];
+			link.l1 = DLG_TEXT[171];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_havana_arrest":
+			dialog.text = DLG_TEXT[165] + GetMyFullName(PChar) + DLG_TEXT[166] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[172] + GetMyFullName(CharacterFromID("Jusepe Guimaraes")) + DLG_TEXT[173];
+			link.l1 = DLG_TEXT[174];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_outside_santiago_townhall":
+			dialog.text = DLG_TEXT[175] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + DLG_TEXT[176];
+			link.l1 = DLG_TEXT[177];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_after_santiago_townhall":
+			dialog.text = DLG_TEXT[178] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[179];
+			link.l1 = DLG_TEXT[180] + GetMyFullName(CharacterFromID("Jusepe Guimaraes")) + DLG_TEXT[181];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_report_crime":
+			dialog.text = DLG_TEXT[182];
+			link.l1 = DLG_TEXT[183] + GetMyFullName(PChar) + DLG_TEXT[184];
+			link.l1.go = "imperial_escort_is_that_the_spy";
+		break;
+
+		case "imperial_escort_is_that_the_spy":
+			dialog.text = DLG_TEXT[185] + GetAddressForm(ADDR_CIVIL, SPAIN, chrsex(PChar)) + DLG_TEXT[186];
+			link.l1 = DLG_TEXT[187] + GetMyFullName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[188] + GetMySimpleName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[189];
+			PChar.quest.imperial_escort.spy_arrester = NPChar.id;
+			AddDialogExitQuest("imperial_escort_guard_arrests_spy");
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_which_one_is_spy":
+			dialog.text = DLG_TEXT[190] + GetMySimpleName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[191];
+			link.l1 = DLG_TEXT[192];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_which_one_is_spy2":
+			dialog.text = "...";
+			link.l1 = DLG_TEXT[193];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_spy_answer1":
+			dialog.text = DLG_TEXT[194];
+			link.l1 = "...";
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_spy_answer2":
+			dialog.text = DLG_TEXT[195];
+			link.l1 = "...";
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_spy_revealed":
+			dialog.text = "";
+			link.l1 = DLG_TEXT[196];
+			link.l1.go = "imperial_escort_how_do_you_know";
+		break;
+
+		case "imperial_escort_how_do_you_know":
+			dialog.text = DLG_TEXT[197];
+			link.l1 = DLG_TEXT[198];
+			link.l1.go = "imperial_escort_why_spy_confess";
+		break;
+
+		case "imperial_escort_why_spy_confess":
+			dialog.text = DLG_TEXT[199];
+			link.l1 = DLG_TEXT[200] + GetMySimpleName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[201];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_spy_poisoned":
+			dialog.text = DLG_TEXT[202];
+			link.l1 = DLG_TEXT[203];
+			link.l1.go = "exit";
+		break;
+
 
 		case "exit_try_again":
 			AddDialogExitQuest("abduction_reset_guards");

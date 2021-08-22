@@ -1,4 +1,4 @@
-title=Side Quest - Rescue Peter Blood' crew
+title=Side Quest - Rescue Peter Blood's crew
 text.t1=I met famous English pirate Peter Blood in the #sGrand Cayman# tavern on #sisland_Cayman# island. Due to some excessive bad luck, he has lost both his ship and his crew. I agreed to bring him to #sisland_Cuba# and help him release his crew from the Spanish. In return, both he and his crew will join my own sailors. I can't sail into #sHavana# port with Peter onboard though. He might get recognized for being a fugitive pirate. Instead we'll make berth at one of the shores. Bahia de San Antonio would be a good place.
 text.t2=The shore wasn't as safe as I thought. We were met by a patrol of Spanish soldiers when we landed there. I hope we will encounter no additional patrols on our way through the jungle. We must get to #sHavana# as soon as we can.
 text.t3=Apparently the execution is just about to begin. We must get to the church immediately!

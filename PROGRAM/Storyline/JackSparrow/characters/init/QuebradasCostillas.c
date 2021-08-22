@@ -2,7 +2,6 @@ void CreateQuebradasCostillasCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	ch.old.name = "Ines";
@@ -42,8 +41,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 	// Skull
 	ch.old.name = "Skull";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Skull");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Skull");
+	ch.lastname = "";
 	ch.id		= "Isenbrandt Jurcksen";
 	ch.model	= "Skull";
 	ch.sex = "man";

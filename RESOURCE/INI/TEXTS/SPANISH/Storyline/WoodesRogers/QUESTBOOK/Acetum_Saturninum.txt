@@ -1,0 +1,3 @@
+title=Acetum Saturninum
+text.t1=Tengo que encontrar esta medicina.
+text.t2=¡Lo conseguí!

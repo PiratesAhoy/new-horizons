@@ -4,7 +4,7 @@ void QuestComplete(string sQuestName)
 // KK -->
 	int iPassenger, cidx, iHP, cc;
 	float locx, locy, locz;
-	string homelocation, homegroup, homelocator;
+	string homelocation, homegroup, homelocator, homeisland;
 	int crewQty = 0;
 // <-- KK
 	aref arship; // PB
@@ -14,18 +14,28 @@ void QuestComplete(string sQuestName)
 	switch(sQuestName)
 	{
 		case "begining":
-// KK -->
-			if (!CheckQuestAttribute("StartAdventure", "begin")) {
-				pchar.quest.Story_LeavingOxbay.win_condition.l1 = "location";
-				pchar.quest.Story_LeavingOxbay.win_condition.l1.location = "Oxbay";
-				pchar.quest.Story_LeavingOxbay.win_condition = "Story_leavingOxbay";
+// GR: choose island based on character nationality, this island will be checked for cancelling the tutorial -->
+			switch(GetCurrentFlag())
+			{
+				case ENGLAND: homeisland = "Oxbay"; break;
+				case FRANCE: homeisland = "FalaiseDeFleur"; break;
+				case SPAIN: homeisland = "IslaMuelle"; break;
+				case PIRATE: homeisland = "QuebradasCostillas"; break;
+				case HOLLAND: homeisland = "Douwesen"; break;
+				case PORTUGAL: homeisland = "Conceicao"; break;
+				case AMERICA: homeisland = "Eleuthera"; break;
+				homeisland = "Oxbay";
 			}
-// <-- KK
-
-			if (CheckQuestAttribute("StartAdventure", "begin")) LAi_QuestDelay("Story_leavingOxbay", 0.0); // KK
+			if (!CheckQuestAttribute("StartAdventure", "begin")) {
+				pchar.quest.cancel_tutorial.win_condition.l1 = "location";
+				pchar.quest.cancel_tutorial.win_condition.l1.location = homeisland;
+				pchar.quest.cancel_tutorial.win_condition = "cancel_tutorial";
+			}
+// <<-- GR
+			else LAi_QuestDelay("cancel_tutorial", 0.0); // KK
 		break;
 
-		case "Story_leavingOxbay":
+		case "cancel_tutorial":
 // KK -->
 			if (!CheckQuestAttribute("StartAdventure", "begin")) {
 
@@ -439,7 +449,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "seeyou":
+			Preprocessor_AddQuestData("money", GetAttribute(CharacterFromID("Bart Renault"), "quest.money"));
 			AddQuestRecord("Beginning_Rogue", 2);
+			Preprocessor_Remove("money");
 			if (pchar.quest.main_line == "escape_from_havana_prison")
 			{
 				LAi_group_SetRelation("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
@@ -604,7 +616,7 @@ void QuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////
 
 		case "madero_start":
-			SetEnterLocationQuest("Conceicao_town", "madero_start_check", 0);
+			SetEnterLocationQuest("Eleuthera_townhall", "madero_start_check", 0);
 		break;
 
 		case "madero_start_check":
@@ -618,16 +630,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "recusar_oferta":
-			DeleteEnterLocationQuest("Conceicao_town", "madero_start_check");
+			DeleteEnterLocationQuest("Eleuthera_townhall", "madero_start_check");
 			LAi_SetActorType(characterFromID("Alonso Madero"));
-			LAi_ActorRunToLocation(characterFromID("Alonso Madero"), "reload", "reload4", "none", "", "", "", 0.0);	
+			LAi_ActorRunToLocation(characterFromID("Alonso Madero"), "reload", "reload1", "none", "", "", "", 0.0);	
 			break;
 
 		case "aceitar_oferta":
-			DeleteEnterLocationQuest("Conceicao_town", "madero_start_check");		
+			DeleteEnterLocationQuest("Eleuthera_townhall", "madero_start_check");		
 			ChangeCharacterAddressGroup(CharacterFromID("Elvira Suarez"), "Suarez_House", "goto", "goto8");
 			LAi_SetActorType(characterFromID("Alonso Madero"));
-			LAi_ActorRunToLocation(characterFromID("Alonso Madero"), "reload", "reload4", "none", "", "", "", 0.0);
+			LAi_ActorRunToLocation(characterFromID("Alonso Madero"), "reload", "reload1", "none", "", "", "", 0.0);
 			Characters[GetCharacterIndex("Elvira Suarez")].dialog.currentnode = "begin_1";			
 			SetQuestHeader("Family_Story");
 			AddQuestRecord("Family_Story", 1);			
@@ -751,6 +763,7 @@ void QuestComplete(string sQuestName)
             break;
 
 		case "explicar_suarez":
+			Locations[FindLocation("Santiago_town_01")].models.always.add9 = "globe";	//JRH: showing the way to the cartographer
 			Locations[FindLocation("Tortuga_port")].models.day.locators = "Tortuga_l_day";
 			Locations[FindLocation("Tortuga_port")].models.night.locators = "Tortuga_l_night";		
             Locations[FindLocation("Santiago_Tavern")].vcskip = true;		
@@ -766,7 +779,8 @@ void QuestComplete(string sQuestName)
             DoQuestReloadToLocation("Santiago_Tavern", "sit", "sit6" ,"ir_taberna2");
             break;					
 			
-		case "ir_taberna2":	
+		case "ir_taberna2":
+			Locations[FindLocation("Santiago_town_01")].models.always.add9 = "globe";	//JRH: showing the way to the cartographer
 			ChangeCharacterAddressGroup(characterFromID("Fernando Suarez"), "Santiago_Tavern", "sit", "sit7");
 			LAi_SetActorType(characterFromID("Fernando Suarez"));
 			LAi_SetSitType(characterFromID("Fernando Suarez"));			
@@ -778,6 +792,7 @@ void QuestComplete(string sQuestName)
             break;
 			
 		case "meet_chaparro":
+			Locations[FindLocation("Santiago_town_01")].models.always.add9 = "globe";	//JRH: showing the way to the cartographer
 			DeleteAttribute(&Locations[FindLocation("Santiago_Tavern")],"vcskip");		
 		    LAi_SetPlayerType(pchar);
 			ChangeCharacterAddressGroup(CharacterFromID("Arnaldo Chaparro"), "Cartographer_House", "sit", "sit1");					
@@ -831,7 +846,12 @@ void QuestComplete(string sQuestName)
 		    sld.name = "Bartolomeu";
 			sld.lastname = "Portugues";			
 			LAi_SetActorType(sld);
-			LAi_ActorSetLayMode(sld);	
+			LAi_ActorSetLayMode(sld);
+			sld = LAi_CreateFantomCharacter(false, 0, true, false, 0.25, "Skel1", "monsters", "monster3");
+		    sld.name = "Guillaume";
+			sld.lastname = "Auger";			
+			LAi_SetActorType(sld);
+			LAi_ActorSetLayMode(sld);				
 			Characters[GetCharacterIndex("Fernando Suarez")].dialog.currentnode = "begin_25";
             break;
 
@@ -899,8 +919,221 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Sneak", 200);
 			}
 			else { AddPartyExp(pchar, 20000); }			
+            break;
+			
+		case "deixar_suarezB":
+			DisableFastTravel(true);
+			DisableMenuLaunch(true);		
+            LAi_SetCitizenType(characterFromID("Fernando Suarez"));		
+			PlayStereoSound("INTERFACE\took_item.wav");
+			GiveItem2Character(Pchar, "bladeBP");
+
+			Pchar.quest.fight_acreB.win_condition.l1 = "location";			
+			Pchar.quest.fight_acreB.win_condition.l1 = "location";
+			Pchar.quest.fight_acreB.win_condition.l1.location = "Havana_Town_02";
+			PChar.quest.fight_acreB.win_condition = "combat_acreB";			
+            break;
+
+		case "combat_acreB":
+			ChangeCharacterAddressGroup(characterFromID("Robert Acre"), "Havana_Town_02", "goto", "goto16");
+			
+			LAi_SetActorType(characterFromID("Robert Acre"));
+			LAi_NoRebirthEnable(characterFromID("Robert Acre"));
+			LAi_ActorAttack(CharacterFromID("Robert Acre"), Pchar, "");
+
+			pchar.quest.pirate_diedB.win_condition.l1 = "NPC_Death";
+			pchar.quest.pirate_diedB.win_condition.l1.character = "Robert Acre";
+			pchar.quest.pirate_diedB.win_condition = "Ir_Grenada";
+            break;	
+			
+		case "Ir_Grenada":	
+			DisableFastTravel(false);
+			DisableMenuLaunch(false);		
+			Locations[FindLocation("Tortuga_port")].reload.l11.disable = 0;
+		    //-> open Grenada Shore
+			Island_SetReloadEnableLocal("Conceicao", "reload_4", true);
+			Islands[FindIsland("Conceicao")].reload.l5.goto_enable = true; // PB			
+		    //<- open Grenada Shore
+    		Locations[FindLocation("Bartolomeu_Mansion")].locators_radius.goto.citizen06 = 1.2;
+    		Locations[FindLocation("Bartolomeu_Mansion")].locators_radius.goto.goto1 = 8.0;
+			
+			Pchar.quest.shore_patrol.win_condition.l1 = "location";			
+			Pchar.quest.shore_patrol.win_condition.l1 = "location";
+			pchar.quest.shore_patrol.win_condition.l1.location = "Conceicao_Shore_03";
+			pchar.quest.shore_patrol.win_condition = "found_patrol";			
+			
+			AddQuestRecord("Family_Story", 13);
+			if(AUTO_SKILL_SYSTEM)
+			{
+				AddPartyExpChar(pchar, "Leadership", 20000);
+				AddPartyExpChar(pchar, "Sneak", 200);
+			}
+			else { AddPartyExp(pchar, 20000); }			
+            break;
+			
+		case "found_patrol":				
+			LAi_SetActorType(Pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Dead_Patrol";
+			LAi_ActorSelfDialog(Pchar, "player_back");
+            break;
+
+		case "meet_french":
+            LAi_group_SetRelation("NAPOLEONIC_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);		
+			LAi_SetPlayerType(Pchar);
+			
+			Pchar.quest.meet_french_soldiers.win_condition.l1 = "location";			
+			Pchar.quest.meet_french_soldiers.win_condition.l1 = "location";
+			pchar.quest.meet_french_soldiers.win_condition.l1.location = "Bartolomeu_Mansion";
+			pchar.quest.meet_french_soldiers.win_condition = "french_camp";			
+            break;
+
+		case "french_camp":
+			LAi_SetActorType(Pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+	        if(makeint(environment.time)> 22.0 || makeint(environment.time)< 6.0 ){			
+			Pchar.dialog.currentnode = "See_French_Camp";
+	        }else{
+			Pchar.dialog.currentnode = "See_French_Camp_Bis";				
+			}	
+			LAi_ActorSelfDialog(Pchar, "player_back");		
+            break;
+			
+		case "voltar_mais_tarde":
+			LAi_SetPlayerType(Pchar);		
+            DoQuestReloadToLocation("Conceicao_Shore_03", "goto", "citizen01" ,"voltar_mais_tarde_bis");		
+            break;
+			
+		case "voltar_mais_tarde_bis":
+			AddQuestRecord("Family_Story", 14);		
+			pchar.quest.explosao_canao.win_condition.l1 = "locator";
+			pchar.quest.explosao_canao.win_condition.l1.location = "Bartolomeu_Mansion";
+			pchar.quest.explosao_canao.win_condition.l1.locator_group = "goto";
+			pchar.quest.explosao_canao.win_condition.l1.locator = "goto1";
+			pchar.quest.explosao_canao.win_condition = "explosao";			
             break;			
 
+		case "explosao":
+			if(makeint(environment.time)< 22.0 && makeint(environment.time)> 6.0 ){
+			CreateParticleSystemX("blast_inv", 1.337, 1, 18.652, -1.57, 0.0, 0.0,0);
+			CreateParticleSystemX("cancloud", -3.337, 1, 18.652, -1.57, 0.0, 0.0,20);
+			CreateParticleSystemX("cancloud", 5.337, 1, 18.652, -1.57, 0.0, 0.0,20);
+			CreateParticleSystemX("cancloud", 1.337, 1, 22.652, -1.57, 0.0, 0.0,20);
+			CreateParticleSystemX("cancloud", 1.337, 1, 14.652, -1.57, 0.0, 0.0,20);
+			PlayStereoSound("OBJECTS\SHIPCHARGE\cannon_fire1.wav");
+			PlaySound("OBJECTS\shipcharge\hit_torock.wav");
+			LAi_KillCharacter(Pchar);
+            }else{
+			pchar.quest.bart_chest.win_condition.l1 = "locator";
+			pchar.quest.bart_chest.win_condition.l1.location = "Bartolomeu_Mansion";
+			pchar.quest.bart_chest.win_condition.l1.locator_group = "goto";
+			pchar.quest.bart_chest.win_condition.l1.locator = "citizen06";
+			pchar.quest.bart_chest.win_condition = "dialogue_chest";					
+			}			
+            break;		
+
+		case "find_chest":
+			LAi_SetPlayerType(Pchar);		
+			pchar.quest.bart_chest.win_condition.l1 = "locator";
+			pchar.quest.bart_chest.win_condition.l1.location = "Bartolomeu_Mansion";
+			pchar.quest.bart_chest.win_condition.l1.locator_group = "goto";
+			pchar.quest.bart_chest.win_condition.l1.locator = "citizen06";
+			pchar.quest.bart_chest.win_condition = "dialogue_chest";			
+            break;
+
+		case "dialogue_chest":
+			Pchar.quest.explosao_canao.over = "yes";		
+			LAi_SetActorType(Pchar);
+			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
+			Pchar.dialog.currentnode = "Key_Chest";
+			LAi_ActorSelfDialog(Pchar, "player_back");		
+            break;
+
+		case "search_rifle":
+			PlayStereoSound("INTERFACE\took_item.wav");		
+			LAi_SetPlayerType(Pchar);		
+			pchar.quest.bart_chestB.win_condition.l1 = "locator";
+			pchar.quest.bart_chestB.win_condition.l1.location = "Bartolomeu_Mansion";
+			pchar.quest.bart_chestB.win_condition.l1.locator_group = "goto";
+			pchar.quest.bart_chestB.win_condition.l1.locator = "citizen08";
+			pchar.quest.bart_chestB.win_condition = "found_rifle";			
+            break;
+
+   		case "found_rifle":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			GiveItem2Character(pchar, "LongRifle_BT");			
+			AddQuestRecord("Family_Story", 15);
+
+			Pchar.quest.french_patrol.win_condition.l1 = "location";			
+			Pchar.quest.french_patrol.win_condition.l1 = "location";
+			pchar.quest.french_patrol.win_condition.l1.location = "Conceicao_Shore_03";
+			pchar.quest.french_patrol.win_condition = "french_patrol_beach";				
+            break;
+
+		case "french_patrol_beach":
+		    DisableFastTravel(true);
+			DisableMenuLaunch(true);
+			locations[FindLocation("Conceicao_Shore_03")].reload.l3.disable = 1;
+			locations[FindLocation("Conceicao_Shore_03")].reload.l2.disable = 1;
+			
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, Nations[FRANCE].fantomModel.m1, "goto", "citizen07");
+			LAi_group_MoveCharacter(sld, "FRENCH_PATROL");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, Nations[FRANCE].fantomModel.m2, "goto", "citizen05");
+			LAi_group_MoveCharacter(sld, "FRENCH_PATROL");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, Nations[FRANCE].fantomModel.m3, "goto", "citizen04");
+			LAi_group_MoveCharacter(sld, "FRENCH_PATROL");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, Nations[FRANCE].fantomModel.m4, "goto", "citizen01");
+			LAi_group_MoveCharacter(sld, "FRENCH_PATROL");
+			LAi_group_FightGroups("FRENCH_PATROL", LAI_GROUP_PLAYER, true);
+			LAi_group_SetCheck("FRENCH_PATROL", "Fight_Victorieuse");			
+            break;		
+			
+		case "Fight_Victorieuse":
+			DisableFastTravel(false);
+			DisableMenuLaunch(false);
+			locations[FindLocation("Conceicao_Shore_03")].reload.l3.disable = 0;
+			locations[FindLocation("Conceicao_Shore_03")].reload.l2.disable = 0;
+			
+			Pchar.quest.combattre_victorieuse.win_condition.l1 = "location";		
+			Pchar.quest.combattre_victorieuse.win_condition.l1 = "location";
+			Pchar.quest.combattre_victorieuse.win_condition.l1.location = "Conceicao";
+			PChar.quest.combattre_victorieuse.win_condition = "Fight_Victorieuse_Bis";
+			break;
+
+     	case "Fight_Victorieuse_Bis":
+			HoistFlag(PERSONAL_NATION);		
+			SetRMRelation(PChar, FRANCE, REL_WAR);		
+			SetCharacterRelationBoth(GetCharacterIndex("Renouart Larrouse"),GetMainCharacterIndex(),RELATION_ENEMY);
+
+			Group_CreateGroup("Renouart Larrouse");
+			Group_AddCharacter("Renouart Larrouse", "Renouart Larrouse");
+			Group_SetGroupCommander("Renouart Larrouse", "Renouart Larrouse");
+			Group_SetPursuitGroup("Renouart Larrouse", PLAYER_GROUP);
+			Group_SetTaskAttack("Renouart Larrouse", PLAYER_GROUP, true);
+			Group_LockTask("Renouart Larrouse");
+			Group_SetAddress("Renouart Larrouse", Characters[GetMainCharacterIndex()].location, "", "");
+
+			UpdateRelations();
+
+			Pchar.quest.gagne_victorieuse.win_condition.l1 = "NPC_Death";
+			Pchar.quest.gagne_victorieuse.win_condition.l1.character = "Renouart Larrouse";
+			Pchar.quest.gagne_victorieuse.win_condition = "won_victorieuse";
+			break;
+
+    	case "won_victorieuse":
+			Pchar.quest.gagne_victorieuse.over = "yes";
+			ChangeCharacterAddressGroup(CharacterFromID("Quest_French_Guard1"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Quest_French_Guard2"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Quest_French_Guard3"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Quest_French_Guard4"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Quest_French_Guard5"), "none", "", "");			
+			ChangeCharacterAddressGroup(CharacterFromID("Quest_English_Patrol1"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Quest_English_Patrol2"), "none", "", "");			
+			
+			AddQuestRecord("Family_Story","16");
+			CloseQuestHeader("Family_Story");
+			break;			
+			
 		PChar.questnotfound = true; // PB: Testing
 	}
 }

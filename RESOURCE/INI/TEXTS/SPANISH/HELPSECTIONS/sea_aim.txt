@@ -1,0 +1,9 @@
+sea_aim_title
+{
+Cannon Aiming Circle
+}
+
+sea_aim_info
+{
+???? Cannon Aiming Circle aparecera en el centro de la pantalla mientras el jugador entra en la cubierta de la nave solo si es posible hacer una salva de canon en la direccion de la vista del jugador. Si algun objetivo ingresa a la zona donde puede cubrirse con canones, el circulo de punteria comienza a pulsar, cambiando su tamano. Tambien apunta muestra el tipo de objetivo con el color. Si el objetivo es amistoso, el circulo de punteria es verde. Y si el objetivo es hostil, el circulo de punteria parpadea en rojo, mientras que el color normal del circulo de punteria es marron.
+}

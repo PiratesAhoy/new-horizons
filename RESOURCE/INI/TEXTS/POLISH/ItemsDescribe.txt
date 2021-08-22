@@ -1,0 +1,2163 @@
+Potion parameters{Medical Remedy}
+health value{Health}
+weapon blade parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, piercing #dpiercing#%, block #dblock#%.}
+weapon gun parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, reload time #dchargespeed#sec, accuracy #daccuracy#%.}
+weapon armor parameters{Armor: Coverage #dcoverage#%, Chance to stop / Percent of damage taken if not stopped, for: Sword #dbladestop#% / #dbladefrac#%, Gun #dgunstop#% / #dgunfrac#%.}
+
+you've_got {You found a}
+
+itmname_gold	{Gold}
+itmdescr_gold
+{
+Gold. A pirate's fondest wish.
+}
+
+itmname_love_letters_of_priest	{Priest's love letters}
+itmdescr_love_letters_of_priest
+{
+Love letters from #sFatherJerald# to a certain girl.
+}
+
+itmname_animists_amulet	{Animists amulet}
+itmdescr_animists_amulet
+{
+A sinister animist amulet resembling a five-pointed star.
+}
+
+itmname_letter_to_domingues	{Letter for Padre Domingues}
+itmdescr_letter_to_domingues
+{
+A letter from #sFatherBernard# to Padre Domingues.
+}
+
+itmname_letter_to_bernard	{Letter for #sFatherBernard#}
+itmdescr_letter_to_bernard
+{
+A letter from Padre Domingues to #sFatherBernard#.
+}
+
+itmname_prison_letter	{Letter from #sFatherBernard#}
+itmdescr_prison_letter
+{
+A letter from #sFatherBernard# that allows you to release a prisoner from #sGreenford# on #sisland_Oxbay# prison.
+}
+
+itmname_old_journal	{Old Journal}
+itmdescr_old_journal
+{
+28th November 1595 - After sailing South for five days, we moored at a large shore near a bay at a deserted island and stocked up on water and food.
+4th December 1595 - I ordered a crewmember to bury something in the jungle; I have a run of ill luck since I acquired it and I prefer to be rid of it.
+(In another person's handwriting) Into the jungle from the large shore, straight ahead at the first crossroads, turn left near the second crossroads. The item is buried there.
+}
+
+itmname_old_journal2	{Old Journal}
+itmdescr_old_journal2
+{
+28th October 1492 - After sailing West for three days, we moored at a large shore near a bay at a deserted island and stocked up on water and food.
+4th November 1492 - I ordered a crewmember to bury something in the jungle; I have a run of ill luck since I acquired it and I prefer to be rid of it.
+(In another person's handwriting) Into the jungle past the large rock with the round hole, then through a narrow passage to the right. Near the next junction the item is buried beside a road to the right.
+}
+
+itmname_small_chest	{Small Chest}
+itmdescr_small_chest
+{
+The documents in this chest prove that the ship that sank at Baie d'Orient was indeed the British frigate 'Lightning'. It says: 'The ship is sinking. We are being dragged down. Now we will never find Miss Shaw. My governor will be so disappointed.' - Captain Thomas Boulden Thompson.
+}
+
+itmname_SpanishLetter	{Spanish Letter}
+itmdescr_SpanishLetter
+{
+This document, signed by Vice-Admiral Salvatore, proves that the 'Vogelstruijs' is carrying ammunition for the conquest of #sRedmond# and is to deliver the cargo to #sSanto Domingo#.
+}
+
+itmname_Trade_Passport {Merchant License}
+itmdescr_Trade_Passport
+{
+These documents were issued by the head of the West India Trading Company. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_EITC_Passport {EITC Passport}
+itmdescr_EITC_Passport
+{
+These documents will allow passage at all the East India Trading Company's locations. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_Davy_Chest {Chest of Davy Jones}
+itmdescr_Davy_Chest
+{
+This chest contains the still-beating heart of the captain of the Flying Dutchman. Carrying this indicates that you are cursed to sail the Seven Seas, never to set foot ashore and to ferry the souls of those who died at sea.
+}
+
+itmname_Devil_Contract {The Devil's Contract}
+itmdescr_Devil_Contract
+{
+This document, signed by Mephistopheles, proves that you have made a contract with the devil. Carrying this indicates that you are cursed to reap souls for Hell and are bound to your ship for eternity.
+}
+
+itmname_Correspondence1 {Letter to Sylvie Bondies}
+itmdescr_Correspondence1
+{
+Correspondence between Arnaud Matton and Sylvie Bondies regarding Sabine.
+}
+itmname_Correspondence2 {Letter to Arnaud Matton}
+itmdescr_Correspondence2
+{
+Correspondence between Sylvie Bondies and Arnaud Matton regarding Sabine.
+}
+
+
+itmname_blade1	{Saber}
+itmdescr_blade1
+{
+A common saber. Better designed for use from horseback than on a ships deck, but an effective if simple weapon.
+}
+
+itmname_blade2	{Rapier}
+itmdescr_blade2
+{
+"These weapons are fit for children, not for men, for straggling boys of the camp to murder poultry, not for men of honor to try the battle with their foes" - George Silver, "Paradoxes of Defence" 1599.
+}
+
+itmname_blade3	{Badelaire}
+itmdescr_blade3
+{
+A French butcher's favorite toy. Combat qualities are mediocre at best, but this sabre is polished so well it sparkles fiercely; more for show than hard work.
+}
+
+itmname_blade4	{Cutlass}
+itmdescr_blade4
+{
+A pirate's best friend. This short and heavy sabre is perfectly suited for combat on a cramped deck.
+}
+
+itmname_blade5	{Dagger}
+itmdescr_blade5
+{
+A sinister-looking dagger. Looks especially elegant when sticking out of someone's back.
+}
+
+itmname_blade6	{Schiavona}
+itmdescr_blade6
+{
+A graceful, deadly blade used by Italian mercenaries.
+}
+
+itmname_blade7	{Yataghan}
+itmdescr_blade7
+{
+Few things cut better than a yataghan - it can split a whale in two. If you manage to sneak up on it.
+}
+
+itmname_blade8	{Maltese knight sword}
+itmdescr_blade8
+{
+A sword used by the Knights of Malta. As straight and grave as the knights themselves. Rare outside of Malta.
+}
+
+itmname_blade9	{French Admiralty Rapier}
+itmdescr_blade9
+{
+A fine rapier, a presentation from the French Crown.
+}
+
+itmname_blade10	{Piranha}
+itmdescr_blade10
+{
+A bloodthirsty-looking short sword of fine steel. Not made for defence, but it's bite more than makes up for that.
+}
+
+itmname_blade11	{Highlander}
+itmdescr_blade11
+{
+This Scottish broadsword is a perfect match for a man with a fiery temper. A tad heavy, with a short strong blade, in a powerful hand it makes for a fearsome weapon.
+}
+
+itmname_blade12	{Arabic Scimitar}
+itmdescr_blade12
+{
+A broad sabre from the hot forges of Damascus. Sharp and light despite it's impressive size, this blade can easily cut silk and nails alike.
+}
+
+itmname_blade13	{Dueling Rapier}
+itmdescr_blade13
+{
+Lighter and faster than your basic rapier. A lot of work went into this design.
+}
+
+itmname_blade14	{Spanish Nobility Longsword}
+itmdescr_blade14
+{
+A beautiful blade, of the type presented to those who are given Spanish titles of nobility. Legend claims that this kind of sword once was used by Cortés and his officers.
+}
+
+itmname_blade15	{Iberian Longsword}
+itmdescr_blade15
+{
+This type of weapon was favored by early Spanish and Portuguese explorers.
+}
+
+itmname_blade16	{Tizona}
+itmdescr_blade16
+{
+Swords of this type are mostly favoured by the Spaniards. Sometimes known as Toledo longswords, famed for their quality.
+}
+
+itmname_blade17	{Flamigera}
+itmdescr_blade17
+{
+A dueling sword with a serpentine blade, reminiscent of a German flamberge, although somewhat lighter.
+}
+
+itmname_blade18	{Saber of Nicolas Sharp}
+itmdescr_blade18
+{
+Nicolas Sharp, the most horrible, bloodthirsty, and depraved pirate that sailed the high seas, has boarded ships and plundered towns with this saber in hand. An excellent weapon, by the way.
+}
+
+itmname_blade19	{German Rapier}
+itmdescr_blade19
+{
+A simple, yet effective rapier, apparently of German origin.
+}
+
+itmname_blade20	{Asiatic Broadsword}
+itmdescr_blade20
+{
+An Asiatic weapon of uncertain origin, possibly Chinese.
+}
+
+itmname_blade21	{Falchion}
+itmdescr_blade21
+{
+A heavy sword perfectly suited for cutting your foe into neat little slices.
+}
+
+itmname_blade22	{Corsair's Pride}
+itmdescr_blade22
+{
+Swords like this were awarded to corsairs in service of Her Majesty, for great service to Britain, usually upon their being knighted.
+}
+
+itmname_blade23	{Dutch Admiralty Sword}
+itmdescr_blade23
+{
+An inscribed blade presented to captains of the Dutch Navy.
+}
+
+itmname_blade24	{English Officer's Saber}
+itmdescr_blade24
+{
+Sword presented to English Naval Officers upon being given a major command.
+}
+
+itmname_blade25	{French Nobility Sword}
+itmdescr_blade25
+{
+Blade presented to those who are knighted for their service to France.
+}
+
+itmname_blade26	{Solingen Rapier}
+itmdescr_blade26
+{
+These fine blades were made in Solingen, Germany, specifically to be presented to Dutch nobility.
+}
+
+itmname_blade27	{Bosun's Choice}
+itmdescr_blade27
+{
+After your ex first-mate Malcolm settled on a life ashore, he decided that someone should make good blades for Bosuns, for working sailors, not just fancy blades for officers. Quality cutlasses like this are the result of his effort.
+}
+
+// Blades from SLiB. Added 09-10-2007 by KevAtl -->
+
+itmname_blade28	{Shamshir}
+itmdescr_blade28
+{
+An ornamental Persian sword featuring a slim upcurved blade. The single edged blade is very sharp, but offers little defensive value.
+}
+
+itmname_blade29	{Portuguese Officer's Sword}
+itmdescr_blade29
+{
+Decorative sword presented to high-ranking naval officers of Portugal. This model is based on the first blades used by the great Portuguese explorer Vasco da Gama.
+}
+
+itmname_blade30	{Dueling Saber}
+itmdescr_blade30
+{
+A finely crafted Italian dueling saber. Blades such as these are rare in the archipelago.
+}
+
+itmname_blade31	{Snake Head}
+itmdescr_blade31
+{
+A beautiful short sword perfect for a fledgling pirate.
+}
+
+itmname_blade32	{Damascus Shamshir}
+itmdescr_blade32
+{
+An inlayed, engraved Persian sword made from the finest Damascus steel. This kind of blade has been spreading since the conquest of Goa to the Turks in the 16th century. A gift from the Portuguese Crown.
+}
+
+itmname_blade33	{Moorish Saber}
+itmdescr_blade33
+{
+An Arabic saber with beautiful golden ornamentation. A gift from the Spanish Crown.
+}
+
+itmname_blade34	{Dragon's Head}
+itmdescr_blade34
+{
+A gift from the pirate lords. A rare treasure, as pirates are not known for giving things away.
+}
+
+// END Blades from SLiB. Added 09-03-2007 by KevAtl <--
+
+itmname_bladeC10	{Short Falchion}
+itmdescr_bladeC10
+{
+A short blade, decorated with an ivory head under the handle.
+}
+
+itmname_bladeC11	{Milanese Longsword}
+itmdescr_bladeC11
+{
+There are many swords that bridge the gap between the cutting and thrusting styles; swords that are longer than later styles, but more slender than the earlier cutting side swords. This is one such sword.
+}
+
+itmname_bladeC12	{Katzbalger}
+itmdescr_bladeC12
+{
+A Double-edged blade with three large and two small fullers, s-shaped quillions with ball finials, as well as a flared fungus-shaped pommel merging flush into a wooden grip.
+}
+
+itmname_bladeC6	{Smallsword}
+itmdescr_bladeC6
+{
+The smallsword is the common dueling weapon. It is not merely a side arm, but rather an essential part of a gentleman's wardrobe. Despite the name, smallswords can be quite long. It refers to the width of the blade rather than it's length and is one of the steps taken between the sword and the rapier.
+}
+
+itmname_bladeC17	{Flamberge Rapier}
+itmdescr_bladeC17
+{
+When parrying, the undulating blade of this rapier causes unpleasant vibration in the attacker's sword. The weapon is probably of German origin. 
+}
+
+itmname_bladeC18	{Shellcup Falchion}
+itmdescr_bladeC18
+{
+This heavy sword is mostly used by strong men, who have enough man power to cut their opponents in tiny pieces!
+}
+
+itmname_bladeC2	{Back-bladed Sidesword}
+itmdescr_bladeC2
+{
+This is a quarter hilt Venetian sword. Two distinct aspects to this design are the steel grip and a wide back-blade with double fullers down the spine. The single-edged blade is heavy and broad enough to justify classifying it as a side sword.
+}
+
+itmname_bladeC23 {Toledo rapier}
+itmdescr_bladeC23 {
+A rapier of the Toledo masters, with a light yet rather sturdy blade. Favoured weapon of Spanish duellists. 
+}
+
+itmname_bladeC26	{Pappenheimer Rapier}
+itmdescr_bladeC26
+{
+A 45-inch blade with a special hilt design that excels at protecting your hand during swordplay. Named after the German count of Pappenheim.
+}
+
+itmname_bladeC30	{Swept Hilt Rapier}
+itmdescr_bladeC30
+{
+Although designed to be used as a defensive weapon in combination with a dagger, this sword works quite well on it's own. 
+}
+
+itmname_bladeC33	{Walloon Sword}
+itmdescr_bladeC33
+{
+The Walloon sword is favored by both the military and civilian gentry for its versatility: it was light, flexible, good for both cutting and thrusting as well as the more accurate pointwork required in duels with rapiers.
+}
+
+itmname_bladeC35	{Hibernian}
+itmdescr_bladeC35
+{
+This is an Irish-made, 32 inch, high-quality steel side sword with a heavy, double-edged blade.
+}
+
+itmname_bladeC36 	{Katana}
+itmdescr_bladeC36 
+{
+The Katana Sword is a light Japanese sword. It is good for both fast attacks and blocking thanks to the long, exceptionally sharp blade.
+}
+
+itmname_blade308 	{Sword of the Earth}
+itmdescr_blade308 
+{
+Designed for the fantasies of an eccentric nobleman, this longsword with its unusual crossguard is nevertheless an effective weapon.
+}
+
+itmname_bladeCiri  {Ciri's Steel Blade}
+itmdescr_bladeCiri 
+{
+While not forged from silver, this is still an exquisite blade for hunting men and monsters alike.
+}
+
+itmname_witcher_steel  {Geralt's Steel Flambard}
+itmdescr_witcher_steel 
+{
+This Flambard was forged in Toussaint by grandmaster smith Lazare Lafargue, shortly before Geralt and Ciri left their world and came to the Caribbean.
+}
+
+// Russian mod -->
+
+itmname_blade35	{Knights Templar Sword}
+itmdescr_blade35
+{
+This ancient, rare, double-edged broadsword has been handed down through the generations by the 'Guardians of the Holy Grail'. The weapon bears the inscription "In hoc signo vinces" - "With this sign, thou shall be victorious".
+}
+
+itmname_blade36	{Hunting Sword}
+itmdescr_blade36
+{
+This short, sharp sword is used for slaughtering animals, but is just as effective against people.
+}
+
+itmname_blade37	{Gold and Jewel Encrusted Dagger}
+itmdescr_blade37
+{
+This long gold dagger is encrusted with precious jewels and has probably seen more ceremonies than battlefields. Seems a shame to get it dirty really.
+}
+
+itmname_blade38	{Kilij}
+itmdescr_blade38
+{
+An ancient, heavy, single-edged Sabre from the Ottoman Empire.
+}
+
+itmname_blade39	{Gold Handled Naval Dirk}
+itmdescr_blade39
+{
+A particually ornate, gold Dirk, that would make a ideal gift for someone... in between the ribs!
+}
+
+itmname_blade40	{Polish Hussar's Szabla}
+itmdescr_blade40
+{
+Mêlée weapon widely used by the heavy Cavalry of the Polish Hussars. The long, thin, single-edged curved blade is ideal for skewering your opponant while on horse-back. This is the weapon that influenced the later adoption of Sabres into Western European Armies.
+}
+
+itmname_blade43	{US Cavalry Sabre}
+itmdescr_blade43
+{
+Finely crafted Sabre of the US Cavalry. With it's long, durable, razor sharp single-edged blade, this sword is forged using the latest techniques of smithing.
+}
+
+itmname_blade42	{Jack Sparrow's Cutlass}
+itmdescr_blade42
+{
+A blade with a bizarre shape for the weirdest pirate of the Caribbean.
+}
+
+itmname_blade44	{Spanish Cup-Hilt Rapier}
+itmdescr_blade44
+{
+Light and well balanced, the Spanish Cup-Hilt Rapier has a long, razor sharp foil blade ideal for duelling.
+}
+
+itmname_blade41	{Russian Cossack's Shashka}
+itmdescr_blade41
+{
+The Shashka, meaning 'Long Knife', is favored by Russian Cossack regiments due to its light weight and durable blade. Being perfectly balanced, the Shashka is an ideal Cavalry weapon and is deadly in almost anybody's hands.
+}
+
+itmname_blade45	{'Crab Claw' BroadSword}
+itmdescr_blade45
+{
+Ancient and rare, this heavy double-edged weapon is of unknown origin but can cut and parry sufficiently despite it's great age.
+}
+
+itmname_blade46	{'Dragon' Shortsword}
+itmdescr_blade46
+{
+Ancient but effective short double-edged weapon. It lends it's name from the dragon motif forged into it's hilt.
+}
+
+itmname_blade47	{Light Tizona}
+itmdescr_blade47
+{
+A double-edged Spanish broadsword made from Damascus steel and a lighter version of the full Tizona. The weapon bears the inscription "Hail Mary, full of grace. The Lord is with you".
+}
+
+itmname_blade48	{Wooden Handled Naval Dirk}
+itmdescr_blade48
+{
+A Naval Officers best friend. Lighter and more compact than a traditional sword, the Dirk consists of a Dagger handle with a cut-down sword blade, making it ideal for deck fighting.
+}
+
+itmname_blade49	{Bronze Handled Naval Dirk}
+itmdescr_blade49
+{
+More of a Dress Sword than a combat weapon. It allows you to impress the ladies and slaughter your enemies at the same time.
+}
+
+itmname_blade50	{Venetian Navy Cutlass}
+itmdescr_blade50
+{
+Robust enough to hack through ropes, canvas and wood yet short enough to weild on a compact ship deck. This Cutlass is the weapon of choice for any self-respecting Pirate.
+}
+
+itmname_blade51	{French Court Sword}
+itmdescr_blade51
+{
+Ornate Dress Sword from the Royal Courts of Paris. Maybe you can impress your opponent into submission.
+}
+
+// KevAtl SLiB Special Weapon blades -->
+
+itmname_bladeFD	{Francis Drake's Sword}
+itmdescr_bladeFD
+{
+I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by François Moulin. It's at least a century old and is ornately engraved. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its history.
+}
+
+
+itmname_bladeFD2	{Francis Drake's Sword}
+itmdescr_bladeFD2
+{
+This sword was presented to Francis Drake for services to the English Crown.
+}
+
+itmname_bladeSC	{Sword of Cortés}
+itmdescr_bladeSC
+{
+I took this ancient saber from Amérigo Vieira. It is a mystical, cursed weapon used by Hernán Cortés during his conquest of the Aztec empire. The Sword's power is derived in combination with a sacred scabbard, made from the innards of Aztec sacrifices. The blade inscription reads "Hernán Cortés 1520 A.D.".
+}
+
+// KevAtl SLiB Special Weapon blades <--
+
+itmname_bladeTriton {Sword of Triton}
+itmdescr_bladeTriton
+{
+According to legend, this infamous blade was forged by the sea deity Triton himself in the lost city of Atlantis. It it said that anyone brandishing the sword would rule a ship's rigging and sails, controlling the vessel to do his indomitable will.
+}
+
+itmname_tridentNeptune {Neptune's Trident}
+itmdescr_tridentNeptune
+{
+This Trident was believed to be Neptune's property once! But a naughty shark stole it one day, and brought it to the world ABOVE the water. There it moved from owner to owner. Neptune used it to create and calm storms.
+}
+
+itmname_bladeBP	{Sword of Bartolomeu}
+itmdescr_bladeBP
+{
+This eccentric sword given by the Portuguese Governor for Charles Baxter's arrest has got a strange cross-guard to allow for better blocking.
+}
+
+itmname_bladePOA {Hand of Poseidon}
+itmdescr_bladePOA
+{
+Johan Elting took this sword when he was fighting for the Dutch Army and killed a famous pirate many years ago.
+}
+
+itmname_blthag02 {Deadly Skull}
+itmdescr_blthag02
+{
+Roxanne Lalliere ordered the sword at a blacksmith of Tortuga. Like its owner, this unique blade is beautiful and deadly.
+}
+
+itmname_blangel {Angel Sword}
+itmdescr_blangel
+{
+Initially designed for Count William V of Holland, this ceremonial sword features a pommel like an angel's wings and a large sapphire mounted in the crossguard.
+}
+
+// Axes from SLiB. Jack Davidson. -->
+// TIH --> properly keyed now with 'blade' prefix
+
+itmname_bladeaxe1 {Axe}
+itmdescr_bladeaxe1
+{
+Commonly used for chopping wood, the axe could also be used as a melee weapon. It's lack of defensive capability is made up for by it weight and destructive power.
+}
+
+itmname_bladeaxe2 {Boarding Axe}
+itmdescr_bladeaxe2
+{
+A utility tool with many shipboard uses including damage and fire control, the boarding axe was also commonly used to assist in boarding enemy ships and disabling them by cutting through rigging, etc. Of course it also made for a very powerful, if somewhat unwieldy, melee weapon.
+}
+
+itmname_bladeaxe3 {Hatchet}
+itmdescr_bladeaxe3
+{
+A small one handed axe, handy for surprise attacks, but of little value in defence.
+}
+
+// TIH <--
+// Axes from SLiB. Jack Davidson. <--
+
+itmname_topor1 {Engraved Felling Axe}
+itmdescr_topor1
+{
+Used for cutting down trees but can also be used for cutting your enemies down to size.
+}
+
+itmname_topor2 {Single Half-Moon Battle Axe}
+itmdescr_topor2
+{
+Heavy and highly ornate battle axe. Very beautiful and very deadly.
+}
+
+itmname_battleax {Master Battle Axe}
+itmdescr_battleax
+{
+An impressive big battle axe perfectly suited for boarding enemy ships.
+}
+
+// Special Hand Weapons from SLiB. KevAtl. 09-03-2007 -->
+
+itmname_bladelead {Pair of Bronze Knuckles}
+itmdescr_bladelead
+{
+Bronze knuckles, a weapon of last resort in hand-to-hand combat. Hit your opponent in the right place and it's deadly!
+}
+
+itmname_bladeclub {Banger Club}
+itmdescr_bladeclub
+{
+A heavy wooden club. Boarding parties love this head knocking tool. It won't block many swordthrusts however.
+}
+
+// Special Hand Weapons from SLiB. KevAtl. <--
+
+itmname_pistol1	{Short pistol}
+itmdescr_pistol1
+{
+A small, cheap pistol. More of a melee weapon than a gun, frequently used to deliver a gutshot to unsuspecting foes.
+}
+
+itmname_pistol1a	{Short pistol}
+itmdescr_pistol1a
+{
+A cheap short-barrelled pistol. Only good for killing sparrows. Point-blank.
+}
+
+itmname_pistol2	{Long pistol}
+itmdescr_pistol2
+{
+A common pistol with a long barrel. Decent range and punch, but it reloads slowly and is not too accurate.
+}
+
+itmname_pistol3	{Grapeshot pistol}
+itmdescr_pistol3
+{
+A genuine hand cannon that does damage to multiple enemies at once. Formidable stopping power, but it lacks range and accuracy.
+}
+
+itmname_pistol4	{Quad-barrel pistol}
+itmdescr_pistol4
+{
+Four pistols in one. Long reloading time, but it's definitely worth it. 'Professional Gunman' ability is required to use this pistol.
+}
+
+itmname_DuelPistol {Duelling pistol}
+itmdescr_DuelPistol
+{
+A well-crafted pistol with a long barrel. Accurate and well balanced, this is the weapon of choice for settling matters of honour.
+}
+
+itmname_pistol5	{Horse pistol}
+itmdescr_pistol5
+{
+This .70 calibre, 14 inch pistol is a true monster. Serious stopping power, excellent range and accuracy make it a weighty argument in any quarrel.
+}
+
+itmname_pistol6	{Dual-barrel pistol}
+itmdescr_pistol6
+{
+An excellent pistol with two barrels. For those cases when one bullet just isn't enough. 'Gunman' ability is required to use this pistol.
+}
+
+itmname_pistol6_2	{Double barrel pistol}
+itmdescr_pistol6_2
+{
+An ornate pistol with two barrels. The ivory grip is made to resemble a falcon's head. 'Gunman' ability is required to use this pistol.
+}
+
+itmname_pistol25	{Brace of four horse pistols}
+itmdescr_pistol25
+{
+These .70 calibre, 14 inch pistols are true monsters. Serious stopping power, excellent range and accuracy make them a weighty argument in any quarrel. ('Professional Gunman' ability required.)
+}
+
+itmname_pistol26	{Four-barrel Grapeshot pistol}
+itmdescr_pistol26
+{
+With four barrels loaded with grapeshots you can do a lot of damage to multiple enemies at once. 'Professional Gunman' ability required.
+}
+
+itmname_pistol27	{Miquelet pistol}
+itmdescr_pistol27
+{
+This Spanish pistol is not especially accurate but is hard hitting. The mechanism is an early form of flintlock.
+}
+
+itmname_pistol3_14	{Jack's Lucky Flintlock}
+itmdescr_pistol3_14
+{
+This beautiful, but plain-decorated pistol, comes from the British colonies of India, the maker has his name 'Perry' etched in the pistol. Orginally owned by Sri Sumbhajee, but stolen by you.
+}
+
+itmname_pistol4_1	{Mercenary's pistol}
+itmdescr_pistol4_1
+{
+A Quad-barrel pistol but bigger and more powerful than a normal one. It can kill a large amount of enemies in only a few seconds. Highly prized by the Spanish mercenaries.
+}
+
+itmname_Sparrow_Ring {Silver Ring}
+itmdescr_Sparrow_Ring
+{
+On an impulse, you took the silver ring from Cap'n Drow's desk while he looked at co-ordinates to Shipwreck Cove. At least you got something from it.
+}
+
+itmname_Sparrow_Ring1 {Pretty Ring}
+itmdescr_Sparrow_Ring1
+{
+Gombo, now known as Gentleman Jocard, traded this ring with you for a piece of junk you found on the original Gentleman Jocard. It seems to be a good trade for you.
+}
+
+// Alan Smithee's new weapons 
+
+itmname_pistol7	{Brace of Small Pistols}
+itmdescr_pistol7
+{
+A strap of three quick-draw handguns. More decorative than powerful, they were formerly used by French nobility for duels. Requires 'Gunman' ability.
+}
+
+itmname_pistol7a	{Brace of Short Pistols}
+itmdescr_pistol7a
+{
+A strap of three quick-draw handguns. Now you can shoot a flock of sparrows, if they sit still. Requires 'Gunman' ability.
+}
+
+itmname_pistol8	{Brace of Flintlock Pistols}
+itmdescr_pistol8
+{
+Three flintlock pistols on a band for rapid access. They are said to be the work of a one-armed, one-eyed Spanish gunsmith. 'Gunman' ability needed.
+}
+
+itmname_pistol9	{Brace of Horse Pistols}
+itmdescr_pistol9
+{
+These .70 calibre, 14 inch pistols are true monsters. Serious stopping power, excellent range and accuracy make them a weighty argument in any quarrel. ('Gunman' ability required.)
+}
+
+// Alan Smithee's new weapons end
+
+// JRH: Long Rifle -->
+
+itmname_LongRifle_C		{Long Rifle}
+itmdescr_LongRifle_C
+{
+This unique weapon can be equipped with a Telescope for increased accuracy. 
+}
+
+itmname_LongRifle_CT		{Long Rifle with Telescope}
+itmdescr_LongRifle_CT
+{
+This is a sniper's favourite weapon. 
+}
+
+itmname_telescope		{Telescope}
+itmdescr_telescope
+{
+A telescope for the Long Rifle. 
+}
+
+itmname_LongRifle_BT		{Long Rifle with Telescope}
+itmdescr_LongRifle_BT
+{
+This is a sniper's favourite weapon. 
+}
+
+itmname_LongRifle_W		{Long Rifle}
+itmdescr_LongRifle_W
+{
+This powerful weapon has silver inlays. Of Arabic origin?
+}
+
+itmname_LongRifle_WT	{Long Rifle with Telescope}
+itmdescr_LongRifle_WT
+{
+This is a sniper's favourite weapon. 
+}
+
+itmname_LongRifle_H		{Long Rifle}
+itmdescr_LongRifle_H
+{
+A Baker Rifle, a flintlock rifle used by the British army during the Napoleonic wars.
+}
+
+// <-- JRH: Long Rifle end
+
+// GR: Collier revolver for use by Clint Eastwood -->
+
+itmname_pistolcollier	{Collier Revolver}
+itmdescr_pistolcollier
+{
+An ornate version of an early revolver produced by Elisha Collier. (Requires 'Professional Gunman' ability.)
+}
+
+// <-- GR: Collier revolver
+
+// BOP and JRH: Indian Weapons -->
+
+itmname_pistolbow 		{Bow}
+itmdescr_pistolbow
+{
+A heavy Bow made of red sallow.
+}
+
+itmname_bladearrows		{Arrows}
+itmdescr_bladearrows
+{
+Arrows for the Bow provided with hawk feathers for precision. Can be upgraded to Flaming or Poisoned Arrows with the right Mixtures.
+}
+
+itmname_curare			{Curare}
+itmdescr_curare
+{
+A mixture of plant extracts used as Arrow poison.
+}
+
+itmname_tar			{Tar Mixture}
+itmdescr_tar
+{
+A thick black paste of tar, gunpowder and other combustibles. Smells really bad but makes your Arrows flaming.
+}
+
+itmname_quiver			{Quiver}
+itmdescr_quiver
+{
+You can carry 12 Arrows with this rich ornate Quiver equipped.
+}
+
+itmname_tomahawk		{Tomahawk}
+itmdescr_tomahawk
+{
+A very dangerous close combat weapon of indian design.
+}
+
+itmname_pistoldart		{Throwingknife}
+itmdescr_pistoldart
+{
+If you throw it from some distance the victim won't realize where it came from. Can be worn instead of a pistol.
+}
+
+// BOP and JRH: Indian Weapons <--
+
+// GR: ceremonial tomahawk for "Crystal Skull" sidequest -->
+
+itmname_tomahawk_chief		{Chief's Tomahawk}
+itmdescr_tomahawk_chief
+{
+If you have this then you are lucky enough to have survived being hit by it, or even luckier to have been given it.
+}
+
+// GR: ceremonial tomahawk for "Crystal Skull" sidequest <--
+
+// KevAtl SLiB Shotgun 09-03-2007 <--
+
+itmname_pistol10 		{Pump Shotgun}
+itmdescr_pistol10
+{
+A magical weapon that is very rarely found in these waters. It allows you to fire nearly continuously and uses grapeshot ammunition. Requires 'Gunman' ability.
+}
+
+// KevAtl SLiB Shotgun <--
+
+// vassal weapons mod start
+
+itmname_pistolmtoon 	{Musketoon}
+itmdescr_pistolmtoon
+{
+A long gun with a shorter barrel than an infantry musket, usually used in boardings for taking out multiple enemies at once.
+}
+
+itmname_pistolmket 		{Musket}
+itmdescr_pistolmket
+{
+An infantry musket. Can be provided with a plug-in Knife as Bayonet.
+}
+
+// vassal weapons mod end
+
+// JRH muskets & pistols -->
+
+itmname_arguebuse 			{Arquebus}
+itmdescr_arguebuse
+{
+This classic Matchlock Musket holds a burning slow match in a clamp at the end of a small curved lever known as the serpentine.
+}
+
+itmname_blade_mKnife		{Knife Bayonet}
+itmdescr_blade_mKnife
+{
+Early Bayonet of the "plug" type. The Knife has a round handle that slides directly into the Musket barrel.
+}
+
+itmname_blademketK			{Musket with Bayonet}
+itmdescr_blademketK
+{
+Standard Musket with a plug-in Knife as Bayonet. The Knife must to be removed when firing.
+}
+
+itmname_pistolmketB 		{Musket with Bayonet}
+itmdescr_pistolmketB
+{
+Musket with a Socket Bayonet allowing the Musket to be loaded and fired without removing the Bayonet. 
+}
+
+itmname_blademketB		{Musket with Bayonet}
+itmdescr_blademketB
+{
+Musket with a Socket Bayonet allowing the Musket to be loaded and fired without removing the Bayonet.  
+}
+
+itmname_pistol11			{Wheellock Pistol}
+itmdescr_pistol11
+{
+An early Pistol with Wheellock mechanism.
+}
+
+itmname_pistol12			{Pair of Wheellock Pistols}
+itmdescr_pistol12
+{
+An excellent pair of richly ornamented Wheellock Pistols. 'Gunman' ability required.
+}
+
+itmname_pistol13			{Short Musket}
+itmdescr_pistol13
+{
+A small-calibre Short Musket with Wheellock. Load it with two pistolbullets.
+}
+
+// <-- JRH muskets & pistols
+
+// SuperDurnius -->
+
+itmname_Barmansknife	{Breadknife}
+itmdescr_Barmansknife
+{
+The original use for this knife is slicing bread, but with a little skill it can also be used for slicing foes.
+}
+
+itmname_Merchantsdagger	{Merchants Dagger}
+itmdescr_Merchantsdagger
+{
+This dagger is favoured by merchants who need to travel through dangerous sites. Thanks to it's size, it can be easily hidden. Good for surprise attacks and discouraging any remaining foes from attacking you. Until they discover the weapon's lacking defensive capabilities.
+}
+
+itmname_GuestsKnife	{Knife}
+itmdescr_GuestsKnife
+{
+The slim blade of this knife can pierce through even the tiniest hole.
+}
+
+itmname_Minersaxe	{Woodmen's Axe}
+itmdescr_Minersaxe
+{
+A woodcutters best friend. Trees or enemies, this tool makes no distinction.
+}
+
+itmname_Minerscrow	{Shovel}
+itmdescr_Minerscrow
+{
+Mostly used by farmers and slaves to cultivate the field. With it's sharp edge, it has no problem 'cultivating' your foe's skull.
+}
+
+itmname_Minerspick	{Pickaxe}
+itmdescr_Minerspick
+{
+This tool is normally used for picking away at rocks. But it is also suitable for picking at enemies.
+}
+
+itmname_MinersSpade	{Spade}
+itmdescr_MinersSpade
+{
+Both capable of cutting and whacking. After killing your victim, you can give him his funeral straight away.
+}
+
+itmname_PiratesDagger	{Stiletto}
+itmdescr_PiratesDagger
+{
+An eleborate dagger. Very sharp and pointy. Ideal for manipulating in a gambling game.
+}
+
+itmname_PiratesPistol	{Flintlock Pistol}
+itmdescr_PiratesPistol
+{
+A common flintlock pistol.
+}
+
+itmname_MerchantsBlade	{Merchants Blade}
+itmdescr_MerchantsBlade
+{
+This saber is favoured by the few merchants who want to protect their merchandise with their lives. Not very elegant, but it does it job.
+}
+//SuperDurnius <--
+
+itmname_spyglass1	{Cheap spyglass}
+itmdescr_spyglass1
+{
+A simple spyglass with scratched lenses. This junk does not belong in any self-respecting captain's pocket.
+Allows the user to see only the ship's name, type, and speed.
+}
+
+itmname_spyglass2	{Common spyglass}
+itmdescr_spyglass2
+{
+An ordinary spyglass. The lenses are of decent quality, although certainly not the best out there.
+Allows the user to see only the ship's name, type, and speed, as well as the number of cannons and the amount of damage to the ship.
+}
+
+itmname_spyglass3	{Superior spyglass}
+itmdescr_spyglass3
+{
+An expensive spyglass with excellent lenses. You can see the grin on the enemy boatswain's face from a mile away with this thing.
+Allows the user to see the ship's name, type, and speed, number of cannons, the amount of damage to the ship, and the number of crew.
+}
+
+itmname_spyglass4	{Masterwork spyglass}
+itmdescr_spyglass4
+{
+A spyglass made by a true master, with lenses from the purest rock crystal. About as good as a spyglass can get.
+Allows the user to see the ship's name, type, speed, the amount of damage to the ship, the number of crew and cannons, and what the opponent's cannons are loaded with.
+}
+
+itmname_potion1	{Small healing potion}
+itmdescr_potion1
+{
+A brew of healing herbs that cures light wounds.
+}
+
+itmname_potion2	{Healing elixir}
+itmdescr_potion2
+{
+A potent concoction of more than a hundred rare herbs, it can heal even the most horrible of wounds.
+}
+
+//New Medical System added by Duncan
+
+itmname_medical1	{Bandage Roll}
+itmdescr_medical1
+{
+Some cloth bandages, to help stop bleeding and support injured limbs.
+}
+
+itmname_medical2	{Cauterization Kit}
+itmdescr_medical2
+{
+A hot cauter used to superheat a wound and cause it to quickly seal shut, can stop bleeding in very serious wounds.
+}
+
+itmname_lockpick	{Lockpick}
+itmdescr_lockpick
+{
+Extract from the "Thief's Guild Guide for Thievery":
+CHAPTER XVII: USING LOCKPICKS
+These handy items will double a professional thief's chance in opening locks. If the lockpick doesn't break and get stuck in the lock, that is.
+
+- "We Solemny Swear We Are Up To No Good!" -
+Signed: Moony, Wormtail, Padfood and Prongs
+}
+
+itmname_jewelry1	{Sapphire}
+itmdescr_jewelry1
+{
+A clear, blue stone. Perfectly cut.
+}
+
+itmname_jewelry2	{Diamond}
+itmdescr_jewelry2
+{
+An exquisite stone. They say you can see your future in this gem's sparkle.
+}
+
+itmname_jewelry3	{Ruby}
+itmdescr_jewelry3
+{
+A precious stone the color of the blood.
+}
+
+itmname_jewelry4	{Emerald}
+itmdescr_jewelry4
+{
+Even the worst scoundrel will look upon this wonderful stone and dream of the green-eyed lover he left behind.
+}
+
+itmname_jewelry5	{Gold Nugget}
+itmdescr_jewelry5
+{
+A nugget of pure gold. Men kill for it, and women swoon over it.
+}
+
+itmname_jewelry6	{Silver Ring}
+itmdescr_jewelry6
+{
+An ideal combination of luxury and style.
+}
+
+itmname_jewelry7	{Golden Ring}
+itmdescr_jewelry7
+{
+Of course it looks too flashy, but are you afraid of seeming noble?
+}
+
+itmname_jewelry8	{Bronze Ring}
+itmdescr_jewelry8
+{
+Someone's 'lucky ring'.
+}
+
+itmname_jewelry9	{Bronze Cross}
+itmdescr_jewelry9
+{
+A symbol of faith. Perhaps this little cross will save your life in the heat of battle.
+}
+
+itmname_jewelry10	{Luxurious Golden Ring}
+itmdescr_jewelry10
+{
+A luxury fit for only the most dignified hand.
+}
+
+itmname_jewelry11	{Large Pearl}
+itmdescr_jewelry11
+{
+A gift from the sea. It may be more than 100 years old.
+}
+
+itmname_jewelry12	{Small Pearl}
+itmdescr_jewelry12
+{
+A small, but beautiful, pearl.
+}
+
+itmname_jewelry13	{Silver Brooch}
+itmdescr_jewelry13
+{
+A gift suitable for any woman - and she will remember you for the rest of her life.
+}
+
+itmname_jewelry14	{Gold Brooch}
+itmdescr_jewelry14
+{
+You wouldn't give this beauty to the first woman you meet. It's a gift suited for a queen - but only to hold for a while.
+}
+
+itmname_jewelry15	{Luxurious pendant}
+itmdescr_jewelry15
+{
+Any woman would be overjoyed to have this lovely piece of jewelry.
+}
+
+itmname_jewelry16	{Gem Necklace}
+itmdescr_jewelry16
+{
+It may not be the most expensive piece of jewelry, but the ladies will love it.
+}
+
+itmname_indian1	{Irgantachul Idol}
+itmdescr_indian1
+{
+Figurine of an Incan god.
+}
+
+itmname_indian2	{Weird Animal Figurine}
+itmdescr_indian2
+{
+No one knows exactly what it is. It may be a toy for Incan children.
+}
+
+itmname_indian3	{Small Mosaic}
+itmdescr_indian3
+{
+Astonishingly beautiful work of art. The secret of making such things was lost ages ago.
+}
+
+itmname_indian4	{Clay Jar}
+itmdescr_indian4
+{
+Beatiful jar adorned with pictures.
+}
+
+itmname_indian5	{Markuchankatu Mask}
+itmdescr_indian5
+{
+A golden mask of an Incan god.
+}
+
+itmname_indian6	{Akumalartu Figurine}
+itmdescr_indian6
+{
+Figurine of an Incan god of war.
+}
+
+itmname_indian7	{Pikachuatl Idol}
+itmdescr_indian7
+{
+This idol depicts an Incan earth goddess of fertility and luck.
+}
+
+itmname_indian8	{Royal Cuspidor}
+itmdescr_indian8
+{
+Ritual item from the court of the Incan emperor.
+}
+
+itmname_indian9	{Bakachukta Idol}
+itmdescr_indian9
+{
+On the one hand it's a figurine of an Incan god. On the other, a cup. A useful item.
+}
+
+itmname_indian10	{Yxtoikchatlu Idol}
+itmdescr_indian10
+{
+Very beautiful gem-encrusted gold figurine of an Incan god.
+}
+
+itmname_indian11	{Wisdom Tooth Figurine}
+itmdescr_indian11
+{
+Incan god of wisdom. He appears happy. (Odd, since most Europeans associate wisdom with cynicism. Cultural differences.)
+}
+
+itmname_indian12	{Morchachtulak Idol}
+itmdescr_indian12
+{
+A large gold Incan idol. A great deal of gold was used to create this.
+}
+
+itmname_indian13	{Ritual Jar}
+itmdescr_indian13
+{
+A traditional Incan ritual jar.
+}
+
+itmname_indian14	{Gold Ichtyloxtumba Idol}
+itmdescr_indian14
+{
+Gold Incan idol made in very unusual style.
+}
+
+itmname_indian15	{Clay Ritual Bath}
+itmdescr_indian15
+{
+Ritual bath - a ceremonial object of the Incans.
+}
+itmname_indian16	{Strangely Painted Pot}
+itmdescr_indian16
+{
+Colorfully painted pot, in a traditional Incan style.
+}
+
+itmname_indian17	{Darien Idol}
+itmdescr_indian17
+{
+This gold idol belongs to a tribe of cannibals. It represents their god of war. Whoever steals it will be in BIG trouble.
+}
+
+itmname_potion3		{Bottled Antidote}
+itmdescr_potion3
+{
+This cocktail cures poison.
+}
+
+
+itmname_potion4		{Mixture}
+itmdescr_potion4
+{
+Mixture not only stops poison, it also replenishes some of your health.
+}
+
+;-----------------------------------START ADDED BY VERRUCKT
+
+itmname_potionrum		{Bottle 'o Rum}
+itmdescr_potionrum
+{
+No rum can get you drunk faster...
+}
+
+itmname_potionwine	{Flask of Fine Wine}
+itmdescr_potionwine
+{
+The finest French wine in the caribbean.
+}
+;----------------------------------STOP ADDED BY VERRUCKT
+
+itmname_100gp	{purse containing 100 gold}
+
+itmname_250gp	{purse containing 250 gold}
+
+itmname_500gp	{purse containing 500 gold}
+
+; GreatZen -->
+
+itmname_mineral1	{Pyrite crystal}
+itmdescr_mineral1
+{
+Large crystal of Aztec iron ore. If one gets enough of them, one learns the secrets of iron.
+}
+
+itmname_Mineral2	{Garnet crystal}
+itmdescr_Mineral2
+{
+Precious and rare garnet. It'll bring a lot of gold when sold to merchants.
+}
+
+itmname_Mineral3	{Piece of Chrysoberyl}
+itmdescr_Mineral3
+{
+Crystal of indian chrysoberyl. It is nearly impossible to find a thing like this. It is known that 2 stones protect from evil ghosts.
+}
+
+itmname_Albatross	{Dead Albatross}
+itmdescr_Albatross
+{
+It's bad luck to find a dead albatross, as every sailor knows. Now, how can you get rid of it? There might be a famous naturalist living somewhere in the British colonies who can be interested in such a specimen.
+}
+
+itmname_GoldArmor	{Gilded Cuirass}
+itmdescr_GoldArmor
+{
+Highly decorative armor apparently designed for someone of importance, and made of the finest materials.
+}
+
+itmname_CommonArmor	{Battle Cuirass}
+itmdescr_CommonArmor
+{
+This armor is well made to turn a blade and even maybe deflect a bullet. 
+}
+
+itmname_CheapArmor	{Cheap Cuirass}
+itmdescr_CheapArmor
+{
+This is common battle armor made of steel; it is heavy and hinders one's movements.
+}
+
+itmname_Gorget	{Gorget}
+itmdescr_Gorget
+{
+Neck armor, usually brass or steel, often favored by swordsmen.
+}
+
+itmname_Jerkin	{Leather Jerkin}
+itmdescr_Jerkin
+{
+A leather vest; provides some protection against blade and gun wounds.
+}
+
+itmname_Cured	{Leather Cuirass}
+itmdescr_Cured
+{
+Battle armor made of hardened leather; provides light protection against blade and gun wounds.
+}
+
+itmname_Mineral7	{Piece of Smoky Quartz}
+itmdescr_Mineral7
+{
+This is the dark stone used by mages for contacting the Dead.
+}
+
+itmname_Mineral8	{Piece of Tormaline}
+itmdescr_Mineral8
+{
+These bright multicolored crystals seem to be a valuable good.
+}
+
+itmname_Mineral9	{Topaz}
+itmdescr_Mineral9
+{
+This stone has excellent transparency. 
+}
+
+itmname_ChinaTiger	{Tiger Statuette}
+itmdescr_ChinaTiger
+{
+This statuette is probably of a chinese origin. 
+}
+
+itmname_WhiteSkull	{White Crystal Skull}
+itmdescr_whiteskull
+{
+This is one of the Mayan crystal skulls for the sacred ritual. 
+}
+
+itmname_RoseSkull	{Rose Crystal Skull}
+itmdescr_roseskull
+{
+This is one of the Mayan crystal skulls for the sacred ritual. 
+}
+
+itmname_BlueSkull	{Blue Crystal Skull}
+itmdescr_blueskull
+{
+This is the main skull of the Mayan crystal skulls for the sacred ritual. 
+}
+
+itmname_cryskull	{Crystal Skull}
+itmdescr_cryskull
+{
+A lifesize model skull made of some sort of crystal. 
+}
+
+itmname_mineral15	{Piece of Native Platinum}
+itmdescr_mineral15
+{
+This is metal. Surely not gold and not silver, but very heavy. 
+}
+
+itmname_Mineral16	{Rock Crystal}
+itmdescr_Mineral16
+{
+Many claim that you can see the future in crystals like these.
+}
+
+; GreatZen <--
+
+itmname_CursedCoin		{Mysterious Coin}
+itmdescr_CursedCoin
+{
+Large golden coin with an Aztec skull depiction. It gives off an aura of great ancient power. Rumour has it that these originate from an island that cannot be found, except by those who already know where it is. Perhaps some drunken pirate knows more about this.
+}
+
+// -- Scheffnow -- 2004-01-17 -- NoSaveModeMod -- start ---------------
+
+itmname_holycross1	{Cupreos Cross}
+itmdescr_holycross1
+{
+A heavy cross with gemstone and pearl ornamentation.
+}
+
+itmname_holycross2	{Silvery Cross}
+itmdescr_holycross2
+{
+A silver cross encrusted with rare gems and pearls.
+}
+
+itmname_holycross3	{Golden Cross}
+itmdescr_holycross3
+{
+A golden cross inlaid with a central sapphire and a pearl on each limb.
+}
+
+// -- Scheffnow -- 2004-01-17 -- NoSaveModeMod -- end -----------------
+
+; --> Fred Bob quest items added by CatalinaThePirate
+
+itmname_letter_reward	{Reward Letter}
+itmdescr_letter_reward
+{
+This sealed letter has an inscription on the envelope promising a reward to the deliverer.
+}
+
+
+itmname_estrella_token	{Estrella's Token}
+itmdescr_estrella_token
+{
+An old Spanish coin made into a love token by a pirate for his lady.
+}
+; <-- Fred Bob quest items added by CatalinaThePirate
+
+; --> Mateus Santos quest items added by SCM
+
+itmname_Santos_Ring {Santos Ring}
+itmdescr_Santos_Ring
+{
+On an impulse, you took the silver ring from Santos' hand after you killed him. Perhaps you'll keep it as a memento mori, or sell it and buy some rum to help you forget that this adventure ever occured.
+}
+
+itmname_Santos_Keys {Santos Keys}
+itmdescr_Santos_Keys
+{
+The keys to the House of Mateus Santos, what doors do they open? Before you attacked Santos you saw him hit a switch, and now many of the doors cannot be opened even with these keys. The keys are marked strangely as well; one says, "Study", and another, "Alas, poor Yorick!", and the third, "Secret-ary", What does this mean?
+}
+
+itmname_Santos_Journal1 {Santos To-do Hit List A-N}
+itmdescr_Santos_Journal1
+{
+This apparently is volume one of a journal listing Santos' targets for assassination; Admiral 8Q, Bonny Megs, Cap'n Toast, Captain Cookie, Captain Dams, Catalina the Pirate, Child of Thor, Couch Captain Charles, Diomed, Donkey Pirate, Fred Bob, High Sea Lass, Inez Dias, JMV575, Keith, Kevo44, Kieron, Lady Karen of the Sandwich Isles, Mad Jack, Maximus, Meigger, Muddymonkey77, Nathan Kell
+}
+
+itmname_Santos_Journal2 {Santo's To-do Hit List O-Z}
+itmdescr_Santos_Journal2
+{
+More targets on Santos Hit List; Petros, Pieter Boelen, Pirate Sam, Rafe Bligh, Rico,(aka Drunken, aka El Capitain, aka Admiral Makkay), Screwface, Skull, Spaz, Vassal, William, and that Dastardly Sir Christopher Mings! Also some college professor named Losey who apparently once gave him a bad grade.
+}
+; <-- Mateus Santos quest items added by SCM
+
+// ccc Building kit aug 05
+
+itmname_building	{Building Permit ;) }
+itmdescr_building
+{
+DON'T TOUCH! Essential for 'occupant' of this building! 
+}
+
+// ccc Special weapons assembly kit start
+
+itmname_bladeX1	{Borgiablade}
+itmdescr_bladeX1
+{
+Looks like a flashy ceremonial blade, but the tip is poisoned with Belladonna. Even the slightest scratch will cause the victim's slow but certain death.
+}
+
+itmname_bladeX2	{Sandbag}
+itmdescr_bladeX2
+{
+A muggers favourite weapon: a blow on the head of an UNPREPARED victim stuns instantly (for some time ! ) but causes no sound and no alarm. Stunned people can easily be plundered... if no witness is near!
+}
+
+itmname_bladeX3	{Thief's knife}
+itmdescr_bladeX3
+{
+Point and backedge of the thin blade have been blunted so that you can easily slip it under someone's belt. Then you can cut the belt with the sharp edge and take the victims weapons and purse in one swift motion. Your next swift motion should be the getaway...
+}
+
+itmname_pistolbbuss	{Blunderbuss}
+itmdescr_pistolbbuss
+{
+Crude scattergun. For people who can never seem to hit their targets normally. Be warned though: this weapon has been known to occasionally jam and explode!
+}
+
+itmname_pistolgrenade	{Grenade}
+itmdescr_pistolgrenade
+{
+Maims EVERYONE near the initial target, so don't throw short! Can be worn instead of a pistol.
+}
+
+itmname_pistolgas	{Bottle of Ether}
+itmdescr_pistolgas
+{
+Emits anesthetizing vapours if thrown and broken. EVERYONE near who is not prepared for an attack will be dazed and stunned... for some time! Can be worn instead of a pistol.
+}
+
+itmname_pistolpdart	{Poisoned Throwingknife}
+itmdescr_pistolpdart
+{
+Razorsharp blade dipped in blood of the Archipelagean Poisonfrog, which kills slowly but surely. If you throw it from some distance the victim won't realize where it came from. Can be worn instead of a pistol.
+}
+
+itmname_pistolstink	{Stinkpot}
+itmdescr_pistolstink
+{
+Jar containing combustibles emitting a suffocating smoke. Slowly poisons EVERYONE who inhaled some of the smoke, so don't throw short! Can be worn instead of a pistol.
+}
+
+itmname_pistolrock	{Cobblestone}
+itmdescr_pistolrock
+{
+Don't underestimate its effectivity as stealth weapon. If you throw it from some distance the victim will be stunned and see only stars... for some time! Though anyone prepared for an attack will easily evade it. Can be worn, concealed in a beltbag, instead of a pistol.
+}
+
+// ccc Special weapons assembly kit end
+
+// PB: Fists -->
+
+itmname_bladeX4	{Your Trusty Fists}
+itmdescr_bladeX4
+{
+They may not do as much damage as real weapons, but they can knock your opponent out. And as you increase in rank, so does your ability to beat the living daylights out of your foes!
+}
+
+// PB: Fists <--
+
+// Alan_Smithee tattoos -->
+
+itmname_tatt1	{Ancient Tribal Tattoo}
+itmdescr_tatt1
+{
+Before going into battle ancient tribal warriors received these markings, designed to strike fear into their enemies' hearts.
+}
+
+itmname_tatt2	{Sailor and Sweetheart Tattoo}
+itmdescr_tatt2
+{
+With its boat, burning village and bonnie lass, this tattoo is sure to remind any sailor of the sweetheart(s) he's got waiting for him in port - and inspire him to get there that much quicker.
+}
+
+itmname_tatt3	{Sweet-soaring and Free Tattoo}
+itmdescr_tatt3
+{
+This inspiring inky image is bound to influence favourable esteem among your crew, reminding them of the free and easy life at sea.
+}
+
+itmname_tatt4	{Classic Anchor Tattoo}
+itmdescr_tatt4
+{
+A classic sailor's anchor and ship design, it will bouy your men into fighting harder to keep their vessel afloat.
+}
+
+itmname_tatt5	{Ancient and Ornate Tattoo}
+itmdescr_tatt5
+{
+Members of certain ancient church orders received these markings, to invoke divine providence.
+}
+// <--- ditto
+
+// Alan_Smithee Apothecary -->
+
+itmname_leeches	{Jar of Leeches}
+itmdescr_leeches
+{
+The quintessential Colonial-era cure-all. When applied to the skin, these little buggers (named Lenny, Benny, Jenny and Eduardo, respectively) will suck out the ill humours but leave the patient feeling a bit weak.
+}
+
+itmname_meds1	{Acetum Saturninum}
+itmdescr_meds1
+{
+A volatile liquid, used as a medicinal hypnotic, derived by oxidation of alcohol. Best to find someone who knows what to do with it.
+}
+
+itmname_meds2	{Confectio Damocritis}
+itmdescr_meds2
+{
+A bottle of mysterious and ill-smelling liquid, presumably of some medical properties... though it's of no use to you as it is.
+}
+
+itmname_meds3	{Tincture of Laudenum}
+itmdescr_meds3
+{
+Many an unfortunate soul has fallen prey to this solution of spirits and opiates, reducing themselves to mindless opium-eaters. Bears the label "Keep out of reach of small children".
+}
+
+itmname_meds4	{Turpeth}
+itmdescr_meds4
+{
+A small chest of some sort of physic of an unknown nature, completely baffling and useless to you alone.
+}
+
+// <-- ditto
+
+// JRH ammo mod start
+
+itmname_powderflask {Gunpowder Flask}
+itmdescr_powderflask
+{
+With the Gunpowder Flask equipped you may keep 12 loads of gunpowder. Reloading is 5% faster.
+}
+
+itmname_gunpowder {Gunpowder}
+itmdescr_gunpowder
+{
+Ordinary ammunition. Check your gunpowder often, it may easily become wet.
+}
+
+itmname_ammopouch {Ammunition Pouch}
+itmdescr_ammopouch
+{
+With the Ammunition Pouch equipped you may keep 12 pistolbullets, 12 pistolgrapes or 6 musketbullets. Reloading is 5% faster.
+}
+
+itmname_powderbarrel {Gunpowder Barrel}
+itmdescr_powderbarrel
+{
+You may keep 24 loads of gunpowder. Gunpowder Barrel must be equipped.
+}
+
+itmname_ammobag {Ammunition Bag}
+itmdescr_ammobag
+{
+You may keep 24 pistolbullets, 24 pistolgrapes or 12 musketbullets. Ammunition Bag must be equipped.
+}
+
+itmname_ammobag1 {Ammunition Bag}
+itmdescr_ammobag1
+{
+You may keep 18 gunpowder AND 18 pistolbullets, 18 pistolgrapes or 9 musketbullets. Powderflask or Ammmunition Pouch are NOT needed but a pistol belt must be equipped! Reloading is 10% faster.
+}
+
+itmname_pistolbullets {Pistol Bullets}
+itmdescr_pistolbullets
+{
+Bullets for all types of pistols except the grapeshot pistol. 
+}
+
+itmname_pistolgrapes {Grapeshots}
+itmdescr_pistolgrapes
+{
+Grapeshots for blunderbuss, musketoon and the grapeshot pistol. 
+}
+
+itmname_musketbullets {Musket Bullets}
+itmdescr_musketbullets
+{
+Larger bullets than for pistols, only for muskets. 
+}
+
+// JRH ammo mod end
+
+// PB: Add new items -->
+
+itmname_microscope {Microscope} // Black Bart
+itmdescr_microscope
+{
+Microscopes are used to see things that are too small too see with the naked eye. It is used frequently by doctors and scientists. Although the microscope is pretty much useless for a captain, the crew will think a captain with a microscope to be smarter than a captain without a microscope.
+}
+
+itmname_compass1 {Cheap Compass} // Black Bart
+itmdescr_compass1
+{
+This is a simple compass that points North. It is a valuable aid in navigation because it shows you the wind's direction.
+}
+
+itmname_compass2 {Normal Compass} // PB
+itmdescr_compass2
+{
+This normal compass is much more useful than the cheap one. It can show you wind and your ship's velocities, the land, the firing zone of your guns, as well as floating (grey triangles) and sinking (blue triangles) ships around you.
+}
+
+itmname_compass3 {Enhanced Compass} // KK
+itmdescr_compass3
+{
+This compass model is improved version of the Normal Compass; that one additionally can show which ships you're fighting with (red triangles) or which are neutral/friendly (grey/green triangles respectively) towards you.
+}
+
+itmname_aztec_compass {Aztec Compass} // Petros
+itmdescr_aztec_compass
+{
+Strangely enough, this compass looks like it was made by Aztecs.
+The Aztecs are well-known for their gold, religion and amazing temples.
+They are, however, not considered great sailors.
+This compass makes it clear why:
+It doesn't point North, making it pretty useless for navigation.
+}
+
+itmname_scales {Set of Scales} // Black Bart
+itmdescr_scales
+{
+Scales are frequently used by traders. They help in weighing items and goods that are traded and helpful for improving your own trading accuracy and ability.
+}
+
+itmname_sextant {Sextant} // Gedscho
+itmdescr_sextant
+{
+A sextant is a measuring instrument generally used to measure the angle of elevation of a celestial object above the horizon. It is an extremely useful item for navigators to determine the position of their ship.
+}
+
+itmname_doctortoolkit {Doctor's Toolkit} // Black Bart & Gedscho
+itmdescr_doctortoolkit
+{
+By using a doctor's toolkit, you can try to save injured crewmembers from dying after a sea battle. This will decrease the battle casualities.
+}
+
+itmname_carpentertools {Carpenter's Toolkit} // JRMM
+itmdescr_carpentertools
+{
+These high-quality tools improve a carpenter's ability to effectively make repairs.
+}
+
+itmname_silkgrapple {Silk Grapple Lines} // JRMM
+itmdescr_silkgrapple
+{
+Lighter and stronger grapple lines made from woven silk. Easier to throw, harder to cut.
+}
+
+itmname_gunnerdrum {Gunner's Drum} // JRMM
+itmdescr_gunnerdrum
+{
+Training the gun crews to work by drum beat allows them to move more quickly and efficiently.
+}
+
+itmname_gunnerglass {Gunner's Glass} // JRMM
+itmdescr_gunnerglass
+{
+A low-magnification, graduated spyglass designed for artillery officers, allowing them to adjust fire quickly.
+}
+
+itmname_masterkeys {Master Keys} // JRMM
+itmdescr_masterkeys
+{
+Keys to the powder room, weapon's locker, and rum storage. Possessing these keys denotes the crewman as a trusted officer and worthy of respect.
+}
+
+itmname_luckcharm {Good Luck charm} // JRMM
+itmdescr_luckcharm
+{
+A sterling silver shamrock pendant. You can't buy this kind of luck, you can only find it.
+}
+
+itmname_bladekit {Blade Care Kit} // JRMM
+itmdescr_bladekit
+{
+Contains a whetstone, oil, and a fine rag. Take care of your blade and it will take care of you. It'll last longer that way.
+}
+
+itmname_clock1 {Simple clock} // PB
+itmdescr_clock1
+{
+Knowing the time aboard a ship has always been very important in navigation. This simple clock, measuring 10 cm in diameter, can be hung from the ceiling of your captain's cabin and it will tell you the time while sailing at sea. However, this clock is not very accurate and can't be used for determining your position using the stars.
+}
+
+itmname_clock2 {Chronometer} // PB
+itmdescr_clock2
+{
+To be able to determine your position at sea, it is required to know the time very accurately. This precision instrument pivots on two points, letting it always hang evenly, even in rough seas. By using this chronometer in combination with a sextant, it is possible to determine your position at mid sea through a series of complicated calculations.
+}
+
+// PB: Add new items <--
+
+// Short Jack Gold Books -->
+
+itmname_book1 {Black Bart's Bumper Book of Boarding}
+itmdescr_book1
+{
+Chapters on: Always tie a rope to your grappling hook - Don't Board ships with Knotted Pine decks if you have a peg leg and Always let your men go first.
+}
+
+itmname_book2 {Boelen Algebra}
+itmdescr_book2
+{
+Shows how to calculate those pesky firing elevations and how to: buy one - get one free at the merchants. 
+Includes a free pop-up abacus
+}
+
+itmname_book3 {Drow's Double Your Dubloons}
+itmdescr_book3
+{
+Includes Teeth Testing Coins - How to toss heads every time - removing zits with two coins - using a coin instead of an eyepatch (see where your money is).
+A "must have" book.
+}
+
+itmname_book4 {Hook's Book}
+itmdescr_book4
+{
+Originally titled Hook's HandBook - till his unfortunate accident
+Many useful tips on navigation - including the position of the sun
+}
+
+itmname_book5 {Morgan's Missing Mizzen}
+itmdescr_book5
+{
+Detailed description of how Morgan repaired his mizzen mast at sea using only his headscarf and his first mate's peg leg - illustrated - a must for those sea skirmishes and storms.
+}
+
+itmname_book6 {Morgan's Mast Mashing}
+itmdescr_book6
+{
+Book 2 in a series of 3 - Details the other side of Morgan - Full size pull-outs of how to dis-mast a ship: at long range, close range and in the shipyard at night when everyone's gone home.
+Not suitable for children or people with a nervous disposition.
+}
+
+itmname_book7 {Morgan's Almanac}
+itmdescr_book7
+{
+Book 3 in a series of 3 showing the practical and personal side of Morgan. Phases of the Moon, Tide Times, Current Speed and direction. Appendix contains Letters from his Mum, Letters to his Mum and Letters of the Alphabet. Bonus Pull-Out: Letters from Pirates he knew, Pirates he didn’t know and Pirates who didn’t want to know him (mostly now deceased).
+}
+
+itmname_book8 {Pirating With Petros}
+itmdescr_book8
+{
+Tales from his long time at sea with parchment pictures - Thrilling chapters including:
+Petros on Pirates - Petros on Pillaging - Petros on Plotting - Petros on Planning and Petros on Pills.
+}
+
+itmname_book9 {Cooking With Albatross}
+itmdescr_book9
+{
+Some really tasty recipes - with or without feathers 
+Add some protein to your crew's diet - could increase their boarding ability
+}
+
+itmname_book10 {Definitive Defence}
+itmdescr_book10
+{
+Chapters written by such famous people as Captain Allvase Lostalot, Vice Admiral Ivor Whiteflag
+And Admiral Defeet should help you defend your ship.
+}
+
+itmname_book11 {Fighting Forts}
+itmdescr_book11
+{
+Fast fun filled fact files for fierce Fort Fighting for fortune and fame - fearful fortress fronts - fictitious forts and famous feints and forts I've fought by Fighting Francesco
+}
+
+itmname_book12 {Great Gun Sights}
+itmdescr_book12
+{
+Full fold out colour pictures of fabulous and functional gun sights - two nails and a piece of wood - knotted string - two thumbs and a finger - and of course the famous pointed stick.
+}
+
+itmname_book13 {Handy Sea Phrases}
+itmdescr_book13
+{
+1001 famous phrases - includes: Aye there me hearties - Yo Ho Ho - ARGGG - Have at 'em lads - left hand down a bit and Ouch that smarts!
+}
+
+itmname_book14 {How to Repel Boarders}
+itmdescr_book14
+{
+Loads of hints in this book including - Don't change the bedsheets - cold food is fun - the wonder of weevils - fierce facial expressions - when mooning works - no hammock hooks - and much, much more.
+}
+
+itmname_book15 {Ship Repair Without Nails}
+itmdescr_book15
+{
+Yes - using horse hoof glue - save thousands in repair bills
+and much quieter - no hammering noises
+}
+
+// Short Jack Gold Books <--
+
+//Levis' exorcism book -->
+
+itmname_book_exorcist {Cessa Decipere}
+itmdescr_book_exorcist
+{
+A weird book in a weird language found on a dead adventurer.
+}
+
+//Levis' exorcism book <--
+
+
+itmname_indian_treasure_note {Indian Treasure Note}
+itmdescr_indian_treasure_note
+{
+This might contain some important information.
+}
+
+itmname_hotel_flyer {Hotel Flyer}
+itmdescr_hotel_flyer
+{
+This seems to be some kind of promotion for a newly opened hotel here in #sCartagena#. It indicates the location is in the town center between the store and the blacksmith.
+}
+
+itmname_package_steven {Package for Steven}
+itmdescr_package_steven
+{
+It's a package from the natives which I should deliver to Steven.
+}
+
+//Levis & PB: Tutorial Books -->
+
+itmname_smugglingbook {Smugglers' Handbook}
+itmdescr_smugglingbook
+{
+This book seems to contain tips and tricks for smuggling. I wonder how such a book can be made without the author being caught.
+}
+
+itmname_opiumlist {List of Opium Buyers}
+itmdescr_opiumlist
+{
+The list of opium buyers provided by the smugglers.
+}
+
+itmname_smugglingbook2 {Smugglers' Handbook Vol 2}
+itmdescr_smugglingbook2
+{
+Wait! There is another one of these smuggler books? Whoever is printing these?
+}
+
+itmname_relationbook {The Art of War}
+itmdescr_relationbook
+{
+While the goings on of the great nations may seem unimportant to a simple sea captain, your actions can have a great impact on how you are treated by ships at sea and the towns' forts. This book contains various important notes to help you navigate safely through the treacherous waters of international politics.
+}
+
+itmname_piratebook {Under the Jolly Roger}
+itmdescr_piratebook
+{
+For the novice pirate, something to read while swigging your rum. The book contains hints to help you survive and make the most of your plundering career.
+}
+
+//Levis & PB: Tutorial Books <--
+
+itmname_smuggling_papers {Governor Orders}
+itmdescr_smuggling_papers
+{
+This document tells you to investigate the smugglers.
+}
+
+itmname_smuggling_first_report {Smuggling Report}
+itmdescr_smuggling_first_report
+{
+This document tells about my smuggling experiences.
+}
+
+itmname_smuggling_second_report {Opium Smuggling Report}
+itmdescr_smuggling_second_report
+{
+This document tells about my opium smuggling experiences.
+}
+
+itmname_skillbook1 {Advanced Blocking Techniques}
+itmdescr_skillbook1
+{
+This book describes how you can use your sword to deflect some of the blows so you don't get hurt that much during a fight.
+(Unlocks Advance Defence)
+}
+
+itmname_skillbook2 {Don't Look in the Barrel}
+itmdescr_skillbook2
+{
+This book teaches you gun ettiquette. 
+(Unlocks Professional Gunman)
+}
+
+itmname_skillbook3 {Book of Bouncing Balls}
+itmdescr_skillbook3
+{
+Did you know there is a way to make cannons balls bounce of your hull? This and more tricks you'll find in this book. 
+(Unlocks Advanced Ship defence)
+}
+
+itmname_skillbook4 {Don't Shoot the Messenger}
+itmdescr_skillbook4
+{
+This book learns you how to use cannons better.
+(Unlocks Professional Cannoneer)
+}
+
+//Levis' Skill Books <--
+
+//Levis' Patrol Schedule Book -->
+
+itmname_patrolbook {Patrol Schedule #sisland# version #dversion#}
+itmdescr_patrolbook
+{
+Patrolling schedule for #sisland#.
+}
+
+//Levis' Patrol Schedule Book <--
+//Levis' ayahuasca -->
+
+itmname_ayahuasca {Ayahuasca}
+itmdescr_ayahuasca
+{
+This plant is said to have the power to unlock the mind.
+}
+
+itmname_vegetal {Hoasca}
+itmdescr_vegetal
+{
+A strange looking potion. It is said to enhance a user's fighting ability for a short while.
+}
+
+//Levis' ayahuasca <--
+//JRH apothecary sidequest -->
+
+itmname_hotel_crucifix {Crucifix}
+itmdescr_hotel_crucifix
+{
+A Priest's item.
+}
+
+itmname_hotel_bible {Bible}
+itmdescr_hotel_bible
+{
+A Priest's item.
+}
+
+itmname_hotel_sextant {Sextant}
+itmdescr_hotel_sextant
+{
+A Navigator's item.
+}
+
+itmname_hotel_drawing {Drawing Kit}
+itmdescr_hotel_drawing
+{
+A Navigator's item.
+}
+
+itmname_hotel_megaphone {Megaphone}
+itmdescr_hotel_megaphone
+{
+A Captain's item.
+}
+
+itmname_hotel_spyglass {Spyglass}
+itmdescr_hotel_spyglass
+{
+A Captain's item.
+}
+
+itmname_hotel_whistle {Boatswain's Pipe}
+itmdescr_hotel_whistle
+{
+A Boatswain's item.
+}
+
+itmname_hotel_grappling {Grappling Hook}
+itmdescr_hotel_grappling
+{
+A Boatswain's item.
+}
+
+itmname_hotel_surgery {Surgery Kit}
+itmdescr_hotel_surgery
+{
+A Doctor's item.
+}
+
+itmname_hotel_bandages {Bandages}
+itmdescr_hotel_bandages
+{
+A Doctor's item.
+}
+
+itmname_hotel_keys {Hotel Keys}
+itmdescr_hotel_keys
+{
+A bunch of Keys. To Chests, doors or both?
+}
+
+itmname_chair_45 {Chair}
+itmdescr_chair_45
+{
+
+}
+
+//JRH apothecary sidequest <--
+//Levis' opium -->
+
+itmname_opium {Opium}
+itmdescr_opium
+{
+A strange substance.
+This is considered contraband, so I'll have a hard time evading the town guards while carrying this.
+}
+
+//Levis' Opium <--
+
+itmname_map {Archipelago map}
+itmdescr_map {
+Map of the Carribbean.
+}
+
+itmname_mapIsland {#slocation# map}
+itmdescr_mapIsland {
+Map of #slocation#.
+}
+
+itmname_mapDungeon {#slocation# dungeon map}
+itmdescr_mapDungeon {
+Map of #slocation# dungeon.
+}
+
+itmname_mapCave {#slocation# cave map}
+itmdescr_mapCave {
+Map of #slocation# cave.
+}
+
+itmname_mapKRTempleGround {#slocation# temple map}
+itmdescr_mapKRTempleGround {
+Map of the ground level of #slocation# temple.
+}
+
+itmname_mapKRTempleUpper {#slocation# temple map}
+itmdescr_mapKRTempleUpper {
+Map of the upper level of #slocation# temple.
+}

@@ -270,10 +270,15 @@ int GetGoodTradeType(ref sisland, int Good)
 
 bool GetStoreGoodsUsed(ref _refStore,int _Goods)
 {
+	ref ctown = GetTownFromID(GetTownIDFromGroup(_refStore.group));//PW for using island not store attributes
+	int tradeType = GetGoodTradeType(Islands[FindIsland(ctown.island)], _Goods);//PW for using island not store attributes
+
 	string tmpstr = Goods[_Goods].name;
 	if( !CheckAttribute(_refStore,"Goods."+tmpstr) ) return false;
 	if( sti(_refStore.Goods.(tmpstr).NotUsed)==true ) return false;
-	if (sti(_refStore.Goods.(tmpstr).TradeType) == TRADE_TYPE_CONTRABAND) {
+	//if (sti(_refStore.Goods.(tmpstr).TradeType) == TRADE_TYPE_CONTRABAND) {
+	if (tradeType == TRADE_TYPE_CONTRABAND)	// PW change to function to use island based tradeType
+	{
 		if (!CheckOfficersPerk(GetMainCharacter(),"Trustworthy") && !LAi_IsCapturedLocation && GetTownNation(GetTownIDFromGroup(_refStore.group)) != PERSONAL_NATION) return false; // KK
 	}
 

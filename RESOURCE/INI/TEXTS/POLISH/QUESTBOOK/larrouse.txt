@@ -1,0 +1,17 @@
+title=Side Quest - The French pirate in the tavern.
+text.t1=In #sIsla Muelle# tavern on #sisland_Isla Muelle# I met a corsair who refused to talk to me. Maybe I can talk to her later?
+text.t2=She offered me a prospect I could scarcely refuse - a mound of gold. But Claire didn't give me all the details.
+text.t3=We are at the mine, but the gold has already gone. What a disappointment. We will try to intercept it between #sGreenford# and #sOxbay#.
+text.t4=We are at the mine, but the gold has already gone. What a disappointment. I have no further interest in this half baked scheme of Claire's.
+text.t5=The traitorous dog! That French scoundrel attacked me when she realized that I'm not going to chase the convoy with her any more.
+text.t6=When I killed Larousse, all my problems were solved - I've got her ship. On the other hand I had to fight her old crew. But that's their misfortune, not mine.
+text.t7=Perhaps it's not such a bad idea to chase this convoy. We've got a chance to pull it off.
+text.t8=We did it! We found the convoy. All that remains is to seize the gold....
+text.t9=So much misfortune! While we were making ready for battle, the convoy came too close to the town's gates. Once they were in earshot of the town garrison, we had no chance of accomplishing our scheme. What a pity!
+text.t10=We've got the gold! All we need now is to deliver the gold to our ships. The simplest plan is to sail the ships to the nearest bay, while the rest of us get ready to load the gold.
+text.t11=When we reached the bay we encountered stiff opposition - English soldiers. It was a hard fight, we lost almost all our men, but we won the battle, and were free to sail away with our ship loaded with gold.
+text.t12=Larousse and I couldn't agree how to divide this gold, so we fought and I had to kill her.
+text.t13=So, our little adventure is over. We shared our booty, and Claire offered to sail with me from that moment forward. But I have no great liking for her, and so I declined her offer. If I change my mind, I will find her in the #sIsla Muelle# tavern on #sisland_Isla Muelle#.
+text.t14=So, our little adventure is over. We shared our booty, and when Claire offered to sail with me from that moment forward, I accepted her offer.
+text.t15=This venture taught me a valuable lesson - ask more questions before agreeing to join someone. Despite Claire's death, her ship's crew had plenty of stomach for a fight and I had to evade them to make good my escape. But at least I got the gold as compensation for the risks involved.
+text.t16=When I killed Larousse, all I ended up with was a valuable lesson - ask more questions before agreeing to join someone on a venture. Her crew continued to fight and I had to evade her ship to make good my escape empty handed.

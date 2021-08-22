@@ -142,7 +142,7 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 	SetEventHandler("ExitYes","ProcessExit_yes",0);
 }
 
-string FindCardsForNation(ref refCharacter)// by this way anyone can make his own cards, and can put new (properly named) *.tx file into RESOURCE\TEXTURES\INTERFACES (pictures.ini contains already all needed sections)
+string FindCardsForNation(ref refCharacter)// by this way anyone can make his own cards, and can put new (properly named) *.tx file into RESOURCE\TEXTURES\INTERFACES (pictures.ini contains all needed sections already)
 {
 	string cardsNation = "british_cards";
     object LocDirectory;
@@ -178,7 +178,7 @@ void SetGame(string gameName)// resets all to virginity :)
 		Cards[n].ingame = false;
 	}
 	GameInterface.strings.CurrentBet = XI_ConvertString("GameBet") + "  " + gameBet;
-	if(CheckAttribute(playerChar,"quest.Contraband.Cards")) GameInterface.strings.CurrentBet = GameInterface.strings.CurrentBet + " + Smuggling Plans"; //Levis added for smuggling game
+	if(CheckAttribute(playerChar,"quest.Contraband.Cards")) GameInterface.strings.CurrentBet = GameInterface.strings.CurrentBet + " " + XI_ConvertString("GameSmug"); //Levis added for smuggling game //changed by MAXIMUS: we need translated strings, isn't it?
 	bNewGame = true;
 	SetFormatedText("INFO_TEXT", infoText);
 	GameName = strcut(GameInterface.title,5,strlen(GameInterface.title)-1);

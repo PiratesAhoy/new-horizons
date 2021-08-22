@@ -1,4 +1,4 @@
-string DLG_TEXT[384] = {
+string DLG_TEXT[639] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -363,16 +363,16 @@ string DLG_TEXT[384] = {
 "The gunpowder has dried into a huge lump -",
 "- if there's something hidden inside I have to brake it up.",
 "I'll need a workbench -",
-"- but also tools to process this pile.",
+"- but also tools and maybe some liquid to process this pile.",
 "Now it's just to wait for Mr Richards to return from town -",
 "- with the items we demanded from the citizens of Charleston!",
-"But first, I want that pistol of yours...",
+"Now I want that pistol of yours...",
 "Sure why not.",
 "Yes that's it -",
 "- now back to the Abbess.",
 "This is a real maze! How should we find Eden's Office -",
 "- can you tell me that Mister Hands?",			//372
-"Very well. But we will also need the map-piece of yours to succeed -",
+"Very well. But we will also need your map to succeed -",
 "- what happened to it, Caesar? And speak the truth now.",
 "Are you Israel Hands?",
 "Who's asking?",
@@ -381,7 +381,262 @@ string DLG_TEXT[384] = {
 "Hmm, the Captain who was marooned by his own crew.",
 "Aaaargh, you shot me in the knee!!!!",
 "What's the meaning of this??",
-"What did Blackbeard mean 'save your life' -",
+"What did Blackbeard mean by 'save your life' -",
 "- he almost killed you?",
+"Let's say we could kill them. How do we get out?",		//384
+"There must be an exit from this part of the prison.",
+"How can you so sure about that?",				//386	
+"Took didn't take Bonnet's group the very long way up through all the prison levels you arrived.",
+"No? Any ideas how?",						//388
+"I can hear running water - where does it leave this goddamned place?",
+"Okay, I'll take a closer look!",				//390
+"Be quick about it and then get the keys before Took wakes up again.",
+"I could use some tools here.",				//392
+"I've already checked that. There are some bars blocking the way.",	//393
+"Okay - tools required then. Now get the keys before Took wakes up again.",
+"No! I have to find weapons for these guys first.",	//395
+"Now be very quite and I'll provide you with some weapons.",
+"Yes! We'll kill them all.",
+"Two guards are needed: one at Took's door and the other one at the exit. Double quick but silent.",
+"Aye aye Captain.",					//399
+"This is how we'll do it: Follow me to the next room. Be very quite and find yourself hiding places for the ambush!",
+"And then?",
+"The soldiers are in the lowest room. I'll try to get them to follow me up the stairs.",
+"And then we hit 'em!!",
+"The prisoners are killing each other! Two of them look dead!",
+"Come on guys - this could be interesting.",
+"Hide those corpses before Took wakes up. I'll go search for some Tools.",	//406
+"Where should we put them?",
+"Drag them off to one of the cells. Very fast now and not a sound!",
+"Take Tookerman to a cell - I'll lock him up.",					
+"All is lost, the treasure is lost! Where am I, and where are all the others?",							//410
+"Maybe I can get some help from that camp. That tower and its flag...",
+"Hmm it's not a british flag...",
+"...more like a pirate flag -",
+"- MY PIRATE FLAG!!",
+"I can't believe it, I've completely run out of luck. It can be the Mutineers!",
+"So this is it. I'm dead.   Ehh...",				//416
+"... wait a minute. How can I be dead if I can think???",
+"I can also hear the sea now -",				//418
+"- but why is it so dark?",
+"The ladder is stuck somehow -",			//420
+"- I can't move it without a tool.",
+"If I only could reach that chest -",			//422
+"- but it's just a little too high.",
+"No, this ladder isn't long enough -",						//424
+"- I have to come up with something completely different!",
+"Yes! He took the flag without any questions -",				//426
+"- still after all these years at sea, those heights makes me sick.",
+"Hope they'll send someone ashore -",
+"- another hand is needed to lift the Boat.",
+"Ok, I guess the Compasses are F3 + F3 -",		//430
+"- and the Map F3 + fire pistol.",
+"They killed my officers -",				//432
+"- and almost me too.",
+"I don't have anything left -",
+"- except the two hidden items!",
+"I'm filthy rich but a walking dead -",			//436
+"- what am I going to do?",
+"YAH!! My body's back again -",				//438
+"- how can I thank you, wherever you are...",
+"Well... I found it. AND IT'S AN ENORMOUS TREASURE -",  //440
+"- WE ARE ALL RICH AS TROLLS!!!",
+"Alright. Now...",	//442
+"...who can swim?",
+"Very well. (Have to get rid of that girl one day) ",		//444
+"Sailors, take the soldiers uniforms and muskets and gather at the boats.",
+"Swimmers, run to the shore -",		//446
+"- and wait for me there.",
+"Now Gentlemen -",			//448
+"- please change outfits too.",
+"I want you three to take command of the boats.",
+"Aye aye, Captain.",
+"I'll go first to check the next deck -",		//452
+"- wait for my signal.",
+"It's empty! So far so good -",		//454
+"- and I've already found the way down to the slaves!",
+"Crimson, you keep watch at the stairs to the weather deck. Caesar, try to remove those planks from the hatch.",		//456
+"It's very empty here - the crew's probably sleeping behind those two doors over there. So King David, follow me to that deck.",
+"Stay here King and guard those stairs while I examine the Hold.",		//458
+"Aye aye, Captain.",
+"I should hurry up and block that door -",		//460
+"- before someone enters.",
+"Schh, I have found the weapons lockers and the Key to the prisoners, I think.",	//462
+"King, pick up weapons for the officers and six prisoners and follow me.",
+"SHUT UP YOU FOOLS!! Are you going to kill us all!?",		//464
+"If you just sit down and keep calm we've got weapons for you...",
+"Hey you, wake up guys - you're free soon.",		//466
+"It's too late for them, Captain.",
+"Keep up the good work, Crimson! I'll look for the Gunpowder Storage.",		//468
+"Sure, Captain.",
+"Alright listen up all. We have to do this very quick and in complete silence. Understood!?",	//470
+"What will happen to us when we've helped you take the ship? Back in chains?",
+"No! You'll have a choice: join us or leave the ship at a safe place.",		//472
+"How can we trust you? You're pirates after all.",
+"We are waiting for our main force to arrive from the shore -",			//474
+"- but remember they'll be dressed in red coats, like english soldiers.",
+"There are also six convicts,  who will stay down here - ",			//476
+"- guarding the new prisoners - the slavers!",
+"??? Let's go on now. Next I need two resolute fellows to guard the exits on the deck above this. -",	//478
+"- The crew is sleeping there and we don't want any surprises!",
+"Yes keep quiet! I want you Monk, to be in charge of the reserve force -",	//480
+"- be ready at the stairs in the next hold, if anything goes wrong upstairs.",
+"Listen guys -",								//482
+"- this is what I want you to do...",
+"Okay, what I tried to say earlier -",						//484
+"- when I was interrupted is this:",
+"For the last time -",								//486
+"- I want you six to...",
+"Is it finally quiet now so I can continue?",					//488
+"Go on Captain.",
+"Okay, this is how we'll do it -",						//490
+"- first you'll get ammo and then...",
+"You again! Talk to the convicts while we start sending the slavers down.",	//492
+"Very well, Captain.",
+"Oh no! It has gone wrong before it even started -",				//494
+"- all hands on deck!!",
+"We'll wait here until dark...",						//496
+"Aye aye, Captain.",
+"Gentlemen, the Corvette is ours -",						//498
+"- finally a three-master!!!",
+"Drop your weapons and sit down -",						//500
+"- if you want to live!",
+"Two crewmembers will be promoted to officers.",				//502
+"Who are they, Captain?",
+"Crimson Pirate will be First Mate",						//504
+"and King David Gunner.",
+"It's time to set a course, Mr Hands.",						//506
+"Where to, Captain?",
+"Home Mr Hands - Home!",							//508
+"That's Jamaica, aye aye. I suggest British colors, Captain.",
+"Alright gentlemen -",								//510
+"- you've got ten minutes to prepare our departure!",
+"Get rid of the bodies and raise the Swedish flag.",				//512
+"Alright! Quartermaster, let him sign the articles.",				//513
+"Aye aye Captain, what's your name doctor?",
+"Oh yeah, one more thing. No british outfits and muskets to the weaponslocker.",//515
+"And where did he find such a valuable item - in the sand maybe?",		//516
+"No Captain, in the warehouse... it was empty and I thought...",	
+"Quickly now, stuff away that thing - or we'll be at war with the spanish.",	//518
+"Hey Gunnar - come over here.",							//519
+"Yah yah, I'm coming.",
+"Gentlemen, to be honest with you -",						//521
+"- I took the ship and liberated the poor bastards.",
+"Very well, we have agreed to accept a swedish Letter of Marque -",		//523
+"- let's hope this partnership will be very profitable.",
+"There's one freedman in a swedish uniform, see to that he's joining the shore party. ",	//525
+"I can't believe it -",								//526
+"- they didn't think of me as the 'Kristiania thief'.",
+"Now let's get out of here -",
+"- before that Governor talks to his wife!",
+"No problem -",					//530
+"- now I can finally search your office more thoroughly.",
+"How did you know I was in this town?",		//532
+"I didn't but Claire told me.",
+"Okay, is she here too?",			//534
+"No. She...ehh...never mind.",
+"That was worst idea for a novel I ever heard -",				//536
+"- 'Lilliputians' and gigants!!!",
+"That explains it. You are 'Captain' Charles Johnson, the author of the book I saw!",		//538
+"Yes that's true.",
+"I've got the First Aid Plaster Tape so maybe it's possible...",		//540
+"...to repair Richard's map!",
+"I have to search for glue or something else...",				//542
+"Now let's search the archipelago map for this island...",		//543
+"I think it's",		//544
+"Antigua.",		//545
+"Aruba.",		//546
+"Barbados.",		//547
+"Bonaire.",		//548
+"Cayman.",		//549
+"Cozumel.",		//550
+"Cuba.",		//551
+"Curacao.",		//552
+"Eleuthera.",		//553
+"Guadeloupe.",		//554
+"Hispaniola.",		//555
+"Isla Mona.",		//556
+"Jamaica.",		//557
+"La Grenade.",		//558
+"La Tortue.",		//559
+"Martinique.",		//560
+"Nevis.",		//561
+"New Granada.",		//562
+"Petit Tabac.",		//563
+"Puerto Rico.",		//564
+"Saint Martin.",	//565
+"Turks.",		//566
+"Hmm, I'm still not sure if it's right. Better check again.",	//567
+"Yes, it's Turks!",	//568
+"I have to clean up the map, but very carefully. If I damage the map I'm finished as a Pirate Captain. What should I use?",	//569
+"Cognac.",			//570
+"Water.",			//571
+"Antidote.",			//572
+"Which temperature should the liquid have?",	//573
+"Cold.",			//574
+"Tepid.",			//575
+"Warm.",			//576
+"How much should I use?",	//577
+"Just a few drops.",		//578
+"Enough.",			//579
+"Plenty.",			//580
+"How should I apply the liquid?",		//581
+"Just pour it over the map.",			//582
+"With a piece of cloth ripped from my skirt.",	//583
+"With more gunpowder.",			//584
+"With sand.",			//585
+"No liquid.",		//586
+"With a bandage.",		//587
+"I think it worked! Now let's see what we've got.",	//588
+"I've ruined the map! The crew is not going to like this!",		//589
+"Without any liquid how should I clean up the map?",	//590
+"I'll try to blow away the gunpowder dust.",		//591
+"No, I have to try something else. What?",		//592
+"I still havn't found what I'm looking for...",		//593
+"I've got it. Let's take a closer look!",		//594
+"Yes, it's Curacao! ",	//595
+"But tell me Mister De Foe, you knew this already?",		//596
+"Of course I did. But I thought you enjoyed these puzzles.",	//597
+"Okay, if the letters should make words - the only thing I come to think of is 'Saint something'. Many islands have names like that.",	//598
+"Indeed but the rest of the letters don't work. Try again - read it top to bottom, left to right.",			//599
+"K...RI...ST...I...ehh...AN...IA. Kristiania. Now that could be an island name, but none I've ever heard of.",	//600
+"But I have. It's not an island but a town.",		
+"Do you know where in the Caribbean, mister De Foe?",		//602
+"Unfortunately it's not in the Caribbean at all but in Europe.",
+"Europe?! And where there if I may ask? Could it be a clue?",	//604
+"It's a name of a town in Norway. And also a part of the danish capital Copenhagen.",
+"Norway, Denmark what's next - Sweden? This is becoming worse and worse.",	//606
+"Not entirely. Sweden you say, I have also heard about a swedish not so prospering town called Kristiania.",
+"And where would that be? In Africa perhaps, this time?",		//608
+"Africa's good. They had a colony there for a while. But no, this should be in the Caribbean. But I have nu idea of where.",
+"It's not much - but after all it's something to follow up.",		//610
+"Yes! Let's continue now, please give me the map again and I'll mark the red ports as well.",
+"Hmm, let's think. Two points can generate a line. Six points - three lines. Maybe those three lines will cross each other in the same spot?",	//612
+"But why three lines? Two lines (four points) would have been enough. I like the idea of lines though. So - the map please.",	//613
+"Lines yes - but I can't make anything valuable out of them.",		//614
+"Grr, let me try again",						//615
+"Sorry Mister De Foe, it's hopeless.",					//616
+"Never! The map!",							//617
+"YES. That's it. Now I see why 6 points were needed. Three lines - one triangle.",
+"Indeed. That was the trick. It's Isla Mona!",	//619
+"It looks like Daniel De Foe up there. Wait for me here men.",	//620
+"To the farm then.",			//621
+"But Captain, we have no ship.",
+"We'll get the Marquis sailed to the farm when they have repaired the sloop.",
+"Alright, the long way then - through the shipyard.",
+"Hmm, this doesn't feel right - not right at all. I have to try something else.",	//625
+"What should I use this time?",			//626
+"To the weatherdeck now -",			//627
+"- before it's too late!",			//628
+"It's time to set a course -",			//629
+"- to Jamaica and HOME!",			//630
+"That was a lot of information. In fact so much, I've not decided where to sail first.",	//631
+"I have to search the wreck and the shore better.",		//632
+"There's still some gunpowder there and it has dried into a huge lump, that's it -",		//633
+"- I'll return when I know more about this.",			//634
+"I lost a treasure but found another one. Besides that I took a Corvette. And yes, there's one thing I saved from the treasure.",	//635
+"The damaged book Minerva told us about?",			//636
+"No, it's a painting I thought could be valuable.",		//637
+"A painting. Sigh. Take a look Dave, if it's anything...",	//638
 
 };

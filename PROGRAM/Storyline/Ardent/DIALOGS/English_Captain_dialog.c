@@ -61,21 +61,20 @@ void ProcessDialogEvent()
 			if (PChar.sex == "man")
 			{
 				Preprocessor_Add("pronoun", XI_ConvertString("she"));
-				Preprocessor_Add("relative", XI_ConvertString("daughter"));
+				link.l1 = DLG_TEXT[11];
 			}
 			else
 			{
 				Preprocessor_Add("pronoun", XI_ConvertString("he"));
-				Preprocessor_Add("relative", XI_ConvertString("son"));
+				link.l1 = DLG_TEXT[12];
 			}
 			dialog.text = DLG_TEXT[10];
-			link.l1 = DLG_TEXT[11];
 			link.l1.go = "whats_your_game";
 		break;
 
 		case "whats_your_game":
-			dialog.text = DLG_TEXT[12];
-			link.l1 = DLG_TEXT[13] + GetMyFullName(characterFromID(PChar.quest.romance)) + ".";
+			dialog.text = DLG_TEXT[13];
+			link.l1 = DLG_TEXT[14] + GetMyFullName(CharacterFromID(PChar.quest.romance)) + ".";
 			link.l1.go = "exit";
 		break;
 	}

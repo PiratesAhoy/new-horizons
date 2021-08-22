@@ -13,3 +13,5 @@ text.t11=I had to kill that stubborn Dutchman. Unfortunately, now there's no way
 text.t12=The tavern-keeper told me that the girl who said that #sFatherJerald# allegedly harassed her actually worked for #sJerald#'s assistant. So, these letters are forgeries. Back now to #sRedmond# on #sisland_Redmond# with the proof.
 text.t13=I returned to #sRedmond# on #sisland_Redmond# and managed to persuade #sFatherBernard# that #sFatherJerald# is innocent. He thanked me and asked to visit him later for my next task.
 text.t14=I returned to #sRedmond# on #sisland_Redmond# and told #sFatherBernard# that #sFatherJerald# is guilty. He thanked me and asked to visit him later for my next task.
+text.t15=#sFatherJerald#'s assistant gave evidence of the priest's guilt. I suspect he just wants to take over #sJerald#'s position. I need to refer him to Father Bernard. Maybe he can make him the head of the Temple. This position is still open.
+text.t16=The waitress confirmed that she really got several love-letters from #sFatherJerald#.

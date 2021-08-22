@@ -28,7 +28,8 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
-			
+
+			Preprocessor_Add("ladlass", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false));			
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "exit";
@@ -95,8 +96,10 @@ void ProcessDialogEvent()
 		break;
 
 		case "begin_4":
+			string cut_yer_throat = DLG_TEXT[48];
+			if (PChar.sex == "woman") cut_yer_throat = DLG_TEXT[52];
 			dialog.snd = "Voice\HAAU\HAAU006";
-			dialog.text = DLG_TEXT[13] + (makeint(Npchar.rank)*5000) + DLG_TEXT[48];
+			dialog.text = DLG_TEXT[13] + (sti(Npchar.rank)*5000) + cut_yer_throat;
 			link.l1 = DLG_TEXT[14];
 			link.l1.go = "begin_6";
 			link.l2 = DLG_TEXT[15];
@@ -233,7 +236,8 @@ void ProcessDialogEvent()
 
 		case "confirm":
 			dialog.snd = "Voice\HAAU\HAAU005";
-			dialog.text = DLG_TEXT[39] + (makeint(Npchar.rank)*5000) + DLG_TEXT[51];
+			Preprocessor_Add("ladlass", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false));
+			dialog.text = DLG_TEXT[39] + (sti(Npchar.rank)*5000) + DLG_TEXT[51];
 			link.l1 = DLG_TEXT[40];
 			link.l1.go = "partnership";
 			link.l2 = DLG_TEXT[41];
@@ -277,6 +281,9 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.TempNode = "first time";
 			LAi_group_MoveCharacter(NPchar, LAI_GROUP_MONSTERS);
+			PChar.quest.Reset_Mary_Wood.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.Reset_Mary_Wood.win_condition.l1.location = pchar.location;
+			PChar.quest.Reset_Mary_Wood.win_condition = "Reset_Mary_Wood";
 		break;
 
 		case "Exit_5":

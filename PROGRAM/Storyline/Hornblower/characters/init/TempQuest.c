@@ -3,13 +3,12 @@ void CreateTempQuestCharacters(ref n)
 
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	ch.old.name = "Captain";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Captain");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Captain");
+	ch.lastname = "";
 	ch.id		= "Quest_frigate_captain";
 	ch.nation	= FRANCE;
 	ch.model	= "fra_cpt_18";
@@ -47,8 +46,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Simon";
 	ch.old.lastname = "Blunden";
-	ch.name = TranslateString("","Simon");
-	ch.lastname = TranslateString("","Blunden");
+	ch.name = TranslateString("", "Simon");
+	ch.lastname = TranslateString("", "Blunden");
 	ch.id		= "Eng Captain Near FdF";
 	ch.model = "corsair1_2";
 	ch.sex = "man";
@@ -128,8 +127,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Cecil Scott";
 	ch.old.lastname = "Forester";
-	ch.name = TranslateString("","Cecil Scott");
-	ch.lastname = TranslateString("","Forester");
+	ch.name = TranslateString("", "Cecil Scott");
+	ch.lastname = TranslateString("", "Forester");
 	ch.id		= "C.S. Forester";
 	ch.model	= "Huber_Hol1_17";
 	ch.sex = "man";
@@ -158,8 +157,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Capitaine";
 	ch.old.lastname = "de Corvette";
-	ch.name = TranslateString("","Captaine");
-	ch.lastname = TranslateString("","de Corvette");
+	ch.name = TranslateString("", "Capitaine");
+	ch.lastname = TranslateString("", "de Corvette");
 	ch.id		= "French_patrol_captain";
 	ch.nation	= FRANCE;
 	ch.model	= "fra_lut_18";

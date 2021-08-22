@@ -1,0 +1,6 @@
+title=La misión de Claude Frollo
+text.t1=Si llevo el libro de himnos del sacerdote de la iglesia al burdel, me llevaré una recompensa. 
+text.t2=El burdel está en frente de la oficina de Mr. Dupin.
+text.t3=He encontrado el libro de himnos.
+text.t4=Bien, he entregado el libro de himnos y la carta al padre Frollo. ¡Veamos qué es esa recompensa!
+text.t5=Ajá, es una carta de amor. Eso explica el interés del padre Frollo en este asunto.

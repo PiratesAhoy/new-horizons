@@ -56,6 +56,10 @@ void StartStoryLine()
 	// PB -->
 	DeleteAttribute(PChar, "quest.Hitman");
 	DeleteAttribute(PChar, "quest.Hit_start");
+
+	Locations[FindLocation("Muelle_town_01")].reload.l19.label = "House";
+	Locations[FindLocation("Muelle_town_01")].reload.l19.go = "";
+	Locations[FindLocation("Muelle_town_01")].reload.l19.disable = 1;
 	// PB <--
 
 //===============================| QUESTS SECTION END |===============================//

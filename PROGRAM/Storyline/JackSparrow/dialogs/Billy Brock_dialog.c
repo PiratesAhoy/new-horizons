@@ -256,8 +256,8 @@ void ProcessDialogEvent()
 
 		case "Testing Storm2":
 			// Set up actual beginning
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
 			SetRelationsAsNation(ENGLAND); // PB: Set nations as per selected flag
 			SetRMRelation(PChar, ENGLAND, REL_AFTERATTACK); // PB: England no longer trusts you
 			SetServedNation(PERSONAL_NATION); // PB: And you are no longer loyal to them
@@ -308,13 +308,13 @@ void ProcessDialogEvent()
 
 		case "Ragetti_Pintel2":
 			// Set up actual beginning
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
 			AddDialogExitQuest("piratefun"); // PB: You have joined the pirates
 			GiveModel2Player("47YoungJack",false);
 			GiveModel2Player("depp",false);
 			GiveModel2Player("Jack",true);
-			GiveShip2Character(pchar,"BlackPearl","Black Pearl",-1,PIRATE,true,true);
+			GiveShip2Character(pchar,"BlackPearl",TranslateString("Black Pearl",""),-1,PIRATE,true,true);
 			PChar.quest.wench_given_by = "Beckett";
 			pchar.Jack = "Pirate";
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
@@ -359,13 +359,13 @@ void ProcessDialogEvent()
 
 		case "Barbossa_Mutiny_Option2":
 			// Set up actual beginning
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
 			AddDialogExitQuest("piratefun"); // PB: You have joined the pirates
 			GiveModel2Player("47YoungJack",false);
 			GiveModel2Player("depp",false);
 			GiveModel2Player("Jack",true);
-			GiveShip2Character(pchar,"BlackPearl","Black Pearl",-1,PIRATE,true,true);
+			GiveShip2Character(pchar,"BlackPearl",TranslateString("Black Pearl",""),-1,PIRATE,true,true);
 			PChar.quest.wench_given_by = "Beckett";
 			pchar.Jack = "Pirate";
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
@@ -409,8 +409,8 @@ void ProcessDialogEvent()
 
 		case "Wicked Wench":
 			// Set up actual beginning
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
 			SetRelationsAsNation(ENGLAND); // PB: Set nations as per selected flag
 			GiveModel2Player("47YoungJack",true);
 			GiveModel2Player("depp",false);
@@ -443,13 +443,13 @@ void ProcessDialogEvent()
 
 		case "DMC":
 			// Set up actual beginning
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
 			AddDialogExitQuest("piratefun"); // PB: You have joined the pirates
 			GiveModel2Player("47YoungJack",false);
 			GiveModel2Player("depp",false);
 			GiveModel2Player("Jack",true);
-			GiveShip2Character(pchar,"BlackPearl","Black Pearl",-1,PIRATE,true,true);
+			GiveShip2Character(pchar,"BlackPearl",TranslateString("Black Pearl",""),-1,PIRATE,true,true);
 			PChar.quest.wench_given_by = "Beckett";
 			pchar.jack = "Met_Tia";
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
@@ -513,8 +513,8 @@ void ProcessDialogEvent()
 
 		case "Jacks_Grand_Entrance2":
 			// Set up actual beginning
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
 			AddDialogExitQuest("piratefun"); // PB: You have joined the pirates
 			GiveModel2Player("47YoungJack",false);
 			GiveModel2Player("depp",false);

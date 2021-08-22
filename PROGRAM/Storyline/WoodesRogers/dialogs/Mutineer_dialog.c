@@ -146,6 +146,6 @@ void ProcessDialogEvent()
 		break;
 	}
 
-	AddDialogExitQuest("mutineer_dialog_over");
+	if(Pchar.location == "mutiny_deckWR") { AddDialogExitQuest("mutineer_dialog_over"); }
 	DialogExit();
 }

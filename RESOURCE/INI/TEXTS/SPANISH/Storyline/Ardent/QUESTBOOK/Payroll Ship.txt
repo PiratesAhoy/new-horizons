@@ -1,0 +1,11 @@
+title=EL barco del dinero
+text.t1=El comandante de la prisión de #sHavana# ha recibido una carta solicitando que proporcione un destacamento de seguridad para un barco que lleva dinero desde #sHavana# a #sSantiago# para pagar a las tropas. Tendré que averiguar más sobre ese barco si quiero hacerme con el dinero...
+text.t2=Me dirigiré a la taberna. Si el capitán del barco del dinero está allí, tal vez pueda sacarle algo de información si me hago pasar por uno de los soldados del comandante.
+text.t3=Me dirigiré a la taberna. Si el capitán del barco del dinero está allí, tal vez se rinda a mis encantos femeninos.
+text.t4=El barco es el 'Siroco'. Zarpará rumbo a #sSantiago# en dos semanas. Ese es todo el tiempo que tengo para llegar a #sSantiago# y encontrar un barco adecuado para atacarlo.
+text.t5=La Playa de Sierra Maestra está cerca de #sSantiago#. Desde allí, debería ser capaz de interceptar al 'Siroco' sea cual sea la ruta que elija para costear #sisland_Cuba#.
+text.t6=Nos hemos hecho con un fantástico y pequeño bergantín. Pero si el barco del dinero tiene un destacamento de tropas a bordo, será mejor que ponga mi tripulación al máximo de sus fuerzas. #sRedmond# no está muy lejos, tal vex pueda enrolar algunos reclutas allí.
+text.t7=El 'Siroco' seguramente ya ha zarpado. Será mejor poner rumbo a la Playa de Sierra Maestra y mantener los ojos bien abiertos.
+text.t8=Demasiado tarde. A estas alturas, el barco del dinero sin duda ya estará a salvo en el puerto de #sSantiago#.
+text.t9=¡Lo hemos conseguido! Hemos apresado al 'Siroco', y el dinero. ¡La fortuna vuelve a sonreirnos! Pero el fuerte de #sSantiago# reconocerá el barco, así que si quiero volver a #sSantiago#, será mejor echar el ancla en la Bahía de Moa y entrar en la ciudad por tierra. O usar un barco diferente.
+text.t10=El 'Siroco' seguramente ya ha zarpado. Necesito una carta náutica de las aguas de #sisland_Cuba#. La tienda de #sSantiago# debería tener uno; si no puedo comprarla, la conseguiré de otra forma.

@@ -2,14 +2,13 @@ void CreateTempQuestCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	// Bart Renault
 	ch.old.name = "Bart";
 	ch.old.lastname = "Renault";
-	ch.name = TranslateString("","Bart");
-	ch.lastname = TranslateString("","Renault");
+	ch.name = TranslateString("", "Bart");
+	ch.lastname = TranslateString("", "Renault");
 	ch.id		= "Bart Renault";
 	ch.model	= "Corsair2"; // PB
 	ch.sound_type = "pirate";
@@ -48,8 +47,8 @@ void CreateTempQuestCharacters(ref n)
 // Enrique Padilla
 	ch.old.name = "Enrique";
 	ch.old.lastname = "Padilla";
-	ch.name = TranslateString("","Enrique");
-	ch.lastname = TranslateString("","Padilla");
+	ch.name = TranslateString("", "Enrique");
+	ch.lastname = TranslateString("", "Padilla");
 	ch.id		= "Enrique Padilla";
 	if (GetCurrentPeriod() == PERIOD_THE_SPANISH_MAIN) ch.model = "Offic_spa2_16";
 	else ch.model = GetRandomModelForTypeExSubCheck(true, "Land_Officers", "man", SPAIN);
@@ -94,8 +93,8 @@ void CreateTempQuestCharacters(ref n)
 // Celestino Villalobos
 	ch.old.name = "Celestino";
 	ch.old.lastname = "Villalobos";
-	ch.name = TranslateString("","Celestino");
-	ch.lastname = TranslateString("","Villalobos");
+	ch.name = TranslateString("", "Celestino");
+	ch.lastname = TranslateString("", "Villalobos");
 	ch.id		= "Celestino Villalobos";
 	ch.model	= "man9";
 	ch.sex = "man";
@@ -145,8 +144,8 @@ void CreateTempQuestCharacters(ref n)
 	// Havana_Crewmember1
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Crewmember_Jean1";
 	ch.model	= "Sailor5";
 	ch.sex = "man";
@@ -182,8 +181,8 @@ void CreateTempQuestCharacters(ref n)
 		// Havana_Crewmember2
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Crewmember_Jean2";
 	ch.model	= "Sailor3";
 	ch.sex = "man";
@@ -219,8 +218,8 @@ void CreateTempQuestCharacters(ref n)
 		// Havana_Crewmember1
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Crewmember");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = "";
 	ch.id		= "Crewmember_Jean3";
 	ch.model	= "Sailor6";
 	ch.sex = "man";
@@ -256,8 +255,8 @@ void CreateTempQuestCharacters(ref n)
 	// Spanish Commander
 	ch.old.name = "Spanish";
 	ch.old.lastname = "Commander";
-	ch.name = TranslateString("","Spanish");
-	ch.lastname = TranslateString("","Commander");
+	ch.name = TranslateString("Spanish", "Commander");
+	ch.lastname = "";
 	ch.id		= "SpainCommander";
 	ch.model	= GetRandomModelForTypeExSubCheck(true, "Land_Officers", "man", SPAIN);
 	ch.sex = "man";
@@ -298,8 +297,8 @@ void CreateTempQuestCharacters(ref n)
 	// PadreGerardo
 	ch.old.name = "Padre";
 	ch.old.lastname = "Gerardo";
-	ch.name = TranslateString("","Padre");
-	ch.lastname = TranslateString("","Gerardo");
+	ch.name = TranslateString("", "Padre");
+	ch.lastname = TranslateString("", "Gerardo");
 	ch.id		= "PadreGerardo";
 	ch.model	= "PadreGerardo";
 	ch.sex = "man";
@@ -337,8 +336,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Shipguard1";
 	ch.model	= 1; // PB
 	ch.sound_type = "pirate";
@@ -374,8 +373,8 @@ void CreateTempQuestCharacters(ref n)
 	
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Shipguard2";
 	ch.model	= 1; // PB
 	ch.sound_type = "pirate";
@@ -415,7 +414,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.name = TranslateString("","Barbara");
 	ch.lastname = TranslateString("","Wellesley");
 	ch.id		= "Lady Barbara Wellesley";
-	ch.model = "LadyBarbara";
+	ch.model = "Lady_Barbara_Wellesley";
+	ch.model.animation = "woman_ab_PoTC";
 	ch.sex = "woman";
 //	ch.sound_type = "female_citizen";
 	ch.location	= "";
@@ -697,6 +697,45 @@ void CreateTempQuestCharacters(ref n)
 	SetRank(ch, ENGLAND, 8);
 	SetRankTitle(ch, TranslateString("", "Sir"));
 	AddGameCharacter(n, ch);
+
+	ch.old.name = "Dreadnought";
+	ch.old.lastname = "Foster";
+	ch.name = TranslateString("","Dreadnought");
+	ch.lastname = TranslateString("","Foster");
+	ch.id		= "Dreadnought Foster";
+	ch.model = "Foster1_18";
+	ch.sex = "man";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.Dialog.Filename = "Hornblower_quest_minors_dialog.c";
+	ch.nation = ENGLAND;
+	ch.Ship.Name = "Dreadnought";
+	ch.Ship.Type = "RN_SuperiorWarship";
+	ch.Ship.Stopped = true;
+	ch.rank 	= 20;
+	ch.reputation = "50";
+	ch.experience = "10";
+	ch.skill.Leadership = "8";
+	ch.skill.Fencing = "8";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "8";
+	ch.skill.Cannons = "8";
+	ch.skill.Grappling = "8";
+	ch.skill.Repair = "8";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "8";
+	ch.skill.Sneak = "8";
+	ch.money = "1000";
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	ch.professionalnavy = ch.nation;
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	ch.questchar = true;
+	SetRank(ch, ENGLAND, 6);
+	AddGameCharacter(n, ch);
 // <- End of Hornblower characters
 	
 //-> Characters for the 'A Family Story' side-quest
@@ -706,7 +745,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.name = TranslateString("","Fernando");
 	ch.lastname = TranslateString("","Suarez");
 	ch.id		= "Fernando Suarez";
-	ch.model	= "Capitan1";
+	ch.model	= "FernandoSuarez";
 	ch.sex = "man";
 	ch.sound_type = "seaman";
 	ch.location	= "";
@@ -840,6 +879,255 @@ void CreateTempQuestCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	AddGameCharacter(n, ch);
+	
+				// Eng Soldiers for Conceicao Shore 3
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Soldier");
+	ch.lastname = "";
+	ch.id		= "Quest_English_Patrol1";
+	ch.model	= Nations[ENGLAND].fantomModel.m1; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	GiveItem2Character(ch, "blade1");
+	ch.equip.blade = "blade1";
+	ch.location	= "none"
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.location	= "Conceicao_Shore_03";
+	ch.location.group = "goto";
+	ch.location.locator = "locator11";		
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetLayType(ch);	
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Soldier");
+	ch.lastname = "";
+	ch.id		= "Quest_English_Patrol2";
+	ch.model	= Nations[ENGLAND].fantomModel.m2; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	GiveItem2Character(ch, "blade1");
+	ch.equip.blade = "blade1";
+	ch.location	= "none"
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.location	= "Conceicao_Shore_03";
+	ch.location.group = "goto";
+	ch.location.locator = "citizen02";	
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetLayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Soldier");
+	ch.lastname = "";
+	ch.id		= "Quest_French_Guard1";
+	ch.model	= Nations[FRANCE].fantomModel.m1; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.location	= "none"
+	ch.nation = FRANCE;
+	ch.rank 	= 1;
+	ch.location	= "Bartolomeu_Mansion";
+	ch.location.group = "goto";
+	ch.location.locator = "citizen05";	
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_group_MoveCharacter(ch, "NAPOLEONIC_SOLDIERS");		
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Soldier");
+	ch.lastname = "";
+	ch.id		= "Quest_French_Guard2";
+	ch.model	= Nations[FRANCE].fantomModel.m2; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.location	= "none"
+	ch.nation = FRANCE;
+	ch.rank 	= 1;
+	ch.location	= "Bartolomeu_Mansion";
+	ch.location.group = "goto";
+	ch.location.locator = "citizen02";	
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_group_MoveCharacter(ch, "NAPOLEONIC_SOLDIERS");		
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Soldier");
+	ch.lastname = "";
+	ch.id		= "Quest_French_Guard3";
+	ch.model	= Nations[FRANCE].fantomModel.m3; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.location	= "none"
+	ch.nation = FRANCE;
+	ch.rank 	= 1;
+	ch.location	= "Bartolomeu_Mansion";
+	ch.location.group = "goto";
+	ch.location.locator = "citizen07";	
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_group_MoveCharacter(ch, "NAPOLEONIC_SOLDIERS");		
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Soldier");
+	ch.lastname = "";
+	ch.id		= "Quest_French_Guard4";
+	ch.model	= Nations[FRANCE].fantomModel.m4; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.location	= "none"
+	ch.nation = FRANCE;
+	ch.rank 	= 1;
+	ch.location	= "Bartolomeu_Mansion";
+	ch.location.group = "goto";
+	ch.location.locator = "citizen09";	
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_group_MoveCharacter(ch, "NAPOLEONIC_SOLDIERS");	
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name = TranslateString("","Soldier");
+	ch.lastname = "";
+	ch.id		= "Quest_French_Guard5";
+	ch.model	= Nations[FRANCE].fantomModel.m5; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.location	= "none"
+	ch.nation = FRANCE;
+	ch.rank 	= 1;
+	ch.location	= "Bartolomeu_Mansion";
+	ch.location.group = "goto";
+	ch.location.locator = "citizen10";	
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_group_MoveCharacter(ch, "NAPOLEONIC_SOLDIERS");	
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);	
+	
 	//<- Characters for the 'A Family Story' side-quest	
 
 	//====================================================================================================================

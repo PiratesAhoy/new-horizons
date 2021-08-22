@@ -7,9 +7,9 @@ string DLG_TEXT[12] = {
 "Really? And what will happen if I say some more? Oh, for example: Devil! .. Whoa... What was that?!",
 "A miracle! It was a miracle! The Lord for some reason has decided to remind you of His existence! \nOh, I'll recite 'Our Father' 20 times today... no, right now, and I'll order an additional service!",
 "Ahem. Do what you want, Padre. I'll be going now, thanks.",
-"Wait, my #schild#! What about Padre Domingues?", // --> Cat
+"Wait, #saddr#! What about Padre Domingues?", // --> Cat
 "*SIGH!* All right, all right. I'll see what I can do.",
-"Wait, my #schild#! What about Padre Domingues?",
+"Wait, #saddr#! What about Padre Domingues?",
 "*SIGH!* All right, all right. I'll see what I can do.", // <-- Cat
 
 };

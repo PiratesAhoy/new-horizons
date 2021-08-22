@@ -186,6 +186,7 @@ void ProcessDialogEvent()
 		case "medicine_quest_greedy2":
 			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+		TakeItemFromCharacter(Pchar, "chinatiger");			//needed to remove the extra green +2 accuracy for the tiger
 			DeleteAttribute(Pchar, "items");//takes all incl fists
 			GiveItem2Character(Pchar, "bladeX4");
 

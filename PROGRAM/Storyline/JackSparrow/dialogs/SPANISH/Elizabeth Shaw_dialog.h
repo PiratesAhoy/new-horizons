@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+".....",
+".....",
+"¿Cuándo navegamos hacia #sPhilipsburg#?",
+"Nunca.",
+"¿Qué? Pero este asesino me dijo que me llevabas a #sPhilipsburg#.",
+"No parece que te guste Davy Jones.",
+"¿Estás bromeando? Nunca lo amaré.",
+"Fácil de adivinar... De hecho, estoy trabajando para tu padre y estoy aquí para rescatarte.", 
+"¡QUE DIOS TE RECOMPENSE!",
+"En este caso, será tu padre. Pero no debemos perder tiempo, tenemos que navegar a #sisland_Falaise de Fleur# lo más rápido posible. No creo que tu 'amante' desista de ti tan fácilmente.",
+"Por fin te has despertado.",
+"Sí, pero ¿qué pasó?",
+"¿No te acuerdas?",
+"OOOhhh si, Davy Jones me disparó.",
+"En efecto, pero la bala, afortunadamente, sólo te arañó la cabeza y te desmayaste.",
+"Entiendo... ¿y Davy Jones?",
+"Salió rápidamente de la isla. Y poco después, la guarnición del fuerte llegó al puerto y te vio tendido. Ahora que pareces estar recuperado, deberías ir al ayuntamiento y hablar con mi padre. Tiene tu recompensa esperándote.",
+"¡Esas son buenas noticias!",
+
+};

@@ -69,7 +69,9 @@ void CreateOfficersCharacters(ref n)
 	ch.id		= "Lucas Da Saldanha";
 	ch.loyality = 10;
 	ch.alignment = "good";
-	ch.model = "lucas";
+	ch.model = "lucas2";
+	GiveItem2Character(ch, "goldarmor");
+//	ch.model = "lucas";	// Old style armour with old style helmet
 	ch.sex = "man";
 	ch.location	= "none";
 	ch.location.group = "goto";

@@ -7,7 +7,7 @@ string DLG_TEXT[43] = {
 "Very well. (Yes! I'm famous!)",
 "... famous for being the most unsuccessful pirate ever.",
 "(Sigh) You were with Blackbeard at Ocracoke Island when he was killed, yes?",
-"I was there??!! I recieved over seventy wounds and was accused for piracy.",
+"I was there??!! I recieved over seventy wounds and was accused of piracy.",
 "Do you remember the navigator Israel Hands?",
 "Do you remember the lieutenant Richards?",		//10
 "Do you remember any crewmember called Johnson?",

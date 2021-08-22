@@ -1,0 +1,3 @@
+title=Tutorial: Ebrolar marineros en la taberna
+text.t1=Por desgracia, hemos perdido algunos marineros en la mar. Debo encontrar una taberna para enrolar nuevos tripulantes antes de zarpar.
+text.t2=Asunto arregaldo.

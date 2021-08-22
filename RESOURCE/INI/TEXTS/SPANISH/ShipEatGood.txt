@@ -1,0 +1,39 @@
+Ship_got_good		{Tienes %1 qq de %2}
+Ship_cant_got_good	{No puedes cargar %1 - ¡Bodega llena!}
+
+seg_Balls		{Balas rasas}
+seg_Grapes		{Metralla}
+seg_Knippels	{Palanquetas}
+seg_Bombs		{Bombas}
+seg_Sailcloth	{Lona}
+seg_Planks		{Tablas}
+seg_Slaves		{Esclavos}
+seg_Wheat		{Trigo}
+seg_Ebony		{Ébano}
+seg_Chocolate	{Chocolate}
+seg_Sugar		{Azúcar}
+seg_Wine		{Vino}
+seg_Linen		{Lino}
+seg_Rum			{Ron}
+seg_Tobacco		{Tabaco}
+seg_Coffee		{Café}
+seg_Mahogany	{Caoba}
+seg_Cinnamon	{Canela}
+seg_Copra		{Copra}
+seg_Paprika		{Pimentón}
+seg_Fruits		{Fruta}
+seg_Ale			{Cerveza}
+seg_Silk		{Seda}
+seg_Clothes		{Ropa}
+seg_Cotton		{Algodón}
+seg_Sandal		{Sándalo}
+seg_Leather		{Cuero}
+seg_Oil			{Aceite}
+seg_Gold		{Oro}
+seg_Silver		{Plata}
+seg_Bricks		{Ladrillos}
+seg_Food		{Comida}
+seg_Weapon		{Armas}
+seg_Gunpowder	{Pólvora}
+seg_Ration		{Comida}
+seg_Medicines	{Medicamentos}

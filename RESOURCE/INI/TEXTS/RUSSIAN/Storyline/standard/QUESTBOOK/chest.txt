@@ -1,0 +1,7 @@
+title=Deliver a closed chest.
+text.t1=Oweyn MacDorey, the owner of #sOxbay# shipyard on #sisland_Oxbay#, asked me to deliver a closed chest to #sRedmond# on #sisland_Redmond#. I have no reservations about doing this favor for a man who just saved Tobias and me from arrest.
+text.t2=When I walked into the tavern, some strangers approached me and demanded Oweyn's chest.
+text.t3=I gave the chest to the strangers. They informed me that Oweyn must have set me up, if it was Oweyn who asked me to deliver this particular chest to #sRedmond# on #sisland_Redmond#. I've got to ask Oweyn what they could possibly be talking about.
+text.t4=I tried to get rid of the strangers, and they drew their weapons. But devils, I couldn't even scratch them!
+text.t5=Oweyn is not the fool he seemed to be. He already knows this legend about skeleton pirates and cursed coins. He wanted me to deliver these cursed coins to his enemy in #sRedmond# on #sisland_Redmond#. Not a bad joke...but the pirates spoiled it. Apparently the fellow who knows all about this business lives in #sFalaise de Fleur# on #sisland_Falaise de Fleur#.
+text.t6=Henry Peat told me a lot about the cursed ship called 'Black Pearl'. Now I just have to find out some more details about that ship and a way to destroy it.

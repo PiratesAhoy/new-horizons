@@ -1,0 +1,12 @@
+title=Retribución.
+text.t1=He sido absuelto del cargo de motín. Por desgracia, Archie confesó un crimen que no había cometido. Sharpe y yo vamos a seguir el rastro del teniente Quelp en #sisland_Cayman#.
+text.t2=Sharpe está seguro de que ha visto a un guardiamarina salir corriendo de la taberna. pero yo no estoy seguro. Hemos encontrado al teniente Quelp, que trató de explicarse. El cpaitán Harvey me ha ordenado poner rumbo a #sSt John's#, en #sisland_Antigua#.
+text.t3=.
+text.t4=.
+text.t5=.
+text.t6=.
+text.t7=.
+text.t8=.
+text.t9=.
+text.t10=.
+text.t11=.

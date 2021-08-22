@@ -1,0 +1,4 @@
+TEXT	{
+No olvides enterrar la mercancía que hemos traído. Puede que la necesitemos más tarde, pero no queremos que nadie la encuentre.
+Hay una vieja abadía allí fuera con mucho espacio. Cuando hayas cunplido la tarea, por favor, hazme saber dónde lo has enterrado.
+}

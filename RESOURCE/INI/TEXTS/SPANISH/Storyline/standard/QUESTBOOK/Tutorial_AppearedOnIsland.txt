@@ -1,0 +1,3 @@
+title=Arribada a #sisland#
+text.t1=Tras sobrevivir a una terrible tempestad, por fin he arribado a #sisland#. Gracias a Dios, la carga del barco está intacta.
+text.t2=Tras sobrevivir a una terrible tempestad, por fin he arribado a #sisland#.

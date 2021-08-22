@@ -73,7 +73,8 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).rankbonus = -5;
 	OfficerTypes.(type).pricemod = 0.5;
 	OfficerTypes.(type).noncontribchance = 35;
-	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};
+	if(isPerkExisting("BasicDamageControl")) {OfficerTypes.(type).perks.BasicDamageControl = 1};
+	if(isPerkExisting("Rigging")) {OfficerTypes.(type).perks.Rigging = 1};
 	if(isPerkExisting("ShipSpeedUp")) {OfficerTypes.(type).perks.ShipSpeedUp = 1};
 	if(isPerkExisting("ShipTurnRateUp")) {OfficerTypes.(type).perks.ShipTurnRateUp = 1};
 	if(isPerkExisting("LightRepair")) {OfficerTypes.(type).perks.LightRepair = 1};
@@ -100,7 +101,7 @@ void eInitOfficerTypes()
 	if(isPerkExisting("BasicCommerce")) {OfficerTypes.(type).perks.BasicCommerce = 1};
 	if(isPerkExisting("AdvancedCommerce")) {OfficerTypes.(type).perks.AdvancedCommerce = 1};
 	if(isPerkExisting("Trustworthy")) {OfficerTypes.(type).perks.Trustworthy = 1};
-	if(isPerkExisting("BasicLandOwner")) {OfficerTypes.(type).perks.BasicLandOwner = 1};
+//	if(isPerkExisting("BasicLandOwner")) {OfficerTypes.(type).perks.BasicLandOwner = 1};
 	
 	//This one is used for townguards
 	type = OFFIC_TYPE_GUARD;
@@ -153,7 +154,8 @@ void eInitOfficerTypes()
 	if(isPerkExisting("SandbankManeuver")) {OfficerTypes.(type).perks.SandbankManeuver = 1};
 	if(isPerkExisting("StormProfessional")) {OfficerTypes.(type).perks.StormProfessional = 1};
 	if(isPerkExisting("SailingProfessional")) {OfficerTypes.(type).perks.SailingProfessional = 1};
-	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};
+	if(isPerkExisting("BasicDamageControl")) {OfficerTypes.(type).perks.BasicDamageControl = 1};
+	if(isPerkExisting("Rigging")) {OfficerTypes.(type).perks.Rigging = 1};
 	if(isPerkExisting("SailsDamageUp")) {OfficerTypes.(type).perks.SailsDamageUp = 1};
 //	if(isPerkExisting("LightRepair")) {OfficerTypes.(type).perks.LightRepair = 1};
 	if(isPerkExisting("InstantRepair")) {OfficerTypes.(type).perks.InstantRepair = 1};
@@ -188,8 +190,9 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).pricemod = 1.23;
 	OfficerTypes.(type).noncontribchance = 15;
 	OfficerTypes.(type).crewtype = OFFIC_TYPE_ABORDAGE;
-	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};
-	if(isPerkExisting("AdvancedBattleState")) {OfficerTypes.(type).perks.AdvancedBattleState = 1};
+	if(isPerkExisting("BasicDamageControl")) {OfficerTypes.(type).perks.BasicDamageControl = 1};
+	if(isPerkExisting("AdvancedDamageControl")) {OfficerTypes.(type).perks.AdvancedDamageControl = 1};
+	if(isPerkExisting("Rigging")) {OfficerTypes.(type).perks.Rigging = 1};
 	if(isPerkExisting("ShipSpeedUp")) {OfficerTypes.(type).perks.ShipSpeedUp = 1};
 	if(isPerkExisting("FastReload")) {OfficerTypes.(type).perks.FastReload = 1};
 	if(isPerkExisting("HullDamageUp")) {OfficerTypes.(type).perks.HullDamageUp = 1};
@@ -225,9 +228,11 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).hplevelbonus = 2;
 	OfficerTypes.(type).pricemod = 1.25;
 	OfficerTypes.(type).crewtype = OFFIC_TYPE_GUARD;
-	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};
-	if(isPerkExisting("AdvancedBattleState")) {OfficerTypes.(type).perks.AdvancedBattleState = 1};
-	if(isPerkExisting("ShipDefenceProfessional")) {OfficerTypes.(type).perks.ShipDefenceProfessional = 1};
+	if(isPerkExisting("BasicDamageControl")) {OfficerTypes.(type).perks.BasicDamageControl = 1};
+	if(isPerkExisting("AdvancedDamageControl")) {OfficerTypes.(type).perks.AdvancedDamageControl = 1};
+	if(isPerkExisting("ProfessionalDamageControl")) {OfficerTypes.(type).perks.ProfessionalDamageControl = 1};
+	if(isPerkExisting("Rigging")) {OfficerTypes.(type).perks.Rigging = 1};
+	if(isPerkExisting("RiggingAdvance")) {OfficerTypes.(type).perks.RiggingAdvance = 1};
 	if(isPerkExisting("FastReload")) {OfficerTypes.(type).perks.FastReload = 1};
 	if(isPerkExisting("HullDamageUp")) {OfficerTypes.(type).perks.HullDamageUp = 1};
 	if(isPerkExisting("SailsDamageUp")) {OfficerTypes.(type).perks.SailsDamageUp = 1};
@@ -304,8 +309,9 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).pricemod = 1.20;
 	OfficerTypes.(type).crewtype = OFFIC_TYPE_ABORDAGE;
 	if(isPerkExisting("DefendPoison")) {OfficerTypes.(type).perks.DefendPoison = 1};
-	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};
-	if(isPerkExisting("AdvancedBattleState")) {OfficerTypes.(type).perks.AdvancedBattleState = 1};
+	if(isPerkExisting("BasicDamageControl")) {OfficerTypes.(type).perks.BasicDamageControl = 1};
+	if(isPerkExisting("AdvancedDamageControl")) {OfficerTypes.(type).perks.AdvancedDamageControl = 1};
+	if(isPerkExisting("Rigging")) {OfficerTypes.(type).perks.Rigging = 1};
 	if(isPerkExisting("FastReload")) {OfficerTypes.(type).perks.FastReload = 1};
 	if(isPerkExisting("ShipTurnRateUp")) {OfficerTypes.(type).perks.ShipTurnRateUp = 1};
 	if(isPerkExisting("ShipSpeedUp")) {OfficerTypes.(type).perks.ShipSpeedUp = 1};
@@ -371,6 +377,8 @@ void eInitOfficerTypes()
 	if(isPerkExisting("HighStakes")) {OfficerTypes.(type).perks.HighStakes = 1};
 	if(isPerkExisting("ImproveSmuggling")) {OfficerTypes.(type).perks.ImproveSmuggling = 1};
 	if(isPerkExisting("MusketsShoot")) {OfficerTypes.(type).perks.MusketsShoot = 1};
+
+	if(isPerkExisting("BasicFirstAid")) {OfficerTypes.(type).perks.BasicFirstAid = 1};
 	
 	//Cannoneer
 	type = OFFIC_TYPE_CANNONEER;
@@ -420,7 +428,7 @@ void eInitOfficerTypes()
 	if(isPerkExisting("BasicCommerce")) {OfficerTypes.(type).perks.BasicCommerce = 1};
 	if(isPerkExisting("AdvancedCommerce")) {OfficerTypes.(type).perks.AdvancedCommerce = 1};
 	if(isPerkExisting("Trustworthy")) {OfficerTypes.(type).perks.Trustworthy = 1};
-	if(isPerkExisting("BasicLandOwner")) {OfficerTypes.(type).perks.BasicLandOwner = 1};
+//	if(isPerkExisting("BasicLandOwner")) {OfficerTypes.(type).perks.BasicLandOwner = 1};
 	if(isPerkExisting("ImproveSmuggling")) {OfficerTypes.(type).perks.ImproveSmuggling = 1};
 	if(isPerkExisting("AdvanceSmuggling")) {OfficerTypes.(type).perks.AdvanceSmuggling = 1};
 	
@@ -447,6 +455,7 @@ void eInitOfficerTypes()
 	if(isPerkExisting("Turn180")) {OfficerTypes.(type).perks.Turn180 = 1};
 	if(isPerkExisting("SandbankManeuver")) {OfficerTypes.(type).perks.SandbankManeuver = 1};
 	if(isPerkExisting("SailingProfessional")) {OfficerTypes.(type).perks.SailingProfessional = 1};
+	if(isPerkExisting("Rigging")) {OfficerTypes.(type).perks.Rigging = 1};
 	
 	//First Mate
 	type = OFFIC_TYPE_FIRSTMATE;
@@ -475,8 +484,10 @@ void eInitOfficerTypes()
 	if(isPerkExisting("Brander")) {OfficerTypes.(type).perks.Brander = 1};
 	if(isPerkExisting("Disguiser")) {OfficerTypes.(type).perks.Disguiser = 1};
 	if(isPerkExisting("FastReload")) {OfficerTypes.(type).perks.FastReload = 1};
-	if(isPerkExisting("LongRangeGrappling")) {OfficerTypes.(type).perks.LongRangeGrappling = 1};
+//	if(isPerkExisting("LongRangeGrappling")) {OfficerTypes.(type).perks.LongRangeGrappling = 1};	// Remove this to balance adding the "Rigging" perks"
 	if(isPerkExisting("BasicCommerce")) {OfficerTypes.(type).perks.BasicCommerce = 1};
+	if(isPerkExisting("Rigging")) {OfficerTypes.(type).perks.Rigging = 1};
+	if(isPerkExisting("RiggingAdvance")) {OfficerTypes.(type).perks.RiggingAdvance = 1};
 	
 	//Carpenter
 	type = OFFIC_TYPE_CARPENTER;
@@ -496,8 +507,10 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).usableoffictype = true;
 	if(isPerkExisting("LightRepair")) {OfficerTypes.(type).perks.LightRepair = 1};
 	if(isPerkExisting("InstantRepair")) {OfficerTypes.(type).perks.InstantRepair = 1};
-	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};    // added by El Rapido
-	if(isPerkExisting("AdvancedBattleState")) {OfficerTypes.(type).perks.AdvancedBattleState = 1};
+	if(isPerkExisting("BasicDamageControl")) {OfficerTypes.(type).perks.BasicDamageControl = 1};    // added by El Rapido
+	if(isPerkExisting("AdvancedDamageControl")) {OfficerTypes.(type).perks.AdvancedDamageControl = 1};
+	if(isPerkExisting("ProfessionalDamageControl")) {OfficerTypes.(type).perks.ProfessionalDamageControl = 1};
+	if(isPerkExisting("ShipSpeedUp")) {OfficerTypes.(type).perks.ShipSpeedUp = 1};
 	if(isPerkExisting("HullDamageUp")) {OfficerTypes.(type).perks.HullDamageUp = 1};
 	if(isPerkExisting("ShipSpeedUp")) {OfficerTypes.(type).perks.ShipSpeedUp = 1};
 	
@@ -521,11 +534,11 @@ void eInitOfficerTypes()
 	OfficerTypes.(type).noncontribchance = 15;
 	if(isPerkExisting("ImprovePotions")) {OfficerTypes.(type).perks.ImprovePotions = 1};
 	if(isPerkExisting("DefendPoison")) {OfficerTypes.(type).perks.DefendPoison = 1};
-	if(isPerkExisting("BasicBattleState")) {OfficerTypes.(type).perks.BasicBattleState = 1};
-	if(isPerkExisting("AdvancedBattleState")) {OfficerTypes.(type).perks.AdvancedBattleState = 1};
-	if(isPerkExisting("ShipDefenceProfessional")) {OfficerTypes.(type).perks.ShipDefenceProfessional = 1};
+	if(isPerkExisting("BasicFirstAid")) {OfficerTypes.(type).perks.BasicFirstAid = 1};
+	if(isPerkExisting("AdvancedFirstAid")) {OfficerTypes.(type).perks.AdvancedFirstAid = 1};
 	if(isPerkExisting("CrewDamageUp")) {OfficerTypes.(type).perks.CrewDamageUp = 1};
 	if(isPerkExisting("Cooking")) {OfficerTypes.(type).perks.Cooking = 1};
+	if(isPerkExisting("IronWill")) {OfficerTypes.(type).perks.IronWill = 1};	// GR: to make up for loss of third level defence ability
 
 	type = OFFIC_TYPE_ABORDAGE;
 	OfficerTypes.(type).skills.Leadership = 0;
@@ -558,8 +571,10 @@ void eInitOfficerTypes()
 	if(isPerkExisting("ShipTurnRateUp")) {OfficerTypes.SuperOfficer.perks.ShipTurnRateUp = 1};
 	if(isPerkExisting("ShipSpeedUp")) {OfficerTypes.SuperOfficer.perks.ShipSpeedUp = 1};
 	if(isPerkExisting("SandbankManeuver")) {OfficerTypes.SuperOfficer.perks.SandbankManeuver = 1};
-	if(isPerkExisting("BasicBattleState")) {OfficerTypes.SuperOfficer.perks.BasicBattleState = 1};
-	if(isPerkExisting("AdvancedBattleState")) {OfficerTypes.SuperOfficer.perks.AdvancedBattleState = 1};
+	if(isPerkExisting("BasicDamageControl")) {OfficerTypes.SuperOfficer.perks.BasicDamageControl = 1};
+	if(isPerkExisting("AdvancedDamageControl")) {OfficerTypes.SuperOfficer.perks.AdvancedDamageControl = 1};
+	if(isPerkExisting("Rigging")) {OfficerTypes.SuperOfficer.perks.Rigging = 1};
+	if(isPerkExisting("RiggingAdvance")) {OfficerTypes.SuperOfficer.perks.RiggingAdvance = 1};
 	if(isPerkExisting("FastReload")) {OfficerTypes.SuperOfficer.perks.FastReload = 1};
 	if(isPerkExisting("HullDamageUp")) {OfficerTypes.SuperOfficer.perks.HullDamageUp = 1};
 	if(isPerkExisting("SailsDamageUp")) {OfficerTypes.SuperOfficer.perks.SailsDamageUp = 1};

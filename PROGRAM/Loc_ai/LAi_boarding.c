@@ -774,7 +774,7 @@ void PlaceOfficers(string locationID, string chLocType, bool noOfficers, bool no
 		idx = GetOfficersIndex(mchr, i);
 		if(idx<0) continue;
 		// boal 05.09.03 offecer need to go to abordage -->
-		if(makeint(Characters[idx].AbordageMode) == 0) continue;
+		if(!CheckAttribute(Characters[idx], "AbordageMode") || sti(Characters[idx].AbordageMode) == 0) continue;
 
 // added by MAXIMUS [abordage MOD] -->
 		if(noOfficers==true) continue;
@@ -2511,22 +2511,34 @@ void MusketVolley(ref mchr, ref echr)
 		}
 	}
 
+	int eclass = GetCharacterShipClass(chr2);
+	float fProtected = 0.0;		// Fraction of enemy crew protected from musket fire due to being below decks
+	if(eclass < 7) fProtected = 0.1;	// Tier 5 and 6 have a few gunners below deck
+	if(eclass < 5) fProtected = 0.2;	// Tier 3 and 4 frigates have a full gun deck under cover
+	if(eclass < 3) fProtected = 0.3;	// Tier 1 and 2 ships of the line have two or more gun decks under cover
+
 	int nShooter = 1;
 	while (numVolleys > 0)
 	{
 		// musket fire effects have been moved from AIAbordage.c to here
+		int mcrew = GetCrewQuantity(chr1);
 		int ecrew = GetCrewQuantity(chr2);
-		float fLuck = 0.5 * GetShipSkill(chr1, SKILL_SNEAK) / MAX_CHARACTER_SKILL;
+		float fGrap = 0.5 * GetShipSkill(chr1, SKILL_GRAPPLING) / MAX_CHARACTER_SKILL;           //TY subbing in grapplng for luck, influence of better managing the boarding and ship position to ensure maximum effect musket volley, after all bosun is in charge of this perk
 		float fShipDefense = 0.0;
-		if (GetOfficersPerkUsing(chr2, "BasicBattleState"))        fShipDefense = 0.15;
-		if (GetOfficersPerkUsing(chr2, "AdvancedBattleState"))     fShipDefense = 0.25;
-		if (GetOfficersPerkUsing(chr2, "ShipDefenceProfessional")) fShipDefense = 0.40;
+		//Levis: Damage Control only works on hull damage
+		/*if (GetOfficersPerkUsing(chr2, "BasicDamageControl"))        fShipDefense = 0.15;
+		if (GetOfficersPerkUsing(chr2, "AdvancedDamageControl"))     fShipDefense = 0.25;
+		if (GetOfficersPerkUsing(chr2, "ProfessionalDamageControl")) fShipDefense = 0.40;*/
+		if (GetOfficersPerkUsing(chr2, "BasicFirstAid"))        fShipDefense = 0.15;
+		if (GetOfficersPerkUsing(chr2, "AdvancedFirstAid"))     fShipDefense = 0.30;
 		float fCharDefence = makefloat(GetShipSkill(chr2, SKILL_DEFENCE)) / MAX_CHARACTER_SKILL;
 
-		int musketkills = makeint(0.25*ecrew * (1.0+delta+fLuck-fShipDefense-fCharDefence)+0.5);
+		int musketkills = makeint((0.1*mcrew * (1.0+delta+fGrap-fShipDefense-fCharDefence) + 0.5) * (FRAND(0.25)+FRAND(0.25)+0.75));	// GR: random element added, muskets weren't accurate. Base multiplier 0.25 reduced because there weren't enough musketeers to do that much damage
+//		int musketkills = makeint(0.25*ecrew * (1.0+delta+fGrap-fShipDefense-fCharDefence)+0.5);	// Original version used 'ecrew' and no randomisation, so a small ship attacking a big ship would cause more casualties than vice versa
 		if (musketkills < 0) musketkills = 0;	// just in case
+		if (musketkills > ecrew * 0.75 * (1.0-fProtected)) musketkills = ecrew * 0.75 * (1.0-fProtected);		// Muskets can't kill crew who are below deck
 
-		// SDLogIt("Musket Fire - delta=" + f2s2(delta) + " sneak=" + fLuck + " ShipDef=" + fShipDefense + " CharDef= " + fCharDefence);
+		// SDLogIt("Musket Fire - delta=" + f2s2(delta) + " grappling=" + fGrap + " ShipDef=" + fShipDefense + " CharDef= " + fCharDefence);
 
 		string whose_fire = "Your";
 		string which_target = "Enemy";

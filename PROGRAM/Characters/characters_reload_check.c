@@ -44,7 +44,7 @@ bool chrCheckReload(ref loc, string reloadLocatorName)
 			// Screwface : forbid the access to ship decks if you have no ship (for ship berthing)
 			if (GetCharacterShipType(GetMainCharacter()) == SHIP_NOTUSED)
 			{
- 				if(CheckAttribute(at, "go") && at.go == loc.island)
+ 				if(CheckAttribute(at, "go") && CheckAttribute(loc, "island") && at.go == loc.island)	// GR: for locations with no "island" attribute
 				{
 					if(!CheckAttribute(at, "olddisablevalue"))
 					{

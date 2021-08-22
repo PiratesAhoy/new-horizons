@@ -1,0 +1,217 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| JackSparrow.c |=====}
+Jack{Jack}
+Sparrow{Sparrow}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+Heumac{Heumac}
+Tezcacoatl{Tezcacoatl}
+Angler{Angler}
+Ogilvey{Ogilvey}
+Maccus{Maccus}
+Clanker{Clanker}
+James{James}
+Norrington{Norrington}
+Lieutenant{Lieutenant}
+Gillette{Gillette}
+Helmsman{Helmsman}
+French{French}
+Soldier{Soldier}
+Hadras{Hadras}
+Urchin{Urchin}
+Wheelback{Wheelback}
+Wyvern{Wyvern}
+Quittance{Quittance}
+Penrod{Penrod}
+
+{=====| Officers.c |=====}
+Captaine{Captaine}
+Chevalle{Chevalle}
+Lucas{Lucas}
+Da Saldanha{Da Saldanha}
+Jaoquin{Jaoquin}
+De Masse{De Masse}
+Gombo{Gombo}
+the Slave{the Slave}
+Prognatus{Prognatus}
+Solvo{Solvo}
+
+{=====| QuebradasCostillas.c |=====}
+Ines{Ines}
+Diaz{Diaz}
+Skull{Skull}
+
+{=====| Redmond.c |=====}
+Henry{Henry}
+Weatherby{Weatherby}
+Swann{Swann}
+
+{=====| Story.c |=====}
+Joshamee{Joshamee}
+Gibbs{Gibbs}
+Random{Random}
+Drunk{Drunk}
+
+{=====| TempQuest.c |=====}
+Matthew{Matthew}
+Shaw{Shaw}
+Billy{Billy}
+Brock{Brock}
+Bligh{Bligh}
+Edward{Edward}
+Teague{Teague}
+Oswald{Oswald}
+Chappel{Chappel}
+Sir Christopher{Sir Christopher}
+Mings{Mings}
+Will{Will}
+Turner{Turner}
+Annabella{Annabella}
+Brin{Brin}
+Bella{Bella}
+Susan{Susan}
+Shaypen{Shaypen}
+Bootstrap Bill{Bootstrap Bill}
+Cutler{Cutler}
+Beckett{Beckett}
+Brinkley{Brinkley}
+Anamaria{Anamaria}
+Tia{Tia}
+Dalma{Dalma}
+Pirate{Pirate}
+1{1}
+2{2}
+3{3}
+Morris{Morris}
+Murtogg{Murtogg}
+Malvert{Malvert}
+Mullroy{Mullroy}
+Captain{Captain}
+Elizabeth{Elizabeth}
+Simon{Simon}
+Blunden{Blunden}
+Turpin{Turpin}
+Cabanel{Cabanel}
+Pieter{Pieter}
+Boelen{Boelen}
+John{John}
+Clifford{Clifford}
+Hector{Hector}
+Barbossa{Barbossa}
+Anne{Anne}
+Bonny{Bonny}
+Davy{Davy}
+Jones{Jones}
+Konrad{Konrad}
+Kulczycki{Kulczycki}
+Petros{Petros}
+Maykin{Maykin}
+Blundas{Blundas}
+Cap'n{Cap'n}
+Drow{Drow}
+Thomas{Thomas}
+the Terror{the Terror}
+Nathan{Nathan}
+Kell{Kell}
+Rackham{Rackham}
+Peter{Peter}
+Willemoes{Willemoes}
+Damski{Damski}
+Maximus{Maximus}
+Philippe{Philippe}
+Couch Captain{Couch Captain}
+Charles{Charles}
+Claudio{Claudio}
+Burrieza{Burrieza}
+Port Guard{Port Guard}
+Silas{Silas}
+Simpkins{Simpkins}
+Tipman{Tipman}
+William{William}
+Wanderman{Wanderman}
+Arthur{Arthur}
+Straightly{Straightly}
+Stephen{Stephen}
+Walsh{Walsh}
+Howard{Howard}
+Cummins{Cummins}
+Ragetti{Ragetti}
+Pintel{Pintel}
+Bartolomeu{Bartolomeu}
+o Portugues{o Portugues}
+Paul Jones{Paul Jones}
+Seb'{Seb'}
+Hylie{Hylie}
+Pistof{Pistof}
+Jean-Bart{Jean-Bart}
+Lafin{Lafin}
+Johan{Johan}
+Klaesz{Klaesz}
+Eduardo{Eduardo}
+Villanueva{Villanueva}
+Francois{Francois}
+de Hadoque{de Hadoque}
+Sri Sumbhajee{Sri Sumbhajee}
+Angria{Angria}
+Pusasn{Pusasn}
+Askay{Askay}
+Ammand{Ammand}
+the Corsair{the Corsair}
+Yedam{Yedam}
+Kinne{Kinne}
+Captain Sao{Captain Sao}
+Feng{Feng}
+Park{Park}
+Lian{Lian}
+Tai{Tai}
+Huang{Huang}
+Short{Short}
+Mergildo{Mergildo}
+Hurtado{Hurtado}
+Jordano{Jordano}
+Marbatico{Marbatico}
+Masked Man{Masked Man}
+Old Salt{Old Salt}
+Meigger{Meigger}
+Stallion{Stallion}
+Skyliner{Skyliner}
+Morgan{Morgan}
+Terror{Terror}
+Bos'un{Bos'un}
+Joaquin{Joaquin}
+Justine{Justine}
+Le Moigne{Le Moigne}
+Justine's guard{Justine's guard}
+Smith{Smith}
+Snorri{Snorri}
+Baldursson{Baldursson}
+Francis{Francis}
+Snake{Snake}
+Maggee{Maggee}
+Reynoud{Reynoud}
+Verheugen{Verheugen}
+Palafico{Palafico}
+Jimmy{Jimmy}
+Legs{Legs}
+Port Admiral{Port Admiral}
+Talicerdor{Talicerdor}
+
+{=====| TempQuestEnemy.c |=====}
+Ronald{Ronald}
+Blacklock{Blacklock}
+Harris{Harris}
+Spanish{Spanish}
+Solider{Solider}
+Prison{Prison}
+Commendant{Commendant}
+Officer{Officer}
+Midshipman{Midshipman}
+Crewmember{Crewmember}
+Mr.{Mr.}
+Mercer{Mercer}
+Gentleman{Gentleman}
+Jocard{Jocard}
+
+{=====| 189 characters |=====}

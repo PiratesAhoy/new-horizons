@@ -1,0 +1,142 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| standard.c |=====}
+Nathaniel{Натаниэль}
+Hawk{Хок}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+
+{=====| Officers.c |=====}
+Danielle{Даниэль}
+Greene{}
+Ralph{Ральф}
+Fawn{Фавн}
+Clement{}
+Barnabas{}
+Aurentius{}
+Leborio{}
+Drago{}
+Gervasio{}
+Serrao{}
+
+{=====| Story.c |=====}
+Vincent{}
+Bethune{Битюн}
+Waulter{}
+Tomlison{}
+Remy{Реми}
+Gatien{Гатье}
+Yves{}
+Giner{}
+Begon{}
+Monchaty{}
+Isaac{}
+Razilly{}
+Jacques{}
+Belmondo{}
+Pierre{Пьер}
+Leverrier{}
+Abelard{}
+Tarnaud{}
+Wigayn{}
+Ratel{}
+Raoul{Рауль}
+Rheims{}
+Valentin{}
+Massoni{}
+Amiel{}
+Berangere{}
+Faust{}
+Gasquet{}
+Virgile{}
+Boon{}
+Tobias{}
+Ewan{}
+Glover{}
+Wilfred{Уилфред}
+English Soldier{}
+French Soldier{}
+Rabel{}
+Yverneau{}
+Anacleto{}
+Rui Sa{}
+Pinto{}
+Sidonio{}
+Ogarrio{}
+Lieutenant{Лейтенант}
+Harris{Харрис}
+Malcolm{Малькольм}
+Hart{Харт}
+Henry{Генри}
+Banfield{}
+Wauter{}
+Keech{}
+Lewellyn{}
+Belt{Белт}
+Thomas{Томас}
+Norton{Нортон}
+Brian{Брайан}
+The Slayer{}
+Ferro{}
+Cerezo{}
+Hector{}
+Barbossa{}
+Robert{Роберт}
+Christopher{Кристофер}
+Silehard{Сайлхард}
+
+{=====| TempQuest.c |=====}
+Bythesea{}
+Harold{}
+Barrat{}
+Sailor{Моряк}
+Pirate{Пират}
+Fernam{}
+Barrios{}
+Violate{Виолате}
+Gyles{Жиль}
+Dubois{Дюбуа}
+citizen{}
+Soldier{}
+Ragetti{Раджетти}
+Pintel{Пинтел}
+
+{=====| TempQuestEnemy.c |=====}
+Captain{Капитан}
+Kalen{}
+Mottram{}
+French Patrol{}
+French{}
+Sapper{}
+Simon{Саймон}
+Buck{}
+Rene{Ренэ}
+Bouillon{}
+Bodyguard{}
+Dutruel{}
+Ian{}
+Bigg{}
+Bonnat{}
+Brendan{Брендан}
+Attwick{}
+Edd{}
+Pease{}
+Kevin{}
+Renner{}
+Terry{Терри}
+Sellar{}
+Donald{Дональд}
+Drake{}
+David{Дэвид}
+Much{}
+Cole{}
+Brock{Брок}
+Shaggy{}
+Harry{Гарри}
+Stephan{}
+Bonser{}
+Oswald{Освальд}
+Chappel{Чаппель}
+
+{=====| 123 characters |=====}

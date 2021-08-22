@@ -35,10 +35,10 @@ string DLG_TEXT[58] = {
 "And you treated him, monsieur?",
 "I ordered some medicines for those guys yes.",
 "Did you talk to him? Do you know what happened to him afterwards?",
-"Certainly not monsieur. As the major surgeon I left all that to my assistent.",
+"Certainly not monsieur. As the surgeon major I left all that to my assistent.",
 "And maybe you know where I can find him?",
 "Last time I heard of him he slept in a carriage somewhere in the town.",
-"I am most grateful for your patience monsieur. Goodbye.",	
+"I am most grateful for your patience, monsieur.",	
 "Aha, a visitor. And who might you be?",			//40
 "Sorry to intrude Governor, my name is Howard Pyle.",
 "The pirate!!",
@@ -49,12 +49,12 @@ string DLG_TEXT[58] = {
 "Monsieur Gautrain, I'm only interested in Teach's lieutenant 'Richards'.",
 "Yes, that one.",
 "Did you talk to him?",
-"Of course. Being one of the very sick pirates he was my patient.",
+"Of course. Being one of the very sick pirates he was my patient.",	//50
 "Do you know what became of him?",
-"Not sure, but he talked about leaving the company.",		//50
+"Not sure, but he talked about leaving the company.",
 "I see... Did he tell you more about his plans?",
-"He had a sister, monsieur. A sister who was a nun in a monastary.",
-"Please go on, this could be it! Where was that monastary?",
+"He had a sister, monsieur. A sister who was a nun in an Abbey.",
+"Please go on, this could be it! Where was that Abbey?",
 "I think he mentioned Cartagena.",
-"Thanks a lot monsieur for your time.",
+"Thanks a lot monsieur for your time.",				//57
 };

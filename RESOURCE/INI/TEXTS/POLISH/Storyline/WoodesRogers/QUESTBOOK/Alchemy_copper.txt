@@ -1,0 +1,6 @@
+title=Alchemy - open the Copper lock
+text.t1=I have to find something that dissolves Copper.
+text.t2=I have Diluted Sulfuric Acid - and it can dissolve Copper!!
+text.t3= 
+text.t4=
+text.t5=

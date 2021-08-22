@@ -1,0 +1,12 @@
+title=The Natividad Incident
+text.t1=I have been ordered to report to #sGreenford# Naval HQ. There, I am apparently to receive new orders.
+text.t2=#sbriefing_officer# has ordered me to take a consignment of muskets and ammunition to a group of rebels led by Don Julian Alvarado. The rebels' base is the fort near Playa de Sabana on #sisland_Cuba#.
+text.t3=Don Julian's "admiral", Jose Hernandez, will take me to the fort. I do not entirely trust either him or Don Julian, who now calls himself "El Supremo". In case I do not return, I have instructed Lt. Bush to take command.
+text.t4=The 'Natividad', a Spanish warship of 60 guns, is on her way here. Don Julian wants me to capture her and give her to him.
+text.t5=Our consignment of weapons is on its way to Don Julian. In return, I have negotiated provisions for our ship, which have now been delivered.
+text.t6=We were able to capture the 'Natividad' by boarding her while her crew were off duty for the night. I have ordered her officers to be brought to the '#sour_ship#'. Don Julian Alvarado would surely execute them if I left them to his care.
+text.t7=Turned over 'Natividad' to Don Julian Alvarado in the belief that circumstances warranted it. Sailing to #sisland_Isla Muelle#.
+text.t8=Encountered a Spanish lugger under a flag of truce. Spain has switched sides and is now Britain's ally. This means Don Julian is now our enemy. I have no choice but to attempt to sink the 'Natividad'. The arrival of Lady Barbara Wellesley is an added complication.
+text.t9=After a hard battle, we have defeated 'Natividad'. Lady Barbara Wellesley insisted on helping to tend the wounded, but was unable to save Midshipman Longley. My duty now is to convey her Ladyship to #sGreenford#.
+text.t10=Rear Admiral Sir Rodney Leighton met us and has escorted Lady Barbara Wellesley from the ship. I should report to Naval HQ.
+text.t11=I have been given command of a larger ship, the 'Sutherland'. My crew from the '#sold_ship#' will also transfer to the 'Sutherland'.

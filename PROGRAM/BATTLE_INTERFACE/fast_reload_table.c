@@ -949,6 +949,13 @@ void initFastReloadTable()
 	curTable.l5.note = FRN_FORT;
 	curTable.l5.location = "Marigot_fakefort1";
 // <-- KK
+// Levis -->
+	// church
+	curTable.l6.pic = FRP_CHURCH;
+	curTable.l6.tex = FRT_CHURCH;
+	curTable.l6.note = FRN_CHURCH; 
+	curTable.l6.location = "Marigot_Church";
+// Levis <--
 
 	makearef(curTable,objFastReloadTable.table.Philipsburg);
 	// store

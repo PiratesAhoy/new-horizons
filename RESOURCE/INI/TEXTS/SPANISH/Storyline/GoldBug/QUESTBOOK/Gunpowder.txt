@@ -1,0 +1,7 @@
+title=Pólvora
+text.t1=Objetos de la mano derecha: F3 + F3; objetos de la mano izquierda: F3 + disparar pistola.
+text.t2=Pólvora estándar: 6 partes de salitre, 1 parte  de carbón vegetal y 1 parte de azufre.
+text.t3=Pólvora de combustión lenta para fuegos artificales: 4 partes de Salitre, 2 partes de carbón vegetal y 2 partes de azufre.
+text.t4=La precaución más importante a la hora de moler pólvora es añadir un poco de agua.
+text.t5=Recuerda siempre mezclar carbón vegetal con salitre para obtener hollín de salitre, y azufre con salitre para obtener hollín de azufre. Haz esto antes de molerlo y será seguro.
+text.t6=No, no sé cómo seguir. Tengo que visitar el restaurante.

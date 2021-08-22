@@ -12,3 +12,4 @@ text.t10=There is a chest in the store!
 text.t11=Mr Cook is at the church collecting citizens donations of medicines and cures.
 text.t12=Mr Stretton can open the rest of the chest, according to grandma Rogers.
 text.t13=I am wanted at the shipyard.
+text.t14=I have to talk to all Rogers' family, friends and officers. They may have something useful for the medicine chest!

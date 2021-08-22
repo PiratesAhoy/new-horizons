@@ -371,7 +371,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;	
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -421,7 +422,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;	
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -471,7 +473,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;	
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -521,7 +524,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;	
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -571,7 +575,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;	
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -621,7 +626,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;	
 	LAi_SetLoginTime(ch, 0.0, 24.0);

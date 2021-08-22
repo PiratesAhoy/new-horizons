@@ -574,12 +574,29 @@ string GetLanguageFile(string dialogFile)
 	string sLanguageDir = LanguageGetLanguage();
 	// PB: Check for storyline .h file even if there is no accompanying .c file -->
 	string sDialogDir = GetStorylinePath(FindCurrentStoryline()) + "dialogs\";
-	//Check if there is a storyline file else take the normal one
-	if (FindFile("PROGRAM\\" + sDialogDir + sLanguageDir, "*.h", DialogTextFile) == "") {
-		sDialogDir = "dialogs\";
+	//MAXIMUS 27.05.2019: checks for localized dialog. If not - the english one (default) will loaded ==>
+	string PathDlgLngExtn = "";
+	if (FindFile("PROGRAM\" + sDialogDir + sLanguageDir, "*.h", DialogTextFile) == "") {
+		if(FindFile("PROGRAM\DIALOGS\" + sLanguageDir, "*.h", DialogTextFile) == "") {
+			if(FindFile("PROGRAM\" + sDialogDir + "ENGLISH\", "*.h", DialogTextFile) == "") {
+				if(FindFile("PROGRAM\DIALOGS\ENGLISH\", "*.h", DialogTextFile) != "") {
+					PathDlgLngExtn = "DIALOGS\ENGLISH\" + DialogTextFile;
+				}
+			}
+			else {
+				PathDlgLngExtn = sDialogDir + "ENGLISH\" + DialogTextFile;
+			}
+		}
+		else {
+			PathDlgLngExtn = "DIALOGS\" + sLanguageDir + "\" + DialogTextFile;
+		}
 	}
+	else
+	{
+	//Check if there is a storyline file else take the normal one
+		PathDlgLngExtn = sDialogDir + sLanguageDir + "\" + DialogTextFile;
+	}//MAXIMUS 27.05.2019: <==
 	// PB: Check for storyline .h file even if there is no accompanying .c file <--
-	string PathDlgLngExtn = sDialogDir + sLanguageDir + "\" + DialogTextFile;
 	return PathDlgLngExtn;
 }
 

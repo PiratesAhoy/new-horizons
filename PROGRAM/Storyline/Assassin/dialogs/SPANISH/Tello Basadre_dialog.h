@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"......",
+"......",
+"¿Qué haces aquí?",
+"Tú eres Tello, ¿verdad?",
+"Sí. Pero no has respondido a mi pregunta.",
+"Como tú, trabajo para Benavides y él quiere que me ayudes.",
+"¿Qué pasa que el Vice-Almirante quiere mi ayuda? ¿Algo importante?",
+"Tal vez. Él piensa que los franceses están ayudando a #sisland_Conceicao#. ¿Observaste la llegada de algunos barcos militares o de abastecimiento franceses recientemente?",
+"La semana pasada, sí. Un buque de guerra y un navío de línea...",
+"Interesante. ¿Estaban juntos?",
+"Sí. Pero sólo se quedaron tres días en #sMarigot#. Sólo para reabastecerse y luego dejaron la isla.",
+"¿Cuál era su destino?",
+"La nave de guerra se dirigía a #sPort au Prince# y el buque insignia iba a navegar a #sFalaise de Fleur#.",
+"Hummm... no es el mismo destino. De todos modos #sFalaise de Fleur# está más cerca de #sConceicao# que de #sPort au Prince#. Tal vez, debería investigar la nave de línea. ¿Podrías darme alguna información sobre esa nave?",
+"Si no recuerdo mal, es 'La Fougueuse' y tiene 56 cañones y unos 650 tripulantes. El Capitán Aurelien Bergerat comanda este navío.",
+"Una nave de fuerza formidable... ¿Tienes alguna información que te gustaría añadir? Como cargador portuario, tal vez trabajaras en esta nave durante su escala.",
+"Desafortunadamente no. Nadie de #sMarigot# lo tenía permitido en cualquiera de las dos naves. Esto es muy inusual. Lo único que puedo decir es que los capitanes de esas naves tenían prisa por continuar su viaje.",
+"Gracias, ya has ayudado bastante. Tu información podría ser útil. ¡Adiós!", 
+
+};

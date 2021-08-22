@@ -1,0 +1,404 @@
+Remarks	{Observaciones}
+none	{Ninguna}
+Requires	{Requiere}
+Rank	{Rango mínimo}
+TimeDuration	{Dura}
+TimeDelay	{Puede usarse cada}
+NegativeTimeDelay	{Solo puede usarse una vez}
+timeunit	{seg}
+Unlocked	{Has desbloqueado la habilidad:}
+Locked		{Esta habilidad debe desbloquearse primero}
+
+BasicDefence {Defensa básica}
+perkBasicDefence
+{
+Los bloqueos del personaje son un 25% más difíciles de penetrar, y el daño cuerpo a cuerpo al personaje se reduce un 10%.
+}
+
+AdvancedDefence {Defensa avanzada}
+perkAdvancedDefence
+{
+Los bloqueos del personaje son un 50% más difíciles de penetrar, y el daño recibido se reduce un 20%.
+}
+perkAdvancedDefenceLocked
+{
+Puedes encontrar estos conocimientos en un libro | Los bloqueos del personaje son un 50% más difíciles de penetrar, y el daño recibido se reduce un 20%.
+}
+
+Toughness {Robustez}
+perkToughness.
+{
+El personaje recibe un 10% extra de salud máxima, regenera salud más rápido, y tiene una resitencia natural a los venenos que reduce el daño por veneo en un 50%.
+}
+perkToughnessLocked
+{
+Los bandoleros de la selva pueden enseñarte esto | +10% a la salud máxima, regeneración más rápida y resistencia natural a los venenos
+}
+
+CriticalHit {Impacto crítico mejorado}
+perkCriticalHit
+{
+La posibilidad del personaje de provocar un impacto crítico en combate cuerpo a cuerpo aumenta a un 10%.
+}
+
+SwordplayProfessional {Espadachín profesional}
+perkSwordplayProfessional
+{
+Los ataques cuerpo a cuerpo del personaje son un 25% más difíciles de bloquear, la posibilidad de impacto crítico aumenta al 25%, y el daño cuerpo a cuerpo recibido disminuye un 30%.
+}
+perkSwordplayProfessionalLocked
+{
+Completa el nivel más alto de entrenamiento de espada con tu tripulación en cubierta | Los ataques cuerpo a cuerpo del personaje son un 25% más difíciles de bloquear, la posibilidad de impacto crítico aumenta al 25%, y el daño cuerpo a cuerpo recibido disminuye un 30%.
+}
+
+Rush {Ataque furioso}
+perkRush
+{
+Los ataques cuerpo a cuerpo del personaje hacen más daño pero es más difícil bloquear. El efecto dura 30 segundos.
+}
+
+Gunman {Pistolero}
+perkGunman
+{
+El personaje maneja mejor la pistola: recarga un 10% más rápido, la puntería mejora en un 5% y la posibilidad de impacto crítico aumenta un 5%. Permite usar pistolas de dos cañones y juegos de varias pistolas.
+}
+
+ImproveAiming {Tirador experto}
+perkImproveAiming
+{
+El personaje es un experto tirador: mejora su puntería un 20% y su posibilidad de impacto crítico un 15%. Pulsa 'Tab' para apuntar manualmente en primera persona.
+}
+perkImproveAimingLocked
+{
+Completa un encargo para un Armero | El personaje es un experto tirador, mejora su puntería un 20% y su posibilidad de impacto crítico un 15%. Pulsa 'Tab' para apuntar manualmente en primera persona.
+}
+
+GunProfessional {Pistolero profesional}
+perkGunProfessional
+{
+El personaje es un profesional de la pistola:  recarga un 50% más rápido, la puntería mejora un 25% y la posibilidad de impacto crítico un 10%. Permite usar pistolas de cuatro cañones.
+}
+perkGunProfessionalLocked
+{
+Encuentra un libro para desbloquear | El personaje es un profesional de la pistola:  recarga un 50% más rápido, la puntería mejora un 25% y la posibilidad de impacto crítico un 10%. Permite usar pistolas de cuatro cañones.
+}
+
+GunFighter	{Maestro pistolero}
+perkGunFighter
+{
+El personaje es un experto pistolero y un experimentado líder pirata. Permite usar el juego extraordinario de pistolas.
+}
+
+ImprovePotions {Pociones eficaces}
+perkImprovePotions
+{
+Las pociones curativas serán un 10% más efectivas para todo el grupo.
+}
+perkImprovePotionsLocked
+{
+yuda al boticario cuando necesite mercancías / Las pociones curativas serán un 10% más efectivas para todo el grupo.
+}
+
+DefendPoison {Resistencia al veneno}
+perkDefendPoison
+{
+Tu grupo tiene mejor resitencia al veneno gracias a disponer de mejores cuidados médicos.
+}
+
+ShipTurnRateUp {Maniobrabilidad}
+perkShipTurnRateUp
+{
+El barco del personaje mejora su maniobrabilidad en un 15%.
+}
+
+ShipSpeedUp {Aumento de velocidad}
+perkShipSpeedUp
+{
+El barco del personaje mejora su velocidad en un 15%.
+}
+
+Turn180 {Virar sobre el ancla}
+perkTurn180
+{
+El barco del personaje puede iniciar un viraje rápido de 90 grados echando el ancla por un lado mientras navega. Se puede hacer una vez cada tres minutos.
+Usa el botón de 'Correr rápido' para elegir el lado hacia el que quieras virar.
+}
+perkTurn180Locked
+{
+Puedes recibir esta habilidad del capitán de un barco enemigo si te comportas civilizadamente | El barco del personaje puede iniciar un viraje rápido de 90 grados echando el ancla por un lado mientras navega.
+}
+ 
+
+SandbankManeuver {Sentir el rumbo}
+perkSandbankManeuver
+{
+El barco del personaje queda protegido de los peligros de atravesar arrefices y bajíos durante 60 segundos, permitiendo escapar de aguas peligrosas sin recibir daños graves.
+}
+
+StormProfessional {Timonel de tormentas}
+perkStormProfessional
+{
+El daño recibido por el barco del personaje en tormentas y tornados se reduce un 40%.
+}
+
+SailingProfessional {Lobo de mar}
+perkSailingProfessional
+{
+El barco del personaje mejora su velocidad y maniobrabilidad en un 20%. En el mapa, el personaje tiene un 50% de posibilidades de poder evitar un encuentro aleatorio. En ese caso, aparecerá un icono de "Evitar encuentro" y podrás pulsar la tecla 'Enter' para evitarlo.
+}
+
+BasicDamageControl {Control de daños}
+perkBasicDamageControl
+{
+El barco del personaje recibe un 15% menos de daño en el casco por fuego enemigo. Permite ejecutar zafarranchos de incendio si hay fuego a bordo.
+}
+
+AdvancedDamageControl {Control de daños mejorado}
+perkAdvancedDamageControl
+{
+El barco del personaje recibe un 25% menos de daño en el casco por fuego enemigo.
+}
+perkAdvancedDamageControlLocked	
+{
+Encuentra un libro para desbloquear | El barco del personaje recibe un 25% menos de daño en el casco por fuego enemigo.
+}
+
+ProfessionalDamageControl {Control de daños profesional}
+perkProfessionalDamageControl
+{
+El barco del personaje recibe un 25% menos de daño en el casco por fuego enemigo, y la probabilidad de recibir impactos críticos se reduce drásticamente.
+}
+
+
+BasicFirstAid {Primeros auxilios}
+perkBasicFirstAid	
+{
+El barco del personaje recibe un 15% menos de daño a la tripulación por fuego enemigo. También previene un 15% del daño provocado por descargas de mosquetería.
+}
+
+
+AdvancedFirstAid {Primeros auxilios mejorados}
+perkAdvancedFirstAid	
+{
+El barco del personaje recibe un 30% menos de daño a la tripulación por fuego enemigo. También previene un 30% del daño provocado por descargas de mosquetería.
+}
+
+Rigging {Remiendos}
+perkRigging
+{
+El barco del personaje recibe un 20% menos de daño en las velas por fuego enemigo.
+}
+
+
+RiggingAdvance {Maestro velero}
+perkRiggingAdvance	
+{
+El barco del personaje recibe un 40% menos de daño en las velas por fuego enemigo.
+}
+
+FastReload {Recarga rápida}
+perkFastReload
+{
+Los cañones del barco se recargan un 20% más rápido.
+}
+
+ImmediateReload {Prerrecarga}
+perkImmediateReload
+{
+Los cañones del barco se recargan un 50% más rápido, pero solo se puede usar esta habilidad cada 5 minutos.
+}
+perkImmediateReloadLocked
+{
+Puedes recibir esta habilidad del capitán de un barco enemigo si te comportas civilizadamente | Los cañones del barco se recargan un 50% más rápido, pero solo se puede usar esta habilidad cada 5 minutos.
+}
+
+
+HullDamageUp {Aumento de daño al casco}
+perkHullDamageUp
+{
+El daño al casco del barco enemigo aumenta un 15%.
+}
+
+SailsDamageUp {Aumento de daño a las velas}
+perkSailsDamageUp
+{
+El daño a las velas del enemigo aumenta un 15%.
+}
+
+CrewDamageUp {Aumento de daño a la tripulación}
+perkCrewDamageUp
+{
+El daño a la tripulación del enemigo aumenta un 15%.
+}
+
+CriticalShoot {Disparo crítico}
+perkCriticalShoot
+{
+El personaje gana un 5% de probabilidades de que una andanada cause daños críticos en un barco enemigo.
+}
+
+LongRangeShoot {Andanada de largo alcance}
+perkLongRangeShoot
+{
+El alcance de los cañones del barco aumenta un 15%.
+}
+
+CannonProfessional {Artillero profesional}
+perkCannonProfessional
+{
+El daño de los cañones a los barcos enemigos aumenta un 30%, y la probabilidad de daños críticos aumenta un 15%.
+}
+perkCannonProfessionalLocked
+{
+Encuentra un libro para desbloquear | El daño de los cañones a los barcos enemigos aumenta un 30%, y la probabilidad de daños críticos aumenta un 15%.
+}
+
+LongRangeGrappling {Abordaje de largo alcance}
+perkLongRangeGrappling
+{
+La distancia a la que puede iniciarse un abordaje aumenta un 15%.
+}
+perkLongRangeGrapplingLocked
+{
+uedes recibir esta habilidad del capitán de un barco enemigo si te comportas civilizadamente | La distancia a la que puede iniciarse un abordaje aumenta un 15%.
+}
+
+
+MusketsShoot {Descarga de mosquetería}
+perkMusketsShoot
+{
+Justo antes de abordar un barco enemigo, la tripulación del personaje dispara sus mosquetes. Esta salva mata al 25% de la tripulación enemiga menos sus bonus de defensa.
+}
+
+GrapplingProfessional {Maestro del abordaje}
+perkGrapplingProfessional
+{
+La distancia a la que puede iniciarse un abordaje aumenta un 25%. La velocidad y el ángulo de aproximación ya no importan.
+}
+
+InstantBoarding {Abordaje instantáneo}
+perkInstantBoarding
+{
+Una vez por batalla, el personaje puede abordar instantáneamente cualquier barco cercano que elija.
+}
+
+Troopers {Brigada de desembarco}
+perkTroopers
+{
+Permite mandar un barco de la flota a debilitar o capturar un fuerte. La eficacia depende del número de tripulantes y la experiencia del capitán.
+También permite desembarcar tropas en una ciudad enemiga que no tenga fuerte si no quedan barcos enemigos en las aguas que circundan la isla.
+}
+perkTroopersLocked
+{
+Gánate la confianza de un gobernador para desbloquear esta habilidad. | Permite mandar un barco de la flota a debilitar o capturar un fuerte. También permite desembarcar tropas en una ciudad enemiga.
+}
+
+LightRepair {Reparaciones de emegencia}
+perkLightRepair
+{
+Permite que la tripulación pueda reparar el barco lentamente hasta un 10% de su salud máxima cuando el barco corre peligro de hundirse. No requiere recursos.
+}
+
+InstantRepair {Reparaciones rápidas}
+perkInstantRepair
+{
+Cuando no estás en un combate, la tripulación puede reparar el barco hasta un 90% de su salud máxima. Requiere tablas y lona y no recupera mástiles pérdidos ni tripulación.
+}
+perkInstantRepairLocked
+{
+Ayuda al astillero cuando necesite materiales | Cuando no estás en un combate, la tripulación puede reparar el barco hasta un 90% de su salud máxima. Requiere tablas y lona y no recupera mástiles pérdidos ni tripulación.
+}
+
+Cooking {Lecciones de cocina}
+perkCooking
+{
+El consumo diario de comida se reduce un 10%.
+}
+
+HighStakes {Apuestas altas}
+perkHighStakes
+{
+Te permite hacer apuestas más altas cuando juegas.
+También puedes apostar con los guardias para conseguir sus itinerarios de patrulla.
+}
+
+Disguiser {Maestro del Disfraz}
+perkDisguiser 
+{
+Eres un maestro del disfraz, lo que disminuye la posibilidad de que tu bandera falsa sea detectada en un 10%.
+}
+
+ImproveSmuggling {Evitar guardacostas}
+perkImproveSmuggling
+{
+Si la guardia costera te encuentra, hay una mayor probabilidad de que estén en un grupo más reducido de lo normal. Y la probabilidad de que te encuentren disminuye un 5%. La probabilidad de que te descubran traficando con opio se reduce un 10%.
+}
+perkImproveSmugglingLocked
+{
+Debes inspeccionar los cuerpos de los guardacostas para ver qué llevan. | Si la guardia costera te encuentra, hay una mayor probabilidad de que estén en un grupo más reducido de lo normal. Y la probabilidad de que te encuentren disminuye un 5%. La probabilidad de que te descubran traficando con opio se reduce un 10%.
+}
+
+AdvanceSmuggling {Contrabando avanzado}
+perkAdvanceSmuggling
+{
+Los contrabandistas te aprecian tanto que pagan un 15% por tu mercancía. Y la posibilidad de que te encuentren los guardacostas se reduce otro 10%. La posibilidad de que aparezcan buques guardacostas cuando te descubren disminuye un 50%.
+La posibilidad de que te pillen traficando con opio se reduce otro 15%.
+}
+
+BasicCommerce {Comercio básico}
+perkBasicCommerce
+{
+El personaje obtiene un 10% de descuento al comprar mercancías en las tiendas.
+}
+perkBasicCommerceLocked
+{
+Completa una misión de convoy de la taberna | El personaje obtiene un 10% de descuento al comprar mercancías en las tiendas.
+}
+
+AdvancedCommerce {Comercio avanzado}
+perkAdvancedCommerce
+{
+El personaje obtiene un 20% de descuento al comprar mercancías en las tiendas y un 5% de bonificación al venderlas.
+}
+perkAdvancedCommerceLocked
+{
+Ayuda al sastre cuando necesite materiales | El personaje obtiene un 20% de descuento al comprar mercancías en las tiendas y un 5% de bonificación al venderlas.
+}
+
+Trustworthy {Persona de fiar}
+perkTrustworthy
+{
+El personaje tiene la opción de comprar y vender productos de contrabando en las tiendas... Por desgracia, al precio normal.
+}
+perkTrustworthyLocked
+{
+Gánate la confianza de un gobernador para acceder a esta habilidad. | El personaje tiene la opción de comprar y vender productos de contrabando en las tiendas... Por desgracia, al precio normal.
+}
+
+BasicLandOwner {Terrateniente}
+perkBasicLandOwner
+{
+La producción de las cosechas es un 50% mayor en las tierras del personaje.
+}
+perkBasicLandOwnerLocked
+{
+Gánate la confianza de un gobernador para acceder a esta habilidad. | La producción de las cosechas es un 50% mayor en las tierras del personaje.
+}
+
+SharedExperience {Experiencia compartida}
+perkSharedExperience
+{
+Cuando tu grupo gana experiencia, tus oficiales ganan puntos también para las destrezas con las que no contribuyen al grupo.
+}
+
+IronWill {Voluntad de hierro}
+perkIronWill
+{
+La moral aumenta un 25%. Además, reduce un 50% la pérdida de moral por impago de salario.
+}
+
+Brander {Brulote}
+perkBrander
+{
+Con esta habilidad, el comandante de una flota puede ordenar a un barco de su flota que explote cerca del enemigo, pudiendo causar un gran daño.
+}

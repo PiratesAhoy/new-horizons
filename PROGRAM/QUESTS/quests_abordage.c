@@ -7,7 +7,9 @@ void QuestAbordageStartEvent()
 
 	if (iCharacter1 == iTestCharacter || iCharacter2 == iTestCharacter)
 	{
+		int smuggle_cargo2 = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_cargo2);
+		int smuggle_amount2 = sti(Characters[GetCharacterIndex("Thomas O'Reily")].smuggle_amount2);
 		Characters[GetCharacterIndex("Thomas O'Reily")].quest.contraband = "boarding";
-		AddCharacterGoods(GetMainCharacter(), GOOD_SANDAL, 50);
+		AddCharacterGoods(GetMainCharacter(), smuggle_cargo2, smuggle_amount2);
 	}
 }

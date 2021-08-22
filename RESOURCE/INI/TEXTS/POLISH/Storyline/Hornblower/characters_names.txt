@@ -1,0 +1,116 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| Hornblower.c |=====}
+Horatio{Horatio}
+Hornblower{Hornblower}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+Jack{Jack}
+Hammond{Hammond}
+Lt. William{Lt. William}
+Bush{Bush}
+Thomas{Thomas}
+Wolfe{Wolfe}
+Matthews{Matthews}
+Lt.{Lt.}
+Chadd{Chadd}
+
+{=====| Story.c |=====}
+Keene{Keene}
+Edward{Edward}
+Pellew{Pellew}
+Dreadnought{Dreadnought}
+Foster{Foster}
+Black Charlie{Black Charlie}
+Harvey{Harvey}
+Simpson{Simpson}
+Clayton{Clayton}
+Hunter{Hunter}
+Henry{Henry}
+Wellard{Wellard}
+Helmsman{Helmsman}
+Styles{Styles}
+Perrin{Perrin}
+Oldroyd{Oldroyd}
+Marsh{Marsh}
+Eccleston{Eccleston}
+Smug{Smug}
+Larr{Larr}
+Big{Big}
+Bryan{Bryan}
+James{James}
+Sawyer{Sawyer}
+Percy{Percy}
+Buckland{Buckland}
+Ebeneezer{Ebeneezer}
+Bracegirdle{Bracegirdle}
+William{William}
+Uriah{Uriah}
+Quelp{Quelp}
+The Earl of{The Earl of}
+Edrington{Edrington}
+Arthur{Arthur}
+Wellesley{Wellesley}
+Chumley{Chumley}
+Barbara{Barbara}
+Maria{Maria}
+Mason{Mason}
+The Duchess of{The Duchess of}
+Wharfedale{Wharfedale}
+Teresa{Teresa}
+Moreno{Moreno}
+Etienne{Etienne}
+de Vergasse{de Vergasse}
+Archie{Archie}
+Kennedy{Kennedy}
+Clive{Clive}
+Don{Don}
+Masseredo{Masseredo}
+Francisco Manuel{Francisco Manuel}
+Ortega{Ortega}
+Richard{Richard}
+Sharpe{Sharpe}
+Patrick{Patrick}
+Harper{Harper}
+Higgins{Higgins}
+Cooper{Cooper}
+Haggman{Haggman}
+Harris{Harris}
+Tanner{Tanner}
+Baker{Baker}
+Fisher{Fisher}
+Williams{Williams}
+Norton{Norton}
+Brown{Brown}
+Evans{Evans}
+Archer{Archer}
+Tongue{Tongue}
+Mansfield{Mansfield}
+Perkins{Perkins}
+Dunnitt{Dunnitt}
+Hogan{Hogan}
+Murray{Murray}
+Hew{Hew}
+Dalrymple{Dalrymple}
+Wilks{Wilks}
+Tompkins{Tompkins}
+Stanley{Stanley}
+Hughes{Hughes}
+Guerilla{Guerilla}
+One{One}
+Two{Two}
+Three{Three}
+Donatien{Donatien}
+Thibaud{Thibaud}
+
+{=====| TempQuest.c |=====}
+Captain{Captain}
+Simon{Simon}
+Blunden{Blunden}
+Cecil Scott{Cecil Scott}
+Forester{Forester}
+Capitaine{Capitaine}
+de Corvette{de Corvette}
+
+{=====| 86 characters |=====}

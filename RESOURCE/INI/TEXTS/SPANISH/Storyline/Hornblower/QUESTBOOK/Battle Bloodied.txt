@@ -1,0 +1,7 @@
+title=Fogueado en la batalla
+text.t1=El 'Téméraire' ha sido hundido. Ahora zarparemos hacia #sCharlestown# antes de que el resto de los franceses lleguen allí. El 'Justinian' pondrá rumbo a #sisland_Antigua#, así que estamos solos. 
+text.t2=¡Un ascenso, teniente en funciones! Eso está muy bien, pero estoy cansado. Iré a la taberna a dormir un poco. Luego buscaré al señor Hunter, un guardiamarina, y veré cómo están los heridos.
+text.t3=Navegando rumbo a #sGreenford#. Al menos es un puerto amistoso.
+text.t4=El 'Indy' y los otros barcos grandes van a dirigirse a #sisland_Antigua#. Yo debo quedarme aquí para reagrupar a la tripulación. Tengo que encontrar al señor Hunter.
+text.t5=Tenemos que encontrar a 'Smug' Larr. Tiene su casa junto al puente.
+text.t6=El túnel que va a la Academia está en la habitación trasera después de subir las escaleras. También conduce al campamento pirata. Me pregunto qué encontraremos primero.

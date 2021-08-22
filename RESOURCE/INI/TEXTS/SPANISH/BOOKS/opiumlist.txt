@@ -1,0 +1,4 @@
+TEXT	{
+Éstas son las personas conocidas por comprar opio:
+#sOpiumList#
+}

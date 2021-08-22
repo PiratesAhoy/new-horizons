@@ -1,0 +1,142 @@
+﻿// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| standard.c |=====}
+Nathaniel{Nathaniel}
+Hawk{Hawk}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+
+{=====| Officers.c |=====}
+Danielle{Danielle}
+Greene{Greene}
+Ralph{Ralph}
+Fawn{Fawn}
+Clement{Clement}
+Barnabas{Barnabas}
+Aurentius{Aurentius}
+Leborio{Leborio}
+Drago{Drago}
+Gervasio{Gervasio}
+Serrao{Serrao}
+
+{=====| Story.c |=====}
+Vincent{Vincent}
+Bethune{Bethune}
+Waulter{Waulter}
+Tomlison{Tomlison}
+Remy{Remy}
+Gatien{Gatien}
+Yves{Yves}
+Giner{Giner}
+Begon{Begon}
+Monchaty{Monchaty}
+Isaac{Isaac}
+Razilly{Razilly}
+Jacques{Jacques}
+Belmondo{Belmondo}
+Pierre{Pierre}
+Leverrier{Leverrier}
+Abelard{Abelard}
+Tarnaud{Tarnaud}
+Wigayn{Wigayn}
+Ratel{Ratel}
+Raoul{Raoul}
+Rheims{Rheims}
+Valentin{Valentin}
+Massoni{Massoni}
+Amiel{Amiel}
+Berangere{Berangere}
+Faust{Faust}
+Gasquet{Gasquet}
+Virgile{Virgile}
+Boon{Boon}
+Tobias{Tobias}
+Ewan{Ewan}
+Glover{Glover}
+Wilfred{Wilfred}
+English Soldier{Soldado inglés}
+French Soldier{Soldado francés}
+Rabel{Rabel}
+Yverneau{Yverneau}
+Anacleto{Anacleto}
+Rui Sa{Rui Sa}
+Pinto{Pinto}
+Sidonio{Sidonio}
+Ogarrio{Ogarrio}
+Lieutenant{Teniente}
+Harris{Harris}
+Malcolm{Malcolm}
+Hart{Hart}
+Henry{Henry}
+Banfield{Banfield}
+Wauter{Wauter}
+Keech{Keech}
+Lewellyn{Lewellyn}
+Belt{Belt}
+Thomas{Thomas}
+Norton{Norton}
+Brian{Brian}
+The Slayer{el Asesino}
+Ferro{Ferro}
+Cerezo{Cerezo}
+Hector{Hector}
+Barbossa{Barbossa}
+Robert{Robert}
+Christopher{Christopher}
+Silehard{Silehard}
+
+{=====| TempQuest.c |=====}
+Bythesea{Bythesea}
+Harold{Harold}
+Barrat{Barrat}
+Sailor{Marinero}
+Pirate{Pirata}
+Fernam{Fernam}
+Barrios{Barrios}
+Violate{Violate}
+Gyles{Gyles}
+Dubois{Dubois}
+citizen{residente}
+Soldier{Soldado}
+Ragetti{Ragetti}
+Pintel{Pintel}
+
+{=====| TempQuestEnemy.c |=====}
+Captain{Capitán}
+Kalen{Kalen}
+Mottram{Mottram}
+French Patrol{Patrulla francesa}
+French{Francés}
+Sapper{Zapador}
+Simon{Simon}
+Buck{Buck}
+Rene{Rene}
+Bouillon{Bouillon}
+Bodyguard{Guardaespaldas}
+Dutruel{Dutruel}
+Ian{Ian}
+Bigg{Bigg}
+Bonnat{Bonnat}
+Brendan{Brendan}
+Attwick{Attwick}
+Edd{Edd}
+Pease{Pease}
+Kevin{Kevin}
+Renner{Renner}
+Terry{Terry}
+Sellar{Sellar}
+Donald{Donald}
+Drake{Drake}
+David{David}
+Much{Much}
+Cole{Cole}
+Brock{Brock}
+Shaggy{Shaggy}
+Harry{Harry}
+Stephan{Stephan}
+Bonser{Bonser}
+Oswald{Oswald}
+Chappel{Chappel}
+
+{=====| 123 characters |=====}

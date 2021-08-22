@@ -1,4 +1,4 @@
-string DLG_TEXT[37] = {
+string DLG_TEXT[44] = {
 "Good day, ",
 ". Have you something to report?",
 "Good day, sir. Nothing to report, sir.",
@@ -36,4 +36,11 @@ string DLG_TEXT[37] = {
 "We're giving you a 74. A Frenchman we captured and renamed the 'Sutherland'. '",
 "'s' crew will be transferred to her.",
 "I'm extremely grateful, sir.",
+"You'll be attached to Leighton's squadron.",
+"Now, gentlemen, the confounded war. I think Napoleon has bitten off more than he can chew in the Caribbean. We have an excellent chance to defeat him and bring victory to Britain, if we can maintain our naval blockade of #sisland_Hispaniola#. But not a single French ship must sail. That's up to you.",
+"But first, dispose of your prize ships, then report back here. Any ships you still have then will be assigned to Leighton.",
+"Yes, sir. I shall go to the shipyard now.",
+"Ah, welcome back, ",
+". I take it you are now ready to join Leighton's squadron?",
+"Yes, sir.",
 }

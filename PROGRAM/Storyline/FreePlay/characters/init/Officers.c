@@ -2,13 +2,14 @@ void CreateOfficersCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	//William Sullivan
 	//First Mate
-	ch.name = TranslateString("","William");
-	ch.lastname = TranslateString("","Sullivan");
+	ch.old.name = "William";
+	ch.old.lastname = "Sullivan";
+	ch.name = TranslateString("", "William");
+	ch.lastname = TranslateString("", "Sullivan");
 	ch.id		= "William Sullivan";
 	ch.model	= "Corsair1_1";
 	ch.sex = "man";
@@ -65,8 +66,10 @@ void CreateOfficersCharacters(ref n)
 
 	//David O'Hara
 	//Navigator
-	ch.name = TranslateString("","David");
-	ch.lastname = TranslateString("","O'Hara");
+	ch.old.name = "David";
+	ch.old.lastname = "O'Hara";
+	ch.name = TranslateString("", "David");
+	ch.lastname = TranslateString("", "O'Hara");
 	ch.id		= "David O'Hara";
 	ch.model	= "Corsair3_J";
 	ch.sex = "man";
@@ -123,8 +126,10 @@ void CreateOfficersCharacters(ref n)
 
 	//Brian Darcy
 	//Gunner
-	ch.name = TranslateString("","Brian");
-	ch.lastname = TranslateString("","Darcy");
+	ch.old.name = "Brian";
+	ch.old.lastname = "Darcy";
+	ch.name = TranslateString("", "Brian");
+	ch.lastname = TranslateString("", "Darcy");
 	ch.id		= "Brian Darcy";
 	ch.model	= "capstan";
 	ch.sex = "man";
@@ -181,8 +186,10 @@ void CreateOfficersCharacters(ref n)
 
 	//Killian Kildare
 	//Boatswain
-	ch.name = TranslateString("","Killian");
-	ch.lastname = TranslateString("","Kildare");
+	ch.old.name = "Killian";
+	ch.old.lastname = "Kildare";
+	ch.name = TranslateString("", "Killian");
+	ch.lastname = TranslateString("", "Kildare");
 	ch.id		= "Killian Kildare";
 	ch.model	= "CapJRMM";
 	ch.sex = "man";
@@ -241,8 +248,10 @@ void CreateOfficersCharacters(ref n)
 
 	//Emily Butler
 	//Surgeon
-	ch.name = TranslateString("","Emily");
-	ch.lastname = TranslateString("","Butler");
+	ch.old.name = "Emily";
+	ch.old.lastname = "Butler";
+	ch.name = TranslateString("", "Emily");
+	ch.lastname = TranslateString("", "Butler");
 	ch.id		= "Emily Butler";
 	ch.model	= "Fanielle";
 	ch.sex = "woman";
@@ -279,9 +288,11 @@ void CreateOfficersCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.perks.list.BasicDefence = true;
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
-	ch.perks.list.ShipDefenceProfessional = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.ProfessionalDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.perks.list.SharedExperience = true;
 	ch.money = "1000";
 	ch.quest.help = "0";
@@ -295,8 +306,10 @@ void CreateOfficersCharacters(ref n)
 
 	//Uriah O'Bannon
 	//Carpenter
-	ch.name = TranslateString("","Uriah");
-	ch.lastname = TranslateString("","O'Bannon");
+	ch.old.name = "Uriah";
+	ch.old.lastname = "O'Bannon";
+	ch.name = TranslateString("", "Uriah");
+	ch.lastname = TranslateString("", "O'Bannon");
 	ch.id		= "Uriah O'Bannon";
 	ch.model	= "will_2";
 	ch.sex = "man";
@@ -335,8 +348,10 @@ void CreateOfficersCharacters(ref n)
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.LightRepair = true;
 	ch.perks.list.InstantRepair = true;
-	ch.perks.list.BasicBattleState = true;
-	ch.perks.list.AdvancedBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.AdvancedDamageControl = true;
+	ch.perks.list.Rigging = true;
+	ch.perks.list.RiggingAdvance = true;
 	ch.money = "1000";
 	ch.quest.help = "0";
 	ch.quest.dialog = "0";
@@ -349,8 +364,10 @@ void CreateOfficersCharacters(ref n)
 
 	//Angus Calhoun
 	//Quartermaster
-	ch.name = TranslateString("","Angus");
-	ch.lastname = TranslateString("","Calhoun");
+	ch.old.name = "Angus";
+	ch.old.lastname = "Calhoun";
+	ch.name = TranslateString("", "Angus");
+	ch.lastname = TranslateString("", "Calhoun");
 	ch.id		= "Angus Calhoun";
 	ch.model	= "gm_crew22";
 	ch.sex = "man";

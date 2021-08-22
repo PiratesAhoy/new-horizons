@@ -1,0 +1,11 @@
+title=Misión secundaria: Contrabando de opio.
+text.t1=He conseguido algo de opio. Seguramente, los contrabandistas estén interesados. Debería hablar con ellos al respecto.
+text.t2=Los contrabandistas me han hablado del tráfico de opio. Tengo una lista de clientes de todo el Caribe, y me han dado un libro que explica cómo funciona el negocio.
+text.t3=Debería llevar esta lista de clientes al gobernador. ¡Puede que la encuentre interesante!
+text.t4=Tengo que andarme con cuidado. Parece que los contrabandistas de las distintas islas mantienen un contacto muy estrecho los unos con los otros. Si hago algo que los perjudique, afectará a mi relación con todos ellos.
+text.t5=He aprendido que el tráfico de opio no es tan fácil como parecía. Un guardia se me ha acercado para preguntarme qué es lo que llevaba encima. Por suerte, he resuelto la situación.
+text.t6=Ahora ya sé cómo funciona el tráfico de opio en el Caribe. He escrito un informe para entregar al gobernador.
+text.t7=El gobernador ha quedado muy sorprendido al ver la lista de compradores de opio. Cree que será una herramienta muy útil en su lucha contra el contrabando.
+text.t8=El gobernador ha quedado muy satisfecho con el informe y yo he recibido una buena recompensa. Debería seguir investigando a ver si descubro mas pistas.
+text.t9=De momento he concluido con mi tarea para el gobernador, ¡pero puede que haya más trabajo en el futuro!
+text.t10=Los contrabandistas me han dicho que este opio tiene algunos efectos extraños. Si quiero averiguar más al respecto, debería preguntar a alguien que sepa mucho sobre medicina.

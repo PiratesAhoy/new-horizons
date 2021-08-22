@@ -1,0 +1,12 @@
+Dialog_window_title
+{
+Ventana de dialogo
+}
+Dialog_window_info
+{
+????La ventana de dialogo aparece cuando se presiona el boton "Accion" que se encuentra delante de algun personaje. O los personajes pueden iniciarlo ellos mismos, si quieren hablar con el personaje del jugador.
+????En la esquina superior izquierda del dialogo, vera la cara de un personaje con el que habla. Y a la derecha el jugador puede ver el nombre de ese personaje.
+????En la parte inferior de la pantalla hay una ventana de texto. Aqui el jugador ve lo que el personaje le dice y tambien ve una lista de frases del jugador que puede decirle al personaje. Las palabras de los personajes son doradas, y las respuestas del jugador aparecen en azul. La respuesta del jugador actualmente seleccionado se resalta con un color azul brillante (foto 2).
+????A veces no todo el texto o las respuestas pueden caber en la ventana de texto. En este caso, el jugador ve flechas verdes hacia arriba y hacia abajo en la parte derecha de la ventana de texto (foto 3). Y si hay algunas lineas de texto debajo, la flecha hacia abajo se resaltara con verde brillante. Lo mismo acerca de la flecha hacia arriba: se resaltara si hay texto arriba.
+????La seleccion de la respuesta del jugador se puede realizar con los botones de seleccion de dialogo, y la activacion de la respuesta seleccionada se puede realizar con la tecla de "accion" del dialogo.
+}

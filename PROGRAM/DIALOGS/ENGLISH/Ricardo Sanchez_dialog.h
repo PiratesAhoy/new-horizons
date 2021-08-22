@@ -1,4 +1,4 @@
-string DLG_TEXT[57] = {
+string DLG_TEXT[51] = {
 "Good to meet you, ",
 ". My name is ",
 ", and I am at your service.",
@@ -20,14 +20,6 @@ string DLG_TEXT[57] = {
 "Neither, thanks. So long.",
 "I'm all ears. What's on your mind?",
 "I'm looking for work for my ship and crew.",
-"I'm interested in a worker of yours, Clauss. I'd like to pay off his debt.",
-"Pay for him? Sure, you can do that. He has worked off a part of his debt...",
-"Enough. Just tell me how much money do I have to give you.",
-"Let me check my papers...aha...yes.... Yes, here it is. Clauss owes me 2632 gold.",
-"Hmm, the lad spent up a lot. Here's your money. Now tell me, where can I find Clauss?",
-"I think I'll delay the payment a bit.",
-"I've sent him to the tavern to get a keg of ale. You'll find him there.",
-"Thanks.",
 "I'm afraid I don't need your services just now.",
 "That's too bad. Let's talk about something else.",
 "I refuse to trade with a person of your reputation and relations. Now get out, ",
@@ -36,7 +28,7 @@ string DLG_TEXT[57] = {
 "I was asked to deliver some cargo to you.",
 "Surely you must have some job you'd like done. I'd be happy to lend you my services for a fee.",
 "I can't talk right now.",
-"No, I won't be needing your services... at least, not as long as you're sinking pirate ships.",
+"No, I won't be needing your services... at least, not as long as you're sinking #snation_desc# ships.",
 "In that case, goodbye.",
 "I'm sorry, but I don't have anything for you at the moment.",
 "I'll come back later, then.",
@@ -56,5 +48,6 @@ string DLG_TEXT[57] = {
 "I'm sorry. I have nothing for you now.",
 "That's a pity. Perhaps you'll answer some questions, then.",
 "Story of my life. How about some information, then?",
-
+"Yes, I'm expecting #squantity# cwt of #scargo#. Do you have it?",
+"Umm... some of it appears to have been misplaced. Don't worry, I'll replace what was lost and bring it to you!",
 };

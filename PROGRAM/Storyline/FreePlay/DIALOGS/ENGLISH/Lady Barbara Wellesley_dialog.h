@@ -1,9 +1,9 @@
-string DLG_TEXT[50] = {
+string DLG_TEXT[60] = {
 "You look flustered, is everything well with you?",
 "Oh! Err... Yes, M'lady.",
 "Ahem..hem...hem...",
 "My name is ",
-"? You're not related to the Duke of Wellington?",
+"#sname#? You're not related to the Duke of Wellington?",
 "He's my brother.",
 "But... A Spanish lugger!",
 "There's yellow fever in #sIsla Muelle#. When Captain ",
@@ -49,4 +49,14 @@ string DLG_TEXT[50] = {
 "Goodbye, ",
 ". Thank you for your kindness.",
 "Goodbye, Lady Barbara.",
+"Captain ",
+"?",
+"Barbara!",
+"I hoped we would meet.  I wanted to thank you again for bringing me here.",
+"It was my pleasure. And may I take this opportunity to congratulate you on your wedding? There was a report in the newspaper.",
+"Yes, it was quite an occasion.",
+"Well, I must take my leave now. I wish you every happiness.",
+"Thank you. Goodbye, ",
+".",
+"Goodbye, Barbara.",
 }

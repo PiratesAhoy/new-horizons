@@ -61,10 +61,21 @@ void ProcessDialogEvent()
 			link.l4.go = "exit";
 		break;
 
+		case "not_again":
+			dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[11];
+			link.l1.go = "not_again2";
+		break;
+
+		case "not_again2":
+			dialog.text = DLG_TEXT[12];
+			link.l1 = DLG_TEXT[13];
+			link.l1.go = "exit";
+		break;
+
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
 		break;
-
 	}
 }

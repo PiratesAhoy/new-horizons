@@ -1,0 +1,8 @@
+title=Woodes Rogers crew
+text.t1=Just like I thought - they're after the Pistolbelt. Maybe it's best to return to Port Royale and Rogers' family.
+text.t2=They have killed the Governor! I'll follow Caroline to him.
+text.t3=I'll continue to help Caroline and watch out for the officers.
+text.t4=Our last chance is to get help from Charles Vane. Selkirk opens for me...
+text.t5=The crew is defeated but some of the officers are still alive.
+text.t6=We killed the last of the crew but Courtney, Cook, Dampier and Dover managed to escape! 
+text.t7=

@@ -604,7 +604,15 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[135];
 			Link.l1 = DLG_TEXT[136];
 			Link.l1.go = "exit";
-			Diag.TempNode = "Second time";		
+			Diag.TempNode = "Second time";
+		break;
+
+		case "Take_Me_Home_Repeat":
+			Dialog.snd = "voice\REDI\REDI018";
+			d.Text = DLG_TEXT[137] + GetMyFirstNames(PChar, false) + DLG_TEXT[138];
+			Link.l1 = DLG_TEXT[139];
+			Link.l1.go = "exit";			
+			Diag.Tempnode = "Take_Me_Home_Repeat";
 		break;
 	}
 }

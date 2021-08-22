@@ -40,6 +40,13 @@ void ProcessDialogEvent()
 			DialogExit();
 		break;
 
+		case "exit_reset":
+			PChar.quest.speaker = NPChar.id;
+			AddDialogExitQuest("reset_crewmember");
+			Diag.CurrentNode = Diag.TempNode; //"First time";
+			DialogExit();
+		break;
+
 	
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
@@ -131,91 +138,90 @@ void ProcessDialogEvent()
 		break;
 
 		case "take_hostage_to_ship":
-			dialog.text = DLG_TEXT[28] + gov_kid2 + "!";
-			link.l1 = DLG_TEXT[29] + GetMyAddressForm(characterFromID(PChar.quest.romance), characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMySimpleName(characterFromID(PChar.quest.romance)) + DLG_TEXT[30] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[31];
+			if (PChar.sex == "woman") dialog.text = DLG_TEXT[29];
+			else dialog.text = DLG_TEXT[28];
+			link.l1 = DLG_TEXT[30] + GetMyAddressForm(characterFromID(PChar.quest.romance), characterFromID(PChar.quest.romance), ADDR_CIVIL, false, false) + " " + GetMySimpleName(characterFromID(PChar.quest.romance)) + DLG_TEXT[31] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[32];
 			link.l1.go = "exit";
 		break;
 
 		case "married_congrats":
-			dialog.text = DLG_TEXT[32];
-			link.l1 = DLG_TEXT[33];
+			dialog.text = DLG_TEXT[33];
+			link.l1 = DLG_TEXT[34];
 			link.l1.go = "exit";
 		break;
 
 		case "abduction_move_ship":
 			dialog.text = DLG_TEXT[0];
-			link.l1 = DLG_TEXT[34];
+			link.l1 = DLG_TEXT[35];
 			link.l1.go = "exit";
 		break;
 
 		case "abduction_officer_replace_romance":
-//			if (PChar.sex == "man") Preprocessor_Add("pronoun", XI_ConvertString("she"));
-//			else Preprocessor_Add("pronoun", XI_ConvertString("he"));
 			Preprocessor_Add("pronoun", gov_kid1);
-			dialog.text = DLG_TEXT[40] + GetMySimpleName(characterfromID(PChar.quest.romance)) + DLG_TEXT[41];
-			link.l1 = DLG_TEXT[42];
+			dialog.text = DLG_TEXT[41] + GetMySimpleName(characterfromID(PChar.quest.romance)) + DLG_TEXT[42];
+			link.l1 = DLG_TEXT[43];
 			link.l1.go = "exit";
 		break;
 
 		case "abduction_romance_not_back":
-			dialog.text = DLG_TEXT[35];
-			link.l1 = DLG_TEXT[36] + GetMySimpleName(characterfromID(PChar.quest.romance)) + DLG_TEXT[37];
+			dialog.text = DLG_TEXT[36];
+			link.l1 = DLG_TEXT[37] + GetMySimpleName(characterfromID(PChar.quest.romance)) + DLG_TEXT[38];
 			link.l1.go = "abduction_romance_not_back2";
 		break;
 
 		case "abduction_romance_not_back2":
 			Preprocessor_Add("pronoun", gov_kid1);
 			Preprocessor_Add("pronoun2", gov_kid);
-			dialog.text = DLG_TEXT[38];
-			link.l1 = DLG_TEXT[39];
+			dialog.text = DLG_TEXT[39];
+			link.l1 = DLG_TEXT[40];
 			AddDialogExitQuest("abduction_officer_return_town");
 			link.l1.go = "exit";
 		break;
 
 		case "mona_attack_detach_fleet":
-			dialog.text = DLG_TEXT[43];
-			link.l1 = DLG_TEXT[44];
+			dialog.text = DLG_TEXT[44];
+			link.l1 = DLG_TEXT[45];
 			link.l1.go = "mona_attack_detach_fleet2";
 		break;
 
 		case "mona_attack_detach_fleet2":
-			dialog.text = DLG_TEXT[45];
-			if (PChar.quest.alignment == "good") link.l1 = DLG_TEXT[46];
-			else link.l1 = DLG_TEXT[47];
+			dialog.text = DLG_TEXT[46];
+			if (PChar.quest.alignment == "good") link.l1 = DLG_TEXT[47];
+			else link.l1 = DLG_TEXT[48];
 			link.l1.go = "mona_attack_detach_fleet3";
 		break;
 
 		case "mona_attack_detach_fleet3":
-			dialog.text = DLG_TEXT[48];
+			dialog.text = DLG_TEXT[49];
 			AddDialogExitQuest("mona_attack_detach_fleet");
 			if (CheckAttribute(PChar, "quest.mona_attack_prepare_for_battle"))
 			{
-				link.l1 = DLG_TEXT[49];
+				link.l1 = DLG_TEXT[50];
 				AddDialogExitQuest("mona_attack_return_to_fort");
 			}
 			else
 			{
-				link.l1 = DLG_TEXT[49] + DLG_TEXT[62];
+				link.l1 = DLG_TEXT[50] + DLG_TEXT[63];
 				PChar.quest.mona_attack_prepare_for_battle = "fleet_done";
 			}
 			link.l1.go = "exit";
 		break;
 
 		case "mona_attack_french_on_way":
-			dialog.text = DLG_TEXT[63];
-			link.l1 = DLG_TEXT[64];
+			dialog.text = DLG_TEXT[64];
+			link.l1 = DLG_TEXT[65];
 			link.l1.go = "exit";
 		break;
 
 		case "mona_attack_pass_battle_won":
-			dialog.text = DLG_TEXT[65];
-			link.l1 = DLG_TEXT[66];
+			dialog.text = DLG_TEXT[66];
+			link.l1 = DLG_TEXT[67];
 			link.l1.go = "mona_attack_pass_battle_won2";
 		break;
 
 		case "mona_attack_pass_battle_won2":
-			dialog.text = DLG_TEXT[67];
-			link.l1 = DLG_TEXT[68];
+			dialog.text = DLG_TEXT[68];
+			link.l1 = DLG_TEXT[69];
 			link.l1.go = "exit";
 		break;
 
@@ -224,15 +230,15 @@ void ProcessDialogEvent()
 			y = GetCompanionQuantity(PChar);
 			if ((x + y - 1) > COMPANION_MAX)
 			{
-				dialog.text = DLG_TEXT[50] + DLG_TEXT[52] + (y-1) + DLG_TEXT[53] + (x-1) + DLG_TEXT[54];
-				link.l1 = DLG_TEXT[57];
+				dialog.text = DLG_TEXT[51] + DLG_TEXT[53] + (y-1) + DLG_TEXT[54] + (x-1) + DLG_TEXT[55];
+				link.l1 = DLG_TEXT[58];
 				AddDialogExitQuest("mona_attack_goto_shipyard");
 				link.l1.go = "exit";
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[50] + DLG_TEXT[51];
-				link.l1 = DLG_TEXT[55] + GetMyName(CharacterFromID(PChar.quest.mona_attack.fleet_commander)) + DLG_TEXT[56];
+				dialog.text = DLG_TEXT[51] + DLG_TEXT[52];
+				link.l1 = DLG_TEXT[56] + GetMyName(CharacterFromID(PChar.quest.mona_attack.fleet_commander)) + DLG_TEXT[57];
 				AddDialogExitQuest("mona_attack_rejoin_fleet2");
 				link.l1.go = "exit";
 			}
@@ -243,34 +249,34 @@ void ProcessDialogEvent()
 			y = GetCompanionQuantity(PChar);
 			if ((x + y - 1) > COMPANION_MAX)
 			{
-				dialog.text = DLG_TEXT[58] + (x-1) + DLG_TEXT[59];
-				link.l1 = DLG_TEXT[60];
+				dialog.text = DLG_TEXT[59] + (x-1) + DLG_TEXT[60];
+				link.l1 = DLG_TEXT[61];
 				AddDialogExitQuest("mona_attack_goto_shipyard");
 				link.l1.go = "exit";
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[61];
-				link.l1 = DLG_TEXT[55] + GetMyName(CharacterFromID(PChar.quest.mona_attack.fleet_commander)) + DLG_TEXT[56];
+				dialog.text = DLG_TEXT[62];
+				link.l1 = DLG_TEXT[56] + GetMyName(CharacterFromID(PChar.quest.mona_attack.fleet_commander)) + DLG_TEXT[57];
 				AddDialogExitQuest("mona_attack_rejoin_fleet2");
 				link.l1.go = "exit";
 			}
 		break;
 
 		case "hunt_what_we_did":
-			dialog.text = DLG_TEXT[69];
-			link.l1 = DLG_TEXT[70];
+			dialog.text = DLG_TEXT[70];
+			link.l1 = DLG_TEXT[71];
 			link.l1.go = "hunt_what_we_did2";
 		break;
 
 		case "hunt_what_we_did2":
-			dialog.text = DLG_TEXT[71];
-			link.l1 = DLG_TEXT[72];
+			dialog.text = DLG_TEXT[72];
+			link.l1 = DLG_TEXT[73];
 			link.l1.go = "exit";
 		break;
 
 		case "hunt_release_you":
-			dialog.text = DLG_TEXT[73];
+			dialog.text = DLG_TEXT[74];
 			link.l1 = "...";
 			link.l1.go = "exit";
 		break;
@@ -278,74 +284,110 @@ void ProcessDialogEvent()
 		case "hunt_take_knife":
 			GiveItem2Character(PChar,"Barmansknife");
 			EquipCharacterByItem(PChar,"Barmansknife");
-			dialog.text = DLG_TEXT[74];
-			link.l1 = DLG_TEXT[75];
+			dialog.text = DLG_TEXT[75];
+			link.l1 = DLG_TEXT[76];
 			link.l1.go = "exit";
 		break;
 
 		case "hunt_well_done":
-			dialog.text = DLG_TEXT[76];
-			link.l1 = DLG_TEXT[77];
+			dialog.text = DLG_TEXT[77];
+			link.l1 = DLG_TEXT[78];
 			link.l1.go = "hunt_cooks_assistant";
 		break;
 
 		case "hunt_cooks_assistant":
-			dialog.text = DLG_TEXT[78] + GetMySimpleName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[79];
-			link.l1 = DLG_TEXT[80];
+			dialog.text = DLG_TEXT[79] + GetMySimpleName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[80];
+			link.l1 = DLG_TEXT[81];
 			link.l1.go = "hunt_good_with_pan";
 		break;
 
 		case "hunt_good_with_pan":
-			dialog.text = DLG_TEXT[81];
-			link.l1 = DLG_TEXT[82];
+			dialog.text = DLG_TEXT[82];
+			link.l1 = DLG_TEXT[83];
 			link.l1.go = "hunt_cook_promotion";
 		break;
 
 		case "hunt_cook_promotion":
-			dialog.text = DLG_TEXT[83];
-			link.l1 = DLG_TEXT[84];
+			dialog.text = DLG_TEXT[84];
+			link.l1 = DLG_TEXT[85];
 			link.l1.go = "hunt_status_report";
 		break;
 
 		case "hunt_status_report":
-			dialog.text = DLG_TEXT[85] + GetMySimpleName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[86];
-			link.l1 = DLG_TEXT[87];
+			dialog.text = DLG_TEXT[86] + GetMySimpleName(CharacterFromID(PChar.quest.villain)) + DLG_TEXT[87];
+			link.l1 = DLG_TEXT[88];
 			link.l1.go = "exit";
 		break;
 
 		case "hunt_rescue_crew_from_prison":
-			dialog.text = DLG_TEXT[88];
-			link.l1 = DLG_TEXT[89];
+			dialog.text = DLG_TEXT[89];
+			link.l1 = DLG_TEXT[90];
 			link.l1.go = "hunt_how_escape";
 		break;
 
 		case "hunt_how_escape":
-			dialog.text = DLG_TEXT[90];
+			dialog.text = DLG_TEXT[91];
 			if (CheckCharacterItem(PChar, "fake_fort_release"))
 			{
-				link.l1 = DLG_TEXT[92] + DLG_TEXT[93];
+				link.l1 = DLG_TEXT[93] + DLG_TEXT[94];
 				link.l1.go = "hunt_villain_nicked_stuff";
 			}
-			link.l2 = DLG_TEXT[91] + DLG_TEXT[93];
+			link.l2 = DLG_TEXT[92] + DLG_TEXT[94];
 			link.l2.go = "hunt_villain_nicked_stuff";
 		break;
 
 		case "hunt_villain_nicked_stuff":
 			Preprocessor_Add("villain", GetMySimpleName(CharacterFromID(PChar.quest.villain)));
-			dialog.text = DLG_TEXT[94];
-			link.l1 = DLG_TEXT[95];
+			dialog.text = DLG_TEXT[95];
+			link.l1 = DLG_TEXT[96];
 			link.l1.go = "exit";
 		break;
 
 		case "hunt_rescue_crew_what_now":
-			dialog.text = DLG_TEXT[96];
-			link.l1 = DLG_TEXT[97];
+			dialog.text = DLG_TEXT[97];
+			link.l1 = DLG_TEXT[98];
 			link.l1.go = "exit";
 		break;
 
 		case "hunt_rescue_glad_to_be_out":
-			dialog.text = DLG_TEXT[98];
-			link.l1 = DLG_TEXT[99];
+			dialog.text = DLG_TEXT[99];
+			link.l1 = DLG_TEXT[100];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_cave_tactics":
+			dialog.text = DLG_TEXT[101];
+			if(CheckCharacterItem(PChar, "pistolgas"))
+			{
+				link.l1 = DLG_TEXT[102];
+				link.l1.go = "exit_reset";
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[104];
+				link.l1.go = "imperial_escort_cave_tactics2";
+				link.l2 = DLG_TEXT[103];
+				link.l2.go = "exit_reset";				
+			}
+		break;
+
+		case "imperial_escort_cave_tactics2":
+			dialog.text = DLG_TEXT[105];
+			link.l1 = DLG_TEXT[106];
+			link.l1.go = "imperial_escort_cave_tactics3";
+		break;
+
+		case "imperial_escort_cave_tactics3":
+			dialog.text = DLG_TEXT[107];
+			link.l1 = DLG_TEXT[108];
+			PChar.quest.imperial_escort.cave_climber = NPChar.id;
+			AddDialogExitQuest("imperial_escort_officer_prepare_climb_cave");
+			link.l1.go = "exit_reset";
+		break;
+
+		case "imperial_escort_down_from_cave":
+			dialog.text = "";
+			link.l1 = DLG_TEXT[109];
 			link.l1.go = "exit";
 		break;
 	}

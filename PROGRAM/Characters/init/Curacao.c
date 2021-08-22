@@ -74,21 +74,22 @@ void CreateCuracaoCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	AddGameCharacter(n, ch);
 
-//  Father Derksen -- Monk
-	ch.old.name = "Father";
+//  Vader Derksen -- Monk
+	ch.old.name = "Vader";
 	ch.old.lastname = "Derksen";
-	ch.name = TranslateString("","Father");
+	ch.name = TranslateString("","Vader");
 	ch.lastname = TranslateString("","Derksen");
-	ch.id		= "Father Derksen";
+	ch.id		= "Vader Derksen";
 	ch.model	= "Monk";
 	ch.sex = "man";
 	ch.sound_type = "priest";
 	ch.location	= "Willemstad_church";
 	ch.location.group = "goto";
 	ch.location.locator = "goto12";
-	ch.Dialog.Filename = "Father Abbott_dialog.c";
+	ch.Dialog.Filename = "Vader Derksen_dialog.c";
 	ch.Dialog.Filename.group = "church.c";
 	ch.nation = HOLLAND;
+	ch.quest.meeting = "0";
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";

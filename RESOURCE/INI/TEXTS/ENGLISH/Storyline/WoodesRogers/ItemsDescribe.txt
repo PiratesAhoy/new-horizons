@@ -25,6 +25,18 @@ itmdescr_bladepowderhornA
 Holds the finer priming powder.  Each cannon shot uses as much primer as a fully loaded musket uses common powder.
 }
 
+itmname_incense			{Incense}
+itmdescr_incense
+{
+Frankincense is an aromatic gum resin. When burned as incense, it creates a strong and beautiful aroma and provides very strong protection against all evil. 
+}
+
+itmname_nails 			{Nails}
+itmdescr_nails
+{
+Ordinary carpenter nails.
+}
+
 //--------------- AMMO END --------------------------------------------------------------------------------------
 //--------------- KEYS START --------------------------------------------------------------------------------------
 
@@ -148,6 +160,12 @@ itmdescr_bladekeysimple
 Yes! I got a black door key with the map.
 }
 
+itmname_key30		{Key}
+itmdescr_key30
+{
+A large Key marked with "Cave". 
+}
+
 itmname_key33		{Key}
 itmdescr_key33
 {
@@ -160,6 +178,36 @@ itmdescr_key34
 A key with the Maltese cross.
 }
 
+itmname_key35		{Key}
+itmdescr_key35
+{
+A key with a town symbol.
+}
+
+itmname_key36		{Key}
+itmdescr_key36
+{
+An old copper key with the Sun symbol.
+}
+
+itmname_key37		{Key}
+itmdescr_key37
+{
+This is the Boat Key!
+}
+
+itmname_key38		{Prison Keys}
+itmdescr_key38
+{
+Three Keys and a Whistle.
+}
+
+itmname_key39		{Key}
+itmdescr_key39
+{
+A key that's floating.
+}
+
 //--------------- KEYS END -----------------------------------------------------------------------------------------
 //--------------- BOOKS START --------------------------------------------------------------------------------------
 
@@ -169,91 +217,91 @@ itmdescr_book21
 Abstract of the British West Indian statutes. The cover is worn but has it ever been opened?
 }
 
-itmname_book22		{The Spanish Armada}
+itmname_book22			{The Spanish Armada}
 itmdescr_book22
 {
 The defeat of the Armada - an eye witness' story. Martin Frobisher, Commander of the frigate Triumph. 
 }
 
-itmname_book23		{The Royal Ship Wasa}
+itmname_book23			{The Royal Ship Wasa}
 itmdescr_book23
 {
 The secret behind the disaster. Original reckonings of Henrik Hybertsson now published. 
 }
 
-itmname_book24		{Notorious Pirates}
+itmname_book24			{Notorious Pirates}
 itmdescr_book24
 {
 A General History of the Robberies and Murders of the Most Notorious Pirates. Two volumes loaded with historical and contemporary pirate captains and their crew. By Captain Charles Johnson.  
 }
 
-itmname_book25		{A New Voyage Round the World}
+itmname_book25			{A New Voyage Round the World}
 itmdescr_book25
 {
 Published 1697 by William Dampier. All you could ever wish to know about the Miscito coast for example. The picture on the front cover is missing.
 }
 
-itmname_book26		{The Human Skeleton}
+itmname_book26			{The Human Skeleton}
 itmdescr_book26
 {
 A manual to all the 206 bones of a human being. Pictures.
 }
 
-itmname_book27		{Chymist}
+itmname_book27			{Chymist}
 itmdescr_book27
 {
 A german work of chemistry published in Leipzig 1729. Looks like it is about minerals and vegetables? 
 }
 
-itmname_book28		{Lolita}
+itmname_book28			{Lolita}
 itmdescr_book28
 {
 An interesting book in a somewhat delicate topic. Provided with childrenproof lock.
 }
 
-itmname_book29		{Les Fleurs du Mal}
+itmname_book29			{Les Fleurs du Mal}
 itmdescr_book29
 {
 Poems of the famous poet Charles Baudelaire. French edition.
 }
 
-itmname_book30		{Books of Poetry}
+itmname_book30			{Books of Poetry}
 itmdescr_book30
 {
 A rich collection of poetry from all around the world. This is really hot stuff.
 }
 
-itmname_book31		{A New Voyage Round the World}
+itmname_book31			{A New Voyage Round the World}
 itmdescr_book31
 {
 The Dampier book is now repaired.
 }
 
-itmname_book33		{Geografien}
+itmname_book33			{Geografien}
 itmdescr_book33
 {
 An old and very basic schoolbook, in any of those nordic languages perhaps?
 }
 
-itmname_book34		{Collection of Books}
+itmname_book34			{Collection of Books}
 itmdescr_book34
 {
 Contains: The Spanish silverfleets, Sugar and Rum trade in the Caribbean, Nassau an economic overview.
 }
 
-itmname_book35		{Mercurius}
+itmname_book35			{Mercurius}
 itmdescr_book35
 {
 Healing and curing with the dangerous but magnificient liquid metal.
 }
 
-itmname_book36		{The Gold-Bug}
+itmname_book36			{The Gold-Bug}
 itmdescr_book36
 {
 A fascinating longer short-story about the buried treasure of Captain Kidd. Author Edgar Allan Poe.
 }
 
-itmname_book41		{Art of Artillery}
+itmname_book41			{Art of Artillery}
 itmdescr_book41
 {
 1) Sponge your piece.
@@ -265,44 +313,44 @@ itmdescr_book41
 7) Fire!
 }
 
-itmname_book42		{Document}
+itmname_book42			{Document}
 itmdescr_book42
 {
 A very long scroll ......
 }
 
-itmname_book43		{Document}
+itmname_book43			{Document}
 itmdescr_book43
 {
 ...... with three groups of ......
 }
 
-itmname_book44		{Document}
+itmname_book44			{Document}
 itmdescr_book44
 {
 ...... strange symbols.
 }
 
-itmname_book45		{Two old Notebooks}
+itmname_book45			{Two old Notebooks}
 itmdescr_book45
 {
 Among the handwritten notes:
 "Never pour water into concentraded acids - it's the other way around!!!"
 }
 
-itmname_book46		{Scroll}
+itmname_book46			{Scroll}
 itmdescr_book46
 {
 More (cabbalistic?) symbols or what.
 }
 
-itmname_book47		{Parchment}
+itmname_book47			{Parchment}
 itmdescr_book47
 {
 A badly worn piece of parchment - with the obligatory cipher.
 }
 
-itmname_book48		{Alchymia}
+itmname_book48			{Alchymia}
 itmdescr_book48
 {
 The discovery of Acidium Vitrioli is credited to the 8th century alchemist Jabir ibn Hayyan.
@@ -311,19 +359,19 @@ It is one of the most important base ingredients, as many other acids may be pro
 Diluted it is used as a solvent for dissolving most metals with notable exceptions of gold, silver and platinum.
 }
 
-itmname_book49		{Book}
+itmname_book49			{Book}
 itmdescr_book49
 {
 An open heavy book .....
 }
 
-itmname_book50		{Book}
+itmname_book50			{Book}
 itmdescr_book50
 {
 ..... and the mystic characters are there. (A foreign alphabet maybe?)
 }
 
-itmname_book51		{The Alchemy of Aqua Vitae}
+itmname_book51			{The Alchemy of Aqua Vitae}
 itmdescr_book51
 {
 From Champagne to Cognac in a minute, by Renault Noir. A small sample is included.
@@ -341,136 +389,458 @@ itmdescr_bible_shot
 Selkirk's Bible has saved my life!
 }
 
-itmname_book63		{Manual of Medicine}
+itmname_book63			{Manual of Medicine}
 itmdescr_book63
 {
 An easy to grasp book in the popular scientific style. Many pictures.
 }
 
-itmname_book64		{L’Ordre de Malte}
+itmname_book64			{L’Ordre de Malte}
 itmdescr_book64
 {
 A french edition, author Annet de Clermont-Gessant.
 }
 
-itmname_book65		{Sacred Writ}
+itmname_book65			{Sacred Writ}
 itmdescr_book65
 {
 The Holy Bible complete with a small crucifix as a bookmarker.
 }
 
-itmname_book66		{Pile of Sheets}
+itmname_book66			{Pile of Sheets}
 itmdescr_book66
 {
 The accounts for the Maltese Order in Charlestown.
 }
 
-itmname_book67		{Document}
+itmname_book67			{Document}
 itmdescr_book67
 {
 Not sure what it is. Looks important though.
 }
 
-itmname_book68		{Scroll}
+itmname_book68			{Scroll}
 itmdescr_book68
 {
 It's all in latin. Could be anything from medicine to excorcism.
 }
 
+itmname_book69A			{Logbook}
+itmdescr_book69A
+{
+Edw. Thatch his Logbook 
+    1717 - 
+}
+
+itmname_book69B			{Logbook}
+itmdescr_book69B
+{
+Such a Day, Rum all out.
+Our Company somewhat sober.
+A damn'd Confusion amongst us!
+Rogues a plotting, great talk of Separation.
+So I look'd sharp for a Prize.
+Such a day took one, with a great deal of Liquor on board, 
+so kept the Company hot, damn'd hot, then all Things went well again.
+}
+
+itmname_book69C			{Logbook}
+itmdescr_book69C
+{
+Four of the french crew from La Concorde signed on:
+Thomas Martin, sailor
+Nicolas Bernard, sailor
+Julien Dubois, sailor
+Louis Arot, cabin boy
+
+I also kept the pilot, four surgeons, two carpenters, two sailors and the cook. 
+}
+
+itmname_tailors_book		{Order-book}
+itmdescr_tailors_book
+{
+Anna Balck, tailor.
+}
+
+itmname_book70_start		{Burned Book}
+itmdescr_book70_start
+{
+This Book with a mysterious sign has been damaged by fire.  
+}
+
+itmname_book70			{Alchemy Book}
+itmdescr_book70
+{
+Only the first part is legible.  
+}
+
+itmname_book70_0		{Alchemy Book}
+itmdescr_book70_0
+{
+A symbolic picture of a skeleton.
+}
+
+itmname_book70_1		{Alchemy Book}
+itmdescr_book70_1
+{
+Tabula Smaragdina or The Emerald Tablet, by Hermes Trismegistus. A compact and cryptic piece of the Hermetica reputed to contain the secret of the prima materia and its transmutation.
+}
+
+itmname_book70_2		{Alchemy Book}
+itmdescr_book70_2
+{
+I remember some of the symbols. It's two Salt and one Sulphur Acid. Let's check the the wall charts for those triangles.
+}
+
+itmname_book70_3		{Alchemy Book}
+itmdescr_book70_3
+{
+Same heat here.
+}
+
+itmname_book70_4		{Alchemy Book}
+itmdescr_book70_4
+{
+That means Mixture 4 and the lone triangle is Water.
+}
+
+itmname_book70_5		{Alchemy Book}
+itmdescr_book70_5
+{
+I recognize this! It's Sulphuric Acid and Nitre. And the mixture should be Distilled.
+}
+
+itmname_book70_6		{Alchemy Book}
+itmdescr_book70_6
+{
+That would be two wood.
+}
+
+itmname_book70_7		{Alchemy Book}
+itmdescr_book70_7
+{
+One wood.
+}
+
+itmname_book70_8		{Alchemy Book}
+itmdescr_book70_8
+{
+Water and three other ingredients. Distill I'm sure of.
+}
+
+itmname_book70_9		{Alchemy Book}
+itmdescr_book70_9
+{
+Mixture 8 and ...?
+}
+
+itmname_book70_10		{Alchemy Book}
+itmdescr_book70_10
+{
+It's all damaged by fire here.
+}
+
+itmname_book70_11		{Alchemy Book}
+itmdescr_book70_11
+{
+Too bad!
+}
+
+itmname_book71_9_start		{Damaged Book}
+itmdescr_book71_9_start
+{
+Many pages have been ripped out. I see one of those symbols there. Could it be..? 
+}
+
+itmname_book71_9		{Alchemy Book}
+itmdescr_book71_9
+{
+Only the last part is left.
+}
+
+itmname_book71_10		{Alchemy Book}
+itmdescr_book71_10
+{
+I've done this once! Grind Limestone and medium heat in the Crucible.
+}
+
+itmname_book71_11		{Alchemy Book}
+itmdescr_book71_11
+{
+Mixture 6, Sulfur, Calcium Oxide and ...? Low heat. Soon I'll speak this language fluently!
+}
+
+itmname_book71_12		{Alchemy Book}
+itmdescr_book71_12
+{
+Mixture 10 and Sulphuric Acid.
+}
+
+itmname_book71_13		{Alchemy Book}
+itmdescr_book71_13
+{
+Something should be Grinded.
+}
+
+itmname_book71_14		{Alchemy Book}
+itmdescr_book71_14
+{
+
+}
+
+itmname_book71_15		{Alchemy Book}
+itmdescr_book71_15
+{
+Mercury-something. Low heat.
+}
+
+itmname_book71_16		{Alchemy Book}
+itmdescr_book71_16
+{
+That's easy. Mix Mercury and Nitric Acid. Strong heat.
+}
+
+itmname_book71_17		{Alchemy Book}
+itmdescr_book71_17
+{
+Mixture 12 should be Filtrated.
+}
+
+itmname_book71_18		{Alchemy Book}
+itmdescr_book71_18
+{
+Mixture 10 and Sulphuric Acid.
+}
+
+itmname_book71_19		{Alchemy Book}
+itmdescr_book71_19
+{
+Something plus Sulfur Auretum.
+}
+
+itmname_book71_20		{Alchemy Book}
+itmdescr_book71_20
+{
+
+}
+
+itmname_book71_21		{Alchemy Book}
+itmdescr_book71_21
+{
+
+}
+
+itmname_book71_22		{Alchemy Book}
+itmdescr_book71_22
+{
+One symbol is Lead but the other one...
+}
+
+itmname_book71_23		{Alchemy Book}
+itmdescr_book71_23
+{
+
+}
+
+itmname_book72_package		{Package}
+itmdescr_book72_package
+{
+Wrapped in sailcloth and addressed to 'Rogers'.
+}
+
+itmname_book72_closed		{A General History of the Pyrates}
+itmdescr_book72_closed
+{
+Of the Robberies and Murders of the most Notorious Pyrates.
+And also their Policies, Discipline and Government,
+from their first rise and settlement in the Island of Providence 
+in 1717, to the present year 1724. By Captain Charles Johnson. 
+
+A note is attached to the book.
+}
+
+itmname_book72_openL		{A General History of the Pyrates}
+itmdescr_book72_openL
+{
+Is that the one I think it is?
+}
+
+itmname_book72_openR		{A General History of the Pyrates}
+itmdescr_book72_openR
+{
+Chapter I. Of Captain Avery.		        VIII. Of Captain England. 
+        II. The Rise of Pyrates.		     IX. Of Captain Davis. 
+         III. Of Captain Martel.	       X. Of Captain Roberts.
+       IV. Of Captain Bonnet.		      XI. Of Captain Worley.
+	        V. Of Captain Thatch.		       XII. Of Captain Lowther.
+   VI. Of Captain Vane.		        XIII. Of Captain Low.
+      VII. Of Captain Rackham.		   XIV. Of Captain Evans.
+}
+
+itmname_book72_edenL		{A General History of the Pyrates}
+itmdescr_book72_edenL
+{
+75      Of Black-Beard.
+Here's the first bookmark.
+}
+
+itmname_book72_edenR		{A General History of the Pyrates}
+itmdescr_book72_edenR
+{
+Of Black-Beard.      76	  
+}
+
+itmname_book72_caesarL		{A General History of the Pyrates}
+itmdescr_book72_caesarL
+{
+85      Of Black-Beard.
+Another page of interest.
+}
+
+itmname_book72_caesarR		{A General History of the Pyrates}
+itmdescr_book72_caesarR
+{
+Of Black-Beard.      86	
+}
+
+itmname_book72_handsL		{A General History of the Pyrates}
+itmdescr_book72_handsL
+{
+87      Of Black-Beard.
+More red ink here.
+}
+
+itmname_book72_handsR		{A General History of the Pyrates}
+itmdescr_book72_handsR
+{
+Of Black-Beard.      88	
+}
+
+itmname_book72_richardsL	{A General History of the Pyrates}
+itmdescr_book72_richardsL
+{
+145      Of Capt. Charles Vane.
+This would be the forth and last one.
+}
+
+itmname_book72_richardsR	{A General History of the Pyrates}
+itmdescr_book72_richardsR
+{
+Of Capt. Charles Vane.      146
+}
+
+itmname_book73_closed		{Liber Abaci}
+itmdescr_book73_closed
+{
+A very old italian book by Leonardo Pisano Fibonacci. A ruler and a mini compass are included. What's this?
+}
+
+itmname_book73_open		{Liber Abaci}
+itmdescr_book73_open
+{
+1 1 2 3 5 8 etc. Yes of course - the Fibonacci numbers. But why are some blue and some red?
+}
+
 //--------------- BOOKS END --------------------------------------------------------------------------------------
 //--------------- DOCUMENTS START --------------------------------------------------------------------------------
 
-itmname_picture1	{Picture}
+itmname_picture1		{Picture}
 itmdescr_picture1
 {
 A map of a fortified city: Caletum. Calais?
 }
 
-itmname_picture2	{Picture}
+itmname_picture2		{Picture}
 itmdescr_picture2
 {
 An map of Iceland by Arne Saknussem.
 }
 
-itmname_picture3	{Picture}
+itmname_picture3		{Picture}
 itmdescr_picture3
 {
 A part of the American east coast.
 }
 
-itmname_picture4	{Picture}
+itmname_picture4		{Picture}
 itmdescr_picture4
 {
 Blackbeard's last fight. From a painting by Howard Pyle.
 }
 
-itmname_picture5	{Picture}
+itmname_picture5		{Picture}
 itmdescr_picture5
 {
 This is an inventory of the estate.
 }
 
-itmname_picture6	{Picture}
+itmname_picture6		{Picture}
 itmdescr_picture6
 {
 A list of supplies for a ship.
 }
 
-itmname_picture7	{Picture}
+itmname_picture7		{Picture}
 itmdescr_picture7
 {
 A portrait of William Dampier. (much younger)
 }
 
-itmname_picture8	{Picture}
+itmname_picture8		{Picture}
 itmdescr_picture8
 {
 A copy of a painting by Frans Hals.
 }
 
-itmname_picture9	{Picture}
+itmname_picture8_A		{Painting}
+itmdescr_picture8_A
+{
+The painting I cut out. Signed FH 1634.
+}
+
+itmname_picture9		{Picture}
 itmdescr_picture9
 {
 A skeleton atlas.
 }
 
-itmname_picture10	{Picture}
+itmname_picture10		{Picture}
 itmdescr_picture10
 {
 An incomprehensible Alchemy picture. 
 }
 
-itmname_picture11	{Picture}
+itmname_picture11		{Picture}
 itmdescr_picture11
 {
 Alchemy again or physics?
 }
 
-itmname_picture13	{Picture}
+itmname_picture13		{Picture}
 itmdescr_picture13
 {
 A romantic seascape painting.
 }
 
-itmname_picture14	{Picture}
+itmname_picture14		{Picture}
 itmdescr_picture14
 {
 Tycho Brahe´s Uranienborg on the island Ven.
 }
 
-itmname_picture15	{Picture}
+itmname_picture15		{Picture}
 itmdescr_picture15
 {
 A young Woodes Rogers showing some papers to his father.
 }
 
-itmname_note1		{Note}
+itmname_note1			{Note}
 itmdescr_note1
 {
 Even though you are young and have strong eyes, the handwriting is too small to be read.
 }
 
-itmname_note2		{Note}
+itmname_note2			{Note}
 itmdescr_note2
 {
 Do I need glasses after all? The note says: 
@@ -504,6 +874,135 @@ itmname_pistolmap1		{Map}
 itmdescr_pistolmap1
 {
 An ancient map showing ....
+}
+
+itmname_doc60A			{Letter}
+itmdescr_doc60A
+{
+to
+Captain Edward Thache
+}
+
+itmname_doc60B			{Letter}
+itmdescr_doc60B
+{
+November 17, 1718
+My ffriend
+
+If this finds you yet in harbour I would have you make the best of 
+your way up as soon as possible your affairs will let you. I have 
+something more to to say to you than at present I can write; the 
+bearer will tell you then end of our Indian Warr, and Ganet can tell 
+you in part what I have to say to you, so referr you in some measure 
+to him.
+...
+}
+
+itmname_doc60C			{Letter}
+itmdescr_doc60C
+{
+...
+I really think these three men are heartily sorry at their difference 
+with you and will be very willing to ask your pardon; if I may 
+advise, be ffriends again, its better than falling out among your 
+selves.
+
+I expect the Governor this night or tomorrow, who I believe would 
+be likewise glad to see you before you goe, I have not time to add 
+save my hearty respects to you, and am your real ffriend.
+
+And Servant
+T. Knight
+}
+
+itmname_doc60D			{Backside of Letter}
+itmdescr_doc60D
+{
+P.I.R.A.T.E.
+That's written with another pen and another hand.
+}
+
+itmname_tailors_note		{Note}
+itmdescr_tailors_note
+{
+To the Red House deliver:
+3 pairs of dark blue trousers
+4 striped sweaters, preferably red/black
+
+To find a safe way through the jungle:
+Never right - right or left - left after each other.
+}
+
+itmname_auction_list_roll	{Document}
+itmdescr_auction_list_roll
+{
+Let's hope it really is a useful list of items sold at the auction.
+}
+
+itmname_auction_list_open	{Auction List}
+itmdescr_auction_list_open
+{
+Yes!
+}
+
+itmname_newspaper1		{Rogers' Notes}
+itmdescr_newspaper1
+{
+He has searched 'The Boston News-Letter' for information about Teach's crew.
+}
+
+itmname_newspaper2		{Rogers' Notes}
+itmdescr_newspaper2
+{
+He has searched 'The Virginia Gazette' for information about Teach's crew.
+}
+
+itmname_newspaper3		{Rogers' Notes}
+itmdescr_newspaper3
+{
+He has searched several other newspapers for information about Teach's crew.
+}
+
+itmname_doc61			{Governor's Letter}
+itmdescr_doc61
+{
+A document from Governor Stapleton which allows me to pass through the Antigua Fort and visit the Prison.
+}
+
+itmname_contract1		{Contract}
+itmdescr_contract1
+{
+A document with two seals, maybe a name and blood?
+}
+
+itmname_contract2		{Contract}
+itmdescr_contract2
+{
+Blood again but not much more.
+}
+
+itmname_contract3		{Contracts}
+itmdescr_contract3
+{
+Two sheets of papers this time. Besides a few letters - blood on both!
+}
+
+itmname_LOM_swe			{Kaperbrief}
+itmdescr_LOM_swe
+{
+A swedish Letter of Marque - written in german.
+}
+
+itmname_letter_cartagena	{Letter}
+itmdescr_letter_cartagena
+{
+Captain Pyle, please meet me in the New Cloister. I've got important information. Daniel De Foe.
+}
+
+itmname_letter_turks		{Letter}
+itmdescr_letter_turks
+{
+Captain Pyle, please meet me outside the Fort. I've got important information. Daniel De Foe.
 }
 
 //--------------- DOCUMENTS END --------------------------------------------------------------------------------------------------
@@ -824,13 +1323,13 @@ They have hidden a key in a secret space on the back - and it was the key to the
 //--------------- ALL MEDICINE CHESTS END --------------------------------------------------------------------------------------
 //--------------- ALL MEDICINE ITEMS START -------------------------------------------------------------------------------------
 
-itmname_mdchest_rope	{Rope}
+itmname_mdchest_rope		{Rope}
 itmdescr_mdchest_rope
 {
 A strong rope with an iron loop. 
 }
 
-itmname_medicine_list	{Medicine list}
+itmname_medicine_list		{Medicine list}
 itmdescr_medicine_list
 {
 In exchange for six citizens we demand a medicine chest filled with all ordinary cures and drugs. No prisoners will be released without these special medicines: Acetum Saturninum, Antidote, Etherbottle, Confectio Damocritis, Tincture of Laudenum and most important anything to cure syphilis. Any other drugs or medical items are of interest! Charles Vane. 
@@ -872,13 +1371,13 @@ itmdescr_blood_letting
 This small brass item opens your veins very quick and painless. The mechanism has twelve sharp knives that cut instantly. 
 }
 
-itmname_filled_large_drawer		{Drawer with many items}
+itmname_filled_large_drawer	{Drawer with many items}
 itmdescr_filled_large_drawer
 {
 The drawer is now filled with items I have collected earlier. 
 }
 
-itmname_empty_large_drawer		{Empty Drawer}
+itmname_empty_large_drawer	{Empty Drawer}
 itmdescr_empty_large_drawer
 {
 I guess the drawer belongs to the medicine chest. 
@@ -938,7 +1437,34 @@ itmdescr_mercury_bottles
 Most physicians treat syphilis with mercury, either orally, in vapor baths, or topically. The use of mercury is based on the ancient theory of humors and health.  
 }
 
+itmname_myrrh			{Myrrh}
+itmdescr_myrrh
+{
+Myrrh is a fragrant spice derived from the sap of a tree native to the Near East. It can be used as incense but also as a medical for special purposes.
+}
+
 //----------------- ALL MEDICINE ITEMS END -----------------------------------------------------------------------------------
+//--------------- OTHER MEDICINE ITEMS START ---------------------------------------------------------------------------------
+
+itmname_calabash		{Calabash with an Antidote}
+itmdescr_calabash
+{
+This unknown liquid cures poison.
+}
+
+itmname_herbs			{Bag of Herbs}
+itmdescr_herbs
+{
+A mixture of herbs that cures light wounds.
+}
+
+itmname_tape			{First Aid Kit}
+itmdescr_tape
+{
+Two bandages, a bottle with unknown content and a first aid plaster tape.
+}
+
+//--------------- OTHER MEDICINE ITEMS END -----------------------------------------------------------------------------------
 //----------------- ALL SURGERY KIT START ------------------------------------------------------------------------------------
 
 itmname_bladesurgery		{A First Aid Kit ...}
@@ -1169,6 +1695,13 @@ itmdescr_coin16
 A large portuguese gold moydore.
 }
 
+itmname_BB_coin			{Amulet}
+itmdescr_BB_coin
+{
+A chinese Gold Coin. Guess it has been carried around the neck, as an Amulet.
+For what? Good Luck? Maybe it didn't help...
+}
+
 //-------------------- COINS END --------------------------------------------------------------------------------------------
 //----------------- CHURCH ITEMS START --------------------------------------------------------------------------------------
 
@@ -1259,7 +1792,7 @@ The monk robes packed into rolls.
 itmname_pistolcenser		{Censer}
 itmdescr_pistolcenser
 {
-This intricately carved gold vessel is used for burning incense. Protects against zombies.
+This intricately carved gold vessel is used for burning incense.
 }
 
 itmname_book62		    	{Cessa Decipere}
@@ -1323,20 +1856,19 @@ itmname_sealed_map		{Sealed Paper}
 itmdescr_sealed_map
 {
 The paper has been sealed in several places with a thimble by way of seal; the very thimble I found in the Governor's pocket.
-I must be very careful with the knife when opening the seals.
+I'll try to use the folding knife when carefully openening the seals.
 }
 
-itmname_mapBB1			{Map Piece}
+itmname_mapBB1			{Hornigold's Map}
 itmdescr_mapBB1
 {
-A map of some islands with latitude and longitude, but it's only a piece of a larger Caribbean Map. 
+Looks like Hispaniola.  
 }
 
 itmname_package			{Oilcloth Packet}
 itmdescr_package
 {
 Under an old boat-cloak, whitened with sea-salt on many a harbour-bar, a bundle tied up in oilcloth and looking like papers.
-The bundle is sewn together, I'll need something to cut the stitches with.
 }
 
 itmname_temp_purse		{Purse}
@@ -1354,7 +1886,7 @@ A few small coins.
 itmname_folding_knife		{Folding Knife}
 itmdescr_folding_knife
 {
-A gully with a crooked handle.
+A gully with a crooked handle. The blade is very thin and sharpe.
 }
 
 itmname_pistoltinderbox		{Tinderbox}
@@ -1412,6 +1944,111 @@ Five or six curious West Indian shells. I wonder since why he should have carrie
 }
 
 //-------------- FINAL CHEST ITEMS END ----------------------------------------------------------------------------------
+//--------------- TREASURE MAPS START -----------------------------------------------------------------------------------
+
+itmname_mapBB2A			{Caesar's Map}
+itmdescr_mapBB2A
+{
+I have to get rid of the gunpowder.  
+}
+
+itmname_mapBB2B			{Caesar's Map}
+itmdescr_mapBB2B
+{
+That's better. 
+}
+
+itmname_mapBB3			{Eden's Map}
+itmdescr_mapBB3
+{
+One corner is missing. Which Island is this?  
+}
+
+itmname_mapBB3T			{Eden's Map}
+itmdescr_mapBB3T
+{
+It's Turks!  
+}
+
+itmname_mapBB4A			{Richards' Map}
+itmdescr_mapBB4A
+{
+Only half of the map remains.  
+}
+
+itmname_mapBB4A_back		{Sketch}
+itmdescr_mapBB4A_back
+{
+On the backside a sketch showing a path?  
+}
+
+itmname_mapBB4B			{Richards' Map}
+itmdescr_mapBB4B
+{
+Here's the other half.  
+}
+
+itmname_mapBB4C			{Richards' Map}
+itmdescr_mapBB4C
+{
+It has been ripped apart and very clumsy repaired.  
+}
+
+itmname_mapBB5A			{Hands' Map}
+itmdescr_mapBB5A
+{
+Is it blood?  
+}
+
+itmname_mapBB5B			{Hands' Map}
+itmdescr_mapBB5B
+{
+There's still some blood left.  
+}
+
+itmname_mapBB6			{Defoe's Map}
+itmdescr_mapBB6
+{
+Very damaged by fire. Which Island is this?  
+}
+
+itmname_mapBB6T			{Defoe's Map}
+itmdescr_mapBB6T
+{
+It's Curacao!  
+}
+
+itmname_mapWR1			{Archipelago Map}
+itmdescr_mapWR1
+{
+With Blue Letters added.  
+}
+
+itmname_mapWR2			{Archipelago Map}
+itmdescr_mapWR2
+{
+With Blue Letters added and Red Ports marked.  
+}
+
+itmname_mapWR3			{Archipelago Map}
+itmdescr_mapWR3
+{
+Maybe the Ports should be connected.  
+}
+
+itmname_mapWR4			{Archipelago Map}
+itmdescr_mapWR4
+{
+Let's try again.  
+}
+
+itmname_mapWR5			{Archipelago Map}
+itmdescr_mapWR5
+{
+One more time.  
+}
+
+//---------------- TREASURE MAPS END --------------------------------------------------------------------------------------
 //-------------- WOOD TOWER ITEMS START -----------------------------------------------------------------------------------
 
 itmname_bladeladder2		{Ladder}
@@ -1456,13 +2093,113 @@ itmdescr_bladespyglass5
 Useful from top of the tower
 }
 
-itmname_bladeflag_pir		{Jolly Roger}
+itmname_bladeflag_pir		{Rackham's Pirate Flag}
 itmdescr_bladeflag_pir
 {
 The black banner in the Charles Vane's style: A skull and two sabres. Later used by Jack Rackham.
 }
 
 //-------------- WOOD TOWER ITEMS END -------------------------------------------------------------------------------------
+//---------------- FLAGCHEST START ----------------------------------------------------------------------------------------
+
+itmname_flagchest_closed	{Flag Chest}
+itmdescr_flagchest_closed
+{
+A closed box with the inscription La Concorde.
+}
+
+itmname_flagchest_openA		{Flag Chest}
+itmdescr_flagchest_openA
+{
+A large collection of Flags from many countries. Also two Black Flags.
+}
+
+itmname_flagchest_empty		{Empty Flag Chest}
+itmdescr_flagchest_empty
+{
+
+}
+
+itmname_flagchest_openB		{Flag Chest}
+itmdescr_flagchest_openB
+{
+A large collection of Flags from many countries. Also two Black Flags.
+}
+
+
+itmname_bladeflag_pir2		{Teach's Pirate Flag}
+itmdescr_bladeflag_pir2
+{
+The black flag of Edward Teach. AKA Blackbeard.
+}
+
+itmname_bladeflag_HOL		{Dutch Flag}
+itmdescr_bladeflag_HOL
+{
+
+}
+
+itmname_bladeflag_ENG		{English Flag}
+itmdescr_bladeflag_ENG
+{
+
+}
+
+itmname_bladeflag_FRA		{French Flag}
+itmdescr_bladeflag_FRA
+{
+
+}
+
+itmname_bladeflag_POR		{Portuguese Flag}
+itmdescr_bladeflag_POR
+{
+
+}
+
+itmname_bladeflag_SPA		{Spanish Flag}
+itmdescr_bladeflag_SPA
+{
+
+}
+
+itmname_bladeflag_PRE		{Prussian Flag}
+itmdescr_bladeflag_PRE
+{
+
+}
+
+itmname_bladeflag_IRE		{Irish Flag}
+itmdescr_bladeflag_IRE
+{
+
+}
+
+itmname_bladeflag_SWE		{Swedish Flag}
+itmdescr_bladeflag_SWE
+{
+
+}
+
+itmname_bladeflag_HOL2		{Dutch Flag}
+itmdescr_bladeflag_HOL2
+{
+"Staten General" from the Netherlands.
+}
+
+itmname_bladeflag_AME		{American Flag}
+itmdescr_bladeflag_AME
+{
+The American First Navy Jack.
+}
+
+itmname_bladeflag_SPA2		{Unknown Flag}
+itmdescr_bladeflag_SPA2
+{
+It looks vaguely Spanish.
+}
+
+//---------------- FLAGCHEST END ------------------------------------------------------------------------------------------
 //--------------- BLADE WEAPONS START -------------------------------------------------------------------------------------
 
 itmname_bladeA2			{Blade}
@@ -1471,10 +2208,10 @@ itmdescr_bladeA2
 A rapier.
 }
 
-itmname_bladeA4			{Blade}
-itmdescr_bladeA4
+itmname_bladeA5			{Blade}
+itmdescr_bladeA5
 {
-A rapier.
+A saber.
 }
 
 itmname_bladeA11		{Blade}
@@ -1489,10 +2226,10 @@ itmdescr_bladeA17
 A saber.
 }
 
-itmname_bladeA5			{Blade}
-itmdescr_bladeA5
+itmname_bladeA4			{Blade}
+itmdescr_bladeA4
 {
-A saber.
+A rapier.
 }
 
 itmname_bladepclub203		{Pistol Club}
@@ -1549,64 +2286,100 @@ itmdescr_bladespade
 Yes, I can dig up the anchor on the shore now.
 }
 
+itmname_bladeBB			{Blade}
+itmdescr_bladeBB
+{
+A Heavy Cutlass with a 'E' carved into the hilt.
+}
+
+itmname_machete		 	{Machete}
+itmdescr_machete
+{
+Used for cutting sugar canes.
+}
+
+itmname_BBDagger		{Dagger}
+itmdescr_BBDagger
+{
+It looks more expensive than dangerous. Sharp enough though to cut out the painting from the frame.
+}
+
+itmname_snakewand		{Aaron's Rod}
+itmdescr_snakewand
+{
+A wooden stick shaped like a snake. It is said to be very powerful against all evil. 
+}
+
+itmname_bladepainting		{Painting}
+itmdescr_bladepainting
+{
+The painting I cut out. Signed FH 1634.
+}
+
+itmname_bladep205 		{Pistol}
+itmdescr_bladep205
+{
+An exceptionally well-crafted duelling pistol. It shoots as good as it looks. 'Richards' carved on the stock.
+}
+
 //--------------- BLADE WEAPONS END --------------------------------------------------------------------------------------
 //------------- PISTOL WEAPONS START -------------------------------------------------------------------------------------
 
-itmname_pistol201 	{Pistol}
+itmname_pistol201 		{Pistol}
 itmdescr_pistol201
 {
 An expensive long pistol with the name 'Johnson'. Looks unused.
 }
 
-itmname_pistol202 	{Pistol}
+itmname_pistol202 		{Pistol}
 itmdescr_pistol202
 {
 A small short-barrelled pistol black of smoke. 'CSAR' with childish letters.
 }
 
-itmname_pistol203 	{Pistol}
+itmname_pistol203 		{Pistol}
 itmdescr_pistol203
 {
 A heavy gun that seems to have been used as a club. 'Benj Hrngld' written on the barrel.
 }
 
-itmname_pistol204 	{Pistol}
+itmname_pistol204 		{Pistol}
 itmdescr_pistol204
 {
 A double-barrelled pistol with rich ornamnents. One lock is stuck though. 'Eden N. Carolina' engraved on the lock.
 }
 
-itmname_pistol205 	{Pistol}
+itmname_pistol205 		{Pistol}
 itmdescr_pistol205
 {
 An exceptionally well-crafted duelling pistol. It shoots as good as it looks. 'Richards' carved on the stock.
 }
 
-itmname_pistol206 	{Pistol}
+itmname_pistol206 		{Pistol}
 itmdescr_pistol206
 {
 Is it a pistol or a cannon? Sounds good too. 'Basilica Hands' with a very fine handwriting.
 }
 
-itmname_pistolbelt 	{Blackbeard´s Pistol Belt}
+itmname_pistolbelt 		{Blackbeard´s Pistol Belt}
 itmdescr_pistolbelt
 {
 You can carry six pistols with this belt used by Teach.
 }
 
-itmname_pistol20 	{Blackbeard´s Set of Six Pistols}
+itmname_pistol20 		{Blackbeard´s Set of Six Pistols}
 itmdescr_pistol20
 {
 Your crew believes that this small arsenal really belonged to Teach, maybe it's true. Only for a 'Master Gunfighter'.
 }
 
-itmname_pistol0		{Pocket Pistol}
+itmname_pistol0			{Pocket Pistol}
 itmdescr_pistol0
 {
 One of two very small pistols for discreet use.
 }
 
-itmname_bladep0		{Pocket Pistol}
+itmname_bladep0			{Pocket Pistol}
 itmdescr_bladep0
 {
 One of two very small pistols for discreet use.
@@ -1642,6 +2415,42 @@ itmdescr_pistolthrow1
 When you're out of ammunition you can throw the pistols on your enemies.
 }
 
+itmname_pistolbladeBB		{Blade}
+itmdescr_pistolbladeBB
+{
+Another Heavy Cutlass with a 'T' carved into the hilt. Yes, I have read he used two blades.
+}
+
+itmname_pistolwhip		{Bullwhip}
+itmdescr_pistolwhip
+{
+A single-tailed whip, made of braided leather, designed as a tool for working with livestock. Use it to disarm your enemies.
+}
+
+itmname_pistolcannon		{Hand Cannon}
+itmdescr_pistolcannon
+{
+Load it with 6 gunpowder and 6 grapeshots and the Swivelgun can take out a whole group of enemies. But watch out for the recoil!
+}
+
+itmname_pistolcannon1		{Hand Cannon}
+itmdescr_pistolcannon1
+{
+You must have the Belt equipped to carry this small but heavy Cannon.
+}
+
+itmname_pistolcenserD		{Censer}
+itmdescr_pistolcenserD
+{
+This intricately carved gold vessel is used for burning incense. Protects against the Evil One.
+}
+
+itmname_pistolbook71		{Damaged Book}
+itmdescr_pistolbook71
+{
+Many pages have been ripped out. I see one of those symbols there. Could it be..? 
+}
+
 //--------------- PISTOL WEAPONS END -------------------------------------------------------------------------------------
 //------------------- TOOLS START ----------------------------------------------------------------------------------------
 
@@ -1675,6 +2484,12 @@ itmdescr_bladehammer
 A short but very heavy hammer. 
 }
 
+itmname_pistolhammer		{Hammer}
+itmdescr_pistolhammer
+{
+A short but very heavy hammer.
+}
+
 itmname_bladepickaxe2		{Pickaxe}
 itmdescr_bladepickaxe2
 {
@@ -1687,49 +2502,49 @@ itmdescr_bladesaw
 A carpenter's robust tool. 
 }
 
-itmname_tool1		{Carpenter Tools}
+itmname_tool1			{Carpenter Tools}
 itmdescr_tool1
 {
 Two planes and a pair of compasses.
 }
 
-itmname_tool2		{Carpenter Tools}
+itmname_tool2			{Carpenter Tools}
 itmdescr_tool2
 {
 A pair of Carpenter axes.
 }
 
-itmname_tool3		{Carpenter Tools}
+itmname_tool3			{Carpenter Tools}
 itmdescr_tool3
 {
 A hammer and three chisels.
 }
 
-itmname_tool4		{Carpenter Tools}
+itmname_tool4			{Carpenter Tools}
 itmdescr_tool4
 {
 A drill and some other things.
 }
 
-itmname_tool5		{Carpenter Tools}
+itmname_tool5			{Carpenter Tools}
 itmdescr_tool5
 {
 Two saws of different size.
 }
 
-itmname_tool6		{Carpenter Tools}
+itmname_tool6			{Carpenter Tools}
 itmdescr_tool6
 {
 A heavy tool that could be used as a lever and more.
 }
 
-itmname_pistoltoolchest1		{Empty Carpenters Chest}
+itmname_pistoltoolchest1	{Empty Carpenters Chest}
 itmdescr_pistoltoolchest1
 {
 Collect all the Carpenter Tools. Maybe you find something useful.
 }
 
-itmname_pistoltoolchest2		{Filled Carpenters Chest}
+itmname_pistoltoolchest2	{Filled Carpenters Chest}
 itmdescr_pistoltoolchest2
 {
 The chest is fully equipped with Carpenter Tools.
@@ -1739,6 +2554,36 @@ itmname_pistolspade		{Spade}
 itmdescr_pistolspade
 {
 A gardener's tool or what? 
+}
+
+itmname_paper_clip		{Wire}
+itmdescr_paper_clip
+{
+Not sure what this little piece of wire is. Maybe I can make something out of it?
+}
+
+itmname_paper_clip2		{Hook}
+itmdescr_paper_clip2
+{
+I have bent it to a Hook. Now let's use it!
+}
+
+itmname_toolbox_filled		{Toolbox}
+itmdescr_toolbox_filled
+{
+It's heavy - let's see what's inside!
+}
+
+itmname_toolbox_empty		{Empty Toolbox}
+itmdescr_toolbox_empty
+{
+
+}
+
+itmname_pitchfork		{Pitchfork}
+itmdescr_pitchfork
+{
+Too clumsy as a weapon but could be useful anyway.
 }
 
 //------------------- TOOLS END -------------------------------------------------------------------------------------------
@@ -1806,7 +2651,7 @@ itmdescr_pistolcloth
 A clean piece of linen cloth.
 }
 
-itmname_pistolbucket_dung	{Camel Dung}
+itmname_pistolbucket_dung	{Horse Dung}
 itmdescr_pistolbucket_dung
 {
 Even though the bucket has a lid it stinks like hell.
@@ -1863,31 +2708,31 @@ Produced from limestone and water.
 //----------------- ALCHEMY ITEMS END -------------------------------------------------------------------------------------
 //----------------- ALCHEMY BOTTLES START ---------------------------------------------------------------------------------
 
-itmname_bladebottle_CE0		{Empty Bottle}
+itmname_bladebottle_CE0			{Small Empty Bottle}
 itmdescr_bladebottle_CE0
 {
  
 }
 
-itmname_bladebottle_CW1		{Water}
+itmname_bladebottle_CW1			{Water}
 itmdescr_bladebottle_CW1
 {
 A bottle half filled with water.
 }
 
-itmname_bladebottle_CT1_sulf	{Sulfuric Acid}
+itmname_bladebottle_CT1_sulf		{Sulfuric Acid}
 itmdescr_bladebottle_CT1_sulf
 {
 Known as Oil of Vitriol to the alchemists. A base ingredient - several other acids can be produced from this liquid. Be careful when mixing with water!
 }
 
-itmname_bladebottle_CT1_nitr	{Nitric Acid}
+itmname_bladebottle_CT1_nitr		{Nitric Acid}
 itmdescr_bladebottle_CT1_nitr
 {
 Be careful when mixing with water!
 }
 
-itmname_bladebottle_CT1_hydr	{Hydrochloric Acid}
+itmname_bladebottle_CT1_hydr		{Hydrochloric Acid}
 itmdescr_bladebottle_CT1_hydr
 {
 Be careful when mixing with water!
@@ -1900,25 +2745,25 @@ itmdescr_bladebottle_CT1_hydrnitr
 }
 
 
-itmname_bladebottle_CT2_sulf_w	{Diluted Sulfuric Acid}
+itmname_bladebottle_CT2_sulf_w		{Diluted Sulfuric Acid}
 itmdescr_bladebottle_CT2_sulf_w
 {
 Sulfuric Acid diluted with water. Dissolves many metals.
 }
 
-itmname_bladebottle_CT2_sulf_c	{Mixture}
+itmname_bladebottle_CT2_sulf_c		{Mixture}
 itmdescr_bladebottle_CT2_sulf_c
 {
 Sulfuric Acid mixed with nitre.
 }
 
-itmname_bladebottle_CT2_nitr_w	{Aqua Fortis}
+itmname_bladebottle_CT2_nitr_w		{Aqua Fortis}
 itmdescr_bladebottle_CT2_nitr_w
 {
 It was used in alchemy as a solvent for dissolving silver and most other metals with notable exceptions of gold and platinum.
 }
 
-itmname_bladebottle_CT2_hydr	{Hydrochloric Acid}
+itmname_bladebottle_CT2_hydr		{Hydrochloric Acid}
 itmdescr_bladebottle_CT2_hydr
 {
 Be careful when mixing with water!
@@ -1930,219 +2775,372 @@ itmdescr_bladebottle_CT2_hydrnitr
 1 part each of Hydrochloric Acid and Nitric Acid.
 }
 
-itmname_bladebottle_CG2		{Mixture}
+itmname_bladebottle_CG2			{Mixture}
 itmdescr_bladebottle_CG2
 {
 Copperas mixed with water.
 }
 
-itmname_bladebottle_CA2		{Aqua Regis}
+itmname_bladebottle_CA2			{Aqua Regis}
 itmdescr_bladebottle_CA2
 {
 It was so named because it can dissolve the so-called "royal metals," or noble metals, gold and platinum.
 }
 
-itmname_bladebottle_CP2		{Champagne}
+itmname_bladebottle_CP2			{Champagne}
 itmdescr_bladebottle_CP2
 {
 Imported from France or maybe Russia?
 }
 
-itmname_bladebottle_CB1		{Alcohol}
+itmname_bladebottle_CB1			{Alcohol}
 itmdescr_bladebottle_CB1
 {
 Almost pure alcohol that has to be diluted with water before drinking it.
 }
 
-itmname_bladebottle_CB2		{Cognac?}
+itmname_bladebottle_CB2			{Cognac?}
 itmdescr_bladebottle_CB2
 {
 If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
 }
 
-itmname_Cognac			{Cognac?}
+itmname_Cognac				{Cognac?}
 itmdescr_Cognac
 {
 If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
 }
 
-itmname_bladebottle_CR2		{Communion Wine}
+itmname_bladebottle_CR2			{Communion Wine}
 itmdescr_bladebottle_CR2
 {
 Looks like ordinary Red Wine to me.
 }
 
-itmname_potionwine2		{Communion Wine}
+itmname_potionwine2			{Communion Wine}
 itmdescr_potionwine2
 {
 Looks like ordinary Red Wine to me.
 }
 
-//Q2 pär
+//Q2
 
-itmname_bladebottle_BE0		{Big Empty Bottle}
+itmname_bladebottle_BE0			{Big Empty Bottle}
 itmdescr_bladebottle_BE0
 {
  
 }
 
-itmname_bladebottle_BTc_hydr	{Mixture}
+itmname_bladebottle_BTc_hydr		{Mixture 1}
 itmdescr_bladebottle_BTc_hydr
 {
 Salt and Sulfuric Acid.
 }
 
-itmname_bladebottle_CV1_ss	{Sodium Sulfate}
+itmname_bladebottle_CV1_ss		{Mixture 2}
 itmdescr_bladebottle_CV1_ss
 {
-
+Sodium Sulfate.
 }
 
-itmname_bladebottle_BG2		{Mixture}
+itmname_bladebottle_BG2			{Mixture 3}
 itmdescr_bladebottle_BG2
 {
 Sodium Sulfate, Calcium Carbonate and Coal.
 }
 
-itmname_bladebottle_CV2		{Mixture}
+itmname_bladebottle_CV2			{Mixture 4}
 itmdescr_bladebottle_CV2
 {
 Sodium Carbonate and Calcium Sulfide.
 }
 
-itmname_bladebottle_CV1_sc	{Sodium Carbonate}
-itmdescr_bladebottle_CV1_sc
-{
-
-}
-
-itmname_bladebottle_BTc_mix3	{Mixture}
+itmname_bladebottle_BTc_mix3		{Mixture 5}
 itmdescr_bladebottle_BTc_mix3
 {
 Sodium Carbonate, Calcium Sulfide and water.
 }
 
-itmname_bladebottle_CG1		{Grinded Limestone}
+itmname_bladebottle_CV1_sc		{Mixture 6}
+itmdescr_bladebottle_CV1_sc
+{
+Sodium Carbonate.
+}
+
+itmname_bladebottle_CG1			{Grinded Limestone}
 itmdescr_bladebottle_CG1
 {
 
 }
 
-itmname_bladebottle_BY2_mix7	{Mixture}
+itmname_bladebottle_BY2_mix7		{Mixture 7}
 itmdescr_bladebottle_BY2_mix7
 {
 Sulphur, Sal Ammoniac, Calcium Oxide and water.
 }
 
-itmname_bladebottle_BY1_mix7	{Mixture}
+itmname_bladebottle_BY1_mix7		{Mixture 7}
 itmdescr_bladebottle_BY1_mix7
 {
 Sulphur, Sal Ammoniac, Calcium Oxide and water.
 }
 
-itmname_bladebottle_CV1_cao	{Calcium Oxide}
+itmname_bladebottle_CV1_cao		{Calcium Oxide}
 itmdescr_bladebottle_CV1_cao
 {
 
 }
 
-itmname_bladebottle_CV1_NH4Cl	{Sal Ammoniac}
+itmname_bladebottle_CV1_NH4Cl		{Sal Ammoniac}
 itmdescr_bladebottle_CV1_NH4Cl
 {
-Ammonium Chloride
+Ammonium Chloride.
 }
 
-itmname_bladebottle_GY2		{Gas Mixture}
+itmname_bladebottle_GY2			{Mixture 8}
 itmdescr_bladebottle_GY2
 {
-H2S + NH3
+A mixture of H2S and NH3 gases.
 }
 
-itmname_bladebottle_BS2_LH	{Liquor Hepatis}
+itmname_bladebottle_BS2_LH		{Liquor Hepatis}
 itmdescr_bladebottle_BS2_LH
 {
 
 }
 
-itmname_bladebottle_BY2_mix9	{Mixture}
+itmname_bladebottle_BS1_LH		{Liquor Hepatis}
+itmdescr_bladebottle_BS1_LH
+{
+
+}
+
+itmname_bladebottle_BY2_mix9		{Mixture 9}
 itmdescr_bladebottle_BY2_mix9
 {
 Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.
 }
 
-itmname_bladebottle_CB1_mix9	{Mixture}
+itmname_bladebottle_CB1_mix9		{Mixture 10}
 itmdescr_bladebottle_CB1_mix9
 {
-Distilled Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
+Dried Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
 }
 
-itmname_bladebottle_CB2_mix9	{Mixture}
+itmname_bladebottle_CB2_mix9		{Mixture 10}
 itmdescr_bladebottle_CB2_mix9
 {
-Distilled Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
+Dried Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
 }
 
-itmname_bladebottle_CC2_bps	{Black Pulvis Solaris}
+itmname_bladebottle_CC2_bps		{Black Pulvis Solaris}
 itmdescr_bladebottle_CC2_bps
 {
 
 }
 
-itmname_bladebottle_CC1		{Grinded Black Antimony}
+itmname_bladebottle_CC1			{Grinded Black Antimony}
 itmdescr_bladebottle_CC1
 {
 
 }
 
-itmname_bladebottle_BP1_ps	{Pulvis Solaris}
+itmname_bladebottle_BP1_ps		{Pulvis Solaris}
 itmdescr_bladebottle_BP1_ps
 {
 Which means Powder of the Sun.
 }
 
-itmname_bladebottle_BP2_ps	{Pulvis Solaris}
+itmname_bladebottle_BP2_ps		{Pulvis Solaris}
 itmdescr_bladebottle_BP2_ps
 {
 Which means Powder of the Sun.
 }
 
-itmname_bladebottle_CQ1		{Mercury}
+itmname_bladebottle_CQ1			{Mercury}
 itmdescr_bladebottle_CQ1
 {
 
 }
 
-itmname_bladebottle_CT2_mix11	{Mixture}
+itmname_bladebottle_CT2_mix11		{Mixture 11}
 itmdescr_bladebottle_CT2_mix11
 {
-Mercury and Nitric Acid
+Mercury and Nitric Acid.
 }
 
-itmname_bladebottle_CA2_mix11	{Mixture}
+itmname_bladebottle_CA2_mix11		{Mixture 12}
 itmdescr_bladebottle_CA2_mix11
 {
 Mercury Oxide and more.
 }
 
-itmname_bladebottle_CR1		{Mercury Oxide}
+itmname_bladebottle_CR1			{Mercury Oxide}
 itmdescr_bladebottle_CR1
 {
 
 }
 
-itmname_bladebottle_CR2_rps	{Red Pulvis Solaris}
+itmname_bladebottle_CR2_rps		{Red Pulvis Solaris}
 itmdescr_bladebottle_CR2_rps
 {
 
 }
 
-itmname_bladebottle_BAU		{Philospher's Stone}
+itmname_bladebottle_BAU			{Philospher's Stone}
 itmdescr_bladebottle_BAU
 {
 Is it really?
 }
 
 //----------------- ALCHEMY BOTTLES END -----------------------------------------------------------------------------------
+//------------------- HAT ITEMS START -------------------------------------------------------------------------------------
+
+itmname_BB_hatA1		{Hat}
+itmdescr_BB_hatA1
+{
+A large Tricorn with a bad smell of burned fuses. 
+}
+
+itmname_BB_hatB			{Hat}
+itmdescr_BB_hatB
+{
+Not much too see here... or is it? 
+}
+
+itmname_BB_hatC			{Hat}
+itmdescr_BB_hatC
+{
+Ha! He had a Key hidden inside.
+}
+
+itmname_BB_hatA2		{Hat}
+itmdescr_BB_hatA2
+{
+A large Tricorn with a bad smell of burned fuses.
+I just have to try it on anyway.
+}
+
+itmname_BB_key			{Key}
+itmdescr_BB_key
+{
+Teach's Key. Must be important when hidden so carefully.
+}
+
+//------------------- HAT ITEMS END ---------------------------------------------------------------------------------------
+//------------------OUTFIT ITEMS START ------------------------------------------------------------------------------------
+
+itmname_bandages_trousersX	{Bandages and Trousers}
+itmdescr_bandages_trousersX
+{
+Bandages - just what I need! It looks like there's something in the Trousers pocket. 
+}
+
+itmname_bandages_trousersQ	{Bandages and Trousers}
+itmdescr_bandages_trousersQ
+{
+First I have to dress the wound then I'll try the badly worn trousers.
+}
+
+itmname_shirt_shoes		{Shirt and Shoes}
+itmdescr_shirt_shoes
+{
+The Shoes look good but he Shirt..!
+}
+
+itmname_socks_sewing		{Sewing Kit and a Pair of Socks}
+itmdescr_socks_sewing
+{
+Maybe I can repair my old shirt now. I like the Blue Socks.
+}
+
+itmname_waistcoat		{Waistcoat}
+itmdescr_waistcoat
+{
+The Waistcoat reminds me of the one I used to wear before I was robbed.
+}
+
+itmname_sash			{Sash}
+itmdescr_sash
+{
+Yes yes yes. A Red Sash for a Pirate Captain!
+}
+
+itmname_blue_uniform		{Officers Uniform}
+itmdescr_blue_uniform
+{
+A blue jacket for an officer in the Woodes Rogers style. Does he take his own officers into custody? 
+}
+
+itmname_Pell_outfit		{Confiscated Clothes}
+itmdescr_Pell_outfit
+{
+A boatswain's complete outfit including a pair of boots. 
+}
+
+itmname_long_johns		{Long Johns}
+itmdescr_long_johns
+{
+My old long johns with a patch. 
+}
+
+itmname_long_johns_map		{Hidden Map}
+itmdescr_long_johns_map
+{
+I have hidden the Map behind the patch. 
+}
+
+itmname_bandana			{Bandana}
+itmdescr_bandana
+{
+My usual orange bandana. 
+}
+
+itmname_bandana_key		{Hidden Key}
+itmdescr_bandana_key
+{
+I have hidden the Key in my bandana. 
+}
+
+
+//------------------OUTFIT ITEMS END---------------------------------------------------------------------------------------
+//----------------- TREASURE ITEMS START ----------------------------------------------------------------------------------
+
+itmname_gold_bars		{Gold Bars}
+itmname_silver_bars		{Silver Bars}
+itmname_gold_coins		{Gold Coins}
+itmname_valuable_weapons	{Valuable Weapons}
+itmname_pistolcenserE		{Empty Censer}
+itmdescr_pistolcenserE
+{
+This intricately carved gold vessel could be worth a lot of money.
+}
+
+itmname_gold_chalice		{Chalice}
+itmdescr_gold_chalice
+{
+A goblet of pure gold used to hold sacramental wine. 
+}
+
+itmname_moon_symbol		{Moon Symbol}
+itmdescr_moon_symbol
+{
+A golden necklace with a powerful Moon Symbol. Gives the owner protection.  
+}
+
+itmname_incas_idol		{Golden idol}
+itmdescr_incas_idol
+{
+A golden idol of Hurukacelitipochtli, the Incan god of death.
+}
+
+itmname_incas_collection	{Incan treasure collection}
+itmdescr_incas_collection
+{
+A collection of Incan treasures.
+}
+
+//----------------- TREASURE ITEMS END ------------------------------------------------------------------------------------
 //----------------- OTHER ITEMS START -------------------------------------------------------------------------------------
 
 itmname_tankard			{Tankard}
@@ -2205,12 +3203,6 @@ itmdescr_glue
 Ordinary glue for papers.
 }
 
-itmname_blue_uniform		{Officers Uniform}
-itmdescr_blue_uniform
-{
-A blue jacket for an officer in the Woodes Rogers style. Does he take his own officers into custody? 
-}
-
 itmname_elevator_ropes		{Long Ropes}
 itmdescr_elevator_ropes
 {
@@ -2229,79 +3221,103 @@ itmdescr_bladelever
 I know where these levers should be placed. 
 }
 
-itmname_bladewood	{Wood}
+itmname_bladelever3		{Lever}
+itmdescr_bladelever3
+{
+I know where this lever should be placed. 
+}
+
+itmname_bladewood		{Wood}
 itmdescr_bladewood
 {
 Some dry wood from the rainforest.
 }
 
-itmname_bladebarrel	{Rum Barrel}
+itmname_bladewood2		{Wood}
+itmdescr_bladewood2
+{
+Some dry wood from the rainforest.
+}
+
+itmname_bladebarrel		{Rum Barrel}
 itmdescr_bladebarrel
 {
 A small barrel filled with the finest rum in the entire Caribbean, distilled by an expert (hrm).
 }
 
-itmname_bladebarrel2	{Empty Barrel}
+itmname_bladebarrel2		{Empty Barrel}
 itmdescr_bladebarrel2
 {
 A small barrel to keep rum in.
 }
 
-itmname_bladebarrel3	{Empty Barrel}
+itmname_bladebarrel3		{Empty Barrel}
 itmdescr_bladebarrel3
 {
 A large wine barrel.
 }
 
-itmname_bladebucket	{Water Bucket}
+itmname_bladebarrel_gpS		{Gunpowder Barrel}
+itmdescr_bladebarrel_gpS
+{
+Standard Gunpowder.
+}
+
+itmname_pistolbarrel_gpS	{Gunpowder Barrel}
+itmdescr_pistolbarrel_gpS
+{
+Standard Gunpowder.
+}
+
+itmname_bladebucket		{Water Bucket}
 itmdescr_bladebucket
 {
 A bucket filled with cold water. 
 }
 
-itmname_pistolbucket	{Water Bucket}
+itmname_pistolbucket		{Water Bucket}
 itmdescr_pistolbucket
 {
 Could be used as coolant. 
 }
 
-itmname_pistoltar	{Tar Bucket}
+itmname_pistoltar		{Tar Bucket}
 itmdescr_pistoltar
 {
 A very heavy bucket with tar used for caulking the hull. 
 }
 
-itmname_bladebottlew4	{Molasses Bottle}
+itmname_bladebottlew4		{Molasses Bottle}
 itmdescr_bladebottlew4
 {
 Don't spoil the liquid by using the bottle as a weapon. 
 }
 
-itmname_pistolbottlew4	{Molasses Bottle}
+itmname_pistolbottlew4		{Molasses Bottle}
 itmdescr_pistolbottlew4
 {
 In this climate fermentation starts very quick. Distill it and there you have it - RUM!
 }
 
-itmname_bladebottlew5	{Wine Bottle}
+itmname_bladebottlew5		{Wine Bottle}
 itmdescr_bladebottlew5
 {
 A wine of unknown quality... 
 }
 
-itmname_pistolbottlew5	{Wine Bottle}
+itmname_pistolbottlew5		{Wine Bottle}
 itmdescr_pistolbottlew5
 {
 ...but it's only the weight that matters.
 }
 
-itmname_bladesack	{Sack with Books}
+itmname_bladesack		{Sack with Books}
 itmdescr_bladesack
 {
 A collection of (poetry) books. Do I really need this?
 }
 
-itmname_bladeskull1	{Skull}
+itmname_bladeskull1		{Skull}
 itmdescr_bladeskull1
 {
 What use can you have of this macabre item?. 
@@ -2395,5 +3411,17 @@ itmname_Malta_box		{Shrine}
 itmname_Malta_relic		{Relic}
 itmname_Malta_cross		{Crucifix}
 itmname_Malta_censer		{Censer}
+
+itmname_switch_button		{?}
+itmdescr_switch_button
+{
+What is this? A button on a rectangular tile with some colored strings.
+}
+
+itmname_blade_gp_dry		{Pile of Gunpowder}
+itmdescr_blade_gp_dry
+{
+The Gunpowder has become wet and then dried into a huge lump. How am I supposed to split it up?
+}
 
 //--------------- OTHER ITEMS END --------------------------------------------------------------------------------------

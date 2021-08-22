@@ -104,8 +104,8 @@ void ProcessDialogEvent()
 		case "pirate":
 			PlaySound("VOICE\ENGLISH\Fre_f_a_003.wav");
 			dialog.text = DLG_TEXT[11];
-			link.l1 = DLG_TEXT[13];
-			link.l1.go = "pirate1";
+			link.l1 = DLG_TEXT[34];
+			link.l1.go = "pirate0";
 		break;
 
 		case "maroon":
@@ -119,6 +119,13 @@ void ProcessDialogEvent()
 			link.l3.go = "painting";
 			link.l4 = DLG_TEXT[6];
 			link.l4.go = "pirate";
+		break;
+
+		case "pirate0":
+			PlaySound("VOICE\ENGLISH\Fre_f_a_009.wav");
+			dialog.text = DLG_TEXT[35];
+			link.l1 = DLG_TEXT[13];
+			link.l1.go = "pirate1";
 		break;
 
 		case "pirate1":

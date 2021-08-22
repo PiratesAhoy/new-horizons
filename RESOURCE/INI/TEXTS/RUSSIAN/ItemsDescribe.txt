@@ -1,0 +1,2071 @@
+Potion parameters{Лечебное Средство}
+health value{здоровья}
+weapon blade parameters{Хлодное оружие: урон мин/макс #ddmg_min#/#ddmg_max#, пробой брон #dpiercing#%, блок #dblock#%.}
+weapon gun parameters{Огнестрельное оружие: урон мин/макс #ddmg_min#/#ddmg_max#, перезарядка #dchargespeed#сек., точность #daccuracy#%.}
+weapon armor parameters{Кираса: Защита #dcoverage#%, Вероятность отражения удара/Процент поражения, если удар пропущен, для: холодного оружия #dbladestop#% / #dbladefrac#%, огнестрельного оружия #dgunstop#% / #dgunfrac#%.}
+
+you've_got {Вы нашли}
+
+itmname_gold	{Золото}
+itmdescr_gold
+{
+Золото. Желтая мечта любого пирата.
+}
+
+itmname_love_letters_of_priest	{Любовные письма священника}
+itmdescr_love_letters_of_priest
+{
+Письма весьма фривольного содержания, написанные отцом Джеральдом в адрес некой девушки.
+}
+
+itmname_animists_amulet	{Амулет анимистов}
+itmdescr_animists_amulet
+{
+Зловещий амулет анимистов, в форме пятиконечной звезды.
+}
+
+itmname_letter_to_domingues	{Письмо для падре Домингеса}
+itmdescr_letter_to_domingues
+{
+Письмо от отца Бернарда для падре Домингеса.
+}
+
+itmname_letter_to_bernard	{Письмо для отца Бернарда}
+itmdescr_letter_to_bernard
+{
+Письмо от падре Домингеса для отца Бернарда.
+}
+
+itmname_prison_letter	{Письмо от отца Бернарда}
+itmdescr_prison_letter
+{
+Письмо от отца #sFatherBernard#, позволяющее вам забрать узника из тюрьмы #sGreenford# на #sisland_Oxbay#.
+}
+
+itmname_old_journal	{Старый Журнал}
+itmdescr_old_journal
+{
+28 ноября 1595 - После пяти дней хода курсом на юг, мы причалили у берега, возле большого залива на необитаемом острове, запаслись водой и пищей.
+4 декабря 1595 - Я приказывал, матросу кое-что закопать в джунглях; I have a run of ill luck since I acquired it and I prefer to be rid of it.
+(Подчерк другого человека) В джунгли от большого берега, прямо вперед от первого перекрестка, поверните налево до второго перекрестка. Предмет был закопан там. Предмет был закопан там.
+}
+
+itmname_old_journal2	{Старый журнал}
+itmdescr_old_journal2
+{
+28th October 1492 - After sailing West for three days, we moored at a large shore near a bay at a deserted island and stocked up on water and food.
+4th November 1492 - I ordered a crewmember to bury something in the jungle; I have a run of ill luck since I acquired it and I prefer to be rid of it.
+(In another person's handwriting) Into the jungle past the large rock with the round hole, then through a narrow passage to the right. Near the next junction the item is buried beside a road to the right.
+}
+
+itmname_small_chest	{Ларец}
+itmdescr_small_chest
+{
+Документы в этом сундуке доказывают, что судно, которое затонуло в Баие д'Ориент было действительно британским фрегатом 'Молния'. В нем говорится: 'Корабль тонет. Мы снижаемся вниз. Теперь мы никогда не найдем мисс Шоу. Мой губернатор будет очень разочарован.' - Капитан Томас Булден Томпсон.
+}
+
+itmname_SpanishLetter	{Spanish Letter}
+itmdescr_SpanishLetter
+{
+This document, signed by Vice-Admiral Salvatore, proves that the 'Vogelstruijs' is carrying ammunition for the conquest of #sRedmond# and is to deliver the cargo to #sSanto Domingo#.
+}
+
+itmname_Trade_Passport {Merchant License}
+itmdescr_Trade_Passport
+{
+These documents were issued by the head of the West India Trading Company. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_EITC_Passport {EITC Passport}
+itmdescr_EITC_Passport
+{
+These documents will allow passage at all the East India Trading Company's locations. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_Davy_Chest {Chest of Davy Jones}
+itmdescr_Davy_Chest
+{
+This chest contains the still-beating heart of the captain of the Flying Dutchman. Carrying this indicates that you are cursed to sail the Seven Seas, never to set foot ashore and to ferry the souls of those who died at sea.
+}
+itmname_Correspondence1 {Letter to Sylvie Bondies}
+itmdescr_Correspondence1
+{
+Correspondence between Arnaud Matton and Sylvie Bondies regarding Sabine.
+}
+itmname_Correspondence2 {Letter to Arnaud Matton}
+itmdescr_Correspondence2
+{
+Correspondence between Sylvie Bondies and Arnaud Matton regarding Sabine.
+}
+
+
+itmname_blade1	{Сабля}
+itmdescr_blade1
+{
+Сабля паршивой ковки. Такие клинки можно найти по всему архипелагу. Тупая, но дешевая.
+}
+
+itmname_blade2	{Рапира}
+itmdescr_blade2
+{
+"Это оружие пригодно для детей, не для мужчин, для мальчиков из лагеря, чтобы убить домашнюю птицу, не для мужской чести пробовать сражаться с ее хозяином" - Джордж Силвер, "Парадоксы Защиты" 1599. Рапира, больше похожая на вертел. Этим можно убить разве что свинью. Спящую.
+}
+
+itmname_blade3	{Широкая сабля}
+itmdescr_blade3
+{
+Стальной привет от французских мясников. Боевые качества оставляют желать лучшего, но для разделки тушек эта тяжелая сабля подходит прекрасно.
+}
+
+itmname_blade4	{Абордажная сабля}
+itmdescr_blade4
+{
+Лучший друг пирата. Эта короткая и тяжелая сабля идеально приспособлена для рубки на тесной палубе.
+}
+
+itmname_blade5	{Кинжал}
+itmdescr_blade5
+{
+Зловещего вида кинжал. Особенно элегантно смотрится торчащим из чьей-нибудь спины.
+}
+
+itmname_blade6	{Скьявона}
+itmdescr_blade6
+{
+Изящный и смертельно опасный меч итальянских наемников.
+}
+
+itmname_blade7	{Ятаган}
+itmdescr_blade7
+{
+Мало что на свете рубит лучше ятагана - им можно развалить надвое даже кита. Если вы сумеете к нему подобраться.
+}
+
+itmname_blade8	{Меч мальтийских рыцарей}
+itmdescr_blade8
+{
+Меч рыцарей Мальтийского ордена. Прямой и серьезный, как сами рыцари.
+}
+
+itmname_blade9	{Французская рапира Адмиралтейства}
+itmdescr_blade9
+{
+Прекрасная рапира, представление от французской Короны. Прихотливо украшенная, красивое и опасное оружие.
+}
+
+itmname_blade10	{Пиранья}
+itmdescr_blade10
+{
+Короткий меч прекрасной ковки и весьма кровожадного вида. Малопригоден для защиты, но страшен в атаке.
+}
+
+itmname_blade11	{Горец}
+itmdescr_blade11
+{
+Палаш из самой Шотландии, где в горах много диких бородатых мужчин. Немного тяжеловат, но в крепкой руке это грозное оружие.
+}
+
+itmname_blade12	{Арабский Ятаган}
+itmdescr_blade12
+{
+Широкая сабля из горячей кузницы Дамаска. Легкая и резкая несмотря на свои внушительные размеры, это лезвие может легко резать как шелк, так и головы.
+}
+
+itmname_blade13	{Рапира дуэлянта}
+itmdescr_blade13
+{
+Легче и быстрее чем любая другая рапира. Много сил ушло на ее дизайн.
+}
+
+itmname_blade14	{Меч испанского дворянина}
+itmdescr_blade14
+{
+Легенда гласит, что этот меч принадлежал самому Кортесу. Так это или нет, но Кортес точно не постеснялся бы носить такой прекрасный клинок.
+}
+
+itmname_blade15	{Иберийский длинный меч}
+itmdescr_blade15
+{
+Этот тип оружия был одобрен ранними испанскими и португальскими исследователями.
+}
+
+itmname_blade16	{Тизона}
+itmdescr_blade16
+{
+Мечи такого типа в основном предпочитают носить испанцы. На этом клинке стоит клеймо одного из лучших мастеров Толедо.
+}
+
+itmname_blade17	{Фламигера}
+itmdescr_blade17
+{
+Любопытный отпрыск рапиры и фламберга. Этот клинок унаследовал лучшие качества обоих родителей - им одинаково удобно колоть и рубить.
+}
+
+itmname_blade18	{Сабля Николаса Шарпа}
+itmdescr_blade18
+{
+Николас Шарп, самый ужасный, кровожадный и развращенный пират, который когда-либо плавал в море, снабдил свою команду этим видом сабли. Превосходное оружие, между прочим.
+}
+
+itmname_blade19	{Немецкая Рапира}
+itmdescr_blade19
+{
+Простая, но эффективная рапира, вероятно, выкованная в Германии.
+}
+
+itmname_blade20	{Азиатский Палаш}
+itmdescr_blade20
+{
+Азиатскее оружие неизвестного происхождения, вероятно прибыла из Китая.
+}
+
+itmname_blade21	{Фальчион}
+itmdescr_blade21
+{
+Тяжелый меч, прекрасно приспособленный для изрубания противника в мелкий винегрет.
+}
+
+itmname_blade22	{Гордость корсара}
+itmdescr_blade22
+{
+Такие шпаги вручали корсарам на службе Ее Величества за особые заслуги перед Британией. Прекрасно подходит и для светской дуэли, и для жестокого штурма.
+}
+
+itmname_blade23	{Голландский Меч}
+itmdescr_blade23
+{
+Именное лезвие, капитанов голландского Флота.
+}
+
+itmname_blade24	{Сабля английского офицера}
+itmdescr_blade24
+{
+Меч, английских Военно-морских офицеров.
+}
+
+itmname_blade25	{Француский меч}
+itmdescr_blade25
+{
+Лезвие тех, кто посвящался в рыцари для службы Франции.
+}
+
+itmname_blade26	{Золингенская Рапира}
+itmdescr_blade26
+{
+Эти прекрасные лезвия были сделаны в Золингене, Германии, определенно принадлежали голландским дворянам.
+}
+
+itmname_blade27	{Выбор Боцмана}
+itmdescr_blade27
+{
+Однажды, поселившись на побережье, боцман Малькольм решил, что кто-то должен делать хорошие клинки и для боцманов, и для обычных моряков, а не только изящные шпаги для офицеров. Великолепные абордажные сабли, подобные этой, и есть результат его усилий.
+}
+
+// Blades from SLiB. Added 09-10-2007 by KevAtl -->
+
+itmname_blade28	{Шамшир}
+itmdescr_blade28
+{
+Декоративный персидский меч, имеющий тонкое изогнутое лезвие, которое очень остро, но представляет не лучшую защиту.
+}
+
+itmname_blade29	{Меч португальского офицера}
+itmdescr_blade29
+{
+Декоративный меч носили высокопоставленные офицеры португальского флота. Эту модель основанную на ранних лезвиях использовал португальский исследователь Васко да Гама.
+}
+// контрольная точка ***********************
+itmname_blade30	{Сабля дуэлянта}
+itmdescr_blade30
+{
+Точно обработанная итальянская сабля. Оружие, этого типа редкость на архипелаге.
+}
+
+itmname_blade31	{Голова Змеи}
+itmdescr_blade31
+{
+Красивый короткий меч, прекрасный для неоперившегося пирата.
+}
+
+itmname_blade32	{Дамаский Шамшир}
+itmdescr_blade32
+{
+Гравированный персидский меч, сделанный из самой лучшей дамасской стали. Это оружие появилось после завоевания Туркам Гоа в 16-ом столетии. Подарок от португальской Короны.
+}
+
+itmname_blade33	{Мавританская Сабля}
+itmdescr_blade33
+{
+Арабская сабля с красивым золотым украшением. Подарок от Испанской Короны.
+}
+
+itmname_blade34	{Голова Дракона}
+itmdescr_blade34
+{
+A gift from the pirate lords. A rare treasure, as pirates are not known for giving things away.
+}
+
+// END Blades from SLiB. Added 09-03-2007 by KevAtl <--
+
+itmname_bladeC10	{Фальчион}
+itmdescr_bladeC10
+{
+Тяжелый меч, прекрасно приспособленный для изрубания противника в мелкий винегрет.
+}
+
+itmname_bladeC11	{Миланская Рапира}
+itmdescr_bladeC11
+{
+Этим оружием, помимо всего прочего, можно и рыбу почистить.
+}
+
+itmname_bladeC12	{Катцбальгер}
+itmdescr_bladeC12
+{
+Короткий меч германских наемников. Использовался, в основном, для бесчинств и дебошей, поэтому не очень пригоден для защиты.
+}
+
+itmname_bladeC6	{Шпага}
+itmdescr_bladeC6
+{
+Шпага является распространенным оружием дуэлянтов, и это не просто продолжение руки, но и часть повседневного гардероба мужчины.
+}
+
+itmname_bladeC18	{Falchion}
+itmdescr_bladeC18
+{
+Этот тяжелый меч пригоден только для силачей, которые могут легро им размахивать, чтобы изрубить своих противников в мелкие кусочки!
+}
+
+itmname_bladeC2	{Меч Бэк-Блэйдед}
+itmdescr_bladeC2
+{
+Венецианский меч с устрашающем видом.
+}
+
+itmname_bladeC26	{Пеппенхеймер}
+itmdescr_bladeC26
+{
+Грозное оружие в руках умельца.
+}
+
+itmname_bladeC30	{Мел Хилт}
+itmdescr_bladeC30
+{
+Хорошая вещь для протыкания врагов.
+}
+
+itmname_bladeC33	{Валлонский Меч}
+itmdescr_bladeC33
+{
+Валлонский меч одобрили военные и гражданские дворяне достоинства: легкость и хорошую сбалансированность.
+}
+
+itmname_bladeC35	{Hibernian}
+itmdescr_bladeC35
+{
+This is an Irish-made, 32 inch, high-quality steel side sword with a heavy, double-edged blade.
+}
+
+itmname_bladeC36 	{Katana}
+itmdescr_bladeC36 
+{
+The Katana Sword is a light Japanese sword. It is good for both fast attacks and blocking thanks to the long, exceptionally sharp blade.
+}
+
+// Russian mod -->
+
+itmname_blade35	{Knights Templar Sword}
+itmdescr_blade35
+{
+This ancient, rare, double-edged broadsword has been handed down through the generations by the 'Guardians of the Holy Grail'. The weapon bears the inscription "In hoc signo vinces" - "With this sign, thou shall be victorious".
+}
+
+itmname_blade36	{Hunting Sword}
+itmdescr_blade36
+{
+This short, sharp sword is used for slaughtering animals, but is just as effective against people.
+}
+
+itmname_blade37	{Gold and Jewel Encrusted Dagger}
+itmdescr_blade37
+{
+This long gold dagger is encrusted with precious jewels and has probably seen more ceremonies than battlefields. Seems a shame to get it dirty really.
+}
+
+itmname_blade38	{Kilij}
+itmdescr_blade38
+{
+An ancient, heavy, single-edged Sabre from the Ottoman Empire.
+}
+
+itmname_blade39	{Gold Handled Naval Dirk}
+itmdescr_blade39
+{
+A particually ornate, gold Dirk, that would make a ideal gift for someone... in between the ribs!
+}
+
+itmname_blade40	{Polish Hussar's Szabla}
+itmdescr_blade40
+{
+Mкlйe weapon widely used by the heavy Cavalry of the Polish Hussars. The long, thin, single-edged curved blade is ideal for skewering your opponant while on horse-back. This is the weapon that influenced the later adoption of Sabres into Western European Armies.
+}
+
+itmname_blade43	{US Cavalry Sabre}
+itmdescr_blade43
+{
+Finely crafted Sabre of the US Cavalry. With it's long, durable, razor sharp single-edged blade, this sword is forged using the latest techniques of smithing.
+}
+
+itmname_blade42	{Jack Sparrow's Cutlass}
+itmdescr_blade42
+{
+A blade with a bizarre shape for the weirdest pirate of the Caribbean.
+}
+
+itmname_blade44	{Spanish Cup-Hilt Rapier}
+itmdescr_blade44
+{
+Light and well balanced, the Spanish Cup-Hilt Rapier has a long, razor sharp foil blade ideal for duelling.
+}
+
+itmname_blade41	{Russian Cossack's Shashka}
+itmdescr_blade41
+{
+The Shashka, meaning 'Long Knife', is favored by Russian Cossack regiments due to its light weight and durable blade. Being perfectly balanced, the Shashka is an ideal Cavalry weapon and is deadly in almost anybody's hands.
+}
+
+itmname_blade45	{'Crab Claw' BroadSword}
+itmdescr_blade45
+{
+Ancient and rare, this heavy double-edged weapon is of unknown origin but can cut and parry sufficiently despite it's great age.
+}
+
+itmname_blade46	{'Dragon' Shortsword}
+itmdescr_blade46
+{
+Ancient but effective short double-edged weapon. It lends it's name from the dragon motif forged into it's hilt.
+}
+
+itmname_blade47	{Light Tizona}
+itmdescr_blade47
+{
+A double-edged Spanish broadsword made from Damascus steel and a lighter version of the full Tizona. The weapon bears the inscription "Hail Mary, full of grace. The Lord is with you".
+}
+
+itmname_blade48	{Wooden Handled Naval Dirk}
+itmdescr_blade48
+{
+A Naval Officers best friend. Lighter and more compact than a traditional sword, the Dirk consists of a Dagger handle with a cut-down sword blade, making it ideal for deck fighting.
+}
+
+itmname_blade49	{Bronze Handled Naval Dirk}
+itmdescr_blade49
+{
+More of a Dress Sword than a combat weapon. It allows you to impress the ladies and slaughter your enemies at the same time.
+}
+
+itmname_blade50	{Venetian Navy Cutlass}
+itmdescr_blade50
+{
+Robust enough to hack through ropes, canvas and wood yet short enough to weild on a compact ship deck. This Cutlass is the weapon of choice for any self-respecting Pirate.
+}
+
+itmname_blade51	{French Court Sword}
+itmdescr_blade51
+{
+Ornate Dress Sword from the Royal Courts of Paris. Maybe you can impress your opponent into submission.
+}
+
+// KevAtl SLiB Special Weapon blades -->
+
+itmname_bladeFD	{Francis Drake's Sword}
+itmdescr_bladeFD
+{
+I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by Franзois Moulin. It's at least a century old and is covered in a blue-green patina. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its' history.
+}
+
+
+itmname_bladeFD2	{Francis Drake's Sword}
+itmdescr_bladeFD2
+{
+This sword was presented to Francis Drake for services to the English Crown.
+}
+
+itmname_bladeSC	{Меч Кортеза}
+itmdescr_bladeSC
+{
+Я взял эту древнюю саблю у Америго Виейра. Это - мистическое, проклятое оружие, использовал Гернан Кортез для завоевания ацтекской империи. Энергия Меча получена в комбинации со священными ножнами, сделанными от внутренностей ацтекских жертв. Гравировка на лезвии гласит: "Гернан Кортез 1520 Н.Э.".
+}
+
+// KevAtl SLiB Special Weapon blades <--
+
+itmname_bladeTriton {Sword of Triton}
+itmdescr_bladeTriton
+{
+According to legend, this infamous blade was forged by the sea deity Triton himself in the lost city of Atlantis. It it said that anyone brandishing the sword would rule a ship's rigging and sails, controlling the vessel to do his indomitable will.
+}
+
+itmname_tridentNeptune {Neptune's Trident}
+itmdescr_tridentNeptune
+{
+This Trident was believed to be Neptune's property once! But a naughty shark stole it one day, and brought it to the world ABOVE the water. There it moved from owner to owner. Neptune used it to create and calm storms.
+}
+
+itmname_bladeBP	{Меч Бартоломея}
+itmdescr_bladeBP
+{
+Этот эксцентричный меч, данный португальским Губернатором для ареста Чарльза Бакстера имеет странную поперечную зашиту, позволяющую лучше блокировать нападение.
+}
+
+itmname_bladePOA {Hand of Poseidon}
+itmdescr_bladePOA
+{
+Johan Elting took this sword when he was fighting for the Dutch Army and killed a famous pirate many years ago.
+}
+
+itmname_blthag02 {Deadly Skull}
+itmdescr_blthag02
+{
+Roxanne Lalliere ordered the sword at a blacksmith of Tortuga. Like its owner, this unique blade is beautiful and deadly.
+}
+
+itmname_blangel {Angel Sword}
+itmdescr_blangel
+{
+Initially designed for Count William V of Holland, this ceremonial sword features a pommel like an angel's wings and a large sapphire mounted in the crossguard.
+}
+
+// Axes from SLiB. Jack Davidson. -->
+// TIH --> properly keyed now with 'blade' prefix
+
+itmname_bladeaxe1 {Топор}
+itmdescr_bladeaxe1
+{
+Предназначен для рубки деревьев, но может использоваться в рукопашной. Защититься им невозможно, но его вес добавляет убойной силы к удару.
+}
+
+itmname_bladeaxe2 {Абордажный топор}
+itmdescr_bladeaxe2
+{
+Полезный инструмент для множества корабельных работ, включая ремонт и тушение огня. Часто используется при абордаже для рубки снастей вражеского корабля. Достаточно мощное, хоть и немного громоздкое, оружие для рукопашной схватки.
+}
+
+itmname_bladeaxe3 {Боевой топор}
+itmdescr_bladeaxe3
+{
+Маленький удобный топор. Бесподобен для неожиданных атак, но абсолютно бесполезен в защите.
+}
+
+// TIH <--
+// Axes from SLiB. Jack Davidson. <--
+
+itmname_topor1 {Engraved Felling Axe}
+itmdescr_topor1
+{
+Used for cutting down trees but can also be used for cutting your enemies down to size.
+}
+
+itmname_topor2 {Single Half-Moon Battle Axe}
+itmdescr_topor2
+{
+Heavy and highly ornate battle axe. Very beautiful and very deadly.
+}
+
+itmname_battleax {Master Battle Axe}
+itmdescr_battleax
+{
+An impressive big battle axe perfectly suited for boarding enemy ships.
+}
+
+// Special Hand Weapons from SLiB. KevAtl. 09-03-2007 -->
+
+itmname_bladelead {Бронзовый кастет}
+itmdescr_bladelead
+{
+Бронзовый кастет, последнее средство в рукопашном бою.
+}
+
+itmname_bladeclub {Дубинка}
+itmdescr_bladeclub
+{
+Тяжелая деревянная дубинка.
+}
+
+// Special Hand Weapons from SLiB. KevAtl. <--
+
+itmname_pistol1	{Пистолет}
+itmdescr_pistol1
+{
+Маленький дешевый пистолет. Опасен только на очень небольшом расстоянии.
+}
+
+itmname_pistol2	{Дуэльный Пистолет}
+itmdescr_pistol2
+{
+Обычный дуэльный пистолет. Приличные дальность и убойная сила, но он долго перезаряжается и не слишком точен.
+}
+
+itmname_pistol3	{Мортирка}
+itmdescr_pistol3
+{
+Настоящая ручная пушка. Большая убойная сила, но дальность и точность оставляют желать лучшего.
+}
+
+itmname_pistol4	{Пеппербёкс}
+itmdescr_pistol4
+{
+Четыре пистолета в одном. Перезаряжается долго, но оно того стоит. Использование этого пистолета требует навыка "Меткий Стрелок".
+}
+
+itmname_pistol5	{Верховой Пистолет}
+itmdescr_pistol5
+{
+Этот пистолет - настоящее произведение искусства. Отличные дальность и точность стрельбы, быстрая перезарядка, высокая убойная сила - весомый аргумент в любом споре.
+}
+
+itmname_pistol6	{Двуствольный Пистолет}
+itmdescr_pistol6
+{
+Отличный пистолет с двумя стволами. Для тех случаев, когда одной пули недостаточно. Использование этого пистолета требует навыка "Стрелок".
+}
+
+itmname_pistol25	{Brace of four horse pistols}
+itmdescr_pistol25
+{
+These .70 calibre, 14 inch pistols are true monsters. Serious stopping power, excellent range and accuracy make them a weighty argument in any quarrel. ('Professional Gunman' ability required.)
+}
+
+itmname_pistol26	{Four-barrel Grapeshot pistol}
+itmdescr_pistol26
+{
+With four barrels loaded with grapeshots you can do a lot of damage to multiple enemies at once. 'Professional Gunman' ability required.
+}
+
+itmname_pistol3_14	{Кремневый пистолет}
+itmdescr_pistol3_14
+{
+Это красивый, но просто украшенный пистолет, прибыл из британских колоний Индии, изготовитель назвал его 'Перри', суда по гравировке. Первоначально принадлежащий Шри Сумбаджи, но украденные вами.
+}
+
+itmname_pistol4_1	{Пистолет наемника}
+itmdescr_pistol4_1
+{
+Четырехствольный пистолет, но мощнее чем обычный. Им можно убить много врагов за несколько секунд. Очень ценится испанскими наемниками.
+}
+
+itmname_Sparrow_Ring {Серебряное кольцо}
+itmdescr_Sparrow_Ring
+{
+Вы взяли серебряное кольцо со стола капитана Дроу в то время как он смотрел на координаты к бухте кораблекрушений. По крайней мере, вы получили хоть что-то от него.
+}
+
+itmname_Sparrow_Ring1 {Красивое кольцо}
+itmdescr_Sparrow_Ring1
+{
+Гомбо, теперь известный как Джентльмен Джокард, нашел это кольцо с частью барахла, которое Вы нашли на настоящем Джентльмене Джокарде.
+}
+
+// Alan Smithee's new weapons 
+
+itmname_pistol7	{Связка малых пистолетов}
+itmdescr_pistol7
+{
+Быстрое трёхзарядное оружие. Более декоративное, чем мощное, оно использовалось когда-то французскими дворянами для поединков. Требуется навык "Меткий стрелок".
+}
+
+itmname_pistol8	{Связка средних пистолетов}
+itmdescr_pistol8
+{
+Три пистолета среднего размера связаны вместе для быстрого использования. Говорят, они работы однорукого и одноглазого Испанского оружейника. Требуется навык "Меткий стрелок".
+}
+
+itmname_pistol9	{Связка больших пистолетов}
+itmdescr_pistol9
+{
+Только очень хороший "Меткий стрелок" сможет воспользоваться всей мощью этих двух великолепных пистолетов. Происхождение их неизвестно, но достоинства убедительны.
+}
+
+// Alan Smithee's new weapons end
+
+// JRH: Long Rifle -->
+
+itmname_LongRifle_C		{Long Rifle}
+itmdescr_LongRifle_C
+{
+This unique weapon can be equipped with a Telescope for increased accuracy. 
+}
+
+itmname_LongRifle_CT		{Long Rifle with Telescope}
+itmdescr_LongRifle_CT
+{
+This is a sniper's favourite weapon. 
+}
+
+itmname_telescope		{Telescope}
+itmdescr_telescope
+{
+A telescope for the Long Rifle. 
+}
+
+itmname_LongRifle_BT		{Long Rifle with Telescope}
+itmdescr_LongRifle_BT
+{
+This is a sniper's favourite weapon. 
+}
+
+itmname_LongRifle_W		{Long Rifle}
+itmdescr_LongRifle_W
+{
+This unique weapon can be equipped with a Telescope for increased accuracy. 
+}
+
+itmname_LongRifle_WT	{Long Rifle with Telescope}
+itmdescr_LongRifle_WT
+{
+This is a sniper's favourite weapon. 
+}
+
+itmname_LongRifle_H		{Long Rifle}
+itmdescr_LongRifle_H
+{
+A Baker Rifle, a flintlock rifle used by the British army during the Napoleonic wars.
+}
+
+// <-- JRH: Long Rifle end
+
+// BOP and JRH: Indian Weapons -->
+
+itmname_pistolbow 		{Bow}
+itmdescr_pistolbow
+{
+A heavy Bow made of red sallow.
+}
+
+itmname_bladearrows		{Arrows}
+itmdescr_bladearrows
+{
+Arrows for the Bow provided with hawk feathers for precision. Can be upgraded to Flaming or Poisoned Arrows with the right Mixtures.
+}
+
+itmname_curare			{Curare}
+itmdescr_curare
+{
+A mixture of plant extracts used as Arrow poison.
+}
+
+itmname_tar			{Tar Mixture}
+itmdescr_tar
+{
+A thick black paste of tar, gunpowder and other combustibles. Smells really bad but makes your Arrows flaming.
+}
+
+itmname_quiver			{Quiver}
+itmdescr_quiver
+{
+You can carry 12 Arrows with this rich ornate Quiver equipped.
+}
+
+itmname_tomahawk		{Tomahawk}
+itmdescr_tomahawk
+{
+A very dangerous close combat weapon of indian design.
+}
+
+itmname_pistoldart		{Throwingknife}
+itmdescr_pistoldart
+{
+If you throw it from some distance the victim won't realize where it came from. Can be worn instead of a pistol.
+}
+
+// BOP and JRH: Indian Weapons <--
+
+// KevAtl SLiB Shotgun 09-03-2007 <--
+
+itmname_pistol10 {Шотган}
+itmdescr_pistol10
+{
+Волшебное оружие, которое очень редко можно найти в этих водах. Делает три выстрела, без перезарядки и использует крупную картечь. Требуется навык 'Меткий стрелок'.
+}
+
+// KevAtl SLiB Shotgun <--
+
+// vassal weapons mod start
+
+itmname_pistolmtoon {Мушкетон}
+itmdescr_pistolmtoon
+{
+Мощное оружие, редко встречающееся в этих краях. Имеет более короткий, чем у мушкета, ствол. Очень удобное оружие для абордажа.
+}
+
+itmname_pistolmket {Мушкет}
+itmdescr_pistolmket
+{
+Очень мощное оружие. Как и мушкетон, редкость в этих краях. Имея длинный ствол, является идеальным оружием для использования с дальнего расстояния.
+}
+
+// vassal weapons mod end
+
+// JRH muskets & pistols -->
+
+itmname_arguebuse 			{Arquebus}
+itmdescr_arguebuse
+{
+This classic Matchlock Musket holds a burning slow match in a clamp at the end of a small curved lever known as the serpentine.
+}
+
+itmname_blade_mKnife		{Knife Bayonet}
+itmdescr_blade_mKnife
+{
+Early Bayonet of the "plug" type. The Knife has a round handle that slides directly into the Musket barrel.
+}
+
+itmname_blademketK			{Musket with Bayonet}
+itmdescr_blademketK
+{
+Standard Musket with a plug-in Knife as Bayonet. The Knife must to be removed when firing.
+}
+
+itmname_pistolmketB 		{Musket with Bayonet}
+itmdescr_pistolmketB
+{
+Musket with a Socket Bayonet allowing the Musket to be loaded and fired without removing the Bayonet. 
+}
+
+itmname_blademketB		{Musket with Bayonet}
+itmdescr_blademketB
+{
+Musket with a Socket Bayonet allowing the Musket to be loaded and fired without removing the Bayonet.  
+}
+
+itmname_pistol11			{Pistol}
+itmdescr_pistol11
+{
+An early Pistol with Wheellock mechanism.
+}
+
+itmname_pistol12			{Pair of Pistols}
+itmdescr_pistol12
+{
+An excellent pair of rich ornamented Wheellock Pistols. 'Gunman' ability required.
+}
+
+itmname_pistol13			{Short Musket}
+itmdescr_pistol13
+{
+A small-calibre Short Musket with Wheellock. Load it with two pistolbullets.
+}
+
+// <-- JRH muskets & pistols
+
+// SuperDurnius -->
+
+itmname_Barmansknife	{Нож для хлеба}
+itmdescr_Barmansknife
+{
+Предназначен для нарезки хлеба, но умелым рукам ничего не стоит нарезать и врагов.
+}
+
+itmname_Merchantsdagger	{Кинжал Торговцев}
+itmdescr_Merchantsdagger
+{
+Этот кинжал одобрен торговцами, которые вынуждены путешествовать через опасные участки.
+}
+
+itmname_GuestsKnife	{Нож}
+itmdescr_GuestsKnife
+{
+Тонкое лезвие этого ножа может проникнуть через даже самое крошечное отверстие.
+}
+
+itmname_Minersaxe	{Лесничий топор}
+itmdescr_Minersaxe
+{
+Лучший друг лесорубов . Деревья или враги, для этого инструмента без разницы.
+}
+
+itmname_Minerscrow	{Лопата}
+itmdescr_Minerscrow
+{
+Главным образом используется фермерами и рабами, чтобы возделывать поля. Но ее острие можно направить и против врагов.
+}
+
+itmname_Minerspick	{Кирка}
+itmdescr_Minerspick
+{
+Этот инструмент обычно используется для работы около скал. Но можно использовать и против врагов.
+}
+
+itmname_MinersSpade	{Лопата}
+itmdescr_MinersSpade
+{
+После убийства жертвы, вы можете ее сразу закопать.
+}
+
+itmname_PiratesDagger	{Стилет}
+itmdescr_PiratesDagger
+{
+Очень тонкий и заостренный. Идеально подходит для азартных игроков.
+}
+
+itmname_PiratesPistol	{Кремнеевый пистолет}
+itmdescr_PiratesPistol
+{
+Обычный кремневый пистолет.
+}
+
+itmname_MerchantsBlade	{Сабля торговцев}
+itmdescr_MerchantsBlade
+{
+Саблю одобрили многие торговцы, которые ей защищали свои товары и жизни.
+}
+//SuperDurnius <--
+
+itmname_spyglass1	{Дешевая позорная труба}
+itmdescr_spyglass1
+{
+Простая подзорная труба с поцарапанными стеклами. Этой рухляди не место в кармане уважающего себя капитана. Через нее можно рассмотреть только тип, название и скорость корабля.
+Позволяет владельцу рассмотреть только название, тип и скорость корабля
+}
+
+itmname_spyglass2	{Обычная подзорная труба}
+itmdescr_spyglass2
+{
+Обычная подзорная труба. Линзы вполне приличные, хотя бывают и лучше.
+Через нее можно рассмотреть только тип, название и скорость корабля, количество пушек и степень его повреждения.
+}
+
+itmname_spyglass3	{Хорошая подзорная труба}
+itmdescr_spyglass3
+{
+Дорогая подзорная труба с отличными линзами. Позоляет за милю рассмотреть ухмылку на роже вражеского боцмана.
+Через нее можно рассмотреть: тип, название и скорость корабля, количество пушек, степень его повреждения и количество команды.
+}
+
+itmname_spyglass4	{Отличная подзорная труба}
+itmdescr_spyglass4
+{
+Подзорная труба работы мастера, с линзами из чистейшего горного хрусталя. Лучше просто не бывает.
+Через нее можно рассмотреть: тип, название и скорость корабля, степень его повреждения, количество команды, орудий, и то, чем они заряжены.
+}
+
+itmname_potion1	{Лечебное зелье}
+itmdescr_potion1
+{
+Настой лекарственных трав, излечивающий легкие раны.
+}
+
+itmname_potion2	{Эликсир}
+itmdescr_potion2
+{
+Сваренный из более чем сотни редких трав, этот эликсир может вылечить даже самые страшные раны.
+}
+
+//New Medical System added by Duncan
+
+itmname_medical1	{Бинты}
+itmdescr_medical1
+{
+Кусок материи, который поможет сохранить поврежденную конечность.
+}
+
+itmname_medical2	{Термокаутер}
+itmdescr_medical2
+{
+Средство для прижигания ран.
+}
+
+itmname_lockpick	{Отмычки}
+itmdescr_lockpick
+{
+Выписка из 'Книги мародеров':
+Глава XVII: ИСПОЛЬЗОВАНИЕ отмычки
+Эти удобные устройства удвоят шанс профессионального вора в открытии замков. Если отмычка не сломается и не застрнет в замке.
+
+- "Торжественно клянусь что замышляю шалость и только шалость"
+Подписано: Лунатик,Сохатый,Бродяга и Хвост :)
+}
+
+itmname_jewelry1	{Сапфир}
+itmdescr_jewelry1
+{
+Светлый, цвета чистой воды камень. Великолепная ровная огранка.
+}
+
+itmname_jewelry2	{Бриллиант}
+itmdescr_jewelry2
+{
+Настоящее призведение ювелирного искусства. Говорят, в блеске граней этого магического камня вы можете увидеть ваше будущее. 
+}
+
+itmname_jewelry3	{Рубин}
+itmdescr_jewelry3
+{
+Яркий, цвета крови, рубин. Украсит вашу шпагу, и придаст вашей руке твердости в следущем бою. 
+}
+
+itmname_jewelry4	{Изумруд}
+itmdescr_jewelry4
+{
+Зеленый камень, при взгляде не который у самого отпетого негодяя в душе возникают воспоминания о красавице с зелеными глазами, которую он оставил дома.
+}
+
+itmname_jewelry5	{Самородное золото}
+itmdescr_jewelry5
+{
+Золотой слиток - ради этого красивого метала люди убивают друг друга. Что можно сказать - золото правит миром.
+}
+
+itmname_jewelry6	{Серебряное кольцо с сапфиром}
+itmdescr_jewelry6
+{
+Серебро и сапфир - недорогое сочетание, но сколько в этом кольце благородства.
+}
+
+itmname_jewelry7	{Золотое кольцо с изумрудом}
+itmdescr_jewelry7
+{
+Золото и изумруд - смотрится броско, но ведь вы не боитесь излишнего блеска.
+}
+
+itmname_jewelry8	{Бронзовое кольцо}
+itmdescr_jewelry8
+{
+Обычно его носят на счастье. Как талисман.
+}
+
+itmname_jewelry9	{Бронзовый крест}
+itmdescr_jewelry9
+{
+Помните Спасителя. Может быть именно маленький крестик придаст вам силы в бою.
+}
+
+itmname_jewelry10	{Золотое кольцо с сапфирами}
+itmdescr_jewelry10
+{
+Это роскошь, достойная немногих.
+}
+
+itmname_jewelry11	{Большая жемчужина}
+itmdescr_jewelry11
+{
+Дар морей, привезенный сюда из далеких морей. Говорят, этой жемчужина больше сотни лет.
+}
+
+itmname_jewelry12	{Маленькая жемчужина}
+itmdescr_jewelry12
+{
+Простая, красивая жемчужина.
+}
+
+itmname_jewelry13	{Серебряная брошь}
+itmdescr_jewelry13
+{
+Камелия. Подарите ее любой красотке - и она будет носить ее до конца жизни вспоминая вас.
+}
+
+itmname_jewelry14	{Золотая брошь}
+itmdescr_jewelry14
+{
+Да, эту вещицу просто красотке не подаришь. Ну, может быть королеве. Но только на время.
+}
+
+itmname_jewelry15	{Изумрудные подвески}
+itmdescr_jewelry15
+{
+Дьявол побери если за такое украшение вы не добъетесь благосклонности любой женщины.
+}
+
+itmname_jewelry16	{Ожерелье}
+itmdescr_jewelry16
+{
+Казалось бы простое украшение. Но и этому любая будет рада. Вот и подарите ее любой. 
+}
+
+itmname_indian1	{Идол Иргантахула}
+itmdescr_indian1
+{
+Фигурка индейского божества.
+}
+
+itmname_indian2	{Статуэтка странного животного}
+itmdescr_indian2
+{
+Кто знает что это. Кажется это игрушка для маленьких индейцев.
+}
+
+itmname_indian3	{Маленькая мозаика}
+itmdescr_indian3
+{
+Потрясающе красивая вещь, секрет производства таких мозаик уже утерян. В Европе такая вешь чтоила бы целое состояние. А здесь продается за бесценок.
+}
+
+itmname_indian4	{Глиняный кувшин}
+itmdescr_indian4
+{
+Красивый расписной сосуд.
+}
+
+itmname_indian5	{Маска Маркуханкату}
+itmdescr_indian5
+{
+Маска веселого божества. кстати, она золотая.
+}
+
+itmname_indian6	{Статуэтка Акумаларту}
+itmdescr_indian6
+{
+Золотая фигурка бога войны местных индейцев.
+}
+
+itmname_indian7	{Идол Пикахуатла}
+itmdescr_indian7
+{
+Идол - изображение Матери Земли. Символ плодородия и удачи.
+}
+
+itmname_indian8	{Королевская Плевательница}
+itmdescr_indian8
+{
+Ритуальный предмет - с помощью этого кубка совершались тайные обряды при Инкском дворе.
+}
+
+itmname_indian9	{Идол Бакахукта}
+itmdescr_indian9
+{
+Изображение бога, а кроме того и кубок. Удобная вещица, согласитесь.
+}
+
+itmname_indian10	{Идол Йкстоикхатлу}
+itmdescr_indian10
+{
+Потрясающе красивая фигурка божества из чистого золота с инкрустацией.
+}
+
+itmname_indian11	{Статуэтка Зуба Мудрости}
+itmdescr_indian11
+{
+Индейское изображение бога мудрости. Как видите, индейская мудрость веселится.
+}
+
+itmname_indian12	{Идол Морхахтулака}
+itmdescr_indian12
+{
+Золотая голова идола. Да золота на эту голову ушло много.
+}
+
+itmname_indian13	{Древняя курительница}
+itmdescr_indian13
+{
+Сосуд для индейских воскурений.
+}
+
+itmname_indian14	{Идол Ихтилокстумба}
+itmdescr_indian14
+{
+Золотой идол, выполненный в очень необычном стиле.
+}
+
+itmname_indian15	{Ритуальная ванна}
+itmdescr_indian15
+{
+Ритуальная ванна - один из главных элементов инкского ритуала.
+}
+itmname_indian16	{Раскрашенный горшок}
+itmdescr_indian16
+{
+Красочный, расписанный в инкском стиле сосуд.
+}
+
+itmname_indian17	{Идол Дариен}
+itmdescr_indian17
+{
+Этот золотой идол принадлежит племени каннибалов. И представляет собой бога войны. Тот, кто украдет его будет в большой беде.
+}
+
+itmname_potion3		{Противоядие}
+itmdescr_potion3
+{
+Смесь трав, помогающая при отравлениях.
+}
+
+
+itmname_potion4		{Микстура}
+itmdescr_potion4
+{
+Микстура не только нейтрализует яд, но и увеличивает здоровье.
+}
+
+;-----------------------------------START ADDED BY VERRUCKT
+
+itmname_potionrum		{Бутылка рома}
+itmdescr_potionrum
+{
+Ничто другое не свалит Вас с ног быстрее...
+}
+
+itmname_potionwine	{Чудесное вино}
+itmdescr_potionwine
+{
+Самое лучшее вино на Карибах.
+}
+;----------------------------------STOP ADDED BY VERRUCKT
+
+itmname_100gp	{100 писастров}
+
+itmname_250gp	{250 писастров}
+
+itmname_500gp	{500 писастров}
+
+; GreatZen -->
+
+itmname_mineral1	{Пирит}
+itmdescr_mineral1
+{
+ Большой кристалл, добытый из железняка Ацтеков.
+}
+
+itmname_Mineral2	{Гранат}
+itmdescr_Mineral2
+{
+ Очень редкий и в то же время очень дорогой кристалл. Продав его торговцу, вы получите хорошие деньги.
+}
+
+itmname_Mineral3	{Хризоберилл}
+itmdescr_Mineral3
+{
+ Практически невозможно найти вещь подобно этой. Послухам этот камень защищает от привидений и прочей нечисти.
+}
+
+itmname_Albatross	{Баклан}
+itmdescr_Albatross
+{
+Большая неожиданность отыскать в сундуке мертвого баклана. Но все же лучше от него избавиться поскорее. Сделать чучело или похоронить.
+}
+
+itmname_GoldArmor	{Золотая кираса}
+itmdescr_GoldArmor
+{
+Кираса из позолоченного металла. Знак богатства и процветания. Прекрасно сдерживает удары.
+}
+
+itmname_CommonArmor	{Боевая кираса}
+itmdescr_CommonArmor
+{
+Она не идеальна, но достойна внимания при встрече с пиратами. Сделана так, что не сковывает движения.
+}
+
+itmname_CheapArmor	{Обычная кираса}
+itmdescr_CheapArmor
+{
+ Такую кирасу носили обычные солдаты. Хорошей защиты она не дает. К тому же в ней трудно двигаться.
+}
+
+itmname_Gorget	{Gorget}
+itmdescr_Gorget
+{
+Neck armor, usually brass or steel, often favored by swordsmen.
+}
+
+itmname_Jerkin	{Leather Jerkin}
+itmdescr_Jerkin
+{
+A leather vest; provides some protection against blade and gun wounds.
+}
+
+itmname_Cured	{Leather Cuirass}
+itmdescr_Cured
+{
+Battle armor made of hardened leather; provides light protection against blade and gun wounds.
+}
+
+itmname_Mineral7	{Дымчатый кварц}
+itmdescr_Mineral7
+{
+ Этот чёрный камень используется в чёрной магии для контактов с умершими.
+}
+
+itmname_Mineral8	{Турмалин}
+itmdescr_Mineral8
+{
+Приятно смотреть на переливы цветов этого камня. Возможно, за него дадут хорошую цену.
+}
+
+itmname_Mineral9	{Топаз}
+itmdescr_Mineral9
+{
+Не особо драгоценный минерал, несколько неказист и далек от совершенства, но все же блики на его поверхности радуют взор. 
+}
+
+itmname_ChinaTiger	{Статуэтка тигра}
+itmdescr_ChinaTiger
+{
+Статуэтка китайского происхождения. Как её сюда занесло? 
+}
+
+itmname_WhiteSkull	{Белый хрустальный череп}
+itmdescr_whiteskull
+{
+Один из трех кристаллических черепов, изготовленных Майя для совершения своих ритуалов.
+}
+
+itmname_RoseSkull	{Розовый хрустальный череп}
+itmdescr_roseskull
+{
+Один из трех кристаллических черепов, изготовленных Майя для совершения своих ритуалов.
+}
+
+itmname_BlueSkull	{Голубой хрустальный череп}
+itmdescr_blueskull
+{
+Этот череп самый важный для ритуалов племени Майя. 
+}
+
+itmname_mineral15	{Самородная платина}
+itmdescr_mineral15
+{
+ Металл. Не золото и не серебро, но очень тяжелый. 
+}
+
+itmname_Mineral16	{Роковой Кристалл}
+itmdescr_Mineral16
+{
+Обработанный в форме сферы, он помогает увидеть будущее
+}
+
+; GreatZen <--
+
+itmname_CursedCoin		{Монета ацтеков}
+itmdescr_CursedCoin
+{
+Большая золотая монета с изображением черепа. Вам не нравится смотреть на неё.
+}
+
+// -- Scheffnow -- 2004-01-17 -- NoSaveModeMod -- start ---------------
+
+itmname_holycross1	{Медный крест}
+itmdescr_holycross1
+{
+Тяжелый крест, украшенный драгоценными камнями и жемчугом.
+}
+
+itmname_holycross2	{Серебряный крест}
+itmdescr_holycross2
+{
+Серебряный крест, украшенный драгоценными камнями и жемчугом.
+}
+
+itmname_holycross3	{Золотой крест}
+itmdescr_holycross3
+{
+Золотой крест, украшенный драгоценными камнями и жемчугом.
+}
+
+// -- Scheffnow -- 2004-01-17 -- NoSaveModeMod -- end -----------------
+
+; --> Fred Bob quest items added by CatalinaThePirate
+
+itmname_letter_reward	{Письмо}
+itmdescr_letter_reward
+{
+Запечатанное письмо. На конверте написано, что доставившего это письмо ожидает награда.
+}
+
+
+itmname_estrella_token	{Медальон Эстреллы}
+itmdescr_estrella_token
+{
+Когда-то это была испанская монета. Какой-то пират сделал из неё медальон и подарил своей возлюбленной.
+}
+; <-- Fred Bob quest items added by CatalinaThePirate
+
+; --> Mateus Santos quest items added by SCM
+
+itmname_Santos_Ring {Кольцо Сантуса}
+itmdescr_Santos_Ring
+{
+ Вы сняли серебряное кольцо с руки Сантуса после того, как его убили. Возможно, вы будете держать его как память о нем, или продадите его, чтобы купить ром, и постараетесь забыть, что это приключение когда-либо случалось.
+}
+
+itmname_Santos_Keys {Ключи Сантуса}
+itmdescr_Santos_Keys
+{
+Ключи к Дому Матеуша Сантоса, что за двери, они открывают? Прежде чем напасть на Сантуса, вы видели как он сломал механизм и теперь многие из дверей не могут быть открыты даже этими ключами. Ключи отмечены странно, на них написано: "Кабинет", "увы, бедный Йорик!", "Секретарь". Что это означает?
+}
+
+itmname_Santos_Journal1 {Журнал Сантуса A-N}
+itmdescr_Santos_Journal1
+{
+Это очевидно - один из журналов, в котором перечислинны цели Сантуса для убийства; Admiral 8Q, Bonny Megs, Cap'n Toast, Captain Cookie, Captain Dams, Catalina the Pirate, Child of Thor, Couch Captain Charles, Diomed, Donkey Pirate, Fred Bob, High Sea Lass, Inez Dias, JMV575, Keith, Kevo44, Kieron, Lady Karen of the Sandwich Isles, Mad Jack, Maximus, Meigger, Muddymonkey77, Nathan Kell
+}
+
+itmname_Santos_Journal2 {Журнал Сантуса O-Z}
+itmdescr_Santos_Journal2
+{
+Продолжение списка; Petros, Pieter Boelen, Pirate Sam, Rafe Bligh, Rico,(aka Drunken, aka El Capitain, aka Admiral Makkay), Screwface, Skull, Spaz, Vassal, William, and that Dastardly Sir Christopher Mings! Кроме того, некоторые профессора колледжа имени Лоузи которые, видимо, когда-то поставили ему плохую оценку.
+}
+; <-- Mateus Santos quest items added by SCM
+
+// ccc Building kit aug 05
+
+itmname_building	{Лицензия на строительство ;) }
+itmdescr_building
+{
+НЕ ТРОГАТЬ! Особенно - если Вы временный 'владелец' этого здания!
+}
+
+// ccc Special weapons assembly kit start
+
+itmname_bladeX1	{Рапира Борджиа}
+itmdescr_bladeX1
+{
+Роскошное церемониальное лезвие... с отравленным белладонной остриём. Даже малейшая сарапина вызовет медленную и неминуемую смерть.
+}
+
+itmname_bladeX2	{Мешочек с песком}
+itmdescr_bladeX2
+{
+Излюбленное оружие грабителей: удар по голове ничего не подозревающей жертвы оглушает её на некоторое время. При этом никаких посторонних звуков. Оглушенного человека легко обчистить, особенно если рядом нет свидетелей.
+}
+
+itmname_bladeX3	{Воровской нож}
+itmdescr_bladeX3
+{
+Края этого тонкого лезвия слегка притуплены. Благодаря этому можно легко просунуть нож под чей-нибудь пояс и одним быстрым движением разрезать его острым концом и сорвать оружие или кошелёк Вашей жертвы. Следующим быстрым движением должно быть бегство.
+}
+
+itmname_pistolbbuss	{Пугач}
+itmdescr_pistolbbuss
+{
+Выстреливает всё, что может быть использовано в качестве шрапнели, и поражает буквально каждого вокруг Вас. Часто заклинивает, и тогда весь заряд может попасть в Ваше милое личико.
+}
+
+itmname_pistolgrenade	{Граната}
+itmdescr_pistolgrenade
+{
+Калечит всех, кто находится рядом с целью броска, поэтому бросайте подальше. Можно использовать вместо пистолета.
+}
+
+itmname_pistolgas	{Бутыль с эфиром}
+itmdescr_pistolgas
+{
+Будучи брошенной и разбившись выпускает анестезирующие испарения, обездвиживая на некоторое время всех, находящихся рядом. Можно использовать вместо пистолета.
+}
+
+itmname_pistolpdart	{Отравленный метательный нож}
+itmdescr_pistolpdart
+{
+Лезвие этого ножа смочено выделениями ядовитой жабы. Убивает медленно и наверняка. Бросая его с расстояния, Вы не позволяете жертве определить откуда пришла смерть. Можно использовать вместо пистолета.
+}
+
+itmname_pistolstink	{"Гадина"}
+itmdescr_pistolstink
+{
+Банка с горючим веществом. Будучи подожжённой отравляет всех, кто вдохнул хотя бы немного дыма. Бросайте подальше от себя. Можно использовать вместо пистолета.
+}
+
+itmname_pistolrock	{Булыжник}
+itmdescr_pistolrock
+{
+Не нужно недооценивать эффективность этого малоприметного оружия. Удачный бросок может оглушить жертву на некоторое время. Однако ожидающий нападения человек может легко уклониться от броска. Можно использовать вместо пистолета.
+}
+
+// ccc Special weapons assembly kit end
+
+// PB: Fists -->
+
+itmname_bladeX4	{Проверенные кулаки}
+itmdescr_bladeX4
+{
+Они не нанесут такого же ущерба, как средняя сабля, но ими можно хорошенько "приложить" Вашего противника. Вместе с увеличением Вашего ранга возрастает и Ваша способность вышибать дух из оппонентов.
+}
+
+// PB: Fists <--
+
+// Alan_Smithee tattoos -->
+
+itmname_tatt1	{Древняя Татуировка Воина}
+itmdescr_tatt1
+{
+Такой рисунок древние воины наносили перед битвой, чтобы вселить страх в сердца врагов.
+}
+
+itmname_tatt2	{Татуировка Моряка и Милого парня}
+itmdescr_tatt2
+{
+Корабль, горящая деревня и милая девушка - эта татуировка наверняка напомнит любому моряку о его возлюбленной (или возлюбленных), ждущей его в порту, и заставит поторопиться с возвращением домой.
+}
+
+itmname_tatt3	{Татуировка Вольного Искателя Приключений}
+itmdescr_tatt3
+{
+Этот чернильный рисунок, напоминающий о свободной и полной приключений морской жизни, внушит уважение к Вам любой команде.
+}
+
+itmname_tatt4	{Классическое изображение якоря}
+itmdescr_tatt4
+{
+Классическое изображение морского якоря и корабля воодушевит ваших людей и они приложат все силы, чтобы в любой ситуации удержать Ваш корабль на плаву.
+}
+
+itmname_tatt5	{Древняя и богато украшенная Татуировка}
+itmdescr_tatt5
+{
+Члены некоторых древних церковных орденов носили такие изображения, чтобы призвать божественное провидение.
+}
+// <--- ditto
+
+// Alan_Smithee Apothecary -->
+
+itmname_leeches	{Банка с пиявками}
+itmdescr_leeches
+{
+Панацея Колониальной Эпохи. Будучи приложенными к коже, эти маленькие говнюки (именуемые Ленни, Бенни, Дженни и Эдуардо, соответственно) высосут из пациента всю накопившуюся дрянь, но оставят его чуть более ослабленным.
+}
+
+itmname_meds1	{Acetum Saturninum}
+itmdescr_meds1
+{
+Изменчивая жидкость, полученная окислением алкоголя. Используется в качестве лекарственного снотворного средства. Лучше всего найти кого-нибудь, кто знает, что с этим делать.
+}
+
+itmname_meds2	{Confectio Damocritis}
+itmdescr_meds2
+{
+Бутылка таинственной и плохо-пахнущей жидкости. Вероятно, с некоторыми медицинскими свойствами... однако бесполезна для Вас в том виде, в каком она есть.
+}
+
+itmname_meds3	{Tincture of Laudenum}
+itmdescr_meds3
+{
+Много несчастливых душ пропало, причислив себя к обессмысленным курильщикам, испробовав эту производную алкоголя и наркотика. На ярлыке надпись - "Держать подальше от детей".
+}
+
+itmname_meds4	{Снадобья}
+itmdescr_meds4
+{
+Небольшой сундучок с какими-то лекарствами неизвестного происхождения. Для Вас абсолютно бесполезен.
+}
+
+// <-- ditto
+
+// JRH ammo mod start
+
+itmname_powderflask {Пороховница}
+itmdescr_powderflask
+{
+В ней Вы можете держать 12 зарядов. Ускоряет перезарядку на 5%.
+}
+
+itmname_gunpowder {Порох}
+itmdescr_gunpowder
+{
+Необходимая вещь. Держите его подальше от воды.
+}
+
+itmname_ammopouch {Сумка для боеприпасов}
+itmdescr_ammopouch
+{
+В ней Вы можете держать 12 пистолетных пуль, 12 дробовых пистолетных зарядов или 6 мушкетных пуль. Ускоряет перезарядку на 5%.
+}
+
+itmname_powderbarrel {Пороховой бочонок}
+itmdescr_powderbarrel
+{
+Вмещает 24 заряда. Пороховница должна быть на Вас.
+}
+
+itmname_ammobag {Ранец для боеприпасов}
+itmdescr_ammobag
+{
+Вмещает 24 пистолетных пуль, 24 дробовых пистолетных зарядов или 12 мушкетных пуль. Сумка для боеприпасов должна быть при вас.
+}
+
+itmname_ammobag1 {Сумка для боеприпасов}
+itmdescr_ammobag1
+{
+Вмещает 18  ед. пороха И 18 пистолетных пуль, 18 дробовых пистолетных зарядов или 9 мушкетных пуль. Пороховница или сумка для боеприпасов НЕ обязательны, но пистолет на поясе должен быть! Пререзарядка на 10% быстрее.
+}
+
+itmname_pistolbullets {Пистолетные пули}
+itmdescr_pistolbullets
+{
+Подходят для всех типов пистолетов, за исключением дробовиков. 
+}
+
+itmname_pistolgrapes {Дробь}
+itmdescr_pistolgrapes
+{
+Подходит для мушкетов, мушкетонов и дробовиков. 
+}
+
+itmname_musketbullets {Мушкетные пули}
+itmdescr_musketbullets
+{
+Больше, чем пистолетные. Подходят только для мушкетов. 
+}
+
+// JRH ammo mod end
+
+// PB: Add new items -->
+
+itmname_microscope {Микроскоп} // Black Bart
+itmdescr_microscope
+{
+Микроскопы используются для того, чтобы видеть вещи, которые слишком малы и их нельзя увидеть невооруженным глазом.
+}
+
+itmname_compass1 {Дешевый Компас} // Black Bart
+itmdescr_compass1
+{
+Это - простой компас, который указывает на Север. А это уже ценная информация, по ней можно определить направление ветра.
+}
+
+itmname_compass2 {Обычный Компас} // PB
+itmdescr_compass2
+{
+Этот обычный компас намного более полезен чем дешевый.
+}
+
+itmname_compass3 {Улучшенный Компас} // KK
+itmdescr_compass3
+{
+Эта модель - улучшенная версия Обычного Компаса.
+}
+
+itmname_aztec_compass {Ацтекский Компас} // Petros
+itmdescr_aztec_compass
+{
+Как ни странно, этот компас похоже, был сделан ацтеками.
+Ацтеки известны за свое золото, религию и удивительные храмы. 
+Но Ацтеки никогда не были хорошими моряками.
+Этот компас объясняет почему:
+Он не указывает на Север, делая его совершенно бесполезным для навигации.
+}
+
+itmname_scales {Весы} // Black Bart
+itmdescr_scales
+{
+Весы часто используются торговцами. Они помогают при взвешивании предметов и товаров. Очень полезны для улучшения ваших собственных торговых навыков.
+}
+
+itmname_sextant {Секстант} // Gedscho
+itmdescr_sextant
+{
+Секстант является измерительным прибором как правило, используется для измерения угла подъема небесного объекта над горизонтом. Это очень полезная вещь для штурманов, чтобы определить положение своего корабля.
+}
+
+itmname_doctortoolkit {Набор инструментов Доктора} // Black Bart & Gedscho
+itmdescr_doctortoolkit
+{
+С помощью инструментария врача, вы можете попытаться спасти раненых членов экипажа от смерти после морского боя.
+}
+
+itmname_carpentertools {Carpenter's Toolkit} // JRMM
+itmdescr_carpentertools
+{
+These high-quality tools improve a carpenter's ability to effectively make repairs.
+}
+
+itmname_silkgrapple {Silk Grapple Lines} // JRMM
+itmdescr_silkgrapple
+{
+Lighter and stronger grapple lines made from woven silk. Easier to throw, harder to cut.
+}
+
+itmname_gunnerdrum {Gunner's Drum} // JRMM
+itmdescr_gunnerdrum
+{
+Training the gun crews to work by drum beat allows them to move more quickly and efficiently.
+}
+
+itmname_gunnerglass {Gunner's Glass} // JRMM
+itmdescr_gunnerglass
+{
+A low-magnification, graduated spyglass designed for artillery officers, allowing them to adjust fire quickly.
+}
+
+itmname_masterkeys {Master Keys} // JRMM
+itmdescr_masterkeys
+{
+Keys to the powder room, weapon's locker, and rum storage. Possessing these keys denotes the crewman as a trusted officer and worthy of respect.
+}
+
+itmname_luckcharm {Good Luck charm} // JRMM
+itmdescr_luckcharm
+{
+A sterling silver shamrock pendant. You can't buy this kind of luck, you can only find it.
+}
+
+itmname_bladekit {Blade Care Kit} // JRMM
+itmdescr_bladekit
+{
+Contains a whetstone, oil, and a fine rag. Take care of your blade and it will take care of you. It'll last longer that way.
+}
+
+itmname_clock1 {Простые часы} // PB
+itmdescr_clock1
+{
+Знание времени на борту судна всегда было очень важно в навигации. Это простые часы, размером 10 см в диаметре, можно подвесить к потолку каюты своего капитана, и он скажет вам время во время плавания в море. Однако, эти часы не очень точны и не могут использоваться для того, чтобы определить ваше положение, используя звезды.
+}
+
+itmname_clock2 {Хронометр} // PB
+itmdescr_clock2
+{
+Для того, чтобы определить свое положение в море, необходимо знать точное время. Этот точный инструмент поворачивается на двух опорах, позволяя ей всегда висеть ровно, даже во время шторма. Используя этот хронометр в сочетании с секстантом, можно определить ваше положение в море через серию сложных вычислений.
+}
+
+// PB: Add new items <--
+
+// Short Jack Gold Books -->
+
+itmname_book1 {Книга Абордажа}
+itmdescr_book1
+{
+главы о: Абордажных крючьях - никогда не высаживайтесь на вражеский корабль первым - пропускайте вперед своих людей.
+}
+
+itmname_book2 {Алгебра Боелена}
+itmdescr_book2
+{
+Учит как не дать себя обмануть торговцам.
+}
+
+itmname_book3 {Drow's Double Your Dubloons}
+itmdescr_book3
+{
+Includes Teeth Testing Coins - How to toss heads every time - removing zits with two coins - using a coin instead of an eyepatch (see where your money is).
+A "must have" book.
+}
+
+itmname_book4 {Книга Гука}
+itmdescr_book4
+{
+Первоначально под названием Справочник Гука - до его несчастного случая
+Много полезных подсказок на навигации - включая положение солнца
+}
+
+itmname_book5 {Ремонт бизань-мачты}
+itmdescr_book5
+{
+Подробное описание того, как Морган отремонтировал свою бизань мачту в море, используя только свой платок и ногу своего первого помощника.
+}
+
+itmname_book6 {Morgan's Mast Mashing}
+itmdescr_book6
+{
+Book 2 in a series of 3 - Details the other side of Morgan - Full size pull-outs of how to dis-mast a ship: at long range, close range and in the shipyard at night when everyone's gone home.
+Not suitable for children or people with a nervous disposition.
+}
+
+itmname_book7 {Morgan's Almanac}
+itmdescr_book7
+{
+Book 3 in a series of 3 showing the practical and personal side of Morgan. Phases of the Moon, Tide Times, Current Speed and direction. Appendix contains Letters from his Mum, Letters to his Mum and Letters of the Alphabet. Bonus Pull-Out: Letters from Pirates he knew, Pirates he didn’t know and Pirates who didn’t want to know him (mostly now deceased).
+}
+
+itmname_book8 {Pirating With Petros}
+itmdescr_book8
+{
+Tales from his long time at sea with parchment pictures - Thrilling chapters including:
+Petros on Pirates - Petros on Pillaging - Petros on Plotting - Petros on Planning and Petros on Pills.
+}
+
+itmname_book9 {Cooking With Albatross}
+itmdescr_book9
+{
+Some really tasty recipes - with or without feathers 
+Add some protein to your crew's diet - could increase their boarding ability
+}
+
+itmname_book10 {Definitive Defence}
+itmdescr_book10
+{
+Chapters written by such famous people as Captain Allvase Lostalot, Vice Admiral Ivor Whiteflag
+And Admiral Defeet should help you defend your ship.
+}
+
+itmname_book11 {Fighting Forts}
+itmdescr_book11
+{
+Fast fun filled fact files for fierce Fort Fighting for fortune and fame - fearful fortress fronts - fictitious forts and famous feints and forts I've fought by Fighting Francesco
+}
+
+itmname_book12 {Great Gun Sights}
+itmdescr_book12
+{
+Full fold out colour pictures of fabulous and functional gun sights - two nails and a piece of wood - knotted string - two thumbs and a finger - and of course the famous pointed stick.
+}
+
+itmname_book13 {Handy Sea Phrases}
+itmdescr_book13
+{
+1001 famous phrases - includes: Aye there me hearties - Yo Ho Ho - ARGGG - Have at 'em lads - left hand down a bit and Ouch that smarts!
+}
+
+itmname_book14 {How to Repel Boarders}
+itmdescr_book14
+{
+Loads of hints in this book including - Don't change the bedsheets - cold food is fun - the wonder of weevils - fierce facial expressions - when mooning works - no hammock hooks - and much, much more.
+}
+
+itmname_book15 {Ремонт Судна без гвоздей}
+itmdescr_book15
+{
+Да - используя клей для лошадиных копыт - можно спасти тысячи золотых на закупке гвоздей
+И что гораздо важнее - безшумно
+}
+
+// Short Jack Gold Books <--
+
+//Levis' exorcism book -->
+
+itmname_book_exorcist {Cessa Decipere}
+itmdescr_book_exorcist
+{
+A weird book in a weird language found on a dead adventurer.
+}
+
+//Levis' exorcism book <--
+
+
+itmname_indian_treasure_note {Indian Treasure Note}
+itmdescr_indian_treasure_note
+{
+This might contain some important information.
+}
+
+itmname_hotel_flyer {Hotel Flyer}
+itmdescr_hotel_flyer
+{
+This seems to be some kind of promotion for a newly opened hotel here in #sCartagena#. It indicates the location is in the town center between the store and the blacksmith.
+}
+
+itmname_package_steven {Package for Steven}
+itmdescr_package_steven
+{
+It's a package from the natives which I should deliver to Steven.
+}
+
+//Levis & PB: Tutorial Books -->
+
+itmname_smugglingbook {Smugglers' Handbook}
+itmdescr_smugglingbook
+{
+This book seems to contain tips and tricks for smuggling. I wonder how such a book can be made without the author being caught.
+}
+
+itmname_opiumlist {List of Opium Buyers}
+itmdescr_opiumlist
+{
+The list of opium buyers provided by the smugglers.
+}
+
+itmname_smugglingbook2 {Smugglers' Handbook Vol 2}
+itmdescr_smugglingbook2
+{
+Wait! There is another one of these smuggler books? Whoever is printing these?
+}
+
+itmname_relationbook {The Art of War}
+itmdescr_relationbook
+{
+While the goings on of the great nations may seem unimportant to a simple sea captain, your actions can have a great impact on how you are treated by ships at sea and the towns' forts. This book contains various important notes to help you navigate safely through the treacherous waters of international politics.
+}
+
+itmname_piratebook {Under the Jolly Roger}
+itmdescr_piratebook
+{
+For the novice pirate, something to read while swigging your rum. The book contains hints to help you survive and make the most of your plundering career.
+}
+
+//Levis & PB: Tutorial Books <--
+
+itmname_smuggling_papers {Governor Orders}
+itmdescr_smuggling_papers
+{
+This document tells you to investigate the smugglers.
+}
+
+itmname_smuggling_first_report {Smuggling Report}
+itmdescr_smuggling_first_report
+{
+This document tells about my smuggling experiences.
+}
+
+itmname_smuggling_second_report {Opium Smuggling Report}
+itmdescr_smuggling_second_report
+{
+This document tells about my opium smuggling experiences.
+}
+
+itmname_skillbook1 {Advanced Blocking Techniques}
+itmdescr_skillbook1
+{
+This book describes how you can use your sword to deflect some of the blows so you don't get hurt that much during a fight.
+(Unlocks Advance Defence)
+}
+
+itmname_skillbook2 {Don't Look in the Barrel}
+itmdescr_skillbook2
+{
+This book teaches you gun ettiquette. 
+(Unlocks Professional Gunman)
+}
+
+itmname_skillbook3 {Book of Bouncing Balls}
+itmdescr_skillbook3
+{
+Did you know there is a way to make cannons balls bounce of your hull? This and more tricks you'll find in this book. 
+(Unlocks Advanced Ship defence)
+}
+
+itmname_skillbook4 {Don't Shoot the Messenger}
+itmdescr_skillbook4
+{
+This book learns you how to use cannons better.
+(Unlocks Professional Cannoneer)
+}
+
+//Levis' Skill Books <--
+
+//Levis' Patrol Schedule Book -->
+
+itmname_patrolbook {Patrol Schedule #sisland# version #dversion#}
+itmdescr_patrolbook
+{
+Patrolling schedule for #sisland#.
+}
+
+//Levis' Patrol Schedule Book <--
+//Levis' ayahuasca -->
+
+itmname_ayahuasca {Ayahuasca}
+itmdescr_ayahuasca
+{
+This plant is said to have the power to unlock the mind.
+}
+
+itmname_vegetal {Hoasca}
+itmdescr_vegetal
+{
+A strange looking potion. It is said to enhance a user's fighting ability for a short while.
+}
+
+//Levis' ayahuasca <--
+//JRH apothecary sidequest -->
+
+itmname_hotel_crucifix {Crucifix}
+itmdescr_hotel_crucifix
+{
+A Priest's item.
+}
+
+itmname_hotel_bible {Bible}
+itmdescr_hotel_bible
+{
+A Priest's item.
+}
+
+itmname_hotel_sextant {Sextant}
+itmdescr_hotel_sextant
+{
+A Navigator's item.
+}
+
+itmname_hotel_drawing {Drawing Kit}
+itmdescr_hotel_drawing
+{
+A Navigator's item.
+}
+
+itmname_hotel_megaphone {Megaphone}
+itmdescr_hotel_megaphone
+{
+A Captain's item.
+}
+
+itmname_hotel_spyglass {Spyglass}
+itmdescr_hotel_spyglass
+{
+A Captain's item.
+}
+
+itmname_hotel_whistle {Boatswain's Pipe}
+itmdescr_hotel_whistle
+{
+A Boatswain's item.
+}
+
+itmname_hotel_grappling {Grappling Hook}
+itmdescr_hotel_grappling
+{
+A Boatswain's item.
+}
+
+itmname_hotel_surgery {Surgery Kit}
+itmdescr_hotel_surgery
+{
+A Doctor's item.
+}
+
+itmname_hotel_bandages {Bandages}
+itmdescr_hotel_bandages
+{
+A Doctor's item.
+}
+
+itmname_hotel_keys {Hotel Keys}
+itmdescr_hotel_keys
+{
+A bunch of Keys. To Chests, doors or both?
+}
+
+itmname_chair_45 {Chair}
+itmdescr_chair_45
+{
+
+}
+
+//JRH apothecary sidequest <--
+//Levis' opium -->
+
+itmname_opium {Opium}
+itmdescr_opium
+{
+A strange substance.
+This is considered contraband, so I'll have a hard time evading the town guards while carrying this.
+}
+
+//Levis' Opium <--
+
+itmname_map {КАРТА АРХИПЕЛАГА}
+itmdescr_map 
+{
+Карта Карибского Архипелага.
+}
+
+itmname_mapIsland {Карта #slocation#}
+itmdescr_mapIsland {
+Карта #slocation#.
+}
+
+itmname_mapDungeon {Карта подземелий #slocation#}
+itmdescr_mapDungeon {
+Карта подземелий #slocation#.
+}
+
+itmname_mapCave {Карта пещеры #slocation#}
+itmdescr_mapCave {
+Карта пещеры #slocation#.
+}
+
+itmname_mapKRTempleGround {карта храма #slocation#}
+itmdescr_mapKRTempleGround {
+Карта нижних уровней храма #slocation#.
+}
+
+itmname_mapKRTempleUpper {карта храма #slocation#}
+itmdescr_mapKRTempleUpper {
+Карта верхних уровней #slocation#.
+}

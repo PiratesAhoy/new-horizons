@@ -2,7 +2,6 @@ void CreateQuebradasCostillasCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 // QC_port:
@@ -10,8 +9,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Terry  Snider -- Black_Corsair
 	ch.old.name = "Terry";
 	ch.old.lastname = "Snider";
-	ch.name = TranslateString("","Terry");
-	ch.lastname = TranslateString("","Snider");
+	ch.name = TranslateString("", "Terry");
+	ch.lastname = TranslateString("", "Snider");
 	ch.id		= "Terry Snider";
 	ch.model	= "Black_Corsair";
 	ch.sex = "man";
@@ -47,8 +46,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Gilles Roche -- Corsair2
 	ch.old.name = "Gilles";
 	ch.old.lastname = "Roche";
-	ch.name = TranslateString("","Gilles");
-	ch.lastname = TranslateString("","Roche");
+	ch.name = TranslateString("", "Gilles");
+	ch.lastname = TranslateString("", "Roche1");	// Was "Roche", but 'TranslateString' turns that into " roche"
 	ch.id		= "Gilles Roche";
 	ch.model	= "Corsair2";
 	ch.sex = "man";
@@ -84,8 +83,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Alvaro Dimas -- korsar
 	ch.old.name = "Alvaro";
 	ch.old.lastname = "Dimas";
-	ch.name = TranslateString("","Alvaro");
-	ch.lastname = TranslateString("","Dimas");
+	ch.name = TranslateString("", "Alvaro");
+	ch.lastname = TranslateString("", "Dimas");
 	ch.id		= "Alvaro Dimas";
 	ch.model	= "korsar";
 	ch.sex = "man";
@@ -125,8 +124,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Natan Bueno -- Corsair1
 	ch.old.name = "Natan";
 	ch.old.lastname = "Bueno";
-	ch.name = TranslateString("","Natan");
-	ch.lastname = TranslateString("","Bueno");
+	ch.name = TranslateString("", "Natan");
+	ch.lastname = TranslateString("", "Bueno");
 	ch.id		= "Natan Bueno";
 	ch.model	= "Corsair1";
 	ch.sex = "man";
@@ -162,8 +161,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Romao  Edhino -- fatman
 	ch.old.name = "Romao";
 	ch.old.lastname = "Edhino";
-	ch.name = TranslateString("","Romao");
-	ch.lastname = TranslateString("","Edhino");
+	ch.name = TranslateString("", "Romao");
+	ch.lastname = TranslateString("", "Edhino");
 	ch.id		= "Romao  Edhino";
 	ch.model	= "fatman";
 	ch.sex = "man";
@@ -200,8 +199,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Valerio Tintorero -- Corsair3
 	ch.old.name = "Valerio";
 	ch.old.lastname = "Tintorero";
-	ch.name = TranslateString("","Valerio");
-	ch.lastname = TranslateString("","Tintorero");
+	ch.name = TranslateString("", "Valerio");
+	ch.lastname = TranslateString("", "Tintorero");
 	ch.id		= "Valerio Tintorero";
 	ch.model	= "Corsair3";
 	ch.sex = "man";
@@ -238,8 +237,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Elias  Hafte -- man1
 	ch.old.name = "Elias";
 	ch.old.lastname = "Hafte";
-	ch.name = TranslateString("","Elias");
-	ch.lastname = TranslateString("","Hafte");
+	ch.name = TranslateString("", "Elias");
+	ch.lastname = TranslateString("", "Hafte");
 	ch.id		= "Elias Hafte";
 	ch.model	= "man1";
 	ch.sex = "man";
@@ -276,8 +275,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Hamund Verret -- shkiper
 	ch.old.name = "Hamund";
 	ch.old.lastname = "Verret";
-	ch.name = TranslateString("","Hamund");
-	ch.lastname = TranslateString("","Verret");
+	ch.name = TranslateString("", "Hamund");
+	ch.lastname = TranslateString("", "Verret");
 	ch.id		= "Hamund Verret";
 	ch.model	= "man1_2";
 	ch.sex = "man";
@@ -313,8 +312,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Armand Delacroix -- added by CatalinaThePirate
 	ch.old.name = "Armand";
 	ch.old.lastname = "Delacroix";
-	ch.name = TranslateString("","Armand");
-	ch.lastname = TranslateString("","Delacroix");
+	ch.name = TranslateString("", "Armand");
+	ch.lastname = TranslateString("", "Delacroix");
 	ch.id		= "Armand Delacroix";
 	ch.model	= "armdelfra";
 	ch.sex = "man";
@@ -364,7 +363,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.perks.list.IronWill = true;
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.LightRepair = true;
 	ch.perks.list.SharedExperience = true;
 	ch.money = "40000";
@@ -379,8 +379,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 	// QC Tailor
 	ch.old.name = "Howell";
 	ch.old.lastname = "Davis";
-	ch.name	= TranslateString("", "Howell");
-	ch.lastname	= TranslateString("", "Davis");
+	ch.name	= TranslateString("",  "Howell");
+	ch.lastname	= TranslateString("",  "Davis");
 	ch.id = "Howell Davis";
 	ch.model = "storeman";
 	ch.sex = "man";
@@ -414,8 +414,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// Isenbrandt Jurcksen -- capitan
 	ch.old.name = "Isenbrandt";
 	ch.old.lastname = "Jurcksen";
-	ch.name = TranslateString("","Isenbrandt");
-	ch.lastname = TranslateString("","Jurcksen");
+	ch.name = TranslateString("", "Isenbrandt");
+	ch.lastname = TranslateString("", "Jurcksen");
 	ch.id		= "Isenbrandt Jurcksen";
 	ch.model	= "50_Boss1"; // was "capitan"
 	ch.sex = "man";
@@ -478,8 +478,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			//Morys Biddulph DICE
 	ch.old.name = "Morys";
 	ch.old.lastname = "Biddulph";
-	ch.name = TranslateString("","Morys");
-	ch.lastname = TranslateString("","Biddulph");
+	ch.name = TranslateString("", "Morys");
+	ch.lastname = TranslateString("", "Biddulph");
 	ch.id		= "Morys Biddulph2";
 	ch.model	= "capitan1";
 	ch.sound_type = "seaman";
@@ -514,8 +514,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			//Roger Hayes DICE
 	ch.old.name = "Roger";
 	ch.old.lastname = "Hayes";
-	ch.name = TranslateString("","Roger");
-	ch.lastname = TranslateString("","Hayes");
+	ch.name = TranslateString("", "Roger");
+	ch.lastname = TranslateString("", "Hayes");
 	ch.id		= "Roger Hayes2";
 	ch.model	= "capstan"; // <-- Estharos Change from Bocman3 to this model
 	ch.sound_type = "seaman";
@@ -548,8 +548,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			//Flann Marrow
 	ch.old.name = "Flann";
 	ch.old.lastname = "Marrow";
-	ch.name = TranslateString("","Flann");
-	ch.lastname = TranslateString("","Marrow");
+	ch.name = TranslateString("", "Flann");
+	ch.lastname = TranslateString("", "Marrow");
 	ch.id		= "Flann Marrow2";
 	ch.model	= "man1_1";
 	ch.sound_type = "male_citizen";
@@ -581,8 +581,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			//Evan Newson
 	ch.old.name = "Evan";
 	ch.old.lastname = "Newson";
-	ch.name = TranslateString("","Evan");
-	ch.lastname = TranslateString("","Newson");
+	ch.name = TranslateString("", "Evan");
+	ch.lastname = TranslateString("", "Newson");
 	ch.id		= "Evan Newson2";
 	ch.model	= "man2";
 	ch.sound_type = "male_citizen";
@@ -614,8 +614,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			//MISTRESS
 	ch.old.name = "Celestine";
 	ch.old.lastname = "Maupassant";
-	ch.name = TranslateString("","Celestine");
-	ch.lastname = TranslateString("","Maupassant");
+	ch.name = TranslateString("", "Celestine");
+	ch.lastname = TranslateString("", "Maupassant");
 	ch.id		= "Mistress";
 	ch.model	= "Liz2"; // KK
 	ch.sound_type = "female_citizen";
@@ -647,8 +647,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 1
 	ch.old.name = "Natalia";
 	ch.old.lastname = "Decoteau";
-	ch.name = TranslateString("","Natalia");
-	ch.lastname = TranslateString("","Decoteau");
+	ch.name = TranslateString("", "Natalia");
+	ch.lastname = TranslateString("", "Decoteau");
 	ch.id		= "wench1";
 	ch.model	= "towngirl2";
 	ch.sound_type = "female_citizen";
@@ -684,8 +684,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 1
 	ch.old.name = "Natalia";
 	ch.old.lastname = "Decoteau";
-	ch.name = TranslateString("","Natalia");
-	ch.lastname = TranslateString("","Decoteau");
+	ch.name = TranslateString("", "Natalia");
+	ch.lastname = TranslateString("", "Decoteau");
 	ch.id		= "wench1";
 	ch.model	= "towngirl2";
 	ch.sound_type = "female_citizen";
@@ -721,8 +721,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 2
 	ch.old.name = "Serena";
 	ch.old.lastname = "Tisserand";
-	ch.name = TranslateString("","Serena");
-	ch.lastname = TranslateString("","Tisserand");
+	ch.name = TranslateString("", "Serena");
+	ch.lastname = TranslateString("", "Tisserand");
 	ch.id		= "wench2";
 	ch.model	= "towngirl6";
 	ch.sound_type = "female_citizen";
@@ -758,8 +758,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 3
 	ch.old.name = "Amelia";
 	ch.old.lastname = "Frere";
-	ch.name = TranslateString("","Amelia");
-	ch.lastname = TranslateString("","Frere");
+	ch.name = TranslateString("", "Amelia");
+	ch.lastname = TranslateString("", "Frere");
 	ch.id		= "wench3";
 	ch.model	= "towngirl5";
 	ch.sound_type = "female_citizen";
@@ -795,8 +795,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 3
 	ch.old.name = "Amelia";
 	ch.old.lastname = "Frere";
-	ch.name = TranslateString("","Amelia");
-	ch.lastname = TranslateString("","Frere");
+	ch.name = TranslateString("", "Amelia");
+	ch.lastname = TranslateString("", "Frere");
 	ch.id		= "wench3";
 	ch.model	= "towngirl5";
 	ch.sound_type = "female_citizen";
@@ -832,8 +832,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			//BARTENDER
 	ch.old.name = "Valentina";
 	ch.old.lastname = "Malter";
-	ch.name = TranslateString("","Valentina");
-	ch.lastname = TranslateString("","Malter");
+	ch.name = TranslateString("", "Valentina");
+	ch.lastname = TranslateString("", "Malter");
 	ch.id		= "QCbartender";
 	ch.model	= "towngirl7";
 	ch.sex = "woman";
@@ -866,8 +866,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 4
 	ch.old.name = "Celia";
 	ch.old.lastname = "Hilder";
-	ch.name = TranslateString("","Celia");
-	ch.lastname = TranslateString("","Hilder");
+	ch.name = TranslateString("", "Celia");
+	ch.lastname = TranslateString("", "Hilder");
 	ch.id		= "wench4";
 	ch.model	= "towngirl4";
 	ch.sound_type = "female_citizen";
@@ -903,8 +903,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 4 (upstairs)
 	ch.old.name = "Celia";
 	ch.old.lastname = "Hilder";
-	ch.name = TranslateString("","Celia");
-	ch.lastname = TranslateString("","Hilder");
+	ch.name = TranslateString("", "Celia");
+	ch.lastname = TranslateString("", "Hilder");
 	ch.id		= "wench4";
 	ch.model	= "towngirl4";
 	ch.sound_type = "female_citizen";
@@ -941,8 +941,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 3 (upstairs)
 	ch.old.name = "Amelia";
 	ch.old.lastname = "Frere";
-	ch.name = TranslateString("","Amelia");
-	ch.lastname = TranslateString("","Frere");
+	ch.name = TranslateString("", "Amelia");
+	ch.lastname = TranslateString("", "Frere");
 	ch.id		= "wench3";
 	ch.model	= "towngirl5";
 	ch.sound_type = "female_citizen";
@@ -979,8 +979,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 1 (upstairs)
 	ch.old.name = "Natalia";
 	ch.old.lastname = "Decoteau";
-	ch.name = TranslateString("","Natalia");
-	ch.lastname = TranslateString("","Decoteau");
+	ch.name = TranslateString("", "Natalia");
+	ch.lastname = TranslateString("", "Decoteau");
 	ch.id		= "wench1";
 	ch.model	= "towngirl2";
 	ch.sound_type = "female_citizen";
@@ -1017,8 +1017,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 		// WENCH 2 (upstairs)
 	ch.old.name = "Serena";
 	ch.old.lastname = "Tisserand";
-	ch.name = TranslateString("","Serena");
-	ch.lastname = TranslateString("","Tisserand");
+	ch.name = TranslateString("", "Serena");
+	ch.lastname = TranslateString("", "Tisserand");
 	ch.id		= "wench2";
 	ch.model	= "towngirl6";
 	ch.sound_type = "female_citizen";
@@ -1059,7 +1059,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "soldier_02";
 	ch.model	= 1; // PB
 	ch.sex = "man";
@@ -1096,7 +1096,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "soldier_01";
 	ch.model	= 2; // PB
 	ch.sex = "man";
@@ -1133,7 +1133,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "soldier_04";
 	ch.model	= 6; // PB
 	ch.sex = "man";
@@ -1170,7 +1170,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Nev_patrol_1";
 	ch.model	= 5; // PB
 	ch.sound_type = "soldier";
@@ -1207,7 +1207,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Nev_patrol_2";
 	ch.model	= 4; // PB
 	ch.sound_type = "soldier";
@@ -1243,8 +1243,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			//Patrol
 	ch.old.name = "Officer";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Officer");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Officer");
+	ch.lastname = "";
 	ch.id		= "Nev_patrol_4";
 	ch.model	= 0; // PB
 	ch.sound_type = "soldier";
@@ -1278,8 +1278,10 @@ void CreateQuebradasCostillasCharacters(ref n)
 	AddGameCharacter(n, ch);
 	
 			// Jean Filaut (βεπτό)
-	ch.name = "Thomas";
-	ch.lastname = "Modiford";
+	ch.old.name = "Thomas";
+	ch.old.lastname = "Modiford";
+	ch.name = TranslateString("", "Thomas");
+	ch.lastname = TranslateString("", "Modiford");
 	ch.id		= "Thomas Modiford";
 	ch.model	= Nations[ENGLAND].fantomModel.m0; // PB
 	ch.sex = "man";
@@ -1392,8 +1394,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			//Father Samuel
 	ch.old.name = "Father";
 	ch.old.lastname = "Samuel";
-	ch.name = TranslateString("","Father");
-	ch.lastname = TranslateString("","Samuel");
+	ch.name = TranslateString("", "Father");
+	ch.lastname = TranslateString("", "Samuel");
 	ch.id		= "Father Samuel";
 	ch.model	= "monk";
 	ch.sound_type = "priest";
@@ -1427,8 +1429,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 			// Clint Eastwood: Shotgun Easter Egg
 	ch.old.name = "Clint";
 	ch.old.lastname = "Eastwood";
-	ch.name = TranslateString("","Clint");
-	ch.lastname = TranslateString("","Eastwood");
+	ch.name = TranslateString("", "Clint");
+	ch.lastname = TranslateString("", "Eastwood");
 	ch.id		= "Clint Eastwood";
 	ch.model	= "wf1blaze";
 	ch.sex = "man";
@@ -1439,7 +1441,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.nation = PIRATE;
 	GiveItem2Character(ch, "bladeX4"); // Fists
 	ch.equip.blade = "bladeX4";
-	if(iRealismMode == 0)
+	if(iRealismMode == 0 && CLINT_SHOTGUN ==1)
 	{
 		GiveItem2Character(ch, "pistol10"); // Shotgun
 		ch.equip.gun = "pistol10";
@@ -1452,8 +1454,16 @@ void CreateQuebradasCostillasCharacters(ref n)
 	}
 	else
 	{
-		GiveItem2Character(ch, "pistol25"); // Brace of 4 Horse Pistols
-		ch.equip.gun = "pistol25";
+		if(GetCurrentPeriod() == PERIOD_NAPOLEONIC)
+		{
+			GiveItem2Character(ch, "pistolcollier"); // Collier revolver
+			ch.equip.gun = "pistolcollier";
+		}
+		else
+		{
+			GiveItem2Character(ch, "pistol25"); // Brace of 4 Horse Pistols
+			ch.equip.gun = "pistol25";
+		}
 		//JRH ammo mod -->
 		if (ENABLE_AMMOMOD) {	// LDH change
 			TakenItems(ch, "gunpowder", 6);
@@ -1496,8 +1506,8 @@ if (ENABLE_WEAPONSMOD)
 	//  Blacksmith
 	ch.old.name = "Arne";
 	ch.old.lastname = "Saknussem";
-	ch.name = TranslateString("","Arne");
-	ch.lastname = TranslateString("","Saknussem");
+	ch.name = TranslateString("", "Arne");
+	ch.lastname = TranslateString("", "Saknussem");
 	ch.id		= "QC_blacksmith";
 	ch.model	= "blacksmith6";
 	ch.sound_type = "male_citizen";
@@ -1531,8 +1541,8 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Fred";
 	ch.old.lastname = "Goyle";
-	ch.name = TranslateString("","Fred");
-	ch.lastname = TranslateString("","Goyle");
+	ch.name = TranslateString("", "Fred");
+	ch.lastname = TranslateString("", "Goyle");
 	ch.id		= "Fred Goyle";
 	ch.model	= "man3";
 	ch.sound_type = "male_citizen";
@@ -1563,8 +1573,8 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Bob";
 	ch.old.lastname = "Stone";
-	ch.name = TranslateString("","Bob");
-	ch.lastname = TranslateString("","Stone");
+	ch.name = TranslateString("", "Bob");
+	ch.lastname = TranslateString("", "Stone");
 	ch.id		= "Bob Stone";
 	ch.model	= "bocman";
 	ch.sound_type = "male_citizen";
@@ -1595,8 +1605,8 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Luna";
 	ch.old.lastname = "Grange";
-	ch.name = TranslateString("","Luna");
-	ch.lastname = TranslateString("","Grange");
+	ch.name = TranslateString("", "Luna");
+	ch.lastname = TranslateString("", "Grange");
 	ch.id		= "Luna Grange";
 	ch.model	= "towngirl3";
 	ch.sound_type = "female_citizen";

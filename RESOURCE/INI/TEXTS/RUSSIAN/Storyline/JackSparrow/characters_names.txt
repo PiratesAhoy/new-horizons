@@ -1,0 +1,217 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| JackSparrow.c |=====}
+Jack{Джек}
+Sparrow{Воробей}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+Heumac{}
+Tezcacoatl{}
+Angler{}
+Ogilvey{}
+Maccus{}
+Clanker{}
+James{Джеймс}
+Norrington{Норрингтон}
+Lieutenant{Лейтенант}
+Gillette{}
+Helmsman{Рулевой}
+French{}
+Soldier{}
+Hadras{}
+Urchin{}
+Wheelback{}
+Wyvern{}
+Quittance{}
+Penrod{}
+
+{=====| Officers.c |=====}
+Captaine{}
+Chevalle{}
+Lucas{Лукас}
+Da Saldanha{Де Салданья}
+Jaoquin{Хоакин}
+De Masse{Де Массе}
+Gombo{}
+the Slave{}
+Prognatus{}
+Solvo{}
+
+{=====| QuebradasCostillas.c |=====}
+Ines{Ines}
+Diaz{Diaz}
+Skull{Skull}
+
+{=====| Redmond.c |=====}
+Henry{Генри}
+Weatherby{Уэзерби}
+Swann{Суонн}
+
+{=====| Story.c |=====}
+Joshamee{Джошеми}
+Gibbs{}
+Random{}
+Drunk{}
+
+{=====| TempQuest.c |=====}
+Matthew{Мэтью}
+Shaw{Шоу}
+Billy{Билли}
+Brock{Брок}
+Bligh{Блай}
+Edward{Эдвард}
+Teague{Тиг}
+Oswald{Освальд}
+Chappel{Чаппель}
+Sir Christopher{Sir Christopher}
+Mings{Mings}
+Will{Уилл}
+Turner{Тёрнер}
+Annabella{Аннабелла}
+Brin{Брин}
+Bella{}
+Susan{Сюзанна}
+Shaypen{Шейпен}
+Bootstrap Bill{Прихлоп Билл}
+Cutler{Катлер}
+Beckett{Бекетт}
+Brinkley{Бринкли}
+Anamaria{Анамария}
+Tia{Тиа}
+Dalma{Дальма}
+Pirate{Пират}
+1{1-й}
+2{2-й}
+3{3-й}
+Morris{Моррис}
+Murtogg{Метог}
+Malvert{Малвет}
+Mullroy{Малрой}
+Captain{Капитан}
+Elizabeth{Элизабет}
+Simon{Саймон}
+Blunden{Бланден}
+Turpin{Турпин}
+Cabanel{Кабанель}
+Pieter{Питер}
+Boelen{Буле}
+John{Джон}
+Clifford{Клиффорд}
+Hector{Гектор}
+Barbossa{Барбосса}
+Anne{Анни}
+Bonny{Бонни}
+Davy{Дэйви}
+Jones{Джонс}
+Konrad{Konrad}
+Kulczycki{Kulczycki}
+Petros{Petros}
+Maykin{Мэйкин}
+Blundas{Бландез}
+Cap'n{Cap'n}
+Drow{Drow}
+Thomas{Thomas}
+the Terror{the Terror}
+Nathan{Nathan}
+Kell{Kell}
+Rackham{Рэкхем}
+Peter{Питер}
+Willemoes{Willemoes}
+Damski{Damski}
+Maximus{Maximus}
+Philippe{Philippe}
+Couch Captain{Couch Captain}
+Charles{Charles}
+Claudio{Клаудио}
+Burrieza{Бурьеца}
+Port Guard{Портовый Стражник}
+Silas{Сайлес}
+Simpkins{Симпкинс}
+Tipman{Типмен}
+William{Уильям}
+Wanderman{Вундерман}
+Arthur{Артур}
+Straightly{Стрэйтли}
+Stephen{Стивен}
+Walsh{Уолш}
+Howard{Говард}
+Cummins{Камминс}
+Ragetti{Раджетти}
+Pintel{Пинтел}
+Bartolomeu{}
+o Portugues{}
+Paul Jones{}
+Seb'{}
+Hylie{}
+Pistof{}
+Jean-Bart{}
+Lafin{}
+Johan{Йоган}
+Klaesz{}
+Eduardo{}
+Villanueva{}
+Francois{Франсуа}
+de Hadoque{де Хадоке}
+Sri Sumbhajee{}
+Angria{}
+Pusasn{}
+Askay{}
+Ammand{}
+the Corsair{}
+Yedam{Йедам}
+Kinne{Кинн}
+Captain Sao{}
+Feng{}
+Park{}
+Lian{}
+Tai{}
+Huang{}
+Short{}
+Mergildo{Мергильдо}
+Hurtado{Хартадо}
+Jordano{Джордано}
+Marbatico{}
+Masked Man{}
+Old Salt{}
+Meigger{}
+Stallion{}
+Skyliner{}
+Morgan{}
+Terror{}
+Bos'un{}
+Joaquin{Хоакин}
+Justine{}
+Le Moigne{Ле Мойн}
+Justine's guard{}
+Smith{Смит}
+Snorri{Снорри}
+Baldursson{Балдурсон}
+Francis{Франсис}
+Snake{Снэйк}
+Maggee{Маги}
+Reynoud{Рейнойд}
+Verheugen{Верхейге}
+Palafico{Палафико}
+Jimmy{Джимми}
+Legs{Легс}
+Port Admiral{}
+Talicerdor{}
+
+{=====| TempQuestEnemy.c |=====}
+Ronald{Рональд}
+Blacklock{Блэклок}
+Harris{Харрис}
+Spanish{Испанский}
+Solider{}
+Prison{Арестант}
+Commendant{}
+Officer{}
+Midshipman{}
+Crewmember{Член команды}
+Mr.{Мистер}
+Mercer{Мерсер}
+Gentleman{Джентельмен}
+Jocard{Жокар}
+
+{=====| 189 characters |=====}

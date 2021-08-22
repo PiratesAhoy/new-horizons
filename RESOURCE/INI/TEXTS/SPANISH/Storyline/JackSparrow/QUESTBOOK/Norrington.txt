@@ -1,0 +1,7 @@
+title=El guardiamarina Norrington
+text.t1=He conocido al guardiamarina Norrington. ¡Odia a los piratas con toda su alma!
+text.t2=Norrington sigue en #sisland_Oxbay#, pero está aprovechando bien su tiempo allí.
+text.t3=Norrington está formando una milicia para ayudar en la invasión.
+text.t4=Norrington ha llegado a capitán (sigue odiando a los piratas). Zarpamos rumbo a #sisland_Turks# para intentar detener un ataque francés.
+text.t5=Norrington vuelve a casa. Creo que le caigo bien, en cierto modo. Me ha dejado una tartana, pero necesito un barco más grande.
+text.t6=Norrington, el gobernador y Cutler Beckett querían que luchara contra los franceses. No quiero hacerlo, así que ahora seguiré por mi cuenta.

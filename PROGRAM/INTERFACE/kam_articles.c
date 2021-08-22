@@ -78,14 +78,14 @@ void ProcessCommandExecute()
 			case "ARTICLES_SALARY_BUTTON":
 				if(CheckAttribute(PChar, "articles") && sti(PChar.articles))
 				{
-					SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
+					SetSquadronCrewQuantityRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
 					ResetAllLengths(PChar);			// LDH 14Mar09
 					PChar.articles = false;
 					KAM_UpdateDisplay();
 				}
 				else
 				{
-					SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
+					SetSquadronCrewQuantityRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
 					ResetAllLengths(PChar);			// LDH 14Mar09
 					PChar.articles = true;
 					DeleteAttribute(PChar, "repeat_salary_payment"); // PB

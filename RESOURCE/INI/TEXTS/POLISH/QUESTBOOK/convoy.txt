@@ -1,0 +1,6 @@
+title=General Quest - Escort a merchant to #sisland#.
+text.t1=I'm to escort a merchant ship to #sisland#. The shipowner will pay me #dmoney# for this. I must meet with him at #sdestination#.
+text.t2=Thousand devils! This storm... My "purse under sails" has gone to Davy Jones' Locker.
+text.t3=I don't care about my reputation when my crew wants to eat and requires money, so I betrayed my employer. He won't be arriving at his destination anymore.
+text.t4=Curses! This #sattacker# was an adroit scoundrel! My employer perished, so I must search for a new source of profit.
+text.t5=Failure!

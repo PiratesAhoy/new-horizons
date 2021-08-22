@@ -189,13 +189,22 @@ void ProcessDialogEvent()
 		break;
 
 		case "Node_13_1":
-			d.Text = DLG_TEXT[48];
-			Link.l1 = DLG_TEXT[49];
+			if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+			{
+				d.Text = DLG_TEXT[295];
+				Link.l1 = DLG_TEXT[296];
+			}
+			else
+			{
+				d.Text = DLG_TEXT[48];
+				Link.l1 = DLG_TEXT[49];
+			}
 			Link.l1.go = "Node_13_2";
 		break;
 		
 		case "Node_13_2":
-			d.Text = DLG_TEXT[50];
+			if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) d.Text = DLG_TEXT[297];
+			else d.Text = DLG_TEXT[50];
 			Link.l1 = DLG_TEXT[51];
 			Link.l1.go = "Exit";
 			AddQuestRecord("fred_bob", 2);
@@ -724,7 +733,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[197];
 			Link.l1 = DLG_TEXT[198];
 			Link.l1.go = "Exit";
-			SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
+			SetSquadronCrewQuantityRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
 			PChar.articles = false;
 		break;
 
@@ -732,7 +741,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[199];
 			Link.l1 = DLG_TEXT[198];
 			Link.l1.go = "Exit";
-			SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
+			SetSquadronCrewQuantityRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
 			PChar.CrewStatus.explength = 0;
 			PChar.articles = true;
 		break;

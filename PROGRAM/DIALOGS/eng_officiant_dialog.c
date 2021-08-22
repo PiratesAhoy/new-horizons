@@ -112,24 +112,33 @@ void ProcessDialogEvent()
 								else
 								{
 									dialog.snd = "Voice\ENOF\ENOF001";
-									dialog.text = DLG_TEXT[4];
-									link.l1 = DLG_TEXT[5];
-									link.l1.go = "exit";
-									link.l2 = DLG_TEXT[44];
-									if(sti(pchar.rank) > 4)
+									if (PChar.sex == "woman")		// GR: female player characters don't snog the barmaid so re-use the "drunken spree" section instead
 									{
-										if (makeint(environment.time) >= 22.0 || makeint(environment.time) < 10.0)
-										{
-											link.l2.go = "room_day_wait_with_girl";
-										}
-										else
-										{
-											link.l2.go = "room_night_wait_with_girl";
-										}
+										dialog.text = DLG_TEXT[2];
+										link.l1 = DLG_TEXT[3];
+										link.l1.go = "exit";
 									}
 									else
 									{
-										link.l2.go = "room_noob_with_girl";
+										dialog.text = DLG_TEXT[4];
+										link.l1 = DLG_TEXT[5];
+										link.l1.go = "exit";
+										link.l2 = DLG_TEXT[44];
+										if(sti(pchar.rank) > 4)
+										{
+											if (makeint(environment.time) >= 22.0 || makeint(environment.time) < 10.0)
+											{
+												link.l2.go = "room_day_wait_with_girl";
+											}
+											else
+											{
+												link.l2.go = "room_night_wait_with_girl";
+											}
+										}
+										else
+										{
+											link.l2.go = "room_noob_with_girl";
+										}
 									}
 								}
 							break;
@@ -160,7 +169,7 @@ void ProcessDialogEvent()
 						}
 					}
 					//Levis: Add option to get rid of albatros at officiant -->
-					if(CheckAttribute(pchar,"quest.mysterious_plants.officiant_buys_albatros"))
+					if(CheckAttribute(pchar,"quest.plants.officiant_buys_albatros"))
 					{
 						if(CheckCharacterItem(Pchar,"albatross"))
 						{
@@ -175,7 +184,7 @@ void ProcessDialogEvent()
 
 		//Levis: Add option to get rid of albatros at officiant -->
 		case "Give Albatros":
-			if(!CheckAttribute(PChar,"quest.mysterious_plants.steven_dead"))
+			if(!CheckAttribute(PChar,"quest.plants.steven_dead"))
 			{
 				dialog.text = DLG_TEXT[73] + DLG_TEXT[74];
 			}
@@ -272,11 +281,13 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Father Bernard")].quest.church_help = "after_off";
 			if(sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) > 0)
 			{
-				AddQuestRecord("Ammand", 7);
+				if(GetDifficulty() <= DIFFICULTY_MARINER) AddQuestRecord("Ammand", 7);
+				else AddQuestRecord("Ammand", 19);
 			}
 			else
 			{
-				AddQuestRecord("Church_help", 7);
+				if(GetDifficulty() <= DIFFICULTY_MARINER) AddQuestRecord("Church_help", 7);
+				else AddQuestRecord("Church_help", 16);
 			}
 		break;
 

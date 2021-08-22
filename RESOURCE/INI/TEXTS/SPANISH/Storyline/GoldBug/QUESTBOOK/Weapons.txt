@@ -1,0 +1,11 @@
+title=Armas
+text.t1=Fort Moultrie es el lugar indicado.
+text.t2=Llevaré un mosquetón. La llave del armero debería estar en uno de los tarros.
+text.t3=Tengo el mosquetón.
+text.t4=El teniente G está en los barracones.
+text.t5=Estoy buscando a un sargento en la torre de la puerta. Quizás pueda conseguirme un revólver.
+text.t6=Para conseguir el revólver: pasar por la prisión. Cerrar todas las celdas. ¿Pero en qué orden?
+text.t7=Sí. Tengo el revólver.
+text.t8=... y está cargado.
+text.t9=Mi pistola está en el herrero, para unas reparaciones. Ahora mismo no puedo permitirme pagarlas.
+text.t10=Esta pistola en su estuche de lujo con todo su equipamiento es mucho mejor que mi vieja pistola. Que el herrero se la quede.

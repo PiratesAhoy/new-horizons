@@ -162,6 +162,53 @@ string SpellString(string tdir, string tfile, ref str1, ref str2, string joinStr
 }
 //MAXIMUS: universal translation method <--
 
+// MAXIMUS: spelling correction - In russian language "2 days" and "5 days" (for example) - different words "days". I added this for proper phrases spelling. Anyone can add the same (if needed) for other languages -->
+string GetLocalizedDayString(int days)
+{
+	string Translation = TranslateString("","days");
+	string sDays = days;
+	int ifcelng = GetInterfaceLanguage();
+
+	int bCorrestion = 1;
+	if (days/10<1) bCorrestion = 0;
+	if (days/10>10) bCorrestion = 2;
+	if (days/10>100) bCorrestion = 3;
+	if (days/10>1000) bCorrestion = 4;
+	if (days/10>10000) bCorrestion = 5;
+	if (days/10>100000) bCorrestion = 6;
+	if (days/10>1000000) bCorrestion = 7;
+	if (days/10>10000000) bCorrestion = 8;
+	if (days/10>100000000) bCorrestion = 9;
+	string daysCount = strcut(sDays, bCorrestion, strlen(sDays)-1);
+//	LogIt(daysCount);
+
+	switch (ifcelng) 
+	{
+		case ILANG_RUS:
+			if (daysCount == 1 && strcut(sDays, strlen(sDays)-2, strlen(sDays)-1) > 11) Translation = TranslateString("","loc_day");
+			if (daysCount > 1 && daysCount < 5)
+			{ 
+				if (days > 20 || days < 10) Translation = TranslateString("","loc_days");
+				if (days > 20 && strcut(sDays, strlen(sDays)-2, strlen(sDays)-1) > 11) Translation = TranslateString("","loc_days");
+			}
+		break;
+//		case ILANG_FRA:
+//		break;
+//		case ILANG_GER:
+//		break;
+//		case ILANG_SPA:
+//		break;
+		case ILANG_POL:
+			if (daysCount == 1 && strcut(sDays, strlen(sDays)-2, strlen(sDays)-1) > 11) Translation = TranslateString("","loc_day");
+		break;
+		// default:
+//			if (daysCount == 1 && strcut(sDays, strlen(sDays)-2, strlen(sDays)-1) > 11) Translation = TranslateString("","day"); // Yields "day" if days ends with "1", e.g. 21
+			if (days == 1) Translation = TranslateString("","day"); // Why complicate it for other languages?  1 day, 2 or more days!
+	}
+	return Translation;
+}
+// MAXIMUS: spelling correction<--
+
 string TranslateString(string strData1, string strData2)
 {
 	string tmpData = " ";
@@ -873,138 +920,6 @@ void RemoveGeometryFromLocation(string LocationID, string ModelName)
 }
 
 // NK -->
-// Levis not used anymore so commented
-/*void FindPerks(ref NPChar)
-{
-	//set up chances
-	int perk_first = 10;
-	int perk_first_two = 8;
-	int perk_first_unlikey = 6;
-	int perk_second = 5;
-	int perk_second_unlikely = 4;
-	int perk_third = 3;
-	int perk_fourth = 2;
-
-	//Melee
-	if(Rand(100) < makeint(Npchar.skill.Fencing) * perk_first) Npchar.perks.list.BasicDefence = "1";
-	if(Rand(100) < makeint(Npchar.skill.Fencing) * perk_second && Npchar.perks.list.BasicDefence == "1") Npchar.perks.list.AdvancedDefence = "1";
-	if(Rand(100) < makeint(Npchar.skill.Fencing) * perk_first) Npchar.perks.list.CriticalHit = "1";
-	if(Rand(100) < makeint(Npchar.skill.Fencing) * perk_third && Npchar.perks.list.AdvancedDefence == "1" && Npchar.perks.list.CriticalHit == "1") Npchar.perks.list.SwordplayProfessional = "1";
-	if(Rand(100) < makeint(Npchar.skill.Fencing) * perk_first_two) Npchar.perks.list.Gunman = "1";
-	if(Rand(100) < makeint(Npchar.skill.Fencing) * perk_second && Npchar.perks.list.Gunman == "1") Npchar.perks.list.GunProfessional = "1";
-
-
-	//Cannons
-	if(Rand(100) < makeint(Npchar.skill.Cannons) * perk_first) Npchar.perks.list.FastReload = "1";
-	if(Rand(100) < makeint(Npchar.skill.Cannons) * perk_second_unlikely && Npchar.perks.list.FastReload == "1") Npchar.perks.list.ImmediateReload = "1";
-
-	if(Rand(100) < makeint(Npchar.skill.Accuracy) * perk_first_two) Npchar.perks.list.HullDamageUp = "1";
-	if(Rand(100) < makeint(Npchar.skill.Accuracy) * perk_first_two) Npchar.perks.list.SailsDamageUp = "1";
-	if(Rand(100) < makeint(Npchar.skill.Accuracy) * perk_first_two) Npchar.perks.list.CrewDamageUp = "1";
-	if(Rand(100) < makeint(Npchar.skill.Accuracy) * perk_first_two) Npchar.perks.list.LongRangeShoot = "1";
-
-	if(Rand(100) < makeint(Npchar.skill.Accuracy) * perk_second_unlikely && Npchar.perks.list.HullDamageUp == "1" && Npchar.perks.list.SailsDamageUp == "1" && Npchar.perks.list.CrewDamageUp == "1") Npchar.perks.list.CriticalShoot = "1";
-
-	if(Rand(100) < makeint(Npchar.skill.Accuracy) * perk_third && Rand(100) < makeint(Npchar.skill.Cannons) * perk_third && Npchar.perks.list.LongRangeShoot == "1" && Npchar.perks.list.CriticalShoot == "1" && Npchar.perks.list.FastReload == "1") Npchar.perks.list.CannonProfessional = "1";
-
-
-	//Sailing
-	if(Rand(100) < makeint(Npchar.skill.Sailing) * perk_first_two) Npchar.perks.list.ShipSpeedUp = "1";
-	if(Rand(100) < makeint(Npchar.skill.Sailing) * perk_first_two) Npchar.perks.list.ShipTurnRateUp = "1";
-	if(Rand(100) < makeint(Npchar.skill.Sailing) * perk_first_two) Npchar.perks.list.StormProfessional = "1";
-
-	if(Rand(100) < makeint(Npchar.skill.Sailing) * perk_second && Npchar.perks.list.ShipSpeedUp == "1" && Npchar.perks.list.ShipTurnRateUp == "1") Npchar.perks.list.Turn180 = "1";
-	if(Rand(100) < makeint(Npchar.skill.Sailing) * perk_third && Npchar.perks.list.Turn180 == "1") Npchar.perks.list.SandbankManeuver = "1";
-	if(Rand(100) < makeint(Npchar.skill.Sailing) *  perk_fourth && Npchar.perks.list.StormProfessional == "1" && Npchar.perks.list.SandbankManeuver == "1") Npchar.perks.list.SailingProfessional = "1";
-
-
-	//Grappling
-	if(Rand(100) < makeint(Npchar.skill.Grappling) * perk_first) Npchar.perks.list.LongRangeGrappling = "1";
-	if(Rand(100) < makeint(Npchar.skill.Grappling) * perk_second && Npchar.perks.list.LongRangeGrappling == "1") Npchar.perks.list.GrapplingProfessional = "1";
-	if(Rand(100) < makeint(Npchar.skill.Grappling) * perk_third && Npchar.perks.list.SailingProfessional == "1" && Npchar.perks.list.GrapplingProfessional == "1") Npchar.perks.list.InstantBoarding = "1";
-
-
-	//Repair
-	if(Rand(100) < makeint(Npchar.skill.Repair) * perk_first) Npchar.perks.list.LightRepair = "1";
-	if(Rand(100) < makeint(Npchar.skill.Repair) * perk_second && Npchar.perks.list.LightRepair == "1") Npchar.perks.list.InstantRepair = "1";
-
-
-	//Defence
-	if(Rand(100) < makeint(Npchar.skill.Defence) * perk_first) Npchar.perks.list.BasicBattleState = "1";
-	if(Rand(100) < makeint(Npchar.skill.Defence) * perk_second && Npchar.perks.list.BasicBattleState == "1") Npchar.perks.list.AdvancedBattleState = "1";
-	if(Rand(100) < makeint(Npchar.skill.Defence) * perk_second_unlikely && Npchar.perks.list.BasicBattleState == "1" && Npchar.perks.list.AdvancedBattleState == "1") Npchar.perks.list.ShipDefenceProfessional = "1";
-
-
-	//Leadership
-	if(Rand(100) < makeint(Npchar.skill.Leadership) * perk_first_unlikey) Npchar.perks.list.IronWill = "1";
-	if(Rand(100) < makeint(Npchar.skill.Leadership) * perk_first) Npchar.perks.list.SharedExperience = "1";
-
-	//Commerce
-	if(Rand(100) < makeint(Npchar.skill.Commerce) * perk_first_two) Npchar.perks.list.Trustworthy = "1";
-	if(Rand(100) < makeint(Npchar.skill.Commerce) * perk_first) Npchar.perks.list.BasicCommerce = "1";
-	if(Rand(100) < makeint(Npchar.skill.Commerce) * perk_second && Npchar.perks.list.BasicCommerce == "1") Npchar.perks.list.AdvancedCommerce = "1";
-}
-// NK <--
-
-void CalculateAppropriateSkills(ref NPchar)
-{
-// NK -->
-	float MiddleK;
-
-	ref Pchar;
-	Pchar = GetMainCharacter();
-	MiddleK = makeint((makeint(Pchar.skill.Leadership) + makeint(Pchar.skill.Fencing) + makeint(Pchar.skill.Sailing) +
-makeint(Pchar.skill.Accuracy) + makeint(Pchar.skill.Cannons) + makeint(Pchar.skill.Grappling) + makeint(Pchar.skill.Repair) +
-makeint(Pchar.skill.Defence) + makeint(Pchar.skill.Commerce) + makeint(Pchar.skill.Sneak))/10);
-	if(MiddleK < (10 + makeint(NPchar.rank) * 2) / 10) MiddleK = (10 + makeint(NPchar.rank) * 2) / 10;
-
-			//make skills
-			Npchar.skill.Leadership = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Leadership)	<= 1) Npchar.skill.Leadership = 1;
-			if(makeint(Npchar.skill.Leadership)	>= 10) Npchar.skill.Leadership = 10;
-
-			Npchar.skill.Fencing = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Fencing)	<= 1) Npchar.skill.Fencing = 1;
-			if(makeint(Npchar.skill.Fencing)	>= 10) Npchar.skill.Fencing = 10;
-
-			Npchar.skill.Sailing = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Sailing)	<= 1) Npchar.skill.Sailing = 1;
-			if(makeint(Npchar.skill.Sailing)	>= 10) Npchar.skill.Sailing = 10;
-
-			Npchar.skill.Accuracy = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Accuracy)	<= 1) Npchar.skill.Accuracy = 1;
-			if(makeint(Npchar.skill.Accuracy)	>= 10) Npchar.skill.Accuracy = 10;
-
-			Npchar.skill.Cannons = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Cannons)	<= 1) Npchar.skill.Cannons = 1;
-			if(makeint(Npchar.skill.Cannons)	>= 10) Npchar.skill.Cannons = 10;
-
-			Npchar.skill.Grappling = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Grappling)	<= 1) Npchar.skill.Grappling = 1;
-			if(makeint(Npchar.skill.Grappling)	>= 10) Npchar.skill.Grappling = 10;
-
-			Npchar.skill.Repair = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Repair)	<= 1) Npchar.skill.Repair = 1;
-			if(makeint(Npchar.skill.Repair)	>= 10) Npchar.skill.Repair = 10;
-
-			Npchar.skill.Defence = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Defence)	<= 1) Npchar.skill.Defence = 1;
-			if(makeint(Npchar.skill.Defence)	>= 10) Npchar.skill.Defence = 10;
-
-			Npchar.skill.Commerce = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Commerce)	<= 1) Npchar.skill.Commerce = 1;
-			if(makeint(Npchar.skill.Commerce)	>= 10) Npchar.skill.Commerce = 10;
-
-			Npchar.skill.Sneak = makeint(MiddleK - 2.5 + rand(5));
-			if(makeint(Npchar.skill.Sneak)	<= 1) Npchar.skill.Sneak = 1;
-			if(makeint(Npchar.skill.Sneak)	>= 10) Npchar.skill.Sneak = 10;
-
-			FindPerks(Npchar);
-// NK <--
-}*/
-
-// Levis Moved FindFreeRandomOfficer to officers.c
-
 //MAXIMUS: the same way, as Enc_Officer -[it was my first version of this function (rewritten later by TIH)]->
 int FindFreeCabinCaptain()
 {
@@ -1135,6 +1050,7 @@ void TIH_OfficerHiredProcess(ref RefChar, bool bLowSalary, bool bAutoAssign, boo
 			if ( CheckAttribute(NewOfficer,"position") ) 		DeleteAttribute(RefChar,"position");
 			if ( CheckAttribute(NewOfficer,"fight") ) 			DeleteAttribute(RefChar,"fight");
 			if ( CheckAttribute(NewOfficer,"cabinfight") ) 		DeleteAttribute(RefChar,"cabinfight");
+			if (CheckAttribute(RefChar, "CompanionEnemyEnable"))	DeleteAttribute(NewOfficer, "CompanionEnemyEnable");
 		}
 		LAi_SetOfficerType(NewOfficer);
 		if(bCreateOfficer)
@@ -1549,12 +1465,18 @@ string GetMyNationAddress(ref chr, ref pchr)
 string GetMyFullName(ref chr)
 {
 	string name = "";
+	int nation = UNKNOWN_NATION;
+	if (CheckAttribute(chr, "nation")) nation = sti(chr.nation);
 	if(!CheckAttribute(chr,"name")) chr.name = name;//MAXIMUS -->
 	if(!CheckAttribute(chr,"lastname")) chr.lastname = name;
 
 	// PB: Include rank -->
-	if (CheckAttribute(chr, "nation") && HasRank(chr, sti(chr.nation)) && sti(chr.nation) != PIRATE) {
-		name = XI_ConvertString(GetRankName(chr, sti(chr.nation))) + " ";
+	if (CheckAttribute(chr, "nation") && HasRank(chr, sti(chr.nation)) && sti(chr.nation) != PIRATE)
+	{
+		name = XI_ConvertString(GetRankName(chr, nation)) + " ";
+
+		// GR: exclude "rank" for privateers of rank 7 or higher with honorific prefix, noble titles go at the end of the name
+		if (GetRank(chr, nation) >= 7 && ProfessionalNavyNationChar(chr) == UNKNOWN_NATION && CheckAttribute(chr, "knighted")) name = "";
 	}
 	// PB: Include rank <--
 
@@ -1563,6 +1485,18 @@ string GetMyFullName(ref chr)
 		name += chr.title + " ";
 	}
 	name += GetMySimpleName(chr); // KK
+
+	// GR: add noble title to the end of the name -->
+	if (CheckAttribute(chr, "nation") && HasRank(chr, sti(chr.nation)) && sti(chr.nation) != PIRATE && GetRank(chr, nation) >= 7 && ProfessionalNavyNationChar(chr) == UNKNOWN_NATION && CheckAttribute(chr, "knighted"))
+	{
+		// Don't add noble title if it is exactly level 7 and from the same nation as prefix title. Knighthood is implied by the prefix.
+		if (GetRank(chr, nation) > 7 || sti(chr.knighted) != nation)
+		{
+			name += ", " + XI_ConvertString(GetRankName(chr, nation));
+		}
+	}
+	// GR: add noble title to the end of the name <--
+
 	return name;
 }
 
@@ -1573,7 +1507,7 @@ string GetMySimpleName(ref chr)
 	if (!CheckAttribute(chr,"name")) chr.name = name;//MAXIMUS
 	if (!CheckAttribute(chr,"lastname")) chr.lastname = name;//MAXIMUS
 	if (CheckAttribute(chr,"firstname")) {
-		name = chr.firstname; // KK
+		name = FirstLetterUp(chr.firstname); // KK
 		if (CheckAttribute(chr,"middlename") == true && chr.middlename != "") {
 			if (name != "") name += " "; // KK
 			name += chr.middlename;
@@ -1581,7 +1515,7 @@ string GetMySimpleName(ref chr)
 			name += chr.firstname;
 		}
 	} else {
-		if (chr.name != "") name += chr.name;
+		if (chr.name != "") name += FirstLetterUp(chr.name);
 		if (CheckAttribute(chr, "middlename") && chr.middlename != "") {
 			if (name != "") name += " "; // KK
 			name += chr.middlename;
@@ -1634,7 +1568,8 @@ string GetMyName(ref chr)
 	string name = "";
 	if(CheckAttribute(chr,"firstname")) { name += chr.firstname; }
 	else { name += chr.name; }
-	return name;
+	if (name == "" && CheckAttribute(chr, "lastname") && chr.lastname != "") name = chr.lastname;	// For characters such as Blackbeard
+	return FirstLetterUp(name);
 }
 
 // KK -->
@@ -1658,21 +1593,35 @@ string GetMyLastName(ref chr)
 //get character's family name with a title, if he has one of them
 string GetMyRespectfullyName(ref chr)
 {
+	string ourName = GetMyLastName(chr);
 	if(!CheckAttribute(chr,"lastname")) chr.lastname = "";
 	string name = "";
 	if(CheckAttribute(chr,"title"))
 	{
 		string ourTitle = chr.title;
+//		Check for knighthood titles given by 'GiveSwordAndPerks' in "NK.c"
+//		Should be "Sir Francis", not "Sir Drake", for example
+//		But only check to change to first name if you have a first name!
+		if (GetMyName(chr) != "")
+		{
+			if(ourTitle == TranslateString("", "Dame") || ourTitle == TranslateString("", "Sir") ||
+			   ourTitle == TranslateString("", "Chevalier") ||
+			   ourTitle == TranslateString("", "Doña") || ourTitle == TranslateString("", "Don") ||
+			   ourTitle == TranslateString("", "Dona") || ourTitle == TranslateString("", "Dom"))
+			{
+				ourName = GetMyName(chr);
+			}
+		}
 		if(XI_ConvertString(chr.title)!="") ourTitle = XI_ConvertString(chr.title);
-		if(chr.lastname=="") name += ourTitle;
-		else name += ourTitle + " " + chr.lastname;
+		if(ourName=="") name += ourTitle;
+		else name += ourTitle + " " + ourName;
 	}
 	else
 	{
 		if(CheckAttribute(chr,"Ship.type") && chr.Ship.type!="" && chr.Ship.type!=SHIP_NOTUSED_TYPE_NAME) // PB: was SHIP_NOTUSED
 		{
-			if(chr.lastname=="") name += XI_ConvertString("Scaptain");
-			else name += XI_ConvertString("Scaptain") + " " + chr.lastname;
+			if(chr.lastname=="") name += XI_ConvertString("captain");	// Was "Scaptain", which returns lower case "captain",
+			else name += XI_ConvertString("captain") + " " + chr.lastname;	// which looks silly in introductions
 		}
 		else name += chr.lastname;
 	}
@@ -1723,6 +1672,15 @@ string GetMyPronounPoss(ref chr)
 	return "his";
 }
 
+string GetMyPronounPossessive(ref chr)	// Function output should be translated by XI_ConvertString
+{
+	if(chr.sex == "woman")
+	{
+		return "her1";		// Translates to "her" in English "common.ini"
+	}
+	return "his1";			// Translates to "his" in English "common.ini"
+}
+
 string GetMyPronoun(ref chr, string model)
 {
 	switch(model)
@@ -1747,87 +1705,309 @@ string FindMRModel(int rank)
 	string modelch[2];
 	int i;
 	int size = 2;
-	if(rank<3) return "towngirl2";
-	modelch[0] = "towngirl2";
-	modelch[1] = "towngirl2_1";					// LDH fix name = 05Jan09
-	if(rank>=3)
+	string sTown = GetCurrentTownID();
+	int iNation;
+	if (sTown == "") iNation = ENGLAND;
+	else iNation = GetTownNation(sTown);
+	ref PChar = GetMainCharacter();
+	if (PChar.sex == "man")
 	{
-		for(i = 0; i < 5; i++) //actually +1 because above
+		if(rank<3) return "towngirl2";
+		modelch[0] = "towngirl2";
+		modelch[1] = "towngirl2_1";					// LDH fix name = 05Jan09
+		if(rank>=3 && rank<8)
 		{
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl2";
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl2_1";	// LDH fix name = 05Jan09
+			for(i = 0; i < 5; i++) //actually +1 because above
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl2";
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl2_1";	// LDH fix name = 05Jan09
+			}
 		}
-	}
-	if(rank>=4)
-	{
-		for(i = 0; i < 9; i++)
+		if(rank>=4)
 		{
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl5";
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl6";
+			for(i = 0; i < 9; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl5";
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl6";
+			}
 		}
-	}
-	if(rank>=5)
-	{
-		for(i = 0; i < 11; i++)
+		if(rank>=5)
 		{
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl3";
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl3_1";	// LDH fix name = 05Jan09
+			for(i = 0; i < 11; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl3";
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl3_1";	// LDH fix name = 05Jan09
+			}
 		}
-	}
-	if(rank>=6)
-	{
-		for(i = 0; i < 15; i++)
+		if(rank>=6)
 		{
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl1";
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl1_1";	// LDH fix name = 05Jan09
+			for(i = 0; i < 15; i++)
+			{
+				if (iNation == SPAIN || iNation == PORTUGAL)
+				{
+					size++;
+					SetArraySize(&modelch,size);
+					modelch[size-1] = "towngirl1_2"; // GR
+					size++;
+					SetArraySize(&modelch,size);
+					modelch[size-1] = "towngirl1_3"; // GR
+				}
+				else
+				{
+					size++;
+					SetArraySize(&modelch,size);
+					modelch[size-1] = "towngirl1";
+					size++;
+					SetArraySize(&modelch,size);
+					modelch[size-1] = "towngirl1_1";	// LDH fix name = 05Jan09
+				}
+			}
 		}
-	}
-	if(rank>=7)
-	{
-		for(i = 0; i < 35; i++)
+		if(rank>=7)
 		{
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl7";
+			for(i = 0; i < 11; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl7";
+			}
+	
+			for(i = 0; i < 11; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl7_2"; // GR
+			}
+	
+			for(i = 0; i < 24; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "towngirl4";
+			}
+	
+			for(i = 0; i < 14; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "50_Rachel"; // GR
+			}
+	
+			for(i = 0; i < 11; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "AnnaDeLeiva"; // GR
+			}
 		}
-	}
-	if(rank>=7)
-	{
-		for(i = 0; i < 39; i++)
+		if(rank>=8)
 		{
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "towngirl4";
+			for(i = 0; i < 24; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				if (iNation == SPAIN || iNation == PORTUGAL)
+				{
+					modelch[size-1] = "liz2"; // GR
+				}
+				else
+				{
+					modelch[size-1] = "liz1"; // KK
+				}
+			}
+	
+			for(i = 0; i < 9; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "diz1"; // GR
+			}
+	
+			for(i = 0; i < 9; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "diz2"; // GR
+			}
+	
+			for(i = 0; i < 4; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "50_Petra2"; // GR
+			}
 		}
-	}
-	if(rank>=8)
-	{
-		for(i = 0; i < 44; i++)
+		if(rank>=9)
 		{
-			size++;
-			SetArraySize(&modelch,size);
-			modelch[size-1] = "liz1"; // KK
-		}
-	}
-	return modelch[rand(size-1)];
-}
+			for(i = 0; i < 39; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "lady04_ab"; // GR
+			}
 
+			for(i = 0; i < 4; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "liz3"; // GR
+			}
+		}
+		if(rank>=10)
+		{
+			for(i = 0; i < 44; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "lady6"; // GR
+			}
+
+			for(i = 0; i < 9; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "lady3"; // GR
+			}
+		}
+		return modelch[rand(size-1)];
+	}
+	else
+	{
+		if(rank<3) return "Blaze_NB";
+		modelch[0] = "Blaze_NB";
+		modelch[1] = Nations[iNation].fantomModel.m1;
+		if(rank>=3)
+		{
+			for(i = 0; i < 5; i++) //actually +1 because above
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = Nations[iNation].fantomModel.m2;
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = Nations[iNation].fantomModel.m3;
+			}
+		}
+		if(rank>=4)
+		{
+			for(i = 0; i < 9; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = Nations[iNation].fantomModel.m0;
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "Corsair1_4";
+			}
+		}
+		if(rank>=5)
+		{
+			for(i = 0; i < 11; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "Corsair3_J";
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "Corsair4_J";
+			}
+		}
+		if(rank>=6)
+		{
+			for(i = 0; i < 15; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "47_JRMMLt1";
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "47_JRMMLcm";
+			}
+		}
+		if(rank>=7)
+		{
+	
+			for(i = 0; i < 35; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "47_JRMMCpt";
+			}
+	
+			for(i = 0; i < 39; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				switch(iNation)
+				{
+					case ENGLAND: modelch[size-1] = "9JdEng"; break;
+					case FRANCE: modelch[size-1] = "9JdFra"; break;
+					case SPAIN: modelch[size-1] = "9JdSpa"; break;
+					case PIRATE: modelch[size-1] = "9Jc"; break;
+					case HOLLAND: modelch[size-1] = "9JdHol"; break;
+					case PORTUGAL: modelch[size-1] = "9JdPor"; break;
+					case GUEST1_NATION: modelch[size-1] = "9JdPor"; break;
+					case GUEST2_NATION: modelch[size-1] = "9JdEng"; break;
+				}
+				modelch[size-1] = "9Jd";
+			}
+		}
+		if(rank>=8)
+		{
+			for(i = 0; i < 24; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "Huber_Eng2_17";
+			}
+	
+			for(i = 0; i < 19; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "Huber_Fra2_17";
+			}
+		}
+		if(rank>=9)
+		{
+			for(i = 0; i < 39; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "Blood2";
+			}
+
+			for(i = 0; i < 4; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "LaCroix";
+			}
+		}
+		if(rank>=10)
+		{
+			for(i = 0; i < 44; i++)
+			{
+				size++;
+				SetArraySize(&modelch,size);
+				modelch[size-1] = "hub_spa3";
+			}
+		}
+		return modelch[rand(size-1)];
+	}
+}
 
 //finds index of free MR
 int FindFreeMR()
@@ -1932,22 +2112,35 @@ bool SetupMR(ref pchar, ref govchar)
 	if(MRs > MR_MAXNUM) return false;
 	MRs++;
 	govchar.MRs.(MRID) = true;
+	
+	govchar.currentMR = MRID;
+	mr.marpoints = MRCalcMarpoints(&pchar, nation);
+	if(DEBUGINFO) Log_SetStringToLog("MP: " + mr.marpoints + ", " + stf(mr.marpoints)/GetFame(pchar, nation) + "x fame");
+	if(pchar.sex == "man")
+	{
+		mr.sex = "woman";
+		if(frnd() < sti(mr.marpoints)/MR_DAUGHTER_THRESH) mr.relationtype = "daughter";
+		else mr.relationtype = "niece";
+	}
+	else
+	{
+		mr.sex = "man";
+		if(frnd() < sti(mr.marpoints)/MR_DAUGHTER_THRESH) mr.relationtype = "son";
+		else mr.relationtype = "nephew";
+	}
 
 	mr.nation = nation;
 	SetRandomNameToCharacter(mr);
 	mr.lastname = govchar.lastname;
 	mr.father = govchar.id;
-	
-	govchar.currentMR = MRID;
-	mr.marpoints = MRCalcMarpoints(&pchar, nation);
-	if(DEBUGINFO) Log_SetStringToLog("MP: " + mr.marpoints + ", " + stf(mr.marpoints)/GetFame(pchar, nation) + "x fame");
-	if(frnd() < sti(mr.marpoints)/MR_DAUGHTER_THRESH) mr.relationtype = "daughter";
-	else mr.relationtype = "niece";
+
 	govchar.currentMR.relationtype = mr.relationtype;
-	mr.model = FindMRModel(GetRank(pchar,nation));
-	facemaker(mr);
+//	mr.model = FindMRModel(GetRank(pchar,nation));		// GR: simply setting model like this does not set animation for special types
+//	facemaker(mr);
+	SetModelFromID(mr, FindMRModel(GetRank(pchar,nation)));	// GR: use the proper function!
 	mr.talkpoints = 0;
 	mr.dialog.currentnode = "First Time";
+	mr.dialog.TempNode = "First Time";
 	mr.pcounter = 0;
 	mr.married = 0;
 	if(mr.location == pchar.location) // if debugging above
@@ -2008,6 +2201,7 @@ void TIH_PrisonerHiredAsOfficerProcess(ref RefChar, bool bLowSalary, bool bSetTy
 	if (CheckAttribute(RefChar, "position")) DeleteAttribute(RefChar, "position");
 	if (CheckAttribute(RefChar, "fight")) DeleteAttribute(RefChar, "fight");
 	if (CheckAttribute(RefChar, "cabinfight")) DeleteAttribute(RefChar, "cabinfight");
+	if (CheckAttribute(RefChar, "CompanionEnemyEnable")) DeleteAttribute(RefChar, "CompanionEnemyEnable");
 
 	// these do fixing
 	if(RefChar.sex=="woman") RefChar.greeting = "Gr_Officer_f common";
@@ -2077,6 +2271,8 @@ void TIH_PrisonerHiredAsOfficerProcess(ref RefChar, bool bLowSalary, bool bSetTy
 	if(bSetType) LAi_SetOfficerType(RefChar);
 
 	AddPassenger(PChar,NewOfficer,false);// just add them as a passenger for now
+	LAi_SetOfficerType(RefChar);
+	RefChar.ClearUponExit = true;		// GR: wipe the original Enc_CabinCaptain to free up his slot
 }
 //MAXIMUS: changes, which were made here:
 //All code for prisoner was moved from Cabinfight_dialog.c
@@ -2126,9 +2322,12 @@ void TIH_PrisonerTakenProcess(ref RefChar, bool bPurgeCrud)
 
 		DisarmCharacter(Prisoner, true, false);
 
-		PlayStereoSound("INTERFACE\took_item.wav");
-		AddMoneyToCharacter(PChar,sti(Prisoner.money));
-		Log_SetStringToLog(TranslateString("","CaptainMoney1")+" "+MakeMoneyShow(sti(Prisoner.money),"",MONEY_DELIVER)+" "+TranslateString("","CaptainMoney2"));
+		if(!CheckAttribute(RefChar, "honourable_surrender"))	// GR: Only take prisoner's money if you did not offer honourable surrender terms
+		{
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar,sti(Prisoner.money));
+			Log_SetStringToLog(TranslateString("","CaptainMoney1")+" "+MakeMoneyShow(sti(Prisoner.money),"",MONEY_DELIVER)+" "+TranslateString("","CaptainMoney2"));
+		}
 		if(Prisoner.sex=="woman") Prisoner.greeting = "Gr_Pirate_f";
 		else Prisoner.greeting = "Gr_Dark Teacher";
 		boarding_enemy.status = "dead";
@@ -2632,44 +2831,52 @@ string GetShipDescribe(string charId, bool nation, bool nguns, bool shipname, bo
 	ref chr, shipRef;
 	int canQuantity;
 	aref arShip;
-	string shipType;
+	string shipType, tmpDescr;
 	string shipDescribe = "";
 
 	chr = characterFromID(charId);
 	shipRef = GetShipByType(GetCharacterShipType(chr));
-	shipType = XI_ConvertString(shipRef.Sname);
+	shipType = shipRef.Sname;
 
-	if (nation) shipDescribe += XI_ConvertString("sw_" + GetNationDescByType(sti(chr.nation))) + " ";
+//	if (nation) shipDescribe += XI_ConvertString("sw_" + GetNationDescByType(sti(chr.nation))) + " "; // MAXIMUS 30.05.2019: moved to the end of function for correct phrase spelling
 	if (nguns) shipDescribe += GetMaxCannonQuantity(chr) + XI_ConvertString("cannonsQuantity") + " ";
-	shipDescribe += strlower(shipType);
+	tmpDescr = shipDescribe + strlower(XI_ConvertString(shipType));
 	if (accusative) {
 		switch (LanguageGetLanguage()) {
 			case "Polish":
-				int dl = strlen(shipDescribe);
-				if (GetSymbol(shipDescribe, dl - 1) == "a") {
+				int dl = strlen(tmpDescr);
+				if (GetSymbol(tmpDescr, dl - 1) == "a") {
 					string tmpstr = "";
 					for (int i = 0; i < dl - 1; i++) {
-						if (GetSymbol(shipDescribe, i + 1) == " ")
+						if (GetSymbol(tmpDescr, i + 1) == " ")
 							tmpstr += "¹";
 						else
-							tmpstr += strcut(shipDescribe, i, i);
+							tmpstr += strcut(tmpDescr, i, i);
 					}
 					tmpstr += "×";
 					shipDescribe = tmpstr;
 				}
 			break;
+			shipDescribe = tmpDescr;
 			// default:
 		}
 	}
+	else {
+		shipDescribe += strlower(XI_ConvertString(shipType));
+	}
 	if (shipname) shipDescribe += " " + GetMyShipNameShow(chr);
+	if (nation) shipDescribe += " " + TranslateString("", "flying the colors of") + " " + XI_ConvertString("q" + GetNationDescByType(sti(chr.nation))); // MAXIMUS 30.05.2019: placed here for correct phrase spelling
 
+// GR: what is this supposed to achieve?
+/*
 	if(HasSubStr(shipType,"0") || HasSubStr(shipType,"1") || HasSubStr(shipType,"2") || HasSubStr(shipType,"3") || HasSubStr(shipType,"4") || HasSubStr(shipType,"5") || HasSubStr(shipType,"6") || HasSubStr(shipType,"7") || HasSubStr(shipType,"8") || HasSubStr(shipType,"9"))
 	{
 		if(!HasSubStr(shipType," 0") && !HasSubStr(shipType," 1") && !HasSubStr(shipType," 2") && !HasSubStr(shipType," 3") && !HasSubStr(shipType," 4") && !HasSubStr(shipType," 5") && !HasSubStr(shipType," 6") && !HasSubStr(shipType," 7") && !HasSubStr(shipType," 8") && !HasSubStr(shipType," 9"))
 		{
-			shipDescribe = shipType;
+			shipDescribe = XI_ConvertString(shipType);
 		}
 	}
+*/
 	return shipDescribe;
 }
 // MAXIMUS: can be used in any situation [used in Silehard-dialog] <-- // <-- KK
@@ -2756,3 +2963,38 @@ void GotSkill(string topic)
 	//LanguageCloseFile(tmpLangFileID);
 }
 // <-- CCC
+
+// GR ---->
+bool StoreDialog(ref ch)
+{
+	if (CheckAttribute(ch, "quest.original_dialog_filename"))
+	{
+		return false;
+	}
+	else
+	{
+		ch.quest.original_dialog_filename = ch.Dialog.Filename;
+		ch.quest.original_dialog_CurrentNode = ch.dialog.CurrentNode;
+		ch.quest.original_dialog_TempNode = ch.dialog.TempNode;
+		return true;
+	}
+}
+
+bool RestoreDialog(ref ch)
+{
+	if (CheckAttribute(ch, "quest.original_dialog_filename"))
+	{
+		ch.Dialog.Filename = ch.quest.original_dialog_filename;
+		ch.dialog.CurrentNode = ch.quest.original_dialog_CurrentNode;
+		ch.dialog.TempNode = ch.quest.original_dialog_TempNode;
+		DeleteAttribute(ch, "quest.original_dialog_filename");
+		DeleteAttribute(ch, "quest.original_dialog_CurrentNode");
+		DeleteAttribute(ch, "quest.original_dialog_TempNode");
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+// <---- GR

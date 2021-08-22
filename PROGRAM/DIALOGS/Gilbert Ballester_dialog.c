@@ -14,8 +14,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
-	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-	else Preprocessor_Add("child", XI_ConvertString("child"));
+	if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+	else Preprocessor_Add("addr", XI_ConvertString("my child"));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -112,12 +112,14 @@ void ProcessDialogEvent()
 			}
 			if(sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) > 0)
 			{
-				AddQuestRecord("Ammand", 3);
+				if(GetDifficulty() <= DIFFICULTY_MARINER) AddQuestRecord("Ammand", 3);
+				else AddQuestRecord("Ammand", 18);
 			}
 			else
 			{
 				Preprocessor_AddQuestData("Jerald", GetMyLastName(CharacterFromID("Father Jerald")));
-				AddQuestRecord("church_help", 3);
+				if(GetDifficulty() <= DIFFICULTY_MARINER) AddQuestRecord("church_help", 3);
+				else AddQuestRecord("church_help", 15);
 				Preprocessor_Remove("Jerald");
 			}
 		break;

@@ -1,2 +1,4 @@
 title=Benjamin Hornigold
-text.t1=Hornigold's ship was the starting point for many of the more famous pirates. I have got the map!
+text.t1=Hornigold's ship was the starting point for many of the more famous pirates.
+text.t2=I have got the map. Is it Hispaniola?
+text.t3=One Port is marked with Red on Hispaniola. The two Blue Letters though... There have to be more maps to get any meaning out of this.

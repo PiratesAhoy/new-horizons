@@ -1,0 +1,3 @@
+title=Benjamin Hornigold
+text.t1=Hornigold's ship was the starting point for many of the more famous pirates.
+text.t2=I have got the map, but it's only a piece of a larger Caribbean Map.

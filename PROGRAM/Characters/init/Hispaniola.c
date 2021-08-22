@@ -1081,7 +1081,8 @@ void CreateHispaniolaCharacters(ref n)
 	ch.perks.list.ProfessionalGunman = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.ShipSpeedUp = true;
@@ -1420,7 +1421,7 @@ void CreateHispaniolaCharacters(ref n)
 	ch.old.name = "Carpenter";
 	ch.old.lastname = "";
 	ch.name 	= TranslateString("","Carpenter");
-	ch.lastname = TranslateString("","");
+	ch.lastname = "";
 	ch.id		= "Tortuga_carpenter1";
 	ch.model	= "gm_crew15";
 	ch.sound_type = "pirate";
@@ -2664,6 +2665,7 @@ void CreateHispaniolaCharacters(ref n)
 	ch.location.locator = "goto11";
 	ch.Dialog.Filename = "Father Abbott_dialog.c";
 	ch.Dialog.Filename.group = "church.c";
+	ch.nation = SPAIN;
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";

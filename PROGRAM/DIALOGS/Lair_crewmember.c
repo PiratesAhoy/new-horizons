@@ -104,7 +104,6 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
 
-			if(TradeCheck(PChar, NPChar, true)) { // NK
 			if(NPChar.quest.meeting == "0")
 			{
 				d.Text = DLG_TEXT[4] + DLG_TEXT[5];
@@ -125,15 +124,6 @@ void ProcessDialogEvent()
 				Link.l3 = DLG_TEXT[16];
 				Link.l3.go = "exit";
 			}
-			// NK -->
-			}
-			else
-			{
-				dialog.text = DLG_TEXT[27] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[28];
-				Link.l1 = DLG_TEXT[29];
-				Link.l1.go = "exit";
-			}
-			// NK <--
 			Diag.TempNode = "First Time";
 		break;
 

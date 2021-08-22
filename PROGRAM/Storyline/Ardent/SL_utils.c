@@ -36,36 +36,7 @@ bool CanMarry(ref partner)
 	ref PChar = GetMainCharacter();
 	if (CheckQuestAttribute("spain_betrayal", "true")) return false;
 	if (CheckAttribute(PChar, "married") && PChar.married != MR_SINGLE) return false;
+	if (CheckAttribute(partner, "married") && partner.married != MR_SINGLE && !CheckAttribute(partner, "married.annulled")) return false;
 	if (LAi_IsDead(partner)) return false;
 	return true;
-}
-
-bool StoreDialog(ref ch)
-{
-	if (CheckAttribute(ch, "quest.original_dialog_filename"))
-	{
-		return false;
-	}
-	else
-	{
-		ch.quest.original_dialog_filename = ch.Dialog.Filename;
-		ch.quest.original_dialog_CurrentNode = ch.dialog.CurrentNode;
-		return true;
-	}
-}
-
-bool RestoreDialog(ref ch)
-{
-	if (CheckAttribute(ch, "quest.original_dialog_filename"))
-	{
-		ch.Dialog.Filename = ch.quest.original_dialog_filename;
-		ch.dialog.CurrentNode = ch.quest.original_dialog_CurrentNode;
-		DeleteAttribute(ch, "quest.original_dialog_filename");
-		DeleteAttribute(ch, "quest.original_dialog_CurrentNode");
-		return true;
-	}
-	else
-	{
-		return false;
-	}
 }

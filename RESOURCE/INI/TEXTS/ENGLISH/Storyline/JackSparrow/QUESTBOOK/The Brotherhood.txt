@@ -18,6 +18,5 @@ text.t16=Petros wants me to try to rescue one of the Brotherhood held prisoner o
 text.t17=This is madness. I can't just sit here. I think I should search the other bays on this island. You never know I might find something to help me.
 text.t18=I met Barbossa when looking for the escaped pirate. He said I should sail to an island or a house. You can't sail to a house so an island it is.
 text.t19=I have found Couch Captain Charles, now to return him to the Brotherhood at Petros' plantation on #sisland_Guadeloupe#.
-text.t20=empty.
-
-
+text.t20=I have to find Nathan Kell, but only Anamaria knows where he is. So first I need to meet her at #sisland_Oxbay# lighthouse.
+text.t21=Anamaria told me that Nathan Kell is somewhere in #sGreenford#. But I must be careful because while I am looking for Nathan Kell, Cutler Beckett is looking for me.

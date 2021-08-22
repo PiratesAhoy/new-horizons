@@ -1,4 +1,4 @@
-string DLG_TEXT[144] = {
+string DLG_TEXT[145] = {
 ", ",
 ", to what do I owe the honor of this visit?",
 "Can I help you, ",
@@ -143,5 +143,5 @@ string DLG_TEXT[144] = {
 "Where can I sell the fine goods I've brought with me?",
 " We have a population of ",
 " citizens.",
-
+"Tell me about the colony.",
 };

@@ -1,0 +1,2 @@
+title=Life as a Privateer
+text.t1=Hemos arribado a #sTortuga#, ya que apenas hay otros puertos que nos reciban amistosamente en todo el Caribe. Aunque los piratas parecen dispuestos a tolerar mi presencia aquE mi deber es complicarles la vida todo lo posible a los enemigos de mi paú. ¡Quizás incluso pueda capturar alguna colonia! El emisario en la residencia del gobernador serEmi contacto.

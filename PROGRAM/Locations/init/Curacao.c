@@ -546,11 +546,11 @@ void LocationInitCuracao(ref n)
 
 	// -------------------------------------------------
 
-	Locations[n].filespath.models = "locations\inside\Residence4";
+	Locations[n].filespath.models = "locations\inside\residenceA03";
 
 	Locations[n].id = "Willemstad_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].image = "Inside_Residence4.tga";
+	locations[n].image = "Inside_ResidencA3.tga";
 
 	//Town sack
 	Locations[n].townsack = "Willemstad";
@@ -560,22 +560,22 @@ void LocationInitCuracao(ref n)
 	locations[n].fastreload = "Willemstad";
 	//Models
 	//Always
-	Locations[n].models.always.locators = "Res04_l";
-	Locations[n].models.always.l1 = "Res04";
-	Locations[n].models.always.window = "Res04_w";
+	Locations[n].models.always.locators = "residence03_locators";
+	Locations[n].models.always.l1 = "residence03";
+	Locations[n].models.always.window = "residence03_window";
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 50;
 
 	//Day
-	Locations[n].models.day.charactersPatch = "Res04_p";
+	Locations[n].models.day.charactersPatch = "Residence03_patch";
 
 	//Night
-	Locations[n].models.night.charactersPatch = "Res04_p";
+	Locations[n].models.night.charactersPatch = "Residence03_patch";
 
 	//Environment
 	Locations[n].environment.weather = "false";
 	Locations[n].environment.sea = "false";
-	Locations[n].models.back = "back\dour4_";
+	Locations[n].models.back = "back\cores5_";
 
 	//Reload map
 	Locations[n].reload.l1.name = "Reload1";

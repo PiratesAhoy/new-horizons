@@ -1,0 +1,26 @@
+string DLG_TEXT[23] = {
+"Muevanse! Despejar las calles!",
+"...",
+"Eh, tu! Me pareces sospechoso. Quien diablos eres tu? Ensename tus papeles!",
+" Quien demonios ERES? Identifiquese y sea estrategia!",
+"Alto! !Nunca te he visto antes, pero tienes cara de pirata! Puedes probar que no eres nadie?",
+"Yo soy ",
+", y aqui estan mi Comision y los papeles de la nave, para probarlo. Fue lo suficientemente estrategia para tu temperamento tan corto?",
+"Oh, si, por supuesto, Senor! Aqui, mi identificacion esta en este bolso, justo debajo de los 200 Dolares. *WINK*",
+"Si no te pierdes a la vez, te mostrare lo estrategia que soy... con mi espada!",
+"No te atrevas a dirigirte a un superior de esa manera otra vez, empleado insolente! No me conoces? Soy el Inspector real de los Regimientos caribenos de su Majestad, y acabo de llegar con el ultimo barco que inspeccione a nuestras tropas aqui! !Ahora no me molestes mas, o tendras que explicarle a tu comandante por que he faltado a mi cita con el!",
+"Ah, si, la imagen en las monedas te identifica como un #spronoun# que tiene un corazon para los guardias mal pagados, jeje. Muy bien, te dejare pasar, pero solo esta vez. Y comportate!",
+"Por supuesto! Quien crees que soy? Un picaro? *WINK*",
+"No confio en ti! ALARMA! LEVANTEN EL DORMITORIO!",
+"Buen intento, amigo, pero no conmigo! ALARMA! Un espia! Levanta el Tono y llora!",
+"Que es esto? ALARMA! Un pirata!",
+"Parece que mis HABILIDADES eran insuficientes para ese enfoque. O fue solo mala suerte? Bien",
+"Espero que mi esgrima tenga mas exito que mi actuacion...",
+"Umm... err... Ya veo. Perdon por haberte molestado, #ssir#. Despedir.",
+"Muy bien, continuen, y un reloj tranquilo para ustedes.",
+"No has leido 'Prohibido el paso' en la puerta? Esta es una fortificacion del Ejercito de alto secreto, y solo los soldados de la Brigada Costera de elite pueden entrar. Nadie sera considerado un espia! Especialmente cierto dinero del barco pirata!",
+"Firmar? Lo siento, no se Leer. Y tengo una cita urgente con el inspector real... quiero decir que soy el inspector y tengo...",
+"Alguna orden, #ssir?#",
+"Nada por ahora."
+
+};

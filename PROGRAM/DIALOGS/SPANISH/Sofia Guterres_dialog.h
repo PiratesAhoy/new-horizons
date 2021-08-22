@@ -1,0 +1,23 @@
+string DLG_TEXT[20] = {
+"Hola! Estas ",
+", verdad? Lo siento, pero no tengo tiempo para hablar. Tengo muchos clientes hoy.",
+"...",
+"Buenas noches, ",
+". Oh. Lo eres...guapo.",
+"Que quieres decir?",
+"Que haces aqui?",
+"!Ah! !Eso fue algo mas! !Vuelve a verme!",
+"Lo hare, si encuentro algo de tiempo.",
+"Bien...",
+"Tengo que irme. Hasta luego.",
+"Bueno, fui enviado por ",
+"Fabiao Dunga",
+"Fabiao Dunga",
+", que recomendo, ",
+".",
+"Ah, ahora estamos hablando! Que estas esperando para venir!",
+"Dile que no necesito la referencia.",
+"Que? ?Me estas echando?",
+"Exactamente.",
+
+};

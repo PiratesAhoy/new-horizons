@@ -1,0 +1,18 @@
+string DLG_TEXT[16] = {
+"......",
+"......",
+"¿Qué?",
+"¿Es usted el capitán que va a #sisland_Isla Mona#?",
+"Sí. ¿Eres mi escolta?",
+"Así es. Acabo de hablar con el Almirante de Puerto. Me dio el pase.",
+"Estoy acostumbrado a ir a #sisland_Isla Mona#. ¿Conoces la ruta?",
+"Sí, no te preocupes. Levemos anclas.",
+"¡Por fin, llegamos! Tengo que reunirme con el tendero pero usted debe reunirse con el administrador del puerto para mostrarle su pase libre. Aquí, las autoridades hacen cumplir estrictamente las reglas.",
+"Está bien. ¿Dónde está él?",
+"En el faro. Después, ve a la taberna si quieres. Necesitaré dos días para descargar la mercancía.",
+"Entonces, tengo que quedarme aquí dos días... Mis tripulantes podrían ayudar a descargar para acelerar la entrega.",
+"No, sólo los estibadores de aquí pueden hacer eso. Alquila una habitación en la taberna, No hay mucho más que hacer en esta isla.",
+"Muchas reglas, eh... Por cierto, ¿dónde está la taberna?",
+"Sí, muchas reglas que deben ser obedecidas exactamente o habrá problemas. La casa de la taberna está cerca del faro.",
+"Gracias, Capitán, lo tendré en cuenta.",
+};

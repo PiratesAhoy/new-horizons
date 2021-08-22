@@ -14,6 +14,8 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+
+	int ladykiller_countdown = sti(GetAttribute(PChar, "quest.ladykiller_countdown"));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -28,27 +30,55 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 
-			dialog.text = DLG_TEXT[0];
-			Link.l1 = DLG_TEXT[2];
-			Link.l1.go = "jewels";
-			Link.l2 = DLG_TEXT[3];
-			Link.l2.go = "reputation";
-			Link.l3 = DLG_TEXT[1];
-			Link.l3.go = "leave";
-
-			if (CheckAttribute(PChar, "quest.defector_gemtype") && CheckCharacterItem(PChar, PChar.quest.defector_gemtype))
+			if(ladykiller_countdown > 0)
 			{
-				Preprocessor_Add("gem", GetItemNameByID(GetAttribute(PChar, "quest.defector_gemtype")));
-				dialog.text = DLG_TEXT[6];
-				Link.l1 = DLG_TEXT[8];
-				link.l1.go = "return_gem";
-				link.l2 = DLG_TEXT[9]
-				Link.l3 = DLG_TEXT[7];
+				dialog.text = DLG_TEXT[18];
+				link.l1 = DLG_TEXT[19];
+				link.l1.go = "leave_apologise";
+				link.l2 = DLG_TEXT[20];
+				link.l2.go = "leave";
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[0];
+				Link.l1 = DLG_TEXT[2];
+				Link.l1.go = "jewels";
+				Link.l2 = DLG_TEXT[3];
+				Link.l2.go = "reputation";
+				Link.l3 = DLG_TEXT[1];
+				Link.l3.go = "leave";
+
+				if (CheckAttribute(PChar, "quest.defector_gemtype") && CheckCharacterItem(PChar, PChar.quest.defector_gemtype) && GetAttribute(PChar, "quest.defector_island") == FindIslandByLocation(PChar.location))
+				{
+					Preprocessor_Add("gem", GetItemNameByID(GetAttribute(PChar, "quest.defector_gemtype")));
+					dialog.text = DLG_TEXT[6];
+					Link.l1 = DLG_TEXT[8];
+					link.l1.go = "return_gem";
+					link.l2 = DLG_TEXT[9]
+					Link.l3 = DLG_TEXT[7];
+				}
 			}
 		break;
 
 		case "leave":
-			if (CheckAttribute(PChar, "quest.defector_gemtype")) DeleteAttribute(PChar, "quest.defector_gemtype");
+			if (CheckAttribute(PChar, "quest.defector_gemtype"))
+			{
+				DeleteAttribute(PChar, "quest.defector_gemtype");
+				DeleteAttribute(PChar, "quest.defector_island");
+			}
+			dialog.text = DLG_TEXT[4];
+			Link.l1 = DLG_TEXT[5];
+			Link.l1.go = "exit_ambush";
+		break;
+
+		case "leave_apologise":
+			if(ladykiller_countdown <= 1) DeleteAttribute(PChar, "quest.ladykiller_countdown");
+			else PChar.quest.ladykiller_countdown = ladykiller_countdown - 1;
+			if (CheckAttribute(PChar, "quest.defector_gemtype"))
+			{
+				DeleteAttribute(PChar, "quest.defector_gemtype");
+				DeleteAttribute(PChar, "quest.defector_island");
+			}
 			dialog.text = DLG_TEXT[4];
 			Link.l1 = DLG_TEXT[5];
 			Link.l1.go = "exit_ambush";
@@ -77,7 +107,11 @@ void ProcessDialogEvent()
 			NextDiag.TempNode = "exit_good";
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			ChangeCharacterReputation(pchar, 1);
-			if (CheckAttribute(PChar, "quest.defector_gemtype")) DeleteAttribute(PChar, "quest.defector_gemtype");
+			if (CheckAttribute(PChar, "quest.defector_gemtype"))
+			{
+				DeleteAttribute(PChar, "quest.defector_gemtype");
+				DeleteAttribute(PChar, "quest.defector_island");
+			}
 			DialogExit();
 		break;
 
@@ -90,6 +124,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[15];
 			link.l1.go = "exit";
 			DeleteAttribute(PChar, "quest.defector_gemtype");
+			DeleteAttribute(PChar, "quest.defector_island");
 		break;
 
 		case "exit_good":

@@ -315,7 +315,15 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[81];
 			Link.l1.go = "exit";
 			Characters[GetCharacterIndex("Rachel Blacque")].quest.badguy = "3";
+			Preprocessor_AddQuestData("Turpin Cabanel", GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("Blacque", GetMyLastName(CharacterFromID("Marc Blacque")));
+			Preprocessor_AddQuestData("Rachel", GetMyName(CharacterFromID("Rachel Blacque")));
+			Preprocessor_AddQuestData("Milon", GetMyName(CharacterFromID("Milon Blacque")));
 			AddQuestRecord("Blacques", 4); // NK
+			Preprocessor_Remove("Milon");
+			Preprocessor_Remove("Rachel");
+			Preprocessor_Remove("Blacque");
+			Preprocessor_Remove("Turpin Cabanel");
 		break;
 
 		case "fight":

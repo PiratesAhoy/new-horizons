@@ -1,0 +1,102 @@
+
+itmname_key3		{Large Key}
+itmdescr_key3
+{
+A robust key to a heavy lock.
+}
+
+itmname_key4		{Ordinary Key}
+itmdescr_key4
+{
+A thin key to a standard lock.
+}
+
+itmname_SecurityLetter	{Letter to Prison Commandant}
+itmdescr_SecurityLetter
+{
+This document orders the commandant to provide security troops for a payroll ship which will depart from #sHavana#.
+}
+
+itmname_TainoRug	{Taino Rug}
+itmdescr_TainoRug
+{
+A woven rug, possibly very old, possibly of Taino origin.
+}
+
+itmname_SignetRing	{Signet Ring}
+itmdescr_SignetRing
+{
+A signet ring which marks you as a trusted agent of the Downing family.
+}
+
+itmname_WeddingRing	{Wedding Ring}
+itmdescr_WeddingRing
+{
+A precious ring signifying that you are married. The markings are very old and not in any known language.
+}
+
+itmname_jewelry7_q	{Golden Ring}
+itmdescr_jewelry7_q
+{
+A gold ring with a fine emerald. You are keeping it safe for use as a wedding ring.
+}
+
+itmname_jewelry10_q	{Luxurious Golden Ring}
+itmdescr_jewelry10_q
+{
+A gold ring inlaid with fine sapphires. You are keeping it safe for use as a wedding ring.
+}
+
+itmname_ExplainLetter	{Letter to Governor}
+itmdescr_ExplainLetter
+{
+A personal letter to the governor of #sSantiago#.
+}
+
+itmname_CourtingLetter	{Private letter}
+itmdescr_CourtingLetter
+{
+A personal, confidential letter with an elaborate seal.
+}
+
+itmname_BetrayedLetter	{Letter to you}
+itmdescr_BetrayedLetter
+{
+To Captain Ardent. As you are once again an enemy of Spain, I have left. Do not try to find me. #sromance#
+}
+
+itmname_PrisonPass	{Prison pass}
+itmdescr_PrisonPass
+{
+A pass allowing you to visit a prisoner.
+}
+
+itmname_FakePrisonPass	{Fake prison pass}
+itmdescr_FakePrisonPass
+{
+A forged pass allowing you to visit a prisoner.
+}
+
+itmname_BattleOrders	{Battle Orders}
+itmdescr_BattleOrders
+{
+Orders stolen from #sPointe a Pitre# Admiralty detailing a French attack on #sRedmond#.
+}
+
+itmname_BattleOrders2	{Battle Orders}
+itmdescr_BattleOrders2
+{
+Orders stolen from #sPointe a Pitre# Admiralty detailing a French attack on #sSantiago#.
+}
+
+itmname_fake_fort_release	{Forged release papers}
+itmdescr_fake_fort_release
+{
+Forged papers releasing prisoners from #sPort au Prince# fort into your custody.
+}
+
+itmname_medal1	{Cross of Santa Isabella}
+itmdescr_medal1
+{
+A medal awarded to you for bringing plans for the invasion of #sSantiago# back to its governor.
+}

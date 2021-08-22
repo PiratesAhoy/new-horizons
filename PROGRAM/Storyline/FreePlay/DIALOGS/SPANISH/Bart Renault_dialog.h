@@ -1,0 +1,18 @@
+string DLG_TEXT[16] = {
+".....",
+".....",
+"Ja! ¿Te doy dinero? Nunca. Mira y espera, dentro de unas horas, mi tripulación viene y me salva.",
+"Si usted lo dice, #ssir#. Pero es su elección. ¡Disfrute de su estancia, jaja!",
+"También oyes este extraño silbido?", 
+"Se está divirtiendo?",
+"No, claro que no. ¡Cómo puedes divertirte con las situaciones de los prisioneros, perro!",
+"Oh, vamos, no seas tan ofensivo! Estás hablando con un compatriota. Yo soy #scountry# y puedo dejarte libre. Por #smoney# piezas de ocho, eres un #sgender# otra vez.",
+"#smoney#!? ¡Eso sólo me deja 1! Es mejor que seguir pudriéndome aquí. Muy bien, es un trato. ¡Ahora sácame!",
+"Despúes de usted, #ssir#.",
+"Ese fue el último de ellos. ¡Ahora salgan de aquí antes de que lleguen más guardias!",
+"No vienes conmigo? No estarán tan felices de saber que has estado ayudando a un prisionero.",
+"No hay sobrevivientes, así que no necesitan saberlo. ¡Ahora enciérrenme en esa celda para que parezca que no tengo nada que ver con su liberación!",
+"Debe gustarte mucho tu trabajo si estás dispuesto a correr el riesgo de quedarte. ¡Buena suerte!",
+"muy independiente",
+"en realidad un pirata",
+};

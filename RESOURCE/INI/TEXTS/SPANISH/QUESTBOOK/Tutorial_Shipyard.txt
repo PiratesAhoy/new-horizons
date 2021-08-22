@@ -1,0 +1,3 @@
+title=Tutorial - Repair battle damage
+text.t1=El casco y el aparejo resultaron dañados en un ataque pirata así que debo mandar reparalos en el astillero antes de abandonar la isla.
+text.t2=Asunto arregaldo.

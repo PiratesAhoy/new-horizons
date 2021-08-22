@@ -1,0 +1,15 @@
+string DLG_TEXT[14] = {
+"Hey, tu! Alto ahi! No podemos permitir que cargues esos bienes. eres conciente Swift. Devuelvelos ahora y paga una multa de ",
+"Lo siento, no sabia que no estaba permitido. Muy bien, aqui esta tu dinero.",
+"Se algo mejor. ?Que tal si no te entrego la mercancia, pero te pago el doble del dinero que me pides? ?Te parece bien?",
+"Maldicion, supongo que esto va a ser sangriento despues de todo.",
+"X, estos bienes no te haran ningun bien. Harias bien en deshacerte de ellos mientras puedas. !Ahora vete!",
+"Si.",
+"De verdad crees que puedes sobornarme? Preparate a morir!",
+"Eso suena como un plan razonable para mi.",
+"Aqui tienes.",
+"Por favor, Mira esto.",
+"Oh lo siento #ssir#, !muevanse!",
+"Gracias, ahora por favor vayase estrategia.",
+" oro.",
+};

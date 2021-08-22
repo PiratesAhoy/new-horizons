@@ -1,0 +1,17 @@
+string DLG_TEXT[15] = {
+"¿Quién eres tú? ¿Qué haces aquí? ¡Y contéstame o te aplastaré la cabeza!",
+"Monseñor, perdóname, porque voy a pecar.",
+"¿Y cuál será tu pecado entonces?",
+"Voy a obligar a un sacerdote a que nos ayude a escapar y nos consiga una nave. #sallez#, ¡Ve a traernos algunas túnicas!",
+"¿Así que ustedes son esos piratas fugitivos? Sería un honor ayudarlos.",
+"En primer lugar, no soy un pirata. Acabo de matar a un hombre en un duelo y luego salí de la cárcel y después de eso maté a algunos soldados españoles. Segundo, ¿por qué nos ayudarías?",
+"Vale, pero eres un fugitivo. Quiero ayudarte, porque yo, Dios me perdone, odio al gobernador y a todos los que están bajo su mando directo. Hombre corrupto. Ahora espera aquí, te conseguiré esas túnicas.",
+"Esperaremos, y esas puertas están cerradas, ¿no?",
+"Aquí están. Ahora, en el puerto se encuentra un galeón cargado de mercancías. Ya no debería estar fuertemente vigilado porque la mayoría de los soldados te están buscando. El barco se encarga de enviar a algunos sacerdotes a una misión en #sisland_Hispaniola#. Así que con este disfraz, seguramente tendrá acceso a la nave.",
+"Muchas gracias, #sfather#. Tenemos que irnos ahora, gracias por todo.",
+"¡Esperen! ¡Llévenme con ustedes! Quiero alejarme de esta maldita ciudad. Además, si voy con ustedes, los guardias ciertamente creerán que ustedes son sacerdotes. Así que, ¿qué dices?",
+"Muy bien, usted puede unirse a nosotros. Guíenos #sfather#.",
+"No, lo siento, no podemos usar un sacerdote obeso, pero gracias por los disfraces.",
+"sacerdote",
+"De prisa",
+};

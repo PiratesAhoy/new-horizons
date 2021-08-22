@@ -1,0 +1,22 @@
+TEXT	{
+Chcesz si× dowiedzieÞ o piractwie? Ta ksi¹žka powie ci wszystko, co musisz wiedzieÞ o pi×knej sztuce grabiežy.
+
+Prawdopodobnie sta³e› si× piratem albo przez obijanie statków, których nie powiniene›. Gruby kupiec jest dobrym celem, ale jedynymi typami, które b×d¹ go atakowaÞ, s¹ floty wroga,
+wrogich korsarzy i piratów. Je›li nie masz prowizji w czyjej› marynarce ani Listu Marque od gubernatora, to b¹dŸ piratem - arr!
+
+A može zdecydowa³e› si× zostaÞ piratem na pocz¹tku swojej kariery.
+
+Wszystkie narody s¹ twoimi wrogami - možesz nienawidziÞ jednego bardziej niž drugiego i wolisz atakowaÞ statki jednego narodu, lub zostawiÞ swój ulubiony naród w spokoju, ale to nie powstrzyma wszystkich
+tak zwane cywilizowane narody nie atakuj¹ ci× na widok. Wi×c b×dziesz chcia³ dobrze wykorzystaÞ fa³szywe flagi. Fa³szywa flaga može sprawiÞ, že statki my›l¹, že jeste› jej przyjacielem
+až upu›cisz, podnie› swoj¹ pirack¹ flag× i daj jej burt×. Niektórzy prawdziwi z³oczyðcy nie zawracaj¹ sobie g³owy flag¹ piratów, ale tylko najgorszym szumowin¹, wci¹ž udaj¹c
+byÞ przyjacielem ofiary, wi×c užywaj swojej pirackiej flagi, po to jest. Ponadto, je›li chcesz pop³yn¹Þ do portu, b×dziesz chcia³ mieÞ przyjazn¹ flag×, wi×c fort nie zaatakuje 
+ciebie i sklepikarze nie powie ci, žeby› si× odwali³. Chociaž je›li jeste› s³awny, možecsz byÞ uznany za pirata, tak czy owak.
+
+Tam, gdzie možesz byÞ pewien, že s¹ mile widziane, s¹ to porty prowadzone przez innych piratów. A je›li do³¹czysz do naszego Bractwa, možesz sprzedaÞ swój ³up za wi×cej niž dostaniesz gdziekolwiek indziej. Cz³ek
+može równiež wznie›Þ si× przez szeregi tak, jakby› by³ w jednej z nich, tworz¹c prawdziwe imi× dla siebie.
+
+Oczywi›cie, možesz zdecydowaÞ przestaÞ byÞ piratem. Po prostu pe³znij na kolanach do jakiego› bogatego gubernatora, zap³aÞ mu troch× ci×žko zarobionego ³upu, a on ci wybaczy. Možesz nawet wtedy
+zap³aciÞ mu jeszcze wi×cej i zdobyÞ sobie List Marque, co oznacza, že ??zamiast atakowaÞ jakikolwiek statek, którego chcesz, možecie atakowaÞ tylko te statki, które možesz. Bo je›li trafisz
+Z³y statek, b×dziesz w drodze powrotnej do bycia piratem. Arr!
+
+}

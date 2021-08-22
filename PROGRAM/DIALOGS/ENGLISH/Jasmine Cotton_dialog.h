@@ -1,4 +1,4 @@
-string DLG_TEXT[55] = {
+string DLG_TEXT[52] = {
 "Welcome to my shop, ",
 ". My name is ",
 ".",
@@ -49,5 +49,6 @@ string DLG_TEXT[55] = {
 "Get out, ",
 ", before I call me husband and his drinking mates.",
 "Very well, I wouldn't want to disturb his grog party.",
-
+"Aye, #sladlass#. I'm expecting #squantity# cwt of #scargo#. Do you have it?",
+"Umm... some of it appears to have been misplaced. Don't worry, I'll replace what was lost and bring it to you!",
 };

@@ -15,8 +15,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	
-	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-	else Preprocessor_Add("child", XI_ConvertString("child"));
+	if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+	else Preprocessor_Add("addr", XI_ConvertString("my child"));
 
 	switch(Dialog.CurrentNode)
 	{
@@ -151,7 +151,7 @@ void ProcessDialogEvent()
 
 		case "wedding_consent1":
 			Dialog.snd = "voice\PADO\PADO043";
-			dialog.text = DLG_TEXT[28] + PChar.quest.groom + " and " + PChar.quest.bride + DLG_TEXT[29];
+			dialog.text = DLG_TEXT[28] + PChar.quest.groom + DLG_TEXT[55] + PChar.quest.bride + DLG_TEXT[29];
 			if (PChar.sex == "man") link.l1 = DLG_TEXT[41];
 			else link.l1 = DLG_TEXT[39];
 			link.l1.go = "exit";

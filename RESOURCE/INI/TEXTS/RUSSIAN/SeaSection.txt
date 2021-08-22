@@ -1,0 +1,45 @@
+Ship_critical			{Критическое попадание!}
+Ship_got_good_1			{Вы подняли}
+Ship_got_good_2			{ц.}
+Ship_cant_got_good_1	{Некуда погрузить}
+Ship_cant_got_good_2	{. Трюм заполнен!}
+
+Fort_destroy	{разрушен.}
+Fort_cannon		{Орудие уничтожено!}
+
+seg_Balls		{Ядер}
+seg_Grapes		{Картечи}
+seg_Knippels	{Книппелей}
+seg_Bombs		{Бомб}
+seg_Sailcloth	{Парусины}
+seg_Planks		{Досок}
+seg_Slaves		{Рабов}
+seg_Wheat		{Пшеницы}
+seg_Ebony		{Черного дерева}
+seg_Chocolate	{Какао}
+seg_Sugar		{Сахара}
+seg_Wine		{Вина}
+seg_Linen		{Полотна}
+seg_Rum			{Рома}
+seg_Tobacco		{Табака}
+seg_Coffee		{Кофе}
+seg_Mahogany	{Красного дерева}
+seg_Cinnamon	{Корицы}
+seg_Copra		{Копры}
+seg_Paprika		{Перца}
+seg_Fruits		{Фруктов}
+seg_Ale			{Эля}
+seg_Silk		{Шелка}
+seg_Clothes		{Одежды}
+seg_Cotton		{Хлопка}
+seg_Sandal		{Сандала}
+seg_Leather		{Кожи}
+seg_Oil			{Масла}
+seg_Gold		{Золота}    // from SLiB -->
+seg_Silver		{Серебра}  //  by
+seg_Bricks		{Кирпичей}  // Jack Davidson <--
+seg_Food		{Провизии}
+seg_Weapon		{Оружия}
+seg_Gunpowder	{Пороха}
+seg_Ration		{Провизии}
+seg_Medicines	{Медикаментов}

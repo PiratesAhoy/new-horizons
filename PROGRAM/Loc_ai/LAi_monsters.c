@@ -203,12 +203,12 @@ void LAi_CreateMonsters(ref location)
 		if(DEBUGINFO) Log_SetStringToLog("House, using " + group + " instead.");
 	}
 	//ћаксимально возможное количество монстров
-	int maxMonsters = 20 - LAi_numloginedcharacters;
+	int maxMonsters = (MAX_LOGINED_CHARACTERS_IN_LOCATION-12) - LAi_numloginedcharacters;
 
 	//SCREWFACE : INCREASE maxMonsters if crewmembers on shore mod
 	if (LANDCREWMEMBERS && makeint(environment.time) > 8.0 && makeint(environment.time) < 22.0) 
 	{
-		maxMonsters = 26 - LAi_numloginedcharacters;
+		maxMonsters = (MAX_LOGINED_CHARACTERS_IN_LOCATION-6) - LAi_numloginedcharacters;
 	}
 	//END
 
@@ -221,13 +221,13 @@ void LAi_CreateMonsters(ref location)
 		{
 			//if(maxMonsters > LAi_numloginedcharacters /2) maxMonsters = LAi_numloginedcharacters/2; // NK
 			if(maxMonsters > 8) maxMonsters = 8;
-			//if(20 - LAi_numloginedcharacters >=4 && maxMonsters < 4) maxMonsters = 4; // NK
+			//if((MAX_LOGINED_CHARACTERS_IN_LOCATION-12) - LAi_numloginedcharacters >=4 && maxMonsters < 4) maxMonsters = 4; // NK
 		}
 		else // NK -->
 		{
 			maxMonsters = maxMonsters/2;
 			if(maxMonsters > 8) maxMonsters = 8;
-			if(20 - LAi_numloginedcharacters >=4 && maxMonsters < 4) maxMonsters = 4;
+			if((MAX_LOGINED_CHARACTERS_IN_LOCATION-12) - LAi_numloginedcharacters >=4 && maxMonsters < 4) maxMonsters = 4;
 		}
 		// NK <--
 	}

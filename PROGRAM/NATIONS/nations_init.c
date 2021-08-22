@@ -485,8 +485,8 @@ void InitNations()
 	rNation.Ranks.8 = "Contra Almirante";
 	rNation.Ranks.9 = "Vice Almirante";
 	rNation.Ranks.10 = "Almirante";
-	rNation.Ranks.11 = "Almirante General";
-	rNation.Ranks.12 = "Capitán General";
+	rNation.Ranks.11 = "Capitán General";
+	rNation.Ranks.12 = "Almirante General";
 	rNation.Titles.Quantity = 12;
 	rNation.Titles.1 = "Aspirante";
 	rNation.Titles.2 = "Alférez de Fragate";
@@ -494,8 +494,8 @@ void InitNations()
 	rNation.Titles.4 = "Teniente de Navío";
 	rNation.Titles.5 = "Capitán de Corbeta";
 	rNation.Titles.6 = "Capitán de Fragata";
-	rNation.Titles.7 = "Caballero";
-	rNation.Titles.8 = "Baronet";
+	rNation.Titles.7 = "Hidalgo";
+	rNation.Titles.8 = "Caballero";
 	rNation.Titles.9 = "Barón";
 	rNation.Titles.10 = "Vizconde";
 	rNation.Titles.11 = "Conde";
@@ -920,8 +920,8 @@ void InitNations()
 	rNation.Titles.4 = "Primeiro-Tenente";
 	rNation.Titles.5 = "CapitÝo-Tenente";
 	rNation.Titles.6 = "CapitÝo-de-Fragata";
-	rNation.Titles.7 = "Cavaleiro";
-	rNation.Titles.8 = "Baronete";
+	rNation.Titles.7 = "Fidalgo";
+	rNation.Titles.8 = "Cavaleiro";
 	rNation.Titles.9 = "BarÝo";
 	rNation.Titles.10 = "Visconde";
 	rNation.Titles.11 = "Conde";
@@ -1040,7 +1040,7 @@ void InitNations()
 			if(period == PERIOD_GOLDEN_AGE_OF_PIRACY || period == PERIOD_COLONIAL_POWERS)
 			{
 				//Location fantom models
-				rNation.fantomModel.m0 = "Dragoon_Swe_18";
+				rNation.fantomModel.m0 = "Offic_Swe_18";		//JRH: a proper officer now
 				rNation.fantomModel.m1 = "Soldier_Swe3_18";
 				rNation.fantomModel.m2 = "Soldier_Swe9_18";
 				rNation.fantomModel.m3 = "Soldier_Swe10_18";
@@ -1048,7 +1048,7 @@ void InitNations()
 				rNation.fantomModel.m5 = "Soldier_Swe14_18";
 				rNation.fantomModel.m6 = "Soldier_Swe6_18";
 				//Boarding models
-				rNation.boardingModel.enemy.m1 = "Dragoon_Swe_18";
+				rNation.boardingModel.enemy.m1 = "Offic_Swe_18";	//JRH: a proper officer now
 				rNation.boardingModel.enemy.m1.ani = "man";
 				rNation.boardingModel.enemy.m2 = "Soldier_Swe3_18";
 				rNation.boardingModel.enemy.m2.ani = "man";

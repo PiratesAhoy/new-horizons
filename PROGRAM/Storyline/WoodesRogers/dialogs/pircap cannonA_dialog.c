@@ -154,11 +154,30 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				//Spriggs
-				Dialog.text = DLG_TEXT[0];
-				link.l1 = DLG_TEXT[1];
-				link.l1.go = "exit";	
+				if(Pchar.location == "wr_church_inside")
+				{
+					//Spriggs
+					Dialog.text = DLG_TEXT[0];
+					link.l1 = DLG_TEXT[1];
+					link.l1.go = "exit";
+				}
+				else
+				{
+					//Spriggs
+					Dialog.text = DLG_TEXT[12];
+					link.l1 = DLG_TEXT[1];
+					link.l1.go = "exit";	
+				}
 			}
+		break;
+
+		case "flag":
+			//Spriggs
+			PlaySound("VOICE\ENGLISH\pir_capHH.wav");
+			Dialog.text = DLG_TEXT[12];
+			link.l1 = DLG_TEXT[13];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Spriggs_flag2");	
 		break;
 
 		case "Exit_CannonProfessional":

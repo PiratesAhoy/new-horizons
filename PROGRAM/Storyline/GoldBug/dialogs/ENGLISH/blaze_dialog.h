@@ -308,8 +308,8 @@ string DLG_TEXT[429] = {
 "I have made all I can for now. Tomorrow I'll try something else but now it's time to go to sleep.",
 "A new day - and I'm going to try a better way to heat up that parchment...",
 "... but first: I have to get the fire burning again. It's freezing cold in here.",
-"If I place the parchment in a clean and dry tin pan on that cauldron, maybe the document will become more thoroughly heated.",
-"But no, I don't know where the tin pan is and we're out of wood. I'll have to wake up Jupiter!",	//310
+"If I place the parchment on a clean and dry plate or dish on that cauldron, maybe the document will become more thoroughly heated.",
+"But no, I don't know where the oven-proof dish is and we're out of wood. I'll have to wake up Jupiter!",	//310
 "I must hurry now and to write the full code down -",
 "- before it vanishes again!",
 "I have got all the six items -",

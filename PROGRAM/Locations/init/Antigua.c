@@ -226,6 +226,7 @@ void LocationInitAntigua(ref n)
 	locations[n].models.always.plan.level = 9;
 
 	locations[n].models.always.add1 = "StJohnsAdd";
+	locations[n].models.always.l2 = "bench";						//JRH: WR2
 
 	//Day
 	locations[n].models.day.fonar = "StJohns_fd";
@@ -330,11 +331,20 @@ void LocationInitAntigua(ref n)
 	Locations[n].reload.l17.name = "reload9";
 	Locations[n].reload.l17.go = "Antigua_mansion_bedroom2";
 	Locations[n].reload.l17.emerge = "reload1";
-    Locations[n].reload.l17.disable = 1;
+	Locations[n].reload.l17.disable = 1;
+
+	Locations[n].reload.l18.name = "reload10";						//JRH: WoodesRogers quest
+	Locations[n].reload.l18.go = "Antigua_yard";
+	Locations[n].reload.l18.emerge = "reload1";
+
+	Locations[n].locators_radius.quest.defoe = 2.0;						//JRH: WR2
+	Locations[n].locators_radius.quest.whistle = 2.5;					//JRH: WR2
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;				//JRH: WoodesRogers quest
+	Locations[n].items.randitem1 = "gatedoor_shipyard";
 	
 	Locations[n].island = "Antigua";
 	n = n + 1;
-
 
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\pirateresidence";	

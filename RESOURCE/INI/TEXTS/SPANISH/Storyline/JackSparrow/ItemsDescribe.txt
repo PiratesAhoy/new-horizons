@@ -1,0 +1,29 @@
+itmname_Map_Doc_1 {Paquete de documentos}
+itmdescr_Map_Doc_1
+{
+Una cuarta parte de un viejo mapa que conduce a los tesoros de Cortés, muestra parte de una isla pero no dónde está.
+}
+
+itmname_Map_Doc_2 {Paquete de documentos}
+itmdescr_Map_Doc_2
+{
+Una cuarta parte de un viejo mapa que conduce a los tesoros de Cortés, que encaja con otro fragmento de mapa.
+}
+
+itmname_Map_Doc_3 {Paquete de documentos}
+itmdescr_Map_Doc_3
+{
+Una cuarta parte de un viejo mapa que conduce a los tesoros de Cortés, muestra otra parte de la isla y parte de un camino qaue va tierra adentro.
+}
+
+itmname_Map_Doc_4 {Paquete de documentos}
+itmdescr_Map_Doc_4
+{
+Una cuarta parte de un viejo mapa que muestra el resto del camino tierra adentro que conduce al tesoro de Cortés, libros sobre corrientes y vientos, pero faltan las coordenadas de la isla.
+}
+
+itmname_small_chestJS	{Cofre pequeño}
+itmdescr_small_chestJS
+{
+Los documentos que contiene este cofre prueban que el barco que se hundió en la Baie d'Orient era efectivamente la fragata francesa 'La Foudre'. Dice: 'El barco se hunde. Nos vamos al fondo. Ahora ya nunca encontraremos a la señorita Le Moigne. Mi gobernador quedará decepcionado.' - Capitán Patric Robert Sondre.
+}

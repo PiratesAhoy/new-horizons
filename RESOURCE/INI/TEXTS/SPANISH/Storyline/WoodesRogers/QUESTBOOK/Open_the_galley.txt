@@ -1,0 +1,9 @@
+title=Open the Galley
+text.t1=The Galley in the prow of the Galleon is blocked and it's my job to open it.
+text.t2=I have found the Galley I think. Now I only need a Tool like a crowbar to remove the plank.
+text.t3=Guess I now must look for the right place to use these Ropes .
+text.t4=I have placed the ropes - and they go all the way down into the Hold. How can I use this?
+text.t5=I have placed the ropes - think I can make them go all the way down into the Hold. How can I use this? 
+text.t6=There's a Tool under the elevator.
+text.t7=Now it's the Planks that need to be placed in some clever way.
+text.t8=I can reach the Tool from the...

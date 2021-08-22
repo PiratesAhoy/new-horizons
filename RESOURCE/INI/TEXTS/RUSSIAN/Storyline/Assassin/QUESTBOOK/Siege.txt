@@ -1,0 +1,9 @@
+title=The Oranjestad' siege
+text.t1=The Dutch have attacked a village near Havana. With Padilla and his men, we defeated them. However, there must be another ones in Playa de Sabana. The shore is to our right when we leave the village. 
+text.t2=The Vice-Admiral and the Governor conceived an ambitious plan: They want to capture Oranjestad! For that, I've got two tasks. The first one is to pass a wrong information to the Dutch authorities of #sisland_Douwesen#. They must think the Spaniards want to attack #sDouwesen# instead of Oranjestad so that they transfer their fleet from Aruba to #sisland_Douwesen#. I already have an idea of how I can do this. Let's go to #sisland_Douwesen#!
+text.t3=Done! Everything worked as planned. I fooled my former Captain, Berend de Voor. Now, I can go to Aruba for my second task: Enlist an indian tribe for the siege of Oranjestad. I know there is an indian village near Oranjestad. I should talk to their chief.
+text.t4=After a first refusal, I finally found a tribe interested in helping us even if they want more gold to fight with the Spaniards. I only need to return to Havana and ask to Vice-Admiral Benavides new tasks.
+text.t5=I've got one month to improve my skills while Vice-Admiral Benavides has the confirmation the plan worked.
+text.t6=Well, the expedition started and Captain Padilla is the leader. Arrived at Aruba, while Padilla and his troops surround Oranjestad I have to see the indian chief and pay the rest of gold he asked. Afterwards, I will accompany his warriors to the Dutch town.
+text.t7=What a vile man is Padilla! He let his men killing civilians. I will inform the Vice-Admiral of these crimes. He'll know how to punish Padilla.
+text.t8=One month I don't see Vice-Admiral Benavides. Time has come I must ask him if the Dutch moved their fleet.

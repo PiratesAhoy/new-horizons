@@ -1,0 +1,5 @@
+string DLG_TEXT[2] = {
+"...y muy malos huevos, Ahoy mate, a pesar de su aspecto exterior bastante sombrio, no me parece ser uno de los hombres de Santos, y por lo tanto, probablemente4 considerarte como un amigo. Parece que la Compania de las Indias orientales tiene una memoria muy larga, y Santos iba a entregarles mis visceras entranas negras. Eso es, el estaba planeando, hasta tu oportuna intervencion, amigo. Tienes mi agradecimiento, pero a menos que puedas encontrar una manera de salir de aqui va a ser una locura. Afortunadamente, parece que hay una buena cantidad de Ron a mano! Espera un minuto, hay algo tallado en la mesa aqui; si esta atascado en las celdas, entonces aparta la mirada, y sigue al pobre Yorick, para torre de este laberinto. ?Que piensas de eso? Dejame recoger mis efectos, y te ayudare a descifrarlos.",
+"Me pregunto si estas llaves pueden sacarnos de aqui...",
+
+};

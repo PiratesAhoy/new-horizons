@@ -1,0 +1,4 @@
+title=Side Quest - A smuggler's life for me.
+text.t1=It seems the stories are true. Smugglers are everywhere in the Caribbean!
+text.t2=I've met a smuggler in a tavern. He gave me a book about smuggling.
+text.t3=I need to be careful. It seems that the smugglers keep close contact with each other. When I do them wrong, it will affect my relation with them.

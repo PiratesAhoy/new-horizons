@@ -20,7 +20,21 @@ void DoCharacterUsedItem(ref chref, string itmID)
 {
 	aref arItm;
 	if( Items_FindItem(itmID,&arItm)<0 ) return;
-	TakeItemFromCharacter(chref,itmID);
+	if(arItm.id == "myrrh")
+	{
+		//JRH
+		if(chref.location == "BB_burning_cave")
+		{
+			TakeItemFromCharacter(chref,itmID);
+		}
+		else
+		{
+			PlaySound("VOICE\ENGLISH\blaze_mhm.wav");
+			Log_SetStringToLog(TranslateString("","No, I'll save that to later"));
+			return;
+		}
+	}
+	else TakeItemFromCharacter(chref,itmID);
 
 	if( CheckAttribute(arItm,"potion.health") )
 	{
@@ -2659,3 +2673,14 @@ bool CheckPartyItem(string itemName)
 	return false;
 }
 // <--Levis
+
+// --> PB
+void ItemSetPrice(string itemID, int price)
+{
+	if (itemID == "") return; // PB: Prevent potential error messages
+	if (GetItemIndex(itemID) < 0) return;
+	aref arItem;
+	Items_FindItem(itemID, &arItem);
+	arItem.price = price;
+}
+// <-- PB

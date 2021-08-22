@@ -1,0 +1,3 @@
+title=Przybycie do #sisland#
+text.t1=Po groŸnym sztormie, dotar³em w koðcu do #sisland#. Szcz×›liwie ³adunek jest nienaruszony.
+text.t2=Po groŸnym sztormie, dotar³em w koðcu do #sisland#.

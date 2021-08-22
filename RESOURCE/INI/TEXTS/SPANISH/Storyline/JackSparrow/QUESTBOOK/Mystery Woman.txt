@@ -1,0 +1,17 @@
+title=Mujer misteriosa
+text.t1=Ha venido a hablar conmigo una mujer misteriosa que quiere que vaya con mi barco a la Bahía Roca Gris, para reunirme allí con ella.
+text.t2=Me he reunido con la mujer misteriosa. Resulta que es una agente de la Hacienda Real. He decidido ayudarla, así que tenemos que poner rumbo a #sTortuga#, frente a las costas de #sisland_Hispaniola#.
+text.t3=Me reuní con la mujer misteriosa. Resulta que es una agente de la Hacienda Real. Decidí no ayudarla, pero ella me robó mi barco y yo acabé arrestado por los guardias de la ciudad. En cualquier caso, he conseguido librarme de ellos gracias a mi labia, así que ahora tengo que decidir si volver a #sOxbay# o ir al campamento pirata de #sisland_Quebradas Costillas# para buscar a la señorita Brin.
+text.t4=Decidí no reunirme con la mujer misteriosa en Bahía Roca Gris. Pero me he toapdo con ella en la isla pirata y la he dejado fuera de combate. Ahora, a la taberna, a averiguar qué demonios pasa aquí.
+text.t5=Hemos llegado a #sTortuga#, y enrolado un oficial llamado Bill Turner 'El Botas'. Ahora tenemos que poner rumbo a #sisland_Quebradas Costillas#, ya que él dice que allí es donde hja ido la Brinkley.
+text.t6=No puedo irme sin hacer algo para ayudar a #sOxbay#, así que trabajaré para la Compañía y para el gobernador. Espero no estar abarcando demasiado, porque ahora no hay vuelta atrás.
+text.t7=Tenemos que encontrar a un contrabandista de diamantes llamado Eastwood. Está en algún lugar de esta isla.
+text.t8=Bill el Botas nos ha dejado para unirse al barco de Barbossa. Tenemos que volver a #sOxbay#, en #sisland_Oxbay#, y encontrar a Brock.
+text.t9=Otra mujer misteriosa. Esta quiere que me reúna con ella en la bahía del faro.
+text.t10=Nuestra relación han terminado. Pero en conjunto, he salido bastante bien parado.
+text.t11=He caído en una trampa. Brock todavía está en #sisland_Oxbay#. Tenemos que volver allí y encontrarlo.
+text.t12=empty.
+text.t13=empty.
+text.t14=empty.
+text.t15=empty.
+

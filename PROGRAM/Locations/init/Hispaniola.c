@@ -1779,11 +1779,11 @@ void LocationInitHispaniola(ref n)
 	n = n + 1;
 
 // KK --------------------------------------------------->
-	Locations[n].filespath.models = "locations\inside\Residence5";
+	locations[n].filespath.models = "locations\inside\ResidenceA02";
 
 	Locations[n].id = "PoPrince_townhall";
 	locations[n].id.label = "#stown_name# townhall";
-	Locations[n].image = "Inside_Residence5.tga";
+	Locations[n].image = "Inside_ResidencA2.tga";
 
 	//Town sack
 	Locations[n].townsack = "Port au Prince";
@@ -1794,16 +1794,16 @@ void LocationInitHispaniola(ref n)
 
 	//Models
 	//Always
-	Locations[n].models.always.locators = "Res05_l";
-	Locations[n].models.always.l1 = "ResX5"; // ccc may07 Location Remodeling Campaign
-	Locations[n].models.always.window = "ResX5_w";
-	Locations[n].models.always.window.tech = "LocationWindows";
-	Locations[n].models.always.window.level = 50;
-
+	locations[n].models.always.locators = "residence02_locators";
+	locations[n].models.always.l1 = "residence02";
+	locations[n].models.always.window = "residence02_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 50;
 	//Day
-	Locations[n].models.day.charactersPatch = "Res05_p";
+	locations[n].models.day.charactersPatch = "residence02_patch";
+
 	//Night
-	Locations[n].models.night.charactersPatch = "Res05_p";
+	locations[n].models.night.charactersPatch = "residence02_patch";
 	//Environment
 	Locations[n].environment.weather = "false";
 	Locations[n].environment.sea = "false";
@@ -3731,7 +3731,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].items.randitem132 = "hatch11";
 
 	Locations[n].locators_radius.randitem.randitem133 = 0.01;
-	Locations[n].items.randitem133 = "door_N06";
+	Locations[n].items.randitem133 = "door_TortugaT";
 
 	Locations[n].locators_radius.randitem.randitem134 = 0.01;
 	Locations[n].items.randitem134 = "door_N10";
@@ -4659,7 +4659,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].image = "Inside_StoreSmall.tga";
 
 	Locations[n].id = "BC_Store";
-	locations[n].id.label = "Buccaneers Camp store";
+	locations[n].id.label = "#stown_name# store";
 	//Town sack
 	Locations[n].townsack = "Buccaneers Camp";
 	//Sound

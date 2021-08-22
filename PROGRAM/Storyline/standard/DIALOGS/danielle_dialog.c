@@ -105,8 +105,16 @@ void ProcessDialogEvent()
 			// разговор в квестовой таверне Редмонда
 			if (pchar.quest.main_line == "talk_in_tavern_begin")
 			{
-				dialog.text = DLG_TEXT[5] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[6])]) + DLG_TEXT[7];
-				Link.l1 = DLG_TEXT[8];
+				if(PChar.sex == "woman")
+				{
+					Dialog.Text = DLG_TEXT[558] + GetMyName(PChar) + DLG_TEXT[559];
+					Link.l1 = DLG_TEXT[560] + GetMyName(NPChar) + DLG_TEXT[561];
+				}
+				else
+				{
+					dialog.text = DLG_TEXT[5] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[6])]) + DLG_TEXT[7];
+					Link.l1 = DLG_TEXT[8];
+				}
 				Link.l1.go = "talk_in_tavern";
 			}
 			if(pchar.quest.main_line == "fawn_death")
@@ -613,8 +621,16 @@ void ProcessDialogEvent()
 		break;
 
 		case "talk_in_tavern":
-			Dialog.Text = DLG_TEXT[204] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[205])]) + DLG_TEXT[206];
-			Link.l1 = DLG_TEXT[207];
+			if(PChar.sex == "woman")
+			{
+				Dialog.Text = DLG_TEXT[562];
+				Link.l1 = DLG_TEXT[563] + GetMyName(NPChar) + DLG_TEXT[564];
+			}
+			else
+			{
+				Dialog.Text = DLG_TEXT[204] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[205])]) + DLG_TEXT[206];
+				Link.l1 = DLG_TEXT[207];
+			}
 			Link.l1.go = "exit";
 			AddDialogExitQuest("prepare_to_battle_in_quest_redmond_tavern");
 		break;
@@ -743,9 +759,20 @@ void ProcessDialogEvent()
 		break;
 
 		case "CaptureGreenford":
-			Dialog.Text = DLG_TEXT[250] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[251])]) + DLG_TEXT[252];
-			Link.l1 = DLG_TEXT[253];
-			Link.l1.go = "CaptureGreenford_1";
+			if(PChar.sex == "woman")
+			{
+				Preprocessor_Add("Governor", Characters[GetCharacterIndex("Robert Christopher Silehard")].lastname); // KK
+				Preprocessor_Add("Researcher", GetMyLastName(CharacterFromID(DLG_TEXT[341])));
+				dialog.text = DLG_TEXT[565];
+				link.l1 = DLG_TEXT[566];
+				link.l1.go = "CaptureGreenford_2_danielle";
+			}
+			else
+			{
+				Dialog.Text = DLG_TEXT[250] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[251])]) + DLG_TEXT[252];
+				Link.l1 = DLG_TEXT[253];
+				Link.l1.go = "CaptureGreenford_1";
+			}
 		break;
 
 		case "CaptureGreenford_1":
@@ -766,6 +793,18 @@ void ProcessDialogEvent()
 			Link.l1.go = "CaptureGreenford_4";
 		break;
 
+		case "CaptureGreenford_2_danielle":
+			dialog.text = DLG_TEXT[567];
+			link.l1 = DLG_TEXT[568];
+			link.l1.go = "CaptureGreenford_3_danielle";
+		break;
+
+		case "CaptureGreenford_3_danielle":
+			dialog.text = DLG_TEXT[569] + GetMyName(PChar) + DLG_TEXT[570];
+			Link.l1 = DLG_TEXT[571];
+			Link.l1.go = "CaptureGreenford_5";
+		break;
+
 		case "CaptureGreenford_4":
 			Dialog.Text = DLG_TEXT[260];
 			Link.l1 = DLG_TEXT[261];
@@ -774,14 +813,15 @@ void ProcessDialogEvent()
 
 		case "CaptureGreenford_5":
 			NextDiag.TempNode = "GoToShip";
-			Dialog.Text = DLG_TEXT[262];
+			if(PChar.sex == "woman") Dialog.Text = DLG_TEXT[572];
+			else Dialog.Text = DLG_TEXT[262];
 			Link.l1 = DLG_TEXT[263];
 			Link.l1.go = "CaptureGreenford_exit";
 			Link.l2 = DLG_TEXT[264];
 			Link.l2.go = "We_Are_ready_exit";
 		break;
 
-		case "CaptureGreenford_5":
+		case "CaptureGreenford_6":
 			NextDiag.TempNode = "KickTheAss";
 			Dialog.Text = DLG_TEXT[265];
 			Link.l1 = DLG_TEXT[266];
@@ -1099,6 +1139,7 @@ void ProcessDialogEvent()
 
 		case "Split_exit":
 			DialogExit();
+			NextDiag.TempNode = "Clement_home";
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			AddDialogExitQuest("Danielle_split_exit");
 		break;
@@ -1106,9 +1147,16 @@ void ProcessDialogEvent()
 		case "Temple_exit":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-			NextDiag.TempNode = "Clement_home";
+//			NextDiag.TempNode = "Clement_home";
+			NextDiag.TempNode = "Why_are_we_waiting";
 
 			DoQuestCheckDelay("Story_ResearcherSpeaksonKhaelRoaBeach", 1);
+		break;
+
+		case "Why_are_we_waiting":
+			Dialog.text = DLG_TEXT[554] + GetMyName(PChar) + DLG_TEXT[555];
+			Link.l1 = DLG_TEXT[556] + GetMyName(NPChar) + DLG_TEXT[557];
+			Link.l1.go = "Exit";
 		break;
 
 		case "AfterGreenfordSiege_exit":
@@ -1216,8 +1264,16 @@ void ProcessDialogEvent()
 
 		case "Clement_home":
 			Dialog.Text = DLG_TEXT[456] + GetMyName(Pchar) + DLG_TEXT[457];
-			Link.l1 = DLG_TEXT[458];
-			Link.l1.go = "Clement_home2";			
+			if(checkquestattribute("Silehard_defeat", "prison") || checkquestattribute("Silehard_defeat", "dead"))
+			{
+				Link.l1 = DLG_TEXT[550];
+				Link.l1.go = "What_to_do_next";		
+			}
+			else
+			{
+				Link.l1 = DLG_TEXT[458];
+				Link.l1.go = "Clement_home2";	
+			}
 		break;
 		
 		case "Clement_home2":
@@ -1225,7 +1281,7 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[460];
 			Link.l1.go = "exit";
 			NextDiag.TempNode = "After_Final2";
-			AddDialogExitQuest("end_game2");			
+//			AddDialogExitQuest("end_game2");	// Now follows on from quest case "end_game"			
 		break;
 		
 		case "After_Final2":
@@ -1339,6 +1395,14 @@ void ProcessDialogEvent()
 		
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "What_to_do_next":
+			NextDiag.TempNode = "Hired";
+			Dialog.Text = DLG_TEXT[551] + GetMyName(PChar) + "?";
+			Link.l1 = DLG_TEXT[552] + GetMyName(NPChar) + DLG_TEXT[553];
+			AddDialogExitQuest("Story_Danielle_back_to_officer");
+			Link.l1.go = "exit";
 		break;
 		
 		case "Reward_for_Silehard":
@@ -1609,7 +1673,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[488];
 			Link.l1 = DLG_TEXT[463];
 			Link.l1.go = "Exit";
-			SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
+			SetSquadronCrewQuantityRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
 			ResetAllLengths(PChar);
 			PChar.articles = false;
 		break;
@@ -1618,7 +1682,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[489];
 			Link.l1 = DLG_TEXT[463];
 			Link.l1.go = "Exit";
-			SetSquadronCrewQuantityTotalRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
+			SetSquadronCrewQuantityRatio(PChar, 0.2 * (1 + makefloat(CalcCharacterSkill(PChar, SKILL_LEADERSHIP))/3.0));
 			ResetAllLengths(PChar);
 			PChar.articles = true;
 		break;

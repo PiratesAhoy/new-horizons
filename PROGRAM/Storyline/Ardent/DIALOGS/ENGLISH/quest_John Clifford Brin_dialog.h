@@ -59,7 +59,7 @@ string DLG_TEXT[79] = {
 "There's also the little matter of defeating the French invasion. Presumably that is worth something as well?",
 "Indeed so. The sum of 200000 gold coins should be suitable reward for such heroism.",
 "You were going to let #svillain# kill me, then steal my possessions! And what were you going to do to my wife?",
-"Nothing. It provoked #svillain# into fighting me, didn't it? And you're still alive, which you wouldn't be if I'd dropped my sword and let #spronoun# do as #spronoun# pleased.",
+"Nothing. It provoked #svillain# into fighting me, didn't it? And you're still alive, which you wouldn't be if I'd dropped my sword and let #spronoun2# do as #spronoun# pleased.",
 "So you say. Why should I trust you?",
 "Because I'm not trying to kill you and put the blame on #svillain#. Your wife is safe, your possessions are safe and you're safe.",
 "I suppose that is true.",

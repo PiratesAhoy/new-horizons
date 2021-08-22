@@ -1,4 +1,4 @@
-string DLG_TEXT[54] = {
+string DLG_TEXT[58] = {
 "Captain, captain! Please listen to me! I crave forgiveness, captain!",
 "Ransoming you sounds pretty good. ",
 "We shall put your word to the test. We have arrived at ",
@@ -53,5 +53,8 @@ string DLG_TEXT[54] = {
 "Mercy! What destiny have I been allotted by thy cruel machinations? You have my life in your hands!",
 "Well, that's more like it! Now we can discuss what to do with you.",
 "I have not decided yet. I'll let you know when I have made up my mind.",
-
+"Traitor! You promised that I would be well treated when I surrendered!",
+"I lied. Now, are you going to walk to the mast to be hanged, or do I need to chop off your legs and carry you?",
+"Did I? In that case, I'd better give you a chance. If you can outswim the sharks and make it to land, you can live. Good luck!", 
+"It will be hard on them, but my family can raise that amount. If you will release me, you will be paid what you ask.",
 };

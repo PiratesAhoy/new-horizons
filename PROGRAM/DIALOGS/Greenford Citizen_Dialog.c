@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 					Link.l3 = DLG_TEXT[170];
 					Link.l3.go = "religous_man";
 				}
-				if(!CheckAttribute(PChar,"quest.mysterious_plants"))
+				if(!CheckAttribute(PChar,"quest.plants"))
 				{
 					Link.l4 = DLG_TEXT[173];
 					Link.l4.go = "apothecary";

@@ -48,6 +48,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "main_line_blaze":
+			Preprocessor_Add("captain", GetMyFirstNames(CharacterFromID("Danielle"), false));
 			Dialog.snd = "voice\RAFA\RAFA003";
 			Dialog.Text = DLG_TEXT[7];
 			Link.l1 = DLG_TEXT[8];

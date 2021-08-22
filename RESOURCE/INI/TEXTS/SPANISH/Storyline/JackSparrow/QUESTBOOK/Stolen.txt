@@ -1,0 +1,12 @@
+title=¡Barco robado!
+text.t1=Ese maldito caballero de Malta, Jaoquin de Masse, ha robado mi #suncursed_ship#. No sé si volveré a ver sus velas alguna vez. 
+text.t2=Ese perro sarnoso de Barbossa se ha llevado mi barco, mi mapa y mi brújula. Ahora tengo que pensar en la forma de salir de esta isla.
+text.t3=Me he encontrado con un grupo de contrabandistas y me he prestado a conducir su barco hasta #sTortuga#, al norte de #sisland_Hispaniola#.
+text.t4=Cuando salía de la taberna, miré mi brújula y vi que estaba apuntando al barco de Annamaria. Estoy seguro de que puedo cogerlo prestado.
+text.t5=Al salir del puerto, mi brújula empezó a apuntar en la direcciñon de #sisland_Redmond# (después de apuntar a una botella de ron). Pondré rumbo a #sRedmond# para ver si allí puedo conseguir otro barco. Al menos, estaré un paso más cerca de recuperar mi #scursed_ship#...
+text.t6=Hemos llegado a #sTortuga#. Pasaré por la taberna para ver qué se cuece por aquí, y hacerme una idea del próximo paso a seguir.
+text.t7=¡Me han robado otro barco! Esta vez, después de llegar a #sTortuga#, al norte de #sisland_Hispaniola#, salí de la taberna a tiempo de ver cómo se laejaba navegando de la isla.
+text.t8=Vaya, ese es un barco interesante. Tal vez eche un vistazo, o quizás sería mejor comprobar primero si Henry el mendigo tiene algún consejo que darme.
+text.t9=He hablado con Henry y he decidido hablar con los soldados que hay en el muelle sobre los barcos que hay en el puerto.
+text.t10=He hablado con Henry y he decidido ir a ver al gobernador Weatherby en su residencia, para ver qué me puede ofrecer.
+text.t11=He hablado con Henry y he decidido renunciar a perseguir a mi #scursed_ship#, y seguir por mi cuenta.

@@ -67,8 +67,10 @@ void ProcessDialogEvent()
 				break;
 				Nationality = GetNationDescByType(sti(PChar.nation));
 			}
+			NPChar.quest.money = sti(PChar.money) - 1;
 			Preprocessor_Add("country", Nationality);
 			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false));
+			Preprocessor_Add("money", NPChar.quest.money);
 			dialog.text = DLG_TEXT[7];
 			link.l1 = DLG_TEXT[8];
 			link.l1.go = "begin_5";
@@ -78,7 +80,7 @@ void ProcessDialogEvent()
 
 		case "begin_5":
 			PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneyToCharacter(PChar, -999);
+			AddMoneyToCharacter(PChar, sti(NPChar.quest.money) * -1);
 			dialog.snd = "Voice\CLLA\CLLA004";
 			dialog.text = DLG_TEXT[9];
 			link.l1.go = "exit";
@@ -87,6 +89,7 @@ void ProcessDialogEvent()
 			break;
 
 		case "begin_6":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_IMPTITLE, false, false));
 			dialog.snd = "Voice\CLLA\CLLA004";
 			dialog.text = DLG_TEXT[3];
 			link.l1 = DLG_TEXT[4];

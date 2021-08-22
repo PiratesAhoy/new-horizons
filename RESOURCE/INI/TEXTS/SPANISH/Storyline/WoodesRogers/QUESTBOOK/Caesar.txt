@@ -1,0 +1,2 @@
+title=Caesar
+text.t1=A Negro. Member of Teach's crew. Was much liked and trusted by Teach.

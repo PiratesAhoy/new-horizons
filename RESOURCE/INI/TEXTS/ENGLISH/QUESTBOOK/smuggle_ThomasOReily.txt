@@ -1,3 +1,3 @@
 title=Side Quest - Thomas O'Reily the smuggler?
-text.t1= It seems this Thomas O'Reily character is doing all kinds of shady deals while the smugglers don't like it all. I should report to them I've seen him also dealing with natives. They might find that interesting.
+text.t1= It seems this Thomas O'Reily character is doing all kinds of shady deals, I suspect that the smugglers won't like that at all. I could report to them I've seen him also dealing with natives. They might find that interesting.
 text.t2= I reported to the smugglers what I knew about Thomas O'Reily. They thanked me for the information and told me they would take care of it.

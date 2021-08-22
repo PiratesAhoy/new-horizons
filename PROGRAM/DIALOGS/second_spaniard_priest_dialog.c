@@ -14,8 +14,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
-	if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-	else Preprocessor_Add("child", XI_ConvertString("child"));
+	if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+	else Preprocessor_Add("addr", XI_ConvertString("my child"));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -63,8 +63,6 @@ void ProcessDialogEvent()
 				AddDialogExitQuest("Story_Domingues_to_cave");
 				AddQuestRecord("ANIMISTS", 40);
 			}
-			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-			else Preprocessor_Add("child", XI_ConvertString("child"));
 			dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[9];
 			link.l1.go = "exit";
@@ -80,8 +78,6 @@ void ProcessDialogEvent()
 				AddDialogExitQuest("Story_Domingues_to_cave");
 				AddQuestRecord("ANIMISTS", 40);
 			}
-			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-			else Preprocessor_Add("child", XI_ConvertString("child"));
 			dialog.text = DLG_TEXT[10];
 			link.l1 = DLG_TEXT[11];
 			link.l1.go = "exit";

@@ -1,0 +1,93 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| FreePlay.c |=====}
+Julian{Джулиан}
+McAllister{МакАлистер}
+
+{=====| StartStoryline.c |=====}
+Robert{Роберт}
+Fletcher{Флэтчер}
+Edward{Эдвард}
+Pellew{Пеллью}
+Elbaron{Эльбарон}
+Caron{Карон}
+Taras{Тарас}
+Bulba{Бульба}
+Cardinal{Кардинал}
+Richelieu{Ришелье}
+Mazarin{Мазарини}
+Teague{Тиг}
+Sparrow{Спэрроу}
+Franзois{Франсуа}
+de Hadoque{де Хадоке}
+Koleniko{Коленико}
+Ragetti{Раджетти}
+
+{=====| quests_reaction.c |=====}
+Bartolomeu{Бартоломео}
+Portugues{Португальский}
+Guillaume{Гилм}
+Auger{Уга}
+
+{=====| Officers.c |=====}
+William{Уильям}
+Sullivan{Салливан}
+David{Дэвид}
+O'Hara{О'Хара}
+Brian{Брайан}
+Darcy{Дарси}
+Killian{Киллиан}
+Kildare{Килдар}
+Emily{Эмили}
+Butler{Батлер}
+Uriah{Урия}
+O'Bannon{О'Беннон}
+Angus{Ангус}
+Calhoun{Кэлхаун}
+Bush{Буш}
+
+{=====| TempQuest.c |=====}
+Bart{Барт}
+Renault{Рено}
+Enrique{Энрике}
+Padilla{Падилья}
+Celestino{Целестино}
+Villalobos{Виллалобос}
+Crewmember{Член команды}
+Spanish{Испанский}
+Commander{Командующий}
+Padre{Падре}
+Gerardo{Жерардо}
+Soldier{Солдат}
+Barbara{Барбара}
+Wellesley{Уэлсли}
+Matthews{Мэтьюс}
+Styles{Стайлс}
+Perrin{Перрин}
+Oldroyd{Олдройд}
+Marsh{Марш}
+Keene{Кин}
+Fernando{Фернандо}
+Suarez{Суарез}
+Elvira{Эльвира}
+Alonso{Алонсо}
+Madero{Мадеро}
+Arnaldo{Арнальдо}
+Chaparro{Чапарро}
+
+{=====| TempQuestEnemy.c |=====}
+Prison{Арестант}
+Guard{Стражник}
+Arnold{Арнольд}
+McGill{МакГилл}
+Smuggler{Контрабандист}
+Acre{Акр}
+Jourdain{Журден}
+Anjou{Анжу}
+Edam{Едам}
+De Cow{Де Коу}
+Abel{Абель}
+Barco{Барко}
+Renouart{Ренуар}
+Larrouse{Лярус}
+
+{=====| 63 characters |=====}

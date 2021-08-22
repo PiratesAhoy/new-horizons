@@ -1107,7 +1107,7 @@ void LocationInitCCCLocations(ref n)
 	//Models
 	//Always
 	Locations[n].models.always.city = "Church3";
-	Locations[n].models.always.locators = "Church3_l";
+	Locations[n].models.always.locators = "Church3_l_maltese";
 	Locations[n].models.always.window = "church3_w";
 	Locations[n].models.always.window.tech = "LocationWindows";
 	Locations[n].models.always.window.level = 50;
@@ -1131,6 +1131,12 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].reload.l2.go = "Greenford_M_crypt"; // KK
 	Locations[n].reload.l2.emerge = "reload1";	// ccc Nov05
 	Locations[n].reload.l2.autoreload = "1";
+	Locations[n].locators_radius.reload.reload2 = 0.7;	//JRH, to match the visible trapdoor
+
+	// JRH -->
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "hatch11";
+	// JRH <--
 
 	LAi_LocationFightDisable(&Locations[n], false);
 	Locations[n].island = "Oxbay"; // NK 04-08-29
@@ -1150,6 +1156,7 @@ void LocationInitCCCLocations(ref n)
 	//Always
 	Locations[n].models.always.locators = "lab2_l_ccc";
 	Locations[n].models.always.l1 = "lab2";
+	Locations[n].models.always.l2 = "hatch11D";		//JRH visible trapdoor from below
 	//Day
 	Locations[n].models.day.charactersPatch = "lab2_p";
 	//Night
@@ -1194,6 +1201,7 @@ void LocationInitCCCLocations(ref n)
 	Locations[n].items.randitem1 = "body";
 	Locations[n].items.randitem2 = "LongRifle_C";
 	Locations[n].items.randitem3 = "book_exorcist";
+	Locations[n].items.randitem4 = "jewelry9";
 	// PB <--
 
 	Locations[n].island = "Oxbay"; // NK 04-08-29  

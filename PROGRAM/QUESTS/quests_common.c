@@ -119,17 +119,38 @@ int GenerateNationTrade(int nation)
 {
 	int i = -1;
 	string friendlyNations = "";
+	bool has_town = false;
 	for(int j=0; j<NATIONS_QUANTITY; j++)
 	{
-		if (j != PIRATE)																			// PB: Any pirate town is fair game
+		if (j != PIRATE)											// PB: Any pirate town is fair game
 		{
-		//	if (GetNationRelation2MainCharacter(j) == RELATION_ENEMY)					continue;	// PB: You should never have to go to ports hostile to yourself
+		//	if (GetNationRelation2MainCharacter(j) == RELATION_ENEMY)			continue;	// PB: You should never have to go to ports hostile to yourself
 			if (GetNationRelation(nation, j) == RELATION_ENEMY && nation != PIRATE)		continue;	// PB: Nor towns that are hostile to the current location (unless it is pirate)
+
+			//GR: Don't trade with nations which have nowhere to trade!
+			i = 0;
+			has_town = false;
+			while (!has_town && i < TOWNS_QUANTITY)
+			{
+				if (CheckAttribute(Towns[i],"id") && GetAttribute(Towns[i],"skiptrade")!=true && CheckAttribute(Towns[i],"nation") && sti(Towns[i].nation)==j) has_town = true;
+				i++;
+			}
+			if (!has_town) continue;
+			//End of check for trading towns
 		}
 		string tmpNat = j;
 		friendlyNations = StoreString(friendlyNations,tmpNat);
 	}
+	trace("GenerateNationTrade: list of friendly nations = " + friendlyNations);
 	i = sti(GetRandSubString(friendlyNations));
+	if (nation != PIRATE && i == PIRATE)
+	{
+		trace("Nation: " + GetNationNameByType(nation) + ", trying to send to " + GetNationNameByType(i));
+		i = sti(GetRandSubString(friendlyNations));		// GR: Attempt to fix excessive amount of trade quests to Pirate stores.  If Pirates are chosen for a non-pirate nation, try once more.
+		trace("GenerateNationTrade: trying not to send " + GetNationDescByType(nation) + " trade to Pirates");
+		trace("friendlyNations = " + friendlyNations);
+		trace("Now sending to " + GetNationNameByType(i));
+	}
 
 	return i;
 }
@@ -255,10 +276,21 @@ string GenerateDestination()
 
 		friendlyTowns = StoreString(friendlyTowns,ctown.id);
 	}
-	if (friendlyTowns != "") {
+	if (friendlyTowns != "")
+	{
 		sdestination = GetRandSubString(friendlyTowns);
 		while (sdestination=="" || HasSubStr(sdestination,",") || GetIslandIDFromTown(sdestination)==GetIslandIDFromTown(GetCurrentTownId())) sdestination = GetRandSubString(friendlyTowns);
-	} else {
+
+		if (GetCurrentLocationNation() != PIRATE && GetTownNation(sdestination) == PIRATE)		//GR: if a pirate destination has been picked for a non-pirate source, try once more
+		{
+			sdestination = GetRandSubString(friendlyTowns);
+			while (sdestination=="" || HasSubStr(sdestination,",") || GetIslandIDFromTown(sdestination)==GetIslandIDFromTown(GetCurrentTownId())) sdestination = GetRandSubString(friendlyTowns);
+			trace("GenerateDestination: trying not to use Pirates as destination for " + GetNationNameByType(GetCurrentLocationNation()));
+			trace("Now sending to " + sdestination);
+		}
+	}
+	else
+	{
 		sdestination = DEFAULT_DESTINATION;
 	}
 //MAXIMUS <-[such functions must be universal (IMHO), if we are planning to make a real Caribbean in the future]-
@@ -783,12 +815,16 @@ string RandomCaptain(int iNation) // KK
 	}
 	else
 	{
-		switch(rand(3))
+		switch(rand(7))
 		{
 			case 0:  return "33_Piratess10";	break;
-			case 1:  return "9Td";				break;
-			case 2:  return "9CATa";			break;
+			case 1:  return "9Td";			break;
+			case 2:  return "9CATa";		break;
 			case 3:  return "girlpatch";		break;
+			case 4:  return "33_Affrica";		break;
+			case 5:  return "Beatrice";		break;
+			case 6:  return "Daniell1";		break;
+			case 7:  return "gipsygirl";		break;
 		}
 		return "33_Piratess10";
 	}
@@ -1232,12 +1268,28 @@ void CommonQuestComplete(string sQuestName)
 			StopCoastGuardCheck();
 			questbookname = "smuggle&number="+PChar.amount_smuggleruns;
 			CloseQuestHeader(questbookname);
-			Lai_QuestDelay("Made First Smuggling Report",0.0);
+
+			ref rIsland = GetIslandByIndex(GetCharacterCurrentIsland(PChar));
+			if(CheckAttribute(PChar,"quest.smuggling_guild.governor_smuggling") && CheckAttribute(rIsland, "id") && GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.island") == rIsland.id && GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling") != "report_made" && GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling") != "report_handed_in")
+			{
+				Lai_QuestDelay("Made First Smuggling Report",0.0);
+			}
 			ChangeCharacterAddressGroup(CharacterFromID("Rand_Smug01"), "None", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("Rand_Smug02"), "None", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("Rand_Smug03"), "None", "", "");
-			RemoveGeometryFromLocation(PChar.Quest.SelectedSmugglingLocation, "smg"); // PB: Moved here
+			RemoveGeometryFromLocation(PChar.Quest.SelectedSmugglingLocation, "smg");	// PB: Moved here
 			DeleteAttribute(pchar,"quest.smuggling_guild.governor_quest.usedpaper");
+
+			PChar.quest.delete_smugglingbook.win_condition.l1 = "Timer";			// Repeatedly smuggling leaves your questbook full of completed smuggling reports
+			PChar.quest.delete_smugglingbook.win_condition.l1.date.day   = GetAddingDataDay  (0, 0, 2);
+			PChar.quest.delete_smugglingbook.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 2);
+			PChar.quest.delete_smugglingbook.win_condition.l1.date.year  = GetAddingDataYear (0, 0, 2);
+			PChar.quest.delete_smugglingbook.win_condition = "delete_smugglingbook";
+		break;
+
+		case "delete_smugglingbook":
+			questbookname = "smuggle&number="+PChar.amount_smuggleruns;
+			DeleteQuestHeader(questbookname);
 		break;
 
 		case "Rand_ContrabandInterruption":
@@ -1345,12 +1397,15 @@ void CommonQuestComplete(string sQuestName)
 		break;
 
 		case "Opium_set_first_ambush":
+			if(DEBUG_SMUGGLING>2)trace("OPIUM SMUGGLING disabled due to bugs");
+/*
 			if(DEBUG_SMUGGLING>2)trace("OPIUM SMUGGLING set first ambush");
 			pchar.quest.opium_smugglingset.win_condition.l1 = "ExitFromLocation";
 			pchar.quest.opium_smugglingset.win_condition.l1.location = pchar.location;
 			pchar.quest.opium_smugglingset.win_condition = "Opium_Ambush";
 			Lai_QuestDelay("Opium Smuggle Got Opium",0.0);
 			Lai_QuestDelay("Smugglers Opium Discovery",1.0);
+*/
 		break;
 
 		case "Opium_Ambush":
@@ -1902,6 +1957,27 @@ void CommonQuestComplete(string sQuestName)
 			}
 		break;
 
+//-----------------------------------------Lady in bedroom---------------------------------------------
+
+		case "LandEnc_ladykiller":	// Grey Roger: you just killed the lady in the bedroom of a mansion, now face the consequences
+			if(CheckAttribute(PChar, "quest.bedroomlady") && sti(GetCharacterIndex(PChar.quest.bedroomlady)) != -1)
+			{			// Check that she still exists - fix for bug whereby you're penalised for killing her because she disappeared
+				ChangeCharacterReputation(PChar, -10);
+				PChar.quest.ladykiller_countdown = 5;
+				PChar.quest.LandEnc_ladykiller_revenge.win_condition.l1 = "ExitFromLocation";
+				PChar.quest.LandEnc_ladykiller_revenge.win_condition.l1.location = PChar.location;
+				PChar.quest.LandEnc_ladykiller_revenge.win_condition = "LandEnc_ladykiller_revenge";
+			}
+		break;
+
+		case "LandEnc_ladykiller_revenge":
+			LAi_CreateFantomGroup("Rich_Citizens", 4, LAI_GROUP_ENEMY, LAI_GROUP_FRIEND, ALL_NATIONS, "", 2, true, "", "", "Avengers", "reload1");
+		break;
+
+		case "LandEnc_cancel_ladykiller":
+			PChar.quest.LandEnc_ladykiller.over = "yes";
+		break;
+
 //------------------------------------------OFFICER----------------------------------------------------
 
 		case "LandEnc Talk to player about hireing":
@@ -2094,7 +2170,7 @@ void CommonQuestComplete(string sQuestName)
 		case "NK_FightMonstersEvent":
 			/*LAi_group_FightGroups(LAI_GROUP_MONSTERS, PLAYER_GROUP, false);
 
-			for(int i = 0; i < 32; i++)
+			for(int i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
 			{
 				chr = &Characters[LOC_FANTOM_CHARACTERS + i];
 				if(!CheckAttribute(chr,"chr_ai.group")) continue;
@@ -2244,8 +2320,9 @@ Cost for level 50 is 55,374,000
 
 		case "prepare_for_convoy_quest_2":
 			LAi_SetPlayerType(pchar);
-			LAi_ActorDialog(characterFromID("Quest trader"), pchar, "", 10.0, 1.0);
+			characters[GetCharacterIndex("quest trader")].Dialog.Filename = "anacleto_dialog.c";
 			characters[GetCharacterIndex("quest trader")].dialog.currentnode = "prepare_convoy_quest";
+			LAi_ActorDialog(characterFromID("Quest trader"), pchar, "", 10.0, 1.0);
 		break;
 
 		case "convoy_refused":
@@ -2380,7 +2457,10 @@ Cost for level 50 is 55,374,000
 			// PB: Possibility for Enemy at Destination -->
 			if(rand(1) == 0) // Fixed 50% chance
 			{
-				GenerateQuestShip("Convoy Pirate", GetServedNation()); // PB: Use Generic Function
+				if(CheckAttribute(characterFromID("quest trader"), "nation")) iTradeNation = sti(characters[GetCharacterIndex("quest trader")].nation);
+				else iTradeNation = GetServedNation());
+//				GenerateQuestShip("Convoy Pirate", GetServedNation());	// PB: Use Generic Function
+				GenerateQuestShip("Convoy Pirate", iTradeNation);	// GR: make the enemy hostile to the trader
 				Group_CreateGroup("Convoy_Pirate");
 				Group_AddCharacter("Convoy_Pirate", "Convoy Pirate");
 				Group_SetGroupCommander("Convoy_Pirate", "Convoy Pirate");
@@ -2882,7 +2962,7 @@ Cost for level 50 is 55,374,000
 
 		case "to_the_room_for_see_girl_2":
 			LAi_SetPlayerType(pchar);
-			if(!AlwaysRunToggle)
+/*			if(!AlwaysRunToggle)	// GR: Why force the player into running mode?
 			{
 				AlwaysRunToggle = true;
 				BeginChangeCharacterActions(GetMainCharacter());
@@ -2890,6 +2970,7 @@ Cost for level 50 is 55,374,000
 				SetDefaultFight(GetMainCharacter());
 				EndChangeCharacterActions(GetMainCharacter());
 			}
+*/
 			LAi_ClearIndexedLocators(Pchar.location, "goto");
 			LAi_SetStayType(characterFromID("Virginie d'Espivant"));
 // changed by MAXIMUS 18.11.2006 [for nice show of this process] <--
@@ -2908,6 +2989,7 @@ Cost for level 50 is 55,374,000
 		break;
 
 		case "kill_man_in_upstairs_for_girl":
+			Characters[GetCharacterIndex(PChar.quest.friend_in_tavern)].location = "none"; // GR: remove gambler so he doesn't appear if you rent the same room
 			LAi_LocationFightDisable(&Locations[FindLocation(pchar.location)], 0);
 			LAi_SetFightMode(pchar, false);
 			pchar.quest.gambling_with_girl = "gambled";
@@ -3648,7 +3730,8 @@ Cost for level 50 is 55,374,000
 			string loc;
 			float dist;
 			GetNearLocator( "goto", &dist, &loc, 0);
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, SelectSoldierModelbyLocationNation("", "officer"), "goto", loc);
+			if (PChar.sex == "man") sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, SelectSoldierModelbyLocationNation("", "officer"), "goto", loc);
+			else sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, GetRandomModelForTypeSex(-1, "Rich_Citizens", "woman"), "goto", loc);
 			sld.id = "Suitor";
 			sld.nation = Characters[GetCharacterIndex(PChar.marriageduel.MRid)].nation;
 			LAi_SetActorType(CharacterFromID("Suitor"));
@@ -3702,7 +3785,7 @@ Cost for level 50 is 55,374,000
 			//int start = 0; if(CheckAttribute(wdmgrid,"lastupdate.day")) { start = sti(wdmgrid.lastupdate.start)+1; }
 			for(dn = 0; dn < daysn-1; dn++)
 			{
-				//trace("Gauging: Start day " + dn);
+				trace("Gauging: Start day " + dn);
 				AddDataToCurrent(0, 0, 1, true); //Changed to true so everything is updated
 				ReloadProgressUpdate();
 				//DailyCrewUpdate();
@@ -4510,6 +4593,11 @@ Cost for level 50 is 55,374,000
 			}
 		break;
 
+		// GR: Mary Wood in Tortuga tavern reverts to normal AI group when you leave tavern so she doesn't keep attacking
+		case "Reset_Mary_Wood":
+			LAi_group_MoveCharacter(CharacterFromID("Mary Wood"), "TORTUGA_CITIZENS");
+		break;
+
 		// PB: Shotgun Easter Egg -->
 		case "clint_eastwood":
 			LAi_SetActorType(CharacterFromID("Clint Eastwood"));
@@ -4549,6 +4637,11 @@ Cost for level 50 is 55,374,000
 			PChar.quest.relation_tutorial = 1;
 			PChar.quest.relationbook_timeout.over = "yes";
 			PChar.Got_Relation_Book = true;
+			PChar.quest.read_relation_book_timeout.win_condition.l1 = "Timer";
+			PChar.quest.read_relation_book_timeout.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
+			PChar.quest.read_relation_book_timeout.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
+			PChar.quest.read_relation_book_timeout.win_condition.l1.date.year = GetAddingDataYear(0, 1, 0);
+			PChar.quest.read_relation_book_timeout.win_condition = "Read_Relation_Book";
 		break;
 
 		case "Read_Relation_Book":
@@ -5021,6 +5114,310 @@ Cost for level 50 is 55,374,000
 			LAi_ActorAttack(CharacterFromID("CB21"), Pchar, "");
 		break;
 // <-- JRH
+
+// JRH: Cartagena New_cloister -->
+	//----------------------------------------------------------------------------------------------
+		case "cloister_start":
+			LAi_QuestDelay("cloister_distillery", 0.1);
+			LAi_QuestDelay("cloister_F1_check", 0.1);
+			LAi_QuestDelay("cloister_F2_check", 0.1);
+			LAi_QuestDelay("cloister_F3_check", 0.1);
+			LAi_QuestDelay("cloister_F4_check", 0.1);
+
+			pchar.quest.cloister_fountain.win_condition.l1 = "location";
+			pchar.quest.cloister_fountain.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_fountain.win_condition = "cloister_fountain";
+		
+			pchar.quest.cloister_stair1_go.win_condition.l1 = "locator";
+			pchar.quest.cloister_stair1_go.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_stair1_go.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_stair1_go.win_condition.l1.locator = "stair1";
+			pchar.quest.cloister_stair1_go.win_condition = "cloister_stair1_go";
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "cloister_stair1":
+			pchar.quest.cloister_stair1_go.win_condition.l1 = "locator";
+			pchar.quest.cloister_stair1_go.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_stair1_go.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_stair1_go.win_condition.l1.locator = "stair1";
+			pchar.quest.cloister_stair1_go.win_condition = "cloister_stair1_go";
+		break;
+
+		case "cloister_stair1_go":
+			if(CheckAttribute(pchar,"cloister_stair1") && pchar.cloister_stair1 == "down_ready")
+			{
+				pchar.cloister_stair1 = "up_ready";
+				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st1_do");
+			}
+			else 
+			{
+				pchar.cloister_stair1 = "down_ready";
+				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st1_up");
+
+				pchar.quest.cloister_stair2A_go.win_condition.l1 = "locator";
+				pchar.quest.cloister_stair2A_go.win_condition.l1.location = "new_cloister_inside";
+				pchar.quest.cloister_stair2A_go.win_condition.l1.locator_group = "quest";
+				pchar.quest.cloister_stair2A_go.win_condition.l1.locator = "stair2A";
+				pchar.quest.cloister_stair2A_go.win_condition = "cloister_stair2A_go";
+
+				pchar.quest.cloister_stair2B_go.win_condition.l1 = "locator";
+				pchar.quest.cloister_stair2B_go.win_condition.l1.location = "new_cloister_inside";
+				pchar.quest.cloister_stair2B_go.win_condition.l1.locator_group = "quest";
+				pchar.quest.cloister_stair2B_go.win_condition.l1.locator = "stair2B";
+				pchar.quest.cloister_stair2B_go.win_condition = "cloister_stair2B_go";
+			}
+
+			LAi_QuestDelay("cloister_stair1", 0.5);
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "cloister_stair2":
+			pchar.quest.cloister_stair2A_go.win_condition.l1 = "locator";
+			pchar.quest.cloister_stair2A_go.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_stair2A_go.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_stair2A_go.win_condition.l1.locator = "stair2A";
+			pchar.quest.cloister_stair2A_go.win_condition = "cloister_stair2A_go";
+
+			pchar.quest.cloister_stair2B_go.win_condition.l1 = "locator";
+			pchar.quest.cloister_stair2B_go.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_stair2B_go.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_stair2B_go.win_condition.l1.locator = "stair2B";
+			pchar.quest.cloister_stair2B_go.win_condition = "cloister_stair2B_go";
+		break;
+			
+		case "cloister_stair2A_go":
+			if(CheckAttribute(pchar,"cloister_stair2") && pchar.cloister_stair2 == "down_ready")
+			{
+				pchar.cloister_stair2 = "up_ready";
+				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st2A_do");
+			}
+			else 
+			{
+				pchar.cloister_stair2 = "down_ready";
+				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st2A_up");
+
+				pchar.quest.cloister_stair3_go.win_condition.l1 = "locator";
+				pchar.quest.cloister_stair3_go.win_condition.l1.location = "new_cloister_inside";
+				pchar.quest.cloister_stair3_go.win_condition.l1.locator_group = "quest";
+				pchar.quest.cloister_stair3_go.win_condition.l1.locator = "stair3";
+				pchar.quest.cloister_stair3_go.win_condition = "cloister_stair3_go";
+			}
+
+			LAi_QuestDelay("cloister_stair2", 0.5);
+		break;
+
+		case "cloister_stair2B_go":
+			if(CheckAttribute(pchar,"cloister_stair2") && pchar.cloister_stair2 == "down_ready")
+			{
+				pchar.cloister_stair2 = "up_ready";
+				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st2B_do");
+			}
+			else 
+			{
+				pchar.cloister_stair2 = "down_ready";
+				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st2B_up");
+
+				pchar.quest.cloister_stair3_go.win_condition.l1 = "locator";
+				pchar.quest.cloister_stair3_go.win_condition.l1.location = "new_cloister_inside";
+				pchar.quest.cloister_stair3_go.win_condition.l1.locator_group = "quest";
+				pchar.quest.cloister_stair3_go.win_condition.l1.locator = "stair3";
+				pchar.quest.cloister_stair3_go.win_condition = "cloister_stair3_go";
+			}
+
+			LAi_QuestDelay("cloister_stair2", 0.5);
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "cloister_stair3_go":
+			ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st3_up");
+
+			pchar.quest.cloister_stair4_go.win_condition.l1 = "locator";
+			pchar.quest.cloister_stair4_go.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_stair4_go.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_stair4_go.win_condition.l1.locator = "stair4";
+			pchar.quest.cloister_stair4_go.win_condition = "cloister_stair4_go";
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "cloister_stair4_go":
+			ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st4_do");
+
+			pchar.quest.cloister_stair3_go.win_condition.l1 = "locator";
+			pchar.quest.cloister_stair3_go.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_stair3_go.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_stair3_go.win_condition.l1.locator = "stair3";
+			pchar.quest.cloister_stair3_go.win_condition = "cloister_stair3_go";
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "cloister_fountain":
+			if(Pchar.location == "new_cloister_inside")
+			{
+				Play3DSound("NATURE\fountain.wav", 2.4, 1.5, -15.4);
+				Play3DSound("NATURE\fountain.wav", 2.4, 1.5, -15.4);
+
+				LAi_QuestDelay("cloister_fountain_1", 0.4);
+				LAi_QuestDelay("cloister_fountain", 2.8);
+			}
+			else
+			{
+				//no fountain sound please
+
+				pchar.quest.cloister_fountain.win_condition.l1 = "location";
+				pchar.quest.cloister_fountain.win_condition.l1.location = "new_cloister_inside";
+				pchar.quest.cloister_fountain.win_condition = "cloister_fountain";
+			}
+		break;
+
+		case "cloister_fountain_1":
+			Play3DSound("NATURE\fountain.wav", 2.4, 1.5, -15.4);
+			Play3DSound("NATURE\fountain.wav", 2.4, 1.5, -15.4);
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "cloister_distillery":
+			if(Pchar.location == "new_cloister_garden")
+			{
+				if(IsDay())
+				{
+					Play3DSound("INTERFACE\bubbles2.wav", -42.0, 1.5, -87.0);
+			
+					LAi_QuestDelay("cloister_distillery_1", 0.4);
+				}
+
+				LAi_QuestDelay("cloister_distillery", 5.0);
+			}
+			else
+			{
+				//no distillery sound please
+
+				pchar.quest.cloister_distillery.win_condition.l1 = "location";
+				pchar.quest.cloister_distillery.win_condition.l1.location = "new_cloister_garden";
+				pchar.quest.cloister_distillery.win_condition = "cloister_distillery";
+			}
+		break;
+
+		case "cloister_distillery_1":
+			Play3DSound("INTERFACE\bubbles2.wav", -42.0, 1.5, -87.0);
+		break;
+	//----------------------------------------------------------------------------------------------
+		case "cloister_F1_check":
+			LAi_SetPlayerType(Pchar);
+
+			pchar.quest.cloister_F1_back.win_condition.l1 = "locator";
+			pchar.quest.cloister_F1_back.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_F1_back.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_F1_back.win_condition.l1.locator = "F1";
+			pchar.quest.cloister_F1_back.win_condition = "cloister_F1_back";
+		break;
+		
+		case "cloister_F1_back":
+			LAi_SetStayType(Pchar);
+			ChangeCharacterAddressGroup(Pchar, "new_cloister_inside", "goto", "F1_back");
+
+			LAi_QuestDelay("cloister_F1_check", 0.2);
+		break;
+
+		case "cloister_F2_check":
+			LAi_SetPlayerType(Pchar);
+
+			pchar.quest.cloister_F2_back.win_condition.l1 = "locator";
+			pchar.quest.cloister_F2_back.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_F2_back.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_F2_back.win_condition.l1.locator = "F2";
+			pchar.quest.cloister_F2_back.win_condition = "cloister_F2_back";
+		break;
+		
+		case "cloister_F2_back":
+			LAi_SetStayType(Pchar);
+			ChangeCharacterAddressGroup(Pchar, "new_cloister_inside", "goto", "F2_back");
+
+			LAi_QuestDelay("cloister_F2_check", 0.2);
+		break;
+
+		case "cloister_F3_check":
+			LAi_SetPlayerType(Pchar);
+
+			pchar.quest.cloister_F3_back.win_condition.l1 = "locator";
+			pchar.quest.cloister_F3_back.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_F3_back.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_F3_back.win_condition.l1.locator = "F3";
+			pchar.quest.cloister_F3_back.win_condition = "cloister_F3_back";
+		break;
+		
+		case "cloister_F3_back":
+			LAi_SetStayType(Pchar);
+			ChangeCharacterAddressGroup(Pchar, "new_cloister_inside", "goto", "F3_back");
+
+			LAi_QuestDelay("cloister_F3_check", 0.2);
+		break;
+
+		case "cloister_F4_check":
+			LAi_SetPlayerType(Pchar);
+
+			pchar.quest.cloister_F4_back.win_condition.l1 = "locator";
+			pchar.quest.cloister_F4_back.win_condition.l1.location = "new_cloister_inside";
+			pchar.quest.cloister_F4_back.win_condition.l1.locator_group = "quest";
+			pchar.quest.cloister_F4_back.win_condition.l1.locator = "F4";
+			pchar.quest.cloister_F4_back.win_condition = "cloister_F4_back";
+		break;
+		
+		case "cloister_F4_back":
+			LAi_SetStayType(Pchar);
+			ChangeCharacterAddressGroup(Pchar, "new_cloister_inside", "goto", "F4_back");
+
+			LAi_QuestDelay("cloister_F4_check", 0.2);
+		break;
+	//----------------------------------------------------------------------------------------------
+// <-- JRH: Cartagena New_cloister
+
+// GR: Easter egg for Rheims' house because guards are always there. Triggered by dialog with one of them. -->
+		case "Rheims_house_setup":
+			PChar.quest.rheims_house.done = true;
+			Locations[FindLocation("Rheims_house_in_smugglers")].vcskip = true;
+			Locations[FindLocation("Rheims_house_in_smugglers")].reload.l1.disable = 1;
+			LAi_SetFightMode(PChar, false);
+			LAi_LocationFightDisable(&Locations[FindLocation("Rheims_house_in_smugglers")], true);
+			PChar.quest.Rheims_house_window_setup.win_condition.l1 = "locator";
+			PChar.quest.Rheims_house_window_setup.win_condition.l1.location = "Smugglers_Lair";
+			PChar.quest.Rheims_house_window_setup.win_condition.l1.locator_group = "reload";
+			PChar.quest.Rheims_house_window_setup.win_condition.l1.locator = "window";
+			PChar.quest.Rheims_house_window_setup.win_condition.l2 = "Time";
+			PChar.quest.Rheims_house_window_setup.win_condition.l2.time = DAY_TIME_NIGHT;
+			PChar.quest.Rheims_house_window_setup.win_condition = "Rheims_house_window_setup";
+		break;
+
+		case "Rheims_house_window_setup":
+			PChar.quest.rheims_house.current_year = GetDataYear();
+			SetCurrentDate(GetDataDay(), GetDataMonth(), 1750);
+			DoQuestReloadToLocation("Rheims_house_in_smugglers", "goto", "goto2", "Rheims_house_inside");
+		break;
+
+		case "Rheims_house_inside":
+			Locations[FindLocation("Rheims_house_in_smugglers")].type = "shop";	// Temporarily turn Rheims' house into "shop" type to prevent alert if you loot a chest
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "blaze", "reload", "reload1");
+			sld.id = "Fake_Nathaniel";
+			sld.old.name = "Nathaniel";
+			sld.old.lastname = "Hawk";
+			sld.name 	= TranslateString("","Nathaniel");
+			sld.lastname 	= TranslateString("","Hawk");
+			sld.Dialog.Filename = "Evaristo Filho_dialog.c";
+			sld.dialog.CurrentNode = "Nathaniel_surprise";
+			LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld,PChar,"",5.0,5.0);
+		break;
+
+		case "Rheims_exit_setup":
+			LAi_SetCitizenType(CharacterFromID("Fake_Nathaniel"));
+			PChar.quest.Rheims_exit.win_condition.l1 = "locator";
+			PChar.quest.Rheims_exit.win_condition.l1.location = "Rheims_house_in_smugglers";
+			PChar.quest.Rheims_exit.win_condition.l1.locator_group = "reload";
+			PChar.quest.Rheims_exit.win_condition.l1.locator = "reload1";
+			PChar.quest.Rheims_exit.win_condition = "Rheims_exit";
+		break;
+
+		case "Rheims_exit":
+			Locations[FindLocation("Rheims_house_in_smugglers")].type = "house";
+			SetCurrentDate(GetDataDay(), GetDataMonth(), sti(PChar.quest.rheims_house.current_year));
+			DoQuestReloadToLocation("Smugglers_Lair", "reload", "reload10", "_");
+		break;
+// <<-- GR: End of Rheims House Easter egg
 
 		PChar.questnotfound = true; // PB: Testing
 	}
@@ -5558,6 +5955,81 @@ void back_bax()
 
 //---------------------------------------------------------------------------
 
+#event_handler("witcher_steel_on_hip", "hip_witcher_steel");
+void hip_witcher_steel()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,BLADE_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	if(IsEquipCharacterByItem(attack, "witcher_steel-2")) {attack.bladeID = "witcher_steel-2"}
+	if(IsEquipCharacterByItem(attack, "witcher_steel-1")) {attack.bladeID = "witcher_steel-1"}
+	if(IsEquipCharacterByItem(attack, "witcher_steel")) {attack.bladeID = "witcher_steel"}
+	if(IsEquipCharacterByItem(attack, "witcher_steel+1")) {attack.bladeID = "witcher_steel+1"}
+	if(IsEquipCharacterByItem(attack, "witcher_steel+2")) {attack.bladeID = "witcher_steel+2"}
+	if(IsEquipCharacterByItem(attack, "witcher_steel+3")) {attack.bladeID = "witcher_steel+3"}
+
+	weapon.model = "witcher_steel";
+	RemoveCharacterEquip(attack, BLADE_ITEM_TYPE );
+
+	if(CheckAttribute(attack,"bladeID"))
+	{
+		switch(attack.bladeID)
+		{
+			case "witcher_steel-2": EquipCharacterByItem(attack, "witcher_steel-2"); break;
+			case "witcher_steel-1": EquipCharacterByItem(attack, "witcher_steel-1"); break;
+			case "witcher_steel": EquipCharacterByItem(attack, "witcher_steel"); break;
+			case "witcher_steel+1": EquipCharacterByItem(attack, "witcher_steel+1"); break;
+			case "witcher_steel+2": EquipCharacterByItem(attack, "witcher_steel+2"); break;
+			case "witcher_steel+3": EquipCharacterByItem(attack, "witcher_steel+3"); break;
+		}
+	}
+
+	if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("PEOPLE\clothes1.wav");
+}
+
+#event_handler("witcher_steel_on_back", "back_witcher_steel");
+void back_witcher_steel()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,BLADE_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	if(weapon.model == "witcher_steel")
+	{
+		if(IsEquipCharacterByItem(attack, "witcher_steel-2")) {attack.bladeID = "witcher_steel-2"}
+		if(IsEquipCharacterByItem(attack, "witcher_steel-1")) {attack.bladeID = "witcher_steel-1"}
+		if(IsEquipCharacterByItem(attack, "witcher_steel")) {attack.bladeID = "witcher_steel"}
+		if(IsEquipCharacterByItem(attack, "witcher_steel+1")) {attack.bladeID = "witcher_steel+1"}
+		if(IsEquipCharacterByItem(attack, "witcher_steel+2")) {attack.bladeID = "witcher_steel+2"}
+		if(IsEquipCharacterByItem(attack, "witcher_steel+3")) {attack.bladeID = "witcher_steel+3"}
+
+		weapon.model = "witcher_steel_back";
+		RemoveCharacterEquip(attack, BLADE_ITEM_TYPE );
+	
+		if(CheckAttribute(attack,"bladeID"))
+		{
+			switch(attack.bladeID)
+			{
+				case "witcher_steel-2": EquipCharacterByItem(attack, "witcher_steel-2"); break;
+				case "witcher_steel-1": EquipCharacterByItem(attack, "witcher_steel-1"); break;
+				case "witcher_steel": EquipCharacterByItem(attack, "witcher_steel"); break;
+				case "witcher_steel+1": EquipCharacterByItem(attack, "witcher_steel+1"); break;
+				case "witcher_steel+2": EquipCharacterByItem(attack, "witcher_steel+2"); break;
+				case "witcher_steel+3": EquipCharacterByItem(attack, "witcher_steel+3"); break;
+			}
+		}
+
+		if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("PEOPLE\clothes1.wav");
+	}
+}
+
+//---------------------------------------------------------------------------
+
 #event_handler("mguns_reset_check", "reset_check_mguns");
 void reset_check_mguns()
 {
@@ -5572,8 +6044,13 @@ void reset_check_mguns()
 		if (index >= 0)
 		{
 			makeref(tmpChr, Characters[index]);
-
+		
 			aref weapon;
+
+			string weaponID2 = GetCharacterEquipByGroup(tmpChr,BLADE_ITEM_TYPE);
+			aref weapon2;
+			Items_FindItem(weaponID2, &weapon2);			
+
 			if (!LAi_IsDead(tmpChr) && !LAi_IsFightMode(tmpChr))
 			{
 				GunCurCharge = LAi_GetCharacterRelCharge(tmpChr); // Levis
@@ -5596,7 +6073,34 @@ void reset_check_mguns()
 					weapon.model = "battleax_back";
 					EquipCharacterByItem(tmpChr, "battleax");
 				}
+			
+				if(IsEquipCharacterByItem(tmpChr, "witcher_steel-2") || IsEquipCharacterByItem(tmpChr, "witcher_steel-1") 
+				|| IsEquipCharacterByItem(tmpChr, "witcher_steel") || IsEquipCharacterByItem(tmpChr, "witcher_steel+1") 
+				|| IsEquipCharacterByItem(tmpChr, "witcher_steel+2") || IsEquipCharacterByItem(tmpChr, "witcher_steel+3"))
+				{
+					weapon2.model = "witcher_steel_back";
 
+					if(IsEquipCharacterByItem(tmpChr, "witcher_steel-2")) {tmpChr.bladeID = "witcher_steel-2"}
+					if(IsEquipCharacterByItem(tmpChr, "witcher_steel-1")) {tmpChr.bladeID = "witcher_steel-1"}
+					if(IsEquipCharacterByItem(tmpChr, "witcher_steel")) {tmpChr.bladeID = "witcher_steel"}
+					if(IsEquipCharacterByItem(tmpChr, "witcher_steel+1")) {tmpChr.bladeID = "witcher_steel+1"}
+					if(IsEquipCharacterByItem(tmpChr, "witcher_steel+2")) {tmpChr.bladeID = "witcher_steel+2"}
+					if(IsEquipCharacterByItem(tmpChr, "witcher_steel+3")) {tmpChr.bladeID = "witcher_steel+3"}
+
+					if(CheckAttribute(tmpChr,"bladeID"))
+					{
+						switch(tmpChr.bladeID)
+						{
+							case "witcher_steel-2": EquipCharacterByItem(tmpChr, "witcher_steel-2"); break;
+							case "witcher_steel-1": EquipCharacterByItem(tmpChr, "witcher_steel-1"); break;
+							case "witcher_steel": EquipCharacterByItem(tmpChr, "witcher_steel"); break;
+							case "witcher_steel+1": EquipCharacterByItem(tmpChr, "witcher_steel+1"); break;
+							case "witcher_steel+2": EquipCharacterByItem(tmpChr, "witcher_steel+2"); break;
+							case "witcher_steel+3": EquipCharacterByItem(tmpChr, "witcher_steel+3"); break;
+						}
+					}
+				}
+			
 				if(IsEquipCharacterByItem(tmpChr, "blademketK"))
 				{
 					RemoveCharacterEquip(tmpChr, BLADE_ITEM_TYPE );

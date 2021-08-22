@@ -1,0 +1,115 @@
+
+sea_Cancel {Cancelar}
+sea_Moor {Fondear}
+sea_Port {Puerto}
+sea_Fort {Fuerte}
+sea_Shore {Costa}
+sea_SailTo {Navegar hacia}
+sea_Board {Abordar}
+sea_LandTroops {Desembarcar tropas}
+sea_Map {Mapa}
+sea_Attack {Atacar}
+sea_Defend {Defender}
+sea_SailAway {Alejarse}
+sea_HeaveToDrift {Ponerse a palo seco}
+sea_Transfer {Transferir}
+sea_Charge {Recargar}
+sea_Speed {Velas}
+sea_CCommand {Dar orden}
+sea_Ability {Usar habilidad}
+sea_ImmediateDeath {¡Destruir!}
+sea_HoistFlag {Izar bandera}
+sea_EnterCabin {Cámara del capitan}
+sea_EnterDeck {Cubierta del barco}
+sea_EnterShip {Cubierta del #sshipname#}
+sea_EnterSeadogs {Alojamientos de la tripulación}
+sea_EnterShipDeck {Cubierta del barco}
+sea_EnterMainCannonsDeck {Cubierta de batería pinicpal}
+sea_EnterUpperCannonsDeck {Cubierta de batería superior}
+sea_EnterLowerCannonsDeck {Cubierta de batería inferior}
+sea_EnterHold {Bodega de carga}
+sea_EnterHold1 {1ª bodega de carga}
+sea_EnterHold2 {2ª bodega de carga}
+sea_LowerSails {Arriar velas}
+sea_BattleSails {Velas de combate}
+sea_FullSails {A toda vela}
+sea_FCoHS_Hail {Llamar al barco}
+sea_FCoHS_Contact {Visitar barco}
+sea_KrakenAttack {Convocar al Kraken}
+sea_SubmergeDutchman {Sumergirse/Emerger}
+sea_PearlSweeps {Sacar los remos}
+sea_QARSword {Acelerón}
+sea_TritonAttack {Ataque del aparejo}
+sea_NeptuneTrident {Tridente de Neptuno}
+
+sea_EnglishFlag {Inglaterra}
+sea_SpainFlag {España}
+sea_PortugalFlag {Portugal}
+sea_FranceFlag {Francia}
+sea_HollandFlag {Holanda}
+sea_Flags {Banderas}
+sea_Explosion {¡Explosión!}
+
+land_ItemsDead {Saquear cadáver}
+land_FastReload {Viaje rápido}
+land_ItemsUse {Usar objeto}
+land_DialogStart {Hablar}
+land_ItemsChange {Intercambiar}
+land_TakeItem {Coger objeto}
+land_PlaceItem {Dejar objeto}
+land_OutDoor {Abrir}
+land_UseBox {Abrir}
+land_ActivateRush {Embestida}
+land_ExitDeck {Mar}
+land_Look {Mirar}
+land_Back {Atrás}
+land_EnterDeck {Cubierta del barco}
+land_EnterShip {Cubierta del #sshipname#}
+land_EnterCabin {Cámara del capitan}
+land_EnterSeadogs {Alojamientos de la tripulación}
+land_EnterShipDeck {Cubierta del barco}
+land_EnterMainCannonsDeck {Cubierta de batería pinicpal}
+land_EnterUpperCannonsDeck {Cubierta de batería superior}
+land_EnterLowerCannonsDeck {Cubierta de batería inferior}
+land_EnterHold {Bodega de carga}
+land_EnterHold1 {1ª bodega de carga}
+land_EnterHold2 {2ª bodega de carga}
+land_UseCorpse {Saqueo de cadáver}
+land_UseBarrel {Mirar en barril}
+land_UseStorage {Polvorín}
+land_GoToTeachHead {Cabeza de Barbabnegra}
+
+go_store {Tienda}
+go_shipyard {Astillero}
+go_tavern {Taberna}
+go_residence {Ayuntamiento}
+go_port {Puerto}
+go_shore {Costa}
+go_loanshark {Prestamista}
+go_brothel {Burdel}
+go_church {Iglesia}
+go_prison {Prisión}
+go_fort {Fuerte}
+go_tailorshop {Tienda del sastre}
+go_blacksmith {Herrero}
+go_shipdeck {Cubierta del barco}
+go_cabin {Cámara del capitan}
+go_seadogs {Alojamientos de la tripulación}
+go_maincannonsdeck {Cubierta de batería principal}
+go_uppercannonsdeck {Cubierta de batería superior}
+go_lowercannonsdeck {Cubierta de batería inferior}
+go_hold {Bodega de carga}
+go_hold1 {1ª bodega de carga}
+go_hold2 {2ª bodega de carga}
+go_apothecary {Botica}
+go_gunsmith {Armero (armas de fuego)}
+go_gunblacksmith {Armero}
+go_opium {Fumadero de opio}
+go_library {Biblioteca}
+go_maltese {Abadía de la Orden de Malta}
+go_indianstore {Tienda india}
+go_tavern2 {Segunda taberna}
+go_eitc {Compañía Comercial de las Indias Orientales}
+go_dwic {Compañía Holandesa de las Indias Occidentales}
+go_academy {Academia Naval}
+go_HQ {Cuartel General Naval}

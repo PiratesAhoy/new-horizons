@@ -122,7 +122,7 @@ void ProcessDialogEvent()
 		case "room_day":
 			dialog.snd = "Voice\FRCO\FRCO019";
 			Dialog.text = DLG_TEXT[24];
-			if (makeint(pchar.money) >= 5)
+			if (sti(pchar.money) >= 2)
 			{
 				link.l1 = DLG_TEXT[25];
 				link.l1.go = "room_day_wait";
@@ -136,7 +136,7 @@ void ProcessDialogEvent()
 		case "room_night":
 			dialog.snd = "Voice\FRCO\FRCO019";
 			Dialog.text = DLG_TEXT[29];
-			if (makeint(pchar.money) >= 5)
+			if (sti(pchar.money) >= 2)
 			{
 				link.l1 = DLG_TEXT[30];
 				link.l1.go = "room_night_wait";
@@ -150,7 +150,7 @@ void ProcessDialogEvent()
 		case "room_24":
 			dialog.snd = "Voice\ANLE\ANLE014";
 			Dialog.text = DLG_TEXT[29];
-			if (makeint(pchar.money) >= 5)
+			if (sti(pchar.money) >= 2)
 			{
 				link.l1 = DLG_TEXT[30];
 				link.l1.go = "room_24_wait";

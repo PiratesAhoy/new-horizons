@@ -816,6 +816,80 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("gm_sailors_complete");
 		break;
 
+		case "defoe_letter":
+			//gm_crew8
+
+			PlaySound("VOICE\ENGLISH\gm_crew8A.wav");
+			PlaySound("VOICE\ENGLISH\gm_crew8A.wav");
+			Dialog.text = DLG_TEXT[64];		
+			link.l1 = DLG_TEXT[65];			
+			link.l1.go = "defoe_letter1";
+		break;
+
+		case "defoe_letter1":
+			//gm_crew8
+
+			PlaySound("VOICE\ENGLISH\gm_crew8C.wav");
+			PlaySound("VOICE\ENGLISH\gm_crew8C.wav");
+			PlaySound("INTERFACE\paper_small.wav");
+			Dialog.text = DLG_TEXT[66];		
+			link.l1 = DLG_TEXT[67];			
+			link.l1.go = "exit_messenger";
+			AddDialogExitQuest("defoe_letter_given");
+		break;
+
+		case "neutral":
+			crewid = NPChar.id;
+			switch(crewid)
+			{
+		//...............................................................
+		//9 OFFICERS
+				case "gm_crew1":
+					PlaySound("VOICE\ENGLISH\gm_crew1A.wav");
+				break;
+
+				case "gm_crew3":
+					PlaySound("VOICE\ENGLISH\Eng_m_a_031.wav");
+				break;
+
+				case "gm_crew4":
+					PlaySound("VOICE\ENGLISH\gm_crew4A.wav");
+				break;
+
+				case "gm_crew5":
+					PlaySound("VOICE\ENGLISH\gm_crew5A.wav");
+				break;
+
+				case "gm_crew10":
+					PlaySound("VOICE\ENGLISH\Fre_m_c_004.wav");
+				break;
+
+				case "gm_crew11":
+					PlaySound("VOICE\ENGLISH\gm_crew11B.wav");
+				break;
+
+				case "gm_crew18":
+					PlaySound("VOICE\ENGLISH\gm_crew18A.wav");
+				break;
+
+				case "gm_crew20":
+					PlaySound("VOICE\ENGLISH\Por_m_b_027.wav");
+				break;
+
+				case "gm_crew22":
+					PlaySound("VOICE\ENGLISH\gm_crew22A.wav");
+				break;
+			}
+			Dialog.text = DLG_TEXT[68];
+			link.l1.go = "exit_messenger";
+			Diag.TempNode = "neutral";
+		break;
+
+		case "Exit_messenger":
+			DialogExit();
+			Diag.CurrentNode = Diag.TempNode;
+		break;
+
 		case "Exit":
 			LAi_SetGuardianType(NPchar);
 

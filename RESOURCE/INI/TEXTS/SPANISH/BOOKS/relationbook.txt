@@ -1,0 +1,49 @@
+TEXT	{
+
+Hostilidades en el mar:
+
+Los fuertes y los barcos en el mar pueden ser hostiles hacia ti por las siguientes razones:
+- Si son hostiles hacia la nación cuya bandera llevas izada.
+- Si son hostiles hacia ti personalmente, y te han reconocido bajo una bandera falsa.
+- Si recuerdan que has sido hostil hacia ellos en un encuentro anterior.
+- Si has abierto fuego sobre ellos deliberadamente.
+
+Abrir fuego deliberadamente sobre barcos amistosos o alcanzarlos accidentalmente reduce tu reputación.
+
+-----------------------------------------
+Banderas falsas:
+
+El uso de una bandera falsa para para obtener una ventaja táctica antes de una batalla, o para entrar en un puerto enemigo clandestinamente, es perfectamente aceptable. Pero siempre debes izar tu propia bandera (o al menos la bandera de una nación que el objetivo ocnsidere hostil) antes de abrir fuego.
+
+Los fuertes y otros barcos pueden verte cambiar la bandera si estás en su campo de visión. Ten en cuenta que los fuertes pueden ver a mucha distancia. Si un fuerte te ve bajo una bandera hostil, lo recordará y te reconocerá. Por lo tanto, si tienes la intención de entrar en un puerto hostil bajo una bandera falsa, asegúrate de izar tu bandera falsa a buena distancia de la costa.
+
+Si te han reconocido, hay varias formas de evitar que te sigan reconociendo como hostil en el futuro:
+- Hacer las peces con esa nación, incluso si es solo durante el tiempo necesario para resolver tus asuntos en el puerto y marcharte.
+- Adquirir un barco diferente. El fuerte recuerda tu barco, por lo que si ya no tiene sun barco del mismo tipo, el fuerte ya no te reconocerá (No basta con repintar el barco o ocn dárselo a un oficial subordinado. Si el fuerte ve ese barco, o cualquier barco del mismo tipo dentro de tu flota, te reconocerá).
+
+-----------------------------------------
+Actos deshonrosos:
+
+Dependiendo de la situación, puede que estés cometiendo un acto deshonroso cuando captures o hundas cualquier barco que no sea pirata. Los siguientes actos se consideran criminales por parte de las naciones civilizadas del mundo. Por orden de menor a mayor graverdad:
+- No contar con una patente de corso o un nombramiento de la Armada, y por lo tanto no tener razón legal para el ataque.
+- Atacar bajo bandera pirata.
+- Atacar a una nación neutral o aliada.
+- Atacar bajo una bandera que el barco atacado considere amistosa.
+
+Dependiendo de la gravedad de tus acciones, puede que se te reconozca como traidor en ciudades no controladas por piratas. Por actos deshonrosos leves, esto puede tardar un tiempo en ocurrir. Pero las ofensas graves se consideran actos de piratería y afectan a tu relación con todas las naciones.
+
+Siempre puedes cambiar la bandera que llevas izada al entrar en combate, lo que puede significar la diferencia entre que tus acciones sean consideradas legales o un grave acto de piratería. Conviene tener cuidado, especialmente, cuando te reconocen navegando bajo bandera falsa.
+
+-----------------------------------------
+Relaciones internacionales:
+
+Obtener puntos con cualquier nación requiere que te unas a sus filas como corsario u oficial de la Armada, o que t eunas a la Hermandad Pirata. Mientras sirvas a una única nación, tus relaciones con las demás estarán dictadas por las relaciones de tu nación. Aunque puedes unirta a tantas naciones como desees al mismo tiempo, esto reducirá los puntos que ganas por tus acciones con cada una de ellas.
+
+Las naciones del mundo no ven con buenos ojos ninguna acción hostil ocntra sus aliados. Por ello, es importante mantenerse al día con las noticias de las tabernas. Esto puede volverse especialmente complicado si sirves a varias naciones a la vez.
+
+-----------------------------------------
+Prisioneros de guerra:
+
+Los oficiales de la Armada y los corsarios están obligados a tratar a los prisioneros con respeto. Exigir un rescate por su liberación es aceptable. Ejecutarlos no lo es. Si adquieres el hábito de ejecutar prisioneros, puedes perder ascensos y, en último término, puedes llegar a ser expulsado del servicio (sin embargo, tanto oficiales de la Armada como corsarios pueden ahorcar piratas sin ninguna penalización).
+
+}

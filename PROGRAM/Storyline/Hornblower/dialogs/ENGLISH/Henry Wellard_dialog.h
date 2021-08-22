@@ -7,7 +7,7 @@ string DLG_TEXT[40] = {
 "Pleased to meet you too Mr. Wellard. This is Acting Lieutenant Archie Kennedy. We need to go to Naval H.Q. right now to report to Captain Sawyer. You should come with us.",
 "Aye aye Sir.",
 "Let's go then.",
-"Any orders Lieutenant Hornblower.",
+"Any orders, Lieutenant Hornblower?",
 "Yes Wellard. Go and check the anchor cables. We need to be ready to weigh anchor when the captain gets here.",
 "Belay the haul! Belay the haul!",
 "It is me Sir.... Wellard... There is a block caught and tearing the sail.",

@@ -11,30 +11,30 @@
 #define GOOD_GUNPOWDER	6
 #define GOOD_SAILCLOTH	7
 #define GOOD_PLANKS		8	// Numbers below are value index based on cost per cwt, multiply by GOODS_PRICE_SCALAR for actual cost/cwt
-#define GOOD_GOLD       9   // 16.67
-#define GOOD_SILVER     10  // 14.00
-#define GOOD_CINNAMON	11	// 8.00
-#define GOOD_CHOCOLATE	12	// 7.00
-#define GOOD_COFFEE		13	// 7.00
-#define GOOD_FOOD		14
-#define GOOD_TREATMENT	15
-#define GOOD_PAPRIKA	16	// 6.00
-#define GOOD_WINE		17	// 5.00
-#define GOOD_SANDAL		18	// 5.00
-#define GOOD_EBONY		19  // 4.33
-#define GOOD_MAHOGANY	20	// 4.00
-#define GOOD_SUGAR		21	// 3.00
-#define GOOD_TOBACCO	22	// 3.00
-#define GOOD_ALE		23	// 3.00
-#define GOOD_SILK		24	// 3.00
-#define GOOD_LINEN		25	// 2.67
-#define GOOD_FRUITS		26	// 2.67
-#define GOOD_CLOTHES	27	// 2.67
-#define GOOD_BRICKS     28  // 2.50
-#define GOOD_OIL		29	// 2.50
-#define GOOD_COTTON		30	// 2.00
-#define GOOD_COPRA		31	// 1.50
-#define GOOD_LEATHER	32	// 1.00
+#define GOOD_GOLD       9   // 100
+#define GOOD_SILVER     10  // 62
+#define GOOD_COFFEE	11	// 14
+#define GOOD_CINNAMON	12	// 11.5
+#define GOOD_MAHOGANY		13	// 10.5
+#define GOOD_EBONY		14 //10.3
+#define GOOD_WINE			15 //10
+#define GOOD_SANDAL		16	// 10
+#define GOOD_PAPRIKA		17	// 9
+#define GOOD_TREATMENT	18	// 9
+#define GOOD_CHOCOLATE	19  // 9
+#define GOOD_ALE	20	// 9
+#define GOOD_SILK		21	// 8.5
+#define GOOD_TOBACCO	22	// 7.75
+#define GOOD_CLOTHES		23	// 6.6
+#define GOOD_SUGAR		24	// 6
+#define GOOD_FRUITS		25	// 5.3
+#define GOOD_LINEN		26	// 5.3 
+#define GOOD_OIL	27	// 5
+#define GOOD_FOOD     28  // 4
+#define GOOD_COTTON		29	// 4
+#define GOOD_LEATHER		30	// 3.6
+#define GOOD_COPRA		31	// 3
+#define GOOD_BRICKS	32	// 2.5
 
 object  Goods[GOODS_QUANTITY]; // NK
 

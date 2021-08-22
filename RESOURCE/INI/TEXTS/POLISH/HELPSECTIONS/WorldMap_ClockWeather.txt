@@ -1,0 +1,9 @@
+Clock_Weather_title
+{
+Date and Weather Indicator
+}
+
+Clock_Weather_info
+{
+    WskaŸnik daty i pogody znajduje si× w prawym górnym rogu ekranu mapy ›wiata. Liczby na nim pokazuj¹ aktualn¹ dat× gry, a aktualna pogoda i czas dnia s¹ wy›wietlane ze zdj×ciem w okr¹g³ym oknie.
+}

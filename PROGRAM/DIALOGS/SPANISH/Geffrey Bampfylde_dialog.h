@@ -1,0 +1,23 @@
+string DLG_TEXT[20] = {
+"?Quien eres y que estas haciendo aqui?! Habla ahora, o tendre ",
+"Bucho",
+"!tirate a la oreja! ",
+"Estoy aqui para TI. Estas preparado para morir?",
+"Asesino! Pero quien-Miles, el perro codicioso. Apuesto a que era el! O Jonson! ?Fue Silehard?",
+"?Has hecho tantos enemigos que ni siquiera puedes elegir uno para culpar?",
+"!Bailare en todas sus tumbas! !Lo Juro! ?Todavia estas aqui? ?Valoras tan poco tu vida? ?No sabes quien soy?",
+"Se que eres un charlatan y un pelmazo. Si me permite la tropza, usted tampoco es el mas apuesto.",
+"?Como te atreves?! ",
+"Bucho",
+", !tira esto#sgender# fuera!",
+"Bucho",
+"no te sera de mucha ayuda despues de que lo atraviese. Entonces tu y yo podemos tomarnos nuestro tiempo.",
+"Por favor, ten piedad! Te dare lo que quieras, pero no me mates.",
+"Toda tu confianza fanfarrona, ?se ha ido de repente? Eso fue rapido. Voy a tratar de hacer esto estrategia, tambien.",
+"?Algo? ?Que podria querer de TI sino dinero? Dame todo lo que tienes.",
+"Vete. !Moveos! Antes de que cambie de opinion.",
+"Eso es todo lo que tengo - 5000 piezas de oro. !Tomalo todo y dejame en paz!",
+"Fino. Corre ahora, escoria, y reza para que nunca me vuelvas a ver.",
+"Perfecto. Pero ahora, por desgracia, ya no me sirves de nada. Preparate a morir!",
+
+};

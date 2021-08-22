@@ -666,9 +666,40 @@ void ProcessDialogEvent()
 			PlaySound("VOICE\ENGLISH\grandma_1.wav");
 			Dialog.text = DLG_TEXT[91];
 			link.l1 = DLG_TEXT[92];
-			link.l1.go = "finale1";
+			link.l1.go = "treasure";	//was finale1
+		break;
+	//-----------------------------------------------------------
+		case "treasure":
+			PlaySound("VOICE\ENGLISH\grandma_4.wav");
+			Dialog.text = DLG_TEXT[105];
+			link.l1 = DLG_TEXT[106];
+			link.l1.go = "treasure1";
 		break;
 
+		case "treasure1":
+			PlaySound("VOICE\ENGLISH\grandma_6.wav");
+			Dialog.text = DLG_TEXT[107];
+			link.l1 = DLG_TEXT[108];
+			link.l1.go = "exit";
+			AddDialogExitQuest("grandma_cheer1");
+		break;
+
+		case "treasure2":
+			PlaySound("VOICE\ENGLISH\grandma_3.wav");
+			Dialog.text = DLG_TEXT[109];
+			link.l1 = DLG_TEXT[110];
+			link.l1.go = "exit";
+			AddDialogExitQuest("grandma_cheer2");
+		break;
+
+		case "treasure3":
+			PlaySound("VOICE\ENGLISH\grandma_yell2.wav");
+			Dialog.text = DLG_TEXT[111];
+			link.l1 = DLG_TEXT[112];
+			link.l1.go = "exit";
+			AddDialogExitQuest("grandma_boo1");
+		break;
+	//-----------------------------------------------------------
 		case "finale1":
 			PlaySound("VOICE\ENGLISH\grandma_7.wav");
 			Dialog.text = DLG_TEXT[93];

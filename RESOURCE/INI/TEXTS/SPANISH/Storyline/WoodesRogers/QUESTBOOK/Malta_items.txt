@@ -1,0 +1,4 @@
+title=Maltains items
+text.t1=There are six books and documents I have to find for the Clerk. He talked about nine cells to open. Also about their most precious item - a relic. Very valuable. 
+text.t2=I got all six books and documents now!
+

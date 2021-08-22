@@ -5,7 +5,7 @@ string DLG_TEXT[23] = {
 "No, This is the dirtiest place in the Caribbean! Well, um, I've been permanently incapacitated, if you get what I mean. See, I met my incapacitation at the hands of a shark. I believe a Great White it was, yes. Anyways, there's nothin in here for meself, because 'its' been replaced with a wooden peg.",
 "Um, Could you tell me a little about this place Madam?",
 "Well, when this town was formed I started this little place, since then it's grown to become the best Brothel in all the achipelago, is that all you wanted to know?",
-"Well, no, I was just curious, let's talk more 'important' buisness...",
+"Well, no, I was just curious, let's talk more 'important' business...",
 "Yup, Thanks for the info, I'll be seeing you around for sure.",
 "I've got a few girls open, you still interested?",
 "Yes Madam, I do believe I am",

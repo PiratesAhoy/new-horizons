@@ -1,0 +1,5 @@
+title=Side Quest - Zaid Murro's problems.
+text.t1=The former navigator of the 'Juno', Vigila Mendes' ship, now lives as a farmer. He said that some people in the jungle steal his goods. Maybe I can help Zaid.
+text.t2=In the jungle, after leaving town, I met the bandits Zaid told me about, and they tried to kill me.
+text.t3=Those bandits were not alone. Deeper in jungle, I met the other members of the outlaw band!
+text.t4=Now Zaid should have no further problems with these bandits.

@@ -1,0 +1,2 @@
+title=Navegar hasta #sisland_Khael Roa# con #sDanielle# y Aurentius.
+text.t1=La escuadra inglesa yace en el fondo del puerto de #sGreenford#. Los peces van a darse un gran festín. Dudo que pudiéramos repeler un segundo ataque, así que deberíamos embarcar a nuestro experto en lenguas nativas y zarpar rumbo a #sisland_Khael Roa#. Puede terminar sus traducciones durante el viaje.

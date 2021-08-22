@@ -60,7 +60,7 @@ void ProcessDialogEvent()
 		case "shop":
 			NPC_Meeting = "1";
 
-			if(rand(100)<20) // chance for random attack, decrease last figure for fewer attacks
+			if(rand(100)<10) // chance for random attack, decrease last figure for fewer attacks (GR: was 20)
 			{
 			 ChangeCharacterReputation(Pchar, 4);  // reward: reputation. Change figure to your liking
 			 if(AUTO_SKILL_SYSTEM)
@@ -72,7 +72,8 @@ void ProcessDialogEvent()
 			 int sum = sti(pchar.skill.fencing) * 1000;
 			 PlayStereoSound("INTERFACE\took_item.wav");
 			 AddMoneyToCharacter(Pchar, sum);
-			 Ambush("outlaws", 1+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
+//			Ambush("outlaws", 1+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
+			Ambush("outlaws", 1+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "reload1");
 			 Dialog.text = DLG_TEXT[10] + sum + DLG_TEXT[11];
 			 link.l1 = RandSwear() + DLG_TEXT[12];
 			 link.l1.go = "exit";

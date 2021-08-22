@@ -2,13 +2,12 @@ void CreateEleutheraCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	ch.old.name = "Kermit";
 	ch.old.lastname = "Brazier";
-	ch.name 	= TranslateString("","Kermit");
-	ch.lastname 	= TranslateString("","Brazier");
+	ch.name 	= TranslateString("", "Kermit");
+	ch.lastname 	= TranslateString("", "Brazier");
 	ch.id		= "Kermit Brazier";
 	ch.model	= "bocman1";
 	ch.sex = "man";
@@ -38,8 +37,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Alicia";
 	ch.old.lastname = "Banister";
-	ch.name 	= TranslateString("","Alicia");
-	ch.lastname 	= TranslateString("","Banister");
+	ch.name 	= TranslateString("", "Alicia");
+	ch.lastname 	= TranslateString("", "Banister");
 	ch.id		= "Alicia Banister";
 	ch.model	= "downgir52";
 	ch.sex = "woman";
@@ -69,8 +68,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Geoffrey";
 	ch.old.lastname = "Shuttle";
-	ch.name 	= TranslateString("","Geoffrey");
-	ch.lastname 	= TranslateString("","Shuttle");
+	ch.name 	= TranslateString("", "Geoffrey");
+	ch.lastname 	= TranslateString("", "Shuttle");
 	ch.id		= "Geoffrey Shuttle";
 	ch.model	= "rabBlack_2";
 	ch.sex = "man";
@@ -100,8 +99,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Joseph";
 	ch.old.lastname = "Bigsby";
-	ch.name 	= TranslateString("","Joseph");
-	ch.lastname 	= TranslateString("","Bigsby");
+	ch.name 	= TranslateString("", "Joseph");
+	ch.lastname 	= TranslateString("", "Bigsby");
 	ch.id		= "Joseph Bigsby";
 	ch.model	= "sailor10";
 	ch.sex = "man";
@@ -131,8 +130,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Lucas";
 	ch.old.lastname = "Bird";
-	ch.name 	= TranslateString("","Lucas");
-	ch.lastname 	= TranslateString("","Bird");
+	ch.name 	= TranslateString("", "Lucas");
+	ch.lastname 	= TranslateString("", "Bird");
 	ch.id		= "Lucas Bird";
 	ch.model	= "sailor16";
 	ch.sex = "man";
@@ -162,8 +161,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Nick";
 	ch.old.lastname = "Hopkins";
-	ch.name 	= TranslateString("","Nick");
-	ch.lastname 	= TranslateString("","Hopkins");
+	ch.name 	= TranslateString("", "Nick");
+	ch.lastname 	= TranslateString("", "Hopkins");
 	ch.id		= "Nick Hopkins";
 	ch.model	= "sailor5";
 	ch.sex = "man";
@@ -195,9 +194,9 @@ void CreateEleutheraCharacters(ref n)
 	ch.old.name = "Michael";
 	ch.old.middlename = "";
 	ch.old.lastname = "Wainwright";
-	ch.name = TranslateString(""," Michael");
-	ch.middlename = TranslateString("","");
-	ch.lastname = TranslateString("","Wainwright");
+	ch.name = TranslateString("", "Michael");
+	ch.middlename = "";
+	ch.lastname = TranslateString("", "Wainwright");
 	ch.id		= "Michael Wainwright";
 	ch.model = "50Grey2";
 	ch.sex = "man";
@@ -229,9 +228,9 @@ void CreateEleutheraCharacters(ref n)
 	ch.old.name = "Cole";
 	ch.old.middlename = "";
 	ch.old.lastname = "Arkwright";
-	ch.name = TranslateString(""," Cole");
-	ch.middlename = TranslateString("","");
-	ch.lastname = TranslateString("","Arkwright");
+	ch.name = TranslateString("", "Cole");
+	ch.middlename = "";
+	ch.lastname = TranslateString("", "Arkwright");
 	ch.id		= "Cole Arkwright";
 	ch.model = "Huber_Spa4_17";
 	ch.sex = "man";
@@ -263,8 +262,8 @@ void CreateEleutheraCharacters(ref n)
 	//Father Abbott
 	ch.old.name = "Father";
 	ch.old.lastname = "Buzzard";
-	ch.name 	= TranslateString("","Father");
-	ch.lastname 	= TranslateString("","Buzzard");
+	ch.name 	= TranslateString("", "Father");
+	ch.lastname 	= TranslateString("", "Buzzard");
 	ch.id		= "Father Buzzard";
 	ch.model	= "monk";
 	ch.sound_type = "priest";
@@ -295,8 +294,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Father";
 	ch.old.lastname = "Abbott";
-	ch.name 	= TranslateString("","Father");
-	ch.lastname 	= TranslateString("","Abbott");
+	ch.name 	= TranslateString("", "Father");
+	ch.lastname 	= TranslateString("", "Abbott");
 	ch.id		= "Father Abbott";
 	ch.model	= "monk";
 	ch.sound_type = "priest";
@@ -328,8 +327,8 @@ void CreateEleutheraCharacters(ref n)
 	// Alice Tailor
 	ch.old.name = "Karen";
 	ch.old.lastname = "Cakebread";
-	ch.name	= TranslateString("", "Karen");
-	ch.lastname	= TranslateString("", "Cakebread");
+	ch.name	= TranslateString("",  "Karen");
+	ch.lastname	= TranslateString("",  "Cakebread");
 	ch.id = "Karen Cakebread";
 	ch.model = "Towngirl";
 	ch.sex = "man";
@@ -2434,8 +2433,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slave";
 	ch.old.lastname = "Worker";
-	ch.name 	= TranslateString("","Slave");
-	ch.lastname = TranslateString("","Worker");
+	ch.name 	= FirstLetterUp(TranslateString("", "Slave"));// MAXIMUS 24.07.2019: "slave" and "slave worker" not the same in russian lang, and also we have other slaves, which must be simply "slave" on any lang, but TranslateString can take translation from characters_names first
+	ch.lastname = TranslateString("", "Worker");
 	ch.id		= "Slave1";
 	ch.model	= "rabblack";
 	ch.sound_type = "seaman";
@@ -2467,8 +2466,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slave";
 	ch.old.lastname = "Worker";
-	ch.name 	= TranslateString("","Slave");
-	ch.lastname = TranslateString("","Worker");
+	ch.name 	= FirstLetterUp(TranslateString("", "Slave"));// MAXIMUS 24.07.2019: "slave" and "slave worker" not the same in russian lang, and also we have other slaves, which must be simply "slave" on any lang, but TranslateString can take translation from characters_names first
+	ch.lastname = TranslateString("", "Worker");
 	ch.id		= "Slave2";
 	ch.model	= "rabblack_1";
 	ch.sound_type = "seaman";
@@ -2500,8 +2499,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slave";
 	ch.old.lastname = "Worker";
-	ch.name 	= TranslateString("","Slave");
-	ch.lastname = TranslateString("","Worker");
+	ch.name 	= FirstLetterUp(TranslateString("", "Slave"));// MAXIMUS 24.07.2019: "slave" and "slave worker" not the same in russian lang, and also we have other slaves, which must be simply "slave" on any lang, but TranslateString can take translation from characters_names first
+	ch.lastname = TranslateString("", "Worker");
 	ch.id		= "Slave3";
 	ch.model	= "rabblack_2";
 	ch.sound_type = "seaman";
@@ -2533,8 +2532,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slave";
 	ch.old.lastname = "Worker";
-	ch.name 	= TranslateString("","Slave");
-	ch.lastname = TranslateString("","Worker");
+	ch.name 	= FirstLetterUp(TranslateString("", "Slave"));// MAXIMUS 24.07.2019: "slave" and "slave worker" not the same in russian lang, and also we have other slaves, which must be simply "slave" on any lang, but TranslateString can take translation from characters_names first
+	ch.lastname = TranslateString("", "Worker");
 	ch.id		= "Slave4";
 	ch.model	= "rabblack_3";
 	ch.sound_type = "seaman";
@@ -2566,8 +2565,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slave";
 	ch.old.lastname = "Worker";
-	ch.name 	= TranslateString("","Slave");
-	ch.lastname = TranslateString("","Worker");
+	ch.name 	= FirstLetterUp(TranslateString("", "Slave"));// MAXIMUS 24.07.2019: "slave" and "slave worker" not the same in russian lang, and also we have other slaves, which must be simply "slave" on any lang, but TranslateString can take translation from characters_names first
+	ch.lastname = TranslateString("", "Worker");
 	ch.id		= "Slave5";
 	ch.model	= "blackman";
 	ch.sound_type = "seaman";
@@ -2599,8 +2598,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slave";
 	ch.old.lastname = "Worker";
-	ch.name 	= TranslateString("","Slave");
-	ch.lastname = TranslateString("","Worker");
+	ch.name 	= FirstLetterUp(TranslateString("", "Slave"));// MAXIMUS 24.07.2019: "slave" and "slave worker" not the same in russian lang, and also we have other slaves, which must be simply "slave" on any lang, but TranslateString can take translation from characters_names first
+	ch.lastname = TranslateString("", "Worker");
 	ch.id		= "Slave6";
 	ch.model	= "rabWhite";
 	ch.sound_type = "seaman";
@@ -2632,8 +2631,8 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slave";
 	ch.old.lastname = "Worker";
-	ch.name 	= TranslateString("","Slave");
-	ch.lastname = TranslateString("","Worker");
+	ch.name 	= FirstLetterUp(TranslateString("", "Slave"));// MAXIMUS 24.07.2019: "slave" and "slave worker" not the same in russian lang, and also we have other slaves, which must be simply "slave" on any lang, but TranslateString can take translation from characters_names first
+	ch.lastname = TranslateString("", "Worker");
 	ch.id		= "Slave7";
 	ch.model	= "rabwhite1";
 	ch.sound_type = "seaman";
@@ -2665,7 +2664,7 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slaver";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Slaver");
+	ch.name = TranslateString("", "Slaver");
 	ch.lastname = "";
 	ch.id		= "slaver1";
 	ch.model	= "pirat3"; // PB
@@ -2701,7 +2700,7 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slaver";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Slaver");
+	ch.name = TranslateString("", "Slaver");
 	ch.lastname = "";
 	ch.id		= "Slaver2";
 	ch.model	= "sailor"; // PB
@@ -2737,7 +2736,7 @@ void CreateEleutheraCharacters(ref n)
 
 	ch.old.name = "Slaver";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Slaver");
+	ch.name = TranslateString("", "Slaver");
 	ch.lastname = "";
 	ch.id		= "slaver3";
 	ch.model	= "pirat6"; // PB

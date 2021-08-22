@@ -44,26 +44,26 @@ void ProcessDialogEvent()
 			}
 			if (pchar.quest.main_line == "return_idol_from_greenford")
 			{
-				link.l1 = DLG_TEXT[5] + characters[GetCharacterIndex(DLG_TEXT[6])].lastname + DLG_TEXT[7];
-				link.l1.go = "return_idol_from_greenford_2";
+				link.l2 = DLG_TEXT[5] + characters[GetCharacterIndex(DLG_TEXT[6])].lastname + DLG_TEXT[7];
+				link.l2.go = "return_idol_from_greenford_2";
 			}
 			if (CheckQuestAttribute("ANIMISTS", "to_prison_for_teacher_3"))
 			{
 				//приказ об освобождении
-				link.l1 = DLG_TEXT[8];
-				link.l1.go = "freedom_letter";
+				link.l2 = DLG_TEXT[8];
+				link.l2.go = "freedom_letter";
 			}
 			if (CheckQuestAttribute("ANIMISTS", "to_prison_for_teacher"))
 			{
-				link.l1 = DLG_TEXT[9];
-				link.l1.go = "dopros";
+				link.l2 = DLG_TEXT[9];
+				link.l2.go = "dopros";
 			}
 			if (CheckQuestAttribute("ANIMISTS", "raskainye"))
 			{
 				dialog.snd = "Voice\GRCO\GRCO002";
 				dialog.text = DLG_TEXT[10];
-				link.l1 = DLG_TEXT[11];
-				link.l1.go = "exit";
+				link.l2 = DLG_TEXT[11];
+				link.l2.go = "exit";
 				pchar.quest.ANIMISTS = "dopros";
 			}
 			//Added by Levis for apothecary quest -->
@@ -71,32 +71,45 @@ void ProcessDialogEvent()
 			{
 				if(!CheckAttribute(PChar,"quest.mysterious_plants.crewmember_killed.expired"))
 				{
-					if(GetAttribute(PChar,"quest.mysterious_plants.crewmember_killed")=="1")
+					if(CheckAttribute(PChar,"quest.mysterious_plants.crewmember.killed")) 
 					{
-						link.l2 = DLG_TEXT[53];
-						link.l2.go = "Report Indians";
-					}
-					else
-					{
-						if(CheckAttribute(PChar,"quest.mysterious_plants.crewmember_killed"))
+						if (GetAttribute(PChar,"quest.mysterious_plants.crewmember.killed")== true)
 						{
-							link.l2 = DLG_TEXT[56];
-							link.l2.go = "Report Indians";
+							link.l3 = DLG_TEXT[53];
+							link.l3.go = "Report Indians";
+						}
+						else
+						{
+						//if(GetAttribute(PChar,"quest.mysterious_plants.crewmember.killed")== false)
+						//{
+							link.l3 = DLG_TEXT[56];
+							link.l3.go = "Report Indians";
+						//}
 						}
 					}
 				}
 			}
 			else
 			{
-				if(CheckAttribute(Pchar,"quest.Apothecary_Enter_Warehouse"))
+				if((CheckAttribute(Pchar,"quest.Apothecary_Enter_Warehouse")) && (CheckAttribute(Pchar,"quest.apothecary_no_follow_indian")))
 				{
-					link.l2 = DLG_TEXT[57];
-					link.l2.go = "Report Indians in Warehouse";
+					//PW didn't follow indian to warehouse so nothing to report before/until you sneak round back 
 				}
-				if(CheckAttribute(Pchar,"quest.mysterious_plants.indians.overheard"))
+				else
 				{
-					link.l2 = DLG_TEXT[60];
-					link.l2.go = "Report Indians Illegal Trade";
+					if(CheckAttribute(Pchar,"quest.Apothecary_Enter_Warehouse")) 
+					{
+						link.l2 = DLG_TEXT[57];
+						link.l2.go = "Report Indians in Warehouse";
+					}
+					else
+					{
+						if(CheckAttribute(Pchar,"quest.mysterious_plants.indians.overheard"))
+						{
+							link.l3 = DLG_TEXT[60];
+							link.l3.go = "Report Indians Illegal Trade";
+						}				
+					}
 				}
 			}
 			//apothecary quest <--
@@ -108,10 +121,20 @@ void ProcessDialogEvent()
 		//Added by Levis for apothecary quest -->
 		
 		case "Report Indians":
-			AddDialogExitQuest("Reported Indians to guards");
-			dialog.text = DLG_TEXT[54];
-			link.l1 = DLG_TEXT[55];
-			link.l1.go = "exit";
+			if((CheckAttribute(Pchar,"quest.Apothecary_Enter_Warehouse")) && (!CheckAttribute(Pchar,"quest.apothecary_no_follow_indian")))
+			{
+				dialog.text = DLG_TEXT[54];
+				link.l1 = DLG_TEXT[57];
+				link.l1.go = "Report Indians in Warehouse";
+				AddQuestRecord("plants", 15);
+			}
+			else
+			{
+				AddDialogExitQuest("Reported Indians to guards");
+				dialog.text = DLG_TEXT[54];
+				link.l1 = DLG_TEXT[55];
+				link.l1.go = "exit";
+			}
 		break;
 		
 		case "Report Indians in Warehouse":
@@ -123,13 +146,16 @@ void ProcessDialogEvent()
 		
 		case "Report Indians Illegal Trade":
 			dialog.text = DLG_TEXT[61];
-			if(CheckCharacterItem(pchar,"opium"))
+			if(CheckCharacterItem(PChar,"vegetal"))
 			{
 				link.l2 = DLG_TEXT[64];
-				link.l2.go = "exit";
+				link.l2.go = "Report Indians with proof";//PW was exit and vegetal above was opium
 			}
+			else
+			{
 			link.l2 = DLG_TEXT[62];
-			link.l2.go = "exit";
+			link.l2.go = "Report Indians without proof";//PW was exit
+			}			
 			link.l3 = DLG_TEXT[66];
 			link.l3.go = "exit";
 		break;
@@ -216,8 +242,9 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[28];
 			link.l1 = DLG_TEXT[29];
 			link.l1.go = "dopros_bad_3";
-			Preprocessor_Add("nation", GetNationNameByType(GetTownNation("Greenford")));
+			Preprocessor_AddQuestData("nation", GetNationNameByType(GetTownNation("Greenford")));
 			AddQuestRecord("ANIMISTS", 29);
+			Preprocessor_Remove("nation");
 		break;
 
 		case "dopros_bad_3":
@@ -246,6 +273,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[35];
 			link.l1.go = "exit";
 			pchar.quest.ANIMISTS = "freedom_letter";
+			TakeItemFromCharacter(PChar,"letter_prison");	// GR: you gave the letter to the commandant
 			AddDialogExitQuest("mystery_man_to_prison");
 		break;
 

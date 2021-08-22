@@ -38,7 +38,7 @@ bool hasSailColorTan = true;
 bool hasSailNationLogo = true;
 bool HasSailPirateLogo = true;
 
-#define SAILSTYPE_SPECIAL_COUNT 13
+#define SAILSTYPE_SPECIAL_COUNT 16
 string SpecialSailsNormal[SAILSTYPE_SPECIAL_COUNT];
 string SpecialSailsEmblem[SAILSTYPE_SPECIAL_COUNT];
 string SpecialSailsDescr[SAILSTYPE_SPECIAL_COUNT];
@@ -100,6 +100,15 @@ void InitInterface(string iniName)
 	SpecialSailsDescr[12] = "Junk sails for Empress without holes."
 	SpecialSailsNormal[12] = "sail_Empres2.tga";
 	SpecialSailsEmblem[12] = "sail_Empres2.tga";
+	SpecialSailsDescr[13] = "Sails with the coat of arms of Castile-Leon."
+	SpecialSailsNormal[13] = "sail_weathered_common.tga";
+	SpecialSailsEmblem[13] = "sail_castile_leon.tga";
+	SpecialSailsDescr[14] = "Sails with the coat of arms of the Holy Roman Empire."
+	SpecialSailsNormal[14] = "sail_weathered_common.tga";
+	SpecialSailsEmblem[14] = "sail_holy_roman_empire.tga";
+	SpecialSailsNormal[15] = "sail_QAR.tga";
+	SpecialSailsEmblem[15] = "sail_QAR1.tga";
+	SpecialSailsDescr[15] = "Red sails with gold fringe, characteristic to Queen Anne's Revenge."
 
 	CreateString(true, "SailTypeName", "", FONT_NORMAL, COLOR_NORMAL, 130, 55, SCRIPT_ALIGN_CENTER, 0.9);
 	CreateString(true, "SailModelName", "", FONT_NORMAL, COLOR_NORMAL, 130, 105, SCRIPT_ALIGN_CENTER, 0.9);

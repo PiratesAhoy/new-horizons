@@ -370,7 +370,7 @@ void ProcessDialogEvent()
 			Link.l5.go = "town_tailor";
 			if (ENABLE_WEAPONSMOD)
 			{
-				Link.l6 = DLG_TEXT[162];
+			//	Link.l6 = DLG_TEXT[162];
 			//	Link.l6.go = "town_smithy";
 			}
 			if(CheckAttribute(Pchar, "Tsurgeon") && Pchar.Tsurgeon == "yes")

@@ -1,0 +1,10 @@
+title=Caesar
+text.t1=A Negro. Member of Teach's crew. Was much liked and trusted by Teach.
+text.t2=Hanged in Williamsburg 1719. Where in the Caribbean did he hide his map-piece?
+text.t3=Teach placed a crewmember, a trusted negro, in the hold with a lighted match. Very likely to be Caesar.
+text.t4=Lieutenant Maynard kept Teach's fourth sloop. He's living in Citadel Rock, Eleuthera.
+text.t5=Maynard sold the sloop to a shipwreck dealer in Grand Turk port. He's office is in the old Fort. To the left when when you exit the Town to the jungle.
+text.t6=Explosives yes. Must be something useful in the Armory.
+text.t7=I'll find the way to the shipwrecks via the Tavern kitchen and a bedroom upstairs.
+text.t8=I'll need a workbench and tools to process this pile of dried Gunpowder.
+text.t9=I have got Caesar's map, but again it's only a piece of a larger Caribbean Map.

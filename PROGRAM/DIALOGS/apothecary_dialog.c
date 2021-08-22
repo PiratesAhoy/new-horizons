@@ -124,20 +124,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "recover2":
-			DialogExit();
-			NextDiag.CurrentNode = NextDiag.TempNode;
-			PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneyToCharacter(Pchar, -200);
-			pchar.chr_ai.poison = 0;
-			LAi_SetCurHPMax(pchar);
-			LAi_Fade("", "");
-			WaitDate("", 0,0,1,0,0);
-			RecalculateJumpTable();
-			pchar.quest.opium_use.opiumsickness = 0; //Levis also heals opium sickness
-			PlaySound("AMBIENT\SHOP\sigh2.wav");
-			Log_SetStringToLog(DLG_TEXT[35]);
-			Log_SetStringToLog(DLG_TEXT[36]);
-			Log_SetStringToLog(DLG_TEXT[37]);
+			HealBy (&pChar, &nextDiag);
 		break;
 
 		case "increase_hp":
@@ -358,3 +345,27 @@ void increaseMaxHP(ref pChar, ref nextDiag)
 }
 // Swindler <--
 // LDH <--
+
+//----->PW changed previous case "recover2" to a function to allow use of dialog as text (as per above example IncreaseMaxHP)
+	Void HealBy (ref pChar, ref nextDiag)
+	{
+		string logMsg1 = "  " + DLG_TEXT[35];
+		string logMsg2 = "  " + DLG_TEXT[36];
+		string logMsg3 = "  " + DLG_TEXT[37];
+		DialogExit();
+		NextDiag.CurrentNode = NextDiag.TempNode;
+		PlayStereoSound("INTERFACE\took_item.wav");
+		AddMoneyToCharacter(Pchar, -200);
+		pchar.chr_ai.poison = 0;
+		LAi_SetCurHPMax(pchar);
+		LAi_Fade("", "");
+		WaitDate("", 0,0,1,0,0);
+		RecalculateJumpTable();
+		pchar.quest.opium_use.opiumsickness = 0; //Levis also heals opium sickness
+		PlaySound("AMBIENT\SHOP\sigh2.wav");
+			
+		Log_SetStringToLog(logMsg1);
+		Log_SetStringToLog(logMsg2);
+		Log_SetStringToLog(logMsg3);
+	}
+//<--------------PW end of function replacing "recover2"

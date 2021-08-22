@@ -3,13 +3,12 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 // Guard 1
 	ch.old.name = "Guard";
 	ch.old.lastname = "1";
-	ch.name = TranslateString("","Guard");
+	ch.name = TranslateString("", "Guard");
 	ch.lastname = "1";
 	ch.id		= "Spanish_guard1";
 	ch.model	= "soldier_spa6_17";
@@ -55,7 +54,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 // Guard 2
 	ch.old.name = "Guard";
 	ch.old.lastname = "2";
-	ch.name = TranslateString("","Guard");
+	ch.name = TranslateString("", "Guard");
 	ch.lastname = "2";
 	ch.id		= "Spanish_guard2";
 	ch.model	= "soldier_spa5_17";
@@ -101,7 +100,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 // Guard 3
 	ch.old.name = "Guard";
 	ch.old.lastname = "3";
-	ch.name = TranslateString("","Guard");
+	ch.name = TranslateString("", "Guard");
 	ch.lastname = "3";
 	ch.id		= "Spanish_guard3";
 	ch.model	= "soldier_spa4_17";
@@ -147,8 +146,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // Havana prison commandant
 	ch.old.name = "Atanagildo";
 	ch.old.lastname = "Galíndez";
-	ch.name 	= TranslateString("","Atanagildo");
-	ch.lastname 	= TranslateString("","Galíndez");
+	ch.name 	= TranslateString("", "Atanagildo");
+	ch.lastname 	= TranslateString("", "Galíndez");
 	ch.id		= "Havana Prison Commandant";
 	ch.model	= "offic_spa_17";
 	ch.sex = "man";
@@ -195,8 +194,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // Havana prison warden
 	ch.old.name = "Eldo";
 	ch.old.lastname = "Fiz";
-	ch.name = TranslateString("","Eldo");
-	ch.lastname 	= TranslateString("","Fiz");
+	ch.name = TranslateString("", "Eldo");
+	ch.lastname 	= TranslateString("", "Fiz");
 	ch.id		= "Warden";
 	ch.model	= "fatman1";
 	ch.sound_type = "soldier";
@@ -235,8 +234,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // Slave camp commander
 	ch.old.name = "Javier";
 	ch.old.lastname = "Mendieta";
-	ch.name = TranslateString("","Javier");
-	ch.lastname 	= TranslateString("","Mendieta");
+	ch.name = TranslateString("", "Javier");
+	ch.lastname 	= TranslateString("", "Mendieta");
 	ch.id		= "Slave Camp Commandant";
 	ch.model	= "offic_spa_17";
 	ch.sex = "man";
@@ -284,8 +283,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Felipe";
 	ch.old.lastname = "Becerra";
-	ch.name = TranslateString("","Felipe");
-	ch.lastname = TranslateString("","Becerra");
+	ch.name = TranslateString("", "Felipe");
+	ch.lastname = TranslateString("", "Becerra");
 	SetRankTitle(ch, TranslateString("", "Teniente"));
 	ch.id		= "Spanish_Captain1";
 	ch.nation	= SPAIN;
@@ -328,8 +327,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Basilio";
 	ch.old.lastname = "Carretero";
-	ch.name = TranslateString("","Basilio");
-	ch.lastname = TranslateString("","Carretero");
+	ch.name = TranslateString("", "Basilio");
+	ch.lastname = TranslateString("", "Carretero");
 	ch.id		= "Spanish_Captain2";
 	ch.nation	= SPAIN;
 	ch.model	= "9JdSpa";
@@ -387,8 +386,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Esteban";
 	ch.old.lastname = "Rovapera";
-	ch.name = TranslateString("","Esteban");
-	ch.lastname = TranslateString("","Rovapera");
+	ch.name = TranslateString("", "Esteban");
+	ch.lastname = TranslateString("", "Rovapera");
 	ch.id		= "Spanish_Captain3";
 	ch.nation	= SPAIN;
 	ch.model	= "Man9";
@@ -441,8 +440,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Mauricio";
 	ch.old.lastname = "Juradu";
-	ch.name = TranslateString("","Mauricio");
-	ch.lastname = TranslateString("","Juradu");
+	ch.name = TranslateString("", "Mauricio");
+	ch.lastname = TranslateString("", "Juradu");
 	ch.id		= "Mauricio Juradu";
 	ch.model = "sailor14";
 	ch.sex = "man";
@@ -500,8 +499,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // Assassin
 	ch.old.name = "Malbert";
 	ch.old.lastname = "Sangier";
-	ch.name = TranslateString("","Malbert");
-	ch.lastname = "Sangier";
+	ch.name = TranslateString("", "Malbert");
+	ch.lastname = TranslateString("", "Sangier");
 	ch.id		= "Malbert Sangier";
 	ch.model	= "Soldier_Spa5_17";
 //	ch.model	= "will_3";
@@ -564,8 +563,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Randolph";
 	ch.old.lastname = "Waghorn";
-	ch.name = TranslateString("","Randolph");
-	ch.lastname = TranslateString("","Waghorn");
+	ch.name = TranslateString("", "Randolph");
+	ch.lastname = TranslateString("", "Waghorn");
 	SetRankTitle(ch, TranslateString("", "Captain"));
 	ch.id		= "Convoy_Captain1";
 	ch.nation	= ENGLAND;
@@ -573,7 +572,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 //	LAi_NoRebirthEnable(ch);
 	ch.sex = "man";
-	ch.loyality = 10;
+	ch.loyality = 5;
 	ch.alignment = "bad";
 	if(ENABLE_WEAPONSMOD)
 	{
@@ -615,17 +614,19 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.Ship.Name = "Phaeton";
 	ch.Ship.Type = "RN_WarGalleon";
 	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 65;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 400.0, 400.0);
 	ch.skipRM = true; // PB: Skip Relations Mod
 	ch.questchar = true;//MAXIMUS: identifier for captives
-	ch.fantomtype = "trade"; // Make sure he doesn't fly naval flag or have naval boarders
+	ch.fantomtype = "trade";	// Make sure he doesn't fly naval flag or have naval boarders
+	ch.canhire = true;		// Can be hired after being captured
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Leonard";
 	ch.old.lastname = "Bowyer";
-	ch.name = TranslateString("","Leonard");
-	ch.lastname = TranslateString("","Bowyer");
+	ch.name = TranslateString("", "Leonard");
+	ch.lastname = TranslateString("", "Bowyer");
 	SetRankTitle(ch, TranslateString("", "Captain"));
 	ch.id		= "Convoy_Captain2";
 	ch.nation	= ENGLAND;
@@ -633,7 +634,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 //	LAi_NoRebirthEnable(ch);
 	ch.sex = "man";
-	ch.loyality = 10;
+	ch.loyality = 5;
 	ch.alignment = "bad";
 	if(ENABLE_WEAPONSMOD)
 	{
@@ -680,17 +681,19 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.Ship.Name = "Assurance";
 	ch.Ship.Type = "RN_WarGalleon";
 	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 65;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 400.0, 400.0);
 	ch.skipRM = true; // PB: Skip Relations Mod
 	ch.questchar = true;//MAXIMUS: identifier for captives
-	ch.fantomtype = "trade"; // Make sure he doesn't fly naval flag or have naval boarders
+	ch.fantomtype = "trade";	// Make sure he doesn't fly naval flag or have naval boarders
+	ch.canhire = true;		// Can be hired if he surrenders
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Marvin";
 	ch.old.lastname = "Corker";
-	ch.name = TranslateString("","Marvin");
-	ch.lastname = TranslateString("","Corker");
+	ch.name = TranslateString("", "Marvin");
+	ch.lastname = TranslateString("", "Corker");
 	SetRankTitle(ch, TranslateString("", "Captain"));
 	ch.id		= "Convoy_Captain3";
 	ch.nation	= ENGLAND;
@@ -698,7 +701,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 //	LAi_NoRebirthEnable(ch);
 	ch.sex = "man";
-	ch.loyality = 10;
+	ch.loyality = 5;
 	ch.alignment = "good";
 	GiveItem2Character(ch, "MerchantsBlade");
 	ch.equip.blade = "MerchantsBlade";
@@ -731,12 +734,13 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetHP(ch, 400.0, 400.0);
 	ch.skipRM = true; // PB: Skip Relations Mod
 	ch.questchar = true;//MAXIMUS: identifier for captives
+	ch.canhire = true;		// Can be hired if he surrenders
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "James";
 	ch.old.lastname = "Haresign";
-	ch.name = TranslateString("","James");
-	ch.lastname = TranslateString("","Haresign");
+	ch.name = TranslateString("", "James");
+	ch.lastname = TranslateString("", "Haresign");
 	SetRankTitle(ch, TranslateString("", "Captain"));
 	ch.id		= "Convoy_Captain4";
 	ch.nation	= ENGLAND;
@@ -744,7 +748,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sound_type = "soldier";
 //	LAi_NoRebirthEnable(ch);
 	ch.sex = "man";
-	ch.loyality = 10;
+	ch.loyality = 5;
 	ch.alignment = "good";
 	GiveItem2Character(ch, "MerchantsBlade");
 	ch.equip.blade = "MerchantsBlade";
@@ -777,13 +781,14 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetHP(ch, 400.0, 400.0);
 	ch.skipRM = true; // PB: Skip Relations Mod
 	ch.questchar = true;//MAXIMUS: identifier for captives
+	ch.canhire = true;		// Can be hired if he surrenders
 	AddGameCharacter(n, ch);
 
 // French Guard 1
 	ch.old.name = "Guard";
 	ch.old.lastname = "1";
-	ch.name = TranslateString("","Guard");
-	ch.lastname = "1";
+	ch.name = TranslateString("", "Guard");
+	ch.lastname = TranslateString("", "1");
 	ch.id		= "French_guard1";
 	ch.model	= "Soldier_Fra_17";
 	ch.sound_type = "soldier";
@@ -828,8 +833,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // French Guard 2
 	ch.old.name = "Guard";
 	ch.old.lastname = "2";
-	ch.name = TranslateString("","Guard");
-	ch.lastname = "2";
+	ch.name = TranslateString("", "Guard");
+	ch.lastname = TranslateString("", "2");
 	ch.id		= "French_guard2";
 	ch.model	= "Soldier_Fra3_17";
 	ch.sound_type = "soldier";
@@ -874,8 +879,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // French Guard 3
 	ch.old.name = "Guard";
 	ch.old.lastname = "3";
-	ch.name = TranslateString("","Guard");
-	ch.lastname = "3";
+	ch.name = TranslateString("", "Guard");
+	ch.lastname = TranslateString("", "3");
 	ch.id		= "French_guard3";
 	ch.model	= "Soldier_Fra5_17";
 	ch.sound_type = "soldier";
@@ -919,8 +924,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Guinemant";
 	ch.old.lastname = "Lavignen";
-	ch.name = TranslateString("","Guinemant");
-	ch.lastname = TranslateString("","Lavignen");
+	ch.name = TranslateString("", "Guinemant");
+	ch.lastname = TranslateString("", "Lavignen");
 	ch.id		= "French_Lieutenant";
 	ch.nation	= FRANCE;
 	ch.model	= "Offic_fra_17";
@@ -964,6 +969,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.Ship.Name = "Joli";
 	ch.Ship.Type = "RN_RaaFrigate";
 	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 65;
 	LAi_SetHP(ch, 300.0, 300.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	SetRank(ch, FRANCE, 3);
@@ -972,8 +978,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Valerian";
 	ch.old.lastname = "Decaux";
-	ch.name = TranslateString("","Valerian");
-	ch.lastname = TranslateString("","Decaux");
+	ch.name = TranslateString("", "Valerian");
+	ch.lastname = TranslateString("", "Decaux");
 	ch.id		= "French_Captain1";
 	ch.nation	= FRANCE;
 	ch.model	= "Gener_fra_16";
@@ -1034,8 +1040,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Arnald";
 	ch.old.lastname = "Rimeaux";
-	ch.name = TranslateString("","Arnald");
-	ch.lastname = TranslateString("","Rimeaux");
+	ch.name = TranslateString("", "Arnald");
+	ch.lastname = TranslateString("", "Rimeaux");
 	ch.id		= "French_Captain2";
 	ch.nation	= FRANCE;
 	ch.model	= "Soldier_Fra4_17";
@@ -1079,6 +1085,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.Ship.Name = "Bolontaire";
 	ch.Ship.Type = "FR_Frigate";
 	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 60;
 	LAi_SetHP(ch, 300.0, 300.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	SetRank(ch, FRANCE, 5);
@@ -1087,8 +1094,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Bruyant";
 	ch.old.lastname = "Moncoutie";
-	ch.name = TranslateString("","Bruyant");
-	ch.lastname = TranslateString("","Moncoutie");
+	ch.name = TranslateString("", "Bruyant");
+	ch.lastname = TranslateString("", "Moncoutie");
 	ch.id		= "French_Captain3";
 	ch.nation	= FRANCE;
 	ch.model	= "Soldier_Fra3_17";
@@ -1132,6 +1139,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.Ship.Name = "Salamine";
 	ch.Ship.Type = "FR_Frigate";
 	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 65;
 	LAi_SetHP(ch, 300.0, 300.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	SetRank(ch, FRANCE, 5);
@@ -1140,8 +1148,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Philip";
 	ch.old.lastname = "de Malvoisin";
-	ch.name = TranslateString("","Philip");
-	ch.lastname = TranslateString("","de Malvoisin");
+	ch.name = TranslateString("", "Philip");
+	ch.lastname = TranslateString("", "de Malvoisin");
 	ch.id		= "French_Contre-Amiral";
 	ch.greeting = "Gr_Antoine Chamfort";
 	SetRankTitle(ch, TranslateString("", "Chevalier"));
@@ -1201,6 +1209,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.Ship.Name = "Conquérante";
 	ch.Ship.Type = "FR_Fleuron";
 	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 65;
 	LAi_SetHP(ch, 1000.0, 1000.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	SetRank(ch, FRANCE, 7);
@@ -1210,9 +1219,9 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.old.name = "François-Louis";
 	ch.old.middlename = "Rousselet";
 	ch.old.lastname = "de Châteaurenault";
-	ch.name = TranslateString("","François-Louis");
-	ch.middlename = TranslateString("","Rousselet");
-	ch.lastname = TranslateString("","de Châteaurenault");
+	ch.name = TranslateString("", "François-Louis");
+	ch.middlename = TranslateString("", "Rousselet");
+	ch.lastname = TranslateString("", "de Châteaurenault");
 	ch.id		= "French_Amiral";
 	SetRankTitle(ch, TranslateString("", "Chevalier"));
 	ch.nation	= FRANCE;
@@ -1284,8 +1293,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // French Prison Guard 1
 	ch.old.name = "Guard";
 	ch.old.lastname = "1";
-	ch.name = TranslateString("","Guard");
-	ch.lastname = "1";
+	ch.name = TranslateString("", "Guard");
+	ch.lastname = TranslateString("", "1");
 	ch.id		= "Fr_Prison_guard1";
 	ch.model	= "Soldier_Fra_17";
 	ch.sound_type = "soldier";
@@ -1331,8 +1340,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // French Prison Guard 2
 	ch.old.name = "Guard";
 	ch.old.lastname = "2";
-	ch.name = TranslateString("","Guard");
-	ch.lastname = "2";
+	ch.name = TranslateString("", "Guard");
+	ch.lastname = TranslateString("", "2");
 	ch.id		= "Fr_Prison_guard2";
 	ch.model	= "Soldier_Fra2_17";
 	ch.sound_type = "soldier";
@@ -1378,8 +1387,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // French Prison Guard 3
 	ch.old.name = "Guard";
 	ch.old.lastname = "3";
-	ch.name = TranslateString("","Guard");
-	ch.lastname = "3";
+	ch.name = TranslateString("", "Guard");
+	ch.lastname = TranslateString("", "3");
 	ch.id		= "Fr_Prison_guard3";
 	ch.model	= "Soldier_Fra3_17";
 	ch.sound_type = "soldier";
@@ -1425,8 +1434,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // French Prison Guard 4
 	ch.old.name = "Guard";
 	ch.old.lastname = "4";
-	ch.name = TranslateString("","Guard");
-	ch.lastname = "4";
+	ch.name = TranslateString("", "Guard");
+	ch.lastname = TranslateString("", "4");
 	ch.id		= "Fr_Prison_guard4";
 	ch.model	= "Offic_Fra_17";
 	ch.sound_type = "soldier";
@@ -1466,8 +1475,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 // French Fort Guard
 	ch.old.name = "Guibert";
 	ch.old.lastname = "Mollaret";
-	ch.name = TranslateString("","Guibert");
-	ch.lastname = "Mollaret";
+	ch.name = TranslateString("", "Guibert");
+	ch.lastname = TranslateString("", "Mollaret");
 	ch.id		= "Fort_guard";
 	ch.model	= "Offic_Fra_17";
 	ch.sound_type = "soldier";
@@ -1501,5 +1510,694 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
 	ch.greeting = "Gr_falaise de fleur soldier";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Guillaume";
+	ch.old.lastname = "Suguenot";
+	ch.name = TranslateString("", "Guillaume");
+	ch.lastname = TranslateString("", "Suguenot");
+	ch.id		= "French_Ambush_Captain1";
+	ch.greeting = "Gr_Antoine Chamfort";
+	ch.nation	= FRANCE;
+	ch.model	= "Man10";
+	ch.sound_type = "soldier";
+//	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade25+2");
+		GiveItem2Character(ch, "pistol5+2");
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade25");
+		GiveItem2Character(ch, "pistol5");
+	}
+	ch.equip.blade = "blade25";
+	ch.equip.gun = "pistol5";
+	GiveItem2Character(ch, "commonarmor");
+	ch.questchar = true;
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "French_Captain1_dialog.c";
+	ch.rank 	= 4;
+	ch.reputation = "35";
+	ch.experience = "0";
+	ch.skill.Leadership = "8";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "10";
+	ch.skill.Accuracy = "10";
+	ch.skill.Cannons = "10";
+	ch.skill.Grappling = "8";
+	ch.skill.Repair = "10";
+	ch.skill.Defence = "10";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "10";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	Ch.Perks.list.Toughness = true;
+	ch.money = "40000";
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	LAi_SetCivilianGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.Ship.Name = "Victorieuse";
+	ch.Ship.Type = "Battleship2";
+//	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 70;
+	LAi_SetHP(ch, 1000.0, 1000.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	SetRank(ch, FRANCE, 6);
+	ch.professionalnavy = FRANCE;
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Louis";
+	ch.old.lastname = "Erignac";
+	ch.name = TranslateString("", "Louis");
+	ch.lastname = TranslateString("", "Erignac");
+	ch.id		= "French_Ambush_Captain2";
+	ch.nation	= FRANCE;
+	ch.model	= "9JdFra";
+	ch.sound_type = "soldier";
+//	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade9+1");
+		GiveItem2Character(ch, "PiratesPistol+1");
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade9");
+		GiveItem2Character(ch, "PiratesPistol");
+	}
+	ch.equip.blade = "blade9";
+	ch.equip.gun = "PiratesPistol";
+	ch.questchar = true;
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "French_Captain1_dialog.c";
+	ch.rank 	= 4;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "8";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "4000";
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	LAi_SetCivilianGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.Ship.Name = "Résistance";
+	ch.Ship.Type = "FR_Frigate";
+//	ch.Ship.Stopped = true;
+	LAi_SetHP(ch, 300.0, 300.0);
+	ch.Ship.crew.morale = 65;
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	SetRank(ch, FRANCE, 5);
+	ch.professionalnavy = FRANCE;
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Corin";
+	ch.old.lastname = "Arzillires";
+	ch.name = TranslateString("", "Corin");
+	ch.lastname = TranslateString("", "Arzillires");
+	ch.id		= "French_Ambush_Captain3";
+	ch.nation	= FRANCE;
+	ch.model	= "Corsair1_1";
+	ch.sound_type = "soldier";
+//	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade9+1");
+		GiveItem2Character(ch, "PiratesPistol+1");
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade9");
+		GiveItem2Character(ch, "PiratesPistol");
+	}
+	ch.equip.blade = "blade9";
+	ch.equip.gun = "PiratesPistol";
+	ch.questchar = true;
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "French_Captain1_dialog.c";
+	ch.rank 	= 4;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "8";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "4000";
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	LAi_SetCivilianGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.Ship.Name = "Reprisal";
+	ch.Ship.Type = "FR_Frigate";
+//	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 65;
+	LAi_SetHP(ch, 300.0, 300.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	SetRank(ch, FRANCE, 5);
+	ch.professionalnavy = FRANCE;
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Renouart";
+	ch.old.lastname = "Bonnefroy";
+	ch.name = TranslateString("", "Renouart");
+	ch.lastname = TranslateString("", "Bonnefroy");
+	ch.id		= "French_Ambush_Captain4";
+	ch.nation	= FRANCE;
+	ch.model	= "Corsair3_J";
+	ch.sound_type = "soldier";
+//	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade9+1");
+		GiveItem2Character(ch, "PiratesPistol+1");
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade9");
+		GiveItem2Character(ch, "PiratesPistol");
+	}
+	ch.equip.blade = "blade9";
+	ch.equip.gun = "PiratesPistol";
+	ch.questchar = true;
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "French_Captain1_dialog.c";
+	ch.rank 	= 4;
+	ch.reputation = "45";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "8";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "4000";
+	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
+	LAi_SetCivilianGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.Ship.Name = "Impétueuse";
+	ch.Ship.Type = "RN_RaaFrigate";
+//	ch.Ship.Stopped = true;
+	ch.Ship.crew.morale = 65;
+	LAi_SetHP(ch, 300.0, 300.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	SetRank(ch, FRANCE, 5);
+	ch.professionalnavy = FRANCE;
+	AddGameCharacter(n, ch);
+
+// Spanish agent
+	ch.old.name = "Jaime";
+	ch.old.lastname = "Lezcano";
+	ch.name = TranslateString("", "Jaime");
+	ch.lastname = TranslateString("", "Lezcano");
+	ch.id		= "Jaime Lezcano";
+	ch.model	= "Montoya";
+	ch.model.animation = "Rousselet";
+	ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.nation = SPAIN;
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade45+2");
+		GiveItem2Character(ch, "pistol25+2");
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade45");
+		GiveItem2Character(ch, "pistol25");
+	}
+	ch.equip.blade = "blade45";
+	ch.equip.gun = "pistol25";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2)); }
+	//JRH ammo mod <--	;
+	GiveItem2Character(ch, "commonarmor");
+	ch.location = "none";
+	ch.location.group = "goto";
+	ch.location.locator = "none";
+	ch.Dialog.Filename = "Jaime Lezcano_dialog.c";
+	ch.greeting = "Gr_Spanish_Spy";
+	ch.rank 	= 7;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "7";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "4";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	Ch.Perks.list.Toughness = true;
+	Ch.Perks.list.Gunman = true;
+	ch.money = "1500";
+	LAi_NoRebirthEnable(ch);
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 300.0, 300.0);
+	ch.questchar = true;
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
+
+// Spanish agent's lieutenant
+	ch.old.name = "Pelayo";
+	ch.old.lastname = "Núñez";
+	ch.name = TranslateString("", "Pelayo");
+	ch.lastname = TranslateString("", "Núñez");
+	ch.id		= "Pelayo Nunez";
+	ch.model	= "Pirat9";
+	ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.nation = SPAIN;
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "blade50+1");
+		GiveItem2Character(ch, "pistol8+1");
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade50");
+		GiveItem2Character(ch, "pistol8");
+	}
+	ch.equip.blade = "blade50";
+	ch.equip.gun = "pistol8";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2)); }
+	//JRH ammo mod <--	;
+	GiveItem2Character(ch, "cured");
+	ch.location = "none";
+	ch.location.group = "goto";
+	ch.location.locator = "none";
+	ch.Dialog.Filename = "Pelayo Nunez_dialog.c";
+	ch.greeting = "Gr_Spanish_Spy";
+	ch.rank 	= 6;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "3";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	Ch.Perks.list.Toughness = true;
+	ch.money = "500";
+	LAi_NoRebirthEnable(ch);
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.Ship.Name = "Tarantula";
+	ch.Ship.Type = "Brig3";
+	ch.Ship.Stopped = true;
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.questchar = true;
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.canhire = true;		// Can be hired after being captured
+	AddGameCharacter(n, ch);
+
+// Rival governor
+	ch.old.name = "Emiliano";
+	ch.old.lastname = "de Guzmán";
+	ch.name = TranslateString("", "Emiliano");
+	ch.lastname = TranslateString("", "de Guzmán");
+	ch.id		= "Emiliano de Guzmán";
+	ch.model	= "hub_por2";
+	ch.sex = "man";
+	ch.nation	= SPAIN;
+	if(ENABLE_WEAPONSMOD)
+	{
+		GiveItem2Character(ch, "bladeC17+2");
+		GiveItem2Character(ch, "pistol7+2");
+	}
+	else
+	{
+		GiveItem2Character(ch, "bladeC17");
+		GiveItem2Character(ch, "pistol7");
+	}
+	ch.equip.blade = "bladeC17";
+	ch.equip.gun = "pistol7";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2)); }
+	//JRH ammo mod <--	;
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Emiliano de Guzmán_dialog.c";
+	ch.rank 	= 35;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.greeting = "Gr_Diego Cordoba";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "8";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "8";
+	ch.skill.Sneak = "2";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	ch.money = "10000";
+	LAi_NoRebirthEnable(ch);
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 500.0, 500.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
+
+	ch.nation = FRANCE;
+	ch.old.name = "Gilles";
+	ch.old.lastname = "Clouzot";
+	ch.name = TranslateString("", "Gilles");
+	ch.lastname = TranslateString("", "Clouzot");
+	ch.id		= "Gilles Clouzot";
+	ch.model = "man2";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.Dialog.Filename = "Gilles Clouzot_dialog.c";
+//	GiveItem2Character(ch, "Piratesdagger");
+//	if(ENABLE_WEAPONSMOD)
+//	{
+//		GiveItem2Character(ch, "pistol1a+3");
+//	}
+//	else
+//	{
+//		GiveItem2Character(ch, "pistol1a");
+//	}
+//	ch.equip.blade = "Piratesdagger";
+//	ch.equip.gun = "pistol1a";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 6);
+		TakenItems(ch, "pistolbullets", 6); }
+	//JRH ammo mod <--	;
+	GiveItem2Character(ch, "cured");
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.greeting = "Gr_Etienne Dupuis";
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "3";
+	ch.skill.Sneak = "7";
+	ch.money = "1538";
+	ch.quest.meeting = "0";
+	LAi_NoRebirthEnable(ch);
+	LAi_SetCitizenType(ch);
+	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+// Spanish soldiers for general use
+// Spanish soldier 1
+	ch.old.name = "Soldier";
+	ch.old.lastname = "1";
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "1";
+	ch.id		= "Spanish_soldier1";
+	ch.model	= "offic_spa_17";
+	ch.sound_type = "soldier";
+	ch.sex = "man";
+	ch.nation = SPAIN;
+	GiveItem2Character(ch, "pistolmket");
+	ch.equip.gun = "pistolmket";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "musketbullets", 1 + rand(2)); }
+	//JRH ammo mod <--	
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "None";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Soldier_dialog.c";
+	ch.rank 	= 25;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "6";
+	ch.skill.Fencing = "9";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "7";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "7";
+	ch.skill.Commerce = "3";
+	ch.skill.Sneak = "7";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	ch.perks.list.Rush = true;
+	ch.perks.list.Gunman = true;
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 500.0, 500.0);
+	ch.questchar = true;
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+// Spanish soldier 2
+	ch.old.name = "Soldier";			// Name will be given by 'SetRandomNameToCharacter' in quest code
+	ch.old.lastname = "2";
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "2";
+	ch.id		= "Spanish_soldier2";
+	ch.model	= "soldier_spa_17";
+	ch.sound_type = "soldier";
+	ch.sex = "man";
+	ch.nation = SPAIN;
+	GiveItem2Character(ch, "pistolmket");
+	ch.equip.gun = "pistolmket";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "musketbullets", 1 + rand(2)); }
+	//JRH ammo mod <--	
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "None";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Soldier_dialog.c";
+	ch.rank 	= 20;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "3";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "6";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "6";
+	ch.skill.Commerce = "3";
+	ch.skill.Sneak = "6";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 400.0, 400.0);
+	ch.questchar = true;
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+// Spanish soldier 3
+	ch.old.name = "Soldier";			// Name will be given by 'SetRandomNameToCharacter' in quest code
+	ch.old.lastname = "3";
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "3";
+	ch.id		= "Spanish_soldier3";
+	ch.model	= "soldier_spa3_17";
+	ch.sound_type = "soldier";
+	ch.sex = "man";
+	ch.nation = SPAIN;
+	GiveItem2Character(ch, "pistolmket");
+	ch.equip.gun = "pistolmket";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "musketbullets", 1 + rand(2)); }
+	//JRH ammo mod <--	
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "None";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Soldier_dialog.c";
+	ch.rank 	= 20;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "3";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "6";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "6";
+	ch.skill.Commerce = "3";
+	ch.skill.Sneak = "6";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 400.0, 400.0);
+	ch.questchar = true;
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+// Spanish soldier 4
+	ch.old.name = "Soldier";			// Name will be given by 'SetRandomNameToCharacter' in quest code
+	ch.old.lastname = "4";
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "4";
+	ch.id		= "Spanish_soldier4";
+	ch.model	= "soldier_spa4_17";
+	ch.sound_type = "soldier";
+	ch.sex = "man";
+	ch.nation = SPAIN;
+	GiveItem2Character(ch, "pistolmket");
+	ch.equip.gun = "pistolmket";
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "musketbullets", 1 + rand(2)); }
+	//JRH ammo mod <--	
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "None";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Soldier_dialog.c";
+	ch.rank 	= 20;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "3";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "6";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "6";
+	ch.skill.Commerce = "3";
+	ch.skill.Sneak = "6";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 400.0, 400.0);
+	ch.questchar = true;
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
 	AddGameCharacter(n, ch);
 }

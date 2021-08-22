@@ -37,6 +37,6 @@ string DLG_TEXT[40] = {
 "I need someone skilled in preparing documents.",
 "What sort of documents?",
 "You know - unofficial. The sort I wouldn't be able to get from an honest writer in town.",
-"Ah, I see what you mean. You probably want to speak to Pablo Escriva.\nHe arrived here round about the time the authorities in #sSanto Domingo# realised that the colonel supposedly signing some army payslips was actually in Spain.\nHe lives just next door to the store.",
+"Ah, I see what you mean. You probably want to speak to Pablo Escriva.\nHe arrived here round about the time the authorities in #sSanto Domingo# realised that the colonel supposedly signing some army payslips was actually in Spain.\nHe lives in the big stone house along from the store.",
 "Thank you, Pablo Escriva sounds like just the sort of man I need.",
 };

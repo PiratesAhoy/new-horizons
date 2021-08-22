@@ -34,19 +34,16 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
-	gov_kid_pronoun1 = XI_ConvertString(GetMyPronounSubj(characterFromID(PChar.quest.romance)));	// "he" / "she"
-	gov_kid_pronoun3 = XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.romance)));	// "him" / "her"
+	gov_kid_pronoun1 = XI_ConvertString(GetMyPronounSubj(characterFromID(PChar.quest.romance)));		// "he" / "she"
+	gov_kid_pronoun2 = XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.romance)));		// "him" / "her"
+	gov_kid_pronoun3 = XI_ConvertString(GetMyPronounPossessive(characterFromID(PChar.quest.romance)));	// "his" / "her"
 	if (PChar.sex == "man")
 	{
 		gov_kid = XI_ConvertString("daughter");
-//		gov_kid_pronoun1 = XI_ConvertString("she");
-		gov_kid_pronoun2 = XI_ConvertString("her");
 	}
 	else
 	{
 		gov_kid = XI_ConvertString("son");
-//		gov_kid_pronoun1 = XI_ConvertString("he");
-		gov_kid_pronoun2 = XI_ConvertString("his");
 	}
 	
 	DeleteQuestAttribute("ardent_kidnap.find_merchant");
@@ -168,7 +165,7 @@ void ProcessDialogEvent()
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, 2000);
 			TakeItemFromCharacter(Pchar, "SignetRing");
-			dialog.text = DLG_TEXT[33]+ GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[34] + gov_kid_pronoun2 + DLG_TEXT[35];
+			dialog.text = DLG_TEXT[33]+ GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[34] + gov_kid_pronoun3 + DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			link.l1.go = "exit";
 			Preprocessor_AddQuestData("villain", GetMySimpleName(characterFromID(PChar.quest.villain)));
@@ -326,7 +323,7 @@ void ProcessDialogEvent()
 
 		case "hunt_where_is_romance":
 			Preprocessor_Add("pronoun", gov_kid_pronoun1);
-			Preprocessor_Add("pronoun3", gov_kid_pronoun3);
+			Preprocessor_Add("pronoun2", gov_kid_pronoun2);
 			dialog.text = DLG_TEXT[83] + DLG_TEXT[80];
 			link.l1 = DLG_TEXT[84];
 			link.l1.go = "hunt_where_is_romance2";
@@ -334,7 +331,7 @@ void ProcessDialogEvent()
 
 		case "hunt_where_is_romance_not_convoy":
 			Preprocessor_Add("pronoun", gov_kid_pronoun1);
-			Preprocessor_Add("pronoun3", gov_kid_pronoun3);
+			Preprocessor_Add("pronoun2", gov_kid_pronoun2);
 			dialog.text = DLG_TEXT[79] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[80];
 			link.l1 = DLG_TEXT[84];
 			link.l1.go = "hunt_where_is_romance2";
@@ -350,7 +347,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "hunt_convoy_romance_taunt":
-			Preprocessor_Add("pronoun2", gov_kid_pronoun2);
+			Preprocessor_Add("pronoun3", gov_kid_pronoun3);
 			dialog.text = DLG_TEXT[87] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[78];
 			link.l1 = "";
 			AddDialogExitQuest("hunt_romance_joins_villain");
@@ -358,7 +355,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "hunt_romance_taunt":
-			Preprocessor_Add("pronoun2", gov_kid_pronoun2);
+			Preprocessor_Add("pronoun3", gov_kid_pronoun3);
 			dialog.text = DLG_TEXT[77] + GetMyName(characterFromID(PChar.quest.romance)) + DLG_TEXT[78];
 			link.l1 = "";
 			AddDialogExitQuest("hunt_romance_joins_villain");

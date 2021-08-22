@@ -12,6 +12,8 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
+	if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+	else Preprocessor_Add("addr", XI_ConvertString("my child"));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -27,7 +29,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "voice\PAJO\PAJO001";
 
-			Dialog.Text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CHILD, false, false) + "."; // KK
+			Dialog.Text = DLG_TEXT[0]; // KK
 			Link.l1 = DLG_TEXT[1];
 			Link.l1.go = "node_2";
 			link.l2 = DLG_TEXT[2];
@@ -71,7 +73,6 @@ void ProcessDialogEvent()
 
 		case "donation":
 			Dialog.snd = "voice\PAJO\PAJO004";
-			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.Text = DLG_TEXT[12];
 			Link.l1 = DLG_TEXT[13];
 			Link.l1.go = "No donation";
@@ -116,7 +117,6 @@ void ProcessDialogEvent()
 
 		case "No donation":
 			Dialog.snd = "voice\PADO\PADO042";
-			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.Text = DLG_TEXT[17];
 			Link.l1 = DLG_TEXT[18];
 			Link.l1.go = "node_3";
@@ -166,7 +166,6 @@ void ProcessDialogEvent()
 
 		case "ispoved":
 			Dialog.snd = "voice\PAJO\PAJO006";
-			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.text = DLG_TEXT[29];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "exit";
@@ -176,7 +175,6 @@ void ProcessDialogEvent()
 
 		case "ispoved_1":
 			Dialog.snd = "voice\PAJO\PAJO007";	
-			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.text = DLG_TEXT[32];
 			link.l1 = DLG_TEXT[33];
 			link.l1.go = "ispoved_2";
@@ -184,16 +182,24 @@ void ProcessDialogEvent()
 
 		case "ispoved_2":
 			Dialog.snd = "voice\PAJO\PAJO008";
-			dialog.text = DLG_TEXT[34];
+			if(NPChar.nation == SPAIN)
+			{
+				dialog.text = DLG_TEXT[68];
+				link.l2 = DLG_TEXT[69];
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[34];
+				link.l2 = DLG_TEXT[36];
+			}
 			link.l1 = DLG_TEXT[35];
 			link.l1.go = "ispoved_3";
-			link.l2 = DLG_TEXT[36];
 			link.l2.go = "ispoved_4";
 		break;
 
 		case "ispoved_3":
 			Dialog.snd = "voice\PAJO\PAJO009";
-			dialog.text = DLG_TEXT[37] + GetMyAddressForm(NPChar, PChar, ADDR_CHILD, false, false) + "."; // KK
+			dialog.text = DLG_TEXT[37];
 			link.l1 = DLG_TEXT[38];
 			link.l1.go = "exit";
 		break;
@@ -209,7 +215,7 @@ void ProcessDialogEvent()
 			if (makeint(pchar.reputation) > 50)
 			{
 				Dialog.snd = "voice\PAJO\PAJO0011";
-				dialog.text = DLG_TEXT[41] + GetMyAddressForm(NPChar, PChar, ADDR_CHILD, false, false) + "."; // KK
+				dialog.text = DLG_TEXT[41];
 				link.l1 = DLG_TEXT[42];
 				link.l1.go = "exit";
 				link.l2 = DLG_TEXT[43];
@@ -218,7 +224,7 @@ void ProcessDialogEvent()
 			else
 			{
 				Dialog.snd = "voice\PAJO\PAJO012";
-				dialog.text = DLG_TEXT[44] + GetMyAddressForm(NPChar, PChar, ADDR_CHILD, false, false) + "."; // KK
+				dialog.text = DLG_TEXT[44];
 				link.l1 = DLG_TEXT[45];
 				link.l1.go = "exit";
 			}
@@ -235,7 +241,6 @@ void ProcessDialogEvent()
 
 		case "prihod_2":
 			Dialog.snd = "voice\PAJO\PAJO014";
-			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.text = DLG_TEXT[49];
 			link.l1 = DLG_TEXT[50];
 			link.l1.go = "exit";
@@ -256,7 +261,6 @@ void ProcessDialogEvent()
 			else
 			{
 				Dialog.snd = "voice\PAJO\PAJO016";
-				Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 				dialog.text = DLG_TEXT[57];
 				link.l1 = DLG_TEXT[58];
 				link.l1.go = "exit";
@@ -265,7 +269,6 @@ void ProcessDialogEvent()
 
 		case "prihod_4":
 			Dialog.snd = "voice\PAJO\PAJO017";
-			Preprocessor_Add("addr", GetCharacterAddressForm(PChar, ADDR_CHILD, false, false)); // KK
 			dialog.text = DLG_TEXT[59];
 			link.l1 = DLG_TEXT[60];
 			link.l1.go = "exit";

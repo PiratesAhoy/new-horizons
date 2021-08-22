@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"¿Perdiste algo, capitan?",
+"¿Que quieres decir y quien eres?",
+"¿No recuerdas a un cierto gobernador perdiendo a su hija?",
+"¿Cómo sabes eso?",
+"Sera mejor que lo dejes así o mi capitan se involucrará. ¡Lo tengo!",
+"No lo creo, a menos que me digas quien es tu capitán",
+"Es Davy Jones por supuesto.",
+"¡¿Davy Jones?! Ahora entiendo.",
+"Bueno, he perdido suficiente tiempo contigo. Asi que, déjalo, ¡o podrías encontrarte en el casillero!",
+"En otras circunstancias, probarías mi cuchilla pero si no me interesa encontrarme en el casillero de Davy Jones, me despediré.",
+"Hola, capitán. No me gustaría estar en su situacion. Davy Jones le está esperando. ¡Vayan a conocerlo!",
+"Confieso que nunca me ha gustado este tipo de reunión familiar.",
+"¿Pensaste que podrías escapar de nosotros, Sparrow? ¡Que mal estabas ... Ahora síguenos!",
+"Supongo que no tengo otra opción.",
+"Davy Jones te esta esperando en la orilla. ¡Ve a conocerlo!",
+"Confieso que nunca me ha gustado este tipo de reunión familiar ...",
+"Bueno, bueno ... ¡Mira quienes tenemos aqui! Visitando la guarida del rey del mar, ¿verdad? ¡Te esta esperando en su cabaña, escaleras arriba!",
+"De hecho, estaba buscando una audiencia con el Sr. Jones ... por así decirlo.",
+
+};

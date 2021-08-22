@@ -87,7 +87,7 @@ void InitInterface_I(string iniName, int item)
 
 	//JRH -->
 	if (selection == BLADE_ITEM_TYPE || selection == ARMOR_ITEM_TYPE || selection == AMMUNITION_ITEM_TYPE || selection == FLASK_ITEM_TYPE || selection == POUCH_ITEM_TYPE || selection == BELT_ITEM_TYPE || selection == OPEN_ITEM_TYPE) selection = GUN_ITEM_TYPE;
-	if (selection == SPYGLASS_ITEM_TYPE  || selection == LOCKPICK_ITEM_TYPE || selection == CLOCK_ITEM_TYPE || selection == COMPASS_ITEM_TYPE || selection == DOCUMENT_ITEM_TYPE || selection == OUTFIT_ITEM_TYPE) selection = OBJECT_ITEM_TYPE;
+	if (selection == SPYGLASS_ITEM_TYPE  || selection == LOCKPICK_ITEM_TYPE || selection == CLOCK_ITEM_TYPE || selection == COMPASS_ITEM_TYPE || selection == DOCUMENT_ITEM_TYPE || selection == OUTFIT_ITEM_TYPE || selection == FLIP_ITEM_TYPE) selection = OBJECT_ITEM_TYPE;
 	if (selection == EQUIP_ITEM_TYPE || selection == EQUIP2_ITEM_TYPE || selection == EQUIP3_ITEM_TYPE || selection == EXAMINE_ITEM_TYPE) selection = QUEST_ITEM_TYPE;
 	//<-- JRH
 
@@ -304,10 +304,9 @@ if(comName=="activate" || comName=="click")
 
 						TakeItemFromCharacter(Pchar, "ammobag2");
 						GiveItem2Character(Pchar, "ammobag1");
-
-						if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 					}
 				}
+				if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 			}
 			else
 			{
@@ -321,9 +320,9 @@ if(comName=="activate" || comName=="click")
 					{
 						TakeItemFromCharacter(Pchar, "ammobag2");
 						GiveItem2Character(Pchar, "ammobag1");
-
-						if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 					}
+
+					if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 				}
 			}
 			else
@@ -333,14 +332,20 @@ if(comName=="activate" || comName=="click")
 					if(itmName == "pistolbelt")	//yes should be different, pistolbelt is not a gun
 					{
 						if(IsEquipCharacterByItem(Pchar, "ammobag2")) RemoveCharacterEquip(Pchar, POUCH_ITEM_TYPE);
-
 						if(CheckCharacterItem(Pchar,"ammobag2"))
 						{
 							TakeItemFromCharacter(Pchar, "ammobag2");
 							GiveItem2Character(Pchar, "ammobag1");
-
-							if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 						}
+
+						if(IsEquipCharacterByItem(Pchar, "pistolcannon")) RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+						if(CheckCharacterItem(Pchar,"pistolcannon"))
+						{
+							TakeItemFromCharacter(Pchar, "pistolcannon");
+							GiveItem2Character(Pchar, "pistolcannon1");
+						}
+
+						if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 					}
 				}
 			}
@@ -354,12 +359,18 @@ if(comName=="activate" || comName=="click")
 					{
 						TakeItemFromCharacter(Pchar, "ammobag1");
 						GiveItem2Character(Pchar, "ammobag2");
-
-						if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 					}
+
+					if(CheckCharacterItem(Pchar,"pistolcannon1"))
+					{
+						TakeItemFromCharacter(Pchar, "pistolcannon1");
+						GiveItem2Character(Pchar, "pistolcannon");
+					}
+
+					if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 				}
 			}
-
+			
 			if(itmName == "ammobag2")
 			{
 				RemoveCharacterEquip(Pchar, POUCH_ITEM_TYPE);
@@ -1137,6 +1148,7 @@ if(comName=="activate" || comName=="click")
 				PlaySound("INTERFACE\water_tap.wav");
 				TakeItemFromCharacter(Pchar, "paper_clip");
 				GiveItem2Character(Pchar, "paper_clip2");
+				AddQuestRecord("KR_amulet","8");
 
 		//		ExtraUpdate = true; // PB
 			}
@@ -1245,6 +1257,7 @@ if(comName=="activate" || comName=="click")
 					SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 
 					LAi_QuestDelay("pchar_mhm", 0.01);
+					LAi_QuestDelay("pchar_outfit_check", 0.1);	//if pistol20 is equipped etc
 				}	
 			}
 
@@ -1274,6 +1287,25 @@ if(comName=="activate" || comName=="click")
 				LAi_QuestDelay("pchar_very_nice", 1.0);
 				
 				LAi_QuestDelay("secret_room_finished_check", 0.1);
+			}
+
+			if(itmName == "toolbox_empty")
+			{
+				PlaySound("PEOPLE\blade_basket.wav");
+				PlaySound("INTERFACE\klonk.wav");
+				TakeItemFromCharacter(Pchar, "toolbox_empty");
+				TakeItemFromCharacter(Pchar, "bladesaw");
+				TakeItemFromCharacter(Pchar, "bladehammer");
+				TakeNItems(Pchar,"nails", -8);
+				TakeItemFromCharacter(Pchar, "bladeirontool");
+				GiveItem2Character(Pchar, "toolbox_filled");
+			}
+
+			if(itmName == "book73_open")
+			{
+				PlaySound("INTERFACE\book_close.wav");
+				TakeItemFromCharacter(Pchar, "book73_open");
+				GiveItem2Character(Pchar, "book73_closed");
 			}
 //JRH equip
 		//<-- JRH
@@ -1305,6 +1337,18 @@ if(comName=="activate" || comName=="click")
 		}
 	break;
 // <-- KK
+// JRH -->
+	case "FLIP_BUTTON":
+		if(comName=="activate" || comName=="click")
+		{
+			I_FlipItem();
+		}
+		if(comName=="upstep" || comName=="deactivate")
+		{
+			SetCurrentNode("ITEMSLIST");
+		}
+	break;
+// <-- JRH
 // Levis -->
 	case "TOSS_BUTTON":
 		if(comName=="activate" || comName=="click")
@@ -1333,6 +1377,12 @@ if(comName=="activate" || comName=="click")
 			{
 				SetCurrentNode("EXAMINE_BUTTON");
 			}
+			// JRH -->
+			if (GetSelectable("FLIP_BUTTON"))
+			{
+				SetCurrentNode("FLIP_BUTTON");
+			}
+			// <-- JRH
 			//Levis -->
 			if (GetSelectable("TOSS_BUTTON"))
 			{
@@ -1425,27 +1475,28 @@ void I_ExamineItem()
 	string itmName = GetItemIDByOrder(nCurScroll);
 	aref itmRef;
 	if (Items_FindItem(itmName, &itmRef) >= 0 && CheckAttribute(itmRef, "index")) GameInterface.ItemIdx = itmRef.index;
-//JRH -->
+
 	ref PChar;
 	PChar = GetMainCharacter();
-/*
-	if(itmName == "notebook")
-	{
-		if(!CheckAttribute(Pchar,"quest.study_notebook") || Pchar.quest.study_notebook != "yes")
-		{
-			LAi_QuestDelay("notebook", 0.1);
-		}
-	}
-*/
 
-
-//JRH -->
 	if(itmName == "map")
 	{
 		if(CheckAttribute(Pchar,"quest.check_pelagomap") && Pchar.quest.check_pelagomap == "enabled")
 		{
 			AddQuestRecord("Woodes_Rogers_quest", "2");
 			Pchar.quest.check_pelagomap = "disabled";
+		}
+
+		if(GetAttribute(pchar, "Eden_map") == "on1" || GetAttribute(pchar, "Eden_map") == "on2")
+		{
+			Pchar.Eden_map = "on2";
+			LAi_QuestDelay("I_know_which_island", 0.1);
+		}
+
+		if(GetAttribute(pchar, "Defoe_map") == "on1" || GetAttribute(pchar, "Defoe_map") == "on2")
+		{
+			Pchar.Defoe_map = "on2";
+			LAi_QuestDelay("I_know_which_island", 0.1);
 		}
 
 	// PB: Only One Map Interface -->
@@ -1456,7 +1507,7 @@ void I_ExamineItem()
 		PChar.inventory = true;
 		return;
 	}
-
+//JRH -->
 	if(itmName == "book52")
 	{
 		PlaySound("INTERFACE\book_open.wav");
@@ -1890,6 +1941,7 @@ void I_ExamineItem()
 		PlaySound("INTERFACE\paper_small.wav");
 		TakeItemFromCharacter(Pchar, "doc60C");
 		GiveItem2Character(Pchar, "doc60D");
+		AddQuestRecord("KR_letter","5");
 		
 		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
 		InterfaceStack.SelectMenu_node = "I_ITEMS";
@@ -2227,7 +2279,7 @@ void I_ExamineItem()
 		PlaySound("PEOPLE\clothes1.wav");
 		TakeItemFromCharacter(Pchar, "flagchest_openA");
 		GiveItem2Character(Pchar, "flagchest_empty");
-
+	
 		if(CheckAttribute(Pchar,"tower.flag"))
 		{
 			if(pchar.tower.flag != "pir") GiveItem2Character(Pchar, "bladeflag_pir");
@@ -2270,6 +2322,7 @@ void I_ExamineItem()
 		PlaySound("INTERFACE\paper.wav");
 		TakeItemFromCharacter(Pchar, "book69B");
 		GiveItem2Character(Pchar, "book69C");
+		AddQuestRecord("KR_logbook","7");
 		
 		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
 		InterfaceStack.SelectMenu_node = "I_ITEMS";
@@ -2311,6 +2364,8 @@ void I_ExamineItem()
 		TakeItemFromCharacter(Pchar, "BB_hatC");
 		GiveItem2Character(Pchar, "BB_hatA2");
 		GiveItem2Character(Pchar, "BB_key");
+
+		AddQuestRecord("KR_tricorn","5");
 		
 		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
 		InterfaceStack.SelectMenu_node = "I_ITEMS";
@@ -2324,7 +2379,7 @@ void I_ExamineItem()
 		PlaySound("INTERFACE\carpet_move.wav");
 		TakeItemFromCharacter(Pchar, "auction_list_roll");
 		GiveItem2Character(Pchar, "auction_list_open");
-		
+
 		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
 		InterfaceStack.SelectMenu_node = "I_ITEMS";
 		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
@@ -2350,6 +2405,7 @@ void I_ExamineItem()
 		GiveItem2Character(Pchar, "tailors_note");
 
 		Pchar.jungle_path = "know_how";
+		AddQuestRecord("KR_logbook","5");
 
 		//now the way to the red house is enabled
 		Locations[FindLocation("KR_jungle_8")].reload.l3.go = "KR_jungle_13";
@@ -2827,6 +2883,9 @@ void I_ExamineItem()
 			Pchar.eden_info = "start";
 			ChangeCharacterAddressGroup(characterFromID("Edmund Christobel Shaw"), "Grand_Cayman_townhall", "goto", "goto12");
 			LAi_SetStayType(characterFromID("Edmund Christobel Shaw"));
+			//these open to Estate
+			Locations[FindLocation("Grand_Cayman_townhall")].locators_radius.box.box1 = 0.8;
+			Locations[FindLocation("Grand_Cayman_townhall")].locators_radius.goto.box1 = 0.8;
 		}
 	}
 
@@ -2914,6 +2973,7 @@ void I_ExamineItem()
 		{
 			Pchar.book72_richardsL = "read";
 			AddQuestRecord("Blackbeards_crew","3");
+			AddQuestRecord("Blackbeards_crew","5");
 
 			//open wr_cave_shore here
 			Island_SetReloadEnableLocal("Redmond", "reload_3", true);
@@ -3056,7 +3116,7 @@ void I_ExamineItem()
 			LAi_QuestDelay("secret_room_finished_check", 0.1);
 		}
 	}
-
+//pär BB1
 	if(itmName == "sealed_map")
 	{
 		if(IsEquipCharacterByItem(Pchar, "folding_knife"))
@@ -3070,13 +3130,8 @@ void I_ExamineItem()
 
 			if(!CheckAttribute(Pchar,"quest.study_mapBB1") || Pchar.quest.study_mapBB1 != "yes")
 			{
-		//		AddQuestRecord("Secrets", "7");
 				AddQuestRecord("Benjamin_Hornigold", "2");
-				CloseQuestHeader("Benjamin_Hornigold");
-				Pchar.quest.study_mapBB1 = "yes";
 			}
-		
-			LAi_QuestDelay("secret_room_finished_check", 0.1);
 		}
 		else PlaySound("VOICE\ENGLISH\blaze_huh.wav");
 
@@ -3086,16 +3141,304 @@ void I_ExamineItem()
 		EndCancelInterface(false);
 		return;	
 	}
-/*
+
 	if(itmName == "mapBB1")
 	{
-		PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+		if(GetAttribute(pchar, "mapBB1") == "info")
+		{
+			//do nothing
+		}
+		else
+		{
+			DeleteQuestHeader("Benjamin_Hornigold");
+			AddQuestRecord("Benjamin_Hornigold", "3");
+			CloseQuestHeader("Benjamin_Hornigold");	
+			Pchar.quest.study_mapBB1 = "yes";
+			Pchar.mapBB1 = "info";
+
+			LAi_QuestDelay("secret_room_finished_check", 0.1);
+		}
 	}
-*/
+
+	if(itmName == "mapBB2A")
+	{
+		if(GetAttribute(pchar, "Caesar_map") == "cleaning")
+		{
+			//do nothing
+		}
+		else
+		{
+			Pchar.Caesar_map = "cleaning";
+			Pchar.Hands_map = "off";
+			AddQuestRecord("Caesar", "17");
+		
+			LAi_QuestDelay("clean_up_map", 0.1);
+		}
+	}
+
+	if(itmName == "mapBB2B")
+	{
+		if(GetAttribute(pchar, "mapBB2B") == "info")
+		{
+			//do nothing
+		}
+		else
+		{
+			Pchar.mapBB2B = "info";
+			DeleteQuestHeader("Caesar");
+			AddQuestRecord("Caesar","17");
+			AddQuestRecord("Caesar","18");
+			CloseQuestHeader("Caesar");
+		}
+	}
+
+	if(itmName == "mapBB3")
+	{
+		if(GetAttribute(pchar, "Eden_map") == "off")
+		{
+			//do nothing
+		}
+		else
+		{
+			Pchar.Eden_map = "on1";
+			AddQuestRecord("Charles_Eden", "11");
+
+			LAi_QuestDelay("which_island", 0.1);
+		}
+	}
+
+	if(itmName == "mapBB4A")
+	{
+		if(CheckAttribute(Pchar,"monastary") && Pchar.monastary == "dont_disturb")
+		{
+			AddQuestRecord("Richards", "24");
+		}
+		else
+		{
+			if(Locations[FindLocation("BB_crypt2_2")].reload.l2.disable == 0)
+			{
+				AddQuestRecord("Richards", "24");
+			}
+			else
+			{
+				PlaySound("INTERFACE\paper_small.wav");
+				TakeItemFromCharacter(Pchar, "mapBB4A");
+				GiveItem2Character(Pchar, "mapBB4A_back");
+
+				PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+				InterfaceStack.SelectMenu_node = "I_ITEMS";
+				interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+				EndCancelInterface(false);
+				return;
+			}	
+		}
+	}
+
+	if(itmName == "mapBB4A_back")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "mapBB4A_back");
+		GiveItem2Character(Pchar, "mapBB4A");
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "mapBB4B")
+	{
+		AddQuestRecord("Richards", "25");
+	}
+
+	if(itmName == "mapBB4C")
+	{
+		if(GetAttribute(pchar, "mapBB4C") == "info")
+		{
+			//do nothing
+		}
+		else
+		{
+			Pchar.mapBB4C = "info";
+			DeleteQuestHeader("Richards");
+			AddQuestRecord("Richards","23");
+			CloseQuestHeader("Richards");
+		}
+	}
+
+	if(itmName == "mapBB5A")
+	{
+		if(GetAttribute(pchar, "Hands_map") == "cleaning")
+		{
+			//do nothing
+		}
+		else
+		{
+			Pchar.Hands_map = "cleaning";
+			Pchar.Caesar_map = "off";
+			AddQuestRecord("Israel_Hands", "13");
+		
+			LAi_QuestDelay("clean_up_map", 0.1);
+		}
+	}
+
+	if(itmName == "mapBB5B")
+	{
+		if(GetAttribute(pchar, "mapBB5B") == "info")
+		{
+			//do nothing
+		}
+		else
+		{
+			Pchar.mapBB5B = "info";
+			DeleteQuestHeader("Israel_Hands");
+			AddQuestRecord("Israel_Hands", "14");
+			CloseQuestHeader("Israel_Hands");
+		}
+	}
+
+	if(itmName == "mapBB6")
+	{
+		if(GetAttribute(pchar, "Defoe_map") == "off")
+		{
+			//do nothing
+		}
+		else
+		{
+			Pchar.Defoe_map = "on1";
+			AddQuestRecord("Johnson", "5");
+
+			LAi_QuestDelay("which_island", 0.1);
+		}
+	}
+
+	if(itmName == "mapWR1")
+	{
+		//blue letters
+		if(GetAttribute(pchar, "WR1_map") == "on")
+		{
+			LAi_QuestDelay("return_to_defoe12", 0.1);	//Kristiania
+		}
+		else
+		{
+			Pchar.WR1_map = "on";
+			LAi_SetSitType(Pchar);
+
+			LAi_QuestDelay("return_to_defoe11", 0.1);	//Saint_X		
+		}
+	}
+
+	if(itmName == "mapWR2")
+	{
+		LAi_QuestDelay("return_to_defoe16", 0.1);
+	}
+
+	if(itmName == "mapWR3")
+	{
+		LAi_QuestDelay("return_to_defoe20", 0.1);
+	}
+
+	if(itmName == "mapWR4")
+	{
+		LAi_QuestDelay("return_to_defoe24", 0.1);
+	}
+
+	if(itmName == "mapWR5")
+	{
+		if(GetAttribute(pchar, "WR5_map") == "done")
+		{
+			//nothing more happens
+		}
+		else LAi_QuestDelay("return_to_defoe29", 0.1);
+	}
+
+	if(itmName == "toolbox_filled")
+	{
+		PlaySound("PEOPLE\basket.wav");
+		PlaySound("INTERFACE\metal_fall.wav");
+		TakeItemFromCharacter(Pchar, "toolbox_filled");
+		GiveItem2Character(Pchar, "toolbox_empty");
+
+		GiveItem2Character(Pchar, "bladesaw");
+		GiveItem2Character(Pchar, "bladehammer");
+		TakeNItems(Pchar,"nails", 8);
+		GiveItem2Character(Pchar, "bladeirontool");
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "book73_closed")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "book73_closed");
+		GiveItem2Character(Pchar, "book73_open"); 
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "long_johns")
+	{
+		PlaySound("OBJECTS\SHIPCHARGE\sail_damage1.wav");
+		TakeItemFromCharacter(Pchar, "long_johns");
+		GiveItem2Character(Pchar, "long_johns_map"); 
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "long_johns_map")
+	{
+		PlaySound("INTERFACE\paper_small.wav");
+		TakeItemFromCharacter(Pchar, "long_johns_map");
+		GiveItem2Character(Pchar, "mapBB1"); 
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "bandana")
+	{
+		PlaySound("PEOPLE\clothes1.wav");
+		TakeItemFromCharacter(Pchar, "bandana");
+		GiveItem2Character(Pchar, "bandana_key"); 
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
+	if(itmName == "bandana_key")
+	{
+		PlaySound("INTERFACE\took_item.wav");
+		TakeItemFromCharacter(Pchar, "bandana_key");
+		GiveItem2Character(Pchar, "key17"); 
+		
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+
 //JRH examine
 	
-
-
 //<-- JRH
 	
 	//Levis Skill Books -->
@@ -3115,6 +3458,36 @@ void I_ExamineItem()
 	EndCancelInterface(false);
 }
 // <-- KK
+
+// JRH -->
+void I_FlipItem()
+{
+	string itmName = GetItemIDByOrder(nCurScroll);
+	aref itmRef;
+	if (Items_FindItem(itmName, &itmRef) >= 0 && CheckAttribute(itmRef, "index")) GameInterface.ItemIdx = itmRef.index;
+	ref PChar;
+	PChar = GetMainCharacter();
+
+	if(itmName == "luckydimeA" || itmName == "luckydimeB")
+	{
+		PlaySound("INTERFACE\flip_coin.wav");
+		TakeItemFromCharacter(Pchar, "luckydimeA");
+		TakeItemFromCharacter(Pchar, "luckydimeB");
+		
+		if(rand(1) <1)
+		{
+			GiveItem2Character(Pchar, "luckydimeA"); 
+		}
+		else GiveItem2Character(Pchar, "luckydimeB");
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;	
+	}
+}
+// <-- JRH
 
 void ChangeSelectedScroll(string curItemGroup)
 {
@@ -3251,23 +3624,15 @@ void UpdateItemData()
 		{
 			case GUN_ITEM_TYPE:
 				// scheffnow - weaponsmod -->
-				if (CheckAttribute(itemARef,"QualityName"))
-				{
-					// LDH added quality "q" translation string - 07May09
-					Quality = TranslateString("", "q"+itemARef.QualityName) + " ";
-				}
-				GameInterface.strings.ItemName = Quality + GameInterface.strings.ItemName; // KK
+				if (CheckAttribute(itemARef,"QualityName")) Quality = TranslateString("", "q"+itemARef.QualityName);
+				//GameInterface.strings.ItemName = Quality + GameInterface.strings.ItemName; // KK // MAXIMUS 31.05.2019: corrected for russian spelling
 				// scheffnow - weaponsmod <--
 				itmDescribe = GetAssembledString(TranslateString("", "weapon gun parameters"), itemARef) + newLineStr;
 			break;
 			case BLADE_ITEM_TYPE:
 				// scheffnow - weaponsmod -->
-				if (CheckAttribute(itemARef,"QualityName"))
-				{
-					// LDH added quality "q" translation string - 07May09
-					Quality = TranslateString("", "q"+itemARef.QualityName) + " ";
-				}
-				GameInterface.strings.ItemName = Quality + GameInterface.strings.ItemName; // KK
+				if (CheckAttribute(itemARef,"QualityName")) Quality = TranslateString("", "q"+itemARef.QualityName);
+				//GameInterface.strings.ItemName = Quality + GameInterface.strings.ItemName; // KK // MAXIMUS 31.05.2019: corrected for russian spelling
 				// scheffnow - weaponsmod <--
 				itmDescribe = GetAssembledString(TranslateString("", "weapon blade parameters"), itemARef) + newLineStr; // KK
 			break;
@@ -3277,6 +3642,17 @@ void UpdateItemData()
 			break;
 			// GreatZen <--
 		}
+
+		// MAXIMUS 31.05.2019: corrected for russian spelling ==>
+		switch(LanguageGetLanguage())
+		{
+			case "Russian":
+				GameInterface.strings.ItemName = GameInterface.strings.ItemName + " " + Quality;
+			break;
+			GameInterface.strings.ItemName = Quality + " " + GameInterface.strings.ItemName;//default for English
+		}
+		// MAXIMUS 31.05.2019: corrected for russian spelling <==
+
 	}
 	else
 	{	if( CheckAttribute(itemARef,"potion") )
@@ -3333,18 +3709,30 @@ void UpdateItemData()
 		|| itemARef.groupID == EXAMINE_ITEM_TYPE || itemARef.groupID == OPEN_ITEM_TYPE) {
 			//JRH: DOCUMENT_ITEM_TYPE
 			SetNodeUsing("EQUIP_BUTTON", false);
+			SetNodeUsing("FLIP_BUTTON", false);
 			SetNodeUsing("EXAMINE_BUTTON", true);
 			return;
 		}
 // <-- KK
+// JRH -->
+		if (itemARef.groupID == FLIP_ITEM_TYPE) {
+			SetNodeUsing("EQUIP_BUTTON", false);
+			SetNodeUsing("EXAMINE_BUTTON", false);
+			SetNodeUsing("FLIP_BUTTON", true);
+			return;
+		}
+// <-- JRH
+
 		if (itemARef.groupID!=BLADE_ITEM_TYPE && itemARef.groupID!=GUN_ITEM_TYPE && itemARef.groupID!=ARMOR_ITEM_TYPE && itemARef.groupID!=SPYGLASS_ITEM_TYPE
 		&& itemARef.groupID!=FLASK_ITEM_TYPE && itemARef.groupID!=POUCH_ITEM_TYPE && itemARef.groupID!=LOCKPICK_ITEM_TYPE
 		&& itemARef.groupID!=CLOCK_ITEM_TYPE && itemARef.groupID!=COMPASS_ITEM_TYPE && itemARef.groupID!=BELT_ITEM_TYPE
 		&& itemARef.groupID!=DOCUMENT_ITEM_TYPE && itemARef.groupID!=OUTFIT_ITEM_TYPE
-		&& itemARef.groupID!=EQUIP_ITEM_TYPE && itemARef.groupID!=EQUIP2_ITEM_TYPE && itemARef.groupID!=EQUIP3_ITEM_TYPE) {
+		&& itemARef.groupID!=EQUIP_ITEM_TYPE && itemARef.groupID!=EQUIP2_ITEM_TYPE && itemARef.groupID!=EQUIP3_ITEM_TYPE
+		&& itemARef.groupID!=FLIP_ITEM_TYPE) {
 			//JRH: new types
 			SetNodeUsing("EQUIP_BUTTON",false);
 			SetNodeUsing("EXAMINE_BUTTON", false);
+			SetNodeUsing("FLIP_BUTTON", false);	//JRH
 			return;
 		}
 		SetNodeUsing("EQUIP_BUTTON",true);
@@ -3370,17 +3758,20 @@ void UpdateItemData()
 			{
 				//JRH: new types
 				SetSelectable("EQUIP_BUTTON",true);
+				SetNodeUsing("FLIP_BUTTON", false); //JRH
 			}
 			SetSelectable("TOSS_BUTTON", false); //Levis
 		}
 		else
 		{
 			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"EQUIP_BUTTON",0, XI_ConvertString("Equip that"));
+			SetNodeUsing("FLIP_BUTTON", false); //JRH
 		}
 	} else {
 		SetNodeUsing("EQUIP_BUTTON",false);
 		SetNodeUsing("EXAMINE_BUTTON", false); // KK
 		SetSelectable("TOSS_BUTTON", false); //Levis
+		SetNodeUsing("FLIP_BUTTON", false);  //JRH
 	}
 }
 /*
@@ -3592,10 +3983,13 @@ bool ThisItemCanBeEquip( aref arItem )
 
 	//JRH -->
 	if(chrgQ<6) return true;
-	if( !IsCharacterPerkOn(mchref,"GunFighter") )
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)
 	{
-		ShowHelpString("chelp_items#11");
-		return false;
+		if(!IsCharacterPerkOn(mchref,"GunFighter") )
+		{
+			ShowHelpString("chelp_items#11");
+			return false;
+		}
 	}
 	//<-- JRH
 
@@ -3606,6 +4000,7 @@ void FillSelectedScroll(string itemsID)
 {
 	SetNodeUsing("EQUIP_BUTTON", false); // KK
 	SetNodeUsing("EXAMINE_BUTTON", false); // KK
+	SetNodeUsing("FLIP_BUTTON", false);  //JRH
 
 	ref pch;
 	if(CheckAttribute(GetMainCharacter(),"Interface.Fellow")) { pch = CharacterFromId(characters[GetMainCharacterIndex()].Interface.Fellow); }
@@ -3659,7 +4054,7 @@ void FillSelectedScroll(string itemsID)
 					if(j>1)	GameInterface.itemslist.(attributeName).str1 = "#"+j;
 // KK -->
 					string name = "";
-					if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name
+					//if (CheckAttribute(arItem, "QualityName")) name = TranslateString("", "q"+arItem.QualityName) + " "; // PB: Correct quality name // MAXIMUS 31.05.2019: corrected for russian spelling
 					if( GetAttribute(arItem,"groupID") == QUEST_ITEM_TYPE)
 					{
 						name += PreprocessText(TranslateString("", arItem.name)); // PB
@@ -3668,6 +4063,19 @@ void FillSelectedScroll(string itemsID)
 					{
 						name += GetAssembledString(TranslateString("", arItem.name), arItem); // Levis
 					}
+
+					// MAXIMUS 31.05.2019: corrected for russian spelling ==>
+					if (CheckAttribute(arItem, "QualityName"))
+					{
+						switch(LanguageGetLanguage())
+						{
+							case "Russian":
+								name = name + " " + TranslateString("", "q"+arItem.QualityName);
+							break;
+							name = TranslateString("", "q"+arItem.QualityName) + " " + name; // PB: Correct quality name //default for English
+						}
+					}
+					// MAXIMUS 31.05.2019: corrected for russian spelling <==
 
 					if(DynamicInterfaceLevel() > 1) GameInterface.itemslist.(attributeName).str2 = "#" + name; // PB: Dynamic Interfaces
 // <-- KK

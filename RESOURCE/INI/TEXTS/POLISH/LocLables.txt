@@ -1,0 +1,87 @@
+FaleDeFler{Falaise De Fleur}
+Falaise De Fleur{Falaise De Fleur}
+Falaise De Fleur Port{Falaise de Fleur Port}
+Octopus Bay{Octopus Bay}
+Falaise De Fleur Fort{Falaise De Fleur Fort}
+Redmond{Redmond}
+Redmond Port{Redmond port}
+Devil's Throat{Devil's Throat}
+Rocky Shore{Rocky Shore}
+Redmond Fort{Redmond Fort}
+IslaMuelle{Isla Muelle}
+Isla Muelle Port{Isla Muelle port}
+Shore{Shore}
+Oyster Beach{Oyster Beach}
+Isla Muelle Fort{Isla Muelle Fort}
+Oxbay{Oxbay}
+Oxbay Port{Oxbay Port}
+Greenford Port{Greenford port}
+Gray Rock Bay{Gray Rock Bay}
+Lighthouse{Lighthouse}
+Far Beach{Far Beach}
+Greenford Fort{Greenford Fort}
+Oxbay Fort{Oxbay Fort}
+Conceicao{Conceicao}
+Conceição Port{Conceição Port}
+Sunny Haven{Sunny Haven}
+Leviathan Rock{Leviathan Rock}
+Conceição Fort{Conceição Fort}
+Douwesen{Douwesen}
+Douwesen Port{Douwesen port}
+Palm Beach{Palm Beach}
+Crab Cliffs{Crab Cliffs}
+Douwesen Fort{Douwesen Fort}
+QuebradasCostillas{Quebradas Costillas}
+Quebradas Costillas Port{Quebradas Costillas port}
+Charlestown{Charlestown}
+Charlestown Port{Charlestown port}
+KhaelRoa{Khael Roa}
+Khael Roa Shore{Khael Roa Shore}
+Cayman{Cayman}
+Grand Cayman{Grand Cayman}
+Cayman Kai{Cayman Kai}
+Sand Bluff{Sand Bluff}
+Eden Rock{Eden Rock}
+Grand Cayman Fort{Grand Cayman Fort}
+Hispaniola{Hispaniola}
+Port au prince{Port au prince}
+Santo Domingo{Santo Domingo}
+Tortuga{Tortuga}
+Boca de Yuman{Boca de Yuman}
+Boca de Hubon{Boca de Hubon}
+Cape Francos{Cape Francos}
+Shore{Shore}
+Port au Prince Fort{Port au Prince Fort}
+Santo Domingo Fort{Santo Domingo Fort}
+Cuba{Cuba}
+Santiago{Santiago}
+Havana{Havana}
+Bahia de San Antonio{Bahia de San Antonio}
+Bahia de Moa{Bahia de Moa}
+Playa de Sabana{Playa de Sabana}
+Punta de Maisi{Punta de Maisi}
+Playa de Sierra Maestra{Playa de Sierra Maestra}
+Peninsula de Zapata{Peninsula de Zapata}
+Santiago Fort{Santiago Fort}
+Guadeloupe{Guadeloupe}
+Pointe à Pitre{Pointe à Pitre}
+Anse Casse-Bois{Anse Casse-Bois}
+Pointe a pitre Fort{Pointe a pitre Fort}
+SaintMartin{Saint Martin}
+Simpson Bay{Simpson Bay}
+Baie Orient{Baie Orient}
+Fort St Louis{Fort St Louis}
+Marigot{Marigot}
+Antigua{Antigua}
+Fort James{Fort James}
+St John's{St. John's}
+Muscetto Cove{Muscetto Cove}
+Turks{Turks}
+Grand Turk{Grand Turk}
+Turtle Bay{Turtle Bay}
+White reefs{White Reefs}
+Sandy Point{Sandy Point}
+Birds Cove{Birds Cove}
+Fort{Fort}
+Bocht Van Hato{Bocht Van Hato}
+Bullen Bay{Bullen Bay}

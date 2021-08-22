@@ -1,0 +1,9 @@
+Clock_Weather_title
+{
+Indicador de fecha y clima
+}
+
+Clock_Weather_info
+{
+???? El indicador de fecha y clima se ubica en la esquina superior derecha de la pantalla Mapa mundial. Los numeros muestran la fecha actual del juego, y el tiempo y el dia actuales se muestran con la imagen en una ventana redonda.
+}

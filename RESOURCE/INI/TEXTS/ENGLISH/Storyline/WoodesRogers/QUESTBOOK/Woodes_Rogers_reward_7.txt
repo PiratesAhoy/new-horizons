@@ -5,3 +5,5 @@ text.t3=I'm closer the Pistolbelt now but the door is locked.
 text.t4=I've found Blackbeard's legendary pistol belt! Guess Rogers' crew wants to lay their hands on this! Didn't know those rough guys were so nostalgic.
 text.t5=The belt is complete!!
 text.t6=Right-hand items = F3 + F3, Left-hand items = F3 + fire pistol.
+text.t7=I guess the Compasses are F3 + F3 and the Map is F3 + fire pistol.
+text.t8=I'll meet Woodes Rogers in the shipyard for my final reward when I return from Charles Vane. Yes!

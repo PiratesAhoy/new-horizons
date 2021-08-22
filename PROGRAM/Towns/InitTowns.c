@@ -278,6 +278,7 @@ void InitTowns(bool first)
 	if(first) ctown.nation = PIRATE; // KK
 	ctown.homeland = PIRATE; // KK
 	ctown.store = SMUGGLERS_STORE;
+	ctown.officiant = "Smugglers_officiant"; // GR
 	ctown.forts.Quantity = 0;
 	ctown.troops = sti(ctown.size) * 4 / 5;
 	ctown.crew.quantity = sti(ctown.size)/8 + rand(sti(ctown.size)/4);
@@ -396,7 +397,8 @@ void InitTowns(bool first)
 	ctown.crew.data.month = GetDataMonth();
 	ctown.crew.data.day = GetDataDay();
 	ctown.boarding.l1 = "Hispaniola_shore_02";
-	ctown.boarding.l2 = "Buccaneers_Camp";
+	ctown.boarding.l2 = "Hispaniola_Jungle_03";
+	ctown.boarding.l3 = "Buccaneers_Camp";
 	ctown.laigroup = "DOUWESEN_PIRATE";
 	ctown.economy = TOWN_ECONOMY_SURVIVING;
 	AddTown(q, ctown);

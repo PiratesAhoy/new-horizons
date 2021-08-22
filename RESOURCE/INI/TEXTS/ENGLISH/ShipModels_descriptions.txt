@@ -42,9 +42,21 @@ Brig2_Descr{Swift naval vessel but struggles upwind.
 White and red painted hull.}
 RN_Brig_Descr{Swift naval vessel but struggles upwind.
 Paint wears off, hinting at long Royal Navy service.}
+BrigQeen1_Descr{Swift naval vessel which may struggle upwind.
+Varnished hull with white trimmings.}
+BrigSW1_Descr{Swift combat vessel which may struggle upwind.
+Black hull and wolf's head figurehead.}
+Brig3_Descr{Adaptable ship, fast, but poor in crosswind.
+Varnished hull with red trim and green markings.}
+Brig_20_Gun1_181_Descr{Adaptable ship, fast, but poor in crosswind.
+Pirate scheme featuring a dark hull with red markings.}
 
 HMS_Interceptor_Descr{"There's no ship as can match
 the Interceptor for speed."}
+RN_Interceptor_Descr{A particularly fast brig. Hull is black
+with cream stripes.}
+US_Interceptor_Descr{The "Lady Washington" appeared in various films, e.g.
+"Pirates of the Caribbean" and "Star Trek: Generations".}
 USS_Enterprise_Descr{24-gun navy brig 'USS Enterprise'.
 Doesn't sail well into the wind.}
 
@@ -57,6 +69,8 @@ Barque1_Descr{This ship performs well with the wind.
 Decent trade vessel with blue paint.}
 Barque2_Descr{This ship performs well with the wind.
 No paint - she's a trader, not a lady's carriage.}
+Barkentine1_Descr{Nice performance for a small trader, even against the wind.
+Dark brown hull with ornate decorations.}
 
 BarqueHeavy_Descr{Nice performance for a small trader, but not upwind.
 Weathered blue hull hints she served some time.}
@@ -74,6 +88,10 @@ Naval design in green and orange.}
 
 Brigantina1_Descr{This naval ship goes upwind at a decent angle.
 Light hull is painted white and ornated.}
+Brigantina2_Descr{This naval ship goes upwind at a decent angle.
+Light hull is painted blue and ornated.}
+BrigantineOld_Descr{A light warship with good cross-wind performance.
+The hull has black and white stripes.}
 
 Tartane1_Descr{Did ya lose yer ship, cap'n?
 Single-masted tartane with plain red wooden hull.}
@@ -99,6 +117,8 @@ This blue painted ship sails good against the wind.}
 FR_Sloop_Descr{'Le Rêve' sails well against the wind.
 Agile vessel of the French Navy.}
 Sloop2_Descr{Adaptable vessel in pale red,
+sails good against the wind.}
+Sloop4_Descr{Adaptable vessel with varnished wood,
 sails good against the wind.}
 
 SloopBermuda_Descr{Sails well against the wind.
@@ -153,6 +173,9 @@ Naval vessel painted blue.}
 FleutWarSat_Descr{Decent at speed and turn rate.
 Black vessel with sinister markings.}
 
+FleutWarExSat_Descr{Decent at speed and turn rate.
+Former Animist ship now in less sinister markings.}
+
 FR_LightPinnace_Descr{Decent speed but not too agile.
 French trade vessel is painted brown and red.}
 
@@ -169,6 +192,14 @@ This decorated Spanish vessel is painted red.}
 
 HMS_Indefatigable_Descr{'HMS Indefatigable', a razéed Ardent-class warship
 built to the design of Sir Thomas Slade.}
+RN_Indefatigable_Descr{A razéed warship bearing a British
+cream and black paint scheme.}
+GEN_Indefatigable_Descr{A razéed warship bearing a generic
+yellow and black paint scheme.}
+FR_Indefatigable_Descr{A razéed warship bearing a French
+red and black paint scheme.}
+SP_Indefatigable_Descr{A razéed warship bearing a Spanish
+dark red and black paint scheme.}
 NL_PinnaceofWar47_Descr{Capacious naval vessel.
 This Dutch ship is painted green, brown and white.}
 
@@ -209,9 +240,15 @@ FR_Licorne_Descr{Amiable performance.
 Based on French ship 'La Licorne'}
 
 FastGalleon1_Descr{At full speed she'll show her possibilities.
-Bears colourful decorations.}
+Bears ornate red and white decorations.}
 FastGalleon2_Descr{At full speed she'll show her possibilities.
-Hull painted in red and brown.}
+Hull painted in black and white.}
+FastGalleon3_Descr{At full speed she'll show her possibilities.
+Bears colourful decorations.}
+FastGalleon4_Descr{At full speed she'll show her possibilities.
+Hull painted in red and black.}
+FastGalleon5_Descr{At full speed she'll show her possibilities.
+Hull is decorated with shields and golden symbols.}
 PiratFastGal_Descr{At full speed she'll show her possibilities.
 Pirates' design in fearsome black.}
 
@@ -262,13 +299,23 @@ NL_Frigate47_Descr{A Russian-built frigate of the early 18th century,
 bearing a Dutch Navy paint scheme.}
 FR_Frigate_Descr{A Russian-built frigate of the early 18th century,
 bearing a gold, blue and peach paint scheme.}
+RN_Frigate_Descr{A Russian-built frigate of the early 18th century,
+bearing a blue and peach paint scheme
+and an ornately decorated stern.}
 
 Frigate_sat_Descr{A mysterious 18th century frigate bearing a dark red 
 and black paint scheme. She is said to be crewed 
 by Satanists.}
+Frigate_Ex_Sat_Descr{Formerly crewed by Satanists, this frigate now
+bears a yellow and black paint scheme
+with gilded trimmings.}
 PiratFrigateSup_Descr{An early 18th century frigate captured by pirates,
 bearing a red and black paint scheme adorned 
 with skulls and bones.}
+PiratFrigateSat_Descr{An early 18th century frigate captured by Satanists,
+bearing a red and black paint scheme.}
+PiratFrigateExSat_Descr{An early 18th century frigate captured by Satanists,
+repainted to a yellow and black paint scheme.}
 
 USS_Constitution_Descr{'USS Constitution', a large, modern frigate 
 built to the design of Joshua Humphreys.}
@@ -286,7 +333,9 @@ performs very well, bearing a black and
 cream paint scheme.}
 FR_Boussole_Descr{A powerful, sleek French frigate, bearing a
 gold, blue and brown paint scheme.}
-FR_Indefatigable_Descr{A powerful, sleek French frigate, bearing a red and
+FR_Razee_Descr{A powerful, sleek French frigate, bearing a red and
+black paint scheme.}
+RN_Razee_Descr{A powerful, sleek British frigate, bearing a cream and
 black paint scheme.}
 
 Lineship1_Descr{For a ship-of-the-line, performance comes second.
@@ -302,6 +351,9 @@ SP_Warship_Descr{For a ship-of-the-line, performance comes second.
 Hull bears colours of France.}
 FR_Belette_Descr{For a ship-of-the-line, performance comes second.
 Hull bears colours of France.}
+
+SwedishIndiaman1_Descr{Lightly armed trader, very fast with good
+cargo capacity.}
 
 NL_Batavia_Descr{Performance comes second for the 'Batavia'.
 Armed trader in Dutch colours.}
@@ -340,6 +392,15 @@ The weathered hull bears colours of Royal Navy.}
 HeavyLineship_Descr{For a ship-of-the-line, performance comes second.
 Hull is red and blue with decorations.}
 
+Battleship4_Descr{For a ship-of-the-line, performance comes second.
+The varnished hull has black stripes and blue uppers.}
+
+FR_Battleship4_Descr{For a ship-of-the-line, performance comes second.
+The dark brown hull has white stripes and blue uppers.}
+
+SP_Battleship4_Descr{For a ship-of-the-line, performance comes second.
+The varnished hull has red stripes and uppers.}
+
 HMS_Endeavour_Descr{HMS Endeavour, the fearsome flagship of the East 
 India company, owned by Lord Cutler Beckett.}
 HMS_Dauntless_Descr{HMS Dauntless, the Royal Navy's most impressive
@@ -377,6 +438,10 @@ RN_SteamFrigate_Descr{Prototype steam-propelled frigate bearing a cream
 and black paint scheme. Engines operate 
 separately from the sails.}
 
+Pirate_SteamFrigate_Descr{Prototype steam-propelled frigate bearing a black
+and dark red paint scheme. Engines operate 
+separately from the sails.}
+
 CursedDutchman_Descr{The cursed ship of Davy Jones, able to submerge.
 "Summon... the Kraken!"}
 FlyingDutchman_Descr{The true form of the 'Flying Dutchman',
@@ -398,13 +463,17 @@ built to the design of Sir Thomas Slade.}
 US_FirstRate_Descr{A mighty first rate ship-of-the-line bearing
 a white and black paint scheme.}
 FR_FirstRate_Descr{A mighty first rate ship-of-the-line bearing
-a red and black paint scheme.}
+a bright red and black paint scheme.}
+SP_FirstRate_Descr{A mighty first rate ship-of-the-line bearing
+a dark red and black paint scheme.}
 
 FR_Superbe_Descr{A third rate ship of the famous Téméraire class, the 
 most numerous class of capital ship ever built, 
 bearing a red and black paint scheme.}
 RN_Superbe_Descr{A formidable third rate ship-of-the-line, 
 bearing a cream and black paint scheme.}
+NL_Superbe_Descr{A formidable third rate ship-of-the-line, 
+bearing a brown and black paint scheme.}
 
 HMS_Bellona_Descr{A third rate ship based on the powerful Bellona class, 
 bearing a cream and black paint scheme.}
@@ -456,6 +525,8 @@ paint scheme.}
 RN_Poseidon_Descr{A Danish-built third rate of the early 18th century,
 bearing an ornate yellow and black 
 paint scheme.}
+SP_Natividad_Descr{A Spanish-built fourth rate of the late 18th century,
+bearing an ornate yellow and black paint scheme.}
 
 RN_Surprise_Descr{A sleek British frigate based on a French design,
 bearing a cream and black paint scheme.}
@@ -488,12 +559,18 @@ Hull has French colours.}
 SP_Hoy_Descr{The 'Lyon Hoy' is a common small trader.
 Hull has Spanish colours.}
 
+FR_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
+bearing a blue and yellow paint scheme.}
+RN_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
+painted yellow with red and blue decoration.}
 PO_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
-bearing a yellow and blue paint scheme.}
+bearing a white and green paint scheme.}
 SP_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
 bearing a red and black paint scheme.}
 NL_Neptunus_Descr{A Dutch-built privateer of the early 18th century,
 bearing a green, red and grey paint scheme.}
+PiratNeptunus_Descr{A Dutch-built privateer of the early 18th century,
+with varnished hull and yellow trimmings.}
 
 PO_NeptunusE_Descr{A Dutch-built privateer of the late 17th century,
 bearing a brown and white paint scheme.}
@@ -553,7 +630,7 @@ brown paint scheme.}
 Empress_Descr{A Chinese junk with unique sailing qualities,
 owned by Captain Sao Feng.}
 
-La_Marianna_Descr{A former Spanish galleon rumoured to be crewed
+CursedMariana_Descr{Devil's creepy ship haunted
 by the ghosts of cursed sailors...}
 
 US_PrinceNeufchatel_Descr{A very fast American schooner that handles well,
@@ -594,6 +671,11 @@ paint scheme.}
 SP_Essex_Descr{A large American-built frigate with good sailing 
 qualities, bearing a red and black 
 paint scheme.}
+Sat_Essex_Descr{A mysterious American-built frigate bearing a dark
+red and black paint scheme. She is said to be crewed 
+by Satanists.}
+UnSat_Essex_Descr{Formerly crewed by Satanists, this frigate now
+bears a white and black paint scheme.}
 
 XebecVML_Descr{A large xebec with excellent sailing qualities,
 bearing an ornate red, blue and white 
@@ -619,6 +701,7 @@ Medium Dutch trader with some green paint.}
 
 GoldenHind_Descr{The 'Golden Hind' is best known for her circumnavigation of the globe between 1577 and 1580.
 She was originally known as the 'Pelican', but was renamed by Drake mid-voyage in 1578.}
+RN_Galeon_L_Descr{A small galleon of English design with colourful markings.}
 
 FR_CastelF_Descr{The 'Castell Friedrichsburg' was built in 1688 and is a coastal patrol ship with shallow draft. She has good speed and manueverability and can sail well into the wind.
 This one bears a French blue and gold paint scheme.}

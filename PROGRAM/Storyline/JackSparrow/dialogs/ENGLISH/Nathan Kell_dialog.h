@@ -1,4 +1,4 @@
-string DLG_TEXT[32] = {
+string DLG_TEXT[40] = {
 "We need to get going.",
 "Alright, Captain.",
 "So you found my room. Stop staring about and state who you are.",
@@ -31,5 +31,12 @@ string DLG_TEXT[32] = {
 "Er... Yes, I suppose it would.",
 "Don't look now... but that Naval Officer over there is one of Beckett's men. Bligh his name is. He's known as the 'Watcher', which is also the name of his ship. ",
 "I've seen him around before. It looks like he's going to follow us.",
-
+"What can I do for you, Captain?",
+"I've killed the Pirate Lord of the Atlantic Ocean, Gentleman Jocard.",
+"You killed a Pirate Lord? That is serious. You will have to answer to the Brethren Court for this!",
+"In my defence, so-called 'Gentleman' Jocard was no gentleman. He was a slaver.",
+"Oh? That is a different matter. We don't tolerate slavery, we stand for freedom for all. Do you have his piece of 8?",
+"Right here.",
+"Very well. Then there is just the matter of a replacement Pirate Lord of the Atlantic Ocean.\nCap'n Drow has shown himself able to take great responsibility. You will find him in the fort office. Go through the landward gate and turn left, then follow the path to the fort.",
+"Thank you. I'll head for the fort now.",
 };

@@ -1,0 +1,11 @@
+title=Amulet - The Church
+text.t1=There is a Chapel in Kristiania center. 
+text.t2=There is a Cathedral in Nueva Suecia, the spanish part of town.
+text.t3=An Amulet is sold to the Church.
+text.t4=The priest in the Chapel hasn't bought anything at the auction. So..?
+text.t5=It's something hidden in the Collection Box. The Amulet? I need a small Hook to reach it.
+text.t6=There's a locked exit from the confessional box.
+text.t7=The priest has a room in a tavern nearby. 
+text.t8=I have made a Hook. Now let's use it.
+text.t9=I've got the Amulet. Hope it'll bring me Luck.
+text.t10=

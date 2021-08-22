@@ -1,4 +1,4 @@
-string DLG_TEXT[105] = {
+string DLG_TEXT[113] = {
 "Don't you dare to adress a superior in that manner again, you insolent hireling!",
 "Umm... err... I see. Sorry for having bothered you, Sir. Goodbye.",
 "Hey, you there! You look suspicious to me. Who the hell are you? Show me your papers!",
@@ -14,7 +14,7 @@ string DLG_TEXT[105] = {
 "Well what do people say then?",
 "Ahh young Captain, have you found any medicines yet?",
 "Grandma ... miss Rogers, only this locked chest so far.",
-"I have sent for the apothecary from Bridgetown but it may take some time for him to get here. The boatswain mr Hynde is placed in the port to meet him.",
+"I have sent for the apothecary from Bridgetown but it may take some time for him to get here. The boatswain Mr Pope is placed in the port to meet him.",
 "I see ...",
 "There may be some cures and drugs in my bedroom - I havn't had the time to check. Perhaps you should come back later!",
 "I'll do that - goodbye miss Rogers.",
@@ -88,14 +88,14 @@ string DLG_TEXT[105] = {
 "Ohh. Me - a houseowner!",
 "The same goes for the Marquis. You may keep the sloop.",
 "You are indeed very generous Miss Rogers.",
-"We are also going to repair and refit the ship completely. If you wait at the Farm we'll sail here there.",
+"We are also going to repair and refit the ship completely. If you wait at the Farm we'll sail her there.",
 "Wow, thank you again.",		//90
 "No Captain Pyle! We are ALL rich - as I told you once before.",
 "(gulp) Of course! It's enough for everyone - I have made a great discovery!",
-"Let me see... we are eight.",		//93
+"Okay we'll divide the riches you after all brought us. Let me see... we are eight.",		//93
 "...and my group four.",
 "13 shares I mean. So you found the secret with those metal bars?",
-"Indeed I did. You did know that already?",
+"Indeed I did. You knew this already?",
 "It was Claire who told us all about it.",
 "Hmm, I'm not surprised that she's well-acquainted with Alchemy too.",
 "Alchemy? I wouldn't call it that.",
@@ -104,5 +104,13 @@ string DLG_TEXT[105] = {
 "!!!",
 "That makes 12 shares.",
 "Yes.",
+"Let's here more about it later. First: what more than a damaged book did Teach's treasure consist of?",	//105
+"First there was a chest with very valuable weapons. Then two chests with silver bars.",		//106
+"And...?",			//107
+"Twelve sacks with gold dust and two chests with gold coins.",		//108
+"Anything else...?",			//109
+"Only four chests with gold bars and and statue of solid gold!",	//110
+"That sounds great, Captain! And a new ship too!",
+"Well you see... there was a storm...",
 
 };

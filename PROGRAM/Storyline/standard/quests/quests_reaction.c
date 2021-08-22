@@ -1936,9 +1936,11 @@ void QuestComplete(string sQuestName)
 				characters[GetCharacterIndex("Rabel Iverneau")].rank = 11;
 				characters[GetCharacterIndex("Rabel Iverneau")].reputation = 54;
 				characters[GetCharacterIndex("Rabel Iverneau")].experience = CalculateExperienceFromRank(11)+ (CalculateExperienceFromRank(11)/10 + rand(11000));
-				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.BasicBattleState = true;
-				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.AdvancedBattleState = true;
-				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.ShipDefenceProfessional = true;
+				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.BasicDamageControl = true;
+				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.AdvancedDamageControl = true;
+				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.ProfessionalDamageControl = true;
+				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.Rigging = true;
+				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.RiggingAdvance = true;
 				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.LightRepair = true;
 				characters[GetCharacterIndex("Rabel Iverneau")].perks.list.ShipSpeedUp = true;
 				SetOfficersIndex(Pchar, 3, GetCharacterIndex("Rabel Iverneau"));
@@ -2054,42 +2056,71 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_BlazeWithRabelAndCounterspyReturn":
+			if(PChar.ship.type == "FR_Boussole" || PChar.ship.type == "RN_Razee" || PChar.ship.type == "FR_Razee")	// GR: only proceed if you have a flushdeck frigate, possibly repainted
+			{
 // KK -->
-			ref Counterspy = CharacterFromID("Counterspy");
+				ref Counterspy = CharacterFromID("Counterspy");
 
-			RestoreOfficers(pchar.id);
-			TakeShipCommandFromOfficer(pchar.id);
+				RestoreOfficers(pchar.id);
+				TakeShipCommandFromOfficer(pchar.id);
 // <-- KK
-			if(GetOfficersIndex(Pchar, 1) != -1 && GetOfficersIndex(Pchar, 1) != GetCharacterIndex("counterspy"))
-			{
-				iPassenger = GetOfficersIndex(Pchar, 1);
-				LAi_SetOfficerType(&characters[iPassenger]);
-			}
-			if(GetOfficersIndex(Pchar, 2) != -1 && GetOfficersIndex(Pchar, 2) != GetCharacterIndex("counterspy"))
-			{
-				iPassenger = GetOfficersIndex(Pchar, 2);
-				LAi_SetOfficerType(&characters[iPassenger]);
-			}
-			if(GetOfficersIndex(Pchar, 3) != -1 && GetOfficersIndex(Pchar, 3) != GetCharacterIndex("counterspy"))
-			{
-				iPassenger = GetOfficersIndex(Pchar, 3);
-				LAi_SetOfficerType(&characters[iPassenger]);
-			}
+				if(GetOfficersIndex(Pchar, 1) != -1 && GetOfficersIndex(Pchar, 1) != GetCharacterIndex("counterspy"))
+				{
+					iPassenger = GetOfficersIndex(Pchar, 1);
+					LAi_SetOfficerType(&characters[iPassenger]);
+				}
+				if(GetOfficersIndex(Pchar, 2) != -1 && GetOfficersIndex(Pchar, 2) != GetCharacterIndex("counterspy"))
+				{
+					iPassenger = GetOfficersIndex(Pchar, 2);
+					LAi_SetOfficerType(&characters[iPassenger]);
+				}
+				if(GetOfficersIndex(Pchar, 3) != -1 && GetOfficersIndex(Pchar, 3) != GetCharacterIndex("counterspy"))
+				{
+					iPassenger = GetOfficersIndex(Pchar, 3);
+					LAi_SetOfficerType(&characters[iPassenger]);
+				}
 
-			HoistFlag(ENGLAND); // KK
-			Pchar.quest.Story_BlazeEscapedFromOxbay.over = "yes";
-			LAi_SetActorType(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Robert Christopher Silehard"));
-			pchar.ship.type = SHIP_NOTUSED_TYPE_NAME; // PS
-			ExchangeCharacterShip(Pchar, characterFromID("Ship Storage"));
-			SetCharacterShipLocation(Pchar, "Redmond_port");
+				HoistFlag(ENGLAND); // KK
+				Pchar.quest.Story_BlazeEscapedFromOxbay.over = "yes";
+				LAi_SetActorType(pchar);
+				LAi_ActorWaitDialog(pchar, characterFromID("Robert Christopher Silehard"));
+				pchar.ship.type = SHIP_NOTUSED_TYPE_NAME; // PS
+				ExchangeCharacterShip(Pchar, characterFromID("Ship Storage"));
+				SetCharacterShipLocation(Pchar, "Redmond_port");
 
-			LAi_type_actor_Reset(characterFromID("Rabel Iverneau"));
-			LAi_type_actor_Reset(characterFromID("Counterspy"));
-			LAi_ActorTurnToCharacter(characterFromID("Rabel Iverneau"), characterFromID("Robert Christopher Silehard"));
-			LAi_QuestDelay("Story_RabelLeavesResidence", 1.0);
+				LAi_type_actor_Reset(characterFromID("Rabel Iverneau"));
+				LAi_type_actor_Reset(characterFromID("Counterspy"));
+				LAi_ActorTurnToCharacter(characterFromID("Rabel Iverneau"), characterFromID("Robert Christopher Silehard"));
+				LAi_QuestDelay("Story_RabelLeavesResidence", 1.0);
 
-			Characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "Story_2ndTask_complete";
+				Characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "Story_2ndTask_complete";
+			}
+			else
+			{
+				LAi_SetActorType(characterFromID("Rabel Iverneau"));
+				LAi_type_actor_Reset(characterFromID("Rabel Iverneau"));
+				LAi_ActorTurnToCharacter(characterFromID("Rabel Iverneau"), characterFromID("Robert Christopher Silehard"));
+				Characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "2nd_Task_no_ship";
+			}
+		break;
+
+		case "Story_go_get_frigate":		// GR: triggered by dialog with Silehard if you returned with the wrong ship
+			if(!CheckQuestAttribute("story_stolen_frigate", "true"))
+			{
+				PChar.quest.story_stolen_frigate = "true";
+				Preprocessor_AddQuestData("ship", XI_ConvertString("FrigateAdv"));
+				AddQuestRecord("Story_2ndTask",13);
+				Preprocessor_Remove("ship");
+			}
+			PChar.quest.reset_Story_BlazeWithRabelAndCounterspyReturn.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.reset_Story_BlazeWithRabelAndCounterspyReturn.win_condition.l1.location = PChar.location;
+			PChar.quest.reset_Story_BlazeWithRabelAndCounterspyReturn.win_condition = "reset_Story_BlazeWithRabelAndCounterspyReturn";
+		break;
+
+		case "reset_Story_BlazeWithRabelAndCounterspyReturn":
+			PChar.quest.Story_BlazeWithRabelAndCounterspyReturn.win_condition.l1 = "location";
+			PChar.quest.Story_BlazeWithRabelAndCounterspyReturn.win_condition.l1.location = "redmond_residence";
+			PChar.quest.Story_BlazeWithRabelAndCounterspyReturn.win_condition = "Story_BlazeWithRabelAndCounterspyReturn";
 		break;
 
 		case "Story_CounterspyLeavesResidence":
@@ -2293,22 +2324,35 @@ void QuestComplete(string sQuestName)
 
 // KK -->
 			iPassenger = sti(Pchar.Temp.Companion.idx1);
-			if (iPassenger > 0) SetCompanionIndex(pchar, 1, iPassenger);
+			if (iPassenger > 0)
+			{
+				SetCompanionIndex(pchar, 1, iPassenger);
+				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_UnStoreFantom(Characters[iPassenger]); // Cancel protection
+			}
 			iPassenger = sti(Pchar.Temp.Companion.idx2);
-			if (iPassenger > 0) SetCompanionIndex(pchar, 2, iPassenger);
+			if (iPassenger > 0)
+			{
+				SetCompanionIndex(pchar, 2, iPassenger);
+				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_UnStoreFantom(Characters[iPassenger]);
+			}
 			iPassenger = sti(Pchar.Temp.Companion.idx3);
-			if (iPassenger > 0) SetCompanionIndex(pchar, 3, iPassenger);
+			if (iPassenger > 0)
+			{
+				SetCompanionIndex(pchar, 3, iPassenger);
+				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_UnStoreFantom(Characters[iPassenger]);
+			}
 			DeleteAttribute(PChar, "temp.Companion");
 
 			if (GetNotCaptivePassengersQuantity(pchar) > 0) {
 				cidx = GetNotCaptivePassenger(pchar, GetNotCaptivePassengersQuantity(pchar) - 1);
 				if (cidx != -1) {
-					if (GetCompanionQuantity(PChar) < 3) {
+//					if (GetCompanionQuantity(PChar) < 3) {
+					if (GetCompanionQuantity(PChar) < COMPANION_MAX-1) {
 						ExchangeCharacterShip(GetCharacter(cidx), characterFromID("Ship Storage"));
 						SetCompanionIndex(PChar, -1, cidx);
 						ExchangeCharacterShip(PChar, GetCharacter(cidx));
 					} else {
-						ExchangeCharacterShip(Pchar, characterFromID("Ship Storage"));
+						ExchangeCharacterShip(Pchar, CharacterFromID("Ship Storage"));
 					}
 				} else {
 					ExchangeCharacterShip(Pchar, characterFromID("Ship Storage"));
@@ -2325,6 +2369,7 @@ void QuestComplete(string sQuestName)
 
 			HoistFlag(GetCurrentFlag()); // NK so comps' nations update
 
+/*
 			// This is only to close quest header for mission which isn't finished yet.
 			// If someone wants to write a continuation, please remove this comment
 			// and four lines of code below and edit second entry for "Kill_Ogario".
@@ -2333,6 +2378,7 @@ void QuestComplete(string sQuestName)
 				AddQuestRecord("Kill_Ogario", 2);
 				CloseQuestHeader("Kill_Ogario");
 			}
+*/
 // <-- KK
 
 			pchar.location.from_sea = "Muelle_port";
@@ -2468,7 +2514,8 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Greenford Commander")].Dialog.Filename = "Greenford Commander_dialog.c";
 			Characters[GetCharacterIndex("Greenford Commander")].Dialog.BoardingNode = "capture_of_Greenford";
 
-			QuestToSeaLogin_PrepareLoc("Oxbay", "Quest_Ships", "Quest_ship_23", true);
+//			QuestToSeaLogin_PrepareLoc("Oxbay", "Quest_Ships", "Quest_ship_23", true);	// GR: teleport to near fort
+			QuestToSeaLogin_PrepareLoc("Oxbay", "reload", "reload_4", true);		// GR: put to sea next to lighthouse
 			QuestToSeaLogin_Launch();
 			//Islands[FindIsland("Oxbay")].reload.l6.go = "Fake_Greenford_fort"; // KK
 
@@ -3032,6 +3079,8 @@ void QuestComplete(string sQuestName)
 			LAi_SetImmortal(characterFromID("Robert Christopher Silehard"), false);
 			LAi_SetStayType(characterFromID("Robert Christopher Silehard"));
 			LAi_SetImmortal(characterFromID("Isenbrandt Jurcksen"), false);
+			Characters[GetCharacterIndex("Robert Christopher Silehard")].recognized = true;
+			Characters[GetCharacterIndex("Isenbrandt Jurcksen")].recognized = true;
 			bQuestDisableMapEnter = true;
 			Island_SetReloadEnableLocal("KhaelRoa", "reload_1", true);
 			Island_SetReloadEnableGlobal("KhaelRoa", false);
@@ -3404,7 +3453,7 @@ void QuestComplete(string sQuestName)
 		case "to_the_ship_whualya":
 			LAi_SetOfficerType(characterFromID("researcher"));
 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Researcher"));
-			Characters[GetCharacterIndex("Researcher")].Dialog.CurrentNode = "Home_again";
+			Characters[GetCharacterIndex("Researcher")].Dialog.CurrentNode = "Take_Me_Home_Repeat"; // was "Home_again" but that triggers "Story_Take_Clement_Home3"
 			Locations[FindLocation("KhaelRoa_port")].reload.l2.disable = 1;
 //			ReStorePassengers(pchar.id);
 		break;
@@ -3521,8 +3570,8 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Take_Clement_Home.win_condition.l1.location = "Oxbay_Lighthouse";
 			Pchar.quest.Story_Take_Clement_Home.win_condition = "Story_Take_Clement_Home";
 			Pchar.quest.Story_Take_Clement_Home.fail_condition = "Story_Take_Clement_Home";
-			Characters[GetCharacterIndex("researcher")].Dialog.CurrentNode = "Home_again";
-			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "Clement_home";
+//			Characters[GetCharacterIndex("researcher")].Dialog.CurrentNode = "Home_again";
+//			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "Clement_home";
 
 			// KK: Swap cursed Pearl with normal Pearl -->
 			if (GetCharacterShipID(PChar) == SHIP_CURSED) GiveShip2Character(pchar, "BlackPearl", "Black Pearl", -1, PIRATE, true, true);
@@ -3535,6 +3584,7 @@ void QuestComplete(string sQuestName)
 			// KK: Swap cursed Pearl with normal Pearl <--
 
 			Reinit_KhaelRoa(); // Enable Khael Roa as personal base
+			LAi_QuestDelay("end_game2", 1.0);	// originally triggered by dialog with Danielle after taking Clement to lighthouse
 		break;
 
 		case "end_game2":
@@ -3544,10 +3594,16 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_AfterFinalOnRedmond1.win_condition = "Story_AfterFinalOnRedmond2";
 			Pchar.quest.Story_AfterFinalOnRedmond1.fail_condition = "Story_AfterFinalOnRedmond2";
 // <-- KK
+
 			Pchar.quest.Story_AfterFinalOnRedmond2.win_condition.l1 = "location";
 			Pchar.quest.Story_AfterFinalOnRedmond2.win_condition.l1.location = "Redmond_shore_02";
 			Pchar.quest.Story_AfterFinalOnRedmond2.win_condition = "Story_AfterFinalOnRedmond2";
 			Pchar.quest.Story_AfterFinalOnRedmond2.fail_condition = "Story_AfterFinalOnRedmond2";
+
+			Pchar.quest.Story_AfterFinalOnRedmond3.win_condition.l1 = "location";
+			Pchar.quest.Story_AfterFinalOnRedmond3.win_condition.l1.location = "Redmond_shore_01";
+			Pchar.quest.Story_AfterFinalOnRedmond3.win_condition = "Story_AfterFinalOnRedmond2";
+			Pchar.quest.Story_AfterFinalOnRedmond3.fail_condition = "Story_AfterFinalOnRedmond2";
 			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "After_Final2";	  // <-- Cat for Danielle fix
 		break;
 
@@ -4661,6 +4717,7 @@ void QuestComplete(string sQuestName)
 
 		case "abording_pirate_06_complete":
 			pchar.quest.kill_pirate_06.over = "yes"; // PW
+			pchar.quest.prepare_fighting_on_deck.over = "yes"; // GR
 			setCharacterShipLocation(characterFromID("Pirate Captain 05"), "none");
 			SetCharacterIslandLocation(characterFromID("Pirate Captain 06"), "none", "quest_ships", "quest_ship_9", "stay", "runaway", "");
 			pchar.quest.main_line = "blaze_to_incas_collection_begin_6";
@@ -5111,9 +5168,11 @@ void QuestComplete(string sQuestName)
 			characters[GetCharacterIndex("danielle")].perks.list.CriticalHit = true;
 			characters[GetCharacterIndex("danielle")].perks.list.Gunman = true;
 			characters[GetCharacterIndex("danielle")].perks.list.CriticalHit = true;
-			characters[GetCharacterIndex("danielle")].perks.list.BasicBattleState = true;
-			characters[GetCharacterIndex("danielle")].perks.list.AdvancedBattleState = true;
-			characters[GetCharacterIndex("danielle")].perks.list.ShipDefenceProfessional = true;
+			characters[GetCharacterIndex("danielle")].perks.list.BasicDamageControl = true;
+			characters[GetCharacterIndex("danielle")].perks.list.AdvancedDamageControl = true;
+			characters[GetCharacterIndex("danielle")].perks.list.ProfessionalDamageControl = true;
+			characters[GetCharacterIndex("danielle")].perks.list.Rigging = true;
+			characters[GetCharacterIndex("danielle")].perks.list.RiggingAdvance = true;
 			GiveItem2Character(characterFromID("danielle"), "blade10");
 			EquipCharacterByItem(characterFromID("danielle"), "blade10");
 
@@ -5345,6 +5404,7 @@ void QuestComplete(string sQuestName)
 			{
 				Pchar.Temp.Companion.idx1 = GetCompanionIndex(pchar,1);
 				iPassenger = GetCompanionIndex(pchar,1);
+				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_StoreFantom(Characters[iPassenger]); // Prevent character from being overwritten by another "Enc_Officer"
 				RemoveCharacterCompanion(Pchar, &Characters[iPassenger]);
 			}
 			else
@@ -5355,6 +5415,7 @@ void QuestComplete(string sQuestName)
 			{
 				Pchar.Temp.Companion.idx2 = GetCompanionIndex(pchar,2);
 				iPassenger = GetCompanionIndex(pchar,2);
+				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_StoreFantom(Characters[iPassenger]);
 				RemoveCharacterCompanion(Pchar, &Characters[iPassenger]);
 			}
 			else
@@ -5365,6 +5426,7 @@ void QuestComplete(string sQuestName)
 			{
 				Pchar.Temp.Companion.idx3 = GetCompanionIndex(pchar,3);
 				iPassenger = GetCompanionIndex(pchar,3);
+				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_StoreFantom(Characters[iPassenger]);
 				RemoveCharacterCompanion(Pchar, &Characters[iPassenger]);
 			}
 			else
@@ -5587,8 +5649,38 @@ void QuestComplete(string sQuestName)
 			LAi_ActorGoToLocator(characterFromID("danielle"), "reload", "reload2", "Story_BlazeMetDanielleOnIslaMuelle", 10.0);
 		break;
 
+		case "kill_Ogario_fight":
+			StartQuestMovie(true, true, false);
+			DisableFastTravel(true);
+			LAi_LocationFightDisable(&Locations[FindLocation("Sidonio Ogarrio House")], false);
+			Ambush("Rich_Citizens", 3, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, "");
+			Lai_group_MoveCharacter(CharacterFromID("Sidonio Ogarrio"), LAI_DEFAULT_GROUP);
+			LAi_ActorAttack(characterfromID("Sidonio Ogarrio"), PChar, "");
+		break;
+
 		case "kill_Ogario_complete":
-			characters[GetCharacterIndex("Wilfred Bythesea")].quest.kill_Ogario = "Almost_complete";
+			DisableFastTravel(false);
+			EndQuestMovie();
+			characters[GetCharacterIndex("Wilfred Bythesea")].quest.kill_Ogarrio = "Almost_complete";
+			AddQuestRecord("Kill_Ogario", 2);
+			CloseQuestHeader("Kill_Ogario");
+		break;
+
+		case "kill_Ogario_timeout":
+			ChangeCharacterAddress(characterFromID("Wilfred Bythesea"), "None", "");
+			characters[GetCharacterIndex("Wilfred Bythesea")].quest.kill_Ogarrio = "Failed";
+			AddQuestRecord("Kill_Ogario", 3);
+			CloseQuestHeader("Kill_Ogario");
+		break;
+
+		case "remove_Wilfred_Bythesea":
+			PChar.quest.remove_Wilfred_Bythesea2.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.remove_Wilfred_Bythesea2.win_condition.l1.location = PChar.location;
+			PChar.quest.remove_Wilfred_Bythesea2.win_condition = "remove_Wilfred_Bythesea2";
+		break;
+
+		case "remove_Wilfred_Bythesea2":
+			ChangeCharacterAddress(characterFromID("Wilfred Bythesea"), "None", "");
 		break;
 
 		case "soldier_goto_to_mine_commander":
@@ -6276,7 +6368,7 @@ void QuestComplete(string sQuestName)
 
 		case "CounterSpy_Ready_for_meeting_exit":
 			SetCharacterRemovable(characterFromID("Counterspy"), true);
-			RemovePassenger(Pchar, getCharacterIndex("Counterspy"));
+//			RemovePassenger(Pchar, characterFromID("Counterspy"));	// GR: was 'RemovePassenger(Pchar, getCharacterIndex("Counterspy"))' which is wrong.  Quest did not break because "Counterspy" has already been removed
 // KK -->
 			if (GetNotCaptivePassengersQuantity(pchar) > 0) {
 				GiveShipCommandToOfficer(pchar.id, GetNotCaptivePassenger(pchar, GetNotCaptivePassengersQuantity(pchar) - 1));
@@ -6376,11 +6468,14 @@ void QuestComplete(string sQuestName)
 			LAi_group_FightGroups("LIGHTHOUSE_SOLDIERS", LAI_GROUP_PLAYER, true);
 		break;
 
+/*
+//		Moved to "quests_side.c" by Grey Roger
 		case "raoul_calmes_fight":
 			LAi_SetActorType(characterFromID("raoul calmes"));
 			LAi_ActorAttack(characterfromID("raoul calmes"), pchar, "");
 			characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "letters_1";
 		break;
+*/
 
 		case "rabel_yverneau_exit_run":
 			LAi_QuestDelay("rabel_yverneau_exit_run_1", 1.2);
@@ -6601,6 +6696,8 @@ void QuestComplete(string sQuestName)
 			LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 // <-- KK
 			LAi_group_SetRelation("ENGLAND_CITIZENS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
+
+			SetNextWind("SSW",rand(20) + 10);	// GR: have the wind blow the right way for escape from fort
 		break;
 
 		case "escape_from_greenford":
@@ -6734,7 +6831,7 @@ void QuestComplete(string sQuestName)
 
 		case "anacleto_rui_sa_pinto_exit_captain_1":
 			ChangeCharacterAddress(characterFromID("Gervasio Serrao"), "Pirate_tavern", "goto6");
-			characters[GetCharacterIndex("Wilfred Bythesea")].quest.kill_ogario = "0";
+			characters[GetCharacterIndex("Wilfred Bythesea")].quest.kill_ogarrio = "0";
 		break;
 
 		case "anacleto_rui_sa_pinto_exit_captain_2":
@@ -6895,17 +6992,27 @@ void QuestComplete(string sQuestName)
 // <-- KK
 
 			//pchar.quest.main_line = "blaze_search_danielle_again";
-			pchar.quest.kill_Ogario.win_condition.l1 = "NPC_death";
-			pchar.quest.kill_Ogario.win_condition.l1.character = "Sidonio Ogarrio";
-			pchar.quest.kill_Ogario.win_condition = "kill_Ogario_complete";
+			if(GetAttribute(CharacterFromID("Wilfred Bythesea"), "quest.kill_Ogarrio") == "wait")
+			{
+				PChar.quest.kill_Ogario.win_condition.l1 = "NPC_death";
+				PChar.quest.kill_Ogario.win_condition.l1.character = "Sidonio Ogarrio";
+				PChar.quest.kill_Ogario.win_condition = "kill_Ogario_complete";
 
-			// NK this was enabling a reload locator inside the house, not in Muelle Town 2. Fixed 05-07-19 -->
-			Locations[FindLocation("Muelle_town_02")].reload.l1.name = "reload1";
-			Locations[FindLocation("Muelle_town_02")].reload.l1.go = "Sidonio Ogarrio House";
-			Locations[FindLocation("Muelle_town_02")].reload.l1.emerge = "reload1";
-			Locations[FindLocation("Muelle_town_02")].reload.l1.autoreload = "0";
-			Locations[FindLocation("Muelle_town_02")].reload.l1.label = "House of Sidonio Ogarrio."; // NK 05-07-19 add label
-			// NK <--
+				PChar.quest.kill_Ogario.fail_condition.l1 = "Timer";
+				PChar.quest.kill_Ogario.fail_condition.l1.date.day = GetAddingDataDay(0, 3, 0);
+				PChar.quest.kill_Ogario.fail_condition.l1.date.month = GetAddingDataMonth(0, 3, 0);
+				PChar.quest.kill_Ogario.fail_condition.l1.date.year = GetAddingDataYear(0, 3, 0);
+				PChar.quest.kill_Ogario.fail_condition = "kill_Ogario_timeout";
+
+				// NK this was enabling a reload locator inside the house, not in Muelle Town 2. Fixed 05-07-19 -->
+				Locations[FindLocation("Muelle_town_02")].reload.l1.name = "reload1";
+				Locations[FindLocation("Muelle_town_02")].reload.l1.go = "Sidonio Ogarrio House";
+				Locations[FindLocation("Muelle_town_02")].reload.l1.emerge = "reload1";
+				Locations[FindLocation("Muelle_town_02")].reload.l1.autoreload = "0";
+				Locations[FindLocation("Muelle_town_02")].reload.l1.label = "House of Sidonio Ogarrio."; // NK 05-07-19 add label
+				Locations[FindLocation("Muelle_town_02")].reload.l1.disable = 0;
+				// NK <--
+			}
 			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			AddQuestRecord("Where_are_i", 7);
 			Preprocessor_Remove("Danielle");
@@ -6969,10 +7076,12 @@ void QuestComplete(string sQuestName)
 // --> CatalinaThePirate Fix for Danielle after final
 
 		case "Story_Take_Clement_Home":
+			if(!IsOfficer(CharacterFromID("researcher"))) PlaceCharacter(characterFromID("researcher"), "goto");
+			Characters[GetCharacterIndex("researcher")].Dialog.CurrentNode = "Home_again";
+			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "Clement_home";
 			LAi_SetActorType(characterFromID("Researcher"));
 			LAi_ActorWaitDialog(Pchar, characterFromID("Researcher"));
 			LAi_ActorDialog(characterFromID("Researcher"), Pchar, "", 8.0, 1.0);
-			Characters[GetCharacterIndex("Researcher")].Dialog.CurrentNode = "Home_again";
 		break;
 
 		case "Story_Take_Clement_Home3":
@@ -6984,10 +7093,15 @@ void QuestComplete(string sQuestName)
 			RemovePassenger(pchar, characterFromID("Researcher"));
 		break;
 
+		case "Story_Danielle_back_to_officer":
+			LAi_SetOfficerType(characterFromID("Danielle"));
+		break;
+
 		case "Story_AfterFinalOnRedmond2":
 // KK -->
 			Pchar.quest.Story_AfterFinalOnRedmond1.over = "yes";
 			Pchar.quest.Story_AfterFinalOnRedmond2.over = "yes";
+			Pchar.quest.Story_AfterFinalOnRedmond3.over = "yes";
 // <-- KK
 			LAi_SetActorType(characterFromID("Danielle"));
 //			LAi_ActorWaitDialog(Pchar, characterFromID("Danielle"));

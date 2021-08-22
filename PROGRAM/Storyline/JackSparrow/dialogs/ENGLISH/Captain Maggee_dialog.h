@@ -23,6 +23,6 @@ string DLG_TEXT[25] = {
 "Goodbye again then Captain Maggee.",
 "I noticed the governor has been quite quiet recently, perhaps you know why?",
 "Yes I do... His daughter has disappeared on route to #sHavana# and he has also lost a frigate in the search. I have now been asked to search for her and the frigate as well now... savvy.",
-"Ok. Well, I'm sailing south-east anyway, so if you want to sail with me I would welcome it. Oh, by the way, call me Captain Maggee.",
+"Ok. Well, I'm sailing towards #sisland_Cuba# anyway, so if you want to sail with me I would welcome it. Oh, by the way, call me Captain Maggee.",
 
 };

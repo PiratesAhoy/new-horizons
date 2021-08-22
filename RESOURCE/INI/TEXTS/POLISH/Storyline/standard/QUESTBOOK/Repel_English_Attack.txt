@@ -1,0 +1,2 @@
+title=Repel the English squadron attacking #sGreenford#.
+text.t1=Apparently, Silehard didn't appreciate our capturing his colony. I was informed by a sailor that the governor has assembled troops and the English squadron is on its way to #sGreenford#. We expect a terrible battle. #sDanielle# will command the fort, and I'll confront the enemy from my quarterdeck as always.

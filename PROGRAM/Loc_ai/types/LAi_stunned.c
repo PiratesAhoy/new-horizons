@@ -279,7 +279,7 @@ void LAi_CharacterBecameStunned()
 	CharacterPlayAction(chr, "");
 	if(!CheckAttribute(chr,"corpse"))
 	{
-		if(chr.sex!="woman")
+		if(GetAttribute(chr, "sex")!="woman")
 		{
 			chr.actions.idle.i1 = "Ground_sitting";
 			chr.actions.idle.i2 = "Ground_sitting";

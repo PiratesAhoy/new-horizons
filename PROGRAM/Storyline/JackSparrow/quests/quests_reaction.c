@@ -95,8 +95,12 @@ void QuestComplete(string sQuestName)
 
 		case "TotBB_HtC3":
 			// Set up actual beginning
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			// MAXIMUS 05.09.2018 ==>
+			PChar.old.name = "Jack";
+			PChar.old.lastname = "Sparrow";
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
+			// MAXIMUS 05.09.2018 <==
 			GiveModel2Player("47YoungJack",true);
 			GiveModel2Player("depp",false);			// PB: For those players who REALLY can't wait
 			GiveShip2Character(pchar,"Cutter2","Spreading Freedom",-1,ENGLAND,true,true);
@@ -323,6 +327,7 @@ void QuestComplete(string sQuestName)
 
 			ChangeCharacterAddressGroup(CharacterFromID("Maykin Blundas"),"Oxbay_tavern", "goto", "goto16");
 
+			Locations[FindLocation("Oxbay_tavern")].vcskip = true;	// GR: See what happens if we vcskip the tavern *before* we get there!
 			Pchar.quest.Blundas_in_the_Tavern.win_condition.l1 = "location";
 			PChar.quest.Blundas_in_the_Tavern.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Blundas_in_the_Tavern.win_condition.l1.location = "Oxbay_tavern";
@@ -4491,7 +4496,11 @@ void QuestComplete(string sQuestName)
 			pchar.quest.main_line = "speak_with_peasant";
 			pchar.quest.Luc_start.over = "yes";
 			pchar.jack = "pirate";
-			if(GetRMRelation(PChar, ENGLAND) > REL_WAR    ) SetRMRelation(PChar, ENGLAND, REL_WAR); 	// PB: Your actions have turned England hostile
+			if(GetRMRelation(PChar, ENGLAND) > REL_WAR)
+			{
+				SetRMRelation(PChar, ENGLAND, REL_WAR); 						// PB: Your actions have turned England hostile
+				if (HaveLetterOfMarque(ENGLAND)) LeaveService(PChar, ENGLAND, true);			// GR: And if you had a LoM, you don't have it any more.
+			}
 			if(GetRMRelation(PChar, PIRATE)  < REL_NEUTRAL) SetRMRelation(PChar, PIRATE, REL_NEUTRAL);	// PB: But the pirates approve
 			PChar.Flags.Personal = 1; // PB: Non-British Jack-flag
 			PChar.Flags.Personal.texture = 3;
@@ -4703,7 +4712,9 @@ void QuestComplete(string sQuestName)
 			}
 			else { AddPartyExp(pchar, 1500); }
 			Pchar.Quest.Barbossa_In_French_Tavern.over = "yes";
-			ChangeCharacterAddress(characterFromID("Turpin Cabanel"), "None", "");
+//			ChangeCharacterAddress(characterFromID("Turpin Cabanel"), "None", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Turpin Cabanel"), "Head_port_house", "goto", "locator1"); // GR: Put him back in his house so you can help him with smugglers or ask about the Blacque family
+			LAi_SetStayType(CharacterFromID("Turpin Cabanel"));
 
 			if(CheckAttribute(locations[FindLocation(Pchar.location)],"Falaise_de_fleur_port_02"))
 			{
@@ -4970,8 +4981,8 @@ void QuestComplete(string sQuestName)
 			pchar.Bosun = "cursed";
 			if(IsPassenger(characterFromID("Bos'un")) || IsOfficer(characterFromID("Bos'un")))
 			{
-				Characters[GetCharacterIndex("Bos'un")].name = "Nigel";
-				Characters[GetCharacterIndex("Bos'un")].lastname = "the Slave";
+				Characters[GetCharacterIndex("Bos'un")].name = TranslateString("","Nigel");
+				Characters[GetCharacterIndex("Bos'un")].lastname = TranslateString("","the Slave");
 				Characters[GetCharacterIndex("Bos'un")].model = "Ancient";
 				Characters[GetCharacterIndex("Bos'un")].headmodel = "h_Ancient";
 			}
@@ -5089,10 +5100,10 @@ void QuestComplete(string sQuestName)
 			// PB -->
 			// KK -->
 			if (PreprocessText("#scursed_ship#") == "Black Pearl")
-				GiveShip2Character(CharacterFromID("Barbossa"),"UncursedPearl",PreprocessText("#scursed_ship#"),-1,PIRATE,TRUE,TRUE);
+				GiveShip2Character(CharacterFromID("Barbossa"),"UncursedPearl",TranslateString(PreprocessText("#scursed_ship#"), ""),-1,PIRATE,TRUE,TRUE);
 			else
 			{
-				GiveShip2Character(CharacterFromID("Barbossa"),"CrimsonBlood", PreprocessText("#scursed_ship#"),-1,PIRATE,TRUE,TRUE);
+				GiveShip2Character(CharacterFromID("Barbossa"),"CrimsonBlood", TranslateString(PreprocessText("#scursed_ship#"), ""),-1,PIRATE,TRUE,TRUE);
 			// <-- KK
 				characters[GetCharacterIndex("Barbossa")].Ship.EmblemedSails.normalTex = "sail_Petros_black_red.tga"; // PB
 				characters[GetCharacterIndex("Barbossa")].Ship.EmblemedSails.nationFileName = "sail_Petros_black_red.tga"; // PB
@@ -5298,8 +5309,10 @@ void QuestComplete(string sQuestName)
 
 		case "10_years_tortuga":
 			DoQuestReloadToLocation("Turks_port", "reload", "reload1", "_");
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			// MAXIMUS 05.09.2018 ==>
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
+			// MAXIMUS 05.09.2018 <==
 			GiveModel2Player("Jack",true);
 			LAi_SetPlayerType(pchar);
 
@@ -5438,6 +5451,8 @@ void QuestComplete(string sQuestName)
 			AddCharacterGoods(pchar, GOOD_BALLS, 500);
 			AddCharacterGoods(pchar, GOOD_GUNPOWDER, 2000);
 			HoistFlag(ENGLAND);
+			PChar.Flags.Personal = 1;	// GR: return to non-British personal flag
+			PChar.Flags.Personal.texture = 3;
 			SetCharacterShipLocation(characterFromID("James Norrington"), "Redmond_port");
 			SetCharacterShipLocation(characterFromID("Port Guard"), "Redmond_port");
 			SetCharacterShipLocation(Pchar, "Redmond_shore_01");
@@ -6283,8 +6298,10 @@ void QuestComplete(string sQuestName)
 			sld.id = "Helmsman";
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Jack", "ships", "ship_1");
-			sld.name = "Jack";
-			sld.lastname = "Sparrow";
+			// MAXIMUS 05.09.2018 ==>
+			sld.name = TranslateString("", "Jack");
+			sld.lastname = TranslateString("", "Sparrow");
+			// MAXIMUS 05.09.2018 <==
 			sld.dialog.filename = "slave_dialog.c";
 			sld.id = "Jack_Sparrow";
 
@@ -6339,8 +6356,10 @@ void QuestComplete(string sQuestName)
 
 		case "Dauntless_Deck_NORR8":
 			GiveModel2Player("Jack", true);
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			// MAXIMUS 05.09.2018 ==>
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
+			// MAXIMUS 05.09.2018 <==
 
 			QuestToSeaLogin_PrepareLoc("Redmond", "reload", "reload_fort1", true);
 			QuestToSeaLogin_Launch();
@@ -6573,13 +6592,13 @@ void QuestComplete(string sQuestName)
 		case "muerte_with_Gibbs_and_Turner":
 			characters[GetCharacterIndex("Will Turner")].Dialog.Filename = "Will Turner_dialog.c";
 			LAi_SetActorType(characterFromID("Will Turner"));
-			LAi_ActorDialog(characterFromID("Will Turner"),PChar,"",10.0,1.0);
+			LAi_ActorDialog(characterFromID("Will Turner"),PChar,"",10.0,10.0);
 			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "On_the_Beach_with_Gibbs";
-			RemoveOfficersIndex(pchar, GetCharacterIndex("Mr. Gibbs"));
-			LAi_QuestDelay("muerte_with_Gibbs_and_Turner2", 0.0);
+//			LAi_QuestDelay("muerte_with_Gibbs_and_Turner2", 0.0);
 		break;
 
 		case "muerte_with_Gibbs_and_Turner2":
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Mr. Gibbs"));
 			LAi_SetOfficerType(characterFromID("Will Turner"));
 			Pchar.quest.meetcrew.win_condition.l1 = "location";
 			Pchar.quest.meetcrew.win_condition.l1.location = "Grotto";
@@ -6620,6 +6639,7 @@ void QuestComplete(string sQuestName)
 
 		case "parlerwill":
 			PostEvent("DoInfoShower",100,"s","");
+			Lai_SetActorType(characterFromID("Will Turner"));
 			Characters[GetCharacterIndex("Will Turner")].dialog.currentnode = "begin_20";
 			LAi_ActorDialog(characterFromID("Will Turner"), pchar, "", 10.0, 10.0);
 		break;
@@ -6630,20 +6650,24 @@ void QuestComplete(string sQuestName)
 			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 
+/* Original version: 'Lai_KillCharacter(pchar)' can really kill player character and end the game
 		case "revoirbarbossa":
 			Lai_KillCharacter(pchar);
 			SetNextWeather("Blue Sky");
 			ChangeCharacterAddress(characterFromID("Elizabeth Swann"), "none", "");
 			LAi_QuestDelay("revoirbarbossa2", 3.0);
+		break; */
+
+		case "revoirbarbossa":
+			SetNextWeather("Blue Sky");
+			ChangeCharacterAddress(characterFromID("Elizabeth Swann"), "none", "");
+			LAi_SetActorType(PChar);
+			LAi_ActorAnimation(PChar, "death_3", "revoirbarbossa2", 2.0);
 		break;
 
 		case "revoirbarbossa2":
 			SetNextWeather("Blue Sky");
 			DoQuestReloadToLocation("Grotto", "goto", "goto5", "amisbarbossa");
-			ChangeCharacterAddress(characterFromID("Will Turner"), "none", "");
-			LAi_SetActorType(characterFromID("Barbossa"));
-			Characters[GetCharacterIndex("Barbossa")].dialog.currentnode = "begin_1";
-			LAi_ActorDialog(characterFromID("Barbossa"), pchar, "", 10.0, 10.0);
 		break;
 
 		case "amisbarbossa":
@@ -6658,9 +6682,20 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(sld, 100.0, 100.0);
 			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Bmunk", "goto", "goto14");
 			LAi_SetHP(sld, 100.0, 100.0);
+			LAi_SetPlayerType(PChar);
+			PChar.quest.old_pirate_flag = PChar.flags.pirate;
+			PChar.quest.old_pirate_flag.texture = PChar.flags.pirate.texture;
+			ChangeCharacterAddress(characterFromID("Will Turner"), "none", "");
+			LAi_SetActorType(characterFromID("Barbossa"));
+			Characters[GetCharacterIndex("Barbossa")].dialog.currentnode = "begin_1";
+			LAi_ActorDialog(characterFromID("Barbossa"), pchar, "", 10.0, 10.0);
 		break;
 // -->SJG
 		case "insertforchase":
+			StorePassengers(Pchar.id);
+			SetOfficersIndex(PChar, 1, GetCharacterIndex("Pintel"));
+			SetOfficersIndex(PChar, 2, GetCharacterIndex("Ragetti"));
+			HoistFlag(PIRATE);
 			GiveShip2Character(CharacterFromID("Mr. Gibbs"),"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
 			characters[GetCharacterIndex("Mr. Gibbs")].quest.old_group = GetAttribute(CharacterFromID("Mr. Gibbs"),"chr_ai.group");
 			LAi_group_MoveCharacter(CharacterFromID("Mr. Gibbs"), "QC_SOLDIERS");
@@ -6715,11 +6750,21 @@ void QuestComplete(string sQuestName)
 			DeleteAttribute(CharacterFromID("Mr. Gibbs"), "recognized");
 			SetNextWeather("Blue Sky");
 			// PB: Back to Jack -->
-			PChar.name = "Jack";
-			PChar.lastname = "Sparrow";
+			// MAXIMUS 05.09.2018 ==>
+			PChar.name = TranslateString("", "Jack");
+			PChar.lastname = TranslateString("", "Sparrow");
+			// MAXIMUS 05.09.2018 <==
 			GiveModel2Player("Jack",true);
-			PChar.Flags.Pirate = 6; // PB: Jack Sparrow Pirate Flag
-			PChar.Flags.Pirate.texture = 0;
+//			PChar.Flags.Pirate = 6; // PB: Jack Sparrow Pirate Flag
+//			PChar.Flags.Pirate.texture = 0;
+			PChar.flags.pirate = PChar.quest.old_pirate_flag;	// GR: whatever pirate flag you were using before the battle
+			PChar.flags.pirate.texture = PChar.quest.old_pirate_flag.texture;
+			DeleteAttribute(PChar, "quest.old_pirate_flag");
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Pintel"));
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Ragetti"));
+			RemovePassenger(PChar, CharacterFromID("Pintel"));
+			RemovePassenger(PChar, CharacterFromID("Ragetti"));
+			RestorePassengers(PChar.id);
 			// PB: Back to Jack <--
 			SetCharacterShipLocation(CharacterFromID("Mr. Gibbs"), "ShipDeck7"); // PB
 //			DoQuestReloadToLocation("Black_Pearl", "rld", "loc1", "nowCapturedInterceptorCrew");
@@ -6826,7 +6871,7 @@ void QuestComplete(string sQuestName)
 
 		case "allersurilot":
 			// PB -->
-			GiveShip2Character(characterFromID("Barbossa"),SHIP_CURSED,PreprocessText("#scursed_ship#"),-1,PIRATE,true,true);
+			GiveShip2Character(characterFromID("Barbossa"),SHIP_CURSED,TranslateString(PreprocessText("#scursed_ship#"), ""),-1,PIRATE,true,true);
 			//setCharacterShipLocation(characterFromID("BP"), "Deserted_Island_shore_01");
 			setCharacterShipLocation(characterFromID("Barbossa"), "Deserted_Island_shore_01");
 			characters[GetCharacterIndex("Barbossa")].sailaway = true;
@@ -7201,10 +7246,10 @@ void QuestComplete(string sQuestName)
 			LAi_SetPlayerType(pchar); // <--SJG
 			// KK -->
 			if (PreprocessText("#scursed_ship#") == "Black Pearl")
-				GiveShip2Character(pchar,"BlackPearl",  PreprocessText("#scursed_ship#"),-1,PIRATE,TRUE,TRUE);
+				GiveShip2Character(pchar,"BlackPearl",  TranslateString(PreprocessText("#scursed_ship#"), ""),-1,PIRATE,TRUE,TRUE);
 			else
 			{
-				GiveShip2Character(pchar,"CrimsonBlood",PreprocessText("#scursed_ship#"),-1,PIRATE,TRUE,TRUE);
+				GiveShip2Character(pchar,"CrimsonBlood",TranslateString(PreprocessText("#scursed_ship#"), ""),-1,PIRATE,TRUE,TRUE);
 				pchar.EmblemedSails.normalTex = "Ships\Sails\sail_Petros_black_red.tga"; // PB
 				pchar.EmblemedSails.nationFileName = "Ships\Sails\sail_Petros_black_red.tga"; // PB
 			}
@@ -7268,6 +7313,7 @@ void QuestComplete(string sQuestName)
 			}
 			//<-- CTM
 
+			PChar.quest.cotbp_done = true;
 			if(CheckQuestAttribute("animists", "completed")) CloseQuestHeader("Stolen");	// If "Animists" quest not complete, "Ship Stolen" questbook may be needed if Jaoquin de Masse steals your ship later
 		break;
 // Bartolomeu o Portugues COTBP Finishes Here
@@ -7988,8 +8034,8 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(sld);
 			LAi_ActorSetLayMode(sld);
 			LAi_SetImmortal(sld,true);
-			sld.name = "French";
-			sld.lastname = "Soldier";
+			sld.name = TranslateString("French", "Soldier");
+			sld.lastname = "";
 			sld.dialog.filename = "Octave Fabre_dialog.c";
 			sld.dialog.currentnode = "Smallchest";
 			LAi_ActorWaitDialog(sld, pchar);			//CTM
@@ -8257,7 +8303,7 @@ void QuestComplete(string sQuestName)
 
 		case "gotoseedavy":
 			SetNextWeather("Black Pearl Fight");
-			DoQuestReloadToLocation("Quest_Falaise_de_fleur_location_03", "reload", "Falaise_de_Fleur_townhall", "");
+			DoQuestReloadToLocation("Quest_Falaise_de_fleur_location_03", "reload", "Falaise_de_Fleur_townhall", "_");
 			locations[FindLocation("Quest_Falaise_de_fleur_location_03")].reload.l1.disable = 1;
 		break;
 
@@ -8435,8 +8481,8 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			LAi_ActorTurnToCharacter(Pchar, characterFromID("Angler"));
 			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Angler"));
 			Pchar.Temp.self.dialog = Pchar.dialog.currentnode;
 			Pchar.dialog.currentnode = "Run_away";
 			LAi_ActorSelfDialog(Pchar, "player_back");
@@ -8572,6 +8618,7 @@ void QuestComplete(string sQuestName)
 			bSuppressResurrection = false;
 			AddMoneyToCharacter(pchar, 40000);
 			AddQuestRecord("Contact", 8);
+			ItemSetPrice("small_chestJS", 1);		// GR: can now dump chest into a chest
 			//CloseQuestHeader("Contact");
 
 			Pchar.quest.Tia_and_Maggee.win_condition.l1 = "location";

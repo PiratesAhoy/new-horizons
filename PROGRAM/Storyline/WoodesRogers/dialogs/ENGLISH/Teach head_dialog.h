@@ -1,5 +1,5 @@
-string DLG_TEXT[28] = {
-"Ahoy there Captain.",
+string DLG_TEXT[50] = {
+"Ahoy there Captain. Which part are you interested in?",
 "!!!",
 "Where to Captain?",
 "Oh I'm fine here thank you with this part of the story.",
@@ -27,5 +27,27 @@ string DLG_TEXT[28] = {
 "Hmm, I think I'll play the start of the adventure instead.",	//25
 "Be warned then Captain.",
 "Alright, alright. Now let's go!",
+"21) To Port Royal and the start of PART 2.",		//28
+"22) To the Farm: after ALCHEMY 1.",			//29
+"Part one.",			//30
+"Part two.",			//31
+"I've changed my mind, take me to part one instead.",	//32
+"I've changed my mind, take me to part two instead.",	//33
+"23) To Cave Shore: after VANE.",			//34
+"24) To Curacao: after HANDS.",				//35
+"25) To La Grenade: after ODEL",			//36
+"26) To Tortuga: after SURGEONS.",			//37
+"27) To Charlestown: after MALTAINS.",			//38
+"28) To Cayman Estate: after MAZE and ROOMS.",		//39
+"29) To Eleuthera: after CITADEL.",			//40
+"30) To Cartagena: after MONASTARY.",			//41
+"31) To Antigua: after PRISON.",			//42
+"32) To Cayman: after ESTATE WINE CELLAR.",		//43
+"33) To Turks: after MAP FOUND.",			//44
+"34) To Cartagena: after ALL FOUR MISSIONS.",		//45
+"35) To Kristiania: after ALL SIX ITEMS FOUND.",	//46
+"36) To Careen shore: after BLACKBEARD'S TOWER.",	//47
+"37) To Corvette: after CAREEN SHORE.",			//48
+"38) To Isla Mona: after CORVETTE.",			//49
   
 };

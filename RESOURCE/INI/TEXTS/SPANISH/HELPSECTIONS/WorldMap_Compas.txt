@@ -1,0 +1,9 @@
+Compas_title
+{
+Brujula
+}
+
+Compas_info
+{
+????? En World Map Compass esta en la esquina inferior derecha de la pantalla. Usalo para establecer tu curso.
+}

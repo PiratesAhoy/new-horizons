@@ -1,7 +1,7 @@
 string DLG_TEXT[118] = {
 "Captain, so long as your assignment remains alive, we have nothing whatsoever to discuss. Remember that I value promptness and the sands of time are running out.",
 "Order flowers for his widow, Santos, the bell is tolling and the bawdy hand of the dial is on the prick of High Noon.",
-"Here is the 3000 gold we agreed upon Captain, and I've been given to understand that Bricenos' body lies upon #sisland_Hispaniola#' shore.",
+"Here is the 3000 gold we agreed upon Captain, and I've been given to understand that Bricenos' body lies upon #sisland_Hispaniola#'s shore.",
 "Yes, I could say that he's all washed up.",
 "Thank you, but this experience has convinced me that the tide is running out on our association,... and I'm sailing on it.",
 "Ah, captain! Well done - you've certainly earned your 4500 gold. I trust everything went smoothly?",

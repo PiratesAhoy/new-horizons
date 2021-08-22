@@ -1,0 +1,18 @@
+string DLG_TEXT[16] = {
+".....",
+".....",
+"Dom Guillermo, Bienvenido a mi oficina.",
+"Note que no me Olvidaste desde nuestra reunion en la fiesta del conc.",
+"Por supuesto, como podria olvidarse del enviado de nuestro Rey. ?Puedo ayudarle?",
+"Si, durante mi visita al fuerte de San Felipe, el conc Montavez revelo un secreto.",
+"Que exactamente?",
+"Habria un tunel que conectaria su oficina con el fuerte.",
+"Eso es cierto. La entrada esta al final de estas escaleras.",
+"Interesante.",
+"Gracias a el, si es necesario, puedo enviar mas tropas al fuerte sin estar en peligro por los barcos enemigos disparando al Puerto.",
+"!Maravilloso! Que idea fantastica. ?Puedes mostrarme el tunel?",
+"Lo siento, Dom Guillermo. Como tal vez ya has visto, la entrada esta cerrada por una puerta de hierro y solo el conc Montavez tiene la llave.",
+"[Thinks: Not Good!]: No Es Bueno! Acto, Almirante. Eso no es importante, era solo por curiosidad. Bueno, debes tener mucho trabajo desde que volviste a Cartagena, asi que prefiero dejarte en paz.",
+"Gracias, Dom Guillermo. Es cierto que la expedicion en Curazao ha retrasado mi trabajo aqui pero todo se resolvera en unos dias.",
+"Es bueno oirlo. !Nos vemos Almirante!",
+};

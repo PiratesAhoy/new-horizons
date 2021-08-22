@@ -240,6 +240,33 @@ void ShipBerthing(int SelCompSlot, int SelPort, int SelBerthSlot, int BDst, int 
 		makearef(arNRCShip,NRC.ship); //JA 9DEC06 Moved inside case statememt as not initialized if no ship in slot
 		CopyAttributes(arNRCShip,TempR);
 		DeleteAttribute(&TempR,"");
+
+//PW ------> copied and slightly amended from transfer_main.c since not called there by kam_shipberthing_ship.c routines
+// to fix bug where MainChar has no location.from_sea since wiped in shipyard.c when you give up your ship and have no ship
+
+// NK 04-17 lay up ships bugfix 
+		
+			if(!CheckAttribute(MainChar,"location.from_sea"))
+			{	
+				if( CheckAttribute(MainChar,"location.old_from_sea") )
+				{
+					MainChar.location.from_sea = MainChar.location.old_from_sea;
+					SetFleetInTown(GetTownIDFromLocID(MainChar.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+					DeleteAttribute(MainChar,"location.old_from_sea");
+				}
+			}
+			if(MainChar.location.from_sea == "")
+			{
+				if( CheckAttribute(MainChar,"location.old_from_sea") )
+				{
+					MainChar.location.from_sea = MainChar.location.old_from_sea;
+					SetFleetInTown(GetTownIDFromLocID(MainChar.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+					DeleteAttribute(MainChar,"location.old_from_sea");
+				}	
+			}
+		// NK <--
+//PW <------ copied from transfer_main.c
+
 		if (TRACELOG == 1) { trace("test: NRC.ship.name = " + NRC.ship.name); }
 	}
 	else

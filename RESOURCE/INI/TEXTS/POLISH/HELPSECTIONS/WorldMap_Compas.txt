@@ -1,0 +1,9 @@
+Compas_title
+{
+Compass
+}
+
+Compas_info
+{
+     Kompas mapy ›wiata znajduje siê w prawym dolnym rogu ekranu. Užyj go, aby ustawiÞ swój kurs.
+}

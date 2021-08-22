@@ -1,0 +1,12 @@
+title=Additional medicines and instruments (optional)
+text.t1=I think it's a surgery kit, but locked.
+text.t2=Medicine leaves? Looks like hemp to me. 
+text.t3=I got a jar of leeches. Also a bag - could be useful for more medicine items.
+text.t4=This is no ordinary saw but a Doctor's tool. Do they really use it in the shipyard? 
+text.t5=A bunch of old letters? No no no - this is a collection of prescriptions and medical advises. 
+text.t6=Rolls of old cloth reused as bandages.
+text.t7=All extra medicines found!
+text.t8=Any other drugs or medical items are of interest! Charles Vane.
+text.t9=I have to search grandma Rogers' bedroom later.
+text.t10=Fried-Egg may have some medicine, but where is he?
+text.t11=Maybe I should take a look around the shipyard while waiting.

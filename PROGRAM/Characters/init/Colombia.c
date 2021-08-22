@@ -4,15 +4,14 @@ void CreateColombiaCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 // Residence - Governor
 
 	ch.old.name = "Gregorio";
 	ch.old.lastname = "Montavez";
-	ch.name = TranslateString("","Gregorio");
-	ch.lastname = TranslateString("","Montavez");
+	ch.name = TranslateString("", "Gregorio");
+	ch.lastname = TranslateString("", "Montavez");
 	ch.id		= "Gregorio Montavez";
 	ch.model	= "Hub_Spa2";
 	ch.sex = "man";
@@ -49,8 +48,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Jose";
     ch.old.lastname = "Puablo";
-    ch.name    = TranslateString("","Jose");
-    ch.lastname    = TranslateString("","Puablo");
+    ch.name    = TranslateString("", "Jose");
+    ch.lastname    = TranslateString("", "Puablo");
     ch.id        = "Jose Puablo";
     ch.model    = "Old_man2";
     ch.sex = "man";
@@ -81,8 +80,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Diego";
     ch.old.lastname = "Martinez";
-    ch.name    = TranslateString("","Diego");
-    ch.lastname    = TranslateString("","Martinez");
+    ch.name    = TranslateString("", "Diego");
+    ch.lastname    = TranslateString("", "Martinez");
     ch.id        = "Diego Martinez";
     ch.model    = "man2";
     ch.sex = "man";
@@ -113,8 +112,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Alejandra";
     ch.old.lastname = "Sanchez";
-    ch.name    = TranslateString("","Alejandra");
-    ch.lastname    = TranslateString("","Sanchez");
+    ch.name    = TranslateString("", "Alejandra");
+    ch.lastname    = TranslateString("", "Sanchez");
     ch.id        = "Alejandra Sanchez";
     ch.model    = "daniell2";
     ch.sex = "woman";
@@ -145,8 +144,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Raquel";
     ch.old.lastname = "Torres";
-    ch.name    = TranslateString("","Raquel");
-    ch.lastname    = TranslateString("","Torres");
+    ch.name    = TranslateString("", "Raquel");
+    ch.lastname    = TranslateString("", "Torres");
     ch.id        = "Raquel Torres";
     ch.model    = "downgir52";
     ch.sex = "woman";
@@ -177,8 +176,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Quirino";
     ch.old.lastname = "Mendoza";
-    ch.name    = TranslateString("","Quirino");
-    ch.lastname    = TranslateString("","Mendoza");
+    ch.name    = TranslateString("", "Quirino");
+    ch.lastname    = TranslateString("", "Mendoza");
     ch.id        = "Quirino Mendoza";
     ch.model    = "man5_1";
     ch.sex = "man";
@@ -209,8 +208,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Raul";
     ch.old.lastname = "Reyes";
-    ch.name    = TranslateString("","Raul");
-    ch.lastname    = TranslateString("","Reyes");
+    ch.name    = TranslateString("", "Raul");
+    ch.lastname    = TranslateString("", "Reyes");
     ch.id        = "Raul Reyes";
     ch.model    = "man4";
     ch.sex = "man";
@@ -241,8 +240,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Sancho";
     ch.old.lastname = "Alvarez";
-    ch.name    = TranslateString("","Sancho");
-    ch.lastname    = TranslateString("","Alvarez");
+    ch.name    = TranslateString("", "Sancho");
+    ch.lastname    = TranslateString("", "Alvarez");
     ch.id        = "Sancho Alvarez";
     ch.model    = "man1";
     ch.sex = "man";
@@ -273,8 +272,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Selena";
     ch.old.lastname = "Diaz";
-    ch.name    = TranslateString("","Selena");
-    ch.lastname    = TranslateString("","Diaz");
+    ch.name    = TranslateString("", "Selena");
+    ch.lastname    = TranslateString("", "Diaz");
     ch.id        = "Selena Diaz";
     ch.model    = "towngirl5";
     ch.sex = "woman";
@@ -305,8 +304,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Cameron";
     ch.old.lastname = "Gomez";
-    ch.name    = TranslateString("","Cameron");
-    ch.lastname    = TranslateString("","Gomez");
+    ch.name    = TranslateString("", "Cameron");
+    ch.lastname    = TranslateString("", "Gomez");
     ch.id        = "Cameron Gomez";
     ch.model    = "downgirl2";
     ch.sex = "woman";
@@ -337,8 +336,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Antonio";
     ch.old.lastname = "Castillo";
-    ch.name    = TranslateString("","Antonio");
-    ch.lastname    = TranslateString("","Castillo");
+    ch.name    = TranslateString("", "Antonio");
+    ch.lastname    = TranslateString("", "Castillo");
     ch.id        = "Antonio Castillo";
     ch.model    = "man8";
     ch.sex = "man";
@@ -369,8 +368,8 @@ void CreateColombiaCharacters(ref n)
 
     ch.old.name = "Penelope";
     ch.old.lastname = "Cruz";
-    ch.name    = TranslateString("","Penelope");
-    ch.lastname    = TranslateString("","Cruz");
+    ch.name    = TranslateString("", "Penelope");
+    ch.lastname    = TranslateString("", "Cruz");
     ch.id        = "Penelope Cruz";
     ch.model    = "danblack";
     ch.sex = "woman";
@@ -869,11 +868,89 @@ void CreateColombiaCharacters(ref n)
 	ch.greeting = "Gr_isla muelle soldier";
 	AddGameCharacter(n, ch);
 
+			// Soldier.
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "Cartagena_soldier_13";
+	ch.model = 2; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_CharacterReincarnation(ch, true, false);
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "Cartagena_town_01";
+	ch.location.group = "goto";
+	ch.location.locator = "soldier03";
+	ch.Dialog.Filename = "Isla Muelle soldier_dialog.c";
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
+			// Soldier.
+	ch.nation = SPAIN;
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "Cartagena_soldier_14";
+	ch.model = 2; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_CharacterReincarnation(ch, true, false);
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "Cartagena_town_01";
+	ch.location.group = "goto";
+	ch.location.locator = "soldier04";
+	ch.Dialog.Filename = "Isla Muelle soldier_dialog.c";
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
+	ch.greeting = "Gr_isla muelle soldier";
+	AddGameCharacter(n, ch);
+
 	// Cartagena Tailor
 	ch.old.name = "Virmundus";
 	ch.old.lastname = "Gastelu";
-	ch.name	= TranslateString("", "Virmundus");
-	ch.lastname	= TranslateString("", "Gastelu");
+	ch.name	= TranslateString("",  "Virmundus");
+	ch.lastname	= TranslateString("",  "Gastelu");
 	ch.id = "Virmundus Gastelu";
 	ch.model = "korsar";
 	ch.sex = "man";
@@ -907,8 +984,8 @@ void CreateColombiaCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Padre";
 	ch.old.lastname = "Camardiel";
-	ch.name = TranslateString("","Padre");
-	ch.lastname = TranslateString("","Camardiel");
+	ch.name = TranslateString("", "Padre");
+	ch.lastname = TranslateString("", "Camardiel");
 	ch.id		= "Padre Camardiel";
 	ch.model = "priest_spa";
 	ch.sex = "man";
@@ -945,8 +1022,8 @@ if (ENABLE_WEAPONSMOD)
 {
 	ch.old.name = "Uitalez";
 	ch.old.lastname = "Chiamuhera";
-	ch.name = TranslateString("","Uitalez");
-	ch.lastname = TranslateString("","Chiamuhera");
+	ch.name = TranslateString("", "Uitalez");
+	ch.lastname = TranslateString("", "Chiamuhera");
 	ch.id		= "Cartagena_blacksmith";
 	ch.model	= "blacksmith7";
 	ch.sound_type = "worker";
@@ -1332,8 +1409,8 @@ if (ENABLE_WEAPONSMOD)
            // Admiral
 	ch.old.name = "Lorenzo";
 	ch.old.lastname = "Delgado";
-	ch.name 	= TranslateString("","Lorenzo");
-	ch.lastname = TranslateString("","Delgado");
+	ch.name 	= TranslateString("", "Lorenzo");
+	ch.lastname = TranslateString("", "Delgado");
 	ch.id		= "Lorenzo Delgado";
 	ch.model	= "hub_spa4";
 	ch.sex = "man";
@@ -1365,8 +1442,8 @@ if (ENABLE_WEAPONSMOD)
 	//Levis Hotel:
 	ch.old.name = "Mary";
     ch.old.lastname = "Seacole";
-    ch.name    = "Mary";
-    ch.lastname    = "Seacole";
+    ch.name    = TranslateString("", "Mary");
+    ch.lastname    = TranslateString("", "Seacole");
     ch.id        = "Mary Seacole";
     ch.model    = "33_Affrica";
     ch.sex = "woman";
@@ -1400,7 +1477,7 @@ if (ENABLE_WEAPONSMOD)
 	
 	ch.old.name = "Abequa";
     ch.old.lastname = "";
-    ch.name    = "Abequa";
+    ch.name    = TranslateString("", "Abequa");
     ch.lastname    = "";
     ch.id        = "Abequa";
     ch.model    = "Indian_girl1";
@@ -1408,7 +1485,7 @@ if (ENABLE_WEAPONSMOD)
     ch.sound_type = "female_citizen";
     ch.location    = "Cartagena Hotel";
     ch.location.group = "goto";
-    ch.location.locator = "goto1";			//JRH
+    ch.location.locator = "goto9";			//JRH was goto1
     ch.Dialog.Filename = "Cartagena citizen_dialog.c";
     ch.greeting = "Gr_Estrella";
     ch.nation = SPAIN;
@@ -1431,4 +1508,465 @@ if (ENABLE_WEAPONSMOD)
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	LAi_SetLoginTime(ch, 0.0, 24.0);		//JRH
 	AddGameCharacter(n, ch);
+
+    //4 monks in Cartagena cloister in all storylines except WoodesRogers JRH
+	ch.old.name = "Brother";
+	ch.old.lastname = "Elias";
+	ch.name = TranslateString("", "Brother");
+	ch.lastname = TranslateString("", "Elias");
+	ch.id		= "cloister_monk1";
+	ch.model	= "monk7";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "cloister_exit";
+	ch.location.group = "goto";
+	ch.location.locator = "goto4";
+	ch.Dialog.Filename = "Cartagena citizen_dialog.c";
+	ch.greeting = "Gr_Padre Domingues";
+	ch.rank 	= 5;
+	ch.reputation = "10";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	ch.quest.meeting = "0";
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 60.0);
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Brother";
+	ch.old.lastname = "Simon";
+	ch.name = TranslateString("", "Brother");
+	ch.lastname = TranslateString("", "Simon");
+	ch.id		= "cloister_monk2";
+	ch.model	= "monk";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "cloister_exit";
+	ch.location.group = "goto";
+	ch.location.locator = "goto1";
+	ch.Dialog.Filename = "Cartagena citizen_dialog.c";
+	ch.greeting = "Gr_second_spaniard_priest";
+	ch.rank 	= 5;
+	ch.reputation = "10";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	ch.quest.meeting = "0";
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 60.0);
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Brother";
+	ch.old.lastname = "Anton";
+	ch.name = TranslateString("", "Brother");
+	ch.lastname = TranslateString("", "Anton");
+	ch.id		= "cloister_monk3";
+	ch.model	= "monk8";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "cloister_inside";
+	ch.location.group = "goto";
+	ch.location.locator = "goto2";
+	ch.Dialog.Filename = "Cartagena citizen_dialog.c";
+	ch.greeting = "Gr_Padre Domingues";
+	ch.rank 	= 5;
+	ch.reputation = "10";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	ch.quest.meeting = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 60.0);
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Brother";
+	ch.old.lastname = "Kristian";
+	ch.name = TranslateString("", "Brother");
+	ch.lastname = TranslateString("", "Kristian");
+	ch.id		= "cloister_monk4";
+	ch.model	= "PadreGerardo";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "cloister_inside";
+	ch.location.group = "sit";
+	ch.location.locator = "sit1";
+	ch.Dialog.Filename = "Cartagena citizen_dialog.c";
+	ch.greeting = "Gr_second_spaniard_priest";
+	ch.rank 	= 5;
+	ch.reputation = "10";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	ch.quest.meeting = "0";
+	LAi_SetSitType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 60.0);
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
+
+// Indian village near beach
+	ch.old.name = "Colombian";
+	ch.old.lastname = "Indian";
+	ch.name = TranslateString("Colombian", "Indian");
+	ch.lastname = "";
+	ch.id		= "Columbian_Indian1";
+	ch.model	= "Indian3";
+	ch.sex = "man";
+	LAi_CharacterReincarnation(ch, true, false);
+	GiveItem2Character(ch, "tomahawk");
+	ch.equip.blade = "tomahawk";
+	GiveItem2Character(ch, "pistolbow");
+	ch.equip.gun = "pistolbow";
+	TakenItems(ch, "bladearrows", 1 + rand(2));
+	ch.isIndian = true;
+	ch.location	= "Colombian_Indian_Village";
+	ch.location.group = "goto";
+	ch.location.locator = "goto7";
+	ch.Dialog.Filename = "Enc_Walker.c";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "1000";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "4";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_SetWarriorTypeNoGroup(ch);
+	LAi_warrior_DialogEnable(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.greeting = "Gr_Indian";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Colombian";
+	ch.old.lastname = "Indian";
+	ch.name = TranslateString("Colombian", "Indian");
+	ch.lastname = "";
+	ch.id		= "Columbian_Indian2";
+	ch.model	= "Indian1_2";
+	ch.sex = "man";
+	LAi_CharacterReincarnation(ch, true, false);
+	GiveItem2Character(ch, "tomahawk");
+	ch.equip.blade = "tomahawk";
+	GiveItem2Character(ch, "pistolbow");
+	ch.equip.gun = "pistolbow";
+	TakenItems(ch, "bladearrows", 1 + rand(2));
+	ch.isIndian = true;
+	ch.location	= "Colombian_Indian_Village";
+	ch.location.group = "goto";
+	ch.location.locator = "goto12";
+	ch.Dialog.Filename = "Enc_Walker.c";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "1000";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "4";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_SetWarriorTypeNoGroup(ch);
+	LAi_warrior_DialogEnable(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.greeting = "Gr_Indian";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Colombian";
+	ch.old.lastname = "Indian";
+	ch.name = TranslateString("Colombian", "IndianF");
+	ch.lastname = "";
+	ch.id		= "Columbian_Indian3";
+	ch.model	= "Indian_girl2";
+	ch.sex = "woman";
+	LAi_CharacterReincarnation(ch, true, false);
+	ch.location	= "Colombian_Indian_Village";
+	ch.location.group = "goto";
+	ch.location.locator = "goto11";
+	ch.Dialog.Filename = "Enc_Walker.c";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.isIndian = true;
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.greeting = "Gr_Woman_French citizen";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Colombian";
+	ch.old.lastname = "Indian";
+	ch.name = TranslateString("Colombian", "Indian");
+	ch.lastname = "";
+	ch.id		= "Columbian_Indian4";
+	ch.model	= "Indian1_2";
+	ch.sex = "man";
+	LAi_NoRebirthDisable(ch);
+	GiveItem2Character(ch, "tomahawk");
+	ch.equip.blade = "tomahawk";
+	GiveItem2Character(ch, "pistolbow");
+	ch.equip.gun = "pistolbow";
+	TakenItems(ch, "bladearrows", 1 + rand(2));
+	ch.isIndian = true;
+	ch.location	= "Colombian_Indian_Village";
+	ch.location.group = "goto";
+	ch.location.locator = "goto37";
+	ch.Dialog.Filename = "Enc_Walker.c";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "1000";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "4";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_SetWarriorTypeNoGroup(ch);
+	LAi_warrior_DialogEnable(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.greeting = "Gr_Indian";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Colombian";
+	ch.old.lastname = "Indian";
+	ch.name = TranslateString("Colombian", "Indian");
+	ch.lastname = "";
+	ch.id		= "Columbian_Indian5";
+	ch.model	= "Indian1_3";
+	ch.sex = "man";
+	LAi_NoRebirthDisable(ch);
+	GiveItem2Character(ch, "tomahawk");
+	ch.equip.blade = "tomahawk";
+	GiveItem2Character(ch, "pistolbow");
+	ch.equip.gun = "pistolbow";
+	TakenItems(ch, "bladearrows", 1 + rand(2));
+	ch.isIndian = true;
+	ch.location	= "Colombian_Indian_Village";
+	ch.location.group = "goto";
+	ch.location.locator = "goto8";
+	ch.Dialog.Filename = "Enc_Walker.c";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "1000";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "4";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_SetWarriorTypeNoGroup(ch);
+	LAi_warrior_DialogEnable(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.greeting = "Gr_Indian";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Colombian";
+	ch.old.lastname = "Indian";
+	ch.name = TranslateString("Colombian", "Indian");
+	ch.lastname = "";
+	ch.id		= "Columbian_Indian6";
+	ch.model	= "Indian1";
+	ch.sex = "man";
+	LAi_NoRebirthDisable(ch);
+	GiveItem2Character(ch, "tomahawk");
+	ch.equip.blade = "tomahawk";
+	GiveItem2Character(ch, "pistolbow");
+	ch.equip.gun = "pistolbow";
+	TakenItems(ch, "bladearrows", 1 + rand(2));
+	ch.isIndian = true;
+	ch.location	= "Colombian_Indian_Village";
+	ch.location.group = "goto";
+	ch.location.locator = "goto43";
+	ch.Dialog.Filename = "Enc_Walker.c";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "1000";
+	ch.skill.Leadership = "3";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "6";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "6";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "3";
+	ch.money = "0";
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_SetWarriorTypeNoGroup(ch);
+	LAi_warrior_DialogEnable(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.greeting = "Gr_Indian";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Colombian";
+	ch.old.lastname = "Indian";
+	ch.name = TranslateString("Colombian", "Indian");
+	ch.lastname = "";
+	ch.id		= "Columbian_Indian7";
+	ch.model	= "Indian2";
+	ch.sex = "man";
+	LAi_NoRebirthDisable(ch);
+	GiveItem2Character(ch, "tomahawk");
+	ch.equip.blade = "tomahawk";
+	GiveItem2Character(ch, "pistolbow");
+	ch.equip.gun = "pistolbow";
+	TakenItems(ch, "bladearrows", 1 + rand(2));
+	ch.isIndian = true;
+	ch.location	= "Colombian_Indian_Village";
+	ch.location.group = "goto";
+	ch.location.locator = "goto9";
+	ch.Dialog.Filename = "Enc_Walker.c";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "1000";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	LAi_SetHP(ch, 100.0, 100.0);
+	LAi_SetWarriorTypeNoGroup(ch);
+	LAi_warrior_DialogEnable(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.greeting = "Gr_Indian";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+/*	
+	ch.old.name = "Columbian";
+	ch.old.lastname = "Chief";
+	ch.name = TranslateString("Colombian", "Chief");
+	ch.lastname = "";
+	ch.id		= "Columbian_Chief";
+	ch.model	= "Indian1";
+	ch.sex = "man";
+	ch.location	= "Colombian_Indian_house";
+	ch.location.group = "goto";
+	ch.location.locator = "goto2";
+	ch.Dialog.Filename = "Enc_Walker.c";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "1000";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "5";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "5";
+	ch.money = "0";
+	ch.isIndian = true;
+	LAi_SetHP(ch, 150.0, 150.0);
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	ch.greeting = "Gr_Indian";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+*/
 }

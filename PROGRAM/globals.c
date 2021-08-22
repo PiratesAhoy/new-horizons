@@ -122,10 +122,10 @@ object  GameState;
 //    TOTAL_CHARACTERS minus FANTOM_CHARACTERS gives the number of possible global fantoms.
 //--------------------------------------------------------------------
 // LDH new numbers 02May09
-#define TOTAL_CHARACTERS			2400	// Size of Characters array, all the characters in the game. JRH was 2050
-#define MAX_CHARACTERS				2149	// Number of permanent characters, JRH was 1999
-#define LOC_FANTOM_CHARACTERS		2150    // Index of first local fantom, must be > MAX_CHARACTERS, JRH was 2000
-#define FANTOM_CHARACTERS			2200	// Index of first permanent fantom, remainder of Character array is used for these, JRH was 2050
+#define TOTAL_CHARACTERS			2600	// Size of Characters array, all the characters in the game. JRH was 2400
+#define MAX_CHARACTERS				2349	// Number of permanent characters, JRH was 2149
+#define LOC_FANTOM_CHARACTERS			2350    // Index of first local fantom, must be > MAX_CHARACTERS, JRH was 2150
+#define FANTOM_CHARACTERS			2400	// Index of first permanent fantom, remainder of Character array is used for these, JRH was 2200
 int CHARACTERS_QUANTITY = 0; // 05-04-05 add int for max char, replace using of MAX_CHARACTERS.
 
 #define	MAX_LOCATIONS		1100 //NK 05-03-30 up number of locs	//JRH was 1000
@@ -182,17 +182,18 @@ bool	bDeadExchange = false;
 // KK -->
 #define ILANG_ENG   0
 #define ILANG_RUS   1
-#define ILANG_FRA   2
-#define ILANG_GER   3
-#define ILANG_SPA   4
+#define ILANG_SPA   2
+#define ILANG_FRA   3
+#define ILANG_GER   4
 #define ILANG_POL   5
+#define ILANG_SWE   6
 
 int iLangInterface = ILANG_ENG;
 int GetInterfaceLanguage() { return iLangInterface; }
-void SetInterfaceLanguage(int il) { if (il >= 0 && il < 6) iLangInterface = il; }
+void SetInterfaceLanguage(int il) { if (il >= 0 && il < 7) iLangInterface = il; }
 int iKeyboardLayout = iLangInterface;
 int GetKeyboardLayout() { return iKeyboardLayout; }
-void SetKeyboardLayout(int kl) { if (kl >= 0 && kl < 6) iKeyboardLayout = kl; }
+void SetKeyboardLayout(int kl) { if (kl >= 0 && kl < 7) iKeyboardLayout = kl; }
 // <-- KK
 
 bool	bLanguageRus = false;
@@ -370,8 +371,8 @@ Note that you must be neutral with that nation to buy a LoM and buying the LoM s
 
 // RM <--
 
-#define BUILDVERSION				"14 (21st May 2018)"	// this is not used in reinit.c anymore, so we can use a string now
-#define IS_SGV					14.941			// must be a float - use small numbers to keep them sequential for all these updates --> 12.10 is smaller than 12.9!
+#define BUILDVERSION				"14 (19th March 2021)"	// this is not used in reinit.c anymore, so we can use a string now
+#define IS_SGV					14.943			// must be a float - use small numbers to keep them sequential for all these updates --> 12.10 is smaller than 12.9!
 
 #define PA_INET					"www.piratesahoy.net"
 #define PA_DOWN					"www.moddb.com/mods/new-horizons"

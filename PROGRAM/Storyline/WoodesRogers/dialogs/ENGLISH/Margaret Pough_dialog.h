@@ -30,6 +30,6 @@ string DLG_TEXT[32] = {
 "Get out! Get out of here -",
 "- and don't ever come back.",
 "Not that I am aware of.",		//30
-"Hmm, maybe I have to come back later for a more thorough exploration.",
+"Hmm, maybe I have to come back later for a more thorough exploration. I wonder if any of Teach's former officers know something of value?",
 
 };

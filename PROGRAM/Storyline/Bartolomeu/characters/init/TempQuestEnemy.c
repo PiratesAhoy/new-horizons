@@ -2,12 +2,11 @@ void CreateTempQuestEnemyCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_1549";
 	ch.model	= 2; // PB
@@ -15,8 +14,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -49,7 +48,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_4143";
 	ch.model	= 5; // PB
@@ -57,8 +56,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -91,7 +90,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_15a9";
 	ch.model	= 2; // PB
@@ -99,8 +98,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -133,7 +132,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_41a3";
 	ch.model	= 5; // PB
@@ -141,8 +140,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -177,7 +176,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a1";
 	ch.model	= 2; // PB
@@ -185,8 +184,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -219,7 +218,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a2";
 	ch.model	= 3; // PB
@@ -227,8 +226,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -261,7 +260,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a3";
 	ch.model	= 2; // PB
@@ -269,8 +268,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -303,7 +302,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a4";
 	ch.model	= 5; // PB
@@ -311,8 +310,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -345,7 +344,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a5";
 	ch.model	= 2; // PB
@@ -353,8 +352,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -387,7 +386,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a6";
 	ch.model	= 3; // PB
@@ -395,8 +394,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -429,7 +428,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a7";
 	ch.model	= 2; // PB
@@ -437,8 +436,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -471,7 +470,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a8";
 	ch.model	= 5; // PB
@@ -479,8 +478,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -513,7 +512,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a9";
 	ch.model	= 5; // PB
@@ -521,8 +520,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -555,7 +554,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a10";
 	ch.model	= 2; // PB
@@ -563,8 +562,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -597,7 +596,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a11";
 	ch.model	= 3; // PB
@@ -605,8 +604,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -639,7 +638,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a12";
 	ch.model	= 2; // PB
@@ -647,8 +646,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -681,7 +680,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_FV_soldier_a13";
 	ch.model	= 5; // PB
@@ -689,8 +688,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -727,7 +726,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_FV_patrol_1";
 	ch.model	= 5; // PB
@@ -736,8 +735,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -770,7 +769,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 			//Patrol
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_FV_patrol_2";
 	ch.model	= 4; // PB
@@ -779,8 +778,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -812,7 +811,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_FV_patrol_3";
 	ch.model	= 2; // PB
@@ -821,8 +820,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -855,7 +854,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 			//Patrol
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_FV_patrol_4";
 	ch.model	= 4; // PB
@@ -864,8 +863,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -897,7 +896,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_FV_patrol_5";
 	ch.model	= 5; // PB
@@ -906,8 +905,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -941,7 +940,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Havana_soldier_01";
 	ch.model	= 1; // PB
@@ -976,7 +975,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Havana_soldier_02";
 	ch.model	= 2; // PB
@@ -1011,7 +1010,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Havana_soldier_03";
 	ch.model	= 3; // PB
@@ -1046,7 +1045,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Havana_soldier_04";
 	ch.model	= 4; // PB
@@ -1081,7 +1080,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Havana_soldier_05";
 	ch.model	= 5; // PB
@@ -1116,7 +1115,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Havana_soldier_06";
 	ch.model	= 5; // PB
@@ -1155,7 +1154,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Pirate");
+	ch.name 	= TranslateString("", "Pirate");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Pirate1";
 	ch.model	= "pirat1";  
@@ -1163,8 +1162,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1197,7 +1196,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Pirate");
+	ch.name 	= TranslateString("", "Pirate");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Pirate2";
 	ch.model	= "pirat2";  
@@ -1205,8 +1204,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1239,7 +1238,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Pirate");
+	ch.name 	= TranslateString("", "Pirate");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Pirate3";
 	ch.model	= "pirat3";  
@@ -1247,8 +1246,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1281,7 +1280,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Pirate");
+	ch.name 	= TranslateString("", "Pirate");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Pirate4";
 	ch.model	= "pirat4";  
@@ -1289,8 +1288,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1323,7 +1322,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Pirate");
+	ch.name 	= TranslateString("", "Pirate");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Pirate5";
 	ch.model	= "pirat5";  
@@ -1331,8 +1330,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1365,7 +1364,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Pirate");
+	ch.name 	= TranslateString("", "Pirate");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Pirate6";
 	ch.model	= "pirat6";  
@@ -1373,8 +1372,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1407,7 +1406,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Pirate");
+	ch.name 	= TranslateString("", "Pirate");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Pirate7";
 	ch.model	= "pirat7";  
@@ -1415,8 +1414,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1449,7 +1448,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Pirate");
+	ch.name 	= TranslateString("", "Pirate");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Pirate8";
 	ch.model	= "pirat8";  
@@ -1457,8 +1456,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1493,7 +1492,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat1";
 	ch.model	= 1; // PB
@@ -1501,8 +1500,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1535,7 +1534,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat2";
 	ch.model	= 2; // PB
@@ -1543,8 +1542,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1577,7 +1576,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat3";
 	ch.model	= 3; // PB
@@ -1585,8 +1584,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1619,7 +1618,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat4";
 	ch.model	= 4; // PB
@@ -1627,8 +1626,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1661,7 +1660,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat5";
 	ch.model	= 5; // PB
@@ -1669,8 +1668,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1703,7 +1702,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat6";
 	ch.model	= 6; // PB
@@ -1711,8 +1710,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1745,7 +1744,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat7";
 	ch.model	= 1; // PB
@@ -1753,8 +1752,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1787,7 +1786,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat8";
 	ch.model	= 2; // PB
@@ -1795,8 +1794,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1829,7 +1828,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat9";
 	ch.model	= 2; // PB
@@ -1837,8 +1836,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1871,7 +1870,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat10";
 	ch.model	= 3; // PB
@@ -1879,8 +1878,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1912,7 +1911,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Aguadilla_Soldat11";
 	ch.model	= 4; // PB
@@ -1920,8 +1919,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1956,7 +1955,7 @@ void CreateTempQuestEnemyCharacters(ref n)
        // Patrol	
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_Morro_soldier_03";
 	ch.model	= 1; // PB
@@ -1965,8 +1964,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -1999,7 +1998,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 			//Patrol
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_Morro_soldier_04";
 	ch.model	= 4; // PB
@@ -2008,8 +2007,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2041,7 +2040,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_Morro_soldier_05";
 	ch.model	= 6; // PB
@@ -2050,8 +2049,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2083,7 +2082,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Quest_Morro_soldier_07";
 	ch.model	= 5; // PB
@@ -2092,8 +2091,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation = SPAIN;
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2125,7 +2124,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Morro_soldier_09";
 	ch.model	= 2; // PB
@@ -2161,7 +2160,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Morro_soldier_10";
 	ch.model	= 3; // PB
@@ -2197,7 +2196,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Quest_Morro_soldier_11";
 	ch.model	= 4; // PB
@@ -2271,7 +2270,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Priest";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Priest");
+	ch.name 	= TranslateString("", "Priest");
 	ch.lastname 	= "";
 	ch.id		= "inquisition_priest";
 	ch.model	= "inquisition_priest";
@@ -2309,7 +2308,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Monk";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Monk");
+	ch.name 	= TranslateString("", "Monk");
 	ch.lastname 	= "";
 	ch.id		= "inquisition_monk1";
 	ch.model	= "inquisition_monk1";
@@ -2347,7 +2346,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Monk";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Monk");
+	ch.name 	= TranslateString("", "Monk");
 	ch.lastname 	= "";
 	ch.id		= "inquisition_monk2";
 	ch.model	= "inquisition_monk2";
@@ -2385,7 +2384,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Monk";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Monk");
+	ch.name 	= TranslateString("", "Monk");
 	ch.lastname 	= "";
 	ch.id		= "inquisition_monk3";
 	ch.model	= "inquisition_monk3";
@@ -2423,7 +2422,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Monk";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Monk");
+	ch.name 	= TranslateString("", "Monk");
 	ch.lastname 	= "";
 	ch.id		= "inquisition_monk4";
 	ch.model	= "inquisition_monk4";
@@ -2461,7 +2460,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "inquisition_dead";
 	ch.model	= "skel1";
@@ -2497,7 +2496,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Cartagena_church_soldier";
 	ch.model	= 2; // PB
@@ -2508,8 +2507,8 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.location.locator = "";
 	GiveItem2Character(ch, "blade2");
 	ch.equip.blade = "blade2";
-	GiveItem2Character(ch, "pistol1");
-	ch.equip.gun = "pistol1";
+	GiveItem2Character(ch, "pistol1a");
+	ch.equip.gun = "pistol1a";
 	//JRH ammo mod -->
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
@@ -2541,7 +2540,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 //JRH for testing boulder	
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "boulder";
 	ch.model	= "boulder";
@@ -2574,7 +2573,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 //JRH for testing alligator	
 	ch.old.name = "";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","");
+	ch.name 	= "";
 	ch.lastname 	= "";
 	ch.id		= "alligator";
 	ch.model	= "alligator";
@@ -2605,7 +2604,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Native";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Native");
+	ch.name 	= TranslateString("", "Native");
 	ch.lastname 	= "";
 	ch.id		= "maquahuitl_enemy1";
 //	ch.model	= "Native";
@@ -2651,7 +2650,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Native";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Native");
+	ch.name 	= TranslateString("", "Native");
 	ch.lastname 	= "";
 	ch.id		= "maquahuitl_enemy2";
 //	ch.model	= "Native";  
@@ -2697,7 +2696,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Native";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Native");
+	ch.name 	= TranslateString("", "Native");
 	ch.lastname 	= "";
 	ch.id		= "maquahuitl_enemy3";
 //	ch.model	= "Native";
@@ -2746,7 +2745,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "rocket_enemy1";
 	ch.model	= 2; // PB
@@ -2789,7 +2788,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "rocket_enemy2";
 	ch.model	= 2; // PB
@@ -2832,7 +2831,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "rocket_enemy3";
 	ch.model	= 2; // PB

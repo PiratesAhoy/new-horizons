@@ -1,4 +1,4 @@
-string DLG_TEXT[30] = {
+string DLG_TEXT[32] = {
 "Hey there! Do me a favour young man...",
 "Huh? (Is he drunk?)",
 "Bandits have locked me in. Defeat them and I'll reward you.", 
@@ -7,8 +7,8 @@ string DLG_TEXT[30] = {
 "I'll be back in a minute, Mr Maynard.",
 "Oh yes, that's a start. The Citadel is damaged so you can only get me out via the upper door of the tower.",
 "Upper door yes. Hmm...",
-"Use the anchor to block the bridge!",
-"Exactly what I had in mind.",
+"Use the anchor to block the bridge!",				//8
+"Exactly what I had in mind.",					//9
 "Finally. Is it sure you're not from a newspaper?",		//10
 "Just a simple sailor, Mr Maynard. (He's stinking of rum!)",
 "It's Lieutenant boy. Very well. I have a few items that may interest you. Take a closer look in my bedroom downstairs.",
@@ -29,5 +29,7 @@ string DLG_TEXT[30] = {
 "Oops wrong exit.",
 "Where do I find the dealer?",
 "He's office is in the old Fort. You have to leave the town into the jungle. Then it's to the left.",
+"But how do I get to the bridge?",			//30
+"Use the cliffs to walk around the bay, young man!",	//31
 
 };

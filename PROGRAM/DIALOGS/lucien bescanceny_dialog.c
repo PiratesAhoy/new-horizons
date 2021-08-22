@@ -165,7 +165,11 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 10);
 			}
 			else { AddPartyExp(pchar, 1000); }
+			Preprocessor_AddQuestData("Lucien", GetMyName(NPChar));
+			Preprocessor_AddQuestData("Patric", GetMyName(CharacterFromID("Patric Cardone")));
 			AddQuestRecord("Patric", 5); // NK
+			Preprocessor_Remove("Patric");
+			Preprocessor_Remove("Lucien");
 		break;
 
 		case "Exit":

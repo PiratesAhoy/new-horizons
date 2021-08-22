@@ -1,0 +1,17 @@
+title=My First Ship
+text.t1=I have been transfered to the Indefatigable under Captain Pellew because of the Clayton issue. Fortunately Archie has been transfered too. 
+text.t2=I had another run in with Jack Simpson. I need to look out for him. The Captain has given me charge of the ship which I must sail to #sCharlestown#, which is on the island of #sisland_Quebradas Costillas#. The course is SE.
+text.t3=We made it to #sCharlestown#. Now I must repair the ship. We also need gunpowder.
+text.t4=Captain Pellew informed us that we have been given orders to blockade French ships at #sisland_Falaise de Fleur#. In particular we are to find the "Téméraire". That will be due West from here till we clear #sisland_Guadeloupe# then WSW to #sisland_Falaise de Fleur#.
+text.t5=We have sunk the Téméraire. Our orders now, are to sail for #sCharlestown#.
+text.t6=I have been ordered to a meeting with Captain Sawyer in the Tavern.
+text.t7=We are to take the ship to #sGreenford# to pick up some officers. We will pick up the Captain when we return.
+text.t8=After a miserable journey from England on the Justinian, what with being sea-sick and the bullying by Simpson, we are now in the Caribbean. Regretably I am to stay on the Justinian in Simpson's watch.
+text.t9=Kennedy, Clayton and I are to go to a briefing meeting at Naval H.Q. It is located in the main town here. 
+text.t10=Another unprovoked attack by Simpson. I will challenge him to a duel when the time is right so he cannot run away.
+text.t11=I have collected the officers. Now we can return to #sCharlestown#.
+text.t12=Clayton dead! I challenged Simpson to a duel, but Clayton knocked me out and took my place, but he was killed. Simpson is saying we both attcked him, which is a lie. I just need to be patient. My turn will come. Meanwhile we sail for #sRedmond# on #sisland_Redmond#.
+text.t13=Oh Dear! I was sick again this morning so I am late for a meeting at the Naval Academy. I had better find it and quickly.
+text.t14=We must go to the Shipyard and get larger guns in stalled on the ship.
+text.t15=The larger guns will have been installed by the time we go to sea. We must now sail for Anse Casse Bois on #sisland_Guadeloupe#, where we will land supplies for our agents there.
+

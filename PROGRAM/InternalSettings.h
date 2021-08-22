@@ -35,6 +35,8 @@ Please follow these rules when editing settings:
 #define ONSEA_DATA_DISABLED			0		// BOOL - 1=ON - Spyglass and compass additional information disabled, cannot move camera to non-player ships
 #define REALISTIC_ABILITIES			1		// INT  - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
 #define ITEM_REALISM				0		// BOOL - 1=ON - Items like rubies, diamonds and inca statuettes give no skill bonuses (books and items like compass etc. still do)
+#define CLINT_SHOTGUN				1		// BOOL - 0=OFF - Clint Eastwood carries brace of four horse pistols in Arcade Mode; 1=ON - Clint Eastwood carries shotgun in Arcade Mode.  In any other mode he always has brace of four horse pistols.
+#define CURSES_DISABLED				0		// INT - 0=default: Cursed items can be dumped or given away. 1 = cursed coins, 2 = cursed albatross, 0 = neither, 3 = both
 
 
 // ======================================
@@ -152,16 +154,17 @@ int		MAX_RAINCHANGE =				5;		// INT - ^^DITTO for rain
 float	COASTRAIDER_CHANCE = 		0.2;		// FLOAT - Generates local ships in ports and around the islands. Some are local merchants, others pirates.
 												// 0.0 : Stock PotC, no local ships at all
 												// 0.1 - 0.9 : The higher that value the more pirates instead of merchants appear
-float	NAVYRAIDER_CHANCE = 		0.4; 		// FLOAT - Ditto, but chance that raider is a foreign warship. Chance for that is coastraider_chance * navyraider_chance
-#define COASTGUARD_CHANCE			0.3			// FLOAT - chance in percent that ships of the island's nation will be warships, not merchants
+float	NAVYRAIDER_CHANCE = 		0.4; 			// FLOAT - Ditto, but chance that raider is a foreign warship. Chance for that is coastraider_chance * navyraider_chance
+#define COASTGUARD_CHANCE		0.3			// FLOAT - chance in percent that ships of the island's nation will be warships, not merchants
 #define TRADE_OTHERNATIONCHANCE		0.4			// FLOAT - chance in percent that the tradeship is not of the island's nation
 #define CR_CLASS_ABOVE_PCHAR		1			// INT - if Ship sightings are capped, this is how many classes above pchar's ship class the coaster can be.
-#define CR_MAX_MINCLASS				6			// INT - highest class minclass can be. Minclass normally scales up as pchar level goes up.
+#define CR_MAX_MINCLASS			6			// INT - highest class minclass can be. Minclass normally scales up as pchar level goes up.
 #define CR_MINCLASS_PERLEVEL		4			// INT - move minclass up one notch per this many PChar levels.
-#define CR_MAXPIRATECLASS			4			// INT - maximum class of pirate ship for coaster, NOT the same as MAXPIRATECLASS above
-#define AUTOCREATE_CR 				1 			// BOOL - Set to 1 to create new coastships every time you leave or approach an island. 0 will create ships only if you ask a citizen about them.
-#define DEAD_GENNEW_CR 				0.33 		// FLOAT - chance to make new coastal ship for character if character is dead.
-#define CR_PERSIST 					5 			// INT - number of days until new coastal ship is generated
+#define CR_MAXPIRATECLASS		4			// INT - maximum class of pirate ship for coaster, NOT the same as MAXPIRATECLASS above
+#define AUTOCREATE_CR 			1 			// BOOL - Set to 1 to create new coastships every time you leave or approach an island. 0 will create ships only if you ask a citizen about them.
+#define DEAD_GENNEW_CR 			0.33 			// FLOAT - chance to make new coastal ship for character if character is dead.
+#define CR_PERSIST 			5 			// INT - number of days until new coastal ship is generated
+#define DS_MULTIFLEET			0.0			// FLOAT - percentage chance of an extra group in a direct-sail encounter.  Default 0.0, no additional groups.  Likely to cause crashes if set above 0.0
 
 
 // ======================================
@@ -1008,5 +1011,5 @@ Set all to -1 to disable this mod
 #define VISIBLE_LOCATORS				0
 #define WITH_BRIGHT_COLOURS				0		// VISIBLE_LOCATORS must be on to change this
 #define FREE_CAMERA						0
-#define SIDESTEP_ENABLED				0		// You can use sidestep during the game (NOTE: No collision detection!)
+#define SIDESTEP_ENABLED				0		// BOOL - 0 (default) = off, 1 = on: you can use sidestep during the game (NOTE: No collision detection!)
 #define ENABLE_CHEATMODE				0		// Cheats can be triggered with numpad buttons

@@ -1,4 +1,4 @@
-string DLG_TEXT[34] = { 
+string DLG_TEXT[38] = { 
 "Can't you see that I'm on duty! Don't bother me.",
 "All right, all right.",
 "Did you want to report some crime?",
@@ -30,8 +30,12 @@ string DLG_TEXT[34] = {
 "That was even worse.",
 "The Commander is not in his office...",
 "No problem.",				//30
-"Red House - sure you know the right path through the jungle, sir? It's a very dangerous place indeed.",
+"Red House - sure you know the right path through the jungle maze, sir? It's a very dangerous place indeed. Hostile indians.",
 "Yes thank you. I've got a description here.",
 "Hmm, you're right. I have no idea how to find it.",
+"You have been warned of the jungle!",
+"Are you sure you want to go into the jungle?",
+"Ehh...(not really)",
+"Did I understand that!?",					//37
 
 };

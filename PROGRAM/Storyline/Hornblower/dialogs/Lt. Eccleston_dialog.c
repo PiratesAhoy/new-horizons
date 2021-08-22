@@ -73,7 +73,8 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("Make_Guadeloupe_Report");
 			dialog.text = DLG_TEXT[16];
 			link.l1 = DLG_TEXT[17];
-			link.l1.go = "Exit_Pellew_from_flagship";
+//			link.l1.go = "Exit_Pellew_from_flagship";	// Doesn't exist
+			link.l1.go = "Exit";
 		break;
 
 		case "Hes_waiting":

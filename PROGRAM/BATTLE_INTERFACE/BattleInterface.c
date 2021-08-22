@@ -2436,14 +2436,10 @@ float GetRigDamage(int shootIdx, int iBallType, ref damage_chr)
 			}
 		}
 
-		if( IsCharacterPerkOn(damage_chr,"ShipDefenceProfessional") ) { fDmgRig *= 0.75; }
+		if( IsCharacterPerkOn(damage_chr,"RiggingAdvance") ) { fDmgRig *= 0.75; }
 		else
 		{
-			if( IsCharacterPerkOn(damage_chr,"AdvancedBattleState") ) { fDmgRig *= 0.85; }
-			else
-			{
-				if( IsCharacterPerkOn(damage_chr,"BasicBattleState") )  { fDmgRig *= 0.92; }
-			}
+			if( IsCharacterPerkOn(damage_chr,"Rigging") )  { fDmgRig *= 0.85; }
 		}
 // KK --> //KB - Tuning ships
 //KB - Tuning ships - gchasers effect on sails
@@ -2480,14 +2476,10 @@ float GetRigDamage(int shootIdx, int iBallType, ref damage_chr)
 			}
 		}
 
-		if( IsCharacterPerkOn(damage_chr,"ShipDefenceProfessional") )	{ fDmgRig *= 0.6; }
+		if( IsCharacterPerkOn(damage_chr,"RiggingAdvance") ) { fDmgRig *= 0.6; }
 		else
 		{
-			if( IsCharacterPerkOn(damage_chr,"AdvancedBattleState") )	{ fDmgRig *= 0.75; }
-			else
-			{
-				if( IsCharacterPerkOn(damage_chr,"BasicBattleState") )	{ fDmgRig *= 0.85; }
-			}
+			if( IsCharacterPerkOn(damage_chr,"Rigging") )  { fDmgRig *= 0.8; }
 		}
 	}
 	return fDmgRig;

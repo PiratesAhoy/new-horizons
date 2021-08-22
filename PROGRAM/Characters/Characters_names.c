@@ -20,8 +20,8 @@ void InitCharactersNames()
 	n = 0;
 	n = AddStr2Array(&sEnWomenNames, n, "Adelaide,Adelina,Alicia,Alison,Amanda,Amelia,Amy,Anne,Arabella,Astrid,Audrey,Aurelia,Aurora,Avis,Beatrice");
 	n = AddStr2Array(&sEnWomenNames, n, "Bella,Camilla,Cecilia,Celia,Christina,Clare,Claudia,Cornelia,Diana,Edith,Elizabeth,Eloise,Emily,Emma");
-	n = AddStr2Array(&sEnWomenNames, n, "Eva,Flora,Gillian,Hilary,Ida,Isabella,Jane,Joan,Julia,Karen,Laura,Lavinia,Letitia,Lillian,Mabel,Magdalen");
-	n = AddStr2Array(&sEnWomenNames, n, "Margaret,Mary,Mildred,Mirabel,Monica,Nadine,Natalia,Priscilla,Sabina,Sarah,Serena,Simona,Susannah");
+	n = AddStr2Array(&sEnWomenNames, n, "Eva,Flora,Gillian,Helen,Hilary,Ida,Isabella,Jane,Joan,Julia,Karen,Laura,Lavinia,Letitia,Lillian,Lucy,Mabel,Magdalen");
+	n = AddStr2Array(&sEnWomenNames, n, "Margaret,Mary,Mildred,Mirabel,Monica,Nadine,Natalia,Priscilla,Sabina,Sally,Sarah,Serena,Simona,Susan,Susannah");
 	n = AddStr2Array(&sEnWomenNames, n, "Sylvia,Una,Ursula,Valentina,Valeria,Vivian,Yvette,Yvonne");
 
 // families
@@ -736,7 +736,7 @@ void InitCharactersNames()
 	n = 0;
 	n = AddStr2Array(&sAmWomenNames, n, "Abby,Abigail,Addison,Adelaide,Adelina,Alexandra,Alexis,Alicia,Allison,Allie,Alyssa,Amanda,Amber");
 	n = AddStr2Array(&sAmWomenNames, n, "Amelia,Amy,Andrea,Anna,Anne,Annie,Arabella,Arianna,Ashley,Astrid,Aubrey,Audrey,Aurelia,Aurora");
-	n = AddStr2Array(&sAmWomenNames, n, "Automn,Avery,Avis,Bailey,Beatrice,Bella,Brianna,Brittanny,Brooke,Brooklyn,Caitlin,Camilla,Caroline");
+	n = AddStr2Array(&sAmWomenNames, n, "Automn,Avery,Avis,Bailey,Barbara,Beatrice,Bella,Brianna,Brittanny,Brooke,Brooklyn,Caitlin,Camilla,Caroline");
 	n = AddStr2Array(&sAmWomenNames, n, "Cecilia,Celia,Charlotte,Chelsea,Cheyenne,Chloe,Christina,Claire,Claudia,Cornelia,Courtney,Danielle");
 	n = AddStr2Array(&sAmWomenNames, n, "Destiny,Diana,Edith,Elizabeth,Ella,Eloise,Emily,Emma,Erica,Erin,Evelyn,Gabby,Gabriella,Grace,Hailey");
 	n = AddStr2Array(&sAmWomenNames, n, "Haley,Hannah,Harper,Heather,Isabella,Jamie,Jasmine,Jenna,Jennifer,Jessica,Jordan,Julia,Kaitlyn,Kate");

@@ -49,7 +49,7 @@ void ProcessDialogEvent()
 						case 2: PlaySound("VOICE\ENGLISH\Poe_ok.wav"); break;
 					}
 				break;
-
+			
 				case "bb_prison_officer":
 					int off1greeting = rand(3);
 					switch (off1greeting)
@@ -60,46 +60,15 @@ void ProcessDialogEvent()
 						case 3: PlaySound("VOICE\ENGLISH\Eng_m_c_042.wav"); break;
 					}
 				break;
-
-				case "P2_guard1":
-					int P2G1greeting = rand(1);
-					switch (P2G1greeting)
-					{
-						case 0: PlaySound("VOICE\ENGLISH\blaze_puh.wav"); break;
-						case 1: PlaySound("VOICE\ENGLISH\blaze_sigh.wav"); break;
-					}
-				break;
-
-				case "P2_guard2":
-					int P2G2greeting = rand(2);
-					switch (P2G2greeting)
-					{
-						case 0: PlaySound("AMBIENT\CHURCH\snooze.wav"); break;
-						case 1: PlaySound("AMBIENT\CHURCH\snooze3.wav"); break;
-						case 2: PlaySound("AMBIENT\CHURCH\snooze2.wav"); break;
-					}
-				break;
-
-				case "P2_guard3":
-					int P2G3greeting = rand(2);
-					switch (P2G3greeting)
-					{
-						case 0: PlaySound("AMBIENT\TAVERN\man1.wav"); break;
-						case 1: PlaySound("AMBIENT\TAVERN\man2.wav"); break;
-						case 2: PlaySound("AMBIENT\TAVERN\man3.wav"); break;
-					}
-				break;
-
-				case "P2_guard4":
-					int P2G4greeting = rand(2);
-					switch (P2G4greeting)
-					{
-						case 0: PlaySound("AMBIENT\JAIL\cough.wav"); break;
-						case 1: PlaySound("AMBIENT\JAIL\sigh.wav"); break;
-						case 2: PlaySound("AMBIENT\JAIL\sniff2.wav"); break;
-					}
-				break;
-
+			
+				int P2greeting = rand(3);
+				switch (P2greeting)
+				{
+					case 0: PlaySound("VOICE\ENGLISH\Eng_m_b_039.wav"); break;
+					case 1: PlaySound("VOICE\ENGLISH\Eng_m_b_040.wav"); break;
+					case 2: PlaySound("VOICE\ENGLISH\Eng_m_b_043.wav"); break;
+					case 3: PlaySound("VOICE\ENGLISH\Eng_m_b_044.wav"); break;
+				}
 			}
 
 			int iPhrase = rand(10);
@@ -260,10 +229,34 @@ void ProcessDialogEvent()
 			PlaySound("VOICE\ENGLISH\Eng_m_c_060.wav");
 			dialog.text = DLG_TEXT[44];
 			link.l1 = DLG_TEXT[45];
+			link.l1.go = "bb_prison_stop7";
+		break;
+
+		case "bb_prison_stop7":
+			PlaySound("VOICE\ENGLISH\Eng_m_c_062.wav");
+			dialog.text = DLG_TEXT[52];
+			link.l1 = DLG_TEXT[53];
 			link.l1.go = "exit";
 			AddDialogExitQuest("bb_prison_stop7");
 		break;
 
+	//-----------------------------------------------------------
+		case "bb_prison2_tools":
+			PlaySound("VOICE\ENGLISH\Eng_m_b_040.wav");
+			dialog.text = DLG_TEXT[46];
+			link.l1 = DLG_TEXT[47];
+			link.l1.go = "exit";
+			AddDialogExitQuest("bb_prison2_tools_done");
+		break
+	//-----------------------------------------------------------	
+		case "Took_finds_out":
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead1.wav");
+			dialog.text = DLG_TEXT[50];
+			link.l1 = DLG_TEXT[51];
+			link.l1.go = "exit";
+			AddDialogExitQuest("P2_guards_move");
+		break;
+	//-----------------------------------------------------------
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;

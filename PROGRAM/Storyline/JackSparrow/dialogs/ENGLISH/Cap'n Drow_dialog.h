@@ -36,7 +36,7 @@ string DLG_TEXT[42] = {
 "Ahoy, Captain Sparrow! What brings you here?",
 "You do, Cap'n Drow. Nathan Kell suggested to me that you are a man that can take a great responsibility, I agreed. So what say you?",
 "What is it that you want from me?",
-"This bit of junk is one of nine pieces of eight! With it you will become the pirate lord of the Alantic ocean. We are to honour the call, if this happens you will need to sail to Shipwreck cove!",
+"This bit of junk is one of nine pieces of eight! With it you will become the pirate lord of the Atlantic ocean. We are to honour the call, if this happens you will need to sail to Shipwreck Cove!",
 "I'm indeed very interested. Is there anything I can give in return.",
 "[THINKS: Maybe I can take something as payment while I show him where Shipwreck Cove is] Just honour the call, savvy? Here is where Shipwreck Cove is located",
 "Welcome back, Mr Sparrow. What can I do for you?",

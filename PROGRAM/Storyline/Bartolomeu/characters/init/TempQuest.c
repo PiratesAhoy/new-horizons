@@ -2,14 +2,13 @@ void CreateTempQuestCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 // Hector Barbossa
 	ch.old.name = "Hector";
 	ch.old.lastname = "Barbossa";
-	ch.name = TranslateString("","Hector");
-	ch.lastname = TranslateString("","Barbossa");
+	ch.name = TranslateString("", "Hector");
+	ch.lastname = TranslateString("", "Barbossa");
 	ch.id		= "Hector Barbossa";
 	ch.model = "Diller";  // Cat
 	ch.sex = "man";
@@ -42,8 +41,8 @@ void CreateTempQuestCharacters(ref n)
 // Pierre Delacroix
 	ch.old.name = "Pierre";
 	ch.old.lastname = "Delacroix";
-	ch.name = TranslateString("","Pierre");
-	ch.lastname = TranslateString("","Delacroix");
+	ch.name = TranslateString("", "Pierre");
+	ch.lastname = TranslateString("", "Delacroix");
 	ch.id		= "Pierre Delacroix";
 	ch.model	= "50M5";
 	ch.sex = "man";
@@ -78,8 +77,8 @@ void CreateTempQuestCharacters(ref n)
 //   Emilio Soares
 	ch.old.name = "Emilio";
 	ch.old.lastname = "Soares";
-	ch.name = TranslateString("","Emilio");
-	ch.lastname = TranslateString("","Soares");
+	ch.name = TranslateString("", "Emilio");
+	ch.lastname = TranslateString("", "Soares");
 	ch.id		= "Emilio Soares";
 	ch.model	= "Emilio1";
 	ch.sex = "man";
@@ -127,8 +126,8 @@ void CreateTempQuestCharacters(ref n)
 // Luc Merin
 	ch.old.name = "Luc";
 	ch.old.lastname = "Merin";
-	ch.name = TranslateString("","Luc");
-	ch.lastname = TranslateString("","Merin");
+	ch.name = TranslateString("", "Luc");
+	ch.lastname = TranslateString("", "Merin");
 	ch.id		= "Luc Merin";
 	ch.model	= "Man5_1";
 	ch.sex = "man";
@@ -168,8 +167,8 @@ void CreateTempQuestCharacters(ref n)
 // Elias Bartels
 	ch.old.name = "Elias";
 	ch.old.lastname = "Bartels";
-	ch.name = TranslateString("","Elias");
-	ch.lastname = TranslateString("","Bartels");
+	ch.name = TranslateString("", "Elias");
+	ch.lastname = TranslateString("", "Bartels");
 	ch.id		= "Elias Bartels";
 	ch.model	= "Chameleon";
 	ch.sex = "man";
@@ -209,8 +208,8 @@ void CreateTempQuestCharacters(ref n)
 // Roxanne Lalliere	
 	ch.old.name = "Roxanne"; 
 	ch.old.lastname = "Lalliere";
-	ch.name = TranslateString("","Roxanne"); 
-	ch.lastname = TranslateString("","Lalliere");
+	ch.name = TranslateString("", "Roxanne"); 
+	ch.lastname = TranslateString("", "Lalliere");
 	ch.id		= "Roxanne Lalliere";
 	ch.model	= "Roxanne";
 	ch.sex = "woman";
@@ -263,8 +262,8 @@ void CreateTempQuestCharacters(ref n)
 // Pedro Rivera	
 	ch.old.name = "Pedro";
 	ch.old.lastname = "Rivera";
-	ch.name = TranslateString("","Pedro");
-	ch.lastname = TranslateString("","Rivera");
+	ch.name = TranslateString("", "Pedro");
+	ch.lastname = TranslateString("", "Rivera");
 	ch.id		= "Pedro Rivera";
 	ch.model	= "wurmwoode";
 	ch.sex = "man";
@@ -305,8 +304,8 @@ void CreateTempQuestCharacters(ref n)
 // Francisco Cruz	
 	ch.old.name = "Francisco";
 	ch.old.lastname = "Cruz";
-	ch.name = TranslateString("","Francisco");
-	ch.lastname = TranslateString("","Cruz");
+	ch.name = TranslateString("", "Francisco");
+	ch.lastname = TranslateString("", "Cruz");
 	ch.id		= "Francisco Cruz";
 	ch.model	= "Francisco_Cruz";
 	ch.sex = "man";
@@ -346,7 +345,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_01";
 	ch.model	= "pirat1";
@@ -377,7 +376,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_02";
 	ch.model	= "pirat2";
@@ -408,7 +407,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_03";
 	ch.model	= "pirat3";
@@ -439,7 +438,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_04";
 	ch.model	= "pirat4";
@@ -471,7 +470,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_05";
 	ch.model	= "pirat5";
@@ -503,7 +502,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_06";
 	ch.model	= "pirat6";
@@ -536,8 +535,8 @@ void CreateTempQuestCharacters(ref n)
 // William Klein	
 	ch.old.name = "William";
 	ch.old.lastname = "Klein";
-	ch.name = TranslateString("","William");
-	ch.lastname = TranslateString("","Klein");
+	ch.name = TranslateString("", "William");
+	ch.lastname = TranslateString("", "Klein");
 	ch.id		= "William Klein";
 	ch.model	= "Corsair5";
 	ch.sex = "man";
@@ -578,8 +577,8 @@ void CreateTempQuestCharacters(ref n)
 // Juan Hernandez	
 	ch.old.name = "Juan";
 	ch.old.lastname = "Hernandez";
-	ch.name = TranslateString("","Juan");
-	ch.lastname = TranslateString("","Hernandez");
+	ch.name = TranslateString("", "Juan");
+	ch.lastname = TranslateString("", "Hernandez");
 	ch.id		= "Juan Hernandez";
 	ch.model	= "fisherman";
 	ch.sex = "man";
@@ -611,8 +610,8 @@ void CreateTempQuestCharacters(ref n)
 // Jerico Contreras	
 	ch.old.name = "Jerico";
 	ch.old.lastname = "Contreras";
-	ch.name = TranslateString("","Jerico");
-	ch.lastname = TranslateString("","Contreras");
+	ch.name = TranslateString("", "Jerico");
+	ch.lastname = TranslateString("", "Contreras");
 	ch.id		= "Jerico Contreras";
 	ch.model	= "Man3";
 	ch.sex = "man";
@@ -653,8 +652,8 @@ void CreateTempQuestCharacters(ref n)
 // Cecile Bienbonne
 	ch.old.name = "Cecile";
 	ch.old.lastname = "Bienbonne";
-	ch.name = TranslateString("","Cecile");
-	ch.lastname = TranslateString("","Bienbonne");
+	ch.name = TranslateString("", "Cecile");
+	ch.lastname = TranslateString("", "Bienbonne");
 	ch.id		= "Cecile Bienbonne";
 	ch.model = "imgovwife";
 	ch.sex = "woman";
@@ -687,8 +686,8 @@ void CreateTempQuestCharacters(ref n)
 // Etienne Dupuis	
 	ch.old.name = "Etienne";
 	ch.old.lastname = "Dupuis";
-	ch.name = TranslateString("","Etienne");
-	ch.lastname = TranslateString("","Dupuis");
+	ch.name = TranslateString("", "Etienne");
+	ch.lastname = TranslateString("", "Dupuis");
 	ch.id		= "Etienne Dupuis";
 	ch.model	= Nations[FRANCE].fantomModel.m3; // PB
 	ch.sex = "man";
@@ -729,8 +728,8 @@ void CreateTempQuestCharacters(ref n)
 // Jean Dusac
 	ch.old.name = "Jean";
 	ch.old.lastname = "Dusac";
-	ch.name = TranslateString("","Jean");
-	ch.lastname = TranslateString("","Dusac");
+	ch.name = TranslateString("", "Jean");
+	ch.lastname = TranslateString("", "Dusac");
 	ch.id		= "Jean Dusac";
 	ch.model	= "pirtt7";
 	ch.sex = "man";
@@ -811,8 +810,8 @@ void CreateTempQuestCharacters(ref n)
 // Simon Chapman
 	ch.old.name = "Simon";
 	ch.old.lastname = "Chapman";
-	ch.name = TranslateString("","Simon");
-	ch.lastname = TranslateString("","Chapman");
+	ch.name = TranslateString("", "Simon");
+	ch.lastname = TranslateString("", "Chapman");
 	ch.id		= "Simon Chapman";
 	ch.model	= "Bocman17";
 	ch.sex = "man";
@@ -852,8 +851,8 @@ void CreateTempQuestCharacters(ref n)
 // Alfonso Galindez
 	ch.old.name = "Alfonso";
 	ch.old.lastname = "Galindez";
-	ch.name = TranslateString("","Alfonso");
-	ch.lastname = TranslateString("","Galindez");
+	ch.name = TranslateString("", "Alfonso");
+	ch.lastname = TranslateString("", "Galindez");
 	ch.id		= "Alfonso Galindez";
 	ch.model	= "Hub_Spa3";
 	ch.nation	= SPAIN;
@@ -969,8 +968,8 @@ void CreateTempQuestCharacters(ref n)
 // Benoit Belcour
 	ch.old.name = "Benoit";
 	ch.old.lastname = "Belcour";
-	ch.name = TranslateString("","Benoit");
-	ch.lastname = TranslateString("","Belcour");
+	ch.name = TranslateString("", "Benoit");
+	ch.lastname = TranslateString("", "Belcour");
 	ch.id		= "Benoit Belcour";
 	ch.model	= "50evl2in";
 	ch.sex = "man";
@@ -1018,8 +1017,8 @@ void CreateTempQuestCharacters(ref n)
 // Adriance Blind
 	ch.old.name = "Adriance";
 	ch.old.lastname = "Blind";
-	ch.name = TranslateString("","Adriance");
-	ch.lastname = TranslateString("","Blind");
+	ch.name = TranslateString("", "Adriance");
+	ch.lastname = TranslateString("", "Blind");
 	ch.id		= "Adriance Blind";
 	ch.model	= "Will_2";
 	ch.sex = "man";
@@ -1067,8 +1066,8 @@ void CreateTempQuestCharacters(ref n)
 // Sean Sparrow
 	ch.old.name = "Sean";
 	ch.old.lastname = "Sparrow";
-	ch.name = TranslateString("","Sean");
-	ch.lastname = TranslateString("","Sparrow");
+	ch.name = TranslateString("", "Sean");
+	ch.lastname = TranslateString("", "Sparrow");
 	ch.id		= "Sean Sparrow";
 	ch.model	= "50fatjack";
 	ch.sex = "man";
@@ -1108,8 +1107,8 @@ void CreateTempQuestCharacters(ref n)
 // Florentino Murrieta
 	ch.old.name = "Florentino";
 	ch.old.lastname = "Murrieta";
-	ch.name = TranslateString("","Florentino");
-	ch.lastname = TranslateString("","Murrieta");
+	ch.name = TranslateString("", "Florentino");
+	ch.lastname = TranslateString("", "Murrieta");
 	ch.id		= "Florentino Murrieta";
 	ch.model	= "Hub_Spa2";
 	ch.sex = "man";
@@ -1162,7 +1161,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldier_01";
 	ch.model = "Soldier_Spa_16";
@@ -1200,7 +1199,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldier_02";
 	ch.model = "Soldier_Spa2_16";
@@ -1237,8 +1236,8 @@ void CreateTempQuestCharacters(ref n)
 // Charles Baxter
 	ch.old.name = "Charles";
 	ch.old.lastname = "Baxter";
-	ch.name = TranslateString("","Charles");
-	ch.lastname = TranslateString("","Baxter");
+	ch.name = TranslateString("", "Charles");
+	ch.lastname = TranslateString("", "Baxter");
 	ch.id		= "Nathaniel Hawk";
 	ch.model	= "Blaze7";
 	ch.nation	= PIRATE;
@@ -1279,13 +1278,14 @@ void CreateTempQuestCharacters(ref n)
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
 // Christopher Backer
 	ch.old.name = "Christopher";
 	ch.old.lastname = "Backer";
-	ch.name = TranslateString("","Christopher");
-	ch.lastname = TranslateString("","Backer");
+	ch.name = TranslateString("", "Christopher");
+	ch.lastname = TranslateString("", "Backer");
 	ch.id		= "Christopher Backer";
 	ch.model	= "Beltro";
 	ch.sex = "man";
@@ -1325,8 +1325,8 @@ void CreateTempQuestCharacters(ref n)
 // Matthew Gilroy
 	ch.old.name = "Matthew";
 	ch.old.lastname = "Gilroy";
-	ch.name = TranslateString("","Matthew");
-	ch.lastname = TranslateString("","Gilroy");
+	ch.name = TranslateString("", "Matthew");
+	ch.lastname = TranslateString("", "Gilroy");
 	ch.id		= "Matthew Gilroy";
 	ch.model	= "Capnhook";
 	ch.sex = "man";
@@ -1358,8 +1358,8 @@ void CreateTempQuestCharacters(ref n)
 // Walter Foreman
 	ch.old.name = "Walter";
 	ch.old.lastname = "Foreman";
-	ch.name = TranslateString("","Walter");
-	ch.lastname = TranslateString("","Foreman");
+	ch.name = TranslateString("", "Walter");
+	ch.lastname = TranslateString("", "Foreman");
 	ch.id		= "Walter Foreman";
 	ch.model	= "Salt";
 	ch.sex = "man";
@@ -1399,8 +1399,8 @@ void CreateTempQuestCharacters(ref n)
 // Duarte Felgueiras
 	ch.old.name = "Duarte";
 	ch.old.lastname = "Felgueiras";
-	ch.name = TranslateString("","Duarte");
-	ch.lastname = TranslateString("","Felgueiras");
+	ch.name = TranslateString("", "Duarte");
+	ch.lastname = TranslateString("", "Felgueiras");
 	ch.id		= "Duarte Felgueiras";
 	ch.model	= "Offic_Por_16";
 	ch.sex = "man";
@@ -1461,8 +1461,8 @@ void CreateTempQuestCharacters(ref n)
 // Sarah Roebuck
 	ch.old.name = "Sarah";
 	ch.old.lastname = "Roebuck";
-	ch.name = TranslateString("","Sarah");
-	ch.lastname = TranslateString("","Roebuck");
+	ch.name = TranslateString("", "Sarah");
+	ch.lastname = TranslateString("", "Roebuck");
 	ch.id		= "Sarah Roebuck";
 	ch.model = "oldwoman";
 	ch.sex = "woman";
@@ -1496,7 +1496,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = PORTUGAL;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Portuguese_soldier_01";
 	ch.model = "Soldier_Por_16";
@@ -1535,7 +1535,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = PORTUGAL;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Portuguese_soldier_02";
 	ch.model = "Soldier_Por2_16";
@@ -1573,8 +1573,8 @@ void CreateTempQuestCharacters(ref n)
 // Luis Perdiguero
 	ch.old.name = "Luis";
 	ch.old.lastname = "Perdiguero";
-	ch.name = TranslateString("","Luis");
-	ch.lastname = TranslateString("","Perdiguero");
+	ch.name = TranslateString("", "Luis");
+	ch.lastname = TranslateString("", "Perdiguero");
 	ch.id		= "Luis Perdiguero";
 	ch.model = "hub_spa4";
 	ch.sex = "man";
@@ -1608,8 +1608,8 @@ void CreateTempQuestCharacters(ref n)
 //  Facundo llano
 	ch.old.name = "Facundo";
 	ch.old.lastname = "Llano";
-	ch.name = TranslateString("","Facundo");
-	ch.lastname = TranslateString("","Llano");
+	ch.name = TranslateString("", "Facundo");
+	ch.lastname = TranslateString("", "Llano");
 	ch.id		= "Facundo Llano";
 	ch.model	= "man2";
 	ch.sex = "man";
@@ -1644,8 +1644,8 @@ void CreateTempQuestCharacters(ref n)
 // François L'Ollonais
 	ch.old.name = "Francois";
 	ch.old.lastname = "L'Ollonais";
-	ch.name = TranslateString("","Francois");
-	ch.lastname = TranslateString("","L'Ollonais");
+	ch.name = TranslateString("", "Francois");
+	ch.lastname = TranslateString("", "L'Ollonais");
 	ch.id		= "Francois L'Ollonais";
 	ch.model	= "Francois_L'Ollenais";
 	ch.sex = "man";
@@ -1726,8 +1726,8 @@ void CreateTempQuestCharacters(ref n)
 // Txiki Pijuan
 	ch.old.name 	= "Txiki";
 	ch.old.lastname 	= "Pijuan";
-	ch.name 	= TranslateString("","Txiki");
-	ch.lastname 	= TranslateString("","Pijuan");
+	ch.name 	= TranslateString("", "Txiki");
+	ch.lastname 	= TranslateString("", "Pijuan");
 	ch.id		= "Txiki Pijuan";
 	ch.model = "Napitan";
 	ch.sound_type = "pirate";
@@ -1762,7 +1762,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.perks.list.CriticalHit = true;
 	ch.perks.list.Gunman = true;
 	ch.perks.list.HullDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.quest.officertype = OFFIC_TYPE_NAVIGATOR;
 	ch.quest.officerprice = "500";
 	LAi_SetMerchantType(ch);
@@ -1813,8 +1814,8 @@ void CreateTempQuestCharacters(ref n)
 	// Henry Morgan
 	ch.old.name = "Henry";
 	ch.old.lastname = "Morgan";
-	ch.name = TranslateString("","Henry");
-	ch.lastname = TranslateString("","Morgan");
+	ch.name = TranslateString("", "Henry");
+	ch.lastname = TranslateString("", "Morgan");
 	ch.id		= "Henry Morgan";
 	ch.model	= "Henry_Morgan";
 	ch.sex = "man";
@@ -1863,8 +1864,8 @@ void CreateTempQuestCharacters(ref n)
 	// Edwaert Mansveldt
 	ch.old.name = "Edwaert";
 	ch.old.lastname = "Mansveldt";
-	ch.name = TranslateString("","Edwaert");
-	ch.lastname = TranslateString("","Mansveldt");
+	ch.name = TranslateString("", "Edwaert");
+	ch.lastname = TranslateString("", "Mansveldt");
 	ch.id		= "Edwaert Mansveldt";
 	ch.model = "Mansveldt";
 	ch.sex = "man";
@@ -1949,7 +1950,7 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Silver";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Silver");
+	ch.name = TranslateString("", "Silver");
 	ch.lastname = "";
 	ch.id		= "Silver";
 	ch.nation	= SPAIN;
@@ -2016,7 +2017,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.ShipSpeedUp = true;
@@ -2035,8 +2037,8 @@ void CreateTempQuestCharacters(ref n)
 // Serafino Masarenhas
 	ch.old.name = "Serafino";
 	ch.old.lastname = "Masarenhas";
-	ch.name = TranslateString("","Serafino");
-	ch.lastname = TranslateString("","Masarenhas");
+	ch.name = TranslateString("", "Serafino");
+	ch.lastname = TranslateString("", "Masarenhas");
 	ch.id		= "Serafino Masarenhas";
 	ch.model = "Serafino_Masarenhas";
 	ch.sex = "man";
@@ -2075,8 +2077,8 @@ void CreateTempQuestCharacters(ref n)
 // Augusto Queiroz
 	ch.old.name = "Augusto";
 	ch.old.lastname = "Queiroz";
-	ch.name = TranslateString("","Augusto");
-	ch.lastname = TranslateString("","Queiroz");
+	ch.name = TranslateString("", "Augusto");
+	ch.lastname = TranslateString("", "Queiroz");
 	ch.id		= "Augusto Queiroz";
 	ch.model	= "Navy_musket";
 	ch.sex = "man";
@@ -2117,8 +2119,8 @@ void CreateTempQuestCharacters(ref n)
 // Osmundo Murrieta
 	ch.old.name = "Osmundo";
 	ch.old.lastname = "Murrieta";
-	ch.name = TranslateString("","Osmundo");
-	ch.lastname = TranslateString("","Murrieta");
+	ch.name = TranslateString("", "Osmundo");
+	ch.lastname = TranslateString("", "Murrieta");
 	ch.id		= "Osmundo Murrieta";
 	ch.model = "offic_spa_16";
 	ch.sound_type = "soldier";
@@ -2163,7 +2165,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.ShipSpeedUp = true;
@@ -2179,7 +2182,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = PORTUGAL;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Portuguese_soldier_03";
 	ch.model = "Soldier_Por3_16";
@@ -2217,8 +2220,8 @@ void CreateTempQuestCharacters(ref n)
 // Arturo Campos
 	ch.old.name = "Arturo";
 	ch.old.lastname = "Campos";
-	ch.name = TranslateString("","Arturo");
-	ch.lastname = TranslateString("","Campos");
+	ch.name = TranslateString("", "Arturo");
+	ch.lastname = TranslateString("", "Campos");
 	ch.id		= "Arturo Campos";
 	ch.model = "Arturo_Campos";
 	ch.sound_type = "soldier";
@@ -2269,7 +2272,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldier_03";
 	ch.model = "Soldier_Spa3_16";
@@ -2306,8 +2309,8 @@ void CreateTempQuestCharacters(ref n)
 // Leonardo Corrales	
 	ch.old.name = "Leonardo";
 	ch.old.lastname = "Corrales";
-	ch.name = TranslateString("","Leonardo");
-	ch.lastname = TranslateString("","Corrales");
+	ch.name = TranslateString("", "Leonardo");
+	ch.lastname = TranslateString("", "Corrales");
 	ch.id		= "Leonardo Corrales";
 	ch.model	= "Leonardo_Corrales"; 
 	ch.sound_type = "male_citizen";
@@ -2342,8 +2345,8 @@ void CreateTempQuestCharacters(ref n)
 //  Guibert Daudet
 	ch.old.name = "Guibert";
 	ch.old.lastname = "Daudet";
-	ch.name = TranslateString("","Guibert");
-	ch.lastname = TranslateString("","Daudet");
+	ch.name = TranslateString("", "Guibert");
+	ch.lastname = TranslateString("", "Daudet");
 	ch.id		= "Guibert Daudet";
 	ch.model	= "Guibert_Daudet";
 	ch.sex = "man";
@@ -2379,7 +2382,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = SPAIN;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "spanish_soldier_04";
 	ch.model = "Soldier_Spa_16";
@@ -2416,9 +2419,9 @@ void CreateTempQuestCharacters(ref n)
 	ch.old.name = " Spanish";
 	ch.old.middlename = "";
 	ch.old.lastname = "Governor";
-	ch.name = TranslateString(""," Spanish");
-	ch.middlename = TranslateString("","");
-	ch.lastname = TranslateString("","Governor");
+	ch.name = TranslateString("", "Spanish");
+	ch.middlename = "";
+	ch.lastname = TranslateString("", "Governor");
 	ch.id		= "Spanish Governor";
 	ch.model = "Huber_Spa4_17";
 	ch.sex = "man";
@@ -2449,8 +2452,8 @@ void CreateTempQuestCharacters(ref n)
 // Fort Captain
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Fort Captain";
 	ch.model = "offic_spa_16";
 	ch.sound_type = "soldier";
@@ -2493,8 +2496,8 @@ void CreateTempQuestCharacters(ref n)
 // Johan Elting
 	ch.old.name = "Johan";
 	ch.old.lastname = "Elting";
-	ch.name = TranslateString("","Johan");
-	ch.lastname = TranslateString("","Elting");
+	ch.name = TranslateString("", "Johan");
+	ch.lastname = TranslateString("", "Elting");
 	ch.id		= "Elting";
 	ch.model = "Johan_Elting_c";
 	ch.sound_type = "soldier";
@@ -2542,7 +2545,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.ShipSpeedUp = true;
@@ -2556,8 +2560,8 @@ void CreateTempQuestCharacters(ref n)
 // Enrique Padilla
 	ch.old.name = "Enrique";
 	ch.old.lastname = "Padilla";
-	ch.name = TranslateString("","Enrique");
-	ch.lastname = TranslateString("","Padilla");
+	ch.name = TranslateString("", "Enrique");
+	ch.lastname = TranslateString("", "Padilla");
 	ch.id		= "Enrique Padilla";
 	ch.model	= "Offic_spa2_16";
 	ch.sex = "man";
@@ -2602,8 +2606,8 @@ void CreateTempQuestCharacters(ref n)
 	 // Salvadore Benavides
 	ch.old.name = "Salvadore";
 	ch.old.lastname = "Benavides";
-	ch.name 	= TranslateString("","Salvadore");
-	ch.lastname = TranslateString("","Benavides");
+	ch.name 	= TranslateString("", "Salvadore");
+	ch.lastname = TranslateString("", "Benavides");
 	ch.id		= "Salvadore Benavides";
 	ch.model	= "Salvadore";
 	ch.sex = "man";
@@ -2633,8 +2637,8 @@ void CreateTempQuestCharacters(ref n)
 	// Daniel Montbars
 	ch.old.name = "Daniel";
 	ch.old.lastname = "Montbars";
-	ch.name 	= TranslateString("","Daniel"); 
-	ch.lastname 	= TranslateString("","Montbars");
+	ch.name 	= TranslateString("", "Daniel"); 
+	ch.lastname 	= TranslateString("", "Montbars");
 	ch.id		= "Daniel Montbars";
 	ch.model = "montbars";
 	ch.sex = "man"; 
@@ -2684,7 +2688,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.ShipSpeedUp = true;
@@ -2697,8 +2702,8 @@ void CreateTempQuestCharacters(ref n)
 	// Arnaud Fontaines
 	ch.old.name = "Arnaud";
 	ch.old.lastname = "Fontaines";
-	ch.name 	= TranslateString("","Arnaud"); 
-	ch.lastname 	= TranslateString("","Fontaines");
+	ch.name 	= TranslateString("", "Arnaud"); 
+	ch.lastname 	= TranslateString("", "Fontaines");
 	ch.id		= "Arnaud Fontaines";
 	ch.model = "Corsair4";
 	ch.sex = "man"; 
@@ -2736,7 +2741,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.ShipSpeedUp = true;
@@ -2750,8 +2756,8 @@ void CreateTempQuestCharacters(ref n)
 // Martin de Urquiza
 	ch.old.name = "Martin";
 	ch.old.lastname = "de Urquiza";
-	ch.name = TranslateString("","Martin");
-	ch.lastname = TranslateString("","de Urquiza");
+	ch.name = TranslateString("", "Martin");
+	ch.lastname = TranslateString("", "de Urquiza");
 	ch.id		= "Martin de Urquiza";
 	ch.model = "Huber_Spa1_17";
 	ch.sex = "man";
@@ -2787,8 +2793,8 @@ void CreateTempQuestCharacters(ref n)
 // Ferro Carriles	
 	ch.old.name = "Ferro";
 	ch.old.lastname = "Carriles";
-	ch.name = TranslateString("","Ferro");
-	ch.lastname = TranslateString("","Carriles");
+	ch.name = TranslateString("", "Ferro");
+	ch.lastname = TranslateString("", "Carriles");
 	ch.id		= "Ferro Carriles";
 	ch.model = "man2";
 	ch.sex = "man";
@@ -2824,7 +2830,7 @@ void CreateTempQuestCharacters(ref n)
 //Antigua Soldier
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Antigua_soldado";
 	ch.model	= 3; // PB
@@ -2862,8 +2868,8 @@ void CreateTempQuestCharacters(ref n)
 // Aspidius Vallalpando
 	ch.old.name = "Aspidius";
 	ch.old.lastname = "Vallalpando";
-	ch.name = TranslateString("","Aspidius");
-	ch.lastname = TranslateString("","Vallalpando");
+	ch.name = TranslateString("", "Aspidius");
+	ch.lastname = TranslateString("", "Vallalpando");
 	ch.id		= "Aspidius Vallalpando";
 	ch.model = "hub_spa4";
 	ch.sound_type = "soldier";
@@ -2897,8 +2903,8 @@ void CreateTempQuestCharacters(ref n)
 	// Gaetan Andrieux
 	ch.old.name = "Gaetan";
 	ch.old.lastname = "Andrieux";
-	ch.name = TranslateString("","Gaetan");
-	ch.lastname = TranslateString("","Andrieux");
+	ch.name = TranslateString("", "Gaetan");
+	ch.lastname = TranslateString("", "Andrieux");
 	ch.id		= "Gaetan Andrieux";
 	ch.model	= "man5";
 	ch.sex = "man";
@@ -2930,8 +2936,8 @@ void CreateTempQuestCharacters(ref n)
 // Agilo Casamayor
 	ch.old.name = "Agilo";
 	ch.old.lastname = "Casamayor";
-	ch.name = TranslateString("","Agilo");
-	ch.lastname = TranslateString("","Casamayor");
+	ch.name = TranslateString("", "Agilo");
+	ch.lastname = TranslateString("", "Casamayor");
 	ch.id		= "Agilo Casamayor";
 	ch.model = "9R_Purs";
 	ch.sex = "man";
@@ -2999,8 +3005,8 @@ void CreateTempQuestCharacters(ref n)
 // Spanish Captain1	
 	ch.old.name = "Bautista";
 	ch.old.lastname = "Lozano";
-	ch.name = TranslateString("","Bautista");
-	ch.lastname = TranslateString("","Lozano");
+	ch.name = TranslateString("", "Bautista");
+	ch.lastname = TranslateString("", "Lozano");
 	ch.id		= "Spanish Captain1";
 	ch.nation	= SPAIN;
 	ch.model	= "Huber_Spa2";
@@ -3083,8 +3089,8 @@ void CreateTempQuestCharacters(ref n)
 // Captain Villalobos
 	ch.old.name = "Captain";
 	ch.old.lastname = "Villalobos";
-	ch.name = TranslateString("","Captain");
-	ch.lastname = TranslateString("","Villalobos");
+	ch.name = TranslateString("", "Captain");
+	ch.lastname = TranslateString("", "Villalobos");
 	ch.id		= "Captain Villalobos";
 	ch.model	= "hub_spa4";
 	ch.sex = "man";
@@ -3126,7 +3132,7 @@ void CreateTempQuestCharacters(ref n)
 			// Villalobos' soldier 1
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "VillaSoldat1";
 	ch.model = "soldier_spa2_16"; 
@@ -3162,7 +3168,7 @@ void CreateTempQuestCharacters(ref n)
 			// Villalobos' soldier 2
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "VillaSoldat2";
 	ch.model = "soldier_spa3_16"; 
@@ -3199,7 +3205,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "elting_pirate_02";
 	ch.model	= "pirat2";
@@ -3232,7 +3238,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "elting_pirate_03";
 	ch.model	= "pirat3";
@@ -3265,7 +3271,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "elting_pirate_04";
 	ch.model	= "pirat4";
@@ -3298,7 +3304,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "elting_pirate_05";
 	ch.model	= "pirat5";
@@ -3331,7 +3337,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "elting_pirate_06";
 	ch.model	= "pirat6";
@@ -3366,7 +3372,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "elting_pirate_01";
 	ch.model	= "pirat1";
@@ -3399,7 +3405,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "elting_pirate_07";
 	ch.model	= "pirat3";
@@ -3432,7 +3438,7 @@ void CreateTempQuestCharacters(ref n)
 //  crew (climbing)
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "elting_pirate_01c";
 	ch.model	= "pirat1";
@@ -3513,8 +3519,8 @@ void CreateTempQuestCharacters(ref n)
 //  Gauthier Thomassin
 	ch.old.name = "Gauthier";
 	ch.old.lastname = "Thomassin";
-	ch.name = TranslateString("","Gauthier");
-	ch.lastname = TranslateString("","Thomassin");
+	ch.name = TranslateString("", "Gauthier");
+	ch.lastname = TranslateString("", "Thomassin");
 	ch.id		= "Gauthier Thomassin";
 	ch.model	= "Pirat3";
 	ch.sex = "man";
@@ -3554,8 +3560,8 @@ void CreateTempQuestCharacters(ref n)
 //  Lorenzo Escartin
 	ch.old.name = "Lorenzo";
 	ch.old.lastname = "Escartin";
-	ch.name = TranslateString("","Lorenzo");
-	ch.lastname = TranslateString("","Escartin");
+	ch.name = TranslateString("", "Lorenzo");
+	ch.lastname = TranslateString("", "Escartin");
 	ch.id		= "Lorenzo Escartin";
 	ch.model	= "Bocman8";
 	ch.sex = "man";
@@ -3594,8 +3600,8 @@ void CreateTempQuestCharacters(ref n)
 //  Guillermo Flores
 	ch.old.name = "Guillermo";
 	ch.old.lastname = "Flores";
-	ch.name = TranslateString("","Guillermo");
-	ch.lastname = TranslateString("","Flores");
+	ch.name = TranslateString("", "Guillermo");
+	ch.lastname = TranslateString("", "Flores");
 	ch.id		= "Guillermo Flores";
 	ch.model	= "fatman";
 	ch.sex = "man";
@@ -3630,8 +3636,8 @@ void CreateTempQuestCharacters(ref n)
 //  Raimundo Huertas
 	ch.old.name = "Raimundo";
 	ch.old.lastname = "Huertas";
-	ch.name = TranslateString("","Raimundo");
-	ch.lastname = TranslateString("","Huertas");
+	ch.name = TranslateString("", "Raimundo");
+	ch.lastname = TranslateString("", "Huertas");
 	ch.id		= "Raimundo Huertas";
 	ch.model	= "chelovek";
 	ch.sex = "man";
@@ -3705,8 +3711,8 @@ void CreateTempQuestCharacters(ref n)
 //  Zacarias Amendola 
 	ch.old.name = "Zacarias";
 	ch.old.lastname = "Amendola";
-	ch.name = TranslateString("","Zacarias");
-	ch.lastname = TranslateString("","Amendola");
+	ch.name = TranslateString("", "Zacarias");
+	ch.lastname = TranslateString("", "Amendola");
 	ch.id		= "Zacarias Amendola";
 	ch.model	= "Bocman3";
 	ch.sex = "man";
@@ -3743,8 +3749,8 @@ void CreateTempQuestCharacters(ref n)
 //  Mayrelli Cadena
 	ch.old.name = "Mayrelli";
 	ch.old.lastname = "Cadena";
-	ch.name = TranslateString("","Mayrelli");
-	ch.lastname = TranslateString("","Cadena");
+	ch.name = TranslateString("", "Mayrelli");
+	ch.lastname = TranslateString("", "Cadena");
 	ch.id		= "Mayrelli Cadena";
 	ch.model	= "mongol";
 	ch.sex = "man";
@@ -3779,8 +3785,8 @@ void CreateTempQuestCharacters(ref n)
 //  Rademiro Elizondo
 	ch.old.name = "Rademiro";
 	ch.old.lastname = "Elizondo";
-	ch.name = TranslateString("","Rademiro");
-	ch.lastname = TranslateString("","Elizondo");
+	ch.name = TranslateString("", "Rademiro");
+	ch.lastname = TranslateString("", "Elizondo");
 	ch.id		= "Rademiro Elizondo";
 	ch.model	= "sailor14";
 	ch.sex = "man";
@@ -3815,8 +3821,8 @@ void CreateTempQuestCharacters(ref n)
 //  Vicente Espejo
 	ch.old.name = "Vicente";
 	ch.old.lastname = "Espejo";
-	ch.name = TranslateString("","Vicente");
-	ch.lastname = TranslateString("","Espejo");
+	ch.name = TranslateString("", "Vicente");
+	ch.lastname = TranslateString("", "Espejo");
 	ch.id		= "Vicente Espejo";
 	ch.model	= "man9";
 	ch.sex = "man";
@@ -3848,8 +3854,8 @@ void CreateTempQuestCharacters(ref n)
 //  Federico Carabali
 	ch.old.name = "Federico";
 	ch.old.lastname = "Carabali";
-	ch.name = TranslateString("","Federico");
-	ch.lastname = TranslateString("","Carabali");
+	ch.name = TranslateString("", "Federico");
+	ch.lastname = TranslateString("", "Carabali");
 	ch.id		= "Federico Carabali";
 	ch.model	= "huber_por";
 	ch.sex = "man";
@@ -3880,7 +3886,7 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Pirate";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Pirate");
+	ch.name = TranslateString("", "Pirate");
 	ch.lastname = "";
 	ch.id		= "bart_pirate_07";
 	ch.model	= "bocman4";
@@ -3916,7 +3922,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = PORTUGAL;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Portuguese_soldier_04";
 	ch.model = "Soldier_Por4_16";
@@ -3955,7 +3961,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = PORTUGAL;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Portuguese_soldier_05";
 	ch.model = "Soldier_Por5_16";
@@ -3994,7 +4000,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = PORTUGAL;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Portuguese_soldier_06";
 	ch.model = "Soldier_Por6_16";
@@ -4033,7 +4039,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = HOLLAND;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Dutch_soldier_01";
 	ch.model = "Soldier_Hol_16";
@@ -4072,7 +4078,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = HOLLAND;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Dutch_soldier_02";
 	ch.model = "Soldier_Hol2_16";
@@ -4111,7 +4117,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = HOLLAND;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Dutch_soldier_03";
 	ch.model = "Soldier_Hol3_16";
@@ -4150,7 +4156,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.nation = HOLLAND;
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
+	ch.name = TranslateString("", "Soldier");
 	ch.lastname = "";
 	ch.id		= "Dutch_soldier_04";
 	ch.model = "Soldier_Hol4_16";

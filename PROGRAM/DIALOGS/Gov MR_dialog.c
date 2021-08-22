@@ -75,6 +75,7 @@ void ProcessDialogEvent()
 			if(NPChar.quest.meeting == "0")
 			{
 				NPChar.quest.meeting = "1";
+				NPChar.quest.colombian_silver.counter = 0;	// Initialise counter for "Colombian Silver" sidequest
 				tempt1 = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_TITLE, false, false) + DLG_TEXT[1];
 				if(MRCanMarryRatio(PChar, NPChar, false) > 0.33) tempt1 = DLG_TEXT[2] + GetMyAddressForm(NPChar, PChar, ADDR_TITLE, false, false) +DLG_TEXT[3];
 				if(MRCanMarryRatio(PChar, NPChar, false) > 0.67) tempt1 = DLG_TEXT[4];
@@ -108,6 +109,7 @@ void ProcessDialogEvent()
 				NPChar.quest.Meeting = lastspeak_date;
 				if(sti(NPChar.married))
 				{
+					NPChar.quest.colombian_silver.counter = sti(NPChar.quest.colombian_silver.counter) + 1;	// GR: Increase chance of triggering "Colombian Silver" sidequest
 					Link.l1 = DLG_TEXT[19];
 					Link.l1.go = "info";
 					if(sti(NPChar.pcounter))
@@ -120,7 +122,8 @@ void ProcessDialogEvent()
 				{
 					if(sti(NPChar.talkpoints))
 					{
-						Link.l4 = PCharRepPhrase(DLG_TEXT[55], DLG_TEXT[56]);
+						if (NPChar.sex == "woman") Link.l4 = PCharRepPhrase(DLG_TEXT[55], DLG_TEXT[56]);
+						else Link.l4 = PCharRepPhrase(DLG_TEXT[79], DLG_TEXT[56]);
 						Link.l4.go = "dump";
 					}
 				}
@@ -134,7 +137,8 @@ void ProcessDialogEvent()
 			if(MRCanMarryRatio(PChar, NPChar, false) > 0.33) tempt1 = DLG_TEXT[24] + GetMyFullName(NPChar) + DLG_TEXT[25] + stringRet(GetRank(PChar, nat) >= 0, ", " + XI_ConvertString(GetRankName(PChar, nat)),"") + "!";
 			if(MRCanMarryRatio(PChar, NPChar, false) > 0.67) tempt1 = GetMyAddressForm(NPChar, PChar, ADDR_TITLE, false, true) + DLG_TEXT[26];
 			d.text = tempt1;
-			Link.l1 = DLG_TEXT[27];
+			if (NPChar.sex == "woman") Link.l1 = DLG_TEXT[27];
+			else Link.l1 = DLG_TEXT[77];
 			Link.l1.go = "First Time";
 			NPChar.skiptext = true;
 		break;
@@ -142,12 +146,15 @@ void ProcessDialogEvent()
 		case "makeconv":
 			SetCurrentMR(&NPChar);
 			nat = sti(NPChar.nation);
+			if (NPChar.sex == "woman") Preprocessor_Add("lady", XI_Convertstring("gentlewoman"));
+			else Preprocessor_Add("lady", XI_Convertstring("gentleman"));
 			d.text = DLG_TEXT[28];
 			Link.l1 = DLG_TEXT[29];
 			Link.l1.go = "exit";
 			MRAddTalkPoints(&PChar, &NPChar);
 			if(MRCanMarry(&PChar, &NPChar, false) && sti(PChar.married) == MR_SINGLE)
 			{
+				Preprocessor_Add("pronoun", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(NPChar))));
 				d.text = DLG_TEXT[30] + NPChar.relationtype + DLG_TEXT[31];
 				NPChar.pcounter = 1;
 				NPChar.married = MR_MISTRESS;
@@ -167,6 +174,8 @@ void ProcessDialogEvent()
 			MRAddTalkPoints(&PChar, &NPChar);
 			if(MRCanMarry(&PChar, &NPChar, true))
 			{
+				Preprocessor_Add("man", XI_ConvertString(PChar.sex));
+				Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
 				d.text = DLG_TEXT[34] + GetMyName(PChar) + DLG_TEXT[35];
 				Link.l1 = DLG_TEXT[36];
 				Link.l1.go = "duel";
@@ -187,6 +196,24 @@ void ProcessDialogEvent()
 			d.text = tempt1;
 			Link.l1 = DLG_TEXT[44];
 			Link.l1.go = "exit";
+
+			if(!CheckAttribute(PChar, "quest.colombian_silver") && rand(7) <= sti(NPChar.quest.colombian_silver.counter))
+			{
+				d.text = DLG_TEXT[69 + rand(2)];
+				link.l1 = DLG_TEXT[72];
+				link.l1.go = "exit_accept_colombian_silver";
+				link.l2 = DLG_TEXT[73];
+				link.l2.go = "exit_reject_colombian_silver";
+				if(GetRMRelation(PChar, SPAIN) >= REL_AMNESTY)
+				{
+					link.l3 = DLG_TEXT[74];
+					if(IsInServiceOf(SPAIN))
+					{
+						link.l3 = DLG_TEXT[75] + TranslateString(GetRankName(PChar, SPAIN),"") + DLG_TEXT[76];
+					}
+					link.l3.go = "exit_reject_colombian_silver";
+				}
+			}
 		break;
 
 		case "dump":
@@ -235,7 +262,9 @@ void ProcessDialogEvent()
 			PChar.married = MR_MARRIED;
 			PChar.married.id = NPChar.id;
 			int ix = GetTownGovernorIndex (GetCurrentTownID());
-			WriteNewLogEntry("Married my beautiful wife", "On this wonderful day I married my beautiful wife, "+NPChar.name+" "+NPChar.lastname+", daugther of "+Characters[ix].name+" "+Characters[ix].lastname+", the governor of "+FindTownName(GetCurrentTownID())+". I won her heart with my wit and charm, and last but not least with my swordmanship, as I had to defeat her jealous suitor, before she could agree to a marriage. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...","Personal",true);
+//			WriteNewLogEntry("Married my beautiful wife", "On this wonderful day I married my beautiful wife, "+NPChar.name+" "+NPChar.lastname+", daugther of "+Characters[ix].name+" "+Characters[ix].lastname+", the governor of "+FindTownName(GetCurrentTownID())+". I won her heart with my wit and charm, and last but not least with my swordmanship, as I had to defeat her jealous suitor, before she could agree to a marriage. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...","Personal",true);
+			if (PChar.sex == "man") WriteNewLogEntry("Married my beautiful wife", "On this wonderful day I married my beautiful wife, "+GetMySimpleName(NPChar)+", "+XI_ConvertString(NPChar.relationtype)+" of "+GetMySimpleName(Characters[ix])+", the governor of "+FindTownName(GetCurrentTownID())+". I won her heart with my wit and charm, and last but not least with my swordmanship, as I had to defeat her jealous suitor, before she could agree to a marriage. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...","Personal",true);
+			else WriteNewLogEntry("Married my handsome husband", "On this wonderful day I married my handsome husband, "+GetMySimpleName(NPChar)+", "+XI_ConvertString(NPChar.relationtype)+" of "+GetMySimpleName(Characters[ix])+", the governor of "+FindTownName(GetCurrentTownID())+". I won his heart with my wit and charm, and last but not least with my swordmanship, as I had to defeat his jealous suitor, before he could agree to a marriage. We're both very happy, and now I am going to finish this writing, because I have something more important to do ...","Personal",true);
 			d.text = DLG_TEXT[45];
 			Link.l1 = DLG_TEXT[46];
 			Link.l1.go = "married2";
@@ -273,7 +302,8 @@ void ProcessDialogEvent()
 
 		// suitor dialog
 		case "engarde":
-			d.text = Characters[GetCharacterIndex(PChar.marriageduel.MRid)].name + DLG_TEXT[50];
+			if (PChar.sex == "man") d.text = Characters[GetCharacterIndex(PChar.marriageduel.MRid)].name + DLG_TEXT[50];
+			else  d.text = Characters[GetCharacterIndex(PChar.marriageduel.MRid)].name + DLG_TEXT[78];
 			Link.l1 = DLG_TEXT[51];
 			Link.l1.go = "exit_duel";
 		break;
@@ -295,6 +325,24 @@ void ProcessDialogEvent()
 			DialogExit();
 		break;
 
+		// Exits for "Colombian Silver"
+		case "exit_accept_colombian_silver":
+			SetQuestHeader("colombian_silver");
+			Preprocessor_AddQuestData("name", GetMyFullName(NPChar));
+			AddQuestRecord("colombian_silver", 1);
+			Preprocessor_Remove("name");
+			AddDialogExitQuest("colombian_silver_prepare_taverns");
+			Diag.CurrentNode = Diag.TempNode;
+			DialogExit();
+		break;
+
+		case "exit_reject_colombian_silver":
+			AddDialogExitQuest("colombian_silver_reject_quest");
+			Diag.CurrentNode = Diag.TempNode;
+			DialogExit();
+		break;
+
+		// Wedding
 		case "her_answer":
 			d.text = DLG_TEXT[61];
 			Link.l1 = DLG_TEXT[44];
@@ -310,27 +358,27 @@ void ProcessDialogEvent()
 
 		case "consent_answer1":
 			d.text = DLG_TEXT[64];
-			if (PChar.sex == "man") Link.l1 = DLG_TEXT[60];
+			if (NPChar.sex == "woman") Link.l1 = DLG_TEXT[60];
 			else Link.l1 = DLG_TEXT[68];
 			Link.l1.go = "exit";
 		break;
 
 		case "consent_answer2":
 			d.text = DLG_TEXT[64];
-			if (PChar.sex == "man") Link.l1 = DLG_TEXT[60];
+			if (NPChar.sex == "woman") Link.l1 = DLG_TEXT[60];
 			else Link.l1 = DLG_TEXT[65];
 			Link.l1.go = "exit";
 		break;
 
 		case "consent_answer3":
 			d.text = DLG_TEXT[65];
-			if (PChar.sex == "man") Link.l1 = DLG_TEXT[60];
+			if (NPChar.sex == "woman") Link.l1 = DLG_TEXT[60];
 			else Link.l1 = DLG_TEXT[66];
 			Link.l1.go = "exit";
 		break;
 
 		case "he_gives_ring":
-			if (PChar.sex == "man")
+			if (NPChar.sex == "woman")
 			{
 				d.text = "";
 				Link.l1 = PChar.quest.bride + DLG_TEXT[67];

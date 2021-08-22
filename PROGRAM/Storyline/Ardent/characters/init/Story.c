@@ -2,15 +2,14 @@ void CreateStoryCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 // Two Dogs
 	ch.nation = SPAIN;
 	ch.old.name = "Indian Warrior";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Indian Warrior");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Indian Warrior");
+	ch.lastname = "";
 	ch.id		= "Two Dogs";
 	ch.model = "Indian1_1";
 	ch.sex = "man";
@@ -34,6 +33,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "0";
+	LAi_NoRebirthEnable(ch);
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;
@@ -49,10 +49,10 @@ void CreateStoryCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Louwe";
 	ch.old.lastname = "Louwman";
-	ch.name = TranslateString("","Louwe");
-	ch.lastname = TranslateString("","Louwman");
+	ch.name = TranslateString("", "Louwe");
+	ch.lastname = TranslateString("", "Louwman");
 	ch.id		= "Louwe Louwman";
-	ch.model = "9S_Pir";
+	ch.model = "Louwman";	// was "9S_Pir";
 	ch.sex = "man";
 	ch.loyality = 10;
 	ch.alignment = "good";
@@ -68,14 +68,15 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Leadership = "2";
 	ch.skill.Fencing = "5";
 	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
 	ch.skill.Grappling = "1";
 	ch.skill.Repair = "1";
 	ch.skill.Defence = "1";
-	ch.skill.Commerce = "5";
+	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "0";
+	LAi_NoRebirthEnable(ch);
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;
@@ -83,7 +84,7 @@ void CreateStoryCharacters(ref n)
 	LAi_SetCitizenType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);		
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
-	ch.quest.officertype = OFFIC_TYPE_QMASTER;
+	ch.quest.officertype = OFFIC_TYPE_CANNONEER;
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
@@ -91,8 +92,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Giraldo";
 	ch.old.lastname = "Annibal";
-	ch.name = TranslateString("","Giraldo");
-	ch.lastname = TranslateString("","Annibal");
+	ch.name = TranslateString("", "Giraldo");
+	ch.lastname = TranslateString("", "Annibal");
 	ch.id		= "Giraldo Annibal";
 	ch.model = "korsar1";
 	ch.sex = "man";
@@ -118,6 +119,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "3";
 	ch.money = "0";
+	LAi_NoRebirthEnable(ch);
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;
@@ -133,10 +135,11 @@ void CreateStoryCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Gheerkin";
 	ch.old.lastname = "Kamalaas";
-	ch.name = TranslateString("","Gheerkin");
-	ch.lastname = TranslateString("","Kamalaas");
+	ch.name = TranslateString("", "Gheerkin");
+	ch.lastname = TranslateString("", "Kamalaas");
 	ch.id		= "Gheerkin Kamalaas";
 	ch.model = "33_Ronal2";
+	ch.model.animation = "33_Ronald";
 	ch.sex = "man";
 	ch.loyality = 10;
 	ch.alignment = "bad";
@@ -152,14 +155,15 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Leadership = "2";
 	ch.skill.Fencing = "5";
 	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
 	ch.skill.Grappling = "1";
 	ch.skill.Repair = "1";
 	ch.skill.Defence = "1";
-	ch.skill.Commerce = "5";
+	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "0";
+	LAi_NoRebirthEnable(ch);
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;
@@ -167,7 +171,7 @@ void CreateStoryCharacters(ref n)
 	LAi_SetCitizenType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);		
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
-	ch.quest.officertype = OFFIC_TYPE_QMASTER;
+	ch.quest.officertype = OFFIC_TYPE_CANNONEER;
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
@@ -175,8 +179,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Morys";
 	ch.old.lastname = "Badlad";
-	ch.name = TranslateString("","Morys");
-	ch.lastname = TranslateString("","Badlad");
+	ch.name = TranslateString("", "Morys");
+	ch.lastname = TranslateString("", "Badlad");
 	ch.id		= "Morys Badlad";
 	ch.model = "corsair3";
 	ch.sex = "man";
@@ -202,6 +206,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "3";
 	ch.money = "0";
+	LAi_NoRebirthEnable(ch);
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;
@@ -217,8 +222,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Ralph";
 	ch.old.lastname = "Partridge";
-	ch.name = TranslateString("","Ralph");
-	ch.lastname = TranslateString("","Partridge");
+	ch.name = TranslateString("", "Ralph");
+	ch.lastname = TranslateString("", "Partridge");
 	ch.id		= "Ralph Partridge";
 	ch.model = "rabwhite1";
 	ch.sex = "man";
@@ -255,8 +260,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Coper";
 	ch.old.lastname = "Blumberger";
-	ch.name = TranslateString("","Coper");
-	ch.lastname = TranslateString("","Blumberger");
+	ch.name = TranslateString("", "Coper");
+	ch.lastname = TranslateString("", "Blumberger");
 	ch.id		= "Coper Blumberger";
 	ch.model = "prison_3";
 	ch.sex = "man";
@@ -293,8 +298,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Amtónio";
 	ch.old.lastname = "Guajira";
-	ch.name = TranslateString("","Amtónio");
-	ch.lastname = TranslateString("","Guajira");
+	ch.name = TranslateString("", "Amtónio");
+	ch.lastname = TranslateString("", "Guajira");
 	ch.id		= "Amtónio Guajira";
 	ch.model = "prison_5";
 	ch.sex = "man";
@@ -331,8 +336,8 @@ void CreateStoryCharacters(ref n)
 	ch.nation = PIRATE;
 	ch.old.name = "Ayol";
 	ch.old.lastname = "Bacha";
-	ch.name = TranslateString("","Ayol");
-	ch.lastname = TranslateString("","Bacha");
+	ch.name = TranslateString("", "Ayol");
+	ch.lastname = TranslateString("", "Bacha");
 	ch.id		= "Ayol Bacha";
 	ch.model = "prison_4";
 	ch.sex = "man";
@@ -365,9 +370,9 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "Lucia";
+	ch.old.name = "Lucía";
 	ch.old.lastname = "de la Vega";
-	ch.name = TranslateString("","Lucia");
+	ch.name = TranslateString("","Lucía");
 	ch.lastname = TranslateString("","de la Vega");
 	ch.id		= "Lucia de la Vega";
 	ch.model = "Lucia_1";	// was "liz3"
@@ -393,17 +398,18 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "4";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
+	LAi_NoRebirthEnable(ch);
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	ch.quest.officertype = OFFIC_TYPE_CIVILIAN;
 	ch.questchar = true;//MAXIMUS: identifier for captives
-	SetRankTitle(ch, TranslateString("", "Donna"));
+	SetRankTitle(ch, TranslateString("", "Doña"));
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Edmundo";
 	ch.old.lastname = "de la Vega";
-	ch.name = TranslateString("","Edmundo");
-	ch.lastname = TranslateString("","de la Vega");
+	ch.name = TranslateString("", "Edmundo");
+	ch.lastname = TranslateString("", "de la Vega");
 	ch.id		= "Edmundo de la Vega";
 	ch.model = "Edmundo";
 	ch.sex = "man";
@@ -428,6 +434,7 @@ void CreateStoryCharacters(ref n)
 	ch.skill.Commerce = "4";
 	ch.skill.Sneak = "1";
 	ch.money = "1000";
+	LAi_NoRebirthEnable(ch);
 	LAi_SetStayType(ch);
 //	LAi_SetCitizenType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
@@ -438,8 +445,8 @@ void CreateStoryCharacters(ref n)
 
 	ch.old.name = "Valerie";
 	ch.old.lastname = "Downing";
-	ch.name = TranslateString("","Valerie");
-	ch.lastname = TranslateString("","Downing");
+	ch.name = TranslateString("", "Valerie");
+	ch.lastname = TranslateString("", "Downing");
 	ch.id		= "Valerie Downing";
 	ch.model = "lady1"; // was "Diz1"
 	ch.sex = "woman";
@@ -487,8 +494,9 @@ void CreateStoryCharacters(ref n)
 	}
      //JRH ammo mod <--
 	ch.equip.blade = "blade9";
-	GiveItem2Character(ch, "goldarmor");
+//	GiveItem2Character(ch, "goldarmor");
 	ch.money = "10000";
+	LAi_NoRebirthEnable(ch);
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
@@ -498,8 +506,8 @@ void CreateStoryCharacters(ref n)
 
 	ch.old.name = "Piers";
 	ch.old.lastname = "Downing";
-	ch.name = TranslateString("","Piers");
-	ch.lastname = TranslateString("","Downing");
+	ch.name = TranslateString("", "Piers");
+	ch.lastname = TranslateString("", "Downing");
 	ch.id		= "Piers Downing";
 	ch.model = "PiersDowning";	// was "Huber_Fra2_17"
 	ch.sex = "man";
@@ -547,8 +555,9 @@ void CreateStoryCharacters(ref n)
 	}
      //JRH ammo mod <--
 	ch.equip.blade = "blade9";
-	GiveItem2Character(ch, "goldarmor");
+//	GiveItem2Character(ch, "goldarmor");
 	ch.money = "10000";
+	LAi_NoRebirthEnable(ch);
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
@@ -558,8 +567,8 @@ void CreateStoryCharacters(ref n)
 
 	ch.old.name = "Gilbert";
 	ch.old.lastname = "Downing";
-	ch.name = TranslateString("","Gilbert");
-	ch.lastname = TranslateString("","Downing");
+	ch.name = TranslateString("", "Gilbert");
+	ch.lastname = TranslateString("", "Downing");
 	ch.id		= "Gilbert Downing";
 	ch.model = "Huber_Hol2_17";
 	ch.sex = "man";
@@ -590,12 +599,12 @@ void CreateStoryCharacters(ref n)
 //	SetRankTitle(ch, TranslateString("", "Sir"));
 	AddGameCharacter(n, ch);
 
-// Spare officer, originally for "Abduction" quest in case Lucia / Edmundo is a companion captain
+// Spare officer, originally for "Abduction" quest in case Lucía / Edmundo is a companion captain
 	ch.nation = PIRATE;
 	ch.old.name = "Emmett";
 	ch.old.lastname = "Dawson";
-	ch.name = TranslateString("","Emmett");
-	ch.lastname = TranslateString("","Dawson");
+	ch.name = TranslateString("", "Emmett");
+	ch.lastname = TranslateString("", "Dawson");
 	ch.id		= "Emmett Dawson";
 	ch.model = "wf1blaze";
 	ch.sex = "man";

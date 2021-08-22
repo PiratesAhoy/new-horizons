@@ -494,7 +494,7 @@ void ProcessDialogEvent()
 			PChar.Flags.Pirate = 0; // PB: Jack Rackham Pirate Flag (used by Barbossa)
 			PChar.Flags.Pirate.texture = 0;
 			// PB: Become Barbossa <--
-			AddDialogExitQuest("insertforchase");			
+			AddDialogExitQuest("insertforchase");
 		break;
 		
 		case "Begin_4":

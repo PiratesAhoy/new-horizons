@@ -1,4 +1,4 @@
-string DLG_TEXT[13] = {
+string DLG_TEXT[14] = {
 "Captain, I have no time to talk to you right now.",
 "See you later then.",
 "I can train you to become a Professional Cannoneer.",
@@ -11,6 +11,8 @@ string DLG_TEXT[13] = {
 "I want to know how to FastReload my cannons.",
 "I certainly say yes to that!",
 "Maybe later.",
-"Captain, do yo want any help with that boat or not?",
+"Captain, do yo want any help with that boat or not?",	//12
+"Maybe later. Here, take this flag and raise it on the tower top.",
+
 
 };

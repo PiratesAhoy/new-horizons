@@ -1,0 +1,10 @@
+title=Side Quest - The Collector
+text.t1= I've met a shady looking guy at the #sGreenford# port. He told me about some opportunities. If I'm interested I should meet him in the tavern.
+text.t2= I wasn't able to meet the guy in time. Guess this opportunity passed me by.
+text.t3= I met with the smuggler in the tavern and he told me one of their contacts was a collector of indian weapons. It seems this collector is looking for 10 bows.
+text.t4= I declined the offer, something doesn't look right here.
+text.t5= I accepted he deal, the smuggler told me to report back to him once I've got the bows. They should be deliverd before two months have passed so I should hurry this up a little bit because I have no idea where I should deliver them once I've got them.
+text.t6= I failed to deliver the native weapons in time. I guess the smugglers won't like this...
+text.t7= I was able to collect all weapons, the smuggler told me to meet #sname# at #slocation# on #sisland#. There I will get my payment.
+text.t8= I met with the buyer although he couldn't offer much money for the bows he did have something else which peaked my interest so I made the deal with him.
+text.t9= I'll return to the apothecary in #sGreenford# now.

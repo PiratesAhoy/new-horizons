@@ -93,9 +93,9 @@ string DLG_TEXT[99] = {
 "Yes, captain? What do you want?",
 "I am in search of the French frigate 'La Foudre'. She was supposed to have sailed to #sisland_Saint Martin# a couple of days ago. Have you sunk it?",
 "We Dutch don't particularly like the French, so I can see why you would think that we would have sunk it. But no, I have not seen any French frigate near here.",
-"Are you sure? #sHavana# Port Admiral Talicerdor assured me she set sail to #sisland_Saint Martin#, and it hasnt been seen on the other side of the island either.",
+"Are you sure? #sHavana# Port Admiral Talicerdor assured me she set sail to #sisland_Saint Martin#, and it hasn't been seen on the other side of the island either.",
 "I can only tell you what I know: I have seen no frigate here. Perhaps she had to change her heading due to that violent storm that roared here a few days ago.",
-"A violent storm? Lord Tailical also mentioned the mystery pirate ship appearing in a storm. I wonder...",
+"A violent storm? Lord Talicerdor also mentioned the mystery pirate ship appearing in a storm. I wonder...",
 "Mystery pirate ship? What mystery pirate ship?",
 "Never you mind. Thanks for your help. Goodbye.",
 

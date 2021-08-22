@@ -23,8 +23,12 @@ void StartStoryLine()
 	// PB: Override Character Type <--
 
 	SetModelfromArray(PChar, GetModelIndex("Fawn"));
-	PChar.name = "Guy";
-	PChar.lastname = "Verbinski";
+	// MAXIMUS 05.09.2018 ==>
+	PChar.old.name = "Guy";
+	PChar.old.lastname = "Verbinski";
+	PChar.name = TranslateString("", "Guy");
+	PChar.lastname = TranslateString("", "Verbinski"); 
+	// MAXIMUS 05.09.2018 <==
 	GiveShip2Character(pchar,"KetchNavy","White Swan",-1,PIRATE,true,true);
 
 	GiveItem2Character(Pchar, "bladeX4");	// PB: Gives you your fists
@@ -57,9 +61,14 @@ void StartStoryLine()
 	Towns[GetTownIndex("Quebradas Costillas")].gov = "Skull";				// PB: Set this for real
 	Towns[GetTownIndex("Grand Turk")].gov = "Sao Feng";						// PB: Set this for real
 	SetCharacterShipLocation(CharacterFromID("Sao Feng"), "Turks_port");	// PB: Just for fun
-	Characters[GetCharacterIndex("John Clifford Brin")].name = "John";
-	Characters[GetCharacterIndex("John Clifford Brin")].middlename = "Clifford";
-	Characters[GetCharacterIndex("John Clifford Brin")].lastname = "Brin";
+	 // MAXIMUS 05.09.2018 ==>
+	Characters[GetCharacterIndex("John Clifford Brin")].old.name = "John";
+	Characters[GetCharacterIndex("John Clifford Brin")].old.middlename = "Clifford";
+	Characters[GetCharacterIndex("John Clifford Brin")].old.lastname = "Brin";
+	Characters[GetCharacterIndex("John Clifford Brin")].name = TranslateString("", "John");
+	Characters[GetCharacterIndex("John Clifford Brin")].middlename = TranslateString("", "Clifford");
+	Characters[GetCharacterIndex("John Clifford Brin")].lastname = TranslateString("", "Brin");
+	 // MAXIMUS 05.09.2018 <==
 
 	Reinit_KhaelRoa();
 
@@ -139,6 +148,7 @@ void StartStoryLine()
 		ChangeCharacterAddress(characterFromID("ANIMISTS_06"), "none", "");
 		ChangeCharacterAddress(characterFromID("ANIMISTS_07"), "none", "");
 		ChangeCharacterAddress(characterFromID("ANIMISTS_08"), "none", "");
+		ChangeCharacterAddress(characterFromID("ANIMISTS_09"), "none", "");
 		SetRumourState("Children_start", false);	// Disable standard rumour
 		// enabled in case "storm_complete"
 
@@ -157,6 +167,14 @@ void StartStoryLine()
 		DeleteAttribute(PChar, "quest.Jackpot");
 		DeleteAttribute(PChar, "quest.Jackpot_start");
 		// enabled in case "storm_complete"
+
+	// Hard Labours of an Assassin - change "thug9" from Jack Sparrow to Nathaniel Hawk
+		SetModelFromID(CharacterFromID("thug9"), "blaze");
+		Characters[GetCharacterIndex("thug9")].name = TranslateString("", "Nathaniel");
+		Characters[GetCharacterIndex("thug9")].lastname = TranslateString("", "Hawk");
+		Characters[GetCharacterIndex("thug9")].greeting = "Gr_Nathaniel";
+		Characters[GetCharacterIndex("thug9")].Dialog.Filename = "Nathaniel Hawk_dialog.c";
+		Characters[GetCharacterIndex("thug9")].Dialog.CurrentNode = "intro";
 	// PB: Sidequests  <--
 
 	//Tortuga Atmosphere

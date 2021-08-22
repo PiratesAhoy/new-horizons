@@ -85,6 +85,7 @@ void ProcessDialogEvent()
 			}
 			if (CheckQuestAttribute("gambling_with_girl", "gambled") || CheckQuestAttribute("gambling_with_girl", "prisoned") || CheckQuestAttribute("gambling_with_girl", "to_hovernor_2"))
 			{
+				Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation("Falaise de Fleur")));
 				if (CheckQuestAttribute("gambling_with_girl", "to_hovernor_2") && GetNationRelation2MainCharacter(iNation) == RELATION_ENEMY)
 				{
 					//прощают
@@ -115,6 +116,7 @@ void ProcessDialogEvent()
 						CloseQuestHeader("gambled_girl");
 					}
 				}
+				Preprocessor_Remove("nation");
 			}
  			if (CheckQuestAttribute("Hunter", "Roxanne"))
 			{
@@ -302,8 +304,13 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			npchar.quest.english_war_ship = "done_1";
 			ChangeCharacterReputation(pchar, -1);
+
+			Preprocessor_AddQuestData("Le Moigne", GetMyLastName(CharacterFromID("Joseph Claude Le Moigne")));
+			Preprocessor_AddQuestData("heavy frigate", XI_ConvertString(GetShipTypeName(CharacterFromID("Eng Captain Near FdF"))));
 			AddQuestRecord("Hire_by_france_for_defeat_england_corvette", 2);
 			CloseQuestHeader("Hire_by_france_for_defeat_england_corvette");
+			Preprocessor_Remove("heavy frigate");
+			Preprocessor_Remove("Le Moigne");
 		break;
 
 		case "Exit":

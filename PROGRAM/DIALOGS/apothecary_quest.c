@@ -39,17 +39,13 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				if(sti(GetAttribute(PChar,"quest.mysterious_plants.donate")) < 1000)
+				if (sti(GetAttribute(PChar,"quest.mysterious_plants.donate")) < 1000 )
 				{
 					if(CheckAttribute(PChar,"quest.mysterious_plants.donate"))
 					{
 						Link.l0 = DLG_TEXT[94];
 						Link.l0.go = "decline_donate_later";
-					}
-					else
-					{
-						Link.l0 = DLG_TEXT[0];
-						Link.l0.go = "Trust Check";
+					
 					}
 				}
 				else
@@ -66,7 +62,33 @@ void ProcessDialogEvent()
 				Link.l0 = DLG_TEXT[55];
 				Link.l0.go = "Meet In Tavern";
 			}
-			if(CheckAttribute(PChar,"quest.mysterious_plants.give_up"))
+
+			if(CheckAttribute(PChar,"quest.mysterious_plants.crewmember.attacked_tell_steven"))
+			{
+				Link.l0 = DLG_TEXT[172];
+				Link.l0.go = "Shock attack";
+			}
+			if (CheckAttribute(PChar, "quest.mysterious_plants.setwarehouse"))//PW 
+			{
+				Link.l0 = DLG_TEXT[167];
+				Link.l0.go = "Tell Steven about warehouse";
+			}
+			if (CheckAttribute(PChar,"quest.mysterious_plants.No_Follow"))//PW 
+			{
+				Link.l0 = DLG_TEXT[175];
+				Link.l0.go = "No Follow";
+			}
+			if (CheckAttribute(PChar,"quest.mysterious_plants.Lost_Indian"))//PW 
+			{
+				Link.l0 = DLG_TEXT[165];
+				Link.l0.go = "Lost Indian";
+			}
+			if (CheckAttribute(pchar,"quest.mysterious_plants.spy.killed"))
+			{
+				Link.l0 = DLG_TEXT[177];
+				Link.l0.go = "Killed Spy";
+			}
+			if (GetAttribute(PChar,"quest.mysterious_plants.give_up") == "true")//PW 
 			{
 				Link.l0 = DLG_TEXT[99];
 				Link.l0.go = "Give Up 1";
@@ -88,10 +110,23 @@ void ProcessDialogEvent()
 				}
 				else
 				{
+					pchar.quest.mysterious_plants.heard_job = "Returned given up";
 					Link.l0 = DLG_TEXT[160];
 					Link.l0.go = "Give Up 1";
+					
 				}
 			}
+			if((pchar.location == "Cartagena Hotel") && CheckAttribute(pchar,"quest.mysterious_plants.give_up.amount"))
+			{
+				Link.l10 = DLG_TEXT[169];
+				Link.l10.go = "Bring Opium";
+			}
+			if(!CheckAttribute(PChar,"quest.plants"))
+			{			
+			Link.l10 = DLG_TEXT[0];
+			Link.l10.go = "Trust Check";
+			}
+
 		break;
 		
 		case "Explain Vegetal":
@@ -104,18 +139,31 @@ void ProcessDialogEvent()
 		// ====================== PART 1
 		
 		case "Trust Check":
+			if(GetCharacterShipLocation(Pchar) == "Greenford_port")
+			{
 			d.Text = DLG_TEXT[1];
 			Link.l1 = DLG_TEXT[2];
 			Link.l1.go = "Convince"; 
+			}
+			else
+			{
+			d.Text = DLG_TEXT[170];
+			Link.l1 = DLG_TEXT[171];
+			Link.l1.go = "exit"; 
+			}
+		
+			
 		break;
 		
 		case "Convince":
-			if(CheckAttribute(PChar,"quest.mysterious_plants"))
+			pchar.quest.plants = "start"
+			if(!CheckAttribute(PChar,"quest.mysterious_plants"))
 			{
 				SetQuestHeader("plants");
 				AddQuestRecord("plants", 1);
 			}
 			AddQuestRecord("plants", 2);
+			AddDialogExitQuest ("Learned About Apothecary");
 			d.Text = DLG_TEXT[3];
 			Link.l1 = DLG_TEXT[4];
 			Link.l1.go = "agree_donate";
@@ -127,6 +175,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[6];
 			Link.l1 = DLG_TEXT[7];
 			Link.l1.go = "exit";
+			DeleteAttribute(&PChar,"quest.mysterious_plants.declined");
 			AddDialogExitQuest("Accept Donate Apothecary");			
 		break;
 		
@@ -163,6 +212,9 @@ void ProcessDialogEvent()
 			Link.l1.go = "exit";
 		break;
 		
+
+		
+
 		//===================== PART 2
 		case "Talk Business":
 			AddDialogExitQuest("Apothecary Talk Business");
@@ -232,6 +284,8 @@ void ProcessDialogEvent()
 			Link.l1.go = "exit";
 		break;
 		
+		
+
 		case "Meet In Tavern":
 			AddDialogExitQuest("Apothecary Meet In Tavern");
 			d.Text = DLG_TEXT[56];
@@ -298,6 +352,7 @@ void ProcessDialogEvent()
 		
 		case "Give Up 5":
 			PChar.quest.mysterious_plants.give_up.amount = sti(GetAttribute(pchar,"quest.mysterious_plants.indians.killed")) * 4;
+			if (sti(GetAttribute(PChar,"quest.mysterious_plants.give_up.amount")) <= 0 )PChar.quest.mysterious_plants.give_up.amount = 2;//PW got a "give us 0 plants" response during testing
 			if(GetDifficulty() >= DIFFICULTY_SEADOG)
 			{
 				d.Text = DLG_TEXT[111]+PChar.quest.mysterious_plants.give_up.amount+DLG_TEXT[112];
@@ -322,16 +377,23 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[121];
 			if(sti(PChar.items.opium) >= sti(GetAttribute(PChar,"quest.mysterious_plants.give_up.amount")))
 			{
+
 				Link.l1 = DLG_TEXT[122];
-				Link.l1.go = "exit2";
+				Link.l1.go = "Give Up Complete";
 			}
-			Link.l2 = DLG_TEXT[123];
-			Link.l2.go = "exit2";
+			else
+			{
+
+			Link.l1 = DLG_TEXT[123];
+			Link.l1.go = "exit";
+			Dialog.NextNode = "Bring Opium";
+			}
+		
 		break;
 		
 		case "Give Up Complete":
-			d.Text = DLG_TEXT[125];
-			Link.l1 = DLG_TEXT[126];
+			d.Text = DLG_TEXT[124];
+			Link.l1 = DLG_TEXT[125];
 			Link.l1.go = "exit2";
 			AddDialogExitQuest("Give Up Completed in Cartagena");
 		break;
@@ -347,11 +409,12 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[12];
 			Link.l1 = DLG_TEXT[13];
 			Link.l1.go = "Choose BOOM";
-			if(sti(PChar.money)>=1000)
-			{
+			//if(sti(PChar.money)>=1000)//PW this removed pay option if you didn't have 1000. This effectively closes the apothecary with no player option otherwise from this point.
+			// PW If you were trying the quest because you didn't have much money you could think you HAD to refuse to donate and end up here. 
+			//{
 				Link.l2 = DLG_TEXT[14];
 				Link.l2.go = "Choose Money";
-			}
+			//}
 			Link.l3 = DLG_TEXT[15];
 			Link.l3.go = "Choose Fight";
 		break;
@@ -364,7 +427,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Choose Money":
-			AddMoneyToCharacter(pchar, -1000);
+			//AddMoneyToCharacter(pchar, -1000);//PW so was working to make indirect donaion but not raising donated sum for continuing quest
 			d.Text = DLG_TEXT[18];
 			Link.l1 = DLG_TEXT[19];
 			Link.l1.go = "exit2";
@@ -372,7 +435,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Choose Fight":
-			AddMoneyToCharacter(pchar, -1000);
+			//AddMoneyToCharacter(pchar, -1000);// PW ?? no money involved if you fight
 			d.Text = DLG_TEXT[20];
 			Link.l1 = DLG_TEXT[21];
 			Link.l1.go = "exit2";
@@ -404,6 +467,24 @@ void ProcessDialogEvent()
 			Link.l1.go = "exit2";
 		break;
 		
+		case "Shock attack"://PW new optional dialog available with steven after your crewmember attacked
+			DeleteAttribute(&PChar,"quest.mysterious_plants.crewmember.attacked_tell_steven");
+			d.Text = DLG_TEXT[173];
+			if (CheckAttribute(&Pchar,"quest.mysterious_plants.reported_crime"))
+			{
+			Link.l1 = DLG_TEXT[176];
+			Link.l1.go = "exit";
+			}
+			else
+			{
+			Link.l1 = DLG_TEXT[174];
+			Link.l1.go = "exit";
+			}
+			
+		break;
+
+
+
 		case "Help During Ambush":
 			AddDialogExitQuest("Continue Apothecary Ambush");
 			d.Text = DLG_TEXT[67];
@@ -445,6 +526,21 @@ void ProcessDialogEvent()
 			Link.l1.go = "exit2";
 		break;
 		
+
+
+
+		case "officiant Leave":
+			d.Text = DLG_TEXT[60];
+			Link.l1 = DLG_TEXT[61];
+			Link.l1.go = "officiant Leave 2";
+		break;
+		
+		case "officiant Leave 2":
+			AddDialogExitQuest("officiant Leaves");
+			d.Text = DLG_TEXT[62];
+			Link.l1 = DLG_TEXT[63];
+			Link.l1.go = "exit2";
+		break;
 		//================== Captain Part
 		case "Talk about plan":
 			AddDialogExitQuest("Apothecary Meet At Lighthouse");
@@ -518,6 +614,38 @@ void ProcessDialogEvent()
 		break;
 		
 		//================= Indians in warehouse part
+
+		case "Tell Steven about warehouse"://PW optional new dialog if you know about warehouse 
+			DeleteAttribute(PChar, "quest.mysterious_plants.setwarehouse");
+			d.Text = DLG_TEXT[168];
+			Link.l1 = DLG_TEXT[59];
+			Link.l1.go = "exit2";
+		break;
+		
+		case "No Follow"://PW optional new dialog with steven to setup indians in warehouse if you din't follow from tavern
+			//DeleteAttribute(PChar,"quest.mysterious_plants.No_Follow");
+			d.Text = DLG_TEXT[166];
+			Link.l1 = DLG_TEXT[171];
+			Link.l1.go = "exit2";
+			AddDialogExitQuest("Apothecary Build Obstacles"); 
+		break;
+		
+		case "Lost Indian"://PW optional new dialog with steven to set indians in warehouse if you didn't follow into suburb
+			//DeleteAttribute(PChar,"quest.mysterious_plants.Lost_Indian");
+			d.Text = DLG_TEXT[166];
+			Link.l1 = DLG_TEXT[59];
+			Link.l1.go = "exit2";
+			AddDialogExitQuest("Setup Warehouse"); 
+		break;
+		
+		case "Killed Spy"://PW optional new dialog with steven to set indians in warehouse if you killed the indian "spy"
+			DeleteAttribute(PChar,"quest.mysterious_plants.spy.killed");
+			d.Text = DLG_TEXT[166];
+			Link.l1 = DLG_TEXT[59];
+			Link.l1.go = "exit2";
+			AddDialogExitQuest("Setup Warehouse"); //PW no build obstacles (should be in place)
+		break;
+
 		case "Indians Talk 1":
 			PChar.quest.mysterious_plants.node = "Indians Talk 2";
 			d.Text = DLG_TEXT[71];
@@ -713,7 +841,15 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Thomas Spotted":
+			
+			If (PChar.location.locator == "citizen06")
+			{
+			d.Text = DLG_TEXT[178];
+			}
+			else
+			{
 			d.Text = DLG_TEXT[118];
+			}
 			Link.l1 = DLG_TEXT[119];
 			Link.l1.go = "exit2";
 			Diag.TempNode = "First time";

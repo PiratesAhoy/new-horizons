@@ -1,0 +1,12 @@
+Dialog_window_title
+{
+Dialogue window
+}
+Dialog_window_info
+{
+    Okno dialogowe pojawia si× po naci›ni×ciu przycisku „Akcja”, pozostaj¹c przed jak¹› postaci¹. Lub postacie mog¹ same go inicjowaÞ, je›li chc¹ rozmawiaÞ z postaci¹ gracza.
+    W lewym górnym rogu okna dialogowego widzisz twarz postaci, z któr¹ rozmawiasz. A do prawego gracza možna zobaczyÞ imi× tej postaci.
+    W dolnej cz×›ci ekranu znajduje si× okno tekstowe. Tutaj gracz widzi, co postaÞ mu mówi, a takže widzi list× zwrotów, które može przekazaÞ postaci. S³owa postaci s¹ z³ote, a odpowiedzi gracza niebieskie. Aktualnie wybrana odpowiedŸ gracza jest wyróžniona jasnym niebieskim kolorem (rys.2).
+    Czasami nie ca³y tekst lub odpowiedzi mog¹ pasowaÞ do okna tekstowego. W tym przypadku gracz widzi zielone strza³ki w gór× iw dó³ w prawej cz×›ci okna tekstowego (rys.3). A je›li s¹ jakie› linie tekstowe ponižej strza³ki w dó³, zostan¹ one pod›wietlone na zielono. To samo co strza³ka w gór× - zostanie pod›wietlona, ??je›li tekst jest powyžej.
+    Wybór odpowiedzi gracza može byÞ dokonany za pomoc¹ przycisków wyboru dialogów, a aktywacja wybranej odpowiedzi može byÞ wykonana za pomoc¹ klawisza „dialog” akcji.
+}

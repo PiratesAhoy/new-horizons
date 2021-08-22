@@ -909,6 +909,12 @@ bool CanReloadGun(ref chr)
 					ammo = GetCharacterItem(chr, ammoName);
 					if(ammo == 0) enough_ammo = false;
 				break;
+				case "pg6":
+					ammoName = "pistolgrapes";
+					ammo = GetCharacterItem(chr, ammoName);
+					if(gp <= 5) enough_ammo = false;
+					if(ammo <= 5) enough_ammo = false;
+				break;
 			}
 		}
 		else
@@ -1019,6 +1025,11 @@ float RecalcCharacterGun(ref chr)
 					if(gpb == 0) enough_ammo = false;
 					if(cap == 0) enough_ammo = false;
 				break;
+				case "pg6":
+					ammoName = "pistolgrapes";
+					if(gp <= 5) enough_ammo = false;
+					if(pg <= 5) enough_ammo = false;
+				break;
 			}
 
 			if(weapon.shottype == "ca" || weapon.shottype == "ar" || weapon.shottype == "ar2")
@@ -1038,7 +1049,7 @@ float RecalcCharacterGun(ref chr)
 			}
 
 			if(weapon.shottype == "pg" || weapon.shottype == "pg2" || weapon.shottype == "mb" || weapon.shottype == "pb" || weapon.shottype == "pb2"
-			|| weapon.shottype == "na2" || weapon.shottype == "ro")
+			|| weapon.shottype == "na2" || weapon.shottype == "ro" || weapon.shottype == "pg6")
 			{
 			    if(enough_ammo == false)
 			    {
@@ -1187,6 +1198,11 @@ float GetCurrentCharacterGunMax(ref chr)
 					if(gpb == 0) enough_ammo = false;
 					if(cap == 0) enough_ammo = false;
 				break;
+				case "pg6":
+					ammoName = "pistolgrapes";
+					if(gp <= 5) enough_ammo = false;
+					if(pg <= 5) enough_ammo = false;
+				break;
 			}
 
 			if(weapon.shottype == "ca" || weapon.shottype == "ar" || weapon.shottype == "ar2")
@@ -1203,7 +1219,7 @@ float GetCurrentCharacterGunMax(ref chr)
 			}
 
 			if(weapon.shottype == "pg" || weapon.shottype == "pg2" || weapon.shottype == "mb" || weapon.shottype == "pb" || weapon.shottype == "pb2"
-			|| weapon.shottype == "na2" || weapon.shottype == "ro")
+			|| weapon.shottype == "na2" || weapon.shottype == "ro" || weapon.shottype == "pg6")
 			{
 			    if(enough_ammo == false)
 			    {

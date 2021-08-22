@@ -11,10 +11,20 @@ Forts and ships at sea may be hostile to you for any of the following reasons:
 Deliberately firing on friendly ships or accidentally hitting them reduces your reputation.
 
 -----------------------------------------
+False Flags:
 
+The use of false flags to gain a tactical advantage prior to battle, or to enter an enemy port under cover, is perfectly legal.  You are required to hoist your true flag (or at least, a flag hostile to the target) before opening fire.
+
+Forts and ships may see you change flag if you are within visual range.  Be warned, forts can see a long way.  If a fort once sees you under a hostile flag, it will remember and it will recognise you.  Therefore if you intend to enter a hostile port under a false flag, be sure to hoist your false flag well away from the coast.
+
+If you have been recognised, there are several ways to avoid further recognition:
+- Make peace with the nation, even if only for long enough to carry out your business in port and leave safely.
+- Acquire a different type of ship.  The fort remembers your ship, therefore if you no longer have a ship of that type, the fort will no longer recognise you.  (It is not sufficient to repaint the ship, or to give it to a subordinate officer.  If the fort sees that ship, or any ship of the same type, anywhere in your fleet, you will be recognised.)
+
+-----------------------------------------
 Unrespectable Acts:
 
-Depending on the situation, you may be committing an unrespectable acts when you capture or sink any non-pirate ships. The following are considered as such by the civilized nations of the world and are listed in order of severity:
+Depending on the situation, you may be committing an unrespectable act when you capture or sink any non-pirate ships. The following are considered as such by the civilized nations of the world and are listed in order of severity:
 - You had no Letter of Marque or navy commission and therefore no legal reason for the attack
 - You were flying a pirate flag
 - You attacked a nation you were neutral or friendly with
@@ -25,11 +35,15 @@ Depending on the severity of your actions, you may be recognized as a traitor in
 It is always possible to hoist another flag in battle, which could mean the difference between your actions being considered legal or a major act of piracy. It serves to be careful especially when being recognized for flying a false flag.
 
 -----------------------------------------
-
 International Relations:
 
 Gaining points with any nation requires joining their ranks as a privateer or navy officer or joining the Pirate Brotherhood. As long as you serve a single nation, your own relations are tied to that nation. While you can join as many nations as you wish at the same time, this does reduce the points you gain from your actions.
 
 The nations of the world object to any actions against their allies. It is therefore important to keep up-to-date with the tavern news. This may become especially complicated if you serve multiple nations at the same time.
+
+-----------------------------------------
+Prisoners of War:
+
+Naval officers and privateers are required to treat prisoners with respect. Demanding a ransom for their release is acceptable. Executing them is not. If you make a habit of executing prisoners, you may lose promotions and ultimately you may lose your commission entirely. (However, naval officers and privateers will not be penalised for hanging pirates.)
 
 }

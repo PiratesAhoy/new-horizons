@@ -1,4 +1,4 @@
-string DLG_TEXT[34] = {
+string DLG_TEXT[36] = {
 "And you are doing what in my room...?",
 "I'm no thief, Your Reverence.",
 "Aha, a polite intruder. And a liar. You're more than a thief. Maybe the Captain of thieves.",
@@ -10,12 +10,12 @@ string DLG_TEXT[34] = {
 "Too bad you have chosen to continue lying. Try again!",
 "Privateer is true. But that's not all. Tell the truth!",
 "But you are portraited as a pirate. With name and all! You had better tell the truth!",
-"That's better. And you want this piece of a map so badly because you hope it shows the way to enormous treasures?",
+"That's better. And you want this piece of a map so badly because you hope it shows the way to enormous treasures?",	//11
 "Not the marooning part but you don't tell me all. Try again!",
-"Are you willing to sell it, Your Reverence?",
+"Are you willing to sell it, Your Reverence?",										//13
 "Hmm, I wonder if you could do me a favour instead. But it's dangerous.",
 "I'm not afraid. Tell me what to do.",
-"I want you to collect the items I need for todays service.",
+"I want you to collect the items I need for todays service. Return them to me and I'll give you the other half of the map.",
 "No problem, Reverend Mother. Where do I find these items?",
 "You have to search the Crypts and the Small Chapel in the Graveyard, Captain.",
 "Which are the items?",
@@ -32,7 +32,9 @@ string DLG_TEXT[34] = {
 "And now Sister Richards, would you please unlock the Cloister Gate for Captain Pyle.",
 "---",
 "Not now, please go away.",
-"Oh, sorry Your Reverence.",
+"Oh, sorry Your Reverence.",							//33
+"Yes, but why have you ripped it apart and where's the other half?",		//34
+"I needed a piece of paper for a note. But I have the other part too.",		//35
 
 
 

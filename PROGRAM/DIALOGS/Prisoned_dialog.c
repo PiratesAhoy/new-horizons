@@ -9,6 +9,7 @@ void ProcessDialogEvent()
 	makearef(Link, Dialog.Links);
 	makearef(NextDiag, NPChar.Dialog);
 	string NPC_Meeting, blade, gun, cuirass, reload_locator;
+	string sLogTitle, sLogEntry;
 	int iNation = sti(NPChar.nation);
 	int i;
 
@@ -31,6 +32,7 @@ void ProcessDialogEvent()
 	bool bAllowRelease  = false;
 	if(bCanEnterToLand && locationNation != UNKNOWN_NATION)
 	{
+trace("Prisoned_dialog: locationNation = " + locationNation);
 		if(HasSubStr(pchar.location.from_sea, "port"))
 		{
 			if(iNation == locationNation)
@@ -65,9 +67,11 @@ void ProcessDialogEvent()
 	}
 	// PB: Always Allow Ransoming and Releasing, except at Hostile Towns <--
 
-	if(CheckAttribute(NPChar,"location.norebirth") && NPChar.location.norebirth==1) { bAllowHireJoin = true; bAllowRelease = false; }
-	if(CheckAttribute(NPChar,"questchar") && NPChar.questchar==true) { bAllowHireJoin = false; bAllowRelease = false; }
+	if(CheckAttribute(NPChar,"location.norebirth") && NPChar.location.norebirth==1) { bAllowHireJoin = true}			// No longer blockfrom ransom/release with bAllowRelease = false
+	if(CheckAttribute(NPChar,"questchar") && NPChar.questchar==true) { bAllowHireJoin = false;}					// No longer block questchar from ransom/release with bAllowRelease = false
+	if(CheckAttribute(NPChar,"canhire") && sti(NPChar.canhire) == true && FindFreeRandomOfficer()!=-1) bAllowHireJoin = true;	// "canhire" attribute overrides block on hiring questchar, but only if there is a slot for him to become an officer
 	if(sti(GetStorylineVar(FindCurrentStoryline(), "NO_CREW_OR_OFFICERS")) == 1 || CheckAttribute(PChar, "isnotcaptain")) { bAllowHireJoin = false; }
+	if(CheckAttribute(NPChar,"canrelease") && sti(NPChar.canrelease) == false) bAllowRelease = false;				// "canrelease" attribute can be set false to explicitly block ransom/release
 	
 	// DeathDaisy: Persuasion tags for the skill checks, if enabled
 	string PersuasionSuccess = "";
@@ -152,9 +156,9 @@ void ProcessDialogEvent()
 		break;
 
 		case "money":
-			dialog.text = DLG_TEXT[5];
 			if(bAllowRelease)
 			{
+				dialog.text = DLG_TEXT[57];
 				link.l1 = DLG_TEXT[2] + FindTownName(GetTownIDFromLocID(pchar.location.from_sea)) + DLG_TEXT[33];
 				link.l1.go = "exit_ransom";
 				if(locationNation==PIRATE)
@@ -172,6 +176,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
+				dialog.text = DLG_TEXT[5];
 				link.l2 = DLG_TEXT[30];
 				link.l2.go = "exit";
 				link.l1 = DLG_TEXT[6];
@@ -278,7 +283,8 @@ void ProcessDialogEvent()
 			{
 				switch(sti(iNation))
 				{
-					case ENGLAND: NPChar.greeting = "Gr_greenford_citizen_01"; break;
+//					case ENGLAND: NPChar.greeting = "Gr_greenford_citizen_01"; break;
+					case ENGLAND: NPChar.greeting = "Gr_f_officer_English"; break; // Grey Roger: replaces one citizen phrase with new audio files
 					case FRANCE: NPChar.greeting = "Gr_Sylvie Bondies"; break;
 					case PIRATE: NPChar.greeting = "Gr_greenford_citizen_01"; break;
 					case HOLLAND: NPChar.greeting = "Gr_Tanneken Oremans"; break;
@@ -365,20 +371,26 @@ void ProcessDialogEvent()
 					NPChar.standing = true;
 				break;
 			}
-			dialog.text = DLG_TEXT[9];
+			if(CheckAttribute(NPChar, "honourable_surrender")) dialog.text = DLG_TEXT[54];
+			else dialog.text = DLG_TEXT[9];
 			switch(Rand(1))
 			{
 				case 0: 
 					link.l1 = DLG_TEXT[10];
+					if(CheckAttribute(NPChar, "honourable_surrender")) link.l1 = DLG_TEXT[55];
 					link.l1.go = "exit_hanged";
 				break;
 				case 1: 
 					link.l1 = DLG_TEXT[44];
+					if(CheckAttribute(NPChar, "honourable_surrender")) link.l1 = DLG_TEXT[56];
 					link.l1.go = "exit_sharks";
 				break;
 			}
-			Link.l2 = DLG_TEXT[29];	
-			Link.l2.go = "kill_prisoner";
+			if(!CheckAttribute(NPChar, "honourable_surrender"))
+			{
+				Link.l2 = DLG_TEXT[29];	
+				Link.l2.go = "kill_prisoner";
+			}
 			if(bAllowHireJoin)
 			{
 				link.l3 = DLG_TEXT[34];
@@ -388,6 +400,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "kill_prisoner":
+			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 			NPChar.money = 0; // PB: If you kill him, you don't deserve the money!
 			LAi_NPC_Equip(NPChar, sti(PChar.rank), true, 0.5);
 			DeleteAttribute(NPChar,"prisoned");
@@ -449,6 +462,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_hanged":
+			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 			switch(NPChar.chr_ai.type)// MAXIMUS: just a little fun in the game
 			{
 				case LAI_TYPE_STAY:
@@ -464,16 +478,27 @@ void ProcessDialogEvent()
 			}
 			DeleteAttribute(NPChar,"status");
 			DeleteAttribute(NPChar,"ransom");
-			ChangeCharacterReputation(PChar, -5); // PB: Killing isn't very nice
+			if(CheckAttribute(NPChar,"honourable_surrender"))
+			{
+				if (NPChar.nation!=PIRATE) Process_Execution(5);
+				ChangeCharacterReputation(PChar, -10); // GR: promising good treatment and then executing prisoner is EVIL!
+			}
+			else
+			{
+				if (NPChar.nation!=PIRATE) Process_Execution(2);
+				ChangeCharacterReputation(PChar, -5); // PB: Killing isn't very nice
+			}
 			ChangeCharacterAddressGroup(NPChar, "None", "", "");
 			object HangFader;
 			CreateEntity(&HangFader, "fader");
 			SendMessage(&HangFader, "lfl", FADER_IN, 0.5, true);
 			StartVideo("Blaze_mutiny_dead");
+			PostEvent("LAi_RemoveDeadCap", 20, "i", NPChar);
 			DialogExit();
 		break;
 
 		case "Exit_sharks":
+			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 			switch(NPChar.chr_ai.type)// MAXIMUS: just a little fun in the game
 			{
 				case LAI_TYPE_STAY:
@@ -489,13 +514,23 @@ void ProcessDialogEvent()
 			}
 			DeleteAttribute(NPChar,"status");
 			DeleteAttribute(NPChar,"ransom");
-			ChangeCharacterReputation(PChar, -5); // PB: Killing isn't very nice
+			if(CheckAttribute(NPChar,"honourable_surrender"))
+			{
+				if (NPChar.nation!=PIRATE) Process_Execution(5);
+				ChangeCharacterReputation(PChar, -10); // GR: promising good treatment and then executing prisoner is EVIL!
+			}
+			else
+			{
+				if (NPChar.nation!=PIRATE) Process_Execution(2);
+				ChangeCharacterReputation(PChar, -5); // PB: Killing isn't very nice
+			}
 			ChangeCharacterAddressGroup(NPChar, "None", "", "");
 			object SharksFader;
 			CreateEntity(&SharksFader, "fader");
 			SendMessage(&SharksFader, "lfl", FADER_IN, 0.5, true);
 			StartVideo("Sharks_attack");
 			DialogExit();
+			PostEvent("LAi_RemoveDeadCap", 20, "i", NPChar);
 		break;
 
 		case "Exit":
@@ -518,7 +553,8 @@ void ProcessDialogEvent()
 			DeleteAttribute(NPChar,"status");
 			DeleteAttribute(NPChar,"ransom");
 			DeleteAttribute(NPChar,"released");
-			ChangeCharacterReputation(PChar, 5); // PB: Releasing without asking for money IS nice
+			ChangeCharacterReputation(PChar, 4); // PB: Releasing without asking for money IS nice. GR: was 5, but you now get +1 for not taking his money earlier
+			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 
 			switch(NPChar.chr_ai.type)// MAXIMUS: just a little fun in the game
 			{
@@ -544,7 +580,8 @@ void ProcessDialogEvent()
 			DeleteAttribute(NPChar,"ransom");
 			DeleteAttribute(NPChar,"released");
 			LAi_NPC_Equip(NPChar, sti(PChar.rank), true, 0.5);
-			ChangeCharacterReputation(PChar, 5); // PB: Releasing without asking for money IS nice
+			ChangeCharacterReputation(PChar, 4); // PB: Releasing without asking for money IS nice. GR: was 5, but you now get +1 for not taking his money earlier
+			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 			LAi_SetCurHPMax(&NPChar);
 
 			switch(NPChar.chr_ai.type)// MAXIMUS: just a little fun in the game
@@ -581,9 +618,10 @@ void ProcessDialogEvent()
 		case "exit_money":
 			DeleteAttribute(NPChar,"status");
 			DeleteAttribute(NPChar,"ransom");
-		    AddMoneyToCharacter(PChar,sti(NPChar.Money));
-		    PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar,sti(NPChar.Money));
+			PlayStereoSound("INTERFACE\took_item.wav");
 
+			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 			switch(NPChar.chr_ai.type)// MAXIMUS: just a little fun in the game
 			{
 				case LAI_TYPE_STAY:
@@ -607,8 +645,9 @@ void ProcessDialogEvent()
 			DeleteAttribute(NPChar,"status");
 			DeleteAttribute(NPChar,"ransom");
 			AddMoneyToCharacter(PChar,prisonRansomCost);
-		    PlayStereoSound("INTERFACE\took_item.wav");
+			PlayStereoSound("INTERFACE\took_item.wav");
 
+			if(GetMySimpleOldName(NPChar) == "Robert Christopher Silehard") DeleteAttribute(CharacterFromID("Robert Christopher Silehard"),"prisoned");	// GR: needed for "standard" storyline so you don't tell governor that Silehard is a prisoner
 			switch(NPChar.chr_ai.type)// MAXIMUS: just a little fun in the game
 			{
 				case LAI_TYPE_STAY:

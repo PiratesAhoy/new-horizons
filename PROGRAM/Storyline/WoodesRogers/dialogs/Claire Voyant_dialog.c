@@ -126,6 +126,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "pistols":
+			PlaySound("VOICE\ENGLISH\claire_hmm.wav");
 			Dialog.text = DLG_TEXT[18];
 			link.l1 = DLG_TEXT[19];
 			link.l1.go = "pistols1";
@@ -234,6 +235,33 @@ void ProcessDialogEvent()
 		case "sloop6":
 			PlaySound("VOICE\ENGLISH\claire_help.wav");
 			Dialog.text = DLG_TEXT[46];
+			link.l1 = DLG_TEXT[68];
+			link.l1.go = "sloop6_A";
+		break;
+
+		case "sloop6_A":
+			PlaySound("VOICE\ENGLISH\claire_hmm.wav");
+			if(GetAttribute(pchar, "book72_edenL") == "read" && GetAttribute(pchar, "book72_handsL") == "read" 
+			&& GetAttribute(pchar, "book72_richardsL") == "read" && GetAttribute(pchar, "book72_caesarL") == "read")
+			{
+				//you have got all info from the book
+				Dialog.text = DLG_TEXT[69];
+				link.l1 = DLG_TEXT[70];
+				link.l1.go = "sloop6_B";
+			}
+			else 
+			{
+				Dialog.text = DLG_TEXT[72];
+				link.l1 = DLG_TEXT[73];
+				link.l1.go = "exit";
+		//		AddDialogExitQuest("sloop7");		//not until book72 is entirely read through
+				AddDialogExitQuest("HOP_read_check");
+			}
+		break;
+
+		case "sloop6_B":
+			PlaySound("VOICE\ENGLISH\claire_welcome.wav");
+			Dialog.text = DLG_TEXT[71];
 			link.l1 = DLG_TEXT[47];
 			link.l1.go = "exit";
 			AddDialogExitQuest("sloop7");
@@ -271,6 +299,72 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("pchar_ooh");
 			AddDialogExitQuest("wait_grandma_finale5");
+		break;
+
+		case "meditation":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "officers", "off_3");
+			PlaySound("VOICE\ENGLISH\claire_help.wav");
+			Dialog.text = DLG_TEXT[56];
+			link.l1 = DLG_TEXT[57];
+			link.l1.go = "meditation1";
+		break;
+
+		case "meditation1":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "officers", "off_3");
+			PlaySound("VOICE\ENGLISH\claire_fortune.wav");
+			Dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "meditation2";
+		break;
+
+		case "meditation2":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "officers", "off_3");
+			PlaySound("VOICE\ENGLISH\claire_light.wav");
+			Dialog.text = DLG_TEXT[60];
+			link.l1 = DLG_TEXT[61];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_transformation2");
+		break;
+
+		case "meditation3":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "black1");
+			PlaySound("VOICE\ENGLISH\claire_welcome.wav");
+			Dialog.text = DLG_TEXT[62];
+			link.l1 = DLG_TEXT[63];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_transformation5");
+		break;
+
+		case "meditation_end":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "goto", "black1");
+			PlaySound("VOICE\ENGLISH\claire_light.wav");
+			Dialog.text = DLG_TEXT[64];
+			link.l1 = DLG_TEXT[65];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_transformation10");
+		break;
+
+		case "magic_items":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "officers", "off_3");
+			PlaySound("VOICE\ENGLISH\claire_welcome.wav");
+			Dialog.text = DLG_TEXT[66];
+			link.l1 = DLG_TEXT[67];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_transformation14");
+		break;
+
+		case "treasure_lost":	
+			PlaySound("VOICE\ENGLISH\claire_hmm.wav");
+			Dialog.text = DLG_TEXT[74];
+			link.l1 = DLG_TEXT[75];
+			link.l1.go = "exit";
+			AddDialogExitQuest("grandma_boo2");
 		break;
 
 		case "Exit":

@@ -67,6 +67,15 @@ void ProcessDialogEvent()
 						link.l1 = DLG_TEXT[258];
 					}
 					link.l1.go = "stormystart";
+					if(CheckCharacterItem(PChar, "Devil_Contract"))
+					{
+						if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("my son"));
+						else Preprocessor_Add("child", XI_ConvertString("my child"));
+						dialog.text = DLG_TEXT[265];
+						link.l1 = DLG_TEXT[266];
+						link.l1.go = "DevilCursed1";
+						
+					}
 				break;
 
 				case PLAYER_TYPE_CORSAIR:
@@ -95,6 +104,36 @@ void ProcessDialogEvent()
 			PChar.vcskip = true;
 		break;
 
+		case "DevilCursed1":
+			dialog.text = DLG_TEXT[267];
+			link.l1 = DLG_TEXT[268];
+			link.l1.go = "DevilCursed2";
+		break;
+		
+		case "DevilCursed2":
+			dialog.text = DLG_TEXT[269] + GetMyName(Pchar) + DLG_TEXT[280] + DLG_TEXT[270];
+			link.l1 = DLG_TEXT[271];
+			link.l1.go = "DevilCursed3";
+		break;
+		
+		case "DevilCursed3":
+			dialog.text = DLG_TEXT[272] + GetMyName(Pchar) + DLG_TEXT[280] + DLG_TEXT[273] + GetMyName(Pchar) + DLG_TEXT[274] + DLG_TEXT[275];
+			link.l1 = DLG_TEXT[276];
+			link.l1.go = "DevilCursed4";
+		break;
+		
+		case "DevilCursed4":
+			dialog.text = DLG_TEXT[277];
+			link.l1 = DLG_TEXT[278];
+			link.l1.go = "DevilCursed5";
+		break;
+		
+		case "DevilCursed5":
+			dialog.text = DLG_TEXT[279] + GetMyFullName(PChar) + DLG_TEXT[280] + DLG_TEXT[281];
+			link.l1 ="";
+			link.l1.go = "stormystart";
+		break;
+		
 		case "intro2":
 			dialog.text = DLG_TEXT[4];
 			link.l1 = DLG_TEXT[5];
@@ -1098,7 +1137,7 @@ void ProcessDialogEvent()
 			link.l6 = DLG_TEXT[199];
 			link.l6.go = "Direct_Sailing";
 			link.l7 = DLG_TEXT[200];
-			link.l7.go = "Moralee";
+			link.l7.go = "Morale";
 			link.l8 = DLG_TEXT[201];
 			link.l8.go = "Flags";
 			link.l9 = DLG_TEXT[202];
@@ -1129,7 +1168,7 @@ void ProcessDialogEvent()
 				link.l5 = DLG_TEXT[199];
 				link.l5.go = "Direct_Sailing";
 				link.l6 = DLG_TEXT[200];
-				link.l6.go = "Moralee";
+				link.l6.go = "Morale";
 				link.l7 = DLG_TEXT[201];
 				link.l7.go = "Flags";
 				link.l8 = DLG_TEXT[202];
@@ -1181,7 +1220,7 @@ void ProcessDialogEvent()
 			link.l6 = DLG_TEXT[199];
 			link.l6.go = "Direct_Sailing";
 			link.l7 = DLG_TEXT[200];
-			link.l7.go = "Moralee";
+			link.l7.go = "Morale";
 			link.l8 = DLG_TEXT[201];
 			link.l8.go = "Flags";
 			link.l9 = DLG_TEXT[202];
@@ -1211,7 +1250,7 @@ void ProcessDialogEvent()
 			link.l6 = DLG_TEXT[199];
 			link.l6.go = "Direct_Sailing";
 			link.l7 = DLG_TEXT[200];
-			link.l7.go = "Moralee";
+			link.l7.go = "Morale";
 			link.l8 = DLG_TEXT[201];
 			link.l8.go = "Flags";
 			link.l9 = DLG_TEXT[202];
@@ -1229,7 +1268,7 @@ void ProcessDialogEvent()
 			link.l4 = DLG_TEXT[199];
 			link.l4.go = "Direct_Sailing";
 			link.l5 = DLG_TEXT[200];
-			link.l5.go = "Moralee";
+			link.l5.go = "Morale";
 			link.l6 = DLG_TEXT[201];
 			link.l6.go = "Flags";
 			link.l7 = DLG_TEXT[202];
@@ -1245,7 +1284,7 @@ void ProcessDialogEvent()
 			link.l3 = DLG_TEXT[199];
 			link.l3.go = "Direct_Sailing";
 			link.l4 = DLG_TEXT[200];
-			link.l4.go = "Moralee";
+			link.l4.go = "Morale";
 			link.l5 = DLG_TEXT[201];
 			link.l5.go = "Flags";
 			link.l6 = DLG_TEXT[195];

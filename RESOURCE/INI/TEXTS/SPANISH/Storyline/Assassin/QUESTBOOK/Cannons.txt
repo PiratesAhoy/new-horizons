@@ -1,0 +1,10 @@
+title=Los cañones de Mona
+text.t1=Tengo que volar los cañones de #sisland_Isla Mona#... Para que me dé esta misión, debo ser el mercenario más valioso del vicealmirante. Debería aprovecharme de esa situación en el futuro... Pero por ahora tengo que reunirme con Pelagius en #sisland_Antigua#.
+text.t2=Esta misión no es fácil, pero el almirante quiere ponerme a prueba. Vayamos a #sisland_Guadeloupe# y abramos algunos agujeros en el casco del 'Belleville'.
+text.t3=¡Hecho! Es hora de volver a #sisland_Antigua# a reunirme con el almirante.
+text.t4=Una nueva misión, pero esta vez en #sisland_Khael Roa#. El captitán Tripper será mi socio. Espero no tener que esperar muchos meses antes de zarpar hacia #sisland_Isla Mona#.
+text.t5=Cuando estábamos dejando la isla, un buque de guerra francés nos atacó. Por suerte, gracias a la ayuda del capitán Tripper, ganamos la batalla. Pongamos rumbo cuanto antes a #sisland_Antigua#, #sisland_Khael Roa# es demasiado peligrosa. 
+text.t6=¡Por fin! Me han encargado una misión en Isla Mona. Tengo que hablar con Wilfred Larner, el capitán del barco mercante.
+text.t7=¡Una gran explosión! Los británicos sufrirán esta pérdida durante mucho tiempo. El vicealmirante Benavides estará satisfecho con el éxito completo de la misión. Si él está contento, yo seré más rico.
+text.t8=Me arrepineto de haber hablado de la misión en #sisland_Khael Roa#. Ahora, mi misión es apresaar el orgullo de la flota francesa: 'La Couronne'. ¡Maldita suerte la mía! Esperemos que los ingleses me ayuden en esta tarea.
+text.t9=¡Sí! 'La Couronne' es mía. Pongamos rumbo a La Habana con este magnífico buque.

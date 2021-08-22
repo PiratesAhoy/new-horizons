@@ -302,16 +302,16 @@ void ProcessDialogEvent()
 		case "free_drink2":
 			if (PChar.sex == "woman")
 			{
-				gov_kid = XI_ConvertString("son");
-				merch_kid = XI_ConvertString("daughter");
+				gov_kid = DLG_TEXT[51];
+				merch_kid = DLG_TEXT[54];
 			}
 			else
 			{
-				gov_kid = XI_ConvertString("daughter");
-				merch_kid = XI_ConvertString("son");
+				gov_kid = DLG_TEXT[50];
+				merch_kid = DLG_TEXT[53];
 			}
-			dialog.text = DLG_TEXT[50] + gov_kid + DLG_TEXT[51] + merch_kid + DLG_TEXT[52];
-			link.l1 = DLG_TEXT[53];
+			dialog.text = gov_kid + DLG_TEXT[52] + merch_kid + DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
 			link.l1.go = "exit";
 			AddDialogExitQuest("initialise_kidnap");
 
@@ -320,12 +320,20 @@ void ProcessDialogEvent()
 				PChar.quest.ardent_kidnap = "Engaged";
 				PChar.quest.ardent_kidnap.find_merchant = "true";
 
-				Preprocessor_AddQuestData("gov_kid", gov_kid);
-				Preprocessor_AddQuestData("merch_kid", merch_kid);
+				if (PChar.sex == "woman")
+				{
+					Preprocessor_AddQuestData("governor_kid", XI_ConvertString("son"));
+					Preprocessor_AddQuestData("merchant_kid", XI_ConvertString("daughter"));
+				}
+				else
+				{
+					Preprocessor_AddQuestData("governor_kid", XI_ConvertString("daughter"));
+					Preprocessor_AddQuestData("merchant_kid", XI_ConvertString("son"));
+				}
 				SetQuestHeader("Kidnap");
 				AddQuestRecord("Kidnap", 1);
-				Preprocessor_Remove("gov_kid");
-				Preprocessor_Remove("merch_kid");
+				Preprocessor_Remove("governor_kid");
+				Preprocessor_Remove("merchant_kid");
 			}
 
 			Diag.TempNode = "second time";

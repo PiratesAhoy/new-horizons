@@ -126,7 +126,7 @@ void ProcessDialogEvent()
 			Dialog.text = DLG_TEXT[19];
 			link.l1 = DLG_TEXT[20];
 			link.l1.go = "exit";
-			AddDialogExitQuest("are_you_Hands_yes");
+			AddDialogExitQuest("are_you_Hands_yes_delay");
 		break;
 
 		case "beggar_is_Hands":
@@ -199,6 +199,96 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[40];
 			link.l1.go = "exit";
 			AddDialogExitQuest("back_to_Wstad3");
+		break;
+
+		case "careen_shore":
+			PlaySound("VOICE\ENGLISH\Odel_yourself_again.wav");
+			Dialog.text = DLG_TEXT[41];
+			link.l1 = DLG_TEXT[42];
+			link.l1.go = "careen_shore1";
+		break;
+
+		case "careen_shore1":
+			SetModel(PChar, "Howard_Pyle_hat_b", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+			GiveItem2Character(Pchar, "bb_hatA2");
+			EquipCharacterByItem(Pchar, "bb_hatA2");
+			PlaySound("INTERFACE\cancel.wav");	
+				
+			Dialog.text = DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44];
+			link.l1.go = "careen_shore2";
+		break;
+
+		case "careen_shore2":
+			GiveItem2Character(Pchar, "book71_9_start");	
+			PlaySound("INTERFACE\paper.wav");
+
+			Dialog.text = DLG_TEXT[45];
+			link.l1 = DLG_TEXT[46];
+			link.l1.go = "exit";
+			AddDialogExitQuest("careen_mutineers23");
+		break;
+
+		case "Pell_shooting":
+			LAi_SetActorType(NPChar);
+			LAi_ActorTurnToLocator(NPChar, "quest", "duel_mills");
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToLocator(PChar, "quest", "duel_christian");
+
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
+			Dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "exit";
+			AddDialogExitQuest("careen_mutineers28_B");
+		break;
+
+		case "and_the_treasure":
+			PlaySound("VOICE\ENGLISH\Odel_yourself_again.wav");
+			Dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_transformation19");
+		break;
+
+		case "bad_weather":
+			PlaySound("VOICE\ENGLISH\Odel_get_started.wav");
+			Dialog.text = DLG_TEXT[51];
+			link.l1 = DLG_TEXT[52];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_transformation_end");
+		break;
+
+		case "what_about_weapons":
+			PlaySound("VOICE\ENGLISH\Odel_get_started.wav");
+			Dialog.text = DLG_TEXT[53];
+			link.l1 = DLG_TEXT[54];
+			link.l1.go = "exit";
+			AddDialogExitQuest("careen_shore_fight_end22");
+		break;
+
+		case "fiddler_returning":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("car_slave27"));
+			LAi_SetActorType(characterFromID("Pell"));
+			LAi_ActorTurnToCharacter(characterFromID("Pell"), characterFromID("car_slave27"));
+
+			PlaySound("VOICE\ENGLISH\alarm1.wav");
+			Dialog.text = DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
+			link.l1.go = "exit";
+		break;
+
+		case "priest_returning":
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("car_slave11"));
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("car_slave11"));
+
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead1.wav");
+			Dialog.text = DLG_TEXT[57];
+			link.l1 = DLG_TEXT[58];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona14");
 		break;
 
 		case "Exit":

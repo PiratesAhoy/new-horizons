@@ -398,7 +398,7 @@ void removeIslandContraband(ref sisland)
 				amountcontraband -= 1;
 			}
 		}
-		if(DEBUG_SMUGGLING>0) trace("SMUGGLING contraband reset");
+		if(DEBUG_SMUGGLING>0) trace("SMUGGLING contraband reset for '" + GetAttribute(sisland, "id") + "'");
 	}
 }
 
@@ -407,8 +407,9 @@ void setIslandSmugglingContraband(ref sisland)
 	//This function adds contraband to the island depending on the smuggling state. For now smugglers can't handle more then
 	//4 pieces of contraband on an island and I don't think this should be more either.
 	//Remove old contraband
-	if(sisland.id == "Antigua")   							return; // We don't want to change the contraband for Antigua
+	if(sisland.id == "Antigua")   					return; // We don't want to change the contraband for Antigua
 	removeIslandContraband(sisland);
+	if(IsIslandDisabled(sisland.id))				return; // No need to bother with uninhabited islands
 	if(!CheckAttribute(sisland,"smuggling.state"))			return; // If there is no coastguard, there can't be contraband
 
 	//Now set the new contraband based on the nation of the island.
@@ -807,6 +808,7 @@ void UpdateIslandSmugglingState(ref sisland)
 	if (townnum == 0)                                     bRemoveContraband = true; //no smuggling state has to be set either
 	if (sti(sisland.smuggling_nation) == PIRATE         ) bRemoveContraband = true; //no coast guard if the island is under pirate control
 	if (sti(sisland.smuggling_nation) == PERSONAL_NATION) bRemoveContraband = true; //you don't want the coastguard to get you on your own island
+	if (IsIslandDisabled(sisland.id))                     return; 			//no smuggling updates to unexplored islands
 	if (bRemoveContraband)
 	{
 		removeIslandContraband(sisland);
@@ -856,7 +858,7 @@ void UpdateIslandSmugglingState(ref sisland)
 					//See if they get caught
 					if(pow2(sisland.smuggling.state,2)<=rand(16))
 					{
-						if(CheckAttribute(sisland,"Trade.Contraband"))
+						if(CheckAttribute(sisland,"Trade.Contraband") && getIslandAmountContraband(sisland)>0)
 						{
 							//Make a smuggler who adds some goods to the island
 							if(DEBUG_SMUGGLING>0) trace("SMUGGLING smuggler visited "+sisland.id);
@@ -910,29 +912,29 @@ void changeIslandSmugglingState(ref sisland, int change)
 		sisland.smuggling.state = SMUGGLING_NORMAL;
 	} 
 	string logTitle, logEntry,SmugglingState;
-	// DeathDaisy: Add smuggling state level info to rumours. TODO: make into ConvertString or whathaveyou.
-	if(sisland.smuggling.state == 1) SmugglingState = "lax";
-	if(sisland.smuggling.state == 2) SmugglingState = "normal";
-	if(sisland.smuggling.state == 3) SmugglingState = "tight";
-	if(sisland.smuggling.state == 4) SmugglingState = "very tight";
+	// DeathDaisy: Add smuggling state level info to rumours.
+	if(sisland.smuggling.state == SMUGGLING_LOW) SmugglingState = "lax";
+	if(sisland.smuggling.state == SMUGGLING_NORMAL) SmugglingState = "normal";
+	if(sisland.smuggling.state == SMUGGLING_MEDIUM) SmugglingState = "tight";
+	if(sisland.smuggling.state == SMUGGLING_HIGH) SmugglingState = "very tight";
 	
 	if(change>0) 
 	{
-		logTitle = sisland.name+" increased coastguard patrol";
-		logEntry = "Due to recent smuggling, the coastguard decided to change the amount of patrolling on "+sisland.name+". They think the smugglers were onto their schedule and therefore able to get past them. Security is now "+SmugglingState+".";
+		logTitle = sisland.name+" "+TranslateString("","Increase_Patrol");
+		logEntry = TranslateString("","Increase_Message1")+" "+sisland.name+TranslateString("Increase_Message2",SmugglingState)+".";
 		WriteNewLogEntry(logTitle, logEntry, "General", false);
 		if(DEBUG_SMUGGLING>0) trace("SMUGGLING increased state of "+sisland.id+" to: "+sisland.smuggling.state);
 	}
 	if(change<0) 
 	{
-		logTitle = sisland.name+" decreased coastguard patrol";
-		logEntry = "Due to a recent lack in smuggling, the coastguard decided to change the amount of patrolling on "+sisland.name+". It seems the coastguard was able to capture most smugglers so they decided to put some of the troops to better use. Coast guard patrol is now "+SmugglingState+".";
+		logTitle = sisland.name+" "+TranslateString("","Decrease_Patrol");
+		logEntry = TranslateString("","Decrease_Message1")+" "+sisland.name+TranslateString("Decrease_Message2",SmugglingState)+".";
 		WriteNewLogEntry(logTitle, logEntry, "General", false);
 		if(DEBUG_SMUGGLING>0) trace("SMUGGLING decreased state of "+sisland.id+" to: "+sisland.smuggling.state);
 	}
 	if(change==0) 
 	{
-		if(DEBUG_SMUGGLING>0) trace("SMUGGLING remained state of "+sisland.id+" to: "+sisland.smuggling.state);
+		if(DEBUG_SMUGGLING>0) trace("SMUGGLING state of "+sisland.id+" remained at: "+sisland.smuggling.state);
 	}
 	setIslandSmugglingContraband(sisland);
 	setIslandSmugglingPatrols(sisland);
@@ -1159,33 +1161,32 @@ int getSmugglingState(ref sisland)
 	return sti(sisland.smuggling.state);
 }
 
-//TODO: This should be done by the ConvertString function
 string getSmugglingStateDesc(int state)
 {
 	//This function returns a nice text for the patrolling state.
 	switch (state)
 	{
 		case SMUGGLING_NONE:
-			return "no duty, we need the troops elsewhere";
+			return TranslateString("","Patrol_None");
 		break;
 		
 		case SMUGGLING_LOW:
-			return "low patrolling duty";
+			return TranslateString("","Patrol_Low");
 		break;
 		
 		case SMUGGLING_NORMAL:
-			return "normal patrolling duty";
+			return TranslateString("","Patrol_Normal");
 		break;
 		
 		case SMUGGLING_MEDIUM:
-			return "alert, the amount of contraband on the island starts to get too much";
+			return TranslateString("","Patrol_Medium");
 		break;
 		
 		case SMUGGLING_HIGH:
-			return "high alert, despite previous measures contraband still finds its way to this island";
+			return TranslateString("","Patrol_High");
 		break;
 	}
-	return "a normal patrolling duty";
+	return TranslateString("","Patrol_Normal");
 }
 
 string CreatePatrolBook(ref sisland)
@@ -1825,13 +1826,13 @@ void PlaceSmugglersOnShore(string LocationId)
 	for (int i = 1; i <= 3; i++)
 	{
 		Smuggler = CharacterFromID("Rand_Smug0" + i);
-		//Levis smugglers carry opium
+/*		//Levis smugglers carry opium
 		if(CheckAttribute(Smuggler,"items.opium")) TakeNItems(Smuggler,"opium", -sti(Smuggler.items.opium)); //remove previous given opium
 		if(rand(100) < 25) //1 in 4 chance of them having opium
 		{
 			TakeNItems(Smuggler, "opium", 2+rand(sti(PChar.rank)));
 		}
-		
+*/		
 		LAi_SetCurHPMax(Smuggler);
 		SetModelfromArray(Smuggler, GetModelIndex(GetRandomModelForTypeExSubCheck(1, "Smugglers", "man", PIRATE)));
 
@@ -1998,7 +1999,8 @@ string SelectSmugglingLocation()
 // KK -->
 			SmugLocation[0] = "Cuba_shore_01";
 			SmugLocation[1] = "Cuba_shore_02";
-			TargetLocation = SmugLocation[Rand(1)];
+			SmugLocation[2] = "Cuba_Shore_06";
+			TargetLocation = SmugLocation[Rand(2)];
 // <-- KK
 			if(DEBUG_SMUGGLING>0) Trace("Location " + TargetLocation + " Selected");
 		break;

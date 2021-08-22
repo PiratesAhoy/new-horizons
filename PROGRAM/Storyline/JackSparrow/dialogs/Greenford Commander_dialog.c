@@ -161,6 +161,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[73];
 			link.l1.go = "exit";
 			pchar.quest.ANIMISTS = "freedom_letter";
+			TakeItemFromCharacter(PChar,"letter_prison");	// GR: you gave the letter to the commandant
 			AddDialogExitQuest("mystery_man_to_prison");
 		break;
 

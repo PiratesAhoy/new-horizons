@@ -650,6 +650,56 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].island = "SaintMartin";
 	n = n + 1;
 
+	//Marigot church -------------------------------------------------
+	Locations[n].id = "Marigot_Church";
+	locations[n].id.label = "#stown_name# Church";
+	Locations[n].image = "GB_Charleston_church.tga";
+	Locations[n].filespath.models = "locations\inside\Church_4";
+
+	//Town sack
+	Locations[n].townsack = "Marigot";
+
+	//Sound
+	locations[n].type = "church";
+	locations[n].fastreload = "Marigot";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\church_4";
+	locations[n].models.always.churchInside2 = "churchInsideBig1";
+	locations[n].models.always.churchInside2.level = 65538;
+	locations[n].models.always.locators = "churchInsideBig1_locators";
+
+	Locations[n].models.always.churchInside2windows = "churchInsideBig1_windows";
+	Locations[n].models.always.churchInside2windows.tech = "LocationWindows";
+//	locations[n].models.always.churchInside2windows.level = 65541;
+	locations[n].models.always.churchInside2windows.level = 50;
+
+	Locations[n].models.always.churchInside2alpha = "churchInsideBig1_alpha";
+	Locations[n].models.always.churchInside2alpha.tech = "LocationWindows";
+	locations[n].models.always.churchInside2alpha.level = 65540;
+
+	Locations[n].models.always.churchInside2gold = "churchInsideBig1_gold";
+	Locations[n].models.always.churchInside2gold.reflection = 0.6;
+	Locations[n].models.always.churchInside2gold.tech = "EnvironmentShader";
+	locations[n].models.always.churchInside2gold.level = 65539;
+	
+	//Day
+	locations[n].models.day.charactersPatch = "churchInsideBig1_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "churchInsideBig1_patch";
+	//Environment
+	locations[n].environment.weather = "false";
+	locations[n].environment.sea = "false";
+	
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Marigot_town_01";
+	locations[n].reload.l1.emerge = "door_6";
+	locations[n].reload.l1.autoreload = "0";
+
+	Locations[n].island = "SaintMartin";
+	n = n + 1;
+	
 // -------------------------------------------------
 	Locations[n].id = "Marigot_town_01";
 	locations[n].id.label = "#stown_name#";
@@ -769,6 +819,12 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].reload.l8.emerge = "reload1";
 	Locations[n].reload.l8.autoreload = "0";
 	Locations[n].reload.l8.label = "House.";
+	
+	Locations[n].reload.l9.name = "door_6";
+	Locations[n].reload.l9.go = "Marigot_Church";
+	Locations[n].reload.l9.emerge = "reload1";
+	Locations[n].reload.l9.autoreload = "0";
+	Locations[n].reload.l9.label = "Church";
 
 
 	Locations[n].island = "SaintMartin"; // NK 04-08-29

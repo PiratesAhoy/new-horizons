@@ -1,0 +1,12 @@
+title=General Quest - Smuggling for the Governor of #stown#.
+text.t1=Governor #sgovernor# of #stown# asked me to investigate the smuggling on #sisland#. To assist me in making contact with the smugglers, he has given me #samount# units of #scargo#. I should report back to him when I find out anything, and soon, lest he suspect that I have stolen his cargo or money! He also gave me a document with these orders. This document might get me out of some tight spots.
+text.t2=I've made a successful transaction with the smugglers and written down how they work. I should report this to the governor.
+text.t3=The governor was pleased to see the report, but he thinks there is more to learn so I shall investigate further.
+text.t4=I am going to try to arrest the smugglers.
+text.t5=The smuggling gang tried to resist arrest and I killed them. The governor should be pleased!
+text.t6=The smuggling gang were too strong for me and I had to withdraw. At least I can still hand in my report.
+text.t7=Governor #sgovernor# wanted me to return the #samount# #scargo# which he gave me, but I did not have it. I must acquire that cargo and return to the governor by #sdeadline# or #snation# will regard me as an outlaw.
+text.t8=Governor #sgovernor# wanted me to return the #smoney# gold which I got from the smugglers, but I did not have it. I must return that much money to the governor by #sdeadline# or #snation# will regard me as an outlaw.
+text.t9=It's been a month since I took that smuggling job. #sgovernor# has probably lost patience by now, and #snation# probably regards me as a smuggler myself.
+text.t10=The deadline to return the cargo to governor #sgovernor# has passed.
+text.t11=The deadline to return the money to governor #sgovernor# has passed.

@@ -7,9 +7,9 @@ string DLG_TEXT[26] = {
 "Very well indeed but it took some time?",
 "Yes, I was delayed...",
 "Alright, I can guess. Hand over what you've got there.",
-"That's great - but how do we get pass those ships?",
+"A document that's great - but how do we get pass those ships?",
 "Hah! We just scare them a little...",
-"But how?",
+"With what?",
 "I'll use the ship's bell.",	//11
 "Don't ever leave your cannon!",
 "When the Captain notice you're just walking around...",

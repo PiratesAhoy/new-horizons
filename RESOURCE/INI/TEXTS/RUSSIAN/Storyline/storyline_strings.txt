@@ -1,0 +1,506 @@
+// MAXIMUS 19.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| initModels.c |=====}
+
+Hilda{Хильда}
+Sparre{Спарре}
+The Road Back to Greatness{Возврат к Величию}
+You are a noblewoman, part of Sweden's most ancient nobility, but the reign of Charles XI had come with ever diminishing power and privilege. Conspiring to take back what was lost, you instead found yourself on the run from a death sentence. With nowhere else to go and hunted by the state, you fled to the New World.{Вы дворянка, потомок древнейшего рода Швеции, но правление Карла XI принесло Вам постоянно уменьшающееся влияние и тающие привилегии. Вступив в заговор с целью вернуть то, что было потеряно, Вы внезапно очутились в бегах, скрываясь от смертного приговора. Поскольку идти больше некуда, и целое государство охотится за Вами - Вы бежали в Новый Свет.}
+Krеkan{Давилка}
+
+Ciri{Чири}
+Riannon{Рианнон}
+Little Horse{Конек}
+
+Morgen{Морган}
+le Fay{ле Фэй}
+Myrddin{Кречет}
+
+Ronald{Рональд}
+
+Jack{Джек}
+Sparrow{Воробей}
+
+Nathaniel{Натаниэль}
+Hawk{Хок}
+
+James{Джеймс}
+Norrington{Норрингтон}
+
+Wicked Wench{Wicked Wench}
+
+Horatio{Горацио}
+Hornblower{Хорнблауэр}
+Caroline{Каролина}
+
+Le Rиve{Мечта}
+
+Atropos{Неотвратимая}
+
+Don Julian{Дон Жулиан}
+Alvarado{Альварадо}
+
+Aine{Айне}
+
+Petra{Петра}
+Borinqueсa{Боринкеса}
+
+Becka{Бекка}
+La Aguja - The Needle{Игла}
+The daughter of a wealthy landowner and one-time partisan, your family have been murdered by the French and you want revenge. You have risen to command of a partisan group, sometimes working with a British officer named Richard Sharpe. You even have a ship, formerly French, which changed hands several times before ending up in yours.{Дочь богатого помещика и бывшего партизана, чья семья была убита французами. Вы хотите отомстить, и приняли командование партизанской группировкой, изредка работая с британским офицером по имени Ричард Шарп. У Вас даже есть бывший французский корабль , который несколько раз переходил из рук в руки, прежде чем окончательно оказаться Вашим.}
+
+Teresa{Тереза}
+Moreno{Морено}
+Out of the Frying Pan...{Из огня...}
+Born into a governor's family, you fell in with bad company in the form of Jack Sparrow and Will Turner. Never one to merely follow other people's lead, you now have a ship of your own. What will you do with her?{Родившись в семье губернатора, вы попали в плохую компанию авантюристов Джека Воробья и Уилла Тернера. Всегда непросто следовать за другими людьми, но теперь у вас есть собственный корабль. Что Вы будете с ним делать?}
+
+Elizabeth{Элизабет}
+Swann{Суонн}
+Stingray{Скат}
+
+Isenbrandt{Изебрандт}
+Jurcksen{Юрксен}
+
+Rachel{Рэйчел}
+
+Raoul{Рауль}
+Rheims{Реймс}
+
+Lara{Лара}
+Croft{Крофт}
+
+Elbaro{Эльбаро}
+Caron{Карон}
+
+Roxanne{Роксан}
+Lalliere{Лальер}
+La Diablesse{Дьявол}
+
+Catalina{Catalina}
+the Pirate{the Pirate}
+
+Jean-Baptiste{Жан-Батист}
+du Casse{дю Касс}
+War of the League of Augsburg{Война Аугсбургской Лиги}
+Quite a colourful character, you are! History claims that you became a buccaneer, admiral and colonial administrator who served throughout the Atlantic World during the 17th and 18th centuries. Now at the beginning of your career as officer in the French navy, you are of course required to follow orders. However, your life is yours and you can make whatever choices you see fit.{Вы довольно красочный персонаж! История утверждает, что Вы были буканьером, адмиралом и колониальным администратором, который послужил во всем Атлантическом Мире в 17 и 18 веках. Теперь, в начале своей карьеры офицера во французском флоте, Вы, конечно, обязаны выполнять приказы. Тем не менее, Ваша жизнь принадлежит Вам, и Вы можете делать все, что считаете нужным.}
+Magicienne{Кудесник}
+
+Pieter{Питер}
+Bloed{Блед}
+Amsterdam{Амстердам}
+
+Francisco{Франциско}
+de Almeida{де Алмейда}
+The Portuguese Armada{The Portuguese Armada}
+As was customary for men in your social circle, you joined the military at an early age. You have fought in conflicts in different parts of Morocco and Spain on the side of the Castilians. Now in the Caribbean, Spain is again your ally. But you never know what the future might bring!{Как было принято для мужчин вашего круга общения, Вы вступили в армию в раннем возрасте. Вы сражались в конфликтах в разных частях Марокко и Испании на стороне кастильцев. Теперь, на Карибах, Испания снова Ваш союзник. Но никогда не знаешь, что может принести будущее!}
+Lebre{Заяц}
+
+Taegan{Тиган}
+Finch{Финч}
+
+Anna{Анна}
+De Leiva{Де Лейва}
+
+Stephen{Стивен}
+Maturin{Мэтьюрин}
+
+Arturo{Артуро}
+Campos{Кампос}
+
+Aubrey{Обри}
+Master & Commander{Младший Капитан}
+Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Surprise. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{Капитан Джон 'Везунчик Джек' Обри отправляется в круиз по Карибскому морю на своем новом судне - КЕВ 'Сюрприз'. Познакомьтесь со своим другом, натуралистом и корабельным врачом Стивеном Мэтьюрином, и повлияйте на ход войны с Францией.}
+Surprise{Сюрприз}
+
+Hector{Гектор}
+Barbossa{Барбосса}
+The Curse of Cortйs{Проклятие Кортеса}
+Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...{Предводитель пиратов Карибского моря. Бунтовщик. А теперь искатель потерянных сокровищ Исла де Муэрте. Вы готовы эффективно использовать свое новообретенное богатство! Но вас ждет неприятный сюрприз...}
+Black Pearl{Черная Жемчужина}
+
+Beatrise{Беатрис}
+
+Beatrice{Беатрис}
+Devlin{Девлин}
+Caribbean Tales{Карибские байки}
+Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?{Беатрис Девлин любит исследовать недавно открытую Вест-Индию. Вы свободная девушка в свободном мире. Есть ли у Вас все необходимое для того, чтобы создать настоящую Эпоху Пиратов?}
+Quicksilver{Ртуть}
+
+Bonnie{Бонни}
+
+Desmond Ray{Десмонд Рэй}
+Beltrop{Белтроп}
+
+Berend{Berend}
+De Voor{De Voor}
+
+Blackbeard{Черная Борода}
+No Quarter!{Пощады не будет!}
+With a one-of-a-kind ship, you are ready to terrorize the Caribbean. But you haven't earned your fame just yet. Are you ready to live up to your name and become the pirate all pirates fear?{Имея единственный в своем роде корабль, Вы готовы терроризировать Карибское море. Но Вам только предстоит заработать свою славу. Вы готовы оправдать это имя, и стать пиратом, которого будут боятся все?}
+Queen Anne's Revenge{Месть Королевы Анны}
+
+Sea Horse{Морской Конек}
+
+The Cossack in the Caribbean{Казак на Карибах}
+A Cossack under the great Stenka Rasin, you have escaped after his death and come to the Caribbean seeking your fortune.{Будучи одним из казаков знаменитого Стеньки Разина, Вы сбежали после его смерти и в поисках удачи прибыли на Карибы.}
+
+Bohdan{Богдан}
+Aleskeevich{Алексеевич}
+Voronov{Воронов}
+Babushka{Бабушка}
+
+Bilgemunky{Полутруп}
+
+Annabella{Аннабелла}
+Brinkley{Бринкли}
+
+Captain John 'Lucky Jack' Aubrey is set to cruise in the Caribbean with his new ship, HMS Sophie. Meet his good friend, naturalist, and ship's physician, Stephen Maturin, and influence the course of the war with France.{Капитан Джон 'Везунчик Джек' Обри отправляется в круиз по Карибскому морю на своем новом судне - КЕВ 'Софи'. Познакомьтесь со своим другом, натуралистом и корабельным врачом Стивеном Мэтьюрином, и повлияйте на ход войны с Францией.}
+Sophie{Софи}
+
+Chico{Чико}
+Cois{Коис}
+
+Jean{Жан}
+Lafitte{Лафитт}
+The Buccaneer{Буканьер}
+A French smuggler friendly to the United States arrives in port. But will you abandon your profitable ventures to expand the might of the Americas in the Caribbean? Or perhaps join forces with one of the other nations? And how long will you be able to resist the lure of piracy?{Французский контрабандист, дружественный США, прибывает в порт. Но откажетесь ли Вы от своих прибыльных предприятий, чтобы увеличить влияние Америки на Карибах? Или, возможно, объедините усилия с одной из других наций? И как долго Вы сможете противостоять соблазну пиратства?}
+Goelette la Diligente{Прилежная Голетта}
+
+James T.{Джеймс Ти}
+Hook{Хук}
+Jolly Roger{Веселый Роджер}
+
+Captaine{Капитан}
+Chevalle{Шеваль}
+Fancy{Ряженый}
+
+Teague{Тиг}
+
+Amazon{Амазонка}
+
+Theodore{Теодор}
+Groves{Гровс}
+You have been placed in command of your very own ship. Will you live up to be that fine officer?{Вы были назначены командовать своим собственным кораблем. Сможете ли Вы прожить достаточно, чтобы стать прекрасным офицером?}
+After the promotion of James Norrington, you have been placed in charge of HMS Interceptor. Will you continue to retain her status as the fastest ship in His Majesty's Navy, one of the finest of Port Royal?{После продвижения по службе Джеймса Норрингтона, Вы были назначены ответственными за КЕВ 'Перехватчик'. Будете ли Вы продолжать сохранять его статус самого быстрого корабля во флоте Его Величества, одного из лучших в Порт-Рояле?}
+
+Interceptor{Перехватчик}
+
+Having served under Commodore Norrington and chasing menacing pirates across the seas, you now find yourself serving your nation, under different interests. Welcome to the East India trading Company, Lieutenant!{Служа под началом Командора Норрингтона и преследуя грозных пиратов по морям, Вы обнаружили себя служащим своей нации, но уже ради других интересов. Добро пожаловать в Ост-Индийскую Торговую Компанию, лейтенант!}
+
+You have finally managed to be recognised for all the years of chasing that ridiculed pirate, with Commodore Norrington. He has placed you in command of HMS Dauntless. Will you continue to uphold the legacy of this mighty ship?{Вам наконец-то удалось добиться признания за все годы погони за этим смехотворным пиратом вместе с Командором Норрингтоном. Он поставил Вас командовать на КЕВ 'Неустрашимый'. Будете ли Вы продолжать поддерживать наследие этого могучего корабля?}
+
+Dauntless{Неустрашимый}
+
+As newly promoted Admiral of the Fleet, you are now in charge of Port Royal's finest ships.{Как недавно назначенный Адмирал Флота, Вы теперь отвечаете за лучшие корабли в Пор-Роял.}
+
+Andrew{Эндрю}
+Gillette{Джиллетт}
+After seeing the threats that oppose the nation first hand, you accompanied Commodore Norrington and your trusty companion Lieutenant Groves on many adventures. Now you have been placed in charge of HMS Interceptor and given your own place in the Royal Navy's finest. While young in the service, shall you continue to uphold your duties?{Увидев воочию угрозы, которые противостоят нации, Вы лично сопровождали Командора Норрингтона и Вашего верного компаньона, лейтенанта Гроувза, во многих приключениях. Теперь Вы назначены ответственными за КЕВ 'Перехватчик', и получили свое место в лучших военно-морских силах Королевского Флота. Будучи новичком на службе, продолжите ли Вы выполнять свои обязанности?}
+
+You have been placed in command of your own ship. Will you continue to serve the interests of the East India Trading Company? Or will you perhaps look to make a name for yourself elsewhere?{Вы были назначены командовать своим собственным кораблем. Будете ли Вы по-прежнему служить интересам Ост-Индийской Торговой Компании, или, возможно, попытаетесь сделать себе имя в другом месте?}
+
+You are still a young captain now. Will you prove that you are capable of defending the nation? Will you join your colleagues in becoming one of Port Royal's most successful officers?{Вы еще достаточно молодой капитан. Докажете ли Вы, что способны защитить нацию? Присоединитесь ли Вы к своим коллегам, чтобы стать одним из самых успешных офицеров в Порт-Роял?}
+
+Climbing up the ranks, you have succeeded in becoming a fine officer. Now you have been placed in charge of HMS Dauntless, once under the command of Commodore Norrington. Will you continue to uphold the legacy of this powerful and old friend?{Поднявшись по служебной лестнице, вам удалось стать хорошим офицером. Теперь вы назначены управлять КЕВ 'Неустрашимый', когда-то ходившим под командованием Командора Норрингтона. Будете ли Вы продолжать поддерживать наследие этого могущественного и старого друга?}
+
+Endeavour{Стремительный}
+
+Henri{Анри}
+Caesar{Цезарь}
+The Haitian Revolution{Гаитянская революция}
+Born to a slave family on Hispaniola, you joined the revolution to see your island become independent from France. Your search in support has led you to the Pirate Brotherhood on Nevis.{Родившись в семье рабов на Эспаньоле, Вы присоединились к революции чтобы увидеть, как Ваш остров станет независимым от Франции. Ваши поиски поддержки привели Вас к пиратам Берегового Братства на Невисе.}
+Black Caesar{Черный Цезарь}
+
+Charles{Чарльз}
+Ardent{Ардент}
+The Caribbean in the Golden Age of Piracy offers many opportunities for those willing to seize them. As a pirate, seizing things is your business!{Карибский бассейн в золотой век пиратства предлагает множество возможностей тем, кто готов их взять. Как пират - Вы умеете брать что-либо гораздо лучше других!}
+Fortune{Удача}
+
+Helen{Хелен}
+
+Lucia{Лючия}
+de la Vega{де ла Вега}
+Doomed to an unhappy marriage, you fled with a pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Обреченная на несчастливый брак, Вы сбежали с пиратом. Теперь у Вас есть собственный корабль, но будете ли Вы вести честную жизнь, или время проведенное с пиратами изменило Вас навсегда?}
+Intrйpido{Бесстрашный}
+
+Edmundo{Эдмундо}
+Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?{Обреченный на несчастливый брак, Вы сбежали с женщиной-пиратом. Теперь у Вас есть собственный корабль, но будете ли Вы вести честную жизнь, или время, проведенное с пиратами, изменило Вас навсегда?}
+
+Piers{Пирс}
+Downing{Даунинг}
+Entreprenant{Предприимчивый}
+
+Franзois-Louis{Франсуа-Луи}
+Rousselet{Русселе}
+Le Saint Louis{Святой Луи}
+
+Nelson{Нельсон}
+Nelson's First Command{Nelson's First Command}
+As a commissioned officer in His Majesty's Royal Navy, Horatio has been recently appointed commander of the brig HMS Badger. Will Horatio let his talents be known and make his way into the history books?{В качестве офицера в Королевском Флоте Его Величества, Горацио был недавно назначен командиром на КЕВ 'Барсук'. Сможет ли Горацио раскрыть свои таланты и попасть в учебники истории?}
+Badger{Барсук}
+
+Danielle{Даниэль}
+
+Lucrezia{Лукреция}
+
+Greene{Грини}
+A Lady Scorned{Презренная Леди}
+After having your heart broken by a scoundrel named Nathaniel Hawk, you have sworn to never fall for another man again. And whoever said a woman cannot captain a ship? This is the Golden Age of Piracy and there is opportunity aplenty for all those willing to take their chance!{После того, как негодяй по имени Натаниэль Хок разбил твое сердце, ты поклялась никогда больше не влюбляться. И кто сказал, что женщина не может управлять кораблем? Это золотой век пиратства, и у всех, кто хочет рискнуть, есть множество возможностей!}
+Vertigo{Головокружение}
+
+Davy{Дэйви}
+Jones{Джонс}
+Lord of the Sea{Властелин Моря}
+Having fallen for the treacherous godess of the sea herself, you got your heart broken as a result. Now all you have left is a thirst for vengeance and a ship to be reckoned with! And... you've got a trick up your sleeve to bring terror upon all souls at sea.{Запав на коварную богиню моря, Вы разбили свое сердце. Теперь все, что Вам осталось - жажда мести и корабль, с которым нужно считаться! И... у Вас есть кое что в рукаве, чтобы вызвать ужас в каждой душе в море.}
+Flying Dutchman{Летучий Голландец}
+
+Anamaria{Анамария}
+Jolly Mon{Веселый Понедельник}
+
+Blaze{Блейз}
+Age of Pirates{Эпоха Пиратов}
+Brother to another well-known character, Blaze Devlin is a corsair always on the hunt for treasure. But what Caribbean Tales lie in store for you? The choice is up to you!{Брат другого известного персонажа, Блейз Девлин - корсар, который постоянно находится в поисках сокровищ. Но какие еще Карибские Байки припасены для Вас? Выбор остается за Вами!}
+Fool's Gold{Золото дураков}
+
+Valerie{Валери}
+
+Diego{Диего}
+
+Eugene{Юджин}
+Martin{Мартин}
+
+Fanielle{Фаниэль}
+
+Ralph{Ральф}
+Fawn{Фавн}
+Having eaten a magic fruit and narrowly avoided being eaten yourself, you now sail the seas in search of the One Piece. Can you rise to become a Pirate King?{Съев магический фрукт и едва не будучи съеденным сам, Вы теперь рыщете по морям в поисках Большого Куша. Сможете ли вы подняться, чтобы стать Королем Пиратов?}
+
+Monkey{Мартышка}
+D.{Ди}
+Luffy{Лаффи}
+Going Merry{Давай Поженимся}
+
+Gherarde{Герард}
+de Jongh{де Йонг}
+
+Phinneas{Финнеас}
+Wake{Уэйк}
+
+Bartolomeu{Бартоломео}
+o Portugues{Португальский}
+
+Santiago{Сантьяго}
+
+Franзois{Франсуа}
+de Hadoque{де Хадоке}
+La Licorne{Единорог}
+
+Henry{Генри}
+Morgan{Морган}
+Jamaica Merchant{Ямайский Торговец}
+
+the Beggar{Нищий}
+
+Rackham{Рэкхем}
+
+Jeremy{Джереми}
+Tripper{Триппер}
+
+de la Croix{де ла Круа}
+Tales of a Chevalier{Истории Шевалье}
+A charming French nobleman with a rogue streak. Your latest endeavour left you several jewels richer and a Spanish lady somewhat distraught. Her brother challenged you to a duel at dawn to settle the score.{Очаровательный французский жуликоватый дворянин. Ваша последняя авантюра сделала Вас на несколько драгоценностей богаче, а испанскую даму оставила в некоторой растерянности. Ее брат пригласил Вас на дуэль на рассвете, чтобы свести счеты.}
+Le Cheval Furieux{Яростная Лошадь}
+
+Johan{Йоган}
+Elting{Элтинг}
+Neptunis{Нептун}
+
+Juan{Хуан}
+Esteban{Эстебан}
+Kieron{Киерон}
+
+Swan{Лебедь}
+
+A Fine Gentleman{Прекрасный джентльмен}
+You intend to see to it that any man who sails under a pirate flag or wears a pirate brand gets what he deserves. But while you may be an ambitious young lieutenant in His Majesty's Navy, you do have your heart in the right place.{Вы намерены следить за тем, чтобы любой, кто плавает под пиратским флагом или отмечен меткой 'Пират', получил то, что заслуживает. Но несмотря на то, что Вы можете быть амбициозным молодым лейтенантом во флоте Его Величества, у Вас все еще есть сердце.}
+
+Michiel{Микель}
+de Ruyter{де Рюйтер}
+Bestevaкr{Наилучший}
+Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Рожденный в бедной семье во Флиссингене Вы, Микель Адриансзон де Рюйтер - скромный человек. Тем не менее, англо-голландские войны 17-го века предоставят Вам массу возможностей, чтобы стать великим!}
+Neptunus{Нептун}
+
+Edwaert{Эдверт}
+Mansveldt{Мансвельдт}
+
+Forester{Лесничий}
+
+Meigger{Мейггер}
+
+Thomas{Томас}
+Modyford{Модифорд}
+
+Daniel{Даниэль}
+Montbart{Монбарт}
+
+Sao{Сяо}
+Feng{Фэнь}
+Crouching Tiger, Sailing Dragon{Крадущийся Тигр, Плывущий Дракон}
+Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.{Вам было суждено стать Предводителем Пиратов Сингапура и бедствием Южно-Китайского моря, но Вы только что отправились на Карибы, чтобы сделать себе имя. Ваш необычный тип корабля может дать Вам рычаги, необходимые для того, чтобы стать успешным пиратом.}
+Empress{Императрица}
+
+Morris{Моррис}
+Williams{Вильямс}
+
+Augusto{Аугусто}
+Queiroz{Кейроз}
+
+Lourenco{Лоренцо}
+Vaz{Ваз}
+
+Manuel{Мануэль}
+Sousa{Соуза}
+
+Padre{Падре}
+Gerardo{Герардо}
+
+Nicholas{Николас}
+Butcher{Батчер}
+
+Rabel{Рабель}
+Chardon{Шардон}
+
+Pintel{Пинтел}
+
+Ragetti{Раджетти}
+
+Robert{Роберт}
+Fulton{Фултон}
+Age of Steam{Эпоха Пара}
+Born on a farm in Little Britain, Pennsylvania, on November 14, 1765, you have spent the past ten years developing a new type of ship. Your latest creation is battle-ready and equipped both with regular sails, but also a new design engine. It is time to take her out for sea trials.{Вы родились на ферме в Маленькой Британии, штат Пенсильвания, 14 ноября 1765 года. Последние десять лет вы потратили на разработку корабля нового типа. Ваше последнее творение готово к бою и оснащено как обычными парусами, так и двигателем новой разработки. Пришло время испытать его на море.}
+Demologos{Демологос}
+
+Roche{Рош}
+Brasiliano{Бразилиано}
+
+Josй{Хосе}
+Joaquнm{Хоаким}
+Almeida{Алмейда}
+Rustic Sea Wolf{Деревенский Морской Волк}
+I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character){Я покинул свой португальский дом на Азорских островах, отправившись в Америку в 1796 году в возрасте 19 лет. Некоторое время я был торговцем, но теперь, с началом войны, я стал капером (включая побочные квесты, характерные для этого персонажа).}
+
+Gaspar{Гаспар}
+The Legend of Gasparilla{Легенда о Гаспарилле}
+Eventually becoming the last of the Buccaneers, rumours surrounding your life have been scarce. Most say you were born in Spain in 1756 and served in the Spanish Navy. Whatever may be the truth, you worked yourself up from a lowly position until you gained command of a ship of your own. It is time to make a name for yourself in the waters south of Florida!{В конце концов, Вы стали последним из буканьеров, но слухи, окружающие вашу жизнь, скудны. Большинство говорят, что Вы родились в Испании в 1756 году и служили в испанском флоте. Что бы ни было правдой, Вы поднимались из низшего сословия, пока не получили командование собственным кораблем. Настало время сделать себе имя в водах к югу от Флориды!}
+Gasparilla{Гаспарилла}
+
+Old{Старая}
+Salt{Соль}
+
+Salvadore{Сальвадор}
+Benavides{Бенавидес}
+
+Serafino{Серафино}
+Masarenhas{Масаренхас}
+
+Skull{Череп}
+
+Carrera{Каррера}
+The Might of Spain{Мощь Испании}
+Ever since the Spanish set foot in the New World, others have tried and succeeded in taking more land away from them. But as recently promoted lieutenant in His Most Catholic Majesty's navy, you intend to see that Spain reclaims its rightful place in the world!{С тех пор, как испанцы ступили в Новый Свет, другие пытались и смогли отобрать у них больше земли. Но, как недавно получивший звание лейтенанта во флоте Его Величайшего Католического Величества, вы намерены увидеть как Испания восстанавливает свое законное место в мире!}
+San Jeronimo{Сан Херонимо}
+
+Sri{Шри}
+Sumbhajee{Сумбаджи}
+
+Tia{Тиа}
+Dalma{Дальма}
+
+Lynch{Линч}
+
+Josiah{Джосия}
+Peabody{Пибоди}
+Play the exploits of a typical U.S. Frigate cruising at sea during the War of 1812. Its captain, Josiah Peabody, demonstrates the revolutionary virtues of a new democracy fighting for its survival against an overwhelmingly superior British Navy.{Повторите подвиги типичного американского фрегата, путешествующего в море во время войны 1812 года. Его капитан Джосия Пибоди демонстрирует революционные достоинства новой демократии, борющейся за свое выживание против подавляющего превосходства британского флота.}
+Delaware{Делавэр}
+
+John{Джон}
+Paul{Пол}
+The American Revolution{Американская Революция}
+Born in Scotland in 1742, your career at sea began at age 13, and by 21 you were the captain of a ship sailing between the West Indies and British ports. You joined the Continental navy for the American Revolution and have just been promoted to lieutenant. However, you have not yet begun to fight. The real battle for independence is yet to come!{Родившись в Шотландии в 1742 году, Вы начали Вашу морскую карьеру в 13 лет, а к 21 году уже были капитаном корабля, курсирующего между Вест-Индией и британскими портами. Вы вступили в Континентальный флот для участия в Американской Революции и только что были произведены в лейтенанты. Тем не менее, Вы еще не начали бороться. Настоящая битва за независимость впереди!}
+Enterprise{Энтерпрайз}
+
+Vito{Вито}
+Leone{Леоне}
+
+A Touch of Destiny{Прикосновение Судьбы}
+Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.{Проклятие за убийство Дэйви Джонса легло на Вас, и теперь Вы - капитан обновленного Летучего Голландца. Вам поручено переправлять души умерших в загробный мир. Но, конечно, это может подождать! На данный момент Вы должны ознакомиться с задачами капитана. Что Вы станете делать после этого - зависит от вас.}
+
+Will{Уилл}
+Turner{Тернер}
+
+Parson{Парсон}
+
+Couchcaptain{Couchcaptain}
+
+Cutler{Катлер}
+Beckett{Беккет}
+Just Good Business{Просто Хороший Бизнес}
+As head of the East India Trading Company, you are in charge of one of the largest ships in the Caribbean. But you are a merchant first of all, and an unscrupulous one at that! Which means that the task of being captain is one you are not quite familiar with.{Как глава Ост-Индийской Торговой Компании, Вы управляете одним из крупнейших кораблей в Карибском море. Но Вы, прежде всего, торговец, и при этом - недобросовестный! Это означает, что задача быть капитаном - то, с чем вы Вы не очень хорошо знакомы.}
+
+Cruz{Круз}
+
+Merciless{Merciless}
+Mark{Mark}
+
+Sir Christopher{Sir Christopher}
+Mings{Mings}
+
+Terror{Terror}
+
+Thomas the{Thomas the}
+
+Uziah{Узия}
+Wurmwoode{Вурмвуд}
+
+Emilio{Эмилио}
+Soares{Соарес}
+
+Francois{Франсуа}
+L'Ollenais{Л'Олленэ}
+Saint-Jean{Святой Иоанн}
+
+Julian{Джулиан}
+McAllister{МакАлистер}
+Brave Black Flag{Храбрый Черный Флаг}
+You have led a mutiny against your cruel captain who meant to kill a group of your countrymen taken as pirates. Now, on the run and marked as a traitor, you must decide what path to follow. Your actions have earned you the respect of the Brotherhood of Pirates. Will you join them under the brave black flag?{Вы подняли мятеж против жестокого капитана, который хотел убить группу Ваших соотечественников, оказавшихся среди захваченных пиратов. Теперь, находясь в бегах и помеченный как предатель, вы должны решить, по какому пути идти. Ваши действия заслужили уважение Берегового Братства. Присоединитесь ли Вы к ним под Храбрым Черным Флагом?}
+Defiance{Вызов}
+
+Eduardo{Эдуардо}
+Villanueva{Вильянуэва}
+Sargento{Сардженто}
+
+Milady{Миледи}
+de Winter{де Винтер}
+Spy and Assassin{Шпион и убийца}
+You are a woman who is cunning, relentless, resourceful, amoral and dangerous. Tasked with causing harm to your nations' enemies by whatever means necessary, you will stop at nothing to fulfil that purpose.{Вы женщина хитрая, неумолимая, находчивая, аморальная и опасная. С целью причинить вред врагам ваших нанимателей любыми необходимыми средствами, Вы не остановитесь ни перед чем, чтобы выполнить поставленную задачу.}
+Athos{Атос}
+
+Comte{Граф}
+de Rochefort{де Рошфор}
+
+Laurens{Лорен}
+de Graaf{де Грааф}
+Scourge of the West{Бич Запада}
+'A great and mischievous pirate' according to Henry Morgan and thought to be the Devil in person by some Spaniards, this Dutch corsair is ready to wreak havoc on the Caribbean!{'Великий и лихой пират', по словам Генри Моргана, и сущий дьявол по мнению некоторых испанцев - этот голландский корсар готов хозяйничать в Карибском море!}
+Wapen van Hoorn{Оружие Единорога}
+
+Francis{Фрэнсис}
+Drake{Дрейк}
+Disturb us, Lord{Побеспокойся о нас, Господь}
+'It isn't that life ashore is distasteful to me. But life at sea is better.' As privateer in the service of queen Elizabeth I of England and with the Spanish owning nearly the entire Caribbean, it is your job to make life as difficult as possible for the Dons.{'Дело не в том, что жизнь на берегу мне неприятна. Но жизнь в море лучше.' Как капер на службе королевы Елизаветы I Английской, а испанцы владеют почти всеми Карибами, Вы должны сделать жизнь Донов настолько трудной, насколько это возможно.}
+Golden Hind{Золотая Лань}
+
+{=====| models.c |=====}
+
+{=====| models.h |=====}
+
+{=====| 231 characters |=====}

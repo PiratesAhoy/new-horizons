@@ -1,0 +1,12 @@
+title=Azufre
+text.t1=He fabricado azufre.
+text.t2=Destilar el azufre va a llevar un tiempo. Haré alguna otra cosa mientras tanto.
+text.t3=
+text.t4=Necesito una caja para recoger el polvo de pirita.
+text.t5=1. Colocar piedras de pirita sobre las tablas.
+text.t6=2. Machacarlas con cuidado para obtener polvo de pirita.
+text.t7=3. Recoger el polvo de pirita.
+text.t8=4. Colocarlo en el alambique.
+text.t9=5. Llenar el alambique con agua del patio.
+text.t10=6. Poner en marcha el alambique y esperar a que se procese.
+text.t11=7. Recoger el azufre destilado. 

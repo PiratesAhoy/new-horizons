@@ -1,0 +1,9 @@
+title=Side Quest - The Silver Train
+text.t1=According to the #sTortuga# tavern owner, a young pirate named Will Turner is making preparations for some sort of expedition. Might be profitable! He can be found in his house at the end of the pier.
+text.t2=I have nothing to lose for going to #sisland_Battle Rocks#. And if Captain Will Turner is right, it could be the jackpot! Let's weigh anchor, I'm eager to be there.
+text.t3=What was this story! Silver at #sisland_Battle Rocks#! The only things I believe I could find there, are mosquitos snakes and diseases. After all, I'm going to capture some enemy ships and forget this odd story. 
+text.t4=What rotten luck! First we lost time to find a shore and now we fought a group of indians. I hope the situation will improve.
+text.t5=Good news! We have the confirmation. There is a mine at #sisland_Battle Rocks#. A fugitive called Konrad Kulczycki told it us. Nevertheless, the mine is well-protected but the opposite would have been amazing.
+text.t6=The Spanish camp was hidden in the jungle. After a risky attack, we defeated the enemy. We did the same at the mine to free the Konrad Kulczycki's friends. However, I expected to look for the silver in the camp when I learned it was en route to a secret port. Fortunately, we have the opportunity to arrive there before the silver train.
+text.t7=Arrived at the Spanish Port, we have been located by a soldier hidden in the small fort. He succeeded in warning the convoy and we have had to fight the Spanish soldiers. But it was worth it. The silver was really there. After a long walk through the jungle, the silver is in the ships' hold. Now, we just need to reach #sTortuga# off the coast of #sisland_Hispaniola#.
+text.t8=This expedition has been a success. Indeed, 60 000 gold coins is quite appreciable. Without forgetting we helped to release many pirates from the Spaniards. Now, the question is if the Spaniards are going to leave #sisland_Battle Rocks# soon.

@@ -60,7 +60,7 @@ void ProcessDialogEvent()
 				else 
 				{
 					link.l1.go = "exit";
-					if (your_rank == 6) link.l1.go = "mission1_1";
+					if (your_rank == 6 && !CheckAttribute(NPChar, "quest.Natividad_given")) link.l1.go = "mission1_1";
 				}
 			}
 		break;
@@ -80,6 +80,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "mission1_1":
+			NPChar.quest.Natividad_given = true;
 			dialog.text = DLG_TEXT[9] + GetMyFullName(CharacterFromID("El Supremo")) + DLG_TEXT[10];
 			if (FindCurrentStoryline() == FindStoryline("Hornblower"))
 			{
@@ -136,6 +137,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "great_report":
+			NPChar.quest.Natividad_given = true;
 			dialog.text = DLG_TEXT[27] + GetMyLastName(PChar) + DLG_TEXT[28];
 			link.l1 = DLG_TEXT[6];
 			link.l1.go = "know_everyone";
@@ -157,6 +159,35 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[34] + PChar.Ship.Name + DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			AddDialogExitQuest("Hornblower_get_Sutherland");
+			link.l1.go = "leighton_squadron";
+		break;
+
+		case "leighton_squadron":
+			if (GetCompanionQuantity(PChar) > 1)
+			{
+				dialog.text = DLG_TEXT[37] + "\n" + DLG_TEXT[39];
+				link.l1 = DLG_TEXT[40];
+				AddDialogExitQuest("Hornblower_dispose_of_prizes");
+				link.l1.go = "exit";
+			}
+			else
+			{
+				dialog.text = DLG_TEXT[37];
+				link.l1 = "";
+				link.l1.go = "blockade_Hispaniola";
+			}
+		break;
+
+		case "return_from_dispose_prizes":
+			dialog.text = DLG_TEXT[41] + GetMyLastName(PChar) + DLG_TEXT[42];
+			link.l1 = DLG_TEXT[43];
+			link.l1.go = "blockade_Hispaniola";
+		break;
+
+		case "blockade_Hispaniola":
+			dialog.text = DLG_TEXT[38];
+			link.l1 = "";
+			AddDialogExitQuest("Hornblower_join_Leighton_squadron");
 			link.l1.go = "exit";
 		break;
 

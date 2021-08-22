@@ -1,0 +1,26 @@
+string DLG_TEXT[23] = {
+
+"Si, #ssir#?",
+"? Eres un oficial?",
+"Yo soy. ?Que quereis?",
+"Bueno, soy comerciante y mientras actualizadaaba a lo largo de la costa para Turquia esta ciudad para vender mis bienes, vi a algunos hombres descargando bienes en Bahia de 55A.",
+"Podrian ser contrabandistas. Lo comprobare. Gracias por su ayuda.",
+"Es mi deber ayudar a las autoridades espanolas.",
+"!Oye! ?Que estas haciendo aqui? ?Y donde estan esos hombres de los que hablabas?",
+"No existen. Invente esta historia para sacarte de aqui por tu cuenta, lejos de la ciudad.",
+"? Y por que? Soy un oficial espanol ejercitos, asi que no me hagas perder el tiempo, por favor. Mi paciencia tiene limites.",
+"Lo entenderas en un par de momentos. Parece que su conc esta preparando algun tipo de accion contra los piratas en #sisland_Turks# y usted me va a decir exactamente que y cuando.",
+"Acto, esta bien. Ambos son piratas y estupidos. ?De verdad creiste que vendria aqui por mi cuenta? Guardias! !Mata a este #sgender#!",
+"Mala decision! Te arrepentiras de eso.",
+"!Alto! Me rindo.",
+"Ah. !Asi que eres razonable despues de todo! Ahora que no me mato, me dices lo que quiero saber. A menos que quieras que te mate. Y no fallare como tu. Puedes estar seguro de eso.",
+"Muy bien entonces. Mi conc no esta contento con los piratas en #sisland_Turks# y quiere capturar la isla para disminuir la amenaza de los piratas a los convoys espanoles.",
+"Eso suena como una operacion arriesgada.",
+"Lo se. Pero nuestro conc es una persona ambigua y si tiene exito, nuestro Rey le recompensara con la gobernacion de #sisland_Turks# tambien.",
+"Un conc espanol en la hermosa isla pirata de #sisland_Turks#? Eso suena horrible! ?Cuando se lleva a cabo la operacion?",
+"Durante el proximo par de dias. El conc solo informara a las tropas el dia antes de partir.",
+"Ah. Entonces tendre que volver estrategia a #sisland_Turks#.  Y tu vienes conmigo. No te matare, pero no puedo arriesgarme a que el conc se entere de que los piratas de #sisland_Turks# estan advertidos de que viene. Te dejare ir tan pronto como esta situacion se resuelva.",
+"...",
+"...",
+
+};

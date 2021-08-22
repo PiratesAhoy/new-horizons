@@ -8,15 +8,14 @@ void CreateTavernsCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	//===============================| Alice Town |===============================//
 
 	ch.old.name = "Robert";
 	ch.old.lastname = "Wicker";
-	ch.name 	= TranslateString("","Robert");
-	ch.lastname = TranslateString("","Wicker");
+	ch.name 	= TranslateString("", "Robert");
+	ch.lastname = TranslateString("", "Wicker");
 	ch.id		= "Robert Wicker";
 	ch.model	= "50M5";
 	ch.sex = "man";
@@ -52,8 +51,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper
 	ch.old.name = "Brian";
 	ch.old.lastname = "Moods";
-	ch.name = TranslateString("","Brian");
-	ch.lastname = TranslateString("","Moods");
+	ch.name = TranslateString("", "Brian");
+	ch.lastname = TranslateString("", "Moods");
 	ch.id		= "Brian Moods";
 	ch.model	= "Pirtt7"; // Estharos Change from man2 to this model
 	ch.sex = "man";
@@ -87,8 +86,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Anne";
 	ch.old.lastname = "Andress";
-	ch.name = TranslateString("","Anne");
-	ch.lastname = TranslateString("","Andress");
+	ch.name = TranslateString("", "Anne");
+	ch.lastname = TranslateString("", "Andress");
 	ch.id		= "Antigua_officiant";
 	ch.model	= "OldWoman1"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -133,8 +132,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper
 	ch.old.name = "Florentin";
 	ch.old.lastname = "Destot";
-	ch.name = TranslateString("","Florentin");
-	ch.lastname = TranslateString("","Destot");
+	ch.name = TranslateString("", "Florentin");
+	ch.lastname = TranslateString("", "Destot");
 	ch.id		= "Florentin Destot";
 	ch.model = "Corsair2"; // Estharos Change from 33_Ronald to this model
 	ch.sex = "man";
@@ -169,8 +168,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Joanne";
 	ch.old.lastname = "Ellene";
-	ch.name = TranslateString("","Joanne");
-	ch.lastname = TranslateString("","Ellene");
+	ch.name = TranslateString("", "Joanne");
+	ch.lastname = TranslateString("", "Ellene");
 	ch.id		= "BuccaneersCamp_officiant";
 	ch.model	= "Downgir52"; // Estharos Change from towngirl6 to this model
 	ch.sex = "woman";
@@ -250,8 +249,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Agnes";
 	ch.old.lastname = "Marley";
-	ch.name = TranslateString("","Agnes");
-	ch.lastname = TranslateString("","Marley");
+	ch.name = TranslateString("", "Agnes");
+	ch.lastname = TranslateString("", "Marley");
 	ch.id		= "Charlestown_officiant";
 	ch.model	= "Downgir51"; // Estharos Change from towngirl3 to this model
 	ch.sex = "woman";
@@ -295,8 +294,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper
 	ch.old.name = "Duarte";
 	ch.old.lastname = "Correja";
-	ch.name = TranslateString("","Duarte");
-	ch.lastname = TranslateString("","Correja");
+	ch.name = TranslateString("", "Duarte");
+	ch.lastname = TranslateString("", "Correja");
 	ch.id		= "Duarte Correja";
 	ch.model	= "sailor15"; // Estharos Change from man2 to this model
 	ch.sex = "man";
@@ -329,8 +328,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Laurenco";
 	ch.old.lastname = "Costa";
-	ch.name = TranslateString("","Laurenco");
-	ch.lastname = TranslateString("","Costa");
+	ch.name = TranslateString("", "Laurenco");
+	ch.lastname = TranslateString("", "Costa");
 	ch.id		= "Laurenco Costa";
 	ch.model	= "shkiper";
 	ch.sex = "man";
@@ -362,8 +361,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Carlos";
 	ch.old.lastname = "Resende";
-	ch.name = TranslateString("","Carlos");
-	ch.lastname = TranslateString("","Resende");
+	ch.name = TranslateString("", "Carlos");
+	ch.lastname = TranslateString("", "Resende");
 	ch.id		= "Carlos Resende";
 	ch.model	= "fatman";
 	ch.sex = "man";
@@ -397,8 +396,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Helena";
 	ch.old.lastname = "Azocar";
-	ch.name = TranslateString("","Helena");
-	ch.lastname = TranslateString("","Azocar");
+	ch.name = TranslateString("", "Helena");
+	ch.lastname = TranslateString("", "Azocar");
 	ch.id		= "Conceicao_officiant";
 	ch.model	= "Downgirl2"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -443,8 +442,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Friedrich";
 	ch.old.lastname = "Corleis";
-	ch.name = TranslateString("","Friedrich");
-	ch.lastname = TranslateString("","Corleis");
+	ch.name = TranslateString("", "Friedrich");
+	ch.lastname = TranslateString("", "Corleis");
 	ch.id		= "Friedrich Corleis";
 	ch.model	= "bocman1"; // Estharos Change from man5 to this model
 	ch.sex = "man";
@@ -477,8 +476,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Baernt";
 	ch.old.lastname = "Jans";
-	ch.name = TranslateString("","Baernt");
-	ch.lastname = TranslateString("","Jans");
+	ch.name = TranslateString("", "Baernt");
+	ch.lastname = TranslateString("", "Jans");
 	ch.id		= "Baernt Jans";
 	ch.model	= "fatman2";
 	ch.sex = "man";
@@ -511,8 +510,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Olivier";
 	ch.old.lastname = "Fessler";
-	ch.name = TranslateString("","Olivier");
-	ch.lastname = TranslateString("","Fessler");
+	ch.name = TranslateString("", "Olivier");
+	ch.lastname = TranslateString("", "Fessler");
 	ch.id		= "Olivier Fessler";
 	ch.model	= "korsar";
 	ch.sex = "man";
@@ -546,8 +545,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Tanneken";
 	ch.old.lastname = "Clemens";
-	ch.name = TranslateString("","Tanneken");
-	ch.lastname = TranslateString("","Clemens");
+	ch.name = TranslateString("", "Tanneken");
+	ch.lastname = TranslateString("", "Clemens");
 	ch.id		= "Douwesen_officiant";
 	ch.model	= "Downgir53"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -591,8 +590,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Brian";
 	ch.old.lastname = "Armstrong";
-	ch.name 	= TranslateString("","Brian");
-	ch.lastname = TranslateString("","Armstrong");
+	ch.name 	= TranslateString("", "Brian");
+	ch.lastname = TranslateString("", "Armstrong");
 	ch.id		= "Brian Armstrong";
 	ch.model	= "50M5";
 	ch.sex = "man";
@@ -626,8 +625,8 @@ void CreateTavernsCharacters(ref n)
 // Sulan --> Officiant
 	ch.old.name = "Sulana";
 	ch.old.lastname = "Armstrong";
-	ch.name = TranslateString("","Sulana");
-	ch.lastname = TranslateString("","Armstrong");
+	ch.name = TranslateString("", "Sulana");
+	ch.lastname = TranslateString("", "Armstrong");
 	ch.id		= "Eleuthera_officiant";
 	ch.model	= "Downgir51"; 
 	ch.sex = "woman";
@@ -669,8 +668,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Antoine";
 	ch.old.lastname = "Lebretton";
-	ch.name = TranslateString("","Antoine");
-	ch.lastname = TranslateString("","Lebretton");
+	ch.name = TranslateString("", "Antoine");
+	ch.lastname = TranslateString("", "Lebretton");
 	ch.id		= "Antoine Lebretton";
 	ch.model = "Sailor6"; // Estharos Change from Old_man1 to this model
 	ch.sex = "man";
@@ -703,8 +702,8 @@ void CreateTavernsCharacters(ref n)
 	
 	ch.old.name = "Thierry";
 	ch.old.lastname = "Bosquet";
-	ch.name = TranslateString("","Thierry");
-	ch.lastname = TranslateString("","Bosquet");
+	ch.name = TranslateString("", "Thierry");
+	ch.lastname = TranslateString("", "Bosquet");
 	ch.id		= "Thierry Bosquet";
 	ch.model = "Black_Corsair";
 	ch.sound_type = "seaman";
@@ -743,8 +742,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Pauline";
 	ch.old.lastname = "Beteille";
-	ch.name = TranslateString("","Pauline");
-	ch.lastname = TranslateString("","Beteille");
+	ch.name = TranslateString("", "Pauline");
+	ch.lastname = TranslateString("", "Beteille");
 	ch.id		= "Falaise_de_fleur_officiant";
 	ch.model	= "Downgirl3"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -789,8 +788,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper
 	ch.old.name = "Olyver";
 	ch.old.lastname = "Littlejohn";
-	ch.name 	= TranslateString("","Olyver");
-	ch.lastname = TranslateString("","Littlejohn");
+	ch.name 	= TranslateString("", "Olyver");
+	ch.lastname = TranslateString("", "Littlejohn");
 	ch.id		= "Olyver Littlejohn";
 	ch.model	= "Old_mat1"; // Estharos no change
 	ch.headmodel = "h_Old_mat1";
@@ -871,8 +870,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Simon";
 	ch.old.lastname = "Hanpool";
-	ch.name 	= TranslateString("","Simon");
-	ch.lastname = TranslateString("","Hanpool");
+	ch.name 	= TranslateString("", "Simon");
+	ch.lastname = TranslateString("", "Hanpool");
 	ch.id		= "Simon Hanpool";
 	ch.model	= "Corsair1_4"; // Estharos Change from man2 to this model
 	ch.sex = "man";
@@ -905,8 +904,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Ralph";
 	ch.old.lastname = "Damerell";
-	ch.name 	= TranslateString("","Ralph");
-	ch.lastname = TranslateString("","Damerell");
+	ch.name 	= TranslateString("", "Ralph");
+	ch.lastname = TranslateString("", "Damerell");
 	ch.id		= "Ralph Damerell";
 	ch.model	= "Corsair3";
 	ch.sound_type = "pirate";
@@ -939,8 +938,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Frederyk";
 	ch.old.lastname = "Kember";
-	ch.name 	= TranslateString("","Frederyk");
-	ch.lastname = TranslateString("","Kember");
+	ch.name 	= TranslateString("", "Frederyk");
+	ch.lastname = TranslateString("", "Kember");
 	ch.id		= "Frederyk Kember";
 	ch.model	= "man4";
 	ch.sound_type = "male_citizen";
@@ -972,8 +971,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Nadine";
 	ch.old.lastname = "Jansen";
-	ch.name 	= TranslateString("","Nadine");
-	ch.lastname = TranslateString("","Jansen");
+	ch.name 	= TranslateString("", "Nadine");
+	ch.lastname = TranslateString("", "Jansen");
 	ch.id		= "Greenford_officiant";
 	ch.model	= "towngirl3_1"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -1019,8 +1018,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Claudio";
 	ch.old.lastname = "Burrieza";
-	ch.name = TranslateString("","Claudio");
-	ch.lastname = TranslateString("","Burrieza");
+	ch.name = TranslateString("", "Claudio");
+	ch.lastname = TranslateString("", "Burrieza");
 	ch.id		= "Claudio Burrieza";
 	ch.model = "50FatJack"; // Estharos Change from Fatman2 to this model
 	ch.sex = "man";
@@ -1055,8 +1054,8 @@ void CreateTavernsCharacters(ref n)
 	
 	ch.old.name = "Tiago";
 	ch.old.lastname = "Marquina";
-	ch.name = TranslateString("","Tiago");
-	ch.lastname = TranslateString("","Marquina");
+	ch.name = TranslateString("", "Tiago");
+	ch.lastname = TranslateString("", "Marquina");
 	ch.id		= "Tiago Marquina";
 	ch.model = "man4";
 	ch.sex = "man";
@@ -1094,8 +1093,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Marinella";
 	ch.old.lastname = "Castrilli";
-	ch.name = TranslateString("","Marinella");
-	ch.lastname = TranslateString("","Castrilli");
+	ch.name = TranslateString("", "Marinella");
+	ch.lastname = TranslateString("", "Castrilli");
 	ch.id		= "Muelle_officiant";
 	ch.model	= "mowngirl7"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -1140,8 +1139,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Fadrique";
 	ch.old.lastname = "Castillo";
-	ch.name = TranslateString("","Fadrique");
-	ch.lastname = TranslateString("","Castillo");
+	ch.name = TranslateString("", "Fadrique");
+	ch.lastname = TranslateString("", "Castillo");
 	ch.id		= "Fadrique Castillo";
 	ch.model	= "blackman"; // Estharos no change
 	ch.sex = "man";
@@ -1175,8 +1174,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Leonor";
 	ch.old.lastname = "Esperanza";
-	ch.name = TranslateString("","Leonor");
-	ch.lastname = TranslateString("","Esperanza");
+	ch.name = TranslateString("", "Leonor");
+	ch.lastname = TranslateString("", "Esperanza");
 	ch.id		= "Havana_officiant";
 	ch.model	= "towngirl1_1"; // Estharos Change from towngirl5 to this model
 	ch.sex = "woman";
@@ -1221,8 +1220,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Andre";
 	ch.old.lastname = "Figaux";
-	ch.name = TranslateString("","Andre");
-	ch.lastname = TranslateString("","Figaux");
+	ch.name = TranslateString("", "Andre");
+	ch.lastname = TranslateString("", "Figaux");
 	ch.id		= "Andree Figaux";
 	ch.model = "Corsair1_1"; // Estharos Change from mongol to this model
 	ch.sex = "man";
@@ -1256,8 +1255,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Sophie";
 	ch.old.lastname = "Neveu";
-	ch.name = TranslateString("","Sophie");
-	ch.lastname = TranslateString("","Neveu");
+	ch.name = TranslateString("", "Sophie");
+	ch.lastname = TranslateString("", "Neveu");
 	ch.id		= "Marigot_officiant";
 	ch.model	= "towngirl2";
 	ch.sex = "woman";
@@ -1301,8 +1300,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Johannes";
 	ch.old.lastname = "Harlekeyn";
-	ch.name = TranslateString("","Johannes");
-	ch.lastname = TranslateString("","Harlekeyn");
+	ch.name = TranslateString("", "Johannes");
+	ch.lastname = TranslateString("", "Harlekeyn");
 	ch.id		= "Johannes Harlekeyn";
 	ch.model	= "bocman8"; // Estharos Change from corsair2 to this model
 	ch.sex = "man";
@@ -1335,8 +1334,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant	
 	ch.old.name = "Alcke";
 	ch.old.lastname = "Smitshoek";
-	ch.name = TranslateString("","Alcke");
-	ch.lastname = TranslateString("","Smitshoek");
+	ch.name = TranslateString("", "Alcke");
+	ch.lastname = TranslateString("", "Smitshoek");
 	ch.id		= "Oranjestad_officiant";
 	ch.model	= "towngirl6"; // Estharos Change from towngirl4 to this model
 	ch.sex = "woman";
@@ -1380,8 +1379,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Everard";
 	ch.old.lastname = "Gordon";
-	ch.name 	= TranslateString("","Everard");
-	ch.lastname 	= TranslateString("","Gordon");
+	ch.name 	= TranslateString("", "Everard");
+	ch.lastname 	= TranslateString("", "Gordon");
 	ch.id		= "Everard Gordon";
 	ch.model	= "Pirat3"; // Estharos Change from old_man1 to this model
 	ch.sex = "man";
@@ -1414,8 +1413,8 @@ void CreateTavernsCharacters(ref n)
 	
 	ch.old.name = "Raulf";
 	ch.old.lastname = "Mather";
-	ch.name 	= TranslateString("","Raulf");
-	ch.lastname 	= TranslateString("","Mather");
+	ch.name 	= TranslateString("", "Raulf");
+	ch.lastname 	= TranslateString("", "Mather");
 	ch.id		= "Raulf Mather";
 	ch.model	= "bocman";
 	ch.sound_type = "seaman";
@@ -1447,8 +1446,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Triston";
 	ch.old.lastname = "Bonger";
-	ch.name 	= TranslateString("","Triston");
-	ch.lastname 	= TranslateString("","Bonger");
+	ch.name 	= TranslateString("", "Triston");
+	ch.lastname 	= TranslateString("", "Bonger");
 	ch.id		= "Triston Bonger";
 	ch.model	= "man6_1";
 	ch.sound_type = "male_citizen";
@@ -1480,8 +1479,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Peter";
 	ch.old.lastname = "Blaxter";
-	ch.name 	= TranslateString("","Peter");
-	ch.lastname 	= TranslateString("","Blaxter");
+	ch.name 	= TranslateString("", "Peter");
+	ch.lastname 	= TranslateString("", "Blaxter");
 	ch.id		= "Peter Blaxter";
 	ch.model	= "man3";
 	ch.sound_type = "male_citizen";
@@ -1515,8 +1514,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Mary";
 	ch.old.lastname = "Bekker";
-	ch.name 	= TranslateString("","Mary");
-	ch.lastname = TranslateString("","Bekker");
+	ch.name 	= TranslateString("", "Mary");
+	ch.lastname = TranslateString("", "Bekker");
 	ch.id		= "Oxbay_officiant";
 	ch.model	= "towngirl7"; // Estharos Change from towngirl5 to this model
 	ch.sex = "woman";
@@ -1561,8 +1560,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Marcus";
 	ch.old.lastname = "Maas";
-	ch.name = TranslateString("","Marcus");
-	ch.lastname = TranslateString("","Maas");
+	ch.name = TranslateString("", "Marcus");
+	ch.lastname = TranslateString("", "Maas");
 	ch.id		= "Marcus Maas";
 	ch.model	= "Pirat13"; // Estharos Change from man2 to this model
 	ch.sex = "man";
@@ -1596,8 +1595,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Cornelisje";
 	ch.old.lastname = "Vandecken";
-	ch.name = TranslateString("","Cornelisje");
-	ch.lastname = TranslateString("","Vandecken");
+	ch.name = TranslateString("", "Cornelisje");
+	ch.lastname = TranslateString("", "Vandecken");
 	ch.id		= "Philipsburg_officiant";
 	ch.model	= "towngirl3"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -1641,8 +1640,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Mario";
 	ch.old.lastname = "Figuiera";
-	ch.name = TranslateString("","Mario");
-	ch.lastname = TranslateString("","Figuiera");
+	ch.name = TranslateString("", "Mario");
+	ch.lastname = TranslateString("", "Figuiera");
 	ch.id		= "Mario Figuiera";
 	ch.model	= "Pirat9"; // Estharos Change from man4 to this model
 	ch.sex = "man";
@@ -1676,8 +1675,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Elkzander";
 	ch.old.lastname = "Dumarteene";
-	ch.name = TranslateString("","Elkzander");
-	ch.lastname = TranslateString("","Dumarteene");
+	ch.name = TranslateString("", "Elkzander");
+	ch.lastname = TranslateString("", "Dumarteene");
 	ch.id		= "Elkzander Dumarteene";
 	ch.model	= "man4";
 	ch.sex = "man";
@@ -1711,8 +1710,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Leandro";
 	ch.old.lastname = "Sousa";
-	ch.name = TranslateString("","Leandro");
-	ch.lastname = TranslateString("","Sousa");
+	ch.name = TranslateString("", "Leandro");
+	ch.lastname = TranslateString("", "Sousa");
 	ch.id		= "Leandro Sousa";
 	ch.model	= "man4";
 	ch.sex = "man";
@@ -1747,8 +1746,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Rosalie";
 	ch.old.lastname = "Bezace";
-	ch.name = TranslateString("","Rosalie");
-	ch.lastname = TranslateString("","Bezace");
+	ch.name = TranslateString("", "Rosalie");
+	ch.lastname = TranslateString("", "Bezace");
 	ch.id		= "Pirate_officiant";
 	ch.model	= "Indian_girl1"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -1785,8 +1784,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Albin";
 	ch.old.lastname = "Bonaventure";
-	ch.name 	= TranslateString("","Albin");
-	ch.lastname = TranslateString("","Bonaventure");
+	ch.name 	= TranslateString("", "Albin");
+	ch.lastname = TranslateString("", "Bonaventure");
 	ch.id		= "Albin Bonaventure";
 	ch.model	= "Sailor"; // Estharos Change from Fatman2_1 to this model
 	ch.sex = "man";
@@ -1944,8 +1943,8 @@ void CreateTavernsCharacters(ref n)
 //<-- TALISMAN soldiers removed here
 */
 
-	ch.name 	= TranslateString("","Sailor");
-	ch.lastname = TranslateString("","");
+	ch.name 	= TranslateString("", "Sailor");
+	ch.lastname = "";
 	ch.id		= "Drunk1";
 	ch.model	= "Pirat3";
 	ch.headmodel = "h_Pirat3";
@@ -1975,8 +1974,8 @@ void CreateTavernsCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	AddGameCharacter(n, ch);
 
-	ch.name 	= TranslateString("","Sailor");
-	ch.lastname = TranslateString("","");
+	ch.name 	= TranslateString("", "Sailor");
+	ch.lastname = "";
 	ch.id		= "Drunk2";
 	ch.model	= "Pirat4";
 	ch.headmodel = "h_Pirat4";
@@ -2006,8 +2005,8 @@ void CreateTavernsCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	AddGameCharacter(n, ch);
 
-	ch.name 	= TranslateString("","Sailor");
-	ch.lastname = TranslateString("","");
+	ch.name 	= TranslateString("", "Sailor");
+	ch.lastname = "";
 	ch.id		= "Drunk2";
 	ch.model	= "Pirtt7";
 	ch.headmodel = "h_Pirtt7";
@@ -2038,8 +2037,8 @@ void CreateTavernsCharacters(ref n)
 	AddGameCharacter(n, ch);
 	
 // Gambler
-	ch.name 	= TranslateString("","Louis");
-	ch.lastname = TranslateString("","Guillaut");
+	ch.name 	= TranslateString("", "Louis");
+	ch.lastname = TranslateString("", "Guillaut");
 	ch.id		= "Louis Guillaut";
 	ch.model	= "Hugnt18";
 	ch.headmodel = "h_Hugnt18";
@@ -2122,8 +2121,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Francois";
 	ch.old.lastname = "Chabert";
-	ch.name 	= TranslateString("","Francois");
-	ch.lastname 	= TranslateString("","Chabert");
+	ch.name 	= TranslateString("", "Francois");
+	ch.lastname 	= TranslateString("", "Chabert");
 	ch.id		= "Francois Chabert";
 	ch.model = "Sailor14"; // Estharos Change from Man1 to this model
 	ch.headmodel = "h_Sailor14"; // Estharos Change from h_Man1 to this model
@@ -2157,8 +2156,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Marcel";
 	ch.old.lastname = "Fasquel";
-	ch.name 	= TranslateString("","Marcel");
-	ch.lastname = TranslateString("","Fasquel");
+	ch.name 	= TranslateString("", "Marcel");
+	ch.lastname = TranslateString("", "Fasquel");
 	ch.id		= "Marcel Fasquel";
 	ch.model	= "Sailor6";
 	ch.headmodel = "h_Sailor6";
@@ -2195,8 +2194,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Eliza";
 	ch.old.lastname = "Girard";
-	ch.name = TranslateString("","Eliza");
-	ch.lastname = TranslateString("","Girard");
+	ch.name = TranslateString("", "Eliza");
+	ch.lastname = TranslateString("", "Girard");
 	ch.id		= "PoPrince_officiant";
 	ch.model	= "towngirl5"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -2275,8 +2274,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "William";
 	ch.old.lastname = "Blaker";
-	ch.name = TranslateString("","William");
-	ch.lastname = TranslateString("","Blaker");
+	ch.name = TranslateString("", "William");
+	ch.lastname = TranslateString("", "Blaker");
 	ch.id		= "William Blaker";
 	ch.model	= "chameleon";
 	ch.sex = "man";
@@ -2310,8 +2309,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Marc";
 	ch.old.lastname = "Fremont";
-	ch.name = TranslateString("","Marc");
-	ch.lastname = TranslateString("","Fremont");
+	ch.name = TranslateString("", "Marc");
+	ch.lastname = TranslateString("", "Fremont");
 	ch.id		= "Marc Fremont";
 	ch.model	= "man5";
 	ch.sex = "man";
@@ -2346,8 +2345,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Tientje";
 	ch.old.lastname = "Durfee";
-	ch.name = TranslateString("","Tientje");
-	ch.lastname = TranslateString("","Durfee");
+	ch.name = TranslateString("", "Tientje");
+	ch.lastname = TranslateString("", "Durfee");
 	ch.id		= "QC_officiant";
 	ch.model	= "Indian_girl1"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -2390,10 +2389,10 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Morys";
 	ch.old.lastname = "Biddulph";
-	ch.name = TranslateString("","Morys");
-	ch.lastname = TranslateString("","Biddulph");
+	ch.name = TranslateString("", "Morys");
+	ch.lastname = TranslateString("", "Biddulph");
 	ch.id		= "Morys Biddulph";
-	ch.model	= "9S_Nav"; // Estharos Change from capitan1 to this model
+	ch.model	= "Capitan1"; // Grey Roger / Bathtub Pirate change back from "9S_Nav"; // Estharos Change from capitan1 to this model
 	ch.sound_type = "seaman";
 	ch.sex = "man";
 	ch.nation = ENGLAND;
@@ -2426,8 +2425,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Roger";
 	ch.old.lastname = "Hayes";
-	ch.name = TranslateString("","Roger");
-	ch.lastname = TranslateString("","Hayes");
+	ch.name = TranslateString("", "Roger");
+	ch.lastname = TranslateString("", "Hayes");
 	ch.id		= "Roger Hayes";
 	ch.model	= "bocman3";
 	ch.sound_type = "seaman";
@@ -2460,8 +2459,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Flann";
 	ch.old.lastname = "Marrow";
-	ch.name = TranslateString("","Flann");
-	ch.lastname = TranslateString("","Marrow");
+	ch.name = TranslateString("", "Flann");
+	ch.lastname = TranslateString("", "Marrow");
 	ch.id		= "Flann Marrow";
 	ch.model	= "man1_1";
 	ch.sound_type = "male_citizen";
@@ -2493,8 +2492,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Evan";
 	ch.old.lastname = "Newson";
-	ch.name = TranslateString("","Evan");
-	ch.lastname = TranslateString("","Newson");
+	ch.name = TranslateString("", "Evan");
+	ch.lastname = TranslateString("", "Newson");
 	ch.id		= "Evan Newson";
 	ch.model	= "man2";
 	ch.sound_type = "male_citizen";
@@ -2526,8 +2525,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Charles";
 	ch.old.lastname = "Windem";
-	ch.name = TranslateString("","Charles");
-	ch.lastname = TranslateString("","Windem");
+	ch.name = TranslateString("", "Charles");
+	ch.lastname = TranslateString("", "Windem");
 	ch.id		= "Charles Windem";
 	ch.model	= "old_man1";
 	ch.sex = "man";
@@ -2561,8 +2560,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant	
 	ch.old.name = "Simona";
 	ch.old.lastname = "Tolman";
-	ch.name = TranslateString("","Simona");
-	ch.lastname = TranslateString("","Tolman");
+	ch.name = TranslateString("", "Simona");
+	ch.lastname = TranslateString("", "Tolman");
 	ch.id		= "Redmond_officiant";
 	ch.model	= "Downgirl1"; // Estharos Change from towngirl2 to this model
 	ch.sound_type = "female_citizen";
@@ -2605,8 +2604,8 @@ void CreateTavernsCharacters(ref n)
 // --> JRH Quest Officiant				//fake Claire as exchanged officiant Redmond
 	ch.old.name = "Claire";
 	ch.old.lastname = "Voyant";
-	ch.name = TranslateString("","Claire");
-	ch.lastname = TranslateString("","Voyant");
+	ch.name = TranslateString("", "Claire");
+	ch.lastname = TranslateString("", "Voyant");
 	ch.id		= "Redmond_officiant_jrh";
 	ch.model	= "OldwomanPriest"; 
 	ch.sound_type = "female_citizen";
@@ -2651,8 +2650,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper
 	ch.old.name = "Pedro";
 	ch.old.lastname = "Fructoso";
-	ch.name = TranslateString("","Pedro");
-	ch.lastname = TranslateString("","Fructoso");
+	ch.name = TranslateString("", "Pedro");
+	ch.lastname = TranslateString("", "Fructoso");
 	ch.id		= "Pedro Fructoso";
 	ch.model	= "Black_Corsair"; // Estharos Change from man5 to this model
 	ch.sex = "man";
@@ -2686,8 +2685,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Juana";
 	ch.old.lastname = "Martinez";
-	ch.name = TranslateString("","Juana");
-	ch.lastname = TranslateString("","Martinez");
+	ch.name = TranslateString("", "Juana");
+	ch.lastname = TranslateString("", "Martinez");
 	ch.id		= "Santiago_officiant";
 	ch.model	= "OldWoman2"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -2732,8 +2731,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper
 	ch.old.name = "Rodrigo";
 	ch.old.lastname = "Ramos";
-	ch.name 	= TranslateString("","Rodrigo");
-	ch.lastname 	= TranslateString("","Ramos");
+	ch.name 	= TranslateString("", "Rodrigo");
+	ch.lastname 	= TranslateString("", "Ramos");
 	ch.id		= "Rodrigo Ramos";
 	ch.model	= "Napitan"; // Estharos no change
 	ch.headmodel = "h_Napitan";
@@ -2768,8 +2767,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant	
 	ch.old.name = "Maria";
 	ch.old.lastname = "Delgado";
-	ch.name = TranslateString("","Maria");
-	ch.lastname = TranslateString("","Delgado");
+	ch.name = TranslateString("", "Maria");
+	ch.lastname = TranslateString("", "Delgado");
 	ch.id		= "Santo_Domingo_officiant";
 	ch.model	= "Downgir52"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -2814,8 +2813,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Fabiao";
 	ch.old.lastname = "Dunga";
-	ch.name = TranslateString("","Fabiao");
-	ch.lastname = TranslateString("","Dunga");
+	ch.name = TranslateString("", "Fabiao");
+	ch.lastname = TranslateString("", "Dunga");
 	ch.id		= "Fabiao Dunga";
 	ch.model	= "bugmanpirat14"; // Estharos Change from fatman2 to this model
 	ch.sex = "man";
@@ -2847,8 +2846,8 @@ void CreateTavernsCharacters(ref n)
 	
 	ch.old.name = "Christiano";
 	ch.old.lastname = "Bessa";
-	ch.name = TranslateString("","Christiano");
-	ch.lastname = TranslateString("","Bessa");
+	ch.name = TranslateString("", "Christiano");
+	ch.lastname = TranslateString("", "Bessa");
 	ch.id		= "Christiano Bessa";
 	ch.model	= "Corsair3";
 	ch.sex = "man";
@@ -2879,8 +2878,8 @@ void CreateTavernsCharacters(ref n)
 	
 	ch.old.name = "Adao";
 	ch.old.lastname = "Henriques";
-	ch.name = TranslateString("","Adao");
-	ch.lastname = TranslateString("","Henriques");
+	ch.name = TranslateString("", "Adao");
+	ch.lastname = TranslateString("", "Henriques");
 	ch.id		= "Adao Henriques";
 	ch.model	= "korsar";
 	ch.sex = "man";
@@ -2913,8 +2912,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant		
 	ch.old.name = "Sofia";
 	ch.old.lastname = "Guterres";
-	ch.name = TranslateString("","Sofia");
-	ch.lastname = TranslateString("","Guterres");
+	ch.name = TranslateString("", "Sofia");
+	ch.lastname = TranslateString("", "Guterres");
 	ch.id		= "Smugglers_officiant";
 	ch.model	= "mowngirl5"; // Estharos no change
 	ch.sex = "woman";
@@ -2922,6 +2921,11 @@ void CreateTavernsCharacters(ref n)
 	ch.location	= "Smugglers_tavern";
 	ch.location.group = "goto";
 	ch.location.locator = "goto6";
+	ch.tavern.location = ch.location;
+	ch.tavern.location.group = ch.location.group;
+	ch.tavern.location.locator = ch.location.locator;
+	ch.resurrection.location = "Smugglers_tavern_upstairs";
+	ch.resurrection.shore = "Conceicao_shore_02";
 	ch.Dialog.Filename = "eng_officiant_dialog.c";
 	ch.greeting = "Gr_eng_officiant";
 	ch.nation = PORTUGAL;
@@ -2950,8 +2954,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "John";
 	ch.old.lastname = "Adams";
-	ch.name 	= TranslateString("","John");
-	ch.lastname = TranslateString("","Adams");
+	ch.name 	= TranslateString("", "John");
+	ch.lastname = TranslateString("", "Adams");
 	ch.id		= "John Adams";
 	ch.model	= "Corsair3"; // Estharos no Change
 	ch.sex = "man";
@@ -2985,8 +2989,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Manuel";
 	ch.old.lastname = "Salazar";
-	ch.name 	= TranslateString("","Manuel");
-	ch.lastname = TranslateString("","Salazar");
+	ch.name 	= TranslateString("", "Manuel");
+	ch.lastname = TranslateString("", "Salazar");
 	ch.id		= "Manuel Salazar";
 	ch.model	= "Shkiper";
 	ch.headmodel = "h_Shkiper";
@@ -3022,8 +3026,8 @@ void CreateTavernsCharacters(ref n)
 
 	ch.old.name = "Mary";
 	ch.old.lastname = "Wood";
-	ch.name 	= TranslateString("","Mary");
-	ch.lastname = TranslateString("","Wood");
+	ch.name 	= TranslateString("", "Mary");
+	ch.lastname = TranslateString("", "Wood");
 	ch.id		= "Mary Wood";
 	ch.model	= "Ladyinred";
 	ch.headmodel = "h_Ladyinred";
@@ -3063,7 +3067,8 @@ void CreateTavernsCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.ShipSpeedUp = true;
@@ -3089,8 +3094,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Esther";
 	ch.old.lastname = "Littlewood";
-	ch.name = TranslateString("","Esther");
-	ch.lastname = TranslateString("","Littlewood");
+	ch.name = TranslateString("", "Esther");
+	ch.lastname = TranslateString("", "Littlewood");
 	ch.id		= "Tortuga_officiant";
 	ch.model	= "Indian_girl1"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -3134,8 +3139,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Josephine";
 	ch.old.lastname = "Bonassieu";
-	ch.name 	= TranslateString("","Josephine");
-	ch.lastname = TranslateString("","Bonassieu");
+	ch.name 	= TranslateString("", "Josephine");
+	ch.lastname = TranslateString("", "Bonassieu");
 	ch.id		= "Josephine Bonassieu";
 	ch.model	= "girlpatch"; // Estharos no change
 	ch.sex = "woman";
@@ -3168,8 +3173,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Cathrine";
 	ch.old.lastname = "Scarlett";
-	ch.name = TranslateString("","Cathrine");
-	ch.lastname = TranslateString("","Scarlett");
+	ch.name = TranslateString("", "Cathrine");
+	ch.lastname = TranslateString("", "Scarlett");
 	ch.id		= "Turks_officiant";
 	ch.model	= "Indian_girl1"; // Estharos Change from towngirl2 to this model
 	ch.sex = "woman";
@@ -3214,8 +3219,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Bella";
 	ch.old.lastname = "Froelich";
-	ch.name 	= TranslateString("","Bella");
-	ch.lastname = TranslateString("","Froelich");
+	ch.name 	= TranslateString("", "Bella");
+	ch.lastname = TranslateString("", "Froelich");
 	ch.id		= "Bella Froelich";
 	ch.model	= "downgir53";
 	ch.sex = "woman";
@@ -3248,8 +3253,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Jantina";
 	ch.old.lastname = "Dedrick";
-	ch.name = TranslateString("","Jantina");
-	ch.lastname = TranslateString("","Dedrick");
+	ch.name = TranslateString("", "Jantina");
+	ch.lastname = TranslateString("", "Dedrick");
 	ch.id		= "Village_officiant";
 	ch.model	= "towngirl2_1";
 	ch.sex = "woman";
@@ -3287,8 +3292,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper	
 	ch.old.name = "Pierart";
 	ch.old.lastname = "Kamerling";
-	ch.name = TranslateString("","Pierart");
-	ch.lastname = TranslateString("","Kamerling");
+	ch.name = TranslateString("", "Pierart");
+	ch.lastname = TranslateString("", "Kamerling");
 	ch.id		= "Pierart Kamerling";
 	ch.model	= "Corsair5"; // Estharos Change from man2 to this model
 	ch.sex = "man";
@@ -3322,8 +3327,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant	
 	ch.old.name = "Brechtje";
 	ch.old.lastname = "Palings";
-	ch.name = TranslateString("","Brechtje");
-	ch.lastname = TranslateString("","Palings");
+	ch.name = TranslateString("", "Brechtje");
+	ch.lastname = TranslateString("", "Palings");
 	ch.id		= "Willemstad_officiant";
 	ch.model	= "towngirl6";
 	ch.sex = "woman";
@@ -3367,8 +3372,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper 1	
 	ch.old.name = "Valerio";
 	ch.old.lastname = "Xalmiento";
-	ch.name = TranslateString("","Valerio");
-	ch.lastname = TranslateString("","Xalmiento");
+	ch.name = TranslateString("", "Valerio");
+	ch.lastname = TranslateString("", "Xalmiento");
 	ch.id		= "Valerio Xalmiento";
 	ch.model	= "fatman";
 	ch.sex = "man";
@@ -3402,8 +3407,8 @@ void CreateTavernsCharacters(ref n)
 // KK --> Officiant
 	ch.old.name = "Inocencia";
 	ch.old.lastname = "Ussica";
-	ch.name = TranslateString("","Inocencia");
-	ch.lastname = TranslateString("","Ussica");
+	ch.name = TranslateString("", "Inocencia");
+	ch.lastname = TranslateString("", "Ussica");
 	ch.id		= "Cartagena_officiant";
 	ch.model	= "mowngirl7";
 	ch.sex = "woman";
@@ -3446,8 +3451,8 @@ void CreateTavernsCharacters(ref n)
 //	Tavern Keeper 2	
 	ch.old.name = "Salvadore";
 	ch.old.lastname = "Xalmiento";
-	ch.name = TranslateString("","Salvadore");
-	ch.lastname = TranslateString("","Xalmiento");
+	ch.name = TranslateString("", "Salvadore");
+	ch.lastname = TranslateString("", "Xalmiento");
 	ch.id		= "Salvadore Xalmiento";
 	ch.model	= "fatman2";
 	ch.sex = "man";
@@ -3476,5 +3481,48 @@ void CreateTavernsCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	ch.greeting = "Gr_claudio burrieza";
+	AddGameCharacter(n, ch);
+
+// GR --> Officiant 2
+	ch.old.name = "Jimena";
+	ch.old.lastname = "López";
+	ch.name = TranslateString("", "Jimena");
+	ch.lastname = TranslateString("", "López");
+	ch.id		= "Cartagena_officiant2";
+	ch.model	= "Jimena";	// Special model for officiant in special tavern - GR
+	ch.sex = "woman";
+	ch.sound_type = "female_citizen";
+	ch.location	= "Cartagena_tavern2";
+	ch.location.group = "goto";
+	ch.location.locator = "goto3";
+
+	ch.Dialog.Filename = "Eng_Officiant_dialog.c";
+	ch.greeting = "Gr_eng_officiant";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "3";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "3";
+	ch.skill.Sneak = "3";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.ImprovePotions = true;
+	ch.perks.list.BasicFirstAid = true;
+	ch.perks.list.Cooking = true;
+	ch.perks.list.BasicCommerce = true;
+	ch.money = "1";
+	ch.quest.sex = 0;
+	ch.sex.time = 0;
+	LAi_SetWaitressType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	ch.questchar = true;
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	AddGameCharacter(n, ch);
 }

@@ -554,10 +554,10 @@ bool TeleportCharacterFromCurLocationToLocation(string locatorExit, string group
 // KK -->
 string FindReloadPicture(string fname)
 {
-	if (FindFile("RESOURCE\Textures\Loading", "*.tga.tx", fname + ".tx") != "")
-		return "Loading\" + fname;
 	if (FindFile("RESOURCE\Textures\Loading\" + LanguageGetLanguage(), "*.tga.tx", fname + ".tx") != "")
 		return "Loading\" + LanguageGetLanguage() + "\" + fname;
+	if (FindFile("RESOURCE\Textures\Loading", "*.tga.tx", fname + ".tx") != "")	// GR: Moved down so that localised versions take precedence
+		return "Loading\" + fname;
 	if (FindFile("RESOURCE\Textures\Loading\ENGLISH", "*.tga.tx", fname + ".tx") != "")
 		return "Loading\ENGLISH\" + fname;
 	if (FindFile("RESOURCE\Textures\INTERFACES\BACKGROUND", "*.tga.tx", fname + ".tx") != "")//MAXIMUS

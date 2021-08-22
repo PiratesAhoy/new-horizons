@@ -1,0 +1,11 @@
+title=El pergamino
+text.t1=He encontrado un pergamino sucio en la orilla. Cerca de los restos de la lancha de un barco.
+text.t2=Mi dibujo del escarabjo de oro en el pergamino sucio.
+text.t3=Mi dibujo del escarabjo de oro, ¡pero ahora en la otra cara hay una calavera!
+text.t4=Más calor, y ahora además de la calavera, ¡ha aparecido una cabra!
+text.t5=¡Es el calor lo que revela los secretos de este documento!
+text.t6=¡Intentaré enjuagar el pergamino con agua!
+text.t7=¡Hay algunos caracteres ordenados en líneas! Parece parte de un texto.
+text.t8=Sí, sí, sí. Sabía que había más. ¡Muchos caracteres toscamente trazados entre la calavera y la cabra!
+text.t9=El pergamino está limpio pero, ¿quizás debería intentar volver a calentarlo?
+text.t10=

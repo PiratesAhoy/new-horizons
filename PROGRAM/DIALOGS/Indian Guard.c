@@ -28,78 +28,125 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\ARGU\ARGU001";
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[1];
-			link.l1.go = "First time";
+			link.l1.go = "Next time";
 			link.l2 = DLG_TEXT[2];
-			link.l2.go = "First time";
+			link.l2.go = "Next time";
 			if(CheckAttribute(PChar,"quest.smuggle_collector.collect_bows"))
 			{
+				if (!CheckCharacterItem(NPChar,"pistolbow"))
+				{
+				link.l1 = DLG_TEXT[16];
+				link.l1.go = "Exit";
+				}
+				else
+				{	
 				link.l3 = DLG_TEXT[8];
 				link.l3.go = "Get Weapon 1";
+				}
 			}
 			link.l4 = DLG_TEXT[3];
 			link.l4.go = "Exit";
 		break;
 		
-		case "Get Weapon 1":
-			dialog.text = DLG_TEXT[0];
-			if(CalcCharacterSkill(PChar,SKILL_FENCING) > 4)
+		case "Next time":
+			
+			dialog.snd = "Voice\ARGU\ARGU001";
+			dialog.text = DLG_TEXT[17];
+			link.l1 = DLG_TEXT[1];
+			link.l1.go = "First time";
+			link.l2 = DLG_TEXT[2];
+			link.l2.go = "First time";
+			if(CheckAttribute(PChar,"quest.smuggle_collector.collect_bows"))
 			{
+				if (!CheckCharacterItem(NPChar,"pistolbow"))
+				{
+				link.l1 = DLG_TEXT[16];
+				link.l1.go = "Exit";
+				}
+				else
+				{	
+				link.l3 = DLG_TEXT[8];
+				link.l3.go = "Get Weapon 1";
+				}
+			}
+			link.l4 = DLG_TEXT[3];
+			link.l4.go = "Exit";
+		break;
+
+
+		case "Get Weapon 1":
+			
+			if((CalcCharacterSkill(PChar,SKILL_FENCING) > 4) || rand (5) > 2)//PW was straight 4
+			
+			{
+				dialog.text = DLG_TEXT[17];
 				link.l1 = DLG_TEXT[9];
 				link.l1.go = "Get Weapon 2";
 			}
 			else
 			{
-				link.l1 = DLG_TEXT[15];
+				dialog.text = DLG_TEXT[15];
+				link.l1 = DLG_TEXT[21];
 				link.l1.go = "Exit provocation";
 			}
 		break;
 		
 		case "Get Weapon 2":
-			dialog.text = DLG_TEXT[0];
-			if(CalcCharacterSkill(PChar,SKILL_COMMERCE) > 5)
+			
+			if((CalcCharacterSkill(PChar,SKILL_COMMERCE) > 5) || rand (5) > 2)//PW was straight 5
 			{
-				link.l1 = DLG_TEXT[10];
+				dialog.text = DLG_TEXT[0];
+				link.l1 = DLG_TEXT[11];
 				link.l1.go = "Get Weapon 3";
 			}
 			else
 			{
-				link.l1 = DLG_TEXT[15];
+				dialog.text = DLG_TEXT[15];
+				link.l1 = DLG_TEXT[21];
 				link.l1.go = "Exit provocation";
 			}
 		break;
 		
 		case "Get Weapon 3":
-			dialog.text = DLG_TEXT[0];
-			if(CalcCharacterSkill(PChar,SKILL_SNEAK) > 6)
+			
+			if((CalcCharacterSkill(PChar,SKILL_SNEAK) > 6) || rand (4) > 2) //PW was straight 6
 			{
-				link.l1 = DLG_TEXT[11];
+				dialog.text = DLG_TEXT[17];
+				link.l1 = DLG_TEXT[10];
 				link.l1.go = "Get Weapon 4";
 			}
 			else
 			{
-				link.l1 = DLG_TEXT[15];
+				dialog.text = DLG_TEXT[15];
+				link.l1 = DLG_TEXT[21];
 				link.l1.go = "Exit provocation";
 			}
 		break;
 		
 		case "Get Weapon 4":
-			dialog.text = DLG_TEXT[0];
-			if(pchar.money >= 200)
+			
+			if(pchar.money >= 100)
 			{
+				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[12];
 				link.l1.go = "Get Weapon 5";
 			}
 			else
 			{
-				link.l1 = DLG_TEXT[15];
+				dialog.text = DLG_TEXT[15];
+				link.l1 = DLG_TEXT[21];
 				link.l1.go = "Exit provocation";
 			}
 		break;
 		
 		case "Get Weapon 5":
-			TakenItems(NPChar,"pistolbow",-1);
+			//PW take bow and remove from character	in screen		
+			//TakenItems(NPChar,"pistolbow",-1);
+			RemoveCharacterEquip(NPChar, GUN_ITEM_TYPE);
+			TakeItemFromCharacter(NPChar, "pistolbow" );
 			TakenItems(pchar,"pistolbow",1);
-			AddMoneyToCharacter(PChar, -200);
+			AddMoneyToCharacter(PChar, -100);
+			AddMoneyToCharacter(NPChar, 100);
 			dialog.text = DLG_TEXT[13];
 			link.l1 = DLG_TEXT[14];
 			link.l1.go = "Exit";
@@ -118,12 +165,24 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Following":
-			AddDialogExitQuest("Apothecary Found Follow");
-			dialog.text = DLG_TEXT[4];
+			dialog.text = DLG_TEXT[18];
 			link.l1 = DLG_TEXT[5];
-			link.l1.go = "First Time";
+			link.l1.go = "Following2";
 		break;
 		
+		case "Following1"://PW not called now
+			dialog.text = DLG_TEXT[4];
+			link.l1 = DLG_TEXT[5];
+			link.l1.go = "Following2";
+		break;
+
+		case "Following2":
+			AddDialogExitQuest("Apothecary Found Follow");
+			dialog.text = DLG_TEXT[20];
+			link.l1 = DLG_TEXT[19];
+			link.l1.go = "Exit";
+		break;
+
 		case "Spotted warehouse":
 			AddDialogExitQuest("Apothecary seen by guard warehouse");
 			dialog.text = DLG_TEXT[6];

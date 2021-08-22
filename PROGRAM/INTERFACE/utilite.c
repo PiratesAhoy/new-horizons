@@ -600,45 +600,77 @@ void CreateStringCheckCase(int enable, string strName, string strData, string st
 	}
 	CreateString(enable,strName,strAlfa,strFont,color,x,y,alignment,scale);
 }
+
+string StringCheckCase(string strData, string strFont, bool bTranslated)
+{
+	string strAlfa = "";
+	for(int g=0; g<strlen(strData); g++)
+	{
+		if(strFont==FONT_TITLE)
+		{
+			if(bTranslated)
+			{
+				strAlfa += toupper(strcut(strData,g,g)); // KK
+			}
+			else strAlfa += touppereng(strcut(strData,g,g)); // KK
+		}
+		else strAlfa += strcut(strData,g,g);
+	}
+	if(strAlfa!="") 	return strAlfa;
+	return strData;
+}
 // added by MAXIMUS - changes strings to uppercase for using INTERFACE_TITLE with any strings in interfaces <--
 
 // KK -->
+// MAXIMUS 30.06.2019: changed for giving TRANSLATED name to character ==>
 void SetMainCharacterName(string newName)
 {
-	SetCharacterName(GetMainCharacter(), newName);
+	ref mChr = GetMainCharacter();
+	int idx = FindCurrentStoryline();
+
+	SetCharacterName(mChr, newName);
+
+	if (CheckAttribute(mChr, "name")) mChr.name = GetTranslatedStoryLine(idx, mChr.name);
+	if (CheckAttribute(mChr, "middlename")) mChr.middlename = GetTranslatedStoryLine(idx, mChr.middlename);
+	if (CheckAttribute(mChr, "lastname")) mChr.lastname = GetTranslatedStoryLine(idx, mChr.lastname);
 }
+// MAXIMUS 30.06.2019: <==
 
 void SetCharacterName(ref chr, string newName)
 {
 	chr.name = "";
-	chr.old.name = "";
+//	chr.old.name = "";
 	chr.middlename = "";
-	chr.old.middlename = "";
+//	chr.old.middlename = "";
 	chr.lastname = "";
-	chr.old.lastname = "";
+//	chr.old.lastname = "";
+	bool bNamed = CheckAttribute(chr, "named");
 
 	string part1 = "";
 	string part2 = "";
 	bool bRes = DivideString(newName, " ", &part1, &part2);
 	if (part2 == "") {
 		chr.lastname = newName;
-		chr.old.lastname = newName;
+		if(strcut(chr.lastname,0,0)==" ") chr.lastname = strRight(chr.lastname,strlen(chr.lastname)-1); //MAXIMUS: fix for some names, which somehow have space before first letter
+		if(!bNamed) chr.old.lastname = chr.lastname;
 		return;
 	}
 	chr.name = part1;
-	chr.old.name = part1;
+	if(strcut(chr.name,0,0)==" ") chr.name = strRight(chr.name,strlen(chr.name)-1);
+	if(!bNamed) chr.old.name = chr.name;
 	newName = part2;
 	while (DivideString(newName, " ", &part1, &part2)) {
 		if (part1 == "de" || part1 == "van" || part1 == "da" || part1 == "la" || part1 == "di" || part1 == "o" || part1 == "von") break;
-		if (chr.middlename == "")
-			chr.middlename = part1;
-		else
-			chr.middlename = chr.middlename + " " + part1;
-		chr.old.middlename = chr.middlename;
+		if (chr.middlename == "") chr.middlename = part1;
+		else chr.middlename = chr.middlename + " " + part1;
+		
+		if(strcut(chr.middlename,0,0)==" ") chr.middlename = strRight(chr.middlename,strlen(chr.middlename)-1); //MAXIMUS: fix for some names, which somehow have space before first letter
+		if(!bNamed) chr.old.middlename = chr.middlename;
 		newName = part2;
 	}
 	chr.lastname = newName;
-	chr.old.lastname = newName;
+	if(strcut(chr.lastname,0,0)==" ") chr.lastname = strRight(chr.lastname,strlen(chr.lastname)-1); //MAXIMUS: fix for some names, which somehow have space before first letter
+	if(!bNamed) chr.old.lastname = chr.lastname;
 	if (CheckAttribute(chr, "middlename") == true && chr.middlename == "") {
 		DeleteAttribute(chr, "middlename");
 		if (CheckAttribute(chr, "old.middlename")) DeleteAttribute(chr, "old.middlename");
@@ -1446,6 +1478,7 @@ void Textbox_Write(bool bAccept)
 	if (GetCurrentNode() == arTextbox.Active1) {
 		if (bAccept)
 			GameInterface.strings.(name) = KeyboardString;
+			GameInterface.strings.(name).named = true;
 		else
 			GameInterface.strings.(name) = arTextbox.text;
 		if (CheckAttribute(arTextbox, "numeric") == true && KeyboardString != "") {

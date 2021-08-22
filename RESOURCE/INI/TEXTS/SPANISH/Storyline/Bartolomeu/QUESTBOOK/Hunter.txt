@@ -1,0 +1,16 @@
+title=El cazador
+text.t1=¿Qué querrá el gobernador Barreto? No se tarda mucho en ir a #sisland_Conceicao# desde #sisland_Oxbay#. No tendré que esperar mucho para averiguarlo.
+text.t2=Ahora estoy envuelto en la guerra hispano-lusa. Tengo que encontrar y matar al capitán español Arturo Campos. Según el gobernador Barreto, está cazando presas en torno a Tortuga y San Salvador con un galeón llamado 'San Pablo'. 
+text.t3=No he visto a Campos. Creo que debe estar en la isla porque su barco estaba cerca de los Arrecifes Blancos. Nos dirigiremos allí.
+text.t4=¡Misión cumplida! El gobernador Barreto tiene su venganza. Habrá que darle las buenas noticias.
+text.t5=¡Condenados mercenarios españoles! Han secuestrado a Emilio Soares. Leonardo Corrales, un espía en #sIsla Muelle#, es mi único medio de encontrarlos. Vive en una casa que mira a un jardín, cerca de la taberna.
+text.t6=Maldición... Las cosas van de mal en peor. Todos mis amigos están en peligro por culpa de esos mercenarios. la primera es Roxanne Lalliere: tengo qeu avisarla. La última vez que nos vimos, dijo que quería trabajar para el gobernador de #sFalaise de Fleur#. ¡Iré a verle!
+text.t7=¡Mala suerte! Roxanne no está en #sisland_Falaise de Fleur#, sino en una misión en la ciudad inglesa de Alice Town, en Eleuthera. Espero poder encontrarla allí.
+text.t8=Ha ocurrido lo peor. Roxanne ha sido secuestrada, estoy bastante seguro de que han sido los mercenarios. Debe de estar en Puerto la Cruz. Para entrar en la ciudad, me disfrazaré de oficial español y esperaré a la caída de la noche. Estoy cerca de la ciudad, las condiciones son perfectas para intentar una operación de rescate.
+text.t9=He tenido que escalar los acantilados para evitar a los guardias del camino. Sin embargo, todavía me queda una dura tarea por delante. Tengo que encontrar y matar al capitán de este fuerte. Sin duda, él llevará consigo las llaves del calabozo.
+text.t10=Logré persuadir a Johan Elting para que se uniera a mi tripulación. Salimos discretamente del fuerte. Por desgracia, poco después nos encontramos con Padilla y sus hombres en la selva. Todos murieron en el combate. Ahora podemos zarpar rumbo a Alice Town.
+text.t11=Próxima escala, La Habana. Emilio está encarcelado allí. Desembarcaremos en la Bahía de San Antonio.
+text.t12=Después de rescatar a Emilio, Elting mató al vicealmirante Benavides. Pongamos rumbo a #sRedmond# para decidir nuestro futuro.
+text.t13=Roxanne ha vuelto a #sFalaise de Fleur# y Elting ha decidido empezar una nueva vida en #sisland_Douwesen#. Yo estoy deseoso de nuevas aventuras. ¿Por qué no poner rumbo a Tortuga y ver si se está preparando alguna expedición?
+text.t14=Roxanne ha vuelto a #sFalaise de Fleur#, pero yo estoy deseoso de nuevas aventuras. ¿Por qué no poner rumbo a Tortuga y ver si se está preparando alguna expedición?
+text.t15=Después de matar a Johan Elting, salimos discretamente del fuerte. Por desgracia, poco después nos encontramos con Padilla y sus hoombres en la selva. Todos han muerto en combate. Ahora podemos zarpar rumbo a Alice Town. 

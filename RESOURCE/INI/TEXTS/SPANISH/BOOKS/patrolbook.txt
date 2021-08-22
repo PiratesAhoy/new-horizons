@@ -1,0 +1,6 @@
+TEXT	{
+Esta es la versión #dversion# del horario de patrulla para el territorio de #sIsland#.
+Debido a la cantidad de contrabando que se encuentra a la venta en esta isla, se ha decidido poner a la guardia costera en #sState#.
+Esto significa que el horario será el siguiente:
+#sSchedule#
+}

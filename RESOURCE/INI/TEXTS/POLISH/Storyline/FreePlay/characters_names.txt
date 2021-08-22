@@ -1,0 +1,93 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| FreePlay.c |=====}
+Julian{Julian}
+McAllister{McAllister}
+
+{=====| StartStoryline.c |=====}
+Robert{Robert}
+Fletcher{Fletcher}
+Edward{Edward}
+Pellew{Pellew}
+Elbaron{Elbaron}
+Caron{Caron}
+Taras{Taras}
+Bulba{Bulba}
+Cardinal{Cardinal}
+Richelieu{Richelieu}
+Mazarin{Mazarin}
+Teague{Teague}
+Sparrow{Sparrow}
+François{François}
+de Hadoque{de Hadoque}
+Koleniko{Koleniko}
+Ragetti{Ragetti}
+
+{=====| quests_reaction.c |=====}
+Bartolomeu{Bartolomeu}
+Portugues{Portugues}
+Guillaume{Guillaume}
+Auger{Auger}
+
+{=====| Officers.c |=====}
+William{William}
+Sullivan{Sullivan}
+David{David}
+O'Hara{O'Hara}
+Brian{Brian}
+Darcy{Darcy}
+Killian{Killian}
+Kildare{Kildare}
+Emily{Emily}
+Butler{Butler}
+Uriah{Uriah}
+O'Bannon{O'Bannon}
+Angus{Angus}
+Calhoun{Calhoun}
+Bush{Bush}
+
+{=====| TempQuest.c |=====}
+Bart{Bart}
+Renault{Renault}
+Enrique{Enrique}
+Padilla{Padilla}
+Celestino{Celestino}
+Villalobos{Villalobos}
+Crewmember{Crewmember}
+Spanish{Spanish}
+Commander{Commander}
+Padre{Padre}
+Gerardo{Gerardo}
+Soldier{Soldier}
+Barbara{Barbara}
+Wellesley{Wellesley}
+Matthews{Matthews}
+Styles{Styles}
+Perrin{Perrin}
+Oldroyd{Oldroyd}
+Marsh{Marsh}
+Keene{Keene}
+Fernando{Fernando}
+Suarez{Suarez}
+Elvira{Elvira}
+Alonso{Alonso}
+Madero{Madero}
+Arnaldo{Arnaldo}
+Chaparro{Chaparro}
+
+{=====| TempQuestEnemy.c |=====}
+Prison{Prison}
+Guard{Guard}
+Arnold{Arnold}
+McGill{McGill}
+Smuggler{Smuggler}
+Acre{Acre}
+Jourdain{Jourdain}
+Anjou{Anjou}
+Edam{Edam}
+De Cow{De Cow}
+Abel{Abel}
+Barco{Barco}
+Renouart{Renouart}
+Larrouse{Larrouse}
+
+{=====| 63 characters |=====}

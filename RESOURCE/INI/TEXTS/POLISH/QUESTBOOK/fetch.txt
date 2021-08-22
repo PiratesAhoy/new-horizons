@@ -1,0 +1,5 @@
+title=General Quest - Helping the #stype# of #stown#.
+text.t1=The #stype# of #stown# asked me to get #damount# #sgood# from somewhere and deliver it back to him for #dmoney# gold coins. But I have to deliver it before #sdate# or I will receive nothing.
+text.t2=I have delivered a part of the amount but I should still deliver the rest.
+text.t3=I completed the task.
+text.t4=I failed to deliver the goods in time.

@@ -1,0 +1,16 @@
+title=La trampa de Bartolomeu
+text.t1=He tenido que aceptar una nueva misión, a pesar de que no tenía ninguna gana, después de lo que pasó en Oranjestad. Mi próximo objetivo es Bartolomeu o Portugues, el célebre pirata luso. El capitán Butcher ya le está buscando. Tengo que verme con él en #sIsla Muelle#.
+text.t2=Una pista, por fin. El capitán Butcher cree que sólo tenemos que encontrar a un amigo de Charles Baxter en el asentamiento pirata de #sisland_Quebradas Costillas# para que nos conduzca en dirección a Bartolomeu.
+text.t3=El capitán Butcher tenía razón. Hemos encontrado a un antiguo compañero de tripulación de Baxter en el asentamiento pirata. Me ha dicho que Bartolomeu ha estado trabajando para el gobernador de #sisland_Conceicao#. Con toda certeza, encontraremos más información en #sConceicao#. Empezaré mi búsqueda allí hablando con el tabernero.
+text.t4=He capturado a uno de los oficiales de Bartolomeu, Emilio Soares. Sin embargo, no sé dónde está Bartolomeu. Volveré a La Habana a pedirle consejo al vicealmirante Benavides.
+text.t5=El vicealmirante me ha proporcionado una información esencial. Roxanne Lalliere, la mejor amiga de Bartolomeu, está en una misión en Alice Town. Sin embargo, antes de dirigirme allí, tengo que reunirme con el gobernador de Puerto la Cruz. Su ayuda podría resultar útil.
+text.t6=El gobernador me ha sugerido que hable con William Cotter, un oficial inglés que trabaja para él. Podría ayudarnos con el secuestro de Lalliere. Debería poder encontrarlo patrullando las calles de Alice Town.
+text.t7=Por la noche, mientras estaba en el fuerte de Eleuthera, sorprendí a Bartolomeu tratando de liberar de la prisión a Roxanne Lalliere. Después de tener una charla, acepté su oferta de asociarnos, y los tres salimos discretamente del fuerte. Por desgracia, nos encontramos con Padilla y sus hombres en la jungla. Todos han muerto en combate. Ahora podemos dirigirnos a Alice Town.
+text.t8=Próxima escala, La Habana. Emilio está encarcelado allí. Desembarcaremos en la Bahía de San Antonio.
+text.t9=Después de rescatar a Emilio Soares, maté al vicealmirante Benavides cuando entraba en su residencia. Pongamos rumbo a #sRedmond# para decidir nuestro futuro.
+text.t10=Roxanne ha regresado a #sFalaise de Fleur# mientras Bartolomeu ha zarpado en busca de nuevas aventuras. Por mi parte, he decidido empezar una nueva vida en #sisland_Douwesen#.
+text.t11=Por la noche, mientras estaba en el fuerte de Eleuthera, sorprendí a Bartolomeu tratando de liberar a Roxanne Lalliere de la prisión. No logró convencerme de abandonar mis servicios a los españoles, y tuve que matarlo. Poco después llegó el capitán Padilla, con órdenes de regresar a La Habana lo antes posible.
+text.t12=¡Por fin soy un hombre libre! Esta pesadilla ha terminado y puedo vivir mi vida como yo quiera.
+
+ 
+

@@ -826,6 +826,40 @@ void CreateSaintMartinCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
 	ch.greeting = "Gr_falaise de fleur soldier";
 	AddGameCharacter(n, ch);
+
+// Marigot Church
+	ch.old.name = "Pater";
+	ch.old.lastname = "Travers";
+	ch.name 	= TranslateString("","Pater");
+	ch.lastname 	= TranslateString("","Travers");
+	ch.id		= "Pater Travers";
+	ch.model	= "monk";
+	ch.sound_type = "priest";
+	ch.sex = "man";
+	ch.location	= "Marigot_Church";
+	ch.location.group = "barmen";
+	ch.location.locator = "stay";
+	ch.Dialog.Filename = "Pater Travers_dialog.c";
+	ch.Dialog.Filename.group = "church.c";
+	ch.nation = FRANCE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetPriestType(ch);
+	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
+	ch.greeting = "Gr_Father Abbott";
+	AddGameCharacter(n, ch);
 	
 // Marigot Citizens
     ch.old.name = "Aubert";
@@ -1385,7 +1419,7 @@ void CreateSaintMartinCharacters(ref n)
     ch.location    = "Philipsburg_port";
     ch.location.group = "goto";
     ch.location.locator = "goto19";
-    ch.Dialog.Filename = "Philipsburg citizen_dialog.c";
+    ch.Dialog.Filename = "Adam Groot_dialog.c";
     ch.greeting = "Gr_douwesen citizen";
     ch.nation = HOLLAND;
     ch.rank     = 1;

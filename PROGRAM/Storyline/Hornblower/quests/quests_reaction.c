@@ -1063,6 +1063,7 @@ void QuestComplete(string sQuestName)
 
 			SetCharacterRemovable(characterFromID("Captain Keene"), true);
 			RemoveCharacterCompanion(Pchar, characterFromID("Captain Keene"));
+			setCharacterShipLocation(characterFromID("Captain Keene"), "Antigua_port");
 
 			Pchar.quest.Arrival_at_Charletown_after_battle.win_condition.l1 = "location";
 			PChar.quest.Arrival_at_Charletown_after_battle.win_condition.l1.character = Pchar.id;
@@ -4741,6 +4742,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.Join_the_battle_company.win_condition.l1.character = Pchar.id;
 			Pchar.quest.Join_the_battle_company.win_condition.l1.location = "Falaise_de_fleur_shore";
 			Pchar.quest.Join_the_battle_company.win_condition = "Join_the_battle_company";
+			ChangeCharacterAddress(CharacterFromID("Victor Hugues"), "None", "");	// Don't want the mad monk wandering into the battle!
 		break;
 
 		case "Join_the_battle_company":
@@ -5754,6 +5756,7 @@ void QuestComplete(string sQuestName)
 			characters[GetCharacterIndex("William Chumley")].Dialog.Filename = "William Chumley_dialog.c";
 			LAi_ActorDialog(characterFromID("William Chumley"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("William Chumley")].dialog.CurrentNode = "Battle_over_now_Oxbay";
+			ChangeCharacterAddressGroup(CharacterFromID("Victor Hugues"), "Falaise_de_fleur_shore", "monk", "goto1"); // Put mad monk back on shore
 		break;
 
 		case "Pellew_sends_you_to_Greenford":
@@ -5991,9 +5994,10 @@ void QuestComplete(string sQuestName)
 
 		case "Day_one_the_Renown2":
 			LAi_SetActorType(pchar);
-			LAi_ActorGoToLocator(characterFromID("Captain James Sawyer"), "reload", "boatl", "", 0.0);
+			LAi_SetActorType(CharacterFromID("Captain James Sawyer"));
+			LAi_ActorGoToLocator(CharacterFromID("Captain James Sawyer"), "reload", "boatl", "", 0.0);
 			LAi_ActorRunToLocator((Pchar), "goto", "goto21", "Day_one_the_Renown3", 15.0);
-			LAi_QuestDelay("Day_one_the_Renown3", 15.0);
+//			LAi_QuestDelay("Day_one_the_Renown3", 15.0);
 		break;
 
 		case "Day_one_the_Renown3":
@@ -6139,15 +6143,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Go_get_Captain_Sawyer":
-			LAi_ActorGoToLocator(characterFromID("Archie Kennedy"), "reload", "reload1", "", 0.0);
+			LAi_ActorGoToLocator(characterFromID("Archie Kennedy"), "reload", "reload1", "Go_get_Captain_Sawyer2", 0.0);
 			LAi_ActorGoToLocator(characterFromID("Lt. William Bush"), "goto", "marine4", "", 0.0);
 			ChangeCharacterAddressGroup(characterfromID("Henry Wellard"), "Quest_ShipDeck6XX", "rig", "rigging1");
-			ChangeCharacterAddressGroup(characterfromID("Captain James Sawyer"), "Quest_ShipDeck6XX", "reload", "reload1");
-			LAi_QuestDelay("Go_get_Captain_Sawyer2", 2.0);
+//			ChangeCharacterAddressGroup(characterfromID("Captain James Sawyer"), "Quest_ShipDeck6XX", "reload", "reload1");
+//			LAi_QuestDelay("Go_get_Captain_Sawyer2", 2.0);
 		break;
 
 		case "Go_get_Captain_Sawyer2":
-			LAi_ActorGoToLocator(characterFromID("Archie Kennedy"), "goto", "marine2", "", 2.0);
+			ChangeCharacterAddressGroup(characterfromID("Captain James Sawyer"), "Quest_ShipDeck6XX", "reload", "reload1");
+			LAi_ActorGoToLocator(characterFromID("Archie Kennedy"), "goto", "marine2", "", 15.0);
 			LAi_ActorGoToLocator(characterFromID("Captain James Sawyer"), "goto", "marine3", "", 2.0);
 
 			characters[GetCharacterIndex("Captain James Sawyer")].Dialog.Filename = "Captain James Sawyer_dialog.c";
@@ -6195,6 +6200,7 @@ void QuestComplete(string sQuestName)
 			AddQuestRecord("Mutiny", 3);
 			SetCurrentTime(14.00, 0);
 			ChangeCharacterAddressGroup(characterfromID("Doctor Clive"), "Seadogs", "goto", "goto2");
+			ChangeCharacterAddressGroup(characterfromID("Captain James Sawyer"), "Cabin4", "officers", "officer5");
 
 			characters[GetCharacterIndex("Doctor Clive")].Dialog.Filename = "Doctor Clive_dialog.c";
 			LAi_SetActorType(characterFromID("Doctor Clive"));
@@ -6242,15 +6248,17 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterfromID("Archie Kennedy"), "Cabin4", "officers", "reload1_3");
 			ChangeCharacterAddressGroup(characterfromID("Lt. William Bush"), "Cabin4", "officers", "officer4");
 			LAi_SetActorType(pchar);
-			LAi_ActorGoToLocator((Pchar), "officers", "reload1_1", "Go_to_Captains_Meeting3", 15.0);
+//			LAi_ActorGoToLocator((Pchar), "officers", "reload1_1", "Go_to_Captains_Meeting3", 15.0);
+			LAi_ActorFollow(PChar, CharacterFromID("Captain James Sawyer"), "", 1.0);
 			Characters[GetCharacterIndex("Captain James Sawyer")].dialog.currentnode = "Sail_to_Cuba";
+			LAi_QuestDelay("Go_to_Captains_Meeting3", 1.5);
 		break;
 
 		case "Go_to_Captains_Meeting3":
 			LAi_SetPlayerType(pchar);
 			characters[GetCharacterIndex("Captain James Sawyer")].Dialog.Filename = "Captain James Sawyer_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Captain James Sawyer"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Captain James Sawyer"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Captain James Sawyer"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Captain James Sawyer")].dialog.currentnode = "Sail_to_Cuba";
 
 			Characters[GetCharacterIndex("Lt. William Bush")].dialog.currentnode = "About_Sail_to_Cuba";
@@ -6259,7 +6267,7 @@ void QuestComplete(string sQuestName)
 		case "Bush_chimes_in":
 			characters[GetCharacterIndex("Lt. William Bush")].Dialog.Filename = "Lt. William Bush_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Lt. William Bush"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Lt. William Bush"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Lt. William Bush"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Lt. William Bush")].dialog.currentnode = "About_Sail_to_Cuba";
 
 			Characters[GetCharacterIndex("Captain James Sawyer")].dialog.currentnode = "Plotting";
@@ -6268,7 +6276,7 @@ void QuestComplete(string sQuestName)
 		case "The_Doctor_Speaks":
 			characters[GetCharacterIndex("Captain James Sawyer")].Dialog.Filename = "Captain James Sawyer_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Captain James Sawyer"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Captain James Sawyer"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Captain James Sawyer"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Captain James Sawyer")].dialog.currentnode = "Plotting";
 
 			Characters[GetCharacterIndex("Doctor Clive")].dialog.currentnode = "Please_leave";
@@ -6277,7 +6285,7 @@ void QuestComplete(string sQuestName)
 		case "The_Doctor_Speaks2":
 			characters[GetCharacterIndex("Doctor Clive")].Dialog.Filename = "Doctor Clive_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Doctor Clive"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Doctor Clive"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Doctor Clive"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Doctor Clive")].dialog.currentnode = "Please_leave";
 		break;
 
@@ -6350,7 +6358,7 @@ void QuestComplete(string sQuestName)
 		case "Move_down_to_deck3":
 			characters[GetCharacterIndex("Captain James Sawyer")].Dialog.Filename = "Captain James Sawyer_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Captain James Sawyer"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Captain James Sawyer"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Captain James Sawyer"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Captain James Sawyer")].dialog.currentnode = "I_Know_youre_here";
 		break;
 
@@ -6379,8 +6387,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterfromID("Doctor Clive"), "Quest_ShipDeck6XX", "reload", "reload1");
 			LAi_ActorTurnToCharacter(characterFromID("Lt. Percy Buckland"), characterFromID("Doctor Clive"));
 			LAi_ActorTurnToCharacter(characterFromID("Lt. William Bush"), characterFromID("Doctor Clive"));
-			LAi_ActorTurnToCharacter((Pchar), characterFromID("Doctor Clive"));
-
+//			LAi_ActorTurnToCharacter((PChar), characterFromID("Doctor Clive"));
 			LAi_SetActorType(characterFromID("Doctor Clive"));
 			characters[GetCharacterIndex("Doctor Clive")].Dialog.Filename = "Doctor Clive_dialog.c";
 			LAi_ActorDialog(characterFromID("Doctor Clive"),PChar,"",5.0,5.0);
@@ -6891,6 +6898,7 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Archie Kennedy")].dialog.CurrentNode = "First time";
 
 			Locations[FindLocation("Prison_Shore")].reload.l2.disable = 1;
+			LAi_SetActorType(CharacterFromID("Francisco Manuel Ortega"));
 			LAi_ActorGoToLocator(characterFromID("Francisco Manuel Ortega"), "officers", "reload1_2", "",2.0);
 			LAi_SetActorType(characterFromID("Lt. William Bush"));
 			characters[GetCharacterIndex("Lt. William Bush")].Dialog.Filename = "Lt. William Bush_dialog.c";
@@ -6904,7 +6912,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorRunToLocator(characterFromID("Styles"), "goto", "goto19", "",10.0);
 			LAi_ActorRunToLocator(characterFromID("Oldroyd"), "goto", "goto5", "",10.0);
 
-			LAi_SetCivilianGuardianType(characterFromID("Francisco Manuel Ortega"));
+//			LAi_SetCivilianGuardianType(characterFromID("Francisco Manuel Ortega"));
 			LAi_SetOfficerType(characterFromID("Lt. William Bush"));
 			LAi_SetOfficerType(characterFromID("Richard Sharpe"));
 			LAi_SetOfficerType(characterFromID("Matthews"));
@@ -6912,7 +6920,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_SetCivilianGuardianType(characterFromID("Francisco Manuel Ortega"));
 			characters[GetCharacterIndex("Francisco Manuel Ortega")].Dialog.Filename = "Francisco Manuel Ortega_dialog.c";
-			LAi_ActorDialog(characterFromID("Francisco Manuel Ortega"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Francisco Manuel Ortega"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Francisco Manuel Ortega")].dialog.CurrentNode = "giving_my_surrender";
 		break;
 
@@ -7746,7 +7754,7 @@ void QuestComplete(string sQuestName)
 
 			characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Sir Edward Pellew"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Sir Edward Pellew"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Sir Edward Pellew"),PChar,"",5.0,5.0);
 
 			Characters[GetCharacterIndex("Black Charlie Hammond")].dialog.currentnode = "Court_Martial_two";
 		break;
@@ -7754,7 +7762,7 @@ void QuestComplete(string sQuestName)
 		case "The_Court_Martial_Begins4":
 			characters[GetCharacterIndex("Black Charlie Hammond")].Dialog.Filename = "Black Charlie Hammond_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Black Charlie Hammond"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Black Charlie Hammond"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Black Charlie Hammond"),PChar,"",5.0,5.0);
 
 			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.currentnode = "Court_Martial_three";
 		break;
@@ -7762,7 +7770,7 @@ void QuestComplete(string sQuestName)
 		case "The_Court_Martial_Begins5":
 			characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Sir Edward Pellew"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Sir Edward Pellew"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Sir Edward Pellew"),PChar,"",5.0,5.0);
 
 			Characters[GetCharacterIndex("Lt. Percy Buckland")].dialog.currentnode = "Court_Martial_four";
 		break;
@@ -7772,7 +7780,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Lt. Percy Buckland"));
 			characters[GetCharacterIndex("Lt. Percy Buckland")].Dialog.Filename = "Lt. Percy Buckland_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Lt. Percy Buckland"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Lt. Percy Buckland"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Lt. Percy Buckland"),PChar,"",5.0,5.0);
 
 			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.currentnode = "Court_Martial_five";
 		break;
@@ -7781,7 +7789,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetOfficerType(characterFromID("Archie Kennedy"));
 			characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Sir Edward Pellew"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Sir Edward Pellew"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Sir Edward Pellew"),PChar,"",5.0,5.0);
 
 			Characters[GetCharacterIndex("Archie Kennedy")].dialog.currentnode = "I_pushed_the_Captain";
 		break;
@@ -7791,7 +7799,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Archie Kennedy"));
 			characters[GetCharacterIndex("Archie Kennedy")].Dialog.Filename = "Archie Kennedy_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Archie Kennedy"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Archie Kennedy"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Archie Kennedy"),PChar,"",5.0,5.0);
 		break;
 
 		case "Retribution_and_Promotion":
@@ -8532,7 +8540,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Matthews"));
 			characters[GetCharacterIndex("Matthews")].Dialog.Filename = "Matthews_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Matthews"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
 		break;
 
 		case "Clear_for_firing":
@@ -8585,7 +8593,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Matthews"));
 			characters[GetCharacterIndex("Matthews")].Dialog.Filename = "Matthews_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Matthews"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
 		break;
 
 		case "The_French_back_off":
@@ -8625,7 +8633,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Matthews"));
 			characters[GetCharacterIndex("Matthews")].Dialog.Filename = "Matthews_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Matthews"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
 		break;
 
 		case "Some_gunners_die":
@@ -8673,7 +8681,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Matthews"));
 			characters[GetCharacterIndex("Matthews")].Dialog.Filename = "Matthews_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Matthews"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
 		break;
 
 		case "Where_are_the_reinforcements":
@@ -8701,7 +8709,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Arthur Wellesley"));
 			characters[GetCharacterIndex("Arthur Wellesley")].Dialog.Filename = "Arthur Wellesley_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Arthur Wellesley"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Arthur Wellesley"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Arthur Wellesley"),PChar,"",5.0,5.0);
 
 			Characters[GetCharacterIndex("Matthews")].dialog.CurrentNode = "Change_orders";
 		break;
@@ -8726,7 +8734,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterFromID("Matthews"));
 			characters[GetCharacterIndex("Matthews")].Dialog.Filename = "Matthews_dialog.c";
 			LAi_ActorDialogNow(characterFromID("Matthews"),PChar,"",1.0);
-			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
+//			LAi_ActorDialog(characterFromID("Matthews"),PChar,"",5.0,5.0);
 		break;
 
 		case "Go_to_the_guns":
@@ -12934,41 +12942,43 @@ void QuestComplete(string sQuestName)
 
 		case "Pellew_at_Greenford_Two":
 			AddQuestRecord("Old Friends - New Enemies", 11);
-			ChangeCharacterAddressGroup(characterFromID("Jack Hammond"), "Greenford_port", "goto", "goto13");
+			ChangeCharacterAddressGroup(CharacterFromID("Jack Hammond"), "Greenford_port", "goto", "goto13");
 
-			Pchar.quest.Report_on_Invasion.win_condition.l1 = "location";
-			PChar.quest.Report_on_Invasion.win_condition.l1.character = Pchar.id;
-			Pchar.quest.Report_on_Invasion.win_condition.l1.location = "Greenford_port";
+			PChar.quest.Report_on_Invasion.win_condition.l1 = "location";
+			PChar.quest.Report_on_Invasion.win_condition.l1.character = PChar.id;
+			PChar.quest.Report_on_Invasion.win_condition.l1.location = "Greenford_port";
 			Pchar.quest.Report_on_Invasion.win_condition = "Report_on_Invasion";
 		break;
 
 		case "Report_on_Invasion":
 			SetNationRelationBoth(ENGLAND, FRANCE, RELATION_ENEMY);
 			SetNationRelationBoth(ENGLAND, SPAIN, RELATION_ENEMY);
+			SetNationRelationBoth(ENGLAND, HOLLAND, RELATION_ENEMY);
 			SetRMRelation(PChar, FRANCE, REL_WAR);
 			SetRMRelation(PChar, SPAIN, REL_WAR);
+			SetRMRelation(PChar, HOLLAND, REL_WAR);
 
 			LAi_SetOfficerType(characterFromID("Jack Hammond"));
 
-			ChangeCharacterAddressGroup(characterFromID("Richard Sharpe"), "Greenford_port", "reload", "reload1_back");
-			LAi_SetActorType(characterFromID("Richard Sharpe"));
+			ChangeCharacterAddressGroup(CharacterFromID("Richard Sharpe"), "Greenford_port", "reload", "reload1_back");
+			LAi_SetActorType(CharacterFromID("Richard Sharpe"));
 			characters[GetCharacterIndex("Richard Sharpe")].Dialog.Filename = "Richard Sharpe_dialog.c";
-			LAi_ActorDialog(characterFromID("Richard Sharpe"),PChar,"",5.0,5.0);
+			LAi_ActorDialog(CharacterFromID("Richard Sharpe"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Richard Sharpe")].dialog.CurrentNode = "Back_to_barracks";
 		break;
 
 		case "Signal_from_flagship":
-			SetCharacterRemovable(characterFromID("Richard Sharpe"), true);
-			RemoveOfficersIndex(pchar, GetCharacterIndex("Richard Sharpe"));
-			RemovePassenger(pchar, characterFromID("Richard Sharpe"));
-			RemoveOfficersIndex(pchar, GetCharacterIndex("Patrick Harper"));
-			RemovePassenger(pchar, characterFromID("Patrick Harper"));
-			RemoveOfficersIndex(pchar, GetCharacterIndex("Rifleman Tongue"));
-			RemovePassenger(pchar, characterFromID("Rifleman Tongue"));
+			SetCharacterRemovable(CharacterFromID("Richard Sharpe"), true);
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Richard Sharpe"));
+			RemovePassenger(PChar, CharacterFromID("Richard Sharpe"));
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Patrick Harper"));
+			RemovePassenger(PChar, CharacterFromID("Patrick Harper"));
+			RemoveOfficersIndex(PChar, GetCharacterIndex("Rifleman Tongue"));
+			RemovePassenger(PChar, CharacterFromID("Rifleman Tongue"));
 
-			LAi_SetActorType(characterFromID("Jack Hammond"));
+			LAi_SetActorType(CharacterFromID("Jack Hammond"));
 			characters[GetCharacterIndex("Jack Hammond")].Dialog.Filename = "Jack Hammond_dialog.c";
-			LAi_ActorDialog(characterFromID("Jack Hammond"),PChar,"",5.0,5.0);
+			LAi_ActorDialog(CharacterFromID("Jack Hammond"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Jack Hammond")].dialog.CurrentNode = "Signal_from_flagship";
 		break;
 
@@ -13400,6 +13410,9 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Lighthouse_step_five.win_condition.l1.character = Pchar.id;
 			pchar.quest.Lighthouse_step_five.win_condition.l1.location = "Guadeloupe_Jungle_02";
 			pchar.quest.Lighthouse_step_five.win_condition = "Lighthouse_step_five";
+
+			SetLocatorRadius(locations[FindLocation("Guadeloupe_Jungle_01")], "goto", "goto1", 2.0);
+			SetLocatorRadius(locations[FindLocation("Guadeloupe_Jungle_01")], "goto", "citizen02", 2.0);
 		break;
 
 		case "Two_French_Soldiers":
@@ -13462,6 +13475,8 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Lighthouse_step_six.win_condition.l1.character = Pchar.id;
 			pchar.quest.Lighthouse_step_six.win_condition.l1.location = "Guadeloupe_Lighthouse";
 			pchar.quest.Lighthouse_step_six.win_condition = "Lighthouse_step_six";
+
+			SetLocatorRadius(locations[FindLocation("Guadeloupe_Jungle_02")], "goto", "goto7", 1.5);
 		break;
 
 		case "Three_French_Soldiers":
@@ -13531,7 +13546,7 @@ void QuestComplete(string sQuestName)
 
 		case "Deal_with_him2":
 			LAi_SetHP(characterFromID("Soldier1X"), 20.0, 20.0);
-			LAi_SetHP(characterFromID("Styles"), 80.0, 80.0);
+//			LAi_SetHP(characterFromID("Styles"), 80.0, 80.0);
 			LAi_SetActorType(CharacterFromID("Soldier1X"));
 			LAi_SetActorType(CharacterFromID("Styles"));
 			LAi_group_MoveCharacter(CharacterFromID("Soldier1X"), "Soldier1X");
@@ -15499,6 +15514,8 @@ void QuestComplete(string sQuestName)
 
 			SetCharacterRemovable(characterFromID("Styles"), false); // GR: Styles and Wilks remain in your crew but should not be assignable
 			SetCharacterRemovable(characterFromID("Able Seaman Wilks"), false);
+			LAi_SetImmortal(CharacterFromID("Styles"), false);
+			LAi_SetImmortal(CharacterFromID("Able Seaman Wilks"), false);
 
 			Pchar.quest.Almost_end_of_Loyalty.win_condition.l1 = "location";
 			PChar.quest.Almost_end_of_Loyalty.win_condition.l1.character = Pchar.id;
@@ -16536,66 +16553,131 @@ void QuestComplete(string sQuestName)
 
 		case "restore_sound":
 //			locations[FindLocation("Greenford_port")].type = "port";
-			ChangeCharacterAddress(characterFromID("Richard Sharpe"), "None", "");
-			ChangeCharacterAddress(characterFromID("Patrick Harper"), "None", "");
-			ChangeCharacterAddress(characterFromID("Rifleman Haggman"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Richard Sharpe"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Patrick Harper"), "None", "");
+			ChangeCharacterAddress(CharacterFromID("Rifleman Haggman"), "None", "");
 			PChar.quest.report_traitors_done.win_condition.l1 = "location";
 			PChar.quest.report_traitors_done.win_condition.l1.character = PChar.id;
-			Pchar.quest.report_traitors_done.win_condition.l1.location = "Greenford Naval HQ";
-			Pchar.quest.report_traitors_done.win_condition = "report_traitors_done";
+			PChar.quest.report_traitors_done.win_condition.l1.location = "Greenford Naval HQ";
+			PChar.quest.report_traitors_done.win_condition = "report_traitors_done";
 			PChar.quest.back_home.win_condition.l1 = "location";
 			PChar.quest.back_home.win_condition.l1.character = PChar.id;
-			Pchar.quest.back_home.win_condition.l1.location = "Mrs. Mason's House";
-			Pchar.quest.back_home.win_condition = "back_home";			
+			PChar.quest.back_home.win_condition.l1.location = "Mrs. Mason's House";
+			PChar.quest.back_home.win_condition = "back_home";			
 		break;
 
 		case "report_traitors_done":
-			ChangeCharacterAddressGroup(characterFromID("Lt. Eccleston"), "Greenford Naval HQ", "sit", "sit1");
-			LAi_ActorSetSitMode(characterFromID("Lt. Eccleston"));
-			ChangeCharacterAddressGroup(characterFromID("Sir Edward Pellew"), "Greenford Naval HQ", "goto", "goto3");
+			ChangeCharacterAddressGroup(CharacterFromID("Lt. Eccleston"), "Greenford Naval HQ", "sit", "sit1");
+			LAi_ActorSetSitMode(CharacterFromID("Lt. Eccleston"));
+			ChangeCharacterAddressGroup(CharacterFromID("Sir Edward Pellew"), "Greenford Naval HQ", "goto", "goto3");
 			LAi_QuestDelay("report_traitors_done2", 2.0);
 		break;
 
 		case "report_traitors_done2":
 			characters[GetCharacterIndex("Lt. Eccleston")].Dialog.Filename = "Lt. Eccleston_dialog.c";
-			LAi_SetActorType(characterFromID("Lt. Eccleston"));
+			LAi_SetActorType(CharacterFromID("Lt. Eccleston"));
 			Characters[GetCharacterIndex("Lt. Eccleston")].dialog.CurrentNode = "what_can_I_do";
-			LAi_ActorDialog(characterFromID("Lt. Eccleston"), pchar, "report_traitors_done3", 10.0, 10.0);
+			LAi_ActorDialog(CharacterFromID("Lt. Eccleston"), PChar, "report_traitors_done3", 10.0, 10.0);
 		break;
 
 		case "report_traitors_done3":
 			PauseAllSounds();
 			PlayStereoOGG("Hornblower_end");
-			LAi_ActorSetSitMode(characterFromID("Lt. Eccleston"));
-			LAi_SetActorType(characterFromID("Sir Edward Pellew"));
-			characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_dialog.c";
+			LAi_ActorSetSitMode(CharacterFromID("Lt. Eccleston"));
+			LAi_SetActorType(CharacterFromID("Sir Edward Pellew"));
+			Characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_dialog.c";
 			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.CurrentNode = "traitors_done";
-			LAi_ActorDialog(characterFromID("Sir Edward Pellew"),PChar,"end_of_traitors",5.0,5.0);
+			LAi_ActorDialog(CharacterFromID("Sir Edward Pellew"),PChar,"end_of_traitors",5.0,5.0);
 		break;
 
 		case "end_of_traitors":
-			SetCharacterRemovable(characterFromID("Donatien Thibaud"), true);
-			RemovePassenger(pchar, characterFromID("Donatien Thibaud"));
+			SetCharacterRemovable(CharacterFromID("Donatien Thibaud"), true);
+			RemovePassenger(PChar, CharacterFromID("Donatien Thibaud"));
 			CloseQuestHeader("Hunt the Traitors");
 			Characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_freeplay_dialog.c"; // Set up Pellew for "Natividad" quest
 			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.CurrentNode = "First time";
-			LAi_SetStayType(characterFromID("Sir Edward Pellew"));
+			LAi_SetStayType(CharacterFromID("Sir Edward Pellew"));
 		break;
 
 		case "back_home":
 			LAi_SetActorType(characterFromID("Maria Mason"));
-			characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Maria Mason_dialog.c";
+			Characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Maria Mason_dialog.c";
 			Characters[GetCharacterIndex("Maria Mason")].dialog.CurrentNode = "Back_home";
-			LAi_ActorDialog(characterFromID("Maria Mason"),PChar,"back_home2",5.0,5.0);
+			LAi_ActorDialog(CharacterFromID("Maria Mason"),PChar,"back_home2",5.0,5.0);
 		break;
 
 		case "back_home2":
-			characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Gov MR_dialog.c";
-			characters[GetCharacterIndex("Maria Mason")].Dialog.CurrentNode = "First time";
-			LAi_SetStayType(characterFromID("Maria Mason"));
+			Characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Gov MR_dialog.c";
+			Characters[GetCharacterIndex("Maria Mason")].Dialog.CurrentNode = "First time";
+			LAi_SetStayType(CharacterFromID("Maria Mason"));
 			LAi_Fade("", "");
 			WaitDate("", 0, 0, 1, 0, 0);
 			SetCurrentTime(10.30, 0);
+		break;
+
+		case "Hornblower_sad_news":	// Trigger set in case "Hornblower_arrive_Barbados2" in "quests_side.c"
+			locations[FindLocation("Mrs. Mason's House")].reload.l1.disable = 1;	// Lock the front door, you're not leaving until the scene ends
+			LAi_SetActorType(characterFromID("Mrs. Mason"));
+			Characters[GetCharacterIndex("Mrs. Mason")].dialog.CurrentNode = "sad_news1";
+			LAi_ActorDialog(CharacterFromID("Mrs. Mason"), PChar, "", 5.0, 5.0);
+		break;
+
+		case "upstairs_to_kid":		// Triggered by dialog with Mrs. Mason
+			LAi_SetActorType(PChar);
+			LAi_ActorGoToLocator((PChar), "reload", "reload2", "upstairs_to_kid2", 10);
+		break;
+
+		case "upstairs_to_kid2":
+			LAi_Fade("", "upstairs_to_kid3");
+		break;
+
+		case "upstairs_to_kid3":
+			WaitDate("", 0, 0, 0, 0, 30);
+			DoQuestReloadToLocation("Mrs. Mason's House", "reload", "reload2", "downstairs_from_kid");
+		break;
+
+		case "downstairs_from_kid":
+			LAi_ActorGoToLocator(PChar, "goto", "goto5", "downstairs_from_kid2", 10);
+		break;
+
+		case "downstairs_from_kid2":
+			LAi_SetActorType(PChar);
+			LAi_ActorTurnToCharacter(PChar, CharacterFromID("Mrs. Mason"));
+			LAi_QuestDelay("downstairs_from_kid3", 0.5);
+		break;
+
+		case "downstairs_from_kid3":
+			LAi_SetPlayerType(PChar);
+			LAi_SetActorType(characterFromID("Mrs. Mason"));
+			Characters[GetCharacterIndex("Mrs. Mason")].dialog.CurrentNode = "fine_boy";
+			LAi_ActorDialog(CharacterFromID("Mrs. Mason"), PChar, "", 5.0, 5.0);
+		break;
+
+		case "hornblower_read_marias_letter":	// Triggered by reading "MariasLetter", which is given to you during dialog with Mrs. Mason
+			LAi_Fade("", "hornblower_after_marias_letter");
+		break;
+
+		case "hornblower_after_marias_letter":
+			WaitDate("", 0, 0, 1, 0, 0);
+			SetCurrentTime(22.30, 0);
+			DoQuestReloadToLocation("Mrs. Mason's House", "reload", "reload2", "hornblower_after_marias_letter2");
+		break;
+
+		case "hornblower_after_marias_letter2":
+			LAi_SetActorType(characterFromID("Mrs. Mason"));
+			Characters[GetCharacterIndex("Mrs. Mason")].dialog.CurrentNode = "in_the_dark";
+			LAi_ActorDialog(CharacterFromID("Mrs. Mason"), PChar, "hornblower_after_marias_letter_next_day", 5.0, 5.0);
+		break;
+
+		case "hornblower_after_marias_letter_next_day":
+			WaitDate("", 0, 0, 1, 0, 0);
+			SetCurrentTime(9.30, 0);
+			DoQuestReloadToLocation("Mrs. Mason's House", "goto", "goto5", "hornblower_after_marias_letter_next_day2");
+		break;
+
+		case "hornblower_after_marias_letter_next_day2":
+			locations[FindLocation("Mrs. Mason's House")].reload.l1.disable = 0;	// Open the front door so you can leave
+			locations[FindLocation("Greenford_town")].reload.l19.disable = 0;	// Open the door to Naval HQ, it's time to go there
 		break;
 
 		PChar.questnotfound = true; // PB: Testing

@@ -180,7 +180,15 @@ void ProcessDialogEvent()
 
 		case "MilonTalk_3":
 			Characters[GetCharacterIndex("Milon Blacque")].quest.first_talk = "done";
+			Preprocessor_AddQuestData("Milon Blacque", GetMyFullName(CharacterFromID("Milon Blacque")));
+			Preprocessor_AddQuestData("Orable Caron", GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("Milon", GetMyName(CharacterFromID("Milon Blacque")));
+			Preprocessor_AddQuestData("Rachel", GetMyName(CharacterFromID("Rachel Blacque")));
 			AddQuestRecord("Blacques", "3"); // NK
+			Preprocessor_Remove("Rachel");
+			Preprocessor_Remove("Milon");
+			Preprocessor_Remove("Orable Caron");
+			Preprocessor_Remove("Milon Blacque");
 			Dialog.Text = DLG_TEXT[62] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[63])]) + DLG_TEXT[64];
 			Link.l1 = DLG_TEXT[65];
 			Link.l1.go = "Exit";
@@ -334,7 +342,11 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[123];
 			Link.l1.go = "exit";
 			Characters[GetCharacterIndex("Rachel Blacque")].quest.badguy = "done";
+			Preprocessor_AddQuestData("Rachel", GetMyName(CharacterFromID("Rachel Blacque")));
+			Preprocessor_AddQuestData("Caron", GetMyLastName(NPChar));
 			AddQuestRecord("Blacques", 7); // NK
+			Preprocessor_Remove("Caron");
+			Preprocessor_Remove("Rachel");
 		break;
 
 		case "Rachel_bad":
@@ -359,7 +371,11 @@ void ProcessDialogEvent()
 			Characters[GetCharacterIndex("Rachel Blacque")].quest.badguy = "dead"; //NK make her dead when she should be, so you can do appropriate dialog with Marc.
 			NextDiag.TempNode = "MilonTalk";
 			characters[GetCharacterIndex("Rachel Blacque")].location = "none";
+			Preprocessor_AddQuestData("Rachel", GetMyName(CharacterFromID("Rachel Blacque")));
+			Preprocessor_AddQuestData("Orable", GetMyName(NPChar));
 			AddQuestRecord("Blacques", 21); // NK
+			Preprocessor_Remove("Orable");
+			Preprocessor_Remove("Rachel");
 			npchar.location = "none";
 			Rumour[3].state = "active";
 		break;

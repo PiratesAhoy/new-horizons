@@ -25,6 +25,8 @@ void ProcessDialogEvent()
 	makearef(Link, Dialog.Links);
 	makearef(NextDiag, NPChar.Dialog);
 	string NPC_Meeting, blade, gun, cuirass, reload_locator, old;
+	string talk, respect_type;
+	string sLogTitle, sLogEntry;
 	int iNation = sti(NPChar.nation);
 	string pNation = XI_ConvertString("p"+GetNationNameByType(iNation));
 	if(GetNationNameByType(iNation)=="no nation") pNation = XI_ConvertString("pPirate");
@@ -36,6 +38,18 @@ void ProcessDialogEvent()
 	int survivors = GetCrewQuantity(boarding_enemy);
 	int allpeople = GetCrewQuantity(PChar) + GetCrewQuantity(boarding_enemy);
 	int i;
+
+	bool bIsNavy = false;
+	bool bIsPrivateer = false;
+	bool bIsHonourable = false;
+	bIsHonourable = (GetCharacterReputation(PChar) >= REPUTATION_GOOD);
+	if(GetCurrentFlag() != PIRATE)
+	{
+		if(ProfessionalNavyNation() != UNKNOWN_NATION && ProfessionalNavyNation() == GetCurrentFlag()) bIsNavy = true;
+		if(ProfessionalNavyNation() == UNKNOWN_NATION && HaveLetterOfMarque(GetCurrentFlag())) bIsPrivateer = true;
+	}
+	if(!CheckAttribute(PChar, "executions")) PChar.executions = 0;
+
 	if(!CheckAttribute(NPChar,"money")) NPChar.money = makeint(rand(100));
 	if(!CheckAttribute(NPChar,"shipmoney")) NPChar.shipmoney = 0; // PB: Prevent missed attribute error on capturing mutinous companions
 	if(!CheckAttribute(NPChar,"wealth"))
@@ -58,10 +72,11 @@ void ProcessDialogEvent()
 	{
 		bAllowCapture = HasSubStr(NPChar.id,"fantom")&&FindFreeCabinCaptain()!=-1;
 	}
-	if(CheckAttribute(NPChar,"cabinfight") && NPChar.cabinfight==true) { bAllowCapture = FindFreeCabinCaptain()!=-1; } /* fantoms allow anything */ //MAXIMUS 10.10.2007
+	if(CheckAttribute(NPChar,"cabinfight") && sti(NPChar.cabinfight)==true) { bAllowCapture = FindFreeCabinCaptain()!=-1; } /* fantoms allow anything */ //MAXIMUS 10.10.2007
 
-	if(CheckAttribute(boarding_enemy,"location.norebirth") && boarding_enemy.location.norebirth==1) { bAllowHireJoin = true; bAllowRelease = false; bAllowCapture = true; } /* special captains must die */
-	if(CheckAttribute(boarding_enemy,"questchar") && boarding_enemy.questchar==true) { bAllowHireJoin = false; bAllowRelease = false; bAllowCapture = true; } /* quest allows capture */ //MAXIMUS: special identifier added into tempquest- and storycharacters init
+	if(CheckAttribute(boarding_enemy,"location.norebirth") && sti(boarding_enemy.location.norebirth)==1) { bAllowHireJoin = true; bAllowRelease = false; bAllowCapture = true; } /* special captains must die */
+	if(CheckAttribute(boarding_enemy,"questchar") && sti(boarding_enemy.questchar)==true) { bAllowHireJoin = false; bAllowRelease = false; bAllowCapture = true; } /* quest allows capture */ //MAXIMUS: special identifier added into tempquest- and storycharacters init
+	if(CheckAttribute(boarding_enemy,"canhire") && sti(boarding_enemy.canhire) == true && FindFreeRandomOfficer()!=-1) bAllowHireJoin = true;
 
 	if(GetPassengersQuantity(PChar) >= PASSENGERS_MAX) { bAllowHireJoin = false; bAllowCapture = false; } // no room for them!
 	if(sti(GetStorylineVar(FindCurrentStoryline(), "NO_CREW_OR_OFFICERS")) == 1 || CheckAttribute(PChar, "isnotcaptain")) { bAllowHireJoin = false; }
@@ -86,7 +101,7 @@ void ProcessDialogEvent()
 //MAXIMUS: [if your crew and enemy's crew will be enough for two minimum crews, you will be able to take him as companion] <--
 
 //MAXIMUS: [if enemy captain is stronger than player, you'll fight with him] -->
-	if(makeint(sti(PChar.skill.Leadership)+sti(PChar.skill.Fencing)+sti(PChar.skill.Grappling))>=makeint(sti(NPChar.skill.Leadership)+sti(NPChar.skill.Fencing)+sti(NPChar.skill.Grappling)))
+	if(makeint(CalcCharacterSkill(PChar, "Leadership")+CalcCharacterSkill(PChar, "Fencing")+CalcCharacterSkill(PChar, "Grappling"))>=makeint(CalcCharacterSkill(NPChar, "Leadership")+CalcCharacterSkill(NPChar, "Fencing")+CalcCharacterSkill(NPChar, "Grappling")))
 	{
 /*		if(CheckAttribute(boarding_enemy,"fight") && sti(boarding_enemy.fight)==1) bDeathFight = true;// if captain was created as fantom, but not by CreateTwinCharacter
 		else
@@ -100,8 +115,32 @@ void ProcessDialogEvent()
 //		}//MAXIMUS: eliminated, because we can make a proper officer from any fantom
 	}
 	else { bDeathFight = true; }
+
+	if (!CheckAttribute(NPChar,"questchar") && !CheckAttribute(NPChar,"reputation"))
+	{
+		NPChar.reputation = rand(20) + rand(20) + rand(20) + rand(20) + 5;	// If reputation not already set, this should give a random number between 5 and 85, biased towards average of 45 i.e. neutral
+trace("No reputation was assigned. Randomly assigning reputation " + NPChar.reputation);
+	}
+
+	if(GetCharacterShipClass(PChar) < (GetCharacterShipClass(boarding_enemy) - 1))	// GR: Enemy will surrender if your ship is at least 2 tiers bigger than his
+	{
+		bDeathFight = false;
+	}
+	if(HasSubStr(PChar.location, "shipdeck"))					// GR: Enemy will surrender if you're on deck, meaning the ship struck her colours before you boarded,
+	{										// and if the captain is honourable - good reputation and not a pirate
+		if(NPChar.nation != PIRATE && GetCharacterReputation(NPChar) >= REPUTATION_GOOD)
+		{
+			bDeathFight = false;
+		}
+	}
+	if(GetCharacterShipClass(boarding_enemy) < (GetCharacterShipClass(PChar) - 1))	// GR: Enemy will NOT surrender if his ship is at least 2 tiers bigger than yours - if you want such a ship, you must fight for it!
+	{
+		bDeathFight = true;
+	}
+
 	if(IsUsedAlliesModel(NPChar)) { bDeathFight = true; }//MAXIMUS: ally's twin will always be agressive [twin officers looks strange, not so?]
 //MAXIMUS: [if enemy captain is stronger than player, you'll fight with him] <--
+	if (strlower(GetAttribute(NPChar, "id")) == "quest trader") bDeathFight = true;	// GR: merchant whom you escorted and betrayed hates you
 	
 	// DeathDaisy: Persuasion tags for the skill checks, if enabled
 	string PersuasionSuccess = "";
@@ -168,19 +207,78 @@ void ProcessDialogEvent()
 				if(bDeathFight)
 				{// added by MAXIMUS 26.08.2006 [if enemy captain is stronger than player, you'll fight with him] -->
 					if(CheckAttribute(NPChar,"wealth")) NPChar.money = sti(NPChar.money) + sti(NPChar.wealth);
+					ref shipRef = GetShipByType(GetCharacterShipType(NPChar));
+					string shipType = XI_ConvertString(shipRef.Sname);
 					string checkSex = DLG_TEXT[102];
 					if(PChar.sex=="woman") { checkSex = DLG_TEXT[106]; }
-					switch(Rand(2))
+					if(NPChar.nation == PIRATE || GetCharacterReputation(NPChar) <= (REPUTATION_RASCAL + REPUTATION_SWINDLER)/2)	// Enemy is evil or pirate, so use original insults
 					{
-						case 0: dialog.Text = DLG_TEXT[94] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname + "." + DLG_TEXT[95]; break;
-						case 1: dialog.Text = GetMySimpleName(PChar) + checkSex; break;
-						case 2: dialog.Text = DLG_TEXT[103] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname + DLG_TEXT[104]; break;
+						switch(Rand(2))
+						{
+							case 0: dialog.Text = DLG_TEXT[94] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname + "." + DLG_TEXT[95]; break;
+							case 1: dialog.Text = GetMySimpleName(PChar) + checkSex; break;
+							case 2: dialog.Text = DLG_TEXT[103] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname + DLG_TEXT[104]; break;
+						}
+						switch(Rand(2))
+						{
+							case 0: Link.l1 = DLG_TEXT[105] + DLG_TEXT[89] + GetMySimpleName(PChar) + DLG_TEXT[90]; break;
+							case 1: Link.l1 = DLG_TEXT[91] + GetMySimpleName(PChar) + DLG_TEXT[92]; break;
+							case 2: Link.l1 = DLG_TEXT[93]; break;
+						}
 					}
-					switch(Rand(2))
+					else														// Enemy is not evil or pirate, so needs a reason to fight after surrender
 					{
-						case 0: Link.l1 = DLG_TEXT[105] + DLG_TEXT[89] + GetMySimpleName(PChar) + DLG_TEXT[90]; break;
-						case 1: Link.l1 = DLG_TEXT[91] + GetMySimpleName(PChar) + DLG_TEXT[92]; break;
-						case 2: Link.l1 = DLG_TEXT[93]; break;
+						switch(Rand(2))
+						{
+							case 0:
+								dialog.Text = DLG_TEXT[139] + GetMyLastName(PChar) + DLG_TEXT[140];
+								Link.l1 = DLG_TEXT[147];
+							break;
+							case 1:
+								dialog.Text = DLG_TEXT[141] + GetMyLastName(PChar) + DLG_TEXT[142];
+								Link.l1 = DLG_TEXT[148];
+							break;
+							case 2:
+								if(CheckAttribute(NPChar, "id") && GetCharacterShipClass(boarding_enemy) < (GetCharacterShipClass(PChar) - 1))
+								{
+									dialog.TEXT = DLG_TEXT[144] + shipType + " " + GetMyShipNameShow(NPChar) + DLG_TEXT[145] + GetMyLastName(PChar) + DLG_TEXT[146];
+									Link.l1 = DLG_TEXT[150];
+								}
+								else
+								{
+									dialog.Text = DLG_TEXT[143];
+									Link.l1 = DLG_TEXT[149];
+								}
+							break;
+								
+						}
+					}
+
+					if (strlower(GetAttribute(NPChar, "id")) == "quest trader")	// GR: Captains of betrayed merchants get their own dialog
+					{
+						switch(Rand(2))
+						{
+							case 0:
+								dialog.Text = DLG_TEXT[152];
+								Link.l1 = DLG_TEXT[153];
+							break;
+
+							case 1:
+								dialog.Text = DLG_TEXT[154] + GetMyLastName(PChar) + "?";
+								Link.l1 = DLG_TEXT[155];
+							break;
+
+							case 2:
+								dialog.Text = DLG_TEXT[156];
+								Link.l1 = DLG_TEXT[157];
+							break;
+						}
+					}
+
+					if (makeint(PChar.rank) >= 15 && Rand(19) == 0)	// GR: Occasionally the captain will use a line from "Moby Dick" / "Wrath of Khan"
+					{
+						dialog.Text = DLG_TEXT[138];
+						Link.l1 = DLG_TEXT[151];
 					}
 					Link.l1.go = "kill_captain";
 				}
@@ -188,7 +286,7 @@ void ProcessDialogEvent()
 				{// added by MAXIMUS 26.08.2006 [if enemy captain is stronger than player, you'll fight with him] <--
 					if(NPChar.nation!=PIRATE)
 					{
-						if(NPChar.nation==GetServedNation()) // of the same nation
+						if(NPChar.nation==GetServedNation())	// of the same nation
 						{
 							switch(Rand(2))
 							{
@@ -223,24 +321,32 @@ void ProcessDialogEvent()
 								case 1: dialog.Text = DLG_TEXT[7]; break;
 								case 2: dialog.Text = DLG_TEXT[8] + XI_ConvertString("3"+GetNationNameByType(iNation)) + DLG_TEXT[9]; break;
 							}
-							link.l1 = DLG_TEXT[13] + MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER) + DLG_TEXT[14];
-							link.l1.go = "money";
-							link.l2 = DLG_TEXT[15];
-							link.l2.go = "kill_them_all";
+							if(!bIsNavy)			// Naval officers shouldn't be looting money
+							{
+								link.l1 = DLG_TEXT[13] + MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER) + DLG_TEXT[14];
+								link.l1.go = "money";
+							}
+						//	if(bIsHonourable || bIsNavy || bIsPrivateer)
+						//	{
+								link.l2 = DLG_TEXT[125];
+								link.l2.go = "honourable_surrender";
+						//	}
+							link.l3 = DLG_TEXT[15];
+							link.l3.go = "kill_them_all";
 							if(GetCrewQuantity(PChar)<GetMaxCrewQuantity(PChar)/2)
 							{
-								link.l3 = DLG_TEXT[84];
-								link.l3.go = "Exit_sharks";
+								link.l4 = DLG_TEXT[84];
+								link.l4.go = "Exit_sharks";
 							}
-							link.l4 = DLG_TEXT[16];
-							link.l4.go = "take_crewmembers";
+							link.l5 = DLG_TEXT[16];
+							link.l5.go = "take_crewmembers";
 							if(bAllowHireJoin && bAllowCompanion) // TIH allow to hirejoin Aug24'06//MAXIMUS: allow to companion
 							{
-								link.l5 = DLG_TEXT[77];
-								link.l5.go = "be_companion";
+								link.l6 = DLG_TEXT[77];
+								link.l6.go = "be_companion";
 							}
-							link.l6 = DLG_TEXT[21] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + ".";
-							link.l6.go = "talk";
+							link.l7 = DLG_TEXT[21] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + ".";
+							link.l7.go = "talk";
 						}
 					}
 					else // pirates
@@ -255,22 +361,24 @@ void ProcessDialogEvent()
 						}
 						link.l1 = DLG_TEXT[13] + MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER) + DLG_TEXT[14];
 						link.l1.go = "money";
-						link.l2 = DLG_TEXT[15];
-						link.l2.go = "kill_them_all";
+						link.l2 = DLG_TEXT[125];
+						link.l2.go = "honourable_surrender";
+						link.l3 = DLG_TEXT[15];
+						link.l3.go = "kill_them_all";
 						if(GetCrewQuantity(PChar)<GetMaxCrewQuantity(PChar)/2)
 						{
-							link.l3 = DLG_TEXT[84];
-							link.l3.go = "Exit_sharks";
+							link.l4 = DLG_TEXT[84];
+							link.l4.go = "Exit_sharks";
 						}
-						link.l4 = DLG_TEXT[16];
-						link.l4.go = "take_crewmembers";
+						link.l5 = DLG_TEXT[16];
+						link.l5.go = "take_crewmembers";
 						if(bAllowHireJoin && bAllowCompanion) // TIH allow to hirejoin Aug24'06//MAXIMUS: allow to companion
 						{
-							link.l5 = DLG_TEXT[77];
-							link.l5.go = "be_companion";
+							link.l6 = DLG_TEXT[77];
+							link.l6.go = "be_companion";
 						}
-						link.l6 = DLG_TEXT[21] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + ".";
-						link.l6.go = "talk";
+						link.l7 = DLG_TEXT[21] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + ".";
+						link.l7.go = "talk";
 					}
 				}//MAXIMUS
 			}
@@ -283,12 +391,14 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[23] + MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER) + DLG_TEXT[24];
 			link.l1.go = "money";
 			
-			if(CheckCharacterPerkLocked(Pchar, "Turn180") || CheckCharacterPerkLocked(Pchar, "LongRangeGrappling") || CheckCharacterPerkLocked(Pchar, "ImmediateReload"))
+			if (bAllowRelease) //PW protect quest captains from being released for perk when part of kill requirement of quest
 			{
-				link.l3 = DLG_TEXT[120];
-				link.l3.go = "UnlockPerkCharacter";
+				if(CheckCharacterPerkLocked(Pchar, "Turn180") || CheckCharacterPerkLocked(Pchar, "LongRangeGrappling") || CheckCharacterPerkLocked(Pchar, "ImmediateReload"))
+				{
+					link.l3 = DLG_TEXT[120];
+					link.l3.go = "UnlockPerkCharacter";
+				}
 			}
-			
 			if(bAllowHireJoin) // TIH allow to hirejoin Aug24'06
 			{
 				link.l2 = DLG_TEXT[22];
@@ -297,8 +407,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "officer":
-		    if(CalcCharacterSkill(NPChar,SKILL_LEADERSHIP)>CalcCharacterSkill(PChar,SKILL_LEADERSHIP))
-		    {
+			if(CalcCharacterSkill(NPChar,SKILL_LEADERSHIP)>CalcCharacterSkill(PChar,SKILL_LEADERSHIP))
+			{
 				dialog.text = PersuasionFailure + DLG_TEXT[25] + pNation + DLG_TEXT[26];
 				link.l1 = DLG_TEXT[27];
 				link.l1.go = "kill";// pissy captains get dead! lol
@@ -326,8 +436,8 @@ void ProcessDialogEvent()
 			} // MAXIMUS 28.07.2006 [so, these sections were removed from Reinit.c] <--
 			bCrewCaptured = true;// sets a global
 			realCrew = GetCrewQuantity(PChar);
-		    if(CalcCharacterSkill(NPChar,SKILL_LEADERSHIP)>CalcCharacterSkill(PChar,SKILL_LEADERSHIP))
-		    {
+			if(CalcCharacterSkill(NPChar,SKILL_LEADERSHIP)>CalcCharacterSkill(PChar,SKILL_LEADERSHIP))
+			{
 				dialog.text = PersuasionFailure + DLG_TEXT[25] + pNation + DLG_TEXT[26];
 				link.l1 = DLG_TEXT[27];
 				link.l1.go = "kill";// pissy captains get dead! lol
@@ -495,7 +605,7 @@ void ProcessDialogEvent()
 		case "Exit_companion":// rewritten by MAXIMUS [if line [link.l1.go = "Exit_companion"] will be commented out - this case will be inaccessible]-->
 			int j = 1;
 			while(GetCompanionIndex(PChar,j)>=0) j++;
-			if(j>=4)
+			if(j>=COMPANION_MAX)
 			{
 				dialog.text = DLG_TEXT[87];
 				link.l1 = DLG_TEXT[88];
@@ -512,7 +622,7 @@ void ProcessDialogEvent()
 				TIH_OfficerHiredProcess(NPChar, false, false, true, true, !UsableOfficer(NPChar));// bLowSalary, bAutoAssign, bPurgeCrud, bSetType, bCreateOfficer
 				int tmpIdx = GetCharacterIndex(NPChar.id);
 
-				Log_SetStringToLog(TranslateString("CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("CaptainMoney2"));
+				Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 
 				NPChar.wealth = sti(NPChar.wealth)/2;
 				NPChar.nation = GetCurrentFlag();
@@ -550,13 +660,27 @@ void ProcessDialogEvent()
 		break;// rewritten by MAXIMUS <--
 
 		case "money":
-			string talk;
+			if(NPChar.nation!=PIRATE)						// GR: Naval officers and privateers aren't supposed to rob non-pirate prisoners, so delay their promotions
+			{
+				if(bIsPrivateer || bIsNavy)
+				{
+					for(i = 0;  i < MAX_NATIONS; i++)
+					{
+						if(HaveLetterOfMarque(i) && i != PIRATE)
+						{
+							if(GetRMRelation(PChar, i) >= (REL_NEUTRAL + 1.0)) ChangeRMRelation(PChar, i, -1.0);
+							else SetRMRelation(PChar, i, REL_NEUTRAL);	// GR: But don't kick them out of the service for such a minor offence
+						}
+					}
+				}
+			}
+
 			switch(Rand(2))
-		    {
-			    case 0: talk = DLG_TEXT[55]; break;
-			    case 1: talk = DLG_TEXT[56]; break;
-			    case 2: talk = DLG_TEXT[57]; break;
-		    }
+		    	{
+				case 0: talk = DLG_TEXT[55]; break;
+				case 1: talk = DLG_TEXT[56]; break;
+				case 2: talk = DLG_TEXT[57]; break;
+			}
 			dialog.text = DLG_TEXT[47] + talk;
 			
 			// if not enough room for all the survivors
@@ -617,11 +741,132 @@ void ProcessDialogEvent()
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
-				if (NPChar.sex == "woman") Preprocessor_AddQuestData("pronoun3", XI_ConvertString("her"));
-				else Preprocessor_AddQuestData("pronoun3", XI_ConvertString("his"));
+				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 				link.l4 = DLG_TEXT[76];
 				link.l4.go = "take_as_prisoner";
 			}
+		break;
+
+		case "honourable_surrender":
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
+			string NPSword, NPGun, stuff_given;
+			int stuff_idx;
+			int diffoffset = GetDifficulty();
+			int rank = sti(PChar.rank);
+			stuff_given = "";
+
+			respect_type = DLG_TEXT[136];
+			if(bIsHonourable) respect_type = DLG_TEXT[126] + DLG_TEXT[127];
+			if(bIsPrivateer) respect_type = DLG_TEXT[126] + DLG_TEXT[129];
+			if(bIsNavy) respect_type = DLG_TEXT[126] + DLG_TEXT[128];
+
+			NPChar.honourable_surrender = true;	// Set attribute which can be checked by prisoner dialog
+			ChangeCharacterReputation(PChar, 1);
+
+			NPSword = GetCharacterEquipByGroup(NPChar, BLADE_ITEM_TYPE);
+			if(NPSword == "") NPSword = FindCharacterItemByGroup(NPChar, BLADE_ITEM_TYPE);
+			if(NPSword == "")
+			{
+				if(ENABLE_WEAPONSMOD == 1)
+				{
+					NPSword = GetRandomBladeForLevel(rank-3+diffoffset, rank+diffoffset, 3+(diffoffset/2));
+				}
+				else
+				{
+					NPSword = LAi_NPC_EquipBladeSelection(rank);
+				}
+			}
+//			else TakeItemFromCharacter(NPchar, NPSword);
+
+			NPGun = GetCharacterEquipByGroup(NPChar, GUN_ITEM_TYPE);
+			if(NPGun == "") NPGun = FindCharacterItemByGroup(NPChar, GUN_ITEM_TYPE);
+//			if(NPGun != "") TakeItemFromCharacter(NPChar, NPGun);
+
+			if(NPSword != "")
+			{
+				PlayStereoSound("INTERFACE\important_item.wav");
+//				GiveItem2Character(PChar, NPSword);
+				stuff_idx = GetItemIndex(NPSword);
+				if(stuff_idx >= 0) stuff_given = TranslateString("a",Items[stuff_idx].name);
+				else stuff_given = "INVALID BLADE '" + NPSword + "'";
+			}
+			if(NPGun != "")
+			{
+//				GiveItem2Character(PChar, NPGun);
+				stuff_idx = GetItemIndex(NPGUN);
+				if(stuff_idx >= 0) stuff_given = stuff_given + " " + XI_ConvertString("and") + " " + TranslateString("a",Items[stuff_idx].name);
+				else stuff_given = stuff_given + ", INVALID GUN '" + NPGun + "'";
+			}
+			traceandlog(TranslateString("","You got ") + stuff_given + ".");
+
+			switch(Rand(1))
+		    	{
+				case 0: talk = DLG_TEXT[55]; break;
+				case 1: talk = DLG_TEXT[56]; break;
+		    	}
+			dialog.text = respect_type + DLG_TEXT[130] + TranslateString("",Items[GetItemIndex(NPSword)].name) + DLG_TEXT[131] + talk;
+			// if not enough room for all the survivors
+			if(survivors > 0 && sti(PChar.ship.Crew.Quantity) + survivors > GetMaxCrewQuantity(&PChar))
+			{
+				// no room for ANY survivors
+				if(sti(PChar.ship.Crew.Quantity) >= GetMaxCrewQuantity(&PChar))
+				{
+					if(bAllowHireJoin && bAllowCompanion) // TIH allow to hirejoin Aug24'06//MAXIMUS: allow to companion
+					{
+						link.l1 = DLG_TEXT[72] + DLG_TEXT[101];
+						link.l1.go = "be_companion";
+					}
+					else
+					{
+						link.l1 = DLG_TEXT[132];
+						link.l1.go = "we_want_to_live";
+					}
+				}
+				// else only enough room for some survivors
+				else
+				{
+					link.l1 = DLG_TEXT[133] + crewCaptured + DLG_TEXT[134];
+					link.l1.go = "we_want_to_live";
+				}
+			}
+			// else there is enough room for ALL survivors (if any)
+			else 
+			{
+				if(bAllowHireJoin) // TIH allow to hirejoin Aug24'06
+				{
+					if(survivors > 0)
+					{
+						link.l1 = DLG_TEXT[53] + survivors + DLG_TEXT[54];
+						link.l1.go = "officer_crew";
+					}
+					else
+					{
+						if(bCrewCaptured==true) link.l1 = DLG_TEXT[86];
+						else link.l1 = DLG_TEXT[135];
+						link.l1.go = "officer";
+					}
+				}
+				else
+				{
+					if(survivors > 0)
+					{
+						link.l1 = DLG_TEXT[96] + survivors + ".";
+						link.l1.go = "accept_all_crew";
+					}
+				}
+			}
+			if (bAllowRelease) { // KK allow releasing
+				link.l2 = DLG_TEXT[52];
+				link.l2.go = "possibility_to_release";
+			}
+			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
+			{
+				link.l3 = DLG_TEXT[137];
+				link.l3.go = "take_as_prisoner";
+			}
+//			link.l4 = DLG_TEXT[15];	// Not an option after honourable surrender
+//			link.l4.go = "kill_them_all";
 		break;
 
 		case "take_crewmembers":
@@ -868,7 +1113,7 @@ void ProcessDialogEvent()
 			{
 				if(CORPSEMODE<4)// MAXIMUS 17.02.2007
 				{
-					Log_SetStringToLog(TranslateString("CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("CaptainMoney2"));
+					Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 					PlayStereoSound("INTERFACE\took_item.wav");
 					AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 					if(CheckAttribute(NPChar,"wealth")) NPChar.wealth = "0";
@@ -884,6 +1129,10 @@ void ProcessDialogEvent()
 		break;
 
 		case "kill_them_all":
+			if(bIsNavy || bIsPrivateer)
+			{
+				if(NPChar.nation!=PIRATE && GetServedNation() != PIRATE) Process_Execution(2);
+			}
 			LAi_SetImmortal(NPChar, false);
 			LAi_SetPlayerType(PChar);
 			LAi_group_MoveCharacter(NPChar, LAI_GROUP_BRDENEMY);
@@ -905,7 +1154,7 @@ void ProcessDialogEvent()
 			boarding_enemy.position = "corpse";
 			if(CORPSEMODE<4)// MAXIMUS 17.02.2007
 			{
-				Log_SetStringToLog(TranslateString("CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("CaptainMoney2"));
+				Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 				PlayStereoSound("INTERFACE\took_item.wav");
 				AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 			}
@@ -919,6 +1168,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "take_as_prisoner"://MAXIMUS: all was moved into TIH_PrisonerTakenProcess
+			if (NPChar.id == "Robert Christopher Silehard") NPChar.prisoned = true;	// GR: necessary because talking with replacement governor checks Silehard's "prisoned" attribute.
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			if(CheckAttribute(PChar, "TalkWithSurrenderedCaptain")) DeleteAttribute(PChar, "TalkWithSurrenderedCaptain"); // KK
 			TIH_PrisonerTakenProcess(NPChar, true); // KK
@@ -926,6 +1176,10 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_hanged":
+			if(bIsNavy || bIsPrivateer)
+			{
+				if(NPChar.nation!=PIRATE && GetServedNation() != PIRATE) Process_Execution(1);
+			}
 			Lai_SetActorType(NPChar);
 			LAi_ActorTurnToCharacter(NPChar, PChar);
 			LAi_ActorAnimation(NPChar, "afraid","", 10);
@@ -957,7 +1211,7 @@ void ProcessDialogEvent()
 			boarding_enemy.position = "corpse";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar,sti(NPChar.wealth));
-			Log_SetStringToLog(TranslateString("CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("CaptainMoney2"));
+			Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 			bCaptureShip = true;
 			object HangFader;
 			CreateEntity(&HangFader, "fader");
@@ -969,6 +1223,10 @@ void ProcessDialogEvent()
 		break;
 
 		case "Exit_sharks":
+			if(bIsNavy || bIsPrivateer)
+			{
+				if(NPChar.nation!=PIRATE && GetServedNation() != PIRATE) Process_Execution(1);
+			}
 			Lai_SetActorType(NPChar);
 			LAi_ActorTurnToCharacter(NPChar, PChar);
 			LAi_ActorAnimation(NPChar, "afraid","", 10);
@@ -1000,7 +1258,7 @@ void ProcessDialogEvent()
 			boarding_enemy.position = "corpse";
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar,sti(NPChar.wealth));
-			Log_SetStringToLog(TranslateString("CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("CaptainMoney2"));
+			Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 			bCaptureShip = true;
 			object SharkFader;
 			CreateEntity(&SharkFader, "fader");
@@ -1035,7 +1293,7 @@ void ProcessDialogEvent()
 			{
 				if(CORPSEMODE<4)// MAXIMUS 17.02.2007
 				{
-					Log_SetStringToLog(TranslateString("CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("CaptainMoney2"));
+					Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 					PlayStereoSound("INTERFACE\took_item.wav");
 					AddMoneyToCharacter(PChar,sti(NPChar.wealth));
 					if(CheckAttribute(NPChar,"wealth")) NPChar.wealth = "0";
@@ -1053,7 +1311,7 @@ void ProcessDialogEvent()
 		case "Exit_release":
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar,sti(NPChar.wealth));
-			Log_SetStringToLog(TranslateString("CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("CaptainMoney2"));
+			Log_SetStringToLog(TranslateString("", "CaptainMoney1")+" "+MakeMoneyShow(sti(NPChar.wealth),"",MONEY_DELIVER)+" "+TranslateString("", "CaptainMoney2"));
 			if(CheckAttribute(NPChar,"wealth")) NPChar.wealth = "0";
 			DialogExit();
 			DeleteCharacter(NPChar);

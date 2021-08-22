@@ -1417,7 +1417,8 @@ void LocationInitIslaMuelle(ref n)
 	Locations[n].reload.l1.emerge = "reload1";
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name#.";
-
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].vcskip = true;
 
 	Locations[n].island = "IslaMuelle"; // NK 04-08-29
 	n = n + 1;

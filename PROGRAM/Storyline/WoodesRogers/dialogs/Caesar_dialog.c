@@ -34,6 +34,9 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "voice\PADI\PADI001";
 		
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("Hands"));
+
 			PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
 			if(IsOfficer(CharacterFromID("Pell")))				
 			{
@@ -45,6 +48,7 @@ void ProcessDialogEvent()
 			}
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "exit";
+		Pchar.servant_Caesar = "done";
 			AddDialogExitQuest("servant_is_Caesar1");
 		break;
 	
@@ -134,6 +138,14 @@ void ProcessDialogEvent()
 			Diag.TempNode = "neutral";
 		break;
 
+		case "neutral_silent":
+			PlaySound("VOICE\ENGLISH\Jupiter_mm.wav");
+			Dialog.text = DLG_TEXT[17];
+			link.l1 = DLG_TEXT[18];
+			link.l1.go = "exit";
+			Diag.TempNode = "neutral_silent";
+		break;
+
 		case "mapBB3":
 			PlaySound("VOICE\ENGLISH\gm_crew7.wav");
 			Dialog.text = DLG_TEXT[19];
@@ -145,6 +157,13 @@ void ProcessDialogEvent()
 			PlaySound("OBJECTS\DUEL\man_hit1.wav");
 			Dialog.text = DLG_TEXT[21];
 			link.l1 = DLG_TEXT[22];
+			link.l1.go = "mapBB3_B";
+		break;
+
+		case "mapBB3_B":
+			PlaySound("VOICE\ENGLISH\gm_crew5A.wav");
+			Dialog.text = DLG_TEXT[63];
+			link.l1 = DLG_TEXT[64];
 			link.l1.go = "exit";
 			Diag.TempNode = "neutral";
 			AddDialogExitQuest("Caesar_mapBB3_done");
@@ -250,6 +269,153 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[39];
 			link.l1.go = "exit";
 			AddDialogExitQuest("Caesar_info_given2");
+		break;
+
+		case "shore_runner":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("Hands"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Hands"));
+
+			PlaySound("OBJECTS\DUEL\man_hit1.wav");
+			Dialog.text = DLG_TEXT[41];
+			link.l1 = DLG_TEXT[42];
+			link.l1.go = "exit";
+			AddDialogExitQuest("careen_mutineers21_B");
+		break;
+
+		case "shore_runner1":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("Hands"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Hands"));
+
+			PlaySound("OBJECTS\VOICES\DEAD\male\dead0.wav");
+			Dialog.text = DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44];
+			link.l1.go = "exit";
+			AddDialogExitQuest("careen_mutineers21_D");
+		break;
+
+		case "shore_runner2":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("Hands"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Hands"));
+
+			PlaySound("VOICE\ENGLISH\gm_crew5C.wav");
+			Dialog.text = DLG_TEXT[45];
+			link.l1 = DLG_TEXT[46];
+			link.l1.go = "shore_runner_belt";
+		break;
+
+		case "shore_runner_belt":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("Hands"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Hands"));
+
+			PlaySound("VOICE\ENGLISH\gm_crew7.wav");
+			Dialog.text = DLG_TEXT[51];
+			link.l1 = DLG_TEXT[52];
+			link.l1.go = "exit";
+			AddDialogExitQuest("careen_mutineers21_F");
+		break;
+
+		case "Hands_is_back":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("Hands"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Hands"));
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorTurnToCharacter(characterFromID("Hands"), characterFromID("Caesar"));
+
+			PlaySound("OBJECTS\DUEL\man_attack6.wav");
+			PlaySound("OBJECTS\DUEL\sabre_out.wav");
+
+			GiveItem2Character(characterFromID("Hands"), "blade2");
+			EquipCharacterByItem(characterFromID("Hands"), "blade2");
+			GiveItem2Character(characterFromID("Hands"), "Pistol6");
+			EquipCharacterByItem(characterFromID("Hands"), "Pistol6");
+			TakenItems(characterFromID("Hands"), "pistolbullets", 2);
+			TakenItems(characterFromID("Hands"), "gunpowder", 2);
+
+			TakeItemFromCharacter(Pchar, "blade2");
+			TakeItemFromCharacter(Pchar, "pistol6");
+			TakenItems(Pchar, "gunpowder", -2);
+			TakenItems(Pchar, "pistolbullets", -2);
+
+			Dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "Hands_is_back1";
+		break;
+
+		case "Hands_is_back1":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("Hands"));
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Hands"));
+			LAi_SetActorType(characterFromID("Hands"));
+			LAi_ActorTurnToCharacter(characterFromID("Hands"), characterFromID("Caesar"));
+
+			PlaySound("VOICE\ENGLISH\blaze_huh.wav");
+			Dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			link.l1.go = "exit";
+			AddDialogExitQuest("careen_mutineers23_A");
+		break;
+
+		case "show_the_way":
+			PlaySound("VOICE\ENGLISH\gm_crew5C.wav");
+			Dialog.text = DLG_TEXT[53];
+			link.l1 = DLG_TEXT[54];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_transformation24");
+		break;
+
+		case "treasure_aboard":
+			PlaySound("OBJECTS\DUEL\man_hit1.wav");
+			Dialog.text = DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
+			link.l1.go = "exit";
+			AddDialogExitQuest("pchar_playertype");
+			AddDialogExitQuest("with_treasure_to_sea3");
+		break;
+
+		case "neutral_swim":
+			PlaySound("VOICE\ENGLISH\gm_crew7.wav");
+			Dialog.text = DLG_TEXT[17];
+			link.l1 = DLG_TEXT[18];
+			link.l1.go = "exit";
+			Diag.TempNode = "neutral";
+			AddDialogExitQuest("careen_shore_fight_end6");
+		break;
+
+		case "open_to_slaves":
+			PlaySound("OBJECTS\DUEL\man_hit1.wav");
+			Dialog.text = DLG_TEXT[57];
+			link.l1 = DLG_TEXT[58];
+			link.l1.go = "exit";
+			Diag.TempNode = "neutral_silent";
+			AddDialogExitQuest("explore_corvette20_E");
+		break;
+
+		case "locked_to_slaves":
+			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");
+			Dialog.text = DLG_TEXT[59];
+			link.l1 = DLG_TEXT[60];
+			link.l1.go = "exit";
+			Diag.TempNode = "neutral_silent";
+			AddDialogExitQuest("explore_corvette10_B");
+		break;
+
+		case "we_got_weapons":
+			PlaySound("VOICE\ENGLISH\gm_crew7.wav");
+			Dialog.text = DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "exit";
+			Diag.TempNode = "neutral_silent";
+			AddDialogExitQuest("explore_corvette32_A");
 		break;
 
 		case "Exit":

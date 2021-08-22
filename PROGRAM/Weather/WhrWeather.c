@@ -335,27 +335,27 @@ void CreateWeatherEnvironment()
 	bool ShowWindLog = false;
 	string logstr = "";
 	string compasstype = CheckCharacterEquipByGroup(pchar, COMPASS_ITEM_TYPE);
-	if (winds == 0)					logstr = "The air is calm";
-	if (winds > 0 && winds <= 2)	logstr = "There are light airs ";
-	if (winds > 2 && winds <= 6)	logstr = "There is a light breeze ";
-	if (winds > 6 && winds <=10)	logstr = "There is a gentle breeze ";
-	if (winds >10 && winds <=15)	logstr = "There is a moderate breeze ";
-	if (winds >15 && winds <=20)	logstr = "There is a fresh breeze ";
-	if (winds >20 && winds <=27)	logstr = "There is a strong breeze ";
-	if (winds >27)					logstr = "There is a near gale ";
+	if (winds == 0)			logstr = TranslateString("", "The air is calm");
+	if (winds > 0 && winds <= 2)	logstr = TranslateString("", "There are light airs");
+	if (winds > 2 && winds <= 6)	logstr = TranslateString("", "There is a light breeze");
+	if (winds > 6 && winds <=10)	logstr = TranslateString("", "There is a gentle breeze");
+	if (winds >10 && winds <=15)	logstr = TranslateString("", "There is a moderate breeze");
+	if (winds >15 && winds <=20)	logstr = TranslateString("", "There is a fresh breeze");
+	if (winds >20 && winds <=27)	logstr = TranslateString("", "There is a strong breeze");
+	if (winds >27)			logstr = TranslateString("", "There is a near gale");
 
 	if (winds>0)
 	{
 		switch (compasstype)
 		{
-			case "compass1": logstr = logstr + "from the " + GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0)); break;
-			case "compass2": logstr = "Wind is from the " + GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0)) + " at " + winds + " kts"; break;
-			case "compass3": logstr = "Wind is from the " + GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0)) + " at " + winds + " kts"; break;
+			case "compass1": logstr = logstr + " " + TranslateString("from the", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))); break;
+			case "compass2": logstr = TranslateString("Wind is from the", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))) + " " + TranslateString("", "wind_at") + " " + winds + " " + TranslateString("", "kts"); break;
+			case "compass3": logstr = TranslateString("Wind is from the", GetCompassDirFromHeading16(fWindA + Degree2Radian(180.0))) + " " + TranslateString("", "wind_at") + " " + winds + " " + TranslateString("", "kts"); break;
 		}
 	}
-	if(bSeaActive && compasstype == "")					ShowWindLog = true;
+	if(bSeaActive && compasstype == "")			ShowWindLog = true;
 	if(CheckAttribute(PChar, "skipWeatherLogs"))		ShowWindLog = false;
-	if(ShowWindLog)										LogIt(logstr);
+	if(ShowWindLog)						LogIt(logstr);
 
 	if(pchar.location != "" && Pchar.location != "error")
 	{

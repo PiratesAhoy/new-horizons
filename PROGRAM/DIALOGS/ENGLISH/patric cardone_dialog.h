@@ -1,4 +1,4 @@
-string DLG_TEXT[120] = {
+string DLG_TEXT[123] = {
 "I'm sorry! I didn't see you there. Do forgive me.",
 "No worries. These things happen. How are sales?",
 "What? Sales? Oh, they're...fine....",
@@ -26,10 +26,10 @@ string DLG_TEXT[120] = {
 "Well, I don't know....",
 "What's the harm in just telling me your troubles? Maybe I'll even be able to help.",
 "Well, it's your business, of course. I'll leave you alone.",
-"All right, I'll tell you. Some time ago, a man who \ncalled himself ",
+"All right, I'll tell you. Some time ago, a man who called himself ",
 "Teodoro Fernandez",
 "Teodoro Fernandez",
-" came to me. He asked me to buy some Indian statuettes for him \nwhich had recently appeared in the archipelago. But I didn't have the money - such pure gold is very expensive in these modern times....",
+" came to me. He asked me to buy some Indian statuettes for him which had recently appeared in the archipelago.\nBut I didn't have the money - such pure gold is very expensive in these modern times....",
 "They were made of gold?",
 "Yes, they were. I'm told they belonged to a collector who found them in the jungle here and decided to take them to Europe.",
 "But he didn't manage to do that?",
@@ -117,7 +117,9 @@ string DLG_TEXT[120] = {
 "Then you need to visit the shipyard office. It's to the left from my stall, by the very gates. See that two-story building? Just go up those stairs.",
 "Thanks. I've got a couple more questions.",
 "Thanks. That's all I wanted to know.",
-"You're a formidable ally, captain! Thanks for your help. Tell a guard or officer about it, though, please--I can't leave my stand, and I don't want any unpleasentness to settle on you for dealing with Lucien. I think I see one walking around...",
+"You're a formidable ally, captain! Thanks for your help. Tell a guard or officer about it, though, please--I can't leave my stand, and I don't want any unpleasentness to settle on you for dealing with #sLucien#. I think I see one walking around...",
 "You're quite welcome. Let me go find him.",
-
+"As you wish. Would you like to see what I have for sale?",
+"Certainly. Perhaps you have something I want.",
+"Not now, thank you. I'm rather busy, so if you don't mind, I'll be on my way.",
 };

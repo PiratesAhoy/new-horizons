@@ -7,7 +7,7 @@ string DLG_TEXT[12] = {
 "As I said, they will now have plenty of work.",
 ".",
 "You did not think your escape through very well, did you captain? Trying to steal a ship without bringing a crew! But please feel free to try swimming to wherever it was you wanted to go, the sharks will enjoy the free meal. Otherwise you will return to your prison cell.",
-"You won't take me alive! I'll escape or die a free man!",
+"You won't take me alive! I'll escape or die a free #sgender#!",
 "I escaped once, I'll do it again.",
 "You're the pirate I arrested, aren't you?",
 "And now we're sailing together. Strange how things turn out, isn't it?",

@@ -172,8 +172,8 @@ void ProcessDialogEvent()
 
 			if (GetAttribute(pchar, "Bosun") == "Cursed")
 			{
-				Characters[GetCharacterIndex("Bos'un")].name = "Nigel";
-				Characters[GetCharacterIndex("Bos'un")].lastname = "the Slave";
+				Characters[GetCharacterIndex("Bos'un")].name = TranslateString("","Nigel");
+				Characters[GetCharacterIndex("Bos'un")].lastname = TranslateString("","the Slave");
 				Characters[GetCharacterIndex("Bos'un")].model = "Ancient";
 				Characters[GetCharacterIndex("Bos'un")].headmodel = "h_Ancient";
 			}
@@ -245,8 +245,8 @@ void ProcessDialogEvent()
 
 			//Characters[GetCharacterIndex("Gentleman Jocard")].model = "9JC";
 			//Characters[GetCharacterIndex("Gentleman Jocard")].headmodel = "h_9JC";
-			Characters[GetCharacterIndex("Gentleman Jocard")].name = "Gentleman";
-			Characters[GetCharacterIndex("Gentleman Jocard")].lastname = "Jocard";
+			Characters[GetCharacterIndex("Gentleman Jocard")].name = TranslateString("", "Gentleman");
+			Characters[GetCharacterIndex("Gentleman Jocard")].lastname = TranslateString("", "Jocard");
 		break;
 		
 		case "Jocard_Request3":
@@ -288,6 +288,7 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\ARVO\ARVO014";
 			dialog.text = DLG_TEXT[46];
 			link.l1 = DLG_TEXT[47];
+			AddDialogExitQuest("Jocard_follow");
 			link.l1.go = "exit";
 		break;
 

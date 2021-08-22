@@ -1,4 +1,4 @@
-string DLG_TEXT[155] = {
+string DLG_TEXT[169] = {
 ", How can I help you?",
 "I am happy to see you here, ",
 ". Do you need my services?",
@@ -154,5 +154,18 @@ string DLG_TEXT[155] = {
 "Very well. I am sure the crew will be ",
 " with their shares. Good luck on your next expedition!",
 "Thank you.",
-
+"I am honoured by your allowing me to serve you, captain. Now, do you just want to divide your gold, or are you planning a whole new expedition?",
+"Just divide up the gold, if you please. The crew are due to be paid, after which I want to put to sea again at once.",
+"Time to draw a line under this voyage and start planning a new adventure, I think.",
+"Very well. If you want to maximise the payment, remember to sell all your officers' ships, all your goods and cannon. ",
+"As it stands, each crewman's share will be ",
+" gold--I'm sure they'll be ",
+"--and your share will be ",
+" gold. ",
+"You will also have ",
+" gold left over for immediate expenses. Some of your crew may decide to take their money and leave, so you may need to recruit replacements. Do you wish to proceed with the division, captain?",
+"As you wish, captain. If you haven't sold your officers' ships, and all your goods and cannon, you should do so first and come back to me. As it stands, each crewman's share will be ",
+"Very well. I am sure the crew will be ",
+" with their shares. Do come back here when you need to share out your wealth again, captain!",
+"Thanks for your help.",
 };

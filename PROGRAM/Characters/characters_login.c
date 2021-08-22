@@ -15,7 +15,7 @@ void LoginCharactersInLocation(ref loc)
 	}
 	if(actLoadFlag)
 	{
-		for(i = 0; i < 32; i++)
+		for(i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
 		{
 			LoginCharacter(&Characters[LOC_FANTOM_CHARACTERS + i], locID);
 		}

@@ -75,6 +75,7 @@ void ProcessDialogEvent()
 			PChar.fetchquestcompleted = sti(PChar.fetchquestcompleted) + 1;
 			if(!CheckAttribute(PChar,"fetchquestcompleted_shipyard")) PChar.fetchquestcompleted_shipyard = 0;
 			PChar.fetchquestcompleted_shipyard = sti(PChar.fetchquestcompleted_shipyard) + 1;
+			PChar.quest.(questbookname).over = "yes"; // GR: cancel quest fail timer
 		break;
 		
 		case "fetch quest failed":

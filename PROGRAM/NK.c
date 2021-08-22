@@ -599,7 +599,7 @@ void GivePromotionReward(int iNation)
 			switch(PlayerRank)
 			{
 				case 1: // Midshipman
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
 							GiveShip2Character(pchar, "PO_Hoy", "Caroline", -1, ENGLAND, true, true); // Hoy
@@ -635,7 +635,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 2: // Junior Lieutenant
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
 							GiveShip2Character(pchar, "Cutter2", "Witch of Endor", -1, ENGLAND, true, true); // Naval Cutter
@@ -671,7 +671,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 3: // Lieutenant
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
 							GiveShip2Character(pchar,"FR_Sloop","Le Rève",-1,FRANCE,true,true); // Captured from the French
@@ -715,7 +715,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 4: // Senior Lieutenant
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
 							GiveShip2Character(pchar, "RN_Volage", "Hotspur", -1, ENGLAND, true, true); // Heavy Sloop-of-War
@@ -759,7 +759,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 5: // Commander
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
 							GiveShip2Character(pchar, "HMS_Greyhound", "Atropos", -1, ENGLAND, true, true); // 6th Rate Frigate
@@ -803,7 +803,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 6: // Post Captain
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
 							GiveShip2Character(pchar, "RN_Essex", "Lydia", -1, ENGLAND, true, true); // Razée Frigate
@@ -847,10 +847,10 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 7: // Commodore
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
-							GiveShip2Character(PChar, "RN_Superbe", "Sutherland", -1, FRANCE, true, true); // Superbe class 3rd Rate, captured from French and given to Hornblower
+							GiveShip2Character(PChar, "HMS_Bellona", "Nonsuch", -1, ENGLAND, true, true);	// Was "RN_Superbe", "Sutherland", but he now gets that from a quest
 						break;
 						case "Theodore Groves":
 							GiveShip2Character(PChar, "HMS_Dauntless", "Dauntless", -1, ENGLAND, true, true); // Dauntless
@@ -919,16 +919,14 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 8: // Rear Admiral
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
 							if (GetCompanionIndex(pchar,1) == -1 || GetCompanionIndex(pchar,2) == -1 || GetCompanionIndex(pchar,3) == -1) // GR
 							{
-								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "PellewX_18", 3, ENGLAND, false);
-								ch.name = TranslateString("","Edward");
-								ch.lastname = TranslateString("","Pellew");
-								SetRankTitle(ch, TranslateString("", "Sir"));
-								GiveShip2Character(ch, "HMS_Indefatigable", "Indefatigable", -1, ENGLAND, true, true); // Razée Frigate
+								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "47_Blaze_brtlt", 3, ENGLAND, false);
+								ch.lastname = TranslateString("","Vickery");
+								GiveShip2Character(ch, "RN_Volage", "Lotus", -1, ENGLAND, true, true); // Sloop of war
 								SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
@@ -990,10 +988,10 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 9: // Vice Admiral
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
-							GiveShip2Character(pchar, "RN_FirstRate", "Nonsuch", -1, ENGLAND, true, true); // Victory class 1st Rate
+							GiveShip2Character(pchar, "RN_SotL", "Prince", -1, ENGLAND, true, true); // 94-gun 2nd rate
 						break;
 
 						case "Horatio Nelson":
@@ -1066,10 +1064,10 @@ void GivePromotionReward(int iNation)
 							ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Offic_eng_16", 3, ENGLAND, false);
 						else
 							ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "brtcpt2_18", 3, ENGLAND, false);
-						switch (GetMySimpleName(PChar))
+						switch (GetMySimpleOldName(PChar))
 						{
 							case "Horatio Hornblower":
-								GiveShip2Character(ch, "RN_Essex", "Phoebe", -1, ENGLAND, true, true); // Essex class Frigate
+								GiveShip2Character(ch, "RN_Essex", "Clorinda", -1, ENGLAND, true, true); // Essex class Frigate
 							break;
 
 							case "Horatio Nelson":
@@ -1137,7 +1135,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "KetchNavy", "Den Graeuwen Heynst", -1, HOLLAND, true, true); //
+							if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "KetchNavy", "Den Graeuwen Heynst", -1, HOLLAND, true, true); //
 							else												GiveShip2Character(pchar, "KetchNavy", "Papeghaij", -1, HOLLAND, true, true); //
 						break;
 
@@ -1166,7 +1164,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "Cutter1", "Groene Leeuw", -1, HOLLAND, true, true); //
+							if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "Cutter1", "Groene Leeuw", -1, HOLLAND, true, true); //
 							else												GiveShip2Character(pchar, "Cutter1", "Gouda", -1, HOLLAND, true, true); //
 						break;
 
@@ -1195,7 +1193,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_Derfflinger", "Haas", -1, HOLLAND, true, true);
+							if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_Derfflinger", "Haas", -1, HOLLAND, true, true);
 							else												GiveShip2Character(pchar, "NL_Derfflinger", "Zwarte Beer", -1, HOLLAND, true, true);
 						break;
 
@@ -1224,7 +1222,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_NeptunusE", "Neptunus", -1, HOLLAND, true, true);
+							if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_NeptunusE", "Neptunus", -1, HOLLAND, true, true);
 							else												GiveShip2Character(pchar, "NL_Pinnace", "Prins Maurits", -1, HOLLAND, true, true); //
 						break;
 
@@ -1253,7 +1251,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_Fleut50", "Witte Lam", -1, HOLLAND, true, true);
+							if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_Fleut50", "Witte Lam", -1, HOLLAND, true, true);
 							else												GiveShip2Character(pchar, "NL_Fleut50", "Gouden Leeuwin", -1, HOLLAND, true, true); //
 						break;
 
@@ -1282,7 +1280,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_FleutWar", "Huis te Kruiningen", -1, HOLLAND, true, true);
+							if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_FleutWar", "Huis te Kruiningen", -1, HOLLAND, true, true);
 							else												GiveShip2Character(pchar, "FastGalleon1", "Utrecht", -1, HOLLAND, true, true); // Fast Galleon
 						break;
 
@@ -1316,7 +1314,7 @@ void GivePromotionReward(int iNation)
 								GiveShip2Character(ch, "NL_FleutWar", "Valk", -1, HOLLAND, true, true); // Fleut of War
 							break;
 								case PERIOD_THE_SPANISH_MAIN:
-								if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(ch, "NL_FleutWar", "Huijs te Zwieten", -1, HOLLAND, true, true);
+								if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(ch, "NL_FleutWar", "Huijs te Zwieten", -1, HOLLAND, true, true);
 								else												GiveShip2Character(ch, "NL_FleutWar", "Eendracht", -1, HOLLAND, true, true); // Fleut of War
 							break;
 								case PERIOD_GOLDEN_AGE_OF_PIRACY:
@@ -1346,7 +1344,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_ConvoiShip", "Spiegel", -1, HOLLAND, true, true);
+							if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(pchar, "NL_ConvoiShip", "Spiegel", -1, HOLLAND, true, true);
 							else												GiveShip2Character(pchar, "NL_SevenProvincien", "Aemilia", -1, HOLLAND, true, true); // 3rd Rate Battleship
 						break;
 
@@ -1363,7 +1361,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "RN_SuperiorWarship", "Vrijheid", -1, HOLLAND, true, true); //
+							GiveShip2Character(pchar, "NL_Superbe", "Vrijheid", -1, HOLLAND, true, true); //
 						break;
 					}
 				break;
@@ -1379,7 +1377,7 @@ void GivePromotionReward(int iNation)
 
 							case PERIOD_THE_SPANISH_MAIN:
 								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Offic_hol_16", 3, HOLLAND, false);
-								if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(ch, "HeavyLineship", "Hollandia", -1, HOLLAND, true, true);
+								if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(ch, "HeavyLineship", "Hollandia", -1, HOLLAND, true, true);
 								else												GiveShip2Character(ch, "NL_ConvoiShip", "Zeelandia", -1, HOLLAND, true, true); // Wappen von Hamburg
 							break;
 
@@ -1424,7 +1422,7 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_THE_SPANISH_MAIN:
-								if (GetMySimpleName(PChar) == "Michiel de Ruyter")	GiveShip2Character(ch, "NL_SevenProvincien", "Zeven Provincien", -1, HOLLAND, true, true);
+								if (GetMySimpleOldName(PChar) == "Michiel de Ruyter")	GiveShip2Character(ch, "NL_SevenProvincien", "Zeven Provincien", -1, HOLLAND, true, true);
 								else												GiveShip2Character(ch, "NL_Lineship", "	Huis te Oosterwijk", -1, HOLLAND, true, true); // 
 							break;
 
@@ -1441,7 +1439,7 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_NAPOLEONIC:
-								GiveShip2Character(ch, "FR_Bellona", "Admiraal Zoutman", -1, HOLLAND, true, true); // Bellona class
+								GiveShip2Character(ch, "NL_Superbe", "Admiraal Zoutman", -1, HOLLAND, true, true); // Bellona class
 							break;
 						}
 						SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
@@ -1597,7 +1595,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 6: // Capitaine de Vaisseau
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "François-Louis Rousselet":
 							GiveShip2Character(PChar, "WallerPinnace", "Le Saint Louis", -1, FRANCE, true, true); // Heavy Pinnace of War
@@ -1667,7 +1665,7 @@ void GivePromotionReward(int iNation)
 						LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
 				break;
 				case 8: // Vice-Amiral
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "François-Louis Rousselet":
 							GiveShip2Character(PChar, "FR_SoleilRoyal", "Dauphin Royal", -1, FRANCE, true, true); // Heavy Pinnace of War
@@ -1698,7 +1696,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 				case 9: // Vice-Amiral d'Escadre
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "François-Louis Rousselet":
 							// Nothing on purpose
@@ -1888,7 +1886,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "SP_Volage", "San Isidre", -1, SPAIN, true, true); // Heavy Sloop-of-War
+							GiveShip2Character(pchar, "SP_Volage", "San Isidro", -1, SPAIN, true, true); // Heavy Sloop-of-War
 						break;
 					}
 				break;
@@ -2611,7 +2609,7 @@ void GivePromotionReward(int iNation)
 								case 2: GiveShip2Character(pchar, "US_BattleFrigate", "United States", -1, AMERICA, true, true); break;
 								case 3: GiveShip2Character(pchar, "US_SteamFrigate", "Hudson", -1, AMERICA, true, true); break;
 							}
-							if (GetMySimpleName(PChar) == "Robert Fulton")	GiveShip2Character(pchar, "US_SteamFrigate", "Hudson", -1, AMERICA, true, true);
+							if (GetMySimpleOldName(PChar) == "Robert Fulton")	GiveShip2Character(pchar, "US_SteamFrigate", "Hudson", -1, AMERICA, true, true);
 						break;
 					}
 				break;
@@ -3073,9 +3071,9 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 	string qual = "";
 	if (ENABLE_WEAPONSMOD) qual = "+2";
 
-	int 												PlayerType = 1; // Privateer
+	int 							PlayerType = 1; // Privateer
 	if (ProfessionalNavyNation() != UNKNOWN_NATION)		PlayerType = 2; // Navy
-	if (iNation == PIRATE)								PlayerType = 3; // Pirate
+	if (iNation == PIRATE)					PlayerType = 3; // Pirate
 
 	switch(PlayerRank)
 	{
@@ -3090,7 +3088,7 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 			switch(iNation)
 			{
 				case ENGLAND:
-					switch (GetMySimpleName(PChar))
+					switch (GetMySimpleOldName(PChar))
 					{
 						case "Francis Drake":
 							GiveItem2Character(pchar,"bladeFD2");
@@ -3138,7 +3136,7 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 				case 1: UnlockPerkCharacter(PChar ,"Trustworthy");		break;	// Privateer
 				case 2: UnlockPerkCharacter(PChar ,"Troopers");			break;	// Navy
 			}
-			switch (GetMySimpleName(PChar))
+			switch (GetMySimpleOldName(PChar))
 			{
 				case "Theodore Groves":
 					DeleteAttribute(ch, "title");
@@ -3148,18 +3146,49 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 		case 6: // Captain
 		break;
 		case 7:		// Commodore/Knight
-			if (iNation == ENGLAND) 
+			switch(iNation)
 			{
-				// DeathDaisy -->
-				if (PChar.sex == "woman"){
-					PCharTitle = "Lady";
-				}
-				else{
-					PCharTitle = "Sir";
-				}
-				// DeathDaisy <--
-				SetRankTitle(PChar, TranslateString("", PCharTitle));
+				case ENGLAND:
+					if (!CheckAttribute(PChar, "knighted"))
+					{
+						// DeathDaisy -->
+						if (PChar.sex == "woman") PCharTitle = "Dame";
+						else PCharTitle = "Sir";
+						// DeathDaisy <--
+						SetRankTitle(PChar, TranslateString("", PCharTitle));
+						PChar.knighted = iNation;
+					}
+				break;
+
+				case FRANCE:
+					if (!CheckAttribute(PChar, "knighted") && GetCurrentPeriod() < PERIOD_NAPOLEONIC)
+					{
+						SetRankTitle(PChar, TranslateString("", "Chevalier"));
+						PChar.knighted = iNation;
+					}
+				break;
+
+				case SPAIN:
+					if (!CheckAttribute(PChar, "knighted"))
+					{
+						if (PChar.sex == "woman") PCharTitle = "Doña";
+						else PCharTitle = "Don";
+						SetRankTitle(PChar, TranslateString("", PCharTitle));
+						PChar.knighted = iNation;
+					}
+				break;
+
+				case PORTUGAL:
+					if (!CheckAttribute(PChar, "knighted"))
+					{
+						if (PChar.sex == "woman") PCharTitle = "Dona";
+						else PCharTitle = "Dom";
+						SetRankTitle(PChar, TranslateString("", PCharTitle));
+						PChar.knighted = iNation;
+					}
+				break;
 			}
+
 			switch(PlayerType)
 			{
 				case 1: UnlockPerkCharacter(PChar ,"Troopers");			break;	// Privateer
@@ -3171,7 +3200,7 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 			switch(iNation)
 			{
 				case ENGLAND:
-				switch (GetMySimpleName(PChar))
+				switch (GetMySimpleOldName(PChar))
 				{
 					case "Francis Drake":
 						if (PlayerType != 2)	// If Drake is a naval officer then he'll get a free ship anyway
@@ -3216,6 +3245,23 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 				break;
 			}
 		break;
+
+		case 10:	// Admiral/Viscount
+			switch(iNation)
+			{
+				case ENGLAND:
+					if (!CheckAttribute(PChar, "knighted") || sti(GetAttribute(PChar, "knighted")) == iNation)
+					{
+						// DeathDaisy -->
+						if (PChar.sex == "woman") PCharTitle = "Lady";
+						else PCharTitle = "Lord";
+						// DeathDaisy <--
+						SetRankTitle(PChar, TranslateString("", PCharTitle));
+						PChar.knighted = iNation;
+					}
+				break;
+			}
+		break;
 	}
 }
 
@@ -3234,7 +3280,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 			switch(PlayerRank)
 			{
 				case 1: // Midshipman
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "James Norrington":
 							PlayerModel = "Mdnorrington";
@@ -3257,7 +3303,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 					}
 				break;
 				case 2: // Junior Lieutenant
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "47_Ltsparrow";
@@ -3299,8 +3345,11 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 				case 4: // Senior Lieutenant
 				break;
 				case 5: // Commander
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
+						case "Horatio Hornblower":
+							PlayerModel = "brtHComdr_18";
+						break;
 						case "Horatio Nelson":
 							PlayerModel = "Cpnnelson";
 						break;
@@ -3310,7 +3359,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 					}
 				break;
 				case 6: // Post Captain
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "47_Cptsparrow";
@@ -3326,7 +3375,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 							else							PlayerModel = "GrovesCpt_EITC";
 						break;
 						case "Horatio Hornblower":
-							PlayerModel = "brtHComdr_18";
+							PlayerModel = "brtHCap_18";
 						break;
 						case "Jack Aubrey":
 							// Intentionally nothing (skip generic model)
@@ -3354,7 +3403,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 					}
 				break;
 				case 7: // Commodore
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "47_Cosparrow";
@@ -3390,7 +3439,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 				case 9: // Vice Admiral
 				break;
 				case 10: // Admiral
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "47_Admsparrow";
@@ -3456,7 +3505,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 			switch(PlayerRank)
 			{
 				case 1: // Enseigne
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "47_Sparrow_france";
@@ -3473,7 +3522,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 					}
 				break;
 				case 2: // Sous-Lieutenant de Vaisseau
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "9JdFra";
@@ -3517,7 +3566,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 			switch(PlayerRank)
 			{
 				case 1: // Aspirante
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "47_Sparrow_spain";
@@ -3609,7 +3658,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 				case 1: // Ensign
 				break;
 				case 2: // Junior Lieutenant
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "John Paul Jones":
 							PlayerModel = "JP_Jones_lut";
@@ -3625,7 +3674,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 				case 5: // Commander
 				break;
 				case 6: // Post Captain
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "John Paul Jones":
 							PlayerModel = "JP_Jones_cpt";
@@ -3637,7 +3686,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 				case 7: // Commodore
 				break;
 				case 8: // Rear Admiral
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "John Paul Jones":
 							PlayerModel = "JP_Jones_adm";
@@ -3660,7 +3709,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 			switch(PlayerRank)
 			{
 				case 2: // Lieutenant
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "47_Sparrow_Eitc_lt";
@@ -3673,7 +3722,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 					}
 				break;
 				case 4: // Captain
-					switch(GetMySimpleName(PChar))
+					switch(GetMySimpleOldName(PChar))
 					{
 						case "Jack Sparrow":
 							PlayerModel = "47_Sparrow_Eitc_cpt";
@@ -3704,7 +3753,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 	{
 		case 1: // Midshipman
 			// Boatswain:
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Jack Aubrey":
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_BOATSWAIN, "man1_1", 3, iNation, false);
@@ -3721,7 +3770,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 		break;
 		case 2: // Junior Lieutenant
 			// Navigator:
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Jack Aubrey":
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_NAVIGATOR, "Storeman2", 3, iNation, false);
@@ -3738,7 +3787,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 		break;
 		case 3: // Lieutenant
 			// Doctor:
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Jack Aubrey":
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_DOCTOR, "apothecary", 3, iNation, false);
@@ -3767,7 +3816,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 				ch = CreateOfficer_Cheat(OFFIC_TYPE_ABORDAGE, GetRandomModelForTypeExSubCheck(true, "Land_Officers", "man", iNation), 3, iNation, false);
 			}
 			SetRank(ch, iNation, 1);
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Jack Aubrey":
 					ch.name = TranslateString("","Peter");
@@ -3805,7 +3854,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 		break;
 		case 4: // Senior Lieutenant
 			// Quartermaster:
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Horatio Nelson":
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_QMASTER, "BadV", 3, iNation, false);
@@ -3815,7 +3864,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 				ch = CreateOfficer_Cheat(OFFIC_TYPE_QMASTER, GetRandomModelForTypeExSubCheck(1, OFFIC_TYPE_QMASTER, "man", iNation), 3, iNation, false);
 			}
 			// Cannoneer:
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Horatio Nelson":
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_CANNONEER, "capstan", 3, iNation, false);
@@ -3858,7 +3907,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 				break;
 			}
 			SetRank(ch, iNation, 3);
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Horatio Nelson":
 					ch.name = TranslateString("","Osborne");
@@ -3915,7 +3964,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 		break;
 		case 6: // Post Captain
 			// Carpenter:
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Horatio Nelson":
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_CARPENTER, "will_2", 3, iNation, false);
@@ -3943,7 +3992,7 @@ void GivePromotionOfficers(int PlayerRank, int iNation)
 		break;
 		case 8: // Rear Admiral
 			// First Mate:
-			switch(GetMySimpleName(PChar))
+			switch(GetMySimpleOldName(PChar))
 			{
 				case "Andrew Gillette":
 					ch = CreateOfficer_Cheat(OFFIC_TYPE_FIRSTMATE, "Conorrington", 3, iNation, false);
@@ -4022,10 +4071,12 @@ bool KrakenAttackEnabled()
 {
 	ref pchar = GetMainCharacter();
 	ref ch;
-	if(CheckAttribute(pchar, "KrakenAttack"))						return false;	// No Kraken attack is available until a set time after the previous attack
-	if(CheckAttribute(pchar, "ship.SubmergeDutchman"))				return false;	// No Kraken attack is available while the Dutchman is submerged
-	for (int i = 0; i <= GetCompanionQuantity(PChar); i++) {
-		ch = GetCharacter(GetCompanionIndex(pchar, sti(i)));
+	if(CheckAttribute(pchar, "KrakenAttack"))				return false;	// No Kraken attack is available until a set time after the previous attack
+	if(CheckAttribute(pchar, "ship.SubmergeDutchman"))			return false;	// No Kraken attack is available while the Dutchman is submerged
+	for (int i = 0; i < COMPANION_MAX; i++)
+	{
+		if (GetCompanionIndex(pchar, i) < 0) continue;
+		ch = GetCharacter(GetCompanionIndex(pchar, i));
 		if(GetAttribute(ch, "ship.type") == "CursedDutchman")		return true;	// Only the CURSED Flying Dutchman can call upon the Kraken
 	}
 	return false;
@@ -4361,6 +4412,28 @@ void CursedPearlFog()
 	CreateParticleSystemX("pearlfog",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 0.0, 0.0, 2);
 }
 
+#event_handler("CreateCursedDevilFog", "CursedDevilFog");
+void CursedDevilFog()
+{
+	aref rCharacter = GetEventData();
+	float fX, fY, fZ, fAY;
+	fX = 0; fY = 0; fZ = 0;
+
+	if(CheckAttribute(rCharacter,"Ship.pos.x")) fX=stf(rCharacter.Ship.pos.x);
+		else return;
+	if(CheckAttribute(rCharacter,"Ship.pos.y")) fY=stf(rCharacter.Ship.pos.y);
+		else return;
+	if(CheckAttribute(rCharacter,"Ship.pos.z")) fZ=stf(rCharacter.Ship.pos.z);
+		else return;
+	if(CheckAttribute(rCharacter,"Ship.Ang.y")) fAY=stf(rCharacter.Ship.Ang.y);
+		else return;
+	float gX, gY, gZ;
+	gX = 0; // Width
+	gY = 0; // Height
+	gZ = 10; // Length
+	CreateParticleSystemX("devilfog",fX - gX*cos(fAY) + gZ*sin(fAY), fY + gY, fZ + gX*sin(fAY) + gZ*cos(fAY), 0.0, 0.0, 0.0, 2);
+}
+
 bool BPSweepsEnabled()
 {
 	ref pchar = GetMainCharacter();
@@ -4512,12 +4585,14 @@ string GetCharacterCursedSails(ref chr)
 	if(HasSubStr(tempstring, "red"))				CursedSails = "sail_torn_red_plain.tga";
 	if(HasSubStr(tempstring, "petros"))				CursedSails = "sail_torn_red_plain.tga";
 	if(HasSubStr(tempstring, "black"))				CursedSails = "sail_torn_black_plain.tga";
+	if(HasSubStr(tempstring, "tan"))				CursedSails = "sail_torn_tan_plain.tga";
 	if(HasSubStr(tempstring, "weathered"))			CursedSails = "sail_torn_white_plain.tga";
 	if(HasSubStr(tempstring, "patch"))				CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Gets cursed sails
 	if(HasSubStr(tempstring, "BlackPearl"))			CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Keeps her own sails
 	if(HasSubStr(tempstring, "dutchman"))			CursedSails = "sail_dutchman2.tga";			// Flying Dutchman - Keeps her own sails
 	if(HasSubStr(tempstring, "Empress"))			CursedSails = "sail_torn_red_plain.tga";	// Empress - Torn red sails
 	if(HasSubStr(tempstring, "qar"))				CursedSails = "sail_torn_red_qar.tga";		// Queen Anne's Revenge - Keeps her own sails
+	if(HasSubStr(tempstring, "mariana"))			CursedSails = "sail_mariana.tga";			// Mariana - Keeps her own sails
 	if(CursedSails == "")
 		CursedSails = "sail_torn_white_plain.tga";
 
@@ -5189,9 +5264,9 @@ void SetUpChar_Cheat(ref ch, string otype)
 			ch.perks.list = "";
 			ch.perks.list.LongRangeGrappling = 1;
 			ch.perks.list.GrapplingProfessional = 1;
-			ch.perks.list.BasicBattleState = 1;
-			ch.perks.list.AdvancedBattleState = 1;
-			ch.perks.list.ShipDefenceProfessional = 1;
+			ch.perks.list.BasicDamageControl = 1;
+			ch.perks.list.Rigging = 1;
+			ch.perks.list.BasicFirstAid = 1;
 			ch.perks.list.LightRepair = 1;
 			ch.perks.list.InstantRepair = 1;
 			ch.perks.list.Trustworthy = 1;
@@ -5272,10 +5347,11 @@ void SetUpChar_Cheat(ref ch, string otype)
 			ch.items.mineral3 = 2;
 			ch.perks.freepoints = 0;
 			ch.perks.list = "";
-			ch.perks.list.BasicBattleState = 1;
-			ch.perks.list.AdvancedBattleState = 1;
-			ch.perks.list.ShipDefenceProfessional = 1;
-			ch.perks.list.LightRepair = 1;
+			ch.perks.list.BasicDamageControl = 1;
+			ch.perks.list.AdvancedDamageControl = 1;
+			ch.perks.list.ProfessionalDamageControl = 1;
+			ch.perks.list.Rigging = 1;
+			ch.perks.list.RiggingAdvance = 1;
 			ch.perks.list.StormProfessional = 1;
 			ch.perks.list.SharedExperience = 1;
 			ch.perks.list.IronWill = 1;

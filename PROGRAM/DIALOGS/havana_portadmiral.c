@@ -129,7 +129,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				link.l1 = DLG_TEXT[119];
+				link.l1 = DLG_TEXT[117];
 			}
 			link.l1.go = "begin_2";
 		break;

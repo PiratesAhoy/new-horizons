@@ -2,12 +2,13 @@ void CreateTempQuestCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 
-	ch.name = TranslateString("","William");
-	ch.lastname = TranslateString("","Legrand");
+	ch.old.name = "William";
+	ch.old.lastname = "Legrand";
+	ch.name = TranslateString("", "William");
+	ch.lastname = TranslateString("", "Legrand");
 	ch.id		= "Legrand_copy";
 	ch.model = "William Legrand";
 	ch.sex = "man";
@@ -51,7 +52,9 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = -20;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Jupiter");
+	ch.old.name = "Jupiter";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Jupiter");
 	ch.lastname = "";
 	ch.id		= "Jupiter";
 	ch.model = "Jupiter";
@@ -98,8 +101,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = -10;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Edgar Allan");
-	ch.lastname = TranslateString("","Poe");
+	ch.old.name = "Edgar Allan";
+	ch.old.lastname = "Poe";
+	ch.name = TranslateString("", "Edgar Allan");
+	ch.lastname = TranslateString("", "Poe");
 	ch.id		= "Edgar Allan Poe";
 	ch.model = "Edgar Allan Poe";
 	ch.sex = "man";
@@ -138,8 +143,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = -10;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","C. Auguste");
-	ch.lastname = TranslateString("","Dupin");
+	ch.old.name = "C. Auguste";
+	ch.old.lastname = "Dupin";
+	ch.name = TranslateString("", "C. Auguste");
+	ch.lastname = TranslateString("", "Dupin");
 	ch.id		= "Auguste Dupin";
 	ch.model = "Auguste Dupin";
 	ch.sex = "man";
@@ -176,8 +183,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = -10;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Arthur Gordon");
-	ch.lastname = TranslateString("","Pym");
+	ch.old.name = "Arthur Gordon";
+	ch.old.lastname = "Pym";
+	ch.name = TranslateString("", "Arthur Gordon");
+	ch.lastname = TranslateString("", "Pym");
 	ch.id		= "Arthur Gordon Pym";
 	ch.model = "Arthur Gordon Pym";
 	ch.sex = "man";
@@ -214,8 +223,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = -10;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Lieutenant");
-	ch.lastname = TranslateString("","G");
+	ch.old.name = "Lieutenant";
+	ch.old.lastname = "G";
+	ch.name = TranslateString("", "Lieutenant");
+	ch.lastname = TranslateString("", "G");
 	ch.id		= "Lieutenant G";
 	ch.model = "lieutenant_G";
 	ch.sex = "man";
@@ -258,8 +269,8 @@ void CreateTempQuestCharacters(ref n)
 //-----------------------------------------------------------------------
 	ch.old.name = "Medicine";
 	ch.old.lastname = "Woman";
-	ch.name = TranslateString("","Medicine");
-	ch.lastname = TranslateString("","Woman");
+	ch.name = TranslateString("Medicine", "Woman");
+	ch.lastname = "";
 	ch.id		= "Medicine Woman";
 	ch.model	= "medicine_woman";
 	ch.sound_type = "female_citizen";
@@ -297,8 +308,10 @@ void CreateTempQuestCharacters(ref n)
 //-----------------------------------------------------------------------
 //Moultrie village
 
-	ch.name = TranslateString("","Hans");
-	ch.lastname = TranslateString("","Pfaall");
+	ch.old.name = "Hans";
+	ch.old.lastname = "Pfaall";
+	ch.name = TranslateString("", "Hans");
+	ch.lastname = TranslateString("", "Pfaall");
 	ch.id		= "Moultrie_restaurant_owner";
 	ch.model = "Mou_19";
 	ch.sex = "man";
@@ -333,8 +346,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","William");
-	ch.lastname = TranslateString("","Wilson");
+	ch.old.name = "William";
+	ch.old.lastname = "Wilson";
+	ch.name = TranslateString("", "William");
+	ch.lastname = TranslateString("", "Wilson");
 	ch.id		= "Moultrie_bouncer";
 	ch.model = "gm_crew1";
 	ch.sex = "man";
@@ -367,8 +382,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Ethelred");
-	ch.lastname = TranslateString("","Usher");
+	ch.old.name = "Ethelred";
+	ch.old.lastname = "Usher";
+	ch.name = TranslateString("", "Ethelred");
+	ch.lastname = TranslateString("", "Usher");
 	ch.id		= "Moultrie_hotel_owner";
 	ch.model = "Mou_12";
 	ch.FaceId	= 160;
@@ -403,7 +420,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Fortunato");
+	ch.old.name = "Fortunato";
+	ch.name = TranslateString("", "Fortunato");
 	ch.id		= "Moultrie_store_owner";
 	ch.model = "pir_cap17";
 	ch.sex = "man";
@@ -441,8 +459,10 @@ void CreateTempQuestCharacters(ref n)
 
 //---------------------------------------------------------------
 //tourists
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist1";
 	ch.model = "man7";
 	ch.sex = "man";
@@ -476,8 +496,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist2";
 	ch.model = "50M5";
 	ch.sex = "man";
@@ -511,8 +533,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist3";
 	ch.model = "towngirl1";
 	ch.sex = "woman";
@@ -546,8 +570,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist4";
 	ch.model = "Liz1";
 	ch.sex = "woman";
@@ -581,8 +607,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist5";
 	ch.model = "blaze4";
 	ch.sex = "man";
@@ -616,8 +644,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist6";
 	ch.model = "50_Rachel";
 	ch.sex = "woman";
@@ -651,8 +681,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist7";
 	ch.model = "Henry_Morgan";
 	ch.sex = "man";
@@ -686,8 +718,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist8";
 	ch.model = "50_33Petra";
 	ch.sex = "woman";
@@ -721,8 +755,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist9";
 	ch.model = "Huber_Fra3_17";
 	ch.sex = "man";
@@ -756,8 +792,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist10";
 	ch.model = "Huber_Fra4_17";
 	ch.sex = "man";
@@ -791,8 +829,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Summer");
-	ch.lastname = TranslateString("","visitor");
+	ch.old.name = "Summer";
+	ch.old.lastname = "visitor";
+	ch.name = TranslateString("", "Summer");
+	ch.lastname = TranslateString("", "visitor");
 	ch.id		= "Moultrie_tourist11";
 	ch.model = "LaCroix";
 	ch.sex = "man";
@@ -830,8 +870,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard1";
 	ch.model = 1;
 	ch.sex = "man";
@@ -874,8 +914,8 @@ void CreateTempQuestCharacters(ref n)
 	//this one checks if you got the password to the fort
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard2";
 	ch.model = 2;
 	ch.sex = "man";
@@ -917,8 +957,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard3";
 	ch.model = 3;
 	ch.sex = "man";
@@ -960,8 +1000,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard4";
 	ch.model = 4;
 	ch.sex = "man";
@@ -1004,8 +1044,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard5";
 	ch.model = 5;
 	ch.sex = "man";
@@ -1048,8 +1088,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard6";
 	ch.model = 1;
 	ch.sex = "man";
@@ -1092,8 +1132,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard7";
 	ch.model = 2;
 	ch.sex = "man";
@@ -1136,8 +1176,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard8";
 	ch.model = 3;
 	ch.sex = "man";
@@ -1180,8 +1220,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard9";
 	ch.model = "Soldier_USA4_18";
 	ch.sex = "man";
@@ -1224,8 +1264,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_guard10";
 	ch.model = "Soldier_USA5_18";
 	ch.sex = "man";
@@ -1271,8 +1311,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_offduty1";			
 	ch.model = "Soldier_USA_jrh1";
 	ch.sex = "man";
@@ -1313,8 +1353,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_offduty2";			
 	ch.model = "Soldier_USA_jrh2";
 	ch.sex = "man";
@@ -1355,8 +1395,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_offduty3";			
 	ch.model = "Soldier_USA_jrh3";
 	ch.sex = "man";
@@ -1397,8 +1437,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_offduty4";			
 	ch.model = "Soldier_USA_jrh1";
 	ch.sex = "man";
@@ -1439,8 +1479,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_offduty5";			
 	ch.model = "Soldier_USA_jrh5";
 	ch.sex = "man";
@@ -1481,8 +1521,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_offduty6";			
 	ch.model = "Soldier_USA_jrh4";
 	ch.sex = "man";
@@ -1523,8 +1563,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_offduty7";			
 	ch.model = "Soldier_USA_jrh4";
 	ch.sex = "man";
@@ -1565,8 +1605,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Moultrie_offduty8";
 	ch.model	= "Soldier_USA2_18";
 	ch.sex = "man";
@@ -1607,8 +1647,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Bartender";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Bartender");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Bartender");
+	ch.lastname = "";
 	ch.id		= "Moultrie_barracks_bartender";			
 	ch.model = "Francisco_Cruz";
 	ch.sex = "man";
@@ -1648,8 +1688,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Sergeant";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Sergeant");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Sergeant");
+	ch.lastname = "";
 	ch.id		= "Moultrie_sergeant";			
 	ch.model = "Soldier_USA_jrh6";
 	ch.sex = "man";
@@ -1690,8 +1730,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Corporal";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Corporal");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Corporal");
+	ch.lastname = "";
 	ch.id		= "Moultrie_Corporal";			
 	ch.model = "Soldier_USA_jrh7";
 	ch.sex = "man";
@@ -1734,8 +1774,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Soldier");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Soldier");
+	ch.lastname = "";
 	ch.id		= "Charleston_guard1";
 	ch.model	= 1;
 	ch.sex = "man";
@@ -1779,7 +1819,7 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Soldier";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Soldier");
+	ch.name 	= TranslateString("", "Soldier");
 	ch.lastname 	= "";
 	ch.id		= "Charleston_guard2";
 	ch.model	= 2; // PB
@@ -1822,8 +1862,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Sailor";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Sailor");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Sailor");
+	ch.lastname = "";
 	ch.id		= "Steamship_sailor1";
 	ch.model	= "Sailor";
 	ch.sex = "man";
@@ -1866,8 +1906,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Sailor";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Sailor");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Sailor");
+	ch.lastname = "";
 	ch.id		= "Steamship_sailor2";
 	ch.model	= "pirat12";
 	ch.sex = "man";
@@ -1910,8 +1950,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Claude";
 	ch.old.lastname = "Frollo";
-	ch.name = TranslateString("","Claude");
-	ch.lastname = TranslateString("","Frollo");
+	ch.name = TranslateString("", "Claude");
+	ch.lastname = TranslateString("", "Frollo");
 	ch.id		= "Claude Frollo";
 	ch.model = "Monk4";
 	ch.sex = "man";
@@ -1949,8 +1989,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Claude";
 	ch.old.lastname = "Frollo";
-	ch.name = TranslateString("","Claude");
-	ch.lastname = TranslateString("","Frollo");
+	ch.name = TranslateString("", "Claude");
+	ch.lastname = TranslateString("", "Frollo");
 	ch.id		= "Claude Frollo2";
 	ch.model = "Monk4";
 	ch.sex = "man";
@@ -1989,8 +2029,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Landlady";
 	ch.old.lastname = "";
-	ch.name = TranslateString("","Landlady");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "Landlady");
+	ch.lastname = "";
 	ch.id		= "Landlady";
 	ch.model = "w5_barwench";
 	ch.sex = "woman";
@@ -2029,8 +2069,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Natalia";
 	ch.old.lastname = "Decoteau";
-	ch.name = TranslateString("","Natalia");
-	ch.lastname = TranslateString("","Decoteau");
+	ch.name = TranslateString("", "Natalia");
+	ch.lastname = TranslateString("", "Decoteau");
 	ch.id		= "Ch_wench1";
 	ch.model	= "w1_Natalia";
 	ch.sound_type = "female_citizen";
@@ -2065,8 +2105,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Serena";
 	ch.old.lastname = "Tisserand";
-	ch.name = TranslateString("","Serena");
-	ch.lastname = TranslateString("","Tisserand");
+	ch.name = TranslateString("", "Serena");
+	ch.lastname = TranslateString("", "Tisserand");
 	ch.id		= "Ch_wench2";
 	ch.model	= "w2_Serena";
 	ch.sound_type = "female_citizen";
@@ -2101,8 +2141,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Celia";
 	ch.old.lastname = "Hilder";
-	ch.name = TranslateString("","Celia");
-	ch.lastname = TranslateString("","Hilder");
+	ch.name = TranslateString("", "Celia");
+	ch.lastname = TranslateString("", "Hilder");
 	ch.id		= "Ch_wench4";
 	ch.model	= "w4_Celia";
 	ch.sound_type = "female_citizen";
@@ -2135,7 +2175,9 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Mummy");
+	ch.old.name = "Mummy";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Mummy");
 	ch.lastname = "";
 	ch.id		= "GB_mummy3";
 	ch.model = "wr_mummy3";
@@ -2172,8 +2214,10 @@ void CreateTempQuestCharacters(ref n)
 //----------------------------------------------------------------
 
 	//MALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen1";
 	ch.model = "Cutler_Beckett";
 	ch.sex = "man";
@@ -2208,8 +2252,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//FEMALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen2";
 	ch.model = "downgirl1";
 	ch.sex = "woman";
@@ -2244,8 +2290,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//MALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen3";
 	ch.model = "Animists1_black";
 	ch.sex = "man";
@@ -2281,8 +2329,8 @@ void CreateTempQuestCharacters(ref n)
 
 	ch.old.name = "Axel";
 	ch.old.lastname = "von Fersen";
-	ch.name = TranslateString("","Axel");
-	ch.lastname = TranslateString("","von Fersen");
+	ch.name = TranslateString("", "Axel");
+	ch.lastname = TranslateString("", "von Fersen");
 	ch.id		= "Axel von Fersen";
 	ch.model = "Axel von Fersen";
 	ch.sex = "man";
@@ -2320,8 +2368,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//MALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen5";
 	ch.model = "Huber_Fra4_17";
 	ch.sex = "man";
@@ -2356,8 +2406,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//FEMALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen6";
 	ch.model = "imgovwife";
 	ch.sex = "woman";
@@ -2392,8 +2444,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//MALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen7";
 	ch.model = "Berend_De_Voor";
 	ch.sex = "man";
@@ -2428,8 +2482,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//FEMALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen8";
 	ch.model = "downgirl2";
 	ch.sex = "woman";
@@ -2464,8 +2520,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//MALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen9";
 	ch.model = "bocman2";
 	ch.sex = "man";
@@ -2500,8 +2558,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//MALE
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_citizen10";
 	ch.model = "mongol";
 	ch.sex = "man";
@@ -2535,8 +2595,10 @@ void CreateTempQuestCharacters(ref n)
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Doctor");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Doctor";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Doctor");
+	ch.lastname = "";
 	ch.id		= "Charleston_doctor";
 	ch.model = "gm_crew4";
 	ch.sex = "man";
@@ -2573,8 +2635,8 @@ void CreateTempQuestCharacters(ref n)
 	//only used for the ship
 	ch.old.name = "KP";
 	ch.old.lastname = "";		
-	ch.name = TranslateString("","KP");
-	ch.lastname = TranslateString("","");
+	ch.name = TranslateString("", "KP");
+	ch.lastname = "";
 	ch.id		= "KP";
 	ch.model = "Dave_clerk";
 	ch.sex = "man";
@@ -2615,8 +2677,10 @@ void CreateTempQuestCharacters(ref n)
 //--------------------------------------------------------------------
 
 	//REPLACES CITIZEN1
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "client1";
 	ch.model = "Cutler_Beckett";
 	ch.sex = "man";
@@ -2650,8 +2714,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//REPLACES CITIZEN2
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "client2";
 	ch.model = "downgirl1";
 	ch.sex = "woman";
@@ -2685,8 +2751,10 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//REPLACES CITIZEN3
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "client3";
 	ch.model = "Animists1_black";
 	ch.sex = "man";
@@ -2722,8 +2790,8 @@ void CreateTempQuestCharacters(ref n)
 	//REPLACES FERSEN
 	ch.old.name = "Axel";
 	ch.old.lastname = "von Fersen";
-	ch.name = TranslateString("","Axel");
-	ch.lastname = TranslateString("","von Fersen");
+	ch.name = TranslateString("", "Axel");
+	ch.lastname = TranslateString("", "von Fersen");
 	ch.id		= "client4";
 	ch.model = "Axel von Fersen";
 	ch.sex = "man";
@@ -2762,8 +2830,10 @@ void CreateTempQuestCharacters(ref n)
 
 //--------------------------------------------------------------------
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant1";
 	ch.model = "pir_cap7";
 	ch.sex = "man";
@@ -2800,8 +2870,10 @@ ch.itemtrade.size = 0.2;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant2";
 	ch.model = "pir_cap6";
 	ch.sex = "man";
@@ -2838,8 +2910,10 @@ ch.itemtrade.size = 0.1;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant3";
 	ch.model = "pir_cap26";
 	ch.sex = "man";				//was woman
@@ -2876,8 +2950,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant4";
 	ch.model = "pir_cap5";
 	ch.sex = "man";
@@ -2914,8 +2990,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant5";
 	ch.model = "gm_crew3";
 	ch.sex = "man";
@@ -2949,8 +3027,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant6";
 	ch.model = "50_india";
 	ch.sex = "woman";
@@ -2984,8 +3064,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant7";
 	ch.model = "prisoner_Sarah_Fitter";
 	ch.sex = "woman";
@@ -3019,8 +3101,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 	
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant8";
 	ch.model = "pir_cap15";
 	ch.sex = "man";
@@ -3054,8 +3138,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant9";
 	ch.model = "pir_cap30";
 	ch.sex = "man";
@@ -3089,8 +3175,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Street");
-	ch.lastname = TranslateString("","Merchant");
+	ch.old.name = "Street";
+	ch.old.lastname = "Merchant";
+	ch.name = TranslateString("Street", "Merchant");
+	ch.lastname = "";
 	ch.id		= "merchant10";
 	ch.model = "pir_cap1";
 	ch.sex = "man";
@@ -3127,8 +3215,10 @@ ch.itemtrade.size = 0.4;
 //PORT CITIZENS
 
 	//shipbuild
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port1";
 	ch.model = "Dave_clerk";
 	ch.sex = "man";
@@ -3163,8 +3253,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//shipbuild
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port2";
 	ch.model = "man3_1";
 	ch.sex = "man";
@@ -3199,8 +3291,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//shipbuild
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port3";
 	ch.model = "man2";
 	ch.sex = "man";
@@ -3235,8 +3329,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//shipbuild
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port4";
 	ch.model = "sailor5";
 	ch.sex = "man";
@@ -3271,8 +3367,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//shipbuild
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port5";
 	ch.model = "man5";
 	ch.sex = "man";
@@ -3307,8 +3405,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//white poor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port6";
 	ch.model = "HenryBeggar";
 	ch.sex = "man";
@@ -3343,8 +3443,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//white poor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port7";
 	ch.model = "man4";
 	ch.sex = "man";
@@ -3379,8 +3481,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//white poor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port8";
 	ch.model = "prison_3";
 	ch.sex = "man";
@@ -3415,8 +3519,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//black poor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port9";
 	ch.model = "rabblack";
 	ch.sex = "man";
@@ -3451,8 +3557,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//black poor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port10";
 	ch.model = "rabblack_1";
 	ch.sex = "man";
@@ -3487,8 +3595,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//female
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port11";
 	ch.model = "towngirl3";
 	ch.sex = "woman";
@@ -3523,8 +3633,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//female
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port12";
 	ch.model = "Danblack";
 	ch.sex = "woman";
@@ -3559,8 +3671,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//female
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port13";
 	ch.model = "OldWoman1";
 	ch.sex = "woman";
@@ -3595,8 +3709,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//black
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port14";
 	ch.model = "pir_cap4";
 	ch.sex = "man";
@@ -3631,8 +3747,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//black
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port15";
 	ch.model = "black_corsair";
 	ch.sex = "man";
@@ -3667,8 +3785,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//sailor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port16";
 	ch.model = "bocman1";
 	ch.sex = "man";
@@ -3703,8 +3823,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//sailor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port17";
 	ch.model = "bocman10";
 	ch.sex = "man";
@@ -3739,8 +3861,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//sailor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port18";
 	ch.model = "bocman";
 	ch.sex = "man";
@@ -3775,8 +3899,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//sailor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port19";
 	ch.model = "pir_cap10";
 	ch.sex = "man";
@@ -3811,8 +3937,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//soldier
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port20";
 	ch.model = "Soldier_USA5_18";
 	ch.sex = "man";
@@ -3847,8 +3975,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//Pintel
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port21";
 	ch.model = "Pintel";
 	ch.sex = "man";
@@ -3883,8 +4013,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//Ragetti
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port22";
 	ch.model = "Ragetti";
 	ch.sex = "man";
@@ -3919,8 +4051,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//nobleman
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port23";
 	ch.model = "Thomas_the_Terror";
 	ch.sex = "man";
@@ -3955,8 +4089,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//sailor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port24";
 	ch.model = "Salt";
 	ch.sex = "man";
@@ -3991,8 +4127,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//sailor
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port25";
 	ch.model = "pirat12";
 	ch.sex = "man";
@@ -4027,8 +4165,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//white poor only at night
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port26";
 	ch.model = "brodyaga";
 	ch.sex = "man";
@@ -4064,8 +4204,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//indian only at night
-	ch.name = TranslateString("","Citizen");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Citizen";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Citizen");
+	ch.lastname = "";
 	ch.id		= "Charleston_port27";
 	ch.model = "indian1_3";
 	ch.sex = "man";
@@ -4103,8 +4245,10 @@ ch.itemtrade.size = 0.4;
 //----------------------------------------------------------------
 //store owners
 
-	ch.name = TranslateString("","Bartender");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Bartender";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Bartender");
+	ch.lastname = "";
 	ch.id		= "GB_port_bartender";
 	ch.model = "Old_mat1";
 	ch.sex = "man";
@@ -4137,8 +4281,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Shipyard");
-	ch.lastname = TranslateString("","Owner");
+	ch.old.name = "Shipyard";
+	ch.old.lastname = "Owner";
+	ch.name = TranslateString("", "Shipyard");
+	ch.lastname = TranslateString("", "Owner");
 	ch.id		= "GB_ship_owner";
 	ch.model = "33_Ronald";
 	ch.model.animation = "33_Ronald";
@@ -4172,8 +4318,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Harbour");
-	ch.lastname = TranslateString("","Master");
+	ch.old.name = "Harbour";
+	ch.old.lastname = "Master";
+	ch.name = TranslateString("", "Harbour");
+	ch.lastname = TranslateString("", "Master");
 	ch.id		= "GB_harbour_master";
 	ch.model = "BadV";
 	ch.sex = "man";
@@ -4206,8 +4354,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Bank");
-	ch.lastname = TranslateString("","Clerk");
+	ch.old.name = "Bank";
+	ch.old.lastname = "Clerk";
+	ch.name = TranslateString("", "Bank");
+	ch.lastname = TranslateString("", "Clerk");
 	ch.id		= "GB_loanshark";
 	ch.model = "man2";
 	ch.sex = "man";
@@ -4240,8 +4390,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Blacksmith");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Blacksmith";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Blacksmith");
+	ch.lastname = "";
 	ch.id		= "GB_blacksmith";
 	ch.model = "blacksmith1";
 	ch.sex = "man";
@@ -4274,8 +4426,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Storeowner");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Storeowner";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Storeowner");
+	ch.lastname = "";
 	ch.id		= "GB_storeowner";
 	ch.model = "50M5";
 	ch.sex = "man";
@@ -4309,8 +4463,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Governor Thomas");
-	ch.lastname = TranslateString("","Bennet");
+	ch.old.name = "Governor Thomas";
+	ch.old.lastname = "Bennet";
+	ch.name = TranslateString("", "Governor Thomas");
+	ch.lastname = TranslateString("", "Bennet");
 	ch.id		= "GB_governor";
 	ch.model = "Huber_Fra3_17";
 	ch.sex = "man";
@@ -4343,8 +4499,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 40;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Bartender");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Bartender";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Bartender");
+	ch.lastname = "";
 	ch.id		= "GB_town_bartender";
 	ch.model = "OldWoman2";
 	ch.sex = "woman";
@@ -4392,7 +4550,9 @@ ch.itemtrade.size = 0.4;
 
 
 //----------------------------------------------------------------
-	ch.name = TranslateString("","The Chinese");
+	ch.old.name = "The Chinese";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "The Chinese");
 	ch.id		= "the_chinese";
 	ch.model = "Mou_9";
 	ch.sex = "man";
@@ -4432,7 +4592,9 @@ ch.itemtrade.size = 0.4;
 //----------------------------------------------------------------
 
 //MALE
-	ch.name = TranslateString("","Man");
+	ch.old.name = "Man";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Man");
 	ch.id		= "m_slave1";
 	ch.model = "guncrew_4";
 	ch.sex = "man";
@@ -4465,7 +4627,9 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Man");
+	ch.old.name = "Man";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Man");
 	ch.id		= "m_slave2";
 	ch.model = "fredbob";
 	ch.sex = "man";
@@ -4498,7 +4662,9 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Man");
+	ch.old.name = "Man";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Man");
 	ch.id		= "m_slave3";
 	ch.model = "Friday_officer";
 	ch.sex = "man";
@@ -4532,7 +4698,8 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	//FEMALE
-	ch.name = TranslateString("","Black Magic Woman");
+	ch.old.name = "Black Magic Woman";
+	ch.name = TranslateString("", "Black Magic Woman");
 	ch.id		= "f_slave1";
 	ch.model = "tiaDalma";
 	ch.model.animation = "TiaDalma";
@@ -4566,7 +4733,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Woman");
+	ch.old.name = "Woman";
+	ch.name = TranslateString("", "Woman");
 	ch.id		= "f_slave2";
 	ch.model	= "downgirl2";
 	ch.sound_type = "female_citizen";
@@ -4599,8 +4767,10 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 //----------------------------------------------------------------
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_guard1";
 	ch.model = "pir_cap7";
 	ch.sex = "man";
@@ -4640,8 +4810,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_guard2";
 	ch.model = "pir_cap22";
 	ch.sex = "man";
@@ -4681,8 +4853,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_patrol1";
 	ch.model = "pir_cap1";
 	ch.sex = "man";
@@ -4723,8 +4897,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_patrol2";
 	ch.model = "pir_cap2";
 	ch.sex = "man";
@@ -4765,8 +4941,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_patrol3";
 	ch.model = "pir_cap5";
 	ch.sex = "man";
@@ -4807,8 +4985,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_patrol4";
 	ch.model = "pir_cap4";
 	ch.sex = "man";
@@ -4849,8 +5029,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_patrol5";
 	ch.model = "pir_cap10";
 	ch.sex = "man";
@@ -4894,8 +5076,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_patrol6";
 	ch.model = "pir_cap17";
 	ch.sex = "man";
@@ -4936,8 +5120,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_patrol7";
 	ch.model = "pir_cap27";
 	ch.sex = "man";
@@ -4978,8 +5164,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_patrol8";
 	ch.model = "pir_cap30";
 	ch.sex = "man";
@@ -5020,8 +5208,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_tower1";
 	ch.model = "capstan";
 	ch.sex = "man";
@@ -5059,8 +5249,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Plantation");
-	ch.lastname = TranslateString("","Guard");
+	ch.old.name = "Plantation";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("", "Plantation");
+	ch.lastname = TranslateString("", "Guard");
 	ch.id		= "Bessop_tower2";
 	ch.model = "buccaneer1";
 	ch.sex = "man";
@@ -5098,8 +5290,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 30;
 	AddGameCharacter(n, ch);
 	
-	ch.name = TranslateString("","Captain William");
-	ch.lastname = TranslateString("","Kidd");
+	ch.old.name = "Captain William";
+	ch.old.lastname = "Kidd";
+	ch.name = TranslateString("", "Captain William");
+	ch.lastname = TranslateString("", "Kidd");
 	ch.id		= "Captain Kidd";
 	ch.model = "Captain Kidd";
 	ch.sex = "man";
@@ -5134,8 +5328,10 @@ ch.itemtrade.size = 0.4;
 
 //----------------------------------------------------------------------
 
-	ch.name = TranslateString("","Howard");
-	ch.lastname = TranslateString("","Pyle");
+	ch.old.name = "Howard";
+	ch.old.lastname = "Pyle";
+	ch.name = TranslateString("", "Howard");
+	ch.lastname = TranslateString("", "Pyle");
 	ch.id		= "GB_Pyle";
 	ch.model = "Howard_Pyle";
 	ch.sex = "man";
@@ -5168,8 +5364,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Caroline");
-	ch.lastname = TranslateString("","K");
+	ch.old.name = "Caroline";
+	ch.old.lastname = "K";
+	ch.name = TranslateString("", "Caroline");
+	ch.lastname = TranslateString("", "K");
 	ch.id		= "GB_Caroline";
 	ch.model = "Caroline_officer";
 	ch.sex = "man";
@@ -5202,8 +5400,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Friday");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Friday";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Friday");
+	ch.lastname = "";
 	ch.id		= "GB_Friday";
 	ch.model = "Friday_officer";
 	ch.sex = "man";
@@ -5236,8 +5436,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Alexander");
-	ch.lastname = TranslateString("","Selkirk");
+	ch.old.name = "Alexander";
+	ch.old.lastname = "Selkirk";
+	ch.name = TranslateString("", "Alexander");
+	ch.lastname = TranslateString("", "Selkirk");
 	ch.id		= "GB_Selkirk";
 	ch.model = "Selkirk_officer";
 	ch.sex = "man";
@@ -5270,8 +5472,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Grandma");
-	ch.lastname = TranslateString("","Rogers");
+	ch.old.name = "Grandma";
+	ch.old.lastname = "Rogers";
+	ch.name = TranslateString("", "Grandma");
+	ch.lastname = TranslateString("", "Rogers");
 	ch.id		= "GB_Grandma";
 	ch.model = "Grandma_boss";
 	ch.sex = "man";
@@ -5304,8 +5508,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Dave");
-	ch.lastname = TranslateString("","Edna");
+	ch.old.name = "Dave";
+	ch.old.lastname = "Edna";
+	ch.name = TranslateString("", "Dave");
+	ch.lastname = TranslateString("", "Edna");
 	ch.id		= "GB_Dave";
 	ch.model = "Dave_officer";
 	ch.sex = "man";
@@ -5338,8 +5544,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Nathaniel");
-	ch.lastname = TranslateString("","Hawk");
+	ch.old.name = "Nathaniel";
+	ch.old.lastname = "Hawk";
+	ch.name = TranslateString("", "Nathaniel");
+	ch.lastname = TranslateString("", "Hawk");
 	ch.id		= "GB_Hawk";
 	ch.model = "blaze";
 	ch.sex = "man";
@@ -5372,8 +5580,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Danielle");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Danielle";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Danielle");
+	ch.lastname = "";
 	ch.id		= "GB_Danielle";
 	ch.model = "Danielle";
 	ch.sex = "woman";
@@ -5407,8 +5617,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Fawn");
-	ch.lastname = TranslateString("","");
+	ch.old.name = "Fawn";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Fawn");
+	ch.lastname = "";
 	ch.id		= "GB_Fawn";
 	ch.model = "Fawn";
 	ch.sex = "man";
@@ -5441,8 +5653,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Steven");
-	ch.lastname = TranslateString("","Maturin");
+	ch.old.name = "Steven";
+	ch.old.lastname = "Maturin";
+	ch.name = TranslateString("", "Steven");
+	ch.lastname = TranslateString("", "Maturin");
 	ch.id		= "GB_Maturin";
 	ch.model = "apothecary";
 	ch.sex = "man";
@@ -5475,8 +5689,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Jack");
-	ch.lastname = TranslateString("","Aubrey");
+	ch.old.name = "Jack";
+	ch.old.lastname = "Aubrey";
+	ch.name = TranslateString("", "Jack");
+	ch.lastname = TranslateString("", "Aubrey");
 	ch.id		= "GB_Aubrey";
 	ch.model = "Aubrey";
 	ch.sex = "man";
@@ -5509,8 +5725,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Jack");
-	ch.lastname = TranslateString("","Sparrow");
+	ch.old.name = "Jack";
+	ch.old.lastname = "Sparrow";
+	ch.name = TranslateString("", "Jack");
+	ch.lastname = TranslateString("", "Sparrow");
 	ch.id		= "GB_Sparrow";
 	ch.model = "depp";				//or Jack
 	ch.sex = "man";
@@ -5543,8 +5761,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Elizabeth");
-	ch.lastname = TranslateString("","Swann");
+	ch.old.name = "Elizabeth";
+	ch.old.lastname = "Swann";
+	ch.name = TranslateString("", "Elizabeth");
+	ch.lastname = TranslateString("", "Swann");
 	ch.id		= "GB_Elizabeth";
 	ch.model = "B_girl";
 	ch.sex = "woman";
@@ -5577,8 +5797,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Hector");
-	ch.lastname = TranslateString("","Barbossa");
+	ch.old.name = "Hector";
+	ch.old.lastname = "Barbossa";
+	ch.name = TranslateString("", "Hector");
+	ch.lastname = TranslateString("", "Barbossa");
 	ch.id		= "GB_Barbossa";
 	ch.model = "Barbossa";
 	ch.sex = "man";
@@ -5611,8 +5833,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Will");
-	ch.lastname = TranslateString("","Turner");
+	ch.old.name = "Will";
+	ch.old.lastname = "Turner";
+	ch.name = TranslateString("", "Will");
+	ch.lastname = TranslateString("", "Turner");
 	ch.id		= "GB_Turner";
 	ch.model = "will";
 	ch.sex = "man";
@@ -5645,8 +5869,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Beatrice");
-	ch.lastname = TranslateString("","Devlin");
+	ch.old.name = "Beatrice";
+	ch.old.lastname = "Devlin";
+	ch.name = TranslateString("", "Beatrice");
+	ch.lastname = TranslateString("", "Devlin");
 	ch.id		= "GB_Beatrice";
 	ch.model = "Beatrice";
 	ch.sex = "woman";
@@ -5679,8 +5905,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Jean");
-	ch.lastname = TranslateString("","de la Croix");
+	ch.old.name = "Jean";
+	ch.old.lastname = "de la Croix";
+	ch.name = TranslateString("", "Jean");
+	ch.lastname = TranslateString("", "de la Croix");
 	ch.id		= "GB_LaCroix";
 	ch.model = "LaCroix";
 	ch.sex = "man";
@@ -5713,8 +5941,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Horatio");
-	ch.lastname = TranslateString("","Hornblower");
+	ch.old.name = "Horatio";
+	ch.old.lastname = "Hornblower";
+	ch.name = TranslateString("", "Horatio");
+	ch.lastname = TranslateString("", "Hornblower");
 	ch.id		= "GB_Hornblower";
 	ch.model = "brtmdsH_18";
 	ch.sex = "man";
@@ -5747,8 +5977,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Archie");
-	ch.lastname = TranslateString("","Kennedy");
+	ch.old.name = "Archie";
+	ch.old.lastname = "Kennedy";
+	ch.name = TranslateString("", "Archie");
+	ch.lastname = TranslateString("", "Kennedy");
 	ch.id		= "GB_Kennedy";
 	ch.model = "Kennedy_Md";
 	ch.sex = "man";
@@ -5781,8 +6013,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Edward");
-	ch.lastname = TranslateString("","Pellew");
+	ch.old.name = "Edward";
+	ch.old.lastname = "Pellew";
+	ch.name = TranslateString("", "Edward");
+	ch.lastname = TranslateString("", "Pellew");
 	ch.id		= "GB_Pellew";
 	ch.model = "PellewX_18";
 	ch.sex = "man";
@@ -5815,8 +6049,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","William");
-	ch.lastname = TranslateString("","Bush");
+	ch.old.name = "William";
+	ch.old.lastname = "Bush";
+	ch.name = TranslateString("", "William");
+	ch.lastname = TranslateString("", "Bush");
 	ch.id		= "GB_Bush";
 	ch.model = "Brtlut3_18";
 	ch.sex = "man";
@@ -5849,8 +6085,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Richard");
-	ch.lastname = TranslateString("","Sharpe");
+	ch.old.name = "Richard";
+	ch.old.lastname = "Sharpe";
+	ch.name = TranslateString("", "Richard");
+	ch.lastname = TranslateString("", "Sharpe");
 	ch.id		= "GB_Sharpe";
 	ch.model = "SharpeL_Rif7_18";
 	ch.sex = "man";
@@ -5883,8 +6121,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Patrick");
-	ch.lastname = TranslateString("","Harper");
+	ch.old.name = "Patrick";
+	ch.old.lastname = "Harper";
+	ch.name = TranslateString("", "Patrick");
+	ch.lastname = TranslateString("", "Harper");
 	ch.id		= "GB_Harper";
 	ch.model = "Harper_Sergeant";
 	ch.sex = "man";
@@ -5917,7 +6157,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Haggman");
+	ch.old.name = "Haggman";
+	ch.name = TranslateString("", "Haggman");
 	ch.id		= "GB_Haggman";
 	ch.model = "Rifleman95B4_18";
 	ch.sex = "man";
@@ -5951,7 +6192,8 @@ ch.itemtrade.size = 0.4;
 	AddGameCharacter(n, ch);
 
 	
-	ch.name = TranslateString("","Harris");
+	ch.old.name = "Harris";
+	ch.name = TranslateString("", "Harris");
 	ch.id		= "GB_Harris";
 	ch.model = "Rifleman95B3_18";
 	ch.sex = "man";
@@ -5984,8 +6226,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Jean");
-	ch.lastname = TranslateString("","Lafitte");
+	ch.old.name = "Jean";
+	ch.old.lastname = "Lafitte";
+	ch.name = TranslateString("", "Jean");
+	ch.lastname = TranslateString("", "Lafitte");
 	ch.id		= "GB_Lafitte";
 	ch.model = "Jean_Lafitte";
 	ch.sex = "man";
@@ -6018,8 +6262,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Bartolomeu");
-	ch.lastname = TranslateString("","o Portugues");
+	ch.old.name = "Bartolomeu";
+	ch.old.lastname = "o Portugues";
+	ch.name = TranslateString("", "Bartolomeu");
+	ch.lastname = TranslateString("", "o Portugues");
 	ch.id		= "GB_Bartolomeu";
 	ch.model = "gypsycaptain";
 	ch.sex = "man";
@@ -6052,8 +6298,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Emilio");
-	ch.lastname = TranslateString("","Soares");
+	ch.old.name = "Emilio";
+	ch.old.lastname = "Soares";
+	ch.name = TranslateString("", "Emilio");
+	ch.lastname = TranslateString("", "Soares");
 	ch.id		= "GB_Emilio";
 	ch.model = "Emilio1";
 	ch.sex = "man";
@@ -6086,8 +6334,10 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Johan");
-	ch.lastname = TranslateString("","Elting");
+	ch.old.name = "Johan";
+	ch.old.lastname = "Elting";
+	ch.name = TranslateString("", "Johan");
+	ch.lastname = TranslateString("", "Elting");
 	ch.id		= "GB_Elting";
 	ch.model = "Johan_Elting";
 	ch.sex = "man";
@@ -6122,7 +6372,8 @@ ch.itemtrade.size = 0.4;
 
 //--------------------------------------------------------------
 
-	ch.name = TranslateString("","Maroon");
+	ch.old.name = "Maroon";
+	ch.name = TranslateString("", "Maroon");
 	ch.id		= "maroon1";
 	ch.model = "maroon1";
 	ch.sex = "man";
@@ -6163,7 +6414,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Maroon");
+	ch.old.name = "Maroon";
+	ch.name = TranslateString("", "Maroon");
 	ch.id		= "maroon2";
 	ch.model = "maroon2";
 	ch.sex = "man";
@@ -6200,7 +6452,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Maroon");
+	ch.old.name = "Maroon";
+	ch.name = TranslateString("", "Maroon");
 	ch.id		= "maroon3";
 	ch.model = "maroon3";
 	ch.sex = "man";
@@ -6237,7 +6490,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Maroon");
+	ch.old.name = "Maroon";
+	ch.name = TranslateString("", "Maroon");
 	ch.id		= "maroon4";
 	ch.model = "maroon4";
 	ch.sex = "man";
@@ -6271,7 +6525,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Maroon");
+	ch.old.name = "Maroon";
+	ch.name = TranslateString("", "Maroon");
 	ch.id		= "maroon5";
 	ch.model = "maroon5";
 	ch.sex = "man";
@@ -6305,7 +6560,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Maroon");
+	ch.old.name = "Maroon";
+	ch.name = TranslateString("", "Maroon");
 	ch.id		= "maroon_girl";
 	ch.model = "maroon_girl";
 	ch.sex = "man";
@@ -6343,7 +6599,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Deserter");
+	ch.old.name = "Deserter";
+	ch.name = TranslateString("", "Deserter");
 	ch.id		= "deserter_us1";
 	ch.model = "deserter_us1";
 	ch.sex = "man";
@@ -6379,7 +6636,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Deserter");
+	ch.old.name = "Deserter";
+	ch.name = TranslateString("", "Deserter");
 	ch.id		= "deserter_us2";
 	ch.model = "deserter_us2";
 	ch.sex = "man";
@@ -6415,7 +6673,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Thug");
+	ch.old.name = "Thug";
+	ch.name = TranslateString("", "Thug");
 	ch.id		= "white_trash1";
 	ch.model = "white_trash1";
 	ch.sex = "man";
@@ -6448,7 +6707,8 @@ ch.itemtrade.size = 0.4;
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Thug");
+	ch.old.name = "Thug";
+	ch.name = TranslateString("", "Thug");
 	ch.id		= "white_trash2";
 	ch.model = "white_trash2";
 	ch.sex = "man";
@@ -6480,7 +6740,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Bandit");
+	ch.old.name = "Bandit";
+	ch.name = TranslateString("", "Bandit");
 	ch.id		= "hunter_bandit";
 	ch.model = "hunter_bandit";
 	ch.sex = "man";
@@ -6512,7 +6773,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Bandit");
+	ch.old.name = "Bandit";
+	ch.name = TranslateString("", "Bandit");
 	ch.id		= "indian_bandit";
 	ch.model = "indian_bandit";
 	ch.sex = "man";
@@ -6551,7 +6813,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Priest");
+	ch.old.name = "Priest";
+	ch.name = TranslateString("", "Priest");
 	ch.id		= "mystery_monk";
 	ch.model = "mystery_monk";
 	ch.sex = "man";
@@ -6587,7 +6850,8 @@ ch.itemtrade.size = 0.4;
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","");
+	ch.old.name = "";
+	ch.name = "";
 	ch.id		= "box_ghost";
 	ch.model = "box_ghost";
 	ch.sex = "man";
@@ -6619,7 +6883,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","");
+	ch.old.name = "";
+	ch.name = "";
 	ch.id		= "gate_ghost";
 	ch.model = "box_ghost";
 	ch.sex = "man";
@@ -6653,7 +6918,8 @@ ch.itemtrade.size = 0.4;
 
 //___________________________________________________________________
 
-	ch.name = TranslateString("","Zombie");
+	ch.old.name = "Zombie";
+	ch.name = TranslateString("", "Zombie");
 	ch.id		= "zombie1";
 	ch.model = "zombie1";
 	ch.sex = "woman";
@@ -6690,7 +6956,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Zombie");
+	ch.old.name = "Zombie";
+	ch.name = TranslateString("", "Zombie");
 	ch.id		= "zombie2";
 	ch.model = "zombie2";
 	ch.sex = "man";
@@ -6727,7 +6994,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Zombie");
+	ch.old.name = "Zombie";
+	ch.name = TranslateString("", "Zombie");
 	ch.id		= "zombie3";
 	ch.model = "zombie3";
 	ch.sex = "man";
@@ -6762,7 +7030,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Zombie");
+	ch.old.name = "Zombie";
+	ch.name = TranslateString("", "Zombie");
 	ch.id		= "zombie4";
 	ch.model = "zombie4";
 	ch.sex = "man";
@@ -6797,7 +7066,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Zombie");
+	ch.old.name = "Zombie";
+	ch.name = TranslateString("", "Zombie");
 	ch.id		= "zombie5";
 	ch.model = "zombie5";
 	ch.sex = "man";
@@ -6832,7 +7102,8 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = -40;		
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Zombie");
+	ch.old.name = "Zombie";
+	ch.name = TranslateString("", "Zombie");
 	ch.id		= "zombie6";
 	ch.model = "zombie6";
 	ch.sex = "man";
@@ -6869,7 +7140,9 @@ ch.itemtrade.size = 0.4;
 
 //------------------------------------------------------------------
 
-	ch.name = TranslateString("","Buccaneer");
+	ch.old.name = "Buccaneer";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Buccaneer");
 	ch.lastname = "";
 	ch.id		= "buried_skeleton1";
 	ch.model = "Skel4";
@@ -6903,7 +7176,9 @@ ch.itemtrade.size = 0.4;
 	ch.HPBonus = 10;	
 	AddGameCharacter(n, ch);
 
-	ch.name = TranslateString("","Buccaneer");
+	ch.old.name = "Buccaneer";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Buccaneer");
 	ch.lastname = "";
 	ch.id		= "buried_skeleton2";
 	ch.model = "Skel1";

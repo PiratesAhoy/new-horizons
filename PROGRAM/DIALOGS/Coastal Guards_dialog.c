@@ -67,9 +67,9 @@ void ProcessDialogEvent()
 			{
 				Link.l3.go = "howDareYou";
 			}
-			if(CheckAttribute(Pchar,"quest.smuggling_guild.governor_quest.nation"))
+			if(CheckAttribute(PChar,"quest.smuggling_guild.governor_smuggling.nation"))
 			{
-				if(CheckCharacterItem(Pchar,"smuggling_papers") && GetSmugglingNation() == sti(pchar.quest.smuggling_guild.governor_quest.nation))
+				if(CheckCharacterItem(PChar,"smuggling_papers") && GetSmugglingNation() == sti(PChar.quest.smuggling_guild.governor_smuggling.nation))
 				{
 					Link.l4 = DLG_TEXT[29];
 					Link.l4.go = "LookAtThis";

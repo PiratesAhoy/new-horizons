@@ -46,12 +46,14 @@ Something downright swarthy, a shirt with long puffed sleeves, brown vest, and i
 For the Caribe in us all, a shirt with long puffed sleeves, brown vest, and let the hair grow out some.{For the Caribe in us all, a shirt with long puffed sleeves, brown vest, and let the hair grow out some.}
 This nice golden dress will so accentuate those lovely blonde curls so that no one would think of telling a blonde joke...{This nice golden dress will so accentuate those lovely blonde curls so that no one would think of telling a blonde joke...}
 This red dress will ideally fit white laces and dark hair.{This red dress will ideally fit white laces and dark hair.}
+An elaborate dress with lace trim, appropriate for a wealthy lady.{An elaborate dress with lace trim, appropriate for a wealthy lady.}
 This ornate engraved Spanish armor and suit will create quite a sensation in Isla Muelle!{This ornate engraved Spanish armor and suit will create quite a sensation in Isla Muelle!}
+A polished Spanish naval uniform, as worn by the son of an admiral.{A polished Spanish naval uniform, as worn by the son of an admiral.}
 This scarlet outfit, and the coiffure I'd recommend go with it, were made the height of fashion in the Mediterranean by that famous Maltese knight Sir Michael Jackson!{This scarlet outfit, and the coiffure I'd recommend go with it, were made the height of fashion in the Mediterranean by that famous Maltese knight Sir Michael Jackson!}
 Just a blue longsleeved shirt and black vest for that dark hair.{Just a blue longsleeved shirt and black vest for that dark hair.}
 How about something common, say a half-sleeved white shirt, black vest-coat, and let the hair grow longer.{How about something common, say a half-sleeved white shirt, black vest-coat, and let the hair grow longer.}
 I'm thinking a common white shirt, vest, and let the hair down...{I'm thinking a common white shirt, vest, and let the hair down...}
-White long-sleeved shirt, closed vest...  Sure you've seen it before, Thomas O'Reily of Redmond wears such a suit!{White long-sleeved shirt, closed vest...  Sure you've seen it before, Thomas O'Reily of Redmond wears such a suit!}
+White long-sleeved shirt, closed vest... Just the right thing to blend in well with the village idiots.{White long-sleeved shirt, closed vest... Just the right thing to blend in well with the village idiots.}
 Perhaps this nice Dutch ensemble of a stiff-collared white shirt, dark brown vest, and wide-brimmed hat will clash with a Mediterranean complexion, but you never know.{Perhaps this nice Dutch ensemble of a stiff-collared white shirt, dark brown vest, and wide-brimmed hat will clash with a Mediterranean complexion, but you never know.}
 How about a nice Dutch ensemble of a stiff-collared white shirt, light brown vest, and a Dutch wide-brimmed hat?{How about a nice Dutch ensemble of a stiff-collared white shirt, light brown vest, and a Dutch wide-brimmed hat?}
 This simple cotton ensemble consisting in the main of an open white shirt comes directly from Neanderthal's of London!{This simple cotton ensemble consisting in the main of an open white shirt comes directly from Neanderthal's of London!}
@@ -128,7 +130,7 @@ A typical english red-coat uniform 3.{A typical english red-coat uniform.}
 A typical english red-coat uniform 4.{A typical english red-coat uniform.}
 A typical english red-coat uniform 5.{A typical english red-coat uniform.}
 A typical english red-coat uniform 6.{A typical english red-coat uniform.}
-The kit ofThe kit of a Personal soldier, complimented by long dark hair and a goatee.{The kit of a Personal soldier, complimented by long dark hair and a goatee.}
+The kit of a Personal soldier, complimented by long dark hair and a goatee.{The kit of a Personal soldier, complimented by long dark hair and a goatee.}
 The uniform of a Personal soldier, without the common goatee.{The uniform of a Personal soldier, without the common goatee.}
 The uniform of a Personal soldier who...  looks like... many other Personal soldiers.{The uniform of a Personal soldier who...  looks like... many other Personal soldiers.}
 This fresh-faced occupant of the uniform of your Personal Army could well resemble one M'seur D'Artagnan of another place and time!{This fresh-faced occupant of the uniform of your Personal Army could well resemble one M'seur D'Artagnan of another place and time!}
@@ -140,12 +142,12 @@ The uniform of a soldier of France who...  looks like... many other soldiers of 
 This fresh-faced occupant of the uniform of the Army of France could well resemble one M'seur D'Artagnan of another place and time!{This fresh-faced occupant of the uniform of the Army of France could well resemble one M'seur D'Artagnan of another place and time!}
 Uniform, French Army, one each.{Uniform, French Army, one each.}
 This uniform of a soldier of France seems... shorter than others like it.{This uniform of a soldier of France seems... shorter than others like it.}
-A typical french uniform 1.{A typical french uniform.}
-A typical french uniform 2.{A typical french uniform.}
-A typical french uniform 3.{A typical french uniform.}
-A typical french uniform 4.{A typical french uniform.}
-A typical french uniform 5.{A typical french uniform.}
-A typical french uniform 6.{A typical french uniform.}
+A typical french uniform 1.{A typical French uniform.}
+A typical french uniform 2.{A typical French uniform.}
+A typical french uniform 3.{A typical French uniform.}
+A typical french uniform 4.{A typical French uniform.}
+A typical french uniform 5.{A typical French uniform.}
+A typical french uniform 6.{A typical French uniform.}
 A beret and breastplate mark this is the kit of a soldier of Holland, and a clean-shaven face to go with it.{A beret and breastplate mark this is the kit of a soldier of Holland, and a clean-shaven face to go with it.}
 A very clean uniform of a soldier of Holland.{A very clean uniform of a soldier of Holland.}
 A nice Dutch soldier's uniform, with somewhat longer hair.{A nice Dutch soldier's uniform, with somewhat longer hair.}
@@ -168,6 +170,8 @@ Ah, now here is the fine blue, somewhat large suit, black hat with blue band, an
 A suit in brown, from the hat to the coat and boots, and it had better have some room around the middle, if you get my drift...{A suit in brown, from the hat to the coat and boots, and it had better have some room around the middle, if you get my drift...}
 This nice dress compliments the blonde hair to create a beautiful picture of the nice town girl.{This nice dress compliments the blonde hair to create a beautiful picture of the nice town girl.}
 This dress is designed to nicely accent black hair for the urban lass.{This dress is designed to nicely accent black hair for the urban lass.}
+This fine dress is a perfect match for the dark eyes and hair of a girl from warm lands.{This fine dress is a perfect match for the dark eyes and hair of a girl from warm lands.}
+This gold and red dress should turn a few heads in any Spanish town.{This gold and red dress should turn a few heads in any Spanish town.}
 In this set of clothes one would be forgiven if they were taken for a Dutch girl.{In this set of clothes one would be forgiven if they were taken for a Dutch girl.}
 This blue accented dress and it's head covering will be pleasant in the Caribbean sun.{This blue accented dress and it's head covering will be pleasant in the Caribbean sun.}
 Bonnets are coming back into fashion, and this outfit is at the forefront of that fashion trend.{Bonnets are coming back into fashion, and this outfit is at the forefront of that fashion trend.}
@@ -176,6 +180,7 @@ This dress looks quite at home on the voluptuous body of the healthy and fit ari
 This tastefully simple outfit will be quite appropriate in any town in the Archipelago.{This tastefully simple outfit will be quite appropriate in any town in the Archipelago.}
 The blonde ringlets appearing from underneath this Dutch bonnet are the perfect adornment to a lady's dress.{The blonde ringlets appearing from underneath this Dutch bonnet are the perfect adornment to a lady's dress.}
 This dress, with it's nice and alluring bodice compliment a head full of fiery red hair.{This dress, with it's nice and alluring bodice compliment a head full of fiery red hair.}
+This dress features a light, cool upper; an elaborate brown bodice; and a green skirt to finish.{This dress features a light, cool upper; an elaborate brown bodice; and a green skirt to finish.}
 A nice little brown outfit, with a hat pinned up on the side, like Will Turner the swordsmith was wearing at the dock the other day!{A nice little brown outfit, with a hat pinned up on the side, like Will Turner the swordsmith was wearing at the dock the other day!}
 A nice little brown outfit, with a hat pinned up on the side and a steel cuirass, like Will Turner the swordsmith was wearing at the dock the other day!{A nice little brown outfit, with a hat pinned up on the side and a steel cuirass, like Will Turner the swordsmith was wearing at the dock the other day!}
 A nice little brown outfit, with a hat pinned up on the side and an engraved breastplate, like Will Turner the swordsmith was wearing at the dock the other day!{A nice little brown outfit, with a hat pinned up on the side and an engraved breastplate, like Will Turner the swordsmith was wearing at the dock the other day!}
@@ -207,6 +212,7 @@ If ye be yearnin' t' be a Bilgemunky, this be yer outfit.{If ye be yearnin' t' b
 Retro French soldier look, but with a renegade flair, and a red bandana to top it off.{Retro French soldier look, but with a renegade flair, and a red bandana to top it off.}
 Give me an outfit suitable for an adventurer, but this time, make it a bit more evil.{Give me an outfit suitable for an adventurer, but this time, make it a bit more evil.}
 How about a nice young impressionable cabin boy type?{How about a nice young impressionable cabin boy type?}
+How about a nice young impressionable Iberian cabin boy type?{How about a nice young impressionable Iberian cabin boy type?}
 Give me a navigator's outfit, pirate style.{Give me a navigator's outfit, pirate style.}
 Black boots, trousers, coat and hat with red trim, long grey hair and beard, and a very mean disposition that has increased with age.{Black boots, trousers, coat and hat with red trim, long grey hair and beard, and a very mean disposition that has increased with age.}
 Lived through a lot of pain, now I'm ready to give some.{Lived through a lot of pain, now I'm ready to give some.}
@@ -222,6 +228,8 @@ Rachel, of noble birth, and as sweet as her name.{Rachel, of noble birth, and as
 Nobility, it is in her blood{Nobility, it is in her blood}
 Always running as if for his life... but from whom?{Always running as if for his life... but from whom?}
 Here is a governor's daughter, who wants to go to sea.{Here is a governor's daughter, who wants to go to sea.}
+A shopkeeper's daughter has run away to sea.{A shopkeeper's daughter has run away to sea.}
+I fight for the freedom of my land and the honour of my family.{I fight for the freedom of my land and the honour of my family.}
 That meddling boy will cower before the might of Captain James, er, Hand! Smee! Where the blazes are you, Smee!{That meddling boy will cower before the might of Captain James, er, Hand! Smee! Where the blazes are you, Smee!}
 The rusty, blood-splattered hook of Captain Uziah Wurmwoode has slit open more than a few gullets in its day, while this rotting wooden leg was formed from the corpse of a burnt galleon... and this pesky eyepatch simply WILL NOT stay on!{His rusty, blood-splattered hook has slit open more than a few gullets in its day and this rotting wooden leg was made from a burnt galleon... and this pesky eyepatch simply WILL NOT stay on!}
 Phinneas Wake, the Gypsy Captain, has spent a long time prowling the Spanish Main... and has the scars to prove it!{Phinneas Wake, the Gypsy Captain, has spent a long time prowling the Spanish Main... and has the scars to prove it!}
@@ -238,7 +246,9 @@ Give me something with black trousers and a gilded breastplate. But don't forget
 This lady may not swing her hips, but one fellow who implied she would not be all woman ended up impaled on her cutlass.{This lady may not swing her hips, but one fellow who implied she would not be all woman ended up impaled on her cutlass.}
 A town girl that got a taste of adventure and threw her skirt aside to sail the seven seas.{A town girl that got a taste of adventure and threw her skirt aside to sail the seven seas.}
 This platinum blonde is not one to mess with, for she is as cool as her icy eyes.{This platinum blonde is not one to mess with, for she is as cool as her icy eyes.}
+Piratess with a stylish purple coat.{Piratess with a stylish purple coat.}
 He's big, he's bad, but most of all he is loyal to those who deserve it.{He's big, he's bad, but most of all he is loyal to those who deserve it.}
+He's big, he's bad, and he can out-drink anyone!{He's big, he's bad, and he can out-drink anyone!}
 Hailing from Africa, she now seeks freedom in the New World.{Hailing from Africa, she now seeks freedom in the New World.}
 I'm feeling like a lucky master and commander today. Do you have anything to suit that?{I'm feeling like a lucky master and commander today. Do you have anything to suit that?}
 I want to dress out like someone really, really poor. Don't ask me why.{I want to dress out like someone really, really poor. Don't ask me why.}
@@ -247,11 +257,14 @@ Your average captain's uniform. But make the colour slightly less vibrant!{Your 
 This lass in black leather is hard to resist. But can she be trusted?{This lass in black leather is hard to resist. But can she be trusted?}
 The kind of lady no sailor can fail to fall in love with upon first sight.{The kind of lady no sailor can fail to fall in love with upon first sight.}
 Looking real good in her hot red outfit.{Looking real good in her hot red outfit.}
+Golden decorations adorn this white blouse - what there is of it!{Golden decorations adorn this white blouse - what there is of it!}
 A very wealthy-looking guy you could easily imagine to be a governor.{A very wealthy-looking guy you could easily imagine to be a governor.}
+A very wealthy-looking guy you could easily imagine to be a Spanish merchant.{A very wealthy-looking guy you could easily imagine to be a Spanish merchant.}
 An upper-class aristocrat with a very elaborate costume.{An upper-class aristocrat with a very elaborate costume.}
 A nice and colourful look for a very wealthy and important person.{A nice and colourful look for a very wealthy and important person.}
 An older, wealthy man with a white collar.{An older, wealthy man with a white collar.}
 A rich aristocrat in an elaborate green outfit.{A rich aristocrat in an elaborate green outfit.}
+A rich aristocrat with an elaborate black and silver outfit.{A rich aristocrat with an elaborate black and silver outfit.}
 A noble (but rather fat) aristocrat in a blue outfit.{A noble (but rather fat) aristocrat in a blue outfit.}
 He doesn't nescessarily look evil, but this is not a person you would want to cross.{He doesn't nescessarily look evil, but this is not a person you would want to cross.}
 A nobleman in red. And please add some sort of gold-coloured hanger thingey.{A nobleman in red. And please add some sort of gold-coloured hanger thingey.}
@@ -318,6 +331,7 @@ How about an elegant gown, perhaps a little revealing of my girlish figure.{How 
 An elegant and revealing gown with Steel Cuirass.{An elegant and revealing gown with Steel Cuirass.}
 An elegant and revealing gown with Battle Cuirass.{An elegant and revealing gown with Battle Cuirass.}
 An elegant and revealing gown with Gold Cuirass.{An elegant and revealing gown with Gold Cuirass.}
+I want to look like Roxanne Lalliere.{I want to look like Roxanne Lalliere.}
 Catalina like simple and practical sturdy leather but without the cuirass.{Catalina like simple and practical sturdy leather but without the cuirass.}
 I want something simple and practical, sturdy leather and steel like Catalina was known to wear.{I want something simple and practical, sturdy leather and steel like Catalina was known to wear.}
 Simple and practical sturdy leather with Steel Cuirass.{Simple and practical sturdy leather with Steel Cuirass.}
@@ -346,6 +360,7 @@ One of Mateus Santo's Thugs, a little worse for wear and tear.{One of Mateus San
 How about a young promising Royal Navy lieutenant?{How about a young promising Royal Navy lieutenant?}
 A Spanish Naval Lieutenant's unifor{A Spanish Naval Lieutenant's unifor}
 A Spanish Admiral's uniform.{A Spanish Admiral's uniform.}
+A distinguished Spanish admiral with many years of service - and medals to prove it.{A distinguished Spanish admiral with many years of service - and medals to prove it.}
 An officer of His Majesty's infantry regiments{An officer of His Majesty's infantry regiments}
 A French Admiral's uniform. Oui, and send for my barber, s'il vous plait.{A French Admiral's uniform. Oui, and send for my barber, s'il vous plait.}
 A French Naval Captain's uniform. Oui, I think even my English cousins in Bath would approve{A French Naval Captain's uniform. Oui, I think even my English cousins in Bath would approve}
@@ -355,6 +370,7 @@ A Spanish Naval Captain's uniform.{A Spanish Naval Captain's uniform.}
 The uniform of a young shaven commodore please.{The uniform of a young shaven commodore please.}
 Wear this Royal Navy Admiral's uniform and drink good health to ol' Jervie{Wear this Royal Navy Admiral's uniform and drink good health to ol' Jervie}
 A Royal Navy Admiral's uniform, if you please. Midshipman, signal all my captains to repair aboard flag at six bells.{A Royal Navy Admiral's uniform, if you please. Midshipman, signal all my captains to repair aboard flag at six bells.}
+A Royal Navy Admiral's uniform, but leave out the wig if you please.{A Royal Navy Admiral's uniform, but leave out the wig if you please.}
 A Royal Navy Post-Captain's uniform.  Broke wore something like this when he stopped them singing Yankee Doodle dandee-oh.{A Royal Navy Post-Captain's uniform.  Broke wore something like this when he stopped them singing Yankee Doodle dandee-oh.}
 A Royal Navy Post-Captain's uniform.  Made for only the luckiest of jack-tars.{A Royal Navy Post-Captain's uniform.  Made for only the luckiest of jack-tars.}
 A Royal Navy Lieutenant's uniform.  This one looks like a red-headed Irishman.{A Royal Navy Lieutenant's uniform.  This one looks like a red-headed Irishman.}
@@ -383,14 +399,23 @@ Spanish grandee in the past, he was forced to leave the country. Hates englishme
 A known swordsman, although success not always was on his side. The scars, got in fights, certainly, confirms that. But scars dye the men.{A known swordsman, although success not always was on his side. The scars, got in fights, certainly, confirms that. But scars dye the men.}
 Who is that guy? Or girl? Looks like his rich parents, somewhere in Europe, already does not dream to see again their child.{Who is that guy? Or girl? Looks like his rich parents, somewhere in Europe, already does not dream to see again their child.}
 Give me something cheap with a brown trousers and a vest, a simple red one.{Give me something cheap with a brown trousers and a vest, a simple red one.}
-I have a somewhat black mood today, have you something that compliment that?.{I have a somewhat black mood today, have you something that compliment that?.}
+I have a somewhat black mood today, have you something that compliments that?{I have a somewhat black mood today, have you something that compliments that?}
 Give me something with blue trousers and vest, in red with blue accents.{Give me something with blue trousers and vest, in red with blue accents.}
+Give me something with a fancy reddish jacket. And some shiny medallions.{Give me something with a fancy reddish jacket. And some shiny medallions.}
 A nice blue suit with much gold to show that I am one of the proud Spanish Navy Captains! Viva l'Espagna!{A nice blue suit with much gold to show that I am one of the proud Spanish Navy Captains! Viva l'Espagna!}
 A proud captain of the East India Trading Company Armed Escort Fleet uniform please. I know, it is a long title, but I am proud of it.{A proud captain of the East India Trading Company Armed Escort Fleet uniform please. I know, it is a long title, but I am proud of it.}
 A EITC Armed Escort Fleet Captain's uniform.  Made for only the luckiest of jack-tars.{A EITC Armed Escort Fleet Captain's uniform.  Made for only the luckiest of jack-tars.}
 A EITC Lieutenant's uniform.{A EITC Lieutenant's uniform.}
 A EITC Lieutenant's uniform. Hmm... reminds me of young Tom. Damn fine seaman, that lad. Very promising young officer{A EITC Lieutenant's uniform. Hmm... reminds me of young Tom. Damn fine seaman, that lad. Very promising young officer}
 A EITC Lieutenant's uniform.  Do you fancy yourself a poet?{A EITC Lieutenant's uniform.  Do you fancy yourself a poet?}
+A proud officer of the EITC's own regiment.{A proud officer of the EITC's own regiment.}
+A soldier of the EITC's own regiment, with long, dark sideburns.{A soldier of the EITC's own regiment, with long, dark sideburns.}
+A fresh-faced young soldier of the EITC's own regiment.{A fresh-faced young soldier of the EITC's own regiment.}
+A soldier of the EITC's own regiment with a neatly trimmed moustache.{A soldier of the EITC's own regiment with a neatly trimmed moustache.}
+A soldier of the EITC's own regiment. Have the barber trim the goatee!{A soldier of the EITC's own regiment. Have the barber trim the goatee!}
+A soldier of the EITC's own regiment. The barber is just down the street.{A soldier of the EITC's own regiment. The barber is just down the street.}
+A soldier of the EITC's own regiment who takes as much care of his beard as his equipment.{A soldier of the EITC's own regiment who takes as much care of his beard as his equipment.}
+A soldier of the EITC's own regiment with fair hair and sideburns.{A soldier of the EITC's own regiment with fair hair and sideburns.}
 A thick coat, big boots, a black ponytail and an unshaven face. Yes ofcourse I am talking about the pirate Peter Blood!{A thick coat, big boots, a black ponytail and an unshaven face. Yes ofcourse I am talking about the pirate Peter Blood!}
 An Officer in his Majestey's Lancer Regiments.{An Officer in his Majestey's Lancer Regiments.}
 Jack Sparrow as a young promising merchant captain. Looks like a real gentlemen to me.{Jack Sparrow as a young promising merchant captain. Looks like a real gentlemen to me.}
@@ -446,6 +471,8 @@ Clothes of a Native Warrior.{Clothes of a Native Warrior.}
 An elderly Indian.{An elderly Indian.}
 An Indian Warrior.{An Indian Warrior.}
 A beautiful indian woman, which sailor couldn't fall in love with this Pocahontas?{A beautiful indian woman, which sailor couldn't fall in love with this Pocahontas?}
+A woman from a native village, in traditional dress.{A woman from a native village, in traditional dress.}
+If you want to know what the future holds for you, this woman can tell you - for a hand full of silver.{If you want to know what the future holds for you, this woman can tell you - for a hand full of silver.}
 A Spanish Naval Admiral's uniform.{A Spanish Naval Admiral's uniform.}
 A Spanish Naval Captain's uniform.{A Spanish Naval Captain's uniform.}
 A Spanish Naval Lieutenant's uniform.{A Spanish Naval Lieutenant's uniform.}
@@ -456,9 +483,11 @@ A typical American soldier's kit.{A typical American soldier's kit.}
 A lieutenant in the service of the United States of America!{A lieutenant in the service of the United States of America!}
 A captain in the service of the United States of America!{A captain in the service of the United States of America!}
 An admiral in the service of the United States of America!{An admiral in the service of the United States of America!}
+This sailor has a grey jacket with golden trim and leather shoulder patches. And who needs a beard when you have sideburns like that?{This sailor has a grey jacket with golden trim and leather shoulder patches. And who needs a beard when you have sideburns like that?}
 The best friend of Bartolomeu o Portugues: A faithful comrade.{The best friend of Bartolomeu o Portugues: A faithful comrade.}
 I feel like a trader. But a shady one. How about a Buccaneer like Eugene Martin?{I feel like a trader. But a shady one. How about a Buccaneer like Eugene Martin?}
 I feel like a dangerous pirate. How about something like Francois L'Ollonais?{I feel like a dangerous pirate. How about something like Francois L'Ollonais?}
+I want to look like Guibert Daudet.{I want to look like Guibert Daudet.}
 I feel like a famous pirate. Henry Morgan will do.{I feel like a famous pirate. Henry Morgan will do.}
 I keep a couple of extra guns just for company...{I keep a couple of extra guns just for company...}
 I DO have the face for tentacleys!{I DO have the face for tentacleys!}
@@ -497,10 +526,11 @@ And so... we go to war!{And so... we go to war!}
 It's actually spelled, Conceição!{It's actually spelled, ConceiçÝo!}
 A very sharp looking model for an officer.{A very sharp looking model for an officer.}
 The best gunsmith in the Caribbean, if you please!{The best gunsmith in the Caribbean, if you please!}
-A young villian who seems to love kidnapping.{A young villian who seems to love kidnapping.}
-The young villian has become older, but still seems to love kidnapping.{The young villian has become older, but still seems to love kidnapping.}
+A young villain who seems to love kidnapping.{A young villain who seems to love kidnapping.}
+The young villain has become older, but still seems to love kidnapping.{The young villain has become older, but still seems to love kidnapping.}
 What who is she!? Get your name straight woman!{What who is she!? Get your name straight woman!}
 Jack as a Spanish Captain{Jack as a Spanish Captain}
+Jack as an EITC Lieutenant{Jack as an EITC Lieutenant}
 The search for the chest is the search for the divine in all of us.{The search for the chest is the search for the divine in all of us.}
 Talk about the latest from Paris, a red striped-and-frilled coat, sash, NICE hat, and a 'do that a barber will take hours over!{Talk about the latest from Paris, a red striped-and-frilled coat, sash, NICE hat, and a 'do that a barber will take hours over!}
 I hate anyone weilding worldly power. But I love the church. And fugitives.{I hate anyone weilding worldly power. But I love the church. And fugitives.}
@@ -564,6 +594,7 @@ It has been torture, trapped in this single form, cut off from the sea.{It has b
 I want to look like Midshipman Hornblower.{I want to look like Midshipman Hornblower.}
 I want to look like Lieutenant Hornblower.{I want to look like Lieutenant Hornblower.}
 I want to look like Commander Hornblower.{I want to look like Commander Hornblower.}
+I want to look like Captain Horatio Hornblower, R.N.{I want to look like Captain Horatio Hornblower, R.N.}
 A fancy captain's uniform in navy blue with gold trim, black hat, and black spats.{A fancy captain's uniform in navy blue with gold trim, black hat, and black spats.}
 A fancy first mate's uniform in navy blue with gold trim, black hat, and black spats.{A fancy first mate's uniform in navy blue with gold trim, black hat, and black spats.}
 A fancy second mate's uniform in navy blue with gold trim, black hat, and black spats.{A fancy second mate's uniform in navy blue with gold trim, black hat, and black spats.}
@@ -583,6 +614,8 @@ Now take Sir Francis Drake, the Spanish all despised him. But to the British, he
 A sallow-looking pirate with a bald head and a belligerent homunculus.{A sallow-looking pirate with a bald head and a belligerent homunculus.}
 I am a Pirate Lord, and you are nothing!{I am a Pirate Lord, and you are nothing!}
 An aristocratic fancy French lady, but one with a shady past...{An aristocratic fancy French lady, but one with a shady past...}
+An aristocratic fancy French lady, but one with a shady past, who doesn't want to be seen...{An aristocratic fancy French lady, but one with a shady past, who doesn't want to be seen...}
+A French aristocrat with a dark outfit and a darker temperament.{A French aristocrat with a dark outfit and a darker temperament.}
 A veteran of the British Royal Navy, now Captain, if you will.{A veteran of the British Royal Navy, now Captain, if you will.}
 An experienced Lieutenant Commander of the British Royal Navy, if you will.{An experienced Lieutenant Commander of the British Royal Navy, if you will.}
 A nice Lieutenant, who now serves the EITC.{A nice Lieutenant, who now serves the EITC.}
@@ -598,9 +631,37 @@ A French-American pirate and privateer from the Gulf of Mexico, if you please.{A
 A Portuguese naval officer who bears merely a passing resemblance to a famous pirate.{A Portuguese naval officer who bears merely a passing resemblance to a famous pirate.}
 A French naval officer who bears merely a passing resemblance to a famous pirate.{A French naval officer who bears merely a passing resemblance to a famous pirate.}
 Charles Ardent, pirate. Hero or villain - the choice is yours.{Charles Ardent, pirate. Hero or villain - the choice is yours.}
+Shave and a haircut - two grand. You'd hardly recognise Charles Ardent!{Shave and a haircut - two gold. You'd hardly recognise Charles Ardent!}
 Helen Ardent, pirate. Heroine or villainess - the choice is yours.{Helen Ardent, pirate. Heroine or villainess - the choice is yours.}
+Helen Ardent - in a dress?{Helen Ardent - in a dress?}
+A gentleman like this has no time for vagabonds - and may not be quite the gentleman he appears!{A gentleman like this has no time for vagabonds - and may not be quite the gentleman he appears!}
+A high-ranking French naval officer and gentleman.{A high-ranking French naval officer and gentleman.}
 Charles Ardent has 'borrowed' a Spanish uniform.{Charles Ardent has 'borrowed' a Spanish uniform.}
+Charles Ardent has 'borrowed' a French uniform.{Charles Ardent has 'borrowed' a French uniform.}
 Helen Ardent has 'borrowed' a Spanish uniform.{Helen Ardent has 'borrowed' a Spanish uniform.}
-An elaborate dress with lace trim, befitting the daughter of a governor.{An elaborate dress with lace trim, befitting the daughter of a governor.}
+Helen Ardent has 'borrowed' a French uniform.{Helen Ardent has 'borrowed' a French uniform.}
+This ornate dress with golden trimming is very suitable for the daughter of a governor.{This ornate dress with golden trimming is very suitable for the daughter of a governor.}
 An elaborate costume befitting the son of a governor.{An elaborate costume befitting the son of a governor.}
 This is what happens when a pirate lady gets hold of some silk and lace.{This is what happens when a pirate lady gets hold of some silk and lace.}
+An intricately decorated brown outfit for a veteran adventurer.{An intricately decorated brown outfit for a veteran adventurer.}
+A purple dress with lace trim and a lot of jewellery. She must be very important, very rich, or both.{A purple dress with lace trim and a lot of jewellery. She must be very important, very rich, or both.}
+A wealthy man's dark green suit with gold buttons and a medallion.{A wealthy man's dark green suit with gold buttons and a medallion.}
+A blue sleeveless shirt, beard and scar for a tough guy who has stayed alive for a long time and plans to keep doing it!{A blue sleeveless shirt, beard and scar for a tough guy who has stayed alive for a long time and plans to keep doing it!}
+A distinguished look for an important person - a governor or admiral, perhaps.{A distinguished look for an important person - a governor or admiral, perhaps.}
+Being a governor's daughter doesn't stop you from allying with pirates.{Being a governor's daughter doesn't stop you from allying with pirates.}
+From Russia with sword.{From Russia with sword.}
+A straw hat and simple jacket are enough for a pirate captain. Perhaps even a Pirate King one day...{A straw hat and simple jacket are enough for a pirate captain. Perhaps even a Pirate King one day...}
+This lady in a dark blue dress with yellow trimmings could be a governor's wife.{This lady in a dark blue dress with yellow trimmings could be a governor's wife.}
+This light blue dress with white trimmings would suit any lady from a wealthy family.{This light blue dress with white trimmings would suit any lady from a wealthy family.}
+A dark red dress with blue sleeves and skirt marks its owner as a woman of wealth.{A dark red dress with blue sleeves and skirt marks its owner as a woman of wealth.}
+A dirty shirt and a leaky boat aren't going to stop you from looking for an adventure.{A dirty shirt and a leaky boat aren't going to stop you from looking for an adventure.}
+I am descended from the Conquistadors and from Montezuma! You will call me El Supremo if you value your life!{I am descended from the Conquistadors and from Montezuma! You will call me El Supremo if you value your life!}
+His name was Geralt of Rivia, he was a Witcher, a professional monster slayer and the adoptive father of Ciri Riannon.{His name was Geralt of Rivia, he was a Witcher, a professional monster slayer and the adoptive father of Ciri Riannon.}
+Ciri. Monster Hunter, dimension traveller and proud owner of a unicorn.{Ciri. Monster Hunter, dimension traveller and proud owner of a unicorn.}
+A pale witch in a black dress who probably does not get enough sleep.{A pale witch in a black dress who probably does not get enough sleep.}
+This elegant green dress is studded with pearls and trimmed with lace.{This elegant green dress is studded with pearls and trimmed with lace.}
+Have you a nice green dress like the one worn by the tavern girl in Cartagena?{Have you a nice green dress like the one worn by the tavern girl in Cartagena?}
+A Dutch admiral and privateer for the Dutch Republic during the Eighty Years' War. The first and the last to capture a large part of a Spanish treasure fleet from America.{A Dutch admiral and privateer for the Dutch Republic during the Eighty Years' War. The first and the last to capture a large part of a Spanish treasure fleet from America.}
+Death is only the beginning.{Death is only the beginning.}
+An adventurer from the Italic peninsula, in search of glory in the Caribbean.{An adventurer from the Italic peninsula, in search of glory in the Caribbean.}
+The son of a French nobleman, who became a well known captain after coming to the Caribbean in quite hasty circumstances.{The son of a French nobleman, who became a well known captain after coming to the Caribbean in quite hasty circumstances.}

@@ -7,12 +7,15 @@ ref Fantom_GetNextFantom()
 }
 
 bool TreasureFleet = false; // PB: Treasure Fleet
+ // DeathDaisy: Store encounter data
+int iGetNumMerchantShips, iGetNumWarShips;
+int iGetEncType = -1;
 
 int Fantom_GenerateEncounter(string sGroupName, int iEType, int iNation) // NK // KK
 {
 	aref	aWar, aMerchant;
 	ref		rEnc;
-	int		i, iNumMerchantShips, iNumWarShips;
+	int		i, iNumMerchantShips, iNumWarShips, iLeadWarship;
 	int		iWarClassMax, iWarClassMin, iMerchantClassMax, iMerchantClassMin;
 
 	ref rCharacter = GetMainCharacter();
@@ -101,6 +104,19 @@ int Fantom_GenerateEncounter(string sGroupName, int iEType, int iNation) // NK /
 	}
 	trace("Fantom_GenerateEncounter: type = "+encountertype+", # Mer = "+iNumMerchantShips+", Mer MAX = "+iMerchantClassMax+", Mer MIN = "+iMerchantClassMin+", # War = "+iNumWarShips+", War MAX = "+iWarClassMax+", War MIN = "+iWarClassMin);
 	// PB: Error Checking <--
+
+	// GR: if more than 1 warship, make sure one of them is at the head of the formation, so merchants aren't all ahead of their escorts
+	iLeadWarship = 0;
+	if (iNumWarShips > 1)
+	{
+		if(iNumShips >= MAX_SHIPS_ON_SEA) return 0; // NK bugfix
+		iShipType = Force_GetShipType(iWarClassMax, iWarClassMin, "War", iNation);
+		if (iShipType != INVALID_SHIP_TYPE)
+		{
+			Fantom_AddFantomCharacter(sGroupName, iShipType, "war", iEType, iNation);
+			iLeadWarship =1;
+		}
+	}
 	
 	for (i=0; i<iNumMerchantShips; i++)
 	{
@@ -111,14 +127,26 @@ int Fantom_GenerateEncounter(string sGroupName, int iEType, int iNation) // NK /
 		Fantom_AddFantomCharacter(sGroupName, iShipType, "trade", iEType, iNation);
 	}
 
-	for (i=0; i<iNumWarShips; i++)
+	for (i=0; i<(iNumWarShips-iLeadWarship); i++)
 	{
 		if(iNumShips + iNumMerchantShips + i >= MAX_SHIPS_ON_SEA) return iNumMerchantShips + i; // NK bugfix
 		iShipType = Force_GetShipType(iWarClassMax, iWarClassMin, "War", iNation); // NK fixed to swap min,max 04-09-13 Change to Force
+
+		if(iShipType == GetShipIndex("FastGalleon4") && TreasureFleet == true)
+		{
+			trace("Fantom_GenerateEncounter: replacing FastGalleon4 with FastGalleon5");
+			iShipType = GetShipIndex("FastGalleon5");	// GR: use custom fast war galleon for treasure fleet
+		}
+
 		if (iShipType == INVALID_SHIP_TYPE) continue;
 		//Trace("War ship class = " + ShipsTypes[iShipType].Class + ", name = " + ShipsTypes[iShipType].Name);
 		Fantom_AddFantomCharacter(sGroupName, iShipType, "war", iEType, iNation);
 	}
+	
+	// DeathDaisy: Save these data for the booty!
+	iGetNumMerchantShips = iNumMerchantShips;
+	iGetNumWarShips = iNumWarShips;
+	iGetEncType = iEType;
 
 	return iNumWarShips + iNumMerchantShips;
 }
@@ -487,6 +515,8 @@ void Fantom_SetGoods(ref rFantom, string sFantomType)
 
 	int iMultiply = 10;
 	int iRandMultiply = 1;
+	bool bBlockTreasure = false;
+	int fillCargo, fillQuantity;
 
 	int iShipClass = 8 - GetCharacterShipClass(rFantom);
 
@@ -511,9 +541,43 @@ void Fantom_SetGoods(ref rFantom, string sFantomType)
 	bool RareShipment = false;
 	if(rFantom.FantomType == "trade")
 	{
-		if(rand(100) < 5)									RareShipment = true; // 5% chance of finding one of these
-		if(TreasureFleet && rFantom.nation == SPAIN)		RareShipment = true; // Always on Spanish Treasure Fleets
+
+		// GR: Block massive treasure hauls from unescorted merchants, boost massive treasure hauls on well-escorted merchants.
+		switch(iGetEncType)
+		{
+			case ENCOUNTER_TYPE_MERCHANT0:
+				trace("CARGO: Fantom_SetGoods No treasure for encounter type Merchants");
+				RareShipment = false;
+				bBlockTreasure = true;
+			break;
+			case ENCOUNTER_TYPE_LMERCHANT0:
+				trace("CARGO: Fantom_SetGoods: No treasure for encounter type Group of Merchants");
+				RareShipment = false;
+				bBlockTreasure = true;
+			break;
+			case ENCOUNTER_TYPE_MERCHANT2:
+				if(rand(100) < 17)
+				{
+					RareShipment = true;
+					trace("CARGO: Fantom_SetGoods: Passed 17 percent chance of treasure for encounter type Single Merchant with Heavy Escort");
+				}
+			break;
+			case ENCOUNTER_TYPE_LMERCHANT1:
+				if(iGetNumWarShips > 1 && rand(100) < 8)
+				{
+					RareShipment = true;
+					trace("CARGO: Fantom_SetGoods: Passed 8 percent chance of treasure for encounter type Escorted Group of Merchants");
+				}
+			break;
+			case ENCOUNTER_TYPE_LMERCHANT2:
+				if(TreasureFleet && rFantom.nation == SPAIN) RareShipment = true; // Always on Spanish Treasure Fleets
+				trace("CARGO: Fantom_SetGoods: Convoy already has 75 percent chance of treasure");
+			break;
+			trace("CARGO: Fantom_SetGoods: No block on treasure due to encounter type");
+			if(rand(100) < 5) RareShipment = true; // 5% chance of finding one of these
+		}
 	}
+
 	if ( RareShipment )
 	// PB: Treasure Fleet <--
 	{
@@ -541,7 +605,27 @@ void Fantom_SetGoods(ref rFantom, string sFantomType)
 	int randGoods = 1 + rand(6);
 	for (int r=0;r<randGoods;r++)
 	{
-		Fantom_SetCharacterGoods(rFantom, iStart + rand(GOODS_QUANTITY - iStart - 1), makeint(iMultiply * rand(iRandMultiply * 3)) );
+		fillCargo = iStart + rand(GOODS_QUANTITY - iStart - 1);
+		fillQuantity = makeint(iMultiply * rand(iRandMultiply * 3));
+		if(bBlockTreasure)
+		{
+			if(fillCargo == GOOD_GOLD || fillCargo == GOOD_SILVER)
+			{
+				trace("CARGO: Fantom_SetGoods: reducing " + fillQuantity + " of '" + Goods[fillCargo].name + "'");
+				fillQuantity = makeint(frand(fillQuantity));
+			}
+		}
+		if(iGetEncType == ENCOUNTER_TYPE_MERCHANT2 && rFantom.FantomType == "trade")
+		{
+//			if(fillCargo == GOOD_COPRA || fillCargo == GOOD_BRICKS || fillCargo == GOOD_LEATHER)
+			if(fillCargo >= GOODS_QUANTITY -3)
+			{
+				trace("CARGO: Fantom_SetGoods: reducing " + fillQuantity + " of '" + Goods[fillCargo].name + "'");
+				fillQuantity = makeint(frand(fillQuantity));
+			}
+		}
+		trace("CARGO: Fantom_SetGoods: adding " + fillQuantity + " of '" + Goods[fillCargo].name + "'");
+		Fantom_SetCharacterGoods(rFantom, fillCargo, fillQuantity);
 	}
 	/* prior method
 	Fantom_SetCharacterGoods(rFantom, iStart + rand(GOODS_QUANTITY - iStart - 1), iMultiply * rand(iRandMultiply * 3));
@@ -557,8 +641,27 @@ void Fantom_SetGoods(ref rFantom, string sFantomType)
 	// TIH --> better method, prevents overloaded ships due to innept mathmatics Sep3'06
 	if(rFantom.FantomType == "trade")
 	{
-		int fillCargo = iStart + rand(GOODS_QUANTITY - iStart - 1);// random pick a good to be maxed
-		int fillQuantity = GetCargoGoods(rFantom,fillCargo) + GetCharacterFreeSpace(rFantom,fillCargo);// fill up the hold
+		fillCargo = iStart + rand(GOODS_QUANTITY - iStart - 1);// random pick a good to be maxed
+		if(bBlockTreasure)
+		{
+			while(fillCargo == GOOD_GOLD || fillCargo == GOOD_SILVER)
+			{
+				trace("CARGO: Fantom_SetGoods: trying not to put '" + Goods[fillCargo].name + "' into unescorted merchant");
+				fillCargo = iStart + rand(GOODS_QUANTITY - iStart - 1);
+			}
+		}
+		if(iGetEncType == ENCOUNTER_TYPE_MERCHANT2)
+		{
+			trace("Initial fill cargo = '" + Goods[fillCargo].name + "': GOODS_QUANTITY = " + GOODS_QUANTITY + ": fillcargo = " + fillcargo);
+//			while(fillCargo == GOOD_COPRA || fillCargo == GOOD_BRICKS || fillCargo == GOOD_LEATHER)
+			while(fillCargo >= (GOODS_QUANTITY - 3))
+			{
+				trace("CARGO: Fantom_SetGoods: trying not to put '" + Goods[fillCargo].name + "' into Single Merchant with Heavy Escort");
+				fillCargo = iStart + rand(GOODS_QUANTITY - iStart - 1);
+			}
+		}
+		fillQuantity = GetCargoGoods(rFantom,fillCargo) + GetCharacterFreeSpace(rFantom,fillCargo);// fill up the hold
+		trace("CARGO: Fantom_SetGoods: filling hold with " + fillQuantity + " of '" + Goods[fillCargo].name + "'");
 		Fantom_SetCharacterGoods(rFantom, fillCargo, fillQuantity);
 	}
 	/* causes overloaded ships

@@ -1,0 +1,115 @@
+
+sea_Cancel {Отмена}
+sea_Moor {Бросить якорь}
+sea_Port {Порт}
+sea_Fort {Форт}
+sea_Shore {Берег}
+sea_SailTo {Доплыть до}
+sea_Board {Абордаж}
+sea_LandTroops {Десант}
+sea_Map {Карта}
+sea_Attack {Атака}
+sea_Defend {Защита}
+sea_SailAway {Уплыть}
+sea_HeaveToDrift {Лечь в дрейф}
+sea_Transfer {Обмен}
+sea_Charge {Перезарядить}
+sea_Speed {Паруса}
+sea_CCommand {Приказать}
+sea_Ability {Использовать способность}
+sea_ImmediateDeath {Уничтожить!}
+sea_HoistFlag {Поднять флаг}
+sea_EnterCabin {Каюта капитана}
+sea_EnterDeck {Палуба}
+sea_EnterShip {Палуба корабля #sshipname#}
+sea_EnterSeadogs {Кают-компания}
+sea_EnterShipDeck {Палуба}
+sea_EnterMainCannonsDeck {Главная орудийная палуба}
+sea_EnterUpperCannonsDeck {Верхняя орудийная палуба}
+sea_EnterLowerCannonsDeck {Нижняя орудийная палуба}
+sea_EnterHold {Трюм}
+sea_EnterHold1 {1-й Грузовой отсек}
+sea_EnterHold2 {2-й Грузовой отсек}
+sea_LowerSails {Спустить паруса}
+sea_BattleSails {Боевое положение}
+sea_FullSails {Полные паруса}
+sea_FCoHS_Hail {Приветствовать корабль}
+sea_FCoHS_Contact {Посетить корабль}
+sea_KrakenAttack {Вызов Кракена}
+sea_SubmergeDutchman {Погрузиться/Всплыть}
+sea_PearlSweeps {Закончить}
+sea_QARSword {Быстрый Всплеск}
+sea_TritonAttack {Атака Такелажа}
+sea_NeptuneTrident {Трезубец Нептуна}
+
+sea_EnglishFlag {Англия}
+sea_SpainFlag {Испания}
+sea_PortugalFlag {Португалия}
+sea_FranceFlag {Франция}
+sea_HollandFlag {Голландия}
+sea_Flags {Флаги}
+sea_Explosion {Взорвать}
+
+land_ItemsDead {Обыск трупа}
+land_FastReload {Переход}
+land_ItemsUse {Использовать}
+land_DialogStart {Поговорить}
+land_ItemsChange {Обменяться}
+land_TakeItem {Взять}
+land_PlaceItem {Положить}
+land_OutDoor {Открыть}
+land_UseBox {Открыть}
+land_ActivateRush {Ярость}
+land_ExitDeck {Море}
+land_Look {Осмотреть}
+land_Back {Назад}
+land_EnterDeck {Палуба}
+land_EnterShip {Палуба корабля #sshipname#}
+land_EnterCabin {Каюта капитана}
+land_EnterSeadogs {Кубрик}
+land_EnterShipDeck {Палуба}
+land_EnterMainCannonsDeck {Главная орудийная палуба}
+land_EnterUpperCannonsDeck {Верхняя орудийная палуба}
+land_EnterLowerCannonsDeck {Нижняя орудийная палуба}
+land_EnterHold {Трюм}
+land_EnterHold1 {1-й грузовой отсек}
+land_EnterHold2 {2-й грузовой отсек}
+land_UseCorpse {Осмотреть труп}
+land_UseBarrel {Осмотреть бочонок}
+land_UseStorage {Пороховой погреб}
+land_GoToTeachHead {Голова Черной Бороды}
+
+go_store {Магазин}
+go_shipyard {Верфь}
+go_tavern {Таверна}
+go_residence {Резиденция}
+go_port {Порт}
+go_shore {Берег}
+go_loanshark {Ростовщик}
+go_brothel {Бордель}
+go_church {Церковь}
+go_prison {Тюрьма}
+go_fort {Форт}
+go_tailorshop {Портной}
+go_blacksmith {Кузница}
+go_shipdeck {Палуба}
+go_cabin {Каюта капитана}
+go_seadogs {Кубрик}
+go_maincannonsdeck {Главная орудийная палуба}
+go_uppercannonsdeck {Верхняя орудийная палуба}
+go_lowercannonsdeck {Нижняя орудийная палуба}
+go_hold {Трюм}
+go_hold1 {1-й грузовой отсек}
+go_hold2 {2-й грузовой отсек}
+go_apothecary {Аптека}
+go_gunsmith {Кузница}
+go_gunblacksmith {Кузнец-оружейник}
+go_opium {Курильня опиума}
+go_library {Библиотека}
+go_maltese {Мальтийское аббатство}
+go_indianstore {Магазин индейца}
+go_tavern2 {Вторая таверна}
+go_eitc {Ост-Индская Торговая Компания}
+go_dwic {Голландская Вест-Индская Компания}
+go_academy {Военно-морская академия}
+go_HQ {Военно-морской штаб}

@@ -258,12 +258,42 @@ void ProcessDialogEvent()
 				Link.l98.go = "rumours_good";
 				iTest = iTest + 1;
 			}
+			if ((characters[GetCharacterIndex("Thierry Bosquet")].quest.gambling == "1")&&(iTest < QUEST_COUNTER))
+			{
+				link.l1 = DLG_TEXT[58];
+				link.l1.go = "bukaner";
+				iTest = iTest + 1;
+			}
+			if ((Characters[GetCharacterIndex("Patric Cardone")].quest.teodoro =="1")&&(iTest < QUEST_COUNTER))
+			{
+				Link.l2 = DLG_TEXT[59] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[60])]) + DLG_TEXT[62];
+				Link.l2.go = "Teodoro";
+				iTest = iTest + 1;
+			}
+			if ((characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers == "2")&&(iTest < QUEST_COUNTER))
+			{
+				link.l3 = DLG_TEXT[63];
+				link.l3.go = "smugglers";
+				iTest = iTest + 1;
+			}
+			if ((characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire == "question_1")&&(iTest < QUEST_COUNTER))
+			{
+				link.l4 = DLG_TEXT[64] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[65])]) + DLG_TEXT[67];
+				link.l4.go = "baldewyn_1";
+				iTest = iTest + 1;
+			}
+			if ((characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers == "teodoro")&&(iTest < QUEST_COUNTER))
+			{
+				link.l5 = DLG_TEXT[68];
+				link.l5.go = "smugglers_3";
+				iTest = iTest + 1;
+			}
 //Lucas
 			if (CheckQuestAttribute("lucas", "search"))
 			{
 				dialog.snd = "Voice\CHWI\CHWI005";
-				Link.l4 = DLG_TEXT[279];
-				Link.l4.go = "Find_Lucas1";
+				Link.l6 = DLG_TEXT[279];
+				Link.l6.go = "Find_Lucas1";
 			}
 //Lucas
 			if (!CheckQuestAttribute("generate_convoy_quest_progress", "begin") && npchar.work != lastspeak_date)
@@ -319,6 +349,209 @@ void ProcessDialogEvent()
 					}
 				}
 			}
+		break;
+
+		case "baldewyn_1":
+			dialog.snd = "Voice\ANLE\ANLE021";
+			dialog.text = DLG_TEXT[109] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[110] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[111])]) + DLG_TEXT[112];
+			link.l1 = DLG_TEXT[113];
+			link.l1.go = "baldewyn_2";
+		break;
+
+		case "baldewyn_2":
+			if (pchar.reputation > 40)
+			{
+				dialog.snd = "Voice\ANLE\ANLE022";
+				dialog.text = DLG_TEXT[114] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[115] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[116])]) + DLG_TEXT[117];
+				link.l1 = DLG_TEXT[118];
+				link.l1.go = "exit";
+				characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "question_1_done";
+			}
+			else
+			{
+				dialog.snd = "Voice\ANLE\ANLE023";
+				dialog.text = DLG_TEXT[119] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[120])]) + DLG_TEXT[121];
+				link.l1 = DLG_TEXT[122];
+				link.l1.go = "baldewyn_3";
+				link.l2 = DLG_TEXT[123];
+				link.l2.go = "baldewyn_4";
+			}
+		break;
+
+		case "baldewyn_3":
+			dialog.snd = "Voice\ANLE\ANLE024";
+			dialog.text = DLG_TEXT[124];
+			link.l1 = DLG_TEXT[125];
+			link.l1.go = "exit";
+			characters[GetCharacterIndex("baldewyn Coffier")].quest.hire = "question_1_done";
+		break;
+
+		case "baldewyn_4":
+			dialog.snd = "Voice\ANLE\ANLE025";
+			Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+			dialog.text = DLG_TEXT[126] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[127];
+			link.l1 = DLG_TEXT[128];
+			link.l1.go = "exit";
+			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire = "question_1_not_done";
+		break;
+
+		case "teodoro":
+			dialog.snd = "Voice\ANLE\ANLE028";
+			Dialog.Text = DLG_TEXT[135];
+			Link.l1 = DLG_TEXT[136];
+			Link.l1.go = "exit";
+			if (makeint(Pchar.money) > 0)
+			{
+				Link.l2 = DLG_TEXT[137];
+				Link.l2.go = "teodoro1";
+			}
+		break;
+
+		case "teodoro1":
+			dialog.snd = "Voice\ANLE\ANLE029";
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, -1);
+			Dialog.text = DLG_TEXT[138];
+			link.l1 = DLG_TEXT[139];
+			link.l1.go = "teodoro2";
+		break;
+
+		case "teodoro2":
+			dialog.snd = "Voice\ANLE\ANLE030";
+			Dialog.text = DLG_TEXT[140];
+			Link.l1 = DLG_TEXT[141];
+			link.l1.go = "teodoro_3";
+		break;
+
+		case "teodoro_3":
+			dialog.snd = "Voice\ANLE\ANLE031";
+			Dialog.text = DLG_TEXT[142];
+			Link.l1 = DLG_TEXT[143];
+			link.l1.go = "teodoro_4";
+		break;
+
+		case "teodoro_4":
+			dialog.snd = "Voice\ANLE\ANLE032";
+			Dialog.text = DLG_TEXT[144] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[145])]) + DLG_TEXT[147];
+			Link.l1 = DLG_TEXT[148] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[149])]) + DLG_TEXT[151];
+			Link.l1.go = "teodoro_5";
+		break;
+
+		case "teodoro_5":
+			dialog.snd = "Voice\ANLE\ANLE033";
+			Dialog.Text = DLG_TEXT[152] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[153];
+			Link.l1 = DLG_TEXT[154];
+			link.l1.go = "teodoro_6";
+			Characters[GetCharacterIndex("Patric Cardone")].quest.teodoro = "4";
+
+			Preprocessor_AddQuestData("Antoine Lebretton", GetMyFullName(NPChar));
+			Preprocessor_AddQuestData("Lucien Bescanceny", GetMyFullName(CharacterFromID("Lucien Bescanceny")));
+			Preprocessor_AddQuestData("Antoine", GetMyName(NPChar));
+			Preprocessor_AddQuestData("Bescanceny", GetMyLastName(CharacterFromID("Lucien Bescanceny")));
+			AddQuestRecord("Patric", 4); // NK
+			Preprocessor_Remove("Bescanceny");
+			Preprocessor_Remove("Antoine");
+			Preprocessor_Remove("Lucien Bescanceny");
+			Preprocessor_Remove("Antoine Lebretton");
+		break;
+
+		case "teodoro_6":
+			dialog.snd = "Voice\ANLE\ANLE034";
+			Dialog.text = DLG_TEXT[155];
+			Link.l1 = DLG_TEXT[156];
+			Link.l1.go = "exit";
+			Link.l2 = DLG_TEXT[157];
+			Link.l2.go = "rumours";
+		break;
+
+		case "smugglers":
+			dialog.snd = "Voice\ANLE\ANLE037";
+			Dialog.text = DLG_TEXT[169];
+			link.l1 = DLG_TEXT[170];
+			link.l1.go = "smugglers_1";
+		break;
+
+		case "smugglers_1":
+			dialog.snd = "Voice\ANLE\ANLE038";
+			Dialog.text = DLG_TEXT[171] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[172];
+			link.l1 = DLG_TEXT[173];
+			link.l1.go = "smugglers_2";
+		break;
+
+		case "smugglers_2":
+			if (pchar.reputation > 40)
+			{
+				dialog.snd = "Voice\ANLE\ANLE039";
+				Dialog.text = DLG_TEXT[174];
+				link.l1 = DLG_TEXT[175];
+				link.l1.go = "exit";
+				characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "find";
+			}
+			else
+			{
+				dialog.snd = "Voice\ANLE\ANLE040";
+				Dialog.text = DLG_TEXT[176];
+				link.l1 = DLG_TEXT[177];
+				link.l1.go = "exit";
+				characters[GetCharacterIndex("Turpin Cabanel")].quest.smugglers = "search";
+			}
+		break;
+
+		case "smugglers_3":
+			dialog.snd = "Voice\ANLE\ANLE041";
+			dialog.text = DLG_TEXT[178] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[179];
+			if(Characters[GetCharacterIndex("Patric Cardone")].quest.teodoro == "0")
+			dialog.text = DLG_TEXT[178] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[179] + " " + DLG_TEXT[278]; // NK
+			link.l1 = DLG_TEXT[180];
+			link.l1.go = "exit";
+		break;
+
+		case "bukaner":
+			dialog.snd = "Voice\ANLE\ANLE042";
+			dialog.text = DLG_TEXT[181];
+			link.l1 = DLG_TEXT[182];
+			link.l1.go = "exit";
+			if (makeint(pchar.money) >= 500)
+			{
+				link.l1 = DLG_TEXT[183];
+				link.l1.go = "bukaner_2";
+			}
+		break;
+
+		case "bukaner_2":
+			dialog.snd = "Voice\ANLE\ANLE043";
+			dialog.text = DLG_TEXT[184] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[185];
+			link.l1 = DLG_TEXT[186];
+			link.l1.go = "bukaner_3";
+			link.l2 = DLG_TEXT[187];
+			link.l2.go = "bukaner_4";
+		break;
+
+		case "bukaner_3":
+			dialog.snd = "Voice\ANLE\ANLE044";
+			dialog.text = DLG_TEXT[188];
+			link.l1 = DLG_TEXT[189];
+			link.l1.go = "exit";
+			characters[GetCharacterIndex("Thierry Bosquet")].quest.gambling = "done_1";
+		break;
+
+		case "bukaner_4":
+			dialog.snd = "Voice\ANLE\ANLE045";
+			dialog.text = DLG_TEXT[190];
+			link.l1 = DLG_TEXT[191];
+			link.l1.go = "exit";
+			characters[GetCharacterIndex("Thierry Bosquet")].quest.gambling = "done_1";
+			link.l2 = DLG_TEXT[192];
+			link.l2.go = "bukaner_5";
+		break;
+
+		case "bukaner_5":
+			dialog.snd = "Voice\ANLE\ANLE046";
+			dialog.text = DLG_TEXT[193];
+			link.l1 = DLG_TEXT[194];
+			link.l1.go = "exit";
+			characters[GetCharacterIndex("Thierry Bosquet")].quest.gambling = "2";
+			AddMoneyToCharacter(pchar, -500);
 		break;
 
 		case "store":
@@ -442,7 +675,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Find_Lucas_exit":
-			Dialog.CurrentNode = Dialog.TempNode;
+			NextDiag.CurrentNode =  NextDiag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();
 

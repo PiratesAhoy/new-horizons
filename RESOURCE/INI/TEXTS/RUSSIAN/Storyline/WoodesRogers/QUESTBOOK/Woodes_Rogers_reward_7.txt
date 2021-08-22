@@ -1,0 +1,7 @@
+title=Woodes Rogers last reward
+text.t1=There is one last(!) reward - and it's NOT a Pistol!? To start with I'm looking for Rogers Farmhouse. There's a girl there named Minerva to guide me.
+text.t2=The dummy is wearing a Pistolbelt, but how do I get to it?
+text.t3=I'm closer the Pistolbelt now but the door is locked. 
+text.t4=I've found Blackbeard's legendary pistol belt! Guess Rogers' crew wants to lay their hands on this! Didn't know those rough guys were so nostalgic.
+text.t5=The belt is complete!!
+text.t6=Right-hand items = F3 + F3, Left-hand items = F3 + fire pistol.

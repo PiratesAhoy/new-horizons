@@ -110,7 +110,7 @@ void ProcessDialogEvent()
 		case "items_list3":	
 			PlaySound("VOICE\ENGLISH\Dut_m_a_021.wav");	
 			dialog.text = DLG_TEXT[16];
-			if(makeint(Pchar.money) >= 4000)
+			if(makeint(Pchar.money) >= 500)
 			{
 				link.l1 = DLG_TEXT[17];  
 				link.l1.go = "items_list4";
@@ -168,7 +168,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "password1":	
-			PlaySound("VOICE\ENGLISH\gm_crew12E.wav");	
+			PlaySound("VOICE\ENGLISH\gr_mistress_laugh.wav");
 			dialog.text = DLG_TEXT[33];
 			link.l1 = DLG_TEXT[34];  
 			link.l1.go = "password2";
@@ -177,17 +177,83 @@ void ProcessDialogEvent()
 		case "password2":	
 			PlaySound("VOICE\ENGLISH\gm_crew12B.wav");		
 			dialog.text = DLG_TEXT[35];
-			link.l1 = DLG_TEXT[36];  
+			link.l1 = DLG_TEXT[61];   
 			link.l1.go = "password3";
+			AddQuestRecord("KR_cutlasses","2");
+			if(CheckAttribute(Pchar,"BB_fort") && Pchar.BB_fort == "knowledge")
+			{
+				AddQuestRecord("KR_cutlasses","1");
+			}
 		break;
 
 		case "password3":	
+			PlaySound("VOICE\ENGLISH\gm_crew12E.wav");		
+			dialog.text = DLG_TEXT[62];
+			link.l1 = DLG_TEXT[63];   
+			link.l1.go = "password4";
+		break;
+
+		case "password4":	
+			PlaySound("VOICE\ENGLISH\Eng_f_c_003.wav");		
+			dialog.text = DLG_TEXT[64];
+			link.l1 = DLG_TEXT[65];   
+			link.l1.go = "password5";
+		break;
+
+		case "password5":	
+			PlaySound("VOICE\ENGLISH\gm_crew12K.wav");		
+			dialog.text = DLG_TEXT[66];
+			link.l1 = DLG_TEXT[67];   
+			link.l1.go = "password6";
+		break;
+
+		case "password6":	
+			PlaySound("VOICE\ENGLISH\Eng_f_c_001.wav");
+			dialog.text = DLG_TEXT[68];
+			link.l1 = DLG_TEXT[69];   
+			link.l1.go = "password7";
+		break;
+
+		case "password7":	
+			PlaySound("VOICE\ENGLISH\Eng_f_c_002.wav");		
+			dialog.text = DLG_TEXT[70];
+			link.l1 = DLG_TEXT[71];   
+			link.l1.go = "password8";
+		break;
+		
+		case "password8":	
+			PlaySound("VOICE\ENGLISH\gm_crew12G.wav");		
+			dialog.text = DLG_TEXT[72];
+			link.l1 = DLG_TEXT[36];   
+			link.l1.go = "password9";
+		break;
+
+		case "password9":	
 			PlaySound("OBJECTS\DUEL\woman_hit3.wav");	
 			dialog.text = DLG_TEXT[37];
-			link.l1 = DLG_TEXT[38];  
+
+			if(CheckAttribute(Pchar,"BB_fort") && Pchar.BB_fort == "knowledge")
+			{
+				link.l1 = DLG_TEXT[38];  
+				link.l1.go = "exit";
+				AddDialogExitQuest("password_done");
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[73];  
+				link.l1.go = "password10";
+			}
+		break;
+
+		case "password10":	
+			PlaySound("VOICE\ENGLISH\gm_crew12B.wav");		
+			dialog.text = DLG_TEXT[74];
+			link.l1 = DLG_TEXT[22];   
 			link.l1.go = "exit";
+			AddQuestRecord("KR_cutlasses","1");
 			AddDialogExitQuest("password_done");
 		break;
+
 
 		case "anna_helena_neutral":	
 			PlaySound("VOICE\ENGLISH\blaze_sigh.wav");	
@@ -261,6 +327,15 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[55];
 			link.l1 = DLG_TEXT[56];  
 			link.l1.go = "exit";
+			AddQuestRecord("KR_amulet","4");
+			AddDialogExitQuest("chapel_monk_done");
+		break;
+
+		case "chapel_monk_neutral":	
+			PlaySound("VOICE\ENGLISH\Beggar_spa.wav");	
+			dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[75];  
+			link.l1.go = "exit";
 		break;
 
 		case "townhall_neutral":	
@@ -276,6 +351,224 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[60];  
 			link.l1.go = "exit";
 		break;
+
+		case "outside_shipyard":	
+			int iPhrase = rand(3);
+			switch (iPhrase)
+			{
+				case 0:
+					PlaySound("VOICE\ENGLISH\Dut_m_a_043.wav");
+				break;
+
+				case 1:
+					PlaySound("VOICE\ENGLISH\Dut_m_a_051.wav");	
+				break;
+
+				case 2:
+					PlaySound("VOICE\ENGLISH\Dut_m_a_053.wav");	
+				break;
+
+				case 3:
+					PlaySound("VOICE\ENGLISH\Dut_m_a_054.wav");	
+				break;	
+			}
+
+			NPChar.dlgover = true;
+			DialogExit();
+		break;
+
+	//Hilpershausen
+		case "captain_where":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_032.wav");
+			PlaySound("VOICE\ENGLISH\Dut_m_a_032.wav");		
+			dialog.text = DLG_TEXT[77];
+			link.l1 = DLG_TEXT[78];  
+			link.l1.go = "captain_where1";
+		break;
+
+		case "captain_where1":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_049.wav");		//was 033		
+			dialog.text = DLG_TEXT[79];
+			link.l1 = DLG_TEXT[80];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona26");
+		break;
+	//Walter
+		case "commanders_here":	
+			PlaySound("VOICE\ENGLISH\jrh_5.wav");		
+			dialog.text = DLG_TEXT[81];
+			link.l1 = DLG_TEXT[82];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona27");
+		break;
+
+	//Hilpershausen
+		case "recognize_Pyle":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_002.wav");
+			PlaySound("VOICE\ENGLISH\Dut_m_a_002.wav");		
+			dialog.text = DLG_TEXT[83];
+			link.l1 = DLG_TEXT[84];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona28");
+		break;
+
+	//Walter earlier in Kristiania
+		case "Kristiania_port":
+			Pchar.talked_to_Walter = "yes";
+			PlaySound("VOICE\ENGLISH\jrh_3.wav");		
+			dialog.text = DLG_TEXT[85];
+			link.l1 = DLG_TEXT[86];  
+			link.l1.go = "exit";
+		break;
+
+	//Walter
+		case "talked_to_in_port":	
+			PlaySound("VOICE\ENGLISH\jrh_8.wav");		
+			dialog.text = DLG_TEXT[87];
+			link.l1 = DLG_TEXT[88];  
+			link.l1.go = "ship_name";
+		break;
+
+		case "seen_in_port":	
+			PlaySound("VOICE\ENGLISH\jrh_8.wav");		
+			dialog.text = DLG_TEXT[89];
+			link.l1 = DLG_TEXT[88];  
+			link.l1.go = "ship_name";
+		break;
+
+		case "ship_name":	
+			PlaySound("VOICE\ENGLISH\jrh_6.wav");		
+			dialog.text = DLG_TEXT[90];
+			link.l1 = DLG_TEXT[91];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona29");
+		break;
+
+	//Hilpershausen
+		case "translate_please":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_067.wav");		
+			dialog.text = DLG_TEXT[92];
+			link.l1 = DLG_TEXT[93];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona30");
+		break;
+
+	//Walter
+		case "gatenhielm":	
+			PlaySound("VOICE\ENGLISH\jrh_3.wav");		
+			dialog.text = DLG_TEXT[94];
+			link.l1 = DLG_TEXT[95];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona35");
+		break;
+
+	//Hilpershausen
+		case "foul_smell":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_006.wav");		
+			dialog.text = DLG_TEXT[96];
+			link.l1 = DLG_TEXT[97];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona38");
+		break;
+
+	//Walter
+		case "no_slaver":	
+			PlaySound("VOICE\ENGLISH\jrh_6.wav");		
+			dialog.text = DLG_TEXT[98];
+			link.l1 = DLG_TEXT[99];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona39");
+		break;
+
+	//Hilpershausen
+		case "stolen_uniform":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_053.wav");	//was 025		
+			dialog.text = DLG_TEXT[100];
+			link.l1 = DLG_TEXT[101];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona39_A");
+		break;
+
+		case "which_nation":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_070.wav");		
+			dialog.text = DLG_TEXT[102];
+			link.l1 = DLG_TEXT[103];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona40");
+		break;
+
+	//Walter
+		case "LOM":	
+			PlaySound("VOICE\ENGLISH\jrh_4.wav");			//step 1/3		
+			dialog.text = DLG_TEXT[104];
+			link.l1 = DLG_TEXT[105];  
+			link.l1.go = "LOM1";
+		break;
+
+		case "LOM1":	
+			PlaySound("VOICE\ENGLISH\jrh_8.wav");			//step 2/3		
+			dialog.text = DLG_TEXT[106];
+			link.l1 = DLG_TEXT[107];  
+			link.l1.go = "LOM2";
+		break;
+
+		case "LOM2":	
+			PlaySound("VOICE\ENGLISH\jrh_7.wav");			//step 3/3		
+			dialog.text = DLG_TEXT[108];
+			link.l1 = DLG_TEXT[109];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona43");
+		break;
+
+	//Hilpershausen
+		case "one_detail":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_002.wav");		
+			dialog.text = DLG_TEXT[110];
+			link.l1 = DLG_TEXT[111];  
+			link.l1.go = "observer";
+		break;
+
+		case "observer":	
+			PlaySound("VOICE\ENGLISH\Dut_m_a_037.wav");		
+			dialog.text = DLG_TEXT[112];
+			link.l1 = DLG_TEXT[113];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona63");
+		break;
+
+	//Walter
+		case "grenadier":	
+			PlaySound("VOICE\ENGLISH\jrh_7.wav");		
+			dialog.text = DLG_TEXT[114];
+			link.l1 = DLG_TEXT[115];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona64");
+		break;
+
+		case "got_document":	
+			LAi_SetActorType(NPChar);
+			LAi_ActorTurnToCharacter(NPChar, characterFromID("Hilphershausen"));
+
+			PlaySound("VOICE\ENGLISH\jrh_8.wav");		
+			dialog.text = DLG_TEXT[116];
+			link.l1 = DLG_TEXT[117];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona66");
+		break;
+
+	//Hilpershausen
+		case "give_document":
+			GiveItem2Character(pchar, "LOM_swe");
+			PlaySound("INTERFACE\paper.wav");
+
+			PlaySound("VOICE\ENGLISH\Dut_m_a_026.wav");	
+			dialog.text = DLG_TEXT[118];
+			link.l1 = DLG_TEXT[119];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("Pyle_to_Mona68");
+		break;
+
+
 
 		case "Exit":
 			DialogExit();

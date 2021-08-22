@@ -80,6 +80,11 @@ void ProcessDialogEvent()
 				link.l11 = DLG_TEXT[56];
 				link.l11.go = "ardent_convoy";
 			}
+			if (CheckQuestAttribute("colombian_silver.status", "start"))
+			{
+				link.l12 = DLG_TEXT[59];
+				link.l12.go = "colombian_silver_train";
+			}
 			link.l99 = DLG_TEXT[15];
 			link.l99.go = "second time";
 		break;
@@ -282,6 +287,10 @@ void ProcessDialogEvent()
 			else TavernWaitDate2("wait_night");
 			DialogExit();
 			Diag.CurrentNode =  Diag.TempNode;
+
+		// For "Colombian Silver" sidequest ---->
+			if(CheckQuestAttribute("colombian_silver.status", "buy_wine")) AddDialogExitQuest("colombian_silver_prepare_jimena_for_room");
+		// <---- For "Colombian Silver" sidequest
 		break;
 
 		case "buy_rum_bottle":
@@ -299,6 +308,15 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[57];
 			link.l1 = DLG_TEXT[58];
 //			PChar.quest.ardent_convoy = "Cartagena_hotel";
+			link.l1.go = "Exit";
+		break;
+
+		case "colombian_silver_train":
+			PChar.quest.colombian_silver.status = "talked_to_tavernkeeper";
+			Locations[FindLocation("Cartagena_tavern2")].reload.l1.disable = 1;
+			AddDialogExitQuest("colombian_silver_jimena_talks");
+			dialog.text = DLG_TEXT[60];
+			link.l1 = DLG_TEXT[61];
 			link.l1.go = "Exit";
 		break;
 	}

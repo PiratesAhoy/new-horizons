@@ -1,0 +1,127 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+{=====| GoldBug.c |=====}
+William{William}
+Legrand{Legrand}
+
+{=====| StartStoryline.c |=====}
+
+{=====| quests_reaction.c |=====}
+Edgar Allan{Edgar Allan}
+Poe{Poe}
+Jupiter{Júpiter}
+
+{=====| TempQuest.c |=====}
+C. Auguste{C. Auguste}
+Dupin{Dupin}
+Arthur Gordon{Arthur Gordon}
+Pym{Pym}
+Lieutenant{Teniente}
+G{G}
+Medicine{Curandera}
+Woman{india}
+Medicine Woman{Curandera india}
+Hans{Hans}
+Pfaall{Pfaall}
+Wilson{Wilson}
+Ethelred{Ethelred}
+Usher{Usher}
+Fortunato{Fortunato}
+Summer{Veraneante}
+visitor{ }
+Soldier{Soldado}
+Bartender{Camarero}
+Sergeant{Sargento}
+Corporal{Cabo}
+Sailor{Marinero}
+Claude{Claude}
+Frollo{Frollo}
+Landlady{Casera}
+Natalia{Natalia}
+Decoteau{Decoteau}
+Serena{Serena}
+Tisserand{Tisserand}
+Celia{Celia}
+Hilder{Hilder}
+Mummy{Momia}
+Citizen{Residente}
+Axel{Axel}
+von Fersen{von Fersen}
+Doctor{Doctor}
+KP{KP}
+Street Merchant{Mercader callejero}
+Shipyard{Dueño}
+Owner{del astillero}
+Harbour{Capitán}
+Master{del puerto}
+Bank{Empleado}
+Clerk{del banco}
+Blacksmith{Herrero}
+Storeowner{Tendero}
+Governor Thomas{Gobernador Thomas}
+Bennet{Bennet}
+The Chinese{El chino}
+Man{chino}
+Black Magic Woman{Hechicera negra}
+Plantation{Guardia}
+Guard{de la plantación}
+Captain William{Capitán William}
+Kidd{Kidd}
+Howard{Howard}
+Pyle{Pyle}
+Caroline{Caroline}
+K{K}
+Friday{Viernes}
+Alexander{Alexander}
+Selkirk{Selkirk}
+Grandma{Abuela}
+Rogers{Rogers}
+Dave{Dave}
+Edna{Edna}
+Nathaniel{Nathaniel}
+Hawk{Hawk}
+Danielle{Danielle}
+Fawn{Fawn}
+Steven{Steven}
+Maturin{Maturin}
+Jack{Jack}
+Aubrey{Aubrey}
+Sparrow{Sparrow}
+Elizabeth{Elizabeth}
+Swann{Swann}
+Hector{Hector}
+Barbossa{Barbossa}
+Will{Will}
+Turner{Turner}
+Beatrice{Beatrice}
+Devlin{Devlin}
+Jean{Jean}
+de la Croix{de la Croix}
+Horatio{Horatio}
+Hornblower{Hornblower}
+Archie{Archie}
+Kennedy{Kennedy}
+Edward{Edward}
+Pellew{Pellew}
+Bush{Bush}
+Richard{Richard}
+Sharpe{Sharpe}
+Patrick{Patrick}
+Harper{Harper}
+Haggman{Haggman}
+Harris{Harris}
+Lafitte{Lafitte}
+Bartolomeu{Bartolomeu}
+o Portugues{o Portugues}
+Emilio{Emilio}
+Soares{Soares}
+Johan{Johan}
+Elting{Elting}
+Maroon{Cimarrón}
+Deserter{Desertor}
+Thug{Matón}
+Bandit{Bandido}
+Priest{Sacerdote}
+Zombie{Zombi}
+Buccaneer{Bucanero}
+
+{=====| 191 characters |=====}

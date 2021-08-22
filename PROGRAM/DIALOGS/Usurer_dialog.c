@@ -307,7 +307,7 @@ void ProcessDialogEvent()
 				if(CheckAttribute(Pchar, "CrewStatus.explength") && CheckAttribute(PChar,"articles") && sti(PChar.articles)/* && sti(Pchar.CrewStatus.explength) > NORMAL_EXP_LENGTH /2*/)
 				{
 					Link.l4 = DLG_TEXT[144];
-					Link.l4.go = "divide";
+					Link.l4.go = "divide_choose";
 				}
 // NK <--
 			}
@@ -331,7 +331,7 @@ void ProcessDialogEvent()
 			if(CheckAttribute(Pchar, "CrewStatus.explength") && CheckAttribute(PChar,"articles") && sti(PChar.articles)/* && sti(Pchar.CrewStatus.explength) > NORMAL_EXP_LENGTH /2*/)
 			{
 				Link.l4 = DLG_TEXT[144];
-				Link.l4.go = "divide";
+				Link.l4.go = "divide_choose";
 			}
 // NK <--			
 		break;
@@ -542,7 +542,36 @@ void ProcessDialogEvent()
 		break;
 
 // NK -->
-		case "divide":
+		case "divide_choose":
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[155];
+			link.l1 = DLG_TEXT[156];
+			link.l1.go = "divide_only_money";
+			link.l2 = DLG_TEXT[157];
+			link.l2.go = "divide_new_expedition";
+		break;
+
+		case "divide_only_money":
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[158] + DLG_TEXT[159] + MakeMoneyShow(GetCrewShare(PChar),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[160] +
+			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[161] + MakeMoneyShow(makeint(GetPersonalShareC(PChar)*(0.75 + makefloat(GetFoodEver()) * 0.25)),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[162] + DLG_TEXT[163] + MakeMoneyShow(makeint(makefloat(GetCharacterMoney(PChar)) * LEFTOVER_SHARE),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[164];
+			Link.l1 = DLG_TEXT[150];
+			Link.l1.go = "divide2";
+			Link.l2 = DLG_TEXT[151];
+			Link.l2.go = "Exit_noChange";
+		break;
+
+		case "divide_new_expedition":
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[165] + MakeMoneyShow(GetCrewShare(PChar),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[146] + 
+			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[147] + MakeMoneyShow(makeint(GetPersonalShareC(PChar)*(0.75 + makefloat(GetFoodEver()) * 0.25)),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[148] + MakeMoneyShow(makeint(makefloat(GetCharacterMoney(PChar)) * LEFTOVER_SHARE),MONEY_SIGN,MONEY_DELIVER) + DLG_TEXT[149];
+			Link.l1 = DLG_TEXT[150];
+			Link.l1.go = "divide1";
+			Link.l2 = DLG_TEXT[151];
+			Link.l2.go = "Exit_noChange";
+		break;
+
+/*		case "divide":
 			Dialog.snd = "voice\USDI\USDI034";
 			// LDH fix for odd money display 10Sep06
 			d.Text = DLG_TEXT[145] + MakeMoneyShow(GetCrewShare(PChar),MONEY_SIGN,MONEY_DELIVER)+ DLG_TEXT[146] + 
@@ -551,7 +580,7 @@ void ProcessDialogEvent()
 			Link.l1.go = "divide1";
 			Link.l2 = DLG_TEXT[151];
 			Link.l2.go = "Exit_noChange";
-		break;
+		break; */
 
 		case "divide1":
 			Dialog.snd = "voice\USDI\USDI034";
@@ -559,7 +588,7 @@ void ProcessDialogEvent()
 			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[153];
 			Link.l1 = DLG_TEXT[154];
 			Link.l1.go = "Exit_noChange";
-			DividePlunder(PChar);
+			DividePlunder(PChar, true);
 			// NK new delay section 05-04-17
 			if(REFIT_TIME)
 			{
@@ -577,6 +606,15 @@ void ProcessDialogEvent()
 			AddTimeToCurrent(24, 0);
 			DeleteAttribute(&PChar,"disableDCU");
 			//WaitDate("", 0, 2, 0, 0, 0); // NK 05-04-16*/
+		break;
+
+		case "divide2":		// GR: same as "divide1" but without the delay
+			Dialog.snd = "voice\USDI\USDI034";
+			d.Text = DLG_TEXT[166] + 
+			GetCrewShareName(GetCrewShareRatioC(PChar)) + DLG_TEXT[167];
+			Link.l1 = DLG_TEXT[168];
+			Link.l1.go = "Exit_noChange";
+			DividePlunder(PChar, false);
 		break;
 // NK <--
 

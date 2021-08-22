@@ -388,7 +388,7 @@ bool LAi_FantomIsStored(ref fantom)
 void LAi_Clear_Fantoms()
 {
 	ref fantom;
-	for(int i = 0; i < 32; i++)
+	for(int i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
 	{
 		fantom = &Characters[LOC_FANTOM_CHARACTERS + i];
 		if(!LAi_FantomIsStored(fantom))
@@ -437,18 +437,18 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 								  float hasgun , string model, string group      , string locator)
 {
 	//Ищем свободное место для персонажа
-	for(int i = 0; i < 32; i++)
+	for(int i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
 	{
 		if(CheckAttribute(&Characters[LOC_FANTOM_CHARACTERS + i], "id") == false) break;
 		if(Characters[LOC_FANTOM_CHARACTERS + i].id == "") break;
 	}
-	if(i >= 32)
+	if(i >= MAX_LOGINED_CHARACTERS_IN_LOCATION)
 	{
-		for(i = 0; i < 32; i++)
+		for(i = 0; i < MAX_LOGINED_CHARACTERS_IN_LOCATION; i++)
 		{
 			if(!IsEntity(&Characters[LOC_FANTOM_CHARACTERS + i])) break;
 		}
-		if(i >= 32) i = 0;
+		if(i >= MAX_LOGINED_CHARACTERS_IN_LOCATION) i = 0;
 	}
 	ref chr; makeref(chr, Characters[LOC_FANTOM_CHARACTERS + i]); // KK
 	//Заполняем поля персонажа
@@ -569,15 +569,15 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 	chr.chr_ai.hp_max = LAI_DEFAULT_HP_MAX;*/
 	// NK <--
 	chr.chr_ai.charge = LAI_DEFAULT_CHARGE;
-	if(LAi_numloginedcharacters >= 32)
+	if(LAi_numloginedcharacters >= MAX_LOGINED_CHARACTERS_IN_LOCATION)
 	{
-		Trace("LAi_CreateFantomCharacter -> many logined characters in location (>32)");
+		Trace("LAi_CreateFantomCharacter -> many logined characters in location (>" + MAX_LOGINED_CHARACTERS_IN_LOCATION +")");
 		return chr;
 	}
 	LAi_AddLoginedCharacter(chr);
 	if(!CreateCharacter(chr))
 	{
-		Trace("LAi_CreateFantomCharacter -> CreateCharacter return false");
+		Trace("LAi_CreateFantomCharacter -> CreateCharacter return false (LAi_numloginedcharacters = " + LAi_numloginedcharacters + ")");
 		return chr;
 	}
 	//Поставим персонажа на локатор

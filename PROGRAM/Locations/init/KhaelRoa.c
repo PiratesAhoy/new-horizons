@@ -5,7 +5,7 @@ void LocationInitKhaelRoa(ref n)
 	Locations[n].worldmap = "Khael Roa";
 	Locations[n].filespath.models = "locations\Incas Temple\Port";
 	Locations[n].image = "Incas_Temple_Port.tga";
-	locations[n].id.label = "$island_name shore";
+	locations[n].id.label = "#sisland_name# shore";
 	//Sound
 	locations[n].type = "seashore";
 	//Models

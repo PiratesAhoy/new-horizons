@@ -1,0 +1,10 @@
+title=The Battle of Aguadilla
+text.t1=An interesting mission Governor Ogeron has got for me. I must kidnap a former Spanish paymaster jailed in Antigua. He could give us some useful information about the gold reserves of #sisland_Isla Muelle#. According to Governor Ogeron he's in a bedroom of the Port Admiral's residence.
+text.t2=We have the paymaster. I hope his release will be useful for finding the Spanish gold. Let's take him to Tortuga. 
+text.t3=Captain Montbars is a real rough! He didn't hesitate to burst the valet's head so that the paymaster confesses the whole story. Seeing Governor Ogeron wanted an additional ship for the expedition, I suggested Roxanne. I hope she will be at #sFalaise de Fleur#. I wouldn't like to make the expedition without her.
+text.t4=With Roxanne in the team, the fleet is ready. Let's sail for #sisland_Isla Muelle#.
+text.t5=Everything was working but Captain Montbars deceived us. Governor Ogeron should know how to find the gold again.
+text.t6=Let's recapitulate : Alice town, #sisland_Redmond# and #sisland_Cayman#. Why not start by Cayman first? 
+text.t7=Now Montbars is dead, I must find any clues about the localization of the gold. Let's check the house and if necessary, outside, around it.
+text.t8=I only found a small part of the gold in Isla de Muerte. Let's see again Governor Ogeron in Tortuga.
+text.t9=I've got nothing scheduled but why not going to #sRedmond#? I know Captain Henry Morgan works for the English Governor. Maybe, he could accept me in one of his expeditions...

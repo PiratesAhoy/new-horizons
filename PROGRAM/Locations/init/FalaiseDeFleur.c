@@ -89,7 +89,8 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].id = "Falaise_de_fleur_port_02";
 	locations[n].id.label = "#sisland_name# beach";
 	locations[n].worldmap = "Falaise De Fleur";
-	Locations[n].image = "Town_FalaiseDeFleur_Port2.tga";
+	if(GetCurrentPeriod() == PERIOD_NAPOLEONIC) Locations[n].image = "Town_FalaiseDeFleur_Port2_Nap.tga";
+	else Locations[n].image = "Town_FalaiseDeFleur_Port2.tga";
 
 	//Town sack
 	Locations[n].townsack = "Falaise de Fleur";

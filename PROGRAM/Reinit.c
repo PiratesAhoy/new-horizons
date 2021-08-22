@@ -266,8 +266,8 @@ void Reinit(bool start, bool show)
 			makeref(ch,Characters[n]);
 			ch.old.name = "Ye Keeper"; // MAXIMUS 16.10.2006
 			ch.old.lastname = "o' ye Hoarde"; // MAXIMUS 16.10.2006
-			ch.name 	= TranslateString("","Ye Keeper");
-			ch.lastname 	= TranslateString("","o' ye Hoarde");
+			ch.name 	= TranslateString("", "Ye Keeper");
+			ch.lastname 	= TranslateString("", "o' ye Hoarde");
 			ch.id		= "B_keeper";
 			ch.model	= "admiral";
 			ch.sex = "man";
@@ -362,6 +362,13 @@ void Reinit(bool start, bool show)
 
 		ReloadProgressUpdate(); // NK 05-04-06 add the spinning thingie
 	}
+	// MAXIMUS 20.08.2018 used for localization -->
+	if(CheckAttribute(pc, "savelang"))
+	{
+		PostEvent("ChangeLanguage", 0, "ls", sti(pc.savelang), "");
+		DeleteAttribute(pc, "savelang");
+	}
+	// MAXIMUS 20.08.2018 used for localization <--
 	Trace("Gauging: update all towns");
 	UpdateAllTowns(true);
 	// NK 05-04-06 itemtrade
@@ -648,7 +655,7 @@ void TraceIf(string ltext)
 
 void Logit(string logstr)
 {
-	Log_SetStringToLog(logstr);
+	Log_SetStringToLog(TranslateString("", logstr));//MAXIMUS 22.04.2019: this will not slow down the messages output too much, but will provide text translation in one place, without editing hundreds of code lines
 }
 
 void DPDoFade()
@@ -672,7 +679,8 @@ void DPStartFade()
 {
 	DelEventHandler("FaderEvent_StartFade", "DPStartFade");
 	ReloadProgressStart();
-	QuestComplete("updatedays");
+//	QuestComplete("updatedays");		// GR: this is specifically for storyline quests and is defined in each storyline's "quests_reaction.c"
+	CompleteQuestName("updatedays");	// GR: this is defined in "quests.c" and tries to complete the quest as common, storyline or side
 }
 
 void DPEndFade()

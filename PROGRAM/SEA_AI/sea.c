@@ -557,6 +557,14 @@ void SeaLogin(ref Login)
 	rPlayer.Ship.POS.Mode = SHIP_SAIL;
 	rPlayer.location = Login.Island;
 
+	for (i = 0; i < COMPANION_MAX; i++)
+	{
+		iCharacterIndex = GetCompanionIndex(rPlayer, i);
+		if (iCharacterIndex < 0) continue;
+		rCharacter = GetCharacter(iCharacterIndex);
+		rCharacter.location = Login.Island;
+	}
+
 	if (bDirectSail) rPlayer.BaseCurrentTime = 0.0; //Screwface : fix to restart Sea ai update as soon as sea reload
 
 	// clear old fantom relations in our character
@@ -770,7 +778,8 @@ void SeaLogin(ref Login)
 
 	ReloadProgressUpdate();
 
-	if (!bDirectSail && !bLoadSavedGame) {
+	if (!bDirectSail && !bLoadSavedGame)
+	{
 		// login fantom groups
 		makearef(arEncounters,Login.Encounters);
 		int iNumGroups = GetAttributesNum(arEncounters);
@@ -823,22 +832,35 @@ void SeaLogin(ref Login)
 			Trace("SEA: Set group : " + sGName + ", x = " + x + ", z = " + z);
 
 			// load ship to sea
-			if (iNShips > 0) {
+			if (iNShips > 0)
+			{
 				int iGeraldSails = -1;
 				if (CheckAttribute(rEncounter, "GeraldSails")) iGeraldSails = sti(rEncounter.GeraldSails);
 				LoadShipsToSea(iNShips, sGName, iNation, iGeraldSails);
 			}
 		}
-	} else {
-		 if (bDirectSail && CheckAttribute(rPlayer, "directsail.encounter")) { // if set so in DirectsailCheck() random encounter ships are created
+	}
+	else
+	{
+		if (bDirectSail && CheckAttribute(rPlayer, "directsail.encounter"))
+		{ // if set so in DirectsailCheck() random encounter ships are created
 			rPlayer.ship.pos.x = stf(Login.PlayerGroup.x); // so that DirectEncounter doesn't use OLD coords
 			rPlayer.ship.pos.z = stf(Login.PlayerGroup.z);
 			DirectEncounter(stf(Login.PlayerGroup.ay));
+			if (DS_MULTIFLEET > 0.0)
+			{
+				if (frand(100) <= DS_MULTIFLEET)
+				{
+					DirectEncounter(stf(Login.PlayerGroup.ay));					// Second group in encounter
+//					if (frand(100) <= DS_MULTIFLEET) DirectEncounter(stf(Login.PlayerGroup.ay));	// Chance of a third
+				}
+			}
 			DeleteAttribute(rPlayer,"directsail");	// clears tags from player
 		}
 		if (bLoadSavedGame) {
 			iNShips = sti(Login.Ship.Quantity);
-			for (i = 0; i < iNShips; i++) {
+			for (i = 0; i < iNShips; i++)
+			{
 				l = "l" + i;
 				// Screwface : If you saved while a ship was sinking (still dead icon in Binterface menu) the next time you loaded your save
 				// the l attribute was missing and icharacterIndex was set to 0 so you had a clone of you as temporary companion !!! The line below avoid that !
@@ -959,8 +981,11 @@ void SeaLogin(ref Login)
 	DeleteAttribute(rPlayer, "scrollchars");				// PB: For Cheatmode
 	DeleteAttribute(rPlayer, "Anchoring");					// PB: Just to make sure this is gone
 	DeleteAttribute(rPlayer, "ForceReload");				// PB: Just to make sure this is gone
-	for (c = 0; c <= GetCompanionQuantity(rPlayer); c++) {
-		rCharacter = GetCharacter(GetCompanionIndex(rPlayer, sti(c)));
+	for (c = 0; c < COMPANION_MAX; c++)
+	{
+		iCharacterIndex = GetCompanionIndex(rPlayer, c);
+		if (iCharacterIndex < 0) continue;
+		rCharacter = GetCharacter(iCharacterIndex);
 		// PB: To make sure this is gone -->
 		DeleteAttribute(rCharacter, "Ship.Sink");
 		DeleteAttribute(rCharacter, "Ship.Sails.Delay");

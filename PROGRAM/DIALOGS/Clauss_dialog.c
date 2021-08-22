@@ -47,6 +47,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "nigel_3":
+			Preprocessor_Add("mister", strlower(GetAddressForm(ADDR_CIVIL, ENGLAND, chrsex(PChar))));
 			dialog.text = DLG_TEXT[6];
 			link.l1 = DLG_TEXT[7];
 			link.l1.go = "nigel_4";

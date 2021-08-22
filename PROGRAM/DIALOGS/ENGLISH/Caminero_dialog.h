@@ -9,7 +9,7 @@ string DLG_TEXT[24] = {
 "All right, he was working for me. Until one day he disappeared with one of my ships.",
 "Heh-heh. What an unfortunate surprise...",
 "Hey, I don't see anything funny in that! And laughing could become harmful for your health!",
-"All right, all right.... Some might pay a lot to keep such an embarrassing secret quiet. 'His ship was stolen from under his nose?' My, my, a secret like that is worth no less than five thousand gold, I should think.",
+"All right, all right.... Some might pay a lot to keep such an embarrassing secret quiet. '#spronoun1# ship was stolen from under #spronoun2# nose?' My, my, a secret like that is worth no less than five thousand gold, I should think.",
 "How about I put a few grams of lead in your head?",
 "Don't try to threaten me. Everybody knows you're the kind, tenderhearted type who helps widows and cripples. Heh-heh!",
 "All right, all right, I agree.",

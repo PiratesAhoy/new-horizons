@@ -14,7 +14,7 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 
-	if (PChar.sex == "man")
+/*	if (PChar.sex == "man")
 	{
 		gov_kid = XI_ConvertString("her");
 		merch_kid = XI_ConvertString("him");
@@ -23,7 +23,9 @@ void ProcessDialogEvent()
 	{
 		gov_kid = XI_ConvertString("him");
 		merch_kid = XI_ConvertString("her");
-	}
+	} */
+	gov_kid = XI_ConvertString(GetMyPronounObj(CharacterFromID(PChar.quest.romance)));
+	merch_kid = XI_ConvertString(GetMyPronounObj(CharacterFromID(PChar.quest.villain)));
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -33,7 +35,6 @@ void ProcessDialogEvent()
 			Diag.CurrentNode = Diag.TempNode; //"First time";
 			DialogExit();
 		break;
-
 	
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
@@ -53,13 +54,13 @@ void ProcessDialogEvent()
 
 		case "first_delivery":
 			dialog.text = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[2];
-			link.l1 = DLG_TEXT[3] + GetMyFullName(characterFromID(PChar.quest.romance)) + ".";
+			link.l1 = DLG_TEXT[3] + GetMyFullName(CharacterFromID(PChar.quest.romance)) + ".";
 			link.l1.go = "first_delivery2";
 		break;
 
 		case "first_delivery2":
 			dialog.text = DLG_TEXT[4] + gov_kid + DLG_TEXT[5];
-			link.l1 = DLG_TEXT[6] + GetMyName(characterFromID(PChar.quest.romance)) + ".";
+			link.l1 = DLG_TEXT[6] + GetMyName(CharacterFromID(PChar.quest.romance)) + ".";
 			link.l1.go = "first_delivery3";
 		break;
 
@@ -164,6 +165,66 @@ void ProcessDialogEvent()
 			else PreProcessor_Add("pronoun", XI_ConvertString("her"));
 			dialog.text = DLG_TEXT[47];
 			link.l1 = DLG_TEXT[48];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_jailbreak":
+			dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			link.l1.go = "imperial_escort_stay_here";
+		break;
+
+		case "imperial_escort_stay_here":
+			dialog.text = DLG_TEXT[51] + GetMyFullName(CharacterFromID("Jusepe Guimaraes")) + DLG_TEXT[52];
+			link.l1 = DLG_TEXT[53];
+			link.l1.go = "imperial_escort_get_your_stuff";
+		break;
+
+		case "imperial_escort_get_your_stuff":
+			dialog.text = DLG_TEXT[54];
+			link.l1 = DLG_TEXT[55];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_ships_impounded":
+			if(sti(PChar.quest.imperial_escort.original_fleet_size) == 1) dialog.text = DLG_TEXT[56] + DLG_TEXT[58];
+			else dialog.text = DLG_TEXT[57] + DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_explanation":
+			dialog.text = DLG_TEXT[60];
+			link.l1 = DLG_TEXT[61];
+			link.l1.go = "imperial_escort_explanation2";
+		break;
+
+		case "imperial_escort_explanation2":
+			dialog.text = GetMyFullName(CharacterFromID("Jusepe Guimaraes")) + DLG_TEXT[62] + GetMyFullName(CharacterFromID("Javier Balboa")) + DLG_TEXT[63] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[64] + GetMyLastName(PChar) + "!";
+			link.l1 = DLG_TEXT[65] + GetMyName(NPChar) + DLG_TEXT[66];
+			link.l1.go = "exit";
+		break;
+
+		case "imperial_escort_remind_stuff":
+			dialog.text = DLG_TEXT[67];
+			if(!CheckAttribute(PChar, "quest.imperial_escort_get_stuff"))	// The "get_stuff" quest is not active because you already retrieved your stuff
+			{
+				link.l1 = DLG_TEXT[68];
+				link.l1.go = "imperial_escort_no_port";
+			}
+			else								// The "get_stuff" quest is still active because you didn't go to the unconscious commandant
+			{
+				link.l1 = DLG_TEXT[69];					// Go back and get stuff
+				link.l1.go = "exit";
+				link.l2 = DLG_TEXT[70];					// Don't bother with stuff
+				link.l2.go = "imperial_escort_no_port";
+			}
+		break;
+
+		case "imperial_escort_no_port":
+			dialog.text = DLG_TEXT[71];
+			link.l1 = DLG_TEXT[72];
+			AddDialogExitQuest("imperial_escort_ships_impounded");
 			link.l1.go = "exit";
 		break;
 	}

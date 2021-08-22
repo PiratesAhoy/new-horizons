@@ -758,7 +758,7 @@ void ProcessDialogEvent()
 
 		case "exit_Interceptor_and_everything":
 			//AddQuestRecord("Search_for_the_Black_Pearl", 4);
-			AddQuestRecord("stolen", 10);
+			AddQuestRecord("stolen", 11);
 			CloseQuestHeader("stolen");
 			pchar.quest.henry_talk = "quests_are_finished";	
 			GiveShip2Character(pchar,"Tartane50","Jolly Mon",-1,PIRATE,true,true);

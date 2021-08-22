@@ -1,4 +1,4 @@
-string DLG_TEXT[293] = {
+string DLG_TEXT[303] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -256,7 +256,7 @@ string DLG_TEXT[293] = {
 "I bet there is something buried here. I'm going to dig.",
 "(Ten minutes later)",
 "What a beautiful sword! But there is a name engraved on the blade...",
-"BARTOLOMEU! WHERE ARE YOU GOING???",
+"PETER! WHERE ARE YOU GOING???",
 "Hmm... He doesn't seem to hear me anymore. I better follow him. He seems to be running to the store.",
 "(A sudden storm is roaring)",
 "Strange. Where did that storm suddenly come from? I better leave this place quickly.",
@@ -291,5 +291,15 @@ string DLG_TEXT[293] = {
 "(A bell is ringing)",
 "Who is making such a racket? (Hint: raise your head now)",
 "(Bartolomeu gives you a sign with one's hand)",
-"Alright, I can join him now.", 
+"Alright, I can join him now.",
+"So much for #sproposer#. But perhaps I can rob the governor of #sDouwesen# myself. Of course, this would ruin my relations with Holland and may mean I can never set foot in #sDouwesen# again.",
+"I want to try it anyway.",
+"Forget it, I don't want to get in trouble with Holland.",
+"Quaffing: the subtle art of getting most of your rum all over the place instead of inside you.  Which is why he's on the floor and I'm on my feet.",
+"Now to get his uniform. But he's just a common soldier, whereas I need the uniform of an officer - a captain, perhaps. A tailor should be able to make the necessary changes.",
+"I won't be able to move that rock by myself. Looks like I'm stuck here...",
+"That looks like the leading part of the silver train.",
+"Wait until they are all in sight before attacking.",
+"The silver is ours!",
+"Now to get it back to the ship.",
 };

@@ -2,15 +2,14 @@ void CreateTurksCharacters(ref n)
 {
 	object chobj;
 	ref ch;
-
 	makeref(ch, chobj);
 
 	// governor
 	ch.old.name = "Dante";
 	ch.old.lastname = "Siciliano";
-	ch.name = TranslateString("","Dante");
-	ch.middlename = TranslateString("","Siciliano");
-	ch.lastname = TranslateString("","Shaw");
+	ch.name = TranslateString("", "Dante");
+	ch.middlename = TranslateString("", "Siciliano");
+	ch.lastname = TranslateString("", "Shaw");
 	ch.id		= "Dante Siciliano";
 	ch.model = "albermal";
 	ch.sex = "man";
@@ -44,8 +43,8 @@ void CreateTurksCharacters(ref n)
 // Lighthouse:
 	ch.old.name = "Robert";
 	ch.old.lastname = "LeNoir";
-	ch.name 	= TranslateString("","Robert");
-	ch.lastname = TranslateString("","LeNoir");
+	ch.name 	= TranslateString("", "Robert");
+	ch.lastname = TranslateString("", "LeNoir");
 	ch.id		= "Robert LeNoir";
 	ch.model	= "pirat3";
 	ch.headmodel = "h_pirat3";
@@ -85,7 +84,8 @@ void CreateTurksCharacters(ref n)
 	ch.perks.list.FastReload = true;
 	ch.perks.list.HullDamageUp = true;
 	ch.perks.list.CrewDamageUp = true;
-	ch.perks.list.BasicBattleState = true;
+	ch.perks.list.BasicDamageControl = true;
+	ch.perks.list.Rigging = true;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.ShipSpeedUp = true;
@@ -115,8 +115,8 @@ void CreateTurksCharacters(ref n)
 		//  Bill Barns -- killer
 	ch.old.name = "Bill";
 	ch.old.lastname = "Barns";
-	ch.name 	= TranslateString("","Bill");
-	ch.lastname = TranslateString("","Barns");
+	ch.name 	= TranslateString("", "Bill");
+	ch.lastname = TranslateString("", "Barns");
 	ch.id		= "Bill Barns";
 	ch.model	= "killer";
 	ch.sex = "man";
@@ -200,8 +200,8 @@ if (ENABLE_WEAPONSMOD)
 			//Turks Gunsmith
 	ch.old.name = "Lorenza";
 	ch.old.lastname = "Trevisano";
-	ch.name = TranslateString("","Lorenza");
-	ch.lastname = TranslateString("","Trevisano");
+	ch.name = TranslateString("", "Lorenza");
+	ch.lastname = TranslateString("", "Trevisano");
 	ch.id		= "Turks_gunsmith";
 	ch.model	= "33_Affrica"; // Estharos Change from blacksmith1 to this model
 	ch.sound_type = "worker";
@@ -211,7 +211,7 @@ if (ENABLE_WEAPONSMOD)
 	ch.location.locator = "goto1";
 	ch.Dialog.Filename = "Gunsmith_dialog.c";
 	ch.Dialog.Filename.Groupdialog = "Gunsmith_fetch.c";
-	ch.greeting = "Gr_Pirate";
+	ch.greeting = "Gr_Pirate_f";	// GR: was "Gr_Pirate" which does not exist, and anyway the character is female
 	ch.nation = PIRATE; // TIH was missing Nov7'06
 	ch.rank 	= 1;
 	ch.reputation = "None";
@@ -236,8 +236,8 @@ if (ENABLE_WEAPONSMOD)
 // Levis, Librarian:
 	ch.old.name = "Cornelius";
 	ch.old.lastname = "Fisherman";
-	ch.name = TranslateString("","Cornelius");
-	ch.lastname = TranslateString("","Fisherman");
+	ch.name = TranslateString("", "Cornelius");
+	ch.lastname = TranslateString("", "Fisherman");
 	ch.id		= "Librarian_Turks";
 	ch.model	= "9R_Purs";
 	ch.headmodel = "9R_Purs";
@@ -284,7 +284,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Carpenter";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Carpenter");
+	ch.name 	= TranslateString("", "Carpenter");
 	ch.lastname = "";
 	ch.id		= "Carpenter";
 	ch.model	= "bocman3";
@@ -327,7 +327,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Crewmember");
+	ch.name 	= TranslateString("", "Crewmember");
 	ch.lastname = "";
 	ch.id		= "Crew_member_01";
 	ch.model	= "sailor7";
@@ -370,7 +370,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Crewmember");
+	ch.name 	= TranslateString("", "Crewmember");
 	ch.lastname = "";
 	ch.id		= "Crew_member_02";
 	ch.model	= "sailor1";
@@ -413,7 +413,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Crewmember");
+	ch.name 	= TranslateString("", "Crewmember");
 	ch.lastname = "";
 	ch.id		= "Crew_member_03";
 	ch.model	= "sailor6";
@@ -457,7 +457,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Crewmember");
+	ch.name 	= TranslateString("", "Crewmember");
 	ch.lastname = "";
 	ch.id		= "Crew_member_04";
 	ch.model	= "bocman";
@@ -502,7 +502,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Crewmember");
+	ch.name 	= TranslateString("", "Crewmember");
 	ch.lastname = "";
 	ch.id		= "Crew_member_05";
 	ch.model	= "Black_corsair";
@@ -547,7 +547,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Crewmember");
+	ch.name 	= TranslateString("", "Crewmember");
 	ch.lastname = "";
 	ch.id		= "Crew_member_06";
 	ch.model	= "Chameleon";
@@ -592,7 +592,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Crewmember");
+	ch.name 	= TranslateString("", "Crewmember");
 	ch.lastname = "";
 	ch.id		= "Crew_member_07";
 	ch.model	= "50evl2in";
@@ -636,7 +636,7 @@ if (ENABLE_WEAPONSMOD)
 
 	ch.old.name = "Crewmember";
 	ch.old.lastname = "";
-	ch.name 	= TranslateString("","Crewmember");
+	ch.name 	= TranslateString("", "Crewmember");
 	ch.lastname = "";
 	ch.id		= "Crew_member_08";
 	ch.model	= "Bocman4";
@@ -682,8 +682,8 @@ if (ENABLE_WEAPONSMOD)
 // Town, citizens
     ch.old.name = "Justin";
     ch.old.lastname = "Boogard";
-    ch.name     = TranslateString("","Justin");
-    ch.lastname     = TranslateString("","Boogard");
+    ch.name     = TranslateString("", "Justin");
+    ch.lastname     = TranslateString("", "Boogard");
     ch.id        = "Justin Boogard";
     ch.model    = "bocman1";
     ch.sex = "man";
@@ -715,8 +715,8 @@ if (ENABLE_WEAPONSMOD)
 
     ch.old.name = "Jo";
     ch.old.lastname = "Peixe";
-    ch.name     = TranslateString("","Jo");
-    ch.lastname     = TranslateString("","Peixe");
+    ch.name     = TranslateString("", "Jo");
+    ch.lastname     = TranslateString("", "Peixe");
     ch.id        = "Jo Peixe";
     ch.model    = "bocman5";
     ch.sex = "man";
@@ -748,8 +748,8 @@ if (ENABLE_WEAPONSMOD)
 
     ch.old.name = "Francisco";
     ch.old.lastname = "Valderrama";
-    ch.name     = TranslateString("","Francisco");
-    ch.lastname     = TranslateString("","Valderrama");
+    ch.name     = TranslateString("", "Francisco");
+    ch.lastname     = TranslateString("", "Valderrama");
     ch.id        = "Francisco Valderrama";
     ch.model    = "corsair3";
     ch.sex = "man";
@@ -781,8 +781,8 @@ if (ENABLE_WEAPONSMOD)
 
     ch.old.name = "Christine";
     ch.old.lastname = "Hoppe";
-    ch.name     = TranslateString("","Christine");
-    ch.lastname     = TranslateString("","Hoppe");
+    ch.name     = TranslateString("", "Christine");
+    ch.lastname     = TranslateString("", "Hoppe");
     ch.id        = "Christine Hoppe";
     ch.model    = "towngirl2";
     ch.sex = "woman";
@@ -814,8 +814,8 @@ if (ENABLE_WEAPONSMOD)
 
 //JRH -->
 		// Admiral of the Coast 21
-	ch.name = TranslateString("","Admiral");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Admiral");
+	ch.lastname = "";
 	ch.id		= "CB21";
 	ch.model = "Sk3Pri";
 	ch.sex = "man";
@@ -852,8 +852,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 2
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB2";
 	ch.model = "Animist4A";
 	ch.sex = "man";
@@ -890,8 +890,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 3
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB3";
 	ch.model = "Animist4B";
 	ch.sex = "man";
@@ -928,8 +928,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 4
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB4";
 	ch.model = "Animist4C";
 	ch.sex = "man";
@@ -966,8 +966,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 5
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB5";
 	ch.model = "Animist4A";
 	ch.sex = "man";
@@ -1004,8 +1004,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 6
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB6";
 	ch.model = "Animist4B";
 	ch.sex = "man";
@@ -1042,8 +1042,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 7
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB7";
 	ch.model = "Animist4C";
 	ch.sex = "man";
@@ -1080,8 +1080,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 8
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB8";
 	ch.model = "Animist4A";
 	ch.sex = "man";
@@ -1118,8 +1118,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 9
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB9";
 	ch.model = "Animist4B";
 	ch.sex = "man";
@@ -1156,8 +1156,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 10
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB10";
 	ch.model = "Animist4C";
 	ch.sex = "man";
@@ -1194,8 +1194,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 			// Brother of the Coast 11
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB11";
 	ch.model = "Animist4A";
 	ch.sex = "man";
@@ -1232,8 +1232,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 				// Brother of the Coast 12
-	ch.name = TranslateString("","Coastbrother");
-	ch.lastname = TranslateString(""," ");
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
 	ch.id		= "CB12";
 	ch.model = "Animist4B";
 	ch.sex = "man";
@@ -1270,8 +1270,8 @@ if (ENABLE_WEAPONSMOD)
 	AddGameCharacter(n, ch);
 
 			// Leader of the Coast 1
-	ch.name = TranslateString("","Leading");
-	ch.lastname = TranslateString("","Coastbrother");
+	ch.name = TranslateString("", "Leading");
+	ch.lastname = TranslateString("", "Coastbrother");
 	ch.id		= "CB1";
 	ch.model = "monk4";
 	ch.sex = "man";
@@ -1280,8 +1280,10 @@ if (ENABLE_WEAPONSMOD)
 	ch.equip.blade = "blade13";
 	GiveItem2Character(ch, "pistol5");
 	ch.equip.blade = "pistol5";
-	TakenItems(ch, "gunpowder", 1 + rand(2));
-	TakenItems(ch, "pistolbullets", 1 + rand(2));
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
 	ch.location	= "Turks_church";
 	ch.location.group = "goto";
 	ch.location.locator = "monk12";

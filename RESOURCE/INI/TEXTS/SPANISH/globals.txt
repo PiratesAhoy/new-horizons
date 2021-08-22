@@ -1,0 +1,71 @@
+QUEST_MESSAGE1 {Has fracasado en la misión. ¡Danielle ha muerto! PARTIDA TERMINADA.}
+QUEST_MESSAGE2 {El plazo para entregar el envío ha expirado.}
+QUEST_MESSAGE3 {Ya eres demasiado viejo para resistir a la maldición del oro azteca...}
+QUEST_MESSAGE4 {¡Has encontrado un tesoro de plata!}
+QUEST_MESSAGE5 {¡Nigel Blythe está atacando la corbeta con el contrabando!}
+QUEST_MESSAGE6 {¡Nigel Blythe te ha abandonado!}
+QUEST_MESSAGE7 {¡Capitán, hemos encontrado a la Perla Negra!}
+QUEST_MESSAGE8 {¡Muy bien, has matado a tu maestro!}
+QUEST_MESSAGE9 {¡Ahora estás solo en este mundo cruel!}
+QUEST_MESSAGE10 {¡Le daremos una recompensa secreta}
+QUEST_MESSAGE11 {a un pirata con un corazón despiadado!}
+QUEST_MESSAGE12 {¡Lo siento, pero ya tienes demasiados oficiales! ¡Despide a alguno y vuelve a intentarlo!}
+  
+Address_Form_Spa {Señor}
+Address_Form_Fra {Monsieur}
+Address_Form_Eng {Sir}
+Address_Form_Por {Senhor}
+Address_Form_Hol {Mijnheer}
+  
+Swear_1 {¡Por los siete mares!}
+Swear_2 {¡Maldición!}
+Swear_3 {¡Oh, no!}
+Swear_4 {¡Diantre!}
+Swear_5 {¡Que me ahorquen!}
+Swear_6 {¡Voto a tal!}
+Swear_7 {¡Maldita sea mi estampa!}
+Swear_8 {¡¡¡Arrgh!!!}
+Swear_9 {¡Por Dios!}
+Swear_10 {¡Al diablo!}  
+  
+TimeGreeting {Buenos días}
+
+Rumour_1 {No ha pasado nada interesante últimamente. La vida sigue tranquilamente. ¡Me pregunto cuánto durará!}
+Rumour_2 {He oido que han encontrado algún tipo de cementerio aborigen dentro de la mina de #sisland_Oxbay#. Han encontrado un montón de huesos, loza, estacas afiladas y platos de arcilla... ¡pero nada de oro!}
+Rumour_3 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+Rumour_4 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+Rumour_5 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+Rumour_6 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+Rumour_7 {He oído que el Gobernador de Redmond metió a un mercader en la cárcel por pelearse en la taberna. Me contaron que ordenó su detención para poder confiscarle las mercancías.}
+
+Falaise De Fleur {Falaise De Fleur}
+Isla Muelle {Isla Muelle}
+Conceicao {ConceiçÝo}
+Conceição {ConceiçÝo}
+Douwesen {Douwesen}
+Redmond {Redmond}
+Oxbay {Oxbay}
+Greenford {Greenford}
+Grand Cayman{Grand Cayman}
+Santo Domingo{Santo Domingo}
+Port au Prince{Port au Prince}
+Pointe à Pitre{Pointe à Pitre}
+Pointe a Pitre{Pointe à Pitre}
+Havana{La Habana}
+Marigot{Marigot}
+Philipsburg{Philipsburg}
+
+OFFIC_TYPE_BOATSWAIN {contramaestre}
+OFFIC_TYPE_CANNONEER {condestable}
+OFFIC_TYPE_QMASTER {intendente}
+OFFIC_TYPE_NAVIGATOR {piloto}
+OFFIC_TYPE_FIRSTMATE {primer oficial}
+OFFIC_TYPE_CARPENTER {carpintero}
+OFFIC_TYPE_DOCTOR {cirujano}
+OFFIC_TYPE_ABORDAGE {cabo de abordaje}
+
+DOUBLE_QUOTE {"}
+
+newline {
+
+}

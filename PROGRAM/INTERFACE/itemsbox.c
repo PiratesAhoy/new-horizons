@@ -360,6 +360,30 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 						}
 						else whichInterface = "ItemsBox";
 					break;
+
+					case "BB_prison_officer":
+						if(boxName == "box13") 
+						{
+							whichInterface = "Tookdrunk";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+
+					case "BB_careen_holdS":
+						if(boxName == "box1") 
+						{
+							whichInterface = "GunpowderStorage_JRH";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+				
+					case "BB_careen_capmd_2":
+						if(boxName == "box5" || boxName == "box6" || boxName == "box7" || boxName == "box8") 
+						{
+							whichInterface = "Weaponslocker";
+						}
+						else whichInterface = "ItemsBox";
+					break;
 				}
 			//<-- JRH
 				
@@ -409,6 +433,13 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 				//empty
 				GameInterface.title = "titleGunpowderStorage";
 				PlaySound("AMBIENT\JAIL\door_003.wav");
+				isGunpowder = false;
+				isItemsBox = true;
+				break;
+
+			case "Tookdrunk":
+				GameInterface.title = "titleTookdrunk";
+				PlaySound("OBJECTS\SHIPCHARGE\sail_damage1.wav");
 				isGunpowder = false;
 				isItemsBox = true;
 				break;
@@ -474,7 +505,9 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 				|| Locations[FindLocation(pch.location)].id == "Kristiania_cathedral" || Locations[FindLocation(pch.location)].id == "wr_shop"
 				|| Locations[FindLocation(pch.location)].id == "church_choir" || Locations[FindLocation(pch.location)].id == "Legrands_attic"
 				|| Locations[FindLocation(pch.location)].id == "wr_farm_bedroom" || Locations[FindLocation(pch.location)].id == "Turks_tavern_bedroom"
-				|| Locations[FindLocation(pch.location)].id == "bb_Eden_office" || Locations[FindLocation(pch.location)].id == "Citadel_tower_bedroom")
+				|| Locations[FindLocation(pch.location)].id == "bb_Eden_office" || Locations[FindLocation(pch.location)].id == "Citadel_tower_bedroom"
+				|| Locations[FindLocation(pch.location)].id == "Mayan_village" || Locations[FindLocation(pch.location)].id == "BB_careen_capmd_2"
+				|| Locations[FindLocation(pch.location)].id == "cloister_exit")
 				{
 					//sounds generated in item_logic
 				}
@@ -857,7 +890,43 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 							GameInterface.FACEPICT.pic1.tex1 = 1;
 						}
 					break;
-				
+
+					case "BB_prison_officer":
+						if(boxName == "box13")
+						{
+							CreateImage("OtherPic","TOOK_IMAGE","TookImage",5,302,133,430);
+						}
+						else
+						{
+							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
+							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
+							GameInterface.FACEPICT.pic1.tex1 = 3;
+						}
+					break;
+
+					case "BB_careen_holdS":
+						if(boxName == "box1")
+						{
+							GameInterface.FACEPICT.pic1.str2 = "Gunpowder";
+							GameInterface.FACEPICT.pic1.img1 = "Gunpowder";
+							GameInterface.FACEPICT.pic1.tex1 = 1;
+						}
+					break;
+
+					case "BB_careen_capmd_2":
+						if(boxName == "box5" || boxName == "box6" || boxName == "box7" || boxName == "box8") 
+						{
+							GameInterface.FACEPICT.pic1.str2 = "Weaponslocker";
+							GameInterface.FACEPICT.pic1.img1 = "Enemy";
+							GameInterface.FACEPICT.pic1.tex1 = 2;
+						}
+						else
+						{
+							GameInterface.FACEPICT.pic1.str2 = "ItemsBox";
+							GameInterface.FACEPICT.pic1.img1 = "BoxImage";
+							GameInterface.FACEPICT.pic1.tex1 = 3;
+						}
+					break;
 				}
 				//<-- JRH
 			}
@@ -1028,6 +1097,7 @@ void FillScroll()
 
 		if( Items_FindItem(GetAttributeName(curItem),&arItem)>=0 )
 		{
+			if (GetAttribute(arItem, "name") == "itmname_building" && GetAttribute(arItem, "describe") == "itmdescr_building") continue; // PB: You're not supposed to loot these...
 // KK -->
 			if (CheckAttribute(arItem, "groupID") == true && arItem.groupID == MAP_ITEM_TYPE) continue;
 			iqty = sti(GetAttributeValue(curItem));
@@ -1121,6 +1191,8 @@ void FillScroll()
 
 		if( Items_FindItem(GetAttributeName(curItem),&arItem)>=0 )
 		{
+			if (GetAttribute(arItem, "name") == "itmname_building" && GetAttribute(arItem, "describe") == "itmdescr_building") continue; // PB: You're not supposed to loot these...
+			
 			if(bDeadExchange)
 			{
 				if(IsCharacterEquipByGroup(g_refItems,BLADE_ITEM_TYPE)) { RemoveCharacterEquip(g_refItems, BLADE_ITEM_TYPE); }
@@ -1188,9 +1260,12 @@ void IDoExit(int exitCode)
 {
 	int s; // NK for below for() statements
 
+	int cortes_disabled = CURSES_DISABLED - 2*MakeInt(CURSES_DISABLED/2);
+	int albatross_disabled = MakeInt(CURSES_DISABLED/2) - 2*MakeInt(CURSES_DISABLED/4);
+
 	ref pchar = GetMainCharacter();
 	// PB: Albatross Easter Egg -->
-	if(sti(GetAttribute(g_refItems, "items.albatross"))>0)
+	if(sti(GetAttribute(g_refItems, "items.albatross"))>0 && !albatross_disabled)
 	{
 		TakeNItems(pchar, "albatross", sti(g_refItems.items.albatross));
 		DeleteAttribute(g_refItems, "items.albatross");
@@ -1198,7 +1273,7 @@ void IDoExit(int exitCode)
 	// PB: Albatross Easter Egg <--
 
 	// PB: Cursed Coins -->
-	if(sti(GetAttribute(g_refItems, "items.cursedcoin"))>0 && GetCursedCoinCount()>0)
+	if(sti(GetAttribute(g_refItems, "items.cursedcoin"))>0 && GetCursedCoinCount()>0 && !cortes_disabled)
 	{
 		// You can give them to officers, companions and crew
 		if(bAllies(g_refItems))
@@ -1985,38 +2060,38 @@ void GiveItems(bool bMoreThanOneItem)
 						break;
 
 						case "def1":
-							if(CheckCharacterPerk(mchref, "ShipDefenceProfessional"))
+							if(CheckCharacterPerk(mchref, "ProfessionalDamageControl"))
 							{
-								DeleteAttribute(mchref,"perks.list.ShipDefenceProfessional");
+								DeleteAttribute(mchref,"perks.list.ProfessionalDamageControl");
 							}
 							else
 							{
-								if(CheckCharacterPerk(mchref, "AdvancedBattleState"))
+								if(CheckCharacterPerk(mchref, "AdvancedDamageControl"))
 								{
-									DeleteAttribute(mchref,"perks.list.AdvancedBattleState");
+									DeleteAttribute(mchref,"perks.list.AdvancedDamageControl");
 								}
 							}
 							else
 							{
-								DeleteAttribute(mchref,"perks.list.BasicBattleState");
+								DeleteAttribute(mchref,"perks.list.BasicDamageControl");
 							}
 							mchref.quest.drawing_kit = "none";
 						break;
 
 						case "def2":
-							if(CheckCharacterPerk(mchref, "ShipDefenceProfessional"))
+							if(CheckCharacterPerk(mchref, "ProfessionalDamageControl"))
 							{
-								DeleteAttribute(mchref,"perks.list.ShipDefenceProfessional");
+								DeleteAttribute(mchref,"perks.list.ProfessionalDamageControl");
 							}
 							else
 							{
-								DeleteAttribute(mchref,"perks.list.AdvancedBattleState");
+								DeleteAttribute(mchref,"perks.list.AdvancedDamageControl");
 							}
 							mchref.quest.drawing_kit = "none";
 						break;
 
 						case "def3":
-							DeleteAttribute(mchref,"perks.list.ShipDefenceProfessional");
+							DeleteAttribute(mchref,"perks.list.ProfessionalDamageControl");
 							mchref.quest.drawing_kit = "none";
 						break;
 					}
@@ -2062,6 +2137,18 @@ void GiveItems(bool bMoreThanOneItem)
 				if( iq1<=0 ) DeleteAttribute(g_refItems,"Items."+itm1);
 
 				LAi_QuestDelay("coin_too_large", 0.1);
+			}
+
+			if(itm1=="Pell_outfit")
+			{
+				if(CheckCharacterItem(CharacterFromID("Pell"),"Pell_outfit"))
+				{
+					PlaySound("PEOPLE\clothes2.wav");
+					SetModel(characterFromID("Pell"), "bb_Pell", "man", "man", 1.8, false);
+					g_refItems.Items.(itm1) = sti(g_refItems.Items.(itm1)) -1;
+
+					LAi_QuestDelay("pchar_yah", 0.1);
+				}
 			}
 	//<-- JRH
 
@@ -2994,19 +3081,19 @@ void TakeItems(bool bMoreThanOneItem)
 					learned_perk = 1;
 				}
 
-				if(!CheckCharacterPerk(mchref, "ShipDefenceProfessional"))
+				if(!CheckCharacterPerk(mchref, "ProfessionalDamageControl"))
 				{
-					if(CheckCharacterPerk(mchref, "AdvancedBattleState") && learned_perk == 0)
+					if(CheckCharacterPerk(mchref, "AdvancedDamageControl") && learned_perk == 0)
 					{
-						mchref.perks.list.ShipDefenceProfessional = true;
+						mchref.perks.list.ProfessionalDamageControl = true;
 						mchref.quest.drawing_kit = "def3";
 						learned_perk = 1;
 					}
 					else
 					{
-						if(CheckCharacterPerk(mchref, "BasicBattleState") && learned_perk == 0)
+						if(CheckCharacterPerk(mchref, "BasicDamageControl") && learned_perk == 0)
 						{
-							mchref.perks.list.AdvancedBattleState = true;
+							mchref.perks.list.AdvancedDamageControl = true;
 							mchref.quest.drawing_kit = "def2";
 							learned_perk = 1;
 						}
@@ -3014,7 +3101,7 @@ void TakeItems(bool bMoreThanOneItem)
 						{
 							if(learned_perk == 0)
 							{
-								mchref.perks.list.BasicBattleState = true;
+								mchref.perks.list.BasicDamageControl = true;
 								mchref.quest.drawing_kit = "def1";
 								learned_perk = 1;
 							}
@@ -3764,6 +3851,16 @@ void SetUpDownUsed()
 		}
 	}
 
+	if( IsQuestUsedItem(itmName1) )
+	{
+		if(itmName1=="Pell_outfit")
+		{
+			SetSelectable("ONEDOWN_BUTTON",true);
+			SetSelectable("ALLDOWN_BUTTON",true);
+			SetSelectable("SWAP_BUTTON",false);
+		}
+	}
+
      //JRH -->
 	//Not meant to move these separate
 	if(itmName1 == "book43" || itmName1 == "book44" || itmName1 == "book50" || itmName1 == "pistollog" 
@@ -3778,7 +3875,10 @@ void SetUpDownUsed()
 	|| itmName1 == "book71_15" || itmName1 == "book71_16" || itmName1 == "book71_17" || itmName1 == "book71_18"
 	|| itmName1 == "book71_19" || itmName1 == "book71_20" || itmName1 == "book71_21" || itmName1 == "book71_22"
 	|| itmName1 == "book71_23" || itmName1 == "book70_start" || itmName1 == "book71_9_start" || itmName1 == "bladebottle_CV1_sc"
-	|| itmName1 == "bladebottle_CB2")
+	|| itmName1 == "bladebottle_CB2" || itmName1=="incense" || itmName1 == "book72_package" || itmName1 == "book72_closed"
+	|| itmName1 == "book72_openL" || itmName1 == "book72_openR" || itmName1 == "book72_edenL" || itmName1 == "book72_edenR"
+	|| itmName1 == "book72_caesarL" || itmName1 == "book72_caesarR" || itmName1 == "book72_handsL" || itmName1 == "book72_handsR"	
+	|| itmName1 == "book72_richardsL" || itmName1 == "book72_richardsR")
 	{
 		SetSelectable("ONEDOWN_BUTTON",false);
 		SetSelectable("ALLDOWN_BUTTON",false);
@@ -3846,8 +3946,9 @@ void SetUpDownUsed()
 		SetSelectable("ONEDOWN_BUTTON",true);
 	}
 
-	//multi picture items, not meant to move these separate or Broomes ayahuasca
-	if(itmName2 == "book43" || itmName2 == "book44" || itmName2 == "book50" || itmName2=="ayahuasca")
+	//multi picture items, not meant to move these separate or Broomes ayahuasca + BB treasure items
+	if(itmName2 == "book43" || itmName2 == "book44" || itmName2 == "book50" || itmName2=="ayahuasca" || itmName2 == "gold_bars" || itmName2 == "silver_bars"
+	|| itmName2 == "gold_coins" || itmName2 == "valuable_weapons")
 	{
 		SetSelectable("ONEUP_BUTTON",false);
 		SetSelectable("ALLUP_BUTTON",false);
@@ -3952,7 +4053,7 @@ void SetUpDownUsed()
 	if(itmName1=="detective_kit1" || itmName1=="detective_kit2" || itmName1=="detective_kit3" || itmName1=="detective_kit4" || itmName1=="detective_kit5"
 	|| itmName1=="D_feather" || itmName1=="D_scissors" || itmName1=="D_compasses" || itmName1=="D_scalpel" || itmName1=="D_magnifying" || itmName1=="D_tweezers" || itmName1=="D_hairpin"
 	|| itmName1=="book55A" || itmName1=="book55B" || itmName1=="book55C" || itmName1=="book55D" || itmName1=="book56" || itmName1=="book57"
-	|| itmName1=="book58" || itmName1=="book59" || itmName1=="book60")
+	|| itmName1=="book58" || itmName1=="book59" || itmName1=="book60" || itmName1=="bladeA2" || itmName1=="bladeA4" || itmName1=="bladeA5" || itmName1=="bladeA11" || itmName1=="bladeA17")
 	{
 		SetSelectable("ONEDOWN_BUTTON",false);
 		SetSelectable("ALLDOWN_BUTTON",false);

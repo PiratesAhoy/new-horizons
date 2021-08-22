@@ -68,8 +68,8 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[3];
 			Link.l1.go = "node_2";
 			Link.l2 = DLG_TEXT[4];
-			Link.l2.go = "exit";
-			if(!CheckAttribute(NPChar, "quest.teodoro_started")) SetQuestHeader("Patric"); // NK
+			Link.l2.go = "node_24";			// GR: was "exit", now switch to trading instead
+//			if(!CheckAttribute(NPChar, "quest.teodoro_started")) SetQuestHeader("Patric"); // NK  // GR: moved to "node_8" so questbook only opens if you get to talking about Teodoro
 		break;
 
 		case "node_2":
@@ -87,7 +87,6 @@ void ProcessDialogEvent()
 			Link.l1.go = "node_4";
 			Link.l2 = DLG_TEXT[11];
 			Link.l2.go = "exit";
-			NextDiag.TempNode = "Second Time";
 		break;
 
 		case "node_4":
@@ -101,7 +100,8 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[17] + GetMyName(NPChar) + DLG_TEXT[18];
 			Link.l1.go = "node_6";
 			Link.l2 = DLG_TEXT[19];
-			Link.l2.go = "exit";
+			Link.l2.go = "node_24";			// GR: was "exit", now switch to trading instead
+			NextDiag.TempNode = "Second Time_Teodoro_Unknown";
 		break;
 
 		case "node_6":
@@ -117,13 +117,24 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[25];
 			Link.l1.go = "node_8";
 			Link.l2 = DLG_TEXT[26];
-			Link.l2.go = "exit";
+			Link.l2.go = "node_24";			// GR: was "exit", now switch to trading instead
 		break;
 
 		case "node_8":
+			if(!CheckAttribute(NPChar, "quest.teodoro_started"))
+			{
+				Preprocessor_AddQuestData("Patric", GetMyName(NPChar));
+				Preprocessor_AddQuestData("French", GetNationDescByType(GetTownNation("Falaise de Fleur")));
+				SetQuestHeader("Patric"); // NK
+				AddQuestRecord("Patric", 1); // NK
+				Preprocessor_Remove("French");
+				Preprocessor_Remove("Patric");
+				NPChar.quest.teodoro_started = true;
+			}
 			Dialog.Text = DLG_TEXT[27] + GetMyFullName(&Characters[GetCharacterIndex(DLG_TEXT[28])]) + DLG_TEXT[30];
 			Link.l1 = DLG_TEXT[31];
 			Link.l1.go = "node_11";
+			NextDiag.TempNode = "Second Time";
 		break;
 
 		case "node_11":
@@ -233,12 +244,24 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[78];
 			Link.l1.go = "exit";
 			NPChar.quest.teodoro = "1"; //NK enable this
+			Preprocessor_AddQuestData("French", GetNationDescByType(GetTownNation("Falaise de Fleur")));
+			Preprocessor_AddQuestData("Patric Cardone", GetMyFullName(NPChar));
 			AddQuestRecord("Patric", 3); // NK
+			Preprocessor_Remove("Patric Cardone");
+			Preprocessor_Remove("French");
 		break;
 
 		////////////////////////////////////////////////////////////////////
 		// второй разговор.
 		////////////////////////////////////////////////////////////////////
+
+		case "Second Time_Teodoro_Unknown":			// GR: alternative "Second_Time" before you've talked about Teodoro
+			Dialog.Text = DLG_TEXT[79] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) + DLG_TEXT[80];
+			Link.l1 = DLG_TEXT[17] + GetMyName(NPChar) + DLG_TEXT[18];
+			Link.l1.go = "node_6";
+			Link.l2 = DLG_TEXT[19];
+			Link.l2.go = "node_24";
+		break;
 
 		case "Second Time":
 			Dialog.Text = DLG_TEXT[79] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[80];
@@ -265,7 +288,9 @@ void ProcessDialogEvent()
 					link.l1.go = "exit";
 					characters[GetCharacterIndex("Raoul Calmes")].quest.visit = "1";
 					if (npchar.quest.teodoro != "5") NPChar.quest.teodoro = "6"; // KK
+					Preprocessor_AddQuestData("Patric", GetMyName(NPChar));
 					AddQuestRecord("Patric", 6); // NK
+					Preprocessor_Remove("Patric");
 				}
 			}
 		break;
@@ -275,6 +300,14 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[90];
 			Link.l1.go = "Items";
 			Link.l2 = DLG_TEXT[91];
+			Link.l2.go = "exit";
+		break;
+
+		case "node_24":
+			Dialog.Text = DLG_TEXT[120];
+			Link.l1 = DLG_TEXT[121];
+			Link.l1.go = "Items";
+			Link.l2 = DLG_TEXT[122];
 			Link.l2.go = "exit";
 		break;
 
@@ -295,11 +328,17 @@ void ProcessDialogEvent()
 		break;
 
 		case "Lucien2":
+			Preprocessor_AddQuestData("Patric", GetMyName(NPChar));
+			Preprocessor_AddQuestData("French", GetNationDescByType(GetTownNation("Falaise de Fleur")));
+			AddQuestRecord("Patric", 9); // NK
+			Preprocessor_Remove("French");
+			Preprocessor_Remove("Patric");
+
+			Preprocessor_Add("Lucien", GetMyName(CharacterFromID("Lucien Bescanceny")));
 			Dialog.text = DLG_TEXT[118];
 			Link.l1 = DLG_TEXT[119];
 			link.l1.go = "exit";
 			NPChar.quest.teodoro = "7"; // KK
-			AddQuestRecord("Patric", 9); // NK
 		break;
 
 		// выполнение квеста.
@@ -320,8 +359,11 @@ void ProcessDialogEvent()
 			NPChar.money.quest = "0";
 			NPChar.quest.Teodoro = "done";
 			NextDiag.TempNode = "Second Time";
-			AddQuestRecord("Patric", 11); // NK
+			Preprocessor_AddQuestData("Patric", GetMyName(NPChar));
+			if (PChar.sex == "woman") AddQuestRecord("Patric", 12);
+			else AddQuestRecord("Patric", 11); // NK
 			CloseQuestHeader("Patric"); // NK
+			Preprocessor_Remove("Patric");
 		break;		
 
 		case "TeodoroLie":
@@ -390,15 +432,17 @@ void ProcessDialogEvent()
 		case "Exit":
 			DialogExit();
 			NextDiag.CurrentNode =  NextDiag.TempNode;
-			if(NextDiag.TempNode == "First Time" && !CheckAttribute(NPChar, "quest.teodoro_started"))
-			{
-				AddQuestRecord("Patric", 1); // NK
-				NPChar.quest.teodoro_started = true;
-			}
+//			if(NextDiag.TempNode == "First Time" && !CheckAttribute(NPChar, "quest.teodoro_started"))	// GR: moved to "node_8" so that questbook only opens and
+//			{												// "quest.teodoro_started" is set after you've talked about Teodoro
+//				AddQuestRecord("Patric", 1); // NK
+//				NPChar.quest.teodoro_started = true;
+//			}
 			if(NextDiag.TempNode == "Second Time" && NPChar.quest.teodoro == "0")
 			{
+				Preprocessor_AddQuestData("Patric", GetMyName(NPChar));
 				AddQuestRecord("Patric", 2); // NK
 				CloseQuestHeader("Patric");
+				Preprocessor_Remove("Patric");
 			}
 		break;
 		

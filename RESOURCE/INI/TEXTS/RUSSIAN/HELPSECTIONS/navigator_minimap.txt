@@ -1,0 +1,22 @@
+minimap_title
+{
+Navigation Minimap
+}
+minimap_info
+{
+    Navigation minimap (pic.1) appears only at sea. It shows current ship and wind speed, round type that loaded in ships cannons and reloading state of cannons for each side. Also compass and wind direction and disposition of island and allied and hostile objects around player's ship.
+
+    Left top number on minimap is wind speed, right top number - current ship speed. These parameters are also represented graphically: blue inner sector on the left side of minmap is wind speed, and yellow sector on the right is ship speed.
+
+    Cannons reloading state is shown by four green (or red, if cannons are not loaded yet) sectors around the minimap. Top, bottom, left and right sectors accordingly represents loading state of bow, stern, larboard and starboard cannons accordingly. Small icon in bottom right corner of the minimap shows current cannon round type. Possible round types could be seen on pic.2 and are knippels, bombs, cannonballs and shrapnel accordingly from left to right. When there is not enough rounds of sekected type to load all cannons, that icon starts to blink.
+
+    Outer circle of the minimap is a compass. It turns around the minimap, since player's ship location on the minimap is fixed - player's ship bow is always looks up, and stern - to the bottom.
+
+    Wind direction is represented with white arrow that goes through the center of the minimap.
+
+    Firing zones of bow, stern and board cannons are shown with white transparent sectors.
+
+    On the minimap player can see an island that his ship is sailing around of. Also all other ships that are inside of viewing dstance, will appear on the minimap. Ally ships will is shown with green, enemies - with red and neutral objects are gray(pic.3)
+
+    You can change minimap scale with minimap zoom keys.
+}

@@ -28,14 +28,14 @@ void ProcessDialogEvent()
 			Dialog.ani = "dialog_stay2";
 			Dialog.cam = "1";
 						
-			if (npchar.quest.kill_ogario == "0")
+			if (GetAttribute(NPChar, "quest.kill_ogarrio") == "0")
 			{
 				Dialog.snd = "voice\WIBY\WIBY001";
 				dialog.text = DLG_TEXT[0] + GetMyName(Pchar) + DLG_TEXT[1];
 				link.l1 = DLG_TEXT[2];
 				link.l1.go = "talk_in_tavern";
 			}
-			if (npchar.quest.kill_ogario == "Almost_complete")
+			if (GetAttribute(NPChar, "quest.kill_ogarrio") == "Almost_complete")
 			{
 				Dialog.snd = "voice\WIBY\WIBY002";
 				dialog.text = DLG_TEXT[3];
@@ -56,7 +56,9 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 7);
 			}
 			else { AddPartyExp(pchar, 700); }
+			AddQuestRecord("Kill_Ogario", 4);
 			CloseQuestHeader("Kill_Ogario");
+			AddDialogExitQuest("remove_Wilfred_Bythesea");
 		break;
 
 		case "talk_in_tavern":

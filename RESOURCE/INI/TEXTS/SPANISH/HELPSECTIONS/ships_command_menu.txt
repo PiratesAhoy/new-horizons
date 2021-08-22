@@ -1,0 +1,25 @@
+ships_command_title
+{
+Menu del icono de comando de envio
+}
+
+ships_command_info
+{
+????El menu del icono de comando de envio (Imagen 1) esta situado en la esquina inferior izquierda de la pantalla. Basicamente, muestra iconos de jugador y sus naves companeras (si las hay). El primer jugador debe seleccionar una nave que quiera dar una orden. Use las teclas izquierda / derecha para hacer eso. El barco actualmente seleccionado se resaltara con color amarillo. Luego presione la tecla Activar comando para confirmar la seleccion. Un numero en la esquina superior izquierda del icono muestra la clase de envio (la primera clase es la mas poderosa). Sobre el icono de la nave podria haber alguna informacion grafica sobre el estado de esta nave (depende de lo que tenga el jugador de Spyglass). Esta informacion se representa con tres franjas: blanco, azul y rojo: el blanco muestra la condicion de las velas, el azul muestra el numero de la tripulacion y el rojo muestra la condicion del casco del barco.
+
+????Despues de que selecciono el barco para el comando, vera una lista de los comandos posibles que podrian darse a ese barco (Pic.2). Todos los comandos posibles se enumeran en la imagen 3 de izquierda a derecha en consecuencia:
+??- "Amarre en tierra" (solo para el barco del jugador): se puede usar solo cuando el barco del jugador esta cerca de alguna orilla donde el jugador puede aterrizar. Transfiere jugador de barco a tierra;
+??- "Tablero" (solo para el barco del jugador): si hay un barco enemigo cerca del barco del jugador, este comando iniciara la accion de embarque con ese barco;
+??- "Navegar para colocar / enviar" (solo para el barco del jugador): si es posible, el barco del jugador llegara instantaneamente a algun otro barco o navegara a algun lugar. Este comando ahorra mucho tiempo real, especialmente si no hay ningun enemigo alrededor;
+??- "Tropas terrestres" (solo para el barco del jugador): despues de que el jugador destruyo la mayoria de los canones del fuerte con un disparo de canon, puede aterrizar tropas en ese fuerte (su barco deberia estar lo suficientemente cerca del fuerte). Cuando el jugador lo seleccione, iniciara una pelea cuerpo a cuerpo con Fort Garrison (muy similar al embarque) y si gana, el Fort sera considerado capturado;
+??- "Mapa del mundo" (solo para el barco del jugador): si no hay enemigos alrededor, el jugador va a la pantalla del Mapa del mundo;
+??- "Intercambiar mercancias / tripulacion" (solo para el barco del jugador): con este comando, el jugador puede intercambiar tripulacion de barco y mercancias con un barco de cualquiera de sus companeros (los barcos deben estar cerca uno del otro como para el embarque);
+??- "Atacar enemigo" (solo la nave del Acompanante): despues de que ese jugador debe seleccionar un objetivo, quiere atacar. Luego, la nave companera elegida atacara al objetivo seleccionado que podria ser un fuerte o una nave;
+??- "Defender" (solo la nave del companero): la nave del companero protegera y defendera el objetivo seleccionado. El objetivo puede ser un aliado o un fuerte;
+??- "Navega lejos" (solo la nave del Acompanante): es una orden para dejar el campo de batalla y zarpar. Despues de recibir esta orden, la nave de la companera intentara navegar lo mas lejos que pueda de las naves o fortalezas enemigas, pero no saldra de la distancia de vista de la jugadora;
+??- "Lay to drift" (solo nave del Acompanante): la nave del Acompanante derribara las velas y detendra cualquier movimiento o actividad. Tripulacion de esta nave considerada como rendida.
+??- "Recargar canones" (solo para el barco del jugador): cambia el tipo de rondas de canones en el barco del jugador. Se puede seleccionar uno de los siguientes tipos de ronda (foto 4): balas de canon, metralla, knippels y bombas. Un icono de tipo de numero sobre la ronda muestra cuantas rondas de este tipo tiene el jugador a bordo.
+??- "Sails conrtol" (solo para el barco del jugador): configura las velas (foto 5): establece las velas completas, golpea las velas y establece las velas de batalla. Las velas de batalla proporcionan una velocidad de navegacion media con buena maniobrabilidad. Velas llenas - velocidad maxima de navegacion pero peor maniobrabilidad.
+
+????Algunos comandos requieren una seleccion de destino tambien. Por ejemplo, el comando "Navegar hacia" requiere seleccionar un barco, que podria ser hostil, o incluso una costa o ciudad. Cuando el jugador selecciona el objetivo para navegar, el minimapa se centra en el objetivo seleccionado, de modo que el jugador puede ver donde estara su nave despues de confirmar el comando.
+}

@@ -1,0 +1,5 @@
+title=Rescatar a mi tripulación
+text.t1=Según mis oficiales, la tripulación está retenida en un campamento de esclavos fuera de la ciudad.
+text.t2=El guerrero indio dice que conoce el camino que lleva al campamento de esclavos.
+text.t3=Dos Perros ha accedido a mostrarnos el camino al campamento si lo llevamos de vuelta a casa.
+text.t4=Hemos liberado a la tripulación y estamos de vuelta en #sHavana#.

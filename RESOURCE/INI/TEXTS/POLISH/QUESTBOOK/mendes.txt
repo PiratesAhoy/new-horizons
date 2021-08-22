@@ -1,0 +1,5 @@
+title=Side Quest - Escort Vigila Mendes' ship.
+text.t1=Vigila Mendes has hired me to protect his ship on the voyage to #sFalaise de Fleur# on #sisland_Falaise de Fleur# and back to #sIsla Muelle# on #sisland_Isla Muelle#.
+text.t2=We came to #sFalaise de Fleur#, and Vigila sold his cargo.
+text.t3=On our return to #sIsla Muelle#, Vigila gave me my pay. He encouraged me to sail on his ship as a navigator, because his old navigator, Zaid Murro, had retired.
+text.t4=Most unfortunate! Vigila Mendes was killed. Not a good day.

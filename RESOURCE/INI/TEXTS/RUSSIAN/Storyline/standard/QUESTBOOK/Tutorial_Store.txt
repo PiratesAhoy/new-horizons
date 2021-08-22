@@ -1,0 +1,3 @@
+title=Tutorial - Sell cargo to the local trader
+text.t1=I should find a storekeeper and sell goods (#sgoods#) from my cargo hold. That will bring me money for repairs and crew hiring.
+text.t2=Done!
