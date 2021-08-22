@@ -92,7 +92,7 @@ string DLG_TEXT[181] = {
 "The owner of the shipyard.",
 "I'm talking about the local trader.",
 "No one. Never mind.",
-"I heard that he works very close together with the governor from Havana. But that makes sense, I guess. Some people say he is afraid of an invasion from Port Royale.",
+"I heard that he works very closely together with the governor from #sHavana#. But that makes sense, I guess. Some people say he is afraid of an invasion from #sRedmond#.",
 "I see. I have another question for you.",
 "Thank you, bye-bye.",
 "Sometimes he's even more drunk than some of his guests. That's really annoying! But most of the time he's a good guy.",

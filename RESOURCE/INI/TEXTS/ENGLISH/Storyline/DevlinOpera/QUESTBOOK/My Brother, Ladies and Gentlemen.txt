@@ -1,0 +1,4 @@
+title=My Brother, Ladies and Gentlemen
+text.t1=A fisherman on #sisland_Quebradas Costillas# said to ask in the tavern about Blaze. He referred to him as 'The Merchant'. 
+text.t2=My dear brother has been smuggling rum and now he stole a whole shipment from the pirates on #sisland_Quebradas Costillas#. Typical.
+text.t3=A young and rather strange academic told me that Blaze's smuggling boat went southwards. There are several smaller islands there, I'll have to check them one by one.

@@ -10,3 +10,5 @@ text.t8=Hemos avistado un lugre español bajo bandera de tregua. España ha cambia
 text.t9=Tras un duro combate, hemos derrotado al 'Natividad'. Lady Barbara Wellesley ha insistido en ayudar a atender a los heridos, pero no ha podido salvar al guardiamarina Longley. Mi deber ahora es llevar a su señoría sana y salva a #sGreenford#.
 text.t10=El contralmirante Sir Rodney Leighton se ha reunido con nosotros para escoltar a Lady Barbara Wellesley al desembarcar. Debería presentarme en el Cuartel General Naval.
 text.t11=He recibido el mando de un navío más grande, el 'Sutherland'. Mi tripulación del '#sold_ship#' también será transferida al 'Sutherland'.
+text.t12=El contraalmirante Sir Rodney Leighton vino a recibirnos y escoltó a Lady Barbara Wellesley a su marcha del barco. Mi esposa probablemente esté esperando oír noticias mías, así que debería ir a casa.
+text.t13=Tristísimas noticias me esperaban al llegar a casa. Mi esposa, Maria, murió al dar a luz. Sin embargo, el niño sobrevivió, ¡tengo un hijo! La señora Mason cuidará de él mientras yo estoy fuera. Ahora tengo que presentarme en el Cuartel General Naval, aquí en #sGreenford#.

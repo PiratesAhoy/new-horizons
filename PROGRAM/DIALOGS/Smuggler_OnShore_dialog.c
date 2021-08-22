@@ -219,7 +219,20 @@ void ProcessDialogEvent()
 			//Levis coastguard will always try to get you -->
 
 			//Coastguard will always try to get you.
-			ChangeSmugglerLiking(PChar, -10); //Add liking - not much, no survivors but they know something went wrong
+			int dislike = 20 - (2 * GetPartySkill(PChar, SKILL_SNEAK));
+			if (CheckAttribute(PChar,"quest.smuggling_guild.times_payed")) dislike = dislike + 15;
+			if(DEBUG_SMUGGLING>2)
+			{
+				trace("Current smuggler liking = " + CheckSmugglerLiking(PChar));
+				trace("GetPartySkill(PChar, SKILL_SNEAK) = " + GetPartySkill(PChar, SKILL_SNEAK));
+				if (CheckCharacterPerk(PChar,"AdvanceSmuggling")) trace("Advanced Smuggling in use");
+				else trace("Advanced Smuggling NOT in use");
+			}
+			if (CheckCharacterPerk(PChar,"AdvanceSmuggling")) dislike = dislike - 10;
+			if (dislike < 5) dislike = 5;
+			if(DEBUG_SMUGGLING>2) trace("Smuggler liking reduced by " + dislike);
+			ChangeSmugglerLiking(PChar, -1 * dislike); //Add liking - how much depends on your general sneakiness and special smuggling talent
+			if(DEBUG_SMUGGLING>2) trace("New smuggler liking = " + CheckSmugglerLiking(PChar));
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();

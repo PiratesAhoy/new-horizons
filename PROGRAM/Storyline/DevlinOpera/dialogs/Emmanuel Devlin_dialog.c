@@ -96,7 +96,8 @@ void ProcessDialogEvent()
 			GiveItem2Character(pchar, "blade13+1");
 			EquipCharacterByItem(pchar, "blade13+1");
 			GiveItem2Character(Pchar, "pistol5+2");
-			EquipCharacterByItem(pchar, "pistol5+2");		
+			EquipCharacterByItem(pchar, "pistol5+2");
+			GiveItem2Character(PChar, "first_part_map");		
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			AddDialogExitQuest("Look_for_my_sister");			

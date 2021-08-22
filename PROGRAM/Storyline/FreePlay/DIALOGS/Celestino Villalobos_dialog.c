@@ -51,7 +51,7 @@ void ProcessDialogEvent()
 				break;
 
 				case SPAIN:
-					Preprocessor_Add("friend", "mi amigo");
+					Preprocessor_Add("friend", "amigo mio");
 				break;
 
 				case PORTUGAL:

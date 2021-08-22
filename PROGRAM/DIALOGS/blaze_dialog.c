@@ -1340,5 +1340,44 @@ void ProcessDialogEvent()
 		Link.l1.go = "exit";
 	break;
 // Hitman Easter Egg
+
+// FreePlay engineer trophy
+	case "library_for_ever":
+		PlaySound("VOICE\ENGLISH\zombie4.wav");
+		Dialog.Text = DLG_TEXT[369];
+		Link.l1 = DLG_TEXT[370];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("library_for_ever1");
+	break;
+// FreePlay engineer trophy
+
+// Agent trophy
+	case "Agent_hide_in_hold":
+		Dialog.Text = DLG_TEXT[371];
+		Link.l1 = DLG_TEXT[372];
+		AddDialogExitQuest("AgentQuest_hide_in_hold");
+		Link.l1.go = "exit";
+	break;
+
+	case "Agent_dispose_of_body":
+		Dialog.Text = DLG_TEXT[373];
+		Link.l1 = DLG_TEXT[374];
+		AddDialogExitQuest("AgentQuest_hide_body");
+		Link.l1.go = "exit";
+	break;
+
+	case "Agent_body_hidden":
+		Dialog.Text = DLG_TEXT[375];
+		Link.l1 = "...";
+//		AddDialogExitQuest("AgentQuest_back_to_hiding");
+		Link.l1.go = "exit";
+	break;
+
+	case "Agent_early_for_smuggler":
+		Dialog.Text = DLG_TEXT[376];
+		Link.l1 = DLG_TEXT[377];
+		Link.l1.go = "exit";
+	break;
+// Agent trophy
 	}
 }

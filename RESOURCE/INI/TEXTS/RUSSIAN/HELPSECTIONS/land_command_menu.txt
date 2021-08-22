@@ -1,11 +1,11 @@
 land_commands_title
 {
-Party Condition
+—осто€ние партии
 }
 
 land_commands_info
 {
-    Player character and his party condition could be seen at left bottom corner of the screen while walking on land (Pic.1). Player sees faces of his character and his officers, and two stripes above them. Blue stripe represents loading state of characters pistol (if he has one), and red is character's health.
-    Reloading of the pistol and replenishment of health take time.
-    Also here there is a command menu, much the same as Ship Command Icon Menu. Menu can be opened with Command key. From that menu you can use Fast Travel command to some locations (pic.2). Those locations are listed on pic.3 These are (from left to right means top-down) store, shipyard, tavern, governor residence and port where player's ship is. Using this menu is absolutely the same as using Ship Command Icon menu.
+    —осто€ние партии и команды во врем€ хождени€ по суше (рис.1) отображаютс€ в левом нижнем углу экрана. »значально показываютс€ портреты вас и ваших офицеров, а так же состо€ние зар€дки огнестрельного оружи€ - полоска синего цвета над портретом персонажа и состо€ние здоровь€ - полоска красного цвета также над портретом персонажа.
+    –ост здоровь€ и зар€да оружи€ происходит со временем.
+     роме состо€ни€ партии, на этом месте может быть показано меню команд наподобие меню управлени€ корабл€ми. ћеню активизируетс€ по нажатию кнопки/клавиши активизации командного меню. »з показанного меню доступна команда "быстрого" перехода в определенные локации (рис.2). —писок этих локаций показан на рис.3 ¬ него вход€т (слева на право сверху вниз) магазин,верфь,таверна,резиденци€ губернатора и причал с вашим кораблем. –абота с данным меню производитс€ так же как и с меню управлени€ корабл€ми.
 }

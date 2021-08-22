@@ -1,4 +1,4 @@
-title=Woodes Rogers second reward
-text.t1=There is another pistol for me to find. I must also search for the Kitchen key - maybe I should start looking in the Residence.
-text.t2=I have got a key - now it's only the Kitchen that is missing. I have to explore the Residence and the Bedroom more closely.
-text.t3=I have found another pistol, marked 'CSAR'. What's so fantastic with these guns? I'll ask Rogers when I return to the Residence.
+title=Вудс Роджерс вторая награда
+text.t1=Мне нужно найти еще один пистолет. Но сначада мне необходимо найти ключ, возможно он находится в этой комнате.
+text.t2=У меня есть ключ - теперь нужна только кухня, которая отсутствует. Исследую-ка я Резиденцию и Спальню более тщательнее.
+text.t3=Я нашел другой пистолет, с пометкой 'CSAR'. И что мне делать с этим оружием? Пожалуй спрошу Роджерса, когда вернусь в резиденцию.

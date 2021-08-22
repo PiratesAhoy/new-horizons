@@ -5,6 +5,7 @@ void ProcessDialogEvent()
 	aref Link, Diag;
 	string NPC_Meeting, TempInfoCharacterID_1, TempInfoCharacterID_2;
 	int DonationSize;
+	int period = GetCurrentPeriod ();//PW period added for history of colony
 	
 	DeleteAttribute(&Dialog,"Links");
 
@@ -169,6 +170,11 @@ void ProcessDialogEvent()
 					Link.l2 = DLG_TEXT[91];
 					Link.l2.go = "localtrader";
 				}
+				if (CheckAttribute(PChar, "quest.poker.allowed"))
+				{
+					Link.l3 = DLG_TEXT[168];//PW poker tournament trimmings
+					Link.l3.go = "longoustines";
+				}
 				if(Rand(1)==0)
 				{
 					Link.l4 = DLG_TEXT[157];
@@ -214,12 +220,26 @@ void ProcessDialogEvent()
 		break;
 
 		case "shipwright":
-				d.Text = DLG_TEXT[99];
+		//----->PW info about shipwright based on period
+				if (period > 3 ) d.Text = DLG_TEXT[176];
+				else
+				{
+					d.Text = DLG_TEXT[99]; 
+				}
+		//PW <-------	
 				Link.l1 = DLG_TEXT[100];
 				Link.l1.go = "new question";
 				Link.l2 = DLG_TEXT[101];
 				Link.l2.go = "exit";
 		break;
+		
+		case "longoustines":				//PW poker tournament trimmings
+				d.Text = DLG_TEXT[169];
+				Link.l1 = DLG_TEXT[170];
+				Link.l1.go = "new question";
+				Link.l2 = DLG_TEXT[104];
+				Link.l2.go = "exit";
+		break;		
 
 		case "localtrader":				
 				d.Text = DLG_TEXT[102];
@@ -240,13 +260,28 @@ void ProcessDialogEvent()
 			Link.l2.go = "town_shipyard";
 			Link.l3 = DLG_TEXT[112];
 			Link.l3.go = "town_store";
-			// RobC/Alan_Smithee Blacksmiths -->
-			if (ENABLE_WEAPONSMOD)
+			if (CheckAttribute(PChar, "quest.poker.allowed"))
 			{
+				Link.l4 = DLG_TEXT[171];//PW poker tournament trimmings
+				Link.l4.go = "town_pokerhall";	
+			}
+			else
+			{
+				// RobC/Alan_Smithee Blacksmiths -->
+				if (ENABLE_WEAPONSMOD)
+				{
 				Link.l4 = DLG_TEXT[162];
 				Link.l4.go = "town_smithy";
+				
+				// RobC/Alan_Smithee Blacksmiths <--
+				}
+				else
+				{
+				Link.l4 = DLG_TEXT[171];//PW poker tournament trimmings
+				Link.l4.go = "town_pokerhall";	
+				}
 			}
-			// RobC/Alan_Smithee Blacksmiths <--
+			
 		break;
 
 		case "town_smithy":
@@ -277,6 +312,18 @@ void ProcessDialogEvent()
             DeleteAttribute(&locations[FindLocation("Turks_Port")], "reload.l4.goto_disable"); // JRH: Unlock Fast Travel
 		break;
 
+		
+		case "town_pokerhall"://PW poker tournament trimmings
+			d.Text = DLG_TEXT[172];
+			Link.l1 = DLG_TEXT[122];
+			Link.l1.go = "town_shipyard";
+			Link.l2 = DLG_TEXT[123];
+			Link.l2.go = "town_tavern";
+			Link.l3 = DLG_TEXT[124];
+			Link.l3.go = "exit";
+         //PW no fast travel to poker hall, you haven't got direct directions anyway!
+		break;
+		
 		case "town_shipyard":
 			d.Text = DLG_TEXT[117];
 			Link.l1 = DLG_TEXT[118];
@@ -319,7 +366,18 @@ void ProcessDialogEvent()
 		break;
 
 		case "Turks":
-			d.Text = DLG_TEXT[134] + DLG_TEXT[168]; // NK
+		//----->PW info about history based on period
+			
+			if (period > 3 ) d.Text = DLG_TEXT[173];
+			else
+			{
+				if (period > 1 ) d.Text = DLG_TEXT[174];
+				else
+				{
+					d.Text = DLG_TEXT[175]; 
+				}
+			}
+		//PW <-------		
 			Link.l1 = pcharrepphrase(DLG_TEXT[135], DLG_TEXT[136]);
 			Link.l1.go = "new question";
 			link.l2 = pcharrepphrase(DLG_TEXT[137], DLG_TEXT[138]);

@@ -119,6 +119,14 @@
 #define FRT_ACADEMY		0
 #define FRN_ACADEMY		"go_academy"
 
+#define FRP_CDC			28
+#define FRT_CDC			0
+#define FRN_CDC			"go_cdc"
+
+#define FRP_FWIC		29
+#define FRT_FWIC		0
+#define FRN_FWIC		"go_fwic"
+
 #define FRP_PORT		2
 #define FRT_PORT		1
 #define FRN_PORT		"go_port"
@@ -1046,6 +1054,11 @@ void initFastReloadTable()
 	curTable.l5.tex = FRT_FORT;
 	curTable.l5.note = FRN_FORT;
 	curTable.l5.location = "PoPrince_fakefort1";
+	// French West India Company
+	curTable.l6.pic = FRP_FWIC;		//GR
+	curTable.l6.tex = FRT_FWIC;
+	curTable.l6.note = FRN_FWIC;
+	curTable.l6.location = "French_WIC_Office";
 // <-- KK
 
 // KK -->
@@ -1285,6 +1298,11 @@ void initFastReloadTable()
 	curTable.l10.tex = FRT_HQ;
 	curTable.l10.note = FRN_HQ;
 	curTable.l10.location = "Admiral_Office";
+	// Casa de Contratación
+	curTable.l11.pic = FRP_CDC;		//GR
+	curTable.l11.tex = FRT_CDC;
+	curTable.l11.note = FRN_CDC;
+	curTable.l11.location = "CdC_Office";
 
 	makearef(curTable,objFastReloadTable.table.Ship);
 	// ship deck

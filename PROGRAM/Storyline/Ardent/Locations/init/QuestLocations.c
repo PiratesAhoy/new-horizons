@@ -712,7 +712,7 @@ void LocationInitQuestLocations(ref n)
 
 	//Sound
 	locations[n].type = "residence";
-	locations[n].fastreload = "Port au Prince";
+	locations[n].fastreload = "Redmond";
 	//Models
 	//Always
 	Locations[n].models.always.locators = "ResB_l";

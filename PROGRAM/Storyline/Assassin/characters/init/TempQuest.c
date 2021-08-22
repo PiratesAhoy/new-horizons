@@ -1558,6 +1558,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Ship.EmblemedSails.nationFileName = "sail_whole_black_plain.tga";
 // <-- KK
 	ch.Ship.Stopped = true;
+	ch.nosurrender = 2;
 	ch.perks.list.BasicDefence = true;
 	ch.perks.list.AdvancedDefence = true;
 	ch.perks.list.SwordplayProfessional = true;

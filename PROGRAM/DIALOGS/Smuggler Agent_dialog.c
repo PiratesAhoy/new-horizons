@@ -16,13 +16,18 @@ void ProcessDialogEvent()
 	makearef(Diag, NPChar.Dialog);
 	
 	string PatrolState;
-	ref SmugglingIsland
+	ref SmugglingIsland;
 	int n;
 	n = GetCharacterCurrentIsland(Pchar);
 	if(n < 0) return "none";
 	SmugglingIsland = GetIslandByIndex(n);
 	
 	int topay;
+
+	float topay_inflation_rate = 1.1;
+	float inflation;
+	if (CheckAttribute(PChar,"quest.smuggling_guild.times_payed")) inflation = pow(topay_inflation_rate, sti(PChar.quest.smuggling_guild.times_payed));
+	else inflation = 1.0;
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -71,7 +76,7 @@ void ProcessDialogEvent()
 			else
 			{
 				//Added by levis to repay for your sins
-				topay = makeint(pow2((25-CheckSmugglerLiking(pchar)),3)*5);
+				topay = makeint(pow2((25-CheckSmugglerLiking(pchar)),3)*5*inflation);
 				pchar.quest.smuggling_guild.pay_redeem = topay;
 				d.Text = DLG_TEXT[26] + topay + DLG_TEXT[27];
 				if (sti(PChar.money) >= topay)
@@ -159,7 +164,8 @@ void ProcessDialogEvent()
 			{
 				Dialog.snd = "voice\SMAG\SMAG001";
 				d.Text = DLG_TEXT[0];
-				Link.l1 = PCharPhrase(DLG_TEXT[1] + GetMyFullName(PChar) + DLG_TEXT[2], DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4] + GetMyShipNameShow(PChar) + DLG_TEXT[5]);
+				if (GetCharacterShipType(PChar) == SHIP_NOTUSED) Link.l1 = DLG_TEXT[1] + GetMyFullName(PChar) + DLG_TEXT[2];
+				else Link.l1 = PCharPhrase(DLG_TEXT[1] + GetMyFullName(PChar) + DLG_TEXT[2], DLG_TEXT[3] + GetMyFullName(PChar) + DLG_TEXT[4] + GetMyShipNameShow(PChar) + DLG_TEXT[5]);
 				Link.l1.go = "meeting";
 				NPC_Meeting = "1"; 
 			}
@@ -209,6 +215,14 @@ void ProcessDialogEvent()
 					Link.l4.go = "Report Thomas";
 				}
 				//Levis: Thomas <--
+
+				// GR: Agent trophy quest --->
+				if (CheckQuestAttribute("agentquest", "find_smuggler"))
+				{
+					link.l1 = DLG_TEXT[82] + FindTownName(PChar.quest.agentquest.original_town) + DLG_TEXT[83];
+					link.l1.go = "Agent_quest_passage";
+				}
+				// GR: Agent trophy quest <---
 				Link.l5 = DLG_TEXT[8];
 				Link.l5.go = "Exit";
 			}
@@ -304,6 +318,13 @@ void ProcessDialogEvent()
 				Link.l4.go = "Report Thomas";
 			}
 			//Levis: Thomas <--
+			// GR: Agent trophy quest --->
+			if (CheckQuestAttribute("agentquest", "find_smuggler"))
+			{
+				link.l1 = DLG_TEXT[82] + FindTownName(PChar.quest.agentquest.original_town) + DLG_TEXT[83];
+				link.l1.go = "Agent_quest_passage";
+			}
+			// GR: Agent trophy quest <---
 			Link.l5 = DLG_TEXT[11];
 			Link.l5.go = "Exit";
 		break;
@@ -377,7 +398,7 @@ void ProcessDialogEvent()
 				else
 				{
 					//Added by levis to repay for your sins
-					topay = makeint(pow2((25-CheckSmugglerLiking(pchar)),3)*5);
+					topay = makeint(pow2((25-CheckSmugglerLiking(pchar)),3)*5*inflation);
 					pchar.quest.smuggling_guild.pay_redeem = topay;
 					d.Text = DLG_TEXT[26] + topay + DLG_TEXT[27];
 					if (sti(PChar.money) >= topay)
@@ -416,5 +437,95 @@ void ProcessDialogEvent()
 			Link.l1.go = "Smuggling prepare exit";
 		break;
 		// <<--- TALISMAN end of add dialog
+
+		// GR: Agent trophy quest --->
+		case "Agent_quest_passage":
+			if(CheckSmugglerLiking(PChar) >= 25)
+			{
+				d.Text = DLG_TEXT[84];
+				Link.l1 = DLG_TEXT[85];
+				Link.l1.go = "Agent_quest_passage2";
+			}
+			else
+			{
+				topay = makeint(pow2((25-CheckSmugglerLiking(pchar)),3)*5*inflation);
+				pchar.quest.smuggling_guild.pay_redeem = topay;
+				d.Text = DLG_TEXT[26] + topay + DLG_TEXT[27];
+				if (sti(PChar.money) >= topay)
+				{
+					Link.l1 = DLG_TEXT[29];
+					Link.l1.go = "Pay";
+				}
+				Link.l2 = DLG_TEXT[28];
+				Link.l2.go = "Exit";
+			}
+		break;
+
+		case "Agent_quest_passage2":
+			d.Text = DLG_TEXT[86];
+			Link.l1 = DLG_TEXT[87];
+			Link.l1.go = "Agent_quest_passage3";
+		break;
+
+		case "Agent_quest_passage3":
+			switch(PChar.quest.agentquest.port2)
+			{
+				case "QC_port": PChar.quest.agentquest.smuggler_beach = "QC_Shore1"; break;
+				case "Muelle_port": PChar.quest.agentquest.smuggler_beach = "Muelle_shore"; break;
+				case "REDMOND_PORT": PChar.quest.agentquest.smuggler_beach = "Redmond_shore_02"; break;
+				case "PoPrince_Port": PChar.quest.agentquest.smuggler_beach = "Hispaniola_shore_02"; break;
+				case "Douwesen_port": PChar.quest.agentquest.smuggler_beach = "Douwesen_shore_02"; break;
+				case "Conceicao_port": PChar.quest.agentquest.smuggler_beach = "Conceicao_shore_01"; break;
+				case "Alice_Port": PChar.quest.agentquest.smuggler_beach = "Eleuthera_shore"; break;
+			}
+			d.Text = DLG_TEXT[88] + TranslateString("", Locations[FindLocation(PChar.quest.agentquest.smuggler_beach)].name) + DLG_TEXT[89];
+			Link.l1 = DLG_TEXT[90];
+			Link.l1.go = "Agent_quest_fare";
+		break;
+
+		case "Agent_quest_fare":
+			string dislandid = PChar.quest.agentquest.original_island;
+			string cislandid = GetIslandIDFromTown(GetCurrentTownID());
+			float distancedestination = GetDistance2D(stf(worldMap.islands.(dislandid).position.x), stf(worldMap.islands.(dislandid).position.z), stf(worldMap.islands.(cislandid).position.x), stf(worldMap.islands.(cislandid).position.z));
+			int fare = 10000 + makeint(distancedestination * (200-CheckSmugglerLiking(PChar)) * ((GetDifficulty()+4)/5.0) * 0.05);
+			PChar.quest.agentquest.smuggler_distance = distancedestination;
+			PChar.quest.agentquest.smuggler_fare = fare;
+			d.Text = DLG_TEXT[91] + fare + DLG_TEXT[92];
+			if (PChar.money >= fare)
+			{
+				Link.l1 = DLG_TEXT[93];
+				Link.l1.go = "Exit_Agent_quest_fare_paid";
+			}
+			else
+			{
+				Link.l1 = DLG_TEXT[94];
+				Link.l1.go = "Agent_quest_fare_unpaid";
+			}
+		break;
+
+		case "Agent_quest_fare_unpaid":
+			d.Text = DLG_TEXT[95];
+			Link.l1 = DLG_TEXT[96];
+			Link.l1.go = "Exit_Agent_quest_fare_unpaid";
+		break;
+
+		case "Exit_Agent_quest_fare_paid":
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, -1 * sti(PChar.quest.agentquest.smuggler_fare));
+			PChar.quest.agentquest.smuggler_fare = 0;
+			AddDialogExitQuest("AgentQuest_Met_Smuggler_Agent");
+			Diag.CurrentNode = Diag.TempNode;
+			NPChar.quest.meeting = NPC_Meeting;
+			DialogExit();
+		break;
+
+		case "Exit_Agent_quest_fare_unpaid":
+			PChar.quest.agentquest.smuggler_fare = sti(PChar.quest.agentquest.smuggler_fare) * 2;
+			AddDialogExitQuest("AgentQuest_Met_Smuggler_Agent");
+			Diag.CurrentNode = Diag.TempNode;
+			NPChar.quest.meeting = NPC_Meeting;
+			DialogExit();
+		break;
+		// GR: Agent trophy quest <---
 	}
 }

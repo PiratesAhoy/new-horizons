@@ -193,6 +193,12 @@ void InitMusic()
 	tmpref.music_house.f2.name = "MUSIC\Jungle.ogg";
 	tmpref.music_house.f3.name = "MUSIC\Enplavanie.ogg";
 
+	//=============================| Santiago Story Teller |=============================// Levis
+	
+	tmpref.storyteller_sad.f1.name = "MUSIC\bensound-tomorrow.ogg";
+	tmpref.storyteller_fun.f1.name = "MUSIC\bensound-smile.ogg";
+
+
 	//============ SHOP, TAVERN, SHIPYARD ============
 	tmpref.music_shop.f1.name = "MUSIC\Taverna.ogg";
 	tmpref.music_shop.f2.name = "MUSIC\Taverna2.ogg";								// Pillat: Port Royale
@@ -207,6 +213,9 @@ void InitMusic()
 	// DeathDaisy: copies of the regular tavern music, so you can add your own
 	tmpref.music_tavern_personal.f1.name = "MUSIC\PersonalNation\personal_tavern1.ogg";
 	tmpref.music_tavern_personal.f2.name = "MUSIC\PersonalNation\personal_tavern2.ogg";	
+	
+	//============ CASINO ============
+	tmpref.music_casino.f1.name = "MUSIC\bensound-jazzcomedy.ogg";
 
 	//============ CHURCH ============================
 	tmpref.music_church.f1.name = "MUSIC\Church_Theme.ogg";

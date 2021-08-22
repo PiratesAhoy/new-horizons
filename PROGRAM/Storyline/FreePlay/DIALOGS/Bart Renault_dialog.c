@@ -68,7 +68,7 @@ void ProcessDialogEvent()
 				Nationality = GetNationDescByType(sti(PChar.nation));
 			}
 			NPChar.quest.money = sti(PChar.money) - 1;
-			Preprocessor_Add("country", Nationality);
+			Preprocessor_Add("country", XI_ConvertString(Nationality));
 			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false));
 			Preprocessor_Add("money", NPChar.quest.money);
 			dialog.text = DLG_TEXT[7];

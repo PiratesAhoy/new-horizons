@@ -69,6 +69,7 @@ void QuestComplete(string sQuestName)
 		case "StartAdventure":
 			DisableTownCapture("Redmond", true);
 			DisableTownCapture("Santiago", true);
+			DisableTownCapture("Port au Prince", true);
 			Locations[FindLocation("Quest_Santiago_Bedroom")].vcskip = true;
 			if (PChar.sex == "man")
 			{
@@ -2283,6 +2284,7 @@ void QuestComplete(string sQuestName)
 			Preprocessor_Remove("pronoun");
 			Locations[FindLocation("Santiago_port")].reload.l2.disable = 0;
 			Locations[FindLocation("Cuba_shore_02")].reload.l2.disable = 0;
+			Locations[FindLocation("Cuba_shore_05")].reload.l2.disable = 0;
 			Characters[romanceidx].dialog.CurrentNode = "no_escape";
 			PChar.quest.ardent_kidnap.voyage_stage = 0;
 			PChar.quest.voyage_stage1.win_condition.l1 = "Timer";
@@ -2331,6 +2333,7 @@ void QuestComplete(string sQuestName)
 			Preprocessor_Remove("name");
 			Locations[FindLocation("Santiago_port")].reload.l2.disable = 0;
 			Locations[FindLocation("Cuba_shore_02")].reload.l2.disable = 0;
+			Locations[FindLocation("Cuba_shore_05")].reload.l2.disable = 0;
 		break;
 
 		case "governors_revenge":	// If you're stupid enough to go back to townhall without a ransom demand or other news, governor avenges his daughter / son.
@@ -2896,7 +2899,9 @@ void QuestComplete(string sQuestName)
 			Characters[villainidx].dialog.CurrentNode = "CourtingLetter_not_yet";
 			Preprocessor_AddQuestData("villain", GetMySimpleName(villain));
 			Preprocessor_AddQuestData("romance", GetMySimpleName(romance));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(villain)));
 			AddQuestRecord("Kidnap", 23);
+			Preprocessor_Remove("pronoun");
 			Preprocessor_Remove("romance");
 			Preprocessor_Remove("villain");
 			PChar.quest.signet_ring_known = "true";
@@ -3197,14 +3202,15 @@ void QuestComplete(string sQuestName)
 		case "bow_escape_out_of_bedroom":
 			ChangeCharacterAddressGroup(romance, "Santiago_town_01", "goto", "goto10");
 			PChar.quest.romance_model = romance.model;
-			SetModelfromArray(romance, GetModelIndex("Animistse"));
+			if (GetAttribute(romance, "sex") == "man") SetModelfromArray(romance, GetModelIndex("AnimistEdmundo"));
+			else SetModelfromArray(romance, GetModelIndex("AnimistLucia"));
 			DoQuestReloadToLocation("Santiago_town_01", "goto", "goto22", "bow_escape_out_to_town");
 		break;
 
 		case "bow_escape_out_to_town":
 			Characters[romanceidx].dialog.CurrentNode = "bow_rescue_outside_residence";
 			LAi_SetActorType(romance);
-			LAi_ActorDialog(romance,PChar,"bow_escape_now_to_port",5.0,5.0);
+			LAi_ActorDialog(romance,PChar,"",5.0,5.0);	// Exits to "bow_escape_now_to_port" or "bow_escape_now_to_shore" depending on ship location
 		break;
 
 		case "bow_escape_now_to_port":
@@ -3322,6 +3328,22 @@ void QuestComplete(string sQuestName)
 //			DeleteQuestAttribute("romance_model");
 		break;
 
+		case "bow_escape_now_to_shore":
+			LAi_SetActorType(romance);
+			LAi_ActorFollowEverywhere(romance, "", 10.0);
+
+			Pchar.quest.kidnap_what_next.win_condition.l1 = "locator";
+			Pchar.quest.kidnap_what_next.win_condition.l1.location = "Cuba_shore_05";
+			Pchar.quest.kidnap_what_next.win_condition.l1.locator_group = "reload";
+			Pchar.quest.kidnap_what_next.win_condition.l1.locator = "boat";
+			Pchar.quest.kidnap_what_next.win_condition = "kidnap_what_next";
+			Locations[FindLocation("Cuba_shore_05")].reload.l2.disable = 1;
+
+			PChar.quest.kidnap_hostage_dead.win_condition.l1 = "NPC_Death";
+			PChar.quest.kidnap_hostage_dead.win_condition.l1.character = romance.id;
+			PChar.quest.kidnap_hostage_dead.win_condition = "hostage_dead";
+		break;
+
 		case "abduction_move_to_prison":
 			LAi_SetActorType(romance);
 			ChangeCharacterAddressGroup(romance, "Quest_Cellar_Prison", "goto", "goto24");
@@ -3364,13 +3386,12 @@ void QuestComplete(string sQuestName)
 			RestoreDialog(ch);
 			LAi_SetCitizenType(ch);
 			Preprocessor_AddQuestData("romance", GetMySimpleName(romance));
-			Preprocessor_AddQuestData("romance1", GetMyName(romance));
-			if (PChar.sex == "man") Preprocessor_AddQuestData("pronoun", "she");
-			else Preprocessor_AddQuestData("pronoun", "he");
+			Preprocessor_AddQuestData("romance2", GetMyName(romance));
+			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(romance)));
 			SetQuestHeader("Abduction");
 			AddQuestRecord("Abduction", 1);
 			Preprocessor_Remove("pronoun");
-			Preprocessor_Remove("romance1");
+			Preprocessor_Remove("romance2");
 			Preprocessor_Remove("romance");
 		break;
 
@@ -4808,8 +4829,9 @@ void QuestComplete(string sQuestName)
 			characters[romanceidx].talkpoints = 0;
 			characters[romanceidx].marpoints = 1;
 			characters[romanceidx].pcounter = 0;
-			if (PChar.sex == "man") characters[romanceidx].middlename = TranslateString("","Ardent");
-			else PChar.middlename = TranslateString("","de la Vega");
+// Advice from Homo Eructus: married women do not adopt their husbands' surnames
+//			if (PChar.sex == "man") characters[romanceidx].middlename = TranslateString("","Ardent");
+//			else PChar.middlename = TranslateString("","de la Vega");
 			PChar.married = MR_MARRIED;
 			PChar.married.id = characters[romanceidx].id;
 
@@ -5386,7 +5408,6 @@ void QuestComplete(string sQuestName)
 			characters[romanceidx].Dialog.Filename = "romance_dialog.c";
 			Characters[romanceidx].dialog.CurrentNode = "convoy_how_take_convoy";
 			LAi_ActorDialog(romance,PChar,"",5.0,5.0); // Exits to "convoy_arrive_port_plan1" or "convoy_arrive_port"
-//			LAi_ActorDialog(romance,PChar,"convoy_arrive_port",5.0,5.0);
 		break;
 
 		case "convoy_arrive_port_plan1":
@@ -5416,9 +5437,9 @@ void QuestComplete(string sQuestName)
 		case "convoy_arrive_port":
 			EndQuestMovie();
 			LAi_SetOfficerType(romance);
-//			ChangeCharacterAddressGroup(romance, "Willemstad_port", "goto", "goto13");
 			PChar.quest.romance_model = romance.model;
-			SetModelFromID(romance, "Animistse");
+			if (GetAttribute(romance, "sex") == "man") SetModelFromID(romance, "AnimistEdmundo"));
+			else SetModelFromID(romance, "AnimistLucia");
 			PChar.location.from_sea = "Willemstad_port";
 			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "PChar");
 			if (PChar.sex == "man") GiveModel2Player("Ardent_S", true);
@@ -5428,7 +5449,6 @@ void QuestComplete(string sQuestName)
 
 		case "convoy_arrive_port2":
 			if(PChar.model == "Ardent_SF") logit(TranslateString("","This uniform is uncomfortable, being made for a man, but I'd better wear it whenever I need to talk to the governor."));
-//			LAi_SetOfficerType(romance);
 			ChangeCharacterAddressGroup(CharacterFromID("Dutch_sergeant"), "Willemstad_townhall", "goto", "goto2");
 			characters[GetCharacterIndex("Dutch_sergeant")].Dialog.Filename = "guard_dialog.c";
 			LAi_SetGuardianType(characterfromID("Dutch_sergeant"));
@@ -6463,7 +6483,7 @@ void QuestComplete(string sQuestName)
 				case "Muelle_port":
 					PChar.quest.mona_attack.pirate_locator = "goto9";
 					PChar.quest.mona_attack.tavern = "Muelle_Tavern";
-					PChar.quest.mona_attack.tavern_seat1_group = "candles";
+					PChar.quest.mona_attack.tavern_seat1_group = "sit2";
 					PChar.quest.mona_attack.tavern_seat1_locator = "sit3";
 					PChar.quest.mona_attack.tavern_seat2_group = "sit";
 					PChar.quest.mona_attack.tavern_seat2_locator = "sit7";
@@ -9398,6 +9418,7 @@ void QuestComplete(string sQuestName)
 		case "finale_port_royale_evacuation_setup":
 			DisableTownCapture("Redmond", false);
 			DisableTownCapture("Santiago", false);
+			DisableTownCapture("Port au Prince", false);
 			StoreDialog(CharacterFromID("John Clifford Brin"));
 			characters[GetCharacterIndex("John Clifford Brin")].Dialog.Filename = "quest_John Clifford Brin_dialog.c";
 			Characters[GetCharacterIndex("John Clifford Brin")].dialog.CurrentNode = "finale_here_to_evacuate";
@@ -11344,18 +11365,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_warden_reunion":	// Triggered by prison sequence if warden is alive, and PChar.quest.imperial_escort.status is either "envoy taken" or "ship_missing"
-			LAi_SetActorType(characterFromID("Warden"));
-			LAi_ActorGoToLocator(characterfromID("Warden"), "reload", "reload12", "imperial_escort_warden_reunion2", 30.0);
+			if (CheckAttribute(CharacterfromID("Warden"), "stuntime")) DeleteAttribute(CharacterfromID("Warden"), "stuntime");
+			LAi_SetActorType(CharacterFromID("Warden"));
+			LAi_ActorGoToLocator(CharacterfromID("Warden"), "reload", "reload12", "imperial_escort_warden_reunion2", 30.0);
 		break;
 
 		case "imperial_escort_warden_reunion2":
-			LAi_ActorTurnToCharacter(characterFromID("Warden"), (Pchar));
-			if (!CheckAttribute(characterfromID("Warden"), "stuntime"))
-			{
-				characters[GetCharacterIndex("Warden")].Dialog.Filename = "Warden_dialog.c";
-				Characters[GetCharacterIndex("Warden")].dialog.CurrentNode = "not_again";
-				LAi_ActorDialogNow(characterFromID("Warden"),PChar,"imperial_escort_warden_leaves",1.0);
-			}
+			LAi_ActorTurnToCharacter(CharacterFromID("Warden"), (Pchar));
+			Characters[GetCharacterIndex("Warden")].Dialog.Filename = "Warden_dialog.c";
+			Characters[GetCharacterIndex("Warden")].dialog.CurrentNode = "not_again";
+			LAi_ActorDialogNow(CharacterFromID("Warden"),PChar,"imperial_escort_warden_leaves",1.0);
 		break;
 
 		case "imperial_escort_warden_leaves":
@@ -11549,8 +11568,10 @@ void QuestComplete(string sQuestName)
 
 		case "imperial_escort_goto_beach":
 			NPChar = CharacterFromID(PChar.quest.rescuer);
+			if (NPChar.location != PChar.location) PlaceCharacter(NPChar, "goto");	// Just in case rescuer got lost along the way
 			LAi_SetImmortal(NPChar, false);
 			LAi_SetFightMode(PChar, false);
+			LAi_SetActorType(PChar);
 			LAi_type_actor_Reset(PChar);
 			LAi_ActorWaitDialog(PChar, NPChar);
 			LAi_SetActorType(NPChar);

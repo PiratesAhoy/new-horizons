@@ -1,7 +1,7 @@
-title=Meet Midshipman Norrington
-text.t1=Met Midshipman Norrington. He really does dislike pirates!!
-text.t2=Norrington is still on #sisland_Oxbay#, but he is putting his time to good use.
-text.t3=Norrington is forming a militia to help with the invasion.
-text.t4=Norrington is now a Captain - he still hates pirates - but we are off to #sisland_Turks# to try to stop a French attack.
-text.t5=Norrington is returning home. He seems to like me in a weird sort of way. He left me a Tartane, but I need a bigger ship.
-text.t6=Norrington, the Governor and Cutler Beckett wanted me to sail against the French. I didn't want to do that, so now I'm on my own.
+title=Знакомство с мичманом Норрингтоном
+text.t1=Я встретил мичмана Норрингтона. Он действительно не любит пиратов!!
+text.t2=Норрингтон все еще находится на острове #sisland_Oxbay#, но он проводит время с пользой.
+text.t3=Норрингтон формирует милицию, чтобы помочь с вторжением.
+text.t4=Норрингтон теперь капитан - он по-прежнему ненавидит пиратов, - но мы плывем к острову #sisland_Turks# , чтобы попытаться остановить Французское нападение.
+text.t5=Норрингтон возвращается домой. У нас, кажется, сплетены судьбы. Он оставил мне Тартану, но мне нужен большой корабль.
+text.t6=Норрингтон, Губернатор и Катлер Беккет хотят, чтобы я выступил против французов. Я не согласился и теперь я свободный капитан.

@@ -8,7 +8,7 @@ string DLG_TEXT[12] = {
 " governor will be installed here.",
 "I'll control this town.",
 "I changed my mind...",
-"Then town will belong to ",
+"Then this town will belong to the ",
 "Do you really want to leave town for uncivilized pirates?",
 "Right.",
 

@@ -49,7 +49,7 @@ string DLG_TEXT[57] = {
 "All right.",
 "Then we'll be forced to kill you.",
 "Try it!",
-"The warden's dead, so you belong to me. Now come along and show me to the Animists' lair!",
+"The warden's dead, so you belong to me. Now come along and show me to the Satanists' lair!",
 "Hah, head to the small island south of #sisland_Isla Muelle#. There my companions will destroy you!", // <--PW
 "Okay, whatever... Just come with me.",
 "That's so nice. And why have I been granted that honor?", // Cat --> 

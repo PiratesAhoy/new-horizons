@@ -48,13 +48,17 @@ void ProcessDialogEvent()
 		case "nigel_fight_with_smugglers":
 			dialogexit();
 			AddDialogExitQuest("nigel_fight_with_smugglers");
-			npchar.dialog.currnetnode = "empty";
+//			npchar.dialog.currnetnode = "empty";
+			Diag.CurrentNode = "empty";
+			Diag.TempNode = "empty";
 		break;
 		
 		case "we_and_nigel_fight_with_smugglers":
 			dialogexit();
 			AddDialogExitQuest("we_and_nigel_fight_with_smugglers");
-			npchar.dialog.currnetnode = "empty";
+//			npchar.dialog.currnetnode = "empty";
+			Diag.CurrentNode = "empty";
+			Diag.TempNode = "empty";
 		break;
 		
 		case "we_and_nigel_fight":

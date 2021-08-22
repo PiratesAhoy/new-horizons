@@ -26,8 +26,8 @@ void ProcessDialogEvent()
 		break;
 
 		case SPAIN:
-			Father = "sacerdote";
-			Preprocessor_Add("allez", "Vayan");
+			Father = "padre";
+			Preprocessor_Add("allez", "Deprisa");
 		break;
 
 		case PORTUGAL:
@@ -119,7 +119,8 @@ void ProcessDialogEvent()
 			break;
 
 		case "plan1":
-			dialog.text = DLG_TEXT[8];
+			if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) dialog.text = DLG_TEXT[15];
+			else dialog.text = DLG_TEXT[8];
 			link.l1 = DLG_TEXT[9];
 			link.l1.go = "plan2";
 			break;

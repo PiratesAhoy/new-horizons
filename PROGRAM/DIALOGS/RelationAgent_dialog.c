@@ -84,40 +84,43 @@ void ProcessDialogEvent()
 				d.Text = DLG_TEXT[10];
 				if(GetRMRelation(PChar, ENGLAND) < REL_AMNESTY) // RM
 				{
-					Link.l1 = DLG_TEXT[11];
+					Link.l1 = XI_ConvertString(GetNationNameByType(ENGLAND)) + ".";
 					Link.l1.go = "England"; // NK bugfix 04-09-17 was England
 
 				}
 				if(GetRMRelation(PChar, SPAIN) < REL_AMNESTY) // RM
 				{
-					Link.l2 = DLG_TEXT[12];
+					Link.l2 = XI_ConvertString(GetNationNameByType(SPAIN)) + ".";
 					Link.l2.go = "Spain";
 				}
 				if(GetRMRelation(PChar, PORTUGAL) < REL_AMNESTY) // RM
 				{
-					Link.l3 = DLG_TEXT[13];
+					Link.l3 = XI_ConvertString(GetNationNameByType(PORTUGAL)) + ".";
 					Link.l3.go = "Portugal";
 				}
 				if(GetRMRelation(PChar, HOLLAND) < REL_AMNESTY) // RM
 				{
-					Link.l4 = DLG_TEXT[14];
+					Link.l4 = XI_ConvertString(GetNationNameByType(HOLLAND)) + ".";
 					Link.l4.go = "Holland";
 				}
 				if(GetRMRelation(PChar, FRANCE) < REL_AMNESTY) // RM
 				{
-					Link.l5 = DLG_TEXT[15];
+					Link.l5 = XI_ConvertString(GetNationNameByType(FRANCE)) + ".";
 					Link.l5.go = "France";
 				}
-				if (CheckGuestNation(GUEST1_NATION, AMERICA))
+				if (CheckGuestNation(GUEST1_NATION, AMERICA) || CheckGuestNation(GUEST1_NATION, SWEDEN))
 				{
-					if(GetRMRelation(PChar, AMERICA) < REL_AMNESTY) // RM
+					if(SWEDEN_ALLOWED || GetCurrentPeriod() >= PERIOD_REVOLUTIONS) // Before "Revolutions", GUEST1_NATION may be Sweden.  "Revolutions" or "Napoleonic", it's America
 					{
-						Link.l5 = DLG_TEXT[15];
-						Link.l5.go = "America";
+						if(GetRMRelation(PChar, GUEST1_NATION) < REL_AMNESTY) // RM
+						{
+							Link.l6 = XI_ConvertString(GetNationNameByType(GUEST1_NATION)) + ".";
+							Link.l6.go = "Guest1_Nation";
+						}
 					}
 				}
-				Link.l6 = DLG_TEXT[16];
-				Link.l6.go = "exit";
+				Link.l7 = DLG_TEXT[16];
+				Link.l7.go = "exit";
 			}
 		break;
 
@@ -157,7 +160,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "England": // NK bugfix 04-09-17 was England
-			iNation = GetNationTypeByID(Dialog.CurrentNode);
+			iNation = ENGLAND;
 			sNation = iNation;
 			Pchar.quest.Relations.nation = iNation;
 			Pchar.quest.Relations.sum = RMAmnestyCost(PChar, iNation) * 1.5;
@@ -177,7 +180,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Spain":
-			iNation = GetNationTypeByID(Dialog.CurrentNode);
+			iNation = SPAIN;
 			sNation = iNation;
 			Pchar.quest.Relations.nation = iNation;
 			Pchar.quest.Relations.sum = RMAmnestyCost(PChar, iNation) * 1.5;
@@ -197,7 +200,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "France":
-			iNation = GetNationTypeByID(Dialog.CurrentNode);
+			iNation = FRANCE;
 			sNation = iNation;
 			Pchar.quest.Relations.nation = iNation;
 			Pchar.quest.Relations.sum = RMAmnestyCost(PChar, iNation) * 1.5;
@@ -217,7 +220,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Portugal":
-			iNation = GetNationTypeByID(Dialog.CurrentNode);
+			iNation = PORTUGAL;
 			sNation = iNation;
 			Pchar.quest.Relations.nation = iNation;
 			Pchar.quest.Relations.sum = RMAmnestyCost(PChar, iNation) * 1.5;
@@ -237,7 +240,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Holland":
-			iNation = GetNationTypeByID(Dialog.CurrentNode);
+			iNation = HOLLAND;
 			sNation = iNation;
 			Pchar.quest.Relations.nation = iNation;
 			Pchar.quest.Relations.sum = RMAmnestyCost(PChar, iNation) * 1.5;
@@ -256,8 +259,8 @@ void ProcessDialogEvent()
 			Link.l2.go = "exit";
 		break;
 
-		case "America":
-			iNation = GetNationTypeByID(Dialog.CurrentNode);
+		case "Guest1_Nation":
+			iNation = GUEST1_NATION;
 			sNation = iNation;
 			Pchar.quest.Relations.nation = iNation;
 			Pchar.quest.Relations.sum = RMAmnestyCost(PChar, iNation) * 1.5;

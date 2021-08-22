@@ -1,4 +1,4 @@
-string DLG_TEXT[369] = {
+string DLG_TEXT[378] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -49,7 +49,7 @@ string DLG_TEXT[369] = {
 "Lucas's kidnappers demanded the ransom to be brought to this tavern, but they don't seem to be here themselves.\nAha, those two at the bar seem to be waiting for someone...",
 "No need to waste time. They're probably the ones I need. (Show them the sign.)",
 "Maybe I should eavesdrop on their conversation a bit first? (Listen to the conversation.)",
-"Luck smiles on me today. ",
+"Luck smiles on me today. ",	//50
 "Pepin Bertillon",
 "'s ship is docked, so its captain should be somewhere around. The only thing left to do is to find him and put a few holes in his chest.\nBut first I've got to know for sure it's him I'm killing - the locals are a violent bunch, and a mistake could cause me a lot of trouble.",
 "...",
@@ -99,7 +99,7 @@ string DLG_TEXT[369] = {
 "Hey, wait...",
 "Looks like we can go to #sisland_Khael Roa# now!",
 "I'm not sure it'll be so easy.",
-"Maybe we should go ahead and search the temple while he's reading those squiggles.",
+"Maybe we should go ahead and search the temple while he's reading those squiggles.",	//100
 "Not without some idea of where we're going! The devil himself could get lost in that maze!",
 "Have it your way, but I'm going for a walk. Oh! I already see something! Keep in mind I found it first!",
 "What?",
@@ -149,7 +149,7 @@ string DLG_TEXT[369] = {
 "Yes. Fortune does favor the foolish.",
 "Easy, now! I've had a rough time of it. When I came to my senses, I staggered into #sDouwesen# and managed to get a small ship. Not long after, I ended up here. You can well imagine how surprised I was to see my old ship in #sIsla Muelle# harbor. She was still being repaired after that storm.",
 "Incredible! Fortune favors the foolish, but even you aren't fool enough to be THAT lucky!",
-"Well, in that case...I made it all up. Yes! Just a tall tale to entertain you. At any rate, here I am.",
+"Well, in that case...I made it all up. Yes! Just a tall tale to entertain you. At any rate, here I am.",	//150
 "And here I am. And now we have the idol. We should sail together to #sisland_Oxbay# and talk to Aurentius about translating that legend.",
 "Oh, I didn't dare to dream you'd say that! Sailing together - it sounds so... sweet!",
 ", dear, do shut up!",
@@ -199,7 +199,7 @@ string DLG_TEXT[369] = {
 "Maybe. But you're still working for a man who wants me dead!",
 "Yes, I was, ",
 ". I've recently...retired. But ",
-"Robert Christopher Silehard",
+"Robert Christopher Silehard",		//200
 " doesn't know that yet.",
 "What, didn't he pay you enough?",
 "Money's not the issue. Not this time. I just decided I didn't want to work for a man like him anymore.",
@@ -249,7 +249,7 @@ string DLG_TEXT[369] = {
 "Snorri: And what if he just doesn't give a devil's spit about his damn son?! What if instead of gold, a galleon full of bloodthirsty Spaniards comes here?!",
 "...",
 "Billy: Enough already! Have you ever seen a father who'd abandon his son in a situation like this? Don't worry, the admiral will pay the ransom. He doesn't really have a choice.",
-"I've heard enough. These are the ones that I need. (Show them the sign)",
+"I've heard enough. These are the ones that I need. (Show them the sign)",	//250
 "Now to free Padre Domingues!",
 "The cells are off to the right. Let's go.", 
 "(I see a small mound of stones)",
@@ -299,7 +299,7 @@ string DLG_TEXT[369] = {
 "(The day after)",
 "Yesss!! it's raining. Thank you God! Finally WATER!",
 "(Many days have passed)",
-"I should explore the islet to know if nobody was here before me and let something.",
+"I should explore the islet to know if nobody was here before me and let something.",	//300
 "(You find a dagger)",
 "Excellent! I could use it with a stick to kill the fishes around the islet.", 
 "(You see a ship approaching)",
@@ -349,7 +349,7 @@ string DLG_TEXT[369] = {
 "' isn't in port! Capitán ",
 " must have been impatient and left for #sHavana# already.",
 "I'll have to sail there myself and hope to catch up with him.",
-"The kidnappers are probably in that cave with #senvoy#. If I charge in, they may kill her, or she may be killed accidentally in the fight.",
+"The kidnappers are probably in that cave with #senvoy#. If I charge in, they may kill her, or she may be killed accidentally in the fight.",	//350
 "If I throw a bottle of ether in there, its effect should be greater in such a confined space.",
 "I'll have to go in carefully and try to negotiate for her release.",
 "I'd better wait for the air to clear. Don't want to knock myself out as well as the kidnappers, do I?",
@@ -361,11 +361,20 @@ string DLG_TEXT[369] = {
 "Damn it! A camp of French soldiers. What are they doing here? I suppose they are preparing an attack on #sConceicao#. Now, I understand why I saw those English soldiers dead on the beach. They must have been ambushed when patrolling the coast. I have no choice. If I want to find anything in the Bartolomeu's mansion, I must approach the camp and avoid the guards.",
 "Damn it! A camp of French soldiers. What are they doing here? I suppose they are preparing an attack on #sConceicao#. Now, I understand why I saw those English soldiers dead on the beach. They must have been ambushed when patrolling the coast. I should go back to the beach and wait for a better moment.",
 "(You look at the chest)",
-"This must be the chest Fernando found the Bartolomeu's diary out. That's weird, there is a small key inside. Why Fernando didn't take it. He must have thought it was useless... Maybe, I can open something with it. But, I only see walls and no door here...",
+"This must be the chest Fernando found the Bartolomeu's diary out. That's weird, there is a small key inside. Why Fernando didn't take it. He must have thought it was useless... Maybe, I can open something with it. But, I only see walls and no door here... Could the key open a box buried in the mansion?",
 "That looks like the leading part of the silver train.",
 "Wait until they are all in sight before attacking.",
 "The silver is ours!",
 "Now to get it back to the ship.",
 "What? That's my ship sailing away - under a pirate flag! DAMN YOU, SPARROW!",
 "At least he left me something to sail.",
+"The door isn't locked but I can't pass -",
+"- am I forever doomed to walk around here?",		//370
+"Now I've made it to the hold, I'd better find somewhere to hide.",
+"Perhaps behind those crates over there.",
+"Well, that's inconvenient. Now I need to dispose of the body. I can't drag him onto deck, I'll almost certainly be seen.",
+"With a bit of luck, I can stuff him into one of these crates.",
+"There, that will do until the ship gets to wherever it's going. Now, back into hiding...",
+"I'm too early. I should return here tomorrow night.",
+"But no later! If I'm too late, the smuggler will leave without me and I may never get away from this island.",
 };

@@ -1,4 +1,4 @@
-Build Version: Friday 19th March 2021
+Build Version: Friday 13th August 2021
 Build 14
 
 ==========================
@@ -51,6 +51,11 @@ Build 14:
   . Second cloister in Cartagena by Jack Rackham
   . Female player characters meet male governor relatives by Grey Roger
   . Left-click an island on the archipelago map to bring up the island's map (only if you have the island map) by Pieter Boelen
+  . Swedish emissary added if Sweden is enabled, by Grey Roger
+  . New storyteller character in Santiago by Levis
+  . French and Spanish trade offices in Port au Prince and Cartagena, different merchant licences for different nations by Grey Roger
+  . New drinkers/gamblers in Havana and Santiago taverns by Grey Roger
+  . Investing large sums of money with loanshark improves town economy by Pieter Boelen
 - Gameplay/Balancing Updates:
   . Boarding skill decrease for surrendered captains disabled by Tingyun
   . Assigning of skill bonuses made nation-dependent by Levis
@@ -78,6 +83,7 @@ Build 14:
   . Naval officers rank 10 or higher can buy ships by HachiChin
   . Time travel Easter egg in Rheims' house in Smugglers' Lair if not playing "Tales of a Sea Hawk" by Grey Roger
   . "Cooking With Albatross" removes an albatross and gives 2 food during daily update, by Grey Roger
+  . Naval officers can not capture towns for themselves nor select any government but their own when persuading a diplomat in a fort to surrender; diplomats in forts use period-correct king names, obey 'isEnabledTownCapture', by Grey Roger
 - Code Updates:
   . Limited number of soldiers in Merchant Guild attacks by Pieter Boelen
   . Reduced number of soldiers in Soldier Reinforcements by Pieter Boelen
@@ -139,6 +145,11 @@ Build 14:
   . Expanded selection of models used by governors' nieces/daughters by Grey Roger
   . Music scheme selection improved by Grey Roger
   . "Fifteen Men on a Dead Man's Chest" song in pirate taverns by BathtubPirate
+  . Various phrases for direct sail made translatable by Grey Roger, translated into Spanish by Homo Eructus
+  . New voice greeting for Joshamee Gibbs by Grey Roger
+  . Blackjack renamed to Vingt-Un by Grey Roger
+  . Gambling code overhauled by Levis
+  . International relations for War of the Spanish Succession corrected by Homo Eructus
 - Bug Fixes:
   . Fix to prevent Merchant Guild attack when player group was not responsible by Pieter Boelen
   . Fix to allow larger Random Quest Ships by Pieter Boelen
@@ -257,6 +268,14 @@ Build 14:
   . Timer for "The Collector" quest failure cancelled when you complete the quest - pedrwyth
   . Two week wait to heal Artois Voysey handled by function instead of direct attribute change, fixes anomaly with worldmap time - Grey Roger
   . Switching crew payment method uses 'SetSquadronCrewQuantityRatio' instead of 'SetSquadronCrewQuantityTotalRatio' to correctly lose crew to desertion - Grey Roger
+  . Citizens in Bridgetown, Governors Harbour and Alice Town taverns do not give directions to their taverns by Grey Roger
+  . Typos in "Smugglers_vs_Blythe.c" dialog file corrected by Kahenraz
+  . Bandits from Zaid Murro quest removed after fight by Grey Roger
+  . Multi-shot guns losing wrong number of shots when missing target in "Woodes Rogers", "Goldbug" and "Bartolomeu" storylines fixed by Jack Rackham
+  . Function 'UpdateItemData()' made to display potion data by Grey Roger
+  . Selling Virginie d'Espivant earns correct amount of money by Jack Rackham
+  . Gibbs01.wav": made audible within game, so can be used as greeting sound for Mr. Gibbs - Jack Rackham
+  . Diplomat uses period-correct nation names, correctly handles America and Sweden - Grey Roger
 - Storyline Updates:
   . Sidequests:
     > A Girl Won in a Card Game, enabled also at Grenada by Pieter Boelen
@@ -307,6 +326,7 @@ Build 14:
     > Apothecary sidequest: low chance of getting to buy a bow during collector quest even if you don't meet skills criteria by pedrwyth
     > Apothecary sidequest: companion ships also stored during trip to Cartagena (to avoid starvation/mutiny issues) by pedrwyth
     > Apothecary sidequest: a merged Father Jerald dialogue file for the Jack Sparrow storyline by pedrwyth
+    > Apothecary sidequest: revised apothecary dialogue files for the Jack Sparrow storyline by pedrwyth
     > Apothecary sidequest: rewards replaced by ingredients for HP bonus, quest linked to "Church Protection" quest by pedrwyth
     > Apothecary sidequest: bugs fixed by pedrwyth
     > Hitman sidequest: Easter egg if you have 'Black Pearl' when you meet Jack Sparrow at the end; "thug9" changed to Nathaniel Hawk in "Jack Sparrow" storyline, by Grey Roger
@@ -319,6 +339,9 @@ Build 14:
     > Various quest items made disposable at or near the ends of sidequests by Pieter Boelen and Grey Roger
     > Church Help: letters removed by Father Jerald and different dialog with Father Bernard if you blackmail Father Jerald and give him the letters, by Grey Roger
     > Church Help: original questbook entries restored for "Seadog" and "Swashbuckler" difficulty so you must figure out for yourself that further investigation is needed, by Grey Roger
+    > New sidequest "A French Companion" for FreePlay character José Joaquím Almeida by Bartolomeu o Portugues
+    > "Silver for Cartagena" made available to pirates who do not join the Brotherhood by Grey Roger
+    > Rogue / Gambler start: new questbook entries for gambler and female rogue, entire quest made optional, "PO_Fleut50" replaced by "FastMerchantman2" in last two periods, by Grey Roger
   . Tutorial:
     > Stormy Start potentially permanently lost ship fixed by Jack Rackham
     > Locked Cabin Icon removed after tutorial completes by pedrwyth
@@ -341,6 +364,8 @@ Build 14:
     > Can now kill Sidonio Ogarrio by Grey Roger
     > Silehard checks that you have the correct ship at end of 2nd mission by Grey Roger
     > Female characters get alternative dialog in two scenes, from original alternative Danielle story, by Grey Roger
+    > New sword "bladeMH" as reward for killing Malcolm Hatcher by Grey Roger
+    > Skull properly becomes replacement pirate boss on Nevis after Isenbrandt Jurcksen killed in final battle, by Grey Roger
   . Ardent storyline:
     > Fully completed by Grey Roger
     > New chapter "Imperial Escort" by Grey Roger
@@ -362,6 +387,7 @@ Build 14:
     > French warship at Sao Jorge uses PRIVATEER_NATION to prevent fort attacking it if you are hostile to Portugal by Grey Roger
     > Guibert Daudet portrait added by Grey Roger
     > Roxanne equips piranha, not fists, to avoid quest stop by Grey Roger
+    > Roche Brasiliano does not surrender; Sao Jorge tavern keeper does not talk about Vito Leone; Vice Admiral repeatedly demands you produce 'La Couronne' if you don't have it; by Grey Roger
   . Bartolomeu o Portugues storyline:
     > Cargo Quests disabled for Hispaniola Buccaneer Camp by Pieter Boelen
     > Elting given his sword in "Cartagena Firework" to prevent him from stunning enemies in sniping scene by Grey Roger
@@ -375,6 +401,10 @@ Build 14:
     > Choosing "Blaze" model, i.e. Nathaniel Hawk, gives you the same ship, flags and difficulty as if you were starting "standard" story
     > Bart Renault demands all your money less 1, instead of fixed 999, by Grey Roger
     > New cursed character Ricardo Orellano with special start by GhostOfDeath91
+    > Malcolm Hatcher's nation set to match player's by Grey Roger
+    > New starting quest for Engineer, "A New Invention" by Jack Rackham
+    > New trophy quest for Gambler, "The Poker Tournament" by pedrwyth and Jack Rackham
+    > New trophy quest for Agent, "Investigate The <Insert Ship Name>" by Grey Roger
   . Hornblower storyline:
     > Lieutenant Bush custom model added by Grey Roger
     > Various potential errors fixed by Grey Roger
@@ -393,8 +423,11 @@ Build 14:
   . Woodes Rogers storyline:
     > More new WIP content added by Jack Rackham
     > Part 2 extension added and playable by Jack Rackham
+    > Coast Brothers concert added by Jack Rackham
   . The Gold-Bug storyline:
     > Ending fixed by Jack Rackham
+  . Devlin Opera storyline:
+    > New quests "My Brother, Ladies and Gentlemen" and "Yo Ho Ho and a shipment of rum", choice of ways to complete "Yo Ho Ho and a shipment of rum", by Bathtub Pirate
 - Model and Texture Updates:
   . Swedish East Indiaman high-detail custom model added by Philipjn and Armada
   . Historically accurate British Navy Fleet paint scheme by Armada and Grey Roger
@@ -429,7 +462,6 @@ Build 14:
   . New "Miquelet" pistol by Jack Rackham
   . New "Sword of the Earth" fantasy sword, hidden in Cayman dungeon by Grey Roger, or starting sword for "Witchgirl" by DeathDaisy
   . "Toledo Rapier" imported from CoAS:GoF by Grey Roger
-  . New texture for Cursed Flying Dutchman imported from CoAS:GoF by Grey Roger
   . Tan sails for all ships, default tan sails for some small ships by Grey Roger
   . Armoured models for "Danielle" variants imported and modified from CoAS:GoF by Grey Roger
   . New character model "Rousselet" plus associated animation files imported from CoAS:GoF by Grey Roger
@@ -488,6 +520,19 @@ Build 14:
   . "Lineship1" and "Lineship47" cannons improved by The Nameless Pirate
   . New character model "Indian_girl2" by Grey Roger
   . New character model "brtHcap_18" based on Captain Horatio Hornblower R.N. by Grey Roger
+  . New ship model for "CursedDutchman" by The Nameless Pirate
+  . New cabin for cursed Flying Dutchman by The Nameless Pirate
+  . "AnimistLucia" and "AnimistEdmundo", cloaked versions of Lucia and Edmundo de la Vega, by Grey Roger
+  . New character models "ArdentF_2" and "ArdentF_3" by Grey Roger
+  . New weapon "Portugize" by Jack Rackham
+  . New character model "Animists3_empty" by Jack Rackham
+  . New backgrounds for windows in Cartagena town centre by Levis
+  . "-" symbol made visible in "INTERFACE_TITLE" font by Grey Roger
+  . New "sit2" locator type replaces "candles" for player's seat opposite gambler in taverns, made visible if VISIBLE_LOCATORS is set, by Grey Roger & Jack Rackham
+  . "Soldier" locator types made visible if VISIBLE_LOCATORS is set, by Grey Roger
+  . Improved church as background to "Cartagena_town_01" by Jack Rackham
+  . New playable character "BeatriceB" by Bathtub Pirate
+  . Building in Grand Turk near tavern now has "RR Club" sign by Jack Rackham
 - ADDITIONAL INSTALLATION OPTIONS:
   . Possibility to revert to original black-and-yellow paint scheme for British ships
 - For Future Development:

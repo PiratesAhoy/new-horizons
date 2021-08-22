@@ -53,7 +53,7 @@ string DLG_TEXT[57] = {
 "se acaba de comprometer a la ",
 "de algun Ingles rico en #sRedmond#. Asi que todo el mundo consigue una bebida gratis con la condicion de levantar sus copas para la feliz pareja.",
 "Bueno, en ese caso, larga vida y felicidad para la pareja de ellos-salud!",
-"Trabajo para Lady Suarez. Quiero hablar con Abel Barco. ?Lo conoces?",
-"No realmente. Solo me pago para informarle cuando alguien que trabaja para Lady Suarez preguntara por El. Y para decirte, manana, te esperara fuera de la ciudad.",
+"Trabajo para Lady Carranza. Quiero hablar con Abel Barco. ?Lo conoces?",
+"No realmente. Solo me pago para informarle cuando alguien que trabaja para Lady Carranza preguntara por El. Y para decirte, manana, te esperara fuera de la ciudad.",
 "Muy bien, Dile que voy a estar alli.",
 };

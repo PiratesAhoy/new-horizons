@@ -1,4 +1,4 @@
-title=Etherbottle
-text.t1=Have to find this medicine.
-text.t2=It may be found in the Opium Den.
-text.t3=Done!
+title=Бутылка эфира
+text.t1=Нужно найти лекарство.
+text.t2=Его можно найти в притоне курильщиков.
+text.t3=Выполнено!

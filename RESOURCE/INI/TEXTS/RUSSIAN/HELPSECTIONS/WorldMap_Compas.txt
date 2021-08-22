@@ -1,9 +1,9 @@
 Compas_title
 {
-Compass
+Компас
 }
 
 Compas_info
 {
-     On World Map Compass is in right bottom corner of the screen. Use it to set your course.
+     Компас на карте мира отображается в правом нижнем углу экрана.
 }

@@ -1,3 +1,2 @@
-title=The nightmare
-text.t1=I can't believe it! I found and fought Charles Baxter off #sisland_Conceicao#. He was sailing a strange caravel. I think I killed him "again".... But, did I really kill him? 
-
+title=Кошмар
+text.t1=Я не могу в это поверить! Я нашел и убил Натаниэля Хаука около острова #sisland_Conceicao#. Он плыл на странной каравелле. Думаю, что я убил его 'снова' .... Но, действительно ли я его убил?

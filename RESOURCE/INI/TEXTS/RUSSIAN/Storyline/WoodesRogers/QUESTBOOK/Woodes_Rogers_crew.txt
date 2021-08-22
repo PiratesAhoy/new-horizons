@@ -1,8 +1,8 @@
-title=Woodes Rogers crew
-text.t1=Just like I thought - they're after the Pistolbelt. Maybe it's best to return to Port Royale and Rogers' family.
-text.t2=They have killed the Governor! I'll follow Caroline to him.
-text.t3=I'll continue to help Caroline and watch out for the officers.
-text.t4=Our last chance is to get help from Charles Vane. Selkirk opens for me...
+title=Команда Вудса Роджерса
+text.t1=Так я и думал - они хотят отобрать у меня кобуру. Может быть, лучше вернуться в Порт-Роял в семью Роджерсов.
+text.t2=Они убили Губернатора! Я последую за Каролиной.
+text.t3=Я буду продолжу помогать Каролине и следить за офицерами.
+text.t4=Наш последний шанс обратиться за помощью к Чарльзу Вэйну. Селкирк откроет для меня...
 text.t5=
 text.t6=
 text.t7=

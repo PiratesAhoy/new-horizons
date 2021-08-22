@@ -1,5 +1,5 @@
-title=Such Devoted Sisters
-text.t1=I have found my sister Bonnie. It's like looking in a mirror, we are so alike. 
-text.t2=Now we must go to #sisland_Turks# Island and find the pirate Short Jack Gold... and ask him if he wants to go swimming!
-text.t3=We made it to #sisland_Turks# Island. Now to find Short Jack Gold. We will ask in the Tavern first.
-text.t4=So it's off to #sisland_Quebradas Costillas# to find our brother Blaze.
+title=Преданные сестры
+text.t1=Я нашла свою сестру Бонни. Это все равно, что смотреть в зеркало, мы так похожи. 
+text.t2=Теперь мы должны плыть на остров #sisland_Turks# и найти пирата Короткого Джека Голда... и передать ему странное слово SWIM.
+text.t3=Мы прибыли на остров #sisland_Turks#. Теперь надо найти Короткого Джека Голда. Сперва надо узнать о нем в таверне.
+text.t4=Теперь путь на остров #sisland_Quebradas Costillas#, надо найти нашего брата Блейза.

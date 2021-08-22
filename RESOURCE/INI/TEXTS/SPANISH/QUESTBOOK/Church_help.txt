@@ -13,3 +13,5 @@ text.t11=He tenido que matar a ese tozudo holandés. Por desgracia, ahora no hay 
 text.t12=El tabernero me ha dicho que la chica que ha acusado a #sFatherJerald# de proposiciones deshonestas en realidad estaba trabajando para el ayudante de #sJerald#. De modo que las cartas son falsificaciones. Ahora debo volver a #sRedmond#, en #sisland_Redmond# con las pruebas.
 text.t13=He vuelto a #sRedmond#, en #sisland_Redmond# y he conseguido persuadir a #sFatherBernard# de que #sFatherJerald# es inocente. Me lo ha agradecido y me ha dicho que vuelva a visitarlo más tarde para recibir mi siguiente tarea.
 text.t14=He vuelto a #sRedmond#, en #sisland_Redmond# y le he dicho a #sFatherBernard# que #sFatherJerald# es culpable. Me lo ha agradecido y me ha dicho que vuelva a visitarlo más tarde para recibir mi siguiente tarea.
+text.t15=El ayudante de #sFatherJerald# me ha dado pruebas de la culpabilidad del cuua. Sospecho que quiere hacerse con el puesto de #sJerald#. Tengo que mandarlo a ver al padre Bernard. Tal vez el pueda nombrarlo cabeza del templo. La posición sigue vacante.
+text.t16=La camarera me ha confirmado que recibió varias cartas de amor de #sFatherJerald#.

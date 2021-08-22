@@ -38,7 +38,7 @@ string DLG_TEXT[71] = {
 "Take me away from here!",
 "Hmm, where to?",
 "It doesn't matter Captain, as long as I get far away from this cursed Hotel.",
-"Very well then. I'm heading back to Bridgetown. Let's go to the port - a ship is waiting.",
+"Very well then. Let's go to the port - a ship is waiting.",
 "You again, Captain. What do you want now?",				//40
 "Oh ... ehhr ... nothing.",
 "I'll follow you, Captain.",

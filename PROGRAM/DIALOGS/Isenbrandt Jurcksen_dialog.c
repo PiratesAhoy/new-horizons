@@ -41,7 +41,7 @@ void ProcessDialogEvent()
 			// NK -->
 			if(GetNationRelation2MainCharacter(PIRATE) != RELATION_ENEMY && HaveLetterOfMarque(PIRATE)) // PB: Added LoM check
 			{
-				dialog.text = "I'm busy.";
+				dialog.text = DLG_TEXT[42];
 			}
 			// NK <--
 			if (GetNationRelation2MainCharacter(PIRATE) != RELATION_ENEMY && !HaveLetterOfMarque(PIRATE)) // PB

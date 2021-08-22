@@ -1,6 +1,7 @@
-string DLG_TEXT[17] = { 
+string DLG_TEXT[26] = { 
 "Good day to you. My name is ",
-" and I am the representative of the West India Trading Company. What brings you to my desk?",
+" and I am the representative of the ",
+". What brings you to my desk?",
 "My name is ",
 ". There is a favour I would like to ask from you.",
 "Wait, this is an office? I must have taken a wrong turn somewhere. Goodbye.",
@@ -13,6 +14,15 @@ string DLG_TEXT[17] = {
 "Now that sounds like a lot of fun. How about I take my leave and let you to your own affairs? Thanks and goodbye.",
 "Pirating merchant vessels? No, we would not be wanting that at all. Yet you have just given me a completely unrelated idea. I shall be leaving now...",
 "Wait? What? How....? Piece of paper? Plenty gold??? I think I'll go visit the apothecary now.",
-"There you go! Signed, stamped and all official. Be warned though that your license will be immediately revoked upon the slightest unrespectable act.",
+"There you go! Signed, stamped and all official. Be warned though that your licence will be immediately revoked upon the slightest unrespectable act.",
 "Understood. I'm sure I'll enjoy my time as an honest merchant. It has been a pleasure doing business with you.",
+" and I'm in charge here.",
+"Paying commission on the sale of cargo? What are you, some sort of merchant? In case you haven't been paying attention, this here town now belongs to pirates, who just love to take cargo from merchants without paying any commission, or anything else!",
+"Pirates? Arr, then I'll be off to do some pirating of my own!",
+"East India Trading Company",
+"Dutch West India Company",
+"Casa de Contratación",
+"Casa da Índia",
+"French West India Company",
+"West India Company",
 };

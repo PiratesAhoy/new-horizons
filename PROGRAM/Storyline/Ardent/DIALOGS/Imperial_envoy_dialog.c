@@ -12,6 +12,10 @@ void ProcessDialogEvent()
 
 	ref PChar;
 	PChar = GetMainCharacter();
+
+	string PCname;
+	if (CheckAttribute(PChar,"title")) PCname = GetMyRespectfullyName(PChar);
+	else PCname = XI_ConvertString(GetRankName(PChar, SPAIN)) + " " + GetMyLastName(PChar);
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -223,8 +227,9 @@ void ProcessDialogEvent()
 		case "believe_ardent":
 			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
 			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(PChar)));
-			if (PChar.sex == "man") Preprocessor_Add("pronoun3", XI_ConvertString("his"));
-			else Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+//			if (PChar.sex == "man") Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+//			else Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));
 			dialog.text = DLG_TEXT[69] + GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation)) + DLG_TEXT[70] + GetMyLastName(PChar) + DLG_TEXT[71] + GetMyLastName(PChar) + DLG_TEXT[72] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[73];
 			link.l1 = "";
 			link.l1.go = "exit";
@@ -233,7 +238,9 @@ void ProcessDialogEvent()
 		case "demand_justice":
 			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
 			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(PChar)));
-			if (PChar.sex == "man") Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+//			if (PChar.sex == "man") Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+//			else Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));
 			string finally = "";
 			if(!LAi_IsDead(CharacterFromID("Emiliano de Guzmán"))) finally = DLG_TEXT[77] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[78];
 			dialog.text = DLG_TEXT[74] + GetMyLastName(PChar) + DLG_TEXT[75] + GetMyLastName(PChar) + DLG_TEXT[76] + finally;
@@ -243,7 +250,7 @@ void ProcessDialogEvent()
 
 		case "keep_galleon":
 			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
-			dialog.text = DLG_TEXT[79] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + DLG_TEXT[80] + PChar.quest.imperial_escort.ship_name + DLG_TEXT[81];
+			dialog.text = DLG_TEXT[79] + PCname + DLG_TEXT[80] + PChar.quest.imperial_escort.ship_name + DLG_TEXT[81];
 			link.l1 = DLG_TEXT[82];
 			link.l1.go = "exit_keep_galleon";
 			link.l2 = DLG_TEXT[83] + PChar.quest.imperial_escort.ship_name + DLG_TEXT[84];
@@ -252,7 +259,7 @@ void ProcessDialogEvent()
 
 		case "decline_galleon":
 			PChar.quest.imperial_escort.keep_galleon = false;
-			dialog.text = DLG_TEXT[90] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + DLG_TEXT[91];
+			dialog.text = DLG_TEXT[90] + PCname + DLG_TEXT[91];
 			link.l1 = DLG_TEXT[92];
 			AddDialogExitQuest("imperial_escort_admiral_restores_ships");
 			link.l1.go = "exit";
@@ -260,20 +267,20 @@ void ProcessDialogEvent()
 
 		case "report_admiral_good":
 			Preprocessor_Add("pronoun2", XI_ConvertString(GetMyPronounObj(PChar)));
-			dialog.text = GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation)) + DLG_TEXT[85] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + DLG_TEXT[86];
+			dialog.text = GetRankName(CharacterFromID("Jusepe Guimaraes"), sti(Characters[GetCharacterIndex("Jusepe Guimaraes")].nation)) + DLG_TEXT[85] + PCname + DLG_TEXT[86];
 			link.l1 = "";
 			link.l1.go = "exit";
 		break;
 
 		case "report_admiral_bad":
 			Preprocessor_Add("pronoun", XI_ConvertString(GetMyPronounSubj(PChar)));
-			dialog.text = DLG_TEXT[87] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + DLG_TEXT[88] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + DLG_TEXT[89];
+			dialog.text = DLG_TEXT[87] + PCname + DLG_TEXT[88] + PCname + DLG_TEXT[89];
 			link.l1 = "";
 			link.l1.go = "exit";
 		break;
 
 		case "farewell":
-			dialog.text = DLG_TEXT[90] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + DLG_TEXT[91];
+			dialog.text = DLG_TEXT[90] + PCname + DLG_TEXT[91];
 			link.l1 = DLG_TEXT[92];
 			link.l1.go = "exit";
 		break;

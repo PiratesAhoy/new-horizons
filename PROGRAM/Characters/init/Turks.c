@@ -1318,6 +1318,115 @@ if (ENABLE_WEAPONSMOD)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
+				// Brother of the Coast 13 Blowhorn style
+	ch.name = TranslateString("", "Coastbrother");
+	ch.lastname = "";
+	ch.id		= "CB13";
+	ch.model = "Blowhorn_monk";
+	ch.sex = "man";
+	//ch.sound_type = "pirate";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+//	ch.location	= "Turks_church";
+//	ch.location.group = "goto";
+//	ch.location.locator = "monk11";	
+	ch.Dialog.Filename = "CoastbrotherTurks_dialog.c";
+	ch.nation = PIRATE;
+	ch.Flags.Pirate = 2;
+	ch.Flags.Pirate.texture = 0;
+	ch.rank 	= 3;
+	ch.reputation = "20";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "3";
+	ch.skill.Sailing = "0";
+	ch.skill.Accuracy = "0";
+	ch.skill.Cannons = "0";
+	ch.skill.Grappling = "0";
+	ch.skill.Repair = "0";
+	ch.skill.Defence = "0";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "0";
+	ch.money = "0";
+	ch.quest.meeting = "0";
+	LAi_SetStayType(ch);
+	Lai_setImmortal(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 40.0, 40.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+//PW poker competition characters showcasing location=====================	
+	
+	ch.old.name = "Reginald";
+	ch.old.lastname = "Longoustine";
+	ch.name 	= TranslateString("", "Reginald");
+	ch.lastname 	= TranslateString("", "Longoustine");
+	ch.id		= "Reg_L";
+	ch.model	= "Reg_L";
+	ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.location	= "Turks_poker_entre";
+	ch.location.group = "goto";
+	ch.location.locator = "goto8";
+	ch.Dialog.Filename = "Poker twins_dialog.c";		
+	//ch.greeting = "Gr_Oxbay Citizen";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.last_theme = "";
+	LAi_SetStayType(ch);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
+	
+	
+	ch.old.name = "Bouncer";
+	ch.old.lastname = "";
+	ch.name 	= TranslateString("", "Bouncer");
+	ch.lastname 	= TranslateString("", "");
+	ch.id		= "bouncer";
+	ch.model	= "bouncer";
+	ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.location	= "Turks_poker_entre";
+	ch.location.group = "sit";
+	ch.location.locator = "sit1";
+	ch.Dialog.Filename = "Poker_Bouncer_dialog.c";	
+	//ch.greeting = "Gr_Oxbay Citizen";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.last_theme = "";
+	LAi_SetSitType(ch);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
+
 
 //<-- JRH
 }

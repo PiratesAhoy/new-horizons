@@ -1,224 +1,189 @@
 About_Build
 {
-Пираты Карибского Моря: Новые Горизонты
+Пираты Карибского Моря: Новые Горизонты
 
-This being a large modification to the original 2003 game, there is a lot to know about the game and a lot of things that may not be immediately apparent.
+Это огромный сборник модификацией к оригинальной игре 2003 года. В игре появлось большое количество нововведений, о которых полезно знать.
+Поэтому для всех игроков появился раздел "Советы и хитрости".
 
-Therefore, we have compiled these Tips & Tricks for all players. There are probably some things mentioned that you didn't already know and can help enhance your game experience.
-
-Хорошо Вам провести время в игре!
-
-}
+Удачи в игре!}
 
 B_1{Введение}
 About_Build_1_d{ВВЕДЕНИЕ}
 About_Build_1
 {
+Сделанный для оригинальных "Пиратов Карибского Моря" 2003 года от Акеллы, этот модпак разрабатывался уже с выпуска Build 13 в далеком 2007. С того времени мы проделали большой путь, добавляя много нового контента и множества новых фишек, некоторых из них казались невозможными даже разработчикам оригинальной игры.
 
-Made for the original 2003 Akella game "Pirates of the Caribbean", this modpack has been in development ever since the release of Build 13 in early 2007. We have come a long way since then, adding much new content and many new features, some of which were thought to be impossible to achieve even by the original game developers themselves.
+Цель - обеспечить впечатление полноценной пиратской игры, насколько это возможно, и более реалистичной, и более развлекающей. Новые фишки включают новые сюжетные линии, исотрические детали, возможности свободной игры, разнообразия и больше настроек, чем когда либо ранее. Не говоря о том, что графика тоже была улучшена, по большей части новыми моделями и текстурами, но также само море и все остальное, с чем мы смогли справиться.
 
-The intention is to provide as full a pirate game experience as possible, both more realistic, but also more fun. New features include more storylines, historical detail, abilities for free play, variety and more customization than ever before. Not to mention that the graphics have also been improved upon, mainly with new models and textures, but also the sea itself and anywhere else that we could manage.
-}
+Переведено сообществом - Corsairs-Harbour.ru}
 
-B_2{Разрешение}
-About_Build_2_d{РАЗРЕШЕНИЕ И ДРУГИЕ ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ}
+B_2{Экран}
+About_Build_2_d{ЭКРАН И ДРУГИЕ НАСТРОЙКИ}
 About_Build_2
 {
+Редактирование engine.ini в корневой папке с игрой - любым текстовым редактором.
 
-Edit engine.ini in your main game folder manually with Notepad. Set screen_x and screen_y to your desktop resolution.
+Значения ключей screen_x и screen_y задают разрешение окна игры.
+Рекомендуется установить fullscreen в 0. Это позволит переключатся между задачами, используя Alt+Tab.
 
-Recommend setting fullscreen to 0. This makes the game run in windowed mode and allows you to Alt+Tab in and out.
-
-If you do not like the "Tips" during game loading, set numoftips to 0.
-}
+Если вам не нравятся "Подсказки" во время загрузки игры, установите numoftips в 0.}
 
 B_3{Берег}
-About_Build_3_d{БЕРЕГ И БОИ НА СУШЕ}
+About_Build_3_d{БЕРЕГ И БОЕВКА НА СУШЕ}
 About_Build_3
 {
+- Если вы заблудились в городе, некоторые жители могут подсказать вам дорогу.
 
-- If you're lost in a town, some citizens can show you the way.
+- Практиковаться в ближнем бою - ключ к выживанию. В начале попытайтесь нанести несколько ударов, и если здоровье понижается, убегайте! Умение растет с каждым ударом.
 
-- Practicing your melee-skill is the key to survive. At the beginning, try to land a few hits and if your health is going down, run away! The skill increases with every hit.
+- предметы, повышающие умения, также будут это делать, если вы поместите их в сундук на корабле. Так что вам не придется все время носить их с собой.
 
-- items that provide skill bonuses will do that also if you put them in the ship-chest. So you don't have to carry them around all the time.
+- Отскакивать очень полезно, когда сражаетесь с несколькими врагами.
 
-- Dodging is very helpful when fighting multiple foes.
+- Бандажи и прочие лекарства могут быть куплены у торговцев на улицах и в магазине. Они спасут вашу жизнь!
 
-- Bandage rolls and other medications can be bought from merchants on the streets and in the store. They will save your live!
+- Не забывайте, что вы можете взять команду с собой на берег. Это особенно полезно в начале игры, потому что у вас не будет офицеров.
 
-- Don't forget that you can take crewmembers with you at land explores. Especially at the beginning of a game it's helpfull, because you won't have officers.
+- Всегда следите за боеприпасами и порохом для огнестрельного оружия!
 
-- Always watch your ammunition and powder for guns!
+- С некоторыми большими экземплярами огнестрельного оружия вы можете активировать "shotgun-mode", нажав [TAB] при обнаженном оружии. Стреляйте при помощи [Q].
 
-- With some large guns, you can enter the "shotgun-mode" by pressing [TAB] when you have drawn your sword. You shoot with [Q]
-
-- Be sure to look in the inventory after a fight. Maybe one of the enemies dropped a weapon better than yours! You can also press [F] for fast equip the best weapon you have (works also during fights).
-
-}
+- Обязательно посмотрите инвентарь после сражения. Возможно, кто-то из врагов выронил оружие лучше вашего! Вы также можете нажать F для быстрой экипировки лучшим вашим оружием (работает и во время сражений).}
 
 B_4{Море}
 About_Build_4_d{ПЛАВАНИЕ И МОРСКИЕ СРАЖЕНИЯ}
 About_Build_4
 {
+- Нанятые офицеры дополняют ваши умения, даже если не назначены в "активный" офицерский отряд. Учтите, что они дополняют только те умения, что соответствуют их типажу. В пассажирском интерфейсе вы можете изменить роль офицеров, посмотреть их наиболее эффективные умения. Полный эффект от суммирования умений персонажа и офицеров показан в пассажирском интерфейсе.
 
-- Hired officers contribute their skills also if they're not in your "active" officer party. Note that they only contribute the skills that are correct for their type. In the Passengers interface, you can reassign officers, see their effective skills. The total effect of player + officers is shown as the player skills in the Passengers interface
+- Всегда проверяйте, нужен ли ремонт вашему кораблю! Вы также можете улучшить свой корабль на верфи, чтобы сделать его мощнее, маневреннее или быстрее.
 
-- Always check if your ship is in need of repairs! You can also upgrade your ship at the shipyard to make it stronger, more agile or faster.
+- Кораблю нужно достаточно команды, чтобы плавать и сражаться должным образом!
 
-- A ship needs enough crew in order to sail and fight properly!
+- Наймите канонира как можно раньше, чтобы лучше вести морские бои. Он также снабдит вас новым вооружением, если зайдете на палубу своего корабля, в противном случае вам придется каждый раз производить погрузки у порохового погреба в трюме.
 
-- Hire a gunner as early as possible to perform better in naval battles. He will also equip you with new ammunition if you enter your ship's deck, otherwise you have to resupply yourself at the powder storage in the cargo hold.
+- Найм доктора с хорошим умением защиты и наличие медикаментов на борту сократят потери после боя. Раненая команда показана как [здоровая команда] /[раненая команда] в F2>Корабль.
 
-- Hiring a doctor with a good defence skill and having medicine on board will decrease after-battle casualties. Wounded crew are shown as [healthy crew] / [wounded crew] in F2>Ship.
+- Не забывайте, что вашей команде нужны еда и ром, чтобы выжить. Вы можете менять рационы при необходимости. Вам также нужны ядра и порох, чтобы зарядить свои орудия.
 
-- Don't forget that your crew needs food and rum to survive. You can change the foodrations if it gets critical. Also you need cannonballs and powder in order to load your cannons.
+- Двойные порции рома могут поднять мораль команды, но могут привести к пьяным дракам.
 
-- Double rum rations will increase your crew's morale, but they might get into a drunken brawl.
+- Расположение ваших и вражеских кораблей на глобальной карте соответствует таковому и на боевой. Так что разверните ваш корабль в хорошую позицию на глобальной карте перед началом сражения! Хорошая стартовая позиция может стать огромным преимуществом.
 
-- The way your ship and enemy ship are positioned on the world map is the same as on open sea. So turn your ship into a good position on the world map before starting the fight! A good starting position can be a huge advantage.
+- Вы можете изменить внешний вид своих парусов в F2>Корабль>Паруса.
 
-- You can change the appearance of your sails in F2>Ship>Sails.
+- Если перевес в морском бою не в вашу пользу, зарядите орудия книппелями и попытайтесь сломать вражеские мачты. Так будет намного проще убежать.
 
-- If the odds in a seabattle are totally against you, load chains and try to break the enemy's masts. It'll be way easier to escape.
+- Абордаж будет намного проще с командой с высокой моралью. Также очень эффективно дать несколько залпов картечью перед абордажем.
 
-- Boarding will be much easier with a crew with good morale. Also, it is very effective to load grapes and fire a few salvos before boarding.
+- Абордажная команда использует вооружение и зелья, помещенные вами в оружейный ящик. Если вы не положите никакого оружия в оружейный ящик, то они воспользуются кутласами.
 
-- Boarding crew uses armour and potions that you stock in the weaponslocker. If you don't put any weapons in the weaponslocker, they will use Cutlasses.
+- Позднее в игре умения и способности вашей команды будут улучшены, так что они смогут использовать огнестрельное оружие, требующее навыка Стрелок. Но не в начале игры.
 
-- Later in the game, your crew will be generated with better skills and abilities and then they might use guns that require the Gunman ability. But not at the start.
+- Когда пытаетесь абордировать, следите за своей скоростью! Пройти под прицелом бортовых орудий корабля может быть смертельно опасно.
 
-- When you try to board, watch your speed! It can be deadly to pass by a ship's side.
+- Ваша команда может использовать холодное и огнестрельное оружие, доспехи и лекарства из вашего оружейного ящика при абордажах. Это поможет преодолеть грань между поражением и победой!
 
-- Your crew can use the weapons, guns, armor and medications in your weaponslocker when boarding. This can be the difference between victory and loss!
+- В Реалистичном режиме и режиме Железного Человека вам нужны компас и секстант, чтобы увидеть свой корабль на карте архипелага (кнопка по умолчанию - М). Также они повышают ваше умение навигации, в любом режиме.
 
-- In Realistic and Iron Man Mode you need a compass and a sextant in order to see your ship on the archipelago map (default key M). Also, in every mode, they increase your sailing skill.
+- Чтобы провести пожарную тревогу, вам нужна способность "Базовая защита корабля". Кнопка по умолчанию - C.
 
-- In order to execute a firedrill, you need the perk "Basic Ship Defence". The default key for this is C.
+- Вы можете поднять флаги других стран через F2> Отношения. Если это ложный флаг, вас могут узнать. Вероятность этого увеличивается, если Вы известны, и если вы приблизитесь к дружественным судам враждебных стран. Поднимая ваш Личный флаг, отношения на море будут такими же, как реальные отношения.
 
-- You can fly other nations' flags through F2>Relations. If it is a false flag, you can be recognized. The chance for this increases if you are famous and as you get closer to friendly ships that are of an enemy nation. Flying your Personal flag, the sea relations will be the same as your real relations.
-
-- Steamship engines needs planks to work
-
-}
+- Паровым двигателем нужны доски, чтобы работать.}
 
 B_5{Дополнительно}
 About_Build_5_d{ДОПОЛНИТЕЛЬНЫЕ ПРИМЕЧАНИЯ}
 About_Build_5
 {
+- Не забывайте сохраняться почаще (F5 для быстрого сохранения). Вы не можете знать, что случится потом.
 
-- Don't forget to save often (Quicksave: F5). You'll never know what will happen next.
+- Вы можете настраивать игру по-своему в дополнительных игровых настройках.
 
-- You can customize your game in the additional game settings.
+- Вы также можете зайти в InternalSettings.h, что в [Корневая папка игры]\PROGRAM, открыв текстовым редактором.ПРЕДУПРЕЖДЕНИЕ! Вы можете наломать там дров! При редактировании этого файла следуйте инструкциям в конце каждой строки! Если там нет никаких описаний, то закройте файл.
 
-- You can also go into InternalSettings.h in [Game-Folder]\PROGRAM, which you can open with WordPad.
-WARNING! You can mess things up there! If you edit this file, please follow the instructions at the end of every line! If there's no description, leave it.
+- В конце указанного файла вы можете разблокировать\заблокировать шаги в стороны ([A] и [D]).Мы не смогли наладить контроль столкновений, так что вы можете выйти за игровой мир. По умолчанию отключено - Вы можете изменить внешность своих парусов в F2>Корабль>Паруса.
 
-- At the bottom of the mentioned file, you can enable/disable the sidestep ([A] and [D]). We couldn't make the collision control work, so you can slide through the world. Default setting: disabled.
+- Почему на странице персонажа 2 числа для умений?Первое - "родное" умение персонажа; второе - умение после бонусов и штрафов от предметов И/ИЛИ класса корабля.
 
-- You can change the appearance of your sails in F2>Ship>Sails.
+- Если вы путаетесь в именах островов и различных мест, сверьтесь с картой архипелага в F2>Инвентарь>Карты. Вы также можете купить карты островов у торговцев предметами, что даст вам имена и расположения городов и бухт.
 
-- Why are there two numbers for skills on the character sheet?
-The first is the character's "native" skill; the second is the skill after bonuses and penalties from items AND/OR ship class have been taken into account.
-
-- If you're confused on island names and positions, consult the Archipelago Map in F2>Inventory>Maps. You can also buy island maps from the item traders, which will give you town and shore positions and names.
-
-- My reputation is horrible. How can I change what people think about me?
-Firstly, you probably didn't know what caused this. Your reputation goes down when:
-> You failed to pay off a loan from the loan shark "on time".
-> You failed to deliver cargo "on time".
-> You hit or killed civilians or merchants.
-> Your landing party and/or officers hurt or killed a civilian. Note, this can happen even at a distance if your officers use guns.
-> You fired on a friendly or neutral ship.
-> You basically did the evil thing in a certain situation.
-To fix this, do the obvious thing: good deeds. talking to people and helping them, rescuing shipwreck survivors, finishing quests you still have going which give you a reputation bonus, etc.
-}
+- Моя репутация ужасна. Как я могу изменить мнение людей обо мне?
+Во-первых, вы, вероятно, не знали, что вызвало это. Ваша репутация понижается, когда:
+> Вы не смогли вовремя оплатить займ у ростовщика.
+> Вы не смогли доставить груз вовремя.
+> Вы атаковали или убили гражданских или торговцев.
+> Ваш десант и/или офицеры причинили вред или убили гражданских. Заметьте, что может произойти, даже если ваши офицеры использовали только огнестрельное оружие.
+> Вы обстреляли дружеский или нейтральный корабль.
+> Вы совершили злодеяние в определенной ситуации.
+Чтобы исправить это, совершайте типичные хорошие поступки: говорите с людьми и помогайте им, спасайте людей за бортом, завершайте квесты, дающие вам прибавку к репутации и.т.д.}
 
 B_6{Секреты}
 About_Build_6_d{СЕКРЕТНОЕ СОДЕРЖАНИЕ}
 About_Build_6
-{
+{- Капитан Хендрик Вандердеккен продает особенные и проклятые корабли. Он живет на острове,отыскать куда путь не дано никому, кроме тех, кто уже знает, где он. Вы можете туда попасть, получив известный предмет от хорошо известного персонажа в хорошо известном месте из фильмов Пираты Карибского Моря .
 
-- Captain Hendrick Vanderdecken sells very special and cursed ships. He lives on an island that cannot be found, except by those who already know where it is. You can get there by getting a famous item from a well-known character in a well-known location from the Pirates of the Caribbean films.
+- Суровый стрелок решил укрыться от мира в неком доме в джунглях. Но есть слухи, что он обладает "волшебным" пистолетом или чем-то в этом роде.
 
-- A tough gun-slinger has decided to hide away from the world in a house in the jungle somewhere. But rumour has it that he has a "magic" gun of some kind.
+- Есть секретное укрытие, которое Вы можете использовать, чтобы спрятаться в пещере на необитаемом острове.
 
-- There is a secret hide-out you can use to lie low in a cave on an uninhabited island.
+- Аптекарь Бриджтауна предлагает такие интересные услуги, как увеличение максимального здоровья. Нанесите ему визит, чтобы узнать, что для этого необходимо.
 
-- The Apothecary in Bridgetown offers interesting options, such as increasing your maximum health. Pay him a visit to find out what is required.
+- Существуют странные монеты из хорошо известного фильма. Сказано, что любой, кто найдет и возьмет с собой хоть одну монету, навлечет на себя страшное проклятье (и на команду, если в оружейном ящике есть монеты).
 
-- There are some strange coins from a well-known movie out in the carribbean. It is told that whoever finds and carries one with him/her, a terrible curse will fall upon him/her (and the crew if there a coins in the weaponslocker).
+- Притон курильщиков опиума предлагает татуировки, повышающие умения.
 
-- The Opium Den on Jamaica offers skill-enhancing tattoos.
-
-- In the Revolutions and Napoleonic time periods, you can leave mines in the sea to destroy your enemies.
-}
+- В эпохи Революций и Наполеона вы можете оставлять мины в море, чтобы уничтожать врагов.}
 
 B_7{Проблемы}
 About_Build_7_d{ИЗВЕСТНЫЕ ПРОБЛЕМЫ И СПОСОБЫ ИХ РЕШЕНИЯ}
 About_Build_7
 {
+- Чаще сохраняйтесь. (Быстрое сохранение F5) игра обычно работает стабильно, но помните, что это - СБОРНИК МОДОВ от разных людей!
 
-- Save often. (Quicksave F5) The game usually is very stable, but remember that this is a MOD from private people!
+- Я НЕ МОГУ ПЕРЕЙТИ НА СЛЕДУЮЩЮЮ ПАЛУБУ ПРИ АБОРДАЖЕНажмите [F12], чтобы перезагрузить сценарий игры. Это должно помочь в большинстве случаев.
 
-- I CAN'T CONTINUE TO THE NEXT BOARDING DECK
-Press [F12] to force the game to enable the reload. It should now possible to continue.
-
-- I CAN NO LONGER MOVE AT ALL
-You have probably been set to Actor Type through the code. Press [F12] to return to Player Type.
-
-}
+- ГГ БОЛЬШЕ НЕ МОГЖЕТ ДВИГАТЬСЯ, ВООБЩЕВероятно, ГГ стал неписем. Нажмите [F12], чтобы вернуться к Типу Игрока.}
 
 B_8{Читы}
 About_Build_8_d{Режим читов}
 About_Build_8
 {
+Чтобы использовать читы, установите ENABLE_CHEATMODE в 1 в PROGRAM\InternalSettings.h. 
+Это разблокирует следующие команды:
 
-To use the cheatmode, set ENABLE_CHEATMODE to 1 at the bottom of PROGRAM\InternalSettings.h . This enables the following key commands:
+Numpad 0 = Режим бога на указанного персонажа
+Numpad 1 = Прокрутка персонажей влево
+Numpad 2 = Выбор главного героя
+Numpad 3 = Прокрутка персонажа вправо
+Numpad 4 = Поднять уровень указанному персонажу
+Numpad 5 = Поддельное поднятие уровня указанному персонажу
+Numpad 6 = Дать 100000 золота и 10000 личных средств
+Numpad 7 = Прокрутка репутаций указанного персонажа (повышение/понижение репутации)
+Numpad 8 = Запретить на глобальной карте преследовать вас штормам и вражеским кораблям
+Numpad 9 = Начать вражескую атаку (активация читов не требуется)
+TAB = "Shotgun-mode": если вы экипировали шотган, мушкет или пистолет Джека Воробья во время сражения
 
-Numpad 0 = Character:	God Mode
-Numpad 1 = Scroll Characters LEFT
-Numpad 2 = Select Main Character
-Numpad 3 = Scroll Characters RIGHT
-Numpad 4 = Character:	Level-Up
-Numpad 5 = Character:	Fake Level Up
-Numpad 6 = Player:		+ 100000 Gold and + 10000 Wealth
-Numpad 7 = Character:	Cycle through reputations (increase/decrease reputation)
-Numpad 8 = Disable worldmap storms and ships chasing you
-Numpad 9 = Trigger enemy attack (cheatmode not required)
-TAB = Shotgun Mode: If you have a shotgun, musket or Jack Sparrow's pistol equipped in Fight Mode
-
-This also enables these "Story Helpers" that allow you to skip to various parts of the storylines:
-- Woodes Rogers: Blackbeard's Head in the opening cabin scene
-- Assassin: Sailor that approaches you on the dock
-- Bartolomeu: Pierre Delacroix that approaches when you enter town
-- Jack Sparrow: Random Drunk sitting in the tavern in Tortuga
-- Hornblower: C.S. Forester who stands near a house at the beginning of the story
-}
+Это также разблокирует "Помощников Сюжетных Линий", позволяющих вам перейти к различным частям сюжетных линий:
+- Вудс Роджерс: голова Чёрной Бороды в каюте в начале игры
+- Ассасин: Моряк, подбегающий к вам на причале
+- Бартоломью: Пьер Делакруа, идущий к вам, когда вы заходите в город
+- Джек Воробей: Случайный Пьяница, сидящий в таверне на Тортуге
+- : С.С. Форестер, стоящий у дома в начале истории}
 
 B_9{Поддержка}
-About_Build_9_d{ПОДДЕРЖКА И РЕШЕНИЕ ПРОБЛЕМ}
+About_Build_9_d{ПОДДЕРЖКА И ИСПРАВЛЕНИЕ ПРОБЛЕМ}
 About_Build_9
-{
+{Из корневой папки игры используйте такие лог-файлы, как compile, system и, возможно, error, чтобы предоставить больше детаей, когда просите помощи, также упомяните свои видеокарту (GFX), пути установки и версию модпака.
 
-Use the compile.log, system.log and possible error.log from your main game folder to provide more details when asking for help. Also mention your graphics (GFX) card, installation folder and modpack version.
-
-To find out your GFX card, press Windows Button+R, then type "dxdiag" followed by "OK". This will run the DirectX diagnostic tool that provides a lot of relevant details.
-
-}
+Чтобы узнать, какая у вас видеокарта, нажмите Windows+R, затем наберите "dxdiag", следуя за подтверждениями "ОК". Это запустит диагностическую утилиту DirectX, которая предоставит множество важных деталей.}
 
 B_10{Дополнительная информация}
 About_Build_10_1
-{
-PiratesAhoy! Сайт и Форум:
-}
+{PiratesAhoy! сайт и форум:}
 
 About_Build_10_2
-{
-Mod DataBase Profile:
-}
+{Профиль DataBase:}
 
 About_Build_10_3
-{
-Walkthroughs:
-}
+{Прохождения:}

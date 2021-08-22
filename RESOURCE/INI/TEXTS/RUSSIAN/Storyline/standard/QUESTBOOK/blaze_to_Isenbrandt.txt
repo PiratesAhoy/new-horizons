@@ -1,3 +1,3 @@
-title=Deliver a letter to a pirate chief.
-text.t1=The Governor Silehard charged me with delivering a letter to a certain Izenbrandt Jurksen who is a pirate chief. In that letter the governor says that he'll reward anyone who can find and kill Rheims. After completing the mission, I'll have to return to #sRedmond# on #sisland_Redmond# to get another mission.
-text.t2=I can't say that Jurksen gave me a very hearty welcome. Nonetheless, I gave him the letter. It's interesting - Jurksen mentioned that the governor has used his services many times. Now I am going to sail back to #sRedmond# on #sisland_Redmond# and tell the governor that I completed his mission.
+title=Доставить письмо главарю пиратов.
+text.t1=Губернатор Силехард поручил мне  доставить письмо некому Изенбранду Джерксену главарю пиратов. В том письме губернатор говорит, что вознаградит любого, кто поможет найти и убить Реймса. После завершения задания, я должен буду вернуться в #sRedmond# на #sisland_Redmond# за другим поручением.
+text.t2=Я не могу сказать, что Джерксен встретил меня теплым приемом. Тем не менее, я вручил ему письмо. Что интересно - Джерксен упоминул, что губернатор использовал его услуги много раз. Теперь мне надо плыть в #sRedmond# на #sisland_Redmond# и сообщить губернатору, об успешном завершении задания.

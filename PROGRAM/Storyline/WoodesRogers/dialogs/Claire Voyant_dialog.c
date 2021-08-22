@@ -367,6 +367,26 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("grandma_boo2");
 		break;
 
+		case "tickets":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("jrh"));
+			LAi_SetActorType(Pchar));
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Defoe"));
+			PlaySound("VOICE\ENGLISH\claire_hmm.wav");
+			Dialog.text = DLG_TEXT[76];
+			link.l1 = DLG_TEXT[77];
+			link.l1.go = "tickets1";			
+		break;
+
+		case "tickets1":
+			PlaySound("INTERFACE\paper_small.wav");	
+			PlaySound("VOICE\ENGLISH\claire_welcome.wav");
+			Dialog.text = DLG_TEXT[78];
+			link.l1 = DLG_TEXT[79];
+			link.l1.go = "exit";
+			AddDialogExitQuest("bonus_chapter5");
+		break;
+
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

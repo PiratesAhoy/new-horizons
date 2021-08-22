@@ -27,13 +27,13 @@ bool DirectsailCheck(bool ActualUpdate)  // called hourly by Whr_UpdateWeather -
 	// UPDATE: This appears not to be necessary; the target ship remains even on heavy DirectSailing
 	if( GetAttribute(pchar, "quest.generate_kill_quest") == "begin" && !CheckAttribute(pchar, "quest.kill_pirate_refused_timer") && GetAttribute(pchar, "quest.generate_kill_quest.destination") == pchar.location)
 	{
-		if (ActualUpdate) LogIt("Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing");
+		if (ActualUpdate) LogIt(TranslateString("","Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing"));
 		return false;
 	}
 	// PB: No DirectSail during Pirate Hunting Quests to prevent breaking them <--
 	if( CheckAttribute(pchar,"nodirectsail") )
 	{
-		if (ActualUpdate) LogIt("Directsail toggled, press 0 to enable");
+		if (ActualUpdate) LogIt(TranslateString("","Directsail toggled, press 0 to enable"));
 		return false;
 	} // ccc Jan07, Directsail can be toggled
 
@@ -41,8 +41,8 @@ bool DirectsailCheck(bool ActualUpdate)  // called hourly by Whr_UpdateWeather -
 	{
 		if (ActualUpdate)
 		{
-			Logit("No island within reach");  // Jan07, hint added
-			Logit("Enter the map to sail to some island");
+			Logit(TranslateString("","No island within reach"));  // Jan07, hint added
+			Logit(TranslateString("","Enter the map to sail to some island"));
 		}
 		return false;	// aborts function if location is open sea without island
 	}
@@ -255,14 +255,14 @@ bool DirectIslandCoordCheck()  // called by DirectsailCheck()
 		if (z > 0.0) dir += PI;
 		if(iRealismMode == 0)
 		{
-			LogIt("Captain, " + FindIslandName(toislandname) + " in sight "		// LDH translate name 02Jan09
+			LogIt(TranslateString("","Captain") + ", " + FindIslandName(toislandname) + " " + TranslateString("","in sight") + " "		// LDH translate name 02Jan09
 				+ GetBearingFromShip16(dir-stf(pchar.ship.ang.y))						// LDH add bearing 04Mar09
 			//	+ " " + GetCompassDirFromHeading16(dir)									// LDH add direction 04Mar09
 			);
 		}
 		else
 		{
-			LogIt("Captain, land in sight "												// jsv  remove the land name from the message  16Nov13
+			LogIt(TranslateString("","Captain, land in sight") + " "												// jsv  remove the land name from the message  16Nov13
 				+ GetBearingFromShip16(dir-stf(pchar.ship.ang.y))						// LDH add bearing 04Mar09
 			//	+ " " + GetCompassDirFromHeading16(dir)									// LDH add direction 04Mar09
 			);
@@ -559,7 +559,7 @@ string GetMapIslandzone(string Island)
 			pchar.directsail1.approaching = FindIslandName(ClosestLandfallIsland2);
 			if(iRealismMode == 0)
 			{
-				LogIt("Captain, we are approaching " + pchar.directsail1.approaching + ".");
+				LogIt(TranslateString("","Captain, we are approaching") + " " + pchar.directsail1.approaching + ".");
 				PlayStereoSound("notebook_note");
 			}
 		}
@@ -571,7 +571,7 @@ string GetMapIslandzone(string Island)
 				pchar.directsail1.approaching = FindIslandName(ClosestLandfallIsland2);		// if we approach a third island, tell the player
 				if(iRealismMode == 0)
 				{
-					LogIt("Captain, we are approaching " + pchar.directsail1.approaching + "!");
+					LogIt(TranslateString("","Captain, we are approaching") + " " + pchar.directsail1.approaching + "!");
 					PlayStereoSound("notebook_note");
 				}
 			}
@@ -683,7 +683,7 @@ void DirectEncounter(float encay)  // called by SeaLoginDirect
 	z = stf(rPlayer.Ship.Pos.z) + (cos(encay)*DIRECTENCOUNTERDISTANCE); // add Z component
 	x = stf(rPlayer.Ship.Pos.x) + (sin(encay)*DIRECTENCOUNTERDISTANCE); // add X component
 
-	LogIt("Strange sail " + GetBearingFromShip16(Degree2Radian(bearing)));	// LDH 26Feb09
+	LogIt(TranslateString("","Strange sail") + " " + GetBearingFromShip16(Degree2Radian(bearing)));	// LDH 26Feb09
 	ay = randnorm(encay + 3.2, Degree2Radian(20.0));	// LDH random heading 29Jan09
 	ReloadProgressUpdate();
 
@@ -915,7 +915,7 @@ void LaunchMine(ref rCharacter)
 
 		// launch effects
 		PlayStereoSound("objects\shipcharge\ball_splash1.wav");
-		Logit("Mine launched");
+		Logit(TranslateString("","Mine launched"));
 		CreateParticleSystemX("ball_splash", x, 1.0, z, 0.0, 3.0, 0.0, 2);
 	} else {
 		Log_SetStringToLog(TranslateString("", "You don't have enough gunpowder for a mine") + "!");
@@ -942,7 +942,7 @@ void SwimGoodEvent(ref rCharacter, int iQuantity)
 				Log_SetStringToLog(XI_ConvertString(GetShipTypeName(rCharacter)) + " " + GetMyShipNameShow(rCharacter) + " " +TranslateString("","damaged on mine") + "!");   //screenmessage
 			} else {
 				AddPartyExp(PChar, 100 * sp);
-				Log_SetStringToLog(TranslateString("","We have hit a mine") + "!");   //screenmessage
+				Log_SetStringToLog(TranslateString("","We have hit a mine!"));   //screenmessage
 			}
 			Ship_Detonate(rCharacter, true, true);
 		break;
@@ -950,7 +950,7 @@ void SwimGoodEvent(ref rCharacter, int iQuantity)
 		case 102: // 102 floating trunk
 			rCharacter.ship.hp = makeint(sti(rCharacter.ship.hp) * (70+ rand(20)) / 100 ); // ship hp reduced to 70 - 90%
 			if (IsMainCharacter(rCharacter)) {
-				Logit(TranslateString("","We have collided with a drifting trunk") + "!");   //screenmessage
+				Logit(TranslateString("","We have collided with a drifting trunk!"));   //screenmessage
 				if (ENABLE_EXTRA_SOUNDS == 1) PlaySound("objects\shipcharge\hit_torock.wav");
 			}
 		break;
@@ -974,7 +974,7 @@ void SwimGoodEvent(ref rCharacter, int iQuantity)
 					{
 						TakenItems(rCharacter, "potion" + n, rand(4) * sp);
 					}
-					Logit(TranslateString("You find some burial objects on a witch doctor's funeral raft"));
+					Logit(TranslateString("","You find some burial objects on a witch doctor's funeral raft"));
 				break;
 
 				case 3:
@@ -986,7 +986,7 @@ void SwimGoodEvent(ref rCharacter, int iQuantity)
 					Logit(TranslateString("","You find some burial objects on a voodoo priest's funeral raft"));
 				break;
 
-				Logit("This Indian funeral raft has already been plundered..."); // default, bad luck event
+				Logit(TranslateString("","This Indian funeral raft has already been plundered...")); // default, bad luck event
 			}
 		break; // 103
 
@@ -1116,12 +1116,12 @@ void ProcessCCCkeys(string ControlName) // Jan07, called by Seadogs.c. Put the c
 				if(CheckAttribute(GetMainCharacter(),"nodirectsail"))
 				{
 					DeleteAttribute(GetMainCharacter(),"nodirectsail");
-					Logit("Directsail mod active");
+					Logit(TranslateString("","Directsail mod active"));
 				}
 				else
 				{
 					characters[GetMainCharacterIndex()].nodirectsail = 1;
-					Logit("Directsail mod deactivated");
+					Logit(TranslateString("","Directsail mod deactivated"));
 				}
 			 break;
 
@@ -1142,7 +1142,7 @@ void DisplaySeaviewCoords()
 		int pZ = MakeInt(characters[GetMainCharacterIndex()].ship.pos.Z);
 		if(pX<0){xtext = "(east)";}else{xtext = "(west)";}
 		if(pZ<0){ztext = "(north)";}else{ztext = "(south)";}
-		LogIt("Our position from "+characters[GetMainCharacterIndex()].location+": "+pZ+" "+ztext+", "+pX+" "+xtext);
+		LogIt(TranslateString("","Our position from") + " "+characters[GetMainCharacterIndex()].location+": "+pZ+" "+ztext+", "+pX+" "+xtext);
 	}
 }
 

@@ -18,7 +18,7 @@ string DLG_TEXT[76] = {
 "Who are you, and what do you want?",
 "Keep a civil tongue in your head, or you'll find it on the floor. I'm from the governor.",
 "Finally! Thank God. Pardon my manner; I must act the part of a French soldier.",
-"I understand completely. Sir Silehard sent me to help you.",
+"I understand completely. Sir Robert Christopher Silehard sent me to help you.",
 "Then listen closely: I recently learned that a French captain lost a small fortune at backgammon. You're familiar with the game?",
 "Of course - but what does it have to do with your mission?",
 "I became acquainted with this captain, yes? Won his trust. And he told me he'd lost such a lot of money that he'd never be able to pay it off. Indeed, he was prepared to take his own life when I offered him another way out of his predicament.\nI offered to pay his debt myself if he would sail his ship to #sRedmond# and give it up to our soldiers. He agreed.",

@@ -1488,6 +1488,11 @@ void ProcessControls()
 							PostEvent("Longrifle_W_on_back", 1000, "i", PChar);
 						}
 
+						if(IsEquipCharacterByItem(PChar, "portugize"))
+						{
+							PostEvent("portugize_on_back", 1000, "i", PChar);
+						}
+
 						if(IsEquipCharacterByItem(Pchar, "shield_hand"))
 						{
 							RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE );
@@ -1569,6 +1574,11 @@ void ProcessControls()
 						if(IsEquipCharacterByItem(Pchar, "Longrifle_W"))
 						{
 							if(charge == 1.0) PostEvent("Longrifle_W_on_hip", 1000, "i", Pchar);
+						}
+
+						if(IsEquipCharacterByItem(Pchar, "portugize"))
+						{
+							if(charge >= 1.0) PostEvent("portugize_on_hip", 1000, "i", Pchar);
 						}
 
 						if(IsEquipCharacterByItem(Pchar, "pistolbow"))

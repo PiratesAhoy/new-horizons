@@ -6,7 +6,7 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	aref Link, Diag;
 	string NPC_Meeting, TempInfoCharacterID_1, TempInfoCharacterID_2;
-	int DonationSize;
+	int DonationSize,line; //PW added line for variable text in poker room
 	
 	DeleteAttribute(&Dialog,"Links");
 
@@ -22,13 +22,21 @@ void ProcessDialogEvent()
 	iMonth = environment.date.month;
 	string lastspeak_date = iday + " " + iMonth;
 
-	if (npchar.quest.Meeting != lastspeak_date)
+	//Levis: For the casino
+	if(PChar.location == "Cartagena Casino")
 	{
-		npchar.quest.last_theme = makeint(rand(1));
-		npchar.quest.Meeting = lastspeak_date;
-		npchar.money = rand(10)*100;
-		if(CheckCharacterPerk(PChar,"HighStakes")) npchar.money = sti(npchar.money) * 5; //Added by Levis
-		//Log_SetStringToLog("Money of character " + npchar.id + " is " + npchar.money + "!!!");
+		npchar.quest.last_theme = 1;
+	}
+	else 
+	{
+		if (npchar.quest.Meeting != lastspeak_date)
+		{
+			npchar.quest.last_theme = makeint(rand(1));
+			npchar.quest.Meeting = lastspeak_date;
+			npchar.money = rand(10)*100;
+			if(CheckCharacterPerk(PChar,"HighStakes")) npchar.money = sti(npchar.money) * 5; //Added by Levis
+			//Log_SetStringToLog("Money of character " + npchar.id + " is " + npchar.money + "!!!");
+		}
 	}
 	if(!CheckAttribute(NPChar,"HPupdated")) { ResetHP(NPChar); NPChar.HPupdated = true; }//MAXIMUS
 	
@@ -44,6 +52,8 @@ void ProcessDialogEvent()
 	if (PChar.location == "Smugglers_tavern") allowSubQuests = true;
 	if (PChar.location == "Conceicao_tavern") allowSubQuests = true; // PB: was "Douwesen_tavern" again!
 	if (PChar.location == "QC_tavern") allowSubQuests = true;
+	if (PChar.location == "PoPrince_Tavern") allowSubQuests = true;
+	if (PChar.location == "Havana_Tavern") allowSubQuests = true;
 	// TIH <--
 //	allowSubQuests = true; //MAXIMUS    //ASVS : this looks suspicious, need to be checked
 	//if (PChar.location == "Tortuga_tavern") PChar.habitue.locator = "sit7"; // habitue locators not used PW
@@ -57,15 +67,23 @@ void ProcessDialogEvent()
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
 			// SCREWFACE : RANDOM TAVERNBRAWL MOD
-			if(TAVERNBRAWL_FROMDIALOG)
+			if(TAVERNBRAWL_FROMDIALOG && PChar.location != "Cartagena Casino")
 			{
-				if(!CheckQuestAttribute("gambling_with_girl", "go_to_see_girl") && !CheckAttribute(pchar,"indialog.withgirl"))// added by MAXIMUS to prevent from this while we are speaking in room
+				if(!CheckQuestAttribute("gambling_with_girl", "go_to_see_girl") && !CheckAttribute(pchar,"indialog.withgirl")  && !CheckAttribute(PChar,"quest.poker.started"))// added by MAXIMUS & PW to prevent from this while speaking in room or poker competition
 				{
 					PChar.TAVERNBRAWL = true;
 					if(rand(10)==0){LAi_LocationFightDisable(&locations[FindLocation(Pchar.location)], false);Random_Raid("smugglers", 5, PIRATE, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, LanguageConvertString(tmpLangFileID,"TAVERNBRAWL") + "!!!");}
 					DeleteAttribute(PChar,"TAVERNBRAWL");
 				}
 			}
+		break;
+
+		case "exit_habitue_leaves":
+			pchar.quest.gambling_with_girl = "gambled";
+			AddDialogExitQuest("habitue_exit_from_room");
+			AddQuestRecord("gambled_girl", 2);
+			Diag.CurrentNode = Diag.TempNode;
+			DialogExit();
 		break;
 
 		case "First time":
@@ -77,78 +95,94 @@ void ProcessDialogEvent()
 			Dialog.defLinkSnd = "dialogs\woman\024";
 			Dialog.ani = "Sit_Lower_head";
 			Dialog.cam = "1";
-			
-
-			switch (npchar.quest.last_theme)
+			//PW ====> make gambling opponenets more frequent for GAMBLER and random speech in poker room
+			if (PChar.location == "Turks_poker_room")
 			{
-				case "0": //drink
-					dialog.snd = "Voice\HADI\HADI001";
-					Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
-					dialog.text = DLG_TEXT[0];
-					link.l1 = DLG_TEXT[1];
-					link.l1.go = "exit";
-					if (makeint(pchar.money) >= 1)
-					{
-						link.l2 = DLG_TEXT[2];
-						link.l2.go = "talk_with_alchogol";
-					}
-				break;
-
-				case "1":   //dice
-					if (!checkAttribute(pchar, "quest.gambling_with_girl"))
-					{
-						pchar.quest.gambling_with_girl = "";
-					}
-					if (allowSubQuests && CheckQuestAttribute("gambling_with_girl", "") && makeint(pchar.quest.gambling) >= 40 && makeint(pchar.money) >=100)
-					{
-						dialog.snd = "Voice\HADI\HADI002";
-						dialog.text = DLG_TEXT[3];
-						link.l1 = DLG_TEXT[4];
-						link.l1.go = "gambling_with_girl_1";
-					}
-					else
-					{
-						dialog.snd = "Voice\HADI\HADI003";
-						dialog.text = DLG_TEXT[5];
-						link.l1 = DLG_TEXT[6];
-						link.l1.go = "exit";
-						if (makeint(pchar.quest.gambling) < 50 && makeint(npchar.money) >=100)
-						{
-							dialog.snd = pcharrepphrase("Voice\HADI\HADI006", "Voice\HADI\HADI007");
-							dialog.text = pcharrepphrase(DLG_TEXT[12], DLG_TEXT[13] + GetMyName(Pchar) + DLG_TEXT[14]);
-							if (makeint(pchar.money) >= 100)
-							{
-								link.l1 = DLG_TEXT[15];
-								link.l1.go = "gambling";
-							}
-							link.l2 = DLG_TEXT[16];
-							link.l2.go = "exit";
-						}
-						if (makeint(pchar.quest.gambling) >= 50 && makeint(npchar.money) >=100)
-						{
-							dialog.snd = "Voice\HADI\HADI005";
-							Dialog.text = DLG_TEXT[9];
-							if (makeint(pchar.money) >= 100)
-							{
-								link.l1 = DLG_TEXT[10];
-								link.l1.go = "gambling";
-							}
-							link.l2 = DLG_TEXT[11];
-							link.l2.go = "exit";
-						}
-						if (makeint(pchar.quest.gambling) >= 100 && makeint(npchar.money) <100)
-						{
-							dialog.snd = "Voice\HADI\HADI004";
-							Dialog.text = DLG_TEXT[7];
-							link.l1 = DLG_TEXT[8];
-							link.l1.go = "exit";
-						}
-					}
-				break;
+				line = ((rand (21)) + 131) ;
+				dialog.text = DLG_TEXT[line];
+				line = ((rand(3)) + 153);
+				link.l1 = DLG_TEXT[line];
+				link.l1.go = "exit";	
 			}
-			
+			else
+			{
+				if (CharPlayerType == PLAYER_TYPE_GAMBLER)
+				{
+					// npchar.quest.last_theme = "1";
+					if (makeint(Rand(5)) < 3)npchar.quest.last_theme = "1";
+				}
+		
+			//PW <=======
+				switch (npchar.quest.last_theme)
+				{
+					case "0": //drink
+						dialog.snd = "Voice\HADI\HADI001";
+						Preprocessor_Add("lad", GetMyAddressForm(NPChar, PChar, ADDR_INFORMAL, false, false)); // DeathDaisy
+						dialog.text = DLG_TEXT[0];
+						link.l1 = DLG_TEXT[1];
+						link.l1.go = "exit";
+						if (makeint(pchar.money) >= 1)
+						{
+							link.l2 = DLG_TEXT[2];
+							link.l2.go = "talk_with_alchogol";
+						}
+					break;
+
+					case "1":   //dice
+						if (!checkAttribute(pchar, "quest.gambling_with_girl"))
+						{
+							pchar.quest.gambling_with_girl = "";
+						}
+						if (allowSubQuests && CheckQuestAttribute("gambling_with_girl", "") && makeint(pchar.quest.gambling) >= 40 && makeint(pchar.money) >=100)
+						{
+							dialog.snd = "Voice\HADI\HADI002";
+							dialog.text = DLG_TEXT[3];
+							link.l1 = DLG_TEXT[4];
+							link.l1.go = "gambling_with_girl_1";
+						}
+						else
+						{
+							dialog.snd = "Voice\HADI\HADI003";
+							dialog.text = DLG_TEXT[5];
+							link.l1 = DLG_TEXT[6];
+							link.l1.go = "exit";
+							if (makeint(pchar.quest.gambling) < 50 && makeint(npchar.money) >=100)
+							{
+								dialog.snd = pcharrepphrase("Voice\HADI\HADI006", "Voice\HADI\HADI007");
+								dialog.text = pcharrepphrase(DLG_TEXT[12], DLG_TEXT[13] + GetMyName(Pchar) + DLG_TEXT[14]);
+								if (makeint(pchar.money) >= 100)
+								{
+									link.l1 = DLG_TEXT[15];
+									link.l1.go = "gambling";
+								}
+								link.l2 = DLG_TEXT[16];
+								link.l2.go = "exit";
+							}
+							if (makeint(pchar.quest.gambling) >= 50 && makeint(npchar.money) >=100)
+							{
+								dialog.snd = "Voice\HADI\HADI005";
+								Dialog.text = DLG_TEXT[9];
+								if (makeint(pchar.money) >= 100)
+								{
+									link.l1 = DLG_TEXT[10];
+									link.l1.go = "gambling";
+								}
+								link.l2 = DLG_TEXT[11];
+								link.l2.go = "exit";
+							}
+							if (makeint(pchar.quest.gambling) >= 100 && makeint(npchar.money) <100)
+							{
+								dialog.snd = "Voice\HADI\HADI004";
+								Dialog.text = DLG_TEXT[7];
+								link.l1 = DLG_TEXT[8];
+								link.l1.go = "exit";
+							}
+						}
+					break;
+				}
+			}
 			Diag.TempNode = "First time";
-	    break;
+		break;
 
 		case "gambling_with_girl_1":
 			pchar.quest.gambling_with_girl = npchar.id;
@@ -228,7 +262,14 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\HADI\HADI015";
 			dialog.text = DLG_TEXT[33] + (rand(6)+3) + DLG_TEXT[34];
 			link.l1 = DLG_TEXT[35] + (rand(10) + 10) + DLG_TEXT[36];
-			link.l1.go = "speak_in_room_while_see_girl_5";
+			if (CheckAttribute (Pchar,"quest.poker.allowed")) //PW check for freeplay gambler to allow trophy quest
+			{
+				link.l1.go = "speak_in_room_while_see_girl_5a";
+			}
+			else
+			{
+				link.l1.go = "speak_in_room_while_see_girl_5";
+			}
 		break;
 
 		case "speak_in_room_while_see_girl_5":
@@ -240,7 +281,51 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("habitue_exit_from_room");
 			AddQuestRecord("gambled_girl", 2);
 		break;
+
+		case "speak_in_room_while_see_girl_5a":
+			dialog.snd = "Voice\HADI\HADI016";
+			dialog.text = DLG_TEXT[123];
+			link.l1 = DLG_TEXT[124];
+			link.l1.go = "speak_in_room_while_see_girl_5a2";
+			pchar.quest.gambling_with_girl = "gambled";
+		break;
+
+		case "speak_in_room_while_see_girl_5a2":
+			dialog.snd = "Voice\HADI\HADI016";
+			dialog.text = DLG_TEXT[125];
+			link.l1 = DLG_TEXT[126];
+			link.l1.go = "speak_in_room_while_see_girl_5a3";
+		break;
 		
+		case "speak_in_room_while_see_girl_5a3":
+			dialog.snd = "Voice\HADI\HADI015";
+			dialog.text = DLG_TEXT[127];
+			link.l1 = DLG_TEXT[128];
+			link.l1.go = "speak_in_room_while_see_girl_5a4";
+			link.l2 = DLG_TEXT[157];
+			link.l2.go = "exit_habitue_leaves";
+		break;
+		
+		case "speak_in_room_while_see_girl_5a4":
+			dialog.snd = "Voice\HADI\HADI015";
+			dialog.text = DLG_TEXT[129] + (rand(6)+3) + DLG_TEXT[34];
+			link.l1 = DLG_TEXT[35] + (rand(10) + 10) + DLG_TEXT[130];
+			link.l1.go = "speak_in_room_while_see_girl_5a5";
+			GiveItem2Character(PChar, "poker_invite1");
+			pchar.quest.poker.times = 0;
+			SetQuestHeader("Poker_Tournament");
+			AddQuestRecord("Poker_Tournament", 1);
+		break;
+
+		case "speak_in_room_while_see_girl_5a5":
+			dialog.snd = "Voice\HADI\HADI016";
+			dialog.text = DLG_TEXT[37];
+			link.l1 = DLG_TEXT[38];
+			link.l1.go = "exit";
+			AddDialogExitQuest("habitue_exit_from_room");
+			AddQuestRecord("gambled_girl", 2);
+		break;
+
 		case "speak_in_room_while_see_girl_6":
 			dialog.snd = "Voice\HADI\HADI017";
 			dialog.text = DLG_TEXT[39];
@@ -297,7 +382,7 @@ void ProcessDialogEvent()
 			Diag.tempNode = "first time";
 			dialog.snd = "Voice\HADI\HADI019";
 			Dialog.text = DLG_TEXT[108];
-			link.l1.go = "BlackJack";
+			link.l1.go = "Vingt-Un";
 			link.l1 = XI_ConvertString(link.l1.go);
 			link.l2.go = "Poker";
 			link.l2 = XI_ConvertString(link.l2.go);
@@ -309,10 +394,10 @@ void ProcessDialogEvent()
 			link.l5.go = "exit_sit";
 		break;
 
-		case "BlackJack":
+		case "Vingt-Un":
 			Diag.CurrentNode = Diag.TempNode;
 			DialogExit();
-			LaunchGambling(NPChar, "BlackJack");
+			LaunchGambling(NPChar, "Vingt-Un");
 		break;
 
 		case "Poker":

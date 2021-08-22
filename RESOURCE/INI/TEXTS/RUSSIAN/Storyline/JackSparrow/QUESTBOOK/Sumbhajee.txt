@@ -1,7 +1,7 @@
-title=Saving Askay's brother
-text.t1=Askay, the aide of Sri Sumbhajee, told me that his brother was kidnapped by some Spaniard in Holland's service. I think I should deal with that problem and help this man return home.
-text.t2=The Prison Commendant told me I could try and persuade the prison ship's captain to allow me to take Pusasn as a slave. Lets hope that I can so I can release him to Sri Sumbhajee and his brother.
-text.t3=This Spaniard was unforgivably rude with me. So I killed him and his officer. The brother is saved.
-text.t4=This Spaniard was unforgivably rude with me. But when his men realized that I was here by the order of the governor, they slew their captain and left.
-text.t5=The Prison Commendant realised I was in disguise and came to intercept me on the jetty. Too bad for him. I had to kill him and two soldiers.
-text.t6=I've "gotten" a new Pistol! I took it from Sri Sumbhajee after his aide couldn't pay me for my troubles in saving his brother.
+title=Спасение брата Аская
+text.t1=Аскай, помощник Шри Самбхэджи, сказал мне, что его брат был похищен каким-то испанцем на службе Голландии. Я думаю, что должен помочь ему и возвратить его брата.
+text.t2=Комендант тюрьмы сказал, что я мог бы попытаться поговорить с капитаном тюремного корабля, чтобы он позволил погрузить Пусаша на мой корабль в качестве раба. Надесь это позволит мне освободить Шри Самбхэджи и его брата.
+text.t3=Этот испанец был непростительно груб со мной. Я убил его и его офицеров. Брат Аская остался жив.
+text.t4=Этот испанец был непростительно груб со мной. Но когда его люди поняли, что я был здесь по приказу губернатора, они убили своего капитана и сбежали.
+text.t5=Комендант тюрьмы понял что я его обманул и решил перехватить меня на причале. Это было слишком опрометчиво с его стороны. Теперь мне придется убить его вместе с эскортом.
+text.t6=Я "получил" новый пистолет! Я взял его у Шри Самбхэджи после того как его помощник не смог заплатить за мои труды по освобождению его брата.

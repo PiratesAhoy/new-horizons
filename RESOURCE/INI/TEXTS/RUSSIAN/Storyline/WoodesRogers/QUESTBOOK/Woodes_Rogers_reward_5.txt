@@ -1,6 +1,6 @@
-title=Woodes Rogers fifth reward
-text.t1=There is a Key in the molasses tank. I have to get it out of there somehow. Rogers mentioned the Shop Office - I have to pass through it.
-text.t2=Where do these pistols come from? Who have they belonged to - pirates accepting amnesty from Woodes Rogers? This very long weapon has the signature 'Richards'. I guess it's time again to enter Rogers' large residence...
+title=Вудс Роджерс пятая награда
+text.t1=В резервуаре с патокой есть ключ. Я должен его оттуда достать. Роджерс упоминал Магазин - я должен его посетить.
+text.t2=Откуда только берутся эти пистолеты? Это очень длинное оружие имеет подпись 'Richards'. думаю, пришло время снова вернуться в 'резиденцию' Роджерса...
 text.t3=
 text.t4=
 text.t5=

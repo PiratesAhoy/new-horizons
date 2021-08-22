@@ -17,7 +17,7 @@ string DLG_TEXT[37] = {
 "Perhaps we can use you. But no one can know you are working for me.",
 "And no one shall. What do you have in mind for me?",
 "Non, it is all to risky for me. Perhaps another time, when I have a larger ship and more crew.",
-"There is a rumour, that a Dutch smuggler is on it's way to #sSanto Domingo#, loaded with ammunition. They say that the Spanish are planning on retaking #sRedmond#. But why should France meddle in this?",
+"There is a rumour, that a Dutch smuggler is on its way to #sSanto Domingo#, loaded with ammunition. They say that the Spanish are planning on retaking #sRedmond#. But why should France meddle in this?",
 "Why, please tell me Contre-Amirale.",
 "#sPort au Prince# is surrounded by Spanish settlements. If there would be a war, #sPort au Prince# would be swarmed by Spanish troops in no time. So we need to maintain the status-quo so to speak. So, I need you to intercept the Dutch Smuggler.",
 "I will take the mission. Will there be a reward if I succeed?",

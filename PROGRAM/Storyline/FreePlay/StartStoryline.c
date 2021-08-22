@@ -38,6 +38,13 @@ void StartStoryLine()
 //		else PChar.start_weapon.blade = "witcher_steel";
 //	}
 
+	if (GetCurrentFlag() != ENGLAND && GetCurrentFlag() != PERSONAL_NATION)
+	{
+		ch.nation = GetCurrentFlag();
+		DeleteAttribute(ch, "questchar")
+		SetRandomNameToCharacter(ch);
+	}
+
 	switch(CharPlayerType)
 	{
 		case PLAYER_TYPE_REBEL:
@@ -167,6 +174,16 @@ void StartStoryLine()
 		break;
 
 		case PLAYER_TYPE_GAMBLER:
+			Pchar.quest.poker.allowed = true;//PW allow poker trophy quest only for freeplay gambler
+			Locations[FindLocation("Turks_port")].reload.l19.name = "reload9_back";
+			Locations[FindLocation("Turks_port")].reload.l19.go = "Turks_poker_entre";
+			Locations[FindLocation("Turks_port")].reload.l19.emerge = "reload1";
+			Locations[FindLocation("Turks_port")].reload.l19.autoreload = "0";
+
+			Locations[FindLocation("Turks_port")].reload.l20.name = "balcony";
+			Locations[FindLocation("Turks_port")].reload.l20.go = "Turks_poker_entre";
+			Locations[FindLocation("Turks_port")].reload.l20.emerge = "reload2";
+			Locations[FindLocation("Turks_port")].reload.l20.autoreload = "0";
 			// Elbaron Caron
 			ch = CharacterFromID("Malcolm Hatcher");
 			ch.Dialog.Filename = "Robert Fletcher_dialog.c";
@@ -342,6 +359,44 @@ void StartStoryLine()
 			DeleteAttribute(ch, "questchar")
 			SetRandomNameToCharacter(ch);
 			SetModelfromArray(ch, GetModelIndex(GetRandomModelForTypeExSubCheck(1, "Captains", "man", iNation)));
+		break;
+
+		case PLAYER_TYPE_ENGINEER:
+			Pchar.portugize_phase = 0;
+			Pchar.sakharine_phase = 0;
+			Pchar.perks.list.Gunman = true;	
+			Pchar.perks.list.GunProfessional = true;
+			Locations[FindLocation("New_cloister_inside")].reload.l5.disable = false;		//inner yard to library
+			Locations[FindLocation("New_cloister_inside")].locators_radius.reload.reload5 = 0.001;	//small until map is given
+			Pchar.monastary = "Ivan_Sakharine";							//Cartagena citizens inform about the New Cloister
+
+			pchar.quest.monk_map_talk.win_condition.l1 = "locator";
+			pchar.quest.monk_map_talk.win_condition.l1.location = "New_cloister_inside";
+			pchar.quest.monk_map_talk.win_condition.l1.locator_group = "sit";
+			pchar.quest.monk_map_talk.win_condition.l1.locator = "sit1";
+			pchar.quest.monk_map_talk.win_condition = "monk_map_talk";
+		
+			Pchar.quest.port_mech.win_condition.l1 = "item";
+			Pchar.quest.port_mech.win_condition.l1.character = Pchar.id;
+			Pchar.quest.port_mech.win_condition.l1.item = "port_mechanism";
+			Pchar.quest.port_mech.win_condition = "check_portugize_parts";
+
+			Pchar.quest.port_tools.win_condition.l1 = "item";
+			Pchar.quest.port_tools.win_condition.l1.character = Pchar.id;
+			Pchar.quest.port_tools.win_condition.l1.item = "port_tools";
+			Pchar.quest.port_tools.win_condition = "check_portugize_parts";
+
+			pchar.quest.library_bars1.win_condition.l1 = "locator";
+			pchar.quest.library_bars1.win_condition.l1.location = "New_cloister_library";
+			pchar.quest.library_bars1.win_condition.l1.locator_group = "quest";
+			pchar.quest.library_bars1.win_condition.l1.locator = "bars1";
+			pchar.quest.library_bars1.win_condition = "library_bars1";
+
+			pchar.quest.library_bars2.win_condition.l1 = "locator";
+			pchar.quest.library_bars2.win_condition.l1.location = "New_cloister_library";
+			pchar.quest.library_bars2.win_condition.l1.locator_group = "quest";
+			pchar.quest.library_bars2.win_condition.l1.locator = "bars2";
+			pchar.quest.library_bars2.win_condition = "library_bars2";
 		break;
 	}
 
@@ -777,7 +832,7 @@ void StartStoryLine()
 	{
 		Periods[GetCurrentPeriod()].Royal.France.Name = "Louis XIII le Juste";
 		Periods[GetCurrentPeriod()].Royal.France.Title = XI_ConvertString("His Most Christian Majesty");
-		if(GetDataYear() >= 1643 && GetDataYear() <= 1715) Periods[GetCurrentPeriod()].Royal.France.Name = "Louis XIV le Grande";
+		if(GetDataYear() >= 1643 && GetDataYear() <= 1715) Periods[GetCurrentPeriod()].Royal.France.Name = "Louis XIV le Grand";
 	}
 			
 	// GOLDEN AGE OF PIRACY
@@ -1168,12 +1223,12 @@ void StartStoryLine()
 		}
 		if (GetDataYear() >= 1702 && GetDataYear() <= 1714)	// GR: War of Spanish Succession
 		{
-			SetNationRelationBoth(ENGLAND, SPAIN,    RELATION_FRIEND);
-			SetNationRelationBoth(FRANCE,  SPAIN,    RELATION_ENEMY);
-			SetNationRelationBoth(SPAIN,   HOLLAND,  RELATION_FRIEND);
-			SetNationRelationBoth(SPAIN,   PORTUGAL, RELATION_NEUTRAL);
-			SetNationRelationBoth(FRANCE,  PORTUGAL, RELATION_NEUTRAL);
-			SetNationRelationBoth(HOLLAND, PORTUGAL, RELATION_NEUTRAL);
+			SetNationRelationBoth(ENGLAND, SPAIN,    RELATION_ENEMY);
+			SetNationRelationBoth(FRANCE,  SPAIN,    RELATION_FRIEND);
+			SetNationRelationBoth(SPAIN,   HOLLAND,  RELATION_ENEMY);
+			SetNationRelationBoth(SPAIN,   PORTUGAL, RELATION_ENEMY);
+			SetNationRelationBoth(FRANCE,  PORTUGAL, RELATION_ENEMY);
+			SetNationRelationBoth(HOLLAND, PORTUGAL, RELATION_FRIEND);
 			if(SWEDEN_ALLOWED)
 			{
 				SetNationRelationBoth(FRANCE,	SWEDEN,	RELATION_NEUTRAL);
@@ -1254,15 +1309,16 @@ void StartStoryLine()
 		}
 	}
 	// NAPOLEONIC ERA
-	if(GetDataYear() >= 1808){	// DeathDaisy: suggestion from Homo Erectus!
+	if(GetDataYear() >= 1808){	// DeathDaisy: suggestion from Homo Eructus!
 		SetNationRelationBoth(SPAIN,FRANCE,RELATION_ENEMY);
+		SetNationRelationBoth(ENGLAND, SPAIN,	RELATION_FRIEND); // Homo eructus: moved from 1812
+		SetNationRelationBoth(SPAIN, PORTUGAL,	RELATION_FRIEND);
 	}
 	if (GetDataYear() >= 1812 && GetDataYear() <= 1815)	// GR: War of 1812
 	{
-		SetNationRelationBoth(ENGLAND, SPAIN,	RELATION_FRIEND);
 		SetNationRelationBoth(ENGLAND, AMERICA,	RELATION_ENEMY);
-		SetNationRelationBoth(SPAIN, AMERICA,	RELATION_NEUTRAL);	// DeathDaisy: from enemy of neutral, suggestion from Homo erectus
-		//SetNationRelationBoth(SPAIN, FRANCE,	RELATION_ENEMY); // DeathDaisy: added above at an earlier date, also suggested by Homo erectus
+		//SetNationRelationBoth(SPAIN, AMERICA,	RELATION_NEUTRAL);	// DeathDaisy: from enemy of neutral, suggestion from  // Homo eructus: set as default for the period
+		//SetNationRelationBoth(SPAIN, FRANCE,	RELATION_ENEMY); // DeathDaisy: added above at an earlier date, also suggested by Homo eructus
 	}
 
 	/*if (GetDataYear() >= 1789 && GetDataYear() <= 1808) // DeathDaisy: out commented since monarch reigns are added as its own thing above

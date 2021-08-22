@@ -1,3 +1,3 @@
 title=Misión secundaria: ¿Thomas O'Reily, contrabandista?
-text.t1= Parece que ese tal Thomas O'Reily está envuelto en todo tipo de negocios turbios, y no todos son del gusto de los contrabandistas. Debería informarlos de que lo he visto tratando con los nativos. Puede que lo encuentren interesante.
+text.t1= Parece que ese tal Thomas O'Reily está envuelto en todo tipo de negocios turbios, y sospecho que no todos son del gusto de los contrabandistas. Debería informarlos de que lo he visto tratando con los nativos. Puede que lo encuentren interesante.
 text.t2= He informado a los contrabandistas de lo que he averiguado sobre Thomas O'Reily. Me han dado las gracias por la información y me han dicho que se harán cargo del asunto.

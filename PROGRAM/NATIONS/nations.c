@@ -804,8 +804,13 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 			if(CheckAttribute(char,"quest.relation_tutorial")) // PB: Now you should know what you're doing!
 			{
 				// No longer an honourable merchant
-				if (CheckCharacterItem(char, "Trade_Passport"))	TakeItemFromCharacter(char, "Trade_Passport");
-				if (CheckCharacterItem(char, "EITC_Passport"))	TakeItemFromCharacter(char, "EITC_Passport");
+				if (CheckCharacterItem(char, "Trade_Passport"))		TakeItemFromCharacter(char, "Trade_Passport");
+				if (CheckCharacterItem(char, "Trade_PassportE"))	TakeItemFromCharacter(char, "Trade_PassportE");
+				if (CheckCharacterItem(char, "Trade_PassportF"))	TakeItemFromCharacter(char, "Trade_PassportF");
+				if (CheckCharacterItem(char, "Trade_PassportS"))	TakeItemFromCharacter(char, "Trade_PassportS");
+				if (CheckCharacterItem(char, "Trade_PassportH"))	TakeItemFromCharacter(char, "Trade_PassportH");
+				if (CheckCharacterItem(char, "Trade_PassportP"))	TakeItemFromCharacter(char, "Trade_PassportP");
+				if (CheckCharacterItem(char, "EITC_Passport"))		TakeItemFromCharacter(char, "EITC_Passport");
 			}
 			else
 			{

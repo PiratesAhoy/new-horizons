@@ -52,7 +52,3 @@ text.t50=The angry mob killed Steven.... I guess the Apothecary won't open anymo
 text.t51=I reported the murder of one of my crew to the commander of the prison, but he said he can't do anything without evidence.
 text.t52=
 
-
-
-
- 

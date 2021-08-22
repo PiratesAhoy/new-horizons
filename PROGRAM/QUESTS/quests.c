@@ -121,6 +121,7 @@ aref GetQuestData(string idQuest)
 // US version:
 bool CheckQuestRecord(aref qref,string textId)
 {
+	ref mc = GetMainCharacter();//PW need to check player attribute to allow repeat questbook entries for poker tournament
 	/*if( CheckAttribute(qref,"Text") )
 	{
 		int pos0,pos1;
@@ -143,7 +144,6 @@ bool CheckQuestRecord(aref qref,string textId)
 /*	bool retVal = hasSubStr(qref.Text, textId + ","); // KK
 	if (!retVal) retVal = hasSubStr(qref.Text, "," + textId); // KK
 	return retVal; */
-
 	bool retVal = false;
 	if(!CheckAttribute(qref,"Text")) return false;
 	if(qref.Text == textID) retVal = true;					// Check if textID is the only record present
@@ -153,6 +153,7 @@ bool CheckQuestRecord(aref qref,string textId)
 		retVal = hasSubstr(strpatch, "*" + textID + ",") || hasSubstr(strpatch, "," + textID + "*");
 		if(!retVal) retVal = hasSubstr(qref.text, "," + textID + ",");	// Check if textID is somewhere in the middle
 	}
+	if (CheckAttribute(mc,"quest.poker.winner")) retVal = false;//PW allow repeat questbook entries for poker tournament iterations
 	return retVal;
 }
 void SetQuestHeader(string idQuest)

@@ -28,7 +28,7 @@ void InitRandomShipsNames()
 
 	// England names
 	n = 0;
-	n = AddStr2Array(&sRndShpEnName, n, "Aboukir,Acasta,Achar,Achille,Acorn,Active,Actoeon,Acute,Adamant,Adonis,Advice,Aeolus,Africa,Africaine,Agamemnon,Agressor,Aigle");
+	n = AddStr2Array(&sRndShpEnName, n, "Acasta,Achar,Achille,Acorn,Active,Actoeon,Acute,Adamant,Adonis,Advice,Aeolus,Africa,Africaine,Agamemnon,Agressor,Aigle");
 	n = AddStr2Array(&sRndShpEnName, n, "Aildreda,Alacrity,Alarm,Alban,Albicore,Albion,Alceste,Alcide,Alcmene,Alexander,Alfred,Algerian,Allemaar,Alligator,Alonso,Amaranthe");
 	n = AddStr2Array(&sRndShpEnName, n, "Amazon,Amelia,Amethyst,Amphion,Amphitrite,Anacreon,Andromeda,Angel,Antelope,Apelles,Apollo,Aquilon,Arab,Ardent,Argo,Argonaute,Ariadne");
 	n = AddStr2Array(&sRndShpEnName, n, "Ariel,Ark Royal,Armada,Arrogant,Arrow,Artoise,Asia,Assistance,Assurance,Astrea,Atalanta,Athenienne,Atlas,Audacious,Aurora,Avenger,Avon,Bacchante,Bacchus");
@@ -45,7 +45,7 @@ void InitRandomShipsNames()
 	n = AddStr2Array(&sRndShpEnName, n, "Hero,Heroine,Heron,Hibernia,Hind,Adelaide,Ajax,Anson,Bermuda,Cormorant,Dauntless,Dreadnought,Erebus,Fencer,Furious,Mary Rose, Golden Lion,Devonshire");
 	n = AddStr2Array(&sRndShpEnName, n, "Glorious,Hermes,Highlander,Hood,Nairana,Phaeton,Raleigh,Rodney,Superb,Tiger,Valiant");
 	n = AddStr2Array(&sRndShpEnName, n, "Horatio,Hostile,Hound,Hussar,Hyaena,Hydra,Hyperion,Illustrious,Implacable,Impregnable,Inconstant,Inflexible,Intrepid,Invincible");
-	n = AddStr2Array(&sRndShpEnName, n, "Iphigenia,Iris,Irresistible,Isis,Jason,Javelin,Juno,Jupiter,Juste,Kangaroo,Katherine,Kent,King George V,Jackal,Jaguar,Kite,Lancaster,Lapwing,Latona,Lavinia,Leda,Legion,Leonidas,Leopard,Levant,Leviathan");
+	n = AddStr2Array(&sRndShpEnName, n, "Iphigenia,Iris,Irresistible,Isis,Jason,Javelin,Juno,Jupiter,Juste,Kangaroo,Katherine,Kent,King George,Jackal,Jaguar,Kite,Lancaster,Lapwing,Latona,Lavinia,Leda,Legion,Leonidas,Leopard,Levant,Leviathan");
 	n = AddStr2Array(&sRndShpEnName, n, "Liberty,Lightning,Lion,Little Sally,Lively,Lizard,London,Lydia,Lynx,Lyra,Macedonian,Magnanime,Magnificent,Majestic,Mariner,Marital,Mars,Martin,Mary");
 	n = AddStr2Array(&sRndShpEnName, n, "Medina,Medusa,Medway,Melampus,Meleoger,Melpomene,Mercury,Merlin,Mermaid,Meteor,Minerva,Minotaur,Minstrel,Monarch,Mosquito,Myrmidon,Mullet,Mutine,Naid,Narcissus");
 	n = AddStr2Array(&sRndShpEnName, n, "Nautilus,Nemesis,Neptune,Nereus,Nimble,Nimrod,Nonsuch,Nymphe,Obedient,Ocean,Olympia,Opossum,Orestes,Orion,Otter,Paladin,Pallas,Pandora,Partridge,Pathfinder,Paulette,Peacock,Pearl");
@@ -56,7 +56,7 @@ void InitRandomShipsNames()
 	n = AddStr2Array(&sRndShpEnName, n, "Sirius,Snake,Solitaire,Spartan,Speedwell,Speedy,Spencer,Sphynx,Spider,Spitfire,Sprightly,Spy,Squirrel,Stag,Standard,Starling,Sturgeon,Success,Sultan,Surprise,Susan");
 	n = AddStr2Array(&sRndShpEnName, n, "Swaggerer,Swallow,Swan,Swift,Swiftsure,Swordfish,Sybille,Sylph,Syren,Talisman,Tartar,Teaser,Telemachus,Tempest,Terpsichore,Terrapin,Terrible,Thais,Thames,Theseus,Thetis,Thistle,Thorn,Thunderbolt");
 	n = AddStr2Array(&sRndShpEnName, n, "Tickler,Tigress,Traveller,Tremendous,Trepassy,Trial,Tribune,Trident,Trimmer,Trinidad,Triton,Triumph,Trooper,Trusty,Turbulent,Turpin,Ulysses,Undaunted,Unicorn,Union,Unite,Urgent,Vanguard,Venerable");
-	n = AddStr2Array(&sRndShpEnName, n, "Vengenance,Venus,Vesta,Vestal,Veteran,Victor,Victory,Vigilant,Vindictive,Viper,Vixen,Voyager,Vulture,Warrior,Warspite,Wasp,Wild Swan,Wren,Wolverine,Wrangler,Yarmouth,Zealous,Zebra,Zulu");
+	n = AddStr2Array(&sRndShpEnName, n, "Vengenance,Venus,Vesta,Vestal,Veteran,Victor,Victory,Victorious,Vigilant,Vindictive,Viper,Vixen,Voyager,Vulture,Warrior,Warspite,Wasp,Wild Swan,Wren,Wolverine,Wrangler,Yarmouth,Zealous,Zebra,Zulu");
 
 	// France names
 	n = 0;

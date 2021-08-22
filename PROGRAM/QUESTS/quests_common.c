@@ -3424,13 +3424,13 @@ Cost for level 50 is 55,374,000
 				break;
 
 				case "Muelle_tavern":
-					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit1") ChangeCharacterAddressGroup(pchar, "Muelle_tavern", "candles", "sit2");
-					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit7") ChangeCharacterAddressGroup(pchar, "Muelle_tavern", "candles", "sit3");
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit1") ChangeCharacterAddressGroup(pchar, "Muelle_tavern", "sit2", "sit2");
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit7") ChangeCharacterAddressGroup(pchar, "Muelle_tavern", "sit2", "sit3");
 				break;
 
 				case "Douwesen_tavern":
-					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit1") ChangeCharacterAddressGroup(pchar, "Douwesen_tavern", "candles", "sit2");
-					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit7") ChangeCharacterAddressGroup(pchar, "Douwesen_tavern", "candles", "sit3");
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit1") ChangeCharacterAddressGroup(pchar, "Douwesen_tavern", "sit2", "sit2");
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit7") ChangeCharacterAddressGroup(pchar, "Douwesen_tavern", "sit2", "sit3");
 				break;
 
 				case "Pirate_tavern":
@@ -3440,8 +3440,8 @@ Cost for level 50 is 55,374,000
 				break;
 
 				case "Conceicao_tavern":
-					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit1") ChangeCharacterAddressGroup(pchar, "Conceicao_tavern", "candles", "sit2");
-					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit7") ChangeCharacterAddressGroup(pchar, "Conceicao_tavern", "candles", "sit3");
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit1") ChangeCharacterAddressGroup(pchar, "Conceicao_tavern", "sit2", "sit2");
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit7") ChangeCharacterAddressGroup(pchar, "Conceicao_tavern", "sit2", "sit3");
 				break;
 
 				case "Smugglers_tavern":
@@ -3451,8 +3451,8 @@ Cost for level 50 is 55,374,000
 				break;
 
 				case "QC_tavern":
-					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit1") ChangeCharacterAddressGroup(pchar, "QC_tavern", "candles", "sit2");
-					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit7") ChangeCharacterAddressGroup(pchar, "QC_tavern", "candles", "sit3"); //PW was sit3 using sit7 but sit3 no longer a valid locator so won't be used?
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit1") ChangeCharacterAddressGroup(pchar, "QC_tavern", "sit2", "sit2");
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit7") ChangeCharacterAddressGroup(pchar, "QC_tavern", "sit2", "sit3"); //PW was sit3 using sit7 but sit3 no longer a valid locator so won't be used?
 				break;
 
 				case "QC_brothel"://<<<<------------------------------------------------------------------Added This, Love Verruckt
@@ -3464,6 +3464,19 @@ Cost for level 50 is 55,374,000
 					{
 						ChangeCharacterAddressGroup(pchar, "QC_brothel", "sit", "sit2");
 					}
+				break;
+
+				case "PoPrince_Tavern":
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit8") ChangeCharacterAddressGroup(pchar, "PoPrince_Tavern", "sit2", "sit4");
+				break;
+
+				case "Havana_Tavern":
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit6") ChangeCharacterAddressGroup(pchar, "Havana_Tavern", "sit2", "sit8");
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit20") ChangeCharacterAddressGroup(pchar, "Havana_Tavern", "sit2", "sit17");
+				break;
+
+				case "Santiago_Tavern":
+					if (characters[GetCharacterIndex(pchar.quest.friend_in_tavern)].location.locator == "sit12") ChangeCharacterAddressGroup(pchar, "Santiago_Tavern", "sit2", "sit11");
 				break;
 
 				// default:
@@ -3558,7 +3571,10 @@ Cost for level 50 is 55,374,000
 				case "QC_brothel"://<---------------------------------------------------------------HERE Brothel Mod , love Verruckt!
 					LAi_group_MoveCharacter(characterFromID(pchar.quest.friend_in_tavern), "QC_CITIZENS");
 				break;
-
+				
+				case "Cartagena Casino":
+					ReadLocatorCoordinates("reload", "reload4", &Land_posx[0], &Land_posy[0], &Land_posz[0]);
+				break;
 //				case "default":// MAXIMUS [for new locations]
 /*					string charGroup = "QC_CITIZENS";
 					for(int log=0; log<LAi_numloginedcharacters; log++)
@@ -3581,7 +3597,18 @@ Cost for level 50 is 55,374,000
 //				break;
 			}
 
-			TeleportCharacterToPosAy(pchar, Land_posx[0], Land_posy[0], Land_posz[0], Land_angle[0]);
+			if (!CheckAttribute(PChar,"quest.poker.started")) 
+			{
+				TeleportCharacterToPosAy(pchar, Land_posx[0], Land_posy[0], Land_posz[0], Land_angle[0]);
+			}
+			else
+			{
+				ChangeCharacterAddressGroup(pchar, "Turks_poker_room", "goto", "goto13");
+				LAi_SetActorType(Pchar);
+				Lai_ActorRunToLocator(pchar, "goto", "goto12", "Competition_day_end", 0);
+			
+			}
+			
 		break;
 
 		case "kill_tavern_fightman_complete":
@@ -4580,11 +4607,15 @@ Cost for level 50 is 55,374,000
 				sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "bocman5", "sit", LAi_FindRandomLocator("sit"));
 				LAi_SetImmortal(sld, true);
 				sld.dialog.filename = "Mr. Gibbs_dialog.c";
+				sld.greeting = "Gr_Mr. Gibbs";
 				sld.money = rand(100);
 				sld.id = "Mr. Gibbs";
 				sld.name = "Joshamee";
 				sld.lastname = "Gibbs";
-				sld.reputation = 65;
+				sld.reputation = REPUTATION_GOOD;
+				sld.nation = PIRATE;
+				sld.sex = "man";
+				sld.grsex = "man";
 				sld.quest.officertype = OFFIC_TYPE_BOATSWAIN;
 				sld.quest.officerprice = 0;//PB
 				LAi_SetSitType(sld);
@@ -5068,6 +5099,12 @@ Cost for level 50 is 55,374,000
 					RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 					EquipCharacterByItem(Pchar, "LongRifle_WT");
 				}
+				if(weapon3.model == "portugize_back")
+				{
+					weapon3.model = "portugize";
+					RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+					EquipCharacterByItem(Pchar, "portugize");
+				}
 			}
 		break;
 
@@ -5227,7 +5264,7 @@ Cost for level 50 is 55,374,000
 		break;
 	//----------------------------------------------------------------------------------------------
 		case "cloister_stair3_go":
-			ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st3_up");
+			ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "sit", "st3_up");		//was goto
 
 			pchar.quest.cloister_stair4_go.win_condition.l1 = "locator";
 			pchar.quest.cloister_stair4_go.win_condition.l1.location = "new_cloister_inside";
@@ -5363,6 +5400,7 @@ Cost for level 50 is 55,374,000
 
 			LAi_QuestDelay("cloister_F4_check", 0.2);
 		break;
+	
 	//----------------------------------------------------------------------------------------------
 // <-- JRH: Cartagena New_cloister
 
@@ -5918,6 +5956,47 @@ void back_LongRifle_W()
 
 //---------------------------------------------------------------------------
 
+#event_handler("portugize_on_hip", "hip_portugize");
+void hip_portugize()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	float charge = stf(attack.chr_ai.charge);
+	weapon.model = "portugize";
+	RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+	EquipCharacterByItem(attack, "portugize");
+	attack.chr_ai.charge = charge;
+
+	if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("OBJECTS\DUEL\reload1.wav");
+}
+
+#event_handler("portugize_on_back", "back_portugize");
+void back_portugize()
+{
+	aref attack = GetEventData();
+	string weaponID = GetCharacterEquipByGroup(attack,GUN_ITEM_TYPE);
+	if (weaponID == "") return; // PB: Prevent potential error messages
+	aref weapon;
+	Items_FindItem(weaponID, &weapon);
+
+	if(weapon.model == "portugize")
+	{
+		float charge = stf(attack.chr_ai.charge);
+		weapon.model = "portugize_back";
+		RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+		EquipCharacterByItem(attack, "portugize");
+		attack.chr_ai.charge = charge;
+
+		if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("PEOPLE\clothes1.wav");
+	}
+}
+
+//---------------------------------------------------------------------------
+
 #event_handler("bax_on_hip", "hip_bax");
 void hip_bax()
 {
@@ -6187,6 +6266,15 @@ void reset_check_mguns()
 					EquipCharacterByItem(tmpChr, "LongRifle_W");
 					tmpChr.chr_ai.charge = GunCurCharge; // Levis
 				}
+
+				if(IsEquipCharacterByItem(tmpChr, "portugize"))
+				{
+					float charge = stf(tmpChr.chr_ai.charge);
+					Items_FindItem("portugize", &weapon);
+					weapon.model = "portugize_back";
+					EquipCharacterByItem(tmpChr, "portugize");
+					tmpChr.chr_ai.charge = Charge;
+				}
 			}
 		}
 	}
@@ -6281,6 +6369,15 @@ void fight_check_mguns()
 						weapon.model = "LongRifle_W_back";
 						EquipCharacterByItem(tmpChr, "LongRifle_W");
 						tmpChr.chr_ai.charge = GunCurCharge; // Levis
+					}
+
+					if(IsEquipCharacterByItem(tmpChr, "portugize"))
+					{
+						float charge = stf(tmpChr.chr_ai.charge);
+						Items_FindItem("portugize", &weapon);
+						weapon.model = "portugize_back";
+						EquipCharacterByItem(tmpChr, "portugize");
+						tmpChr.chr_ai.charge = Charge;
 					}
 				}
 			}

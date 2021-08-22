@@ -148,6 +148,7 @@ void InitLocation(ref loc)
 	if (!CheckAttribute(loc, "locators_radius.characters")) loc.locators_radius.characters = 0.5;
 	if (!CheckAttribute(loc, "locators_radius.goto")) loc.locators_radius.goto = 0.5;
 	if (!CheckAttribute(loc, "locators_radius.sit")) loc.locators_radius.sit = 0.5;
+	if (!CheckAttribute(loc, "locators_radius.sit2")) loc.locators_radius.sit2 = 0.5;			//JRH added
 	if (!CheckAttribute(loc, "locators_radius.item")) loc.locators_radius.item = 0.5;
 	if (!CheckAttribute(loc, "locators_radius.officers")) loc.locators_radius.officers = 0.5;
 	if (!CheckAttribute(loc, "locators_radius.merchant")) loc.locators_radius.merchant = 1.0;
@@ -181,6 +182,7 @@ void InitLocation(ref loc)
 	if (!CheckAttribute(loc, "locators_radius.quest_ships")) loc.locators_radius.quest_ships = 1.0;		//JRH for testing
 	if (!CheckAttribute(loc, "locators_radius.quest_ships_other")) loc.locators_radius.ships_other = 1.0;	//JRH for testing
 	if (!CheckAttribute(loc, "locators_radius.patrol")) loc.locators_radius.patrol = 0.5;		//JRH
+	if (!CheckAttribute(loc, "locators_radius.soldiers")) loc.locators_radius.soldiers = 0.5;
 
 	//Day dynamic light
 	if (!CheckAttribute(loc, "models.day.lights.candles")) loc.models.day.lights.candles = "candle";

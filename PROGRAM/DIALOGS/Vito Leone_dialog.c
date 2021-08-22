@@ -116,8 +116,11 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[40]+ Characters[GetCharacterIndex(DLG_TEXT[41])].lastname +DLG_TEXT[42];
 			link.l1 = DLG_TEXT[43];
 			link.l1.go = "9";
-			link.l2 = DLG_TEXT[44];
-			link.l2.go = "Exit_kill";
+			if (FindCurrentStoryline() != FindStoryline("Assassin"))
+			{
+				link.l2 = DLG_TEXT[44];
+				link.l2.go = "Exit_kill";
+			}
 		break;
 
 		case "9":
@@ -129,9 +132,9 @@ void ProcessDialogEvent()
 			{
 				link.l2 = DLG_TEXT[51]+ Characters[GetCharacterIndex(DLG_TEXT[52])].lastname +DLG_TEXT[53];
 				link.l2.go = "Exit_spare";
+				link.l3 = DLG_TEXT[54];
+				link.l3.go = "Exit_kill";
 			}
-			link.l3 = DLG_TEXT[54];
-			link.l3.go = "Exit_kill";
 		break;
 
 		case "10":
@@ -143,9 +146,9 @@ void ProcessDialogEvent()
 			{
 				link.l2 = DLG_TEXT[57]+ Characters[GetCharacterIndex(DLG_TEXT[58])].lastname +DLG_TEXT[59];
 				link.l2.go = "Exit_spare";
+				link.l3 = DLG_TEXT[60];
+				link.l3.go = "Exit_kill";
 			}
-			link.l3 = DLG_TEXT[60];
-			link.l3.go = "Exit_kill";
 
 		break;
 

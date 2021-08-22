@@ -1,4 +1,4 @@
-string DLG_TEXT[76] = {
+string DLG_TEXT[80] = {
 "Hello Captain Pyle, I have got something that you're looking for ... ",
 "Hello who are you, how do you know who I am and what I'm up to?",
 "Lots of questions - but you'll need the medicine chest first. Welcome back again.",
@@ -75,6 +75,9 @@ string DLG_TEXT[76] = {
 "Yes you're right, I'll do that right now!",		//73
 "You lost the Marquis and the treasure.",		//74
 "Well... yes.",		//75
-
+"JRH, you know perfectly well that I can make any papers show up. You remember those pictures of relatives that you...",   //76		//76
+"Please, say no more.",
+"Very well, here are the tickets. Shall we go?",		//78
+"Yes!",
 
 };

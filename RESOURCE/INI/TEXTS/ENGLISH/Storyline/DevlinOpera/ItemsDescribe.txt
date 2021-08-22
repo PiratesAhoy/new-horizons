@@ -1,5 +1,23 @@
-itmname_a_letter	{Letter from missing relative}
+itmname_a_letter	{Mysterious Letter}
 itmdescr_a_letter
 {
-A letter which reveals secrets from your family's past and guides you to siblings you never met as well as to the really big treasure.
+A letter in your father's handwriting: 'Find your sister Bonnie and your brother Blaze. Together, the map will guide you to El Dorado'.
+}
+
+itmname_first_part_map	{Part of a Treasure Map}
+itmdescr_first_part_map
+{
+Part of a treasure map with the note to 'ask Short Jack Gold about the dirty snow'.
+}
+
+itmname_key_haraldo	{Haraldo's Key}
+itmdescr_key_haraldo
+{
+A key was in the vase!
+}
+
+itmname_jauri_note	{Note on the door}
+itmdescr_Jauri_note
+{
+'Dear Jaqueline, I've gone shopping.'
 }

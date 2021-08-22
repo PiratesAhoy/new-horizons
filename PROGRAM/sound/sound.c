@@ -339,6 +339,12 @@ void SetSchemeForLocation(ref loc)
 			if(CheckAttribute(loc,"id") && loc.id == "NS_hidden_town_Tavern") SetMusicAlarm("Rogers_crew");
 // <-- JRH
 			break;
+// Levis: Casino -->			
+		case "casino":
+			SetSoundScheme("tavern");
+			SetMusicAlarm("music_casino");
+			break;
+// Levis: Casino <---
 		case "shop":
 			SetSoundScheme("shop");
 			SetMusicAlarm("music_shop");

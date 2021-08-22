@@ -2444,7 +2444,7 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	// no model assignment quest character -->
-	model.description	=  "Beatrice Devlin. In her's original view.";
+	model.description	=  "Beatrice Devlin. In her original view.";
 	model.id			=  "Beatrice";
 	model.FaceId		=  293;
 	model.nation		=  SPAIN;
@@ -2474,30 +2474,57 @@ void InitModels(bool isstart)
 	// <-- no model assignment quest character
 
 	// no model assignment quest character -->
-	model.description	=  "Beatrice Devlin. In some other clothes.";
-	model.id			=  "BeatriceA";
+	model.description	=  "Beatrice's sister. Slightly younger, slightly sassier and it shows in the outfit.";
+	model.id		=  "BeatriceA";
 	model.FaceId		=  323;
-	model.nation		=  SPAIN;
-	model.price			=  1000;
+	model.nation		=  PERSONAL_NATION;
+	model.price		=  1000;
 	model.assigned		=  true;
 	model.height		=  1.7;
-	model.sex			=  "woman";
-//	model.ani			=  "Beatrice";
+	model.sex		=  "woman";
+//	model.ani		=  "Beatrice";
 	model.ani		=  "woman_sit";
-	model.name 			=  "Bonnie";
+	model.name 		=  "Bonnie";
 	model.lastname 		=  "Devlin";
-	model.playertype = PLAYER_TYPE_EXPLORER;
-	model.difficulty = DIFFICULTY_MARINER;
-	model.Flags.Pirate = 11;
-	model.Flags.Personal = 4;
-	model.ship = "PO_CaravelR";
-	model.shipname = "Quicksilver";
-	model.date.hour = 10;
-	model.date.min = 24;
-	model.date.sec = 42;
-	model.date.day = 25;
-	model.date.month = 9;
-	model.date.year = 1550;
+	model.playertype 	= PLAYER_TYPE_EXPLORER;
+	model.difficulty 	= DIFFICULTY_MARINER;
+	model.Flags.Pirate 	= 5;
+	model.Flags.Personal	= 43;
+	model.ship		= "RN_Galeon_L";
+	model.shipname		= "Quicksilver";
+	model.date.hour		= 10;
+	model.date.min		= 24;
+	model.date.sec		= 42;
+	model.date.day		= 1;
+	model.date.month	= 4;
+	model.date.year		= 1576;
+	AddCharacterModel(model);
+	// <-- no model assignment quest character
+
+	// no model assignment quest character -->
+	model.description	=  "Bonnie Devlin after she dyed her hair and her clothes.";
+	model.id		=  "BeatriceB";
+	model.FaceId		=  602;
+	model.nation		=  PERSONAL_NATION;
+	model.price		=  1000;
+	model.assigned		=  true;
+	model.height		=  1.7;
+	model.sex		=  "woman";
+	model.ani		=  "woman_sit";
+	model.name 		=  "Bonnie";
+	model.lastname 		=  "Devlin";
+	model.playertype	= PLAYER_TYPE_ADVENTURER;
+	model.difficulty	= DIFFICULTY_MARINER;
+	model.Flags.Pirate	= 5;
+	model.Flags.Personal	= 43;
+	model.ship		= "RN_Galeon_L";
+	model.shipname		= "Quicksilver";
+	model.date.hour		= 10;
+	model.date.min		= 24;
+	model.date.sec		= 42;
+	model.date.day		= 1;
+	model.date.month	= 4;
+	model.date.year		= 1576;
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
 
@@ -3865,6 +3892,32 @@ void InitModels(bool isstart)
 	model.date.year = 1691;
 	AddCharacterModel(model);
 
+	model.description =  "Helen Ardent, with a pirate's hat and coat.";
+	model.id	=  "ArdentF_3"; // Based on "Daniell2"
+	model.FaceId	=  600;
+	model.nation	=  PIRATE;
+	model.price	=  1200;
+	model.assigned	=  true;
+	model.sex         =  "woman";
+	model.ani         =  "woman_sit";
+	model.height      =  1.75;
+	model.name = "Helen";
+	model.lastname = "Ardent";
+	model.loadingScreen = "Quest_Ardent.tga";
+	model.playertype  = PLAYER_TYPE_CORSAIR;
+	model.difficulty = DIFFICULTY_SEADOG;
+	model.Flags.Pirate = 1;
+	model.Flags.Personal = 15;
+	model.ship = "Cutter1";
+	model.shipname = "Fortune";
+	model.date.hour = 10;
+	model.date.min = 24;
+	model.date.sec = 42;
+	model.date.day = 31;
+	model.date.month = 7;
+	model.date.year = 1691;
+	AddCharacterModel(model);
+
 	model.description	= "Shave and a haircut - two grand. You'd hardly recognise Charles Ardent!"
 	model.id		=  "ArdentM_2"; // Based on "Blaze_NB"
 	model.FaceId		=  586;
@@ -3927,13 +3980,21 @@ void InitModels(bool isstart)
 	model.assigned		=  true;
 	AddCharacterModel(model);
 
-	model.description =  "An elaborate costume befitting the son of a governor.";
-	model.id	   =  "Edmundo";
-	model.FaceId	= 246;
-	model.nation	  =  SPAIN; // made buyable
-	model.price	   =  2000;
-	model.assigned	=  true;
-	model.iscombat = false;
+	model.description	= "Lucia de la Vega incognito.";
+	model.id		= "AnimistLucia";  // Based on "Animistse"
+	model.FaceId		= 598;
+	model.nation		= BROKEN; // Assigned during story
+	model.price		= 1000;
+	model.assigned		= true;
+	AddCharacterModel(model);
+
+	model.description	= "An elaborate costume befitting the son of a governor.";
+	model.id		= "Edmundo";
+	model.FaceId		= 246;
+	model.nation		= SPAIN; // made buyable
+	model.price		= 2000;
+	model.assigned		= true;
+	model.iscombat		= false;
 	model.name = "Edmundo";
 	model.lastname = "de la Vega";
 	model.storytext  =  "Doomed to an unhappy marriage, you fled with a female pirate. Now you have your own ship, will you lead an honest life or has your time with the pirate changed you forever?";
@@ -3949,6 +4010,14 @@ void InitModels(bool isstart)
 	model.date.day = 14;
 	model.date.month = 8;
 	model.date.year = 1691;
+	AddCharacterModel(model);
+
+	model.description	= "Edmundo de la Vega incognito.";
+	model.id		= "AnimistEdmundo";  // Based on "Animist4A"
+	model.FaceId		= 599;
+	model.nation		= BROKEN; // Assigned during story
+	model.price		= 1000;
+	model.assigned		= true;
 	AddCharacterModel(model);
 
 	model.description =  "A gentleman like this has no time for vagabonds - and may not be quite the gentleman he appears!";
@@ -11284,6 +11353,13 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "";
+	model.id	   =  "invisible2";
+	model.FaceId	= "606";		//invisible icon
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
 	model.id	   =  "Animist4B";
 	model.FaceId	= 489;
 	model.nation	  =  BROKEN;
@@ -13861,6 +13937,37 @@ void InitModels(bool isstart)
 	model.nation	  =  BROKEN;
 	model.assigned	=  true;
 	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Animists3_empty";
+	model.FaceId	= 601;				//was 544
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Ron_L";
+	model.FaceId	= 603;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "Reg_L";
+	model.FaceId	= 604;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+	model.description =  "";
+	model.id	   =  "bouncer";
+	model.FaceId	= 605;
+	model.nation	  =  BROKEN;
+	model.assigned	=  true;
+	AddCharacterModel(model);
+
+
+
     //<-- JRH
 
 	//The code below this comment HAVE TO be after all model definitions.

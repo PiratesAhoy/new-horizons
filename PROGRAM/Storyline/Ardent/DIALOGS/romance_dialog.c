@@ -888,6 +888,8 @@ void ProcessDialogEvent()
 		case "bow_rescue_outside_residence":
 			dialog.text = DLG_TEXT[101];
 			link.l1 = DLG_TEXT[102];
+			if (GetCharacterShipLocation(PChar) == "Cuba_Shore_05") AddDialogExitQuest("bow_escape_now_to_shore");
+			else AddDialogExitQuest("bow_escape_now_to_port");
 			link.l1.go = "exit";
 		break;
 

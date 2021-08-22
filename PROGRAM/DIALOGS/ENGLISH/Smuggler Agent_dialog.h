@@ -1,4 +1,4 @@
-string DLG_TEXT[85] = {
+string DLG_TEXT[97] = {
 "What do you want, captain?",
 "I'm ",
 ".",
@@ -81,4 +81,19 @@ string DLG_TEXT[85] = {
 "Like I said, patrols have been pretty standard so this shouldn't be anything out of the ordinary, but be careful none the less.",
 "Remember, patrols have been increasing lately, so be on the lookout.",
 "Patrols have been everywhere lately, so be very careful",
+"I need to buy passage to ",
+".",
+"We don't run a passenger service. Go and find a ship's captain somewhere.",
+"No honest captain is likely to want to help me.",
+"I see. Well, transporting things which aren't supposed to be transported is our business, and I suppose that could extend to people who aren't supposed to be transported either. Are you in trouble where you are going?",
+"No, but I am in trouble here.",
+"Very well. Then I'll arrange for one of our captains to meet you at ",
+" tomorrow night. Don't be late. He won't wait, and you won't get another chance.",
+"Thanks for your help.",
+"Not so fast. First there's the matter of your fare. ",
+" gold, payable in advance, here and now.",
+"Very well, here's your money.",
+"I don't have that much. But I can pay you double that when we get to where we're going.",
+"Double? Alright, we can accept that. Make sure you don't try to wriggle out of paying, though. You won't live to regret it.",
+"Don't worry about that. I'll pay alright - after all, I may need to use your services again some day.",
 };

@@ -1449,7 +1449,7 @@ void CreateTempQuestCharacters(ref n)
 //	GiveItem2Character(ch, "pistolmketB");
 //	ch.equip.gun = "pistolmketB";
 	ch.location	= "Fort_Moultrie_barracks";
-	ch.location.group = "sit";
+	ch.location.group = "sit2";
 	ch.location.locator = "sit3";
 	ch.Dialog.Filename = "Moultrie soldier_dialog.c";
 	//ch.greeting = "Gr_Redmond Soldier";

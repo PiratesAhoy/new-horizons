@@ -533,6 +533,314 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 120.0, 120.0);
 	AddGameCharacter(n, ch);	
-	//<- Characters for the 'A Family Story' side-quest		
+	//<- Characters for the 'A Family Story' side-quest
+	
+    //-> Characters for the 'A French companion' side-quest
+	
+    // Nigel Chandler
+	ch.old.name = "Nigel";
+	ch.old.lastname = "Chandler";
+	ch.name = TranslateString("","Nigel");
+	ch.lastname = TranslateString("","Chandler");
+	ch.id		= "Nigel Chandler";
+	ch.model	= "Offic_eng_18";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	ch.nation	= ENGLAND;
+	GiveItem2Character(ch, "blade25");
+	ch.equip.blade = "blade25";
+	GiveItem2Character(ch, "pistol6");
+	ch.equip.gun = "pistol6";
+	//JRH ammo mod -->
+	TakenItems(ch, "gunpowder", 6);
+	TakenItems(ch, "pistolbullets", 6);
+	//JRH ammo mod <--
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Cabinfight_dialog.c";
+	ch.rank 	= 10;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.greeting = "Gr_Redmond Soldier";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "4";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "2";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10000";
+	ch.Ship.Name = "Endeavour";
+	ch.Ship.Type = "HMS_Endeavour";
+	ch.Ship.Stopped = true;
+	ch.ShipSlot1.Type=SHIP_NOTUSED;
+	ch.ShipSlot1.Name="NoName";
+	ch.ShipSlot2.Type=SHIP_NOTUSED;
+	ch.ShipSlot2.Name="NoName";
+	ch.ShipSlot3.Type=SHIP_NOTUSED;
+	ch.ShipSlot3.Name="NoName";
+	ch.quest.killed.pirates = "0";
+	LAi_NoRebirthEnable(ch);
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 120.0, 120.0);
+	AddGameCharacter(n, ch);
+	
+	// Killian Bencroft
+	ch.old.name = "Killian";
+	ch.old.lastname = "Bencroft";
+	ch.name = TranslateString("","Killian");
+	ch.lastname = TranslateString("","Bencroft");
+	ch.id		= "Killian Bencroft";
+	ch.model	= "47_Blaze_brtlt";
+	ch.sound_type = "pirate";
+	LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "pistol2");
+	ch.equip.gun = "pistol2";
+     //JRH ammo mod -->
+	if (ENABLE_AMMOMOD) {	// LDH change
+		TakenItems(ch, "gunpowder", 1 + rand(2));
+		TakenItems(ch, "pistolbullets", 1 + rand(2));
+	}
+     //JRH ammo mod <--
+	GiveItem2Character(ch, "blade24");
+	ch.equip.blade = "blade24";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Backoff";
+	ch.nation = ENGLAND;
+	ch.rank 	= 10;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "5";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "4";
+	ch.skill.Sneak = "3";
+	ch.money = "10";
+    LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+     // Royal Navy
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name 	= TranslateString("","Soldier");
+	ch.lastname 	= "";
+	ch.id		= "RN_soldier_1";
+	ch.model	= 1; // PB
+	ch.sound_type = "soldier";
+	ch.sex = "man";
+	ch.location	= "Quest_ShipDeck6";
+	ch.location.group = "reload";
+	ch.location.locator = "reload3";
+	ch.Dialog.Filename = "Royal Navy_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "BRITISH_NAVY_SOLDIERS");
+	ch.greeting = "Gr_Redmond Soldier";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name 	= TranslateString("","Soldier");
+	ch.lastname 	= "";
+	ch.id		= "RN_soldier_2";
+	ch.model	= 2; // PB
+	ch.sound_type = "soldier";
+	ch.sex = "man";	
+	ch.location	= "Quest_ShipDeck6";
+	ch.location.group = "goto";
+	ch.location.locator = "goto13";
+	ch.Dialog.Filename = "Royal Navy_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetPatrolType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "BRITISH_NAVY_SOLDIERS");
+	ch.greeting = "Gr_Redmond Soldier";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name 	= TranslateString("","Soldier");
+	ch.lastname 	= "";
+	ch.id		= "RN_soldier_3";
+	ch.model	= 3; // PB
+	ch.sound_type = "soldier";
+	ch.sex = "man";	
+	ch.location	= "Quest_ShipDeck6";
+	ch.location.group = "goto";
+	ch.location.locator = "goto1";
+	ch.Dialog.Filename = "Royal Navy_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetPatrolType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "BRITISH_NAVY_SOLDIERS");
+	ch.greeting = "Gr_Redmond Soldier";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name 	= TranslateString("","Soldier");
+	ch.lastname 	= "";
+	ch.id		= "RN_soldier_4";
+	ch.model	= 4; // PB
+	ch.sound_type = "soldier";
+	ch.sex = "man";
+	ch.location	= "Quest_ShipDeck6";
+	ch.location.group = "goto";
+	ch.location.locator = "goto27";
+	ch.Dialog.Filename = "Royal Navy_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetPatrolType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "BRITISH_NAVY_SOLDIERS");
+	ch.greeting = "Gr_Redmond Soldier";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name 	= TranslateString("","Soldier");
+	ch.lastname 	= "";
+	ch.id		= "RN_soldier_5";
+	ch.model	= 5; // PB
+	ch.sound_type = "soldier";
+	ch.sex = "man";	
+	ch.location	= "Quest_Deck1";
+	ch.location.group = "reload";
+	ch.location.locator = "reload4";
+	ch.Dialog.Filename = "Royal Navy_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetPatrolType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "BRITISH_NAVY_SOLDIERS_2");
+	ch.greeting = "Gr_Redmond Soldier";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Soldier";
+	ch.old.lastname = "";
+	ch.name 	= TranslateString("","Soldier");
+	ch.lastname 	= "";
+	ch.id		= "RN_soldier_6";
+	ch.model	= 6; // PB
+	ch.sound_type = "soldier";
+	ch.sex = "man";
+	ch.location	= "Quest_Deck2";
+	ch.location.group = "reload";
+	ch.location.locator = "reload3";
+	ch.Dialog.Filename = "Royal Navy2_dialog.c";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "5";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "BRITISH_NAVY_SOLDIERS_3");
+	ch.greeting = "Gr_Redmond Soldier";
+	AddGameCharacter(n, ch);	 	
+	
+	//<- Characters for the 'A French companion' side-quest		
 //====================================================================================================================
 }

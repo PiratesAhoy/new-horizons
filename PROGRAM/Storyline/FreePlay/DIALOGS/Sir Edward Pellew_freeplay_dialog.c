@@ -165,8 +165,8 @@ void ProcessDialogEvent()
 		case "leighton_squadron":
 			if (GetCompanionQuantity(PChar) > 1)
 			{
-				dialog.text = DLG_TEXT[37] + "\n" + DLG_TEXT[39];
-				link.l1 = DLG_TEXT[40];
+				dialog.text = DLG_TEXT[37] + "\n" + DLG_TEXT[41];
+				link.l1 = DLG_TEXT[42];
 				AddDialogExitQuest("Hornblower_dispose_of_prizes");
 				link.l1.go = "exit";
 			}
@@ -174,19 +174,19 @@ void ProcessDialogEvent()
 			{
 				dialog.text = DLG_TEXT[37];
 				link.l1 = "";
-				link.l1.go = "blockade_Hispaniola";
+				link.l1.go = "blockade_Caribbean";
 			}
 		break;
 
 		case "return_from_dispose_prizes":
-			dialog.text = DLG_TEXT[41] + GetMyLastName(PChar) + DLG_TEXT[42];
-			link.l1 = DLG_TEXT[43];
-			link.l1.go = "blockade_Hispaniola";
+			dialog.text = DLG_TEXT[43] + GetMyLastName(PChar) + DLG_TEXT[44];
+			link.l1 = DLG_TEXT[45];
+			link.l1.go = "blockade_Caribbean";
 		break;
 
-		case "blockade_Hispaniola":
-			dialog.text = DLG_TEXT[38];
-			link.l1 = "";
+		case "blockade_Caribbean":
+			dialog.text = DLG_TEXT[38] + DLG_TEXT[39] + GetMyLastName(PChar) + DLG_TEXT[40];
+			link.l1 = DLG_TEXT[46];
 			AddDialogExitQuest("Hornblower_join_Leighton_squadron");
 			link.l1.go = "exit";
 		break;

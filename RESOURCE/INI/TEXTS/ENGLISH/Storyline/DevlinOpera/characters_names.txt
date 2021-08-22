@@ -13,8 +13,10 @@ Skull{Skull}
 {=====| Story.c |=====}
 Mystery{Mystery}
 Messenger{Messenger}
+Brin Mistress{Brin Mistress}
 Emmanuel{Emmanuel}
 Bonnie{Bonnie}
+Blaze{Blaze}
 Short Jack{Short Jack}
 Gold{Gold}
 Couch Captain{Couch Captain}
@@ -24,6 +26,8 @@ Mings{Mings}
 Nathan{Nathan}
 Kell{Kell}
 Petros{Petros}
+Robert{Robert}
+Cook{Cook}
 Thomas the{Thomas the}
 Terror{Terror}
 John Paul{John Paul}

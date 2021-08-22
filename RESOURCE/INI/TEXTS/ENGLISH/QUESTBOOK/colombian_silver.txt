@@ -20,3 +20,4 @@ text.t18=I should not have tried to deceive #sfirstname#. The deal is off. And I
 text.t19=Apparently the silver train is on its way to #sCartagena#. But it is sure to be well guarded and I don't feel confident enough to try to take it. Perhaps next year...
 text.t20=Apparently the silver train is on its way to #sCartagena#. But if I attack it, I will make an enemy of Spain. I don't want to do that.
 text.t21=I didn't have enough medicine when I met the Indians. The deal is off. So I will not be able to attack the silver train.
+text.t22=#sname# told me something very interesting. The silver train, carrying silver from Spain's colonies on the mainland, is on its way to #sCartagena#. I've agreed to give him #spercent# percent of what we get from plundering the silver train. I should make my own way there to find out more. Perhaps ask at the taverns - discreetly, of course.

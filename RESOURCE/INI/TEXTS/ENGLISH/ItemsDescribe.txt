@@ -18,10 +18,10 @@ itmdescr_love_letters_of_priest
 Love letters from #sFatherJerald# to a certain girl.
 }
 
-itmname_animists_amulet	{Animists amulet}
+itmname_animists_amulet	{Satanist amulet}
 itmdescr_animists_amulet
 {
-A sinister animist amulet resembling a five-pointed star.
+A sinister Satanist amulet resembling a five-pointed star.
 }
 
 itmname_letter_to_domingues	{Letter for Padre Domingues}
@@ -74,6 +74,36 @@ itmname_Trade_Passport {Merchant License}
 itmdescr_Trade_Passport
 {
 These documents were issued by the head of the West India Trading Company. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_Trade_PassportE {Merchant License}
+itmdescr_Trade_PassportE
+{
+These documents were issued by the head of the East India Trading Company. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_Trade_PassportH {Merchant License}
+itmdescr_Trade_PassportH
+{
+These documents were issued by the head of the Dutch West India Company. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_Trade_PassportS {Merchant License}
+itmdescr_Trade_PassportS
+{
+These documents were issued by the head of the Casa de Contratación. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_Trade_PassportF {Merchant License}
+itmdescr_Trade_PassportF
+{
+These documents were issued by the head of the French West India Company. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+}
+
+itmname_Trade_PassportP {Merchant License}
+itmdescr_Trade_PassportP
+{
+These documents were issued by the head of the Casa da Índia. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
 }
 
 itmname_EITC_Passport {EITC Passport}
@@ -532,6 +562,12 @@ itmname_bladeSC	{Sword of Cortés}
 itmdescr_bladeSC
 {
 I took this ancient saber from Amérigo Vieira. It is a mystical, cursed weapon used by Hernán Cortés during his conquest of the Aztec empire. The Sword's power is derived in combination with a sacred scabbard, made from the innards of Aztec sacrifices. The blade inscription reads "Hernán Cortés 1520 A.D.".
+}
+
+itmname_bladeMH	{Teacher's Pet}
+itmdescr_bladeMH
+{
+This was my reward for killing my tutor. Now I am the master!
 }
 
 // KevAtl SLiB Special Weapon blades <--

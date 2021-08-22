@@ -56,7 +56,7 @@ string DLG_TEXT[60] = {
 "the daughter",
 " of some rich Englishman over in #sRedmond#. So everyone gets one free drink on condition they raise their glasses to the happy couple.",
 "Well in that case, long life and happiness to the pair of them - cheers!",
-"I'm working for Lady Suarez. I want to speak with Abel Barco. Do you know him?",
-"Not really. He's just paid me to inform him when someone working for Lady Suarez would ask for him. And to tell you, tomorrow, he'll wait for you outside the town.",
+"I'm working for Lady Carranza. I want to speak with Abel Barco. Do you know him?",
+"Not really. He's just paid me to inform him when someone working for Lady Carranza would ask for him. And to tell you, tomorrow, he'll wait for you outside the town.",
 "Alright, Tell him I'll be there.",
 };

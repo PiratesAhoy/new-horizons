@@ -1,8 +1,8 @@
-title=Collection box
-text.t1=I have to put some coins (the right ones!?) in the collection box. Will this help me to find a way out of here?
-text.t2=The coins are all from different nations.
-text.t3=The number of gold coins are two.
-text.t4=Use nothing but round coins.
-text.t5=There is one single copper coin.
-text.t6=There should be seven coins in the box, no more no less.
-text.t7=A pigeon brought me a letter - I'll see what it can be.
+title=Ящик для пожертвований
+text.t1=Я должен положить несколько монет (правильных!?) в ящик для пожертвований. Поможет ли мне это выбратся отсюда?
+text.t2=Монеты разных стран.
+text.t3=Две золотые монеты.
+text.t4=Можно использовать только круглые монеты.
+text.t5=Одна медная монета.
+text.t6=В ящике должно быть семь монет ни больше, ни меньше.
+text.t7=Голубь принес мне письмо - посмотрю, что в нем может быть.

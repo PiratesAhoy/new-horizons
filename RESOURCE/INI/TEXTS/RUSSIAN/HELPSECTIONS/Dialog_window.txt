@@ -1,12 +1,12 @@
 Dialog_window_title
 {
-Dialogue window
+Окно диалога
 }
 Dialog_window_info
 {
-    Dialogue window appears when you press "Action" button staying in front of some character. Or characters can initiate it themselves, if they want to speak to player character.
-    In the top left corner of the dialogue wiondow you see face of a character you speaking to. And to the right player can see that character's name.
-    At the bottom of the screen there is a text window. Here player sees what character tells him and also sees a list of player's phrases he can tell to character. Character's words are gold, and player's answers appears blue. Currently selected player's answer is highlited with bright blue color (pic.2).
-    Sometimes not all the text or answers can fit the text window. In this case player sees green up and down arrows in the right part of text window (pic.3). And if there is some text lines below down arrow will be highlighted with bright green. The same about up arrow - it will be highlighted if there is text above.
-    Selection of player's answer can be performed with dialogue selection buttons, and аctivation of selected answer can be performed with dialogue "action" key.
+    Окно диалога с персонажами появляется тогда, когда вы его инициализируете нажатием клавиши/кнопки "действие" при возможности начать диалог или самими персонажами, по каким либо причинам желающие говорить с вами.
+    В окне дилога, в его левом верхнем углу, показывается крупным планом голова персонажа с которым вы ведете разговор. Справа от окна головы вы можете увидеть имя этого персонажа.
+    В нижней части дилогового окна размещено непосредственно текстовое окно диалога. В нем отображаются фразы, которые произносит нейтральный персонаж - желтым цветом, а также ваши фразы, которые вы можете произнести - темно синим цветом. Выбранная вами фраза, подсвечивается ярко синим цветом (рис.2).
+    Бывает, что не все фразы могут быть показаны одновременно в диалоговом окне. В этом случае в правой части текстового диалогового окна будут показаны зеленые стрелки вверх и вниз (рис.3). При этом, если над первой выведенной в окне строкой есть еще строки, то стрелка вверх подсвечивается до ярко зеленого цвета, тоже самое происходит и с нижней стрелкой при наличие еще строк ниже последней показанной.
+    Выбор фраз ответа производится кнопками/клавишами передвижения по диалогу, а активизация выбранного ответа производиться кнопкой/клавишей "активизация" диалогового окна.
 }

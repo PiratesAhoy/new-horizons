@@ -1,5 +1,5 @@
 title=Side Quest - A girl won in a card game.
-text.t1=In one tavern I met a man who proposed to play cards with me. I was astonished when I discovered he planned to wager a girl.
+text.t1=In a tavern I met a man who proposed a game of dice with me. I was astonished when I discovered he planned to wager a girl he had won in a card game himself.
 text.t2=I won, so the girl is mine.
 text.t3=The offer of this fellow was offensive. So I killed him.
 text.t4=This girl is really beautiful. She says she is a noblewoman. Judging by her name, she's French, and I can believe her story, but it won't stop me if I decide to sell her.
@@ -10,7 +10,7 @@ text.t8=It is a romantic story, but I think that now, once freed, Virginia can d
 text.t9=What an irony! We came to #sFalaise de Fleur# on #sisland_Falaise de Fleur# and found the fellow that Virginie was searching for, but he turned out to be a real scoundrel. He spoke to her disrespectfully, then left her broken-hearted.
 text.t10=Virginie said that she is going to sail for home, but she wants to do me a favour in return, and take me to the #snation# governor.
 text.t11=I don't think this is such a good idea because we are enemies with the #snation#, but Virginie assured me she will protect me.
-text.t12=A noblewoman's word is a fine guarantee, but I don't trust the #snation# authorities, and I declined Virginie's favor.
+text.t12=A noblewoman's word is a fine guarantee, but I don't trust the #snation# authorities, and I declined Virginie's favour.
 text.t13=She was right. Of course, the governor wasn't at all glad to see me, but he gave me a reward, and more than that, he pardoned me for my crimes to the #snation# government.
 text.t14=The #snation# generously rewarded me for returning Virginie.
 text.t15=It was quite a risky affair, but now it's over. The governor gave me 7000 gold for the girl.

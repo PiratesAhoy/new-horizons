@@ -2,16 +2,17 @@ void CreateQuebradasCostillasCharacters(ref n)
 {
 	object chobj;
 	ref ch;
+
 	makeref(ch, chobj);
 
 	// Isenbrandt Jurcksen -- capitan
-	ch.old.name = "Skull";
+	ch.old.name	= "Skull";
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Skull");
-	ch.lastname = "";
+	ch.name		= TranslateString("", "Skull");
+	ch.lastname	= "";
 	ch.id		= "Isenbrandt Jurcksen";
 	ch.model	= "Skull";
-	ch.sex = "man";
+	ch.sex		= "man";
 	ch.location	= "QC_residence";
 	ch.location.group = "goto";
 	ch.location.locator = "goto1";
@@ -55,5 +56,71 @@ void CreateQuebradasCostillasCharacters(ref n)
 	LAi_SetHP(ch, 160.0, 160.0);
 	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
 	ch.greeting = "Gr_Isenbrandt Jurcksen";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Sixto";
+	ch.old.lastname = "Costa";
+	ch.name = TranslateString("","Sixto");
+	ch.lastname = TranslateString("","Costa");
+	ch.id		= "Sixto Costa";
+	ch.model	= "rabWhite";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	ch.location	= "QC_port";
+	ch.location.group = "goto";
+	ch.location.locator = "goto3";
+	ch.Dialog.Filename = "Sixto Costa_dialog.c";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	LAi_SetPoorType(ch);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "QC_SOLDIERS");
+	ch.greeting = "Gr_QC Citizen";
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Rico";
+	ch.old.lastname = "Diaz";
+	ch.name = TranslateString("","Rico");
+	ch.lastname = TranslateString("","Diaz");
+	ch.id		= "Rico Diaz";
+	ch.model	= "diller";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	ch.location	= "";
+	ch.location.group = "sit";
+	ch.location.locator = "sit1";
+	ch.Dialog.Filename = "Rico Diaz_dialog.c";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	LAi_SetSitType(ch);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "QC_SOLDIERS");
+	ch.greeting = "Gr_Rico Diaz";
 	AddGameCharacter(n, ch);
 }

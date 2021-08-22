@@ -1307,4 +1307,46 @@ void LocationInitShip(ref n)
 // <-- KK
 
 	n = n + 1;
+	
+	//ID
+	Locations[n].id = "CabinFDM"; // KK
+	locations[n].id.label = "Captain's cabin";
+	//Info
+	Locations[n].filespath.models = "locations\decks\cabin\cabinFDM"; // KK
+	Locations[n].image = "deck_cabinFDM.tga"; // KK
+	//Sound
+	Locations[n].type = "own_deck";
+	Locations[n].lockCamAngle = 0.4;
+	Locations[n].camshuttle = 1;
+	Locations[n].fastreload = "ship";
+	Locations[n].monsters = 0; // KK
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "cabinFDM_ld"; // KK
+	Locations[n].models.always.l1 = "cabinFDM";
+	Locations[n].models.always.l2 = "cabinchest";			//fake - not visible
+	Locations[n].models.always.l3 = "trunk";			//fake - not visible
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 65531;
+	//Day
+	Locations[n].models.day.charactersPatch = "cabinFDM_patch";
+	Locations[n].models.day.fonar = "cabinFDM_fonar"; // KK
+	//Night
+	Locations[n].models.night.charactersPatch = "cabinFDM_patch";
+	Locations[n].models.night.fonar = "cabinFDM_fonar"; // KK
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+	Locations[n].environment.curse = "false"; // PB: Cursed Coins
+
+// KK -->
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "";
+	Locations[n].reload.l1.emerge = "";
+	Locations[n].reload.l1.autoreload = "0";
+// <-- KK
+
+	n = n + 1;
 }

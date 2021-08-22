@@ -34,12 +34,16 @@ void ProcessDialogEvent()
 					if(PChar.sex == "woman") link.l1 = DLG_TEXT[264];
 					else link.l1 = DLG_TEXT[248];
 					link.l1.go = "stormystart";
+					link.l2 = DLG_TEXT[265];
+					link.l2.go = "no_duel";
 				break;
 
 				case PLAYER_TYPE_GAMBLER:
 					dialog.text = DLG_TEXT[249];
 					link.l1 = DLG_TEXT[250];
 					link.l1.go = "stormystart";
+					link.l2 = DLG_TEXT[265];
+					link.l2.go = "no_duel";
 				break;
 
 				case PLAYER_TYPE_AGENT:
@@ -71,8 +75,8 @@ void ProcessDialogEvent()
 					{
 						if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("my son"));
 						else Preprocessor_Add("child", XI_ConvertString("my child"));
-						dialog.text = DLG_TEXT[265];
-						link.l1 = DLG_TEXT[266];
+						dialog.text = DLG_TEXT[266];
+						link.l1 = DLG_TEXT[267];
 						link.l1.go = "DevilCursed1";
 						
 					}
@@ -105,31 +109,31 @@ void ProcessDialogEvent()
 		break;
 
 		case "DevilCursed1":
-			dialog.text = DLG_TEXT[267];
-			link.l1 = DLG_TEXT[268];
+			dialog.text = DLG_TEXT[268];
+			link.l1 = DLG_TEXT[269];
 			link.l1.go = "DevilCursed2";
 		break;
 		
 		case "DevilCursed2":
-			dialog.text = DLG_TEXT[269] + GetMyName(Pchar) + DLG_TEXT[280] + DLG_TEXT[270];
-			link.l1 = DLG_TEXT[271];
+			dialog.text = DLG_TEXT[270] + GetMyName(Pchar) + DLG_TEXT[281] + DLG_TEXT[271];
+			link.l1 = DLG_TEXT[272];
 			link.l1.go = "DevilCursed3";
 		break;
 		
 		case "DevilCursed3":
-			dialog.text = DLG_TEXT[272] + GetMyName(Pchar) + DLG_TEXT[280] + DLG_TEXT[273] + GetMyName(Pchar) + DLG_TEXT[274] + DLG_TEXT[275];
-			link.l1 = DLG_TEXT[276];
+			dialog.text = DLG_TEXT[273] + GetMyName(Pchar) + DLG_TEXT[281] + DLG_TEXT[274] + GetMyName(Pchar) + DLG_TEXT[275] + DLG_TEXT[276];
+			link.l1 = DLG_TEXT[277];
 			link.l1.go = "DevilCursed4";
 		break;
 		
 		case "DevilCursed4":
-			dialog.text = DLG_TEXT[277];
-			link.l1 = DLG_TEXT[278];
+			dialog.text = DLG_TEXT[278];
+			link.l1 = DLG_TEXT[279];
 			link.l1.go = "DevilCursed5";
 		break;
 		
 		case "DevilCursed5":
-			dialog.text = DLG_TEXT[279] + GetMyFullName(PChar) + DLG_TEXT[280] + DLG_TEXT[281];
+			dialog.text = DLG_TEXT[280] + GetMyFullName(PChar) + DLG_TEXT[281] + DLG_TEXT[282];
 			link.l1 ="";
 			link.l1.go = "stormystart";
 		break;
@@ -1440,6 +1444,13 @@ void ProcessDialogEvent()
 		case "stormystart":
 			PlayStereoSound("sails_up");
 			addDialogExitQuest("stormystart");
+			DialogExit();
+			bChangeNation = true;
+		break;
+
+		case "no_duel":
+			PlayStereoSound("sails_up");
+			AddDialogExitQuest("no_duel");
 			DialogExit();
 			bChangeNation = true;
 		break;

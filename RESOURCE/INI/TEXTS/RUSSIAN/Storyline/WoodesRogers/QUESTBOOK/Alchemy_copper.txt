@@ -1,6 +1,6 @@
-title=Alchemy - open the Copper lock
-text.t1=I have to find something that dissolves Copper.
-text.t2=I have Diluted Sulfuric Acid - and it can dissolve Copper!!
+title=Алхимия - открыть Медный замок
+text.t1=Я должен найти то, что разъедает медь.
+text.t2=Я нашел серную кислоту - она разъест медь!!
 text.t3= 
 text.t4=
 text.t5=

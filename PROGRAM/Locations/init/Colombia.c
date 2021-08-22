@@ -84,6 +84,7 @@
 	Locations[n].reload.l10.label = "Town.";
 	Locations[n].reload.l10.name = "gate";
 	Locations[n].reload.l10.autoreload = "0";
+	Locations[n].locators_radius.reload.gate = 2.0;
 
 	Locations[n].reload.l9.go = "new_cloister_garden";
 	Locations[n].reload.l9.emerge = "reload1";
@@ -266,8 +267,8 @@
 	Locations[n].models.always.grassPatch = "Red01_g";
 	Locations[n].models.always.palace = "Palais";
 	Locations[n].models.always.palace.locator.group = "randitem";
-	Locations[n].models.always.palace.locator.name = "randitem2";
-	Locations[n].models.always.church = "Church1";
+	Locations[n].models.always.palace.locator.name = "randitem2";				
+	Locations[n].models.always.church = "cathedral";				//JRH, was church1
 	Locations[n].models.always.church.locator.group = "randitem";
 	Locations[n].models.always.church.locator.name = "randitem3";
 	//River
@@ -356,12 +357,20 @@
 	Locations[n].reload.l8.label = "Cartagena town.";
 	Locations[n].locators_radius.reload.reload_2_4 = 2.0;
 
-    Locations[n].reload.l11.name = "door_1";
+	Locations[n].reload.l11.name = "door_1";
 	Locations[n].reload.l11.go = "Cartagena_tavern";
 	Locations[n].reload.l11.emerge = "reload1";
 	Locations[n].reload.l11.autoreload = "0";
 	Locations[n].reload.l11.label = "Tavern.";
-	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1; // Screwface: Disable Go-To location		
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1; // Screwface: Disable Go-To location
+
+	Locations[n].reload.l13.name = "door_5";
+	Locations[n].reload.l13.go = "CdC_Office";
+	Locations[n].reload.l13.emerge = "reload1";
+	Locations[n].reload.l13.autoreload = "0";
+	Locations[n].reload.l13.label = "Casa de Contratacion.";
+	Locations[n].reload.l13.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l13.goto_disable = 1; // Screwface: Disable Go-To location		
 
 	Locations[n].island = "Colombia"; // NK 04-08-29
 	n = n + 1;
@@ -422,6 +431,12 @@
 	Locations[n].reload.l3.emerge = "goto7";		//was reload1
 	Locations[n].reload.l3.autoreload = "0";
 	Locations[n].reload.l3.label = "cloister.";
+
+	Locations[n].reload.l4.name = "locator22";
+	Locations[n].reload.l4.go = "House Grandma";
+	Locations[n].reload.l4.emerge = "reload1";
+	Locations[n].reload.l4.autoreload = "0";
+	Locations[n].reload.l4.label = "House.";
 /*
 	Locations[n].reload.l4.name = "locator21";
 	Locations[n].reload.l4.go = "house_of_Elzire_Ayarai";
@@ -1216,6 +1231,7 @@
 	Locations[n].reload.l4.autoreload = "0";
 	Locations[n].reload.l4.label = "store.";
 	Locations[n].reload.l4.close_for_night = 1;
+	Locations[n].locators_radius.reload.reload4 = 2.0;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l4.goto_disable = 1; // Screwface: Disable Go-To location
 
 	Locations[n].reload.l5.name = "reload5";
@@ -1238,6 +1254,7 @@
 	Locations[n].reload.l7.emerge = "reload1";
 	Locations[n].reload.l7.autoreload = "0";
 	Locations[n].reload.l7.label = "Loanshark's Office.";
+	Locations[n].locators_radius.reload.reload7 = 1.4;
 	Locations[n].reload.l7.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l7.goto_disable = 1; // Screwface: Disable Go-To location
 
@@ -1275,7 +1292,20 @@
 	Locations[n].reload.l12.emerge = "reload8";
 	Locations[n].reload.l12.autoreload = "0";
 	Locations[n].reload.l12.label = "Cartagena Hotel.";
-	Locations[n].locators_radius.reload.reload12 = 0.5;	
+	Locations[n].locators_radius.reload.reload12 = 0.5;
+
+	Locations[n].reload.l13.name = "reload13";
+	Locations[n].reload.l13.go = "Cartagena Casino";
+	Locations[n].reload.l13.emerge = "reload2";
+	Locations[n].reload.l13.autoreload = "0";
+	Locations[n].reload.l13.label = "Gaming House.";
+
+	Locations[n].reload.l14.name = "reload14";
+	Locations[n].reload.l14.go = "Cartagena Mansion Town";
+	Locations[n].reload.l14.emerge = "reload1";
+	Locations[n].reload.l14.autoreload = "0";
+	Locations[n].reload.l14.label = "Mansion.";
+	Locations[n].reload.l14.close_for_night = 1;
 
 	Locations[n].locators_radius.box.box1 = 0.001;			//climb derrick
 	Locations[n].locators_radius.box.box2 = 0.5;
@@ -1811,7 +1841,7 @@
 	Locations[n].models.always.house = "LH_F1";
 	Locations[n].models.always.window = "LF1_w";
 	Locations[n].models.always.window.tech = "LocationWindows";
-	Locations[n].models.always.window.level = 50;
+	Locations[n].models.always.window.level = 100;
 	//Day
 	Locations[n].models.day.charactersPatch = "LH_F1_p";
 
@@ -1821,13 +1851,20 @@
 	//Environment
 	Locations[n].environment.weather = "false";
 	Locations[n].environment.sea = "false";
-	Locations[n].models.back = "back\mulf1_";
+	Locations[n].models.back = "back\car_";
+
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
 	Locations[n].reload.l1.go = "Cartagena_Center";
 	Locations[n].reload.l1.emerge = "reload7";
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name#.";
+	
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "Cartagena Casino";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].reload.l2.label = "Cartagena Casino.";
 	LAi_LocationFightDisable(&Locations[n], true);
 
 	Locations[n].island = "Colombia"; // NK 04-08-29
@@ -1978,6 +2015,84 @@
 	else
 		Locations[n].reload.l2.label = "Sea.";
 	Locations[n].locators_radius.reload.boat = 11.0;
+
+	Locations[n].island = "Colombia"; // NK 04-08-29
+	n = n + 1;
+	
+	// -------------------------------------------------
+	// Levis: Casino
+
+	Locations[n].filespath.models = "locations\Inside\Casino";
+
+	Locations[n].id = "Cartagena Casino";
+	locations[n].id.label = "#stown_name# Gambling House";
+	Locations[n].image = "Casino.tga";
+	Locations[n].vcskip = true;
+
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+
+	//Sound
+	locations[n].type = "casino";
+	locations[n].fastreload = "Cartagena";
+	
+	//Models
+	//Always
+	Locations[n].models.always.locators = "casino_locators";
+	Locations[n].models.always.casino = "casino";
+	
+	Locations[n].models.always.table1 = "long_table";
+	Locations[n].models.always.table1.locator.group = "tables";
+	Locations[n].models.always.table1.locator.name = "table1";
+	
+	Locations[n].models.always.table2 = "long_table";
+	Locations[n].models.always.table2.locator.group = "tables";
+	Locations[n].models.always.table2.locator.name = "table2";
+	
+	Locations[n].models.always.roulette1 = "roulette";
+	Locations[n].models.always.roulette1.locator.group = "tables";
+	Locations[n].models.always.roulette1.locator.name = "roulette";
+	
+	Locations[n].models.always.roulette2 = "roulette2";
+	Locations[n].models.always.roulette2.locator.group = "tables";
+	Locations[n].models.always.roulette2.locator.name = "roulette";
+	Locations[n].models.always.roulette2.rotate.x = 0;
+	Locations[n].models.always.roulette2.rotate.y = 0.5;
+	Locations[n].models.always.roulette2.rotate.z = 0;
+	
+	Locations[n].models.always.chair1 = "armchair02";
+	Locations[n].models.always.chair1.locator.group = "tables";
+	Locations[n].models.always.chair1.locator.name = "chair1";
+	
+	Locations[n].models.always.chair2 = "armchair02";
+	Locations[n].models.always.chair2.locator.group = "tables";
+	Locations[n].models.always.chair2.locator.name = "chair2";
+
+	Locations[n].models.always.window = "casino_window";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 100;
+	//Day
+	Locations[n].models.day.charactersPatch = "casino_patch";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "casino_patch";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\car_";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Cartagena_UsurerHouse";
+	Locations[n].reload.l1.emerge = "reload2";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.close_for_night = 1;
+	
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "Cartagena_Center";
+	Locations[n].reload.l2.emerge = "reload13";
+	Locations[n].reload.l2.autoreload = "0";
 
 	Locations[n].island = "Colombia"; // NK 04-08-29
 	n = n + 1;
@@ -2149,6 +2264,133 @@
 	
 	n = n + 1;
 
+ 	//-------------------------------------------------
+	Locations[n].id = "CdC_Office";
+	locations[n].id.label = "Casa de Contratacion";
+	Locations[n].filespath.models = "locations\inside\residenceCdC";
+	Locations[n].filespath.textures = "locations\inside\Residence_CdC";
+	Locations[n].image = "Inside_Residenc_CdC.tga";
+
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+
+	//Sound
+	locations[n].type = "residence";
+	locations[n].fastreload = "Cartagena";
+
+	//Models
+	//Always
+	locations[n].models.always.locators = "Residence01_locators";
+	locations[n].models.always.l1 = "Residence01";
+	locations[n].models.always.window = "residence01_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 50;
+	//Day
+	locations[n].models.day.charactersPatch = "Residence01_patch";
+
+	//Night
+	locations[n].models.night.charactersPatch = "Residence01_patch";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\redrsb_";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Cartagena_town_01";
+	Locations[n].reload.l1.emerge = "door_5";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#. Center.";
+	LAi_LocationFightDisable(&Locations[n], true);
+
+
+	Locations[n].island = "Colombia"; // NK 04-08-29
+	n = n + 1;
+
+	//---------------------------------
+	//Levis: Cartagena Mansion
+	Locations[n].id = "Cartagena Mansion Town";
+	locations[n].id.label = "Mansion";
+	Locations[n].filespath.models = "locations\inside\Office";
+	Locations[n].image = "Mansion_Inside.tga";
+	Locations[n].vcskip = true;
+
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+	locations[n].fastreload = "Cartagena";	
+
+	//Sound
+	locations[n].type = "residence";
+	
+	//Models
+	Locations[n].models.back = "back\mumh9_";
+	//Always
+	Locations[n].models.always.locators = "office_locators2";
+	Locations[n].models.always.residence = "office2";
+	Locations[n].models.always.window = "office_windows";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 65;
+	//Day
+	Locations[n].models.day.charactersPatch = "office_patch";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "office_patch";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Cartagena_Center";
+	Locations[n].reload.l1.emerge = "reload14";
+	Locations[n].reload.l1.autoreload = "0";
+
+	Locations[n].island = "Colombia";
+	n = n + 1;
+	
+	//---------------------------------
+	//Levis: House of Grandma
+	
+	Locations[n].id = "House Grandma";
+	locations[n].id.label = "House";
+	Locations[n].filespath.models = "locations\inside\Smallhome";
+	Locations[n].image = "Inside_Smallhome.tga";
+	Locations[n].vcskip = true;
+
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "Cartagena";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "sh_l";
+	Locations[n].models.always.shipyard = "sh";
+	Locations[n].models.always.window = "sh_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 55;
+
+	//Day
+	Locations[n].models.day.charactersPatch = "sh_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "sh_p";
+
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\ffsh_";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Cartagena_town_02";
+	Locations[n].reload.l1.emerge = "locator22";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#.";
+
+	Locations[n].island = "Colombia";
+	n = n + 1;
+
     //------------------------------------------------------------------------------
     //NEW CLOISTER
 
@@ -2178,6 +2420,10 @@
 	Locations[n].models.always.l6 = "white_buildings";
 	Locations[n].models.always.l7 = "clocktower";
 	Locations[n].models.always.l8 = "plants_oriel_trees1";
+
+	Locations[n].models.always.donkey1 = "donkey";
+	Locations[n].models.always.donkey1.locator.group = "quest";
+	Locations[n].models.always.donkey1.locator.name = "donkey1";
 
 	//Day
 	Locations[n].models.day.fonar = "lamps_outside_fd";
@@ -2499,7 +2745,7 @@
 
 	//Models
 	//Always
-	Locations[n].models.always.locators = "new_cloister_l_outer";
+	Locations[n].models.always.locators = "new_cloister_l_graveyard";	//was new_cloister_l_outer
 	Locations[n].models.always.town = "new_cloister";
 
 	Locations[n].models.always.l1 = "Margarita_gate";
@@ -2800,7 +3046,7 @@
 	Build_at("new_cloister_graveyard", "hedgerow", "", -29.0, -0.1, -31.7, 0.0, "Building");
 
 	 //------------------------------------------------------------------------------
-//pär
+
 	Locations[n].filespath.models = "locations\Town_Cartagena\New_cloister";
 	Locations[n].image = "Town_Cartagena_New_Cloister_Inside.tga";
 
@@ -2872,10 +3118,17 @@
 	Locations[n].reload.l4.emerge = "reload6";
 	Locations[n].reload.l4.autoreload = "0";
 
+	Locations[n].reload.l5.name = "reload5";
+	Locations[n].reload.l5.go = "new_cloister_library";
+	Locations[n].reload.l5.emerge = "reload1";
+	Locations[n].reload.l5.autoreload = "0";
+	Locations[n].reload.l5.disable = true;			//only in Freeplay as engineer
+
 	Locations[n].locators_radius.quest.F1 = 2.0;
 	Locations[n].locators_radius.quest.F2 = 2.0;
 	Locations[n].locators_radius.quest.F3 = 2.0;
 	Locations[n].locators_radius.quest.F4 = 2.0;
+	Locations[n].locators_radius.sit.sit1 = 2.5;
 
 	Locations[n].locators_radius.randitem.randitem1 = 0.01;
 	Locations[n].items.randitem1 = "door_N13";
@@ -2918,6 +3171,12 @@
 
 	Locations[n].locators_radius.randitem.randitem14 = 0.01;
 	Locations[n].items.randitem14 = "church_window_small";
+
+	Locations[n].locators_radius.randitem.randitem15 = 0.01;
+	Locations[n].items.randitem15 = "door_LBR";
+
+	Locations[n].locators_radius.randitem.randitem16 = 0.01;
+	Locations[n].items.randitem16 = "chair";
 	
 	Locations[n].island = "Colombia"; // NK 04-08-29
 
@@ -3133,7 +3392,71 @@
 	Locations[n].island = "Colombia";
 	n = n + 1;
 
+	//--------------------------------------------------------------------------
+//pär
+	Locations[n].id = "New_cloister_library";
+	locations[n].id.label = "Library";
+	Locations[n].filespath.models = "locations\inside\Dungeon_2\\";
+	Locations[n].filespath.textures = "locations\inside\Dungeon_2\library";
+	Locations[n].image = "Inside_Cloister_Library.tga";
 
+	//Town sack
+	Locations[n].townsack = "Cartagena";
+
+	//Sound
+	locations[n].type = "Rogers_mine";
+	
+	//Models
+	//Always
+	Locations[n].models.always.locators = "d02_l_library";
+	Locations[n].models.always.dungeon = "d02";
+	Locations[n].models.always.fonar = "d02_fn";
+
+	Locations[n].lockCamAngle = 0.15;
+
+	//Day
+	Locations[n].models.day.charactersPatch = "d02_p";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "d02_p";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "new_cloister_inside";
+	Locations[n].reload.l1.emerge = "reload5";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].locators_radius.reload.reload1 = 0.5;
+
+	Locations[n].locators_radius.box.box13 = 0.0001;
+	Locations[n].locators_radius.quest.end = 1.5;
+
+	Locations[n].items.randitem1 = "port_mechanism";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.01;
+	Locations[n].items.randitem2 = "body";
+
+	Locations[n].items.randitem3 = "port_tools";
+
+	Locations[n].locators_radius.randitem.randitem4 = 0.01;
+	Locations[n].items.randitem4 = "number_plate1";
+
+	Locations[n].locators_radius.randitem.randitem5 = 0.01;
+	Locations[n].items.randitem5 = "number_plate3";
+
+	Locations[n].locators_radius.randitem.randitem6 = 0.01;
+	Locations[n].items.randitem6 = "number_plate4";
+
+	Locations[n].locators_radius.randitem.randitem7 = 0.01;
+	Locations[n].items.randitem7 = "number_plate2";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+
+	Locations[n].island = "Colombia";
+	n = n + 1;
 
 	// -------------------------------------------------
 

@@ -284,7 +284,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				trace("PersuasionChance: "+PersuasionChance+ "Dice: "+ ThreeDice + ". Persuasion Failed!");
+				if(DEBUG_SMUGGLING>3) trace("PersuasionChance: "+PersuasionChance+ "Dice: "+ ThreeDice + ". Persuasion Failed!");
 				if(pchar.money > price)
 				{
 					Dialog.Text = PersuasionFailure+DLG_TEXT[64];

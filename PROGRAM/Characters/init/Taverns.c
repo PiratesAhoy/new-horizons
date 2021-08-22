@@ -711,7 +711,7 @@ void CreateTavernsCharacters(ref n)
 	GiveItem2Character(ch, "blade7");
 	ch.equip.blade = "blade7";
 	ch.location	= "Falaise_de_fleur_tavern";
-	ch.location.group = "candles"; // GR: was "sit"
+	ch.location.group = "sit2"; // GR: was "sit", then "candles"
 	ch.location.locator = "sit2";
 	ch.Dialog.Filename = "Thierry Bosquet_dialog.c";
 	ch.nation = FRANCE;
@@ -1214,6 +1214,81 @@ void CreateTavernsCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	AddGameCharacter(n, ch);
 // <-- KK
+	
+	ch.old.name = "Rodrigo";
+	ch.old.lastname = "Figueras";
+	ch.name = TranslateString("", "Rodrigo");
+	ch.lastname = TranslateString("", "Figueras");
+	ch.id		= "Rodrigo Figueras";
+	ch.model = "bocman10";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "Havana_Tavern";
+	ch.location.group = "sit";
+	ch.location.locator = "sit20";
+	ch.Dialog.Filename = "Habitue_dialog.c";
+	ch.greeting = "Gr_isla muelle citizen";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.experience = "5000";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "2";
+	ch.skill.Sailing = "2";
+	ch.skill.Accuracy = "2";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "2";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "2";
+	ch.skill.Commerce = "2";
+	ch.skill.Sneak = "2";
+	ch.money = "1000";
+	ch.quest.meeting = "0";
+	LAi_SetSitType(ch);
+	LAi_SetLoginTime(ch, 22.0, 5.98333);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Ramón";
+	ch.old.lastname = "Figueras";
+	ch.name = TranslateString("", "Ramón");
+	ch.lastname = TranslateString("", "Figueras");
+	ch.id		= "Ramón Figueras";
+	ch.model = "9S_Nav";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "Havana_Tavern";
+	ch.location.group = "sit";
+	ch.location.locator = "sit6";
+	ch.Dialog.Filename = "Habitue_dialog.c";
+	ch.greeting = "Gr_isla muelle citizen";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "30000";
+	ch.skill.Leadership = "10";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "7";
+	ch.skill.Accuracy = "10";
+	ch.skill.Cannons = "9";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "4";
+	ch.skill.Defence = "9";
+	ch.skill.Commerce = "2";
+	ch.skill.Sneak = "7";
+	ch.money = "1000";
+	ch.quest.meeting = "0";
+	LAi_SetSitType(ch);
+	LAi_SetLoginTime(ch, 6.0, 21.98333);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
 	
 	//===============================| Marigot Town |===============================//
 
@@ -2725,6 +2800,39 @@ void CreateTavernsCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	AddGameCharacter(n, ch);
 // <-- KK
+
+	ch.old.name = "Miguel";
+	ch.old.lastname = "García";
+	ch.name = TranslateString("", "Miguel");
+	ch.lastname = TranslateString("", "García");
+	ch.id		= "Miguel García";
+	ch.model	= "Sailor15";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "Santiago_Tavern";
+	ch.location.group = "sit";
+	ch.location.locator = "sit4";
+	ch.Dialog.Filename = "habitue_dialog.c";
+	ch.greeting = "Gr_isla muelle citizen";
+	ch.nation = SPAIN;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "2500";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	LAi_SetSitType(ch);
+	LAi_SetLoginTime(ch, 22.0, 5.98333);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	AddGameCharacter(n, ch);
 	
 	//============================| Santo Domingo Town |============================//
 
@@ -2875,7 +2983,7 @@ void CreateTavernsCharacters(ref n)
 	LAi_SetSitType(ch);
 	LAi_group_MoveCharacter(ch, "SMUGGLERS_CITIZENS");
 	AddGameCharacter(n, ch);
-	
+
 	ch.old.name = "Adao";
 	ch.old.lastname = "Henriques";
 	ch.name = TranslateString("", "Adao");
@@ -2948,7 +3056,7 @@ void CreateTavernsCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_group_MoveCharacter(ch, "SMUGGLERS_CITIZENS");
 	AddGameCharacter(n, ch);
-	
+
 	//===============================| Tortuga Town |===============================//
 
 //	Tavern Keeper	

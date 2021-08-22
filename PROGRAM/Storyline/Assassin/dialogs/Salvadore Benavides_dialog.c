@@ -673,23 +673,28 @@ void ProcessDialogEvent()
         		break;
 
                 case "begin_84":
-            if (pchar.ship.type == "FR_Couronne")
-            {			
-			dialog.snd = "Voice\CLLA\CLLA004";
-			dialog.text = DLG_TEXT[165];
-			link.l1 = DLG_TEXT[166];
-			link.l1.go = "begin_85";
-                        PlayStereoSound("INTERFACE\took_item.wav");
+			if (pchar.ship.type == "FR_Couronne")
+			{			
+				dialog.snd = "Voice\CLLA\CLLA004";
+				dialog.text = DLG_TEXT[165];
+				link.l1 = DLG_TEXT[166];
+				link.l1.go = "begin_85";
+				PlayStereoSound("INTERFACE\took_item.wav");
             			AddMoneyToCharacter(pchar, 30000);
-            }
-            else
-            {
-			dialog.snd = "Voice\CLLA\CLLA004";			
-			dialog.text = DLG_TEXT[245];
-			Link.l1 = DLG_TEXT[29];
-			Link.l1.go = "Exit";			
-            }			
-        		break;
+            		}
+            		else
+            		{
+				dialog.snd = "Voice\CLLA\CLLA004";
+				if (CheckAttribute(PChar, "quest.no_couronne")) dialog.text = DLG_TEXT[247];
+				else
+				{
+					PChar.quest.no_couronne = true;
+					dialog.text = DLG_TEXT[245];
+				}
+				Link.l1 = DLG_TEXT[29];
+				Link.l1.go = "Exit_get_ship";			
+			}			
+        	break;
 
                 case "begin_85":
 			dialog.snd = "Voice\CLLA\CLLA004";
@@ -1023,10 +1028,13 @@ void ProcessDialogEvent()
 		break;				
 				
 		case "Exit":
-
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
 
+		case "Exit_get_ship":
+			NextDiag.CurrentNode = "begin_84";
+			DialogExit();
 		break;
 
 	}

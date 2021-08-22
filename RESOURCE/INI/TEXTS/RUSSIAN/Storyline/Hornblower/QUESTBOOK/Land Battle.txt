@@ -1,7 +1,7 @@
-title=Land Battle
-text.t1=We are to go to #sRedmond# on #sisland_Redmond# to pick up troops to fight the French.
-text.t2=I am assigned to take the troops to Octopus Bay on #sisland_Falaise de Fleur# where we will engage the French.
-text.t3=The battle is won. Lieutenant Chumley wants to go back to #sCharlestown# but we have so many wounded I am going to take them to #sOxbay# on #sisland_Oxbay#.
+title=Поле боя
+text.t1=Мы должны плыть в #sRedmond# на #sisland_Redmond# чтобы поднять войска для борьбы с французами.
+text.t2=Я назначен вести войска в Залив Осьминога на #sisland_Falaise de Fleur# где мы наймем французов.
+text.t3=Сражение выиграно. Лейтенант Чумлей хочет вернуться в #sCharlestown# но мы имеем раненых и я собираюсь взять их в #sOxbay# на #sisland_Oxbay#.
 text.t4=.
 text.t5=.
 text.t6=.

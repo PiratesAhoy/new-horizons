@@ -1,187 +1,187 @@
 Adventurer_Descr_a{}
-Adventurer_Descr_b{You have spent your life}
-Adventurer_Descr_c{seeking fame, fortune and}
-Adventurer_Descr_d{glory, going where the winds}
-Adventurer_Descr_e{(and rumours of treasure)}
-Adventurer_Descr_f{have taken you.}
+Adventurer_Descr_b{Вы провели свою жизнь}
+Adventurer_Descr_c{в поисках известности, удачи и}
+Adventurer_Descr_d{славы, следуя туда, куда ветра}
+Adventurer_Descr_e{(и слухи о сокровищах)}
+Adventurer_Descr_f{ведут вас.}
 Adventurer_Descr_g{}
 Adventurer_Descr_h{}
 Adventurer_Descr_i{}
 
 Agent_Descr_a{}
-Agent_Descr_b{Part of the secret service of}
-Agent_Descr_c{one of Europe’s major powers,}
-Agent_Descr_d{you are tasked to infiltrate}
-Agent_Descr_e{an enemy stronghold.}
-Agent_Descr_f{However, you may have}
-Agent_Descr_g{different plans for yourself}
-Agent_Descr_h{once you arrive there!}
+Agent_Descr_b{Как часть секретной службы}
+Agent_Descr_c{одной из главных держав Европы,}
+Agent_Descr_d{вам было поручено пробраться}
+Agent_Descr_e{во вражеские владения.}
+Agent_Descr_f{Тем не менее, у вас могут быть}
+Agent_Descr_g{другие планы на себя,}
+Agent_Descr_h{раз вы прибыли сюда!}
 Agent_Descr_i{}
 
 Army Veteran_Descr_a{}
-Army Veteran_Descr_b{You have served in the}
-Army Veteran_Descr_c{ground forces of a major}
-Army Veteran_Descr_d{power, either as a regular}
-Army Veteran_Descr_e{soldier or a mercenary}
-Army Veteran_Descr_f{for hire.}
+Army Veteran_Descr_b{Вы служили}
+Army Veteran_Descr_c{в пехоте одной из главных}
+Army Veteran_Descr_d{держав Европы, либо обычным}
+Army Veteran_Descr_e{солдатом или наемником.}
+Army Veteran_Descr_f{}
 Army Veteran_Descr_g{}
 Army Veteran_Descr_h{}
 Army Veteran_Descr_i{}
 
 Corsair_Descr_a{}
-Corsair_Descr_b{You have cut your teeth as}
-Corsair_Descr_c{a seaman aboard a pirate}
-Corsair_Descr_d{vessel and now have been}
-Corsair_Descr_e{raised to captain by your}
-Corsair_Descr_f{brethren in recognition}
-Corsair_Descr_g{of your prowess and cunning.}
+Corsair_Descr_b{Вы начали в качестве}
+Corsair_Descr_c{матроса на борту пиратского}
+Corsair_Descr_d{судна, а были выбраны}
+Corsair_Descr_e{капитаном своими братьями}
+Corsair_Descr_f{благодаря вашему}
+Corsair_Descr_g{мастерству и хитрости.}
 Corsair_Descr_h{}
 Corsair_Descr_i{}
 
 Engineer_Descr_a{}
-Engineer_Descr_b{You have served one of}
-Engineer_Descr_c{the great powers as a}
-Engineer_Descr_d{military engineer, building}
-Engineer_Descr_e{bridges, fortifications}
-Engineer_Descr_f{and undermining enemy}
-Engineer_Descr_g{defenses during sieges.}
+Engineer_Descr_b{Вы служили одной из}
+Engineer_Descr_c{главных держав Европы в качестве}
+Engineer_Descr_d{военного инженера, строя}
+Engineer_Descr_e{морты, форты и минируя}
+Engineer_Descr_f{вражескую защиту во время}
+Engineer_Descr_g{осад.}
 Engineer_Descr_h{}
 Engineer_Descr_i{}
 
 Explorer_Descr_a{}
-Explorer_Descr_b{Much of the new world is}
-Explorer_Descr_c{still uncharted and you}
-Explorer_Descr_d{have been employed discovering}
-Explorer_Descr_e{what lies beyond the}
-Explorer_Descr_f{frontiers of colonial power.}
+Explorer_Descr_b{Большая часть Нового Света}
+Explorer_Descr_c{все еще не исследована, и вы}
+Explorer_Descr_d{занялись исследованием того,}
+Explorer_Descr_e{что лежит за границами}
+Explorer_Descr_f{колониальных держав.}
 Explorer_Descr_g{}
 Explorer_Descr_h{}
 Explorer_Descr_i{}
 
 Gambler_Descr_a{}
-Gambler_Descr_b{A professional card player,}
-Gambler_Descr_c{you have won your ship in}
-Gambler_Descr_d{a game of chance and now}
-Gambler_Descr_e{seek adventure and fortune}
-Gambler_Descr_f{on the high seas.}
-Gambler_Descr_g{This has led to a duel}
-Gambler_Descr_h{at dawn with a Spanish Don.}
+Gambler_Descr_b{Профессиональный игрок в карты,}
+Gambler_Descr_c{вы выиграли свой корабль,}
+Gambler_Descr_d{а теперь ищете приключений и}
+Gambler_Descr_e{удачи в море.}
+Gambler_Descr_f{Это привело к дуэли на}
+Gambler_Descr_g{рассвете с испанским доном.}
+Gambler_Descr_h{}
 Gambler_Descr_i{}
 
 Gunner_Descr_a{}
-Gunner_Descr_b{You are a trained}
-Gunner_Descr_c{artilleryman who has now}
-Gunner_Descr_d{moved on to commanding}
-Gunner_Descr_e{a ship of your own.}
+Gunner_Descr_b{Вы - опытный}
+Gunner_Descr_c{канонир, отныне}
+Gunner_Descr_d{коммандующий собственным}
+Gunner_Descr_e{кораблем.}
 Gunner_Descr_f{}
 Gunner_Descr_g{}
 Gunner_Descr_h{}
 Gunner_Descr_i{}
 
 Marine_Descr_a{}
-Marine_Descr_b{You have served as a}
-Marine_Descr_c{fighter aboard navy vessels,}
-Marine_Descr_d{boarding enemy ships}
-Marine_Descr_e{in combat and defending}
-Marine_Descr_f{your own from the same.}
+Marine_Descr_b{Вы служили в качестве}
+Marine_Descr_c{бойца на борту военных суден,}
+Marine_Descr_d{абордируя вражеские корабли}
+Marine_Descr_e{и защищая свой одновременно.}
+Marine_Descr_f{}
 Marine_Descr_g{}
 Marine_Descr_h{}
 Marine_Descr_i{}
 
 Merchant_Descr_a{}
-Merchant_Descr_b{You are the new captain}
-Merchant_Descr_c{of a merchant vessel,}
-Merchant_Descr_d{having bought out the}
-Merchant_Descr_e{interest of the ship’s}
-Merchant_Descr_f{former captain who has}
-Merchant_Descr_g{retired to life on land.}
+Merchant_Descr_b{Вы новый капитан}
+Merchant_Descr_c{торгового судна,}
+Merchant_Descr_d{купленного у его}
+Merchant_Descr_e{бывшего капитана, ушедшего}
+Merchant_Descr_f{на сушу, в отставку.}
+Merchant_Descr_g{}
 Merchant_Descr_h{}
 Merchant_Descr_i{}
 
 Naval Officer_Descr_a{}
-Naval Officer_Descr_b{You are a commissioned}
-Naval Officer_Descr_c{naval officer in the service of}
-Naval Officer_Descr_d{one of the great nations.}
-Naval Officer_Descr_e{You live to serve your country}
-Naval Officer_Descr_f{and protect your fellow citizens.}
+Naval Officer_Descr_b{Вы - уполномоченный}
+Naval Officer_Descr_c{офицер флота на службе у}
+Naval Officer_Descr_d{одной из великих держав.}
+Naval Officer_Descr_e{Вы живете, чтобы служить своей стране}
+Naval Officer_Descr_f{и защищать своих соотечественников.}
 Naval Officer_Descr_g{}
 Naval Officer_Descr_h{}
 Naval Officer_Descr_i{}
 
 Physician_Descr_a{}
-Physician_Descr_b{A former ship’s surgeon,}
-Physician_Descr_c{you have adapted to life}
-Physician_Descr_d{at sea and now command a}
-Physician_Descr_e{vessel of your very own.}
+Physician_Descr_b{Бывший корабельный хирург,}
+Physician_Descr_c{вы привыкли к жизни в море}
+Physician_Descr_d{и теперь командуете
+Physician_Descr_e{собственным судном.}
 Physician_Descr_f{}
 Physician_Descr_g{}
 Physician_Descr_h{}
 Physician_Descr_i{}
 
 Quartermaster_Descr_a{}
-Quartermaster_Descr_b{A ship’s paymaster,}
-Quartermaster_Descr_c{you stepped-in to act}
-Quartermaster_Descr_d{as captain when the}
-Quartermaster_Descr_e{ship’s commanding officer}
-Quartermaster_Descr_f{and first mate were lost}
-Quartermaster_Descr_g{on a prior journey.}
+Quartermaster_Descr_b{Корабельный казначей,}
+Quartermaster_Descr_c{вы вступили в должность}
+Quartermaster_Descr_d{капитана, когда}
+Quartermaster_Descr_e{командующий кораблем и}
+Quartermaster_Descr_f{первый помощник пропали}
+Quartermaster_Descr_g{в предыдущем приключении.}
 Quartermaster_Descr_h{}
 Quartermaster_Descr_i{}
 
 Rebel_Descr_a{}
-Rebel_Descr_b{As freedom fighter on the run}
-Rebel_Descr_c{from the authorities in the}
-Rebel_Descr_d{old world, you have moved on}
-Rebel_Descr_e{to the new to try your hand at}
-Rebel_Descr_f{making a better life there.}
-Rebel_Descr_g{The pirates offer you refuge.}
+Rebel_Descr_b{Борец за свободу в бегах от}
+Rebel_Descr_c{властей Старого Света,}
+Rebel_Descr_d{вы пришли в Новый за}
+Rebel_Descr_e{лучшей жизнью. Пираты}
+Rebel_Descr_f{предлагают вам убежище.}
+Rebel_Descr_g{}
 Rebel_Descr_h{}
 Rebel_Descr_i{}
 
 Rogue_Descr_a{}
-Rogue_Descr_b{Quite the womanizer, you are!}
-Rogue_Descr_c{Barely escaped from Europe}
-Rogue_Descr_d{after charming a Lady out}
-Rogue_Descr_e{from her jewelry, you find}
-Rogue_Descr_f{yourself caught up in a duel}
-Rogue_Descr_g{with a Spanish Don.}
+Rogue_Descr_b{А вы распутник!}
+Rogue_Descr_c{Едва сбежав из Европы}
+Rogue_Descr_d{после соблазнения и выманивания}
+Rogue_Descr_e{леди из ее сокровищницы, вы}
+Rogue_Descr_f{попали на дуэль с}
+Rogue_Descr_g{испанским доном.}
 Rogue_Descr_h{}
 Rogue_Descr_i{}
 
 Sailor_Descr_a{}
-Sailor_Descr_b{A lowly sailor, you have}
-Sailor_Descr_c{skimped and saved all your}
-Sailor_Descr_d{life with the dream of one}
-Sailor_Descr_e{day owning a ship of your own.}
-Sailor_Descr_f{That day has come at last.}
+Sailor_Descr_b{Скромный матрос, вы}
+Sailor_Descr_c{провели всю свою жизнь в}
+Sailor_Descr_d{мечтах об обладании собственным}
+Sailor_Descr_e{кораблем. Наконец, этот день настал.}
+Sailor_Descr_f{}
 Sailor_Descr_g{}
 Sailor_Descr_h{}
 Sailor_Descr_i{}
 
 Shipwright_Descr_a{}
-Shipwright_Descr_b{A designer and builder}
-Shipwright_Descr_c{of ships, the wanderlust}
-Shipwright_Descr_d{has taken hold of you and}
-Shipwright_Descr_e{you now leave port in a}
-Shipwright_Descr_f{vessel built with}
-Shipwright_Descr_g{your own hands.}
+Shipwright_Descr_b{Дизайнер и строитель}
+Shipwright_Descr_c{кораблей, страсть к путешествиям}
+Shipwright_Descr_d{взяла верх, и вы}
+Shipwright_Descr_e{покинули порт на судне,}
+Shipwright_Descr_f{построенным собственными руками.}
+Shipwright_Descr_g{}
 Shipwright_Descr_h{}
 Shipwright_Descr_i{}
 
 Smuggler_Descr_a{}
-Smuggler_Descr_b{The first officer of a}
-Smuggler_Descr_c{smuggling vessel, your}
-Smuggler_Descr_d{foolish captain has landed}
-Smuggler_Descr_e{himself in prison leaving}
-Smuggler_Descr_f{you in command to run }
-Smuggler_Descr_g{things as you see fit.}
+Smuggler_Descr_b{Первый офицер на}
+Smuggler_Descr_c{судне контрабандистов, ваш}
+Smuggler_Descr_d{глупый капитан загремел в}
+Smuggler_Descr_e{тюрьму, оставив вас}
+Smuggler_Descr_f{командовать, и теперь}
+Smuggler_Descr_g{вы в погоне за прибылью.}
 Smuggler_Descr_h{}
 Smuggler_Descr_i{}
 
 Social Climber_Descr_a{}
-Social Climber_Descr_b{You mean to go places in life.}
-Social Climber_Descr_c{If a ship can take you there}
-Social Climber_Descr_d{then so be it.}
+Social Climber_Descr_b{Вы по жизни намереваетесь посещать места.}
+Social Climber_Descr_c{Если корабль может вас туда отвезти,}
+Social Climber_Descr_d{так тому и быть.}
 Social Climber_Descr_e{}
 Social Climber_Descr_f{}
 Social Climber_Descr_g{}
@@ -189,39 +189,39 @@ Social Climber_Descr_h{}
 Social Climber_Descr_i{}
 
 Sword Master_Descr_a{}
-Sword Master_Descr_b{A fencing master from Europe,}
-Sword Master_Descr_c{you have trained soldiers and}
-Sword Master_Descr_d{noblemen alike to know one end}
-Sword Master_Descr_e{of a sword from another.}
-Sword Master_Descr_f{Bored by this pursuit,}
-Sword Master_Descr_g{you have bought a ship}
-Sword Master_Descr_h{and made your way}
-Sword Master_Descr_i{to the Caribbean.}
+Sword Master_Descr_b{Мастер фехтования из Европы, вы}
+Sword Master_Descr_c{тренировали солдат и аристократов и}
+Sword Master_Descr_d{знаете, чем один меч отличается от}
+Sword Master_Descr_e{другого. Устав от этого занятия, вы}
+Sword Master_Descr_f{купили корабль и прибыли на Карибы.}
+Sword Master_Descr_g{}
+Sword Master_Descr_h{}
+Sword Master_Descr_i{}
 
 Cursed_Descr_a{}
-Cursed_Descr_b{An island that cannot be found,}
-Cursed_Descr_c{that's what they said. But}
-Cursed_Descr_d{find it you did! And there be}
-Cursed_Descr_e{the chest. You took it all!}
-Cursed_Descr_f{But will you attempt to lift}
-Cursed_Descr_g{the resulting curse?}
-Cursed_Descr_h{Or take advantage of}
-Cursed_Descr_i{the benefits?}
+Cursed_Descr_b{Остров, куда отыскать путь не надо никому,}
+Cursed_Descr_c{так говорилось. Но вы нашли его!}
+Cursed_Descr_d{Там был сундук. Вы взяли все!}
+Cursed_Descr_e{Но попытаетесь ли вы избавиться}
+Cursed_Descr_f{от проклятия? Или воспользуетесь}
+Cursed_Descr_g{его преимуществами?}
+Cursed_Descr_h{}
+Cursed_Descr_i{}
 
 Castaway_Descr_a{}
-Castaway_Descr_b{With no experience and no}
-Castaway_Descr_c{possessions, you have to start}
-Castaway_Descr_d{completely from scratch.}
-Castaway_Descr_e{A tough start indeed!}
-Castaway_Descr_f{Will you survive this}
-Castaway_Descr_g{ultimate challenge?}
+Castaway_Descr_b{Без опыта и имущества, вам}
+Castaway_Descr_c{придется начать с нуля.}
+Castaway_Descr_d{Без сомнений, суровое начало!}
+Castaway_Descr_e{Выживете ли вы, приняв этот}
+Castaway_Descr_f{исключительный вызов?}
+Castaway_Descr_g{}
 Castaway_Descr_h{}
 Castaway_Descr_i{}
 
 Custom_Descr_a{}
-Custom_Descr_b{Where do you come from?}
-Custom_Descr_c{Where will you go?}
-Custom_Descr_d{It is a mystery!}
+Custom_Descr_b{Откуда вы пришли?}
+Custom_Descr_c{Куда вы пойдете?}
+Custom_Descr_d{Это загадка!}
 Custom_Descr_e{}
 Custom_Descr_f{}
 Custom_Descr_g{}

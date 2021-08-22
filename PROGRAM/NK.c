@@ -161,6 +161,11 @@ bool HasMerchantPassport(ref chr)
 {
 	if (CheckCharacterItem(chr, "EITC_Passport"))	return true;
 	if (CheckCharacterItem(chr, "Trade_Passport"))	return true;
+	if (CheckCharacterItem(chr, "Trade_PassportE"))	return true;
+	if (CheckCharacterItem(chr, "Trade_PassportF"))	return true;
+	if (CheckCharacterItem(chr, "Trade_PassportS"))	return true;
+	if (CheckCharacterItem(chr, "Trade_PassportH"))	return true;
+	if (CheckCharacterItem(chr, "Trade_PassportP"))	return true;
 	return false;
 }
 

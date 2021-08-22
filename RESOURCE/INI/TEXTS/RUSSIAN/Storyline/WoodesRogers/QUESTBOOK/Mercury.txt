@@ -1,6 +1,6 @@
-title=A remedy for curing syphilis
-text.t1=Have to find this medicine.
-text.t2=Where can I find empty bottles in a town based on rum and drunken sailors?
-text.t3=I got the empty bottles, now to the doctor again.
-text.t4=Done!
-text.t5=The doctor is trying some new outfits - where?
+title=Средство для лечения сифилиса
+text.t1=Нужно найти лекарство.
+text.t2=Где я могу найти пустые бутылки в городе? Из под рома. Среди пьяных матросов?
+text.t3=Я достал пустые бутылки, теперь снова к доктору.
+text.t4=Готово!
+text.t5=Доктор примеряет новые наряды - где?

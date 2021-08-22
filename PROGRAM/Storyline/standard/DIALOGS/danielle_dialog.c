@@ -1279,9 +1279,16 @@ void ProcessDialogEvent()
 		case "Clement_home2":
 			Dialog.Text = DLG_TEXT[459];
 			Link.l1 = DLG_TEXT[460];
+			AddDialogExitQuest("Story_Danielle_back_to_officer");
 			Link.l1.go = "exit";
-			NextDiag.TempNode = "After_Final2";
+			NextDiag.TempNode = "Remind_about_Redmond";
 //			AddDialogExitQuest("end_game2");	// Now follows on from quest case "end_game"			
+		break;
+
+		case "Remind_about_Redmond":
+			Dialog.Text = DLG_TEXT[573];
+			Link.l1 = DLG_TEXT[574] + GetMyName(NPChar) + DLG_TEXT[575];
+			Link.l1.go = "exit";			
 		break;
 		
 		case "After_Final2":

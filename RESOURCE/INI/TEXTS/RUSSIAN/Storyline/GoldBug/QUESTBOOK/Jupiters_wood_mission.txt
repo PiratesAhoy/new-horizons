@@ -1,2 +1,2 @@
-title=Jupiters wood mission
-text.t1=Pick up wood in the boathouse.
+title=Добыть древесину
+text.t1=Забрать из лодочного сарая дрова.

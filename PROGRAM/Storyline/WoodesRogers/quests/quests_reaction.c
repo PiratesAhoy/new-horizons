@@ -579,6 +579,7 @@ void QuestComplete(string sQuestName)
 		break;
 	//----------------------------------------------------------------------------------------------------------------
 		case "mutiny_deck":
+			Pchar.enable_bonuschapter = "yes";
 			PlaySound("INTERFACE\closed_locked_door.wav");
 
 			ChangeCharacterAddressGroup(characterFromID("Fletcher Christian"), "mutiny_deckWR", "officers", "reload1_3");
@@ -27520,17 +27521,22 @@ void QuestComplete(string sQuestName)
        			locy = stf(loadedLocation.locators.quest.turn_around.y);
        			locz = stf(loadedLocation.locators.quest.turn_around.z);
        			locCameraToPos(locx, locy, locz, false);
-
+		
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "quest", "turn_around");
 			PlaySound("INTERFACE\blues_end.wav");
 
 			LAi_QuestDelay("the_very_end1", 6.0);
-			LAi_QuestDelay("the_very_end2", 10.0);
+
+			if(CheckAttribute(Pchar,"enable_bonuschapter") && Pchar.enable_bonuschapter == "yes")
+			{
+				LAi_QuestDelay("bonus_chapter1", 10.0);
+			}
+			else LAi_QuestDelay("the_very_end2", 10.0);
 		break;
 
 		case "the_very_end1":
-			LAi_ActorAnimation(Pchar, "hands up", "_", 11.0);
+			LAi_ActorAnimation(Pchar, "hands up", "_", 5.0);		//was 11.0
 
 			LAi_QuestDelay("pchar_sigh", 0.01);
 			LAi_QuestDelay("pchar_sigh", 0.01);
@@ -27541,7 +27547,104 @@ void QuestComplete(string sQuestName)
 			SetEventHandler("frame","Main_Start",1);
 			InterfaceStates.Buttons.Resume.enable = false;
 		break;
-	
+
+		case "bonus_chapter1":
+			//jrh arrives
+
+			PlaySound("PEOPLE\counter_close.wav");
+			ChangeCharacterAddressGroup(characterFromID("jrh"), "wr_farm_alchemy2", "reload", "reload2");
+
+			LAi_QuestDelay("bonus_chapter2", 0.01);
+		break;
+
+		case "bonus_chapter2":
+			LAi_QuestDelay("pchar_huh", 0.01);
+
+			LAi_SetActorType(CharacterFromID("grandma"));
+			LAi_SetActorType(CharacterFromID("Dave Edna"));
+			LAi_SetActorType(CharacterFromID("wench3"));
+			LAi_SetActorType(CharacterFromID("Minerva"));
+			LAi_SetActorType(CharacterFromID("Selkirk"));
+			LAi_SetActorType(CharacterFromID("Friday"));
+			LAi_SetActorType(CharacterFromID("Defoe"));
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			
+			LAi_ActorTurnToLocator(CharacterFromID("grandma"), "reload", "reload2");
+			LAi_ActorTurnToLocator(CharacterFromID("Dave Edna"), "reload", "reload2");
+			LAi_ActorTurnToLocator(CharacterFromID("wench3"), "reload", "reload2");
+			LAi_ActorTurnToLocator(CharacterFromID("Minerva"), "reload", "reload2");
+			LAi_ActorTurnToLocator(CharacterFromID("Selkirk"), "reload", "reload2");
+			LAi_ActorTurnToLocator(CharacterFromID("Friday"), "reload", "reload2");
+			LAi_ActorTurnToLocator(CharacterFromID("Defoe"), "reload", "reload2");
+			LAi_ActorTurnToLocator(CharacterFromID("Claire Voyant"), "reload", "reload2");
+
+			LAi_SetActorType(Pchar);
+			LAi_ActorTurnToLocator(Pchar, "reload", "reload2");
+
+			LAi_QuestDelay("bonus_chapter3", 1.0);
+		break;
+
+		case "bonus_chapter3":
+			SendMessage(&locCamera, "l", MSG_CAMERA_FOLLOW);
+
+			LAi_SetActorType(CharacterFromID("jrh"));
+			LAi_ActorDialog(characterFromID("jrh"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("jrh"));
+			Characters[GetCharacterIndex("jrh")].dialog.CurrentNode  = "bonus_chapter";
+		break;
+
+		case "bonus_chapter4":
+			LAi_ActorTurnToLocator(CharacterFromID("grandma"), "reload", "reload1");
+			LAi_ActorTurnToLocator(CharacterFromID("Dave Edna"), "reload", "reload1");
+			LAi_ActorTurnToLocator(CharacterFromID("wench3"), "reload", "reload1");
+			LAi_ActorTurnToLocator(CharacterFromID("Minerva"), "reload", "reload1");
+			LAi_ActorTurnToLocator(CharacterFromID("Selkirk"), "reload", "reload1");
+			LAi_ActorTurnToLocator(CharacterFromID("Friday"), "reload", "reload1");
+			LAi_ActorTurnToLocator(CharacterFromID("Defoe"), "reload", "reload1");
+			LAi_ActorTurnToLocator(CharacterFromID("Claire Voyant"), "reload", "reload1");
+
+			LAi_SetActorType(CharacterFromID("Claire Voyant"));
+			LAi_ActorDialog(characterFromID("Claire Voyant"), pchar, "", 0.0, 0.0);
+			LAi_ActorWaitDialog(Pchar, characterFromID("Claire Voyant"));
+			Characters[GetCharacterIndex("Claire Voyant")].dialog.CurrentNode  = "tickets";
+		break;
+
+		case "bonus_chapter5":
+			LAi_QuestDelay("pchar_lets_go", 0.01);
+
+			LAi_QuestDelay("bonus_chapter6", 1.0);
+		break;
+
+		case "bonus_chapter6":
+			ChangeCharacterAddressGroup(characterFromID("Javier Balboa"), "none", "", "");
+			locations[FindLocation("Santiago_townhall")].type = "";
+			locations[FindLocation("Santiago_townhall")].models.always.locators = "Residence01_locators_CB";
+
+			for(i = 1; i < 14; i++) {LAi_SetPoorType(CharacterFromID("CB"+i));}
+
+			ChangeCharacterAddressGroup(characterFromID("CB2"), "Santiago_townhall", "goto", "m2");
+			ChangeCharacterAddressGroup(characterFromID("CB3"), "Santiago_townhall", "goto", "m3");
+			ChangeCharacterAddressGroup(characterFromID("CB4"), "Santiago_townhall", "goto", "m4");
+			ChangeCharacterAddressGroup(characterFromID("CB5"), "Santiago_townhall", "goto", "m5");
+			ChangeCharacterAddressGroup(characterFromID("CB6"), "Santiago_townhall", "goto", "m6");
+			ChangeCharacterAddressGroup(characterFromID("CB7"), "Santiago_townhall", "goto", "m7");
+			ChangeCharacterAddressGroup(characterFromID("CB8"), "Santiago_townhall", "goto", "m8");
+			ChangeCharacterAddressGroup(characterFromID("CB9"), "Santiago_townhall", "goto", "m9");
+			ChangeCharacterAddressGroup(characterFromID("CB10"), "Santiago_townhall", "goto", "m10");
+			ChangeCharacterAddressGroup(characterFromID("CB11"), "Santiago_townhall", "goto", "m11");
+			ChangeCharacterAddressGroup(characterFromID("CB12"), "Santiago_townhall", "goto", "m12");
+			ChangeCharacterAddressGroup(characterFromID("CB21"), "Santiago_townhall", "goto", "m21_1");
+			ChangeCharacterAddressGroup(characterFromID("CB13"), "Santiago_townhall", "goto", "m13");
+			ChangeCharacterAddressGroup(characterFromID("CB1"), "Santiago_townhall", "goto", "m1_1");
+
+			SetModel(PChar, "invisible", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
+			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+			DeleteAttribute(pchar, "items");//takes all incl fists
+
+			DoQuestReloadToLocation("Santiago_townhall", "quest", "pyle" ,"B_A1");
+		break;
+//pär bonus
 	//................................................................................................
 		case "glass_on_stool_sound":
 			PlaySound("PEOPLE\step_stairway2.wav");
@@ -33300,14 +33403,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "shop_fight3":
-			LAi_QuestDelay("shop_fight4", 1.0);
-			LAi_QuestDelay("shop_fight5", 4.0);		//was 3.0
-			LAi_QuestDelay("shop_fight6", 7.0);		//was 5.0
-			LAi_QuestDelay("shop_fight7", 9.0);		//was 7.0
-			LAi_QuestDelay("shop_fight8", 10.0);		//was 8.0
-			LAi_QuestDelay("elevator_fire", 12.0);		// was 10.0
+	//		LAi_QuestDelay("shop_fight4", 1.0);		//wr_boc1 skipped as he didn't shop up at all
+			LAi_QuestDelay("shop_fight5", 1.0);		//was 4.0
+			LAi_QuestDelay("shop_fight6", 4.0);		//was 7.0
+			LAi_QuestDelay("shop_fight7", 7.0);		//was 9.0
+			LAi_QuestDelay("shop_fight8", 9.0);		//was 10.0
+			LAi_QuestDelay("elevator_fire", 10.0);		// was 12.0
 		break;
-
+	/*
 		case "shop_fight4":
 			LAi_SetPlayerType(Pchar);
 			LAi_SetFightMode(Pchar, true);
@@ -33320,8 +33423,11 @@ void QuestComplete(string sQuestName)
 			LAi_ActorAttack(CharacterFromID("wr_boc1"), Pchar, "");					//nr 1
 			LAi_group_MoveCharacter(characterFromID("wr_boc1"), "WR_GUARDS_2");
 		break;
-
+	*/
 		case "shop_fight5":
+		    LAi_SetPlayerType(Pchar);
+		    LAi_SetFightMode(Pchar, true);
+
 			ChangeCharacterAddressGroup(characterFromID("wr_pir2"), "wr_shop", "reload", "reload2");
 			LAi_NoRebirthEnable(characterFromID("wr_pir2"));
 			RemoveCharacterEquip(characterFromID("wr_pir2"), GUN_ITEM_TYPE);
@@ -33348,6 +33454,8 @@ void QuestComplete(string sQuestName)
 			TakeItemFromCharacter(characterFromID("wr_fralut"), "pistol1");
 			RemoveCharacterEquip(characterFromID("wr_fralut"), BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(characterFromID("wr_fralut"), "blade3carpets");
+			if(!CheckCharacterItem(characterFromID("wr_fralut"),"blade4")) 
+			{ GiveItem2Character(characterFromID("wr_fralut"), "blade4"); }
 			EquipCharacterbyItem(characterFromID("wr_fralut"), "blade4");
 			LAi_SetActorType(characterFromID("wr_fralut"));
 			LAi_ActorAttack(CharacterFromID("wr_fralut"), Pchar, "");				//nr 4
@@ -33362,6 +33470,8 @@ void QuestComplete(string sQuestName)
 			TakeItemFromCharacter(characterFromID("wr_mong"), "pistol1");
 			RemoveCharacterEquip(characterFromID("wr_mong"), BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(characterFromID("wr_mong"), "bladebarrel");
+			if(!CheckCharacterItem(characterFromID("wr_mong"),"blade4")) 
+			{ GiveItem2Character(characterFromID("wr_mong"), "blade4"); }
 			EquipCharacterbyItem(characterFromID("wr_mong"), "blade4");
 			LAi_SetActorType(characterFromID("wr_mong"));
 			LAi_ActorAttack(CharacterFromID("wr_mong"), Pchar, "");					//nr 5
@@ -33499,6 +33609,8 @@ void QuestComplete(string sQuestName)
 			TakeItemFromCharacter(characterFromID("wr_pir4"), "pistol1");
 			RemoveCharacterEquip(characterFromID("wr_pir4"), BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(characterFromID("wr_pir4"), "bladeglobe");
+			if(!CheckCharacterItem(characterFromID("wr_pir4"),"blade4")) 
+			{ GiveItem2Character(characterFromID("wr_pir4"), "blade4"); }
 			EquipCharacterbyItem(characterFromID("wr_pir4"), "blade4");
 			LAi_SetActorType(characterFromID("wr_pir4"));
 			LAi_ActorAttack(CharacterFromID("wr_pir4"), Pchar, "");					//nr 10
@@ -33604,8 +33716,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "shop_guards_defeated_check":
-			Pchar.quest.shop_guards_defeated_check1.win_condition.l1 = "NPC_Death";
-			Pchar.quest.shop_guards_defeated_check1.win_condition.l1.character = "wr_boc1";
+		//	Pchar.quest.shop_guards_defeated_check1.win_condition.l1 = "NPC_Death";
+		//	Pchar.quest.shop_guards_defeated_check1.win_condition.l1.character = "wr_boc1";
 			Pchar.quest.shop_guards_defeated_check1.win_condition.l2 = "NPC_Death";
 			Pchar.quest.shop_guards_defeated_check1.win_condition.l2.character = "wr_pir2";
 			Pchar.quest.shop_guards_defeated_check1.win_condition.l3 = "NPC_Death";
@@ -82913,8 +83025,435 @@ void QuestComplete(string sQuestName)
 			}
 			else LAi_QuestDelay("HNO3_check", 2.0);//loop check
 		break;
+	//..............................................................................................................
+	//bonus part Barbara Ann
 
+		case "B_A1":
+			LAi_SetStayType(Pchar);
+			PlaySound("AMBIENT\galleon_party.wav");
+
+			LAi_QuestDelay("B_A2", 7.0);
+		break;
+
+		case "B_A2":
+			LAi_SetActorType(characterFromID("CB21"));
+			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "block", 1.0);
+
+			PlaySound("PEOPLE\chopchop.wav");
+
+			LAi_QuestDelay("B_CB21_reset", 1.0);
+			LAi_QuestDelay("B_A3", 2.0);
+		break;
+
+		case "B_CB21_reset":
+			LAi_SetStayType(characterFromID("CB21"));
+		break;
+
+		case "B_A3":
+			LAi_SetActorType(characterFromID("CB21"));
+			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "hands up", 1.0);
+			LAi_SetActorType(characterFromID("CB1"));
+
+			LAi_QuestDelay("B_A4", 2.0);
+		break;
+
+	//----------------------------------------------------------
+
+		case "B_A4":
+			LAi_SetStayType(characterFromID("CB21"));
+			PlaySound("MUSIC\Coast Brothers.wav");
+
+			LAi_QuestDelay("B_A5", 3.0);
+		break;
+
+		case "B_A5":
+			LAi_SetActorType(characterFromID("CB6"));
+			LAi_SetActorType(characterFromID("CB7"));
+			LAi_SetActorType(characterFromID("CB12"));
+			
+			LAi_QuestDelay("B_A6", 2.25);			//was 2.0
+		break;
+
+		case "B_A6":
+			LAi_SetActorType(characterFromID("CB13"));	//was 1.0
+
+			LAi_QuestDelay("B_A7", 0.75);
+		break;
+
+		case "B_A7":
+			LAi_SetActorType(characterFromID("CB2"));
+			LAi_SetActorType(characterFromID("CB3"));
+			LAi_SetActorType(characterFromID("CB4"));
+			LAi_SetActorType(characterFromID("CB5"));
+			LAi_SetActorType(characterFromID("CB8"));
+			LAi_SetActorType(characterFromID("CB9"));
+			LAi_SetActorType(characterFromID("CB10"));
+			LAi_SetActorType(characterFromID("CB11"));
+
+			Pchar.chorus_anim = "verse1";
+			LAi_QuestDelay("B_chorus_anim", 0.01);
+
+			LAi_QuestDelay("B_turn_left", 2.5);		//subdominant
+			LAi_QuestDelay("B_turn_forward", 5.0);		//tonika
+			LAi_QuestDelay("B_turn_right", 7.5);		//dominant
+			
+			LAi_QuestDelay("B_turn_left", 8.5);		//subdominant
+			LAi_QuestDelay("B_turn_forward", 10.5);		//tonika
 		
+		LAi_QuestDelay("B_CB21_hands_up", 12.5);
+			LAi_QuestDelay("B_B5", 13.0);			//was 13.5
+		break;
+
+	//----------------------------------------------------------
+	
+		case "B_turn_left":
+			//turn left
+
+			LAi_ActorTurnToLocator(characterFromID("CB4"), "goto", "L1_low");
+			LAi_ActorTurnToLocator(characterFromID("CB5"), "goto", "L1_low");
+			LAi_ActorTurnToLocator(characterFromID("CB8"), "goto", "L2_low");
+			LAi_ActorTurnToLocator(characterFromID("CB9"), "goto", "L2_low");
+			LAi_ActorTurnToLocator(characterFromID("CB10"), "goto", "L2_low");
+			LAi_ActorTurnToLocator(characterFromID("CB11"), "goto", "L2_low");
+
+			LAi_ActorTurnToLocator(characterFromID("CB2"), "goto", "L1_high");
+			LAi_ActorTurnToLocator(characterFromID("CB3"), "goto", "L1_high");
+
+			LAi_ActorTurnToLocator(characterFromID("CB1"), "goto", "L2_high");
+			LAi_ActorTurnToLocator(characterFromID("CB6"), "goto", "L2_high");
+			LAi_ActorTurnToLocator(characterFromID("CB7"), "goto", "L2_high");
+			LAi_ActorTurnToLocator(characterFromID("CB12"), "goto", "L2_high");
+
+			LAi_ActorTurnToLocator(characterFromID("CB13"), "goto", "L3_high");
+		break;
+
+		case "B_turn_forward":
+			//turn forward
+
+			LAi_ActorTurnToLocator(characterFromID("CB3"), "goto", "FL");
+			LAi_ActorTurnToLocator(characterFromID("CB5"), "goto", "FL");
+			LAi_ActorTurnToLocator(characterFromID("CB9"), "goto", "FL");
+
+			LAi_ActorTurnToLocator(characterFromID("CB1"), "quest", "pyle1");
+			LAi_ActorTurnToLocator(characterFromID("CB6"), "quest", "pyle1");
+			LAi_ActorTurnToLocator(characterFromID("CB7"), "quest", "pyle1");
+			LAi_ActorTurnToLocator(characterFromID("CB13"), "quest", "pyle1");
+			LAi_ActorTurnToLocator(characterFromID("CB10"), "quest", "pyle1");
+			LAi_ActorTurnToLocator(characterFromID("CB11"), "quest", "pyle1");
+
+			LAi_ActorTurnToLocator(characterFromID("CB2"), "goto", "FR");
+			LAi_ActorTurnToLocator(characterFromID("CB4"), "goto", "FR");
+			LAi_ActorTurnToLocator(characterFromID("CB8"), "goto", "FR");
+			LAi_ActorTurnToLocator(characterFromID("CB12"), "goto", "FR");
+		break;
+
+		case "B_turn_right":
+			//turn right
+
+			LAi_ActorTurnToLocator(characterFromID("CB4"), "goto", "R1_low");
+			LAi_ActorTurnToLocator(characterFromID("CB5"), "goto", "R1_low");
+			LAi_ActorTurnToLocator(characterFromID("CB8"), "goto", "R2_low");
+			LAi_ActorTurnToLocator(characterFromID("CB9"), "goto", "R2_low");
+			LAi_ActorTurnToLocator(characterFromID("CB10"), "goto", "R2_low");
+			LAi_ActorTurnToLocator(characterFromID("CB11"), "goto", "R2_low");
+
+			LAi_ActorTurnToLocator(characterFromID("CB2"), "goto", "R1_high");
+			LAi_ActorTurnToLocator(characterFromID("CB3"), "goto", "R1_high");
+
+			LAi_ActorTurnToLocator(characterFromID("CB1"), "goto", "R2_high");
+			LAi_ActorTurnToLocator(characterFromID("CB6"), "goto", "R2_high");
+			LAi_ActorTurnToLocator(characterFromID("CB7"), "goto", "R2_high");
+			LAi_ActorTurnToLocator(characterFromID("CB12"), "goto", "R2_high");
+
+			LAi_ActorTurnToLocator(characterFromID("CB13"), "goto", "R3_high");
+		break;
+	
+	//----------------------------------------------------------
+
+		case "B_CB21_hands_up":
+			LAi_SetActorType(characterFromID("CB21"));
+			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "hands up", 1.0);
+
+			LAi_QuestDelay("B_CB21_reset", 0.5);		//was 0.5
+		break;
+
+	//----------------------------------------------------------
+
+		case "B_B5":
+			//verse 2
+
+			Pchar.chorus_singer = "stop";
+	
+			LAi_SetStayType(characterFromID("CB13"));		//reset
+			LAi_SetPoorType(characterFromID("CB13"));
+
+			LAi_SetStayType(characterFromID("CB1")); LAi_SetStayType(characterFromID("CB6"));
+			LAi_SetStayType(characterFromID("CB7")); LAi_SetStayType(characterFromID("CB12"));
+
+			LAi_SetPoorType(characterFromID("CB2")); LAi_SetPoorType(characterFromID("CB3")); LAi_SetPoorType(characterFromID("CB4"));
+			LAi_SetPoorType(characterFromID("CB5")); LAi_SetPoorType(characterFromID("CB8")); LAi_SetPoorType(characterFromID("CB9"));
+			LAi_SetPoorType(characterFromID("CB10")); LAi_SetPoorType(characterFromID("CB11"));
+			
+			LAi_QuestDelay("B_CB21_hands_up", 0.01);
+			LAi_QuestDelay("B_B6", 3.0);			//was 2.0
+		break;
+
+		case "B_B6":
+			LAi_SetActorType(characterFromID("CB13"));
+
+			LAi_QuestDelay("B_B7", 2.5);			//was 3.5			
+		break;
+
+		case "B_B7":
+			for(i = 1; i < 14; i++) {LAi_SetActorType(CharacterFromID("CB"+i));}
+
+			Pchar.chorus_singer = "go";
+			Pchar.chorus_anim = "verse2";
+			LAi_QuestDelay("B_chorus_anim", 0.01);
+
+			LAi_QuestDelay("B_turn_left", 0.01);		
+			LAi_QuestDelay("B_turn_forward", 2.5);		
+			LAi_QuestDelay("B_turn_right", 5.0);		
+			
+			LAi_QuestDelay("B_turn_left", 6.0);		
+			LAi_QuestDelay("B_turn_forward", 8.0);		
+
+			LAi_QuestDelay("B_C4", 11.0);			//was 10.5
+		break;
+
+	//----------------------------------------------------------
+	
+		case "B_C4":
+			//verse 3
+
+			Pchar.chorus_singer = "stop";
+			for(i = 2; i < 14; i++) {LAi_SetPoorType(CharacterFromID("CB"+i));}
+			LAi_SetStayType(CharacterFromID("CB1"));			//reset
+
+			LAi_QuestDelay("B_CB21_hands_up", 0.01);
+			LAi_QuestDelay("B_C5", 2.3);
+		break;
+
+		case "B_C5":
+			LAi_SetActorType(characterFromID("CB6"));
+			LAi_SetActorType(characterFromID("CB7"));
+			LAi_SetActorType(characterFromID("CB12"));
+			
+			LAi_QuestDelay("B_C6", 2.25);			//was 2.0
+		break;
+
+		case "B_C6":
+			LAi_SetActorType(characterFromID("CB13"));
+
+			LAi_QuestDelay("B_C7", 0.75);			//was 1.0
+		break;
+
+		case "B_C7":
+			for(i = 1; i < 14; i++) {LAi_SetActorType(CharacterFromID("CB"+i));}
+		
+			Pchar.chorus_singer = "go";
+			Pchar.chorus_anim = "verse3";
+			LAi_QuestDelay("B_chorus_anim", 0.01);
+
+			LAi_QuestDelay("B_turn_left", 2.5);
+			LAi_QuestDelay("B_turn_forward", 5.0);
+			LAi_QuestDelay("B_turn_right", 7.5);
+			
+			LAi_QuestDelay("B_turn_left", 8.5);
+			LAi_QuestDelay("B_turn_forward", 10.5);
+
+			LAi_QuestDelay("B_D1", 13.5);			//pause party from here, was 13.5
+		break;
+	
+	//----------------------------------------------------------
+
+		case "B_chorus_anim":
+			if(GetAttribute(Pchar, "chorus_singer") == "stop")
+			{
+
+			}
+			else
+			{
+				if(CheckAttribute(Pchar, "chorus_anim"))
+				{
+					switch(Pchar.chorus_anim)
+					{
+						case "verse1":
+							for(i = 1; i < 14; i++) {LAi_tmpl_ani_PlayAnimation(characterFromID("CB"+i), "hit_stand", 1.0);}
+
+							LAi_QuestDelay("B_chorus_anim", 1.0);
+						break;
+
+						case "verse2":
+							for(i = 1; i < 14; i++) {LAi_tmpl_ani_PlayAnimation(characterFromID("CB"+i), "stairs up", 1.0);}	//was stairs up
+
+							LAi_QuestDelay("B_chorus_anim", 1.0);
+						break;
+
+						case "verse3":
+							for(i = 1; i < 14; i++) {LAi_tmpl_ani_PlayAnimation(characterFromID("CB"+i), "run", 1.0);}
+
+							LAi_QuestDelay("B_chorus_anim", 1.0);
+						break;
+
+						case "verse4":
+							for(i = 1; i < 14; i++) {LAi_tmpl_ani_PlayAnimation(characterFromID("CB"+i), "fight stand_5", 1.0);}
+							
+							LAi_QuestDelay("B_D_pause", 1.0);
+						break;
+					}
+				}
+			}
+		break;
+	
+	//----------------------------------------------------------
+
+		case "B_D_pause":
+			for(i = 1; i < 13; i++) {LAi_SetCitizenType(CharacterFromID("CB"+i));}
+			LAi_SetPoorType(CharacterFromID("CB13"));
+		break;
+
+		case "B_D1":
+		//	Pchar.chorus_singer = "stop";
+
+			Pchar.chorus_anim = "verse4";
+		//	LAi_QuestDelay("B_chorus_anim", 0.01);
+
+			LAi_QuestDelay("B_turn_left", 5.5);
+			LAi_QuestDelay("B_turn_forward", 8.0);
+			LAi_QuestDelay("B_turn_right", 10.5);
+			
+			LAi_QuestDelay("B_turn_left", 11.5);
+			LAi_QuestDelay("B_turn_forward", 13.5);
+
+			LAi_QuestDelay("B_CB21_hands_up", 16.0);	//was a little late
+			LAi_QuestDelay("B_E4", 16.5);			//was 16.5
+		break;
+
+	//----------------------------------------------------------
+
+		case "B_E4":
+			Pchar.chorus_singer = "stop";
+
+			ChangeCharacterAddressGroup(characterFromID("CB1"), "Santiago_townhall", "goto", "m1_1");
+			ChangeCharacterAddressGroup(characterFromID("CB2"), "Santiago_townhall", "goto", "m2");
+			ChangeCharacterAddressGroup(characterFromID("CB3"), "Santiago_townhall", "goto", "m3");
+			ChangeCharacterAddressGroup(characterFromID("CB4"), "Santiago_townhall", "goto", "m4");
+			ChangeCharacterAddressGroup(characterFromID("CB5"), "Santiago_townhall", "goto", "m5");
+			ChangeCharacterAddressGroup(characterFromID("CB6"), "Santiago_townhall", "goto", "m6");
+			ChangeCharacterAddressGroup(characterFromID("CB7"), "Santiago_townhall", "goto", "m7");
+			ChangeCharacterAddressGroup(characterFromID("CB8"), "Santiago_townhall", "goto", "m8");
+			ChangeCharacterAddressGroup(characterFromID("CB9"), "Santiago_townhall", "goto", "m9");
+			ChangeCharacterAddressGroup(characterFromID("CB10"), "Santiago_townhall", "goto", "m10");
+			ChangeCharacterAddressGroup(characterFromID("CB11"), "Santiago_townhall", "goto", "m11");
+			ChangeCharacterAddressGroup(characterFromID("CB12"), "Santiago_townhall", "goto", "m12");
+
+			for(i = 2; i < 14; i++) {LAi_SetPoorType(CharacterFromID("CB"+i));}
+
+			LAi_SetStayType(CharacterFromID("CB1"));			//reset
+			LAi_SetActorType(characterFromID("CB6"));
+			LAi_SetActorType(characterFromID("CB7"));
+			LAi_SetActorType(characterFromID("CB12"));
+
+			
+			LAi_QuestDelay("B_E7", 5.5);
+		break;
+
+		case "B_E7":
+			LAi_SetActorType(characterFromID("CB1"));
+			LAi_SetActorType(characterFromID("CB2"));
+			LAi_SetActorType(characterFromID("CB3"));
+			LAi_SetActorType(characterFromID("CB4"));
+			LAi_SetActorType(characterFromID("CB5"));
+			LAi_SetActorType(characterFromID("CB8"));
+			LAi_SetActorType(characterFromID("CB9"));
+			LAi_SetActorType(characterFromID("CB10"));
+			LAi_SetActorType(characterFromID("CB11"));
+			LAi_SetActorType(characterFromID("CB13"));
+
+			Pchar.chorus_singer = "go";
+			Pchar.chorus_anim = "verse1";
+			LAi_QuestDelay("B_chorus_anim", 0.01);
+
+			LAi_QuestDelay("B_turn_left", 0.0);
+			LAi_QuestDelay("B_turn_forward", 2.5);
+			LAi_QuestDelay("B_turn_right", 5.0);
+			
+			LAi_QuestDelay("B_turn_left", 6.0);
+			LAi_QuestDelay("B_turn_forward", 8.0);			//should be 8?
+
+			LAi_QuestDelay("B_CB21_hands_up", 10.5);		//was late
+			LAi_QuestDelay("B_F4", 11.0);				//was 10.5 and all steps E too early
+		break;
+
+	//----------------------------------------------------------
+
+		case "B_F4":
+			Pchar.chorus_singer = "stop";
+			for(i = 2; i < 14; i++) {LAi_SetPoorType(CharacterFromID("CB"+i));}
+			LAi_SetStayType(CharacterFromID("CB1"));			//reset
+
+			LAi_QuestDelay("B_F5", 2.3);
+		break;
+
+		case "B_F5":
+			LAi_SetActorType(characterFromID("CB6"));
+			LAi_SetActorType(characterFromID("CB7"));
+			LAi_SetActorType(characterFromID("CB12"));
+			
+			LAi_QuestDelay("B_F6", 2.25);			//was 2.0
+		break;
+
+		case "B_F6":
+			LAi_SetActorType(characterFromID("CB13"));
+
+			LAi_QuestDelay("B_F7", 0.75);			//was 1.0
+		break;
+
+		case "B_F7":
+			for(i = 1; i < 14; i++) {LAi_SetActorType(CharacterFromID("CB"+i));}
+		
+			Pchar.chorus_singer = "go";
+			Pchar.chorus_anim = "verse3";
+			LAi_QuestDelay("B_chorus_anim", 0.01);
+
+			LAi_QuestDelay("B_turn_left", 2.5);
+			LAi_QuestDelay("B_turn_forward", 5.0);
+			LAi_QuestDelay("B_turn_right", 7.5);
+			
+			LAi_QuestDelay("B_turn_left", 8.5);
+			LAi_QuestDelay("B_turn_forward", 10.5);
+
+			LAi_QuestDelay("B_G1", 13.0);			//end of singing/dancing
+		break;
+
+	//----------------------------------------------------------
+
+		case "B_G1":
+			Pchar.chorus_singer = "stop";
+			for(i = 1; i < 14; i++) {LAi_SetStayType(CharacterFromID("CB"+i));}
+
+			LAi_SetActorType(characterFromID("CB21"));
+			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "hands up", 1.0);
+
+			LAi_QuestDelay("B_CB21_reset", 5.5);
+			LAi_QuestDelay("B_G2", 7.5);
+
+		break;
+
+		case "B_G2":
+			LAi_SetActorType(characterFromID("CB21"));
+			LAi_ActorTurnToCharacter(characterFromID("CB21"), Pchar);
+
+			LAi_QuestDelay("B_G3", 5.0);
+		break;
+
+		case "B_G3":
+			Event("DoInfoShower","sl","game prepare",true);
+			SetEventHandler("frame","Main_Start",1);
+			InterfaceStates.Buttons.Resume.enable = false;
+		break;
+	//..............................................................................................................
 	
 		PChar.questnotfound = true; // PB: Testing
 	}

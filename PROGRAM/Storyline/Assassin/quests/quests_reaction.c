@@ -1785,6 +1785,13 @@ void QuestComplete(string sQuestName)
 
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Sneak", 7000); }
 			else { AddPartyExp(pchar, 7000); }
+
+			LAi_SetWarriorType(CharacterfromID("Thug2"));				// Without these lines,
+			LAi_SetWarriorType(CharacterfromID("Thug7"));				// three thugs in dungeon
+			LAi_SetWarriorType(CharacterfromID("Thug8"));				// all cower in terror
+			LAi_group_MoveCharacter(CharacterfromID("Thug2"), LAI_GROUP_MONSTERS);
+			LAi_group_MoveCharacter(CharacterfromID("Thug7"), LAI_GROUP_MONSTERS);
+			LAi_group_MoveCharacter(CharacterfromID("Thug8"), LAI_GROUP_MONSTERS);
 		break;
 
 		case "Hit_congrats":
@@ -1811,6 +1818,7 @@ void QuestComplete(string sQuestName)
 			EndQuestMovie();TrackQuestMovie("end","Hit_complete_end");
 			bDisableFastReload = 0;
 			AddQuestRecord("Hitman", "19");
+			ItemSetPrice("Santos_Keys", 1);		// Keys can now be dumped in ship's chest.
 			Characters[GetCharacterIndex("Salvadore Benavides")].dialog.currentnode = "begin_47";			
 		break;
 		
@@ -3030,14 +3038,22 @@ void QuestComplete(string sQuestName)
 				AddPartyExpChar(pchar, "Sneak", 100);
 			}
 			else { AddPartyExp(pchar, 10000); }
-			ChangeRMRelation(pchar, SPAIN, 5.0);		
-			Group_SetAddressNone("French_Captain1");
-			Group_SetAddressNone("French_Captain2");
-			Group_SetAddressNone("French_Captain3");			
-			Group_SetAddressNone("Jeremy Tripper");			
-			Group_SetAddressNone("English_Captain2");
-			Group_SetAddressNone("English_Captain3");
-			Group_SetAddressNone("English_Captain4");
+			ChangeRMRelation(pchar, SPAIN, 5.0);
+			Group_SetAddressNone("French_Captain1_Ship");
+			Group_SetAddressNone("French_Captain2_Ship");
+			Group_SetAddressNone("French_Captain3_Ship");
+			Group_SetAddressNone("Tripper_Ship");
+			Group_SetAddressNone("English_Captain2_Ship");
+			Group_SetAddressNone("English_Captain3_Ship");
+			Group_SetAddressNone("English_Captain4_Ship");
+
+			Group_DeleteGroup("French_Captain1_Ship");
+			Group_DeleteGroup("French_Captain2_Ship");
+			Group_DeleteGroup("French_Captain3_Ship")
+			Group_DeleteGroup("Tripper_Ship");
+			Group_DeleteGroup("English_Captain2_Ship");
+			Group_DeleteGroup("English_Captain3_Ship");
+			Group_DeleteGroup("English_Captain4_Ship");;
 
             ChangeCharacterAddressGroup(characterFromID("spanish_soldat_09"), "Havana_House_03", "reload", "reload1");			
 	        LAi_SetActorType(characterFromID("spanish_soldat_09"));
@@ -4258,27 +4274,28 @@ void QuestComplete(string sQuestName)
 			LAi_ActorRunToLocation(characterFromID("Guibert Daudet"), "reload", "reload61_back", "none", "", "", "", 9.0);
         break;
 
-      case "quitter_alicebis":
-            GiveShip2Character(pchar,"FastCaravel","Santiago",-1,PIRATE,true,true);
+	case "quitter_alicebis":
+			GiveShip2Character(pchar,"FastCaravel","Santiago",-1,PIRATE,true,true);
+			HoistFlag(PORTUGAL);
 			SetCharacterShipLocation(Pchar, "Alice_Port");			
-            RestoreOfficers(pchar.id);	  
+			RestoreOfficers(pchar.id);	  
 			SetCompanionIndex(Pchar, -1, GetCharacterIndex("Roxanne Lalliere"));
 			SetCharacterRemovable(characterFromID("Roxanne Lalliere"), false);
 			
 			pchar.quest.parabahia.win_condition.l1 = "location";
 			pchar.quest.parabahia.win_condition.l1.location = "Cuba_shore_01";
 			pchar.quest.parabahia.win_condition = "chegada_antonio";
-       break;
+	break;
 
-      case "chegada_antonio":
-             ChangeCharacterAddressGroup(CharacterFromID("Roxanne Lalliere"), "Cuba_shore_01", "goto", "goto13");
-             LAi_SetStayType(characterFromID("Roxanne Lalliere"));	  
-		     Characters[GetCharacterIndex("Bartolomeu")].dialog.currentnode = "begin_21";			  
-             LAi_SetActorType(characterFromID("Bartolomeu"));
-    		 LAi_ActorDialog(characterFromID("Bartolomeu"), pchar, "", 2.0, 1.0);				
-       break;	   
+	case "chegada_antonio":
+			ChangeCharacterAddressGroup(CharacterFromID("Roxanne Lalliere"), "Cuba_shore_01", "goto", "goto13");
+			LAi_SetStayType(characterFromID("Roxanne Lalliere"));	  
+			Characters[GetCharacterIndex("Bartolomeu")].dialog.currentnode = "begin_21";			  
+			LAi_SetActorType(characterFromID("Bartolomeu"));
+			LAi_ActorDialog(characterFromID("Bartolomeu"), pchar, "", 2.0, 1.0);				
+	break;	   
 
-      case "free_emilio":
+	case "free_emilio":
 			Locations[FindLocation("Havana_town_05")].vcskip = true;			  
 			RemovePassenger(pchar, characterFromID("Bartolomeu"));
 			RemoveCharacterCompanion(pchar, characterFromID("Bartolomeu"));
@@ -4527,38 +4544,42 @@ void QuestComplete(string sQuestName)
 		break;
 		
 		case "partir_bahia":
-    		 Characters[GetCharacterIndex("Bartolomeu")].dialog.currentnode = "begin_35";
-             LAi_SetActorType(characterFromID("Bartolomeu"));
-    		 LAi_ActorDialog(characterFromID("Bartolomeu"), pchar, "", 3.0, 1.0);		
-             LAi_SetActorType(CharacterFromID("Roxanne Lalliere"));
-             LAi_ActorFollowEverywhere(characterFromID("Roxanne Lalliere"), "", 60.0);
-             LAi_SetActorType(CharacterFromID("Emilio Soares"));
-             LAi_ActorFollowEverywhere(characterFromID("Emilio Soares"), "", 60.0);
+			Characters[GetCharacterIndex("Bartolomeu")].dialog.currentnode = "begin_35";
+			LAi_SetActorType(characterFromID("Bartolomeu"));
+			LAi_ActorDialog(characterFromID("Bartolomeu"), pchar, "", 3.0, 1.0);		
+			LAi_SetActorType(CharacterFromID("Roxanne Lalliere"));
+			LAi_ActorFollowEverywhere(characterFromID("Roxanne Lalliere"), "", 60.0);
+			LAi_SetActorType(CharacterFromID("Emilio Soares"));
+			LAi_ActorFollowEverywhere(characterFromID("Emilio Soares"), "", 60.0);
 		break;
 		
 		case "partir_bahia2":
 			LAi_ActorFollowEverywhere(characterFromID("Bartolomeu"), "", 60.0);			
-    		AddQuestRecord("Trap", "9");		
-		
+			AddQuestRecord("Trap", "9");
+
 			pchar.quest.para_redmond.win_condition.l1 = "location";
 			pchar.quest.para_redmond.win_condition.l1.location = "redmond_port";
 			pchar.quest.para_redmond.win_condition = "Enfin_PortRoyal";
 		break;		
 
 		case "Enfin_PortRoyal":				
-		    Characters[GetCharacterIndex("Bartolomeu")].dialog.currentnode = "begin_37";
-            LAi_SetActorType(characterFromID("Bartolomeu"));
-    		LAi_ActorDialog(characterFromID("Bartolomeu"), pchar, "", 4.0, 1.0);
+			Characters[GetCharacterIndex("Bartolomeu")].dialog.currentnode = "begin_37";
+			LAi_SetActorType(characterFromID("Bartolomeu"));
+			LAi_ActorDialog(characterFromID("Bartolomeu"), pchar, "", 4.0, 1.0);
 		break;
 
 		case "Enfin_PortRoyal2":
 			pchar.quest.para_douwesen.win_condition.l1 = "location";
 			pchar.quest.para_douwesen.win_condition.l1.location = "Douwesen_port";
-			pchar.quest.para_douwesen.win_condition = "pardon_douwesen";		
-		
-			GiveShip2Character(pchar,"Tartane50","The Mischievous",-1,ENGLAND,true,true);		
+			pchar.quest.para_douwesen.win_condition = "pardon_douwesen";
+
+			GiveShip2Character(pchar,"Tartane50","The Mischievous",-1,ENGLAND,true,true);
 			AddQuestRecord("Trap", "10");
-			CloseQuestHeader("Trap");				
+			CloseQuestHeader("Trap");
+
+			LeaveService(PChar, SPAIN, true);	// Spain knows you double-crossed them and is out for revenge!
+			HoistFlag(HOLLAND);
+
 			if(AUTO_SKILL_SYSTEM)
 			{
 				AddPartyExpChar(pchar, "Leadership", 20000);
@@ -4566,16 +4587,16 @@ void QuestComplete(string sQuestName)
 			}
 			else { AddPartyExp(pchar, 20000); }	  		
 		
-            LAi_SetActorType(CharacterFromID("Roxanne Lalliere"));
+			LAi_SetActorType(CharacterFromID("Roxanne Lalliere"));
 			LAi_ActorRunToLocation(characterFromID("Roxanne Lalliere"), "reload", "sea_1", "none", "", "", "", 6.0);
 			RemoveCharacterCompanion(Pchar, characterFromID("Roxanne Lalliere"));
 			setCharacterShipLocation(characterFromID("Roxanne Lalliere"), "none");
-            LAi_SetActorType(CharacterFromID("Emilio Soares"));
+			LAi_SetActorType(CharacterFromID("Emilio Soares"));
 			LAi_ActorRunToLocation(characterFromID("Emilio Soares"), "reload", "sea_1", "none", "", "", "", 6.0);			
 
-            LAi_SetActorType(CharacterFromID("Bartolomeu"));
+			LAi_SetActorType(CharacterFromID("Bartolomeu"));
 			LAi_ActorRunToLocation(characterFromID("Bartolomeu"), "reload", "sea_1", "none", "", "", "", 6.0);			
-        break;
+		break;
 
 // El Diablo's coming back		
 		

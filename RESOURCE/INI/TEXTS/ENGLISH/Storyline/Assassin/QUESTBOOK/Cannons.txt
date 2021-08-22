@@ -7,4 +7,4 @@ text.t5=When we were leaving the island, a French warship attacked us. Fortunate
 text.t6=Finally!! I've been given a mission to Isla Mona. I need to talk to Wilfred Larner, the captain of the merchant ship.
 text.t7=A great explosion! The British will suffer this loss for a long time. Vice-Admiral Benavides will be very pleased that the mission was a complete success. If he is happy - I will be richer.
 text.t8=I regret having spoken the mission to #sisland_Khael Roa#. Now, my mission is to capture the pride of the French fleet - La Couronne. What rotten luck! Let's hope the English will help me in this task.
-text.t9=Yes! La Couronne is mine. Let's moor this amazing ship at Havana.
+text.t9=Yes! La Couronne is mine. Let's moor this amazing ship at Havana. I must present the ship to Vice-Admiral Benavides myself, so I must be in command of her.

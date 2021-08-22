@@ -1,4 +1,4 @@
-string DLG_TEXT[247] = {
+string DLG_TEXT[248] = {
 ".....",
 ".....",
 "Well, well, well... Captain Elting. Do you enjoy your holiday in #sHavana#?",
@@ -109,12 +109,12 @@ string DLG_TEXT[247] = {
 "Captain Elting, did you find the envoy?",
 "No, Excellency but I know Roche Brasiliano kidnapped him.",
 "How?!",
-"He boarded the envoy' ship off #sisland_Hispaniola#.",
+"He boarded the envoy's ship off #sisland_Hispaniola#.",
 "What nerve that bastard of a pirate has!",
 "And before I left #sSanto Domingo#, the governor received a letter asking a large ransom for his release.",
-"Outrageous! This pirate has exceeded all limits. Find and free the envoy but I also want you capture Roche and bring him to me. I will have a warm welcome waiting for him.",
+"Outrageous! This pirate has exceeded all limits. Find and free the envoy but I also want you to capture Roche and bring him to me. I will have a warm welcome waiting for him.",
 "I would like to comply, Excellency, but I don't know where to start my search.",
-"Well, maybe you should team up with Nicholas Butcher. Roche may prove too much for one",
+"Well, maybe you should team up with Nicholas Butcher. Roche may prove too much for one man.",
 "Who?",
 "He's my longest serving mercenary, he has a lot of experience in hunting pirates.",
 "Where can I find him?",
@@ -246,4 +246,5 @@ string DLG_TEXT[247] = {
 "Don't worry. I already gave him a reward. Captain Butcher is my oldest mercenary but he's still one of my best soldiers. However, there are another good news for you. Governor Vadés wants to speak with you.",
 "I see you captured 'La Couronne' but you are not captaining her. Please return after you have her under complete control.",
 "Alright Captain. Go to the shipyard so that you may meet my personal shipwright, Captain Damski. He will teach you about your new ship, a new kind of xebec. Afterwards, join your new crewmembers and officer in the port. And before I forget, take this Letter of Marque provided by the governor and these 2000 gold coins in order to pay your men or purchase new items. Don't think you can rely only on my rewards. You will also have to liberate money and supplies from our enemies, attacking hostile ships for instance.",
+"Captain, you still fail to present 'La Couronne' to me. Either bring me that ship or bring me an identical French war galleon!",
 };

@@ -89,12 +89,17 @@ void InitItems()  // economics adjusted by BB & Sulan 2011-08
   n = InitQuestItem(n,"small_chest",	"small_chest",			"",			4,	 1,		0,0,	"","",	"","",		"","",""	);
   n = InitQuestItem(n,"SpanishLetter",	"SpanishLetter",		"",	 		4,  14,		0,0,	"","",	"","",		"","",""	);
   n = InitQuestItem(n,"EITC_Passport",	"EITC_Passport",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For Cutler Beckett
+  n = InitQuestItem(n,"Trade_PassportE","Trade_PassportE",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For player types
+  n = InitQuestItem(n,"Trade_PassportF","Trade_PassportF",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For player types
+  n = InitQuestItem(n,"Trade_PassportS","Trade_PassportS",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For player types
+  n = InitQuestItem(n,"Trade_PassportH","Trade_PassportH",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For player types
+  n = InitQuestItem(n,"Trade_PassportP","Trade_PassportP",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For player types
   n = InitQuestItem(n,"Trade_Passport",	"Trade_Passport",		"",			4,	13,		0,0,	"","",	"","",		"","",""	); // PB: For player types
-  n = InitQuestItem(n,"Davy_Chest",		"Davy_Chest",			"",		 "AS",	 8,		0,0,	"","",	"","",		"","",""	); // PB: Davy Jones
-  n = InitQuestItem(n,"Devil_Contract", 	"Devil_Contract",		"",		4,	3,		0,0,	"","",	"","",		"","",""	); // PB: For Ricardo Orellana
-  n = InitQuestItem(n,"Correspondence1",	"Correspondence1",		"",	 		4,  14,		0,0,	"","",	"","",		"","",""	); //PW letter1 for arnaud/sabine matton sidequest
-  n = InitQuestItem(n,"Correspondence2", "Correspondence2",		"",	 		4,  14,		0,0,	"","",	"","",		"","",""	); //PW letter2 for arnaud/sabine matton sidequest
-  n = InitQuestItem(n,"cryskull",	"cryskull",		 "cryskul",   12,    8,	    0,0,	"","",	"","",		"","",""	); // GR: amber skull for "Crystal Skull" sidequest
+  n = InitQuestItem(n,"Davy_Chest",	"Davy_Chest",			"",		 	"AS",	 8,		0,0,	"","",	"","",		"","",""	); // PB: Davy Jones
+  n = InitQuestItem(n,"Devil_Contract",	"Devil_Contract",		"",			4,	3,		0,0,	"","",	"","",		"","",""	); // PB: For Ricardo Orellana
+  n = InitQuestItem(n,"Correspondence1","Correspondence1",		"",	 		4,	14,		0,0,	"","",	"","",		"","",""	); //PW letter1 for arnaud/sabine matton sidequest
+  n = InitQuestItem(n,"Correspondence2","Correspondence2",		"",	 		4,	14,		0,0,	"","",	"","",		"","",""	); //PW letter2 for arnaud/sabine matton sidequest
+  n = InitQuestItem(n,"cryskull",	"cryskull",		 	"cryskul",  		12,	8,		0,0,	"","",	"","",		"","",""	); // GR: amber skull for "Crystal Skull" sidequest
   QUESTITEMS_QUANTITY = n;
   // <-- KK
 
@@ -691,6 +696,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"gatedoor_mi",			"gatedoor_mi");		//stockwall mine
   n = InitBuildingItemJRH(n,	"gatedoor_5",			"gatedoor_5");		//gatedoor to library from storeroom
   n = InitBuildingItemJRH(n,	"gatedoor_p5",			"gatedoor_p5");		//gatedoor to library from storeroom with planks
+  n = InitBuildingItemJRH(n,	"gatedoor_Res2",		"gatedoor_Res2");	//gatedoor to poker room from entre
   n = InitBuildingItemJRH(n,	"gatedoor_stone",		"gatedoor_stone");	//stonewall gps, mine tunnelA lights
   n = InitBuildingItemJRH(n,	"gatedoor_white_stone",		"gatedoor_white_stone");//stonewall food cellar
   n = InitBuildingItemJRH(n,	"gatedoor_white_stone_90",	"gatedoor_white_stone_90");//stonewall Cayman town
@@ -747,6 +753,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"doubledoor",			"doubledoor");		//tavern upstairs
   n = InitBuildingItemJRH(n,	"door_sklad",			"door_sklad");		//wr_crew, farm_kitchen = 'add'
   n = InitBuildingItemJRH(n,	"door_shya",			"door_shya");		//inside shipyard (FF port2)
+  n = InitBuildingItemJRH(n,	"door_LBR",			"door_LBR");		//inside New cloister Cartagena
 
   n = InitBuildingItemJRH(n,	"hatch1",			"hatch1");		//roof hatch (outside, QC)
   n = InitBuildingItemJRH(n,	"hatch3",			"hatch3");		//roof hatch tavern storeroom
@@ -969,6 +976,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"number_plate2",		"number_plate2");
   n = InitBuildingItemJRH(n,	"number_plate3",		"number_plate3");
   n = InitBuildingItemJRH(n,	"number_plate2_floor",		"number_plate2_floor");
+  n = InitBuildingItemJRH(n,	"number_plate4",		"number_plate4");
 
   n = InitBuildingItemJRH(n,	"build_clock2",			"build_clock2");	//Cartagena
   n = InitBuildingItemJRH(n,	"fire_irons_item",		"fire_irons_item");	//Cartagena
@@ -1894,6 +1902,33 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.nation                  = "";
   n++;
 
+ //JRH: Portugize// Freeplay quest item!
+  makeref(itm,Items[n]);
+  itm.id                      = "portugize";
+  itm.sound                   = "OBJECTS\DUEL\pistol_grape.wav";
+  itm.shottype                = "pg"; //JRH
+  itm.skiptrade               = false;  //BB you can sell them
+  itm.skipsell                = true;   //BB you can't buy them
+  itm.skiprand                = true;   // you can't randomly find it
+  itm.skipequip               = false;
+  itm.groupID                 = GUN_ITEM_TYPE;
+  itm.name                    = "itmname_portugize";
+  itm.describe                = "itmdescr_portugize";
+  itm.folder                  = "ammo";
+  itm.model                   = "portugize_back";
+  itm.picIndex                = 11;
+  itm.picTexture              = "ITEMS_JRH39";
+  itm.price                   = 8479;
+  itm.chargeQ                 = 5;
+  itm.chargespeed             = 35;
+  itm.dmg_min                 = 30.0;
+  itm.dmg_max                 = 60.0;
+  itm.minlevel                = 99;     //BB+PB added minlevel to improve rarity
+  itm.accuracy                = 30;
+  itm.rare                    = 0.00;
+  itm.nation                  = "";
+  n++;
+
   // Sandbag
   makeref(itm,Items[n]);
   itm.id                      = "bladeX2";
@@ -2066,6 +2101,34 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.param.time              = 0.1;
   itm.skill.sneak             = -1;
   itm.skill.fencing           = +1;
+  itm.param.colorstart        = argb(64, 64, 64, 64);
+  itm.param.colorend          = argb(0, 32, 32, 32);
+  itm.nation                  = SPAIN;
+  n++;
+
+  // Reward for killing Malcolm Hatcher
+  makeref(itm,Items[n]);
+  itm.id                      = "bladeMH";
+  itm.skiptrade               = false;  // you can sell the item
+  itm.skipsell                = true;   // you can't buy it
+  itm.skiprand                = true;   // you can't randomly find it
+  itm.skipequip               = false;
+  itm.groupID                 = BLADE_ITEM_TYPE;
+  itm.name                    = "itmname_bladeMH";
+  itm.describe                = "itmdescr_bladeMH";
+  itm.folder                  = "ammo";
+  itm.model                   = "bladeMH";// was "bladeSC"
+  itm.picIndex                = 11;
+  itm.picTexture              = "ITEMS_AS";
+  itm.price                   = 2345;  //
+  itm.dmg_min                 = 30.0;
+  itm.dmg_max                 = 44.0;
+  itm.piercing                = 65;     //BB (90)
+  itm.block                   = 30;
+  itm.minlevel                = 99;     //BB+PB
+  itm.rare                    = 0.00;   // should be unique
+  itm.param.time              = 0.1;
+  itm.skill.sneak             = +1;
   itm.param.colorstart        = argb(64, 64, 64, 64);
   itm.param.colorend          = argb(0, 32, 32, 32);
   itm.nation                  = SPAIN;
@@ -3446,6 +3509,22 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //     Some skill modifiers changed; all modders' books now give more bonus points than minus points  //BB changed to no negatives and less positive and more cost and higher rarity.
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+  // Questbooks Cartagena Library: added by JRH
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  n = InitItem(n,"book21F", "",     "JRH5", 1,  0.00,  1,    179, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//law
+  n = InitItem(n,"book22F", "",     "JRH5", 2,  0.00,  1,    142, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//sea battles
+  n = InitItem(n,"book23F", "",     "JRH5", 3,  0.00,  1,    211, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//shipbuilding
+  n = InitItem(n,"book24F", "",     "JRH5", 4,  0.00,  1,    460, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//history
+  n = InitItem(n,"book26F", "",     "JRH5", 6,  0.00,  1,    464, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//medicine
+  n = InitItem(n,"book27F", "",     "JRH5", 7,  0.00,  1,    108, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//chemistry
+  n = InitItem(n,"book28F", "",     "JRH5", 8,  0.00,  1,    437, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//erotica
+  n = InitItem(n,"book29F", "",     "JRH5", 9,  0.00,  1,    373, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//poetry
+  n = InitItem(n,"book31F", "",     "JRH5",11,  0.00,  1,    241, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//Dampier's book
+  n = InitItem(n,"book33F", "",     "JRH5",13,  0.00,  1,    104, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//geography
+  n = InitItem(n,"book34F", "",     "JRH5",14,  0.00,  1,    557, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//trade
+  n = InitItem(n,"book35F", "",     "JRH5",15,  0.00,  1,    291, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//mercury
+  n = InitItem(n,"book36F", "",     "JRH5",16,  0.00,  1,    219, 0,   0, 0, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1);//GoldBug
+
   //--------------------------------------------------------------------------------------------------------------------------------------------------
   // JEWELRY:
   //--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -4079,6 +4158,7 @@ bool IsWeaponUnique(string id)
 	case "bladeC36":	isUnique = true;	break;	// Katana	              - Japanese import
 	case "blade308":	isUnique = true;	break;	// Based on Anathros	      - From "Two Worlds"
 	case "bladeCiri":	isUnique = true;	break;	// Ciri's Blade		      - Forged by gnomes
+	case "bladeMH":		isUnique = true;	break;	// Secret Reward              - Reward for killing Malcolm Hatcher
 	case "witcher_steel":	isUnique = true;	break;	// Geralt's steel flambard
 	case "tomahawk_chief":  isUnique = true;        break;  // Chief's tomahawk for "Crystal Skull" sidequest  
 	case "pistol10":	isUnique = true;        break;  // Shotgun
@@ -4229,13 +4309,14 @@ int InitGun(  ref ItemIndex,
       switch(id)
       {
         case "pistol3":      gun.multidmg = 1;     break; // PB: Grapeshot Pistol
+	case "portugize":    gun.multidmg = 1;     break; // JRH: Grapeshot Pistol
         case "pistolmtoon":  gun.multidmg = 1;     break; // PB: Musketoon
         case "pistol10":     gun.enblrld = true;   break; // PB: Shotgun
         case "LongRifle_BT": gun.enblrld = true;   break; // JRH: Bartolomeu
-		case "LongRifle_CT": gun.enblrld = true;   break; // JRH: All Storylines
-		case "LongRifle_WT": gun.enblrld = true;   break; // JRH: WoodesRogers
-		case "pistol26":     gun.multidmg = 1;     break; // JRH
-		case "pistolbow":    gun.arrow = 1;        break; // JRH
+	case "LongRifle_CT": gun.enblrld = true;   break; // JRH: All Storylines
+	case "LongRifle_WT": gun.enblrld = true;   break; // JRH: WoodesRogers
+	case "pistol26":     gun.multidmg = 1;     break; // JRH
+	case "pistolbow":    gun.arrow = 1;        break; // JRH
       }
       // PB: Unique Guns -->
       if (IsWeaponUnique(id))
@@ -4637,6 +4718,20 @@ int InitQuestItem(  ref ItemIndex, string id, string txtname, string model,
 	case "bandana":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
 	case "bandana_key":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
     	case "MariasLetter":	qstitm.groupID = BOOK_ITEM_TYPE;	qstitm.QuestName = "hornblower_read_marias_letter";	qstitm.text = "MariasLetter";	break;  // GR: Letter from Maria from shortly before she died: Hornblower storyline
+	
+	case "port_stock":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+	case "port_metal":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+	case "port_rest":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+	case "port_magazine":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+	case "port_barrel":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+	case "port_mechanism":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
+	case "port_2":				   					     qstitm.price = 1;	break;
+	case "port_3":				  					     qstitm.price = 1;	break;
+	case "port_4":				   					     qstitm.price = 1;	break;
+	case "port_5":				   					     qstitm.price = 1;	break;
+	case "engineer_letter1":		qstitm.groupID		= EXAMINE_ITEM_TYPE; 			break;
+	case "engineer_letter2":		qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
+	case "engineer_letter3":		qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
   }
   if ( setshown == 1 ) qstitm.shown = shownval;
 
@@ -5162,6 +5257,7 @@ int InitQuestBlade( 	ref	ItemIndex,
 		case "bladeflint":	blade.fist = true;			break; //JRH
 		case "bladeplank2":	blade.sound = "OBJECTS\DUEL\plank.wav";	break; //JRH
 		case "bladespade":	blade.sound = "PEOPLE\spade.wav";	break; //JRH
+		case "bladetrophy":	blade.sound = "INTERFACE\wheel_place.wav"; break; //JRH
 	}
 
 	BladeIndex++;
@@ -5604,6 +5700,20 @@ int InitMaps(int n)
 	curMap.picIndex = 3;
 	curMap.picTexture = "items_maps";	//JRH
 	curMap.price = 1500;
+	curMap.labels = "";
+	makearef(labels, curMap.labels);
+	n = InitMap(n, curMap);
+
+	curMap.id = "mapCartagena_Library";
+	curMap.name = "itmname_mapLibrary";
+	curMap.describe = "itmdescr_mapLibrary";
+	curMap.island = "Colombia";
+	curMap.location = TranslateString("", "Library map");
+	curMap.picIndex = 3;
+	curMap.picTexture = "items_maps";	//JRH
+	curMap.price = "285";
+	curMap.skiptrade = false;		//you can sell			
+	curMap.skipsell = true;			//but not buy it
 	curMap.labels = "";
 	makearef(labels, curMap.labels);
 	n = InitMap(n, curMap);

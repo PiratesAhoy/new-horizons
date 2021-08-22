@@ -1,4 +1,4 @@
 title=Misión secundaria: Hundir la fragata pirata.
-text.t1=El gobernador de #sFalaise de Fleur#, en #sisland_Falaise de Fleur#, Joseph Claude Le Moigne, me ha encomendado la misión de hundir el barco pirata que bloquea la colonia mientras la escuadra francesa está en alta mar.
-text.t2=He tenido que rechazar la misión de Le Moigne. 5000 piezas de oro no son suficiente recompensa para tanto riesgo. No es asunto de poca monta combatir contra una fragata. El gobernador parecía disgustado con mi negativa.
+text.t1=El gobernador de #sFalaise de Fleur#, en #sisland_Falaise de Fleur#, #sJoseph Claude Le Moigne#, me ha encomendado la misión de hundir el barco pirata que bloquea la colonia mientras la escuadra francesa está en alta mar.
+text.t2=He tenido que rechazar la misión de #sLe Moigne#. 5000 piezas de oro no son suficiente recompensa para tanto riesgo. No es asunto de poca monta combatir contra una fragata. El gobernador parecía disgustado con mi negativa.
 text.t3=El gobernador ha quedado encantado con mi actuación. Me ha dado la recompensa y me ha dicho que no olvide seguir en contacto con él. Quiere seguir trabajando conmigo en el futuro.

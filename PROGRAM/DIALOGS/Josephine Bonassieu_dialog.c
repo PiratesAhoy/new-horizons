@@ -229,5 +229,27 @@ void ProcessDialogEvent()
 			DialogExit();
 			AddDialogExitQuest("exit_sit");
 		break;
+		
+		case "begin_1":
+			dialog.snd = "Voice\CLLA\CLLA005";
+			dialog.text = DLG_TEXT[35];
+			link.l1 = DLG_TEXT[36];
+			link.l1.go = "begin_2";		
+			break;
+			
+		case "begin_2":
+			dialog.snd = "Voice\CLLA\CLLA005";
+			dialog.text = DLG_TEXT[37];
+			link.l1 = DLG_TEXT[38];
+			link.l1.go = "begin_3";
+			break;
+
+		case "begin_3":
+			dialog.snd = "Voice\CLLA\CLLA005";
+			dialog.text = DLG_TEXT[39];
+			link.l1 = DLG_TEXT[40];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Talks_Laura_Cotton");			
+			break;		
 	}
 }

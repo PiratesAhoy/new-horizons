@@ -1,5 +1,5 @@
 string DLG_TEXT[28] = {
-"Such beautiful colourscheme and texture...",
+"Such beautiful colour scheme and texture...",
 "Yes, a nice ship.",
 "So, you think I might be able to help you on your quest?",
 "Yes Captain Terror, if you'd be so kind.",

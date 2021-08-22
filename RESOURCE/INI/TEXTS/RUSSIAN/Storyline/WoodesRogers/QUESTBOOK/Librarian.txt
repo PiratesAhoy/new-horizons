@@ -1,8 +1,8 @@
-title=Librarian
-text.t1=I got six books from Selkirk to put back on their right places.
-text.t2=Now there is that Dampier book to repair.
-text.t3=I have to return he repaired Dampier book to its shelf - that would be 'Travels'.
-text.t4=Rogers' equipped me with three books in exchange for the Dampier book.
-text.t5=I must deliver "Notorious Pirates" to Rogers.
-text.t6=The chain and the handcuffs are blocking the Chemistry shelf so I can open it.
-text.t7=I'm not so interested in Poetry - can I use this sack of books in another way?
+title=Библиотекарь
+text.t1=Мне надо разложить шесть книг по своим местам.
+text.t2=Теперь надо восстановить книгу Дампира.
+text.t3=Я должен вернуться к кабанет Роджерса и поставить ее на полку с 'Путешествиями'.
+text.t4=Роджерс всучил мне три книги в обмен на книгу Дампира.
+text.t5=Я должен доставить книгу "Печально известные Пираты" Роджерсу.
+text.t6=Цепь и наручники блокируют полку Химии. Я должен ее открыть.
+text.t7=Я не настолько заинтересован в поэзии - могу использовать этот мешок с книгами по-другому?

@@ -75,7 +75,7 @@ void ProcessDialogEvent()
 			}
 			if (CheckQuestAttribute("kidnapping", "abel_barco"))
 			{
-				link.l1 = DLG_TEXT[54];
+				link.l1 = DLG_TEXT[57];
 				link.l1.go = "meet_abel";
 			}			
 			link.l99 = DLG_TEXT[15];
@@ -320,20 +320,15 @@ void ProcessDialogEvent()
 				PChar.quest.ardent_kidnap = "Engaged";
 				PChar.quest.ardent_kidnap.find_merchant = "true";
 
+				SetQuestHeader("Kidnap");
 				if (PChar.sex == "woman")
 				{
-					Preprocessor_AddQuestData("governor_kid", XI_ConvertString("son"));
-					Preprocessor_AddQuestData("merchant_kid", XI_ConvertString("daughter"));
+					AddQuestRecord("Kidnap", 28);
 				}
 				else
 				{
-					Preprocessor_AddQuestData("governor_kid", XI_ConvertString("daughter"));
-					Preprocessor_AddQuestData("merchant_kid", XI_ConvertString("son"));
+					AddQuestRecord("Kidnap", 1);
 				}
-				SetQuestHeader("Kidnap");
-				AddQuestRecord("Kidnap", 1);
-				Preprocessor_Remove("governor_kid");
-				Preprocessor_Remove("merchant_kid");
 			}
 
 			Diag.TempNode = "second time";
@@ -341,8 +336,8 @@ void ProcessDialogEvent()
 		
 		case "meet_abel":
 			dialog.snd = "Voice\CLLA\CLLA005";
-			dialog.text = DLG_TEXT[55];
-			link.l1 = DLG_TEXT[56];
+			dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
 			link.l1.go = "exit";
 			AddDialogExitQuest("encontrar_abel");			
 			break;		

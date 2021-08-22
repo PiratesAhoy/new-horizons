@@ -198,7 +198,19 @@ void CreateCharacters()
 			GiveItem2Character(ch, "compass2");
 			GiveItem2Character(ch, "clock1");
 			if (CharFirstName == "Cutler Beckett" || HasSubStr(CharModel, "EITC")) GiveItem2Character(ch, "EITC_Passport");
-			else GiveItem2Character(ch, "Trade_Passport");
+			else
+			{
+				switch(sti(ch.nation))
+				{
+					case ENGLAND:	GiveItem2Character(ch, "Trade_PassportE"); break;
+					case FRANCE:	GiveItem2Character(ch, "Trade_PassportF"); break;
+					case SPAIN:	GiveItem2Character(ch, "Trade_PassportS"); break;
+					case HOLLAND:	GiveItem2Character(ch, "Trade_PassportH"); break;
+					case PORTUGAL:	GiveItem2Character(ch, "Trade_PassportP"); break;
+					case PIRATE: break;	// Nothing - trade passports are not for pirates!
+					GiveItem2Character(ch, "Trade_Passport");
+				}
+			}
 		break;
 		case PLAYER_TYPE_NAVAL_OFFICER:
 			ch.shiplog.Entry.log0 = "Having joined the navy, it is now up to me to work myself up through the ranks.";

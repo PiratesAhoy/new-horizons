@@ -1,4 +1,4 @@
-string DLG_TEXT[51] = {
+string DLG_TEXT[63] = {
 "You look flustered, is everything well with you?",
 "Oh! Err... Yes, M'lady.",
 "Ahem..hem...hem...",
@@ -50,4 +50,16 @@ string DLG_TEXT[51] = {
 "Goodbye, ",
 ". Thank you for your kindness.",
 "Goodbye, Lady Barbara.",
+"Captain ",
+"?",
+"Barbara!",
+"I hoped we would meet.  I wanted to tell you how sorry I was about the news you had at home.",
+"Thank you.",
+"I hear you have a son.",
+"Yes! A boy to be proud of.",
+"I'm sure he is.",
+"Well, I must take my leave now. I wish you every happiness.",
+"Thank you. Goodbye, ",
+".",
+"Goodbye, Barbara.",
 }

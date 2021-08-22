@@ -27,35 +27,35 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "voice\THDI\THDI001";
 
-			dialog.text = "How're you doing, captain?";
-			link.l1 = "Fine, thank you. Is there anything I can do for you?";
+			dialog.text = DLG_TEXT[2];
+			link.l1 = DLG_TEXT[3];
 			link.l1.go = "Node1";
 		break;
 
 		case "Node1":
-			dialog.text = "Perhaps. But there IS something I can do for you. Here. Take this. Perhaps you can find some use for it.";
-			link.l1 = "Thanks. Now what could I do for you?";
+			dialog.text = DLG_TEXT[4];
+			link.l1 = DLG_TEXT[5];
 			link.l1.go = "Node2";
 		break;
 
 		case "Node2":
 			GiveItem2Character(pchar,"aztec_compass");
-			dialog.text = "I have been without a ship for too long. Would you please allow me to be your boatswain?";
-			link.l1 = "Yes, please. But you'd better be good.";
+			dialog.text = DLG_TEXT[6];
+			link.l1 = DLG_TEXT[7];
 			link.l1.go = "Node3";
-			link.l2 = "No, thanks.";
+			link.l2 = DLG_TEXT[8];
 			link.l2.go = "Exit";
 		break;
 
 		case "Node3":
-			dialog.text = "Don't worry about that. I'm just about as experienced as you are.";
-			link.l1 = "That sounds quite good. I'm looking forward to seeing you in action.";
+			dialog.text = DLG_TEXT[9];
+			link.l1 = DLG_TEXT[10];
 			link.l1.go = "Exit_hire";
 		break;
 
 		case "drinking":
-			dialog.text = "Take what you can!";
-			link.l1 = "Give nothing back!";
+			dialog.text = DLG_TEXT[11];
+			link.l1 = DLG_TEXT[12];
 			link.l1.go = "Exit";
 		break;
 

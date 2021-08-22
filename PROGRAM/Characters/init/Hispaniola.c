@@ -1913,6 +1913,39 @@ void CreateHispaniolaCharacters(ref n)
 	AddGameCharacter(n, ch);
 // <-- KK
 
+	ch.old.name = "Charles";
+	ch.old.middlename = "Aubert";
+	ch.old.lastname = "de La Chesnaye";
+	ch.name = TranslateString("","Charles");
+	ch.middlename = TranslateString("","Aubert");
+	ch.lastname = TranslateString("","de La Chesnaye");
+	ch.id		= "French_WIC_Officer";
+	ch.model	= "Huber_Fra3_17";
+	ch.sex = "man";
+	ch.location	= "French_WIC_Office";
+	ch.location.group = "sit";
+	ch.location.locator = "sit1";
+	ch.Dialog.Filename = "WIC Officer_dialog.c";
+	ch.nation = FRANCE;
+	ch.rank		= 1;
+	ch.reputation	= "50";
+	ch.experience	= "0";
+	ch.skill.Leadership	= "1";
+	ch.skill.Fencing	= "1";
+	ch.skill.Sailing	= "1";
+	ch.skill.Accuracy	= "1";
+	ch.skill.Cannons	= "1";
+	ch.skill.Grappling	= "1";
+	ch.skill.Repair		= "1";
+	ch.skill.Defence	= "1";
+	ch.skill.Commerce	= "10";
+	ch.skill.Sneak		= "1";
+	ch.money = "1";
+	LAi_SetHuberType(ch);
+	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
+	ch.greeting = "Gr_turpin cabanel";
+	AddGameCharacter(n, ch);
+
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// SOLDIERS
 	///////////////////////////////////////////////////////////////////////////////////////////////

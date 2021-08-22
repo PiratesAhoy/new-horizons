@@ -34,6 +34,7 @@ This officer has too low Leadership and Sailing skills to command this ship. Ass
 You can't command a fleet until reaching level{You can't command a fleet until reaching level}
 Leadership. Assign anyway?{Leadership. Assign anyway?}
 's current colours{current colours}
+Hoist flag{Hoist flag}
 is known as{is known as}
 Raise{Raise}
 have been installed{have been installed}
@@ -685,6 +686,9 @@ Abandoned mine{Abandoned mine}
 Town{Town}
 Dutch West India Company{Dutch West India Company}
 Indian Village{Indian Village}
+Casa de Contratacion{Casa de Contratacion}
+French West India Company{French West India Company}
+#stown_name# Gambling House{#stown_name# Gambling House}
 
 Brothel.{Brothel}
 Loanshark's Office.{Loanshark's Office}
@@ -743,6 +747,9 @@ Abbey of the Maltese order.{Abbey of the Maltese order}
 Sewer.{Sewer}
 Abandoned mine.{Abandoned mine}
 Town.{Town}
+Casa de Contratacion.{Casa de Contratacion.}
+French West India Company.{French West India Company.}
+Gaming House.{Gaming House.}
 
 Khael Roa Shore{Khael Roa Shore}
 Incas Temple{Incas Temple}
@@ -1122,13 +1129,19 @@ No Bombs to Load{No Bombs to Load}
 
 There's a cave entrance in the Cliff!{There's a cave entrance in the Cliff!}
 NoGambleMoney{Nothing? That's not much of a gamble, is it? Or are you broke?}
+NoGambleMoneyPoker{Come on, put in your ante}
 NoGamblerMoney{Not that rich, eh?}
+NoGamblerMoneyPoker{Out of chips eh?}
+IWin{I win}
+YouWin{You win}
 GambleBetMin{That doesn't look like much... but it seems real enough. I'll take it.}
-FirstTimePlayingBlackJack{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Left click on the cards to begin a game. Left click on the portraits to make each character move. Click Bet during own turn to double up.}
-FirstTimePlayingPoker{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Left click on the cards to begin a game. Left click on the portraits to make each character move. Left click on any of your cards to change them.}
+GambleBetMinPoker{Putting out the minimum eh? Very wise.}//PW
+FirstTimePlayingVingtUn{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Left click on the cards to begin a game. Left click on the portraits to make each character move. Click Bet during own turn to double up.}
+FirstTimePlayingPoker{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Left click on the cards to begin a game. Left click on the portraits to make each character move. Left click on any of your cards to change them. You can raise your bet once you have your final hand.}
 FirstTimePlayingDumb{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Left click on the cards to begin a game. Left click on any of your cards to make a move.}
 FirstTimePlayingDice{Left click on "Bet:" to make a bet. Left click on the x-icon to stop playing. Click on the mug to roll the dice.}
 Exit from gamble confirm{Do you really want to leave this game?}
+Exit from gamble confirmPoker{If you quit you lose unless you have played 50 hands or you have all the chips. Do you really want to exit?}
 CrewMutinyLeavesShip{Crewmembers are leaving your ship!}
 CrewMutinyArticles1{You violate the conditions of our agreement, captain. If you won't immediately pay us}
 CrewMutinyArticles2{gold and won't give us a small cask of rum, we'll hitch you up on a yard!}
@@ -1145,6 +1158,7 @@ Deserted shore{Deserted shore}
 Dead Man's Bay{Dead Man's Bay}
 Witch's Rock{Witch's Rock}
 Strange sail to the{Strange sail to the}
+Strange sail{Strange sail}
 Captain, a hint:{Captain, a hint:}
 of_island{of}
 lies nothing but open sea!{lies nothing but open sea!}
@@ -1159,7 +1173,9 @@ Southwest{Southwest}
 No island within reach{No island within reach}
 Enter the map to sail to some island{Enter the map to sail to some island}
 in sight{in sight}
+Captain, land in sight{Captain, land in sight}
 to the{to the}
+Captain, we are approaching{Captain, we are approaching}
 Captain, there is something drifting in the water{Captain, there is something drifting in the water}
 Something is drifting there, DEAD AHEAD,{Something is drifting there, DEAD AHEAD,}
 Captain, a boat{Captain, a boat}
@@ -1167,7 +1183,10 @@ Captain, a native raft{Captain, a native raft}
 Captain, a dismasted vessel{Captain, a dismasted vessel}
 You don't have enough gunpowder for a mine{You don't have enough gunpowder for a mine}
 A mine{A mine}
+Mine launched{Mine launched}
+We have hit a mine!{We have hit a mine!}
 Collision with a drifting trunk !{Collision with a drifting trunk !}
+We have collided with a drifting trunk!{We have collided with a drifting trunk!}
 You find some votive items on an Indian ceremonial raft{You find some votive items on an Indian ceremonial raft}
 You find some burial objects on a witch doctor's funeral raft{You find some burial objects on a witch doctor's funeral raft}
 You find some burial objects on a voodoo priest's funeral raft{You find some burial objects on a voodoo priest's funeral raft}
@@ -1179,6 +1198,8 @@ Someone has already emptied this abandoned hulk...{Someone has already emptied t
 Directsail mod active{Directsail mod active}
 Directsail mod deactivated{Directsail mod deactivated}
 Directsail toggled, press 0 to enable{Directsail toggled, press "0" to enable}
+Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing{Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing}
+Our position from{Our position from}
 
 #stown_name# Gunsmith{#stown_name# Gunsmith}
 #stown_name# Blacksmith{#stown_name# Blacksmith}
@@ -2074,3 +2095,9 @@ Patrol_Low{low patrolling duty}
 Patrol_Normal{normal patrolling duty}
 Patrol_Medium{alert, the amount of contraband on the island starts to get too much}
 Patrol_High{high alert, despite previous measures contraband still finds its way to this island}
+
+It's Sakharine - is he dead?{It's Sakharine - is he dead?}
+There's poor Sakharine again.{There's poor Sakharine again.}
+I need Tools to assemble this thing.{I need Tools to assemble this thing.}
+I don't have all parts yet.{I don't have all parts yet.}
+No, that's not the right part.{No, that's not the right part.}

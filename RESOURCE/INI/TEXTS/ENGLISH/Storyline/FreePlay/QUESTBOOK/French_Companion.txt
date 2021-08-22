@@ -1,0 +1,7 @@
+title=A French companion
+text.t1=I agree to help the governor of #sisland_Eleuthera#. Captain Jean Lafitte is already on #sTortuga# preparing the mission. Maybe I could find him in the tavern...
+text.t2=I was right! Lafitte was in the tavern recruiting some sailors. He seems to be a smart guy. That's all I need in this dangerous mission. Now, my next stop is Turtle Bay on #sisland_Turks#.
+text.t3=Until now, everything is fine. I'm going to ask help to that woman called Laura Cotton. She lives in a house near to the town gates.
+text.t4=Captain Caesar, the prisoner I found in the cargo hold, seems to be a good guy. Happy I can help him... Now, back to #sEleuthera#! A reward is waiting for me. 
+text.t5=Done! I've got the reward and two new friends with Captain Lafitte and Caesar and of course I helped in stopping the British from attacking #sisland_Eleuthera#. Not bad like mission!
+text.t6=The Governor of #sisland_Eleuthera# is a nice person but I won't put my life in danger for 25000 gold coins!

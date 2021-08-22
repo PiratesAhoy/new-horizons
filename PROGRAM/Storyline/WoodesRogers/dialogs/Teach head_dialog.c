@@ -28,7 +28,38 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 
 			dialog.snd = "Voice\CLLA\CLLA001";
-			PlaySound("VOICE\ENGLISH\gr_Teach5.wav");
+
+			if(GetAttribute(pchar, "TH_first_time") == "done")
+			{
+				PlaySound("VOICE\ENGLISH\gr_Teach7.wav");
+				dialog.text = DLG_TEXT[52];
+				link.l1 = DLG_TEXT[3];
+				link.l1.go = "exit";
+				link.l2 = DLG_TEXT[53];
+				link.l2.go = "where_to_part";
+			}
+			else
+			{
+				PlaySound("VOICE\ENGLISH\gr_Teach5.wav");
+				dialog.text = DLG_TEXT[50];
+				link.l1 = DLG_TEXT[51];
+				link.l1.go = "no_bonus_chapter";
+				Pchar.TH_first_time = "done";
+			}
+		break;
+
+		case "no_bonus_chapter":
+			PlaySound("VOICE\ENGLISH\gr_Teach7.wav");
+			dialog.text = DLG_TEXT[52];
+			link.l1 = DLG_TEXT[3];
+			link.l1.go = "exit";
+			link.l2 = DLG_TEXT[53];
+			link.l2.go = "where_to_part";
+		break;
+
+		case "where_to_part":
+			dialog.snd = "Voice\CLLA\CLLA001";
+			PlaySound("VOICE\ENGLISH\gr_Teach4.wav");
 			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "where_to_part1";

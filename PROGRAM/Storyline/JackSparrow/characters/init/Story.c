@@ -17,6 +17,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.locator = "sit5";
 	ch.Dialog.Filename = "Storyteller_dialog.c";
 	ch.Dialog.CurrentNode = "Tavern_Story";
+	ch.greeting = "Gr_Mr. Gibbs";
 	ch.rank 	= 10;
 	ch.reputation = "None";
 	ch.experience = "0";

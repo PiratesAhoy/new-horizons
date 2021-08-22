@@ -295,9 +295,11 @@ void ProcessDialogEvent()
 				dialog.snd3 = "";
 				d.Text = RandPhrase(DLG_TEXT[115] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + " " + PChar.lastname + DLG_TEXT[116], DLG_TEXT[117], DLG_TEXT[118] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[119], &Dialog, Dialog.snd1, Dialog.snd2, Dialog.snd3);
 			}
-
-			Link.l1 = DLG_TEXT[120];
-			Link.l1.go = "town_tavern";
+			if (GetAttribute(NPChar, "location") != "Greenford_Tavern")
+			{
+				Link.l1 = DLG_TEXT[120];
+				Link.l1.go = "town_tavern";
+			}
 			Link.l2 = DLG_TEXT[121];
 			Link.l2.go = "town_shipyard";
 			Link.l3 = DLG_TEXT[122];
@@ -317,8 +319,11 @@ void ProcessDialogEvent()
 
 		case "town_shipyard":
 			d.Text = DLG_TEXT[127]
-			Link.l1 = DLG_TEXT[128];
-			Link.l1.go = "town_tavern";
+			if (GetAttribute(NPChar, "location") != "Greenford_Tavern")
+			{
+				Link.l1 = DLG_TEXT[128];
+				Link.l1.go = "town_tavern";
+			}
 			Link.l2 = DLG_TEXT[129];
 			Link.l2.go = "town_store";
 			Link.l3 = DLG_TEXT[130];
@@ -330,8 +335,11 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[131];
 			Link.l1 = DLG_TEXT[132];
 			Link.l1.go = "town_shipyard";
-			Link.l2 = DLG_TEXT[133];
-			Link.l2.go = "town_tavern";
+			if (GetAttribute(NPChar, "location") != "Greenford_Tavern")
+			{
+				Link.l2 = DLG_TEXT[133];
+				Link.l2.go = "town_tavern";
+			}
 			Link.l3 = DLG_TEXT[134];
 			Link.l3.go = "exit";
 			DeleteAttribute(&locations[Findlocation("Greenford_town")], "reload.l7.goto_disable"); // SS: Unlock Fast Travel

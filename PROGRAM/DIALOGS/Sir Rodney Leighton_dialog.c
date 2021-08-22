@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 	string your_rank_name;
 	string el_supremo_short_name = GetAttribute(CharacterFromID("El Supremo"), "title") + " " + GetMyName(CharacterFromID("El Supremo"));
 
-	if (your_rank == 6) your_rank_name = "Captain";
+	if (your_rank == 6) your_rank_name = XI_ConvertString("Captain");
 	else your_rank_name = GetRankName(PChar, ENGLAND);
 
 	PChar.quest.powder_needed = 500;
@@ -227,5 +227,106 @@ void ProcessDialogEvent()
 			link.l1 = "";
 			link.l1.go = "exit";
 		break;
+
+		case "time_up":
+			dialog.text = DLG_TEXT[61] + GetMyLastName(PChar) + DLG_TEXT[62];
+			if (CheckAttribute(PChar, "quest.hornblower_off_course")) dialog.text = dialog.text + DLG_TEXT[63];
+			else dialog.text = dialog.text + ".";
+			link.l1 = DLG_TEXT[64];
+			link.l1.go = "sentenced";
+			link.l2 = DLG_TEXT[65];
+			link.l2.go = "dont_believe_you";
+		break;
+
+		case "dont_believe_you":
+			dialog.text = DLG_TEXT[66];
+			link.l1 = DLG_TEXT[67];
+			link.l1.go = "sentenced";
+		break;
+
+		case "sentenced":
+			dialog.text = DLG_TEXT[68];
+			link.l1 = "";
+			AddDialogExitQuest("hornblower_execution");
+			link.l1.go = "exit";
+		break;
+
+		case "French_escaped":
+			dialog.text = DLG_TEXT[69];
+			link.l1 = DLG_TEXT[70];
+			link.l1.go = "French_to_Port_au_Prince";
+		break;
+
+		case "French_to_Port_au_Prince":
+			dialog.text = DLG_TEXT[71];
+			link.l1 = DLG_TEXT[72];
+			link.l1.go = "where_else";
+		break;
+
+		case "where_else":
+			dialog.text = DLG_TEXT[73] + GetMyLastName(PChar) + DLG_TEXT[74];
+			link.l1 = DLG_TEXT[75];
+			link.l1.go = "not_south";
+		break;
+
+		case "not_south":
+			dialog.text = DLG_TEXT[76];
+			link.l1 = DLG_TEXT[77];
+			link.l1.go = "not_Redmond";
+		break;
+
+		case "not_Redmond":
+			dialog.text = DLG_TEXT[78];
+			link.l1 = DLG_TEXT[79];
+			AddDialogExitQuest("Hornblower_Foster_interrupts");
+			link.l1.go = "exit";
+		break;
+
+		case "Foster_devil_to_pay":
+			dialog.text = DLG_TEXT[80];
+			link.l1 = DLG_TEXT[81];
+			link.l1.go = "Foster_both_ways";
+		break;
+
+		case "Foster_both_ways":
+			dialog.text = DLG_TEXT[82];
+			link.l1 = "...";
+//			AddDialogExitQuest("Hornblower_Leighton_continues");
+			link.l1.go = "exit";
+		break;
+
+		case "good_idea":
+			dialog.text = DLG_TEXT[83] + GetMyLastName(CharacterFromID("Dreadnought Foster")) + DLG_TEXT[84];
+			link.l1 = "...";
+			AddDialogExitQuest("Hornblower_Keene_suggests_Sutherland");
+			link.l1.go = "exit";
+		break;
+
+		case "Keene_suggests_Sutherland":
+			dialog.text = DLG_TEXT[85];
+			link.l1 = "...";
+			AddDialogExitQuest("Hornblower_Leighton_no_prizes");
+			link.l1.go = "exit";
+		break;
+
+		case "you_want_a_prize":
+			dialog.text = DLG_TEXT[86] + GetMyLastName(PChar) + DLG_TEXT[87];
+			link.l1 = DLG_TEXT[88];
+			link.l1.go = "no_risks";
+		break;
+
+		case "no_risks":
+			dialog.text = DLG_TEXT[89];
+			link.l1 = DLG_TEXT[90];
+			link.l1.go = "put_it_in_writing";
+		break;
+
+		case "put_it_in_writing":
+			dialog.text = DLG_TEXT[91];
+			link.l1 = "";
+//			AddDialogExitQuest("Hornblower_return_to_Sutherland");
+			link.l1.go = "exit";
+		break;
+			
 	}
 }

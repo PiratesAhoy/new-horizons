@@ -142,6 +142,130 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[93];
 			link.l1.go = "exit";
 		break;
+		
+		case "gov_15":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[94];
+			link.l1 = DLG_TEXT[95];
+			link.l1.go = "gov_16";
+		break;
+
+		case "gov_16":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[96];
+			link.l1 = DLG_TEXT[97];
+			link.l1.go = "gov_17";
+		break;
+
+		case "gov_17":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[98];
+			link.l1 = DLG_TEXT[99];
+			link.l1.go = "gov_18";
+		break;
+
+		case "gov_18":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[100];
+			link.l1 = DLG_TEXT[101];
+			link.l1.go = "gov_19";
+		break;
+
+		case "gov_19":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[102];
+			link.l1 = DLG_TEXT[103];
+			link.l1.go = "gov_20";
+		break;
+
+		case "gov_20":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[104];
+			link.l1 = DLG_TEXT[105];
+			link.l1.go = "gov_21";
+		break;
+
+		case "gov_21":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[106];
+			link.l1 = DLG_TEXT[107];
+			link.l1.go = "gov_22";
+		break;
+
+		case "gov_22":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[108];
+			link.l1 = DLG_TEXT[109];
+			link.l1.go = "gov_23";
+		break;
+
+		case "gov_23":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[110];
+			link.l1 = DLG_TEXT[111];
+			link.l1.go = "gov_24";
+			link.l2 = DLG_TEXT[112];
+			link.l2.go = "abandon_quest";			
+		break;
+
+		case "gov_24":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[113];
+			link.l1 = DLG_TEXT[114];
+			link.l1.go = "gov_25";
+		break;
+
+		case "gov_25":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[115];
+			link.l1 = DLG_TEXT[116];
+			link.l1.go = "gov_26";
+		break;
+
+		case "gov_26":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[117];
+			link.l1 = DLG_TEXT[118];
+			link.l1.go = "exit";
+			GiveItem2Character(Pchar, "Letter_Lafitte");			
+			AddDialogExitQuest("meet_lafitte");			
+		break;
+		
+		case "gov_27":
+			RemovePassenger(pchar, characterFromID("Jean Lafitte"));
+			RemoveCharacterCompanion(pchar, characterFromID("Jean Lafitte"));
+			RemoveOfficersIndex(pchar, GetCharacterIndex("Jean Lafitte"));			
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[119];
+			link.l1 = DLG_TEXT[120];
+			link.l1.go = "gov_28";
+		break;
+
+		case "gov_28":
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[121];
+			link.l1 = DLG_TEXT[122];
+			link.l1.go = "gov_29";
+		break;
+
+		case "gov_29":
+			ChangeCharacterAddressGroup(characterFromID("Jean Lafitte"), "Eleuthera_Port", "goto", "goto25");		
+            PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(pchar, 25000);
+			ChangeRMRelation(pchar, AMERICA, 20.0);				
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[123];
+			link.l1 = DLG_TEXT[124];
+			link.l1.go = "gov_30";
+		break;
+
+		case "gov_30":	
+			dialog.snd = "Voice\REGR\REGR008";
+			dialog.text = DLG_TEXT[125];
+			link.l1 = DLG_TEXT[126];
+			link.l1.go = "exit";
+			AddDialogExitQuest("leave_governor_eleuthera");			
+		break;			
 
 		case "Exit":
 			DialogExit();

@@ -1,7 +1,7 @@
-title=Anaconda's Capture
-text.t1=I was right to search for prize ships off #sisland_Isla Muelle#. I engaged a light galleon and after a hard fight, she was mine. There are some valuable goods in the cargo hold. Boca de Hubon is not a safe at the moment. I need to sell my cargo on #sisland_Redmond# and repair.
-text.t2=Dash it! The Spaniards caught me before I reached the safe harbour at #sisland_Redmond#. Luck is with me, I escaped my captors in the #sSanto Domingo#'s Port and swam up to Boca de Yuman with Emilio. Now, I have to go to the village and find help.
-text.t3=Finally, I met a fisherman in the village. He'll wait for me at Boca de Yuman. Afterwards, I just need to sail to Boca de Hubon and look for Eugene in the Buccaneer Camp. I'm sure he'll help me.
-text.t4=That's done! I hired two experienced pirates introduced by Eugene. I hoped more but I think these men will be enough. Indeed, I have an idea to reach my ship. But for that, I need to go to the village church.
-text.t5=Now, if we wear these robes, we can get into #sSanto Domingo# and its port, without having to fight. My galleon is moored waiting to be rescued.
-text.t6=Yes! Finally I've got my ship back. Let's quickly clear the port and its guns. It will be best to sail to #sisland_Khael Roa#, a good hunting ground for enemy prize ships.
+title=Захват Анаконды
+text.t1=Я был прав решив отправиться на остров #sisland_Isla Muelle#. Я заметил легкий галеон и после тяжелого боя он был захвачен. В его трюме нашлось немного ценных товаров. Бока Де Хубон не самое безопасное место. Стоит продать груз на острове #sisland_Redmond# и отремонтировать корабль.
+text.t2=Проклятие! Испанцы настигли меня прежде, чем я вошел в безопасную гавань города #sisland_Redmond#. Мне повезло и я сбежал в город #sSanto Domingo# и доплыл с Эмилио до Бока Де Юман. Теперь, нужно пойти в поселок и найти помощь.
+text.t3=Наконец, в деревне я встретил рыбака. Он будет ждать меня в Бока Де Юман. Затем отправлюсь в Бока Де Хубон и найду Юджина в Лагере Пиратов. Уверен, он мне поможет.
+text.t4=Получилось! Я нанял двух опытных пиратов, порекомендованных Юджином. Конечно, надеялся на большее, но думаю, что этих людей тоже будет достаточно. У меня есть идея добраться до моего судна. Но для этого, я должен пойти в деревенскую церковь.
+text.t5=Итак, если мы наденем эти рясы, то сможем проникнуть в город #sSanto Domingo# и его порт, без необходимости драки. Мой галеон ждет когда я его спасу!
+text.t6=Да! Наконец я вернул свое судно назад. Нужно быстрее покинуть порт и его пушки. И лучше будет направиться на остров #sisland_Khael Roa#, там неплохое место.

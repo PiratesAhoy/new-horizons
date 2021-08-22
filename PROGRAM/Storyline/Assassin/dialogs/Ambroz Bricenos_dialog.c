@@ -113,12 +113,12 @@ void ProcessDialogEvent()
 
 		case "cash":
 			ChangeCharacterReputation(pchar, -10);
-		    PlayStereoSound("INTERFACE\took_item.wav");
+		    	PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, 1500);
 			dialog.snd = "Voice\AMBR\AMBR011";
 			dialog.text = DLG_TEXT[38];
-			link.l1 = DLG_TEXT[39];
-			link.l1.go = "Exit_spare";
+//			link.l1 = DLG_TEXT[39];
+//			link.l1.go = "Exit_spare";
 			link.l2 = DLG_TEXT[40];
 			link.l2.go = "kill";
 		break;
@@ -126,8 +126,8 @@ void ProcessDialogEvent()
 		case "spare":
 			dialog.snd = "Voice\AMBR\AMBR012";
 			dialog.text = DLG_TEXT[41];
-			link.l1 = DLG_TEXT[42];
-			link.l1.go = "Exit_spare";
+//			link.l1 = DLG_TEXT[42];
+//			link.l1.go = "Exit_spare";
 			link.l2 = DLG_TEXT[43];
 			link.l2.go = "kill";
 		break;

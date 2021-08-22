@@ -1,9 +1,9 @@
 Clock_Weather_title
 {
-Date and Weather Indicator
+Индикатор даты и погоды
 }
 
 Clock_Weather_info
 {
-    Date and weather indicator is placed in right upper corner of World Map screen. Numbers on it shows current game date, and current weather and day time is shown with picture in a round window.
+    Индикатор даты и погоды показываетс¤ в карте мира в правом верхнем углу экрана. Цифрами на нем показана текущая дата, а в круглом окошке изображено состо¤ние погоды и времени суток на текущий момент.
 }

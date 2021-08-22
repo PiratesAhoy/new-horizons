@@ -40,6 +40,14 @@ void StartStoryLine()
 	Characters[GetCharacterIndex("Short Jack Gold")].dialog.filename = "Nathan Kell (GOV)_dialog.c";
 	ChangeCharacterAddressGroup(characterFromID("Dante Siciliano"), "none", "", "");
 
+//================================| LOCATIONS |=======================================//
+
+	Locations[FindLocation("Redmond_port")].reload.l7.name = "Door_4";
+	Locations[FindLocation("Redmond_port")].reload.l7.go = "Storyteller_house";
+	Locations[FindLocation("Redmond_port")].reload.l7.emerge = "reload1";
+	Locations[FindLocation("Redmond_port")].reload.l7.autoreload = "0";
+	Locations[FindLocation("Redmond_port")].reload.l7.label = "House.";
+
 //================================| BEGINNING QUESTS |================================//
 
 	//Beatrice
@@ -49,6 +57,9 @@ void StartStoryLine()
 	PChar.quest.Start.win_condition.l1.location = "Redmond_port";
 	PChar.quest.Start.win_condition = "Start";
 	//Beatrice
+
+	DeleteAttribute(PChar, "quest.Install_Voysey_And_Blythe");										//disables sidequest in Nevis
+	DeleteAttribute(&Locations[FindLocation("QC_town")],"vcskip");									//disables sidequest in Nevis
 
 //===============================| QUESTS SECTION END |===============================//
 

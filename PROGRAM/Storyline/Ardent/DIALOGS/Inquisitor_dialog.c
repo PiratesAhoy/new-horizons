@@ -61,6 +61,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "adventure":
+			if (PChar.sex == "woman") GiveModel2Player("ArdentF_3", false);
 			PChar.quest.alignment = "good";
 			ChangeCharacterReputation(pchar, 5);
 			dialog.text = DLG_TEXT[8];
@@ -71,6 +72,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "gold":
+			if (PChar.sex == "woman") GiveModel2Player("ArdentF_3", true);
 			PChar.quest.alignment = "evil";
 			ChangeCharacterReputation(pchar, -5);
 			dialog.text = DLG_TEXT[8];

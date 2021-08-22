@@ -55,6 +55,32 @@ void ProcessDialogEvent()
 
 			NextDiag.TempNode = "red_house";
 		break;
+
+		case "bonus_chapter":
+			PlaySound("VOICE\ENGLISH\jrh_4.wav");			
+			dialog.text = DLG_TEXT[6];
+			link.l1 = DLG_TEXT[7];  
+			link.l1.go = "bonus_chapter1";
+		break;
+
+		case "bonus_chapter1":
+			PlaySound("VOICE\ENGLISH\jrh_8.wav");			
+			dialog.text = DLG_TEXT[8];
+			link.l1 = DLG_TEXT[9];  
+			link.l1.go = "bonus_chapter2";
+		break;
+
+		case "bonus_chapter2":
+			LAi_SetActorType(NPchar);
+			LAi_ActorTurnToCharacter(NPchar, characterFromID("Claire Voyant"));
+			LAi_SetActorType(Pchar));
+			LAi_ActorTurnToCharacter(Pchar, characterFromID("Defoe"));
+			PlaySound("VOICE\ENGLISH\jrh_7.wav");			
+			dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[11];  
+			link.l1.go = "exit";
+			AddDialogExitQuest("bonus_chapter4");
+		break;
 					
 		case "Exit":
 			DialogExit();

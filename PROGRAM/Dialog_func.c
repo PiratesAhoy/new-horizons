@@ -1343,9 +1343,16 @@ string GetMyAddressForm(ref chr, ref pchr, int addrtype, bool fname, bool lname)
 		case ADDR_IMPTITLE:	retstr = stringret(GetRank(&pchr, nat) > 0, XI_ConvertString(GetRankName(&pchr, nat)), GetAddressForm(ADDR_IMPTITLE, fakeNat, bsex)); break;// MAXIMUS 16.10.2006
 		/*default:*/		retstr = GetAddressForm(addrtype, fakeNat, bsex);
 	}
-	if(fname) retstr += " " + GetMyName(pchr);
-	if(fname && lname && CheckAttribute(pchr, "middlename")) retstr += " " + pchr.middlename;
-	if(lname) retstr += " " + pchr.lastname;
+	if (!CheckAttribute(pchr, "lastname") || pchr.lastname == "" || GetMyName(pchr) == FirstLetterUp(pchr.lastname))	// Character has only one name
+	{
+		if (fname || lname) retstr += " " + GetMyName(pchr);
+	}
+	else
+	{
+		if(fname) retstr += " " + GetMyName(pchr);
+		if(fname && lname && CheckAttribute(pchr, "middlename")) retstr += " " + pchr.middlename;
+		if(lname) retstr += " " + GetMyLastName(pchr);
+	}
 	return retstr;
 }
 

@@ -1,4 +1,4 @@
-string DLG_TEXT[50] = {
+string DLG_TEXT[54] = {
 "Ahoy there Captain. Which part are you interested in?",
 "!!!",
 "Where to Captain?",
@@ -49,5 +49,9 @@ string DLG_TEXT[50] = {
 "36) To Careen shore: after BLACKBEARD'S TOWER.",	//47
 "37) To Corvette: after CAREEN SHORE.",			//48
 "38) To Isla Mona: after CORVETTE.",			//49
+"I can take you to any part of the quest. But remember it has a price.",	//50
+"Hmm, what will it cost me?",				
+"If you finish the quest without using any jump starts you'll get access to the bonus chapter.",	//52
+"I don't care about that. Please go on.",
   
 };

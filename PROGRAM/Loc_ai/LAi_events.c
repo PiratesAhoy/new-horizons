@@ -1306,6 +1306,16 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			if(GetAttribute(weapon,"model") == "LongRifle_C")	PostEvent("LongRifle_C_on_back", 1000, "i", attack);
 			if(GetAttribute(weapon,"model") == "LongRifle_H")	PostEvent("LongRifle_H_on_back", 1000, "i", attack);
 			if(GetAttribute(weapon,"model") == "LongRifle_W")	PostEvent("LongRifle_W_on_back", 1000, "i", attack);
+			if(CheckAttribute(weapon, "id") && weapon.id == "Portugize")
+			{
+				if(charge == 0.0)
+				{
+					weapon.model = "portugize_back";
+					RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+					EquipCharacterByItem(attack, "portugize");
+					PlaySound("PEOPLE\clothes1.wav");
+				}
+			}
 
 			if(GetAttribute(weapon,"model") == "maquahuitl_cursed")
 			{
@@ -1362,11 +1372,6 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 					}
 				}
 			}
-		
-			if(IsCharacterPerkOn(attack, "Gunfighter") && attack.chr_ai.charge >= "2")
-			{
-				attack.chr_ai.charge = charge + 1.0;
-			}
 		}
 		else
 		{
@@ -1381,6 +1386,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			if(GetAttribute(weapon,"model") == "LongRifle_C")	PostEvent("LongRifle_C_on_back", 1000, "i", attack);
 			if(GetAttribute(weapon,"model") == "LongRifle_H")	PostEvent("LongRifle_H_on_back", 1000, "i", attack);
 			if(GetAttribute(weapon,"model") == "LongRifle_W")	PostEvent("LongRifle_W_on_back", 1000, "i", attack);
+			if(GetAttribute(weapon,"model") == "portugize")		PostEvent("portugize_on_back", 1000, "i", attack);
 
 			if(GetAttribute(weapon, "id") == "pistolwhip")
 			{
@@ -1396,18 +1402,24 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 
 		if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
 		{
+			attack.chr_ai.charge = charge + 1.0;
+
 			LoadStorylineFile("", "SL_utils.c");	// PB: To Prevent Errors
 			LAi_CharacterFireExecute_WR(attack, enemy, kDist, isFindedEnemy);
 			return;
 		}
 		if(sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)
 		{
+			attack.chr_ai.charge = charge + 1.0;
+
 			LoadStorylineFile("", "SL_utils.c");	// PB: To Prevent Errors
 			LAi_CharacterFireExecute_BUG(attack, enemy, kDist, isFindedEnemy);
 			return;
 		}
 		if(sti(GetStorylineVar(FindCurrentStoryline(), "BART_PUZZLES")) > 0)
 		{
+			attack.chr_ai.charge = charge + 1.0;
+
 			LoadStorylineFile("", "SL_utils.c");	// PB: To Prevent Errors
 			LAi_CharacterFireExecute_BART(attack, enemy, kDist, isFindedEnemy);
 			return;
@@ -1688,9 +1700,32 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 								PlaySound("OBJECTS\duel\pistol_musket2.wav");
 								PlaySound("OBJECTS\duel\pistol_musket2.wav");
 							}
+							if(CheckAttribute(weapon, "id") && weapon.id == "Portugize")
+							{
+								LAi_QuestDelay("portugize_extra_sound", 1.0);
+							
+								if(charge == 0.0)
+								{
+									weapon.model = "portugize_back";
+									RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+									EquipCharacterByItem(attack, "portugize");
+									PlaySound("PEOPLE\clothes1.wav");
+									attack.chr_ai.charge = "0";
+								}	
+							
+							}
 						}
 						else
 						{
+							if(CheckAttribute(weapon, "id") && weapon.id == "Portugize")
+							{
+								weapon.model = "portugize_back";
+								RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
+								EquipCharacterByItem(attack, "portugize");
+								PlaySound("PEOPLE\clothes1.wav");
+								attack.chr_ai.charge = "0";
+							}
+					
 							if(IsMainCharacter(attack))
 							{
 								if(gp == 0) Log_SetStringToLog(TranslateString("","There is no Gunpowder left"));
@@ -3333,6 +3368,14 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 	{
 		PostEvent("LongRifle_W_on_back", 1000, "i", attack);
 		PostEvent("mguns_fight_check", 1000, "i", attack);
+	}
+
+	if(IsEquipCharacterByItem(attack, "portugize"))
+	{
+//		PostEvent("portugize_on_back", 1000, "i", attack);
+//		PostEvent("mguns_fight_check", 1000, "i", attack);
+
+	//	if(charge == 0.0)  PostEvent("portugize_on_back", 1000, "i", PChar);		//move this to "pg" part?
 	}
     //<--- JRH switch rifles
 

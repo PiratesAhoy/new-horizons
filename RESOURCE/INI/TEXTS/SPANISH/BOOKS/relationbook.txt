@@ -19,7 +19,7 @@ Los fuertes y otros barcos pueden verte cambiar la bandera si estás en su campo
 
 Si te han reconocido, hay varias formas de evitar que te sigan reconociendo como hostil en el futuro:
 - Hacer las peces con esa nación, incluso si es solo durante el tiempo necesario para resolver tus asuntos en el puerto y marcharte.
-- Adquirir un barco diferente. El fuerte recuerda tu barco, por lo que si ya no tiene sun barco del mismo tipo, el fuerte ya no te reconocerá (No basta con repintar el barco o ocn dárselo a un oficial subordinado. Si el fuerte ve ese barco, o cualquier barco del mismo tipo dentro de tu flota, te reconocerá).
+- Adquirir un barco diferente. El fuerte recuerda tu barco, por lo que si ya no tienes un barco del mismo tipo, el fuerte ya no te reconocerá (No basta con repintar el barco o ocn dárselo a un oficial subordinado. Si el fuerte ve ese barco, o cualquier barco del mismo tipo dentro de tu flota, te reconocerá).
 
 -----------------------------------------
 Actos deshonrosos:
@@ -37,9 +37,9 @@ Siempre puedes cambiar la bandera que llevas izada al entrar en combate, lo que 
 -----------------------------------------
 Relaciones internacionales:
 
-Obtener puntos con cualquier nación requiere que te unas a sus filas como corsario u oficial de la Armada, o que t eunas a la Hermandad Pirata. Mientras sirvas a una única nación, tus relaciones con las demás estarán dictadas por las relaciones de tu nación. Aunque puedes unirta a tantas naciones como desees al mismo tiempo, esto reducirá los puntos que ganas por tus acciones con cada una de ellas.
+Obtener puntos con cualquier nación requiere que te unas a sus filas como corsario u oficial de la Armada, o que te unas a la Hermandad Pirata. Mientras sirvas a una única nación, tus relaciones con las demás estarán dictadas por las relaciones de tu nación. Aunque puedes unirte a tantas naciones como desees al mismo tiempo, esto reducirá los puntos que ganas por tus acciones con cada una de ellas.
 
-Las naciones del mundo no ven con buenos ojos ninguna acción hostil ocntra sus aliados. Por ello, es importante mantenerse al día con las noticias de las tabernas. Esto puede volverse especialmente complicado si sirves a varias naciones a la vez.
+Las naciones del mundo no ven con buenos ojos ninguna acción hostil contra sus aliados. Por ello, es importante mantenerse al día con las noticias de las tabernas. Esto puede volverse especialmente complicado si sirves a varias naciones a la vez.
 
 -----------------------------------------
 Prisioneros de guerra:

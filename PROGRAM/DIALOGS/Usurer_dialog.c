@@ -6,6 +6,8 @@ void ProcessDialogEvent()
 	PChar = GetMainCharacter();
 	aref Link, Diag;	
 	string NPC_Area;
+	float NPC_INVEST_RATE = 0.1;	// If you deposit money, the loanshark invests this much of it into local business...
+	int NPChar_Investment;		// ... and this is the amount invested
 	
 	DeleteAttribute(&Dialog,"Links");
 
@@ -136,6 +138,22 @@ void ProcessDialogEvent()
 		//	DepositSum = -DepositSum;
 		    PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(Pchar, -(makeint(Pchar.Quest.Deposits.(NPC_Area).Sum)));
+			NPChar_Investment = makeint(sti(Pchar.Quest.Deposits.(NPC_Area).Sum) * NPC_INVEST_RATE);
+			SetTownGold(NPC_Area, GetTownGold(NPC_Area) + NPChar_Investment); // GR: Some of deposit invested into town gold
+			switch (GetTownEconomy(GetTownFromID(NPC_Area)))
+			{
+				case TOWN_ECONOMY_STARVING:
+					if (NPChar_Investment > 20000) AdjustTownEconomy(GetTownFromID(NPC_Area), 1);
+					if (NPChar_Investment > 200000) AdjustTownEconomy(GetTownFromID(NPC_Area), 1);
+				break;
+				case TOWN_ECONOMY_STRUGGLING:
+					if (NPChar_Investment > 100000) AdjustTownEconomy(GetTownFromID(NPC_Area), 1);
+					if (NPChar_Investment > 1000000) AdjustTownEconomy(GetTownFromID(NPC_Area), 1);
+				break;
+				case TOWN_ECONOMY_SURVIVING: if (NPChar_Investment > 750000) AdjustTownEconomy(GetTownFromID(NPC_Area), 1); break;
+				case TOWN_ECONOMY_PROSPERING: if (NPChar_Investment > 2000000) AdjustTownEconomy(GetTownFromID(NPC_Area), 1); break;
+				// No entry for TOWN_ECONOMY_WEALTHY as that's the maximum economy level!
+			}
 			Pchar.Quest.Deposits.(NPC_Area) = true;
 			Pchar.Quest.Deposits.(NPC_Area).StartDay = getDataDay();
 			Pchar.Quest.Deposits.(NPC_Area).StartMonth = getDataMonth();

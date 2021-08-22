@@ -189,7 +189,7 @@ settingsailho_infolevel4
 visit_deck{Fondeo y petición de rescate}
 settingvisit_deck1
 {
-Vas directamente al puerto/costa. Decide qué hacer con los cautivos en el menú de Pasajeros.
+Desembarcas directamente. Decide qué hacer con los cautivos en el menú de Pasajeros.
 }
 settingvisit_deck2
 {

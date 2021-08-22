@@ -1,5 +1,5 @@
-title=Distiller
-text.t1=No rum, no molasses, no nothing - yet.
-text.t2=I can find wood and bottles with molasses in the Study.
-text.t3=They want me to light the fire. But I don't have any fire kits, maybe I could use my Pistol??
-text.t4=That's it! I have made Rum and found the Key. Now I only have to find out where to use the Key.
+title=Самогонщик
+text.t1=Нет рома, не патоки, ничего нет.
+text.t2=Я могу найти дерево и бутылки с патокой в кабинете Роджерса.
+text.t3=Они хотят, чтобы я зажег огонь. Но у меня нет никаких средств его добычи, возможно я мог бы воспользоваться пистолетом?
+text.t4=Вах! Я сделал ром и нашел ключ. Но только мне надо узнать от чего этот ключ.

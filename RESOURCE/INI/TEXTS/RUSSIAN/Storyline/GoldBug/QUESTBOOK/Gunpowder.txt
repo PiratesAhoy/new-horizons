@@ -1,7 +1,7 @@
-title=Gunpowder
-text.t1=Right-hand items: F3 + F3, left-hand items: F3 + fire pistol.
-text.t2=Standard Gunpowder: 6 parts of Salpeter, 1 part of Charcoal and Sulfur each.
-text.t3=Slow-burning Gunpowder for Fireworks: 4 parts of Salpeter, 2 parts of Charcoal and Sulfur each.
-text.t4=The most important precaution when grinding Gunpowder is to add a little Water.
-text.t5=Always remember to mix Charcoal with Salpeter to Salpeter Soot and Sulfur with Salpeter to Sulfur Soot. Do this before grinding and you're safe.
-text.t6=No, I don't know how to go on. I have to visit the Restaurant.
+title=Порох
+text.t1=Правая рука: F3 + F3, левая рука: F3 + выстрел из пистолета (Q).
+text.t2=стандартный порох: 6 частей Селитры, 1 часть Древесного угля и Серы соответственно.
+text.t3=Медленногорящий Порох для Фейерверка: 4 части Селитры, 2 части Древесного угля и Серы соответственно.
+text.t4=Главная предосторожность, размалывая порох нужно добавить немного воды.
+text.t5=Не забывайте смешивать Древесный уголь с Селитрой к Саже Селитры и Сере с Селитрой к Саже Серы. Сделайте это прежде, чем перемаловать и вам ничего не угрожает. Ох-хо-хох...
+text.t6=Нет, я не знаю, как это продолжить. Надо посетить ресторан.

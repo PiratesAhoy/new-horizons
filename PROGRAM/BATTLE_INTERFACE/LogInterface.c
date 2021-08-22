@@ -338,6 +338,8 @@ void CreateLandActionsEnvironment()
 	IActions.ActiveActions.ToEITC.IconNum			= 42; // JRH
 	IActions.ActiveActions.ToDWIC.IconNum			= 43; // JRH
 	IActions.ActiveActions.ToAcademy.IconNum		= 44; // JRH
+	IActions.ActiveActions.ToCdC.IconNum			= 45; // GR
+	IActions.ActiveActions.ToFWIC.IconNum			= 46; // GR
 
 	// PB: Treasure Chest locators -->
 	if(GetAttribute(Pchar, "boxname") == "treasure_box")
@@ -390,6 +392,27 @@ void CreateLandActionsEnvironment()
 		if (CheckAttribute(PChar, "boxname"))
 		{
 			if(Pchar.boxname == "box1") IActions.ActiveActions.OpenBox.IconNum	= 60;
+		}
+	}
+
+	if(Pchar.location == "New_cloister_library")
+	{
+		if (CheckAttribute(PChar, "boxname"))
+		{
+			if(Pchar.boxname == "box8" || Pchar.boxname == "box9" || Pchar.boxname == "box10" || Pchar.boxname == "box11" 
+			|| Pchar.boxname == "box12" || Pchar.boxname == "box14" || Pchar.boxname == "box15" 
+			|| Pchar.boxname == "box18" || Pchar.boxname == "box19" || Pchar.boxname == "box20")
+			{
+				IActions.ActiveActions.OpenBox.IconNum	= 62;
+			}
+			else 
+			{
+				if(Pchar.boxname == "box13") 
+				{
+					IActions.ActiveActions.OpenBox.IconNum	= 1;
+				}
+				else IActions.ActiveActions.OpenBox.IconNum	= 29;
+			}
 		}
 	}
 	// <-- JRH

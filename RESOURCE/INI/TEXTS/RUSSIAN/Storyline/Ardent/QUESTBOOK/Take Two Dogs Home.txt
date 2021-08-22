@@ -1,7 +1,7 @@
-title=Take Two Dogs Home
-text.t1=In return for Two Dogs leading us to the slave camp where the crew are held, I have agreed to take him home.
-text.t2=Two Dogs is dead.
-text.t3=I don't need Two Dogs any more so I told him to go away.
-text.t4=Two Dogs helped me to find and rescue my crew, so I shall take him to his home on #sisland_Isla Mona#.
-text.t5=Two Dogs is safely home with his father. I have promised not to tell anyone the secret of his name, and made my officers promise the same.
-text.t6=Two Dogs not-Fighting is safely home with his father. I promised I wouldn't tell anyone, but that ought to be worth a few free drinks in the next tavern!
+title=Отведите Две Собаки домой
+text.t1=Две Собаки проведет к лагерю рабов, если я верну его домой.
+text.t2=Две Собаки погиб.
+text.t3=Мне больше не нужен Две Собаки, поэтому я приказал ему уйти.
+text.t4=Две Собаки помог мне найти и спасти свою команду, поэтому, я верну его в его домой на остров #sisland_Isla Mona#.
+text.t5=Две Собаки благополучно вернулся домой к своему отцу. я обещал не раскрывать тайну его имени.
+text.t6=Две Собаки благополучно вернулся домой к своему отцу. я обещал не раскрывать тайну его имени. Но могу получить в таверне бесплатную выпивку!

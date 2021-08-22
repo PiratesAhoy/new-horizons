@@ -1,4 +1,4 @@
-string DLG_TEXT[42] = {
+string DLG_TEXT[43] = {
 "I don't know who you are, but if you leave right now, I won't have to feed you to the sharks!",
 "...",
 "Why are you looking for ",
@@ -41,5 +41,5 @@ string DLG_TEXT[42] = {
 "What? But I'm not THAT kind of pirate! I'm the NICE kind that gives candy to little children. Goodbye, you blackhearted scoundrel!",
 "In that case, please be allowin' me to be the first to welcome you to the Brotherhood, me #slad#!",
 "ARRRRRRRRRRR!!!!!!!!!!",
-
+"I'm busy.",
 };

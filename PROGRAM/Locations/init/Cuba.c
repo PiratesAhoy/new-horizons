@@ -636,7 +636,7 @@ void LocationInitCuba(ref n)
 	//Models
 	//Always
 	Locations[n].models.always.tavern = "Tavern_2";
-	Locations[n].models.always.locators = "Tavern_2_l";
+	Locations[n].models.always.locators = "tavern_2_l_Havana";
 	//Day
 	Locations[n].models.day.charactersPatch = "Tavern_2_p";
 

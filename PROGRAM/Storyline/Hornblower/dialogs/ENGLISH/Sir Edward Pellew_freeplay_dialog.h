@@ -1,4 +1,4 @@
-string DLG_TEXT[44] = {
+string DLG_TEXT[47] = {
 "Good day, ",
 ". Have you something to report?",
 "Good day, sir. Nothing to report, sir.",
@@ -37,10 +37,13 @@ string DLG_TEXT[44] = {
 "'s' crew will be transferred to her.",
 "I'm extremely grateful, sir.",
 "You'll be attached to Leighton's squadron.",
-"Now, gentlemen, the confounded war. I think Napoleon has bitten off more than he can chew in the Caribbean. We have an excellent chance to defeat him and bring victory to Britain, if we can maintain our naval blockade of #sisland_Hispaniola#. But not a single French ship must sail. That's up to you.",
+"Now, gentlemen, the confounded war. I think Napoleon has bitten off more than he can chew in the Caribbean. We have an excellent chance to defeat him and bring victory to Britain, if we can maintain our naval superiority here. But not a single French ship must enter these waters. That's up to you.\n",
+"Just as our fleets enter the Caribbean at #sSt John's# on #sisland_Antigua#, French fleets arrive at #sMarigot# on #sisland_Saint Martin#. And that is where you will stop them. You are to sail to #sisland_Saint Martin#. If you get there first, you will intercept the French fleet while it is still exhausted after crossing the Atlantic. If it has already arrived then you will bottle it up at #sMarigot#.\nCaptain ",
+", you have sailed this area before under my command, so you are familiar with the seas. You will guide the squadron, if you please.",
 "But first, dispose of your prize ships, then report back here. Any ships you still have then will be assigned to Leighton.",
 "Yes, sir. I shall go to the shipyard now.",
 "Ah, welcome back, ",
 ". I take it you are now ready to join Leighton's squadron?",
 "Yes, sir.",
+"Very well, sir.",
 }

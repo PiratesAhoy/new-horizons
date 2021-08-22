@@ -69,7 +69,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.Dialog.Filename = "Enrique Padilla_dialog.c";
 	ch.greeting = "Gr_isla muelle soldier";
 	ch.Ship.Name = "Miguel de Cervantes";	
-	ch.Ship.Type = "PO_Fleut50";		
+	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FastMerchantman2";	
+	else ch.Ship.Type = "PO_Fleut50";		
 	ch.Ship.Stopped = true;
 	ch.rank 	= 10;
 	ch.reputation = "None";
@@ -774,11 +775,11 @@ void CreateTempQuestCharacters(ref n)
 	LAi_SetImmortal(ch, true);
 	AddGameCharacter(n, ch);
 	
-    // Elvira Suarez	
+    // Elvira Carranza
     ch.old.name = "Elvira";
-    ch.old.lastname = "Suarez";
+    ch.old.lastname = "Carranza";
     ch.name    = TranslateString("","Elvira");
-    ch.lastname    = TranslateString("","Suarez");
+    ch.lastname    = TranslateString("","Carranza");	// Was Suarez, but Spanish wives do not take their husbands' surnames. ID remains unchanged
     ch.id        = "Elvira Suarez";
     ch.model    = "towngirl4";
     ch.sex = "woman";
@@ -1128,7 +1129,568 @@ void CreateTempQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);	
 	
-	//<- Characters for the 'A Family Story' side-quest	
+	//<- Characters for the 'A Family Story' side-quest
+	
+    //-> Characters for the 'A French companion' side-quest
+	// Jean Lafitte
+	ch.old.name = "Jean";
+	ch.old.lastname = "Lafitte";
+	ch.name = TranslateString("","Jean");
+	ch.lastname = TranslateString("","Lafitte");
+	ch.id		= "Jean Lafitte";
+	ch.model	= "Jean_Lafitte";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nation	= PIRATE;
+	GiveItem2Character(ch, "pistol2");
+	ch.equip.gun = "pistol2";
+	//JRH ammo mod -->
+	TakenItems(ch, "gunpowder", 6);
+	TakenItems(ch, "pistolbullets", 6);
+	//JRH ammo mod <--
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Jean Lafitte_dialog.c";
+	ch.greeting = "Gr_Francois Chabert";
+	ch.Ship.Name = "Goelette la Diligente";
+	ch.Ship.Type = 	"US_Hannah";	
+	ch.Ship.Stopped = true;
+	//ch.Flags.Pirate = 19; // GR
+	//ch.Flags.Pirate.texture = 3; // GR
+	ch.Flags.Personal = 3; // GR
+	ch.Flags.Personal.texture = 5; // GR
+	ch.experience = "0";
+	ch.skill.Leadership = "6";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "2";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "3";
+	ch.money = "0";
+	ch.perks.list.ShipSpeedUp = true;
+	ch.perks.list.ShipTurnRateUp = true;
+	ch.perks.list.StormProfessional = true;
+	ch.perks.list.SandbankManeuver = true;
+	ch.perks.list.SailingProfessional = true;
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 180.0, 180.0);
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
 
+// Laura Cotton
+	ch.old.name = "Laura";
+	ch.old.lastname = "Cotton";
+	ch.name = TranslateString("","Laura");
+	ch.lastname = TranslateString("","Cotton");
+	ch.id		= "Laura Cotton";
+	ch.model = "downgirl2";
+	ch.sex = "woman";
+	ch.sound_type = "pirate";
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Laura Cotton_dialog.c";
+	ch.rank 	= 1;
+	ch.reputation = "none";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "3";
+	ch.skill.Sneak = "1";
+	ch.money = "50";
+	ch.quest.meeting = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 40.0, 40.0);
+	ch.greeting = "Gr_Cecile Bienbonne";
+	AddGameCharacter(n, ch);
+
+	// Henri Caesar
+	ch.old.name = "Henri";
+	ch.old.lastname = "Caesar";
+	ch.name = TranslateString("","Henri");
+	ch.lastname = TranslateString("","Caesar");
+	ch.id		= "Henri Caesar";
+	ch.model	= "Corsair1_3";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	ch.nation	= FRANCE;
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Henri Caesar_dialog.c";
+	ch.greeting = "Gr_Jean Dusac";
+	ch.experience = "0";
+	ch.skill.Leadership = "6";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "2";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "3";
+	ch.money = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 180.0, 180.0);
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);	
+    //<- Characters for the 'A French companion' side-quest
+	//====================================================================================================================
+	
+    //Characters for side quest gambler type poker competition ---->
+	
+	ch.old.name = "Abel";
+	ch.old.lastname = "Punter";
+	ch.name 	= TranslateString("", "Abel");
+	ch.lastname 	= TranslateString("", "Punter");
+	ch.id		= "Gambler 1";
+	ch.model	= "hub_spa3";
+	ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.location	= "Turks_poker_room";
+	ch.location.group = "sit";
+	ch.location.locator = "sit3";
+	ch.Dialog.Filename = "Habitue_dialog.c";
+	//ch.greeting = "Gr_Oxbay Citizen";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.last_theme = "";
+	LAi_SetSitType(ch);
+	//LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Hans";
+	ch.old.lastname = "Winnink";
+	ch.name 	= TranslateString("", "Hans");
+	ch.lastname 	= TranslateString("", "Winnink");
+	ch.id		= "Gambler 2";
+	ch.model	= "Huber_Hol1_17";
+	ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.location	= "Turks_poker_room";
+	ch.location.group = "sit";
+	ch.location.locator = "sit6";
+	ch.Dialog.Filename = "Habitue_dialog.c";
+	//ch.greeting = "Gr_Oxbay Citizen";
+	ch.rank 	= 1;
+	ch.nation = HOLLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.last_theme = "";
+	LAi_SetSitType(ch);
+	//LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Donato";
+	ch.old.lastname = "da Silva";
+	ch.name 	= TranslateString("", "Donato");
+	ch.lastname 	= TranslateString("", "da Silva");
+	ch.id		= "Gambler 3";
+	ch.model	= "huber_por2";
+	ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.location	= "Turks_poker_room";
+	ch.location.group = "sit";
+	ch.location.locator = "sit4";
+	ch.Dialog.Filename = "Habitue_dialog.c";
+	//ch.greeting = "Gr_Oxbay Citizen";
+	ch.rank 	= 1;
+	ch.nation = PORTUGAL;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.last_theme = "";
+	LAi_SetSitType(ch);
+	//LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Ronald";
+	ch.old.lastname = "Longoustine";
+	ch.name 	= TranslateString("", "Ronald");
+	ch.lastname 	= TranslateString("", "Longoustine");
+	ch.id		= "Ron_L";
+	ch.model	= "Ron_L";
+	ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.location	= "Turks_poker_room";
+	ch.location.group = "goto";
+	ch.location.locator = "goto11";
+	ch.Dialog.Filename = "Poker twins_dialog.c";		
+	//ch.greeting = "Gr_Oxbay Citizen";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.last_theme = "";
+	LAi_SetStayType(ch);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
+
+	ch.old.name = " ";
+	ch.old.lastname = " ";
+	ch.name 	= " ";
+	ch.lastname 	= " ";				//1 spacebar gives no visible name
+	ch.id		= "invisible_gamer";
+	ch.model	= "invisible2";			//no portrait icon
+	//ch.sound_type = "male_citizen";
+	ch.sex = "man";
+	ch.location	= "Turks_poker_room";
+	ch.location.group = "sit";
+	ch.location.locator = "sit1";
+	//ch.Dialog.Filename = "Poker twins_dialog.c";		
+	//ch.greeting = "Gr_Oxbay Citizen";
+	ch.rank 	= 1;
+	ch.nation = ENGLAND;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.last_theme = "";
+	LAi_SetActorType(ch);				//no dialog starts
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	LAi_SetImmortal(ch, true);
+	AddGameCharacter(n, ch);
+// <----------------Characters for side quest gambler type poker competition
+
+    // -> General characters for trophy quests
+	ch.old.name		= "";
+	ch.old.lastname		= "";
+	ch.name			= "";		// To be filled in by quest use
+	ch.lastname		= "";
+	ch.id			= "TQ_Char1";
+	ch.model		= "Sailor1";	// Can be changed by quest use
+	ch.sex			= "man";
+	ch.sound_type		= "male_citizen";
+	ch.location		= "None";
+	ch.location.group	= "";
+	ch.location.locator	= "";
+	ch.Dialog.Filename	= "Enc_Officer_dialog.c";
+	ch.greeting		= "Gr_Herald";
+	ch.rank 	= 5;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "2";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "2";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);		
+	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
+	ch.quest.officertype = OFFIC_TYPE_NAVIGATOR;
+//	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
+	ch.old.name		= "";
+	ch.old.lastname		= "";
+	ch.name			= "";		// To be filled in by quest use
+	ch.lastname		= "";
+	ch.id			= "TQ_Char2";
+	ch.model		= "Sailor4";	// Can be changed by quest use
+	ch.sex			= "man";
+	ch.sound_type		= "male_citizen";
+	ch.location		= "None";
+	ch.location.group	= "";
+	ch.location.locator	= "";
+	ch.Dialog.Filename	= "Enc_Officer_dialog.c";
+	ch.greeting		= "Gr_Herald";
+	ch.rank 	= 5;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "5";
+	ch.skill.Accuracy = "2";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "2";
+	ch.skill.Defence = "2";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);		
+	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
+	ch.quest.officertype = OFFIC_TYPE_NAVIGATOR;
+//	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "TQ_Soldier1";
+	ch.model	= 2; // PB
+	ch.sex		= "man";
+	ch.sound_type	= "soldier";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade	= "blade4";
+	ch.location		= "None";
+	ch.location.group	= "";
+	ch.location.locator	= "";
+	ch.Dialog.Filename	= "Greenford soldier_dialog.c";
+	ch.greeting		= "Gr_Greenford Soldier";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "";
+	ch.old.lastname = "";
+	ch.name 	= "";		// To be filled in by quest use
+	ch.lastname 	= "";
+	ch.id		= "TQ_Soldier2";
+	ch.model	= 4; // PB
+	ch.sex		= "man";
+	ch.sound_type	= "soldier";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade	= "blade4";
+	ch.location		= "None";
+	ch.location.group	= "";
+	ch.location.locator	= "";
+	ch.Dialog.Filename	= "Greenford soldier_dialog.c";
+	ch.greeting		= "Gr_Greenford Soldier";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "";
+	ch.old.lastname = "";
+	ch.name 	= "";
+	ch.lastname 	= "";
+	ch.id		= "TQ_Soldier3";
+	ch.model	= 2; // PB
+	ch.sex		= "man";
+	ch.sound_type	= "soldier";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade	= "blade4";
+	ch.location		= "None";
+	ch.location.group	= "";
+	ch.location.locator	= "";
+	ch.Dialog.Filename	= "Greenford soldier_dialog.c";
+	ch.greeting		= "Gr_Greenford Soldier";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
+	AddGameCharacter(n, ch);
+
+	ch.old.name	= "";
+	ch.old.lastname = "";
+	ch.name 	= "";		// To be filled in by quest use
+	ch.lastname 	= "";
+	ch.id		= "TQ_Soldier4";
+	ch.model	= 4; // PB
+	ch.sex		= "man";
+	ch.sound_type	= "soldier";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade	= "blade4";
+	ch.location		= "None";
+	ch.location.group	= "";
+	ch.location.locator	= "";
+	ch.Dialog.Filename	= "Greenford soldier_dialog.c";
+	ch.greeting		= "Gr_Greenford Soldier";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
+	AddGameCharacter(n, ch);
+
+
+	ch.old.name		= "";
+	ch.old.lastname		= "";
+	ch.name			= "";		// To be filled in by quest use
+	ch.lastname		= "";
+	ch.id			= "TQ_Captain1";
+	ch.nation		= SPAIN;
+	ch.model		= "9JdEng";
+	ch.sound_type		= "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.sex			= "man";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade		= "blade4";
+	ch.nodisarm		= 1;		// PB: Disable disarming
+	ch.location		= "None";
+	ch.location.group	= "";
+	ch.location.locator	= "";
+	ch.Dialog.Filename	= "Gyles Dubois_dialog.c";
+	ch.rank			= 4;
+	ch.reputation		= "45";
+	ch.experience		= "0";
+	ch.skill.Leadership	= "5";
+	ch.skill.Fencing	= "6";
+	ch.skill.Sailing	= "5";
+	ch.skill.Accuracy	= "3";
+	ch.skill.Cannons	= "3";
+	ch.skill.Grappling	= "1";
+	ch.skill.Repair		= "1";
+	ch.skill.Defence	= "3";
+	ch.skill.Commerce	= "1";
+	ch.skill.Sneak		= "1";
+	ch.money		= "1000";
+	ch.Ship.Name		= "Unknown";
+	ch.Ship.Type		= "Brig1";
+	ch.Ship.Stopped		= true;
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.nation		= ENGLAND;
+	SetRank(ch, SPAIN, 4);
+	ch.professionalnavy	= ch.nation;
+	ch.quest.officertype	= OFFIC_TYPE_CAPNAVY;
+	AddGameCharacter(n, ch);
+    // <- General characters for trophy quests
 	//====================================================================================================================
 }

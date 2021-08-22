@@ -157,7 +157,16 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 
 			//JRH -->
 				switch (curLocId)
-				{				
+				{
+					case "New_cloister_library":
+						if(boxName == "box8" || boxName == "box9" || boxName == "box10" || boxName == "box11" || boxName == "box12"
+						|| boxName == "box14" || boxName == "box15" || boxName == "box18" || boxName == "box19" || boxName == "box20")
+						{
+							whichInterface = "BookShelf";
+						}
+						else whichInterface = "ItemsBox";
+					break;
+				
 					case "wr_library":
 						whichInterface = "BookShelf";
 					break;
@@ -725,6 +734,14 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 				//JRH -->
 				switch (curLocId)
 				{
+					case "New_cloister_library":
+						if(boxName == "box8" || boxName == "box9" || boxName == "box10" || boxName == "box11" || boxName == "box12"
+						|| boxName == "box14" || boxName == "box15" || boxName == "box18" || boxName == "box19" || boxName == "box20")
+						{
+							CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
+						} 
+					break;
+
 					case "wr_library":
 						CreateImage("OtherPic","SHELF_IMAGE","ShelfImage",5,302,133,430);//JRH bookshelf
 					break;

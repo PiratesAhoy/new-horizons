@@ -1,7 +1,7 @@
-title=Open the Niche
-text.t1=I don't need the barrel any longer to keep the hatch stay open.
-text.t2=Behind the metal hatch is a Chest placed in the wall niche.
-text.t3=There are bad creatures in the Mine. They are afraid of open fire and they don't see to good.
-text.t4=I have found an axe that obviously has been used to cut off heads. Is that what I have to do?
-text.t5=The goods they sell in the Antique Store is stolen?!! Anyway I guess it's back into the mine again.
-text.t6=I'm not sure what to do with the skull - but I'll try it on the steplock. 
+title=ќткрыть нишу
+text.t1=Ѕольше нет необходимости держать люк открытым, бочку можно забрать.
+text.t2=ѕозади металлического люка - сундук, помещенный в стенную нишу.
+text.t3=¬ шахте вод€тс€ нехорошие существа. ќни бо€тс€ открытого огн€ и не очень хорошо вид€т.
+text.t4=я нашел топор, который очевидно использовалс€, чтобы рубить головы. Ёто то, что мне надо делать?
+text.t5=“овары, которые продают в магазине краденые?!! ѕолагаю в любом случае мне идти обратно в шахту.
+text.t6=Ќе знаю, что делать с черепом - но думаю, его можно куда-нибудь засунуть. 

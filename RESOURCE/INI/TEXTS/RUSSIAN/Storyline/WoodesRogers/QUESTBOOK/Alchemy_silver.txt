@@ -1,6 +1,6 @@
-title=Alchemy - open the Silver lock
-text.t1=I have to find something that dissolves Silver.
-text.t2=I have Aqua Fortis - and it can dissolve Silver!!
+title=Алхимия - открыть Серебрянный замок
+text.t1=Я должен найти то, что разъедает серебро..
+text.t2=У меня есть Аква Фортис - она разъест серебро!!
 text.t3= 
 text.t4=
 text.t5=

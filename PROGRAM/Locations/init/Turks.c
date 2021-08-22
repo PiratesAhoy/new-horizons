@@ -213,7 +213,7 @@ void LocationInitTurks(ref n)
 	Locations[n].reload.l17.name = "reload_roof1";
 	Locations[n].reload.l17.go = "Turks_balcony_room";
 	Locations[n].reload.l17.emerge = "reload1";
-	Locations[n].reload.l17.autoreload = "0";			
+	Locations[n].reload.l17.autoreload = "0";
 	Locations[n].locators_radius.reload.reload_roof1 = 0.6;	
 	Locations[n].locators_radius.reload.reload_roof2 = 0.6;
 	Locations[n].locators_radius.reload.reload_roof3 = 0.4;
@@ -1948,6 +1948,116 @@ void LocationInitTurks(ref n)
 //	LAi_LocationSetMonstersTime(&locations[n], 0, 24);
 
 	Locations[n].island = "Turks"; // NK 04-08-29
+	n = n + 1;
+	// -------------------------------------------------
+
+	Locations[n].id = "Turks_poker_entre";
+	locations[n].id.label = "Entrance Hall";
+	Locations[n].image = "poker_entre.tga";
+	Locations[n].filespath.models = "locations\inside\Residence2";
+
+	Locations[n].vcskip = true;
+
+	//Sound
+//	locations[n].type = "house";
+	locations[n].type = "silent_residence";
+
+	//Models
+	//Always
+	Locations[n].models.always.city = "Res02_gambler";
+	Locations[n].models.always.locators = "Res02_l_gambler";
+	Locations[n].models.always.window = "Res02_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "Res02_p_stairs";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "Res02_p_stairs";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+//	Locations[n].models.back = "back\mures2_";
+	Locations[n].models.back = "..\back\inside_back_";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "Turks_port";
+	Locations[n].reload.l1.emerge = "reload9";
+	Locations[n].reload.l1.autoreload = "0";
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "Turks_port";
+	Locations[n].reload.l2.emerge = "balcony";
+	Locations[n].reload.l2.autoreload = "0";
+	Locations[n].locators_radius.reload.reload2 = 0.5;
+
+	Locations[n].reload.l3.name = "reload3";
+	Locations[n].reload.l3.go = "Turks_poker_room";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "0";
+	Locations[n].reload.l3.disable = 1;			//opened later
+
+	Locations[n].locators_radius.randitem.randitem1 = 0.001;
+	Locations[n].items.randitem1 = "gatedoor_Res2";
+
+	Locations[n].locators_radius.randitem.randitem2 = 0.001;
+	Locations[n].items.randitem2 = "FransHals";
+	
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Turks";
+	n = n + 1;
+	// -------------------------------------------------
+
+	locations[n].id = "Turks_poker_room";
+	locations[n].id.label = "Cardroom";
+	Locations[n].filespath.models = "locations\Inside\residence7";
+	Locations[n].image = "poker_room.tga";
+	Locations[n].vcskip = true;
+	//Sound
+//	locations[n].type = "residence";
+	locations[n].type = "Legrands_house";	
+
+	//Models
+	Locations[n].models.back = "..\back\inside_back_";
+	//Always
+	Locations[n].models.always.cave = "res07_gambler";
+	Locations[n].models.always.locators = "res07_locators_gambler";
+	Locations[n].models.always.window = "res07_window";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+
+	Locations[n].models.always.l1 = "long_table";
+	Locations[n].models.always.l1.locator.group = "upgrades";
+	Locations[n].models.always.l1.locator.name = "tableM";
+
+	Locations[n].models.always.l2 = "armchair01";
+	Locations[n].models.always.l2.locator.group = "upgrades";
+	Locations[n].models.always.l2.locator.name = "chairM2";
+
+	Locations[n].models.always.l3 = "armchair01";
+	Locations[n].models.always.l3.locator.group = "upgrades";
+	Locations[n].models.always.l3.locator.name = "chairM1";
+
+	Locations[n].models.always.l6 = "trophy";
+	Locations[n].models.always.l7 = "cards";	
+
+	//Day
+	Locations[n].models.day.charactersPatch = "res07_gambler_patch";
+	//Night
+	Locations[n].models.night.charactersPatch = "res07_gambler_patch";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";	
+	Locations[n].reload.l1.go = "Turks_poker_entre";
+	Locations[n].reload.l1.emerge = "reload3";
+	Locations[n].reload.l1.autoreload = "0";
+	
+	LAi_LocationFightDisable(&locations[n], true);
+	Locations[n].island = "Turks";
 	n = n + 1;
 	// -------------------------------------------------
 

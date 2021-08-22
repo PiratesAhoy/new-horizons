@@ -2216,7 +2216,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("danielle"), "none", "");
 
 			iPassenger = makeint(Pchar.Temp.Officer.idx3);
-			ChangeCharacterAddressGroup(&Characters[iPassenger], "Muelle_tavern", "candles", "sit3");
+			ChangeCharacterAddressGroup(&Characters[iPassenger], "Muelle_tavern", "sit2", "sit3");
 			LAi_SetActorType(&Characters[iPassenger]);
 			LAi_ActorSetSitMode(&Characters[iPassenger]);
 
@@ -3131,8 +3131,13 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(characterFromID("Researcher"), false);
 			characters[GetCharacterIndex("Researcher")].AbordageMode = 0;	// KK
 
-			ChangeCharacterAddressGroup(CharacterFromID("Skull"), "QC_residence", "goto", "goto1");	// PB: Replacement for Isenbrandt Jurcksen
-			Towns[GetTownIndex("Quebradas Costillas")].gov = "Skull";								// PB: Set this for real
+			ChangeCharacterAddressGroup(CharacterFromID("Skull"), "QC_residence", "goto", "goto1");			// PB: Replacement for Isenbrandt Jurcksen
+			Characters[GetCharacterIndex("Skull")].Dialog.Filename = Characters[GetCharacterIndex("Isenbrandt Jurcksen")].Dialog.Filename;
+			if (CheckAttribute(CharacterFromID("Isenbrandt Jurcksen"), "Dialog.Filename.GroupDialog"))		// GR: Make Skull use the same dialog as Isenbrandt in case player has joined Pirates
+			{
+				Characters[GetCharacterIndex("Skull")].Dialog.Filename.GroupDialog = Characters[GetCharacterIndex("Isenbrandt Jurcksen")].Dialog.Filename.GroupDialog;
+			}
+			Towns[GetTownIndex("Quebradas Costillas")].gov = "Skull";						// PB: Set this for real
 			ChangeCharacterAddress(characterFromID("Isenbrandt Jurcksen"), "none", "");				// PB: Just in case
 
 			Pchar.quest.Story_LandedOnKhaelRoa.win_condition.l1 = "location";
@@ -6926,6 +6931,7 @@ void QuestComplete(string sQuestName)
 		case "to_sea_for_capture_cerezo":
 			LAi_SetImmortal(characterFromID("ferro cerezo"), false); // GR: make him vulnerable again so you can sink him or board and kill him
 			LAi_SetStayType(characterFromID("Ferro Cerezo"));
+			Characters[GetCharacterIndex("Ferro Cerezo")].nosurrender = 1;		// Can surrender only after you board his ship, as surrendering at sea means you must be hostile to Portugal to capture him
 			Group_AddCharacter("ferro cerezo", "ferro cerezo");
 			Group_SetGroupCommander("ferro cerezo", "ferro cerezo");
 			Group_SetPursuitGroup("ferro cerezo", PLAYER_GROUP);
@@ -7077,8 +7083,10 @@ void QuestComplete(string sQuestName)
 
 		case "Story_Take_Clement_Home":
 			if(!IsOfficer(CharacterFromID("researcher"))) PlaceCharacter(characterFromID("researcher"), "goto");
+			if(!IsOfficer(CharacterFromID("danielle"))) PlaceCharacter(characterFromID("Danielle"), "goto");
+			LAi_SetOfficerType(characterFromID("Danielle"));
 			Characters[GetCharacterIndex("researcher")].Dialog.CurrentNode = "Home_again";
-			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "Clement_home";
+			Characters[GetCharacterIndex("Danielle")].Dialog.CurrentNode = "Clement_home";
 			LAi_SetActorType(characterFromID("Researcher"));
 			LAi_ActorWaitDialog(Pchar, characterFromID("Researcher"));
 			LAi_ActorDialog(characterFromID("Researcher"), Pchar, "", 8.0, 1.0);

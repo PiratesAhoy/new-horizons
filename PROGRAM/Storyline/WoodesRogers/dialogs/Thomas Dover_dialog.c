@@ -40,7 +40,7 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[12];
 				link.l1.go = "chain";
 			}
-			else¨
+			else
 			{
 				if(CheckAttribute(Pchar,"quest.med_Dover"))
 				{

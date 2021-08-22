@@ -1,6 +1,6 @@
-title=Alchemy - open the Gold lock
-text.t1=I have to find something that dissolves Gold
-text.t2=I have Aqua Reigis - and it can dissolve Gold!!
+title=Алхимия - открыть Золотой замок
+text.t1=Я должен найти то, что разъедает золото.
+text.t2=У меня есть Аква Регис - и она может растворять золото!!
 text.t3= 
 text.t4=
 text.t5=

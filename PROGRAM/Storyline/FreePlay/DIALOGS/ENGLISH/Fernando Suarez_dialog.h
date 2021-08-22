@@ -4,7 +4,7 @@ string DLG_TEXT[69] = {
 "Who are you, Senor?",
 "Don't speak so loudly. There must be many guards in the house...",
 "Did you come to free me?",
-"I suppose you're the Elvira Suarez's husband?",
+"I suppose you're the Elvira Carranza's husband?",
 "Yes, but I still don't know who you are.",
 "I work for your wife. And yes, I came to free you.",
 "Thanks God. I had almost lost the faith to be released.",

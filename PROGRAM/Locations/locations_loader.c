@@ -581,6 +581,7 @@ bool LoadLocation(ref loc)
 		VisibleLocatorsGroup("characters", 1.0, 15.0, 155, 255, 0, 0);	
 		VisibleLocatorsGroup("goto", 1.0, 15.0, 255, 255, 0, 0);
 		VisibleLocatorsGroup("sit", 1.0, 15.0, 255, 255, 0, 0);
+		VisibleLocatorsGroup("sit2", 1.0, 15.0, 255, 255, 0, 0);			//JRH added
 		VisibleLocatorsGroup("item", 1.0, 15.0, 255, 255, 0, 255);
 		VisibleLocatorsGroup("randitem", 1.0, 15.0, 255, 255, 0, 255);
 		VisibleLocatorsGroup("treasurechests", 1.0, 15.0, 255, 255, 0, 255);
@@ -606,6 +607,7 @@ bool LoadLocation(ref loc)
 		VisibleLocatorsGroup("ships", 1.0, 300.0, 255, 255, 255, 55);
 		VisibleLocatorsGroup("ships_other", 1.0, 600.0, 255, 255, 255, 55);
 		VisibleLocatorsGroup("patrol", 1.0, 15.0, 155, 0, 255, 255);
+		VisibleLocatorsGroup("soldiers", 1.0, 15.0, 155, 0, 255, 255);			// GR added
 	    }
 	    else
 	    {
@@ -618,6 +620,7 @@ bool LoadLocation(ref loc)
 		VisibleLocatorsGroup("characters", 1.0, 15.0, 55, 55, 0, 0);
 		VisibleLocatorsGroup("goto", 1.0, 15.0, 55, 55, 0, 0);
 		VisibleLocatorsGroup("sit", 1.0, 15.0, 55, 55, 0, 0);
+		VisibleLocatorsGroup("sit2", 1.0, 15.0, 55, 55, 0, 0);				//JRH added
 		VisibleLocatorsGroup("item", 1.0, 15.0, 55, 55, 0, 55);
 		VisibleLocatorsGroup("randitem", 1.0, 15.0, 55, 55, 0, 55);
 		VisibleLocatorsGroup("monsters", 1.0, 15.0, 55, 0, 55, 0);
@@ -634,6 +637,7 @@ bool LoadLocation(ref loc)
 		VisibleLocatorsGroup("ships", 1.0, 300.0, 55, 55, 55, 55);
 		VisibleLocatorsGroup("ships_other", 1.0, 300.0, 55, 55, 55, 55);
 		VisibleLocatorsGroup("patrol", 1.0, 15.0, 155, 0, 55, 55);
+		VisibleLocatorsGroup("soldiers", 1.0, 15.0, 155, 0, 55, 55);			// GR added
 	    }
 	}
 

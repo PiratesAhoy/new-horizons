@@ -1523,6 +1523,7 @@ void LocationInitHispaniola(ref n)
 	Locations[n].reload.l12.emerge = "reload1";
 	Locations[n].reload.l12.autoreload = "0";
 	Locations[n].reload.l12.label = "House.";
+
 	Locations[n].reload.l14.name = "reload0";
 	Locations[n].reload.l14.go = "PoPrince_town_02";
 	Locations[n].reload.l14.emerge = "reload6";
@@ -1547,6 +1548,17 @@ void LocationInitHispaniola(ref n)
 	Locations[n].reload.l6.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l6.goto_disable = 1; // Screwface: Disable Go-To location
 // <-- KK
+
+	if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN)
+	{
+		Locations[n].reload.l16.name = "reload3";
+		Locations[n].reload.l16.go = "French_WIC_Office";
+		Locations[n].reload.l16.emerge = "reload1";
+		Locations[n].reload.l16.autoreload = "0";
+		Locations[n].reload.l16.label = "French West India Company.";
+		Locations[n].reload.l16.close_for_night = 1;
+		if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l16.goto_disable = 1; // Screwface: Disable Go-To location
+	}
 
 // ccc may07 Location Remodeling Campaign -->
   // additional gate to fort
@@ -1661,7 +1673,7 @@ void LocationInitHispaniola(ref n)
 	locations[n].fastreload = "PoPrince";
 	//Models
 	//Always
-	Locations[n].models.always.locators = "ST_l";
+	Locations[n].models.always.locators = "ST_PoP_l";
 	Locations[n].models.always.tavern = "ST";
 	Locations[n].models.always.window = "St_w";
 	Locations[n].models.always.window.tech = "LocationWindows";
@@ -1887,6 +1899,48 @@ void LocationInitHispaniola(ref n)
 	else
 		Locations[n].reload.l3.label = "Sea.";
 	Locations[n].locators_radius.reload.reload2 = 3;
+
+	Locations[n].island = "Hispaniola"; // NK 04-08-29
+	n = n + 1;
+
+// -------------------------------------------------
+	Locations[n].filespath.models = "locations\inside\Residence5";
+
+	Locations[n].id = "French_WIC_Office";
+	locations[n].id.label = "French West India Company";
+	Locations[n].image = "Inside_FWIC_Office.tga";
+
+	//Town sack
+	Locations[n].townsack = "Port au Prince";
+
+	//Sound
+	locations[n].type = "residence";
+	locations[n].fastreload = "Port au Prince";
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Res05_l";
+	Locations[n].models.always.l1 = "ResX5"; // ccc may07 Location Remodeling Campaign
+	Locations[n].models.always.window = "ResX5_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+
+	//Day
+	Locations[n].models.day.charactersPatch = "Res05_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "Res05_p";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\cores5_";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "PoPrince_town";
+	Locations[n].reload.l1.emerge = "reload3";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#.";
+	LAi_LocationFightDisable(&Locations[n], true);
 
 	Locations[n].island = "Hispaniola"; // NK 04-08-29
 	n = n + 1;

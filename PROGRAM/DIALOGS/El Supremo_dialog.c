@@ -15,7 +15,7 @@ void ProcessDialogEvent()
 
 	int your_rank = GetRank(PChar, ENGLAND);
 	string your_rank_name;
-	if (your_rank == 6) your_rank_name = "Captain";
+	if (your_rank == 6) your_rank_name = XI_ConvertString("Captain");
 	else your_rank_name = GetRankName(PChar, ENGLAND);
 
 	int muskets, powder;

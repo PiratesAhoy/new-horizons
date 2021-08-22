@@ -600,7 +600,7 @@ void SetWindow(int iWindow)
 			pirateflagidx = PChar.Flags.Pirate;
 			SetNodeUsing("TOOLTIP_FADER", true);
 			SetNodeUsing("DIALOG_WINDOW", true);
-			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "PIRATE FLAG", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
+			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitlePirateFlag"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("WINDOWSTRINGES", true);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", true);
 			SetNodeUsing("DIALOG_SELECT_BUTTON", true);
@@ -624,7 +624,7 @@ void SetWindow(int iWindow)
 			personalflagidx = PChar.Flags.Personal;
 			SetNodeUsing("TOOLTIP_FADER", true);
 			SetNodeUsing("DIALOG_WINDOW", true);
-			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "PERSONAL FLAG", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
+			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitlePersonalFlag"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("WINDOWSTRINGES", true);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", true);
 			SetNodeUsing("DIALOG_SELECT_BUTTON", true);

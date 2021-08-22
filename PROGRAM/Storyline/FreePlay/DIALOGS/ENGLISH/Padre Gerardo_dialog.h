@@ -1,4 +1,4 @@
-string DLG_TEXT[15] = {
+string DLG_TEXT[16] = {
 "Who are you? What are you doing here? And answer me or I will smash your heads!",
 "Monsignore, forgive me, for I am going to sin.",
 "And what will your sin be then?",
@@ -7,11 +7,12 @@ string DLG_TEXT[15] = {
 "First of all, I am not a pirate. I just killed a man in a duel and then got sprung out of jail and after that I killed some Spanish soldiers. Second, why would you help us?",
 "Okay, but you are a fugitive. I want to help you, because I, God forgive me, hate the governor and everyone who is under his direct command. Corrupt man. Now you wait here, I will get you those robes.",
 "We'll wait, oh, and those doors are locked, aren't they?",
-"Here they are. Now, in the harbour lies a galleon loaded with goods. It should not be heavily guarded anymore because most of the soldiers are looking for you. The ship is commisioned to ship some priests to a mission on #sisland_Hispaniola#. So with these disguise, you are certain to get access to the vessel.",
+"Here they are. Now, in the harbour lies a galleon loaded with goods. It should not be heavily guarded anymore because most of the soldiers are looking for you. The ship is commissioned to ship some priests to a mission on #sisland_Hispaniola#. So with these disguise, you are certain to get access to the vessel.",
 "Thank you, #sfather#. We have to go now, thank you for everything.",
 "Wait! Take me with you! I want to get away from this damned city. Plus, if I go with you, the guards will certainly believe that you are the priests. So what do you say?",
 "Alright, you can join us. Guide us #sfather#.",
 "No, sorry we can't use an obese priest, but thanks for the disguises.",
 "priest",
 "Hurry",
+"Here they are. Now, in the harbour lies a merchantman loaded with goods. It should not be heavily guarded anymore because most of the soldiers are looking for you. The ship is commissioned to ship some priests to a mission on #sisland_Hispaniola#. So with these disguise, you are certain to get access to the vessel.",
 };

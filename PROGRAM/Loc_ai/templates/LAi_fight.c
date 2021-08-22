@@ -90,6 +90,11 @@ bool LAi_tmpl_SetFight(aref chr, aref target)
 		if(charge == 1.0) PostEvent("LongRifle_H_on_hip", 0, "i", chr);
 	}
 
+	if(IsEquipCharacterByItem(chr, "portugize"))
+	{
+		if(charge >= 1.0) PostEvent("portugize_on_hip", 0, "i", chr);			//changed from charge == 1.0
+	}
+
 	if(IsEquipCharacterByItem(chr, "battleax"))
 	{
 		PostEvent("bax_on_hip", 10, "i", chr);
@@ -531,6 +536,12 @@ void LAi_tmpl_fight_CharacterUpdate(aref chr, float dltTime)
 		if(IsEquipCharacterByItem(chr, "LongRifle_H"))
 		{
 			PostEvent("LongRifle_H_on_back", 1000, "i", chr);
+			PostEvent("mguns_reset_check", 1000, "i", chr);
+		}
+
+		if(IsEquipCharacterByItem(chr, "portugize"))
+		{
+			PostEvent("portugize_on_back", 1000, "i", chr);
 			PostEvent("mguns_reset_check", 1000, "i", chr);
 		}
 

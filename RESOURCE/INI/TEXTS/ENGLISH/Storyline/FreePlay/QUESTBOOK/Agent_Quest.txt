@@ -1,0 +1,15 @@
+title=Investigate the '#sship#'
+text.t1=Governor #sgovernor# of #stown# on #sisland# has given me a mission. I am to investigate the '#sship#', a #snation# ship known to be in the port of #sport1# on #sisland1#. I must find out where the ship is going and what the enemy's plans are.
+text.t2=I have ordered my ship to sail back to #slocationfromsea#. Meanwhile I'll find a way to get onto the '#sship#'.
+text.t3=I have successfully infiltrated the '#sship#' and am now safely hidden in the cargo hold. Now I just need to wait until the ship reaches her destination.
+text.t4=I wasn't as safely hidden as I thought. A guard came to search the hold and found me. I had to kill him. He's now stuffed into one of the crates.
+text.t5=A guard came to search the hold but I was well enough hidden and he didn't spot me.
+text.t6=The ship seems to have moored. Time to leave the hold and try to leave the ship...
+text.t7=The '#sship#' has arrived at #stown#. Now I need to find out what she is doing here. There may be some useful information in the town hall. To break in, I shall need to kill any guards near the entrance, preferably without attracting attention. Then I shall need to pick the door lock because the door will be locked at night, and I'm not stupid enough to try this during the day!
+text.t8=The '#sship#' has arrived at #stown#. Now I need to find out what she is doing here. There may be some useful information in the boss pirate's house. To break in, I shall need to kill any guards near the entrance, preferably without attracting attention. Then I shall need to pick the door lock because the door will be locked at night, and I'm not stupid enough to try this during the day!
+text.t9=Found it! A complete plan of what the assembled #snation# fleet will be doing. I've made a copy and left the original where I found it, so that they don't know that their secret plan is no longer secret. Now I must return to #stown#. Perhaps the local smugglers will help me - for a hefty price, no doubt.
+text.t10=A smuggler will take me back to #stown#. I should be at #sshore# tomorrow night.
+text.t11=It's time to go to #sshore#. I'd better not keep the smuggler waiting. If he leaves without me, I'll be stuck here for the rest of my life, which might not be very long!
+text.t12=As the smuggler's navigator is sick, I'm to guide the ship to #sport#. There I should report to governor #sgovernor# with my copy of the enemy's plans.
+text.t13=Governor #sgovernor# was pleased to receive the copy of the #snation# plans. Our own forces will now be able to spoil those plans quite effectively.
+text.t14=I was too late. The smuggler has gone. Now I'm stuck on #sisland#. <Hint: if the local shipyard has anything for sale, you could buy a ship - if the local shipyard will do business with you. Otherwise this game is over!>

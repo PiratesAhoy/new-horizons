@@ -1,16 +1,17 @@
-title=The Bartolomeu's trap
-text.t1=I've had to accept a new mission despite I wasn't motivated after what happened in Oranjestad. My next target is Bartolomeu o Portugues, the famous Portuguese pirate. Captain Butcher is already looking for him. I must see him in #sIsla Muelle#.
-text.t2=A lead, finally. Captain Butcher thinks we only need to see a friend of Charles Baxter in the pirate settlement of #sisland_Quebradas Costillas# to have a lucky break of finding Bartolomeu.
-text.t3=Captain Butcher was right. We found a former Baxter's crewmember in the pirate settlement. He said Bartolomeu worked for the governor of #sisland_Conceicao#. Certainly, we'll find more information in #sConceicao#. I'll start my search there talking to the tavern keeper.
-text.t4=I've captured the Bartolomeu's officer, Emilio Soares. However, I don't know where Bartolomeu is. Let's return to Havana and take advice from Vice-Admiral Benavides.
-text.t5=The Vice-Admiral gave me an essential information. Roxanne Lalliere, his best friend, is in mission at Alice town. However, before going there, I must see the governor of Puerto la Cruz. His help could be useful.
-text.t6=The Governor suggested I talk to William Cotter, an English officer working for him. He could help us in the Lalliere's kidnapping. I should find him patrolling the streets of Alice town.
-text.t7=A night, while I was in the Eleuthera fort, I saw Bartolomeu trying to release Roxanne Lalliere from the prison. After accepting his offer of partnership, we discreetly went out the fort. Unfortunately, we met Padilla and his men short after in the jungle. They have been killed in a fight. Now, we can go to Alice town.
-text.t8=Next stop, Havana. Emilio is jailed there. We'll land first at Bahia de San Antonio.
-text.t9=After releasing Emilio Soares, I killed Vice-Admiral Benavides when he entered his residence. Let's go to #sRedmond# to decide our future.
-text.t10=Roxanne returned to #sFalaise de Fleur# while Bartolomeu went for new adventures. In my case, I decided to start a new life in #sisland_Douwesen#.
-text.t11=A night, while I was in the Eleuthera fort, I saw Bartolomeu trying to release Roxanne Lalliere from the prison. He didn't convinced me of leaving the Spanish service and I had to kill him. Short after, Captain Padilla arrived and he decided we should return to Havana as quickly as possible.
-text.t12=Finally, I'm a free man! The nightmare is over and I can manage my life as I like.
+title=Ловушка для Бартоломью
+text.t1=Я должен был принять новое задание несмотря на то, что случилось в Ораньестад. Моя следующая цель Бартоломью Португалец, известный португальский пират. Капитан Бучер уже ищет его. Я должен найти его в #sIsla Muelle#.
+text.t2=Капитан Бучер предлагает встретится с Бакстером в пиратском поселке #sisland_Quebradas Costillas#.
+text.t3=Капитан Бучер был прав. В поселке пиратов мы обнаружили бывшего члена команды Бакстера. Он сказал, что Бартоломью работал на губернатора #sisland_Conceicao#. Конечно, мы получим больше информации в #sConceicao#. Я начну свой поиск с посещения местной таверны, может трактирщик чего знает.
+text.t4=Я захватил офицера Бартоломью, Эмильо Соареса. Однако, я не знаю, где Бартоломью. Нужно вернуться в Гавану за советом Вице-адмирала Бенавайдса.
+text.t5=Вице-адмирал дал мне существенную информацию. Роксане Лоллир, его лучший друг, находится на задании в городе Элис. Однако, прежде чем отправиться туда, я должен поговорить с губернатором Пуэрто-ла-Круса. Его помощь могла бы быть полезна.
+text.t6=Губернатор предложил мне поговорить с Уильямом Коттером, английским офицером работающим на него. Он мог бы помочь нам в похищении Лоллир. Он патрулирует улици города, надо его найти.
+text.t7=Ночью, когда я был в форте Эльютера, я увидел, как Бартоломью пытается освободить Роксане Лоллир из тюрьмы. Приняв его предложение о партнерстве, мы незаметно вышли из форта. К сожалению вскоре после того, мы встретились с Падилья и его командой в джунглях. Они были убиты в бою. Теперь мы можем пойти в город Элис.
+text.t8=Следующая остановка, Гавана. Эмильо там, заключен в тюрьму. Сначала мы высадимся в Баия-де-Сан-Антонио.
+text.t9=После выпуска Эмильо Соареса, я убил Вицеа-дмирала Бенавайдса, когда он входил в свою резиденцию. Курс на #sRedmond# там надо решить что делать дальше.
+text.t10=Роксане вернулась в #sFalaise de Fleur# в то время как Бартоломью отправился за новыми приключениями. Я же решил начать новую жизнь в #sisland_Douwesen#.
+text.t11=Ночью, когда я был в форте Эльютера, я увидел, как Бартоломью пытается освободить Роксане Лоллир из тюрьмы. Он не убедил меня оставить службу испанцам, и мне пришлось его убить. Вскоре после этого, пришел капитан Падилья. По его мнению, мы должны вернуться в Гавану как можно скорее.
+text.t12=Наконец, я - свободный человек! Кошмар закончился, и я могу жить как хочу.
+
 
  
 

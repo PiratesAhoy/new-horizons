@@ -48,3 +48,6 @@ text.t46=La joven Abequa vendrá conmigo a Bridgetown a cambio de 'Ayahuasca'. Su
 text.t47=Eso es todo. volvamos a Bridgetown.
 text.t48=Por fin tengo las plantas de 'Ayahuasca'. Debo hacerle una visita a Steven e informarle de los resultados del viaje.
 text.t49=Las plantas han sido entregadas y la misión concluida.
+text.t50=La muchedumbr enfurecida ha asesinado a Steven... Supongo que la botica no volverá a abrir. La moza de la taberna me ha dicho que compartía con Steven la pasión por la naturaleza y me ha pedido que le traiga a ella todos los especímenes interesantes de animales que encuentre..
+text.t51=He denunciado el asesinato de un miembro de mi tripulación ante el comandante de la prisión, pero me ha dicho que no puede hacer nada sin pruebas.
+text.t52=

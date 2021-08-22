@@ -1,16 +1,19 @@
-title=The Hunter
-text.t1=What does Governor Barreto want? It's a quick voyage going to #sisland_Conceicao# from #sisland_Oxbay#. I won't have to wait too much to know it.
-text.t2=Now, I'm in the Luso-Spanish war. I need to find and kill the Spanish Captain Arturo Campos. According to Governor Barreto he's chasing around Tortuga and San Salvador with a galleon called San Pablo. 
-text.t3=I didn't see Campos. I think he must be on the island because the ship was near White Reefs. Let's go there.
-text.t4=Mission accomplished! Governor Barreto is revenged. Let's give him the good news.
-text.t5=Confounded Spanish mercenaries! They kidnapped Emilio Soares. Leonardo Corrales, a spy in #sIsla Muelle#, is my unique way of finding them. He lives in a house looking onto a back yard, near the tavern.
-text.t6=Too bad... The situation worsened. All my friends are in danger because of those mercenaries. The first one is Roxanne Lalliere herself : I must warm her. The last time, she said she wanted to work for the Governor of #sFalaise de Fleur#. Let's see him!
-text.t7=Bad luck! She isn't in #sisland_Falaise de Fleur# but in mission in the English town of Alice on Eleuthera. I hope to see her there.
-text.t8=The worse happened. Roxanne has been kidnapped, I'm quite sure, by the mercenaries. She must be in Puerto la Cruz. In order to enter the town, I disguised in Spanish officer and waited for the dark. I'm near the town, the conditions are perfect to try a rescue operation.
-text.t9=I've had to climb the cliffs in order to avoid the guards along the road. However, I still have a hard task to accomplish. I need to find and kill the Captain of this fort. He must have the jail's keys in his uniform.
-text.t10=I persuaded Johan Elting to join my crew. We discreetly went out the fort. Unfortunately, we met Padilla and his men short after in the jungle. They have been killed in a fight. Now, we can go to Alice town.
-text.t11=Next stop, Havana. Emilio is jailed there. We'll land first at Bahia de San Antonio.
-text.t12=After releasing Emilio, Elting killed Vice-Admiral Benavides. Let's go to #sRedmond# to decide our future.
-text.t13=Roxanne returned to #sFalaise de Fleur# and Elting decided to start a new life in #sisland_Douwesen#. I'm motivated for new adventures. Why not going to Tortuga and look for some expeditions?
-text.t14=Roxanne returned to #sFalaise de Fleur# but I'm motivated for new adventures. Why not look for any expeditions?
-text.t15=After killing Johan Elting, we discreetly went out the fort. Unfortunately, we met Padilla and his men short after in the jungle. They have been killed in a fight. Now, we can go to Alice town. 
+title=Охотник
+text.t1=Что хочет Губернатор Баррето? Это легкое путешествие с острова #sisland_Conceicao# на остров #sisland_Oxbay#. Большего мне знать не положено.
+text.t2=Сейчас я ввязался в португало-испанскую войну. Мне нужно найти и убить испанского капитана Артуро Кампоса. По словам губернатора Баррето он находиться около Тортуги и Сан-Сальвадора на галеоне под названием Сан-Пабло.
+text.t3=Я не видел Кампус. Думаю, что он на острове, так как его корабль был рядом с белыми рифами. Надо пойти туда.
+text.t4=Задание выполнено! Губернатор Баррето отомщен. Передпм ему хорошие новости.
+text.t5=Черт бы побрал испанских наемников! Они похитили Эмилио Соареса. Леонардо Корралес, шпион в городе #sIsla Muelle#, мой единственный шанс найти их. Он живет в доме, у пристани, около таверны.
+text.t6=Слишком плохо... Ситуация ухудшалась. Все мои друзья в опасности из-за этих наемников. Первая - Роксанн Лаллир: я должен найти ее. Она говорила, что хотела работать на Губернатора города #sFalaise de Fleur#. Надо её навестить!
+text.t7=Неудачно! Её нет в городе #sisland_Falaise de Fleur#, она на задании в английском Элистаун на Эльютера. Я надеюсь найти ее там.
+text.t8=Случилось худшее. Роксанн была похищена и я весьма уверен, наемниками. Она должна быть в Пуэрто-ла-Крусе. Чтобы войти в город, я переоделся в испанского офицера и жду темноты. Я около города, условия прекрасны, чтобы провернуть операцию по спасению.
+text.t9=Мне пришлось подняться на утес, чтобы избежать встречи с солдатами на дороге. Однако, у меня все еще есть задача найти и убить Капитана этого форта. У него должны быть ключи от тюрьмы.
+text.t10=Я убедил Йогана Элтинга присоединиться к моей команде. Мы осторожно вошли в форт. К сожалению, мы встретили Падилью и его людей. Они все были убиты. Теперь, мы можем смело идти в Элистаун.
+text.t11=Следующая остановка, Гавана. Эмилио заключен в тюрьму там. Мы сначала высадимся в Баия-де-Сан-Антонио.
+text.t12=После освобождения Эмилио Эльтинг убил Вицеадмирала Бенавидеса. Направляемся в город #sRedmond#, чтобы решить наше будущее.
+text.t13=Роксанн возвратилась в город #sFalaise de Fleur#, а Элтинг решил начать новую жизнь в городе #sisland_Douwesen#. Меня же интересуют новые приключения. Почему бы не отправиться на Тортугу и не присоединиться к какой нибудь экспедиции?
+text.t14=Роксанн возвратилась в город #sFalaise de Fleur#, но я жажду новых приключений. Почему бы не найти какую-нибудь экспедицию?
+text.t15=После убийства Йогана Элтинга мы осторожно вышли из форта. К сожалению, наткнулись на Падилью и его людей. Мы всех перерезали и теперь смело можем пойти в Элистаун. 
+
+ 
+

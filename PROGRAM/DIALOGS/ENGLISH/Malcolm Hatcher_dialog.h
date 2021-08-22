@@ -239,4 +239,6 @@ string DLG_TEXT[340] = {
 "#sname#, I'd like thank you for everything and wish luck on dry land. Now I'd like to visit the town.",
 "For a better start you can take things from that chest, you'll find weapons and a spyglass there. You can also take your pick of the rest, even the money you find there.",
 "You can go to the town if you wish; I have some things to do here. We'll meet in the local tavern.",
+"Ahoy there, Captain. A letter for you.",			//240
+"Alright #sname#. (YES! The first letter I ever have got.)",	//241
 };

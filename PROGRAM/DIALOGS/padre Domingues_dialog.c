@@ -154,8 +154,8 @@ void ProcessDialogEvent()
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(pchar, 2500);
 			AddQuestRecord("ANIMISTS", 18);
-//			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-//			else Preprocessor_Add("child", XI_ConvertString("child"));
+			if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+			else Preprocessor_Add("addr", XI_ConvertString("my child"));
 			dialog.text = DLG_TEXT[23];
 			link.l1 = DLG_TEXT[24];
 			link.l1.go = "to_bernard";
@@ -199,8 +199,8 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("oops_ANIMISTS_want_letter_again");
 			GiveItem2Character(pchar, "letter_to_bernard");
 			AddQuestRecord("ANIMISTS", 20);
-//			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-//			else Preprocessor_Add("child", XI_ConvertString("child"));
+			if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+			else Preprocessor_Add("addr", XI_ConvertString("my child"));
 			dialog.text = DLG_TEXT[29];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "exit";
@@ -241,8 +241,8 @@ void ProcessDialogEvent()
 			}
 			else { AddPartyExp(pchar, 1500); }
 			AddQuestRecord("ANIMISTS", 12);
-//			if (PChar.sex == "man") Preprocessor_Add("child", XI_ConvertString("son"));
-//			else Preprocessor_Add("child", XI_ConvertString("child"));
+			if (PChar.sex == "man") Preprocessor_Add("addr", XI_ConvertString("my son"));
+			else Preprocessor_Add("addr", XI_ConvertString("my child"));
 			dialog.text = DLG_TEXT[38];
 			link.l1 = DLG_TEXT[39];
 			link.l1.go = "prepare_for_bark";

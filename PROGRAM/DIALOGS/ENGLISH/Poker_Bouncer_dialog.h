@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = {
+"This club is private property. Home to the Grand Turk Poker Tournament.",
+"I'm sorry I just wanted to look around.",
+"There's no admittance to the cardroom. Only for members and competitors on tournament days.",
+"That's a pity perhaps I'll take up gambling in the future then.",
+"Trying to spy out the location Eh? Well there's no admittance to the cardroom. Only for members and competitors on tournament days.",
+"I'm just leaving.",
+"Perhaps you'll return for the next tournament but for now since you're not a member, Push Off.",
+"OK I'm on my way.",
+"Come back tomorrow! Do I have to make you leave the premises?",
+"No I can find my own way out.",
+"Have you got an invitation and tournament fee? It's 20000 you know.",
+"Yes, I have both here.",
+"I have the invitation but am short on the fee.",
+"This is not a charitable enterprise you know. Come back only when you have both in the meantime scram!",
+"Just go on through to the cardroom for the competition.",
+"You're too late and forfeited the contest, your stakemoney and any future participation. You are also barred from these premises. Now get out.",
+"Sorry I got waylaid. Ah well.",
+
+};

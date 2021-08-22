@@ -18738,7 +18738,7 @@ void OpenBoxProcedure_WR()
 
 				if(CheckAttribute(chr,"quest.damper_check") && chr.quest.damper_check == "0")
 				{
-					chr.quest.dmaper_check = "1";
+					chr.quest.damper_check = "1";
 					//chr.quest.4checks = sti(chr.quest.3checks) + 1;//not used yet
 				}
 

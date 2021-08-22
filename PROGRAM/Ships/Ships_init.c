@@ -17194,11 +17194,11 @@ void InitShips()
 	refShip.MaxCaliber		= 32;
 	refShip.Weight			= Tonnes2CWT(2200);
 	refShip.Capacity		= 4000;
-	refShip.CannonsQuantity		= 58;
+	refShip.CannonsQuantity		= 56;
 	refShip.Cannons.Borts.cannonf.qty = 6;
-	refShip.Cannons.Borts.cannonb.qty = 0;
-	refShip.Cannons.Borts.cannonl.qty = 26;
-	refShip.Cannons.Borts.cannonr.qty = 26;
+	refShip.Cannons.Borts.cannonb.qty = 4;
+	refShip.Cannons.Borts.cannonl.qty = 23;
+	refShip.Cannons.Borts.cannonr.qty = 23;
 	refShip.MaxCrew			= 420;
 	refShip.MinCrew			= 40;
 	refShip.Price			= 300000;
@@ -17216,12 +17216,12 @@ void InitShips()
 	refShip.QDeck				= "ShipDeck2";
 	refShip.CannonsDeck			= 3;
 	refShip.CargoHold			= 2;
-	refShip.Cabin				= "Cabin2";
+	refShip.Cabin				= "CabinFDM";
 // <-- KK
 
 	refShip.CanEncounter		= false;
 	refShip.CanBuy				= false;
-	refShip.Model = "Dutchman"; // KK
+//	refShip.Model = "Dutchman"; // KK
 	refShip.Type.Trade 			= false;
 	refShip.Type.War 			= true;
 

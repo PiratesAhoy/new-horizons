@@ -11,6 +11,6 @@ string DLG_TEXT[14] = {
 "Ha Ha! You should, I've bounced you on my knee a few times. Not recognise your uncle Emmanuel, your father's brother. Whatever next!",
 "Uncle Manny! But I was only a child then, I do remember you of course. But, what are you doing here? And what does my father's letter mean? 'Sister'. I don't have a sister.",
 "I will need to think this all through, but I can do that after I have met Bonnie. Thank you Uncle Manny... and goodbye.",
-"Emmanuel Devlin, Harbour Master at your service.",
-"Pleased to meet you, Sir.",
+"What are you waiting for, Beatrice? Your sister and your family's heritage are waiting!",
+"I'm on my way, Uncle!",
 };

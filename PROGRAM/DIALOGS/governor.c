@@ -245,6 +245,17 @@ void ProcessDialogEvent()
 						otherquest = true;
 					}
 				}
+				if (!CheckAttribute(PChar, "quest.agentquest") && sti(PChar.PlayerType) == PLAYER_TYPE_AGENT && FindCurrentStoryline() == FindStoryline("FreePlay") && PChar.rank >= 10 && GetCharacterBaseSkill(PChar, SKILL_SNEAK) >= 6)
+				{
+					if (GetServedNation() == sti(NPChar.nation) || HaveLetterOfMarque(sti(NPChar.nation)))
+					{
+						if(otherquest) stemp = stemp + DLG_TEXT[155];
+						stemp = stemp + DLG_TEXT[156];
+						link.l3 = DLG_TEXT[157];
+						link.l3.go = "agent_quest";
+						otherquest = true;
+					}
+				}
 				if (!IsInServiceOf(iNation) && iNation != PERSONAL_NATION) stemp = stemp + " " + DLG_TEXT[102];
 				if (otherquest) dialog.text = stemp;
 			}
@@ -759,6 +770,181 @@ void ProcessDialogEvent()
 			if (GetLetterOfMarqueQuantity() > 1) dialog.text = DLG_TEXT[118] + DLG_TEXT[119];
 			link.l1 = DLG_TEXT[120];
 			link.l1.go = "exit";
+		break;
+
+		case "agent_quest":
+			int My_Nation = sti(NPChar.nation);
+			int Enemy_Nation = FindEnemyNation2Nation(My_Nation);
+			if (Enemy_Nation == PIRATE) Enemy_Nation = FindEnemyNation2Nation(My_Nation); // Make Pirate targets less likely
+			PChar.quest.agentquest.enemy_nation = Enemy_Nation;
+			if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS)
+			{
+				if (My_Nation == SPAIN || My_Nation == PORTUGAL)
+				{
+					PChar.quest.agentquest.port1 = "Tortuga_port";
+					PChar.quest.agentquest.port2 = "QC_port";
+				}
+				else
+				{
+					PChar.quest.agentquest.port1 = "Cuba_port";
+					PChar.quest.agentquest.port2 = "Muelle_port";
+				}
+			}
+			else
+			{
+				switch(Enemy_Nation)
+				{
+					case ENGLAND:
+						PChar.quest.agentquest.port1 = "Antigua_port";
+						PChar.quest.agentquest.port2 = "REDMOND_PORT";
+					break;
+
+					case FRANCE:
+						PChar.quest.agentquest.port1 = "Marigot_port";
+						PChar.quest.agentquest.port2 = "PoPrince_Port";
+					break;
+
+					case SPAIN:
+						PChar.quest.agentquest.port1 = "Cuba_port";
+						PChar.quest.agentquest.port2 = "Muelle_port";
+					break;
+
+					case PIRATE:
+						PChar.quest.agentquest.port1 = "Tortuga_port";
+						PChar.quest.agentquest.port2 = "QC_port";
+					break;
+
+					case HOLLAND:
+						PChar.quest.agentquest.port1 = "Willemstad_port";
+						PChar.quest.agentquest.port2 = "Douwesen_port";
+					break;
+
+					case PORTUGAL:
+						int Friend_nation = FindFriendlyNation2Nation(PORTUGAL);
+						if (Friend_nation == PORTUGAL) Friend_nation = FindFriendlyNation2Nation(PORTUGAL);
+						switch(Friend_nation)
+						{
+							case ENGLAND:	PChar.quest.agentquest.port1 = "REDMOND_PORT"; break;
+							case FRANCE:	PChar.quest.agentquest.port1 = "Marigot_port"; break;
+							case SPAIN:	PChar.quest.agentquest.port1 = "Muelle_port"; break;
+							case HOLLAND:	PChar.quest.agentquest.port1 = "Willemstad_port"; break;
+							case AMERICA:	PChar.quest.agentquest.port1 = "Eleuthera_Port"; break;
+							PChar.quest.agentquest.port1 = "QC_port";
+						}
+						PChar.quest.agentquest.port2 = "Conceicao_port";
+						if (GetCurrentPeriod() < PERIOD_REVOLUTIONS && Friend_nation == SWEDEN) PChar.quest.agentquest.port1 = "QC_port";
+					break;
+
+					case GUEST1_NATION:
+						if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+						{
+							PChar.quest.agentquest.port1 = "Eleuthera_Port";
+							PChar.quest.agentquest.port2 = "Alice_Port";
+						}
+						else
+						{
+							PChar.quest.agentquest.port1 = "Tortuga_port";
+							PChar.quest.agentquest.port2 = "QC_port";
+						}
+					break;
+					PChar.quest.agentquest.port1 = "Tortuga_port";
+					PChar.quest.agentquest.port2 = "QC_port";
+				}
+			}
+			string town1, town1_name, island1, island1_name;
+			town1 = GetTownIDFromLocID(PChar.quest.agentquest.port1);
+			town1_name = FindTownName(town1);
+			island1 = GetIslandIDFromTown(town1);
+			island1_name = FindIslandName(island1);
+			PChar.quest.agentquest = "accepted";
+			PChar.quest.agentquest.governor = NPChar.id;
+			PChar.quest.agentquest.enemy_ship.type = GetShipID(Force_GetShipType(4, 6, "War", Enemy_Nation));
+			PChar.quest.agentquest.enemy_ship.name = GetRandomShipNameForNation(Enemy_Nation);
+			PChar.quest.agentquest.town1 = town1;
+			Characters[GetCharacterIndex("TQ_Captain1")].nation = Enemy_Nation;
+			GiveShip2Character(CharacterFromID("TQ_Captain1"), PChar.quest.agentquest.enemy_ship.type, PChar.quest.agentquest.enemy_ship.name, -1, Enemy_Nation, true, true);
+
+			PChar.quest.agentquest.original_flag = GetCurrentFlag();
+			PChar.quest.agentquest.original_location_from_sea = PChar.location.from_sea;
+//			PChar.quest.agentquest.original_town = GetTownIDFromLocID(PChar.location.from_sea);
+			PChar.quest.agentquest.original_town = GetCurrentTownID();
+			PChar.quest.agentquest.original_island = GetIslandIDFromTown(PChar.quest.agentquest.original_town);
+
+			dialog.text = DLG_TEXT[158] + PChar.quest.agentquest.enemy_ship.name + DLG_TEXT[159] + GetShipDescribe("TQ_Captain1", true, false, false, false) + DLG_TEXT[160] + town1_name + DLG_TEXT[161] + island1_name + DLG_TEXT[162];
+			link.l1 = DLG_TEXT[163] + PChar.quest.agentquest.enemy_ship.name + DLG_TEXT[164];
+			link.l1.go = "agent_quest2";
+		break;
+
+		case "agent_quest2":
+			dialog.text = DLG_TEXT[165];
+			link.l1 = DLG_TEXT[166] + PChar.quest.agentquest.town1 + DLG_TEXT[167];
+			link.l1.go = "exit_AgentQuest_setup";
+			link.l2 = DLG_TEXT[168];
+			link.l2.go = "exit_AgentQuest_refused";
+		break;
+
+		case "agent_quest_return":
+			dialog.text = DLG_TEXT[169];
+			link.l1 = DLG_TEXT[170] + PChar.quest.agentquest.enemy_ship.name + DLG_TEXT[171] + FindTownName(GetTownIDFromLocID(PChar.quest.agentquest.port1)) + DLG_TEXT[172] + FindTownName(GetTownIDFromLocID(PChar.quest.agentquest.port2)) + DLG_TEXT[173];
+			link.l1.go = "agent_quest_return2";
+			TakeItemFromCharacter(PChar, "plans_copy");
+		break;
+
+		case "agent_quest_return2":
+			dialog.text = DLG_TEXT[174];
+			if (GetNationRelation(sti(NPChar.nation), sti(PChar.quest.agentquest.enemy_nation)) == RELATION_ENEMY)
+			{
+				dialog.text = dialog.text + DLG_TEXT[175] + XI_ConvertString(GetNationDescByType(sti(PChar.quest.agentquest.enemy_nation))) + DLG_TEXT[176];
+			}
+			else
+			{
+				dialog.text = dialog.text + DLG_TEXT[177] + GetNationNameByType(sti(NPChar.nation)) + DLG_TEXT[178] + GetNationNameByType(sti(PChar.quest.agentquest.enemy_nation)) + DLG_TEXT[179] + GetNationNameByType(sti(PChar.quest.agentquest.enemy_nation)) + DLG_TEXT[180];
+			}
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, 20000);
+			AddPartyExpChar(PChar, "Sneak", 10000);
+			if (!CheckAttribute(PChar, "quest.agentquest.smuggler_fare") || sti(PChar.quest.agentquest.smuggler_fare) == 0)
+			{
+				link.l1 = DLG_TEXT[188];
+				AddDialogExitQuest("Agentquest_return_ships_and_officers");
+				link.l1.go = "exit";
+			}
+			else
+			{
+				link.l1 = DLG_TEXT[181];
+				link.l1.go = "agent_quest_expenses";
+			}
+		break;
+
+		case "agent_quest_expenses":
+			dialog.text = DLG_TEXT[182];
+			link.l1 = DLG_TEXT[183] + PChar.quest.agentquest.smuggler_fare + DLG_TEXT[184];
+			link.l1.go = "agent_quest_expenses2";
+		break;
+
+		case "agent_quest_expenses2":
+			int agent_extra_reward = 1000*(GetTownEconomy(GetCurrentTown()) + 3)	// GetTownEconomy ranges from -2 (starving) to +2 (wealthy)
+			if (sti(PChar.quest.agentquest.smuggler_fare) >= 20000) agent_extra_reward += sti(PChar.quest.agentquest.smuggler_fare) - 20000;
+			else agent_extra_reward += sti(PChar.quest.agentquest.smuggler_fare) / 3;
+			dialog.text = DLG_TEXT[185] + 20000 + DLG_TEXT[186] + agent_extra_reward + DLG_TEXT[187];
+			PlayStereoSound("INTERFACE\took_item.wav");
+			AddMoneyToCharacter(PChar, agent_extra_reward);
+			link.l1 = DLG_TEXT[188];
+			AddDialogExitQuest("Agentquest_return_ships_and_officers");
+			AddDialogExitQuest("Agentquest_prepare_pay_smuggler");
+			link.l1.go = "exit";
+		break;
+
+		case "exit_AgentQuest_setup":
+			AddDialogExitQuest("AgentQuest_setup");
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			DialogExit();
+		break;
+
+		case "exit_AgentQuest_refused":
+			DeleteAttribute(PChar, "quest.agentquest");
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			DialogExit();
 		break;
 // <-- GR
 	}

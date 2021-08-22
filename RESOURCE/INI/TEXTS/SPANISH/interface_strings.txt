@@ -7,6 +7,7 @@ save game limit {Has alcanzado el número máximo de partidas guardadas. Debes bor
 You can't save while sailing or boarding!{¡No puedes guardar mientras navegas o durante un abordaje!}
 on ship in{a bordo en}
 #sisland_name# Waters{Aguas de #sisland_name# }
+Number of saved games{Número de partidas guardadas}
 
 Salary info {Tu tripulación demanda su salario mensual ¿Vas a pagarles?}
 
@@ -31,9 +32,10 @@ Not enough crew assigned{¡No hay suficiente tripulación asignada!}
 Min crew reached{¡Tripulación mínima alcanzada!}
 This officer has too low Leadership and Sailing skills to command this ship. Assign anyway?{Este oficial tiene destrezas de Liderazgo y Navegación demasiado bajas para capitanear este barco. ¿Asignar de todos modos?}
 You can't command a fleet until reaching level{No puedes comandar una flota hasta alcanzar el nivel}
-Leadership. Assign anyway?{Liderazgo. ¿Asignar de todos modos?}
+Leadership. Assign anyway?{ de Liderazgo. ¿Asignar de todos modos?}
 's current colours{bandera actual}
-is known as{es conocido como}
+Hoist flag{Izar bandera}
+is known as{tiene fama de}
 Raise{Izar}
 have been installed{se han instalado}
 on to the ship{en el barco}
@@ -79,14 +81,14 @@ Exellent {Exelente}
 Average {Mediocre}
 
 Qual{Calidad}
-a{un/a}
-a broken{un/a inservible}
-a badly worn{un/a lamentable}
-a worn{un/a pobre}
-an average{un/a mediocre}
-a good{un/a apreciable}
-a fine{un/a impresionante}
-an excellent{un/a excelente}
+a{tu}
+a broken{tu inservible}
+a badly worn{tu lamentable}
+a worn{tu pobre}
+an average{tu mediocre}
+a good{tu apreciable}
+a fine{tu impresionante}
+an excellent{tu excelente}
 You don't have{No tienes}
 to equip{para equipar}
 You equipped{Has equipado}
@@ -145,9 +147,11 @@ You were disarmed!{¡Te han desarmado!}
 The Merchant Guild's watchmen are very vigilant...{Los guardias del Gremio de mercaderes están muy vigilantes...}
 The Garrison Commander sent immediate reinforcements...{El comandante de la guarnción ha enviado refuerzos...}
 Weapon misfired & blew up !{¡El arma se ha encasquillado y ha explotado !}
+Your blade decreased in quality!{¡Tu arma blanca ha perdido calidad!}
 Robbing helpless citizens isn't good for your reputation !{¡Robar a ciudadanos indefensos no es bueno para tu reputación!}
 has gained a new level!{ha ganado un nuevo nivel!}
 (Now level{(Ahora tiene nivel}
+Enemy lost weapon, trying to run!{¡El enemigo ha perdido su arma e intenta huir!}
 CHANGE REP FOR PLAYER:{Tu reputación ha cambiado en base a tus acciones:}
 undrawn blade 1{desarmado 1}
 undrawn blade 2{desarmado 2}
@@ -160,7 +164,7 @@ New captain{Nuevo capitán}
 Gained{Ganado}
 You smell some gunpowder about...{Detectas olor a pólvora en la zona...}
 You catch a glint of cold steel.{Ves de reojo el brillo del acero.}
-You take item{Has cogido el objeto}
+You take item{Has recogido el objeto}
 You give item{Has entregado el objeto}
 has been occupied by{ha sido ocupada por}
 England{Inglaterra}
@@ -183,7 +187,7 @@ Hostile{hostil}
 Letter of Marque{Patente de corso}
 ALARM !  AN AMBUSH !!!!{¡ALARMA!  ¡¡¡EMBOSCADA!!!}
 Gamlet{Solo Hamlet hablaba con los muertos y ni siquiera él esperaba que le respondieran.}
-NoItems{No hay nada que coger}
+NoItems{No hay nada que llevarte}
 Captain, the crew is envious of the amount of money we have on board and wants to sign articles{Capitán, la tripulación tiene envidia de la cantidad de dinero que tenemos a bordo y quiere firmar artículos}
 Captain, we have only{¡Capitán, solo nos quedan}
 days worth of rum left!{días hasta que se acabe el ron!}
@@ -248,9 +252,10 @@ from your party in berthing duties.{de tu grupo en tasas de atraque.}
 You pay{Pagas}
 to the crew and officers you have{a los tripulantes y oficiales que tienes}
 on shore leave at{de permiso en tierra en}
-FAILED{FAILED}
+FAILED{FRACASO}
 You haven't the file{No tienes el archivo}
 You can't save while carrying a holy relic! Give it to a monk{¡No puedes guardar mientras llevas una reliquia sagrada! Dásela a un monje}
+You can't save while carrying a holy relic in this old abbey! Give it to a monk{¡No puedes guardar mientras llevas una reliquia sagrada en la vieja abadía! Dásela a un monje}
 You can't save or load until{No puedes guardar o cargar hasta que}
 leaves.{se vaya.}
 NewSave{Nueva partida guardada}
@@ -333,7 +338,7 @@ Ship is currently in companion slot{El barco está actualmente en un puesto de ac
 empty companion slot{puesto de acompañante vacío}
 empty berthing slot{puesto de atraque vacío}
 You have signed articles with your crew.{Has firmado artículos con tu tripulación.}
-This means{Esto significa que serán pagados mediante el reparto del botín después de cada expedición. Si te hartas de capturar todas esas presas, puedes pagar a tu tripulación un salario normal. Esto hará que su moral sea más estable, pero no tan alta como podría ser bajo un acuerdo de reparto del botín.}
+This means{Esto significa que recibirán su paga mediante el reparto del botín después de cada expedición. Si te hartas de capturar todas esas presas, puedes pagar a tu tripulación un salario normal. Esto hará que su moral sea más estable, pero no tan alta como podría ser bajo un acuerdo de reparto del botín.}
 Note: Before you can do this, you must divide the plunder.{Nota: Antes de poder hacer esto, debes repartir el botín.}
 WARNING! A proportion of the crew will desert if you do this.{¡ADVERTENCIA! Una parte de la tripulación desertará si haces esto.}
 Your crew is currently paid by regular salary.{Actualmente tu tripulación recibe su paga en forma de salario.}
@@ -528,7 +533,7 @@ There are no Arrows left{¡No quedan flechas!}
 There are no{¡No quedan}
 and gunpowder{ni pólvora}
 left{!}
-You have taken{Has cogido}
+You have taken{Has conseguido}
 Equip the Ammunition Pouch!{¡Equipa el saquete de balas!}
 Equip the Gunpowder Flask!{¡Equipa la petaca de pólvora!}
 Mustering those drunken tars takes till nightfall...{Reunir a estos marineros borrachos lleva hasta el anochecer...}
@@ -680,6 +685,10 @@ Sewer{Cloacas}
 Abandoned mine{Mina abandonada}
 Town{Ciudad}
 Dutch West India Company{Compañía Holandesa de las Indias Occidentales}
+Indian Village{Poblado indio}
+Casa de Contratacion{Casa de Contratación}
+French West India Company{Compañía Francesa de las Indias Occidentales}
+#stown_name# Gambling House{Garito de juego de #stown_name#}
 
 Brothel.{Burdel}
 Loanshark's Office.{Oficina del prestamista}
@@ -738,6 +747,9 @@ Abbey of the Maltese order.{Abadía de la Orden de Malta}
 Sewer.{Cloacas}
 Abandoned mine.{Mina abandonada}
 Town.{Ciudad}
+Casa de Contratacion.{Casa de Contratación.}
+French West India Company.{Compañía Francesa de las Indias Occidentales.}
+Gaming House.{Garito de juego.}
 
 Khael Roa Shore{Costa de Khael Roa}
 Incas Temple{Templo Inca}
@@ -1116,14 +1128,20 @@ No Chains to Load{No hay palanquetas que cargar}
 No Bombs to Load{No hay bombas que cargar}
 
 There's a cave entrance in the Cliff!{¡Hay una entrada a una cueva en el acantilado!}
-NoGambleMoney{¿Nada? No es que sea una gran apuesta, ¿no? ¿O es que estás en la ruina?}
+NoGambleMoney{¿Nada? No es que sea una gran apuesta, ¿no? ¿O es que estás sin blanca?}
+NoGambleMoneyPoker{Vamos, haz tu apuesta inicial}
 NoGamblerMoney{No estás muy boyante, ¿eh?}
+NoGamblerMoneyPoker{Te has quedado sin fichas, ¿eh?}
+IWin{Gano yo}
+YouWin{Tú ganas}
 GambleBetMin{No es que sea mucho... pero parece auténtico. Lo acepto.}
-FirstTimePlayingBlackJack{Clic izquierdo en 'Apuesta:' para apostar. Clic izquierdo en la 'x' para dejar de jugar. Clic izquierdo en las cartas para empezar una mano. Clic izquierdo en los retratos para hacer jugar a cada personaje. Clic en 'Apuesta' durante tu turno para doblar la apuesta.}
+GambleBetMinPoker{Apostando el mínimo, ¿eh? Sabia decisión.}//PW
+FirstTimePlayingVingtUn{Clic izquierdo en 'Apuesta:' para apostar. Clic izquierdo en la 'x' para dejar de jugar. Clic izquierdo en las cartas para empezar una mano. Clic izquierdo en los retratos para hacer jugar a cada personaje. Clic en 'Apuesta' durante tu turno para doblar la apuesta.}
 FirstTimePlayingPoker{Clic izquierdo en 'Apuesta:' para apostar. Clic izquierdo en la 'x' para dejar de jugar. Clic izquierdo en las cartas para empezar una mano. Clic izquierdo en los retratos para hacer jugar a cada personaje. Clic izquierdo en cualquiera de tus cartas para cambiarla.}
 FirstTimePlayingDumb{Clic izquierdo en 'Apuesta:' para apostar. Clic izquierdo en la 'x' para dejar de jugar. Clic izquierdo en las cartas para empezar una mano. Clic izquierdo en cualquiera de tus cartas para hacer un movimiento.}
 FirstTimePlayingDice{Clic izquierdo en 'Apuesta:' para apostar. Clic izquierdo en la 'x' para dejar de jugar. Clic en el vaso para tirar los dados.}
 Exit from gamble confirm{¿Seguro que quieres dejar este juego?}
+Exit from gamble confirmPoker{Si te retiras perderás, a no ser que hayas jugado 50 manos o tengas todas las fichas. ¿Seguro que quieres salir?}
 CrewMutinyLeavesShip{¡Algúnos miembros de la trupulación están abandonando tu barco!}
 CrewMutinyArticles1{Has violado las condiciones de nuestro acuerdo, capitán. ¡Si no nos pagas inmediatamente}
 CrewMutinyArticles2{piezas de oro y un barril de ron, te colgaremos de una verga!}
@@ -1139,7 +1157,8 @@ IslaDeMuerte{Isla De Muerta}
 Deserted shore{Costa desierta}
 Dead Man's Bay{Bahía del hombre Muerto}
 Witch's Rock{Roca de la Bruja}
-Strange sail to the{Vela extraña al}
+Strange sail to the{Vela desconocida al}
+Strange sail{Vela desconocida}
 Captain, a hint:{Capitán, una pista:}
 of_island{de}
 lies nothing but open sea!{no hay nada salvo mar abierto!}
@@ -1154,7 +1173,9 @@ Southwest{Suroeste}
 No island within reach{No hay ninguna isla al alcance}
 Enter the map to sail to some island{Entra al mapa para navegar a alguna isla}
 in sight{a la vista}
+Captain, land in sight{Capitán, tierra a la vista}
 to the{al}
+Captain, we are approaching{Capitán, nos estamos acercando a}
 Captain, there is something drifting in the water{Capitán, hay algo flotando a la deriva}
 Something is drifting there, DEAD AHEAD,{Hay algo flotando a la deriva ahí, JUSTO A PROA,}
 Captain, a boat{Capitán, un bote}
@@ -1162,7 +1183,10 @@ Captain, a native raft{Capitán, una balsa nativa}
 Captain, a dismasted vessel{Capitán, un barco desarbolado}
 You don't have enough gunpowder for a mine{No tienes suficiente pólvora para una mina}
 A mine{Una mina}
-Collision with a drifting trunk !{¡Colisión con un trono a la deriva !}
+Mine launched{Mina lanzada}
+We have hit a mine!{¡Hemos dado contra una mina!}
+Collision with a drifting trunk !{¡Colisión con un tronco a la deriva !}
+We have collided with a drifting trunk!{¡Hemos chocado con un tronco a la deriva!}
 You find some votive items on an Indian ceremonial raft{Encuentras algunos objetos votivos en una balsa ceremonial india}
 You find some burial objects on a witch doctor's funeral raft{Encuentras algunos objetos funerarios en la balsa mortuoria de un chamán}
 You find some burial objects on a voodoo priest's funeral raft{Encuentras algunos objetos funerarios en la balsa mortuoria de un sacerdote vudú}
@@ -1174,6 +1198,8 @@ Someone has already emptied this abandoned hulk...{Alguien ya ha vaciado este ca
 Directsail mod active{Mod Directsail activo}
 Directsail mod deactivated{Mod Directsail desactivado}
 Directsail toggled, press 0 to enable{DirectSail seleccionado, pulsa 0 para activar}
+Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing{Misión de caza de barco activa, DirectSail se ha desactivado para evitar que el barco objetivo desaparezca}
+Our position from{Nuestra posición respecto a}
 
 #stown_name# Gunsmith{Armero de #stown_name#}
 #stown_name# Blacksmith{Herrero de #stown_name#}
@@ -1264,8 +1290,8 @@ have broken their alliance and are now at war!{han roto su alianza y ahora están
 My dear, I'm totally enchanted!  May I spend a few moments of your precious time?{¡Querida, estoy absolutamente encantado! ¿Podría gastar siquiera unos minutos de tu precioso tiempo?}
 You take the wind right out of my sails!  Would you do me the pleasure of some conversation?{¡Me quitas el viento de las velas! ¿Me darías el placer de conversar conmigo?}
 I am delighted to have the opportunity to be here with you.  Might you indulge a lonely sailor?{Estoy encantado de tener la oportunidad de estar aquí contigo. ¿Concederás el placer de tu compañía a un marinero solitario?}
-You are as radiant as a summer's sunset out at sea!  May I become better acquainted with you?{¡Eres tan radiante como el sol del amanecer en alta mar! ¿Podría conocerte mejor?}
-This lowly seaman is at a loss for words.  Speak, I pray, that I might know you better!{Este pobre marino no tiene palabras. Habla, por favor, para que pueda conocerte mejor!}
+You are as radiant as a summer's sunset out at sea!  May I become better acquainted with you?{¡Eres tan radiante como un atardecer de verano en alta mar! ¿Podría conocerte mejor?}
+This lowly seaman is at a loss for words.  Speak, I pray, that I might know you better!{Este pobre marino no tiene palabras. ¡Habla, por favor, para que pueda conocerte mejor!}
 I would be honored and delighted to share a few moments of time with you, dear lady!{¡Sería un honor y un placer pasar unos momentos contigo, querida!}
 I must leave with the tide, dear one...  But until then, might we share some companionable moments?{Debo marcharme con la marea, querida... Pero hasta entonces, ¿podemos compartir unos momentos de mutua compañía?}
 The sea calls, and I must build a future.  Until the next tide, would you indulge a weary sailor?{La mar me llama y debo labrarme un futuro. Hasta la próxima marea, ¿concederás el placer de tu compañía a un marinero fatigado?}
@@ -1273,8 +1299,18 @@ My dear, I'm just a master and commander.  Tell me about yourself, everything, I
 There are any wondrous things at sea, from mighty ships to flying fish. But none so lovely as your smile!{Hay todo tipo de cosas maravillosas en la mar, desde imponentes navíos a peces voladores.  ¡Pero ninguna tan hermosa como tu sonrisa!}
 I hesitate to be so bold, but I am lost without you.  Would you complete me by consenting to be my bride?{Perdona que sea tan osado, pero me siento perdido sin ti. ¿Me completarías consintiendo en ser mi esposa?}
 I used to think that I was happy at sea, but I would be much happier knowing that you waited at my home port.  Would you be my wife?{Solía creer que era feliz en la mar, pero sería mucho más feliz sabiendo que tú me esperas al regrsar a puerto. ¿Querrías ser mi esposa?}
-I...  I'm at a loss for words... Ha'hmmm...  I have this ring here, you see, and I...  Would you marry me?{Yo... no puedo encontrar las palabras... Ha'hmmm... Tengo aquí este anillo, ya sabes, y... ¿Te casarías conmigo?}
+I...  I'm at a loss for words... Ha'hmmm...  I have this ring here, you see, and I...  Would you marry me?{Yo... no puedo encontrar las palabras... Eh...hum... Tengo aquí este anillo, ya sabes, y... ¿Te casarías conmigo?}
 Dear lady, I have trod decks riddled with shot without the depth of fear I feel now.  Please ease my soul and tell me that you'll marry me!{Querida mía, he atravesado cubiertas acribilladas de disparos sin sentir el miedo que siento ahora. ¡Por favor, tranquiliza mi alma y dime que te casarás conmigo!}
+I would very much like to spend a few moments with the gentleman's company, if he is willing.{Me encantaría pasar siquiera unos momentos en compañía del caballero, si él consiente.}
+My lord, I must admit, you do not fail to impress. Would you care to join me for some conversation?{Mi señor, debo admitirlo, no dejas de impresionarme. ¿Te gustaría conversar un rato conmigo?}
+You are more thrilling than the fiercest storm of the seven seas!  May I become better acquainted with you?{¡Eres más electrizante que la más furiosa tempestad de los siete mares!  ¿Podría conocerte mejor?}
+I am enchanted by your grace and eloquence. Speak, I pray, that I might know you better!{Me siento hechizada por tu gracia y elocuencia. ¡Habla, por favor, para que pueda conocerte mejor!}
+I would be honoured and delighted to share a few moments of time with you, my lord.{Sería un honor y un placer pasar unos momentos contigo, señor.}
+My dear, I have mastered the waves and commanded the winds, but you are the one puzzle I cannot solve! Tell me more!{¡Querido, he dominado las olas y los vientos, pero tú eres el único rompecabezas que no puedo resolver! ¡Cuéntame más!}
+I hesitate to be so bold, but I am lost without you.  Would you complete me by consenting to be my husband?{Perdona mi osadía, pero me siento perdida sin ti. ¿Me completarías consintiendo en ser mi esposo?}
+I used to think that nothing could make me happier than the seas, but you proved otherwise, my lord. Would you be my husband?{Pensaba que nada podría hacerme más feliz que el mar abierto, pero tú me has demostrado lo contrario, señor. ¿Querrías ser mi esposo?}
+I...  I do not know how to ask you this, but... Words elude me, I...  Would you...marry me?{Yo...  No sé cómo preguntarte esto, pero... Me faltan las palabras, yo...  ¿Te... te casarías conmigo?}
+My lord, I have trod decks riddled with shot without the depth of fear I feel now.  Please ease my soul and tell me that you'll marry me!{Señor mío, he atravesado cubiertas acribilladas de disparos sin sentir el miedo que siento ahora. ¡Por favor, tranquiliza mi alma y dime que te casarás conmigo!}
 
 cplates_desc{Un forro de cobre impide la acumulación de residuos arrastrados por el agua en el casco, resultando en una mejora de rendimiento.}
 bcannons_desc{Para los que pueden permitírselo, los cañones de bronce ofrecen mayor precisión que los de hierro.}
@@ -1399,7 +1435,7 @@ I have repaired Dampier's book!{¡He reparado el libro de Dampier!}
 A small key is attached to the inside of the cover of the Chemistry book!{¡Una pequeña llave está adherida a la cubierta interior del libro de Química!}
 Erotic book placed{Libro erótico colocado}
 You need something to carry the books in!{¡Necesitas algo en lo que cargar los libros!}
-History book picked up{Libro de Historia cogido}
+History book picked up{Libro de Historia recogido}
 Water tank{Depósito de agua}
 Molasses tank{Depósito de melaza}
 Water valve{Válvula de agua}
@@ -1435,7 +1471,7 @@ Ok, there might be skeletons in here...{De acuerdo, puede que ajya esqueletos aq
 Hmm, very foggy now - maybe the Skeletons can't see me?{Hum, hay mucha niebla - ¿quizás los esqueletos no puedan verme?}
 The corpse is too heavy walking around with.{El cadáver e smuy pesado para andar con él a cuestas.}
 Maybe these poles and planks could be of some help.{Quizás estos postes y tablas podrían ser de ayuda.}
-I need something with a hook to get those boxes.{Necesito algo con un gancho para coger esas cajas.}
+I need something with a hook to get those boxes.{Necesito algo con un gancho para alcanzar esas cajas.}
 If I just had something to carry this chest with!{¡Si tan siquiera tuviera algo con lo que cargar este cofre!}
 I could use a box or bag or anything to carry this in.{Podría usar una caja o una bolsa o cualquier cosa para llevarlo dentro.}
 I'll need a foodchest first.{Necesitaré un cofre de comida primero.}
@@ -1757,7 +1793,7 @@ No, I'm not sure that's the right mix.{No, no estoy seguro de que esa sea la mez
 Oh no - I lost all the Gunpowder on the floor!{Oh no, he perdido toda la pólvora derramándola por el suelo!}
 The Barrel isn't filled yet.{El barril todavía no está lleno.}
 I have to grind all first.{Tengo que triturarlo todo primero.}
-I have already filled that Barrel, it's just to pick it up.{Ya he llenado ese barril, solo hay que cogerlo.}
+I have already filled that Barrel, it's just to pick it up.{Ya he llenado ese barril, solo hay que recogerlo.}
 I have already done that.{Ya he hecho eso.}
 There's nothing to grind yet.{Aun no hay nada que triturar.}
 Water is already added.{Ya he añadido agua.}
@@ -1862,7 +1898,7 @@ Finally, they have stopped the repairs.{Por fin, han parado las reparaciones.}
 The door isn't locked but blocked.{La puerta no está cerrada, sino bloqueada.}
 What is it - an old Cutlass?{¿Qué es esto? ¿Un viejo alfanje?}
 I need something to carry the Treasure in.{Necesito algo donde llevar el tesoro.}
-We have to get the rest of the Treasure first.{Primero tenemos que coger el resto del tesoro.}
+We have to get the rest of the Treasure first.{Primero tenemos que recoger el resto del tesoro.}
 No, I have already done that.{No, ya he hecho eso.}
 Now when it's clean, maybe I should heat it up again?{Ahora que está limpio, ¿tal vez debería calentarlo otra vez?}
 No, I don't want to boil the Parchment!{¡No, no quiero hervir el pergamino!}
@@ -1884,9 +1920,16 @@ Cellarium{Cellarium}
 Chapter-house{Sala capitular}
 Scriptorium{Scriptorium}
 Cloister{Claustro}
+cloister inside{Interior del claustro}
+New Cloister Garden{Nuevo jardín del claustro}
+Cloister yard{Patio del claustro}
+cloister exit{Salida del claustro}
 Infirmary{Enfermería}
 Lavatorium{Lavatorium}
 Sacristy{Sacristía}
+Graveyard{Cementerio}
+Crypt{Cripta}
+Cell{Celda}
 
 Something under that straw?{¿Algo bajo esa paja?}
 No, I'll only cut myself on those shards.{No, me cortaría con esos cristales rotos.}
@@ -1898,6 +1941,7 @@ One wine bottle in each hand is enough!{¡Una botella de vino en cada mano es suf
 Hmm, I could place some goods on the elevator.{Hum, podría colocar algunas mercancías en el montacargas.}
 No, the elevator isn't heavy enough.{No, el montacargas no es lo bastante pesado.}
 Now let's fill the barrel up.{Ahora llenemos el barril.}
+
 I don't need to carry these newspapers around.{No tengo que andar cargando con estos periódicos.}
 Better study them or return them to the counter.{Será mejor que los estudie o los devuelva al mostrador.}
 I don't need more wood at the moment.{No necesito más leña por el momento.}
@@ -1939,7 +1983,15 @@ Just one drop...{Solo una gota...}
 I'll use more this time. Five drops perhaps.{Esta vez usaré más. Cinco gotas, quizás.}
 
 Yes! That was the last ghost. Maybe the indian wants to talk to me now...{¡Sí! Ese era el último fantasma. Puede que ahora el indio quiera hablar conmigo...}
+Cartagena fort{Fuerte de Cartagena}
+Cartagena fort.{Fuerte de Cartagena.}
 Cartagena Hotel{Hotel de Cartagena}
+Cartagena Hotel Pension{Pensión del Hotel de Cartagena}
+Palace square{Plaza del palacio}
+Admiral's Office{Despacho del Almirante}
+Fort Tunnel{Túnel del fuerte}
+Secret passage{Pasadizo secreto}
+Inquisition Cave{Cueva de la Inquisición}
 Suarez's house{Casa de Suárez}
 Cartographer's House{Casa del cartógrafo}
 No, it's stuck in the sand.{No, se ha atascado en la arena.}
@@ -1947,7 +1999,7 @@ Order of Malta only in WoodesRogers quest{Orden de Malta solo en misión de Woode
 Order of Malta{Orden de Malta}
 It's not time for any meal now.{No es hora de comer ahora mismo.}
 Hey, it's occupied.{Eh, está ocupado.}
-No, I'm only allowed to take books and documents.{No, solo se me permite coger libros y documentos.}
+No, I'm only allowed to take books and documents.{No, solo se me permite llevarme libros y documentos.}
 I guess a lever should be placed here.{Supongo que debería colocar una palanca aquí.}
 I guess the other blade should be placed here.{Supongo que la otra espada debería colocarse aquí.}
 Something's missing here for sure.{Aquí falta algo, eso seguro.}
@@ -1981,13 +2033,14 @@ That hatch - could be the way to the Captain's cabin.{Esa escotilla... podría co
 I need a long tool to remove the pole.{Necesito un utensilio largo para quitar el palo.}
 CALL MATES{LLAMAR AYUDANTES}
 AWAY BOAT{ARRIAR BOTE}
+No, I have no more business there.{No, no tengo que hacer nada más allí.}
 
 Taino Village{Aldea taína}
 House of Gilbert Downing{Casa de Gilbert Downing}
 Old Inquisition prison{Antigua prisión de la Inquisición}
 Archives{Archivo}
 Abandoned fort{Fuerte abandonado}
-Slave Camp{Campo de esclavos}
+Slave Camp{Campamento de esclavos}
 
 HINT: If that warden comes close enough to the bars, you can mug him!{Pista: Si el carcelero se acerca lo suficiente a los barrotes, puedes reobarle.}
 Crew remaining:{Tripulación restante:}
@@ -1995,7 +2048,7 @@ crew died of maltreatment{miembros de la tripulación han muerto por el mal trato
 HINT: You aren't well armed and your officers aren't armed at all. Take all the help you can get!{Pista: No cuentas con buenas armas, y tus oficiales no están armados en absoluto.¡Necesitarás toda la ayuda que puedas conseguir!}
 crew died in the battle{miembros de la tripulación han muerto en la batalla}
 I'm taking one of the soldier's uniforms. A disguise might be useful later.{Me llevaré uno de los uniformes de los soldados. Un disfraz podría serme útil más tarde.}
-You broke the window and grabbed the map. Now RUN!{Has roto la ventana y has cogido el mapa. ¡Ahora, corre!}
+You broke the window and grabbed the map. Now RUN!{Has roto la ventana y has conseguido el mapa. ¡Ahora, corre!}
 That looks like the original crew returning. Better get aboard and get out of here!{Parece que la tripulación original ya viene de vuelta. ¡Será mejor subir a bordo y salir de aquí!}
 Now to wait for the 'Siroco'...{Ahora toca esperar a que aparezca el 'Siroco'...}
 Maybe there's something in that room with the wall markings...{Quizás haya algo en esa habitación con maecas en las paredes...}
@@ -2016,7 +2069,7 @@ A few minutes later...{Unos minutos después...}
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Pista: Para hacer que un oficial esté disponible como escolta, asigna a ese oficial a uno de los 4 recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Pista: Para hacer que un oficial esté disponible como escolta, asigna a ese oficial a uno de los 3 primeros recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Pista: Para hacer que un oficial esté disponible como escolta, asigna a ese oficial a uno de los 4 recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
-HHint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Pista: Para hacer que un oficial esté disponible como escolta, asigna a ese oficial a uno de los 3 primeros recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
+Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Pista: Para hacer que un oficial esté disponible como escolta, asigna a ese oficial a uno de los 3 primeros recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
 
 Three days later...{Tres días después...}
 
@@ -2042,3 +2095,9 @@ Patrol_Low{mínimas labores de patrulla}
 Patrol_Normal{labores de patrulla normales}
 Patrol_Medium{alerta, la cantidad de contrabando en la isla empieza a ser demasiada}
 Patrol_High{alerta máxima, a pesar de las medidas tomadas, la mercancía de contrabando todavía llega a esta isla}
+
+It's Sakharine - is he dead?{Es Sakharine... ¿Está muerto?}
+There's poor Sakharine again.{Ahí está otra vez el pobre Sakharine.}
+I need Tools to assemble this thing.{Necesito herramientas para ensamblar esta cosa.}
+I don't have all parts yet.{Todavía no tengo todas las partes.}
+No, that's not the right part.{No, esa no es la parte correcta.}

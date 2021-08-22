@@ -317,7 +317,7 @@ void InitInterface_RRS(string iniName,ref pCharacter,ref enemyCh,string newCurNo
 				SetSelectable("CANNONS_BUTTON", false);
 				SetSelectable("SWAP_BUTTON", false);
 				SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "GOODS_BUTTON"  , 0, "Cannot plunder");*/
-				SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "CREW_BUTTON"   , 0, "Assign prize crew");
+				SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "CREW_BUTTON"   , 0, TranslateString("", "Assign prize crew"));
 			/*	SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "CANNONS_BUTTON", 0, "Cannot take cannons");
 				SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "SWAP_BUTTON"   , 0, "Cannot take ship");*/
 			}

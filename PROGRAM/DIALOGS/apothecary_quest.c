@@ -311,7 +311,7 @@ void ProcessDialogEvent()
 		
 		case "Give Up 3":
 			AddDialogExitQuest("At Steven while Giving Up 3");
-			if(GetAttribute(pchar,"quest.mysterious_plants.heard_job") == "Returned")
+			if(GetAttribute(pchar,"quest.mysterious_plants.heard_job") == "Returned given up")
 			{
 				d.Text = DLG_TEXT[161];
 			}
@@ -477,8 +477,16 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-			Link.l1 = DLG_TEXT[174];
-			Link.l1.go = "exit";
+			if (FindCurrentStoryline() == FindStoryline("JackSparrow"))
+				{
+    				Link.l1 = DLG_TEXT[180];
+				Link.l1.go = "exit"; 
+				}
+				else
+				{
+   				Link.l1 = DLG_TEXT[174];
+				Link.l1.go = "exit"; 
+				}
 			}
 			
 		break;
@@ -618,7 +626,15 @@ void ProcessDialogEvent()
 		case "Tell Steven about warehouse"://PW optional new dialog if you know about warehouse 
 			DeleteAttribute(PChar, "quest.mysterious_plants.setwarehouse");
 			d.Text = DLG_TEXT[168];
-			Link.l1 = DLG_TEXT[59];
+			if (FindCurrentStoryline() == FindStoryline("JackSparrow"))
+				{
+    				Link.l1 = DLG_TEXT[179];
+				}
+				else
+				{
+   				Link.l1 = DLG_TEXT[59];
+				}
+			
 			Link.l1.go = "exit2";
 		break;
 		

@@ -1307,6 +1307,252 @@ if(comName=="activate" || comName=="click")
 				TakeItemFromCharacter(Pchar, "book73_open");
 				GiveItem2Character(Pchar, "book73_closed");
 			}
+
+			if(itmName == "port_stock" || itmName == "port_metal")
+			{
+				if(CheckAttribute(Pchar,"Portugize_phase"))
+				{
+					switch(Pchar.Portugize_phase)
+					{
+						case "1":
+							if(CheckCharacterItem(Pchar,"port_tools"))
+							{
+								PlaySound("PEOPLE\chopchop.wav");
+								TakeItemFromCharacter(Pchar, "port_stock");
+								TakeItemFromCharacter(Pchar, "port_metal");
+								GiveItem2Character(Pchar, "port_2");
+								Pchar.Portugize_phase = "2";
+							}
+							else
+							{
+								if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_huh.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_couldnt.wav");
+								Logit(TranslateString("","I need Tools to assemble this thing."));
+								return;
+							}
+						break;
+
+						case "0":
+							if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_sigh.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_sigh.wav");
+							Logit(TranslateString("","I don't have all parts yet."));
+							return;
+						break;
+					}
+				}
+			}
+
+			if(itmName == "port_rest")
+			{
+				if(CheckAttribute(Pchar,"Portugize_phase"))
+				{
+					switch(Pchar.Portugize_phase)
+					{
+						case "2":
+							PlaySound("INTERFACE\cancel.wav");
+							PlaySound("INTERFACE\cancel.wav");
+							TakeItemFromCharacter(Pchar, "port_rest");
+							TakeItemFromCharacter(Pchar, "port_2");
+							GiveItem2Character(Pchar, "port_3");
+							Pchar.Portugize_phase = "3";
+						break;
+
+						case "1":
+							if(CheckCharacterItem(Pchar,"port_tools"))
+							{
+								if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+								Logit(TranslateString("","No, that's not the right part."));
+								return;
+							}
+							else
+							{
+								if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_huh.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_couldnt.wav");
+								Logit(TranslateString("","I need Tools to assemble this thing."));
+								return;
+							}
+						break;
+
+						case "0":
+							if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_sigh.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_sigh.wav");
+							Logit(TranslateString("","I don't have all parts yet."));
+							return;
+						break;
+					}
+				}
+			}
+
+			if(itmName == "port_magazine")
+			{
+				if(CheckAttribute(Pchar,"Portugize_phase"))
+				{
+					switch(Pchar.Portugize_phase)
+					{
+						case "3":
+							PlaySound("PEOPLE\beltkey.wav");
+							PlaySound("PEOPLE\beltkey.wav");
+							TakeItemFromCharacter(Pchar, "port_magazine");
+							TakeItemFromCharacter(Pchar, "port_3");
+							GiveItem2Character(Pchar, "port_4");
+							Pchar.Portugize_phase = "4";
+						break;
+
+						case "2":
+							if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+							Logit(TranslateString("","No, that's not the right part."));
+							return;
+						break;
+
+						case "1":
+							if(CheckCharacterItem(Pchar,"port_tools"))
+							{
+								if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+								Logit(TranslateString("","No, that's not the right part."));
+								return;
+							}
+							else
+							{
+								if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_huh.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_couldnt.wav");
+								Logit(TranslateString("","I need Tools to assemble this thing."));
+								return;
+							}
+						break;
+
+						case "0":
+							if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_sigh.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_sigh.wav");
+							Logit(TranslateString("","I don't have all parts yet."));
+							return;
+						break;
+					}
+				}
+			}
+
+			if(itmName == "port_barrel")
+			{
+				if(CheckAttribute(Pchar,"Portugize_phase"))
+				{
+					switch(Pchar.Portugize_phase)
+					{
+						case "4":
+							PlaySound("INTERFACE\bell_broken.wav");
+							TakeItemFromCharacter(Pchar, "port_barrel");
+							TakeItemFromCharacter(Pchar, "port_4");
+							GiveItem2Character(Pchar, "port_5");
+							Pchar.Portugize_phase = "5";
+						break;
+
+						case "3":
+							if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+							Logit(TranslateString("","No, that's not the right part."));
+							return;
+						break;
+
+						case "2":
+							if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+							Logit(TranslateString("","No, that's not the right part."));
+							return;
+						break;
+
+						case "1":
+							if(CheckCharacterItem(Pchar,"port_tools"))
+							{
+								if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+								Logit(TranslateString("","No, that's not the right part."));
+								return;
+							}
+							else
+							{
+								if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_huh.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_couldnt.wav");
+								Logit(TranslateString("","I need Tools to assemble this thing."));
+								return;
+							}
+						break;
+
+						case "0":
+							if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_sigh.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_sigh.wav");
+							Logit(TranslateString("","I don't have all parts yet."));
+							return;
+						break;
+					}
+				}
+			}
+
+			if(itmName == "port_mechanism")
+			{
+				if(CheckAttribute(Pchar,"Portugize_phase"))
+				{
+					switch(Pchar.Portugize_phase)
+					{
+						case "5":
+							PlaySound("PEOPLE\spyglass.wav");
+							TakeItemFromCharacter(Pchar, "port_mechanism");
+							TakeItemFromCharacter(Pchar, "port_5");
+							TakeItemFromCharacter(Pchar, "port_tools");
+							GiveItem2Character(Pchar, "portugize");
+						
+							LAi_QuestDelay("portugize_equip", 0.2);
+							
+						break;
+
+						case "4":
+							if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+							Logit(TranslateString("","No, that's not the right part."));
+							return;
+						break;
+
+
+						case "3":
+							if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+							Logit(TranslateString("","No, that's not the right part."));
+							return;
+						break;
+
+						case "2":
+							if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+							Logit(TranslateString("","No, that's not the right part."));
+							return;
+						break;
+
+						case "1":
+							if(CheckCharacterItem(Pchar,"port_tools"))
+							{
+								if (PChar.sex == "man") { PlaySound("OBJECTS\DUEL\man_attack5.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_angry.wav");
+								Logit(TranslateString("","No, that's not the right part."));
+								return;
+							}
+							else
+							{
+								if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_huh.wav"); }
+								else PlaySound("VOICE\ENGLISH\gr_wench3_couldnt.wav");
+								Logit(TranslateString("","I need Tools to assemble this thing."));
+								return;
+							}
+						break;
+
+						case "0":
+							if (PChar.sex == "man") { PlaySound("VOICE\ENGLISH\blaze_sigh.wav"); }
+							else PlaySound("VOICE\ENGLISH\gr_wench3_sigh.wav");
+							Logit(TranslateString("","I don't have all parts yet."));
+							return;
+						break;
+					}
+				}
+			}	
 //JRH equip
 		//<-- JRH
 
@@ -3437,6 +3683,45 @@ void I_ExamineItem()
 		return;	
 	}
 
+	if(itmName == "engineer_letter1")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "engineer_letter1");
+		GiveItem2Character(Pchar, "engineer_letter2");
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "engineer_letter2")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		TakeItemFromCharacter(Pchar, "engineer_letter2");
+		GiveItem2Character(Pchar, "engineer_letter3");
+
+		PostEvent("LaunchIAfterFrame",1,"sl", "I_ITEMS", 2);
+		InterfaceStack.SelectMenu_node = "I_ITEMS";
+		interfaceResultCommand = RC_INTERFACE_ITEMS_EXIT;
+		EndCancelInterface(false);
+		return;
+	}
+
+	if(itmName == "engineer_letter3")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		SetQuestHeader("Beginning_Engineer")
+		AddQuestRecord("Beginning_Engineer", "1");
+	}
+
+	if(itmName == "mapCartagena_Library")
+	{
+		PlaySound("INTERFACE\paper.wav");
+		AddQuestRecord("Beginning_Engineer", "5");
+	}
+
 //JRH examine
 	
 //<-- JRH
@@ -3641,6 +3926,24 @@ void UpdateItemData()
 				itmDescribe = GetAssembledString(TranslateString("", "weapon armor parameters"),itemARef) + newLineStr;
 			break;
 			// GreatZen <--
+			// Grey Roger: copied from below as potions now have "groupID" attribute -->
+			case POTION_ITEM_TYPE:
+				if( CheckAttribute(itemARef,"potion") )
+				{
+					itmDescribe = TranslateString("", "Potion parameters")+":";
+					if( CheckAttribute(itemARef,"potion.health") )
+					{
+						itmDescribe += " "+TranslateString("", "health value");
+						if(stf(itemARef.potion.health)>=0)
+						{	itmDescribe += "+" + sti(itemARef.potion.health) + ".";
+						} else
+						{	itmDescribe += sti(itemARef.potion.health) + ".";
+						}
+					}
+					itmDescribe += newLineStr;
+				}
+			break;
+			// <-- Grey Roger
 		}
 
 		// MAXIMUS 31.05.2019: corrected for russian spelling ==>

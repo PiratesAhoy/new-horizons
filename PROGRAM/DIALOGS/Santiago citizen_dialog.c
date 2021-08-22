@@ -128,14 +128,12 @@ void ProcessDialogEvent()
 						PChar.quest.ardent_kidnap.wedding = "sad";
 						if (PChar.sex == "man")
 						{
-							Preprocessor_AddQuestData("gov_kid", XI_ConvertString("daughter"));
+							AddQuestRecord("Kidnap", 18);
 						}
 						else
 						{
-							Preprocessor_AddQuestData("gov_kid", XI_ConvertString("son"));
+							AddQuestRecord("Kidnap", 29);
 						}
-						AddQuestRecord("Kidnap", 18);
-						Preprocessor_Remove("gov_kid");
 					}
 				}
 				if(CheckQuestAttribute("assassination", "no_clue"))
@@ -365,7 +363,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Santiago":
-			d.Text = DLG_TEXT[134] + DLG_TEXT[168];// NK
+			d.Text = DLG_TEXT[134] + DLG_TEXT[168] + GetTownSize("Santiago") + DLG_TEXT[169];// NK
 			Link.l1 = pcharrepphrase(DLG_TEXT[135], DLG_TEXT[136]);
 			Link.l1.go = "new question";
 			link.l2 = pcharrepphrase(DLG_TEXT[137], DLG_TEXT[138]);

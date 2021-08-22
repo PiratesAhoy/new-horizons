@@ -197,5 +197,41 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[50];
 			link.l1.go = "exit";
 		break;
+
+		case "meet_after_briefing":
+			dialog.text = DLG_TEXT[51] + GetMyLastName(PChar) + DLG_TEXT[52];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
+
+		case "meet_after_briefing2":
+			dialog.text = "";
+			link.l1 = DLG_TEXT[53];
+			link.l1.go = "sorry_about_news";
+		break;
+
+		case "sorry_about_news":
+			dialog.text = DLG_TEXT[54];
+			link.l1 = DLG_TEXT[55];
+			link.l1.go = "you_have_a_son";
+		break;
+
+		case "you_have_a_son":
+			dialog.text = DLG_TEXT[56];
+			link.l1 = DLG_TEXT[57];
+			link.l1.go = "you_have_a_son2";
+		break;
+
+		case "you_have_a_son2":
+			dialog.text = DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "goodbye_again";
+		break;
+
+		case "goodbye_again":
+			dialog.text = DLG_TEXT[60] + GetMyName(PChar) + DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "exit";
+		break;
 	}
 }

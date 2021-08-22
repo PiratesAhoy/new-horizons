@@ -1,4 +1,4 @@
-title=Deliver a prisoner to the governor.
-text.t1=The governor charged me with a mission to bring him the prisoner held in #sGreenford#'s prison on #sisland_Oxbay#.
-text.t2=When I said that I wanted to see the prisoner, the commandant told me he had escaped several hours ago. They are looking for him, but there is no good news so far.
-text.t3=When I arrived at #sRedmond# on #sisland_Redmond#, I told the governor that the prisoner had escaped. Silehard wasn't at all pleased to hear that.
+title=Доставить пленника к губернатору.
+text.t1=Мое новое задание очень простое - надо поработать тюремщиком, превратив свое судно в плавучую тюрьму, на тот срок, который потребуется, чтобы доставить пленника из тюрьмы #sGreenford#'s к Сайлхарду. 
+text.t2=Как говаривал один мой старый друг, книжник: "Все любопытственнее и любопытственнее". Другими словами, когда я потребовал выдать мне пленника, комендант тюрьмы заявил мне, что тот сбежал сегодня ночью. Как может сбежать человек, запертый в клетку? Уж я то знаю, как это сложно сделать - сам побывал в подобной ситуации. И тем более я не понимаю, как можно так долго искать этого мерзавца и не найти его?! Придется возвращаться к Сайлхарду ни с чем.
+text.t3=Как я и предполагал, губернатор Сайлхард был не в восторге от нерадивости своих солдат, упустивших пленника. Наверное, этот парень, сильно насолил его превосходительству, раз известие о побеге погрузило английского губернатора в пучину тяжелых раздумий.

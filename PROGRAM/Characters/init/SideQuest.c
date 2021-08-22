@@ -7241,5 +7241,65 @@ void CreateSideQuestCharacters(ref n)
 	ch.quest.officertype = OFFIC_TYPE_CAPNAVY;
 	ch.questchar = true;	// Stop levelling from messing him about
 	AddGameCharacter(n, ch);
+
+	ch.old.name = "Meredith";		// Introduces player to the quest if high enough level and no LoM
+	ch.old.lastname = "Byrom";
+	ch.name = TranslateString("", "Meredith");
+	ch.lastname = TranslateString("", "Byrom");
+	ch.id		= "Meredith Byrom";
+	ch.model	= "man1_1";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	if (GetCurrentPeriod() <= PERIOD_THE_SPANISH_MAIN)
+	{
+		GiveItem2Character(ch, "blade10");
+		ch.equip.blade = "blade10";
+		GiveItem2Character(ch, "pistol1a");
+		ch.equip.gun = "pistol1a";
+	}
+	else
+	{
+		GiveItem2Character(ch, "blade27");
+		ch.equip.blade = "blade27";
+		GiveItem2Character(ch, "pistol1");
+		ch.equip.gun = "pistol1";
+	}
+	//JRH ammo mod -->
+	if (ENABLE_AMMOMOD)
+	{
+		TakenItems(ch, "gunpowder", 2 + rand(3));
+		TakenItems(ch, "pistolbullets", 2 + rand(3));
+	}
+	//JRH ammo mod <--
+	ch.experience = CalculateExperienceFromRank(10)+ (CalculateExperienceFromRank(10)/10 + rand(10000));	
+	ch.location	= "none"; // "Smugglers_Tavern"
+	ch.location.group = "goto";
+	ch.location.locator = "goto6";
+	ch.Dialog.Filename = "Meredith Byrom_dialog.c";
+	ch.rank 	= 10;
+	ch.reputation = "None";
+	ch.greeting = "Gr_Clauss";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "2";
+	ch.skill.Cannons = "2";
+	ch.skill.Grappling = "2";
+	ch.skill.Repair = "3";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "0";
+	ch.perks.list.BasicDefence = true;
+	ch.perks.list.AdvancedDefence = true;
+	ch.perks.list.SwordplayProfessional = true;
+	ch.perks.list.CriticalHit = true;
+	ch.perks.list.Gunman = true;
+	ch.quest.officertype = OFFIC_TYPE_SAILOR;
+	ch.quest.officerprice = "1000";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 100.0, 100.0);
+	AddGameCharacter(n, ch);
 }
 	

@@ -1,6 +1,6 @@
-title=Open the Cell
+title=Открыть ячейку
 text.t1=
-text.t2=I need something with a hook to get those boxes.
-text.t3=I have to keep my eyes open for a hatch somewhere. 
-text.t4=No, the barrel is not heavy enough! I have to fill it with something.
-text.t5=The boatswain warned me to touch 'the single lever on the right side'.
+text.t2=Мне нужно что-то с крюком, чтобы достать эти коробки.
+text.t3=Нужно как-то зафиксировать эту площадку. 
+text.t4=Нет, бочка не достаточно тяжелая! Нужно ее чем-то заполнить.
+text.t5=Боцман попросил меня не косаться 'единственного рычага с правой стороны'.

@@ -36,8 +36,31 @@ void ProcessDialogEvent()
 	switch(Dialog.CurrentNode)
 		{
 			case "start":
+				if (CharPlayerType == PLAYER_TYPE_ENGINEER)
+				{
+					GiveItem2Character(Pchar, "engineer_letter1");
+					dialog.text = DLG_TEXT[240];
+					link.l4 = DLG_TEXT[241];
+					link.l4.go = "start_engineer";
+				}
+				else
+				{
+					Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
+					Preprocessor_Add("enemy", XI_ConvertString(GetNationDescByType(iNation)));
+					dialog.text = DLG_TEXT[0];
+					link.l1 = DLG_TEXT[1];
+					link.l1.go = "intro2";
+					link.l2 = DLG_TEXT[2];
+					link.l2.go = "start1";
+					link.l3 = DLG_TEXT[3];
+					link.l3.go = "stormystart";
+					PChar.vcskip = true;
+				}
+			break;
+
+			case "start_engineer":
 				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
-				Preprocessor_Add("enemy",GetNationDescByType(iNation));
+				Preprocessor_Add("enemy", XI_ConvertString(GetNationDescByType(iNation)));
 				dialog.text = DLG_TEXT[0];
 				link.l1 = DLG_TEXT[1];
 				link.l1.go = "intro2";
@@ -68,7 +91,7 @@ void ProcessDialogEvent()
 			break;
 
 			case "start1":
-				Preprocessor_Add("enemy",GetNationDescByType(iNation));
+				Preprocessor_Add("enemy", XI_ConvertString(GetNationDescByType(iNation)));
 				BLI_UpdateOfficers();
 				dialog.text = DLG_TEXT[10];
 				link.l1 = DLG_TEXT[11];
@@ -750,9 +773,9 @@ void ProcessDialogEvent()
 			break;
 
 			case "TutorialTasks_1":
-				Preprocessor_Add("enemy",GetNationDescByType(iNation));
+				Preprocessor_Add("enemy", XI_ConvertString(GetNationDescByType(iNation)));
 				dialog.text = DLG_TEXT[130];
-				Preprocessor_Add("enemy",GetNationDescByType(iNation));
+				Preprocessor_Add("enemy", XI_ConvertString(GetNationDescByType(iNation)));
 				if(GetCurrentFlag() == ENGLAND && GetStorylineDir(FindCurrentStoryline()) == "standard\")
 					dialog.text = dialog.text + "\n" + DLG_TEXT[131];
 				link.l1 = DLG_TEXT[132];
@@ -1108,7 +1131,7 @@ void ProcessDialogEvent()
 			break;
 
 			case "Skip_tutorial_2":
-				Preprocessor_Add("enemy",GetNationDescByType(iNation));
+				Preprocessor_Add("enemy", XI_ConvertString(GetNationDescByType(iNation)));
 				bDisableFastReload = 0;
 				addDialogExitQuest("Tut_SkipTutorialOnShip");
 				NextDiag.Tempnode = "Questions";
@@ -1318,7 +1341,7 @@ void ProcessDialogEvent()
 			break;
 
 			case "Final_Goodbye":
-				Preprocessor_Add("enemy",GetNationDescByType(iNation));
+				Preprocessor_Add("enemy", XI_ConvertString(GetNationDescByType(iNation)));
 				if (Locations[FindLoadedLocation()].type != "tavern") AddDialogExitQuest("Tut_SkipTutorialInTown");
 				NextDiag.Tempnode = "Questions";
 				string locTavern = DLG_TEXT[227];
@@ -1369,7 +1392,7 @@ void ProcessDialogEvent()
 			break;
 
 			case "OnMalcolmShip":
-				Preprocessor_Add("enemy",GetNationDescByType(iNation));
+				Preprocessor_Add("enemy", XI_ConvertString(GetNationDescByType(iNation)));
 				dialog.text = DLG_TEXT[230] + XI_ConvertString(GetShipTypeName(PChar)) + DLG_TEXT[231] + GetMyShipNameShow(PChar) + DLG_TEXT[232];
 				link.l1 = DLG_TEXT[233] + XI_ConvertString(GetShipTypeName(NPChar)) + ", '" + NPChar.ship.name + "'" + DLG_TEXT[141];
 				link.l1.go = "OnMalcolmShip_1";

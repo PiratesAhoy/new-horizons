@@ -89,6 +89,12 @@ void ProcessDialogEvent()
 		case "First_orders10":
 			dialog.text = DLG_TEXT[20];
 			link.l1 = DLG_TEXT[21];
+			link.l1.go = "First_orders11";
+		break;
+
+		case "First_orders11":
+			dialog.text = DLG_TEXT[22];
+			link.l1 = DLG_TEXT[23];
 			link.l1.go = "Exit_First_orders";
 		break;
 		
@@ -110,17 +116,7 @@ void ProcessDialogEvent()
 		break;		
 		
 		case "Exit_First_Orders":
-			pchar.quest.Mings_contract = "open";
-			pchar.quest.Catalina_contract = "open";
-			pchar.quest.CCC_contract = "open";
-			pchar.quest.Armada_contract = "open";
-			pchar.quest.Merciless_contract = "open";
-			pchar.quest.Maximus_contract = "open";
-			pchar.quest.Petros_contract = "open";
-			pchar.quest.ThomasT_contract = "open";
-			pchar.quest.NathanK_contract = "open";
-			pchar.quest.Bonnie_talk = "Needing_some_help";
-			pchar.quest.Morgan_talk = "no_dialog";
+			AddDialogExitQuest("Got_info_from_SJG");
 			DialogExit();
 			NextDiag.CurrentNode = "First time";
 		break;

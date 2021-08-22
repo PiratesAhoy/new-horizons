@@ -3,3 +3,211 @@ itmdescr_SpanishLetter
 {
 This document, signed by Vice-Admiral Salvatore, proves that the 'Vogelstruijs' is carrying ammunition for the conquest of #sRedmond# and is to deliver the cargo to #sSanto Domingo#.
 }
+itmname_Letter_Lafitte	{Letter for Captain Jean Lafitte}
+itmdescr_Letter_Lafitte
+{
+This letter written by the Governor of #sisland_Eleuthera# aims to inform Captain Jean Lafitte I'll be his partner in this mission against the British.
+}
+itmname_time_bomb	{Time-Bomb}
+itmdescr_time_bomb
+{
+It's a big grenade with a long fuse. A basic model but very effective.
+}
+
+itmname_engineer_letter1	{Letter}
+itmdescr_engineer_letter1
+{
+A Letter. For me!
+}
+
+itmname_engineer_letter2	{Letter}
+itmdescr_engineer_letter2
+{
+This is so exciting.
+}
+
+itmname_engineer_letter3	{Letter}
+itmdescr_engineer_letter3
+{
+Okay, let's see now...
+}
+
+itmname_mapLibrary		{Cartagena library map}
+itmdescr_mapLibrary
+{
+It's an enormous maze!
+}
+
+itmname_port_stock		{Stock}
+itmdescr_port_stock
+{
+Very strange shape of a gun stock.
+}
+
+itmname_port_metal		{Metal part}
+itmdescr_port_metal
+{
+Hard to say where this goes.
+}
+
+itmname_port_rest		{Metal part}
+itmdescr_port_rest
+{
+I have no idea what this is.
+}
+
+itmname_port_magazine		{Magazine}
+itmdescr_port_magazine
+{
+The round magazine has place for five shots. It's supposed to rotate!
+}
+
+itmname_port_barrel		{Barrel}
+itmdescr_port_barrel
+{
+The large caliber barrel is flared at the muzzle. For grapeshot use.
+}
+
+itmname_port_mechanism		{Mechanism}
+itmdescr_port_mechanism
+{
+A slow-burning cord attached to a curved lever. This new weapon uses the ancient matchlock! 
+}
+
+itmname_port_2			{Weapon under construction}
+itmdescr_port_2
+{
+
+}
+
+itmname_port_3			{Weapon under construction}
+itmdescr_port_3
+{
+
+}
+
+itmname_port_4			{Weapon under construction}
+itmdescr_port_4
+{
+
+}
+
+itmname_port_5			{Weapon under construction}
+itmdescr_port_5
+{
+
+}
+
+itmname_portugize		{Portugize}
+itmdescr_portugize
+{
+This new invention has a rotating magazine with five shots. Loaded with grapeshots it does damage to multiple enemies at once. 
+}
+
+itmname_port_tools		{Tools}
+itmdescr_port_tools
+{
+A set of repair tools for pistols and rifles.
+}
+
+itmname_book21F			{Statute Book}
+itmdescr_book21F
+{
+Abstract of the British West Indian statutes. The cover is worn but has it ever been opened?
+}
+
+itmname_book22F			{The Spanish Armada}
+itmdescr_book22F
+{
+The defeat of the Armada - an eye witness' story. Martin Frobisher, Commander of the frigate Triumph. 
+}
+
+itmname_book23F			{The Royal Ship Wasa}
+itmdescr_book23F
+{
+The secret behind the disaster. Original reckonings of Henrik Hybertsson now published. 
+}
+
+itmname_book24F			{Notorious Pirates}
+itmdescr_book24F
+{
+A General History of the Robberies and Murders of the Most Notorious Pirates. Two volumes loaded with historical and contemporary pirate captains and their crew. By Captain Charles Johnson.  
+}
+
+itmname_book26F			{The Human Skeleton}
+itmdescr_book26F
+{
+A manual to all the 206 bones of a human being. Pictures.
+}
+
+itmname_book27F			{Chymist}
+itmdescr_book27F
+{
+A German work of chemistry published in Leipzig 1729. Looks like it is about minerals and vegetables? 
+}
+
+itmname_book28F			{Lolita}
+itmdescr_book28F
+{
+An interesting book in a somewhat delicate topic. Provided with childrenproof lock.
+}
+
+itmname_book29F			{Les Fleurs du Mal}
+itmdescr_book29F
+{
+Poems of the famous poet Charles Baudelaire. French edition.
+}
+
+itmname_book31F			{A New Voyage Round the World}
+itmdescr_book31F
+{
+The Dampier book is now repaired.
+}
+
+itmname_book33F			{Geografien}
+itmdescr_book33F
+{
+An old and very basic schoolbook, in any of those nordic languages perhaps?
+}
+
+itmname_book34F			{Collection of Books}
+itmdescr_book34F
+{
+Contains: The Spanish silverfleets, Sugar and Rum trade in the Caribbean, Nassau an economic overview.
+}
+
+itmname_book35F			{Mercurius}
+itmdescr_book35F
+{
+Healing and curing with the dangerous but magnificient liquid metal.
+}
+
+itmname_book36F			{The Gold-Bug}
+itmdescr_book36F
+{
+A fascinating longer short-story about the buried treasure of Captain Kidd. Author Edgar Allan Poe.
+}
+
+itmname_poker_invite1		{Invitation}
+itmdescr_poker_invite1
+{
+An invitation to the poker tournament held in Grand Turk. There is an entry fee of 20000 but the winner gets 75% of all the stakes plus a trophy.
+}
+
+itmname_poker_invite2		{Invitation}
+itmdescr_poker_invite2
+{
+An invitation to the Double R's poker tournament. Same as always there is an entry fee of 20000 but the winner gets 75% of all the stakes plus a trophy.
+}
+
+itmname_bladetrophy		{Trophy}
+itmdescr_bladetrophy
+{
+The mini Trophy I won at the poker tournament. Not of much value as a weapon.
+}
+
+itmname_plans_copy		{Secret plans}
+itmdescr_plans_copy
+{
+A copy of secret plans detailing future actions of an enemy fleet.
+}

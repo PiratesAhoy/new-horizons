@@ -102,21 +102,27 @@ void ProcessDialogEvent()
 		case "warning":
 			Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 			dialog.text = DLG_TEXT[21];
-			Link.l1 = DLG_TEXT[22];
-			if (rand(100)< FORT_RAIDSUCCESS/2 )		//  chance that...
+			if (isEnabledTownCapture(lcn.townsack))
 			{
-				Link.l1.go = "capture";	// ... the town surrenders...
-			}
-			else
-			{
-				Link.l1.go = "fight";		// ... or you get another fight
+				Link.l1 = DLG_TEXT[22];
+				if (rand(100)< FORT_RAIDSUCCESS/2 )		//  chance that...
+				{
+					Link.l1.go = "capture";	// ... the town surrenders...
+				}
+				else
+				{
+					Link.l1.go = "fight";		// ... or you get another fight
+				}
 			}
 
-			Link.l2 = DLG_TEXT[23];
-			Link.l2.go = "purse";
+			if (ProfessionalNavyNation() == UNKNOWN_NATION || !isEnabledTownCapture(lcn.townsack))
+			{
+				Link.l2 = DLG_TEXT[23];
+				Link.l2.go = "purse";
 
-			Link.l3 = DLG_TEXT[24];
-			Link.l3.go = "amnesty";
+				Link.l3 = DLG_TEXT[24];
+				Link.l3.go = "amnesty";
+			}
 
 			Link.l4 = LinkRandPhrase(DLG_TEXT[3], DLG_TEXT[4], DLG_TEXT[5]);
 			Link.l4.go = "exit";
@@ -139,24 +145,65 @@ void ProcessDialogEvent()
 			LAi_Fade("", "");
 
 			dialog.text = DLG_TEXT[29];
+			if (ProfessionalNavyNation() == UNKNOWN_NATION || ProfessionalNavyNation() == PORTUGAL)
+			{
+				Link.l2 = DLG_TEXT[30];
+				Link.l2.go = "portugal";
+			}
 
-			Link.l2 = DLG_TEXT[30];
-			Link.l2.go = "portugal";
+			if (ProfessionalNavyNation() == UNKNOWN_NATION || ProfessionalNavyNation() == HOLLAND)
+			{
+				Link.l1 = DLG_TEXT[31];
+				Link.l1.go = "dutch";
+			}
 
-			Link.l1 = DLG_TEXT[31];
-			Link.l1.go = "dutch";
+			if (ProfessionalNavyNation() == UNKNOWN_NATION || ProfessionalNavyNation() == ENGLAND)
+			{
+				Link.l3 = DLG_TEXT[32];
+				Link.l3.go = "britain";
+			}
 
-			Link.l3 = DLG_TEXT[32];
-			Link.l3.go = "britain";
+			if (ProfessionalNavyNation() == UNKNOWN_NATION || ProfessionalNavyNation() == FRANCE)
+			{
+				Link.l4 = DLG_TEXT[33] + GetNationRoyalByType(FRANCE) + DLG_TEXT[34];
+				Link.l4.go = "france";
+			}
 
-			Link.l4 = DLG_TEXT[33];
-			Link.l4.go = "france";
+			if (ProfessionalNavyNation() == UNKNOWN_NATION || ProfessionalNavyNation() == SPAIN)
+			{
+				Link.l5 = DLG_TEXT[35] + GetNationRoyalByType(SPAIN) + DLG_TEXT[36];
+				Link.l5.go = "spain";
+			}
 
-			Link.l5 = DLG_TEXT[34];
-			Link.l5.go = "spain";
+			if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+			{
+				if (ProfessionalNavyNation() == UNKNOWN_NATION || ProfessionalNavyNation() == AMERICA)
+				{
+					Link.l6 = DLG_TEXT[37];
+					Link.l6.go = "america";
+				}
+			}
 
-			Link.l6 = DLG_TEXT[35];
-			Link.l6.go = "ransack";
+			if (SWEDEN_ALLOWED && GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
+			{
+				if (ProfessionalNavyNation() == UNKNOWN_NATION || ProfessionalNavyNation() == SWEDEN)
+				{
+					Link.l6 = DLG_TEXT[38] + GetNationRoyalByType(SWEDEN) + DLG_TEXT[39];
+					Link.l6.go = "sweden";
+				}
+			}
+
+			if (GetServedNation() == PIRATE || PChar.nation == PIRATE)
+			{
+				link.l7 = DLG_TEXT[40];
+				link.l7.go = "pirate";
+			}
+
+			if (ProfessionalNavyNation() == UNKNOWN_NATION)
+			{
+				Link.l8 = DLG_TEXT[41];
+				Link.l8.go = "ransack";
+			}
 		break;
 
 
@@ -248,6 +295,60 @@ void ProcessDialogEvent()
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
 
+		case "america":
+			PlayStereoSound("voice\" + LanguageGetLanguage() + "\Eng_m_c_047.wav");
+			LAi_ActorGoToLocation(NPchar, "reload", LAi_FindRandomLocator("reload"), "none", "", "", "", 25.0);
+
+			ChangeTownNation (lcn.townsack, AMERICA);
+			if (GetRMRelation(PChar, AMERICA) < 0)
+			{
+				SetRMRelation(GetMainCharacter(), AMERICA, REL_NEUTRAL);
+				ReceiveLetterOfMarque(AMERICA); // KK
+			}
+
+			if(AUTO_SKILL_SYSTEM) { AddCharacterExpChar(pchar, "Leadership", 5000); }
+			else { AddCharacterExp(pchar, 5000); }
+			LAi_ActorGoToLocation(NPchar, "reload", LAi_FindRandomLocator("reload"), "none", "", "", "", 25.0);
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "sweden":
+			PlayStereoSound("voice\" + LanguageGetLanguage() + "\Eng_m_c_045.wav");
+			LAi_ActorGoToLocation(NPchar, "reload", LAi_FindRandomLocator("reload"), "none", "", "", "", 25.0);
+
+			ChangeTownNation (lcn.townsack, SWEDEN);
+			if (GetRMRelation(PChar, SWEDEN) < 0)
+			{
+				SetRMRelation(GetMainCharacter(), SWEDEN, REL_NEUTRAL);
+				ReceiveLetterOfMarque(SWEDEN); // KK
+			}
+
+			if(AUTO_SKILL_SYSTEM) { AddCharacterExpChar(pchar, "Leadership", 5000); }
+			else { AddCharacterExp(pchar, 5000); }
+			LAi_ActorGoToLocation(NPchar, "reload", LAi_FindRandomLocator("reload"), "none", "", "", "", 25.0);
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "pirate":
+			PlayStereoSound("voice\" + LanguageGetLanguage() + "\Eng_m_c_045.wav");
+			LAi_ActorGoToLocation(NPchar, "reload", LAi_FindRandomLocator("reload"), "none", "", "", "", 25.0);
+
+			ChangeTownNation (lcn.townsack, PIRATE);
+			if (GetRMRelation(PChar, PIRATE) < 0)
+			{
+				SetRMRelation(GetMainCharacter(), PIRATE, REL_NEUTRAL);
+			}
+			SetServedNation(PIRATE);
+
+			if(AUTO_SKILL_SYSTEM) { AddCharacterExpChar(pchar, "Leadership", 5000); }
+			else { AddCharacterExp(pchar, 5000); }
+			LAi_ActorGoToLocation(NPchar, "reload", LAi_FindRandomLocator("reload"), "none", "", "", "", 25.0);
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
 		case "ransack":
 			PlayStereoOGG("music_ship_victory"); 		// fanfare
 			if(GetRMRelation(PChar, sti(commander.nation)) > REL_WAR)
@@ -261,8 +362,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "purse":
-			dialog.text =  RandSwear() + LinkRandPhrase(DLG_TEXT[36], DLG_TEXT[37], DLG_TEXT[38]) + npchar.money + DLG_TEXT[39];
-			Link.l1 = LinkRandPhrase(DLG_TEXT[40], DLG_TEXT[41], DLG_TEXT[42]);
+			dialog.text =  RandSwear() + LinkRandPhrase(DLG_TEXT[42], DLG_TEXT[43], DLG_TEXT[44]) + npchar.money + DLG_TEXT[45];
+			Link.l1 = LinkRandPhrase(DLG_TEXT[46], DLG_TEXT[47], DLG_TEXT[48]);
 			Link.l1.go = "exit";
 
 			LAi_group_SetRelation( LAI_GROUP_GUARDS, LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
@@ -313,45 +414,45 @@ void ProcessDialogEvent()
 		break;
 
 		case "clerk":
-			dialog.text = DLG_TEXT[43];
-			Link.l1 = DLG_TEXT[44];
+			dialog.text = DLG_TEXT[49];
+			Link.l1 = DLG_TEXT[50];
 			Link.l1.go = "exit";
-			Link.l2 = DLG_TEXT[45];
+			Link.l2 = DLG_TEXT[51];
 			Link.l2.go = "purse";
 
 		break;
 
 
 		case "armory":
-			dialog.text = DLG_TEXT[46];
-			Link.l1 = DLG_TEXT[47];
+			dialog.text = DLG_TEXT[52];
+			Link.l1 = DLG_TEXT[53];
 			Link.l1.go = "exit";
-			Link.l2 = DLG_TEXT[48];
+			Link.l2 = DLG_TEXT[54];
 			Link.l2.go = "bombs";
 
-			Link.l3 = DLG_TEXT[49];
+			Link.l3 = DLG_TEXT[55];
 			Link.l3.go = "arms";
 		break;
 
 
 		case "crimp":
-			dialog.text = DLG_TEXT[50];
+			dialog.text = DLG_TEXT[56];
 
 			if(IsBrothelEnabled())
 			{
-				Link.l1 = DLG_TEXT[51];
+				Link.l1 = DLG_TEXT[57];
 				Link.l1.go = "exit";
 			}
 			else
 			{
-				Link.l1 = DLG_TEXT[65];
+				Link.l1 = DLG_TEXT[70];
 				Link.l1.go = "exit";
 			}
 
-			Link.l2 = DLG_TEXT[52];
+			Link.l2 = DLG_TEXT[58];
 			Link.l2.go = "Exit_crew";
 
-			Link.l3 = DLG_TEXT[53];
+			Link.l3 = DLG_TEXT[59];
 			Link.l3.go = "purse";
 		break;
 
@@ -367,15 +468,15 @@ void ProcessDialogEvent()
 
 
 		case "supply":
-			dialog.text = DLG_TEXT[54];
+			dialog.text = DLG_TEXT[60];
 
-			Link.l1 = DLG_TEXT[55];
+			Link.l1 = DLG_TEXT[61];
 			Link.l1.go = "exit";
 
-			Link.l2 = DLG_TEXT[56];
+			Link.l2 = DLG_TEXT[62];
 			Link.l2.go = "Exit_buy";
 
-			Link.l3 = DLG_TEXT[57];
+			Link.l3 = DLG_TEXT[63];
 			Link.l3.go = "purse";
 		break;
 
@@ -392,15 +493,15 @@ void ProcessDialogEvent()
 
 
 		case "officer":
-			dialog.text = DLG_TEXT[58];
-			Link.l1 = DLG_TEXT[59];
+			dialog.text = DLG_TEXT[64];
+			Link.l1 = DLG_TEXT[65];
 			Link.l1.go = "exit";
-			Link.l2 = DLG_TEXT[60];
+			Link.l2 = DLG_TEXT[66];
 			Link.l2.go = "purse";
 
 			if(sti(GetStorylineVar(FindCurrentStoryline(), "NO_CREW_OR_OFFICERS")) < 1 && !CheckAttribute(PChar, "isnotcaptain"))
 			{
-				Link.l3 = DLG_TEXT[61];
+				Link.l3 = DLG_TEXT[67];
 				Link.l3.go = "enlist_me";
 			}
 		break;
@@ -409,8 +510,8 @@ void ProcessDialogEvent()
 		case "enlist_me":
 			// NK let you hire these people
 			NPChar.Dialog.Filename = "Enc_Officer_dialog.c";
-			dialog.Text = DLG_TEXT[62];
-			Link.l1 = DLG_TEXT[63];
+			dialog.Text = DLG_TEXT[68];
+			Link.l1 = DLG_TEXT[69];
 			Link.l1.go = "exit_change_dlg";
 			NPChar.offgen = true;
 			NPChar.officer = true;

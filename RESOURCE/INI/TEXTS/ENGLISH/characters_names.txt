@@ -98,6 +98,12 @@ Native{Native}
 Colombian Indian{Colombian Indian}
 Colombian IndianF{Colombian Indian}
 Colombian Chief{Colombian Chief}
+Chima{Chima}
+Alejandro{Alejandro}
+de Mendoza{de Mendoza}
+Arturo{Arturo}
+de Cádiz{de Cádiz}
+Librarian{Librarian}
 
 {=====| CommonQuest.c |=====}
 Malcolm{Malcolm}
@@ -112,6 +118,8 @@ Vas{Vas}
 de Torres{de Torres}
 Reginald{Reginald}
 de Boeuf{de Boeuf}
+Björn{Björn}
+Roos af Hjelmsäter{Roos af Hjelmsäter}
 Charlie{Charlie}
 Allen{Allen}
 Edgar{Edgar}
@@ -224,6 +232,7 @@ Figueroa{Figueroa}
 Magarino{Magarino}
 Micael{Micael}
 Salinas{Salinas}
+Mahala{Mahala}
 
 {=====| Curacao.c |=====}
 Hans{Hans}
@@ -585,6 +594,8 @@ Bloody{Bloody}
 Norm Kidd{Norm Kidd}
 Iguaran{Iguaran}
 Escriva{Escriva}
+Aubert{Aubert}
+de La Chesnaye{de La Chesnaye}
 
 {=====| IslaMona.c |=====}
 Randolf{Randolf}
@@ -1150,6 +1161,8 @@ Castrilli{Castrilli}
 Fadrique{Fadrique}
 Leonor{Leonor}
 Esperanza{Esperanza}
+Ramón{Ramón}
+Figueras{Figueras}
 Figaux{Figaux}
 Sophie{Sophie}
 Neveu{Neveu}
@@ -1195,6 +1208,7 @@ Tolman{Tolman}
 Voyant{Voyant}
 Fructoso{Fructoso}
 Juana{Juana}
+García{García}
 Ramos{Ramos}
 Fabiao{Fabiao}
 Dunga{Dunga}

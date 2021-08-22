@@ -1,4 +1,4 @@
-string DLG_TEXT[182] = {
+string DLG_TEXT[185] = {
 ". What is it, ",
 "?",
 "May I help you, ",
@@ -181,8 +181,9 @@ string DLG_TEXT[182] = {
 "Hmm not quite. First you'll find the Cloister...",		//179
 "Yes..?",			//180
 "The Abbey is found beyond the Cloister. You have to pass through it somewhow.",	//181
-
-
+"In the Cloister is a very silent monk order. The Abbey I've heard, is for nuns but only accessable in 'WoodesRogers'. The New Cloister has a very famous Library.",	//182
+"Yes! It's the Library I'm searching for. How do I get to the New Cloister?",		//183
+"From the Port take to the left. In the next part of the town straight on. Pass the Residence and you'll find the gate.",	//184
 
 
 };

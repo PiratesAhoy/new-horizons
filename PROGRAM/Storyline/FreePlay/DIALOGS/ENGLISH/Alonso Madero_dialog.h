@@ -14,8 +14,8 @@ string DLG_TEXT[19] = {
 "Indeed, but as I said you could earn a lot...",
 "I hope so. Well, I agree to help. We can weigh anchor now if you want.",
 "After all, I won't accept to help. Sorry, but find someone else. Goodbye!",
-"Unfortunately, I cannot go with you right now. His husband has a trade company in which I work and I must stay here for business these days.",
+"Unfortunately, I cannot go with you right now. Her husband has a trade company in which I work and I must stay here for business these days.",
 "Where does she live in #sHavana#?",
-"Her house is just in front of the town hall. Her name is Elvira Suarez... Captain, don't spend too much time to see her. Her husband is in danger.",
+"Her house is just in front of the town hall. Her name is Elvira Carranza... Captain, don't spend too much time to see her. Her husband is in danger.",
 "Alright, I'll do my best. See you!",
 };

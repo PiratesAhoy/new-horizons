@@ -203,8 +203,8 @@ void InitInterface(string iniName)
 	CreateString(true, "StartYear", CharYear, FONT_NORMAL, COLOR_NORMAL, 420, 268, SCRIPT_ALIGN_CENTER, 0.7);
 	CreateString(true, "StartDay", CharDay, FONT_NORMAL, COLOR_NORMAL, 368, 268, SCRIPT_ALIGN_CENTER, 0.7);
 	CreateString(true, "StartMonth", GetMonthName(CharMonth), FONT_NORMAL, COLOR_NORMAL, 260, 268, SCRIPT_ALIGN_LEFT, 0.7);
-	CreateString(true, "LblData", "Date:", FONT_NORMAL, COLOR_NORMAL, 200, 268, SCRIPT_ALIGN_LEFT, 0.7);
-	CreateString(true, "LblPeriod", "Period:", FONT_NORMAL, COLOR_NORMAL, 200, 289, SCRIPT_ALIGN_LEFT, 0.7);
+	CreateString(true, "LblData", XI_ConvertString("Date") + ":", FONT_NORMAL, COLOR_NORMAL, 200, 268, SCRIPT_ALIGN_LEFT, 0.7);
+	CreateString(true, "LblPeriod", XI_ConvertString("Period") + ":", FONT_NORMAL, COLOR_NORMAL, 200, 289, SCRIPT_ALIGN_LEFT, 0.7);
 	CreateString(true, "StartPeriod", TranslateString("", GetPeriodName(curPeriod)), FONT_NORMAL, COLOR_NORMAL, 250, 289, SCRIPT_ALIGN_LEFT, 0.7);
 	//Levis custom startdate end
 	
@@ -795,9 +795,9 @@ void ChangeStoryline(bool bRight)
 	
 	//Levis custom start date -->
 	GameInterface.strings.StartYear = CharYear;
-	GameInterface.strings.StartMonth = GetMonthName(CharMonth);
+	GameInterface.strings.StartMonth = TranslateString("",GetMonthName(CharMonth));
 	GameInterface.strings.StartDay = CharDay;
-	GameInterface.strings.StartPeriod = GetPeriodName(curPeriod);
+	GameInterface.strings.StartPeriod = TranslateString("", GetPeriodName(curPeriod));
 	bool canchangedate = true;
 	if(CheckAttribute(arstart,"date.lock")) canchangedate = false;
 	SetNodeUsing("YEAR", canchangedate);
@@ -1964,7 +1964,7 @@ void SetWindow(int iWindow)
 			SetNewPicture("FLAG_PICTURE41", "INTERFACES\Flags\Flag_Personal" + personalflagidx + personalflagtex + ".tga");
 			SetNodeUsing("FLAG_PICTURE41", true);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "lblNationPersonal", TranslateString("", CheckNationNameByPeriod(PERSONAL_NATION, curPeriod, true)), FONT_NORMAL, 440, 180, COLOR_NORMAL, 0, SCRIPT_ALIGN_LEFT, true, 0.8, 0);
-			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "NATION", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
+			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitleNation"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("WINDOWSTRINGES", true);
 			SetNodeUsing("TITLE_WINDOW", true);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", true);
@@ -1976,7 +1976,7 @@ void SetWindow(int iWindow)
 		case WINDOW_PIRATEFLAG:
 			SetNodeUsing("TOOLTIP_FADER", true);
 			SetNodeUsing("DIALOG_WINDOW", true);
-			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "PIRATE FLAG", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
+			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitlePirateFlag"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("WINDOWSTRINGES", true);
 			SetNodeUsing("TITLE_WINDOW", true);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", true);
@@ -2001,7 +2001,7 @@ void SetWindow(int iWindow)
 		case WINDOW_PERSONALFLAG:
 			SetNodeUsing("TOOLTIP_FADER", true);
 			SetNodeUsing("DIALOG_WINDOW", true);
-			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "PERSONAL FLAG", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
+			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitlePersonalFlag"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("WINDOWSTRINGES", true);
 			SetNodeUsing("TITLE_WINDOW", true);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", true);
@@ -2026,7 +2026,7 @@ void SetWindow(int iWindow)
 		case WINDOW_PLAYERTYPE:
 			SetNodeUsing("TOOLTIP_FADER", true);
 			SetNodeUsing("DIALOG_WINDOW", true);
-			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "BACKGROUND PROFESSION", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
+			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitleProfession"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("WINDOWSTRINGES", true);
 			SetNodeUsing("TITLE_WINDOW", true);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", true);

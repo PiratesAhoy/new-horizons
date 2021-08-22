@@ -62,15 +62,15 @@ void ProcessDialogEvent()
 			switch(iNation)
 			{
 				case FRANCE:
-					Preprocessor_Add("attack", "HOMMES, ATTAQUE");
+					Preprocessor_Add("attack", "MES HOMMES, ATTAQUEZ");
 				break;
 
 				case SPAIN:
-					Preprocessor_Add("attack", "HOMBRES, ATAQUE");
+					Preprocessor_Add("attack", "HOMBRES, AL ATAQUE");
 				break;
 
 				case PORTUGAL:
-					Preprocessor_Add("attack", "HOMENS, ATAQUE");
+					Preprocessor_Add("attack", "HOMENS, AO ATAQUE");
 				break;
 
 				case HOLLAND:

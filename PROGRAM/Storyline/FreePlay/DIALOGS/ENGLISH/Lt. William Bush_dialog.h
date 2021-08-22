@@ -1,4 +1,4 @@
-string DLG_TEXT[47] = {
+string DLG_TEXT[50] = {
 "Any orders, sir?",
 "Nothing at the moment. Carry on, Mr. Bush.",
 "A rum looking lot, eh, sir?",
@@ -46,4 +46,7 @@ string DLG_TEXT[47] = {
 "Run out a gun.",
 "Bring the prisoners here.",
 "Mr. Bush, I'll have you remind everyone that this is still a ship of war!",
+"Signal from the flagship, sir. All captains come aboard.",
+"Oh, very good Mr. Bush. Acknowledge and clear away the gig.",
+"ACKNOWLEDGE! CLEAR AWAY THE CAPTAIN'S GIG!",
 }

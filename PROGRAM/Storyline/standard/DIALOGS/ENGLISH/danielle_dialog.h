@@ -1,4 +1,4 @@
-string DLG_TEXT[573] = {
+string DLG_TEXT[576] = {
 "I've got nothing to say right now.",
 "Very well; let's move along then...",
 "Are you ready to set sail, ",
@@ -572,4 +572,7 @@ string DLG_TEXT[573] = {
 ".",
 "Hah! A walking Kraken, that's me! But I'm ready when you are.",
 "We'll need some time to plan the assault - it won't be a cakewalk. When we're ready, you can put me and my crew ashore at the lighthouse.",
+"When are we going to #sRedmond#? If we can't get the gold from the temple, at least let's try to get something for Silehard.",
+"Have a bit of patience, ",
+"! I haven't forgotten about that.",
 };

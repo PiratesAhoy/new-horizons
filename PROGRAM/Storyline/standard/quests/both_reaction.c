@@ -583,7 +583,7 @@ void BothQuestComplete(string sQuestName)
 			Log_SetStringToLog(QUEST_MESSAGE10); 
 			Log_SetStringToLog(QUEST_MESSAGE11);
 
-			TakeNItems(PChar,"blade6", 1);
+			TakeNItems(PChar,"bladeMH", 1);		// GR: originally blade23 ("Windmill Slayer"), then blade6 (Schiavona)
 		break;
 	
 		case "Tut_TakeStuff":

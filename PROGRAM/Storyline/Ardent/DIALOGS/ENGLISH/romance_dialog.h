@@ -265,7 +265,7 @@ string DLG_TEXT[516] = {
 "How do you like this outfit? It is more practical on deck than my dress, anyway.",
 "Very nice!",
 "Oh, ",
-" I am so glad to see you! Can you open this door?",
+", I am so glad to see you! Can you open this door?",
 "Unfortunately I don't have a key so opening that door may take a while.",
 "That corridor leads to the house of ",
 ". There must be a key in there somewhere.",

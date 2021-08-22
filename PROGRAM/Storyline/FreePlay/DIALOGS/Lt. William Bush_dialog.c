@@ -223,5 +223,17 @@ void ProcessDialogEvent()
 			link.l1 = "";
 			link.l1.go = "exit";
 		break;
+
+		case "Signal_from_the_flagship":
+			dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "Signal_from_the_flagship2";
+		break;
+
+		case "Signal_from_the_flagship2":
+			dialog.text = DLG_TEXT[49];
+			link.l1 = "";
+			link.l1.go = "exit";
+		break;
 	}
 }

@@ -1,0 +1,24 @@
+title=The Poker Tournament
+text.t1=I won a token that gives entry to a Poker Tournament in Grand Turk at the Double R Club. The token is intriguing and smacks a little of duplicity. Once I have the required stake I should go there at the double.
+text.t2=I've been accepted into the Tournament after they double checked my token was authentic. I now have to complete one bout each day for three consecutive days.
+text.t3=Damn! I've been thrown out of the Tournament because I missed yesterday. It's a double whammy because I'm banned for the future too.
+text.t4=I won the Tournament and have the trophy. I wonder if I can double up and win the next one to be held starting on #sdate#.
+text.t5=I lost the Tournament. I wonder if I can win next time? It should be doable I must remember it's to be held starting on #sdate#.
+text.t6=Well it's finally time to test my poker again (could that be double entendre?). Let's hope the R's are ready.
+text.t7=It's too late to attend the Poker Tournament so I've missed my double date after all.
+text.t8=Only a month now until the next Poker Tournament so I'd best plan and prepare if I'm not going to be double booked and unable to attend.
+text.t9=Well it's finally time to test my poker skills again. Let's hope the R's are ready.
+text.t10=I won the Tournament and have the trophy. I wonder if I can double up and win the next one to be held starting on #sdate1#.
+text.t11=I lost the Tournament. I wonder if I can win next time? It should be doable I must remember it's to be held starting on #sdate1#.
+text.t12=I won the Tournament and have the trophy. I wonder if I can double up and win the next one to be held starting on #sdate2#.
+text.t13=I lost the Tournament. I wonder if I can win next time? It should be doable I must remember it's to be held starting on #sdate2#.
+text.t14=I won the Tournament and have the trophy. I wonder if I can double up and win the next one to be held starting on #sdate3#.
+text.t15=I lost the Tournament. I wonder if I can win next time? It should be doable I must remember it's to be held starting on #sdate3#.
+text.t16=I won the Tournament and have the trophy. I wonder if I can double up and win the next one to be held starting on #sdate4#.
+text.t17=I lost the Tournament. I wonder if I can win next time? It should be doable I must remember it's to be held starting on #sdate4#.
+
+
+
+
+
+

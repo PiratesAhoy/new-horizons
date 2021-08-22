@@ -1,10 +1,10 @@
 HelpChooser {Selector de ayuda}
 MainInterface {Interfaz principal}
-DialogControls {Di√°logo}
-WorldMapControls {Mapa de navegaci√≥n}
+DialogControls {Di·logo}
+WorldMapControls {Mapa de navegaciÛn}
 BattleInterfaceControls {Interfaz de batalla}
-Sailing1Pers {Navegaci√≥n 1¬™ persona}
-Sailing3Pers {Navegaci√≥n 3¬™ persona}
+Sailing1Pers {NavegaciÛn en primera persona}
+Sailing3Pers {NavegaciÛn en tercera persona}
 FightModeControls {Modo de combate}
 PrimaryLand {Controles primarios en tierra}
 
@@ -12,49 +12,49 @@ PrimaryLand {Controles primarios en tierra}
 
 ChrCamTurnV
 {
-Movimeinto vertical de la c√°mara del personaje
+Movimeinto vertical de la c·mara del personaje
 
 }
 ChrCamTurnH
 {
-Movimeinto horizontal de la c√°mara del personaje
+Movimeinto horizontal de la c·mara del personaje
 
 }
 ChrCamCameraSwitch
 {
-Cambiar modo de c√°mara primera/tercera persona
+Cambiar modo de c·mara primera/tercera persona
 
 }
 ChrCamNormalize
 {
-Reestablecer c√°mara a posici√≥n por defecto
+Reestablecer c·mara a posiciÛn por defecto
 
 }
 
 Sulan_ArchipelagoMap
 {
-Mostrar mapa del archipi√©lago map (si tienes uno)
+Mostrar mapa del archipiÈlago map (si tienes uno)
 
 }
 
 ShipCamera_Turn_V
 {
-Movimiento vertical de la c√°mara del barco
+Movimiento vertical de la c·mara del barco
 
 }
 ShipCamera_Turn_H
 {
-Movimiento horizontal de la c√°mara del barco
+Movimiento horizontal de la c·mara del barco
 
 }
 ShipCamera_Forward
 {
-Aumentar zoom de c√°mara sobre el barco
+Aumentar zoom de c·mara sobre el barco
 
 }
 ShipCamera_Backward
 {
-Disminuir zoom de c√°mara sobre el barco
+Disminuir zoom de c·mara sobre el barco
 
 }
 
@@ -81,7 +81,7 @@ Moverse hacia delante en cubierta
 }
 DeckCamera_Backward
 {
-Moverse hacia atr√°s en cubierta
+Moverse hacia atr·s en cubierta
 
 }
 DeckCamera_Left
@@ -123,7 +123,7 @@ Personaje: girar derecha
 }
 ChrAction
 {
-Realizar una acci√≥n
+Realizar una acciÛn
 
 }
 ChrForward
@@ -138,12 +138,12 @@ Movimiento adelante
 }
 ChrBackward
 {
-Movimiento atr√°s
+Movimiento atr·s
 
 }
 ChrBackward1
 {
-Movimiento atr√°s
+Movimiento atr·s
 
 }
 ChrRun
@@ -209,7 +209,7 @@ Arriar velas
 }
 Ship_Fire
 {
-Disparar ca√±ones
+Disparar caÒones
 
 }
 Aimed_Ship_Fire
@@ -219,7 +219,7 @@ Disparar con apuntado manual
 }
 Sea_CameraSwitch
 {
-Cambiar entre c√°mara de cubierta y c√°mara a√©rea
+Cambiar entre c·mara de cubierta y c·mara aÈrea
 
 }
 TelescopeIn
@@ -234,32 +234,32 @@ Usar/dejar de usar catalejo
 
 WMapTurnH
 {
-Rotar c√°mara alrededor del barco en el mapa de navegaci√≥n
+Rotar c·mara alrededor del barco en el mapa de navegaciÛn
 
 }
 WMapTurnV
 {
-Rotar c√°mara sobre el barco en el mapa de navegaci√≥n
+Rotar c·mara sobre el barco en el mapa de navegaciÛn
 
 }
 WMapCameraRotate
 {
-Activar deslizamiento y rotaci√≥n de c√°mara
+Activar deslizamiento y rotaciÛn de c·mara
 
 }
 WMapForward
 {
-Aumentar zoom en el mapa de navegaci√≥n
+Aumentar zoom en el mapa de navegaciÛn
 
 }
 WMapBackward
 {
-Disminuir zoom en el mapa de navegaci√≥n
+Disminuir zoom en el mapa de navegaciÛn
 
 }
 WMapCameraSwitch
 {
-Cambiar modo de c√°mara
+Cambiar modo de c·mara
 
 }
 WMapShipSailUp
@@ -269,7 +269,7 @@ Navegar avante
 }
 WMapShipSailDown
 {
-Navegar atr√°s
+Navegar atr·s
 
 }
 WMapShipTurnLeft
@@ -284,7 +284,7 @@ Girar a estribor (derecha)
 }
 WMapCancel
 {
-Salir del mapa de navegaci√≥n
+Salir del mapa de navegaciÛn
 
 }
 
@@ -300,12 +300,12 @@ Abrir pantalla de estado del jugador
 }
 MainMenu
 {
-Abrir men√∫ principal
+Abrir men˙ principal
 
 }
 Help
 {
-Abir selector de temas de ayuda
+Abrir selector de temas de ayuda
 
 }
 
@@ -315,12 +315,12 @@ Abir selector de temas de ayuda
 
 BICommandsActivate
 {
-Abrir men√∫ de iconos de comando
+Abrir men˙ de iconos de comando
 
 }
 LICommandsActivate
 {
-Abrir men√∫ de iconos de comando
+Abrir men˙ de iconos de comando
 
 }
 BICommandsConfirm
@@ -330,17 +330,17 @@ Activar icono de comando seleccionado
 }
 BICommandsCancel
 {
-Cancelar actual men√∫ de iconos de comando
+Cancelar actual men˙ de iconos de comando
 
 }
 BICommandsLeft
 {
-Mover izquierda en el men√±u de comandos
+Mover izquierda en el men˙ de comandos
 
 }
 BICommandsRight
 {
-Mover derecha en el men√∫ de comandos
+Mover derecha en el men˙ de comandos
 
 }
 MiniMapZoomIn
@@ -355,7 +355,7 @@ Disminuir zoom en Minimapa
 }
 BIFastCommand
 {
-Realizar comando de "acci√≥n r√°pida"
+Realizar comando de "acciÛn r·pida"
 
 }
 
@@ -375,7 +375,7 @@ Ver tema de ayuda sobre el elemento de pantalla seleccionado
 }
 HelpChooser_Next
 {
-Ver tem ade ayuda siguiente
+Ver tema de ayuda siguiente
 
 }
 HelpChooser_Prev
@@ -412,7 +412,7 @@ Seleccionar tema abajo
 
 DlgAction
 {
-Eleguir una respuesta de di√°logo
+Eleguir una respuesta de di·logo
 
 }
 DlgUp
@@ -469,13 +469,13 @@ Cambiar nombre de jugador al que se encuentra en BuildSettings.h
 
 NK_AlwaysRunToggle
 {
-Activar o desactivar "correr siempre" / Direcci√≥n de "Virar sobre el ancla" (estribor o babor)
+Activar o desactivar "correr siempre" / DirecciÛn de "Virar sobre el ancla" (estribor o babor)
 
 }
 
 NK_LogsToggle
 {
-Activar o desactivar informaci√≥n extra
+Activar o desactivar informaciÛn extra
 
 }
 
@@ -493,25 +493,25 @@ Iniciar modo embestida
 
 BOAL_Control
 {
-Acelerar el tiempo en incrementos de 1x a 3x, 10x y 30x
+Acelerar el tiempo en incrementos de 1x, 3x, 10x y 30x
 
 }
 
 BOAL_Control2
 {
-Mostrar informaci√≥n del personaje, arreglar bugs. Si el juego sufre un crash, recarga y pulsa esta tecla.
+Mostrar informaciÛn del personaje, arreglar bugs. Si el juego sufre un crash, recarga y pulsa esta tecla.
 
 }
 
 BOAL_Control0
 {
-Decelera el tiempo en desde 30x a 10x, 3x y 1x
+Reducir velocidad del tiempo de 30x a 10x, 3x y 1x
 
 }
 
 BOAL_UsePotion
 {
-Beber un poci√≥n curativa
+Beber una pociÛn curativa
 
 }
 TIH_FireDrill
@@ -522,12 +522,12 @@ Activar zafarrancho de incendio para apagar fuegos a bordo
 
 DCH_Quicksave
 {
-Guardado r√°pido
+Guardado r·pido
 
 }
 DCH_Quickload
 {
-Carga r√°pida
+Carga r·pida
 
 }
 
@@ -545,7 +545,7 @@ Paso lateral derecha
 
 Equip
 {
-Equipar r√°pido
+Equipar r·pido
 
 }
 
@@ -557,7 +557,7 @@ Pausar juego
 
 NK_DialogStart
 {
-Saquear cad√°ver
+Saquear cad·ver
 
 }
 

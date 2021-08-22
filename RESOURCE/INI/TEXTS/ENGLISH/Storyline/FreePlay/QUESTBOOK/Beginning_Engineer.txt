@@ -1,0 +1,18 @@
+title=A new invention
+text.t1=My friend Sakharine is in real danger. He's hiding with his new invention in a Monastary Library in Cartagena. 
+text.t2=The Library is in the New Cloister. I'll find it by taking to the left from the port. Next straight on and pass the Residence.
+text.t3=The blue Library door is found in the Cloisters inner yard.
+text.t4=I have been warned not to try stealing any books. Or the Librarian gets - angry?
+text.t5=Could that nonsense text on the Map mean: it's either always Right or always Left? But even if so, where to start? I have to study the Map more closely!
+text.t6=I have found one part of Sakharine's invention. Wonder how many parts there are?
+text.t7=I think I've got all parts but need Tools to assemble this weapon.
+text.t8=I've got the Tools but not all parts of the weapon yet. 
+text.t9=I think I've got all parts and the Tools. Let's do some engineering.
+text.t10=The new Rifle is complete but I need ammo too.
+text.t11=The new Rifle is complete and ready to use.
+
+
+
+
+
+

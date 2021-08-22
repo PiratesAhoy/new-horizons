@@ -1,4 +1,4 @@
-string DLG_TEXT[35] = {
+string DLG_TEXT[41] = {
 "Welcome! Take a seat at the free table. What would you like to order, ",
 "?",
 "Nothing. I'm here on business.",
@@ -34,4 +34,10 @@ string DLG_TEXT[35] = {
 "No. I have another question.",
 "Friends, please! Enough of this madness. Don't make me call out the guard!",
 "Relax! I'm leaving.",
+"Yes? What do you want?",
+"I'd like to spend some good times 'if you understand'. Could you help me to find a woman?",
+"Hahaha! Of course, Captain. 'I understand'. Talk to Laura Cotton.",
+"Where is she?",
+"At this hour, I suppose at home. It's the house next to the exit to the jungles.",
+"Thanks!",
 };

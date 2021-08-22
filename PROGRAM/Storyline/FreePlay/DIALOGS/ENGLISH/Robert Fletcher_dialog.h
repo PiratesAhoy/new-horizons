@@ -264,6 +264,7 @@ string DLG_TEXT[340] = {
 "I am sorry the ship's rolling is making you seasick, but we do not have different quarters available for you. Now please leave my cabin.",
 "Very well, then. Let's just hope I don't fall overboard in this storm. You could get into a lot of trouble with your employer if you lose one of your passengers!",
 "The gentleman knew what he was doing. If his brother cannot deal with that, then he can deal with ME!",
+"True enough. We'll try to leave without any more trouble. Set sail at once!",
 "Good evening, #schild#.",
 "You... Stay away from me!",
 "A little late for that. Beautiful ship, isn't it?",

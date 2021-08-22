@@ -18,10 +18,10 @@ itmdescr_love_letters_of_priest
 Cartas de amor del #sFatherJerald# a cierta muchacha.
 }
 
-itmname_animists_amulet	{Amuleto animista}
+itmname_animists_amulet	{Amuleto satánico}
 itmdescr_animists_amulet
 {
-Un siniestro amuleto animista con forma de estrella de cinco puntas.
+Un siniestro amuleto satánico con forma de estrella de cinco puntas.
 }
 
 itmname_letter_to_domingues	{Carta para el Padre Domingues}

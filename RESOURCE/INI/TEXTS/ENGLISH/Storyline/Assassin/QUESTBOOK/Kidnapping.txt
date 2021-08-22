@@ -10,5 +10,5 @@ text.t8=Damn it! I failed my attempt and the mission by the way.
 text.t9=I need to go to #sWillemstad# on #sisland_Curacao# and look for more information about Roche.
 text.t10=It seems Roche lives in a village near the town. Let's check this!
 text.t11=The envoy is under way with Nicholas Butcher but my mission is not finished, I must capture Roche. He has left the Island, I will need to look for his ship at sea. That soldier on #sisland_Hispaniola# said he has a black fast galleon named 'Quick Death', where would he be going for a short trip?
-text.t12=Done! I captured Roche Brasiliano. Let's head to #sHavana# on #sisland_Cuba#, the Vice-Admiral will be waiting....I will greatly impress him if I land during the day for all to see...
+text.t12=Done! I captured Roche Brasiliano, wounded in the battle but still alive. Let's head to #sHavana# on #sisland_Cuba#, the Vice-Admiral will be waiting....I will greatly impress him if I land during the day for all to see...
 text.t13=One month I left Vice-Admiral Benavides. Time has come to return to Havana and see him again. He must have a new mission for me.

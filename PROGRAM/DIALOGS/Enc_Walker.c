@@ -160,8 +160,8 @@ void ProcessDialogEvent()
 						switch(Rand(1))
 						{
 							case 0:						// beggar
-								if (PChar.sex == "woman") Preprocessor_Add("title", XI_ConvertString("Madam"));
-								else Preprocessor_Add("title", XI_ConvertString("Sir"));
+								if (PChar.sex == "woman") Preprocessor_Add("title", FirstLetterUp(XI_ConvertString("Madam")));
+								else Preprocessor_Add("title", FirstLetterUp(XI_ConvertString("Sir")));
 								Preprocessor_Add("person", XI_ConvertString(NPChar.sex));
 								d.Text = DLG_TEXT[27];
 								Link.l1 = DLG_TEXT[28];

@@ -1,7 +1,7 @@
-title=Open the Chest
-text.t1=The niche stays open now but how can I reach the Chest?
-text.t2=I think I'll follow that Powdermonkey instead.
-text.t3=I'm gonna search this new shaft thoroughly at low tide!
-text.t4=What's wrong with the lights - did the Monkey turned them out?
-text.t5=Wonder what I'm supposed to do with that Saw?
-text.t6=I got a plank, maybe I can use it in a similar way as the skull??
+title=ќткрыть сундук
+text.t1=Ќиша открыта, но как добратьс€ до сундука?
+text.t2=ƒумаю, стоит последовать за этой 'пороховой обез€ной'.
+text.t3=я пробирусь в эту шахту при отливе!
+text.t4=„то случилось с огнем - обезь€на погасила его?
+text.t5=»нтересно, что € должен сделать с этой пилой?
+text.t6=я получил доску, возможно ее стоит использовать также как и череп?

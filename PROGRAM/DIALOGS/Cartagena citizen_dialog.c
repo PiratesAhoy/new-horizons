@@ -256,6 +256,14 @@ void ProcessDialogEvent()
 				Link.l5.go = "monastary";
 			}
 			//JRH: WoodesRogers2 <--
+
+			//JRH: FreePlay engineer -->
+			if(GetAttribute(Pchar, "monastary") == "Ivan_Sakharine")
+			{
+				Link.l5 = DLG_TEXT[170];
+				Link.l5.go = "new_cloister";
+			}
+			//JRH: FreePlay engineer <--
 		break;
 
 		case "town_smithy":
@@ -344,7 +352,33 @@ void ProcessDialogEvent()
 			Link.l1.go = "exit";
 			AddDialogExitQuest("Abbey_info");
 		break;
+//----------------------------------------------------------------------------------------
+		case "new_cloister":
+			d.Text = DLG_TEXT[171];
+			Link.l1 = DLG_TEXT[172];
+			Link.l1.go = "new_cloister1";
+		break;
 
+		case "new_cloister1":
+			d.Text = DLG_TEXT[173];
+			Link.l1 = DLG_TEXT[174];
+			Link.l1.go = "new_cloister2";
+		break;
+
+		case "new_cloister2":
+			d.Text = DLG_TEXT[182];
+			Link.l1 = DLG_TEXT[183];
+			Link.l1.go = "new_cloister3";
+		break;
+
+		case "new_cloister3":
+			AddQuestRecord("Beginning_Engineer", "2");
+			d.Text = DLG_TEXT[184];
+			Link.l1 = DLG_TEXT[154];
+			Link.l1.go = "exit";
+		break;
+
+//----------------------------------------------------------------------------------------
 		case "colony":
 			dialog.snd1 = "";
 			dialog.snd2 = "";

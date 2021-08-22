@@ -2293,4 +2293,39 @@ if (ENABLE_WEAPONSMOD)
     	AddGameCharacter(n, ch);
     }
     // <-- RobC/Alan_Smithee Blacksmith mod
+
+	// Levis: Storyteller
+	ch.old.name = "Mahala";
+	ch.old.lastname = "";
+	ch.name    = "Mahala";
+	ch.lastname    = "";
+	ch.id        = "Mahala";
+	ch.model    = "gipsygirl";
+	ch.sex = "woman";
+	ch.sound_type = "female_citizen";
+	ch.location    = "Santiago_town_01";
+	ch.location.group = "merchant";
+	ch.location.locator = "merchant6";
+	ch.Dialog.Filename = "Mahala_dialog.c";
+	ch.greeting = "Gr_Desiree' Muerte";
+	ch.nation = SPAIN;
+	ch.rank    = 20;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "10";
+	ch.skill.Sneak = "2";
+	ch.money = "100";
+	ch.questchar = true;
+	LAi_SetStayType(ch);
+	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
+	LAi_SetLoginTime(ch, 0.0, 24.0);		//JRH
+	AddGameCharacter(n, ch);
 }

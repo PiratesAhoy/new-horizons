@@ -10,3 +10,5 @@ text.t8=Encountered a Spanish lugger under a flag of truce. Spain has switched s
 text.t9=After a hard battle, we have defeated 'Natividad'. Lady Barbara Wellesley insisted on helping to tend the wounded, but was unable to save Midshipman Longley. My duty now is to convey her Ladyship to #sGreenford#.
 text.t10=Rear Admiral Sir Rodney Leighton met us and has escorted Lady Barbara Wellesley from the ship. I should report to Naval HQ.
 text.t11=I have been given command of a larger ship, the 'Sutherland'. My crew from the '#sold_ship#' will also transfer to the 'Sutherland'.
+text.t12=Rear Admiral Sir Rodney Leighton met us and has escorted Lady Barbara Wellesley from the ship. My wife is probably waiting to hear from me so I should go home.
+text.t13=There was very sad news when I returned home. My wife, Maria, died in childbirth. However, the child survived - I have a son! Mrs. Mason will look after him while I am away. Now I am to report to the Naval HQ here in #sGreenford#.

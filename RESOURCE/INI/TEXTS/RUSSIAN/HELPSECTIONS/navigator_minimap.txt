@@ -1,22 +1,22 @@
 minimap_title
 {
-Navigation Minimap
+Навигационная карта
 }
 minimap_info
 {
-    Navigation minimap (pic.1) appears only at sea. It shows current ship and wind speed, round type that loaded in ships cannons and reloading state of cannons for each side. Also compass and wind direction and disposition of island and allied and hostile objects around player's ship.
+    Навигационная карта (рис.1) показывается только в морской части игры. На ней отображаются такие параметры корабля, как: скорость корабля и ветра, текущий заряд в пушках и состояние зарядки пушек по каждому борту, компас и направление ветра, а также расположение своих и чужих кораблей и острова.
 
-    Left top number on minimap is wind speed, right top number - current ship speed. These parameters are also represented graphically: blue inner sector on the left side of minmap is wind speed, and yellow sector on the right is ship speed.
+    Цифрами на навигационной карте показаны: левая верхняя - скорость ветра, правая верхняя - скорость корабля. Эти же параметры показаны и графически: синий внутренний сектор в левой половине миникарты отображает скорость ветра, а скорость корабля показана желтым сектором в правой части миникарты.
 
-    Cannons reloading state is shown by four green (or red, if cannons are not loaded yet) sectors around the minimap. Top, bottom, left and right sectors accordingly represents loading state of bow, stern, larboard and starboard cannons accordingly. Small icon in bottom right corner of the minimap shows current cannon round type. Possible round types could be seen on pic.2 and are knippels, bombs, cannonballs and shrapnel accordingly from left to right. When there is not enough rounds of sekected type to load all cannons, that icon starts to blink.
+    Состояние заряда пушек показано графически четырмя зелеными или, при не полной готовности, красными секторами окружающими сектора скорости. Верхний, нижний, левый и правый сектор соответствуют состоянию зарядки у носовых, кормовых пушках и пушек левого и правого борта соответственно. Текущий тип заряда показывает иконка в правом нижнем углу навигационной карты. Варианты типов заряда показаны на рисунке 2 и соответствуют: книпели, бомбы, ядра и шрапнель в порядке слева на право. Когда зарядов становиться недостаточно, для полной зарядки бортов судна, то этот индикатор мигает.
 
-    Outer circle of the minimap is a compass. It turns around the minimap, since player's ship location on the minimap is fixed - player's ship bow is always looks up, and stern - to the bottom.
+    Внешний обод навигационной карты представлен компасом. Подвижной частью карты является именно компас, тогда как положение нашего корабля на миникарте однозначно определено как то: нос корабля направлен вертикально вверх, корма - вниз.
 
-    Wind direction is represented with white arrow that goes through the center of the minimap.
+    Направление ветра на навигационной карте показано белой стрелкой проходящей через центр карты.
 
-    Firing zones of bow, stern and board cannons are shown with white transparent sectors.
+    Зоны обстрела носовыми, кормовыми и бортовыми орудиями показаны соответствующими белыми полупрозрачными секторами.
 
-    On the minimap player can see an island that his ship is sailing around of. Also all other ships that are inside of viewing dstance, will appear on the minimap. Ally ships will is shown with green, enemies - with red and neutral objects are gray(pic.3)
+    На самой карте показан остров, возле которого в данный момент находится ваш корабль, а также другие корабли, находящиеся в зоне видимости карты. При этом свои корабли показываются зеленым, вражеские красным, а нейтральные серыми цветами (рис.3)
 
-    You can change minimap scale with minimap zoom keys.
+    Мастаб карты можно изменять кнопками (или клавишами) назначенными для изменения масштаба навигационной карты.
 }

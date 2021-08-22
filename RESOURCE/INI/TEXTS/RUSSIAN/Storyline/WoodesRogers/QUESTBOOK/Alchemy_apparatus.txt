@@ -1,6 +1,6 @@
-title=Alchemy - assembling the Apparatus
-text.t1=It's  Cauldron - Retort - Top - Glass tube - Receiver  in that order.
-text.t2=The Cauldron must be filled with water!
-text.t3=All I need is in the bootyroom or in the kitchen.
-text.t4=I have to assemble the Distillery Apparatus, guess it shall be placed in that large oven.
+title=Алхимия - сборка аппарата
+text.t1=Котел - реторта - крышка - Стеклянная труба - пустая емкость в таком порядке.
+text.t2=Котел должен быть заполнен водой!
+text.t3=Все что мне нужно есть на складе или на кухне.
+text.t4=Я должен собрать перегонный аппарат, думаю его нужно поместить в ту большую печь
 text.t5=

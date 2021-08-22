@@ -19,7 +19,7 @@ string DLG_TEXT[42] = {
 "Ha! What an unremarkable ",
 ". I'd almost rather not waste my time on it, if not for the gold you're about to part with.",
 "Meh. If you think I'm impressed with that little ",
-" , captain, you're wrong. When I'm through with it, it'll be a finer blade than you deserve.",
+", captain, you're wrong. When I'm through with it, it'll be a finer blade than you deserve.",
 "Har-de-har-har. You call that wretched ",
 " of yours a sword? I'll show you a sword, when I'm through with it.",
 "Bah! You bring me an already perfect ",

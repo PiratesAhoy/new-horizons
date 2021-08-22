@@ -3251,7 +3251,7 @@ void QuestComplete(string sQuestName)
 		case "falarllano":
 			LAi_SetActorType(pchar);
 			LAi_ActorSetSitMode(pchar);
-			ChangeCharacterAddressGroup(pchar, "Muelle_tavern", "candles", "sit3");
+			ChangeCharacterAddressGroup(pchar, "Muelle_tavern", "sit2", "sit3");
 			Characters[GetCharacterIndex("Facundo Llano")].dialog.currentnode = "begin_2";
 
 			break;
@@ -4967,6 +4967,10 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "dentro_forte":
+			LAi_group_SetRelation("FORTV_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+			LAi_group_SetLookRadius("FORTV_SOLDIERS", LAI_GROUP_GRD_LOOK/2);
+			LAi_group_SetHearRadius("FORTV_SOLDIERS", LAI_GROUP_GRD_HEAR/2);
+			LAi_group_SetSayRadius("FORTV_SOLDIERS", LAI_GROUP_GRD_SAY);
 			AddQuestRecord("Hunter", "9");
 //			GiveItem2Character(CharacterFromId("Fort Captain"), "Fort_Keys");	// Stealing his keys may not work if he's under too many soldier corpses, or if corpse looting is disabled
 
@@ -7176,7 +7180,7 @@ void QuestComplete(string sQuestName)
 			GiveItem2Character(CharacterFromId("Captain Villalobos"), "bladex4");
 			EquipCharacterByItem(CharacterFromId("Captain Villalobos"), "bladex4");
 
-			ChangeCharacterAddressGroup(CharacterFromID("Bartolomeu"), "Morgan_ShipDeck", "rld", "loc10");
+			ChangeCharacterAddressGroup(CharacterFromID("Elting"), "Morgan_ShipDeck", "rld", "loc10");
 			ChangeCharacterAddressGroup(CharacterFromID("Henry Morgan"), "Morgan_ShipDeck", "rld", "loc13");
 
 			Characters[GetCharacterIndex("Henry Morgan")].dialog.currentnode = "begin_40";

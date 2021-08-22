@@ -909,6 +909,14 @@ void Box_EnterToLocator(aref loc, string locName)
 					{
 						if(chr.boxname == "box1" || chr.boxname == "box2") chr.boxname.boxlabel = "";//JRH skip text Chest on "boxes"
 					}
+
+					if(chr.location == "New_cloister_library")
+					{
+						if(chr.boxname == "box8" || chr.boxname == "box9" || chr.boxname == "box10" || chr.boxname == "box11"
+						|| chr.boxname == "box12" || chr.boxname == "box14" || chr.boxname == "box15"
+						|| chr.boxname == "box18" || chr.boxname == "box19" || chr.boxname == "box20") chr.boxname.boxlabel = "BookShelf";//JRH skip text Chest on "boxes"
+						if(chr.boxname == "box13") chr.boxname.boxlabel = "Cloister yard";
+					}
 				}
 			}
 			if (!CheckAttribute(chr,"BoxName.update")) Event("procChrOpenBox", "s", chr.boxname.boxlabel);
@@ -1572,6 +1580,32 @@ void OpenBoxProcedure()
 			}
 			return;
 		}
+
+		if(Locations[locidx].id=="New_cloister_library")
+		{
+			if(chr.boxname == "box13")
+			{
+				LAi_QuestDelay("library_for_ever", 0.01);
+			}
+			else
+			{
+				LaunchItemsBox(&ar);
+				LAi_QuestDelay("check_portugize_books", 0.5);		//from ALL boxes!
+
+				if(chr.boxname == "box2" || chr.boxname == "box3" || chr.boxname == "box4"
+				|| chr.boxname == "box5" || chr.boxname == "box6")
+				{
+					LAi_QuestDelay("check_portugize_parts", 0.5);
+				}
+
+				if(chr.boxname == "box1" || chr.boxname == "box7")
+				{
+					LAi_QuestDelay("engineer_mission_complete_check", 0.5);
+				}
+			}
+			return;
+		}
+
 
 		// PB: Treasure Quests -->
 		//Levis added location dependancy for required item
@@ -3028,6 +3062,38 @@ void Box_FillBox(ref _location, string locatorName, bool isAbordageBox)
 		}
 
 //		if(_location.id=="Muelle04_HouseInsideR6") locations[FindLocation(chr.location)].box2.items.pistol62 = 1;
+
+		if(_location.id=="New_cloister_library")
+		{
+			spawnItemsCount = 0;
+			locations[FindLocation(chr.location)].box1.items.powderbarrel = 1;
+			locations[FindLocation(chr.location)].box1.items.gunpowder = 24;
+		      locations[FindLocation(chr.location)].box1.items.book33F = 1;
+			locations[FindLocation(chr.location)].box2.items.port_stock = 1;
+			locations[FindLocation(chr.location)].box3.items.port_metal = 1;
+			locations[FindLocation(chr.location)].box4.items.port_rest = 1;
+			locations[FindLocation(chr.location)].box5.items.port_magazine = 1;
+		      locations[FindLocation(chr.location)].box5.items.book36F = 1;
+			locations[FindLocation(chr.location)].box6.items.port_barrel = 1;
+			locations[FindLocation(chr.location)].box7.items.ammobag = 1;
+			locations[FindLocation(chr.location)].box7.items.pistolgrapes = 24;
+		
+
+			locations[FindLocation(chr.location)].box8.items.book21F = 1;
+		locations[FindLocation(chr.location)].box8.items.potion3 = 1;
+			locations[FindLocation(chr.location)].box9.items.book22F = 1;
+			locations[FindLocation(chr.location)].box10.items.book23F = 1;
+			locations[FindLocation(chr.location)].box11.items.book24F = 1;
+			locations[FindLocation(chr.location)].box12.items.book26F = 1;
+		locations[FindLocation(chr.location)].box12.items.potion4 = 1;
+			locations[FindLocation(chr.location)].box14.items.book27F = 1;
+			locations[FindLocation(chr.location)].box15.items.book28F = 1;
+			locations[FindLocation(chr.location)].box18.items.book29F = 1;
+			locations[FindLocation(chr.location)].box19.items.book31F = 1;
+		locations[FindLocation(chr.location)].box19.items.potion3 = 1;
+			locations[FindLocation(chr.location)].box20.items.book34F = 1;
+		      locations[FindLocation(chr.location)].box20.items.book35F = 1;
+		}
 
 		for (int j = 0; j < spawnItemsCount; j++) {
 			if (needRespawn || isAbordageBox)

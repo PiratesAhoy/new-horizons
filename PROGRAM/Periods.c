@@ -272,7 +272,7 @@ void InitPeriods()
 	period.Towns."Grand Cayman".gov.name = "Francisco";
 	period.Towns."Grand Cayman".gov.lastname = "Xelder";
 	period.Towns.Havana.gov.name = "Pedro";
-	period.Towns.Havana.gov.lastname = "Vadés";
+	period.Towns.Havana.gov.lastname = "Valdés";
 	period.Towns.Santiago.gov.name = "Gaspar";
 	period.Towns.Santiago.gov.middlename = "Ruíz";
 	period.Towns.Santiago.gov.lastname = "de Pereda";
@@ -570,7 +570,7 @@ void InitPeriods()
 	period.Relations.France.America = RELATION_NEUTRAL;
 	period.Relations.Spain.Holland = RELATION_ENEMY;
 	period.Relations.Spain.Portugal = RELATION_ENEMY;
-	period.Relations.Spain.America = RELATION_ENEMY;
+	period.Relations.Spain.America = RELATION_NEUTRAL;
 	period.Relations.Holland.Portugal = RELATION_ENEMY;
 	period.Relations.Holland.America = RELATION_FRIEND;
 	period.Relations.Portugal.America = RELATION_FRIEND;
@@ -757,6 +757,11 @@ void InitTownNationalities()
 		break;
 
 		case PERIOD_THE_SPANISH_MAIN:
+			if (SWEDEN_ALLOWED)
+			{
+				if (GetDataYear() == 1668) ChangeCharacterAddressGroup(CharacterFromID("Swedish Emissary"), "Philipsburg_residence",  "goto","goto5");
+				else ChangeCharacterAddressGroup(CharacterFromID("Swedish Emissary"), "Marigot_mansion_hall",  "goto","goto5");
+			}
 		/*	if (Items_FindItem("musketbullets", &item) >= 0) {
 				item.rare      = 0.00;
 				item.skiptrade = true;
@@ -765,10 +770,20 @@ void InitTownNationalities()
 		break;
 
 		case PERIOD_GOLDEN_AGE_OF_PIRACY:
+			if (SWEDEN_ALLOWED)
+			{
+				ChangeCharacterAddressGroup(CharacterFromID("Swedish Emissary"), "Marigot_mansion_hall",  "goto","goto5");
+				if (GetDataYear() >= 1688 && GetDataYear() <= 1691) ChangeCharacterAddressGroup(CharacterFromID("Swedish Emissary"), "Philipsburg_residence",  "goto","goto5");
+				if (GetDataYear() == 1700) ChangeCharacterAddressGroup(CharacterFromID("Swedish Emissary"), "Philipsburg_residence",  "goto","goto5");
+			}
 		break;
 
 		case PERIOD_COLONIAL_POWERS:
 			locations[FindLocation("Tortuga_Tavern")].id.label = "The Faithful Bride";
+			if (SWEDEN_ALLOWED)
+			{
+				ChangeCharacterAddressGroup(CharacterFromID("Swedish Emissary"), "Marigot_mansion_hall",  "goto","goto5");
+			}
 		break;
 
 		case PERIOD_REVOLUTIONS:
@@ -859,6 +874,14 @@ void InitTownNationalities()
 	PChar.quest.Santiago_start.win_condition = "Santiago_start";
 	PChar.quest.Santiago_start.skip = "yes";
 	//Santiago quest
+
+	//Colombian Silver quest
+	PChar.quest.colombian_silver_start.win_condition.l1 = "location";
+	PChar.quest.colombian_silver_start.win_condition.l1.character = PChar.id;
+	PChar.quest.colombian_silver_start.win_condition.l1.location = "Smugglers_Tavern";
+	PChar.quest.colombian_silver_start.win_condition = "colombian_silver_start";
+	PChar.quest.colombian_silver_start.skip = "yes";
+	//Colombian Silver quest
 
 	//JRH: Cartagena New_cloister
 	PChar.quest.cloister_start.win_condition.l1 = "location";

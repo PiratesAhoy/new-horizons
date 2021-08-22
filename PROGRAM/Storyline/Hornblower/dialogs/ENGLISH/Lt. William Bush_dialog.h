@@ -1,4 +1,4 @@
-string DLG_TEXT[191] = {
+string DLG_TEXT[194] = {
 "Hello Hornblower. All's well with you I trust?",
 "Yes thank you, Lieutenant.",
 "I am Second Lieutenant William Bush reporting for duty. Where might I find the Captain?",
@@ -190,4 +190,7 @@ string DLG_TEXT[191] = {
 "Run out a gun.",
 "Bring the prisoners here.",
 "Mr. Bush, I'll have you remind everyone that this is still a ship of war!",
+"Signal from the flagship, sir. All captains come aboard.",
+"Oh, very good Mr. Bush. Acknowledge and clear away the gig.",
+"ACKNOWLEDGE! CLEAR AWAY THE CAPTAIN'S GIG!",
 };

@@ -1,4 +1,4 @@
-string DLG_TEXT[179] = {
+string DLG_TEXT[1181] = {
 "Word goes you are looking for a good captain.",
 "Ah my dear captain, indeed I am. You see, the work I'm doing here sometimes raises eyebrows at the church. And it seems I made them angry again by experimenting with the blood of some deceased people. Normally I just donate some money to the church and they look away but I don't have the money any more now to please them. So could I ask you to donate a sum of 1000 coins to them?",
 "I would love to help you Steven. But I don't see what good this would do; apart from parting me with my money, that is.",
@@ -178,4 +178,6 @@ string DLG_TEXT[179] = {
 "Waste of time and energy",
 "I think an indian might have been eavesdropping in the tavern when I spoke with the captain. I followed him and taking no chances, killed him",
 "Huh? What are you doing here? Ah never mind. It's late and I have to get back to the town.",
+"Report at the prison!! I don't do prisons. Savvy?",
+"Report them to the Authorities?? Do you forget I'm Captain Jack Sparrow. Me and the Authorities don't see eye to eye.",
 };

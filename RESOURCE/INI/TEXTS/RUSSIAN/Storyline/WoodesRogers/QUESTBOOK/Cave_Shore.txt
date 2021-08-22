@@ -1,10 +1,10 @@
-title=Open to Cave Shore
-text.t1=I'm going to search for the door that opened.
-text.t2=I have to try that lever on the Ship once more!
-text.t3=I'll try the megaphone on the Shore - maybe someone can here me?
-text.t4=I go down to the Shore and see if they did send a boat.
-text.t5=The Chest from the Blue Cavern is stuck under the Boat. I need help to lift the Boat!
-text.t6=Can I balance on the edging to the Musket?
+title=Открыть выход на берег
+text.t1=Ну, на поиски открывшейся двери.
+text.t2=Нужно потянуть за корабль еще раз!
+text.t3=Я постараюсь покричать в рупор на берегу - может быть, кто нибудь услышит меня?
+text.t4=Спущусь на берег и посмотрю, прислали шлюпку или нет.
+text.t5=Сундук из голубой пещеры застрял под лодкой. Мне нужна помощь чтобы поднять ее!
+text.t6=Я смогу пробраться по окантовке за мушкетом?
 text.t7=
 text.t8=
 text.t9=

@@ -17,6 +17,10 @@ void ProcessDialogEvent()
 	int i, x, y, idx;
 	ref sld, passenger;
 	string passengerid, temp;
+
+	string PCname;
+	if (CheckAttribute(PChar,"title")) PCname = GetMyRespectfullyName(PChar);
+	else PCname = XI_ConvertString(GetRankName(PChar, SPAIN)) + " " + GetMyLastName(PChar);
 	
 	switch(Dialog.CurrentNode)
 	{
@@ -39,7 +43,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
 
-			if(GetAttribute(NPChar, "meeting") == "1" && GetRank(PChar, SPAIN) >= 2) dialog.text = DLG_TEXT[25] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + "." + DLG_TEXT[1];
+			if(GetAttribute(NPChar, "meeting") == "1" && GetRank(PChar, SPAIN) >= 2) dialog.text = DLG_TEXT[25] + PCname + "." + DLG_TEXT[1];
 			else dialog.text = DLG_TEXT[0] + GetMyFullName(NPChar) + "." + DLG_TEXT[1];
 			
 			if (CheckCharacterItem(PChar, "BattleOrders2"))
@@ -61,7 +65,7 @@ void ProcessDialogEvent()
 			}
 			if (CheckAttribute(PChar, "quest.imperial_escort_enable") && !CheckAttribute(PChar, "quest.imperial_escort") && GetRank(PChar, SPAIN) >= 5)
 			{
-				dialog.text = DLG_TEXT[26] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + DLG_TEXT[27];
+				dialog.text = DLG_TEXT[26] + PCname + DLG_TEXT[27];
 				link.l2 = DLG_TEXT[28];
 				link.l2.go = "imperial_escort_intro";
 			}
@@ -253,7 +257,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_ship_missing":
-			dialog.text = DLG_TEXT[25] + GetRankName(PChar, SPAIN) + " " + GetMyLastName(PChar) + DLG_TEXT[57] + GetMyFullName(CharacterFromID("Imperial_envoy")) + "?";
+			dialog.text = DLG_TEXT[25] + PCname + DLG_TEXT[57] + GetMyFullName(CharacterFromID("Imperial_envoy")) + "?";
 			link.l1 = DLG_TEXT[58] + PChar.quest.imperial_escort.ship_name + DLG_TEXT[59];
 			link.l1.go = "imperial_escort_ship_missing2";
 		break;
@@ -383,7 +387,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_payment":
-			dialog.text = DLG_TEXT[120] + GetRankName(PChar, sti(NPChar.nation)) + " " + GetMyLastName(PChar) + DLG_TEXT[121] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[122];
+			dialog.text = DLG_TEXT[120] + PCname + DLG_TEXT[121] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[122];
 			link.l1 = DLG_TEXT[123];
 			link.l1.go = "imperial_escort_half_pay";
 			link.l2 = DLG_TEXT[124];

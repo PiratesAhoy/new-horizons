@@ -1,5 +1,5 @@
-itmname_a_letter	{Letter from missing relative}
+itmname_a_letter	{Письмо пропавшего родственника}
 itmdescr_a_letter
 {
-A letter which reveals secrets from your family's past and guides you to siblings you never met as well as to the really big treasure.
+Письмо, раскрывающее секреты прошлого вашей семьи, а так же оно поможет вам найти братьев и сестер, которых вы никогда не встречали, и действительно большие сокровища.
 }

@@ -39,12 +39,49 @@ void CreateStoryCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
+	ch.old.name = "Nicholas";
+	ch.old.lastname = "Sharp";
+	ch.name = TranslateString("", "Nicholas");
+	ch.lastname = TranslateString("", "Sharp");
+	ch.id		= "Devlin Jumpstart";
+	ch.model = "pirat13";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	GiveItem2Character(ch, "blade18");
+	ch.equip.blade = "blade18";
+	ch.location	= "Storyteller_house";
+	ch.location.group = "goto";
+	ch.location.locator = "goto1";
+	ch.Dialog.Filename = "Devlin Jumpstart_dialog.c";
+	ch.greeting = "";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.questchar = true;
+	ch.quest.meeting = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
+
 	ch.old.name = "Emmanuel";
 	ch.old.lastname = "Devlin";
 	ch.name = TranslateString("","Emmanuel");
 	ch.lastname = TranslateString("","Devlin");
 	ch.id		= "Emmanuel Devlin";
-	ch.model = "Corsair1";
+	ch.model = "Old_mat1";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade4");
@@ -53,7 +90,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Emmanuel Devlin_dialog.c";
-	ch.greeting = "Gr_Stephan Bonser";
+	ch.greeting = "Gr_Uncle Manny";
 	ch.rank 	= 1;
 	ch.reputation = "22";
 	ch.experience = "0";
@@ -90,7 +127,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Bonnie Devlin_dialog.c";
-	ch.greeting = "Gr_danielle"; //Gr_Stephan Bonser";
+	ch.greeting = "Gr_Bonnie"; //Gr_Stephan Bonser";
 	ch.rank 	= 20;
 	ch.reputation = "22";
 	ch.experience = "0";
@@ -108,6 +145,78 @@ void CreateStoryCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Blaze";
+	ch.old.lastname = "Devlin";
+	ch.name = TranslateString("","Blaze");
+	ch.lastname = TranslateString("","Devlin");
+	ch.id		= "Blaze Devlin";
+	ch.model = "Devlin";
+	ch.model.animation = "blaze";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	GiveItem2Character(ch, "blade21");
+	ch.equip.blade = "blade21";
+	GiveItem2Character(ch, "pistol27");
+	ch.equip.blade = "pistol27";
+	ch.location	= "";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Blaze Devlin_dialog.c";
+	ch.greeting = "Gr_Devlin"; //Gr_Stephan Bonser";
+	ch.rank 	= 20;
+	ch.reputation = "22";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "8";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "8";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "8";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1000";
+	LAi_SetPoorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Crewmember";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Crewmember");
+	ch.lastname = TranslateString("", "");
+	ch.id		= "Crewmember Devlin";
+	ch.model = "Sailor3";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Crewmember Devlin_dialog.c";
+	ch.greeting = "Gr_Marc Blacque";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "2";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "3";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Short Jack";
@@ -142,7 +251,7 @@ void CreateStoryCharacters(ref n)
 	// PB -->
 	ch.reputation = "60";
 	ch.experience = "2000000";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.skill.Leadership = "9";
 	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "9";
@@ -204,7 +313,7 @@ void CreateStoryCharacters(ref n)
 	// PB -->
 	ch.reputation = "60";
 	ch.experience = "2000000";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.skill.Leadership = "9";
 	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "9";
@@ -264,7 +373,7 @@ void CreateStoryCharacters(ref n)
 	// PB -->
 	ch.reputation = "60";
 	ch.experience = "2000000";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.skill.Leadership = "9";
 	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "9";
@@ -325,7 +434,7 @@ void CreateStoryCharacters(ref n)
 	// PB -->
 	ch.reputation = "60";
 	ch.experience = "2000000";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.skill.Leadership = "9";
 	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "9";
@@ -387,7 +496,7 @@ void CreateStoryCharacters(ref n)
 	// PB -->
 	ch.reputation = "60";
 	ch.experience = "2000000";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.skill.Leadership = "9";
 	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "9";
@@ -438,7 +547,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Thomas the Terror_dialog.c";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.rank 	= 1;
 	ch.reputation = "22";
 	ch.experience = "2000";
@@ -532,7 +641,7 @@ void CreateStoryCharacters(ref n)
 	// PB -->
 	ch.reputation = "60";
 	ch.experience = "2000000";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.skill.Leadership = "9";
 	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "9";
@@ -588,7 +697,7 @@ void CreateStoryCharacters(ref n)
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
 	//JRH ammo mod <--
-	ch.greeting = "Gr_danielle"; //Gr_Stephan Bonser";
+	ch.greeting = "Gr_SJGfem"; //Gr_Stephan Bonser";
 	ch.rank 	= 40;
 	ch.reputation = "22";
 	ch.experience = "600";
@@ -644,7 +753,7 @@ void CreateStoryCharacters(ref n)
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
 	//JRH ammo mod <--
-	ch.greeting = "Gr_danielle"; //Gr_Stephan Bonser";
+	ch.greeting = "Gr_SJGfem"; //Gr_Stephan Bonser";
 	GiveItem2Character(ch, "commonarmor");
 	ch.equip.armor = "commonarmor";
 	ch.rank 	= 40;
@@ -747,7 +856,7 @@ void CreateStoryCharacters(ref n)
 	// PB -->
 	ch.reputation = "60";
 	ch.experience = "2000000";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.skill.Leadership = "9";
 	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "9";
@@ -807,7 +916,7 @@ void CreateStoryCharacters(ref n)
 	// PB -->
 	ch.reputation = "60";
 	ch.experience = "2000000";
-	ch.greeting = "Gr_Pieter Boelen";
+	ch.greeting = "Gr_SJG";
 	ch.skill.Leadership = "9";
 	ch.skill.Fencing = "6";
 	ch.skill.Sailing = "9";

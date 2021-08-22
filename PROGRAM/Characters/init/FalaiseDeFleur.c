@@ -338,7 +338,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.sex = "man";
 	ch.sound_type = "pirate";
 	ch.location	= "Falaise_de_fleur_tavern";
-	ch.location.group = "candles"; // PB: was "sit"
+	ch.location.group = "sit2"; // GR: was "candles", PB: was "sit"
 	ch.location.locator = "sit3";
 	ch.Dialog.Filename = "Andre Juliao_dialog.c";
 	ch.greeting = "Gr_andre juliao";

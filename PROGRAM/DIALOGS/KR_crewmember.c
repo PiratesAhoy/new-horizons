@@ -96,7 +96,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
 
-			if(TradeCheck(PChar, NPChar, true)) { // NK
+//			if(TradeCheck(PChar, NPChar, true)) { // NK
 			if(NPChar.quest.meeting == "0")
 			{
 				d.Text = DLG_TEXT[4] + DLG_TEXT[5];
@@ -116,14 +116,14 @@ void ProcessDialogEvent()
 				Link.l3.go = "exit";
 			}
 			// NK -->
-			}
-			else
+//			}
+/*			else
 			{
 				dialog.text = DLG_TEXT[26] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[27];
 				Link.l1 = DLG_TEXT[28];
 				Link.l1.go = "exit";
 			}
-			// NK <--
+			// NK <-- */
 			Diag.TempNode = "First Time";
 		break;
 

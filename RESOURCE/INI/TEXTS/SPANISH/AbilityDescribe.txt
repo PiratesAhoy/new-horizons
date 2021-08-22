@@ -96,7 +96,7 @@ Las pociones curativas serán un 10% más efectivas para todo el grupo.
 }
 perkImprovePotionsLocked
 {
-yuda al boticario cuando necesite mercancías / Las pociones curativas serán un 10% más efectivas para todo el grupo.
+Ayuda al boticario cuando necesite mercancías | Las pociones curativas serán un 10% más efectivas para todo el grupo.
 }
 
 DefendPoison {Resistencia al veneno}

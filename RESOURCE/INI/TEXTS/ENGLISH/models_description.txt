@@ -346,8 +346,9 @@ Now then, I must have an ounce or two of that malapert blood from you!{Now then,
 I'm gonna have yer guts for garters, Nicholas Sharp!{I'm gonna have yer guts for garters, Nicholas Sharp!}
 Damn you, Mings! You didn't give me a neck!{Damn you, Mings! You didn't give me a neck!}
 Blaze Devlin. In his original view.{Blaze Devlin. In his original view.}
-Beatrice Devlin. In her's original view.{Beatrice Devlin. In her original view.}
-Beatrice Devlin. In some other clothes.{Beatrice Devlin. In some other clothes.}
+Beatrice Devlin. In her original view.{Beatrice Devlin. In her original view.}
+Beatrice's sister. Slightly younger, slightly sassier and it shows in the outfit.{Beatrice's sister. Slightly younger, slightly sassier and it shows in the outfit.}
+Bonnie Devlin after she dyed her hair and her clothes.{Bonnie Devlin after she dyed her hair and her clothes.}
 Am I worthy to sail under Captain Jack Sparrow?{Am I worthy to sail under Captain Jack Sparrow?}
 A most trustworthy and rum-drinking boatswain, please!{A most trustworthy and rum-drinking boatswain, please!}
 A most trustworthy and rum-drinking boatswain, in blue vest!{A most trustworthy and rum-drinking boatswain, in blue vest!}
@@ -631,8 +632,9 @@ A French-American pirate and privateer from the Gulf of Mexico, if you please.{A
 A Portuguese naval officer who bears merely a passing resemblance to a famous pirate.{A Portuguese naval officer who bears merely a passing resemblance to a famous pirate.}
 A French naval officer who bears merely a passing resemblance to a famous pirate.{A French naval officer who bears merely a passing resemblance to a famous pirate.}
 Charles Ardent, pirate. Hero or villain - the choice is yours.{Charles Ardent, pirate. Hero or villain - the choice is yours.}
-Shave and a haircut - two grand. You'd hardly recognise Charles Ardent!{Shave and a haircut - two gold. You'd hardly recognise Charles Ardent!}
+Shave and a haircut - two grand. You'd hardly recognise Charles Ardent!{Shave and a haircut - two grand. You'd hardly recognise Charles Ardent!}
 Helen Ardent, pirate. Heroine or villainess - the choice is yours.{Helen Ardent, pirate. Heroine or villainess - the choice is yours.}
+Helen Ardent, with a pirate's hat and coat.{Helen Ardent, with a pirate's hat and coat.}
 Helen Ardent - in a dress?{Helen Ardent - in a dress?}
 A gentleman like this has no time for vagabonds - and may not be quite the gentleman he appears!{A gentleman like this has no time for vagabonds - and may not be quite the gentleman he appears!}
 A high-ranking French naval officer and gentleman.{A high-ranking French naval officer and gentleman.}
@@ -642,6 +644,8 @@ Helen Ardent has 'borrowed' a Spanish uniform.{Helen Ardent has 'borrowed' a Spa
 Helen Ardent has 'borrowed' a French uniform.{Helen Ardent has 'borrowed' a French uniform.}
 This ornate dress with golden trimming is very suitable for the daughter of a governor.{This ornate dress with golden trimming is very suitable for the daughter of a governor.}
 An elaborate costume befitting the son of a governor.{An elaborate costume befitting the son of a governor.}
+Lucia de la Vega incognito.{Lucia de la Vega incognito.}
+Edmundo de la Vega incognito.{Edmundo de la Vega incognito.}
 This is what happens when a pirate lady gets hold of some silk and lace.{This is what happens when a pirate lady gets hold of some silk and lace.}
 An intricately decorated brown outfit for a veteran adventurer.{An intricately decorated brown outfit for a veteran adventurer.}
 A purple dress with lace trim and a lot of jewellery. She must be very important, very rich, or both.{A purple dress with lace trim and a lot of jewellery. She must be very important, very rich, or both.}
