@@ -1,3 +1,4 @@
 *.h text eol=crlf working-tree-encoding=Windows-1251
 *.c text eol=crlf working-tree-encoding=Windows-1251
 *.ini text eol=crlf working-tree-encoding=Windows-1251
+*.txt text eol=crlf working-tree-encoding=Windows-1251
