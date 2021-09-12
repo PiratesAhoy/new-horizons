@@ -55,7 +55,8 @@ string DLG_TEXT[113] = {
 "Please go on, this is exciting... ",
 "Hornigold left New Providence Island with Edward Teach (Blackbeard) among his crew. After capturing a sloop, Teach was given command of the prize. In the spring of the year 1717, they seized a large French ship...",
 "Yes...?",
-"Governor Alexander Spotswood of Virginia gave Lieutenant Robert Maynard the command of two sloops. Maynard killed Teach and beheaded him, tied the head to the bowsprit of his ship, and set sail for Virginia.",
+"Governor Alexander Spotswood of Virginia gave Lieutenant Robert Maynard the command of two sloops. Maynard killed Teach and beheaded him, tied the 
+head to the bowsprit of his ship, and set sail for Virginia.",
 "I thought that was only a legend!",
 "Almost you say. Did they take your map!?",
 "No, I had hidden it behind a patch on my underwear. So even though they took my trousers they missed it!",

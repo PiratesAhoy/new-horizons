@@ -1,17 +1,17 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| standard.c |=====}
-Nathaniel{Натаниэль}
-Hawk{Хок}
+Nathaniel{РќР°С‚Р°РЅРёСЌР»СЊ}
+Hawk{РҐРѕРє}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
 
 {=====| Officers.c |=====}
-Danielle{Даниэль}
+Danielle{Р”Р°РЅРёСЌР»СЊ}
 Greene{}
-Ralph{Ральф}
-Fawn{Фавн}
+Ralph{Р Р°Р»СЊС„}
+Fawn{Р¤Р°РІРЅ}
 Clement{}
 Barnabas{}
 Aurentius{}
@@ -22,11 +22,11 @@ Serrao{}
 
 {=====| Story.c |=====}
 Vincent{}
-Bethune{Битюн}
+Bethune{Р‘РёС‚СЋРЅ}
 Waulter{}
 Tomlison{}
-Remy{Реми}
-Gatien{Гатье}
+Remy{Р РµРјРё}
+Gatien{Р“Р°С‚СЊРµ}
 Yves{}
 Giner{}
 Begon{}
@@ -35,13 +35,13 @@ Isaac{}
 Razilly{}
 Jacques{}
 Belmondo{}
-Pierre{Пьер}
+Pierre{РџСЊРµСЂ}
 Leverrier{}
 Abelard{}
 Tarnaud{}
 Wigayn{}
 Ratel{}
-Raoul{Рауль}
+Raoul{Р Р°СѓР»СЊ}
 Rheims{}
 Valentin{}
 Massoni{}
@@ -54,7 +54,7 @@ Boon{}
 Tobias{}
 Ewan{}
 Glover{}
-Wilfred{Уилфред}
+Wilfred{РЈРёР»С„СЂРµРґ}
 English Soldier{}
 French Soldier{}
 Rabel{}
@@ -64,79 +64,79 @@ Rui Sa{}
 Pinto{}
 Sidonio{}
 Ogarrio{}
-Lieutenant{Лейтенант}
-Harris{Харрис}
-Malcolm{Малькольм}
-Hart{Харт}
-Henry{Генри}
+Lieutenant{Р›РµР№С‚РµРЅР°РЅС‚}
+Harris{РҐР°СЂСЂРёСЃ}
+Malcolm{РњР°Р»СЊРєРѕР»СЊРј}
+Hart{РҐР°СЂС‚}
+Henry{Р“РµРЅСЂРё}
 Banfield{}
 Wauter{}
 Keech{}
 Lewellyn{}
-Belt{Белт}
-Thomas{Томас}
-Norton{Нортон}
-Brian{Брайан}
+Belt{Р‘РµР»С‚}
+Thomas{РўРѕРјР°СЃ}
+Norton{РќРѕСЂС‚РѕРЅ}
+Brian{Р‘СЂР°Р№Р°РЅ}
 The Slayer{}
 Ferro{}
 Cerezo{}
 Hector{}
 Barbossa{}
-Robert{Роберт}
-Christopher{Кристофер}
-Silehard{Сайлхард}
+Robert{Р РѕР±РµСЂС‚}
+Christopher{РљСЂРёСЃС‚РѕС„РµСЂ}
+Silehard{РЎР°Р№Р»С…Р°СЂРґ}
 
 {=====| TempQuest.c |=====}
 Bythesea{}
 Harold{}
 Barrat{}
-Sailor{Моряк}
-Pirate{Пират}
+Sailor{РњРѕСЂСЏРє}
+Pirate{РџРёСЂР°С‚}
 Fernam{}
 Barrios{}
-Violate{Виолате}
-Gyles{Жиль}
-Dubois{Дюбуа}
+Violate{Р’РёРѕР»Р°С‚Рµ}
+Gyles{Р–РёР»СЊ}
+Dubois{Р”СЋР±СѓР°}
 citizen{}
 Soldier{}
-Ragetti{Раджетти}
-Pintel{Пинтел}
+Ragetti{Р Р°РґР¶РµС‚С‚Рё}
+Pintel{РџРёРЅС‚РµР»}
 
 {=====| TempQuestEnemy.c |=====}
-Captain{Капитан}
+Captain{РљР°РїРёС‚Р°РЅ}
 Kalen{}
 Mottram{}
 French Patrol{}
 French{}
 Sapper{}
-Simon{Саймон}
+Simon{РЎР°Р№РјРѕРЅ}
 Buck{}
-Rene{Ренэ}
+Rene{Р РµРЅСЌ}
 Bouillon{}
 Bodyguard{}
 Dutruel{}
 Ian{}
 Bigg{}
 Bonnat{}
-Brendan{Брендан}
+Brendan{Р‘СЂРµРЅРґР°РЅ}
 Attwick{}
 Edd{}
 Pease{}
 Kevin{}
 Renner{}
-Terry{Терри}
+Terry{РўРµСЂСЂРё}
 Sellar{}
-Donald{Дональд}
+Donald{Р”РѕРЅР°Р»СЊРґ}
 Drake{}
-David{Дэвид}
+David{Р”СЌРІРёРґ}
 Much{}
 Cole{}
-Brock{Брок}
+Brock{Р‘СЂРѕРє}
 Shaggy{}
-Harry{Гарри}
+Harry{Р“Р°СЂСЂРё}
 Stephan{}
 Bonser{}
-Oswald{Освальд}
-Chappel{Чаппель}
+Oswald{РћСЃРІР°Р»СЊРґ}
+Chappel{Р§Р°РїРїРµР»СЊ}
 
 {=====| 123 characters |=====}
