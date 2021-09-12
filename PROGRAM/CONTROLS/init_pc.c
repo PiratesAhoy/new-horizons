@@ -12,6 +12,8 @@ void ExternControlsInit(bool bFirst)
 		ExternInitKeyCodes();
 		CI_CreateAndSetControls( "", "ICancel", CI_GetKeyCode(CTL_INTERFACE_NAV_CANCEL), 0, false );
 		CI_CreateAndSetControls( "", "IAction", CI_GetKeyCode(CTL_INTERFACE_NAV_SELECT), 0, false );
+
+		ControlsTreeInit();
 		return;
 	}
 
@@ -77,6 +79,10 @@ void ExternControlsInit(bool bFirst)
 	MapControlToGroup("ChrRun","FightModeControls");
 	//MapControlToGroup("ChrRun","BattleInterfaceControls");// TIH not needed Aug24'06
 
+    //#20180629-01
+	CI_CreateAndSetControls( "PrimaryLand", "ChrJump", CI_GetKeyCode("KEY_T"), 0, true );
+	MapControlToGroup("ChrJump","FightModeControls");
+	MapControlToGroup("ChrJump","BattleInterfaceControls");
 
 	CI_CreateAndSetControls( "PrimaryLand", "ChrAction", CI_GetKeyCode(CTL_LAND_ACTION), 0, true );
 	CI_CreateAndSetControls( "PrimaryLand", "ChrActionAlt", CI_GetKeyCode(CTL_LAND_ACTION_ALT), 0, true ); // KK
@@ -84,11 +90,13 @@ void ExternControlsInit(bool bFirst)
 	CI_CreateAndSetControls( "PrimaryLand", "Equip", CI_GetKeyCode(CTL_LAND_AUTO_EQUIP), 0, true );	// PB: Equip button
 	MapControlToGroup("Equip", "FightModeControls");
 
+//	MapControlToGroup("ChrBlock","BattleInterfaceControls");
 
 	CI_CreateAndSetControls( "PrimaryLand", "ChrFightMode", CI_GetKeyCode(CTL_FIGHT_MODE), 0, true );
 	MapControlToGroup("ChrFightMode","FightModeControls");
 	MapControlToGroup("ChrFightMode","BattleInterfaceControls");
 
+/*
 	CI_CreateAndSetControls( "FightModeControls", "ChrAttack", CI_GetKeyCode(CTL_FIGHT_ATTACK), 0, true );
 
 	CI_CreateAndSetControls( "FightModeControls", "ChrBlock", CI_GetKeyCode(CTL_FIGHT_BLOCK), 0, true );
@@ -96,8 +104,36 @@ void ExternControlsInit(bool bFirst)
 
 	CI_CreateAndSetControls( "FightModeControls", "ChrRecoil", CI_GetKeyCode(CTL_FIGHT_DODGE), 0, true );
 
-	CI_CreateAndSetControls( "FightModeControls", "ChrFire", CI_GetKeyCode(CTL_FIGHT_FIRE_GUN), 0, true );
+	//CI_CreateAndSetControls( "FightModeControls", "ChrFire", CI_GetKeyCode(CTL_FIGHT_FIRE_GUN), 0, true );
 	//MapControlToGroup("ChrFire","BattleInterfaceControls");// TIH not needed Aug24'06
+*/
+
+
+	//CI_CreateAndSetControls( "FightModeControls", "ChrBlockBase", CI_GetKeyCode("VK_SPACE"), 0, true );   //0
+	CI_CreateAndSetControls( "FightModeControls", "ChrBlock", CI_GetKeyCode("VK_SPACE"), 0, true );
+	CI_CreateAndSetControls( "FightModeControls", "ChrAltAttackBase", CI_GetKeyCode("VK_LBUTTON"), 0, false );   //2
+	CI_CreateAndSetControls( "FightModeControls", "ChrAttackBreakBase", CI_GetKeyCode("VK_MBUTTON"), 0, false ); //ChrAttackRoundBase
+	CI_CreateAndSetControls( "FightModeControls", "ChrAttackBase", CI_GetKeyCode("VK_RBUTTON"), 0, false );   //1
+
+	//MapControlToGroup("ChrBlockBase","BattleInterfaceControls");
+	//CI_CreateAndSetControls( "FightModeControls", "BIFastCommand", CI_GetKeyCode("VK_F3"), 0, true ); //VK_F3
+
+	//CI_CreateAndSetControls( "FightModeControls", "ChrBlock", CI_GetKeyCode("VK_SPACE"), 0, true );
+	//CI_CreateAndSetControls( "FightModeControls", "ChrRecoil", CI_GetKeyCode("KEY_G"), 0, true );
+	//CI_CreateAndSetControls( "FightModeControls", "ChrParry", CI_GetKeyCode("VK_SHIFT"), 0, true );   //3
+	CI_CreateAndSetControls( "FightModeControls", "ChrAttackChoseBase", CI_GetKeyCode("VK_SHIFT"), 0, true );
+	CI_CreateAndSetControls( "FightModeControls", "ChrFire", CI_GetKeyCode(CTL_FIGHT_FIRE_GUN), 0, true );
+
+	//CI_CreateAndSetControls( "FightModeControls", "ChrAttackForce", CI_GetKeyCode("KEY_C"), 0, true );
+	//CI_CreateAndSetControls( "FightModeControls", "ChrAttackFast", CI_GetKeyCode("KEY_X"), 0, true );
+	//CI_CreateAndSetControls( "FightModeControls", "ChrAttackRound", CI_GetKeyCode("VK_MBUTTON"), 0, true );   //4
+
+	//CI_CreateAndSetControls( "FightModeControls", "ChrAttackBreak", CI_GetKeyCode("KEY_Z"), 0, true );
+	//CI_CreateAndSetControls( "FightModeControls", "ChrAttackFient", CI_GetKeyCode("KEY_X"), 0, true );
+	//CI_CreateAndSetControls( "FightModeControls", "ChrParry", CI_GetKeyCode("KEY_C"), 0, true );
+
+
+
 
 	CI_CreateAndSetControls( "PrimaryLand", "BOAL_UsePotion", CI_GetKeyCode(CTL_LAND_USE_POTION), 0, true );
 	MapControlToGroup("BOAL_UsePotion", "FightModeControls");
@@ -318,6 +354,8 @@ void ExternControlsInit(bool bFirst)
 	CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsLeft", CI_GetKeyCode(CTL_CMD_INTERFACE_LEFT), 0, true );
 	CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsRight", CI_GetKeyCode(CTL_CMD_INTERFACE_RIGHT), 0, true );
 
+    CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsUp", CI_GetKeyCode("VK_UP"), 0, true );
+	CI_CreateAndSetControls( "BattleInterfaceControls", "BICommandsDown", CI_GetKeyCode("VK_DOWN"), 0, true );
 
 
 
@@ -423,6 +461,12 @@ void ExternControlsInit(bool bFirst)
 		CI_CreateAndSetControls( "", "TeleportDown", CI_GetKeyCode("VK_DOWN"), 0, false );
 		CI_CreateAndSetControls( "", "TeleportSelect", CI_GetKeyCode("VK_RETURN"), 0, false );
 	}
+
+    CI_CreateAndSetControls( "", "CoastFoamLB", CI_GetKeyCode("VK_LBUTTON"), 0, false );
+    CI_CreateAndSetControls( "", "CoastFoamRB", CI_GetKeyCode("VK_RBUTTON"), 0, false );
+    CI_CreateAndSetControls( "", "CoastFoamINS", CI_GetKeyCode("VK_INSERT"), 0, false );
+    CI_CreateAndSetControls( "", "CoastFoamDEL", CI_GetKeyCode("VK_DELETE"), 0, false );
+    CI_CreateAndSetControls( "", "CoastFoamCopy", CI_GetKeyCode("KEY_C"), 0, false );
 
 	// weather
 	//CI_CreateAndSetControls( "", "WhrPrevWeather", CI_GetKeyCode("KEY_M"), 0, false );
@@ -574,6 +618,10 @@ void ExternInitKeyCodes()
 	objControlsState.key_codes.VK_RIGHT.img = "r";
 	objControlsState.key_codes.VK_DOWN		= 40;
 	objControlsState.key_codes.VK_DOWN.img = "d";
+	objControlsState.key_codes.VK_INSERT	= 45;
+	objControlsState.key_codes.VK_INSERT.img = "r";
+	objControlsState.key_codes.VK_DELETE	= 46;
+	objControlsState.key_codes.VK_DELETE.img = "d";
 
 	objControlsState.key_codes.KEY_0 = 48;
 	objControlsState.key_codes.KEY_0.img = "0";
@@ -696,7 +744,7 @@ void ExternInitKeyCodes()
 	objControlsState.key_codes.VK_F5        = 116;
 	objControlsState.key_codes.VK_F5.img    = "a";
 	objControlsState.key_codes.VK_F6        = 117;
-	objControlsState.key_codes.VK_F6.img    = "Ñ†";
+	objControlsState.key_codes.VK_F6.img    = "ö";
 	objControlsState.key_codes.VK_F9        = 120;
 	objControlsState.key_codes.VK_F9.img    = "f";
 
@@ -732,29 +780,29 @@ void ExternInitKeyCodes()
 		objControlsState.key_codes.VK_INSERT.img = ">";
 		objControlsState.key_codes.VK_DELETE = 46;
 		objControlsState.key_codes.VK_DELETE.img = ">";
-		objControlsState.key_codes.VK_OEM_1 = 186; // ; Ð¶
+		objControlsState.key_codes.VK_OEM_1 = 186; // ; æ
 		objControlsState.key_codes.VK_OEM_1.img = ">";
 		objControlsState.key_codes.VK_OEM_PLUS = 187; // +
 		objControlsState.key_codes.VK_OEM_PLUS.img = ">";
-		objControlsState.key_codes.VK_OEM_COMMA = 188; // , Ð±
+		objControlsState.key_codes.VK_OEM_COMMA = 188; // , á
 		objControlsState.key_codes.VK_OEM_COMMA.img = ">";
 		objControlsState.key_codes.VK_OEM_MINUS = 189; // -
 		objControlsState.key_codes.VK_OEM_MINUS.img = ">";
-		objControlsState.key_codes.VK_OEM_PERIOD = 190; // . ÑŽ
+		objControlsState.key_codes.VK_OEM_PERIOD = 190; // . þ
 		objControlsState.key_codes.VK_OEM_PERIOD.img = ">";
 
 		// added by MAXIMUS for typing on Russian -->
 		objControlsState.key_codes.VK_OEM_2 = 191; // / .
 		objControlsState.key_codes.VK_OEM_2.img = ">";
-		objControlsState.key_codes.VK_OEM_3 = 192; // ` Ñ‘
+		objControlsState.key_codes.VK_OEM_3 = 192; // ` ¸
 		objControlsState.key_codes.VK_OEM_3.img = ">";
-		objControlsState.key_codes.VK_OEM_4 = 219; // [ Ñ…
+		objControlsState.key_codes.VK_OEM_4 = 219; // [ õ
 		objControlsState.key_codes.VK_OEM_4.img = ">";
 		objControlsState.key_codes.VK_OEM_5 = 220; // \
 		objControlsState.key_codes.VK_OEM_5.img = ">";
-		objControlsState.key_codes.VK_OEM_6 = 221; // ] ÑŠ
+		objControlsState.key_codes.VK_OEM_6 = 221; // ] ú
 		objControlsState.key_codes.VK_OEM_6.img = ">";
-		objControlsState.key_codes.VK_OEM_7 = 222; // ' Ñ changed by MAXIMUS was 223
+		objControlsState.key_codes.VK_OEM_7 = 222; // ' ý changed by MAXIMUS was 223
 		objControlsState.key_codes.VK_OEM_7.img = ">";
 		// added by MAXIMUS for typing on Russian <--
 		//oem_2-3 are 191-192 as / and `

@@ -46,7 +46,8 @@ void FCoHS_Boarding_Start(int iBoardingTarget)
 
 	// Reset sounds
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 }
 
 // ---------------------
@@ -123,7 +124,8 @@ void FCoHS_Boarding_EndFade()
 void FCoHS_Boarding_PrepareLoadDeck()
 {
 	// Reset sounds
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 
 	// Switch interface

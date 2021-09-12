@@ -3,6 +3,8 @@
 
 #include "CONTROLS\DefaultControls.h" // TIH - Default key control settings file for easy user editing. Nov17'06 // KK
 
+native int AddControlTreeNode(int nParent,string sBaseControl,string sOutControl,float fTimeOut);
+
 // control flags
 #define USE_AXIS_AS_BUTTON				1
 #define USE_AXIS_AS_INVERSEBUTTON		2
@@ -29,6 +31,38 @@ object TmpControlsList;
 
 extern void ExternControlsInit(bool bFirst);
 extern void ExternInitKeyCodes(); // NK 05-07-21
+
+void ControlsTreeInit()
+{
+	int n;
+
+	// base controls: "ChrBlockBase","ChrAttackBase","ChrAltAttackBase"
+
+	// out controls: *ChrBlock, ChrParry, *ChrAttackForce, *ChrAttackFast, *ChrAttackRound, *ChrAttackBreak,
+	// ------------- ChrAttackFient
+
+	/*n = AddControlTreeNode(-1,"ChrBlockBase","ChrBlock2",0.15);
+	if( n!=-1 ) {
+		AddControlTreeNode(n,"ChrAttackBase","ChrAttackRound2",0.0);
+	}
+
+	n = AddControlTreeNode(-1,"ChrAttackBase","ChrAttackForce2",0.0);
+
+	n = AddControlTreeNode(-1,"ChrAltAttackBase","ChrAttackFast2",0.15);
+	if( n!=-1 ) {
+		AddControlTreeNode(n,"ChrAttackBase","ChrAttackBreak2",0.0);
+	}*/
+	n = AddControlTreeNode(-1,"ChrAttackChoseBase","",0.05);
+	if( n!=-1 ) {
+		AddControlTreeNode(n,"ChrAttackBase","ChrParry",0.0);
+		AddControlTreeNode(n,"ChrAttackBreakBase","ChrAttackFient",0.0);
+		AddControlTreeNode(n,"ChrAltAttackBase","ChrAttackRound",0.0);
+	}
+
+	n = AddControlTreeNode(-1,"ChrAttackBase","ChrAttackForce2",0.0);
+	n = AddControlTreeNode(-1,"ChrAltAttackBase","ChrAttackFast2",0.0);
+	n = AddControlTreeNode(-1,"ChrAttackBreakBase","ChrAttackBreak",0.0);
+}
 
 void ControlsInit(string sPlatformName,bool bFirst)
 {

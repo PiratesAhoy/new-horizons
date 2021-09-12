@@ -1,0 +1,22 @@
+Name_Section {///////////////////////////////////////////////////////////////////////}
+CannonTypeName_4 {4-lb Cannon }
+CannonTypeName_8 {8-lb Cannon }
+CannonTypeName_12 {12-lb Cannon }
+CannonTypeName_16 {16-lb Cannon }
+CannonTypeName_20 {20-lb Cannon }
+CannonTypeName_24 {24-lb Cannon }
+CannonTypeName_28 {28-lb Cannon }
+CannonTypeName_32 {32-lb Cannon }
+CannonTypeName_36 {36-lb Cannon }
+CannonTypeName_42 {42-lb Cannon }
+CannonTypeName_48 {48-lb Cannon }
+CannonTypeName_92 {92-lb Cannon }
+CulTypeName_4 {4-lb Culverin }
+CulTypeName_8 {8-lb Culverin }
+CulTypeName_12 {12-lb Culverin }
+CulTypeName_16 {16-lb Culverin }
+CulTypeName_20 {20-lb Culverin }
+CulTypeName_24 {24-lb Culverin }
+CulTypeName_28 {28-lb Culverin }
+CulTypeName_32 {32-lb Culverin }
+

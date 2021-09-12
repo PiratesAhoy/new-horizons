@@ -46,7 +46,7 @@ the actual ship-berthing function is in the file ..\kam_shipberthing_ship.c, whi
 
 
 // general
-ref PChar;
+//ref PChar;
 int CurrentIslandNumber; // KK
 int CurrentPortNumber;
 string CurrentWindow;

@@ -1,7 +1,6 @@
 #ifndef __BATTLE_INTERFACE_MSG_CONTROL_
 #define __BATTLE_INTERFACE_MSG_CONTROL_
 
-// список активных действий
 #define BI_ACTIVE_MOOR				0
 #define BI_ACTIVE_SAIL_TO			1
 #define BI_ACTIVE_BOARD				2
@@ -12,7 +11,6 @@
 #define BI_ACTIVE_SAIL_AWAY			12
 #define BI_ACTIVE_HEAVE_TO_DRIFT	13
 
-// режим выбора
 #define BI_COMMODE_MY_SHIP_SELECT		1
 #define BI_COMMODE_ENEMY_SHIP_SELECT	2
 #define BI_COMMODE_NEUTRAL_FORT_SELECT	4
@@ -26,6 +24,9 @@
 #define BI_COMMODE_ABILITY_ICONS		1024
 #define BI_COMMODE_FRIEND_SHIP_SELECT	2048
 #define BI_COMMODE_NEUTRAL_SHIP_SELECT	4096
+#define BI_COMMODE_ENEMY_TOWN			8192
+#define BI_COMMODE_DISEASED_TOWN		16384
+#define BI_COMMODE_NOTDISEASED_TOWN		32768
 
 #define BI_MSG_SET_ISLAND				46003 // "s" (modelName)
 #define BI_MSG_NOT_ENOUGH_BALLS_FLAG	46004 // "l"
@@ -39,6 +40,9 @@
 #define BI_MSG_SET_MSG_ICONS			46006 // "e" &aref[4]
 
 #define BI_MSG_ADD_NEWTEXTURE			46007 // "sll" texName, horzSize, vertSize
+#define BI_MSG_CARE_COMMANDLIST_UPDATE	46050 // "ls" texIdx, texName
+//#20200311-01
+#define BI_MSG_POSITION_SWAP			46055
 
 #define BI_EVENT_SET_VISIBLE			"BI_Visible"
 #define BI_EVENT_SET_SEA_STATE			"BI_SetSeaState"
@@ -46,33 +50,28 @@
 #define BI_EVENT_CHECK_SHIPSTATE_SHOW	"BI_CheckSSShow"
 #define BI_EVENT_GET_FORT_RELATION		"BI_GetFortRelation"
 
-// типы отношений
 #define BI_RELATION_ENEMY		0
 #define BI_RELATION_FRIEND		1
 #define BI_RELATION_NEUTRAL		2
 
-// типы получаемых данных
 #define BIDT_SHIPPICTURE		0 // "l" (characterIdx)
 #define BIDT_GERALD_DATA		1 // "l" (characterIdx)
 
-// команды "земного" интерфейса
 #define MSG_BATTLE_LAND_START			46100 // ""
 #define MSG_BATTLE_LAND_END				46101 // ""
 #define MSG_BATTLE_LAND_SET_SHOW		46102 // "l" commandos show
 #define MSG_BATTLE_LAND_SET_MSGICONS	46103 // "e" &aref[4]
 #define MSG_BATTLE_LAND_SET_ICONTEX		46104 // "ls" texIdx, texName
+#define MSG_BATTLE_LAND_MAKE_COMMAND	46105 // "s" command_name
 
-// команды интерфейса подзорной трубы
 #define MSG_ISG_VISIBLE			46201 // "l" (set visible interface)
 #define MSG_ISG_UPDATE			46202 // "sslllfll" (ship name, ship type, hull, sail, crew, speed, cannons, charge)
+#define MSG_ISG_SET_SHIPICON	46203 // "sffff" ( texture name, uv_rect{left,top,right,bottom} )
 
-// команды интерфейса подзорной трубы
 #define MSG_SP_CHANGESHIP		46301 // "l" (new character - ship owner)
 
-// обращение к парусам
 #define MSG_SAIL_SCRIPT_PROCESSING	40099	// "s..."
 
-// обновить список активированных способностей
 #define MSG_ACTIVE_PERK_LIST_REFRESH	47000
 
 #endif

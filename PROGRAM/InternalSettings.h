@@ -15,6 +15,7 @@ Please follow these rules when editing settings:
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
+int iScriptVersion = 8675309;       //54128  --  15650
 
 // ======================================
 // REALISM OPTIONS:
@@ -142,7 +143,7 @@ int		MAX_RAINCHANGE =				5;		// INT - ^^DITTO for rain
 
 #define MAX_SHIPS_ON_SEA			32			// INT - original value is 32, DO NOT TOUCH THIS
 
-#define MAP_VOYAGELENGTH			4.0 		// FLOAT - ccc maptweak is 8.0: lets voyages take longer, original 4.0, slower days on worldmap is 2.0
+#define MAP_VOYAGELENGTH			1.5 //4.0 		// FLOAT - ccc maptweak is 8.0: lets voyages take longer, original 4.0, slower days on worldmap is 2.0
 
 #define MAXPIRATECLASS				4 			// INT - this is the maximum class ship pirates will be given. Defaults to 4.
 #define MAXCOASTGUARDCLASS			2 			// INT - this is the maximum class ship for coast guards.
@@ -192,7 +193,7 @@ float	NAVYRAIDER_CHANCE = 		0.4; 			// FLOAT - Ditto, but chance that raider is 
 												// 1: Same speed as in "Realistic Mode"
 												// 2: Twice as fast (default setting)
 												// 3: 3x as fast etc.
-												
+
 #define CANNON_RANGE_SCALAR 		1.0			// 0.3 - 2.0 : The higher the value the longer the cannon range OF SHIPS
 												// SET TO 1.0 IF USING REAL CANNONS!
 #define FORT_RANGE_SCALAR 			0.5			// 0.3 - 2.0 : The higher the value the longer the cannon range OF FORTS
@@ -216,13 +217,13 @@ float	NAVYRAIDER_CHANCE = 		0.4; 			// FLOAT - Ditto, but chance that raider is 
 #define FIREKILLCH_HP_RAT_PWR		0.5			// FLOAT - power to HP ratio
 
 
-#define SURR_GLOBAL_SCL				0.04		// FLOAT - Ships will surrender if damage or crew morale become critical
+#define SURR_GLOBAL_SCL				0.01		// FLOAT - Ships will surrender if damage or crew morale become critical
 												// 0.0 : Stock PotC, no surrenders
 												// 0.01 - 0.5 : The higher that value the faster ships surrender
 // Surrender adjustments
 #define SURR_MAX_MORALE				30			// INT - if morale > this, no surrender check. Scaled to between below two numbers.
-#define SURR_MRL_SCL_MAX			1.0			// FLOAT - (no description)
-#define SURR_MRL_SCL_MIN			0.4			// FLOAT - (no description)
+#define SURR_MRL_SCL_MAX			0.4			// FLOAT - (no description)
+#define SURR_MRL_SCL_MIN			0.2			// FLOAT - (no description)
 
 // Sailto controls
 #define SAILTO_MIN_SPEEDRATIO		0.75		// FLOAT - if your speed is less than this compared to your target's, can't sail-to. Note, also checks wind angle for you and the target running away, and rigtype for both.
@@ -335,7 +336,7 @@ float	MIN_ENEMY_DISTANCE_TO_DISABLE_ENTER_2_LOCATION =	500.0;	// FLOAT - origina
 // These are filenames from resource\models\characters but with extra character at the end describing whether they are
 // men ("M"), ladies ("W") or skeletons ("S"). Empty string ("") gets stock default.
 
-#define BOARDERMODEL 				"standard"	// Outfit for your boarders, insert one of these groups (Don't change spelling or the "" !): 
+#define BOARDERMODEL 				"standard"	// Outfit for your boarders, insert one of these groups (Don't change spelling or the "" !):
 												// "marine", "corsair", "masked", "skeleton", "girl", "soldier" (soldiers of current flag),
 												// "boarder" (Nathaniel's soldiers); default: "standard"
 
@@ -806,7 +807,7 @@ Set all to -1 to disable this mod
 #define REPLOSS							1		// INT - Reputation you loose if you hit an unarmed NPC
 
 // Bladedamage
-#define BLADEDAMAGE_ENABLED 			1		// BOOL - 1: Blades will suffer damage by use and decrease in quality	
+#define BLADEDAMAGE_ENABLED 			1		// BOOL - 1: Blades will suffer damage by use and decrease in quality
 												// 0: Stock PotC: bladequality never changes
 												// Note: Setting ENABLE_WEAPONSMOD to 0 will also disable this mod
 
@@ -861,7 +862,7 @@ Set all to -1 to disable this mod
 // ======================================
 
 #define SHIPHIT_PARTICLES 				3		// INT - The higher the setting the more effects (choose a lower setting if you get performance problems)
-												// 0: Stock PotC (red-orange explosion on hit) 
+												// 0: Stock PotC (red-orange explosion on hit)
 												// 1: Minimal hit effects (small puffs of gray smoke)
 												// 2: Recommended hit effects (puffs and splinters)
 												// 3: Excessive hit debris effects (plumes of planks and barrels, water splashes, flashes and smoke - ship explosions extensive)
@@ -1013,3 +1014,5 @@ Set all to -1 to disable this mod
 #define FREE_CAMERA						0
 #define SIDESTEP_ENABLED				0		// BOOL - 0 (default) = off, 1 = on: you can use sidestep during the game (NOTE: No collision detection!)
 #define ENABLE_CHEATMODE				0		// Cheats can be triggered with numpad buttons
+//Boyer add
+#define USE_NEW_WEATHER 1

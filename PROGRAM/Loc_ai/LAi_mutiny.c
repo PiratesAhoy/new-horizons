@@ -37,7 +37,7 @@ void Return2SeaAfterMutinyDeck()
 	SendMessage(&boarding_fader, "ls", FADER_PICTURE, FindReloadPicture("sea.tga")); // KK
 
 	float fadeOutTime = RELOAD_TIME_FADE_OUT;
-	
+
 	SendMessage(&boarding_fader, "lfl", FADER_OUT, fadeOutTime, false);
 	SendMessage(&boarding_fader, "l", FADER_STARTFRAME);
 	if (CheckAttribute(PChar, "IsOnDeck")) DeleteAttribute(PChar, "IsOnDeck"); // KK
@@ -51,7 +51,7 @@ void MutinyDeck_ReloadEndFade()
 
 	// unload all models
 	aref arModel;
-	if (FindClass(&arModel, "modelr")) 
+	if (FindClass(&arModel, "modelr"))
 	{
 		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
 		while (FindClassNext(&arModel)) { SendMessage(arModel, "l", MSG_MODEL_RELEASE); }
@@ -64,7 +64,7 @@ void MutinyDeck_ReloadEndFade()
 	boarding_fader = GetEventData();
 
 	MutinyDeck_Start();
-	
+
 	DelEventHandler("FaderEvent_EndFade", "MutinyDeck_ReloadEndFade");
 	SendMessage(&boarding_fader, "lfl", FADER_IN, RELOAD_TIME_FADE_IN, true);
 }
@@ -77,22 +77,23 @@ void Sea_MutinyDeckStartNow()
 // KK -->
 		if (isEntity(&WorldMap) != 0) {
 			PrepareMutinyDeck();
-		
+
 			if(sti(GetStorylineVar(FindCurrentStoryline(), "DISABLE_TIPS")) < 1) SetReloadNextTipsImage(); // JRH
-		
+
 			//Fade out
 			SetEventHandler("FaderEvent_StartFade", "MutinyDeck_WorldmapReloadStartFade", 0);
 			SetEventHandler("FaderEvent_EndFade", "MutinyDeck_WorldmapReloadEndFade", 0);
 			wdm_fader.thisWorldMapFader = "";
 			CreateEntity(&wdm_fader, "fader");
-			if(IsEntity(wdm_fader) == 0) Trace("Fader not created!!!");	
+			if(IsEntity(wdm_fader) == 0) Trace("Fader not created!!!");
 			float fadeOutTime = 0.5;
 			SendMessage(&wdm_fader, "lfl", FADER_OUT, fadeOutTime, true);
 			SendMessage(&wdm_fader, "l", FADER_STARTFRAME);
 			SendMessage(&wdm_fader, "ls", FADER_PICTURE, FindReloadPicture("Mutiny.tga"));
 
 			PauseAllSounds();
-			ResetSoundScheme();
+			//ResetSoundScheme();
+            ResetSound();
 		} else {
 			bSeaReloadStarted = true;
 
@@ -107,7 +108,8 @@ void Sea_MutinyDeckStartNow()
 			SendMessage(&boarding_fader, "l", FADER_STARTFRAME);
 
 			PauseAllSounds();
-			ResetSoundScheme();
+			//ResetSoundScheme();
+            ResetSound();
 		}
 // <-- KK
 
@@ -131,13 +133,14 @@ void Sea_MutinyDeckStartNow()
 
 void MutinyDeck_Start()
 {
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	int i, idx;
 	//Настроим интерфейс
 	DeleteBattleInterface();
 	StartBattleLandInterface();
-	
+
 	ref mchr = GetMainCharacter();
 // KK -->
 	int locID = FindLocation("MUTINY_Deck");
@@ -243,7 +246,7 @@ trace("Officer "+GetMySimpleName(chr)+" on "+chLocType+":"+chr.location.locator)
 			int actLoyal = makeint((1.0 - crewRatio) * actTotal);
 			mchr.Ship.Crew.Quantity = makeint(stf(mchr.Ship.Crew.Quantity) * (1.0 - crewRatio));
 			if (sti(mchr.Ship.Crew.Quantity) < 0) mchr.Ship.Crew.Quantity = 0;
-			/*int maxActors = 
+			/*int maxActors =
 			if (actTotal > maxActors) {
 				actTotal = maxActors;
 				actLoyal = makeint(actTotal * crewRatio);
@@ -413,7 +416,8 @@ void LAi_Activate_Reload()
 
 void MutinyDeck_ReloadStartFadeAfter()
 {
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	DelEventHandler("FaderEvent_StartFade", "MutinyDeck_ReloadStartFadeAfter");
 	if(boarding_location >= 0) UnloadLocation(&Locations[boarding_location]);

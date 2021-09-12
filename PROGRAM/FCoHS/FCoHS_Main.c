@@ -196,7 +196,8 @@ void FCoHS_Boarding_Start(int iBoardingTarget)
 
 	// Reset sounds
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	// Used by DirectSail
 	rMainCharacter.IsOnDeck = true;
@@ -270,7 +271,8 @@ void FCoHS_Boarding_EndFade()
 void FCoHS_Boarding_PrepareLoadDeck()
 {
 	// Reset sounds
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 
 	// Switch interface from sea to land
@@ -607,7 +609,8 @@ void FCoHS_Boarding_ReturnToOwnDeck()
 
 	// Reset sounds
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	// Used by DirectSail
 	if(CheckAttribute(GetMainCharacter(),"IsOnDeck")) { DeleteAttribute(GetMainCharacter(),"IsOnDeck"); }

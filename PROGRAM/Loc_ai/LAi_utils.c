@@ -48,6 +48,31 @@ bool LAi_CharacterCanFire(aref chr)
 	}
 	return false;
 }
+//Boyer add
+float Lai_CharacterGetEnergy(aref chr)
+{
+	if(CheckAttribute(chr, "chr_ai.energy"))
+	{
+		return stf(chr.chr_ai.energy);
+	}
+	return 0.0;
+}
+// 0..100
+void Lai_CharacterChangeEnergy(aref chr, float dlt)
+{
+	if(CheckAttribute(chr, "chr_ai.energy"))
+	{
+		float cur = stf(chr.chr_ai.energy);
+		cur = cur + dlt;
+		if(cur < 0.0) cur = 0.0;
+		if(cur > LAi_GetCharacterMaxEnergy(chr)) cur = LAi_GetCharacterMaxEnergy(chr);
+		chr.chr_ai.energy = cur;
+	}else{
+		if(dlt < 0.0) dlt = 0.0;
+		if(dlt > LAi_GetCharacterMaxEnergy(chr)) dlt = LAi_GetCharacterMaxEnergy(chr);
+		chr.chr_ai.energy = dlt;
+	}
+}
 
 //Может ли сражаться персонаж в заданной локации
 bool LAi_LocationCanFight()
@@ -292,6 +317,13 @@ void LAi_ApplyCharacterDamage(aref chr, int dmg)
 	// NK -->
 	int chrIndex = sti(chr.index);
 	ref mainChr = GetMainCharacter();
+
+	//Boyer add for Blood
+	bool bloodSize = false;
+	if (damage > 30.0) bloodSize = true;
+	float fRange = 1.0 + frand(0.6);
+	LaunchBlood(chr, fRange, bloodSize);
+
 	if(sti(mainChr.index) == chrIndex)
 	{
 		if(SHOWHP_PLAYER) SendMessage(chr, "lfff", MSG_CHARACTER_VIEWDAMAGE, dmg, MakeFloat(MakeInt(hp)), MakeFloat(MakeInt(maxhp)));
@@ -337,7 +369,7 @@ void LAi_CheckKillCharacter(aref chr)
 		//Переинициируем параметры
 		DeleteAttribute(chr, "chr_ai.poison");// ccc fix for poisoned rebirths
 
-		//ccc Survival -> if(CheckAttribute(chr, "chr_ai.type")) //original code, replaced by 
+		//ccc Survival -> if(CheckAttribute(chr, "chr_ai.type")) //original code, replaced by
 		if(IsMainCharacter(chr))
 		{
 			PlaySound("OBJECTS\VOICES\DEAD\skeleton\skeleton_dead01.wav");
@@ -433,7 +465,7 @@ ref LAi_CreateFantomCharacterExOt(bool isfriend, string officertype, int rank, b
 }
 
 //Создать фантомного персонажа
-ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string attr1, string attr2, string attr3, int rank     , bool hasblade, 
+ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string attr1, string attr2, string attr3, int rank     , bool hasblade,
 								  float hasgun , string model, string group      , string locator)
 {
 	//Ищем свободное место для персонажа
@@ -505,8 +537,8 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 	if(attr2 != "") chr.(attr2) = true;
 	if(attr3 != "") chr.(attr3) = true;
 
-	//nation - moved up here for consistency 
-	int nat = GetLocationNation(loadedLocation);	
+	//nation - moved up here for consistency
+	int nat = GetLocationNation(loadedLocation);
 	if(nat >= 0)
 	{
 		chr.nation = nat;
@@ -515,8 +547,8 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 	}
 	//name
 	SetRandomNameToCharacter(chr);
-  
-	// Sulan: No naval soldiers with shovels and pickaxes -->	
+
+	// Sulan: No naval soldiers with shovels and pickaxes -->
 //	if((iFCoHS_BoardingNation != PIRATE) && bFCoHS_FriendlyBoardingStarted)
 //	{
 //		chr.isSoldier = true;
@@ -569,6 +601,7 @@ ref LAi_CreateFantomCharacterExOtAt(bool isfriend, string officertype, string at
 	chr.chr_ai.hp_max = LAI_DEFAULT_HP_MAX;*/
 	// NK <--
 	chr.chr_ai.charge = LAI_DEFAULT_CHARGE;
+	SetEnergyToCharacter(chr); // boal
 	if(LAi_numloginedcharacters >= MAX_LOGINED_CHARACTERS_IN_LOCATION)
 	{
 		Trace("LAi_CreateFantomCharacter -> many logined characters in location (>" + MAX_LOGINED_CHARACTERS_IN_LOCATION +")");
@@ -743,7 +776,7 @@ void LAi_SetHuberSitAnimation(aref chr)
 	if(IsEntity(chr))
 	{
 		BeginChangeCharacterActions(chr);
-		SetHuberAnimation(chr);		
+		SetHuberAnimation(chr);
 		EndChangeCharacterActions(chr);
 	}
 }
@@ -766,7 +799,7 @@ void LAi_Fade(string questFadeOut, string questFadeIn)
 {
 	if(questFadeOut != "") LAi_QuestDelay(questFadeOut, 0.5);
 	if(questFadeIn != "") LAi_QuestDelay(questFadeIn, 1.0);
-	
+
 	if(IsEntity(&LAi_QuestFader))
 	{
 		Trace("LAi_Fade -> previous fade operation not ended!");
@@ -838,7 +871,7 @@ bool LAi_CanNearEnemy(aref chr, float radius)
 	{
 		int idx = sti(chrFindNearCharacters[i].index);
 		if(LAi_group_IsEnemy(chr, &Characters[idx])) return true;
-	}	
+	}
 	return false;
 }
 
@@ -850,3 +883,28 @@ void PauseLayer()
 //	ref ch = GetMainCharacter();
 }
 // <-- KK
+
+//Boyer add for Blood
+void LaunchBlood(aref chr, float addy, bool isBig)
+{
+	float x, y, z;
+	GetCharacterPos(chr, &x, &y, &z);
+	if (loadedLocation.type == "underwater")
+	{
+		y = y + 0.9;
+		CreateParticleSystemXPS("bloodUnderwater", x, y, z, 0,1.0,0,0);
+	}
+	else
+	{
+		y = y + addy;
+		if(isBig == true)
+		{
+			CreateParticleSystemXPS("blood_big", x, y, z, 0,1.0,0,0);
+		}
+		else
+		{
+			CreateParticleSystemXPS("blood", x, y, z, 0,1.0,0,0);
+		}
+		SendMessage(loadedLocation, "lsfff", MSG_LOCATION_EX_MSG, "par", x,y,z);
+	}
+}

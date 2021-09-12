@@ -12,7 +12,7 @@ string oldCurNode = "";
 int oldShowMode = -1;
 
 int nCurScroll;
-ref PChar;
+//ref PChar;
 int CurrentPortNumber;
 
 int SelectedCaptain1 = -1;

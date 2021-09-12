@@ -218,7 +218,7 @@ void InitInterface_R(string iniName,ref pCharacter)
 	if (hasShip == false && GetBerthedShipsQuantityForTown(GetTownIDFromLocID(MainChar.location)) > 0) {
 		hasShip = true;
 		GameInterface.GoDirectToShipBerthing = true;
-		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "I_SHIP", 0, XI_ConvertString("Sel Berth"));
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "I_SHIP", 0, "#"+XI_ConvertString("Sel Berth"));
 	}
 // <-- KK
 

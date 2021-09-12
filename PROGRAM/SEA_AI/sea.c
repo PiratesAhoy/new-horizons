@@ -18,11 +18,19 @@
 #include "sea_ai\ShipDead.c"
 #include "sea_ai\ShipWalk.c"
 
+#include "sea_ai\CoastFoam.c"
+
 #include "sea_ai\Telescope.c"
 
 #include "battle_interface\BattleInterface.c"
 
 #event_handler("Sea_FirstInit", "Sea_FirstInit");
+//Boyer add
+#event_handler("SeaLoad_GetPointer", "SeaLoad_GetPointer");
+
+#define PLAYER_GROUP	"OurGroup"
+#define MUTINY_GROUP	"MutinyGroup"
+#define SURR_GROUP	"SurrenderGroup"
 
 #define DEBUGCR		0		// LDH set to 1 to get coastal traffic debugging info 15Feb09
 
@@ -116,6 +124,7 @@ void DeleteSeaEnvironment()
 	DeleteSeaGoodsEnvironment();
 
 	DeleteWeatherEnvironment();
+	DeleteCoastFoamEnvironment();
 
 	DeleteAttribute(&AISea,"");
 
@@ -166,6 +175,9 @@ void CreateSeaEnvironment()
 	LayerFreeze("execute", true);
 	LayerCreate("sea_reflection", 1);
 	LayerFreeze("sea_reflection", false);
+	//Boyer add
+	LayerCreate("sea_reflection2", 1);			// this layer enabled for sea and disabled for abordage
+	LayerFreeze("sea_reflection2", false);
 
 	InterfaceStates.Buttons.Resume.enable = true;
 
@@ -205,10 +217,10 @@ void CreateSeaEnvironment()
 	// 1.03 - CreateEntity(&SeaLocatorShow, "SeaLocatorShow"); ReloadProgressUpdate();
 	// KK LayerAddObject(SEA_REALIZE, &SeaLocatorShow, -1); // since we hadn't created entity...
 
-	CreateEntity(&Telescope, "TELESCOPE");			ReloadProgressUpdate();
+	/* CreateEntity(&Telescope,"TELESCOPE");			ReloadProgressUpdate();
 	LayerAddObject(SEA_EXECUTE, &Telescope, -1);
-	LayerAddObject(SEA_REALIZE, &Telescope, -3);
-	TelescopeInitParameters(&Telescope);
+	LayerAddObject(SEA_REALIZE, &Telescope, -3); */
+	//TelescopeInitParameters(&objISpyGlass);
 
 	CreateSeaAnimals();								ReloadProgressUpdate();
 
@@ -261,10 +273,13 @@ void Sea_LandLoad()
 {
 	bSeaReloadStarted = true;
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	if (!bSeaActive) return;
 	if (bCanEnterToLand) {
+        //#20190717-01
+        resetGroupRel();
 		LayerFreeze("realize", false);
 		LayerFreeze("execute", false);
 
@@ -302,7 +317,8 @@ void Sea_ImmediateLandLoad(bool toFort)
 {
 	bSeaReloadStarted = true;
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	if (bSeaActive == false) return;
 	if (bCanEnterToLand == true)
@@ -382,7 +398,7 @@ void Sea_MapEndFade()
 
 	// PB: Update Changed Flag -->
 //	int cc, compIdx;
-	ref PChar = GetMainCharacter();
+	PChar = GetMainCharacter();
 	if(CheckAttribute(PChar, "orgnation"))	// checks if you just hoisted Jolly Roger
 	{
 		HoistFlag(sti(PChar.orgnation));
@@ -407,13 +423,16 @@ void Sea_MapLoad()
 	//int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
 	if(GetSeaTime() < 3 && !bSkipSeaLogin) {
 		LogIt(TranslateString("","Wait a sec while I get out the chart, captain!"));
-		PlaySound("interface\knock.wav");
+		PlaySound("knock");
 		return;
 	} // NK so you must be on sea >= 3 seconds. 05-04-23
+	//#20190717-01
+    resetGroupRel();
 	bSeaReloadStarted = true;
 	PauseAllSounds();
 
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	SetEventHandler("FaderEvent_StartFade", "Sea_MapStartFade", 0);
 	SetEventHandler("FaderEvent_EndFade", "Sea_MapEndFade", 0);
@@ -439,7 +458,8 @@ void Land_MapLoad()
 	bSeaReloadStarted = true;
 	PauseAllSounds();
 
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	SetEventHandler("FaderEvent_StartFade", "Land_MapStartFade", 0);
 	SetEventHandler("FaderEvent_EndFade", "Sea_MapEndFade", 0);
@@ -459,7 +479,7 @@ void Land_MapLoad()
 void Land_MapStartFade()
 {
 	DelEventHandler("FaderEvent_StartFade", "Land_MapStartFade");
-	ref PChar = GetMainCharacter();
+	PChar = GetMainCharacter();
 	if(CheckAttribute(PChar,"location") && PChar.location!="" && FindLocation(PChar.location)!=-1)
 	{
 		UnloadLocation(&locations[FindLocation(PChar.location)]);
@@ -564,7 +584,6 @@ void SeaLogin(ref Login)
 		rCharacter = GetCharacter(iCharacterIndex);
 		rCharacter.location = Login.Island;
 	}
-
 	if (bDirectSail) rPlayer.BaseCurrentTime = 0.0; //Screwface : fix to restart Sea ai update as soon as sea reload
 
 	// clear old fantom relations in our character
@@ -618,7 +637,10 @@ void SeaLogin(ref Login)
 		trace("SEA: sealogin loading island " + sIslandID);
 		CreateEntity(&Island, "Island");
 		Island.LightingPath = GetLightingPath();
-
+		//20180715
+		Island.FogDensity = Weather.Fog.IslandDensity;
+        Island.ImmersionDistance = 450000.0;
+		Island.ImmersionDepth = 0.0;
 		if (GetTargetPlatform() != "xbox")
 		{
 			//CreateEntity(&SeaLighter, "lighter"); // PB: Enable Loc Lighter at sea with this
@@ -627,20 +649,29 @@ void SeaLogin(ref Login)
 		}
 
 		SendMessage(&Island, "lsss", MSG_ISLAND_LOAD_GEO, "islands", Islands[iIslandIndex].filespath.models, Islands[iIslandIndex].model);
-		LayerAddObject(SEA_REALIZE, &Island, 65529);
+		LayerAddObject(SEA_REALIZE, &Island, 4); //Boyer change 65529 4
 		LayerAddObject("mast_island_trace", &Island, 1);
 		LayerAddObject("sun_trace", &Island, 1);
+		//Boyer add
+		float fMaxViewDist = 6000.0;
+		if(CheckAttribute(&Islands[iIslandIndex], "maxviewdist"))
+		{
+			fMaxViewDist = stf(Islands[iIslandIndex].maxviewdist);
+		}
+		SendMessage(&Island, "lf", MSG_MODEL_SET_MAX_VIEW_DIST, fMaxViewDist);
 
 		CreateEntity(&IslandReflModel, "MODELR");
 		string sReflModel = Islands[iIslandIndex].filespath.models + "\" + Islands[iIslandIndex].refl_model;
 		SendMessage(&IslandReflModel, "ls", MSG_MODEL_SET_LIGHT_PATH, GetLightingPath());
 		SendMessage(&IslandReflModel, "ls", MSG_MODEL_LOAD_GEO, sReflModel);
-		LayerAddObject("sea_reflection", &IslandReflModel, -1);
+		SendMessage(&IslandReflModel, "lllf", MSG_MODEL_SET_FOG, 1, 1, stf(Weather.Fog.IslandDensity));
+		LayerAddObject("sea_reflection2", &IslandReflModel, -1); //Boyer change sea_reflection
 		SendMessage(SeaLighter, "ssi", "AddModel", Islands[iIslandIndex].refl_model, &IslandReflModel);
 
 		bIslandLoaded = true;
 
 		SendMessage(&SeaLocatorShow, "a", &Islands[iIslandIndex]);
+		CreateCoastFoamEnvironment(sIslandID, SEA_EXECUTE, SEA_REALIZE);
 		Fort_Login(iIslandIndex);
 
 		if(!bstorm) Sea.MaxSeaHeight = 3.0; // screwface : allow big waves around island in storm conditions
@@ -778,8 +809,7 @@ void SeaLogin(ref Login)
 
 	ReloadProgressUpdate();
 
-	if (!bDirectSail && !bLoadSavedGame)
-	{
+	if (!bDirectSail && !bLoadSavedGame) {
 		// login fantom groups
 		makearef(arEncounters,Login.Encounters);
 		int iNumGroups = GetAttributesNum(arEncounters);
@@ -832,8 +862,7 @@ void SeaLogin(ref Login)
 			Trace("SEA: Set group : " + sGName + ", x = " + x + ", z = " + z);
 
 			// load ship to sea
-			if (iNShips > 0)
-			{
+			if (iNShips > 0) {
 				int iGeraldSails = -1;
 				if (CheckAttribute(rEncounter, "GeraldSails")) iGeraldSails = sti(rEncounter.GeraldSails);
 				LoadShipsToSea(iNShips, sGName, iNation, iGeraldSails);
@@ -843,7 +872,7 @@ void SeaLogin(ref Login)
 	else
 	{
 		if (bDirectSail && CheckAttribute(rPlayer, "directsail.encounter"))
-		{ // if set so in DirectsailCheck() random encounter ships are created
+		{ // if set so in DirectsailCheck() random encounter ships are created			rPlayer.ship.pos.x = stf(Login.PlayerGroup.x); // so that DirectEncounter doesn't use OLD coords
 			rPlayer.ship.pos.x = stf(Login.PlayerGroup.x); // so that DirectEncounter doesn't use OLD coords
 			rPlayer.ship.pos.z = stf(Login.PlayerGroup.z);
 			DirectEncounter(stf(Login.PlayerGroup.ay));
@@ -975,9 +1004,10 @@ void SeaLogin(ref Login)
 	SetAllShipsNeutral();							ReloadProgressUpdate(); // PB: But set correct relations later in Sea_FirstInit
 	// Screwface : End
 
-	CreateEntity(&Seafoam,"Seafoam");				ReloadProgressUpdate();
-	LayerAddObject(SEA_EXECUTE, &Seafoam, -1);
-	LayerAddObject(SEA_REALIZE, &Seafoam, -1);
+	//Boyer move to Sea_FirstInit
+	//CreateEntity(&Seafoam,"Seafoam");				ReloadProgressUpdate();
+	//LayerAddObject(SEA_EXECUTE, &Seafoam, -1);
+	//LayerAddObject(SEA_REALIZE, &Seafoam, -1);
 	DeleteAttribute(rPlayer, "scrollchars");				// PB: For Cheatmode
 	DeleteAttribute(rPlayer, "Anchoring");					// PB: Just to make sure this is gone
 	DeleteAttribute(rPlayer, "ForceReload");				// PB: Just to make sure this is gone
@@ -994,20 +1024,24 @@ void SeaLogin(ref Login)
 		DeleteAttribute(rCharacter, "Ship.Tack");
 		// PB: To make sure this is gone <--
 	}
+
+	//Boyer move to Sea_FirstInit
+	/*
 	if (Whr_IsStorm())
 	{
 		Seafoam.storm = "true";
 		rPlayer.Capsize.Warning = ROLL_ANGLE_WARNING;		// PB: Reset capsize danger
-	}
+	} */
+
 	InitOpenSeaMod();										// stljeffbb Jan 15 2012
-	trace("Seafoam done");
+	//trace("Seafoam done");
 
 	/*CreateEntity(&SeaOperator, "SEA_OPERATOR");
 	LayerAddObject(SEA_EXECUTE, &SeaOperator, -1);
 	LayerAddObject(SEA_REALIZE, &SeaOperator, 3);*/
 
 	SendMessage(&Telescope, "leee", MSG_TELESCOPE_INIT_ARRAYS, &Nations, &ShipsTypes, &Goods);
-	trace("Telescope initiated");
+	//trace("Telescope initiated");
 
 	PostEvent(SHIP_CHECK_RELOAD_ENABLE, 100);
 
@@ -1018,8 +1052,13 @@ void SeaLogin(ref Login)
 	iRDTSC = RDTSC_E(iRDTSC);
 	//Trace("SeaLogin RDTSC = " + iRDTSC);
 	//Trace("iNumShips = " + iNumShips);
+    DeleteAttribute(pchar, "SkipEshipIndex");// boal
+	PostEvent("Sea_FirstInit", 1);
+	//StartPostInitChars();
+	Trace("SEA: SeaLogin end");
 
-	PostEvent("Sea_FirstInit", 100);
+
+PostEvent("Sea_FirstInit", 100);
 	StartPostInitChars();
 	Trace("SEA: SeaLogin end");
 }
@@ -1331,6 +1370,24 @@ void Sea_FirstInit()
 
 	ResetTimeToNormal(); // PB: Reset Time Scale
 
+	//Boyer change as wdmCurrentIsland not set as no WorldMap event to do so in 2.8 engine anymore
+ 	//Fixed by worldmap.legacyArea
+ 	//#20210827-01
+ 	//wdmCurrentIsland = DiscoveredIsland(ISLAND_DISCOVERY_DISTANCE);
+
+
+	//Boyer change move here from SeaLogin
+	if(!IsEntity(&Seafoam)) {
+        CreateEntity(&Seafoam,"Seafoam");//				ReloadProgressUpdate();
+        LayerAddObject(SEA_EXECUTE, &Seafoam, -1);
+        LayerAddObject(SEA_REALIZE, &Seafoam, -1);
+	}
+	if (Whr_IsStorm())
+	{
+		Seafoam.storm = "true";
+		rPlayer.Capsize.Warning = ROLL_ANGLE_WARNING;		// PB: Reset capsize danger
+	}
+
 	trace("Sea_FirstInit done");
 }
 
@@ -1567,7 +1624,7 @@ void SetCoastTraffic(string islandstr)
 					cr.perks.list.ShipSpeedUp = true;
 					cr.Ship.crew.quantity = GetMaxCrewQuantity(cr);
 				}
-				
+
 				InitAutoSkillsSystem(cr,false); //Levis
 				// move down - SetCharacterRelationBoth(sti(cr.index), GetMainCharacterIndex(), GetRMRelationType(GetRMRelation(PChar, sti(cr.nation)))); // NK set base relation to avoid gray icon
 				//trace(trstr);
@@ -1783,9 +1840,13 @@ float GetVisibilityRange(int iRange)
 		break;
 		// default:
 			visibility_range = 3000.0;
-			
+
 	}
-	visibility_range -= (stf(Weathers.Fog.SeaDensity) * 130 * visibility_range);
+	//Boyer add
+    if(USE_NEW_WEATHER)
+        visibility_range -= (stf(Weather.Fog.SeaDensity) * 130 * visibility_range);
+    else
+        visibility_range -= (stf(Weathers.Fog.SeaDensity) * 130 * visibility_range);
 	if (Whr_IsNight()) visibility_range /= 2.0;
 	return visibility_range;
 }
@@ -1817,3 +1878,112 @@ void SetCorrectWorldMapPosition()
 		worldMap.playerShipZ = (psZ/WDM_MAP_TO_SEA_SCALE) + iz;
 	}
 }
+
+//Boyer add
+ref		rSeaLoadResult;
+
+ref SeaLoad_GetPointer()
+{
+	string sType = GetEventData();
+	int iIndex = GetEventData();
+
+	switch (sType)
+	{
+		case "character":
+			makeref(rSeaLoadResult, Characters[iIndex]);
+		break;
+		//case "ship":
+		//	makeref(rSeaLoadResult, RealShips[iIndex]);
+		//break;
+		case "seacameras":
+			makeref(rSeaLoadResult, SeaCameras);
+		break;
+		//case "seasave":
+		//	makeref(rSeaLoadResult, oSeaSave);
+		//break;
+	}
+	return rSeaLoadResult;
+}
+
+float SetMaxSeaHeight(int islandIdx)
+{
+	if (!bSeaActive) return   6.0; // ??????? ????? ??? ????, ??? ????????? pchar.Ship.Pos.x
+	if (bStorm) return 200.0;
+	string sIslandID = Islands[islandIdx].id;
+
+
+	float  fMaxViewDist;
+    int    i, iQty;
+
+	if (CheckAttribute(Islands[islandIdx], "MaxSeaHeight")) return stf(Islands[islandIdx].MaxSeaHeight);
+
+	// ????? ??? ?????????? ?? ??????? ?? ?????? -->
+    //fMaxViewDist = 2000; // ???????? ???????? ??????????
+
+	aref arReloadLoc, arLocator;
+	makearef(arReloadLoc, Islands[islandIdx].reload);
+	string  sLabel;
+	iQty = GetAttributesNum(arReloadLoc);
+    //Log_TestInfo("Sea.MaxSeaHeight " + Sea.MaxSeaHeight);
+	for (i=0; i<iQty; i++)
+	{
+		arLocator = GetAttributeN(arReloadLoc, i);
+		sLabel = arLocator.label;
+
+		//?????????? ?? ???? ? ??????
+		if (findsubstr(sLabel, "Shore" , 0) != -1 || findsubstr(sLabel, "Mayak" , 0) != -1)
+		{
+			if (CheckAttribute(pchar, "Ship.Pos.x") && CheckAttribute(arLocator, "x"))  // fix ?????? ????????? ? ???????, ?????? ?????? ???? ? ?????? to_do
+
+			{
+				if (GetDistance2D(stf(pchar.Ship.Pos.x), stf(pchar.Ship.Pos.z), stf(arLocator.x), stf(arLocator.z)) < 1500)
+					return 6.0;
+
+			}
+			else
+			{
+				trace("Error: ???????? ??????????? SetMaxSeaHeight ??? " + sLabel);
+
+			}
+		}
+		//?????????? ?? ?????
+		if (findsubstr(sLabel, "Fort" , 0) != -1)
+		{
+			if (CheckAttribute(pchar, "Ship.Pos.x") && CheckAttribute(arLocator, "x"))  // fix ?????? ????????? ? ???????, ?????? ?????? ???? ? ?????? to_do
+
+			{
+				if (GetDistance2D(stf(pchar.Ship.Pos.x), stf(pchar.Ship.Pos.z), stf(arLocator.x), stf(arLocator.z)) < 1700)
+					return 6.0;
+			}
+			else
+			{
+				trace("Error: ???????? ??????????? SetMaxSeaHeight ??? " + sLabel);
+			}
+
+		}
+		//?????????? ?? ?????
+		if (findsubstr(sLabel, "Port" , 0) != -1)
+
+		{
+			if (CheckAttribute(pchar, "Ship.Pos.x") && CheckAttribute(arLocator, "x"))  // fix ?????? ????????? ? ???????, ?????? ?????? ???? ? ?????? to_do
+
+
+
+			{
+				if (GetDistance2D(stf(pchar.Ship.Pos.x), stf(pchar.Ship.Pos.z), stf(arLocator.x), stf(arLocator.z)) < 2000)
+					return 6.0;
+
+			}
+			else
+			{
+				trace("Error: ???????? ??????????? SetMaxSeaHeight ??? " + sLabel);
+
+			}
+
+		}
+
+	}
+    //Log_TestInfo("Sea.MaxSeaHeight Max 200");
+	return 200.0;
+}
+

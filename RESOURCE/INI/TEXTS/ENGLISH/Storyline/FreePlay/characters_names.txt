@@ -1,9 +1,8 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-{=====| FreePlay.c |=====}
+
 Julian{Julian}
 McAllister{McAllister}
 
-{=====| StartStoryline.c |=====}
 Robert{Robert}
 Fletcher{Fletcher}
 Edward{Edward}
@@ -22,13 +21,12 @@ de Hadoque{de Hadoque}
 Koleniko{Koleniko}
 Ragetti{Ragetti}
 
-{=====| quests_reaction.c |=====}
+
 Bartolomeu{Bartolomeu}
 Portugues{Portugues}
 Guillaume{Guillaume}
 Auger{Auger}
 
-{=====| Officers.c |=====}
 William{William}
 Sullivan{Sullivan}
 David{David}
@@ -45,7 +43,6 @@ Angus{Angus}
 Calhoun{Calhoun}
 Bush{Bush}
 
-{=====| TempQuest.c |=====}
 Bart{Bart}
 Renault{Renault}
 Enrique{Enrique}
@@ -76,7 +73,6 @@ Madero{Madero}
 Arnaldo{Arnaldo}
 Chaparro{Chaparro}
 
-{=====| TempQuestEnemy.c |=====}
 Prison{Prison}
 Guard{Guard}
 Prison Guard{Prison Guard}
@@ -92,5 +88,3 @@ Abel{Abel}
 Barco{Barco}
 Renouart{Renouart}
 Larrouse{Larrouse}
-
-{=====| 63 characters |=====}

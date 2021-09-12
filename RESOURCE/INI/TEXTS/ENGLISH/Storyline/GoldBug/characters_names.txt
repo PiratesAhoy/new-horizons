@@ -1,16 +1,12 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-{=====| GoldBug.c |=====}
+
 William{William}
 Legrand{Legrand}
 
-{=====| StartStoryline.c |=====}
-
-{=====| quests_reaction.c |=====}
 Edgar Allan{Edgar Allan}
 Poe{Poe}
 Jupiter{Jupiter}
 
-{=====| TempQuest.c |=====}
 C. Auguste{C. Auguste}
 Dupin{Dupin}
 Arthur Gordon{Arthur Gordon}
@@ -124,5 +120,3 @@ Bandit{Bandit}
 Priest{Priest}
 Zombie{Zombie}
 Buccaneer{Buccaneer}
-
-{=====| 191 characters |=====}

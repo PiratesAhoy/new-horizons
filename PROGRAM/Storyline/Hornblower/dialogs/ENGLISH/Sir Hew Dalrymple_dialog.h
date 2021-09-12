@@ -5,7 +5,7 @@ string DLG_TEXT[35] = {
 "Indeed, Sir Hew.",
 ".",
 "Now concerning you, Mr. ",
-". Justinian.. Indefatigable.. Capture of Le RÐºve.. Commendation with regard to the sinking of the TÐ¹mÐ¹raire and saving us from the fire ship. Impressive stuff, Mr. ",
+". Justinian.. Indefatigable.. Capture of Le Rêve.. Commendation with regard to the sinking of the Téméraire and saving us from the fire ship. Impressive stuff, Mr. ",
 ". And you were here for your lieutenants' exam eh! No time for that now. Things have moved on somewhat. Looks like you're just the man we need for this mission.",
 "Mission?",
 "Yes Lieutenant, mission. Captain Pellew and I have some top secret documents we need you to take to England. With all possible speed.",

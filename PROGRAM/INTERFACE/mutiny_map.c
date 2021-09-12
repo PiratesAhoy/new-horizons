@@ -155,7 +155,7 @@ void DoPostExit()
 
 void CalculateInfoData()
 {
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_PAY",0,XI_ConvertString("MutinyPay"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_PAY",0,"#"+XI_ConvertString("MutinyPay"));
 	ref mainCh = GetMainCharacter();
 	mainCh.Mutiny = true;
 	int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
@@ -169,7 +169,7 @@ void CalculateInfoData()
 	{
 		SetSelectable("B_PAY",false);
 		SetCurrentNode("B_FIGHT");
-		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FIGHT",0,XI_ConvertString("MutinyFight"));
+		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FIGHT",0,"#"+XI_ConvertString("MutinyFight"));
 		totalInfo += " " + LanguageConvertString(tmpLangFileID,"CrewMutinyArticles5");
 		if(GetSquadronGoods(mainCh,GOOD_RUM)<rumRation) // PB: Use ALL ships in the fleet
 		{
@@ -182,7 +182,7 @@ void CalculateInfoData()
 		{
 			SetSelectable("B_PAY",false);
 			SetCurrentNode("B_FIGHT");
-			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FIGHT",0,XI_ConvertString("MutinyFight"));
+			SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FIGHT",0,"#"+XI_ConvertString("MutinyFight"));
 			totalInfo += " " + LanguageConvertString(tmpLangFileID,"CrewMutinyArticles4");
 		}
 		else
@@ -192,14 +192,14 @@ void CalculateInfoData()
 				SetSelectable("B_PAY",false);
 				SetCurrentNode("B_FIGHT");
 				totalInfo = LanguageConvertString(tmpLangFileID,"CrewMutinyArticles3");
-				SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FIGHT",0,XI_ConvertString("MutinyExit"));
+				SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FIGHT",0,"#"+XI_ConvertString("MutinyExit"));
 				PlaySound("AMBIENT\cheer.wav");
 			}
 			else
 			{
 				SetSelectable("B_PAY",true);
 				SetCurrentNode("B_PAY");
-				SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FIGHT",0,XI_ConvertString("MutinyFight"));
+				SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FIGHT",0,"#"+XI_ConvertString("MutinyFight"));
 			}
 		}
 	}

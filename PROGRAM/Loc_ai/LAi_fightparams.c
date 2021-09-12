@@ -1,3 +1,5 @@
+#define MOD_SKILL_ENEMY_RATE 0
+
 // GreatZen-NK -->
 float ApplyArmor(ref chr, ref attack, float dmg, bool blade)
 {
@@ -34,7 +36,115 @@ float ApplyArmor(ref chr, ref attack, float dmg, bool blade)
 //--------------------------------------------------------------------------------
 //Blade parameters
 //--------------------------------------------------------------------------------
+float LAi_CalcDamageForBlade(aref attack, aref enemy, string attackType, bool isBlocked)
+{
+	float min = 10.0;
+	float max = 10.0;
+	if(CheckAttribute(attack, "chr_ai.dmgbldmin"))
+	{
+		min = stf(attack.chr_ai.dmgbldmin);
+	}
+	if(CheckAttribute(attack, "chr_ai.dmgbldmax"))
+	{
+		max = stf(attack.chr_ai.dmgbldmax);
+	}
+	//float bladeDmg = min + frand((max - min));//*(rand(10)*0.1);
+	float bladeDmg = min + (max - min)*frandSmall(LAi_GetCharacterFightLevel(attack));
+	float aSkill = LAi_GetCharacterFightLevel(attack);
+	float eSkill = LAi_GetCharacterFightLevel(enemy);
+	//float kSkillDmg = 1.0;
+	//kSkillDmg = 1.0 * (1.0 + (0.3 * aSkill));
+    if (aSkill < eSkill)
+	{
+		bladeDmg = bladeDmg * (1.0 + 0.7 * (aSkill - eSkill));
+	}
 
+	float kAttackDmg = 1.0;
+
+	//if (sti(attack.index) == GetMainCharacterIndex()) Log_Info(attackType);
+	switch(attackType)
+	{
+		case "fast":
+			if(isBlocked)
+			{
+				kAttackDmg = 0.0;
+			}else{
+				kAttackDmg = 0.7;
+			}
+			break;
+		case "force":
+			if(isBlocked)
+			{
+				kAttackDmg = 0.0;
+			}else{
+				kAttackDmg = 1.0;
+			}
+			break;
+		case "round":
+			if(isBlocked)
+			{
+				kAttackDmg = 0.0;
+			}else{
+				kAttackDmg = 0.6;
+			}
+			if(CheckCharacterPerk(attack, "BladeDancer"))
+			{
+				kAttackDmg = kAttackDmg * 1.3;
+			}
+			break;
+		case "break":
+			if(isBlocked)
+			{
+				kAttackDmg = 1.0;
+			}else{
+				kAttackDmg = 3.0;
+			}
+		break;
+
+		case "feintc":
+			if(isBlocked)
+			{
+				kAttackDmg = 0.0;
+			}else{
+				kAttackDmg = 0.8;
+			}
+		break;
+
+		case "feint":
+			if(isBlocked)
+			{
+				kAttackDmg = 0.0;
+			}else{
+				kAttackDmg = 0.5;
+			}
+		break;
+	}
+	if (kAttackDmg > 0)
+	{
+		float dmg = bladeDmg * kAttackDmg;
+		/* if(CheckCharacterPerk(attack, "HardHitter"))
+		{
+			if(CheckAttribute(enemy, "chr_ai.energy"))
+			{
+				enemy.chr_ai.energy = (stf(enemy.chr_ai.energy) * 0.9); //fix
+			}
+		}
+		if (MOD_SKILL_ENEMY_RATE == 1 && CheckAttribute(enemy, "chr_ai.group"))
+		{
+			if (enemy.chr_ai.group == LAI_GROUP_PLAYER)
+			{
+				dmg = dmg / MOD_Complexity_1_DMG;
+			}
+		}
+		if (MOD_SKILL_ENEMY_RATE < 5 && sti(enemy.index) == GetMainCharacterIndex())
+		{
+			dmg = dmg * (4.0 + MOD_SKILL_ENEMY_RATE) / 10.0;
+		} */
+		return dmg;
+	}
+	return 0.0;
+}
+/*
 //Получить повреждение от сабли
 float LAi_BladeCalcDamage(aref attack)
 {
@@ -52,6 +162,7 @@ float LAi_BladeCalcDamage(aref attack)
 	float dmg = min + (max - min)*(rand(100)*0.01);
 	return dmg;
 }
+*/
 
 //Модифицировать повреждение от сабли с учётом скилов
 float LAi_BladeApplySkills(aref attack, aref enemy, float dmg)
@@ -133,6 +244,76 @@ float LAi_BladeCalcExperience(aref attack, aref enemy, float dmg)
 	return dmg;
 }
 
+float LAi_CalcUseEnergyForBlade(aref character, string actionType)
+{
+	float energy = 0.0;
+	switch(actionType)
+	{
+		case "fast":
+			energy = 10.0;
+		break;
+		case "force":
+			energy = 7.0;
+		break;
+		case "round":
+			energy = 14.0;
+		break;
+		case "break":
+			energy = 25.0;
+		break;
+		//case "feint":
+		//	energy = 7.0;
+		//break;
+		//case "parry":
+		//	energy = 20.0;
+		//break;
+		case "hit_parry":  // fix
+			energy = 20.0;
+		break;
+		case "feintc":
+			energy = 7.0;
+		break;
+	}
+	/*if(CheckCharacterPerk(character, "BladeDancer"))  // to_do
+	{
+		energy = energy * 0.9;
+	}*/
+	/*if(character.id == pchar.id || character.chr_ai.group == LAI_GROUP_PLAYER)
+	{
+		energy = energy * (1.05 - (0.025 * MOD_SKILL_ENEMY_RATE));
+	} */
+	if (energy > 0.0)
+	{
+		float fSkill = LAi_GetCharacterFightLevel(character);  // stf(character.skill.fencing)
+		fSkill = (1.0 - (0.3 * fSkill));
+		energy = energy * fSkill * LAi_GetBladeEnergyType(character);
+	}
+	return energy;
+}
+
+float Lai_UpdateEnergyPerDltTime(aref chr, float curEnergy, float dltTime)
+{
+	float fMultiplier = 1.6666667;
+    //#20191008-01
+	//if(CheckCharacterPerk(chr, "Energaiser") || IsCharacterPerkOn(chr, "herbRush"))
+	//{
+	//	fMultiplier = fMultiplier * 1.5;
+	//}
+	//if(CheckCharacterPerk(chr, "Tireless"))
+	//{
+	//	fMultiplier = fMultiplier * 1.15;
+	//}
+    /*
+	if(chr.id == pchar.id || chr.chr_ai.group == LAI_GROUP_PLAYER)
+	{
+		fMultiplier = fMultiplier * (1.0 + (0.025 * MOD_SKILL_ENEMY_RATE));
+	}
+	*/
+	float fEnergy;
+	fEnergy = curEnergy + dltTime * fMultiplier;
+
+	return fEnergy;
+}
 //Расчитать вероятность пробивки блока
 float LAi_BladeFindPiercingProbability(aref attack, aref enemy, float hitDmg)
 {
@@ -170,7 +351,7 @@ float LAi_BladeFindPiercingProbability(aref attack, aref enemy, float hitDmg)
 		if(IsCharacterPerkOn(enemy, "BasicDefence")) k = 0.75;
 		if(IsCharacterPerkOn(enemy, "AdvancedDefence")) k = 0.5;
 	}
-	
+
 	//Moved from attack function
 	float pBreak = 1.0;
 	if(IsCharacterPerkOn(attack, "SwordplayProfessional"))
@@ -185,11 +366,11 @@ float LAi_BladeFindPiercingProbability(aref attack, aref enemy, float hitDmg)
 	{
 		pBreak = pBreak + 0.9;
 	}
-	
+
 	hitDmg = 0.25*hitDmg^2 + 0.5*hitDmg + 0.25;							// hitDmg is a small number, so this is 0.5 to 0.52 typically, can be higher
 	//Levis changed and removed a *hitDmg at the end. should have same effect but makes it easier to read.
 	// (0.5X + 0.5) * (0.5X +0.5) = 0.25X^2 + 0.5X + 0.25
-	
+
 //float retVal = p*k*hitDmg*hitDmg*100;  if (retVal > 100.0) retVal = 100.0;
 //float retValOrig = origP*k*hitDmg*hitDmg*100;
 //TraceAndLog("p=" + makeint(piercing*100) + ", " + stringRet(piercing<0.1," ","") +
@@ -206,7 +387,7 @@ float LAi_BladeFindPiercingProbability(aref attack, aref enemy, float hitDmg)
 	float s = 1.0;
 	if(CheckAttribute(enemy,"quest.opium_use.opiumsickness")) s = s - stf(enemy.quest.opium_use.opiumsickness);
 	if(s < 0.1) s = 0.1;
-	
+
 	p = p*k*hitDmg*pBreak*s;
 	if (p>1.0) p = 1.0;
 	return p;
@@ -337,8 +518,8 @@ float LAi_GunReloadSpeed(aref chr)
 		}
 		else
 		{
-			if(IsEquipCharacterByItem(chr, "ammopouch")) 
-			{	
+			if(IsEquipCharacterByItem(chr, "ammopouch"))
+			{
 				P = 1.05;
 			}
 		}
@@ -445,10 +626,6 @@ float LAi_GunReloadSpeed(aref chr)
 						ammoName2 = "caps_box_O";
 						if(gpb == 0 || cap == 0) return 0.0;
 					break;
-					case "pg6":
-						ammoName = "pistolgrapes";
-						if(pg <= 5 || gp <= 5) return 0.0;
-					break;				
 				}
 				if(!CheckAttribute(chr,"Items.gunpowder")) chr.Items.gunpowder = 0;
 				if(!CheckAttribute(chr,"Items."+ammoName) || sti(chr.Items.gunpowder)==0)
@@ -635,7 +812,7 @@ float LAi_CalcDeadExp(aref attack, aref enemy)
 //Calculate
 //--------------------------------------------------------------------------------
 
-
+/*
 //Начисление повреждений при незаблокированной атаке
 void LAi_ApplyCharacterAttackDamage(aref attack, aref enemy, float attackDmg, float hitDmg)
 {
@@ -647,10 +824,14 @@ void LAi_ApplyCharacterBlockDamage(aref attack, aref enemy, float attackDmg, flo
 {
 	LAi_ApplyCharacterBladeDamage(attack, enemy, attackDmg, hitDmg, true);
 }
+*/
 
 //Начисление повреждений при атаке мечём
-void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, float hitDmg, bool isBlocked)
+//void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, float hitDmg, bool isBlocked)
+void LAi_ApplyCharacterAttackDamage(aref attack, aref enemy, string attackType, bool isBlocked)
 {
+	float dmg = LAi_CalcDamageForBlade(attack, enemy, attackType, isBlocked);
+
 	//Если неубиваемый, то нетрогаем его
 	if(LAi_IsImmortal(enemy)) return;
 	//Применяем абилити
@@ -675,7 +856,7 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 	if(isBlocked)
 	{
 		//Вероятность пробивки
-		float p = LAi_BladeFindPiercingProbability(attack, enemy, hitDmg);
+		float p = LAi_BladeFindPiercingProbability(attack, enemy, dmg);
 		//p = p + pBreak;
 
 		//Если шансов пробить нет, то ненаносим провреждения
@@ -697,7 +878,7 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 		}
 	}
 	//Вычисляем повреждение
-	float dmg = LAi_BladeCalcDamage(attack);
+	//float dmg = LAi_BladeCalcDamage(attack);
 	float damage = LAi_BladeApplySkills(attack, enemy, dmg);
 	// Baste - critical hit calculation changed -->
 	float critical = 0.0;
@@ -780,7 +961,7 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 	//Проверим на смерть
 	LAi_CheckKillCharacter(enemy);
 	//Есть ли оружие у цели
-	bool isSetBalde = (CheckAttribute(enemy, "equip.blade") == true);//(SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
+	bool isSetBalde = (SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
 	//Начисляем опыта
 	if(critical > 0.0) damage = critical; // So EXP calculation takes critical damage into account
 	float exp = LAi_BladeCalcExperience(attack, enemy, damage);
@@ -794,27 +975,10 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 			// ccc mar05 REPLOSS tweak added
 			if(enemy.chr_ai.group != LAi_monsters_group)
 			{
-				if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS*3 + " - " + TranslateString("","undrawn blade 1")); 	// LDH 19Dec08
+				if(sti(attack.index) == GetMainCharacterIndex()) LogIt("CHANGE REP for player: " + -REPLOSS*3 + " - undrawn blade 1"); 	// LDH 19Dec08
 				LAi_ChangeReputation(attack, - REPLOSS*3); // NK tempfix for un-drawn blades 04-17
-				if(IsMainCharacter(attack))		 //All near guards will attack you now. -Levis
-				{
-					LAi_group_FightGroups(LAI_GROUP_PLAYER, GetSoldiersGroup(GetCurrentLocationNation()), true);
-				}
+				if(IsMainCharacter(attack)) GuardsAttackOpium(); //All near guards will attack you now. -Levis
 			}
-		}
-		// GR: REPLOSS for killing a stunned character
-		if(CheckAttribute(enemy, "stuntime"))
-		{
-			if(enemy.chr_ai.group != LAi_monsters_group)
-			{
-				if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS*3 + " - " + TranslateString("","stunned victim"));
-				LAi_ChangeReputation(attack, - REPLOSS*3);
-				if(IsMainCharacter(attack) && !CheckAttribute(enemy,"pickgold")) //All near guards will attack you now. -Levis
-				{
-					LAi_group_FightGroups(LAI_GROUP_PLAYER, GetSoldiersGroup(GetCurrentLocationNation()), true);
-				}
-			}
-			exp = 0.0;
 		}
 	}
 	//if(AUTO_SKILL_SYSTEM) { if(!LAi_IsDead(enemy)) { AddCharacterExpChar(enemy, "Defence", MakeInt(stf(exp*0.5 + 0.5))/2); } }// MAXIMUS! //Levis we moved this to when its really blocked
@@ -823,23 +987,13 @@ void LAi_ApplyCharacterBladeDamage(aref attack, aref enemy, float attackDmg, flo
 		// ccc mar05 REPLOSS tweak added
 		if(enemy.chr_ai.group != LAi_monsters_group)
 		{
-			if (CheckAttribute(enemy, "attacked_you")) // GR: No reploss if enemy attacked you.  If player attacks enemy who attacked you and is now running, show warning
-			{
-				if (sti(GetAttribute(attack, "index")) == GetMainCharacterIndex()) logit(TranslateString("", "Enemy lost weapon, trying to run!"));
-			}
-			else
-			{
-				if (!CheckAttribute(enemy,"pickgold") || GetCharacterEquipByGroup(attack, BLADE_ITEM_TYPE) != "bladeX3") // GR: no reploss if he robbed you and you use a thief's knife
-				{
-					if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS + " - " + TranslateString("","undrawn blade 2")); 	// LDH 19Dec08
-					LAi_ChangeReputation(attack, - REPLOSS); // NK tempfix for un-drawn blades 04-17
-				}
-			}
+			if(sti(attack.index) == GetMainCharacterIndex()) LogIt("CHANGE REP for player: " + -REPLOSS + " - undrawn blade 2"); 	// LDH 19Dec08
+			LAi_ChangeReputation(attack, - REPLOSS); // NK tempfix for un-drawn blades 04-17
 		}
 		exp = 0.0;
 	}
 
-	if(!noExp) { if(AUTO_SKILL_SYSTEM) { AddCharacterExpChar(attack, SKILL_FENCING, MakeInt(exp*0.5 + 0.5)); }else{ AddCharacterExp(attack, MakeInt(exp*0.5 + 0.5)); } }
+	if(!noExp) { if(AUTO_SKILL_SYSTEM) { AddCharacterExpChar(attack, "Fencing", MakeInt(exp*0.5 + 0.5)); }else{ AddCharacterExp(attack, MakeInt(exp*0.5 + 0.5)); } }
 	if ( resetshowXP ) { DeleteAttribute(attack,"donotshowXP"); } // TIH do not show other characters XP increases
 }
 
@@ -979,26 +1133,9 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 			// ccc mar05 REPLOSS tweak added
 			if(enemy.chr_ai.group != LAi_monsters_group)
 			{
-				if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS*3 + " - " + TranslateString("","firing on undrawn blade 1")); 	// LDH 19Dec08
+				if(sti(attack.index) == GetMainCharacterIndex()) LogIt("CHANGE REP for player: " + -REPLOSS*3 + " - firing on undrawn blade 1"); 	// LDH 19Dec08
 				LAi_ChangeReputation(attack, - REPLOSS*3); // NK tempfix for un-drawn blades 04-17
-				if(IsMainCharacter(attack))		//All near guards will attack you now. -Levis
-				{
-					LAi_group_FightGroups(LAI_GROUP_PLAYER, GetSoldiersGroup(GetCurrentLocationNation()), true);
-				}
-			}
-			exp = exp*0.05;
-		}
-		// GR: REPLOSS for killing a stunned character
-		if(CheckAttribute(enemy, "stuntime"))
-		{
-			if(enemy.chr_ai.group != LAi_monsters_group)
-			{
-				if(sti(attack.index) == GetMainCharacterIndex()) LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS*3 + " - " + TranslateString("","stunned victim"));
-				LAi_ChangeReputation(attack, - REPLOSS*3);
-				if(IsMainCharacter(attack) && !CheckAttribute(enemy,"pickgold"))	//All near guards will attack you now. -Levis
-				{
-					LAi_group_FightGroups(LAI_GROUP_PLAYER, GetSoldiersGroup(GetCurrentLocationNation()), true);
-				}
+				if(IsMainCharacter(attack)) GuardsAttackOpium(); //All near guards will attack you now. -Levis
 			}
 			exp = exp*0.05;
 		}
@@ -1013,7 +1150,7 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist)
 			if(enemy.chr_ai.group != LAi_monsters_group)
 			{
 				if(sti(attack.index) == GetMainCharacterIndex())
-					LogIt(TranslateString("","CHANGE REP for player:") + " " + -REPLOSS + " - " + TranslateString("","firing on undrawn blade 2")); 	// LDH 19Dec08
+					LogIt("CHANGE REP for player: " + -REPLOSS + " - firing on undrawn blade 2"); 	// LDH 19Dec08
 				LAi_ChangeReputation(attack, -REPLOSS); // NK tempfix for un-drawn blades 04-17
 			}
 		}
@@ -1149,4 +1286,157 @@ void LAi_Location_CharacterSGFire()
 	LAi_ApplyCharacterDamage(enemy, MakeInt((5 + rand(5))*kDmg));
 	//Проверим на смерть
 	LAi_CheckKillCharacter(enemy);*/
+}
+
+//Boyer add below
+
+
+#event_handler("NPC_Event_GetAttackWeightFast","LAi_NPC_GetAttackWeightFast");
+float LAi_NPC_GetAttackWeightFast()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = 20.0;
+	npc_return_tmp = npc_return_tmp * (0.8 + (0.1 * MOD_SKILL_ENEMY_RATE));
+	return npc_return_tmp;
+}
+
+//??? ?????? ????? "force", 0 - ??????? ?? ????????
+#event_handler("NPC_Event_GetAttackWeightForce","LAi_NPC_GetAttackWeightForce");
+float LAi_NPC_GetAttackWeightForce()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = 50.0;
+	npc_return_tmp = npc_return_tmp * (0.8 + (0.1 * MOD_SKILL_ENEMY_RATE));
+	return npc_return_tmp;
+}
+
+//??? ?????? ????? "round", 0 - ??????? ?? ????????, ???? ?????? <3 ?? ???? ?? ??????????
+#event_handler("NPC_Event_GetAttackWeightRound","LAi_NPC_GetAttackWeightRound");
+float LAi_NPC_GetAttackWeightRound()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = 20.0;
+	npc_return_tmp = npc_return_tmp * (0.8 + (0.1 * MOD_SKILL_ENEMY_RATE));
+	return npc_return_tmp;
+}
+
+//??? ?????? ????? "break", 0 - ??????? ?? ????????
+#event_handler("NPC_Event_GetAttackWeightBreak","LAi_NPC_GetAttackWeightBreak");
+float LAi_NPC_GetAttackWeightBreak()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = 20.0;
+	npc_return_tmp = npc_return_tmp * (0.6 + (0.1 * MOD_SKILL_ENEMY_RATE));
+	return npc_return_tmp;
+}
+
+//??? ?????? ????? "feint", 0 - ??????? ?? ????????
+#event_handler("NPC_Event_GetAttackWeightFeint","LAi_NPC_GetAttackWeightFeint");
+float LAi_NPC_GetAttackWeightFeint()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = 10.0; //30 boal fix
+	npc_return_tmp = npc_return_tmp * (0.6 + (0.1 * MOD_SKILL_ENEMY_RATE));
+	return npc_return_tmp;
+}
+
+#event_handler("NPC_Event_GetDefenceWeightBlock","LAi_NPC_GetDefenceWeightBlock");
+float LAi_NPC_GetDefenceWeightBlock()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = 80.0;
+	npc_return_tmp = npc_return_tmp * (0.5 + (0.05 * MOD_SKILL_ENEMY_RATE));   // boal
+	return npc_return_tmp;
+}
+
+//??? ??????  ????????????, 0 - ??????? ?? ????????
+//????? ? ????? ???????????? ???????? 2 ???? ? ???????
+#event_handler("NPC_Event_GetDefenceWeightParry","LAi_NPC_GetDefenceWeightParry");
+float LAi_NPC_GetDefenceWeightParry()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = 20.0; // 40 boal
+	npc_return_tmp = npc_return_tmp * (0.6 + (0.1 * MOD_SKILL_ENEMY_RATE));
+	return npc_return_tmp;
+}
+
+//???????? ?? ??????
+#event_handler("NPC_Event_EnableRecoil","LAi_NPC_EnableRecoil");
+bool LAi_NPC_EnableRecoil()
+{
+	aref chr = GetEventData();
+	npc_return_tmpb = true;
+	return npc_return_tmpb;
+}
+
+#event_handler("NPC_Event_AdaptiveTargetSelect","LAi_NPC_AdaptiveTargetSelect");
+bool LAi_NPC_AdaptiveTargetSelect()
+{
+	aref chr = GetEventData();
+	if(chr.chr_ai.type == LAI_TYPE_ACTOR)
+	{
+		npc_return_tmpb = false;
+	}else{
+		npc_return_tmpb = true;
+	}
+	return npc_return_tmpb;
+}
+
+#event_handler("ChrAttackAction", "LAi_ChrAttackAction");
+bool LAi_ChrAttackAction()
+{
+	aref attack = GetEventData();
+	string attackType = GetEventData();
+
+	float curEnergy = Lai_CharacterGetEnergy(attack);
+	float needEnergy = LAi_CalcUseEnergyForBlade(attack, attackType);
+	if(curEnergy >= needEnergy)
+	{
+		npc_return_tmpb = true;
+	}
+	else
+	{
+		npc_return_tmpb = false;
+	}
+	return npc_return_tmpb;
+}
+
+#event_handler("ChrFgtActApply", "LAi_ChrFightActionApply");
+void LAi_ChrFightActionApply()
+{
+	aref attack = GetEventData();
+	string attackType = GetEventData();
+
+	float needEnergy = LAi_CalcUseEnergyForBlade(attack, attackType);
+	Lai_CharacterChangeEnergy(attack, -needEnergy);
+}
+
+//???????? ????????????? ????????????? ???????
+#event_handler("NPC_Event_GetActionEnergy","LAi_NPC_GetActionEnergy");
+float LAi_NPC_GetActionEnergy()
+{
+	aref chr = GetEventData();
+	string act = GetEventData();
+
+	npc_return_tmp = LAi_CalcUseEnergyForBlade(chr, act) / LAi_GetCharacterMaxEnergy(chr);  // boal
+	return npc_return_tmp;
+}
+
+//?????????? ??????? ??????????? ?????? ?????????????? ???????? ?????
+#event_handler("NpcEvtHP", "LAi_NPC_EvtGetHP");
+float LAi_NPC_EvtGetHP()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = LAi_GetCharacterRelHP(chr);
+	return npc_return_tmp;
+}
+
+
+//?????????? ??????? ??????????? ?????? ?????????????? ???????? ???????
+#event_handler("NpcEvtEny", "LAi_NPC_EvtGetEny");
+float LAi_NPC_EvtGetEny()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = LAi_GetCharacterRelEnergy(chr);
+	return npc_return_tmp;
 }

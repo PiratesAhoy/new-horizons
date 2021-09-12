@@ -34,7 +34,7 @@ string DLG_TEXT[93] = {
 "How much can you offer, Madame?",
 "How much is she worth to you? Tell me your price, and then we'll see.",
 "I would give you all I have - 2000 gold.",
-"You've got a deal. Give me the money, and I'll set my â€˜passenger' free.",
+"You've got a deal. Give me the money, and I'll set my ‘passenger' free.",
 "Ah, you are pretty shrewd too and drive a hard bargain. Well, give me the gold and I'll let the girl go.",
 "Fine, I think I'll take the money but ",
 "Sabine Matton",

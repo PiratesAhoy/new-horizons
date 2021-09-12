@@ -1,4 +1,4 @@
-string DLG_TEXT[105] = {
+string DLG_TEXT[117] = {
 "Fuera de aqui! No estoy de humor para hablar con extranos.",
 "No quieres comprarme un poco de Ron?",
 "En camino. Estoy ocupado.",
@@ -104,5 +104,16 @@ string DLG_TEXT[105] = {
 "Has sido inesperado, pero deliciosamente, util. Podrias contestarme otra, amigo?",
 ".",
 "nosotros ahora!",
-
+"buscar a Nemo",
+"frotar la cubierta de proa",
+"darle al yunque de Venus",
+"sacarle brillo al mástil",
+"tocar la zambomba",
+"zurrarme la sardina",
+"¿Qué quieres?",
+"¡Serás... hip... serás bellaco! ¡Has hecho daño a... hip... mi amigo!",
+"¿Qué amigo? Si no hay nadie contigo, ",
+".",
+"¿Qué? Estaba... aquí hace un momento. Iré a buscarlo. ¡Tú... hip... espera aquí si quieres que te zurre!",
+"¡¿Cómo te atreves a llevarme la contraria?! ¡Te voy a estrangular!",
 };

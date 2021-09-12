@@ -31,102 +31,101 @@
 #define FRT_BLACKSMITH		0
 #define FRN_BLACKSMITH		"go_blacksmith"
 
-#define FRP_PRISON		8
+#define FRP_PRISON		16 //8
 #define FRT_PRISON		0
 #define FRN_PRISON		"go_prison"
 
-#define FRP_FORT		9
+#define FRP_FORT		17 //9
 #define FRT_FORT		0
 #define FRN_FORT		"go_fort"
 
-#define FRP_BROTHEL		10 // MAXIMUS interface MOD
+#define FRP_BROTHEL		18 //10 // MAXIMUS interface MOD
 #define FRT_BROTHEL		0 // MAXIMUS interface MOD
 #define FRN_BROTHEL		"go_brothel" // KK
 
-#define FRP_SHIPDECK		11
+#define FRP_SHIPDECK		19 //11
 #define FRT_SHIPDECK		0
 #define FRN_SHIPDECK		"go_shipdeck"
 
-#define FRP_CABIN		12
+#define FRP_CABIN		20 //12
 #define FRT_CABIN		0
 #define FRN_CABIN		"go_cabin"
 
-#define FRP_SEADOGS		13
+#define FRP_SEADOGS		21 //13
 #define FRT_SEADOGS		0
 #define FRN_SEADOGS		"go_seadogs"
 
-#define FRP_DECK1		14
+#define FRP_DECK1		22 //14
 #define FRT_DECK1		0
 #define FRN_DECK1		"go_maincannonsdeck"
 
-#define FRP_DECK2		14
+#define FRP_DECK2		22 //14
 #define FRT_DECK2		0
 #define FRN_DECK2		"go_lowercannonsdeck"
 
-#define FRP_DECK3		14
+#define FRP_DECK3		22 //14
 #define FRT_DECK3		0
 #define FRN_DECK3		"go_maincannonsdeck"
 
-#define FRP_HOLD		15
+#define FRP_HOLD		23 //15
 #define FRT_HOLD		0
 #define FRN_HOLD		"go_hold"
 
-#define FRP_APOTHECARY		16
+#define FRP_APOTHECARY		32 //16
 #define FRT_APOTHECARY		0
 #define FRN_APOTHECARY		"go_apothecary"
 
-#define FRP_GUNSMITH		17
+#define FRP_GUNSMITH		33 //17
 #define FRT_GUNSMITH		0
 #define FRN_GUNSMITH		"go_gunsmith"
 
-#define FRP_GUNBLACKSMITH	18
+#define FRP_GUNBLACKSMITH	34 //18
 #define FRT_GUNBLACKSMITH	0
 #define FRN_GUNBLACKSMITH	"go_gunblacksmith"
 
-#define FRP_OPIUM		19
+#define FRP_OPIUM		35 //19
 #define FRT_OPIUM		0
 #define FRN_OPIUM		"go_opium"
 
-#define FRP_LIBRARY		20
+#define FRP_LIBRARY		36 //20
 #define FRT_LIBRARY		0
 #define FRN_LIBRARY		"go_library"
 
-#define FRP_MALTESE		21
+#define FRP_MALTESE		37 //21
 #define FRT_MALTESE		0
 #define FRN_MALTESE		"go_maltese"
 
-#define FRP_INDIANSTORE		22
+#define FRP_INDIANSTORE		38 //22
 #define FRT_INDIANSTORE		0
 #define FRN_INDIANSTORE		"go_indianstore"
 
-#define FRP_TAVERN2		23
+#define FRP_TAVERN2		39 //23
 #define FRT_TAVERN2		0
 #define FRN_TAVERN2		"go_tavern2"
 
-#define FRP_EITC		24
+#define FRP_EITC		48 //24
 #define FRT_EITC		0
 #define FRN_EITC		"go_eitc"
 
-#define FRP_DWIC		25
+#define FRP_DWIC		49 //25
 #define FRT_DWIC		0
 #define FRN_DWIC		"go_dwic"
 
-#define FRP_HQ			26
+#define FRP_HQ			50 //26
 #define FRT_HQ			0
 #define FRN_HQ			"go_hq"
 
-#define FRP_ACADEMY		27
+#define FRP_ACADEMY		51 //27
 #define FRT_ACADEMY		0
 #define FRN_ACADEMY		"go_academy"
 
-#define FRP_CDC			28
+#define FRP_CDC			52 //28
 #define FRT_CDC			0
 #define FRN_CDC			"go_cdc"
 
-#define FRP_FWIC		29
+#define FRP_FWIC		53 //29
 #define FRT_FWIC		0
 #define FRN_FWIC		"go_fwic"
-
 #define FRP_PORT		2
 #define FRT_PORT		1
 #define FRN_PORT		"go_port"
@@ -170,7 +169,7 @@ void initFastReloadTable()
 	// church MAXIMUS
 	curTable.l6.pic = FRP_CHURCH;
 	curTable.l6.tex = FRT_CHURCH;
-	curTable.l6.note = FRN_CHURCH; 
+	curTable.l6.note = FRN_CHURCH;
 	curTable.l6.location = "Eleuthera_church";
 
 	makearef(curTable,objFastReloadTable.table.Alice);
@@ -202,7 +201,7 @@ void initFastReloadTable()
 	// church MAXIMUS
 	curTable.l6.pic = FRP_CHURCH;
 	curTable.l6.tex = FRT_CHURCH;
-	curTable.l6.note = FRN_CHURCH; 
+	curTable.l6.note = FRN_CHURCH;
 	curTable.l6.location = "Alice_church";
 	//prison
 	curTable.l9.pic = FRP_PRISON;
@@ -344,7 +343,7 @@ void initFastReloadTable()
 	// store
 	curTable.l5.pic = FRP_STORE;
    	curTable.l5.tex = FRT_STORE;
-   	curTable.l5.note = FRN_STORE); 
+   	curTable.l5.note = FRN_STORE);
    	curTable.l5.location = "Pirate_store";
 
 	makearef(curTable,objFastReloadTable.table.Falaise_de_fleur);
@@ -435,7 +434,7 @@ void initFastReloadTable()
 	curTable.l8.location = "IM_blacksmith";
 // <-- KK
 
-	makearef(curTable,objFastReloadTable.table.KhaelRoa); // Ð½ÐµÑ‚ Ð½Ð¸Ñ‡ÐµÐ³Ð¾, ÐºÑ€Ð¾Ð¼Ðµ Ð¿Ñ€Ð¸Ñ‡Ð°Ð»Ð°
+	makearef(curTable,objFastReloadTable.table.KhaelRoa); // íåò íè÷åãî, êðîìå ïðè÷àëà
 
 	makearef(curTable,objFastReloadTable.table.Oxbay);
 	// store
@@ -665,7 +664,7 @@ void initFastReloadTable()
 	curTable.l6.tex = FRT_CHURCH;
 	curTable.l6.note = FRN_CHURCH; // KK
 	curTable.l6.location = "PaP_Church";
-	// fort	
+	// fort
 	curTable.l7.pic = FRP_FORT;
 	curTable.l7.tex = FRT_FORT;
 	curTable.l7.note = FRN_FORT;
@@ -961,7 +960,7 @@ void initFastReloadTable()
 	// church
 	curTable.l6.pic = FRP_CHURCH;
 	curTable.l6.tex = FRT_CHURCH;
-	curTable.l6.note = FRN_CHURCH; 
+	curTable.l6.note = FRN_CHURCH;
 	curTable.l6.location = "Marigot_Church";
 // Levis <--
 
@@ -1050,7 +1049,7 @@ void initFastReloadTable()
 	curTable.l4.note = FRN_RESIDENCE;
 	curTable.l4.location = "PoPrince_townhall";
 	// fort
-	curTable.l5.pic = FRP_FORT;
+	curTable.l5.pic = 17; //FRP_FORT;
 	curTable.l5.tex = FRT_FORT;
 	curTable.l5.note = FRN_FORT;
 	curTable.l5.location = "PoPrince_fakefort1";
@@ -1153,7 +1152,7 @@ void initFastReloadTable()
 	// church MAXIMUS
 	curTable.l6.pic = FRP_CHURCH;
 	curTable.l6.tex = FRT_CHURCH;
-	curTable.l6.note = FRN_CHURCH; 
+	curTable.l6.note = FRN_CHURCH;
 	curTable.l6.location = "Oranjestad_church";
 	// tailor's shop
 	curTable.l7.pic = FRP_TAILORSHOP;
@@ -1195,7 +1194,7 @@ void initFastReloadTable()
 	// church MAXIMUS
 	curTable.l6.pic = FRP_CHURCH;
 	curTable.l6.tex = FRT_CHURCH;
-	curTable.l6.note = FRN_CHURCH; 
+	curTable.l6.note = FRN_CHURCH;
 	curTable.l6.location = "Willemstad_church";
 	// tailor's shop
 	curTable.l7.pic = FRP_TAILORSHOP;
@@ -1237,14 +1236,14 @@ void initFastReloadTable()
 	// church MAXIMUS
 	curTable.l6.pic = FRP_CHURCH;
 	curTable.l6.tex = FRT_CHURCH;
-	curTable.l6.note = FRN_CHURCH; 
+	curTable.l6.note = FRN_CHURCH;
 	curTable.l6.location = "Eleuthera_church";
 	// tailor's shop
 	curTable.l7.pic = FRP_TAILORSHOP;
 	curTable.l7.tex = FRT_TAILORSHOP;
 	curTable.l7.note = FRN_TAILORSHOP;
 	curTable.l7.location = "Eleuthera_TailorsShop";
-	
+
 	makearef(curTable,objFastReloadTable.table.Cartagena);
 	// store
 	curTable.l1.pic = FRP_STORE;
@@ -1291,14 +1290,14 @@ void initFastReloadTable()
 	// tavern 2
 	curTable.l9.pic = FRP_TAVERN2;		//JRH
 	curTable.l9.tex = FRT_TAVERN2;
-	curTable.l9.note = FRN_TAVERN2; 	
+	curTable.l9.note = FRN_TAVERN2;
 	curTable.l9.location = "Cartagena_tavern2";
 	// naval HQ
 	curTable.l10.pic = FRP_HQ;		//JRH
 	curTable.l10.tex = FRT_HQ;
 	curTable.l10.note = FRN_HQ;
 	curTable.l10.location = "Admiral_Office";
-	// Casa de ContrataciÑƒn
+	// Casa de Contratación
 	curTable.l11.pic = FRP_CDC;		//GR
 	curTable.l11.tex = FRT_CDC;
 	curTable.l11.note = FRN_CDC;

@@ -139,7 +139,8 @@ void Sea_DeckStartNow(int chridx, string deckname)
 	SendMessage(&boarding_fader, "l", FADER_STARTFRAME);
 
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	bAbordageStarted = true;
 	if(DeckID == "seadogs") bCrewStarted = true;
@@ -155,7 +156,8 @@ void Sea_DeckStartNow(int chridx, string deckname)
 //////////////
 void Deck_Start()
 {
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	int i, idx;
 	//=астроим интерфейс
@@ -396,7 +398,8 @@ void Deck_LoadLocation(string locID) // KK //MAXIMUS
 void Deck_ReloadStartFadeAfter()
 {
 	//Tыгружаем локаци|
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	DelEventHandler("FaderEvent_StartFade", "Deck_ReloadStartFadeAfter");
 	DelEventHandler("Control Activation", "TeleportToDeck");//JA 6DEC06 this eventhandler was hanging around after you went from deck to sea.
@@ -555,7 +558,8 @@ void Sea_CabinStartNow(int chridx)
 	SendMessage(&boarding_fader, "l", FADER_STARTFRAME);
 
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	bAbordageStarted = true;
 	bCabinStarted = true;
@@ -567,7 +571,8 @@ void Sea_CabinStartNow(int chridx)
 //////////////
 void Cabin_Start()
 {
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	int i, idx;
 	//=астроим интерфейс
@@ -911,7 +916,8 @@ void SetUpDeckReloadMap()
 
 void DeckToSea_ReloadStartFadeAfter()
 {
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	DelEventHandler("FaderEvent_StartFade", "DeckToSea_ReloadStartFadeAfter");
 
@@ -1020,7 +1026,8 @@ void Deck_GoBack()
 
 void DeckBack_ReloadStartFadeAfter()
 {
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	DelEventHandler("FaderEvent_StartFade", "DeckBack_ReloadStartFadeAfter");
 
@@ -1065,7 +1072,8 @@ void DeckBack_ReloadEndFadeAfter()
 	BLI_RefreshCommandMenu();
 
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	ReloadProgressEnd();
 }
@@ -1206,7 +1214,7 @@ void Land_DeckStartNow(int chridx, string deckname)
 	bDeckEnter = true;
 
 	deckID = deckname;
-	if (!bEmergeOnStartloc && HasSubStr(deckname, "ShipDeck")) 
+	if (!bEmergeOnStartloc && HasSubStr(deckname, "ShipDeck"))
 	{
 		LAi_QuestDelay("gunner_ammo", 1.0);
 
@@ -1219,7 +1227,8 @@ void Land_DeckStartNow(int chridx, string deckname)
 	SendMessage(&boarding_fader, "l", FADER_STARTFRAME);
 
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	bAbordageStarted = true;
 	bDeckStarted = true;
@@ -1286,7 +1295,8 @@ void Land_ToPort()
 
 void LandToPort_ReloadStartFadeAfter()
 {
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	DelEventHandler("FaderEvent_StartFade", "LandToPort_ReloadStartFadeAfter");
 
@@ -1415,7 +1425,8 @@ void Land_CabinStartNow(int chridx)
 	SendMessage(&boarding_fader, "l", FADER_STARTFRAME);
 
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	bAbordageStarted = true;
 	bCabinStarted = true;

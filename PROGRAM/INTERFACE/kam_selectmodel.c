@@ -1,5 +1,5 @@
 int nCurScroll;
-ref PChar;
+//ref PChar;
 ref XChar;
 int tempCurrentModel;
 

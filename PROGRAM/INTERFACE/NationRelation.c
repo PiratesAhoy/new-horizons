@@ -5,7 +5,7 @@
 int curWindow;
 int pirateflagidx, pirateflagtex, personalflagidx, personalflagtex, tmppirateflagidx, tmppirateflagtex, tmppersonalflagidx, tmppersonalflagtex;
 bool hasShip = false;
-ref PChar;
+//ref PChar;
 
 void InitInterface(string iniName)
 {
@@ -128,7 +128,7 @@ void InitInterface(string iniName)
 	if (hasShip == false && GetBerthedShipsQuantityForTown(GetTownIDFromLocID(PChar.location)) > 0) {
 		hasShip = true;
 		GameInterface.GoDirectToShipBerthing = true;
-		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "I_SHIP", 0, XI_ConvertString("Sel Berth"));
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "I_SHIP", 0, "#"+XI_ConvertString("Sel Berth"));
 	}
 // <-- KK
 
@@ -137,7 +137,7 @@ void InitInterface(string iniName)
 	// KK SetSelectable("I_NATIONS",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());
 	SetSelectable("I_TRADEBOOK",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());
 	// PB SetSelectable("I_QUESTBOOK",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());
-	SetSelectable("I_SHIPLOG",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());	
+	SetSelectable("I_SHIPLOG",!LAi_IsBoardingProcess() && !LAi_group_IsActivePlayerAlarm());
 	SetSelectable("EXIT_BUTTON",true);
 // MAXIMUS interface MOD <--
 
@@ -600,7 +600,7 @@ void SetWindow(int iWindow)
 			pirateflagidx = PChar.Flags.Pirate;
 			SetNodeUsing("TOOLTIP_FADER", true);
 			SetNodeUsing("DIALOG_WINDOW", true);
-			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitlePirateFlag"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
+			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "PIRATE FLAG", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("WINDOWSTRINGES", true);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", true);
 			SetNodeUsing("DIALOG_SELECT_BUTTON", true);
@@ -624,7 +624,7 @@ void SetWindow(int iWindow)
 			personalflagidx = PChar.Flags.Personal;
 			SetNodeUsing("TOOLTIP_FADER", true);
 			SetNodeUsing("DIALOG_WINDOW", true);
-			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", XI_ConvertString("TitlePersonalFlag"), FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
+			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "PERSONAL FLAG", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("WINDOWSTRINGES", true);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", true);
 			SetNodeUsing("DIALOG_SELECT_BUTTON", true);

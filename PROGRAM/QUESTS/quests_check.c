@@ -20,7 +20,7 @@ bool TestIntValue(int nValue, int nCompareValue, string sOperation)
 	break;
 	case "<":
 			if(nValue < nCompareValue) return true;
-			return false;	
+			return false;
 	break;
 	}
 	trace("ERROR: invalid operation(" + sOperation + ")");
@@ -54,6 +54,14 @@ bool ProcessCondition(aref condition)
 
 	switch(sConditionName)
 	{
+    //Boyer add for weather
+    case "ExitFromSea":
+        if (bSeaActive == false)
+        {
+            return true;
+        }
+        return false;
+    break;
 	case "Goods":
 		return TestIntValue(GetCargoGoods(refCharacter,sti(condition.goods)),sti(condition.quantity),condition.operation);
 	break;
@@ -153,7 +161,7 @@ bool ProcessCondition(aref condition)
 		}
 		return bTmp;
 	break;
-	
+
 	case "location":
 		if(refCharacter.location==condition.location) return !CharacterIsDead(refCharacter);
 		return false;
@@ -317,7 +325,7 @@ bool ProcessCondition(aref condition)
 		return false;
 	break;
 	}
-	trace("ERROR: unidentified condition type():");
+	trace("ERROR: unidentified condition type(): " + sConditionName);
 	DumpAttributes(condition);
 	return false;
 }
@@ -336,12 +344,12 @@ void QuestsCheck()
 	int  n,m;
 	string sQuestName;
 	bool bQuestCompleted;
-	
-	
+
+
 	makearef(quests,Characters[GetMainCharacterIndex()].quest);
-		
+
 	nQuestsNum = GetAttributesNum(quests);
-	
+
 	for(n = 0; n < nQuestsNum; n++)
 	{
 		quest = GetAttributeN(quests,n);
@@ -370,19 +378,19 @@ void QuestsCheck()
 			for(m = 0; m < nConditionsNum; m++)
 			{
 				condition = GetAttributeN(conditions,m);
-				if(ProcessCondition(condition) == false) 
+				if(ProcessCondition(condition) == false)
 				{
 					bQuestCompleted = false;
 					break;
 				}
 			}
-			if(bQuestCompleted) 
+			if(bQuestCompleted)
 			{
 				OnQuestComplete(quest);
 				nQuestsNum = GetAttributesNum(quests);
 			}
 		}
-		
+
 		if(CheckAttribute(quest,"fail_condition"))
 		{
 			makearef(conditions,quest.fail_condition);
@@ -391,7 +399,7 @@ void QuestsCheck()
 			for(m = 0; m < nConditionsNum; m++)
 			{
 				condition = GetAttributeN(conditions,m);
-				if(ProcessCondition(condition) == true) 
+				if(ProcessCondition(condition) == true)
 				{
 					OnQuestFailed(quest);
 					nQuestsNum = GetAttributesNum(quests);

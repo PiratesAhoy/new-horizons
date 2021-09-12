@@ -48,7 +48,7 @@ ref GetTownFromID(string sTownName)
 	return &Towns[idx];
 	/*ref ctown;
 	string temp;
-	if(sTownName == "Concei–∑ao") sTownName = "Conceicao";  // <-- fix by emrep for Trade Mission error
+	if(sTownName == "ConceiÁao") sTownName = "Conceicao";  // <-- fix by emrep for Trade Mission error
 	for(int i = 0; i < TOWNS_QUANTITY; i++)
 	{
 		temp = "t" + i;
@@ -83,7 +83,7 @@ string GetTownIDFromNation(int nat)
 
 int GetTownIndex(string sTownName)
 {
-	if(sTownName == "Concei–∑ao") sTownName = "Conceicao";
+	if(sTownName == "ConceiÁao") sTownName = "Conceicao";
 	if (sTownName == "Antigua") sTownName = "St John's"; // KK
 	// NK 05-04-23 switch to towns[]
 	return NativeFindCharacter(&Towns, sTownName);
@@ -641,7 +641,7 @@ bool SetFleetInTown(string sTownName, string fleetid)
 	bool washere = false;
 	ref ctown;
 	//string temp;
-	if(sTownName == "Concei–∑ao") sTownName = "Conceicao";  // <-- fix by emrep for Trade Mission error
+	if(sTownName == "ConceiÁao") sTownName = "Conceicao";  // <-- fix by emrep for Trade Mission error
 	for(int i = 0; i < TOWNS_QUANTITY; i++)
 	{
 		//temp = "t" + i;

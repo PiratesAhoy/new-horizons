@@ -1,4 +1,7 @@
 object	Sea;
+object	ShipLights;
+
+extern void InitShipLights();
 
 void SeaAI_GetLayers()
 {
@@ -9,6 +12,8 @@ void SeaAI_GetLayers()
 void DeleteSea()
 {
 	DeleteClass(&Sea);
+	//Boyer add
+	DeleteClass(&ShipLights);
 }
 
 void CreateSea(string sExecuteLayer, string sRealizeLayer)
@@ -22,6 +27,18 @@ void CreateSea(string sExecuteLayer, string sRealizeLayer)
 	MoveSeaToLayers(sExecuteLayer, sRealizeLayer);
 
 	LayerFreeze("sea_reflection", false);
+
+	//Boyer add
+	if (LoadSegment("sea_ai\ShipLights.c"))
+	{
+		InitShipLights();
+		UnloadSegment("sea_ai\ShipLights.c");
+	}
+	CreateEntity(&ShipLights, "ShipLights");		ReloadProgressUpdate();
+	LayerAddObject(sExecuteLayer, &ShipLights, 0);
+	LayerAddObject(sRealizeLayer, &ShipLights, -1);
+	LayerAddObject("sea_sunroad", &ShipLights, -1);
+	//End Boyer add
 
 	Sea.AbordageMode = false;
 }
@@ -73,35 +90,45 @@ void SeaAI_SailToEndFade()
 						if(aCurWeather.id == "Blue Sky" && wRain < 75)
 						{
 							//Sea.GF3.WaterColor = argb(0,45,129,153);
-							Sea.GF3.WaterColor = argb(0,124,202,215);
-							Sea.GF3.SkyColor = argb(0,109,185,240);
-							Sea.WaterAttenuation = 0.3;
+							//Sea.GF3.WaterColor = argb(0,124,202,215);
+							//Sea.GF3.SkyColor = argb(0,109,185,240);
+							//Sea.WaterAttenuation = 0.3;
+							Sea.Sea2.WaterColor = argb(0,124,202,215);
+                            Sea.Sea2.SkyColor = argb(0,109,185,240);
+                            Sea.Sea2.Attenuation = 0.3;
 							arLocator.inlagoon = 1;
 						}
 						else
 						{
-							Sea.GF3.WaterColor = aCurWeather.Sea.Water.Color;
-							Sea.GF3.SkyColor = aCurWeather.Sea.Sky.Color;
-							Sea.WaterAttenuation = aCurWeather.Sea.WaterAttenuation;
+							//Sea.GF3.WaterColor = aCurWeather.Sea.Water.Color;
+							//Sea.GF3.SkyColor = aCurWeather.Sea.Sky.Color;
+							//Sea.WaterAttenuation = aCurWeather.Sea.WaterAttenuation;
+							Sea.Sea2.WaterColor = aCurWeather.Sea2.WaterColor;
+                            Sea.Sea2.SkyColor = aCurWeather.Sea2.SkyColor;
+                            Sea.Sea2.Attenuation = aCurWeather.Sea2.Attenuation;
 							if(Checkattribute(arLocator, "inlagoon")) Deleteattribute(arLocator, "inlagoon");
 						}
 						//logit("locator : " + arLocator.name);
 					}
 					else
 					{
-						Sea.GF3.WaterColor = aCurWeather.Sea.Water.Color;
-						Sea.GF3.SkyColor = aCurWeather.Sea.Sky.Color;
-						Sea.WaterAttenuation = aCurWeather.Sea.WaterAttenuation;
+						//Sea.GF3.WaterColor = aCurWeather.Sea.Water.Color;
+						//Sea.GF3.SkyColor = aCurWeather.Sea.Sky.Color;
+						//Sea.WaterAttenuation = aCurWeather.Sea.WaterAttenuation;
+						Sea.Sea2.WaterColor = aCurWeather.Sea2.WaterColor;
+                        Sea.Sea2.SkyColor = aCurWeather.Sea2.SkyColor;
+                        Sea.Sea2.Attenuation = aCurWeather.Sea2.Attenuation;
 						if(Checkattribute(arLocator, "inlagoon")) Deleteattribute(arLocator, "inlagoon");
 					}
 				}else{if(Checkattribute(arLocator, "inlagoon")) Deleteattribute(arLocator, "inlagoon");}
 			} // Screwface : end
-			SendMessage(AISea,"lfff", AI_MESSAGE_SAIL_2_LOCATOR, stf(rIslLoc.x), stf(rIslLoc.y), stf(rIslLoc.z));
+			SendMessage(AISea,"lffff", AI_MESSAGE_SAIL_2_LOCATOR, stf(rIslLoc.x), stf(rIslLoc.y), stf(rIslLoc.z), stf(rIslLoc.ay));
 		break;
 		case SAIL_TO_CHARACTER:
 			SendMessage(AISea, "laff", AI_MESSAGE_SAIL_2_CHARACTER, &Characters[sti(sSailToString)], SAILTO_DISTANCE1 + frnd()*(SAILTO_DISTANCE2-SAILTO_DISTANCE1), frnd() * PIm2);    // LDH change
 		break;
 	}
+
 }
 
 void SeaAI_SailToCreateFader()
@@ -174,7 +201,7 @@ void SeaAI_SailToCharacter(int iCharacterIndex)
 	if(dist < SAILTO_MIN_DISTANCE && iRealismMode>0)
 	{
 		Logit(TranslateString("","Too close! Can't use sail-to. You must sail manually."));
-		PlaySound("interface\knock.wav");
+		PlaySound("knock");
 		return;
 	}
 	aref arship; makearef(arship, pchar.ship);
@@ -192,7 +219,7 @@ void SeaAI_SailToCharacter(int iCharacterIndex)
 		if(speedratio < SAILTO_MIN_SPEEDRATIO && CheckAttribute(stchar, "after_1st_sailto") == true) // KK
 		{
 			Logit(TranslateString("","Enemy ship will outpace us! Can't use sail-to. You must sail manually."));
-			PlaySound("interface\knock.wav");
+			PlaySound("knock");
 			return;
 		}
 		if (!CheckAttribute(stchar, "after_1st_sailto")) stchar.after_1st_sailto = true; // KK

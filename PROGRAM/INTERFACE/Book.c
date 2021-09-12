@@ -21,9 +21,9 @@ void InitInterface_BB(string iniName, ref book)
 	SetSelectable("EXIT_BUTTON",true);
 	if(CheckAttribute(book,"text"))
 	{
-		if (FindFile("RESOURCE\\INI\\TEXTS\\ENGLISH\\BOOKS","*.txt", book.text+".txt") != "") 
+		if (FindFile(GetResourceDirectory() + "INI\TEXTS\ENGLISH\BOOKS","*.txt", book.text+".txt") != "")
 		{
-			lngFileID = LanguageOpenFile("BOOKS\\" +book.text + ".txt");
+			lngFileID = LanguageOpenFile("BOOKS\" +book.text + ".txt");
 		}
 		else
 		{
@@ -33,7 +33,7 @@ void InitInterface_BB(string iniName, ref book)
 	else
 	{
 		trace("BOOK ERROR: no text set for book, attempting to use id to open book");
-		lngFileID = LanguageOpenFile("BOOKS\\" +book.id + ".txt");
+		lngFileID = LanguageOpenFile("BOOKS\" +book.id + ".txt");
 	}
 	string text = LanguageConvertString(lngFileID,"TEXT");
 	LanguageCloseFile(lngFileID);

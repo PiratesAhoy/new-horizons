@@ -87,7 +87,7 @@ Please follow these rules when editing settings:
 #define CTL_SHIP_POWER_DOWN	 		"VK_SUBTRACT"
 #define CTL_SHIP_POWER_ZERO			"VK_MULTIPLY"
 
-#define CTL_SHIP_FIRE_AUTO_CANNON 	"VK_SPACE"
+#define CTL_SHIP_FIRE_AUTO_CANNON 	"KEY_Q"
 #define CTL_DECK_FIRE_AIMED_CANNON 	"KEY_V"
 
 #define CTL_SHIP_FIREDRILL			"KEY_C"

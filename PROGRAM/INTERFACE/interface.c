@@ -199,7 +199,7 @@ void ContinueQuickSave()
 	/*if(CheckAttribute(Globalsettings,"profile."+storyline+".len")) stringlen = Globalsettings.profile.(storyline).len;
 	if(stringlen != 0)
 	{*/
-	string sCurProfile = GetCurrentProfile(storyline);		
+	string sCurProfile = GetCurrentProfile(storyline);
 	/*}
 	else
 	{
@@ -241,10 +241,12 @@ string GetSaveDataString()
 {
 	ref PChar = GetMainCharacter();
 	string locLabel = CreateLocDescribe();
+	//Boyer add
+	string fileSystemDate = "";
 
 	AddTimeToCurrent(0,0);
 	string SystemTime = "";
-	SendMessage(&GameInterface,"lse",MSG_INTERFACE_GETTIME, "", &SystemTime);
+	SendMessage(&GameInterface,"lsee",MSG_INTERFACE_GETTIME, "", &SystemTime, &fileSystemDate);
 // KK -->
 	// PB: Fill in missing firstnames
 	string sSaveDescriber = locLabel + "@" +
@@ -1293,9 +1295,9 @@ void EndOkInterface()
 				InitInterface_I(Interfaces[CurrentInterface].IniFile,false);
 			}
 			*/
-			
+
 			return;
-			
+
 		break;
 	}
 	// if it got this far, it does default actions
@@ -1491,7 +1493,8 @@ void StartVideo(string vidName)
 	if(bPlay)// TIH --> videos toggle 7-7-06
 	{
 		PauseAllSounds();
-		ResetSoundScheme();
+		//ResetSoundScheme();
+        ResetSound();
 	}// TIH <-- videos toggle
 	if(sti(InterfaceStates.Launched))
 	{
@@ -1732,7 +1735,7 @@ void ILaunchAfterFrame()
 //MAXIMUS Interface MOD
 	case "I_OFFICER":
 			if(CheckAttribute(&GameInterface,"AbilityChr"))
-			{	       
+			{
 				LaunchOfficer(GetCharacter(sti(GameInterface.AbilityChr)));
 			}
 		return;
@@ -1741,9 +1744,9 @@ void ILaunchAfterFrame()
 	case "I_MAP":			LaunchMap(sti(GameInterface.ItemIdx));	return; break; // KK
 	case "A_MAP":			LaunchPelagoMap();						return; break; // PB
 //MAXIMUS Interface MOD
-	
+
 	case "I_BOOK":			LaunchBook(&Items[sti(GameInterface.ItemIdx)]);	return; break; // Levis Readable Books
-	
+
 	case "I_SHIP":
 // KK -->
 		if (CheckAttribute(GameInterface, "GoDirectToShipBerthing") == true && sti(GameInterface.GoDirectToShipBerthing) == true) {
@@ -1819,6 +1822,8 @@ bool procInterfacePrepare(int interfaceCode)
 	if(g_ibVideoExecuting) return false;
 	if( LoadSegment(Interfaces[interfaceCode].SectionName) )
 	{
+	    //Boyer add
+	    Telescope_Off();
 		InterfaceStates.Launched = true;
 		InterfaceStates.doUnFreeze = false;
 		Log_SetActiveAction("Nothing");
@@ -2097,7 +2102,23 @@ float GetSeaTimeScale()
 	if(iRealismMode == 0) return 2.0;
 	return 3.0;
 }
-
+//Boyer change
+void SetShowWindowParameters(bool TVused, int w,int h, int l,int t,int r,int b)
+{
+	float realAspect = stf(Render.screen_x) / stf(Render.screen_y);
+	showWindow.TVused = TVused;
+	showWindow.width = w;
+	showWindow.height = h;
+	showWindow.aspectRatio = (makefloat(h) / makefloat(w)) * realAspect; //(h*4.0)/(w*3.0);
+	showWindow.left = RecalculateHIcon(l);
+	showWindow.top = RecalculateVIcon(t);
+	showWindow.right = w - RecalculateHIcon(w-r);
+	showWindow.bottom = h - RecalculateVIcon(h-b);
+	showWindow.sw = r-l;
+	showWindow.sh = b-t;
+	showWindow.scale =  makefloat(w) / 1024.0;
+}
+/*
 void SetShowWindowParameters(bool TVused, int w,int h, int l,int t,int r,int b)
 {
 	showWindow.TVused = TVused;
@@ -2110,8 +2131,9 @@ void SetShowWindowParameters(bool TVused, int w,int h, int l,int t,int r,int b)
 	showWindow.bottom = h - RecalculateVIcon(h-b);
 	showWindow.sw = r-l;
 	showWindow.sh = b-t;
+	showWindow.scale =  makefloat(w) / 1024.0;
 }
-
+*/
 int RecalculateHIcon(int curHSize)
 {
 	return makeint(curHSize); // LDH 27Oct16, would return a float if passed one
@@ -2138,13 +2160,13 @@ string GetVideoFileName(string baseName)
 		sidx = FindCurrentStoryline();
 		if (sidx >= 0) {
 			sldir = GetStorylineDir(sidx);
-			if (FindFile("RESOURCE\VIDEOS\" + sldir + language, "*.wmv", baseName + ".wmv") != "") return sldir + language + "\" + baseName + ".wmv";
-			if (FindFile("RESOURCE\VIDEOS\" + sldir + default_language, "*.wmv", baseName + ".wmv") != "") return sldir + default_language + "\" + baseName + ".wmv";
-			if (FindFile("RESOURCE\VIDEOS\" + sldir, "*.wmv", baseName + ".wmv") != "") return sldir + "\" + baseName + ".wmv";
+			if (FindFile(GetResourceDirectory() + "VIDEOS\" + sldir + language, "*.wmv", baseName + ".wmv") != "") return sldir + language + "\" + baseName + ".wmv";
+			if (FindFile(GetResourceDirectory() + "VIDEOS\" + sldir + default_language, "*.wmv", baseName + ".wmv") != "") return sldir + default_language + "\" + baseName + ".wmv";
+			if (FindFile(GetResourceDirectory() + "VIDEOS\" + sldir, "*.wmv", baseName + ".wmv") != "") return sldir + "\" + baseName + ".wmv";
 		}
-		if (FindFile("RESOURCE\VIDEOS\common\" + language, "*.wmv", baseName + ".wmv") != "") return "common\" + language + "\" + baseName + ".wmv";
-		if (FindFile("RESOURCE\VIDEOS\common\" + default_language, "*.wmv", baseName + ".wmv") != "") return "common\" + default_language + "\" + baseName + ".wmv";
-		if (FindFile("RESOURCE\VIDEOS\common", "*.wmv", baseName + ".wmv") != "") return "common\" + baseName + ".wmv";
+		if (FindFile(GetResourceDirectory() + "VIDEOS\common\" + language, "*.wmv", baseName + ".wmv") != "") return "common\" + language + "\" + baseName + ".wmv";
+		if (FindFile(GetResourceDirectory() + "VIDEOS\common\" + default_language, "*.wmv", baseName + ".wmv") != "") return "common\" + default_language + "\" + baseName + ".wmv";
+		if (FindFile(GetResourceDirectory() + "VIDEOS\common", "*.wmv", baseName + ".wmv") != "") return "common\" + baseName + ".wmv";
 // <-- KK
 		return baseName + ".wmv";
 	}
@@ -2213,4 +2235,39 @@ bool g_bOptionsBreak = false;
 void procOptionsBreak()
 {
 	g_bOptionsBreak = true;
+}
+
+int RecalculateHIconScaled(int curHSize)
+{
+	return makeint(stf(showWindow.scale)*curHSize);
+}
+
+int RecalculateVIconScaled(int curVSize)
+{
+	return makeint(stf(showWindow.scale)*stf(showWindow.aspectRatio)*curVSize);
+}
+
+void ChangeShowIntarface()
+{
+    if (bSeaActive && !bAbordageStarted)
+    {
+        if (!IsEntity(BattleInterface))
+        {
+            InitBattleInterface();
+            StartBattleInterface();
+            RefreshBattleInterface(true);
+        }
+        else DeleteBattleInterface();
+    }
+    else
+    {
+		if (!IsEntity(worldMap))
+		{
+			if (!bLandInterfaceStart)
+	        {
+	            StartBattleLandInterface();
+	        }
+	        else EndBattleLandInterface();
+        }
+    }
 }

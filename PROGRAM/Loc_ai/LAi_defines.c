@@ -10,6 +10,8 @@
 #define LAI_DEFAULT_HP			40.0		//Количество хп по умолчанию
 #define LAI_DEFAULT_HP_MAX		40.0		//Максимальное количество хп по умолчанию
 #define LAI_DEFAULT_CHARGE		1.0			//Состояние зарядки пистолета по умолчанию
+#define LAI_DEFAULT_ENERGY		100.0		//?????????? ??????? ?? ?????????
+#define LAI_DEFAULT_ENERGY_MAX	100.0		//?????????? MAX ??????? ?? ?????????
 #define LAI_DEFAULT_DLTHP		0.1			//Скорость наростания хп в секунду
 #define LAI_DEFAULT_DLTBLTHP	5			//Скорость наростания бутылочных хп в секунду
 #define LAI_DEFAULT_DLTCHRG		0.05		//Скорость зарядки пистолета в секунду
@@ -68,7 +70,10 @@
 #define LAI_GROUP_FRIEND		"friend"			//Дружественные отношение
 #define LAI_GROUP_NEUTRAL		"neitral"			//Нейтральные отношение
 #define LAI_GROUP_ENEMY			"enemy"				//Враждебные отношения
-
+//#20190717-01
+#define LAI_GROUP_FRIEND_INT		1
+#define LAI_GROUP_NEITRAL_INT		2
+#define LAI_GROUP_ENEMY_INT			3
 
 //Приоритеты групп
 #define LAI_GROUP_PDEFAULT		10					//Значение преоритета по умолчанию

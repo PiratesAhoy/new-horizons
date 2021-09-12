@@ -1,6 +1,6 @@
 
 int nCurScroll;
-ref PChar;
+//ref PChar;
 
 void InitInterface(string iniName)
 {
@@ -80,7 +80,7 @@ void ProcessCommandExecute()
 				pchar.Crewstatus.foodrations = 2;
 				KAM_UpdateDisplay();
 				break;
-				
+
 			case "DOUBLERUM_BUTTON":
 				pchar.Crewstatus.rumrations = 1;
 				KAM_UpdateDisplay();

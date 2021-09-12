@@ -35,11 +35,11 @@ int Fort_FindCharacter(string sLocationID, string sLocationGroup, string sLocati
 	for (int i=0; i<CHARACTERS_QUANTITY; i++) // NK 05-04-05 we assume not fantom.
 	{
 		if (GetMainCharacterIndex() == i) continue; // KK
-		if (Characters[i].location == sLocationID) 
+		if (Characters[i].location == sLocationID)
 		{
-			if (Characters[i].location.group == sLocationGroup) 
+			if (Characters[i].location.group == sLocationGroup)
 			{
-				if (Characters[i].location.locator == sLocationLocator) 
+				if (Characters[i].location.locator == sLocationLocator)
 				{
 					return i;
 				}
@@ -55,7 +55,7 @@ int Fort_GetDeadDays(ref rCharacter)
 	int		iDMonth = sti(rCharacter.Fort.DieTime.Month);
 	int		iDDay = sti(rCharacter.Fort.DieTime.Day);
 	float	fTime = stf(rCharacter.Fort.DieTime.Time);
-	
+
 	return GetPastTime("day", iDYear, iDMonth, iDDay, fTime, GetDataYear(), GetDataMonth(), GetDataDay(), GetTime());
 }
 
@@ -80,7 +80,11 @@ void Fort_Login(int iIslandIndex)
 			string sFortModel = rIsland.filespath.models + "\" + arLocator.fort.model;
 			SendMessage(&Forts[iNumForts], "ls", MSG_MODEL_SET_LIGHT_PATH, GetLightingPath());
 			SendMessage(&Forts[iNumForts], "ls", MSG_MODEL_LOAD_GEO, sFortModel);
-			LayerAddObject(SEA_REALIZE, &Forts[iNumForts], 10000);
+			//20180715
+			SendMessage(&Island, "li", MSG_ISLAND_ADD_FORT,  &Forts[iNumForts]);
+			//Boyer change
+			LayerAddObject(SEA_EXECUTE, &Forts[iNumForts], 10001);
+			//LayerAddObject(SEA_REALIZE, &Forts[iNumForts], 10000);
 			LayerAddObject("fort_cannon_trace", &Forts[iNumForts], 1);
 			SendMessage(SeaLighter, "ssi", "AddModel", arLocator.fort.model, &Forts[iNumForts]);
 			iNumForts++;
@@ -132,9 +136,9 @@ void Fort_Login(int iIslandIndex)
 				break;
 			}
 
-			/*if (iDeadDays > 0) 
-			{ 
-				// NK - rCharacter.Ship.Crew.Quantity = iDeadDays * 200 + rand(100); 
+			/*if (iDeadDays > 0)
+			{
+				// NK - rCharacter.Ship.Crew.Quantity = iDeadDays * 200 + rand(100);
 			}*/
 
 			if (bFortRessurect)
@@ -169,17 +173,17 @@ void Fort_Login(int iIslandIndex)
 				SetCharacterGoods(rCharacter,GOOD_GUNPOWDER,qunpowderQty);
 			}// TIH <-- mod toggle
 			// ADDING GUNPOWDER TO THE FORT // added by MAXIMUS [gunpowder mod] <--
-	
+
 			// create fort blot
 			CreateEntity(&FortsBlots[iNumForts - 1], "blots");
 			SendMessage(&FortsBlots[iNumForts - 1], "lia", MSG_BLOTS_SETMODEL, &Forts[iNumForts - 1], rCharacter);
 			LayerAddObject(SEA_EXECUTE, &Forts[iNumForts], 10001);
 			LayerAddObject(SEA_REALIZE, &Forts[iNumForts], 10001);
-			
+
 			SendMessage(&AIFort, "laaaii", AI_MESSAGE_ADD_FORT, rIsland, arLocator, rCharacter, &Forts[iNumForts-1], &FortsBlots[iNumForts-1]);
 			// flags
 			SetFortFlag(&Forts[iNumForts - 1]); // install flag on fort // KK
-			
+
 			//Update the contriblist and skill multipliers and do auto level up for NPC's
 			InitAutoSkillsSystem(rCharacter, true); //Levis, the check for autoskill will happen later.
 			if(CheckAttribute(rCharacter,"ContribList")) DeleteAttribute(rCharacter,"ContribList")); //Levis refresh contriblist on login
@@ -210,6 +214,7 @@ int Fort_GetCannonsQuantity(ref rFortCharacter)
 		int quantity = 0;
 		if (CheckAttribute(rFortCharacter, "Fort.Cannons.Type.1.Quantity")) quantity += sti(rFortCharacter.Fort.Cannons.Type.1.Quantity);
 		if (CheckAttribute(rFortCharacter, "Fort.Cannons.Type.2.Quantity")) quantity += sti(rFortCharacter.Fort.Cannons.Type.2.Quantity);
+		if (CheckAttribute(rFortCharacter, "Fort.Cannons.Type.3.Quantity")) quantity += sti(rFortCharacter.Fort.Cannons.Type.3.Quantity);//PW added for crash in JLB engine
 		return quantity;
 // <-- KK
 	}
@@ -278,10 +283,10 @@ float Fort_CannonDamage()
 	rBall = GetGoodByType(sti(AIBalls.CurrentBallType));
 
 	//CreateParticleSystem("blast",x,y,z,0.0,0.0,0.0,0);
-	
+
 // KK -->
 	fHullDamage = stf(rBall.DamageHull) * fCannonDamageMultiply * 0.4;
-// edited by MAXIMUS [was divide by zero] --> 
+// edited by MAXIMUS [was divide by zero] -->
 	/*if (GetTownNumForts(rFortCharacter.town) > 0)
 		fCrewDamage *= (0.01 * (stf(rFortCharacter.Ship.Crew.Quantity) / makefloat(GetTownSize(rFortCharacter.town) * TOWN_TROOPS_SCALAR / GetTownNumForts(rFortCharacter.town)))); // 04-09-22
 	else
@@ -293,7 +298,7 @@ float Fort_CannonDamage()
 
 	fDamagePiece = fHullDamage + (frnd() - 0.5) * fHullDamage * 0.4;
 	fDamage = fDamage + fDamagePiece;
-	
+
 	if (iBallCharacterIndex == GetMainCharacterIndex())
 	{
 		iRelation = SeaAI_GetRelation(iFortCharacterIndex, iBallCharacterIndex);
@@ -315,8 +320,8 @@ float Fort_CannonDamage()
 		}
 	}
 
-	if (fDamage >= 100.0) 
-	{ 
+	if (fDamage >= 100.0)
+	{
 		bImmortal = LAi_IsImmortal(rFortCharacter);
 
 		Play3DSound("fort_cann_explode", x, y, z);
@@ -416,14 +421,16 @@ void Fort_CheckAttributes(ref rCharacter)
 		if (!CheckAttribute(rCharacter, "Ship.Cannons.Charge.Type")) { rCharacter.Ship.Cannons.Charge.Type = GOOD_BOMBS; }
 		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.1")) { rCharacter.Fort.Cannons.Type.1 = CANNON_TYPE_LONG_LBS42; }
 		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.2")) { rCharacter.Fort.Cannons.Type.2 = CANNON_TYPE_CARRONADE_LBS68; }
+		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.3")) { rCharacter.Fort.Cannons.Type.3 = CANNON_TYPE_CARRONADE_LBS68; }//PW added for crash in JLB engine
 	}
 	// KNB <--
 	else
 	{
 		if (!CheckAttribute(rCharacter, "Ship.Cannons.Type")) { rCharacter.Ship.Cannons.Type = CANNON_TYPE_CULVERINE_LBS24; }
-		
+
 		if (!CheckAttribute(rCharacter, "Ship.Cannons.Charge.Type")) { rCharacter.Ship.Cannons.Charge.Type = GOOD_BOMBS; }
 		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.1")) { rCharacter.Fort.Cannons.Type.1 = CANNON_TYPE_CULVERINE_LBS24; }
 		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.2")) { rCharacter.Fort.Cannons.Type.2 = CANNON_TYPE_CANNON_LBS32; }
+		if (!CheckAttribute(rCharacter, "Fort.Cannons.Type.3")) { rCharacter.Fort.Cannons.Type.3 = CANNON_TYPE_CANNON_LBS32; }//PW added for crash in JLB engine
 	}
 }

@@ -73,6 +73,9 @@ void wdmEvent_PlayerInStorm()
 	float playerShipAY = GetEventData();
 	int stormIndex = GetEventData();
 	wdmDisableTornadoGen = false;
+	if (CheckAttribute(pchar, "stormIndex")) return; // PW storm immunity otherwise locked in storm
+    	pchar.stormIndex = stormIndex;//PW set up variable for storm immunity (cleared in daily crew update)
+
 	wdmReloadToSea();
 }
 
@@ -85,6 +88,9 @@ void wdmEvent_ShipEncounter()
 	int eshipIndex = GetEventData();
 	//Trace("Player ship hit in ship encounter with index " + eshipIndex);
 
+	//Boyer add
+	if (CheckAttribute(pchar, "SkipEshipIndex") && pchar.SkipEshipIndex == eshipIndex) return; // boal
+	pchar.SkipEshipIndex = eshipIndex;
 	if(CheckAttribute(worldMap, "evwin") != 0)
 	{
 		if(worldMap.evwin == "true")
@@ -95,7 +101,7 @@ void wdmEvent_ShipEncounter()
 	}
 	// boal -->
 //changed by MAXIMUS: for new "Sail Ho" and DirectSail-Mod -->
-	CalculateEncInfoData();
+    CalculateEncInfoData();
 /*	ref messenger = DirectSailMessenger("sail_ho");
 	messenger.SailHo = true;
 	messenger.Dialog.Filename = "Enc_WorldMap_dialog.c";
@@ -129,7 +135,6 @@ void wdmEvent_EventWindowSelect()
 	int result = GetEventData();
 
 	//Trace("Event window select is " + result);
-
 	if(result == 0) wdmReloadToSea();
 }
 
@@ -148,7 +153,7 @@ void wdmEvent_WaitMenuSelect()
 void wdmEvent_UpdateDate()
 {
 	Environment.date.day = worldMap.date.day;
-	Environment.date.month = worldMap.date.month;	
+	Environment.date.month = worldMap.date.month;
 	Environment.date.year = worldMap.date.year;
 	Environment.date.hour = worldMap.date.hour;
 	Environment.date.min = worldMap.date.min;

@@ -45,7 +45,7 @@ string DLG_TEXT[77] = {
 "I learned Bartolomeu captured Charles Baxter, an English Pirate, last year.",
 "How this information can help us to find Bartolomeu?",
 "The last stay known of Charles Baxter was in #sisland_Quebradas Costillas#. There is a pirate settlement on that island and I bet we could meet some of his friends there.",
-"Interesting. We could learn why Bartolomeu arrested Charles Baxter and where he took him. I think we've got a good lead. Letâ€™s go to #sisland_Quebradas Costillas#!",
+"Interesting. We could learn why Bartolomeu arrested Charles Baxter and where he took him. I think we've got a good lead. Let’s go to #sisland_Quebradas Costillas#!",
 "I think we'll find in #sConceicao# another leads about Bartolomeu.",
 "Right. Let's go to #sisland_Conceicao#.",
 "I saw this ship in the port when we landed.",

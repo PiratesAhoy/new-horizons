@@ -15,7 +15,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------–î–∏–∞–ª–æ–≥ –ø–µ—Ä–≤—ã–π - –ø–µ—Ä–≤–∞—è –≤—Å—Ç—Ä–µ—á–∞
+		// -----------------------------------ƒË‡ÎÓ„ ÔÂ‚˚È - ÔÂ‚‡ˇ ‚ÒÚÂ˜‡
 		
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
@@ -71,19 +71,19 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_explain2":
-			dialog.text = GetMySimpleName(CharacterfromID("Javier Balboa")) + DLG_TEXT[19] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[20] + GetMySimpleName(CharacterfromID("Javier Balboa")) + DLG_TEXT[21] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[22];
+			dialog.text = GetMySimpleName(CharacterfromID("Javier Balboa")) + DLG_TEXT[19] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[20] + GetMySimpleName(CharacterfromID("Javier Balboa")) + DLG_TEXT[21] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[22];
 			link.l1 = DLG_TEXT[23] + GetMyFullName(CharacterFromID("Imperial_envoy")) + "!";
 			link.l1.go = "imperial_escort_explain3";
 		break;
 
 		case "imperial_escort_explain3":
 			dialog.text = DLG_TEXT[24];
-			link.l1 = DLG_TEXT[25] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[26];
+			link.l1 = DLG_TEXT[25] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[26];
 			link.l1.go = "imperial_escort_explain4";
 		break;
 
 		case "imperial_escort_explain4":
-			dialog.text = DLG_TEXT[27] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[28] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[29];
+			dialog.text = DLG_TEXT[27] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[28] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[29];
 			link.l1 = DLG_TEXT[30];
 			link.l1.go = "imperial_escort_explain5";
 		break;
@@ -173,7 +173,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_negotiations_in_cave8":
-			dialog.text = DLG_TEXT[59] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + ".";
+			dialog.text = DLG_TEXT[59] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + ".";
 			link.l1 = DLG_TEXT[60];
 			AddDialogExitQuest("imperial_escort_leave_cave");
 			link.l1.go = "exit";
@@ -253,7 +253,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_negotations_outside_cave8":
-			dialog.text = DLG_TEXT[84] + GetMyFullName(CharacterFromID("Emiliano de Guzm–±n")) + DLG_TEXT[85];
+			dialog.text = DLG_TEXT[84] + GetMyFullName(CharacterFromID("Emiliano de Guzm·n")) + DLG_TEXT[85];
 			link.l1 = DLG_TEXT[86];
 			AddDialogExitQuest("imperial_escort_agent_returns_to_cave");
 			link.l1.go = "exit";

@@ -218,7 +218,7 @@ void SetCurentOptions(ref optref, bool bGlobal)
 // changed by MAXIMUS <--
 // KK -->
 	music_scheme = sti(optref.gameoption.musicscheme);
-	if (music_scheme > 0 && CheckDirectory("RESOURCE\Sounds\MUSIC\" + GetMusicSchemeResDir(), "*.ogg") == 0) {
+	if (music_scheme > 0 && CheckDirectory(GetResourceDirectory() + "Sounds\MUSIC\" + GetMusicSchemeResDir(), "*.ogg") == 0) {
 		music_scheme = 0;
 		optref.gameoption.musicscheme = music_scheme;
 		//SaveMainOptions(optref);

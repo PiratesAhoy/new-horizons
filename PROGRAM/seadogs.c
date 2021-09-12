@@ -91,7 +91,30 @@ native int RDTSC_B();
 native int RDTSC_E(int iRDTSC);
 //int onesec; // NK for speedtests.
 
-#libriary "script_libriary_test"
+native int SetTexturePath(int iLevel, string sPath);
+native int SetGlowParams(float fBlurBrushSize, int Intensivity, int BlurPasses);
+native int RPrint(int x, int y, string sPrint);
+
+//Boyer add for new version
+native bool FileDelete(string sFilePath);
+native bool FileExists(string sFilePath);
+native bool CreateFolder(string sFolderName);
+native bool CheckFolder(string sFolderName);
+native bool DeleteFolder(string sFolderName);
+native bool FindFolders(string sFindTemplate,aref arFoldersList);
+//#20190704-01
+native bool MoveFile(string sExistName, string sNewName);
+native string LanguageGetDefaultLanguage();
+native string GetSaveDirectory();
+native string GetResourceDirectory();
+native string GetProgramDirectory();
+native int GetTexture(string sFilename);
+native int FindFiles(ref rObject, string sDirectory, string sMask, bool bRecursive);
+//#20171106-01 Add GetFontStringWidth()
+native int GetFontStringWidth(string sInput, float scale);
+
+#library "script_library"
+#library "render_script_library"
 
 #event_handler(NEW_GAME_EVENT,"NewGame");
 #event_handler(GAME_OVER_EVENT,"GameOverE");
@@ -102,6 +125,8 @@ native int RDTSC_E(int iRDTSC);
 // NK 05-07-10 for now do with normal controls. - #event_handler("Cheat","ProcessCheat");
 #event_handler("Control Activation","ProcessCheat");
 #event_handler("SeaDogs_ClearSaveData", "ClearLocationsSaveData");
+//#20171009-03
+#event_handler("ResetDevice", "ResetDevice");
 
 // KK -->
 ref ResurrectingOfficiant;
@@ -362,6 +387,11 @@ void Main()
 	SetEventHandler("Control Activation","proc_break_video",0);
 	SetEventHandler(EVENT_END_VIDEO,"Main_LogoVideo",0);
 	InterfaceStates.videoIdx = 0;
+
+
+
+
+
 	Event(EVENT_END_VIDEO);
 	ReloadProgressEnd();
 }
@@ -378,30 +408,6 @@ void Main_LogoVideo()
 		{
 			InterfaceStates.videoIdx = 1;
 			StartPostVideo("PiratesAhoyLogo",1);
-			return;
-		}
-	break;
-
-	case 1:
-		{
-			InterfaceStates.videoIdx = 2;
-			StartPostVideo("WaltDisneyLogo",1);
-			return;
-		}
-	break;
-
-	case 2:
-		{
-			InterfaceStates.videoIdx = 3;
-			StartPostVideo("AkellaLogo",1);
-			return;
-		}
-	break;
-
-	case 3:
-		{
-			InterfaceStates.videoIdx = 4;
-			StartPostVideo("BethesdaLogo",1);
 			return;
 		}
 	break;
@@ -463,6 +469,7 @@ void Main_Start()
 	SetCurrentTime(CharHour, CharMinute);
 	SetCurrentDate(CharDay, CharMonth, CharYear);
 
+
 	Trace("Gauging: initgame start");
 	InitGame();
 	Trace("Gauging: initgame done");
@@ -470,24 +477,20 @@ void Main_Start()
 
 	CheckStorylines(); // KK
 
+	 //Boyer add
+	 pchar = GetMainCharacter();
+    if(USE_NEW_WEATHER) {
+        InterfaceStates.SeaDetails = 1.0;
+        WeatherInit();
+    }
+
 	InterfaceStates.Buttons.Load.enable = true;
 
 	Event("DoInfoShower","sl","game prepare",false);
 
 	GetInterfaceParameters(); // added by MAXIMUS
 	GetLanguageParameters(); // added by MAXIMUS
-
-	// PB: Catch Erroneous Install -->
-	if (FindFile("", "RESOURCE\*.*", "build14_beta4_final") == "")
-	{
-		LaunchInstallError();
-	}
-	else
-	{
-		LaunchMainMenu();
-	}
-	// PB: Catch Erroneous Install <--
-
+	LaunchMainMenu();
 	//LaunchLoadGame();
 
 	//SetMainCharacterIndex(1);
@@ -509,7 +512,7 @@ void SaveGame()
 
 void SaveGame_continue()
 {
-	ref PChar = GetMainCharacter();
+	PChar = GetMainCharacter();
 	DelEventHandler("evntSave","SaveGame");
 	DelEventHandler("delay_save","SaveGame_continue"); //Levis
 	string savePath = GetEventData(); // KK
@@ -528,7 +531,6 @@ void SaveGame_continue()
 	string qsFileName = "-=" + sCurProfile + "=- QuickSave";
 	string saveQSFullName = savePath + "\" + qsFileName;
 // <-- KK
-	PChar.savelang = GetInterfaceLanguage(); // MAXIMUS 20.08.2018 used for localization
 
 	SaveEngineState(saveFullName);
 	ISetSaveData(saveFullName, saveData);
@@ -562,6 +564,10 @@ void SaveGame_continue()
 
 void LoadGame()
 {
+    PauseParticles(true); //fix
+	PauseAllSounds(); // fix
+    ResetSound();  // fix
+
 	string saveName = GetEventData();
 
 	DeleteEntities();
@@ -573,7 +579,7 @@ void LoadGame()
 	SendMessage(&reload_fader, "ls", FADER_PICTURE, FindReloadPicture("loading_game.tga")); // KK
 	SendMessage(&reload_fader, "lfl", FADER_IN, RELOAD_TIME_FADE_IN, true);
 	ReloadProgressStart();
-	ref pchar = GetMainCharacter(); // KK
+	pchar = GetMainCharacter(); // KK
 	pchar.savegamename = saveName;
 	SetEventHandler("frame","LoadGame_continue",1);
 }
@@ -581,7 +587,7 @@ void LoadGame()
 void LoadGame_continue()
 {
 // KK -->
-	ref pchar = GetMainCharacter();
+	pchar = GetMainCharacter();
 	DelEventHandler("frame","LoadGame_continue");
 	LoadEngineState(PChar.savegamename);
 	DeleteAttribute(PChar, "savegamename");
@@ -754,7 +760,7 @@ void SaveAtSea()
 {
 	// Screwface : It seems that if we do a save at sea and a reload, we lost the current load of balls & gunpowder
 	// This code save this charge to re-add it at the load at sea
-	ref Pchar = GetMainCharacter();
+	Pchar = GetMainCharacter();
 	ref rCannon; makeref(rCannon,Cannon[GetCaracterShipCannonsType(Pchar)]);
 	if(CANNONPOWDER_MOD)
 	{
@@ -834,6 +840,8 @@ void OnLoad()
 	InitTeleport();
 	ReloadProgressUpdate();
 	InitParticles();
+	//Boyer add
+    if(USE_NEW_WEATHER) WeatherInit();
 	ReloadProgressUpdate();
 	//ImportFuncTest();
 
@@ -903,11 +911,10 @@ void NewGame()
 
 	// PB: Storyline Specific Start New Game Screens -->
 	string LoadingScreen = "Quest_"+GetStoryline(FindCurrentStoryline())+".tga";
-	string TextureFolder = "RESOURCE\Textures\Loading\"+ LanguageGetLanguage() +"\";
+	string TextureFolder = GetResourceDirectory() + "Textures\Loading\"+ LanguageGetLanguage() +"\";
 	ref model = ModelFromID(CharModel);
 	if (CheckAttribute(model, "loadingScreen"))	LoadingScreen = model.loadingScreen;
-//	if(FindFile(TextureFolder, "*.tx", LoadingScreen+".tx") == "") LoadingScreen = "new_game.tga";
-	if(FindReloadPicture(LoadingScreen) == "") LoadingScreen = "new_game.tga";//MAXIMUS 25.04.2019: method FindFile not works with localization
+	if(FindFile(TextureFolder, "*.tx", LoadingScreen+".tx") == "") LoadingScreen = "new_game.tga";
 	// PB: Storyline Specific Start New Game Screens <--
 
 	CreateEntity(&LanguageObject,"obj_strservice");
@@ -991,7 +998,7 @@ void NewGame_continue()
 	InterfaceStates.Buttons.Load.enable = true;
 
 // KK -->
-	ref PChar = GetMainCharacter();
+	PChar = GetMainCharacter();
 
 	// PB: To Prevent Errors -->
 	LoadStorylineFile("", "SL_utils.c");
@@ -1135,7 +1142,7 @@ void InitGame()
 void SideStepControl(float mag, bool onoff)
 {
 	//trace("Sidestep control, mag " + mag + ", onoff is " + onoff);
-	ref pchar = GetMainCharacter();
+	pchar = GetMainCharacter();
 	if(onoff)
 	{
 		if(!CheckAttribute(pchar, "sidestep"))
@@ -1190,7 +1197,7 @@ void ProcessControls()
 
 	if(ControlName == "Help") RunHelpChooser();
 
-	ref PChar = GetMainCharacter(); // NK moved here
+	PChar = GetMainCharacter(); // NK moved here
 	if(bKeyboardEnabled) // NK keyboard 05-07-21
 	{
 		//trace("KB enabled, control is " + ControlName);
@@ -1264,7 +1271,7 @@ void ProcessControls()
 				{
 					ActivateCharacterPerk(PChar,"Rush");
 				}
-			break;
+			return; break;
 			// scheffnow <--
 
 			// NK -->
@@ -1330,7 +1337,7 @@ void ProcessControls()
 					// TIH <--
 // changed by MAXIMUS [now we are looting corpses without dialog file] <--
 				}
-			break;
+			return; break;
 
 			case "ScreenCleaning":
 // KK -->
@@ -1339,9 +1346,9 @@ void ProcessControls()
 				else
 					BLIVisible(!sti(InterfaceStates.BIVisible));
 // <-- KK
-			break;
+			return; break;
 
-			case "NK_Re-init": Reinit(false, true); break;
+			case "NK_Re-init": Reinit(false, true); return; break;
 
 			case "NK_AlwaysRunToggle":
 				if (!bSeaActive || bAbordageStarted)
@@ -1367,7 +1374,7 @@ void ProcessControls()
 						LogIt("Clubhauling default direction set to STARBOARD");
 					}
 				}
-			break;
+			return; break;
 
 			case "NK_LogsToggle":
 // KK -->
@@ -1378,7 +1385,7 @@ void ProcessControls()
 				if(LogsToggle) Log_SetStringToLog(TranslateString("","Various logs are now on")); //bugfix 04-08-28
 				else Log_SetStringToLog(TranslateString("","Various logs are now off"));*/
 // <-- KK
-			break;
+			return; break;
 
 			case "executeconsole":
 				if(LoadSegment("console.c"))
@@ -1386,7 +1393,7 @@ void ProcessControls()
 					ExecuteConsole();
 					UnloadSegment("console.c");
 				}
-			break;
+			return; break;
 // added by MAXIMUS [for new C-III models, which have an animated sidestep] -->
 			case "Sidestep_left_on":
 				if(bSeaActive && !bAbordageStarted) break; // PB: Don't do this while sailing, but don't prevent it during boarding
@@ -1396,7 +1403,7 @@ void ProcessControls()
 					SetEventHandler("DoStraif", "CharacterDoStraif", 0);
 					Event("DoStraif", "il", pchar, -1);
 				}
-			break;
+			return; break;
 			case "Sidestep_right_on":
 				if(bSeaActive && !bAbordageStarted) break; // PB: Don't do this while sailing, but don't prevent it during boarding
 				if(CheckAttribute(worldMap, "isLoaded") == true && worldMap.isLoaded == "true") break; // KK The same for Worldmap
@@ -1405,15 +1412,42 @@ void ProcessControls()
 					SetEventHandler("DoStraif", "CharacterDoStraif", 0);
 					Event("DoStraif", "il", pchar, 1);
 				}
-			break;
+			return; break;
 			case "Sidestep_left_off":
 				if(!StraifCharacter(PChar)) SideStepControl(SIDESTEP_DIST_LEFT, false);
-			break;
+			return; break;
 			case "Sidestep_right_off":
 				if(!StraifCharacter(PChar)) SideStepControl(SIDESTEP_DIST_RIGHT, false);
-			break;
+			return; break;
 // added by MAXIMUS [for new C-III models, which have an animated sidestep] -->
-	
+            //
+            case "ChrBackward": //ChrStrafeLeft ChrStrafeRight
+                if (bLandInterfaceStart && LAi_IsFightMode(pchar))
+                {
+                    pchar.chr_ai.energy = stf(pchar.chr_ai.energy) - 2;
+                    if (stf(pchar.chr_ai.energy) < 0) pchar.chr_ai.energy = 0;
+                }
+                return;
+            break;
+            case "ChrStrafeLeft":
+                //#20190313-02
+                if (bLandInterfaceStart && LAi_IsFightMode(pchar) && !LAi_CheckRunMode(pchar))
+                {
+                    pchar.chr_ai.energy = stf(pchar.chr_ai.energy) - 2;
+                    if (stf(pchar.chr_ai.energy) < 0) pchar.chr_ai.energy = 0;
+                }
+                return;
+            break;
+            case "ChrStrafeRight":
+                //#20190313-02
+                if (bLandInterfaceStart && LAi_IsFightMode(pchar) && !LAi_CheckRunMode(pchar))
+                {
+                    pchar.chr_ai.energy = stf(pchar.chr_ai.energy) - 2;
+                    if (stf(pchar.chr_ai.energy) < 0) pchar.chr_ai.energy = 0;
+                }
+                return;
+            break;
+
 			// JRH -->
 			case "ChrFightMode":
 				if(bSeaActive && !bAbordageStarted) break; // PB: Don't do this while sailing, but don't prevent it during boarding
@@ -1477,7 +1511,7 @@ void ProcessControls()
 						{
 							PostEvent("Longrifle_C_on_back", 1000, "i", PChar);
 						}
-						
+
 						if(IsEquipCharacterByItem(PChar, "Longrifle_H"))
 						{
 							PostEvent("Longrifle_H_on_back", 1000, "i", PChar);
@@ -1488,26 +1522,20 @@ void ProcessControls()
 							PostEvent("Longrifle_W_on_back", 1000, "i", PChar);
 						}
 
-						if(IsEquipCharacterByItem(PChar, "portugize"))
-						{
-							PostEvent("portugize_on_back", 1000, "i", PChar);
-						}
-
 						if(IsEquipCharacterByItem(Pchar, "shield_hand"))
 						{
 							RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE );
 							TakeItemFromCharacter(Pchar, "shield_hand");
 							GiveItem2Character(Pchar, "shield_back");
-							EquipCharacterByItem(Pchar, "shield_back");								
+							EquipCharacterByItem(Pchar, "shield_back");
 						}
 
 						if(IsEquipCharacterByItem(PChar, "battleax"))
 						{
 							PostEvent("bax_on_back", 1000, "i", PChar);
 						}
-			
-						if(IsEquipCharacterByItem(PChar, "witcher_steel-2") || IsEquipCharacterByItem(PChar, "witcher_steel-1") 
-						|| IsEquipCharacterByItem(PChar, "witcher_steel") || IsEquipCharacterByItem(PChar, "witcher_steel+1") 
+						if(IsEquipCharacterByItem(PChar, "witcher_steel-2") || IsEquipCharacterByItem(PChar, "witcher_steel-1")
+						|| IsEquipCharacterByItem(PChar, "witcher_steel") || IsEquipCharacterByItem(PChar, "witcher_steel+1")
 						|| IsEquipCharacterByItem(PChar, "witcher_steel+2") || IsEquipCharacterByItem(PChar, "witcher_steel+3"))
 						{
 							PostEvent("witcher_steel_on_back", 1000, "i", PChar);
@@ -1534,7 +1562,7 @@ void ProcessControls()
 
 						if(IsEquipCharacterByItem(Pchar, "pistolmtoon"))
 						{
-							if(charge == 1.0) PostEvent("mtoon_on_hip", 1000, "i", Pchar);	
+							if(charge == 1.0) PostEvent("mtoon_on_hip", 1000, "i", Pchar);
 						}
 
 						if(IsEquipCharacterByItem(Pchar, "pistolmketB"))
@@ -1565,7 +1593,7 @@ void ProcessControls()
 						{
 							if(charge == 1.0) PostEvent("Longrifle_C_on_hip", 1000, "i", Pchar);
 						}
-						
+
 						if(IsEquipCharacterByItem(Pchar, "Longrifle_H"))
 						{
 							if(charge == 1.0) PostEvent("Longrifle_H_on_hip", 1000, "i", Pchar);
@@ -1585,7 +1613,7 @@ void ProcessControls()
 						{
 							int ar = GetCharacterItem(Pchar, "bladearrows");
 							if(ar >= 1)
-							{						
+							{
 								if(!IsEquipCharacterByItem(Pchar, "bladearrows"))
 								{
 									RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE );
@@ -1599,16 +1627,15 @@ void ProcessControls()
 							RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE );
 							TakeItemFromCharacter(Pchar, "shield_back");
 							GiveItem2Character(Pchar, "shield_hand");
-							EquipCharacterByItem(Pchar, "shield_hand");								
+							EquipCharacterByItem(Pchar, "shield_hand");
 						}
 
 						if(IsEquipCharacterByItem(PChar, "battleax"))
 						{
 							PostEvent("bax_on_hip", 10, "i", PChar);
 						}
-				
-						if(IsEquipCharacterByItem(PChar, "witcher_steel-2") || IsEquipCharacterByItem(PChar, "witcher_steel-1") 
-						|| IsEquipCharacterByItem(PChar, "witcher_steel") || IsEquipCharacterByItem(PChar, "witcher_steel+1") 
+						if(IsEquipCharacterByItem(PChar, "witcher_steel-2") || IsEquipCharacterByItem(PChar, "witcher_steel-1")
+						|| IsEquipCharacterByItem(PChar, "witcher_steel") || IsEquipCharacterByItem(PChar, "witcher_steel+1")
 						|| IsEquipCharacterByItem(PChar, "witcher_steel+2") || IsEquipCharacterByItem(PChar, "witcher_steel+3"))
 						{
 							PostEvent("witcher_steel_on_hip", 10, "i", PChar);
@@ -1710,7 +1737,7 @@ void ProcessControls()
 					}
 				*/
 				}
-			break;
+			return; break;
 			// <-- JRH
 
 			// PB: Control Camera Behaviour -->
@@ -1742,7 +1769,7 @@ void ProcessControls()
 						else										locCameraFollow();
 					}
 				}
-			break;
+			return; break;
 			// PB: Control Camera Behaviour <--
 
 			// PB: Equip button -->
@@ -1977,7 +2004,7 @@ void ProcessControls()
 				// output
 				if(logstr != "") { Logit(TranslateString("","You equipped") + " " + logstr + "."); }
 				if(errstr != "") { Logit(TranslateString("","You don't have") + " " + errstr + " " + TranslateString("","to equip") + "."); }
-			break;
+			return; break;
 			// PB: Equip button <--
 
 			// PB: Steam Ships -->
@@ -1987,7 +2014,7 @@ void ProcessControls()
 					PChar.Ship.Power = sti(GetAttribute(PChar,"Ship.Power")) + 25;
 					if(sti(PChar.Ship.Power) > 100) PChar.Ship.Power = 100;
 				}
-			break
+			return; break
 
 			case "Ship_PowerDown":
 				if(SteamShip(PChar) && bSeaActive && !bAbordageStarted)
@@ -1995,14 +2022,14 @@ void ProcessControls()
 					PChar.Ship.Power = sti(GetAttribute(PChar,"Ship.Power")) - 25;
 					if(sti(PChar.Ship.Power) < -100) PChar.Ship.Power = -100;
 				}
-			break
+			return; break
 
 			case "Ship_PowerZero":
 				if(SteamShip(PChar) && bSeaActive && !bAbordageStarted)
 				{
 					PChar.Ship.Power = 0;
 				}
-			break
+			return; break
 			// PB: Steam Ships <--
 
 			// El Rapido Rapid Raid -->
@@ -2019,7 +2046,7 @@ void ProcessControls()
 					else
 						Rapid_Raid("Soldiers", 10, SPAIN, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, "Several Conquistadores attack you!", "Conquistador", OFFIC_TYPE_GUARD, 0, true, "", "");
 				}
-			break;
+			return; break;
 			// El Rapido Rapid Raid <--
 
 			// NK <--
@@ -2050,7 +2077,7 @@ void ProcessControls()
 					}
 				}
 				// ccc firedrill end, original potion-use mod put with its original key -tih
-			break;
+			return; break;
 			// TIH <--
 
 			// boal -->
@@ -2067,7 +2094,7 @@ void ProcessControls()
 					Log_SetStringToLog(TranslateString("","Used potion"));
 				}
 				// NK <--
-			break;
+			return; break;
 
 			// PB: Simplified Time Compression Controls -->
 			case "BOAL_Control":
@@ -2081,7 +2108,7 @@ void ProcessControls()
 				}
 				UpdateTimeScale();
 				LogIt(XI_ConvertString("Time") + " x" + makeint(GetTimeScale()));
-			break;
+			return; break;
 
 			case "BOAL_Control0":
 				switch(GetTimeScale())
@@ -2093,7 +2120,7 @@ void ProcessControls()
 				}
 				UpdateTimeScale();
 				LogIt(XI_ConvertString("Time") + " x" + makeint(GetTimeScale()));
-			break;
+			return; break;
 			// PB: Simplified Time Compression Controls <--
 
 			case "BOAL_Control2":
@@ -2111,16 +2138,16 @@ void ProcessControls()
 // changed by MAXIMUS [just for fun] <--
 					}
 				}
-			break;
+			return; break;
 
 // dchaley -->
 			case "DCH_Quicksave":
 				DoQuickSave();
-			break;
+			return; break;
 
 			case "DCH_Quickload":
 				DoQuickLoad();
-			break;
+			return; break;
 
 			case "Sulan_ArchipelagoMap":
 				if(CheckCharacterItem(PChar,"map"))
@@ -2131,7 +2158,7 @@ void ProcessControls()
 				{
 					LogIt("You don't have a map of the archipelago.");
 				}
-			break;
+			return; break;
 // dchaley <--
 		}
 // boal <--
@@ -2159,7 +2186,7 @@ void ProcessControls()
 			} else {
 				Logit(TranslateString("","You don't have a regular blade to equip."));
 			}
-			break;
+			return; break;
 
 		case "BI_ChargeGrapes":
 		// PB: Equip [Regular Gun]
@@ -2178,7 +2205,7 @@ void ProcessControls()
 			} else {
 				Logit(TranslateString("","You don't have a regular gun to equip."));
 			}
-			break;
+			return; break;
 
 		case "BI_ChargeKnippels":
 		// PB: Equip [Cobblestone]
@@ -2189,7 +2216,7 @@ void ProcessControls()
 			}
 			else
 			{Logit(TranslateString("","You don't have a cobblestone to equip."));}
-			break;
+			return; break;
 
 		case "BI_ChargeBombs":
 		// PB: Equip [Sandbag]
@@ -2200,7 +2227,7 @@ void ProcessControls()
 			}
 			else
 			{Logit(TranslateString("","You don't have a sandbag to equip."));}
-			break;
+			return; break;
 
 		// PB: More fast equip keys -->
 		case "BI_ChargeKey5":
@@ -2212,7 +2239,7 @@ void ProcessControls()
 			}
 			else
 			{Logit(TranslateString("","You don't have an etherbottle to equip."));}
-			break;
+			return; break;
 
 		case "BI_ChargeKey6":
 		// PB: Equip [Thief's Knife]
@@ -2223,7 +2250,7 @@ void ProcessControls()
 			}
 			else
 			{Logit(TranslateString("","You don't have a thief's knife to equip."));}
-			break;
+			return; break;
 
 		case "BI_ChargeKey7":
 		// PB: Equip [Poisoned Throwingknife]
@@ -2234,7 +2261,7 @@ void ProcessControls()
 			}
 			else
 			{Logit(TranslateString("","You don't have a poisoned throwingknife to equip."));}
-			break;
+			return; break;
 
 		case "BI_ChargeKey8":
 		// PB: Equip [Stinkpot]
@@ -2245,7 +2272,7 @@ void ProcessControls()
 			}
 			else
 			{Logit(TranslateString("","You don't have a stinkpot to equip."));}
-			break;
+			return; break;
 
 		case "BI_ChargeKey9":
 		// PB: Equip [Grenade]
@@ -2256,7 +2283,7 @@ void ProcessControls()
 			}
 			else
 			{Logit(TranslateString("","You don't have a grenade to equip."));}
-			break;
+			return; break;
 
 		case "BI_ChargeKey0":
 		// PB: Equip [Your Trusty Fists]
@@ -2267,7 +2294,7 @@ void ProcessControls()
 			}
 			else
 			{Logit(TranslateString("","What the heck? You don't have your trusty fists???"));}
-			break;
+			return; break;
 		// PB <--
 // KK -->
 		case "ChrActionAlt":
@@ -2283,19 +2310,19 @@ void ProcessControls()
 					}
 				}
 			}
-			break;
+			return; break;
 
 		case "DlgActionAlt":
 			SwitchDialogControls();
-			break;
+			return; break;
 
 		case "DlgUpAlt":
 			SwitchDialogControls();
-			break;
+			return; break;
 
 		case "DlgDownAlt":
 			SwitchDialogControls();
-			break;
+			return; break;
 // <-- KK
 		}
 	}
@@ -2308,52 +2335,52 @@ void ProcessControls()
 		switch (ControlName) {
 			case "ILClick":
 				bLMouseDown = true;
-			break;
+			return; break;
 			case "ILClick_Up":
 				bLMouseDown = false;
-			break;
+			return; break;
 			case "IRClick":
 				bRMouseDown = true;
-			break;
+			return; break;
 			case "IRClick_Up":
 				bRMouseDown = false;
-			break;
+			return; break;
 			case "ILeftAlt":
 				bKeyboardAlt = true;
-			break;
+			return; break;
 			case "ILeftAltUp":
 				bKeyboardAlt = false;
-			break;
+			return; break;
 			case "IRightAlt":
 				bKeyboardAlt = true;
-			break;
+			return; break;
 			case "IRightAltUp":
 				bKeyboardAlt = false;
-			break;
+			return; break;
 			case "ILeftControl":
 				bKeyboardControl = true;
-			break;
+			return; break;
 			case "ILeftControlUp":
 				bKeyboardControl = false;
-			break;
+			return; break;
 			case "IRightControl":
 				bKeyboardControl = true;
-			break;
+			return; break;
 			case "IRightControlUp":
 				bKeyboardControl = false;
-			break;
+			return; break;
 			case "ILeftShift":
 				bKeyboardShift = true;
-			break;
+			return; break;
 			case "ILeftShiftUp":
 				bKeyboardShift = false;
-			break;
+			return; break;
 			case "IRightShift":
 				bKeyboardShift = true;
-			break;
+			return; break;
 			case "IRightShiftUp":
 				bKeyboardShift = false;
-			break;
+			return; break;
 		}
 	}
 // <-- KK
@@ -2363,50 +2390,57 @@ void ProcessControls()
 	{
 		switch(ControlName)
 		{
-			case "MainMenu": ProcessMainMenuKey();	break;
-			case "MainMenuDouble": ProcessMainMenuKey(); break;
-			case "Interface": ProcessInterfaceKey();break;
+			case "MainMenu": ProcessMainMenuKey();	return; break;
+			case "MainMenuDouble": ProcessMainMenuKey(); return; break;
+			case "Interface": ProcessInterfaceKey(); return; break;
 
-			case "Sea_CameraSwitch": SeaCameras_Switch(); break;
+			case "Sea_CameraSwitch": SeaCameras_Switch(); return; break;
 			case "Ship_Fire": Ship_DoFire(); break;
 
-			case "Aimed_Ship_Fire": Ship_DoAimedFire(); break;	// LDH - allows manual aiming
-			//case "Tele": Sea_ReloadStart(); break;
+			case "Aimed_Ship_Fire": Ship_DoAimedFire(); return; break;	// LDH - allows manual aiming
+			//case "Tele": Sea_ReloadStart(); return; break;
 
 // KK -->
-			case "Ship_RaiseSails": Ship_DoRaiseSails(); break;
-			case "Ship_LowerSails": Ship_DoLowerSails(); break;
+			case "Ship_RaiseSails": Ship_DoRaiseSails(); return; break;
+			case "Ship_LowerSails": Ship_DoLowerSails(); return; break;
 
 			case "ILeft":
 				if (bKeyboardControl && iRealismMode<2 && !ONSEA_DATA_DISABLED) SeaCameras_SetPreviousShip();
-			break;
+			return; break;
 			case "IRight":
 				if (bKeyboardControl && iRealismMode<2 && !ONSEA_DATA_DISABLED) SeaCameras_SetNextShip();
-			break;
+			return; break;
 			case "IDown":
 				if (bKeyboardControl && iRealismMode<2 && !ONSEA_DATA_DISABLED) SeaCameras_SetMyShip();
-			break;
-			case "ControlDown": bKeyboardControl = true; break;
-			case "ControlUp": bKeyboardControl = false; break;
+			return; break;
+			case "ControlDown": bKeyboardControl = true; return; break;
+			case "ControlUp": bKeyboardControl = false; return; break;
 // <-- KK
+
 		}
 	}
 	else
 	{
 		switch(ControlName)
 		{
-			case "MainMenu": ProcessMainMenuKey();	break;
-			case "MainMenuDouble": ProcessMainMenuKey(); break;
-			case "Interface": ProcessInterfaceKey();break;
+			case "MainMenu": ProcessMainMenuKey();	return; break;
+			case "MainMenuDouble": ProcessMainMenuKey(); return; break;
+			case "Interface": ProcessInterfaceKey(); return; break;
 			case "Tele":
 				StartQuickTeleport();
-				break;
-			case "TeleBack": Teleport(-1); break;
+				return; break;
+			case "TeleBack": Teleport(-1); return; break;
 			case "Action":
 				//DumpAttributes(loadedLocation/*loadedLocation.reload.reload1.x*/);
 				//trace("Y: " + loadedLocation.reload.reload1.y);
 				//trace("Z: " + loadedLocation.reload.reload1.z);
-			break;
+			return; break;
+			case "WMapCancel":
+			if(IsEntity(&worldMap))
+                {
+                    DeleteAttribute(pchar, "SkipEshipIndex");// boal
+                }
+            break;
 		}
 	}
 
@@ -2662,7 +2696,7 @@ void GameOver(string sName)
 			{
 				RemoveCharacterEquip(mc, GUN_ITEM_TYPE);
 				TakeItemFromCharacter(mc, gun);
-				
+
 				if(!IsEquipCharacterByItem(mc, "bladepclub203"))
 				{
 					TakeItemFromCharacter(mc, "bladepclub203");	//unequipped
@@ -2849,12 +2883,31 @@ void GameOverOrg(string sName)	//ccc original GameOver function
 		case "mutiny":
 			StartPostVideo("blaze_mutiny_dead",1);
 		break;
-		
+
 		case "surrender":
 			StartPostVideo("surrender_bart",1);
-		break;		
+		break;
 	}
 	InterfaceStates.Buttons.Resume.enable = false;
 	InterfaceStates.Buttons.Save.enable = false;
 }
 //ccc survival <-
+
+//#20171009-03
+extern void SaveLoadResetCall(string iniName, bool isSave);
+void ResetDevice()
+{
+    if(InterfaceStates.Launched == true) {
+        if(CurrentInterface == INTERFACE_SAVELOAD) {
+            bool isSave = false;
+            if(GameInterface.strings.ScreenTitle == XI_ConvertString("titleSave"))
+                isSave = true;
+            SaveLoadResetCall(Interfaces[CurrentInterface].IniFile, isSave);
+        }
+    }
+    //else {
+        //Call twice to remove/replace
+        //ChangeShowIntarface();
+        //ChangeShowIntarface();
+    //}
+}

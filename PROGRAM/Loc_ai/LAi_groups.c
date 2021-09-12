@@ -510,7 +510,7 @@ void LAi_group_UpdateAlarm()
 
 		if(iRealismMode>0 || SHORE_DANGER_ALARM) // Screwface
 		{
-			if(!CheckAttribute(mchr,"doalarm")) 
+			if(!CheckAttribute(mchr,"doalarm"))
 			{
 				LAi_grp_alarmactive = false;
 			}
@@ -521,4 +521,18 @@ void LAi_group_UpdateAlarm()
 		}//Screwface : end
 	}
 	Sound_OnAlarm(LAi_grp_alarmactive);
+}
+//#20190717-01
+void resetGroupRel()
+{
+    aref aGrp, qGrp;
+	makearef(aGrp, LAi_grp_relations.savedata);
+	int num = GetAttributesNum(aGrp);
+	for(int i = 0; i < num; i++)
+	{
+		aref atr = GetAttributeN(&aGrp, i);
+		if(sti(atr.curState) != LAI_GROUP_ENEMY_INT) continue;		//line 534
+		if(sti(atr.isactive) == 0)
+            atr.curState = LAI_GROUP_NEITRAL_INT;
+	}
 }

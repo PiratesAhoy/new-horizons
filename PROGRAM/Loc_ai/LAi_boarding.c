@@ -152,7 +152,8 @@ void LAi_StartBoarding(int locType, ref echr, bool isMCAttack)
 	}
 	else
 	{
-		ResetSoundScheme();
+		//ResetSoundScheme();
+        ResetSound();
 		PauseAllSounds();
 	}
 
@@ -714,7 +715,7 @@ void LAi_LoadLocation(string locationID)
 		boarding_location = locIndex;
 		if (LoadLocation(&Locations[boarding_location]))
 		{
-			if (!Surrendered) { 
+			if (!Surrendered) {
 				// Let us take out the sabre
 				SendMessage(mchr, "lsl", MSG_CHARACTER_EX_MSG, "SetFightMode", 1);
 				// We arrange the characters
@@ -749,7 +750,7 @@ void LAi_LoadLocation(string locationID)
 
 	if(CheckAttribute(mchr,"musket"))//MAXIMUS: placed here for sound effects
 	{
-		if(!Surrendered && FindFile("RESOURCE\Sounds\INTERFACE", "*.wav", "_musketshot.wav")!="") PlaySound("INTERFACE\_musketshot.wav");
+		if(!Surrendered && FindFile(GetResourceDirectory() + "Sounds\INTERFACE", "*.wav", "_musketshot.wav")!="") PlaySound("INTERFACE\_musketshot.wav");
 		//if(CheckAttribute(mchr,"musket.kills")) PlaySound("OBJECTS\ABORDAGE\abordage_loosing.wav");
 		if (CheckAttribute(mchr, "musket")) DeleteAttribute(mchr, "musket");
 		if (CheckAttribute(refEnCharacter, "musket")) DeleteAttribute(refEnCharacter, "musket");
@@ -902,7 +903,7 @@ bool SurrenderAction(ref mchr, ref ch, string locationID, string homeLocator, st
 	string desc = "This captain surrendered";
 	SetSkillCharMod(refEnCaptain, "Leadership", -1, id, desc); //Levis
 //	SetSkillCharMod(refEnCaptain, "Grappling", -1, id, desc); //Levis, TY after poll generally agreed to remove this part of the modifier
-	
+
 	refEnCaptain.nodisarm = 1;
 	if (!CheckAttribute(refEnCaptain,"chr_ai.type")) refEnCaptain.chr_ai.type = "stay";
 	if (!CheckAttribute(refEnCaptain,"model.entity")) refEnCaptain.model.entity = "NPCharacter";
@@ -1033,7 +1034,8 @@ void LAi_ReloadStartFade()
 	SDLogIt("***ReloadStartFade()");
 	//Выгружаем локацию
 	// We unload the location
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	DelEventHandler("FaderEvent_StartFade", "LAi_ReloadStartFade");
 	if (boarding_location >= 0) UnloadLocation(&Locations[boarding_location]);
@@ -1418,7 +1420,7 @@ void LAi_ActivateReload()
 {
 //	SDLogIt("***ActivateReload()");		// Uncommenting this gives many many entries in the log
 	int tmpi;
-	ref mchr = GetMainCharacter(); 
+	ref mchr = GetMainCharacter();
 	ref chr;
 	string controlName = GetEventData();
 	if (controlName != "ChrAction") return;
@@ -2182,7 +2184,7 @@ int GetFortBoardingLocationsCount()
 void PrepareLocationForBoardingFort()
 {
 	int fortidx, homeland;
-	string town; 
+	string town;
 	ref fort;
 
 	fortidx = FindLocation("BOARDING_Fort");

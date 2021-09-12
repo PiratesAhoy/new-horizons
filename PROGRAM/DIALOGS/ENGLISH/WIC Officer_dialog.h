@@ -21,8 +21,8 @@ string DLG_TEXT[26] = {
 "Pirates? Arr, then I'll be off to do some pirating of my own!",
 "East India Trading Company",
 "Dutch West India Company",
-"Casa de Contrataci—Én",
-"Casa da –ùndia",
+"Casa de ContrataciÛn",
+"Casa da Õndia",
 "French West India Company",
 "West India Company",
 };

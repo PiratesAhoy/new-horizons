@@ -1,4 +1,5 @@
 object Particles;
+object ParticlesXPS;
 #event_handler("CreateParticleSystemPost", "CreateParticleSystemEvent"); // NK 04-09-21 add createpartsys event
 
 void InitParticles()
@@ -6,7 +7,10 @@ void InitParticles()
 	Particles.windpower = 1.0;
 	Particles.winddirection.x = frnd();
 	Particles.winddirection.z = frnd();
-	if (!CreateParticleEntity())
+	ParticlesXPS.windpower = 1.0;
+	ParticlesXPS.winddirection.x = frnd();
+	ParticlesXPS.winddirection.z = frnd();
+	if (!CreateParticleEntity() || !CreateParticleEntityXPS())
 	{
 		Trace("Can't create 'particles' class");
 	}
@@ -40,6 +44,15 @@ int CreateParticleSystem(string name,float x,float y,float z,
 	return pid;
 }
 
+int CreateParticleSystemXPS(string name,float x,float y,float z,
+		float ax,float ay,float az,int lifetime)
+{
+	int pid;
+	if (!CreateParticleEntityXPS()) return 0;
+	pid = SendMessage(&ParticlesXPS,"lsffffffl",PS_CREATE,name,x,y,z,ax,ay,az,lifetime);
+	return pid;
+}
+
 // NK createparsys event 04-09-21 -->
 void CreateParticleSystemEvent()
 {
@@ -57,14 +70,26 @@ void CreateParticleSystemEvent()
 
 bool CreateParticleEntity()
 {
-	if(IsEntity(Particles) == false)
+	if(IsEntity(&Particles) == false)
 	{
-		if (CreateEntity(&Particles,"particles") == false) return false;
-		Trace("bool CreateParticleEntity()");
+		if (CreateEntity(&Particles,"particleslegacy") == false) return false;
 		LayerAddObject("realize",Particles,65536);
 		LayerAddObject("execute",Particles,0);
 		LayerAddObject(SEA_REALIZE,Particles,65536);
 		LayerAddObject(SEA_EXECUTE,Particles,0);
+	}
+	return true;
+}
+
+bool CreateParticleEntityXPS()
+{
+	if(IsEntity(&ParticlesXPS) == false)
+	{
+		if (CreateEntity(&ParticlesXPS,"particles") == false) return false;
+		LayerAddObject("realize",ParticlesXPS,65536);
+		LayerAddObject("execute",ParticlesXPS,0);
+		LayerAddObject(SEA_REALIZE,ParticlesXPS,65536);
+		LayerAddObject(SEA_EXECUTE,ParticlesXPS,0);
 	}
 	return true;
 }
@@ -103,7 +128,7 @@ int CreateBlastX(float x,float y,float z,float ax,float ay,float az)
 // MM, modified blast for solid shot impacts, flying planks removed.
 // TIH --> This function crashes the game because the "flying planks removed" portion was done improperly.
 // As a result, we are bypassing this function and using the stock one above to insure proper particles.
-int CreateBlastM(float x,float y,float z) 
+int CreateBlastM(float x,float y,float z)
 {
 	return CreateBlast( x, y, z); // bypass this function and use stock above
 	/*

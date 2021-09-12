@@ -1,6 +1,6 @@
 string DLG_TEXT[3] = {
 "...",
-"CapitÐ±n Jack Sparrow. SÑƒlo me preguntaba si necesitas que te hagan un trabajo",
-"ÐŽOye! Ñ—El gato te comiÑƒ la lengua? Hazlo a tu manera, amigo.",
+"Capitán Jack Sparrow. Sólo me preguntaba si necesitas que te hagan un trabajo",
+"¡Oye! ¿El gato te comió la lengua? Hazlo a tu manera, amigo.",
 
 };

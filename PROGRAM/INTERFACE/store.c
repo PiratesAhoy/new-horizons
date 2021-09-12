@@ -49,8 +49,8 @@ void InitInterface_RR(string iniName,ref pChar,ref pStore)
 	CreateExitString();//MAXIMUS: standard exit-string for exit-button
 // KK -->
 		if (LAi_IsCapturedLocation) {
-		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "BUY_BUTTON", 0, XI_ConvertString("Take"));
-		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "SELL_BUTTON", 0, XI_ConvertString("Leave"));
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "BUY_BUTTON", 0, "#"+XI_ConvertString("Take"));
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "SELL_BUTTON", 0, "#"+XI_ConvertString("Leave"));
 		SetNodeUsing("SELLEVERYTHING_BUTTON", false);
 		SetNodeUsing("SELLALL_BUTTON", false);
   	}
@@ -592,7 +592,7 @@ void SetShowMode(int st)
 
 	case SHOW_INFO:
 		SetNodeUsing("GOODS_DESCRIBE",false);
-		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "INFO_BUTTON", 0, XI_ConvertString("INFO")); // KK
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "INFO_BUTTON", 0, "#"+XI_ConvertString("INFO")); // KK
 	break;
 	}
 
@@ -658,7 +658,7 @@ void SetShowMode(int st)
 		// KK SetCurrentNode("GOODS_DESCRIBE");
 		DoGoodsDescribe();
 // KK -->
-		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "INFO_BUTTON", 0, XI_ConvertString("OK"));
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "INFO_BUTTON", 0, "#"+XI_ConvertString("OK"));
 		SetNodeUsing("INFO_BUTTON", true);
 		SetCurrentNode("INFO_BUTTON");
 		FreezeScreen(true);

@@ -14,8 +14,6 @@
 
 #define MAX_LANGUAGES        6
 #define MAX_KEYBOARD_LAYOUTS 7
-
-
 float i_fCurMusic;
 float i_fCurSound;
 float i_fCurDialog;
@@ -174,7 +172,7 @@ void InitInterface(string iniName)
 	SendMessage(&GameInterface,"lsla",MSG_INTERFACE_MSG_TO_NODE,"KEY_CHOOSER", 0,ar);
 
 	if( g_bDisableControlChange ) {
-		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CONTROLS", 0,XI_ConvertString("View Controls"));
+		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CONTROLS", 0,"#"+XI_ConvertString("View Controls"));
 	}
 
 	SetNodeUsing("MB_CAMERA",g_bDisableControlChange);
@@ -392,7 +390,7 @@ void ProcessCommandExecute()
 // MAXIMUS interface MOD -->
 	int x;ref tmpch;string tmpstr;
         if(nodName=="OPTIONS")
-{ 
+{
 if(comName=="activate" || comName=="click")
 	{
 		ShowOptionsPage(OPAGE_MAIN);
@@ -401,7 +399,7 @@ if(comName=="activate" || comName=="click")
 	}
 }
         if(nodName=="CANCEL")
-{ 
+{
 if(comName=="activate" || comName=="click")
 	{
 		ShowOptionsPage(OPAGE_CONTROLS_2);
@@ -1066,7 +1064,7 @@ if(comName=="activate" || comName=="click")
 				ShowOptionsPage(OPAGE_CONTROLS_1);
 				SetCurrentNode("CONTROLS_B_CHANGE");
 			 }
-			
+
 		}
 		if(comName=="activate" || comName=="click")
 		{
@@ -1776,7 +1774,7 @@ void SetShowGroup(string groupName)
 	aref arGroup;
 	makearef(arGroup,objControlsState.keygroups.(groupName));
 
-	// РџСЂРѕРїРёСЃР°С‚СЊ РєРѕРЅС‚СЂРѕР»Рё РІ СЃРїРёСЃРѕРє
+	// Прописать контроли в список
 	DeleteAttribute(&objArrayControls,"");
 	int i, idx, tmpcolor;
 	aref arControl;
@@ -1830,8 +1828,8 @@ void procFTUpdate()
 {
 	string nodName = GetEventData();
 	if(nodName!="CONTROLSWINDOW") return;
-	int grNum = GetEventData(); // РїРµСЂРІР°СЏ РіСЂСѓРїРїР° РІ РёР·РјРµРЅРµРЅРёСЏС…
-	int strNum = GetEventData(); // РїРµСЂРІР°СЏ СЃС‚СЂРѕРєР° РІ РёР·РјРµРЅРµРЅРёСЏС…
+	int grNum = GetEventData(); // первая группа в изменениях
+	int strNum = GetEventData(); // первая строка в изменениях
 
 	object objPos,obj;
 	DeleteAttribute(&objPos,"");
@@ -1911,7 +1909,7 @@ string GetControlNameFromIdx(int idx)
 void procFTActivate()
 {
 	string nodName = GetEventData();
-	curCntrlIdx = GetEventData(); // РЅРѕРјРµСЂ С‚РµРєСЃС‚Р°
+	curCntrlIdx = GetEventData(); // номер текста
 	if(nodName!="CONTROLSWINDOW" && nodName!="SETTINGS_WINDOW") return;
 	if(nodName=="SETTINGS_WINDOW") { ShowSettingsDescribe(GetSettingsName(curCntrlIdx), curCntrlIdx); return; }
 
@@ -2329,27 +2327,27 @@ void SetNewLanguageView()
 	if(GetSelectable("B_LANGUAGES")) GameInterface.strings.GameOptionTitle = XI_ConvertString("Changeinterface");
 	else GameInterface.strings.GameOptionTitle = XI_ConvertString("Available Languages");//MAXIMUS
 	CreateExitString(); // KK//MAXIMUS
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_VIDEO",0,XI_ConvertString("Video Settings"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_SAILING",0,XI_ConvertString("Sailing Mode"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_SOUNDS",0,XI_ConvertString("Sounds"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CAMERA",0,XI_ConvertString("Camera Mode"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CONTROLS",0,XI_ConvertString("Controls"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_DIFFICULTY",0,XI_ConvertString("Difficulty"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_GAMEOPTION",0,XI_ConvertString("Changeinterface"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_BUILDSETTINGS",0,XI_ConvertString("BuildSettings"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NEWINTERFACE",0,XI_ConvertString("Newlook"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_OLDINTERFACE",0,XI_ConvertString("Oldlook"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NEWICONS",0,XI_ConvertString("NewIcons"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_OLDICONS",0,XI_ConvertString("OldIcons"));
-	/*SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ENGLISH",0,XI_ConvertString("IntEnglish"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_RUSSIAN",0,XI_ConvertString("IntRussian"));//MAXIMUS
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FRENCH",0,XI_ConvertString("IntFrench"));//MAXIMUS
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_SPANISH",0,XI_ConvertString("IntSpanish"));//MAXIMUS
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_POLISH",0,XI_ConvertString("IntPolish"));*///MAXIMUS
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_LANGUAGES",0,XI_ConvertString("IntLanguages"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ANION",0,XI_ConvertString("AniOn"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ANIOFF",0,XI_ConvertString("AniOff"));
-//	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ADDITIONAL",0,XI_ConvertString("IntAdditional")); // PB
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_VIDEO",0,"#"+XI_ConvertString("Video Settings"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_SAILING",0,"#"+XI_ConvertString("Sailing Mode"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_SOUNDS",0,"#"+XI_ConvertString("Sounds"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CAMERA",0,"#"+XI_ConvertString("Camera Mode"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_CONTROLS",0,"#"+XI_ConvertString("Controls"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_DIFFICULTY",0,"#"+XI_ConvertString("Difficulty"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_GAMEOPTION",0,"#"+XI_ConvertString("Changeinterface"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"MB_BUILDSETTINGS",0,"#"+XI_ConvertString("BuildSettings"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NEWINTERFACE",0,"#"+XI_ConvertString("Newlook"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_OLDINTERFACE",0,"#"+XI_ConvertString("Oldlook"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NEWICONS",0,"#"+XI_ConvertString("NewIcons"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_OLDICONS",0,"#"+XI_ConvertString("OldIcons"));
+	/*SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ENGLISH",0,"#"+XI_ConvertString("IntEnglish"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_RUSSIAN",0,"#"+XI_ConvertString("IntRussian"));//MAXIMUS
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FRENCH",0,"#"+XI_ConvertString("IntFrench"));//MAXIMUS
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_SPANISH",0,"#"+XI_ConvertString("IntSpanish"));//MAXIMUS
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_POLISH",0,"#"+XI_ConvertString("IntPolish"));*///MAXIMUS
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_LANGUAGES",0,"#"+XI_ConvertString("IntLanguages"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ANION",0,"#"+XI_ConvertString("AniOn"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ANIOFF",0,"#"+XI_ConvertString("AniOff"));
+//	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ADDITIONAL",0,"#"+XI_ConvertString("IntAdditional")); // PB
 	GameInterface.strings.CurrentLanguage = XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedInterfaceLanguage)) + " | " + XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedKeyboardLayout)); // KK
 	DisplayInterfaceStatus();
 }
@@ -2409,7 +2407,7 @@ void AdditionalHide()
 	GameInterface.pictures.igood10.tex = -1;
 	GameInterface.pictures.igood11.pic = -1;
 	GameInterface.pictures.igood11.tex = -1;
-	
+
 //	CreateString(true,"Languages",XI_ConvertString("Available Languages"),FONT_NORMAL,COLOR_NORMAL,320,150,SCRIPT_ALIGN_CENTER,1.3);
 	GameInterface.strings.GameOptionTitle = XI_ConvertString("Available Languages");
 	SetNodeUsing("ADDITIONAL_RECT",true);
@@ -2439,12 +2437,12 @@ void AdditionalHide()
 	if(!bInterfaceSpa) SetSelectable("B_SPANISH",FindLocalLanguage("spanish"));
 	if(!bInterfacePol) SetSelectable("B_POLISH",FindLocalLanguage("polish"));*/ // KK
 	SetNodeUsing("REINITLANGUAGE",true);//MAXIMUS
-	/*SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ENGLISH",0,XI_ConvertString("IntEnglish")); // KK
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_RUSSIAN",0,XI_ConvertString("IntRussian"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FRENCH",0,XI_ConvertString("IntFrench"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_GERMAN",0,XI_ConvertString("IntGerman"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_SPANISH",0,XI_ConvertString("IntSpanish"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_POLISH",0,XI_ConvertString("IntPolish"));*/ // KK
+	/*SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_ENGLISH",0,"#"+XI_ConvertString("IntEnglish")); // KK
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_RUSSIAN",0,"#"+XI_ConvertString("IntRussian"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_FRENCH",0,"#"+XI_ConvertString("IntFrench"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_GERMAN",0,"#"+XI_ConvertString("IntGerman"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_SPANISH",0,"#"+XI_ConvertString("IntSpanish"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_POLISH",0,"#"+XI_ConvertString("IntPolish"));*/ // KK
 	//DisplayInterfaceStatus();
 }
 
@@ -2589,11 +2587,11 @@ void DisplayInterfaceStatus()
 	else interfacestatus = 2;
 	switch(interfacestatus)
 	{
-		case "1":		
+		case "1":
 			CreateImage("InterfacePic","icons","complete",194,130,221,157);
-			SetNewPicture("INTERFACE", "interfaces\background\brown.tga");	
+			SetNewPicture("INTERFACE", "interfaces\background\brown.tga");
 		break;
-		case "2":		
+		case "2":
 			CreateImage("InterfacePic","icons","complete",194,165,224,192);
 			SetNewPicture("INTERFACE", "interfaces\background\blue.tga");
 		break;
@@ -2603,7 +2601,7 @@ void DisplayInterfaceStatus()
 	else iconstatus = 2;
 	switch(iconstatus)
 	{
-		case "1":		
+		case "1":
 			CreateImage("IconPic","icons","complete",554,130,581,157);
 
 			CreateImage("igood0","GOODS_NEW","Bombs",387,201,447,261);
@@ -2624,7 +2622,7 @@ void DisplayInterfaceStatus()
 			CreateImage("igood10","GOODS_NEW","Mahogany",517,329,577,389);
 			CreateImage("igood11","GOODS_NEW","Silk",517,393,577,453);
 		break;
-		case "2":		
+		case "2":
 			CreateImage("IconPic","icons","complete",554,165,584,192);
 
 			CreateImage("igood0","GOODS","Bombs",387,201,447,261);
@@ -2670,9 +2668,9 @@ void SetSettingsList()
 	SendMessage(&GameInterface,"ll", MSG_INTERFACE_LOCK_NODE, 0);
 	CreateString(false,"BuildSettingsTitle",XI_ConvertString("BuildSettingsTitle"),FONT_NORMAL,COLOR_YELLOW_LIGHT,320,37,SCRIPT_ALIGN_CENTER,1.3);
 	CreateString(false,"BuildSettingsDescr",XI_ConvertString("BuildSettingsDescr"),FONT_NORMAL,COLOR_RED_LIGHT,320,74,SCRIPT_ALIGN_CENTER,1.0);
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_OK_BUTTON",0,XI_ConvertString("Ok"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_CANCEL_BUTTON",0,XI_ConvertString("Cancel"));
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_DEFAULT_BUTTON",0,XI_ConvertString("Restore Default"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_OK_BUTTON",0,"#"+XI_ConvertString("Ok"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_CANCEL_BUTTON",0,"#"+XI_ConvertString("Cancel"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_DEFAULT_BUTTON",0,"#"+XI_ConvertString("Restore Default"));
 	bKeyboardEnabled = false;
 
 	SetNodeUsing("SETTINGS_DESCRIBEWINDOW",false);
@@ -2776,7 +2774,7 @@ void ShowSettingsDescribe(string settingName, int textNum)
 		SendMessage(&GameInterface,"lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_NAME",0,
 			"SettingName", LanguageConvertString(tmpLangFileID,settingName), FONT_NORMAL,
 			320,108, COLOR_NORMAL,0, SCRIPT_ALIGN_CENTER, true, 1.5, 420);
-	
+
 		SetNodeUsing("SETTINGS_DESCRIBEWINDOW2",true);
 		SetFormatedText("SETTINGS_DESCRIBEWINDOW2",LanguageConvertString(tmpLangFileID,settingName+"info"));
 		SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_DESCRIBEWINDOW2", 5);
@@ -2808,11 +2806,11 @@ void ShowSettingsDescribe(string settingName, int textNum)
 				SetNodeUsing(nName,true);
 				string translString = LanguageConvertString(tmpLangFileID,iName);
 				if(HasSubStr(translString,"#")) translString = strcut(translString,1,strlen(translString)-1);
-				
+
 				if(strlen(LanguageConvertString(tmpLangFileID,iName))<=85 && !HasSubStr(LanguageConvertString(tmpLangFileID,iName),"#"))
 				{
 					SendMessage(&GameInterface,"lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE,nName,0,sName, translString, FONT_NORMAL,93,sti(258+posY)+2, COLOR_NORMAL,0, SCRIPT_ALIGN_LEFT, true, 0.8, 480);
-					SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,nName, 5);
+					//SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,nName, 5);
 				}
 				else
 				{
@@ -3009,7 +3007,6 @@ void CreateCheckBoxes(string optName, int chkCount, int startBox)
 		startY = endY+8;
 		endY = endY+30;
 	}
-
 	UpdateString(GameInterface.Buildsettings.(optName));
 }
 
@@ -3041,6 +3038,7 @@ void HideCheckBoxes(int boxCount)
 void CreateStringChanger(string optName)
 {
 	string tmpStr = GameInterface.Buildsettings.(optName);
+
 	SetNodeUsing("SETTINGS_NUMCHANGE",true);
 	SetNodeUsing("VALUE_CHANGER",true);
 	SetNodeUsing("VALUE_RECT",true);
@@ -3063,6 +3061,7 @@ void CreateIntChanger(string optName, int iStep, bool showPercent)
 {
 	string tmpStr = GameInterface.Buildsettings.(optName);
 	if(showPercent) tmpStr += "%";
+
 	SetNodeUsing("SETTINGS_NUMCHANGE",true);
 	SetNodeUsing("VALUE_RECT",true);
 	SetNodeUsing("VALUE_CHANGER",true);
@@ -3085,6 +3084,7 @@ void CreateFloatChanger(string optName, float fStep, bool showPercent)
 {
 	string tmpStr = GameInterface.Buildsettings.(optName);
 	if(showPercent) tmpStr += "%";
+
 	SetNodeUsing("SETTINGS_NUMCHANGE",true);
 	SetNodeUsing("VALUE_RECT",true);
 	SetNodeUsing("VALUE_CHANGER",true);
@@ -3148,7 +3148,7 @@ void CreateScrollCheckers(string optName, string iName, int chkCount, string mId
 		if(i==startBox)
 		{
 			curColor = COLOR_NORMAL;
-			bComplete = true; 
+			bComplete = true;
 			if(mId!="")
 			{
 				curModel = mId;
@@ -3170,7 +3170,7 @@ void CreateScrollCheckers(string optName, string iName, int chkCount, string mId
 		if(i>=6 && i<9) { curSx = startX+260; curEx = endX+260; if(!b2) { b2 = true; curSy = startY; curEy = endY; } }
 		if(i>=9 && i<12) { curSx = startX+390; curEx = endX+390; if(!b3) { b3 = true; curSy = startY; curEy = endY; } }
 		if(optName=="new_ship") curModel = XI_ConvertString(curModel);
-		CreateChecker("CHECKER_NAME"+sti(i+1), "SCROLL_BUTTON"+sti(i+1), 
+		CreateChecker("CHECKER_NAME"+sti(i+1), "SCROLL_BUTTON"+sti(i+1),
 			"CheckerName"+sti(i+1), curModel, attrName1, curColor, curSx, curSy, curEx, curEy, bComplete);
 		curSy = curEy+8;
 		curEy = curEy+30;
@@ -3191,7 +3191,7 @@ void CreateChecker(string nName, string btName, string sName, string sData, stri
 	if(nName!="")
 	{
 		SetNodeUsing(nName,true);
-		SendMessage(&GameInterface,"lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, nName, 0, sName, sData, 
+		SendMessage(&GameInterface,"lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, nName, 0, sName, sData,
 			FONT_NORMAL, sti(startX+32), sti(startY+5), nameColor, 0, SCRIPT_ALIGN_LEFT, true, 0.8, 420);
 	}
 
@@ -3446,7 +3446,7 @@ string GetNameFromScroll(string optName, int scrollNum)
 int GetModelFaceId(string curModel)
 {
 	ref model;
-	for(int i=0; i<MODEL_HIGH; i++) 
+	for(int i=0; i<MODEL_HIGH; i++)
 	{
 		makeref(model,Models[i]);
 		if(CheckAttribute(model,"id") && model.id==curModel)
@@ -3464,7 +3464,7 @@ void UpdateString(string tmpStr)
 {
 	if(sti(GameInterface.Buildsettings.bPersent)) tmpStr += "%";
 	SendMessage(&GameInterface,"lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_NUMCHANGE",0,"OptionValue", tmpStr, FONT_NORMAL,320,203, COLOR_MONEY,0, SCRIPT_ALIGN_CENTER, true, 1.2, 480);
-	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_NUMCHANGE", 5);
+	//SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"SETTINGS_NUMCHANGE", 5);
 }
 
 void ProcessChangeLeft()
@@ -3777,13 +3777,13 @@ void KAM_ChangeNotification()
 	{
 		SetShipCap(false);
 		GameInterface.strings.NotificationState = PCharName + " " + LanguageConvertString(tmpLangFileID,"will be notified of all sightings") + ".";
-		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NOTIFICATION",0,GameInterface.strings.NotificationState);
+		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NOTIFICATION",0,"#"+GameInterface.strings.NotificationState);
 	}
 	else
 	{
 		SetShipCap(true);
 		GameInterface.strings.NotificationState = PCharName + " " + LanguageConvertString(tmpLangFileID,"won't be notified of too-powerful sightings") + ".";
-		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NOTIFICATION",0,GameInterface.strings.NotificationState);
+		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NOTIFICATION",0,"#"+GameInterface.strings.NotificationState);
 	}
 	LanguageCloseFile(tmpLangFileID);
 }
@@ -3807,12 +3807,12 @@ void KAM_DisplayNotification()
 	if (GetShipCap() == true)
 	{
 		GameInterface.strings.NotificationState = PCharName + " " + LanguageConvertString(tmpLangFileID,"won't be notified of too-powerful sightings") + ".";
-		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NOTIFICATION",0,GameInterface.strings.NotificationState);
+		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NOTIFICATION",0,"#"+GameInterface.strings.NotificationState);
 	}
 	else
 	{
 		GameInterface.strings.NotificationState = PCharName + " " + LanguageConvertString(tmpLangFileID,"will be notified of all sightings") + ".";
-		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NOTIFICATION",0,GameInterface.strings.NotificationState);
+		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"B_NOTIFICATION",0,"#"+GameInterface.strings.NotificationState);
 	}
 	LanguageCloseFile(tmpLangFileID);
 }
@@ -3841,9 +3841,9 @@ void DoMusicSchemeChangeLeft()
 	while (true)
 	{
 		music_scheme--;
-//		if (music_scheme < 0) music_scheme = 5;
+		if (music_scheme < 0) music_scheme = 5;
 		if (music_scheme < 0) music_scheme = GetMusicSchemeCount()-1;
-		if (music_scheme == 0 || CheckDirectory("RESOURCE\Sounds\MUSIC\" + GetMusicSchemeResDir(), "*.ogg") > 0) break;
+		if (music_scheme == 0 || CheckDirectory(GetResourceDirectory() + "Sounds\MUSIC\" + GetMusicSchemeResDir(), "*.ogg") > 0) break;
 	}
 	GameInterface.Strings.MusicScheme = GetMusicSchemeName(music_scheme);
 }
@@ -3853,9 +3853,9 @@ void DoMusicSchemeChangeRight()
 	while (true)
 	{
 		music_scheme++;
-//		if (music_scheme > 5) music_scheme = 0;
+		if (music_scheme > 5) music_scheme = 0;
 		if (music_scheme >= GetMusicSchemeCount()) music_scheme = 0;
-		if (music_scheme == 0 || CheckDirectory("RESOURCE\Sounds\MUSIC\" + GetMusicSchemeResDir(), "*.ogg") > 0) break;
+		if (music_scheme == 0 || CheckDirectory(GetResourceDirectory() + "Sounds\MUSIC\" + GetMusicSchemeResDir(), "*.ogg") > 0) break;
 	}
 	GameInterface.Strings.MusicScheme = GetMusicSchemeName(music_scheme);
 }
@@ -3895,7 +3895,7 @@ void ProcessLanguageRight()
 	// MAXIMUS: changed it, because we don't need changer for nonexistent translation and interfaces. Only presented languages will be shown
 	/*if (LanguageQty == 0 || GetInterfaceLanguageName(iSelectedInterfaceLanguage + 1) != "English") if(FindLocalLanguage(GetInterfaceLanguageName(iSelectedInterfaceLanguage + 1))) { iSelectedInterfaceLanguage++; }*/
 // <-- KK
-	GameInterface.strings.LanguagesList = XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedInterfaceLanguage));				
+	GameInterface.strings.LanguagesList = XI_ConvertString("Int" + GetInterfaceLanguageName(iSelectedInterfaceLanguage));
 }
 
 void ProcessKeyboardLayoutLeft()
@@ -4130,7 +4130,7 @@ string NextUp(string curNod)
 	case "MB_BUILDSETTINGS":
 		if(GetSelectable("MB_DIFFICULTY")==true) return "MB_DIFFICULTY";
 		else return NextUp("MB_DIFFICULTY");
-		break;	
+		break;
 	case "SETTINGS_WINDOW":
 		if(GetSelectable("SETTINGS_WINDOW")==true) return "SETTINGS_WINDOW";
 		else return NextUp("SETTINGS_WINDOW");

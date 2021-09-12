@@ -1735,10 +1735,10 @@ bool LoadQuestBookData(string qname)
 	}
 	//Changes for multiple istances of same quest by Levis <--
 	string language = LanguageGetLanguage();
-	string dirname = "RESOURCE\INI\TEXTS\" + language + "\" + GetStorylinePath(FindCurrentStoryline()) + "QUESTBOOK\";
+	string dirname = GetResourceDirectory() + "INI\TEXTS\" + language + "\" + GetStorylinePath(FindCurrentStoryline()) + "QUESTBOOK\";
 	string filename = qname + ".txt";
 	if (FindFile(dirname, "*.txt", filename) == "") {
-		dirname = "RESOURCE\INI\TEXTS\" + language + "\QUESTBOOK\";
+		dirname = GetResourceDirectory() + "INI\TEXTS\" + language + "\QUESTBOOK\";
 		if (FindFile(dirname, "*.txt", filename) == "") return false;
 	}
 	filename = dirname + filename;

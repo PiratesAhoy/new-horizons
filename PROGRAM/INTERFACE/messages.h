@@ -45,7 +45,7 @@
 #define MSG_INTERFACE_FILENAME2DATASTR		45055
 #define MSG_INTERFACE_GETTIME				45056
 #define MSG_INTERFACE_CHECK_AGAIN			45057
-#define MSG_INTERFACE_IS_READY_LOAD			45058 // from 1.03 patch. Dunno if it works with our DLLs
+#define MSG_INTERFACE_IS_READY_LOAD			45058
 #define MSG_INTERFACE_LOADPICTUREFROMSAVE	45059
 #define MSG_INTERFACE_GETPICTUREFROMPICTURE	45060
 #define MSG_INTERFACE_SET_TOOLTIP			45061
@@ -93,4 +93,6 @@
 #define MSG_SET_VIDEO_PLAY		49000	//"s" video file name
 #define MSG_SET_VIDEO_FADE		49001	//"" Start Fade to Black
 #define EVENT_END_VIDEO			"EndVideoPlay"
+//Boyer add
+#define MSG_SET_VIDEO_PLAY_RESTRICT		49050	//"s" video file name
 //============================================================================================

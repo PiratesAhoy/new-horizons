@@ -45,7 +45,7 @@ string GetRandomShipNameForNation(int nat)
 				makeref(rMassiveOfNames, sRndShpSwName);
 			}
 			else{
-				makeref(rMassiveOfNames, sRndShpAmName); 
+				makeref(rMassiveOfNames, sRndShpAmName);
 			}
 		break;
 		//case AMERICA:  makeref(rMassiveOfNames, sRndShpAmName); break;
@@ -489,7 +489,7 @@ string GetShipDecksTexture(ref chref)
 	string deck = GetLocalShipAttrib(ship, &ShipsTypes[st], "DeckTexturesDir");
 	if (deck != "") {
 		path = "Locations\decks\" + GetLocalShipAttrib(ship, &ShipsTypes[st], "DeckTexturesDir");
-		if (CheckDirectory("RESOURCE\Textures\" + path, "*") == 0) path = "";
+		if (CheckDirectory("Textures\" + path, "*") == 0) path = "";
 	}
 	return path;
 }
@@ -829,8 +829,8 @@ void CrimsonBlood_ModifyShip()
 	refShip.BigPicTex		= 4;
 	refShip.BigPicTexName	= "SHIPS4"; // Armada
 // KK -->
-	refShip.BI.Tex = 10;
-	refShip.BI.Pic = 3;
+	refShip.BI.Tex = 16; //10;
+	refShip.BI.Pic = 146; //3;
 	refShip.QDeck = "ShipDeck1";
 	refShip.CannonsDeck = 1;
 	refShip.CargoHold = 1;
@@ -843,7 +843,7 @@ void CrimsonBlood_ModifyShip()
 	refShip.WaterLine = 0.2;
 	refShip.SpeedDependWeight = 0.3;
 	refShip.SubSeaDependWeight = 0.55;
-	
+
 	refShip.GeraldSails.rey_b2	= 1;
 	refShip.GeraldSails.rey_b3	= 1;
 

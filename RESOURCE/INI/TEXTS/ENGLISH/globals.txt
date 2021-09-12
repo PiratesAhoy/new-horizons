@@ -55,7 +55,7 @@ Havana{Havana}
 Marigot{Marigot}
 Philipsburg{Philipsburg}
 
-OFFIC_TYPE_BOATSWAIN {boatswain}
+OFFIC_TYPE_BOATSWAIN	 {boatswain}
 OFFIC_TYPE_CANNONEER {cannoneer}
 OFFIC_TYPE_QMASTER {quartermaster}
 OFFIC_TYPE_NAVIGATOR {navigator}

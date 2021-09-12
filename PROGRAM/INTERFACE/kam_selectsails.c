@@ -1,4 +1,4 @@
-ref PChar;
+//ref PChar;
 int PCharNation;
 int ListNum;
 int ListMax;
@@ -249,7 +249,7 @@ void FirstUpdate()
 		break;
 	}
 
-	SetSelectable("USETHESESAILS_BUTTON",true);			
+	SetSelectable("USETHESESAILS_BUTTON",true);
 	UpdateDisplay();
 }
 
@@ -456,7 +456,7 @@ void UpdateDisplay()
 		for (ListNum = SAILSTYPE_SPECIAL_COUNT - 1; ListNum > 0 ; ListNum--) {
 			if (SpecialSailsNormal[ListNum] == FileStr[4] && SpecialSailsEmblem[ListNum] == FileStr[1]) break;
 		}
-		
+
 		if (FileStr[1] == "") FileStr[1] = SpecialSailsEmblem[0];
 		if (FileStr[4] == "") FileStr[4] = SpecialSailsNormal[0];
 
@@ -467,7 +467,7 @@ void UpdateDisplay()
 
 	SetFormatedText("TEXTWINDOW", SailDesc);
 	GameInterface.Strings.SailsFnames = FileStr[1] + FileStr[2] + FileStr[3] + ".tx; " + FileStr[4] + ".tx.";
-	if (FindFile("RESOURCE\Textures\Ships\Sails", "*.tga.tx", FileStr[1] + FileStr[2] + FileStr[3] + ".tx") == "") {
+	if (FindFile(GetResourceDirectory() + "Textures\Ships\Sails", "*.tga.tx", FileStr[1] + FileStr[2] + FileStr[3] + ".tx") == "") {
 		GameInterface.Strings.SailsFnames = FileStr[4] + ".tx; " + FileStr[4] + ".tx.";
 		FileStr[1] = "Ships\Sails\" + FileStr[4];
 		FileStr[2] = "";
@@ -580,7 +580,7 @@ void ScrollSails(bool ScrollRight)
 	if (LowClassShip) FileStr[1] = FileStr[4];
 	SetFormatedText("TEXTWINDOW",SailDesc);
 	GameInterface.Strings.SailsFnames = FileStr[1] + FileStr[2] + FileStr[3] + ".tx; " + FileStr[4] + ".tx.";
-	if (FindFile("RESOURCE\Textures\Ships\Sails", "*.tga.tx", FileStr[1] + FileStr[2] + FileStr[3] + ".tx") == "") {
+	if (FindFile(GetResourceDirectory() + "Textures\Ships\Sails", "*.tga.tx", FileStr[1] + FileStr[2] + FileStr[3] + ".tx") == "") {
 		GameInterface.Strings.SailsFnames = FileStr[4] + ".tx; " + FileStr[4] + ".tx.";
 		FileStr[1] = "Ships\Sails\" + FileStr[4];
 		FileStr[2] = "";
@@ -619,7 +619,7 @@ void SetListMax()
 								case SAILSCOLOUR_RED:		ListMax = QTY_LOGOSAILS_WHOLE_RED;	break;
 								case SAILSCOLOUR_BLACK:		ListMax = QTY_LOGOSAILS_WHOLE_BLACK;	break;
 								case SAILSCOLOUR_TAN:		ListMax = QTY_LOGOSAILS_WHOLE_TAN;	break;
-							}	
+							}
 						break;
 
 						case SAILSMODEL_TORN:

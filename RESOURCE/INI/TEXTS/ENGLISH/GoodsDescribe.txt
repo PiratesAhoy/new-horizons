@@ -50,7 +50,7 @@ Used to make bread and brew various alcoholic beverages.
 Ebony {Ebony}
 Ebony_descr
 {
-A rare and valuable type of blackwood, of particular hardness and density.
+A rare and valuable type of wood.
 }
 
 Chocolate {Chocolate}
@@ -105,7 +105,7 @@ Coffee beans are used to brew a bitter tonic drink.
 Mahogany {Mahogany}
 Mahogany_descr
 {
-A precious type of wood with a characteristic reddish color.
+A precious type of wood.
 }
 
 

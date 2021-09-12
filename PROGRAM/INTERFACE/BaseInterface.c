@@ -16,6 +16,7 @@ void InitBaseInterfaces()
 	{
 		Event("EvStoreDayUpdate");
 	}
+	GameInterface.noresize = 1;
 }
 
 void InitBaseInterfaces_main()

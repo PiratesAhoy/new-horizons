@@ -47,7 +47,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Falaise_de_fleur_port_01";
 		rIsland.reload.l1.emerge = "sea";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 15;
+		rIsland.reload.l1.pic = 27;
+		rIsland.reload.l1.selpic = 31;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -56,7 +57,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Falaise_de_Fleur_shore";
 		rIsland.reload.l2.emerge = "reload1";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 21;
+		rIsland.reload.l2.pic = 41;
+		rIsland.reload.l2.selpic = 45;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -69,15 +71,16 @@ void InitIslands()
 		rIsland.reload.l3.commander = "FalaiseDeFleur Commander"; // KK
 		rIsland.reload.l3.fort.model = "FalaiseDeFleur_fort1";
 		rIsland.reload.l3.fort.locators = "FalaiseDeFleur_fort1_locators";
-		rIsland.reload.l3.pic = 22;
+		rIsland.reload.l3.pic = 42;
+		rIsland.reload.l3.selpic = 46;
 		rIsland.reload.l3.tex = "t1";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
@@ -116,7 +119,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "REDMOND_PORT";
 		rIsland.reload.l1.emerge = "sea_1";
 		rIsland.reload.l1.radius = 600.0;
-		rIsland.reload.l1.pic = 7;
+		rIsland.reload.l1.pic = 11;
+		rIsland.reload.l1.selpic = 15;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -128,6 +132,7 @@ void InitIslands()
 			rIsland.reload.l2.emerge = "reload1";
 			rIsland.reload.l2.radius = 200.0;
 			rIsland.reload.l2.pic = 10;
+			rIsland.reload.l2.selpic = 14; //Boyer note: not sure what the new .pic and .selpic should be
 			rIsland.reload.l2.tex = "t1";
 			rIsland.reload.l2.enable = false;      //start disabled
 			rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
@@ -137,19 +142,21 @@ void InitIslands()
 			rIsland.reload.l3.go = "wr_cave_shore";
 			rIsland.reload.l3.emerge = "reload11";
 			rIsland.reload.l3.radius = 200.0;
-			rIsland.reload.l3.pic = 2;
+			rIsland.reload.l3.pic = 1;
+			rIsland.reload.l3.selpic = 5; //Boyer note: not sure what the new .pic and .selpic should be
 			rIsland.reload.l3.tex = "t2";
 			rIsland.reload.l3.enable = false;      //start disabled
 			rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 		}
 		else
 		{
-			rIsland.reload.l2.label = "Devil's Throat";
+            rIsland.reload.l2.label = "Devil's Throat";
 			rIsland.reload.l2.name = "reload_1";
 			rIsland.reload.l2.go = "Redmond_Shore_01";
 			rIsland.reload.l2.emerge = "reload1";
 			rIsland.reload.l2.radius = 200.0;
-			rIsland.reload.l2.pic = 12;
+			rIsland.reload.l2.pic = 8;
+			rIsland.reload.l2.selpic = 12;
 			rIsland.reload.l2.tex = "t2";
 			rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -158,9 +165,11 @@ void InitIslands()
 			rIsland.reload.l3.go = "Redmond_Shore_02";
 			rIsland.reload.l3.emerge = "reload1";
 			rIsland.reload.l3.radius = 200.0;
-			rIsland.reload.l3.pic = 13;
+			rIsland.reload.l3.pic = 9;
+			rIsland.reload.l3.selpic = 13;
 			rIsland.reload.l3.tex = "t2";
 			rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
+			
 		}
 
 		rIsland.reload.l4.label = "#stown_name# Fort"; // KK
@@ -172,15 +181,16 @@ void InitIslands()
 		rIsland.reload.l4.radius = 250.0;
 		rIsland.reload.l4.fort.model = "Redmond_fort1";
 		rIsland.reload.l4.fort.locators = "Redmond_fort1_locators";
-		rIsland.reload.l4.pic = 22;
+		rIsland.reload.l4.pic = 42;
+		rIsland.reload.l4.selpic = 46;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
@@ -216,7 +226,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Muelle_port";
 		rIsland.reload.l1.emerge = "Reload3";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 8;
+		rIsland.reload.l1.pic = 32;
+		rIsland.reload.l1.selpic = 36;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.ships.l0.ay = 2.5;			// LDH fix until the locators.gm file can be updated - 24Apr09
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
@@ -227,7 +238,8 @@ void InitIslands()
 		rIsland.reload.l2.emerge = "see";
 		rIsland.reload.l2.radius = 200.0;
 		rIsland.reload.l2.enable = false;
-		rIsland.reload.l2.pic = 14;
+		rIsland.reload.l2.pic = 26;
+		rIsland.reload.l2.selpic = 30;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -236,7 +248,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Muelle_shore";
 		rIsland.reload.l3.emerge = "reload2";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 15;
+		rIsland.reload.l3.pic = 27;
+		rIsland.reload.l3.selpic = 31;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -249,15 +262,16 @@ void InitIslands()
 		rIsland.reload.l4.radius = 250.0;
 		rIsland.reload.l4.fort.model = "IslaMuelle_fort1";
 		rIsland.reload.l4.fort.locators = "IslaMuelle_fort1_locators";
-		rIsland.reload.l4.pic = 22;
+		rIsland.reload.l4.pic = 42;
+		rIsland.reload.l4.selpic = 46;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_EBONY;
@@ -298,7 +312,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Oxbay_port";
 		rIsland.reload.l1.emerge = "reload2";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 16;
+		rIsland.reload.l1.pic = 32;
+		rIsland.reload.l1.selpic = 36;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -307,9 +322,10 @@ void InitIslands()
 		rIsland.reload.l2.go = "Greenford_port";
 		rIsland.reload.l2.emerge = "reload1";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 17;
+		rIsland.reload.l2.pic = 33;
+		rIsland.reload.l2.selpic = 37;
 		rIsland.reload.l2.tex = "t1";
-        rIsland.reload.l2.ships.l0.ay = 3.4;        // LDH 11Dec16
+		rIsland.reload.l2.ships.l0.ay = 3.4;        // LDH 11Dec16
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l3.label = "Gray Rock Bay";
@@ -317,7 +333,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Oxbay_shore_02";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 300.0;
-		rIsland.reload.l3.pic = 22;
+		rIsland.reload.l3.pic = 42;
+		rIsland.reload.l3.selpic = 46;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -326,7 +343,8 @@ void InitIslands()
 		rIsland.reload.l4.go = "Oxbay_lighthouse";
 		rIsland.reload.l4.emerge = "reload3";
 		rIsland.reload.l4.radius = 200.0;
-		rIsland.reload.l4.pic = 23;
+		rIsland.reload.l4.pic = 43;
+		rIsland.reload.l4.selpic = 47;
 		rIsland.reload.l4.tex = "t2";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -335,7 +353,8 @@ void InitIslands()
 		rIsland.reload.l5.go = "Oxbay_Shore_01";
 		rIsland.reload.l5.emerge = "see";
 		rIsland.reload.l5.radius = 200.0;
-		rIsland.reload.l5.pic = 24;
+		rIsland.reload.l5.pic = 40;
+		rIsland.reload.l5.selpic = 44;
 		rIsland.reload.l5.tex = "t2";
 		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -348,7 +367,8 @@ void InitIslands()
 		rIsland.reload.l6.commander = "Greenford Commander"; // KK
 		rIsland.reload.l6.fort.model = "Oxbay_fort1";
 		rIsland.reload.l6.fort.locators = "Oxbay_fort1_locators";
-		rIsland.reload.l6.pic = 22;
+		rIsland.reload.l6.pic = 42;
+		rIsland.reload.l6.selpic = 46;
 		rIsland.reload.l6.tex = "t1";
 		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -361,15 +381,16 @@ void InitIslands()
 		rIsland.reload.l7.radius = 250.0;
 		rIsland.reload.l7.fort.model = "Oxbay_fort2";
 		rIsland.reload.l7.fort.locators = "Oxbay_fort2_locators";
-		rIsland.reload.l7.pic = 22;
+		rIsland.reload.l7.pic = 42;
+		rIsland.reload.l7.selpic = 46;
 		rIsland.reload.l7.tex = "t1";
 		rIsland.reload.l7.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_SANDAL;
@@ -408,9 +429,10 @@ void InitIslands()
 		rIsland.reload.l1.go = "Conceicao_port";
 		rIsland.reload.l1.emerge = "reload2";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 18;
+		rIsland.reload.l1.pic = 34;
+		rIsland.reload.l1.selpic = 38;
 		rIsland.reload.l1.tex = "t1";
-        rIsland.reload.l1.ships.l0.ay = -1.5;           // LDH 11Dec16
+		rIsland.reload.l1.ships.l0.ay = -1.5;           // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "Sunny Haven";
@@ -418,7 +440,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Conceicao_shore_01";
 		rIsland.reload.l2.emerge = "reload1";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 25;
+		rIsland.reload.l2.pic = 49;
+		rIsland.reload.l2.selpic = 53;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -427,7 +450,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Conceicao_shore_02";
 		rIsland.reload.l3.emerge = "see";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 26;
+		rIsland.reload.l3.pic = 50;
+		rIsland.reload.l3.selpic = 54;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -440,25 +464,27 @@ void InitIslands()
 		rIsland.reload.l4.commander = "Conceicao Commander"; // KK
 		rIsland.reload.l4.fort.locators = "Conceicao_fort1_locators";
 		rIsland.reload.l4.fort.model = "Conceicao_fort1";
-		rIsland.reload.l4.pic = 22;
+		rIsland.reload.l4.pic = 42;
+		rIsland.reload.l4.selpic = 46;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
-		
+
 		rIsland.reload.l5.label = "Linda Praia";
 		rIsland.reload.l5.name = "reload_4";
 		rIsland.reload.l5.go = "Conceicao_Shore_03";
 		rIsland.reload.l5.emerge = "see";
 		rIsland.reload.l5.radius = 200.0;
-		rIsland.reload.l5.pic = 26;
+		rIsland.reload.l5.pic = 50;
+		rIsland.reload.l5.selpic = 54; //Boyer note: Not sure what the .selpic should be
 		rIsland.reload.l5.tex = "t2";
-		rIsland.reload.l5.enable = false;		
-		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To		
+		rIsland.reload.l5.enable = false;
+		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
@@ -498,9 +524,10 @@ void InitIslands()
 		rIsland.reload.l1.go = "Douwesen_port";
 		rIsland.reload.l1.emerge = "reload2";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 19;
+		rIsland.reload.l1.pic = 35;
+		rIsland.reload.l1.selpic = 39;
 		rIsland.reload.l1.tex = "t1";
-        rIsland.reload.l1.ships.l0.ay = 2.7;        // LDH 11Dec16
+		rIsland.reload.l1.ships.l0.ay = 2.7;        // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "Palm Beach";
@@ -508,7 +535,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Douwesen_shore_01";
 		rIsland.reload.l2.emerge = "reload1";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 27;
+		rIsland.reload.l2.pic = 51;
+		rIsland.reload.l2.selpic = 55;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -517,7 +545,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Douwesen_shore_02";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 28;
+		rIsland.reload.l3.pic = 56;
+		rIsland.reload.l3.selpic = 60;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -530,15 +559,16 @@ void InitIslands()
 		rIsland.reload.l4.commander = "Douwesen Commander"; // KK
 		rIsland.reload.l4.fort.model = "Douwesen_fort1";
 		rIsland.reload.l4.fort.locators = "Douwesen_fort1_locators";
-		rIsland.reload.l4.pic = 22;
+		rIsland.reload.l4.pic = 42;
+		rIsland.reload.l4.selpic = 46;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_TOBACCO;
@@ -581,7 +611,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Charlestown_port";
 		rIsland.reload.l1.emerge = "reload1_back";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 9;
+		rIsland.reload.l1.pic = 17;
+		rIsland.reload.l1.selpic = 21;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.ships.l0.ay = 3.0;    // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
@@ -591,7 +622,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "QC_port";
 		rIsland.reload.l2.emerge = "reload1";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 10;
+		rIsland.reload.l2.pic = 18;
+		rIsland.reload.l2.selpic = 22;
 		rIsland.reload.l2.tex = "t1";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -600,7 +632,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "QC_Shore1";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 16;
+		rIsland.reload.l3.pic = 32;
+		rIsland.reload.l3.selpic = 36;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -613,15 +646,16 @@ void InitIslands()
 		rIsland.reload.l4.commander = "Charlestown Commander"; // KK
 		rIsland.reload.l4.fort.model = "QuebradasCostillas_Fort1";
 		rIsland.reload.l4.fort.locators = "QuebradasCostillas_Fort1_locators";
-		rIsland.reload.l4.pic = 22;
+		rIsland.reload.l4.pic = 42;
+		rIsland.reload.l4.selpic = 46;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_RUM;
@@ -664,11 +698,12 @@ void InitIslands()
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.enable = false;
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
-		rIsland.reload.l1.pic = 8;
+		rIsland.reload.l1.pic = 16;
+		rIsland.reload.l1.selpic = 20;
 		rIsland.reload.l1.tex = "t2";
 
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		AddIsland(q, rIsland, locator);
@@ -694,7 +729,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Cayman_port";
 		rIsland.reload.l1.emerge = "sea";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 6;
+		rIsland.reload.l1.pic = 10;
+		rIsland.reload.l1.selpic = 14;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.ships.l0.ay = 1.7;			// LDH fix until the locators.gm file can be updated - 19Apr09
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
@@ -704,7 +740,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Cayman_Shore_02";
 		rIsland.reload.l2.emerge = "see"; // KK
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 9;
+		rIsland.reload.l2.pic = 17;
+		rIsland.reload.l2.selpic = 21;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -713,7 +750,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Cayman_Shore_03";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 10;
+		rIsland.reload.l3.pic = 18;
+		rIsland.reload.l3.selpic = 22;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -722,7 +760,8 @@ void InitIslands()
 		rIsland.reload.l4.go = "Cayman_Shore_01";
 		rIsland.reload.l4.emerge = "reload1";
 		rIsland.reload.l4.radius = 200.0;
-		rIsland.reload.l4.pic = 11;
+		rIsland.reload.l4.pic = 19;
+		rIsland.reload.l4.selpic = 23;
 		rIsland.reload.l4.tex = "t2";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -735,7 +774,8 @@ void InitIslands()
 		rIsland.reload.l5.commander = "Grand Cayman Commander"; // KK
 		rIsland.reload.l5.fort.model = "Cayman_fort2";
 		rIsland.reload.l5.fort.locators = "Cayman_fort2_locators";
-		rIsland.reload.l5.pic = 22;
+		rIsland.reload.l5.pic = 42;
+		rIsland.reload.l5.selpic = 46;
 		rIsland.reload.l5.tex = "t1";
 		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -748,11 +788,11 @@ void InitIslands()
 //		rIsland.reload.l6.tex = "t2";
 //		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_SANDAL;
@@ -791,6 +831,7 @@ void InitIslands()
 		rIsland.reload.l1.emerge = "Reload2";
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 0;
+		rIsland.reload.l1.selpic = 4;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.ships.l0.ay = 1.7;		// LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
@@ -801,6 +842,7 @@ void InitIslands()
 		rIsland.reload.l2.emerge = "Reload1";
 		rIsland.reload.l2.radius = 200.0;
 		rIsland.reload.l2.pic = 1;
+		rIsland.reload.l2.selpic = 5;
 		rIsland.reload.l2.tex = "t1";
 		rIsland.reload.l2.ships.l0.ay = 0.7;		// LDH 11Dec16
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
@@ -811,6 +853,7 @@ void InitIslands()
 		rIsland.reload.l3.emerge = "Reload2";
 		rIsland.reload.l3.radius = 200.0;
 		rIsland.reload.l3.pic = 2;
+		rIsland.reload.l3.selpic = 6;
 		rIsland.reload.l3.tex = "t1";
 		rIsland.reload.l3.ships.l0.ay = -0.8;		// LDH 11Dec16
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
@@ -821,6 +864,7 @@ void InitIslands()
 		rIsland.reload.l4.emerge = "Reload1";
 		rIsland.reload.l4.radius = 200.0;
 		rIsland.reload.l4.pic = 0;
+		rIsland.reload.l4.selpic = 4;
 		rIsland.reload.l4.tex = "t2";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -830,6 +874,7 @@ void InitIslands()
 		rIsland.reload.l5.emerge = "Reload1";
 		rIsland.reload.l5.radius = 200.0;
 		rIsland.reload.l5.pic = 1;
+		rIsland.reload.l5.selpic = 5;
 		rIsland.reload.l5.tex = "t2";
 		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -839,6 +884,7 @@ void InitIslands()
 		rIsland.reload.l6.emerge = "see";
 		rIsland.reload.l6.radius = 200.0;
 		rIsland.reload.l6.pic = 2;
+		rIsland.reload.l6.selpic = 6;
 		rIsland.reload.l6.tex = "t2";
 		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -848,6 +894,7 @@ void InitIslands()
 		rIsland.reload.l7.emerge = "Reload1";
 		rIsland.reload.l7.radius = 200.0;
 		rIsland.reload.l7.pic = 3;
+		rIsland.reload.l7.selpic = 7;
 		rIsland.reload.l7.tex = "t2";
 		rIsland.reload.l7.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -860,7 +907,8 @@ void InitIslands()
 		rIsland.reload.l8.commander = "Port au Prince Commander"; // KK
 		rIsland.reload.l8.fort.model = "Gaity_fort2";
 		rIsland.reload.l8.fort.locators = "Gaity_fort2_locators";
-		rIsland.reload.l8.pic = 22;
+		rIsland.reload.l8.pic = 42;
+		rIsland.reload.l8.selpic = 46;
 		rIsland.reload.l8.tex = "t1";
 		rIsland.reload.l8.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -873,7 +921,8 @@ void InitIslands()
 		rIsland.reload.l9.commander = "Santo Domingo Commander"; // KK
 		rIsland.reload.l9.fort.model = "Gaity_fort3";
 		rIsland.reload.l9.fort.locators = "Gaity_fort3_locators";
-		rIsland.reload.l9.pic = 22;
+		rIsland.reload.l9.pic = 42;
+		rIsland.reload.l9.selpic = 46;
 		rIsland.reload.l9.tex = "t1";
 		rIsland.reload.l9.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -886,15 +935,16 @@ void InitIslands()
 		rIsland.reload.l10.commander = "Tortuga Commander"; // KK
 		rIsland.reload.l10.fort.model = "Gaity_fort1";
 		rIsland.reload.l10.fort.locators = "Gaity_fort1_locators";
-		rIsland.reload.l10.pic = 22;
+		rIsland.reload.l10.pic = 42;
+		rIsland.reload.l10.selpic = 46;
 		rIsland.reload.l10.tex = "t1";
 		rIsland.reload.l10.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_EBONY;
@@ -934,7 +984,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Santiago_port"; // KK
 		rIsland.reload.l1.emerge = "reload2"; // KK
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 23;
+		rIsland.reload.l1.pic = 43;
+		rIsland.reload.l1.selpic = 47;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -943,9 +994,10 @@ void InitIslands()
 		rIsland.reload.l2.go = "Cuba_Port";
 		rIsland.reload.l2.emerge = "sea_2";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 24;
+		rIsland.reload.l2.pic = 48;
+		rIsland.reload.l2.selpic = 52;
 		rIsland.reload.l2.tex = "t1";
-        rIsland.reload.l2.ships.l0.ay = 3.0;        // LDH 11Dec16
+		rIsland.reload.l2.ships.l0.ay = 3.0;        // LDH 11Dec16
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
 // KK -->
@@ -954,7 +1006,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Cuba_shore_01";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 21;
+		rIsland.reload.l3.pic = 41;
+		rIsland.reload.l3.selpic = 45;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -963,7 +1016,8 @@ void InitIslands()
 		rIsland.reload.l4.go = "Cuba_shore_02";
 		rIsland.reload.l4.emerge = "Reload2";
 		rIsland.reload.l4.radius = 200.0;
-		rIsland.reload.l4.pic = 15;
+		rIsland.reload.l4.pic = 27;
+		rIsland.reload.l4.selpic = 31;
 		rIsland.reload.l4.tex = "t2";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -972,7 +1026,8 @@ void InitIslands()
 		rIsland.reload.l5.go = "Cuba_Shore_06";
 		rIsland.reload.l5.emerge = "Reload1";
 		rIsland.reload.l5.radius = 200.0;
-		rIsland.reload.l5.pic = 10;
+		rIsland.reload.l5.pic = 18;
+		rIsland.reload.l5.selpic = 22;
 		rIsland.reload.l5.tex = "t1";
 		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -981,7 +1036,8 @@ void InitIslands()
 		rIsland.reload.l6.go = "Cuba_Shore_03";
 		rIsland.reload.l6.emerge = "Reload1";
 		rIsland.reload.l6.radius = 200.0;
-		rIsland.reload.l6.pic = 34;
+		rIsland.reload.l6.pic = 66;
+		rIsland.reload.l6.selpic = 70;
 		rIsland.reload.l6.tex = "t2";
 		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -990,9 +1046,10 @@ void InitIslands()
 		rIsland.reload.l7.go = "Cuba_Shore_05";
 		rIsland.reload.l7.emerge = "Reload1";
 		rIsland.reload.l7.radius = 200.0;
-		rIsland.reload.l7.pic = 27;
+		rIsland.reload.l7.pic = 51;
+		rIsland.reload.l7.selpic = 55;
 		rIsland.reload.l7.tex = "t2";
-//		rIsland.reload.l7.enable = false;
+		rIsland.reload.l7.enable = false;
 		rIsland.reload.l7.goto_enable = false; // PB
 
 		rIsland.reload.l8.label = "Playa de Sabana";
@@ -1000,7 +1057,8 @@ void InitIslands()
 		rIsland.reload.l8.go = "Cuba_Shore_04";
 		rIsland.reload.l8.emerge = "Reload1";
 		rIsland.reload.l8.radius = 200.0;
-		rIsland.reload.l8.pic = 35;
+		rIsland.reload.l8.pic = 67;
+		rIsland.reload.l8.selpic = 71;
 		rIsland.reload.l8.tex = "t2";
 		rIsland.reload.l8.goto_enable = false; // Screwface: Disable Sail-To
 // <-- KK
@@ -1014,7 +1072,8 @@ void InitIslands()
 		rIsland.reload.l9.commander = "Santiago Commander"; // KK
 		rIsland.reload.l9.fort.model = "Cuba_fort2";
 		rIsland.reload.l9.fort.locators = "Cuba_fort2_locators";
-		rIsland.reload.l9.pic = 22;
+		rIsland.reload.l9.pic = 42;
+		rIsland.reload.l9.selpic = 46;
 		rIsland.reload.l9.tex = "t1";
 		rIsland.reload.l9.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1027,15 +1086,16 @@ void InitIslands()
 		rIsland.reload.l10.commander = "Havana Commander"; // KK
 		rIsland.reload.l10.fort.model = "Cuba_fort1";
 		rIsland.reload.l10.fort.locators = "Cuba_fort1_locators";
-		rIsland.reload.l10.pic = 22;
+		rIsland.reload.l10.pic = 42;
+		rIsland.reload.l10.selpic = 46;
 		rIsland.reload.l10.tex = "t1";
 		rIsland.reload.l10.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_EBONY;
@@ -1072,7 +1132,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Guadeloupe_Port";
 		rIsland.reload.l1.emerge = "reload2_back";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 14;
+		rIsland.reload.l1.pic = 26;
+		rIsland.reload.l1.selpic = 30;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1081,7 +1142,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Guadeloupe_shore_01";
 		rIsland.reload.l2.emerge = "see";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 20;
+		rIsland.reload.l2.pic = 40;
+		rIsland.reload.l2.selpic = 44;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1094,15 +1156,16 @@ void InitIslands()
 		rIsland.reload.l3.commander = "Pointe a Pitre Commander"; // KK
 		rIsland.reload.l3.fort.model = "Guadelupa_fort1";
 		rIsland.reload.l3.fort.locators = "Guadelupa_fort1_locators";
-		rIsland.reload.l3.pic = 22;
+		rIsland.reload.l3.pic = 42;
+		rIsland.reload.l3.selpic = 46;
 		rIsland.reload.l3.tex = "t1";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
@@ -1141,9 +1204,10 @@ void InitIslands()
 		rIsland.reload.l1.go = "Philipsburg_port";
 		rIsland.reload.l1.emerge = "reload1";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 11;
+		rIsland.reload.l1.pic = 19;
+		rIsland.reload.l1.selpic = 23;
 		rIsland.reload.l1.tex = "t1";
-        rIsland.reload.l1.ships.l0.ay = 2.0;        // LDH 11Dec16
+		rIsland.reload.l1.ships.l0.ay = 2.0;        // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l2.label = "Fort Amsterdam";
@@ -1155,7 +1219,8 @@ void InitIslands()
 		rIsland.reload.l2.commander = "Philipsburg Commander"; // KK
 		rIsland.reload.l2.fort.model = "Sent_fort1";
 		rIsland.reload.l2.fort.locators = "Sent_fort1_locators";
-		rIsland.reload.l2.pic = 22;
+		rIsland.reload.l2.pic = 40;
+		rIsland.reload.l2.selpic = 44;
 		rIsland.reload.l2.tex = "t1";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1164,9 +1229,10 @@ void InitIslands()
 		rIsland.reload.l3.go = "Marigot_port";
 		rIsland.reload.l3.emerge = "sea";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 12;
+		rIsland.reload.l3.pic = 24;
+		rIsland.reload.l3.selpic = 28;
 		rIsland.reload.l3.tex = "t1";
-        rIsland.reload.l3.ships.l0.ay = -1.3;       // LDH 11Dec16
+		rIsland.reload.l3.ships.l0.ay = -1.3;       // LDH 11Dec16
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.reload.l4.label = "Fort St Louis";
@@ -1178,7 +1244,8 @@ void InitIslands()
 		rIsland.reload.l4.commander = "Marigot Commander"; // KK
 		rIsland.reload.l4.fort.model = "Sent_fort2";
 		rIsland.reload.l4.fort.locators = "Sent_fort2_locators";
-		rIsland.reload.l4.pic = 22;
+		rIsland.reload.l4.pic = 42;
+		rIsland.reload.l4.selpic = 46;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1187,7 +1254,8 @@ void InitIslands()
 		rIsland.reload.l5.go = "SaintMartin_shore_01";
 		rIsland.reload.l5.emerge = "reload1";
 		rIsland.reload.l5.radius = 200.0;
-		rIsland.reload.l5.pic = 17;
+		rIsland.reload.l5.pic = 19;
+		rIsland.reload.l5.selpic = 23;
 		rIsland.reload.l5.tex = "t2";
 		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1196,15 +1264,16 @@ void InitIslands()
 		rIsland.reload.l6.go = "SaintMartin_shore_02";
 		rIsland.reload.l6.emerge = "see";	// Akella's spelling ;)
 		rIsland.reload.l6.radius = 200.0;
-		rIsland.reload.l6.pic = 18;
+		rIsland.reload.l6.pic = 34;
+		rIsland.reload.l6.selpic = 38;
 		rIsland.reload.l6.tex = "t2";
 		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
@@ -1246,7 +1315,8 @@ void InitIslands()
 		rIsland.reload.l1.commander = "St John's Commander"; // KK
 		rIsland.reload.l1.fort.model = "Antigua_fort1";
 		rIsland.reload.l1.fort.locators = "Antigua_fort1_locators";
-		rIsland.reload.l1.pic = 22;
+		rIsland.reload.l1.pic = 42;
+		rIsland.reload.l1.selpic = 46;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1255,7 +1325,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Antigua_port";
 		rIsland.reload.l2.emerge = "sea_2";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 13;
+		rIsland.reload.l2.pic = 25;
+		rIsland.reload.l2.selpic = 29;
 		rIsland.reload.l2.tex = "t1";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1264,15 +1335,16 @@ void InitIslands()
 		rIsland.reload.l3.go = "Antigua_shore";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 19;
+		rIsland.reload.l3.pic = 35;
+		rIsland.reload.l3.selpic = 39;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		// victualler stores only ship supplies
@@ -1318,7 +1390,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Turks_Port";
 		rIsland.reload.l1.emerge = "Reload1";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 10;
+		rIsland.reload.l1.pic = 18;
+		rIsland.reload.l1.selpic = 22;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.ships.l0.ay = 3.0;    // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
@@ -1328,7 +1401,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Turks_Lighthouse";
 		rIsland.reload.l2.emerge = "reload3";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 4;
+		rIsland.reload.l2.pic = 8;
+		rIsland.reload.l2.selpic = 12;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.ships.l0.ay = 3.0;    // LDH 12Dec16
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
@@ -1338,7 +1412,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Turks_shore_01";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 5;
+		rIsland.reload.l3.pic = 9;
+		rIsland.reload.l3.selpic = 13;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1347,7 +1422,8 @@ void InitIslands()
 		rIsland.reload.l4.go = "Turks_Shore_04";
 		rIsland.reload.l4.emerge = "reload3";
 		rIsland.reload.l4.radius = 200.0;
-		rIsland.reload.l4.pic = 6;
+		rIsland.reload.l4.pic = 10;
+		rIsland.reload.l4.selpic = 14;
 		rIsland.reload.l4.tex = "t2";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1356,7 +1432,8 @@ void InitIslands()
 		rIsland.reload.l5.go = "Turks_shore_05";
 		rIsland.reload.l5.emerge = "see";
 		rIsland.reload.l5.radius = 200.0;
-		rIsland.reload.l5.pic = 7;
+		rIsland.reload.l5.pic = 11;
+		rIsland.reload.l5.selpic = 15;
 		rIsland.reload.l5.tex = "t2";
 		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1369,15 +1446,16 @@ void InitIslands()
 		rIsland.reload.l6.commander = "Grand Turk Commander"; // KK
 		rIsland.reload.l6.fort.model = "Terks_fort1";
 		rIsland.reload.l6.fort.locators = "Terks_fort1_locators";
-		rIsland.reload.l6.pic = 22;
+		rIsland.reload.l6.pic = 42;
+		rIsland.reload.l6.selpic = 46;
 		rIsland.reload.l6.tex = "t1";
 		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 // KK -->
@@ -1413,7 +1491,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Willemstad_port";
 		rIsland.reload.l1.emerge = "sea";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 20;
+		rIsland.reload.l1.pic = 40;
+		rIsland.reload.l1.selpic = 44;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.ships.l0.ay = 3.14;		// LDH fix until the locators.gm file can be updated - 19Apr09
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
@@ -1423,7 +1502,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Curacao_shore_01";
 		rIsland.reload.l2.emerge = "see";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 29;
+		rIsland.reload.l2.pic = 57;
+		rIsland.reload.l2.selpic = 61;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1432,7 +1512,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Curacao_shore_02";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 25;
+		rIsland.reload.l3.pic = 49;
+		rIsland.reload.l3.selpic = 53;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.enable = false;
 		rIsland.reload.l3.goto_enable = false; // PB
@@ -1446,15 +1527,16 @@ void InitIslands()
 		rIsland.reload.l4.commander = "Willemstad Commander"; // KK
 		rIsland.reload.l4.fort.model = "Curacao_fort1";
 		rIsland.reload.l4.fort.locators = "Curacao_fort1_locators";
-		rIsland.reload.l4.pic = 22;
+		rIsland.reload.l4.pic = 42;
+		rIsland.reload.l4.selpic = 46;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_TOBACCO;
@@ -1494,7 +1576,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Eleuthera_Port";
 		rIsland.reload.l1.emerge = "reload1";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 4;
+		rIsland.reload.l1.pic = 8;
+		rIsland.reload.l1.selpic = 12;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1507,7 +1590,8 @@ void InitIslands()
 		rIsland.reload.l2.commander = "Eleuthera Commander";
 		rIsland.reload.l2.fort.model = "Eleuthera_fort1";
 		rIsland.reload.l2.fort.locators = "Eleuthera_fort1_locators";
-		rIsland.reload.l2.pic = 22;
+		rIsland.reload.l2.pic = 18;
+		rIsland.reload.l2.selpic = 22;
 		rIsland.reload.l2.tex = "t1";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1516,7 +1600,8 @@ void InitIslands()
 		rIsland.reload.l3.go = "Alice_Port";
 		rIsland.reload.l3.emerge = "reload61";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 5;
+		rIsland.reload.l3.pic = 9;
+		rIsland.reload.l3.selpic = 13;
 		rIsland.reload.l3.tex = "t1";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1526,15 +1611,16 @@ void InitIslands()
 		rIsland.reload.l4.go = "Eleuthera_shore";
 		rIsland.reload.l4.emerge = "reload2";
 		rIsland.reload.l4.radius = 300.0;
-		rIsland.reload.l4.pic = 15;
+		rIsland.reload.l4.pic = 27;
+		rIsland.reload.l4.selpic = 31;
 		rIsland.reload.l4.tex = "t2";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_TOBACCO;
@@ -1576,7 +1662,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "Oranjestad_port";
 		rIsland.reload.l1.emerge = "reload1";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 10;
+		rIsland.reload.l1.pic = 18;
+		rIsland.reload.l1.selpic = 22;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1585,7 +1672,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "Aruba_shore";
 		rIsland.reload.l2.emerge = "see";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 30;
+		rIsland.reload.l2.pic = 58;
+		rIsland.reload.l2.selpic = 62;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1599,17 +1687,18 @@ void InitIslands()
 		rIsland.reload.l3.fort.model = "Aruba_fort1";
 		rIsland.reload.l3.fort.locators = "Aruba_fort1_locators";
 		rIsland.reload.l3.pic = 1;
+		rIsland.reload.l3.selpic = 5;
 		rIsland.reload.l3.tex = "t1";
 		rIsland.reload.l3.ships.l0.x = -5.0;
 		rIsland.reload.l3.ships.l0.z = -150.0;
 		rIsland.reload.l3.ships.l0.ay = 0.0;
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To*/
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		rIsland.Trade.Export.id1 = GOOD_TOBACCO;
@@ -1651,10 +1740,11 @@ void InitIslands()
 		rIsland.reload.l1.enable = false;
 		rIsland.reload.l1.goto_enable = false; // PB
 		rIsland.reload.l1.pic = 0;
+		rIsland.reload.l1.selpic = 4;
 		rIsland.reload.l1.tex = "t2";
 
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		AddIsland(q, rIsland, locator);
@@ -1678,6 +1768,7 @@ void InitIslands()
 		rIsland.reload.l1.ships.l0.ay = 2.5;
 		rIsland.reload.l1.radius = 200.0;
 		rIsland.reload.l1.pic = 3;
+		rIsland.reload.l1.selpic = 7;
 		rIsland.reload.l1.tex = "t1";
 		rIsland.reload.l1.ships.l0.ay = 3.0;        // LDH 11Dec16
 		rIsland.reload.l1.goto_enable = false;
@@ -1691,7 +1782,8 @@ void InitIslands()
 		rIsland.reload.l2.commander = "Cartagena Commander"; // KK
 		rIsland.reload.l2.fort.model = "Cartahena_Fort1";
 		rIsland.reload.l2.fort.locators = "Cartahena_Fort1_locators";
-		rIsland.reload.l2.pic = 21;
+		rIsland.reload.l2.pic = 41;
+		rIsland.reload.l2.selpic = 45;
 		rIsland.reload.l2.tex = "t1";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1700,15 +1792,16 @@ void InitIslands()
 		rIsland.reload.l3.go = "Colombia_shore";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 21;
+		rIsland.reload.l3.pic = 41;
+		rIsland.reload.l3.selpic = 45;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga.tx";
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		// PB: Temporary copied from Isla Muelle - no contraband, because NO SHORE
@@ -1747,7 +1840,8 @@ void InitIslands()
 		rIsland.reload.l1.go = "IslaDeMuerte_shore_01";
 		rIsland.reload.l1.emerge = "reload1";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 31;
+		rIsland.reload.l1.pic = 59;
+		rIsland.reload.l1.selpic = 63;
 		rIsland.reload.l1.tex = "t2";
 		rIsland.reload.l1.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1756,7 +1850,8 @@ void InitIslands()
 		rIsland.reload.l2.go = "IslaDeMuerte_shore_02";
 		rIsland.reload.l2.emerge = "sea_back";
 		rIsland.reload.l2.radius = 200.0;
-		rIsland.reload.l2.pic = 32;
+		rIsland.reload.l2.pic = 64;
+		rIsland.reload.l2.selpic = 68;
 		rIsland.reload.l2.tex = "t2";
 		rIsland.reload.l2.goto_enable = false; // Screwface: Disable Sail-To
 
@@ -1765,12 +1860,13 @@ void InitIslands()
 		rIsland.reload.l3.go = "IslaDeMuerte_shore_03";
 		rIsland.reload.l3.emerge = "reload1";
 		rIsland.reload.l3.radius = 200.0;
-		rIsland.reload.l3.pic = 33;
+		rIsland.reload.l3.pic = 65;
+		rIsland.reload.l3.selpic = 69;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		AddIsland(q, rIsland, locator);
@@ -1792,13 +1888,14 @@ void InitIslands()
 		rIsland.reload.l1.go = "Devil_Creek";
 		rIsland.reload.l1.emerge = "see";
 		rIsland.reload.l1.radius = 200.0;
-		rIsland.reload.l1.pic = 26;
+		rIsland.reload.l1.pic = 50;
+		rIsland.reload.l1.selpic = 54;
 		rIsland.reload.l1.tex = "t2";
 		rIsland.reload.l1.enable = false;
 		rIsland.reload.l1.goto_enable = false; // PB
 
-		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga.tx";
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		AddIsland(q, rIsland, locator);

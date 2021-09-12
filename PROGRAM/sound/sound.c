@@ -199,10 +199,10 @@ void SetSchemeForLocation(ref loc)
 				case PORTUGAL: SetMusicAlarm("music_por_town"); break;
 				case GUEST1_NATION: // DeathDaisy: added swedish music
 					if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
-						SetMusicAlarm("music_swe_town"); 
+						SetMusicAlarm("music_swe_town");
 					} else{	SetMusicAlarm("music_usa_town"); }
 				break;
-				case PERSONAL_NATION:	SetMusicAlarm("music_personal_town"); 
+				case PERSONAL_NATION:	SetMusicAlarm("music_personal_town");
 							if(HasSubStr(loc.id,"Kristiania"  )) SetMusicAlarm("Rogers_gunroom"); 	//JRH for Spanish part of Kristiania
 				break; // DeathDaisy: added music for personal colonies
 			}
@@ -229,7 +229,7 @@ void SetSchemeForLocation(ref loc)
 				case PORTUGAL: SetMusicAlarm("music_por_town"); break;
 				case GUEST1_NATION: // DeathDaisy: added swedish music
 					if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
-						SetMusicAlarm("music_swe_town"); 
+						SetMusicAlarm("music_swe_town");
 					} else{	SetMusicAlarm("music_usa_town"); }
 				break;
 				//case AMERICA:  SetMusicAlarm("music_usa_town"); break;
@@ -339,7 +339,7 @@ void SetSchemeForLocation(ref loc)
 			if(CheckAttribute(loc,"id") && loc.id == "NS_hidden_town_Tavern") SetMusicAlarm("Rogers_crew");
 // <-- JRH
 			break;
-// Levis: Casino -->			
+// Levis: Casino -->
 		case "casino":
 			SetSoundScheme("tavern");
 			SetMusicAlarm("music_casino");
@@ -372,7 +372,7 @@ void SetSchemeForLocation(ref loc)
 				case PORTUGAL: SetMusicAlarm("music_portugal_governor"); break;//changed by MAXIMUS <--
 				case GUEST1_NATION: // DeathDaisy: added swedish music
 					if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS){
-							SetMusicAlarm("music_swedish_governor"); 
+							SetMusicAlarm("music_swedish_governor");
 					} else{	SetMusicAlarm("music_american_governor"); }
 				break;
 				//case AMERICA: SetMusicAlarm("music_american_governor"); break;
@@ -634,7 +634,7 @@ void SetSchemeForLocation(ref loc)
 		case "Claire_outside":
 			ResetSoundScheme();
 			SetTimeScheme("land");
-			SetWeatherScheme("distant_seashore");	
+			SetWeatherScheme("distant_seashore");
 			SetMusicAlarm("Claire_theme");
 			break;
 		case "Defoe_cabin":
@@ -746,7 +746,7 @@ void SetSchemeForLocation(ref loc)
 			SetMusicAlarm("silence");
 			break;
 	// GOLDBUG -->
-	
+
 		case "Charleston_port":
 			SetSoundScheme("port");
 			SetTimeScheme("land");
@@ -813,8 +813,8 @@ void SetSchemeForLocation(ref loc)
 			{
 				SetMusicAlarm("silence");
 			}
-			else 
-			{ 
+			else
+			{
 				SetMusicAlarm("Charleston_town");
 			}
 			break;
@@ -831,7 +831,7 @@ void SetSchemeForLocation(ref loc)
 			{
 				SetSoundScheme("jungle");
 			}
-			else 
+			else
 			{
 				SetSoundScheme("town");
 			}
@@ -862,13 +862,13 @@ void SetSchemeForLocation(ref loc)
 			{
 				ResetSoundScheme();
 			}
-			else 
+			else
 			{
 				if (Whr_IsNight())
 				{
 					SetSoundScheme("town");
 				}
-				else 
+				else
 				{
 					SetSoundScheme("Chinese_garden");
 				}
@@ -882,13 +882,13 @@ void SetSchemeForLocation(ref loc)
 			{
 				ResetSoundScheme();
 			}
-			else 
+			else
 			{
 				if (Whr_IsNight())
 				{
 					SetSoundScheme("jungle");
 				}
-				else 
+				else
 				{
 					SetSoundScheme("Cloister_garden");
 				}
@@ -902,13 +902,13 @@ void SetSchemeForLocation(ref loc)
 			{
 				ResetSoundScheme();
 			}
-			else 
+			else
 			{
 				if (Whr_IsNight())
 				{
 					SetSoundScheme("town");
 				}
-				else 
+				else
 				{
 					SetSoundScheme("Chinese_garden");
 				}
@@ -952,7 +952,7 @@ void SetSchemeForLocation(ref loc)
 				SetMusicAlarm("Charleston_brothel");	//JRH
 			}
 			else
-			{ 
+			{
 				SetMusicAlarm("music_brothel_QC");
 				PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_001.wav");
 				PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_002.wav");
@@ -1546,7 +1546,7 @@ string GetMusicSchemeName(int musNum)
 	ref rms; makeref(rms, registered_music_schemes);
 	string lnode = "l" + musNum;
 	if (CheckAttribute(rms, lnode)) {
-		if (CheckDirectory("RESOURCE\Sounds\MUSIC\\" + rms.(lnode).resdir, "*.ogg") > 0) retVal = rms.(lnode).name;
+		if (CheckDirectory(GetResourceDirectory() + "Sounds\MUSIC\\" + rms.(lnode).resdir, "*.ogg") > 0) retVal = rms.(lnode).name;
 	}
 	return retVal;
 }
@@ -1557,7 +1557,7 @@ string GetMusicScheme()
 	ref rms; makeref(rms, registered_music_schemes);
 	string lnode = "l" + music_scheme;
 	if (CheckAttribute(rms, lnode)) {
-		if (CheckDirectory("RESOURCE\Sounds\MUSIC\\" + rms.(lnode).resdir, "*.ogg") > 0) retVal = rms.(lnode).id;
+		if (CheckDirectory(GetResourceDirectory() + "Sounds\MUSIC\\" + rms.(lnode).resdir, "*.ogg") > 0) retVal = rms.(lnode).id;
 	}
 	return retVal;
 }

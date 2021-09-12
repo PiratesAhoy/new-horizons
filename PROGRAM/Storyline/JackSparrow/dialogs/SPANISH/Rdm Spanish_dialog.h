@@ -1,5 +1,5 @@
 string DLG_TEXT[3] = {
-"Ohh, no me siento muy bien... ÐŽPooor.. ffaaa..voor..., dÐ¹eejame en paz!",
-"ÐŽGuau! Ñ—CuÐ±nto has bebido?",
+"Ohh, no me siento muy bien... ¡Pooor.. ffaaa..voor..., déeejame en paz!",
+"¡Guau! ¿Cuánto has bebido?",
 
 };

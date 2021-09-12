@@ -23,6 +23,12 @@ string oldCurNode = "SAVE_BUTTON";//MAXIMUS
 int iCurStoryline, iShowStoryline; // KK
 string sCurProfile, sShowProfile; // KK
 
+//Boyer add for reset
+void SaveLoadResetCall(string iniName, bool isSave)
+{
+	 InitInterface_B(iniName, isSave);
+}
+
 void InitInterface_B(string iniName, bool isSave)
 {
 	bThisSave = isSave;
@@ -134,8 +140,8 @@ void InitInterface_B(string iniName, bool isSave)
 	iShowStoryline = iCurStoryline;
 	sShowProfile = sCurProfile;
 // <-- KK
-
-	FillScroll();
+    //Boyer change
+	SaveLoadFillScroll();
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 
 	CreateString(true,"SaveName","",FONT_NORMAL,COLOR_NORMAL,50,330,SCRIPT_ALIGN_LEFT,1.0);
@@ -190,8 +196,8 @@ void InitInterface_B(string iniName, bool isSave)
 		if (HasSubStr(PMainCharacter.location, "church"))
 		{
 		if (HasSubStr(PMainCharacter.location, "Greenford_M"))
-			{		
-			if (CheckAttribute(PMainCharacter,"NoSave.CarryRelic") == true && PMainCharacter.NoSave.CarryRelic != "none") 
+			{
+			if (CheckAttribute(PMainCharacter,"NoSave.CarryRelic") == true && PMainCharacter.NoSave.CarryRelic != "none")
 				{
 				bNightmareMode = true;
 				GameInterface.strings.NoSave = TranslateString("","You can't save while carrying a holy relic in this old abbey! Give it to a monk") + " " + PMainCharacter.NoSave.ReleaseMonkLocation + "."; // NK
@@ -201,13 +207,13 @@ void InitInterface_B(string iniName, bool isSave)
 		}
 		else
 		{
-			if (CheckAttribute(PMainCharacter,"NoSave.CarryRelic") == true && PMainCharacter.NoSave.CarryRelic != "none") 
+			if (CheckAttribute(PMainCharacter,"NoSave.CarryRelic") == true && PMainCharacter.NoSave.CarryRelic != "none")
 			{
 				bNightmareMode = true;
 				GameInterface.strings.NoSave = TranslateString("","You can't save while carrying a holy relic! Give it to a monk") + " " + PMainCharacter.NoSave.ReleaseMonkLocation + "."; // NK
 				EnableString("NoSave");
 			}
-		}  
+		}
 		// scheffnow <--
 		// PB -->
 		if (CheckAttribute(PMainCharacter,"NoSave.Custom")) {
@@ -216,7 +222,7 @@ void InitInterface_B(string iniName, bool isSave)
 			EnableString("NoSave");
 		}
 		// PB <--
-	//	if(sCurProfile=="" || FindProfile(GetStoryline(FindCurrentStoryline()), sCurProfile) < 0) // Screwface 
+	//	if(sCurProfile=="" || FindProfile(GetStoryline(FindCurrentStoryline()), sCurProfile) < 0) // Screwface
 		if(sCurProfile=="") // PB: Simplify to allow saving
 		{
 			bNightmareMode = true;
@@ -278,7 +284,7 @@ void FrameProcess()
 
 		SetSelectable("SAVE_BUTTON", !bNightmareMode); // KK
 		SetSelectable("DEL_BUTTON",bFilePresent);
-		
+
 		if (bFilePresent) {
 			if (!bThisSave) SetSelectable("LOAD_BUTTON", !bCorrupted);
 		} else {
@@ -324,7 +330,7 @@ void CheckButtonStatus(string saveName)
 		SetSelectable("LOAD_BUTTON", false);
 		return;
 	}
-	string sdir = "SAVE\" + GetStorylineDir(iCurStoryline);
+	string sdir = GetSaveDirectory() + GetStorylineDir(iCurStoryline);
 	string saveString = "";
 	bool bCorrupted = true;
 	bool bIncompatible = true;
@@ -339,12 +345,13 @@ void CheckButtonStatus(string saveName)
 }
 // <-- KK
 
-void FillScroll()
+//Boyer change
+void SaveLoadFillScroll()
 {
     int i=0;
     string attributeName;
 	if(CheckAttribute(&GameInterface,"saveslist")) DeleteAttribute(&GameInterface,"saveslist");
-	string savepath = "SAVE\" + GetStorylineDir(iCurStoryline); // KK
+	string savepath = GetSaveDirectory() + GetStorylineDir(iCurStoryline); // KK
 
 	nCurScroll = -1;
 	GameInterface.SavePath = savepath;
@@ -357,7 +364,7 @@ void FillScroll()
 	GameInterface.saveslist.ImagesGroup.t0 = "CORRUPTSAVE";
 // <-- KK
 	GameInterface.saveslist.NotUsed = 5;
-	
+
 	if(bThisSave && !bNightmareMode)
 	{
 		GameInterface.saveslist.pic1.name1 = "newsave";
@@ -370,7 +377,7 @@ void FillScroll()
 		GameInterface.saveslist.pic1.saveSize = 0;
 		i++;
 	}
-	
+
 	string saveName;
 	string saveString;
 	int nSaveSize;
@@ -414,7 +421,7 @@ void FillScroll()
 		}
 
 		bQuickSave = HasSubStr(saveName, "QuickSave");
-		saveString = IGetSaveString("SAVE\" + GetStorylineDir(iCurStoryline) + saveName);
+		saveString = IGetSaveString(GetSaveDirectory() + GetStorylineDir(iCurStoryline) + saveName);
 		bCorrupted = saveString == "";
 		bIncompatible = GetSaveVersion(saveString) != makefloat(IS_SGV);
 		InfoStr1 = "";
@@ -460,7 +467,7 @@ bool CheckSavedFile(string saveName, string storyline, string profile)
 	int slidx = FindStoryline(storyline);
 	int pidx = FindProfile(storyline, profile);
 	if(saveName=="" || saveName=="." || saveName==".." || HasSubStr(saveName,"options") || slidx < 0 || pidx < 0) return false;
-	string savepath = "SAVE\" + GetStorylineDir(slidx);
+	string savepath = GetSaveDirectory() + GetStorylineDir(slidx);
 	bool bExists = FindFile(savepath, "*", saveName) != "";
 	if (bExists)
 	{
@@ -553,12 +560,12 @@ void ProcessCommandExecute()
 	}
 
 // LDH No accidental deletes by pressing the space bar rapidly to load a game.
-	// This can happen if you're used to hitting space bar 3 times at the main menu 
+	// This can happen if you're used to hitting space bar 3 times at the main menu
 	// to load your last save without using the mouse.  If the mouse moves, you can accidentally get the delete button instead.
 	// You can only confirm a delete by clicking on the YES button in the confirmation screen, not with the space bar.
 	if (nodName == "CONFIRM_YES_BUTTON" && !bLoadConfirm && !bSaveConfirm)
 	{
-		if (comName != "click") 
+		if (comName != "click")
 		{
 			bAbortDelete = true;		// LDH no accidental deletes 20Mar09
 		}
@@ -641,12 +648,12 @@ void ProcessSave()
 
 	SetEventHandler("evntSave","SaveGame",1);
 
-	GameInterface.SavePath = "SAVE\" + GetStorylineDir(iCurStoryline); // KK
+	GameInterface.SavePath = GetSaveDirectory() + GetStorylineDir(iCurStoryline); // KK
 
 	if(GetTargetPlatform()=="pc") {
 		PostEvent("evntSave",0,"sss", GameInterface.SavePath, curSave, sSaveDescriber);
 	} else {
-		PostEvent("evntSave",0,"ss", curSave, sSaveDescriber);
+		PostEvent("evntSave",0,"sss", "", curSave, sSaveDescriber);
 		Event("DoInfoShower","sl","save game",true);
 	}
 
@@ -705,7 +712,7 @@ void ProcessLoad()
 
 	SetEventHandler("evntLoad","LoadGame",1);
 
-	GameInterface.SavePath = "SAVE\" + sldir; // KK
+	GameInterface.SavePath = GetSaveDirectory() + sldir; // KK
 
 	if(GetTargetPlatform()=="pc") {
 		PostEvent("evntLoad",0,"s",GameInterface.SavePath + sCurSave);
@@ -852,7 +859,10 @@ void SettingDataForSave(string saveFileName)
 	string locationStr, timeStr, tmpStr, tmpStr2;
 	string sgvStr = -1; // TIH Aug24'06
 	int locidx;
-	ref PChar = GetMainCharacter();
+	//Boyer add
+	string fileSystemDate = "";
+
+	PChar = GetMainCharacter();
 
 	EnableString("SaveName");
 	if( saveFileName=="" )
@@ -896,7 +906,7 @@ void SettingDataForSave(string saveFileName)
 		}
 		tmpStr2 = GetCurSaveName();
 		SendMessage(&GameInterface, "lse", MSG_INTERFACE_FILENAME2DATASTR, TranslateString("","NewSave") + " - " + GetCurSaveName(), &tmpStr2);
-		SendMessage(&GameInterface, "lse", MSG_INTERFACE_GETTIME, "", &tmpStr);
+		SendMessage(&GameInterface, "lsee", MSG_INTERFACE_GETTIME, "", &tmpStr, &fileSystemDate);
 	}
 	else
 	{
@@ -905,9 +915,9 @@ void SettingDataForSave(string saveFileName)
 		tmpStr2 = saveFileName;
 		SendMessage(&GameInterface, "lse", MSG_INTERFACE_FILENAME2DATASTR, saveFileName, &tmpStr2);
 		if(GetTargetPlatform()=="xbox") {
-			SendMessage(&GameInterface, "lse", MSG_INTERFACE_GETTIME, saveFileName, &tmpStr);
+			SendMessage(&GameInterface, "lsee", MSG_INTERFACE_GETTIME, saveFileName, &tmpStr, &fileSystemDate);
 		} else {
-			SendMessage(&GameInterface, "lse", MSG_INTERFACE_GETTIME, "SAVE\" + GetStorylineDir(iCurStoryline) + "\" + saveFileName, &tmpStr);
+			SendMessage(&GameInterface, "lsee", MSG_INTERFACE_GETTIME, GetSaveDirectory() + GetStorylineDir(iCurStoryline) + "\" + saveFileName, &tmpStr, &fileSystemDate);
 		}
 	}
 
@@ -918,7 +928,7 @@ void SettingDataForSave(string saveFileName)
 		/*SetNodeUsing("VERSIONMISMATCHBOX",true);
 		SetNodeUsing("VERSIONMISMATCH",true);
 		SetSelectable("VERSIONMISMATCH",true);*/
-		
+
 	}
 	// TIH <--
 	string ProfileName = FirstLetterUp(sCurProfile);
@@ -1058,7 +1068,7 @@ ref NewInterfaceTexture()
 //	if(str!="quicksave")) // NK 05-04-14 fix quicksave "out of memory" error //MAXIMUS
 //	{
 	if (GetTargetPlatform()=="pc") {
-		sl_tmp_var = SendMessage(&scrshot,"lsse", MSG_SCRSHOT_READ, "SAVE\" + GetStorylineDir(iCurStoryline), str, &strSaveData);
+		sl_tmp_var = SendMessage(&scrshot,"lsse", MSG_SCRSHOT_READ, GetSaveDirectory() + GetStorylineDir(iCurStoryline), str, &strSaveData);
 	} else {
 		sl_tmp_var = SendMessage(&scrshot,"lsse", MSG_SCRSHOT_READ,"", str, &strSaveData);
 	}
@@ -1098,7 +1108,7 @@ void FindScrshotClass()
 string _IGetSaveString(string saveName)
 {
 	if(GetTargetPlatform()=="pc") {
-		return IGetSaveString("SAVE\" + GetStorylineDir(iCurStoryline) + "\" + saveName);
+		return IGetSaveString(GetSaveDirectory() + GetStorylineDir(iCurStoryline) + "\" + saveName);
 	} else {
 		return IGetSaveString(saveName);
 	}
@@ -1467,7 +1477,7 @@ void EndSelectProfilesScreen()
 	SetNodeUsing("DEL_BUTTON", true);
 	SetNodeUsing("CANCEL_BUTTON", true);
 	EnableString("SaveName");
-	EnableString("Storyline_Profile");	
+	EnableString("Storyline_Profile");
 	SetCurrentNode("SAVESLIST");
 	SetFirstButton(); // PB
 }
@@ -1480,7 +1490,7 @@ void FindProfileMainChar(string storyline, string profile, ref pic, ref chname)
 	int nSaveSize;
 	string saveString = "";
 	string stmp;
-	GameInterface.SavePath = "SAVE\" + GetStorylineDir(FindStoryline(storyline));
+	GameInterface.SavePath = GetSaveDirectory() + GetStorylineDir(FindStoryline(storyline));
 	pic = -1;
 	chname = "";
 	while (SendMessage(&GameInterface, "llee", MSG_INTERFACE_SAVE_FILE_FIND, j, &saveName, &nSaveSize) != 0) {
@@ -1512,7 +1522,8 @@ void UpdateLoadScreen(int slidx, string profile)
 		DisableString("NoSave");
 	}
 	DeleteAttribute(&GameInterface, "SAVESLIST");
-	FillScroll();
+	//Boyer change
+	SaveLoadFillScroll();
 	SendMessage(&GameInterface, "ls", MSG_INTERFACE_REFRESH_SCROLL, "SAVESLIST");
 	GameInterface.strings.Storyline_Profile = TranslateString("", "Storyline") + ": " + GetStorylineTitle(iCurStoryline) + ";  " + TranslateString("", "Profile") + ": " + FirstLetterUp(sCurProfile);
 	Event("exitProfiles");
@@ -1568,7 +1579,7 @@ void ProcessProfileDelete()
 		SetFormatedText("TEXTWINDOW1", TranslateString("", "Storyline") + ": " + GetStorylineTitle(iShowStoryline) + ", " + TranslateString("", "Profile") + ": " + sShowProfile + GlobalStringConvert("newline") + TranslateString("", "Warning: this profile is currently active!"));
 	else
 		SetFormatedText("TEXTWINDOW1", TranslateString("", "Storyline") + ": " + GetStorylineTitle(iShowStoryline) + ", " + TranslateString("", "Profile") + ": " + sShowProfile);
-	
+
 }
 
 void ProcScrollPosChange()
@@ -1716,7 +1727,7 @@ string NextRight(string curNod)
 				}
 			}
 		break;
-		
+
 	}
 	return " ";
 }

@@ -5,7 +5,7 @@ void SetModel(ref chr, string model, string ani, string sex, float height, bool 
 	chr.model = model;
 
 // KK -->
-	if (CheckAttribute(chr, "model.armorlevel") == true && FindFile("RESOURCE\MODELS\Characters", "*.gm", model + "_A" + sti(chr.model.armorlevel) + ".gm") != "") {
+	if (CheckAttribute(chr, "model.armorlevel") == true && FindFile(GetResourceDirectory() + "MODELS\Characters", "*.gm", model + "_A" + sti(chr.model.armorlevel) + ".gm") != "") {
 		model += "_A" + sti(chr.model.armorlevel);
 	}
 // <-- KK
@@ -149,7 +149,7 @@ bool CheckItem(string ItemID)
 	/*ref itm;
 	int n;
 	bool ItemIsDefined;
-	ItemIsDefined = false; 
+	ItemIsDefined = false;
 	//Trace("CheckItem: ----------------------------------")
 	for(n=0; n<MAX_ITEMS; n++)
 	{
@@ -157,7 +157,7 @@ bool CheckItem(string ItemID)
 		//Trace("CheckItem: " + itm.id +" - "+ itemID)
 		if(itm.id == ItemID)
 		{
-		  ItemIsDefined = true; 
+		  ItemIsDefined = true;
 		  break;
 		}
 	}
@@ -187,10 +187,10 @@ void SortModelArray(int intLowerPos, int intUpperPos)
 	int intCenterValue;
 	int intCenterPos;
 	int i;
-   
+
 	ref MinModel;
 	ref MaxModel;
-	ref TmpModel; 
+	ref TmpModel;
 	string stmp; // NK
 	if (intLowerPos < intUpperPos)
 	{
@@ -228,7 +228,7 @@ void SortModelArray(int intLowerPos, int intUpperPos)
 		SortModelArray(intLowerPos,intCenterPos-1);
 		SortModelArray(intCenterPos+1,intUpperPos);
 	}
-} 
+}
 
 // PB: Function completely rewritten and simplified -->
 int GetRandomModelForNation(int Nation, int maxRank)
@@ -329,7 +329,7 @@ void ClearModelTypeSlot(int n)
 			MODELTYPES_QUANTITY = n; // assume there's nothing after this, even though we use >= above.
 		}
 	}
-			
+
 	if(bdirect)
 	{
 		ClearModelTypeSlotDirect(n);
@@ -405,7 +405,7 @@ string GetRandomModelForTypeEx(int iscombat, string type, string sex, int nat)
 	if(isdigit(type, strlen(type)-1)) {
 		// in case nation is already in the type
 		// this is DANGEROUS because it means we can only have 10 nations, and you can't precombine ALL_NATIONS because it's three digits.
-		otype = strcut(type, 0, strlen(type)-2);	
+		otype = strcut(type, 0, strlen(type)-2);
 	} else {
 		otype = type;
 		type += nat;
@@ -652,11 +652,11 @@ string FindRandomModelOfficerType(string model)
 
 	string curType = "";
 	string nexType = FindModelTypeFromModel(model, num);
-	
+
 	while (num == 0 || curType != nexType)
 	{
 		if(UsableOfficerType(nexType, false))	validTypes = StoreString(validTypes, nexType);
-		
+
 		num++;
 		curType = nexType;
 		nexType = FindModelTypeFromModel(model, num);

@@ -1,6 +1,6 @@
 
 int nCurScroll;
-ref PChar;
+//ref PChar;
 
 void InitInterface(string iniName)
 {
@@ -38,7 +38,7 @@ void KAM_UpdateDisplay()
 
 	if(CheckAttribute(PChar, "articles") && sti(PChar.articles))
 	{
-		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"ARTICLES_SALARY_BUTTON",0,XI_ConvertString("KAMPaySalary"));
+		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"ARTICLES_SALARY_BUTTON",0,"KAMPaySalary");
 		tempmessage1 = LanguageConvertString(tmpLangFileID,"You have signed articles with your crew.");
 		tempmessage2 = LanguageConvertString(tmpLangFileID,"This means");// they are paid by division of plunder after each expedition. If you've had enough of all that privateering, you can pay your crew a regular salary. This would make crew morale more stable, although it would not be as high as it could be under a divide-the-plunder agreement.";
 		if(sti(PChar.CrewStatus.explength) > 1)	// LDH was "!= 1", this makes it possible to go back to salary immediately - 07Mar09
@@ -53,7 +53,7 @@ void KAM_UpdateDisplay()
 	}
 	else
 	{
-		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"ARTICLES_SALARY_BUTTON",0,XI_ConvertString("KAMSignArticles"));
+		SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"ARTICLES_SALARY_BUTTON",0,"KAMSignArticles");
 		tempmessage1 = LanguageConvertString(tmpLangFileID,"Your crew is currently paid by regular salary.");
 		tempmessage2 = LanguageConvertString(tmpLangFileID,"The alternative");// is to sign articles with your crew, which means you pay them by dividing the plunder of each expedition (do this at the Loanshark's office in any port). If you sign articles with your crew, it is possible to raise your crew's morale much higher than before, but harder to keep it that way!";
 		tempmessage3 = LanguageConvertString(tmpLangFileID,"WARNING! A proportion of the crew will desert if you do this.");

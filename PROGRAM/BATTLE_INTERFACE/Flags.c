@@ -15,20 +15,24 @@ ref procGetRiggingData()
 {
 	int n;
 	int retVal = 0;
-	int locidx = FindLoadedLocation();
-	bool PirateOverride = false;															// PB: For Pirate Flags on Forts and Ashore
-	ref chr;
-	ref PChar = GetMainCharacter();
+	bool PirateOverride = false;
+	string datName = GetEventData();														// PB: For Pirate Flags on Forts and Ashore
+	n = GetEventData();
+    n = GetEventData();
+    //aref nochr = GetEventData();
+    aref chr = GetEventData();
 
-	string datName = GetEventData();
-	if (datName == "GetFlagTexNum") {
-		n = GetEventData();
-		n = GetEventData();
+    int locidx = FindLoadedLocation();
+	//Boyer change
+	//if (datName == "GetFlagTexNum") {
+	if (datName != "") {
+		//n = GetEventData();
+		//n = GetEventData();
 		if (n == SHIP_FLAG || n == SHIP_PENNANT) {
-			if (locidx < 0)
-				chr = GetCharacter(Ships[CurrentShip]);
-			else
-				chr = GetCharacter(iShips[CurrentShip]);
+			//if (locidx < 0)
+			//	chr = GetCharacter(Ships[CurrentShip]);
+			//else
+			//	chr = GetCharacter(iShips[CurrentShip]);
 			if (ShipFlagsQuantity == -1) {
 				ShipFlagsQuantity = GetShipFlagsQuantity(chr);
 				bShipWithoutPennants = ShipWithoutPennants(chr);
@@ -61,10 +65,8 @@ ref procGetRiggingData()
 				return &retVal;
 			}
 		} else {
-			chr = GetCharacter(n);
-			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on")
-			{ PirateOverride = false; }	 //JRH
-			else PirateOverride = true;															// PB: For Pirate Flags on Forts and Ashore
+			//chr = GetCharacter(n);
+			PirateOverride = true;															// PB: For Pirate Flags on Forts and Ashore
 		}
 		n = sti(chr.nation);
 		switch (n)
@@ -76,9 +78,9 @@ ref procGetRiggingData()
 			case SPAIN:            retVal = 4;                                break;
 			case PIRATE:
 				if(PirateOverride) retVal = 6;												// PB: For Pirate Flags on Forts and Ashore
-				else	       retVal = GetPirateFlag(chr, &n);           break;
+				else			   retVal = GetPirateFlag(chr, &n);           break;
 			case GUEST1_NATION:    retVal = 5;                                break;
-			case GUEST2_NATION:    retVal = 7;                                break;		//JRH 7, was 6
+			case GUEST2_NATION:    retVal = 6;                                break;
 			case PRIVATEER_NATION: retVal = GetPersonalFlag(chr, &n);         break;
 			case UNKNOWN_NATION:   retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break;		//added by KAM		// changed after build 11 by KAM
 			case NEUTRAL_NATION:   retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break;		//added by KAM
@@ -119,9 +121,12 @@ string GetShipFlagType(ref chr, int pos)
 	aref arMasts; makearef(arMasts, rShip.Flags);
 	int nMasts = GetAttributesNum(arMasts);
 	int m = 0;
-	int i = 1;
+	//Boyer fix
+	//int i = 1;
 	if (CheckAttribute(chr, "surrendered")) return FLAG_NONE; // Screwface: to fix the white flags
-	while (i <= nMasts)
+	//Boyer fix
+	//while (i <= nMasts)
+	while (m < nMasts)
 	{
 		string sMast = "Mast" + m;
 		if (CheckAttribute(chr, "Ship.Masts." + sMast) == true && GetLocalShipAttrib(arShip, rShip, "Ship.Masts." + sMast) == "1") {
@@ -132,7 +137,8 @@ string GetShipFlagType(ref chr, int pos)
 			m++;
 			continue;
 		}
-		i++;
+		//Boyer fix
+		//i++;
 		aref arFlags; makearef(arFlags, rShip.Flags.(sMast));
 		int nFlags = GetAttributesNum(arFlags);
 		for (int f = 1; f <= nFlags; f++)
@@ -141,8 +147,11 @@ string GetShipFlagType(ref chr, int pos)
 			if (!CheckShipAttribute(arShip, rShip, "Flags." + sMast + "." + sFlag)) continue;
 			if (n == pos) return GetLocalShipAttrib(arShip, rShip, "Flags." + sMast + "." + sFlag);
 			n++;
-			m++;
+			//Boyer fix
+			//m++;
 		}
+		//Boyer fix
+		m++;
 	}
 	return FLAG_ENSIGN;
 }
@@ -159,7 +168,6 @@ void SetFortFlag(ref rModel)
 {
 	int i, idx, iNation;
 	ref chr;
-	ref Pchar = GetMaincharacter();
 	if (!CheckAttribute(rModel, "fortcmdridx")) return;
 	idx = sti(rModel.fortcmdridx);
 	if (idx < 0) return;
@@ -177,28 +185,20 @@ void SetFortFlag(ref rModel)
 	SendMessage(&FortFlag, "li", MSG_FLAG_DEL_GROUP, &rModel);
 	iNation = sti(chr.nation);
 	switch (iNation) {
-
-		//ok for red, ok for standard
-		case PIRATE:
-			//JRH:
-			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on") 
-			{
-				GetPirateFlag(chr, &i);
-				SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
-			}
-			else SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &rModel, idx);
+/*		case PIRATE:
+			GetPirateFlag(chr, &i);
+			SendMessage(&PirateFlag[i], "lila", MSG_FLAG_INIT, &rModel, idx, &Characters[idx]);
 		break;
-	
-/*		case PRIVATEER_NATION:
+		case PRIVATEER_NATION:
 			GetPersonalFlag(chr, &i);
-			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
+			SendMessage(&PersonalFlag[i], "lila", MSG_FLAG_INIT, &rModel, idx, &Characters[idx]);
 		break;*/
 		case PERSONAL_NATION:
 			GetPersonalFlag(chr, &i);
-			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
+			SendMessage(&PersonalFlag[i], "lila", MSG_FLAG_INIT, &rModel, idx, &Characters[idx]);
 		break;
 		// default:
-			SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &rModel, idx);
+			SendMessage(&FortFlag, "lila", MSG_FLAG_INIT, &rModel, idx, &Characters[idx]);
 	}
 }
 
@@ -249,29 +249,29 @@ void SetShipFlag(int chridx)
 				switch (iNation) {
 					case PIRATE:
 						GetPirateFlag(chr, &j);
-						SendMessage(&PirateFlag[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-						if (IsEntity(&PiratePennant[j])) SendMessage(&PiratePennant[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
+						SendMessage(&PirateFlag[j], "lila", MSG_FLAG_INIT, &arModel, SHIP_FLAG, &Characters[chridx]);
+						if (IsEntity(&PiratePennant[j])) SendMessage(&PiratePennant[j], "lila", MSG_FLAG_INIT, &arModel, SHIP_PENNANT, &Characters[chridx]);
 					break;
 					case PRIVATEER_NATION:
 						GetPersonalFlag(chr, &j);
-						SendMessage(&PersonalFlag[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-						if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
+						SendMessage(&PersonalFlag[j], "lila", MSG_FLAG_INIT, &arModel, SHIP_FLAG, &Characters[chridx]);
+						if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "lila", MSG_FLAG_INIT, &arModel, SHIP_PENNANT, &Characters[chridx]);
 					break;
 					case PERSONAL_NATION:
 						GetPersonalFlag(chr, &j);
-						SendMessage(&PersonalFlag[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-						if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
+						SendMessage(&PersonalFlag[j], "lila", MSG_FLAG_INIT, &arModel, SHIP_FLAG, &Characters[chridx]);
+						if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "lila", MSG_FLAG_INIT, &arModel, SHIP_PENNANT, &Characters[chridx]);
 					break;
 					case NEUTRAL_NATION:
-						SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
+						SendMessage(&FortFlag, "lila", MSG_FLAG_INIT, &arModel, SHIP_FLAG, &Characters[chridx]);
 					break;
 					// default:
 						if (IsEntity(&MerchantFlag) && IsShipMerchant(chr)) {
-							SendMessage(&MerchantFlag, "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-							if (IsEntity(&MerchantPennant)) SendMessage(&MerchantPennant, "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
+							SendMessage(&MerchantFlag, "lila", MSG_FLAG_INIT, &arModel, SHIP_FLAG, &Characters[chridx]);
+							if (IsEntity(&MerchantPennant)) SendMessage(&MerchantPennant, "lila", MSG_FLAG_INIT, &arModel, SHIP_PENNANT, &Characters[chridx]);
 						} else {
-							SendMessage(&Flag, "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-							if (IsEntity(&Pennant)) SendMessage(&Pennant, "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
+							SendMessage(&Flag, "lila", MSG_FLAG_INIT, &arModel, SHIP_FLAG, &Characters[chridx]);
+							if (IsEntity(&Pennant)) SendMessage(&Pennant, "lila", MSG_FLAG_INIT, &arModel, SHIP_PENNANT, &Characters[chridx]);
 						}
 				}
 			}
@@ -286,7 +286,6 @@ void SetTownFlag(ref loc, object mdl)
 	int i, idx, iNation;
 	string town;
 	ref chr;
-	ref Pchar = GetMaincharacter();
 	if (!CheckAttribute(loc, "townsack")) return;
 	SendMessage(&Flag, "li", MSG_FLAG_DEL_GROUP, &mdl);
 	SendMessage(&MerchantFlag, "li", MSG_FLAG_DEL_GROUP, &mdl);
@@ -308,28 +307,20 @@ void SetTownFlag(ref loc, object mdl)
 	if (idx < 0) idx = GetMainCharacterIndex();
 	chr = GetCharacter(idx); // PB
 	switch (iNation) {
-		
-		//ok for red, ok for standard
-		case PIRATE:
-			//JRH:
-			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on") 
-			{
-				GetPirateFlag(chr, &i);
-				SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
-			}
-			else SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &mdl, idx);
+/*		case PIRATE:
+			GetPirateFlag(chr, &i);
+			SendMessage(&PirateFlag[i], "lila", MSG_FLAG_INIT, &mdl, idx, &Characters[idx]);
 		break;
-		
-/*		case PRIVATEER_NATION:
+		case PRIVATEER_NATION:
 			GetPersonalFlag(chr, &i);
-			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
+			SendMessage(&PersonalFlag[i], "lila", MSG_FLAG_INIT, &mdl, idx, &Characters[idx]);
 		break;*/
 		case PERSONAL_NATION:
 			GetPersonalFlag(chr, &i);
-			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
+			SendMessage(&PersonalFlag[i], "lila", MSG_FLAG_INIT, &mdl, idx, &Characters[idx]);
 		break;
 		// default:
-			SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &mdl, idx);
+			SendMessage(&FortFlag, "lila", MSG_FLAG_INIT, &mdl, idx, &Characters[idx]);
 	}
 }
 

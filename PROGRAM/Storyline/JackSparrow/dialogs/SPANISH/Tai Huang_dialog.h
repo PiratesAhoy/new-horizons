@@ -1,12 +1,12 @@
 string DLG_TEXT[9] = {
-"—óNo ves que estoy ocupado? Es peligroso molestarme, especialmente cuando no me conoces.",
-"Esto no llevar–± mucho tiempo. Tengo un par de preguntas sobre tu —ältimo viaje, Tai Huang.",
-"De acuerdo, est–± bien.",
-"Ah, sabes mi nombre. Entonces pregunta r–±pido y vete.",
-"Se dice que viste una extra—Åa corbeta al acercarte a la isla...",
-"S–Ω, es cierto. Una enorme monstruosidad negra con velas rojo - sangre. La mayor–Ωa de los hombres pensaban que eran piratas.",
-"Dicen que son piratas - —ópodr–Ωa este barco negro pertenecer a uno de vosotros?",
-"Estos tipos no se parec–Ωan en nada a nosotros. Todas nuestras naves son chatarra, esta era una corbeta que se ve–Ωa muy misteriosa. Tengo la sensaci—Én de que se dirig–Ωa hacia #sisland_Guadeloupe#.",
-"Gracias. Ahora te dejar–π en paz.",
+"øNo ves que estoy ocupado? Es peligroso molestarme, especialmente cuando no me conoces.",
+"Esto no llevar· mucho tiempo. Tengo un par de preguntas sobre tu ˙ltimo viaje, Tai Huang.",
+"De acuerdo, est· bien.",
+"Ah, sabes mi nombre. Entonces pregunta r·pido y vete.",
+"Se dice que viste una extraÒa corbeta al acercarte a la isla...",
+"SÌ, es cierto. Una enorme monstruosidad negra con velas rojo - sangre. La mayorÌa de los hombres pensaban que eran piratas.",
+"Dicen que son piratas - øpodrÌa este barco negro pertenecer a uno de vosotros?",
+"Estos tipos no se parecÌan en nada a nosotros. Todas nuestras naves son chatarra, esta era una corbeta que se veÌa muy misteriosa. Tengo la sensaciÛn de que se dirigÌa hacia #sisland_Guadeloupe#.",
+"Gracias. Ahora te dejarÈ en paz.",
 
 };

@@ -16,7 +16,9 @@ native void SystemDelay(int millsec);
 native void ExecuteTechnique(string techName);
 native string GetNextLineString();
 native void SetReloadNextTipsImage();
-#libriary "ScriptLocationLibrary"
+//#20181023-03
+native void SetTipsEnabled(bool enabled);
+#library "ScriptLocationLibrary"
 
 
 void LocationInit()

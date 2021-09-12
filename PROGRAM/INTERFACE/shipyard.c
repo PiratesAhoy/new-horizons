@@ -3665,7 +3665,7 @@ bool IsEnableSellShip()
 		EnableString("HelpString");
 		SetNodeUsing("BOX1",true);
 		SetNodeUsing("BOX1_RAMKA", true);
-		GameInterface.strings.HelpString = TranslateString ("", "Cannot Sell - Contraband on board");
+		GameInterface.strings.HelpString = "Cannot Sell - Contraband on board";
 		return false;
 	}
 	if(IsMainCharacter(chref) && ProfessionalNavyNation() != UNKNOWN_NATION && GetRank(PChar, GetServedNation()) < 10)
@@ -3680,9 +3680,9 @@ bool IsEnableSellShip()
 	makearef(arCurShip, Characters[cn].ship); // PRS3
 	switch (ShipAcquiredState(arCurShip))
 	{
-		case "bought":	SellButton = TranslateString ("", "Sell Owned Ship");		break;
-		case "taken":	SellButton = TranslateString ("", "Auction Prize Ship");	break;
-		case "pirated":	SellButton = TranslateString ("", "Sell Pirated Ship");	break;
+		case "bought":	SellButton = "Sell Owned Ship";		break;
+		case "taken":	SellButton = "Auction Prize Ship";	break;
+		case "pirated":	SellButton = "Sell Pirated Ship";	break;
 	}
 	SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "SELLSHIP_BUTTON", 0, SellButton);
 // PB <--
@@ -3898,14 +3898,14 @@ void ProcessBuyShip()
 			string acquired = "";
 			switch (ShipAcquiredState(arCurShip))
 			{
-				case "bought":	acquired = TranslateString("", "owned ship");		break;
-				case "taken":	acquired = TranslateString("", "auction prize");	break;
-				case "pirated":	acquired = TranslateString("", "pirated ship");		break;
+				case "bought":	acquired = "owned ship ";		break;
+				case "taken":	acquired = "auction prize ";	break;
+				case "pirated":	acquired = "pirated ship ";		break;
 			}
 
 			if (EnableLimitedShipClass() && GetShipMinClassForCharacter(mchr) > sti(ShipsTypes[st].Class)) text = TranslateString("", "This officer has too low Leadership and Sailing skills to command this ship.") + GlobalStringConvert("newline");
 			text += TranslateString("", "Buy this ship for") + " " + MakeMoneyShow(buyPrice,MONEY_SIGN,MONEY_DELIVER) + "?";
-			if (sPrice>0) text += " " + GlobalStringConvert("newline") + acquired + " " + TranslateString("", "trade-in") + " " + MakeMoneyShow(sPrice,MONEY_SIGN,MONEY_DELIVER) + TranslateString("", ". New ship price") + " " + MakeMoneyShow(bPrice,MONEY_SIGN,MONEY_DELIVER);
+			if (sPrice>0) text += TranslateString("", " ") + GlobalStringConvert("newline") + acquired + "trade-in " + MakeMoneyShow(sPrice,MONEY_SIGN,MONEY_DELIVER) + "  new ship price " + MakeMoneyShow(bPrice,MONEY_SIGN,MONEY_DELIVER);
 			SetFormatedText("TEXTWINDOW", text);
 		}
 	/*} else {
@@ -3960,11 +3960,11 @@ void ProcessSellShip()
 			string acquired = "";
 			switch (ShipAcquiredState(arCurShip))
 			{
-				case "bought":	acquired = TranslateString("", "owned ship");		break;
-				case "taken":	acquired = TranslateString("", "auction prize");	break;
-				case "pirated":	acquired = TranslateString("", "pirated ship");		break;
+				case "bought":	acquired = "owned ship ";		break;
+				case "taken":	acquired = "auction prize ";	break;
+				case "pirated":	acquired = "pirated ship ";		break;
 			}
-			string text = TranslateString("", "Sell this") + " " + acquired + " " + TranslateString("", "shipyard confirm 2") + MakeMoneyShow(GetSellPrice(nCurFourNum,"includecargo"),MONEY_SIGN,MONEY_DELIVER) + "?" + GlobalStringConvert("newline") + TranslateString("", "of which") + " " + MakeMoneyShow(shipCost1 - gPrice[nCurFourNum],MONEY_SIGN,MONEY_DELIVER) + " " + TranslateString("", "is ship and") + " " + MakeMoneyShow((gPrice[nCurFourNum]),MONEY_SIGN,MONEY_DELIVER) + " " + TranslateString("", "is cargo");
+			string text = TranslateString("", "Sell this ") + acquired + "for" + " " + MakeMoneyShow(GetSellPrice(nCurFourNum,"includecargo"),MONEY_SIGN,MONEY_DELIVER) + "?" + GlobalStringConvert("newline") + "of which " + MakeMoneyShow(shipCost1 - gPrice[nCurFourNum],MONEY_SIGN,MONEY_DELIVER) + " is ship and " + MakeMoneyShow((gPrice[nCurFourNum]),MONEY_SIGN,MONEY_DELIVER) + " is cargo";
 			SetFormatedText("TEXTWINDOW", text);
 		}
 		else

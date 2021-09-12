@@ -211,40 +211,40 @@ void Reinit(bool start, bool show)
 	if(bNewInterface==true)
 	{
 		Interfaces[INTERFACE_KAM_SELECTMODEL].SectionName = "interface\kam_selectmodel.c";
-		Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = "RESOURCE\INI\NEW_INTERFACES\kam_selectmodel.ini";
+		Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_selectmodel.ini";
 		Interfaces[INTERFACE_KAM_SELECTSAILS].SectionName = "interface\kam_selectsails.c";
-		Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = "RESOURCE\INI\NEW_INTERFACES\kam_selectsails.ini";
+		Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_selectsails.ini";
 		Interfaces[INTERFACE_KAM_RATIONS].SectionName = "interface\kam_rations.c";
-		Interfaces[INTERFACE_KAM_RATIONS].IniFile = "RESOURCE\INI\NEW_INTERFACES\kam_rations.ini";
+		Interfaces[INTERFACE_KAM_RATIONS].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_rations.ini";
 		Interfaces[INTERFACE_KAM_ARTICLES].SectionName = "interface\kam_articles.c";
-		Interfaces[INTERFACE_KAM_ARTICLES].IniFile = "RESOURCE\INI\NEW_INTERFACES\kam_articles.ini";
+		Interfaces[INTERFACE_KAM_ARTICLES].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_articles.ini";
 		Interfaces[INTERFACE_KAM_SHIPTRANSFER].SectionName = "interface\kam_shiptransfer.c";
-		Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = "RESOURCE\INI\NEW_INTERFACES\kam_shiptransfer.ini";
+		Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_shiptransfer.ini";
 		Interfaces[INTERFACE_KAM_SHIPBERTHING].SectionName = "interface\kam_shipberthing.c";				// added after build 11
-		Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = "RESOURCE\INI\NEW_INTERFACES\kam_shipberthing.ini";		// added after build 11
+		Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_shipberthing.ini";		// added after build 11
 		Interfaces[INTERFACE_NEWS].SectionName = "interface\news.c";
-		Interfaces[INTERFACE_NEWS].IniFile = "RESOURCE\INI\NEW_INTERFACES\news.ini";
+		Interfaces[INTERFACE_NEWS].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\news.ini";
 		Interfaces[INTERFACE_MONKEY].SectionName = "interface\monkey.c";
-		Interfaces[INTERFACE_MONKEY].IniFile = "RESOURCE\INI\INTERFACES\monkey.ini";
+		Interfaces[INTERFACE_MONKEY].IniFile = GetResourceDirectory() + "INI\INTERFACES\monkey.ini";
 	}
 	else
 	{
 		Interfaces[INTERFACE_KAM_SELECTMODEL].SectionName = "interface\kam_selectmodel.c";
-		Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = "RESOURCE\INI\INTERFACES\kam_selectmodel.ini";
+		Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_selectmodel.ini";
 		Interfaces[INTERFACE_KAM_SELECTSAILS].SectionName = "interface\kam_selectsails.c";
-		Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = "RESOURCE\INI\INTERFACES\kam_selectsails.ini";
+		Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_selectsails.ini";
 		Interfaces[INTERFACE_KAM_RATIONS].SectionName = "interface\kam_rations.c";
-		Interfaces[INTERFACE_KAM_RATIONS].IniFile = "RESOURCE\INI\INTERFACES\kam_rations.ini";
+		Interfaces[INTERFACE_KAM_RATIONS].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_rations.ini";
 		Interfaces[INTERFACE_KAM_ARTICLES].SectionName = "interface\kam_articles.c";
-		Interfaces[INTERFACE_KAM_ARTICLES].IniFile = "RESOURCE\INI\INTERFACES\kam_articles.ini";
+		Interfaces[INTERFACE_KAM_ARTICLES].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_articles.ini";
 		Interfaces[INTERFACE_KAM_SHIPTRANSFER].SectionName = "interface\kam_shiptransfer.c";
-		Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = "RESOURCE\INI\INTERFACES\kam_shiptransfer.ini";
+		Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_shiptransfer.ini";
 		Interfaces[INTERFACE_KAM_SHIPBERTHING].SectionName = "interface\kam_shipberthing.c";				// added after build 11
-		Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = "RESOURCE\INI\INTERFACES\kam_shipberthing.ini";		// added after build 11
+		Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_shipberthing.ini";		// added after build 11
 		Interfaces[INTERFACE_NEWS].SectionName = "interface\news.c";
-		Interfaces[INTERFACE_NEWS].IniFile = "RESOURCE\INI\INTERFACES\news.ini";
+		Interfaces[INTERFACE_NEWS].IniFile = GetResourceDirectory() + "INI\INTERFACES\news.ini";
 		Interfaces[INTERFACE_MONKEY].SectionName = "interface\monkey.c";
-		Interfaces[INTERFACE_MONKEY].IniFile = "RESOURCE\INI\INTERFACES\monkey.ini";
+		Interfaces[INTERFACE_MONKEY].IniFile = GetResourceDirectory() + "INI\INTERFACES\monkey.ini";
 	}
 // added by MAXIMUS <--
 
@@ -345,7 +345,7 @@ void Reinit(bool start, bool show)
 
 	if(start) ReloadProgressUpdate(); // NK 05-04-06 add the spinning thingie
 
-	// 04-12-5 this is making things worse curchar = CharacterFromID("Danielle"); curchar.alwaysload = true; LAi_LoginInCaptureTown(characterFromID("Danielle"),true); // NK 04-11-10 fix	
+	// 04-12-5 this is making things worse curchar = CharacterFromID("Danielle"); curchar.alwaysload = true; LAi_LoginInCaptureTown(characterFromID("Danielle"),true); // NK 04-11-10 fix
 
 	if (start) {
 // added by MAXIMUS -->
@@ -374,7 +374,7 @@ void Reinit(bool start, bool show)
 	// NK 05-04-06 itemtrade
 	Trace("Gauging: itrade update");
 	UpdateAllItemTraders(IT_CLEAN_REINIT); // will clean items and itemlists from all traders. Note this will take one heck of a long time!
-	
+
 	/*SetArraySize(&Interfaces, INTERFACE_QUANTITY);
 	if(LoadSegment("Interface\BaseInterface.c"))
 	{
@@ -384,7 +384,7 @@ void Reinit(bool start, bool show)
 		if(show) Log_SetStringToLog("Interfaces...");
 	}*/
 
-	
+
 
 	// swap between USE_REAL_CANNONS 1 and 0.
 	if(!start)
@@ -583,7 +583,7 @@ void Reinit(bool start, bool show)
 
 	FindBlankCharSlot(); // to set CHARACTERS_QUANTITY correctly, just to be sure.
 	FindBlankLocSlot(); // to set nLocationsNum correctly, just to be sure.
-	
+
 	/* hoboseadog section:
 	ref chr;
 	chr = CharacterFromID("Enc_Officer_0");

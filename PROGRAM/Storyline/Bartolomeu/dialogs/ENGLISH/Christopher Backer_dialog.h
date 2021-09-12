@@ -38,7 +38,7 @@ string DLG_TEXT[44] = {
 "NO, Please! I swear I tell the truth, he left to warn Charles about you!",
 "Dash it! I can't believe I'm going to lose Charles! Don't you have any idea who could help me? Think once more!",
 "I understand that Charles has worked for the #sisland_Turks#' pirate chief recently. Maybe, you could find more information there.",
-"Maybe. I found out that Charles was to meet FranÐ·ois L'Ollonais. Do you know if this French pirate also worked for the pirate chief?",
+"Maybe. I found out that Charles was to meet François L'Ollonais. Do you know if this French pirate also worked for the pirate chief?",
 "Yes, he did. But you should avoid meeting L'Ollonais. He's a 'wild beast', much more cruel and nasty than Charles.",
 "I know his reputation and I'm only interested in Charles. You can go but if I learn you lied, I'll come back to #sTortuga# and I'll kill you.",
 "I have told you all I know, I swear it!",

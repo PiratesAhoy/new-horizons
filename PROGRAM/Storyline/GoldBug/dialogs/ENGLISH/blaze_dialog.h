@@ -267,7 +267,7 @@ string DLG_TEXT[429] = {
 "(You see the port soldier)",
 "That's him again! Let's catch him!",
 "(Barbossa talking to his crew)", 
-"Gentlemen, the time has come! Our torment is nearing an end! For ten years we've been tested and tried. And each man here has moved his mettle a hundred times over and a hundred times again. Punished we were the lot of us, disproportionate to our crime. Here it is! The cursed treasure of CortÐ¹s himself. Every last piece that went astray we have returned. Save for this!",
+"Gentlemen, the time has come! Our torment is nearing an end! For ten years we've been tested and tried. And each man here has moved his mettle a hundred times over and a hundred times again. Punished we were the lot of us, disproportionate to our crime. Here it is! The cursed treasure of Cortés himself. Every last piece that went astray we have returned. Save for this!",
 "Maybe you are immortal, but I can still knock you out idiot! Now, I have to join my crew to invert the situation on my ship.",
 "Captain ",
 "You are accused for crimes against the Crown. Said crimes being numerous in quantity and sinister in nature. The most egregious of these to be cited herewith: piracy, smuggling, sailing under false colours, arson, kidnapping, looting, poaching, brigandage, pilfening, depravity, depredation and general lawlessness. For these crimes, you are sentenced to be hung by the neck until dead. May God have mercy on your soul.",
@@ -299,7 +299,7 @@ string DLG_TEXT[429] = {
 "Now let's do a more methodical -",
 "- investigation of the parchment.",
 "Now the skull is gone! Only my sketch of the beetle remains. Let me think:",	//299
-"When I drew the scarabÐ¶us there was no skull apparent upon the parchment. When I had completed the drawing I gave it to Mr Poe, and observed him narrowly until he returned it. He, therefore, did not design the skull, and no one else was present to do it. Then it was not done by human agency. And nevertheless it was done.",
+"When I drew the scarabæus there was no skull apparent upon the parchment. When I had completed the drawing I gave it to Mr Poe, and observed him narrowly until he returned it. He, therefore, did not design the skull, and no one else was present to do it. Then it was not done by human agency. And nevertheless it was done.",
 "The weather was chilly (oh rare and happy accident!) and a fire was blazing upon the hearth.",
 "I was heated with exercise and sat on the bed far from the fireplace. Mr Poe, however, had drawn a stool close to the chimney.",
 "When I consider all these particulars, I doubt not for a moment that heat has been the agent in bringing to light, upon the parchment, the skull which I saw designed upon it.",
@@ -396,12 +396,12 @@ string DLG_TEXT[429] = {
 "- but now I'm ready to join my friend William outside town.",
 "Jupiter, what are you doing?",
 "Are you out on the branch with the Skull yet?",
-"Well now, Jupiter, do exactly as I tell you â€” do you hear?",
+"Well now, Jupiter, do exactly as I tell you — do you hear?",
 "Yes, massa.",
-"Pay attention, then! â€” find the left eye of the skull.",
+"Pay attention, then! — find the left eye of the skull.",
 "Hum! hoo! dat's good! why dare aint no eye lef at all.",				//400
 "Curse your stupidity! do you know your right hand from your left?",
-"Yes, I nose dat â€” nose all bout dat â€” tis my lef hand what I chops de wood wid.",
+"Yes, I nose dat — nose all bout dat — tis my lef hand what I chops de wood wid.",
 "To be sure! you are left-handed and your left eye is on the same side as your left hand. 
 Now, I suppose, you can find the left eye of the skull, or the place where the left eye has been. Have you found it?",
 "---",											//404
@@ -409,13 +409,13 @@ Now, I suppose, you can find the left eye of the skull, or the place where the l
 "Six - seven feet down, yes massa.",
 "Are you ready Edgar, to mark the spot when I remove the GoldBug?",
 "Sure, I'll use one of the pegs I found in the Church.",				//408
-"You scoundrel, speak I tell you! â€” answer me this instant without prevarication! â€” which â€” which is your left eye?",
+"You scoundrel, speak I tell you! — answer me this instant without prevarication! — which — which is your left eye?",
 "Oh, my Golly, Massa Will! aint dis here my lef eye for sartain?",
-"I thought so! â€” I knew it! â€” hurrah!",
+"I thought so! — I knew it! — hurrah!",
 "Jupiter, was the skull nailed to the limb with the face outwards, or with the face to the limb?",
 "De face was to the limb massa.",
 "Well, then, was it this eye or that through which you dropped the beetle?",
-"Twas dis eye, massa â€” de lef eye â€” jis as you tell me.",
+"Twas dis eye, massa — de lef eye — jis as you tell me.",
 "Give me that Spade Jupiter.",
 "If you say so, massa Will.",
 "Jupiter, did you bring any Sacks from home?",
@@ -426,12 +426,12 @@ Now, I suppose, you can find the left eye of the skull, or the place where the l
 "This has been a very very long day -",
 "- let's all get some sleep now!",
 "There seems, however, only one plausible way of accounting for them
- â€” and yet it is dreadful to believe in such atrocity as my suggestion would imply. 
-It is clear that Kidd â€” if Kidd indeed secreted this treasure, which I doubt not â€” 
+ — and yet it is dreadful to believe in such atrocity as my suggestion would imply. 
+It is clear that Kidd — if Kidd indeed secreted this treasure, which I doubt not — 
 it is clear that he must have had assistance in the labor.",	//425
 "But, this labor concluded, he may have thought it expedient to remove all participants in his secret. 
 Perhaps a couple of blows with a mattock were sufficient, while his coadjutors were busy in the pit, 
-perhaps it required a dozen â€” who shall tell?",			//426
+perhaps it required a dozen — who shall tell?",			//426
 "I wonder if Lieutenant G knows anyhing about cipher -",
 "- this means absolutely nothing to me.",
 

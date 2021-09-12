@@ -8,12 +8,25 @@ native void LanguageSetLanguage(string sLanguageName);
 native string XI_ConvertString(string inStr);
 native int GlobalLngFileID();
 native string LanguageGetFaderPic(string faderPicName);
+native string DialogAssembleStr(string idStr, string paramStr);
+native string DialogAddParamToStr(string oldParamStr, string paramID, string paramValue);
 
 native void XI_SetColorCorrection(float fContrast, float fGamma, float fBrightness);
 native void XI_SetMouseSensitivity( float fMouseXSens, float fMouseYSens );
 native void XI_ControlMakeInvert(string sControlName, int bInvertState);
 
-#libriary "script_interface_functions"
+native void XI_MakeNode(string sIniFileName, string sNodeType, string sNodeName, int nPriority);
+native void XI_DeleteNode(string sNodeName);
+native bool XI_IsWindowEnable(string sWindowName);
+native void XI_WindowShow(string sWindowName, int bShowStatus);
+native void XI_WindowDisable(string sWindowName, int bDisableStatus);
+native void XI_WindowAddNode(string sWindowName, string sNodeName);
+native int XI_StoreNodeLocksWithOff();
+native void XI_RestoreNodeLocks(int nStoreCode);
+native bool XI_IsKeyPressed(string key_name); // key_name = {"shift","control","alt"}
+native void XI_RegistryExitKey(string key_name);
+
+#library "script_interface_functions"
 
 // KK -->
 #define TOOLTIP_FADER                   "Fader"
@@ -600,7 +613,6 @@ void CreateStringCheckCase(int enable, string strName, string strData, string st
 	}
 	CreateString(enable,strName,strAlfa,strFont,color,x,y,alignment,scale);
 }
-
 string StringCheckCase(string strData, string strFont, bool bTranslated)
 {
 	string strAlfa = "";
@@ -632,18 +644,16 @@ void SetMainCharacterName(string newName)
 
 	if (CheckAttribute(mChr, "name")) mChr.name = GetTranslatedStoryLine(idx, mChr.name);
 	if (CheckAttribute(mChr, "middlename")) mChr.middlename = GetTranslatedStoryLine(idx, mChr.middlename);
-	if (CheckAttribute(mChr, "lastname")) mChr.lastname = GetTranslatedStoryLine(idx, mChr.lastname);
-}
-// MAXIMUS 30.06.2019: <==
+	if (CheckAttribute(mChr, "lastname")) mChr.lastname = GetTranslatedStoryLine(idx, mChr.lastname);}
 
 void SetCharacterName(ref chr, string newName)
 {
 	chr.name = "";
-//	chr.old.name = "";
+	chr.old.name = "";
 	chr.middlename = "";
-//	chr.old.middlename = "";
+	chr.old.middlename = "";
 	chr.lastname = "";
-//	chr.old.lastname = "";
+	chr.old.lastname = "";
 	bool bNamed = CheckAttribute(chr, "named");
 
 	string part1 = "";
@@ -661,7 +671,7 @@ void SetCharacterName(ref chr, string newName)
 	newName = part2;
 	while (DivideString(newName, " ", &part1, &part2)) {
 		if (part1 == "de" || part1 == "van" || part1 == "da" || part1 == "la" || part1 == "di" || part1 == "o" || part1 == "von") break;
-		if (chr.middlename == "") chr.middlename = part1;
+			if (chr.middlename == "") chr.middlename = part1;
 		else chr.middlename = chr.middlename + " " + part1;
 		
 		if(strcut(chr.middlename,0,0)==" ") chr.middlename = strRight(chr.middlename,strlen(chr.middlename)-1); //MAXIMUS: fix for some names, which somehow have space before first letter
@@ -671,7 +681,7 @@ void SetCharacterName(ref chr, string newName)
 	chr.lastname = newName;
 	if(strcut(chr.lastname,0,0)==" ") chr.lastname = strRight(chr.lastname,strlen(chr.lastname)-1); //MAXIMUS: fix for some names, which somehow have space before first letter
 	if(!bNamed) chr.old.lastname = chr.lastname;
-	if (CheckAttribute(chr, "middlename") == true && chr.middlename == "") {
+		if (CheckAttribute(chr, "middlename") == true && chr.middlename == "") {
 		DeleteAttribute(chr, "middlename");
 		if (CheckAttribute(chr, "old.middlename")) DeleteAttribute(chr, "old.middlename");
 	}

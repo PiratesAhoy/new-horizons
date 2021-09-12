@@ -42,7 +42,7 @@ void RegisterStoryline(int n)
 	{
 		// default:
 			sl.(sn).title = "The Gold-Bug";
-			sl.(sn).description = "'What ho! What ho! This fellow is dancing mad! He hath been bitten by the Tarantula.'                        All in the Wrong.";
+			sl.(sn).description = "'What ho! What ho! This fellow is dancing mad! He hath been bitten by the Tarantula.' All in the Wrong.";
 			break;
 	}
 	AddStorylineVar(n, "ISLA_DE_MUERTE", "-1");		// PB: No curse in effect and cannot freely visit Isla de Muerte

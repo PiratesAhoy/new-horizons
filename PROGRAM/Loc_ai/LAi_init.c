@@ -47,7 +47,7 @@ void LocAi_Init(ref loc)
 	SetEventHandler("Location_CharacterFightGo", "LAi_CharacterFightGo", 0);
 	SetEventHandler("Location_CharacterFightStay", "LAi_CharacterFightStay", 0);
 	SetEventHandler("Location_CharacterAttack", "LAi_CharacterAttack", 0);
-	SetEventHandler("Location_CharacterBlock", "LAi_CharacterBlock", 0);
+	/* SetEventHandler("Location_CharacterBlock", "LAi_CharacterBlock", 0); */
 	SetEventHandler("Location_CharacterFire", "LAi_CharacterFire", 0);
 	SetEventHandler("Location_CharacterIsFire", "LAi_CharacterIsFire", 0);
 	SetEventHandler("Location_CharacterIsFight", "LAi_CharacterIsFight", 0);
@@ -403,7 +403,7 @@ void LocAi_Release()
 	DelEventHandler("Location_CharacterFightGo", "LAi_CharacterFightGo");
 	DelEventHandler("Location_CharacterFightStay", "LAi_CharacterFightStay");
 	DelEventHandler("Location_CharacterAttack", "LAi_CharacterAttack");
-	DelEventHandler("Location_CharacterBlock", "LAi_CharacterBlock");
+	/* DelEventHandler("Location_CharacterBlock", "LAi_CharacterBlock"); */
 	DelEventHandler("Location_CharacterFire", "LAi_CharacterFire");
 	DelEventHandler("Location_CharacterIsFire", "LAi_CharacterIsFire");
 	DelEventHandler("Location_CharacterIsFight", "LAi_CharacterIsFight");

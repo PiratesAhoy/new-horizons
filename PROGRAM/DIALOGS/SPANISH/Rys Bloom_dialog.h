@@ -95,7 +95,7 @@ string DLG_TEXT[173] = {
 "!",
 "Entonces comparte tu experiencia conmigo.",
 "Hmm, bueno, esta bien, te vere mas tarde.",
-"Apenas puedo darte un Consejo sobre navegacion o maniobras ya que no soy un oficial. \n Pero en cuanto a algunas otras cosas –ÉEestare encantado de ayudarle.",
+"Apenas puedo darte un Consejo sobre navegacion o maniobras ya que no soy un oficial. \n Pero en cuanto a algunas otras cosas ÅEestare encantado de ayudarle.",
 "Perfecto. ?Que puede decirme sobre lo que el capitan debe saber?",
 "Como debo tratar a mi tripulacion?",
 "Que tal un par de consejos de marineros?",

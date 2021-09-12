@@ -247,7 +247,7 @@ void ProcessCancelExit()
 		{
 			if(GetCrewQuantity(refEnemyCharacter) < GetMinCrewQuantity(refEnemyCharacter) && GetCrewQuantity(refMyCharacter) > GetMinCrewQuantity(refMyCharacter)) // changed by MAXIMUS
 			{
-				PlaySound("interface\knock.wav");
+				PlaySound("knock");
 				GameInterface.strings.Mincrewwarn = LanguageConvertString(tmpLangFileID,"Not enough crew assigned");
 				return;
 			}

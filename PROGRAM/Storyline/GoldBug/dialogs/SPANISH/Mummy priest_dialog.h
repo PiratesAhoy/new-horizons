@@ -1,10 +1,10 @@
 string DLG_TEXT[6] = {
-"La llave estÐ± en la caja de colecta.",
-"ÐŽAjÐ±!",
-"Ñ—Has buscado en el armario del altar?",
-"Ñ—Algo en el altar?",
-"Caroline K se olvidÑƒ su cesta el domingo pasado.",
-"Ñ—Ñ—QuÐ¹??",
+"La llave está en la caja de colecta.",
+"¡Ajá!",
+"¿Has buscado en el armario del altar?",
+"¿Algo en el altar?",
+"Caroline K se olvidó su cesta el domingo pasado.",
+"¿¿Qué??",
 
 
 };

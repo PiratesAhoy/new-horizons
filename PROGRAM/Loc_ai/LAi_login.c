@@ -114,6 +114,7 @@ bool LAi_CharacterLogin(aref chr, string locID)
 	{
 		chr.chr_ai.charge = LAI_DEFAULT_CHARGE;
 	}
+	SetEnergyToCharacter(chr);  // boal
 	//Проверяем хитпойнты
 	float hp = stf(chr.chr_ai.hp);
 	float hpmax = stf(chr.chr_ai.hp_max);
@@ -211,7 +212,7 @@ bool LAi_CharacterLogoff(aref chr)
 	// LDH --> moved from below Aug29'06
 	if(!CheckAttribute(chr, "index")) {
 		Trace("Warning: Invalid character index in LAi_CharacterLogoff(), function returned false");
-		return false; 
+		return false;
 	}
 	// LDH <--
 	// NK handle stunned character logoffs for use in next logon 05-07-12
@@ -225,7 +226,7 @@ bool LAi_CharacterLogoff(aref chr)
 		}
 	}
 	// NK <--
-	chr.chr_ai.login = false;	
+	chr.chr_ai.login = false;
 	if(LAi_CheckCharacter(chr, "LAi_CharacterLogoff") == false) return false; // LDH - moved above
 	LAi_DelLoginedCharacter(chr);
 	string func = chr.chr_ai.type;
@@ -256,7 +257,7 @@ void LAi_DelLoginedCharacter(aref chr)
 		{
 			LAi_loginedcharacters[i] = LAi_loginedcharacters[LAi_numloginedcharacters - 1];
 			LAi_numloginedcharacters = LAi_numloginedcharacters - 1;
-		}		
+		}
 	}
 	if(LAi_numloginedcharacters < 0) LAi_numloginedcharacters = 0;
 }

@@ -1,116 +1,79 @@
-// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-{=====| Hornblower.c |=====}
-Horatio{Horatio}
-Hornblower{Hornblower}
-
-{=====| StartStoryline.c |=====}
-
-{=====| quests_reaction.c |=====}
-Jack{Jack}
-Hammond{Hammond}
-Lt. William{Lt. William}
-Bush{Bush}
-Thomas{Thomas}
-Wolfe{Wolfe}
-Matthews{Matthews}
-Lt.{Lt.}
-Chadd{Chadd}
-
-{=====| Story.c |=====}
+Captain{Captain}
 Keene{Keene}
-Edward{Edward}
+Sir Edward{Sir Edward}
 Pellew{Pellew}
-Dreadnought{Dreadnought}
-Foster{Foster}
-Black Charlie{Black Charlie}
-Harvey{Harvey}
-Simpson{Simpson}
 Clayton{Clayton}
-Hunter{Hunter}
-Henry{Henry}
-Wellard{Wellard}
+Jack{Jack}
+Simpson{Simpson}
 Helmsman{Helmsman}
-Styles{Styles}
-Perrin{Perrin}
-Oldroyd{Oldroyd}
-Marsh{Marsh}
-Eccleston{Eccleston}
-Smug{Smug}
-Larr{Larr}
-Big{Big}
-Bryan{Bryan}
+Lt. Alan{Lt. Alan}
+Smithee{Smithee}
 James{James}
 Sawyer{Sawyer}
-Percy{Percy}
+Lt. William{Lt. William}
+Bush{Bush}
+Lt. Percy{Lt. Percy}
 Buckland{Buckland}
-Ebeneezer{Ebeneezer}
-Bracegirdle{Bracegirdle}
-William{William}
-Uriah{Uriah}
-Quelp{Quelp}
-The Earl of{The Earl of}
-Edrington{Edrington}
-Arthur{Arthur}
+Captain James{Captain James}
+Sawyer{Sawyer}
+Captain Horatio{Captain Horatio}
+Nelson{Nelson}
+Lady Barbara{Lady Barbara}
 Wellesley{Wellesley}
-Chumley{Chumley}
-Barbara{Barbara}
-Maria{Maria}
-Mason{Mason}
+Sir Hew{Sir Hew}
+Dalrymple{Dalrymple}
+Lt.{Lt.}
+Chadd{Chadd}
+Eccleston{Eccleston}
 The Duchess of{The Duchess of}
 Wharfedale{Wharfedale}
-Teresa{Teresa}
-Moreno{Moreno}
-Etienne{Etienne}
-de Vergasse{de Vergasse}
 Archie{Archie}
 Kennedy{Kennedy}
-Clive{Clive}
+Rifleman{Rifleman}
+Cooper{Cooper}
+Haggman{Haggman}
+Higgins{Higgins}
+Uriah{Uriah}
+Quelp{Quelp}
 Don{Don}
 Masseredo{Masseredo}
-Francisco Manuel{Francisco Manuel}
-Ortega{Ortega}
 Richard{Richard}
 Sharpe{Sharpe}
 Patrick{Patrick}
 Harper{Harper}
-Higgins{Higgins}
-Cooper{Cooper}
-Haggman{Haggman}
+Midshipman{Midshipman}
+Hunter{Hunter}
+Smug{Smug}
+Larr{Larr}
+Big{Big}
+Bryan{Bryan}
+Arthur{Arthur}
+Matthews{Matthews}
+Styles{Styles}
+French{French}
+Crewman{Crewman}
+Perrin{Perrin}
 Harris{Harris}
-Tanner{Tanner}
-Baker{Baker}
-Fisher{Fisher}
-Williams{Williams}
-Norton{Norton}
-Brown{Brown}
-Evans{Evans}
-Archer{Archer}
 Tongue{Tongue}
+Etienne{Etienne}
+de Vergasse{de Vergasse}
+Oldroyd{Oldroyd}
+Marsh{Marsh}
 Mansfield{Mansfield}
-Perkins{Perkins}
-Dunnitt{Dunnitt}
-Hogan{Hogan}
-Murray{Murray}
-Hew{Hew}
-Dalrymple{Dalrymple}
-Wilks{Wilks}
-Tompkins{Tompkins}
-Stanley{Stanley}
-Hughes{Hughes}
-Guerilla{Guerilla}
-One{One}
-Two{Two}
-Three{Three}
+William{William}
+Chumley{Chumley}
+Dreadnought{Dreadnought}
+Foster{Foster}
+Black Charlie{Black Charlie}
+Hammond{Hammond}
+Lieutenant{Lieutenant}
+Bracegirdle{Bracegirdle}
+Francisco Manuel{Francisco Manuel}
+Ortega{Ortega}
+Arthur{Arthur}
+Wellard{Wellard}
+Doctor{Doctor}
+Clive{Clive}
+Henry{Henry}
 Donatien{Donatien}
 Thibaud{Thibaud}
-
-{=====| TempQuest.c |=====}
-Captain{Captain}
-Simon{Simon}
-Blunden{Blunden}
-Cecil Scott{Cecil Scott}
-Forester{Forester}
-Capitaine{Capitaine}
-de Corvette{de Corvette}
-
-{=====| 86 characters |=====}

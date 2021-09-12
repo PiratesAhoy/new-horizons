@@ -18,12 +18,12 @@ void ProcessDialogEvent()
 	string Ami;
 	if(PChar.sex == "woman")
 	{
-		Frere = "ma sњur";
+		Frere = "ma sœur";
 		Ami = "m'amie";
 	}
 	else
 	{
-		Frere = "mon frйre";
+		Frere = "mon frére";
 		Ami = "mon ami";
 	}
 	Preprocessor_Add("smarmy", Frere); 

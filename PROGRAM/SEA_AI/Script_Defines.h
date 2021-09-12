@@ -25,43 +25,49 @@
 #define BALL_WATER_HIT				"Ball_WaterHit"
 #define BALL_ISLAND_HIT				"Ball_IslandHit"
 #define BALL_FLY_UPDATE				"Ball_FlyUpdate"
+#define BALL_FLY_NEAR_CAMERA		"Bll_FlyNCam"
 
-// KK -->
 // Group section
-#define PLAYER_GROUP      			"OurGroup"
-#define SURR_GROUP        			"surrendered"
-#define MUTINY_GROUP      			"Mutineers"
-
 #define GROUP_CHECKTASKEVENT		"GrpChkTsk"
-// <-- KK
+//#20181103-02
+#define GROUP_REMOVEEVENT			"GrpRemovedEvt"
+#define GROUP_CMDCHGEVENT			"GrpCmdChgEvt"
 
 // Ship section
-#define SHIP_DEAD					"ShpDead"
-#define SHIP_CREATE					"ShpCreate"
-#define SHIP_DELETE					"ShpDelete"
-#define SHIP_FIRE_DAMAGE			"ShpFDamage"
-#define SHIP_TO_STRAND				"Shp2Strand"
-#define SHIP_TO_STRAND_NEXT			"Shp2StrandNext"
-#define SHIP_MAST_DAMAGE			"ShpMastDamage"
-#define SHIP_SAIL_DAMAGE			"ShpSailDamage"
-#define SHIP_HULL_HIT				"Shp_HullHit"
-#define SHIP_SHIP2ISLAND_COLLISION	"Shp_ShipIslColl"
-#define SHIP_SHIP2SHIP_COLLISION	"Shp_Ship2ShipColl"
-#define SHIP_GET_CURRENT_BALLS_NUM	"Shp_GetCurBallsNum"
-#define SHIP_NOT_ENOUGH_BALLS		"Shp_NotEnoughBalls"
-#define SHIP_CHECK_SITUATION		"Shp_ChkSituation"
-#define SHIP_UPDATE_PARAMETERS		"Shp_UpdParams"
-#define SHIP_CHANGE_CHARGE			"ShpChCharge"
-#define SHIP_CHECK_RELOAD_ENABLE	"ShpChkReloadEnable"
-#define SHIP_FIRE_ACTION			"ShpFireAction"
-#define SHIP_EAT_SWIM_GOOD			"ShpEatSwimGood"
-#define SHIP_GET_BORT_FIRE_DELTA	"ShpGetBortFireDelta"
-#define SHIP_BRANDER_DETONATE		"ShpBrndrBoom"
-#define SHIP_ACTIVATE_FIRE_PLACE	"ShpActFirePlace"
+#define SHIP_DEAD						"ShpDead"
+#define SHIP_CREATE						"ShpCreate"
+#define SHIP_DELETE						"ShpDelete"
+#define SHIP_FIRE_DAMAGE				"ShpFDamage"
+#define SHIP_TO_STRAND					"Shp2Strand"
+#define SHIP_TO_STRAND_NEXT				"Shp2StrandNext"
+#define SHIP_MAST_DAMAGE				"ShpMastDamage"
+#define SHIP_SAIL_DAMAGE				"ShpSailDamage"
+#define SHIP_HULL_HIT					"Shp_HullHit"
+#define SHIP_SHIP2ISLAND_COLLISION		"Shp_ShipIslColl"
+#define SHIP_SHIP2SHIP_COLLISION		"Shp_Ship2ShipColl"
+#define SHIP_GET_CURRENT_BALLS_NUM		"Shp_GetCurBallsNum"
+#define SHIP_NOT_ENOUGH_BALLS			"Shp_NotEnoughBalls"
+#define SHIP_CHECK_SITUATION			"Shp_ChkSituation"
+#define SHIP_UPDATE_PARAMETERS			"Shp_UpdParams"
+#define SHIP_CHANGE_CHARGE				"ShpChCharge"
+#define SHIP_CHECK_RELOAD_ENABLE		"ShpChkReloadEnable"
+#define SHIP_FIRE_ACTION				"ShpFireAction"
+#define SHIP_EAT_SWIM_GOOD				"ShpEatSwimGood"
+#define SHIP_GET_BORT_FIRE_DELTA		"ShpGetBortFireDelta"
+#define SHIP_BRANDER_DETONATE			"ShpBrndrBoom"
+#define SHIP_ACTIVATE_FIRE_PLACE		"ShpActFirePlace"
+#define SHIP_CREATELOADSHIP				"Shp_LoadShp"
+#define SHIP_LOAD_SHIPACTIVATEFIREPLACE	"Shp_LoadActFirePlace"
+#define SHIP_DROP_GOOD					"Shp_DropGoodsToSea"
+#define SHIP_GET_RUNAWAY_POINT			"Shp_GetRunawayPnt"
+#define SHIP_BORT_RELOADED				"Shp_BortReloaded"
+#define SHIP_TASK_COMPLETE				"Shp_TaskComplete"
+//#20210726-01
+#define SHIP_TASK_CHANGE				"Shp_TaskChange"
 
 #define SHIP_MAST_TOUCH_ISLAND		0
 #define SHIP_MAST_TOUCH_SHIP		1
-#define SHIP_MAST_TOUCH_BALL		2 // Walker
+#define SHIP_MAST_TOUCH_BALL		2
 
 // Fort Section
 #define FORT_NORMAL					0
@@ -69,14 +75,12 @@
 #define FORT_DEAD					2
 
 #define SHIP_ABORDAGE				3
-
-// KK -->
 #define TOWN_ABORDAGE				4
-// <-- KK
 
 #define FORT_CREATE					"FortCreate"
 #define FORT_DELETE					"FortDelete"
 #define FORT_CANNON_DAMAGE			"FortCDamage"
+#define FORT_LOADDMGCANNON		"FortLdDmgCann"
 
 // Cannon Section
 #define CANNON_RECALCULATE_PARAMETERS	"CannReCaclParam"
@@ -86,14 +90,18 @@
 #define CANNON_GET_FIRE_HEIGHT			"CannGFHeight"
 #define CANNON_UNLOAD					"CannUnload"
 #define CANNON_LOAD						"CannLoad"
+#define CANNON_DAMAGE					"CannDamage"
 
 // AI Section
 
 // Nation section
-#define RELATION_UNKNOWN		-1
+//Boyer fix #20170318-46
+//#define RELATION_UNKNOWN		-1
+#define RELATION_UNKNOWN		4
 #define RELATION_FRIEND			0
 #define RELATION_NEUTRAL		1
 #define RELATION_ENEMY			2
+#define RELATION_ALLIANCE		3
 
 #define AI_ALL					10000
 #define AI_SELECT				10010
@@ -129,6 +137,10 @@
 #define AITASK_RUNAWAY			6
 #define	AITASK_MOVE				7
 #define	AITASK_BRANDER			8
+//#20190313-01
+#define AITASK_ABORDAGE_MULTI	9
+//#20210731-03
+#define AITASK_DRIFT_WATCH		15
 
 // define AI tasks priority
 #define PRIMARY_TASK			0
@@ -163,5 +175,37 @@
 #define AI_MESSAGE_CHARACTER_DEAD					51026
 #define AI_MESSAGE_GET_RELATION						51027
 #define AI_MESSAGE_SET_COMPANION_ENEMY				51028
+#define AI_MESSAGE_CANNONS_BOOM_CHECK				51040
+#define AI_MESSAGE_CANNONS_PARAMS					51041
+#define AI_MESSAGE_SEASAVE							51042
+#define AI_MESSAGE_SEALOAD							51043
+#define AI_MESSAGE_FORT_SET_LIGHTS					51044
+#define AI_MESSAGE_FORT_UNSET_LIGHTS				51045
+#define AI_MESSAGE_RESEARCH_CANNONS					51050  // SendMessage(&AISea, "la", AI_MESSAGE_RESEARCH_CANNONS, aCharacter)
+//#20181027-02
+#define AI_MESSAGE_FORT_RESETISLAND					51055
+//#20181102-02
+#define AI_MESSAGE_CHARACTER_REMOVE					51060
+#define AI_MESSAGE_GROUP_GET_COMMANDER				51065
+//#20190701-01
+#define AI_MESSAGE_GROUP_GET_POWERABS				51066
+#define AI_MESSAGE_GROUP_GET_POWERREL				51067
+#define AI_MESSAGE_GROUP_GET_POWERGRP				51068
+#define AI_MESSAGE_GROUP_FIND_CLOSE					51069
+//#20190210-01
+#define AI_MESSAGE_RESET_CAMERAS_ATTRIBUTE			51070
+
+//#20180112-01 Group mod for multiple squadron lines
+#define AI_MESSAGE_GROUP_SET_LINES					51080
+//#20181027-02
+#define AI_MESSAGE_GROUP_ADJ_XYZ_AY					51081
+//#20200311-01
+#define AI_MESSAGE_POSITION_SWAP					52000
+
+// cameras
+#define AI_CAMERAS_ADD_CAMERA					55000
+#define AI_CAMERAS_SET_CAMERA					55001
+//#20181027-02
+#define AI_CAMERAS_RESETISLAND					55010
 
 #endif

@@ -1,14 +1,12 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-{=====| Ardent.c |=====}
+
 Charles{Charles}
 Ardent{Ardent}
 
-{=====| StartStoryline.c |=====}
 William{William}
 McMurrough{McMurrough}
 O'Brien{O'Brien}
 
-{=====| quests_reaction.c |=====}
 de la Vega{de la Vega}
 Two Dogs{Two Dogs}
 Fighting{Fighting}
@@ -20,7 +18,6 @@ Cardinal{Cardinal}
 Ximinez{Ximinez}
 Fang{Fang}
 
-{=====| Story.c |=====}
 Indian Warrior{Indian Warrior}
 Louwe{Louwe}
 Louwman{Louwman}
@@ -47,7 +44,6 @@ Gilbert{Gilbert}
 Emmett{Emmett}
 Dawson{Dawson}
 
-{=====| TempQuest.c |=====}
 Inquisitor{Inquisitor}
 Monkey{Monkey}
 Crescent Moon{Crescent Moon}
@@ -87,7 +83,6 @@ Maria{Maria}
 Antonia{Antonia}
 of Austria{of Austria}
 
-{=====| TempQuestEnemy.c |=====}
 Guard{Guard}
 1{1}
 2{2}
@@ -149,7 +144,4 @@ de Guzmán{de Guzmán}
 Gilles{Gilles}
 Clouzot{Clouzot}
 
-{=====| 90 characters |=====}
-
-{=====| Other |=====}
 Helen{Helen}

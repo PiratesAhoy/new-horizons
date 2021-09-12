@@ -383,7 +383,7 @@ void ProcessChangeLeft()
 	{
 		if(GetCrewQuantity(refEnemyCharacter) <= GetMinCrewQuantity(refEnemyCharacter))
 		{
-			PlaySound("interface\knock.wav");
+			PlaySound("knock");
 			GameInterface.strings.Mincrewwarn = LanguageConvertString(tmpLangFileID,"Not enough crew assigned"); // MAXIMUS
 			return;
 		}
@@ -399,7 +399,7 @@ void ProcessChangeLeft()
 					  GetMinCrewQuantity(xi_refCharacter) + GetMinCrewQuantity(refEnemyCharacter)
 				)
 			{
-//				PlaySound("interface\knock.wav");		// LDH 29Sep06 removed this awful noise
+//				PlaySound("knock");		// LDH 29Sep06 removed this awful noise
 				GameInterface.strings.Mincrewwarn = LanguageConvertString(tmpLangFileID,"Min crew reached"); // MAXIMUS
 				return;
 			}
@@ -426,7 +426,7 @@ void ProcessChangeRight()
 	if(GetCrewQuantity(xi_refCharacter) <= GetMinCrewQuantity(xi_refCharacter))
 	{
 	    int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
-//		PlaySound("interface\knock.wav");		// LDH 29Sep06 removed this awful noise
+//		PlaySound("knock");		// LDH 29Sep06 removed this awful noise
 		GameInterface.strings.Mincrewwarn = LanguageConvertString(tmpLangFileID,"Min crew reached"); // MAXIMUS
 		return;
 	}

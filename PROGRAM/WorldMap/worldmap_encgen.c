@@ -64,6 +64,7 @@ void wdmStormGen(float dltTime, float playerShipX, float playerShipZ, float play
 void wdmShipEncounter(float dltTime, float playerShipX, float playerShipZ, float playerShipAY)
 {
 	int numShips = wdmGetNumberShipEncounters();
+
 	if(numShips < 5)
 	{
 		rand(1001);
@@ -85,7 +86,7 @@ void wdmShipEncounter(float dltTime, float playerShipX, float playerShipZ, float
 			wdmTimeOfLastMerchant = 0.0;
 			if(GenerateMapEncounter(WDM_ETYPE_MERCHANT, wdmGetCurrentIsland(), &i1, &i2) == false) return;
 //NK -->
-			wdmCreateMerchantShip(i1, "", rand(50) - 50);
+			wdmCreateMerchantShip(wdmGetCurrentIsland(), rand(50) - 50);
 // NK <--
 		}else{
 			if(encoff == false)
@@ -94,7 +95,7 @@ void wdmShipEncounter(float dltTime, float playerShipX, float playerShipZ, float
 				{
 					wdmTimeOfLastWarring = 0.0;
 					if(GenerateMapEncounter(WDM_ETYPE_WARRING, wdmGetCurrentIsland(), &i1, &i2) == false) return;
-					wdmCreateWarringShips(i1, i2);
+					wdmCreateWarringShips(wdmGetCurrentIsland());
 				}else{
 					if(rand(1001) + 1 < wdmTimeOfLastFollow)
 					{
@@ -139,6 +140,37 @@ bool wdmTornadoGenerator()
 	int r = rand(1000);
 	if(r == 0) return false;
 	return r < 450;
+}
+
+#event_handler("Map_TraderSucces", "Map_TraderSucces");
+#event_handler("Map_WarriorEnd", "Map_WarriorEnd");
+
+void Map_WarriorEnd()
+{
+    ref mc = GetMainCharacter();
+	if(!CheckAttribute(mc, "worldmap.shipcounter"))
+	{
+		return;
+	}
+	mc.worldmap.shipcounter = sti(mc.worldmap.shipcounter) - 1;
+	if(sti(mc.worldmap.shipcounter) < 0)
+	{
+		sti(mc.worldmap.shipcounter) = 0;
+	}
+}
+void Map_TraderSucces()
+{
+    ref mc = GetMainCharacter();
+	if(!CheckAttribute(mc, "worldmap.shipcounter"))
+	{
+		return;
+	}
+	mc.worldmap.shipcounter = sti(mc.worldmap.shipcounter) - 1;
+	if(sti(mc.worldmap.shipcounter) < 0)
+	{
+		mc.worldmap.shipcounter = 0;
+	}
+	string sChar = GetEventData();
 }
 
 

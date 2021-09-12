@@ -79,7 +79,7 @@ void LAi_ChrSnd_Attack()
 					case 4 : sname = "man_attack_dut";break;
 					case 5 : sname = "man_attack";break;
 				}
-				if(rand(10) < 7) LAi_CharacterPlaySound(chr, sname);
+				if(rand(10) < 1) LAi_CharacterPlaySound(chr, sname);
 				else LAi_CharacterPlaySound(chr, "man_attack");
 			break;
 		case "woman":

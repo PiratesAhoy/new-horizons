@@ -263,7 +263,7 @@ string GetNationIDByType(int iNationType)
 {
 	string retText = InvalidNation(iNationType);
 	if (retText != "")	return retText;
-	
+
 	ref rNation = GetNationByType(iNationType);
 	return rNation.id;
 }
@@ -283,7 +283,7 @@ string GetNationNameByType(int iNationType)
 {
 	string retText = InvalidNation(iNationType);
 	if (retText != "")	return retText;
-	
+
 	ref rNation = GetNationByType(iNationType);
 	return rNation.Name;
 }
@@ -293,7 +293,7 @@ string GetNationOfficialNameByType(int iNationType)
 {
 	string retText = InvalidNation(iNationType);
 	if (retText != "")	return retText;
-	
+
 	string stmp = GetNationIDByType(iNationType);
 	ref rPeriod; makeref(rPeriod, Periods[GetCurrentPeriod()]);
 	if (CheckAttribute(rPeriod, "Nations.OfficialName." + stmp)) return rPeriod.Nations.OfficialName.(stmp);
@@ -315,7 +315,7 @@ string GetNationDescByType(int iNationType)
 {
 	string retText = InvalidNation(iNationType);
 	if (retText != "")	return retText;
-	
+
 	ref rNation = GetNationByType(iNationType);
 	return rNation.Desc;
 }
@@ -331,7 +331,7 @@ string GetNationRoyalByType(int iNationType)
 	sRet = "";
 
 	int tmpRoyalFileID = -1; // MAXIMUS 14.08.2019: changes for translation
-	if(FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "periods_strings.txt") != "") tmpRoyalFileID = LanguageOpenFile("periods_strings.txt"); // MAXIMUS 14.08.2019: changes for translation
+	if(FindFile(GetResourceDirectory() + "INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "periods_strings.txt") != "") tmpRoyalFileID = LanguageOpenFile("periods_strings.txt"); // MAXIMUS 14.08.2019: changes for translation
 
 	if (iNationType >= 0 && iNationType < NATIONS_QUANTITY)	// LDH fix for iNationType < 0
 	{
@@ -342,7 +342,7 @@ string GetNationRoyalByType(int iNationType)
 		}
 		if (CheckAttribute(rPeriod, "Royal." + sNation + ".Name"))
 		{
-			if(sRet == "")	
+			if(sRet == "")
 			{
 				sRet  =       rPeriod.Royal.(sNation).Name;
 				if(tmpRoyalFileID!=-1) sRet = LanguageConvertString(tmpRoyalFileID, sRet); // MAXIMUS 14.08.2019: changes for translation
@@ -717,7 +717,7 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 				{
 					relChange = rel  -  REL_WAR + 1;														// You may immediately become HOSTILE with this nation!
 					if (makeint(rel) <= REL_WAR)								relChange = fPoints;		// They are already hostile, so just subtract the number
-					else																					// You were friendly with them before, bastard!	
+					else																					// You were friendly with them before, bastard!
 					{
 						if (i == PIRATE)										relChange = fPoints;		// The pirates aren't too concerned with you attacking other pirates
 						else {if (iActOfPiracy > 0)								iActOfPiracy += relChange;}	// You had no legal reason for this attack, TRAITOR!
@@ -927,7 +927,7 @@ void SetRelationsAsNation(int iNation)
 	{
 		for (i = 0; i < NATIONS_QUANTITY; i++)
 		{
-			if (i == PIRATE && iNation != PIRATE)	SetRMRelation(PChar, i, (REL_WAR + REL_MIN)/2);	
+			if (i == PIRATE && iNation != PIRATE)	SetRMRelation(PChar, i, (REL_WAR + REL_MIN)/2);
 			else									SetRMRelation(PChar, i, RelationToRMRelation(GetNationRelation(iNation, i)) );
 		}
 	}
@@ -1406,7 +1406,7 @@ void InitGroups()
 	LAi_group_SetLookRadius("SWEDEN_CITIZENS", LAI_GROUP_DEF_LOOK);
 	LAi_group_SetHearRadius("SWEDEN_CITIZENS", LAI_GROUP_DEF_HEAR);
 	LAi_group_SetSayRadius("SWEDEN_CITIZENS", LAI_GROUP_DEF_SAY);
-	
+
 	LAi_group_SetAlarmReaction("AMERICA_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY, LAI_GROUP_FRIEND);
 	LAi_group_SetRelation("AMERICA_CITIZENS", "AMERICA_SOLDIERS", LAI_GROUP_FRIEND);
 	LAi_group_SetRelation("AMERICA_SOLDIERS", "AMERICA_SOLDIERS", LAI_GROUP_FRIEND);

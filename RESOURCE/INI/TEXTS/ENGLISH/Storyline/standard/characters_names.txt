@@ -1,13 +1,8 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-{=====| standard.c |=====}
+
 Nathaniel{Nathaniel}
 Hawk{Hawk}
 
-{=====| StartStoryline.c |=====}
-
-{=====| quests_reaction.c |=====}
-
-{=====| Officers.c |=====}
 Danielle{Danielle}
 Greene{Greene}
 Ralph{Ralph}
@@ -20,7 +15,6 @@ Drago{Drago}
 Gervasio{Gervasio}
 Serrao{Serrao}
 
-{=====| Story.c |=====}
 Vincent{Vincent}
 Bethune{Bethune}
 Waulter{Waulter}
@@ -86,7 +80,6 @@ Robert{Robert}
 Christopher{Christopher}
 Silehard{Silehard}
 
-{=====| TempQuest.c |=====}
 Bythesea{Bythesea}
 Harold{Harold}
 Barrat{Barrat}
@@ -102,7 +95,6 @@ Soldier{Soldier}
 Ragetti{Ragetti}
 Pintel{Pintel}
 
-{=====| TempQuestEnemy.c |=====}
 Captain{Captain}
 Kalen{Kalen}
 Mottram{Mottram}
@@ -138,5 +130,3 @@ Stephan{Stephan}
 Bonser{Bonser}
 Oswald{Oswald}
 Chappel{Chappel}
-
-{=====| 123 characters |=====}

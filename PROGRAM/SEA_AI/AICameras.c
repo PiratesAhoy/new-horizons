@@ -40,11 +40,11 @@ void CreateSeaCamerasEnvironment()
 	SeaShipCamera.SensivityAzimuthAngle = 0.04;
 	SeaShipCamera.MaxAngleX = 0.2;
 	SeaShipCamera.MinAngleX = -1.4;
-	SeaShipCamera.Distance = 69.0;
+	SeaShipCamera.Distance = 70.0;
 	SeaShipCamera.MinDistance = 25.0;
 	SeaShipCamera.MaxDistance = 70.0;
 	SeaShipCamera.MinHeightOnSea = 1.0;
-	SeaShipCamera.MaxHeightOnShip = 16.0;
+	SeaShipCamera.MaxHeightOnShip = 5.0;
 	SeaShipCamera.InvertMouseX = 1.0;
 	SeaShipCamera.InvertMouseY = -1.0;
 
@@ -161,13 +161,13 @@ void SeaCameras_UpdateCamera()
 	switch (SeaCameras.Camera)
 	{
 		case "SeaShipCamera":
-			SendMessage(&SeaCameras, "ia", SeaShipCamera, &SeaShipCharacterForCamera);
+			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, SeaShipCamera, &SeaShipCharacterForCamera);
 		break;
 		case "SeaFreeCamera":
-			SendMessage(&SeaCameras, "ia", SeaFreeCamera, &SeaShipCharacterForCamera);
+			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, SeaFreeCamera, &SeaShipCharacterForCamera);
 		break;
 		case "SeaDeckCamera":
-			SendMessage(&SeaCameras, "ia", SeaDeckCamera, &SeaShipCharacterForCamera);
+			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, SeaDeckCamera, &SeaShipCharacterForCamera);
 		break;
 	}
 }
@@ -182,6 +182,8 @@ void SeaCameras_SetDieCamera()
 		PeopleOnShip.IsOnDeck = 0;
 		DeleteClass(&Telescope);
 		SeaCameras_UpdateCamera();
+		//Boyer add
+		SendMessage(&objISpyGlass, "ll", MSG_TELESCOPE_REQUEST,0);
 	}
 }
 

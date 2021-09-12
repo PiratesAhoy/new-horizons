@@ -52,7 +52,7 @@ void InitInterface_RR(string iniName,ref pCharacter,ref enemyCh)
 	for(i=1;i<OFFICER_MAX  ;i++)	{if( GetOfficersIndex (pCharacter,i)>=0 ) bBeParty = true; break;}
 	for(i=1;i<COMPANION_MAX;i++)	{if( GetCompanionIndex(pCharacter,i)>=0 ) bBeParty = true; break;}
 
-    if(bAnimation && bNewInterface) iniName = "RESOURCE\INI\NEW_INTERFACES\ANIMATION\transfer_cannons.ini";
+    if(bAnimation && bNewInterface) iniName = "NEW_INTERFACES\ANIMATION\transfer_cannons.ini";
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 	CreateExitString();//MAXIMUS: standard exit-string for exit-button
 

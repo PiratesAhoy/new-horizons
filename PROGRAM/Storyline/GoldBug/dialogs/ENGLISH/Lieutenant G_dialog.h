@@ -13,7 +13,7 @@ string DLG_TEXT[79] = {
 "No, noffin at all.",
 "Hello Jupiter, I guess Mr Legrand sent you.",
 "Yes, he want de bug back.",
-"Of course, I have wrapped the scarabÐ¶us in paper for protection. Please see to that Mr Legrand gets it at once.",
+"Of course, I have wrapped the scarabæus in paper for protection. Please see to that Mr Legrand gets it at once.",
 "Goodbye.",
 "I want to ask you something about your military service.",
 "Sure, go ahead.",

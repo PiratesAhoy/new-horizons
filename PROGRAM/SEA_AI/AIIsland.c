@@ -6,7 +6,7 @@ void Island_Start()
 void Island_Reload(string sIslandID, string sNewIslandModel)
 {
 	int iIslandID = FindIsland(sIslandID);
-	if (iIslandID < 0) 
+	if (iIslandID < 0)
 	{
 		return;
 	}
@@ -14,6 +14,6 @@ void Island_Reload(string sIslandID, string sNewIslandModel)
 	rIsland.model = sNewIslandModel;
 	if (bSeaActive)
 	{
-		SendMessage(&Island, "lss", MSG_ISLAND_LOAD_GEO, "islands", sNewIslandModel);
+		SendMessage(&Island, "lsss", MSG_ISLAND_LOAD_GEO, "islands", rIsland.filespath.models, sNewIslandModel);
 	}
 }

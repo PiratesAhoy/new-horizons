@@ -78,24 +78,49 @@ extern void wdmInitWorldMap();
 #event_handler("ExitFromWorldMap", "wdmReloadToSea");
 #event_handler("EventLoadLocation", "wdmOpenLocation");
 
+#event_handler("EventTimeUpdate", "wdmTimeUpdate");
+
 //=========================================================================================
 // Programm interface
 //=========================================================================================
 bool wdmNoClearEncountersTable = false;
 
+
+void wdmTimeUpdate()
+{
+	PostEvent("EventTimeUpdate", 5000);
+}
+
 void wdmCreateMap(float dx, float dz, float ay)
 {
 	float fadeInTime = 0.5; // KK
+	//float zeroX = MakeFloat(worldMap.zeroX);
+	//float zeroZ = MakeFloat(worldMap.zeroZ);
+    int scale = WDM_MAP_TO_SEA_SCALE;
 	wdmDisableTornadoGen = true;
+
+   // worldMap.playerShipX = (dx/scale) + zeroX;
+	//worldMap.playerShipZ = (dz/scale) + zeroZ;
 	worldMap.playerShipAY = ay;
 	ClearAllLogStrings();
 	wdmDisableRelease = true;
 	//Create world map engine object
 	ReloadProgressStart();
+	wdmRemoveOldEncounters();
+//	Trace("Save check ---------------================--------------")
+//	DumpAttributes(&worldMap);
+//	Trace("Save check ###########----================--------------")
+	worldMap.playerInStorm = "0";
+    wdmReset();
+    worldMap.date.hourPerSec = MAP_VOYAGELENGTH;	// ccc maptweak original 4.0
+    //#20210827-01
+    worldMap.legacyArea = true;
 // KK -->
+	//Boyer change
 	if (bNewInterface)
-		CreateEntity(&worldMap, "wrldmap2");
-	else
+		worldMap.BaseIslands = "islands\islands";
+//		CreateEntity(&worldMap, "wrldmap2");
+//	else
 		CreateEntity(&worldMap,"worldmap");
 // <-- KK
 	worldMap.isLoaded = "true";
@@ -108,12 +133,12 @@ void wdmCreateMap(float dx, float dz, float ay)
 	wdmReset();
 	worldMap.playerShipUpdateDisp = "";
 	if (wdmNoClearEncountersTable == false) ReleaseMapEncounters();
-	wdmNoClearEncountersTable = false; 
+	wdmNoClearEncountersTable = false;
 	//Fade in
 // KK -->
 	if (!IsEntity(&wdm_fader)) {
 		CreateEntity(&wdm_fader, "fader");
-		if (IsEntity(&wdm_fader)) {	
+		if (IsEntity(&wdm_fader)) {
 			SendMessage(&wdm_fader, "lfl", FADER_IN, fadeInTime, true);
 			SendMessage(&wdm_fader, "ls", FADER_PICTURE0, FindReloadPicture("sea.tga")); // KK
 		} else {
@@ -126,9 +151,9 @@ void wdmCreateMap(float dx, float dz, float ay)
 	ReloadProgressEnd();
 
 	// ccc maptweak
-	worldMap.date.hourPerSec = MAP_VOYAGELENGTH;	// ccc maptweak original 4.0
+	//worldMap.date.hourPerSec = MAP_VOYAGELENGTH;	// ccc maptweak original 4.0
 	SetTimeScale(MAPSPEED);			// slow motion
-	SetWeatherScheme("seashore_weather");		
+	SetWeatherScheme("seashore_weather");
 	// ccc maptweak end
 }
 
@@ -147,6 +172,117 @@ void wdmLoadSavedMap()
 	float shipAY = MakeFloat(worldMap.playerShipAY);
 	wdmNoClearEncountersTable = true;
 	wdmCreateMap(dshipX, dshipZ, shipAY);
+}
+
+void wdmRemoveOldEncounters()
+{
+	//ÃÃ®Ã¬Ã¥Ã²Ã¨Ã¬ Ã¯Ã°Ã®Ã²Ã³ÃµÃ¸Ã¨Ã¥ Ã½Ã­ÃªÃ Ã³Ã­Ã²Ã¥Ã°Ã»
+	wdmMarkDeleteEncounters();
+	//Ã‘Ã®Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã¢Ã±Ã¥Ãµ Ã¦Ã¥Ã«Ã Ã¾Ã¹Ã¨Ãµ
+	aref encs;
+	makearef(encs, worldMap.encounters);
+	int num = GetAttributesNum(encs);
+	object forDelete;
+	string attr, encID;
+	int count = 0;
+
+	for(int i = 0; i < num; i++)
+	{
+		aref enc = GetAttributeN(encs, i);
+		if(CheckAttribute(enc, "needDelete") != 0)
+		{
+			attr = "del" + count;
+			forDelete.(attr) = GetAttributeName(enc);
+			count = count + 1;
+		}
+	}
+	for(i = 0; i < count; i++)
+	{
+		attr = "del" + i;
+		encID = "encounters." + forDelete.(attr);
+		DeleteAttribute(&worldMap, encID);
+	}
+}
+
+float wdmGetDays(int year, int month, int day, int hour)
+{
+	//Ã‘Ã·Ã¨Ã²Ã Ã¥Ã¬ Ã¤Ã­Ã¨ Ã¯Ã® Ã£Ã®Ã¤Ã Ã¬
+	if(year < 0) year = 0;
+	if(year > 3000) year = 3000;
+	year = year*365;
+	//Ã‘Ã·Ã¨Ã²Ã Ã¥Ã¬ Ã¶Ã¥Ã«Ã»Ã¥ Ã¤Ã­Ã¨
+	for(int i = 1; i < month; i++)
+	{
+		day = day + GetMonthDays(i, year);
+	}
+	//Ã‘Ã·Ã¨Ã²Ã Ã¥Ã¬ Ã¯Ã®Ã«Ã­Ã»Ã¥ Ã¤Ã­Ã¨
+	float days = year + day + (hour/24.0);
+	return days;
+}
+
+void wdmMarkDeleteEncounters()
+{
+	//ÃÃ®Ã«Ã³Ã·Ã Ã¥Ã¬ Ã¤Ã Ã²Ã³
+	int year = sti(worldMap.date.year);
+	int month = sti(worldMap.date.month);
+	int day = sti(worldMap.date.day);
+	int hour = sti(worldMap.date.hour);
+	float days = wdmGetDays(year, month, day, hour);
+	int encYear, encMonth, encDay, encHour;
+	//ÃÃ¥Ã°Ã¥Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã¢Ã±Ã¥ Ã½Ã­ÃªÃ®Ã³Ã­Ã²Ã¥Ã°Ã», Ã¯Ã®Ã¬Ã¥Ã·Ã Ã¿ Ã­Ã  Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥
+	aref encs;
+	makearef(encs, worldMap.encounters);
+	int num = GetAttributesNum(encs);
+	for(int i = 0; i < num; i++)
+	{
+		aref enc = GetAttributeN(encs, i);
+		if(CheckAttribute(enc, "Quest") != 0)
+
+		{
+			continue;
+		}
+		bool deleteMe = false;
+		if(CheckAttribute(enc, "year") != 0)
+		{
+			encYear = sti(enc.year);
+		}else{
+			deleteMe = true;
+		}
+		if(CheckAttribute(enc, "month") != 0)
+		{
+			encMonth = sti(enc.month);
+		}else{
+			deleteMe = true;
+		}
+		if(CheckAttribute(enc, "day") != 0)
+		{
+			encDay = sti(enc.day);
+		}else{
+			deleteMe = true;
+		}
+		if(CheckAttribute(enc, "hour") != 0)
+		{
+			encHour = sti(enc.hour);
+		}else{
+			deleteMe = true;
+		}
+		if(deleteMe != true)
+		{
+			float deltaDays = wdmGetDays(encYear, encMonth, encDay, encHour) - days;
+			if(deltaDays < 0)
+			{
+				deltaDays = -deltaDays;
+			}
+			if(deltaDays > 1.0)
+			{
+				deleteMe = true;
+			}
+		}
+		if(deleteMe != false)
+		{
+			enc.needDelete = "Time delete";
+		}
+	}
 }
 
 void wdmOpenLocation()
@@ -219,21 +355,29 @@ void wdmSetIcon(string town, string new_name, int iNation)
 	if (island_idx < 0) return;
 	wdmisland = wdmGetIslandNameFromID(island);
 	if (!CheckAttribute(worldMap, "islands." + wdmisland + ".locations")) return;
-	makearef(wdmislandlocs, worldMap.islands.(wdmisland).locations);
+	//Boyer change
+	//makearef(wdmislandlocs, worldMap.islands.(wdmisland).locations);
+	if (!CheckAttribute(worldMap, "labels")) return;
+	makearef(wdmislandlocs, worldMap.labels));
 	num = GetAttributesNum(wdmislandlocs);
 	for (i = 0; i < num; i++) {
 		loc = GetAttributeN(wdmislandlocs, i);
-		if (!CheckAttribute(loc, "name")) continue;
-		if (loc.name == town) {
+		if (!CheckAttribute(loc, "id")) continue;
+		if (!CheckAttribute(loc, "type")) continue;
+		if (!CheckAttribute(loc, "island")) continue;
+		if (loc.type == "town" && loc.id == town && loc.island == wdmisland) {
 			if (IsIslandDisabled(island)) {
 				trace("wdmSetIcon: island "+island+" is disabled.");
-				loc.modelName = "";
-				loc.label.text = "";
-				loc.label.icon = -1;
-				DeleteAttribute(loc, "real");
+				//loc.modelName = "";
+				//loc.label.text = "";
+				//loc.label.icon = -1;
+				//DeleteAttribute(loc, "real");
+				//Boyer change
+				loc.text = "";
+				loc.icon = -1;
 			} else {
-				if (new_name != "") loc.label.text = new_name;
-				loc.label.icon = wdmTownFlag(iNation);
+				if (new_name != "") loc.text = new_name;
+				loc.icon = wdmTownFlag(iNation);
 			}
 			return;
 		}

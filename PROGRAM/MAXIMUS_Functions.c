@@ -920,7 +920,7 @@ void InitEleutheraBrothel()
 	locations[n].models.always.window = "Brothel_window";
 	locations[n].models.always.window.tech = "LocationWindows";
 	locations[n].models.always.window.level = 50;
-	
+
 	locations[n].models.always.back = "..\inside_back";
 
 	//Day
@@ -1649,7 +1649,7 @@ void CharacterDoStraif()
 	bool bStraif = StraifCharacter(chr);
 
 	DelEventHandler("DoStraif", "CharacterDoStraif");
- 
+
 	if (bLeft) {
 		if(LAi_IsFightMode(chr))
 			Animation = "straif_weapon_left";
@@ -2075,7 +2075,7 @@ string GetMySimpleOldName(ref chr)
 	string name = "";
 	string tmpName = "";
 	string tmpLastname = "";
-	if (!CheckAttribute(chr,"old.name")) tmpName = name; else tmpName = chr.old.name; 
+	if (!CheckAttribute(chr,"old.name")) tmpName = name; else tmpName = chr.old.name;
 	if (!CheckAttribute(chr,"old.lastname")) tmpLastname = name; else tmpLastname = chr.old.lastname;
 	if (CheckAttribute(chr,"old.firstname")) {
 		name = chr.old.firstname;
@@ -2205,13 +2205,13 @@ string GetLingvo(string strData)
 {
 	if(LanguageGetLanguage()=="Russian")
 	{
-		if(strcut(strData, strlen(strData)-1, strlen(strData)-1)=="Ð°")
+		if(strcut(strData, strlen(strData)-1, strlen(strData)-1)=="à")
 		{
-			strData = strcut(strData, 0, strlen(strData)-2)+"Ñƒ";
+			strData = strcut(strData, 0, strlen(strData)-2)+"ó";
 		}
-		if(strcut(strData, strlen(strData)-1, strlen(strData)-1)=="Ð")
+		if(strcut(strData, strlen(strData)-1, strlen(strData)-1)=="À")
 		{
-			strData = strcut(strData, 0, strlen(strData)-2)+"Ð£";
+			strData = strcut(strData, 0, strlen(strData)-2)+"Ó";
 		}
 	}
 
@@ -2801,135 +2801,135 @@ void ReinitInterface()
 {
 // KK -->
 	Interfaces[INTERFACE_SELECT_STORYLINE].SectionName = "interface\select_storyline.c";
-	Interfaces[INTERFACE_SELECT_STORYLINE].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\select_storyline.ini";
+	Interfaces[INTERFACE_SELECT_STORYLINE].IniFile = +GetCurrentInterfacePath()+"\select_storyline.ini";
 // <-- KK
 	Interfaces[INTERFACE_STORE].SectionName = "interface\store.c";
-	Interfaces[INTERFACE_STORE].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\store.ini";
+	Interfaces[INTERFACE_STORE].IniFile = +GetCurrentInterfacePath()+"\store.ini";
 	Interfaces[INTERFACE_SHIP_CHOOSE].SectionName = "interface\ship.c";
-	Interfaces[INTERFACE_SHIP_CHOOSE].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\ship.ini";
+	Interfaces[INTERFACE_SHIP_CHOOSE].IniFile = +GetCurrentInterfacePath()+"\ship.ini";
 	Interfaces[INTERFACE_SHIPYARD].SectionName = "interface\shipyard.c";
-	Interfaces[INTERFACE_SHIPYARD].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\shipyard.ini";
+	Interfaces[INTERFACE_SHIPYARD].IniFile = +GetCurrentInterfacePath()+"\shipyard.ini";
 	Interfaces[INTERFACE_CHARACTER].SectionName = "interface\character.c";
-	Interfaces[INTERFACE_CHARACTER].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\character.ini";
+	Interfaces[INTERFACE_CHARACTER].IniFile = +GetCurrentInterfacePath()+"\character.ini";
 	Interfaces[INTERFACE_MAINMENU].SectionName = "interface\mainmenu.c";
-	Interfaces[INTERFACE_MAINMENU].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\mainmenu.ini";
+	Interfaces[INTERFACE_MAINMENU].IniFile = +GetCurrentInterfacePath()+"\mainmenu.ini";
 	Interfaces[INTERFACE_SHIPHOLD].SectionName = "interface\shiphold.c";
-	Interfaces[INTERFACE_SHIPHOLD].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\shiphold.ini";
+	Interfaces[INTERFACE_SHIPHOLD].IniFile = +GetCurrentInterfacePath()+"\shiphold.ini";
 	Interfaces[INTERFACE_HIRECREW].SectionName = "interface\hirecrew.c";
-	Interfaces[INTERFACE_HIRECREW].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\hirecrew.ini";
+	Interfaces[INTERFACE_HIRECREW].IniFile = +GetCurrentInterfacePath()+"\hirecrew.ini";
 	Interfaces[INTERFACE_PASSENGERS].SectionName = "interface\passengers.c";
-	Interfaces[INTERFACE_PASSENGERS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\passengers.ini";
+	Interfaces[INTERFACE_PASSENGERS].IniFile = +GetCurrentInterfacePath()+"\passengers.ini";
 	Interfaces[INTERFACE_CHARACTER_SELECT].SectionName = "interface\selectCharacter.c";
-	Interfaces[INTERFACE_CHARACTER_SELECT].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\selectCharacter.ini";
+	Interfaces[INTERFACE_CHARACTER_SELECT].IniFile = +GetCurrentInterfacePath()+"\selectCharacter.ini";
 	Interfaces[INTERFACE_QUESTBOOK].SectionName = "interface\questbook.c";
-	Interfaces[INTERFACE_QUESTBOOK].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\questbook.ini";
+	Interfaces[INTERFACE_QUESTBOOK].IniFile = +GetCurrentInterfacePath()+"\questbook.ini";
 	// Sulan ShipsLog -->
 	Interfaces[INTERFACE_SHIPLOG].SectionName = "interface\shipslog.c";
-	Interfaces[INTERFACE_SHIPLOG].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\shipslog.ini";
+	Interfaces[INTERFACE_SHIPLOG].IniFile = +GetCurrentInterfacePath()+"\shipslog.ini";
 	Interfaces[INTERFACE_NEWS].SectionName = "interface\news.c";
-	Interfaces[INTERFACE_NEWS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\news.ini";
+	Interfaces[INTERFACE_NEWS].IniFile = +GetCurrentInterfacePath()+"\news.ini";
 	Interfaces[INTERFACE_MONKEY].SectionName = "interface\monkey.c";
-	Interfaces[INTERFACE_MONKEY].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\monkey.ini";
+	Interfaces[INTERFACE_MONKEY].IniFile = +GetCurrentInterfacePath()+"\monkey.ini";
 	// Sulan ShipsLog <--
 	Interfaces[INTERFACE_TRADEBOOK].SectionName = "interface\tradebook.c";
-	Interfaces[INTERFACE_TRADEBOOK].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\tradebook.ini";
+	Interfaces[INTERFACE_TRADEBOOK].IniFile = +GetCurrentInterfacePath()+"\tradebook.ini";
 	Interfaces[INTERFACE_NATIONRELATION].SectionName = "interface\NationRelation.c";
-	Interfaces[INTERFACE_NATIONRELATION].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\NationRelation.ini";
+	Interfaces[INTERFACE_NATIONRELATION].IniFile = +GetCurrentInterfacePath()+"\NationRelation.ini";
 	Interfaces[INTERFACE_SAVELOAD].SectionName = "interface\save_load.c";
-	Interfaces[INTERFACE_SAVELOAD].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\save_load.ini";
+	Interfaces[INTERFACE_SAVELOAD].IniFile = +GetCurrentInterfacePath()+"\save_load.ini";
 	Interfaces[INTERFACE_ITEMS].SectionName = "interface\items.c";
-	Interfaces[INTERFACE_ITEMS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\items.ini";
+	Interfaces[INTERFACE_ITEMS].IniFile = +GetCurrentInterfacePath()+"\items.ini";
 	Interfaces[INTERFACE_FORTCAPTURE].SectionName = "interface\fortcapture.c";
-	Interfaces[INTERFACE_FORTCAPTURE].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\fortcapture.ini";
+	Interfaces[INTERFACE_FORTCAPTURE].IniFile = +GetCurrentInterfacePath()+"\fortcapture.ini";
 	Interfaces[INTERFACE_ITEMSBOX].SectionName = "interface\itemsbox.c";
-	Interfaces[INTERFACE_ITEMSBOX].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\itemsbox.ini";
+	Interfaces[INTERFACE_ITEMSBOX].IniFile = +GetCurrentInterfacePath()+"\itemsbox.ini";
 	Interfaces[INTERFACE_HELPSCREEN].SectionName = "interface\helpscreen.c";
-	Interfaces[INTERFACE_HELPSCREEN].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\helpscreen.ini";
+	Interfaces[INTERFACE_HELPSCREEN].IniFile = +GetCurrentInterfacePath()+"\helpscreen.ini";
 	Interfaces[INTERFACE_OPTIONSCREEN].SectionName = "interface\option_screen.c";
-	Interfaces[INTERFACE_OPTIONSCREEN].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\option_screen.ini";
+	Interfaces[INTERFACE_OPTIONSCREEN].IniFile = +GetCurrentInterfacePath()+"\option_screen.ini";
 	Interfaces[INTERFACE_SELECTMENU].SectionName = "interface\select_menu.c";
-	Interfaces[INTERFACE_SELECTMENU].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\select_menu.ini";
+	Interfaces[INTERFACE_SELECTMENU].IniFile = +GetCurrentInterfacePath()+"\select_menu.ini";
 	Interfaces[INTERFACE_ITEMSTRADE].SectionName = "interface\itemstrade.c";
-	Interfaces[INTERFACE_ITEMSTRADE].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\itemstrade.ini";
+	Interfaces[INTERFACE_ITEMSTRADE].IniFile = +GetCurrentInterfacePath()+"\itemstrade.ini";
 	Interfaces[INTERFACE_CONTROLS].SectionName = "interface\controls.c";
-	Interfaces[INTERFACE_CONTROLS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\controls.ini";
+	Interfaces[INTERFACE_CONTROLS].IniFile = +GetCurrentInterfacePath()+"\controls.ini";
 	Interfaces[INTERFACE_PERKS].SectionName = "interface\perks.c";
-	Interfaces[INTERFACE_PERKS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\perks.ini";
+	Interfaces[INTERFACE_PERKS].IniFile = +GetCurrentInterfacePath()+"\perks.ini";
 	Interfaces[INTERFACE_SALARY].SectionName = "interface\salary.c";
-	Interfaces[INTERFACE_SALARY].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\salary.ini";
+	Interfaces[INTERFACE_SALARY].IniFile = +GetCurrentInterfacePath()+"\salary.ini";
 	Interfaces[INTERFACE_PLAYGAME].SectionName = "interface\playgame.c";
-	Interfaces[INTERFACE_PLAYGAME].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\playgame.ini";
+	Interfaces[INTERFACE_PLAYGAME].IniFile = +GetCurrentInterfacePath()+"\playgame.ini";
 	Interfaces[INTERFACE_ENDGAME].SectionName = "interface\endgame.c";
-	Interfaces[INTERFACE_ENDGAME].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\endgame.ini";
+	Interfaces[INTERFACE_ENDGAME].IniFile = +GetCurrentInterfacePath()+"\endgame.ini";
 	Interfaces[INTERFACE_RANSACK_JOIN].SectionName = "interface\ransack_join.c";
-	Interfaces[INTERFACE_RANSACK_JOIN].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\ransack_join.ini";
+	Interfaces[INTERFACE_RANSACK_JOIN].IniFile = +GetCurrentInterfacePath()+"\ransack_join.ini";
 	Interfaces[INTERFACE_RANSACK_CREW].SectionName = "interface\ransack_crew.c";
-	Interfaces[INTERFACE_RANSACK_CREW].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\ransack_crew.ini";
+	Interfaces[INTERFACE_RANSACK_CREW].IniFile = +GetCurrentInterfacePath()+"\ransack_crew.ini";
 	Interfaces[INTERFACE_RANSACK_CAPTAIN].SectionName = "interface\ransack_captain.c";
-	Interfaces[INTERFACE_RANSACK_CAPTAIN].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\ransack_captain.ini";
+	Interfaces[INTERFACE_RANSACK_CAPTAIN].IniFile = +GetCurrentInterfacePath()+"\ransack_captain.ini";
 	Interfaces[INTERFACE_RANSACK_MAIN].SectionName = "interface\ransack_main.c";
-	Interfaces[INTERFACE_RANSACK_MAIN].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\transfer_main.ini";
+	Interfaces[INTERFACE_RANSACK_MAIN].IniFile = +GetCurrentInterfacePath()+"\transfer_main.ini";
 	Interfaces[INTERFACE_TRANSFER_MAIN].SectionName = "interface\transfer_main.c";
-	Interfaces[INTERFACE_TRANSFER_MAIN].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\transfer_main.ini";
+	Interfaces[INTERFACE_TRANSFER_MAIN].IniFile = +GetCurrentInterfacePath()+"\transfer_main.ini";
 	Interfaces[INTERFACE_TRANSFER_GOODS].SectionName = "interface\transfer_goods.c";
-	Interfaces[INTERFACE_TRANSFER_GOODS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\transfer_goods.ini";
+	Interfaces[INTERFACE_TRANSFER_GOODS].IniFile = +GetCurrentInterfacePath()+"\transfer_goods.ini";
 	Interfaces[INTERFACE_TRANSFER_CHARACTER].SectionName = "interface\transfer_characters.c";
-	Interfaces[INTERFACE_TRANSFER_CHARACTER].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\transfer_characters.ini";
+	Interfaces[INTERFACE_TRANSFER_CHARACTER].IniFile = +GetCurrentInterfacePath()+"\transfer_characters.ini";
 	Interfaces[INTERFACE_TRANSFER_CREW].SectionName = "interface\transfer_crew.c";
-	Interfaces[INTERFACE_TRANSFER_CREW].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\transfer_crew.ini";
+	Interfaces[INTERFACE_TRANSFER_CREW].IniFile = +GetCurrentInterfacePath()+"\transfer_crew.ini";
 // boal -->
 	Interfaces[INTERFACE_BOAL_MAP].SectionName = "interface\boal_map.c";
-	Interfaces[INTERFACE_BOAL_MAP].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\boal_map.ini";
+	Interfaces[INTERFACE_BOAL_MAP].IniFile = +GetCurrentInterfacePath()+"\boal_map.ini";
 // boal <--
 // GreatZen Interface Mod -->
 	Interfaces[INTERFACE_MONEYT].SectionName = "interface\money.c";
-	Interfaces[INTERFACE_MONEYT].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\money.ini";
+	Interfaces[INTERFACE_MONEYT].IniFile = +GetCurrentInterfacePath()+"\money.ini";
 // GreatZen Interface Mod <--
 // MAXIMUS interface MOD -->
 	Interfaces[INTERFACE_MAP].SectionName = "interface\map.c";
-	Interfaces[INTERFACE_MAP].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\map.ini";
+	Interfaces[INTERFACE_MAP].IniFile = +GetCurrentInterfacePath()+"\map.ini";
 	Interfaces[INTERFACE_OFFICER].SectionName = "interface\officer.c";
-	Interfaces[INTERFACE_OFFICER].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\officer.ini";
+	Interfaces[INTERFACE_OFFICER].IniFile = +GetCurrentInterfacePath()+"\officer.ini";
 	Interfaces[INTERFACE_TRANSFER_CANNONS].SectionName = "interface\transfer_cannons.c";
-	Interfaces[INTERFACE_TRANSFER_CANNONS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\transfer_cannons.ini";
+	Interfaces[INTERFACE_TRANSFER_CANNONS].IniFile = +GetCurrentInterfacePath()+"\transfer_cannons.ini";
 	Interfaces[INTERFACE_CUSTOMIZATION].SectionName = "interface\customization.c";
-	Interfaces[INTERFACE_CUSTOMIZATION].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\customization.ini";
+	Interfaces[INTERFACE_CUSTOMIZATION].IniFile = +GetCurrentInterfacePath()+"\customization.ini";
 	Interfaces[INTERFACE_ABOUT_BUILD].SectionName = "interface\about_build.c";
-	Interfaces[INTERFACE_ABOUT_BUILD].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\about_build.ini";
+	Interfaces[INTERFACE_ABOUT_BUILD].IniFile = +GetCurrentInterfacePath()+"\about_build.ini";
 	Interfaces[INTERFACE_GAMBLE].SectionName = "interface\gamble.c";
-	Interfaces[INTERFACE_GAMBLE].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\gamble.ini";
+	Interfaces[INTERFACE_GAMBLE].IniFile = +GetCurrentInterfacePath()+"\gamble.ini";
 	Interfaces[INTERFACE_MUTINY].SectionName = "interface\mutiny_map.c";
-	Interfaces[INTERFACE_MUTINY].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\mutiny_map.ini";
+	Interfaces[INTERFACE_MUTINY].IniFile = +GetCurrentInterfacePath()+"\mutiny_map.ini";
 	Interfaces[INTERFACE_A_MAP].SectionName = "interface\a_map.c";
-	Interfaces[INTERFACE_A_MAP].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\a_map.ini";
+	Interfaces[INTERFACE_A_MAP].IniFile = +GetCurrentInterfacePath()+"\a_map.ini";
 	Interfaces[INTERFACE_INFOBOX].SectionName = "interface\info_box.c";
-	Interfaces[INTERFACE_INFOBOX].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\info_box.ini";
+	Interfaces[INTERFACE_INFOBOX].IniFile = +GetCurrentInterfacePath()+"\info_box.ini";
 // MAXIMUS interface MOD <--
 //added by KAM -->
 	Interfaces[INTERFACE_KAM_SELECTMODEL].SectionName = "interface\kam_selectmodel.c";
-	Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\kam_selectmodel.ini";
+	Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = +GetCurrentInterfacePath()+"\kam_selectmodel.ini";
 	Interfaces[INTERFACE_KAM_SELECTSAILS].SectionName = "interface\kam_selectsails.c";
-	Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\kam_selectsails.ini";
+	Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = +GetCurrentInterfacePath()+"\kam_selectsails.ini";
 	Interfaces[INTERFACE_KAM_RATIONS].SectionName = "interface\kam_rations.c";
-	Interfaces[INTERFACE_KAM_RATIONS].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\kam_rations.ini";
+	Interfaces[INTERFACE_KAM_RATIONS].IniFile = +GetCurrentInterfacePath()+"\kam_rations.ini";
 	Interfaces[INTERFACE_KAM_ARTICLES].SectionName = "interface\kam_articles.c";
-	Interfaces[INTERFACE_KAM_ARTICLES].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\kam_articles.ini";
+	Interfaces[INTERFACE_KAM_ARTICLES].IniFile = +GetCurrentInterfacePath()+"\kam_articles.ini";
 	Interfaces[INTERFACE_KAM_SHIPTRANSFER].SectionName = "interface\kam_shiptransfer.c";
-	Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\kam_shiptransfer.ini";
+	Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = +GetCurrentInterfacePath()+"\kam_shiptransfer.ini";
 	Interfaces[INTERFACE_KAM_SHIPBERTHING].SectionName = "interface\kam_shipberthing.c";
-	Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\kam_shipberthing.ini";
+	Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = +GetCurrentInterfacePath()+"\kam_shipberthing.ini";
 //added by KAM <--
 // KK -->
 	Interfaces[INTERFACE_CAPTURE_COLONY].SectionName = "interface\capture_colony.c";
-	Interfaces[INTERFACE_CAPTURE_COLONY].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\capture_colony.ini";
+	Interfaces[INTERFACE_CAPTURE_COLONY].IniFile = +GetCurrentInterfacePath()+"\capture_colony.ini";
 // <-- KK
 //Levis Readable books -->
 	Interfaces[INTERFACE_BOOK].SectionName = "interface\Book.c";
-	Interfaces[INTERFACE_BOOK].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\book.ini";
+	Interfaces[INTERFACE_BOOK].IniFile = +GetCurrentInterfacePath()+"\book.ini";
 //Levis Readable books <--
 // PB: Catch Erroneous Install -->
 	Interfaces[INTERFACE_INSTALLERROR].SectionName = "interface\installerror.c";
-	Interfaces[INTERFACE_INSTALLERROR].IniFile = "RESOURCE\INI\"+GetCurrentInterfacePath()+"\installerror.ini";
+	Interfaces[INTERFACE_INSTALLERROR].IniFile = GetResourceDirectory() + "INI\"+GetCurrentInterfacePath()+"\installerror.ini";
 // PB: Catch Erroneous Install <--
 }
 
@@ -3083,39 +3083,39 @@ void ResetKeyboardCharacters(string curLanguage)
 		break;
 
 		case "English":
-			CI_CreateAndSetControls("", "NK_Key_Ð°", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð±", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð²", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð³", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð´", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ðµ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ‘", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð¶", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð·", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð¸", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð¹", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ðº", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð»", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð¼", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð½", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð¾", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ð¿", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ€", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ‚", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñƒ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ„", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ…", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ†", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ‡", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñˆ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ‰", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ‹", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_ÑŠ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_ÑŒ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_ÑŽ", "", 0, false);
-			CI_CreateAndSetControls("", "NK_Key_Ñ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_à", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_á", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_â", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ã", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ä", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_å", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_¸", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_æ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ç", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_è", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_é", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ê", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ë", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ì", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_í", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_î", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ï", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ð", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ñ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ò", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ó", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ô", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_õ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ö", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_÷", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ø", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ù", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_û", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ú", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ý", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ü", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_þ", "", 0, false);
+			CI_CreateAndSetControls("", "NK_Key_ÿ", "", 0, false);
 			CI_CreateAndSetControls("", "NK_Key_.", "", 0, false);
 		break;
 	}
@@ -3129,19 +3129,19 @@ string GetTranslatedStoryLine(int idx, string strName)
 	int tmpNameFileID = -1;
 	string tmpName = "";
 
-	if(FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage()+"\"+filePath, "*.txt", "storyline_strings.txt") != "")
+	if(FindFile(GetResourceDirectory() + "INI\TEXTS\"+LanguageGetLanguage()+"\"+filePath, "*.txt", "storyline_strings.txt") != "")
 	{
 		tmpNameFileID = LanguageOpenFile(filePath + "storyline_strings.txt");
 		tmpName = LanguageConvertString(tmpNameFileID, strName);
 	}
 
-	if(tmpName=="" && FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage()+"\Storyline", "*.txt", "storyline_strings.txt") != "")//also translated text can be in one single file for all storylines
+	if(tmpName=="" && FindFile(GetResourceDirectory() + "INI\TEXTS\"+LanguageGetLanguage()+"\Storyline", "*.txt", "storyline_strings.txt") != "")//also translated text can be in one single file for all storylines
 	{
 		tmpNameFileID = LanguageOpenFile("Storyline\storyline_strings.txt");
 		tmpName = LanguageConvertString(tmpNameFileID, strName);
 	}
 
-	if(tmpName=="" && FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
+	if(tmpName=="" && FindFile(GetResourceDirectory() + "INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
 	{
 		tmpNameFileID = LanguageOpenFile("interface_strings.txt");
 		tmpName = LanguageConvertString(tmpNameFileID, strName);
@@ -3161,13 +3161,13 @@ string GetTranslatedPeriod(string strName)
 	int tmpNameFileID = -1;
 	string tmpName = "";
 
-	if(FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "periods_strings.txt") != "")
+	if(FindFile(GetResourceDirectory() + "INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "periods_strings.txt") != "")
 	{
 		tmpNameFileID = LanguageOpenFile("periods_strings.txt");
 		tmpName = LanguageConvertString(tmpNameFileID, strName);
 	}
 
-	if(tmpName=="" && FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
+	if(tmpName=="" && FindFile(GetResourceDirectory() + "INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
 	{
 		tmpNameFileID = LanguageOpenFile("interface_strings.txt");
 		tmpName = LanguageConvertString(tmpNameFileID, strName);
@@ -3187,13 +3187,13 @@ string GetTranslatedLog(string strLog)
 	int tmpLogFileID = -1;
 	string tmpLog = "";
 
-	if(FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "shipslog_strings.txt") != "")
+	if(FindFile(GetResourceDirectory() + "INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "shipslog_strings.txt") != "")
 	{
 		tmpLogFileID = LanguageOpenFile("shipslog_strings.txt");
 		tmpLog = LanguageConvertString(tmpLogFileID, strLog);
 	}
 
-	if(tmpLog=="" && FindFile("RESOURCE\INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
+	if(tmpLog=="" && FindFile(GetResourceDirectory() + "INI\TEXTS\"+LanguageGetLanguage(), "*.txt", "interface_strings.txt") != "")//maybe someone puted translated text in this file by mistake
 	{
 		tmpLogFileID = LanguageOpenFile("interface_strings.txt");
 		tmpLog = LanguageConvertString(tmpLogFileID, strLog);
@@ -3210,7 +3210,7 @@ string GetTranslatedLog(string strLog)
 // KK -->
 bool FindLocalLanguage(string lang)
 {
-	string dir = "RESOURCE\INI\TEXTS\" + lang;
+	string dir = GetResourceDirectory() + "INI\TEXTS\" + lang;
 	if (FindFile(dir, "*.ini", "common.ini") == "") return false;
 //	if (CheckDirectory(dir, "*.txt") < 15) return false;								// PB: LESS than 15? Even ENGLISH has more now!
 //	if (FindFile(dir + "\QUESTBOOK", "*.txt", "quests_texts.txt") == "") return false;	// PB: English doesn't have this file either...
@@ -3678,7 +3678,7 @@ void EncRecalcReloadToSea()
 	float EncSpeed = 1.0;
 	int numEncounters = wdmGetNumberShipEncounters();
 	int isShipEncounterType = 0;
-	ref rEncounter;
+	aref rEncounter;
 	ref mc = GetMainCharacter();
 
 	for(int i = 0; i < numEncounters; i++)
@@ -3691,7 +3691,11 @@ void EncRecalcReloadToSea()
 			{
 				totalInfo = totalInfo + " " + XI_ConvertString("vs.") + " ";
 			}
-			rEncounter = &MapEncounters[sti(worldMap.encounter.type)];
+			trace("What is this? " + sti(worldMap.encounter.type));
+			//rEncounter = &MapEncounters[sti(worldMap.encounter.type)];
+			//Boyer fix
+			string encID = worldMap.encounter.id;
+			makearef(rEncounter, worldMap.encounters.(encID).encdata);
 
 			if (!CheckAttribute(rEncounter, "RealEncounterType")) {
 				totalInfo = totalInfo + TranslateString("","ships");

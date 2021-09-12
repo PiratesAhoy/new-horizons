@@ -39,7 +39,7 @@ int oldIndex = -1;
 int ListMax;
 ref MainChar;
 
-ref PChar;
+//ref PChar;
 
 ref NPchar;
 

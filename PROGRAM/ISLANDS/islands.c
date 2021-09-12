@@ -1,3 +1,5 @@
+#include "islands\islands_loader.c"
+
 extern void InitIslands();
 
 // KK -->
@@ -186,7 +188,6 @@ void AddIsland(ref n, ref island, object locator)
 	makeref(rPeriod, Periods[GetCurrentPeriod()]);
 	DeleteAttribute(rIsland, "");
 	CopyAttributes(rIsland, island);
-
 	sIslandID = rIsland.id;
 	if (CheckAttribute(island, "towns")) {
 		DeleteAttribute(rIsland, "towns");
@@ -260,6 +261,7 @@ void AddIsland(ref n, ref island, object locator)
 		}
 	}
 
+	sattr = rIsland.id;
 	if (CheckAttribute(rPeriod, "Islands." + sIslandID + ".Name"))
 		rIsland.name = rPeriod.Islands.(sIslandID).Name;
 	else
@@ -282,7 +284,7 @@ void AddIsland(ref n, ref island, object locator)
 		}
 	}
 
-	if (CheckAttribute(rPeriod, "Islands." + sIslandID + ".smuggling_nation")) rIsland.smuggling_nation = rPeriod.Islands.(sIslandID).smuggling_nation;
+	if (CheckAttribute(rPeriod, "Islands." + sattr + ".smuggling_nation")) rIsland.smuggling_nation = rPeriod.Islands.(sattr).smuggling_nation;
 
 	if(IsIslandDisabled(rIsland.id))
 	{
@@ -294,7 +296,6 @@ void AddIsland(ref n, ref island, object locator)
 		if (!CheckAttribute(rIsland, "reload_enable")) rIsland.reload_enable = true;
 		if (!CheckAttribute(rIsland, "visible")) rIsland.visible = true;
 	}
-
 	if (CheckAttribute(rPeriod, "Islands." + sIslandID + ".Model")) rIsland.model = rPeriod.Islands.(sIslandID).Model;
 
 	SendMessage(&locator, "le", LM_LOCATE_I, rIsland);

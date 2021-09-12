@@ -1,9 +1,9 @@
 string DLG_TEXT[15] = {
 ".....",
 ".....",
-"I suppose you're working for Se—Åora Carranza...",
+"I suppose you're working for SeÒora Carranza...",
 "You're right.",
-"So, give me the ransom, Se—Åor.",
+"So, give me the ransom, SeÒor.",
 "Hold on my friend! I want to see her husband before.",
 "No, mate. You give me the ransom first and I'll accompany you to the place where he is.",
 "Alright, let me explain you. I'm not here to pay. If you want to live you're going to tell me where he is right now!",

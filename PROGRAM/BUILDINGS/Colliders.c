@@ -179,3 +179,5 @@ float GetTriangleArea(float x0, float y0, float x1, float y1, float x2, float y2
 	 float area = abs((x0*(y1-y2)+x1*(y2-y0)+x2*(y0-y1)) / 2);
 	 return area;
 }
+
+string sCurFog = Whr_GetCurrentFog();

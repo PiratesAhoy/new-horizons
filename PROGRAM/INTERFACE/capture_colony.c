@@ -63,7 +63,7 @@ void InitInterface_RS(string iniName,ref _refCharacter, string _colony_name)
 	CreateExitString();//MAXIMUS: standard exit-string for exit-button
 
 	if (bMyColony) {
-		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "ASSIGNGOV_BUTTON", 0, XI_ConvertString("OK"));
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "ASSIGNGOV_BUTTON", 0, "#"+XI_ConvertString("OK"));
 		if (bNewInterface) SetNewPicture("BACKGROUND", "interfaces\background\port.tga");
 		CreateString(true, "HelpText", XI_ConvertString("ManageHelpString"), FONT_NORMAL, COLOR_MONEY, 320, 478, SCRIPT_ALIGN_CENTER, 0.7);
 		SetSelectable("RGOV", false);

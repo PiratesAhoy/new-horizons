@@ -144,6 +144,10 @@ bool LoadLocation(ref loc)
 			//Sea
 			if (loc.environment.sea == "true") {
 				CreateSea("execute","realize");//CreateEntity(&locSea, "sea");
+                if (!CheckAttribute(loc, "notCrateFoam"))
+                {
+                    CreateCoastFoamEnvironment(loc.id, "execute", "realize");
+                }
 			} else {
 				if (!ownDeckStarted()) DeleteSeaEnvironment();
 			}
@@ -171,7 +175,13 @@ bool LoadLocation(ref loc)
 		if (!CheckAttribute(loc, "models.back")) {
 			if(isTown || isFort) {
 				//Sea
-				if(loc.environment.sea == "true") CreateSea("execute","realize");//CreateEntity(&locSea, "sea");
+				if(loc.environment.sea == "true") {
+                    CreateSea("execute","realize");//CreateEntity(&locSea, "sea");
+                    if (!CheckAttribute(loc, "notCrateFoam"))
+                    {
+                        CreateCoastFoamEnvironment(loc.id, "execute", "realize");
+                    }
+				}
 				//Weather
 				if(loc.environment.weather == "true") CreateWeather("execute","realize");//CreateEntity(&locWeather, "weather");
 			}
@@ -215,7 +225,7 @@ bool LoadLocation(ref loc)
 	}
 	//Set models path
 	if(CheckAttribute(loc, "filespath.models"))
-	{		
+	{
 		SendMessage(loc, "ls", MSG_LOCATION_MODELSPATH, loc.filespath.models);
 	}
 	//Set textures path
@@ -265,7 +275,7 @@ bool LoadLocation(ref loc)
 		if(LocLoadModel(loc, "models.back", hourModel) == 0)//MAXIMUS <-[corrects back-models]-
 		{
 			traceif("LocationLoader: not loaded back model location." + sat + ", id = " + loc.id);
-		}		
+		}
 	}
 
 	ReloadProgressUpdate();
@@ -341,7 +351,7 @@ bool LoadLocation(ref loc)
 				}
 			}
 		}
-		
+
 		//Loading patches
 		if(CheckAttribute(loc, "models.night.charactersPatch") != 0)
 		{
@@ -408,7 +418,7 @@ bool LoadLocation(ref loc)
 		{
 			//Group radius
 			aref rdgrp = GetAttributeN(locator_rad, j);
-			string rdgname = GetAttributeName(rdgrp);			
+			string rdgname = GetAttributeName(rdgrp);
 			float rad = MakeFloat("" + rdgrp);
 			SetLocatorGroupRadius(loc, rdgname, rad);
 			//Some locators radius
@@ -429,7 +439,7 @@ bool LoadLocation(ref loc)
 	if(CheckAttribute(loc,"id") && loc.id!="") { WriteAdditionalLocators(FindLocation(loc.id)); }//MAXIMUS: adding not prescribed locators [MAXIMUS_Functions.c]
 
 	loadedLocation = loc;
-	
+
 //	DumpAttributes(loc);
 
 
@@ -460,7 +470,7 @@ bool LoadLocation(ref loc)
 			if(CheckAttribute(loc, sat) != 0)
 			{
 				makearef(lit, loc.(sat));
-				lnum = GetAttributesNum(lit);					
+				lnum = GetAttributesNum(lit);
 				for(j = 0; j < lnum; j++)
 				{
 					lit1 = GetAttributeN(lit, j);
@@ -477,9 +487,9 @@ bool LoadLocation(ref loc)
 			}
 		}
 	}
-	
+
 	ReloadProgressUpdate();
-	
+
 	//Particles============================================================================
 	CreateParticles(loc);
 	ReloadProgressUpdate();
@@ -506,7 +516,7 @@ bool LoadLocation(ref loc)
 	{
 		traceif("Main character not loaded!");
 		UnloadLocation(loc);
-		return false;		
+		return false;
 	}
 	AddCharacterLocatorGroup(mainCharacter, "reload");
 
@@ -575,13 +585,13 @@ bool LoadLocation(ref loc)
 	    if(WITH_BRIGHT_COLOURS)	//JRH
 	    {
 		VisibleLocatorsGroup("rld", 1.0, 15.0, 255, 0, 255, 0);
-		VisibleLocatorsGroup("reload", 1.0, 15.0, 255, 0, 255, 0);	
+		VisibleLocatorsGroup("reload", 1.0, 15.0, 255, 0, 255, 0);
 		VisibleLocatorsGroup("Merchant", 1.0, 15.0, 105, 0, 255, 125);
 		VisibleLocatorsGroup("camera", 1.0, 15.0, 155, 0, 255, 255);
-		VisibleLocatorsGroup("characters", 1.0, 15.0, 155, 255, 0, 0);	
+		VisibleLocatorsGroup("characters", 1.0, 15.0, 155, 255, 0, 0);
 		VisibleLocatorsGroup("goto", 1.0, 15.0, 255, 255, 0, 0);
 		VisibleLocatorsGroup("sit", 1.0, 15.0, 255, 255, 0, 0);
-		VisibleLocatorsGroup("sit2", 1.0, 15.0, 255, 255, 0, 0);			//JRH added
+		VisibleLocatorsGroup("sit2", 1.0, 15.0, 255, 255, 0, 0);
 		VisibleLocatorsGroup("item", 1.0, 15.0, 255, 255, 0, 255);
 		VisibleLocatorsGroup("randitem", 1.0, 15.0, 255, 255, 0, 255);
 		VisibleLocatorsGroup("treasurechests", 1.0, 15.0, 255, 255, 0, 255);
@@ -607,7 +617,7 @@ bool LoadLocation(ref loc)
 		VisibleLocatorsGroup("ships", 1.0, 300.0, 255, 255, 255, 55);
 		VisibleLocatorsGroup("ships_other", 1.0, 600.0, 255, 255, 255, 55);
 		VisibleLocatorsGroup("patrol", 1.0, 15.0, 155, 0, 255, 255);
-		VisibleLocatorsGroup("soldiers", 1.0, 15.0, 155, 0, 255, 255);			// GR added
+		VisibleLocatorsGroup("soldiers", 1.0, 15.0, 155, 0, 255, 255);
 	    }
 	    else
 	    {
@@ -637,22 +647,22 @@ bool LoadLocation(ref loc)
 		VisibleLocatorsGroup("ships", 1.0, 300.0, 55, 55, 55, 55);
 		VisibleLocatorsGroup("ships_other", 1.0, 300.0, 55, 55, 55, 55);
 		VisibleLocatorsGroup("patrol", 1.0, 15.0, 155, 0, 55, 55);
-		VisibleLocatorsGroup("soldiers", 1.0, 15.0, 155, 0, 55, 55);			// GR added
+		VisibleLocatorsGroup("soldiers", 1.0, 15.0, 155, 0, 55, 55);
 	    }
 	}
 
 	/*
 	VisibleLocatorsGroup("candles_medium", 1.0, 15.0, 255, 255, 255, 55);
 	VisibleLocatorsGroup("chandeliers", 1.0, 15.0, 255, 128, 0, 128);
-	VisibleLocatorsGroup("outside", 1.0, 15.0, 255, 155, 155, 255);	
+	VisibleLocatorsGroup("outside", 1.0, 15.0, 255, 155, 155, 255);
 	VisibleLocatorsGroup("fonar", 1.0, 15.0, 255, 155, 255, 155);
 	VisibleLocatorsGroup("heaters", 1.0, 15.0, 255, 155, 255, 155);
 	VisibleLocatorsGroup("incas_light", 1.0, 15.0, 255, 155, 255, 255);
 	VisibleLocatorsGroup("incas_sky", 1.0, 15.0, 255, 0, 255, 255);
 	*/
-	
+
 	ReloadProgressUpdate();
-	
+
 	ClearScreenShoter();//MAXIMUS: used for QuickSave
 	RestoreLogInterface();
 
@@ -697,13 +707,63 @@ bool LoadLocation(ref loc)
 
 	//Levis moved it here for better timing
 	StartPostInitChars();
-	
+
 	ReloadProgressUpdate();
-	
+
 	return true;
 }
 
 object loc;
+
+void LocationSetLights(ref loc)
+{
+	SendMessage(loc, "ls", MSG_LOCATION_EX_MSG, "DelAllLights");
+
+	string lightPath,lightName,lightGroupName;
+	string sat;
+	aref st,at,lit,lit1;
+	int i,num, lnum,j;
+
+	if(Whr_IsLight() == 0)
+	{
+		lightPath = "models.day.lights";
+	}else{
+		lightPath = "models.night.lights";
+	}
+
+	if(CheckAttribute(loc, lightPath) != 0)
+	{
+		makearef(st, loc.(lightPath));
+		num = GetAttributesNum(st);
+		//Trace("numLights = " + num);
+		for(i = 0; i < num; i++)
+		{
+			at = GetAttributeN(st, i);
+			lightGroupName = GetAttributeName(at);
+			sat = lightPath + "." + lightGroupName;
+			lightName = loc.(sat);
+			sat = "locators." + lightGroupName;
+			if(CheckAttribute(loc, sat) != 0)
+			{
+				makearef(lit, loc.(sat));
+				lnum = GetAttributesNum(lit);
+				for(j = 0; j < lnum; j++)
+				{
+					lit1 = GetAttributeN(lit, j);
+					float litX = stf(lit1.x);
+					float litY = stf(lit1.y);
+					float litZ = stf(lit1.z);
+					//Trace("     AddLight: " + lightName + " (" + litX + ", " + litY + ", " + litZ);
+					SendMessage(loc, "lsfff", MSG_LOCATION_ADD_LIGHT, lightName, litX, litY, litZ);
+					if(lightName == "lamp")
+					{
+						SendMessage(loc, "lsfff", MSG_LOCATION_EX_MSG, "AddFlys", litX, litY, litZ);
+					}
+				}
+			}
+		}
+	}
+}
 
 bool UnloadLocation(aref loc)
 {
@@ -739,6 +799,8 @@ bool UnloadLocation(aref loc)
 	LogoffCharactersFromLocation(loc);									// PB: Permanently erase certain characters
 	int n;
 
+	DeleteCoastFoamEnvironment();
+
 // KK -->
 	/*bool isNoBoarding = true;
 	bool isFort = false;
@@ -759,7 +821,7 @@ bool UnloadLocation(aref loc)
 		DeleteAnimals();
 		DeleteSea();
 		DeleteWeather();
-		DeleteShipEnvironment(); 
+		DeleteShipEnvironment();
 		for (n = 0; n < locNumShips; n++)
 		{
 			DeleteClass(locShips[n]);
@@ -838,7 +900,7 @@ bool LocLoadModel(aref loc, string sat, string addition)
 			realModel = loc.(sat);
 		}
 	}
-	res = SendMessage(loc, "lssl", MSG_LOCATION_ADD_MODEL, realModel, tech, level);
+	res = SendMessage(loc, "lssll", MSG_LOCATION_ADD_MODEL, realModel, tech, level, 0);
 	if(res == 0) return 0;
 	//Устанавливаем флаги
 	object mdl;
@@ -890,7 +952,7 @@ bool LocLoadModel(aref loc, string sat, string addition)
 		if(CheckAttribute(loc, attr1) != 0) z = MakeFloat(loc.(attr1));
 		res = SendMessage(loc, "lfff", MSG_LOCATION_MODEL_SET_ROT, x, y, z);
 		if(res == 0) traceif("Can't set rotate modifier to model: " + loc.(sat));
-	}	
+	}
 	//uvslide
 	attr = sat + ".uvslide";
 	if(CheckAttribute(loc, attr) != 0)
@@ -961,8 +1023,8 @@ void LocLoadShips(ref Location)
 	bool bMainCharacterHere = LocIsEntryLocation(Location);
 
 	ref rPlayer = GetMainCharacter();
-	
-	if (!CheckAttribute(Location, "locators")) 
+
+	if (!CheckAttribute(Location, "locators"))
 	{
 		if(Location.environment.sea=="true" && !bDeckEnter) traceif("LocLoadShips: Can't find Location.locators in location: " + Location.id); // MAXIMUS 28.07.2006
 		return;
@@ -1065,9 +1127,9 @@ void LocLoadShips(ref Location)
 		// PB: Sailing Ships <--
 
 		bool bExist = false;
-		for (j=0;j<locNumShips;j++) 
+		for (j=0;j<locNumShips;j++)
 		{
-			if (i == iShips[j]) 
+			if (i == iShips[j])
 			{
 				bExist = true; break;
 			}
@@ -1108,8 +1170,8 @@ void LocLoadShips(ref Location)
 		switch(iShipsType[n])
 		{
 			case 0:
-				if (iCurNumShips >= iNumShips) 
-				{ 
+				if (iCurNumShips >= iNumShips)
+				{
 					traceif("LocLoadShips: need (ships): " + iCurNumShips + ", but max_num_ships: " + iNumShips);
 					iCurNumShips++;		// LDH added for trace 03Sep06
 					continue;
@@ -1118,8 +1180,8 @@ void LocLoadShips(ref Location)
 				iCurNumShips++;
 			break;
 			case 1:
-				if (iCurNumOtherShips >= iNumOtherShips) 
-				{ 
+				if (iCurNumOtherShips >= iNumOtherShips)
+				{
 					traceif("LocLoadShips: need (ships_other): " + iCurNumOtherShips + ", but max_num_ships_other: " + iNumOtherShips);
 					iCurNumOtherShips++;		// LDH added for trace
 					continue;
@@ -1218,7 +1280,7 @@ void LocLoadShips(ref Location)
 			}
 		}
 	}
-	else 
+	else
 	{
 		if (bMainCharacterHere)
 		{

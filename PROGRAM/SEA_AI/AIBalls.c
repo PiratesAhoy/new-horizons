@@ -9,6 +9,7 @@ void DeleteBallsEnvironment()
 	DelEventHandler(BALL_ISLAND_HIT,"Ball_IslandHit");
 	DelEventHandler(BALL_FLY_UPDATE,"Ball_OnFlyUpdate");
 	DelEventHandler(BALL_FORT_HIT,"Ball_FortHit");
+	DelEventHandler(BALL_FLY_NEAR_CAMERA, "Ball_FlyNearCamera");
 }
 
 void CreateBallsEnvironment()
@@ -16,14 +17,22 @@ void CreateBallsEnvironment()
 	CreateEntity(&AIBalls, "AIBalls");
 	LayerAddObject(SEA_EXECUTE, &AIBalls, -1);
 	LayerAddObject(SEA_REALIZE, &AIBalls, 65532);
+
+	//Boyer add
+	AIBalls.CurrentBallCannonType = -1;
+	AIBalls.CurrentBallDistance = 0.0;
+	AIBalls.CurrentMaxBallDistance = 0.0;
+	AIBalls.BallFlySoundDistance = 15.0;
+	AIBalls.BallFlySoundStereoMultiplyer = 2.0;
+
 	// KNB -->
 	if(USE_REAL_CANNONS)
 	{
 		AIBalls.SpeedMultiply = 1.0;
-		AIBalls.Texture = "AllBalls.tga";
+		AIBalls.Texture = "AllBalls.tga.tx";
 		AIBalls.SubTexX = 2;
 		AIBalls.SubTexY = 2;
-	
+
 		makearef(Grapes,AIBalls.Balls.Grapes);
 		makearef(Knippels,AIBalls.Balls.Knippels);
 		makearef(Balls,AIBalls.Balls.Balls);
@@ -41,7 +50,7 @@ void CreateBallsEnvironment()
 
 		// Knippels
 		Knippels.SubTexIndex = 3; Knippels.Size = 0.4; Knippels.GoodIndex = GOOD_KNIPPELS;
-	
+
 		AIBalls.isDone = 1;
 	}
 	// KNB <--
@@ -51,41 +60,64 @@ void CreateBallsEnvironment()
 		AIBalls.Texture = "AllBalls.tga";
 		AIBalls.SubTexX = 2;
 		AIBalls.SubTexY = 2;
-	
+
 		makearef(Grapes,AIBalls.Balls.Grapes);
 		makearef(Knippels,AIBalls.Balls.Knippels);
 		makearef(Balls,AIBalls.Balls.Balls);
 		makearef(Bombs,AIBalls.Balls.Bombs);
-	
+
 		// Bombs
 		Bombs.SubTexIndex = 0;		Bombs.Size = 0.3;		Bombs.GoodIndex = GOOD_BOMBS;
 		Bombs.Particle = "bomb_smoke";
-	
+
 		// Grapes
 		Grapes.SubTexIndex = 1;		Grapes.Size = 0.2;		Grapes.GoodIndex = GOOD_GRAPES;
-	
+
 		// Balls
 		Balls.SubTexIndex = 2;		Balls.Size = 0.2;		Balls.GoodIndex = GOOD_BALLS;
-	
+
 		// Knippels
 		Knippels.SubTexIndex = 3;	Knippels.Size = 0.2;	Knippels.GoodIndex = GOOD_KNIPPELS;
-	
+
 		AIBalls.isDone = 1;
 	}
+
+	// cheat - fire from camera
+	AIBalls.FireBallFromCamera = true;
 
 	SetEventHandler(BALL_WATER_HIT,"Ball_WaterHitEvent",0);
 	SetEventHandler(BALL_ISLAND_HIT,"Ball_IslandHit",0);
 	SetEventHandler(BALL_FLY_UPDATE,"Ball_OnFlyUpdate",0);
 	SetEventHandler(BALL_FORT_HIT,"Ball_FortHit",0);
+	SetEventHandler(BALL_FLY_NEAR_CAMERA, "Ball_FlyNearCamera", 0);
+}
+
+void Ball_FlyNearCamera()
+{
+	float x = GetEventData();
+	float y = GetEventData();
+	float z = GetEventData();
+
+	Play3DSound("fly_ball", x, y, z);
 }
 
 //int ballNumber;
 
-void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0, float fDirAng, float fHeightAng, float fCannonDirAng)
+bool Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0, float fDirAng, float fHeightAng, float fCannonDirAng, float fMaxFireDistance)
 {
+	int iCannonType = sti(aCharacter.Ship.Cannons.Type);
+	ref rCannon = GetCannonByType(iCannonType);
+	float fCannonHeightMultiply = stf(rCannon.HeightMultiply);
+
+	AIBalls.CannonType = iCannonType;
+	AIBalls.HeightMultiply    = fCannonHeightMultiply;
+	AIBalls.SizeMultiply      = rCannon.SizeMultiply;
+	AIBalls.TimeSpeedMultiply = rCannon.TimeSpeedMultiply;
+	AIBalls.MaxFireDistance   = fMaxFireDistance;
+
 	bool BowChaserGreekFire = false; // PB: Queen Anne's Revenge's Bow Chasers
 	float fTempDispersionY, fTempDispersionX, fAccuracy;
-	if(CheckAttribute(aCharacter,"surrendered")) return; // surrendered chars don't fire. 05-04-20
+	if(CheckAttribute(aCharacter,"surrendered")) return false; // surrendered chars don't fire. 05-04-20
 	if(USE_REAL_CANNONS)
 	{
 		// NK can qty 05-04-18 -->
@@ -109,7 +141,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 			if(CheckAttribute(arcan,"numfired"))
 			{
 				firedqty = sti(arcan.numfired);
-				firedqty++; 
+				firedqty++;
 				arcan.numfired = firedqty;
 				if(!CheckAttribute(arcan,"deleteme"))
 				{
@@ -137,7 +169,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 						arcan.firingextra = true;
 						for (int c = 0; c < max-cur; c++)
 						{
-							Ball_AddBall(&aCharacter, fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng);
+							Ball_AddBall(&aCharacter, fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng, fMaxFireDistance);
 						}
 						DeleteAttribute(arcan,"firingextra");
 					}
@@ -168,7 +200,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 				if (CANNONPOWDER_MOD) AddCharacterGoodsSimple(aCharacter, GOOD_GUNPOWDER, sti(Cannon[GetCaracterShipCannonsType(aCharacter)].gunpowder));
 				// TIH <--
 				//if ( sti(aCharacter.Index) == GetMainCharacterIndex() ) { Logit("Ammo Returned "); }
-				return;
+				 return false;
 			}
 			//arcan.numfired = firedqty;
 		}
@@ -178,6 +210,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 		AIBalls.y = fY;
 		AIBalls.z = fZ;
 		AIBalls.CharacterIndex = aCharacter.Index;
+		AIBalls.MaxFireDistance   = fMaxFireDistance;
 //KB- Tuning, to allow gchasers
 		AIBalls.quad = quadstr; //KB
 //KB end
@@ -213,7 +246,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 		}*/
 
 		// KNB To make carronades less accurate
-		ref rCannon = GetCannonByType(sti(aCharacter.Ship.Cannons.Type));
+		//ref rCannon = GetCannonByType(sti(aCharacter.Ship.Cannons.Type));
 		// NK read from cannon table
 		fTempDispersionX *= stf(rCannon.dispersion.X);
 		fTempDispersionY *= stf(rCannon.dispersion.Y);
@@ -237,7 +270,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 		if (CheckAttribute(temparef,"tune")) {
 			//testtune = 1;
 			makearef(temparef,aCharacter.ship.tune);
-			if(CheckAttribute(temparef,"bcannons")) { 
+			if(CheckAttribute(temparef,"bcannons")) {
 				if ( sti(aCharacter.ship.tune.bcannons.on) == 1 ) {
 					fTempDispersionY = fTempDispersionY - fTempDispersionY * BCACC /100;
 					fTempDispersionV = fTempDispersionV - fTempDispersionV * BCACC /100;
@@ -249,15 +282,15 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 //KB - Tuning ships - gchasers accuracy and range
 //KB if ( sti(aCharacter.index) == 0 ) { Trace("KB - GChaseres Disp before " + fTempDispersionY); }
 		float kbaddtospeedball = 1.0;
-		if (AIBalls.quad == "cannonf") {  //KB It's a chaser	
+		if (AIBalls.quad == "cannonf") {  //KB It's a chaser
 			/*if (testtune == 1) {
 				makearef(temparef,aCharacter.ship.tune);
-				if(CheckAttribute(temparef,"gchasers")) { 
+				if(CheckAttribute(temparef,"gchasers")) {
 					if ( sti(aCharacter.ship.tune.gchasers.on) == 1 ) {
 						fTempDispersionY = fTempDispersionY - fTempDispersionY * GCACCADD /100;
 						fTempDispersionV = fTempDispersionV - fTempDispersionV * GCACCADD /100;
 						fTempDispersionX = fTempDispersionX - fTempDispersionX * GCACCADD /100;
-						kbaddtospeedball = kbaddtospeedball * makefloat(GCRANGEADD);				
+						kbaddtospeedball = kbaddtospeedball * makefloat(GCRANGEADD);
 					}
 				}
 			}*/
@@ -267,7 +300,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 
 		AIBalls.Dir = fDirAng + fAccuracy * fTempDispersionY * (frnd() - 0.5);
 //KB Tuning - gchasers
-		AIBalls.SpdV0 = fSpeedV0 * kbaddtospeedball + fAccuracy * (fTempDispersionV * fSpeedV0) * (frnd() - 0.5); 
+		AIBalls.SpdV0 = fSpeedV0 * kbaddtospeedball + fAccuracy * (fTempDispersionV * fSpeedV0) * (frnd() - 0.5);
 		AIBalls.Ang = fHeightAng + fAccuracy * fTempDispersionX * (frnd() - 0.5);
 //KB - END Tuning ships
 
@@ -300,11 +333,11 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 			switch (USE_PARTICLES_CANNONS)	// Switch smoke quantity according to advanced options for particles
 			{
 				case 0: // None (Stock POTC, less smoke)
-					PostEvent("CreateParticleSystemPost", 200, "sffffffl", "cancloud_stock", fX, fY, fZ, -fHeightAng, fDirAng, 0.0, 20); 
+					PostEvent("CreateParticleSystemPost", 200, "sffffffl", "cancloud_stock", fX, fY, fZ, -fHeightAng, fDirAng, 0.0, 20);
 				break;
 				case 1: // Full
-					PostEvent("CreateParticleSystemPost", 50, "sffffffl", "MMcancloud_Light", fX, fY, fZ, -fHeightAng, fDirAng, 0.0, 20); 
-					PostEvent("CreateParticleSystemPost", 60, "sffffffl", "MMcancloud2_Light", fX, fY, fZ, -fHeightAng, fDirAng, 0.0, 20); 
+					PostEvent("CreateParticleSystemPost", 50, "sffffffl", "MMcancloud_Light", fX, fY, fZ, -fHeightAng, fDirAng, 0.0, 20);
+					PostEvent("CreateParticleSystemPost", 60, "sffffffl", "MMcancloud2_Light", fX, fY, fZ, -fHeightAng, fDirAng, 0.0, 20);
 				break;
 				case 2: // Enhanced! High-End Machine Recommended!
 					PostEvent("CreateParticleSystemPost", 50, "sffffffl", "MMcancloud", fX, fY, fZ, -fHeightAng, fDirAng, 0.0, 20); // Post delay reduced to synchronize the fire and smoke better
@@ -339,7 +372,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 		AIBalls.Dir = fDirAng + fK * fTempDispersionY * (frnd() - 0.5);
 		AIBalls.SpdV0 = fSpeedV0 + fAccuracy * (10.0 * fTempDispersionY) * (frnd() - 0.5);
 		AIBalls.Ang = fHeightAng + fAccuracy * (fTempDispersionX) * (frnd() - 0.5);
-
+		AIBalls.MaxFireDistance   = fMaxFireDistance;
 		AIBalls.Event = "";
 		/*if (sti(rCharacter.index) == GetMainCharacterIndex())
 		{
@@ -355,6 +388,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 		PostEvent("CreateParticleSystemPost", 300, "sffffffl", "cancloud_stock", fX, fY, fZ, -fHeightAng, fDirAng, 0.0, 20); // now done as post to not hide fire fx
 		Play3DSound("cannon_fire", fX, fY, fZ);
 	}
+	return true;
 }
 
 void Ball_WaterHitEvent()
@@ -366,13 +400,13 @@ void Ball_WaterHitEvent()
 	x = GetEventData();
 	y = GetEventData();
 	z = GetEventData();
-	vx = GetEventData();
+	/* vx = GetEventData();
 	vy = GetEventData();
-	vz = GetEventData();
+	vz = GetEventData(); */
 	//if(iCharacterIndex != -1) trace("for char " + Characters[iCharacterIndex].id + " and ship " + Characters[iCharacterIndex].ship.name + " waterhit at " + x +","+y+","+z+" and v"+vx+","+vy+","+vz);
 
 	//SendMessage(&BallSplash, "lffffff", MSG_BALLSPLASH_ADD, x, y, z, 0.0, 0.0, 0.0); // vx, vy, vz
-	SendMessage(&BallSplash, "lffffff", MSG_BALLSPLASH_ADD, x, y, z, vx, vy, vz);
+	SendMessage(&BallSplash, "lffffff", MSG_BALLSPLASH_ADD, x, y, z, 0.0, 0.0, 0.0);
 	Play3DSound("ball_splash", x, y, z);
 }
 //new Fort hit effect by MM

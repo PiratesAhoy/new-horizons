@@ -16,12 +16,15 @@
 
 #define DOUBLE_REP_INCR 0		// LDH 30Sep06
 
+//Boyer add
+int MAX_NUM_FIGHTERS = 3;
+
 #event_handler("evnt_MsgIconTick","proc_MsgIconTick");
 
 bool GetShipRemovable(ref _refCharacter)
 {
 	bool locked = CheckAttribute(_refCharacter,"ShipRemovable") && sti(_refCharacter.ShipRemovable) == false;
-	return !locked && !IsCargoLocked(_refCharacter); 
+	return !locked && !IsCargoLocked(_refCharacter);
 }
 
 void SetShipRemovable(ref _refCharacter, bool bRemovable)
@@ -427,11 +430,11 @@ int GetCaracterShipCannonsType(ref _refCharacter)
 }
 int GetCannonQuantity(ref refCharacter)
 {
-	int nShipType = GetCharacterShipType(refCharacter);
-	if (nShipType <0 || nShipType >= SHIP_TYPES_QUANTITY) { return 0; } // PB: Prevent CTDs
-	ref rShip = GetShipByType(nShipType);
-	aref arship; makearef(arship, refCharacter.ship); return sti(GetLocalShipAttrib(arship, &rShip, "CurCanQty")); //NK can qty 05-04-18
-	//return sti(rShip.CannonsQuantity);
+    int nShipType = GetCharacterShipType(refCharacter);
+    if (nShipType <0 || nShipType >= SHIP_TYPES_QUANTITY) { return 0; } // PB: Prevent CTDs
+    ref rShip = GetShipByType(nShipType);
+    aref arship; makearef(arship, refCharacter.ship); return sti(GetLocalShipAttrib(arship, &rShip, "CurCanQty")); //NK can qty 05-04-18
+    //return sti(rShip.CannonsQuantity);
 }
 // NK 05-04-19 -->
 int GetCannonMaxQuantity(ref refCharacter)
@@ -510,12 +513,13 @@ int GetCurrentShipHP(ref _refCharacter)
 
 	return 0;
 }
-int GetCharacterShipSP(ref _refCharacter)
+//Boyer change
+float GetCharacterShipSP(ref _refCharacter)
 {
 	int nShipType = GetCharacterShipType(_refCharacter);
 	if (nShipType <0 || nShipType >= SHIP_TYPES_QUANTITY) { return 0; } // PB: Prevent CTDs
 	aref arship; makearef(arship, _refCharacter.ship); // PRS3
-	return sti(GetLocalShipAttrib(arship, &ShipsTypes[nShipType], "SP")); // PRS3
+	return stf(GetLocalShipAttrib(arship, &ShipsTypes[nShipType], "SP")); // PRS3
 }
 string GetShipTypeName(ref _refCharacter)
 {
@@ -845,7 +849,7 @@ string GetCharacterOfficerType(ref _refCharacter)
 int GetWoundedHealedPerDay(ref _refCharacter)
 {
 	int healing_rate = HEALED_PER_DAY;
-	if(GetCargoGoods(_refCharacter, GOOD_TREATMENT) > 0)
+if(GetCargoGoods(_refCharacter, GOOD_TREATMENT) > 0)
 		healing_rate = healing_rate + HEALED_WITH_MEDS;
 	if(CharacterHasOfficerType(_refCharacter, OFFIC_TYPE_DOCTOR))
 	{
@@ -872,15 +876,13 @@ int GetWoundedKilledPerDay(ref _refCharacter)
 	int death_rate = KILLED_PER_DAY;
 	if(CharacterHasOfficerType(_refCharacter, OFFIC_TYPE_DOCTOR))
 		death_rate = death_rate - CharacterGetOfficerSkill(_refCharacter, OFFIC_TYPE_DOCTOR, "defence");
-
 	if (GetOfficersPerkUsing(_refCharacter, "BasicFirstAid")) death_rate = death_rate - 2;
 	if (GetOfficersPerkUsing(_refCharacter, "AdvancedFirstAid")) death_rate = death_rate - 2;
-
 	if(GetCargoGoods(_refCharacter, GOOD_TREATMENT) > 0)
 		death_rate = death_rate - HEALED_WITH_MEDS;
 	if(death_rate <= 0) return 0;
 	else return makeint(0.5 * death_rate + rand(death_rate));
-}
+	}
 
 bool CharacterHasOfficerType(ref _refCharacter, string OfficerType)
 {
@@ -1047,8 +1049,8 @@ float GetCharShareRatio(ref pchar, ref chref)
 
 	share = base * (cexplength * COMP_MULT + oexplength) / OFF_DIV / explength;
 
-	trace(chref.name + " " + chref.lastname + 
-		" explen=" + explength + " companion=" + cexplength + " officer=" + oexplength + 
+	trace(chref.name + " " + chref.lastname +
+		" explen=" + explength + " companion=" + cexplength + " officer=" + oexplength +
 		" share ratio " + share*100.0 + "%% (" + share/GetPersonalShareRatio(pchar)*100.0 + "%% of psr)");
 	return share;
 }
@@ -1447,13 +1449,13 @@ void SetSquadronGoodsRatio(ref _refCharacter,int _Goods, int quantity, float rat
 }
 */
 // NK CM/DP <--
-
+//Boyer change
 float GetSailPercent(ref _refCharacter)
 {
 	if( !CheckAttribute(_refCharacter,"Ship.SP") ) return 100.0;
-	int iSP = GetCharacterShipSP(_refCharacter);
-	if(iSP<=0) return 100.0;
-	float fpsp = 100.0*stf(_refCharacter.Ship.SP)/iSP;
+	float fSP = GetCharacterShipSP(_refCharacter);
+	if(fSP<=0.0) return 100.0;
+	float fpsp = 100.0*stf(_refCharacter.Ship.SP)/fSP;
 	return fpsp;
 }
 float GetHullPercent(ref _refCharacter)
@@ -1501,7 +1503,7 @@ int GetNotCaptivePassengersQuantity(ref _refCharacter)
 		return 0;
 
 	int psgQuant = GetPassengersQuantity(_refCharacter);
-	
+
 	int result = 0;
 
 	for(int i = 0; i < psgQuant; i++)
@@ -1637,7 +1639,6 @@ trace("RemovePassenger: Actual passenger '" + GetMySimpleName(_refPassenger) + "
 			}
 		}
 	}
-
 	if(psgNum==-1) return PsgQuantity;
 
 	makearef(tmpRef,_refCharacter.Fellows.Passengers);
@@ -2046,7 +2047,7 @@ int GetPrisonRansomCost(ref captive)
 // Bugfixing and refactoring of code, previously in GetPrisonRansomCost(ref captive)
 int CalculatePrisonRansomCost(ref captive)
 {
-	// ref shipt = GetShipByType(0); // NK bugfix 04-06 - Swindler 2006-07-10: not necessary anymore, as GetShipByType() now does this check. 
+	// ref shipt = GetShipByType(0); // NK bugfix 04-06 - Swindler 2006-07-10: not necessary anymore, as GetShipByType() now does this check.
 	float srank = sqrt(sqrt(pow(sti(captive.rank),3.0)));
 	float sclass;
 	float sweight;
@@ -2072,7 +2073,7 @@ int GetLevel(ref chref) { if(CheckAttribute(chref,"rank")) { return sti(chref.ra
 
 
 // DP mod -->
-// Superceded by PayScaleFactor -jsv 
+// Superceded by PayScaleFactor -jsv
 /* float CalcOffScalar()
 {
 	return
@@ -2102,7 +2103,7 @@ int CalcOfficerPayOwed(ref mchref)
 		{
 			if(CheckAttribute(Characters[cn],"quest.OfficerPayOwed")) PaymentQ += sti(Characters[cn].quest.OfficerPayOwed);
 		}
-		
+
 		for(j = 1; j < OFFICER_MAX; j++)
 		{
 			on = GetOfficersIndex(Characters[cn], j);
@@ -2175,7 +2176,7 @@ void DoDailyCrewPay()
 	}
 	float fCrewPay = 0;
 	//add crew pay owed:
-	
+
 	if(CheckAttribute(mchref,"quest.CrewPayOwed")) fCrewPay = stf(mchref.quest.CrewPayOwed);
 	fCrewPay += makefloat(crewQ) * DailyCrewPay();
 	mchref.quest.CrewPayOwed = fCrewPay;
@@ -2521,8 +2522,7 @@ int Promote(ref char, ref gov, int iNation)
 	SetRank(char, iNation, curRank); // PB: was	char.nations.(sNation).Rank = curRank;
 	GivePromotionReward(iNation); // PB
 //	bool NoLandGiven = ProfessionalNavyNation() != UNKNOWN_NATION && curRank < 7;
-	bool NoLandGiven = curRank < 7;	// GR: no land for navy OR privateers until you are landed gentry
-	if(NoLandGiven || iNation == PIRATE)
+	bool NoLandGiven = curRank < 7;	// GR: no land for navy OR privateers until you are landed gentry	if(NoLandGiven || iNation == PIRATE)
 	{
 		if (!InTutDeck) WriteNewLogEntry("Promoted to "+GetNationDescByType(iNation)+" "+GetRankNameDirect(char, iNation, currank),"My dedication and faithful service for "+GetNationNameByType(iNation)+" have earned me the rank of "+GetRankNameDirect(char, iNation, currank)+".","Personal",true);
 	}
@@ -2644,7 +2644,6 @@ bool LeaveService(ref char, int iNation, bool override)
 		{
 			RemoveLandFromCharacterNation(&char, iNation); // KK
 			curRank = 0;
-
 			if (sti(GetAttribute(char, "knighted")) == iNation) // GR: if you have an honorific prefix from this nation, lose it
 			{
 				DeleteAttribute(char, "knighted");
@@ -3202,15 +3201,15 @@ void SetBaseShipData(ref refCharacter)
 			if (FOOD_ON) {
 				int goodSum = 0;
 				i = GetCharacterFreeSpace(refCharacter,GOOD_WHEAT);
-				if(i>0) 
-				{ 
+				if(i>0)
+				{
 					goodSum = makeint(2 + sti(refCharacter.ship.crew.quantity) * FOOD_PER_CREW * WHEAT_DAYS);// at least 2 wheat
 					if(i>=goodSum)	{ SetCharacterGoods(refCharacter,GOOD_WHEAT,goodSum); }
 					else  			{ SetCharacterGoods(refCharacter,GOOD_WHEAT,makeint(i/2)); }
 				}
 				i = GetCharacterFreeSpace(refCharacter,GOOD_RUM);
-				if(i>0) 
-				{ 
+				if(i>0)
+				{
 					goodSum = makeint(2 + sti(refCharacter.ship.crew.quantity) * FOOD_PER_CREW * RUM_DAYS);// at least 2 rum
 					if(i>=goodSum)	{ SetCharacterGoods(refCharacter,GOOD_RUM,goodSum); }
 					else  			{ SetCharacterGoods(refCharacter,GOOD_RUM,i); }
@@ -3426,7 +3425,7 @@ bool TakeNItems(ref _refCharacter,string itemName, int n)
 			}
 		}
 
-		if (rc < 0) 
+		if (rc < 0)
 		{
 //			trace("WARNING!!! Item id = "+itemName+" not implemented");
 			return false;
@@ -3482,9 +3481,9 @@ bool TakeNItems(ref _refCharacter,string itemName, int n)
 				AddMsgToCharacter(_refCharacter,MSGICON_GETITEM);
 			}
 		}
-		
+
 		UpdateSkillModifierFromItem(_refCharacter, itemName); // PB: Update only relevant skill modifiers
-		
+
 		q = GetCharacterItem(_refCharacter,itemName);
 		if (q + n <= 0) {
 			DeleteAttribute(_refCharacter,"Items."+itemName);
@@ -3788,7 +3787,7 @@ void SetRandomNameToCharacter(ref rCharacter)
 	}
 	/*if(GetCurrentPeriod() > PERIOD_EARLY_EXPLORERS && GetCurrentPeriod() < PERIOD_REVOLUTIONS && SWEDEN_ALLOWED){
 		switch(iNation){
-			case SWEDEN: 
+			case SWEDEN:
 				rNames = &sSwWomenNames;
 				if(rCharacter.sex != "woman") rNames = &sSwManNames;
 				rLastNames = &sSwFamilies;
@@ -4043,7 +4042,7 @@ void SetEquipedItemToCharacter(ref chref, string groupID, string itemID)
 					for (i = newarmorlevel; i >= 0; i--) // find existing lower-quality armored model
 					{
 						modid = mdname + "_A" + i;
-						if (FindFile("RESOURCE\MODELS\Characters", "*.gm", modid + ".gm") != "") {
+						if (FindFile(GetResourceDirectory() + "MODELS\Characters", "*.gm", modid + ".gm") != "") {
 							bmodelfound = true;
 							break;
 						}
@@ -4052,7 +4051,7 @@ void SetEquipedItemToCharacter(ref chref, string groupID, string itemID)
 						for(i = newarmorlevel+1; i <= 3; i++) // if no lower one, look for higher. There may eventually be more than 3 though.
 						{
 							modid = mdname + "_A" + i;
-							if (FindFile("RESOURCE\MODELS\Characters", "*.gm", modid + ".gm") != "") {
+							if (FindFile(GetResourceDirectory() + "MODELS\Characters", "*.gm", modid + ".gm") != "") {
 								bmodelfound = true;
 								break;
 							}
@@ -4068,7 +4067,7 @@ void SetEquipedItemToCharacter(ref chref, string groupID, string itemID)
 		// GreatZen <-- // <-- KK
 		case SPYGLASS_ITEM_TYPE:
 			if(CheckAttribute(arItm,"id"))
-				setTelescopeInitParameters(&Telescope,arItm);
+				setTelescopeInitParameters(arItm);
 		break;
 
 		case GUN_ITEM_TYPE:
@@ -4078,7 +4077,7 @@ void SetEquipedItemToCharacter(ref chref, string groupID, string itemID)
 				LAi_GunSetChargeQuant(chref,sti(arItm.chargeQ));
 			else
 				LAi_GunSetChargeQuant(chref,0);
-			
+
 			if(CheckAttribute(arItm,"chargespeed") && stf(arItm.chargespeed)>0.0)
 				LAi_GunSetChargeSpeed(chref,1.0/stf(arItm.chargespeed));
 			else
@@ -4110,7 +4109,7 @@ void SetEquipedItemToCharacter(ref chref, string groupID, string itemID)
 			if(CheckAttribute(arItm, "blade.time"))	{liveTime = stf(arItm.blade.time);}
 			if(CheckAttribute(arItm, "blade.colorstart"))	{colors = sti(arItm.blade.colorstart);}
 			if(CheckAttribute(arItm, "blade.colorend"))	{colore = sti(arItm.blade.colorend);}
-			SendMessage(chref, "lsfll", MSG_CHARACTER_SETBLADE, modelName, liveTime, colors, colore);
+			SendMessage(chref, "llsfll", MSG_CHARACTER_SETBLADE, 0, modelName, liveTime, colors, colore);
 
 			if(CheckAttribute(arItm,"dmg_min"))
 				LAi_BladeSetDamageMin(chref,stf(arItm.dmg_min));
@@ -4177,7 +4176,7 @@ void EquipCharacterByItem(ref chref, string itemID)
 			{
 				string ammoName;
 				string ammoName2;					//JRH
-				
+
 				int gp;
 				int pb;
 				int pg;
@@ -4202,7 +4201,7 @@ void EquipCharacterByItem(ref chref, string itemID)
 				ro = GetCharacterItem(chref, "rockets");
 				gpb = GetCharacterItem(chref, "cart_box_O");
 				cap = GetCharacterItem(chref, "caps_box_O");
-				
+
 				switch(weapon.shottype)
 				{
 					case "pg2":
@@ -4261,10 +4260,10 @@ void EquipCharacterByItem(ref chref, string itemID)
 				}
 
 			//JRH -->
-				if(weapon.shottype == "pg" || weapon.shottype == "pg2" || weapon.shottype == "mb" || weapon.shottype == "pb" 
+				if(weapon.shottype == "pg" || weapon.shottype == "pg2" || weapon.shottype == "mb" || weapon.shottype == "pb"
 				|| weapon.shottype == "pb2" || weapon.shottype == "na2" || weapon.shottype == "ro")
 				{
-				    if(enough_ammo == false) 
+				    if(enough_ammo == false)
 				    {
 						LAi_GunSetUnload(chref);
 				    }
@@ -4285,7 +4284,7 @@ void EquipCharacterByItem(ref chref, string itemID)
 
 				if(weapon.shottype == "ca" || weapon.shottype == "ar" || weapon.shottype == "ar2")
 				{
-				    if(enough_ammo == false) 
+				    if(enough_ammo == false)
 				    {
 						LAi_GunSetUnload(chref);
 				    }
@@ -4301,10 +4300,10 @@ void EquipCharacterByItem(ref chref, string itemID)
 						}
 				    }
 				}
-			
+
 				if(weapon.shottype == "pc")
 				{
-				    if(enough_ammo == false) 
+				    if(enough_ammo == false)
 				    {
 						LAi_GunSetUnload(chref);
 				    }
@@ -4697,3 +4696,69 @@ int RemoveNotCaptivePassenger(ref _refCharacter,ref _refPassenger)
 	return PsgQuantity;
 }
 
+float GetCharacterMaxEnergyValue(ref _refCharacter)
+{
+    float ret = (30.0); // + GetCharacterSPECIAL(_refCharacter, SPECIAL_A)*10);
+    /*if (CheckCharacterPerk(_refCharacter, "EnergyPlus"))
+	{
+		ret = ret + 20;
+	}
+	if (CheckAttribute(_refCharacter, "PerkValue.EnergyPlus"))
+	{
+  		ret = ret + stf(_refCharacter.PerkValue.EnergyPlus);
+	} */
+	return ret;
+}
+
+float GetCharacterMaxEnergyABSValue(ref _refCharacter)
+{
+    // ???????? ?????? to_do
+	float ret = (30.0); // + GetCharacterSPECIALSimple(_refCharacter, SPECIAL_A)*10);
+	/*if (CheckCharacterPerk(_refCharacter, "EnergyPlus"))
+	{
+		ret = ret + 20;
+	}
+	if (CheckAttribute(_refCharacter, "PerkValue.EnergyPlus"))
+	{
+  		ret = ret + stf(_refCharacter.PerkValue.EnergyPlus);
+	} */
+	return ret;
+}
+
+void SetEnergyToCharacter(ref _refCharacter)
+{
+	_refCharacter.chr_ai.energyMax = GetCharacterMaxEnergyValue(_refCharacter);
+	if (!CheckAttribute(_refCharacter, "chr_ai.energy"))
+	{
+		_refCharacter.chr_ai.energy    = _refCharacter.chr_ai.energyMax;
+	}
+	else
+	{
+	    if (sti(_refCharacter.chr_ai.energy) > sti(_refCharacter.chr_ai.energyMax))
+	    {
+	        _refCharacter.chr_ai.energy    = _refCharacter.chr_ai.energyMax;
+	    }
+	}
+}
+
+int GetQuestPastMinutesParam(string _quest)
+{
+    aref  arQ;
+    makearef(arQ, PChar.(_quest));
+    if (CheckAttribute(PChar, _quest + ".control_year"))
+    {
+    	return GetPastTime("minute", sti(arQ.control_year), sti(arQ.control_month), sti(arQ.control_day), stf(arQ.control_time), GetDataYear(), GetDataMonth(), GetDataDay(), GetTime());
+	}
+	return 0;
+}
+
+void SaveCurrentQuestDateParam(string _quest)
+{
+    aref  arQ;
+    makearef(arQ, PChar.(_quest));
+
+    arQ.control_day = GetDataDay();
+    arQ.control_month = GetDataMonth();
+    arQ.control_year = GetDataYear();
+    arQ.control_time = GetTime();
+}

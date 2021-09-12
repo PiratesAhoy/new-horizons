@@ -3,7 +3,7 @@ string DLG_TEXT[340] = {
 "Captain Champers was a pig of a man and what he intended for you was monstrous. I didn't see a choice.",
 "Treacherous dogs. I suppose I saw that coming. What can I do for you, Captain?",
 "Sorry Captain Fletcher, no time for chit chat. I need to be away before the Navy shows up. I know a storm is raging but I'll face that risk, and set sail right away. Goodbye and good luck!",
-"I'm done with this life but my men need a home. They are good sailors, fiercely loyal, and owe you their lives. You would do well to take them on. You should look them over and assign them duties fitting their skills. I suggest Mr. Sullivan as first mate but of course the choice is up to you. (Open your â€˜Passangers' window to view your new officers)",
+"I'm done with this life but my men need a home. They are good sailors, fiercely loyal, and owe you their lives. You would do well to take them on. You should look them over and assign them duties fitting their skills. I suggest Mr. Sullivan as first mate but of course the choice is up to you. (Open your ‘Passangers' window to view your new officers)",
 "Yes, I talked to Sullivan. He seems like a competent sailor and a good bloke. I'm sure your people all know what they're doing.",
 "The authorities will be after you with a powerful will for what you've done. They'll be looking for your head whether they need to take it on land or sea.",
 "True. I'll have to be on the lookout for assassins as well as the Navy.",

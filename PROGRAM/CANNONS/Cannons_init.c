@@ -30,11 +30,18 @@ void InitCannons()
 		rCannon.ReloadTime = 40;
 		rCannon.Cost = 800;
 		rCannon.Weight = 13;
+		rCannon.name = "caliber4";
+		rCannon.picture = "cannons1";
  		rCannon.sound = ("cannon_fire_LG4");//JRH
  		rCannon.gunpowder = 2;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 0.35;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 1.35;
+		rCannon.hp = 40.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1350.0*CANNON_RANGE_SCALAR);
 		n++;
 
@@ -44,11 +51,18 @@ void InitCannons()
 		rCannon.ReloadTime = 50;
 		rCannon.Cost = 1000;
 		rCannon.Weight = 26;
+		rCannon.name = "caliber6";
+		rCannon.picture = "cannons2";
 		rCannon.sound = ("cannon_fire_LG6");//JRH
- 		rCannon.gunpowder = 3;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 0.60;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 1.60;
+		rCannon.hp = 45.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1450.0*CANNON_RANGE_SCALAR);
 		n++;
 
@@ -58,11 +72,18 @@ void InitCannons()
 		rCannon.ReloadTime = 60;
 		rCannon.Cost = 1300;
 		rCannon.Weight = 33;
+		rCannon.name = "caliber9";
+		rCannon.picture = "cannons3";
  		rCannon.sound = ("cannon_fire_LG9");//JRH
- 		rCannon.gunpowder = 4;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 1.0; // calculated as m*v^2, normalized
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 2.0; // calculated as m*v^2, normalized
+		rCannon.hp = 50.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1620.0*CANNON_RANGE_SCALAR);
 		n++;
 
@@ -72,11 +93,18 @@ void InitCannons()
 		rCannon.ReloadTime = 70;
 		rCannon.Cost = 1650;
 		rCannon.Weight = 38;
+		rCannon.name = "caliber12";
+		rCannon.picture = "cannons5";
 		rCannon.sound = ("cannon_fire_LG12");//JRH
- 		rCannon.gunpowder = 5;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 1.4;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 2.4;
+		rCannon.hp = 45.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1680.0*CANNON_RANGE_SCALAR);
 		n++;
 
@@ -86,11 +114,18 @@ void InitCannons()
 		rCannon.ReloadTime = 85;
 		rCannon.Cost = 2200;
 		rCannon.Weight = 47;
+		rCannon.name = "caliber18";
+		rCannon.picture = "cannons6";
 		rCannon.sound = ("cannon_fire_LG18");//JRH
- 		rCannon.gunpowder = 6;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 2.2;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 3.2;
+		rCannon.hp = 50.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1800.0*CANNON_RANGE_SCALAR);
 		n++;
 
@@ -101,11 +136,18 @@ void InitCannons()
 		rCannon.ReloadTime = 100;
 		rCannon.Cost = 3000;
 		rCannon.Weight = 58; //50
+		rCannon.name = "caliber24";
+		rCannon.picture = "cannons7";
 		rCannon.sound = ("cannon_fire_LG24");//JRH
- 		rCannon.gunpowder = 7;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 3.0;
+		rCannon.hp = 55.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1800.0*CANNON_RANGE_SCALAR);
 		n++;
 
@@ -116,11 +158,18 @@ void InitCannons()
 		rCannon.ReloadTime = 120;
 		rCannon.Cost = 4000;
 		rCannon.Weight = 70; //56
+		rCannon.name = "caliber32";
+		rCannon.picture = "cannons8";
 		rCannon.sound = ("cannon_fire_LG32");//JRH
- 		rCannon.gunpowder = 8;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 4.0;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 5.0;
+		rCannon.hp = 60.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,2080.0*CANNON_RANGE_SCALAR);
 		n++;
 
@@ -128,29 +177,42 @@ void InitCannons()
 		makeref(rCannon,Cannon[CANNON_TYPE_LONG_LBS42]);
 		rCannon.type = CANNON_NAME_LONG;
 		rCannon.caliber = 42;
-		rCannon.ReloadTime = 150;		// LDH was 240
+		rCannon.ReloadTime = 240;		// LDH was 240
 		rCannon.Cost = 5000;
 		rCannon.Weight = 75;
+		rCannon.name = "caliber42";
+		rCannon.picture = "cannons8";
 		rCannon.sound = ("cannon_fire_LG42");//JRH
- 		rCannon.gunpowder = 9;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 5.5;
+		rCannon.hp = 60.0;
 		rCannon.TradeOff = true;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1940.0*FORT_RANGE_SCALAR); // PB: Different value for forts
 		n++;
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS12]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber12a";
+		rCannon.picture = "cannons1";
 		rCannon.caliber = 12;
 		rCannon.ReloadTime = 50;
 		rCannon.Cost = 1200;
 		rCannon.Weight = 6;
 		rCannon.sound = ("cannon_fire_CR12");//JRH
- 		rCannon.gunpowder = 6;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 0.8;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 1.8;
 		InitBaseCannons_CalcSpeedV0(&rCannon,950.0*CANNON_RANGE_SCALAR);
 		rCannon.Dispersion.X = CARRONADE_DISPERSION_MULT;
 		rCannon.Dispersion.Y = CARRONADE_DISPERSION_MULT;
@@ -159,15 +221,21 @@ void InitCannons()
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS18]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber18a";
+		rCannon.picture = "cannons2";
 		rCannon.caliber = 18;
 		rCannon.ReloadTime = 60;
 		rCannon.Cost = 1500;
 		rCannon.Weight = 10;
 		rCannon.sound = ("cannon_fire_CR18");//JRH
- 		rCannon.gunpowder = 7;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 1.2;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 2.2;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1000.0*CANNON_RANGE_SCALAR);
 		rCannon.Dispersion.X = CARRONADE_DISPERSION_MULT;
 		rCannon.Dispersion.Y = CARRONADE_DISPERSION_MULT;
@@ -176,15 +244,21 @@ void InitCannons()
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS24]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber24a";
+		rCannon.picture = "cannons3";
 		rCannon.caliber = 24;
 		rCannon.ReloadTime = 70;
 		rCannon.Weight = 14;
 		rCannon.Cost = 2000;
 		rCannon.sound = ("cannon_fire_CR24");//JRH
- 		rCannon.gunpowder = 8;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 1.7;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 2.7;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1050.0*CANNON_RANGE_SCALAR);
 		rCannon.Dispersion.X = CARRONADE_DISPERSION_MULT;
 		rCannon.Dispersion.Y = CARRONADE_DISPERSION_MULT;
@@ -194,15 +268,21 @@ void InitCannons()
 		// Not very useful, but here nontheless
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS32]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber32a";
+		rCannon.picture = "cannons8";
 		rCannon.caliber = 32;
 		rCannon.ReloadTime = 85;
 		rCannon.Weight = 20;
 		rCannon.Cost = 3000;
 		rCannon.sound = ("cannon_fire_CR32");//JRH
- 		rCannon.gunpowder = 9;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 2.4;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 3.4;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1080.0*CANNON_RANGE_SCALAR);
 		rCannon.Dispersion.X = CARRONADE_DISPERSION_MULT;
 		rCannon.Dispersion.Y = CARRONADE_DISPERSION_MULT;
@@ -212,15 +292,21 @@ void InitCannons()
 		// More big, scary fort guns
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS42]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber42a";
+		rCannon.picture = "cannons8";
 		rCannon.caliber = 42;
 		rCannon.ReloadTime = 100;		// LDH was 180
 		rCannon.Weight = 24;
 		rCannon.Cost = 4000;
 		rCannon.sound = ("cannon_fire_CR42");//JRH
- 		rCannon.gunpowder = 10;// added by MAXIMUS [gunpowder mod]
+ 		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 3.5;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 5.5;
 		rCannon.TradeOff = true;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1170.0*FORT_RANGE_SCALAR); // PB: Different value for forts
 		rCannon.Dispersion.X = CARRONADE_DISPERSION_MULT;
@@ -231,6 +317,8 @@ void InitCannons()
 		// Even bigger, even scarier fort guns
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS68]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber68";
+		rCannon.picture = "cannons8";
 		rCannon.caliber = 68;
 		rCannon.ReloadTime = 125;		// LDH was 240
 		rCannon.Weight = 40;
@@ -239,6 +327,10 @@ void InitCannons()
  		rCannon.gunpowder = 6;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 6.0;
 		rCannon.TradeOff = true;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1280.0*FORT_RANGE_SCALAR); // PB: Different value for forts
@@ -249,15 +341,21 @@ void InitCannons()
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS68I]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber68a";
+		rCannon.picture = "cannons8";
 		rCannon.caliber = 68;
 		rCannon.ReloadTime = 100;		// LDH was 240
 		rCannon.Weight = 40;
 		rCannon.Cost = 5000;
 		rCannon.sound = ("cannon_fire_CR68");//JRH
-		rCannon.gunpowder = 5;// added by MAXIMUS [gunpowder mod]
+		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 5.1;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 6.1;
 		rCannon.TradeOff = true;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1080.0*CANNON_RANGE_SCALAR);
 		rCannon.Dispersion.X = CARRONADE_DISPERSION_MULT;
@@ -267,15 +365,21 @@ void InitCannons()
 		
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS42I]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber42b";
+		rCannon.picture = "cannons8";
 		rCannon.caliber = 42;
 		rCannon.ReloadTime = 85;		// LDH was 180
 		rCannon.Weight = 24;
 		rCannon.Cost = 4000;
 		rCannon.sound = ("cannon_fire_CR42");//JRH
-		rCannon.gunpowder = 4;// added by MAXIMUS [gunpowder mod]
+		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 3.0;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 5.0;
 		rCannon.TradeOff = true;
 		InitBaseCannons_CalcSpeedV0(&rCannon,970.0*CANNON_RANGE_SCALAR);
 		rCannon.Dispersion.X = CARRONADE_DISPERSION_MULT;
@@ -285,15 +389,21 @@ void InitCannons()
 		
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_LBS68SPEC]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber68a";
+		rCannon.picture = "cannons8";
 		rCannon.caliber = 68;
 		rCannon.ReloadTime = 90;		// LDH was 240
 		rCannon.Weight = 40;
 		rCannon.Cost = 5000;
 		rCannon.sound = ("cannon_fire_CR68");//JRH
-		rCannon.gunpowder = 5;// added by MAXIMUS [gunpowder mod]
+		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
-		rCannon.DamageMultiply = 7.8;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
+		rCannon.DamageMultiply = 7.0;
 		rCannon.TradeOff = true;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1480.0*CANNON_RANGE_SCALAR);
 		rCannon.Dispersion.X = CARRONADE_DISPERSION_MULT;
@@ -303,14 +413,20 @@ void InitCannons()
 		
 		makeref(rCannon,Cannon[CANNON_TYPE_CARRONADE_DUTCHMAN]);
 		rCannon.type = CANNON_NAME_CARRONADE;
+		rCannon.name = "caliber128";
+		rCannon.picture = "cannons8";
 		rCannon.caliber = 128;
 		rCannon.ReloadTime = 100;		// LDH was 240
 		rCannon.Weight = 72;
 		rCannon.Cost = 10000;
 		rCannon.sound = ("cannon_fire_DUTCHMAN");//JRH
-		rCannon.gunpowder = 5;// added by MAXIMUS [gunpowder mod]
+		rCannon.gunpowder = 1;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 1.0;
 		rCannon.FireAngMin = 1.0;
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 9.1;
 		rCannon.TradeOff = true;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1680.0*CANNON_RANGE_SCALAR);
@@ -336,6 +452,8 @@ void InitCannons()
 	{
 		makeref(rCannon,Cannon[CANNON_TYPE_CULVERINE_LBS12]);
 		rCannon.type = CANNON_NAME_CULVERINE;
+		rCannon.name = "caliber12b";
+		rCannon.picture = "cannons5";
 		rCannon.caliber = 12;
 		rCannon.ReloadTime = 28; //20;
 		rCannon.Cost = 1200;
@@ -344,12 +462,18 @@ void InitCannons()
  		rCannon.gunpowder = 3;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
 		rCannon.FireAngMin = -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 0.6;
 		InitBaseCannons_CalcSpeedV0(&rCannon,800.0*CANNON_RANGE_SCALAR*0.5);
 		n++;
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CULVERINE_LBS16]);
 		rCannon.type = CANNON_NAME_CULVERINE;
+		rCannon.name = "caliber16b";
+		rCannon.picture = "cannons6";
 		rCannon.caliber = 16;
 		rCannon.ReloadTime = 42; //24;
 		rCannon.Cost = 1600;
@@ -358,12 +482,18 @@ void InitCannons()
  		rCannon.gunpowder = 5;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
 		rCannon.FireAngMin = -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 1.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,970.0*CANNON_RANGE_SCALAR*0.5);
 		n++;
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CULVERINE_LBS24]);
 		rCannon.type = CANNON_NAME_CULVERINE;
+		rCannon.name = "caliber24b";
+		rCannon.picture = "cannons7";
 		rCannon.caliber = 24;
 		rCannon.ReloadTime = 56; //30;
 		rCannon.Cost = 2000;
@@ -372,12 +502,18 @@ void InitCannons()
  		rCannon.gunpowder = 8;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
 		rCannon.FireAngMin = -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 1.5;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1150.0*CANNON_RANGE_SCALAR*0.5);
 		n++;
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CANNON_LBS12]);
 		rCannon.type = CANNON_NAME_CANNON;
+		rCannon.name = "caliber12c";
+		rCannon.picture = "cannons5";
 		rCannon.caliber = 12;
 		rCannon.ReloadTime = 24; //12;
 		rCannon.Cost = 1000;
@@ -386,12 +522,18 @@ void InitCannons()
  		rCannon.gunpowder = 2;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
 		rCannon.FireAngMin = -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 0.6;
 		InitBaseCannons_CalcSpeedV0(&rCannon,640.0*CANNON_RANGE_SCALAR*0.5);
 		n++;
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CANNON_LBS16]);
 		rCannon.type = CANNON_NAME_CANNON;
+		rCannon.name = "caliber16c";
+		rCannon.picture = "cannons6";
 		rCannon.caliber = 16;
 		rCannon.ReloadTime = 36; //20;
 		rCannon.Cost = 1300;
@@ -400,12 +542,18 @@ void InitCannons()
  		rCannon.gunpowder = 3;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
 		rCannon.FireAngMin = -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 1.0;
 		InitBaseCannons_CalcSpeedV0(&rCannon,775.0*CANNON_RANGE_SCALAR*0.5);
 		n++;
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CANNON_LBS24]);
 		rCannon.type = CANNON_NAME_CANNON;
+		rCannon.name = "caliber24c";
+		rCannon.picture = "cannons7";
 		rCannon.caliber = 24;
 		rCannon.ReloadTime = 48; //24;
 		rCannon.Weight = 58;
@@ -414,12 +562,18 @@ void InitCannons()
  		rCannon.gunpowder = 5;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
 		rCannon.FireAngMin = -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 1.5;
 		InitBaseCannons_CalcSpeedV0(&rCannon,920.0*CANNON_RANGE_SCALAR*0.5);
 		n++;
 
 		makeref(rCannon,Cannon[CANNON_TYPE_CANNON_LBS32]);
 		rCannon.type = CANNON_NAME_SPECIAL_CANNON;
+		rCannon.name = "caliber32d";
+		rCannon.picture = "cannons8";
 		rCannon.caliber = 32;
 		rCannon.ReloadTime = 60; //40;
 		rCannon.Cost = 3500;
@@ -428,6 +582,10 @@ void InitCannons()
  		rCannon.gunpowder = 9;// added by MAXIMUS [gunpowder mod]
 		rCannon.FireAngMax = 0.60 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
 		rCannon.FireAngMin = -0.35 * FIRE_ANGLE_SCALAR_H*0.5; // NK 04-09-09
+		rCannon.TimeSpeedMultiply = 1.0;
+		rCannon.BigBall = 0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.HeightMultiply = 1.0;
 		rCannon.DamageMultiply = 2.25;
 		rCannon.TradeOff = false;
 		InitBaseCannons_CalcSpeedV0(&rCannon,1100.0*CANNON_RANGE_SCALAR*0.5);

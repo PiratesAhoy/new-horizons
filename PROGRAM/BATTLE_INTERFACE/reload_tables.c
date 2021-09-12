@@ -200,7 +200,7 @@ void PlayerFastTravel(int startLocIdx, string finishLocName)
 		AddTimeToCurrent(0,TIME_FASTTRAVEL*2); // NK 04-09-21
 		DoReloadCharacterToLocation(finishLocName, "Reload", "Reload2");
 		return;
-		
+
 	}
 
 	if (HasSubStr(lcn.filespath.models,"Town_Greenford\port") || HasSubStr(lcn.filespath.models,"Town_Charlestown")) // PB
@@ -579,14 +579,25 @@ bool CheckFastJump(string sFromLocation, string sToLocation)
 			if (bCanEnterToLand) {
 				aref curTable; makearef(curTable, objFastReloadTable.table.Ship);
 				curTable.l9.pic = 1;
+				curTable.l9.selpic = 5;
 				curTable.l9.note = "go_shore";
 				if (Locations[FindLocation(LocatorRef.go)].type == "port" || Locations[FindLocation(LocatorRef.go)].type == "town") {
 					curTable.l9.pic = 2;
+					curTable.l9.selpic = 6;
 					if(CheckAttribute(Locations[FindLocation(LocatorRef.go)], "id"))
 					{
-						if(HasSubStr(Locations[FindLocation(LocatorRef.go)].id,"QC_")) curTable.l9.pic = 1;//MAXIMUS
-						if(Locations[FindLocation(LocatorRef.go)].id=="Douwesen_shore_01") curTable.l9.pic = 1;//MAXIMUS
-						if(Locations[FindLocation(LocatorRef.go)].id=="Conceicao_shore_02") curTable.l9.pic = 1;//MAXIMUS
+						if(HasSubStr(Locations[FindLocation(LocatorRef.go)].id,"QC_")) {
+                                curTable.l9.pic = 1;//MAXIMUS
+                                curTable.l9.selpic = 5;
+						}
+						if(Locations[FindLocation(LocatorRef.go)].id=="Douwesen_shore_01") {
+                                curTable.l9.pic = 1;//MAXIMUS
+                                curTable.l9.selpic = 5;
+						}
+						if(Locations[FindLocation(LocatorRef.go)].id=="Conceicao_shore_02") {
+                                curTable.l9.pic = 1;//MAXIMUS
+                                curTable.l9.selpic = 5;
+						}
 					}
 					curTable.l9.note = "go_port";
 				}

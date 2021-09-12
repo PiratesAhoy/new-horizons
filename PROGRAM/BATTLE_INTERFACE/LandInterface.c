@@ -56,9 +56,11 @@ void StartBattleLandInterface()
 	}
 	bLandInterfaceStart = true;
 
-	BLI_SetShowParameters();
+	//BLI_SetShowParameters();
+	BLI_SetObjectData();
+	BLI_SetMessageParameters();
 	CreateEntity(&objLandInterface,"battle_land_interface");
-	DeleteAttribute(&objLandInterface,"");
+	//DeleteAttribute(&objLandInterface,"");
 	LayerAddObject("execute",&objLandInterface,-1);
 	LayerAddObject("realize",&objLandInterface,-1);
 
@@ -67,8 +69,6 @@ void StartBattleLandInterface()
 	SetEventHandler(EVENT_CHANGE_OFFICERS,"BLI_UpdateOfficers",0);
 	SetEventHandler(EVENT_DIALOG_START,"BLI_DisableShow",0);
 	SetEventHandler(EVENT_DIALOG_EXIT,"BLI_EnableShow",0);
-
-	BLI_SetObjectData();
 
 	if(dialogRun) BLI_DisableShow();
 	else BLI_EnableShow();
@@ -81,6 +81,7 @@ void StartBattleLandInterface()
 	SetEventHandler("Location_CharacterEntryToLocator", "BLI_ChrEnterToLocation", 0);
 	SetEventHandler("Location_CharacterExitFromLocator", "BLI_ChrExitFromLocation", 0);
 	SetEventHandler("evntPerkAgainUsable","BLI_RefreshCommandMenu",0);
+	SetEventHandler("Control Activation","LI_ProcessControlPress",0);
 
 	RefreshFlags();
 
@@ -376,12 +377,14 @@ void EndBattleLandInterface()
 	DelEventHandler("Location_CharacterEntryToLocator", "BLI_ChrEnterToLocation");
 	DelEventHandler("Location_CharacterExitFromLocator", "BLI_ChrExitFromLocation");
 	DelEventHandler("evntPerkAgainUsable","BLI_RefreshCommandMenu");
+	DelEventHandler("Control Activation","LI_ProcessControlPress");
 
 	Log_SetActiveAction("Nothing");
 }
 
 void BLI_SetObjectData()
 {
+    int fTmp, fTmp2;
 	DeleteAttribute(&objLandInterface,"");
 	objLandInterface.data.riskAlarm = 0;
 	// индикатор тревоги
@@ -392,7 +395,7 @@ void BLI_SetObjectData()
 	int i,cn;
 	ref curCh;
 	string attrName;
-	for(i=0; i < OFFICER_MAX; i++)
+	for(i=0; i<=OFFICER_MAX; i++)
 	{
 		cn = GetOfficersIndex(mainCh,i);
 		if(cn==-1) continue;
@@ -404,118 +407,144 @@ void BLI_SetObjectData()
 		ar.health = 0.0;
 		ar.charge = 0.0;
 	}
-	BLI_SetCommandParameters();
-	BLI_SetMassageParameters();
+
+	BLI_SetMessageParameters();
 	// текстуры
 	int idLngFile = LanguageOpenFile("commands_name.txt");
 	objLandInterface.CommandTextures.list.t0.name = "battle_interface\LandCommands.tga";
-	objLandInterface.CommandTextures.list.t0.xsize = 2;
+	objLandInterface.CommandTextures.list.t0.xsize = 4;
 	objLandInterface.CommandTextures.list.t0.ysize = 8;//4;//MAXIMUS
 	objLandInterface.CommandTextures.list.t1.name = "battle_interface\LandTarget4.tga";
-	objLandInterface.CommandTextures.list.t1.xsize = 8; //Greatzen was 4
-	objLandInterface.CommandTextures.list.t1.ysize = 4; // KK JRH
+	objLandInterface.CommandTextures.list.t1.xsize = 16; //Greatzen was 4
+	objLandInterface.CommandTextures.list.t1.ysize = 4; // KK
 	objLandInterface.CommandTextures.list.t2.name = "battle_interface\LandTarget1.tga";
-	objLandInterface.CommandTextures.list.t2.xsize = 4; // KK
+	objLandInterface.CommandTextures.list.t2.xsize = 8; // KK
 	objLandInterface.CommandTextures.list.t2.ysize = 2; // PB
 	objLandInterface.CommandTextures.list.t3.name = "battle_interface\Cancel.tga";
-	objLandInterface.CommandTextures.list.t3.xsize = 1;
+	objLandInterface.CommandTextures.list.t3.xsize = 2;
 	objLandInterface.CommandTextures.list.t3.ysize = 1;
 	objLandInterface.CommandTextures.list.t4.name = "battle_interface\UsedItems1.tga";
-	objLandInterface.CommandTextures.list.t4.xsize = 4;
+	objLandInterface.CommandTextures.list.t4.xsize = 8;
 	objLandInterface.CommandTextures.list.t4.ysize = 2;
 	objLandInterface.CommandTextures.list.t5.name = "battle_interface\UsedItems2.tga";
-	objLandInterface.CommandTextures.list.t5.xsize = 4;
+	objLandInterface.CommandTextures.list.t5.xsize = 8;
 	objLandInterface.CommandTextures.list.t5.ysize = 2;
   // Viper
 	objLandInterface.CommandTextures.list.t6.name = "battle_interface\UsedItems3.tga"; //Levis
-	objLandInterface.CommandTextures.list.t6.xsize = 4;
+	objLandInterface.CommandTextures.list.t6.xsize = 8;
 	objLandInterface.CommandTextures.list.t6.ysize = 2;
-	objLandInterface.CommandTextures.list.t7.name = "blank.tga"; // PW: avoid system.log errors
-	objLandInterface.CommandTextures.list.t7.xsize = 4;
+	objLandInterface.CommandTextures.list.t7.name = "blank.tga.tx";
+	objLandInterface.CommandTextures.list.t7.xsize = 4; //was 8 by Jeffrey
 	objLandInterface.CommandTextures.list.t7.ysize = 4;
-	objLandInterface.CommandTextures.list.t8.name = "blank.tga"; // PW: avoid system.log errors
-	objLandInterface.CommandTextures.list.t8.xsize = 4;
+	objLandInterface.CommandTextures.list.t8.name = "blank.tga.tx";
+	objLandInterface.CommandTextures.list.t8.xsize = 4; //was 8 by Jeffrey
 	objLandInterface.CommandTextures.list.t8.ysize = 4;
   // Viper
 // KK -->
-	objLandInterface.CommandTextures.list.t9.name = "blank.tga"; // PW: avoid system.log errors
+	objLandInterface.CommandTextures.list.t9.name = "blank.tga.tx";
 	objLandInterface.CommandTextures.list.t9.xsize = 0;
 	objLandInterface.CommandTextures.list.t9.ysize = 0;
 
-	objLandInterface.CommandTextures.list.t10.name = "battle_interface\ships_16.tga";
-	objLandInterface.CommandTextures.list.t10.xsize = 4;
+	objLandInterface.CommandTextures.list.t10.name = "battle_interface\ships_16.tga.tx";
+	objLandInterface.CommandTextures.list.t10.xsize = 8; //was 8 by Jeffrey
 	objLandInterface.CommandTextures.list.t10.ysize = 4;
-	objLandInterface.CommandTextures.list.t11.name = "battle_interface\ships_1.tga";
-	objLandInterface.CommandTextures.list.t11.xsize = 1;
+	objLandInterface.CommandTextures.list.t11.name = "battle_interface\ships_1.tga.tx";
+	objLandInterface.CommandTextures.list.t11.xsize = 2;  //was 2 by Jeffrey
 	objLandInterface.CommandTextures.list.t11.ysize = 1;
-	objLandInterface.CommandTextures.list.t12.name = "battle_interface\ships_2.tga";
-	objLandInterface.CommandTextures.list.t12.xsize = 1;
+	objLandInterface.CommandTextures.list.t12.name = "battle_interface\ships_2.tga.tx";
+	objLandInterface.CommandTextures.list.t12.xsize = 2; //was 2 by Jeffrey
 	objLandInterface.CommandTextures.list.t12.ysize = 2;
-	objLandInterface.CommandTextures.list.t13.name = "battle_interface\08shs_02.tga";
-	objLandInterface.CommandTextures.list.t13.xsize = 1;
+	objLandInterface.CommandTextures.list.t13.name = "battle_interface\08shs_02.tga.tx";
+	objLandInterface.CommandTextures.list.t13.xsize = 2; //was 2 by Jeffrey
 	objLandInterface.CommandTextures.list.t13.ysize = 1;
-	objLandInterface.CommandTextures.list.t14.name = "battle_interface\ships_32.tga";
-	objLandInterface.CommandTextures.list.t14.xsize = 4;
+	objLandInterface.CommandTextures.list.t14.name = "battle_interface\ships_32.tga.tx";
+	objLandInterface.CommandTextures.list.t14.xsize = 8; //was 8 by Jeffrey
 	objLandInterface.CommandTextures.list.t14.ysize = 4;
 // <-- KK
+    objLandInterface.CommandTextures.list.t15.name = "battle_interface\ships_48.tga.tx";
+	objLandInterface.CommandTextures.list.t15.xsize = 8;
+	objLandInterface.CommandTextures.list.t15.ysize = 4;
+
+    objLandInterface.CommandTextures.list.t16.name = "battle_interface\ships_all.tga.tx";
+	objLandInterface.CommandTextures.list.t16.xsize = 16;
+	objLandInterface.CommandTextures.list.t16.ysize = 16;
 
 	objLandInterface.CommandTextures.CommandTexNum = 0;
 	// список команд
 	objLandInterface.Commands.Cancel.enable			= false;
 	objLandInterface.Commands.Cancel.picNum			= 0;
+	objLandInterface.Commands.Cancel.selPicNum			= 1;
 	objLandInterface.Commands.Cancel.texNum			= 3;
 	objLandInterface.Commands.Cancel.event			= "Cancel";
 	objLandInterface.Commands.ItemsUse.enable		= true;
 	objLandInterface.Commands.ItemsUse.picNum		= 0;
+	objLandInterface.Commands.ItemsUse.selPicNum		= 2;
+	objLandInterface.Commands.ItemsUse.texNum			= 0;
 	objLandInterface.Commands.ItemsUse.event		= "BI_ItemsUse";
 	objLandInterface.Commands.ItemsUse.note			= LanguageConvertString(idLngFile, "land_ItemsUse");
 	objLandInterface.Commands.DialogStart.enable	= true;
-	objLandInterface.Commands.DialogStart.picNum	= 4;
+	objLandInterface.Commands.DialogStart.picNum	= 8;
+	objLandInterface.Commands.DialogStart.selPicNum	= 10;
+	objLandInterface.Commands.DialogStart.texNum			= 0;
 	objLandInterface.Commands.DialogStart.event		= "BI_DialogStart";
 	objLandInterface.Commands.DialogStart.note		= LanguageConvertString(idLngFile, "land_DialogStart");
 	objLandInterface.Commands.ItemsChange.enable	= true;
 	objLandInterface.Commands.ItemsChange.picNum	= 1;
+	objLandInterface.Commands.ItemsChange.selPicNum	= 3;
+	objLandInterface.Commands.ItemsChange.texNum			= 0;
 	objLandInterface.Commands.ItemsChange.event		= "BI_ItemsChange";
 	objLandInterface.Commands.ItemsChange.note		= LanguageConvertString(idLngFile, "land_ItemsChange");
 	objLandInterface.Commands.TakeItem.enable		= true;
 	objLandInterface.Commands.TakeItem.picNum		= 5;
+	objLandInterface.Commands.TakeItem.selPicNum		= 11;
+	objLandInterface.Commands.TakeItem.texNum			= 0;
 	objLandInterface.Commands.TakeItem.event		= "BI_TakeItem";
 	objLandInterface.Commands.TakeItem.note			= LanguageConvertString(idLngFile, "land_TakeItem");
 	objLandInterface.Commands.PlaceItem.enable		= true;
-	objLandInterface.Commands.PlaceItem.picNum		= 5;
+	objLandInterface.Commands.PlaceItem.picNum		= 9;
+	objLandInterface.Commands.PlaceItem.selPicNum		= 11;
+	objLandInterface.Commands.PlaceItem.texNum			= 0;
 	objLandInterface.Commands.PlaceItem.event		= "BI_PlaceItem";
 	objLandInterface.Commands.PlaceItem.note		= LanguageConvertString(idLngFile, "land_PlaceItem");
 	objLandInterface.Commands.OutDoor.enable		= true;
-	objLandInterface.Commands.OutDoor.picNum		= 2;
+	objLandInterface.Commands.OutDoor.picNum		= 4;
+	objLandInterface.Commands.OutDoor.selPicNum		= 6;
+	objLandInterface.Commands.OutDoor.texNum			= 0;
 	objLandInterface.Commands.OutDoor.event			= "BI_OutDoor";
 	objLandInterface.Commands.OutDoor.note			= LanguageConvertString(idLngFile, "land_OutDoor");
 	objLandInterface.Commands.UseBox.enable			= true;
-	objLandInterface.Commands.UseBox.picNum			= 8;//1;//MAXIMUS
+	objLandInterface.Commands.UseBox.picNum			= 16;//1;//MAXIMUS
+	objLandInterface.Commands.UseBox.selPicNum			= 18;
 	objLandInterface.Commands.UseBox.texNum			= 0;//MAXIMUS
 	objLandInterface.Commands.UseBox.event			= "BI_UseBox";
 	objLandInterface.Commands.UseBox.note			= LanguageConvertString(idLngFile, "land_UseBox");
 //MAXIMUS -->
 	objLandInterface.Commands.UseCorpse.enable		= true;
-	objLandInterface.Commands.UseCorpse.picNum		= 9;
+	objLandInterface.Commands.UseCorpse.picNum		= 17;
+	objLandInterface.Commands.UseCorpse.selPicNum		= 19;
 	objLandInterface.Commands.UseCorpse.texNum		= 0;
 	objLandInterface.Commands.UseCorpse.event		= "BI_UseCorpse";
 	objLandInterface.Commands.UseCorpse.note		= LanguageConvertString(idLngFile, "land_UseCorpse");
 
 	objLandInterface.Commands.UseBarrel.enable		= true;
-	objLandInterface.Commands.UseBarrel.picNum		= 10;
+	objLandInterface.Commands.UseBarrel.picNum		= 20;
+	objLandInterface.Commands.UseBarrel.selPicNum		= 22;
 	objLandInterface.Commands.UseBarrel.texNum		= 0;
 	objLandInterface.Commands.UseBarrel.event		= "BI_UseBarrel";
 	objLandInterface.Commands.UseBarrel.note		= LanguageConvertString(idLngFile, "land_UseBarrel");
 //MAXIMUS <--
 // KK -->
 	objLandInterface.Commands.ReloadFromLandToSea.enable		= false;
-	objLandInterface.Commands.ReloadFromLandToSea.picNum		= 7;
+	objLandInterface.Commands.ReloadFromLandToSea.picNum		= 13;
+	objLandInterface.Commands.ReloadFromLandToSea.selPicNum		= 15;
 	objLandInterface.Commands.ReloadFromLandToSea.texNum		= 0;
 	objLandInterface.Commands.ReloadFromLandToSea.event			= "BI_ReloadFromLandToSea";
 	objLandInterface.Commands.ReloadFromLandToSea.note	    = LanguageConvertString(idLngFile, "land_ExitDeck");
 
 	objLandInterface.Commands.FastReload.enable		= true;
-	objLandInterface.Commands.FastReload.picNum		= 3;
+	objLandInterface.Commands.FastReload.picNum		= 5;
+	objLandInterface.Commands.FastReload.selPicNum		= 7;
+	objLandInterface.Commands.FastReload.texNum		= 0;
 	objLandInterface.Commands.FastReload.event		= "BI_FastReload";
 	objLandInterface.Commands.FastReload.note		= LanguageConvertString(idLngFile, "land_FastReload");
 
@@ -524,13 +553,19 @@ void BLI_SetObjectData()
 		if (st >= 0 && st < SHIP_TYPES_QUANTITY) {
 			objLandInterface.Commands.EnterShip.enable = true;
 			objLandInterface.Commands.EnterShip.picNum = sti(ShipsTypes[st].BI.Pic);
+			//Boyer change
+			if(CheckAttribute(ShipsTypes[st], "BI.selPic"))
+                objLandInterface.Commands.EnterShip.selPicNum = sti(ShipsTypes[st].BI.selPic);
+            else
+                objLandInterface.Commands.EnterShip.selPicNum = sti(ShipsTypes[st].BI.Pic) + 1;
 			objLandInterface.Commands.EnterShip.texNum = sti(ShipsTypes[st].BI.Tex);
 			objLandInterface.Commands.EnterShip.event  = "BI_EnterShip";
 			objLandInterface.Commands.EnterShip.note   = GetMyShipName(mainCh);
 		}
 	} else {
 		objLandInterface.Commands.EnterShip.enable = true;
-		objLandInterface.Commands.EnterShip.picNum = 5;
+		objLandInterface.Commands.EnterShip.picNum = 9;
+		objLandInterface.Commands.EnterShip.selPicNum = 13;
 		objLandInterface.Commands.EnterShip.texNum = 2;
 		objLandInterface.Commands.EnterShip.event  = "BI_EnterShip";
 		objLandInterface.Commands.EnterShip.note   = LanguageConvertString(idLngFile, "land_EnterDeck");
@@ -538,20 +573,23 @@ void BLI_SetObjectData()
 	// added by KAM -->
 // MAXIMUS Deck -->
 	objLandInterface.Commands.ExitDeck.enable		= false;
-	objLandInterface.Commands.ExitDeck.picNum		= 7;
+	objLandInterface.Commands.ExitDeck.picNum		= 13;
+	objLandInterface.Commands.ExitDeck.selPicNum		= 15;
 	objLandInterface.Commands.ExitDeck.texNum		= 0;
 	objLandInterface.Commands.ExitDeck.event		= "BI_ExitDeck";
 	objLandInterface.Commands.ExitDeck.note		    = LanguageConvertString(idLngFile, "land_ExitDeck");
 // MAXIMUS Deck <--
 	// <-- added by KAM
 	objLandInterface.Commands.Back.enable		= false;
-	objLandInterface.Commands.Back.picNum		= 4;
+	objLandInterface.Commands.Back.picNum		= 8;
+	objLandInterface.Commands.Back.selPicNum		= 12;
 	objLandInterface.Commands.Back.texNum		= 2;
 	objLandInterface.Commands.Back.event		= "BI_Back";
 	objLandInterface.Commands.Back.note		    = LanguageConvertString(idLngFile, "land_Back");
 // <-- KK
 	objLandInterface.Commands.ActivateRush.enable	= true;
-	objLandInterface.Commands.ActivateRush.picNum	= 6;
+	objLandInterface.Commands.ActivateRush.picNum	= 12;
+	objLandInterface.Commands.ActivateRush.selPicNum	= 14;
 	objLandInterface.Commands.ActivateRush.event	= "BI_ActivateRush";
 	objLandInterface.Commands.ActivateRush.note		= LanguageConvertString(idLngFile, "land_ActivateRush");
 
@@ -559,8 +597,85 @@ void BLI_SetObjectData()
 		// cancel icon
 	objLandInterface.UserIcons.cancel.enable = true;
 	objLandInterface.UserIcons.cancel.pic = 0;
+	objLandInterface.UserIcons.cancel.selpic = 1;
 	objLandInterface.UserIcons.cancel.tex = 3;
 	objLandInterface.UserIcons.cancel.name = "cancel";
+
+	objLandInterface.ManSign.backtexturename		= "battle_interface\empty.tga.tx";
+	objLandInterface.ManSign.backcolor				= argb(255,128,128,128);
+	objLandInterface.ManSign.backuv					= "0.0,0.0,1.0,1.0";
+	objLandInterface.ManSign.backoffset				= "0.0,0.0";
+	objLandInterface.ManSign.backiconsize			= "128,128";
+
+	objLandInterface.ManSign.alarmtexturename		= "battle_interface\AlarmBack.tga.tx";
+	objLandInterface.ManSign.alarmhighcolor			= argb(168,168,28,28);
+	objLandInterface.ManSign.alarmlowcolor			= argb(64,168,28,28);
+	objLandInterface.ManSign.alarmuptime			= 2.5;
+	objLandInterface.ManSign.alarmdowntime			= 1.0;
+	objLandInterface.ManSign.alarmuv				= "0.0,0.0,1.0,1.0";
+	fTmp = RecalculateHIcon(-14);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(125);
+	//objLandInterface.ManSign.alarmoffset			= "-14,770";
+	objLandInterface.ManSign.alarmoffset = fTmp + "," + fTmp2;
+	objLandInterface.ManSign.alarmiconsize			= "70,70";
+
+	objLandInterface.ManSign.manstatetexturename	= "battle_interface\ShipState.tga.tx";
+	objLandInterface.ManSign.manstatecolor			= argb(255,128,128,128);
+	objLandInterface.ManSign.manhpuv				= "0.0,0.109,0.5,0.6875";
+	fTmp = RecalculateHIcon(-38);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(128);
+	//objLandInterface.ManSign.manhpoffset			= "-38,767";
+	objLandInterface.ManSign.manhpoffset = fTmp + "," + fTmp2;
+	objLandInterface.ManSign.manhpiconsize			= "64,80";
+	objLandInterface.ManSign.manenegryuv			= "0.5,0.109,1.0,0.6875";
+	fTmp = RecalculateHIcon(38);
+	//objLandInterface.ManSign.manenegryoffset		= "38,767";
+	objLandInterface.ManSign.manenegryoffset = fTmp + "," + fTmp2;
+	objLandInterface.ManSign.manenergyiconsize		= "64,80";
+
+	objLandInterface.ManSign.gunchargetexturename	= "battle_interface\ShipClass.tga.tx";
+	objLandInterface.ManSign.gunchargecolor			= argb(255,168,168,48);
+	objLandInterface.ManSign.gunchargebackcolor		= argb(255,188,48,48);
+	objLandInterface.ManSign.gunchargeuv			= "0.0,0.0,1.0,1.0";
+	fTmp = RecalculateHIcon(-16);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(155);
+	//objLandInterface.ManSign.gunchargeoffset		= "-14,740";
+	objLandInterface.ManSign.gunchargeoffset = fTmp + "," + fTmp2;
+	objLandInterface.ManSign.gunchargeiconsize		= "64,16";
+	objLandInterface.ManSign.gunchargeprogress		= "0.0625, 0.219, 0.359, 0.5, 0.641, 0.781, 0.983";
+
+	objLandInterface.ManSign.manfacecolor			= argb(255,128,128,128);
+	//objLandInterface.ManSign.manfaceoffset			= "-14,770";
+	fTmp = RecalculateHIcon(-14);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(125);
+	objLandInterface.ManSign.manfaceoffset = fTmp + "," + fTmp2;
+	//objLandInterface.ManSign.iconoffset1 = objLandInterface.ManSign.manfaceoffset;
+	objLandInterface.ManSign.manfaceiconsize		= "74,74";
+	//objLandInterface.ManSign.commandlistverticaloffset = 735;
+	fTmp2 -= RecalculateVIcon(37);
+	objLandInterface.ManSign.commandlistverticaloffset = fTmp2;
+	//Boyer mod
+	/*
+	objLandInterface.ManSign.iconoffset1 = "70,70";
+	objLandInterface.ManSign.iconoffset2 = "70,180";
+	objLandInterface.ManSign.iconoffset3 = "70,290";
+	objLandInterface.ManSign.iconoffset4 = "70,400";
+	*/
+    string sOff = "iconoffset";
+    fTmp = RecalculateVIcon(95);
+    fTmp2 = RecalculateVIcon(70);
+/*
+	for(i = 1; i<=MAX_NUM_FIGHTERS + 1; i++) {
+		string sOffsetIcon = "iconoffset" + i;
+		objLandInterface.ManSign.(sOffsetIcon) = "70," + (70 + (i-1)*110);
+		trace(sOffsetIcon + " = " + objLandInterface.ManSign.(sOffsetIcon) );
+	}
+*/
+    objLandInterface.ManSign.iconoffset1 = fTmp2 + "," + fTmp2;
+	for(i = OFFICER_MAX; i > 1; i--) {
+        sOff = "iconoffset" + i;
+		objLandInterface.ManSign.(sOff) = (fTmp * i) + "," + fTmp2;
+	}
 
 	LanguageCloseFile(idLngFile);
 		// go to icons
@@ -573,6 +688,7 @@ void BLI_SetObjectData()
 		CreateReloadPaths(outGroupName);
 	}
 
+	BLI_SetCommandParameters();
 	SendMessage(&objLandInterface,"l",MSG_BATTLE_LAND_START);
 }
 
@@ -589,7 +705,7 @@ bool FindUserIcon(string id,ref uiref)
 	}
 	return false;
 }
-
+/*
 void BLI_SetShowParameters()
 {
 	aref ar; makearef(ar,objLandInterface.Parameters);
@@ -640,11 +756,30 @@ void BLI_SetShowParameters()
 	ar.iconHorzQuantity = 8;
 	ar.iconVertQuantity = 4;
 	BLI_SetCommandParameters();
-	BLI_SetMassageParameters();
+	BLI_SetMessageParameters();
 }
+*/
 
 void BLI_SetCommandParameters()
 {
+	objLandInterface.CommandList.CommandMaxIconQuantity = 10;
+	objLandInterface.CommandList.CommandIconSpace = 1;
+	objLandInterface.CommandList.CommandIconLeft = 120;//157;
+	objLandInterface.CommandList.CommandIconWidth = RecalculateHIcon(74);
+	objLandInterface.CommandList.CommandIconHeight = RecalculateVIcon(74);
+
+	objLandInterface.CommandList.CommandNoteFont = "interface_normal";
+	objLandInterface.CommandList.CommandNoteColor = argb(255,255,255,255);
+	objLandInterface.CommandList.CommandNoteScale = 1.0;
+	objLandInterface.CommandList.CommandNoteOffset = RecalculateHIcon(0) + "," + RecalculateVIcon(-60);
+
+	objLandInterface.CommandList.UDArrow_Texture = "battle_interface\arrowly.tga.tx";
+	objLandInterface.CommandList.UDArrow_UV_Up = "0.0,1.0,1.0,0.0";
+	objLandInterface.CommandList.UDArrow_UV_Down = "0.0,0.0,1.0,1.0";
+	objLandInterface.CommandList.UDArrow_Size = RecalculateHIcon(32) + "," + RecalculateVIcon(32);
+	objLandInterface.CommandList.UDArrow_Offset_Up = RecalculateHIcon(-41) + "," + RecalculateVIcon(-30);
+	objLandInterface.CommandList.UDArrow_Offset_Down = RecalculateHIcon(-41) + "," + RecalculateVIcon(46);
+/*
 	objLandInterface.CommandShowParam.maxShowQuantity = 10;
 	objLandInterface.CommandShowParam.iconDistance = RecalculateHIcon(4);
 	objLandInterface.CommandShowParam.iconWidth = RecalculateHIcon(64);
@@ -666,22 +801,23 @@ void BLI_SetCommandParameters()
 	objLandInterface.CommandShowParam.noteXOffset = RecalculateHIcon(0);
 	objLandInterface.CommandShowParam.noteYOffset = RecalculateVIcon(-28);
 	objLandInterface.CommandShowParam.argbTFactorColor = argb(256,64,64,64);
+*/
 }
 
-void BLI_SetMassageParameters()
+void BLI_SetMessageParameters()
 {
 	objLandInterface.MessageIcons.IconWidth = RecalculateHIcon(64);
 	objLandInterface.MessageIcons.IconHeight = RecalculateVIcon(24);
 	objLandInterface.MessageIcons.IconDist = RecalculateVIcon(2);
 	objLandInterface.MessageIcons.IconBottom = sti(showWindow.bottom)-RecalculateHIcon(80+40);
-	objLandInterface.MessageIcons.IconMaxQuantity = 2;
+	objLandInterface.MessageIcons.IconMaxQuantity = 4;
 	objLandInterface.MessageIcons.BlendTime = 3.0;
 	objLandInterface.MessageIcons.FallSpeed = 22.0;
 	objLandInterface.MessageIcons.argbHighBlind = argb(255,128,128,128);
 	objLandInterface.MessageIcons.argbLowBlind = argb(255,68,68,68);
 	objLandInterface.MessageIcons.BlindUpTime = 0.5;
 	objLandInterface.MessageIcons.BlindDownTime = 1.0;
-	objLandInterface.MessageIcons.texture = "battle_interface\MessageIcons.tga";
+	objLandInterface.MessageIcons.texture = "battle_interface\MessageIcons.tga.tx";
 	objLandInterface.MessageIcons.TexHSize = 2;
 	objLandInterface.MessageIcons.TexVSize = 2;
 }
@@ -691,13 +827,14 @@ void BLI_UpdateObjectData()
 	objLandInterface.data.alarm = LAi_group_GetPlayerAlarm();
 	bool bIsRiskAlarm = LAi_group_IsActivePlayerAlarm();
 	if(sti(objLandInterface.data.riskAlarm)!=bIsRiskAlarm) BLI_RefreshCommandMenu();
-	objLandInterface.data.riskAlarm = bIsRiskAlarm;
+	objLandInterface.data.Alarm = bIsRiskAlarm;
+
 	ref mainCh = GetMainCharacter();
 	aref ar,arItm;
 	int i,cn;
 	ref curCh;
 	string attrName;
-	for(i=0; i<OFFICER_MAX; i++)
+	for(i=0; i<=OFFICER_MAX; i++)
 	{
 		attrName = "id"+i;
 		cn = GetOfficersIndex(mainCh,i);
@@ -708,12 +845,14 @@ void BLI_UpdateObjectData()
 		}
 		curCh = GetCharacter(cn);
 		makearef(ar,objLandInterface.data.icons.(attrName));
-		ar.picture = curCh.FaceId;
-		ar.health = LAi_GetCharacterRelHP(curCh);
-		ar.charge = LAi_GetCharacterRelCharge(curCh);//gun's reload speed (calculates from charges quantity)
-		ar.shootMax = LAi_GetCharacterChargeQuant(curCh);//maximal charges quantity (for current gun)
-		ar.shootCur = LAi_GetCharacterChargeCur(curCh);//actual charges quantity
-		ar.poison = LAi_IsPoison(curCh);
+		SetCharacterIconData(cn,ar);
+		//ar.picture = curCh.FaceId;
+		//ar.health = LAi_GetCharacterRelHP(curCh);
+		//ar.energy = LAi_GetCharacterRelEnergy(curCh);
+		//ar.charge = LAi_GetCharacterRelCharge(curCh);//gun's reload speed (calculates from charges quantity)
+		//ar.shootMax = LAi_GetCharacterChargeQuant(curCh);//maximal charges quantity (for current gun)
+		//ar.shootCur = LAi_GetCharacterChargeCur(curCh);//actual charges quantity
+		//ar.poison = LAi_IsPoison(curCh);
 	}
 	CheckOfficers();//MAXIMUS: updates officers-icons
 	SearchAdditionalLocators();//MAXIMUS: makes box from corpse with hand-icon in the top-left corner
@@ -1045,7 +1184,7 @@ void BLI_SetPossibleCommands()
 		objLandInterface.Commands.UseBox.enable	= !HasSubStr(mchref.boxname,"gunpowder") && !HasSubStr(mchref.boxname,"corpse");
 		bUseCommand = true;
 	}//MAXIMUS <--
-	
+
 	if( CheckAttribute(mchref,"activeItem") && mchref.activeItem!="" )
 	{
 		bUseCommand = true;
@@ -1125,15 +1264,52 @@ bool CheckForReload()
 }
 // <-- MAXIMUS // KK
 
-void BLI_evntRefreshCommandMenu()
+object objIconsNote;
+string GetNodeForIcon(int nTex, int nPic)
+{
+	string attrName = nTex+"x"+nPic;
+	if( CheckAttribute(objIconsNote,attrName) ) return objIconsNote.(attrName);
+	return "";
+}
+
+void LI_ProcessControlPress()
+{
+	string ControlName = GetEventData();
+
+	switch(ControlName)
+	{
+		case "hk_Cure": // TO_DO ?? ??????? - ? ???? ? ?? ?????
+			if( LAi_GetCharacterRelHP(pchar) < 1.0 )
+			{
+				float dhlt = LAi_GetCharacterMaxHP(pchar) - LAi_GetCharacterHP(pchar);
+				string btl = FindHealthForCharacter(pchar, dhlt);
+				DoCharacterUsedItem(pchar, btl);
+			}
+		break;
+
+		case "LICommandsActivate":
+			PlaySound("interface\ok.wav"); // boal ????? ?????!
+		break;
+	}
+}
+
+/* void BLI_evntRefreshCommandMenu()
 {
 	DelEventHandler("frame","BLI_evntRefreshCommandMenu");
 	BLI_RefreshCommandMenu();
 }
+*/
+
 void BLI_RefreshCommandMenu()
 {
-	SendMessage(&objLandInterface,"lllll",BI_IN_SET_COMMAND_MODE,-1,-1,-1,-1,-1);
+	SendMessage( &objLandInterface,"l",BI_MSG_CARE_COMMANDLIST_UPDATE );
 }
+
+void LI_CareUpdateCommandList()
+{
+	SendMessage( &objLandInterface,"l",BI_MSG_CARE_COMMANDLIST_UPDATE );
+}
+
 /*
 void procFindDialogChar()
 {
@@ -1227,7 +1403,7 @@ void PortraitUpdate(ref mchref, ref NPChar, string chrName, bool bShow)
 
 	if(bShow == true && chrName != "" && CheckAttribute(NPChar, "FaceId") && sti(NPChar.FaceId) != -1) {
 		string facePict = "INTERFACES\PORTRAITS\64\face_" + sti(NPChar.FaceId) + ".tga";
-		if (CheckAttribute(NPChar, "corpse") || FindFile("RESOURCE\TEXTURES\INTERFACES\PORTRAITS\64","*.tga.tx","face_"+sti(NPChar.FaceId)+".tga.tx")=="") facePict = "INTERFACES\PORTRAITS\128\face_skull.tga";
+		if (CheckAttribute(NPChar, "corpse") || FindFile(GetResourceDirectory() + "TEXTURES\INTERFACES\PORTRAITS\64","*.tga.tx","face_"+sti(NPChar.FaceId)+".tga.tx")=="") facePict = "INTERFACES\PORTRAITS\128\face_skull.tga";
 		// KK SetUpLogInterface("",COLOR_GREEN_LIGHT,16,0);
 		SetUpLogActions(facePict, 1, 1, 0);
 		Log_SetActiveAction("TalkWith");
@@ -1278,7 +1454,8 @@ void BLI_ChrEnterToLocation()
 	aref loc = GetEventData(); //moved up by levis
 	aref chr = GetEventData(); //moved up by levis
 	if(HasSubStr(GetAttribute(GetMainCharacter(), "boxname"),"corpse_box")) return; //Levis to make sure corpses can be on locators
-	DelEventHandler("frame", "BLI_evntRefreshCommandMenu");
+	//DelEventHandler("frame", "BLI_evntRefreshCommandMenu");
+	LI_CareUpdateCommandList();
 	if(bMutinyDeckStarted || LAi_IsBoardingProcess()) return;// MAXIMUS
 	if(CheckAttribute(GetMainCharacter(),"autoreload")) return;// MAXIMUS
 	string group = GetEventData();
@@ -1323,7 +1500,8 @@ void BLI_ChrEnterToLocation()
 // <-- KK
 		}
 	}
-	SetEventHandler("frame","BLI_evntRefreshCommandMenu",1);
+	//SetEventHandler("frame","BLI_evntRefreshCommandMenu",1);
+	LI_CareUpdateCommandList();
 	//LanguageCloseFile(tmpLangFileID);
 }
 
@@ -1414,7 +1592,8 @@ void SetUpLogActions(string textPath, int horzQuantity, int vertQuantity, int pi
 
 void BLI_ChrExitFromLocation()
 {
-	SetEventHandler("frame","BLI_evntRefreshCommandMenu",1);
+	//SetEventHandler("frame","BLI_evntRefreshCommandMenu",1);
+	LI_CareUpdateCommandList();
 }
 
 void LI_Reload()
@@ -1449,7 +1628,8 @@ bool SetUsedPotionIcons()
 
 	string UI_name;
 	int UI_idx = 0;
-
+    int nPicNum = 0;
+	int nTexNum = 4;
 	itmIdx = FindPotionFromChr(mc, &arItm, 0);
 	while(itmIdx>=0)
 	{
@@ -1458,8 +1638,16 @@ bool SetUsedPotionIcons()
 			UI_idx++;
 			UI_name = "potion"+UI_idx;
 			objLandInterface.UserIcons.(UI_name).enable = true;
-			objLandInterface.UserIcons.(UI_name).pic = GetPotionPicture(arItm);
-			objLandInterface.UserIcons.(UI_name).tex = GetPotionTexture(arItm);
+			nPicNum = GetPotionPicture(arItm);
+			objLandInterface.UserIcons.(UI_name).pic = nPicNum;
+			nTexNum = GetPotionTexture(arItm);
+			objLandInterface.UserIcons.(UI_name).tex = nTexNum;
+			if(nTexNum==4){
+				objLandInterface.UserIcons.(UI_name).selpic = nPicNum + 2;
+			}
+			else {
+				objLandInterface.UserIcons.(UI_name).selpic = nPicNum + 1;
+			}
 			objLandInterface.UserIcons.(UI_name).name = UI_name;
 			objLandInterface.UserIcons.(UI_name).potion = arItm.id;
 			objLandInterface.UserIcons.(UI_name).note = GetItemNameByID(arItm.id) + ": " + GetCharacterItem(mc, arItm.id); // KK
@@ -1474,6 +1662,7 @@ bool SetUsedPotionIcons()
 		UI_name = "potion"+UI_idx;
 		objLandInterface.UserIcons.(UI_name).enable = true;
 		objLandInterface.UserIcons.(UI_name).pic = 0;
+		objLandInterface.UserIcons.(UI_name).selpic = 4;
 		objLandInterface.UserIcons.(UI_name).tex = 6;
 		objLandInterface.UserIcons.(UI_name).name = UI_name;
 		objLandInterface.UserIcons.(UI_name).potion = "opium";
@@ -1486,6 +1675,7 @@ bool SetUsedPotionIcons()
 		UI_name = "potion"+UI_idx;
 		objLandInterface.UserIcons.(UI_name).enable = true;
 		objLandInterface.UserIcons.(UI_name).pic = 1;
+		objLandInterface.UserIcons.(UI_name).selpic = 5;
 		objLandInterface.UserIcons.(UI_name).tex = 6;
 		objLandInterface.UserIcons.(UI_name).name = UI_name;
 		objLandInterface.UserIcons.(UI_name).potion = "vegetal";
@@ -1534,9 +1724,17 @@ bool SetReloadIcons()
 					objLandInterface.UserIcons.(fastLocName).enable = true;
 					objLandInterface.UserIcons.(fastLocName).pic = curloc.pic;
 					objLandInterface.UserIcons.(fastLocName).tex = 1+sti(curloc.tex);
+					if(sti(curloc.tex) == 0)
+                        objLandInterface.UserIcons.(fastLocName).selpic = sti(curloc.pic) + 8;
+                    else
+                        objLandInterface.UserIcons.(fastLocName).selpic = sti(curloc.pic) + 4;
 					objLandInterface.UserIcons.(fastLocName).name = "reload"+i;
 					objLandInterface.UserIcons.(fastLocName).location = curloc.location;
 					objLandInterface.UserIcons.(fastLocName).note = LanguageConvertString(tmpLangFileID, curloc.note); // KK
+					trace("curloc.tex " + curloc.tex);
+					trace("curloc.pic " + curloc.pic);
+					trace("curloc.sel " + objLandInterface.UserIcons.(fastLocName).selpic);
+					trace("curloc.note " + curloc.note);
 
 // KK -->
 					if (curloc.location == "Hold1" && GetCharacterShipCargoHoldCount(mc) > 1)
@@ -1564,7 +1762,11 @@ bool SetReloadIcons()
 					{
 						objLandInterface.UserIcons.port.enable = true;
 						objLandInterface.UserIcons.port.pic = 2;
-						if(Locations[idxloc].fastreload=="QC" || Locations[idxloc].fastreload=="Pirate_fort" || Locations[idxloc].fastreload=="SL") objLandInterface.UserIcons.port.pic = 1;
+						objLandInterface.UserIcons.port.selpic = 6;
+						if(Locations[idxloc].fastreload=="QC" || Locations[idxloc].fastreload=="Pirate_fort" || Locations[idxloc].fastreload=="SL") {
+                                objLandInterface.UserIcons.port.pic = 1;
+                                objLandInterface.UserIcons.port.selpic = 5;
+						}
 						objLandInterface.UserIcons.port.tex = 2;
 						objLandInterface.UserIcons.port.name = "reloadtoport";
 
@@ -1600,6 +1802,28 @@ void SetOfficerTexture(int officerIdx)
 // KK: fixed officers-icons - we'll see proper icon for each officer in any location (simpler than MAXIMUS did) -->
 void BLI_UpdateOfficers()
 {
+	//Boyer mod
+	/*
+	SetOfficerTexture(0);
+	SetOfficerTexture(1);
+	SetOfficerTexture(2);
+	SetOfficerTexture(3);
+	//Boyer mod for add'l fighters
+	SetOfficerTexture(4);
+	SetOfficerTexture(5);
+	SetOfficerTexture(6);
+	*/
+	for(int i=0;i<=OFFICER_MAX;i++) {
+		SetOfficerTexture(i);
+	}
+	//End Boyer mod
+
+	for(i=0;i<=OFFICER_MAX;i++) {
+		string sTexture;
+		sTexture = "iconTexture" + i;
+		SendMessage(&objLandInterface, "lls", MSG_BATTLE_LAND_SET_ICONTEX, i, objLandInterface.Parameters.(sTexture));
+	}
+
 	BLI_SetObjectData();
 	CheckOfficers();//MAXIMUS: all was moved down and BLI_UpdateObjectData will check officers-icons too :) [this will exclude hundreds of BLI_UpdateOfficers() in different places]
 }
@@ -1673,7 +1897,7 @@ bool CanBeUseItem(ref chref)
 
 // NK rewrite to use native StrCut() -->
 string Truncate(string str,int pos,int pos2)
-{               
+{
   /*string a="";
   int i;
   for (i=pos;i<pos2;i++)
@@ -1695,13 +1919,18 @@ bool SetShipIcons()
 	ref mchr = GetMainCharacter();
 	for (i = 0; i < COMPANION_MAX; i++) {
 		cn = GetCompanionIndex(mchr, i);
-		if (cn < 0) continue; // Levis: was if (cn < 0 || cn == iShipCaptain)
+		if (cn < 0 || cn == iShipCaptain) continue;
 		curchr = GetCharacter(cn);
 		st = GetCharacterShipType(curchr);
 		if (st >= 0 && st < SHIP_TYPES_QUANTITY) {
 			ship = "ship" + i;
 			objLandInterface.UserIcons.(ship).enable = true;
 			objLandInterface.UserIcons.(ship).pic    = sti(ShipsTypes[st].BI.Pic);
+			//Boyer change
+			if(CheckAttribute(ShipsTypes[st], "BI.selPic"))
+                objLandInterface.UserIcons.(ship).selpic = sti(ShipsTypes[st].BI.selPic);
+            else
+                objLandInterface.UserIcons.(ship).selpic = sti(ShipsTypes[st].BI.Pic) + 1;
 			objLandInterface.UserIcons.(ship).tex    = sti(ShipsTypes[st].BI.Tex);
 			objLandInterface.UserIcons.(ship).note   = GetMyShipName(curchr);
 			objLandInterface.UserIcons.(ship).name   = cn;
@@ -1742,3 +1971,31 @@ void BLIVisible(bool visibleFlag)
 	LogsVisible(visibleFlag);
 }
 // <-- KK
+
+void SetCharacterIconData(int chrindex, aref arData)
+{
+	ref chref = GetCharacter(chrindex);
+	arData.chrindex = chrindex;
+	arData.health = LAi_GetCharacterRelHP(chref);
+	arData.energy = LAi_GetCharacterRelEnergy(chref);
+	arData.shootMax = LAi_GetCharacterChargeQuant(chref);
+	arData.shootCur = LAi_GetCharacterChargeCur(chref);
+	if( CheckAttribute(chref,"FaceId") ) {
+		//arData.picture = chref.FaceId;
+		arData.texture = "interfaces\portraits\64\face_"+chref.FaceID+".tga.tx";
+		if( CheckAttribute(chref,"FaceUV") ) {
+			arData.uv = chref.FaceUV;
+		} else {
+			arData.uv = "0.0,0.0,1.0,1.0";
+		}
+	} else {
+		arData.texture = "battle_interface\two.tga.tx";
+		if( chrindex == 1 ) {
+			arData.uv = "0.5,0.0,1.0,1.0";
+		} else {
+			arData.uv = "0.0,0.0,0.5,1.0";
+		}
+	}
+	//arData.charge = LAi_GetCharacterRelCharge(chref);
+	//arData.poison = LAi_IsPoison(chref);
+}

@@ -9,7 +9,7 @@
 
 #define FRA_COLONY 		 		"Falaise De Fleur"
 #define SPA_COLONY 		 		"Isla Muelle"
-#define POR_COLONY 		 		"Conceicao"	
+#define POR_COLONY 		 		"Conceicao"
 #define HOL_COLONY 		 		"Douwesen"
 #define RED_COLONY 		 		"Redmond"
 #define OX_COLONY 		 		"Oxbay"
@@ -128,7 +128,7 @@ string SpellString(string tdir, string tfile, ref str1, ref str2, string joinStr
 	int tmpLangFileID = -1;
 
 	if (!bUseCommonIni) {
-		if (FindFile("RESOURCE\INI\TEXTS\" + LanguageGetLanguage() + "\" + tdir, "*.txt", tfile) == "") {
+		if (FindFile(GetResourceDirectory() + "INI\TEXTS\" + LanguageGetLanguage() + "\" + tdir, "*.txt", tfile) == "") {
 			str1 = "";
 			str2 = "";
 			return "";
@@ -182,12 +182,12 @@ string GetLocalizedDayString(int days)
 	string daysCount = strcut(sDays, bCorrestion, strlen(sDays)-1);
 //	LogIt(daysCount);
 
-	switch (ifcelng) 
+	switch (ifcelng)
 	{
 		case ILANG_RUS:
 			if (daysCount == 1 && strcut(sDays, strlen(sDays)-2, strlen(sDays)-1) > 11) Translation = TranslateString("","loc_day");
 			if (daysCount > 1 && daysCount < 5)
-			{ 
+			{
 				if (days > 20 || days < 10) Translation = TranslateString("","loc_days");
 				if (days > 20 && strcut(sDays, strlen(sDays)-2, strlen(sDays)-1) > 11) Translation = TranslateString("","loc_days");
 			}
@@ -324,7 +324,7 @@ int SetDifficulty(int newdiff)
 }
 
 string GetDifficultyName(int d)
-{                             
+{
 	string retstr;
 	switch(d)
 	{
@@ -390,7 +390,7 @@ void KAM_SetSailingIconsState(bool cap)
 		RefreshBattleInterface(false); // try to refresh BI
 	}*/
 	// NK <--
-	
+
 }
 // KAM <--
 
@@ -634,7 +634,7 @@ string SelectRumour(string rIsland, string rNation)
 		//if not active because quest not in progress, skip
 		if(!CheckAttribute(&Rumour[i],"given")) Rumour[i].given = false;
 		if(Rumour[i].state != "active") { continue; }
-		
+
 		// check chance
 		if(rand(100) > sti(Rumour[i].chance)) { continue; }
 
@@ -643,11 +643,11 @@ string SelectRumour(string rIsland, string rNation)
 			{ if(Rumour[i].loc != "all" && Rumour[i].loc != rIsland && Rumour[i].loc != rNation) { continue; } }
 
 		if(CheckAttribute(&Rumour[i],"id")) { questavail = true; if(!sti(Rumour[i].given)) { qungiven = true; } } //there is a quest rumor available
-		
+
 		AvailRumors[NumRumours] = i;
 		NumRumours++;
 	}
-	if (NumRumours == 0) 
+	if (NumRumours == 0)
 	{
 		//if none found, return default rumor
 		return Rumour[0].text;
@@ -1018,7 +1018,7 @@ void TIH_OfficerHiredProcess(ref RefChar, bool bLowSalary, bool bAutoAssign, boo
 */
 		// TIH --> suggested additions from maximus, adjusted for this code Aug29'06
 // TIH --> no, see if this attr doesnt exist for NEW officer, its because REF officer didn't have it in the first place, so trying to assign it the null field again is a bit pointless and dangerous - Oct30'06
-//		if (!CheckAttribute(NewOfficer,"location.locator") && CheckAttribute(RefChar, "location.locator")) NewOfficer.location.locator = RefChar.location.locator;// ? was a bug with not existent location.locator // KK now that should be OK 
+//		if (!CheckAttribute(NewOfficer,"location.locator") && CheckAttribute(RefChar, "location.locator")) NewOfficer.location.locator = RefChar.location.locator;// ? was a bug with not existent location.locator // KK now that should be OK
 //		if (!CheckAttribute(NewOfficer,"location.locator"))	NewOfficer.location.locator = "";// TIH - actually set it to nothing for fresh reset - Oct30'06
 // TIH <--
 		if (!CheckAttribute(NewOfficer,"model.entity")) 	NewOfficer.model.entity = "NPCharacter";// ? sometimes was an error - "can't create class"
@@ -1152,7 +1152,7 @@ void TIH_OfficerHiredShow(bool bPlaceChar, bool bSameSpot, bool bStartDialog)
 
 	// TIH --> This section won't be activated from at-sea conditions yet.
 	// Cabins and decks don't properly unload all characters when you leave them.
-	// Thus hired captains or captives get 'left there' pretty much until you get to 
+	// Thus hired captains or captives get 'left there' pretty much until you get to
 	// land and assign them as your officer. However if you had them assigned to a ship
 	// you can't assign them as an officer, and then they will ALWAYS show up in cabins/decks.
 	// So, until something is made for that, this section is not activated for now.
@@ -1204,7 +1204,7 @@ string returnRandomDeadItem()
 	return "potion";
 }
 
-//----------------------------- –ù–µ–¥–æ–ø–∏—Å–∞–Ω–Ω—ã–µ —Ñ—É–Ω–∫—Ü–∏–∏, –≤–≤–µ–¥–µ–Ω–Ω—ã–µ –¥–ª—è –ø—Ä–æ–ø–∏—Å—ã–≤–∞–Ω–∏—è –≤ –¥–∏–∞–ª–æ–≥–∏ ---------------------------
+//----------------------------- ÕÂ‰ÓÔËÒ‡ÌÌ˚Â ÙÛÌÍˆËË, ‚‚Â‰ÂÌÌ˚Â ‰Îˇ ÔÓÔËÒ˚‚‡ÌËˇ ‚ ‰Ë‡ÎÓ„Ë ---------------------------
 
 
 string TimeGreeting()
@@ -1262,13 +1262,13 @@ void Set_inDialog_Attributes()
 
 	// TODO NOTE: PUT THESE IN COMMON.INI AND USE CONVERTSTRING!
 	// Although we shouldn't for the ADDR_CIVIL because they're already translated; and for those other address forms we make multinational.
-	
+
 	AddressForms[GetAddressIndex(ADDR_CIVIL, ENGLAND, 0)] = XI_ConvertString("Mister");	// should this and Miss be master and mistress? This makes
 	AddressForms[GetAddressIndex(ADDR_CIVIL, ENGLAND, 1)] = XI_ConvertString("Miss");	// especial sense because often it's used with the player's _first_ name...
 	AddressForms[GetAddressIndex(ADDR_CIVIL, FRANCE, 0)] = XI_ConvertString("Monsieur");
 	AddressForms[GetAddressIndex(ADDR_CIVIL, FRANCE, 1)] = XI_ConvertString("Mademoiselle");
-	AddressForms[GetAddressIndex(ADDR_CIVIL, SPAIN, 0)] = XI_ConvertString("Se—Åor");
-	AddressForms[GetAddressIndex(ADDR_CIVIL, SPAIN, 1)] = XI_ConvertString("Se—Åorita");
+	AddressForms[GetAddressIndex(ADDR_CIVIL, SPAIN, 0)] = XI_ConvertString("SeÒor");
+	AddressForms[GetAddressIndex(ADDR_CIVIL, SPAIN, 1)] = XI_ConvertString("SeÒorita");
 	// pirate omitted.
 	AddressForms[GetAddressIndex(ADDR_CIVIL, HOLLAND, 0)] = XI_ConvertString("Mijnheer");
 	AddressForms[GetAddressIndex(ADDR_CIVIL, HOLLAND, 1)] = XI_ConvertString("Juffrouw");
@@ -1278,18 +1278,18 @@ void Set_inDialog_Attributes()
 	AddressForms[GetAddressIndex(ADDR_CIVIL, PERSONAL_NATION, 0)] = XI_ConvertString("Comrade");
 	AddressForms[GetAddressIndex(ADDR_CIVIL, PERSONAL_NATION, 1)] = XI_ConvertString("Comrade");
 // <-- KK
-	
+
 	AddressForms[GetAddressIndex(ADDR_COURTING, ENGLAND, 0)] = XI_ConvertString("m'lord");	//	Romancing, flattering or generally buttering up
 	AddressForms[GetAddressIndex(ADDR_COURTING, ENGLAND, 1)] = XI_ConvertString("m'lady");
-	
-	
+
+
 	AddressForms[GetAddressIndex(ADDR_POLITE, ENGLAND, 0)] = XI_ConvertString("sir");		//	Polite conversations (traders et cetera)
 	AddressForms[GetAddressIndex(ADDR_POLITE, ENGLAND, 1)] = XI_ConvertString("ma'am");	// ma'am is then not a new contraction? Boy, learn something every day. :)
 	// civil titles copied for polite for non-Eng
-	AddressForms[GetAddressIndex(ADDR_POLITE, FRANCE, 0)] = XI_ConvertString("Monsieur");	
+	AddressForms[GetAddressIndex(ADDR_POLITE, FRANCE, 0)] = XI_ConvertString("Monsieur");
 	AddressForms[GetAddressIndex(ADDR_POLITE, FRANCE, 1)] = XI_ConvertString("Mademoiselle");
-	AddressForms[GetAddressIndex(ADDR_POLITE, SPAIN, 0)] = XI_ConvertString("Se—Åor");
-	AddressForms[GetAddressIndex(ADDR_POLITE, SPAIN, 1)] = XI_ConvertString("Se—Åorita");
+	AddressForms[GetAddressIndex(ADDR_POLITE, SPAIN, 0)] = XI_ConvertString("SeÒor");
+	AddressForms[GetAddressIndex(ADDR_POLITE, SPAIN, 1)] = XI_ConvertString("SeÒorita");
 	AddressForms[GetAddressIndex(ADDR_POLITE, HOLLAND, 0)] = XI_ConvertString("Mijnheer");
 	AddressForms[GetAddressIndex(ADDR_POLITE, HOLLAND, 1)] = XI_ConvertString("Juffrouw");
 	AddressForms[GetAddressIndex(ADDR_POLITE, PORTUGAL, 0)] = XI_ConvertString("Senhor");
@@ -1301,19 +1301,19 @@ void Set_inDialog_Attributes()
 
 	AddressForms[GetAddressIndex(ADDR_INFORMAL, ENGLAND, 0)] = XI_ConvertString("lad");	//	Friendly references (matey's and friends)
 	AddressForms[GetAddressIndex(ADDR_INFORMAL, ENGLAND, 1)] = XI_ConvertString("lass");
-	
+
 	AddressForms[GetAddressIndex(ADDR_INSULT, ENGLAND, 0)] = XI_ConvertString("sirrah");	//	Patronising reference (marriage duel et cetera)
 	AddressForms[GetAddressIndex(ADDR_INSULT, ENGLAND, 1)] = XI_ConvertString("wench");
-	
+
 	AddressForms[GetAddressIndex(ADDR_HOSTILE, ENGLAND, 0)] = XI_ConvertString("bastard");	//	Insulting references (congratulations, you got an enemy)
 	AddressForms[GetAddressIndex(ADDR_HOSTILE, ENGLAND, 1)] = XI_ConvertString("trollop");
-	
+
 	AddressForms[GetAddressIndex(ADDR_CHILD, ENGLAND, 0)] = XI_ConvertString("son");		//	Governors' daughters and what you are to the church
 	AddressForms[GetAddressIndex(ADDR_CHILD, ENGLAND, 1)] = XI_ConvertString("daughter");
-	
+
 	AddressForms[GetAddressIndex(ADDR_KIN, ENGLAND, 0)] = XI_ConvertString("nephew");		//	Governors' nieces
 	AddressForms[GetAddressIndex(ADDR_KIN, ENGLAND, 1)] = XI_ConvertString("niece");
-	
+
 	AddressForms[GetAddressIndex(ADDR_GENDER, ENGLAND, 0)] = XI_ConvertString("man"); 	//	Gendered noun ("My good woman" et cetera)
 	AddressForms[GetAddressIndex(ADDR_GENDER, ENGLAND, 1)] = XI_ConvertString("woman");	//
 }
@@ -1387,14 +1387,14 @@ string GetCharacterAddressForm(ref chr, int addrtype, bool fname, bool lname)
 		//default:
 		retstr = GetAddressForm(addrtype, fakeNat, bsex);//MAXIMUS: 05.10.2007
 	}
-	
+
 	if(fname)
 		retstr += " " + chr.name;
 	if(fname && lname && CheckAttribute(chr, "middlename"))
 		retstr += " " + chr.middlename;
 	if(lname)
 		retstr += " " + chr.lastname;
-	return retstr;	
+	return retstr;
 }
 /**
  * Returns the officers address form as used e.g in the tailor's mod. But
@@ -1403,7 +1403,7 @@ string GetCharacterAddressForm(ref chr, int addrtype, bool fname, bool lname)
 string GetOfficerAddressForm(ref officer)
 {
 	return GetCharacterAddressForm(&officer, ADDR_CIVIL, true, true);
-}	 
+}
 // Swindler <--
 
 // gets the addressform of specified type of nation nat and for sex == "woman"
@@ -1441,13 +1441,13 @@ string GetMyNationAddress(ref chr, ref pchr)
 // KK -->
 	if(pchr.sex == "woman")
 	{
-		nataddr[SPAIN] = XI_ConvertString("Se—Åorita");			//spell-checked by KAM
+		nataddr[SPAIN] = XI_ConvertString("SeÒorita");			//spell-checked by KAM
 		nataddr[FRANCE] = XI_ConvertString("Mademoiselle");
 		nataddr[ENGLAND] = XI_ConvertString("Miss");
 		nataddr[PORTUGAL] = XI_ConvertString("Senhorita");
 		nataddr[HOLLAND] = XI_ConvertString("Juffrouw");
 	} else {
-		nataddr[SPAIN] = XI_ConvertString("Se—Åor");			//spell-checked by KAM
+		nataddr[SPAIN] = XI_ConvertString("SeÒor");			//spell-checked by KAM
 		nataddr[FRANCE] = XI_ConvertString("Monsieur");
 		nataddr[ENGLAND] = XI_ConvertString("Mister"); // NK
 		nataddr[PORTUGAL] = XI_ConvertString("Senhor");
@@ -1613,7 +1613,7 @@ string GetMyRespectfullyName(ref chr)
 		{
 			if(ourTitle == TranslateString("", "Dame") || ourTitle == TranslateString("", "Sir") ||
 			   ourTitle == TranslateString("", "Chevalier") ||
-			   ourTitle == TranslateString("", "Do—Åa") || ourTitle == TranslateString("", "Don") ||
+			   ourTitle == TranslateString("", "DoÒa") || ourTitle == TranslateString("", "Don") ||
 			   ourTitle == TranslateString("", "Dona") || ourTitle == TranslateString("", "Dom"))
 			{
 				ourName = GetMyName(chr);
@@ -1694,10 +1694,10 @@ string GetMyPronoun(ref chr, string model)
 	{
 		case "he": return XI_ConvertString(GetMyPronounSubj(&chr)); break;
 		case "she": return XI_ConvertString(GetMyPronounSubj(&chr)); break;
-		
+
 		case "him": return XI_ConvertString(GetMyPronounObj(&chr)); break;
 		case "her": return XI_ConvertString(GetMyPronounObj(&chr)); break;
-		
+
 		case "his": return XI_ConvertString(GetMyPronounPoss(&chr)); break;
 		case "hers": return XI_ConvertString(GetMyPronounPoss(&chr)); break;
 	}
@@ -1790,28 +1790,28 @@ string FindMRModel(int rank)
 				SetArraySize(&modelch,size);
 				modelch[size-1] = "towngirl7";
 			}
-	
+
 			for(i = 0; i < 11; i++)
 			{
 				size++;
 				SetArraySize(&modelch,size);
 				modelch[size-1] = "towngirl7_2"; // GR
 			}
-	
+
 			for(i = 0; i < 24; i++)
 			{
 				size++;
 				SetArraySize(&modelch,size);
 				modelch[size-1] = "towngirl4";
 			}
-	
+
 			for(i = 0; i < 14; i++)
 			{
 				size++;
 				SetArraySize(&modelch,size);
 				modelch[size-1] = "50_Rachel"; // GR
 			}
-	
+
 			for(i = 0; i < 11; i++)
 			{
 				size++;
@@ -1834,21 +1834,21 @@ string FindMRModel(int rank)
 					modelch[size-1] = "liz1"; // KK
 				}
 			}
-	
+
 			for(i = 0; i < 9; i++)
 			{
 				size++;
 				SetArraySize(&modelch,size);
 				modelch[size-1] = "diz1"; // GR
 			}
-	
+
 			for(i = 0; i < 9; i++)
 			{
 				size++;
 				SetArraySize(&modelch,size);
 				modelch[size-1] = "diz2"; // GR
 			}
-	
+
 			for(i = 0; i < 4; i++)
 			{
 				size++;
@@ -1945,14 +1945,14 @@ string FindMRModel(int rank)
 		}
 		if(rank>=7)
 		{
-	
+
 			for(i = 0; i < 35; i++)
 			{
 				size++;
 				SetArraySize(&modelch,size);
 				modelch[size-1] = "47_JRMMCpt";
 			}
-	
+
 			for(i = 0; i < 39; i++)
 			{
 				size++;
@@ -1979,7 +1979,7 @@ string FindMRModel(int rank)
 				SetArraySize(&modelch,size);
 				modelch[size-1] = "Huber_Eng2_17";
 			}
-	
+
 			for(i = 0; i < 19; i++)
 			{
 				size++;
@@ -2021,7 +2021,7 @@ int FindFreeMR()
 {
 	int Counter, MRIdx;
 	ref PChar;
-	
+
 	PChar = GetMainCharacter();
 	if(sti(PChar.married)) return -1;
 	string MRId;
@@ -2031,7 +2031,7 @@ int FindFreeMR()
 	for(counter = 0; counter <10; counter++)
 	{
 		MRId = "GovRel" + counter;
-		MRIdx = GetCharacterIndex(MRId);		
+		MRIdx = GetCharacterIndex(MRId);
 		if(sti(Characters[MRIdx].talkpoints) == 0 && sti(Characters[MRIdx].married) == MR_SINGLE) return MRIdx;
 	}
 
@@ -2106,7 +2106,7 @@ bool SetupMR(ref pchar, ref govchar)
 	if(offset >= 12) offset = -10;
 	else offset = 0 - offset/2;
 	LAi_Create_Officer(offset, mr);
-	
+
 	string MRID = mr.id;
 	int nation = sti(govchar.nation);
 	if(GetRank(pchar, nation) < 3) return false;
@@ -2119,7 +2119,7 @@ bool SetupMR(ref pchar, ref govchar)
 	if(MRs > MR_MAXNUM) return false;
 	MRs++;
 	govchar.MRs.(MRID) = true;
-	
+
 	govchar.currentMR = MRID;
 	mr.marpoints = MRCalcMarpoints(&pchar, nation);
 	if(DEBUGINFO) Log_SetStringToLog("MP: " + mr.marpoints + ", " + stf(mr.marpoints)/GetFame(pchar, nation) + "x fame");
@@ -2353,7 +2353,7 @@ void TIH_PrisonerTakenProcess(ref RefChar, bool bPurgeCrud)
 
 		// TIH --> suggested additions from maximus, adjusted for this code Aug29'06
 // TIH --> no, see if this attr doesnt exist for NEW officer, its because REF officer didn't have it in the first place, so trying to assign it the null field again is a bit pointless and dangerous - Oct30'06
-//		if (!CheckAttribute(Prisoner,"location.locator") && CheckAttribute(RefChar, "location.locator")) Prisoner.location.locator = RefChar.location.locator;// ? was a bug with not existent location.locator // KK now that should be OK 
+//		if (!CheckAttribute(Prisoner,"location.locator") && CheckAttribute(RefChar, "location.locator")) Prisoner.location.locator = RefChar.location.locator;// ? was a bug with not existent location.locator // KK now that should be OK
 //		if (!CheckAttribute(Prisoner,"location.locator"))	Prisoner.location.locator = "";// TIH - actually set it to nothing for fresh reset - Oct30'06
 // TIH <--
 		if (!CheckAttribute(Prisoner,"model.entity")) 	Prisoner.model.entity = "NPCharacter";// ? sometimes was an error - "can't create class"
@@ -2464,7 +2464,7 @@ void Riley_Restock_Ammo(int chridx, int gunpowder, int pistol_bullets, int grape
 	if (chridx < 0 || chridx == GetMainCharacterIndex()) {
 		// restock the weapons locker in the captain's cabin
 		ref _loc = &Locations[FindLocation("Tutorial_Deck")];
-	
+
 		if (CheckAttribute(_loc, "weaponslocker.items.gunpowder")) {
 			_loc.weaponslocker.items.gunpowder = sti(_loc.weaponslocker.items.gunpowder) + gpratio + (fgp > 0.0);
 		} else {
@@ -2495,7 +2495,7 @@ void Riley_Restock_Ammo(int chridx, int gunpowder, int pistol_bullets, int grape
 		if (chridx != cn && chridx > -1) continue;
 		// restock the weapons locker in the companion's cabin
 		_loc = &Locations[FindLocation("Companion_Cabin_" + i)];
-	
+
 		if (CheckAttribute(_loc, "weaponslocker.items.gunpowder")) {
 			_loc.weaponslocker.items.gunpowder = sti(_loc.weaponslocker.items.gunpowder) + gpratio;
 		} else {
@@ -2543,7 +2543,7 @@ void Riley_Officer_Restock_Ammo(int officer_price)
 	string pg_sgpl = " " + XI_ConvertString("wgrapeshot loads") + ", ";
 	string mb_sgpl = " " + XI_ConvertString("wmusket bullets bought for") + " ";
 	if (LAi_IsCapturedLocation) mb_sgpl = " " + XI_ConvertString("wmusket bullets taken"); // KK
-			
+
 	ref curChar;
 	int cn;
 	for(int i=0;i<psgQuant;i++)
@@ -2670,7 +2670,7 @@ int Riley_Officer_Restock_Ammo_Price()
 			if(sti(curChar.prisoned)==true) continue;
 		}
 		pistolbulletcheck = 0;
-		
+
 
 		// checking for powder flask, ammo pouch, powder barrel and ammunition bag
 		maxpowder = MAX_GUNPOWDER;
@@ -2720,7 +2720,7 @@ void RansomColony(string TownName, int nBooty)
 	townsize = GetTownSize(TownName);
 	troops = GetTownNumTroops(TownName);
 	nExp = troops * 50;
-	
+
 	ref chref = GetTownFortCommander(TownName, 0); // PB
 	if (CheckAttribute(chref, "skipRM"))
 	{
@@ -2732,7 +2732,7 @@ void RansomColony(string TownName, int nBooty)
 		if (CheckAttribute(chref, "betrayed"))	PChar.traitor = true; // PB: Temporary attribute, will be deleted in the next function
 		UpdateRMRelation(PChar, iNation, makefloat(townsize+troops)/100.0);
 	}
-	
+
 	SetTownGold(TownName, GetTownGold(TownName) - nBooty);
 	AddMoneyToCharacter(PChar, nBooty);
 	SetTownNumTroops(TownName, makeint(makefloat(troops) * SACK_TROOPS_DECREASE * (0.75 + frand(0.5))));
@@ -2776,7 +2776,7 @@ void CaptureColony(string TownName, int toNation)
 	iNation = GetTownNation(TownName);
 	townsize = GetTownSize(TownName);
 	troops = GetTownNumTroops(TownName);
-	
+
 	chref = GetTownFortCommander(TownName, 0); // PB
 	if (CheckAttribute(chref, "skipRM"))
 	{
@@ -2788,7 +2788,7 @@ void CaptureColony(string TownName, int toNation)
 		if (CheckAttribute(chref, "betrayed"))	PChar.traitor = true; // PB: Temporary attribute, will be deleted in the next function
 		UpdateRMRelation(PChar, iNation, makefloat(townsize+troops)/100.0);
 	}
-	
+
 	string sLogTitle;
 	string sLogEntry;
 	if (toNation != PERSONAL_NATION) {
@@ -2856,11 +2856,11 @@ string GetShipDescribe(string charId, bool nation, bool nguns, bool shipname, bo
 					string tmpstr = "";
 					for (int i = 0; i < dl - 1; i++) {
 						if (GetSymbol(tmpDescr, i + 1) == " ")
-							tmpstr += "‚Ññ";
+							tmpstr += "π";
 						else
 							tmpstr += strcut(tmpDescr, i, i);
 					}
-					tmpstr += "–ß";
+					tmpstr += "◊";
 					shipDescribe = tmpstr;
 				}
 			break;

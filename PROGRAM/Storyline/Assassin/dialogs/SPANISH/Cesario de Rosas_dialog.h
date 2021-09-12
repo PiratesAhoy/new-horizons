@@ -1,10 +1,10 @@
 string DLG_TEXT[8] = {
 "......",
 "......",
-"Ñ—QuĞ¹ es esto? Ñ—Y quiĞ¹n es usted?",
-"El CapitĞ±n Elting y yo trabajamos para el Vicealmirante de #sHavana#.",
-"Ñ—Trabajan para Salvadore Benavides? Al final, Ğsoy libre!",
-"Ñ—Es usted Cesario de Rosas, el enviado de Charles II?",
-"SĞ½. No pensĞ¹ en ser liberado tan pronto.",
-"TodavĞ½a estĞ± en peligro. Tenemos que dejar la isla ahora mismo. SĞ½game, Excelencia.",
+"¿Qué es esto? ¿Y quién es usted?",
+"El Capitán Elting y yo trabajamos para el Vicealmirante de #sHavana#.",
+"¿Trabajan para Salvadore Benavides? Al final, ¡soy libre!",
+"¿Es usted Cesario de Rosas, el enviado de Charles II?",
+"Sí. No pensé en ser liberado tan pronto.",
+"Todavía está en peligro. Tenemos que dejar la isla ahora mismo. Sígame, Excelencia.",
 };

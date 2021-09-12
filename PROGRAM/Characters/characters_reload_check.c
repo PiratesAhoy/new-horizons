@@ -186,7 +186,7 @@ int chrCheckReloadLink(ref loc, string reloadLocatorName) // KK
 					if (goLoc.id == "EITC_Office") mc.reloadStatus = "ToEITC";			//JRH
 					if (goLoc.id == "DWIC") mc.reloadStatus = "ToDWIC";				//JRH
 					if (goLoc.id == "CdC_Office") mc.reloadStatus = "ToCdC";			//GR
-					if (goLoc.id == "French_WIC_Office") mc.reloadStatus = "ToFWIC";		//GR
+					if (goLoc.id == "French_WIC_Office") mc.reloadStatus = "ToFWIC";		//GR					if (goLoc.type == "church" && HasSubStr(goLoc.id, "_church")) mc.reloadStatus = "ToChurch";
 					if (goLoc.type == "church" && HasSubStr(goLoc.id, "_church")) mc.reloadStatus = "ToChurch";
 					if (goLoc.type == "Turks_church") mc.reloadStatus = "ToChurch";			//JRH
 					if (goLoc.type == "Vane_chapel") mc.reloadStatus = "ToChurch";			//JRH

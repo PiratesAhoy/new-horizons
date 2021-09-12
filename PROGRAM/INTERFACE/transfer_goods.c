@@ -53,7 +53,7 @@ void InitInterface_RR(string iniName,ref pCharacter,ref enemyCh)
 	for(i=1;i<COMPANION_MAX;i++)	{if( GetCompanionIndex(pCharacter,i)>=0 ) bBeParty = true; break;}
 
 	FillScroll();
-	if(bAnimation && bNewInterface) iniName = "RESOURCE\INI\NEW_INTERFACES\ANIMATION\transfer_goods.ini";
+	if(bAnimation && bNewInterface) iniName = "NEW_INTERFACES\ANIMATION\transfer_goods.ini";
     SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 	CreateExitString();//MAXIMUS: standard exit-string for exit-button
 
@@ -69,7 +69,7 @@ void InitInterface_RR(string iniName,ref pCharacter,ref enemyCh)
 
 // added by MAXIMUS -->
 	string curEnemyName = XI_ConvertString("No Captain Assigned");
-	if(nCompanionIndex<0) 
+	if(nCompanionIndex<0)
 	{
 		if(CheckAttribute(refEnemyCharacter,"position"))
 		{
@@ -111,7 +111,7 @@ void InitInterface_RR(string iniName,ref pCharacter,ref enemyCh)
 			//CreateString(true,"EnemyName",XI_ConvertString("Dead") + " " + XI_ConvertString("captain"),FONT_NORMAL,COLOR_NORMAL,478,170,SCRIPT_ALIGN_CENTER,1.0);
 		}
 	}
-	else 
+	else
 	{
 		if(IsCompanion(newFriend) || IsOfficerCompanion(newFriend))
 		{
@@ -176,7 +176,7 @@ void SelectDiscard()
 void TransferCargoProcess(ref toChar, ref fromChar)
 {
 	// GOOD_GUNPOWDER is worst case scenario
-	
+
 	int goodsIdx 		= GetGoodsIndexForI(curNum);
 	int changeQ 		= sti(Goods[goodsIdx].Units);
 	int fromGoodsLeft 	= GetCargoGoods(fromChar,goodsIdx);
@@ -190,7 +190,7 @@ void TransferCargoProcess(ref toChar, ref fromChar)
 		{
 			// if it successfully added the goods to the destination, remove the goods from the source
 			RemoveCharacterGoods(fromChar,goodsIdx,changeQ);
-		} 
+		}
 		else
 		{
 			// if there wasn't enough room for a bulk transfer, then loop through one by one until its full
@@ -448,6 +448,8 @@ void ChangeScroll()
 		GameInterface.goodslist.(attributeName).goodsNum = i;
 		GameInterface.goodslist.(attributeName).tex1 = 0;
 		GameInterface.goodslist.(attributeName).tex2 = 1;
+		//Boyer change
+		SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"GOODSLIST",i);
 		idx++;
 	}
 	// fill invisible goods
@@ -465,6 +467,8 @@ void ChangeScroll()
 		GameInterface.goodslist.(attributeName).goodsNum = i;
 		GameInterface.goodslist.(attributeName).tex1 = 0;
 		GameInterface.goodslist.(attributeName).tex2 = 1;
+		//Boyer change
+		SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"GOODSLIST",i);
 		idx++;
 	}
 
@@ -474,7 +478,8 @@ void ChangeScroll()
 	GameInterface.strings.GoodsName = XI_ConvertString(Goods[GetGoodsIndexForI(curNum)].Name);
 	GameInterface.strings.EnemyGoods = GetCargoGoods(refEnemyCharacter,GetGoodsIndexForI(curNum)));
 
-    SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"GOODSLIST",-1);
+	//Boyer change
+    //SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"GOODSLIST",-1);
 	bool isEnable = false;
 //	if(GetRemovable(xi_refCharacter) && GetCargoGoods(xi_refCharacter,GetGoodsIndexForI(curNum))>0)
 //	{
@@ -496,7 +501,7 @@ void ChangeScroll()
  // added by MAXIMUS -->
 	if(GetCargoGoods(refEnemyCharacter,GetGoodsIndexForI(curNum))>0 && GetCargoLoad(xi_refCharacter)!=GetCargoMaxSpace(xi_refCharacter)) SetSelectable("TAKEALLCURRENT_BUTTON",isEnable);
 	else SetSelectable("TAKEALLCURRENT_BUTTON",false);
-	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"TAKEALLCURRENT_BUTTON",0,XI_ConvertString(Goods[GetGoodsIndexForI(curNum)].Name)+" - "+XI_ConvertString("TakeAll"));
+	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"TAKEALLCURRENT_BUTTON",0,"#"+XI_ConvertString(Goods[GetGoodsIndexForI(curNum)].Name)+" - "+XI_ConvertString("TakeAll"));
  // added by MAXIMUS <--
 }
 
@@ -636,15 +641,18 @@ void TakeAllProcess()
 	float holder;
 	int place;
 
-	float GoodsSort[33];
-	int GSID[33];
+	//float GoodsSort[33];
+	//int GSID[33];
+    object GSID[33];
 
 	for(i = 0; i < GOODS_QUANTITY; i++)
 	{
-		GoodsSort[i] = GetGoodPricePerWeight(i);
-		GSID[i] = i;
+		//GoodsSort[i] = GetGoodPricePerWeight(i);
+		//GSID[i] = i;
+		GSID[i].idx = i;
+		GSID[i].price = GetGoodPricePerWeight(i);
 	}
-
+/*
 // bubblesort grabbed from http://www.metalshell.com/view/source/105/
 	for(x = 0; x < GOODS_QUANTITY; x++)
 	{
@@ -661,21 +669,23 @@ void TakeAllProcess()
       			}
 		}
 	}
+*/
+    SortIdxArray(&GSID, "price", true /* desc */);
 
 	for(i=0;i<GOODS_QUANTITY;i++)
 	{
 		freeSpace = GetCargoFreeSpace(xi_refCharacter);
-		freeQuantity = GetGoodQuantityByWeight(GSID[i],freeSpace);
-		itmp = GetCargoGoods(refEnemyCharacter,GSID[i]);
+		freeQuantity = GetGoodQuantityByWeight(sti(GSID[i].idx),freeSpace);
+		itmp = GetCargoGoods(refEnemyCharacter,sti(GSID[i].idx));
 		if(itmp<=freeQuantity)
 		{
-			AddCharacterGoods(xi_refCharacter,GSID[i],itmp);
-			RemoveCharacterGoods(refEnemyCharacter,GSID[i],itmp);
+			AddCharacterGoods(xi_refCharacter,sti(GSID[i].idx),itmp);
+			RemoveCharacterGoods(refEnemyCharacter,sti(GSID[i].idx),itmp);
 		}
 		else
 		{
-			AddCharacterGoods(xi_refCharacter,GSID[i],freeQuantity);
-			RemoveCharacterGoods(refEnemyCharacter,GSID[i],freeQuantity);
+			AddCharacterGoods(xi_refCharacter,sti(GSID[i].idx),freeQuantity);
+			RemoveCharacterGoods(refEnemyCharacter,sti(GSID[i].idx),freeQuantity);
 		}
 	}
 // NK -->
@@ -760,7 +770,7 @@ void ProcessCommandExecute()
 	string nodName = GetEventData();
 
 	switch(nodName)
-	{	
+	{
 	case "GOODSLIST":
 		if(comName=="activate" || comName=="downstep")	{SelectDiscard();}
 	break;

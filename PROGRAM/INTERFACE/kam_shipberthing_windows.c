@@ -135,7 +135,7 @@ void DoWindow(string ChosenWindow, bool ShowBool)
 				{
 					SetNodeUsing("BSD_LAYUPSHIPBTN1",true);
 					SetNodeUsing("BSD_LAYUPSHIPBTN2",true);
-					SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"BSD_LAYUPSHIPBTN2",0,XI_ConvertString("KAM_SB_LayUpShip"));
+					SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"BSD_LAYUPSHIPBTN2",0,"#"+XI_ConvertString("KAM_SB_LayUpShip"));
 					EnableString("BSD_ShipCaptain");
 					tempnuma2 = PChar.ShipBerthing.(tempstringa1).(tempstringa2).captainindex;
 					GameInterface.strings.BSD_ShipCaptain = XI_ConvertString("Captain") + ": " + GetCaptainNameFromIndex(tempnuma2);
@@ -143,7 +143,7 @@ void DoWindow(string ChosenWindow, bool ShowBool)
 				else
 				{
 					SetNodeUsing("BSD_LAYUPSHIPBTN2",true);
-					SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"BSD_LAYUPSHIPBTN2",0,XI_ConvertString("KAM_SB_ScrapShip"));
+					SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"BSD_LAYUPSHIPBTN2",0,"#"+XI_ConvertString("KAM_SB_ScrapShip"));
 				}
 				SetNodeUsing("BSD_RELEASESHIPBTN",true);
 				if (SelectedPort == CurrentPortNumber)

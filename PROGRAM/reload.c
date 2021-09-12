@@ -220,7 +220,7 @@ int Reload(aref reload_group, string locator_name, string current_location)
 	reload_cur_island_index = -1;
 	reload_cur_location_index = -1;
 	if(current_location != "")
-	{		
+	{
 		reload_cur_island_index = FindIsland(current_location);
 		if(reload_cur_island_index < 0)
 		{
@@ -360,7 +360,8 @@ int Reload(aref reload_group, string locator_name, string current_location)
 
 void ReloadStartFade()
 {
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 	PauseAllSounds();
 	DelEventHandler("FaderEvent_StartFade", "ReloadStartFade");
 	Trace("ReloadStartFade");
@@ -396,7 +397,7 @@ void ReloadStartFade()
 			// LDH update the merchants when going to port
 			// other updates are more appropriate if you've stayed overnight in town, these updates happen in DoDailyUpdates()
 			// When worldmap sailing is fixed to properly update the merchants, these three update lines should be removed
-			UpdateAllTowns(false);			// This gives the town proper itemtrade values so merchants have goods first visit - 30Jan09 
+			UpdateAllTowns(false);			// This gives the town proper itemtrade values so merchants have goods first visit - 30Jan09
 //			UpdateAllItemTraders(false);	// This gives the merchants new goods if they need them - 07Feb09
 //			UpdateAllStores(false);			// This is probably not necessary, but added just to be sure - 07Feb09
 
@@ -471,7 +472,7 @@ string	FindEmergeLocator(ref rObject, string emerge_str)
 		aref arLoc;
 		arLoc = GetAttributeN(arReload,i);
 		if(!CheckAttribute(arLoc, "name")) continue;//MAXIMUS
-		if (arLoc.name == emerge_str) 
+		if (arLoc.name == emerge_str)
 		{
 			string loc_name = GetAttributeName(arLoc);
 			return loc_name;
@@ -532,7 +533,7 @@ int ReloadToSea(int island_index, aref reload_data)
 	Login.FromCoast = true;
 
 	//Trace("Load from location to sea sLoc = " + rIslLoc.name + ", x = " + Login.PlayerGroup.x + ",z = " + Login.PlayerGroup.z+ ",ay = "+Login.PlayerGroup.ay);
-		
+
 	SeaLogin(Login);
 
 	SupplyAmmo(false); // JRH
@@ -554,13 +555,13 @@ bool TeleportCharacterFromCurLocationToLocation(string locatorExit, string group
 // KK -->
 string FindReloadPicture(string fname)
 {
-	if (FindFile("RESOURCE\Textures\Loading\" + LanguageGetLanguage(), "*.tga.tx", fname + ".tx") != "")
+	if (FindFile(GetResourceDirectory() + "vTextures\Loading\" + LanguageGetLanguage(), "*.tga.tx", fname + ".tx") != "")
 		return "Loading\" + LanguageGetLanguage() + "\" + fname;
-	if (FindFile("RESOURCE\Textures\Loading", "*.tga.tx", fname + ".tx") != "")	// GR: Moved down so that localised versions take precedence
+	if (FindFile(GetResourceDirectory() + "Textures\Loading", "*.tga.tx", fname + ".tx") != "")	// GR: Moved down so that localised versions take precedence
 		return "Loading\" + fname;
-	if (FindFile("RESOURCE\Textures\Loading\ENGLISH", "*.tga.tx", fname + ".tx") != "")
+	if (FindFile(GetResourceDirectory() + "Textures\Loading\ENGLISH", "*.tga.tx", fname + ".tx") != "")
 		return "Loading\ENGLISH\" + fname;
-	if (FindFile("RESOURCE\Textures\INTERFACES\BACKGROUND", "*.tga.tx", fname + ".tx") != "")//MAXIMUS
+	if (FindFile(GetResourceDirectory() + "Textures\INTERFACES\BACKGROUND", "*.tga.tx", fname + ".tx") != "")//MAXIMUS
 		return "INTERFACES\BACKGROUND\" + fname;
 	return "";
 }

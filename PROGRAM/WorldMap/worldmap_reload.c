@@ -1,3 +1,6 @@
+//Boyer change
+#define ISLAND_DISCOVERY_DISTANCE 2000.0
+
 object wdmLoginToSea;
 object wdm_fader;
 bool wdmLockReload = false;
@@ -34,6 +37,12 @@ void wdmReloadToSea()
 	//Trace("\\");
 	//Trace("psX = " + psX + "   psZ = " + psZ);
 
+	//Boyer change as wdmCurrentIsland not set as no WorldMap event to do so in 2.8 engine anymore
+ 	//Fixed by worldmap.legacyArea
+ 	//#20210827-01
+ 	//wdmCurrentIsland = DiscoveredIsland(ISLAND_DISCOVERY_DISTANCE);
+//trace("wdmLoginToSea.island = " + wdmCurrentIsland);
+	//
 	if (wdmCurrentIsland !=	WDM_NONE_ISLAND) {
 		//Island
 		wdmLoginToSea.island = worldMap.islands.(wdmCurrentIsland).name;
@@ -88,6 +97,18 @@ void wdmReloadToSea()
 			if(wdmSetCurrentShipData(i))
 			{
 				if(MakeInt(worldMap.encounter.select) == 0) continue;
+				//Boyer add to fix encounters
+				string encStringID = worldMap.encounter.id;
+                if(encStringID == "") continue;
+                encStringID = "encounters." + encStringID + ".encdata";
+                if(CheckAttribute(&worldMap, encStringID) == 0) continue;
+                int mapEncSlot = FindFreeMapEncounterSlot();
+                if(mapEncSlot < 0) continue;
+                ref mapEncSlotRef = GetMapEncounterRef(mapEncSlot);
+                aref encDataForSlot;
+                makearef(encDataForSlot, worldMap.(encStringID));
+                CopyAttributes(mapEncSlotRef, encDataForSlot);
+                //End Boyer add
 				isShipEncounterType = true;
 				/*
 				// boal нужно перенести наверх, а то в территории острова -->
@@ -101,14 +122,27 @@ void wdmReloadToSea()
 				wdmLoginToSea.encounters.(grp).x = plsX + (encX - psX)*WDM_MAP_TO_SEA_ENCOUNTERS_SCALE;
 				wdmLoginToSea.encounters.(grp).z = plsZ + (encZ - psZ)*WDM_MAP_TO_SEA_ENCOUNTERS_SCALE;
 				wdmLoginToSea.encounters.(grp).ay = worldMap.encounter.ay;
-				wdmLoginToSea.encounters.(grp).type = worldMap.encounter.type;
+				//wdmLoginToSea.encounters.(grp).type = worldMap.encounter.type;
+				//Boyer add
+				wdmLoginToSea.encounters.(grp).type = mapEncSlot;
+				encStringID = worldMap.encounter.id;
+                encStringID = "encounters." + encStringID;
+				if(CheckAttribute(&worldMap, encStringID + ".quest") == 0)
+                {
+                    worldMap.(encStringID).needDelete = "Reload delete non quest encounter";
+                }
 			}
 		}
 	}
 // <-- KK
+    //Boyer add
+    wdmReleaseEncounters();
+	WdmStormEncounter();
+	worldMap.deleteUpdate = "";
+	SendMessage(&worldMap, "l", MSG_WORLDMAP_CREATEENC_RELEASE);
 	//Weather
 	worldMap.info.updateinfo = "";
-	wdmLoginToSea.storm = worldMap.info.playerInStorm;
+	//wdmLoginToSea.storm = worldMap.info.playerInStorm;
 	//Fade out
 	SetEventHandler("FaderEvent_StartFade", "WdmStartFade", 0);
 	SetEventHandler("FaderEvent_EndFade", "WdmEndFade", 0);
@@ -219,6 +253,88 @@ void WdmEndFadeA()
 	// Faradin Fix <--
 }
 
+bool WdmAddEncountersData()
+{
+    float psX = MakeFloat(worldMap.playerShipX);
+	float psZ = MakeFloat(worldMap.playerShipZ);
+	bool isShipEncounter = false;
+	//Удалим все существующие записи об морских энкоунтерах
+	ReleaseMapEncounters();
+	//Количество корабельных энкоунтеров в карте
+	int numEncounters = wdmGetNumberShipEncounters();
+	trace("wdmaddenc numEncounters = " + numEncounters);
+	//Позиция игрока на карте
+	float mpsX = MakeFloat(worldMap.playerShipX);
+	float mpsZ = MakeFloat(worldMap.playerShipZ);
+	//Позиция игрока в мире
+	float wpsX = MakeFloat(wdmLoginToSea.playerGroup.x);
+	float wpsZ = MakeFloat(wdmLoginToSea.playerGroup.z);
+	if (CheckAttribute(WorldMap, "QuestToSeaLogin") == false || sti(WorldMap.QuestToSeaLogin) == false) {
+        for(int i = 0; i < numEncounters; i++)
+        {
+            //Получим информацию о данном энкоунтере
+            if(wdmSetCurrentShipData(i))
+            {
+                //Если не активен, то пропустим его
+                if(MakeInt(worldMap.encounter.select) == 0) continue;
+                //Добавляем информацию об морских энкоунтере
+                string encStringID = worldMap.encounter.id;
+                if(encStringID == "") continue;
+                encStringID = "encounters." + encStringID + ".encdata";
+                if(CheckAttribute(&worldMap, encStringID) == 0) continue;
+                int mapEncSlot = FindFreeMapEncounterSlot();
+                if(mapEncSlot < 0) continue;
+                ref mapEncSlotRef = GetMapEncounterRef(mapEncSlot);
+                aref encDataForSlot;
+                makearef(encDataForSlot, worldMap.(encStringID));
+                CopyAttributes(mapEncSlotRef, encDataForSlot);
+                //Отмечаем свершение корабельного энкоунтера
+                isShipEncounter = true;
+                //Описываем его параметры
+                string grp; grp = "group" + i;
+                float encX = MakeFloat(worldMap.encounter.x);
+                float encZ = MakeFloat(worldMap.encounter.z);
+                wdmLoginToSea.encounters.(grp).x = wpsX + (encX - psX)*WDM_MAP_TO_SEA_ENCOUNTERS_SCALE;
+                wdmLoginToSea.encounters.(grp).z = wpsZ + (encZ - psZ)*WDM_MAP_TO_SEA_ENCOUNTERS_SCALE;
+                wdmLoginToSea.encounters.(grp).ay = worldMap.encounter.ay;
+                wdmLoginToSea.encounters.(grp).type = mapEncSlot;
+                wdmLoginToSea.encounters.(grp).id = worldMap.encounter.id;
+                //Помечаем энкоунтера на удаление
+                encStringID = worldMap.encounter.id;
+                encStringID = "encounters." + encStringID;
+                if(CheckAttribute(&worldMap, encStringID + ".quest") == 0)
+                {
+                    worldMap.(encStringID).needDelete = "Reload delete non quest encounter";
+                }
+            }
+        }
+	}
+	return isShipEncounter;
+}
+
+void WdmStormEncounter()
+{
+	wdmLoginToSea.storm = worldMap.playerInStorm;
+	if(MakeInt(wdmLoginToSea.storm) != 0)
+	{
+		wdmLoginToSea.tornado = worldMap.stormWhithTornado;
+	}else{
+		wdmLoginToSea.tornado = "0";
+	}
+
+	//wdmLoginToSea.tornado = "1";
+
+	if(CheckAttribute(&worldMap, "stormId") != 0)
+	{
+		if(worldMap.stormId != "")
+		{
+			string encStringID = worldMap.stormId;
+			encStringID = "encounters." + encStringID;
+			worldMap.(encStringID).needDelete = "Reload delete storm";
+		}
+	}
+}
+
 // KK -->
 int wdmToLandIdx = -1;
 string wdmToLandGroup = "";
@@ -250,7 +366,8 @@ void wdmReloadToLand(string locationID, string group, string locator, string shi
 	if (CheckAttribute(&Locations[wdmToLandIdx], "image")) SendMessage(&wdm_fader, "ls", FADER_PICTURE, FindReloadPicture(Locations[wdmToLandIdx].image));
 
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 }
 
 void WdmToLandStartFade()

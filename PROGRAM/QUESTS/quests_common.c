@@ -356,7 +356,7 @@ void GenerateConvoyQuest()
 // PB -->
 	int iNation = GetCurrentLocationNation();
 	int nNation = GetTownNation(cDestination);
-	
+
 	if (iNation == PIRATE)	iNation = nNation;							// If pirate, use the other one
 	if (nNation == PIRATE)	nNation = iNation;							// If pirate, use the other one
 	if (rand(1) == 0)		iNation = nNation;							// Use either of the two
@@ -381,13 +381,13 @@ void GenerateConvoyQuest()
 	iTradeGoods = rand(20) + 6;
 	iCargoType = GetCharacterFreeSpace(rTrader, iTradeGoods);
 	AddCharacterGoods(rTrader, iTradeGoods, iCargoType);
-	
+
 	//Levis: Moved money after destination and take distance into account.
 	string dislandid = GetIslandIDFromTown(cDestination);
 	string cislandid = GetIslandIDFromTown(GetCurrentTownID());
 //	trace("distance between "+dislandid+" and "+cislandid+": "+stf(worldMap.islands.(dislandid).position.x)+" , "+stf(worldMap.islands.(dislandid).position.z)+" , "+stf(worldMap.islands.(cislandid).position.x)+" , "+stf(worldMap.islands.(cislandid).position.z));
 	int distancedestination = GetDistance2D(stf(worldMap.islands.(dislandid).position.x), stf(worldMap.islands.(dislandid).position.z), stf(worldMap.islands.(cislandid).position.x), stf(worldMap.islands.(cislandid).position.z));
-	
+
 	iTradeMoney = pow((0.5*Goods[iTradeGoods].Cost + iCargoType)*(1.0+(5.0-GetDifficulty())/5.0),0.5) * 0.05 * pow(irank ,0.5) * pow(distancedestination,1.2);
 
 	rTrader.money = iTradeMoney * rand(irank) + rand(100); // KK
@@ -489,7 +489,7 @@ string GenerateFetchCargo(ref ctown) //temp function until economy overhaul
 				goodoptions[option]= GOOD_SILK; option++;
 			}
 		break;
-		
+
 		case "blacksmith":
 			goodoptions[option]= GOOD_OIL; option++;
 			if(sti(Pchar.rank)>20)
@@ -501,7 +501,7 @@ string GenerateFetchCargo(ref ctown) //temp function until economy overhaul
 				goodoptions[option]= GOOD_GOLD; option++;
 			}
 		break;
-		
+
 		case "gunsmith":
 			if(ENABLE_AMMOMOD) goodoptions[option]= GOOD_GUNPOWDER; option++;
 			goodoptions[option]= GOOD_SILVER; option++;
@@ -510,7 +510,7 @@ string GenerateFetchCargo(ref ctown) //temp function until economy overhaul
 				goodoptions[option]= GOOD_EBONY; option++;
 			}
 		break;
-		
+
 		case "apothecary":
 			goodoptions[option]= GOOD_TREATMENT; option++;
 		break;
@@ -555,11 +555,11 @@ void AnnounceFetchQuestEvent(String IslandID, string cargoid) //will be moved la
 			case "blacksmith":
 				logEntry = "The military ordered new weapons as it is time to amortize their current stock. The blacksmith needs help to acquire the resources to make them.";
 			break;
-			
+
 			case "gunsmith":
 				logEntry = "The gunsmith has gotten lots of new orders lately. Everyone wants a new sword or a firearm and he doesn't have the means to make them all.";
 			break;
-			
+
 			// TALISMAN -->
 			// added to fill blank page in Ship's Log
 			case "apothecary":
@@ -579,7 +579,7 @@ void AnnounceFetchQuestEvent(String IslandID, string cargoid) //will be moved la
 void UpdateAllCargos() //for now placed here. will be moved later
 {
 	if(DEBUG_FETCH_QUEST) trace("FETCH QUEST: Update all cargos");
-	for(int n=0; n<ISLANDS_QUANTITY; n++) 
+	for(int n=0; n<ISLANDS_QUANTITY; n++)
 	{
 		ref tisland = GetIslandByIndex(n);
 		if(IsIslandDisabled(tisland.id)) continue; // PB
@@ -954,7 +954,7 @@ void ProcessLateLoan(string town)
 		Pchar.mad_usurer = makeint(Pchar.mad_usurer) + 1;
 	else
 		PChar.mad_usurer = 1;
-	rUsurer.is_mad = true; 
+	rUsurer.is_mad = true;
 	// a simple virtual sailor <--
 	rUsurer.Dialog.CurrentNode = "DeadMotherfucker";
 
@@ -1005,7 +1005,10 @@ void CommonQuestComplete(string sQuestName)
 // <-- KK
 
 	switch (sQuestName) {
-
+        //Boyer add for weather
+        case "EraseWind":
+			DeleteAttribute(pchar, "wind");
+		break;
 		// PB: How about we add this into the common file???
 		// Was only in "standard" folder, so might cause trouble in other storylines
 		case "player_back":
@@ -1029,11 +1032,11 @@ void CommonQuestComplete(string sQuestName)
 			Group_DelCharacter("Treasure_Pirate", "Treasure Pirate");
 			Group_deleteGroup("Treasure_Pirate");
 		break;
-		
+
 		////////////////////////////////////////////////////////////////////////
 		//  Fetch Quest
 		////////////////////////////////////////////////////////////////////////
-		
+
 		case "Fetch Quest Expire":
 			questbookname = pchar.quest.completed_win_condition; //Levis: get the quest which triggered this.
 			if(DEBUG_FETCH_QUEST) trace("FETCH QUEST: triggered expire quest for "+questbookname);
@@ -1046,7 +1049,7 @@ void CommonQuestComplete(string sQuestName)
 			DeleteAttribute(NPChar,"fetch_quest_active");
 			if(!CheckAttribute(PChar,"fetchquestfailed")) PChar.fetchquestfailed = 0;
 			PChar.fetchquestfailed = sti(PChar.fetchquestfailed) + 1;
-			
+
 		break;
 
 		////////////////////////////////////////////////////////////////////////
@@ -1083,7 +1086,7 @@ void CommonQuestComplete(string sQuestName)
 			PChar.quest.Prepare_Smuggling_Fail.win_condition.l1.date.year = GetAddingDataYear(0,0,7);
 			PChar.quest.Prepare_Smuggling_Fail.win_condition = "Prepare Smuggling Fail";
 		break;
-		
+
 		case "Prepare Smuggling Fail": // DeathDaisy: this happens if you fail to get back to the smuggler agent with the patrol times within a week
 			ref ch = characterFromID(PChar.quest.Contraband.contact);
 			ch.Dialog.CurrentNode = ch.Dialog.TempNode;
@@ -1093,7 +1096,7 @@ void CommonQuestComplete(string sQuestName)
 			ChangeSmugglerLiking(Pchar, -2); //Add liking
 			RemoveSmugglersFromShore();
 		break;
-		
+
 		case "Cancel_Smuggling":
 			questbookname = "smuggle&number="+Pchar.amount_smuggleruns;
 			AddQuestRecord(questbookname, 15);
@@ -1146,7 +1149,7 @@ void CommonQuestComplete(string sQuestName)
 			if(CheckCharacterPerk(NPChar,"Trustworthy")) caughtchance = caughtchance*0.9;
 			if(CheckCharacterPerk(NPChar,"ImproveSmuggling")) caughtchance = caughtchance*0.8;
 			if(CheckCharacterPerk(NPChar,"AdvanceSmuggling")) caughtchance = caughtchance*0.5;
-			
+
 			if(DEBUG_SMUGGLING>2)trace("SMUGGLING caughtchance for officer is: "+caughtchance);
 			if(rand(99) < caughtchance)
 			{
@@ -1247,11 +1250,11 @@ void CommonQuestComplete(string sQuestName)
 		case "GenerateCoastGuard":
 			StartCoastGuardCheck();
 		break;
-		
+
 		case "Remove Coast Guard":
 			CoastGuardPatrolGoAway();
 		break;
-		
+
 		case "Coast Guard Away":
 			CoastGuardPatrolRemove();
 		break;
@@ -1366,7 +1369,7 @@ void CommonQuestComplete(string sQuestName)
 			PChar.quest.Opium_Smuggling_Expire.win_condition.l1.date.year = GetAddingDataYear(0,2,0);     // TALISMAN corrected - timer was 2 days?!! not 2 months
 			PChar.quest.Opium_Smuggling_Expire.win_condition = "Opium Smuggle Expire";
 		break;
-		
+
 		case "Opium Smuggle Got Opium":
 			if(CheckAttribute(pchar,"quest.opium_smuggling.questgiven"))
 			{
@@ -1376,7 +1379,7 @@ void CommonQuestComplete(string sQuestName)
 				Preprocessor_Remove("place");
 			}
 		break;
-		
+
 		case "Complete Opium Smuggle Quest":
 			questbookname = "smuggle_opium&number="+Pchar.amount_smuggleruns_opium;
 			AddQuestRecord(questbookname, 3);
@@ -1384,7 +1387,7 @@ void CommonQuestComplete(string sQuestName)
 			DeleteAttribute(pchar,"quest.opium_smuggling.questgiven");
 			Lai_QuestDelay("Made Second Smuggling Report",0.0);
 		break;
-		
+
 		case "Opium Smuggle Expire":
 			if(CheckAttribute(pchar,"quest.opium_smuggling.questgiven"))
 			{
@@ -1489,7 +1492,7 @@ void CommonQuestComplete(string sQuestName)
 			}
 			if(!CheckAttribute(pchar,"quest.opium_smuggling.Encountered_Opium_Guard")) Lai_QuestDelay("First Encounter Opium Guard",0.0);
 		break;
-		
+
 		case "Opium Bribe":
 			//Clean up previous dialog
 			if(CheckAttribute(pchar,"quest.opium_smuggling.guards.send"))
@@ -1503,7 +1506,7 @@ void CommonQuestComplete(string sQuestName)
 			}
 			if(!CheckAttribute(pchar,"quest.opium_smuggling.Encountered_Opium_Guard")) Lai_QuestDelay("First Encounter Opium Guard",0.0);
 		break;
-		
+
 		case "remove_opium_effect":
 			//TODO: Make use of Buff/Debuff system when made
 			//TODO: Probably fails when used multiple times but don't know for sure. Need to check
@@ -1517,7 +1520,7 @@ void CommonQuestComplete(string sQuestName)
 			User.quest.opium_use.opiumsickness = sickness;
 			DeleteAttribute(OpiumUse,used_id);
 		break;
-		
+
 		case "Remove Vegetal Effect":
 			aref VegetalUse; makearef(VegetalUse,PChar.quest.vegetal_effect.users);
 			string idcase = GetAttributeName(GetAttributeN(VegetalUse,0));
@@ -1985,7 +1988,7 @@ void CommonQuestComplete(string sQuestName)
 			LAi_SetActorType(NPChar);
 			LAi_ActorDialogNow(NPChar,Pchar,"Return LandEnc to citizentype",-1);
 		break;
-		
+
 		case "Return LandEnc to citizentype":
 			NPChar = characterFromID(PChar.quest.hire_enc_walker);
 			DeleteAttribute(PChar,"quest.hire_enc_walker");
@@ -2258,7 +2261,7 @@ Cost for level 50 is 55,374,000
 */
 // LDH <--
 		break;
-		
+
 		//GENERATE
 		case "generate_trade_quest":
 			if (pchar.quest.generate_trade_quest_progress == "begin")
@@ -2333,7 +2336,7 @@ Cost for level 50 is 55,374,000
 			homelocator = LAi_FindNearestFreeLocator("reload", locx, locy, locz);
 			LAi_SetActorType(characterFromID("quest trader"));
 			LAi_ActorGoToLocation(characterFromID("quest trader"), "reload", homelocator, "none", "", "", "", 10.0);
-		
+
 			if (checkquestattribute("generate_convoy_quest_progress", "completed"))
 			{
 				iPassenger = makeint(pchar.quest.generate_convoy_quest.convoymoney) + makeint(pchar.rank)*100;
@@ -2427,7 +2430,7 @@ Cost for level 50 is 55,374,000
 		case "convoy_agreeded":
 			SetCompanionIndex(Pchar, -1, GetCharacterIndex("quest trader"));
 			SetCharacterRemovable(characterFromID("quest trader"), false);
-			
+
 			// KK GetCharacterPos(GetMainCharacter(), &locx, &locy, &locz);
 			// KK homelocator = LAi_FindNearestFreeLocator("reload", locx, locy, locz);
 			LAi_SetActorType(characterFromID("quest trader"));
@@ -2617,7 +2620,7 @@ Cost for level 50 is 55,374,000
 			// Philippe: For Eleuthera <--
 			DoQuestReloadToLocation(roomName, homegroup, homelocator, "restore_hp");//MAXIMUS <--
 		break;
-		
+
 		//Levis: Extra atmosphere -->
 		case "sleep_in_tavern_with_girl":
 			string roomNamegirl = pchar.location;//MAXIMUS -->
@@ -2635,7 +2638,7 @@ Cost for level 50 is 55,374,000
 			homegroup = "goto";
 			DoQuestReloadToLocation(roomNamegirl, homegroup, homelocator, "girl_leaves");//MAXIMUS <--
 		break;
-		
+
 		case "girl_leaves":
 			NPChar = characterFromID(Pchar.sexwith);
 			ChangeCharacterAddressGroup(NPChar, pchar.location, "goto", "goto5");
@@ -2643,7 +2646,7 @@ Cost for level 50 is 55,374,000
 			NPChar.Dialog.CurrentNode = Pchar.sexwith.CurrentNode;
 			LAi_ActorDialog(NPChar,Pchar,"girl_leaves_2",5.0,5.0);
 		break;
-		
+
 		case "girl_leaves_2":
 			NPChar = characterFromID(Pchar.sexwith);
 			LAi_SetActorType(PChar);
@@ -2656,7 +2659,7 @@ Cost for level 50 is 55,374,000
 			LAi_ActorRunToLocator(NPChar,"reload","reload1","girl_gone",40);
 		break;
 		//Levis: Extra atmosphere <--
-		
+
 		//Levis: Add waiting time on ship -->
 		case "waited_on_ship_for_time":
 			NPChar = characterFromID(Pchar.waitedonship);
@@ -2664,7 +2667,7 @@ Cost for level 50 is 55,374,000
 			NPChar.dialog.currentnode = "whatsthetime";
 			LAi_ActorDialog(NPChar,Pchar,"",5.0,1.0);
 		break;
-		
+
 		case "reset after waiting":
 			if(CheckAttribute(PChar, "waitedonship"))
 			{
@@ -2675,7 +2678,7 @@ Cost for level 50 is 55,374,000
 			}
 		break;
 		//Levis: Add waiting time on ship <--
-		
+
 		case "girl_gone":
 			NPChar = characterFromID(Pchar.sexwith);
 			ChangeCharacterAddressGroup(NPChar,NPChar.tavern.location,NPChar.location.group,NPChar.location.locator);
@@ -2996,7 +2999,7 @@ Cost for level 50 is 55,374,000
 			LAi_SetActorType(characterFromID("Virginie d'Espivant"));
 			LAi_ActorDialog(characterFromID("Virginie d'Espivant"), pchar, "open_room", 2.0, 1.0);
 		break;
-		
+
 		case "open_room":
 			locations[FindLocation(pchar.location)].reload.l1.disable = 0;// MAXIMUS: was pchar.location + "_upstairs", WHY?
 		break;
@@ -3015,7 +3018,7 @@ Cost for level 50 is 55,374,000
 //			ChangeCharacterAddressGroup(characterFromID("danielle_quests_corsair_1"), pchar.location, "reload", "reload1");								// PB: Reset this to normal
 			if(pchar.location == "Antigua_Port")						// PB: Weird pier needs special case
 				ChangeCharacterAddressGroup(CharacterFromID("danielle_quests_corsair_1"), homelocation, "reload", "reload2");
-			else										// GR: attempt to spawn pirate wherever you are. 
+			else										// GR: attempt to spawn pirate wherever you are.
 				SetCharacterToNearLocatorFromMe("danielle_quests_corsair_1", 3);	// 'SetCharacterToNearLocatorFromMe' takes character ID, not ref, as parameter
 
 			LAi_SetActorType(characterFromID("danielle_quests_corsair_1"));
@@ -3115,7 +3118,7 @@ Cost for level 50 is 55,374,000
 		case "gambled_girl_comes_to_FDF_tavern_complete":
 			ChangeCharacterAddress(characterFromID("Raymond Bouchez"), "Falaise_De_Fleur_Tavern", "goto4");
 			ChangeCharacterAddress(characterFromID("Virginie d'Espivant"), "Falaise_De_Fleur_Tavern", "goto5");
-			
+
 			LAi_SetActorType(characterFromID("Virginie d'Espivant"));
 			LAi_SetActorType(characterFromID("Falaise_De_Fleur_officiant"));
 			LAi_SetActorType(characterFromID("Raymond Bouchez"));
@@ -3255,7 +3258,7 @@ Cost for level 50 is 55,374,000
 					LAi_ActorWaitDialog(PChar, CharacterFromID("Falaise_De_fleur_officiant"));
 					characters[GetCharacterIndex("Falaise_De_Fleur_officiant")].dialog.currentnode = "without_money";
 					LAi_ActorDialog(characterFromID("Falaise_de_fleur_officiant"), PChar,"",2.0, 1.0);
-					
+
 				break;
 
 				case "Muelle_tavern":
@@ -3571,7 +3574,7 @@ Cost for level 50 is 55,374,000
 				case "QC_brothel"://<---------------------------------------------------------------HERE Brothel Mod , love Verruckt!
 					LAi_group_MoveCharacter(characterFromID(pchar.quest.friend_in_tavern), "QC_CITIZENS");
 				break;
-				
+
 				case "Cartagena Casino":
 					ReadLocatorCoordinates("reload", "reload4", &Land_posx[0], &Land_posy[0], &Land_posz[0]);
 				break;
@@ -3597,7 +3600,7 @@ Cost for level 50 is 55,374,000
 //				break;
 			}
 
-			if (!CheckAttribute(PChar,"quest.poker.started")) 
+			if (!CheckAttribute(PChar,"quest.poker.started"))
 			{
 				TeleportCharacterToPosAy(pchar, Land_posx[0], Land_posy[0], Land_posz[0], Land_angle[0]);
 			}
@@ -3606,9 +3609,9 @@ Cost for level 50 is 55,374,000
 				ChangeCharacterAddressGroup(pchar, "Turks_poker_room", "goto", "goto13");
 				LAi_SetActorType(Pchar);
 				Lai_ActorRunToLocator(pchar, "goto", "goto12", "Competition_day_end", 0);
-			
+
 			}
-			
+
 		break;
 
 		case "kill_tavern_fightman_complete":
@@ -3939,7 +3942,7 @@ Cost for level 50 is 55,374,000
 			{
 				NPChar.rank = PChar.rank*2;
 				NPChar.experience = PChar.experience*2;
-				NPChar.skill.Fencing = 10;	
+				NPChar.skill.Fencing = 10;
 				NPChar.perks.list.BasicDefence = true;
 				NPChar.perks.list.AdvancedDefence = true;
 				NPChar.perks.list.SwordplayProfessional = true;
@@ -3978,11 +3981,11 @@ Cost for level 50 is 55,374,000
 
 			LAi_SetFightMode(PChar, true);
 
-			LAi_SetActorTypeNoGroup(NPChar); 
+			LAi_SetActorTypeNoGroup(NPChar);
 			LAi_ActorAttack(NPChar, PChar, "");
 
-			Lai_SetCheckMinHP(PChar, 0.5*LAi_GetCharacterHP(PChar), false, "TrainingFightFinished1"); 
-			Lai_SetCheckMinHP(NPChar, 0.5*LAi_GetCharacterHP(NPChar), true, "TrainingFightFinished2"); 
+			Lai_SetCheckMinHP(PChar, 0.5*LAi_GetCharacterHP(PChar), false, "TrainingFightFinished1");
+			Lai_SetCheckMinHP(NPChar, 0.5*LAi_GetCharacterHP(NPChar), true, "TrainingFightFinished2");
 		break;
 
 		case "TrainingFightFinished1":
@@ -4051,14 +4054,14 @@ Cost for level 50 is 55,374,000
 
 			// Turks: Not in Jack Sparrow Storyline
 			if (sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) != 1)
-			{ 
+			{
 				Characters[GetCharacterIndex("Dante Siciliano")].Dialog.Filename = "PGov_dialog.c";
 				Characters[GetCharacterIndex("Dante Siciliano")].Dialog.Filename.GroupDialog = "governor.c";
 			}
 
 			// Nevis: Not in Standard Storyline
 			if (sti(GetStorylineVar(FindCurrentStoryline(), "START_MIN_LEVEL")) != 1)
-			{ 
+			{
 				Characters[GetCharacterIndex("Isenbrandt Jurcksen")].Dialog.Filename = "PGov_dialog.c";
 				Characters[GetCharacterIndex("Isenbrandt Jurcksen")].Dialog.Filename.GroupDialog = "governor.c";
 			}
@@ -4071,7 +4074,7 @@ Cost for level 50 is 55,374,000
 				Locations[FindLocation("QC_blacksmith")].id.label = "Pirate Gun- and Blacksmith";
 				Locations[FindLocation("QC_blacksmith")].id = "QC_Gunsmith";
 				Characters[GetCharacterIndex("QC_blacksmith")].Location = "QC_Gunsmith";
-				
+
 				// Modify the Fast Travel icon
 				makearef(curTable,objFastReloadTable.table.QC);
 				curTable.l6.pic = FRP_GUNBLACKSMITH;
@@ -4079,10 +4082,10 @@ Cost for level 50 is 55,374,000
 				curTable.l6.note = FRN_GUNBLACKSMITH;
 				curTable.l6.location = "QC_Gunsmith";
 				RecalculateJumpTable();
-				
+
 				// Give him the alternate dialog
 				Characters[GetCharacterIndex("QC_blacksmith")].Dialog.Filename = "Gunsmith_dialog.c";
-				
+
 				// And enable the correct fetch quests
 				Characters[GetCharacterIndex("QC_blacksmith")].Dialog.Filename.Groupdialog = "Gunsmith_fetch.c";
 				makearef(store, Stores[PIRATES_STORE]);
@@ -4129,7 +4132,7 @@ Cost for level 50 is 55,374,000
 
 			// Turks: Not in Jack Sparrow Storyline
 			if (sti(GetStorylineVar(FindCurrentStoryline(), "JACK_SPARROW")) != 1)
-			{ 
+			{
 				Characters[GetCharacterIndex("Dante Siciliano")].Dialog.Filename = "Nathan Kell (Gov)_dialog.c";
 				Characters[GetCharacterIndex("Dante Siciliano")].Dialog.CurrentNode = "First time";
 				DeleteAttribute(CharacterFromID("Dante Siciliano"), "Dialog.Filename.GroupDialog");
@@ -4151,7 +4154,7 @@ Cost for level 50 is 55,374,000
 				Locations[FindLocation("QC_Gunsmith")].id.label = "Pirate Blacksmith";
 				Locations[FindLocation("QC_Gunsmith")].id = "QC_blacksmith";
 				Characters[GetCharacterIndex("QC_blacksmith")].Location = "QC_blacksmith";
-				
+
 				// Modify the Fast Travel icon
 				makearef(curTable,objFastReloadTable.table.QC);
 				curTable.l6.pic = FRP_BLACKSMITH;
@@ -4159,10 +4162,10 @@ Cost for level 50 is 55,374,000
 				curTable.l6.note = FRN_BLACKSMITH;
 				curTable.l6.location = "QC_blacksmith";
 				RecalculateJumpTable();
-				
+
 				// Give him the alternate dialog
 				Characters[GetCharacterIndex("QC_blacksmith")].Dialog.Filename = "Blacksmith5_dialog.c";
-				
+
 				// And enable the correct fetch quests
 				Characters[GetCharacterIndex("QC_blacksmith")].Dialog.Filename.Groupdialog = "Blacksmith_fetch.c";
 				makearef(store, Stores[PIRATES_STORE]);
@@ -4313,12 +4316,12 @@ Cost for level 50 is 55,374,000
 		break;
 
 		case "DPFader": DPDoFade(); break;
-	
+
 		case "stand_up":
 			LAi_Fade("stand_up1", "stand_up2");
-			LAi_SetPlayerType(Pchar); 
+			LAi_SetPlayerType(Pchar);
 		break;
-	
+
 		case "stand_up1":
 // NK -->
 			if(CheckAttribute(pchar, "quest.Attwood1.leave"))
@@ -4331,9 +4334,9 @@ Cost for level 50 is 55,374,000
 			TeleportCharacterToLocator(Pchar, "goto", "goto20");
 			LAi_ActorSetStayMode(Pchar);
 		break;
-	
+
 		case "stand_up2":
-			LAi_SetPlayerType(Pchar); 
+			LAi_SetPlayerType(Pchar);
 		break;
 
 //============================================================================
@@ -4355,7 +4358,7 @@ Cost for level 50 is 55,374,000
 				if(CheckAttribute(Pchar,"quest.Tortuga_ships") && Pchar.quest.Tortuga_ships == "4")
 				{
 					Pchar.quest.Tortuga_ships = "5";
-		
+
 					GiveShip2Character(characterFromID("Tor_soldier_3"),"MerchantPinnace","Victory",-1,PIRATE,true,true);
 					setCharacterShipLocation(characterFromID("Tor_soldier_3"), "Tortuga_port");
 				}
@@ -4376,8 +4379,8 @@ Cost for level 50 is 55,374,000
 
 						GiveShip2Character(characterFromID("Tor_soldier_1"),"Sloop2","Victory",-1,PIRATE,true,true);
 						GiveShip2Character(characterFromID("Tor_soldier_2"),"PiratBrig50","Victory",-1,PIRATE,true,true);
-						setCharacterShipLocation(characterFromID("Tor_soldier_1"), "Tortuga_port"); 	
-						setCharacterShipLocation(characterFromID("Tor_soldier_2"), "Tortuga_port");	
+						setCharacterShipLocation(characterFromID("Tor_soldier_1"), "Tortuga_port");
+						setCharacterShipLocation(characterFromID("Tor_soldier_2"), "Tortuga_port");
 					}
 				}
 			}
@@ -4729,7 +4732,7 @@ Cost for level 50 is 55,374,000
 			if(FREE_CAMERA)		locCameraCurMode = LOCCAMERA_TRANS; // Needed to return properly
 			PlaySound("OBJECTS\duel\reload1.wav");
 		break;
-		
+
 		case "get_sword_ready":
 			LAi_SetFightMode(Pchar, true);
 		break;
@@ -4823,7 +4826,7 @@ Cost for level 50 is 55,374,000
 			{
 				//ok
 			}
-			else RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);	
+			else RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 		break;
 
 		case "indian_pistols_equip_check":
@@ -4891,7 +4894,7 @@ Cost for level 50 is 55,374,000
 			CreateParticleSystem("blast_dirt_small" , u, v, w, 5.1, 4.0, 0.0, sti(20) );	//nr 31
 			CreateParticleSystem("splinters" , u, v+1.2, w, 5.1, 4.0, 0.0, sti(20) );
 			CreateParticleSystem("splinters2" , u, v+1.2, w, 5.1, 4.0, 0.0, sti(20) );
-		
+
 			PlaySound("OBJECTS\DUEL\pistol_mtoon.wav");
 		break;
 //JRH
@@ -4908,7 +4911,7 @@ Cost for level 50 is 55,374,000
 			CreateParticleSystem("MMcancloud2" , u, v, w, 5.1, 4.0, 0.0, sti(20) );		//nr 14
 
 			LAi_QuestDelay("NPC_flaming_hit1", 1.0);
-	
+
 			if(IsMainCharacter(NPChar) || IsOfficer(NPChar))
 			{
 				//don't make them staytype
@@ -4994,14 +4997,14 @@ Cost for level 50 is 55,374,000
 			if(!CheckCharacterItem(NPChar, "bladeX4")) GiveItem2Character(NPChar, "bladeX4");
 			EquipCharacterByItem(NPChar, "bladeX4");
 		break;
-	
+
 		case "reset_whip_rolled_pchar":
 			//LogIt("PCHAR");
 			weapon.model = "whip_rolled";
 			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE );
-			EquipCharacterByItem(Pchar, "pistolwhip");		
+			EquipCharacterByItem(Pchar, "pistolwhip");
 		break;
-	
+
 		case "reset_whip_rolled_officer":
 			//LogIt("OFFICER");
 
@@ -5009,14 +5012,14 @@ Cost for level 50 is 55,374,000
 			weaponID = GetCharacterEquipByGroup(OPchar,GUN_ITEM_TYPE);
 			Items_FindItem(weaponID, &weapon);
 			//LogIt("officer model 1 = " + weapon.model);
-			
+
 			weapon.model = "whip_rolled";
 			RemoveCharacterEquip(OPchar, GUN_ITEM_TYPE );
 			EquipCharacterByItem(OPchar, "pistolwhip");
 
 			weaponID = GetCharacterEquipByGroup(OPchar,GUN_ITEM_TYPE);
 			Items_FindItem(weaponID, &weapon);
-			//LogIt("officer model 2 = " + weapon.model);		
+			//LogIt("officer model 2 = " + weapon.model);
 		break;
 
 		case "pchar_hip_mode_check":
@@ -5164,7 +5167,7 @@ Cost for level 50 is 55,374,000
 			pchar.quest.cloister_fountain.win_condition.l1 = "location";
 			pchar.quest.cloister_fountain.win_condition.l1.location = "new_cloister_inside";
 			pchar.quest.cloister_fountain.win_condition = "cloister_fountain";
-		
+
 			pchar.quest.cloister_stair1_go.win_condition.l1 = "locator";
 			pchar.quest.cloister_stair1_go.win_condition.l1.location = "new_cloister_inside";
 			pchar.quest.cloister_stair1_go.win_condition.l1.locator_group = "quest";
@@ -5186,7 +5189,7 @@ Cost for level 50 is 55,374,000
 				pchar.cloister_stair1 = "up_ready";
 				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st1_do");
 			}
-			else 
+			else
 			{
 				pchar.cloister_stair1 = "down_ready";
 				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st1_up");
@@ -5220,14 +5223,14 @@ Cost for level 50 is 55,374,000
 			pchar.quest.cloister_stair2B_go.win_condition.l1.locator = "stair2B";
 			pchar.quest.cloister_stair2B_go.win_condition = "cloister_stair2B_go";
 		break;
-			
+
 		case "cloister_stair2A_go":
 			if(CheckAttribute(pchar,"cloister_stair2") && pchar.cloister_stair2 == "down_ready")
 			{
 				pchar.cloister_stair2 = "up_ready";
 				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st2A_do");
 			}
-			else 
+			else
 			{
 				pchar.cloister_stair2 = "down_ready";
 				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st2A_up");
@@ -5248,7 +5251,7 @@ Cost for level 50 is 55,374,000
 				pchar.cloister_stair2 = "up_ready";
 				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st2B_do");
 			}
-			else 
+			else
 			{
 				pchar.cloister_stair2 = "down_ready";
 				ChangeCharacterAddressGroup(pchar, "new_cloister_inside", "goto", "st2B_up");
@@ -5313,7 +5316,7 @@ Cost for level 50 is 55,374,000
 				if(IsDay())
 				{
 					Play3DSound("INTERFACE\bubbles2.wav", -42.0, 1.5, -87.0);
-			
+
 					LAi_QuestDelay("cloister_distillery_1", 0.4);
 				}
 
@@ -5342,7 +5345,7 @@ Cost for level 50 is 55,374,000
 			pchar.quest.cloister_F1_back.win_condition.l1.locator = "F1";
 			pchar.quest.cloister_F1_back.win_condition = "cloister_F1_back";
 		break;
-		
+
 		case "cloister_F1_back":
 			LAi_SetStayType(Pchar);
 			ChangeCharacterAddressGroup(Pchar, "new_cloister_inside", "goto", "F1_back");
@@ -5359,7 +5362,7 @@ Cost for level 50 is 55,374,000
 			pchar.quest.cloister_F2_back.win_condition.l1.locator = "F2";
 			pchar.quest.cloister_F2_back.win_condition = "cloister_F2_back";
 		break;
-		
+
 		case "cloister_F2_back":
 			LAi_SetStayType(Pchar);
 			ChangeCharacterAddressGroup(Pchar, "new_cloister_inside", "goto", "F2_back");
@@ -5376,7 +5379,7 @@ Cost for level 50 is 55,374,000
 			pchar.quest.cloister_F3_back.win_condition.l1.locator = "F3";
 			pchar.quest.cloister_F3_back.win_condition = "cloister_F3_back";
 		break;
-		
+
 		case "cloister_F3_back":
 			LAi_SetStayType(Pchar);
 			ChangeCharacterAddressGroup(Pchar, "new_cloister_inside", "goto", "F3_back");
@@ -5393,14 +5396,14 @@ Cost for level 50 is 55,374,000
 			pchar.quest.cloister_F4_back.win_condition.l1.locator = "F4";
 			pchar.quest.cloister_F4_back.win_condition = "cloister_F4_back";
 		break;
-		
+
 		case "cloister_F4_back":
 			LAi_SetStayType(Pchar);
 			ChangeCharacterAddressGroup(Pchar, "new_cloister_inside", "goto", "F4_back");
 
 			LAi_QuestDelay("cloister_F4_check", 0.2);
 		break;
-	
+
 	//----------------------------------------------------------------------------------------------
 // <-- JRH: Cartagena New_cloister
 
@@ -5526,7 +5529,7 @@ void blade_mketK()
 		GiveItem2Character(attack, "blademketK");		//JRH: just to be sure
 	}
 	EquipCharacterByItem(attack, "blademketK");
-	
+
 	if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("OBJECTS\DUEL\reload1.wav");
 }
 
@@ -5561,7 +5564,7 @@ void gun_mketK()
 		weapon.model = "musket_back";
 		RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
 		EquipCharacterByItem(attack, "pistolmket");
-	}	
+	}
 
 	attack.chr_ai.charge = GunCurCharge; // Levis
 
@@ -5648,7 +5651,7 @@ void blade_mketB()
 		GiveItem2Character(attack, "blademketB");		//JRH: just to be sure
 	}
 	EquipCharacterByItem(attack, "blademketB");
-	
+
 	if(IsMainCharacter(attack) && DisableReloadWhileFighting()) PlaySound("PEOPLE\clothes1.wav");
 }
 
@@ -6089,7 +6092,7 @@ void back_witcher_steel()
 
 		weapon.model = "witcher_steel_back";
 		RemoveCharacterEquip(attack, BLADE_ITEM_TYPE );
-	
+
 		if(CheckAttribute(attack,"bladeID"))
 		{
 			switch(attack.bladeID)
@@ -6116,19 +6119,19 @@ void reset_check_mguns()
 	aref attack = GetEventData();
 	ref tmpChr;
 	float GunCurCharge;
-	
+
 	for (int i = 0; i < LAi_numloginedcharacters; i++)
 	{
 		int index = LAi_loginedcharacters[i];
 		if (index >= 0)
 		{
 			makeref(tmpChr, Characters[index]);
-		
+
 			aref weapon;
 
 			string weaponID2 = GetCharacterEquipByGroup(tmpChr,BLADE_ITEM_TYPE);
 			aref weapon2;
-			Items_FindItem(weaponID2, &weapon2);			
+			Items_FindItem(weaponID2, &weapon2);
 
 			if (!LAi_IsDead(tmpChr) && !LAi_IsFightMode(tmpChr))
 			{
@@ -6152,9 +6155,9 @@ void reset_check_mguns()
 					weapon.model = "battleax_back";
 					EquipCharacterByItem(tmpChr, "battleax");
 				}
-			
-				if(IsEquipCharacterByItem(tmpChr, "witcher_steel-2") || IsEquipCharacterByItem(tmpChr, "witcher_steel-1") 
-				|| IsEquipCharacterByItem(tmpChr, "witcher_steel") || IsEquipCharacterByItem(tmpChr, "witcher_steel+1") 
+
+				if(IsEquipCharacterByItem(tmpChr, "witcher_steel-2") || IsEquipCharacterByItem(tmpChr, "witcher_steel-1")
+				|| IsEquipCharacterByItem(tmpChr, "witcher_steel") || IsEquipCharacterByItem(tmpChr, "witcher_steel+1")
 				|| IsEquipCharacterByItem(tmpChr, "witcher_steel+2") || IsEquipCharacterByItem(tmpChr, "witcher_steel+3"))
 				{
 					weapon2.model = "witcher_steel_back";
@@ -6179,7 +6182,7 @@ void reset_check_mguns()
 						}
 					}
 				}
-			
+
 				if(IsEquipCharacterByItem(tmpChr, "blademketK"))
 				{
 					RemoveCharacterEquip(tmpChr, BLADE_ITEM_TYPE );
@@ -6429,7 +6432,7 @@ void SupplyAmmo(bool bOverride)
 							DeleteAttribute(NPChar,"Items.pistolgrapes");
 							DeleteAttribute(NPChar,"Items.musketbullets");
 
-							if(CheckCharacterItem(NPChar,"powderbarrel")) { TakeNItems(NPChar,"gunpowder", (4 * MAX_GUNPOWDER)); } 
+							if(CheckCharacterItem(NPChar,"powderbarrel")) { TakeNItems(NPChar,"gunpowder", (4 * MAX_GUNPOWDER)); }
 							else
 							{
 								if(CheckCharacterItem(NPChar,"powderflask")) { TakeNItems(NPChar,"gunpowder", (2 * MAX_GUNPOWDER)); }
@@ -6444,7 +6447,7 @@ void SupplyAmmo(bool bOverride)
 							//LogIt("cc = " + cc);
 							if(cc > OpriorGP)																										{ bGotAmmo = true; }
 
-							if(weapon.shottype == "pg2" || weapon.shottype == "pg")	{ TakeNItems(NPChar,"pistolgrapes" , cc);    if (cc > OpriorPG)	{ bGotAmmo = true; } }	
+							if(weapon.shottype == "pg2" || weapon.shottype == "pg")	{ TakeNItems(NPChar,"pistolgrapes" , cc);    if (cc > OpriorPG)	{ bGotAmmo = true; } }
 							if(weapon.shottype == "mb") 							{ TakeNItems(NPChar,"musketbullets", cc/2);  if (cc > OpriorMB)	{ bGotAmmo = true; } }
 							if(weapon.shottype == "pb2" || weapon.shottype == "pb")	{ TakeNItems(NPChar,"pistolbullets", cc);    if (cc > OpriorPB)	{ bGotAmmo = true; } }
 						}

@@ -24,8 +24,8 @@ void WriteNewLogEntry(string logTitle, string logEntry, string logCategory, bool
 			if(GetStringDate(GetDataYear(), GetDataMonth(), GetDataDay()) == pchar.shiplog.Date.log0)
 			{
 				newLog = "";
-				if(pchar.shiplog.Title.log0 != GetTranslatedLog("Several battles at sea")) { newLog = GetTranslatedLog("Encountered several enemy ships today"); newLog += "\n \n"; }
-				pchar.shiplog.Title.log0 = GetTranslatedLog("Several battles at sea");
+				if(pchar.shiplog.Title.log0 != "Several battles at sea") newLog = "Encountered several enemy ships today:\n \n";
+				pchar.shiplog.Title.log0 = "Several battles at sea";
 				newLog += pchar.shiplog.Entry.log0;
 				newLog += "\n \n";
 				newLog += logEntry;
@@ -213,6 +213,6 @@ string GetLogTime()
 		break;
 	}
 
-	sDateTime=GetTranslatedLog("On ")+GetDayName(GetWeekday(GetDataDay(), GetDataMonth(), GetDataYear()))+", "+GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay())+" "+GetTranslatedLog(tmp);
+	sDateTime="On "+GetDayName(GetWeekday(GetDataDay(), GetDataMonth(), GetDataYear()))+", "+GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay())+" "+tmp;
 	return sDateTime;
 }

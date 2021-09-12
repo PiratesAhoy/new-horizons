@@ -1,5 +1,5 @@
 string DLG_TEXT[2] = {
-"Chcesz mnie zabiÐ¶? Zobaczmy, na co ciÐº staÐ¶!",
-"Chyba mi siÐº to spodoba!",
+"Chcesz mnie zabiæ? Zobaczmy, na co ciê staæ!",
+"Chyba mi siê to spodoba!",
 
 };

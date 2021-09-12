@@ -1,8 +1,8 @@
 string DLG_TEXT[6] = {
 ".....",
 ".....",
-"ÐŽOye! Te peleaste conmigo... Ñ—QuÐ¹? Ñ—Roxanne? Ñ—Bartolomeu? Ñ—QuÐ¹ estÐ±n haciendo contigo?",
-"Soy el CapitÐ±n Elting y confirmo que luchÐ¹ con usted hace unos dÐ½as. Pero, decidÐ½ unirme a usted.",
-"Es una pena que no cambiaras de bando antes de nuestra pelea, mi cabeza estarÐ½a en mucho mejor estado ahora. De todos modos, Ñ—quÐ¹ decidieron hacer Bartolomeu y Roxanne? Ñ—Nos quedamos aquÐ½ un tiempo o nos vamos de la isla?",
-"No lo sÐ¹. DÐ¹jame preguntarles a ellos.",
+"¡Oye! Te peleaste conmigo... ¿Qué? ¿Roxanne? ¿Bartolomeu? ¿Qué están haciendo contigo?",
+"Soy el Capitán Elting y confirmo que luché con usted hace unos días. Pero, decidí unirme a usted.",
+"Es una pena que no cambiaras de bando antes de nuestra pelea, mi cabeza estaría en mucho mejor estado ahora. De todos modos, ¿qué decidieron hacer Bartolomeu y Roxanne? ¿Nos quedamos aquí un tiempo o nos vamos de la isla?",
+"No lo sé. Déjame preguntarles a ellos.",
 };

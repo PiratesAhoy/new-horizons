@@ -40,7 +40,7 @@ void InitInterface_I(string iniName,int bIState)
 	CreateString(true,"Hull","100%",FONT_BOLD_NUMBERS,COLOR_NORMAL,63,154,SCRIPT_ALIGN_CENTER,0.6); // KK
 	CreateString(true,"Sails","100%",FONT_BOLD_NUMBERS,COLOR_NORMAL,191,154,SCRIPT_ALIGN_CENTER,0.6); // KK
 	CreateString(true,"Crew","0",FONT_BOLD_NUMBERS,COLOR_NORMAL,447,154,SCRIPT_ALIGN_CENTER,0.6); // KK
-	CreateString(true,"QCannons","0",FONT_BOLD_NUMBERS,COLOR_NORMAL,575,154,SCRIPT_ALIGN_CENTER,0.6); // KK
+	CreateString(true,"Cannons","0",FONT_BOLD_NUMBERS,COLOR_NORMAL,575,154,SCRIPT_ALIGN_CENTER,0.6); // KK
 	CreateString(true,"Money",MakeMoneyShow(sti(refMyCh.money),MONEY_SIGN,MONEY_DELIVER),FONT_NORMAL,COLOR_MONEY,320,393,SCRIPT_ALIGN_CENTER,1.0);
 	CreateString(true,"ShipName","",FONT_SEADOGS,COLOR_NORMAL,320,234,SCRIPT_ALIGN_CENTER,1.0); // MAXIMUS interface MOD // KK
 
@@ -388,7 +388,7 @@ void ProcessFrame()
 			if(cn==-1)
 			{
 				GameInterface.strings.ShipName = refMyCh.(slotName).Name; // MAXIMUS interface MOD
-//				SendMessage(&GameInterface,"lsls", MSG_INTERFACE_MSG_TO_NODE, "B_SHIPNAME", 0, refMyCh.(slotName).Name); // MAXIMUS interface MOD
+//				SendMessage(&GameInterface,"lsls", MSG_INTERFACE_MSG_TO_NODE, "B_SHIPNAME", 0, "#"+refMyCh.(slotName).Name); // MAXIMUS interface MOD
 				if(CheckAttribute(refMyCh,slotName+".HP"))
 				{
 					ftmp = GetHullPercent(refMyCh);
@@ -425,7 +425,7 @@ void ProcessFrame()
 			else
 			{
 				GameInterface.strings.ShipName = otherCh.Ship.Name; // MAXIMUS interface MOD
-//				SendMessage(&GameInterface,"lsls", MSG_INTERFACE_MSG_TO_NODE, "B_SHIPNAME", 0, otherCh.Ship.Name); // MAXIMUS interface MOD
+//				SendMessage(&GameInterface,"lsls", MSG_INTERFACE_MSG_TO_NODE, "B_SHIPNAME", 0, "#"+otherCh.Ship.Name); // MAXIMUS interface MOD
 				ftmp = GetHullPercent(otherCh);
 				if(ftmp<1.0) {
 					GameInterface.strings.Hull = FloatToString(ftmp,1)+"%";
@@ -455,17 +455,17 @@ void ProcessFrame()
 			aref tmpar; makearef(tmpar, otherCh.ship); // NK can qty 05-04-18
 // KK -->
 			GameInterface.strings.TCannons = GetCannonName(GetCaracterShipCannonsType(otherCh));
-			GameInterface.strings.QCannons = GetLocalShipAttrib(&tmpar,&refBaseShip,"CurCanQty");
-			if (sti(GameInterface.strings.QCannons) == 0 && GetCaracterShipCannonsType(refMyCh) == CANNON_TYPE_NONECANNON) {
+			GameInterface.strings.Cannons = GetLocalShipAttrib(&tmpar, &refBaseShip, "CurCanQty"); // NK can qty05-04-18 refBaseShip.CannonsQuantity;
+			if (sti(GameInterface.strings.Cannons) == 0 && GetCaracterShipCannonsType(refMyCh) == CANNON_TYPE_NONECANNON) {
 				SetSelectable("RCANNONS", false);
-				GameInterface.strings.QCannons = "";
+				GameInterface.strings.Cannons = "";
 			}
 // <-- KK
 		}
 		else
 		{
 			GameInterface.strings.ShipName = XI_ConvertString("Not Used"); // MAXIMUS interface MOD
-//			SendMessage(&GameInterface,"lsls", MSG_INTERFACE_MSG_TO_NODE, "B_SHIPNAME", 0, XI_ConvertString("Not Used")); // MAXIMUS interface MOD
+//			SendMessage(&GameInterface,"lsls", MSG_INTERFACE_MSG_TO_NODE, "B_SHIPNAME", 0, "#"+XI_ConvertString("Not Used")); // MAXIMUS interface MOD
 			GameInterface.strings.Hull = "100%";
 			GameInterface.strings.Sails = "100%";
 			GameInterface.strings.Crew = 0;

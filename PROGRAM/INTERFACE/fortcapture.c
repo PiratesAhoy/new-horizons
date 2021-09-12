@@ -8,7 +8,7 @@ void InitInterface_R(string iniName,ref captref)
 	ref mchref = GetMainCharacter();
 	mchref.from_interface.fortCharacterIdx = captref.index;
 
-	if(bAnimation) iniName = "RESOURCE\INI\NEW_INTERFACES\ANIMATION\fortcapture.ini";
+	if(bAnimation) iniName = "NEW_INTERFACES\ANIMATION\fortcapture.ini";
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 
     CreateString(true,"Exp","",FONT_NORMAL,COLOR_NORMAL,20,180,SCRIPT_ALIGN_LEFT,1.2);

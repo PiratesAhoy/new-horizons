@@ -197,7 +197,6 @@ float roundto(float num, int decimals)
 {
 	return makefloat(round(num*pow(10,decimals)))/pow(10,decimals);
 }
-
 // new 05-04-05
 int round(float num)
 {
@@ -1097,7 +1096,7 @@ string toupperpol(string c)
 	switch(c)
 	{
 		case "№": return "Ґ"; break;
-		case "Ю": return "ю"; break;
+		case "е": return "ю"; break;
 		case "Ч": return "Ѕ"; break;
 		case "і": return "Ј"; break;
 		case "р": return "э"; break;
@@ -1114,7 +1113,7 @@ string tolowerpol(string c)
 	switch(c)
 	{
 		case "Ґ": return "№"; break;
-		case "ю": return "Ю"; break;
+		case "ю": return "е"; break;
 		case "Ѕ": return "Ч"; break;
 		case "Ј": return "і"; break;
 		case "э": return "р"; break;
@@ -1147,8 +1146,6 @@ string tolowerswe(string c)
 	}
 	return tolowereng(c);
 }
-
-
 // Returns characteristic letter for language when ALT is pressed together with "c"
 string GetDiacriticalChar(string c, string lang)
 {
@@ -1196,7 +1193,7 @@ string GetDiacriticalChar(string c, string lang)
 		case "Polish":
 			switch (c) {
 				case "a": return "№"; break;
-				case "c": return "Ю"; break;
+				case "c": return "е"; break;
 				case "e": return "Ч"; break;
 				case "l": return "і"; break;
 				case "n": return "р"; break;
@@ -1204,13 +1201,6 @@ string GetDiacriticalChar(string c, string lang)
 				case "s": return "›"; break;
 				case "x": return "џ"; break;
 				case "z": return "ћ"; break;
-			}
-		break;
-		case "Swedish":
-			switch (c) {
-				case "q": return "е"; break;
-				case "a": return "д"; break;
-				case "o": return "ц"; break;
 			}
 		break;
 	}
@@ -1443,7 +1433,6 @@ string ChrFromCode(int code)
 		case 252: return "ь"; break;
 		case 253: return "э"; break;
 		case 254: return "ю"; break;
-		case 255: return "я"; break; // was lost
 	}
 	return "";
 }
@@ -1565,7 +1554,7 @@ int ascii(string chr)
 		case "¤": return 164; break;
 		case "Ґ": return 165; break;
 		case "§": return 167; break;
-		case "Ё": return 168; break; 
+		case "Ё": return 168; break;
 		case "«": return 171; break;
 		case "­": return 173; break;
 		case "Ї": return 175; break;
@@ -1644,8 +1633,8 @@ int ascii(string chr)
 
 string GetCursorSymbol()
 {
-	if (bKeyboardOverwriteMode) return "<";
-	return "|";
+	if (bKeyboardOverwriteMode) return "Ђ";
+	return "я";
 }
 // <-- KK
 
@@ -1824,26 +1813,7 @@ string GetHumanDate(int year, int month, int day)
 	if (day == 1 || day == 21 || day == 31) sufix = "st";
 	if (day == 2 || day == 22) sufix = "nd";
 	if (day == 3 || day == 23) sufix = "rd";
-	string formatted = XI_ConvertString("g_month_" + month) + " " + day + XI_ConvertString(sufix) + ", " + year; // PB: Formatting changed to appear more historically appropriate
-	//MAXIMUS 22.04.2019: different formatting for different languages ==> 
-	int ifcelng = GetInterfaceLanguage();
-	switch (ifcelng) {
-		case ILANG_RUS:
-			formatted =  day + XI_ConvertString(sufix) + " " + XI_ConvertString("g_month_" + month) + " " + year + XI_ConvertString("yr");
-		break;
-		case ILANG_FRA:
-		break;
-		case ILANG_GER:
-		break;
-		case ILANG_SPA:
-		break;
-		case ILANG_POL:
-		break;
-		case ILANG_SWE:
-		break;
-	}
-	return formatted:
-	//MAXIMUS 22.04.2019: different formatting for different languages <==
+	return XI_ConvertString("g_month_" + month) + " " + day + XI_ConvertString(sufix) + ", " + year; // PB: Formatting changed to appear more historically appropriate
 }
 // <-- KK
 
@@ -2074,9 +2044,9 @@ void Preprocessor_Init()
 			SetRandomNameToCharacter(ch);
 			ch.name = "Padre"; // Override random first name
 		}
-		Preprocessor_Save("FatherBernard",	GetMySimpleName(CharacterFromID("Father Bernard")));	// GR: For "Church Help"
-		Preprocessor_Save("FatherJerald",	GetMySimpleName(CharacterFromID("Father Jerald")));	// and "Animists"
-		Preprocessor_Save("FatherGareth",	GetMySimpleName(CharacterFromID("Father Gareth")));	// side quests.
+		Preprocessor_Save("FatherBernard",	GetMySimpleName(CharacterFromID("Father Bernard")));  // GR: For "Church Help"
+		Preprocessor_Save("FatherJerald",	GetMySimpleName(CharacterFromID("Father Jerald")));  // and "Animists"
+		Preprocessor_Save("FatherGareth",	GetMySimpleName(CharacterFromID("Father Gareth")));  // side quests.
 	}
 }
 
@@ -2108,12 +2078,13 @@ void InitStorylines()
 		// PB: Disable certain storylines -->
 		send  = strcut(sfile, strlen(sfile) - 6, strlen(sfile) - 3);
 		if (send == "_off")		continue;
+		else					n++;
 		// PB: Disable certain storylines <--
 
 		if (LoadSegment("Storyline\" + sfile)) {
 			RegisterStoryline(n); // PB: was i
 			UnloadSegment("Storyline\" + sfile);
-			n++;
+
 		}
 	}
 }
@@ -2146,7 +2117,10 @@ void DeleteStoryline(int idx)
 
 string GetStoryline(int idx)
 {
-	if (idx < 0 || idx > GetStorylinesQuantity() - 1) return GetStoryline(FindDefaultStoryline());
+	if (idx < 0 || idx > GetStorylinesQuantity() - 1) {
+            return GetStoryline(FindDefaultStoryline());
+
+	}
 	ref storyline; makeref(storyline, Storylines);
 	aref sl; makearef(sl, storyline.list);
 	int num = GetAttributesNum(sl);
@@ -2154,12 +2128,14 @@ string GetStoryline(int idx)
 		aref arsl = GetAttributeN(sl, i);
 		if (!CheckAttribute(arsl, "index")) continue;
 		if (sti(arsl.index) == idx) {
-			if (CheckAttribute(arsl, "id"))
+			if (CheckAttribute(arsl, "id")) {
 				return arsl.id;
+			}
 			else
 				break;
 		}
 	}
+
 	return GetStoryline(FindDefaultStoryline());
 }
 
@@ -2329,8 +2305,7 @@ void RefreshStorylines()
 	CopyAttributes(tsl, sl);
 	DeleteAttribute(sl, "");
 	int num = GetAttributesNum(tsl);
-	for (int i = 0; i < num; i++)
-	{
+	for (int i = 0; i < num; i++) {
 		aref arsl = GetAttributeN(tsl, i);
 		string sfile = "Storyline\" + arsl.dir;
 		sfile = strcut(sfile, 0, strlen(sfile) - 2) + ".c";
@@ -2402,7 +2377,7 @@ int GetCurrentModelrNumber()
 	aref arModel;
 	if (FindClass(&arModel, "modelr")) {
 		n++;
-		while (FindClassNext(&arModel)) 
+		while (FindClassNext(&arModel))
 		{
 			n++;
 		}
@@ -2419,7 +2394,7 @@ void InitProfiles()
 	ref rSP; makeref(rSP, SaveProfiles);
 	for (int i = 0; i < SLinesNum; i++) {
 		storyline = GetStoryline(i);
-		GameInterface.SavePath = "SAVE\" + GetStorylineDir(i);
+		GameInterface.SavePath = GetSaveDirectory() + GetStorylineDir(i);
 		string saveName = "";
 		int fSize = 0;
 		int j = 0;
@@ -2497,7 +2472,7 @@ int GetProfileSavesQuantity(string storyline, string profile)
 	if (slidx < 0) return 0;
 	int pnum = FindProfile(storyline, profile);
 	if (pnum < 0) return 0;
-	aref arSaveFiles = GetFiles("SAVE\" + GetStorylineDir(slidx), "-=" + profile + "=-*");
+	aref arSaveFiles = GetFiles(GetSaveDirectory() + GetStorylineDir(slidx), "-=" + profile + "=-*");
 	return GetAttributesNum(arSaveFiles);
 }
 
@@ -2505,7 +2480,7 @@ int GetAnyProfileSavesQuantity(string storyline)
 {
 	int slidx = FindStoryline(storyline);
 	if (slidx < 0) return 0;
-	aref arSaveFiles = GetFiles("SAVE\" + GetStorylineDir(slidx), "-=*=-*");
+	aref arSaveFiles = GetFiles(GetSaveDirectory() + GetStorylineDir(slidx), "-=*=-*");
 	return GetAttributesNum(arSaveFiles);
 }
 
@@ -2545,16 +2520,17 @@ bool DeleteProfile(string storyline, string profile)
 	if (slidx < 0) return false;
 	int pnum = FindProfile(storyline, profile);
 	if (pnum < 0) return false;
-	GameInterface.SavePath = "SAVE\" + GetStorylineDir(slidx);
+	GameInterface.SavePath = GetSaveDirectory() + GetStorylineDir(slidx);
 	string saveName;
 	int fSize;
 	int i = 0;
+	//Boyer change to always increment i++ so this works properly
 	while (SendMessage(&GameInterface, "llee", MSG_INTERFACE_SAVE_FILE_FIND, i, &saveName, &fSize) != 0) {
+        i++;
 		if (hasSubStr(saveName, "-=" + profile + "=-")) {
 			SendMessage(&GameInterface, "ls", MSG_INTERFACE_DELETE_SAVE_FILE, saveName);
 			continue;
 		}
-		i++;
 	}
 	saveName = profile + "_options";
 	if (FindFile(GameInterface.SavePath, "*", saveName) != "") SendMessage(&GameInterface, "ls", MSG_INTERFACE_DELETE_SAVE_FILE, saveName);
@@ -2573,3 +2549,162 @@ string f2s2(float num)
 	temp.data = num;
 	return temp.data;
 }
+
+
+int i_min(int a1, int a2)
+{
+	if (a1 < a2) { return a1; }
+	return a2;
+}
+
+/*float frand(float fMin, float fMax, int digit)
+{
+	int nDiv = pow(10,digit);
+	int n = rand(100000);
+	float fRes = fMin+(fMax-fMin)*n/100000.0;
+	fRes = makefloat( makeint(fRes*ndiv+0.5) )/nDiv;
+	return fRes;
+}*/
+
+// boal -->
+
+void Log_Info(string _str)
+{
+    Log_SetStringToLog(_str);
+}
+
+void Log_TestInfo(string logtext)
+{
+	if (true) //bBettaTestMode)
+	{
+		Log_SetStringToLog(logtext);
+		//trace("TestInfo: " + GetQuestBookDataDigit() + " " + logtext)
+	}
+}
+
+
+string NewStr()
+{
+    int idLngFile = LanguageOpenFile("ItemsDescribe.txt");
+    string sTemp;
+    sTemp = LanguageConvertString(idLngFile,"new_string");
+    LanguageCloseFile(idLngFile);
+
+    return sTemp;
+}
+
+Object objGrass;
+
+void CreateGrass(string sDataFile, string sTextureFile, float fScale, float fW,float fH, float fMinDist,float fMaxDist, float fMinLod)
+{
+	CreateEntity(&objGrass,"Grass");
+	if( bSeaActive && !bAbordageStarted )
+	{
+		LayerAddObject(SEA_EXECUTE,&objGrass,1000);
+		LayerAddObject(SEA_REALIZE,&objGrass,1000);
+	}
+	else
+	{
+		LayerAddObject("execute",&objGrass,1000);
+		LayerAddObject("realize",&objGrass,1000);
+	}
+	SendMessage(objGrass,"ls",41666, sTextureFile); // #define MSG_GRASS_SET_TEXTURE 41666
+	SendMessage(objGrass,"lffffff",42666, fScale, fW,fH, fMinDist,fMaxDist, fMinLod); // #define MSG_GRASS_SET_PARAM 42666
+	SendMessage(objGrass,"ls",40666, sDataFile); // #define MSG_GRASS_LOAD_DATA 40666
+}
+
+void DeleteGrass()
+{
+	if (IsEntity(&objGrass))
+	{
+		DeleteClass(&objGrass); // boal грохнуть конкретный объект
+	}
+	DeleteEntitiesByType("Grass");
+}
+
+void HideGrass()
+{
+	if (IsEntity(&objGrass))
+	{
+        LayerDelObject("execute", &objGrass);
+		LayerDelObject("realize", &objGrass);
+		LayerDelObject(SEA_EXECUTE, &objGrass);
+		LayerDelObject(SEA_REALIZE, &objGrass);
+	}
+}
+
+void ShowGrass()
+{
+	if (IsEntity(&objGrass))
+	{
+        LayerAddObject(SEA_EXECUTE, &objGrass, 1000);
+		LayerAddObject(SEA_REALIZE, &objGrass, 1000);
+	}
+}
+// boal 16.03.2004 -->
+void CalcLocalTime(float _inc)
+{
+	if (locTmpTime >= _inc)
+	{
+		/*int hour = GetHour();
+		if (AddTimeToCurrent(0, makeint(locTmpTime / _inc)) > 0)
+		{
+			//вызов уже внутри метода времени PostEvent("NextDay", 20); // наступил новый день
+		}        */
+        locTmpTime = 0.0;
+        /*if (hour != GetHour() && !bStorm && !bTornado && !bDisableMapEnter && !LAi_grp_alarmactive) // не в бою
+		{
+            RefreshWeather();
+		} */
+    }
+}
+void RefreshWeather()
+{
+    Whr_UpdateWeather(true);
+	// звуки
+	/*
+	if (bSeaActive && !bAbordageStarted)
+	{
+	    SetSchemeForSea();
+	    if (Whr_IsDay() && sti(pchar.Ship.Lights) == 1)
+	    {
+	        //выключаем фонари.
+			Ship_SetLightsOff(pchar, 15.0, true, true, false);
+	    }
+	}
+	else
+	{ // суша
+	    LoadSceneSound();
+	} */
+}
+
+
+int func_max(int a, int b)
+{
+	if (a > b) return a;
+	return b;
+}
+int func_min(int a, int b)
+{
+	if (a > b) return b;
+	return a;
+}
+
+
+void FreeChangeFlagMode(string _tmp)
+{
+	DeleteAttribute(pchar, "DisableChangeFlagMode");
+}
+
+string  xiStr(string _str) // просто сокращение
+{
+	return XI_ConvertString(_str);
+}
+
+
+string  xiDStr(string _str) // просто сокращение
+{
+	//return GetConvertStr(_str, "DialogSource.txt");
+}
+
+

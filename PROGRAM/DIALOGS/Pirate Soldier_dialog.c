@@ -368,5 +368,44 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
+
+		case "drink":
+			NextDiag.TempNode = "first time";
+	
+			Dialog.defAni = "dialog_stay1";
+			Dialog.defCam = "1";
+			Dialog.defSnd = "dialogs\0\017";
+			Dialog.defLinkAni = "dialog_1";
+			Dialog.defLinkCam = "1";
+			Dialog.defLinkSnd = "dialogs\woman\024";
+			Dialog.ani = "dialog_stay1";
+			Dialog.cam = "1";
+			
+			dialog.snd = "Voice\COSO\COSO045";
+			dialog.text = DLG_TEXT[111];
+			link.l1 = DLG_TEXT[112];
+			link.l1.go = "drink_2";
+		break;
+
+		case "drink_2":
+			dialog.snd = "Voice\COSO\COSO046";
+			dialog.text = DLG_TEXT[113] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[114];
+			link.l1 = DLG_TEXT[115];
+			link.l1.go = "drink_exit";
+			link.l2 = DLG_TEXT[116];
+			link.l2.go = "fight_exit";
+		break;
+
+		case "drink_exit":
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			DialogExit();
+			npchar.location = "none";
+		break;
+
+		case "fight_exit":
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			DialogExit();
+			AddDialogExitQuest("fight_with_soldier_for_drink");
+		break;
 	}
 }

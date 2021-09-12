@@ -63,7 +63,7 @@ string DLG_TEXT[73] = {
 "Damn right I do! And it had better be good.",
 " knows that ",
 " recommended you for the escort mission. The almirante believes you betrayed him, and that my master may be in league with you. So my master has also been arrested.\nHis only hope now is if you can find out who really kidnapped ",
-". That is also your only hope.\nI must return to the residence before I am missed and suspicion falls on me too. Good luck, Capit–±n ",
+". That is also your only hope.\nI must return to the residence before I am missed and suspicion falls on me too. Good luck, Capit·n ",
 "Thanks! You've done the right thing, ",
 ". I'll find out who is really responsible. If possible, I'll bring them in myself. Goodbye!",
 "Did you remember to collect your equipment?",

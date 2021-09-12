@@ -51,7 +51,6 @@ void DailyCrewUpdate()
 
 	//JA 1Dec06 reworked Food & Rum system -->
 	//food
-
 		// GR: If you have the "Cooking With Albatross" book and an albatross, cook it
 		bool HaveCookBook = CheckCharacterItem(PChar, "book9");		// Do you have the cookbook?
 		int PCabin = FindCharacterShipCabin(PChar);
@@ -64,7 +63,6 @@ void DailyCrewUpdate()
 			TakeItemFromCharacter(PChar, "albatross");
 			AddCharacterGoods(PChar, GOOD_WHEAT, 2);
 		}
-
 		int foodQ = GetSquadronGoods(pchar, GOOD_WHEAT);
 		float foodRatio[4];
 		int ft[4];
@@ -104,7 +102,7 @@ void DailyCrewUpdate()
 		if(CheckFood && foodQ) // NK 04-09-09 divbyzero error fix
 		{
 			float iHighestFoodRatio = 0; //JA Need this to handle special case.
-			for(i=0; i<COMPANION_MAX; i++)
+			for(i=0; i<4; i++)
 			{
 				cn = GetCompanionIndex(pchar,i);
 				if(cn!=-1) { // KK --> // PB: Included GetRemovable(GetCharacter(cn))
@@ -154,7 +152,7 @@ void DailyCrewUpdate()
 		if(CheckFood && rumQ) // NK 04-09-09 divbyzero error fix
 		{
 			float iHighestRumRatio = 0; //JA Need this to handle special case.
-			for(i=0; i<COMPANION_MAX; i++)
+			for(i=0; i<4; i++)
 			{
 				cn = GetCompanionIndex(pchar,i);
 				if(cn!=-1) { // KK --> // PB: Included GetRemovable(GetCharacter(cn))
@@ -195,7 +193,7 @@ void DailyCrewUpdate()
 			}
 
 			//divide remaining food back into ships
-			for(i=0; i<COMPANION_MAX; i++)
+			for(i=0; i<4; i++)
 			{
 				cn = GetCompanionIndex(pchar,i);
 				if(cn!=-1) ft[i] = makeint(makefloat(foodQ)*foodRatio[i]);
@@ -239,7 +237,7 @@ void DailyCrewUpdate()
 			}
 	//JA <-- 1Dec06 reworked Food & Rum system
 
-			for(i=0; i<COMPANION_MAX; i++)
+			for(i=0; i<4; i++)
 			{
 				cn = GetCompanionIndex(pchar,i);
 				if(cn!=-1) SetCharacterGoods(&Characters[cn],GOOD_WHEAT, ft[i]);
@@ -259,7 +257,7 @@ void DailyCrewUpdate()
 				if(tempdie < 0) tempdie = 0.0;
 				if(GetCrewQuantity(pchar) <= makeint(makefloat(GetMaxCrewQuantity(pchar)) / 4.0)) KAM_Mutiny(); //MAXIMUS: new "Mutiny"
 // KK -->
-				for (i = 1; i < COMPANION_MAX; i++)
+				for (i = 1; i < 4; i++)
 				{
 					cn = GetCompanionIndex(pchar, i);
 					if (cn < 0) continue;
@@ -316,7 +314,7 @@ void DailyCrewUpdate()
 			}
 
 			//divide remaining rum back into ships
-			for(i=0; i<COMPANION_MAX; i++)
+			for(i=0; i<4; i++)
 			{
 				cn = GetCompanionIndex(pchar,i);
 				if(cn!=-1) rt[i] = makeint(makefloat(rumQ)*rumRatio[i]);
@@ -360,7 +358,7 @@ void DailyCrewUpdate()
 				}
 			}
 			SetCharacterGoods(pchar, GOOD_RUM, rt[0]);
-			for(i=1; i<COMPANION_MAX; i++)
+			for(i=1; i<4; i++)
 			{
 				cn = GetCompanionIndex(pchar,i);
 				if(cn!=-1) SetCharacterGoods(&Characters[cn],GOOD_RUM, rt[i]);
@@ -413,10 +411,8 @@ void DailyCrewUpdate()
 				LogIt("Captain, " + makeint((1-uncursed_percentage)*100) + "% of the crew is cursed due to " + CursedCoins + " Aztec coins");
 			}
 
-			for (i = 0; i < COMPANION_MAX; i++)
-			{
-				if (GetCompanionIndex(PChar, i) < 0) continue;
-				chref = GetCharacter(GetCompanionIndex(PChar, i));
+			for (i = 0; i < GetCompanionQuantity(pchar); i++) {
+				chref = GetCharacter(GetCompanionIndex(GetMainCharacter(), sti(i)));
 				if(CheckCharacterItem(chref,"cursedcoin"))
 				{
 					if(!CheckAttribute(chref, "curseddays"))	chref.curseddays = 0;
@@ -484,7 +480,7 @@ void DailyCrewUpdate()
 				if(CheckAttribute(loc, "box1.money"))			money = money + sti(loc.box1.money);
 				//Levis: Check the amount of ships
 				int numship = 1;
-				for(i=1; i<COMPANION_MAX; i++)
+				for(i=1; i<4; i++)
 				{
 					if(GetCompanionIndex(pchar,i) != -1) numship ++;
 				}
@@ -499,7 +495,7 @@ void DailyCrewUpdate()
 					if(!CheckAttribute(pchar, "articles_note"))
 					{
 						pchar.articles_note = true;																					// PB: Show this only once
-						LogIt(TranslateString("","Captain, the crew is envious of the amount of money we have on board and wants to sign articles"));	// PB: Log message added + effect increased to become visible
+						LogIt("Captain, the crew is envious of the amount of money we have on board and wants to sign articles");	// PB: Log message added + effect increased to become visible
 						SetQuestHeader("crew_affairs");																				// PB: Add to Questbook too
 						AddQuestRecord("crew_affairs", 1);																			// PB: Add to Questbook too
 					}
@@ -532,7 +528,7 @@ void DailyCrewUpdate()
 		explength++;
 		pchar.CrewStatus.explength = explength;
 		//apply personal explengths
-		for(i=1; i<COMPANION_MAX; i++)
+		for(i=1; i<4; i++)
 		{
 			cn = GetCompanionIndex(pchar,i);
 			if(cn!=-1)
@@ -541,8 +537,8 @@ void DailyCrewUpdate()
 
 				// LDH make companion ship morale change like player ship morale - 27Jan09
 				// This way you don't have captured ships going from Treacherous to Heroic in one jump
-				if(!CheckAttribute(chref, "Ship.Crew.Morale"))	chref.Ship.Crew.Morale = 45;						// PB: To fix missed attribute
-				morale = sti(chref.Ship.Crew.Morale);											// companion ship previous morale
+				if(!CheckAttribute(chref, "Ship.Crew.Morale"))	chref.Ship.Crew.Morale = 45;									// PB: To fix missed attribute
+				morale = sti(chref.Ship.Crew.Morale);																			// companion ship previous morale
 
 				// PB: Use Companion Skills and Reputation for Morale -->
 				int diff = 0;
@@ -554,7 +550,7 @@ void DailyCrewUpdate()
 				skillLead = GetEffectiveSkill(chref,SKILL_LEADERSHIP);									// check captain ONLY
 				moralemod = 0.6 + (stf(skillLead) + stf(PerkIron)*5)/20;								// calculated same as player
 				moralemod = moralemod * moralescale;											// apply food and rum modifiers
-				moralemod = norm_morale * moralemod;											// apply leadership and perks for companion
+				moralemod = norm_morale * moralemod;
 				if(ProfessionalNavyNation() == UNKNOWN_NATION)
 				{
 					if(player_rep > REPUTATION_NEUTRAL && compan_rep < REPUTATION_NEUTRAL)
@@ -597,7 +593,7 @@ void DailyCrewUpdate()
 				else {chref.cexplength = 1;}
 			}
 		}
-		for(i=1; i<OFFICER_MAX; i++)
+		for(i=1; i<4; i++)
 		{
 			cn = GetOfficersIndex(pchar,i);
 			if (cn != -1) {
@@ -643,8 +639,10 @@ void DailyCrewUpdate()
 	//ASVS - playing main_theme music mod <---
 
 // KK & PB -->
-		
-	for (i = 0; i < COMPANION_MAX; i++)
+	int wounded_total = 0;
+	int healed_total = 0;
+	int killed_total = 0;
+	for (i = 0; i < 4; i++)
 	{
 		cn = GetCompanionIndex(pchar, i);
 		if (cn < 0) continue;
@@ -661,16 +659,16 @@ void DailyCrewUpdate()
 			RemoveCharacterWoundedCrew(chref, killed_qty);
 
 			if (GetCargoGoods(chref, GOOD_TREATMENT) > 0) RemoveCharacterGoods(chref, GOOD_TREATMENT, 1);
-		
+
 			if (GetWoundedCrewQuantity(chref) > 0 || healed_qty > 0 || killed_qty > 0)
 			{
 				LogIt(GetWoundedCrewQuantity(chref) + " wounded crewmembers: " + healed_qty + " healed and " + killed_qty + " died from gangrene on "+GetMyShipNameShow(chref)+".");
 			} // Serge Grey: moved and changed for ship's name outputting (24.05.2018).
 		}
-
 	}
-
-		
+	if (wounded_total > 0 || healed_total > 0 || killed_total > 0) {
+		LogIt(wounded_total + " wounded crewmembers: " + healed_total + " healed and " + killed_total + " died from gangrene.");
+	}
 // KK & PB <--
 
 // KK -->
@@ -723,4 +721,6 @@ void DailyCrewUpdate()
 	// Fudge Dragon: Changing Face of the Caribbean <--
 
 	if (bCompanionMutiny) ShipMutiny(); // KK
+	DeleteAttribute(pchar, "stormIndex");// PW end temporary immunity from storm
+
 }

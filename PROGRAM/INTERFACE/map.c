@@ -79,11 +79,11 @@ void SelectMap(int idx)
 			DeleteAttribute(arMap,"UnlockedPerk");
 		}
 		//Add unlocking of perk <--
-		
+
 		SetNodeUsing("MAP", true);
 		// Screwface : MAP TITLES ARE PERIOD DEPENDANT
 		int period = GetCurrentPeriod();
-		string path = "RESOURCE\Textures\INTERFACES\Maps\" + period; 
+		string path = GetResourceDirectory() + "Textures\INTERFACES\Maps\" + period;
 		if(FindFile(path, "*.tga.tx", item_id + ".tga.tx") !="")
 			{SetNewPicture("MAP", "INTERFACES\Maps\" + period  + "\" + item_id + ".tga");}
 		else

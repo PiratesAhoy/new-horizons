@@ -28,11 +28,12 @@ bool bIslandChecked=false;	// LDH 07Jan09
 void InitLogInterface()
 {
 	SetEventHandler("SetWindowSize","LI_SetWindowSize",0);
-	CreateEntity(&IActions,"ActionIntrface");
+	CreateEntity(&IActions,"ILogAndActions");
 	CreateEntity(&ILog, "ILogAndActions"); // KK
 	DelEventHandler("SetWindowSize","LI_SetWindowSize");
 	DeleteAttribute(&IActions,"");
 	DeleteAttribute(&ILog, ""); // KK
+
 	CreateLogEnvironment();
 // --> KK
 	//SendMessage(&IActions,"lll",LOG_AND_ACTIONS_INIT,sti(InterfaceStates.BattleShow.FastCommand),sti(InterfaceStates.BattleShow.ActionLabel));
@@ -58,6 +59,7 @@ void LI_SetWindowSize()
 {
 	int w = GetEventData();
 	int h = GetEventData();
+
 	int bTVused = GetEventData();
 	if(bTVused)	SetShowWindowParameters(bTVused,w,h,40,24,w-40,h-24);
 	else	SetShowWindowParameters(bTVused,w,h,0,0,w,h);
@@ -257,6 +259,7 @@ void CreateLogEnvironment()
 
 void CreateSeaActionsEnvironment()
 {
+	IActions.type = "sea";
 	IActions.ActiveActions.TextureName = "battle_interface\cicons_command.tga";
 	IActions.ActiveActions.horzQ = 8;
 	IActions.ActiveActions.vertQ = 8; // FCoHS
@@ -276,8 +279,9 @@ void CreateSeaActionsEnvironment()
 
 void CreateLandActionsEnvironment()
 {
-	ref PChar = GetMainCharacter();		//JRH
+	PChar = GetMainCharacter();		//JRH
 
+	IActions.type = "land";
 	IActions.ActiveActions.TextureName = "battle_interface\land_fast_commands.tga";
 	IActions.ActiveActions.horzQ = 8;
 	IActions.ActiveActions.vertQ = 8; // KK // MAXIMUS
@@ -377,7 +381,7 @@ void CreateLandActionsEnvironment()
 
 	if(Pchar.location == "Cartagena_hotel_private")
 	{
-		if (CheckAttribute(PChar, "boxname") && Pchar.boxname == "box5") 
+		if (CheckAttribute(PChar, "boxname") && Pchar.boxname == "box5")
 		{
 			if(CheckCharacterItem(Pchar,"hotel_keys"))
 			{
@@ -399,21 +403,20 @@ void CreateLandActionsEnvironment()
 	{
 		if (CheckAttribute(PChar, "boxname"))
 		{
-			if(Pchar.boxname == "box8" || Pchar.boxname == "box9" || Pchar.boxname == "box10" || Pchar.boxname == "box11" 
-			|| Pchar.boxname == "box12" || Pchar.boxname == "box14" || Pchar.boxname == "box15" 
+			if(Pchar.boxname == "box8" || Pchar.boxname == "box9" || Pchar.boxname == "box10" || Pchar.boxname == "box11"
+			|| Pchar.boxname == "box12" || Pchar.boxname == "box14" || Pchar.boxname == "box15"
 			|| Pchar.boxname == "box18" || Pchar.boxname == "box19" || Pchar.boxname == "box20")
 			{
 				IActions.ActiveActions.OpenBox.IconNum	= 62;
 			}
-			else 
+			else
 			{
-				if(Pchar.boxname == "box13") 
+				if(Pchar.boxname == "box13")
 				{
 					IActions.ActiveActions.OpenBox.IconNum	= 1;
 				}
 				else IActions.ActiveActions.OpenBox.IconNum	= 29;
-			}
-		}
+			}		}
 	}
 	// <-- JRH
 
@@ -643,7 +646,7 @@ void LoadLIStates()
 // KK -->
 void InitDateTimeDisplay()
 {
-	CreateEntity(&IDateTimeDisplay, "IDateTime_Show");
+	CreateEntity(&IDateTimeDisplay, "ILogAndActions");
 	DeleteAttribute(&IDateTimeDisplay, "");
 	LayerAddObject("execute", &IDateTimeDisplay, -257);
 	LayerAddObject("realize", &IDateTimeDisplay, -257);
@@ -884,7 +887,7 @@ void procUpdateTime()
 					for (i=0; i<MAX_SHIP_GROUPS; i++)
 					{
 						rGroup = Group_GetGroupByIndex(i);
-					
+
 						groupe = GetAttribute(rGroup, "id");
 						if (groupe == "-1") continue; // Skip any groups that aren't used
 						if (groupe == "OurGroup") continue; // Skip player group
@@ -905,7 +908,7 @@ void procUpdateTime()
 					Recognized = Recognized || CheckAllShips("ships", false);
 					if (Recognized)
 					{
-						if(iRealismMode<2) 
+						if(iRealismMode<2)
 							LogIt(TranslateString("", "We are recognized, captain!"));
 						RefreshBattleInterface(true);
 					}
@@ -975,9 +978,12 @@ void procUpdateTime()
 								}
 								else
 								{
-									Sea.GF3.WaterColor = aCurWeather.Sea.Water.Color;
-									Sea.GF3.SkyColor = aCurWeather.Sea.Sky.Color;
-									Sea.WaterAttenuation = aCurWeather.Sea.WaterAttenuation;
+									//Sea.GF3.WaterColor = aCurWeather.Sea.Water.Color;
+									//Sea.GF3.SkyColor = aCurWeather.Sea.Sky.Color;
+									//Sea.WaterAttenuation = aCurWeather.Sea.WaterAttenuation;
+									Sea.Sea2.WaterColor = aCurWeather.Sea2.WaterColor;
+									Sea.Sea2.SkyColor = aCurWeather.Sea2.SkyColor;
+									Sea.Sea2.Attenuation = aCurWeather.Sea2.Attenuation;
 								}
 							}
 						}
@@ -994,7 +1000,7 @@ void procUpdateTime()
 		sDateTimeDisplay = XI_ConvertString(GetDayName(GetWeekday(iday, imonth, iyear))) + ", " + GetHumanDate(iyear, imonth, iday);
 		if (sti(mchr.HasClock)) sDateTimeDisplay += " " + GetStringTime(stf(mchr.CurrentTime));
 		// DeathDaisy: approximate time of day when not having a clock
-		else{ 
+		else{
 			string TimeOfDay;
 			if(GetTime() >= 22 || GetTime() < 3) TimeOfDay = XI_ConvertString("Night");
 			if(GetTime() >= 3 && GetTime() < 6) TimeOfDay = XI_ConvertString("Small Hours");

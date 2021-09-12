@@ -29,7 +29,7 @@ string DLG_TEXT[99] = {
 " Le escucho, capitan.",
 "?Que hay de interesante en la ciudad?",
 "Terminemos con esta charla ociosa y vayamos al grano.",
-"Lo que es interesante...? Bueno, ni siquiera se que decirte. Cada uno tiene sus propios intereses –ÉEun comerciante esta interesado en una cosa, un marinero en otra. Bueno, ya lo se. ",
+"Lo que es interesante...? Bueno, ni siquiera se que decirte. Cada uno tiene sus propios intereses ÅEun comerciante esta interesado en una cosa, un marinero en otra. Bueno, ya lo se. ",
 "Claire Larrouse",
 "Claire Larrouse",
 "llego a la ciudad recientemente. Dicen que esta formando una tripulacion para su nueva expedicion.",

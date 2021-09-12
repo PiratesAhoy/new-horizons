@@ -117,7 +117,7 @@ void LAi_SetCurHPMax(aref chr)
 	{
 		maxHP = stf(chr.chr_ai.hp_max);
 		if(maxHP < 1) maxHP = 1;
-	}	
+	}
 	chr.chr_ai.hp_max = maxHP;
 	chr.chr_ai.hp = maxHP;
 }
@@ -132,7 +132,7 @@ void LAi_SetDltHealth(aref chr, float healthPerSec)
 //Использовать бутылочку-лечилку
 void LAi_UseHealthBottle(aref chr, float healthInBottle)
 {
-	if(healthInBottle <= 0) return;	
+	if(healthInBottle <= 0) return;
 	if(CheckPerkForGroup(chr, "ImprovePotions")) healthInBottle = healthInBottle * 1.1;//partywide boost
 	if(!CheckAttribute(chr, "chr_ai.hp_bottle"))
 	{
@@ -250,6 +250,26 @@ float LAi_GetCharacterRelHP(aref chr)
 	return 0.0;
 }
 
+float LAi_GetCharacterRelEnergy(aref chr)
+{
+	float energy = 0.0;
+	if(CheckAttribute(chr, "chr_ai.energy"))
+	{
+		energy = stf(chr.chr_ai.energy);
+		energy = energy / LAi_GetCharacterMaxEnergy(chr); // boal
+	}
+	return energy;
+}
+
+float LAi_GetCharacterMaxEnergy(aref chr)
+{
+	if(CheckAttribute(chr, "chr_ai.energyMax"))
+	{
+		return stf(chr.chr_ai.energyMax);
+	}
+	return LAI_DEFAULT_ENERGY_MAX;
+}
+
 //Установить проверяльщик хп, если их становиться меньше чем, вызвать квест
 void LAi_SetCheckMinHP(aref chr, float min, bool immortal, string quest)
 {
@@ -264,7 +284,7 @@ void LAi_RemoveCheckMinHP(aref chr)
 {
 	aref chr_ai;
 	makearef(chr_ai, chr.chr_ai);
-	DeleteAttribute(chr_ai, "hpchecker");	
+	DeleteAttribute(chr_ai, "hpchecker");
 }
 
 //Убить персонажа
@@ -286,7 +306,7 @@ void LAi_KillCharacter(aref chr)
 bool LAi_IsDead(aref chr)
 {
 	bool bDead = false;
-	if (CheckAttribute(chr, "chr_ai.hp") == false) 
+	if (CheckAttribute(chr, "chr_ai.hp") == false)
 	{
 		bDead = true;
 	}
@@ -376,7 +396,7 @@ void LAi_CharacterReincarnationEx(aref chr, bool isEnable, bool isUseCurModel, s
 		aref chr_ai;
 		makearef(chr_ai, chr.chr_ai);
 		DeleteAttribute(chr_ai, "reincarnation");
-	}	
+	}
 }
 
 bool LAi_CharacterIsReincarnation(aref chr)
@@ -500,6 +520,16 @@ void LAi_LockFightMode(aref chr, bool isLockFightMode)
 {
 	SendMessage(&chr, "lsl", MSG_CHARACTER_EX_MSG, "LockFightMode", isLockFightMode);
 //	PostEvent("evntBLI_Update",BLI_UPDATE_PERIOD);//MAXIMUS: makes box from corpse with hand-icon in the top-left corner
+}
+
+bool LAi_CheckFightMode(aref chr)
+{
+	return SendMessage(&chr, "ls", MSG_CHARACTER_EX_MSG, "CheckFightMode");
+}
+//#20190313-02
+bool LAi_CheckRunMode(aref chr)
+{
+	return SendMessage(&chr, "ls", MSG_CHARACTER_EX_MSG, "CheckRunMode");
 }
 
 //------------------------------------------------------------------------------------------
@@ -652,7 +682,19 @@ void LAi_BladeSetBlock(aref chr, float block)
 	chr.chr_ai.block = block;
 }
 
+void LAi_BladeEnergyType(aref chr, float fEnergyType)
+{
+	chr.chr_ai.EnergyType = fEnergyType;
+}
 
+float LAi_GetBladeEnergyType(aref chr)
+{
+    if (CheckAttribute(chr, "chr_ai.EnergyType"))
+	{
+        return stf(chr.chr_ai.EnergyType);
+    }
+    return 1.0;
+}
 //------------------------------------------------------------------------------------------
 //Internal
 //------------------------------------------------------------------------------------------
@@ -677,7 +719,7 @@ void LAi_AllCharactersUpdate(float dltTime)
 
 			// El Rapido -->
 // KK: we have already set special dlthp for people with "Toughness" ability, enough! -->
-			hp = stf(chr_ai.hp) + dlthp * dltTime;  
+			hp = stf(chr_ai.hp) + dlthp * dltTime;
 			/*if(IsCharacterPerkOn(chr, "Toughness"))
 			{
 				hp = stf(chr_ai.hp) + dlthp*dltTime*40;
@@ -782,6 +824,19 @@ void LAi_AllCharactersUpdate(float dltTime)
 			}else{
 				chr_ai.charge = "0";
 			}
+			if(CheckAttribute(chr_ai, "energy"))
+			{
+				float energy = Lai_UpdateEnergyPerDltTime(chr, stf(chr_ai.energy), dltTime);
+				if(energy < 0.0)
+				{
+					energy = 0.0;
+				}
+				if(energy > LAi_GetCharacterMaxEnergy(chr))
+				{
+					energy = LAi_GetCharacterMaxEnergy(chr);
+				}
+				chr_ai.energy = energy;
+			}
 		}
 	}
 }
@@ -812,7 +867,7 @@ void LAi_CharacterSaveAy(aref chr)
 {
 	float ay = 0.0;
 	if(GetCharacterAy(chr, &ay) == false) ay = 0.0;
-	chr.chr_ai.type.ay = ay;	
+	chr.chr_ai.type.ay = ay;
 }
 
 void LAi_CharacterRestoreAy(aref chr)
@@ -1034,7 +1089,7 @@ float RecalcCharacterGun(ref chr)
 
 			if(weapon.shottype == "ca" || weapon.shottype == "ar" || weapon.shottype == "ar2")
 			{
-			    if(enough_ammo == false) 
+			    if(enough_ammo == false)
 			    {
 					LAi_GunSetUnload(chr);
 			    }

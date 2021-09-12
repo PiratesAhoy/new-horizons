@@ -31,7 +31,7 @@ string DLG_TEXT[52] = {
 "It's time my brother!",
 "You know, I think i will keep all the booty for me!",
 "I changed my mind..Why do we have to separate us after all!",
-". You are my brother captain and i'll be ever here fo you if you would sail with me again! Bon vent Ð° toi!",
+". You are my brother captain and i'll be ever here fo you if you would sail with me again! Bon vent à toi!",
 "I'll thinking about it my friend. Hope to see you again one day!",
 "Cutthroat! you are already dead!",
 "We will see",

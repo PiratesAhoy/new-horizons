@@ -143,5 +143,5 @@ string DLG_TEXT[145] = {
 "Donde puedo vender los productos finos que he traido conmigo?",
 "Tenemos una poblacion de ",
 " ciudadano.",
-"HÐ±blame de la colonia.",
+"Háblame de la colonia.",
 };

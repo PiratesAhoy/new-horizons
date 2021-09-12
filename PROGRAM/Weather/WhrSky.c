@@ -1,189 +1,125 @@
+#event_handler("frame", "UpdateSky");
+
 object Sky;
+
+//float fPrevCameraAX = 0;
 
 void WhrDeleteSkyEnvironment()
 {
-	if (isEntity(&Sky))
+	if(isEntity(&Sky))
 	{
 		DeleteClass(&Sky);
 	}
-	DeleteAttribute(&Sky,"");
+
+	DeleteAttribute(&Sky, "");
 }
 
 void WhrCreateSkyEnvironment()
 {
 	aref aCurWeather = GetCurrentWeather();
-	aref aSky; makearef(aSky,aCurWeather.Sky);
+	aref aSky;
+	makearef(aSky, aCurWeather.Sky);
 
-	DeleteAttribute(&Sky,"");
-	if (!isEntity(&Sky))
+	DeleteAttribute(&Sky, "")
+	if(!isEntity(&Sky))
 	{
-		CreateEntity(&Sky,"Sky");
-		LayerAddObject("sea_reflection",&Sky,1);
+		CreateEntity(&Sky, "Sky");
+		//#20180613-01, #20180615-01
+		if(bSeaActive)
+            LayerAddObject("sea_reflection", &Sky, 1);
+        else
+            LayerAddObject("sea_reflection", &Sky, 11);
 	}
 
-    //JRH -->
-	ref PChar = GetMainCharacter();
+	FillSkyDir(&Sky);
+	//Sky.Dir = Whr_GetString(aSky, "Dir");
 
-	if(CheckAttribute(Pchar,"quest.JRH_sky"))
+	Sky.Color = Whr_GetColor(aSky, "Color");
+	Sky.RotateSpeed = Whr_GetFloat(aSky, "Rotate"); // Warship 02.06.09
+	Sky.Angle = Whr_GetFloat(aSky, "Angle");
+	Sky.Size = Whr_GetFloat(aSky, "Size");
+
+	//#20180615-01
+
+    if(bSeaActive) {
+        Sky.Size = Whr_GetFloat(aSky, "Size");
+        Sky.techSky = "Sky";
+        Sky.techSkyBlend = "SkyBlend";
+        Sky.techskyAlpha = "skyblend_alpha";
+        Sky.techSkyFog = "SkyFog";
+	}
+	else {
+	    Sky.Size = 2048; // == 512.0 * 4;
+	    Sky.techSky = "SkyLand";
+        Sky.techSkyBlend = "SkyBlendLand";
+        Sky.techskyAlpha = "skyblend_alphaLand";
+        Sky.techSkyFog = "SkyFogLand";
+	}
+
+	Sky.isDone = "";
+}
+
+// Warship 02.06.09
+void UpdateSky()
+{
+	float windSpeed = 5.0;
+	float timeScale = 1.0 + TimeScaleCounter * 0.25;
+
+	if(timeScale <= 2.0)
 	{
-		switch(Pchar.quest.JRH_sky)
-		{
-			case "1_Bl":
-				Sky.Dir = "weather\skies\1\\";
-			break;
-
-			case "2_Rd":
-				Sky.Dir = "weather\skies\2\\";
-			break;
-
-			case "3_Pu":
-				Sky.Dir = "weather\skies\3\\";
-			break;
-
-			case "4_Rd":
-				Sky.Dir = "weather\skies\4\\";
-			break;
-
-			case "5_Gr":
-				Sky.Dir = "weather\skies\5\\";
-			break;
-
-			case "6_Ni":
-				Sky.Dir = "weather\skies\6\\";
-			break;
-
-			case "7_Gr":
-				Sky.Dir = "weather\skies\7\\";
-			break;
-
-			case "8_Bl":
-				Sky.Dir = "weather\skies\8\\";
-			break;
-
-			case "C_Bl1":
-				Sky.Dir = "weather\skies\Converted\Blue 1\\";
-			break;
-
-			case "C_Cl1":
-				Sky.Dir = "weather\skies\Converted\Clouds 1\\";
-			break;
-
-			case "C_Cl2":
-				Sky.Dir = "weather\skies\Converted\Clouds 2\\";
-			break;
-
-			case "C_Cl3":
-				Sky.Dir = "weather\skies\Converted\Clouds 3\\";
-			break;
-
-			case "C_Cl5":
-				Sky.Dir = "weather\skies\Converted\Clouds 5\\";
-			break;
-
-			case "C_Cl6":
-				Sky.Dir = "weather\skies\Converted\Clouds 6\\";
-			break;
-
-			case "C_Ni1":
-				Sky.Dir = "weather\skies\Converted\Night 1\\";
-				Sky.Color = argb(0,200,200,255);
-			break;
-
-			case "C_Ni2":
-				Sky.Dir = "weather\skies\Converted\Night 2\\";
-				Sky.Color = argb(0,200,200,255);
-			break;
-
-			case "C_Ni3":
-				Sky.Dir = "weather\skies\Converted\Night 3\\";
-			break;
-
-			case "C_Ni4":
-				Sky.Dir = "weather\skies\Converted\Night 4\\";
-				Log_SetStringToLog("JRH_sky = Night 4");
-			break;
-
-			case "C_Ni5":
-				Sky.Dir = "weather\skies\Converted\Night 5\\";
-			break;
-
-			case "C_Ov1":
-				Sky.Dir = "weather\skies\Converted\Overcast 1\\";
-			break;
-
-			case "C_Ov2":
-				Sky.Dir = "weather\skies\Converted\Overcast 2\\";
-			break;
-
-			case "C_Ov3":
-				Sky.Dir = "weather\skies\Converted\Overcast 3\\";
-			break;
-
-			case "C_Ov4":
-				Sky.Dir = "weather\skies\Converted\Overcast 4\\";
-			break;
-
-			case "C_Ov5":
-				Sky.Dir = "weather\skies\Converted\Overcast 5\\";
-			break;
-
-			case "C_Ov6":
-				Sky.Dir = "weather\skies\Converted\Overcast 6\\";
-			break;
-
-			case "C_Ov7":
-				Sky.Dir = "weather\skies\Converted\Overcast 7\\";
-			break;
-
-			case "C_St1":
-				Sky.Dir = "weather\skies\Converted\Stormy 1\\";
-			break;
-
-			case "C_St2":
-				Sky.Dir = "weather\skies\Converted\Stormy 2\\";
-			break;
-
-			case "C_Su1":
-				Sky.Dir = "weather\skies\Converted\Sunset 1\\";
-			break;
-
-			case "C_Su2":
-				Sky.Dir = "weather\skies\Converted\Sunset 2\\";
-			break;
-
-			case "C_Su3":
-				Sky.Dir = "weather\skies\Converted\Sunset 3\\";
-			break;
-
-			case "C_Su8":
-				Sky.Dir = "weather\skies\Converted\Sunset 8\\";
-			break;
-
-			case "C_Tw1":
-				Sky.Dir = "weather\skies\Converted\Twilight 1\\";
-			break;
-
-			case "C_Tw2":
-				Sky.Dir = "weather\skies\Converted\Twilight 2\\";
-			break;
-
-			//Default
-			Sky.Dir = Whr_GetString(aSky,"Dir");
-			Sky.Color = Whr_GetColor(aSky,"Color");
-		}
+		timeScale = 1.0;
 	}
 	else
 	{
-		Sky.Dir = Whr_GetString(aSky,"Dir");
-		Sky.Color = Whr_GetColor(aSky,"Color");
+		timeScale /= 2.0;
 	}
-    //<-- JRH
+	if(CheckAttribute(Weather, "Wind.Speed"))
+	{
+		windSpeed = stf(Weather.Wind.Speed);
+	}
 
-	Sky.Angle = Whr_GetFloat(aSky,"Angle");
-	Sky.RotateSpeed = Whr_GetFloat(aSky,"Rotate");
-	Sky.Size = Whr_GetFloat(aSky,"Size");
+	// Sky.RotateSpeed == 0.05
+	Sky.RotateSpeed = windSpeed / 2500 / timeScale;
+}
 
-	Sky.isDone = "";
+void FillSkyDir(aref aSky)
+{
+	int i, nStart, nDur;
+	string satr;
+	aref aCurWeather = GetCurrentWeather();
+	string sDir;
+
+	DeleteAttribute(aSky,"Dir");
+	if( iBlendWeatherNum < 0 )
+	{
+		aSky.Dir.d1 = aCurWeather.Sky.Dir;
+		aSky.Dir = GetHour();
+	} else {
+		for (i=0;i<MAX_WEATHERS;i++)
+		{
+			if (!CheckAttribute(&Weathers[i], "Hour")) {continue;}
+			if (CheckAttribute(&Weathers[i], "Skip") && sti(Weathers[i].Skip)==true) {continue;}
+			if (CheckAttribute(&Weathers[i], "Storm")&& sti(Weathers[i].Storm)==true) {continue;}
+
+			satr = "d" + sti(Weathers[i].Hour.Min);
+			if( satr=="d24" ) {continue;}
+
+//navy -->
+			sDir = Weathers[i].Sky.Dir;
+			if (CheckAttribute(&WeatherParams, "Rain.ThisDay") && sti(WeatherParams.Rain.ThisDay))
+			{
+				nStart = sti(WeatherParams.Rain.StartTime);
+				nDur = MakeInt(sti(WeatherParams.Rain.Duration)/60 + 0.5);
+				if (sti(Weathers[i].Hour.Min) >= nStart  && sti(Weathers[i].Hour.Max) <= (nStart + nDur))
+				{
+					sDir = "weather\skies\Storm01\";
+				}
+			}
+//navy <--
+			aSky.Dir.(satr) = sDir;
+		}
+		aSky.Dir = GetTime();
+	}
 }
 
 void MoveSkyToLayers(string sExecuteLayer, string sRealizeLayer)
@@ -193,6 +129,13 @@ void MoveSkyToLayers(string sExecuteLayer, string sRealizeLayer)
 	LayerDelObject(SEA_EXECUTE,&Sky);
 	LayerDelObject(SEA_REALIZE,&Sky);
 
-	LayerAddObject(sExecuteLayer,&Sky,2);
-	LayerAddObject(sRealizeLayer,&Sky,2);
+	//#20180615-01
+	if(bSeaActive) {
+        LayerAddObject(sExecuteLayer,&Sky,2);
+        LayerAddObject(sRealizeLayer,&Sky,3);
+	}
+    else {
+        LayerAddObject(sExecuteLayer,&Sky,12);
+        LayerAddObject(sRealizeLayer,&Sky,13);
+    }
 }

@@ -113,7 +113,7 @@ string KAM_GetDefaultEmblemedSail(ref char)
 		tempstring = char.Ship.EmblemedSails.nationFileName;
 	}
 
-	if (FindFile("RESOURCE\Textures\ships\sails", "*.tga.tx", tempstring + ".tx") == "") return KAM_GetDefaultNormalSail(char); // KK
+	if (FindFile(GetResourceDirectory() + "Textures\ships\sails", "*.tga.tx", tempstring + ".tx") == "") return KAM_GetDefaultNormalSail(char); // KK
 // <-- KK
 
 	return tempstring;

@@ -6,14 +6,14 @@ ref refIsland;
 int townsQty, nCurScrolli; // added by MAXIMUS
 int curTown = 1; // added by MAXIMUS
 bool bBeParty; // added by MAXIMUS
-ref pchar = GetMainCharacter();
+//ref pchar = GetMainCharacter();
 
 int islandsortorder[22] = {3,4,5,15,17,19,8,16,1,14,10,9,2,12,6,13,11,0,20,21};				// LDH sort islands 22Feb09
 int islandsortorder_early[22] = {3,4,5,19,8,16,1,14,10,9,2,6,0,13,20,21,11,12,15,17};		// LDH sort islands 22Feb09
 
 void InitInterface_S(string iniName, string town)
 {
-	ref PChar = GetMainCharacter();
+	//ref PChar = GetMainCharacter();
 	GameInterface.title = "titleColonies";
 
 	FillScroll();
@@ -69,7 +69,7 @@ void InitInterface_S(string iniName, string town)
 		townsQty--;
 	}
 // <-[improved by MAXIMUS]- KK
-	if(bAnimation && bNewInterface) iniName = "RESOURCE\INI\NEW_INTERFACES\ANIMATION\TradeBook.ini";
+	if(bAnimation && bNewInterface) iniName = "NEW_INTERFACES\ANIMATION\TradeBook.ini";
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 // MAXIMUS interface MOD -->
 	CreateExitString();//MAXIMUS: standard exit-string for exit-button
@@ -205,7 +205,7 @@ void InitInterface_S(string iniName, string town)
 	if (hasShip == false && GetBerthedShipsQuantityForTown(GetTownIDFromLocID(PChar.location)) > 0) {
 		hasShip = true;
 		GameInterface.GoDirectToShipBerthing = true;
-		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "I_SHIP", 0, XI_ConvertString("Sel Berth"));
+		SendMessage(&GameInterface, "lsls", MSG_INTERFACE_MSG_TO_NODE, "I_SHIP", 0, "#"+XI_ConvertString("Sel Berth"));
 	}
 // <-- KK
 

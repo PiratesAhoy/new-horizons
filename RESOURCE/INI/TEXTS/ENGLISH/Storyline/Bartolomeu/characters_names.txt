@@ -1,13 +1,8 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-{=====| Bartolomeu.c |=====}
+
 Bartolomeu{Bartolomeu}
 o Portugues{o Portugues}
 
-{=====| StartStoryline.c |=====}
-
-{=====| quests_reaction.c |=====}
-
-{=====| Story.c |=====}
 Donald{Donald}
 Hendy{Hendy}
 Celestin{Celestin}
@@ -37,7 +32,6 @@ Arie{Arie}
 Dierman{Dierman}
 Street Merchant{Street Merchant}
 
-{=====| TempQuest.c |=====}
 Hector{Hector}
 Barbossa{Barbossa}
 Pierre{Pierre}
@@ -165,9 +159,6 @@ Espejo{Espejo}
 Federico{Federico}
 Carabali{Carabali}
 
-{=====| TempQuestEnemy.c |=====}
 Priest{Priest}
 Monk{Monk}
 Native{Native}
-
-{=====| 215 characters |=====}

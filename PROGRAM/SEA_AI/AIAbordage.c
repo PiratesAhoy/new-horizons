@@ -76,13 +76,13 @@ void Return2SeaAfterAbordage()
 {
 	// load all models back to sea
 	aref arModel;
-	if (FindClass(&arModel, "modelr")) 
+	if (FindClass(&arModel, "modelr"))
 	{
 		SendMessage(arModel, "l", MSG_MODEL_RESTORE);
-		while (FindClassNext(&arModel)) 
-		{ 
+		while (FindClassNext(&arModel))
+		{
 			//Trace("XYZ");
-			SendMessage(arModel, "l", MSG_MODEL_RESTORE); 
+			SendMessage(arModel, "l", MSG_MODEL_RESTORE);
 		}
 	}
 
@@ -174,7 +174,7 @@ void Abordage_ReloadEndFade()
 
 	// unload all models
 	aref arModel;
-	if (FindClass(&arModel, "modelr")) 
+	if (FindClass(&arModel, "modelr"))
 	{
 		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
 		while (FindClassNext(&arModel)) { SendMessage(arModel, "l", MSG_MODEL_RELEASE); }
@@ -302,7 +302,8 @@ void Sea_AbordageStartNow(int _iAbordageMode, int _iAbordageCharacter, bool _bPl
 
 	SetMusic("music_abordage"); // Baste
 	PauseAllSounds();
-	ResetSoundScheme();
+	//ResetSoundScheme();
+	ResetSound();
 
 	// NK -->
 	if(ENABLE_EXTRA_SOUNDS == 1) {			// added by KAM after build 11
@@ -311,16 +312,16 @@ void Sea_AbordageStartNow(int _iAbordageMode, int _iAbordageCharacter, bool _bPl
 			if (_iAbordageMode == SHIP_ABORDAGE) {
 				PlaySound("#boarding");
 			} else {
-				if (FindFile("RESOURCE\Sounds\INTERFACE\"+LanguageGetLanguage(), "*.wav", "_GTBoard3.wav") != "")
+				if (FindFile(GetResourceDirectory() + "Sounds\INTERFACE\"+LanguageGetLanguage(), "*.wav", "_GTBoard3.wav") != "")
 					PlaySound("INTERFACE\"+LanguageGetLanguage()+"\_GTBoard3.wav");
 				else
 					PlaySound("INTERFACE\_GTBoard3.wav");
 			}
 		} else {
-			if (FindFile("RESOURCE\Sounds\INTERFACE\"+LanguageGetLanguage(), "*.wav", "_GTBoard2.wav") != "") {
+			if (FindFile(GetResourceDirectory() + "Sounds\INTERFACE\"+LanguageGetLanguage(), "*.wav", "_GTBoard2.wav") != "") {
 				PlaySound("INTERFACE\"+LanguageGetLanguage()+"\_GTBoard2.wav");
 			} else {
-				if (FindFile("RESOURCE\Sounds\INTERFACE\"+LanguageGetLanguage(), "*.wav", "_GTBoard3.wav") != "")
+				if (FindFile(GetResourceDirectory() + "Sounds\INTERFACE\"+LanguageGetLanguage(), "*.wav", "_GTBoard3.wav") != "")
 					PlaySound("INTERFACE\"+LanguageGetLanguage()+"\_GTBoard3.wav");
 				else
 					PlaySound("INTERFACE\_GTBoard3.wav");
@@ -328,7 +329,7 @@ void Sea_AbordageStartNow(int _iAbordageMode, int _iAbordageCharacter, bool _bPl
 		}
 		else
 		{
-			if(FindFile("RESOURCE\Sounds\INTERFACE\"+LanguageGetLanguage(), "*.wav", "_GTBoard2.wav")!="") PlaySound("INTERFACE\"+LanguageGetLanguage()+"\_GTBoard2.wav");
+			if(FindFile(GetResourceDirectory() + "Sounds\INTERFACE\"+LanguageGetLanguage(), "*.wav", "_GTBoard2.wav")!="") PlaySound("INTERFACE\"+LanguageGetLanguage()+"\_GTBoard2.wav");
 			else PlaySound("INTERFACE\_GTBoard2.wav");
 		}
 // <-- KK

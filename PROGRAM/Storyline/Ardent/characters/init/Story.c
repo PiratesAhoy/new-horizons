@@ -294,13 +294,13 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-// Amt—Énio Guajira
+// AmtÛnio Guajira
 	ch.nation = PIRATE;
-	ch.old.name = "Amt—Énio";
+	ch.old.name = "AmtÛnio";
 	ch.old.lastname = "Guajira";
-	ch.name = TranslateString("", "Amt—Énio");
+	ch.name = TranslateString("", "AmtÛnio");
 	ch.lastname = TranslateString("", "Guajira");
-	ch.id		= "Amt—Énio Guajira";
+	ch.id		= "AmtÛnio Guajira";
 	ch.model = "prison_5";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
@@ -370,9 +370,9 @@ void CreateStoryCharacters(ref n)
 	ch.questchar = true;
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "Luc–Ωa";
+	ch.old.name = "LucÌa";
 	ch.old.lastname = "de la Vega";
-	ch.name = TranslateString("","Luc–Ωa");
+	ch.name = TranslateString("","LucÌa");
 	ch.lastname = TranslateString("","de la Vega");
 	ch.id		= "Lucia de la Vega";
 	ch.model = "Lucia_1";	// was "liz3"
@@ -403,7 +403,7 @@ void CreateStoryCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	ch.quest.officertype = OFFIC_TYPE_CIVILIAN;
 	ch.questchar = true;//MAXIMUS: identifier for captives
-	SetRankTitle(ch, TranslateString("", "Do—Åa"));
+	SetRankTitle(ch, TranslateString("", "DoÒa"));
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Edmundo";
@@ -599,7 +599,7 @@ void CreateStoryCharacters(ref n)
 //	SetRankTitle(ch, TranslateString("", "Sir"));
 	AddGameCharacter(n, ch);
 
-// Spare officer, originally for "Abduction" quest in case Luc–Ωa / Edmundo is a companion captain
+// Spare officer, originally for "Abduction" quest in case LucÌa / Edmundo is a companion captain
 	ch.nation = PIRATE;
 	ch.old.name = "Emmett";
 	ch.old.lastname = "Dawson";

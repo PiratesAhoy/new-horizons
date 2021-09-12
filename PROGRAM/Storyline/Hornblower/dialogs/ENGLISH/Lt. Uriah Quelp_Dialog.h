@@ -119,7 +119,7 @@ string DLG_TEXT[130] = {
 "It's ironic hearing you talk about betrayal, Quelp. I don't know where those soldiers came from, but now you have nowhere to run. You're under arrest.",
 "It's even more amusing hearing you talk about those soldiers. They're Voltigeurs, fully equal to Sharpe's men. And since you like irony, you'll love what we're going to do.",
 "Which is?",
-"We'll take your ship the same way you took 'Le RÐ¸ve'. Then we'll attack #sEleuthera#.",
+"We'll take your ship the same way you took 'Le Rève'. Then we'll attack #sEleuthera#.",
 "Why? That would bring the United States into the war against France.",
 "Think again, Hornblower. Who will the Americans see attacking them?",
 "Of course! They'll think it is Britain who is attacking.",

@@ -128,16 +128,22 @@ void StartDialogMain()
 	DelEventHandler("frame", "StartDialogMain");
 
 // KK -->
-	if (bNewInterface)
-		CreateEntity(&Dialog, "dialg2");
-	else
-		CreateEntity(&Dialog, "dialog");
+	if (bNewInterface) {
+		//CreateEntity(&Dialog, "dialg2");
+		Dialog.texturePath = "Dialog\Dialg2.tga.tx";
+		Dialog.iniName = "dialg2.ini";
+		CreateEntity(&Dialog, "dialoglegacy");
+	}
+	else {
+        Dialog.texturePath = "Dialog\dialog.tga.orig.tx";
+		CreateEntity(&Dialog, "dialoglegacy");
+	}
 // KK <--
 
 	Log_SetActiveAction("Nothing");//MAXIMUS
 	LogsVisible(false); // KK
 	Dialog.headModel = CharacterRef.headModel; // KK
-	if(FindFile("resource\models\Heads", "*.gm", CharacterRef.headModel + ".gm") == "")
+	if(FindFile(GetResourceDirectory() + "models\Heads", "*.gm", CharacterRef.headModel + ".gm") == "")
 	{
 		if(CharacterRef.headModel!="h_"+CharacterRef.Model) CharacterRef.headModel = "h_"+CharacterRef.Model;//MAXIMUS: prevents some errors (I'm wondering: sometimes we have models-names, like 23iu432523h)
 //		else Dialog.headModel = "h_Skel4";//MAXIMUS: temporary (for excluding errors). Maybe someone can make heads???
@@ -146,6 +152,8 @@ void StartDialogMain()
 
 	DeleteAttribute(&Dialog,"Links");
 	DeleteAttribute(&Dialog,"Text");
+	//#20190615-01
+	Dialog.CancelDelay = 1;
 
 // KK -->
 	SetEventHandler("PlayDialogGreeting", "DialogPlayGreeting", 0);
@@ -245,15 +253,21 @@ void SelfDialog(ref Character)
 	Dialog.CurrentNode = CharacterRef.Dialog.CurrentNode;
 	//Trace("SelfDialog: dialog path for self character <" + Character.id + "> = " + FullDialogPath);
 // KK -->
-	if (bNewInterface)
-		CreateEntity(&Dialog, "dialg2");
-	else
-		CreateEntity(&Dialog, "dialog");
+	if (bNewInterface) {
+		//CreateEntity(&Dialog, "dialg2");
+		Dialog.texturePath = "Dialog\Dialg2.tga.tx";
+		Dialog.iniName = "dialg2.ini";
+		CreateEntity(&Dialog, "dialoglegacy");
+	}
+	else {
+        Dialog.texturePath = "Dialog\dialog.tga.orig.tx";
+		CreateEntity(&Dialog, "dialoglegacy");
+	}
 // <-- KK
 	Log_SetActiveAction("Nothing");//MAXIMUS
 	LogsVisible(false); // KK
 	Dialog.headModel = CharacterRef.headModel; // KK
-	if (FindFile("resource\models\Heads", "*.gm", CharacterRef.headModel + ".gm") == "")
+	if (FindFile(GetResourceDirectory() + "models\Heads", "*.gm", CharacterRef.headModel + ".gm") == "")
 	{
 		if(CharacterRef.headModel!="h_"+CharacterRef.Model) CharacterRef.headModel = "h_"+CharacterRef.Model;//MAXIMUS: prevents some errors (I'm wondering: sometimes we have models-names, like 23iu432523h)
 //		else Dialog.headModel = "h_Skel4";//MAXIMUS: temporary (for excluding errors). Maybe someone can make heads???
@@ -356,6 +370,8 @@ void StartDialogWithMainCharacter()
 	if(dialogDisable) return;
 	//С кем хотим говорить
 	int person = GetEventData();
+	//Boyer fix #20170326-01 Invalid index -1 [size:1000]
+	if(person<0) return;
 	//Сими с собой не беседуем
 	if(person == GetMainCharacterIndex()) return;
 	//С непрогруженными персонажами не беседуем
@@ -529,7 +545,7 @@ void ProcessLinks(int maxfiles,int curfile)
 				Dialog.PreLinks.(newlink) = Dialog.Links.(curlink);
 				Dialog.PreLinks.(newlink).go = Dialog.Links.(curlink).go;
 			break;
-			
+
 			case "a":
 				newlink = "l" + link + 1; //1 should always be the mainfile
 				Dialog.PreLinks.(newlink) = Dialog.Links.(curlink);
@@ -552,7 +568,7 @@ string SortLinks()
 	for (int l = 0; l < lnum; l++) {
 		string curlink = GetAttributeName(GetAttributeN(links, l));
 		int link = sti(strcut(curlink,1,strlen(curlink)-1));
-		if(curlow>link) 
+		if(curlow>link)
 		{
 			curlow = link;
 			lowest = curlink;
@@ -683,7 +699,7 @@ int LotHostileNation(int iNation)
 	// PB: Rewritten to avoid infinite loop -->
 	int nat;
 	int num = 0;
-	
+
 	string hostileNations = "";
 	for(nat=0; nat<NATIONS_QUANTITY; nat++)
 	{

@@ -1,3 +1,5 @@
+#define MAX_CANNON_DAMAGE_DISTANCE				3.0
+
 void DeleteCannonsEnvironment()
 {
 // KK -->
@@ -17,6 +19,7 @@ void DeleteCannonsEnvironment()
 	DelEventHandler(CANNON_UNLOAD, "Cannon_UnloadBall");
 	DelEventHandler(CANNON_LOAD, "Cannon_LoadBall");
 	DelEventHandler(CANNON_RECALCULATE_PARAMETERS, "Cannon_RecalculateParametersEvent");
+	DelEventHandler(CANNON_DAMAGE, "Cannon_DamageEvent");
 }
 
 void CreateCannonsEnvironment()
@@ -28,6 +31,9 @@ void CreateCannonsEnvironment()
 	SetEventHandler(CANNON_UNLOAD, "Cannon_UnloadBall", 0);
 	SetEventHandler(CANNON_LOAD, "Cannon_LoadBall", 0);
 	SetEventHandler(CANNON_RECALCULATE_PARAMETERS, "Cannon_RecalculateParametersEvent", 0);
+	SetEventHandler(CANNON_DAMAGE, "Cannon_DamageEvent", 0);
+
+	SendMessage(&AISea, "lff", AI_MESSAGE_CANNONS_PARAMS, MAX_CANNON_DAMAGE_DISTANCE, 1.0);	// fMaxCannonDamageDistance, fMaxCannonDamageRadiusPoint
 }
 
 bool Cannon_LoadBall()
@@ -432,7 +438,7 @@ float Cannon_GetFireTime()
 
 void Cannon_FireCannon()
 {
-	float fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng;
+	float fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng, fMaxFireDistance;
 
 	aref aCharacter = GetEventData();
 	fX = GetEventData();
@@ -442,8 +448,13 @@ void Cannon_FireCannon()
 	fDirAng = GetEventData();
 	fHeightAng = GetEventData();
 	fCannonDirAng = GetEventData();
+	fMaxFireDistance = GetEventData();
 
-	Ball_AddBall(aCharacter, fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng);
+	bool ret = Ball_AddBall(aCharacter, fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng, fMaxFireDistance);
+	if(ret)
+        DeleteAttribute(aCharacter, "skipDynClight");
+    else
+        aCharacter.skipDynClight = true;
 	DeleteAttribute(aCharacter,"ship.changedammo"); // NK 04-09-15
 	aCharacter.seatime.lastfired = GetSeaTime(); // NK 04-09-16, to set time when last fired/reloaded
 }
@@ -511,3 +522,73 @@ void CancelAllGunReadySounds()
 	}
 }
 // <-- KK
+
+// Damage 2 cannon from balls
+float Cannon_DamageEvent()
+{
+	//return 0.0;
+	aref	aCharacter = GetEventData();
+	float	fBallDamage = GetEventData();	// ball damage
+	float	fCurDamage = GetEventData();	// current cannon damage (0.0 .. 1.0)
+	float	fDistance = GetEventData();		// distance from ball 2 cannon
+	float	x = GetEventData();				// x, y, z - cannon position
+	float	y = GetEventData();
+	float	z = GetEventData();
+
+	if(CheckAttribute(aCharacter, "chr_ai.immortal"))
+	{
+		if(sti(aCharacter.chr_ai.immortal) == 1)
+		{
+			return 0.0;
+		}
+	}
+
+	ref	rCannon = GetCannonByType(sti(aCharacter.Ship.Cannons.Type));
+
+	float fMaxCHP = stf(rCannon.hp);
+	//fCurDamage = (fCurDamage * fMaxCHP + fBallDamage * (1.0 - fDistance / MAX_CANNON_DAMAGE_DISTANCE)) / fMaxCHP;
+    //Log_TestInfo("fBallDamage "  + fBallDamage + " fCurDamage " +fCurDamage + " fMaxCHP " + fMaxCHP + " fDistance " +fDistance);
+    fBallDamage *= 0.1 / fDistance;
+    fCurDamage =  fCurDamage  + fBallDamage / fMaxCHP;  // TO_DO
+
+	//fCurDamage = fCurDamage - fCurDamage/100*(sti(aCharacter.ship.upgrades.cannons)-1)*20;
+	if (fCurDamage >= 1.0)
+	{
+		fCurDamage = 1.0;
+		CreateBlast(x,y,z);
+		CreateParticleSystem("blast_inv", x, y, z, 0.0, 0.0, 0.0, 0);
+		Play3DSound("cannon_explosion", x, y, z);
+		if (sti(aCharacter.index) == GetMainCharacterIndex())
+		{
+		    Log_Info(XI_ConvertString("Cannon_DamageEvent"));
+		}
+		aCharacter.Ship.Cargo.RecalculateCargoLoad = true; // boal 27.07.06 ????? - ????
+	}
+
+	return fCurDamage;
+}
+
+int GetBortIntactCannonsNum(ref rCharacter, string sBort, int iNumCannonsOnBort)
+{
+	//Boyer fix
+	if(sti(rCharacter.ship.type) == SHIP_NOTUSED) return 0;
+	if (!CheckAttribute(rCharacter, "Ship.Cannons.Borts." + sBort + ".damages")) return iNumCannonsOnBort;
+
+	aref arDamages;
+	makearef(arDamages, rCharacter.Ship.Cannons.Borts.(sBort).damages);
+	int iNumRealCannons = GetAttributesNum(arDamages);
+	if (iNumRealCannons != iNumCannonsOnBort)
+	{
+		//Trace("ship " + RealShips[sti(rCharacter.ship.type)].basetype + ", have invalid cannons on bort. " + sBort + " " + iNumCannonsOnBort + ", but need: " + iNumRealCannons);
+		return iNumCannonsOnBort;
+	}
+
+	int iNumIntactCannons = 0;
+	for (int i=0; i<iNumCannonsOnBort; i++)
+	{
+		float fDamage = stf(GetAttributeValue(GetAttributeN(arDamages, i)));
+		if (fDamage < 1.0) { iNumIntactCannons++; }
+	}
+
+	return iNumIntactCannons;
+}
