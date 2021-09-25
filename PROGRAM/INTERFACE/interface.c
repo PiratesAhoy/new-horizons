@@ -233,7 +233,7 @@ void ClearScreenShoter()
 {
 	DeleteEntitiesByType("scrshoter");
 	aref arScrShoter;
-	if(FindEntity(&arScrShoter,"scrshoter")) DeleteClass(&arScrShoter));
+	if(GetEntity(&arScrShoter,"scrshoter")) DeleteClass(&arScrShoter));
 	if(CheckAttribute(&InterfaceStates,"MakeScreenShot")) DeleteAttribute(&InterfaceStates,"MakeScreenShot");
 }
 
