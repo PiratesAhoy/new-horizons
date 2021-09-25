@@ -28,7 +28,7 @@ bool bIslandChecked=false;	// LDH 07Jan09
 void InitLogInterface()
 {
 	SetEventHandler("SetWindowSize","LI_SetWindowSize",0);
-	CreateEntity(&IActions,"ActionIntrface");
+	CreateEntity(&IActions,"ILogAndActions");
 	CreateEntity(&ILog, "ILogAndActions"); // KK
 	DelEventHandler("SetWindowSize","LI_SetWindowSize");
 	DeleteAttribute(&IActions,"");
@@ -643,7 +643,7 @@ void LoadLIStates()
 // KK -->
 void InitDateTimeDisplay()
 {
-	CreateEntity(&IDateTimeDisplay, "IDateTime_Show");
+	CreateEntity(&IDateTimeDisplay, "ILogAndActions");
 	DeleteAttribute(&IDateTimeDisplay, "");
 	LayerAddObject(EXECUTE, &IDateTimeDisplay, -257);
 	LayerAddObject(REALIZE, &IDateTimeDisplay, -257);
