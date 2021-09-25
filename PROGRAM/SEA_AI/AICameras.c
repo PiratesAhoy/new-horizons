@@ -161,13 +161,13 @@ void SeaCameras_UpdateCamera()
 	switch (SeaCameras.Camera)
 	{
 		case "SeaShipCamera":
-			SendMessage(&SeaCameras, "ia", SeaShipCamera, &SeaShipCharacterForCamera);
+			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, &SeaShipCamera, &SeaShipCharacterForCamera);
 		break;
 		case "SeaFreeCamera":
-			SendMessage(&SeaCameras, "ia", SeaFreeCamera, &SeaShipCharacterForCamera);
+			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, &SeaFreeCamera, &SeaShipCharacterForCamera);
 		break;
 		case "SeaDeckCamera":
-			SendMessage(&SeaCameras, "ia", SeaDeckCamera, &SeaShipCharacterForCamera);
+			SendMessage(&SeaCameras, "lia", AI_CAMERAS_SET_CAMERA, &SeaDeckCamera, &SeaShipCharacterForCamera);
 		break;
 	}
 }
