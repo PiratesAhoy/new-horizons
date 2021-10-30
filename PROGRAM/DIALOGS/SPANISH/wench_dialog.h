@@ -1,4 +1,4 @@
-string DLG_TEXT[22] = {
+string DLG_TEXT[30] = {
 "Hola, amigo, ?te gustaria encontrar un verdadero botin?",
 "!Arrr!",
 "Oye marinero, que es shakin?",
@@ -21,5 +21,12 @@ string DLG_TEXT[22] = {
 "!Quiero navegar los siete mares de ustedes!",
 "!De verdad me levantas la vela mayor!",
 "!Puedes navegar en mi puerto en cualquier momento!",
-
+"Estas despierto?",
+"Ohhh...",
+"Estas bien? Como esta tu cabeza?",
+"Que diablos paso?",
+"No eres x? Bebiste demasiado, te dormiste en la mesa y luego te robaron.",
+"Que? Oh... mi cabeza.... Que se atrevio...?",
+"Como voy a saberlo? !Es un barrio duro! Llegaron, me amenazo, fue a traves de sus bolsillos, y a la izquierda.",
+"Muy bien. Lo perdido esta perdido. Al menos no encontraron mi moneybelt.",
 };

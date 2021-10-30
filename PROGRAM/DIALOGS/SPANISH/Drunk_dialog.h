@@ -1,5 +1,5 @@
 string DLG_TEXT[2] = { 
-"?No lo ves realmente? Estoy ocupado, muy ocupado...",
-"Oh, si... Una borrachera es un empleo serio.",
+"¿Acaso no lo ves? Estoy ocupado, muy ocupado...",
+"Oh, sí... Beber hasta perder el sentido es una ocupación muy seria.",
 
 };

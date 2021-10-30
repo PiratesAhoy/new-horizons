@@ -1285,7 +1285,7 @@ void CreateTavernsCharacters(ref n)
 	ch.money = "1000";
 	ch.quest.meeting = "0";
 	LAi_SetSitType(ch);
-	LAi_SetLoginTime(ch, 6.0, 21.98333);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	AddGameCharacter(n, ch);
@@ -2805,13 +2805,13 @@ void CreateTavernsCharacters(ref n)
 	ch.old.lastname = "Garcнa";
 	ch.name = TranslateString("", "Miguel");
 	ch.lastname = TranslateString("", "Garcнa");
-	ch.id		= "Miguel Garcнa";
+	ch.id		= "Miguel Garcia";
 	ch.model	= "Sailor15";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
 	ch.location	= "Santiago_Tavern";
 	ch.location.group = "sit";
-	ch.location.locator = "sit4";
+	ch.location.locator = "sit12";
 	ch.Dialog.Filename = "habitue_dialog.c";
 	ch.greeting = "Gr_isla muelle citizen";
 	ch.nation = SPAIN;

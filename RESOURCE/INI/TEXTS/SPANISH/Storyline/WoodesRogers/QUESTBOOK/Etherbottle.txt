@@ -1,4 +1,4 @@
-title=Etherbottle
-text.t1=Have to find this medicine.
-text.t2=It may be found in the Opium Den.
-text.t3=Done!
+title=Botella de éter
+text.t1=Tengo que encontrar esta medicina.
+text.t2=Puede encontrarse en el fumadero de opio.
+text.t3=¡Hecho!

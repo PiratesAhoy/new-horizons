@@ -76465,7 +76465,7 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("BB_careen_capmd_2")], true);
 			if(LAi_IsFightMode(Pchar)) {LAi_SetFightMode(Pchar, false);}
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("BB_careen_capmd_2")].image = "Deck.tga";
+			Locations[FindLocation("BB_careen_capmd_2")].image = "wr_careen_capmd.tga";
 		break;
 
 		case "explore_corvette14":
@@ -81278,7 +81278,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\shelf_open.wav");
 			CreateParticleSystem("blast_dirt_small" , 0.0, 5.4, -2.6, 0.0, 0.0, 0.0, sti(20) );
 
-			Locations[FindLocation("BB_careen_capsm")].image = "Deck_Capsm.tga";
+			Locations[FindLocation("BB_careen_capsm")].image = "wr_careen_capsm.tga";
 		break;
 
 

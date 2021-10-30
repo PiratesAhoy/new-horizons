@@ -1,4 +1,4 @@
-string DLG_TEXT[22] = {
+string DLG_TEXT[30] = {
 "Ahoy matey, would you like to find some REAL booty?",
 "Arrr!",
 "Hey sailor, what's shakin?",
@@ -21,5 +21,12 @@ string DLG_TEXT[22] = {
 "I wanna sail all seven of your seas!",
 "You really hoist my mainsail!",
 "You can sail into my port anytime!",
-
+"Are you awake?",
+"Ohhh...",
+"Are you all right? How's your head?",
+"What the hell happened?",
+"Don't you remember? You drank too much - fell asleep at the table - and then you were robbed!",
+"What? Oh... my head.... Who dared...?",
+"How should I know? It's a rough neighbourhood! They came in, threatened me, went through your pockets, and left.",
+"All right. What's lost is lost. At least they didn't find my moneybelt.",
 };

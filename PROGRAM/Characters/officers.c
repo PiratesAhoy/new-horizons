@@ -164,15 +164,15 @@ void RestoreOfficerFromCaptain(ref officer)
 string GetRandomEnemyType()
 {
 	string retVal = "";
-	int numtypes = GetAttributesNum(OfficerTypes);
+	int numtypes = GetAttributesNum(&OfficerTypes);
 	int picked;
 	int attempts = 0;
 	string type;
 	while(retVal == "")
 	{
 		picked = rand(numtypes-1);
-		type = GetAttributeName(GetAttributeN(OfficerTypes,picked));
-		if(CheckAttribute(OfficerTypes,type+".EnemyType"))
+		type = GetAttributeName(GetAttributeN(&OfficerTypes,picked));
+		if(CheckAttribute(&OfficerTypes,type+".EnemyType"))
 		{
 			retVal = type;
 		}

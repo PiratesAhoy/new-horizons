@@ -174,9 +174,9 @@ void UpdateBaseDisplay()
 			SetSelectable("BERTHASHIPHEREBTN",false);
 			// Screwface : don't remove the checkattribute it is important to have no errors on ship decks
 			if(CheckAttribute(&Locations[FindLoadedLocation()],"island") && Locations[FindLoadedLocation()].island == "KhaelRoa")
-				GameInterface.strings.shipyard = "(You can berth/relaunch ships in the Secret hideout)";
+				GameInterface.strings.shipyard = TranslateString("", "(You can berth/relaunch ships in the Secret hideout)");
 			else
-				GameInterface.strings.shipyard = "(You must be in the shipyard to berth or relaunch a ship)";
+				GameInterface.strings.shipyard = TranslateString("", "(You must be in the shipyard to berth or relaunch a ship)");
 			EnableString("shipyard");
 		}
 	}

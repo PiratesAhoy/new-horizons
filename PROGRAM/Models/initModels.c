@@ -2529,6 +2529,55 @@ void InitModels(bool isstart)
 	// <-- no model assignment quest character
 
 	// no model assignment quest character -->
+	model.description	=  "A demoness who came from the underworld seeks an adventure in mortal world.";
+	model.id		=  "Devillady";
+	model.FaceId		=  607;
+	model.nation		=  SPAIN;
+	model.price		=  3000;
+	model.assigned		=  true;
+	model.height		=  1.7;
+	model.sex		=  "woman";
+	model.ani		=  "woman_sit";
+	model.name 		=  "Dervia";
+	model.playertype	= PLAYER_TYPE_ADVENTURER;
+	model.difficulty	= DIFFICULTY_SWASHBUCKLER;
+	model.Flags.Pirate	= 5;
+	model.Flags.Personal	= 43;
+	model.date.hour		= 10;
+	model.date.min		= 24;
+	model.date.sec		= 42;
+	model.date.day		= 1;
+	model.date.month	= 4;
+	model.date.year		= 1576;
+	AddCharacterModel(model);
+	// <-- no model assignment quest character
+
+	// no model assignment quest character -->
+	model.description	=  "The undead monk who had many names for ages, decides to take up a sword and show his true nature into this cruel world.";
+	model.id		=  "undeadmon";
+	model.FaceId		=  608;
+	model.nation		=  ENGLAND;
+	model.price		=  3000;
+	model.assigned		=  true;
+	model.height		=  1.7;
+	model.sex		=  "man";
+	model.name 		=  "Avergorex";
+	model.playertype	= PLAYER_TYPE_ADVENTURER;
+	model.difficulty	= DIFFICULTY_SWASHBUCKLER;
+	model.Flags.Pirate	= 5;
+	model.Flags.Personal	= 43;
+	model.ship = "tartane1";
+	model.shipname		= "Devil";
+	model.date.hour		= 10;
+	model.date.min		= 24;
+	model.date.sec		= 42;
+	model.date.day		= 1;
+	model.date.month	= 4;
+	model.date.year		= 1750;
+	AddCharacterModel(model);
+	// <-- no model assignment quest character
+
+	// no model assignment quest character -->
 	model.description	=  "Now then, I must have an ounce or two of that malapert blood from you!";
 	model.id		=  "Beltro";
 	model.FaceId		=  "184";
@@ -9885,6 +9934,30 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 	// <-- JMV's Spanish officer models recoded by Jack Davidson using JMV's textures based on original Akella models
 
+	model.description	= "A Spanish Admiral bearing with pride the scars of many battles.";
+	model.id		= "spa_Lezo";
+	model.FaceId		= 609;
+	model.nation		= SPAIN;
+	model.price		= 9500;
+	model.minlevel		= 8;
+	model.minrank		= 9;	// Not strictly accurate, Blas de Lezo was Teniente General by 1739, but setting him to rank 9 allows the player to earn a promotion
+	model.assigned		= true;
+	model.name		= "Blas";
+	model.lastname		= "de Lezo";
+	model.storytitle	= "The Defender of Cartagena";
+	model.storytext		= "Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.";
+	model.playertype	= PLAYER_TYPE_NAVAL_OFFICER;
+	model.Flags.Pirate	= 23;
+	model.Flags.Personal	= 27;
+	model.ship		= "PO_Poseidon";
+	model.shipname		= "Conquistador";
+	model.date.day		= 1;
+	model.date.month	= 3;
+	model.date.year		= 1740;
+	model.period		= "" + PERIOD_GOLDEN_AGE_OF_PIRACY + PERIOD_COLONIAL_POWERS;
+	AssignModelTypeNation(isstart, model, "navy", 1.0, SPAIN);
+	AddCharacterModel(model);	
+
 	// Assassin Main Quest -->
 	model.description =  "";
 	model.id	   =  "Spy1";
@@ -10326,6 +10399,7 @@ void InitModels(bool isstart)
 	model.assigned    =  true;
 	model.name = "Ricardo";
 	model.lastname = "Orellana";
+	model.loadingScreen = "Quest_Devil.tga";
 	model.storytitle = "The Devil's Ship";
 	model.storytext = "You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.";
 	model.ship = "CursedMariana";

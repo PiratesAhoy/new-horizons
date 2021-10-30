@@ -226,28 +226,24 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Gambling2":
-		PChar.quest.friend_in_tavern = characterFromID("Gambler 3");
-		
-			ChangeCharacterAddressGroup(pchar, "Turks_poker_room", "sit", "sit1");
-		
-			
-			
+			PChar.quest.friend_in_tavern = characterFromID("Gambler 3");		
+
+			ChangeCharacterAddressGroup(pchar, "Turks_poker_room", "sit", "sit1");		
+
+			sld = &characters[GetCharacterIndex("Gambler 3")];
 			ChangeCharacterAddressGroup(characterFromID("Ron_L"), "Turks_poker_room", "goto", "goto14");
 			ChangeCharacterAddressGroup(characterFromID("Reg_L"), "Turks_poker_room", "goto", "goto15");
-			
+			deleteAttribute(Pchar, "quest.Day_Expired");
+			deleteAttribute(Pchar, "quest.Day_Noreturn");
 			GiveItem2Character(characterFromID("Ron_L"), "bladetrophy");//PW set Ron with trophy to present
 			EquipCharacterByItem(characterFromID("Ron_L"), "bladetrophy");
 			Characters[GetCharacterIndex("Reg_L")].dialog.CurrentNode  = "Day Three End";
-			deleteAttribute(Pchar,"quest.Day_Expired");
-			deleteAttribute(Pchar,"quest.Day_Noreturn");
+
 			LAi_SetPlayerType(Pchar);
-			LaunchGambling(sld, "Poker");	
-		
 			DialogExit();
-			sld = &characters[GetCharacterIndex("Gambler 3")];
-			LaunchGambling(sld, "Poker")		
-			LAi_SetPlayerType(Pchar);
-			break;
+
+			LaunchGambling(sld, "Poker");	
+		break;
 		
 		case "Day three end":
 			AddDialogExitQuest("Competition Winner");

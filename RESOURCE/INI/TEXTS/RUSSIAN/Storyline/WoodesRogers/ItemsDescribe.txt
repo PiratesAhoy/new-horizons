@@ -365,7 +365,7 @@ itmdescr_book63
 An easy to grasp book in the popular scientific style. Many pictures.
 }
 
-itmname_book64		{L’Ordre de Malte}
+itmname_book64		{Lâ€™Ordre de Malte}
 itmdescr_book64
 {
 A french edition, author Annet de Clermont-Gessant.
@@ -778,7 +778,7 @@ A romantic seascape painting.
 itmname_picture14	{Picture}
 itmdescr_picture14
 {
-Tycho Brahe´s Uranienborg on the island Ven.
+Tycho BraheÂ´s Uranienborg on the island Ven.
 }
 
 itmname_picture15	{Picture}
@@ -1486,7 +1486,7 @@ A swedish 2 mark silver coin.
 itmname_coin2			{Coin}
 itmdescr_coin2
 {
-A swedish 1 öre copper coin. From the bottom of the sea?
+A swedish 1 Ã¶re copper coin. From the bottom of the sea?
 }
 
 itmname_coin3			{Coin}
@@ -2110,13 +2110,13 @@ itmdescr_pistol206
 Is it a pistol or a cannon? Sounds good too. 'Basilica Hands' with a very fine handwriting.
 }
 
-itmname_pistolbelt 	{Blackbeard´s Pistol Belt}
+itmname_pistolbelt 	{BlackbeardÂ´s Pistol Belt}
 itmdescr_pistolbelt
 {
 You can carry six pistols with this belt used by Teach.
 }
 
-itmname_pistol20 	{Blackbeard´s Set of Six Pistols}
+itmname_pistol20 	{BlackbeardÂ´s Set of Six Pistols}
 itmdescr_pistol20
 {
 Your crew believes that this small arsenal really belonged to Teach, maybe it's true. Only for a 'Master Gunfighter'.
@@ -2524,7 +2524,7 @@ itmdescr_potionwine2
 Looks like ordinary Red Wine to me.
 }
 
-//Q2 pär
+//Q2 pÃ¤r
 
 itmname_bladebottle_BE0		{Big Empty Bottle}
 itmdescr_bladebottle_BE0

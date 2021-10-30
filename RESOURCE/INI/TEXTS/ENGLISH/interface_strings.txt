@@ -337,6 +337,46 @@ Current captain{Current captain}
 Ship is currently in companion slot{Ship is currently in companion slot}
 empty companion slot{empty companion slot}
 empty berthing slot{empty berthing slot}
+You can't assign a ship to a companion if you have no ship!{You can't assign a ship to a companion if you have no ship!}
+You can't berth your own ship if your companions have ships!{You can't berth your own ship if your companions have ships!}
+(You can berth/relaunch ships in the Secret hideout){(You can berth/relaunch ships in the Secret hideout)}
+(You must be in the shipyard to berth or relaunch a ship){(You must be in the shipyard to berth or relaunch a ship)}
+Confirm - Swap Ships{Confirm - Swap Ships}
+Confirm - Relaunch Ship{Confirm - Relaunch Ship}
+Confirm - Berth Ship{Confirm - Berth Ship}
+Confirm - Lay Up Ship{Confirm - Lay Up Ship}
+Confirm - Scrap Ship{Confirm - Scrap Ship}
+You have selected to put the{You have selected to put the}
+(currently active) on shore leave, and relaunch the{(currently active) on shore leave, and relaunch the}
+(currently on shore leave). This action is completely reversible; nothing will be lost or stripped from either ship. Note however that berthing charges for the{(currently on shore leave). This action is completely reversible; nothing will be lost or stripped from either ship. Note however that berthing charges for the}
+ will be high ({will be high (}
+/ month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate ({/ month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate (}
+/ month). Click OK to go ahead with this.{/ month). Click OK to go ahead with this.}
+(currently laid up). If the{(currently laid up). If the}
+goes on shore leave, nothing will be lost or stripped from her, but note that berthing charges will be high ({goes on shore leave, nothing will be lost or stripped from her, but note that berthing charges will be high (}
+/ month). If the{/ month). If the}
+is relaunched, you will have to replace her rigging, her supplies and her crew. Click OK to go ahead with this.{is relaunched, you will have to replace her rigging, her supplies and her crew. Click OK to go ahead with this.}
+(currently active), and relaunch the{(currently active), and relaunch the}
+(currently on shore leave). If the{(currently on shore leave). If the}
+is laid up, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{is laid up, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.}
+You will receive{You will receive}
+for the value of the cargo in the hold at local prices.{for the value of the cargo in the hold at local prices.}
+You will no longer have to pay the crew, and the berthing charge will be low ({You will no longer have to pay the crew, and the berthing charge will be low (}
+/ month).{/ month).}
+If the{If the}
+is relaunched, you will have to replace, her rigging, her supplies and her crew.{is relaunched, you will have to replace, her rigging, her supplies and her crew.}
+Click OK to go ahead with this.{Click OK to go ahead with this.}
+Click OK to confirm that you want to relaunch the{Click OK to confirm that you want to relaunch the}
+You will have to replace, her rigging, her supplies and her crew.{You will have to replace, her rigging, her supplies and her crew.}
+(currently active) on shore leave. This action is completely reversible; nothing will be lost or stripped from her. Note however that berthing charges will be high ({(currently active) on shore leave. This action is completely reversible; nothing will be lost or stripped from her. Note however that berthing charges will be high (}
+(currently active). She will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{(currently active). She will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.}
+Note that if you lay up the{Note that if you lay up the}
+, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.}
+You will no longer have to pay the crew, and the monthly berthing charge will decrease from{You will no longer have to pay the crew, and the monthly berthing charge will decrease from}
+. Click OK to go ahead with this.{. Click OK to go ahead with this.}
+Click OK to confirm that you want to scrap the{Click OK to confirm that you want to scrap the}
+The ship's captain will return to the passengers list.{The ship's captain will return to the passengers list.}
+
 You have signed articles with your crew.{You have signed articles with your crew.}
 This means{This means they are paid by division of plunder after each expedition. If you've had enough of all that privateering, you can pay your crew a regular salary. This would make crew morale more stable, although it would not be as high as it could be under a divide-the-plunder agreement.}
 Note: Before you can do this, you must divide the plunder.{Note: Before you can do this, you must divide the plunder.}
@@ -402,6 +442,16 @@ Junk sails for Empress without holes.{Junk sails for Empress without holes.}
 Sails with the coat of arms of Castile-Leon.{Sails with the coat of arms of Castile-Leon.}
 Sails with the coat of arms of the Holy Roman Empire.{Sails with the coat of arms of the Holy Roman Empire.}
 Red sails with gold fringe, characteristic to Queen Anne's Revenge.{Red sails with gold fringe, characteristic to Queen Anne's Revenge.}
+A set of sails that once belonged to the legendary Death Vessel.{A set of sails that once belonged to the legendary Death Vessel.}
+A set of black sails with red and white stripes.{A set of black sails with red and white stripes.}
+A set of sails bearing diamonds patterns, praised for their beauty.{A set of sails bearing diamonds patterns, praised for their beauty.}
+A set of white sails sporting a chain with broken links, and represent the holder's commitment to freedom.{A set of white sails sporting a chain with broken links, and represent the holder's commitment to freedom.}
+A set of sails with an anchor pattern, representing the conquering explorers of the New World.{A set of sails with an anchor pattern, representing the conquering explorers of the New World.}
+A set of blue sails with gilded gold patterns.{A set of blue sails with gilded gold patterns.}
+A set of sails with the pattern of a master navigator's golden sextant.{A set of sails with the pattern of a master navigator's golden sextant.}
+A set of sails featuring a pattern of crossed muskets.{A set of sails featuring a pattern of crossed muskets.}
+A set of white canvas sails adorned with red stripes.{A set of white canvas sails adorned with red stripes.}
+A set of black and red sails emblazoned with the Templar cross.{A set of black and red sails emblazoned with the Templar cross.}
 National Emblem{National Emblem}
 sails, without emblem.{sails, without emblem.}
 Plain{Plain}
@@ -612,6 +662,13 @@ Points{Points}
 trade_ship{Trade ship}
 war_ship{War ship}
 pirate_ship{Pirate ship}
+
+Hostile Port{Hostile Port}
+Friendly Port{Friendly Port}
+Cozumel Waters{Cozumel Waters}
+Random Port{Random Port}
+Random Shore{Random Shore}
+Lifeboat{Lifeboat}
 
 Brothel{Brothel}
 Tutorial Deck{Tutorial Deck}
@@ -1322,6 +1379,8 @@ rhull_desc{Jury-rigged structural reinforcements, to the Captain's specification
 flushed_desc{Corsairs regularly strip out unnecessary superstructure from a vessel to increase speed, agility and cargo capacity at the cost of hull strength.}
 
 Swamp Island{Swamp Island}
+Pirate's Cave{Pirate's Cave}
+Log-house{Log-house}
 Swamp Wreck{Swamp Wreck}
 Store upstairs{Store upstairs}
 Woodes Rogers' bedroom{Woodes Rogers' bedroom}
@@ -1605,7 +1664,12 @@ I have 2 sailors left to hire.{I have 2 sailors left to hire.}
 I have 1 sailor left to hire.{I have 1 sailor left to hire.}
 I have 2 officers left to hire.{I have 2 officers left to hire.}
 I have 1 officer left to hire.{I have 1 officer left to hire.}
-I need more logs to build a raft.{I need more logs to build a raft.}
+Hmm, with some more logs maybe I could build a raft here.{Hmm, with some more logs maybe I could build a raft here.}
+I still need more logs to build a raft.{I still need more logs to build a raft.}
+Enough with logs - how do I assemble the raft?{Enough with logs - how do I assemble the raft?}
+No, this rope is tied too hard!{No, this rope is tied too hard!}
+No, I can't move it!{No, I can't move it!}
+Hmm. That was maybe not a good idea!?{Hmm. That was maybe not a good idea!?}
 That was it. I'll go back to Charles Vane.{That was it. I'll go back to Charles Vane.}
 Maybe the Captains in the Sacristy know more...{Maybe the Captains in the Sacristy know more...}
 Maybe the Captains in the Church know more...{Maybe the Captains in the Church know more..}
@@ -1915,6 +1979,7 @@ Rotunda upper levels{Rotunda upper levels}
 Rotunda middle levels{Rotunda middle levels}
 Rotunda lower levels{Rotunda lower levels}
 I'll need a Rope here.{I'll need a Rope here.}
+Kitchen{Kitchen}
 Dormitorium{Dormitorium}
 Cellarium{Cellarium}
 Chapter-house{Chapter-house}
@@ -1930,6 +1995,7 @@ Sacristy{Sacristy}
 Graveyard{Graveyard}
 Crypt{Crypt}
 Cell{Cell}
+Fort Waxholm{Fort Waxholm}
 
 Something under that straw?{Something under that straw?}
 No, I'll only cut myself on those shards.{No, I'll only cut myself on those shards.}

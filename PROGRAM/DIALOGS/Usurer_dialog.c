@@ -501,7 +501,7 @@ void ProcessDialogEvent()
 			Link.l1.go = "quarter";
 			Link.l2 = DLG_TEXT[113] + makeint(makeint(PChar.money)/20)*10 + DLG_TEXT[114];
 			Link.l2.go = "half";
-			Link.l3 = "Three quarters of my wealth - " + makeint(makeint(PChar.money)*0.75/10)*10 + " gold.";	// LDH 21Apr09
+			Link.l3 = DLG_TEXT[169] + makeint(makeint(PChar.money)*0.75/10)*10 + DLG_TEXT[170];	// LDH 21Apr09
 			Link.l3.go = "most";
 			Link.l4 = DLG_TEXT[115] + makeint(makeint(PChar.money)/10)*10 + DLG_TEXT[116];
 			Link.l4.go = "All";

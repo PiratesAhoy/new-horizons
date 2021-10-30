@@ -903,6 +903,7 @@ void ProcessDialogEvent()
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, 20000);
 			AddPartyExpChar(PChar, "Sneak", 10000);
+			ChangeRMRelation(PChar, iNation, 5);
 			if (!CheckAttribute(PChar, "quest.agentquest.smuggler_fare") || sti(PChar.quest.agentquest.smuggler_fare) == 0)
 			{
 				link.l1 = DLG_TEXT[188];
@@ -914,6 +915,8 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[181];
 				link.l1.go = "agent_quest_expenses";
 			}
+
+			PChar.quest.agentquest = "completed";
 		break;
 
 		case "agent_quest_expenses":
@@ -942,7 +945,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "exit_AgentQuest_refused":
-			DeleteAttribute(PChar, "quest.agentquest");
+			AddDialogExitQuest("Agentquest_refused");
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit();
 		break;

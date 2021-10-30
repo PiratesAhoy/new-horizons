@@ -188,6 +188,9 @@ bool ProcessCondition(aref condition)
 	case "NPC_Death":
 		return CharacterIsDead(refCharacter);
 	break;
+	case "NPC_Stunned":
+		return CheckAttribute(refCharacter, "stuntime");
+	break;
 	case "Nation_Ship_sink":
 		return TestIntValue(GetNationShipKilled(refCharacter,condition.nation),sti(condition.quantity),condition.operation);
 	break;

@@ -1,6 +1,6 @@
 title=Alquimia: abrir la cerradura de plata
 text.t1=Tengo que encontrar algo que disuelva la plata.
-text.t2=He conseguido Aqua Fortis, ¡y puede disolver la plata!
+text.t2=He conseguido Aqua Fortis, ?y puede disolver la plata!
 text.t3= 
 text.t4=
 text.t5=

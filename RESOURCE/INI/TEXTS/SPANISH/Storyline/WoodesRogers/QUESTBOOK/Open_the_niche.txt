@@ -1,7 +1,7 @@
-title=Open the Niche
-text.t1=I don't need the barrel any longer to keep the hatch stay open.
-text.t2=Behind the metal hatch is a Chest placed in the wall niche.
-text.t3=There are bad creatures in the Mine. They are afraid of open fire and they don't see to good.
-text.t4=I have found an axe that obviously has been used to cut off heads. Is that what I have to do?
-text.t5=The goods they sell in the Antique Store is stolen?!! Anyway I guess it's back into the mine again.
-text.t6=I'm not sure what to do with the skull - but I'll try it on the steplock. 
+title=Abrir el nicho
+text.t1=Ya no necesito el barril para mantener abierta la trampilla.
+text.t2=Detrás de la trampilla de metal hay un cofre colocado en el nicho de la pared.
+text.t3=Hay criaturas en la mina. Les asusta el fuego, y no tienen muy buena visión.
+text.t4=He encontrado un hacha que abobviamernte se ha usado para cortar cabezas. ¿Es eso lo que tengo que hacer?
+text.t5=¿Lo que venden en la tienda de antigüedades es robado? En cualquier caso, creo que hay que volver a la mina.
+text.t6=No estoy seguro de qué hacer con la calavera. Pero probaré a ponerla en la placa de presión. 

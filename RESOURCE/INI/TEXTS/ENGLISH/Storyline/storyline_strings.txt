@@ -523,6 +523,18 @@ Disturb us, Lord{Disturb us, Lord}
 'It isn't that life ashore is distasteful to me. But life at sea is better.' As privateer in the service of queen Elizabeth I of England and with the Spanish owning nearly the entire Caribbean, it is your job to make life as difficult as possible for the Dons.{'It isn't that life ashore is distasteful to me. But life at sea is better.' As privateer in the service of queen Elizabeth I of England and with the Spanish owning nearly the entire Caribbean, it is your job to make life as difficult as possible for the Dons.}
 Golden Hind{Golden Hind}
 
+Blas{Blas}
+de Lezo{de Lezo}
+The Defender of Cartagena{The Defender of Cartagena}
+Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.{Blas de Lezo started his naval career in 1701 at age twelve, serving France and Spain during the War of Spanish Succession. Never afraid to be under fire, by 1714 he had lost a leg, an eye, and the use of an arm, scars he wore as badges of honor. Despite his injuries he led a successful career and is now in command of the naval forces of Cartagena de Indias.}
+Conquistador{Conquistador}
+
+Dervia{Dervia}
+A demoness who came from the underworld seeks an adventure in mortal world.{A demoness who came from the underworld seeks an adventure in mortal world.}
+
+Avergorex{Avergorex}
+The undead monk who had many names for ages, decides to take up a sword and show his true nature into this cruel world.{The undead monk who had many names for ages, decides to take up a sword and show his true nature into this cruel world.}
+
 {=====| models.c |=====}
 
 {=====| models.h |=====}

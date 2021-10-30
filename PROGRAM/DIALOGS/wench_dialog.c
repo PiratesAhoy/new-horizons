@@ -114,5 +114,44 @@ void ProcessDialogEvent()
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();
 		break;
+
+		case "without_money":
+			Diag.TempNode = "First Time";
+			Dialog.defAni = "dialog_stay1";
+			Dialog.defCam = "1";
+			Dialog.defSnd = "dialogs\0\017";
+			Dialog.defLinkAni = "dialog_1";
+			Dialog.defLinkCam = "1";
+			Dialog.defLinkSnd = "dialogs\woman\024";
+			Dialog.ani = "dialog_stay2";
+			Dialog.cam = "1";
+			//LAi_ActorWaitDialog(PChar, NPChar);
+			dialog.snd = "Voice\ENOF\ENOF007";
+			dialog.text = DLG_TEXT[22];
+			link.l1 = DLG_TEXT[23];
+			link.l1.go = "without_money_2";
+		break;
+
+		case "without_money_2":
+			dialog.snd = "Voice\ENOF\ENOF008";
+			dialog.text = DLG_TEXT[24];
+			link.l1 = DLG_TEXT[25];
+			link.l1.go = "without_money_3";
+		break;
+
+		case "without_money_3":
+			dialog.snd = "Voice\ENOF\ENOF009";
+			dialog.text = DLG_TEXT[26];
+			link.l1 = DLG_TEXT[27];
+			link.l1.go = "without_money_4";
+		break;
+
+		case "without_money_4":
+			AddDialogExitQuest("officiant_back_to_citizen");
+			dialog.snd = "Voice\ENOF\ENOF010";
+			dialog.text = DLG_TEXT[28];
+			link.l2 = DLG_TEXT[29];
+			link.l2.go = "exit";
+		break;
 	}
 }

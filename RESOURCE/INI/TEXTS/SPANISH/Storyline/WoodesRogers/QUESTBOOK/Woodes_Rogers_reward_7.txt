@@ -1,8 +1,8 @@
-title=Woodes Rogers last reward
-text.t1=There is one last(!) reward - and it's NOT a Pistol!? To start with I'm looking for Rogers Farmhouse. There's a girl there named Minerva to guide me.
-text.t2=The dummy is wearing a Pistolbelt, but how do I get to it?
-text.t3=I'm closer the Pistolbelt now but the door is locked. 
-text.t4=I've found Blackbeard's legendary pistol belt! Guess Rogers' crew wants to lay their hands on this! Didn't know those rough guys were so nostalgic.
-text.t5=The belt is complete!!
-text.t6=Right-hand items = F3 + F3, Left-hand items = F3 + fire pistol.
-text.t7=I guess the Compasses are F3 + F3 and the Map is F3 + fire pistol.
+title=La última recompensa de Woodes Rogers
+text.t1=Queda una última recompensa, ¿y NO es una pistola? Para empezarm tengo que buscar la granja de Rogers. Allí hay una muchacha llamada Minerva que me servirá de guía.
+text.t2=El maniquí lleva una bandolera de pistolas, ¿pero cómo llego hasta ella?
+text.t3=Ahora estoy más cerca de la bandolera, pero la perta está cerrada. 
+text.t4=¡He encontrado la legendaria bandoelra para pistolas de Barbanegra! Supongo que la tripulación de Rogers quiere hacerse con ella. No sabía que esos tipos duros eran tan sentimentales.
+text.t5=¡La bandolera está completa!
+text.t6=Objetos de la mano derecha = F3 + F3; objetos de la mano izquierda = F3 + disparar pistola.
+text.t7=Supongo que los compases son F3 + F3 y el mapa es F3 + disparar pistola.

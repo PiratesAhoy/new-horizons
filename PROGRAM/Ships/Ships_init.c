@@ -9522,8 +9522,8 @@ void InitShips()
 	refShip.CannonsQuantity = 38;
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
-	refShip.MaxCrew		 = 360;
-	refShip.MinCrew		 = 32;
+	refShip.MaxCrew			= 360;
+	refShip.MinCrew			= 64; // GR: was 32, too small!
 	refShip.Price		   = 110000;
 	refShip.HP			  = 4000;
 	refShip.SP			  = 200;
@@ -9618,8 +9618,8 @@ void InitShips()
 	refShip.CannonsQuantity = 38;
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
-	refShip.MaxCrew		 = 390;
-	refShip.MinCrew		 = 45;
+	refShip.MaxCrew			= 400; // GR: was 390, usually over 400 after national modifiers, so increase to 400 and make it officially tier 3
+	refShip.MinCrew			= 90; // GR: was 45, too small!
 	refShip.Price		   = 120000;
 	refShip.HP			  = 4500;
 	refShip.SP			  = 200;
@@ -9711,8 +9711,8 @@ void InitShips()
 	refShip.CannonsQuantity = 38;
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
-	refShip.MaxCrew		 = 360;
-	refShip.MinCrew		 = 32;
+	refShip.MaxCrew			= 360;
+	refShip.MinCrew			= 64;  // GR: was 32, too small!
 	refShip.Price		   = 110000;
 	refShip.HP			  = 4000;
 	refShip.SP			  = 200;
@@ -9807,8 +9807,8 @@ void InitShips()
 	refShip.CannonsQuantity = 38;
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
-	refShip.MaxCrew		 = 390;
-	refShip.MinCrew		 = 45;
+	refShip.MaxCrew			= 400; // GR: was 390, usually over 400 after national modifiers, so increase to 400 and make it officially tier 3
+	refShip.MinCrew			= 90;  // GR: was 45, too small!
 	refShip.Price		   = 120000;
 	refShip.HP			  = 4500;
 	refShip.SP			  = 200;
@@ -9900,8 +9900,8 @@ void InitShips()
 	refShip.CannonsQuantity = 38;
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
-	refShip.MaxCrew		 = 390;
-	refShip.MinCrew		 = 45;
+	refShip.MaxCrew			= 400; // GR: was 390, usually over 400 after national modifiers, so increase to 400 and make it officially tier 3
+	refShip.MinCrew			= 90;  // GR: was 45, too small!
 	refShip.Price		   = 120000;
 	refShip.HP			  = 4500;
 	refShip.SP			  = 200;
@@ -12887,7 +12887,7 @@ void InitShips()
 	refShip.MaxCaliber		= 12;
 	refShip.Weight			= Tonnes2CWT(1300);
 	refShip.Capacity		= 2000;
-	refShip.CannonsQuantity = 42;
+	refShip.CannonsQuantity = 44;	// was 42, two missing guns added
 	// NK cannon qtys 05-04-18 -->
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
@@ -12982,7 +12982,7 @@ void InitShips()
 	refShip.MaxCaliber		= 12;
 	refShip.Weight			= Tonnes2CWT(1300);
 	refShip.Capacity		= 2000;
-	refShip.CannonsQuantity = 42;
+	refShip.CannonsQuantity = 44;	// was 42, two missing guns added
 	// NK cannon qtys 05-04-18 -->
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
@@ -19022,10 +19022,10 @@ void InitShips()
 // Armada -->
 	makeref(refShip,ShipsTypes[n]);
 	n++;
-	refShip.Name			 = "HMS_Sophie";
-	refShip.id 			 = refShip.Name;
-	refShip.Walk		= "Sophie";
-	refShip.sname			= "Sophie";
+	refShip.Name			= "HMS_Sophie";
+	refShip.id			= refShip.Name;
+	refShip.Walk			= "Sophie";
+	refShip.sname			= "HMS_Sophie";
 	refShip.All			= "Brig1";
 	refShip.Class			= 7;
 	refShip.Cannon		 = CANNON_TYPE_CARRONADE_LBS24;
@@ -23680,8 +23680,8 @@ void InitShips()
 	
 	refShip.BigPicTexName = "SHIPS1"; //Armada
 	// KK -->
-	refShip.EmblemedSails.normalTex = "sail_Mariana.tga";
-	refShip.EmblemedSails.nationFileName = "sail_Mariana.tga";
+	refShip.EmblemedSails.normalTex = "sail_DeathVessel_torn.tga";
+	refShip.EmblemedSails.nationFileName = "sail_DeathVessel_torn1.tga";
 	refShip.devil_trail = true;		// PB: Cursed Ship Trails Fog
 	refShip.night_stealth = true;	// PB: Half visibility at night
 	

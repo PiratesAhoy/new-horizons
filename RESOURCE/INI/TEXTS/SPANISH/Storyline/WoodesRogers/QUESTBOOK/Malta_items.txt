@@ -1,4 +1,4 @@
-title=Maltains items
-text.t1=There are six books and documents I have to find for the Clerk. He talked about nine cells to open. Also about their most precious item - a relic. Very valuable. 
-text.t2=I got all six books and documents now!
+title=Objetos malteses
+text.t1=Hay seis libros y documentos que tengo que encontrar para el secretario. Habló de nueve celdas que hay que abrir. También de su posesión más preciada, una reliquia. Muy valiosa. 
+text.t2=¡Ya tengo los seis libros y documentos!
 

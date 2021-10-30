@@ -1056,25 +1056,25 @@ void RefreshScreen()
 							break;
 
 							case PLAYER_TYPE_AGENT:
-								id += "Hostile Port";
+								id += TranslateString("", "Hostile Port");
 								LocationOverride = true;
 							break;
 
 							case PLAYER_TYPE_SMUGGLER:
-								id += "Friendly Port";
+								id += TranslateString("", "Friendly Port");
 								LocationOverride = true;
 							break;
 
 							case PLAYER_TYPE_CURSED:
 								if(HasSubStr(ShipsTypes[curShip].id, "Dutchman"))
-									id += "Cozumel Waters";
+									id += TranslateString("", "Cozumel Waters");
 								else
-									id += "Random Port";
+									id += TranslateString("", "Random Port");
 								LocationOverride = true;
 							break;
 
 							case PLAYER_TYPE_CASTAWAY:
-								id += "Random Shore";
+								id += TranslateString("", "Random Shore");
 								LocationOverride = true;
 								SetSelectable("SHIP", false);
 								SetTextBoxReadOnly("ShipName", true);
@@ -1101,6 +1101,8 @@ void RefreshScreen()
 									{
 										if (CharNation == ENGLAND)
 											lidx = FindLocation("Redmond_port");						// Speightstown isn't much of a navy base
+										if (CharNation == SPAIN && GetAttribute(model, "id") == "spa_Lezo")
+											lidx = FindLocation("Cartagena_port");
 									}
 									NavyLockShipSelection(true , model);								// Navy assignment is pre-defined
 								}
@@ -1376,13 +1378,13 @@ void ChangeStartDate(int year, int month, int day)
 	//CharSecond = sti(arstart.date.sec);
 	curPeriod = GetPeriodFromYear(CharYear);
 	GameInterface.strings.StartYear = CharYear;
-	GameInterface.strings.StartMonth = GetMonthName(CharMonth);
+	GameInterface.strings.StartMonth = TranslateString("",GetMonthName(CharMonth));
 	GameInterface.strings.StartDay = CharDay;
 	curPeriod = GetPeriodFromYear(CharYear);
 	SetCurrentPeriod(curPeriod);
 	RefreshScreen();
 	iNationsQuantity = CheckNationsQuantity(curPeriod);
-	GameInterface.strings.StartPeriod = GetPeriodName(curPeriod);
+	GameInterface.strings.StartPeriod = TranslateString("", GetPeriodName(curPeriod));
 }
 
 //These are copies of the function in calendar.c but they take the Char data instead of the envirioment data as current data.

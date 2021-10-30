@@ -407,35 +407,16 @@ void ProcessDialogEvent()
 
 		case "whores3":
 			// DeathDaisy -->
-			string RandEuphemism;
-			if(PChar.sex == "woman"){
-				RandEuphemism = GetRandSubString("1,2,3");
+			string Spanking;
+			if(PChar.sex == "woman")
+			{
+				Spanking = DLG_TEXT[rand(2) + 147];
 			}
-			else{
-				RandEuphemism = GetRandSubString("4,5,6");
+			else
+			{
+				Spanking = DLG_TEXT[rand(2) + 150];
 			}
 			
-			string Spanking;
-			switch(RandEuphemism){
-				case "1": 
-					Spanking = "polishin' the jewel"; 
-				break;
-				case "2": 
-					Spanking = "swabbin' the foredeck"; 
-				break;
-				case "3": 
-					Spanking = "beatin' Venus' Anvil"; 
-				break;
-				case "4": 
-					Spanking = "spankin' the plank"; 
-				break;
-				case "5": 
-					Spanking = "playin' the fiddle"; 
-				break;
-				case "6": 
-					Spanking = "shakin' the ol' cod"; 
-				break;
-			}
 			Preprocessor_Add("onanism", Spanking);
 			// DeathDaisy <--- Random Euphemisms woooo! :D
 			dialog.text = DLG_TEXT[89];

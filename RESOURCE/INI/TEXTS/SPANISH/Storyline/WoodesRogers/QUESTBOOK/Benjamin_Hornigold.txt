@@ -1,2 +1,4 @@
 title=Benjamin Hornigold
-text.t1=Hornigold's ship was the starting point for many of the more famous pirates. I have got the map!
+text.t1=El barco de Hornigold fue el punto de partida para muchos de los piratas más famosos. 
+text.t2=¡Tengo el mapa! ¿Es La Española?
+text.t3=Un puerto en La Española está marcado en rojo. Pero las dos letras azules... Tiene que haber más mapas que te permitan sacar algo en claro de esto.

@@ -1,5 +1,5 @@
-title=Distiller
-text.t1=No rum, no molasses, no nothing - yet.
-text.t2=I can find wood and bottles with molasses in the Study.
-text.t3=They want me to light the fire. But I don't have any fire kits, maybe I could use my Pistol??
-text.t4=That's it! I have made Rum and found the Key. Now I only have to find out where to use the Key.
+title=Destilador
+text.t1=Ni ron, ni melaza, nada... Todavía.
+text.t2=Puedo encontrar madera y botellas con melaza en el estudio.
+text.t3=Quieren que encienda el fuego. Perro no tengo yesquero, ¿tal vez podría usar mi pistola?
+text.t4=¡Eso es! He elaborado ron y he encontrado la llave. Ahora sólo tengo que averiguar dónde uesar la llave.

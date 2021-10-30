@@ -1,4 +1,17 @@
 *.h text eol=crlf working-tree-encoding=Windows-1251
 *.c text eol=crlf working-tree-encoding=Windows-1251
 *.ini text eol=crlf working-tree-encoding=Windows-1251
+
 *.txt text eol=crlf working-tree-encoding=Windows-1251
+RESOURCE/INI/TEXTS/**/*.txt text eol=crlf working-tree-encoding=UTF-8
+
+RESOURCE/INI/TEXTS/SPANISH/**/*.ini working-tree-encoding=Windows-1252
+RESOURCE/INI/TEXTS/SPANISH/**/*.txt working-tree-encoding=Windows-1252
+PROGRAM/**/DIALOGS/SPANISH/**/*.h working-tree-encoding=Windows-1252
+
+RESOURCE/INI/TEXTS/RUSSIAN/**/*.txt text eol=crlf working-tree-encoding=Windows-1251
+
+# Specific files that have encoding issues
+RESOURCE/INI/TEXTS/RUSSIAN/BOOKS/cookbook.txt working-tree-encoding=UTF-8
+RESOURCE/INI/TEXTS/RUSSIAN/Storyline/WoodesRogers/ItemsDescribe.txt working-tree-encoding=UTF-8
+PROGRAM/Storyline/standard/DIALOGS/POLISH/danielle_dialog.h working-tree-encoding=UTF-8

@@ -1,8 +1,8 @@
-title=Woodes Rogers quest
-text.t1=The Governor offered me a mission (and a fine reward): His daughter has been taken prisoner by Pirates "somewhere northeast of Guadeloupe". I have to consult an Archipelago Map!
-text.t2=North of Guadeloupe - that would be Nevis with its Pirate Settlement! No time to waste.
-text.t3=They have sold her to the Brothel!
+title=La misión de Woodes Rogers
+text.t1=El gobernador me ha ofrecido una misión (y una buena recompensa): su hija ha sido apresada por piratas "en algún lugar al nordeste de Guadeloupe". Tengo que consultar un mapa del archipiélago.
+text.t2=Al norte de Guadeloupe... ¡Eso podría ser Nevis, donde hay una asentamiento pirata! No hay tiempo que perder.
+text.t3=¡La han vendido al burdel!
 text.t4=.
-text.t5=I've found her! Met this lovely girl in the Brothel. She needs my help to escape.
-text.t6=Promised to help the girl. This could be a new type of adventure. Her name is Caroline K.
-text.t7=Somehow I'm still alive - and so is Caroline K! Now to Woodes Rogers in Port Royale and the waiting reward...
+text.t5=¡La he encontrado! He encontrado a esa encantadora muchacha en el burdel. Necesita mi ayuda para escapar.
+text.t6=He prometido ayudar a la muchacha. Esto podría ser un nuevo tipo de aventura. Su nombre es Caroline K.
+text.t7=¡De alguna manera, sigo con vida, y también Caroline K! Ahora volvamos a Port Royal, donde esperan Woodes Rogers y la recompensa...

@@ -2829,9 +2829,18 @@ void BothQuestComplete(string sQuestName)
 						rldLocator = "sea";
 						break;
 					case SPAIN:
-						loadPort = "Muelle_port";
-						gotoGroup = "reload";
-						rldLocator = "reload1_back";
+						switch(GetMySimpleOldName(PChar))
+						{
+							case "Blas de Lezo":
+								loadPort = "Cartagena_port";
+								gotoGroup = "reload";
+								rldLocator = "reload1_back";
+							break;
+							// Default
+							loadPort = "Muelle_port";
+							gotoGroup = "reload";
+							rldLocator = "reload1_back";
+						}
 						break;
 					case PIRATE:
 						loadPort = "QC_port";

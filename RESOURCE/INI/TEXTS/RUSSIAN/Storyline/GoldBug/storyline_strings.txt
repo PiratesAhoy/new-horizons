@@ -1,5 +1,5 @@
-The Gold-Bug{Золотой Жук}
+The Gold-Bug{Р—РѕР»РѕС‚РѕР№ Р–СѓРє}
 Alaus Oculatus{Alaus Oculatus}
-'What ho! What ho! This fellow is dancing mad! He hath been bitten by the Tarantula.'                        All in the Wrong.{'Эй, там! Эй, там! Этот парень танцует безумно! Его укусил Тарантул.' 
+'What ho! What ho! This fellow is dancing mad! He hath been bitten by the Tarantula.'                        All in the Wrong.{'Р­Р№, С‚Р°Рј! Р­Р№, С‚Р°Рј! Р­С‚РѕС‚ РїР°СЂРµРЅСЊ С‚Р°РЅС†СѓРµС‚ Р±РµР·СѓРјРЅРѕ! Р•РіРѕ СѓРєСѓСЃРёР» РўР°СЂР°РЅС‚СѓР».' 
 
-Все пошло не так.}
+Р’СЃРµ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє.}

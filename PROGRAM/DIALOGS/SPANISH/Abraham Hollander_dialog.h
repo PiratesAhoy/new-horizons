@@ -3,7 +3,7 @@ string DLG_TEXT[32] = {
 ", propietario del astillero local.",
 "Y yo soy ",
 ", capitбn del '",
-".'",
+"'.",
 ", ",
 ". їNecesitas los servicios de mi astillero, ",
 "?",

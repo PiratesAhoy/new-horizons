@@ -1,10 +1,10 @@
-title=Open to Cave Shore
-text.t1=I'm going to search for the door that opened.
-text.t2=I have to try that lever on the Ship once more!
-text.t3=I'll try the megaphone on the Shore - maybe someone can here me?
-text.t4=I go down to the Shore and see if they did send a boat.
-text.t5=The Chest from the Blue Cavern is stuck under the Boat. I need help to lift the Boat!
-text.t6=Can I balance on the edging to the Musket?
+title=Abrir el camino a la cueva
+text.t1=Voy a buscar la puerta que se ha abierto.
+text.t2=¡Tengo que probar otra vez esa palanca que hay en el barco!
+text.t3=Intentaré usar la bocina en la orilla. Quizás alguien pueda oírme,
+text.t4=Bajaré a la orilla a ver si han mandado un bote.
+text.t5=El cofre de la Caverna Azul está atascado bajo el bote. ¡Necesito ayuda para levantar el bote!
+text.t6=¿Puedo mantener el equilibrio en el borde para llegar hasta el mosquete?
 text.t7=
 text.t8=
 text.t9=

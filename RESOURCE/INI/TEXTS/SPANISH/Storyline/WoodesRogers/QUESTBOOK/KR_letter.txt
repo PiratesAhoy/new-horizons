@@ -1,9 +1,9 @@
-title=Letter - Governor Walter
-text.t1=The Townhall is the big stone building in the town center. It's always guarded by dragoons. It's the home of Governor Walter.
-text.t2=Governor Walter lives in the Townhall building, and I know it's in the town center!
-text.t3=A Letter is sold to Governor Walter.
-text.t4=I've got the Letter. Let's read it.
-text.t5=On the backside of the letter is written P.I.R.A.T.E. with another pen and another hand.
+title=Carta - Gobernador Walter
+text.t1=El ayuntamiento es el gran edifico de piedra en el centro de la ciudad. Siempre está vigilado por dragones. Es la residencia del gobernador Walter.
+text.t2=¡El gobernador Walter vive en el edifico del ayuntamiento y sé que está en el centro de la ciudad!
+text.t3=Se ha vendido una carta al gobernador Walter.
+text.t4=Tengo la carta. Vamos a leerla.
+text.t5=En el reverso de la carta está escrito P.I.R.A.T.E. cun una pluma y por una mano diferente.
 text.t6=
 text.t7=
 text.t8=

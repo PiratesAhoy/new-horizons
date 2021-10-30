@@ -3200,8 +3200,8 @@ void QuestComplete(string sQuestName)
 			iForceDetectionFalseFlag = 1;	// Should make shopkeeper and shipyard owner refuse to do business.  Also means that if you do buy a ship and sail away, the fort will attack.
 			PChar.quest.agentquest = "find_smuggler";
 
-			Pchar.AgentQuest_quest.escape_to_sea.win_condition.l1 = "MapEnter";
-			Pchar.AgentQuest_quest.escape_to_sea.win_condition = "AgentQuest_quest.escape_to_sea";
+			PChar.quest.AgentQuest_escape_to_sea.win_condition.l1 = "MapEnter";
+			PChar.quest.AgentQuest_escape_to_sea.win_condition = "AgentQuest_escape_to_sea";
 
 			PChar.quest.AgentQuest_reset_soldiers_and_governor.win_condition.l1 = "ExitFromLocation";
 			PChar.quest.AgentQuest_reset_soldiers_and_governor.win_condition.l1.location = PChar.location;
@@ -3227,7 +3227,8 @@ void QuestComplete(string sQuestName)
 			}
 		break;
 
-		case "AgentQuest_quest.escape_to_sea":
+		case "AgentQuest_escape_to_sea":
+			PChar.quest.agentquest = "escaped_to_sea";
 			HoistFlag(GetServedNation());
 			iForceDetectionFalseFlag = 0;
 			if (!CheckQuestAttribute("agentquest", "smuggler_ship"))	// You escaped to sea without the help of the smugglers
@@ -3447,7 +3448,7 @@ void QuestComplete(string sQuestName)
 			cc = 0;
 			for (i=1; i<COMPANION_MAX; i++)
 			{
-				attr = "quest.imperial_escort.companion" + i;
+				attr = "quest.agentquest.companion" + i;
 				if (GetAttribute(PChar, attr) != "*NULL*" && GetAttribute(PChar, attr) != "-1") cc++;
 			}
 			PChar.quest.agentquest.original_companions_number = cc;
@@ -3490,6 +3491,23 @@ void QuestComplete(string sQuestName)
 					SetCompanionIndex(PChar, -1, iPassenger);
 				}
 			}
+		break;
+
+		case "Agentquest_refused":
+			PChar.quest.agentquest = "refused";
+			if (ENABLE_CHEATMODE) LAi_QuestDelay("Agentquest_refused_reset", 0.0);
+			else
+			{
+				PChar.quest.Agentquest_refused_reset.win_condition.l1 = "Timer";
+				PChar.quest.Agentquest_refused_reset.win_condition.l1.date.day = GetAddingDataDay(0, 1, 0);
+				PChar.quest.Agentquest_refused_reset.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
+				PChar.quest.Agentquest_refused_reset.win_condition.l1.date.year = GetAddingDataYear(0, 1, 0);
+				PChar.quest.Agentquest_refused_reset.win_condition = "PChar.quest.Agentquest_refused_reset";
+			}
+		break;
+
+		case "Agentquest_refused_reset":
+			DeleteAttribute(PChar, "quest.agentquest");
 		break;
 
 		PChar.questnotfound = true; // PB: Testing

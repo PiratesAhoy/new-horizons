@@ -1,6 +1,6 @@
-title=Woodes Rogers sixth reward
-text.t1=There is one more pistol - the last (puh!). Rogers inviteded me to take a drink in the Crew's Quarters.
-text.t2=This should be the last one then ... Wonder who 'Basilica Hands' was?
-text.t3=Oh no - when I finally got that last Pistol I'm stuck in the prison! I have to explore the cell carefully.
+title=La sexta recompensa de Woodes Rogers
+text.t1=Hay una pistola más, la última (¡por fín!). Rogers me ha invitado a tomar un trago en los alojamientos de la tripulación.
+text.t2=Esta debería ser la última... Me pregunto quién sería 'Basilica Hands'.
+text.t3=Oh, no. Ahora que por fin me he hecho con la última pistola, ¡he acabado encerrado en la prisión! Tengo que explorar la celda con atención.
 text.t4=
 text.t5=

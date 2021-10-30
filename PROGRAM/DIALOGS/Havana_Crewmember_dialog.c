@@ -31,7 +31,7 @@ void ProcessDialogEvent()
 			Preprocessor_Add("hello", "Hola");
 			Preprocessor_Add("captain", "Capitбn");
 			Preprocessor_Add("mygod", "Dios mio");
-			Preprocessor_Add("assault", "Si, asalto");
+			Preprocessor_Add("assault", "Si, al ataque");
 			Preprocessor_Add("yes", "Si");
 		break;
 

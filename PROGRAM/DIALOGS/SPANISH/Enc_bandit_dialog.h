@@ -1,13 +1,13 @@
 string DLG_TEXT[10] = {
-"!Oye, tu! ?Como puedes atreverte a entrar en este refugio sagrado de nuestra orden?",
-"!?Que estas fumando aqui ?!",
+"¡Eh, tú! ¿Cómo osas entrar en este refugio sagrado de nuestra orden?",
+"¡¿Qué estáis fumando aqui?!",
 "!",
-"Umm ... eh ... pense que esto era solo una iglesia normal, y entre a aprovecharme de ti ... eh ... reza de rodillas, siendo un devoto cristiano",
-"Oye, he oido que alguien con mucha influencia y MUCHO oro ha puesto un precio en tu cabeza. Bien conocido, te digo, jeje. Este es el dia en que me volvere rico ...",
-"Mal, este es el dia en que te convertiras en historia ...",
-"!Esta no es una iglesia publica, es una abadia de la orden maltesa, y aqui solo se permiten monjes, novicios y caballeros de la noble orden!",
-"Veo",
+"Hum... eh..., pensé que esta era una iglesia normal y corriente, y entré a rob... eh... rezar de rodillas, como debe hacer todo buen cristiano.",
+"¡Oye, he oído que alguien con mucha influencia y MUCHO oro ha puesto un precio a tu cabeza! Te doy la bienvenida, ¡je,je! Este es el dia en que me haré rico...",
+"Te equivocas, este es el día en que morirás...",
+"¡Esta no es una iglesia pública, es una abadía de la Orden de Malta, y aquí solo se permite el paso a frailes, novicios y caballeros de la noble orden!",
+"Ya veo.",
 "...",
-"Parece que mis HABILIDADES eran insuficientes para ESO enfoque. ?O fue solo mala suerte? Bueno, espero que mi esgrima sea mas exitosa que mi actuacion ...",
+"Parece que mis HABILIDADES eran insuficientes para intentar ese enfoque. ¿O ha sido solo mala suerte? Bueno, espero que mi esgrima tenga más éxito que mi arte dramático...",
 
 };

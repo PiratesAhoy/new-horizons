@@ -2024,31 +2024,39 @@ void GivePromotionReward(int iNation)
 				break;
 
 				case 9: // Vice Almirante
-					switch(GetCurrentPeriod())
+					switch (GetMySimpleOldName(PChar))
 					{
-						case PERIOD_EARLY_EXPLORERS:
-							GiveShip2Character(pchar, "SP_BattleGalleon", "San Martin", -1, SPAIN, true, true); // San Martin
+						case "Blas de Lezo":
+							GiveShip2Character(pchar, "PO_Poseidon", "Conquistador", -1, SPAIN, true, true); // Poseidon class 3rd Rate
 						break;
 
-						case PERIOD_THE_SPANISH_MAIN:
-							GiveShip2Character(pchar, "SP_SanFelipe", "San Felipe", -1, SPAIN, true, true); // Man of war
-						break;
+						//default:
+						switch(GetCurrentPeriod())
+						{
+							case PERIOD_EARLY_EXPLORERS:
+								GiveShip2Character(pchar, "SP_BattleGalleon", "San Martin", -1, SPAIN, true, true); // San Martin
+							break;
 
-						case PERIOD_GOLDEN_AGE_OF_PIRACY:
-							GiveShip2Character(pchar, "SP_SanFelipe", "San Felipe", -1, SPAIN, true, true); // Man of war
-						break;
+							case PERIOD_THE_SPANISH_MAIN:
+								GiveShip2Character(pchar, "SP_SanFelipe", "San Felipe", -1, SPAIN, true, true); // Man of war
+							break;
 
-						case PERIOD_COLONIAL_POWERS:
-							GiveShip2Character(pchar, "SP_Trinity", "Nuevo Invencible", -1, SPAIN, true, true); // Trinity class 2nd Rate
-						break;
+							case PERIOD_GOLDEN_AGE_OF_PIRACY:
+								GiveShip2Character(pchar, "SP_SanFelipe", "San Felipe", -1, SPAIN, true, true); // Man of war
+							break;
 
-						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "SP_SotL", "Santнsima Trinidad", -1, SPAIN, true, true); // Victory class 1st Rate
-						break;
+							case PERIOD_COLONIAL_POWERS:
+								GiveShip2Character(pchar, "SP_Trinity", "Nuevo Invencible", -1, SPAIN, true, true); // Trinity class 2nd Rate
+							break;
 
-						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "SP_SotL", "Santнsima Trinidad", -1, SPAIN, true, true); // Victory class 1st Rate
-						break;
+							case PERIOD_REVOLUTIONS:
+								GiveShip2Character(pchar, "SP_SotL", "Santнsima Trinidad", -1, SPAIN, true, true); // Victory class 1st Rate
+							break;
+
+							case PERIOD_NAPOLEONIC:
+								GiveShip2Character(pchar, "SP_SotL", "Santнsima Trinidad", -1, SPAIN, true, true); // Victory class 1st Rate
+							break;
+						}
 					}
 				break;
 
@@ -2059,31 +2067,42 @@ void GivePromotionReward(int iNation)
 							ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Huber_Spa4_17", 3, SPAIN, false);
 						else
 							ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "spa_cpt1_18", 3, SPAIN, false);
-						switch(GetCurrentPeriod())
+						switch (GetMySimpleOldName(PChar))
 						{
-							case PERIOD_EARLY_EXPLORERS:
-								GiveShip2Character(ch, "FastGalleon2", "San Marcos", -1, SPAIN, true, true); // War Galleon
+							case "Blas de Lezo":
+								ch.name = TranslateString("","Francisco");
+								ch.middlename = TranslateString("","Josй");
+								ch.lastname = TranslateString("","de Ovando");
+								GiveShip2Character(ch, "PO_Poseidon", "Dragуn", -1, SPAIN, true, true);
 							break;
 
-							case PERIOD_THE_SPANISH_MAIN:
-								GiveShip2Character(ch, "Galeon50", "Nuestra Seсora de las Mercedes", -1, SPAIN, true, true); // War Galleon
-							break;
+							//default:
+							switch(GetCurrentPeriod())
+							{
+								case PERIOD_EARLY_EXPLORERS:
+									GiveShip2Character(ch, "FastGalleon2", "San Marcos", -1, SPAIN, true, true); // War Galleon
+								break;
 
-							case PERIOD_GOLDEN_AGE_OF_PIRACY:
-								GiveShip2Character(ch, "SP_Battleship", "Principe de Asturias", -1, SPAIN, true, true); // Battleship
-							break;
+								case PERIOD_THE_SPANISH_MAIN:
+									GiveShip2Character(ch, "Galeon50", "Nuestra Seсora de las Mercedes", -1, SPAIN, true, true); // War Galleon
+								break;
 
-							case PERIOD_COLONIAL_POWERS:
-								GiveShip2Character(ch, "SP_Trinity", "Principe", -1, SPAIN, true, true); // Trinity class 2nd Rate
-							break;
+								case PERIOD_GOLDEN_AGE_OF_PIRACY:
+									GiveShip2Character(ch, "SP_Battleship", "Principe de Asturias", -1, SPAIN, true, true); // Battleship
+								break;
 
-							case PERIOD_REVOLUTIONS:
-								GiveShip2Character(ch, "FR_FirstRate", "San Carlos", -1, SPAIN, true, true); // Intrйpide class 1st Rate
-							break;
+								case PERIOD_COLONIAL_POWERS:
+									GiveShip2Character(ch, "SP_Trinity", "Principe", -1, SPAIN, true, true); // Trinity class 2nd Rate
+								break;
 
-							case PERIOD_NAPOLEONIC:
-								GiveShip2Character(ch, "FR_FirstRate", "San Carlos", -1, SPAIN, true, true); // Intrйpide class 1st Rate
-							break;
+								case PERIOD_REVOLUTIONS:
+									GiveShip2Character(ch, "FR_FirstRate", "San Carlos", -1, SPAIN, true, true); // Intrйpide class 1st Rate
+								break;
+
+								case PERIOD_NAPOLEONIC:
+									GiveShip2Character(ch, "FR_FirstRate", "San Carlos", -1, SPAIN, true, true); // Intrйpide class 1st Rate
+								break;
+							}
 						}
 						SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
 						RemovePassenger  (pchar,     CharacterFromID  (ch.id));
@@ -4552,8 +4571,9 @@ string GetCharacterCursedModel(ref chr)
 	if(chr.model == "davy4")						return chr.model;
 	if(chr.model == "davy5")						return chr.model;
 	if(chr.model == "Vanderdecken")					return chr.model;
+	if(chr.model == "Orellana")						return "Skelt";
 	if(IsMainCharacter(chr))						return "Bmunk";
-	if(chr.index == GetOfficersIndex(Pchar, 1))		return "Skelt";
+	if(chr.index == GetOfficersIndex(Pchar, 1))		return "Skel2";
 	if(chr.index == GetOfficersIndex(Pchar, 2))		return "Skel3";
 	if(chr.index == GetOfficersIndex(Pchar, 3))		return "Skel1";
 	return "Skel"+makeint(1+rand(3));
@@ -4587,17 +4607,42 @@ string GetCharacterCursedSails(ref chr)
 		}
 	}
 
-	if(HasSubStr(tempstring, "red"))				CursedSails = "sail_torn_red_plain.tga";
-	if(HasSubStr(tempstring, "petros"))				CursedSails = "sail_torn_red_plain.tga";
-	if(HasSubStr(tempstring, "black"))				CursedSails = "sail_torn_black_plain.tga";
-	if(HasSubStr(tempstring, "tan"))				CursedSails = "sail_torn_tan_plain.tga";
-	if(HasSubStr(tempstring, "weathered"))			CursedSails = "sail_torn_white_plain.tga";
-	if(HasSubStr(tempstring, "patch"))				CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Gets cursed sails
+	if(HasSubStr(tempstring, "red"))			CursedSails = "sail_torn_red_plain.tga";
+	if(HasSubStr(tempstring, "black"))			CursedSails = "sail_torn_black_plain.tga";
+	if(HasSubStr(tempstring, "tan"))			CursedSails = "sail_torn_tan_plain.tga";
+	if(HasSubStr(tempstring, "weathered"))			CursedSails = "sail_torn_weathered_plain.tga";
+	if(HasSubStr(tempstring, "patch"))			CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Gets cursed sails
 	if(HasSubStr(tempstring, "BlackPearl"))			CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Keeps her own sails
-	if(HasSubStr(tempstring, "dutchman"))			CursedSails = "sail_dutchman2.tga";			// Flying Dutchman - Keeps her own sails
+	if(HasSubStr(tempstring, "dutchman"))			CursedSails = "sail_dutchman2.tga";		// Cursed Flying Dutchman keeps her own sails, uncursed Dutchman gets cursed Dutchman sails
 	if(HasSubStr(tempstring, "Empress"))			CursedSails = "sail_torn_red_plain.tga";	// Empress - Torn red sails
-	if(HasSubStr(tempstring, "qar"))				CursedSails = "sail_torn_red_qar.tga";		// Queen Anne's Revenge - Keeps her own sails
+	if(HasSubStr(tempstring, "Empres2"))			CursedSails = "sail_torn_red_plain.tga";	// Empress - Torn red sails
+	if(HasSubStr(tempstring, "qar"))			CursedSails = "sail_torn_red_qar.tga";		// Queen Anne's Revenge - Keeps her own sails
 	if(HasSubStr(tempstring, "mariana"))			CursedSails = "sail_mariana.tga";			// Mariana - Keeps her own sails
+	if(HasSubStr(tempstring, "sws_christian_maria"))	CursedSails = "sws_christian_maria_torn.tga";	// Torn versions of special sails
+	if(HasSubStr(tempstring, "castile_leon"))		CursedSails = "sail_castile_leon_torn.tga";
+	if(HasSubStr(tempstring, "holy_roman_empire"))		CursedSails = "sail_holy_roman_empire_torn.tga";
+	if(HasSubStr(tempstring, "DeathVessel_whole"))		CursedSails = "sail_DeathVessel_torn.tga";
+	if(HasSubStr(tempstring, "DeathVessel_whole1"))		CursedSails = "sail_DeathVessel_torn1.tga";
+	if(HasSubStr(tempstring, "Black_Red"))			CursedSails = "sail_Black_Red_torn.tga";
+	if(HasSubStr(tempstring, "Diamond"))			CursedSails = "sail_Diamond_torn.tga";
+	if(HasSubStr(tempstring, "Experto"))			CursedSails = "sail_Experto_torn.tga";
+	if(HasSubStr(tempstring, "Experto1"))			CursedSails = "sail_Experto_torn1.tga";
+	if(HasSubStr(tempstring, "Explorer"))			CursedSails = "sail_Explorer_torn.tga";
+	if(HasSubStr(tempstring, "Explorer1"))			CursedSails = "sail_Explorer_torn1.tga";
+	if(HasSubStr(tempstring, "Gilded"))			CursedSails = "sail_Gilded_torn.tga";
+	if(HasSubStr(tempstring, "Gilded_plain"))		CursedSails = "sail_torn_Gilded_plain.tga";
+	if(HasSubStr(tempstring, "Navigator"))			CursedSails = "sail_Navigator_torn.tga";
+	if(HasSubStr(tempstring, "Navigator1"))			CursedSails = "sail_Navigator_torn1.tga";
+	if(HasSubStr(tempstring, "Officer"))			CursedSails = "sail_Officer_torn.tga";
+	if(HasSubStr(tempstring, "Officer1"))			CursedSails = "sail_Officer_torn1.tga";
+	if(HasSubStr(tempstring, "Red_Striped"))		CursedSails = "sail_Red_Striped_torn.tga";
+	if(HasSubStr(tempstring, "Templar"))			CursedSails = "sail_Templar_torn.tga";
+	if(HasSubStr(tempstring, "Templar1"))			CursedSails = "sail_Templar_torn1.tga";
+	if(HasSubStr(tempstring, "petros"))			CursedSails = "sail_torn_red_plain.tga";
+	if(HasSubStr(tempstring, "petros_plain"))		CursedSails = "sail_torn_petros_plain.tga";
+	if(HasSubStr(tempstring, "petros_black_red"))		CursedSails = "sail_torn_petros_black_red.tga";
+	if(HasSubStr(tempstring, "petros_blue_white"))		CursedSails = "sail_torn_petros_blue_white.tga";
+	if(HasSubStr(tempstring, "barbarossa"))			CursedSails = "sail_torn_barbarossa_plain.tga";
 	if(CursedSails == "")
 		CursedSails = "sail_torn_white_plain.tga";
 

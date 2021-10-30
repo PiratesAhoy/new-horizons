@@ -160,20 +160,6 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l2.label = "#stown_name#.";
 	Locations[n].locators_radius.reload.reload_1_4_back = 2.0;
 
-/*	Locations[n].reload.l2.name = "reload_1_2";
-	Locations[n].reload.l2.go = "Redmond_Town_02";
-	Locations[n].reload.l2.emerge = "reload_2_1";
-	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].reload.l2.label = "Redmond. Centrum.";
-	Locations[n].locators_radius.reload.reload_1_2 = 2.0;
-
-	Locations[n].reload.l22.name = "reload_1_2_back";
-	Locations[n].reload.l22.go = "Redmond_Town_02";
-	Locations[n].reload.l22.emerge = "reload_2_1";
-	Locations[n].reload.l22.autoreload = "1";
-	Locations[n].reload.l22.label = "Redmond. Centrum.";
-	Locations[n].locators_radius.reload.reload_1_2_back = 2.0;*/
-
 	Locations[n].reload.l3.name = "reload_1_3";
 	Locations[n].reload.l3.go = "Havana_Town_02";
 	Locations[n].reload.l3.emerge = "reload10";
@@ -238,12 +224,12 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l11.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1; // Screwface: Disable Go-To location
 
-    Locations[n].reload.l12.name = "door_11";
+/*    Locations[n].reload.l12.name = "door_11";
 	Locations[n].reload.l12.go = "";
 	Locations[n].reload.l12.emerge = "reload1";
 	Locations[n].reload.l12.autoreload = "0";
 	Locations[n].reload.l12.label = "Store.";
-	Locations[n].reload.l12.close_for_night = 1;
+	Locations[n].reload.l12.close_for_night = 1;*/
 
     Locations[n].reload.l13.name = "door_5";
 	Locations[n].reload.l13.go = "Havana_House_03";
@@ -259,30 +245,17 @@ void LocationInitCuba(ref n)
 	Locations[n].reload.l14.label = "Damski's House";
 	Locations[n].reload.l14.disable = true;	
 
-/*	Locations[n].reload.l7.name = "door_5";
-	Locations[n].reload.l7.go = "Redmond_HouseInsideR5(01)";
-	Locations[n].reload.l7.emerge = "reload1";
-	Locations[n].reload.l7.autoreload = "0";
-	Locations[n].reload.l7.label = "Дом.";
-	Locations[n].reload.l7.close_for_night = 1;
+/*	Locations[n].reload.l15.name = "door_7";
+	Locations[n].reload.l15.go = "Redmond_HouseInsideR7(01)";
+	Locations[n].reload.l15.emerge = "reload1";
+	Locations[n].reload.l15.autoreload = "0";
+	Locations[n].reload.l15.label = "Дом.";
 
-	Locations[n].reload.l8.name = "door_7";
-	Locations[n].reload.l8.go = "Redmond_HouseInsideR7(01)";
-	Locations[n].reload.l8.emerge = "reload1";
-	Locations[n].reload.l8.autoreload = "0";
-	Locations[n].reload.l8.label = "Дом.";
-
-	Locations[n].reload.l9.name = "door_3";
-	Locations[n].reload.l9.go = "Redmond_HouseInsideR3(01)";
-	Locations[n].reload.l9.emerge = "reload1";
-	Locations[n].reload.l9.autoreload = "0";
-	Locations[n].reload.l9.label = "Дом.";
-
-	Locations[n].reload.l10.name = "door_1";
-	Locations[n].reload.l10.go = "Redmond_HouseInsideR1(01)";
-	Locations[n].reload.l10.emerge = "reload1";
-	Locations[n].reload.l10.autoreload = "0";
-	Locations[n].reload.l10.label = "Дом.";*/
+	Locations[n].reload.l16.name = "door_3";
+	Locations[n].reload.l16.go = "Redmond_HouseInsideR3(01)";
+	Locations[n].reload.l16.emerge = "reload1";
+	Locations[n].reload.l16.autoreload = "0";
+	Locations[n].reload.l16.label = "Дом.";*/
 
 	Locations[n].island = "Cuba"; // NK 04-08-29
 	n = n + 1;

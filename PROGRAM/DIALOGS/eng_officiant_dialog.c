@@ -309,18 +309,18 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			//LAi_ActorWaitDialog(PChar, NPChar);
 			dialog.snd = "Voice\ENOF\ENOF007";
-			dialog.text = DLG_TEXT[12]; //PW was 10
-			link.l1 = DLG_TEXT[13]; //PW was 11
-			link.l1.go = "without_money_3"; // PW case 2 skipped
+			dialog.text = DLG_TEXT[10];
+			link.l1 = DLG_TEXT[11];
+			link.l1.go = "without_money_2";
 		break;
 
-		/*case "without_money_2":
-			//dialog.snd = "Voice\ENOF\ENOF008";
+		case "without_money_2":
+			dialog.snd = "Voice\ENOF\ENOF008";
 			dialog.text = DLG_TEXT[12];
 			link.l1 = DLG_TEXT[13];
 			link.l1.go = "without_money_3";
 		break;
-		*/
+
 		case "without_money_3":
 			dialog.snd = "Voice\ENOF\ENOF009";
 			dialog.text = DLG_TEXT[14];

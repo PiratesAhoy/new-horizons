@@ -333,7 +333,7 @@ void ProcessDialogEvent()
 			if(Rand(1)== 0)
 			{
 				Link.l1 = pcharrepphrase(DLG_TEXT[130], DLG_TEXT[131]);
-				Link.l1.go = "Philipsburg";
+				Link.l1.go = "Oranjestad";
 			}
 			else
 			{
@@ -344,8 +344,8 @@ void ProcessDialogEvent()
 			Link.l2.go = "new question";
 		break;
 
-		case "Philipsburg":
-			d.Text = DLG_TEXT[134] + DLG_TEXT[168];// NK
+		case "Oranjestad":
+			d.Text = DLG_TEXT[134] + DLG_TEXT[168] + GetTownSize("Oranjestad") + DLG_TEXT[169];// NK
 			Link.l1 = pcharrepphrase(DLG_TEXT[135], DLG_TEXT[136]);
 			Link.l1.go = "new question";
 			link.l2 = pcharrepphrase(DLG_TEXT[137], DLG_TEXT[138]);

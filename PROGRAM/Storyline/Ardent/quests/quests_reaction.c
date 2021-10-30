@@ -7,6 +7,7 @@ void QuestComplete(string sQuestName)
 	int officer1idx, officer2idx, romanceidx, villainidx, arresteridx, crewidx;
 	float locx, locy, locz;
 	string speaker, homelocation, homegroup, homelocator, gov_kid, merch_kid, romance_name, villain_name, normal_dialog, romance_pronoun1, romance_pronoun2, romance_pronoun3, villain_pronoun, temp, attr, cabin;
+	string logTitle, logEntry;
 	int canQty = 0;
 	int crewQty = 0;
 	int survivors = 0;
@@ -2567,7 +2568,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "hostage_released":
-			Characters[romanceidx].dialog.CurrentNode = "not_mistreated";
+			romance.Dialog.Filename = "romance_dialog.c";	// Reset filename and greeting in case you talked to prisoner in the hold
+			if (romance.sex == "woman") romance.greeting = "Gr_Arabella Silehard";
+			else romance.greeting = "Gr_christofor manuel de alencar";
+			romance.Dialog.CurrentNode = "not_mistreated";
 			LAi_SetActorType(romance);
 			LAi_ActorDialog(romance,PChar,"hostage_released2",10.0,10.0);
 		break;
@@ -2600,7 +2604,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorGoToLocator(characterFromID("Spanish_guard1"), "officers", "reload2_1", "",60.0);
 			LAi_ActorGoToLocator(characterFromID("Spanish_guard2"), "officers", "reload2_2", "",60.0);
 			LAi_ActorGoToLocator(romance, "officers", "reload2_3", "",60.0);
-			ch = characterFromID("Javier Balboa");
+			ch = CharacterFromID("Javier Balboa");
 			ch.skill.Fencing = "10";
 			ch.skill.Accuracy = "5";
 			ch.skill.Defence = "5";
@@ -2609,13 +2613,14 @@ void QuestComplete(string sQuestName)
 			ch.perks.list.SwordplayProfessional = true;
 			ch.perks.list.CriticalHit = true;
 			Ch.Perks.list.Toughness = true;
-//			GiveItem2Character(characterfromID("Javier Balboa"), "blade33+3");
-//			GiveItem2Character(characterfromID("Javier Balboa"), "goldarmor");
-//			EquipCharacterByItem(characterfromID("Javier Balboa"),"blade33");
-			LAi_SetHP(characterfromID("Javier Balboa"), 500.0, 500.0);
-			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "revenge";
-			LAi_ActorTurnToLocator(characterFromID("Javier Balboa"), "reload", "reload1");
-			LAi_SetStayType(characterFromID("Javier Balboa"));
+//			GiveItem2Character(ch, "blade33+3");
+//			GiveItem2Character(ch, "goldarmor");
+//			EquipCharacterByItem(ch,"blade33");
+			LAi_SetHP(ch, 500.0, 500.0);
+			ch.dialog.CurrentNode = "revenge";
+			LAi_SetActorType(CharacterFromID("Javier Balboa"));
+			LAi_ActorTurnToLocator(CharacterFromID("Javier Balboa"), "reload", "reload1");
+			LAi_SetStayType(CharacterFromID("Javier Balboa"));
 			Pchar.quest.grigorio_leaves1.win_condition.l1 = "MapEnter";
 			Pchar.quest.grigorio_leaves1.win_condition = "grigorio_leaves";
 			Pchar.quest.grigorio_leaves2.win_condition.l1 = "ExitFromLocation";
@@ -10457,6 +10462,19 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_to_sanjuan":	// Triggered by dialog with Jusepe Guimaraes
+			if (GetNationRelation(SPAIN, FRANCE) != RELATION_ENEMY)			// If Spain and France have randomly made peace, they're at war again
+			{
+				SetNationRelationBoth(SPAIN, FRANCE, RELATION_ENEMY);
+				logTitle = GetNationNameByType(SPAIN) + " is at war with " + GetNationNameByType(FRANCE);
+				logEntry = GetNationNameByType(SPAIN) + " and " + GetNationNameByType(FRANCE) + " have resumed their hostilities.";
+				WriteNewLogEntry(logTitle, logEntry, "General",false);
+			}
+			if (GetNationRelation(ENGLAND, FRANCE) == RELATION_FRIEND)		// If Britain and France randomly allied, break the alliance
+			{
+				SetNationRelationBoth(ENGLAND, FRANCE, RELATION_NEUTRAL);
+			}
+			AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "0");	// Lock relations to prevent France making peace with Spain
+
 			DeleteQuestAttribute("imperial_escort_enable");
 			NPChar = CharacterFromID("Imperial_Captain");
 			GiveShip2Character(NPChar, "FastGalleon5", "San Lorenzo", -1, SPAIN, true, true);
@@ -13532,6 +13550,7 @@ void QuestComplete(string sQuestName)
 			Preprocessor_Remove("governor");
 			Preprocessor_Remove("evilgov");
 			CloseQuestHeader("Imperial Escort");
+			AddStorylineVar(FindCurrentStoryline(), "CHANGING_RELATIONS", "1");		// International relations can now change randomly again
 		break;
 
 		case "imperial_escort_go_get_spy":			// Triggered by dialog with Jusepe Guimaraes if Gilles Clouzot is in San Juan port

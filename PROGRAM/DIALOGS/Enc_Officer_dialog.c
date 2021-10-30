@@ -50,7 +50,7 @@ void ProcessDialogEvent()
 		int sel_nation = sti(ssel);
 		string tstr = XI_ConvertString(GetNationDescByType(sel_nation));
 		HoistFlag(sel_nation);
-		if (sel_nation == PERSONAL_NATION) tstr = "your";
+		if (sel_nation == PERSONAL_NATION) tstr = XI_ConvertString("4personal");
 		d.Text = DLG_TEXT[48] + tstr + DLG_TEXT[49];
 // <-- KK
 		Link.l1 = DLG_TEXT[50];

@@ -608,6 +608,24 @@ itmdescr_blangel
 Initially designed for Count William V of Holland, this ceremonial sword features a pommel like an angel's wings and a large sapphire mounted in the crossguard.
 }
 
+itmname_bldevil	{Sword of Orellana}
+itmdescr_bldevil
+{
+No one knows who forged this sword. It is said to have been summoned from a black abyss and then given to Ricardo Orellana for services rendered to the Spanish Inquisition. The blade emits something malevolent like a million screams of terror.
+}
+
+itmname_bladerubysb {Ruby Rune Saber}
+itmdescr_bladerubysb
+{
+This is one of the Rune Sabers that was forged from mythical salt mines on one of the island far away from Caribbean, by wielding you can see the blade is razor sharp.
+}
+
+itmname_blade_ebony {Ebony Sabre}
+itmdescr_blade_ebony
+{
+This sabre is different from the other ones. It is made out of unique gold and ebony steel. You can feel a dark aura around this sword.
+}
+
 // Axes from SLiB. Jack Davidson. -->
 // TIH --> properly keyed now with 'blade' prefix
 

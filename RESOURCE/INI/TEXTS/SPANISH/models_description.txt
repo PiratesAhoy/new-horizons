@@ -24,7 +24,7 @@ Something cheap, salty looking, worn, that the officer of a merchantman would we
 Bring out a Moor's naval uniform!  A Moor, a Moor, are ye daft?!?{¡Sácame un uniforme naval haitiano! He dicho haitiano, ¡haitiano! ¿Eeres idiota?}
 A white half-sleeved shirt, light vest, eyepatch, do something with the hair, sounds like Pirate Eye For The Straight Guy, doesn't it?{Una camisa blanca de media manga, chaleco claro, parche en el ojo, algo diferente en el pelo, suena como el típico pirata, ¿verdad?}
 Orange pants, brown coat, a sash... and a pegged leg, an eyepatch and a hook.{Pantalones naranja, casaca marrón, una faja... y una pata de palo, un garfio y un parche en el ojo.}
-A white longsleeved shirt open at the collar, light vest, draw the hair back in a pony-tail, look what it does for the curves!  Speaking of which...{Una camisa blanca de manga larga abierta al cuello, chaleco claro, pelo recogido en una coleta, 'mira cómo acentúa las curvas!  Hablando de curvas...}
+A white longsleeved shirt open at the collar, light vest, draw the hair back in a pony-tail, look what it does for the curves!  Speaking of which...{Una camisa blanca de manga larga abierta al cuello, chaleco claro, pelo recogido en una coleta, ¡mira cómo acentúa las curvas!  Hablando de curvas...}
 Black loose trowsers, a light shirt, sash, bandanna, something that will compliment dreadlocks.{Pantalones anchos negros, una camisa clara, faja, bandana, algo que vaya bien con las rastas.}
 Black loose trowsers, a steel cuirass, sash, bandanna, something that will compliment dreadlocks.{Pantalones anchos negros, una coraza de acero, faja, bandana, algo que vaya bien con las rastas.}
 Black loose trowsers, an engraved breastplate, sash, bandanna, something that will compliment dreadlocks.{Pantalones anchos negros, un peto labrado, faja, bandana, algo que vaya bien con las rastas.}
@@ -348,6 +348,7 @@ Damn you, Mings! You didn't give me a neck!{¡Maldito seas, Mings! ¡No me diste u
 Blaze Devlin. In his original view.{Blaze Devlin. Con su aspecto original.}
 Beatrice Devlin. In her's original view.{Beatrice Devlin. Con su aspecto original.}
 Beatrice Devlin. In some other clothes.{Beatrice Devlin. Con otra ropa.}
+Bonnie Devlin after she dyed her hair and her clothes.{Bonnie Devlin después de teñirse el pelo y la ropa.}
 Am I worthy to sail under Captain Jack Sparrow?{¿Soy digno de navegar a las órdenes del capitán Jack Sparrow?}
 A most trustworthy and rum-drinking boatswain, please!{¡Un contramaestre fiable y bebedor de ron, por favor!}
 A most trustworthy and rum-drinking boatswain, in blue vest!{Un contramaestre fiable y bebedor de ron, con un chaleco azul.}
@@ -365,7 +366,7 @@ An officer of His Majesty's infantry regiments{Un oficial de uno de los regimien
 A French Admiral's uniform. Oui, and send for my barber, s'il vous plait.{Un uniforme de almirante francés. Oui, y mandad venir a mi barbero, s'il vous plait.}
 A French Naval Captain's uniform. Oui, I think even my English cousins in Bath would approve{Un uniforme de capitán de la Armada Francesa. Oui, creo que incluso mis primos ingleses de Bath lo aprobarían.}
 A French Naval Lieutenant's uniform, s'il vous plait. Young and bold indeed... but a buccaneer? No, you are surely mistaken, monsieur!{Un uniforme de teniente de la Armada Francesa, s'il vous plait. Joven y atrevido, sin duda... ¿pero un bucanero? ¡No, se equivoca, monsieur!}
-An Officer in His Majestey's Lancer Regiments.{Un oficial de uno de los regimientos de lanceros de Su majestad.}
+An Officer in His Majestey's Lancer Regiments.{Un oficial de los regimientos de lanceros de Su majestad.}
 A Spanish Naval Captain's uniform.{Un uniforme de capitán de la Armada Española.}
 The uniform of a young shaven commodore please.{El uniforme de un joven comodoro bien afeitado, por favor.}
 Wear this Royal Navy Admiral's uniform and drink good health to ol' Jervie{Ponte este uniforme de almirante de la Royal Navy y bebe a la salud del Viejo Jervie}
@@ -446,7 +447,7 @@ French fencer in an engraved breastplate.{Esgrimista francés con un peto grabado
 French fencer in a gilded breastplate.{Esgrimista francés con un peto dorado.}
 French fencer in an ornate breastplate.{Esgrimista francés con un peto decorado.}
 An elderly beggar, who spent all his money on women and booze. But still a good poet!{Un anciano mendigo, que gastó todo su dinero en mujeres y alcohol. ¡Pero todavía es un buen poeta!}
-Crew cut,Grey trousers, red leather boots, and a shirt that fits loose and will show off some muscles!{Aspecto de tripulante, pantalones grises, botas de cuero rojo y una camisa que quede suelta y enseñe algo de músculo.}
+Crew cut,Grey trousers, red leather boots, and a shirt that fits loose and will show off some muscles!{Corte de pelo militar, pantalones grises, botas de cuero rojo y una camisa que quede suelta y enseñe algo de músculo.}
 He's big, he's bad, and he's let the hair grow longer, but most of all he is loyal to those who deserve it.{Es grande, es malo y se ha dejado crecer el pelo, pero sobre todo es leal a aquéllos que se lo merecen.}
 A nice red coat and bandanna, that's the perfect outfit for a Portuguese Pirate.{Una buena casaca roja y una bandana, el traje perfecto para un pirata portugués.}
 A nice red coat, bandanna and steel breastplate, that's the perfect outfit for a Portuguese Pirate.{Una buena casaca roja, una bandana y un peto de acero, el traje perfecto para un pirata portugués.}
@@ -471,6 +472,7 @@ Clothes of a Native Warrior.{Atuendo de un guerrero nativo.}
 An elderly Indian.{Un anciano indio.}
 An Indian Warrior.{Un guerrero indio.}
 A beautiful indian woman, which sailor couldn't fall in love with this Pocahontas?{Una bella mujer india, ¿qué marinero no se enamoraría de esta Pocahontas?}
+A woman from a native village, in traditional dress.{Una mujer de un poblado nativo, con su vestido tradicional.}
 If you want to know what the future holds for you, this woman can tell you - for a hand full of silver.{Si quieres saber lo que te depara el futuro, esta mujer puede decírtelo... por un buen puñado de plata.}
 A Spanish Naval Admiral's uniform.{Un uniforme de almirante de la Armada Española.}
 A Spanish Naval Captain's uniform.{Un uniforme de capitán de la Armada Española.}
@@ -486,14 +488,15 @@ This sailor has a grey jacket with golden trim and leather shoulder patches. And
 The best friend of Bartolomeu o Portugues: A faithful comrade.{El mejor amigo de Bartolomeu o Portugues: un fiel camrada.}
 I feel like a trader. But a shady one. How about a Buccaneer like Eugene Martin?{Me siento como un comerciante. Pero uno turbio. ¿Qué tal un bucanero como Eugene Martin?}
 I feel like a dangerous pirate. How about something like Francois L'Ollonais?{Me siento como un peligroso pirata. ¿Qué tal algo como François L'Ollonais?}
+I want to look like Guibert Daudet.{Quiero parecerme a Guibert Daudet.}
 I feel like a famous pirate. Henry Morgan will do.{Me siento como un pirata famoso. Henry Morgan servirá.}
 I keep a couple of extra guns just for company...{Me gusta llevar un par de pistolas extra, para estar bien acompañado...}
 I DO have the face for tentacleys!{¡A mi cara le quedan bien los tentáculos!}
 This old seadog hails from the Northern Waters.{Este viejo lobo de mar proviene de las Aguas del Norte.}
 He's big, he's bad, and he's let the hair grow longer, but most of all he is loyal to those who deserve it.{Es grande, es malo y se ha dejado crecer el pelo, pero sobre todo es leal a aquéllos que se lo merecen.}
-Crew cut, grey trousers, red leather boots and a shirt that fits loose and will show off some muscles!{Aspecto de tripulante, pantalones grises, botas de cuero rojo y una camisa que quede suelta y enseñe algo de músculo.}
-Crew cut, grey trousers, dark brown leather boots, a shirt that fits loose, a waistcoat and sword belt and the kid gloves are off.{Aspecto de tripulante, pantalones grises, botas de cuero marrón oscuro y una camisa que quede suelta, un chaleco y un cinturón para la espada.}
-Crew cut, grey trousers, dark leather gold trim boots and a shirt that fits loose, a waistcoat and headband, bare knuckled. He makes a good Pirate!{Aspecto de tripulante, pantalones grises, botas de cuero oscuro con borde dorado y una camisa que quede suelta, un chaleco y una bandana. ¡Un buen pirata!}
+Crew cut, grey trousers, red leather boots and a shirt that fits loose and will show off some muscles!{Corte de pelo militar, pantalones grises, botas de cuero rojo y una camisa que quede suelta y enseñe algo de músculo.}
+Crew cut, grey trousers, dark brown leather boots, a shirt that fits loose, a waistcoat and sword belt and the kid gloves are off.{Corte de pelo militar, pantalones grises, botas de cuero marrón oscuro y una camisa que quede suelta, un chaleco y un cinturón para la espada.}
+Crew cut, grey trousers, dark leather gold trim boots and a shirt that fits loose, a waistcoat and headband, bare knuckled. He makes a good Pirate!{Corte de pelo militar, pantalones grises, botas de cuero oscuro con borde dorado y una camisa que quede suelta, un chaleco y una bandana. ¡Un buen pirata!}
 A flashy red coat, trimmed with golden leafs. And on top of that, an Indian pattern bandana. Now I look like a real 'gentlemen' pirate!{Una ostentosa casaca roja, con ribetes de hojas doradas. Y como colofón una bandana de diseño indio. Ahora sí que parezco todo un 'caballero' pirata.}
 I feel like a Portuguese Marine. How about something like Manuel Sousa ?{Me siento como un infante de marina portugués. ¿Qué tal algo como Manuel Sousa?}
 I feel like a Portuguese Marine. How about something like Lourenço Vaz ?{Me siento como un infante de marina portugués. ¿Qué tal algo como Lourenço Vaz?}
@@ -592,6 +595,7 @@ It has been torture, trapped in this single form, cut off from the sea.{Ha sido 
 I want to look like Midshipman Hornblower.{Quiero tener el aspecto del guardiamarina Hornblower.}
 I want to look like Lieutenant Hornblower.{Quiero tener el aspecto del teniente Hornblower.}
 I want to look like Commander Hornblower.{Quiero tener el aspecto del comandante Hornblower.}
+I want to look like Captain Horatio Hornblower, R.N.{Quiero parecerme al capitán Horatio Hornblower, 'El hidalgo de los mares'}
 A fancy captain's uniform in navy blue with gold trim, black hat, and black spats.{Un elegante uniforme de capitán azul marino con ribetes de oro, sombrero negro, y polainas negras.}
 A fancy first mate's uniform in navy blue with gold trim, black hat, and black spats.{Un elegante uniforme de primer oficial azul marino con ribetes de oro, sombrero negro, y polainas negras.}
 A fancy second mate's uniform in navy blue with gold trim, black hat, and black spats.{Un elegante uniforme de segundo oficial azul marino con ribetes de oro, sombrero negro, y polainas negras.}
@@ -604,7 +608,7 @@ A typical captain's uniform with blue stockings and blonde hair.{Un típico unifo
 A typical captain's uniform but with black pants and a nicer vest.{Un típico uniforme de capitán pero con botas negras y  un chaleco mejor.}
 A proper piratin' outfit with a vest and bandanna.  Yarr!{Un traje apropiado para la piratería, con un chaleco y una bandana. ¡Yarr!}
 I feel like Horatio Nelson today, I need a fine Captain uniform. And don't forget the wig!{Hoy me siento como Horatio Nelson, necesito un buen uniforme de capitán, y no olvides la peluca.}
-Have you ever heard of the Pirate Lord of Singapore?{¿Alguna vez has oido hablar del Señor Pirata de Singapur?}
+Have you ever heard of the Pirate Lord of Singapore?{¿Alguna vez has oído hablar del Señor Pirata de Singapur?}
 A humble man born in Vlissingen as son of a beer porter. Yet with the makings of greatness!{Un hombre humilde nacido en Vlissingen, hijo de un repartidor de cerveza. Pero destinado a grandes cosas.}
 The outfit of a tall, blond, moustached and handsome Dutch corsair, if you please.{El traje de un corsario holandés, alto, rubio, apuesto y bigorudo, por favor.}
 Now take Sir Francis Drake, the Spanish all despised him. But to the British, he's a hero and they idolised him!{Mira a Sir Francis Drake, todos los españoles le despreciaban. Pero para los ingleses, es un héroe y un ídolo.}
@@ -630,19 +634,22 @@ A French naval officer who bears merely a passing resemblance to a famous pirate
 Charles Ardent, pirate. Hero or villain - the choice is yours.{Charles Ardent, pirata. Héroe o villano: la elección es tuya.}
 Shave and a haircut - two grand. You'd hardly recognise Charles Ardent!{Afeitado y corte de pelo: son dos mil. ¡Apenas reconocerías a Charles Ardent!}
 Helen Ardent, pirate. Heroine or villainess - the choice is yours.{Helen Ardent, pirata. Heroína o villana: la elección es tuya.}
+Helen Ardent, with a pirate's hat and coat.{Helen Ardent, con un sombrero y una casaca de pirata.}
 Helen Ardent - in a dress?{Helen Ardent... ¿llevando un vestido?}
 A gentleman like this has no time for vagabonds - and may not be quite the gentleman he appears!{Un caballero como éste no tiene tiempo para vagabundos... ¡y puede que no sea el caballero que aparenta ser!}
 A high-ranking French naval officer and gentleman.{Un oficial naval francés de alto rango y todo un caballero.}
 Charles Ardent has 'borrowed' a Spanish uniform.{Charles Ardent ha 'tomado prestado' un uniforme español.}
 Charles Ardent has 'borrowed' a French uniform.{Charles Ardent ha 'tomado prestado' un uniforme francés.}
-Helen Ardent has 'borrowed' a Spanish uniform.{Helen Ardent  ha 'tomado prestado' un uniforme español.}
-Helen Ardent has 'borrowed' a French uniform.{Helen Ardent  ha 'tomado prestado' un uniforme francés.}
+Helen Ardent has 'borrowed' a Spanish uniform.{Helen Ardent ha 'tomado prestado' un uniforme español.}
+Helen Ardent has 'borrowed' a French uniform.{Helen Ardent ha 'tomado prestado' un uniforme francés.}
 This ornate dress with golden trimming is very suitable for the daughter of a governor.{Este elaborado vestido con ribetes dorados es muy apropiado para la hija de un gobernador.}
 An elaborate costume befitting the son of a governor.{Un elaborado traje digno del hijo de un gobernador.}
+Lucia de la Vega incognito.{Lucia de la Vega, de incógnito.}
+Edmundo de la Vega incognito.{Edmundo de la Vega, de incógnito.}
 This is what happens when a pirate lady gets hold of some silk and lace.{Esto es lo que pasa cuando una mujer pirata se hace con un poco de seda y encaje.}
 An intricately decorated brown outfit for a veteran adventurer.{Un traje marrón profusamente decorado para un aventurero veterano.}
 A purple dress with lace trim and a lot of jewellery. She must be very important, very rich, or both.{Un vestido violeta con ribetes de encaje y mucha joyería. Debe de ser muy importante, muy rica, o ambas cosas.}
-A wealthy man's dark green suit with gold buttons and a medallion.{Un traje verde para un hombre adinerado, verde oscuro ocn botones dorados y un medallón.}
+A wealthy man's dark green suit with gold buttons and a medallion.{Un traje verde para un hombre adinerado, verde oscuro con botones dorados y un medallón.}
 A blue sleeveless shirt, beard and scar for a tough guy who has stayed alive for a long time and plans to keep doing it!{Una camisa azul sin mangas, barba y cicatriz. ¡Un tipo duro que se ha mantenido con vida durante mucho tiempo y piensa seguir haciéndolo!}
 A distinguished look for an important person - a governor or admiral, perhaps.{Un aspecto distinguido para una persona importante; un gobernador o un almirante, tal vez.}
 Being a governor's daughter doesn't stop you from allying with pirates.{Ser la hija de un gobernador no te impedirá aliarte con piratas.}
@@ -654,8 +661,12 @@ A dark red dress with blue sleeves and skirt marks its owner as a woman of wealt
 A dirty shirt and a leaky boat aren't going to stop you from looking for an adventure.{Una camisa sucia y un bote que hace agua no bastarán para impedirte buscar una aventura.}
 I am descended from the Conquistadors and from Montezuma! You will call me El Supremo if you value your life!{¡Soy descendiente de los conquistadores y de Montezuma! ¡Me llamará El Supremo si valora su vida!}
 His name was Geralt of Rivia, he was a Witcher, a professional monster slayer and the adoptive father of Ciri Riannon.{Su nombre era Geralt de Rivia. Era un brujo, un cazador de monstruos profesional, y el padre adoptivo de Ciri Riannon.}
-Ciri. Monster Hunter, dimension traveller and proud owner of a unicorn.{Ciri. Cazadora de monstruos, viajera interdimensional y orgullosa poseedora d eun unicornio.}
+Ciri. Monster Hunter, dimension traveller and proud owner of a unicorn.{Ciri. Cazadora de monstruos, viajera interdimensional y orgullosa poseedora de un unicornio.}
 A pale witch in a black dress who probably does not get enough sleep.{Una pálida bruja con un vestido negro que seguramente duerme menos de lo que debería.}
-This elegant green dress is studded with pearls and trimmed with lace.{Este elegante vestido verde está adornado ocn perlas y ribeteado de encaje.}
+This elegant green dress is studded with pearls and trimmed with lace.{Este elegante vestido verde está adornado con perlas y ribeteado de encaje.}
 Have you a nice green dress like the one worn by the tavern girl in Cartagena?{¿Tienes un bonito vestido como el que lleva la chica de la taberna de Cartagena?}
 A Dutch admiral and privateer for the Dutch Republic during the Eighty Years' War. The first and the last to capture a large part of a Spanish treasure fleet from America.{Un almirante y corsario holandés al servicio de las Provincias Unidas durante la Guerra de los Ochenta Años. El primero y el último en capturar gran parte de una flota española del tesoro de Indias.}
+Death is only the beginning.{La muerte es solo el principio.}
+An adventurer from the Italic peninsula, in search of glory in the Caribbean.{Un aventurero de la península italiana, en busca de gloria en el Caribe.}
+The son of a French nobleman, who became a well known captain after coming to the Caribbean in quite hasty circumstances.{El hijo de un noble francés, que se convirtió en un capitán bien conocido después de llegar al Caribe en circunstancias bastante apresuradas.}
+A Spanish Admiral bearing with pride the scars of many battles.{Un almirante español, que lleva con orgullo las cicatrices de mil batallas.}

@@ -1,9 +1,9 @@
-title=Wine cellars
-text.t1=I can swim but most sailors can't. I'll try to use that in the cellars!
-text.t2=A Barrel on an Elevator - what am I supposed to do?
-text.t3=There's a Steplock under the Elevator!
-text.t4=Think I have found the exit - but how do I open it?
-text.t5=By the sound three gates opened.
+title=La bodegas de vino
+text.t1=Yo sé nadar pero la mayoría de los marineros no saben. ¡Intentaré aprovechar esa ventaja en las bodegas!
+text.t2=Un barril en un montacargas. ¿Qué s esupone que tengo que hacer?
+text.t3=¡Hay una placa de presión para mover el montacargas!
+text.t4=Creo que he encontrado la salida, ¿pero cómo la abro?
+text.t5=A juzgar por el sonido, se han abierto tres puertas.
 text.t6=
 text.t7=
 text.t8=
