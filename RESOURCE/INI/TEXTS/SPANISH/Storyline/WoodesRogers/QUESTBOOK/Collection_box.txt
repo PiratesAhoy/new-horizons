@@ -1,8 +1,8 @@
-title=Collection box
-text.t1=I have to put some coins (the right ones!?) in the collection box. Will this help me to find a way out of here?
-text.t2=The coins are all from different nations.
-text.t3=The number of gold coins are two.
-text.t4=Use nothing but round coins.
-text.t5=There is one single copper coin.
-text.t6=There should be seven coins in the box, no more no less.
-text.t7=A pigeon brought me a letter - I'll see what it can be.
+title=Estuche de coleccionista
+text.t1=Tengo que colocar unas monedas (¿las correctas?) en el estuche de coleccionista. ¿Me ayudará hacer esto a encontrar la forma de salir de aquí?
+text.t2=Todas las monedas son de naciones diferentes.
+text.t3=El número de monedas de oro es dos.
+text.t4=Sólo se pueden usar monedas redondas.
+text.t5=Hay una sola moneda de cobre.
+text.t6=Debería haber siete monedas en el estuche, ni más ni menos.
+text.t7=Una paloma mensajera me ha traído una carta. Veré de qué se trata.

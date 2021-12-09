@@ -2,45 +2,45 @@ ALeadership_Header{Liderazgo}
 ALeadership_Descr{El liderazgo indica la fuerza de tu influencia en la gente que te rodea, y lo bien que se te da lograr tus objetivos.}
 ALeadership_Img{Icono de destrreza Liderazgo}
 AFencing_Header{Esgrima}
-AFencing_Descr{La esgrima es importante para cualquier capit·n, ya que tu supervivencia a menudo depende de lo bien que sepas blandir la espada.}
+AFencing_Descr{La esgrima es importante para cualquier capit√°n, ya que tu supervivencia a menudo depende de lo bien que sepas blandir la espada.}
 AFencing_Img{Icono de destrreza Esgrima}
-ASailing_Header{NavegaciÛn}
-ASailing_Descr{La destreza de navegaciÛn indica lo bien que se te da controlar tu barco. Influye en la velocidad y maniobrabilidad de tu barco.}
-ASailing_Img{Icono de destrreza NavegaciÛn}
-ACannons_Header{CaÒones}
-ACannons_Descr{CaÒones es la destreza que determina la velocidad de recarga de tus caÒones y la concetraciÛn de sus disparos.}
-ACannons_Img{Icono de destrreza CaÒones}
-AAccuracy_Header{PunterÌa}
-AAccuracy_Descr{La punterÌa es el talento para calcular el momento en que una andanada har· el m·ximo daÒo al enemigo. Cuanto m·s alta sea esta destreza, tus artilleros ser·n mas precisos.}
-AAccuracy_Img{Icono de destrreza PunterÌa}
+ASailing_Header{Navegaci√≥n}
+ASailing_Descr{La destreza de navegaci√≥n indica lo bien que se te da controlar tu barco. Influye en la velocidad y maniobrabilidad de tu barco.}
+ASailing_Img{Icono de destrreza Navegaci√≥n}
+ACannons_Header{Ca√±ones}
+ACannons_Descr{Ca√±ones es la destreza que determina la velocidad de recarga de tus ca√±ones y la concetraci√≥n de sus disparos.}
+ACannons_Img{Icono de destrreza Ca√±ones}
+AAccuracy_Header{Punter√≠a}
+AAccuracy_Descr{La punter√≠a es el talento para calcular el momento en que una andanada har√° el m√°ximo da√±o al enemigo. Cuanto m√°s alta sea esta destreza, tus artilleros ser√°n mas precisos.}
+AAccuracy_Img{Icono de destrreza Punter√≠a}
 AGrappling_Header{Abordaje}
-AGrappling_Descr{Abordaje es la destreza para escoger la distancia, ·ngulo y velocidad Ûptimas para abordar barcos, asÌ como mantener unida a tu brigada de abordaje.}
+AGrappling_Descr{Abordaje es la destreza para escoger la distancia, √°ngulo y velocidad √≥ptimas para abordar barcos, as√≠ como mantener unida a tu brigada de abordaje.}
 AGrappling_Img{Icono de destrreza Abordaje}
 ADefence_Header{Defensa}
-ADefence_Descr{Defensa determina el nivel de comodidad e higiene de los alojamientos de la tripulaciÛn, y la capacidad de curar a los heridos, ayudando a reducir las bajas en combate.}
+ADefence_Descr{Defensa determina el nivel de comodidad e higiene de los alojamientos de la tripulaci√≥n, y la capacidad de curar a los heridos, ayudando a reducir las bajas en combate.}
 ADefence_Img{Icono de destrreza Defensa}
-ARepair_Header{ReparaciÛn}
-ARepair_Descr{ReparaciÛn es el conocimiento profundo de tu barco y su construcciÛn, que te permite utilizar mejor a tus brigadas de reparaciÛn, mejorando la efectividad de su trabajo.}
-ARepair_Img{Icono de destrreza ReparaciÛn}
+ARepair_Header{Reparaci√≥n}
+ARepair_Descr{Reparaci√≥n es el conocimiento profundo de tu barco y su construcci√≥n, que te permite utilizar mejor a tus brigadas de reparaci√≥n, mejorando la efectividad de su trabajo.}
+ARepair_Img{Icono de destrreza Reparaci√≥n}
 ACommerce_Header{Comercio}
-ACommerce_Descr{Comercio es la destreza para regatear, evaluar el valor de las mercancÌas y hacer contactos comerciales. Ayuda a conseguir mejores tratos comerciales.}
+ACommerce_Descr{Comercio es la destreza para regatear, evaluar el valor de las mercanc√≠as y hacer contactos comerciales. Ayuda a conseguir mejores tratos comerciales.}
 ACommerce_Img{Icono de destrreza Comercio}
 ASneak_Header{Suerte}
-ASneak_Descr{Suerte, precogniciÛn o sexto sentido, como quieras llamarlo. Cuanto m·s mejores esta destreza, m·s te sonreir· la fortuna.}
+ASneak_Descr{Suerte, precognici√≥n o sexto sentido, como quieras llamarlo. Cuanto m√°s mejores esta destreza, m√°s te sonreir√° la fortuna.}
 ASneak_Img{Icono de destrreza Suerte}
 AFacePict_Descr{Este es el personaje #sname#}
 change_outfit_Header{Cambiar ropa}
-change_outfit_Descr{Este botÛn te permite cambiar tu apariencia o la de tus oficiales.}
-Ranks_Header{InformaciÛn de estatus}
-Ranks_Descr{Estas columnas describen el estatus y rango actual de #sPChar# en una determianda naciÛn. El texto verde claro indica que est·s esperando un ascenso.}
+change_outfit_Descr{Este bot√≥n te permite cambiar tu apariencia o la de tus oficiales.}
+Ranks_Header{Informaci√≥n de estatus}
+Ranks_Descr{Estas columnas describen el estatus y rango actual de #sPChar# en una determianda naci√≥n. El texto verde claro indica que est√°s esperando un ascenso.}
 Relations_Header{Relaciones de las naciones}
 Relations_Descr{Esta tabla muestra las relaciones internacionales conocidas entre las naciones.}
 Attitude_Header{Actitud de las naciones}
 Attitude_Descr{Esta columna muestra la actitud de las naciones hacia #sPChar#.}
 Nation_Descr{Esta #sColumn_Row# muestra las relaciones del gobierno #sNationOf# con otras naciones.}
-RelFlag_Header{RelaciÛn basada en la bandera}
+RelFlag_Header{Relaci√≥n basada en la bandera}
 RelFlag_Descr{Esta columna muestra la actitud de las naciones hacia la bandera actual de #sPChar#.}
 Checkbox_nation_Header{Izar bandera}
-Checkbox_nation_Descr{Haz clic aquÌ para izar el pabellÛn #sFlagOf#.}
+Checkbox_nation_Descr{Haz clic aqu√≠ para izar el pabell√≥n #sFlagOf#.}
 Change_Flag_Header{Seleccionar bandera}
-Change_Flag_Descr{Haz clic aquÌ para seleccionar otra bandera #sFlagOf#.}
+Change_Flag_Descr{Haz clic aqu√≠ para seleccionar otra bandera #sFlagOf#.}

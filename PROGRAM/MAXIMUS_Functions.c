@@ -729,10 +729,24 @@ void InitQCBrothel()
 	Locations[n].reload.l1.emerge = "reload9";
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name#.";
+
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "QC_brothel_upstairs";
+	Locations[n].reload.l2.emerge = "reload1";
+	Locations[n].reload.l2.label = "Brothel Bedroom";
+	Locations[n].reload.l2.disable = 1;
+
 	Locations[n].monsters = "0";
 	LAi_LocationFightDisable(Locations[n], true);
 
 	Locations[n].island = "QuebradasCostillas"; // NK 04-08-29
+
+	// Bedroom
+	n = FindLocation("QC_brothel_upstairs");
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go  = "QC_brothel";
+	Locations[n].reload.l1.emerge = Locations[n].reload.l1.emerge = Locations[FindLocation("QC_brothel")].reload.l2.name;
+	Locations[n].reload.l1.label = "Brothel";
 }
 
 // KK -->

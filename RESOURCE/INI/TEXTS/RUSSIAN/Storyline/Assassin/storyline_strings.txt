@@ -1,5 +1,5 @@
-Assassin{Наёмник}
-Johan{Йоган}
-Elting{Элтинг}
-Neptunis{Нептун}
-As a former Dutch soldier, Johan Elting is regarded by his peers as a good fighter. Tired of the army life (and pay), he decided to become a smuggler. Little does he know that soon he will become one of the most feared mercenaries in the Spanish service. But how long will he accept this new status?{Бывший голландский солдат Йоган Элтинг слывет хорошим бойцом. Устав от армейской жизни (и армейского жалованья), он решил стать контрабандистом. Он еще не знает, что скоро станет одним из самых страшных наемников на службе Испании. Но как долго он сможет продержаться?}
+Assassin{РќР°С‘РјРЅРёРє}
+Johan{Р™РѕРіР°РЅ}
+Elting{Р­Р»С‚РёРЅРі}
+Neptunis{РќРµРїС‚СѓРЅ}
+As a former Dutch soldier, Johan Elting is regarded by his peers as a good fighter. Tired of the army life (and pay), he decided to become a smuggler. Little does he know that soon he will become one of the most feared mercenaries in the Spanish service. But how long will he accept this new status?{Р‘С‹РІС€РёР№ РіРѕР»Р»Р°РЅРґСЃРєРёР№ СЃРѕР»РґР°С‚ Р™РѕРіР°РЅ Р­Р»С‚РёРЅРі СЃР»С‹РІРµС‚ С…РѕСЂРѕС€РёРј Р±РѕР№С†РѕРј. РЈСЃС‚Р°РІ РѕС‚ Р°СЂРјРµР№СЃРєРѕР№ Р¶РёР·РЅРё (Рё Р°СЂРјРµР№СЃРєРѕРіРѕ Р¶Р°Р»РѕРІР°РЅСЊСЏ), РѕРЅ СЂРµС€РёР» СЃС‚Р°С‚СЊ РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚РѕРј. РћРЅ РµС‰Рµ РЅРµ Р·РЅР°РµС‚, С‡С‚Рѕ СЃРєРѕСЂРѕ СЃС‚Р°РЅРµС‚ РѕРґРЅРёРј РёР· СЃР°РјС‹С… СЃС‚СЂР°С€РЅС‹С… РЅР°РµРјРЅРёРєРѕРІ РЅР° СЃР»СѓР¶Р±Рµ РСЃРїР°РЅРёРё. РќРѕ РєР°Рє РґРѕР»РіРѕ РѕРЅ СЃРјРѕР¶РµС‚ РїСЂРѕРґРµСЂР¶Р°С‚СЊСЃСЏ?}

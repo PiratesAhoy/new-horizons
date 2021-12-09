@@ -1,2 +1,2 @@
-title=Notificacion - Asuntos de la tripulación
-text.t1=La moral esta cayendo porque la tripulación tiene envidia de la cantidad de dinero que tienes a bordo y quiere firmar artículos.
+title=Notificacion - Asuntos de la tripulaciÃ³n
+text.t1=La moral esta cayendo porque la tripulaciÃ³n tiene envidia de la cantidad de dinero que tienes a bordo y quiere firmar artÃ­culos.

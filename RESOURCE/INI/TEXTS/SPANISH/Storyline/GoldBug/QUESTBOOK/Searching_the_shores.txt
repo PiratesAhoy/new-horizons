@@ -1,7 +1,7 @@
 title=Buscando por la orilla
 text.t1=Tengo que encontrar y recoger las cuatro gallinetas de agua que hemos cazado.
-text.t2=Buscaré conchas en la próxima franja de playa. En mis bolsillos hay sitio para al menos seis.
-text.t3=¡Un escarabajo de oro! Pero todavía no lo he atrapado.
-text.t4=Necesitaré una hoja, o algo similar, para hacerme con el escarabajo. 
+text.t2=BuscarÃ© conchas en la prÃ³xima franja de playa. En mis bolsillos hay sitio para al menos seis.
+text.t3=Â¡Un escarabajo de oro! Pero todavÃ­a no lo he atrapado.
+text.t4=NecesitarÃ© una hoja, o algo similar, para hacerme con el escarabajo. 
 text.t5=Un trozo de papel. Puedo usarlo para capturar al escarabajo.
-text.t6=Tengo una colección completa de conchas. Es hora de continuar hasta la siguiente franja de playa.
+text.t6=Tengo una colecciÃ³n completa de conchas. Es hora de continuar hasta la siguiente franja de playa.

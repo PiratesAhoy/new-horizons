@@ -1,6 +1,6 @@
-title=Woodes Rogers fourth reward
-text.t1=The next pistol (puh!) is in Roger's Mother's room above the Shop.
-text.t2=Okay, I'm in the Shop now. Where am I supposed to use the padlock?
-text.t3=Yes yes yes, it's a pistol of course. This one looks interesting though, provided with a very modern percussion lock. 'Eden N. Carolina', is it a family name, a plantation or a small town?
-text.t4=Think I go back to the shop and search better for the gun this time.
-text.t5=Now the question is which way to take to get back inside the maze of Rogers' rooms again?
+title=La cuarta recompensa de Woodes Rogers
+text.t1=La próxima pistola (¡Uff!) está en la habitación de la madre de Rogers, encima de la tienda.
+text.t2=Bien, estoy en la tienda. ¿Dónde se supone que tengo que usar este candado?
+text.t3=Sí, sí, si, es una pistola, por supuesto. Pero esta tiene un aspecto más interesante, cuenta con una moderna llave de percusió. 'Eden N. Carolina', ¿es el nombre de una familia, una plantación o una pequeña ciudad?
+text.t4=Creo que volveré a la tienda, y esta vez buscaré la pistola con más atención.
+text.t5=Ahora la cuestión es, ¿qué camino tomar para volver a entrar en ese laberinto de habitaciones de Rogers?

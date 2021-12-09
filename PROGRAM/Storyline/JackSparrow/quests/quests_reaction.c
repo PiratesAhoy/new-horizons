@@ -908,10 +908,11 @@ void QuestComplete(string sQuestName)
 		case "Looking_for_Brinkley":
 			LAi_SetOfficerType(characterFromID("Susan Shaypen"));
 			Characters[GetCharacterIndex("Susan Shaypen")].dialog.currentnode = "First time";
-            DeleteAttribute(pchar,"A_Possible_Side_Track");
+			DeleteAttribute(pchar,"A_Possible_Side_Track");
 		break;
 
 		case "Brinkley_left_Tortuga":
+			Locations[FindLocation("Tortuga_port")].vcskip = true;
 			Pchar.quest.On_the_trail.win_condition.l1 = "location";
 			PChar.quest.On_the_trail.win_condition.l1.character = Pchar.id;
 			Pchar.quest.On_the_trail.win_condition.l1.location = "Tortuga_port";
@@ -922,8 +923,8 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Looking_for_sisters.over = "yes";
 			ChangeCharacterAddressGroup(CharacterFromID("Bootstrap Bill Turner"),"Tortuga_port", "goto", "goto16");
 			pchar.quest.Jacks_early_days = "information_at_Tortuga";
-            LAi_SetActorType(characterFromID("Susan Shaypen"));
-            Lai_ActorFollow(characterFromID("Susan Shaypen"), pchar, "On_the_trail2", 0.0);
+			LAi_SetActorType(characterFromID("Susan Shaypen"));
+			Lai_ActorFollow(characterFromID("Susan Shaypen"), pchar, "On_the_trail2", 0.0);
 		break;
 
 		case "On_the_trail2":
@@ -951,6 +952,8 @@ void QuestComplete(string sQuestName)
 			AddPassenger(Pchar, characterFromID("Bootstrap Bill Turner"), 0);
 			SetOfficersIndex(Pchar, 2, getCharacterIndex("Bootstrap Bill Turner"));
 			LAi_SetOfficerType(characterFromID("Bootstrap Bill Turner"));
+
+			DeleteAttribute(&Locations[FindLocation("Tortuga_port")],"vcskip");
 
 			Pchar.quest.Look_for_sistersBBT.win_condition.l1 = "location";
 			PChar.quest.Look_for_sistersBBT.win_condition.l1.character = Pchar.id;
@@ -4757,29 +4760,29 @@ void QuestComplete(string sQuestName)
 			LAi_SetSitType(characterFromID("Davy Jones"));
 
 			sld = CharacterFromID("KR_Crew1");
-			SetModelfromArray(sld, GetModelIndex("davy1"));
-			sld.name = "Angler";
+			SetModelfromArray(sld, GetModelIndex("Palafico"));	// was "davy1"
+			sld.name = TranslateString("", "Palafico");		// was "Angler"
 			sld.lastname = "";
 			sld.Dialog.Filename = "Davycrew_dialog.c";
 			sld.Dialog.currentnode = "roa_lair";
 
 			sld = CharacterFromID("KR_Crew2");
-			SetModelfromArray(sld, GetModelIndex("davy2"));
-			sld.name = "Ogilvey";
+			SetModelfromArray(sld, GetModelIndex("Penrod"));	// was "davy2"
+			sld.name = TranslateString("", "Penrod");		// was "Ogilvey"
 			sld.lastname = "";
 			sld.Dialog.Filename = "Davycrew_dialog.c";
 			sld.Dialog.currentnode = "roa_lair";
 
 			sld = CharacterFromID("KR_Crew3");
-			SetModelfromArray(sld, GetModelIndex("davy3"));
-			sld.name = "Maccus";
+			SetModelfromArray(sld, GetModelIndex("Maccus"));	// was "davy3"
+			sld.name = TranslateString("", "Maccus");
 			sld.lastname = "";
 			sld.Dialog.Filename = "Davycrew_dialog.c";
 			sld.Dialog.currentnode = "roa_lair";
 
 			sld = CharacterFromID("KR_Crew4");
-			SetModelfromArray(sld, GetModelIndex("davy4"));
-			sld.name = "Clanker";
+			SetModelfromArray(sld, GetModelIndex("Hadras"));	// was "davy4"
+			sld.name = TranslateString("", "Hadras");		// was "Clanker"
 			sld.lastname = "";
 			sld.Dialog.Filename = "Davycrew_dialog.c";
 			sld.Dialog.currentnode = "roa_lair";
@@ -4798,6 +4801,7 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Barbossa")].dialog.currentnode = "First time";
 
 		//-->CTM (adding Pintel and Ragetti)
+			Locations[FindLocation("Tortuga_port")].vcskip = true; // GR
 			Pchar.quest.Find_Ragetti_and_Pintel.win_condition.l1 = "location";
 			//Pchar.quest.Find_Ragetti_and_Pintel.win_condition.l1.location = "Tortuga_town_01";
 			Pchar.quest.Find_Ragetti_and_Pintel.win_condition.l1.location = "Tortuga_port";			//JRH change
@@ -4859,6 +4863,7 @@ void QuestComplete(string sQuestName)
 		//	LAi_SetOfficerType(characterFromID("Pintel"));
 		//	LAi_SetImmortal(characterFromID("Pintel"), true);
 		//	SetOfficersIndex(Pchar, 3, getCharacterIndex("Pintel")); // Levis
+			DeleteAttribute(&Locations[FindLocation("Tortuga_port")],"vcskip"); // GR
 
 			Characters[GetCharacterIndex("Pintel")].dialog.currentnode = "First time";
 			Characters[GetCharacterIndex("Ragetti")].dialog.currentnode = "First time";
@@ -6692,10 +6697,6 @@ void QuestComplete(string sQuestName)
 		break;
 // -->SJG
 		case "insertforchase":
-			StorePassengers(Pchar.id);
-			SetOfficersIndex(PChar, 1, GetCharacterIndex("Pintel"));
-			SetOfficersIndex(PChar, 2, GetCharacterIndex("Ragetti"));
-			HoistFlag(PIRATE);
 			GiveShip2Character(CharacterFromID("Mr. Gibbs"),"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
 			characters[GetCharacterIndex("Mr. Gibbs")].quest.old_group = GetAttribute(CharacterFromID("Mr. Gibbs"),"chr_ai.group");
 			LAi_group_MoveCharacter(CharacterFromID("Mr. Gibbs"), "QC_SOLDIERS");
@@ -6708,6 +6709,24 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "insertforchase2":
+			// GR: Moved here from "insertforchase" so that all the code for changing to Barbossa happens together
+			StorePassengers(Pchar.id);
+			SetOfficersIndex(PChar, 1, GetCharacterIndex("Pintel"));
+			SetOfficersIndex(PChar, 2, GetCharacterIndex("Ragetti"));
+			HoistFlag(PIRATE);
+			// GR: Moved here from "Barbossa_dialog.c", case "Begin_3D" so that you don't become Barbossa mid-dialog
+			PChar.quest.your_rep = GetCharacterReputation(PChar);
+			PChar.reputation = GetCharacterReputation(CharacterFromID("Barbossa"));
+			GiveShip2Character(pchar, SHIP_CURSED, PreprocessText("#scursed_ship#"),-1,PIRATE,true,true);
+			AddCharacterGoods(pchar, GOOD_GUNPOWDER, 5000);
+			// PB: Become Barbossa -->
+			PChar.name = "Hector";
+			PChar.lastname = "Barbossa";
+			GiveModel2Player("Barbossa",true);
+			PChar.Flags.Pirate = 0; // PB: Jack Rackham Pirate Flag (used by Barbossa)
+			PChar.Flags.Pirate.texture = 0;
+			// GR
+
 //			ChangeCharacterAddressGroup(CharacterFromID("Barbossa"),"IslaDemuerte_shore_01","goto","locator10");	// GR: Why? You're Barbossa now!
 			sld = LAi_CreateFantomCharacter(false, 0, false, true, 0.25, "Skel1", "goto", "locator08");
 			LAi_SetHP(sld, 100.0, 100.0);
@@ -6755,6 +6774,8 @@ void QuestComplete(string sQuestName)
 			PChar.lastname = TranslateString("", "Sparrow");
 			// MAXIMUS 05.09.2018 <==
 			GiveModel2Player("Jack",true);
+			PChar.reputation = sti(PChar.quest.your_rep);
+			DeleteQuestAttribute("your_rep");
 //			PChar.Flags.Pirate = 6; // PB: Jack Sparrow Pirate Flag
 //			PChar.Flags.Pirate.texture = 0;
 			PChar.flags.pirate = PChar.quest.old_pirate_flag;	// GR: whatever pirate flag you were using before the battle
@@ -8114,6 +8135,8 @@ void QuestComplete(string sQuestName)
 			//ChangeCharacterAddressGroup(CharacterFromID("Davycrew_02"), "Turks_town_exit", "goto", "citizen017");
 			ChangeCharacterAddressGroup(CharacterFromID("Davycrew_01"), "Turks_port", "goto", "TX_citizen018");	//JRH: new Turks, at the gate to the shore part
 			ChangeCharacterAddressGroup(CharacterFromID("Davycrew_02"), "Turks_port", "goto", "TX_citizen017");	//JRH: new Turks, at the gate to the shore part
+			Characters[GetCharacterIndex("Davycrew_01")].dialog.CurrentNode = "First time";				// In case their dialogs have been changed elsewhere
+			Characters[GetCharacterIndex("Davycrew_02")].dialog.CurrentNode = "First time";
 			LAi_SetActorType(CharacterFromID("Davycrew_02"));
 			LAi_ActorFollow(CharacterFromID("Davycrew_02"), pchar, "", 10);
 			LAi_SetActorType(characterfromID("davycrew_01"));
@@ -8341,61 +8364,61 @@ void QuestComplete(string sQuestName)
 			// -------------------
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "sitizen06");
-			sld.name = "Angler";
+			sld.name = TranslateString("", "Angler");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "locator21");
-			sld.name = "Ogilvey";
+			sld.name = TranslateString("", "Ogilvey");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
  
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "sitizen07");
-			sld.name = "Maccus";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Maccus", "goto", "sitizen07");
+			sld.name = TranslateString("", "Maccus");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "locator10");
-			sld.name = "Clanker";
+			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "soldier04");
-			sld.name = "Hadras";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Hadras", "goto", "soldier04");
+			sld.name = TranslateString("", "Hadras");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "locator8");
-			sld.name = "Urchin";
+			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "locator11");
-			sld.name = "Wheelback";
+			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "locator13");
-			sld.name = "Wyvern";
+			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "soldier03");
-			sld.name = "Quittance";
+			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "padre");
-			sld.name = "Penrod";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Penrod", "goto", "padre");
+			sld.name = TranslateString("", "Penrod");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
@@ -8421,62 +8444,62 @@ void QuestComplete(string sQuestName)
 			PChar.quest.davymeet.win_condition = "davyonshore";
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "reload", "Falaise_de_fleur_location_03_02");
-			sld.name = "Angler";
+			sld.name = TranslateString("", "Angler");
 			sld.lastname = "";
 			sld.id = "Angler";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "officers", "Falaise_de_fleur_location_03_02_1");
-			sld.name = "Ogilvey";
+			sld.name = TranslateString("", "Ogilvey");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
  
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "officers", "Falaise_de_fleur_location_03_02_2");
-			sld.name = "Maccus";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Maccus", "officers", "Falaise_de_fleur_location_03_02_2");
+			sld.name = TranslateString("", "Maccus");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "Falaise_de_fleur_location_03_02_3");
-			sld.name = "Clanker";
+			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "locator22");
-			sld.name = "Hadras";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Hadras", "goto", "locator22");
+			sld.name = TranslateString("", "Hadras");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "locator8");
-			sld.name = "Urchin";
+			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "sitizen05");
-			sld.name = "Wheelback";
+			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "officers", "Falaise_de_fleur_shipyard_3");
-			sld.name = "Wyvern";
+			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "Falaise_de_fleur_shipyard_1");
-			sld.name = "Quittance";
+			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "officers", "Falaise_de_fleur_shipyard_2");
-			sld.name = "Penrod";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Penrod", "officers", "Falaise_de_fleur_shipyard_2");
+			sld.name = TranslateString("", "Penrod");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");

@@ -1,7 +1,7 @@
 title=Salvar al hermano de Askay
-text.t1=Askay, el asistente de Sri Sumbhajee, me ha dicho que su hermano fue secuestrado por cierto espaÒol al servicio de Holanda. Creo que deberÌa lidiar con ese problema y ayudar a ese pobre hombre a volver a casa.
-text.t2=El comandante de la prisiÛn me ha dicho que tal vez pueda persuadir al capit·n del barco prisiÛn de que me permita llevarme a Pusasn como esclavo. Esperemos que sea asÌ, para poder liberarlo y llevarlo junto Sri Sumbhajee y su hermano.
-text.t3=Ese espaÒol fue imperdonablemente grosero conmigo. AsÌ que los he matado a Èl y a su oficial. El hermano de Askay est· salvado.
-text.t4=Ese espaÒol fue imperdonablemente grosero conmigo. Pero cuando sus hombres se dieron cuenta de que venÌa por orden del gobernador, mataron a su propio capit·n y se fueron.
-text.t5=El comandante de la prisiÛn descubriÛ mi disfraz y vino a interceptame en el muelle. Peor para Èl. He tenido que matarlo, a Èl y a dos soldados.
-text.t6=°He "conseguido" una nueva pistola! Se la quitÈ a Sri Sumbhajee despuÈs de que su asistente no pudiera pagarme por haber salvado a su hermano.
+text.t1=Askay, el asistente de Sri Sumbhajee, me ha dicho que su hermano fue secuestrado por cierto espa√±ol al servicio de Holanda. Creo que deber√≠a lidiar con ese problema y ayudar a ese pobre hombre a volver a casa.
+text.t2=El comandante de la prisi√≥n me ha dicho que tal vez pueda persuadir al capit√°n del barco prisi√≥n de que me permita llevarme a Pusasn como esclavo. Esperemos que sea as√≠, para poder liberarlo y llevarlo junto Sri Sumbhajee y su hermano.
+text.t3=Ese espa√±ol fue imperdonablemente grosero conmigo. As√≠ que los he matado a √©l y a su oficial. El hermano de Askay est√° salvado.
+text.t4=Ese espa√±ol fue imperdonablemente grosero conmigo. Pero cuando sus hombres se dieron cuenta de que ven√≠a por orden del gobernador, mataron a su propio capit√°n y se fueron.
+text.t5=El comandante de la prisi√≥n descubri√≥ mi disfraz y vino a interceptame en el muelle. Peor para √©l. He tenido que matarlo, a √©l y a dos soldados.
+text.t6=¬°He "conseguido" una nueva pistola! Se la quit√© a Sri Sumbhajee despu√©s de que su asistente no pudiera pagarme por haber salvado a su hermano.

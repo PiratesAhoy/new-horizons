@@ -1,3 +1,3 @@
-title=Tutorial: Vender mercancía al comerciante local
-text.t1=Debo encontrar una tienda y vender la mercancía (#sgoods#) de mi bodega. Eso debería conseguirme el dinero para las reparaciones y para nerolar nuevos tripulantes.
+title=Tutorial: Vender mercancÃ­a al comerciante local
+text.t1=Debo encontrar una tienda y vender la mercancÃ­a (#sgoods#) de mi bodega. Eso deberÃ­a conseguirme el dinero para las reparaciones y para nerolar nuevos tripulantes.
 text.t2=Asunto arregaldo.

@@ -1,10 +1,10 @@
-title=Blackbeard's tower
-text.t1=The exit from Kristiania is close to the only brick house in the town Center.
-text.t2=I have found Blackbeard's tower but where is the entrance?
-text.t3=I have found Blackbeard's tower and the entrance is through the mountain.
-text.t4=I have found a secret entrance to the mountain but a lever is needed.
-text.t5=The auctionist must know who bought the items that may have belonged to Blackbeard himself.
-text.t6=I've got all the items sold at the auction. Now it's time to return to Blackbeard's tower.
+title=La torre de Barbanegra
+text.t1=La salida de Kristiania está cerca de la únic acasa de ladrillo en el centro de la ciudad.
+text.t2=He encontrado la torre de Barbanegra, ¿pero dónde está la entrada?
+text.t3=He encontrado la torre de Barbanegra y la entrada es a través de la montaña.
+text.t4=He encontrado una entrada secreta en la montaña, pero hace falta una palanca.
+text.t5=El subastador debe saber quién compró los artículos que pudieron pertenecer al mismísimo Barbanegra.
+text.t6=Tengo todos los artículos que se vendieron en la subasta. Es hora de volver a la torre de Barbanegra.
 text.t7=
 text.t8=
 text.t9=

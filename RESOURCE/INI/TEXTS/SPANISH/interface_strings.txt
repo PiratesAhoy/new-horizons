@@ -70,14 +70,14 @@ Badly worn{Lamentable}
 Worn{Pobre}
 Good{Apreciable}
 Fine{Impresionante}
-Exellent{Exelente}
+Exellent{Excelente}
 Average{Mediocre}
 Broken {Inservible}
 Badly worn {Lamentable}
 Worn {Pobre}
 Good {Apreciable}
 Fine {Impresioante}
-Exellent {Exelente}
+Exellent {Excelente}
 Average {Mediocre}
 
 Qual{Calidad}
@@ -272,26 +272,26 @@ New captain{Nuevo capit·n}
 (no available captains){(no hay capitanes disponibles)}
 Currently a passenger{Actualmente un pasajero}
 Currently an officer{Actualmente un oficial}
-Currently captain of the ship being relaunched{Actualmente capit·n de un barco que estÅ· siendo devueltp al servicio}
+Currently captain of the ship being relaunched{Actualmente capit·n de un barco que estÅ· siendo botado de nuevo}
 Currently captain of the ship going on shore leave{Actualmente capit·n de un barco de permiso en tierra}
-Ship is to be LAID UP at{El barco serÅ· RETIRADO DEL SERVICIO en}
+Ship is to be LAID UP at{El barco serÅ· puesto EN DIQUE SECO en}
 Ship is to be put on SHORE LEAVE at{El barco pasarÅ· su PERMISO EN TIERRA en}
 (CLICK TO VIEW){(CLIC PARA VER)}
 Days in berth{DÌas en atraque}
 Calculated daily (now due{Calculado por dÌas (ahora}
 Crew & officers' pay{Paga de tripulaciÛn y oficiales}
 Calculated monthly (now due{Calculado por mes (ahora}
-Choose a companion slot in which to relaunch this ship:{Elige un puesto de barco acompaÒante en el que pdevolver este barco al servicio:}
+Choose a companion slot in which to relaunch this ship:{Elige un puesto de barco acompaÒante en el que poner este barco despuÈs de botarlo:}
 Swap with the{Intercambiar con el}
-Relaunch into empty companion slot{Devolver al servicio en un puesto de acompaÒante vacÌo}
-(flagship slot){(puesto de buque insignia)}
+Relaunch into empty companion slot{Volver a botar en un puesto de acompaÒante vacÌo}
+(flagship slot){(buque insignia)}
 (You may not swap with the{(No puedes intercambiar con el}
 Choose a ship to berth at{Elige un barco para atracar en}
 (You may not berth the{(No puedes atracar el}
-Currently in companion slot{Actualmente e puesto de acompaÒante}
+Currently in companion slot{Actualmente en puesto de acompaÒante}
 Choose a berthing slot at{Elige un puesto de atraque en}
 Swap with{Intercambiar con}
-Berth ship in empty slot{Atracar barco en puesto vac˙å}
+Berth ship in empty slot{Atracar barco en puesto vacÌo}
 Falaise de Fleur{Falaise de Fleur}
 Redmond{Redmond}
 Isla Muelle{Isla Muelle}
@@ -302,13 +302,13 @@ Conceicao{ConceiÁ„o}
 Douwesen{Douwesen}
 Quebradas Costillas{Quebradas Costillas}
 Khael Roa{Khael Roa}
-Cayman{Cayman}
+Cayman{Islas Caim·n}
 Hispaniola{La EspaÒola}
 Cuba{Cuba}
 Guadeloupe{Guadeloupe}
 Saint Martin{Saint Martin}
 Antigua{Antigua}
-Turks{Turks}
+Turks{Islas Turcas}
 Grand Cayman{Grand Cayman}
 Marigot{Marigot}
 Havana{La Habana}
@@ -322,21 +322,61 @@ Santo Domingo{Santo Domingo}
 Tortuga{Tortuga}
 Grand Turk{Grand Turk}
 Initial location{Lugar inicial}
-Laid up{Retirado del servicio}
+Laid up{En dique seco}
 On shore leave{De permiso en tierra}
 (error){(error)}
 island{en la isla}
 island.{isla}
-Choosing captain for ship being relaunched, the{Eligiendo capit·n para devolver al servicio el}
+Choosing captain for ship being relaunched, the{Eligiendo capit·n para volver a botar el}
 Choosing captain for ship going on shore leave, the{Eligiendo capit·n para barco de permiso en tierra, el}
 at{en}
 on{en}
 Ship is currently{El barco est· actualmente}
-Ship is to be RELAUNCHED into companion slot{El barco va a ser DEVUELTO AL SERVICIO en un puesto de acompaÒante}
+Ship is to be RELAUNCHED into companion slot{El barco ser· BOTADO en el puesto de acompaÒante}
 Current captain{Capit·n actual}
 Ship is currently in companion slot{El barco est· actualmente en un puesto de acompaÒante}
 empty companion slot{puesto de acompaÒante vacÌo}
 empty berthing slot{puesto de atraque vacÌo}
+You can't assign a ship to a companion if you have no ship!{°No puedes asignar un barco a un compaÒero si t˙ no tienes un barco bajo tu mando!}
+You can't berth your own ship if your companions have ships!{°No puedes atracar tu propio barco si tus compaÒeros tienen barcos a su mando!}
+(You can berth/relaunch ships in the Secret hideout){(Puedes atracar o botar barcos en el Escondite Secreto)}
+(You must be in the shipyard to berth or relaunch a ship){(Debes estar en el astillero para atracar o botar un barco)}
+Confirm - Swap Ships{Confirmar - Intercambiar barcos}
+Confirm - Relaunch Ship{Confirmar - Botar barco}
+Confirm - Berth Ship{Confirmar - Atracar barco}
+Confirm - Lay Up Ship{Confirmar - Poner barco en dique seco}
+Confirm - Scrap Ship{Confirmar - Desguazar barco}
+You have selected to put the{Has elegido poner el}
+(currently active) on shore leave, and relaunch the{(actualmente en activo) de permiso en tierra, y volver a botar el}
+(currently on shore leave). This action is completely reversible; nothing will be lost or stripped from either ship. Note however that berthing charges for the{(actualmente de permiso en tierra). Esta acciÛn es completamente reversible; no se perder· ni se destruir· nada en ninguno de los dos barcos. Pero ten en cuenta que los gastos de atraque del}
+will be high ({ser·n elevados (}
+/ month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate ({/ mes) y tendr·s que seguir pagando a la tripulaciÛn, al capit·n y a cualquier oficial que el capit·n tenga, aunque a coste reducido (}
+/ month). Click OK to go ahead with this.{/ mes). Haz clic en OK si quieres seguir adelante con esto.}
+(currently laid up). If the{(actualmente en dique seco). Si el}
+goes on shore leave, nothing will be lost or stripped from her, but note that berthing charges will be high ({pasa a estar de permiso en tierra, no se perder· ni destruir· nada, pero ten en cuenta que los gastos de atraque ser·n elevados (}
+/ month). If the{/ mes). Si el}
+is relaunched, you will have to replace her rigging, her supplies and her crew. Click OK to go ahead with this.{es botado de nuevo, tendr·s que reemplazar su aparejo, sus suministros y su tripulaciÛn. Haz clic en OK si quieres seguir adelante con esto.}
+(currently active), and relaunch the{(actualmente en activo), y volver a botar el}
+(currently on shore leave). If the{(actualmente de permiso en tierra). Si el}
+is laid up, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{es puesto en dique seco, ser· desmantelado por completo, excepto por los caÒones (esto incluye tripulaciÛn, aparejo y mejoras; tendr·s que reemplazar todo esto cuando vuelvas a botarlo), y su capit·n volver· a la lista de pasajeros.}
+You will receive{Recibir·s}
+for the value of the cargo in the hold at local prices.{piezas de oro por el valor de la carga almacenada en la bodega, seg˙n los precios locales.}
+You will no longer have to pay the crew, and the berthing charge will be low ({No tendr·s que seguir pagando a la tripulaciÛn, y los gastos de atraque ser·n bajos (}
+/ month).{/ mes).}
+If the{Si el}
+is relaunched, you will have to replace, her rigging, her supplies and her crew.{es botado de nuevo, tendr·s que reemplazar su aparejo, sus suministros y su tripulaciÛn.}
+Click OK to go ahead with this.{Haz clic en OK si quieres seguir adelante con esto.}
+Click OK to confirm that you want to relaunch the{Haz clic en OK para confirmar que quieres volver a botar el}
+You will have to replace, her rigging, her supplies and her crew.{Tendr·s que reemplazar su aparejo, sus suministros y su tripulaciÛn.}
+(currently active) on shore leave. This action is completely reversible; nothing will be lost or stripped from her. Note however that berthing charges will be high ({(actualmente en activo) de permiso en tierra. Esta acciÛn es completamente reversible; no se perder· ni se destruir· nada en el barco. Pero ten en cuenta que los gastos de atraque ser·n elevados (}
+(currently active). She will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{(actualmente en activo). El barco ser· desmantelado por completo, excepto por los caÒones (esto incluye tripulaciÛn, aparejo y mejoras; tendr·s que reemplazar todo esto cuando vuelvas a botarlo), y su capit·n volver· a la lista de pasajeros.}
+Note that if you lay up the{Ten en cuenta que si pones en dique seco el}
+, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{, ser· desmantelado por completo, excepto por los caÒones (esto incluye tripulaciÛn, aparejo y mejoras; tendr·s que reemplazar todo esto cuando vuelvas a botarlo), y su capit·n volver· a la lista de pasajeros.}
+You will no longer have to pay the crew, and the monthly berthing charge will decrease from{No tendr·s que seguir pagando a la tripulaciÛn, y los gastos de atraque se reducir·n de}
+. Click OK to go ahead with this.{. Haz clic en OK si quieres seguir adelante con esto.}
+Click OK to confirm that you want to scrap the{Haz clic en OK para confirmar que quieres desguazar el}
+The ship's captain will return to the passengers list.{El capit·n del barco volver· a la lista de pasajeros.}
+
 You have signed articles with your crew.{Has firmado artÌculos con tu tripulaciÛn.}
 This means{Esto significa que recibir·n su paga mediante el reparto del botÌn despuÈs de cada expediciÛn. Si te hartas de capturar todas esas presas, puedes pagar a tu tripulaciÛn un salario normal. Esto har· que su moral sea m·s estable, pero no tan alta como podrÌa ser bajo un acuerdo de reparto del botÌn.}
 Note: Before you can do this, you must divide the plunder.{Nota: Antes de poder hacer esto, debes repartir el botÌn.}
@@ -402,6 +442,16 @@ Junk sails for Empress without holes.{Velas de junco para el Empress sin agujero
 Sails with the coat of arms of Castile-Leon.{Velas con el escudo de armas de Castilla y LeÛn.}
 Sails with the coat of arms of the Holy Roman Empire.{Velas con el escudo de armas del Sacro Imperio Romano.}
 Red sails with gold fringe, characteristic to Queen Anne's Revenge.{Velas rojas con flecos dorados, caracterÌsêticas del Queen Anne's Revenge.}
+A set of sails that once belonged to the legendary Death Vessel.{Un juego de velas que antaÒo perteneciÛ al legendario Buque de la Muerte.}
+A set of black sails with red and white stripes.{Un juego de velas negras con franjas rojas y blancas.}
+A set of sails bearing diamonds patterns, praised for their beauty.{Un juego de velas decoradas con un diseÒo de diamantes, renombradas por su belleza.}
+A set of white sails sporting a chain with broken links, and represent the holder's commitment to freedom.{Un juego de velas decoradas con una cadenas con eslabones rotos, que representa el compromiso de quien las iza con la libertad.}
+A set of sails with an anchor pattern, representing the conquering explorers of the New World.{Un juego de velas con la imagen de un ancla, que representa a los exploradores y conquistadores del Nuevo Mundo.}
+A set of blue sails with gilded gold patterns.{Un juego de velas azules con decoraciones doradas.}
+A set of sails with the pattern of a master navigator's golden sextant.{Un juego de velas decoradas con la imagen de un sextante dorado, propias de un maestro navegante.}
+A set of sails featuring a pattern of crossed muskets.{Un juego de velas con un emblema de mosquetes cruzados.}
+A set of white canvas sails adorned with red stripes.{Un juego de velas de lona blanca decoradas con franjas rojas.}
+A set of black and red sails emblazoned with the Templar cross.{Un juego de velas negras blasonadas con la cruz de los templarios.}
 National Emblem{Emblema nacional}
 sails, without emblem.{, sin emblema.}
 Plain{simples}
@@ -612,6 +662,13 @@ Points{Puntos}
 trade_ship{Barco mercante}
 war_ship{Barco guerra}
 pirate_ship{Barco pirata}
+
+Hostile Port{puerto hostil}
+Friendly Port{puerto amistoso}
+Cozumel Waters{aguas de Cozumel}
+Random Port{puerto al azar}
+Random Shore{costa al azar}
+Lifeboat{Bote salvavidas}
 
 Brothel{Burdel}
 Tutorial Deck{Cubierta del tutorial}
@@ -873,7 +930,7 @@ Gunpowder Storage{Santab·rbara}
 Cargo Hold{Bodega de carga}
 1st Cargo Hold{Primera bodega de carga}
 2nd Cargo Hold{Segunda bodega de carga}
-Captain's Cabin{C·mara del capitan}
+Captain's Cabin{C·mara del capit·n}
 Crew's Quarters{Alojamientos de la tripulaciÛn}
 Quarterdeck{Alc·zar}
 
@@ -1141,7 +1198,7 @@ FirstTimePlayingPoker{Clic izquierdo en 'Apuesta:' para apostar. Clic izquierdo 
 FirstTimePlayingDumb{Clic izquierdo en 'Apuesta:' para apostar. Clic izquierdo en la 'x' para dejar de jugar. Clic izquierdo en las cartas para empezar una mano. Clic izquierdo en cualquiera de tus cartas para hacer un movimiento.}
 FirstTimePlayingDice{Clic izquierdo en 'Apuesta:' para apostar. Clic izquierdo en la 'x' para dejar de jugar. Clic en el vaso para tirar los dados.}
 Exit from gamble confirm{øSeguro que quieres dejar este juego?}
-Exit from gamble confirmPoker{Si te retiras perder·s, a no ser que hayas jugado 50 manos o tengas todas las fichas. øSeguro que quieres salir?}
+Exit from gamble confirmPoker{Si te retiras perder·s, salvo que hayas jugado 50 manos o tengas todas las fichas. øQuieres salir?}
 CrewMutinyLeavesShip{°Alg˙nos miembros de la trupulaciÛn est·n abandonando tu barco!}
 CrewMutinyArticles1{Has violado las condiciones de nuestro acuerdo, capit·n. °Si no nos pagas inmediatamente}
 CrewMutinyArticles2{piezas de oro y un barril de ron, te colgaremos de una verga!}
@@ -1271,7 +1328,7 @@ Peninsula de Zapata{PenÌnsula de Zapata}
 Fort St Louis{Fort St Louis}
 Fort James{Fort James}
 Fort{Fuerte}
-Terks{Turks}
+Terks{Islas Turcas}
 Hidden Coast{Costa Esoncdida}
 Pirate Port{Puerto pirata}
 Fort Amsterdam{Fuerte Amsterdam}
@@ -1321,7 +1378,9 @@ stays_desc{Velas de estay adicionales, izadas entre los m·stiles, mejorar·n el r
 rhull_desc{Refuerzos estructurales improvisados, seg˙n las especificaciones del capit·n, vuelven tu barco ligeramente m·s resistente contra las tormentas, el mar y los disparos.}
 flushed_desc{Los corsarios a menudo eliminan las superestructuras innecesarias de los barcos para aumentar la velocidad, maniobrabilidad y capacidad de carga a costa de la resistencia del casco.}
 
-Swamp Island{Isal del pantano}
+Swamp Island{Isla del pantano}
+Pirate's Cave{Cueva del pirata}
+Log-house{CabaÒa de troncos}
 Swamp Wreck{Naufragio del pantano}
 Store upstairs{Piso de arriba de la tienda}
 Woodes Rogers' bedroom{Dormitorio de Woodes Rogers}
@@ -1466,11 +1525,11 @@ Now I need some glue to repair the Book.{Ahora necesito algo de cola para repara
 No this is not the right picture.{No, esta no es la imagen correcta.}
 Maybe I should cut him down.{Quiz·s deberÌa bajarlo.}
 That barrel could be useful but I can't remove it with my bare hands from the gibbet.{Ese barril podrÌa ser ˙til pero no puedo sacarlo del cadalso con mis manos desnudas.}
-Ok, there might be skeletons in here...{De acuerdo, puede que ajya esqueletos aquÌ...}
-...and how do I frighten them away with fire!?{...øy cÛmo voy a espantarlos con fuego?}
-Hmm, very foggy now - maybe the Skeletons can't see me?{Hum, hay mucha niebla - øquiz·s los esqueletos no puedan verme?}
-The corpse is too heavy walking around with.{El cad·ver e smuy pesado para andar con Èl a cuestas.}
-Maybe these poles and planks could be of some help.{Quiz·s estos postes y tablas podrÌan ser de ayuda.}
+Ok, there might be skeletons in here...{De acuerdo, puede que haya esqueletos aquÌ...}
+...and how do I frighten them away with fire!?{... øy cÛmo voy a espantarlos con fuego?}
+Hmm, very foggy now - maybe the Skeletons can't see me?{Hum, hay mucha niebla, øquiz·s los esqueletos no puedan verme?}
+The corpse is too heavy walking around with.{El cad·ver es muy pesado para andar con Èl a cuestas.}
+Maybe these poles and planks could be of some help.{Quiz·s estos postes y tablas podrÌan servirme de ayuda.}
 I need something with a hook to get those boxes.{Necesito algo con un gancho para alcanzar esas cajas.}
 If I just had something to carry this chest with!{°Si tan siquiera tuviera algo con lo que cargar este cofre!}
 I could use a box or bag or anything to carry this in.{PodrÌa usar una caja o una bolsa o cualquier cosa para llevarlo dentro.}
@@ -1605,7 +1664,12 @@ I have 2 sailors left to hire.{Me quedan 2 marineros por enrolar.}
 I have 1 sailor left to hire.{Me queda 1 marineros por enrolar.}
 I have 2 officers left to hire.{Me quedan 2 oficiales por enrolar.}
 I have 1 officer left to hire.{Me queda 1 oficial por enrolar.}
-I need more logs to build a raft.{Necesito m·s troncos para construir una balsa.}
+Hmm, with some more logs maybe I could build a raft here.{Hum, con unos cuantos troncos m·s, quiz·s podrÌa construir una balsa.}
+I still need more logs to build a raft.{A˙n necesito m·s troncos para construir una balsa.}
+Enough with logs - how do I assemble the raft?{Ya basta de troncos. øCÛmo los uno para hacer la balsa?}
+No, this rope is tied too hard!{°No, este cabo est· demasiado bien atado!}
+No, I can't move it!{°No, no puedo moverlo!}
+Hmm. That was maybe not a good idea!?{Hum. °øQuiz·s no era una buena idea?!}
 That was it. I'll go back to Charles Vane.{Eso es todo. VolverÈ con Charles Vane.}
 Maybe the Captains in the Sacristy know more...{Puede que los capitanes en la sacristÌa sepan m·s...}
 Maybe the Captains in the Church know more...{Puede que los capitanes en la iglesia sepan m·s...}
@@ -1915,6 +1979,7 @@ Rotunda upper levels{Niveles superiores de Rotunda}
 Rotunda middle levels{Niveles medios de Rotunda}
 Rotunda lower levels{Niveles inferiores de Rotunda}
 I'll need a Rope here.{NecesitarÈ una cuerda aquÌ.}
+Kitchen{Cocina}
 Dormitorium{Dormitorium}
 Cellarium{Cellarium}
 Chapter-house{Sala capitular}
@@ -1930,6 +1995,7 @@ Sacristy{SacristÌa}
 Graveyard{Cementerio}
 Crypt{Cripta}
 Cell{Celda}
+Fort Waxholm{Fort Waxholm}
 
 Something under that straw?{øAlgo bajo esa paja?}
 No, I'll only cut myself on those shards.{No, me cortarÌa con esos cristales rotos.}
@@ -2070,6 +2136,7 @@ Hint: To make an officer available as an escort, assign that officer to one of t
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Pista: Para hacer que un oficial estÈ disponible como escolta, asigna a ese oficial a uno de los 3 primeros recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Pista: Para hacer que un oficial estÈ disponible como escolta, asigna a ese oficial a uno de los 4 recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Pista: Para hacer que un oficial estÈ disponible como escolta, asigna a ese oficial a uno de los 3 primeros recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
+Capit·n{Capit·n}
 
 Three days later...{Tres dÌas despuÈs...}
 
@@ -2081,7 +2148,7 @@ Officer Boarding False{El oficial no luchar· en los abordajes}
 SmugglingAmount{MercancÌa pasada de contrabando:}
 SmugglingState{Cantidad de patrullas:}
 lax{laxa}
-normal{normales}
+normal{normal}
 tight{estricta}
 very tight{muy estricta}
 Increase_Patrol{ha aumentado las parullas guardacostas}

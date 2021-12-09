@@ -220,7 +220,7 @@ itmdescr_blade19
 Una simple pero efectiva ropera, aparentemente de origen alemán.
 }
 
-itmname_blade20	{Espada ancha asiática}
+itmname_blade20	{Espada asiática}
 itmdescr_blade20
 {
 Un arma asiática de origen incierto, seguramente china.

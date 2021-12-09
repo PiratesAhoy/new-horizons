@@ -34,7 +34,7 @@ void ProcessDialogEvent()
 
 	if(CheckAttribute(characterFromID(PChar.quest.romance), "married") && characters[getCharacterIndex(PChar.quest.romance)].married == MR_MARRIED && characters[getCharacterIndex(PChar.quest.romance)].married.id == PChar.id)
 		name = GetMyName(PChar);
-	else name = "Capitбn " + GetMyLastName(PChar);
+	else name = TranslateString("", "Capitán") + " " + GetMyLastName(PChar);
 
 	DeleteAttribute(&Dialog,"Links");
 

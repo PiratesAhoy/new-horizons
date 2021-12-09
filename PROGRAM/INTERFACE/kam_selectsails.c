@@ -139,7 +139,7 @@ void InitInterface(string iniName)
 	SpecialSailsNormal[25] = "sail_Templar.tga";
 	SpecialSailsEmblem[25] = "sail_Templar1.tga";
 	SpecialSailsDescr[25] = "A set of black and red sails emblazoned with the Templar cross.";
-	
+
 	CreateString(true, "SailTypeName", "", FONT_NORMAL, COLOR_NORMAL, 130, 55, SCRIPT_ALIGN_CENTER, 0.9);
 	CreateString(true, "SailModelName", "", FONT_NORMAL, COLOR_NORMAL, 130, 105, SCRIPT_ALIGN_CENTER, 0.9);
 	CreateString(true, "SailColorName", "", FONT_NORMAL, COLOR_NORMAL, 130, 155, SCRIPT_ALIGN_CENTER, 0.9);

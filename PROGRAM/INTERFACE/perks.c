@@ -212,7 +212,7 @@ void SetAbilitesList()
 	//Show the non_contributing perks
 	if(skipped>0 && SHOW_NON_CONTRIB_PERK > 0 && !ShowAssignableOnly)
 	{
-		SendMessage(&GameInterface,"lsle",MSG_INTERFACE_MSG_TO_NODE,"PERKSWINDOW", 0,"NON CONTRIBUTING PERKS");
+		SendMessage(&GameInterface,"lsle",MSG_INTERFACE_MSG_TO_NODE,"PERKSWINDOW", 0,TranslateString("", "NON CONTRIBUTING PERKS"));
 		chrPerksQ++;
 		
 		for(i=0; i<perksQ; i++)
@@ -388,18 +388,18 @@ void DoViewDescribe()
 	//Add min level -Levis
 	if(!CheckPerkRank(refUsedCharacter, strPerkName))
 	{
-		Description = Description + " Min Level: " + GetPerkRank(strPerkName));
+		Description = Description + " " + TranslateString("", "Min Level:") + " " + GetPerkRank(strPerkName));
 	}
 	//Check for captains
 	if(!isOfficerPerk(refUsedCharacter, strPerkName))
 	{
 		if(SHOW_NON_CONTRIB_PERK>0)
 		{
-			Description = "This officer won't contribute this perk to the ship. " + Description;
+			Description = TranslateString("", "This officer won't contribute this perk to the ship.") + " " + Description;
 		}
 		else
 		{
-			Description = "You can't select this ability for this role";
+			Description = TranslateString("", "You can't select this ability for this role");
 		}
 	}
 	SetFormatedText("DESCRIBEWINDOW",Description);

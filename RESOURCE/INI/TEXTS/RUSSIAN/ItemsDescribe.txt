@@ -408,7 +408,7 @@ A particually ornate, gold Dirk, that would make a ideal gift for someone... in 
 itmname_blade40	{Polish Hussar's Szabla}
 itmdescr_blade40
 {
-Mкlйe weapon widely used by the heavy Cavalry of the Polish Hussars. The long, thin, single-edged curved blade is ideal for skewering your opponant while on horse-back. This is the weapon that influenced the later adoption of Sabres into Western European Armies.
+Melee weapon widely used by the heavy Cavalry of the Polish Hussars. The long, thin, single-edged curved blade is ideal for skewering your opponant while on horse-back. This is the weapon that influenced the later adoption of Sabres into Western European Armies.
 }
 
 itmname_blade43	{US Cavalry Sabre}
@@ -482,7 +482,7 @@ Ornate Dress Sword from the Royal Courts of Paris. Maybe you can impress your op
 itmname_bladeFD	{Francis Drake's Sword}
 itmdescr_bladeFD
 {
-I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by Franзois Moulin. It's at least a century old and is covered in a blue-green patina. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its' history.
+I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by Francois Moulin. It's at least a century old and is covered in a blue-green patina. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its' history.
 }
 
 

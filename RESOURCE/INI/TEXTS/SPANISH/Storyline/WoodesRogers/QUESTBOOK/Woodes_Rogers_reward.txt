@@ -1,3 +1,3 @@
-title=Woodes Rogers reward
-text.t1=There is a reward for me in the Governors bedroom. His rooms are a litle 'spread out' though...
-text.t2=Woodes Rogers gave me a pistol with the name 'Johnson'. And....? Think I go back to Rogers.
+title=La recompensa de Woodes Rogers
+text.t1=Hay una recompensa para mí en el dormitorio del gobernador. Pero sus habitaciones están un poco 'dispersas'...
+text.t2=Woodes Rogers me ha dado una pistola con el nombre 'Johnson'. ¿Y...? Creo que volveré con Rogers.

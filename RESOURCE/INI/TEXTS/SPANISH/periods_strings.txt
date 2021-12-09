@@ -179,7 +179,7 @@ de Salamanca{de Salamanca}
 de Montanos{de Montanos}
 Blázquez{Blázquez}
 Xelder{Xelder}
-Vadés{Vadés}
+Valdés{Valdés}
 Ruíz{Ruíz}
 de Pereda{de Pereda}
 José{José}

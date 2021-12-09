@@ -1,2753 +1,2607 @@
-Potion parameters{Medical Remedy}
-health value{Health}
-weapon blade parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, piercing #dpiercing#%, block #dblock#%.}
-weapon gun parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, reload time #dchargespeed#sec, accuracy #daccuracy#%.}
-weapon armor parameters{Armor: Coverage #dcoverage#%, Chance to stop / Percent of damage taken if not stopped, for: Sword #dbladestop#% / #dbladefrac#%, Gun #dgunstop#% / #dgunfrac#%.}
+Potion parameters{Remedio médico}
+health value{Salud}
+weapon blade parameters{Arma: daño.min/max #ddmg_min#/#ddmg_max#, penetrante #dpiercing#%, bloqueo #dblock#%.}
+weapon gun parameters{Arma: daño.min/max #ddmg_min#/#ddmg_max#, recarga #dchargespeed#sec, precisión #daccuracy#%.}
+weapon armor parameters{Armadura: Cobertura #dcoverage#%, Posib. de parada / % de daño recibido si no hay parada, para: Espada #dbladestop#% / #dbladefrac#%, Arma de fuego #dgunstop#% / #dgunfrac#%.}
 
 //--------------- AMMO START --------------------------------------------------------------------------------------
 
 
-itmname_ammobag2 {Ammunition Bag}
+itmname_ammobag2 {Cartuchera}
 itmdescr_ammobag2
 {
-You may keep 18 gunpowder AND 18 pistolbullets, 18 pistolgrapes or 9 musketbullets. Powderflask or Ammmunition Pouch are NOT needed but a pistol belt must be equipped! Reloading is 10% faster.
+Puedes llevar 18 cargas de pólvora Y 18 balas de pistola, 18 cargas de metralla de pistola o 9 balas de mosquete. NO se necesitan petaca de pólvora ni saquete de balas pero debe equiparse una bandolera de pistolas. Recargar es un 10% más rápido.
 }
 
-itmname_bladepowderhornP	{Powder Horn}
+itmname_bladepowderhornP	{Cuerno de pólvora}
 itmdescr_bladepowderhornP
 {
-Holds the finer priming powder.  Each cannon shot uses as much primer as a fully loaded musket uses common powder.
+Contiene la mejor pólvora para cebar cañones. Cada disparo de cañón usa tanto cebo como una carga completa de pólvora de mosquete.
 }
 
-itmname_bladepowderhornA	{Powder Horn}
+itmname_bladepowderhornA	{Cuerno de pólvora}
 itmdescr_bladepowderhornA
 {
-Holds the finer priming powder.  Each cannon shot uses as much primer as a fully loaded musket uses common powder.
-}
-
-itmname_incense			{Incense}
-itmdescr_incense
-{
-Frankincense is an aromatic gum resin. When burned as incense, it creates a strong and beautiful aroma and provides very strong protection against all evil. 
-}
-
-itmname_nails 			{Nails}
-itmdescr_nails
-{
-Ordinary carpenter nails.
+Contiene la mejor pólvora para cebar cañones. Cada disparo de cañón usa tanto cebo como una carga completa de pólvora de mosquete.
 }
 
 //--------------- AMMO END --------------------------------------------------------------------------------------
 //--------------- KEYS START --------------------------------------------------------------------------------------
 
-itmname_key1		{Chest Key}
+itmname_key1		{Llave de cofre}
 itmdescr_key1
 {
-A common key to a chest.
+Una llave normal para un cofre.
 }
 
-itmname_key2		{Chest Key}
+itmname_key2		{Llave de cofre}
 itmdescr_key2
 {
-A common key to a chest.
+Una llave normal para un cofre.
 }
 
-itmname_key3		{Large Key}
+itmname_key3		{Llave grande}
 itmdescr_key3
 {
-A robust key to a heavy lock.
+Una llave robusta para una cerradura pesada.
 }
 
-itmname_key4		{Ordinary Key}
+itmname_key4		{Llave ordinaria}
 itmdescr_key4
 {
-A thin key to a standard lock.
+Una fina llave para una cerradura normal.
 }
 
-itmname_key5		{Key}
+itmname_key5		{Llave}
 itmdescr_key5
 {
-A small key to a door, but to which one?
+Una llave pequeña para una puerta, ¿pero para cuál?
 }
 
-itmname_key6		{Key}
+itmname_key6		{Llave}
 itmdescr_key6
 {
-Another small door key, very great help! 
+Otra pequeña llave para una puerte, ¡qué gran ayuda! 
 }
 
-itmname_key7		{Key}
+itmname_key7		{Llave}
 itmdescr_key7
 {
-This small door key was found in the distillery. 
+Esta pequña llave fue encontrada en la destilería. 
 }
 
-itmname_key8		{Padlock with Key}
+itmname_key8		{Candado con llave}
 itmdescr_key8
 {
-A rusty padlock with key.
+Un candado oxidado con llave.
 }
 
-itmname_key9		{Key Collection}
+itmname_key9		{Colección de llaves}
 itmdescr_key9
 {
-A small collection of chest keys.
+Una pequeña colección de llaves para cofres.
 }
 
-itmname_key10		{Small Key}
+itmname_key10		{Llave pequeña}
 itmdescr_key10
 {
-A small key to a chest.
+Una pequeña llave para un cofre.
 }
 
-itmname_key11		{Small Key}
+itmname_key11		{Llave pequeña}
 itmdescr_key11
 {
-A small key found in the back of the Medicine Chest - a key to the Surgey Kit!
+Una pequeña llave encontrada en el fondo del cofre de medicinas: ¡una llave para el equipo de cirujía!
 }
 
-itmname_key12		{Mine Key}
+itmname_key12		{Llave de la mina}
 itmdescr_key12
 {
-A casket with a Key marked with number 2 to the mine.
+Un cofrecillo con una llave de la mina marcada con el número 2.
 }
 
-itmname_key13		{Mine Key}
+itmname_key13		{Llave de la mina}
 itmdescr_key13
 {
-A casket with a Key marked with number 3 to the mine.
+Un cofrecillo con una llave de la mina marcada con el número 3.
 }
 
-itmname_key14		{Mine Key}
+itmname_key14		{Llave de la mina}
 itmdescr_key14
 {
-A casket with a Key to the mine. The number is missing.
+Un cofrecillo con una llave de la mina. Falta el número.
 }
 
-itmname_key15		{Key Collection}
+itmname_key15		{Colección de llaves}
 itmdescr_key15
 {
-A collection of keys to the food and drink storage room.
+Una colección de llaves para el almacén de comida y bebida.
 }
 
-itmname_key16		{Chest Key}
+itmname_key16		{Llave de cofre}
 itmdescr_key16
 {
-A big black key to a chest lock.
+Una gran llave negra para la cerradura de un cofre.
 }
 
-itmname_key17		{Gold Key}
+itmname_key17		{Llalve dorada}
 itmdescr_key17
 {
-A small gold key hanging to a tarry string.
+Una pequeña llave dorada colgada de un cordel embreado.
 }
 
-itmname_key18		{Key}
+itmname_key18		{Llave}
 itmdescr_key18
 {
-Yes! There was a black door key under the scroll.
+¡Sí! Había una llave negra para una puerta debajo del pergamino.
 }
 
-itmname_key19		{Key}
+itmname_key19		{Llave}
 itmdescr_key19
 {
-A chestkey with a small flag.
+Una llave para un cofre con una pequeña bandera.
 }
 
-itmname_bladekeysimple		{Key}
+itmname_bladekeysimple		{Llave}
 itmdescr_bladekeysimple
 {
-Yes! I got a black door key with the map.
+¡Sí! He conseguido una lleve negra para una puerta con el mapa.
 }
 
-itmname_key30		{Key}
-itmdescr_key30
-{
-A large Key marked with "Cave". 
-}
-
-itmname_key33		{Key}
+itmname_key33		{Llave}
 itmdescr_key33
 {
-A key with a skull.
+Una llave con una calavera.
 }
 
-itmname_key34		{Key}
+itmname_key34		{Llave}
 itmdescr_key34
 {
-A key with the Maltese cross.
+Una llave con una cruz de Malta.
 }
 
-itmname_key35		{Key}
+itmname_key35		{Llave}
 itmdescr_key35
 {
-A key with a town symbol.
+Una llave con el símbolo de una ciudad.
 }
 
-itmname_key36		{Key}
+itmname_key36		{Llave}
 itmdescr_key36
 {
-An old copper key with the Sun symbol.
+Una vieja llave de cobre con el símbolo del Sol.
 }
 
-itmname_key37		{Key}
+itmname_key37		{Llave}
 itmdescr_key37
 {
-This is the Boat Key!
-}
-
-itmname_key38		{Prison Keys}
-itmdescr_key38
-{
-Three Keys and a Whistle.
+¡Esta es la llve del bote!
 }
 
 //--------------- KEYS END -----------------------------------------------------------------------------------------
 //--------------- BOOKS START --------------------------------------------------------------------------------------
 
-itmname_book21		{Statute Book}
+itmname_book21		{Libro de los estatutos}
 itmdescr_book21
 {
-Abstract of the British West Indian statutes. The cover is worn but has it ever been opened?
+Resumen de los estatutos de las Indias Occidentales británicas. La cubierta está gastada, pero, ¿se ha abierto alguna vez?
 }
 
-itmname_book22		{The Spanish Armada}
+itmname_book22		{La Gran Armada española}
 itmdescr_book22
 {
-The defeat of the Armada - an eye witness' story. Martin Frobisher, Commander of the frigate Triumph. 
+'La derrota de la Gran Armada: el relato de un testigo'. Martin Frobisher, Comandante de la fragata Triumph. 
 }
 
-itmname_book23		{The Royal Ship Wasa}
+itmname_book23		{El navío real Wasa}
 itmdescr_book23
 {
-The secret behind the disaster. Original reckonings of Henrik Hybertsson now published. 
+'El secreto detrás del desastre'. Observaciones originales de Henrik Hybertsson, ahora publicadas. 
 }
 
-itmname_book24		{Notorious Pirates}
+itmname_book24		{Notorios Piratas}
 itmdescr_book24
 {
-A General History of the Robberies and Murders of the Most Notorious Pirates. Two volumes loaded with historical and contemporary pirate captains and their crew. By Captain Charles Johnson.  
+'Historia General de los Robos y Asesinatos de los más Notorios Piratas'. Dos volúmenes repletos de capitanes piratas históricos y contemporáneos, y sus tripuilaciones. Por el capitán Charles Johnson.  
 }
 
-itmname_book25		{A New Voyage Round the World}
+itmname_book25		{Un nuevo viaje alrededor del mundo}
 itmdescr_book25
 {
-Published 1697 by William Dampier. All you could ever wish to know about the Miscito coast for example. The picture on the front cover is missing.
+Publicado en 1697 por William Dampier. Todo lo que quieras saber sobre la costa de Miscito, por ejemplo. Falta la ilustración de cubierta.
 }
 
-itmname_book26		{The Human Skeleton}
+itmname_book26		{El esqueleto humano}
 itmdescr_book26
 {
-A manual to all the 206 bones of a human being. Pictures.
+Un manual de los 206 huesos que tiene el ser humano. Con ilustraciones.
 }
 
 itmname_book27		{Chymist}
 itmdescr_book27
 {
-A german work of chemistry published in Leipzig 1729. Looks like it is about minerals and vegetables? 
+Una obra alemana sobre química publicada en Leipzig en 1729. ¿Parece que trata sobre minerales y vegetales? 
 }
 
 itmname_book28		{Lolita}
 itmdescr_book28
 {
-An interesting book in a somewhat delicate topic. Provided with childrenproof lock.
+Un ibro interesante sobre un tema delicado. Incluye cerradura a prueba de niños.
 }
 
 itmname_book29		{Les Fleurs du Mal}
 itmdescr_book29
 {
-Poems of the famous poet Charles Baudelaire. French edition.
+Poemas del famoso poeta Charles Baudelaire. Edición francesa.
 }
 
-itmname_book30		{Books of Poetry}
+itmname_book30		{Libros de poesía}
 itmdescr_book30
 {
-A rich collection of poetry from all around the world. This is really hot stuff.
+Una colección de poesía de todo el mundo. Esto es una maravilla.
 }
 
-itmname_book31		{A New Voyage Round the World}
+itmname_book31		{Un nuevo viaje alrededor del mundo}
 itmdescr_book31
 {
-The Dampier book is now repaired.
+El libro de Dampier está reparado.
 }
 
 itmname_book33		{Geografien}
 itmdescr_book33
 {
-An old and very basic schoolbook, in any of those nordic languages perhaps?
+Un viejo y muy básico libro de texto, ¿en uno de esos idiomas nórdicos, quizás?
 }
 
-itmname_book34		{Collection of Books}
+itmname_book34		{Colección de libros}
 itmdescr_book34
 {
-Contains: The Spanish silverfleets, Sugar and Rum trade in the Caribbean, Nassau an economic overview.
+Contiene: 'Las flotas españolas de la plata', 'Comercio de azúcar y ron en el Caribe', 'Nassau: un panorama económico'.
 }
 
 itmname_book35		{Mercurius}
 itmdescr_book35
 {
-Healing and curing with the dangerous but magnificient liquid metal.
+Sanación y curación con el peligroso pero magnífico metal líquido.
 }
 
-itmname_book36		{The Gold-Bug}
+itmname_book36		{El escarabajo de oro}
 itmdescr_book36
 {
-A fascinating longer short-story about the buried treasure of Captain Kidd. Author Edgar Allan Poe.
+Una fascinante historia breve sobre el tesoro enterrado del capitán Kidd. Autor: Edgar Allan Poe.
 }
 
-itmname_book41		{Art of Artillery}
+itmname_book41		{Arte de la Artillería}
 itmdescr_book41
 {
-1) Sponge your piece.
-2) Put in your powder.
-3) Put in your wad.
-4) Put in your shot.
-5) Thrust home your shot with the rammer.
-6) Put the primer in the vent.
-7) Fire!
+1) Limpia el ánima con la esponja.
+2) Introduce la pólvora.
+3) Introduce el taco.
+4) Introduce la bala.
+5) Aprieta la carga con el atacador.
+6) Pon el cebo en el oido.
+7) ¡Fuego!
 }
 
-itmname_book42		{Document}
+itmname_book42		{Documento}
 itmdescr_book42
 {
-A very long scroll ......
+Un pergamino muy largo...
 }
 
-itmname_book43		{Document}
+itmname_book43		{Documento}
 itmdescr_book43
 {
-...... with three groups of ......
+... con tres grupos de...
 }
 
-itmname_book44		{Document}
+itmname_book44		{Documento}
 itmdescr_book44
 {
-...... strange symbols.
+... símbolos extraños.
 }
 
-itmname_book45		{Two old Notebooks}
+itmname_book45		{Dos cuadernos viejos}
 itmdescr_book45
 {
-Among the handwritten notes:
-"Never pour water into concentraded acids - it's the other way around!!!"
+Entre las notas manuscritas:
+"Nunca viertas agua sobre ácidos concentrados; ¡es al revés!"
 }
 
-itmname_book46		{Scroll}
+itmname_book46		{Rollo de pergamino}
 itmdescr_book46
 {
-More (cabbalistic?) symbols or what.
+Más símbolos (¿cabalísticos?) o algo así.
 }
 
-itmname_book47		{Parchment}
+itmname_book47		{Pergamino}
 itmdescr_book47
 {
-A badly worn piece of parchment - with the obligatory cipher.
+Un fragmento de pergamino muy desgastado, escrito en clave.
 }
 
 itmname_book48		{Alchymia}
 itmdescr_book48
 {
-The discovery of Acidium Vitrioli is credited to the 8th century alchemist Jabir ibn Hayyan.
-It is one of the most important base ingredients, as many other acids may be produced from it.
+El descubrimiento del Acidium Vitrioli se atribuye al alquimista del siglo VIII Jabir ibn Hayyan.
+Es uno de los ingredientes básicos más importantes, ya que se utiliza para elaborar otros muchos ácidos.
  
-Diluted it is used as a solvent for dissolving most metals with notable exceptions of gold, silver and platinum.
+Diluido, se utiliza como disolvente capaz de disolver la mayoría de los metales, con las notables excepciones del oro, la plata y el platino.
 }
 
-itmname_book49		{Book}
+itmname_book49		{Libro}
 itmdescr_book49
 {
-An open heavy book .....
+Un pesado libro abierto...
 }
 
-itmname_book50		{Book}
+itmname_book50		{Libro}
 itmdescr_book50
 {
-..... and the mystic characters are there. (A foreign alphabet maybe?)
+... lleno de caracteres místicos (¿un alfabeto extranjero, tal vez?)
 }
 
-itmname_book51		{The Alchemy of Aqua Vitae}
+itmname_book51		{La alquimia de la Aqua Vitae}
 itmdescr_book51
 {
-From Champagne to Cognac in a minute, by Renault Noir. A small sample is included.
+De Champagne a Cognac en un minuto, por Renault Noir. Incluye una pequeña muestra.
 }
 
-itmname_bible		{Selkirk's Bible}
+itmname_bible			{Biblia de Selkirk}
 itmdescr_bible
 {
-The Holy Bible, the one Alexander Selkirk studied for years on that godforgotten island.
+La Sagrada Biblia, la misma que Alexander Selkirk estudió durante años en aquella isla dejada de la mano de Dios.
 }
 
-itmname_bible_shot	{Selkirk's Bible}
+itmname_bible_shot	{Biblia de Selkirk}
 itmdescr_bible_shot
 {
-Selkirk's Bible has saved my life!
+¡La Biblia de Selkirk me ha salvado la vida!
 }
 
-itmname_book63		{Manual of Medicine}
+itmname_book63		{Manual de medicina}
 itmdescr_book63
 {
-An easy to grasp book in the popular scientific style. Many pictures.
+Un libro fácil de entender escrito en el estilo científico más popular. Muchas ilustraciones.
 }
 
-itmname_book64		{L�Ordre de Malte}
+itmname_book64		{L’Ordre de Malte}
 itmdescr_book64
 {
-A french edition, author Annet de Clermont-Gessant.
+Una edición francesa. Autor: Annet de Clermont-Gessant.
 }
 
-itmname_book65		{Sacred Writ}
+itmname_book65		{Sagradas Escrituras}
 itmdescr_book65
 {
-The Holy Bible complete with a small crucifix as a bookmarker.
+TLa Sagrada Biblia, incluye un pequeño crucifijo como marcapáginas.
 }
 
-itmname_book66		{Pile of Sheets}
+itmname_book66		{Montón de hojas}
 itmdescr_book66
 {
-The accounts for the Maltese Order in Charlestown.
+Los registros de la Orden de Malta en Charlestown.
 }
 
-itmname_book67		{Document}
+itmname_book67		{Documento}
 itmdescr_book67
 {
-Not sure what it is. Looks important though.
+No estoy seguro de qué es. Pero parece importante.
 }
 
-itmname_book68		{Scroll}
+itmname_book68		{Pergamino}
 itmdescr_book68
 {
-It's all in latin. Could be anything from medicine to excorcism.
+Está todo en latín. Podría ser cualquier cosa, desde medicina hasta exorcismos.
 }
 
-itmname_book69A		{Logbook}
+itmname_book69A		{Cuaderno de bitácora}
 itmdescr_book69A
 {
-Edw. Thatch his Logbook 
+Edw. Thatch, su cuaderno de bitácora 
     1717 - 
 }
 
-itmname_book69B		{Logbook}
+itmname_book69B		{Cuaderno de bitácora}
 itmdescr_book69B
 {
-Such a Day, Rum all out.
-Our Company somewhat sober.
-A damn'd Confusion amongst us!
-Rogues a plotting, great talk of Separation.
-So I look'd sharp for a Prize.
-Such a day took one, with a great deal of Liquor on board, 
-so kept the Company hot, damn'd hot, then all Things went well again.
+En este Día, nos quedamos sin Ron.
+Nuestra Compañía está algo sobria.
+¡Maldita Confusión reina entre nosotros!
+Los canallas conspiran, se habla mucho de Separación.
+Así que busqué con ahinco una Presa.
+En este día tomé una, con gran cantidad de Licor a bordo, 
+para mantener a la Compañíoa caliente, bien caliente, entonces todo volvió a ir bien.
 }
 
-itmname_book69C		{Logbook}
+itmname_book69C		{Cuaderno de bitácora}
 itmdescr_book69C
 {
-Four of the french crew from La Concorde signed on:
-Thomas Martin, sailor
-Nicolas Bernard, sailor
-Julien Dubois, sailor
-Louis Arot, cabin boy
+Cuatro de los tripulantes franceses de 'La Concorde' se enrolaron:
+Thomas Martin, marinero
+Nicolas Bernard, marinero
+Julien Dubois, marinero
+Louis Arot, grumete
 
-I also kept the pilot, four surgeons, two carpenters, two sailors and the cook. 
+También me quedé con el piloto, cuatro cirujanos, dos carpinteros, dos marineros y el cocinero. 
 }
 
-itmname_tailors_book	{Order-book}
+itmname_tailors_book	{Libro de encargos}
 itmdescr_tailors_book
 {
-Anna Balck, tailor.
+Anna Balck, sastre.
 }
 
-itmname_book70_start	{Burned Book}
+itmname_book70_start	{Libro quemado}
 itmdescr_book70_start
 {
-This Book with a mysterious sign has been damaged by fire.  
+Este libro ocn un signo misterioso ha sido dañado por el fuego.  
 }
 
-itmname_book70		{Alchemy Book}
+itmname_book70		{Libro de alquimia}
 itmdescr_book70
 {
-Only the first part is legible.  
+Solo es legible la primera parte.  
 }
 
-itmname_book70_0	{Alchemy Book}
+itmname_book70_0	{Libro de alquimia}
 itmdescr_book70_0
 {
-A symbolic picture of a skeleton.
+Una ilustración simbólica de un esqueleto.
 }
 
-itmname_book70_1	{Alchemy Book}
+itmname_book70_1	{Libro de alquimia}
 itmdescr_book70_1
 {
-Tabula Smaragdina or The Emerald Tablet, by Hermes Trismegistus. A compact and cryptic piece of the Hermetica reputed to contain the secret of the prima materia and its transmutation.
+'Tabula Smaragdina' o 'La mesa esmeralda', por Hermes Trismegisto. Un fragmento compacto y críptico de la Hermética, del que se dice que contiene el secreto de la prima materia y su transmutación.
 }
 
-itmname_book70_2	{Alchemy Book}
+itmname_book70_2	{Libro de alquimia}
 itmdescr_book70_2
 {
 
 }
 
-itmname_book70_3	{Alchemy Book}
+itmname_book70_3	{Libro de alquimia}
 itmdescr_book70_3
 {
 
 }
 
-itmname_book70_4	{Alchemy Book}
+itmname_book70_4	{Libro de alquimia}
 itmdescr_book70_4
 {
 
 }
 
-itmname_book70_5	{Alchemy Book}
+itmname_book70_5	{Libro de alquimia}
 itmdescr_book70_5
 {
 
 }
 
-itmname_book70_6	{Alchemy Book}
+itmname_book70_6	{Libro de alquimia}
 itmdescr_book70_6
 {
 
 }
 
-itmname_book70_7	{Alchemy Book}
+itmname_book70_7	{Libro de alquimia}
 itmdescr_book70_7
 {
 
 }
 
-itmname_book70_8	{Alchemy Book}
+itmname_book70_8	{Libro de alquimia}
 itmdescr_book70_8
 {
 
 }
 
-itmname_book70_9	{Alchemy Book}
+itmname_book70_9	{Libro de alquimia}
 itmdescr_book70_9
 {
 
 }
 
-itmname_book70_10	{Alchemy Book}
+itmname_book70_10	{Libro de alquimia}
 itmdescr_book70_10
 {
-It's all damaged by fire here.
+Aquí está todo dañado por el fuego.
 }
 
-itmname_book70_11	{Alchemy Book}
+itmname_book70_11	{Libro de alquimia}
 itmdescr_book70_11
 {
-Too bad!
+¡Qué pena!
 }
 
 itmname_book71_9_start	{Damaged Book}
 itmdescr_book71_9_start
 {
-Many pages have been ripped out. I see one of those symbols there. Could it be..? 
+Muchas páginas han sido arrancadas. Aquí veo uno de esos símbolos. ¿Podría ser...? 
 }
 
-itmname_book71_9	{Alchemy Book}
+itmname_book71_9	{Libro de alquimia}
 itmdescr_book71_9
 {
-Only the last part is left.
+Solo queda la última parte.
 }
 
-itmname_book71_10	{Alchemy Book}
+itmname_book71_10	{Libro de alquimia}
 itmdescr_book71_10
 {
 
 }
 
-itmname_book71_11	{Alchemy Book}
+itmname_book71_11	{Libro de alquimia}
 itmdescr_book71_11
 {
 
 }
 
-itmname_book71_12	{Alchemy Book}
+itmname_book71_12	{Libro de alquimia}
 itmdescr_book71_12
 {
 
 }
 
-itmname_book71_13	{Alchemy Book}
+itmname_book71_13	{Libro de alquimia}
 itmdescr_book71_13
 {
 
 }
 
-itmname_book71_14	{Alchemy Book}
+itmname_book71_14	{Libro de alquimia}
 itmdescr_book71_14
 {
 
 }
 
-itmname_book71_15	{Alchemy Book}
+itmname_book71_15	{Libro de alquimia}
 itmdescr_book71_15
 {
 
 }
 
-itmname_book71_16	{Alchemy Book}
+itmname_book71_16	{ALibro de alquimia}
 itmdescr_book71_16
 {
 
 }
 
-itmname_book71_17	{Alchemy Book}
+itmname_book71_17	{Libro de alquimia
 itmdescr_book71_17
 {
 
 }
 
-itmname_book71_18	{Alchemy Book}
+itmname_book71_18	{Libro de alquimia}
 itmdescr_book71_18
 {
 
 }
 
-itmname_book71_19	{Alchemy Book}
+itmname_book71_19	{Libro de alquimia}
 itmdescr_book71_19
 {
 
 }
 
-itmname_book71_20	{Alchemy Book}
+itmname_book71_20	{Libro de alquimia}
 itmdescr_book71_20
 {
 
 }
 
-itmname_book71_21	{Alchemy Book}
+itmname_book71_21	{Libro de alquimia}
 itmdescr_book71_21
 {
 
 }
 
-itmname_book71_22	{Alchemy Book}
+itmname_book71_22	{Libro de alquimia}
 itmdescr_book71_22
 {
 
 }
 
-itmname_book71_23	{Alchemy Book}
+itmname_book71_23	{Libro de alquimia}
 itmdescr_book71_23
 {
 
 }
 
-itmname_book72_package	{Package}
+itmname_book72_package	{Paquete}
 itmdescr_book72_package
 {
-Wrapped in sailcloth and addressed to 'Rogers'.
+Envuelto en lona par avelas y dirigido a 'Rogers'.
 }
 
-itmname_book72_closed	{A General History of the Pyrates}
+itmname_book72_closed	{Historia General de los Piratas}
 itmdescr_book72_closed
 {
-Of the Robberies and Murders of the most Notorious Pyrates.
-And also their Policies, Discipline and Government,
-from their first rise and settlement in the Island of Providence 
-in 1717, to the present year 1724. By Captain Charles Johnson. 
+De los Robos y Asesinatos de los más Notoiros Piratas.
+Y también de sus Políticas, Discipliba y Gobierno,
+desde su primer ascenso y establecmiento en la isla de Providence 
+en 1717, al presente año 1724. Por el Capitán Charles Johnson. 
 
 A note is attached to the book.
 }
 
-itmname_book72_openL	{A General History of the Pyrates}
+itmname_book72_openL	{Historia General de los Piratas}
 itmdescr_book72_openL
 {
-Is that the one I think it is?
+¿Es este el que creo que es?
 }
 
-itmname_book72_openR	{A General History of the Pyrates}
+itmname_book72_openR	{Historia General de los Piratas}
 itmdescr_book72_openR
 {
-Chapter I. Of Captain Avery.		        VIII. Of Captain England. 
-        II. The Rise of Pyrates.		     IX. Of Captain Davis. 
-         III. Of Captain Martel.	       X. Of Captain Roberts.
-       IV. Of Captain Bonnet.		      XI. Of Captain Worley.
-	        V. Of Captain Thatch.		       XII. Of Captain Lowther.
-   VI. Of Captain Vane.		        XIII. Of Captain Low.
-      VII. Of Captain Rackham.		   XIV. Of Captain Evans.
+Capítulo I. Del Capitán Avery.		        VIII. Del Capitán England. 
+        II. El Ascenso de los Piratas.		     IX. Del Capitán Davis. 
+         III. Del Capitán Martel.	       X. Del Capitán Roberts.
+       IV. Del Capitán Bonnet.		      XI. Del Capitán Worley.
+	        V. Del Capitán Thatch.		       XII. Del Capitán Lowther.
+   VI. Del Capitán Vane.		        XIII. Del Capitán Low.
+      VII. Del Capitán Rackham.		   XIV. Del Capitán Evans.
 }
 
-itmname_book72_edenL	{A General History of the Pyrates}
+itmname_book72_edenL	{Historia General de los Piratas}
 itmdescr_book72_edenL
 {
-75      Of Black-Beard.
-Here's the first bookmark.
+75      De Barbanegra.
+Aquí está el primer marcapáginas.
 }
 
-itmname_book72_edenR	{A General History of the Pyrates}
+itmname_book72_edenR	{Historia General de los Piratas}
 itmdescr_book72_edenR
 {
-Of Black-Beard.      76	  
+De Barbanegra.      76	  
 }
 
-itmname_book72_caesarL	{A General History of the Pyrates}
+itmname_book72_caesarL	{Historia General de los Piratas}
 itmdescr_book72_caesarL
 {
-85      Of Black-Beard.
-Another page of interest.
+85      De Barbanegra.
+Otra página de interés.
 }
 
-itmname_book72_caesarR	{A General History of the Pyrates}
+itmname_book72_caesarR	{Historia General de los Piratas}
 itmdescr_book72_caesarR
 {
-Of Black-Beard.      86	
+De Barbanegra.      86	
 }
 
-itmname_book72_handsL	{A General History of the Pyrates}
+itmname_book72_handsL	{Historia General de los Piratas}
 itmdescr_book72_handsL
 {
-87      Of Black-Beard.
-More red ink here.
+87      De Barbanegra.
+Aquí hay más tinta roja.
 }
 
-itmname_book72_handsR	{A General History of the Pyrates}
+itmname_book72_handsR	{Historia General de los Piratas}
 itmdescr_book72_handsR
 {
-Of Black-Beard.      88	
+De Barbanegra.      88	
 }
 
-itmname_book72_richardsL	{A General History of the Pyrates}
+itmname_book72_richardsL	{Historia General de los Piratas}
 itmdescr_book72_richardsL
 {
-145      Of Capt. Charles Vane.
-This would be the forth and last one.
+145     Del Cpt. Charles Vane.
+Este es el cuarto y último.
 }
 
-itmname_book72_richardsR	{A General History of the Pyrates}
+itmname_book72_richardsR	{Historia General de los Piratas}
 itmdescr_book72_richardsR
 {
-Of Capt. Charles Vane.      146
-}
-
-itmname_book73_closed		{Liber Abaci}
-itmdescr_book73_closed
-{
-A very old italian book by Leonardo Pisano Fibonacci. A ruler and a mini compass are included. What's this?
-}
-
-itmname_book73_open		{Liber Abaci}
-itmdescr_book73_open
-{
-1 1 2 3 5 8 etc. Yes of course - the Fibonacci numbers. But why are some blue and some red?
+Del Cpt. Charles Vane.      146
 }
 
 //--------------- BOOKS END --------------------------------------------------------------------------------------
 //--------------- DOCUMENTS START --------------------------------------------------------------------------------
 
-itmname_picture1	{Picture}
+itmname_picture1	{Ilustración}
 itmdescr_picture1
 {
-A map of a fortified city: Caletum. Calais?
+Mapa de una ciudad fortificada: Caletum. ¿Calais?
 }
 
-itmname_picture2	{Picture}
+itmname_picture2	{Ilustración}
 itmdescr_picture2
 {
-An map of Iceland by Arne Saknussem.
+Mapa de Islandia por Arne Saknussem.
 }
 
-itmname_picture3	{Picture}
+itmname_picture3	{Ilustración}
 itmdescr_picture3
 {
-A part of the American east coast.
+Una parte de la costa este americana.
 }
 
-itmname_picture4	{Picture}
+itmname_picture4	{Ilustración}
 itmdescr_picture4
 {
-Blackbeard's last fight. From a painting by Howard Pyle.
+El último combate de Barbanegra. De una pintura de Howard Pyle.
 }
 
-itmname_picture5	{Picture}
+itmname_picture5	{Ilustración}
 itmdescr_picture5
 {
-This is an inventory of the estate.
+Un inventario de la finca.
 }
 
-itmname_picture6	{Picture}
+itmname_picture6	{Ilustración}
 itmdescr_picture6
 {
-A list of supplies for a ship.
+Una lista de suministros para un barco.
 }
 
-itmname_picture7	{Picture}
+itmname_picture7	{Ilustración}
 itmdescr_picture7
 {
-A portrait of William Dampier. (much younger)
+Un retrato de William Dampier. (mucho más joven)
 }
 
-itmname_picture8	{Picture}
+itmname_picture8	{Ilustración}
 itmdescr_picture8
 {
-A copy of a painting by Frans Hals.
+Copia de una pintura de Frans Hals.
 }
 
-itmname_picture9	{Picture}
+itmname_picture9	{Ilustración}
 itmdescr_picture9
 {
-A skeleton atlas.
+Un atlas del esqueleto humano.
 }
 
-itmname_picture10	{Picture}
+itmname_picture10	{Ilustración}
 itmdescr_picture10
 {
-An incomprehensible Alchemy picture. 
+Un incompresible diagrama alquímico. 
 }
 
-itmname_picture11	{Picture}
+itmname_picture11	{Ilustración}
 itmdescr_picture11
 {
-Alchemy again or physics?
+¿Más alquimia? ¿O física?
 }
 
-itmname_picture13	{Picture}
+itmname_picture13	{Ilustración}
 itmdescr_picture13
 {
-A romantic seascape painting.
+Un paisaje marítimo romántico.
 }
 
-itmname_picture14	{Picture}
+itmname_picture14	{Ilustración}
 itmdescr_picture14
 {
-Tycho Brahe�s Uranienborg on the island Ven.
+Uranienborg en la isla de Ven, de Tycho Brahe.
 }
 
-itmname_picture15	{Picture}
+itmname_picture15	{Ilustración}
 itmdescr_picture15
 {
-A young Woodes Rogers showing some papers to his father.
+Un joven Woodes Rogers mostrando unos papeles a su padre.
 }
 
-itmname_note1		{Note}
+itmname_note1		{Nota}
 itmdescr_note1
 {
-Even though you are young and have strong eyes, the handwriting is too small to be read.
+Aunque eres joven y tienes una vista aguda, la escritura es demasiado pequeña para leerla.
 }
 
-itmname_note2		{Note}
+itmname_note2		{Nota}
 itmdescr_note2
 {
-Do I need glasses after all? The note says: 
-Planter's Finest Rum. A short briefing through the procedure.
-1) Fill up the distillery with water and molasses (only the finest quality).
-2) Be sure to get a very strong heat for the distilling process to start.
-3) Lower the temperature after a while and there you are - RUM!
-4) But beware distilling might be dangerous - explosions have occured.
+¿Necesitaré anteojos después de todo? La nota dice: 
+El mejor ron de Planter. Breves instrucciones del proceso de elaboración.
+1) Llena el alambique de agua y melaza (solo de la mejor claidad).
+2) Asegúrate de obtener una temperatura muy alta para comenzar el proceso de destilación.
+3) Baja la temperatura después de un rato y ya lo tienes: ¡RON!
+4) Pero cuidado, la destilación puede ser peligrosa: se han dado casos de explosiones.
 }
 
 itmname_note3			{Astronomiae Instauratae Mechanica}
 itmdescr_note3
 {
-A heavy book about astronomical instruments by Tycho Brahe 1598. More interesting is perhaps this note: "The key to the catacombs is in the fourth cell".  
+Un pesado libro sobre instrumentos astronómicos, por Tycho Brahe 1598. Puede que lo más interesante sea esta nota: "La llave de las catacumbas está en la cuarta celda".  
 }
 
-itmname_amnesty_doc		{A 'Woodes-Rogers'}
+itmname_amnesty_doc		{Un 'Woodes-Rogers'}
 itmdescr_amnesty_doc
 {
-This document issued by Governor Rogers proclaims that the owner (ME!) has been given a pardon.  
+Este documento, expedido por el Gobernador Rogers, proclama que el portador (¡YO!) ha recibido un indulto real.  
 }
 
-itmname_excel_document		{Document}
+itmname_excel_document		{Documento}
 itmdescr_excel_document
 {
-What use can you have of squared piece of parchment?
-See for yourself in the folder RESOURCE\INI\TEXTS\ENGLISH\Storyline\WoodesRogers\QUESTBOOK. //JRH 
+¿Para qué puede servir un trozo de pergamino cuadriculado?
+Compruébalo tú mismo en la carpeta RESOURCE\INI\TEXTS\SPANISH\Storyline\WoodesRogers\QUESTBOOK. //JRH 
 }
 
-itmname_pistolmap1		{Map}
+itmname_pistolmap1		{Mapa}
 itmdescr_pistolmap1
 {
-An ancient map showing ....
+Un viejo mapa que muestra...
 }
 
-itmname_doc60A			{Letter}
+itmname_doc60A			{Carta}
 itmdescr_doc60A
 {
-to
-Captain Edward Thache
+Dirigida a:
+Capitán Edward Thache
 }
 
-itmname_doc60B			{Letter}
+itmname_doc60B			{Carta}
 itmdescr_doc60B
 {
-November 17, 1718
-My ffriend
+17 de Noviembre, 1718
+Amigo mío
 
-If this finds you yet in harbour I would have you make the best of 
-your way up as soon as possible your affairs will let you. I have 
-something more to to say to you than at present I can write; the 
-bearer will tell you then end of our Indian Warr, and Ganet can tell 
-you in part what I have to say to you, so referr you in some measure 
-to him.
+Si esta misiva te encuentra en puerto, espero que vengas a la mayor
+brevedda que tus asuntos te permitan. Tengo algo más que decirte
+que en este momento no puedo poner por escrito; el portador 
+te contará el final de nuestra Guerra India, y Ganet puede contarte 
+en parte lo que te tengo que decir, así que te dirijo en cierta medida 
+a él.
 ...
 }
 
-itmname_doc60C			{Letter}
+itmname_doc60C			{Carta}
 itmdescr_doc60C
 {
 ...
-I really think these three men are heartily sorry at their difference 
-with you and will be very willing to ask your pardon; if I may 
-advise, be ffriends again, its better than falling out among your 
-selves.
+En verdad pienso que estos tres hombres lamentan de corazón sus diferencias 
+contigo y estarán más que dispuestos a pedirte perdón; si puedo 
+aconsejarte, volved a ser amigos; es mejor que enemistaros entre 
+vosotros.
 
-I expect the Governor this night or tomorrow, who I believe would 
-be likewise glad to see you before you goe, I have not time to add 
-save my hearty respects to you, and am your real ffriend.
+Espero al Gobernador esta noche o mañana, quien creo que también 
+se alegrará de verte antes de que te vayas. No tengo tiempo sino para añadir 
+mis más calurosos respetos para ti, y quedar como tu verdadero amigo.
 
-And Servant
+Y seguro servidor,
 T. Knight
 }
 
-itmname_doc60D			{Backside of Letter}
+itmname_doc60D			{Reverso de al carta}
 itmdescr_doc60D
 {
 P.I.R.A.T.E.
-That's written with another pen and another hand.
+Eso está escrito con otra pluma y por otra mano.
 }
 
-itmname_tailors_note		{Note}
+itmname_tailors_note		{Nota}
 itmdescr_tailors_note
 {
-To the Red House deliver:
-3 pairs of dark blue trousers
-4 striped sweaters, preferably red/black
+A la Casa Roja, llevar:
+3 pares de pantalones azul oscuro
+4 jerseys a rayas, a poder ser negras y rojas
 
-To find a safe way through the jungle:
-Never right - right or left - left after each other.
+Para encontrar un camino seguro a través de la selva:
+Nunca derecha - derecha o izquierda - izquierda despuñes de cada una.
 }
 
-itmname_auction_list_roll	{Document}
+itmname_auction_list_roll	{Documento}
 itmdescr_auction_list_roll
 {
-Let's hope it really is a useful list of items sold at the auction.
+Esperemos que sea realmente una lista útil de los artículos vendidos en la subasta.
 }
 
-itmname_auction_list_open	{Auction List}
+itmname_auction_list_open	{Lista de subasta}
 itmdescr_auction_list_open
 {
-Yes!
+¡Sí!
 }
 
-itmname_newspaper1		{Rogers' Notes}
+itmname_newspaper1		{Notas de Rogers}
 itmdescr_newspaper1
 {
-He has searched 'The Boston News-Letter' for information about Teach's crew.
+Ha estado buscando en 'The Boston News-Letter' información sobre la tripulación de Teach.
 }
 
-itmname_newspaper2		{Rogers' Notes}
+itmname_newspaper2		{Notas de Rogers}
 itmdescr_newspaper2
 {
-He has searched 'The Virinia Gazette' for information about Teach's crew.
+Ha estado buscando en 'The Virinia Gazette' información sobre la tripulación de Teach.
 }
 
-itmname_newspaper3		{Rogers' Notes}
+itmname_newspaper3		{Notas de Rogers}
 itmdescr_newspaper3
 {
-He has searched several other newspapers for information about Teach's crew.
-}
-
-itmname_doc61			{Governor's Letter}
-itmdescr_doc61
-{
-A document from Governor Stapelton which allows me to pass through the Antigua Fort and visit the Prison.
-}
-
-itmname_contract1		{Contract}
-itmdescr_contract1
-{
-A document with two seals, maybe a name and blood?
-}
-
-itmname_contract2		{Contract}
-itmdescr_contract2
-{
-Blood again but not much more.
-}
-
-itmname_contract3		{Contracts}
-itmdescr_contract3
-{
-Two sheets of papers this time. Besides a few letters - blood on both!
+Ha estado buscando en varios periódicos más información sobre la tripulación de Teach.
 }
 
 //--------------- DOCUMENTS END --------------------------------------------------------------------------------------------------
 //--------------- ALL MEDICINE CHESTS START --------------------------------------------------------------------------------------
 
-itmname_pistolmdchest_F1	{Medicine Chest}
+itmname_pistolmdchest_F1	{Cofre de medicinas}
 itmdescr_pistolmdchest_F1
 {
-A fine piece of craftsmanship but unfortunately locked! 
+Una buena obra de artesanía, pero por desgracia está cerrado. 
 }
 
-itmname_pistolmdchest_F1_C	{Medicine Chest}
+itmname_pistolmdchest_F1_C	{Cofre de medicinas}
 itmdescr_pistolmdchest_F1_C
 {
-A fine piece of craftsmanship but unfortunately locked! 
+Una buena obra de artesanía, pero por desgracia está cerrado.
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F2A	{Empty Medicine Chest}
+itmname_pistolmdchest_F2A	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2A
 {
-Only one half of the chest is opened. Not much in here: One drawer is empty, two missing and one blocked! 
+Solo la mitad del cofre está abierta. No hay gran cosa: un cajón está vacío, dos faltan y uno está bloqueado. 
 }
 
-itmname_pistolmdchest_F2A_C	{Empty Medicine Chest}
+itmname_pistolmdchest_F2A_C	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2A_C
 {
-Only one half of the chest is opened. Not much in here: One drawer is empty, two missing and one blocked! 
+Solo la mitad del cofre está abierta. No hay gran cosa: un cajón está vacío, dos faltan y uno está bloqueado. 
 }
 
-itmname_pistolmdchest_F2A_S	{Empty Medicine Chest}
+itmname_pistolmdchest_F2A_S	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2A_S
 {
-Only one half of the chest is opened. Not much in here: One drawer is empty, two missing and one blocked! 
+Solo la mitad del cofre está abierta. No hay gran cosa: un cajón está vacío, dos faltan y uno está bloqueado. 
 }
 
-itmname_pistolmdchest_F2A_CS	{Empty Medicine Chest}
+itmname_pistolmdchest_F2A_CS	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2A_CS
 {
-Only one half of the chest is opened. Not much in here: One drawer is empty, two missing and one blocked! 
+Solo la mitad del cofre está abierta. No hay gran cosa: un cajón está vacío, dos faltan y uno está bloqueado. 
 }
 
 
-itmname_pistolmdchest_F2B	{Empty Medicine Chest}
+itmname_pistolmdchest_F2B	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2B
 {
-What a locksmith he is mister Cook. He opened this fine chest by violence - and broke one door! 
+Vaya un cerrajero está hecho el señor Cook. ¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
 }
 
-itmname_pistolmdchest_F2B_C	{Empty Medicine Chest}
+itmname_pistolmdchest_F2B_C	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2B_C
 {
-What a locksmith he is mister Cook. He opened this fine chest by violence - and broke one door! 
+Vaya un cerrajero está hecho el señor Cook. ¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
 }
 
-itmname_pistolmdchest_F2B_S	{Empty Medicine Chest}
+itmname_pistolmdchest_F2B_S	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2B_S
 {
-What a locksmith he is mister Cook. He opened this fine chest by violence - and broke one door! 
+Vaya un cerrajero está hecho el señor Cook. ¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
 }
 
-itmname_pistolmdchest_F2B_CS	{Empty Medicine Chest}
+itmname_pistolmdchest_F2B_CS	{Cofre de medicinas vacío}
 itmdescr_pistolmdchest_F2B_CS
 {
-What a locksmith he is mister Cook. He opened this fine chest by violence - and broke one door! 
+Vaya un cerrajero está hecho el señor Cook. ¡Ha abierto este bonito cofre por la fuerza, y ha roto una de las puertas! 
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F3A	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3A	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3A
 {
-Two drawers are filled but I can't place the large drawer yet.  
+Dos cajones están llenos pero todavía no puedo colocar el cajón grande.  
 }
 
-itmname_pistolmdchest_F3A_C	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3A_C	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3A_C
 {
-Two drawers are filled but I can't place the large drawer yet.  
+Dos cajones están llenos pero todavía no puedo colocar el cajón grande.  
 }
 
-itmname_pistolmdchest_F3A_S	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3A_S	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3A_S
 {
-Two drawers are filled but I can't place the large drawer yet.  
+Dos cajones están llenos pero todavía no puedo colocar el cajón grande.  
 }
 
-itmname_pistolmdchest_F3A_CS	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3A_CS	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3A_CS
 {
-Two drawers are filled but I can't place the large drawer yet.  
+Dos cajones están llenos pero todavía no puedo colocar el cajón grande.  
 }
 
 
-itmname_pistolmdchest_F3B	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3B	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3B
 {
-Some bottles are now in their places but many still missing.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
-itmname_pistolmdchest_F3B_C	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3B_C	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3B_C
 {
-Some bottles are now in their places but many still missing.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
-itmname_pistolmdchest_F3B_S	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3B_S	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3B_S
 {
-Some bottles are now in their places but many still missing.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
-itmname_pistolmdchest_F3B_CS	{Half Filled Medicine Chest}
+itmname_pistolmdchest_F3B_CS	{Cofre de medicinas medio lleno}
 itmdescr_pistolmdchest_F3B_CS
 {
-Some bottles are now in their places but many still missing.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F4A		{Open Medicine Chest}
+itmname_pistolmdchest_F4A		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4A
 {
-Another marauder at work: He blow off the entire lock and damaged the door!  
+Esta es la obra de otro merodeador: ¡ha reventado toda la cerradura y ha dañado la puerta!  
 }
 
-itmname_pistolmdchest_F4A_C		{Open Medicine Chest}
+itmname_pistolmdchest_F4A_C		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4A_C
 {
-Another marauder at work: He blow off the entire lock and damaged the door!  
+Esta es la obra de otro merodeador: ¡ha reventado toda la cerradura y ha dañado la puerta!  
 }
 
-itmname_pistolmdchest_F4A_S		{Open Medicine Chest}
+itmname_pistolmdchest_F4A_S		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4A_S
 {
-Another marauder at work: He blow off the entire lock and damaged the door!  
+Esta es la obra de otro merodeador: ¡ha reventado toda la cerradura y ha dañado la puerta!  
 }
 
-itmname_pistolmdchest_F4A_CS		{Open Medicine Chest}
+itmname_pistolmdchest_F4A_CS		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4A_CS
 {
-Another marauder at work: He blow off the entire lock and damaged the door!  
+Esta es la obra de otro merodeador: ¡ha reventado toda la cerradura y ha dañado la puerta!  
 }
 
 
-itmname_pistolmdchest_F4B		{Open Medicine Chest}
+itmname_pistolmdchest_F4B		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4B
 {
-The large drawer is now in place, three new ones look empty though.  
+El cajón grande está en su sitio, pero los tres nuevos parecen vacíos.  
 }
 
-itmname_pistolmdchest_F4B_C		{Open Medicine Chest}
+itmname_pistolmdchest_F4B_C		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4B_C
 {
-The large drawer is now in place, three new ones look empty though.  
+El cajón grande está en su sitio, pero los tres nuevos parecen vacíos.  
 }
 
-itmname_pistolmdchest_F4B_S		{Open Medicine Chest}
+itmname_pistolmdchest_F4B_S		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4B_S
 {
-The large drawer is now in place, three new ones look empty though.  
+El cajón grande está en su sitio, pero los tres nuevos parecen vacíos.  
 }
 
-itmname_pistolmdchest_F4B_CS		{Open Medicine Chest}
+itmname_pistolmdchest_F4B_CS		{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4B_CS
 {
-The large drawer is now in place, three new ones look empty though.  
+El cajón grande está en su sitio, pero los tres nuevos parecen vacíos.  
 }
 
 
-itmname_pistolmdchest_F4C	{Open Medicine Chest}
+itmname_pistolmdchest_F4C	{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4C
 {
-Some bottles are now in their places but many still missing.  
+Algunas botellas están en su sitio pero todavía faltan muchas.  
 }
 
-itmname_pistolmdchest_F4C_C	{Open Medicine Chest}
+itmname_pistolmdchest_F4C_C	{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4C_C
 {
-Some bottles are now in their places but many still missing.  
+Algunas botellas están en su sitio pero todavía faltan muchas.
 }
 
-itmname_pistolmdchest_F4C_S	{Open Medicine Chest}
+itmname_pistolmdchest_F4C_S	{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4C_S
 {
-Some bottles are now in their places but many still missing.  
+Algunas botellas están en su sitio pero todavía faltan muchas.
 }
 
-itmname_pistolmdchest_F4C_CS	{Open Medicine Chest}
+itmname_pistolmdchest_F4C_CS	{Cofre de medicinas abierto}
 itmdescr_pistolmdchest_F4C_CS
 {
-Some bottles are now in their places but many still missing.  
+Algunas botellas están en su sitio pero todavía faltan muchas.
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F5A		{Filled Medicine Chest}
+itmname_pistolmdchest_F5A		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5A
 {
-All bottles found!  
+¡Todas las botellas encontradas!  
 }
 
-itmname_pistolmdchest_F5A_C		{Filled Medicine Chest}
+itmname_pistolmdchest_F5A_C		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5A_C
 {
-All bottles found!  
+¡Todas las botellas encontradas!  
 }
 
-itmname_pistolmdchest_F5A_S		{Filled Medicine Chest}
+itmname_pistolmdchest_F5A_S		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5A_S
 {
-All bottles found!  
+¡Todas las botellas encontradas!  
 }
 
-itmname_pistolmdchest_F5A_CS		{Filled Medicine Chest}
+itmname_pistolmdchest_F5A_CS		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5A_CS
 {
-All bottles found!  
+¡Todas las botellas encontradas!  
 }
 
 
-itmname_pistolmdchest_F5B		{Filled Medicine Chest}
+itmname_pistolmdchest_F5B		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5B
 {
-All drawers are filled and all bottles found!  
+¡Todos los cajones están llenos y todas las botellas han sido encontradas!
 }
 
-itmname_pistolmdchest_F5B_C		{Filled Medicine Chest}
+itmname_pistolmdchest_F5B_C		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5B_C
 {
-All drawers are filled and all bottles found!  
+¡Todos los cajones están llenos y todas las botellas han sido encontradas!
 }
 
-itmname_pistolmdchest_F5B_S		{Filled Medicine Chest}
+itmname_pistolmdchest_F5B_S		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5B_S
 {
-All drawers are filled and all bottles found!  
+¡Todos los cajones están llenos y todas las botellas han sido encontradas!
 }
 
-itmname_pistolmdchest_F5B_CS		{Filled Medicine Chest}
+itmname_pistolmdchest_F5B_CS		{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5B_CS
 {
-All drawers are filled and all bottles found!  
+¡Todos los cajones están llenos y todas las botellas han sido encontradas!  
 }
 
 
-itmname_pistolmdchest_F5C	{Filled Medicine Chest}
+itmname_pistolmdchest_F5C	{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5C
 {
-All bottles found!  
+¡Todas las botellas encontradas!  
 }
 
-itmname_pistolmdchest_F5C_C	{Filled Medicine Chest}
+itmname_pistolmdchest_F5C_C	{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5C_C
 {
-All bottles found!  
+¡Todas las botellas encontradas!
 }
 
-itmname_pistolmdchest_F5C_S	{Filled Medicine Chest}
+itmname_pistolmdchest_F5C_S	{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5C_S
 {
-All bottles found!  
+¡Todas las botellas encontradas!  
 }
 
-itmname_pistolmdchest_F5C_CS	{Filled Medicine Chest}
+itmname_pistolmdchest_F5C_CS	{Cofre de medicinas lleno}
 itmdescr_pistolmdchest_F5C_CS
 {
-All bottles found!  
+¡Todas las botellas encontradas!  
 }
 
 //..............................................................................................................
 
-itmname_pistolmdchest_F6	{Repaired Medicine Chest}
+itmname_pistolmdchest_F6	{Cofre de medicinas reparado}
 itmdescr_pistolmdchest_F6
 {
-I hope that carpenter is a better craftsman with masts and hull than he is with furniture!   
+¡Espero que a ese carpintero se le dé mejor reparar mástiles y cascos que muebles!   
 }
 
-itmname_pistolmdchest_F6_C	{Repaired Medicine Chest}
+itmname_pistolmdchest_F6_C	{Cofre de medicinas reparado}
 itmdescr_pistolmdchest_F6_C
 {
-I hope that carpenter is a better craftsman with masts and hull than he is with furniture!   
+¡Espero que a ese carpintero se le dé mejor reparar mástiles y cascos que muebles!   
 }
 
-itmname_pistolmdchest_F6_S	{Repaired Medicine Chest}
+itmname_pistolmdchest_F6_S	{Cofre de medicinas reparado}
 itmdescr_pistolmdchest_F6_S
 {
-I hope that carpenter is a better craftsman with masts and hull than he is with furniture!   
+¡Espero que a ese carpintero se le dé mejor reparar mástiles y cascos que muebles!   
 }
 
-itmname_pistolmdchest_F6_CS	{Repaired Medicine Chest}
+itmname_pistolmdchest_F6_CS	{Cofre de medicinas reparado}
 itmdescr_pistolmdchest_F6_CS
 {
-I hope that carpenter is a better craftsman with masts and hull than he is with furniture!   
+¡Espero que a ese carpintero se le dé mejor reparar mástiles y cascos que muebles!   
 }
 
 //..............................................................................................................
 
-itmname_mdchest_B2		{Medicine Chest}
+itmname_mdchest_B2		{Cofre de medicinas}
 itmdescr_mdchest_B2
 {
-There are places for bottles on the back too! 
+¡También hay sitio para meter botellas en la parte de atrás! 
 }
 
-itmname_mdchest_B3		{Medicine Chest}
+itmname_mdchest_B3		{Cofre de medicinas}
 itmdescr_mdchest_B3
 {
-The backside is filled with bottles. 
+La parte de atrás está llena de botellas. 
 }
 
-itmname_mdchest_B4		{A Key in the Medicine Chest}
+itmname_mdchest_B4		{Llave encontrada en el cofre de medicinas}
 itmdescr_mdchest_B4
 {
-They have hidden a key in a secret space on the back - and it was the key to the Surgery Kit! 
+Había una llave escondida en un compartimento secreto en la aprte de atrás. ¡Es la llave del equipo de cirujía! 
 }
 
 //--------------- ALL MEDICINE CHESTS END --------------------------------------------------------------------------------------
 //--------------- ALL MEDICINE ITEMS START -------------------------------------------------------------------------------------
 
-itmname_mdchest_rope	{Rope}
+itmname_mdchest_rope	{Cuerda}
 itmdescr_mdchest_rope
 {
-A strong rope with an iron loop. 
+Una cuerda resistente con una argolla de hierro. 
 }
 
-itmname_medicine_list	{Medicine list}
+itmname_medicine_list	{Lista de medicinas}
 itmdescr_medicine_list
 {
-In exchange for six citizens we demand a medicine chest filled with all ordinary cures and drugs. No prisoners will be released without these special medicines: Acetum Saturninum, Antidote, Etherbottle, Confectio Damocritis, Tincture of Laudenum and most important anything to cure syphilis. Any other drugs or medical items are of interest! Charles Vane. 
+A cambio de seis rehenes, exigimos un cofre de medicinas lleno con todos los remedios y medicamentos habituales. Ningún prisionero será liberado sin estas medicinas especiales: Acetum Saturninum, Antídoto, botella de éter, Confectio Damocritis, tintura de Láudano, y lo más importante, algo para curar la sífilis. ¡Cualquier otro medicamento o instrumental médico es de interés! Charles Vane. 
 }
 
-itmname_medicine_leaves		{Medicine Leaves}
+itmname_medicine_leaves		{Hojas medicinales}
 itmdescr_medicine_leaves
 {
-These leaves may protect you against evil spirits and inspire your imagination.   
+Estas hojas pueden protegerte de los espíritus malignos e inspirar tu imaginación.   
 }
 
-itmname_anti_scurvy_pills	{Lozenges}
+itmname_anti_scurvy_pills	{Tabletas}
 itmdescr_anti_scurvy_pills
 {
-Problems with scurvy? Put a tablet in water and this drink will protect you from all seamens feared desease. New and secret patent.  
+¿Problemas con el escorbuto? Disuelve una tableta en agua y esta bebida te protegerá de la enfermedad más temida por los marinos. Nueva patente secreta.  
 }
 
-itmname_filled_medium_drawer	{Drawer with various medicine bottles}
+itmname_filled_medium_drawer	{Cajón con varias botellas de medicinas}
 itmdescr_filled_medium_drawer
 {
-Hmm, the doctor must have stolen this from the medicine chest earlier. 
+Hmm, el cirujano debe haber robado esto del cofre d emedicinas. 
 }
 
-itmname_mortar_ointment		{Mortar and Ointment}
+itmname_mortar_ointment		{Mortero y ungüento}
 itmdescr_mortar_ointment
 {
-A Mortar made of china and a homemade Ointment in a birch box. 
+Un mortero hecho de porcelana y un ungüento casero en una cajita de abedul. 
 }
 
-itmname_cough_syrup		{Cough Syrup}
+itmname_cough_syrup		{Jaraba para la tos}
 itmdescr_cough_syrup
 {
-One bottle with Cough Syrup and another one with unknown content. 
+Una botella de jarabe para al tos y otra de contenido desconocido. 
 }
 
-itmname_blood_letting		{Blood Letting Tool}
+itmname_blood_letting		{instrumental para sangrar}
 itmdescr_blood_letting
 {
-This small brass item opens your veins very quick and painless. The mechanism has twelve sharp knives that cut instantly. 
+Este pequeño objeto de latón obre las venas rápidamente y sin dolor. El mecanismo tiene doce cuchillas afiladas que cortan al isntante. 
 }
 
-itmname_filled_large_drawer		{Drawer with many items}
+itmname_filled_large_drawer		{Cajón lleno de cosas}
 itmdescr_filled_large_drawer
 {
-The drawer is now filled with items I have collected earlier. 
+El cajón está lleno de objetos que he recogido antes. 
 }
 
-itmname_empty_large_drawer		{Empty Drawer}
+itmname_empty_large_drawer		{Cajón vacío}
 itmdescr_empty_large_drawer
 {
-I guess the drawer belongs to the medicine chest. 
+Creo que ese cajón pertenece al cofre de medicinas. 
 }
 
-itmname_bag_of_herbs		{Bag of Herbs}
+itmname_bag_of_herbs		{Bolsa de hierbas}
 itmdescr_bag_of_herbs
 {
-A small bag for herbs and additional medicines.  
+Una pequeña bolsa para guardar hierbas y otras medicinas.  
 }
 
-itmname_pistolmdcloth		{Rolls of Bandages}
+itmname_pistolmdcloth		{Rollos de vendas}
 itmdescr_pistolmdcloth
 {
-This a just some rolls of old cloth, but can be used as bandages - and there is enough for a minor campaign!
+Son solo unos rollos de tela vieja, pero pueden usarse como vendas: ¡y hay suficientes como para una campaña militar!
 }
 
-itmname_rolls_of_bandages	{Rolls of Bandages}
+itmname_rolls_of_bandages	{Rollos de vendas}
 itmdescr_rolls_of_bandages
 {
-This a just some rolls of old cloth, but can be used as bandages - and there is enough for a minor campaign!  
+Son solo unos rollos de tela vieja, pero pueden usarse como vendas: ¡y hay suficientes como para una campaña militar!
 }
 
-itmname_pistolmdclothsack	{Rolls of Bandages}
+itmname_pistolmdclothsack	{Rollos de vendas}
 itmdescr_pistolmdclothsack
 {
-This a just some rolls of old cloth, but can be used as bandages - and there is enough for a minor campaign! A small bag for herbs and additional medicines too.  
+Son solo unos rollos de tela vieja, pero pueden usarse como vendas: ¡y hay suficientes como para una campaña militar!
 }
 
-itmname_pistolmdsack		{Bag of Herbs}
+itmname_pistolmdsack		{Bolsa de hierbas}
 itmdescr_pistolmdsack
 {
-A small bag for herbs and additional medicines.  
+Una pequeña bolsa para guardar hierbas y otras medicinas.  
 }
 
-itmname_prescriptions		{Prescriptions}
+itmname_prescriptions		{Recetas médicas}
 itmdescr_prescriptions
 {
-A bunch of old letters? No no no - this is a collection of prescriptions and medical advises.   
+¿Un montón de cartas viejas? No, no, no... es una colección de recetas y consejos médicos.   
 }
 
-itmname_bladeprescriptions	{Prescriptions}
+itmname_bladeprescriptions	{Recetas médicas}
 itmdescr_bladeprescriptions
 {
-A bunch of old letters? No no no - this is a collection of prescriptions and medical advises.   
+¿Un montón de cartas viejas? No, no, no... es una colección de recetas y consejos médicos.   
 }
 
-itmname_empty_bottles		{Empty Bottles}
+itmname_empty_bottles		{Botellas vacías}
 itmdescr_empty_bottles
 {
-Two empty bottles nothing more nothing less.  
+Dos botellas vacías, nada más y nada menos.  
 }
 
-itmname_mercury_bottles		{Mercury Bottles}
+itmname_mercury_bottles		{Botellas de mercurio}
 itmdescr_mercury_bottles
 {
-Most physicians treat syphilis with mercury, either orally, in vapor baths, or topically. The use of mercury is based on the ancient theory of humors and health.  
-}
-
-itmname_myrrh			{Myrrh}
-itmdescr_myrrh
-{
-Myrrh is a fragrant spice derived from the sap of a tree native to the Near East. It can be used as incense but also as a medical for special purposes.
+La mayoría de los médicos tratan la sífilis con mercurio, bien por vía oral, en baños de vapor, o de forma tópica. El uso del mercurio se basa en la antigua teoría de los humores y la salud.  
 }
 
 //----------------- ALL MEDICINE ITEMS END -----------------------------------------------------------------------------------
-//--------------- OTHER MEDICINE ITEMS START ---------------------------------------------------------------------------------
-
-itmname_calabash		{Calabash with an Antidote}
-itmdescr_calabash
-{
-This unknown liquid cures poison.
-}
-
-itmname_herbs			{Bag of Herbs}
-itmdescr_herbs
-{
-A mixture of herbs that cures light wounds.
-}
-
-//--------------- OTHER MEDICINE ITEMS END -----------------------------------------------------------------------------------
 //----------------- ALL SURGERY KIT START ------------------------------------------------------------------------------------
 
-itmname_bladesurgery		{A First Aid Kit ...}
+itmname_bladesurgery		{Botiquín de primeros auxilios...}
 itmdescr_bladesurgery
 {
-... or what? Anyway there is no key.  
+... ¿o algo así? En cualquier caso, no hay llave.  
 }
 
-itmname_bladesurgery2		{Surgery Kit}
+itmname_bladesurgery2		{Equipo de cirujía}
 itmdescr_bladesurgery2
 {
-The key from the chest opened a complete doctors surgery kit. Well it's almost complete - a big saw is missing.  
+La llave que había en el cofre abre un equipo de cirujía completo. Bueno, casi completo: falta una sierra grande.  
 }
 
-itmname_bladesurgery3		{Surgery Kit}
+itmname_bladesurgery3		{Equipo de cirujía}
 itmdescr_bladesurgery3
 {
-Now with the saw it's complete!  
+¡Con la sierra, el equipo está completo!  
 }
 
-itmname_bladesurgcan		{A First Aid Kit ...}
+itmname_bladesurgcan		{Botiquín de primeros auxilios...}
 itmdescr_bladesurgcan
 {
-... or what? Anyway there is no key.  
+... ¿o algo así? En cualquier caso, no hay llave.  
 }
 
-itmname_bladesurgcan2		{Surgery Kit}
+itmname_bladesurgcan2		{Equipo de cirujía}
 itmdescr_bladesurgcan2
 {
-The key from the chest opened a complete doctors surgery kit. Well it's almost complete - a big saw is missing.   
+La llave que había en el cofre abre un equipo de cirujía completo. Bueno, casi completo: falta una sierra grande.  
 }
 
-itmname_bladesurgcan3		{Surgery Kit}
+itmname_bladesurgcan3		{Equipo de cirujía}
 itmdescr_bladesurgcan3
 {
-Now with the saw it's complete!  
+¡Con la sierra, el equipo está completo!  
 }
 
-itmname_bladesurgery_r		{A First Aid Kit ...}
+itmname_bladesurgery_r		{Botiquín de primeros auxilios...}
 itmdescr_bladesurgery_r
 {
-... or what? Anyway there is no key.  
+... ¿o algo así? En cualquier caso, no hay llave.  
 }
 
-itmname_bladesurgery2_r		{Surgery Kit}
+itmname_bladesurgery2_r		{Equipo de cirujía}
 itmdescr_bladesurgery2_r
 {
-The key from the chest opened a complete doctors surgery kit. Well it's almost complete - a big saw is missing.    
+La llave que había en el cofre abre un equipo de cirujía completo. Bueno, casi completo: falta una sierra grande.  
 }
 
-itmname_bladesurgery3_r		{Surgery Kit}
+itmname_bladesurgery3_r		{Equipo de cirujía}
 itmdescr_bladesurgery3_r
 {
-Now with the saw it's complete!  
+¡Con la sierra, el equipo está completo!  
 }
 
 itmname_bladesurgcan_r		{A First Aid Kit ...}
 itmdescr_bladesurgcan_r
 {
-... or what? Anyway there is no key.  
+... ¿o algo así? En cualquier caso, no hay llave.  
 }
 
-itmname_bladesurgcan2_r		{Surgery Kit}
+itmname_bladesurgcan2_r		{Equipo de cirujía}
 itmdescr_bladesurgcan2_r
 {
-The key from the chest opened a complete doctors surgery kit. Well it's almost complete - a big saw is missing.    
+La llave que había en el cofre abre un equipo de cirujía completo. Bueno, casi completo: falta una sierra grande.  
 }
 
-itmname_bladesurgcan3_r		{Surgery Kit}
+itmname_bladesurgcan3_r		{Equipo de cirujía}
 itmdescr_bladesurgcan3_r
 {
-Now with the saw it's complete!  
+¡Con la sierra, el equipo está completo!  
 }
 
-itmname_surgery_saw		{Saw}
+itmname_surgery_saw		{Sierra}
 itmdescr_surgery_saw
 {
-A carpenter's robust tool, or maybe a marine doctors?. 
+Una robusta herramienta de carpintero, ¿o tal vez de un cirujano naval?. 
 }
 
 //----------------- ALL SURGERY KIT END -------------------------------------------------------------------------------------
 //------------------- FOOD ITEMS START --------------------------------------------------------------------------------------
 
-itmname_pistolfoodchest		{Food Chest}
+itmname_pistolfoodchest		{Cofre de provisiones}
 itmdescr_pistolfoodchest
 {
-An empty medium size chest.
+Un cofre vacío de tamaño medio.
 }
 
-itmname_pistolfoodchest2	{Food Chest}
+itmname_pistolfoodchest2	{Cofre de provisiones}
 itmdescr_pistolfoodchest2
 {
-An empty medium size chest.
+Un cofre vacío de tamaño medio.
 }
 
-itmname_bladefish		{Big Fish}
+itmname_bladefish		{Pez grande}
 itmdescr_bladefish
 {
-A big but also very delicious fish - if it hadn't been stored away in this cellar for days in the Caribbean heat.
+Un gran y delicioso pescado... si no llevara días almacenado en este sótano expuesto al calor del Caribe.
 }
 
 itmname_meat			{Boucan}
 itmdescr_meat
 {
-A speciality from Tortuga. Meat smoked by hunters, also known as buccaneers. Some smell though?  
+Una especialidad de Tortuga. Carne ahumada por los cazadores, también conocidos como bucaneros. Pero huele un poco mal, ¿no?  
 }
 
-itmname_2winebottles		{Two Wine Bottles}
+itmname_2winebottles		{Dos botellas de vino}
 itmdescr_2winebottles
 {
-French wine of highest quality, but a little warm.
+Vino francés de la mejor calidad, pero demasiado caliente.
 }
 
-itmname_bread			{Ships Biscuits}
+itmname_bread			{Bizcocho de barco}
 itmdescr_bread
 {
-Bread baked for long journeys at sea meant to stay fresh. It didn't! Something's moving inside.  
+Pan recocido para soportar largos viajes por mar sin estropearse. ¡Pero ha dado igual! Hay algo moviéndose dentro.  
 }
 
-itmname_ale			{Ale}
+itmname_ale			{Cerveza}
 itmdescr_ale
 {
-A strong brew - all the way from England? Be careful, this beer can really knock you out.  
+Una bebbida fuerte, ¿llegada desde Inglaterra? Cuidado, esta cerveza se sube a la cabeza muy rápido.  
 }
 
 //------------------- FOOD ITEMS END ----------------------------------------------------------------------------------------
 //-------------------- COINS START ------------------------------------------------------------------------------------------
 
-itmname_coin1			{Coin}
+itmname_coin1			{Moneda}
 itmdescr_coin1
 {
-A swedish 2 mark silver coin.
+Una moneda sueca de plata de dos marcos.
 }
 
-itmname_coin2			{Coin}
+itmname_coin2			{Moneda}
 itmdescr_coin2
 {
-A swedish 1 �re copper coin. From the bottom of the sea?
+Una moneda sueca de cobre de un öre. ¿Procedente del fondo del mar?
 }
 
-itmname_coin3			{Coin}
+itmname_coin3			{Moneda}
 itmdescr_coin3
 {
-A spanish gold doubloon.
+Un doblón español de oro.
 }
 
-itmname_coin4			{Coins}
+itmname_coin4			{Monedas}
 itmdescr_coin4
 {
-Two spanish pieces-of-eight or eight reales.
+Dos piezas de a ocho españolas, u ocho reales.
 }
 
-itmname_coin4_bad		{Coins}
+itmname_coin4_bad		{Monedas}
 itmdescr_coin4_bad
 {
-The pieces-of-eight vary too much in weight to be of any use!
+¡Las piezas de a ocho tienen un peso demasiado variable como para ser de utilidad!
 }
 
-itmname_coin5			{Coin}
+itmname_coin5			{Moneda}
 itmdescr_coin5
 {
-A british 2 guinea gold coin with the portrait of queen Anne.
+Una moneda inglesa de oro de dos guineas con el retrato de la reina Anne.
 }
 
-itmname_coin6			{Coin}
+itmname_coin6			{Moneda}
 itmdescr_coin6
 {
-A british 3 pence small silver coin.
+Una moneda inglesa de plata de tres peniques.
 }
 
-itmname_coin7			{Coin}
+itmname_coin7			{Moneda}
 itmdescr_coin7
 {
-A chinese brass coin.
+Una moneda china de latón.
 }
 
-itmname_coin8			{Coin}
+itmname_coin8			{Moneda}
 itmdescr_coin8
 {
-A chinese copper coin.
+Una moneda china de cobre.
 }
 
-itmname_coin9			{Coin}
+itmname_coin9			{Moneda}
 itmdescr_coin9
 {
-An arabic gold sequin.
+Un cequí árabe de oro.
 }
 
-itmname_coin10			{Coin}
+itmname_coin10			{Moneda}
 itmdescr_coin10
 {
-An arabic silver coin.
+Una moneda árabe de plata.
 }
 
-itmname_coin11			{Coin}
+itmname_coin11			{Moneda}
 itmdescr_coin11
 {
-A very small and worn arabic silver coin.
+Una moneda árabe de plata muy pequeña y desgastada.
 }
 
-itmname_coin12			{Coin}
+itmname_coin12			{Moneda}
 itmdescr_coin12
 {
-A fine french Louis d'or.
+Un bonito Louis d'or francés.
 }
 
-itmname_coin13			{Coin}
+itmname_coin13			{Moneda}
 itmdescr_coin13
 {
-A dutch gulden.
+Un gulden holandés.
 }
 
-itmname_coin14			{Coin}
+itmname_coin14			{Moneda}
 itmdescr_coin14
 {
-A dutch 50 stuivers silver coin of unusual form.
+Una moneda holandesa de plata de 50 stuivers, con una forma inusual.
 }
 
-itmname_coin15			{Coin}
+itmname_coin15			{Moneda}
 itmdescr_coin15
 {
-A dutch rijkdaalder silver coin.
+Un rijkdaalder holandés de plata.
 }
 
-itmname_coin16			{Coin}
+itmname_coin16			{Moneda}
 itmdescr_coin16
 {
-A large portuguese gold moydore.
+Un gran moydoro portugués de oro.
 }
 
-itmname_BB_coin			{Amulet}
+itmname_BB_coin			{Amuleto}
 itmdescr_BB_coin
 {
-A chinese Gold Coin. Guess it has been carried around the neck, as an Amulet.
-For what? Good Luck? Maybe it didn't help...
+Una moneda de oro china. Supongo que alguien la llevaba en torno al cuello como amuleto.
+¿Para qué? ¡Buena suerte? Quizás no sirvió de mucho...
 }
 
 //-------------------- COINS END --------------------------------------------------------------------------------------------
 //----------------- CHURCH ITEMS START --------------------------------------------------------------------------------------
 
-itmname_bladechurchsilver	{Sack}
+itmname_bladechurchsilver	{Saco}
 itmdescr_bladechurchsilver
 {
-An ordinary sack. Use it to carry the church treasures away...
+Un saco normal y corriente. Úsalo para llevarte los tesoros de la iglesia...
 }
 
-itmname_jewelcross		{Jewel Cross}
+itmname_jewelcross		{Cruz enjoyada}
 itmdescr_jewelcross
 {
-A silver cross ornated with seven sapphires, one dark blue spinel, one amethyst, one citrine, and one brown zircon.
+Una cruz de plata adornada con siete zafiros, una espinela azul oscuro, una amatista, un cuarzo, y un jacinto.
 }
 
-itmname_fake_reliquary		{Reliquary}
+itmname_fake_reliquary		{Relicario}
 itmdescr_fake_reliquary
 {
-In this shrine rests the physical remains of a since long forgotten saint.
+En esta capilla reposan los restos terrenales de un santo olvidado tiempo ha.
 }
 
-itmname_fake_chalice		{Chalice}
+itmname_fake_chalice		{Cáliz}
 itmdescr_fake_chalice
 {
-A goblet of pure gold used to hold sacramental wine. 
+Un copón de oro puro usado para contener el vino sacramental. 
 }
 
-itmname_fake_censer		{Censer}
+itmname_fake_censer		{Incensario}
 itmdescr_fake_censer
 {
-This intricately carved gold vessel is used for burning incense.
+Este recipiente de oro profusamente labrado se usa para quemar incienso.
 }
 
-itmname_fake_candelabre		{Candelabre}
+itmname_fake_candelabre		{Candelabro}
 itmdescr_fake_candelabre
 {
-A heavy eight-branched silver candelabre. 
+Un peado candelabro de pata de ocho brazos. 
 }
 
-itmname_bladelockpick		{Lockpick}
+itmname_bladelockpick		{Ganzúa}
 itmdescr_bladelockpick
 {
-Two small irons that could be used as lockpick tools.
+Dos hierros pequeños que pueden usarse como herramientas de cerrajería.
 }
 
-itmname_bladehandle		{Handle}
+itmname_bladehandle		{Picaporte}
 itmdescr_bladehandle
 {
-A simple handle to a door or a closet.
+Un simple picaporte de una puerta o un armario.
 }
 
-itmname_bladeladder		{Ladder}
+itmname_bladeladder		{Escalera de mano}
 itmdescr_bladeladder
 {
-A long ladder. Why was it hidden it here?
+Una larga escalera de mano. ¿Por qué estaba aquí escondida?
 }
 
-itmname_bladeoilbottle		{Bottle of Oil}
+itmname_bladeoilbottle		{Botella de aceite}
 itmdescr_bladeoilbottle
 {
-A bottle filled with the finest olive oil.
+Una botella llena del mejor aceite de oliva.
 }
 
-itmname_bladekeygrand		{Key}
+itmname_bladekeygrand		{Llave}
 itmdescr_bladekeygrand
 {
-Another key.
+Otra llave.
 }
 
-itmname_red_animist		{Monk Habit}
+itmname_red_animist		{Hábito de monje}
 itmdescr_red_animist
 {
-One of the choir members red clothes together with a long rope.
+Las vestiduras rojas de uno de los miembros del coro, junto a una larga cuerda.
 }
 
-itmname_many_red_animists	{Many Monk Habits}
+itmname_many_red_animists	{Muchos hábitos de monje}
 itmdescr_many_red_animists
 {
-The rest of the choir's red outfits.
+El resto de los ropajes rojos del coro.
 }
 
-itmname_pack_of_red_cloth	{Rolls of Red Cloth}
+itmname_pack_of_red_cloth	{Rollos de tela roja}
 itmdescr_pack_of_red_cloth
 {
-The monk robes packed into rolls.
+Los ropajes de los monjes recogidos en rollos.
 }
 
-itmname_pistolcenser		{Censer}
+itmname_pistolcenser		{Incensario}
 itmdescr_pistolcenser
 {
-This intricately carved gold vessel is used for burning incense.
+Este recipiente de oro profusamente labrado se usa para quemar incienso. Proteje contra los zombis.
 }
 
 itmname_book62		    	{Cessa Decipere}
 itmdescr_book62
 {
-Exorcizamus te, omnis immundus spiritus omnis satanica potestas... Huh?
+Exorcizamus te, omnis immundus spiritus omnis satanica potestas... ¿Eh?
 }
 
-itmname_altar_bread		{Altar Bread}
+itmname_altar_bread		{Pan del altar}
 itmdescr_altar_bread
 {
-Poor bastards - only these dry biscuits to eat.
+Pobres bastardos: solo esta galleta seca para comer.
 }
 
-itmname_wax_candles		{Wax Candles}
+itmname_wax_candles		{Velas de cera}
 itmdescr_wax_candles
 {
-Expensive beeswax candles for church ceremonies. 
+Caras velas de cera de abeja para las ceremonias de la iglesia. 
 }
 
-itmname_silvercross		{Silver Cross}
+itmname_silvercross		{Cruz de plata}
 itmdescr_silvercross
 {
-A simple cross and chain in silver. 
+Una simple cruz en una cadena de plata. 
 }
 
-itmname_treasure7		{Relic}
+itmname_treasure7		{Reliquia}
 itmdescr_treasure7
 {
-The supposed finger and ring of the 1100th century female Pope. 
+El supuesto dedo y el anillo de la mujer papisa del siglo XI. 
 }
 
-itmname_icon			{Icon}
+itmname_icon			{Icono}
 itmdescr_icon
 {
-An icon of Pope Joan. 
+Un icono de la papisa Juana. 
 }
 
-itmname_rosary			{Rosary}
+itmname_rosary			{Rosario}
 itmdescr_rosary
 {
-The Abbess' rosary. 
+El rosario de la abadesa. 
 }
 
-itmname_crypt_sketch		{Sketch}
+itmname_crypt_sketch		{Dibujo}
 itmdescr_crypt_sketch
 {
-The sketch shows a path I think. 
+El dibujo muestra un camino, creo. 
 }
 
 //----------------- CHURCH ITEMS END --------------------------------------------------------------------------------------
 //-------------- FINAL CHEST ITEMS START ----------------------------------------------------------------------------------
 
-itmname_red_uniform		{Red Costume}
+itmname_red_uniform		{Traje rojo}
 itmdescr_red_uniform
 {
-A suit of very good clothes, carefully brushed and folded.
+Un traje de ropas de gran calidad, cuidadosamente cepilladas y dobladas.
 }
 
-itmname_sealed_map		{Sealed Paper}
+itmname_sealed_map		{Papel lacrado}
 itmdescr_sealed_map
 {
-The paper has been sealed in several places with a thimble by way of seal; the very thimble I found in the Governor's pocket.
-I'll try to use the folding knife when carefully openening the seals.
+El papel ha sido lacrado en varias partes usando un dedal como sello; el mismo dedal que encontré en el bolsillo del Gobernador.
+Debo tener mucho cuidado con el cuchillo para abirir los lacres.
 }
 
-itmname_mapBB1			{Map Piece}
+itmname_mapBB1			{Fragmento de mapa}
 itmdescr_mapBB1
 {
-A map of some islands with latitude and longitude, but it's only a piece of a larger Caribbean Map. 
+Un mapa de ciertas islas, con latitud y longitud, Pero es solo un grafmento de un mapa más grande del Caribe. 
 }
 
-itmname_package			{Oilcloth Packet}
+itmname_package			{Paquete de lona impermeable}
 itmdescr_package
 {
-Under an old boat-cloak, whitened with sea-salt on many a harbour-bar, a bundle tied up in oilcloth and looking like papers.
+Bajo la vieja capa de marino, desgastada por la sal, un paquete envuelto en lona impermeable que parece contener papeles.
+El paquete está cosido, nnecesitaré algo para cortar las costuras.
 }
 
-itmname_temp_purse		{Purse}
+itmname_temp_purse		{Bolso}
 itmdescr_temp_purse
 {
-A canvas bag, that give forth at a touch, the jingle of gold.
+Una bolsa de lienzo que tintinea al agitarla, anunciando la presencia de oro en su interior.
 }
 
-itmname_temp_coins		{Coins}
+itmname_temp_coins		{Monedas}
 itmdescr_temp_coins
 {
-A few small coins.
+Unas pocas monedas pequeñas.
 }
 
-itmname_folding_knife		{Folding Knife}
+itmname_folding_knife		{Navaja plegable}
 itmdescr_folding_knife
 {
-A gully with a crooked handle. The blade is very thin and sharpe.
+Una navaja con el mango torcido.
 }
 
-itmname_pistoltinderbox		{Tinderbox}
+itmname_pistoltinderbox		{Yesquero}
 itmdescr_pistoltinderbox
 {
-A tinderbox looking like a small pistol.
+Un yesquero que parece una pequeña pistola.
 }
 
-itmname_tobacco			{Tobacco}
+itmname_tobacco			{Tabaco}
 itmdescr_tobacco
 {
-Pieces of pigtail tobacco.
+Fragmentos de tabaco de mascar.
 }
 
-itmname_sewing_kit		{Sewing Kit}
+itmname_sewing_kit		{Equipo de costura}
 itmdescr_sewing_kit
 {
-A thimble, some thread and big needles.
+Un dedal, hilo y una aguja grande.
 }
 
-itmname_notebook		{Notebook}
+itmname_notebook		{Cuaderno}
 itmdescr_notebook
 {
-The book is divided in six 'chapters'. Not much text in each though...
+El cuaderno se divide en seis 'capítulos'. Aunque no hay mucho texto en cada uno...
 }
 
-itmname_drawing_kit		{Pair of Compasses}
+itmname_drawing_kit		{Par de Compases}
 itmdescr_drawing_kit
 {
-A pair of compasses mounted with brass.
+Un par de compases de dibujo con montura de latón.
 }
 
-itmname_tin_jug			{Tin Canikin}
+itmname_tin_jug			{Jarra de hojalata}
 itmdescr_tin_jug
 {
-A small tin jug.
+Una pequeña jarra de hojalata.
 }
 
-itmname_silver_bar		{Silver Bar}
+itmname_silver_bar		{Lingote de plata}
 itmdescr_silver_bar
 {
-A heavy piece of bar silver.
+Una pesada pieza de plata en lingote.
 }
 
-itmname_foreign_items		{Item Collection}
+itmname_foreign_items		{Colección de trastos}
 itmdescr_foreign_items
 {
-Some trinkets of little value and mostly of foreign make.
+Algunas baratijas de poco valor y en su mayoría de factura extranjera.
 }
 
-itmname_strange_shells		{Strange Shells}
+itmname_strange_shells		{Conchas extrañas}
 itmdescr_strange_shells
 {
-Five or six curious West Indian shells. I wonder since why he should have carried about these shells with him in his wandering, guilty and hunted life.
+Cinco o seis curiosas conchas de las Indias Occidentales. Siempre me he preguntado por qué llevaría consigo estas conchas en su vida errante, perseguido y culpable.
 }
 
 //-------------- FINAL CHEST ITEMS END ----------------------------------------------------------------------------------
 //-------------- WOOD TOWER ITEMS START -----------------------------------------------------------------------------------
 
-itmname_bladeladder2		{Ladder}
+itmname_bladeladder2		{Escalera de mano}
 itmdescr_bladeladder2
 {
-The storm has moved this long ladder into the water.
+La tormenta ha movido esta larga escalera de mano hasta el agua.
 }
 
-itmname_bladeboathook_1		{Boathook}
+itmname_bladeboathook_1		{Bichero}
 itmdescr_bladeboathook_1
 {
-It's very long and equipped with a hook, that's all.
+Es muy largo y con un gancho en el extremo, eso es todo.
 }
 
-itmname_bladeboathook_2		{Boathook}
+itmname_bladeboathook_2		{Bichero}
 itmdescr_bladeboathook_2
 {
-It's very long and equipped with a hook, that's all.
+Es muy largo y con un gancho en el extremo, eso es todo.
 }
 
-itmname_blademegaphone		{Megaphone}
+itmname_blademegaphone		{Bocina}
 itmdescr_blademegaphone
 {
-An officers item made of finest brass.
+Un objeto para oficiales, hecho del mejor latón.
 }
 
-itmname_bladewhistle		{Bosun's Pipe}
+itmname_bladewhistle		{Silbato de contramaestre}
 itmdescr_bladewhistle
 {
-Give the signals: 'Call mates', 'Carry on', 'The side' and 'Away boat'.
+Da las señales de: 'Llamar a los ayudantes del contramaestre', 'Romper filas', 'Recibir o despedir a oficiales' y 'Largar los botes'.
 }
 
-itmname_blademusket		{Musket}
+itmname_blademusket		{Mosquete}
 itmdescr_blademusket
 {
-Looks familiar.
+Me resulta familiar.
 }
 
-itmname_bladespyglass5		{Spyglass}
+itmname_bladespyglass5		{Catalejo}
 itmdescr_bladespyglass5
 {
-Useful from top of the tower
+Usado desde lo alto de la torre
 }
 
-itmname_bladeflag_pir		{Rackham's Pirate Flag}
+itmname_bladeflag_pir		{Jolly Roger}
 itmdescr_bladeflag_pir
 {
-The black banner in the Charles Vane's style: A skull and two sabres. Later used by Jack Rackham.
+La bandera negra al estilo de Charles Vane: una calavera y dos sables. Más tarde usada por Jack Rackham.
 }
 
 //-------------- WOOD TOWER ITEMS END -------------------------------------------------------------------------------------
 //---------------- FLAGCHEST START ----------------------------------------------------------------------------------------
 
-itmname_flagchest_closed	{Flag Chest}
+itmname_flagchest_closed	{Cofre de banderas}
 itmdescr_flagchest_closed
 {
-A closed box with the inscription La Concorde.
+Una caja cerrada con la inscripción 'La Concorde'.
 }
 
-itmname_flagchest_openA		{Flag Chest}
+itmname_flagchest_openA		{Cofre de banderas}
 itmdescr_flagchest_openA
 {
-A large collection of Flags from many countries. Also two Black Flags.
+Una gran colección de banderas de muchos países. Y dos banderas negras.
 }
 
-itmname_flagchest_empty		{Empty Flag Chest}
+itmname_flagchest_empty		{Cofre de banderas vacío}
 itmdescr_flagchest_empty
 {
 
 }
 
-itmname_flagchest_openB		{Flag Chest}
+itmname_flagchest_openB		{Cofre de banderas}
 itmdescr_flagchest_openB
 {
-A large collection of Flags from many countries. Also two Black Flags.
+Una gran colección de banderas de muchos países. Y dos banderas negras.
 }
 
 
-itmname_bladeflag_pir2		{Teach's Pirate Flag}
+itmname_bladeflag_pir2		{Bandera pirata de Teach}
 itmdescr_bladeflag_pir2
 {
-The black flag of Edward Teach. AKA Blackbeard.
+La bandera negra de Edward Teach, alias Barbanegra.
 }
 
-itmname_bladeflag_HOL		{Dutch Flag}
+itmname_bladeflag_HOL		{Bandera holandesa}
 itmdescr_bladeflag_HOL
 {
 
 }
 
-itmname_bladeflag_ENG		{English Flag}
+itmname_bladeflag_ENG		{Bandera inglesa}
 itmdescr_bladeflag_ENG
 {
 
 }
 
-itmname_bladeflag_FRA		{French Flag}
+itmname_bladeflag_FRA		{Bandera española}
 itmdescr_bladeflag_FRA
 {
 
 }
 
-itmname_bladeflag_POR		{Portuguese Flag}
+itmname_bladeflag_POR		{Bandera portuguesa}
 itmdescr_bladeflag_POR
 {
 
 }
 
-itmname_bladeflag_SPA		{Spanish Flag}
+itmname_bladeflag_SPA		{Bandera española}
 itmdescr_bladeflag_SPA
 {
 
 }
 
-itmname_bladeflag_PRE		{Prussian Flag}
+itmname_bladeflag_PRE		{Bandera prusiana}
 itmdescr_bladeflag_PRE
 {
 
 }
 
-itmname_bladeflag_IRE		{Irish Flag}
+itmname_bladeflag_IRE		{Bandera irlandesa}
 itmdescr_bladeflag_IRE
 {
 
 }
 
-itmname_bladeflag_SWE		{Swedish Flag}
+itmname_bladeflag_SWE		{Bandera sueca}
 itmdescr_bladeflag_SWE
 {
 
 }
 
-itmname_bladeflag_HOL2		{Dutch Flag}
+itmname_bladeflag_HOL2		{Bandera holandesa}
 itmdescr_bladeflag_HOL2
 {
-"Staten General" from the Netherlands.
+"Staten General" de los Países Bajos.
 }
 
-itmname_bladeflag_AME		{American Flag}
+itmname_bladeflag_AME		{Bandera estadounidense}
 itmdescr_bladeflag_AME
 {
-The American First Navy Jack.
+La primera bandera naval estadounidense.
 }
 
-itmname_bladeflag_SPA2		{Unknown Flag}
+itmname_bladeflag_SPA2		{Bandera desconocida}
 itmdescr_bladeflag_SPA2
 {
-It looks vaguely Spanish.
+Parece vagamente española.
 }
 
 //---------------- FLAGCHEST END ------------------------------------------------------------------------------------------
 //--------------- BLADE WEAPONS START -------------------------------------------------------------------------------------
 
-itmname_bladeA2			{Blade}
+itmname_bladeA2			{Espada}
 itmdescr_bladeA2
 {
-A rapier.
+Una espada ropera.
 }
 
-itmname_bladeA4			{Blade}
+itmname_bladeA4			{Espada}
 itmdescr_bladeA4
 {
-A rapier.
+Una espada ropera.
 }
 
-itmname_bladeA11		{Blade}
+itmname_bladeA11		{Espada}
 itmdescr_bladeA11
 {
-A rapier.
+Una espada ropera.
 }
 
-itmname_bladeA17		{Blade}
+itmname_bladeA17		{Espada}
 itmdescr_bladeA17
 {
-A saber.
+Un sable.
 }
 
-itmname_bladeA5			{Blade}
+itmname_bladeA5			{Espada}
 itmdescr_bladeA5
 {
-A saber.
+Un sable.
 }
 
-itmname_bladepclub203		{Pistol Club}
+itmname_bladepclub203		{Pistola garrote}
 itmdescr_bladepclub203
 {
-A heavy pistol can be used as a club. Makes more damage than your fists.
+Una pistola pesada puede usarse como garrote. Hace más daño que los puños desnudos.
 }
 
-itmname_fake_pclub		{Pistol Club}
+itmname_fake_pclub		{Pistola garrote}
 itmdescr_fake_pclub
 {
-A heavy pistol can be used as a club. Makes more damage than your fists.
+Una pistola pesada puede usarse como garrote. Hace más daño que los puños desnudos.
 }
 
-itmname_bladeplank		{Plank}
+itmname_bladeplank		{Tabla}
 itmdescr_bladeplank
 {
-Maybe you can defend yourself with this plank. 
+Tal vez puedas defenderte con esta tabla. 
 }
 
-itmname_bladeboom		{Boom}
+itmname_bladeboom		{Palo}
 itmdescr_bladeboom
 {
-Just a piece of wood, hardly any dangerous weapon. 
+Es solo un trozo de madera, no es un arma muy peligrosa. 
 }
 
-itmname_bladeanchor		{Anchor}
+itmname_bladeanchor		{Rezón}
 itmdescr_bladeanchor
 {
-A small but heavy anchor, it may cause some really bad damage. 
+Un ancla pequeña pero pesada, podría causar mucho daño. 
 }
 
-itmname_bladeanchor_big		{Big Anchor}
+itmname_bladeanchor_big		{Ancla grande}
 itmdescr_bladeanchor_big
 {
-A very heavy anchor. I'll try to block the suspension bridge with it. 
+Un ancla muy pesada. Intentaré bloquear el puente colgante con ella. 
 }
 
-itmname_fake_anchor		{Anchor}
+itmname_fake_anchor		{Rezón}
 itmdescr_fake_anchor
 {
-A small but heavy anchor, it may cause some really bad damage. 
+Un ancla pequeña pero pesada, podría causar mucho daño. 
 }
 
-itmname_bladebroom		{Broom}
+itmname_bladebroom		{Escoba}
 itmdescr_bladebroom
 {
-Now I can tidy up the place. 
+Ahora puedo limpiar el lugar. 
 }
 
-itmname_bladespade		{Spade}
+itmname_bladespade		{Pala}
 itmdescr_bladespade
 {
-Yes, I can dig up the anchor on the shore now.
+Sí, ahora pueda desenterrar el ancla de la orilla.
 }
 
-itmname_bladeBB			{Blade}
+itmname_bladeBB			{Espada}
 itmdescr_bladeBB
 {
-A Heavy Cutlass with a 'E' carved into the hilt.
-}
-
-itmname_machete		 	{Machete}
-itmdescr_machete
-{
-Used for cutting sugar canes.
-}
-
-itmname_BBDagger		{Dagger}
-itmdescr_BBDagger
-{
-It looks more expensive than dangerous. Sharp enough though to cut out the painting from the frame.
-}
-
-itmname_snakewand		{Aaron's Rod}
-itmdescr_snakewand
-{
-A wooden stick shaped like a snake. It is said to be very powerful against all evil. 
-}
-
-itmname_bladepainting		{Painting}
-itmdescr_bladepainting
-{
-The painting I cut out. Signed FH 1634.
+Un pesado alfanje con una 'E' grabada en la empuñadura.
 }
 
 //--------------- BLADE WEAPONS END --------------------------------------------------------------------------------------
 //------------- PISTOL WEAPONS START -------------------------------------------------------------------------------------
 
-itmname_pistol201 	{Pistol}
+itmname_pistol201 	{Pistola}
 itmdescr_pistol201
 {
-An expensive long pistol with the name 'Johnson'. Looks unused.
+Una cara pistola larga con el nombre 'Johnson'. Parece que no se ha usado.
 }
 
-itmname_pistol202 	{Pistol}
+itmname_pistol202 	{Pistola}
 itmdescr_pistol202
 {
-A small short-barrelled pistol black of smoke. 'CSAR' with childish letters.
+Una pequeña pistola de cañón corto enenegrecida por el humo. Tiene grabado 'CSAR' con caligrafía infantil.
 }
 
-itmname_pistol203 	{Pistol}
+itmname_pistol203 	{Pistola}
 itmdescr_pistol203
 {
-A heavy gun that seems to have been used as a club. 'Benj Hrngld' written on the barrel.
+Un arma pesada que parece haber sido usdada como garrote. Tiene escrito 'Benj Hrngld' en el cañón.
 }
 
-itmname_pistol204 	{Pistol}
+itmname_pistol204 	{Pistola}
 itmdescr_pistol204
 {
-A double-barrelled pistol with rich ornamnents. One lock is stuck though. 'Eden N. Carolina' engraved on the lock.
+Una pistola de dos cañones con ricos adornos. Pero una de las llaves está atascada. Tiene 'Eden N. Carolina' grabado en la llave.
 }
 
-itmname_pistol205 	{Pistol}
+itmname_pistol205 	{Pistola}
 itmdescr_pistol205
 {
-An exceptionally well-crafted duelling pistol. It shoots as good as it looks. 'Richards' carved on the stock.
+Una pistola de duelo de excepcional factura. Es tan precisa como bonita. Tiene 'Richards' grabado en la culata.
 }
 
-itmname_pistol206 	{Pistol}
+itmname_pistol206 	{Pistola}
 itmdescr_pistol206
 {
-Is it a pistol or a cannon? Sounds good too. 'Basilica Hands' with a very fine handwriting.
+¿Es una pistola o un cañón? Suena como uno. Lleva escrito con muy buena letra 'Basilica Hands'.
 }
 
-itmname_pistolbelt 	{Blackbeard�s Pistol Belt}
+itmname_pistolbelt 	{Bandolera de pistolas de Barbanegra}
 itmdescr_pistolbelt
 {
-You can carry six pistols with this belt used by Teach.
+Con esta bandolera usada por Teach, puedes llevar seis pistolas.
 }
 
-itmname_pistol20 	{Blackbeard�s Set of Six Pistols}
+itmname_pistol20 	{Juego de seis pistolas de Barbanegra}
 itmdescr_pistol20
 {
-Your crew believes that this small arsenal really belonged to Teach, maybe it's true. Only for a 'Master Gunfighter'.
+Tu tripulación cree que este pequeño arsenal perteneció realmente a Teach. Puede que sea verdad. Solo para un 'Maestro pistolero'.
 }
 
-itmname_pistol0		{Pocket Pistol}
+itmname_pistol0		{Pistola de bolsillo}
 itmdescr_pistol0
 {
-One of two very small pistols for discreet use.
+Una de un juego de dos pistolas muy pequeñas para uso discreto.
 }
 
-itmname_bladep0		{Pocket Pistol}
+itmname_bladep0		{Pistola de bolsillo}
 itmdescr_bladep0
 {
-One of two very small pistols for discreet use.
+Una de un juego de dos pistolas muy pequeñas para uso discreto.
 }
 
-itmname_pistolthrow5		{Throwing Pistols}
+itmname_pistolthrow5		{Pistolas arrojadizas}
 itmdescr_pistolthrow5
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
-itmname_pistolthrow4		{Throwing Pistols}
+itmname_pistolthrow4		{Pistolas arrojadizas}
 itmdescr_pistolthrow4
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
-itmname_pistolthrow3		{Throwing Pistols}
+itmname_pistolthrow3		{Pistolas arrojadizas}
 itmdescr_pistolthrow3
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
-itmname_pistolthrow2		{Throwing Pistols}
+itmname_pistolthrow2		{Pistolas arrojadizas}
 itmdescr_pistolthrow2
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
-itmname_pistolthrow1		{Throwing Pistols}
+itmname_pistolthrow1		{Pistolas arrojadizas}
 itmdescr_pistolthrow1
 {
-When you're out of ammunition you can throw the pistols on your enemies.
+Cuando te quedas sin munición puedes lanzar la pistola a tus enemigos.
 }
 
-itmname_pistolbladeBB		{Blade}
+itmname_pistolbladeBB		{Espada}
 itmdescr_pistolbladeBB
 {
-Another Heavy Cutlass with a 'T' carved into the hilt. Yes, I have read he used two blades.
-}
-
-itmname_pistolwhip		{Bullwhip}
-itmdescr_pistolwhip
-{
-A single-tailed whip, made of braided leather, designed as a tool for working with livestock. Use it to disarm your enemies.
-}
-
-itmname_pistolcannon		{Hand Cannon}
-itmdescr_pistolcannon
-{
-Load it with 6 gunpowder and 6 grapeshots and the Swivelgun can take out a whole group of enemies. But watch out for the recoil!
-}
-
-itmname_pistolcannon1		{Hand Cannon}
-itmdescr_pistolcannon1
-{
-You must have the Belt equipped to carry this small but heavy Cannon.
-}
-
-itmname_pistolcenserD		{Censer}
-itmdescr_pistolcenserD
-{
-This intricately carved gold vessel is used for burning incense. Protects against the Evil One.
-}
-
-itmname_pistolbook71		{Damaged Book}
-itmdescr_pistolbook71
-{
-Many pages have been ripped out. I see one of those symbols there. Could it be..? 
+Otro alfanje pesado con una 'T' grabada en la empuñadura. Sí, he oído que usaba dos espadas.
 }
 
 //--------------- PISTOL WEAPONS END -------------------------------------------------------------------------------------
 //------------------- TOOLS START ----------------------------------------------------------------------------------------
 
-itmname_bladeaxe4		{Axe}
+itmname_bladeaxe4		{Hacha}
 itmdescr_bladeaxe4
 {
-This creepy big axe looks very much like an executioner's axe. 
+Esta siniestra hacha de gran tamaño parece el arma de un verdugo. 
 }
 
-itmname_bladeaxe5		{Small Axe}
+itmname_bladeaxe5		{Hacha pequeña}
 itmdescr_bladeaxe5
 {
-A small hand axe, nothing special with it. 
+Una pequeña hacha de mano, no tiene nada de especial. 
 }
 
-itmname_bladepickaxe1		{Tool}
+itmname_bladepickaxe1		{Herramienta}
 itmdescr_bladepickaxe1
 {
-A long gardening tool(?) or maybe something used in the mines. 
+¿Una larga herramienta de jardinería?, ¿o quizás algo usado en minería? 
 }
 
-itmname_bladeirontool		{Tool}
+itmname_bladeirontool		{Herramienta}
 itmdescr_bladeirontool
 {
-Could be used as a crowbar. 
+Podría usarse como pata de cabra. 
 }
 
-itmname_bladehammer		{Hammer}
+itmname_bladehammer		{Martillo}
 itmdescr_bladehammer
 {
-A short but very heavy hammer. 
+Un martillo corto pero muy pesado. 
 }
 
-itmname_pistolhammer		{Hammer}
+itmname_pistolhammer		{Martillo}
 itmdescr_pistolhammer
 {
-A short but very heavy hammer.
+Un martillo corto pero muy pesado. 
 }
 
-itmname_bladepickaxe2		{Pickaxe}
+itmname_bladepickaxe2		{Pico}
 itmdescr_bladepickaxe2
 {
-A long sharp tool used in the mining business. 
+Una herramienta larga y afilada usada en el negocio de la minería. 
 }
 
-itmname_bladesaw		{Saw}
+itmname_bladesaw		{Sierra}
 itmdescr_bladesaw
 {
-A carpenter's robust tool. 
+Una robusta herramienta de carpintero. 
 }
 
-itmname_tool1			{Carpenter Tools}
+itmname_tool1		{Herramientas de carpintero}
 itmdescr_tool1
 {
-Two planes and a pair of compasses.
+Dos garlopas y un par de compases.
 }
 
-itmname_tool2			{Carpenter Tools}
+itmname_tool2		{Herramientas de carpintero}
 itmdescr_tool2
 {
-A pair of Carpenter axes.
+Un par de hachas de carpintero.
 }
 
-itmname_tool3			{Carpenter Tools}
+itmname_tool3		{Herramientas de carpintero}
 itmdescr_tool3
 {
-A hammer and three chisels.
+Un martillo y tres escoplos.
 }
 
-itmname_tool4			{Carpenter Tools}
+itmname_tool4		{Herramientas de carpintero}
 itmdescr_tool4
 {
-A drill and some other things.
+Un taladro y otras cosas.
 }
 
-itmname_tool5			{Carpenter Tools}
+itmname_tool5		{Herramientas de carpintero}
 itmdescr_tool5
 {
-Two saws of different size.
+Dos sierras de diferente tamaño.
 }
 
-itmname_tool6			{Carpenter Tools}
+itmname_tool6		{Herramientas de carpintero}
 itmdescr_tool6
 {
-A heavy tool that could be used as a lever and more.
+Una herramienta pesada que podría usarse como palanca y más cosas.
 }
 
-itmname_pistoltoolchest1	{Empty Carpenters Chest}
+itmname_pistoltoolchest1		{Cofre de carpintero vacío}
 itmdescr_pistoltoolchest1
 {
-Collect all the Carpenter Tools. Maybe you find something useful.
+Obtén todas las herramientas de carpintero. Puede que encuentres algo útil.
 }
 
-itmname_pistoltoolchest2	{Filled Carpenters Chest}
+itmname_pistoltoolchest2		{Cofre de carpintero lleno}
 itmdescr_pistoltoolchest2
 {
-The chest is fully equipped with Carpenter Tools.
+El cofre está completamente equipado con herramientos de carpintero.
 }
 
-itmname_pistolspade		{Spade}
+itmname_pistolspade		{Pala}
 itmdescr_pistolspade
 {
-A gardener's tool or what? 
+¿Una herramienta de jardinero o qué? 
 }
 
-itmname_paper_clip		{Wire}
+itmname_paper_clip		{Alambre}
 itmdescr_paper_clip
 {
-Not sure what this little piece of wire is. Maybe I can make something out of it?
+No estoy seguro de qué es esta pequeña pieza de alambre. ¿Quizás pueda hacer algo con ella?
 }
 
-itmname_paper_clip2		{Hook}
+itmname_paper_clip2		{Gancho}
 itmdescr_paper_clip2
 {
-I have bent it to a Hook. Now let's use it!
-}
-
-itmname_toolbox_filled		{Toolbox}
-itmdescr_toolbox_filled
-{
-It's heavy - let's see what's inside!
-}
-
-itmname_toolbox_empty		{Empty Toolbox}
-itmdescr_toolbox_empty
-{
-
+He doblado el alambre para formar un gancho. ¡Vamos a usarlo!
 }
 
 //------------------- TOOLS END -------------------------------------------------------------------------------------------
 //----------------- ALCHEMY ITEMS START -----------------------------------------------------------------------------------
 
-itmname_bladecauldron		{Cauldron}
+itmname_bladecauldron		{Caldera}
 itmdescr_bladecauldron
 {
-A heavy cast iron Cauldron.
+Una pesada caldera de hierro fundido.
 }
 
-itmname_bladecauldron_w		{Cauldron}
+itmname_bladecauldron_w		{Caldera}
 itmdescr_bladecauldron_w
 {
-The Cauldron is filled with Water.
+La caldera está llena de agua.
 }
 
-itmname_bladetop		{Top}
+itmname_bladetop		{Tapa}
 itmdescr_bladetop
 {
-A dirty glass item. Should be placed on top of the Retort.
+Un objeto de cristal sucio. Debería colocarse encima de la retorta.
 }
 
-itmname_pistolretort		{Retort}
+itmname_pistolretort		{Retorta}
 itmdescr_pistolretort
 {
-It's here the distillation takes place.
+Aquí es donde tiene lugar la destilación.
 }
 
-itmname_pistolglass_tube	{Glass Tube}
+itmname_pistolglass_tube	{Tubo de cristal}
 itmdescr_pistolglass_tube
 {
-For connecting the Top with a Reciever.
+Para conectar la tapa con el receptáculo.
 }
 
-itmname_pistolsalt		{Salt}
+itmname_pistolsalt		{Sal}
 itmdescr_pistolsalt
 {
-A jar full of ordinary salt.
+Un frasco lleno de sal ordinaria.
 }
 
-itmname_pistolnitre		{Nitre}
+itmname_pistolnitre		{Nitro}
 itmdescr_pistolnitre
 {
-A leather sack with stinking saltpeter.
+Un saco de cuero lleno de apestoso salitre.
 }
 
-itmname_pistolcopperas		{Copperas}
+itmname_pistolcopperas		{Caparrosa}
 itmdescr_pistolcopperas
 {
-A wooden box with green vitriol.
+Una caja de madera con vitriolo verde.
 }
 
 //Q2
 
-itmname_pistolfunnel		{Funnel}
+itmname_pistolfunnel		{Embudo}
 itmdescr_pistolfunnel
 {
-A glass funnel.
+Un embudo de cristal.
 }
 
-itmname_pistolcloth		{Filter}
+itmname_pistolcloth		{Filtro}
 itmdescr_pistolcloth
 {
-A clean piece of linen cloth.
+Una tela de lino limpia.
 }
 
-itmname_pistolbucket_dung	{Horse Dung}
+itmname_pistolbucket_dung	{Estiércol de caballo}
 itmdescr_pistolbucket_dung
 {
-Even though the bucket has a lid it stinks like hell.
+Aunque el cubo tiene tapa, huele que apesta.
 }
 
-itmname_pistolstonebasket_R	{Mercury Sulfide}
+itmname_pistolstonebasket_R	{Sulfuro de mercurio}
 itmdescr_pistolstonebasket_R
 {
-A chemical compound composed of the chemical elements mercury and sulphur.
+Un compuesto químico formado de los elementos mercurio y azufre.
 }
 
-itmname_pistolstonebasket_G	{Limestone}
+itmname_pistolstonebasket_G	{Caliza}
 itmdescr_pistolstonebasket_G
 {
-A sedimentary rock composed largely of calcium carbonate.
+Una roca sedimentaria compuesta en su mayoría por carbonato cálcico.
 }
 
-itmname_pistolstonebasket_M	{Antimony}
+itmname_pistolstonebasket_M	{Antimonio}
 itmdescr_pistolstonebasket_M
 {
-A lustrous gray metalloid.
+Un metaloide gris lustroso.
 }
 
-itmname_pistolstonebasket_B	{Black Antimony}
+itmname_pistolstonebasket_B	{Antimonio negro}
 itmdescr_pistolstonebasket_B
 {
-A common sulfide of antimony.
+Un común sulfuro de antimonio.
 }
 
-itmname_pistolsulphur_WR	{Sulphur}
+itmname_pistolsulphur_WR	{Azufre}
 itmdescr_pistolsulphur_WR
 {
-Elemental sulphur is a bright yellow crystalline solid at room temperature.
+El azufre es un elemento amarillo vivo, cristalino y sólido a temperatura ambiente.
 }
 
-itmname_pistolcharcoal_WR	{Coal}
+itmname_pistolcharcoal_WR	{Carbón}
 itmdescr_pistolcharcoal_WR
 {
-Charcoal is usually produced by slow pyrolysis, the heating of wood in the absence of oxygen.
+El carbón vegeta se produce normalmente mediante la pirólisis lenta, el calentamiento de la madera en ausencia de oxígeno.
 }
 
-itmname_pistolretort3		{Wax, fat}
+itmname_pistolretort3		{Cera, grasa}
 itmdescr_pistolretort3
 {
-Beeswax and butter. Very greasy.
+Cera de abeja y mantequilla. Muy grasienta.
 }
 
-itmname_pistolcalciumsack	{Calcium Carbonate}
+itmname_pistolcalciumsack	{Carbonato cálcico}
 itmdescr_pistolcalciumsack
 {
-Produced from limestone and water.
+Producido a partir de caliza y agua.
 }
 
 //----------------- ALCHEMY ITEMS END -------------------------------------------------------------------------------------
 //----------------- ALCHEMY BOTTLES START ---------------------------------------------------------------------------------
 
-itmname_bladebottle_CE0		{Small Empty Bottle}
+itmname_bladebottle_CE0		{Botella pequeña vacía}
 itmdescr_bladebottle_CE0
 {
  
 }
 
-itmname_bladebottle_CW1		{Water}
+itmname_bladebottle_CW1		{Agua}
 itmdescr_bladebottle_CW1
 {
-A bottle half filled with water.
+Una botella medio llena de agua.
 }
 
-itmname_bladebottle_CT1_sulf	{Sulfuric Acid}
+itmname_bladebottle_CT1_sulf	{Ácido sulfúrico}
 itmdescr_bladebottle_CT1_sulf
 {
-Known as Oil of Vitriol to the alchemists. A base ingredient - several other acids can be produced from this liquid. Be careful when mixing with water!
+Conocido como aceite de vitriolo por los alquimistas. Un ingrediente base: otros ácidos pueden elaborarse a partir de este líquido. ¡Cuidado al mezclarlo con agua!
 }
 
-itmname_bladebottle_CT1_nitr	{Nitric Acid}
+itmname_bladebottle_CT1_nitr	{Ácido Nítrico}
 itmdescr_bladebottle_CT1_nitr
 {
-Be careful when mixing with water!
+¡Cuidado al mezclarlo con agua!
 }
 
-itmname_bladebottle_CT1_hydr	{Hydrochloric Acid}
+itmname_bladebottle_CT1_hydr	{Ácido clorhídrico}
 itmdescr_bladebottle_CT1_hydr
 {
-Be careful when mixing with water!
+¡Cuidado al mezclarlo con agua!
 }
 
-itmname_bladebottle_CT1_hydrnitr	{Mixture}
+itmname_bladebottle_CT1_hydrnitr	{Mezcla}
 itmdescr_bladebottle_CT1_hydrnitr
 {
-1 part each of Hydrochloric and Nitric Acid.
+Una parte de ácido clorhídrico y otra de ácido nítrico.
 }
 
 
-itmname_bladebottle_CT2_sulf_w	{Diluted Sulfuric Acid}
+itmname_bladebottle_CT2_sulf_w	{Ácido sulfúrico diluido}
 itmdescr_bladebottle_CT2_sulf_w
 {
-Sulfuric Acid diluted with water. Dissolves many metals.
+Ácido sulfúrico diluido con agua. Disuelve muchos metales.
 }
 
-itmname_bladebottle_CT2_sulf_c	{Mixture}
+itmname_bladebottle_CT2_sulf_c	{Mezcla}
 itmdescr_bladebottle_CT2_sulf_c
 {
-Sulfuric Acid mixed with nitre.
+Ácido sulfúrico mezclado con salitre.
 }
 
 itmname_bladebottle_CT2_nitr_w	{Aqua Fortis}
 itmdescr_bladebottle_CT2_nitr_w
 {
-It was used in alchemy as a solvent for dissolving silver and most other metals with notable exceptions of gold and platinum.
+Se usaba en alquimia como disolvente para disolver plata y otros muchos metles, con las notables excepciones del oro y del platino.
 }
 
-itmname_bladebottle_CT2_hydr	{Hydrochloric Acid}
+itmname_bladebottle_CT2_hydr	{Ácido clorhídrico}
 itmdescr_bladebottle_CT2_hydr
 {
-Be careful when mixing with water!
+¡Cuidado al mezclarlo con agua!
 }
 
-itmname_bladebottle_CT2_hydrnitr	{Mixture}
+itmname_bladebottle_CT2_hydrnitr	{Mezcla}
 itmdescr_bladebottle_CT2_hydrnitr
 {
-1 part each of Hydrochloric Acid and Nitric Acid.
+Una parte de ácido clorhídrico y otra de ácido nítrico.
 }
 
-itmname_bladebottle_CG2		{Mixture}
+itmname_bladebottle_CG2		{Mezcla}
 itmdescr_bladebottle_CG2
 {
-Copperas mixed with water.
+Caparrosa mezclada con agua.
 }
 
 itmname_bladebottle_CA2		{Aqua Regis}
 itmdescr_bladebottle_CA2
 {
-It was so named because it can dissolve the so-called "royal metals," or noble metals, gold and platinum.
+Se llamaba así porque puede disolver los llamados "metales reales", o nobles, el oro y el platino.
 }
 
 itmname_bladebottle_CP2		{Champagne}
 itmdescr_bladebottle_CP2
 {
-Imported from France or maybe Russia?
+¿Importado de Francia o tal vez de Rusia?
 }
 
 itmname_bladebottle_CB1		{Alcohol}
 itmdescr_bladebottle_CB1
 {
-Almost pure alcohol that has to be diluted with water before drinking it.
+Alcohol casi puro que debe diluirse en agua antes de poder beberlo.
 }
 
-itmname_bladebottle_CB2		{Cognac?}
+itmname_bladebottle_CB2		{¿Cognac?}
 itmdescr_bladebottle_CB2
 {
-If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
+Si lo almacenas durante diez años, tal vez pudieras llamarlo cognac. Por ahora tiene un sabor muy fuerte e... inusual.  
 }
 
-itmname_Cognac			{Cognac?}
+itmname_Cognac			{¿Cognac?}
 itmdescr_Cognac
 {
-If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
+Si lo almacenas durante diez años, tal vez pudieras llamarlo cognac. Por ahora tiene un sabor muy fuerte e... inusual.  
 }
 
-itmname_bladebottle_CR2		{Communion Wine}
+itmname_bladebottle_CR2		{Vino de comunión}
 itmdescr_bladebottle_CR2
 {
-Looks like ordinary Red Wine to me.
+Parece vino tinto normal y corriente.
 }
 
-itmname_potionwine2		{Communion Wine}
+itmname_potionwine2		{Vino de comunión}
 itmdescr_potionwine2
 {
-Looks like ordinary Red Wine to me.
+Parece vino tinto normal y corriente.
 }
 
-//Q2 p�r
+//Q2
 
-itmname_bladebottle_BE0		{Big Empty Bottle}
+itmname_bladebottle_BE0		{Gran botella vacía}
 itmdescr_bladebottle_BE0
 {
  
 }
 
-itmname_bladebottle_BTc_hydr	{Mixture 1}
+itmname_bladebottle_BTc_hydr	{Mezcla 1}
 itmdescr_bladebottle_BTc_hydr
 {
-Salt and Sulfuric Acid.
+Sal y ácido sulfúrico.
 }
 
-itmname_bladebottle_CV1_ss	{Mixture 2}
+itmname_bladebottle_CV1_ss	{Mezcla 2}
 itmdescr_bladebottle_CV1_ss
 {
-Sodium Sulfate.
+Sulfato de sodio.
 }
 
-itmname_bladebottle_BG2		{Mixture 3}
+itmname_bladebottle_BG2		{Mezcla 3}
 itmdescr_bladebottle_BG2
 {
-Sodium Sulfate, Calcium Carbonate and Coal.
+Sulfato de sodio, carbonato cálcico y carbón.
 }
 
-itmname_bladebottle_CV2		{Mixture 4}
+itmname_bladebottle_CV2		{Mezcla 4}
 itmdescr_bladebottle_CV2
 {
-Sodium Carbonate and Calcium Sulfide.
+Carbonato sódico y sulfuro de calcio.
 }
 
-itmname_bladebottle_BTc_mix3	{Mixture 5}
+itmname_bladebottle_BTc_mix3	{Mezcla 5}
 itmdescr_bladebottle_BTc_mix3
 {
-Sodium Carbonate, Calcium Sulfide and water.
+Carbonato sódico y sulfuro de calcio y agua.
 }
 
-itmname_bladebottle_CV1_sc	{Mixture 6}
+itmname_bladebottle_CV1_sc	{Mezcla 6}
 itmdescr_bladebottle_CV1_sc
 {
-Sodium Carbonate.
+Carbonato sódico.
 }
 
-itmname_bladebottle_CG1		{Grinded Limestone}
+itmname_bladebottle_CG1		{Caliza molida}
 itmdescr_bladebottle_CG1
 {
 
 }
 
-itmname_bladebottle_BY2_mix7	{Mixture 7}
+itmname_bladebottle_BY2_mix7	{Mezcla 7}
 itmdescr_bladebottle_BY2_mix7
 {
-Sulphur, Sal Ammoniac, Calcium Oxide and water.
+Azufre, sal de amoniaco, óxido de calcio y agua.
 }
 
-itmname_bladebottle_BY1_mix7	{Mixture 7}
+itmname_bladebottle_BY1_mix7	{Mezcla 7}
 itmdescr_bladebottle_BY1_mix7
 {
-Sulphur, Sal Ammoniac, Calcium Oxide and water.
+Azufre, sal de amoniaco, óxido de calcio y agua.
 }
 
-itmname_bladebottle_CV1_cao	{Calcium Oxide}
+itmname_bladebottle_CV1_cao	{Óxido de calcio}
 itmdescr_bladebottle_CV1_cao
 {
 
 }
 
-itmname_bladebottle_CV1_NH4Cl	{Sal Ammoniac}
+itmname_bladebottle_CV1_NH4Cl	{Sal de Amoníaco}
 itmdescr_bladebottle_CV1_NH4Cl
 {
-Ammonium Chloride.
+Cloruro de amonio
 }
 
-itmname_bladebottle_GY2		{Mixture 8}
+itmname_bladebottle_GY2		{Mezcla 8}
 itmdescr_bladebottle_GY2
 {
-A mixture of H2S and NH3 gases.
+Una mezcla de los gases H2S y NH3.
 }
 
 itmname_bladebottle_BS2_LH	{Liquor Hepatis}
@@ -2762,31 +2616,31 @@ itmdescr_bladebottle_BS1_LH
 
 }
 
-itmname_bladebottle_BY2_mix9	{Mixture 9}
+itmname_bladebottle_BY2_mix9	{Mezcla 9}
 itmdescr_bladebottle_BY2_mix9
 {
-Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.
+Azufre, carbonato sódico, óxido de calcio y antimonio.
 }
 
-itmname_bladebottle_CB1_mix9	{Mixture 10}
+itmname_bladebottle_CB1_mix9	{Mezcla 10}
 itmdescr_bladebottle_CB1_mix9
 {
-Dried Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
+Azufre seco, carbonato sódico, óxido de calcio y antimonio.  
 }
 
-itmname_bladebottle_CB2_mix9	{Mixture 10}
+itmname_bladebottle_CB2_mix9	{Mezcla 10}
 itmdescr_bladebottle_CB2_mix9
 {
-Dried Sulphur, Sodium Carbonate, Calcium Oxide and Antimon.  
+Azufre seco, carbonato sódico, óxido de calcio y antimonio.  
 }
 
-itmname_bladebottle_CC2_bps	{Black Pulvis Solaris}
+itmname_bladebottle_CC2_bps	{Pulvis Solaris negro}
 itmdescr_bladebottle_CC2_bps
 {
 
 }
 
-itmname_bladebottle_CC1		{Grinded Black Antimony}
+itmname_bladebottle_CC1		{Antimonio negro molido}
 itmdescr_bladebottle_CC1
 {
 
@@ -2795,474 +2649,407 @@ itmdescr_bladebottle_CC1
 itmname_bladebottle_BP1_ps	{Pulvis Solaris}
 itmdescr_bladebottle_BP1_ps
 {
-Which means Powder of the Sun.
+Lo que significa 'polvo del sol'.
 }
 
 itmname_bladebottle_BP2_ps	{Pulvis Solaris}
 itmdescr_bladebottle_BP2_ps
 {
-Which means Powder of the Sun.
+Lo que significa 'polvo del sol'.
 }
 
-itmname_bladebottle_CQ1		{Mercury}
+itmname_bladebottle_CQ1		{Mercurio}
 itmdescr_bladebottle_CQ1
 {
 
 }
 
-itmname_bladebottle_CT2_mix11	{Mixture 11}
+itmname_bladebottle_CT2_mix11	{Mezcla 11}
 itmdescr_bladebottle_CT2_mix11
 {
-Mercury and Nitric Acid.
+Mercurio y ácido nítrico.
 }
 
-itmname_bladebottle_CA2_mix11	{Mixture 12}
+itmname_bladebottle_CA2_mix11	{Mezcla 12}
 itmdescr_bladebottle_CA2_mix11
 {
-Mercury Oxide and more.
+Óxido de mercurio y más.
 }
 
-itmname_bladebottle_CR1		{Mercury Oxide}
+itmname_bladebottle_CR1		{Óxido de mercurio}
 itmdescr_bladebottle_CR1
 {
 
 }
 
-itmname_bladebottle_CR2_rps	{Red Pulvis Solaris}
+itmname_bladebottle_CR2_rps	{Pulvis Solaris rojo}
 itmdescr_bladebottle_CR2_rps
 {
 
 }
 
-itmname_bladebottle_BAU		{Philospher's Stone}
+itmname_bladebottle_BAU		{Piedra filosofal}
 itmdescr_bladebottle_BAU
 {
-Is it really?
+¿De verdad?
 }
 
 //----------------- ALCHEMY BOTTLES END -----------------------------------------------------------------------------------
 //------------------- HAT ITEMS START -------------------------------------------------------------------------------------
 
-itmname_BB_hatA1		{Hat}
+itmname_BB_hatA1		{Sombrero}
 itmdescr_BB_hatA1
 {
-A large Tricorn with a bad smell of burned fuses. 
+Un gran tricornio que apesta a mechas quemadas. 
 }
 
-itmname_BB_hatB			{Hat}
+itmname_BB_hatB			{Sombrero}
 itmdescr_BB_hatB
 {
-Not much too see here... or is it? 
+No hay mucho que ver aquí... ¿o sí? 
 }
 
-itmname_BB_hatC			{Hat}
+itmname_BB_hatC			{Sombrero}
 itmdescr_BB_hatC
 {
-Ha! He had a Key hidden inside.
+¡Ja! Tenía una llave escondida dentro.
 }
 
-itmname_BB_hatA2		{Hat}
+itmname_BB_hatA2		{Sombrero}
 itmdescr_BB_hatA2
 {
-A large Tricorn with a bad smell of burned fuses.
-I just have to try it on anyway.
+Un gran tricornio que apesta a mechas quemadas.
+Pero tengo que probármelo de todos modos.
 }
 
-itmname_BB_key			{Key}
+itmname_BB_key			{Llave}
 itmdescr_BB_key
 {
-Teach's Key. Must be important when hidden so carefully.
+La llave de Teach. Debe ser importante para tomarse tantas molestias en esconderla.
 }
 
 //------------------- HAT ITEMS END ---------------------------------------------------------------------------------------
 //------------------OUTFIT ITEMS START ------------------------------------------------------------------------------------
 
-itmname_bandages_trousersX	{Bandages and Trousers}
+itmname_bandages_trousersX	{Vendas y pantalones}
 itmdescr_bandages_trousersX
 {
-Bandages - just what I need! It looks like there's something in the Trousers pocket. 
+Vendas, ¡justo lo que necesito! Parece que hay algo en el bolsillo de los pantalones. 
 }
 
-itmname_bandages_trousersQ	{Bandages and Trousers}
+itmname_bandages_trousersQ	{Vendas y pantalones}
 itmdescr_bandages_trousersQ
 {
-First I have to dress the wound then I'll try the badly worn trousers.
+Primero tengo que vendar la herida, luego me probaré los pantalones desgastados.
 }
 
-itmname_shirt_shoes		{Shirt and Shoes}
+itmname_shirt_shoes		{Camisa y zapatos}
 itmdescr_shirt_shoes
 {
-The Shoes look good but he Shirt..!
+Los zapatos están bien, ¡pero la camisa...!
 }
 
-itmname_socks_sewing		{Sewing Kit and a Pair of Socks}
+itmname_socks_sewing		{Equipo de costura y un par de clacetines}
 itmdescr_socks_sewing
 {
-Maybe I can repair my old shirt now. I like the Blue Socks.
+Tal vez ahora pueda arreglar mi vieja camisa. Me gustan los calcetines azules.
 }
 
-itmname_waistcoat		{Waistcoat}
+itmname_waistcoat		{Chaleco}
 itmdescr_waistcoat
 {
-The Waistcoat reminds me of the one I used to wear before I was robbed.
+El cahaleco me recuerda a uno que solía usar antes de que me robaran.
 }
 
-itmname_sash			{Sash}
+itmname_sash			{Faja}
 itmdescr_sash
 {
-Yes yes yes. A Red Sash for a Pirate Captain!
-}
-
-itmname_blue_uniform		{Officers Uniform}
-itmdescr_blue_uniform
-{
-A blue jacket for an officer in the Woodes Rogers style. Does he take his own officers into custody? 
-}
-
-itmname_Pell_outfit		{Confiscated Clothes}
-itmdescr_Pell_outfit
-{
-A boatswain's complete outfit including a pair of boots. 
-}
-
-itmname_long_johns		{Long Johns}
-itmdescr_long_johns
-{
-My old long johns with a patch. 
-}
-
-itmname_long_johns_map		{Hidden Map}
-itmdescr_long_johns_map
-{
-I have hidden the Map behind the patch. 
-}
-
-itmname_bandana			{Bandana}
-itmdescr_bandana
-{
-My usual orange bandana. 
-}
-
-itmname_bandana_key		{Hidden Key}
-itmdescr_bandana_key
-{
-I have hidden the Key in my bandana. 
+Sí, sí, sí. ¡Una faja roja para un capitán pirata!
 }
 
 
 //------------------OUTFIT ITEMS END---------------------------------------------------------------------------------------
-//----------------- TREASURE ITEMS START ----------------------------------------------------------------------------------
-
-itmname_gold_bars		{Gold Bars}
-itmname_silver_bars		{Silver Bars}
-itmname_gold_coins		{Gold Coins}
-itmname_valuable_weapons	{Valuable Weapons}
-itmname_pistolcenserE		{Empty Censer}
-itmdescr_pistolcenserE
-{
-This intricately carved gold vessel could be worth a lot of money.
-}
-
-itmname_gold_chalice		{Chalice}
-itmdescr_gold_chalice
-{
-A goblet of pure gold used to hold sacramental wine. 
-}
-
-itmname_moon_symbol		{Moon Symbol}
-itmdescr_moon_symbol
-{
-A golden necklace with a powerful Moon Symbol. Gives the owner protection.  
-}
-
-itmname_incas_idol	{Golden idol}
-itmdescr_incas_idol
-{
-A golden idol of Hurukacelitipochtli, the Incan god of death.
-}
-
-itmname_incas_collection	{Incan treasure collection}
-itmdescr_incas_collection
-{
-A collection of Incan treasures.
-}
-
-//----------------- TREASURE ITEMS END ------------------------------------------------------------------------------------
 //----------------- OTHER ITEMS START -------------------------------------------------------------------------------------
 
-itmname_tankard			{Tankard}
+itmname_tankard			{Jarra}
 itmdescr_tankard
 {
-A large tin tankard - maybe worth some money? 
+Una gran jarra de estaño, ¿puede que valga algún dinero? 
 }
 
-itmname_plate			{Plate}
+itmname_plate			{Bandeja}
 itmdescr_plate
 {
-Blue china imported by the East India Company. 
+Porcelana azul importada por la Compañía de las Indias Orientales. 
 }
 
-itmname_copper_cauldron		{Cauldron}
+itmname_copper_cauldron		{Caldera}
 itmdescr_copper_cauldron
 {
-A heavy copper cauldron. 
+Una pesada caldera de cobre. 
 }
 
-itmname_fish			{Fish}
+itmname_fish			{Pez}
 itmdescr_fish
 {
-It may be good for your brain to eat fish, but your crew has no higher thoughts of a fishmonger Captain.
+Puede que comer pescado sea bueno para el cerebro, pero la tripulación no tiene buena opinión de un capitán pescadero.
 }
 
-itmname_cannonballs		{Cannonballs}
+itmname_cannonballs		{Balas de cañón}
 itmdescr_cannonballs
 {
-A set of Cannonballs, heavier than you thought?
+Un juego de balas de cañón, ¿más pesadas de lo que imaginabas?
 }
 
-itmname_glasses			{Glasses}
+itmname_glasses			{Anteojos}
 itmdescr_glasses
 {
-A pair of worn but fine glasses. Hope Selkirk may have use for them. 
+Un par de gafas, desgastadas pero de calidad. Espero que Selkirk les encuentre algún uso. 
 }
 
-itmname_chain			{Chain and handcuffs}
+itmname_chain			{Cadena y grilletes}
 itmdescr_chain
 {
-A prison startkit maybe. I try to get rid of these to anyone in the Gunroom...
+El equipo básico de un preso. Intento encasquetárselos a cualquiera en la armería...
 }
 
-itmname_corkscrews		{Corkscrews}
+itmname_corkscrews		{Sacacorchos}
 itmdescr_corkscrews
 {
-A set of corkscrews for different size of bottles. Could be useful for some other purpose? 
+Un juego de sacacorchos para botellas de distintos tamaños. ¿Podrían ser útiles para otra cosa? 
 }
 
-itmname_emptysack		{Empty Sack}
+itmname_emptysack		{Saco vacío}
 itmdescr_emptysack
 {
-An old sack used to transport sugar canes.
+Un viejo saco usado para transportar caña de azúcar.
 }
 
-itmname_glue			{Glue}
+itmname_glue			{Pegamento}
 itmdescr_glue
 {
-Ordinary glue for papers.
+Pegamento normal para papeles.
 }
 
-itmname_elevator_ropes		{Long Ropes}
+itmname_blue_uniform		{Uniforme de oficial}
+itmdescr_blue_uniform
+{
+Una casaca azul de oficial al estilo de Woodes Rogers. ¿Acaso pone a sus oficiales bajo custodia? 
+}
+
+itmname_elevator_ropes		{Cuerdas largas}
 itmdescr_elevator_ropes
 {
-Four long ropes from bottom of the sea. 
+Cuatro cuerdas largas del fondo del mar. 
 }
 
-itmname_raft_ropes		{Long Rope}
+itmname_raft_ropes		{Cuerda larga}
 itmdescr_raft_ropes
 {
-A very long and strong rope. 
+Una cuerda muy larga y fuerte. 
 }
 
-itmname_bladelever		{Lever}
+itmname_bladelever		{Palanca}
 itmdescr_bladelever
 {
-I know where these levers should be placed. 
+Ya sé dónde debería colocar estas palancas.
 }
 
-itmname_bladelever3		{Lever}
+itmname_bladelever3		{Palanca}
 itmdescr_bladelever3
 {
-I know where this lever should be placed. 
+Sé dónde hay que colocar esta palanca. 
 }
 
-itmname_bladewood	{Wood}
+itmname_bladewood	{Madera}
 itmdescr_bladewood
 {
-Some dry wood from the rainforest.
+Algo de madera seca del bosque tropical.
 }
 
-itmname_bladebarrel	{Rum Barrel}
+itmname_bladebarrel	{Barril de ron}
 itmdescr_bladebarrel
 {
-A small barrel filled with the finest rum in the entire Caribbean, distilled by an expert (hrm).
+Un pequeño barril lleno del mejor ron del Caribe, destilado por un experto (hrm).
 }
 
-itmname_bladebarrel2	{Empty Barrel}
+itmname_bladebarrel2	{Barril vacío}
 itmdescr_bladebarrel2
 {
-A small barrel to keep rum in.
+Un pequeño barril para llenarlo de ron.
 }
 
-itmname_bladebarrel3	{Empty Barrel}
+itmname_bladebarrel3	{Barril vacío}
 itmdescr_bladebarrel3
 {
-A large wine barrel.
+Un barril grande para vino.
 }
 
-itmname_bladebarrel_gpS		{Gunpowder Barrel}
+itmname_bladebarrel_gpS		{Barril de pólvora}
 itmdescr_bladebarrel_gpS
 {
-Standard Gunpowder.
+Pólvora estándar.
 }
 
-itmname_pistolbarrel_gpS	{Gunpowder Barrel}
+itmname_pistolbarrel_gpS	{Barril de pólvora}
 itmdescr_pistolbarrel_gpS
 {
-Standard Gunpowder.
+Pólvora estándar.
 }
 
-itmname_bladebucket	{Water Bucket}
+itmname_bladebucket	{Cubo de agua}
 itmdescr_bladebucket
 {
-A bucket filled with cold water. 
+Un cubo lleno de agua fría. 
 }
 
-itmname_pistolbucket	{Water Bucket}
+itmname_pistolbucket	{Cubo de agua}
 itmdescr_pistolbucket
 {
-Could be used as coolant. 
+Podría usarse como refrigerante. 
 }
 
-itmname_pistoltar	{Tar Bucket}
+itmname_pistoltar	{Cubo de brea}
 itmdescr_pistoltar
 {
-A very heavy bucket with tar used for caulking the hull. 
+Un pesado cubo lleno de brea para calafatear el casco. 
 }
 
-itmname_bladebottlew4	{Molasses Bottle}
+itmname_bladebottlew4	{Botella de melaza}
 itmdescr_bladebottlew4
 {
-Don't spoil the liquid by using the bottle as a weapon. 
+No desperdicies el líquido usando la botella como arma. 
 }
 
-itmname_pistolbottlew4	{Molasses Bottle}
+itmname_pistolbottlew4	{Botella de melaza}
 itmdescr_pistolbottlew4
 {
-In this climate fermentation starts very quick. Distill it and there you have it - RUM!
+En este clima, la fermentación empieza muy rápido. Destílala y ya lo tienes: ¡RON!
 }
 
-itmname_bladebottlew5	{Wine Bottle}
+itmname_bladebottlew5	{Botella de vino}
 itmdescr_bladebottlew5
 {
-A wine of unknown quality... 
+Un vino de calidad desconocida... 
 }
 
-itmname_pistolbottlew5	{Wine Bottle}
+itmname_pistolbottlew5	{Botella de vino}
 itmdescr_pistolbottlew5
 {
-...but it's only the weight that matters.
+... pero el peso es lo único que importa.
 }
 
-itmname_bladesack	{Sack with Books}
+itmname_bladesack	{Saco lleno de libros}
 itmdescr_bladesack
 {
-A collection of (poetry) books. Do I really need this?
+Una colección de libros (de poesía). ¿De verdad los necesito?
 }
 
-itmname_bladeskull1	{Skull}
+itmname_bladeskull1	{Calavera}
 itmdescr_bladeskull1
 {
-What use can you have of this macabre item?. 
+¿De qué puede servir este objeto tan macabro? 
 }
 
-itmname_bladeviolin		{Violin}
+itmname_bladeviolin		{Violín}
 itmdescr_bladeviolin
 {
-An excellent work from Cremona in Italy by the legendary Antonius Stratocastrius.  
+Una excelente obra realizada en Cremona, Italia, por el legendario Antonius Stratocastrius.  
 }
 
-itmname_bladedefense		{Safety Device}
+itmname_bladedefense		{Dispositivo de seguridad}
 itmdescr_bladedefense
 {
-This plank sure looks bullet-proof.
+Esta tabla parece a prueba de balas.
 }
 
-itmname_bladepinion_small	{Small Pinion}
+itmname_bladepinion_small	{Piñón pequeño}
 itmdescr_bladepinion_small
 {
-A small pinion to some mechanism - where?
+Un pequeño piñón para algún tipo de mecanismo, ¿pero dónde?
 }
 
-itmname_bladepinion_large	{Large Pinion}
+itmname_bladepinion_large	{Piñón grande}
 itmdescr_bladepinion_large
 {
-A large pinion to some mechanism - where?
+Un gran piñón para algún tipo de mecanismo, ¿pero dónde?
 }
 
-itmname_pistolwheel		{Wheel}
+itmname_pistolwheel		{Rueda}
 itmdescr_pistolwheel
 {
-A large brass item - a steering wheel maybe?
+Un gran objeto de latón - ¿una rueda de timón, tal vez?
 }
 
-itmname_bladecompasses		{Pair of Compasses}
+itmname_bladecompasses		{Par de compases}
 itmdescr_bladecompasses
 {
-A Pair of Compasses is indispensible for every navigator.
+Un par de compases es indispensable para cualquier piloto.
 }
 
-itmname_pistolmine		{Mine}
+itmname_pistolmine		{Mina}
 itmdescr_pistolmine
 {
-Warning: don't try this dangerous bomb without a proper Safety Device.
+Advertencia: no probar esta peligrosa bomba sin un adecuado dispositivo de seguridad.
 }
 
-itmname_bladeplank2		{Plank}
+itmname_bladeplank2		{Tabla}
 itmdescr_bladeplank2
 {
-A heavy plank. 
+Una tabla pesada. 
 }
 
-itmname_pistolplank2		{Plank}
+itmname_pistolplank2		{Tabla}
 itmdescr_pistolplank2
 {
-A heavy plank. 
+Una tabla pesada. 
 }
 
-itmname_pistolhand		{My left hand}
+itmname_pistolhand		{Mi mano izquierda}
 itmdescr_pistolhand
 {
-After years of exploring the Caribbean I finally realized I could use my left hand to pick up things. 
+Tras años explorando el Caribe, por fin me di cuenta de que podía usar mi mano izquierda para coger cosas. 
 }
 
-itmname_pistollog		{Log}
+itmname_pistollog		{Tronco}
 itmdescr_pistollog
 {
-A burned log from the palisade, very heavy. 
+Un tronco quemado de la empalizada. Muy pesado. 
 }
 
-itmname_corkscrew		{Corkscrew}
+itmname_corkscrew		{Sacacorchos}
 itmdescr_corkscrew
 {
-An ordinary Corkscrew.
+Un sacacorchos normal y corriente.
 }
 
-itmname_bladekeyring		{Key Collection}
+itmname_bladekeyring		{Colección de llaves}
 itmdescr_bladekeyring
 {
-Nine keys on a ring. 
+Nueve llaves en una argolla. 
 }
 
-itmname_Malta_icon		{Icon}
-itmname_Malta_outfit		{Outfit}
-itmname_Malta_poison		{Medicines?}
-itmname_Malta_syringe		{Syringe, bandages}
-itmname_Malta_medkit		{Small Apothecary}
-itmname_Malta_statue		{Bust}
-itmname_Malta_box		{Shrine}
-itmname_Malta_relic		{Relic}
-itmname_Malta_cross		{Crucifix}
-itmname_Malta_censer		{Censer}
+itmname_Malta_icon		{Icono}
+itmname_Malta_outfit		{Traje}
+itmname_Malta_poison		{¿Medicinas?}
+itmname_Malta_syringe		{Jeringa, vendas}
+itmname_Malta_medkit		{Pequeña botica}
+itmname_Malta_statue		{Busto}
+itmname_Malta_box		{Relicario}
+itmname_Malta_relic		{Reliquia}
+itmname_Malta_cross		{Crucifijo}
+itmname_Malta_censer		{Incensario}
 
 itmname_switch_button		{?}
 itmdescr_switch_button
 {
-What is this? A button on a rectangular tile with some colored strings.
+¿Qué es esto? Un botón en una baldosa rectangular con algunos cordeles de colores.
 }
 
-itmname_blade_gp_dry		{Pile of Gunpowder}
+itmname_blade_gp_dry		{Montón de pólvora}
 itmdescr_blade_gp_dry
 {
-The Gunpowder has become wet and then dried into a huge lump. How am I supposed to split it up?
+La pólvora se ha mojado y al secarse se ha solidificado en un gran bloque. ¿Cómo se supone que voy a partirlo?
 }
 
 //--------------- OTHER ITEMS END --------------------------------------------------------------------------------------

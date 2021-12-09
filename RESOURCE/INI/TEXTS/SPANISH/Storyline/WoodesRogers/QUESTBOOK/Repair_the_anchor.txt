@@ -1,6 +1,6 @@
-title=Repair the anchor mechanism
-text.t1=It's something wrong with the Corvette's anchor.
-text.t2=I'm looking for a Wheel and some Pinions.
-text.t3=Yes! I have fixed it. Now to the Galley door problem...
+title=Reparar el mecanismo del ancla
+text.t1=Hay algún problema con el ancla de la corbeta.
+text.t2=Estoy buscando una rueda y algunos piñones.
+text.t3=¡Sí! Lo he arreglado. Ahora, el problema con la puerta de la cocina...
 text.t4=
 text.t5=

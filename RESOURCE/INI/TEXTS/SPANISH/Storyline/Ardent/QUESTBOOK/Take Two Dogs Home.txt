@@ -1,7 +1,7 @@
 title=Llevar a Dos Perros a casa
-text.t1=En recompensa por indicarnos el camino al campamento de esclavos donde estaba retenida la tripulación, he accedido a llevar a Dos Perros de vuelta a casa.
+text.t1=En recompensa por indicarnos el camino al campamento de esclavos donde estaba retenida la tripulaciÃ³n, he accedido a llevar a Dos Perros de vuelta a casa.
 text.t2=Dos Perros ha muerto.
-text.t3=Ya no necesito a Dos Perros, así que le he dicho que se largue.
-text.t4=Dos Perros me ayudó a encontrar y rescatar a mi tripulación, así que lo llevaré a su hogar en #sisland_Isla Mona#.
-text.t5=Dos Perros está sano y salvo en casa con su padre. He prometido que no revelaré a nadie el secreto de su nombre, y he hecho prometer lo mismo a mis oficiales.
-text.t6=Dos Perros Que No Pelean está sano y salvo en casa con su padre. Le he prometido que no se lo diría a nadie, ¡pero ese secreto me puede valer unas cuantas bebidas gratios en la próxima taberna!
+text.t3=Ya no necesito a Dos Perros, asÃ­ que le he dicho que se largue.
+text.t4=Dos Perros me ayudÃ³ a encontrar y rescatar a mi tripulaciÃ³n, asÃ­ que lo llevarÃ© a su hogar en #sisland_Isla Mona#.
+text.t5=Dos Perros estÃ¡ sano y salvo en casa con su padre. He prometido que no revelarÃ© a nadie el secreto de su nombre, y he hecho prometer lo mismo a mis oficiales.
+text.t6=Dos Perros Que No Pelean estÃ¡ sano y salvo en casa con su padre. Le he prometido que no se lo dirÃ­a a nadie, Â¡pero ese secreto me puede valer unas cuantas bebidas gratios en la prÃ³xima taberna!

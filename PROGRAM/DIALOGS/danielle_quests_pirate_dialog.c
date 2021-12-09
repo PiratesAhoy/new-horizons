@@ -95,8 +95,9 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			PlayStereoSound("INTERFACE\took_item.wav");
-		//	AddMoneyToCharacter(pchar, pchar.quest.gambling_with_girl);		//JRH -->
+		//	AddMoneyToCharacter(pchar, pchar.quest.gambling_with_girl);
 		
+			//JRH -->
 			if ( CheckAttribute(Pchar,"quest.gambling_with_girl") )
 			{
 			    switch(Pchar.quest.gambling_with_girl)
@@ -105,7 +106,7 @@ void ProcessDialogEvent()
 				case "5500": AddMoneyToCharacter(pchar, 5500); break;
 			    }
 			}
-												//<-- JRH
+			//<-- JRH
 			RemovePassenger(pchar, characterFromID("Virginie d'Espivant"));
 			pchar.quest.gambling_with_girl = "done";
 			OfficersReaction("bad");

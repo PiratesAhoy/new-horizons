@@ -1,109 +1,109 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| Bartolomeu.c |=====}
-Bartolomeu{Бартоломео}
-o Portugues{Португальский}
+Bartolomeu{Р‘Р°СЂС‚РѕР»РѕРјРµРѕ}
+o Portugues{РџРѕСЂС‚СѓРіР°Р»СЊСЃРєРёР№}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
 
 {=====| Story.c |=====}
-Donald{Дональд}
+Donald{Р”РѕРЅР°Р»СЊРґ}
 Hendy{}
-Celestin{Селестин}
+Celestin{РЎРµР»РµСЃС‚РёРЅ}
 Aguilar{}
 Jasper{}
 Bullinger{}
-Pirate{Пират}
-Juan{Хуан}
-Esteban{Эстебан}
+Pirate{РџРёСЂР°С‚}
+Juan{РҐСѓР°РЅ}
+Esteban{Р­СЃС‚РµР±Р°РЅ}
 Gherarde{}
 de Jongh{}
-Manuel{Мануэль}
-Sousa{Соуза}
+Manuel{РњР°РЅСѓСЌР»СЊ}
+Sousa{РЎРѕСѓР·Р°}
 Lourenco{}
 Vaz{}
 Soldier{}
-Indian{Индеец}
-Street{Уличный}
-Merchant{Торговец}
+Indian{РРЅРґРµРµС†}
+Street{РЈР»РёС‡РЅС‹Р№}
+Merchant{РўРѕСЂРіРѕРІРµС†}
 Chago{}
 Castaneda{}
-Lucia{Лючия}
-Montavez{Монтавез}
+Lucia{Р›СЋС‡РёСЏ}
+Montavez{РњРѕРЅС‚Р°РІРµР·}
 Sebastian{}
-Ortega{Ортега}
+Ortega{РћСЂС‚РµРіР°}
 Arie{}
 Dierman{}
 
 {=====| TempQuest.c |=====}
 Hector{}
 Barbossa{}
-Pierre{Пьер}
-Delacroix{Делакруа}
-Emilio{Эмилио}
-Soares{Соарес}
+Pierre{РџСЊРµСЂ}
+Delacroix{Р”РµР»Р°РєСЂСѓР°}
+Emilio{Р­РјРёР»РёРѕ}
+Soares{РЎРѕР°СЂРµСЃ}
 Luc{}
 Merin{}
-Elias{Элиас}
+Elias{Р­Р»РёР°СЃ}
 Bartels{}
 Roxanne{}
 Lalliere{}
-Pedro{Педро}
-Rivera{Ривера}
-Francisco{Франсиско}
-Cruz{Крус}
-William{Уильям}
+Pedro{РџРµРґСЂРѕ}
+Rivera{Р РёРІРµСЂР°}
+Francisco{Р¤СЂР°РЅСЃРёСЃРєРѕ}
+Cruz{РљСЂСѓСЃ}
+William{РЈРёР»СЊСЏРј}
 Klein{}
-Hernandez{Эрнандез}
+Hernandez{Р­СЂРЅР°РЅРґРµР·}
 Jerico{}
 Contreras{}
-Cecile{Сесиль}
-Bienbonne{Бьенбонн}
-Etienne{Этьен}
-Dupuis{Дюпюи}
-Jean{Жан}
-Dusac{Дюсак}
-Simon{Саймон}
+Cecile{РЎРµСЃРёР»СЊ}
+Bienbonne{Р‘СЊРµРЅР±РѕРЅРЅ}
+Etienne{Р­С‚СЊРµРЅ}
+Dupuis{Р”СЋРїСЋРё}
+Jean{Р–Р°РЅ}
+Dusac{Р”СЋСЃР°Рє}
+Simon{РЎР°Р№РјРѕРЅ}
 Chapman{}
 Alfonso{}
 Galindez{}
-Benoit{Бенуа}
+Benoit{Р‘РµРЅСѓР°}
 Belcour{}
 Adriance{}
 Blind{}
-Sean{Шон}
-Sparrow{Спэрроу}
+Sean{РЁРѕРЅ}
+Sparrow{РЎРїСЌСЂСЂРѕСѓ}
 Florentino{}
 Murrieta{}
-Charles{Чарльз}
+Charles{Р§Р°СЂР»СЊР·}
 Baxter{}
 Christopher{}
 Backer{}
-Matthew{Мэтью}
-Gilroy{Гилрой}
-Walter{Уолтер}
+Matthew{РњСЌС‚СЊСЋ}
+Gilroy{Р“РёР»СЂРѕР№}
+Walter{РЈРѕР»С‚РµСЂ}
 Foreman{}
-Duarte{Дуарте}
+Duarte{Р”СѓР°СЂС‚Рµ}
 Felgueiras{}
 Sarah{}
 Roebuck{}
-Luis{Луис}
+Luis{Р›СѓРёСЃ}
 Perdiguero{}
 Facundo{}
 Llano{}
-Francois{Франсуа}
+Francois{Р¤СЂР°РЅСЃСѓР°}
 L'Ollonais{}
-Txiki{Тики}
-Pijuan{Пижуан}
-Henry{Генри}
+Txiki{РўРёРєРё}
+Pijuan{РџРёР¶СѓР°РЅ}
+Henry{Р“РµРЅСЂРё}
 Morgan{}
 Edwaert{}
 Mansveldt{}
 Konrad{Konrad}
 Kulczycki{Kulczycki}
-Silver{Сильвер}
-Roche{Роше}
+Silver{РЎРёР»СЊРІРµСЂ}
+Roche{Р РѕС€Рµ}
 Brasiliano{}
 Serafino{}
 Masarenhas{}
@@ -112,23 +112,23 @@ Queiroz{}
 Osmundo{}
 Arturo{}
 Campos{}
-Leonardo{Леонардо}
+Leonardo{Р›РµРѕРЅР°СЂРґРѕ}
 Corrales{}
-Guibert{Гиберт}
+Guibert{Р“РёР±РµСЂС‚}
 Daudet{}
-Spanish{Испанский}
-Governor{Губернатор}
-Johan{Йоган}
-Elting{Элтинг}
-Enrique{Энрике}
-Padilla{Падилья}
+Spanish{РСЃРїР°РЅСЃРєРёР№}
+Governor{Р“СѓР±РµСЂРЅР°С‚РѕСЂ}
+Johan{Р™РѕРіР°РЅ}
+Elting{Р­Р»С‚РёРЅРі}
+Enrique{Р­РЅСЂРёРєРµ}
+Padilla{РџР°РґРёР»СЊСЏ}
 Salvadore{}
-Benavides{Бенавидес}
+Benavides{Р‘РµРЅР°РІРёРґРµСЃ}
 Daniel{}
 Montbars{}
-Arnaud{Арно}
+Arnaud{РђСЂРЅРѕ}
 Fontaines{}
-Martin{Мартин}
+Martin{РњР°СЂС‚РёРЅ}
 de Urquiza{}
 Ferro{}
 Carriles{}
@@ -140,7 +140,7 @@ Agilo{}
 Casamayor{}
 Bautista{}
 Lozano{}
-Captain{Капитан}
+Captain{РљР°РїРёС‚Р°РЅ}
 Damski{Damski}
 Villalobos{}
 Capitan{}
@@ -165,8 +165,8 @@ Federico{}
 Carabali{}
 
 {=====| TempQuestEnemy.c |=====}
-Priest{Священник}
-Monk{Монах}
-Native{Абориген}
+Priest{РЎРІСЏС‰РµРЅРЅРёРє}
+Monk{РњРѕРЅР°С…}
+Native{РђР±РѕСЂРёРіРµРЅ}
 
 {=====| 215 characters |=====}

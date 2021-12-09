@@ -106,7 +106,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_imperial_escort_after_spy":
-			dialog.text = DLG_TEXT[118] + GetRankName(PChar, sti(NPChar.nation)) + DLG_TEXT[119];
+			dialog.text = DLG_TEXT[118] + XI_ConvertString(GetRankName(PChar, sti(NPChar.nation))) + DLG_TEXT[119];
 			if (CheckQuestAttribute("imperial_escort.spy_search", "spy_dead_aboard")) link.l1 = DLG_TEXT[120];
 			else link.l1 = DLG_TEXT[121];
 			link.l1.go = "ardent_imperial_escort_no_interrogation";

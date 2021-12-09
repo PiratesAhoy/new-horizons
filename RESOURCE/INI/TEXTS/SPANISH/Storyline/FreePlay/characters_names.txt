@@ -66,6 +66,8 @@ Alonso{Alonso}
 Madero{Madero}
 Arnaldo{Arnaldo}
 Chaparro{Chaparro}
+
+{=====| TempQuestEnemy.c |=====}
 Prison{Prisión}
 Guard{Guardia}
 Prison Guard{Guardia de la prisión}

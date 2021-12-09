@@ -1,28 +1,28 @@
 Balls	{Balas rasas}
 Balls_descr
 {
-El tipo de munición de cañón más común, estas pesadas bolas de hierro fundido provocan un daño considerable a los barcos enemigos. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#
+El tipo de municiÃ³n de caÃ±Ã³n mÃ¡s comÃºn, estas pesadas bolas de hierro fundido provocan un daÃ±o considerable a los barcos enemigos. DaÃ±o: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, TripulaciÃ³n-#f.2DamageCrew#
 }
 
 
 Grapes	{Metralla}
 Grapes_descr
 {
-Cartuchos de pequeñas balas de hierro disparadas por los cañones para barrer las cubiertas de un barco enemigo a corto alcance, con efectos devastadores en la tripulación. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#
+Cartuchos de pequeÃ±as balas de hierro disparadas por los caÃ±ones para barrer las cubiertas de un barco enemigo a corto alcance, con efectos devastadores en la tripulaciÃ³n. DaÃ±o: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, TripulaciÃ³n-#f.2DamageCrew#
 }
 
 
 Knippels {Palanquetas}
 Knippels_descr
 {
-Dos bolas o medias bolas de hierro fundido conectadas por una gruesa cadena o una barra. Se usan para destruir las velas y los mástiles de los barcos enemigos. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#
+Dos bolas o medias bolas de hierro fundido conectadas por una gruesa cadena o una barra. Se usan para destruir las velas y los mÃ¡stiles de los barcos enemigos. DaÃ±o: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, TripulaciÃ³n-#f.2DamageCrew#
 }
 
 
 Bombs {Bombas}
 Bombs_descr
 {
-Rellenas de pólvora, estas balas huecas causan graves daños al casco del barco enemigo. Daño: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, Tripulación-#f.2DamageCrew#
+Rellenas de pÃ³lvora, estas balas huecas causan graves daÃ±os al casco del barco enemigo. DaÃ±o: Casco-#f.2DamageHull#, Velas-#f.2DamageRig#, TripulaciÃ³n-#f.2DamageCrew#
 }
 
 
@@ -43,27 +43,27 @@ Puedes tapar agujeros en el casco de tu barco con estas tablas de madera.
 Wheat {Trigo}
 Wheat_descr
 {
-Cereal usado para hacer pan y para elaborar varias bebidas alcohólicas.
+Cereal usado para hacer pan y para elaborar varias bebidas alcohÃ³licas.
 }
 
 
-Ebony {Ébano}
+Ebony {Ã‰bano}
 Ebony_descr
 {
-Un valioso y exótico tipo de madera negra, de particular dureza y densidad.
+Un valioso y exÃ³tico tipo de madera negra, de particular dureza y densidad.
 }
 
 Chocolate {Chocolate}
 Chocolate_descr
 {
-El manjar preferido de las niñas mimadas de la nobleza de todo el mundo.
+El manjar preferido de las niÃ±as mimadas de la nobleza de todo el mundo.
 }
 
 
-Sugar {Azúcar}
+Sugar {AzÃºcar}
 Sugar_descr
 {
-La cosa más dulce del mundo.
+La cosa mÃ¡s dulce del mundo.
 }
 
 
@@ -84,28 +84,28 @@ Una tela usada para hacer ropa.
 Rum {Ron}
 Rum_descr
 {
-La escasez de esta bebida en un viaje largo puede ocasionar un motín.
+La escasez de esta bebida en un viaje largo puede ocasionar un motÃ­n.
 }
 
 
 Tobacco {Tabaco}
 Tobacco_descr
 {
-El aromático tesoro del Nuevo Mundo.
+El aromÃ¡tico tesoro del Nuevo Mundo.
 }
 
 
-Coffee {Café}
+Coffee {CafÃ©}
 Coffee_descr
 {
-Los granos de café se usan para preparar una bebida amarga.
+Los granos de cafÃ© se usan para preparar una bebida amarga.
 }
 
 
 Mahogany {Caoba}
 Mahogany_descr
 {
-Un tipo de madera preciosa con un característico color rojizo.
+Un tipo de madera preciosa con un caracterÃ­stico color rojizo.
 }
 
 
@@ -123,7 +123,7 @@ Pulpa de coco seca.
 }
 
 
-Paprika {Pimentón}
+Paprika {PimentÃ³n}
 Paprika_descr
 {
 El pimiento es un ingrediente de muchas ensaladas y guisos; seco y convertido en polvo, se convierte en un apreciado condimento.
@@ -140,7 +140,7 @@ Frutos variados de plantas tropicales.
 Ale {Cerveza}
 Ale_descr
 {
-Una bebida alcohólica ligera elaborada con lúpulo y malta.
+Una bebida alcohÃ³lica ligera elaborada con lÃºpulo y malta.
 }
 
 
@@ -158,17 +158,17 @@ Bastas ropas de arpillera para la gente humilde de las colonias.
 }
 
 
-Cotton {Algodón}
+Cotton {AlgodÃ³n}
 Cotton_descr
 {
 Materia prima usada para elaborar tela.
 }
 
 
-Sandal {Sándalo}
+Sandal {SÃ¡ndalo}
 Sandal_descr
 {
-Un tipo de madera preciosa. Usada en decoración y para la producción de incienso.
+Un tipo de madera preciosa. Usada en decoraciÃ³n y para la producciÃ³n de incienso.
 }
 
 
@@ -185,10 +185,10 @@ Oil_descr
 El aceite de oliva se usa para cocinar muchos platos diferentes.
 }
 
-Gunpowder {Pólvora}
+Gunpowder {PÃ³lvora}
 Gunpowder_descr
 {
-Inventada en China, la pólvora es necesaria para los cañones de un barco. Sin ella, estarán más callados que los peces. Cualquier capitán debe asegurarse de que queda pólvora en su bodega y reaprovisionar su santabárbara regularmente. Puedes lanzar un barril con 300 unidades como mina anti-barco (Tecla 9 en el mar).
+Inventada en China, la pÃ³lvora es necesaria para los caÃ±ones de un barco. Sin ella, estarÃ¡n mÃ¡s callados que los peces. Cualquier capitÃ¡n debe asegurarse de que queda pÃ³lvora en su bodega y reaprovisionar su santabÃ¡rbara regularmente. Puedes lanzar un barril con 300 unidades como mina anti-barco (Tecla 9 en el mar).
 }
 
 // from SLiB by Jack Davidson -->
@@ -208,7 +208,7 @@ Argentum. Un metal precioso blanco extraido de las minas de las colonias.
 Bricks {Ladrillos}
 Bricks_descr
 {
-Grandes ladrillos de construcción, moldeados con arcilla y piedras y usados para la construcción de fuertes y edificios urbanos.
+Grandes ladrillos de construcciÃ³n, moldeados con arcilla y piedras y usados para la construcciÃ³n de fuertes y edificios urbanos.
 }
 
 // from SLiB by Jack Davidson <--
@@ -216,7 +216,7 @@ Grandes ladrillos de construcción, moldeados con arcilla y piedras y usados para
 Medicines {Medicamentos}
 Medicines_descr
 {
-Medicamentos necesaios para el tratamiento de las enfermedades. Ayudarán a salvar a los heridos y sanar a los enfermos durante la navegación.
+Medicamentos necesaios para el tratamiento de las enfermedades. AyudarÃ¡n a salvar a los heridos y sanar a los enfermos durante la navegaciÃ³n.
 }
 
 Ration {Comida}

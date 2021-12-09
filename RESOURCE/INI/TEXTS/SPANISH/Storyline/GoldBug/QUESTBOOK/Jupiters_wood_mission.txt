@@ -1,2 +1,2 @@
-title=La misión maderera de Júpiter
+title=La misiÃ³n maderera de JÃºpiter
 text.t1=Recoger madera en el cobertizo para barcas.

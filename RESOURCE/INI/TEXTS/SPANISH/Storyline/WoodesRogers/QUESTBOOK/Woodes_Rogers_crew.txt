@@ -1,8 +1,8 @@
-title=Woodes Rogers crew
-text.t1=Just like I thought - they're after the Pistolbelt. Maybe it's best to return to Port Royale and Rogers' family.
-text.t2=They have killed the Governor! I'll follow Caroline to him.
-text.t3=I'll continue to help Caroline and watch out for the officers.
-text.t4=Our last chance is to get help from Charles Vane. Selkirk opens for me...
-text.t5=
-text.t6=
+title=La tripulación de Woodes Rogers
+text.t1=Justo lo que pensaba. Quieren la bandolera de pistolas. Puede que lo mejor sea volver a Port Royal con la familia Rogers.
+text.t2=¡Han matado al gobernaor! Seguiré a Caroline para llegar hasta él.
+text.t3=Seguiré ayudando a Caroline y tendré cuidado con los oficiales.
+text.t4=Nuestra última oportunidad es conseguir ayuda de Charles Vane. Selkirk nos pondrá en contacto...
+text.t5=La tripulación ha sido derrotada, pero alguos de lops oficiales siguen vivos.
+text.t6=¡Matamos a los últimos miembros de la tripulación, pero Courtney, Cook, Dampier y Dover lograron escapar! 
 text.t7=

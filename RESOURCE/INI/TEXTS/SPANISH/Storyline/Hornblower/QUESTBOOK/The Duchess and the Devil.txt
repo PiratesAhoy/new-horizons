@@ -1,9 +1,9 @@
 title=La duquesa y el diablo.
-text.t1=Debo llevar a la duquesa de Wharfedale a Inglaterra y llevar tambiÈn ciertos documentos secretos. Debemos prepararnos para zarpar.
-text.t2=Los espaÒoles nos han capturado y nos han encerrado en la prisiÛn. Tengo que examinar los alrededores para pensar en una forma de escapar.
-text.t3=Me he encontrado con Archie, pero est· muy mal. No puedo dejarlo aquÌ, asÌ que la fuga es imposible por el momento.
-text.t4=La duquesa nos ha visitado en la prisiÛn. Nos permiten dar un paseo juntos por la playa. Bien, porque tengo que saber si todavÌa tiene los documentos. Tenemos que ir hasta la orilla para que los guardias no nos oigan hablar.
+text.t1=Debo llevar a la duquesa de Wharfedale a Inglaterra y llevar tambi√©n ciertos documentos secretos. Debemos prepararnos para zarpar.
+text.t2=Los espa√±oles nos han capturado y nos han encerrado en la prisi√≥n. Tengo que examinar los alrededores para pensar en una forma de escapar.
+text.t3=Me he encontrado con Archie, pero est√° muy mal. No puedo dejarlo aqu√≠, as√≠ que la fuga es imposible por el momento.
+text.t4=La duquesa nos ha visitado en la prisi√≥n. Nos permiten dar un paseo juntos por la playa. Bien, porque tengo que saber si todav√≠a tiene los documentos. Tenemos que ir hasta la orilla para que los guardias no nos oigan hablar.
 text.t5=Me han invitado a cenar con el 'don' y la duquesa.
-text.t6=La duquesa se ha ido, y todavÌa tiene los documentos en su poder.
-text.t7=La duquesa y los documentos est·n a salvo. La tripulaciÛn y yo debemos regresar a la prisiÛn, ya que di mi palabra de que volverÌamos.
-text.t8=Los espaÒoles nos han puesto en libertad. Debemos ir a la playa para volver a bordo del 'Indy'.
+text.t6=La duquesa se ha ido, y todav√≠a tiene los documentos en su poder.
+text.t7=La duquesa y los documentos est√°n a salvo. La tripulaci√≥n y yo debemos regresar a la prisi√≥n, ya que di mi palabra de que volver√≠amos.
+text.t8=Los espa√±oles nos han puesto en libertad. Debemos ir a la playa para volver a bordo del 'Indy'.

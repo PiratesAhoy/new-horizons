@@ -349,7 +349,7 @@ void ProcessCommandExecute()
 				else
 				{
 					EnableString("CantBerthShip");
-					GameInterface.strings.CantBerthShip = "You can't assign a ship to a companion if you have no ship !";
+					GameInterface.strings.CantBerthShip = TranslateString("", "You can't assign a ship to a companion if you have no ship!");
 				}
 			}
 
@@ -376,7 +376,7 @@ void ProcessCommandExecute()
 				else
 				{
 					EnableString("CantBerthShip");
-					GameInterface.strings.CantBerthShip = "You can't assign a ship to a companion if you have no ship !";
+					GameInterface.strings.CantBerthShip = TranslateString("", "You can't assign a ship to a companion if you have no ship!");
 				}
 			}
 
@@ -403,7 +403,7 @@ void ProcessCommandExecute()
 				else
 				{
 					EnableString("CantBerthShip");
-					GameInterface.strings.CantBerthShip = "You can't assign a ship to a companion if you have no ship !";
+					GameInterface.strings.CantBerthShip = TranslateString("", "You can't assign a ship to a companion if you have no ship!");
 				}
 			}
 
@@ -433,7 +433,7 @@ void ProcessCommandExecute()
 				else
 				{
 					EnableString("CantBerthShip");
-					GameInterface.strings.CantBerthShip = "You can't berth your own ship if your companions have ships !";
+					GameInterface.strings.CantBerthShip = TranslateString("", "You can't berth your own ship if your companions have ships!");
 				}
 			}
 

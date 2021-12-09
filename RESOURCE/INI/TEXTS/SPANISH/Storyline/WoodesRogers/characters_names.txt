@@ -23,21 +23,21 @@ Hilder{Hilder}
 {=====| TempQuest.c |=====}
 Richard{Richard}
 Bolitho{Bolitho}
-Midshipman{Midshipman}
+Midshipman{Guardiamarina}
 Herrick{Herrick}
-Marine{Marine}
-Seaman{Seaman}
-Buccaneer{Buccaneer}
+Marine{Infante de marina}
+Seaman{Marinero}
+Buccaneer{Bucanero}
 Fletcher{Fletcher}
 Christian{Christian}
-Constable{Constable}
+Constable{Agente}
 Mills{Mills}
 Young{Young}
-Mutineer{Mutineer}
-Thug{Thug}
-Leading{Leading}
-Coastbrother{Coastbrother}
-Admiral{Admiral}
+Mutineer{Amotinado}
+Thug{Matón}
+Leading{Líder}
+Coastbrother{Hermano de la Costa}
+Admiral{Almirante}
 John{John}
 Connely{Connely}
 Cook{Cook}
@@ -52,9 +52,9 @@ Dover{Dover}
 Robert{Robert}
 Fry{Fry}
 Stretton{Stretton}
-Rogers'{Rogers'}
-Crew{Crew}
-Former Crew{Former Crew}
+Rogers'{Rogers}
+Crew{Tripulación}
+Former Crew{Antigua tripulación}
 Vane{Vane}
 Bellamy{Bellamy}
 Paul{Paul}
@@ -383,42 +383,42 @@ Emma{Emma}
 Linnea{Linnea}
 Elina{Elina}
 Erica{Erica}
-Abbess{Abbess}
+Abbess{Abadesa}
 Lovisa{Lovisa}
-Brother{Brother}
+Brother{Hermano}
 Kristian{Kristian}
 Hannes{Hannes}
-Servant{Servant}
-Governor Charles{Governor Charles}
+Servant{Sirviente}
+Governor Charles{Gobernador Charles}
 Eden{Eden}
-Secretary Tobias{Secretary Tobias}
-Beggar{Beggar}
-Pilot{Pilot}
-Merchant{Merchant}
+Secretary Tobias{Secretario Tobias}
+Beggar{Mendigo}
+Pilot{Piloto}
+Merchant{Mercader}
 Anne{Anne}
 Russel Stapelton{Russel Stapelton}
 Don{Don}
 van Vliet{van Vliet}
 Vincent Z{Vincent Z}
-Officer{Officer}
-on guard duty{on guard duty}
+Officer{Oficial}
+on guard duty{de guardia}
 Tookerman{Tookerman}
-Guard{Guard}
+Guard{Guardia}
 Gerrard{Gerrard}
 Jonathan{Jonathan}
 Clarke{Clarke}
 Rowland{Rowland}
 Sharp{Sharp}
-Deserter{Deserter}
-Thief{Thief}
+Deserter{Desertor}
+Thief{Ladrón}
 Legrand{Legrand}
-Poacher{Poacher}
+Poacher{Furtivo}
 Charon{Charon}
 Inch{Inch}
-Old{Old}
-Nick{Nick}
+Old{Pedro}
+Nick{Botero}
 Conquistador{Conquistador}
-Templar{Templar}
-Demon{Demon}
+Templar{Templario}
+Demon{Demoníaco}
 
 {=====| 570 characters |=====}

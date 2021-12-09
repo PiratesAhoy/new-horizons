@@ -1,9 +1,9 @@
-title=Conseguir informaciÛn del gobernador.
-text.t1=#sDanielle# ha sugerido utilizar una bahÌa secreta oculta detr·s de los arrecifes para llegar a #sRedmond#, en #sisland_Redmond#.  Dice que sabe cÛmo llegar hasta allÌ a travÈs de una gran grieta en las rocas.
+title=Conseguir informaci√≥n del gobernador.
+text.t1=#sDanielle# ha sugerido utilizar una bah√≠a secreta oculta detr√°s de los arrecifes para llegar a #sRedmond#, en #sisland_Redmond#.  Dice que sabe c√≥mo llegar hasta all√≠ a trav√©s de una gran grieta en las rocas.
 text.t2=Hemos decidido colarnos por la noche en casa de Silehard.
-text.t3=El canalla de Silehard ha escapado. Por desgracia no hemos conseguido la informaciÛn que buscamos. Peor a˙n, sin duda decretar· una orden para nuestro arresto. Los puertos ingleses ya no ser·n seguros para nosotros, asÌ que ser· mejor que escapemos a nuestros barcos cuanto antes, ahora que todavÌa podemos.
-text.t4=Hemos decidido separarnos. #sDanielle# va a zarpar rumbo a #sIsla Muelle#, en #sisland_Isla Muelle# para buscar la leyenda original y yo saldrÈ hacia #sGreenford#, en #sisland_Oxbay# para intentar que los soldados me den informaciÛn sobre el Ìdolo que tenÌa que estar en casa del piloto del difunto Rheims.
-text.t5=He ido a #sGreenford# y he hablado con el soldado. He descubierto que hay un capit·n que tiene el Ìdolo. Puedo encontrar a este capit·n en la prisiÛn.
-text.t6=Tras hablar con el tabernero, he averiguado que hay un capit·n que tiene el Ìdolo. Puedo encontrar al capit·n en la prisiÛn.
-text.t7=Silehard va un paso por delante de mÌ. El Ìdolo est· en un barco y el capit·n de la guardia tiene Ûrdenes de arrestar a todo el que se interese por el Ìdolo. Tengo que apresurarme hacia el puerto e intentar apresar el barco inglÈs que lleva el Ìdolo a bordo.
-text.t8=°Ha sido una batalla dura! °No es f·cil apresar una fragata inglesa protegida por un fuerte! Estoy muy feliz por mi victoria..., y por mi premio, el Ìdolo. Ahora debo ir a reunirme con #sDanielle# en el faro.
+text.t3=El canalla de Silehard ha escapado. Por desgracia no hemos conseguido la informaci√≥n que buscamos. Peor a√∫n, sin duda decretar√° una orden para nuestro arresto. Los puertos ingleses ya no ser√°n seguros para nosotros, as√≠ que ser√° mejor que escapemos a nuestros barcos cuanto antes, ahora que todav√≠a podemos.
+text.t4=Hemos decidido separarnos. #sDanielle# va a zarpar rumbo a #sIsla Muelle#, en #sisland_Isla Muelle# para buscar la leyenda original y yo saldr√© hacia #sGreenford#, en #sisland_Oxbay# para intentar que los soldados me den informaci√≥n sobre el √≠dolo que ten√≠a que estar en casa del piloto del difunto Rheims.
+text.t5=He ido a #sGreenford# y he hablado con el soldado. He descubierto que hay un capit√°n que tiene el √≠dolo. Puedo encontrar a este capit√°n en la prisi√≥n.
+text.t6=Tras hablar con el tabernero, he averiguado que hay un capit√°n que tiene el √≠dolo. Puedo encontrar al capit√°n en la prisi√≥n.
+text.t7=Silehard va un paso por delante de m√≠. El √≠dolo est√° en un barco y el capit√°n de la guardia tiene √≥rdenes de arrestar a todo el que se interese por el √≠dolo. Tengo que apresurarme hacia el puerto e intentar apresar el barco ingl√©s que lleva el √≠dolo a bordo.
+text.t8=¬°Ha sido una batalla dura! ¬°No es f√°cil apresar una fragata inglesa protegida por un fuerte! Estoy muy feliz por mi victoria..., y por mi premio, el √≠dolo. Ahora debo ir a reunirme con #sDanielle# en el faro.

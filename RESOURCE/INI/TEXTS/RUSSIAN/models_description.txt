@@ -2,9 +2,9 @@ What a fine suit this is, with it's Elizabethan collar and frills.  To wear it w
 A red monk's robe, bath robe, martial arts robe, magician's robe, whatever kind of robe you say it is!{A red monk's robe, bath robe, martial arts robe, magician's robe, whatever kind of robe you say it is!}
 A red monk's robe will accent the mustache and goatee for an impression of menace!{A red monk's robe will accent the mustache and goatee for an impression of menace!}
 A grey monk's robe perhaps from the far east!{A grey monk's robe perhaps from the far east!}
-Do you have a set of clothes suitable for a Moorish swashbuckler?{У вас есть набор одежды, подходящий для мавританского головореза?}
+Do you have a set of clothes suitable for a Moorish swashbuckler?{РЈ РІР°СЃ РµСЃС‚СЊ РЅР°Р±РѕСЂ РѕРґРµР¶РґС‹, РїРѕРґС…РѕРґСЏС‰РёР№ РґР»СЏ РјР°РІСЂРёС‚Р°РЅСЃРєРѕРіРѕ РіРѕР»РѕРІРѕСЂРµР·Р°?}
 Bring a simple outfit that'll show off this nice black skin!{Bring a simple outfit that'll show off this nice black skin!}
-Give me something with black trousers and vest, in the Russian style.{Дайте мне что-нибудь с черными штанами и жилетом, в Русском стиле.}
+Give me something with black trousers and vest, in the Russian style.{Р”Р°Р№С‚Рµ РјРЅРµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ СЃ С‡РµСЂРЅС‹РјРё С€С‚Р°РЅР°РјРё Рё Р¶РёР»РµС‚РѕРј, РІ Р СѓСЃСЃРєРѕРј СЃС‚РёР»Рµ.}
 Give me something with black trousers and a steel cuirass, in the Russian style.{Give me something with black trousers and a steel cuirass, in the Russian style.}
 Give me something with black trousers and an engraved breastplate, in the Russian style.{Give me something with black trousers and an engraved breastplate, in the Russian style.}
 Give me something with black trousers and a gilded breastplate, in the Russian style.{Give me something with black trousers and a gilded breastplate, in the Russian style.}
@@ -25,7 +25,7 @@ Bring out a Moor's naval uniform!  A Moor, a Moor, are ye daft?!?{Bring out a Mo
 A white half-sleeved shirt, light vest, eyepatch, do something with the hair, sounds like Pirate Eye For The Straight Guy, doesn't it?{A white half-sleeved shirt, light vest, eyepatch, do something with the hair, sounds like Pirate Eye For The Straight Guy, doesn't it?}
 Orange pants, brown coat, a sash... and a pegged leg, an eyepatch and a hook.{Orange pants, brown coat, a sash... and a pegged leg, an eyepatch and a hook.}
 A white longsleeved shirt open at the collar, light vest, draw the hair back in a pony-tail, look what it does for the curves!  Speaking of which...{A white longsleeved shirt open at the collar, light vest, draw the hair back in a pony-tail, look what it does for the curves!  Speaking of which...}
-Black loose trowsers, a light shirt, sash, bandanna, something that will compliment dreadlocks.{Черные свободные брюки, легкая рубашка, пояс, бандана, что-то, что будет дополнять дреды.}
+Black loose trowsers, a light shirt, sash, bandanna, something that will compliment dreadlocks.{Р§РµСЂРЅС‹Рµ СЃРІРѕР±РѕРґРЅС‹Рµ Р±СЂСЋРєРё, Р»РµРіРєР°СЏ СЂСѓР±Р°С€РєР°, РїРѕСЏСЃ, Р±Р°РЅРґР°РЅР°, С‡С‚Рѕ-С‚Рѕ, С‡С‚Рѕ Р±СѓРґРµС‚ РґРѕРїРѕР»РЅСЏС‚СЊ РґСЂРµРґС‹.}
 Black loose trowsers, a steel cuirass, sash, bandanna, something that will compliment dreadlocks.{Black loose trowsers, a steel cuirass, sash, bandanna, something that will compliment dreadlocks.}
 Black loose trowsers, an engraved breastplate, sash, bandanna, something that will compliment dreadlocks.{Black loose trowsers, an engraved breastplate, sash, bandanna, something that will compliment dreadlocks.}
 Black loose trowsers, a gilded breastplate, sash, bandanna, something that will compliment dreadlocks.{Black loose trowsers, a gilded breastplate, sash, bandanna, something that will compliment dreadlocks.}
@@ -97,7 +97,7 @@ They'll be thinking 'Oh shiver me timbers, it's a pirate!' when they see this da
 Let's try it without a shirt under the vest, and a bandanna, what do you say?{Let's try it without a shirt under the vest, and a bandanna, what do you say?}
 Let's try it without a shirt under the vest, and a bandanna, but without the beard, what do you say?{Let's try it without a shirt under the vest, and a bandanna, but without the beard, what do you say?}
 Let's try it without a shirt under the vest, and a bandanna, but without hair, what do you say?{Let's try it without a shirt under the vest, and a bandanna, but without hair, what do you say?}
-Hmmm, thinkin' pirate here, so a white half-sleeved shirt, dark vest, dark hair, and an eyepatch!{Хммм, думаю, здесь пират. Поэтому белая рубашка с укороченными рукавами, тёмный жилет, темные волосы и повязка на глаз!}
+Hmmm, thinkin' pirate here, so a white half-sleeved shirt, dark vest, dark hair, and an eyepatch!{РҐРјРјРј, РґСѓРјР°СЋ, Р·РґРµСЃСЊ РїРёСЂР°С‚. РџРѕСЌС‚РѕРјСѓ Р±РµР»Р°СЏ СЂСѓР±Р°С€РєР° СЃ СѓРєРѕСЂРѕС‡РµРЅРЅС‹РјРё СЂСѓРєР°РІР°РјРё, С‚С‘РјРЅС‹Р№ Р¶РёР»РµС‚, С‚РµРјРЅС‹Рµ РІРѕР»РѕСЃС‹ Рё РїРѕРІСЏР·РєР° РЅР° РіР»Р°Р·!}
 What this is is a cassock and a surplice, worn by priests and bishops of the Catholic Church, the Anglican Church... and I guess by anyone who jolly well just wants to wear one!{What this is is a cassock and a surplice, worn by priests and bishops of the Catholic Church, the Anglican Church... and I guess by anyone who jolly well just wants to wear one!}
 This is the very outfit worn by that nice priest, bishop, well, whatever the head guy is at the church of Isla Muelle!  And if he thinks it's HIS his, just remember where it came from.{This is the very outfit worn by that nice priest, bishop, well, whatever the head guy is at the church of Isla Muelle!  And if he thinks it's HIS his, just remember where it came from.}
 Cheap clothes won't protect you from the sun darkening your skin... severely!{Cheap clothes won't protect you from the sun darkening your skin... severely!}
@@ -178,7 +178,7 @@ This dress looks quite at home on the voluptuous body of the healthy and fit ari
 This tastefully simple outfit will be quite appropriate in any town in the Archipelago.{This tastefully simple outfit will be quite appropriate in any town in the Archipelago.}
 The blonde ringlets appearing from underneath this Dutch bonnet are the perfect adornment to a lady's dress.{The blonde ringlets appearing from underneath this Dutch bonnet are the perfect adornment to a lady's dress.}
 This dress, with it's nice and alluring bodice compliment a head full of fiery red hair.{This dress, with it's nice and alluring bodice compliment a head full of fiery red hair.}
-A nice little brown outfit, with a hat pinned up on the side, like Will Turner the swordsmith was wearing at the dock the other day!{Симпатичный костюм в коричневых тонах, шляпа, зашпиленная с одной стороны... Точно так был одет на днях Уилл Тёрнер, оружейник!}
+A nice little brown outfit, with a hat pinned up on the side, like Will Turner the swordsmith was wearing at the dock the other day!{РЎРёРјРїР°С‚РёС‡РЅС‹Р№ РєРѕСЃС‚СЋРј РІ РєРѕСЂРёС‡РЅРµРІС‹С… С‚РѕРЅР°С…, С€Р»СЏРїР°, Р·Р°С€РїРёР»РµРЅРЅР°СЏ СЃ РѕРґРЅРѕР№ СЃС‚РѕСЂРѕРЅС‹... РўРѕС‡РЅРѕ С‚Р°Рє Р±С‹Р» РѕРґРµС‚ РЅР° РґРЅСЏС… РЈРёР»Р» РўС‘СЂРЅРµСЂ, РѕСЂСѓР¶РµР№РЅРёРє!}
 A nice little brown outfit, with a hat pinned up on the side and a steel cuirass, like Will Turner the swordsmith was wearing at the dock the other day!{A nice little brown outfit, with a hat pinned up on the side and a steel cuirass, like Will Turner the swordsmith was wearing at the dock the other day!}
 A nice little brown outfit, with a hat pinned up on the side and an engraved breastplate, like Will Turner the swordsmith was wearing at the dock the other day!{A nice little brown outfit, with a hat pinned up on the side and an engraved breastplate, like Will Turner the swordsmith was wearing at the dock the other day!}
 A nice little brown outfit, with a hat pinned up on the side and a gilded breastplate, like Will Turner the swordsmith was wearing at the dock the other day!{A nice little brown outfit, with a hat pinned up on the side and a gilded breastplate, like Will Turner the swordsmith was wearing at the dock the other day!}
@@ -216,15 +216,15 @@ Lived through a lot of pain, now I'm ready to give some.{Lived through a lot of 
 Would ye be want'n to hire a tomb raider?{Would ye be want'n to hire a tomb raider?}
 A descendant of Spaniard and Carib, she knows the Caribbean well.{A descendant of Spaniard and Carib, she knows the Caribbean well.}
 Beauty with eyes as green as emeralds and hair as red as blood.{Beauty with eyes as green as emeralds and hair as red as blood.}
-As skilled with the sword as she is beautiful, they call her Borinqueсa{As skilled with the sword as she is beautiful, they call her Borinqueсa}
+As skilled with the sword as she is beautiful, they call her BorinqueСЃa{As skilled with the sword as she is beautiful, they call her BorinqueСЃa}
 Don't let her beauty deceive you, she's a Pirate Captain.{Don't let her beauty deceive you, she's a Pirate Captain.}
 Have you met Orable's uncle, Elbaro?{Have you met Orable's uncle, Elbaro?}
 Sparrow got old, hit the bottle, and now look at him!{Sparrow got old, hit the bottle, and now look at him!}
-An older pirate ... a meaner pirate ... a Pirate Boss!{Старший пират... самый сильный пират... Предводитель Пиратов!}
+An older pirate ... a meaner pirate ... a Pirate Boss!{РЎС‚Р°СЂС€РёР№ РїРёСЂР°С‚... СЃР°РјС‹Р№ СЃРёР»СЊРЅС‹Р№ РїРёСЂР°С‚... РџСЂРµРґРІРѕРґРёС‚РµР»СЊ РџРёСЂР°С‚РѕРІ!}
 Rachel, of noble birth, and as sweet as her name.{Rachel, of noble birth, and as sweet as her name.}
 Nobility, it is in her blood{Nobility, it is in her blood}
-Always running as if for his life... but from whom?{Всегда бежит, словно спасая свою жизнь... но от кого?}
-Here is a governor's daughter, who wants to go to sea.{Дочь губернатора, которая возомнила себя моряком.}
+Always running as if for his life... but from whom?{Р’СЃРµРіРґР° Р±РµР¶РёС‚, СЃР»РѕРІРЅРѕ СЃРїР°СЃР°СЏ СЃРІРѕСЋ Р¶РёР·РЅСЊ... РЅРѕ РѕС‚ РєРѕРіРѕ?}
+Here is a governor's daughter, who wants to go to sea.{Р”РѕС‡СЊ РіСѓР±РµСЂРЅР°С‚РѕСЂР°, РєРѕС‚РѕСЂР°СЏ РІРѕР·РѕРјРЅРёР»Р° СЃРµР±СЏ РјРѕСЂСЏРєРѕРј.}
 That meddling boy will cower before the might of Captain James, er, Hand! Smee! Where the blazes are you, Smee!{That meddling boy will cower before the might of Captain James, er, Hand! Smee! Where the blazes are you, Smee!}
 The rusty, blood-splattered hook of Captain Uziah Wurmwoode has slit open more than a few gullets in its day, while this rotting wooden leg was formed from the corpse of a burnt galleon... and this pesky eyepatch simply WILL NOT stay on!{His rusty, blood-splattered hook has slit open more than a few gullets in its day and this rotting wooden leg was made from a burnt galleon... and this pesky eyepatch simply WILL NOT stay on!}
 Phinneas Wake, the Gypsy Captain, has spent a long time prowling the Spanish Main... and has the scars to prove it!{Phinneas Wake, the Gypsy Captain, has spent a long time prowling the Spanish Main... and has the scars to prove it!}
@@ -239,15 +239,15 @@ Give me something with black trousers and a steel cuirass. But don't forget the 
 Give me something with black trousers and an engraved breastplate. But don't forget the razor!{Give me something with black trousers and an engraved breastplate. But don't forget the razor!}
 Give me something with black trousers and a gilded breastplate. But don't forget the razor!{Give me something with black trousers and a gilded breastplate. But don't forget the razor!}
 This lady may not swing her hips, but one fellow who implied she would not be all woman ended up impaled on her cutlass.{This lady may not swing her hips, but one fellow who implied she would not be all woman ended up impaled on her cutlass.}
-A town girl that got a taste of adventure and threw her skirt aside to sail the seven seas.{Городская девчонка, которая почувствовала вкус к приключениям и отбросила юбку, чтобы идти под парусами.}
+A town girl that got a taste of adventure and threw her skirt aside to sail the seven seas.{Р“РѕСЂРѕРґСЃРєР°СЏ РґРµРІС‡РѕРЅРєР°, РєРѕС‚РѕСЂР°СЏ РїРѕС‡СѓРІСЃС‚РІРѕРІР°Р»Р° РІРєСѓСЃ Рє РїСЂРёРєР»СЋС‡РµРЅРёСЏРј Рё РѕС‚Р±СЂРѕСЃРёР»Р° СЋР±РєСѓ, С‡С‚РѕР±С‹ РёРґС‚Рё РїРѕРґ РїР°СЂСѓСЃР°РјРё.}
 This platinum blonde is not one to mess with, for she is as cool as her icy eyes.{This platinum blonde is not one to mess with, for she is as cool as her icy eyes.}
-He's big, he's bad, but most of all he is loyal to those who deserve it.{Он большой, он плохой, но он лоялен к тем, кто этого заслуживает.}
+He's big, he's bad, but most of all he is loyal to those who deserve it.{РћРЅ Р±РѕР»СЊС€РѕР№, РѕРЅ РїР»РѕС…РѕР№, РЅРѕ РѕРЅ Р»РѕСЏР»РµРЅ Рє С‚РµРј, РєС‚Рѕ СЌС‚РѕРіРѕ Р·Р°СЃР»СѓР¶РёРІР°РµС‚.}
 Hailing from Africa, she now seeks freedom in the New World.{Hailing from Africa, she now seeks freedom in the New World.}
-I'm feeling like a lucky master and commander today. Do you have anything to suit that?{Я чувствую себя, словно счастливчик Штурман-Командир. Есть у Вас что-то, чтобы изобразить это одеждой?}
+I'm feeling like a lucky master and commander today. Do you have anything to suit that?{РЇ С‡СѓРІСЃС‚РІСѓСЋ СЃРµР±СЏ, СЃР»РѕРІРЅРѕ СЃС‡Р°СЃС‚Р»РёРІС‡РёРє РЁС‚СѓСЂРјР°РЅ-РљРѕРјР°РЅРґРёСЂ. Р•СЃС‚СЊ Сѓ Р’Р°СЃ С‡С‚Рѕ-С‚Рѕ, С‡С‚РѕР±С‹ РёР·РѕР±СЂР°Р·РёС‚СЊ СЌС‚Рѕ РѕРґРµР¶РґРѕР№?}
 I want to dress out like someone really, really poor. Don't ask me why.{I want to dress out like someone really, really poor. Don't ask me why.}
 Give me a good officer's costume. But forget the navy blue. This time, I want it in purple!{Give me a good officer's costume. But forget the navy blue. This time, I want it in purple!}
 Your average captain's uniform. But make the colour slightly less vibrant!{Your average captain's uniform. But make the colour slightly less vibrant!}
-This lass in black leather is hard to resist. But can she be trusted?{Перед этой девушкой в чёрной коже трудно устоять. Но можно ли ей верить?}
+This lass in black leather is hard to resist. But can she be trusted?{РџРµСЂРµРґ СЌС‚РѕР№ РґРµРІСѓС€РєРѕР№ РІ С‡С‘СЂРЅРѕР№ РєРѕР¶Рµ С‚СЂСѓРґРЅРѕ СѓСЃС‚РѕСЏС‚СЊ. РќРѕ РјРѕР¶РЅРѕ Р»Рё РµР№ РІРµСЂРёС‚СЊ?}
 The kind of lady no sailor can fail to fall in love with upon first sight.{The kind of lady no sailor can fail to fall in love with upon first sight.}
 Looking real good in her hot red outfit.{Looking real good in her hot red outfit.}
 A very wealthy-looking guy you could easily imagine to be a governor.{A very wealthy-looking guy you could easily imagine to be a governor.}
@@ -260,10 +260,10 @@ A noble (but rather fat) aristocrat in a blue outfit.{A noble (but rather fat) a
 He doesn't nescessarily look evil, but this is not a person you would want to cross.{He doesn't nescessarily look evil, but this is not a person you would want to cross.}
 A nobleman in red. And please add some sort of gold-coloured hanger thingey.{A nobleman in red. And please add some sort of gold-coloured hanger thingey.}
 A very slick-looking officer's uniform. With a small beard, little moustache and red hair.{A very slick-looking officer's uniform. With a small beard, little moustache and red hair.}
-A lot of muscle, straight from Africa.{Гора мышц прямиком из Африки.}
+A lot of muscle, straight from Africa.{Р“РѕСЂР° РјС‹С€С† РїСЂСЏРјРёРєРѕРј РёР· РђС„СЂРёРєРё.}
 A slightly older man, looking suspiciously like a cannoneer.{A slightly older man, looking suspiciously like a cannoneer.}
 A sailor in green. Why? He shouldn't draw attention to himself in dense jungles!{A sailor in green. Why? He shouldn't draw attention to himself in dense jungles!}
-I remember Jack Sparrow as a devil may care rogue bucaneer.{Я помню Джека Воробья как буканьера, о котором заботится сам дьявол.}
+I remember Jack Sparrow as a devil may care rogue bucaneer.{РЇ РїРѕРјРЅСЋ Р”Р¶РµРєР° Р’РѕСЂРѕР±СЊСЏ РєР°Рє Р±СѓРєР°РЅСЊРµСЂР°, Рѕ РєРѕС‚РѕСЂРѕРј Р·Р°Р±РѕС‚РёС‚СЃСЏ СЃР°Рј РґСЊСЏРІРѕР».}
 I remember Jack Sparrow as a devil may care rogue bucaneer in a unadorned steel breastplate.{I remember Jack Sparrow as a devil may care rogue bucaneer in a unadorned steel breastplate.}
 I remember Jack Sparrow as a devil may care rogue bucaneer in an engraved steel breastplate.{I remember Jack Sparrow as a devil may care rogue bucaneer in an engraved steel breastplate.}
 I remember Jack Sparrow as a devil may care rogue bucaneer in an intricate golden breastplate.{I remember Jack Sparrow as a devil may care rogue bucaneer in an intricate golden breastplate.}
@@ -304,7 +304,7 @@ A functional tradesman's uniform, ideal for Doctors.{A functional tradesman's un
 A functional tradesman's uniform, ideal for Gunners.{A functional tradesman's uniform, ideal for Gunners.}
 A functional tradesman's uniform, ideal for Pursers.{A functional tradesman's uniform, ideal for Pursers.}
 Taegan's simple vest outfit but without the vest.{Taegan's simple vest outfit but without the vest.}
-How about a simple brown vest to fit my girlish figure.{Как насчёт простого коричневого жилета, соответствующего моей девичьей фигуре?}
+How about a simple brown vest to fit my girlish figure.{РљР°Рє РЅР°СЃС‡С‘С‚ РїСЂРѕСЃС‚РѕРіРѕ РєРѕСЂРёС‡РЅРµРІРѕРіРѕ Р¶РёР»РµС‚Р°, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРіРѕ РјРѕРµР№ РґРµРІРёС‡СЊРµР№ С„РёРіСѓСЂРµ?}
 A simple brown vest with a Steel Cuirass.{A simple brown vest with a Steel Cuirass.}
 A simple brown vest with a Battle Cuirass.{A simple brown vest with a Battle Cuirass.}
 A simple brown vest with a Gold Cuirass.{A simple brown vest with a Gold Cuirass.}
@@ -323,7 +323,7 @@ An elegant and revealing gown with Steel Cuirass.{An elegant and revealing gown 
 An elegant and revealing gown with Battle Cuirass.{An elegant and revealing gown with Battle Cuirass.}
 An elegant and revealing gown with Gold Cuirass.{An elegant and revealing gown with Gold Cuirass.}
 Catalina like simple and practical sturdy leather but without the cuirass.{Catalina like simple and practical sturdy leather but without the cuirass.}
-I want something simple and practical, sturdy leather and steel like Catalina was known to wear.{Я хочу что-нибудь простое и практичное, прочная кожа и сталь будет как раз кстати.}
+I want something simple and practical, sturdy leather and steel like Catalina was known to wear.{РЇ С…РѕС‡Сѓ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РїСЂРѕСЃС‚РѕРµ Рё РїСЂР°РєС‚РёС‡РЅРѕРµ, РїСЂРѕС‡РЅР°СЏ РєРѕР¶Р° Рё СЃС‚Р°Р»СЊ Р±СѓРґРµС‚ РєР°Рє СЂР°Р· РєСЃС‚Р°С‚Рё.}
 Simple and practical sturdy leather with Steel Cuirass.{Simple and practical sturdy leather with Steel Cuirass.}
 Simple and practical sturdy leather with Battle Cuirass.{Simple and practical sturdy leather with Battle Cuirass.}
 Simple and practical sturdy leather with Gold Cuirass.{Simple and practical sturdy leather with Gold Cuirass.}
@@ -335,10 +335,10 @@ Matey, yer seen-all, hard face can tell: You FINALLY earned a captains hat,and a
 Now then, I must have an ounce or two of that malapert blood from you!{Now then, I must have an ounce or two of that malapert blood from you!}
 I'm gonna have yer guts for garters, Nicholas Sharp!{I'm gonna have yer guts for garters, Nicholas Sharp!}
 Damn you, Mings! You didn't give me a neck!{Damn you, Mings! You didn't give me a neck!}
-Blaze Devlin. In his original view.{Хотелось бы походить на сына легендарного капитана Шарпа.}
-Beatrice Devlin. In her's original view.{Рыжая бестия в лёгкой рубашке. Враги будут в отпаде.}
-Beatrice Devlin. In some other clothes.{Огненно рыжие волосы и весёлый нрав всегда располагают к себе людей.}
-Am I worthy to sail under Captain Jack Sparrow?{Достоин ли я капитана, подобного Джеку Воробью?}
+Blaze Devlin. In his original view.{РҐРѕС‚РµР»РѕСЃСЊ Р±С‹ РїРѕС…РѕРґРёС‚СЊ РЅР° СЃС‹РЅР° Р»РµРіРµРЅРґР°СЂРЅРѕРіРѕ РєР°РїРёС‚Р°РЅР° РЁР°СЂРїР°.}
+Beatrice Devlin. In her's original view.{Р С‹Р¶Р°СЏ Р±РµСЃС‚РёСЏ РІ Р»С‘РіРєРѕР№ СЂСѓР±Р°С€РєРµ. Р’СЂР°РіРё Р±СѓРґСѓС‚ РІ РѕС‚РїР°РґРµ.}
+Beatrice Devlin. In some other clothes.{РћРіРЅРµРЅРЅРѕ СЂС‹Р¶РёРµ РІРѕР»РѕСЃС‹ Рё РІРµСЃС‘Р»С‹Р№ РЅСЂР°РІ РІСЃРµРіРґР° СЂР°СЃРїРѕР»Р°РіР°СЋС‚ Рє СЃРµР±Рµ Р»СЋРґРµР№.}
+Am I worthy to sail under Captain Jack Sparrow?{Р”РѕСЃС‚РѕРёРЅ Р»Рё СЏ РєР°РїРёС‚Р°РЅР°, РїРѕРґРѕР±РЅРѕРіРѕ Р”Р¶РµРєСѓ Р’РѕСЂРѕР±СЊСЋ?}
 A most trustworthy and rum-drinking boatswain, please!{A most trustworthy and rum-drinking boatswain, please!}
 A most trustworthy and rum-drinking boatswain, in blue vest!{A most trustworthy and rum-drinking boatswain, in blue vest!}
 Mateus Santos, at your service. Can I drop you somewhere?{Mateus Santos, at your service. Can I drop you somewhere?}
@@ -383,10 +383,10 @@ I feel like James Norrington today, I need a fine Lieutenant uniform.{I feel lik
 I feel like James Norrington today, I need a fine Captain uniform. And don't forget the wig!{I feel like James Norrington today, I need a fine Captain uniform. And don't forget the wig!}
 I feel like James Norrington today, I need a nice golden trimmed Commodore's uniform, and don't forget the wig.{I feel like James Norrington today, I need a nice golden trimmed Commodore's uniform, and don't forget the wig.}
 I've ended up as a rum-potting deckhand that takes orders from pirates, have you anything that can express that?.{I've ended up as a rum-potting deckhand that takes orders from pirates, have you anything that can express that?.}
-Young man. Too young for serious fight, but his courage compensates the shortage of experience.{Молодой человек. Слишком молодой для серьёзной драки, но недостаток опыта компенсирует отвага.}
-Spanish grandee in the past, he was forced to leave the country. Hates englishmen and... friends betrayers.{Испанский гранд в прошлом - он был вынужден покинуть страну. Кто знает, почему... Ненавидит англичан и... друзей-предателей.}
-A known swordsman, although success not always was on his side. The scars, got in fights, certainly, confirms that. But scars dye the men.{Известный фехтовальщик и задира, но далеко не всегда победитель в устроенных им же заварушках. Его шрамы могут подтвердить это. Но шрамы только украшают мужчину.}
-Who is that guy? Or girl? Looks like his rich parents, somewhere in Europe, already does not dream to see again their child.{Кто этот мальчик? Или это девочка? Похоже, его богатые родители, гдн-нибудь в Европе, уже и не мечтают снова обнять своё дитя.}
+Young man. Too young for serious fight, but his courage compensates the shortage of experience.{РњРѕР»РѕРґРѕР№ С‡РµР»РѕРІРµРє. РЎР»РёС€РєРѕРј РјРѕР»РѕРґРѕР№ РґР»СЏ СЃРµСЂСЊС‘Р·РЅРѕР№ РґСЂР°РєРё, РЅРѕ РЅРµРґРѕСЃС‚Р°С‚РѕРє РѕРїС‹С‚Р° РєРѕРјРїРµРЅСЃРёСЂСѓРµС‚ РѕС‚РІР°РіР°.}
+Spanish grandee in the past, he was forced to leave the country. Hates englishmen and... friends betrayers.{РСЃРїР°РЅСЃРєРёР№ РіСЂР°РЅРґ РІ РїСЂРѕС€Р»РѕРј - РѕРЅ Р±С‹Р» РІС‹РЅСѓР¶РґРµРЅ РїРѕРєРёРЅСѓС‚СЊ СЃС‚СЂР°РЅСѓ. РљС‚Рѕ Р·РЅР°РµС‚, РїРѕС‡РµРјСѓ... РќРµРЅР°РІРёРґРёС‚ Р°РЅРіР»РёС‡Р°РЅ Рё... РґСЂСѓР·РµР№-РїСЂРµРґР°С‚РµР»РµР№.}
+A known swordsman, although success not always was on his side. The scars, got in fights, certainly, confirms that. But scars dye the men.{РР·РІРµСЃС‚РЅС‹Р№ С„РµС…С‚РѕРІР°Р»СЊС‰РёРє Рё Р·Р°РґРёСЂР°, РЅРѕ РґР°Р»РµРєРѕ РЅРµ РІСЃРµРіРґР° РїРѕР±РµРґРёС‚РµР»СЊ РІ СѓСЃС‚СЂРѕРµРЅРЅС‹С… РёРј Р¶Рµ Р·Р°РІР°СЂСѓС€РєР°С…. Р•РіРѕ С€СЂР°РјС‹ РјРѕРіСѓС‚ РїРѕРґС‚РІРµСЂРґРёС‚СЊ СЌС‚Рѕ. РќРѕ С€СЂР°РјС‹ С‚РѕР»СЊРєРѕ СѓРєСЂР°С€Р°СЋС‚ РјСѓР¶С‡РёРЅСѓ.}
+Who is that guy? Or girl? Looks like his rich parents, somewhere in Europe, already does not dream to see again their child.{РљС‚Рѕ СЌС‚РѕС‚ РјР°Р»СЊС‡РёРє? РР»Рё СЌС‚Рѕ РґРµРІРѕС‡РєР°? РџРѕС…РѕР¶Рµ, РµРіРѕ Р±РѕРіР°С‚С‹Рµ СЂРѕРґРёС‚РµР»Рё, РіРґРЅ-РЅРёР±СѓРґСЊ РІ Р•РІСЂРѕРїРµ, СѓР¶Рµ Рё РЅРµ РјРµС‡С‚Р°СЋС‚ СЃРЅРѕРІР° РѕР±РЅСЏС‚СЊ СЃРІРѕС‘ РґРёС‚СЏ.}
 Give me something cheap with a brown trousers and a vest, a simple red one.{Give me something cheap with a brown trousers and a vest, a simple red one.}
 I have a somewhat black mood today, have you something that compliments that?{I have a somewhat black mood today, have you something that compliments that?}
 Give me something with blue trousers and vest, in red with blue accents.{Give me something with blue trousers and vest, in red with blue accents.}
@@ -405,9 +405,9 @@ Jack Sparrow in a nice british captains uniform. Looks real dashing!{Jack Sparro
 Jack Sparrow in a goldtrimmed commodores uniform. Shiny!{Jack Sparrow in a gold-trimmed commodore's uniform. Shiny!}
 Dark blue loose trowsers, a light shirt, sash, bandanna, something that will compliment dreadlocks. And don't forget me effects!{Dark blue loose trowsers, a light shirt, sash, bandanna, something that will compliment dreadlocks. And don't forget me effects!}
 A French Naval Lieutenant's uniform. And please leave the moustache as it is now, s'il vous plait.{A French Naval Lieutenant's uniform. And please leave the moustache as it is now, s'il vous plait.}
-A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la mиre' and 'rouge' from blood!{A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la mиre' and 'rouge' from blood!}
+A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la mРёre' and 'rouge' from blood!{A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la mРёre' and 'rouge' from blood!}
 A French Naval Captain's uniform. I only need a Corvette and a crew to compliment all this, monsieur!{A French Naval Captain's uniform. I only need a Corvette and a crew to compliment all this, monsieur!}
-A French Naval Commodore's uniform. Oui, C'est trиs bon.{A French Naval Commodore's uniform. Oui, C'est trиs bon.}
+A French Naval Commodore's uniform. Oui, C'est trРёs bon.{A French Naval Commodore's uniform. Oui, C'est trРёs bon.}
 A typical Dutch uniform 1.{A typical Dutch uniform 1.}
 A typical Dutch uniform 2.{A typical Dutch uniform 2.}
 A typical Dutch uniform 3.{A typical Dutch uniform 3.}
@@ -475,7 +475,7 @@ Crew cut, grey trousers, dark brown leather boots, a shirt that fits loose, a wa
 Crew cut, grey trousers, dark leather gold trim boots and a shirt that fits loose, a waistcoat and headband, bare knuckled. He makes a good Pirate!{Crew cut, grey trousers, dark leather gold trim boots and a shirt that fits loose, a waistcoat and headband, bare knuckled. He makes a good Pirate!}
 A flashy red coat, trimmed with golden leafs. And on top of that, an Indian pattern bandana. Now I look like a real 'gentlemen' pirate!{A flashy red coat, trimmed with golden leafs. And on top of that, an Indian pattern bandana. Now I look like a real 'gentlemen' pirate!}
 I feel like a Portuguese Marine. How about something like Manuel Sousa ?{I feel like a Portuguese Marine. How about something like Manuel Sousa ?}
-I feel like a Portuguese Marine. How about something like Lourenзo Vaz ?{I feel like a Portuguese Marine. How about something like Lourenзo Vaz ?}
+I feel like a Portuguese Marine. How about something like LourenР·o Vaz ?{I feel like a Portuguese Marine. How about something like LourenР·o Vaz ?}
 A perfect outfit for an infiltration mission in Spanish towns.{A perfect outfit for an infiltration mission in Spanish towns.}
 Just the best Spanish swordsman in the archipelago.{Just the best Spanish swordsman in the archipelago.}
 I feel like the Director of the Dutch West India Compagny. How about something like Gherarde de Jongh.{I feel like the Director of the Dutch West India Compagny. How about something like Gherarde de Jongh.}
@@ -500,7 +500,7 @@ Billions of Blue Blistering Barnacles! What do you mean 'I look drawn'? I'm as r
 This pirate resembles one famous pennyless French Captain{This pirate resembles one famous pennyless French Captain}
 It's a mythical creature... I can call it what I like.{It's a mythical creature... I can call it what I like.}
 And so... we go to war!{And so... we go to war!}
-It's actually spelled, Conceiзгo!{It's actually spelled, ConceiзЭo!}
+It's actually spelled, ConceiР·Ріo!{It's actually spelled, ConceiР·Р­o!}
 A very sharp looking model for an officer.{A very sharp looking model for an officer.}
 The best gunsmith in the Caribbean, if you please!{The best gunsmith in the Caribbean, if you please!}
 A young villain who seems to love kidnapping.{A young villain who seems to love kidnapping.}

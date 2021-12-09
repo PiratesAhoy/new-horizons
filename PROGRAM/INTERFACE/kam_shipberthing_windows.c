@@ -1081,49 +1081,49 @@ void ConfirmationWindow(string WhichWindow)
 					tempnumg2 = SBCalculateDailyCost(0,tempnumg1,SelectedPort) * 30;
 					tempnumg3 = SBCalculateDailyCost(1,tempnumg1,SelectedPort) * 30;
 					tempnumg4 = SBGetShoreLeavePay(BerthingShipCaptain, GetCrewQuantity(GetCharacter(PCharAndCompanions_Indexes[SelectedCompanionSlot-1])));
-					GameInterface.strings.FC_Title = "Confirm - Swap Ships";
+					GameInterface.strings.FC_Title = TranslateString("", "Confirm - Swap Ships");
 					if(BerthingMethod == 0)
 					{
 						tempnumg1 = PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).status;
 						if (tempnumg1 == 2)
 						{
-							tempstringg1 = "You have selected to put the " + tempstringg3 + " (currently active) on shore leave, and relaunch the " + tempstringg2 + " (currently on shore leave). This action is completely reversible; nothing will be lost or stripped from either ship. Note however that berthing charges for the " + tempstringg3 + " will be high (" + tempnumg2 + " / month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate (" + tempnumg4 + " / month). Click OK to go ahead with this.";
+							tempstringg1 = TranslateString("", "You have selected to put the") + " " + tempstringg3 + " " + TranslateString("", "(currently active) on shore leave, and relaunch the") + " " + tempstringg2 + " " + TranslateString("", "(currently on shore leave). This action is completely reversible; nothing will be lost or stripped from either ship. Note however that berthing charges for the") + " " + tempstringg3 + " " + TranslateString("", "will be high (") + tempnumg2 + " " + TranslateString("", "/ month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate (") + tempnumg4 + " " + TranslateString("", "/ month). Click OK to go ahead with this.");
 						}
 						else
 						{
-							tempstringg1 = "You have selected to put the " + tempstringg3 + " (currently active) on shore leave, and relaunch the " + tempstringg2 + " (currently laid up). If the " + tempstringg3 + " goes on shore leave, nothing will be lost or stripped from her, but note that berthing charges will be high (" + tempnumg2 + " / month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate (" + tempnumg4 + " / month). If the " + tempstringg2 + " is relaunched, you will have to replace, her rigging, her supplies and her crew. Click OK to go ahead with this.";
+							tempstringg1 = TranslateString("", "You have selected to put the") + " " + tempstringg3 + " " + TranslateString("", "(currently active) on shore leave, and relaunch the") + " " + tempstringg2 + " " + TranslateString("", "(currently laid up). If the") + " " + tempstringg3 + " " + TranslateString("", "goes on shore leave, nothing will be lost or stripped from her, but note that berthing charges will be high (") + tempnumg2 + " " + TranslateString("", "/ month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate (") + tempnumg4 + " " + TranslateString("", "/ month). If the") + " " + tempstringg2 + " " + TranslateString("", "is relaunched, you will have to replace her rigging, her supplies and her crew. Click OK to go ahead with this.");
 						}
 					}
 					else
 					{
-						tempstringg1 = "You have selected to lay up the " + tempstringg3 + " (currently active), and relaunch the " + tempstringg2 + " (currently on shore leave). If the " + tempstringg3 + " is laid up, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list. ";
+						tempstringg1 = TranslateString("", "You have selected to lay up the") + " " + tempstringg3 + " " + TranslateString("", "(currently active), and relaunch the") + " " + tempstringg2 + " " + TranslateString("", "(currently on shore leave). If the") + " " + tempstringg3 + " " + TranslateString("", "is laid up, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.")+ " ";
 						gCaptainChar = GetCharacter(PCharAndCompanions_Indexes[SelectedCompanionSlot-1]);
 						if (GetCargoLoad(gCaptainChar) > 0)
 						{
 							tempnumg1 = SBGetGoodsPrice(PCharAndCompanions_Indexes[SelectedCompanionSlot-1],SelectedPort);
-							tempstringg1 += "You will receive " + tempnumg1 + " for the value of the cargo in the hold at local prices. ";
+							tempstringg1 += TranslateString("", "You will receive") + " " + tempnumg1 + " " + TranslateString("", "for the value of the cargo in the hold at local prices.") + " ";
 						}
-						tempstringg1 += "You will no longer have to pay the crew, and the berthing charge will be low (" + tempnumg3 + " / month). ";
+						tempstringg1 += TranslateString("", "You will no longer have to pay the crew, and the berthing charge will be low (") + tempnumg3 + " " + TranslateString("", "/ month).") + " ";
 						tempnumg1 = PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).status;
 						if (tempnumg1 == 1)
 						{
-							tempstringg1 += "If the " + tempstringg2 + " is relaunched, you will have to replace, her rigging, her supplies and her crew. ";
+							tempstringg1 += TranslateString("", "If the") + " "+ tempstringg2 + " " + TranslateString("", "is relaunched, you will have to replace her rigging, her supplies and her crew.") + " ";
 						}
-						tempstringg1 += "Click OK to go ahead with this.";
+						tempstringg1 += TranslateString("", "Click OK to go ahead with this.");
 					}
 				break;
 				case 1:
-					GameInterface.strings.FC_Title = "Confirm - Relaunch Ship";
+					GameInterface.strings.FC_Title = TranslateString("", "Confirm - Relaunch Ship");
 					tempstringg2 = PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).shipname;
-					tempstringg1 = "Click OK to confirm that you want to relaunch the " + tempstringg2 + ".";
+					tempstringg1 = TranslateString("", "Click OK to confirm that you want to relaunch the") + " " + + tempstringg2 + ". ";
 					tempnumg1 = PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).status;
 					if (tempnumg1 == 1)
 					{
-						tempstringg1 += " You will have to replace, her rigging, her supplies and her crew.";
+						tempstringg1 += TranslateString("", "You will have to replace, her rigging, her supplies and her crew.");
 					}
 				break;
 				case 2:
-					GameInterface.strings.FC_Title = "Confirm - Berth Ship";
+					GameInterface.strings.FC_Title = TranslateString("", "Confirm - Berth Ship");
 					tempnumg1 = PCharAndCompanions_ShipTypes[SelectedCompanionSlot-1];
 					tempnumg2 = SBCalculateDailyCost(0,tempnumg1,SelectedPort) * 30;
 					tempnumg3 = SBCalculateDailyCost(1,tempnumg1,SelectedPort) * 30;
@@ -1131,18 +1131,18 @@ void ConfirmationWindow(string WhichWindow)
 					tempstringg3 = PCharAndCompanions_ShipNames[SelectedCompanionSlot-1];
 					if(BerthingMethod == 0)
 					{
-						tempstringg1 = "You have selected to put the " + tempstringg3 + " (currently active) on shore leave. This action is completely reversible; nothing will be lost or stripped from her. Note however that berthing charges will be high (" + tempnumg2 + " / month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate (" + tempnumg4 + " / month). Click OK to go ahead with this.";
+						tempstringg1 = TranslateString("", "You have selected to put the") + " " + tempstringg3 + " " + TranslateString("", "(currently active) on shore leave. This action is completely reversible; nothing will be lost or stripped from her. Note however that berthing charges will be high (") + tempnumg2 + " " + TranslateString("", "/ month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate (") + tempnumg4 + " " + TranslateString("", "/ month). Click OK to go ahead with this.");
 					}
 					else
 					{
-						tempstringg1 = "You have selected to lay up the " + tempstringg3 + " (currently active). She will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list. ";
+						tempstringg1 = TranslateString("", "You have selected to lay up the") + " " + tempstringg3 + " " + TranslateString("", "(currently active). She will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.")+ " ";
 						gCaptainChar = GetCharacter(PCharAndCompanions_Indexes[SelectedCompanionSlot-1]);
 						if (GetCargoLoad(gCaptainChar) > 0)
 						{
 							tempnumg1 = SBGetGoodsPrice(PCharAndCompanions_Indexes[SelectedCompanionSlot-1],SelectedPort);
-							tempstringg1 += "You will receive " + tempnumg1 + " for the value of the cargo in the hold at local prices. ";
+							tempstringg1 += TranslateString("", "You will receive") + " " + tempnumg1 + " " + TranslateString("", "for the value of the cargo in the hold at local prices.")+ " ";
 						}
-						tempstringg1 += "You will no longer have to pay the crew, and the berthing charge will be low (" + tempnumg3 + " / month). Click OK to go ahead with this.";
+						tempstringg1 += TranslateString("", "You will no longer have to pay the crew, and the berthing charge will be low (") + tempnumg3 + " " + TranslateString("", "/ month). Click OK to go ahead with this.");
 					}
 				break;
 			}
@@ -1152,41 +1152,41 @@ void ConfirmationWindow(string WhichWindow)
 
 
 		case "Lay up ship on shore leave":
-			GameInterface.strings.FC_Title = "Confirm - Lay Up Ship";
+			GameInterface.strings.FC_Title = TranslateString("", "Confirm - Lay Up Ship");
 			tempstringg2 = PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).shipname;
 			tempnumg1 = PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).shiptype;
 			tempnumg2 = SBCalculateDailyCost(0,tempnumg1,SelectedPort) * 30;
 			tempnumg3 = SBCalculateDailyCost(1,tempnumg1,SelectedPort) * 30;
-			tempstringg1 = "Note that if you lay up the " + tempstringg2 + ", she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list. ";
+			tempstringg1 = TranslateString("", "Note that if you lay up the") + " " + tempstringg2 + TranslateString("", ", she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.") + " ";
 			gCaptainChar = GetCharacter(sti(PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).captainindex));
 			if (GetCargoLoad(gCaptainChar) > 0)
 			{
 				tempnumg1 = SBGetGoodsPrice(sti(PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).captainindex),SelectedPort);
-				tempstringg1 += "You will receive " + tempnumg1 + " for the value of the cargo in the hold at local prices. ";
+				tempstringg1 += TranslateString("", "You will receive") + " " + tempnumg1 + " " + TranslateString("", "for the value of the cargo in the hold at local prices.")+ " ";
 			}
-			tempstringg1 += "You will no longer have to pay the crew, and the monthly berthing charge will decrease from " + tempnumg2 + " to " + tempnumg3 + ". Click OK to go ahead with this.";
+			tempstringg1 += TranslateString("", "You will no longer have to pay the crew, and the monthly berthing charge will decrease from") + " " + tempnumg2 + " " + TranslateString("", "to") + " " + tempnumg3 + TranslateString("", ". Click OK to go ahead with this.");
 			SetFormatedText("FC_TEXT",tempstringg1);
 		break;
 
 
 
 		case "Scrap berthed ship":
-			GameInterface.strings.FC_Title = "Confirm - Scrap Ship";
+			GameInterface.strings.FC_Title = TranslateString("", "Confirm - Scrap Ship");
 			tempstringg2 = PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).shipname;
 			if (PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).status == 2)
 			{
-				tempstringg1 = "Click OK to confirm that you want to scrap the " + tempstringg2 + ". ";
+				tempstringg1 = TranslateString("", "Click OK to confirm that you want to scrap the") + " " + tempstringg2 + ". ";
 				gCaptainChar = GetCharacter(sti(PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).captainindex));
 				if (GetCargoLoad(gCaptainChar) > 0)
 				{
 					tempnumg1 = SBGetGoodsPrice(sti(PChar.ShipBerthing.(gPortAttrib).(gSlotAttrib).captainindex),SelectedPort);
-					tempstringg1 += "You will receive " + tempnumg1 + " for the value of the cargo in the hold at local prices. ";
+					tempstringg1 += TranslateString("", "You will receive") + " " + tempnumg1 + " " + TranslateString("", "for the value of the cargo in the hold at local prices.")+ " ";
 				}
-				tempstringg1 += "The ship's captain will return to the passengers list.";
+				tempstringg1 += TranslateString("", "The ship's captain will return to the passengers list.");
 			}
 			else
 			{
-				tempstringg1 = "Click OK to confirm that you want to Scrap the " + tempstringg2 + ".";
+				tempstringg1 = TranslateString("", "Click OK to confirm that you want to Scrap the") + " " + tempstringg2 + ".";
 			}
 			SetFormatedText("FC_TEXT",tempstringg1);
 		break;

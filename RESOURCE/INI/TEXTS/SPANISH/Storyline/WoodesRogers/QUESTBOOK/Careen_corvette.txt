@@ -1,0 +1,12 @@
+title=Corbeta en carena
+text.t1=La escotilla del techo probablemente lleva a la cámara del capitán. Pero neesitaré una herramienta larga para abrirla.
+text.t2=I have found a (locked) way down to the slaves.
+text.t3=¡Hay una horca! ¿Pero cómo llego a ella?
+text.t4=Buscaré la santabárbara.
+text.t5=Aquí hay algunos prisioneros. Con un poco de suerte, la siguiente puerta lleva al compartimento de los esclavos.
+text.t6=Debo darme prisa y bloquear esa puerta antes de que entre alguien.
+text.t7=
+text.t8=
+text.t9=
+text.t10=
+

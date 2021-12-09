@@ -1,4 +1,4 @@
-// частичный перевод, доделка во второй очереди
+// С‡Р°СЃС‚РёС‡РЅС‹Р№ РїРµСЂРµРІРѕРґ, РґРѕРґРµР»РєР° РІРѕ РІС‚РѕСЂРѕР№ РѕС‡РµСЂРµРґРё
 Potion parameters{Medical Remedy}
 health value{Health}
 weapon blade parameters{Weapon: dmg.min/max #ddmg_min#/#ddmg_max#, piercing #dpiercing#%, block #dblock#%.}
@@ -7,139 +7,139 @@ weapon armor parameters{Armor: Coverage #dcoverage#%, Chance to stop / Percent o
 
 //..........................BLADE ITEMS START.........................................
 
-itmname_bladeskull1	{Череп}
+itmname_bladeskull1	{Р§РµСЂРµРї}
 itmdescr_bladeskull1
 {
 What did he use this macabre item to?. 
 }
 
-itmname_bladerammer		{Шомпол}
+itmname_bladerammer		{РЁРѕРјРїРѕР»}
 itmdescr_bladerammer
 {
 A Gunner's tool. 
 }
 
-itmname_bladeplank2		{Доска}
+itmname_bladeplank2		{Р”РѕСЃРєР°}
 itmdescr_bladeplank2
 {
 A heavy plank. 
 }
 
-itmname_bladeirontool		{Инструмент}
+itmname_bladeirontool		{РРЅСЃС‚СЂСѓРјРµРЅС‚}
 itmdescr_bladeirontool
 {
 Could be used as a crowbar. 
 }
 
-itmname_bladeemptysack_P	{Пустой Мешок}
+itmname_bladeemptysack_P	{РџСѓСЃС‚РѕР№ РњРµС€РѕРє}
 itmdescr_bladeemptysack_P
 {
 An old sack with place for a lot of books.
 }
 
-itmname_bladesemifullsack_P	{Мешок с некоторыми Книгами}
+itmname_bladesemifullsack_P	{РњРµС€РѕРє СЃ РЅРµРєРѕС‚РѕСЂС‹РјРё РљРЅРёРіР°РјРё}
 itmdescr_bladesemifullsack_P
 {
 The sack with some books. Heavy enough?
 }
 
-itmname_bladefullsack_P		{Мешок с Книгами}
+itmname_bladefullsack_P		{РњРµС€РѕРє СЃ РљРЅРёРіР°РјРё}
 itmdescr_bladefullsack_P
 {
 The sack is now filled with books. Heavy enough?
 }
 
-itmname_bladeemptysack_B	{Пустой Мешок}
+itmname_bladeemptysack_B	{РџСѓСЃС‚РѕР№ РњРµС€РѕРє}
 itmdescr_bladeemptysack_B
 {
 An old sack with place for four birds.
 }
 
-itmname_bladebirdsack		{Мешок с Птицами}
+itmname_bladebirdsack		{РњРµС€РѕРє СЃ РџС‚РёС†Р°РјРё}
 itmdescr_bladebirdsack
 {
 Now I got enough food for a meal or two.
 }
 
-itmname_bladecauldron		{Котел}
+itmname_bladecauldron		{РљРѕС‚РµР»}
 itmdescr_bladecauldron
 {
 A heavy cast iron Cauldron.
 }
 
-itmname_bladecauldron_w		{Котел}
+itmname_bladecauldron_w		{РљРѕС‚РµР»}
 itmdescr_bladecauldron_w
 {
 The Cauldron is filled with Water.
 }
 
-itmname_bladeemptysack		{Пустой Мешок}
+itmname_bladeemptysack		{РџСѓСЃС‚РѕР№ РњРµС€РѕРє}
 itmdescr_bladeemptysack
 {
 An old sack with place for nine pieces of wood.
 }
 
-itmname_bladewoodsack		{Мешок с Лесом}
+itmname_bladewoodsack		{РњРµС€РѕРє СЃ Р›РµСЃРѕРј}
 itmdescr_bladewoodsack
 {
 Now I got enough wood for a new fire.
 }
 
-itmname_bladefryingpan		{Блюдо}
+itmname_bladefryingpan		{Р‘Р»СЋРґРѕ}
 itmdescr_bladefryingpan
 {
 A large ovenproof dish.
 }
 
-itmname_bladefish		{Важная персона}
+itmname_bladefish		{Р’Р°Р¶РЅР°СЏ РїРµСЂСЃРѕРЅР°}
 itmdescr_bladefish
 {
 A big but also very delicious fish - if it hadn't been stored away in this cellar for days in the Caribbean heat.
 }
 
-itmname_bladeflag_usa		{Форт Flag}
+itmname_bladeflag_usa		{Р¤РѕСЂС‚ Flag}
 itmdescr_bladeflag_usa
 {
 The Star-spangled Banner.
 }
 
-itmname_bladespyglass6		{Подзорная труба}
+itmname_bladespyglass6		{РџРѕРґР·РѕСЂРЅР°СЏ С‚СЂСѓР±Р°}
 itmdescr_bladespyglass6
 {
 A  long Spyglass was hidden inside the flag roll.
 }
 
-itmname_bladeoilbottle		{Бутылка Нефти}
+itmname_bladeoilbottle		{Р‘СѓС‚С‹Р»РєР° РќРµС„С‚Рё}
 itmdescr_bladeoilbottle
 {
 A bottle filled with the finest olive oil.
 }
 
-itmname_bladebarrel		{Ромовый Баррель}
+itmname_bladebarrel		{Р РѕРјРѕРІС‹Р№ Р‘Р°СЂСЂРµР»СЊ}
 itmdescr_bladebarrel
 {
 A small barrel filled with the finest rum in the entire Caribbean, distilled by an expert (hrm).
 }
 
-itmname_bladebarrel_gp0		{Пустой Баррель}
+itmname_bladebarrel_gp0		{РџСѓСЃС‚РѕР№ Р‘Р°СЂСЂРµР»СЊ}
 itmdescr_bladebarrel_gp0
 {
 
 }
 
-itmname_bladebarrel_gpW		{Баррель пороха}
+itmname_bladebarrel_gpW		{Р‘Р°СЂСЂРµР»СЊ РїРѕСЂРѕС…Р°}
 itmdescr_bladebarrel_gpW
 {
 No, the mixture isn't right. I have to get rid of it.
 }
 
-itmname_bladebarrel_gpS		{Баррель пороха}
+itmname_bladebarrel_gpS		{Р‘Р°СЂСЂРµР»СЊ РїРѕСЂРѕС…Р°}
 itmdescr_bladebarrel_gpS
 {
 Standard Gunpowder for all kind of Handguns.
 }
 
-itmname_bladebarrel_gpF		{Баррель пороха}
+itmname_bladebarrel_gpF		{Р‘Р°СЂСЂРµР»СЊ РїРѕСЂРѕС…Р°}
 itmdescr_bladebarrel_gpF
 {
 Special Gunpowder for Fireworks.
@@ -151,109 +151,109 @@ itmdescr_bladelockpick
 Two small irons that could be used as lockpick tools.
 }
 
-itmname_bladewood_short		{Лес}
+itmname_bladewood_short		{Р›РµСЃ}
 itmdescr_bladewood_short
 {
 Hmm, I have to split the Wood too.
 }
 
-itmname_bladewood4		{Лес}
+itmname_bladewood4		{Р›РµСЃ}
 itmdescr_bladewood4
 {
 Okay, I think this will do in the fireplace.
 }
 
-itmname_sledgehammer		{Кувалда}
+itmname_sledgehammer		{РљСѓРІР°Р»РґР°}
 itmdescr_sledgehammer
 {
 With this Sledgehammer I can break anything.
 }
 
-itmname_bladepickaxe1		{Инструмент}
+itmname_bladepickaxe1		{РРЅСЃС‚СЂСѓРјРµРЅС‚}
 itmdescr_bladepickaxe1
 {
 A long gardening tool(?) or maybe something used in the mines. 
 }
 
-itmname_bladehammer		{Молоток}
+itmname_bladehammer		{РњРѕР»РѕС‚РѕРє}
 itmdescr_bladehammer
 {
 A short but very heavy hammer. 
 }
 
-itmname_bladesaw		{Видел}
+itmname_bladesaw		{Р’РёРґРµР»}
 itmdescr_bladesaw
 {
 A carpenter's robust tool. 
 }
 
-itmname_bladeladle		{Ковш}
+itmname_bladeladle		{РљРѕРІС€}
 itmdescr_bladeladle
 {
 A sooty metal ladle. 
 }
 
-itmname_bladebroom		{Метла}
+itmname_bladebroom		{РњРµС‚Р»Р°}
 itmdescr_bladebroom
 {
 Now I can tidy up the place. 
 }
 
-itmname_bladeladder2		{Лестница}
+itmname_bladeladder2		{Р›РµСЃС‚РЅРёС†Р°}
 itmdescr_bladeladder2
 {
 The big ladder I found in the Cavern.
 }
 
-itmname_clubmusketoon		{Клуб Musketoon}
+itmname_clubmusketoon		{РљР»СѓР± Musketoon}
 itmdescr_clubmusketoon
 {
 A Musketoon used as a very heavy Club.
 }
 
-itmname_bladeanchor		{Якорь}
+itmname_bladeanchor		{РЇРєРѕСЂСЊ}
 itmdescr_bladeanchor
 {
 A small but heavy anchor, how did it end up in the tailor's shop? 
 }
 
-itmname_bladeboom		{Бум}
+itmname_bladeboom		{Р‘СѓРј}
 itmdescr_bladeboom
 {
 Just a piece of wood, hardly a dangerous weapon. 
 }
 
-itmname_bladepaperroll		{Бумажный Рулон}
+itmname_bladepaperroll		{Р‘СѓРјР°Р¶РЅС‹Р№ Р СѓР»РѕРЅ}
 itmdescr_bladepaperroll
 {
 I'll place it on the floor and use the Tinderbox to light it.
 }
 
-itmname_bladespade		{Лопата}
+itmname_bladespade		{Р›РѕРїР°С‚Р°}
 itmdescr_bladespade
 {
 Better than nothing as a weapon.
 }
 
-itmname_bladepickaxe2		{Кирка}
+itmname_bladepickaxe2		{РљРёСЂРєР°}
 itmdescr_bladepickaxe2
 {
 A long sharp tool used in the mining business. 
 }
 
-itmname_machete		 	{Мачете}
+itmname_machete		 	{РњР°С‡РµС‚Рµ}
 itmdescr_machete
 {
 Used for cutting sugar canes.
 }
 
-itmname_holy_water		 {Святая Вода}
+itmname_holy_water		 {РЎРІСЏС‚Р°СЏ Р’РѕРґР°}
 itmdescr_holy_water
 {
 My only protection against Zombies and other undead.
 }
 
-itmname_bladelever		 {Рычаг}
+itmname_bladelever		 {Р С‹С‡Р°Рі}
 itmdescr_bladelever
 {
 I guess it will be needed somewhere.
@@ -262,55 +262,55 @@ I guess it will be needed somewhere.
 
 //..........................BLADECRYPTO START..........................................
 
-itmname_crypto			{Пергамент}
+itmname_crypto			{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_crypto
 {
 The dirty Parchment I found on the shore.
 }
 
-itmname_bladecrypto_d		{Пергамент}
+itmname_bladecrypto_d		{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_bladecrypto_d
 {
 The dirty Parchment I found on the shore.
 }
 
-itmname_bladecrypto_dl		{Пергамент}
+itmname_bladecrypto_dl		{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_bladecrypto_dl
 {
 My drawing of the Goldbug on the dirty Parchment.
 }
 
-itmname_bladecrypto_ds		{Пергамент}
+itmname_bladecrypto_ds		{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_bladecrypto_ds
 {
 My drawing of the Goldbug, but on the other side there is a Death's-head now!
 }
 
-itmname_bladecrypto_dsk		{Пергамент}
+itmname_bladecrypto_dsk		{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_bladecrypto_dsk
 {
 Together with the Death's-head a Goat?
 }
 
-itmname_bladecrypto_cl		{Пергамент}
+itmname_bladecrypto_cl		{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_bladecrypto_cl
 {
 My drawing of the Goldbug on the rinsed Parchment.
 }
 
-itmname_bladecrypto_csk		{Пергамент}
+itmname_bladecrypto_csk		{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_bladecrypto_csk
 {
 Here are the Death's-head and the Goat again.
 }
 
-itmname_bladecrypto_cskp	{Пергамент}
+itmname_bladecrypto_cskp	{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_bladecrypto_cskp
 {
 Besides the Death's-head and the Goat also some figures arranged in lines.
 }
 
-itmname_bladecrypto_cskt	{Пергамент}
+itmname_bladecrypto_cskt	{РџРµСЂРіР°РјРµРЅС‚}
 itmdescr_bladecrypto_cskt
 {
 A lot of characters are rudely traced between the Death's-head and the Goat.
@@ -320,133 +320,133 @@ A lot of characters are rudely traced between the Death's-head and the Goat.
 
 //..........................BLADEBOTTLES START.........................................
 
-itmname_bladebottle_CB2		{Коньяк}
+itmname_bladebottle_CB2		{РљРѕРЅСЊСЏРє}
 itmdescr_bladebottle_CB2
 {
 If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
 }
 
-itmname_Cognac			{Коньяк?}
+itmname_Cognac			{РљРѕРЅСЊСЏРє?}
 itmdescr_Cognac
 {
 If you store it for ten years or so maybe it could be called cognac. Now it has a very strong and ... unsual taste.  
 }
 
-itmname_bladebottle_CE0		{Маленькая Бутылка}
+itmname_bladebottle_CE0		{РњР°Р»РµРЅСЊРєР°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_CE0
 {
 Small empty bottle.
 }
 
-itmname_bladebottle_AC2		{Маленькая Бутылка}
+itmname_bladebottle_AC2		{РњР°Р»РµРЅСЊРєР°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_AC2
 {
 Small bottle filled with Charcoal. 
 }
 
-itmname_bladebottle_AG2		{Маленькая Бутылка}
+itmname_bladebottle_AG2		{РњР°Р»РµРЅСЊРєР°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_AG2
 {
 Small bottle filled with a mix of Charcoal and Salpeter. 
 }
 
-itmname_bladebottle_AN2		{Маленькая Бутылка}
+itmname_bladebottle_AN2		{РњР°Р»РµРЅСЊРєР°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_AN2
 {
 Small bottle filled with Salpeter. 
 }
 
-itmname_bladebottle_AS2		{Маленькая Бутылка}
+itmname_bladebottle_AS2		{РњР°Р»РµРЅСЊРєР°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_AS2
 {
 Small bottle filled with Sulfur. 
 }
 
-itmname_bladebottle_AY2		{Маленькая Бутылка}
+itmname_bladebottle_AY2		{РњР°Р»РµРЅСЊРєР°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_AY2
 {
 Small bottle filled with a mix of Sulfur and Salpeter. 
 }
 
-itmname_bladebottle_AZ2		{Маленькая Бутылка}
+itmname_bladebottle_AZ2		{РњР°Р»РµРЅСЊРєР°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_AZ2
 {
 Small bottle filled with a mix of Sulfur and Charcoal. 
 }
 
-itmname_bladebottle_BE0		{Большая Бутылка}
+itmname_bladebottle_BE0		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BE0
 {
 Big empty bottle.
 }
 
-itmname_bladebottle_BC2		{Большая Бутылка}
+itmname_bladebottle_BC2		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BC2
 {
 Big bottle filled with Charcoal. 
 }
 
-itmname_bladebottle_BG2		{Большая Бутылка}
+itmname_bladebottle_BG2		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BG2
 {
 Big bottle filled with a mix of Charcoal and Salpeter. 
 }
 
-itmname_bladebottle_BN2		{Большая Бутылка}
+itmname_bladebottle_BN2		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BN2
 {
 Big bottle filled with Salpeter. 
 }
 
-itmname_bladebottle_BS2		{Большая Бутылка}
+itmname_bladebottle_BS2		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BS2
 {
 Big bottle filled with Sulfur. 
 }
 
-itmname_bladebottle_BY2		{Большая Бутылка}
+itmname_bladebottle_BY2		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BY2
 {
 Big bottle filled with a mix of Sulfur and Salpeter. 
 }
 
-itmname_bladebottle_BZ2		{Большая Бутылка}
+itmname_bladebottle_BZ2		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BZ2
 {
 Big bottle filled with a mix of Sulfur and Charcoal. 
 }
 
-itmname_bladebottle_BC1		{Большая бутылка}
+itmname_bladebottle_BC1		{Р‘РѕР»СЊС€Р°СЏ Р±СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BC1
 {
 Big bottle half filled with Charcoal. 
 }
 
-itmname_bladebottle_BG1		{Большая Бутылка}
+itmname_bladebottle_BG1		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BG1
 {
 Big bottle half filled with a mix of Charcoal and Salpeter. 
 }
 
-itmname_bladebottle_BN1		{Большая Бутылка}
+itmname_bladebottle_BN1		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BN1
 {
 Big bottle half filled with Salpeter. 
 }
 
-itmname_bladebottle_BS1		{Большая бутылка}
+itmname_bladebottle_BS1		{Р‘РѕР»СЊС€Р°СЏ Р±СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BS1
 {
 Big bottle half filled with Sulfur. 
 }
 
-itmname_bladebottle_BY1		{Большая Бутылка}
+itmname_bladebottle_BY1		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BY1
 {
 Big bottle half filled with a mix of Sulfur and Salpeter. 
 }
 
-itmname_bladebottle_BZ1		{Большая Бутылка}
+itmname_bladebottle_BZ1		{Р‘РѕР»СЊС€Р°СЏ Р‘СѓС‚С‹Р»РєР°}
 itmdescr_bladebottle_BZ1
 {
 Big bottle half filled with a mix of Sulfur and Charcoal. 
@@ -456,61 +456,61 @@ Big bottle half filled with a mix of Sulfur and Charcoal.
 
 //..........................GUN ITEMS START..........................................
 
-itmname_pistolFWchest		{Фейерверк}
+itmname_pistolFWchest		{Р¤РµР№РµСЂРІРµСЂРє}
 itmdescr_pistolFWchest
 {
 A Chest stuffed with Pyrotechnics. The Rockets have fancy names like Red Sun, Fire Rain, Burning Ring, Golden Cross and Blue Anemon.
 }
 
-itmname_blowgun			{Духовое ружье}
+itmname_blowgun			{Р”СѓС…РѕРІРѕРµ СЂСѓР¶СЊРµ}
 itmdescr_blowgun
 {
 The Maya used the Blowgun to hunt birds and small animals. A tube for poisoned darts is attached to the pipe. 
 }
 
-itmname_pistoltinderbox		{Трутница}
+itmname_pistoltinderbox		{РўСЂСѓС‚РЅРёС†Р°}
 itmdescr_pistoltinderbox
 {
 A tinderbox looking like a small pistol.
 }
 
-itmname_revolver 		{Револьвер}
+itmname_revolver 		{Р РµРІРѕР»СЊРІРµСЂ}
 itmdescr_revolver
 {
 American patent nr 138 for a 'Revolving Gun' by Samuel Colt.
 }
 
-itmname_pistol204_P 		{Пистолет}
+itmname_pistol204_P 		{РџРёСЃС‚РѕР»РµС‚}
 itmdescr_pistol204_P
 {
 A double-barrelled pistol with percussion lock.
 }
 
-itmname_pistolbedlinen		{Постельное белье}
+itmname_pistolbedlinen		{РџРѕСЃС‚РµР»СЊРЅРѕРµ Р±РµР»СЊРµ}
 itmdescr_pistolbedlinen
 {
 Three rolls of new linen. Maybe a faint smell of mold?
 }
 
-itmname_pistolsalt		{Соль}
+itmname_pistolsalt		{РЎРѕР»СЊ}
 itmdescr_pistolsalt
 {
 A jar full of ordinary salt.
 }
 
-itmname_pistolbucket_empty	{Пустое Ведро}
+itmname_pistolbucket_empty	{РџСѓСЃС‚РѕРµ Р’РµРґСЂРѕ}
 itmdescr_pistolbucket_empty
 {
 
 }
 
-itmname_pistolbucket_water	{Ведро}
+itmname_pistolbucket_water	{Р’РµРґСЂРѕ}
 itmdescr_pistolbucket_water
 {
 A Bucket filled with Water.
 }
 
-itmname_pistolbucket_nitre	{Ведро}
+itmname_pistolbucket_nitre	{Р’РµРґСЂРѕ}
 itmdescr_pistolbucket_nitre
 {
 A Bucket filled with Salpeter.
@@ -522,103 +522,103 @@ itmdescr_pistolhand2
 .
 }
 
-itmname_pistolnitre_E		{Пустой Мешок}
+itmname_pistolnitre_E		{РџСѓСЃС‚РѕР№ РњРµС€РѕРє}
 itmdescr_pistolnitre_E
 {
 
 }
 
-itmname_pistolnitre_H		{Мешок селитры}
+itmname_pistolnitre_H		{РњРµС€РѕРє СЃРµР»РёС‚СЂС‹}
 itmdescr_pistolnitre_H
 {
 A Leathersack half filled with Salpeter.
 }
 
-itmname_pistolnitre_big_F	{Мешок селитры}
+itmname_pistolnitre_big_F	{РњРµС€РѕРє СЃРµР»РёС‚СЂС‹}
 itmdescr_pistolnitre_big_F
 {
 A Leathersack filled with Salpeter.
 }
 
-itmname_pistolsulphur_E		{Пустая Корзина}
+itmname_pistolsulphur_E		{РџСѓСЃС‚Р°СЏ РљРѕСЂР·РёРЅР°}
 itmdescr_pistolsulphur_E
 {
 
 }
 
-itmname_pistolsulphur_H		{Корзина серы}
+itmname_pistolsulphur_H		{РљРѕСЂР·РёРЅР° СЃРµСЂС‹}
 itmdescr_pistolsulphur_H
 {
 A Basket half filled with Sulfur.
 }
 
-itmname_pistolsulphur_F		{Корзина серы}
+itmname_pistolsulphur_F		{РљРѕСЂР·РёРЅР° СЃРµСЂС‹}
 itmdescr_pistolsulphur_F
 {
 A Basket filled with Sulfur.
 }
 
-itmname_pistolcharcoal_E	{Пустая Фляга}
+itmname_pistolcharcoal_E	{РџСѓСЃС‚Р°СЏ Р¤Р»СЏРіР°}
 itmdescr_pistolcharcoal_E
 {
 
 }
 
-itmname_pistolcharcoal_H	{Темно-серая Фляга}
+itmname_pistolcharcoal_H	{РўРµРјРЅРѕ-СЃРµСЂР°СЏ Р¤Р»СЏРіР°}
 itmdescr_pistolcharcoal_H
 {
 A Jar half filled with Charcoal.
 }
 
-itmname_pistolcharcoal_F	{Темно-серая Фляга}
+itmname_pistolcharcoal_F	{РўРµРјРЅРѕ-СЃРµСЂР°СЏ Р¤Р»СЏРіР°}
 itmdescr_pistolcharcoal_F
 {
 A Jar filled with Charcoal.
 }
 
-itmname_pistolpyrite_E		{Пустая Коробка}
+itmname_pistolpyrite_E		{РџСѓСЃС‚Р°СЏ РљРѕСЂРѕР±РєР°}
 itmdescr_pistolpyrite_E
 {
 
 }
 
-itmname_pistolpyrite_H		{Коробка пирита}
+itmname_pistolpyrite_H		{РљРѕСЂРѕР±РєР° РїРёСЂРёС‚Р°}
 itmdescr_pistolpyrite_H
 {
 A Box half filled with Pyrite Dust.
 }
 
-itmname_pistolpyrite_F		{Коробка пирита}
+itmname_pistolpyrite_F		{РљРѕСЂРѕР±РєР° РїРёСЂРёС‚Р°}
 itmdescr_pistolpyrite_F
 {
 A Box filled with Pyrite Dust.
 }
 
-itmname_pistolbarrel_gp0	{Пустой Баррель}
+itmname_pistolbarrel_gp0	{РџСѓСЃС‚РѕР№ Р‘Р°СЂСЂРµР»СЊ}
 itmdescr_pistolbarrel_gp0
 {
 
 }
 
-itmname_pistolbarrel_gpW	{Баррель пороха}
+itmname_pistolbarrel_gpW	{Р‘Р°СЂСЂРµР»СЊ РїРѕСЂРѕС…Р°}
 itmdescr_pistolbarrel_gpW
 {
 No, the mixture isn't right. I have to get rid of it.
 }
 
-itmname_pistolbarrel_gpS	{Баррель пороха}
+itmname_pistolbarrel_gpS	{Р‘Р°СЂСЂРµР»СЊ РїРѕСЂРѕС…Р°}
 itmdescr_pistolbarrel_gpS
 {
 Standard Gunpowder for all kind of Handguns.
 }
 
-itmname_pistolbarrel_gpF	{Баррель пороха}
+itmname_pistolbarrel_gpF	{Р‘Р°СЂСЂРµР»СЊ РїРѕСЂРѕС…Р°}
 itmdescr_pistolbarrel_gpF
 {
 Special Gunpowder for Fireworks.
 }
 
-itmname_pistolsextant2 		{Секстант}
+itmname_pistolsextant2 		{РЎРµРєСЃС‚Р°РЅС‚}
 itmdescr_pistolsextant2
 {
 The sextant of Arthur Gordon Pym.
@@ -627,109 +627,109 @@ The sextant of Arthur Gordon Pym.
 //..........................GUN ITEMS END.............................................
 //..........................AMMO ITEMS START..........................................
 
-itmname_arrows2			{Отравленные Стрелки}
+itmname_arrows2			{РћС‚СЂР°РІР»РµРЅРЅС‹Рµ РЎС‚СЂРµР»РєРё}
 itmdescr_arrows2	
 {
 Some cultures dip the tip of the darts in curare or other poisons in order to paralyze the target.
 }
 
-itmname_cartridges 		{Патроны}
+itmname_cartridges 		{РџР°С‚СЂРѕРЅС‹}
 itmdescr_cartridges
 {
 Also called rounds, packages the bullet and gunpowder into a single unit. For the Revolver. 
 }
 
-itmname_nails 			{Гвозди}
+itmname_nails 			{Р“РІРѕР·РґРё}
 itmdescr_nails
 {
 Maybe these can be used instead of pistolgrapes for the Musketoon?
 }
 
-itmname_bagcompass4 		{Компас}
+itmname_bagcompass4 		{РљРѕРјРїР°СЃ}
 itmdescr_bagcompass4
 {
 A heavy ship Compass complete with a bag.
 }
 
-itmname_p_package 		{Пакет}
+itmname_p_package 		{РџР°РєРµС‚}
 itmdescr_p_package
 {
 Claude Frollo's reward. What can it be?
 }
 
-itmname_p_case_C 		{Шкатулка}
+itmname_p_case_C 		{РЁРєР°С‚СѓР»РєР°}
 itmdescr_p_case_C
 {
 A very fine Mahogany Casket.  
 }
 
-itmname_p_case_3 		{Случай пистолета}
+itmname_p_case_3 		{РЎР»СѓС‡Р°Р№ РїРёСЃС‚РѕР»РµС‚Р°}
 itmdescr_p_case_3
 {
 A Gentleman's Pistol Case with all Tools and equipment.
 }
 
-itmname_p_case_2A 		{Случай пистолета}
+itmname_p_case_2A 		{РЎР»СѓС‡Р°Р№ РїРёСЃС‚РѕР»РµС‚Р°}
 itmdescr_p_case_2A
 {
 A Gentleman's Pistol Case with all Tools and equipment.
 }
 
-itmname_p_case_2B 		{Случай пистолета}
+itmname_p_case_2B 		{РЎР»СѓС‡Р°Р№ РїРёСЃС‚РѕР»РµС‚Р°}
 itmdescr_p_case_2B
 {
 A Gentleman's Pistol Case with all Tools and equipment.
 }
 
-itmname_p_case_2C		{Случай пистолета}
+itmname_p_case_2C		{РЎР»СѓС‡Р°Р№ РїРёСЃС‚РѕР»РµС‚Р°}
 itmdescr_p_case_2C
 {
 A Gentleman's Pistol Case with all Tools and equipment.
 }
 
-itmname_p_case_1A 		{Случай пистолета}
+itmname_p_case_1A 		{РЎР»СѓС‡Р°Р№ РїРёСЃС‚РѕР»РµС‚Р°}
 itmdescr_p_case_1A
 {
 A Gentleman's Pistol Case with all Tools and equipment.
 }
 
-itmname_p_case_1B 		{Случай пистолета}
+itmname_p_case_1B 		{РЎР»СѓС‡Р°Р№ РїРёСЃС‚РѕР»РµС‚Р°}
 itmdescr_p_case_1B
 {
 A Gentleman's Pistol Case with all Tools and equipment.
 }
 
-itmname_p_case_1C		{Случай пистолета}
+itmname_p_case_1C		{РЎР»СѓС‡Р°Р№ РїРёСЃС‚РѕР»РµС‚Р°}
 itmdescr_p_case_1C
 {
 A Gentleman's Pistol Case with all Tools and equipment.
 }
 
-itmname_p_case_0		{Случай пистолета}
+itmname_p_case_0		{РЎР»СѓС‡Р°Р№ РїРёСЃС‚РѕР»РµС‚Р°}
 itmdescr_p_case_0
 {
 A Gentleman's Pistol Case with all Tools and equipment.
 }
 
-itmname_cart_box_C		{Ящик с патронами}
+itmname_cart_box_C		{РЇС‰РёРє СЃ РїР°С‚СЂРѕРЅР°РјРё}
 itmdescr_cart_box_C
 {
 Cartridges impervious to dampness. Manufactured by D.C. Sage & Co
 }
 
-itmname_cart_box_O		{Патроны}
+itmname_cart_box_O		{РџР°С‚СЂРѕРЅС‹}
 itmdescr_cart_box_O
 {
 Paper Cartridges containing Gunpowder and a Pistol Bullet. 18 grs 44/100 caliber. Hotchkiss' patent.
 }
 
-itmname_caps_box_C		{Коробка Капсюлей}
+itmname_caps_box_C		{РљРѕСЂРѕР±РєР° РљР°РїСЃСЋР»РµР№}
 itmdescr_caps_box_C
 {
 Colt's Pistol Caps made by Eley Bros. London.
 }
 
-itmname_caps_box_O		{Капсюли}
+itmname_caps_box_O		{РљР°РїСЃСЋР»Рё}
 itmdescr_caps_box_O
 {
 Percussion Caps makes your Pistol only click in one of a hundred shots.
@@ -739,7 +739,7 @@ Percussion Caps makes your Pistol only click in one of a hundred shots.
 //..........................OTHER ITEMS START.........................................
 
 
-itmname_marsh_hen		{Курица болота}
+itmname_marsh_hen		{РљСѓСЂРёС†Р° Р±РѕР»РѕС‚Р°}
 itmdescr_marsh_hen
 {
 Sullivan's Island is a favorite resort of the marsh-hen.
@@ -781,13 +781,13 @@ itmdescr_shell6
 A fine shell I found on the seashore.
 }
 
-itmname_shell_collection	{Коллекция Shell}
+itmname_shell_collection	{РљРѕР»Р»РµРєС†РёСЏ Shell}
 itmdescr_shell_collection
 {
 This collection of shells may be envied by a Swammerdamm.
 }
 
-itmname_inkpen			{Ручка и Чернила}
+itmname_inkpen			{Р СѓС‡РєР° Рё Р§РµСЂРЅРёР»Р°}
 itmdescr_inkpen
 {
 Nothing more nothing less.
@@ -799,7 +799,7 @@ itmdescr_1_log
 A piece of wood I found on the shore.
 }
 
-itmname_bigfish			{Важная персона}
+itmname_bigfish			{Р’Р°Р¶РЅР°СЏ РїРµСЂСЃРѕРЅР°}
 itmdescr_bigfish
 {
 A big but also very delicious fish - if it cooked today.
@@ -811,181 +811,181 @@ itmdescr_meat
 A speciality from Tortuga. Meat smoked by hunters, also known as buccaneers. Some smell though?  
 }
 
-itmname_2winebottles		{Две Винных Бутылки}
+itmname_2winebottles		{Р”РІРµ Р’РёРЅРЅС‹С… Р‘СѓС‚С‹Р»РєРё}
 itmdescr_2winebottles
 {
 French wine of highest quality, but a little warm.
 }
 
-itmname_bread			{Булочки судов}
+itmname_bread			{Р‘СѓР»РѕС‡РєРё СЃСѓРґРѕРІ}
 itmdescr_bread
 {
 Bread baked for long journeys at sea meant to stay fresh. It didn't! Something's moving inside.  
 }
 
-itmname_ale			{Пиво}
+itmname_ale			{РџРёРІРѕ}
 itmdescr_ale
 {
 A strong brew - all the way from England? Be careful, this beer can really knock you out.  
 }
 
-itmname_tankard			{Пивная кружка}
+itmname_tankard			{РџРёРІРЅР°СЏ РєСЂСѓР¶РєР°}
 itmdescr_tankard
 {
 A large tin tankard - maybe worth some money? 
 }
 
-itmname_fish			{Рыба}
+itmname_fish			{Р С‹Р±Р°}
 itmdescr_fish
 {
 It may be good for your brain to eat fish, but boring day after day.
 }
 
-itmname_coin7			{Монета}
+itmname_coin7			{РњРѕРЅРµС‚Р°}
 itmdescr_coin7
 {
 A chinese brass coin.
 }
 
-itmname_foreign_items		{Коллекция изделия}
+itmname_foreign_items		{РљРѕР»Р»РµРєС†РёСЏ РёР·РґРµР»РёСЏ}
 itmdescr_foreign_items
 {
 Some trinkets of little value and mostly of foreign make.
 }
 
-itmname_tobacco			{Табак}
+itmname_tobacco			{РўР°Р±Р°Рє}
 itmdescr_tobacco
 {
 Pieces of pigtail tobacco.
 }
 
-itmname_goldbug2		{Жук-листоед}
+itmname_goldbug2		{Р–СѓРє-Р»РёСЃС‚РѕРµРґ}
 itmdescr_goldbug2
 {
 The Goldbug is carefully wrapped in a piece of paper.
 }
 
-itmname_tin_jug			{Оловянная Кружечка}
+itmname_tin_jug			{РћР»РѕРІСЏРЅРЅР°СЏ РљСЂСѓР¶РµС‡РєР°}
 itmdescr_tin_jug
 {
 A small tin jug.
 }
 
-itmname_plate			{Пластина}
+itmname_plate			{РџР»Р°СЃС‚РёРЅР°}
 itmdescr_plate
 {
 Blue china imported by the East India Company. 
 }
 
-itmname_copper_cauldron		{Котел}
+itmname_copper_cauldron		{РљРѕС‚РµР»}
 itmdescr_copper_cauldron
 {
 A heavy copper cauldron. 
 }
 
-itmname_chain			{Цепь и наручники}
+itmname_chain			{Р¦РµРїСЊ Рё РЅР°СЂСѓС‡РЅРёРєРё}
 itmdescr_chain
 {
 A prison startkit maybe. I try to get rid of these to anyone in the Gunroom...
 }
 
-itmname_medicine_leaves		{Листья медицины}
+itmname_medicine_leaves		{Р›РёСЃС‚СЊСЏ РјРµРґРёС†РёРЅС‹}
 itmdescr_medicine_leaves
 {
 These leaves may protect you against evil spirits and inspire your imagination.   
 }
 
-itmname_Poes_clothes		{Одежда}
+itmname_Poes_clothes		{РћРґРµР¶РґР°}
 itmdescr_Poes_clothes
 {
    
 }
 
-itmname_Poes_urn		{Урна}
+itmname_Poes_urn		{РЈСЂРЅР°}
 itmdescr_Poes_urn
 {
    
 }
 
-itmname_Poes_books		{Книги}
+itmname_Poes_books		{РљРЅРёРіРё}
 itmdescr_Poes_books
 {
    
 }
 
-itmname_gibbet_rope		{Длинная Веревка}
+itmname_gibbet_rope		{Р”Р»РёРЅРЅР°СЏ Р’РµСЂРµРІРєР°}
 itmdescr_gibbet_rope
 {
 The Long Rope I found in The Maroon Cavern.   
 }
 
-itmname_fort_rope		{Длинная Веревка}
+itmname_fort_rope		{Р”Р»РёРЅРЅР°СЏ Р’РµСЂРµРІРєР°}
 itmdescr_fort_rope
 {
 The Long Rope I bought in Fort Moultrie.   
 }
 
-itmname_cork			{Пробка}
+itmname_cork			{РџСЂРѕР±РєР°}
 itmdescr_cork
 {
 The Cork from the Barrel.   
 }
 
-itmname_corkscrew		{Штопор}
+itmname_corkscrew		{РЁС‚РѕРїРѕСЂ}
 itmdescr_corkscrew
 {
 An ordinary Corkscrew.   
 }
 
-itmname_picture3		{Карта}
+itmname_picture3		{РљР°СЂС‚Р°}
 itmdescr_picture3
 {
 A map of a fortified city: Caletum. Calais?
 }
 
-itmname_picture5		{Инвентарь}
+itmname_picture5		{РРЅРІРµРЅС‚Р°СЂСЊ}
 itmdescr_picture5
 {
 This is an inventory of the household.
 }
 
-itmname_picture6		{Список}
+itmname_picture6		{РЎРїРёСЃРѕРє}
 itmdescr_picture6
 {
 A list of supplies for the garrison.
 }
 
-itmname_glasses			{Очки}
+itmname_glasses			{РћС‡РєРё}
 itmdescr_glasses
 {
 A pair of worn but fine glasses.
 }
 
-itmname_blue_uniform	        {Полная форма}
+itmname_blue_uniform	        {РџРѕР»РЅР°СЏ С„РѕСЂРјР°}
 itmdescr_blue_uniform
 {
 Lieutenant G's finest uniform. Looks new.
 }
 
-itmname_G_journal		{Журнал}
+itmname_G_journal		{Р–СѓСЂРЅР°Р»}
 itmdescr_G_journal
 {
 Journal of lieutenant G. Most about animals.
 }
 
-itmname_G_letter1		{Бумаги}
+itmname_G_letter1		{Р‘СѓРјР°РіРё}
 itmdescr_G_letter1
 {
 Very private letter.
 }
 
-itmname_G_letter2		{Документ}
+itmname_G_letter2		{Р”РѕРєСѓРјРµРЅС‚}
 itmdescr_G_letter2
 {
 Very private letter.
 }
 
-itmname_G_letter3		{Письмо}
+itmname_G_letter3		{РџРёСЃСЊРјРѕ}
 itmdescr_G_letter3
 {
 Very private letter.
@@ -997,19 +997,19 @@ itmdescr_sailbag
 Really heavy those sails.
 }
 
-itmname_pistol_package		{Пакет}
+itmname_pistol_package		{РџР°РєРµС‚}
 itmdescr_pistol_package
 {
 The Package I got at the Brothel. It's from the Priest, Claude Frollo.
 }
 
-itmname_calabash		{Тыква с Противоядием}
+itmname_calabash		{РўС‹РєРІР° СЃ РџСЂРѕС‚РёРІРѕСЏРґРёРµРј}
 itmdescr_calabash
 {
 This unknown liquid cures poison.
 }
 
-itmname_herbs			{Сумка Трав}
+itmname_herbs			{РЎСѓРјРєР° РўСЂР°РІ}
 itmdescr_herbs
 {
 A mixture of herbs that cures light wounds.
@@ -1019,43 +1019,43 @@ A mixture of herbs that cures light wounds.
 
 //..........................BOOKS DOCUMENTS START...................................
 
-itmname_letter_paper		{Почтовая бумага}
+itmname_letter_paper		{РџРѕС‡С‚РѕРІР°СЏ Р±СѓРјР°РіР°}
 itmdescr_letter_paper
 {
 A few sheets of dirty letter-paper with the hotels logo.
 }
 
-itmname_crypto1			{Шифр}
+itmname_crypto1			{РЁРёС„СЂ}
 itmdescr_crypto1
 {
 I have copied the characters from the parchment. As any one might readily guess, they convey a meaning.
 }
 
-itmname_crypto2			{Шифр}
+itmname_crypto2			{РЁРёС„СЂ}
 itmdescr_crypto2
 {
 The full text divided into sentences by Mr Poe.
 }
 
-itmname_book52 			{Несколько Слов на Секретном Письме}
+itmname_book52 			{РќРµСЃРєРѕР»СЊРєРѕ РЎР»РѕРІ РЅР° РЎРµРєСЂРµС‚РЅРѕРј РџРёСЃСЊРјРµ}
 itmdescr_book52
 {
 An essay by Edgar Allan Poe. In the book a folded paper. 
 }
 
-itmname_book53 			{Несколько Слов на Секретном Письме}
+itmname_book53 			{РќРµСЃРєРѕР»СЊРєРѕ РЎР»РѕРІ РЅР° РЎРµРєСЂРµС‚РЅРѕРј РџРёСЃСЊРјРµ}
 itmdescr_book53
 {
 Marked with red: Now, of all words in the language,  'THE'  is most usual; let us see, therefore, whether there are not repetitions of any three characters, in the same order of collocation. If we discover repetitions of such letters, so arranged, the will most probably represent the word  'THE' . 
 }
 
-itmname_book54 			{Таблица частот}
+itmname_book54 			{РўР°Р±Р»РёС†Р° С‡Р°СЃС‚РѕС‚}
 itmdescr_book54
 {
 In English, the letter which most frequently occurs is  'E' . Afterwards, the succession runs thus: a o i d h n r s t u y c f g l m w b k p q x z. 'E'  predominates so remarkably that an individual sentence of any length is rarely seen, in which it is not the prevailing character. 
 }
 
-itmname_book26			{Человеческий Скелет}
+itmname_book26			{Р§РµР»РѕРІРµС‡РµСЃРєРёР№ РЎРєРµР»РµС‚}
 itmdescr_book26
 {
 A manual to all the 206 bones of a human being. Pictures.
@@ -1073,73 +1073,73 @@ itmdescr_book33
 An old and very basic schoolbook, in any of those nordic languages perhaps?
 }
 
-itmname_book21			{Книга устава}
+itmname_book21			{РљРЅРёРіР° СѓСЃС‚Р°РІР°}
 itmdescr_book21
 {
 Abstract of the British West Indian statutes. The cover is worn but has it ever been opened?
 }
 
-itmname_doc1A			{Согнутая Бумага}
+itmname_doc1A			{РЎРѕРіРЅСѓС‚Р°СЏ Р‘СѓРјР°РіР°}
 itmdescr_doc1A
 {
 
 }
 
-itmname_doc1B			{Отметить}
+itmname_doc1B			{РћС‚РјРµС‚РёС‚СЊ}
 itmdescr_doc1B
 {
 Right-hand items: F3 + F3, left-hand items: F3 + fire pistol.//JRH
 }
 
-itmname_doc2A			{Папка}
+itmname_doc2A			{РџР°РїРєР°}
 itmdescr_doc2A
 {
 
 }
 
-itmname_doc2B			{Папка}
+itmname_doc2B			{РџР°РїРєР°}
 itmdescr_doc2B
 {
 
 }
 
-itmname_doc2C			{Картина}
+itmname_doc2C			{РљР°СЂС‚РёРЅР°}
 itmdescr_doc2C
 {
 A picture of a wheel? I don't know. On the Right page there's something written though.
 }
 
-itmname_doc3C			{Порох Стандарта рецепта}
+itmname_doc3C			{РџРѕСЂРѕС… РЎС‚Р°РЅРґР°СЂС‚Р° СЂРµС†РµРїС‚Р°}
 itmdescr_doc3C
 {
 Take 6 parts of Salpeter, 1 part of Charcoal and Sulfur each.
 }
 
-itmname_doc2D			{Пустая Страница}
+itmname_doc2D			{РџСѓСЃС‚Р°СЏ РЎС‚СЂР°РЅРёС†Р°}
 itmdescr_doc2D
 {
 
 }
 
-itmname_doc3D			{Смешивание Компонентов}
+itmname_doc3D			{РЎРјРµС€РёРІР°РЅРёРµ РљРѕРјРїРѕРЅРµРЅС‚РѕРІ}
 itmdescr_doc3D
 {
 Always remember to mix Charcoal with Salpeter to Salpeter Soot and Sulfur with Salpeter to Sulfur Soot. Do this before grinding and you're safe.
 }
 
-itmname_doc2E			{Рецепт Медленногорящий Порох}
+itmname_doc2E			{Р РµС†РµРїС‚ РњРµРґР»РµРЅРЅРѕРіРѕСЂСЏС‰РёР№ РџРѕСЂРѕС…}
 itmdescr_doc2E
 {
 Take 4 parts of Salpeter, 2 parts of Charcoal and Sulfur each.
 }
 
-itmname_doc4A			{Старая Книга}
+itmname_doc4A			{РЎС‚Р°СЂР°СЏ РљРЅРёРіР°}
 itmdescr_doc4A
 {
 A badly worn Book.
 }
 
-itmname_doc4B			{Как Сжечь Древесный уголь}
+itmname_doc4B			{РљР°Рє РЎР¶РµС‡СЊ Р”СЂРµРІРµСЃРЅС‹Р№ СѓРіРѕР»СЊ}
 itmdescr_doc4B
 {
 1 saw the logs
@@ -1149,19 +1149,19 @@ itmdescr_doc4B
 5 when it has burned to charcoal it's ready, scoop it from the fireplace
 }
 
-itmname_doc5A			{Почта бутылки}
+itmname_doc5A			{РџРѕС‡С‚Р° Р±СѓС‚С‹Р»РєРё}
 itmdescr_doc5A
 {
 A Bottle with a Sealed Paper inside.
 }
 
-itmname_doc5B			{Свиток}
+itmname_doc5B			{РЎРІРёС‚РѕРє}
 itmdescr_doc5B
 {
 Now let's read the Message!
 }
 
-itmname_doc5C			{Как Извлечь Селитру}
+itmname_doc5C			{РљР°Рє РР·РІР»РµС‡СЊ РЎРµР»РёС‚СЂСѓ}
 itmdescr_doc5C
 {
 1 prepare by placing more wood in the oven
@@ -1172,19 +1172,19 @@ itmdescr_doc5C
 6 scrape the Salpeter from the planks
 }
 
-itmname_doc6A			{Конверт}
+itmname_doc6A			{РљРѕРЅРІРµСЂС‚}
 itmdescr_doc6A
 {
 Something inside?
 }
 
-itmname_doc6B			{Письмо}
+itmname_doc6B			{РџРёСЃСЊРјРѕ}
 itmdescr_doc6B
 {
 What's it all about?
 }
 
-itmname_doc6C			{Как Дистиллировать Серу}
+itmname_doc6C			{РљР°Рє Р”РёСЃС‚РёР»Р»РёСЂРѕРІР°С‚СЊ РЎРµСЂСѓ}
 itmdescr_doc6C
 {
 1 bring down some Pyrite Stones on the planks
@@ -1196,85 +1196,85 @@ itmdescr_doc6C
 7 pick up the Distilled Sulfhur
 }
 
-itmname_goldbug			{Жук-листоед}
+itmname_goldbug			{Р–СѓРє-Р»РёСЃС‚РѕРµРґ}
 itmdescr_goldbug
 {
 A scarab?us which I believe to be totally new.
 }
 
-itmname_wrinkled_paper		{Листок бумаги}
+itmname_wrinkled_paper		{Р›РёСЃС‚РѕРє Р±СѓРјР°РіРё}
 itmdescr_wrinkled_paper
 {
 A piece of paper in which the scarab?us was wrapped.
 }
 
-itmname_bird_sketch		{Картина}
+itmname_bird_sketch		{РљР°СЂС‚РёРЅР°}
 itmdescr_bird_sketch
 {
 A childish sketch of a black bird. But which one is it supposed to be?
 }
 
-itmname_bird_sketch_doc		{Картина Ворона}
+itmname_bird_sketch_doc		{РљР°СЂС‚РёРЅР° Р’РѕСЂРѕРЅР°}
 itmdescr_bird_sketch_doc
 {
 Maybe the backside is clean enough for another drawing?
 }
 
-itmname_bird_backside		{Пустая Бумага}
+itmname_bird_backside		{РџСѓСЃС‚Р°СЏ Р‘СѓРјР°РіР°}
 itmdescr_bird_backside
 {
 The backside of the Raven picture.
 }
 
-itmname_BH_sketch		{Рисование}
+itmname_BH_sketch		{Р РёСЃРѕРІР°РЅРёРµ}
 itmdescr_BH_sketch
 {
 The Black Magic Woman made me this drawing of a Rock which she calls Bessop's Castle.
 }
 
-itmname_BH_sketch_out		{Рисование}
+itmname_BH_sketch_out		{Р РёСЃРѕРІР°РЅРёРµ}
 itmdescr_BH_sketch_out
 {
 I can make a roll of this paper to light the Gunpowder.
 }
 
-itmname_rolled_paper		{Бумажный Рулон}
+itmname_rolled_paper		{Р‘СѓРјР°Р¶РЅС‹Р№ Р СѓР»РѕРЅ}
 itmdescr_rolled_paper
 {
 I'll fill it up with Gunpowder.
 }
 
-itmname_rolled_paper_gp		{Самодельная Бомба}
+itmname_rolled_paper_gp		{РЎР°РјРѕРґРµР»СЊРЅР°СЏ Р‘РѕРјР±Р°}
 itmdescr_rolled_paper_gp
 {
 I'll place it on the floor and use the Tinderbox to light it.
 }
 
-itmname_book55A			{Моби Дик}
+itmname_book55A			{РњРѕР±Рё Р”РёРє}
 itmdescr_book55A
 {
 The novel about Captain Ahab chasing the white whale by Herman Melville.
 }
 
-itmname_book55B			{Моби Дик}
+itmname_book55B			{РњРѕР±Рё Р”РёРє}
 itmdescr_book55B
 {
 Now that's a big Whale.
 }
 
-itmname_book55C			{Моби Дик}
+itmname_book55C			{РњРѕР±Рё Р”РёРє}
 itmdescr_book55C
 {
 There's something hidden inside!
 }
 
-itmname_book55D			{Моби Дик}
+itmname_book55D			{РњРѕР±Рё Р”РёРє}
 itmdescr_book55D
 {
 
 }
 
-itmname_book56			{Жюль Верн Коллектион}
+itmname_book56			{Р–СЋР»СЊ Р’РµСЂРЅ РљРѕР»Р»РµРєС‚РёРѕРЅ}
 itmdescr_book56
 {
 "Le Tour du Monde en Quatre-Vingts Jours"
@@ -1284,7 +1284,7 @@ itmdescr_book56
 "L'?le myst?rieuse"
 }
 
-itmname_book57			{Известные Подземные Пещеры}
+itmname_book57			{РР·РІРµСЃС‚РЅС‹Рµ РџРѕРґР·РµРјРЅС‹Рµ РџРµС‰РµСЂС‹}
 itmdescr_book57
 {
 "1 Mulu Caves, Borneo"
@@ -1298,7 +1298,7 @@ itmdescr_book57
 "9 Reed Flute Cave, southern China"
 }
 
-itmname_book58			{Тема людоедства}
+itmname_book58			{РўРµРјР° Р»СЋРґРѕРµРґСЃС‚РІР°}
 itmdescr_book58
 {
 "Hansel and Gretel" by the Brothers Grimm.
@@ -1306,7 +1306,7 @@ itmdescr_book58
 "Cooking with Hannibal Lecter" new extended edition, 1400 pages.
 }
 
-itmname_book59			{Четыре Пиратской Классики}
+itmname_book59			{Р§РµС‚С‹СЂРµ РџРёСЂР°С‚СЃРєРѕР№ РљР»Р°СЃСЃРёРєРё}
 itmdescr_book59
 {
 "Mutiny on the Bounty" by Charles Nordhoff and James Norman Hall.
@@ -1315,49 +1315,49 @@ itmdescr_book59
 "The Dark Frigate" by Charles Boardman Hawes.
 }
 
-itmname_book60			{Собаки ньюфаундленда}
+itmname_book60			{РЎРѕР±Р°РєРё РЅСЊСЋС„Р°СѓРЅРґР»РµРЅРґР°}
 itmdescr_book60
 {
 A pile of of papers with notes about Pym's favourite dogs. Complete with a portrait of "Tiger".
 }
 
-itmname_book61A			{Книга}
+itmname_book61A			{РљРЅРёРіР°}
 itmdescr_book61A
 {
 The Book has an Icon on the cover. A Bible?
 }
 
-itmname_book61B			{Книга гимна}
+itmname_book61B			{РљРЅРёРіР° РіРёРјРЅР°}
 itmdescr_book61B
 {
 No it's a Hymn Book, 'Missa in Discantu'. Something's hidden inside.
 }
 
-itmname_book61C1		{Письма}
+itmname_book61C1		{РџРёСЃСЊРјР°}
 itmdescr_book61C1
 {
 Hmm, there's a Collection of Letters here. The Priest's 'document'.
 }
 
-itmname_book61C2		{Письма}
+itmname_book61C2		{РџРёСЃСЊРјР°}
 itmdescr_book61C2
 {
 The Priest's Letters.
 }
 
-itmname_book61D			{Любовное письмо}
+itmname_book61D			{Р›СЋР±РѕРІРЅРѕРµ РїРёСЃСЊРјРѕ}
 itmdescr_book61D
 {
 A very Compromising Letter for a Priest. So that's why he wanted the Book back so badly.
 }
 
-itmname_sergeants_note		{Примечание сержанта}
+itmname_sergeants_note		{РџСЂРёРјРµС‡Р°РЅРёРµ СЃРµСЂР¶Р°РЅС‚Р°}
 itmdescr_sergeants_note
 {
 This Note gives me a Revolver, ammunition and a Long Rope from a Corporal in the Armory.
 }
 
-itmname_poe_manuscript		{Рукопись По}
+itmname_poe_manuscript		{Р СѓРєРѕРїРёСЃСЊ РџРѕ}
 itmdescr_poe_manuscript
 {
 Let's see what Mister Poe has written...
@@ -1366,49 +1366,49 @@ Let's see what Mister Poe has written...
 
 //..........................MEDICINE BAG START......................................
 
-itmname_med_bag1_obj		{Сумка медицины}
+itmname_med_bag1_obj		{РЎСѓРјРєР° РјРµРґРёС†РёРЅС‹}
 itmdescr_med_bag1_obj
 {
 The Medicine Bag is empty.
 }
 
-itmname_med_bag1_doc_NO		{Сумка медицины}
+itmname_med_bag1_doc_NO		{РЎСѓРјРєР° РјРµРґРёС†РёРЅС‹}
 itmdescr_med_bag1_doc_NO
 {
 The Medicine Bag I got from the indian woman. I'll examine it when I come home or...
 }
 
-itmname_med_bag1_doc_YES	{Сумка медицины}
+itmname_med_bag1_doc_YES	{РЎСѓРјРєР° РјРµРґРёС†РёРЅС‹}
 itmdescr_med_bag1_doc_YES
 {
 The Medicine Bag I got from the indian woman. Now let's see what's inside!
 }
 
-itmname_med_bag1_out		{Сумка медицины}
+itmname_med_bag1_out		{РЎСѓРјРєР° РјРµРґРёС†РёРЅС‹}
 itmdescr_med_bag1_out
 {
 The Medicine Bag I got from the indian woman. Equipped it increases my Luck with +2.
 }
 
-itmname_med_bag2_doc		{Пункты медицины}
+itmname_med_bag2_doc		{РџСѓРЅРєС‚С‹ РјРµРґРёС†РёРЅС‹}
 itmdescr_med_bag2_doc
 {
 A Hawk Feather, a Pine Cone and a Blue Stone, which could be Lapis Lazuli. Also a folded paper - a message? 
 }
 
-itmname_med_bag2_obj		{Пункты медицины}
+itmname_med_bag2_obj		{РџСѓРЅРєС‚С‹ РјРµРґРёС†РёРЅС‹}
 itmdescr_med_bag2_obj
 {
 The four items I checked earlier. 
 }
 
-itmname_med_bag2_out		{Пункты медицины}
+itmname_med_bag2_out		{РџСѓРЅРєС‚С‹ РјРµРґРёС†РёРЅС‹}
 itmdescr_med_bag2_out
 {
 I think I'll put the Items back in the Medicine Bag. 
 }
 
-itmname_crypto_excel		{Бумага в клетку}
+itmname_crypto_excel		{Р‘СѓРјР°РіР° РІ РєР»РµС‚РєСѓ}
 itmdescr_crypto_excel
 {
 A large Squared Papper with a small note and a picture attached. The picture of a Hanged Pirate? The note has a very small writing... 
@@ -1418,79 +1418,79 @@ A large Squared Papper with a small note and a picture attached. The picture of 
 
 //..........................DETECTVE KIT START......................................
 
-itmname_detective_kit1		{Детектив Кит}
+itmname_detective_kit1		{Р”РµС‚РµРєС‚РёРІ РљРёС‚}
 itmdescr_detective_kit1
 {
 The toolkit is locked.   
 }
 
-itmname_detective_kit2		{Детектив Кит}
+itmname_detective_kit2		{Р”РµС‚РµРєС‚РёРІ РљРёС‚}
 itmdescr_detective_kit2
 {
 I succeded in opening the box with the Hairpin! Inside is a bunch of Keys.   
 }
 
-itmname_detective_kit3		{Детектив Кит}
+itmname_detective_kit3		{Р”РµС‚РµРєС‚РёРІ РљРёС‚}
 itmdescr_detective_kit3
 {
 The toolkit is open but empty. I have to collect six items to fill it up.   
 }
 
-itmname_detective_kit4		{Детектив Кит}
+itmname_detective_kit4		{Р”РµС‚РµРєС‚РёРІ РљРёС‚}
 itmdescr_detective_kit4
 {
 The toolkit is filled. Just to lock it and deliver it to Mr Dupin.   
 }
 
-itmname_detective_kit5		{Детектив Кит}
+itmname_detective_kit5		{Р”РµС‚РµРєС‚РёРІ РљРёС‚}
 itmdescr_detective_kit5
 {
 The toolkit is filled. I can take out the items if I want to.   
 }
 
-itmname_D_feather		{Щетка пера}
+itmname_D_feather		{Р©РµС‚РєР° РїРµСЂР°}
 itmdescr_D_feather
 {
 A small Feather used as a brush. When taking fingerprints?   
 }
 
-itmname_D_scissors		{Ножницы}
+itmname_D_scissors		{РќРѕР¶РЅРёС†С‹}
 itmdescr_D_scissors
 {
 A pair of Scissors. For medical use?   
 }
 
-itmname_D_compasses		{Компасы}
+itmname_D_compasses		{РљРѕРјРїР°СЃС‹}
 itmdescr_D_compasses
 {
 A pair of Compasses. Comes in handy when examingin a map.   
 }
 
-itmname_D_scalpel		{Скальпель}
+itmname_D_scalpel		{РЎРєР°Р»СЊРїРµР»СЊ}
 itmdescr_D_scalpel
 {
 A very sharp Scalpel. I have to be careful so I don't cut myself.   
 }
 
-itmname_D_magnifying		{Лупа}
+itmname_D_magnifying		{Р›СѓРїР°}
 itmdescr_D_magnifying
 {
 The Magnifying Glass is the most wellknown of a private investigators tools.   
 }
 
-itmname_D_tweezers		{Пинцет}
+itmname_D_tweezers		{РџРёРЅС†РµС‚}
 itmdescr_D_tweezers
 {
 A pair of Tweezers. For picking up very small pieces of evidence.   
 }
 
-itmname_D_hairpin		{Шпилька}
+itmname_D_hairpin		{РЁРїРёР»СЊРєР°}
 itmdescr_D_hairpin
 {
 An ordinary Hairpin - what use can I have of it?   
 }
 
-itmname_D_key23			{Ключи}
+itmname_D_key23			{РљР»СЋС‡Рё}
 itmdescr_D_key23
 {
 A collection of five Keys, to where?   
@@ -1500,85 +1500,85 @@ A collection of five Keys, to where?
 
 //..........................KEYS START..............................................
 
-itmname_key2			{Ключ грудной клетки}
+itmname_key2			{РљР»СЋС‡ РіСЂСѓРґРЅРѕР№ РєР»РµС‚РєРё}
 itmdescr_key2
 {
 A common key to a chest.
 }
 
-itmname_key7			{Ключ}
+itmname_key7			{РљР»СЋС‡}
 itmdescr_key7
 {
 A key with a house symbol.
 }
 
-itmname_key20			{Ключ}
+itmname_key20			{РљР»СЋС‡}
 itmdescr_key20
 {
 An old key.
 }
 
-itmname_key21			{Ключ}
+itmname_key21			{РљР»СЋС‡}
 itmdescr_key21
 {
 My room key.
 }
 
-itmname_key22			{Ключ}
+itmname_key22			{РљР»СЋС‡}
 itmdescr_key22
 {
 The Key to the Sacristy.
 }
 
-itmname_key24			{Черный Ключ}
+itmname_key24			{Р§РµСЂРЅС‹Р№ РљР»СЋС‡}
 itmdescr_key24
 {
 
 }
 
-itmname_key25			{Золотой Ключ}
+itmname_key25			{Р—РѕР»РѕС‚РѕР№ РљР»СЋС‡}
 itmdescr_key25
 {
 
 }
 
-itmname_key26			{Серебряный Ключ}
+itmname_key26			{РЎРµСЂРµР±СЂСЏРЅС‹Р№ РљР»СЋС‡}
 itmdescr_key26
 {
 
 }
 
-itmname_key27			{Красный Ключ}
+itmname_key27			{РљСЂР°СЃРЅС‹Р№ РљР»СЋС‡}
 itmdescr_key27
 {
 
 }
 
-itmname_key28			{Ключ борделя}
+itmname_key28			{РљР»СЋС‡ Р±РѕСЂРґРµР»СЏ}
 itmdescr_key28
 {
 A fine Key with a small bell attached to it.
 }
 
-itmname_key29			{Ключ}
+itmname_key29			{РљР»СЋС‡}
 itmdescr_key29
 {
 A Key with an empty reel of thread. 
 }
 
-itmname_key30			{Ключ}
+itmname_key30			{РљР»СЋС‡}
 itmdescr_key30
 {
 A large Key marked with "Cave". 
 }
 
-itmname_key31			{Ключ}
+itmname_key31			{РљР»СЋС‡}
 itmdescr_key31
 {
 A Key attached to a Chess Piece? 
 }
 
-itmname_key32			{Тюремные Ключи}
+itmname_key32			{РўСЋСЂРµРјРЅС‹Рµ РљР»СЋС‡Рё}
 itmdescr_key32
 {
 Keys to all six Prison cells. 
@@ -1588,67 +1588,67 @@ Keys to all six Prison cells.
 
 //..........................CHURCH ITEMS START....................................
 
-itmname_measuring_tape		{Измерение Ленты}
+itmname_measuring_tape		{РР·РјРµСЂРµРЅРёРµ Р›РµРЅС‚С‹}
 itmdescr_measuring_tape
 {
 A 15 feet Measuring Tape.
 }
 
-itmname_peg			{Ориентир}
+itmname_peg			{РћСЂРёРµРЅС‚РёСЂ}
 itmdescr_peg
 {
 A small wooden Peg.
 }
 
-itmname_knitting_basket		{Маленькая Корзина}
+itmname_knitting_basket		{РњР°Р»РµРЅСЊРєР°СЏ РљРѕСЂР·РёРЅР°}
 itmdescr_knitting_basket
 {
 Someone has forgotten it in the church. What's inside?
 }
 
-itmname_knitting		{Вязание}
+itmname_knitting		{Р’СЏР·Р°РЅРёРµ}
 itmdescr_knitting
 {
 A Ball of Twine with two Needles.
 }
 
-itmname_yarn			{Шар Бечевки}
+itmname_yarn			{РЁР°СЂ Р‘РµС‡РµРІРєРё}
 itmdescr_yarn
 {
 A Ball of Twine yes. And?
 }
 
-itmname_needles			{Иглы}
+itmname_needles			{РРіР»С‹}
 itmdescr_needles
 {
 Maybe I can use them to pick locks?
 }
 
-itmname_needles2		{Инструменты Lockpick}
+itmname_needles2		{РРЅСЃС‚СЂСѓРјРµРЅС‚С‹ Lockpick}
 itmdescr_needles2
 {
 The Needles converted to Lockpick Tools.
 }
 
-itmname_magnet			{Магнит}
+itmname_magnet			{РњР°РіРЅРёС‚}
 itmdescr_magnet
 {
 A very thin Magnet.
 }
 
-itmname_magnet2			{Магнит}
+itmname_magnet2			{РњР°РіРЅРёС‚}
 itmdescr_magnet2
 {
 A string is attached to the Magnet.
 }
 
-itmname_pliers			{Пара Плоскогубцев}
+itmname_pliers			{РџР°СЂР° РџР»РѕСЃРєРѕРіСѓР±С†РµРІ}
 itmdescr_pliers
 {
 Just an ordinary tool. How can I use it?
 }
 
-itmname_potionwine2		{Вино общины}
+itmname_potionwine2		{Р’РёРЅРѕ РѕР±С‰РёРЅС‹}
 itmdescr_potionwine2
 {
 Looks like ordinary Red Wine to me.
@@ -1656,30 +1656,30 @@ Looks like ordinary Red Wine to me.
 
 itmname_fake_candelabre		{Candelabre}
 
-itmname_wax_candles		{Свечи воска}
+itmname_wax_candles		{РЎРІРµС‡Рё РІРѕСЃРєР°}
 
-itmname_fake_chalice		{Чаша}
+itmname_fake_chalice		{Р§Р°С€Р°}
 
-itmname_altar_bread		{Просвира}
+itmname_altar_bread		{РџСЂРѕСЃРІРёСЂР°}
 itmdescr_altar_bread
 {
 Poor bastard - only these dry biscuits to eat.
 }
 
-itmname_flyswatter		{Мухобойка}
+itmname_flyswatter		{РњСѓС…РѕР±РѕР№РєР°}
 
-itmname_shrine			{Святыня}
+itmname_shrine			{РЎРІСЏС‚С‹РЅСЏ}
 
 itmname_jewelcross		{Jewelcross}
 
-itmname_cowl			{Капюшон}
+itmname_cowl			{РљР°РїСЋС€РѕРЅ}
 
-itmname_fake_censer		{Кадило}
+itmname_fake_censer		{РљР°РґРёР»Рѕ}
 
 //..........................CHURCH ITEMS END....................................
 //........................TREASURE ITEMS START..................................
 
-itmname_mixed_treasure		{Сокровище}
+itmname_mixed_treasure		{РЎРѕРєСЂРѕРІРёС‰Рµ}
 itmdescr_mixed_treasure
 {
 In an instant, a treasure of incalculable value lay gleaming before us. 
@@ -1687,45 +1687,45 @@ As the rays of the sun fell within the pit, there flashed upwards a glow and a g
 from a confused heap of gold and of jewels that absolutely dazzled our eyes.
 }
 
-itmname_emptysack		{Пустой Мешок}
+itmname_emptysack		{РџСѓСЃС‚РѕР№ РњРµС€РѕРє}
 itmdescr_emptysack
 {
 An old empty sack.
 }
 
-itmname_treasuresack		{Заполненный Мешок}
+itmname_treasuresack		{Р—Р°РїРѕР»РЅРµРЅРЅС‹Р№ РњРµС€РѕРє}
 itmdescr_treasuresack
 {
 Part of the Treasure in a sack.
 }
 
-itmname_treasure1		{Потрясающий Шар Удара}
-itmname_treasure2		{Кадило}
-itmname_treasure3		{Опал}
-itmname_treasure4		{Слон}
+itmname_treasure1		{РџРѕС‚СЂСЏСЃР°СЋС‰РёР№ РЁР°СЂ РЈРґР°СЂР°}
+itmname_treasure2		{РљР°РґРёР»Рѕ}
+itmname_treasure3		{РћРїР°Р»}
+itmname_treasure4		{РЎР»РѕРЅ}
 
-itmname_treasure5		{Большое Кольцо}
-itmname_treasure6		{Маленькое Кольцо}
-itmname_treasure7		{Кольцо пальца}
-itmname_treasure8		{Маленькая Цепь}
+itmname_treasure5		{Р‘РѕР»СЊС€РѕРµ РљРѕР»СЊС†Рѕ}
+itmname_treasure6		{РњР°Р»РµРЅСЊРєРѕРµ РљРѕР»СЊС†Рѕ}
+itmname_treasure7		{РљРѕР»СЊС†Рѕ РїР°Р»СЊС†Р°}
+itmname_treasure8		{РњР°Р»РµРЅСЊРєР°СЏ Р¦РµРїСЊ}
 
-itmname_treasure9		{Большие Часы}
-itmname_treasure10		{Маленькие Часы}
-itmname_treasure11		{Средние Часы}
-itmname_treasure12		{Богатая Цепь}
+itmname_treasure9		{Р‘РѕР»СЊС€РёРµ Р§Р°СЃС‹}
+itmname_treasure10		{РњР°Р»РµРЅСЊРєРёРµ Р§Р°СЃС‹}
+itmname_treasure11		{РЎСЂРµРґРЅРёРµ Р§Р°СЃС‹}
+itmname_treasure12		{Р‘РѕРіР°С‚Р°СЏ Р¦РµРїСЊ}
 
-itmname_treasure13		{Французское Распятие}
-itmname_treasure14		{Маленькое Распятие}
-itmname_treasure15		{Большое Распятие}
-itmname_treasure16		{Тяжелая Цепь}
+itmname_treasure13		{Р¤СЂР°РЅС†СѓР·СЃРєРѕРµ Р Р°СЃРїСЏС‚РёРµ}
+itmname_treasure14		{РњР°Р»РµРЅСЊРєРѕРµ Р Р°СЃРїСЏС‚РёРµ}
+itmname_treasure15		{Р‘РѕР»СЊС€РѕРµ Р Р°СЃРїСЏС‚РёРµ}
+itmname_treasure16		{РўСЏР¶РµР»Р°СЏ Р¦РµРїСЊ}
 
-itmname_incas_collection	{Incan дорожат коллекцией}
-itmname_sword_handle1		{Ручка меча}
-itmname_sword_handle2		{Ручка меча}
+itmname_incas_collection	{Incan РґРѕСЂРѕР¶Р°С‚ РєРѕР»Р»РµРєС†РёРµР№}
+itmname_sword_handle1		{Р СѓС‡РєР° РјРµС‡Р°}
+itmname_sword_handle2		{Р СѓС‡РєР° РјРµС‡Р°}
 
-itmname_coin3			{Дублон}
-itmname_coin5			{Гвинея}
-itmname_coin9			{Блестка}
-itmname_coin12			{Луи д'Ор}
-itmname_coin13			{Гульден}
+itmname_coin3			{Р”СѓР±Р»РѕРЅ}
+itmname_coin5			{Р“РІРёРЅРµСЏ}
+itmname_coin9			{Р‘Р»РµСЃС‚РєР°}
+itmname_coin12			{Р›СѓРё Рґ'РћСЂ}
+itmname_coin13			{Р“СѓР»СЊРґРµРЅ}
 itmname_coin16			{Moydore}

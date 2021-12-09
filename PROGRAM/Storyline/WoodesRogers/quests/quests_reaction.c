@@ -21988,7 +21988,10 @@ void QuestComplete(string sQuestName)
 			RemoveCharacterEquip(Pchar, GUN_ITEM_TYPE);
 
 			TakeItemFromCharacter(Pchar, "pistol206");
-			GiveItem2Character(Pchar, "bladeA11");
+			if(!CheckCharacterItem(Pchar,"bladeA11"))
+			{
+				GiveItem2Character(Pchar, "bladeA11");
+			}
 			GiveItem2Character(Pchar, "pistol201");
 			GiveItem2Character(Pchar, "pistol202");
 			GiveItem2Character(Pchar, "pistol203");
@@ -49322,6 +49325,7 @@ void QuestComplete(string sQuestName)
 		SetLocatorRadius(locations[FindLocation("wr_port")], "reload", "reload1", 0.0001);	
 		Locations[FindLocation("wr_port")].locators_radius.reload.reload1 = 0.001;
 	Pchar.quest.alchemy_lever = "up";
+	Pchar.quest.mixtable_bottle = "none";		//21-11-28
 	
 			SetCharacterShipLocation(characterFromID("Coastbrother25"), "none");		//boat3 at wr_port
 			SetCharacterShipLocation(characterFromID("Coastbrother26"), "none");		//corvette at wr_port
@@ -81519,7 +81523,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.farmbooty_fillbottle = "off";
 			Pchar.quest.apparatus_liquid = "none";
 			Pchar.quest.apparatus_cooling = "2";
-			Pchar.quest.mixtable_bottle = "ME0";
+			Pchar.quest.mixtable_bottle = "none";		//was MEO 21-11-28
 			pchar.quest.Minerva = "arrived";
 			Pchar.quest.cauldron = "water";
 			Pchar.quest.retort = "yes";

@@ -1,2 +1,2 @@
 title=Fracaso
-text.t1=¡Maldita sea! Se me ha acabado el límite de tiempo. Debería evitar al Vicealmirante, y a todos los españoles a partir de ahora.
+text.t1=Â¡Maldita sea! Se me ha acabado el lÃ­mite de tiempo. DeberÃ­a evitar al Vicealmirante, y a todos los espaÃ±oles a partir de ahora.

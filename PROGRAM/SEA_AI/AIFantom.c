@@ -134,8 +134,8 @@ int Fantom_GenerateEncounter(string sGroupName, int iEType, int iNation) // NK /
 
 		if(iShipType == GetShipIndex("FastGalleon4") && TreasureFleet == true)
 		{
-			trace("Fantom_GenerateEncounter: replacing FastGalleon4 with FastGalleon5");
-			iShipType = GetShipIndex("FastGalleon5");	// GR: use custom fast war galleon for treasure fleet
+			trace("Fantom_GenerateEncounter: replacing FastGalleon4 with Mariana");
+			iShipType = GetShipIndex("Mariana");	// GR: use custom fast war galleon for treasure fleet
 		}
 
 		if (iShipType == INVALID_SHIP_TYPE) continue;

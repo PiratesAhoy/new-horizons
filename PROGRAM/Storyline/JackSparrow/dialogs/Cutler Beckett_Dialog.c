@@ -407,7 +407,7 @@ void ProcessDialogEvent()
 			Ship_Detonate(pchar, true, false);
 			Ship_Detonate(pchar, true, false);
 			Ship_Detonate(pchar, true, false);
-			dialog.text = DLG_TEXT[220] + pchar.lastname + DLG_TEXT[221];
+			dialog.text = DLG_TEXT[220] + GetMyName(PChar) + DLG_TEXT[221];
 			Link.l1 = DLG_TEXT[222];
 			Link.l1.go = "Captured_on_Oxbay6";
 			RemoveCharacterEquip(pchar, BLADE_ITEM_TYPE);

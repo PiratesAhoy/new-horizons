@@ -7,7 +7,7 @@
 #define		DEBUG_GAMBLING_CARD	0		//0 means no logs, 1 shows what is set for the card images
 #define		DEBUG_GAMBLING_RULE	0		//0 means no logs, 1 shows what is done to determine the winner/loser of the game.
 
-string DLG_TEXT[162];// from Habitue_dialog.h
+// string DLG_TEXT[162];// from Habitue_dialog.h
 
 object Cards[MAX_CARDS];
 object CardPack;
@@ -38,11 +38,10 @@ string GameName;
 string gambleID;
 string cardNames;
 string imageGroup;
-// DeathDaisy -->
-string you_lose = DLG_TEXT[36]; // "! You lose, lad/lass!"
-string you_lose2 = DLG_TEXT[54]; // "You've lost, lad/lass!"
-string lucky_man = DLG_TEXT[106]; // "... Lucky man/girl. Give me the card..."
-// DeathDaisy <-- Thanks GR!
+
+string you_lose; // Declared here as globals, defined later when "playerChar" is defined
+string you_lose2;
+string lucky_man;
 
 int iNatural21 = 0;
 int NATURAL21_PLAYER = 1;
@@ -50,6 +49,8 @@ int NATURAL21_GAMBLER = 2;
 int NATURAL21_BOTH = 3;
 
 int curSkillValue1,curSkillValue2;
+
+string prefix1, prefix2;
 
 void InitInterface_RS(string iniName, ref gambler, string curName)
 {
@@ -59,10 +60,14 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 	{
 		case "Vingt-Un": GameInterface.title = "titleVingt-Un"; break;
 
-		case "Poker": GameInterface.title = "titlePoker"; 
-			if (checkAttribute(playerChar,"quest.poker.started"))GameInterface.title = "titleDay1"; 
-			if (GetAttribute(playerChar,"quest.poker.day") == "3")GameInterface.title = "titleDay2"; 
-			if (GetAttribute(playerChar,"quest.poker.day") == "5")GameInterface.title = "titleDay3"; 
+		case "Poker":
+			GameInterface.title = "titlePoker";
+			if(GetAttribute(playerChar, "location") == "Turks_poker_room")
+			{
+				if (checkAttribute(playerChar,"quest.poker.started")) GameInterface.title = "titleDay1"; 
+				if (GetAttribute(playerChar,"quest.poker.day") == "3") GameInterface.title = "titleDay2"; 
+				if (GetAttribute(playerChar,"quest.poker.day") == "5") GameInterface.title = "titleDay3";
+			}
 		break;
 
 		case "Dumb": GameInterface.title = "titleDumb"; break;
@@ -80,7 +85,7 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 	gambleChar = gambler;
 	gambleID = gambler.id;
 	infoText = "";
-	
+
 	if (CheckAttribute(playerChar,"quest.poker.started"))
 	{	
 		if(GetDataYear() > 1725)
@@ -98,7 +103,7 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 	}
 
 	if(DEBUG_GAMBLING>1) trace("GAMBLING: imagegroup = "+imageGroup);
-	
+
 	if(HasSubStr(playerChar.location,"tavern") && imageGroup!="british_cards")
 	{ 
 		imageGroup = "OLD_SHADOWS";
@@ -108,22 +113,20 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 	// DeathDaisy --> putting this here because playerChar isn't defined outside the function
 	if(playerChar.sex == "woman")
 	{
-		you_lose = DLG_TEXT[118];
-		you_lose2 = DLG_TEXT[119];
-		lucky_man = DLG_TEXT[120];
+		lucky_man = XI_ConvertString("lucky_girl");
 	}
 	else
 	{
-		you_lose = DLG_TEXT[36];
-		you_lose2 = DLG_TEXT[54];
-		lucky_man = DLG_TEXT[106];
+		lucky_man = XI_ConvertString("lucky_man");
 	}
+	you_lose = XI_ConvertString("you_lose") + " " + GetMyAddressForm(gambleChar, playerChar, ADDR_INFORMAL, false, false) + "!";
+	you_lose2 = XI_ConvertString("you_lose2") + " " + GetMyAddressForm(gambleChar, playerChar, ADDR_INFORMAL, false, false) + "!";
 	// DeathDaisy <-- Thanks GR!
 	// GR: setting default value outside this function didn't work.  Settings for male character now brought in here.
 	
 	playerChar.gamepoints = "0";
 	gambleChar.gamepoints = "0";
-	
+
 	if(CheckAttribute(playerChar,"quest.Contraband.CardsBet")) 
 	{
 		if(makeint(gambleChar.money)<=GetGameBet(BetIndex)) gambleChar.money = sti(gambleChar.money) + GetGameBet(BetIndex);
@@ -151,7 +154,7 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 
-    if(AUTO_SKILL_SYSTEM)
+	if(AUTO_SKILL_SYSTEM)
 	{
 		curSkillValue1 = 610;
 		if(CheckAttribute(playerChar,"Experience.Sneak")) curSkillValue1 = 610 + sti(makeint(sti(playerChar.Experience.Sneak)/500)*0.58);
@@ -166,7 +169,7 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 
 	CreateString(true,"CurrentBet","",FONT_SEADOGS,COLOR_NORMAL,20,300,SCRIPT_ALIGN_LEFT,1.2);
 	CreateString(true,"PlayerMoney","",FONT_NORMAL,COLOR_MONEY,405,420,SCRIPT_ALIGN_LEFT,1.0);
-	
+
 	if (CheckAttribute(playerChar,"quest.poker.started"))
 	{	
 		playerChar.money.backup = playerChar.money;
@@ -212,7 +215,7 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 	SetNodeUsing("CARD_PIC",false);
 
 	SetEventHandler("InterfaceBreak","ProcessCancelExit",0);
-    SetEventHandler("exitCancel","ProcessCancelExit",0);
+	SetEventHandler("exitCancel","ProcessCancelExit",0);
 	SetEventHandler("ievnt_command","ProcessCommandExecute",0);
 	SetEventHandler("ExitPress","ProcessExit",0);
 	SetEventHandler("StartGamble","StartGame",0);
@@ -224,7 +227,7 @@ string FindCardsForNation(ref refCharacter)// by this way anyone can make his ow
 {
 	if(DEBUG_GAMBLING>0) trace("GAMBLING: Called function FindCardsForNation");
 	string cardsNation = "british_cards";
-    object LocDirectory;
+	object LocDirectory;
 
 	DeleteAttribute(&LocDirectory, "");
 
@@ -250,6 +253,16 @@ string FindCardsForNation(ref refCharacter)// by this way anyone can make his ow
 
 void SetGame(string gameName)// resets all to virginity :)
 {
+	if (LanguageGetLanguage() == "Spanish")
+	{
+		prefix1 = "Ў";
+		prefix2 = "ї";
+	}
+	else
+	{
+		prefix1 = "";
+		prefix2 = "";
+	}
 	if(DEBUG_GAMBLING>0) trace("GAMBLING: Called function SetGame");
 	string plMoney = "";
 	GameInterface.strings.CurrentBet = GetBetText(BetIndex);
@@ -268,7 +281,7 @@ void SetGame(string gameName)// resets all to virginity :)
 	DeleteAttribute(gambleChar,"cards");
 	playerChar.cards.value = "0";
 	gambleChar.cards.value = "0";
-	
+
 	UpdateMoneyPile(playerChar, imageGroup);
 	UpdateMoneyPile(gambleChar, imageGroup);
 
@@ -504,7 +517,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 		SetSelectable("ICON_GOLD",true);
 	}
 	switch(gameName)
-	{		
+	{
 		case "Vingt-Un":
 			if(DEBUG_GAMBLING>1) trace("GAMBLING: Set Exit and Gold button to non-selectable");
 			SetSelectable("EXIT_BUTTON",false);
@@ -519,7 +532,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 					{
 						case NATURAL21_PLAYER:
 							if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un: player has natural 21. [WIN]");
-							infoText = Randswear() + " " + DLG_TEXT[158];
+							infoText = Randswear() + " " + XI_ConvertString("you_have_natural21");
 							VewGamble(infoText);
 							UpdateBet("win");
 							return;
@@ -527,7 +540,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 
 						case NATURAL21_GAMBLER:
 							if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un: gambler has natural 21. [LOSE]");
-							infoText = DLG_TEXT[159];
+							infoText = XI_ConvertString("i_have_natural21");
 							VewGamble(infoText);
 							UpdateBet("lose");
 							return;
@@ -535,7 +548,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 
 						case NATURAL21_BOTH:
 							if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un: both player and gambler have natural 21. [DRAW]");
-							infoText = DLG_TEXT[160];
+							infoText = XI_ConvertString("both_have_natural21");
 							VewGamble(infoText);
 							UpdateBet("draw");
 							return;
@@ -548,7 +561,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 					if(sti(gambleChar.cards.value)>sti(playerChar.cards.value))
 					{
 						if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of gambler is higher then player. [LOSE]");
-						infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
+						infoText = prefix1 + XI_ConvertString("ive_got") + " " + sti(gambleChar.cards.value) + you_lose;
 						VewGamble(infoText);
 						UpdateBet("lose");
 						return;
@@ -558,7 +571,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 						if(sti(gambleChar.cards.value)==sti(playerChar.cards.value))
 						{
 							if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of player equal to gambler. [DRAW]");
-							infoText = RandSwear() + DLG_TEXT[61];
+							infoText = RandSwear() + XI_ConvertString("i_hate_draws");
 							VewGamble(infoText);
 							UpdateBet("draw");
 							return;
@@ -566,7 +579,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 						else
 						{
 							if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of player is higher then gambler. [WIN]");
-							infoText = Randswear() + " " + sti(gambleChar.cards.value) + DLG_TEXT[104];
+							infoText = Randswear() + " " + sti(gambleChar.cards.value) + XI_ConvertString("lady_luck_tart");
 							VewGamble(infoText);
 							UpdateBet("win");
 							return;
@@ -579,7 +592,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 					if(sti(gambleChar.cards.value)==21)
 					{
 						if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of gambler is exactly 21. [LOSE]");
-						infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
+						infoText = prefix1 + XI_ConvertString("ive_got") + " " + sti(gambleChar.cards.value) + you_lose;
 						VewGamble(infoText);
 						UpdateBet("lose");
 						return;
@@ -587,7 +600,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 					else
 					{
 						if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of gambler is higher then 21. [WIN]");
-						infoText = Randswear() + " " + sti(gambleChar.cards.value) + DLG_TEXT[103];
+						infoText = Randswear() + " " + sti(gambleChar.cards.value) + XI_ConvertString("i_have_surplus");
 						VewGamble(infoText);
 						UpdateBet("win");
 						return;
@@ -602,7 +615,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				if(sti(playerChar.cards.value)==21)
 				{
 					if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of both player and gambler is exactly 21. [DRAW]");
-					infoText = RandSwear() + DLG_TEXT[61];
+					infoText = RandSwear() + XI_ConvertString("i_hate_draws");
 					VewGamble(infoText);
 					UpdateBet("draw");
 					return;
@@ -610,7 +623,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				else
 				{
 					if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of gambler is exactly 21. [LOSE]");
-					infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + you_lose;
+					infoText = prefix1 + XI_ConvertString("ive_got") + " " + sti(gambleChar.cards.value) + you_lose;
 					VewGamble(infoText);
 					UpdateBet("lose");
 					return;
@@ -623,7 +636,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 					if(sti(gambleChar.cards.value)>21)
 					{
 						if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of gambler went above 21. [WIN]");
-						infoText = Randswear() + " " + sti(gambleChar.cards.value) + DLG_TEXT[103];
+						infoText = Randswear() + " " + sti(gambleChar.cards.value) + XI_ConvertString("i_have_surplus");
 						VewGamble(infoText);
 						UpdateBet("win");
 						return;
@@ -640,7 +653,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 					if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of player is exactly 21. Gambler may try to draw to match 21.");
 //					infoText = sti(playerChar.cards.value) + lucky_man;
 					SetNodeUsing("MYFACE",false);
-					SetFormatedText("INFO_TEXT", sti(playerChar.cards.value) + lucky_man + DLG_TEXT[161]);
+					SetFormatedText("INFO_TEXT", sti(playerChar.cards.value) + lucky_man + " " + XI_ConvertString("try_to_match"));
 					bGambleMove = true;
 					bPlayerMove = false;
 				}
@@ -648,7 +661,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				if(sti(playerChar.cards.value)>21)
 				{
 					if(DEBUG_GAMBLING_RULE>0) trace("GAMBLING: Vingt-Un score of player went above 21. [LOSE]");
-					infoText = DLG_TEXT[101] + sti(gambleChar.cards.value) + DLG_TEXT[107];
+					infoText = XI_ConvertString("ive_got") + " " + sti(gambleChar.cards.value) + XI_ConvertString("you_have_surplus");
 					bPlayerMove = false;
 					VewGamble(infoText);
 					UpdateBet("lose");
@@ -737,10 +750,10 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				PlaySound("gamble_dice_throw");
 				SetSelectable("B_PACK", true);
 
-				if(iEnemyDice<=10) { infoText = iEnemyDice + DLG_TEXT[48]; VewGamble(infoText); return; }
-				if(iEnemyDice>10 && iEnemyDice<=15) { infoText = iEnemyDice + DLG_TEXT[49]; VewGamble(infoText); return; }
-				if(iEnemyDice>15 && iEnemyDice<=20) { infoText = iEnemyDice + DLG_TEXT[50]; VewGamble(infoText); return; }
-				if(iEnemyDice>20) { infoText = iEnemyDice + DLG_TEXT[51]; VewGamble(infoText); return; }
+				if(iEnemyDice<=10) { infoText = prefix1 + iEnemyDice + XI_ConvertString("seen_better_throws"); VewGamble(infoText); return; }
+				if(iEnemyDice>10 && iEnemyDice<=15) { infoText = prefix1 + iEnemyDice + XI_ConvertString("not_best_throw"); VewGamble(infoText); return; }
+				if(iEnemyDice>15 && iEnemyDice<=20) { infoText = prefix1 + iEnemyDice + XI_ConvertString("not_bad_throw"); VewGamble(infoText); return; }
+				if(iEnemyDice>20) { infoText = prefix1 + iEnemyDice + XI_ConvertString("hot_throw"); VewGamble(infoText); return; }
 			}
 
 			if(bPlayerMove)
@@ -817,7 +830,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				if(iPCDice<makeint(playerChar.iEnemyDice))
 				{
 					bGambleMove = true;
-					infoText = iPCDice + DLG_TEXT[53] + you_lose2;
+					infoText = prefix1 + iPCDice + you_lose2;
 					VewGamble(infoText);
 					UpdateBet("lose");
 					DeleteAttribute(playerChar, "iEnemyDice");
@@ -827,7 +840,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				if(iPCDice>makeint(playerChar.iEnemyDice))
 				{
 					bGambleMove = true;
-					infoText = RandSwear() + iPCDice + DLG_TEXT[57] + DLG_TEXT[58];
+					infoText = RandSwear() + prefix1 + iPCDice + XI_ConvertString("you_won_dice");
 					VewGamble(infoText);
 					UpdateBet("win");
 					DeleteAttribute(playerChar, "iEnemyDice");
@@ -837,7 +850,7 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				if(iPCDice==makeint(playerChar.iEnemyDice))
 				{
 					bGambleMove = true;
-					infoText = RandSwear() + DLG_TEXT[61];
+					infoText = RandSwear() + XI_ConvertString("i_hate_draws");
 					VewGamble(infoText);
 					UpdateBet("draw");
 					DeleteAttribute(playerChar, "iEnemyDice");
@@ -859,22 +872,32 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 	gambleChar.gambling.most = "";
 	string playerbestface = GetMostCard(playerChar);
 	string gamblebestface = GetMostCard(gambleChar);
-	
+	string gambler_most, player_most;
+	string prefix = prefix1;
+
+	gambler_most = XI_ConvertString(gambleChar.gambling.most);
+	if (CheckAttribute(playerChar,"quest.poker.started")) prefix = "";
+	if (gambler_most != "") gambler_most = "! " + prefix + gambler_most;
+	if (CheckAttribute(playerChar,"quest.poker.started") && gambler_most == "") gambler_most = "!";
 	switch(GetCardsCombination(gambleChar))
 	{
-		case "Pair": cardsInCombo = XI_ConvertString(gambleChar.gambling.most); break;
-		case "Four of Kind": cardsInCombo = XI_ConvertString(gambleChar.gambling.most); break;
-		case "HighCard": cardsInCombo = XI_ConvertString(gambleChar.gambling.most); break;
+		case "Pair": cardsInCombo = gambler_most; break;
+		case "Four of Kind": cardsInCombo = gambler_most; break;
+		case "HighCard": cardsInCombo = gambler_most; break;
 		
 		if (CheckAttribute(playerChar,"quest.poker.started"))cardsInCombo = XI_ConvertString("my combination is best");
 		else cardsInCombo = XI_ConvertString("my combination is better");
 	}
 
+	prefix = prefix1;
+	player_most = XI_ConvertString(playerChar.gambling.most);
+	if (player_most == "") player_most = "!";
+	else player_most = "! " + player_most;
 	switch(GetCardsCombination(playerChar))
 	{
-		case "Pair": cardsCombo = XI_ConvertString(playerChar.gambling.most); break;
-		case "Four of Kind": cardsCombo = XI_ConvertString(playerChar.gambling.most); break;
-		case "HighCard": cardsCombo = XI_ConvertString(playerChar.gambling.most); break;
+		case "Pair": cardsCombo = player_most; break;
+		case "Four of Kind": cardsCombo = player_most; break;
+		case "HighCard": cardsCombo = player_most; break;
 		random = Rand(4);
 		if (CheckAttribute(playerChar,"quest.poker.started")) random = 0;//PW removing some comments for tournament
 		switch(Random)
@@ -883,7 +906,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 			case 1: cardsCombo = XI_ConvertString("combination1"); break;
 			case 2: cardsCombo = XI_ConvertString("combination2"); break;
 			case 3: cardsCombo = XI_ConvertString("combination3"); break;
-			case 4: cardsCombo = XI_ConvertString("combination4"); break;
+			case 4: cardsCombo = XI_ConvertString("combination4"); prefix = ""; break;
 		}
 	}
 
@@ -902,7 +925,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 		if(pcombo>gcombo)
 		{
 			//trace("combo better");
-			infoText = XI_ConvertString(GetCardsCombination(playerChar)) + cardsCombo;
+			infoText = prefix + XI_ConvertString(GetCardsCombination(playerChar)) + cardsCombo;
 			UpdateBet("win");
 		}
 		else
@@ -916,7 +939,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 				if(phigh>ghigh)
 				{
 					//trace("equal higher");
-					infoText = XI_ConvertString(GetCardsCombination(playerChar)) + cardsCombo;
+					infoText = prefix + XI_ConvertString(GetCardsCombination(playerChar)) + cardsCombo;
 					UpdateBet("win");
 				}
 				else
@@ -924,13 +947,13 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 					if(phigh==ghigh)
 					{
 						//trace("equal equal");
-						infoText = XI_ConvertString(GetCardsCombination(playerChar)) + XI_ConvertString("same combination") + "...";
+						infoText = prefix1 + XI_ConvertString(GetCardsCombination(playerChar)) + XI_ConvertString("same combination") + "...";
 						UpdateBet("draw");
 					}
 					else
 					{
 						//trace("equal lower");
-						infoText = XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo;
+						infoText = prefix1 + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo;
 						UpdateBet("lose");
 					}
 				}
@@ -938,7 +961,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 			else
 			{
 				//trace("combo worse");
-				infoText = XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo;
+				infoText = prefix1 + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo;
 				UpdateBet("lose");
 			}
 		}
@@ -948,7 +971,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 		if(pcombo>gcombo)
 		{
 			//trace("combo better");
-			infoText = Randswear() + XI_ConvertString(GetCardsCombination(playerChar)) + cardsCombo + DLG_TEXT[104];
+			infoText = Randswear() + prefix + XI_ConvertString(GetCardsCombination(playerChar)) + cardsCombo + XI_ConvertString("lady_luck_tart");
 			UpdateBet("win");
 		}
 		else
@@ -962,7 +985,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 				if(phigh>ghigh)
 				{
 					//trace("equal higher");
-					infoText = Randswear() + XI_ConvertString(GetCardsCombination(playerChar)) + cardsCombo + DLG_TEXT[104];
+					infoText = Randswear() + prefix + XI_ConvertString(GetCardsCombination(playerChar)) + cardsCombo + XI_ConvertString("lady_luck_tart");
 					UpdateBet("win");
 				}
 				else
@@ -970,13 +993,13 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 					if(phigh==ghigh)
 					{
 						//trace("equal equal");
-						infoText = Randswear() + XI_ConvertString(GetCardsCombination(playerChar)) + XI_ConvertString("same combination") + "...";
+						infoText = Randswear() + prefix + XI_ConvertString(GetCardsCombination(playerChar)) + XI_ConvertString("same combination") + "...";
 						UpdateBet("draw");
 					}
 					else
 					{
 						//trace("equal lower");
-						infoText = DLG_TEXT[101] + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo + you_lose;
+						infoText = prefix1 + XI_ConvertString("ive_got") + " " + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo + you_lose;
 						UpdateBet("lose");
 					}
 				}
@@ -984,7 +1007,7 @@ void UpdateHand(string cardCombination)// shows the game result and resets portr
 			else
 			{
 				//trace("combo worse");
-				infoText = DLG_TEXT[101] + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo + you_lose;
+				infoText = prefix1 + XI_ConvertString("ive_got") + " " + XI_ConvertString(GetCardsCombination(gambleChar)) + cardsInCombo + you_lose;
 				UpdateBet("lose");
 			}
 		}
@@ -1116,7 +1139,7 @@ void UpdateBet(string gameResult)// shows player money on the table, calculate g
 		break;
 	}
 
-    if(AUTO_SKILL_SYSTEM)
+	if(AUTO_SKILL_SYSTEM)
 	{
 		curSkillValue1 = 610;
 		if(CheckAttribute(playerChar,"Experience.Sneak")) curSkillValue1 = 610 + sti(makeint(sti(playerChar.Experience.Sneak)/500)*0.58);
@@ -1125,7 +1148,7 @@ void UpdateBet(string gameResult)// shows player money on the table, calculate g
 		curSkillValue2 = 0;
 		if(CheckAttribute(playerChar,"Experience.Sneak")) curSkillValue2 = sti(makeint(sti(gambleChar.Experience.Sneak)/500)*1.28);
 		CreateImage("LUCK2","ICONS", "status line filled",0,3,curSkillValue2,8);
-		
+
 		if (!CheckAttribute(playerChar,"quest.poker.started"))
 		{
 			if(sti(GameInterface.strings.GambleSneakLevel)<sti(gambleChar.skill.Sneak))
@@ -1133,7 +1156,7 @@ void UpdateBet(string gameResult)// shows player money on the table, calculate g
 				SetFormatedText("FIRST_TEXT", XI_ConvertString("Warning")+"! "+GetCharacterFullName(gambleChar.id)+" "+XI_ConvertString("playing_better")+".");
 				GameInterface.strings.GambleSneakLevel = sti(gambleChar.skill.Sneak);
 			}
-		}	
+		}
 	}
 }
 
@@ -1185,12 +1208,15 @@ void ChangeBet()
 	//Check if the max amount of raises was reached
 	if(!bNewGame)
 	{
-		if((BetIndex - tmpBetIndex) == GetMaxRaises())
+		if((BetIndex - tmpBetIndex) >= GetMaxRaises())
 		{
 			if(DEBUG_GAMBLING>1) trace("GAMBLING: Disable betting because max bets was reached.");
 			DisableBet();
-			infoText = DLG_TEXT[122];
-			SetFormatedText("INFO_TEXT", infoText);
+			if(GetAttribute(playerChar, "location") != "Turks_poker_room")
+			{
+				infoText = XI_ConvertString("enough_raising");
+				SetFormatedText("INFO_TEXT", infoText);
+			}
 		}
 	}
 }
@@ -1528,7 +1554,7 @@ void ProcessGiveCards(ref refCharacter, int cardNum, string cardName)// deals ca
 		case 0:// player section
 			switch(GameName)
 			{
-				case "Vingt-Un":		
+				case "Vingt-Un":
 					CardValue = GetCardValue(cardName);
 					if(DEBUG_GAMBLING>1) trace("GAMBLING: Vingt-Un add card with value "+CardValue+" for player");
 	
@@ -1782,7 +1808,7 @@ string GetCardsCombination(ref refCharacter)// returns cards combinations ("Pair
 				{
 					if(HasSubStr(cardsNames,"_5"))
 					{
-						if(bFlush) cardsCombination = "Royal Flush";
+						if(bFlush) cardsCombination = "Straight Flush";
 						else cardsCombination = "Straight";
 					}
 				}
@@ -1800,7 +1826,7 @@ string GetCardsCombination(ref refCharacter)// returns cards combinations ("Pair
 				{
 					if(HasSubStr(cardsNames,"_6"))
 					{
-						if(bFlush) cardsCombination = "Royal Flush";
+						if(bFlush) cardsCombination = "Straight Flush";
 						else cardsCombination = "Straight";
 					}
 				}
@@ -2165,11 +2191,14 @@ void ProcessCommandExecute()
 							}
 							
 							//Check with the player if they want to raise the bet
-							if(!bRaisedBet)
+							if(!bRaisedBet && !CheckAttribute(playerChar,"quest.Contraband.CardsBet"))
 							{
-								if(DEBUG_GAMBLING>1) trace("GAMBLING: Poker clicked gambler portrait so ask for raising the bet.");
-								infoText = DLG_TEXT[121];
-								SetFormatedText("INFO_TEXT", infoText);
+								if(GetAttribute(playerChar, "location") != "Turks_poker_room")
+								{
+									if(DEBUG_GAMBLING>1) trace("GAMBLING: Poker clicked gambler portrait so ask for raising the bet.");
+									infoText = XI_ConvertString("want_to_raise");
+									SetFormatedText("INFO_TEXT", infoText);
+								}
 								bRaisedBet = true;
 								tmpBetIndex = BetIndex;
 								UpdateBetButtons(BetIndex);
@@ -2500,7 +2529,7 @@ void DoubleUp()
 	//Check if character has enough money for double up
 	if(sti(playerChar.money)<GetGameBet(BetIndex))
 	{
-		infoText = DLG_TEXT[117];
+		infoText = XI_ConvertString("I don't have enough money to double up");
 		SetFormatedText("INFO_TEXT", infoText);
 		BetIndex--;
 		ChangeBet();
@@ -2513,7 +2542,7 @@ void DoubleUp()
 			SetSelectable(btnName,false);
 		}
 		
-		infoText = DLG_TEXT[116];
+		infoText = XI_ConvertString("you are doubling up");
 		SetFormatedText("INFO_TEXT", infoText);
 		
 		AddOneCard(GetCardsOnHand(playerChar)+1, playerChar);
@@ -2540,8 +2569,8 @@ void ProcessCancelExit()
 		SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 1, "CONFIRM_NO_BUTTON");
 		SendMessage(&GameInterface,"lls", MSG_INTERFACE_LOCK_NODE, 2, "CONFIRM_YES_BUTTON");
 
-		SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Exit from gamble confirm"));
 		if (CheckAttribute(playerChar,"quest.poker.started"))SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Exit from gamble confirmPoker"));
+		else SetFormatedText("TEXTWINDOW",LanguageConvertString(tmpLangFileID,"Exit from gamble confirm"));
 
 		LanguageCloseFile(tmpLangFileID);
 	}
@@ -2590,7 +2619,7 @@ void ProcessExit()
 
 	EndCancelInterface(true);
 
-	if(gambleChar.Dialog.Filename=="Habitue_dialog.c")
+	if(gambleChar.Dialog.Filename=="Habitue_dialog.c" || gambleChar.Dialog.Filename=="Poker_Gamblers_dialog.c")
 	{
 		LAi_SetActorType(playerChar);
 		LAi_ActorAnimation(playerChar, "Sit_Look_Around","exit_sit", 1);

@@ -871,6 +871,7 @@ Elizabeth{Elizabeth}
 Palafico{Palafico}
 Jimmy{Jimmy}
 Legs{Legs}
+Penrod{Penrod}
 Bart{Bart}
 Cooke{Cooke}
 Wally{Wally}
@@ -1239,3 +1240,12 @@ Maltese{Maltese}
 Knight{Knight}
 Weird{Weird}
 Warriormonk{Warriormonk}
+Maccus{Maccus}
+Hadras{Hadras}
+Angler{Angler}
+Ogilvey{Ogilvey}
+Clanker{Clanker}
+Urchin{Urchin}
+Wheelback{Wheelback}
+Wyvern{Wyvern}
+Quittance{Quittance}
