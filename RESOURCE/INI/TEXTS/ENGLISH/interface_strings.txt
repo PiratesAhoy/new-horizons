@@ -2136,6 +2136,7 @@ Hint: To make an officer available to command your ship, assign that officer to 
 Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.{Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
+Capitán{Capitán}
 
 Three days later...{Three days later...}
 

@@ -7305,6 +7305,102 @@ void InitShips()
 
 	refShip.Type.Trade = true;
 	refShip.Type.War = true;
+	refShip.Model = "FleutWar";
+	refShip.CanBuy		= true;
+	refShip.CanEncounter	= true;
+
+	refShip.WaterLine = 0.3;
+	refShip.SpeedDependWeight = 0.3;
+	refShip.SubSeaDependWeight = 0.9;
+
+	refShip.GeraldSails.rey_b2	= 1;
+	refShip.GeraldSails.rey_b3	= 1;
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
+		refShip.SpeedRate		= 9.0;
+		refShip.TurnRate		= 65;
+		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.4;
+		refShip.InertiaAccelerationY	= 1.9;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
+	}else{
+		refShip.SpeedRate		= 12.8;
+		refShip.TurnRate		= 32;
+		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 1.0;
+		refShip.InertiaAccelerationY	= 8;	refShip.InertiaBrakingY		= 6;
+		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 4.0;
+
+	}
+
+	refShip.RigType = "Bat";
+
+// Review: Vessel configured as:
+// high seas cruiser, medium draft V-hull, moderate turn circle (WBT4)
+//     <SWS - Willemstad Builders' Trials Winter 09 S/N 083> is henceforth complete
+// on this day and date Dec 31 2009, 2307h
+
+//-------------------------------------------------------------------------
+//      34 Gun Fleut of War (FleutWar) by Captain Hawk, retextured by Grey Roger
+//     <SWS - Willemstad Builders' Trials Winter 09 S/N 083> (WBT4)
+//-------------------------------------------------------------------------
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name			= "FleutWar2";
+	refShip.All			= "Fleut1";
+	refShip.Sname			= "FleutWarL";
+	refShip.id			= refShip.Name;
+	refShip.Walk			= "Fleut2";
+	refShip.Class			= 4;
+	refShip.Cannon			= CANNON_TYPE_CARRONADE_LBS24;
+	refShip.MaxCaliber		= 12;
+	refShip.Weight			= Tonnes2CWT(450);
+	refShip.Capacity		= 3500;
+	refShip.CannonsQuantity = 34;
+	// NK cannon qtys 05-04-18 -->
+	refShip.Cannons.Borts.cannonf.qty = 2;
+	refShip.Cannons.Borts.cannonb.qty = 2;
+	// NK <--
+	refShip.MaxCrew			= 204;
+	refShip.MinCrew			= 41;
+	refShip.Price			= 109600;
+	refShip.HP			= 3500;
+	refShip.SP			= 200;
+	refShip.Jetty			= false; // PB
+
+	refShip.BigPicTexName	= "SHIPS5"; // Armada
+// KK -->
+	refShip.BI.Tex = 14;
+	refShip.BI.Pic = 15;
+	refShip.QDeck = "ShipDeck5";
+	refShip.CannonsDeck = 1;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin_medium";
+	refShip.Flags.Mast1.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast3.Flag1 = FLAG_ENSIGN;
+	refShip.Flags.Mast4.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast5.Flag1 = FLAG_ENSIGN;
+// <-- KK
+
+	//Period
+	refShip.period.0 = 0.5; //
+	refShip.period.1 = 0.8; //
+	refShip.period.2 = 0.7; //
+	refShip.period.3 = 0.1; //
+	refShip.period.4 = 0.0; //
+	refShip.period.5 = 0.0; //
+	//Nation
+	refShip.england = 0.0; //
+	refShip.france = 0.0; //
+	refShip.holland = 0.0; //
+	refShip.portugal = 0.0; //
+	refShip.pirate = 0.1; //
+	refShip.spain = 0.0; //
+	refShip.america = 0.0; //
+	refShip.sweden = 0.0; //
+
+	refShip.Type.Trade = true;
+	refShip.Type.War = true;
+	refShip.Model = "FleutWar";
 	refShip.CanBuy		= true;
 	refShip.CanEncounter	= true;
 
@@ -9889,8 +9985,8 @@ void InitShips()
 	n++;
 	refShip.Name			= "FastGalleon5";
 	refShip.All 			= "Galeon1";
-	refShip.id				= "FastGalleon5";
-	refShip.Class		   = 3;
+	refShip.id			= "FastGalleon5";
+	refShip.Class			= 3;
 	refShip.SName 			= "FastGalleonW";
 	refShip.Walk  = "FastGalleon"; // PB & back84
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS18;
@@ -9902,9 +9998,9 @@ void InitShips()
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	refShip.MaxCrew			= 400; // GR: was 390, usually over 400 after national modifiers, so increase to 400 and make it officially tier 3
 	refShip.MinCrew			= 90;  // GR: was 45, too small!
-	refShip.Price		   = 120000;
-	refShip.HP			  = 4500;
-	refShip.SP			  = 200;
+	refShip.Price		   	= 120000;
+	refShip.HP			= 4500;
+	refShip.SP			= 200;
 	refShip.Jetty			= false; // PB
 
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
@@ -9992,8 +10088,8 @@ void InitShips()
 	refShip.CannonsQuantity = 38;
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
-	refShip.MaxCrew		 = 390;
-	refShip.MinCrew		 = 68;
+	refShip.MaxCrew			= 400; // GR: was 390, changed to 400 to match other fast war galleons
+	refShip.MinCrew			= 90;  // GR: was 68
 	refShip.Price		   = 120000;
 	refShip.HP			  = 4500;
 	refShip.SP			  = 200;
@@ -19342,6 +19438,90 @@ void InitShips()
 	refShip.Type.War = true;
 	refShip.CanEncounter		= true;
 	refShip.CanBuy			= true;
+	refShip.Model			= "Couronne";
+
+	refShip.WaterLine = 0.1;
+	refShip.SpeedDependWeight = 0.35;
+	refShip.SubSeaDependWeight = 0.75;
+
+	refShip.GeraldSails.rey_b2 = 1;
+	refShip.GeraldSails.rey_b3 = 1;
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
+		refShip.SpeedRate		= 11.5;
+		refShip.TurnRate		= 60;
+		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.5;
+		refShip.InertiaAccelerationY	= 1.8;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
+	}else{
+		refShip.SpeedRate		= 11.5;
+		refShip.TurnRate		= 32;
+		refship.InertiaAccelerationX	= 3.5;	refship.InertiaBrakingX		= 3.0;
+		refship.InertiaAccelerationY	= 2.5;	refship.InertiaBrakingY		= 2.5;
+		refship.InertiaAccelerationZ	= 3.5;	refship.InertiaBrakingZ		= 3.0;
+
+		refShip.RigType = "Bat";
+	}
+
+//-------------------------------------------------------------------------
+//	La Couronne 1636 by pgargon, retextured for pirates by Pillat
+//-------------------------------------------------------------------------
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name				= "Couronne_pirate";
+	refShip.id				= refShip.Name;
+	refShip.walk				= "Couronne";
+	refShip.SName				= "Couronne";
+	refShip.all				= "Galeon1";
+	refShip.Class				= 3;
+	refShip.Cannon				= CANNON_TYPE_LONG_LBS24;
+	refShip.MaxCaliber			= 32;
+	refShip.Weight				= Tonnes2CWT(2750);
+	refShip.Capacity			= 3250;
+	refShip.CannonsQuantity			= 64;
+	refShip.Cannons.Borts.cannonf.qty	= 8;
+	refShip.Cannons.Borts.cannonb.qty	= 8;
+	refShip.MaxCrew				= 640;
+	refShip.MinCrew				= 128;
+	refShip.Price				= 364000;
+	refShip.HP				= 9000;
+	refShip.SP				= 200;
+
+	refShip.BigPicTexName	= "SHIPS5"; // Armada
+	refShip.BI.Tex = 10;
+	refShip.BI.Pic = 6;
+	refShip.QDeck = "ShipDeck2";
+	refShip.CannonsDeck = 1;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin2";
+	refShip.Flags.Mast1.Flag1 = FLAG_ENSIGN;
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast3.Flag1 = FLAG_ENSIGN;
+	refShip.Flags.Mast4.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast5.Flag1 = FLAG_ENSIGN;
+
+	//Period
+	refShip.period.0 = 0.0; //
+	refShip.period.1 = 0.6; //
+	refShip.period.2 = 0.1; //
+	refShip.period.3 = 0.0; //
+	refShip.period.4 = 0.0; //
+	refShip.period.5 = 0.0; //
+	//Nation
+	refShip.england = 0.0; //
+	refShip.france = 0.0; //
+	refShip.holland = 0.0; //
+	refShip.portugal = 0.0; //
+	refShip.pirate = 0.05; //
+	refShip.spain = 0.0; //
+	refShip.america = 0.0; //
+	refShip.sweden = 0.0; //
+
+	refShip.Type.Trade = false;
+	refShip.Type.War = true;
+	refShip.CanEncounter		= true;
+	refShip.CanBuy			= true;
+	refShip.Model			= "Couronne";
 
 	refShip.WaterLine = 0.1;
 	refShip.SpeedDependWeight = 0.35;
@@ -23567,9 +23747,9 @@ void InitShips()
 	makeref(refShip,ShipsTypes[n]);
 	n++;
 	refShip.Name			= "RN_RaaFrigate";
-	refShip.SName           		= "RaaFrigate";
-	refShip.id				= refShip.Name;
-	refship.walk                    =  "RaaFrigate";
+	refShip.SName           	= "RaaFrigate";
+	refShip.id			= refShip.Name;
+	refship.walk                    = "RaaFrigate";
 	refShip.Class		   	= 5;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS12;
 	refShip.MaxCaliber		= 12;
@@ -23580,14 +23760,14 @@ void InitShips()
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
-	refShip.MaxCrew		 = 300;
-	refShip.MinCrew		 = 70;
-	refShip.Price		   = 190200;
-	refShip.HP			  = 3250;
-	refShip.SP			  = 200;
-	refShip.Jetty	= false; // PB
+	refShip.MaxCrew			= 300;
+	refShip.MinCrew			= 70;
+	refShip.Price			= 190200;
+	refShip.HP			= 3250;
+	refShip.SP			= 200;
+	refShip.Jetty			= false; // PB
 
-	refShip.BigPicTexName	= "SHIPS4"; // Armada
+	refShip.BigPicTexName		= "SHIPS4"; // Armada
 
 // KK -->
 	refShip.BI.Tex = 10;
@@ -23652,89 +23832,173 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// Cursed Mariana - Model modified by Yo Ho Ho - Retextured by GhostOfDeath91
+// Cursed Mariana (Ricardo Orellana'Ship) by GhostOfDeath91
 // <SWS - Willemstad Builders' Trials Winter 09 S/N 118> (WBT4HF)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
-	refShip.Name = "CursedMariana";
-	refShip.All = "Mariana";
-	refShip.id = refShip.Name;
-	refShip.SName = "FlyingDutchman";
-	refShip.Nation = PIRATE;
-	refShip.unique = true;
-	refShip.Class = 3;
-	refShip.Walk = "";
-	refShip.Cannon = CANNON_TYPE_LONG_LBS24;
-	refShip.MaxCaliber = 24;
-	refShip.Weight = Tonnes2CWT(1650);
-	refShip.Capacity = 4000;
-	refShip.CannonsQuantity = 38;
+	refShip.Name			= "CursedMariana";
+	refShip.All			= "Galeon1";
+	refShip.id			= refShip.Name;
+	refShip.SName			= "FlyingDutchman";
+	refShip.Nation			= PIRATE;
+	refShip.unique			= true;
+	refShip.Class			= 3;
+	refShip.Walk			= "";
+	refShip.Cannon			= CANNON_TYPE_LONG_LBS24;
+	refShip.MaxCaliber		= 24;
+	refShip.Weight			= Tonnes2CWT(1600);
+	refShip.Capacity		= 2200;
+	refShip.CannonsQuantity		= 38;
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
-	refShip.MaxCrew = 440;
-	refShip.MinCrew = 45;
-	refShip.Price = 284400;
-	refShip.HP = 100000;
-	refShip.SP = 999999;
-	
+	refShip.MaxCrew			= 390;
+	refShip.MinCrew			= 32;
+	refShip.Price			= 225000;
+	refShip.HP			= 100000;
+	refShip.SP			= 999999;
+
 	refShip.BigPicTexName = "SHIPS1"; //Armada
-	// KK -->
+// KK -->
 	refShip.EmblemedSails.normalTex = "sail_DeathVessel_torn.tga";
 	refShip.EmblemedSails.nationFileName = "sail_DeathVessel_torn1.tga";
-	refShip.devil_trail = true;		// PB: Cursed Ship Trails Fog
-	refShip.night_stealth = true;	// PB: Half visibility at night
-	
-	refShip.BI.Tex = 10;
+	refShip.devil_trail = true; // PB: Cursed Ship Trails Fog
+	refShip.night_stealth = true; // PB: Half visibility at night
+
+	refShip.BI.Tex = 14;
 	refShip.BI.Pic = 0;
-	refShip.QDeck = "ShipDeck6";
-	refShip.CannonsDeck = 1;
+	refShip.QDeck = "ShipDeck7";
+	refShip.CannonsDeck = 2;
 	refShip.CargoHold = 1;
 	refShip.Cabin = "Cabin5";
-	refShip.Flags.Mast1.Flag1 = FLAG_NONE;
-	refShip.Flags.Mast2.Flag1 = FLAG_NONE;
+	refShip.DeckTexturesDir = "BlackPearl";
+	refShip.Flags.Mast1.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;
 	refShip.Flags.Mast3.Flag1 = FLAG_ENSIGN;
-	refShip.Flags.Mast4.Flag1 = FLAG_NONE;
+	refShip.Flags.Mast4.Flag1 = FLAG_PENNANT;
 	refShip.Flags.Mast5.Flag1 = FLAG_ENSIGN;
-	// <-- KK
-	
-	refShip.Model = "Mariana";
+// <-- KK
+
 	refShip.Type.Trade = false;
 	refShip.Type.War = true;
 	refShip.CanBuy = false;
 	refShip.CanEncounter = false;
-	
+
 	refShip.SpeedDependWeight = 0.3;
 	refShip.SubSeaDependWeight = 0.5;
 
-	refShip.GeraldSails.rey_b2	= 1;
-	refShip.GeraldSails.rey_b3	= 1;
-
+	refShip.GeraldSails.rey_b2 = 1;
+	refShip.GeraldSails.rey_b3 = 1;
 	refShip.WaterLine = -0.7;
-	
-	// Movement unaffected by wind - sails fastest INTO the wind
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
+		refShip.SpeedRate = 14.1;
+		refShip.TurnRate = 80;
+		refShip.InertiaAccelerationX = 4; refShip.InertiaBrakingX = 0.5;
+		refShip.InertiaAccelerationY = 2; refShip.InertiaBrakingY = 0.5;
+		refShip.InertiaAccelerationZ = 2.5; refShip.InertiaBrakingZ = 2.0;
+	}else{
+		refShip.SpeedRate = 14.1;
+		refShip.TurnRate = 31;
+		refShip.InertiaAccelerationX = 0.2; refShip.InertiaBrakingX = 2.0;
+		refShip.InertiaAccelerationY = 6; refShip.InertiaBrakingY = 3;
+		refShip.InertiaAccelerationZ = 2.0; refShip.InertiaBrakingZ = 4.0;
+	}
+// Movement unaffected by wind - sails fastest INTO the wind
 	refShip.ClosestPoint = 0.01;
 	refShip.BestPoint = 0.01;
 	// KK refShip.RigType = sDet;
 
-	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
-	refShip.SpeedRate = 12.5;
-	refShip.TurnRate = 80;
-	refShip.InertiaAccelerationX = 4; refShip.InertiaBrakingX = 0.5;
-	refShip.InertiaAccelerationY = 2.0; refShip.InertiaBrakingY = 0.5;
-	refShip.InertiaAccelerationZ = 2.5; refShip.InertiaBrakingZ = 2.0;
-	}else{
-	refShip.SpeedRate = 12.5;
-	refShip.TurnRate = 30;
-	refShip.InertiaAccelerationX = 0.4; refShip.InertiaBrakingX = 2.0;
-	refShip.InertiaAccelerationY = 10; refShip.InertiaBrakingY = 4;
-	refShip.InertiaAccelerationZ = 4.0; refShip.InertiaBrakingZ = 2.0;
-	}
+//-------------------------------------------------------------------------
+// Spanish Fast Galleon (Uncursed Mariana) by GhostOfDeath91
+// <SWS - Willemstad Builders' Trials Winter 09 S/N 118> (WBT4HF)
+//-------------------------------------------------------------------------
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name			= "Mariana";
+	refShip.All			= "Galeon1";
+	refShip.id			= refShip.Name;
+	refShip.nation			= SPAIN;
+	refShip.Class			= 3;
+	refShip.SName			= "FastGalleonW";
+	refShip.Walk			= "FastGalleon";
+	refShip.Cannon			= CANNON_TYPE_LONG_LBS18;
+	refShip.MaxCaliber		= 18;
+	refShip.Weight			= Tonnes2CWT(1650);
+	refShip.Capacity		= 4000;
+	refShip.CannonsQuantity		= 38;
+	refShip.Cannons.Borts.cannonf.qty = 2;
+	refShip.Cannons.Borts.cannonb.qty = 4;
+	refShip.MaxCrew			= 400;
+	refShip.MinCrew			= 90;
+	refShip.Price			= 120000;
+	refShip.HP			= 4500;
+	refShip.SP			= 200;
+	refShip.Jetty			= false; // PB
 
-// Review: Vessel configured as:
-// high seas cruiser, medium draft U-hull, moderate turn circle (WBT1)
-//     <SWS - Willemstad Builders' Trials Winter 09 S/N 107> is henceforth complete
-// on this day and date 2 Jan 10, 0857h
+	refShip.BigPicTexName		= "SHIPS5"; // Armada
+// KK -->
+	refShip.EmblemedSails.normalTex = "sail_weathered_plain.tga";
+	refShip.EmblemedSails.nationFileName = "sail_weathered_nation2.tga";
+
+	refShip.BI.Tex = 10;
+	refShip.BI.Pic = 0;
+	refShip.QDeck = "ShipDeck6";
+	refShip.CannonsDeck = 2;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin5";
+	refShip.Flags.Mast1.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast3.Flag1 = FLAG_ENSIGN;
+	refShip.Flags.Mast4.Flag1 = FLAG_PENNANT;
+	refShip.Flags.Mast5.Flag1 = FLAG_ENSIGN;
+	refShip.Flags.UseNavalFlag = true;
+// <-- KK
+
+	//Period
+	refShip.period.0 = 0.0; //
+	refShip.period.1 = 0.0; //
+	refShip.period.2 = 0.01; //
+	refShip.period.3 = 0.0; //
+	refShip.period.4 = 0.0; //
+	refShip.period.5 = 0.0; //
+	//Nation
+	refShip.england = 0.0; //
+	refShip.france = 0.0; //
+	refShip.holland = 0.0; //
+	refShip.portugal = 0.0; //
+	refShip.pirate = 0.0; //
+	refShip.spain = 0.01; //
+	refShip.america = 0.0; //
+	refShip.sweden = 0.0; //
+
+	refShip.CanEncounter = true;
+	refShip.CanBuy = true;
+	refShip.Model = "Fast War Galleon"; // KK
+	refShip.Type.Trade = false;
+	refShip.Type.War = true;
+
+	refShip.SpeedDependWeight = 0.3;
+	refShip.SubSeaDependWeight = 0.5;
+
+	refShip.GeraldSails.rey_b2 = 1;
+	refShip.GeraldSails.rey_b3 = 1;
+
+	refShip.WaterLine = -0.7;
+	refShip.RigType = "Bat";
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
+		refShip.SpeedRate = 11.5;
+		refShip.TurnRate = 80;
+		refShip.InertiaAccelerationX = 4; refShip.InertiaBrakingX = 0.5;
+		refShip.InertiaAccelerationY = 2; refShip.InertiaBrakingY = 0.5;
+		refShip.InertiaAccelerationZ = 2.5; refShip.InertiaBrakingZ = 2.0;
+	}else{
+		refShip.SpeedRate = 12.5;
+		refShip.TurnRate = 31;
+		refShip.InertiaAccelerationX = 0.2; refShip.InertiaBrakingX = 2.0;
+		refShip.InertiaAccelerationY = 6; refShip.InertiaBrakingY = 3;
+		refShip.InertiaAccelerationZ = 2.0; refShip.InertiaBrakingZ = 4.0;
+	}
 
 //-------------------------------------------------------------------------
 // Prince de Neufchatel by Captain Armstrong

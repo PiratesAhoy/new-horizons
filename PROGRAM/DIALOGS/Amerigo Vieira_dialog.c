@@ -33,7 +33,8 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[1];
 			link.l1.go = "Exit";
 
-			if(PChar.quest.Hitman == "mark_amerigo")
+//			if(PChar.quest.Hitman == "mark_amerigo")
+			if(CheckQuestAttribute("Hitman", "mark_amerigo"))
 			{
 				string intro = DLG_TEXT[2];
 				dialog.snd = "Voice\AMVI\AMVI002";

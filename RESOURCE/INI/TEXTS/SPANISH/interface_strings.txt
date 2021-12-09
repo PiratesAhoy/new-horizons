@@ -2136,6 +2136,7 @@ Hint: To make an officer available as an escort, assign that officer to one of t
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Pista: Para hacer que un oficial esté disponible como escolta, asigna a ese oficial a uno de los 3 primeros recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Pista: Para hacer que un oficial esté disponible como escolta, asigna a ese oficial a uno de los 4 recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Pista: Para hacer que un oficial esté disponible como escolta, asigna a ese oficial a uno de los 3 primeros recuadros del grupo de desembarco en la pantalla 'Pasajeros'.}
+Capitán{Capitán}
 
 Three days later...{Tres días después...}
 

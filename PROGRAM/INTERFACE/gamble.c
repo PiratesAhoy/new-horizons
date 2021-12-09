@@ -751,9 +751,9 @@ void UpdateTable()// shows the game result and resets portraits-buttons
 				SetSelectable("B_PACK", true);
 
 				if(iEnemyDice<=10) { infoText = prefix1 + iEnemyDice + XI_ConvertString("seen_better_throws"); VewGamble(infoText); return; }
-				if(iEnemyDice>10 && iEnemyDice<=15) { prefix1 + infoText = iEnemyDice + XI_ConvertString("not_best_throw"); VewGamble(infoText); return; }
-				if(iEnemyDice>15 && iEnemyDice<=20) { prefix1 + infoText = iEnemyDice + XI_ConvertString("not_bad_throw"); VewGamble(infoText); return; }
-				if(iEnemyDice>20) { prefix1 + infoText = iEnemyDice + XI_ConvertString("hot_throw"); VewGamble(infoText); return; }
+				if(iEnemyDice>10 && iEnemyDice<=15) { infoText = prefix1 + iEnemyDice + XI_ConvertString("not_best_throw"); VewGamble(infoText); return; }
+				if(iEnemyDice>15 && iEnemyDice<=20) { infoText = prefix1 + iEnemyDice + XI_ConvertString("not_bad_throw"); VewGamble(infoText); return; }
+				if(iEnemyDice>20) { infoText = prefix1 + iEnemyDice + XI_ConvertString("hot_throw"); VewGamble(infoText); return; }
 			}
 
 			if(bPlayerMove)

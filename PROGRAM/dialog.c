@@ -137,6 +137,14 @@ void StartDialogMain()
 	Log_SetActiveAction("Nothing");//MAXIMUS
 	LogsVisible(false); // KK
 	Dialog.headModel = CharacterRef.headModel; // KK
+
+// GR: use armoured head model if appropriate -->
+	if (CheckAttribute(CharacterRef, "model.armorlevel") == true && FindFile("RESOURCE\MODELS\Heads", "*.gm", Dialog.headModel + "_A" + sti(CharacterRef.model.armorlevel) + ".gm") != "")
+	{
+		Dialog.headModel = Dialog.headModel + "_A" + sti(CharacterRef.model.armorlevel);
+	}
+// GR <--
+
 	if(FindFile("resource\models\Heads", "*.gm", CharacterRef.headModel + ".gm") == "")
 	{
 		if(CharacterRef.headModel!="h_"+CharacterRef.Model) CharacterRef.headModel = "h_"+CharacterRef.Model;//MAXIMUS: prevents some errors (I'm wondering: sometimes we have models-names, like 23iu432523h)

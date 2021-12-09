@@ -100,13 +100,13 @@ void CreateCharacters()
 				break;
 
 				case "Dervia":
-					ch.shiplog.Title.log0 = "My introduction to Caribbean.";
+					ch.shiplog.Title.log0 = "My Introduction to the Caribbean";
 					ch.shiplog.Entry.log0 = "Once a beautiful pirate captain, now a demoness. This all happened during my 'visit' on Cuba. The Spanish patrol found me and took their last breath, but I also was wounded heavily. I lost my consciousness at the governor's mansion and after I woke up, I was on a main square tied up. The people saw that I was awake and shouted to the executioner to cut off my head...and he did it. This is all really strange as after my death I found myself in a strange cave. There was a weird floating black orb and a white orb. I took the opportunity and touched the black one. A enormous and searing pain came through my body and I once again passed out. This time I woke up on Santiago main square where I was executed. My anger towards those Spanish lapdogs was so big that I burned the entire city myself, after that I continue my adventure and the Caribbean will cower before my might as I am the Angel of Death.";
 					GiveItem2Character(ch, "bladerubysb");
 				break;
 
 				case "Avergorex":
-					ch.shiplog.Title.log0 = "My first arrival";
+					ch.shiplog.Title.log0 = "My First Arrival";
 					ch.shiplog.Entry.log0 = "I spent my eternal life as a demon in the underworld, but this time someone has summoned me to this mortal world. They thought when they summon me by their stupid ritual, they will be rewarded with power, such foolishness. After I killed them, I took their belongings, their robes and weapons, especially MY sabre that I found on their leader, for now I should have a look around and see where this world will lead me.";
 					GiveItem2Character(ch, "blade_ebony");
 				break;
@@ -372,12 +372,12 @@ void CreateCharacters()
 			if(HasSubStr(CharShipType, "Dutchman")) curse_type = "DavyJones";
 			if(HasSubStr(CharShipType, "Mariana")) curse_type = "Orellana";
 
-			if (curse_type != "Orellana")	// Don't give standard sword to these specific characters, they'll get special weapons in their own sections
+			if (curse_type != "Orellana")	// Don't give standard weapons to these specific characters, they'll get special weapons in their own sections
 			{
 				GiveItem2Character(ch, "blade4");
+				if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+				else GiveItem2Character(ch, "pistol1a");
 			}
-			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
-			else GiveItem2Character(ch, "pistol1a");
 			switch(curse_type)
 			{
 				case "DavyJones":
@@ -390,6 +390,7 @@ void CreateCharacters()
 					ch.shiplog.Entry.log0 = "Originally a Navy Officer, I was accused of treason by having a relationship with a privateer who had been taken prisoner by the Admiral during an attack. I was also arrested and tortured by the Inquisition. To save us, I made a pact with Padre Melquнades de Vбzquez. In exchange for a grace for me and my lover, I had to serve the Inquisition and extend its influence in the New World. I didn't know I had just sold my soul to the Devil at that time. Shortly after my first mission, my love succumbed to the Black Death and was the only victim. Realizing that the Demon had betrayed me, I decided to steal a ship and flee Cartagena to take my revenge on him. But the crew began to fall mysteriously ill and died quickly. Then strange events occurred, it was like moving shadows, or sinister whispers. Those who had escaped the disease were swept away by madness and killed each other or put an end to their day...";
 					GiveItem2Character(ch, "Devil_Contract");
 					GiveItem2Character(ch, "bldevil");
+					GiveItem2Character(ch, "pistol27");
 					ch.boardingmodels = "Ghost";
 				break;
 

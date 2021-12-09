@@ -221,7 +221,7 @@ void ProcessDialogEvent()
 
 		case "shipwright":
 		//----->PW info about shipwright based on period
-				if (period > 3 ) d.Text = DLG_TEXT[176];
+				if (period > PERIOD_COLONIAL_POWERS) d.Text = DLG_TEXT[176];
 				else
 				{
 					d.Text = DLG_TEXT[99]; 
@@ -281,7 +281,6 @@ void ProcessDialogEvent()
 				Link.l4.go = "town_pokerhall";	
 				}
 			}
-			
 		break;
 
 		case "town_smithy":
@@ -368,16 +367,16 @@ void ProcessDialogEvent()
 		case "Turks":
 		//----->PW info about history based on period
 			
-			if (period > 3 ) d.Text = DLG_TEXT[173];
+			if (period > PERIOD_COLONIAL_POWERS) d.Text = DLG_TEXT[173];
 			else
 			{
-				if (period > 1 ) d.Text = DLG_TEXT[174];
+				if (period > PERIOD_THE_SPANISH_MAIN) d.Text = DLG_TEXT[174];
 				else
 				{
 					d.Text = DLG_TEXT[175]; 
 				}
 			}
-		//PW <-------		
+		//PW <-------
 			Link.l1 = pcharrepphrase(DLG_TEXT[135], DLG_TEXT[136]);
 			Link.l1.go = "new question";
 			link.l2 = pcharrepphrase(DLG_TEXT[137], DLG_TEXT[138]);

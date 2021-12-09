@@ -309,6 +309,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(sld);
 			LAi_ActorGoToLocation(sld, "reload", "reload1", "none", "", "", "", 10.0);
 
+			LAi_SetActorType(CharacterFromID("Roxanne Lalliere"));
 			ChangeCharacterAddressGroup(CharacterFromID("Roxanne Lalliere"), "Redmond_shore_02", "goto", "goto7");
 			Characters[GetCharacterIndex("Roxanne Lalliere")].dialog.currentnode = "begin_58";
 			LAi_ActorDialog(characterFromID("Roxanne Lalliere"), pchar, "", 2.0, 1.0);

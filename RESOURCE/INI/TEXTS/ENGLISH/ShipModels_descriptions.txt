@@ -170,6 +170,9 @@ Excellent trade vessel with few decorations.}
 FleutWar_Descr{Decent at speed and turn rate.
 Naval vessel painted blue.}
 
+FleutWar2_Descr{Decent at speed and turn rate.
+Naval vessel painted black and red.}
+
 FleutWarSat_Descr{Decent at speed and turn rate.
 Black vessel with sinister markings.}
 
@@ -504,6 +507,9 @@ and white paint scheme.}
 FR_Couronne_Descr{A large, emblematic French Navy galleon,
 and the first of her kind to be built in France.}
 
+Couronne_pirate_Descr{A large former French Navy galleon,
+now taken over by pirates.}
+
 SP_ApostolFelipe_Descr{'Apóstol Felipe', one of the six galleons
 built by Martín de Arana for King Felipe IV.}
 
@@ -632,6 +638,8 @@ owned by Captain Sao Feng.}
 
 CursedMariana_Descr{Devil's creepy ship haunted
 by the ghosts of cursed sailors...}
+Mariana_Descr{At full speed she'll show her possibilities.
+Spanish design decorated with gilding.}
 
 US_PrinceNeufchatel_Descr{A very fast American schooner that handles well,
 bearing a white and black paint scheme.}

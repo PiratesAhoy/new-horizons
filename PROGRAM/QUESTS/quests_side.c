@@ -6697,61 +6697,61 @@ void SideQuestComplete(string sQuestName)
 			// -------------------
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto1");
-			sld.name = "Angler";
+			sld.name = TranslateString("", "Angler");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto3");
-			sld.name = "Ogilvey";
+			sld.name = TranslateString("", "Ogilvey");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "goto4");
-			sld.name = "Maccus";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Maccus", "goto", "goto4");
+			sld.name = TranslateString("", "Maccus");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto5");
-			sld.name = "Clanker";
+			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "goto6");
-			sld.name = "Hadras";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Hadras", "goto", "goto6");
+			sld.name = TranslateString("", "Hadras");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto7");
-			sld.name = "Urchin";
+			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto8");
-			sld.name = "Wheelback";
+			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "goto9");
-			sld.name = "Wyvern";
+			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto10");
-			sld.name = "Quittance";
+			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "goto30");
-			sld.name = "Penrod";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Penrod", "goto", "goto30");
+			sld.name = TranslateString("", "Penrod");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
@@ -6776,61 +6776,61 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.davymeet.win_condition = "davyonshore";
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "reload", "reload9");
-			sld.name = "Angler";
+			sld.name = TranslateString("", "Angler");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "officers", "reload9_1");
-			sld.name = "Ogilvey";
+			sld.name = TranslateString("", "Ogilvey");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "officers", "reload9_2");
-			sld.name = "Maccus";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Maccus", "officers", "reload9_2");
+			sld.name = TranslateString("", "Maccus");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "reload9_3");
-			sld.name = "Clanker";
+			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "goto1");
-			sld.name = "Hadras";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Hadras", "goto", "goto1");
+			sld.name = TranslateString("", "Hadras");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto2");
-			sld.name = "Urchin";
+			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto3");
-			sld.name = "Wheelback";
+			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "reload", "reload8");
-			sld.name = "Wyvern";
+			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "reload8_1");
-			sld.name = "Quittance";
+			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "officers", "reload8_2");
-			sld.name = "Penrod";
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Penrod", "officers", "reload8_2");
+			sld.name = TranslateString("", "Penrod");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");

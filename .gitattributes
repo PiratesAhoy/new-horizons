@@ -15,3 +15,4 @@ RESOURCE/INI/TEXTS/RUSSIAN/**/*.txt text eol=crlf working-tree-encoding=Windows-
 RESOURCE/INI/TEXTS/RUSSIAN/BOOKS/cookbook.txt working-tree-encoding=UTF-8
 RESOURCE/INI/TEXTS/RUSSIAN/Storyline/WoodesRogers/ItemsDescribe.txt working-tree-encoding=UTF-8
 PROGRAM/Storyline/standard/DIALOGS/POLISH/danielle_dialog.h working-tree-encoding=UTF-8
+"PROGRAM/Storyline/Ardent/DIALOGS/Javier Balboa_dialog.c" working-tree-encoding=UTF-8

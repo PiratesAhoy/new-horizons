@@ -4365,6 +4365,10 @@ void InitModels(bool isstart)
 	model.nation      =  PIRATE;
 	model.price       =  3000;
 	model.assigned    =  true;
+	model.height		=  1.85;
+	model.sex		=  "man";
+	model.ani		=  "Rousselet";
+	model.status		=  "C_III"; // added as an identifier, for assigning another animation to the new models
 	model.name = "Davy";
 	model.lastname = "Jones";
 	model.storytitle = "Lord of the Sea";
@@ -9955,7 +9959,6 @@ void InitModels(bool isstart)
 	model.date.month	= 3;
 	model.date.year		= 1740;
 	model.period		= "" + PERIOD_GOLDEN_AGE_OF_PIRACY + PERIOD_COLONIAL_POWERS;
-	AssignModelTypeNation(isstart, model, "navy", 1.0, SPAIN);
 	AddCharacterModel(model);	
 
 	// Assassin Main Quest -->
@@ -10403,9 +10406,9 @@ void InitModels(bool isstart)
 	model.storytitle = "The Devil's Ship";
 	model.storytext = "You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.";
 	model.ship = "CursedMariana";
-	model.shipname = "Mariana";
+	model.shipname = "La Mariana";
 	model.playertype = PLAYER_TYPE_CURSED;
-	model.Flags.Pirate = 15;
+	model.Flags.Pirate = 29;
 	model.Flags.Personal = 46;
 	model.date.hour = 22;
 	model.date.year = 1715;
@@ -10561,6 +10564,58 @@ void InitModels(bool isstart)
 	model.Flags.Pirate = 23;
 	model.Flags.Personal = 24;
 	model.date.year = 1740;
+	AddCharacterModel(model);
+
+	model.description	=  "Half man, half lobster - one of Davy Jones' crew.";
+	model.id		=  "Penrod";
+	model.FaceId		= 610;
+	model.nation		=  CURSED;
+	model.assigned		=  true;
+	model.camouflage	= true; // PB: Everyone is Enemy
+	model.sex		= "skeleton";
+	model.height		= 1.85;
+	model.ani		= "Rousselet";
+	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
+	AssignModelType(isstart, model, "Davycrew", 1.0);
+	AddCharacterModel(model);
+
+	model.description	= "Half man, half hammerhead shark - one of Davy Jones' crew.";
+	model.id		=  "Maccus";
+	model.FaceId		= 611;
+	model.nation		= CURSED;
+	model.assigned		= true;
+	model.camouflage	= true; // PB: Everyone is Enemy
+	model.sex		= "skeleton";
+	model.height		= 1.85;
+	model.ani		= "Rousselet";
+	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
+	AssignModelType(isstart, model, "Davycrew", 1.0);
+	AddCharacterModel(model);
+
+	model.description	= "Half man, half shellfish - one of Davy Jones' crew.";
+	model.id		= "Palafico";
+	model.FaceId		= 612;
+	model.nation		= CURSED;
+	model.assigned		= true;
+	model.camouflage	= true; // PB: Everyone is Enemy
+	model.sex		= "skeleton";
+	model.height		= 1.85;
+	model.ani		= "Rousselet";
+	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
+	AssignModelType(isstart, model, "Davycrew", 1.0);
+	AddCharacterModel(model);
+
+	model.description	= "Half man, half shellfish - one of Davy Jones' crew.";
+	model.id		= "Hadras";
+	model.FaceId		= 613;
+	model.nation		= CURSED;
+	model.assigned		= true;
+	model.camouflage	= true; // PB: Everyone is Enemy
+	model.sex		= "skeleton";
+	model.height		= 1.85;
+	model.ani		= "Rousselet";
+	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
+	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description =  "Your first basic collection of animated old bones covered in seaweed.";

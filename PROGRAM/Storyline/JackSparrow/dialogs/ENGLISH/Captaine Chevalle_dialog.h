@@ -49,7 +49,7 @@ string DLG_TEXT[149] = {
 "What are you doing here?",
 "I want to have a better view of the execution.",
 "You like to show off, don't you? Let's see how you'll be showing off without your head!",
-"You are quite happy to kill, aren't you? Hangman must've been the perfect carreer choice for you. Unfortunately, that carreer will soon be over.",
+"You are quite happy to kill, aren't you? Hangman must've been the perfect career choice for you. Unfortunately, that career will soon be over.",
 "Hah! My men were almost beginning to think I'd leave them to die with the English! But wait! Where is Jean-Bart?",
 "We don't have time to talk right now. We must leave now. There are bound to come more soldiers.",
 "We did it! We escaped! That wasn't so hard.",

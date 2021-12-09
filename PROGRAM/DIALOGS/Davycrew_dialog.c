@@ -90,12 +90,24 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\CLLA\CLLA004";
 			dialog.text = DLG_TEXT[16];
 			link.l1 = DLG_TEXT[17];
-			link.l1.go = "exit";
+			link.l1.go = "exit_roa_lair";
+		break;
+
+		case "roa_lair2":
+			dialog.snd = "Voice\CLLA\CLLA004";
+			dialog.text = DLG_TEXT[18];
+			link.l1 = DLG_TEXT[19];
+			link.l1.go = "exit_roa_lair";
 		break;
 
 		case "Exit":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+
+		case "exit_roa_lair":
+			DialogExit();
+			NextDiag.CurrentNode = "roa_lair2";
 		break;
 	}
 }

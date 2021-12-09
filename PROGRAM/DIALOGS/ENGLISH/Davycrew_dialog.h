@@ -1,4 +1,4 @@
-string DLG_TEXT[18] = {
+string DLG_TEXT[20] = {
 "Did you lose something, captain?",
 "What do you mean and who are you?",
 "Don't you remember a certain governor losing his daughter?",
@@ -17,5 +17,6 @@ string DLG_TEXT[18] = {
 "I confess I've never liked this kind of family reunion...",
 "Well, well... Look who we have here! Visiting the lair of the king of the sea himself, are you? He is awaiting you in his cabin up the stairs!",
 "Indeed I was looking to seek an audience with Mr. Jones... as it were.",
-
+"You don't look as though you belong here. Perhaps after a few hundred years...",
+"I don't intend to stay that long!",
 };

@@ -457,6 +457,9 @@ void BLI_SetObjectData()
 	objLandInterface.CommandTextures.list.t14.name = "battle_interface\ships_32.tga";
 	objLandInterface.CommandTextures.list.t14.xsize = 4;
 	objLandInterface.CommandTextures.list.t14.ysize = 4;
+	objLandInterface.CommandTextures.list.t15.name = "battle_interface\ships_48.tga";
+	objLandInterface.CommandTextures.list.t15.xsize = 4;
+	objLandInterface.CommandTextures.list.t15.ysize = 4;
 // <-- KK
 
 	objLandInterface.CommandTextures.CommandTexNum = 0;

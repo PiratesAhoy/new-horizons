@@ -1164,7 +1164,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.name = TranslateString("", "Davy");
 	ch.lastname = TranslateString("", "Jones");
 	ch.id		= "Davy Jones";
-	ch.model = "DavyJones"; // Damski62
+	ch.model = "DavyJones"; // NikK
+	ch.model.animation = "Rousselet";
 	ch.sex = "man";
 //	ch.sound_type = "pirate";
 //	ch.greeting = "Gr_Davy Jones";
@@ -4882,7 +4883,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.name = TranslateString("", "Palafico"); // PB
 	ch.lastname = "";
 	ch.id		= "Davycrew_01";
-	ch.model	= "davy4";
+	ch.model	= "Palafico";
+	ch.model.animation = "Rousselet";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade1");
@@ -4919,12 +4921,13 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	//  Davy's crewmember2
-	ch.old.name = "Jimmy";
-	ch.old.lastname = "Legs";
-	ch.name = TranslateString("", "Jimmy"); // PB
-	ch.lastname = TranslateString("", "Legs"); // PB
+	ch.old.name = "Penrod";		// was "Jimmy"
+	ch.old.lastname = "";		// was "Legs"
+	ch.name = TranslateString("", "Penrod");
+	ch.lastname = "";
 	ch.id		= "Davycrew_02";
-	ch.model	= "davy5";
+	ch.model	= "Penrod";	// New models don't include Jimmy Legs. (Penrod has an extra leg.)
+	ch.model.animation = "Rousselet";
 	ch.sex = "man";
 	ch.sound_type = "pirate";
 	GiveItem2Character(ch, "blade4");

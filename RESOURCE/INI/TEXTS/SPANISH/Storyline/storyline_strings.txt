@@ -452,7 +452,7 @@ icardo{Ricardo}
 Orellana{Orellana}
 The Devil's Ship{El barco del Diablo}
 You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.{Hiciste un pacto con el Diablo para salvar a tu amor y a ti mismo de una muerte segura a cambio de tu alma. El demonio te traicionó arrebatándote todo lo que amabas. Con tu corazón lleno de rabia y ansias de venganza, siembras la muerte en tu camino con la ayuda de tu barco maldito.}
-Mariana{Mariana}
+La Mariana{La Mariana}
 Parson{Parson}
 
 Couchcaptain{Couchcaptain}
