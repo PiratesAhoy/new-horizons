@@ -1753,6 +1753,7 @@ void SetWindow(int iWindow)
 			SetNodeUsing("TITLE_WINDOW", false);
 			SetNodeUsing("EXIT_WINDOW_BUTTON", false);
 			SetNodeUsing("DIALOG_SELECT_BUTTON", false);
+			SendMessage(&GameInterface, "lsl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 5); //Add
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "Title", "", FONT_TITLE, 320, 110, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);
 			SetNodeUsing("PLAYERTPYPESCROLLBAR", false);
 			SendMessage(&GameInterface, "lslsssllllllfl", MSG_INTERFACE_MSG_TO_NODE, "WINDOWSTRINGES", 0, "playertypename", "", FONT_NORMAL, 162, 144, COLOR_NORMAL, 0, SCRIPT_ALIGN_CENTER, true, 0.8, 0);

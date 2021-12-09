@@ -1097,7 +1097,7 @@ void CreateStoryCharacters(ref n)
 	ch.lastname = TranslateString("","Wellesley");
 	ch.id		= "Lady Barbara Wellesley";
 	ch.model = "Lady_Barbara_Wellesley";
-	ch.model.animation = "woman_ab_PoTC";
+	ch.model.animation = "woman_sit";
 	ch.sex = "woman";
 //	ch.sound_type = "female_citizen";
 	ch.location	= "";

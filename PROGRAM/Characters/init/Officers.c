@@ -216,7 +216,7 @@ void CreateOfficersCharacters(ref n)
 	ch.id		= "Claire Larrouse";
 	ch.model = "50_33_40Claire"; // was corsair1_1
 	ch.model.height = 1.75;
-	ch.model.animation = "man_woman_sit";
+	ch.model.animation = "woman_sit";
 	ch.sex = "woman"; // was "man"
 	ch.loyality = 10;
 	ch.nodisarm	= 1;				// PB: Disable disarming

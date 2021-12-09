@@ -328,7 +328,7 @@ void CreateLogHeadersList()
 	{ 
 		tmp = "log"+i;
 		if(!CheckAttribute(&myCh, "shiplog.Date."+tmp)) break; // break in case of errors
-		tmpLogTitle = myCh.shiplog.Date.(tmp) + "        " + GetTranslatedLog(myCh.shiplog.Title.(tmp)); // MAXIMUS 27.06.2019: localization
+		tmpLogTitle = myCh.shiplog.Date.(tmp) + "        " + GetTranslatedLog(myCh.shiplog.Title.(tmp)); // MAXIMUS 27.06.2019: localization  
 		if( tmpLogTitle == "")
 		{
 			continue;   
@@ -517,6 +517,7 @@ void DisplayLogText()
 	GameInterface.strings.LogEntry_Title = GetTranslatedLog(tmpLogTitle); // MAXIMUS 27.06.2019: localization
 	EnableString("LogEntry_Date");
 	EnableString("LogEntry_Title");
+
 
 	SendMessage(&GameInterface,"lss",MSG_INTERFACE_SET_FORMATEDTEXT,"LOGENTRY_TEXT",""); // MAXIMUS 12.08.2019: fix - after reopen log, the log text was doubled
 	SetFormatedLogText("LOGENTRY_TEXT", GetTranslatedLog(tmpLogEntry)); // MAXIMUS 27.06.2019: localization

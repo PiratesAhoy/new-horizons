@@ -1497,8 +1497,8 @@ void StartStoryLine()
 
 				//SetCurrentTime(12, 0);		//closed to Maltains
 			SetCurrentTime(2, 0);				//open to Maltains if info from Hands (given in "start_Maltains" below)
-				//SetNextWeather("Clear");
-			SetNextWeather("Heavy Rain");
+			SetNextWeather("Clear");
+			// SetNextWeather("Heavy Rain");
 
 				SetModel(PChar, "Howard_Pyle", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 				

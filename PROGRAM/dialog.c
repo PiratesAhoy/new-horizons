@@ -27,6 +27,7 @@ void DialogsInit()
 //Начать диалог
 bool DialogMain(ref Character)
 {
+	trace("Character " + Character.id + " belongs to " + Character.chr_ai.group);
 	//Add the debug dialog files for everyone
 	Character.Dialog.Filename.Debug = "Debug.c";
 	if(CheckAttribute(Character, "condition") && Character.condition=="reload") return false;//MAXIMUS: prevents from dialogs start during reload -->
@@ -204,7 +205,7 @@ void StartDialogMain()
 void DialogPlayGreeting()
 {
 	DelEventHandler("PlayDialogGreeting", "DialogPlayGreeting");
-	Dialog.greeting = "Gr_none";		// this causes a fixed length dialog animation with no sound
+	DeleteAttribute(&Dialog, "greeting");		// this causes a fixed length dialog animation with no sound
 	PlayGreeting(CharacterRef);			// play the greeting explicitly rather than letting the dialog engine do it - 19Mar09
 }
 // <-- KK

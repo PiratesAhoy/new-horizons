@@ -1,19 +1,12 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-{=====| WoodesRogers.c |=====}
 Howard{Howard}
 Pyle{Pyle}
-
-{=====| StartStoryline.c |=====}
-
-{=====| quests_reaction.c |=====}
 Israel{Israel}
 Hands{Hands}
 Samuel{Samuel}
 Odel{Odel}
 Edward{Edward}
 Teach{Teach}
-
-{=====| QuebradasCostillas.c |=====}
 Celestine{Celestine}
 Maupassant{Maupassant}
 Natalia{Natalia}
@@ -77,7 +70,7 @@ Low{Low}
 Phineas{Phineas}
 Bunce{Bunce}
 Gow{Gow}
-Charles Vane's{Charles Vane's}
+Charles Vane's{Charles Vane}
 Walter{Walter}
 Kennedy{Kennedy}
 England{England}
@@ -110,16 +103,16 @@ Rosabella{Rosabella}
 Issalini{Issalini}
 Woodes{Woodes}
 Rogers{Rogers}
-Grandma{Grandma}
+Grandma{Abuela}
 Dave{Dave}
 Edna{Edna}
 Alexander{Alexander}
 Selkirk{Selkirk}
-Friday{Friday}
-Powdermonkey{Powdermonkey}
+Friday{Viernes}
+Powdermonkey{Mono polvorero}
 Daniel{Daniel}
 De Foe{De Foe}
-Citizen{Citizen}
+Citizen{Ciudadano}
 Claire{Claire}
 Voyant{Voyant}
 Minerva{Minerva}
@@ -129,10 +122,10 @@ Sarah{Sarah}
 Fitter{Fitter}
 Laurence{Laurence}
 Wellman{Wellman}
-Father{Father}
+Father{Padre}
 Bernard{Bernard}
-Soldier{Soldier}
-Docker{Docker}
+Soldier{Soldado}
+Docker{Estibador}
 Gillian{Gillian}
 Atterbury{Atterbury}
 Griffith{Griffith}
@@ -161,10 +154,10 @@ Flann{Flann}
 Marrow{Marrow}
 Mortimer{Mortimer}
 Pitchblende{Pitchblende}
-Guncrew{Guncrew}
+Guncrew{Artillero}
 Benjamin{Benjamin}
 Hornigold{Hornigold}
-lieutenant{lieutenant}
+lieutenant{Teniente}
 Richards{Richards}
 Caesar{Caesar}
 JRH{JRH}
@@ -206,10 +199,10 @@ Juan{Juan}
 Florin{Florin}
 Peter{Peter}
 Blowhorn{Blowhorn}
-Mummy{Mummy}
-Blackbeard's{Blackbeard's}
-head{head}
-Swedish{Swedish}
+Mummy{Momia}
+Blackbeard's{Cabeza de}
+head{Barbanegra}
+Swedish{Sueco}
 Guy{Guy}
 Konrad{Konrad}
 Ljungberg{Ljungberg}
@@ -258,7 +251,7 @@ Johan{Johan}
 Löfqvist{Löfqvist}
 Pehr{Pehr}
 Ståhlfot{Ståhlfot}
-Sister{Sister}
+Sister{Hermana}
 Jean{Jean}
 Dubou{Dubou}
 Marc{Marc}
@@ -272,21 +265,21 @@ Barreto{Barreto}
 Bertrand{Bertrand}
 Ogeron{Ogeron}
 Maynard{Maynard}
-Bandit{Bandit}
-Bandit's{Bandit's}
-leader{leader}
-Maltese{Maltese}
+Bandit{Bandido}
+Bandit's{Bandido}
+leader{líder}
+Maltese{Maltés}
 Sir William{Sir William}
 Stapelton{Stapelton}
-Clerk{Clerk}
-Surgeon{Surgeon}
-Captain{Captain}
-Chaplain{Chaplain}
-German{German}
-Knight{Knight}
+Clerk{Secretario}
+Surgeon{Cirujano}
+Captain{Capitán}
+Chaplain{Capellán}
+German{Alemán}
+Knight{Caballero}
 Margaret{Margaret}
 Pough{Pough}
-Native{Native}
+Native{Nativo}
 Louis{Louis}
 Arot{Arot}
 Anna H{Anna H}
@@ -341,11 +334,11 @@ Kie{Kie}
 Löfgren{Löfgren}
 Simon{Simon}
 Grandell{Grandell}
-Cardinal Gabr{Cardinal Gabr}
+Cardinal Gabr{Cardenal Gabr}
 Fortelius{Fortelius}
-Vatican{Vatican}
-priest{priest}
-monk{monk}
+Vatican{Vaticano}
+priest{sacerdote}
+monk{monje}
 Petrus{Petrus}
 Aboensis{Aboensis}
 Olof{Olof}
@@ -353,32 +346,32 @@ Tomasson{Tomasson}
 Postman{Postman}
 Greensail{Greensail}
 Joseph{Joseph}
-Brooks Jr{Brooks Jr}
+Brooks Jr{Brooks Jr.}
 James{James}
 Blake{Blake}
 Philips{Philips}
-gunner Phillip{gunner Phillip}
+gunner Phillip{artillero Phillip}
 Morton{Morton}
 Nathaniel{Nathaniel}
 Jackson{Jackson}
-quartermaster Thomas{quartermaster Thomas}
+quartermaster Thomas{intendente Thomas}
 Miller{Miller}
 White{White}
 Gills{Gills}
 Gates{Gates}
-Brooks Sr{Brooks Sr}
+Brooks Sr{Brooks Sr.}
 Robbins{Robbins}
 Curtice{Curtice}
 Husk{Husk}
-boatswain Garrat{boatswain Garrat}
+boatswain Garrat{contramaestre Garrat}
 Gibbens{Gibbens}
-carpenter Owen{carpenter Owen}
+carpenter Owen{carpintero Owen}
 Stephen{Stephen}
 Stiles{Stiles}
 Salter{Salter}
 Carnes{Carnes}
-Boardman Hawes{Boardman Hawes}
-Major Stede{Major Stede}
+Boardman Hawes{Abordador Hawes}
+Major Stede{Mayor Stede}
 Bonnet{Bonnet}
 David{David}
 Herriot{Herriot}

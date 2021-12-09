@@ -32,7 +32,13 @@
 #include "ITEMS\itemLogic.c"
 #include "ITEMS\items_utilite.c"
 #include "sound\alias.c" // KK
-#include "weather\WhrWeather.c"
+
+// ======================================
+// WEATHER OPTIONS
+// ======================================
+#include "Weather_NH/WhrWeather.c"   // NH weather
+// #include "Weather_GOF/WhrWeather.c"   //GOF weather
+
 #include "controls\controls.c"
 #include "landencounters\landencounters.c"
 #include "NK.c" // 05-07-03 NK for misc functions
@@ -41,7 +47,11 @@
 #include "models\initModels.c" //scheffnow
 #include "Characters\init\monks.c" // scheffnow
 #include "CCCFunctions.c" // ccc
-#include "CCCdirectsail.c" // ccc Jan07, directsail code
+
+// Directsail code.  Use only directsail_NH.c (original) or directsail_GOF.c (hybrid of GOF and NH)
+// #include "directsail_NH.c" // ccc Jan07, directsail code
+#include "directsail_GOF.c" // ccc Jan07, directsail code
+
 #include "elrapido.c" // El Rapido
 #include "MAXIMUS_Functions.c" // MAXIMUS
 #include "KB_routines.c"  // KBlack - to accomodate functions from other mods - initially for tuning ships mod

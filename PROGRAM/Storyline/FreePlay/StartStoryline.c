@@ -33,11 +33,6 @@ void StartStoryLine()
 		else PChar.start_weapon.blade = "bladeCiri";
 	}
 
-//	if(GetMySimpleOldName(pchar) == "Geralt of Rivia" && pchar.model == "Geralt"){
-//		if(ENABLE_WEAPONSMOD) PChar.start_weapon.blade = "witcher_steel+2";
-//		else PChar.start_weapon.blade = "witcher_steel";
-//	}
-
 	if (GetCurrentFlag() != ENGLAND && GetCurrentFlag() != PERSONAL_NATION)
 	{
 		ch.nation = GetCurrentFlag();
@@ -179,6 +174,7 @@ void StartStoryLine()
 			Locations[FindLocation("Turks_port")].reload.l19.go = "Turks_poker_entre";
 			Locations[FindLocation("Turks_port")].reload.l19.emerge = "reload1";
 			Locations[FindLocation("Turks_port")].reload.l19.autoreload = "0";
+			Locations[FindLocation("Turks_port")].reload.l19.close_for_night = 1;
 
 			Locations[FindLocation("Turks_port")].reload.l20.name = "balcony";
 			Locations[FindLocation("Turks_port")].reload.l20.go = "Turks_poker_entre";

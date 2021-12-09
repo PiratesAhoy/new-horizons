@@ -13,7 +13,7 @@ float	WDM_MAP_TO_SEA_ENCOUNTERS_SCALE;		// Set in function InitOpenSeaMod() in P
 
 object worldMap;
 
-string wdmCurrentIsland = WDM_NONE_ISLAND;
+string wdmCurrentIsland = "open_sea";
 
 
 //=========================================================================================

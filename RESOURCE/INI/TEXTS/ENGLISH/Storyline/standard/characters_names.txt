@@ -1,8 +1,6 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-
 Nathaniel{Nathaniel}
 Hawk{Hawk}
-
 Danielle{Danielle}
 Greene{Greene}
 Ralph{Ralph}
@@ -14,7 +12,6 @@ Leborio{Leborio}
 Drago{Drago}
 Gervasio{Gervasio}
 Serrao{Serrao}
-
 Vincent{Vincent}
 Bethune{Bethune}
 Waulter{Waulter}
@@ -79,7 +76,6 @@ Barbossa{Barbossa}
 Robert{Robert}
 Christopher{Christopher}
 Silehard{Silehard}
-
 Bythesea{Bythesea}
 Harold{Harold}
 Barrat{Barrat}
@@ -94,7 +90,6 @@ citizen{citizen}
 Soldier{Soldier}
 Ragetti{Ragetti}
 Pintel{Pintel}
-
 Captain{Captain}
 Kalen{Kalen}
 Mottram{Mottram}

@@ -150,6 +150,7 @@ void InitShips()
 		// whoops this should be left blank as default refShip.CanBuy = true;
 		refShip.Type.Trade = true;
 		refShip.Type.War = true;
+		refShip.Track.Enable = true;
 
 		// PS -->
 		/*these override refShip.name for each case
@@ -276,6 +277,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 32;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.6, 8.2";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.4, 5.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -378,6 +390,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 32;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.6, 8.2";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.4, 5.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -477,6 +500,17 @@ void InitShips()
 	refShip.MaxCrew		 = 110;
 	refShip.MinCrew		 = 20;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.07;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "3.9, 4.8";
+	refShip.Track1.Speed = "6.6, 8.1";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.7, 6.3";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.Price		   = 44000;
 	refShip.HP			  = 2000;
 	refShip.SP			  = 200;
@@ -567,6 +601,17 @@ void InitShips()
 	refShip.Capacity		= 1800;//BB was 2000
 	refShip.CannonsQuantity 	= 32;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.7, 8.2";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.2, 5.7";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -664,6 +709,17 @@ void InitShips()
 	refShip.Capacity	= 1850;
 	refShip.Cannon		= CANNON_TYPE_LONG_LBS6;
 	refShip.MaxCaliber	= 6;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.4, 5.9";
+	refShip.Track2.Speed = "0.16, 0.27";
 
 	refShip.CannonsQuantity = 14;
 	refShip.Cannons.Borts.cannonf.qty = 0;
@@ -767,6 +823,17 @@ void InitShips()
 	refShip.Cannon		= CANNON_TYPE_LONG_LBS6;
 	refShip.MaxCaliber	= 6;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.4, 5.9";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.CannonsQuantity = 14;
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
@@ -864,6 +931,17 @@ void InitShips()
 	refShip.Capacity	= 1550;
 	refShip.Cannon		= CANNON_TYPE_LONG_LBS9;
 	refShip.MaxCaliber	= 9;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.6, 4.5";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.2, 5.6";
+	refShip.Track2.Speed = "0.17, 0.28";
 
 	refShip.CannonsQuantity = 16;
 	refShip.Cannons.Borts.cannonf.qty = 0;
@@ -965,6 +1043,17 @@ void InitShips()
 	refShip.Cannon		= CANNON_TYPE_LONG_LBS9;
 	refShip.MaxCaliber	= 9;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.6, 4.5";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.2, 5.6";
+	refShip.Track2.Speed = "0.17, 0.28";
+
 	refShip.CannonsQuantity = 16;
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
@@ -1064,6 +1153,17 @@ void InitShips()
 	refShip.Capacity	= 1550;
 	refShip.Cannon		= CANNON_TYPE_LONG_LBS9;
 	refShip.MaxCaliber	= 9;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.6, 4.5";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.2, 5.6";
+	refShip.Track2.Speed = "0.17, 0.28";
 
 	refShip.CannonsQuantity = 16;
 	refShip.Cannons.Borts.cannonf.qty = 0;
@@ -1166,6 +1266,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 26;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.08;
+	refShip.Track1.LifeTime = 72;
+	refShip.Track1.Width = "5.4, 6.8";
+	refShip.Track1.Speed = "6.3, 7.7";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 40;
+	refShip.Track2.Width = "7.2, 9.1";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -1272,6 +1383,17 @@ void InitShips()
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 63;
+	refShip.Track1.Width = "4.6, 5.8";
+	refShip.Track1.Speed = "6.5, 8.0";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.9, 7.6";
+	refShip.Track2.Speed = "0.15, 0.26";
+
 	refShip.BigPicTexName = "SHIPS1"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -1358,6 +1480,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.4, 4.3";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.8, 5.2";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -1454,6 +1587,17 @@ void InitShips()
 	refShip.Capacity		= 1500;//BB was 1250
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.5";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.5";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -1550,6 +1694,17 @@ void InitShips()
 	refShip.Capacity	= 1000;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.6, 5.0";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -1651,6 +1806,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.4, 4.3";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.8, 5.2";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -1754,6 +1920,17 @@ void InitShips()
 	refShip.Capacity		 = 1250;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.3, 4.3";
+	refShip.Track1.Speed = "6.6, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.14, 0.22";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -1854,6 +2031,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.6, 5.0";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -1953,6 +2141,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -2055,6 +2254,17 @@ void InitShips()
 	refShip.Capacity		 = 1250;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.4, 4.3";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.8, 5.2";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -2163,6 +2373,17 @@ void InitShips()
 	refShip.Capacity		 = 1450;//BB was 1250
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.9, 5.4";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -2278,6 +2499,17 @@ void InitShips()
 	refShip.HP				= 1000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.3, 4.4";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -2374,6 +2606,17 @@ void InitShips()
 	refShip.HP			  = 1500;
 	refShip.SP			  = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.1, 4.0";
+	refShip.Track1.Speed = "6.9, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.3, 4.7";
+	refShip.Track2.Speed = "0.17, 0.28";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -2464,6 +2707,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 18;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.2, 4.2";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.5, 4.9";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -2565,6 +2819,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 18;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.2, 4.2";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.5, 4.9";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -2668,6 +2933,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 18;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.2, 4.2";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.5, 4.9";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -2766,6 +3042,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.3, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.6, 5.0";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -2866,6 +3153,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.3, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.6, 5.0";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -2965,6 +3263,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.3, 4.4";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3060,6 +3369,17 @@ void InitShips()
 	refShip.Capacity		= 1250; // Armada: Adjusted for Bartolomeu storyline
 	refShip.CannonsQuantity 	= 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.3, 4.4";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.6, 5.1";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3168,6 +3488,17 @@ void InitShips()
 	refShip.Capacity		= 1250; // Armada: adjusted for Assassin storyline
 	refShip.CannonsQuantity 	= 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.3, 4.4";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.6, 5.1";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3267,6 +3598,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.3, 4.4";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3373,6 +3715,17 @@ void InitShips()
 	refShip.HP			  = 1000;
 	refShip.SP			  = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 49;
+	refShip.Track1.Width = "3.5, 4.6";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "3.9, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -3460,6 +3813,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3561,6 +3925,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3665,6 +4040,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3763,6 +4149,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3860,6 +4257,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity 	= 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.17, 0.29";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -3967,6 +4375,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -4070,6 +4489,17 @@ void InitShips()
 	refShip.Capacity		= 1350;
 	refShip.CannonsQuantity		= 16;	// Yes, it's called "20_Gun", but the model only has 16!
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.4, 4.3";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.8, 5.3";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -4167,6 +4597,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.6, 4.5";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.1, 5.6";
+	refShip.Track2.Speed = "0.17, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -4264,6 +4705,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 22;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.6, 4.5";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.1, 5.6";
+	refShip.Track2.Speed = "0.17, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -4361,6 +4813,17 @@ void InitShips()
 	refShip.Capacity		= 1350;
 	refShip.CannonsQuantity		= 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.4, 4.3";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.8, 5.3";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -4458,6 +4921,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity		= 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.17, 0.29";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -4556,6 +5030,17 @@ void InitShips()
 	refShip.HP			  = 300;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 41;
+	refShip.Track1.Width = "2.7, 3.7";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.5, 3.8";
+	refShip.Track2.Speed = "0.14, 0.22";
+
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -4636,6 +5121,17 @@ void InitShips()
 	refShip.MaxCrew		 = 5;
 	refShip.MinCrew		 = 2;
 	refShip.Price			= 2600;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 41;
+	refShip.Track1.Width = "2.7, 3.7";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.5, 3.8";
+	refShip.Track2.Speed = "0.14, 0.22";
 
 	refShip.HP			  = 300;
 	refShip.SP			  = 100;
@@ -4721,6 +5217,17 @@ void InitShips()
 	refShip.Price			= 2000;
 	refShip.HP 		   = 200;
 	refShip.SP 		   = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 41;
+	refShip.Track1.Width = "2.6, 3.6";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.4, 3.7";
+	refShip.Track2.Speed = "0.14, 0.23";
 
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 // KK -->
@@ -4808,6 +5315,17 @@ void InitShips()
 	refShip.SupplyScalar = 1.0;
 	refShip.CannonsQuantity = 5;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "4.4, 6.4";
+	refShip.Track1.Speed = "6.0, 7.6";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.0, 7.0";
+	refShip.Track2.Speed = "0.06, 0.07";
+
 	refShip.Cannons.Borts.cannonf.qty = 1;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -4924,6 +5442,17 @@ void InitShips()
 	refShip.MinCrew			= 5;
 	refShip.Price			= 9600;//BB was 15600
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 41;
+	refShip.Track1.Width = "2.7, 3.7";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.5, 3.8";
+	refShip.Track2.Speed = "0.14, 0.23";
+
 	refShip.HP				= 500;
 	refShip.SP				= 100;
 
@@ -5033,6 +5562,17 @@ void InitShips()
 	refShip.Capacity		= 700;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.0, 4.0";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.1, 4.5";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5125,6 +5665,17 @@ void InitShips()
 	refShip.Capacity		= 700;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.0, 4.0";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.1, 4.5";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5215,6 +5766,17 @@ void InitShips()
 	refShip.Capacity		= 700;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.0, 4.0";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.2, 4.5";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5305,6 +5867,17 @@ void InitShips()
 	refShip.Capacity		= 800;
 	refShip.CannonsQuantity = 14;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.1, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.3, 4.7";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5397,6 +5970,17 @@ void InitShips()
 	refShip.Capacity		= 700;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.0, 4.0";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.2, 4.5";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5486,6 +6070,17 @@ void InitShips()
 	refShip.Capacity		= 800;
 	refShip.CannonsQuantity = 14;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.1, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.3, 4.7";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5578,6 +6173,17 @@ void InitShips()
 	refShip.Weight		= Tonnes2CWT(250);//BB ? weight seems large compared to normal sloop?(was 390)
 	refShip.Capacity	= 1100;//BB these were trade ships too(was 500). Increased to better match weight and reduced guns
 	refShip.CannonsQuantity	= 10;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.2, 4.3";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.5, 4.9";
+	refShip.Track2.Speed = "0.15, 0.25";
 
 	refShip.Cannons.Borts.cannonf.qty = 1;
 	refShip.Cannons.Borts.cannonb.qty = 1;
@@ -5674,6 +6280,17 @@ void InitShips()
 	refShip.Capacity		= 300;
 	refShip.CannonsQuantity = 12;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 45;
+	refShip.Track1.Width = "2.8, 3.7";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.8, 4.2";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5767,6 +6384,17 @@ void InitShips()
 	refShip.Capacity		 = 300;
 	refShip.CannonsQuantity = 12;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 41;
+	refShip.Track1.Width = "2.7, 3.8";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 4.0";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5859,6 +6487,17 @@ void InitShips()
 	refShip.Capacity		= 700;
 	refShip.CannonsQuantity 	= 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.0, 4.0";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.2, 4.5";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -5945,6 +6584,17 @@ void InitShips()
 	refShip.Capacity		= 800;
 	refShip.CannonsQuantity = 12;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.1, 4.0";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.2, 4.6";
+	refShip.Track2.Speed = "0.14, 0.23";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -6046,6 +6696,17 @@ void InitShips()
 	refShip.Capacity		= 800;//BB was 1000
 	refShip.CannonsQuantity = 12;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.1, 4.0";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.2, 4.6";
+	refShip.Track2.Speed = "0.14, 0.23";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -6137,6 +6798,17 @@ void InitShips()
 	refShip.Capacity		 = 800;
 	refShip.CannonsQuantity = 12;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.1, 4.0";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.2, 4.6";
+	refShip.Track2.Speed = "0.14, 0.23";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -6232,6 +6904,17 @@ void InitShips()
 	refShip.Capacity		= 1100;//BB was 1000
 	refShip.CannonsQuantity = 12;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.2, 4.3";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.4, 4.9";
+	refShip.Track2.Speed = "0.14, 0.23";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -6325,6 +7008,17 @@ void InitShips()
 	refShip.Capacity		= 1150;//BB was 1000
 	refShip.CannonsQuantity = 8;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.2, 4.3";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.4, 4.9";
+	refShip.Track2.Speed = "0.14, 0.22";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -6417,6 +7111,17 @@ void InitShips()
 	refShip.Capacity		= 950;//BB was 1000
 	refShip.CannonsQuantity = 12;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.1, 4.2";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.3, 4.7";
+	refShip.Track2.Speed = "0.14, 0.23";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -6514,6 +7219,17 @@ void InitShips()
 	refShip.HP				= 1000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 48;
+	refShip.Track1.Width = "3.3, 4.4";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -6599,6 +7315,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 30;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.7, 4.4";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -6695,6 +7422,17 @@ void InitShips()
 	refShip.Capacity		= 2200;
 	refShip.CannonsQuantity = 26;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "4.0, 4.9";
+	refShip.Track1.Speed = "6.8, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "5.0, 6.5";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -6797,6 +7535,17 @@ void InitShips()
 	refShip.HP			  	= 2400;
 	refShip.SP			  	= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "4.0, 4.9";
+	refShip.Track1.Speed = "6.8, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "5.0, 6.5";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.BigPicTexName = "SHIPS1"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -6876,6 +7625,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity 	= 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 6.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -6970,6 +7730,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 6.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -7063,6 +7834,17 @@ void InitShips()
 	refShip.Weight			= Tonnes2CWT(450);
 	refShip.Capacity			= 5000;
 	refShip.CannonsQuantity		= 30;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.09;
+	refShip.Track1.LifeTime = 73;
+	refShip.Track1.Width = "5.3, 6.7";
+	refShip.Track1.Speed = "6.1, 7.6";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "6.9, 8.9";
+	refShip.Track2.Speed = "0.11, 0.17";
 
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
@@ -7165,6 +7947,17 @@ void InitShips()
 	refShip.Capacity			= 5000;
 	refShip.CannonsQuantity		= 30;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.09;
+	refShip.Track1.LifeTime = 73;
+	refShip.Track1.Width = "5.3, 6.7";
+	refShip.Track1.Speed = "6.1, 7.6";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "6.9, 8.9";
+	refShip.Track2.Speed = "0.11, 0.17";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 
@@ -7261,6 +8054,17 @@ void InitShips()
 	refShip.Capacity		= 3500;
 	refShip.CannonsQuantity = 34;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.08;
+	refShip.Track1.LifeTime = 66;
+	refShip.Track1.Width = "4.6, 5.7";
+	refShip.Track1.Speed = "6.4, 7.9";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.9, 7.6";
+	refShip.Track2.Speed = "0.14, 0.23";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -7357,6 +8161,17 @@ void InitShips()
 	refShip.Capacity		= 3500;
 	refShip.CannonsQuantity = 34;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.09;
+	refShip.Track1.LifeTime = 67;
+	refShip.Track1.Width = "4.6, 5.7";
+	refShip.Track1.Speed = "6.4, 7.9";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.9, 7.6";
+	refShip.Track2.Speed = "0.13, 0.22";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -7444,6 +8259,17 @@ void InitShips()
 	refShip.Capacity		= 3500;
 	refShip.CannonsQuantity = 34;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.09;
+	refShip.Track1.LifeTime = 67;
+	refShip.Track1.Width = "4.6, 5.7";
+	refShip.Track1.Speed = "6.4, 7.9";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.9, 7.6";
+	refShip.Track2.Speed = "0.13, 0.22";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -7524,6 +8350,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 6.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -7618,6 +8455,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 24;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.08;
+	refShip.Track1.LifeTime = 72;
+	refShip.Track1.Width = "5.4, 6.8";
+	refShip.Track1.Speed = "6.3, 7.7";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 40;
+	refShip.Track2.Width = "7.2, 9.1";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 6;
 	// NK <--
@@ -7714,6 +8562,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 24;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.08;
+	refShip.Track1.LifeTime = 72;
+	refShip.Track1.Width = "5.4, 6.8";
+	refShip.Track1.Speed = "6.3, 7.7";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 40;
+	refShip.Track2.Width = "7.2, 9.1";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 6;
 	// NK <--
@@ -7819,6 +8678,17 @@ void InitShips()
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 60;
+	refShip.Track1.Width = "4.4, 5.5";
+	refShip.Track1.Speed = "6.6, 8.1";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.5, 7.2";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -7904,6 +8774,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity 	= 30;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.08;
+	refShip.Track1.LifeTime = 72;
+	refShip.Track1.Width = "5.4, 6.8";
+	refShip.Track1.Speed = "6.3, 7.7";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 40;
+	refShip.Track2.Width = "7.2, 9.1";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 6;
 	// NK <--
@@ -7999,6 +8880,17 @@ void InitShips()
 	refShip.Capacity		= 4000;
 	refShip.CannonsQuantity = 54;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.09;
+	refShip.Track1.LifeTime = 74;
+	refShip.Track1.Width = "5.4, 5.8";
+	refShip.Track1.Speed = "6.9, 8.2";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.7, 9.2";
+	refShip.Track2.Speed = "0.24, 0.45";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 6;
 	// NK <--
@@ -8096,6 +8988,17 @@ void InitShips()
 	refShip.Capacity			= 8000;
 	refShip.CannonsQuantity 		= 40;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 84;
+	refShip.Track1.Width = "7.5, 8.9";
+	refShip.Track1.Speed = "6.9, 7.8";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "11.1, 13.1";
+	refShip.Track2.Speed = "0.27, 0.49";
+
 	refShip.Cannons.Borts.cannonf.qty 	= 2;
 	refShip.Cannons.Borts.cannonb.qty	 = 4;
 	// NK <--
@@ -8190,6 +9093,17 @@ void InitShips()
 	refShip.Capacity		= 7500;
 	refShip.CannonsQuantity = 36;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 83;
+	refShip.Track1.Width = "7.2, 8.5";
+	refShip.Track1.Speed = "6.8, 7.8";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 46;
+	refShip.Track2.Width = "10.5, 12.5";
+	refShip.Track2.Speed = "0.25, 0.46";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -8290,6 +9204,17 @@ void InitShips()
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 // Petros -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.07;
+	refShip.Track1.LifeTime = 88;
+	refShip.Track1.Width = "7.5, 8.8";
+	refShip.Track1.Speed = "6.8, 7.8";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "11.3, 13.3";
+	refShip.Track2.Speed = "0.27, 0.5";
+
 	refShip.EmblemedSails.normalTex = "sail_petros_plain.tga";
 	refShip.EmblemedSails.nationFileName = "sail_petros_plain.tga";
 // <-- Petros
@@ -8382,6 +9307,17 @@ void InitShips()
 	refShip.Capacity		= 6000;
 	refShip.CannonsQuantity = 56;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 77;
+	refShip.Track1.Width = "6.7, 7.4";
+	refShip.Track1.Speed = "7.5, 8.4";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 46;
+	refShip.Track2.Width = "10.2, 11.8";
+	refShip.Track2.Speed = "0.35, 0.66";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -8479,6 +9415,17 @@ void InitShips()
 	refShip.Capacity		= 6000; // Modified for Portugal, was 5000
 	refShip.CannonsQuantity = 56;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 77;
+	refShip.Track1.Width = "6.8, 7.4";
+	refShip.Track1.Speed = "7.6, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 46;
+	refShip.Track2.Width = "10.4, 11.9";
+	refShip.Track2.Speed = "0.36, 0.69";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -8551,6 +9498,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 40;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 71;
+	refShip.Track1.Width = "6.1, 6.8";
+	refShip.Track1.Speed = "7.5, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "9.2, 10.6";
+	refShip.Track2.Speed = "0.34, 0.64";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -8648,6 +9606,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity 	= 40;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 71;
+	refShip.Track1.Width = "6.1, 6.8";
+	refShip.Track1.Speed = "7.5, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "9.2, 10.6";
+	refShip.Track2.Speed = "0.34, 0.64";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -8748,6 +9717,17 @@ void InitShips()
 	refShip.Capacity		= 4000;
 	refShip.CannonsQuantity = 46;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 65;
+	refShip.Track1.Width = "5.1, 6.1";
+	refShip.Track1.Speed = "6.9, 8.2";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.0, 8.6";
+	refShip.Track2.Speed = "0.22, 0.39";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -8841,6 +9821,17 @@ void InitShips()
 	refShip.Capacity			= 4000;
 	refShip.CannonsQuantity		= 54;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.09;
+	refShip.Track1.LifeTime = 74;
+	refShip.Track1.Width = "5.4, 5.8";
+	refShip.Track1.Speed = "6.9, 8.2";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.7, 9.2";
+	refShip.Track2.Speed = "0.24, 0.45";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 6;
 	// NK <--
@@ -8939,6 +9930,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 52;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.1;
+	refShip.Track1.LifeTime = 79;
+	refShip.Track1.Width = "5.8, 6.5";
+	refShip.Track1.Speed = "6.6, 7.9";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "8.2, 10.0";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.Cannons.Borts.cannonf.qty = 4;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -9037,6 +10039,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 52;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.1;
+	refShip.Track1.LifeTime = 79;
+	refShip.Track1.Width = "5.8, 6.5";
+	refShip.Track1.Speed = "6.6, 7.9";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "8.2, 10.0";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.Cannons.Borts.cannonf.qty = 4;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -9133,6 +10146,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 52;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.1;
+	refShip.Track1.LifeTime = 79;
+	refShip.Track1.Width = "5.8, 6.5";
+	refShip.Track1.Speed = "6.6, 7.9";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "8.2, 10.0";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.Cannons.Borts.cannonf.qty = 4;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -9229,6 +10253,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 52;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.1;
+	refShip.Track1.LifeTime = 79;
+	refShip.Track1.Width = "5.8, 6.5";
+	refShip.Track1.Speed = "6.6, 7.9";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "8.2, 10.0";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.Cannons.Borts.cannonf.qty = 4;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -9326,6 +10361,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 52;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.1;
+	refShip.Track1.LifeTime = 79;
+	refShip.Track1.Width = "5.8, 6.5";
+	refShip.Track1.Speed = "6.6, 7.9";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "8.2, 10.0";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.Cannons.Borts.cannonf.qty = 4;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -9423,6 +10469,17 @@ void InitShips()
 	refShip.Capacity		= 5000;
 	refShip.CannonsQuantity = 52;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.1;
+	refShip.Track1.LifeTime = 79;
+	refShip.Track1.Width = "5.8, 6.5";
+	refShip.Track1.Speed = "6.6, 7.9";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "8.2, 10.0";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.Cannons.Borts.cannonf.qty = 4;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -9529,6 +10586,17 @@ void InitShips()
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 70;
+	refShip.Track1.Width = "5.9, 6.8";
+	refShip.Track1.Speed = "7.1, 8.3";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "8.4, 10.0";
+	refShip.Track2.Speed = "0.27, 0.5";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -9625,6 +10693,17 @@ void InitShips()
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 66;
+	refShip.Track1.Width = "5.4, 6.1";
+	refShip.Track1.Speed = "7.2, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.7, 9.1";
+	refShip.Track2.Speed = "0.28, 0.51";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -9717,6 +10796,17 @@ void InitShips()
 	refShip.HP			  = 4000;
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 70;
+	refShip.Track1.Width = "5.9, 6.8";
+	refShip.Track1.Speed = "7.1, 8.3";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "8.4, 10.0";
+	refShip.Track2.Speed = "0.27, 0.5";
 
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 // KK -->
@@ -9814,6 +10904,17 @@ void InitShips()
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 66;
+	refShip.Track1.Width = "5.4, 6.1";
+	refShip.Track1.Speed = "7.2, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.7, 9.1";
+	refShip.Track2.Speed = "0.28, 0.51";
+
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -9907,6 +11008,17 @@ void InitShips()
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 66;
+	refShip.Track1.Width = "5.4, 6.1";
+	refShip.Track1.Speed = "7.2, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.7, 9.1";
+	refShip.Track2.Speed = "0.28, 0.51";
+
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -9999,6 +11111,17 @@ void InitShips()
 	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 66;
+	refShip.Track1.Width = "5.4, 6.1";
+	refShip.Track1.Speed = "7.2, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.7, 9.1";
+	refShip.Track2.Speed = "0.28, 0.51";
+
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -10082,6 +11205,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.4, 4.3";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.9, 5.3";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -10168,6 +11302,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.4, 4.3";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.9, 5.3";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -10257,6 +11402,17 @@ void InitShips()
 	refShip.Capacity	= 1100;//BB was 1500, less cargo for crew quarters
 	refShip.CannonsQuantity	= 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.4, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "4.0, 5.3";
+	refShip.Track2.Speed = "0.17, 0.29";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -10351,6 +11507,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 24;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.07;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "3.6, 4.3";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.2, 5.6";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -10456,6 +11623,17 @@ void InitShips()
 	refShip.HP        = 3000;
 	refShip.SP        = 200;
 // Petros -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.08;
+	refShip.Track1.LifeTime = 60;
+	refShip.Track1.Width = "3.9, 4.6";
+	refShip.Track1.Speed = "6.6, 8.2";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.9, 6.3";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.EmblemedSails.normalTex = "sail_petros_blue_white.tga";
 	refShip.EmblemedSails.nationFileName = "sail_petros_blue_white.tga";
 // <-- Petros
@@ -10539,6 +11717,17 @@ void InitShips()
 	refShip.Capacity		= 1000;
 	refShip.CannonsQuantity = 24;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.3, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.7, 5.1";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -10635,6 +11824,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 30;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.7, 4.4";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -10730,6 +11930,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 30;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.5, 4.3";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.1, 5.5";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -10831,6 +12042,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 30;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.7, 4.4";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -10935,6 +12157,17 @@ void InitShips()
 	refShip.SP		= 200;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.7, 4.4";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -11020,6 +12253,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 30;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.7, 4.4";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -11114,6 +12358,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 32;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.7, 4.4";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -11207,6 +12462,17 @@ void InitShips()
 	refShip.Capacity		= 1750;
 	refShip.CannonsQuantity = 36;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.0, 4.6";
+	refShip.Track1.Speed = "7.2, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.1, 6.4";
+	refShip.Track2.Speed = "0.24, 0.43";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -11302,6 +12568,17 @@ void InitShips()
 	refShip.Capacity			= 2500;
 	refShip.CannonsQuantity			= 56;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2; // Chasers added by Armada
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -11401,6 +12678,17 @@ void InitShips()
 	refShip.Capacity			= 2500;
 	refShip.CannonsQuantity			= 56;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2; // Chasers added by Armada
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -11499,6 +12787,17 @@ void InitShips()
 	refShip.Capacity			= 3500;
 	refShip.CannonsQuantity			= 54;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.02;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "5.3, 5.9";
+	refShip.Track1.Speed = "8.0, 9.0";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 44;
+	refShip.Track2.Width = "8.0, 9.2";
+	refShip.Track2.Speed = "0.39, 0.74";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2; // Chasers added by Armada
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -11591,6 +12890,17 @@ void InitShips()
 	refShip.Capacity			= 2500;
 	refShip.CannonsQuantity			= 56;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2; // Chasers added by Armada
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -11671,7 +12981,7 @@ void InitShips()
 // on this day and date Dec 23 2009, 0325h
 
 //-------------------------------------------------------------------------
-// French Battle Frigate (Artémise class Frigate) By ZarethPL
+// French Battle Frigate (Art�mise class Frigate) By ZarethPL
 // Further model and texture work by Captain Armstrong and Armada; rigging by Hylie Pistof
 //     SWS / Flushdeck Frigate / WBT4
 //-------------------------------------------------------------------------
@@ -11689,6 +12999,17 @@ void InitShips()
 	refShip.Capacity			= 2500;
 	refShip.CannonsQuantity			= 56;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2; // Chasers added by Armada
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -11793,6 +13114,17 @@ void InitShips()
 	refShip.HP			  = 3250;
 	refShip.SP			  = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.0, 4.6";
+	refShip.Track1.Speed = "7.2, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.1, 6.4";
+	refShip.Track2.Speed = "0.24, 0.43";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -11883,6 +13215,17 @@ void InitShips()
 	refShip.Capacity		= 1750;
 	refShip.CannonsQuantity = 36;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.0, 4.6";
+	refShip.Track1.Speed = "7.2, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.1, 6.4";
+	refShip.Track2.Speed = "0.24, 0.43";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -11985,6 +13328,17 @@ void InitShips()
 	refShip.HP				= 5000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 38;
@@ -12078,6 +13432,17 @@ void InitShips()
 	refShip.HP				= 5000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 38;
@@ -12165,6 +13530,17 @@ void InitShips()
 	refShip.Price				= 428000;
 	refShip.HP				= 8000;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
 
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 	refShip.BI.Tex = 16;
@@ -12255,6 +13631,17 @@ void InitShips()
 	refShip.HP				= 8000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
+
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 38;
@@ -12343,6 +13730,17 @@ void InitShips()
 	refShip.Price				= 428000;
 	refShip.HP				= 8000;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
 
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 	refShip.BI.Tex = 16;
@@ -12433,6 +13831,17 @@ void InitShips()
 	refShip.HP				= 8000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
+
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 38;
@@ -12522,6 +13931,17 @@ void InitShips()
 	refShip.HP				= 8000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.8, 5.2";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.1";
+	refShip.Track2.Speed = "0.37, 0.71";
+
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 38;
@@ -12605,6 +14025,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 36;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.1, 4.8";
+	refShip.Track1.Speed = "7.1, 8.6";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.3, 6.6";
+	refShip.Track2.Speed = "0.23, 0.42";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -12704,6 +14135,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 36;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.1, 4.8";
+	refShip.Track1.Speed = "7.1, 8.6";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.3, 6.6";
+	refShip.Track2.Speed = "0.23, 0.42";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -12798,6 +14240,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 36;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.1, 4.8";
+	refShip.Track1.Speed = "7.1, 8.6";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.3, 6.6";
+	refShip.Track2.Speed = "0.23, 0.42";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -12889,6 +14342,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 42;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.2, 4.8";
+	refShip.Track1.Speed = "7.4, 8.7";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.6, 6.8";
+	refShip.Track2.Speed = "0.27, 0.49";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -12984,6 +14448,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 42;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.2, 4.8";
+	refShip.Track1.Speed = "7.4, 8.7";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.6, 6.8";
+	refShip.Track2.Speed = "0.27, 0.49";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -13074,6 +14549,17 @@ void InitShips()
 	refShip.Capacity		= 1750;
 	refShip.CannonsQuantity = 36;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.0, 4.6";
+	refShip.Track1.Speed = "7.2, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.1, 6.4";
+	refShip.Track2.Speed = "0.24, 0.43";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -13167,6 +14653,17 @@ void InitShips()
 	refShip.Capacity		= 1750;
 	refShip.CannonsQuantity = 36;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.0, 4.6";
+	refShip.Track1.Speed = "7.2, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.1, 6.4";
+	refShip.Track2.Speed = "0.24, 0.43";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -13268,6 +14765,17 @@ void InitShips()
 	refShip.SP				= 200;
 	refShip.Walk 				= "Flushdeck";
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 56;
+	refShip.Track1.Width = "4.3, 5.2";
+	refShip.Track1.Speed = "7.0, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.6, 7.0";
+	refShip.Track2.Speed = "0.22, 0.4";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 38;
@@ -13355,6 +14863,17 @@ void InitShips()
 	refShip.Capacity		= 2500;
 	refShip.CannonsQuantity = 40;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.5, 5.2";
+	refShip.Track1.Speed = "7.5, 8.8";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 40;
+	refShip.Track2.Width = "6.2, 7.5";
+	refShip.Track2.Speed = "0.29, 0.55";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -13448,6 +14967,17 @@ void InitShips()
 	refShip.Capacity		= 2500;
 	refShip.CannonsQuantity = 44;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 56;
+	refShip.Track1.Width = "4.6, 5.1";
+	refShip.Track1.Speed = "7.6, 8.8";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "6.5, 7.7";
+	refShip.Track2.Speed = "0.31, 0.58";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -13543,6 +15073,17 @@ void InitShips()
     refShip.Capacity        = 4500;
     refShip.CannonsQuantity = 32;
     // NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "5.3, 6.5";
+	refShip.Track1.Speed = "6.7, 8.0";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.2, 9.0";
+	refShip.Track2.Speed = "0.2, 0.35";
+
     refShip.Cannons.Borts.cannonf.qty = 0;
     refShip.Cannons.Borts.cannonb.qty = 2;
     // NK <--
@@ -13636,6 +15177,17 @@ void InitShips()
 	refShip.Weight			= Tonnes2CWT(1050);
 	refShip.Capacity		= 2500;
 	refShip.CannonsQuantity		= 28;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "4.4, 5.1";
+	refShip.Track1.Speed = "7.1, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.8, 7.2";
+	refShip.Track2.Speed = "0.23, 0.42";
 
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
@@ -13737,6 +15289,17 @@ void InitShips()
 	refShip.Capacity		= 3000;
 	refShip.CannonsQuantity 	= 32;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.07;
+	refShip.Track1.LifeTime = 62;
+	refShip.Track1.Width = "4.3, 5.4";
+	refShip.Track1.Speed = "6.4, 7.9";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "5.2, 6.9";
+	refShip.Track2.Speed = "0.13, 0.2";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -13801,7 +15364,7 @@ void InitShips()
 // on this day and date Jan 2 10, 2131h
 
 //-------------------------------------------------------------------------
-// Lineship47 by Chris Roupé and Thomas the Terror
+// Lineship47 by Chris Roup� and Thomas the Terror
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 165> (WBT4)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
@@ -13818,6 +15381,17 @@ void InitShips()
 	refShip.Capacity		= 2500;
 	refShip.CannonsQuantity = 40;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.01;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "4.5, 5.2";
+	refShip.Track1.Speed = "7.5, 8.8";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 40;
+	refShip.Track2.Width = "6.2, 7.5";
+	refShip.Track2.Speed = "0.3, 0.55";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -13912,6 +15486,17 @@ void InitShips()
 	refShip.Capacity		= 2500;
 	refShip.CannonsQuantity = 52;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 56;
+	refShip.Track1.Width = "4.6, 5.1";
+	refShip.Track1.Speed = "7.6, 8.8";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "6.5, 7.7";
+	refShip.Track2.Speed = "0.31, 0.58";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -14011,6 +15596,17 @@ void InitShips()
 	refShip.Capacity		= 2500;
 	refShip.CannonsQuantity = 44;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.6, 5.3";
+	refShip.Track1.Speed = "7.7, 8.9";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "6.4, 7.6";
+	refShip.Track2.Speed = "0.32, 0.6";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 
@@ -14106,6 +15702,17 @@ void InitShips()
 	refShip.Weight			= Tonnes2CWT(1300);
 	refShip.Capacity        = 5000;
 	refShip.CannonsQuantity = 58;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.1;
+	refShip.Track1.LifeTime = 79;
+	refShip.Track1.Width = "5.9, 6.5";
+	refShip.Track1.Speed = "6.7, 8.0";
+
+	refShip.Track2.ZStart = -0.17;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "8.4, 10.1";
+	refShip.Track2.Speed = "0.22, 0.4";
 
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 6;
@@ -14212,6 +15819,17 @@ void InitShips()
 	refShip.HP				= 8000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.0;
+	refShip.Track1.LifeTime = 56;
+	refShip.Track1.Width = "4.8, 5.4";
+	refShip.Track1.Speed = "7.8, 8.9";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.0, 8.2";
+	refShip.Track2.Speed = "0.34, 0.65";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -14297,6 +15915,17 @@ void InitShips()
 	refShip.Weight			= Tonnes2CWT(2250);
 	refShip.Capacity        = 2750;
 	refShip.CannonsQuantity = 60;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.9, 5.4";
+	refShip.Track1.Speed = "8.0, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.2, 8.3";
+	refShip.Track2.Speed = "0.37, 0.71";
 
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
@@ -14394,6 +16023,17 @@ void InitShips()
 	refShip.Capacity		= 4000;
 	refShip.CannonsQuantity = 46;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.07;
+	refShip.Track1.LifeTime = 69;
+	refShip.Track1.Width = "5.2, 6.0";
+	refShip.Track1.Speed = "6.8, 8.1";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 40;
+	refShip.Track2.Width = "7.1, 8.7";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -14495,6 +16135,17 @@ void InitShips()
 	refShip.Capacity		= 3000;
 	refShip.CannonsQuantity = 70;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -14590,6 +16241,17 @@ void InitShips()
 	refShip.Capacity		= 3000;
 	refShip.CannonsQuantity = 70;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -14685,6 +16347,17 @@ void InitShips()
 	refShip.Capacity		= 3000;
 	refShip.CannonsQuantity = 70;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -14779,6 +16452,17 @@ void InitShips()
 	refShip.MaxCaliber = 24;
 	refShip.Weight     = Tonnes2CWT(2500);
 	refShip.Capacity   = 3000;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
 
 	refShip.CannonsQuantity = 70;
 	refShip.Cannons.Borts.cannonf.qty = 2;
@@ -14884,6 +16568,17 @@ void InitShips()
 	refShip.HP			 	= 10000;
 	refShip.SP			  	= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.02;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "5.3, 5.5";
+	refShip.Track1.Speed = "8.3, 9.3";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 44;
+	refShip.Track2.Width = "8.2, 9.1";
+	refShip.Track2.Speed = "0.44, 0.84";
+
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -14978,6 +16673,17 @@ void InitShips()
 	refShip.HP				 = 12000;
 	refShip.SP				 = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "5.5, 5.7";
+	refShip.Track1.Speed = "8.4, 9.3";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.5, 9.5";
+	refShip.Track2.Speed = "0.46, 0.88";
+
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -15066,6 +16772,17 @@ void InitShips()
 	refShip.Price			 = 464000;
 	refShip.HP				 = 12000;
 	refShip.SP				 = 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "5.5, 5.7";
+	refShip.Track1.Speed = "8.4, 9.3";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.5, 9.5";
+	refShip.Track2.Speed = "0.46, 0.88";
 
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 // KK -->
@@ -15156,6 +16873,17 @@ void InitShips()
 	refShip.HP				 = 12000;
 	refShip.SP				 = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "5.5, 5.7";
+	refShip.Track1.Speed = "8.4, 9.3";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.5, 9.5";
+	refShip.Track2.Speed = "0.46, 0.88";
+
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -15238,6 +16966,17 @@ void InitShips()
 	refShip.Capacity		= 3250;
 	refShip.CannonsQuantity = 74;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "5.5, 5.7";
+	refShip.Track1.Speed = "8.4, 9.3";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.5, 9.5";
+	refShip.Track2.Speed = "0.46, 0.88";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -15348,6 +17087,17 @@ void InitShips()
 	refShip.SP			  	= 200;
 //	refShip.RigType 			= "Fri";
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "5.5, 5.7";
+	refShip.Track1.Speed = "8.4, 9.3";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.5, 9.5";
+	refShip.Track2.Speed = "0.46, 0.88";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -15440,6 +17190,17 @@ void InitShips()
 	refShip.Capacity		= 3250;
 	refShip.CannonsQuantity = 74;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "5.5, 5.7";
+	refShip.Track1.Speed = "8.4, 9.3";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.5, 9.5";
+	refShip.Track2.Speed = "0.46, 0.88";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -15552,6 +17313,17 @@ void InitShips()
 	refShip.SP				 = 200;
 	refShip.Jetty				= false; 	//JRH
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.08;
+	refShip.Track1.LifeTime = 71;
+	refShip.Track1.Width = "5.3, 5.9";
+	refShip.Track1.Speed = "6.8, 8.1";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 40;
+	refShip.Track2.Width = "7.4, 9.0";
+	refShip.Track2.Speed = "0.23, 0.41";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -15646,6 +17418,17 @@ void InitShips()
 	refShip.HP				= 19000;
 	refShip.SP				= 300;
 // KK -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "6.6, 6.8";
+	refShip.Track1.Speed = "8.4, 9.2";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 48;
+	refShip.Track2.Width = "10.6, 11.7";
+	refShip.Track2.Speed = "0.49, 0.95";
+
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 22;
@@ -15740,6 +17523,17 @@ void InitShips()
 	refShip.HP					= 14000;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "5.9, 5.9";
+	refShip.Track1.Speed = "8.8, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.4, 10.3";
+	refShip.Track2.Speed = "0.52, 1.0";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -15809,7 +17603,7 @@ void InitShips()
 // on this day and date Jan 1 2010, 1711h
 
 //-------------------------------------------------------------------------
-// Intrépide by Seb
+// Intr�pide by Seb
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 198> (WBT4XL)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
@@ -15832,6 +17626,17 @@ void InitShips()
 	refShip.Price					= 528000;
 	refShip.HP					= 14000;
 	refShip.SP					= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "5.9, 5.9";
+	refShip.Track1.Speed = "8.8, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.4, 10.3";
+	refShip.Track2.Speed = "0.52, 1.0";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
@@ -15925,6 +17730,17 @@ void InitShips()
 	refShip.Price             = 620000;
 	refShip.HP                 = 19000;
 	refShip.SP                 = 300;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "6.6, 6.8";
+	refShip.Track1.Speed = "8.4, 9.2";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 48;
+	refShip.Track2.Width = "10.6, 11.7";
+	refShip.Track2.Speed = "0.49, 0.95";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
@@ -16020,6 +17836,17 @@ void InitShips()
 	refShip.HP					= 14000;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "5.9, 5.9";
+	refShip.Track1.Speed = "8.8, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.4, 10.3";
+	refShip.Track2.Speed = "0.52, 1.0";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -16112,6 +17939,17 @@ void InitShips()
 	refShip.HP					= 14000;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "5.9, 5.9";
+	refShip.Track1.Speed = "8.8, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.4, 10.3";
+	refShip.Track2.Speed = "0.52, 1.0";
+
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -16197,6 +18035,17 @@ void InitShips()
 	refShip.Capacity		= 4000;
 	refShip.CannonsQuantity = 100;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.02;
+	refShip.Track1.LifeTime = 64;
+	refShip.Track1.Width = "6.2, 6.1";
+	refShip.Track1.Speed = "8.6, 9.4";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.9, 10.9";
+	refShip.Track2.Speed = "0.51, 0.99";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 8;
 	// NK <--
@@ -16294,6 +18143,17 @@ void InitShips()
 	refShip.Capacity		= 4000;
 	refShip.CannonsQuantity = 100;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.02;
+	refShip.Track1.LifeTime = 64;
+	refShip.Track1.Width = "6.2, 6.1";
+	refShip.Track1.Speed = "8.6, 9.4";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.9, 10.9";
+	refShip.Track2.Speed = "0.51, 0.99";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 8;
 	// NK <--
@@ -16391,6 +18251,17 @@ void InitShips()
 	refShip.Capacity		= 4000;
 	refShip.CannonsQuantity = 100;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.02;
+	refShip.Track1.LifeTime = 64;
+	refShip.Track1.Width = "6.2, 6.1";
+	refShip.Track1.Speed = "8.6, 9.4";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.9, 10.9";
+	refShip.Track2.Speed = "0.51, 0.99";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 8;
 	// NK <--
@@ -16485,6 +18356,17 @@ void InitShips()
 	refShip.Capacity		= 4000;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS32;
 	refShip.MaxCaliber	= 32;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.01;
+	refShip.Track1.LifeTime = 66;
+	refShip.Track1.Width = "6.0, 6.0";
+	refShip.Track1.Speed = "8.2, 9.1";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 46;
+	refShip.Track2.Width = "9.4, 10.5";
+	refShip.Track2.Speed = "0.45, 0.87";
 
 	refShip.CannonsQuantity	= 100;
 	refShip.Cannons.Borts.cannonf.qty	= 2;
@@ -16589,6 +18471,17 @@ void InitShips()
 	refShip.Capacity			= 1750;
 	refShip.CannonsQuantity			= 46;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.07;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "4.6, 4.9";
+	refShip.Track1.Speed = "8.8, 9.7";
+
+	refShip.Track2.ZStart = -0.09;
+	refShip.Track2.LifeTime = 44;
+	refShip.Track2.Width = "7.1, 7.9";
+	refShip.Track2.Speed = "0.48, 0.93";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2;
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -16721,6 +18614,17 @@ void InitShips()
 	refShip.Capacity			= 1750;
 	refShip.CannonsQuantity			= 46;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.07;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "4.6, 4.9";
+	refShip.Track1.Speed = "8.8, 9.7";
+
+	refShip.Track2.ZStart = -0.09;
+	refShip.Track2.LifeTime = 44;
+	refShip.Track2.Width = "7.1, 7.9";
+	refShip.Track2.Speed = "0.48, 0.93";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2;
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -16853,6 +18757,17 @@ void InitShips()
 	refShip.Capacity			= 1750;
 	refShip.CannonsQuantity			= 46;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.07;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "4.6, 4.9";
+	refShip.Track1.Speed = "8.8, 9.7";
+
+	refShip.Track2.ZStart = -0.09;
+	refShip.Track2.LifeTime = 44;
+	refShip.Track2.Width = "7.1, 7.9";
+	refShip.Track2.Speed = "0.48, 0.93";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2;
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -16979,6 +18894,17 @@ void InitShips()
 	refShip.Capacity			= 1750;
 	refShip.CannonsQuantity			= 46;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.07;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "4.6, 4.9";
+	refShip.Track1.Speed = "8.8, 9.7";
+
+	refShip.Track2.ZStart = -0.09;
+	refShip.Track2.LifeTime = 44;
+	refShip.Track2.Width = "7.1, 7.9";
+	refShip.Track2.Speed = "0.48, 0.93";
+
 	refShip.Cannons.Borts.cannonf.qty	= 2;
 	refShip.Cannons.Borts.cannonb.qty	= 2;
 	// NK <--
@@ -17107,6 +19033,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity 	= 32;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.07;
+	refShip.Track1.LifeTime = 57;
+	refShip.Track1.Width = "3.8, 4.7";
+	refShip.Track1.Speed = "6.6, 8.2";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.6, 6.1";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	// NK <--
@@ -17205,6 +19142,17 @@ void InitShips()
 	refShip.HP				= 100000;
 	refShip.SP				= 999999;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 61;
+	refShip.Track1.Width = "5.5, 6.3";
+	refShip.Track1.Speed = "7.7, 8.8";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "8.0, 9.4";
+	refShip.Track2.Speed = "0.34, 0.64";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 // KK -->
 	refShip.EmblemedSails.normalTex = "sail_dutchman2.tga";
@@ -17278,6 +19226,17 @@ void InitShips()
 	refShip.Capacity		= 4000;
 	refShip.CannonsQuantity		= 58;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.02;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "5.6, 6.3";
+	refShip.Track1.Speed = "7.9, 8.9";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 44;
+	refShip.Track2.Width = "8.3, 9.6";
+	refShip.Track2.Speed = "0.38, 0.72";
+
 	refShip.Cannons.Borts.cannonf.qty = 6;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -17367,6 +19326,17 @@ void InitShips()
 	refShip.HP					= 3600;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 65;
+	refShip.Track1.Width = "5.2, 6.6";
+	refShip.Track1.Speed = "6.7, 8.0";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "6.9, 8.7";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 // KK -->
 	refShip.EmblemedSails.normalTex = "sail_whole_black_patch2.tga";
@@ -17453,6 +19423,17 @@ void InitShips()
 	refShip.HP					= 4500;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 65;
+	refShip.Track1.Width = "5.2, 6.6";
+	refShip.Track1.Speed = "6.7, 8.1";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.0, 8.8";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -17535,6 +19516,17 @@ void InitShips()
 	refShip.HP					= 4500;
 	refShip.SP					= 200;
 // KK -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 65;
+	refShip.Track1.Width = "5.2, 6.6";
+	refShip.Track1.Speed = "6.7, 8.1";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.0, 8.8";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.EmblemedSails.normalTex = "sail_BlackPearl_whole.tga";
 	refShip.EmblemedSails.nationFileName = "sail_BlackPearl_whole.tga";
 	refShip.night_stealth = true;	// PB: Half visibility at night
@@ -17618,6 +19610,17 @@ void InitShips()
 	refShip.Price				= 225000;
 	refShip.HP					= 100000; // stronger
 // SWS: Pieter suggested a MoW should stand a chance against the Pearl
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.2, 4.9";
+	refShip.Track1.Speed = "7.1, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.4, 6.8";
+	refShip.Track2.Speed = "0.23, 0.41";
+
 	refShip.SP					= 999999;
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
@@ -17706,6 +19709,17 @@ void InitShips()
 	refShip.HP			  = 19000;
 	refShip.SP			  = 300;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "6.6, 6.8";
+	refShip.Track1.Speed = "8.4, 9.2";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 48;
+	refShip.Track2.Width = "10.6, 11.7";
+	refShip.Track2.Speed = "0.49, 0.95";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 22;
@@ -17792,6 +19806,17 @@ void InitShips()
 	refShip.Price		   = 624000;
 	refShip.HP			  = 19000;
 	refShip.SP			  = 300;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "6.6, 6.8";
+	refShip.Track1.Speed = "8.4, 9.2";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 48;
+	refShip.Track2.Width = "10.6, 11.7";
+	refShip.Track2.Speed = "0.49, 0.95";
 
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
@@ -17880,6 +19905,17 @@ void InitShips()
 	refShip.HP			  = 19000;
 	refShip.SP			  = 300;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "6.6, 6.8";
+	refShip.Track1.Speed = "8.4, 9.2";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 48;
+	refShip.Track2.Width = "10.6, 11.7";
+	refShip.Track2.Speed = "0.49, 0.95";
+
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 22;
@@ -17965,6 +20001,17 @@ void InitShips()
 	refShip.Price		   = 624000;
 	refShip.HP			  = 19000;
 	refShip.SP			  = 300;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "6.6, 6.8";
+	refShip.Track1.Speed = "8.4, 9.2";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 48;
+	refShip.Track2.Width = "10.6, 11.7";
+	refShip.Track2.Speed = "0.49, 0.95";
 
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
@@ -18052,6 +20099,17 @@ void InitShips()
 	refShip.HP			  = 19000;
 	refShip.SP			  = 300;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "6.6, 6.8";
+	refShip.Track1.Speed = "8.4, 9.2";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 48;
+	refShip.Track2.Width = "10.6, 11.7";
+	refShip.Track2.Speed = "0.49, 0.95";
+
 	refShip.BigPicTexName = "SHIPS2"; //Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 22;
@@ -18136,6 +20194,17 @@ void InitShips()
 	refShip.Price		   		= 450000;
 	refShip.HP			  	= 12000;
 	refShip.SP			  	= 250;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 56;
+	refShip.Track1.Width = "5.4, 5.5";
+	refShip.Track1.Speed = "8.5, 9.4";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.4, 9.3";
+	refShip.Track2.Speed = "0.46, 0.89";
 
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 	refShip.BI.Tex = 16;
@@ -18229,6 +20298,17 @@ void InitShips()
 	refShip.HP			  	= 12000;
 	refShip.SP			  	= 250;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 56;
+	refShip.Track1.Width = "5.4, 5.5";
+	refShip.Track1.Speed = "8.5, 9.4";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.4, 9.3";
+	refShip.Track2.Speed = "0.46, 0.89";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 50;
@@ -18318,6 +20398,17 @@ void InitShips()
 	refShip.Price		   		= 450000;
 	refShip.HP			  	= 12000;
 	refShip.SP			  	= 250;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.03;
+	refShip.Track1.LifeTime = 56;
+	refShip.Track1.Width = "5.4, 5.5";
+	refShip.Track1.Speed = "8.5, 9.4";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.4, 9.3";
+	refShip.Track2.Speed = "0.46, 0.89";
 
 	refShip.BigPicTexName = "SHIPS5"; //Armada
 	refShip.BI.Tex = 16;
@@ -18409,6 +20500,17 @@ void InitShips()
 	refShip.Price		  = 475000;
 	refShip.HP			  = 12500;
 	refShip.SP			  = 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "5.5, 5.6";
+	refShip.Track1.Speed = "8.7, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.6, 9.5";
+	refShip.Track2.Speed = "0.49, 0.95";
 
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
@@ -18503,6 +20605,17 @@ void InitShips()
 	refShip.HP			  = 12500;
 	refShip.SP			  = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "5.5, 5.6";
+	refShip.Track1.Speed = "8.7, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.6, 9.5";
+	refShip.Track2.Speed = "0.49, 0.95";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 50;
@@ -18593,6 +20706,17 @@ void InitShips()
 	refShip.Price		  = 475000;
 	refShip.HP			  = 12500;
 	refShip.SP			  = 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "5.5, 5.6";
+	refShip.Track1.Speed = "8.7, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 45;
+	refShip.Track2.Width = "8.6, 9.5";
+	refShip.Track2.Speed = "0.49, 0.95";
 
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 	refShip.BI.Tex = 16;
@@ -18686,6 +20810,17 @@ void InitShips()
 	refShip.HP				= 1000;
 	refShip.SP				= 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 41;
+	refShip.Track1.Width = "2.8, 3.8";
+	refShip.Track1.Speed = "6.9, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.7, 4.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.WaterLine = 0.0;
 	refShip.SpeedDependWeight = 0.2;
 	refShip.SubSeaDependWeight = 0.6;
@@ -18776,6 +20911,17 @@ void InitShips()
 	refShip.HP			  = 2000;
 	refShip.SP			  = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.5, 4.3";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.1, 5.5";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 72;
@@ -18863,6 +21009,17 @@ void InitShips()
 	refShip.Price		   = 138000;
 	refShip.HP			  = 2000;
 	refShip.SP			  = 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.5, 4.3";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.1, 5.5";
+	refShip.Track2.Speed = "0.19, 0.34";
 
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
@@ -18952,6 +21109,17 @@ void InitShips()
 	refShip.HP			  = 2000;
 	refShip.SP			  = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 50;
+	refShip.Track1.Width = "3.5, 4.3";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.1, 5.5";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 72;
@@ -19040,6 +21208,17 @@ void InitShips()
 	refShip.Price			= 69000;
 	refShip.HP 		   = 1750;
 	refShip.SP 		   = 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.2, 4.2";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.4, 4.8";
+	refShip.Track2.Speed = "0.15, 0.25";
 
 	refShip.CanEncounter	= true;
 	refShip.CanBuy		= true;
@@ -19133,6 +21312,17 @@ void InitShips()
 	refShip.HP			  = 1500;
 	refShip.SP			  = 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 42;
+	refShip.Track1.Width = "2.9, 4.0";
+	refShip.Track1.Speed = "6.9, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "2.9, 4.3";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 114;
@@ -19217,6 +21407,17 @@ void InitShips()
 	refShip.Price = 272000;
 	refShip.HP = 7000;
 	refShip.SP = 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "4.8, 5.5";
+	refShip.Track1.Speed = "7.5, 8.7";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "6.8, 8.1";
+	refShip.Track2.Speed = "0.3, 0.56";
 
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 	refShip.BI.Tex = 16;
@@ -19308,6 +21509,17 @@ void InitShips()
 	refShip.HP					= 9000;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.02;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.4, 5.7";
+	refShip.Track1.Speed = "8.2, 9.2";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 44;
+	refShip.Track2.Width = "8.3, 9.3";
+	refShip.Track2.Speed = "0.43, 0.82";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 86;
@@ -19367,7 +21579,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// Apostól Felipe 1626 by pgargon
+// Apost�l Felipe 1626 by pgargon
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
@@ -19390,6 +21602,17 @@ void InitShips()
 	refShip.HP = 5200;
 	refShip.SP = 200;
 	refShip.Jetty = false;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.07;
+	refShip.Track1.LifeTime = 72;
+	refShip.Track1.Width = "5.5, 6.5";
+	refShip.Track1.Speed = "6.7, 8.0";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.5, 9.3";
+	refShip.Track2.Speed = "0.2, 0.35";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
@@ -19475,6 +21698,17 @@ void InitShips()
 	refShip.HP			  = 900;//BB was 550
 	refShip.SP			  = 200;//BB was 150
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 47;
+	refShip.Track1.Width = "3.1, 4.1";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.3, 4.7";
+	refShip.Track2.Speed = "0.15, 0.24";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 114;
@@ -19557,6 +21791,17 @@ void InitShips()
 	refShip.HP			  = 1000;//BB was 600
 	refShip.SP			  = 200;//BB was 180
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 46;
+	refShip.Track1.Width = "3.1, 4.1";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.2, 4.6";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.BigPicTexName	= "SHIPS2"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 114;
@@ -19638,6 +21883,17 @@ void InitShips()
 	refShip.Price		   = 44800;//BB was 76800
 	refShip.HP			  = 1600;
 	refShip.SP			  = 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 42;
+	refShip.Track1.Width = "3.0, 4.1";
+	refShip.Track1.Speed = "6.9, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.1, 4.4";
+	refShip.Track2.Speed = "0.16, 0.28";
 
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
@@ -19731,6 +21987,17 @@ void InitShips()
 	refShip.HP					= 9000;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 86;
@@ -19813,6 +22080,17 @@ void InitShips()
 	refShip.Price				= 364000;
 	refShip.HP					= 9000;
 	refShip.SP					= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
 
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
@@ -19897,6 +22175,17 @@ void InitShips()
 	refShip.HP					= 9000;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 86;
@@ -19979,6 +22268,17 @@ void InitShips()
 	refShip.Price				= 350000;
 	refShip.HP				= 8500;	// GR: reduced from 9000 on original Fleuron
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
 
 	refShip.BigPicTexName = "SHIPS5"; //Armada
 	refShip.BI.Tex = 16;
@@ -20064,6 +22364,17 @@ void InitShips()
 	refShip.Price				= 228000;
 	refShip.HP				= 5000;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "4.2, 4.8";
+	refShip.Track1.Speed = "7.4, 8.7";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.6, 6.8";
+	refShip.Track2.Speed = "0.27, 0.49";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
@@ -20153,6 +22464,17 @@ void InitShips()
 	refShip.HP				= 4000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.9, 4.5";
+	refShip.Track1.Speed = "7.5, 8.8";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.2, 6.4";
+	refShip.Track2.Speed = "0.28, 0.52";
+
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 38;
@@ -20217,7 +22539,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// Unité class frigate, French version of RN_Surprise by pgargon, retextured by Grey Roger
+// Unit� class frigate, French version of RN_Surprise by pgargon, retextured by Grey Roger
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
@@ -20239,6 +22561,17 @@ void InitShips()
 	refShip.Price				= 228000;
 	refShip.HP				= 4000;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.9, 4.5";
+	refShip.Track1.Speed = "7.5, 8.8";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.2, 6.4";
+	refShip.Track2.Speed = "0.28, 0.52";
 
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 	refShip.BI.Tex = 16;
@@ -20304,7 +22637,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// Unité class frigate, Spanish version of RN_Surprise by pgargon, retextured by Grey Roger
+// Unit� class frigate, Spanish version of RN_Surprise by pgargon, retextured by Grey Roger
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
@@ -20326,6 +22659,17 @@ void InitShips()
 	refShip.Price				= 228000;
 	refShip.HP				= 4000;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.9, 4.5";
+	refShip.Track1.Speed = "7.5, 8.8";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "5.2, 6.4";
+	refShip.Track2.Speed = "0.28, 0.52";
 
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 	refShip.BI.Tex = 16;
@@ -20414,6 +22758,17 @@ void InitShips()
 	refShip.HP		= 16000;
 	refShip.SP		= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.01;
+	refShip.Track1.LifeTime = 67;
+	refShip.Track1.Width = "6.1, 6.2";
+	refShip.Track1.Speed = "8.2, 9.1";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 46;
+	refShip.Track2.Width = "9.6, 10.7";
+	refShip.Track2.Speed = "0.44, 0.86";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -20501,6 +22856,17 @@ void InitShips()
 	refShip.Price            = 600000;
 	refShip.HP               = 17000;
 	refShip.SP               = 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 64;
+	refShip.Track1.Width = "6.6, 6.5";
+	refShip.Track1.Speed = "8.9, 9.6";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 49;
+	refShip.Track2.Width = "10.8, 11.7";
+	refShip.Track2.Speed = "0.56, 1.09";
 
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 // KK -->
@@ -20595,6 +22961,17 @@ void InitShips()
 	refShip.HP = 4500;
 	refShip.SP = 400;
 	refShip.Jetty			= false; // PB
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 69;
+	refShip.Track1.Width = "5.8, 6.7";
+	refShip.Track1.Speed = "7.2, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "8.3, 9.9";
+	refShip.Track2.Speed = "0.28, 0.52";
 
 	refShip.BigPicTexName	= "SHIPS4"; // Armada
 // KK -->
@@ -20691,6 +23068,17 @@ void InitShips()
 	refShip.SP = 400;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 61;
+	refShip.Track1.Width = "5.0, 5.8";
+	refShip.Track1.Speed = "7.3, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.1, 8.5";
+	refShip.Track2.Speed = "0.28, 0.51";
+
 	refShip.BigPicTexName	= "SHIPS4"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -20786,6 +23174,17 @@ void InitShips()
 	refShip.SP = 400;
 	refShip.Jetty			= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 61;
+	refShip.Track1.Width = "5.0, 5.8";
+	refShip.Track1.Speed = "7.3, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.1, 8.5";
+	refShip.Track2.Speed = "0.28, 0.51";
+
 	refShip.BigPicTexName	= "SHIPS4"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -20876,6 +23275,17 @@ void InitShips()
 	refShip.MaxCrew		 = 70;
 	refShip.MinCrew		 = 20;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 45;
+	refShip.Track1.Width = "3.3, 4.6";
+	refShip.Track1.Speed = "6.8, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "3.6, 5.1";
+	refShip.Track2.Speed = "0.15, 0.26";
+
 	refShip.Price		   = 44000;
 	refShip.HP			  = 1750;
 	refShip.SP			  = 200;
@@ -20962,6 +23372,17 @@ void InitShips()
 	refShip.HP				= 5000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 65;
+	refShip.Track1.Width = "5.2, 6.6";
+	refShip.Track1.Speed = "6.7, 8.1";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 41;
+	refShip.Track2.Width = "7.0, 8.8";
+	refShip.Track2.Speed = "0.19, 0.34";
+
 	refShip.BigPicTexName	= "SHIPS3"; // Armada
 // KK -->
 	refShip.EmblemedSails.normalTex = "sail_torn_red_qar.tga";
@@ -21029,6 +23450,17 @@ void InitShips()
 	refShip.Capacity		= 1200;   //changed from 800 to reflect the large hull  HP
 	refShip.CannonsQuantity = 8;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 45;
+	refShip.Track1.Width = "3.2, 4.4";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.3, 4.8";
+	refShip.Track2.Speed = "0.14, 0.22";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21122,6 +23554,17 @@ void InitShips()
 	refShip.Capacity		= 1200;     //changed from 800 to reflect the large hull  HP
 	refShip.CannonsQuantity = 8;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 45;
+	refShip.Track1.Width = "3.2, 4.4";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.3, 4.8";
+	refShip.Track2.Speed = "0.14, 0.22";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21215,6 +23658,17 @@ void InitShips()
 	refShip.Capacity		= 1200;        //changed from 800 to reflect the large hull  HP
 	refShip.CannonsQuantity = 8;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 45;
+	refShip.Track1.Width = "3.2, 4.4";
+	refShip.Track1.Speed = "6.7, 8.4";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.3, 4.8";
+	refShip.Track2.Speed = "0.14, 0.22";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21307,6 +23761,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21403,6 +23868,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21505,6 +23981,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21607,6 +24094,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21709,6 +24207,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21810,6 +24319,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -21906,6 +24426,17 @@ void InitShips()
 	refShip.Capacity		= 1800;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -22011,6 +24542,17 @@ void InitShips()
 	refShip.Capacity		= 1800;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -22116,6 +24658,17 @@ void InitShips()
 	refShip.Capacity		= 1800;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -22221,6 +24774,17 @@ void InitShips()
 	refShip.Capacity		= 1800;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -22326,6 +24890,17 @@ void InitShips()
 	refShip.Capacity		= 1800;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -22431,6 +25006,17 @@ void InitShips()
 	refShip.Capacity		= 1800;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.9, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 5.9";
+	refShip.Track2.Speed = "0.18, 0.31";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -22536,6 +25122,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 6.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -22628,6 +25225,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 6.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -22721,6 +25329,17 @@ void InitShips()
 	refShip.Capacity		= 2000;
 	refShip.CannonsQuantity = 20;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 6.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -22813,6 +25432,17 @@ void InitShips()
 	refShip.Capacity	= 1750;
 	refShip.Cannon		= CANNON_TYPE_LONG_LBS6;
 	refShip.MaxCaliber	= 6;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.3, 5.8";
+	refShip.Track2.Speed = "0.16, 0.27";
 
 	refShip.CannonsQuantity = 16;
 	refShip.Cannons.Borts.cannonf.qty = 0;
@@ -22914,6 +25544,17 @@ void InitShips()
 	refShip.Cannon		= CANNON_TYPE_LONG_LBS6;
 	refShip.MaxCaliber	= 6;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.3, 5.8";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.CannonsQuantity = 16;
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
@@ -23013,6 +25654,17 @@ void InitShips()
 	refShip.Capacity	= 1750;
 	refShip.Cannon		= CANNON_TYPE_LONG_LBS6;
 	refShip.MaxCaliber	= 6;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.7, 4.7";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.3, 5.8";
+	refShip.Track2.Speed = "0.16, 0.27";
 
 	refShip.CannonsQuantity = 16;
 	refShip.Cannons.Borts.cannonf.qty = 0;
@@ -23124,6 +25776,17 @@ void InitShips()
 	refShip.HP				= 7500;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.01;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.3, 5.9";
+	refShip.Track1.Speed = "7.9, 8.9";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.8, 9.0";
+	refShip.Track2.Speed = "0.36, 0.69";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -23207,6 +25870,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 38;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.8, 4.4";
+	refShip.Track1.Speed = "7.1, 8.6";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.7, 6.0";
+	refShip.Track2.Speed = "0.22, 0.39";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -23305,6 +25979,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 38;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 53;
+	refShip.Track1.Width = "3.8, 4.4";
+	refShip.Track1.Speed = "7.1, 8.6";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.7, 6.0";
+	refShip.Track2.Speed = "0.22, 0.39";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -23404,6 +26089,17 @@ void InitShips()
 	refShip.Capacity		= 1200;
 	refShip.CannonsQuantity = 4;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 45;
+	refShip.Track1.Width = "3.2, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "3.2, 4.7";
+	refShip.Track2.Speed = "0.13, 0.21";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -23498,6 +26194,17 @@ void InitShips()
 	refShip.Capacity		= 1200;
 	refShip.CannonsQuantity = 10;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.07;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.4, 4.1";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 35;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -23577,6 +26284,17 @@ void InitShips()
 	refShip.Capacity		= 1250;
 	refShip.CannonsQuantity = 32;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 51;
+	refShip.Track1.Width = "3.7, 4.3";
+	refShip.Track1.Speed = "7.2, 8.7";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.7, 5.9";
+	refShip.Track2.Speed = "0.24, 0.43";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -23678,6 +26396,17 @@ void InitShips()
 	refShip.HP = 100000;
 	refShip.SP = 999999;
 	
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 66;
+	refShip.Track1.Width = "5.4, 6.1";
+	refShip.Track1.Speed = "7.2, 8.4";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 42;
+	refShip.Track2.Width = "7.7, 9.1";
+	refShip.Track2.Speed = "0.28, 0.51";
+
 	refShip.BigPicTexName = "SHIPS1"; //Armada
 	// KK -->
 	refShip.EmblemedSails.normalTex = "sail_Mariana.tga";
@@ -23759,6 +26488,17 @@ void InitShips()
 	refShip.Price              = 46000;
 	refShip.HP                        = 2500;
 	refShip.SP                        = 300;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.03;
+	refShip.Track1.LifeTime = 49;
+	refShip.Track1.Width = "3.5, 4.3";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.1, 5.5";
+	refShip.Track2.Speed = "0.2, 0.35";
 
 	refShip.BigPicTexName = "SHIPS1"; //Armada
 	refShip.BI.Tex = 16;
@@ -23844,6 +26584,17 @@ void InitShips()
 	refShip.Price				= 110000;
 	refShip.HP				= 3000;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.9, 4.6";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.9, 6.3";
+	refShip.Track2.Speed = "0.21, 0.38";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
@@ -23933,6 +26684,17 @@ void InitShips()
 	refShip.HP				= 3000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.9, 4.6";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.9, 6.3";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 36;
@@ -24021,6 +26783,17 @@ void InitShips()
 	refShip.HP				= 3000;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.9, 4.6";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.9, 6.3";
+	refShip.Track2.Speed = "0.21, 0.38";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 36;
@@ -24107,6 +26880,17 @@ void InitShips()
 	refShip.Price				= 110000;
 	refShip.HP				= 3000;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.9, 4.6";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.9, 6.3";
+	refShip.Track2.Speed = "0.21, 0.38";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
@@ -24195,6 +26979,17 @@ void InitShips()
 	refShip.Price				= 110000;
 	refShip.HP				= 3000;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.9, 4.6";
+	refShip.Track1.Speed = "7.0, 8.5";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.9, 6.3";
+	refShip.Track2.Speed = "0.21, 0.38";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
@@ -24286,6 +27081,17 @@ void InitShips()
 	refShip.HP					= 13000;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.7, 5.7";
+	refShip.Track1.Speed = "8.8, 9.6";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 46;
+	refShip.Track2.Width = "9.2, 10.1";
+	refShip.Track2.Speed = "0.52, 1.01";
+
 	refShip.BigPicTexName = "SHIPS1"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -24373,6 +27179,17 @@ void InitShips()
 	refShip.HP					= 15000;
 	refShip.SP					= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "5.9, 5.9";
+	refShip.Track1.Speed = "8.8, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.4, 10.3";
+	refShip.Track2.Speed = "0.52, 1.0";
+
 	refShip.BigPicTexName = "SHIPS2"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -24449,6 +27266,17 @@ void InitShips()
 	refShip.Price					= 530000;
 	refShip.HP					= 15000;
 	refShip.SP					= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.04;
+	refShip.Track1.LifeTime = 59;
+	refShip.Track1.Width = "5.9, 5.9";
+	refShip.Track1.Speed = "8.8, 9.5";
+
+	refShip.Track2.ZStart = -0.11;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "9.4, 10.3";
+	refShip.Track2.Speed = "0.52, 1.0";
 
 	refShip.BigPicTexName = "SHIPS2"; //Armada
 // KK -->
@@ -24533,6 +27361,17 @@ void InitShips()
 	refShip.Price				= 260000;
 	refShip.HP				= 5100;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
@@ -24621,6 +27460,17 @@ void InitShips()
 	refShip.Price				= 260000;
 	refShip.HP				= 5100;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
@@ -24711,6 +27561,17 @@ void InitShips()
 	refShip.HP				= 5100;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 36;
@@ -24798,6 +27659,17 @@ void InitShips()
 	refShip.Price				= 260000;
 	refShip.HP				= 5100;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
 
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
@@ -24887,6 +27759,17 @@ void InitShips()
 	refShip.HP				= 5100;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 36;
@@ -24975,6 +27858,17 @@ void InitShips()
 	refShip.Price				= 290000;
 	refShip.HP				= 5500;
 	refShip.SP				= 200;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
 
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
 
@@ -25069,6 +27963,17 @@ void InitShips()
 	refShip.HP				= 5500;
 	refShip.SP				= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "4.4, 5.2";
+	refShip.Track1.Speed = "7.3, 8.6";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 39;
+	refShip.Track2.Width = "5.9, 7.3";
+	refShip.Track2.Speed = "0.26, 0.47";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 	refShip.BI.Tex = 16;
 	refShip.BI.Pic = 36;
@@ -25150,6 +28055,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -25253,6 +28169,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -25356,6 +28283,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -25459,6 +28397,17 @@ void InitShips()
 	refShip.Capacity		= 1400;
 	refShip.CannonsQuantity = 16;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 52;
+	refShip.Track1.Width = "3.5, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.0, 5.4";
+	refShip.Track2.Speed = "0.16, 0.26";
+
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
@@ -25562,6 +28511,17 @@ void InitShips()
 	refShip.Capacity		= 1500;
 	refShip.CannonsQuantity = 30;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.06;
+	refShip.Track1.LifeTime = 55;
+	refShip.Track1.Width = "3.6, 4.4";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.15;
+	refShip.Track2.LifeTime = 36;
+	refShip.Track2.Width = "4.3, 5.7";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -25656,6 +28616,17 @@ void InitShips()
 	refShip.HP			 	= 9500;
 	refShip.SP			  	= 200;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = 0.0;
+	refShip.Track1.LifeTime = 58;
+	refShip.Track1.Width = "5.2, 5.5";
+	refShip.Track1.Speed = "8.1, 9.1";
+
+	refShip.Track2.ZStart = -0.12;
+	refShip.Track2.LifeTime = 43;
+	refShip.Track2.Width = "7.9, 8.9";
+	refShip.Track2.Speed = "0.4, 0.77";
+
 	refShip.BigPicTexName	= "SHIPS1"; // Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -25745,6 +28716,17 @@ void InitShips()
 	refShip.SP			  	= 200;
 	refShip.Jetty				= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 6.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.BigPicTexName = "SHIPS4"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -25831,6 +28813,17 @@ void InitShips()
 	refShip.SP			  	= 200;
 	refShip.Jetty				= false; // PB
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.05;
+	refShip.Track1.LifeTime = 54;
+	refShip.Track1.Width = "3.8, 4.8";
+	refShip.Track1.Speed = "6.7, 8.3";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 37;
+	refShip.Track2.Width = "4.5, 6.0";
+	refShip.Track2.Speed = "0.16, 0.27";
+
 	refShip.BigPicTexName = "SHIPS3"; //Armada
 // KK -->
 	refShip.BI.Tex = 16;
@@ -25915,6 +28908,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -25949,6 +28953,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -25985,6 +29000,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26019,6 +29045,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26055,6 +29092,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26089,6 +29137,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26125,6 +29184,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26159,6 +29229,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26195,6 +29276,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26229,6 +29321,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26265,6 +29368,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26300,6 +29414,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26330,6 +29455,17 @@ void InitShips()
 	refShip.Capacity		= 3200;
 	refShip.CannonsQuantity = 24;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.09;
+	refShip.Track1.LifeTime = 68;
+	refShip.Track1.Width = "4.6, 5.4";
+	refShip.Track1.Speed = "6.5, 8.0";
+
+	refShip.Track2.ZStart = -0.16;
+	refShip.Track2.LifeTime = 38;
+	refShip.Track2.Width = "6.0, 7.6";
+	refShip.Track2.Speed = "0.16, 0.28";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 6;
 	// NK <--
@@ -26388,6 +29524,17 @@ void InitShips()
 	refShip.SP				 = 100;
 	refShip.AbordageLocation = "BOARDING_BATTLESHIP";
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.02;
+	refShip.Track1.LifeTime = 75;
+	refShip.Track1.Width = "6.9, 7.5";
+	refShip.Track1.Speed = "7.9, 8.7";
+
+	refShip.Track2.ZStart = -0.14;
+	refShip.Track2.LifeTime = 47;
+	refShip.Track2.Width = "10.7, 12.2";
+	refShip.Track2.Speed = "0.41, 0.78";
+
 	refShip.Type.Trade = false;
 	refShip.Type.War = true;
 
@@ -26422,6 +29569,17 @@ void InitShips()
 	refShip.Capacity		= 300;
 	refShip.CannonsQuantity = 12;
 	// NK cannon qtys 05-04-18 -->
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 45;
+	refShip.Track1.Width = "2.8, 3.7";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.8, 4.2";
+	refShip.Track2.Speed = "0.15, 0.25";
+
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 2;
 	// NK <--
@@ -26515,6 +29673,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26549,6 +29718,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26585,6 +29765,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26620,6 +29811,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26654,6 +29856,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26691,6 +29904,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26725,6 +29949,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26761,6 +29996,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26795,6 +30041,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26832,6 +30089,17 @@ void InitShips()
 	refShip.SP			  = 100;
 	refShip.Flags.Mast0.Flag1 = FLAG_ENSIGN;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26866,6 +30134,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -26902,6 +30181,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -26936,6 +30226,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
@@ -27012,6 +30313,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -27047,6 +30359,17 @@ void InitShips()
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
 
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
+
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH
 
@@ -27081,6 +30404,17 @@ void InitShips()
 	refShip.Price		   = 1000;
 	refShip.HP			  = 100;
 	refShip.SP			  = 100;
+
+	refShip.Track.Enable = true;
+	refShip.Track1.ZStart = -0.04;
+	refShip.Track1.LifeTime = 44;
+	refShip.Track1.Width = "2.7, 3.5";
+	refShip.Track1.Speed = "6.8, 8.5";
+
+	refShip.Track2.ZStart = -0.13;
+	refShip.Track2.LifeTime = 34;
+	refShip.Track2.Width = "2.6, 3.9";
+	refShip.Track2.Speed = "0.14, 0.24";
 
 	refShip.CanEncounter	= false; // NK just to be sure.
 	refShip.CanBuy	= false; //JRH

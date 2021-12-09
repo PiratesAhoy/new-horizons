@@ -651,7 +651,7 @@ void LocationInitRedmond(ref n)
 	Locations[n].reload.l18.go = "wr_residence";
 	Locations[n].reload.l18.emerge = "reload1";
 	Locations[n].reload.l18.autoreload = "0";
-	Locations[n].reload.l18.label = "Woodes Rogersґresidence.";
+	Locations[n].reload.l18.label = "Woodes Rogers´residence.";
 	Locations[n].locators_radius.reload.reload7 = 0.2;
 
 	Locations[n].locators_radius.randitem.randitem3 = 0.1;
@@ -1339,7 +1339,7 @@ void LocationInitRedmond(ref n)
 	//Locations[n].reload.l3.go = "wr_library";
 	//Locations[n].reload.l3.emerge = "reload6";
 	//Locations[n].reload.l3.autoreload = "0";
-	//Locations[n].reload.l3.label = "Woodes Rogersґ library.";
+	//Locations[n].reload.l3.label = "Woodes Rogers´ library.";
 
     //temp case when locked
     	Locations[n].reload.l3.name = "reload5";

@@ -2103,6 +2103,7 @@ float GetSeaTimeScale()
 	return 3.0;
 }
 //Boyer change
+
 void SetShowWindowParameters(bool TVused, int w,int h, int l,int t,int r,int b)
 {
 	float realAspect = stf(Render.screen_x) / stf(Render.screen_y);

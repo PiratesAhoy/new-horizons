@@ -44,6 +44,7 @@ void ReturnToMainView()
 	CreateString(true,"Info_1_1"," http://"+PA_INET,FONT_NORMAL,COLOR_BLUE_LIGHT,300,396,SCRIPT_ALIGN_LEFT,0.7);
 	CreateString(true,"Info_2_1"," http://"+PA_DOWN,FONT_NORMAL,COLOR_BLUE_LIGHT,300,418,SCRIPT_ALIGN_LEFT,0.7);
 	CreateString(true,"Info_3_1"," http://"+PA_WALK,FONT_NORMAL,COLOR_BLUE_LIGHT,300,440,SCRIPT_ALIGN_LEFT,0.7);
+	CreateString(true,"Maelstrom",MAELSTROM,FONT_NORMAL,COLOR_BLUE_LIGHT,300,440,SCRIPT_ALIGN_LEFT,0.7);
 
 	string infoText = LanguageConvertString(lngFileID,"About_Build");
 	SetFormatedText("BUILD_DESCRIBE",infoText);

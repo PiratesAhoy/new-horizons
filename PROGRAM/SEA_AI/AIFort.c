@@ -254,6 +254,7 @@ float Fort_CannonDamage()
 
 	iBallCharacterIndex = GetEventData();
 	iFortCharacterIndex = GetEventData();
+
 	aFortLabel = GetEventData();
 	iNumAllCannons = GetEventData();
 	iNumDamagedCannons = GetEventData();
@@ -275,7 +276,7 @@ float Fort_CannonDamage()
 	iFortMode = sti(rFortCharacter.Fort.Mode);
 	if (iFortMode != FORT_NORMAL) { return fDamage; }
 
-	fDistanceMul = pow(0.035, fDistance / MIN_CANNON_DAMAGE_DISTANCE);
+	fDistanceMul = fDistanceMul = pow(0.11, fDistance);// pow(0.035, fDistance / MIN_CANNON_DAMAGE_DISTANCE);
 
 	rCannon = GetCannonByType(sti(rBallCharacter.Ship.Cannons.Type));
 	fCannonDamageMultiply = stf(rCannon.DamageMultiply) * fDistanceMul;
@@ -309,7 +310,7 @@ float Fort_CannonDamage()
 			if (iRelation == RELATION_FRIEND)	{ fCurPlayerDamage = fCurPlayerDamage + fDamagePiece * 0.8; }
 			if (iRelation == RELATION_NEUTRAL)	{ fCurPlayerDamage = fCurPlayerDamage + fDamagePiece * 0.5; }
 
-			if (fCurPlayerDamage >= 100.0)
+			if (fCurPlayerDamage >= 1.0) //100.0)
 			{
 				SetCharacterRelationBoth(iBallCharacterIndex, iFortCharacterIndex, RELATION_ENEMY);
 				AttackRMRelation(GetMainCharacter(), sti(rFortCharacter.Nation)); // RM - SetNationRelation2MainCharacter(sti(rFortCharacter.Nation), RELATION_ENEMY);
@@ -320,7 +321,7 @@ float Fort_CannonDamage()
 		}
 	}
 
-	if (fDamage >= 100.0)
+	if (fDamage >= 1.0) //100.0)
 	{
 		bImmortal = LAi_IsImmortal(rFortCharacter);
 
@@ -332,7 +333,7 @@ float Fort_CannonDamage()
 // KK -->
 		if (!bImmortal) {
 			iNumDamagedCannons++;
-			fDamage = 100.0;
+			fDamage = 1.0; //100.0;
 
 			switch (rand(1))
 			{

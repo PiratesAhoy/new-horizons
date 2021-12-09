@@ -160,7 +160,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "not_in_a_Good_Mood2":
-			dialog.text = DLG_TEXT [0] + DLG_TEXT[32];
+			dialog.text = DLG_TEXT[0] + DLG_TEXT[32];
 			link.l1 = DLG_TEXT[33];
 			link.l1.go = "not_in_a_Good_Mood3";
 		break;

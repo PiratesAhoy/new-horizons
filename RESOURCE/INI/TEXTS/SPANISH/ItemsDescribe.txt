@@ -297,7 +297,7 @@ Una hermosa espada corta perfecta para un pirata principiante.
 itmname_blade32	{Shamshir de Damasco}
 itmdescr_blade32
 {
-Una espada persa grabada e incrustada hecha del más fino acero de Damasco. Este tipo de espada se ha extendido desde la conquista de Goa a los turcos en el siglo XVI. Un regalo de la Corona portuguesa.
+Una espada persa grabada e incrustada de joyas, hecha del más fino acero de Damasco. Este tipo de espada se ha extendido desde la conquista de Goa a los turcos en el siglo XVI. Un regalo de la Corona portuguesa.
 }
 
 itmname_blade33	{Sable morisco}
@@ -358,7 +358,7 @@ Esta es una espada veneciana con guarda de cuarto de lazo. Dos aspectos distinti
 
 itmname_bladeC23 {Ropera de Toledo}
 itmdescr_bladeC23 {
-Una ropera de los amestros espaderos toledanos, con una hoja ligera pero robusta. El arma favorita de los duelistas españoles.
+Una ropera de los maestros espaderos toledanos, con una hoja ligera pero robusta. El arma favorita de los duelistas españoles.
 }
 
 itmname_bladeC26	{Ropera Pappenheimer}
@@ -391,7 +391,7 @@ itmdescr_bladeC36
 La Katana es una espada ligera japonesa. Es buena tanto para ataques rápidos como para bloqueos gracias a su hoja larga y excepcionalmente afilada.
 }
 
-itmname_blade308 	{SEspada de la Tierra}
+itmname_blade308 	{Espada de la Tierra}
 itmdescr_blade308 
 {
 Diseñada según las fantasías de un excéntrico noble, esta espada larga con su inusual arriaz es, no obstante, un arma efectiva.
@@ -435,7 +435,7 @@ itmdescr_blade38
 Un antiguo y pesado sable de un solo filo procedente del Imperio Otomano.
 }
 
-itmname_blade39	{Daga naval con puño durado}
+itmname_blade39	{Daga naval con puño dorado}
 itmdescr_blade39
 {
 Una daga dorada particularmente decorada, que sería ideal para hacerle un regalo a alguien... entre las costillas.

@@ -139,7 +139,7 @@ void CreateStoryCharacters(ref n)
 	ch.lastname = TranslateString("", "Kamalaas");
 	ch.id		= "Gheerkin Kamalaas";
 	ch.model = "33_Ronal2";
-	ch.model.animation = "33_Ronald";
+	ch.model.animation = "man";
 	ch.sex = "man";
 	ch.loyality = 10;
 	ch.alignment = "bad";

@@ -1227,7 +1227,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.nation	= FRANCE;
 //	ch.model	= "hugnt18";
 	ch.model	= "Rousselet";
-	ch.model.animation = "Rousselet";
+	ch.model.animation = "man";
 	ch.sound_type = "soldier";
 //	LAi_NoRebirthEnable(ch);
 	ch.sex = "man";
@@ -1774,7 +1774,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.lastname = TranslateString("", "Lezcano");
 	ch.id		= "Jaime Lezcano";
 	ch.model	= "Montoya";
-	ch.model.animation = "Rousselet";
+	ch.model.animation = "man";
 	ch.sound_type = "male_citizen";
 	ch.sex = "man";
 	ch.nation = SPAIN;

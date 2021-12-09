@@ -41,12 +41,12 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name#.";
 
-	Locations[n].reload.l2.name = "werf";
+/*	Locations[n].reload.l2.name = "werf";
 	Locations[n].reload.l2.go = "";
 	Locations[n].reload.l2.emerge = "";
 	Locations[n].reload.l2.autoreload = "0";
 	Locations[n].reload.l2.label = "";
-	Locations[n].locators_radius.reload.werf = 3;
+	Locations[n].locators_radius.reload.werf = 3;*/
 
 	Locations[n].reload.l3.name = "sea";
 	Locations[n].reload.l3.go = "Curacao";
@@ -58,12 +58,12 @@ void LocationInitCuracao(ref n)
 		Locations[n].reload.l3.label = "Sea.";
 	Locations[n].locators_radius.reload.sea = 3;
 
-	Locations[n].reload.l4.name = "werf_back";
+/*	Locations[n].reload.l4.name = "werf_back";
 	Locations[n].reload.l4.go = "";
 	Locations[n].reload.l4.emerge = "";
 	Locations[n].reload.l4.autoreload = "0";
 	Locations[n].reload.l4.label = "";
-	Locations[n].locators_radius.reload.werf_back = 2;
+	Locations[n].locators_radius.reload.werf_back = 2;*/
 
 	Locations[n].reload.l5.name = "sea_back";
 	Locations[n].reload.l5.go = "Curacao";
@@ -153,7 +153,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l4.label = "Tavern.";
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l4.goto_disable = 1; // Screwface: Disable Go-To location
 
-	Locations[n].reload.l5.name = "reload6";
+/*	Locations[n].reload.l5.name = "reload6";
 	Locations[n].reload.l5.go = "";
 	Locations[n].reload.l5.emerge = "reload1";
 	Locations[n].reload.l5.autoreload = "0";
@@ -163,7 +163,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l6.go = "";
 	Locations[n].reload.l6.emerge = "reload1";
 	Locations[n].reload.l6.autoreload = "0";
-	Locations[n].reload.l6.label = "House.";
+	Locations[n].reload.l6.label = "House.";*/
 
 	Locations[n].reload.l7.name = "reload23";
 	Locations[n].reload.l7.go = "Willemstad_Store";
@@ -181,7 +181,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l8.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l8.goto_disable = 1; // Screwface: Disable Go-To location
 
-  	Locations[n].reload.l9.name = "reload27";
+/*  	Locations[n].reload.l9.name = "reload27";
 	Locations[n].reload.l9.go = "";
 	Locations[n].reload.l9.emerge = "";
 	Locations[n].reload.l9.autoreload = "0";
@@ -193,7 +193,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l10.emerge = "reload1";
 	Locations[n].reload.l10.autoreload = "0";
 	Locations[n].reload.l10.label = "House.";
-	Locations[n].reload.l10.close_for_night = 1;
+	Locations[n].reload.l10.close_for_night = 1;*/
 
 	Locations[n].reload.l11.name = "reload15";
 	Locations[n].reload.l11.go = "Willemstad_church";
@@ -203,7 +203,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l11.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1; // Screwface: Disable Go-To location
 
-	Locations[n].reload.l12.name = "reload9";
+/*	Locations[n].reload.l12.name = "reload9";
 	Locations[n].reload.l12.go = "";
 	Locations[n].reload.l12.emerge = "";
 	Locations[n].reload.l12.autoreload = "0";
@@ -214,7 +214,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l13.go = "";
 	Locations[n].reload.l13.emerge = "reload1";
 	Locations[n].reload.l13.autoreload = "0";
-	Locations[n].reload.l13.label = "House.";
+	Locations[n].reload.l13.label = "House.";*/
 
 	Locations[n].reload.l14.name = "reload28";
 	Locations[n].reload.l14.go = "Willemstad_TailorsShop";
@@ -224,7 +224,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l14.close_for_night   = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l14.goto_disable = 1; // Screwface: Disable Go-To location
 	
-	Locations[n].reload.l15.name = "reload25";
+/*	Locations[n].reload.l15.name = "reload25";
 	Locations[n].reload.l15.go = "";
 	Locations[n].reload.l15.emerge = "reload1";
 	Locations[n].reload.l15.autoreload = "0";
@@ -234,7 +234,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l16.go = "";
 	Locations[n].reload.l16.emerge = "reload1";
 	Locations[n].reload.l16.autoreload = "0";
-	Locations[n].reload.l16.label = "House.";
+	Locations[n].reload.l16.label = "House.";*/
 
 	Locations[n].island = "Curacao"; // NK 04-08-29
 	n = n + 1;

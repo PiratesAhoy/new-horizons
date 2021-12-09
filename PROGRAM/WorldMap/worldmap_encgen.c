@@ -136,7 +136,7 @@ bool wdmDisableTornadoGen = true;
 bool wdmTornadoGenerator()
 {
 	if(wdmDisableTornadoGen) return false;
-	if(wdmCurrentIsland !=	WDM_NONE_ISLAND) return false;
+	if(wdmCurrentIsland != WDM_NONE_ISLAND) return false;
 	int r = rand(1000);
 	if(r == 0) return false;
 	return r < 450;

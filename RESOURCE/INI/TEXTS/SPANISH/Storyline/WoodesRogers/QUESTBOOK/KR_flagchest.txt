@@ -1,8 +1,8 @@
-title=Flagchest - Shipyard owner
-text.t1=The Shipyard is found in the Lower Town of Nueva Suecia. The sign says 'Astillero'.
-text.t2=If I could reach the bell over the Shipyard door - maybe the owner thinks it's a fire alarm?
-text.t3=A Flagchest is sold to the Shipyard owner.
-text.t4=I've got the Flagchest.
+title=Cofre de banderas - Dueño del astillero
+text.t1=El astillero se encuentra en la parte baja de Nueva Suecia. El cartel dice 'Astillero'.
+text.t2=Si pudiera llegar hasta la campana que hay sobre la puerta del astillero, ¿quizás el dueño pensaría que es una alarma de incendios?
+text.t3=Un cofre de banderas ha sido vendido al dueño del astillero.
+text.t4=Tengo el cofre de banderas.
 text.t5=
 text.t6=
 text.t7=

@@ -27536,7 +27536,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "the_very_end1":
-			LAi_ActorAnimation(Pchar, "hands up", "_", 5.0);		//was 11.0
+			LAi_ActorAnimation(Pchar, "afraid", "_", 5.0);		//was 11.0
 
 			LAi_QuestDelay("pchar_sigh", 0.01);
 			LAi_QuestDelay("pchar_sigh", 0.01);
@@ -76465,7 +76465,7 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("BB_careen_capmd_2")], true);
 			if(LAi_IsFightMode(Pchar)) {LAi_SetFightMode(Pchar, false);}
 			LAi_SetPlayerType(Pchar);
-			Locations[FindLocation("BB_careen_capmd_2")].image = "Deck.tga";
+			Locations[FindLocation("BB_careen_capmd_2")].image = "wr_careen_capmd.tga";
 		break;
 
 		case "explore_corvette14":
@@ -77433,7 +77433,7 @@ void QuestComplete(string sQuestName)
 		case "explore_corvette33_D":
 			PlaySound("VOICE\ENGLISH\blaze_dont_leave_me.wav");
 			LAi_SetActorType(Pchar);
-			LAi_ActorAnimation(Pchar, "hands up", "_", 2.0);
+			LAi_ActorAnimation(Pchar, "afraid", "_", 2.0);
 
 			LAi_QuestDelay("explore_corvette33_E", 2.0);
 		break;
@@ -78546,11 +78546,11 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(characterFromID("mutineer_2"), false);
 
 			LAi_SetActorType(characterFromID("car_sailor2"));
-			LAi_ActorAnimation(characterFromID("car_sailor2"), "hands up", "Pyle_to_wdeck8", 15.0);
+			LAi_ActorAnimation(characterFromID("car_sailor2"), "afraid", "Pyle_to_wdeck8", 15.0);
 			LAi_SetActorType(characterFromID("car_sailor4"));
-			LAi_ActorAnimation(characterFromID("car_sailor4"), "hands up", "_", 15.0);
+			LAi_ActorAnimation(characterFromID("car_sailor4"), "afraid", "_", 15.0);
 			LAi_SetActorType(characterFromID("car_sailor10"));
-			LAi_ActorAnimation(characterFromID("car_sailor10"), "hands up", "_", 15.0);
+			LAi_ActorAnimation(characterFromID("car_sailor10"), "afraid", "_", 15.0);
 			
 			LAi_QuestDelay("Pyle_to_wdeck4", 1.0);
 			LAi_QuestDelay("Pyle_to_wdeck6", 2.0);
@@ -81278,7 +81278,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("INTERFACE\shelf_open.wav");
 			CreateParticleSystem("blast_dirt_small" , 0.0, 5.4, -2.6, 0.0, 0.0, 0.0, sti(20) );
 
-			Locations[FindLocation("BB_careen_capsm")].image = "Deck_Capsm.tga";
+			Locations[FindLocation("BB_careen_capsm")].image = "wr_careen_capsm.tga";
 		break;
 
 
@@ -83051,7 +83051,7 @@ void QuestComplete(string sQuestName)
 
 		case "B_A3":
 			LAi_SetActorType(characterFromID("CB21"));
-			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "hands up", 1.0);
+			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "afraid", 1.0);
 			LAi_SetActorType(characterFromID("CB1"));
 
 			LAi_QuestDelay("B_A4", 2.0);
@@ -83172,7 +83172,7 @@ void QuestComplete(string sQuestName)
 
 		case "B_CB21_hands_up":
 			LAi_SetActorType(characterFromID("CB21"));
-			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "hands up", 1.0);
+			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "afraid", 1.0);
 
 			LAi_QuestDelay("B_CB21_reset", 0.5);		//was 0.5
 		break;
@@ -83434,7 +83434,7 @@ void QuestComplete(string sQuestName)
 			for(i = 1; i < 14; i++) {LAi_SetStayType(CharacterFromID("CB"+i));}
 
 			LAi_SetActorType(characterFromID("CB21"));
-			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "hands up", 1.0);
+			LAi_tmpl_ani_PlayAnimation(characterFromID("CB21"), "afraid", 1.0);
 
 			LAi_QuestDelay("B_CB21_reset", 5.5);
 			LAi_QuestDelay("B_G2", 7.5);

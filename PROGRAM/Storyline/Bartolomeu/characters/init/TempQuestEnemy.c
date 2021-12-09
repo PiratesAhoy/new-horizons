@@ -2545,7 +2545,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.id		= "boulder";
 	ch.model	= "boulder";
 	ch.sex = "man";
-	ch.model.animation = "fast_man";
+	ch.model.animation = "man";
 //	ch.location	= "boulder_tunnel";
 //	ch.location.group = "reload";
 //	ch.location.locator = "reload3";

@@ -416,7 +416,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.lastname = TranslateString("","Wellesley");
 	ch.id		= "Lady Barbara Wellesley";
 	ch.model = "Lady_Barbara_Wellesley";
-	ch.model.animation = "woman_ab_PoTC";
+	ch.model.animation = "woman_sit";
 	ch.sex = "woman";
 //	ch.sound_type = "female_citizen";
 	ch.location	= "";
@@ -1267,7 +1267,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location	= "Turks_poker_room";
 	ch.location.group = "sit";
 	ch.location.locator = "sit3";
-	ch.Dialog.Filename = "Habitue_dialog.c";
+	ch.Dialog.Filename = "Poker_Gamblers_dialog.c";
 	//ch.greeting = "Gr_Oxbay Citizen";
 	ch.rank 	= 1;
 	ch.nation = ENGLAND;
@@ -1300,7 +1300,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location	= "Turks_poker_room";
 	ch.location.group = "sit";
 	ch.location.locator = "sit6";
-	ch.Dialog.Filename = "Habitue_dialog.c";
+	ch.Dialog.Filename = "Poker_Gamblers_dialog.c";
 	//ch.greeting = "Gr_Oxbay Citizen";
 	ch.rank 	= 1;
 	ch.nation = HOLLAND;
@@ -1333,7 +1333,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location	= "Turks_poker_room";
 	ch.location.group = "sit";
 	ch.location.locator = "sit4";
-	ch.Dialog.Filename = "Habitue_dialog.c";
+	ch.Dialog.Filename = "Poker_Gamblers_dialog.c";
 	//ch.greeting = "Gr_Oxbay Citizen";
 	ch.rank 	= 1;
 	ch.nation = PORTUGAL;

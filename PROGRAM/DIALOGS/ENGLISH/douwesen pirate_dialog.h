@@ -30,5 +30,5 @@ string DLG_TEXT[32] = {
 " right away!",
 "Good! And make haste!",
 "Yeah, yeah, wait a darn minute, let us the time to prepare ourself!",
-"You're not afraid of being discovered by the Costguards, are you? ...",
+"You're not afraid of being discovered by the Coastguards, are you? ...",
 };

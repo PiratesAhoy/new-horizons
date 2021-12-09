@@ -1597,7 +1597,7 @@ void LocationInitTurks(ref n)
 	Locations[n].reload.l2.autoreload = "1";
 	Locations[n].reload.l2.label = "Cave.";
 
-	Locations[n].reload.l3.name = "reload2";
+/*	Locations[n].reload.l3.name = "reload2";
 	Locations[n].reload.l3.go = "";
 	Locations[n].reload.l3.emerge = "reload1";
 	Locations[n].reload.l3.autoreload = "1";
@@ -1609,7 +1609,7 @@ void LocationInitTurks(ref n)
 	Locations[n].reload.l4.emerge = "reload1";
 	Locations[n].reload.l4.autoreload = "1";
 	Locations[n].reload.l4.label = "";
-	Locations[n].locators_radius.reload.reload2_back = 2.0;
+	Locations[n].locators_radius.reload.reload2_back = 2.0;*/
 
 	Locations[n].island = "Hispaniola"; // NK 04-08-29
 	n = n + 1;

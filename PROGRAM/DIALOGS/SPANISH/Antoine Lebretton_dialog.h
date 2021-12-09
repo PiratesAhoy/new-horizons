@@ -210,7 +210,7 @@ string DLG_TEXT[290] = {
 ", ¿Qué voy a hacer con él?",
 "Me da exactamente igual.",
 "Piensa por un momento. Siempre hay una solución.",
-"No tengo nada que ver con esto",
+"No tengo nada que ver con esto, ",
 ", ¡eres tú quien lo ha matado! ¡Puedo llamar a los guardias!",
 "Mira el papel que encontré en su cuerpo. ¿Sabes lo que es?",
 "Eso sería un error. Un gravísimo error.",
@@ -270,7 +270,7 @@ string DLG_TEXT[290] = {
 "Amiel Berangere",
 " fue contratado para escoltar un buque de guerra."
 "Hum.... ¿Qué clase de buque exactamente?",
-"Parecía un barco de abastecimiento. Seguramente llevarán alimentos a la flota francesa. Estamos en guerra, ya sabes, así que lo contrataron para asegurarse de que no terminase en el fondo del mar. También puede que transporte pólvora o bombas.",
+"Parecía un barco de abastecimiento. Seguramente llevarán alimentos a la flota francesa. Estamos en guerra, ya sabes, así que lo contrataron para asegurarse de que el barco no terminase en el fondo del mar. También puede que transporte pólvora o bombas.",
 "Ya veo... Entonces, ¿dónde puedo pasar la noche?",
 "No sé. Tal vez podrías hablar con él. No parece un mal tipo. Puede que esté dispuesto a compartir la habitación contigo.",
 "Hum... Espero que haya dos camas.",

@@ -1,11 +1,8 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-{=====| Antigua.c |=====}
 Portadmiral{Almirante del puerto}
 Lord Barham{Lord Barham}
 Regulating{Capitán}
 RCaptain{de regulación}
-
-{=====| Aruba.c |=====}
 Hendrick{Hendrick}
 van der Kuylen{van der Kuylen}
 Nicolaas{Nicolaas}
@@ -35,8 +32,6 @@ Chief{Jefe}
 Arawak Indian{Indio arawak}
 Arawak IndianF{India arawak}
 Arawak Chief{Jefe arawak}
-
-{=====| cayman.c |=====}
 Edmund{Edmund}
 Christobel{Christobel}
 Shaw{Shaw}
@@ -51,8 +46,6 @@ Ranger{Ranger}
 Jenna{Jenna}
 Valentine{Valentine}
 Coxon{Coxon}
-
-{=====| Colombia.c |=====}
 Gregorio{Gregorio}
 Montavez{Montavez}
 Jose{Jose}
@@ -98,8 +91,6 @@ Native{Native}
 Colombian Indian{Indio colombiano}
 Colombian IndianF{India colombiana}
 Colombian Chief{Jefe colombiano}
-
-{=====| CommonQuest.c |=====}
 Malcolm{Malcolm}
 Hatcher{Hatcher}
 Blackbeard{Barbanegra}
@@ -127,8 +118,6 @@ Raymond{Raymond}
 Bouchez{Bouchez}
 Emellio{Emellio}
 Fernandez{Fernandez}
-
-{=====| Conceicao.c |=====}
 Jacinto{Jacinto}
 Arcibaldo{Arcibaldo}
 Barreto{Barreto}
@@ -177,8 +166,6 @@ Evaristo{Evaristo}
 Macario{Macario}
 Regalo{Regalo}
 Uargo{Uargo}
-
-{=====| cuba.c |=====}
 Felipe{Felipe}
 Cisneros{Cisneros}
 Horacio{Horacio}
@@ -222,8 +209,6 @@ Figueroa{Figueroa}
 Magarino{Magarino}
 Micael{Micael}
 Salinas{Salinas}
-
-{=====| Curacao.c |=====}
 Hans{Hans}
 Kloss{Kloss}
 Pelgrem{Pelgrem}
@@ -241,8 +226,6 @@ Marja{Marja}
 Fixe{Fixe}
 Piet{Piet}
 Heyn{Heyn}
-
-{=====| DockyardOwners.c |=====}
 Patrick{Patrick}
 Webster{Webster}
 Dockyard{Comisario}
@@ -291,8 +274,6 @@ Bogardus{Bogardus}
 Vanderdecken{Vanderdecken}
 Ricardo{Ricardo}
 Ordiales{Ordiales}
-
-{=====| Douwesen.c |=====}
 Todredus{Todredus}
 Ordialds{Ordialds}
 Toff{Toff}
@@ -356,8 +337,6 @@ Severin{Severin}
 Bonvoisin{Bonvoisin}
 Alistair{Alistair}
 Garcilaso{Garcilaso}
-
-{=====| Eleuthera.c |=====}
 Kermit{Kermit}
 Brazier{Brazier}
 Alicia{Alicia}
@@ -384,8 +363,6 @@ Arrowsmith{Arrowsmith}
 Slave{Esclavo}
 Worker{Trabajador}
 Slaver{Esclavista}
-
-{=====| FalaiseDeFleur.c |=====}
 Milon{Milon}
 Blacque{Blacque}
 Orable{Orable}
@@ -471,8 +448,6 @@ Elzire{Elzire}
 Ayarai{Ayarai}
 Tomasina{Tomasina}
 Pickfurt{Pickfurt}
-
-{=====| FortCommandants.c |=====}
 Rauf{Rauf}
 Mallard{Mallard}
 Stanley{Stanley}
@@ -514,8 +489,6 @@ Oranjestad Fort{Fuerte de Oranjestad}
 Commandant{Commandant}
 de Heredia{de Heredia}
 Smith{Smith}
-
-{=====| Guadeloupe.c |=====}
 Remy{Remy}
 Gatien{Gatien}
 Dominic{Dominic}
@@ -526,8 +499,6 @@ Sinclair{Sinclair}
 Dubois{Dubois}
 François{François}
 de Vigny{de Vigny}
-
-{=====| Hispaniola.c |=====}
 Jehan{Jehan}
 Labbe{Labbe}
 Puebla{Puebla}
@@ -578,17 +549,13 @@ Lunesque{Lunesque}
 Bryan{Bryan}
 the Disgruntled{el Contrariado}
 Bloody{Norm Kidd}
-Norm Kidd{el Sangrietno}
+Norm Kidd{el Sangriento}
 Iguaran{Iguaran}
 Escriva{Escriva}
-
-{=====| IslaMona.c |=====}
 Randolf{Randolf}
 Blecher{Blecher}
 Wilfred{Wilfred}
 Burman{Burman}
-
-{=====| IslaMuelle.c |=====}
 Sylvie{Sylvie}
 Bondies{Bondies}
 Zaid{Zaid}
@@ -647,16 +614,10 @@ Edinho{Edinho}
 Cervano{Cervano}
 Robierto{Robierto}
 Cabellodoferro{Cabellodoferro}
-
-{=====| monks.c |=====}
-
-{=====| NK.c |=====}
 First{Primero}
 Last{Último}
 Ye Keeper{El Guardián}
 o' ye Hoarde{del Botín}
-
-{=====| Officers.c |=====}
 Fred{Fred}
 Bob{Bob}
 Baldewyn{Baldewyn}
@@ -679,12 +640,8 @@ Attwood{Attwood}
 Blood{Blood}
 Txiki{Txiki}
 Pijuan{Pijuan}
-
-{=====| Other.c |=====}
 Boat{Boat}
 Character{Character}
-
-{=====| Oxbay.c |=====}
 Bartholomew{Bartholomew}
 Pardner{Pardner}
 Olyver{Olyver}
@@ -741,10 +698,6 @@ Ballester{Ballester}
 Steven{Steven}
 Mather-Wren{Mather-Wren}
 Hacepoco{Hacepoco}
-
-{=====| PostInit.c |=====}
-
-{=====| QuebradasCostillas.c |=====}
 Terry{Terry}
 Snider{Snider}
 Gilles{Gilles}
@@ -793,8 +746,6 @@ Goyle{Goyle}
 Stone{Stone}
 Luna{Luna}
 Grange{Grange}
-
-{=====| Redmond.c |=====}
 Henry{Henry}
 Laurence{Laurence}
 Wellman{Wellman}
@@ -839,8 +790,6 @@ McGillicutty{McGillicutty}
 Sullivan{Sullivan}
 James{James}
 Lancaster{Lancaster}
-
-{=====| SaintMartin.c |=====}
 Dickman{Dickman}
 de Rivarol{de Rivarol}
 Travers{Travers}
@@ -861,11 +810,7 @@ Hannes{Hannes}
 Jansen{Jansen}
 Jana{Jana}
 Smit{Smit}
-
-{=====| Ship.c |=====}
 Crewmember{Tripulante}
-
-{=====| SideQuest.c |=====}
 Rian{Rian}
 Dekkers{Dekkers}
 Janneke{Janneke}
@@ -1026,8 +971,6 @@ Kicking{Cuervo}
 Raven{Que Patea}
 Lewis{Lewis}
 Vickers{Vickers}
-
-{=====| StoreOwners.c |=====}
 Agent-Victualler{Agente de avituallamiento}
 Eugene{Eugene}
 Martinho{Martinho}
@@ -1067,8 +1010,6 @@ Dawg{Dawg}
 Bennett{Bennett}
 Augustin{Augustin}
 Frechilla{Frechilla}
-
-{=====| StreetMerchants.c |=====}
 Street{Callejero}
 Merchant{Mercader}
 Street Merchant{Mercader callejero}
@@ -1096,11 +1037,7 @@ Pinto{Pinto}
 Hugo{Hugo}
 Aguayo{Aguayo}
 Zambrano{Zambrano}
-
-{=====| TActors.c |=====}
 Crewmember{Crewmember}
-
-{=====| Taverns.c |=====}
 Wicker{Wicker}
 Moods{Moods}
 Andress{Andress}
@@ -1222,8 +1159,6 @@ Ussica{Ussica}
 Salvadore{Salvadore}
 Jimena{Jimena}
 López{López}
-
-{=====| Turks.c |=====}
 Dante{Dante}
 Siciliano{Siciliano}
 LeNoir{LeNoir}
@@ -1240,8 +1175,6 @@ Hoppe{Hoppe}
 Admiral{Almirante}
 Coastbrother{Hermano de la Costa}
 Leading{Leading}
-
-{=====| Usurers.c |=====}
 Robyn{Robyn}
 Corrick{Corrick}
 Archibald{Archibald}
@@ -1270,8 +1203,6 @@ Cojuango{Cojuango}
 Jacquotte{Jacquotte}
 Delahaye{Delahaye}
 Corrales{Corrales}
-
-{=====| NK.c |=====}
 Vickery{Vickery}
 Cuthbert{Cuthbert}
 Collingwood{Collingwood}
@@ -1287,12 +1218,6 @@ Osborne{Osborne}
 Edwards{Edwards}
 Mowett{Mowett}
 Orswood{Orswood}
-
-
-{=====| 1368 characters |=====}
-
-
-{=====| Others |=====}
 Maltese{Caballero}
 Knight{de Malta}
 Weird{Extraño}

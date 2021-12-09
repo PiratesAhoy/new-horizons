@@ -164,6 +164,47 @@ float LAi_BladeCalcDamage(aref attack)
 }
 */
 
+float LAi_CalcExperienceForBlade(aref attack, aref enemy, string attackType, bool isBlocked, float dmg)
+{
+	//Вычисляем полученый опыт
+	float ra = 1.0;
+	float re = 1.0;
+	if(CheckAttribute(attack, "rank"))
+	{
+		ra = stf(attack.rank);
+	}
+	if(CheckAttribute(enemy, "rank"))
+	{
+		re = stf(enemy.rank);
+	}
+	if(ra < 1.0) ra = 1.0;
+	if(re < 1.0) re = 1.0;
+	dmg = dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
+
+	switch(attackType)
+	{
+		case "break":
+			if(isBlocked)
+			{
+				dmg = dmg*1.1;
+			}else{
+				dmg = dmg*1.2;
+			}
+		break;
+		case "feint":
+			dmg = dmg*1.5;
+		break;
+		case "feintc":
+			dmg = dmg*1.5;
+		break;
+	}
+	if (stf(enemy.chr_ai.hp) < dmg)
+	{
+       dmg = stf(enemy.chr_ai.hp);
+	}
+	return dmg;
+}
+
 //Модифицировать повреждение от сабли с учётом скилов
 float LAi_BladeApplySkills(aref attack, aref enemy, float dmg)
 {
@@ -250,16 +291,16 @@ float LAi_CalcUseEnergyForBlade(aref character, string actionType)
 	switch(actionType)
 	{
 		case "fast":
-			energy = 10.0;
-		break;
-		case "force":
 			energy = 7.0;
 		break;
+		case "force":
+			energy = 5.0;
+		break;
 		case "round":
-			energy = 14.0;
+			energy = 10.0;
 		break;
 		case "break":
-			energy = 25.0;
+			energy = 20.0;
 		break;
 		//case "feint":
 		//	energy = 7.0;
@@ -268,10 +309,10 @@ float LAi_CalcUseEnergyForBlade(aref character, string actionType)
 		//	energy = 20.0;
 		//break;
 		case "hit_parry":  // fix
-			energy = 20.0;
+			energy = 15.0;
 		break;
 		case "feintc":
-			energy = 7.0;
+			energy = 5.0;
 		break;
 	}
 	/*if(CheckCharacterPerk(character, "BladeDancer"))  // to_do

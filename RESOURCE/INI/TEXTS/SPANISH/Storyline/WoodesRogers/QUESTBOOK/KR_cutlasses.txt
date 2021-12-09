@@ -1,8 +1,8 @@
-title=Two Cutlasses - Fort Commander
-text.t1=The Fort gate is found at the end of the town center.
-text.t2=The password is 'Långtora'.
-text.t3=Two cutlasses are sold to the Fort Commander.
-text.t4=I've got the two Cutlasses!
+title=Dos alfanjes - Comandante del fuerte
+text.t1=La puerta del fuerte se encuentra al final del centro de la ciudad.
+text.t2=La contraseña es 'Långtora'.
+text.t3=Dos alfanjes han sido vendidos al comandante del fuerte.
+text.t4=¡Tengo los dos alfanjes!
 text.t5=
 text.t6=
 text.t7=

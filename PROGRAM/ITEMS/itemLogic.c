@@ -1643,7 +1643,7 @@ void OpenBoxProcedure()
 					{
 						case "Minerspick":
 							PlaySound("people\blade_kling.wav");
-							LAi_tmpl_ani_PlayAnimation(chr, "attack_7", 1.0);
+							LAi_tmpl_ani_PlayAnimation(chr, "attack_force_4", 1.0);
 							CreateParticleSystemX("cannon_embers",x,y,z, 0.0, 0.0, 0.0, 0);
 							break;
 						case "Minersspade":

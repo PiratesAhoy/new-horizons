@@ -1,8 +1,6 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-
 Bartolomeu{Bartolomeu}
 o Portugues{o Portugues}
-
 Donald{Donald}
 Hendy{Hendy}
 Celestin{Celestin}
@@ -31,7 +29,6 @@ Ortega{Ortega}
 Arie{Arie}
 Dierman{Dierman}
 Street Merchant{Street Merchant}
-
 Hector{Hector}
 Barbossa{Barbossa}
 Pierre{Pierre}
@@ -158,7 +155,6 @@ Vicente{Vicente}
 Espejo{Espejo}
 Federico{Federico}
 Carabali{Carabali}
-
 Priest{Priest}
 Monk{Monk}
 Native{Native}

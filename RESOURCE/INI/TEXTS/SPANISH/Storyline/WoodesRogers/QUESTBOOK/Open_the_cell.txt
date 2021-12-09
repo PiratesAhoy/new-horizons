@@ -1,6 +1,6 @@
-title=Open the Cell
+title=Abrir la celda
 text.t1=
-text.t2=I need something with a hook to get those boxes.
-text.t3=I have to keep my eyes open for a hatch somewhere. 
-text.t4=No, the barrel is not heavy enough! I have to fill it with something.
-text.t5=The boatswain warned me to touch 'the single lever on the right side'.
+text.t2=Necesito algo con un gancho para alcanzar esas cajas.
+text.t3=Tengo que estar atento por si veo una trampilla por alguna parte. 
+text.t4=¡No, el barril no es lo bastante pesado! Tengo que llenarlo con algo.
+text.t5=El contramaestre me advirtió que no tocara 'la única palanca del lado derecho'.

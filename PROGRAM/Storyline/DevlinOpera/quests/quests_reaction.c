@@ -1190,7 +1190,7 @@ void QuestComplete(string sQuestName)
 		case "Switch_to_Blaze":
 			SetModel(PChar, "Devlin", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 			PChar.sex = "man";
-                        PChar.model.animation = "blaze";
+                        PChar.model.animation = "man"
 			ChangeCharacterAddressGroup(characterFromID("Bonnie Devlin"), "none", "", "");	//just to be sure
 			ChangeCharacterAddressGroup(characterFromID("Blaze Devlin"), "none", "", "");	//just to be sure
 			RemovePassenger(Pchar, characterFromID("Bonnie Devlin"));
@@ -1241,7 +1241,7 @@ void QuestComplete(string sQuestName)
 		case "Switch_to_Beatrice":
 			SetModel(PChar, "Beatrice", Pchar.model.animation, PChar.sex, stf(PChar.model.height), true);
 			PChar.sex = "woman";
-                        PChar.model.animation = "Beatrice";
+                        PChar.model.animation = "woman_sit"
 			AddPassenger(Pchar, characterFromID("Bonnie Devlin"), 0);
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));
 			LAi_SetImmortal(characterFromID("Bonnie Devlin"), true);

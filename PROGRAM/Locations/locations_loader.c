@@ -234,6 +234,8 @@ bool LoadLocation(ref loc)
 		SendMessage(loc, "ls", MSG_LOCATION_TEXTURESPATH, loc.filespath.textures);
 	}
 	//Set lighting path
+	trace("Mdl: " + loc.filespath.models);
+    trace("lp: " + GetLightingPath());
 	SendMessage(loc, "ls", MSG_LOCATION_LIGHTPATH, GetLightingPath());
 	SendMessage(loc, "ls", MSG_LOCATION_SHADOWPATH, GetLmLightingPath());
 
@@ -873,7 +875,11 @@ bool LocLoadModel(aref loc, string sat, string addition)
 	attr = sat + ".tech";
 	if(CheckAttribute(loc, attr)) tech = loc.(attr);
 	attr = sat + ".level";
-	if(CheckAttribute(loc, attr)) level = MakeInt(loc.(attr));
+	//#20180615-01
+    if(CheckAttribute(loc, attr)) {
+        level = MakeInt(loc.(attr));
+        if(!bSeaActive) level += 10;
+    }
 	//Грузим модельку
 	string realModel = loc.(sat) + addition;
 	if(HasSubStr(sat,"back") && !ownDeckStarted())

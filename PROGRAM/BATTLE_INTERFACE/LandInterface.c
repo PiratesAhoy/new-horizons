@@ -233,7 +233,7 @@ ref BLI_CheckCommand()
 		break;
 	}
 
-	if(!bUsed) objLandInterface.UserIcons.cancel.enable = true;
+	if(!bUsed) objLandInterface.UserIcons.cancel.enable = false;
 	return &g_intRetVal;
 }
 
@@ -387,9 +387,9 @@ void BLI_SetObjectData()
     int fTmp, fTmp2;
 	DeleteAttribute(&objLandInterface,"");
 	objLandInterface.data.riskAlarm = 0;
-	// индикатор тревоги
+	// ��������� �������
 	objLandInterface.data.alarm = 0.0;
-	// персы вместе с нами
+	// ����� ������ � ����
 	ref mainCh = GetMainCharacter();
 	aref ar;
 	int i,cn;
@@ -409,7 +409,7 @@ void BLI_SetObjectData()
 	}
 
 	BLI_SetMessageParameters();
-	// текстуры
+	// ��������
 	int idLngFile = LanguageOpenFile("commands_name.txt");
 	objLandInterface.CommandTextures.list.t0.name = "battle_interface\LandCommands.tga";
 	objLandInterface.CommandTextures.list.t0.xsize = 4;
@@ -470,7 +470,7 @@ void BLI_SetObjectData()
 	objLandInterface.CommandTextures.list.t16.ysize = 16;
 
 	objLandInterface.CommandTextures.CommandTexNum = 0;
-	// список команд
+	// ������ ������
 	objLandInterface.Commands.Cancel.enable			= false;
 	objLandInterface.Commands.Cancel.picNum			= 0;
 	objLandInterface.Commands.Cancel.selPicNum			= 1;
@@ -590,10 +590,11 @@ void BLI_SetObjectData()
 	objLandInterface.Commands.ActivateRush.enable	= true;
 	objLandInterface.Commands.ActivateRush.picNum	= 12;
 	objLandInterface.Commands.ActivateRush.selPicNum	= 14;
+	objLandInterface.Commands.ActivateRush.texNum		= 0;
 	objLandInterface.Commands.ActivateRush.event	= "BI_ActivateRush";
 	objLandInterface.Commands.ActivateRush.note		= LanguageConvertString(idLngFile, "land_ActivateRush");
 
-	// список пользовательских картинок
+	// ������ ���������������� ��������
 		// cancel icon
 	objLandInterface.UserIcons.cancel.enable = true;
 	objLandInterface.UserIcons.cancel.pic = 0;
@@ -637,11 +638,11 @@ void BLI_SetObjectData()
 	objLandInterface.ManSign.gunchargecolor			= argb(255,168,168,48);
 	objLandInterface.ManSign.gunchargebackcolor		= argb(255,188,48,48);
 	objLandInterface.ManSign.gunchargeuv			= "0.0,0.0,1.0,1.0";
-	fTmp = RecalculateHIcon(-16);
-	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(155);
+	fTmp = RecalculateHIcon(-18);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(168);
 	//objLandInterface.ManSign.gunchargeoffset		= "-14,740";
 	objLandInterface.ManSign.gunchargeoffset = fTmp + "," + fTmp2;
-	objLandInterface.ManSign.gunchargeiconsize		= "64,16";
+	objLandInterface.ManSign.gunchargeiconsize		= "80,20";
 	objLandInterface.ManSign.gunchargeprogress		= "0.0625, 0.219, 0.359, 0.5, 0.641, 0.781, 0.983";
 
 	objLandInterface.ManSign.manfacecolor			= argb(255,128,128,128);
@@ -723,7 +724,7 @@ void BLI_SetShowParameters()
 	ar.heightHealth = RecalculateVIcon(16);
 	ar.distHealth = RecalculateVIcon(4);
 
-	// высота и отступ для количества зарядов пистолета
+	// ������ � ������ ��� ���������� ������� ���������
 	ar.GunShootHeight = RecalculateHIcon(16);
 	ar.GunShootSpace = RecalculateVIcon(2);
 
@@ -1642,12 +1643,7 @@ bool SetUsedPotionIcons()
 			objLandInterface.UserIcons.(UI_name).pic = nPicNum;
 			nTexNum = GetPotionTexture(arItm);
 			objLandInterface.UserIcons.(UI_name).tex = nTexNum;
-			if(nTexNum==4){
-				objLandInterface.UserIcons.(UI_name).selpic = nPicNum + 2;
-			}
-			else {
-				objLandInterface.UserIcons.(UI_name).selpic = nPicNum + 1;
-			}
+			objLandInterface.UserIcons.(UI_name).selpic = nPicNum + 4;
 			objLandInterface.UserIcons.(UI_name).name = UI_name;
 			objLandInterface.UserIcons.(UI_name).potion = arItm.id;
 			objLandInterface.UserIcons.(UI_name).note = GetItemNameByID(arItm.id) + ": " + GetCharacterItem(mc, arItm.id); // KK
@@ -1848,11 +1844,15 @@ void CheckOfficers()
 
 int GetPotionPicture(aref arItm)
 {
+    int ret = 0;
 	if( CheckAttribute(arItm,"potion.pic") ) {
-		return sti(arItm.potion.pic);
+		int picC = sti(arItm.potion.pic) % 4; //col
+		int picR = sti(arItm.potion.pic) / 4; //rows
+        ret = (picR * 8) + picC;
+		return ret;
 	}
 	traceif("Item "+arItm.id+ " hav`t POTION.PIC attribute");
-	return 0;
+	return ret;
 }
 
 int GetPotionTexture(aref arItm)

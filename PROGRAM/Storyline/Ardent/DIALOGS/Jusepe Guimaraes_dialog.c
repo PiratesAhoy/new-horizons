@@ -71,20 +71,20 @@ void ProcessDialogEvent()
 			}
 			if (CheckAttribute(PChar, "quest.imperial_escort.failed_return_fleet") || CheckAttribute(PChar, "quest.imperial_escort.failed_grigorio_swap"))
 			{
-				link.l1 = DLG_TEXT[173] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[174];
+				link.l1 = DLG_TEXT[173] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[174];
 				link.l1.go = "imperial_escort_merge_fleet_again";
 			}
 			if (CheckAttribute(PChar, "quest.imperial_escort.arrest_guzman") && sti(PChar.quest.imperial_escort.arrest_guzman) == true && LAi_IsDead(CharacterFromID("Emiliano de Guzmán")))
 			{
-				link.l1 = GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[179] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[180];
+				link.l1 = XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[179] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[180];
 				link.l1.go = "imperial_escort_arrest_guzman_complete";
 			}
 			if (Characters[GetCharacterIndex("Gilles Clouzot")].location == "Muelle_port" && !CheckAttribute(PChar, "quest.imperial_escort.spy_search"))
 			{
-				link.l2 = DLG_TEXT[185] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[186];
+				link.l2 = DLG_TEXT[185] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[186];
 				link.l2.go = "imperial_escort_find_spy";
 			}
-			link.l10 = DLG_TEXT[2] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[3];
+			link.l10 = DLG_TEXT[2] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[3];
 			link.l10.go = "Exit";
 		break;
 
@@ -93,7 +93,7 @@ void ProcessDialogEvent()
 			if (CheckAttribute(PChar, "quest.ardent_treachery_status")) DeleteQuestAttribute("ardent_treachery_status");
 			Preprocessor_Add("warship", Characters[GetCharacterIndex("French_Amiral")].Ship.Name);
 			TakeItemFromCharacter(Pchar, "BattleOrders2");
-			if (HasRank(PChar, SPAIN)) rank = GetRankName(PChar, SPAIN);
+			if (HasRank(PChar, SPAIN)) rank = XI_ConvertString(GetRankName(PChar, SPAIN));
 			else rank = XI_ConvertString("captain");
 
 			if (CheckAttribute(PChar, "quest.threat_governor_sent_me"))
@@ -129,7 +129,7 @@ void ProcessDialogEvent()
 				PChar.quest.finale_galleons_assigned_by = "Jusepe Guimaraes";
 			}
 			Diag.TempNode = "why_still_here";
-			link.l1 = DLG_TEXT[15] + GetRankName(NPChar, sti(NPChar.nation)) + ".";
+			link.l1 = DLG_TEXT[15] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + ".";
 			link.l1.go = "exit_finale_accept_mission";
 //			link.l2 = DLG_TEXT[16];
 //			link.l2.go = "exit";
@@ -158,13 +158,13 @@ void ProcessDialogEvent()
 				PChar.quest.finale_galleons_assigned_by = "Jusepe Guimaraes";
 			}
 			Diag.TempNode = "why_still_here";
-			link.l1 = DLG_TEXT[15] + GetRankName(NPChar, sti(NPChar.nation)) + ".";
+			link.l1 = DLG_TEXT[15] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + ".";
 			link.l1.go = "exit_finale_accept_mission";
 		break;
 
 		case "why_still_here":
 			dialog.text = DLG_TEXT[17];
-			link.l1 = DLG_TEXT[2] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[3];
+			link.l1 = DLG_TEXT[2] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[3];
 			link.l1.go = "Exit";
 		break;
 
@@ -215,7 +215,7 @@ void ProcessDialogEvent()
 		case "imperial_escort_reject":
 			PChar.quest.imperial_escort = "rejected";
 			dialog.text = DLG_TEXT[36] + GetMyLastName(CharacterFromID("Javier Balboa")) + DLG_TEXT[37];
-			link.l1 = DLG_TEXT[39] + GetRankName(NPChar, sti(NPChar.nation)) + ".";
+			link.l1 = DLG_TEXT[39] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + ".";
 			link.l1.go = "exit";
 			link.l2 = DLG_TEXT[38];
 			link.l2.go = "imperial_escort_accept";
@@ -223,8 +223,8 @@ void ProcessDialogEvent()
 
 		case "imperial_escort_accept":
 			PChar.quest.imperial_escort.status = "mission_accepted";
-			dialog.text = DLG_TEXT[40] + Characters[GetCharacterIndex("Imperial_Captain")].Ship.Name + DLG_TEXT[41] + GetMyFullName(CharacterFromID("Imperial_Captain")) + DLG_TEXT[42] + GetRankName(CharacterFromID("Imperial_Captain"), SPAIN) + " " + GetMyLastName(CharacterFromID("Imperial_Captain")) + DLG_TEXT[43];
-			link.l1 = DLG_TEXT[44] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[45] + ".";
+			dialog.text = DLG_TEXT[40] + Characters[GetCharacterIndex("Imperial_Captain")].Ship.Name + DLG_TEXT[41] + GetMyFullName(CharacterFromID("Imperial_Captain")) + DLG_TEXT[42] + XI_ConvertString(GetRankName(CharacterFromID("Imperial_Captain"), SPAIN)) + " " + GetMyLastName(CharacterFromID("Imperial_Captain")) + DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[45] + ".";
 			AddDialogExitQuest("imperial_escort_to_sanjuan");
 			link.l1.go = "exit";
 		break;
@@ -302,7 +302,7 @@ void ProcessDialogEvent()
 
 		case "imperial_escort_youre_back":
 			dialog.text = DLG_TEXT[80] + GetMyLastName(PChar) + DLG_TEXT[81];
-			link.l1 = DLG_TEXT[82] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[83] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[84];
+			link.l1 = DLG_TEXT[82] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[83] + GetMyFullName(CharacterFromID("Imperial_envoy")) + DLG_TEXT[84];
 			link.l1.go = "imperial_escort_do_you_believe";
 		break;
 
@@ -320,7 +320,7 @@ void ProcessDialogEvent()
 
 		case "imperial_escort_whodunnit":
 			dialog.text = DLG_TEXT[89];
-			link.l1 = DLG_TEXT[90] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[91] + GetMyFullName(CharacterFromID("Javier Balboa")) + DLG_TEXT[92] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[93];
+			link.l1 = DLG_TEXT[90] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[91] + GetMyFullName(CharacterFromID("Javier Balboa")) + DLG_TEXT[92] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[93];
 			link.l1.go = "imperial_escort_replaced_governor";
 		break;
 
@@ -356,14 +356,14 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				link.l1 = GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[110] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[111];
+				link.l1 = XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[110] + GetMyFullName(CharacterFromID("Emiliano de Guzmán")) + DLG_TEXT[111];
 				link.l1.go = "imperial_escort_arrest_guzman";
 			}
 		break;
 
 		case "imperial_escort_arrest_guzman":
 			dialog.text = DLG_TEXT[112];
-			link.l1 = DLG_TEXT[113] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[114];
+			link.l1 = DLG_TEXT[113] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[114];
 			AddDialogExitQuest("imperial_escort_go_get_guzman");
 			link.l1.go = "exit";
 		break;
@@ -397,8 +397,8 @@ void ProcessDialogEvent()
 		case "imperial_escort_half_pay":
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneytoCharacter(PChar, 25000);
-			dialog.text = DLG_TEXT[125] + GetRankName(PChar, sti(NPChar.nation)) + DLG_TEXT[126];
-			link.l1 = DLG_TEXT[127] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[128];
+			dialog.text = DLG_TEXT[125] + XI_ConvertString(GetRankName(PChar, sti(NPChar.nation))) + DLG_TEXT[126];
+			link.l1 = DLG_TEXT[127] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[128];
 			link.l1.go = "imperial_escort_grigorio_ship";
 		break;
 
@@ -440,7 +440,7 @@ void ProcessDialogEvent()
 
 		case "imperial_escort_cant_pay":
 			dialog.text = DLG_TEXT[145];
-			link.l1 = DLG_TEXT[146] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[147] + GetMyAddressForm(NPChar, CharacterFromID("Grigorio Formoselle"), ADDR_CIVIL, false, true) + DLG_TEXT[143];
+			link.l1 = DLG_TEXT[146] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[147] + GetMyAddressForm(NPChar, CharacterFromID("Grigorio Formoselle"), ADDR_CIVIL, false, true) + DLG_TEXT[143];
 			link.l1.go = "imperial_escort_merge_fleet";
 		break;
 
@@ -596,7 +596,7 @@ void ProcessDialogEvent()
 						AddQuestRecord("Imperial Escort", 45);
 					}
 					PChar.quest.imperial_escort.failed_return_fleet = true;
-					link.l1 = DLG_TEXT[171] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[172];
+					link.l1 = DLG_TEXT[171] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[172];
 				}
 				else
 				{
@@ -612,7 +612,7 @@ void ProcessDialogEvent()
 						}
 					}
 					if (CheckAttribute(PChar, "quest.imperial_escort.failed_return_fleet")) DeleteQuestAttribute("imperial_escort.failed_return_fleet");	// This piece of dialog may have been triggered from "imperial_escort_merge_fleet_again", which was triggered if "imperial_escort.failed_return_fleet" was previously set
-					link.l1 = DLG_TEXT[169] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[170];
+					link.l1 = DLG_TEXT[169] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[170];
 				}
 
 			}
@@ -626,7 +626,7 @@ void ProcessDialogEvent()
 				if (GetCompanionQuantity(PChar) >= COMPANION_MAX)			// You still have a full fleet, so you're still not getting the flagship back
 				{
 					dialog.text = DLG_TEXT[175];
-					link.l1 = DLG_TEXT[171] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[172];
+					link.l1 = DLG_TEXT[171] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[172];
 					link.l1.go = "exit";
 				}
 				else								// You don't have a full fleet so there's a free slot for the flagship
@@ -672,7 +672,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = DLG_TEXT[176] + GetRankName(PChar, sti(NPChar.nation)) + DLG_TEXT[177];
+				dialog.text = DLG_TEXT[176] + XI_ConvertString(GetRankName(PChar, sti(NPChar.nation))) + DLG_TEXT[177];
 				link.l1 = DLG_TEXT[157];
 				link.l1.go = "imperial_escort_merge_fleet2";
 			}
@@ -684,10 +684,10 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[181] + "\n" + GetMyFullName(CharacterFromID("Javier Balboa")) + DLG_TEXT[182];
 			if (CheckAttribute(PChar, "quest.imperial_escort.failed_return_fleet") || CheckAttribute(PChar, "quest.imperial_escort.failed_grigorio_swap"))
 			{
-				link.l1 = DLG_TEXT[173] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[174];
+				link.l1 = DLG_TEXT[173] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[174];
 				link.l1.go = "imperial_escort_merge_fleet_again";
 			}
-			link.l2 = DLG_TEXT[183] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[184];
+			link.l2 = DLG_TEXT[183] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[184];
 			link.l2.go = "exit";
 		break;
 
@@ -698,37 +698,37 @@ void ProcessDialogEvent()
 		break;
 
 		case "imperial_escort_find_spy2":
-			dialog.text = DLG_TEXT[189] + GetRankName(PChar, sti(NPChar.nation)) + DLG_TEXT[190];
+			dialog.text = DLG_TEXT[189] + XI_ConvertString(GetRankName(PChar, sti(NPChar.nation))) + DLG_TEXT[190];
 			link.l1 = DLG_TEXT[191]
 			link.l1.go = "imperial_escort_find_spy3";
 		break;
 
 		case "imperial_escort_find_spy3":
 			dialog.text = DLG_TEXT[192];
-			link.l1 = DLG_TEXT[193] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[194];
+			link.l1 = DLG_TEXT[193] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[194];
 			AddDialogExitQuest("imperial_escort_go_get_spy");
 			link.l1.go = "exit";
 		break;
 
 		case "imperial_escort_spy_result":
-			dialog.text = DLG_TEXT[195] + GetRankName(PChar, sti(NPChar.nation)) + DLG_TEXT[196];
-			link.l1 = DLG_TEXT[197] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[198];
+			dialog.text = DLG_TEXT[195] + XI_ConvertString(GetRankName(PChar, sti(NPChar.nation))) + DLG_TEXT[196];
+			link.l1 = DLG_TEXT[197] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[198];
 			link.l1.go = "exit";
 			if (CheckQuestAttribute("imperial_escort.spy_search", "spy_dead_ashore"))
 			{
-				link.l1 = DLG_TEXT[199] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[200] + GetMyFullName(CharacterFromID("Gilles Clouzot")) + DLG_TEXT[201] + GetMyFullName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[202] + GetMySimpleName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[203] + GetMySimpleName(CharacterFromID("Gilles Clouzot")) + DLG_TEXT[204];
+				link.l1 = DLG_TEXT[199] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[200] + GetMyFullName(CharacterFromID("Gilles Clouzot")) + DLG_TEXT[201] + GetMyFullName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[202] + GetMySimpleName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[203] + GetMySimpleName(CharacterFromID("Gilles Clouzot")) + DLG_TEXT[204];
 				link.l1.go = "imperial_escort_spy_reward";
 			}
 			if (CheckQuestAttribute("imperial_escort.spy_search", "spy_dead_aboard"))
 			{
-				link.l1 = DLG_TEXT[199] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[200] + GetMyFullName(CharacterFromID("Gilles Clouzot")) + DLG_TEXT[201] + GetMyFullName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[205];
+				link.l1 = DLG_TEXT[199] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[200] + GetMyFullName(CharacterFromID("Gilles Clouzot")) + DLG_TEXT[201] + GetMyFullName(CharacterFromID("Uasco Mazinho")) + DLG_TEXT[205];
 				link.l1.go = "imperial_escort_spy_reward";
 			}
 		break;
 
 		case "imperial_escort_spy_reward":
 			dialog.text = DLG_TEXT[206] + GetMyFullName(CharacterFromID("Gilles Clouzot")) + DLG_TEXT[207];
-			link.l1 = DLG_TEXT[208] + GetRankName(NPChar, sti(NPChar.nation)) + DLG_TEXT[209];
+			link.l1 = DLG_TEXT[208] + XI_ConvertString(GetRankName(NPChar, sti(NPChar.nation))) + DLG_TEXT[209];
 			AddDialogExitQuest("imperial_escort_spy_reward");
 			link.l1.go = "exit";
 		break;

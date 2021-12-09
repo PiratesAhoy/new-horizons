@@ -1,12 +1,9 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-
 William{William}
 Legrand{Legrand}
-
 Edgar Allan{Edgar Allan}
 Poe{Poe}
 Jupiter{Jupiter}
-
 C. Auguste{C. Auguste}
 Dupin{Dupin}
 Arthur Gordon{Arthur Gordon}

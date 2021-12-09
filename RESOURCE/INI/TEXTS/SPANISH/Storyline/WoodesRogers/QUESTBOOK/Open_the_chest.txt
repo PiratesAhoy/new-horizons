@@ -1,7 +1,7 @@
-title=Open the Chest
-text.t1=The niche stays open now but how can I reach the Chest?
-text.t2=I think I'll follow that Powdermonkey instead.
-text.t3=I'm gonna search this new shaft thoroughly at low tide!
-text.t4=What's wrong with the lights - did the Monkey turned them out?
-text.t5=Wonder what I'm supposed to do with that Saw?
-text.t6=I got a plank, maybe I can use it in a similar way as the skull??
+title=Abrir el cofre
+text.t1=Ahora el nicho permanece abierto pero, ¿cómo puedo alcanzar el cofre?
+text.t2=En vez de eso, creo que seguiré al mono polvorero
+text.t3=¡Registraré bien esta nueva galería cuando baje la marea!
+text.t4=¿Qué ha pasado con las luces? ¿El mono las ha apagado??
+text.t5=Me pregunto qué se supone que tengo que hacer con esta sierra.
+text.t6=Tengo una tabla, ¿tal vez pueda usarla de manera similar a la calavera?

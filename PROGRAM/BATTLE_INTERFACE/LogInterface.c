@@ -22,6 +22,9 @@ bool bAiupdated = false; // Screwface
 
 bool bIslandChecked=false;	// LDH 07Jan09
 
+float oldModulus = 0.0;
+float currentModulus = 0.0;
+
 #event_handler("blieGetMsgIconRoot","BI_GetMsgIconRoot");
 #event_handler("evntUpdateTime", "procUpdateTime");
 
@@ -754,7 +757,7 @@ void procUpdateTime()
 				bCheckForAiupdate = true;
 			}
 		}
-		if (iSeaTime >= sti(mchr.TimeSeconds)+60/TIMESCALAR_SEA)	// 12 seconds, this is approximate, but works
+		if (iSeaTime >= sti(mchr.TimeSeconds)+60.0/TIMESCALAR_SEA)	// 12 seconds, this is approximate, but works
 		{
 			mchr.TimeSeconds = iSeaTime;
 			float CurrentTime = stf(mchr.CurrentTime);
@@ -849,14 +852,16 @@ void procUpdateTime()
 		{
 			timeString = GetStringTime(stf(mchr.CurrentTime));
 			theMinute = sti(strRight(timeString,2));
-			if (theMinute != 0 && theMinute+1 != 60 && ((theMinute+1) % DirectsailCheckFrequency) == 0)	// check every DirectsailCheckFrequency minutes
+			currentModulus = ((theMinute+1) % DirectsailCheckFrequency);
+			// trace("timeString: " + timeString + " theminute: " + theMinute + " currentModulus: " + currentModulus + " oldModulus: " + oldModulus + " difference: " + (currentModulus - oldModulus));
+			if (theMinute != 0 && theMinute+1 != 60 && (currentModulus - oldModulus) < 0.0)	// check every DirectsailCheckFrequency minutes
 			{
 				if ( ! bIslandChecked )
 				{
-					Trace("== Directsail called at " + timestring);
+					// Trace("== Directsail called at " + timestring);
 					mchr.directsail.count = stf(mchr.directsail.count) + DirectsailCheckFrequency/60.0; // update encounter frequency count
-//TraceAndLog("Directsail encounter check = " + stf(mchr.directsail.count));
-					DirectSailCheck(true);
+					// TraceAndLog("Directsail encounter check = " + stf(mchr.directsail.count));
+					if (GetSeaTime()>60) DirectsailCheck(true);
 					bIslandChecked = true;
 				}
 			}
@@ -864,6 +869,8 @@ void procUpdateTime()
 			{
 				bIslandChecked = false;
 			}
+
+			oldModulus = currentModulus;
 		}
 
 		// SCREWFACE : UPDATE AI
@@ -923,8 +930,9 @@ void procUpdateTime()
 			}
 
 			// Screwface : lagoon colour mod close to seashore reload locator
-			if(mchr.location !="")
+			if(mchr.location != WDM_NONE_ISLAND)
 			{
+				// trace("Check for lagoon")
 				string island = mchr.location;
 				int li = Findisland(island);
 				//logit("island : " + island);

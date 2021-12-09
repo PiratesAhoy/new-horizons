@@ -635,10 +635,10 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].reload.l6.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l6.goto_disable = 1; // Screwface: Disable Go-To location
 	
-	Locations[n].reload.l7.name = "locator33";
+/*	Locations[n].reload.l7.name = "locator33";
 	Locations[n].reload.l7.go = "";
 	Locations[n].reload.l7.emerge = "reload1";
-	Locations[n].reload.l7.autoreload = "0";
+	Locations[n].reload.l7.autoreload = "0";*/
 	
 	Locations[n].reload.l8.name = "locator32";
 	Locations[n].reload.l8.go = "Marigot_shipyard";
@@ -960,11 +960,11 @@ void LocationInitSaintMartin(ref n)
 	Locations[n].reload.l3.autoreload = "0";
 	Locations[n].reload.l3.label = "Jungle.";
 
-	Locations[n].reload.l4.name = "door_7";
+/*	Locations[n].reload.l4.name = "door_7";
 	Locations[n].reload.l4.go = ""; // KK
 	Locations[n].reload.l4.emerge = "";
 	Locations[n].reload.l4.autoreload = "0";
-	Locations[n].reload.l4.label = "";
+	Locations[n].reload.l4.label = "";*/
 
 	Locations[n].reload.l7.name = "door_1";
 	Locations[n].reload.l7.go = "Marigot_tavern";

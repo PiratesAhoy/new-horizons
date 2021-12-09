@@ -6868,7 +6868,7 @@ void SideQuestComplete(string sQuestName)
 		case "pushdavy":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Davy Jones"));
-			LAi_ActorAnimation(pchar, "attack_2", "davywater", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "davywater", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 

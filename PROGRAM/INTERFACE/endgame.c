@@ -2,7 +2,7 @@ void InitInterface(string iniName)
 {
 	ref mchref = GetMainCharacter();
 
-	if(bAnimation) iniName = GetResourceDirectory() + "INI\NEW_INTERFACES\ANIMATION\endgame.ini";
+	if(bAnimation) iniName = "NEW_INTERFACES\ANIMATION\endgame.ini";
 	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 	SetNodeUsing("VIDEOPIE",bAnimation);
 

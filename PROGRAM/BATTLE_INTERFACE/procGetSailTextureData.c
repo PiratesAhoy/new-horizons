@@ -15,6 +15,8 @@ ref procGetSailTextureData()
 
 	DeleteAttribute(&BI_objRetValue,"");
 	BI_objRetValue.normalTex = "ships\sails\sail_whole_white_plain.tga"; // KK
+	  //Add this line for Maelstrom to fix sail emblems
+    BI_objRetValue.useOldSails = true;
 
 	string nationFileName = "ships\sails\sail_whole_white_plain.tga"; // KK
 	string tmpStr;
@@ -30,6 +32,7 @@ ref procGetSailTextureData()
 		}
 		if(IsMainCharacter(char))
 		{
+			trace("char" + "EmblemedSails");
 			if(CheckAttribute(char, "EmblemedSails"))																UseSails = 1;	// Player Emblemed Sails
 		}
 		if(CheckCharacterItem(char,"cursedcoin") && GetCursedCoinCount()>0)

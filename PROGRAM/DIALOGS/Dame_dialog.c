@@ -37,7 +37,7 @@ void ProcessDialogEvent()
 		case "begin_1":
 			TortugaDame1 = NPChar;
 			Lai_SetActorType(TortugaDame1);
-			LAi_ActorAnimation(TortugaDame1, "attack_2", "Dame_1", -1);
+			LAi_ActorAnimation(TortugaDame1, "attack_fast_2", "Dame_1", -1);
 			LAi_SetCurHPMax(pchar); // PB: No need for them to kill you
 			LAi_CharacterPlaySound(PChar, "OBJECTS\duel\punch"+sti(Rand(2)+1)+".wav");
 			NextDiag.CurrentNode = NextDiag.TempNode;
@@ -53,7 +53,7 @@ void ProcessDialogEvent()
 
 		case "begin_3":
 			Lai_SetActorType(TortugaDame2);
-			LAi_ActorAnimation(TortugaDame2, "attack_2", "Dame_3", -1);
+			LAi_ActorAnimation(TortugaDame2, "attack_fast_2", "Dame_3", -1);
 			LAi_SetCurHPMax(pchar); // PB: No need for them to kill you
 			LAi_CharacterPlaySound(PChar, "OBJECTS\duel\punch"+sti(Rand(2)+1)+".wav");
 			NextDiag.CurrentNode = NextDiag.TempNode;
@@ -68,7 +68,7 @@ void ProcessDialogEvent()
 
 		case "begin_5":
 			Lai_SetActorType(TortugaDame3);
-			LAi_ActorAnimation(TortugaDame3, "attack_2", "Dame_5", -1);
+			LAi_ActorAnimation(TortugaDame3, "attack_fast_2", "Dame_5", -1);
 			LAi_SetCurHPMax(pchar); // PB: No need for them to kill you
 			LAi_CharacterPlaySound(PChar, "OBJECTS\duel\punch"+sti(Rand(2)+1)+".wav");
 			NextDiag.CurrentNode = NextDiag.TempNode;

@@ -20912,9 +20912,9 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(Pchar);
 			LAi_SetActorType(characterFromID("Edgar Allan Poe"));
 			LAi_SetActorType(characterFromID("Jupiter"));
-			LAi_ActorAnimation(Pchar, "hands up", "", 1.0);
-			LAi_ActorAnimation(CharacterFromID("Edgar Allan Poe"), "hands up", "", 1.0);
-			LAi_ActorAnimation(CharacterFromID("Jupiter"), "hands up", "", 1.0);
+			LAi_ActorAnimation(Pchar, "afraid", "", 1.0);
+			LAi_ActorAnimation(CharacterFromID("Edgar Allan Poe"), "afraid", "", 1.0);
+			LAi_ActorAnimation(CharacterFromID("Jupiter"), "afraid", "", 1.0);
 		break;
 
 		case "stop_animation":

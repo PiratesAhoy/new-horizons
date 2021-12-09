@@ -1,8 +1,8 @@
 string CITY_TEXT[7] = {
-"Parece que un buen caballero ayudo al astillero con algun tipo de trabajo. ?No seria bueno que todos ayudaran a nuestra isla tanto como ese hombre?",
-"Note que el sastre estaba muy ocupado haciendo nuevos uniformes. Supongo que consiguio a alguien para que le consiguiera los materiales que necesitaba. ?No seria agradable si todos fueran tan amables?",
-"El fuego de los herreros arde dia y noche. No se que esta pasando, pero parece que al herrero no le faltan suministros. Alguien debe haberlos conseguido para el. ?No seria bueno que todos se ayudaran?",
-"RESERVADO PARA TRABAJO DE SOMBRAS",
-"RESERVADO PARA TRABAJO DE ALTO ESTADO",
-"Si seria ... bye",
+"Parece que algún gentil caballero ayudó al astillero con algún tipo de trabajo. ¿No sería bonito si todos ayudaran a nuestra isla tanto como lo hizo ese hombre?",
+"Me he fijado en que el sastre estaba muy ocupado haciendo nuevos uniformes. Supongo que consiguió que alguien le proporcionara los materiales que necesitaba. ¿No sería maravilloso si todo el mundo fuera tan amable?",
+"Las fraguas del herrero están encendidas noche y día. No sé lo que está pasando, pero parece que el herrero no tiene escasez de suministros. Alguien debe de habérselos conseguido. ¿No sería maravilloso que todos se ayudaran mutuamente?",
+"RESERVED FOR SHADDY JOB",
+"RESERVED FOR HIGH STATUS JOB",
+"Si, lo sería ... Adiós."
 };

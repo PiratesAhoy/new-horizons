@@ -29,7 +29,7 @@ void ProcessDialogEvent()
 			{
 				case "land_ho":
 					string toIsland = "";
-					if(CheckAttribute(NPChar,"directsail.toisland")) { toIsland = DLG_TEXT[6] + LanguageConvertString(tmpLangFileID, NPChar.directsail.toisland) + "."; }
+					if(CheckAttribute(worldmap,"directsail.toisland")) { toIsland = DLG_TEXT[6] + LanguageConvertString(tmpLangFileID, worldmap.directsail.toisland) + "."; }
 					Dialog.Text = DLG_TEXT[0] + toIsland;
 					Link.l1 = DLG_TEXT[2] + DLG_TEXT[3];
 					Link.l1.go = "Engage";

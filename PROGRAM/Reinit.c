@@ -165,6 +165,7 @@ void Reinit(bool start, bool show)
 		}
 
 		WeatherInit();
+		makeCurrentFutureRealizations(MakeInt(GetHour()));
 
 		if(show) Log_SetStringToLog(TranslateString("","Weather..."));
 
@@ -211,40 +212,40 @@ void Reinit(bool start, bool show)
 	if(bNewInterface==true)
 	{
 		Interfaces[INTERFACE_KAM_SELECTMODEL].SectionName = "interface\kam_selectmodel.c";
-		Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_selectmodel.ini";
+		Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = "NEW_INTERFACES\kam_selectmodel.ini";
 		Interfaces[INTERFACE_KAM_SELECTSAILS].SectionName = "interface\kam_selectsails.c";
-		Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_selectsails.ini";
+		Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = "NEW_INTERFACES\kam_selectsails.ini";
 		Interfaces[INTERFACE_KAM_RATIONS].SectionName = "interface\kam_rations.c";
-		Interfaces[INTERFACE_KAM_RATIONS].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_rations.ini";
+		Interfaces[INTERFACE_KAM_RATIONS].IniFile = "NEW_INTERFACES\kam_rations.ini";
 		Interfaces[INTERFACE_KAM_ARTICLES].SectionName = "interface\kam_articles.c";
-		Interfaces[INTERFACE_KAM_ARTICLES].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_articles.ini";
+		Interfaces[INTERFACE_KAM_ARTICLES].IniFile = "NEW_INTERFACES\kam_articles.ini";
 		Interfaces[INTERFACE_KAM_SHIPTRANSFER].SectionName = "interface\kam_shiptransfer.c";
-		Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_shiptransfer.ini";
+		Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = "NEW_INTERFACES\kam_shiptransfer.ini";
 		Interfaces[INTERFACE_KAM_SHIPBERTHING].SectionName = "interface\kam_shipberthing.c";				// added after build 11
-		Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\kam_shipberthing.ini";		// added after build 11
+		Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = "NEW_INTERFACES\kam_shipberthing.ini";		// added after build 11
 		Interfaces[INTERFACE_NEWS].SectionName = "interface\news.c";
-		Interfaces[INTERFACE_NEWS].IniFile = GetResourceDirectory() + "INI\NEW_INTERFACES\news.ini";
+		Interfaces[INTERFACE_NEWS].IniFile = "NEW_INTERFACES\news.ini";
 		Interfaces[INTERFACE_MONKEY].SectionName = "interface\monkey.c";
-		Interfaces[INTERFACE_MONKEY].IniFile = GetResourceDirectory() + "INI\INTERFACES\monkey.ini";
+		Interfaces[INTERFACE_MONKEY].IniFile = "NEW_INTERFACES\monkey.ini";
 	}
 	else
 	{
 		Interfaces[INTERFACE_KAM_SELECTMODEL].SectionName = "interface\kam_selectmodel.c";
-		Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_selectmodel.ini";
+		Interfaces[INTERFACE_KAM_SELECTMODEL].IniFile = "NEW_INTERFACES\kam_selectmodel.ini";
 		Interfaces[INTERFACE_KAM_SELECTSAILS].SectionName = "interface\kam_selectsails.c";
-		Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_selectsails.ini";
+		Interfaces[INTERFACE_KAM_SELECTSAILS].IniFile = "NEW_INTERFACES\kam_selectsails.ini";
 		Interfaces[INTERFACE_KAM_RATIONS].SectionName = "interface\kam_rations.c";
-		Interfaces[INTERFACE_KAM_RATIONS].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_rations.ini";
+		Interfaces[INTERFACE_KAM_RATIONS].IniFile = "NEW_INTERFACES\kam_rations.ini";
 		Interfaces[INTERFACE_KAM_ARTICLES].SectionName = "interface\kam_articles.c";
-		Interfaces[INTERFACE_KAM_ARTICLES].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_articles.ini";
+		Interfaces[INTERFACE_KAM_ARTICLES].IniFile = "NEW_INTERFACES\kam_articles.ini";
 		Interfaces[INTERFACE_KAM_SHIPTRANSFER].SectionName = "interface\kam_shiptransfer.c";
-		Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_shiptransfer.ini";
+		Interfaces[INTERFACE_KAM_SHIPTRANSFER].IniFile = "NEW_INTERFACES\kam_shiptransfer.ini";
 		Interfaces[INTERFACE_KAM_SHIPBERTHING].SectionName = "interface\kam_shipberthing.c";				// added after build 11
-		Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = GetResourceDirectory() + "INI\INTERFACES\kam_shipberthing.ini";		// added after build 11
+		Interfaces[INTERFACE_KAM_SHIPBERTHING].IniFile = "NEW_INTERFACES\kam_shipberthing.ini";		// added after build 11
 		Interfaces[INTERFACE_NEWS].SectionName = "interface\news.c";
-		Interfaces[INTERFACE_NEWS].IniFile = GetResourceDirectory() + "INI\INTERFACES\news.ini";
+		Interfaces[INTERFACE_NEWS].IniFile = "NEW_INTERFACES\news.ini";
 		Interfaces[INTERFACE_MONKEY].SectionName = "interface\monkey.c";
-		Interfaces[INTERFACE_MONKEY].IniFile = GetResourceDirectory() + "INI\INTERFACES\monkey.ini";
+		Interfaces[INTERFACE_MONKEY].IniFile = "NEW_INTERFACES\monkey.ini";
 	}
 // added by MAXIMUS <--
 
@@ -737,6 +738,7 @@ void BS_Reinit()
 		IslandsInit();
 		trace("Gauging: islands");
 		WeatherInit();
+		makeCurrentFutureRealizations(MakeInt(GetHour()));		
 		trace("Gauging: weather");
 		Alias_Init();
 		trace("Gauging: Aliases");

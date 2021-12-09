@@ -25,7 +25,7 @@ void InitInterface_S(string iniName, string town)
 		// PB: Show the Current Island -->
 		if(bSeaActive)
 		{
-			if (pchar.location != "")
+			if (pchar.location != WDM_NONE_ISLAND)
 			{
 				ref CurrentIsland = GetIslandByID(pchar.location);
 				// But it does need to have a store:

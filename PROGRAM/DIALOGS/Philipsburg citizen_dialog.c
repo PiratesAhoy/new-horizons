@@ -318,7 +318,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Philipsburg":
-			d.Text = DLG_TEXT[134] + DLG_TEXT[168];// NK
+			d.Text = DLG_TEXT[134] + DLG_TEXT[168] + GetTownSize("Philipsburg") + DLG_TEXT[169];// NK
 			Link.l1 = pcharrepphrase(DLG_TEXT[135], DLG_TEXT[136]);
 			Link.l1.go = "new question";
 			link.l2 = pcharrepphrase(DLG_TEXT[137], DLG_TEXT[138]);

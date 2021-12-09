@@ -193,7 +193,7 @@ void InitCharactersNames()
 	n = AddStr2Array(&sHoWomenNames, n, "Geerje,Geertie,Geertje,Geertrui,Geertruida,Geertruyd,Geertruyt,Geesje,Geleyn,Gellis,Gerritje,Gheertruud");
 	n = AddStr2Array(&sHoWomenNames, n, "Gheertruut,Gheetrwd,Gheile,Griet,Grietje,Heile,Heintje,Heleen,Hendrica,Hendrickje,Hendrikje,Hentje");
 	n = AddStr2Array(&sHoWomenNames, n, "Heyl,Heyltje,Hilleken,Hilletje,Isabella,Jaantje,Jacomina,Jacomintie,Jacomyntie,Jacomyntje,Janneke");
-	n = AddStr2Array(&sHoWomenNames, n, "Janneken,Jannetje,Jannettie,Jannie,Janotje,Jansje,Jantina,Jaquemyntje,Jetje,Johanna,Josyntje,Judith.");
+	n = AddStr2Array(&sHoWomenNames, n, "Janneken,Jannetje,Jannettie,Jannie,Janotje,Jansje,Jantina,Jaquemyntje,Jetje,Johanna,Josyntje,Judith");
 	n = AddStr2Array(&sHoWomenNames, n, "Juliaantje,Kaat,Kaatje,Katelinen,Katerine,Katerinen,Katherijn,Katrijn,Katrina,Keesje,Kerstecen,Kersteken");
 	n = AddStr2Array(&sHoWomenNames, n, "Kerstgen,Kesia,Krisje,Kristel,Kristijntje,Lea,Liisbetten,Lijsbet,Lijsbet,Lijskin,Lisebet,Lisebetten");
 	n = AddStr2Array(&sHoWomenNames, n, "Lizebetten,Lysbet,Lysebet,Machteld,Machtelden,Machtelt,Magdaleentje,Margaretha,Margreet,Margriet,Margriete");

@@ -1,4 +1,4 @@
-#include "islands\islands_loader.c"
+// #include "islands\islands_loader.c"
 
 extern void InitIslands();
 

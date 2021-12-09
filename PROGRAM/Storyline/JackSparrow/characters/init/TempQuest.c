@@ -413,7 +413,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.id		= "Susan Shaypen";
 	ch.model = "Daniell3"; // GR: was "Daniell1"
 	ch.sex = "woman";
-	ch.model.animation = "woman";
+	ch.model.animation = "woman_sit";
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
@@ -600,7 +600,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.lastname = TranslateString("", "Dalma");
 	ch.id		= "Tia Dalma";
 	ch.model	= "TiaDalma"; // Damski
-	ch.model.animation = "TiaDalma"; // Damski
+	ch.model.animation = "woman_sit"; // Damski
 	ch.sex = "woman";
 //	ch.sound_type = "female_citizen";
 	ch.FaceId      =  226;
@@ -1825,7 +1825,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.lastname = TranslateString("", "Maximus");
 	ch.id		= "Captain Maximus";
 	ch.model	= "Espinosa";
-	ch.model.animation = "new_man"; // PB
+	ch.model.animation = "man"; // PB
 	ch.sex = "man";
 	ch.loyality = 15;
 	ch.alignment = "good";
@@ -1883,7 +1883,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.lastname = TranslateString("", "Philippe");
 	ch.id		= "Captain Philippe";
 	ch.model = "33_Ronald";
-	ch.model.animation = "33_Ronald";
+	ch.model.animation = "man";
 	ch.sex = "man";
 	ch.loyality = 15;
 	ch.alignment = "good";
@@ -3189,7 +3189,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.lastname = "";
 	ch.id		= "Sao Feng's body1";
 	ch.model	= "SaoFeng_guard";	//JRH
-	ch.model.animation = "33_Blazie"; // PB
+	ch.model.animation = "woman_sit"; // PB
 	ch.sex	  =  "woman";
 	LAi_NoRebirthEnable(ch);
 	ch.sound_type = "female_citizen";
@@ -3227,7 +3227,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.lastname = "";
 	ch.id		= "Sao Feng's body2";
 	ch.model	= "SaoFeng_guard";	//JRH
-	ch.model.animation = "33_Blazie"; // PB
+	ch.model.animation = "woman_sit"; // PB
 	ch.sex	  =  "woman";
 	LAi_NoRebirthEnable(ch);
 	ch.sound_type = "female_citizen";
@@ -3421,7 +3421,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.lastname = "";
 	ch.id		= "Mystery_Man_01";
 	ch.model	= "33_Ronal2";
-	ch.model.animation = "33_Ronald";
+	ch.model.animation = "man";
 	ch.sex = "man";
 	ch.sound_type = "priest";
 	ch.act.escape = 0;

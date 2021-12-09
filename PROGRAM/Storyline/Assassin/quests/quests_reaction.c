@@ -3785,22 +3785,22 @@ void QuestComplete(string sQuestName)
 		case "check_capture":		
 			sld = LAi_CreateFantomCharacter(false, 0, false, false, 0.25, "pirat1", "rld", "aloc7");
             LAi_SetActorType(sld);
-			LAi_ActorAnimation(sld, "hands up", "", 1.0);	           			
+			LAi_ActorAnimation(sld, "afraid", "", 1.0);	           			
 			LAi_SetHP(sld, 40.0, 40.0);
 
 			sld = LAi_CreateFantomCharacter(false, 0, false, false, 0.25, "pirat2", "rld", "aloc5");
             LAi_SetActorType(sld);
-			LAi_ActorAnimation(sld, "hands up", "", 1.0);	            			
+			LAi_ActorAnimation(sld, "afraid", "", 1.0);	            			
 			LAi_SetHP(sld, 40.0, 40.0);	
 
 			sld = LAi_CreateFantomCharacter(false, 0, false, false, 0.25, "pirat3", "rld", "aloc4");
             LAi_SetActorType(sld);
-			LAi_ActorAnimation(sld, "hands up", "", 1.0);	             			
+			LAi_ActorAnimation(sld, "afraid", "", 1.0);	             			
 			LAi_SetHP(sld, 40.0, 40.0);	
 
 			sld = LAi_CreateFantomCharacter(false, 0, false, false, 0.25, "pirat4", "rld", "aloc6");
             LAi_SetActorType(sld);
-			LAi_ActorAnimation(sld, "hands up", "", 1.0);	           			
+			LAi_ActorAnimation(sld, "afraid", "", 1.0);	           			
 			LAi_SetHP(sld, 40.0, 40.0);
 
             ChangeCharacterAddressGroup(CharacterFromID("Chico Cois"), "Santiago_ship", "rld", "loc5");
@@ -5703,11 +5703,11 @@ void QuestComplete(string sQuestName)
 
             ChangeCharacterAddressGroup(CharacterFromID("elting_pirate_06"), "Quest_Morro_fort2", "goto", "goto3");
             LAi_SetActorType(CharacterFromID("elting_pirate_06"));
-			LAi_ActorAnimation(CharacterFromID("elting_pirate_06"), "hands up", "", 1.0);
+			LAi_ActorAnimation(CharacterFromID("elting_pirate_06"), "afraid", "", 1.0);
 
             ChangeCharacterAddressGroup(CharacterFromID("elting_pirate_04"), "Quest_Morro_fort2", "goto", "goto4");				
             LAi_SetActorType(CharacterFromID("elting_pirate_04"));
-			LAi_ActorAnimation(CharacterFromID("elting_pirate_04"), "hands up", "", 1.0);
+			LAi_ActorAnimation(CharacterFromID("elting_pirate_04"), "afraid", "", 1.0);
 
 			GiveItem2Character(CharacterFromId("elting_pirate_04"), "bladex4");
 			EquipCharacterByItem(CharacterFromId("elting_pirate_04"), "bladex4");

@@ -1,4 +1,4 @@
-string DLG_TEXT[129] = {
+string DLG_TEXT[135] = {
 "Off with you! I'm in no mood to talk to strangers.",
 "Don't you want to buy me some rum?",
 "On your way. I'm busy.",
@@ -92,7 +92,7 @@ string DLG_TEXT[129] = {
 "No, rather, another topic will do, shall we?",
 "Aye, storied she is: a fine 'istory o' blood an' guts. But we freebootin', seafarin' folk -- calls ourselves 'Buccaneer Caribbeans', if it please ye -- take good care of our own sort, and as long as ye be flyin' the skull'n'bones, yer a mate of ours. Why, there's ",
 "Fascinating... do oblige and tell me more.",
-"Perfectly intruiging. But I've other things on my mind just now.",
+"Perfectly intriguing. But I've other things on my mind just now.",
 "This land has been in many hands since the Spanish first settled her, back in ought-six if memory serves. We done wrested this rock from the French last, been some 20 years, and no one's been man enough to try and take her from us. And let 'em try, says I!",
 "Quite a story indeed. I'd like to know more about the present state of things, now.",
 "Nope, 't'ain't naught else to be found here... just our little settlement, to be sure. And I'd be careful, askin' about our private affairs here, mark me.",
@@ -128,5 +128,10 @@ string DLG_TEXT[129] = {
 "I'm not afraid of you youngster!",
 "Get out of my sight now.",
 "Hand 'em over Captain.",
-
+"polishin' the jewel",
+"swabbin' the foredeck",
+"beatin' Venus' Anvil",
+"spankin' the plank",
+"playin' the fiddle",
+"shakin' the ol' cod",
 };

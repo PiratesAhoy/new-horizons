@@ -650,44 +650,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.name = TranslateString("", "Natalia");
 	ch.lastname = TranslateString("", "Decoteau");
 	ch.id		= "wench1";
-	ch.model	= "towngirl2";
-	ch.sound_type = "female_citizen";
-	ch.sex = "woman";
-	ch.location	= "QC_brothel";
-	ch.location.group = "goto";
-	ch.location.locator = "goto5";
-	ch.Dialog.Filename = "wench_dialog.c";
-	ch.greeting = "Gr_Wench";//MAXIMUS
-	ch.nation = PIRATE;
-	ch.rank 	= 1;
-	ch.reputation = "None";
-	ch.experience = "0";
-	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "1";
-	ch.quest.sex = 0;
-	ch.sex.time = 0;
-	LAi_SetWaitressType(ch);
-	LAi_SetLoginTime(ch, 18.0, 24.0);
-	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-
-	AddGameCharacter(n, ch);
-
-		// WENCH 1
-	ch.old.name = "Natalia";
-	ch.old.lastname = "Decoteau";
-	ch.name = TranslateString("", "Natalia");
-	ch.lastname = TranslateString("", "Decoteau");
-	ch.id		= "wench1";
-	ch.model	= "towngirl2";
+	ch.model	= "downgirl2";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
 	ch.location	= "QC_brothel";
@@ -715,7 +678,6 @@ void CreateQuebradasCostillasCharacters(ref n)
 	LAi_SetWaitressType(ch);
 	LAi_SetLoginTime(ch, 0.0, 12.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-
 	AddGameCharacter(n, ch);
 
 		// WENCH 2
@@ -724,7 +686,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.name = TranslateString("", "Serena");
 	ch.lastname = TranslateString("", "Tisserand");
 	ch.id		= "wench2";
-	ch.model	= "towngirl6";
+	ch.model	= "downgir51";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
 	ch.location	= "QC_brothel";
@@ -750,9 +712,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.quest.sex = 0;
 	ch.sex.time = 0;
 	LAi_SetWaitressType(ch);
-	LAi_SetLoginTime(ch, 0.0, 18.0);
+	LAi_SetLoginTime(ch, 12.0, 24.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-
 	AddGameCharacter(n, ch);
 
 		// WENCH 3
@@ -761,7 +722,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.name = TranslateString("", "Amelia");
 	ch.lastname = TranslateString("", "Frere");
 	ch.id		= "wench3";
-	ch.model	= "towngirl5";
+	ch.model	= "downgir52";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
 	ch.location	= "QC_brothel";
@@ -787,18 +748,17 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.quest.sex = 0;
 	ch.sex.time = 0;
 	LAi_SetWaitressType(ch);
-	LAi_SetLoginTime(ch, 12.0, 24.0);
+	LAi_SetLoginTime(ch, 6.0, 18.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-
 	AddGameCharacter(n, ch);
 
-		// WENCH 3
-	ch.old.name = "Amelia";
-	ch.old.lastname = "Frere";
-	ch.name = TranslateString("", "Amelia");
-	ch.lastname = TranslateString("", "Frere");
-	ch.id		= "wench3";
-	ch.model	= "towngirl5";
+		// WENCH 4
+	ch.old.name = "Celia";
+	ch.old.lastname = "Hilder";
+	ch.name = TranslateString("", "Celia");
+	ch.lastname = TranslateString("", "Hilder");
+	ch.id		= "wench4";
+	ch.model	= "diz2";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
 	ch.location	= "QC_brothel";
@@ -826,7 +786,42 @@ void CreateQuebradasCostillasCharacters(ref n)
 	LAi_SetWaitressType(ch);
 	LAi_SetLoginTime(ch, 0.0, 6.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
 
+		// WENCH 5 - duplicate of "wench4" to cover times 0:00-6:00, 18:00-24:00, effectively 18:00-6:00
+	ch.old.name = "Celia";
+	ch.old.lastname = "Hilder";
+	ch.name = TranslateString("", "Celia");
+	ch.lastname = TranslateString("", "Hilder");
+	ch.id		= "wench5";
+	ch.model	= "diz2";
+	ch.sound_type = "female_citizen";
+	ch.sex = "woman";
+	ch.location	= "QC_brothel";
+	ch.location.group = "goto";
+	ch.location.locator = "goto3";
+	ch.Dialog.Filename = "wench_dialog.c";
+	ch.greeting = "Gr_Wench";//MAXIMUS
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	ch.quest.sex = 0;
+	ch.sex.time = 0;
+	LAi_SetWaitressType(ch);
+	LAi_SetLoginTime(ch, 18.0, 24.0);
+	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
 	AddGameCharacter(n, ch);
 
 			//BARTENDER
@@ -860,22 +855,132 @@ void CreateQuebradasCostillasCharacters(ref n)
 	LAi_SetBarmanType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-
 	AddGameCharacter(n, ch);
 
-		// WENCH 4
+		// WENCH 1 (upstairs)
+	ch.old.name = "Natalia";
+	ch.old.lastname = "Decoteau";
+	ch.name = TranslateString("", "Natalia");
+	ch.lastname = TranslateString("", "Decoteau");
+	ch.id		= "wench1U";
+	ch.model	= "downgirl2";
+	ch.sound_type = "female_citizen";
+	ch.sex = "woman";
+	ch.location	= "QC_brothel_upstairs";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "wenched_dialog.c";
+	ch.greeting = "Gr_Wench";//MAXIMUS
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	ch.quest.sex = 0;
+	ch.sex.time = 0;
+//	LAi_SetStayType(ch);
+	LAi_SetBarmanType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
+
+		// WENCH 2 (upstairs)
+	ch.old.name = "Serena";
+	ch.old.lastname = "Tisserand";
+	ch.name = TranslateString("", "Serena");
+	ch.lastname = TranslateString("", "Tisserand");
+	ch.id		= "wench2U";
+	ch.model	= "downgir51";
+	ch.sound_type = "female_citizen";
+	ch.sex = "woman";
+	ch.location	= "QC_brothel_upstairs";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "wenched_dialog.c";
+	ch.greeting = "Gr_Wench";//MAXIMUS
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	ch.quest.sex = 0;
+	ch.sex.time = 0;
+//	LAi_SetStayType(ch);
+	LAi_SetBarmanType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
+
+		// WENCH 3 (upstairs)
+	ch.old.name = "Amelia";
+	ch.old.lastname = "Frere";
+	ch.name = TranslateString("", "Amelia");
+	ch.lastname = TranslateString("", "Frere");
+	ch.id		= "wench3U";
+	ch.model	= "downgir52";
+	ch.sound_type = "female_citizen";
+	ch.sex = "woman";
+	ch.location	= "QC_brothel_upstairs";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "wenched_dialog.c";
+	ch.greeting = "Gr_Wench";//MAXIMUS
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "1";
+	ch.quest.sex = 0;
+	ch.sex.time = 0;
+//	LAi_SetStayType(ch);
+	LAi_SetBarmanType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
+
+		// WENCH 4 (upstairs)
 	ch.old.name = "Celia";
 	ch.old.lastname = "Hilder";
 	ch.name = TranslateString("", "Celia");
 	ch.lastname = TranslateString("", "Hilder");
-	ch.id		= "wench4";
-	ch.model	= "towngirl4";
+	ch.id		= "wench4U";
+	ch.model	= "diz2";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
-	ch.location	= "QC_brothel";
-	ch.location.group = "goto";
-	ch.location.locator = "goto3";
-	ch.Dialog.Filename = "wench_dialog.c";
+	ch.location	= "QC_brothel_upstairs";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "wenched_dialog.c";
 	ch.greeting = "Gr_Wench";//MAXIMUS
 	ch.nation = PIRATE;
 	ch.rank 	= 1;
@@ -895,161 +1000,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.quest.sex = 0;
 	ch.sex.time = 0;
 	LAi_SetWaitressType(ch);
-	LAi_SetLoginTime(ch, 6.0, 24.0);
-	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
-
-	AddGameCharacter(n, ch);
-
-		// WENCH 4 (upstairs)
-	ch.old.name = "Celia";
-	ch.old.lastname = "Hilder";
-	ch.name = TranslateString("", "Celia");
-	ch.lastname = TranslateString("", "Hilder");
-	ch.id		= "wench4";
-	ch.model	= "towngirl4";
-	ch.sound_type = "female_citizen";
-	ch.sex = "woman";
-	ch.location	= "QC_brothel_upstairs";
-	ch.location.group = "goto";
-	ch.location.locator = "goto3";
-	ch.Dialog.Filename = "wenched_dialog.c";
-	ch.greeting = "Gr_Wench";//MAXIMUS
-	ch.nation = PIRATE;
-	ch.rank 	= 1;
-	ch.reputation = "None";
-	ch.experience = "0";
-	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "1";
-	ch.quest.sex = 0;
-	ch.sex.time = 0;
-//	LAi_SetStayType(ch);
-	LAi_SetBarmanType(ch);
-	LAi_SetLoginTime(ch, 0.0, 6.0);
-	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
-
-	AddGameCharacter(n, ch);
-
-		// WENCH 3 (upstairs)
-	ch.old.name = "Amelia";
-	ch.old.lastname = "Frere";
-	ch.name = TranslateString("", "Amelia");
-	ch.lastname = TranslateString("", "Frere");
-	ch.id		= "wench3";
-	ch.model	= "towngirl5";
-	ch.sound_type = "female_citizen";
-	ch.sex = "woman";
-	ch.location	= "QC_brothel_upstairs";
-	ch.location.group = "goto";
-	ch.location.locator = "goto7";
-	ch.Dialog.Filename = "wenched_dialog.c";
-	ch.greeting = "Gr_Wench";//MAXIMUS
-	ch.nation = PIRATE;
-	ch.rank 	= 1;
-	ch.reputation = "None";
-	ch.experience = "0";
-	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "1";
-	ch.quest.sex = 0;
-	ch.sex.time = 0;
-//	LAi_SetStayType(ch);
-	LAi_SetBarmanType(ch);
-	LAi_SetLoginTime(ch, 6.0, 12.0);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-
-	AddGameCharacter(n, ch);
-
-		// WENCH 1 (upstairs)
-	ch.old.name = "Natalia";
-	ch.old.lastname = "Decoteau";
-	ch.name = TranslateString("", "Natalia");
-	ch.lastname = TranslateString("", "Decoteau");
-	ch.id		= "wench1";
-	ch.model	= "towngirl2";
-	ch.sound_type = "female_citizen";
-	ch.sex = "woman";
-	ch.location	= "QC_brothel_upstairs";
-	ch.location.group = "goto";
-	ch.location.locator = "goto5";
-	ch.Dialog.Filename = "wenched_dialog.c";
-	ch.greeting = "Gr_Wench";//MAXIMUS
-	ch.nation = PIRATE;
-	ch.rank 	= 1;
-	ch.reputation = "None";
-	ch.experience = "0";
-	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "1";
-	ch.quest.sex = 0;
-	ch.sex.time = 0;
-//	LAi_SetStayType(ch);
-	LAi_SetBarmanType(ch);
-	LAi_SetLoginTime(ch, 12.0, 18.0);
-	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-
-	AddGameCharacter(n, ch);
-
-		// WENCH 2 (upstairs)
-	ch.old.name = "Serena";
-	ch.old.lastname = "Tisserand";
-	ch.name = TranslateString("", "Serena");
-	ch.lastname = TranslateString("", "Tisserand");
-	ch.id		= "wench2";
-	ch.model	= "towngirl6";
-	ch.sound_type = "female_citizen";
-	ch.sex = "woman";
-	ch.location	= "QC_brothel_upstairs";
-	ch.location.group = "goto";
-	ch.location.locator = "goto2";
-	ch.Dialog.Filename = "wenched_dialog.c";
-	ch.greeting = "Gr_Wench";//MAXIMUS
-	ch.nation = PIRATE;
-	ch.rank 	= 1;
-	ch.reputation = "None";
-	ch.experience = "0";
-	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "1";
-	ch.quest.sex = 0;
-	ch.sex.time = 0;
-//	LAi_SetStayType(ch);
-	LAi_SetBarmanType(ch);
-	LAi_SetLoginTime(ch, 18.0, 24.0);
-	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-
 	AddGameCharacter(n, ch);
 
 //-----------END BROTHEL SECTION-------------------

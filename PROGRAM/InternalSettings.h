@@ -143,7 +143,7 @@ int		MAX_RAINCHANGE =				5;		// INT - ^^DITTO for rain
 
 #define MAX_SHIPS_ON_SEA			32			// INT - original value is 32, DO NOT TOUCH THIS
 
-#define MAP_VOYAGELENGTH			1.5 //4.0 		// FLOAT - ccc maptweak is 8.0: lets voyages take longer, original 4.0, slower days on worldmap is 2.0
+#define MAP_VOYAGELENGTH			1.0 //4.0 		// FLOAT - ccc maptweak is 8.0: lets voyages take longer, original 4.0, slower days on worldmap is 2.0
 
 #define MAXPIRATECLASS				4 			// INT - this is the maximum class ship pirates will be given. Defaults to 4.
 #define MAXCOASTGUARDCLASS			2 			// INT - this is the maximum class ship for coast guards.
@@ -217,7 +217,7 @@ float	NAVYRAIDER_CHANCE = 		0.4; 			// FLOAT - Ditto, but chance that raider is 
 #define FIREKILLCH_HP_RAT_PWR		0.5			// FLOAT - power to HP ratio
 
 
-#define SURR_GLOBAL_SCL				0.01		// FLOAT - Ships will surrender if damage or crew morale become critical
+#define SURR_GLOBAL_SCL				0.001		// FLOAT - Ships will surrender if damage or crew morale become critical
 												// 0.0 : Stock PotC, no surrenders
 												// 0.01 - 0.5 : The higher that value the faster ships surrender
 // Surrender adjustments

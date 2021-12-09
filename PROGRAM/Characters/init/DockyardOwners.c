@@ -157,7 +157,7 @@ void CreateDockYardOwnersCharacters(ref n)
 	ch.lastname = TranslateString("", "Fobes");
 	ch.id		= "Lambrecht Fobes";
 	ch.model	= "33_Ronald"; // Estharos Change from Old_man1 to this model
-	ch.model.animation = "33_Ronald";
+	ch.model.animation = "man";
 	ch.sex = "man";
 	ch.location	= "Douwesen_shipyard";
 	ch.location.group = "sit";
@@ -193,7 +193,7 @@ void CreateDockYardOwnersCharacters(ref n)
 	ch.lastname 	= "";
 	ch.id		= "Philippe";
 	ch.model = "33_Ronald";
-	ch.model.animation = "33_Ronald";
+	ch.model.animation = "man";
 	ch.sex = "man";
 	ch.location	= "Eleuthera_Shipyard";
 	ch.location.group = "sit";
@@ -264,7 +264,7 @@ void CreateDockYardOwnersCharacters(ref n)
 	ch.id		= "Fletcher Rosewood";
 	ch.model	= "33_Ronal2"; // Estharos Change from Bocman3 to this model
 	ch.headmodel = "h_33_Ronal2"; // Estharos Change from h_Bocman3 to this model
-	ch.model.animation = "33_Ronald";
+	ch.model.animation = "man";
 	ch.sex = "man";
 	ch.location	= "Grand_Cayman_Shipyard";
 	ch.location.group = "sit";

@@ -679,7 +679,7 @@ void PrepareSelectPerksForCharacter(ref chref)
 	if(DEBUG_PERKSELECT>1) Trace("PERK SELECT: Prepare SelectPerksForCharacter for: "+GetMySimpleName(chref));
 	//Let's check the different perktypes and see what our character can pick
 	//We use the skill list in maincharacter to loop trough so we know its always accurate
-	int numperktypes = GetAttributesNum(PerkTypes);
+	int numperktypes = GetAttributesNum(&PerkTypes);
 	aref perktype;
 	int total = 0;
 	int numskills = 0;
@@ -690,7 +690,7 @@ void PrepareSelectPerksForCharacter(ref chref)
 	string skillname, typename;
 	for(int n = 0; n < numperktypes; n++)
 	{
-		typename = GetAttributeName(GetAttributeN(PerkTypes, n));
+		typename = GetAttributeName(GetAttributeN(&PerkTypes, n));
 		makearef(perktype,PerkTypes.(typename).Skill);
 		//A perktype has serveral contributing skills. They are weighted and when added together with theire
 		//weighting they can be max 100. We use this number to determine which skilltype will be picked.
@@ -725,11 +725,11 @@ bool SelectPerksForCharacter(ref chref, int attempts)
 	if(!CheckAttribute(chref,"PerkTypes")) PrepareSelectPerksForCharacter(chref);
 	if(sti(chref.PerkTypes) <= 0) return false;
 	string typename;
-	int numperktypes = GetAttributesNum(PerkTypes);
+	int numperktypes = GetAttributesNum(&PerkTypes);
 	if(DEBUG_PERKSELECT>1) Trace("PERK SELECT: Called SelectPerksForCharacter for: "+GetMySimpleName(chref));
 	string offictype = chref.quest.officertype;
 	//First we try to add a perk to the highest PerkType
-	typename = GetAttributeName(GetAttributeN(PerkTypes, sti(chref.PerkTypes.highest)));
+	typename = GetAttributeName(GetAttributeN(&PerkTypes, sti(chref.PerkTypes.highest)));
 	if(SelectPerkForType(typename, chref))
 	{
 		return true;
@@ -752,7 +752,7 @@ bool SelectPerksForCharacter(ref chref, int attempts)
 					if(DEBUG_PERKSELECT>1) Trace("PERK SELECT: no more freepoints left. Break the loop");
 					break;
 				}
-				typename = GetAttributeName(GetAttributeN(PerkTypes, i));
+				typename = GetAttributeName(GetAttributeN(&PerkTypes, i));
 				if(rnum < sti(chref.PerkTypes.(typename)))
 				{
 					if(SelectPerkForType(typename, chref)) 
@@ -871,7 +871,7 @@ bool SelectPerkForType(string type, ref chref)
 		if(hval <2) chance -= 40; //If the score is only 1 we have a 50% chance of taking this perk. There might be something better or we should wait till something with more points comes along
 		if(sti(chref.rank) < 10) chance -= 25; //If we are below level 10 we should have a large chance of skipping a perk because there is a large chance something better is out there.
 		if(sti(chref.rank) < 20) chance -= 15; //If we are below level 20 we should have a chance of skipping a perk because there is a large chance something better is out there.
-		if(type != GetAttributeName(GetAttributeN(PerkTypes, sti(chref.PerkTypes.highest)))) chance -= 35; //If this isn't the best PerkType we should have less chance of picking one.
+		if(type != GetAttributeName(GetAttributeN(&PerkTypes, sti(chref.PerkTypes.highest)))) chance -= 35; //If this isn't the best PerkType we should have less chance of picking one.
 		if(rand(100)<chance)
 		{
 			perkname = GetAttributeName(GetAttributeN(perks, highest));

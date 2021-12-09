@@ -41,7 +41,7 @@ bool Character_PostInit(int n)
 // changed by MAXIMUS [for AOP models] -->
 		if(rCharacter.sex == "woman")
 		{
-			if(StraifCharacter(rCharacter)) rCharacter.model.animation = "new_woman";
+			if(StraifCharacter(rCharacter)) rCharacter.model.animation = "woman_sit";
 			else rCharacter.model.animation = "woman_sit";	// was "towngirl"
 // KK -->
 			rCharacter.model.height = WOMAN_HEIGHT;
@@ -50,7 +50,7 @@ bool Character_PostInit(int n)
 		}
 		else
 		{
-			if(StraifCharacter(rCharacter)) rCharacter.model.animation = "new_man";
+			if(StraifCharacter(rCharacter)) rCharacter.model.animation = "man";
 			else rCharacter.model.animation = "man";
 // KK -->
 			rCharacter.model.height = MAN_HEIGHT;
@@ -361,10 +361,10 @@ void SetDefaultSitIdle(ref character)
 {	
 	character.actions.idle.i1 = "Sit_Look_Around";
 	character.actions.idle.i2 = "Sit_Lower_head";
-	character.actions.idle.i3 = "Sit_WaveFly";
-	character.actions.idle.i5 = "Sit_Blew_1";
-	character.actions.idle.i6 = "Sit_Blew_1";
-	character.actions.idle.i7 = "Sit_Blew_1";
+	character.actions.idle.i3 = "Sit_Idle01";
+	character.actions.idle.i5 = "Sit_Idle02";
+	character.actions.idle.i6 = "Sit_Idle03";
+	character.actions.idle.i7 = "Sit_Idle04";
 }
 
 void SetDefaultNormWalk(ref character)
@@ -435,54 +435,124 @@ void SetDefaultFight(ref character)
 		character.actions.fightbackrun = "fight back run";
 	}
 // MAXIMUS: <-[unlinks from character.id]-
-
-	character.actions.attack.a1 = "attack_1";
-	character.actions.attack.a2 = "attack_2";
-	character.actions.attack.a3 = "attack_3";
-	character.actions.attack.a4 = "attack_4";
-	character.actions.attack.a5 = "attack_5";
-	character.actions.attack.a6 = "attack_6";
-	character.actions.attack.a7 = "attack_7";
-	character.actions.attack.a8 = "attack_8";
-
-	character.actions.attacktl.a1 = "attack_left_1";
-
-	character.actions.attacktr.a1 = "attack_right_1";
-
-	character.actions.hit.h1 = "hit_1";
-	character.actions.hit.h2 = "hit_2";
-	character.actions.hit.h3 = "hit_3";
-	if(IsMainCharacter(character)) character.actions.hit.h4 = "face_hit";// MAXIMUS
-
-	character.actions.block = "block";
-	character.actions.blockhit = "block_hit";
-	character.actions.recoil = "Recoil";
-	character.actions.shot = "Shot";
-
-
-	if(StraifCharacter(character))
-	{
-		character.actions.fightSidestep_left_on = "straif_weapon_left";
-		character.actions.fightSidestep_right_on = "straif_weapon_right";
-	}
-	else
-	{
-		character.actions.fightSidestep_left_on = "skip";
-		character.actions.fightSidestep_right_on = "skip";
-	}
-
-	SetDefaultFightDead(character);
-
-	//Idle анимация в режиме боя
-	character.actions.fightidle.i1 = "fight stand_1";
-	character.actions.fightidle.i2 = "fight stand_2";
-	character.actions.fightidle.i3 = "fight stand_3";
-	character.actions.fightidle.i4 = "fight stand_4";
-	if(GetAttribute(character,"model.animation")=="blaze" || GetAttribute(character,"model.animation")=="new_man") // PB: missed attribute: model ???
-	{
+	
+	// mitrokosta add COAS actions
+	if (GetAttribute(character,"model.animation") == "man" || GetAttribute(character,"model.animation") == "woman_sit") {
+		//�������� � ������ ���
+		//Fast (max 3) --------------------------------------------------
+		character.actions.attack_fast.a1 = "attack_fast_1";
+		character.actions.attack_fast.a2 = "attack_fast_2";
+		character.actions.attack_fast.a3 = "attack_fast_3";
+		//Force (max 4) --------------------------------------------------
+		character.actions.attack_force.a1 = "attack_force_1";
+		character.actions.attack_force.a2 = "attack_force_2";
+		character.actions.attack_force.a3 = "attack_force_3";
+		character.actions.attack_force.a4 = "attack_force_4";
+		//Round (max 2) --------------------------------------------------
+		character.actions.attack_round.a1 = "attack_round_1";
+		character.actions.attack_round.a2 = "attack_round_1";
+		//Break (max 4) --------------------------------------------------
+		character.actions.attack_break.a1 = "attack_break_1";
+		character.actions.attack_break.a2 = "attack_break_1";
+		character.actions.attack_break.a3 = "attack_break_1";
+		character.actions.attack_break.a4 = "attack_break_1";
+		//Feint (max 4) --------------------------------------------------
+		character.actions.attack_feint.a1 = "attack_feint_1";
+		character.actions.attack_feintc.a1 = "attack_feintc_1";
+		character.actions.attack_feint.a2 = "attack_feint_2";
+		character.actions.attack_feintc.a2 = "attack_feintc_2";
+		character.actions.attack_feint.a3 = "attack_feint_3";
+		character.actions.attack_feintc.a3 = "attack_feintc_3";
+		character.actions.attack_feint.a4 = "attack_feint_4";
+		character.actions.attack_feintc.a4 = "attack_feintc_4";
+		//Shot--------------------------------------------------
+		character.actions.shot = "Shot";
+		//Normal hit (max 3) --------------------------------------------------
+		character.actions.hit_attack.h1 = "hit_attack_1";
+		character.actions.hit_attack.h2 = "hit_attack_2";
+		character.actions.hit_attack.h3 = "hit_attack_3";
+		//Ohter hits --------------------------------------------------------------------
+		character.actions.hit_feint = "hit_feint";
+		character.actions.hit_parry = "hit_parry";
+		character.actions.hit_round = "hit_round";
+		character.actions.hit_shot = "hit_fire";
+		//Block--------------------------------------------------------------------
+		character.actions.block = "block";
+		character.actions.blockaxe = "block_axe";
+		character.actions.blockhit = "block_hit";
+		character.actions.blockaxehit = "block_axe_hit";
+		character.actions.blockbreak = "block_break";
+		//Parry--------------------------------------------------------------------
+		character.actions.parry.p1 = "parry_1";
+		character.actions.parry.p2 = "parry_2";
+		character.actions.parry.p3 = "parry_3";
+		character.actions.parry.p4 = "parry_4";
+		//Strafes--------------------------------------------------------------------
+		character.actions.recoil = "recoil";					//�����
+		character.actions.strafeleft = "straif_weapon_left";	//�����
+		character.actions.straferight = "straif_weapon_right";	//������
+		//Death
+		SetDefaultFightDead(character);
+		//Idle �������� � ������ ���
+		character.actions.fightidle.i1 = "fight stand_1";
+		character.actions.fightidle.i2 = "fight stand_2";
+		character.actions.fightidle.i3 = "fight stand_3";
+		character.actions.fightidle.i4 = "fight stand_4";
 		character.actions.fightidle.i5 = "fight stand_5";
 		character.actions.fightidle.i6 = "fight stand_6";
+		character.actions.fightidle.i7 = "fight stand_7";
+		character.actions.fightidle.i8 = "fight stand_8";
+	} else {
+		character.actions.attack.a1 = "attack_1";
+		character.actions.attack.a2 = "attack_2";
+		character.actions.attack.a3 = "attack_3";
+		character.actions.attack.a4 = "attack_4";
+		character.actions.attack.a5 = "attack_5";
+		character.actions.attack.a6 = "attack_6";
+		character.actions.attack.a7 = "attack_7";
+		character.actions.attack.a8 = "attack_8";
+
+		character.actions.attacktl.a1 = "attack_left_1";
+
+		character.actions.attacktr.a1 = "attack_right_1";
+
+		character.actions.hit.h1 = "hit_1";
+		character.actions.hit.h2 = "hit_2";
+		character.actions.hit.h3 = "hit_3";
+		if(IsMainCharacter(character)) character.actions.hit.h4 = "face_hit";// MAXIMUS
+
+		character.actions.block = "block";
+		character.actions.blockhit = "block_hit";
+		character.actions.recoil = "Recoil";
+		character.actions.shot = "Shot";
+
+
+		if(StraifCharacter(character))
+		{
+			character.actions.fightSidestep_left_on = "straif_weapon_left";
+			character.actions.fightSidestep_right_on = "straif_weapon_right";
+		}
+		else
+		{
+			character.actions.fightSidestep_left_on = "skip";
+			character.actions.fightSidestep_right_on = "skip";
+		}
+
+		SetDefaultFightDead(character);
+
+		//Idle �������� � ������ ���
+		character.actions.fightidle.i1 = "fight stand_1";
+		character.actions.fightidle.i2 = "fight stand_2";
+		character.actions.fightidle.i3 = "fight stand_3";
+		character.actions.fightidle.i4 = "fight stand_4";
+		if(GetAttribute(character,"model.animation")=="blaze" || GetAttribute(character,"model.animation")=="new_man") // PB: missed attribute: model ???
+		{
+			character.actions.fightidle.i5 = "fight stand_5";
+			character.actions.fightidle.i6 = "fight stand_6";
+		}
 	}
+
+	
 
 }
 

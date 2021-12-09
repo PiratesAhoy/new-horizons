@@ -1,4 +1,4 @@
-string DLG_TEXT[165] = {
+string DLG_TEXT[166] = {
 "Welcome, welcome, ",
 ". You'll find everything your heart desires at Everard Gordon's tavern. If I don't have it, I know where to get it!",
 "Thanks for the warm welcome. I'm ",
@@ -159,6 +159,7 @@ string DLG_TEXT[165] = {
 "Do you have a vacancy?",
 "Not just yet. Let me have a moment more of your time.",
 "Stop this! Stop this madness at once, or I shall be forced to call the guards!",
+"All right, all right. I'm leaving!",
 "Do you know if an English convoy has been here recently?",
 "Yes, about a week ago. It was a good day for business. They were bringing a load of silk from across the Atlantic and hadn't seen any decent food or drink for ages.",
 "Any idea where they headed next?",

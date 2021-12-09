@@ -1,9 +1,9 @@
-title=Tricorn - Tailor
-text.t1=The Tailor's shop is in the Upper Town of Nueva Sucia.
-text.t2=The Tailor's private room is the one with an orial. I have to climb the roofs to get there. But where do you start?
-text.t3=A Tricorn is sold to the Tailor.
-text.t4=I've got the Tricorn.
-text.t5=Yes! There was a Key hidden inside.
+title=Tricornio - Sastre
+text.t1=La sastrería está en la parte alta de Nueva Suecia.
+text.t2=El cuarto privado del sastre es el que tiene una ventana con mirador. Tendré que trepar por los tejados para llegar allí. ¿Pero por dónde empezar?
+text.t3=Se ha vendido un tricornio al sastre.
+text.t4=Tengo el tricornio.
+text.t5=¡Sí! Había una llave escondida dentro.
 text.t6=
 text.t7=
 text.t8=

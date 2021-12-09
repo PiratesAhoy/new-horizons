@@ -255,7 +255,7 @@ void ProcessDialogEvent()
 			}
 			if (CheckQuestAttribute("ardent_convoy", "Oxbay"))
 			{
-				link.l1 = DLG_TEXT[160];
+				link.l1 = DLG_TEXT[161];
 				link.l1.go = "ardent_convoy";
 			}
 			Link.l99 = DLG_TEXT[42];
@@ -631,16 +631,16 @@ void ProcessDialogEvent()
 		break;
 
 		case "ardent_convoy":
-			d.Text = DLG_TEXT[161];
-			link.l1 = DLG_TEXT[162];
+			d.Text = DLG_TEXT[162];
+			link.l1 = DLG_TEXT[163];
 			link.l1.go = "ardent_convoy2";
 		break;
 
 		case "ardent_convoy2":
 			PChar.quest.ardent_convoy = "Cartagena";
 			AddQuestRecord("Convoy Strike", 3);
-			d.Text = DLG_TEXT[163];
-			link.l1 = DLG_TEXT[164];
+			d.Text = DLG_TEXT[164];
+			link.l1 = DLG_TEXT[165];
 			link.l1.go = "exit";
 		break;
 

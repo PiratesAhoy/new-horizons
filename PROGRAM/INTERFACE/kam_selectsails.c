@@ -38,7 +38,7 @@ bool hasSailColorTan = true;
 bool hasSailNationLogo = true;
 bool HasSailPirateLogo = true;
 
-#define SAILSTYPE_SPECIAL_COUNT 16
+#define SAILSTYPE_SPECIAL_COUNT 26
 string SpecialSailsNormal[SAILSTYPE_SPECIAL_COUNT];
 string SpecialSailsEmblem[SAILSTYPE_SPECIAL_COUNT];
 string SpecialSailsDescr[SAILSTYPE_SPECIAL_COUNT];
@@ -109,7 +109,37 @@ void InitInterface(string iniName)
 	SpecialSailsNormal[15] = "sail_QAR.tga";
 	SpecialSailsEmblem[15] = "sail_QAR1.tga";
 	SpecialSailsDescr[15] = "Red sails with gold fringe, characteristic to Queen Anne's Revenge."
-
+	SpecialSailsNormal[16] = "sail_DeathVessel_whole.tga";
+	SpecialSailsEmblem[16] = "sail_DeathVessel_whole1.tga";
+	SpecialSailsDescr[16] = "A set of sails that once belonged to the legendary Death Vessel.";
+	SpecialSailsNormal[17] = "sail_Black_Red.tga";
+	SpecialSailsEmblem[17] = "sail_Black_Red.tga";
+	SpecialSailsDescr[17] = "A set of black sails with red and white stripes.";
+	SpecialSailsNormal[18] = "sail_Diamond.tga";
+	SpecialSailsEmblem[18] = "sail_Diamond.tga";
+	SpecialSailsDescr[18] = "A set of sails bearing diamonds patterns, praised for their beauty.";
+	SpecialSailsNormal[19] = "sail_Experto.tga";
+	SpecialSailsEmblem[19] = "sail_Experto1.tga";
+	SpecialSailsDescr[19] = "A set of white sails sporting a chain with broken links, and represent the holder's commitment to freedom.";
+	SpecialSailsNormal[20] = "sail_Explorer.tga";
+	SpecialSailsEmblem[20] = "sail_Explorer1.tga";
+	SpecialSailsDescr[20] = "A set of sails with an anchor pattern, representing the conquering explorers of the New World.";
+	SpecialSailsNormal[21] = "sail_Gilded_plain.tga";
+	SpecialSailsEmblem[21] = "sail_Gilded.tga";
+	SpecialSailsDescr[21] = "A set of blue sails with gilded gold patterns.";
+	SpecialSailsNormal[22] = "sail_Navigator.tga";
+	SpecialSailsEmblem[22] = "sail_Navigator1.tga";
+	SpecialSailsDescr[22] = "A set of sails with the pattern of a master navigator's golden sextant.";
+	SpecialSailsNormal[23] = "sail_Officer.tga";
+	SpecialSailsEmblem[23] = "sail_Officer1.tga";
+	SpecialSailsDescr[23] = "A set of sails featuring a pattern of crossed muskets.";
+	SpecialSailsNormal[24] = "sail_Red_Striped.tga";
+	SpecialSailsEmblem[24] = "sail_Red_Striped.tga";
+	SpecialSailsDescr[24] = "A set of white canvas sails adorned with red stripes.";
+	SpecialSailsNormal[25] = "sail_Templar.tga";
+	SpecialSailsEmblem[25] = "sail_Templar1.tga";
+	SpecialSailsDescr[25] = "A set of black and red sails emblazoned with the Templar cross.";
+	
 	CreateString(true, "SailTypeName", "", FONT_NORMAL, COLOR_NORMAL, 130, 55, SCRIPT_ALIGN_CENTER, 0.9);
 	CreateString(true, "SailModelName", "", FONT_NORMAL, COLOR_NORMAL, 130, 105, SCRIPT_ALIGN_CENTER, 0.9);
 	CreateString(true, "SailColorName", "", FONT_NORMAL, COLOR_NORMAL, 130, 155, SCRIPT_ALIGN_CENTER, 0.9);
@@ -196,7 +226,7 @@ void FirstUpdate()
 				case SAILSTYPE_SPECIAL:
 					isSailTypeSpecial = true;
 					hasSailModelWhole = false;
-					hasSailModelTorn = false;
+					hasSailModelTorn = true;
 					hasSailColorWhite = false;
 					hasSailColorRed = false;
 					hasSailColorBlack = false;
@@ -239,7 +269,7 @@ void FirstUpdate()
 		case SAILSTYPE_SPECIAL:
 			isSailTypeSpecial = true;
 			hasSailModelWhole = false;
-			hasSailModelTorn = false;
+			hasSailModelTorn = true;
 			hasSailColorWhite = false;
 			hasSailColorRed = false;
 			hasSailColorBlack = false;

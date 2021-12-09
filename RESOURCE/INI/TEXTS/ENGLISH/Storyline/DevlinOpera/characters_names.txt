@@ -1,9 +1,15 @@
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+Beatrice{Beatrice}
+Devlin{Devlin}
+Skull{Skull}
 Mystery{Mystery}
 Messenger{Messenger}
 Brin Mistress{Brin Mistress}
 Emmanuel{Emmanuel}
-Devlin{Devlin}
 Bonnie{Bonnie}
+Blaze{Blaze}
+Short Jack{Short Jack}
+Gold{Gold}
 Couch Captain{Couch Captain}
 Charles{Charles}
 Sir Christopher{Sir Christopher}
@@ -15,16 +21,16 @@ Robert{Robert}
 Cook{Cook}
 Thomas the{Thomas the}
 Terror{Terror}
-High Sea{High Sea}
-Lass{Lass}
-Morgan{Morgan}
-Skull{Skull}
-Bartholomew{Bartholomew}
-Roberts{Roberts}
-Catalina{Catalina}
-the Pirate{the Pirate}
-Merciless{Merciless}
-Mark{Mark}
 John Paul{John Paul}
 Jones{Jones}
-Blaze{Blaze}
+Captain{Captain}
+Maximus{Maximus}
+High Sea{High Sea}
+Lass{Lass}
+Catalina{Catalina}
+the Pirate{the Pirate}
+Morgan{Morgan}
+Bartholomew{Bartholomew}
+Roberts{Roberts}
+Merciless{Merciless}
+Mark{Mark}

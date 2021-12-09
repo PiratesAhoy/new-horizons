@@ -120,7 +120,7 @@ bool AISeaGoods_ShipEatGood()
 	// ccc Jan07 Directsail, special events that happen if you sail over flotsam of a certain kind
        if (sGood=="Oil")   //Oil, which usually never floats, serves as trigger for events
        {
-          SwimGoodEvent(rCharacter,iQuantity);   //new function in CCCdirectsail.c, so that future changes won't affect this common file
+          SwimGoodEvent(rCharacter,iQuantity);   //new function in directsail_NH.c or directsail_GOF.c, so that future changes won't affect this common file
           return false;   //aborts the function so that no "oil" goods are added
        }
 	

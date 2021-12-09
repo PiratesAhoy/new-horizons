@@ -1,8 +1,6 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-
 Julian{Julian}
 McAllister{McAllister}
-
 Robert{Robert}
 Fletcher{Fletcher}
 Edward{Edward}
@@ -20,12 +18,10 @@ François{François}
 de Hadoque{de Hadoque}
 Koleniko{Koleniko}
 Ragetti{Ragetti}
-
 Bartolomeu{Bartolomeu}
 Portugues{Portugues}
 Guillaume{Guillaume}
 Auger{Auger}
-
 William{William}
 Sullivan{Sullivan}
 David{David}
@@ -41,7 +37,6 @@ O'Bannon{O'Bannon}
 Angus{Angus}
 Calhoun{Calhoun}
 Bush{Bush}
-
 Bart{Bart}
 Renault{Renault}
 Enrique{Enrique}
@@ -71,7 +66,6 @@ Alonso{Alonso}
 Madero{Madero}
 Arnaldo{Arnaldo}
 Chaparro{Chaparro}
-
 Prison{Prisión}
 Guard{Guardia}
 Prison Guard{Guardia de la prisión}

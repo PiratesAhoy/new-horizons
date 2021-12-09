@@ -90,15 +90,28 @@ void CreateCharacters()
 	switch(CharPlayerType)
 	{
 		case PLAYER_TYPE_ADVENTURER:
-			if(GetMySimpleOldName(ch) == "Geralt of Rivia")
+			switch(GetMySimpleOldName(ch))
 			{
-				ch.shiplog.Title.log0 = "Travelling Worlds";
-				ch.shiplog.Entry.log0 = "Ciri and I were on the hunt for a 'dragon' that had killed five villagers. However we knew that our employer was most probably mistaken and that the monster was probably a Wyvern or something similar. When we went to investigate, we were surprised, although no dragon, the beast was still very dangerous, it was a Manticore, one of the most dangerous beasts the world has to offer. I had killed one of them in the past, but this time something was troubling me and i made a mistake. Ciri quickly grabbed me and teleported us to a different world, saving my life. But we were separated once more."
-				if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "witcher_steel+2");
-				else			GiveItem2Character(ch, "witcher_steel");
-			}
-			else
-			{
+				case "Geralt of Rivia":
+					ch.shiplog.Title.log0 = "Travelling Worlds";
+					ch.shiplog.Entry.log0 = "Ciri and I were on the hunt for a 'dragon' that had killed five villagers. However we knew that our employer was most probably mistaken and that the monster was probably a Wyvern or something similar. When we went to investigate, we were surprised, although no dragon, the beast was still very dangerous, it was a Manticore, one of the most dangerous beasts the world has to offer. I had killed one of them in the past, but this time something was troubling me and i made a mistake. Ciri quickly grabbed me and teleported us to a different world, saving my life. But we were separated once more.";
+					if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "witcher_steel+2");
+					else			GiveItem2Character(ch, "witcher_steel");
+				break;
+
+				case "Dervia":
+					ch.shiplog.Title.log0 = "My introduction to Caribbean.";
+					ch.shiplog.Entry.log0 = "Once a beautiful pirate captain, now a demoness. This all happened during my 'visit' on Cuba. The Spanish patrol found me and took their last breath, but I also was wounded heavily. I lost my consciousness at the governor's mansion and after I woke up, I was on a main square tied up. The people saw that I was awake and shouted to the executioner to cut off my head...and he did it. This is all really strange as after my death I found myself in a strange cave. There was a weird floating black orb and a white orb. I took the opportunity and touched the black one. A enormous and searing pain came through my body and I once again passed out. This time I woke up on Santiago main square where I was executed. My anger towards those Spanish lapdogs was so big that I burned the entire city myself, after that I continue my adventure and the Caribbean will cower before my might as I am the Angel of Death.";
+					GiveItem2Character(ch, "bladerubysb");
+				break;
+
+				case "Avergorex":
+					ch.shiplog.Title.log0 = "My first arrival";
+					ch.shiplog.Entry.log0 = "I spent my eternal life as a demon in the underworld, but this time someone has summoned me to this mortal world. They thought when they summon me by their stupid ritual, they will be rewarded with power, such foolishness. After I killed them, I took their belongings, their robes and weapons, especially MY sabre that I found on their leader, for now I should have a look around and see where this world will lead me.";
+					GiveItem2Character(ch, "blade_ebony");
+				break;
+
+				// Default
 				if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "bladeC2+2");
 				else			GiveItem2Character(ch, "bladeC2");
 			}
@@ -137,7 +150,7 @@ void CreateCharacters()
 				{
 					if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "blade21+2");
 					else					GiveItem2Character(ch, "blade21");
-					GiveItem2Character(ch, "bladekit");
+					GiveItem2Character(ch, "bladekit");	
 				}
 				else
 				{
@@ -210,7 +223,7 @@ void CreateCharacters()
 					case PIRATE: break;	// Nothing - trade passports are not for pirates!
 					GiveItem2Character(ch, "Trade_Passport");
 				}
-			}		
+			}
 		break;
 		case PLAYER_TYPE_NAVAL_OFFICER:
 			ch.shiplog.Entry.log0 = "Having joined the navy, it is now up to me to work myself up through the ranks.";
@@ -262,7 +275,7 @@ void CreateCharacters()
 			else
 			{
 				ch.shiplog.Entry.log0 = "Ever since I was a child I have been restless and unable to tolerate injustice. I have fought in many wars across the old world and been on the losing side of all of them. I am without regret or apology however. I have stayed true to what I believe in and never compromised my integrity for coin or comfort. Still, I know when it is time to move on and so I have done just that. It is off to the new world for me. If I can't make Europe a better place perhaps there is still time to make the Americas one.";
-
+			
 				if(ENABLE_WEAPONSMOD)
 				{
 					GiveItem2Character(ch, "bladeC2+1");
@@ -355,30 +368,37 @@ void CreateCharacters()
 			GiveItem2Character(ch, "goldarmor");
 		break;
 		case PLAYER_TYPE_CURSED:
-			GiveItem2Character(ch, "blade4");
+			string curse_type = "general";
+			if(HasSubStr(CharShipType, "Dutchman")) curse_type = "DavyJones";
+			if(HasSubStr(CharShipType, "Mariana")) curse_type = "Orellana";
+
+			if (curse_type != "Orellana")	// Don't give standard sword to these specific characters, they'll get special weapons in their own sections
+			{
+				GiveItem2Character(ch, "blade4");
+			}
 			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
 			else GiveItem2Character(ch, "pistol1a");
-			if(HasSubStr(CharShipType, "Dutchman"))
+			switch(curse_type)
 			{
-				ch.shiplog.Entry.log0 = "I have started a new logbook. The old one contained too many painful memories. This new one will soon be filled with records of fear and terror that I shall reign upon all those who dare cross me at sea!";
-				GiveItem2Character(ch, "Davy_Chest");
-				ch.boardingmodels = "Davycrew";
-			}
-			else
-			{
-				if(HasSubStr(CharShipType, "Mariana"))
-				{
+				case "DavyJones":
+					ch.shiplog.Entry.log0 = "I have started a new logbook. The old one contained too many painful memories. This new one will soon be filled with records of fear and terror that I shall reign upon all those who dare cross me at sea!";
+					GiveItem2Character(ch, "Davy_Chest");
+					ch.boardingmodels = "Davycrew";
+				break;
+
+				case "Orellana":
 					ch.shiplog.Entry.log0 = "Originally a Navy Officer, I was accused of treason by having a relationship with a privateer who had been taken prisoner by the Admiral during an attack. I was also arrested and tortured by the Inquisition. To save us, I made a pact with Padre Melquíades de Vázquez. In exchange for a grace for me and my lover, I had to serve the Inquisition and extend its influence in the New World. I didn't know I had just sold my soul to the Devil at that time. Shortly after my first mission, my love succumbed to the Black Death and was the only victim. Realizing that the Demon had betrayed me, I decided to steal a ship and flee Cartagena to take my revenge on him. But the crew began to fall mysteriously ill and died quickly. Then strange events occurred, it was like moving shadows, or sinister whispers. Those who had escaped the disease were swept away by madness and killed each other or put an end to their day...";
 					GiveItem2Character(ch, "Devil_Contract");
+					GiveItem2Character(ch, "bldevil");
 					ch.boardingmodels = "Ghost";
-				}
-				else
-				{
+				break;
+
+				case "general":
 					ch.shiplog.Entry.log0 = "Perhaps we should not have been so greedy at Isla de Muerta as it turns out the treasure was cursed. The only way to lift it is to return 882 coins to the chest in the cave.";
 					GiveItem2Character(ch, "aztec_compass");
 					GiveItem2Character(ch, "cursedcoin");
 					ch.gibbs = 1; // Removes Mr. Gibbs from the Tortuga Tavern
-				}
+				break;
 			}
 		break;
 		case PLAYER_TYPE_MILITARY:
@@ -587,7 +607,7 @@ void CreateCharacters()
 	n = CreateGameCharacters(n, "Aruba"); ReloadProgressUpdate();
 	n = CreateGameCharacters(n, "Curacao"); ReloadProgressUpdate();
 	n = CreateGameCharacters(n, "Eleuthera"); ReloadProgressUpdate();
-	n = CreateGameCharacters(n, "Colombia"); ReloadProgressUpdate();
+	n = CreateGameCharacters(n, "Colombia"); ReloadProgressUpdate();	
 	n = CreateGameCharacters(n, "IslaMona"); ReloadProgressUpdate();
 	n = CreateGameCharacters(n, "Story"); ReloadProgressUpdate();
 	n = CreateGameCharacters(n, "TempQuest"); ReloadProgressUpdate();
@@ -599,7 +619,7 @@ void CreateCharacters()
 	n = CreateGameCharacters(n, "TActors"); ReloadProgressUpdate();
 	n = CreateGameCharacters(n, "NK"); ReloadProgressUpdate();
 	n = CreateGameCharacters(n, "Ship"); ReloadProgressUpdate();
-	n = CreateGameCharacters(n, "DockyardOwners"); ReloadProgressUpdate(); // Estharos new file
+	n = CreateGameCharacters(n, "DockyardOwners"); ReloadProgressUpdate(); // Estharos new file 
 	n = CreateGameCharacters(n, "Taverns"); ReloadProgressUpdate(); // Estharos new file
 
 	n = CreateCommonQuestCharacters(n);
@@ -711,7 +731,6 @@ void InitCharacter(ref ch)
 		if (CheckAttribute(ch, "chr_ai.hp_max")) hp_max = stf(ch.chr_ai.hp_max);
 		LAi_SetHP(ch, hp, hp_max);
 	}
-	SetEnergyToCharacter(ch);
 	if (!CheckAttribute(ch, "AbordageMode")) ch.AbordageMode = 1; // boal 05.09.03 officer need to go to abordage
 	if (!CheckAttribute(ch, "isSoldier")) ch.isSoldier = false;
 }
@@ -752,7 +771,6 @@ void AddGameCharacter(ref n, ref ch)
 	}
 	DeleteAttribute(chr, "");
 	CopyAttributes(chr, ch);
-	SetEnergyToCharacter(ch)
 	chr.index = chridx;
 	InitCharacter(chr);
 	DeleteAttribute(ch, "");

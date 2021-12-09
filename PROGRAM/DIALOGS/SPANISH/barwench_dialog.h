@@ -15,5 +15,6 @@ string DLG_TEXT[16] = {
 "!Ron para mi, no ese aguardiente para mariquitas francesas!",
 "El vino estaria bien.",
 "1000 de Oro? No, gracias, conozco formas mas baratas de perder la vista..",
-
+"¡Eh, vosotros dos! La dueña tiene unos amigos a los que no queréis conocer. Pero los conoceréis si seguís causando problemas.",
+"!Muy bien, muy bien! !Ya me he ido!",
 };

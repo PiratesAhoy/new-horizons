@@ -26,7 +26,7 @@ Puedes encontrar estos conocimientos en un libro | Los bloqueos del personaje so
 }
 
 Toughness {Robustez}
-perkToughness.
+perkToughness
 {
 El personaje recibe un 10% extra de salud máxima, regenera salud más rápido, y tiene una resitencia natural a los venenos que reduce el daño por veneo en un 50%.
 }

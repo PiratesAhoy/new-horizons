@@ -61,11 +61,13 @@ bool GenerateMapEncounter(int iMapEncounterType, string sIslandID, ref iEncounte
 	int iNearIslandNation = PIRATE;
 
 	// NK 05-06-27 actually get island nation.
-	if(sIslandID != "")
+
+	// trace("generatemapencounter: island: " + sIslandID)
+	if(sIslandID != WDM_NONE_ISLAND && sIslandID != "")
 	{
 		if(!Island_IsEncountersEnable(sIslandID)) {	return false; }
 
-		ref isl = GetIslandByID(worldMap.islands.(wdmCurrentIsland).name);
+		ref isl = GetIslandByID(worldMap.islands.(sIslandID).name);
 		iNearIslandNation = sti(isl.smuggling_nation);
 	}
 	// NK <--

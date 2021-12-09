@@ -17,7 +17,7 @@ string DLG_TEXT[39] = {
 "What not even a 'good luck'?",
 "That's your first bout, come back tomorrow for the next.",	//16
 "Fine I could do with a break.",
-"Welcome to day two of the tournament your opponent is waiting. So if your quite ready to take your seat.",	//18
+"Welcome to day two of the tournament, your opponent is waiting. So if you're quite ready to take your seat.",	//18
 "So still not even a 'good luck'!",
 "Just one more round for you tomorrow.",		//20
 "Yes it seems like Deja Vu.",

@@ -178,7 +178,7 @@ void InitBattleInterface()
 	SetEventHandler("DoSailHole","ProcessSailDamage",0);
 	SetEventHandler("evntBISelectShip","procBISelectShip",0);
 
-	procLoadIntoNew(); // Проинитим таблицу активных перков
+	procLoadIntoNew(); // ��������� ������� �������� ������
 	SetEventHandler("Control Activation","BI_ProcessControlPress",0);
 
 	RefreshFlags();
@@ -1126,11 +1126,11 @@ void BI_LaunchCommand()
 // <-- KK
 	case "BI_SailTo":
 		if(targetNum==-1)
-		{ // приплыть в локатор с именем locName
+		{ // �������� � ������� � ������ locName
 			SeaAI_SailToLocator(locName);
 		}
 		else
-		{ // догнать перса с индексом targetNum
+		{ // ������� ����� � �������� targetNum
 			SeaAI_SailToCharacter(targetNum);
 		}
 	break;
@@ -1154,7 +1154,7 @@ void BI_LaunchCommand()
 	break;
 	case "BI_ImmDeath":
 		if(targetNum==-1)
-		{ // смерть форта
+		{ // ������ �����
 			targetNum = Fort_FindCharacter(AISea.Island,"reload",locName);
 			if(targetNum>=0)
 			{
@@ -1271,6 +1271,7 @@ void BI_LaunchCommand()
 			while(Whr_IsStorm())
 			{
 				SetNextWind(-1, 20);
+				SetNextWeather("Clear");
 				CreateWeatherEnvironment();
 				MoveWeatherToLayers(sNewExecuteLayer, sNewRealizeLayer);
 			}
@@ -1497,7 +1498,7 @@ void BI_SetPossibleCommands()
 		return;
 	}
 
-	// для главного персонажа
+	// ��� �������� ���������
 	if(mainIdx==chIdx)
 	{
 		BattleInterface.Commands.Moor.enable				= bCanEnterToLand;
@@ -1540,7 +1541,7 @@ void BI_SetPossibleCommands()
 		BattleInterface.Commands.CCommand.enable		= GetCompanionQuantity(mainCh)>1;
 		BattleInterface.Commands.Ability.enable			= true;
 	}
-	// для спутников
+	// ��� ���������
 	else
 	{
 		BattleInterface.Commands.Moor.enable				= false;
@@ -1932,7 +1933,7 @@ ref BI_GetData()
 
 	switch (dataType)
 	{
-	// Получаем номер картинки корабля
+	// �������� ����� �������� �������
 		case BIDT_SHIPPICTURE:
 			enable = distance < GetCharVisibilityRange(GetMainCharacter(), 1); // PB: Ship type is visible inside LONG range
 			if (CheckAttribute(chRef, "unknownShip") == true && sti(chRef.unknownShip) == true) {
@@ -2378,7 +2379,7 @@ void SetParameterData()
 	BattleInterface.ShipIcon.shiphpiconsize			= "64,70";
 	BattleInterface.ShipIcon.shipspuv				= "0.5,0.109,1.0,0.6875";
 
-	BattleInterface.ShipIcon.shipspoffset			= "32,-15";
+	BattleInterface.ShipIcon.shipspoffset			= "33,-15";
 	BattleInterface.ShipIcon.shipspiconsize			= "64,70";
 
 	BattleInterface.ShipIcon.shipclasstexturename	= "battle_interface\empty.tga.tx"; //was Shipclass.tga.tx changed to fool it, beacuse it doesn't exist in original Mod / Mirsaneli
@@ -2421,7 +2422,7 @@ void SetParameterData()
     string sOff = "iconoffset";
     int fTmp3 = RecalculateVIcon(70);
     if(bRealBattleInterface) {
-        fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(225);
+        fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(59);
         if(nCmpNum == 1) {
             BattleInterface.ShipIcon.iconoffset1 = fTmp + "," + fTmp2;
         }
@@ -2483,19 +2484,19 @@ void SetParameterData()
 
 ref ProcessSailDamage()
 {
-	// от кого удар
+	// �� ���� ����
 	int shootIdx = GetEventData();
-	// перс
+	// ����
 	int chrIdx = GetEventData();
 	string sMastName = GetEventData();
-	// координаты паруса
+	// ���������� ������
 	string reyName = GetEventData();
 	int groupNum = GetEventData();
-	// данные о дырках
+	// ������ � ������
 	int holeCount = GetEventData();
 	int holeData = GetEventData();
 	int maxHoleCount = GetEventData();
-	// мощность паруса
+	// �������� ������
 	float sailPower = GetEventData();
 
 // KK -->
@@ -2562,7 +2563,7 @@ void ProcessDayRepair()
 		chref = GetCharacter(cn);
 		RepairAllCannons(&chref); // NK can qty. For now repair all fixable guns. Later go back and set repair rates. 05-04-19
 
-		// расчет починки корпуса
+		// ������ ������� �������
 		if( GetHullPercent(chref)<100.0 )
 		{
 			repPercent = GetHullRPD(chref);
@@ -2574,7 +2575,7 @@ void ProcessDayRepair()
 			RemoveRepairGoods(true,chref,matQ);
 		}
 
-		// расчет починки парусов
+		// ������ ������� �������
 		if( GetSailPercent(chref)<100.0 )
 		{
 			repPercent = GetSailRPD(chref);
@@ -2911,7 +2912,7 @@ void procSetUsingAbility()
 		return;
 	}
 
-	// для главного персонажа
+	// ��� �������� ���������
 	if (mainIdx == chIdx)
 	{
 		BattleInterface.AbilityIcons.Brander.enable			= false;
@@ -3199,7 +3200,7 @@ ref BI_GetLandData()
 	}
 	// NK <--
 
-	// Заглушка
+	// ��������
 	if( BI_intNRetValue[2]<0 || BI_intNRetValue[3]<0 )
 	{
 		BI_intNRetValue[2] = AddTextureToList( &BattleInterface, "battle_interface\LandTarget1.tga.tx", 4, 2 ); // KK

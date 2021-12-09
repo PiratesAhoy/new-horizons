@@ -1,6 +1,6 @@
 string DLG_TEXT[49] = {
 "¿Qué opinas de nuestro último combate? ¡No recuerdo nada parecido!",
-"!Sí! ¡Fue una gloriosa carnicería! ¡Y lo que nos espera ne el futuro! Así es nuestra vida, amigo mío.",
+"¡Sí! ¡Fue una gloriosa carnicería! ¡Y lo que nos espera en el futuro! Así es nuestra vida, amigo mío.",
 "¡Si quieres pelear de nuevo, necesito algunos hombres que desembarquen conmigo la próxima vez que toquemos tierra!",
 "Necesitas un uniforme mejor.",
 "Debo suministrar armas a nuestra brigada de abordaje.",

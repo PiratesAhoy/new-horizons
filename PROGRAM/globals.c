@@ -384,9 +384,10 @@ Note that you must be neutral with that nation to buy a LoM and buying the LoM s
 
 // RM <--
 
-#define BUILDVERSION				"14 (13th August 2021)"	// this is not used in reinit.c anymore, so we can use a string now
+#define BUILDVERSION				"14 (28th September 2021)"	// this is not used in reinit.c anymore, so we can use a string now
 #define IS_SGV					14.943			// must be a float - use small numbers to keep them sequential for all these updates --> 12.10 is smaller than 12.9!
 
+#define MAELSTROM				"Maelstrom Engine 2.8.4"
 #define PA_INET					"www.piratesahoy.net"
 #define PA_DOWN					"www.moddb.com/mods/new-horizons"
 #define PA_WALK					"www.piratesahoy.net/wiki/new-horizon-quests"

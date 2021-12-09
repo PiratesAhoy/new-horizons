@@ -6912,7 +6912,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.id		= "CS_Spanish_Captain1";
 	ch.nation	= SPAIN;
 	ch.model	= "Espinosa";
-	ch.model.animation = "Blaze";
+	ch.model.animation = "man"
 	ch.sound_type = "soldier";
 	LAi_NoRebirthEnable(ch);
 	ch.sex = "man";

@@ -1,6 +1,6 @@
 string DLG_TEXT[3] = { 
-"Seleccione las opciones disponibles",
-"Interfaz Shipyad",
+"Selecciona las opciones disponibles",
+"Interfaz del astillero",
 "Cancelar",
 
 };

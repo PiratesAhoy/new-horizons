@@ -1465,8 +1465,8 @@ void BothQuestComplete(string sQuestName)
 			LAi_ActorFollowEverywhere(characterFromID("Francois de Hadoque"), "", 60.0);
 
 			LAi_SetActorType(characterFromID("Captaine Chevalle"));
-			LAi_ActorAnimation(characterFromID("Captaine Chevalle"), "attack_2", "/*Eduardo_retail*/", 0.0);	// Nonsensical quest case name
-			LAi_ActorAnimation(characterFromID("Captaine Chevalle"), "attack_2", "", 0.0);
+			LAi_ActorAnimation(characterFromID("Captaine Chevalle"), "attack_fast_2", "/*Eduardo_retail*/", 0.0);	// Nonsensical quest case name
+			LAi_ActorAnimation(characterFromID("Captaine Chevalle"), "attack_fast_2", "", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 
 			LAi_QuestDelay("Eduardo_retail", 0.2);
@@ -1846,7 +1846,7 @@ void BothQuestComplete(string sQuestName)
 		case "Hit_Ammand_and_run":
 			LAi_SetActorType(pchar);
 			//LAi_SetActorType(characterFromID("Ammand"));
-			LAi_ActorAnimation(pchar, "attack_2", "running_from_Ammand", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "running_from_Ammand", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 
@@ -3980,7 +3980,7 @@ void BothQuestComplete(string sQuestName)
 		case "Jocard_Deck6":
 			LAi_SetActorType(CharacterFromID("Bos'un"));
 
-			LAi_ActorAnimation(CharacterFromID("Bos'un"), "attack_2", "Jocard_Deck7", 0.0);
+			LAi_ActorAnimation(CharacterFromID("Bos'un"), "attack_fast_2", "Jocard_Deck7", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 

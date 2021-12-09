@@ -1,4 +1,4 @@
 string DLG_TEXT[2] = { 
-"Bienvenido a tu ciudad, ",
-"Continua.",
+"Te doy la Bienvenida a tu ciudad, ",
+"Prosigue.",
 };

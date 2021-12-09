@@ -85,12 +85,31 @@ void ProcessDialogEvent()
 		break;
 
 		case "room_night_wait":
+			if (PChar.location == "QC_brothel")
+			{
+				ChangeCharacterAddress(CharacterFromID("wench1U"), "None", "");	// Clear all upstairs girls, then place the correct one for current time.
+				ChangeCharacterAddress(CharacterFromID("wench2U"), "None", ""); // Can't be done by login time because you spawn in upstairs room at 22:00.
+				ChangeCharacterAddress(CharacterFromID("wench3U"), "None", "");
+				ChangeCharacterAddress(CharacterFromID("wench4U"), "None", "");
+				if(GetTime() >= 6.0 && GetTime() < 12.0) ChangeCharacterAddressGroup(CharacterfromID("wench4U"), "QC_brothel_upstairs", "goto", "goto3");
+				if(GetTime() >= 12.0 && GetTime() < 18.0) ChangeCharacterAddressGroup(CharacterfromID("wench1U"), "QC_brothel_upstairs", "goto", "goto5");
+				if(GetTime() >= 18.0 && GetTime() < 24.0) ChangeCharacterAddressGroup(CharacterfromID("wench3U"), "QC_brothel_upstairs", "goto", "goto7");
+			}
 			GotSlut("night");//MAXIMUS
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;
 		break;
 
 		case "room_day_wait":
+			if (PChar.location == "QC_brothel")
+			{
+				ChangeCharacterAddress(CharacterFromID("wench1U"), "None", "");	// Clear all upstairs girls, then place the correct one for current time.
+				ChangeCharacterAddress(CharacterFromID("wench2U"), "None", ""); // Can't be done by login time because you spawn in upstairs room at 10:00.
+				ChangeCharacterAddress(CharacterFromID("wench3U"), "None", "");
+				ChangeCharacterAddress(CharacterFromID("wench4U"), "None", "");
+				if(GetTime() >= 18.0 && GetTime() < 24.0) ChangeCharacterAddressGroup(CharacterfromID("wench3U"), "QC_brothel_upstairs", "goto", "goto7");
+				if(GetTime() >= 0.0 && GetTime() < 6.0) ChangeCharacterAddressGroup(CharacterfromID("wench2U"), "QC_brothel_upstairs", "goto", "goto2");
+			}
 			GotSlut("day");//MAXIMUS
 			DialogExit();
 			Diag.CurrentNode = Diag.TempNode;

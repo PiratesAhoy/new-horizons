@@ -3207,7 +3207,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.lastname = TranslateString("", "Caceres");
 	ch.id		= "Capitan Caceres";
 	ch.model	= "Espinosa";
-	ch.model.animation = "new_man"; // PB
+	ch.model.animation = "man"; // PB
 	ch.sex = "man";
 	ch.sound_type = "pirate";
 	ch.location	= "none";

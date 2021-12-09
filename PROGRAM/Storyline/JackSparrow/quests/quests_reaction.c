@@ -5950,7 +5950,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Escape_to_Shipyard_at_Redmond":
-			LAi_ActorAnimation(pchar, "attack_2", "Norrington_puch_up", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Norrington_puch_up", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			Lai_KillCharacter(characterFromID("Weatherby Swann"));
 		break;
@@ -5971,7 +5971,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Off_to_shipyard_now2":
-			LAi_ActorAnimation(pchar, "attack_2", "Off_to_shipyard_now3", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Off_to_shipyard_now3", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			Lai_KillCharacter(characterFromID("Malvert Mullroy"));
 		break;
@@ -5981,7 +5981,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Off_to_shipyard_now4":
-			LAi_ActorAnimation(pchar, "attack_2", "Off_to_shipyard_now5", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Off_to_shipyard_now5", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			Lai_KillCharacter(characterFromID("Morris Murtogg"));
 			GiveItem2Character(Pchar, "blade4");  
@@ -6061,7 +6061,7 @@ void QuestComplete(string sQuestName)
 
 		case "In_the_Clink2":
 			LAi_SetPlayerType(pchar);
-			LAi_ActorAnimation(characterfromID("Port Guard"), "attack_2", "", 0.0);
+			LAi_ActorAnimation(characterfromID("Port Guard"), "attack_fast_2", "", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			LAi_QuestDelay("Swann_put_me_in_prison", 1.0);
 		break;
@@ -6499,7 +6499,7 @@ void QuestComplete(string sQuestName)
 
 		case "gifleAnnamaria":
 			Lai_SetActorType(characterFromID("Annamaria"));
-			LAi_ActorAnimation(characterFromID("Annamaria"), "attack_2", "boatAnnamaria", -1);
+			LAi_ActorAnimation(characterFromID("Annamaria"), "attack_fast_2", "boatAnnamaria", -1);
 			PlaySound("OBJECTS\duel\punch1.wav"); 
 		break;
 
@@ -6646,7 +6646,7 @@ void QuestComplete(string sQuestName)
 
 		case "coupwill":
 			Lai_SetActorType(characterFromID("Will Turner"));
-			LAi_ActorAnimation(characterFromID("Will Turner"), "attack_2", "revoirbarbossa", 0.0);
+			LAi_ActorAnimation(characterFromID("Will Turner"), "attack_fast_2", "revoirbarbossa", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 
@@ -6826,7 +6826,7 @@ void QuestComplete(string sQuestName)
 		case "giflecrewb":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("crewmanb"));
-			LAi_ActorAnimation(pchar, "attack_2", "giflecrewbis", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "giflecrewbis", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 
@@ -7189,7 +7189,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Over_the_wall":
-			LAi_ActorAnimation(pchar, "attack_2", "", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			LAi_QuestDelay("Over_the_wall2", 1.0);
 		break;
@@ -8540,7 +8540,7 @@ void QuestComplete(string sQuestName)
 		case "pushdavy":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Davy Jones"));
-			LAi_ActorAnimation(pchar, "attack_2", "davywater", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "davywater", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 		break;
 

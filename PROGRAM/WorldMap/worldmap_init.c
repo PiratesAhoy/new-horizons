@@ -716,8 +716,7 @@ void wdmInitWorldMap()
 	worldMap.date.day = CharDay;
 	worldMap.date.month = CharMonth;
 	worldMap.date.year = CharYear;
-// <-- PB
-	worldMap.date.hourPerSec = 4.0;
+	
 	//Output info	
 	worldMap.date.font = "normal";
 

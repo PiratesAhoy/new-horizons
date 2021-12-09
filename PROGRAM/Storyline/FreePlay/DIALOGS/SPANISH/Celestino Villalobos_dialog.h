@@ -8,10 +8,10 @@ string DLG_TEXT[15] = {
 "No hay nada que resolver, #sfriend#. Tu hermana solamente fue muy, muy amistosa conmigo, ¡ja ja!",
 "No hay nada que resolver, #sfriend#. Tu hermano solamente fue muy, muy amistoso conmigo, ¡ja ja!",
 "Eres muy mal perdedor. El barco es mío. ¡Te vencí justamente y sin trampas!",
-"#sputa#! ¡Diablo de #sgender# sin honor!",
+"¡#sputa#! ¡Diablo de #sgender# sin honor!",
 "¡Eso es un insulto que tendrás que pagar!",
 "¡Vete al infierno, ",
-"! En Guardia!",
-"¡En Guardia!",
+"! ¡En guardia!",
+"¡En guardia!",
 "amigo mío",
 };

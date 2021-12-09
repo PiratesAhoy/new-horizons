@@ -1,8 +1,8 @@
-title=Librarian
-text.t1=I got six books from Selkirk to put back on their right places.
-text.t2=Now there is that Dampier book to repair.
-text.t3=I have to return he repaired Dampier book to its shelf - that would be 'Travels'.
-text.t4=Rogers' equipped me with three books in exchange for the Dampier book.
-text.t5=I must deliver "Notorious Pirates" to Rogers.
-text.t6=The chain and the handcuffs are blocking the Chemistry shelf so I can open it.
-text.t7=I'm not so interested in Poetry - can I use this sack of books in another way?
+title=Bibliotecario
+text.t1=He recibido seis libros de Selkirk para devolverlos a sus lugares correctos.
+text.t2=Ahora está ese libro de Dampier que hay que reparar.
+text.t3=Tengo que devolver el libro reparado de Dampier a su estantería: la de la sección de 'Viajes'.
+text.t4=Rogers me ha dado tres libros a cambio del libro de Dampier.
+text.t5=Debo entregar "Notorios Piratas" a Rogers.
+text.t6=La cadena y los grilletes están bloqueando la estantería de 'Química' para que pueda abrirla.
+text.t7=No me interesa tanto la poesía, ¿puedo usar este saco de libros para alguna otra cosa?

@@ -852,7 +852,7 @@ int CreateCommonQuestCharacters(int in)
 
 
 	//ASVS moved here soldiers for drunk fight
-				// Redmond Soldier for drink fight
+/*				// Redmond Soldier for drink fight
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1114,7 +1114,7 @@ int CreateCommonQuestCharacters(int in)
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
-
+*/
 				// Smugglers Soldier for drink fight
 	ch.old.name = "";
 	ch.old.lastname = "";
@@ -1146,7 +1146,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
+	LAi_SetGuardianTypeNoGroup(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
@@ -1189,7 +1189,7 @@ int CreateCommonQuestCharacters(int in)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-				// Falaise De Fleur Soldier for drink fight
+/*				// Falaise De Fleur Soldier for drink fight
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -1224,6 +1224,43 @@ int CreateCommonQuestCharacters(int in)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_falaise de fleur soldier";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+*/
+				// Generic Soldier for drink fight
+	ch.old.name = "";
+	ch.old.lastname = "";
+	ch.name = "";
+	ch.lastname = "";
+	ch.id		= "Drink Soldier";
+	ch.model	= 1; // PB
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "none"
+	ch.location.group = "none";
+	ch.location.locator = "none";
+	ch.Dialog.Filename = "drink_soldier_dialog.c";
+	ch.nation = ENGLAND;
+	ch.rank 	= 1;
+	ch.reputation = "52";
+	ch.experience = "0";
+	ch.skill.Leadership = "4";
+	ch.skill.Fencing = "6";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.greeting = "Gr_Redmond Soldier";
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 

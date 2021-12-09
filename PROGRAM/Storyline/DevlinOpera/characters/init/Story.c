@@ -118,7 +118,7 @@ void CreateStoryCharacters(ref n)
 	ch.lastname = TranslateString("","Devlin");
 	ch.id		= "Bonnie Devlin";
 	ch.model = "BeatriceA";
-	ch.model.animation = "Beatrice";
+	ch.model.animation = "woman_sit";
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
 	GiveItem2Character(ch, "blade4");
@@ -153,7 +153,7 @@ void CreateStoryCharacters(ref n)
 	ch.lastname = TranslateString("","Devlin");
 	ch.id		= "Blaze Devlin";
 	ch.model = "Devlin";
-	ch.model.animation = "blaze";
+	ch.model.animation = "man";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
 	GiveItem2Character(ch, "blade21");
@@ -615,7 +615,7 @@ void CreateStoryCharacters(ref n)
 	ch.lastname = TranslateString("", "Maximus");
 	ch.id		= "Maximus";
 	ch.model	= "Espinosa";
-	ch.model.animation = "new_man"; // PB
+	ch.model.animation = "man"; // PB
 	ch.sex = "man";
 	ch.loyality = 15;
 	ch.alignment = "good";
@@ -680,7 +680,7 @@ void CreateStoryCharacters(ref n)
 	ch.id		= "High Sea Lass";
 	ch.model = "33_Blazie";
 	ch.sex = "woman";
-	ch.model.animation = "33_Blazie";
+	ch.model.animation = "woman_sit";
 	ch.sound_type = "female_citizen";
 	ch.location	= "";
 	ch.location.group = "";

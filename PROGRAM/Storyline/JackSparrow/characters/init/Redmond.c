@@ -44,7 +44,7 @@ void CreateRedmondCharacters(ref n)
 	ch.lastname 	= TranslateString("", "Swann");
 	ch.id		= "Weatherby Swann";
 	ch.model	= "Modyford"; // PB
-	ch.model.animation = "new_man"; // PB
+	ch.model.animation = "man" // PB
 	ch.headmodel = "h_Nobleman2";
 	ch.sex = "man";
 	ch.sound_type = "seaman";

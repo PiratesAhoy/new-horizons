@@ -905,6 +905,6 @@ void LaunchBlood(aref chr, float addy, bool isBig)
 		{
 			CreateParticleSystemXPS("blood", x, y, z, 0,1.0,0,0);
 		}
-		SendMessage(loadedLocation, "lsfff", MSG_LOCATION_EX_MSG, "par", x,y,z);
+		SendMessage(loadedLocation, "lsfff", MSG_LOCATION_EX_MSG, "AddBlood", x,y,z);
 	}
 }

@@ -11,7 +11,7 @@ sea_Map {Mapa}
 sea_Attack {Atacar}
 sea_Defend {Defender}
 sea_SailAway {Alejarse}
-sea_HeaveToDrift {Ponerse a palo seco}
+sea_HeaveToDrift {Arriar las velas}
 sea_Transfer {Transferir}
 sea_Charge {Recargar}
 sea_Speed {Velas}

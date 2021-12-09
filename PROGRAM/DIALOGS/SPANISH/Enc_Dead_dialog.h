@@ -1,14 +1,14 @@
 string DLG_TEXT[11] = {
-"*You've already searched this body!*",
-"*Leave*",
-"*A dead body*",
-"*A dead man*",
+"*¡Ya has registrado este cuerpo!*",
+"*Dejarlo*",
+"*Un cadáver*",
+"¡Un cadáver!",
 "*Un hombre muerto*",
-"!Busca!",
-"Dejar.",
-"Has encontrado oro - ",
-"en moneda. Ademas, el hombre muerto tenia algo mas sobre el. - ",
+"¡Buscar!",
+"Dejarlo.",
+"Has encontrado oro: ",
+"en monedas. Además, el muerto llevaba encima algo más: ",
 ".",
-"Dejar.",
+"Dejarlo.",
 
 };

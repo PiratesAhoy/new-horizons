@@ -1133,6 +1133,7 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			{
 				if(NPChar.nation!=PIRATE && GetServedNation() != PIRATE) Process_Execution(2);
 			}
+			if (bAllowHireJoin || bAllowRelease || bAllowCapture) ChangeCharacterReputation(PChar, -5); // GR: if you have a choice and choose to execute prisoners, lose rep
 			LAi_SetImmortal(NPChar, false);
 			LAi_SetPlayerType(PChar);
 			LAi_group_MoveCharacter(NPChar, LAI_GROUP_BRDENEMY);

@@ -17,7 +17,9 @@ void wdmEvent_EncounterCreate()
 	worldMap.playerShipX = playerShipX;
 	worldMap.playerShipZ = playerShipZ;
 	worldMap.playerShipAY = playerShipAY;
-	if(wdmCurrentIsland!=WDM_NONE_ISLAND && wdmCurrentIsland!="") // PB: Prevent error.log entries
+
+	// trace("Encounter Create - wdmCurrentIsland: " + wdmCurrentIsland + " Logical: " + (wdmCurrentIsland != ""));
+	if(wdmCurrentIsland != WDM_NONE_ISLAND) // PB: Prevent error.log entries
 	{
 		wdmLoginToSea.island = worldMap.islands.(wdmCurrentIsland).name;
 		float ix = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rx);
@@ -76,6 +78,8 @@ void wdmEvent_PlayerInStorm()
 	if (CheckAttribute(pchar, "stormIndex")) return; // PW storm immunity otherwise locked in storm
     	pchar.stormIndex = stormIndex;//PW set up variable for storm immunity (cleared in daily crew update)
 
+	// if (rand(100)>20) SetNextWeather("Stormy");
+	// else SetNextWeather("Heavy Storm");
 	wdmReloadToSea();
 }
 

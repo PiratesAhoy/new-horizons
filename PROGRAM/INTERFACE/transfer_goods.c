@@ -434,6 +434,7 @@ void ChangeScroll()
     string goodsName;
 	// fill visible goods
 	int idx = 1;
+	int idx2 = 0;
 	for(i=0; i<GOODS_QUANTITY; i++)
 	{
 		if(GetCargoGoods(xi_refCharacter,i)==0 && GetCargoGoods(refEnemyCharacter,i)==0) continue;
@@ -449,10 +450,12 @@ void ChangeScroll()
 		GameInterface.goodslist.(attributeName).tex1 = 0;
 		GameInterface.goodslist.(attributeName).tex2 = 1;
 		//Boyer change
-		SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"GOODSLIST",i);
+		SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"GOODSLIST",idx);
 		idx++;
+		idx2++;
 	}
 	// fill invisible goods
+	idx2 = 0;
 	for(i=0; i<GOODS_QUANTITY; i++)
 	{
 		if(GetCargoGoods(xi_refCharacter,i)!=0 || GetCargoGoods(refEnemyCharacter,i)!=0) continue;
@@ -468,8 +471,9 @@ void ChangeScroll()
 		GameInterface.goodslist.(attributeName).tex1 = 0;
 		GameInterface.goodslist.(attributeName).tex2 = 1;
 		//Boyer change
-		SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"GOODSLIST",i);
+		SendMessage(&GameInterface,"lsl",MSG_INTERFACE_SCROLL_CHANGE,"GOODSLIST",idx);
 		idx++;
+		idx2++;
 	}
 
 	GameInterface.strings.MyCargo = GetCargoLoad(xi_refCharacter) + "/" + GetCargoMaxSpace(xi_refCharacter);

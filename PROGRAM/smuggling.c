@@ -1035,15 +1035,16 @@ float getCoastGuardEncounterChance()
 	if(DEBUG_SMUGGLING>2) trace("SMUGGLING isday: "+isDay()+" chance: "+chance_get_caught);
 	//Check for weather
 	aref aCurWeather = GetCurrentWeather();
-	if(aCurWeather.id == "Blue Sky") chance_get_caught = chance_get_caught * 1.2;
-	if(aCurWeather.id == "Day Storm") chance_get_caught = chance_get_caught * 0.5;
-	if(aCurWeather.id == "Rainy") chance_get_caught = chance_get_caught * 0.8;
-	if(aCurWeather.id == "Heavy Rain") chance_get_caught = chance_get_caught * 0.6;
-	if(aCurWeather.id == "Stormy") chance_get_caught = chance_get_caught * 0.4;
-	if(aCurWeather.id == "Heavy Storm") chance_get_caught = chance_get_caught * 0.2;
-	if(aCurWeather.id == "Foggy") chance_get_caught = chance_get_caught * 0.8;
-	if(aCurWeather.id == "Heavy Fog") chance_get_caught = chance_get_caught * 0.2;
-	if(aCurWeather.id == "Super Fog") chance_get_caught = chance_get_caught * 0.05;
+	if (wRain < 75 && fog < 5) chance_get_caught = chance_get_caught * 1.2;
+	if (wRain >= 75 && wRain < 80) chance_get_caught = chance_get_caught * 0.8;
+	if (wRain >= 80 && wRain < 85) chance_get_caught = chance_get_caught * 0.7;
+	if (wRain >= 85 && wRain < 90) chance_get_caught = chance_get_caught * 0.6;
+	if (wRain >= 90 && wRain < 95) chance_get_caught = chance_get_caught * 0.5;
+	if (wRain >= 95) chance_get_caught = chance_get_caught * 0.4;
+	if (fog > 20) chance_get_caught = chance_get_caught * 0.2;
+	if (fog > 15) chance_get_caught = chance_get_caught * 0.4;
+	if (fog > 10) chance_get_caught = chance_get_caught * 0.6;
+
 	if(DEBUG_SMUGGLING>2) trace("SMUGGLING weather: "+aCurWeather.id+" chance: "+chance_get_caught);
 	//Check for difficulty
 	int difficulty = GetDifficulty();

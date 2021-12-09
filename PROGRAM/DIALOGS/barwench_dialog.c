@@ -138,5 +138,16 @@ void ProcessDialogEvent()
 			DialogExit();
 		break;
 
+		case "tavern_keeper":
+			dialog.text = DLG_TEXT[16];
+			link.l1 = DLG_TEXT[17];
+			link.l1.go = "exit_sit";
+		break;
+
+		case "exit_sit":
+			Diag.CurrentNode = Diag.TempNode;
+			DialogExit();
+			AddDialogExitQuest("exit_sit");
+		break;
 	}
 }

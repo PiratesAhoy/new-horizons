@@ -1,5 +1,5 @@
 string DLG_TEXT[2] = {
-"Estare encantado de charlar con usted en cualquier otro dia, pero estamos tan ocupados en este momento! Lo siento.",
+"Estaría encantada de charlar contigo cualquier otro día, ¡pero en este momento estamos tan ocupados...! Lo siento.",
 "...",
 
 };

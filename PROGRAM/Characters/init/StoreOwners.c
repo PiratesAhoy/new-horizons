@@ -690,7 +690,7 @@ void CreateStoreOwnersCharacters(ref n)
 	ch.lastname = TranslateString("","Blowhorn");
 	ch.id		= "Kate Blowhorn";
 	ch.model	= "33_Blazie";
-	ch.model.animation = "33_Blazie"; // PB
+	ch.model.animation = "woman_sit"; // PB
 	ch.sex = "woman";
 	ch.location	= "QC_Store";
 	ch.location.group = "sit";

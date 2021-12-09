@@ -1,12 +1,9 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
-
 Charles{Charles}
 Ardent{Ardent}
-
 William{William}
 McMurrough{McMurrough}
 O'Brien{O'Brien}
-
 de la Vega{de la Vega}
 Two Dogs{Two Dogs}
 Fighting{Fighting}
@@ -17,7 +14,6 @@ Indian{Indian}
 Cardinal{Cardinal}
 Ximinez{Ximinez}
 Fang{Fang}
-
 Indian Warrior{Indian Warrior}
 Louwe{Louwe}
 Louwman{Louwman}
@@ -43,7 +39,6 @@ Piers{Piers}
 Gilbert{Gilbert}
 Emmett{Emmett}
 Dawson{Dawson}
-
 Inquisitor{Inquisitor}
 Monkey{Monkey}
 Crescent Moon{Crescent Moon}
@@ -82,7 +77,6 @@ de Malaspina{de Malaspina}
 Maria{Maria}
 Antonia{Antonia}
 of Austria{of Austria}
-
 Guard{Guard}
 1{1}
 2{2}
@@ -143,5 +137,4 @@ Emiliano{Emiliano}
 de Guzmán{de Guzmán}
 Gilles{Gilles}
 Clouzot{Clouzot}
-
 Helen{Helen}

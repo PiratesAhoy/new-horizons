@@ -1,6 +1,6 @@
-title=A remedy for curing syphilis
-text.t1=Have to find this medicine.
-text.t2=Where can I find empty bottles in a town based on rum and drunken sailors?
-text.t3=I got the empty bottles, now to the doctor again.
-text.t4=Done!
-text.t5=The doctor is trying some new outfits - where?
+title=Un remedio pra curar la sífilis
+text.t1=Tengo que encontrar esta medicina
+text.t2=¿Dónde puedo encontrar botellas vacías en una ciudad llena de ron y marineros borrachos?
+text.t3=Tengo las botellas vacías, volvamos con el doctor.
+text.t4=¡Hecho!
+text.t5=El doctor se está probando nuevos trajes. ¿Dónde?

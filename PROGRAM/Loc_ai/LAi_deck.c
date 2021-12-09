@@ -945,7 +945,7 @@ void DeckToSea_ReloadEndFadeAfter()
 	chrWaitReloadLocator = "";
 	chrWaitReloadIsNoLink = false;
 	ReloadToSea(FindIsland(island), chrWaitReloadRef);
-	DirectsailCheck(true);
+	// DirectsailCheck(true);
 
 	bDeckEnter = false;
 	LandLocationIdx = -1;

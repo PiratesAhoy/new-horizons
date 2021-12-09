@@ -2303,6 +2303,96 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.nation                  = HOLLAND;
   n++;
 
+  // Ricardo Orellana's Cutlass
+  makeref(itm,Items[n]);
+  itm.id                      = "bldevil";
+  itm.poison                  = 1;    // poisons targets
+  itm.skiptrade               = false;  //BB you can sell the item
+  itm.skipsell                = true;   // you can't buy it
+  itm.skiprand                = true;   // you can't randomly find it
+  itm.skipequip               = false;
+  //itm.skipequip   = NO_SPECIALWEAPONED_NPC ;
+  itm.groupID                 = BLADE_ITEM_TYPE;
+  itm.name                    = "itmname_bldevil";
+  itm.describe                = "itmdescr_bldevil";
+  itm.folder                  = "ammo";
+  itm.model                   = "bldevil";
+  itm.picIndex                = 2;
+  itm.picTexture              = "ITEMS_JRH4";
+  itm.price                   = 15660;  //BB (25000)
+  itm.dmg_min                 = 25.0;
+  itm.dmg_max                 = 40.0;
+  itm.piercing                = 60;
+  itm.block                   = 80;
+  itm.minlevel                = 99;
+  itm.rare                    = 0.00;   // should be unique
+  itm.param.time              = 0.1;
+  itm.skill.sneak             = -1;
+  itm.skill.fencing           = +1;
+  itm.skill.leadership        = +1;
+  itm.param.colorstart        = argb(64, 64, 64, 64);
+  itm.param.colorend          = argb(0, 32, 32, 32);
+  itm.nation                  = PIRATE;
+  n++;
+
+  // Ebony Sword
+  makeref(itm,Items[n]);
+  itm.id                      = "blade_ebony";
+  itm.skiptrade               = false;  // you can sell the item
+  itm.skipsell                = true;   // you can't buy it
+  itm.skiprand                = true;   // you can't randomly find it
+  itm.skipequip               = false;
+  itm.groupID                 = BLADE_ITEM_TYPE;
+  itm.name                    = "itmname_blade_ebony";
+  itm.describe                = "itmdescr_blade_ebony";
+  itm.folder                  = "ammo";
+  itm.model                   = "blade_ebony";
+  itm.picIndex                = 12;
+  itm.picTexture              = "ITEMS_AS";
+  itm.price                   = 15660;
+  itm.dmg_min                 = 20.0;
+  itm.dmg_max                 = 31.0;
+  itm.piercing                = 50;
+  itm.block                   = 50;
+  itm.minlevel                = 99;
+  itm.rare                    = 0.00;   // should be unique
+  itm.param.time              = 0.1;
+  itm.skill.leadership        = -1;
+  itm.skill.sailing           = -1;
+  itm.skill.fencing           = +1;
+  itm.param.colorstart        = argb(64, 64, 64, 64);
+  itm.param.colorend          = argb(0, 32, 32, 32);
+  itm.nation                  = ENGLAND;
+  n++;
+  
+  // Ruby Rune Saber
+  makeref(itm,Items[n]);
+  itm.id                      = "bladerubysb";
+  itm.skiptrade               = false;  //BB you can sell the item
+  itm.skipsell                = true;   // you can't buy it
+  itm.skiprand                = true;   // you can't randomly find it
+  itm.skipequip               = false;
+  itm.groupID                 = BLADE_ITEM_TYPE;
+  itm.name                    = "itmname_bladerubysb";
+  itm.describe                = "itmdescr_bladerubysb";
+  itm.folder                  = "ammo";
+  itm.model                   = "bladerubysb";
+  itm.picIndex                = 13;
+  itm.picTexture              = "ITEMS_AS";
+  itm.price                   = 15660;  //BB (25000)
+  itm.dmg_min                 = 30.0;
+  itm.dmg_max                 = 41.0;
+  itm.piercing                = 60;     //BB (90)
+  itm.block                   = 60;
+  itm.minlevel                = 99;     //BB+PB
+  itm.rare                    = 0.00;   // should be unique
+  itm.param.time              = 0.1;
+  itm.skill.fencing           = +2;
+  itm.param.colorstart        = argb(64, 64, 64, 64);
+  itm.param.colorend          = argb(0, 32, 32, 32);
+  itm.nation                  = PIRATE;
+  n++;
+
   // Jack Sparrow's Cutlass (Russian Mod)//BB slightly 'crazy' weapon - it is JS!//BB highest value.
   makeref(itm,Items[n]);
   itm.id                      = "blade42";
@@ -3207,7 +3297,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBlade(n, "bladeC30","bladeC30",               21,   8,  0.25,  13, 1651, 19.0, 29.0, 46, 29,  "",        4,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Swept Hilt Rapier  (CoAS Metazot)//BB
   n = InitBlade(n, "bladeC33","bladeC33",               21,   9,  0.20,   9,  588, 14.0, 26.0, 30, 45,  HOLLAND,   3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Germanic Baskethilt Sword (CoAS Metazot)//BB
   n = InitBlade(n, "bladeC35","bladeC35",               21,  14,  0.03,  19, 5200, 20.0, 40.0, 40, 45,  "",        3,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Hibernian (Irish sword) //JRMM
-  n = InitBlade(n, "bladeC36","bladeC36",                9,   5,  0.00,  99, 8000, 15.0, 30.0, 30, 40,  PIRATE,    3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Katana //JRH, fix in items_utilite.c
+  n = InitBlade(n, "bladeC36","bladeC36",                9,   5,  0.00,  99, 8000, 30.0, 60.0, 60, 50,  PIRATE,    3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Katana //JRH, fix in items_utilite.c
   n = InitBlade(n, "blade308","blade308",                9,   6,  0.00,  99, 5500, 27.0, 42.0, 45, 37,  "",        4,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Based on Anathros, Sword of the Earth from "Two Worlds" // GR
   n = InitBlade(n, "bladeCiri","CiriSword",              9,   7,  0.00,  99, 8000, 15.0, 30.0, 30, 40,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Ciri's sword from Witcher 3 // DeathDaisy 
   n = InitBlade(n, "witcher_steel","witcher_steel_back", 25,  1,  0.00,  99, 8000, 15.0, 30.0, 30, 40,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Flambard used by Geralt // Grey Roger/The Nameless Pirate
@@ -3218,6 +3308,8 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBlade(n, "bladeA17","bladeA17", 	     "JRH4",  1,  0.00,  99, 1000, 21.0, 26.0, 28, 20,  "",        1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest
 
   n = InitBlade(n, "bladeA11","bladeA11", 	     "JRH4",  3,  0.00,  99,  200, 10.0, 12.0, 15, 10,  "",        0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest
+
+  n = InitBlade(n, "bladeMesser","messer", 	     "22",  14,  0.60,  12,  2000, 24.0, 45.0, 35, 25,  "",        0,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY,      PERIOD_NAPOLEONIC); // Langes Messer
 
   n = InitBlade(n, "Barmansknife","Barmansknife",       22,   7,  0.90,   1,    5,  3.0,  9.0, 20,  3,  PIRATE,    0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Breadknife (SuperDurnius)//BB USE AS BASE VALUE FOR ECONOMY (CHEAPEST)
   n = InitBlade(n, "Guestsknife","Guestsknife",         22,   6,  0.90,   1,    9,  3.0, 11.0, 25,  4,  PIRATE,    0,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Knife (SuperDurnius)//BB
@@ -4160,6 +4252,9 @@ bool IsWeaponUnique(string id)
 	case "bladeCiri":	isUnique = true;	break;	// Ciri's Blade		      - Forged by gnomes
 	case "bladeMH":		isUnique = true;	break;	// Secret Reward              - Reward for killing Malcolm Hatcher
 	case "witcher_steel":	isUnique = true;	break;	// Geralt's steel flambard
+	case "bldevil":		isUnique = true;	break;	// Ricardo Orellana's sword
+	case "blade_ebony":	isUnique = true;	break;	// Avergorex's ebony sabre
+	case "bladerubysb":	isUnique = true;	break;	// Dervia's ruby sabre
 	case "tomahawk_chief":  isUnique = true;        break;  // Chief's tomahawk for "Crystal Skull" sidequest  
 	case "pistol10":	isUnique = true;        break;  // Shotgun
 	case "pistol62":	isUnique = true;        break;  // Special dual-barrel pistol - Easter egg in San Juan residence

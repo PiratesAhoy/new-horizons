@@ -1502,7 +1502,7 @@ void QuestComplete(string sQuestName)
 		case "giflepretre":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Padre Iguaran"));
-			LAi_ActorAnimation(pchar, "attack_2", "habitmoine", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "habitmoine", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 
 			break;
@@ -3458,7 +3458,7 @@ void QuestComplete(string sQuestName)
 		case "gifleperdiguero":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Luis Perdiguero"));
-			LAi_ActorAnimation(pchar, "attack_2", "sautfenetre", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "sautfenetre", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			break;
 
@@ -3990,7 +3990,7 @@ void QuestComplete(string sQuestName)
 			break;
 
 		case "finalalliere2":
-			LAi_ActorAnimation(pchar, "attack_2", "finalalliere3", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "finalalliere3", 0.0);
 			TakeItemFromCharacter(pchar, "darien_idol");
 			PlayStereoSound("INTERFACE\took_item.wav");
 			break;
@@ -4948,7 +4948,7 @@ void QuestComplete(string sQuestName)
 		case "giflecole":
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(characterFromID("Spanish Governor"));
-			LAi_ActorAnimation(pchar, "attack_2", "Lancer_Video2", 0.0);
+			LAi_ActorAnimation(pchar, "attack_fast_2", "Lancer_Video2", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			break;
 
@@ -7446,11 +7446,11 @@ void QuestComplete(string sQuestName)
 
 			ChangeCharacterAddressGroup(CharacterFromID("elting_pirate_06"), "Quest_Morro_fort2", "goto", "goto3");
 			LAi_SetActorType(CharacterFromID("elting_pirate_06"));
-			LAi_ActorAnimation(CharacterFromID("elting_pirate_06"), "hands up", "", 1.0);
+			LAi_ActorAnimation(CharacterFromID("elting_pirate_06"), "afraid", "", 1.0);
 
 			ChangeCharacterAddressGroup(CharacterFromID("elting_pirate_04"), "Quest_Morro_fort2", "goto", "goto4");
 			LAi_SetActorType(CharacterFromID("elting_pirate_04"));
-			LAi_ActorAnimation(CharacterFromID("elting_pirate_04"), "hands up", "", 1.0);
+			LAi_ActorAnimation(CharacterFromID("elting_pirate_04"), "afraid", "", 1.0);
 
 			GiveItem2Character(CharacterFromId("elting_pirate_04"), "bladex4");
 			EquipCharacterByItem(CharacterFromId("elting_pirate_04"), "bladex4");
@@ -8027,7 +8027,7 @@ void QuestComplete(string sQuestName)
 		case "assommer_bart":
 			bSuppressResurrection = true;
 			LAi_SetActorType(characterFromID("Gauthier Thomassin"));
-			LAi_ActorAnimation(characterFromID("Gauthier Thomassin"), "attack_2", "assommer_bart2", 0.0);
+			LAi_ActorAnimation(characterFromID("Gauthier Thomassin"), "attack_fast_2", "assommer_bart2", 0.0);
 			PlaySound("OBJECTS\duel\punch1.wav");
 			break;
 

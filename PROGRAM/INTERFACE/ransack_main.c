@@ -54,7 +54,7 @@ void InitInterface_RRS(string iniName,ref pCharacter,ref enemyCh,string newCurNo
 		SetMusicNoPause("music_plunder");
 	}
 	// NK <--
-	
+
 // MAXIMUS interface MOD -->
 	FillCharactersList(pCharacter);
 
@@ -163,8 +163,8 @@ void InitInterface_RRS(string iniName,ref pCharacter,ref enemyCh,string newCurNo
 // added by MAXIMUS -->
 	string curEnemyName = XI_ConvertString("No Captain Assigned");
 	bool btmp = false; // KK
-	if(nCompanionIndex<0) 
-	{    
+	if(nCompanionIndex<0)
+	{
 		if(CheckAttribute(refEnemyCharacter,"position"))
 		{
 			switch(refEnemyCharacter.position)
@@ -220,7 +220,7 @@ void InitInterface_RRS(string iniName,ref pCharacter,ref enemyCh,string newCurNo
 			//transferCaptain = false; // eliminated
 		}
 	}
-	else 
+	else
 	{
 		if(IsCompanion(newFriend) || IsOfficerCompanion(newFriend))
 		{
@@ -430,7 +430,7 @@ void InitInterface_RRS(string iniName,ref pCharacter,ref enemyCh,string newCurNo
 		if(GetCargoGoods(refEnemyCharacter, i) > 0)
 		{
 			plunder = "plunder"+i;
-			refEnemyCharacter.Ship.Plunder.(plunder) = GetCargoGoods(refEnemyCharacter, i);    
+			refEnemyCharacter.Ship.Plunder.(plunder) = GetCargoGoods(refEnemyCharacter, i);
 		}
 	}
 	i=0;
@@ -829,7 +829,7 @@ void Exit()
 	DelEventHandler("CharactersPress","CharactersProcess");
 	DelEventHandler("CrewPress","CrewProcess");
 	DelEventHandler("SwapPress","SwapProcess");
-	
+
 	DelEventHandler("CannonsPress","CannonsProcess");
 
 	DelEventHandler("UpPress","UpProcess");
