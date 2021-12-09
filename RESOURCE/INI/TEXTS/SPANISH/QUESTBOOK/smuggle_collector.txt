@@ -1,10 +1,10 @@
-title=Misión secundaria - El coleccionista
-text.t1= He conocido a un tipo de aspecto sospechoso en el puerto de #sGreenford#. Me ha hablado de ciertas oportunidades de negocio. Si decido que me interesa, debo reunirme con él en la taberna.
+title=MisiÃ³n secundaria - El coleccionista
+text.t1= He conocido a un tipo de aspecto sospechoso en el puerto de #sGreenford#. Me ha hablado de ciertas oportunidades de negocio. Si decido que me interesa, debo reunirme con Ã©l en la taberna.
 text.t2= No he llagado a tiempo de reunirme con el tipo. Me temo que he perdido esta oportunidad.
-text.t3= Me he reunido con el contrabandista en la taberna y me ha dicho que uno de sus contactos es un coleccionista de armas nativas. Al parecer, este coleccionista está buscando hacerse con 10 arcos.
+text.t3= Me he reunido con el contrabandista en la taberna y me ha dicho que uno de sus contactos es un coleccionista de armas nativas. Al parecer, este coleccionista estÃ¡ buscando hacerse con 10 arcos.
 text.t4= He declinado la oferta, hay algo en este asunto que no me gusta.
-text.t5= He aceptado el trato, el contrabandista me ha dicho que vuelva a hablar con él cuando tenga los arcos. Tengo que entregarlos antes de que pasen 2 meses así que debo darme un poco de prisa, ya que no sé dónde tendré que entregarlos una vez que los tenga.
+text.t5= He aceptado el trato, el contrabandista me ha dicho que vuelva a hablar con Ã©l cuando tenga los arcos. Tengo que entregarlos antes de que pasen 2 meses asÃ­ que debo darme un poco de prisa, ya que no sÃ© dÃ³nde tendrÃ© que entregarlos una vez que los tenga.
 text.t6= No he entregado las armas nativas en el plazo convenido. Me temo que a los contrbandistas no les va a gustar...
-text.t7= He conseguido todas las armas, el contrabandista me ha dicho que me reúna con #sname# en #slocation#, en #sisland#. Alli recibiré mi paga.
-text.t8= Me reuni con el comprador y, aunque no podia ofrecerme mucho dinero por los arcos, sí que tenía otra cosa que suscitó mi interes, así que hicimos el trato.
-text.t9= Ahora volveré a visitar al boticario de #sGreenford#.
+text.t7= He conseguido todas las armas, el contrabandista me ha dicho que me reÃºna con #sname# en #slocation#, en #sisland#. Alli recibirÃ© mi paga.
+text.t8= Me reuni con el comprador y, aunque no podia ofrecerme mucho dinero por los arcos, sÃ­ que tenÃ­a otra cosa que suscitÃ³ mi interes, asÃ­ que hicimos el trato.
+text.t9= Ahora volverÃ© a visitar al boticario de #sGreenford#.

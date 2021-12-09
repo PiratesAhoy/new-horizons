@@ -1,8 +1,8 @@
-title=El túnel de los problemas.
-text.t1=He encontrado a Hunter y él conoce un atajo para llegar a Bahía Blanca. Debemos ir a la casa junto al puente.
-text.t2=Hemos capturado al grupo que iba a recoger agua para el barco francés. Ahora apresaremos el barco.
-text.t3=El teniente Quelp ha matado al contrabandista Larr. Ahora debo investigar el otro túnel para encontrar el campamento pirata y la Academia.
-text.t4=He encontrado los túneles. Ahora debo volver a informar al capitán Pellew.
+title=El tÃºnel de los problemas.
+text.t1=He encontrado a Hunter y Ã©l conoce un atajo para llegar a BahÃ­a Blanca. Debemos ir a la casa junto al puente.
+text.t2=Hemos capturado al grupo que iba a recoger agua para el barco francÃ©s. Ahora apresaremos el barco.
+text.t3=El teniente Quelp ha matado al contrabandista Larr. Ahora debo investigar el otro tÃºnel para encontrar el campamento pirata y la Academia.
+text.t4=He encontrado los tÃºneles. Ahora debo volver a informar al capitÃ¡n Pellew.
 text.t5=Vamos a ganar a Quelp en su propio juego. Volvemos a la casa del contrabandista.
 text.t6=Hemos derrotado a las tropas francesas. Ahora debo llevar al mayor Wellesley a #sRedmond#.
-test.t7=Hemos sido atacados por tropas de élite francesas. Tenemos que volver junto al capitán Pellew y decirle lo que ha pasado.
+test.t7=Hemos sido atacados por tropas de Ã©lite francesas. Tenemos que volver junto al capitÃ¡n Pellew y decirle lo que ha pasado.

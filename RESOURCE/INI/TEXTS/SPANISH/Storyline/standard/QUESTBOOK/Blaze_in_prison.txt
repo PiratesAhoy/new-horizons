@@ -1,7 +1,7 @@
-title=Salir de la cárcel.
-text.t1=Los soldados me han metido en la cárcel. No sé dónde estan mis armas y seguro que no han informado al gobernador de mi situación. ¡Qué puedo hacer ahora?
+title=Salir de la cÃ¡rcel.
+text.t1=Los soldados me han metido en la cÃ¡rcel. No sÃ© dÃ³nde estan mis armas y seguro que no han informado al gobernador de mi situaciÃ³n. Â¡QuÃ© puedo hacer ahora?
 text.t2=El carcelero, que responde al nombre de Edgar Attwood, me ha dejado salir de mi celda a cambio de que lo contrate como artillero jefe en mi barco.
-text.t3=Edgar Attwood, el carcelero, me ha dicho que era un buen artillero, pero que perdió su trabajo por culpa de la bebida. Le he ofrecido un puesto de artillero a bordo de mi barco..., pero solo si me deja salir de la celda. Se ha reído.
-text.t4=No me gusta que la gente se ría de mí. Edgar ha dicho que acabaré andando con muletas si sigo interrumpiéndole mientras me cuenta la historia de su vida. Me he cansado de su insolencia y le he pegado un tiro.
-text.t5=Ahora tengo que largarme de este cuchitril humedo al que llaman prisión. Edgar mencionó que hay varios guardias vigilando. Tendré que matarlos a todos. Es la única forma de recuperar mi libertad.
-text.t6=El gobernador Silehard en persona ha venido a la prisión. Ha dicho que mi encarcelamiento ha sido un terrible error y me ha ofrecido sus disculpas. Después me ha invitado a acompañarlo a su estudio para tener una charla importante.
+text.t3=Edgar Attwood, el carcelero, me ha dicho que era un buen artillero, pero que perdiÃ³ su trabajo por culpa de la bebida. Le he ofrecido un puesto de artillero a bordo de mi barco..., pero solo si me deja salir de la celda. Se ha reÃ­do.
+text.t4=No me gusta que la gente se rÃ­a de mÃ­. Edgar ha dicho que acabarÃ© andando con muletas si sigo interrumpiÃ©ndole mientras me cuenta la historia de su vida. Me he cansado de su insolencia y le he pegado un tiro.
+text.t5=Ahora tengo que largarme de este cuchitril humedo al que llaman prisiÃ³n. Edgar mencionÃ³ que hay varios guardias vigilando. TendrÃ© que matarlos a todos. Es la Ãºnica forma de recuperar mi libertad.
+text.t6=El gobernador Silehard en persona ha venido a la prisiÃ³n. Ha dicho que mi encarcelamiento ha sido un terrible error y me ha ofrecido sus disculpas. DespuÃ©s me ha invitado a acompaÃ±arlo a su estudio para tener una charla importante.

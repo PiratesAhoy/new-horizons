@@ -17,7 +17,7 @@ Richelieu{Richelieu}
 Mazarin{Mazarin}
 Teague{Teague}
 Sparrow{Sparrow}
-François{François}
+FranÃ§ois{FranÃ§ois}
 de Hadoque{de Hadoque}
 Koleniko{Koleniko}
 Ragetti{Ragetti}
@@ -53,9 +53,9 @@ Padilla{Padilla}
 Celestino{Celestino}
 Villalobos{Villalobos}
 Crewmember{Tripulante}
-Spanish{Español}
+Spanish{EspaÃ±ol}
 Commander{comandante}
-Spanish Commander{Comandante español}
+Spanish Commander{Comandante espaÃ±ol}
 Padre{Padre}
 Gerardo{Gerardo}
 Soldier{Soldado}
@@ -77,9 +77,9 @@ Arnaldo{Arnaldo}
 Chaparro{Chaparro}
 
 {=====| TempQuestEnemy.c |=====}
-Prison{Prisión}
+Prison{PrisiÃ³n}
 Guard{Guardia}
-Prison Guard{Guardia de la prisión}
+Prison Guard{Guardia de la prisiÃ³n}
 Arnold{Arnold}
 McGill{McGill}
 Smuggler{Contrabandista}

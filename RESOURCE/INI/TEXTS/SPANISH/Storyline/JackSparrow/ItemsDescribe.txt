@@ -1,29 +1,29 @@
 itmname_Map_Doc_1 {Paquete de documentos}
 itmdescr_Map_Doc_1
 {
-Una cuarta parte de un viejo mapa que conduce a los tesoros de CortÈs, muestra parte de una isla pero no dÛnde est·.
+Una cuarta parte de un viejo mapa que conduce a los tesoros de Cort√©s, muestra parte de una isla pero no d√≥nde est√°.
 }
 
 itmname_Map_Doc_2 {Paquete de documentos}
 itmdescr_Map_Doc_2
 {
-Una cuarta parte de un viejo mapa que conduce a los tesoros de CortÈs, que encaja con otro fragmento de mapa.
+Una cuarta parte de un viejo mapa que conduce a los tesoros de Cort√©s, que encaja con otro fragmento de mapa.
 }
 
 itmname_Map_Doc_3 {Paquete de documentos}
 itmdescr_Map_Doc_3
 {
-Una cuarta parte de un viejo mapa que conduce a los tesoros de CortÈs, muestra otra parte de la isla y parte de un camino qaue va tierra adentro.
+Una cuarta parte de un viejo mapa que conduce a los tesoros de Cort√©s, muestra otra parte de la isla y parte de un camino qaue va tierra adentro.
 }
 
 itmname_Map_Doc_4 {Paquete de documentos}
 itmdescr_Map_Doc_4
 {
-Una cuarta parte de un viejo mapa que muestra el resto del camino tierra adentro que conduce al tesoro de CortÈs, libros sobre corrientes y vientos, pero faltan las coordenadas de la isla.
+Una cuarta parte de un viejo mapa que muestra el resto del camino tierra adentro que conduce al tesoro de Cort√©s, libros sobre corrientes y vientos, pero faltan las coordenadas de la isla.
 }
 
-itmname_small_chestJS	{Cofre pequeÒo}
+itmname_small_chestJS	{Cofre peque√±o}
 itmdescr_small_chestJS
 {
-Los documentos que contiene este cofre prueban que el barco que se hundiÛ en la Baie d'Orient era efectivamente la fragata francesa 'La Foudre'. Dice: 'El barco se hunde. Nos vamos al fondo. Ahora ya nunca encontraremos a la seÒorita Le Moigne. Mi gobernador quedar· decepcionado.' - Capit·n Patric Robert Sondre.
+Los documentos que contiene este cofre prueban que el barco que se hundi√≥ en la Baie d'Orient era efectivamente la fragata francesa 'La Foudre'. Dice: 'El barco se hunde. Nos vamos al fondo. Ahora ya nunca encontraremos a la se√±orita Le Moigne. Mi gobernador quedar√° decepcionado.' - Capit√°n Patric Robert Sondre.
 }

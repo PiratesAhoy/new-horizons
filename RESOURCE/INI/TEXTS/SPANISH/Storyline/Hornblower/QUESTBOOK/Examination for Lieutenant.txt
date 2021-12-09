@@ -1,5 +1,5 @@
 title=El examen de teniente
-text.t1=El capit·n Foster me ha ordenado poner rumbo a #sisland_Redmond#.
-text.t2=Debo reunirme con el capit·n Pellew a las puertas de la Residencia.
-text.t3=El capit·n Pellew me ha dicho que Archie ha sido hecho prisionero por los espaÒoles. Pero ahora mismo debo ir a presentarme para mi examen de teniente.
-text.t4=°Un brulote en llamas se dirige al puerto! Debemos llegar hasta el puerto y ver quÈ podemos hacer.
+text.t1=El capit√°n Foster me ha ordenado poner rumbo a #sisland_Redmond#.
+text.t2=Debo reunirme con el capit√°n Pellew a las puertas de la Residencia.
+text.t3=El capit√°n Pellew me ha dicho que Archie ha sido hecho prisionero por los espa√±oles. Pero ahora mismo debo ir a presentarme para mi examen de teniente.
+text.t4=¬°Un brulote en llamas se dirige al puerto! Debemos llegar hasta el puerto y ver qu√© podemos hacer.

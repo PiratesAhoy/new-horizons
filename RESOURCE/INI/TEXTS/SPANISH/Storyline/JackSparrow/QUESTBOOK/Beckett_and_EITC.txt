@@ -1,9 +1,9 @@
-title=Negocios con Beckett y la Compañía Comercial de las Indias Orientales
-text.t1=Mi próximo trabajo es ir a #sisland_Antiqua# a recoger mercancías, venderlas en #sGreenford# (#sisland_Oxbay#), comprar oro y volver a #sRedmond#. 
-text.t2=Mi próximo trabajo es ir a #sisland_Antiqua# a recoger mercancías, venderlas en #sGreenford#, #sisland_Oxbay#, y comprar oro con el dinero de la venta. Además de ir a la ciudad de #sOxbay# a espiar para el gobernador. Después de todo esto, tengo que volver a #sRedmond#.
-text.t3=He completado con éxito mi primer viaje para la Compañía. Cuenta por dos, uno a #sisland_Antiqua# y otro a #sGreenford# (#sisland_Oxbay#), ¡así que me han pagado el doble! Pero esto no tiene sentido, estoy bastante seguro de que el valor del oro no da suficientes beneficios para cubrir lo que Sir Cutler me está pagando.
-text.t4=Zarpo rumbo a #sisland_Oxbay# para recoger un paquete del dueño del astillero de #sOxbay#. Puede que tenga que desembarcar en #sGreenford# y atravesar la isla por tierra.
+title=Negocios con Beckett y la CompaÃ±Ã­a Comercial de las Indias Orientales
+text.t1=Mi prÃ³ximo trabajo es ir a #sisland_Antiqua# a recoger mercancÃ­as, venderlas en #sGreenford# (#sisland_Oxbay#), comprar oro y volver a #sRedmond#. 
+text.t2=Mi prÃ³ximo trabajo es ir a #sisland_Antiqua# a recoger mercancÃ­as, venderlas en #sGreenford#, #sisland_Oxbay#, y comprar oro con el dinero de la venta. AdemÃ¡s de ir a la ciudad de #sOxbay# a espiar para el gobernador. DespuÃ©s de todo esto, tengo que volver a #sRedmond#.
+text.t3=He completado con Ã©xito mi primer viaje para la CompaÃ±Ã­a. Cuenta por dos, uno a #sisland_Antiqua# y otro a #sGreenford# (#sisland_Oxbay#), Â¡asÃ­ que me han pagado el doble! Pero esto no tiene sentido, estoy bastante seguro de que el valor del oro no da suficientes beneficios para cubrir lo que Sir Cutler me estÃ¡ pagando.
+text.t4=Zarpo rumbo a #sisland_Oxbay# para recoger un paquete del dueÃ±o del astillero de #sOxbay#. Puede que tenga que desembarcar en #sGreenford# y atravesar la isla por tierra.
 text.t5=He recibido el paquete de manos de Owen McDorey.
 text.t6=He recibido el paquete de manos de Owen McDorey. Lo he cosido dentro del forro de mi casaca para mayor seguridad.
 text.t7=El agente de avituallamiento de #sisland_Antigua# me ha dado un paquete para Sir Beckett. Lo he abierto con cuidado, de modo que pueda volver a sellarlo sin que nadie se entere de que ha sido abierto. Parece que contiene un fragmento del mpaa de un tesoro.
-text.t8=Zarpo rumbo a #sisland_Falaise de Fleur# para recoger un paquete del dueño del astillero. También tengo que hundir un buque de escolta francés.
+text.t8=Zarpo rumbo a #sisland_Falaise de Fleur# para recoger un paquete del dueÃ±o del astillero. TambiÃ©n tengo que hundir un buque de escolta francÃ©s.

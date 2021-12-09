@@ -1,6 +1,6 @@
-title=Misión general: Escoltar a un mercante a #sisland#.
-text.t1=Tengo que escoltar a un barco mercante hasta #sisland#. El armador me pagará #dmoney# por este trabajo. Debo reunirme con él en #sdestination#.
-text.t2=¡Mil demonios maldigan esta tormenta! Mi 'monedero flotante' se ha ido al fondo del mar.
-text.t3=Me trae sin cuidado mi reputación cuando mi tripulación necesita dinero para comer, así que he traicionado a mi cliente. Ya nunca llegará a su destino.
-text.t4=¡Maldito sea ese #sattacker#! Era un canalla redomado. Mi cliente ha perecido, así que debo buscarme otra fuente de ingresos.
-text.t5=¡Fracaso!
+title=MisiÃ³n general: Escoltar a un mercante a #sisland#.
+text.t1=Tengo que escoltar a un barco mercante hasta #sisland#. El armador me pagarÃ¡ #dmoney# por este trabajo. Debo reunirme con Ã©l en #sdestination#.
+text.t2=Â¡Mil demonios maldigan esta tormenta! Mi 'monedero flotante' se ha ido al fondo del mar.
+text.t3=Me trae sin cuidado mi reputaciÃ³n cuando mi tripulaciÃ³n necesita dinero para comer, asÃ­ que he traicionado a mi cliente. Ya nunca llegarÃ¡ a su destino.
+text.t4=Â¡Maldito sea ese #sattacker#! Era un canalla redomado. Mi cliente ha perecido, asÃ­ que debo buscarme otra fuente de ingresos.
+text.t5=Â¡Fracaso!

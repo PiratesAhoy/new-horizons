@@ -1,4 +1,4 @@
 title=Tutorial: Relaciones internacionales
-text.t1=Al parecer mis últimas acciones navales han generado algunas consecuencias importantes. Como no quiero hacer enemigos por accidente, será mejor averiguar cómo tratar con las distintas naciones cuyos barcos me puedo encontrar en alta mar. Tal vez pueda pedir consejo a alguno de los gobernadores de las colonias. Mientras tanto, debo andarme con más cuidado.
-text.t2=Incluso me arriesgo a perder mi Licencia Mercantil si vuelvo a hacer una cosa así.
-text.t3=He recibido un libro que contiene detalles sobre las relaciones entre naciones. Debería ayudarme a evitar que las autoridades me declaren pirata. A no ser que quiera exactamente eso, claro...
+text.t1=Al parecer mis Ãºltimas acciones navales han generado algunas consecuencias importantes. Como no quiero hacer enemigos por accidente, serÃ¡ mejor averiguar cÃ³mo tratar con las distintas naciones cuyos barcos me puedo encontrar en alta mar. Tal vez pueda pedir consejo a alguno de los gobernadores de las colonias. Mientras tanto, debo andarme con mÃ¡s cuidado.
+text.t2=Incluso me arriesgo a perder mi Licencia Mercantil si vuelvo a hacer una cosa asÃ­.
+text.t3=He recibido un libro que contiene detalles sobre las relaciones entre naciones. DeberÃ­a ayudarme a evitar que las autoridades me declaren pirata. A no ser que quiera exactamente eso, claro...

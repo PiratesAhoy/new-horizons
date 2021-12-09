@@ -1,3 +1,3 @@
-title=Tutorial: Los consejos del viejo capit·n
-text.t1=CococÌ a un oficial en la taberna y, caundo intentaba convencerlo para enrolarse conmigo, un viejo capit·n se me acercÛ. Me dijo que los oficiales de ahora ya no son lo que eran. Hoy en dÌa todos los oficiales est·n especializados en aspectos diferentes. Se ofreciÛ a enseÒarme m·s cosas sobre los distintos tipos de oficiales. DeberÌa ir a #sOranjestad# y reunirme con Èl antes de que pasen tres meses.
-text.t2=Por ahora el capit·n no puede enseÒarme nada. DeberÌa volver a intentarlo despuÈs de la prÛxima actualizaciÛn.
+title=Tutorial: Los consejos del viejo capit√°n
+text.t1=Cococ√≠ a un oficial en la taberna y, caundo intentaba convencerlo para enrolarse conmigo, un viejo capit√°n se me acerc√≥. Me dijo que los oficiales de ahora ya no son lo que eran. Hoy en d√≠a todos los oficiales est√°n especializados en aspectos diferentes. Se ofreci√≥ a ense√±arme m√°s cosas sobre los distintos tipos de oficiales. Deber√≠a ir a #sOranjestad# y reunirme con √©l antes de que pasen tres meses.
+text.t2=Por ahora el capit√°n no puede ense√±arme nada. Deber√≠a volver a intentarlo despu√©s de la pr√≥xima actualizaci√≥n.

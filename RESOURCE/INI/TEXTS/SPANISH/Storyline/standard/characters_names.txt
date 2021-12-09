@@ -1,4 +1,4 @@
-﻿// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
+// MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| standard.c |=====}
 Nathaniel{Nathaniel}
 Hawk{Hawk}
