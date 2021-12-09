@@ -1,4 +1,4 @@
-Build Version: Friday 13th August 2021
+Build Version: Thursday 2nd December 2021
 Build 14
 
 ==========================
@@ -44,6 +44,7 @@ Build 14:
   . New voice greetings for female pirate and English officers by Jack Rackham and Tingyun
   . Partial Russian translation by Maximus
   . Partial Spanish translation by Homo Eructus, Perro Negro and Xianco. Now includes storyline questbooks and some dialogs.
+  . Spanish translation expanded by Homo Eructus including more dialogs
   . Partial Polish translation by Jacob and Konrad Kulczycki
   . Support for Swedish keyboard by Konrad Kulczycki
   . Colombia jungle including land route from Cartagena to Dolphin Sands by Grey Roger and Jack Rackham
@@ -84,6 +85,7 @@ Build 14:
   . Time travel Easter egg in Rheims' house in Smugglers' Lair if not playing "Tales of a Sea Hawk" by Grey Roger
   . "Cooking With Albatross" removes an albatross and gives 2 food during daily update, by Grey Roger
   . Naval officers can not capture towns for themselves nor select any government but their own when persuading a diplomat in a fort to surrender; diplomats in forts use period-correct king names, obey 'isEnabledTownCapture', by Grey Roger
+  . If you have a choice to not execute a surrendered captain and actively choose to do so, lose reputation by Grey Roger
 - Code Updates:
   . Limited number of soldiers in Merchant Guild attacks by Pieter Boelen
   . Reduced number of soldiers in Soldier Reinforcements by Pieter Boelen
@@ -149,7 +151,13 @@ Build 14:
   . New voice greeting for Joshamee Gibbs by Grey Roger
   . Blackjack renamed to Vingt-Un by Grey Roger
   . Gambling code overhauled by Levis
+  . Gambling code revised to use 'XI_ConvertString' instead of 'DLG_TEXT', gambling text moved from "Habitue_dialog.c" to "common.ini" by Grey Roger
   . International relations for War of the Spanish Succession corrected by Homo Eructus
+  . Random euphemisms in Terry Snider's dialog and general Nevis Pirate citizen dialog made translatable, and translated, by Homo Eructus
+  . Drinking in taverns, wenching in Nevis Pirate Settlement overhauled by Grey Roger
+  . Inverted exclamation mark resized in "RESOURCE\INI\fonts_euro.ini" to make it look better by Grey Roger
+  . "PROGRAM\DiALOGS\Enc_Officer_dialog.c"; "PROGRAM\INTERFACE\kam_shipberthing.c", "kam_shipberthing_updatedisplay.c", "kam_shipberthing_windows.c", "perks.c": made translatable and translated by Homo Eructus
+  . "PROGRAM\DIALOGS\GrandTurks citizen_dialog.c": several fixed numbers replaced by names of constant variables, by Pieter Boelen
 - Bug Fixes:
   . Fix to prevent Merchant Guild attack when player group was not responsible by Pieter Boelen
   . Fix to allow larger Random Quest Ships by Pieter Boelen
@@ -276,6 +284,9 @@ Build 14:
   . Selling Virginie d'Espivant earns correct amount of money by Jack Rackham
   . Gibbs01.wav": made audible within game, so can be used as greeting sound for Mr. Gibbs - Jack Rackham
   . Diplomat uses period-correct nation names, correctly handles America and Sweden - Grey Roger
+  . Citizen dialog files corrected to show town population by Homo Eructus
+  . "PROGRAM\Characters\Leveling.c, officers.c", "PROGRAM\QUESTS\quests_common.c": calls on GetAttributeN, GetAttributesNum, GetAttributeName changed to supply '&name' (aref) instead of 'name' (object) to prevent bugs by Hammie
+  . "SName" attribute for "HMS_Sophie" changed from "Sophie" to "HMS_Sophie" to avoid conflict with woman's name "Sophie" by Homo Eructus
 - Storyline Updates:
   . Sidequests:
     > A Girl Won in a Card Game, enabled also at Grenada by Pieter Boelen
@@ -308,7 +319,7 @@ Build 14:
     > New quest for Horatio Hornblower, available to FreePlay or after storyline, by Grey Roger
     > A Smuggler's Life For Me split into separate tutorial, smuggling for governor and opium smuggling by Grey Roger
     > New sidequest "Quest for the Crystal Skull" by Grey Roger
-    > New sidequest "A Family Story" for FreePlay character José Joaquím Almeida by Bartolomeu o Portugues
+    > New sidequest "A Family Story" for FreePlay character JosÐ¹ JoaquÐ½m Almeida by Bartolomeu o Portugues
     > Rogue / Gambler start improved: period-correct soldier uniforms, bugs fixed, dialogs tailored to different character nationalities, bugs fixed: Grey Roger & DeathDaisy
     > Lucas da Saldhana uses new model "Lucas2", Joaquin da Saldhana uses new model "spa_adm_18_2" for "Revolutions" and "Napoleonic" periods by Grey Roger
     > Artois Voysey sidequest closes if Artois dies before telling you about treasure by Grey Roger
@@ -339,7 +350,7 @@ Build 14:
     > Various quest items made disposable at or near the ends of sidequests by Pieter Boelen and Grey Roger
     > Church Help: letters removed by Father Jerald and different dialog with Father Bernard if you blackmail Father Jerald and give him the letters, by Grey Roger
     > Church Help: original questbook entries restored for "Seadog" and "Swashbuckler" difficulty so you must figure out for yourself that further investigation is needed, by Grey Roger
-    > New sidequest "A French Companion" for FreePlay character José Joaquím Almeida by Bartolomeu o Portugues
+    > New sidequest "A French Companion" for FreePlay character JosÐ¹ JoaquÐ½m Almeida by Bartolomeu o Portugues
     > "Silver for Cartagena" made available to pirates who do not join the Brotherhood by Grey Roger
     > Rogue / Gambler start: new questbook entries for gambler and female rogue, entire quest made optional, "PO_Fleut50" replaced by "FastMerchantman2" in last two periods, by Grey Roger
   . Tutorial:
@@ -420,6 +431,7 @@ Build 14:
     > Dialog added for Nathan Kell to direct you to Cap'n Drow after killing Gentleman Jocard by Grey Roger
     > When you become Barbossa, lose your own officers and get Pintel and Ragetti by Grey Roger
     > Dialog for "Girl Won in a Card Game" added to storyline version of Joseph Claude Le Moigne's dialog files by Salonikasurf
+    > Dialog for Cutler Beckett in lighthouse arrest scene now uses AWE line about liberating cargo, by Grey Roger
   . Woodes Rogers storyline:
     > More new WIP content added by Jack Rackham
     > Part 2 extension added and playable by Jack Rackham
@@ -533,6 +545,17 @@ Build 14:
   . Improved church as background to "Cartagena_town_01" by Jack Rackham
   . New playable character "BeatriceB" by Bathtub Pirate
   . Building in Grand Turk near tavern now has "RR Club" sign by Jack Rackham
+  . New playable character Ricardo Orellana, with custom sword and loading screen, by GhostofDeath91
+  . Two cannon locators added to "Frigate_Sat.gm" and "Frigate_Ex_Sat.gm" for previously unused gunports by Grey Roger
+  . Santiago tavern "sit4" and "sit11" locators changed to point slightly to the side to fix a bug which prevents a character from appearing on them, by Grey Roger
+  . New custom sail textures, plus torn versions of existing custom sails, by GhostofDeath91
+  . New playable supernatural characters Avergorex and Dervia, with custom swords, by Jacob
+  . New playable historical character Blas de Lezo by Homo Eructus
+  . New character models for Davy Jones and crew (Hadras, Maccus, Palafico, Penrod) by NikK / Karlik-Nos
+  . Talking heads show the same armour as main character models, by Grey Roger
+  . New ship "Mariana" by GhostOfDeath91
+  . New ship "FleutWar2" by Grey Roger
+  . New ship "Couronne_pirate" by Pillat
 - ADDITIONAL INSTALLATION OPTIONS:
   . Possibility to revert to original black-and-yellow paint scheme for British ships
 - For Future Development:
@@ -876,7 +899,7 @@ Build 14 Beta 3.4:
       > Bow and arrow items added for Quest Indians by Bartolomeu o Portugues and Jack Rackham
   . Brave Black Flag new Free Play storyline added by Jason Maffettone
       > Includes a modified tutorial
-      > All of the standard game’s side quests.
+      > All of the standard gameâ€™s side quests.
       > Start the game with a full cadre of 7 officers
       > Some standard story characters and ships have been altered for greater variety, challenge, and reward
       > Full wardrobe of 12 outfits from beginning of the game based on the Blaze model
@@ -1273,7 +1296,7 @@ Build 14 Beta 3:
   . Sidequests Fixed by Pieter Boelen
       > "A girl won in a card game" sidequest available in ALL storylines
       > Find the missing son of the Spanish Admiral
-      > Find Angelique Moulin’s Father
+      > Find Angelique Moulinâ€™s Father
       > Baldewyn Coffier & Arnaud Matton
 - Modder Tools:
   . PERIOD_ACCURACY_LEVEL setting at the top of PROGRAM\Ships\ships_init.c for testing purposes by Pieter Boelen
@@ -1360,7 +1383,7 @@ Build 14 Beta 2.5:
     To the following storylines: Devlin Opera, Master & Commander, The Buccaneer and Tales of a Chevalier
     Sidequests added:
     > Baldewyn Coffier & Arnaud Matton
-    > Find Angelique Moulin’s Father
+    > Find Angelique Moulinâ€™s Father
     > Find the missing son of the Spanish Admiral
     > Help the Boatswain
     > Help the Lady
@@ -1640,7 +1663,7 @@ Build 14 Beta 2:
   . Neptunus (NL_Neptunus, PO_Neptunus and SP_Neptunus) high-detail custom model added by SeaNorris and Rider88, ported by Hylie Pistof
   . Raa Frigate (RN_RaaFrigate) high-detail custom model added by Jaberddau and Jack Harrison and Noriruru and Craiggo, ported by Hylie Pistof
   . Heavy Lugger (Lugger3) updated AoP model added by Pgargon, ported by Armada
-  . La Rêve (FR_Sloop) updated AoP model added by Pgargon, texture by Seb, ported by Hylie Pistof and Pieter Boelen
+  . La RÐºve (FR_Sloop) updated AoP model added by Pgargon, texture by Seb, ported by Hylie Pistof and Pieter Boelen
   . French Light Pinnace (FR_LightPinnace) updated AoP model added by Pgargon, ported by Hylie Pistof and Pieter Boelen
   . Centaure class 3rd Rate (FR_Bellona) reskin added by Armada
   . Independence class 3rd Rate (US_Bellona) reskin added by Armada
@@ -1660,7 +1683,7 @@ Build 14 Beta 1 Patch 7:
   . No more random characters in tavern rooms by Pieter Boelen
   . Aruba and Hispaniola tavern rooms fixed by Captain Maggee
   . Corrected tradebook islands quantity in sort order (20 instead of 19) by Sulan
-  . Cut island name "Santa María de Guadalupe de Extremadura" to "Santa María de Guadalupe" to fit interface by Sulan
+  . Cut island name "Santa MarÐ½a de Guadalupe de Extremadura" to "Santa MarÐ½a de Guadalupe" to fit interface by Sulan
   . Ghost Ammo fix updated by Jack Rackham
   . Pirate promotion reward code fixed by Aviator543
   . Passengers Interface empty officer picture fixed for the Brown Interface by Pieter Boelen
@@ -1811,7 +1834,7 @@ Build 14 Beta 1 Patch 6:
   . Cursed Black Pearl new sails by Armada
   . New 'Pure White' sail texture by Armada
   . American Navy flag updated for historical accuracy in the 'Revolutions' period by Armada
-  . Improved glass texture for several ships’ stern windows by Armada
+  . Improved glass texture for several shipsâ€™ stern windows by Armada
 - Ship Model Updates:
   . PO_Poseidon/RN_Poseidon/FR_Fleuron high-detail custom model added by Jabberdau, ported by Jack Harrison and Armada
   . SanFelipe1 high-detail custom model added by pgargon
@@ -1956,7 +1979,7 @@ Build 14 Beta 1 Patch 4:
   . USS Enterprise high-detail custom model added by Pgargon
   . HMS Mordaunt high-detail custom model added by Pgargon
   . La Couronne high-detail custom model added by Pgargon
-  . Apostól Felipe high-detail custom model added by Pgargon
+  . ApostÑƒl Felipe high-detail custom model added by Pgargon
   . USS Hannah and Pirate Version high-detail custom model added by Pgargon
   . HMS Speedy high-detail custom model added by Pgargon
   . British Royal Navy steam ship added by Armada
