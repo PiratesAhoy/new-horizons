@@ -1,39 +1,39 @@
-Ship_got_good		{%1 С† %2 РїРѕРґРЅСЏС‚Рѕ РЅР° Р±РѕСЂС‚}
-Ship_cant_got_good	{РќРµС‚ РјРµСЃС‚Р° РґР»СЏ %1. РўСЂСЋРј Р·Р°РїРѕР»РЅРµРЅ}
+Ship_got_good		{%1 ц %2 поднято на борт}
+Ship_cant_got_good	{Нет места для %1. Трюм заполнен}
 
-seg_Balls		{СЏРґРµСЂ}
-seg_Grapes		{РєР°СЂС‚РµС‡Рё}
-seg_Knippels	{РєРЅРёРїРїРµР»РµР№}
-seg_Bombs		{Р±РѕРјР±}
-seg_Sailcloth	{РїР°СЂСѓСЃРёРЅС‹}
-seg_Planks		{РґРѕСЃРѕРє}
-seg_Slaves		{СЂР°Р±РѕРІ}
-seg_Wheat		{РїС€РµРЅРёС†С‹}
-seg_Ebony		{С‡РµСЂРЅРѕРіРѕ РґРµСЂРµРІР°}
-seg_Chocolate	{РєР°РєР°Рѕ}
-seg_Sugar		{СЃР°С…Р°СЂР°}
-seg_Wine		{РІРёРЅР°}
-seg_Linen		{РїРѕР»РѕС‚РЅР°}
-seg_Rum			{СЂРѕРјР°}
-seg_Tobacco		{С‚Р°Р±Р°РєР°}
-seg_Coffee		{РєРѕС„Рµ}
-seg_Mahogany	{РєСЂР°СЃРЅРѕРіРѕ РґРµСЂРµРІР°}
-seg_Cinnamon	{РєРѕСЂРёС†С‹}
-seg_Copra		{РєРѕРїСЂС‹}
-seg_Paprika		{РїР°РїСЂРёРєРё}
-seg_Fruits		{С„СЂСѓРєС‚РѕРІ}
-seg_Ale			{СЌР»СЏ}
-seg_Silk		{С€РµР»РєР°}
-seg_Clothes		{РѕРґРµР¶РґС‹}
-seg_Cotton		{С…Р»РѕРїРєР°}
-seg_Sandal		{СЃР°РЅРґР°Р»Р°}
-seg_Leather		{РєРѕР¶Рё}
-seg_Oil			{РјР°СЃР»Р°}
-seg_Gold		{Р·РѕР»РѕС‚Р°}    // from SLiB -->
-seg_Silver		{СЃРµСЂРµР±СЂР°}  //   by
-seg_Bricks		{РєРёСЂРїРёС‡РµР№}  // Jack Davidson <--
-seg_Food		{РїСЂРѕРІРёР·РёРё}
-seg_Weapon		{РѕСЂСѓР¶РёСЏ}
-seg_Gunpowder	{РїРѕСЂРѕС…Р°}
-seg_Ration		{РїСЂРѕРІРёР·РёРё}
-seg_Medicines	{РјРµРґРёРєР°РјРµРЅС‚РѕРІ}
+seg_Balls		{ядер}
+seg_Grapes		{картечи}
+seg_Knippels	{книппелей}
+seg_Bombs		{бомб}
+seg_Sailcloth	{парусины}
+seg_Planks		{досок}
+seg_Slaves		{рабов}
+seg_Wheat		{пшеницы}
+seg_Ebony		{черного дерева}
+seg_Chocolate	{какао}
+seg_Sugar		{сахара}
+seg_Wine		{вина}
+seg_Linen		{полотна}
+seg_Rum			{рома}
+seg_Tobacco		{табака}
+seg_Coffee		{кофе}
+seg_Mahogany	{красного дерева}
+seg_Cinnamon	{корицы}
+seg_Copra		{копры}
+seg_Paprika		{паприки}
+seg_Fruits		{фруктов}
+seg_Ale			{эля}
+seg_Silk		{шелка}
+seg_Clothes		{одежды}
+seg_Cotton		{хлопка}
+seg_Sandal		{сандала}
+seg_Leather		{кожи}
+seg_Oil			{масла}
+seg_Gold		{золота}    // from SLiB -->
+seg_Silver		{серебра}  //   by
+seg_Bricks		{кирпичей}  // Jack Davidson <--
+seg_Food		{провизии}
+seg_Weapon		{оружия}
+seg_Gunpowder	{пороха}
+seg_Ration		{провизии}
+seg_Medicines	{медикаментов}

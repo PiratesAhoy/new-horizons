@@ -1,14 +1,14 @@
 string DLG_TEXT[46] = { 
-"Buenos días, Capitán.",
-"Buenos días, señor.",
+"Buenos dÃ­as, CapitÃ¡n.",
+"Buenos dÃ­as, seÃ±or.",
 ".",
 ".",
 ".",
 ".",
 ".",
 ".",
-"¡¡Eh!!... ¡ALTO!... ¡Suena la alarma!... ¡SPARROW SE HA ESCAPADO!", // TALISMAN added --->
-"ARGH!!!...¡Maldita sea! ... ¡Corre hacia la nave Capitán Drow!... ¡Corre!",
+"Â¡Â¡Eh!!... Â¡ALTO!... Â¡Suena la alarma!... Â¡SPARROW SE HA ESCAPADO!", // TALISMAN added --->
+"ARGH!!!...Â¡Maldita sea! ... Â¡Corre hacia la nave CapitÃ¡n Drow!... Â¡Corre!",
 "",
 "",
 "",

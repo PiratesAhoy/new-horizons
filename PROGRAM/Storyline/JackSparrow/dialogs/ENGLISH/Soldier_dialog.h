@@ -37,7 +37,7 @@ string DLG_TEXT[40] = {
 "Wait! Can't we discuss this?",
 "Well, Sir, he WAS chasing someone when we arrived.",
 "Yes! Yes! And tell him how you saved my life!",
-"Er.., Ah! Er.., well, we may have been contributory in saving this man’s life. IF, he was being robbed. But, he did have the diamonds on him. That's why we brought him in... Sir.",
+"Er.., Ah! Er.., well, we may have been contributory in saving this manâ€™s life. IF, he was being robbed. But, he did have the diamonds on him. That's why we brought him in... Sir.",
 "An understandable mistake, soldier. With all the commotion going on.",
 
 };

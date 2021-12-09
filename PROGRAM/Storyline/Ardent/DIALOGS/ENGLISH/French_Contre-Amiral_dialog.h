@@ -23,7 +23,7 @@ string DLG_TEXT[37] = {
 "Report on your activities on #sisland_Isla Mona#, if you please.",
 "Yes, sir. We engaged a pirate ship but she ran away. Rather than pursue her, ",
 "Yes, sir. After the encounter with the pirate ships, ",
-"we proceeded to land on the island. The squad which I sent to the Taíno village reported that they are peaceful and pose no threat. We continued to the fort, which as you may imagine was in some disrepair after decades of neglect.",
+"we proceeded to land on the island. The squad which I sent to the TaÃ­no village reported that they are peaceful and pose no threat. We continued to the fort, which as you may imagine was in some disrepair after decades of neglect.",
 "Indeed, this was to be expected. Continue.",
 "I had my men make a start on clearing the place up. We have made good progress. Then you arrived and we handed the fort over to your men. My crew are now embarked and we are ready to leave at your command, sir.",
 "Very good. You may be wondering why we have taken over #sisland_Isla Mona#, a tiny island with no resources to speak of.\n",

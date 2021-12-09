@@ -1204,7 +1204,7 @@ string returnRandomDeadItem()
 	return "potion";
 }
 
-//----------------------------- Íåäîïèñàííûå ôóíêöèè, ââåäåííûå äëÿ ïðîïèñûâàíèÿ â äèàëîãè ---------------------------
+//----------------------------- ÃÃ¥Ã¤Ã®Ã¯Ã¨Ã±Ã Ã­Ã­Ã»Ã¥ Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¨, Ã¢Ã¢Ã¥Ã¤Ã¥Ã­Ã­Ã»Ã¥ Ã¤Ã«Ã¿ Ã¯Ã°Ã®Ã¯Ã¨Ã±Ã»Ã¢Ã Ã­Ã¨Ã¿ Ã¢ Ã¤Ã¨Ã Ã«Ã®Ã£Ã¨ ---------------------------
 
 
 string TimeGreeting()
@@ -1267,8 +1267,8 @@ void Set_inDialog_Attributes()
 	AddressForms[GetAddressIndex(ADDR_CIVIL, ENGLAND, 1)] = XI_ConvertString("Miss");	// especial sense because often it's used with the player's _first_ name...
 	AddressForms[GetAddressIndex(ADDR_CIVIL, FRANCE, 0)] = XI_ConvertString("Monsieur");
 	AddressForms[GetAddressIndex(ADDR_CIVIL, FRANCE, 1)] = XI_ConvertString("Mademoiselle");
-	AddressForms[GetAddressIndex(ADDR_CIVIL, SPAIN, 0)] = XI_ConvertString("Señor");
-	AddressForms[GetAddressIndex(ADDR_CIVIL, SPAIN, 1)] = XI_ConvertString("Señorita");
+	AddressForms[GetAddressIndex(ADDR_CIVIL, SPAIN, 0)] = XI_ConvertString("SeÃ±or");
+	AddressForms[GetAddressIndex(ADDR_CIVIL, SPAIN, 1)] = XI_ConvertString("SeÃ±orita");
 	// pirate omitted.
 	AddressForms[GetAddressIndex(ADDR_CIVIL, HOLLAND, 0)] = XI_ConvertString("Mijnheer");
 	AddressForms[GetAddressIndex(ADDR_CIVIL, HOLLAND, 1)] = XI_ConvertString("Juffrouw");
@@ -1288,8 +1288,8 @@ void Set_inDialog_Attributes()
 	// civil titles copied for polite for non-Eng
 	AddressForms[GetAddressIndex(ADDR_POLITE, FRANCE, 0)] = XI_ConvertString("Monsieur");
 	AddressForms[GetAddressIndex(ADDR_POLITE, FRANCE, 1)] = XI_ConvertString("Mademoiselle");
-	AddressForms[GetAddressIndex(ADDR_POLITE, SPAIN, 0)] = XI_ConvertString("Señor");
-	AddressForms[GetAddressIndex(ADDR_POLITE, SPAIN, 1)] = XI_ConvertString("Señorita");
+	AddressForms[GetAddressIndex(ADDR_POLITE, SPAIN, 0)] = XI_ConvertString("SeÃ±or");
+	AddressForms[GetAddressIndex(ADDR_POLITE, SPAIN, 1)] = XI_ConvertString("SeÃ±orita");
 	AddressForms[GetAddressIndex(ADDR_POLITE, HOLLAND, 0)] = XI_ConvertString("Mijnheer");
 	AddressForms[GetAddressIndex(ADDR_POLITE, HOLLAND, 1)] = XI_ConvertString("Juffrouw");
 	AddressForms[GetAddressIndex(ADDR_POLITE, PORTUGAL, 0)] = XI_ConvertString("Senhor");
@@ -1441,13 +1441,13 @@ string GetMyNationAddress(ref chr, ref pchr)
 // KK -->
 	if(pchr.sex == "woman")
 	{
-		nataddr[SPAIN] = XI_ConvertString("Señorita");			//spell-checked by KAM
+		nataddr[SPAIN] = XI_ConvertString("SeÃ±orita");			//spell-checked by KAM
 		nataddr[FRANCE] = XI_ConvertString("Mademoiselle");
 		nataddr[ENGLAND] = XI_ConvertString("Miss");
 		nataddr[PORTUGAL] = XI_ConvertString("Senhorita");
 		nataddr[HOLLAND] = XI_ConvertString("Juffrouw");
 	} else {
-		nataddr[SPAIN] = XI_ConvertString("Señor");			//spell-checked by KAM
+		nataddr[SPAIN] = XI_ConvertString("SeÃ±or");			//spell-checked by KAM
 		nataddr[FRANCE] = XI_ConvertString("Monsieur");
 		nataddr[ENGLAND] = XI_ConvertString("Mister"); // NK
 		nataddr[PORTUGAL] = XI_ConvertString("Senhor");
@@ -1613,7 +1613,7 @@ string GetMyRespectfullyName(ref chr)
 		{
 			if(ourTitle == TranslateString("", "Dame") || ourTitle == TranslateString("", "Sir") ||
 			   ourTitle == TranslateString("", "Chevalier") ||
-			   ourTitle == TranslateString("", "Doña") || ourTitle == TranslateString("", "Don") ||
+			   ourTitle == TranslateString("", "DoÃ±a") || ourTitle == TranslateString("", "Don") ||
 			   ourTitle == TranslateString("", "Dona") || ourTitle == TranslateString("", "Dom"))
 			{
 				ourName = GetMyName(chr);
@@ -2856,11 +2856,11 @@ string GetShipDescribe(string charId, bool nation, bool nguns, bool shipname, bo
 					string tmpstr = "";
 					for (int i = 0; i < dl - 1; i++) {
 						if (GetSymbol(tmpDescr, i + 1) == " ")
-							tmpstr += "¹";
+							tmpstr += "Â¹";
 						else
 							tmpstr += strcut(tmpDescr, i, i);
 					}
-					tmpstr += "×";
+					tmpstr += "Ã—";
 					shipDescribe = tmpstr;
 				}
 			break;

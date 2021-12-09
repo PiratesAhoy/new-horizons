@@ -2,28 +2,28 @@ void InitRandomShipsNames()
 {
 	// Spain names
 	int n = 0;
-	n = AddStr2Array(&sRndShpSpName, n, "Alfonso X,Almansa,AmÈrica,AquilÛn,Andaluz,Ave de Gracia,Aventura,¡frica,¡guila,Amazona,Ambrosia,AnfÌtrite");		//some spanish ship names spell-checked by KAM
-	n = AddStr2Array(&sRndShpSpName, n, "¡ngel de la Guarda,AnunciaciÛn,Antilla,Argonauta,Arrogante,Asia,Astrea,Astuto,AsunciÛn,Atlante,Atrevida,Bahama,Baleares,B·rbara,Blas de Lezo");
-	n = AddStr2Array(&sRndShpSpName, n, "Volador,Bravo,Catal·n,Canarias,C·ntabro,Carmen,Cardenal Cisneros,Carlota,Carmelita,Castilla,Cazador,Ceres,Cuzco,Cierva,Clara,ColÛn");
-	n = AddStr2Array(&sRndShpSpName, n, "ConcepciÛn,CortÈs,Conquistador,Caim·n,Corso,San Cosme,Cagafuego,Cuervo,DÈdalo,Descubierta,DelfÌn,Diana,Diligencia,Don Antonio,Don Juan de Austria");
-	n = AddStr2Array(&sRndShpSpName, n, "Estrella del Mar,Emperador Carlos V,Esmeralda,EspaÒa,Esperanza,Europa,Extremadura,Fama,Feliz,FÈnix,Firme,Flecha,Formidable");
+	n = AddStr2Array(&sRndShpSpName, n, "Alfonso X,Almansa,Am√©rica,Aquil√≥n,Andaluz,Ave de Gracia,Aventura,√Åfrica,√Åguila,Amazona,Ambrosia,Anf√≠trite");		//some spanish ship names spell-checked by KAM
+	n = AddStr2Array(&sRndShpSpName, n, "√Ångel de la Guarda,Anunciaci√≥n,Antilla,Argonauta,Arrogante,Asia,Astrea,Astuto,Asunci√≥n,Atlante,Atrevida,Bahama,Baleares,B√°rbara,Blas de Lezo");
+	n = AddStr2Array(&sRndShpSpName, n, "Volador,Bravo,Catal√°n,Canarias,C√°ntabro,Carmen,Cardenal Cisneros,Carlota,Carmelita,Castilla,Cazador,Ceres,Cuzco,Cierva,Clara,Col√≥n");
+	n = AddStr2Array(&sRndShpSpName, n, "Concepci√≥n,Cort√©s,Conquistador,Caim√°n,Corso,San Cosme,Cagafuego,Cuervo,D√©dalo,Descubierta,Delf√≠n,Diana,Diligencia,Don Antonio,Don Juan de Austria");
+	n = AddStr2Array(&sRndShpSpName, n, "Estrella del Mar,Emperador Carlos V,Esmeralda,Espa√±a,Esperanza,Europa,Extremadura,Fama,Feliz,F√©nix,Firme,Flecha,Formidable");
 	n = AddStr2Array(&sRndShpSpName, n, "Fuerte,Gallardo,Galgo,Galicia,Gamo,Gertrudis,Guarnizo,Glorioso,Gravina,Guerrera,Guipuzcoana,Gitano");
-	n = AddStr2Array(&sRndShpSpName, n, "HalcÛn,Hermenegildo,HermÌone,Infanta,Isla de Cuba,Isla de LuzÛn,IntrÈpido,Isabela,Jaime I,Jes˙s MarÌa y JosÈ,Invencible,Juno,Lepanto,Liebre,Ligera,Lebrel");
-	n = AddStr2Array(&sRndShpSpName, n, "LimeÒo,Magn·nima,Mahonesa,MarÌa SantÌsima,MarquÈs de la Ensenada,Matilda,Medea,Matamoros,Mercedes,Mejicana,MallorquÌn,Minerva,MiÒo");
-	n = AddStr2Array(&sRndShpSpName, n, "Monarca,MontaÒÈs,Murciana,Nuestra SeÒora del Carmen,Natividad,Navarra,Navas de Tolosa,Neptuno,Ninfa,Nueva EspaÒa,Numancia,Oriente,Urquijo,Palas,P·xaro,Paz,Paloma");
-	n = AddStr2Array(&sRndShpSpName, n, "Peruano,Perla,Pinta,Poli,PrÌncipe de Asturias,Raposa,Rayo,Real Familia,NiÒa,Reina MarÌa Luisa,Reina del Mar,Reina de Cuba,Reina");
-	n = AddStr2Array(&sRndShpSpName, n, "ResoluciÛn,RÌo De La Plata,Rosario,Sabina,San Antonio,San AugustÌn,Santander,Santa B·rbara,San Bernardo,San Blas,San Bruno");
-	n = AddStr2Array(&sRndShpSpName, n, "San Carlos,San D·maso,San Eugenio,San Felipe,San FermÌn,San Fernando,San Francisco,San MartÌn,SantÌsima Madre");
-	n = AddStr2Array(&sRndShpSpName, n, "San Fulgencio,San Gabriel,San Genaro,San Gil,San Ildefonso,San Isidro,San JoaquÌn,SantÌsima Trinidad");
-	n = AddStr2Array(&sRndShpSpName, n, "San JosÈ,SantÌsimo Sacramento,San Juan Bautista,San Juan Nepomuceno,Sagunto,San Juli·n,San Justo");
-	n = AddStr2Array(&sRndShpSpName, n, "SeptentriÛn,San Leandro,San LeÛn,San Lino,San Lorenzo,San Nicol·s,San Pablo,San Pascual");
-	n = AddStr2Array(&sRndShpSpName, n, "San Pedro Alc·ntara,San Pedro ApÛstal,San PÌo,San Rafael,San RamÛn,San Sebasti·n");
-	n = AddStr2Array(&sRndShpSpName, n, "San Vicente,San Isidro,San Felipe,Santa ¡gueda,Santa Ana,Santa BrÌgida,Santa Catalina");
-	n = AddStr2Array(&sRndShpSpName, n, "Santa Casilda,Santa Cecilia,Santa Clara,Santa Dorotea,Santa Elena,Santa Escol·stica");
-	n = AddStr2Array(&sRndShpSpName, n, "Santa Florentina,Santa Gertrudis,Santa Isabel,Santa Leocadia,Santa LucÌa,Santa Margarita");
-	n = AddStr2Array(&sRndShpSpName, n, "Santa MarÌa,Santa MarÌa Magdalena,Santa Matilde,Santa Perpetua,Santa Raquel,Santa Rita");
-	n = AddStr2Array(&sRndShpSpName, n, "Santa Rosa,Santa RosalÌa,Santa Rufinia,Santa Sabina,Santa Eulalia,Santa Teresa,Tetu·n,San Telmo");
-	n = AddStr2Array(&sRndShpSpName, n, "Sacramento,Seria,Sirena,Siroco,Soberana,T·rtaro,Temerario,Terrible,Tetis,Tonina,Tramontana,Triunfante,Trucha,Valiente,Valerosa");
+	n = AddStr2Array(&sRndShpSpName, n, "Halc√≥n,Hermenegildo,Herm√≠one,Infanta,Isla de Cuba,Isla de Luz√≥n,Intr√©pido,Isabela,Jaime I,Jes√∫s Mar√≠a y Jos√©,Invencible,Juno,Lepanto,Liebre,Ligera,Lebrel");
+	n = AddStr2Array(&sRndShpSpName, n, "Lime√±o,Magn√°nima,Mahonesa,Mar√≠a Sant√≠sima,Marqu√©s de la Ensenada,Matilda,Medea,Matamoros,Mercedes,Mejicana,Mallorqu√≠n,Minerva,Mi√±o");
+	n = AddStr2Array(&sRndShpSpName, n, "Monarca,Monta√±√©s,Murciana,Nuestra Se√±ora del Carmen,Natividad,Navarra,Navas de Tolosa,Neptuno,Ninfa,Nueva Espa√±a,Numancia,Oriente,Urquijo,Palas,P√°xaro,Paz,Paloma");
+	n = AddStr2Array(&sRndShpSpName, n, "Peruano,Perla,Pinta,Poli,Pr√≠ncipe de Asturias,Raposa,Rayo,Real Familia,Ni√±a,Reina Mar√≠a Luisa,Reina del Mar,Reina de Cuba,Reina");
+	n = AddStr2Array(&sRndShpSpName, n, "Resoluci√≥n,R√≠o De La Plata,Rosario,Sabina,San Antonio,San August√≠n,Santander,Santa B√°rbara,San Bernardo,San Blas,San Bruno");
+	n = AddStr2Array(&sRndShpSpName, n, "San Carlos,San D√°maso,San Eugenio,San Felipe,San Ferm√≠n,San Fernando,San Francisco,San Mart√≠n,Sant√≠sima Madre");
+	n = AddStr2Array(&sRndShpSpName, n, "San Fulgencio,San Gabriel,San Genaro,San Gil,San Ildefonso,San Isidro,San Joaqu√≠n,Sant√≠sima Trinidad");
+	n = AddStr2Array(&sRndShpSpName, n, "San Jos√©,Sant√≠simo Sacramento,San Juan Bautista,San Juan Nepomuceno,Sagunto,San Juli√°n,San Justo");
+	n = AddStr2Array(&sRndShpSpName, n, "Septentri√≥n,San Leandro,San Le√≥n,San Lino,San Lorenzo,San Nicol√°s,San Pablo,San Pascual");
+	n = AddStr2Array(&sRndShpSpName, n, "San Pedro Alc√°ntara,San Pedro Ap√≥stal,San P√≠o,San Rafael,San Ram√≥n,San Sebasti√°n");
+	n = AddStr2Array(&sRndShpSpName, n, "San Vicente,San Isidro,San Felipe,Santa √Ågueda,Santa Ana,Santa Br√≠gida,Santa Catalina");
+	n = AddStr2Array(&sRndShpSpName, n, "Santa Casilda,Santa Cecilia,Santa Clara,Santa Dorotea,Santa Elena,Santa Escol√°stica");
+	n = AddStr2Array(&sRndShpSpName, n, "Santa Florentina,Santa Gertrudis,Santa Isabel,Santa Leocadia,Santa Luc√≠a,Santa Margarita");
+	n = AddStr2Array(&sRndShpSpName, n, "Santa Mar√≠a,Santa Mar√≠a Magdalena,Santa Matilde,Santa Perpetua,Santa Raquel,Santa Rita");
+	n = AddStr2Array(&sRndShpSpName, n, "Santa Rosa,Santa Rosal√≠a,Santa Rufinia,Santa Sabina,Santa Eulalia,Santa Teresa,Tetu√°n,San Telmo");
+	n = AddStr2Array(&sRndShpSpName, n, "Sacramento,Seria,Sirena,Siroco,Soberana,T√°rtaro,Temerario,Terrible,Tetis,Tonina,Tramontana,Triunfante,Trucha,Valiente,Valerosa");
 	n = AddStr2Array(&sRndShpSpName, n, "Velasco,Veloz,Vencedora,Venganza,Venus,Vencejo,Villa de Madrid,Villamil,Vitoria,Viva,Vizcaya,Viento,Zaragoza,");
 
 	// England names
@@ -60,35 +60,35 @@ void InitRandomShipsNames()
 
 	// France names
 	n = 0;
-	n = AddStr2Array(&sRndShpFrName, n, "Abeille,Achates,Achille,Actif,Aelcon,Africaine,Agricole,Aigle,Alceste,Alcide,Alerte,Alexandre,Algeciras,Alouette,Amaranthe,Amazone,Ambuscade,AmÈrique,Andromaque,Annibal");		//some french ship names spell-checked by KAM
-	n = AddStr2Array(&sRndShpFrName, n, "Antelope,Apollon,Aquilon,Ardente,Artheuse,Argonaute,Ariel,ArtÈmise,ArtÈsien,AstrÈe,Atalante,Atlas,Audocieux,Auguste,Aurore,Babet,Badine,Baionnaise,Belette,Belleisle,Bellone");
-	n = AddStr2Array(&sRndShpFrName, n, "Berceau,Berwick,Bestale,Betsey,Bizarre,Blanche,Bienvenue,Blonde,Bolontaire,Bonne Citoyenne,BorÈe,Boudeuse,Boudissant,Bourbonnaise,Bourgogne,Brave,Bravoure,Breslaw,Brillante");
-	n = AddStr2Array(&sRndShpFrName, n, "Brune,Brutus,Bucentaure,Caire,Calliope,Calliope,Calypso,Capricieuse,Carmagnole,Caroline,Cartagenoise,Cassard,Castor,Censeur,Centaure,Ceres,Chameau,Charente,ChÈrie,Chiffone");
-	n = AddStr2Array(&sRndShpFrName, n, "Cisalpine,Citoyenne,Cleopatre,Clorinde,Cocade,Commerce de Bordeaux,Commerce de Marseilles,Concorde,Confiance,Confiante,ConquÈrante,Consolante,Constance,Constitution,Convention");
-	n = AddStr2Array(&sRndShpFrName, n, "Coquille,Cormagnole,CornÈlie,Cornette,Courier,CÙte d'Or,Courageuse,Courier,Couronne,CrÈtin,Curleuse,CybËle,Danae,Dasaix,Dauphin Royal,Decade,Decuise,Decuise,Dedaigneuse,Desire");
-	n = AddStr2Array(&sRndShpFrName, n, "DesirÈe,Destin,Diademe,Diane,Didon,Diligente,Dix Ao˚t,Droits de l'homme,Droits du Peuple,Dryade,Duc de Bourgogne,Duguai Trouin,Dulyce,Duquesne,Durance,Duras,…chaude,…claire,…gyptienne");
-	n = AddStr2Array(&sRndShpFrName, n, "Electra,…lisabeth,…liza,Embroie,…meraude,Emulus,Enchantrice,Engageante,Entreprenante,Eole,Epervier,EspÈrance,Espion,…toile,…veille,FantÙme,Fauvette,FÈe,FÈlicitÈ,Fendant,FidËle,Filibustier");
-	n = AddStr2Array(&sRndShpFrName, n, "Fine,Flamande,FlËche,Fleuron,Flore,Formidable,Forte,FortunÈe,Foudrayante,Fougueuse,Franklin,FraternitÈ,Friponne,Furet,Furieuse,GalathÈe,Gasparin,GÈnÈreuse,Gentille,Gloire,Glorieuse,Gracieuse");
-	n = AddStr2Array(&sRndShpFrName, n, "Grande,Guadaloupe,Guerrier,Guillaume Tell,Hannibal,Hardie,Hassard,Hector,Hehe,HelËne,Hercule,Hermione,HÈros,Heureux,Hirondelle,Hoche,Harmonie,Heureuse,Illustre,Impatiente,ImmortalitÈ,ImpÈriale");
-	n = AddStr2Array(&sRndShpFrName, n, "Imperieuse,ImpÈtueuse,Inconnue,Inconstante,Incorruptible,Indienne,Indivisible,Indomptable,Insolente,Insurgente,IntrÈpide,Invincible,IphigÈnie,Iriste,Jacobine,Jean Bart,Jena,Junon,Jupiter,Juste,Justice");
-	n = AddStr2Array(&sRndShpFrName, n, "Justine,Latone,LÈgËre,Leopard,LÈvrier,LibertÈ,Libre,Lion,Loire,L'Orient,Lutine,Magnanime,Magnifique,Maida,MajestÈ,Malicieuse,Marat,Marengo,Marseillaise,Marte,MedÈe,MÈduse,Melpomene,Mercure");
-	n = AddStr2Array(&sRndShpFrName, n, "Mignonne,Minerve,Minotaure,Modeste,Mont Blanc,Montagne,MontrÈal,Moselle,Mucius,Mulet,Musette,Mutine,Nemesis,Neptune,Nereide,Neuf Thermidor,Nieman,Nymphe,OcÈan,Orient,Orion,Pallas,Palmier");
+	n = AddStr2Array(&sRndShpFrName, n, "Abeille,Achates,Achille,Actif,Aelcon,Africaine,Agricole,Aigle,Alceste,Alcide,Alerte,Alexandre,Algeciras,Alouette,Amaranthe,Amazone,Ambuscade,Am√©rique,Andromaque,Annibal");		//some french ship names spell-checked by KAM
+	n = AddStr2Array(&sRndShpFrName, n, "Antelope,Apollon,Aquilon,Ardente,Artheuse,Argonaute,Ariel,Art√©mise,Art√©sien,Astr√©e,Atalante,Atlas,Audocieux,Auguste,Aurore,Babet,Badine,Baionnaise,Belette,Belleisle,Bellone");
+	n = AddStr2Array(&sRndShpFrName, n, "Berceau,Berwick,Bestale,Betsey,Bizarre,Blanche,Bienvenue,Blonde,Bolontaire,Bonne Citoyenne,Bor√©e,Boudeuse,Boudissant,Bourbonnaise,Bourgogne,Brave,Bravoure,Breslaw,Brillante");
+	n = AddStr2Array(&sRndShpFrName, n, "Brune,Brutus,Bucentaure,Caire,Calliope,Calliope,Calypso,Capricieuse,Carmagnole,Caroline,Cartagenoise,Cassard,Castor,Censeur,Centaure,Ceres,Chameau,Charente,Ch√©rie,Chiffone");
+	n = AddStr2Array(&sRndShpFrName, n, "Cisalpine,Citoyenne,Cleopatre,Clorinde,Cocade,Commerce de Bordeaux,Commerce de Marseilles,Concorde,Confiance,Confiante,Conqu√©rante,Consolante,Constance,Constitution,Convention");
+	n = AddStr2Array(&sRndShpFrName, n, "Coquille,Cormagnole,Corn√©lie,Cornette,Courier,C√¥te d'Or,Courageuse,Courier,Couronne,Cr√©tin,Curleuse,Cyb√®le,Danae,Dasaix,Dauphin Royal,Decade,Decuise,Decuise,Dedaigneuse,Desire");
+	n = AddStr2Array(&sRndShpFrName, n, "Desir√©e,Destin,Diademe,Diane,Didon,Diligente,Dix Ao√ªt,Droits de l'homme,Droits du Peuple,Dryade,Duc de Bourgogne,Duguai Trouin,Dulyce,Duquesne,Durance,Duras,√âchaude,√âclaire,√âgyptienne");
+	n = AddStr2Array(&sRndShpFrName, n, "Electra,√âlisabeth,√âliza,Embroie,√âmeraude,Emulus,Enchantrice,Engageante,Entreprenante,Eole,Epervier,Esp√©rance,Espion,√âtoile,√âveille,Fant√¥me,Fauvette,F√©e,F√©licit√©,Fendant,Fid√®le,Filibustier");
+	n = AddStr2Array(&sRndShpFrName, n, "Fine,Flamande,Fl√®che,Fleuron,Flore,Formidable,Forte,Fortun√©e,Foudrayante,Fougueuse,Franklin,Fraternit√©,Friponne,Furet,Furieuse,Galath√©e,Gasparin,G√©n√©reuse,Gentille,Gloire,Glorieuse,Gracieuse");
+	n = AddStr2Array(&sRndShpFrName, n, "Grande,Guadaloupe,Guerrier,Guillaume Tell,Hannibal,Hardie,Hassard,Hector,Hehe,Hel√®ne,Hercule,Hermione,H√©ros,Heureux,Hirondelle,Hoche,Harmonie,Heureuse,Illustre,Impatiente,Immortalit√©,Imp√©riale");
+	n = AddStr2Array(&sRndShpFrName, n, "Imperieuse,Imp√©tueuse,Inconnue,Inconstante,Incorruptible,Indienne,Indivisible,Indomptable,Insolente,Insurgente,Intr√©pide,Invincible,Iphig√©nie,Iriste,Jacobine,Jean Bart,Jena,Junon,Jupiter,Juste,Justice");
+	n = AddStr2Array(&sRndShpFrName, n, "Justine,Latone,L√©g√®re,Leopard,L√©vrier,Libert√©,Libre,Lion,Loire,L'Orient,Lutine,Magnanime,Magnifique,Maida,Majest√©,Malicieuse,Marat,Marengo,Marseillaise,Marte,Med√©e,M√©duse,Melpomene,Mercure");
+	n = AddStr2Array(&sRndShpFrName, n, "Mignonne,Minerve,Minotaure,Modeste,Mont Blanc,Montagne,Montr√©al,Moselle,Mucius,Mulet,Musette,Mutine,Nemesis,Neptune,Nereide,Neuf Thermidor,Nieman,Nymphe,Oc√©an,Orient,Orion,Pallas,Palmier");
 	n = AddStr2Array(&sRndShpFrName, n, "Papillon,Patriote,Paulette,Pegase,Pelletier,Pensee,Perdrix,Perle,Perte,Petite Aurore,Phocion,Pique,Pluton,Pomone,Pompee,Poulette,Precieuse,Preneuse,Prevoyante,Prompte,Proselyte,Proserpine");
-	n = AddStr2Array(&sRndShpFrName, n, "Protecteuse,Prudente,Puissante,Railleuse,Railleuse,Rapide,Rebecca,Recluse,Redoutable,RÈflÈchie,RegenerÈe,RenommÈe,Reprisal,Requin,RÈsistance,RÈsolue,RÈsolution,RÈunion,Revanche,Revenge,Richelieu,Rivoli");
-	n = AddStr2Array(&sRndShpFrName, n, "Robuste,Romaine,Rousseau,Royal CÈsar,Ruse,Sagesse,Sainte Antoine,Salamine,Sardine,Scaevala,Sceptre,Scipion,Seduisante,Seine,Semillante,Sensible,Serpente,SÈvËre,Sincere,Singe,Spartiate,Sphinx");
-	n = AddStr2Array(&sRndShpFrName, n, "St. Esprit,St. Michel,Suffisante,Suffren,Suitane,Sultana,Superbe,SupÈrieure,Surveillante,Swiftsure,Sybille,Syrene,Tactique,Tamise,Tapageuse,Tapaze,Tartouffe,Terrible,Thetis,Tigresse,Timoleon");
-	n = AddStr2Array(&sRndShpFrName, n, "Tonnante,TonnËre,Tortue,Tourtourelle,Tourville,Trajan,Trampeuse,Trente et Un Mai,Tribune,Tricolore,Trident,Triomphant,Tyrannicide,UnitÈ,Uranie,Vaillante,Varsovie,VendÈe,Vengeance,Vengeur,Venturer");
-	n = AddStr2Array(&sRndShpFrName, n, "Venus,Vertu,Vestale,Vesuve,Victoire,Victorieuse,VimÈria,Virginie,Virtu,Volcan,Wagram,Wattignies,Zephyr");
+	n = AddStr2Array(&sRndShpFrName, n, "Protecteuse,Prudente,Puissante,Railleuse,Railleuse,Rapide,Rebecca,Recluse,Redoutable,R√©fl√©chie,Regener√©e,Renomm√©e,Reprisal,Requin,R√©sistance,R√©solue,R√©solution,R√©union,Revanche,Revenge,Richelieu,Rivoli");
+	n = AddStr2Array(&sRndShpFrName, n, "Robuste,Romaine,Rousseau,Royal C√©sar,Ruse,Sagesse,Sainte Antoine,Salamine,Sardine,Scaevala,Sceptre,Scipion,Seduisante,Seine,Semillante,Sensible,Serpente,S√©v√®re,Sincere,Singe,Spartiate,Sphinx");
+	n = AddStr2Array(&sRndShpFrName, n, "St. Esprit,St. Michel,Suffisante,Suffren,Suitane,Sultana,Superbe,Sup√©rieure,Surveillante,Swiftsure,Sybille,Syrene,Tactique,Tamise,Tapageuse,Tapaze,Tartouffe,Terrible,Thetis,Tigresse,Timoleon");
+	n = AddStr2Array(&sRndShpFrName, n, "Tonnante,Tonn√®re,Tortue,Tourtourelle,Tourville,Trajan,Trampeuse,Trente et Un Mai,Tribune,Tricolore,Trident,Triomphant,Tyrannicide,Unit√©,Uranie,Vaillante,Varsovie,Vend√©e,Vengeance,Vengeur,Venturer");
+	n = AddStr2Array(&sRndShpFrName, n, "Venus,Vertu,Vestale,Vesuve,Victoire,Victorieuse,Vim√©ria,Virginie,Virtu,Volcan,Wagram,Wattignies,Zephyr");
 
 	// Pirate names
 	n = 0;
 	n = AddStr2Array(&sRndShpPiName, n, "Adventure,Adventure Galley,Adventure Prize,Bachelors Delight,Black Joke,Blanco,Blessing,Bravo,Concorde,Itchen,Jed,Ostergo,Overijssell,Pluto,Prins Frederik,Prins Maurits,Revolutie,Rotterdam,Utrecht,Verwachting,Wassenaar,Westergo,Westfriesland");		//some pirate ship names spell-checked by KAM
 	n = AddStr2Array(&sRndShpPiName, n, "Zeeland,Zevenwalder,Zevenwolder,Zuid Beveland,Nassau,Octopus,Princesse Louise,Mackerel,Manta,Medregal,Menhaden,Mero,Ohio,Virginia,Nebraska,Georgia");
-	n = AddStr2Array(&sRndShpPiName, n, "Papillon,Patriote,Royal Fortune,Paulette,Pegase,Pelletier,PensÈe,Golden Hind,Perdrix,Perle,Perte,Petite Aurore,Phocion,Pique,Cassandra,Childhood");
-	n = AddStr2Array(&sRndShpPiName, n, "Pluton,Pomone,PompÈe,Poulette,Precieuse,Preneuse,Prevoyante,Prompte,ProsÈlyte,Proserpine,Queen Annes Revenge,Queenfish,Royal James,Sirius,Snake,Solitaire,Spartan,Speedwell,Speedy,Spencer,Sphinx,Spider,Spitfire");
+	n = AddStr2Array(&sRndShpPiName, n, "Papillon,Patriote,Royal Fortune,Paulette,Pegase,Pelletier,Pens√©e,Golden Hind,Perdrix,Perle,Perte,Petite Aurore,Phocion,Pique,Cassandra,Childhood");
+	n = AddStr2Array(&sRndShpPiName, n, "Pluton,Pomone,Pomp√©e,Poulette,Precieuse,Preneuse,Prevoyante,Prompte,Pros√©lyte,Proserpine,Queen Annes Revenge,Queenfish,Royal James,Sirius,Snake,Solitaire,Spartan,Speedwell,Speedy,Spencer,Sphinx,Spider,Spitfire");
 	n = AddStr2Array(&sRndShpPiName, n, "Sprightly,Spy,Squirrel,Stag,Standard,Starling,Success,Sultan,Sumter,Surprise,Susan,Tarantula,Velasco,Velosa,Vencedor,Venganza,Venus,Vincejo,Vivo,Voader,Vermont");
 	n = AddStr2Array(&sRndShpPiName, n, "Cour Valant,Delight,Delivery,Desire,Fancy,Flying Dragon,Flying Horse,Flying King,Gift,Good Fortune,Mayflower,Night Rambler,Rising Sun,Sea King,Sudden Death,Whydah,Snap Dragon");
-	n = AddStr2Array(&sRndShpPiName, n, "La Mort,La Faucheuse,Enfer,Immortel,Le Terrible,Le Sans PitiÈ,…popÈe,…pervier,La Frayeur,…pilogue,Le Satan,Le Diable,Insoumis,Le Mort Vivant,Angoisse,Le DÈsinvolte,Le Larcin");
+	n = AddStr2Array(&sRndShpPiName, n, "La Mort,La Faucheuse,Enfer,Immortel,Le Terrible,Le Sans Piti√©,√âpop√©e,√âpervier,La Frayeur,√âpilogue,Le Satan,Le Diable,Insoumis,Le Mort Vivant,Angoisse,Le D√©sinvolte,Le Larcin");
 	n = AddStr2Array(&sRndShpPiName, n, "Devil,Demon,Sea Devil,Sea Demon,Ocean Devil,Ocean Demon,Merciless,Plaguebringer,Black Queen,Black King,Red Queen,Fishking,Hunter,Avenger,Blackdeath,Infection");
 	n = AddStr2Array(&sRndShpPiName, n, "Seawitch,Grey Witch,Red Witch,Black Witch,Black Knight,Nightstalker,Stealthy,Sneaky,Deathbringer,Golden King,Golden Queen,Hawk,Seawolf,Blackshark,Red Shark,Nightwolf,Wolf,Predator");
 	n = AddStr2Array(&sRndShpPiName, n, "Old Hag,Ocean Hag,Seagiant,Black Giant,Deathwish,Glorious,Infamous,Bad luck,Revenge,Goldseeker,Ruby,Emerald,Sapphire,Diamond,Black Diamond,Red Blood,Bloodred");
@@ -107,20 +107,20 @@ void InitRandomShipsNames()
 
 	// Portugal names
 	n = 0;
-	n = AddStr2Array(&sRndShpPoName, n, "Adamastor,Dom Carlos I,Douro,Santa de ConceiÁ›o,PrÌncipe Real,Conde Dom Henrique,Maria I,Medusa,Princesa de Beira,PrÌncipe Regente,Reinha do Portugal,S›o AntÛnio e S›o Jose,Vasco da Gama,Alfonso de Albuquerque,Dom Jo›o de Castro");		//some portuguese ship names spell-checked by KAM
-	n = AddStr2Array(&sRndShpPoName, n, "Infante Dom Pedro,Santa de Belem,Santa de Bom Succeso,Martin de Freitas,S›o Sebasti›o,FÈnix,GraÁa,Amazana,Minerva,Princesa Carlota,Perola,PrÌncipe de Brazil,Trit›o,Bolfinho,Ulisses,Ur‚nia,Cisne,Plongeur,Espadarte,Golfinho,Hidra");
-	n = AddStr2Array(&sRndShpPoName, n, "Princesa de Brazil,Thetis,Torta,Venus,Josefa,S›o AntÛnio e ¡sia Feliz,Sao Gabriel,Sao Rafael,Benjamin,Princesa Real,San Jo›o Magn‚nimo,Condessa de Resonde,S›o AntÛnio,¡guia,GlÛria,Neptuno,PolÌfemo,Falc›o,Giavota,Lebre");
-	n = AddStr2Array(&sRndShpPoName, n, "Sem Nome,Serpente de Mar,Voador,Galgo,VinganÁa,Amorale,Curiosa,Coroa,Princesa,PrÌncipe,Isabel,Costanca,Laocadia,Tareia,Tina-Maria,HelÈnica,Marta-Alexandra,Dores,Aldonca,Josefa,Violante,Luciana,Alvares Cabral,Corte Real");
-	n = AddStr2Array(&sRndShpPoName, n, "Betriz,Etelvina,Rainha Dona Amelia,Maria-Augusta,SÛnia,Bella,Fernanda,Guiomar,Meiguinha,Teresa,Vasco Da Gama,D Francisco De Almeida,Almirante Magalhaes Correa,Commandante Joao Belo,Vasco Da Gama,Espardarte,Vulcano");
+	n = AddStr2Array(&sRndShpPoName, n, "Adamastor,Dom Carlos I,Douro,Santa de Concei√ß√ùo,Pr√≠ncipe Real,Conde Dom Henrique,Maria I,Medusa,Princesa de Beira,Pr√≠ncipe Regente,Reinha do Portugal,S√ùo Ant√≥nio e S√ùo Jose,Vasco da Gama,Alfonso de Albuquerque,Dom Jo√ùo de Castro");		//some portuguese ship names spell-checked by KAM
+	n = AddStr2Array(&sRndShpPoName, n, "Infante Dom Pedro,Santa de Belem,Santa de Bom Succeso,Martin de Freitas,S√ùo Sebasti√ùo,F√©nix,Gra√ßa,Amazana,Minerva,Princesa Carlota,Perola,Pr√≠ncipe de Brazil,Trit√ùo,Bolfinho,Ulisses,Ur√¢nia,Cisne,Plongeur,Espadarte,Golfinho,Hidra");
+	n = AddStr2Array(&sRndShpPoName, n, "Princesa de Brazil,Thetis,Torta,Venus,Josefa,S√ùo Ant√≥nio e √Åsia Feliz,Sao Gabriel,Sao Rafael,Benjamin,Princesa Real,San Jo√ùo Magn√¢nimo,Condessa de Resonde,S√ùo Ant√≥nio,√Åguia,Gl√≥ria,Neptuno,Pol√≠femo,Falc√ùo,Giavota,Lebre");
+	n = AddStr2Array(&sRndShpPoName, n, "Sem Nome,Serpente de Mar,Voador,Galgo,Vingan√ßa,Amorale,Curiosa,Coroa,Princesa,Pr√≠ncipe,Isabel,Costanca,Laocadia,Tareia,Tina-Maria,Hel√©nica,Marta-Alexandra,Dores,Aldonca,Josefa,Violante,Luciana,Alvares Cabral,Corte Real");
+	n = AddStr2Array(&sRndShpPoName, n, "Betriz,Etelvina,Rainha Dona Amelia,Maria-Augusta,S√≥nia,Bella,Fernanda,Guiomar,Meiguinha,Teresa,Vasco Da Gama,D Francisco De Almeida,Almirante Magalhaes Correa,Commandante Joao Belo,Vasco Da Gama,Espardarte,Vulcano");
 	n = AddStr2Array(&sRndShpPoName, n, "Tejo,Tamega,Vouga,Gaudiana,Diogo Cao,Corte Real,Nuno Tristao,Pedro Escobar,Almirante Gago Coutinho,Almirante Pereira Da Silva,Alvares Cabral,Commandante Roberto Ivens,Commandante Sacadura Cabral,Joao Coutinho");
 	n = AddStr2Array(&sRndShpPoName, n, "Jacinto Candido,General Pereira D'Eca,Augusto De Castilho,Honorio Barreto,Antonio Enes,Baptiste De Andrada,Joao Roby,Alfonso Cerqueira,Oliveira E Carmo,Commandante Pedro Campbell");
-	n = AddStr2Array(&sRndShpPoName, n, "O TemÌvel,O Temido,O Minho,O Timor,O Supremo,O Sonho,O Sonhador,O Solit·rio,O PeremptÛrio,O Perfeito,O Pavor,O Ousado,O Not·vel,O Furac›o");
-	n = AddStr2Array(&sRndShpPoName, n, "Santa Virgem,S›o Bartolomeu,S›o Miguel,S›o Jo›o de Arga,Santa Luzia,Santo AntÛnio,Senhora da GraÁa,Senhora da Vista,S›o Silvestre,S›o Mamede,S›o Bento,Boa Morte,Santo Amaro,S›o Br·s");
-	n = AddStr2Array(&sRndShpPoName, n, "Senhora do Fastio,Senhora da Aparecida,Senhora do Faro,S›o Jo›o Baptista,Terra de Cerveira,Santo Aginha,Foz do Coura,Santa Marta,S›o Jo›o da Ribeira,Santa Maria,O Bom Jesus,Dom Sancho I,MelgaÁo Velho,O Santu·rio do Rei");
-	n = AddStr2Array(&sRndShpPoName, n, "O Foz do Lima,Vinha da Rainha,Salvador do Monte,Santa Eul·lia,Santa Cruz,Santa Comba,Santa Catarina,Santa Clara,Santo VitÛria,S›o Pedro,S›o Geraldo,Rio Tinto,Rio Maior,Rainha Santa Isabel");
-	n = AddStr2Array(&sRndShpPoName, n, "Andorinha,Monte dos Corvos,Senhora das Neves,Santa Cristina,Pedras Negras,S›o Bernardino,Porto de MÛs,Costa Nova,S›o Vicente,Ponte de Sagres,Monte da Piedade,Santa B·rbara,S›o Martinho");
-	n = AddStr2Array(&sRndShpPoName, n, "Cavaleiro Preto,Ilha Terceira,Ilha da Madeira,Vila Azeda,S›o Rom›o,Monte Real,Boa Viagem,MartinganÁa,ConsolaÁ›o,Calvaria de Cima,Pinheiro Grande,Rio de Moinhos,Moita da Roda,Mata Mourisca");
-	n = AddStr2Array(&sRndShpPoName, n, "Foz de Arouce,Alcaria Nova,Ninho do AÁor,O Horrendo,HerÛi do Mar,Penamacor,Terreiro das Bruxas,Vila de SantarÈm,Alfama,S›o Roque,Torre de BelÈm,Madre de Deus,Jardim do Mar,Boca do Inferno");
+	n = AddStr2Array(&sRndShpPoName, n, "O Tem√≠vel,O Temido,O Minho,O Timor,O Supremo,O Sonho,O Sonhador,O Solit√°rio,O Perempt√≥rio,O Perfeito,O Pavor,O Ousado,O Not√°vel,O Furac√ùo");
+	n = AddStr2Array(&sRndShpPoName, n, "Santa Virgem,S√ùo Bartolomeu,S√ùo Miguel,S√ùo Jo√ùo de Arga,Santa Luzia,Santo Ant√≥nio,Senhora da Gra√ßa,Senhora da Vista,S√ùo Silvestre,S√ùo Mamede,S√ùo Bento,Boa Morte,Santo Amaro,S√ùo Br√°s");
+	n = AddStr2Array(&sRndShpPoName, n, "Senhora do Fastio,Senhora da Aparecida,Senhora do Faro,S√ùo Jo√ùo Baptista,Terra de Cerveira,Santo Aginha,Foz do Coura,Santa Marta,S√ùo Jo√ùo da Ribeira,Santa Maria,O Bom Jesus,Dom Sancho I,Melga√ßo Velho,O Santu√°rio do Rei");
+	n = AddStr2Array(&sRndShpPoName, n, "O Foz do Lima,Vinha da Rainha,Salvador do Monte,Santa Eul√°lia,Santa Cruz,Santa Comba,Santa Catarina,Santa Clara,Santo Vit√≥ria,S√ùo Pedro,S√ùo Geraldo,Rio Tinto,Rio Maior,Rainha Santa Isabel");
+	n = AddStr2Array(&sRndShpPoName, n, "Andorinha,Monte dos Corvos,Senhora das Neves,Santa Cristina,Pedras Negras,S√ùo Bernardino,Porto de M√≥s,Costa Nova,S√ùo Vicente,Ponte de Sagres,Monte da Piedade,Santa B√°rbara,S√ùo Martinho");
+	n = AddStr2Array(&sRndShpPoName, n, "Cavaleiro Preto,Ilha Terceira,Ilha da Madeira,Vila Azeda,S√ùo Rom√ùo,Monte Real,Boa Viagem,Martingan√ßa,Consola√ß√ùo,Calvaria de Cima,Pinheiro Grande,Rio de Moinhos,Moita da Roda,Mata Mourisca");
+	n = AddStr2Array(&sRndShpPoName, n, "Foz de Arouce,Alcaria Nova,Ninho do A√ßor,O Horrendo,Her√≥i do Mar,Penamacor,Terreiro das Bruxas,Vila de Santar√©m,Alfama,S√ùo Roque,Torre de Bel√©m,Madre de Deus,Jardim do Mar,Boca do Inferno");
 
 	// American names
 	n = 0;
@@ -132,14 +132,14 @@ void InitRandomShipsNames()
 	
 	// Swedish names
 	n = 0;
-	n = AddStr2Array(&sRndShpSwName, n, "ƒlgen,ƒlvsborg,ƒngeln,ƒngeln Gabriel,ƒpplet,ƒrtan,≈len,≈ngermanland,÷rnen,÷rnen,Abraham,Achilles,Amalia,Amarant,Amphion,Andromeda,Angelus,Anna,Apelbom,Apollo");
-	n = AddStr2Array(&sRndShpSwName, n, "Arvid,Bˆnan,Bˆse Lejon,Baggen,Basiliscus,Bellona,Bjˆrnen,BlÂ Falk,BlÂ Lejonet,BlÂ MÂne,BlÂ Mannen,BlÂ Ormen,Blekinge,Blomman,Bohus,Brommaren,Bruna Lejon,Brune Bjˆrnen,Buffeln,Caesar");
-	n = AddStr2Array(&sRndShpSwName, n, "Carolus,Cronstierna,Danska Phoenix,Danziger Svanen,David,Delfinen,Draken,Dristigheten,Dromedarius,Drottningen,Duvan,Dygden,Ekorren,Elefanten,Enhˆrningen,Enigheten,Estland,Fˆrgyllda ƒpplet,Fˆrgyllda Duvan,Fˆrgyllda Hjorten");
-	n = AddStr2Array(&sRndShpSwName, n, "Fˆrgyllda Lejonet,Fˆrgyllda Rosen,Fˆrsiktigheten,Falken,Fenix,Finland,Finska Memnon,Flygande Drake,Flygande Vargen,Fortuna,Frˆja,Frˆken Eleonora,Fredrika Amalia,Friheten,G‰ddan,Gˆta Lejon,Gˆteborg,Gamla Sv‰rdet,Gamle Frantsen,Gotland");
-	n = AddStr2Array(&sRndShpSwName, n, "GrÂ Ulven,Grˆne J‰garen,Greken,Greve Sparre,Gripen,Gule Lejonet,Gustavus,Gyllenstiernan,H‰gern,Hˆken,Halland,HalvmÂnen,Hanen,Hannibal,Havh‰sten,Havsfrun,Herdinnan,Herkules,Hjorten,Holken");
-	n = AddStr2Array(&sRndShpSwName, n, "Hummern,Hunden,Hvita ÷rn,Igeln,Ilskan,J‰garen,Jonas,Jungfrun,Jupiter,Justitia,K‰mpen,Kalmar,Kattan,Korpen,Kr‰ftan,KrÂkan,Krabaten,Krabban,Kristina,Lammet");
-	n = AddStr2Array(&sRndShpSwName, n, "Laxen,Lejonet,Lejoninnan,Leoparden,Liljan,Lindormen,MÂnen,MÂsen,Makalˆs,Makrillen,Manligheten,Maria,Mars,Mercurius,Mjˆlkpigan,N‰ktergalen,N‰svis,Neptunus,Nordstjernan,Nyckeln");
-	n = AddStr2Array(&sRndShpSwName, n, "Ormen,Oxen,Papegojan,Pelikanen,Phoenix,RÂbocken,Rˆda Gripen,Rˆda Lejonet,Rˆde Lejonet,Recompens,Regina,Renen,Resande Man,Rosen,S‰len,Sankt Erik,Sankt Gˆran,Saturnus,Siken,Sjˆkatten");
-	n = AddStr2Array(&sRndShpSwName, n, "Solen,StÂln‰bben,Stenbock,Stj‰rnan,Stockholm,Storken,Stormaren,Strutsen,Sundsvall,Sv‰rdet,Sv‰rdet,Svanen,Svarta Hunden,Svarte Rappen,Svarte Ryttaren,Sven,Tapperheten,Tigern,Tranan,Tre Kronor");
-	n = AddStr2Array(&sRndShpSwName, n, "Tre Lejon,Tumlaren,Ugglan,Ulven,Unge Ryttaren,Upland,Uttern,V‰lkomsten,Valen,Vargen,Venus,Viktoria");
+	n = AddStr2Array(&sRndShpSwName, n, "√Ñlgen,√Ñlvsborg,√Ñngeln,√Ñngeln Gabriel,√Ñpplet,√Ñrtan,√Ölen,√Öngermanland,√ñrnen,√ñrnen,Abraham,Achilles,Amalia,Amarant,Amphion,Andromeda,Angelus,Anna,Apelbom,Apollo");
+	n = AddStr2Array(&sRndShpSwName, n, "Arvid,B√∂nan,B√∂se Lejon,Baggen,Basiliscus,Bellona,Bj√∂rnen,Bl√• Falk,Bl√• Lejonet,Bl√• M√•ne,Bl√• Mannen,Bl√• Ormen,Blekinge,Blomman,Bohus,Brommaren,Bruna Lejon,Brune Bj√∂rnen,Buffeln,Caesar");
+	n = AddStr2Array(&sRndShpSwName, n, "Carolus,Cronstierna,Danska Phoenix,Danziger Svanen,David,Delfinen,Draken,Dristigheten,Dromedarius,Drottningen,Duvan,Dygden,Ekorren,Elefanten,Enh√∂rningen,Enigheten,Estland,F√∂rgyllda √Ñpplet,F√∂rgyllda Duvan,F√∂rgyllda Hjorten");
+	n = AddStr2Array(&sRndShpSwName, n, "F√∂rgyllda Lejonet,F√∂rgyllda Rosen,F√∂rsiktigheten,Falken,Fenix,Finland,Finska Memnon,Flygande Drake,Flygande Vargen,Fortuna,Fr√∂ja,Fr√∂ken Eleonora,Fredrika Amalia,Friheten,G√§ddan,G√∂ta Lejon,G√∂teborg,Gamla Sv√§rdet,Gamle Frantsen,Gotland");
+	n = AddStr2Array(&sRndShpSwName, n, "Gr√• Ulven,Gr√∂ne J√§garen,Greken,Greve Sparre,Gripen,Gule Lejonet,Gustavus,Gyllenstiernan,H√§gern,H√∂ken,Halland,Halvm√•nen,Hanen,Hannibal,Havh√§sten,Havsfrun,Herdinnan,Herkules,Hjorten,Holken");
+	n = AddStr2Array(&sRndShpSwName, n, "Hummern,Hunden,Hvita √ñrn,Igeln,Ilskan,J√§garen,Jonas,Jungfrun,Jupiter,Justitia,K√§mpen,Kalmar,Kattan,Korpen,Kr√§ftan,Kr√•kan,Krabaten,Krabban,Kristina,Lammet");
+	n = AddStr2Array(&sRndShpSwName, n, "Laxen,Lejonet,Lejoninnan,Leoparden,Liljan,Lindormen,M√•nen,M√•sen,Makal√∂s,Makrillen,Manligheten,Maria,Mars,Mercurius,Mj√∂lkpigan,N√§ktergalen,N√§svis,Neptunus,Nordstjernan,Nyckeln");
+	n = AddStr2Array(&sRndShpSwName, n, "Ormen,Oxen,Papegojan,Pelikanen,Phoenix,R√•bocken,R√∂da Gripen,R√∂da Lejonet,R√∂de Lejonet,Recompens,Regina,Renen,Resande Man,Rosen,S√§len,Sankt Erik,Sankt G√∂ran,Saturnus,Siken,Sj√∂katten");
+	n = AddStr2Array(&sRndShpSwName, n, "Solen,St√•ln√§bben,Stenbock,Stj√§rnan,Stockholm,Storken,Stormaren,Strutsen,Sundsvall,Sv√§rdet,Sv√§rdet,Svanen,Svarta Hunden,Svarte Rappen,Svarte Ryttaren,Sven,Tapperheten,Tigern,Tranan,Tre Kronor");
+	n = AddStr2Array(&sRndShpSwName, n, "Tre Lejon,Tumlaren,Ugglan,Ulven,Unge Ryttaren,Upland,Uttern,V√§lkomsten,Valen,Vargen,Venus,Viktoria");
 }

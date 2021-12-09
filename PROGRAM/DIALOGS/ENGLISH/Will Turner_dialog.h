@@ -63,7 +63,7 @@ string DLG_TEXT[126] = {
 "I have the feeling that the expedition is too risky. You should look for someone else.",
 "Well, Captain, maybe I'll see you again one day.",
 "Maybe. Goodbye.",
-"Excellent! I've already made the preparations so we can go right now. But before, let me just introduce my fiancée, Miss Elizabeth Swann, to you. She'll be useful during this expedition. Indeed, she's a good fighter!",
+"Excellent! I've already made the preparations so we can go right now. But before, let me just introduce my fiancÃ©e, Miss Elizabeth Swann, to you. She'll be useful during this expedition. Indeed, she's a good fighter!",
 "Finally, we found a shore.",
 "Indeed, I was right when I said the coast is uneven. Let's go into the jungle to see if the Spaniards have settled the island.",
 "Me too!",

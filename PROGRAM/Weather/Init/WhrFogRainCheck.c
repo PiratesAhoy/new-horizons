@@ -1,4 +1,4 @@
-п»їvoid Whr_FogRainCheck(){
+void Whr_FogRainCheck(){
 //JL -------------------------------------------------------------
 
 //  LDH more fog in mornings - 26Feb09
@@ -196,7 +196,7 @@
 				Weathers.Tornado = true;
 				Weathers.Lights = false;
 				if(!CheckAttribute(PChar, "skipWeatherLogs")) // PB
-				// DeathDaisy added a string here instead off GetMyAddressForm, because I thought it would be weird if your crew called you SeГ±or or similar
+				// DeathDaisy added a string here instead off GetMyAddressForm, because I thought it would be weird if your crew called you Señor or similar
 					string PCCaptainTitle;
 					if(PChar.sex == "woman")
 						PCCaptainTitle = "Ma'am";

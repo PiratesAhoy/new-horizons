@@ -1,237 +1,237 @@
 // MAXIMUS 05.06.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| WoodesRogers.c |=====}
-Howard{Р“РѕРІР°СЂРґ}
-Pyle{РџР°Р№Р»}
+Howard{Говард}
+Pyle{Пайл}
 
 {=====| StartStoryline.c |=====}
 
 {=====| quests_reaction.c |=====}
-Israel{РР·СЂР°СЌР»СЊ}
-Hands{РҐСЌРЅРґСЃ}
-Samuel{РЎСЌРјСЋСЌР»СЊ}
+Israel{Израэль}
+Hands{Хэндс}
+Samuel{Сэмюэль}
 Odel{}
-Edward{Р­РґРІР°СЂРґ}
-Teach{РўРёС‡}
+Edward{Эдвард}
+Teach{Тич}
 
 {=====| QuebradasCostillas.c |=====}
-Celestine{Р¦РµР»РµСЃС‚РёРЅР°}
-Maupassant{РњРѕРїР°СЃСЃР°РЅ}
-Natalia{РќР°С‚Р°Р»РёР°}
-Decoteau{Р”РµРєРѕС‚Рѕ}
-Serena{РЎРµСЂРµРЅР°}
-Tisserand{РўРёСЃСЃРµСЂР°РЅРґ}
-Caroline{РљСЌСЂРѕР»Р°Р№РЅ}
+Celestine{Целестина}
+Maupassant{Мопассан}
+Natalia{Наталиа}
+Decoteau{Декото}
+Serena{Серена}
+Tisserand{Тиссеранд}
+Caroline{Кэролайн}
 K{K}
-Valentina{Р’Р°Р»РµРЅС‚РёРЅР°}
-Malter{РњР°Р»СЊС‚РµСЂ}
-Celia{РЎРµР»РёСЏ}
-Hilder{РҐРёР»РґРµСЂ}
+Valentina{Валентина}
+Malter{Мальтер}
+Celia{Селия}
+Hilder{Хилдер}
 
 {=====| TempQuest.c |=====}
-Richard{Р РёС‡Р°СЂРґ}
+Richard{Ричард}
 Bolitho{}
 Midshipman{}
 Herrick{}
 Marine{}
 Seaman{}
-Buccaneer{Р‘СѓРєР°РЅСЊРµСЂ}
-Fletcher{Р¤Р»СЌС‚С‡РµСЂ}
+Buccaneer{Буканьер}
+Fletcher{Флэтчер}
 Christian{}
 Constable{}
 Mills{}
 Young{}
 Mutineer{}
-Thug{Р“СЂРѕРјРёР»Р°}
-Leading{Р“Р»Р°РІРЅС‹Р№}
-Coastbrother{Р‘СѓРєР°РЅСЊРµСЂ}
-Admiral{РђРґРјРёСЂР°Р»}
-John{Р”Р¶РѕРЅ}
+Thug{Громила}
+Leading{Главный}
+Coastbrother{Буканьер}
+Admiral{Адмирал}
+John{Джон}
 Connely{}
-Cook{РљСѓРє}
-William{РЈРёР»СЊСЏРј}
-Dampier{Р”Р°РјРїСЊРµ}
-Steven{РЎС‚РёРІРµРЅ}
-Courtney{РљРѕСЂС‚РЅРё}
-Charles{Р§Р°СЂР»СЊР·}
+Cook{Кук}
+William{Уильям}
+Dampier{Дампье}
+Steven{Стивен}
+Courtney{Кортни}
+Charles{Чарльз}
 Pope{}
-Thomas{РўРѕРјР°СЃ}
-Dover{Р”РѕРІРµСЂ}
-Robert{Р РѕР±РµСЂС‚}
+Thomas{Томас}
+Dover{Довер}
+Robert{Роберт}
 Fry{}
 Stretton{}
 Rogers'{}
 Crew{}
 Former Crew{}
-Vane{Р’СЌР№РЅ}
-Bellamy{Р‘РµР»Р»СЌРјРё}
-Paul{РџРѕР»}
-Williams{Р’РёР»СЊСЏРјСЃ}
-Yeats{Р™РµР№С‚СЃ}
-Howell{РҐР°СѓСЌР»Р»}
-Davis{Р”СЌРІРёСЃ}
-Cocklyn{РљРѕРєР»РёРЅ}
-Anstis{РђРЅСЃС‚РёСЃ}
-Olivier{РћР»РёРІСЊРµ}
-La Bouche{Р›Р° Р‘СѓС€}
-Low{Р›Р°Сѓ}
-Phineas{Р¤РёРЅРµР°СЃ}
-Bunce{Р‘С‘РЅСЃ}
-Gow{Р“Р°Сѓ}
+Vane{Вэйн}
+Bellamy{Беллэми}
+Paul{Пол}
+Williams{Вильямс}
+Yeats{Йейтс}
+Howell{Хауэлл}
+Davis{Дэвис}
+Cocklyn{Коклин}
+Anstis{Анстис}
+Olivier{Оливье}
+La Bouche{Ла Буш}
+Low{Лау}
+Phineas{Финеас}
+Bunce{Бёнс}
+Gow{Гау}
 Charles Vane's{}
-Walter{РЈРѕР»С‚РµСЂ}
-Kennedy{РљРµРЅРЅРµРґРё}
-England{РРЅРіР»РµРЅРґ}
+Walter{Уолтер}
+Kennedy{Кеннеди}
+England{Ингленд}
 Bartholomew{Bartholomew}
 Roberts{Roberts}
-George{Р”Р¶РѕСЂРґР¶}
-Lowther{Р›Р°СѓС‚РµСЂ}
-Calico Jack{РљР°Р»РёРєРѕ Р”Р¶РµРє}
-Rackham{Р СЌРєС…РµРј}
-Edmund{Р­РґРјСѓРЅРґ}
-Condent{РљРѕРЅРґРµ}
-Christopher{РљСЂРёСЃС‚РѕС„РµСЂ}
-Winter{Р’РёРЅС‚РµСЂ}
-Auger{РЈРіР°}
-Taylor{РўСЌР№Р»РѕСЂ}
-Francis{Р¤СЂСЌРЅСЃРёСЃ}
-Spriggs{РЎРїСЂРёРіРіСЃ}
-Mary{РњСЌСЂРё}
-Read{Р РёРґ}
-Quelch{РљРІРµР»С‡}
-Emanuel{Р­РјР°РЅСѓСЌР»СЊ}
-Wynn{Р’РёРЅРЅ}
-Moody{РњСѓРґРё}
-Worley{Р’РѕСЂР»Рё}
-Jean Thomas{Р–Р°РЅ РўРѕРјР°}
-Dulaien{Р”СЋР»РѕРЅ}
-Alexandre{РђР»РµРєСЃР°РЅРґСЂ}
-Exquemelin{Р­РєСЃРєРІРµРјРµР»РёРЅ}
-Rosabella{Р РѕР·Р°Р±РµР»Р»Р°}
-Issalini{РСЃСЃР°Р»РёРЅРё}
-Woodes{Р’СѓРґСЃ}
-Rogers{Р РѕРґР¶РµСЂСЃ}
-Grandma{Р‘Р°Р±СѓС€РєР°}
-Dave{Р”РµР№РІ}
-Edna{Р­РґРЅР°}
-Alexander{РђР»РµРєСЃР°РЅРґСЂ}
-Selkirk{РЎРµР»РєРёСЂРє}
-Friday{РџСЏС‚РЅРёС†Р°}
+George{Джордж}
+Lowther{Лаутер}
+Calico Jack{Калико Джек}
+Rackham{Рэкхем}
+Edmund{Эдмунд}
+Condent{Конде}
+Christopher{Кристофер}
+Winter{Винтер}
+Auger{Уга}
+Taylor{Тэйлор}
+Francis{Фрэнсис}
+Spriggs{Сприггс}
+Mary{Мэри}
+Read{Рид}
+Quelch{Квелч}
+Emanuel{Эмануэль}
+Wynn{Винн}
+Moody{Муди}
+Worley{Ворли}
+Jean Thomas{Жан Тома}
+Dulaien{Дюлон}
+Alexandre{Александр}
+Exquemelin{Эксквемелин}
+Rosabella{Розабелла}
+Issalini{Иссалини}
+Woodes{Вудс}
+Rogers{Роджерс}
+Grandma{Бабушка}
+Dave{Дейв}
+Edna{Эдна}
+Alexander{Александр}
+Selkirk{Селкирк}
+Friday{Пятница}
 Powdermonkey{}
-Daniel{Р”Р°РЅРёРµР»СЊ}
-De Foe{Р”РµС„Рѕ}
+Daniel{Даниель}
+De Foe{Дефо}
 Citizen{}
-Claire{РљР»СЌСЂ}
-Voyant{РџСЂРѕРІРёРґРёС†Р°}
-Minerva{РњРёРЅРµСЂРІР°}
-Mather-Wren{РњР°С‚СЌ-Р’СЂСЌРЅ}
-Silehard{РЎР°Р№Р»С…Р°СЂРґ}
+Claire{Клэр}
+Voyant{Провидица}
+Minerva{Минерва}
+Mather-Wren{Матэ-Врэн}
+Silehard{Сайлхард}
 Sarah{}
 Fitter{}
-Laurence{Р›РѕСѓСЂСЌРЅСЃ}
-Wellman{Р’СЌР»РјСЌРЅ}
-Father{РћС‚РµС†}
-Bernard{Р‘РµСЂРЅР°СЂРґ}
+Laurence{Лоурэнс}
+Wellman{Вэлмэн}
+Father{Отец}
+Bernard{Бернард}
 Soldier{}
-Docker{РџРѕСЂС‚РѕРІС‹Р№ РіСЂСѓР·С‡РёРє}
-Gillian{Р”Р¶РёР»Р»РёР°РЅ}
-Atterbury{Р­С‚С‚РµСЂР±РµСЂРё}
-Griffith{Р“СЂРёС„С„РёС‚}
-Peabody{РџРёР±РѕРґРё}
-Henry{Р“РµРЅСЂРё}
-Jane{Р”Р¶РµР№РЅ}
-Attwell{РђС‚С‚РІСЌР»Р»}
-Marvin{РњР°СЂРІРёРЅ}
-Peutherer{РџСЊСЋС‚РµСЂРµСЂ}
-Vallentain{Р’Р°Р»РµРЅС‚Р°Р№РЅ}
-Elias{Р­Р»РёР°СЃ}
-Belt{Р‘РµР»С‚}
-Patrick{РџР°С‚СЂРёРє}
-Bisset{Р‘РёСЃСЃРµС‚}
-Flora{Р¤Р»РѕСЂР°}
-Kempster{РљСЌРјРїСЃС‚РµСЂ}
-Randolf{Р СЌРЅРґРѕР»СЊС„}
-Potter{РџРѕС‚С‚РµСЂ}
-Morys{РњРѕСЂРёСЃ}
-Biddulph{Р‘РёРґРґР°Р»СЊС„}
-Roger{Р РѕРґР¶РµСЂ}
-Hayes{РҐСЌР№СЃ}
-Murato{РњСЋСЂР°С‚}
-Kamizane{РљСЌРјРёР·РµРЅ}
-Flann{Р¤Р»СЌРЅРЅ}
-Marrow{РњР°СЂСЂРѕСѓ}
-Mortimer{РњРѕСЂС‚РёРјРµСЂ}
-Pitchblende{РџРёС‚С‡Р±Р»РµРЅРґ}
+Docker{Портовый грузчик}
+Gillian{Джиллиан}
+Atterbury{Эттербери}
+Griffith{Гриффит}
+Peabody{Пибоди}
+Henry{Генри}
+Jane{Джейн}
+Attwell{Аттвэлл}
+Marvin{Марвин}
+Peutherer{Пьютерер}
+Vallentain{Валентайн}
+Elias{Элиас}
+Belt{Белт}
+Patrick{Патрик}
+Bisset{Биссет}
+Flora{Флора}
+Kempster{Кэмпстер}
+Randolf{Рэндольф}
+Potter{Поттер}
+Morys{Морис}
+Biddulph{Биддальф}
+Roger{Роджер}
+Hayes{Хэйс}
+Murato{Мюрат}
+Kamizane{Кэмизен}
+Flann{Флэнн}
+Marrow{Марроу}
+Mortimer{Мортимер}
+Pitchblende{Питчбленд}
 Guncrew{}
-Benjamin{Р‘РµРЅРґР¶Р°РјРёРЅ}
-Hornigold{РҐРѕСЂРЅРёРіРѕР»СЊРґ}
-lieutenant{Р»РµР№С‚РµРЅР°РЅС‚}
-Richards{Р РёС‡Р°СЂРґСЃ}
-Caesar{Р¦РµР·Р°СЂСЊ}
+Benjamin{Бенджамин}
+Hornigold{Хорнигольд}
+lieutenant{лейтенант}
+Richards{Ричардс}
+Caesar{Цезарь}
 JRH{JRH}
 Nils{}
 Holgersson{}
 Wake{}
 Maze{}
-Basil{Р‘СЌР·РёР»}
+Basil{Бэзил}
 Ringrose{}
-Prosper{РџСЂРѕСЃРїРµСЂ}
-Chingachgook{Р§РёРЅРіР°С‡РіСѓРє}
-Uncas{РђРЅРєР°СЃ}
-King{РљРёРЅРі}
-Mah{РњР°}
-Jong{Р”Р¶РѕРЅРі}
-Pierre{РџСЊРµСЂ}
+Prosper{Проспер}
+Chingachgook{Чингачгук}
+Uncas{Анкас}
+King{Кинг}
+Mah{Ма}
+Jong{Джонг}
+Pierre{Пьер}
 le Grand{}
-don Carlos Berto{РґРѕРЅ РљР°СЂР»РѕСЃ Р‘РµСЂС‚Рѕ}
-Agnesi{РђРіРЅРµСЃСЃР°}
-Long{Р”РѕР»РіРѕРІСЏР·С‹Р№}
-Tall Sally{Р”С‹Р»РґР° РЎР°Р»Р»Рё}
-Moore{РњСѓСЂ}
+don Carlos Berto{дон Карлос Берто}
+Agnesi{Агнесса}
+Long{Долговязый}
+Tall Sally{Дылда Салли}
+Moore{Мур}
 Ireland{}
-Sergej{РЎРµСЂРіРµР№}
-Prokofiev{РџСЂРѕРєРѕС„СЊРµРІ}
-Barbecue{Р‘Р°СЂР±РµРєСЋ}
-PРёre{РџР°РґСЂРµ}
-Labat{Р›Р°Р±Р°С‚}
-Laurens{Р›РѕСѓСЂРµРЅСЃ}
+Sergej{Сергей}
+Prokofiev{Прокофьев}
+Barbecue{Барбекю}
+Pиre{Падре}
+Labat{Лабат}
+Laurens{Лоуренс}
 de Graaf{}
 Piet{}
 Heyn{}
-Vasco da{Р’Р°СЃРєРѕ РґР°}
-Gama III{Р“Р°РјР° III}
-Jupiter{Р®РїРёС‚РµСЂ}
-Laurentius{Р›РѕСЂРµРЅС‚РёСѓСЃ}
-Johannes{Р™РѕС…Р°РЅРЅРµСЃ}
-Juan{РҐСѓР°РЅ}
+Vasco da{Васко да}
+Gama III{Гама III}
+Jupiter{Юпитер}
+Laurentius{Лорентиус}
+Johannes{Йоханнес}
+Juan{Хуан}
 Florin{}
-Peter{РџРёС‚РµСЂ}
-Blowhorn{Р‘Р»РѕСѓС…РѕСЂРЅ}
+Peter{Питер}
+Blowhorn{Блоухорн}
 Mummy{}
-Blackbeard's{Р§РµСЂРЅРѕР№ Р‘РѕСЂРѕРґС‹}
-head{РіРѕР»РѕРІР°}
+Blackbeard's{Черной Бороды}
+head{голова}
 Swedish{}
-Guy{Р“Р°Р№}
-Konrad{РљРѕРЅСЂР°Рґ}
+Guy{Гай}
+Konrad{Конрад}
 Ljungberg{}
 Abraham{}
-Hendrick{РҐРµРЅРґСЂРёРє}
+Hendrick{Хендрик}
 Quintor{}
 Alonzo{}
 Bosco{}
 Hieronymus{}
-Bosch{Р‘РѕС€}
-Victor{Р’РёРєС‚РѕСЂ}
+Bosch{Бош}
+Victor{Виктор}
 Hall{}
 Knut{}
 Ellingsen{}
 Anton{}
-BРґcklin{}
-Felix{Р¤РµР»РёРєСЃ}
+Bдcklin{}
+Felix{Феликс}
 Nilsson{}
 Westlund{}
 Viktor{}
 Olsson{}
-Diego{Р”РёРµРіРѕ}
+Diego{Диего}
 Grillo{}
 Amcoff{}
 Albert{}
@@ -239,9 +239,9 @@ Persson{}
 Filip{}
 Berglund{}
 Garcia{}
-Emilio{Р­РјРёР»РёРѕ}
-Gomes{Р“РѕРјРµСЃ}
-SР№rgio Soares{РЎРµСЂРґР¶РёРѕ РЎРѕР°СЂРµР·}
+Emilio{Эмилио}
+Gomes{Гомес}
+Sйrgio Soares{Серджио Соарез}
 Sergio{}
 Cloise{}
 Sundin{}
@@ -250,29 +250,29 @@ Larsson{}
 Ossian{}
 Rodriguez{}
 Felipe{}
-KristrС†m{}
+Kristrцm{}
 Nathalie{}
 Sebastian{}
 Bylund{}
-Johan{Р™РѕРіР°РЅ}
-LС†fqvist{}
+Johan{Йоган}
+Lцfqvist{}
 Pehr{}
-StРµhlfot{}
+Stеhlfot{}
 Sister{}
-Jean{Р–Р°РЅ}
+Jean{Жан}
 Dubou{}
-Marc{РњР°СЂРє}
+Marc{Марк}
 Bourgneuf{}
-Claude{РљР»РѕРґ}
+Claude{Клод}
 Deshayes{}
-Nicholas{РќРёРєРѕР»Р°СЃ}
+Nicholas{Николас}
 Gautrain{}
 Leontina{}
-Barreto{Р‘Р°СЂСЂРµС‚Рѕ}
-Bertrand{Р‘РµСЂС‚СЂР°РЅ}
-Ogeron{РћР¶РµСЂРѕРЅ}
+Barreto{Баррето}
+Bertrand{Бертран}
+Ogeron{Ожерон}
 Maynard{}
-Bandit{Р‘Р°РЅРґРёС‚}
+Bandit{Бандит}
 Bandit's{}
 leader{}
 Maltese{}
@@ -280,21 +280,21 @@ Sir William{}
 Stapelton{}
 Clerk{}
 Surgeon{}
-Captain{РљР°РїРёС‚Р°РЅ}
+Captain{Капитан}
 Chaplain{}
 German{}
 Knight{}
 Margaret{}
 Pough{}
-Native{РђР±РѕСЂРёРіРµРЅ}
-Louis{Р›СѓРё}
+Native{Абориген}
+Louis{Луи}
 Arot{}
 Anna H{}
 Trafvenfeldt{}
 Angelica{}
-LindstrС†m{}
+Lindstrцm{}
 Wilma S{}
-ForsstrС†m{}
+Forsstrцm{}
 Madelaine{}
 Hansson{}
 Linn{}
@@ -302,16 +302,16 @@ Brorsson{}
 Ebba{}
 Modin{}
 Thomina{}
-SundstrС†m{}
+Sundstrцm{}
 Elin{}
 Asp{}
-Martin{РњР°СЂС‚РёРЅ}
+Martin{Мартин}
 Schmidt{}
 Tobias{}
-HРґllgren{}
+Hдllgren{}
 Axel{}
 Joel{}
-BjС†rk{}
+Bjцrk{}
 Hildingsson{}
 Erik{}
 Ejvind{}
@@ -323,23 +323,23 @@ Cahling{}
 Kolmodin{}
 Isak{}
 Karlsson{}
-Marcus{РњР°СЂРєСѓСЃ}
+Marcus{Маркус}
 Engberg{}
 Wallberg{}
 Svalberg{}
 Iman{}
 Razuli{}
-Jakob{Р”Р¶РµР№РєРѕР±}
-AndrР№{}
+Jakob{Джейкоб}
+Andrй{}
 Jensen{}
-Albin{РђР»СЊР±РёРЅ}
-HС†gman{}
+Albin{Альбин}
+Hцgman{}
 Lukas{}
-HammarstrС†m{}
+Hammarstrцm{}
 Mar la{}
 Kie{}
-LС†fgren{}
-Simon{РЎР°Р№РјРѕРЅ}
+Lцfgren{}
+Simon{Саймон}
 Grandell{}
 Cardinal Gabr{}
 Fortelius{}
@@ -352,18 +352,18 @@ Olof{}
 Tomasson{}
 Postman{}
 Greensail{}
-Joseph{Р–РѕР·РµС„}
+Joseph{Жозеф}
 Brooks Jr{}
 James{}
 Blake{}
 Philips{}
 gunner Phillip{}
 Morton{}
-Nathaniel{РќР°С‚Р°РЅРёСЌР»СЊ}
+Nathaniel{Натаниэль}
 Jackson{}
 quartermaster Thomas{}
 Miller{}
-White{Р‘РµР»С‹Р№}
+White{Белый}
 Gills{}
 Gates{}
 Brooks Sr{}
@@ -373,14 +373,14 @@ Husk{}
 boatswain Garrat{}
 Gibbens{}
 carpenter Owen{}
-Stephen{РЎС‚РёРІРµРЅ}
+Stephen{Стивен}
 Stiles{}
 Salter{}
 Carnes{}
 Boardman Hawes{}
 Major Stede{}
 Bonnet{}
-David{Р”СЌРІРёРґ}
+David{Дэвид}
 Herriot{}
 Ignatius{}
 Pell{}
@@ -395,37 +395,37 @@ Lovisa{}
 Brother{}
 Kristian{}
 Hannes{}
-Servant{РЎР»СѓРіР°}
-Governor Charles{Р“СѓР±РµСЂРЅР°С‚РѕСЂ Р§Р°СЂР»СЊР·}
+Servant{Слуга}
+Governor Charles{Губернатор Чарльз}
 Eden{}
-Secretary Tobias{РЎРµРєСЂРµС‚Р°СЂСЊ РўРѕР±РёР°СЃ}
-Beggar{РќРёС‰РёР№}
-Pilot{Р›РѕС†РјР°РЅ}
-Merchant{РўРѕСЂРіРѕРІРµС†}
-Anne{РђРЅРЅРё}
+Secretary Tobias{Секретарь Тобиас}
+Beggar{Нищий}
+Pilot{Лоцман}
+Merchant{Торговец}
+Anne{Анни}
 Russel Stapelton{}
-Don{Р”РѕРЅ}
+Don{Дон}
 van Vliet{}
 Vincent Z{}
 Officer{}
 on guard duty{}
 Tookerman{}
-Guard{РЎС‚СЂР°Р¶РЅРёРє}
+Guard{Стражник}
 Gerrard{}
 Jonathan{}
 Clarke{}
 Rowland{}
 Sharp{}
-Deserter{Р”РµР·РµСЂС‚РёСЂ}
-Thief{Р’РѕСЂ}
-Legrand{Р›РµРіСЂР°РЅ}
-Poacher{Р‘СЂР°РєРѕРЅСЊРµСЂ}
-Charon{РҐР°СЂРѕРЅ}
-Inch{РРЅС‡}
-Old{РЎС‚Р°СЂРёРЅР°}
-Nick{РќРёРє}
-Conquistador{РљРѕРЅРєРёСЃС‚Р°РґРѕСЂ}
-Templar{РўР°РјРїР»РёРµСЂ}
-Demon{Р”РµРјРѕРЅ}
+Deserter{Дезертир}
+Thief{Вор}
+Legrand{Легран}
+Poacher{Браконьер}
+Charon{Харон}
+Inch{Инч}
+Old{Старина}
+Nick{Ник}
+Conquistador{Конкистадор}
+Templar{Тамплиер}
+Demon{Демон}
 
 {=====| 523 characters |=====}

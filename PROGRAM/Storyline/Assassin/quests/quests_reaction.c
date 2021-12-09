@@ -3708,7 +3708,7 @@ void QuestComplete(string sQuestName)
     		AddQuestRecord("Siege", "7");				
 		break;
 
-// Bartolomeu�s trap		
+// Bartolomeuâ€™s trap		
 		
 		case "join_butcher":
 			CloseQuestHeader("Siege");		

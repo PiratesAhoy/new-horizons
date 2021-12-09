@@ -1,7 +1,7 @@
 // MAXIMUS 23.05.2019: file created by script. For ease of later comparison please keep its structure. 
 {=====| DevlinOpera.c |=====}
-Beatrice{Р‘РµР°С‚СЂРёСЃ}
-Devlin{Р”РµРІР»РёРЅ}
+Beatrice{Беатрис}
+Devlin{Девлин}
 
 {=====| StartStoryline.c |=====}
 
@@ -11,10 +11,10 @@ Devlin{Р”РµРІР»РёРЅ}
 Skull{Skull}
 
 {=====| Story.c |=====}
-Mystery{РЎС‚СЂР°РЅРЅС‹Р№}
-Messenger{РџРѕСЃР»Р°РЅРЅРёРє}
-Emmanuel{Р­РјРјР°РЅСѓРёР»}
-Bonnie{Р‘РѕРЅРЅРё}
+Mystery{Странный}
+Messenger{Посланник}
+Emmanuel{Эммануил}
+Bonnie{Бонни}
 Short Jack{Short Jack}
 Gold{Gold}
 Couch Captain{Couch Captain}
@@ -28,7 +28,7 @@ Thomas the{Thomas the}
 Terror{Terror}
 John Paul{John Paul}
 Jones{Jones}
-Captain{РљР°РїРёС‚Р°РЅ}
+Captain{Капитан}
 Maximus{Maximus}
 High Sea{High Sea}
 Lass{Lass}

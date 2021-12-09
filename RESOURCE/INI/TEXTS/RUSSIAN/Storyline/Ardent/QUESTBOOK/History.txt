@@ -1,2 +1,2 @@
 title=Historical Note
-text.t1=Several warships would subsequently be named 'Ardent'. One, launched in 1764, was the first of a class of third-rate ships of the line; another ship of this class was 'ĞšĞ•Ğ’ ĞĞµÑƒÑ‚Ğ¾Ğ¼Ğ¸Ğ¼Ñ‹Ğ¹', which was converted to a 44 gun razee frigate. You will sail on this ship if you play the "Hornblower" storyline.
+text.t1=Several warships would subsequently be named 'Ardent'. One, launched in 1764, was the first of a class of third-rate ships of the line; another ship of this class was 'ÊÅÂ Íåóòîìèìûé', which was converted to a 44 gun razee frigate. You will sail on this ship if you play the "Hornblower" storyline.

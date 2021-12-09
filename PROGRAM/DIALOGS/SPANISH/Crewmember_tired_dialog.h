@@ -1,6 +1,6 @@
 string DLG_TEXT[3] = { 
-"¿Eres tú, capitán? Puedo snetirlo, está... roto. ¡Puedes ver los jirones de carne desgarrada por mis propios huesos! !Hola! !Ahi está la médula derramándose!",
-"Duerme, amigo mío. Necesito que descanses.",
+"Â¿Eres tÃº, capitÃ¡n? Puedo snetirlo, estÃ¡... roto. Â¡Puedes ver los jirones de carne desgarrada por mis propios huesos! !Hola! !Ahi estÃ¡ la mÃ©dula derramÃ¡ndose!",
+"Duerme, amigo mÃ­o. Necesito que descanses.",
 "Necesitas un uniforme mejor.",
 
 };

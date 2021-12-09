@@ -965,7 +965,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l3.go = "wr_food_supply";
 	Locations[n].reload.l3.emerge = "reload1";
 	Locations[n].reload.l3.autoreload = "0";
-	Locations[n].reload.l3.label = "Woodes Rogers¥food supply.";
+	Locations[n].reload.l3.label = "Woodes Rogers¬¥food supply.";
 	Locations[n].locators_radius.reload.reload3 = 0.5;
 	Locations[n].reload.l3.disable = 1;				
 
@@ -1323,7 +1323,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l3.go = "wr_library";
 	Locations[n].reload.l3.emerge = "reload1";
 	Locations[n].reload.l3.autoreload = "0";
-	Locations[n].reload.l3.label = "Woodes Rogers¥ library.";
+	Locations[n].reload.l3.label = "Woodes Rogers¬¥ library.";
 
 	//Charles Windem room
 	Locations[n].reload.l4.name = "reload4";
@@ -1496,7 +1496,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l2.go = "wr_residence";
 	Locations[n].reload.l2.emerge = "reload2";
 	Locations[n].reload.l2.autoreload = "0";
-	Locations[n].reload.l2.label = "Woodes Rogers¥residence.";
+	Locations[n].reload.l2.label = "Woodes Rogers¬¥residence.";
 	Locations[n].locators_radius.reload.reload2 = 0.1;//0.5 later on
 
 	//attic
@@ -9782,7 +9782,7 @@ void LocationInitQuestLocations(ref n)
 	n = n + 1;
 
 	//  -------------------------------------------------
-//p‰r
+//p√§r
 	Locations[n].id = "bb_prison_stairs2";
 //	locations[n].id.label = "House";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
@@ -17072,7 +17072,7 @@ void LocationInitQuestLocations(ref n)
 	n = n + 1;
 
 	// -------------------------------------------------
-//p‰r
+//p√§r
 	Locations[n].id = "Tortuga_tower_stairs_A";
 	locations[n].id.label = "Tower stairs";
 	Locations[n].filespath.models = "locations\inside\Doubleflour_house\\";
@@ -20909,7 +20909,7 @@ Locations[n].items.randitem1 = "door_TortugaT";
 //	Locations[n].rats = "true";			//fewer rats added via animals.c
 	Locations[n].island = "Redmond";
 	n = n + 1;
-//p‰r h‰r
+//p√§r h√§r
 //--------------------------------------------------------------------------
 //fake location - never visited -just for the label
 

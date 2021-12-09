@@ -29,7 +29,7 @@ void ProcessDialogEvent()
 
 		case SPAIN:
 			Preprocessor_Add("hello", "Hola");
-			Preprocessor_Add("captain", "Capitán");
+			Preprocessor_Add("captain", "CapitÃ¡n");
 			Preprocessor_Add("mygod", "Dios mio");
 			Preprocessor_Add("assault", "Si, asalto");
 			Preprocessor_Add("yes", "Si");
@@ -37,7 +37,7 @@ void ProcessDialogEvent()
 
 		case PORTUGAL:
 			Preprocessor_Add("hello", "Ola");
-			Preprocessor_Add("captain", "CapitÝo");
+			Preprocessor_Add("captain", "CapitÃo");
 			Preprocessor_Add("mygod", "Meu Deus");
 			Preprocessor_Add("assault", "Sim, assalto");
 			Preprocessor_Add("yes", "Sim");
@@ -78,7 +78,7 @@ void ProcessDialogEvent()
 		case GUEST1_NATION:
 			if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
 			{
-				Preprocessor_Add("hello", "Hallå");
+				Preprocessor_Add("hello", "HallÃ¥");
 				Preprocessor_Add("captain", "Kapten");
 				Preprocessor_Add("mygod", "Min Gud");
 				Preprocessor_Add("assault", "Ja, angrip");
@@ -99,7 +99,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Äèàëîã ïåðâûé - ïåðâàÿ âñòðå÷à
+		// -----------------------------------Ã„Ã¨Ã Ã«Ã®Ã£ Ã¯Ã¥Ã°Ã¢Ã»Ã© - Ã¯Ã¥Ã°Ã¢Ã Ã¿ Ã¢Ã±Ã²Ã°Ã¥Ã·Ã 
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";

@@ -5,7 +5,7 @@ void CreateTempQuestCharacters(ref n)
 
 	makeref(ch, chobj);
 
-				// Wilfred Bythesea - так, старый знакомы Блэйза, появляющийся эпизодически
+				// Wilfred Bythesea - С‚Р°Рє, СЃС‚Р°СЂС‹Р№ Р·РЅР°РєРѕРјС‹ Р…Р»СЌР№Р·Р°, РїРѕв‚¬РІР»в‚¬СЋС‰РёР№СЃв‚¬ СЌРїРёР·РѕРґРёС‡РµСЃРєРё
 	ch.old.name = "Wilfred";
 	ch.old.lastname = "Bythesea";
 	ch.name = TranslateString("","Wilfred");

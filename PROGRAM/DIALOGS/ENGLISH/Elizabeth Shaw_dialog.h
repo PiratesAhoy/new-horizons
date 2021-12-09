@@ -8,7 +8,7 @@ string DLG_TEXT[18] = {
 "Are you joking? I'll never love him.",
 "Easily guessed.. In fact, I'm working for your father and I'm here to rescue you.", 
 "GOD REWARD YOU!",
-"In this case, it will be your father. But we must not waste time, we need to sail to #sisland_Cayman# as quickly as possible. I don't think your «lover» will desist from you so easily.",
+"In this case, it will be your father. But we must not waste time, we need to sail to #sisland_Cayman# as quickly as possible. I don't think your Â«loverÂ» will desist from you so easily.",
 "At last, you have woken up.",
 "Yes, but what happened?",
 "Do you not remember?",

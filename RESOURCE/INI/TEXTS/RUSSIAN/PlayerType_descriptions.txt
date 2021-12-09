@@ -1,187 +1,187 @@
 Adventurer_Descr_a{}
-Adventurer_Descr_b{Р’С‹ РїСЂРѕРІРµР»Рё СЃРІРѕСЋ Р¶РёР·РЅСЊ}
-Adventurer_Descr_c{РІ РїРѕРёСЃРєР°С… РёР·РІРµСЃС‚РЅРѕСЃС‚Рё, СѓРґР°С‡Рё Рё}
-Adventurer_Descr_d{СЃР»Р°РІС‹, СЃР»РµРґСѓСЏ С‚СѓРґР°, РєСѓРґР° РІРµС‚СЂР°}
-Adventurer_Descr_e{(Рё СЃР»СѓС…Рё Рѕ СЃРѕРєСЂРѕРІРёС‰Р°С…)}
-Adventurer_Descr_f{РІРµРґСѓС‚ РІР°СЃ.}
+Adventurer_Descr_b{Вы провели свою жизнь}
+Adventurer_Descr_c{в поисках известности, удачи и}
+Adventurer_Descr_d{славы, следуя туда, куда ветра}
+Adventurer_Descr_e{(и слухи о сокровищах)}
+Adventurer_Descr_f{ведут вас.}
 Adventurer_Descr_g{}
 Adventurer_Descr_h{}
 Adventurer_Descr_i{}
 
 Agent_Descr_a{}
-Agent_Descr_b{РљР°Рє С‡Р°СЃС‚СЊ СЃРµРєСЂРµС‚РЅРѕР№ СЃР»СѓР¶Р±С‹}
-Agent_Descr_c{РѕРґРЅРѕР№ РёР· РіР»Р°РІРЅС‹С… РґРµСЂР¶Р°РІ Р•РІСЂРѕРїС‹,}
-Agent_Descr_d{РІР°Рј Р±С‹Р»Рѕ РїРѕСЂСѓС‡РµРЅРѕ РїСЂРѕР±СЂР°С‚СЊСЃСЏ}
-Agent_Descr_e{РІРѕ РІСЂР°Р¶РµСЃРєРёРµ РІР»Р°РґРµРЅРёСЏ.}
-Agent_Descr_f{РўРµРј РЅРµ РјРµРЅРµРµ, Сѓ РІР°СЃ РјРѕРіСѓС‚ Р±С‹С‚СЊ}
-Agent_Descr_g{РґСЂСѓРіРёРµ РїР»Р°РЅС‹ РЅР° СЃРµР±СЏ,}
-Agent_Descr_h{СЂР°Р· РІС‹ РїСЂРёР±С‹Р»Рё СЃСЋРґР°!}
+Agent_Descr_b{Как часть секретной службы}
+Agent_Descr_c{одной из главных держав Европы,}
+Agent_Descr_d{вам было поручено пробраться}
+Agent_Descr_e{во вражеские владения.}
+Agent_Descr_f{Тем не менее, у вас могут быть}
+Agent_Descr_g{другие планы на себя,}
+Agent_Descr_h{раз вы прибыли сюда!}
 Agent_Descr_i{}
 
 Army Veteran_Descr_a{}
-Army Veteran_Descr_b{Р’С‹ СЃР»СѓР¶РёР»Рё}
-Army Veteran_Descr_c{РІ РїРµС…РѕС‚Рµ РѕРґРЅРѕР№ РёР· РіР»Р°РІРЅС‹С…}
-Army Veteran_Descr_d{РґРµСЂР¶Р°РІ Р•РІСЂРѕРїС‹, Р»РёР±Рѕ РѕР±С‹С‡РЅС‹Рј}
-Army Veteran_Descr_e{СЃРѕР»РґР°С‚РѕРј РёР»Рё РЅР°РµРјРЅРёРєРѕРј.}
+Army Veteran_Descr_b{Вы служили}
+Army Veteran_Descr_c{в пехоте одной из главных}
+Army Veteran_Descr_d{держав Европы, либо обычным}
+Army Veteran_Descr_e{солдатом или наемником.}
 Army Veteran_Descr_f{}
 Army Veteran_Descr_g{}
 Army Veteran_Descr_h{}
 Army Veteran_Descr_i{}
 
 Corsair_Descr_a{}
-Corsair_Descr_b{Р’С‹ РЅР°С‡Р°Р»Рё РІ РєР°С‡РµСЃС‚РІРµ}
-Corsair_Descr_c{РјР°С‚СЂРѕСЃР° РЅР° Р±РѕСЂС‚Сѓ РїРёСЂР°С‚СЃРєРѕРіРѕ}
-Corsair_Descr_d{СЃСѓРґРЅР°, Р° Р±С‹Р»Рё РІС‹Р±СЂР°РЅС‹}
-Corsair_Descr_e{РєР°РїРёС‚Р°РЅРѕРј СЃРІРѕРёРјРё Р±СЂР°С‚СЊСЏРјРё}
-Corsair_Descr_f{Р±Р»Р°РіРѕРґР°СЂСЏ РІР°С€РµРјСѓ}
-Corsair_Descr_g{РјР°СЃС‚РµСЂСЃС‚РІСѓ Рё С…РёС‚СЂРѕСЃС‚Рё.}
+Corsair_Descr_b{Вы начали в качестве}
+Corsair_Descr_c{матроса на борту пиратского}
+Corsair_Descr_d{судна, а были выбраны}
+Corsair_Descr_e{капитаном своими братьями}
+Corsair_Descr_f{благодаря вашему}
+Corsair_Descr_g{мастерству и хитрости.}
 Corsair_Descr_h{}
 Corsair_Descr_i{}
 
 Engineer_Descr_a{}
-Engineer_Descr_b{Р’С‹ СЃР»СѓР¶РёР»Рё РѕРґРЅРѕР№ РёР·}
-Engineer_Descr_c{РіР»Р°РІРЅС‹С… РґРµСЂР¶Р°РІ Р•РІСЂРѕРїС‹ РІ РєР°С‡РµСЃС‚РІРµ}
-Engineer_Descr_d{РІРѕРµРЅРЅРѕРіРѕ РёРЅР¶РµРЅРµСЂР°, СЃС‚СЂРѕСЏ}
-Engineer_Descr_e{РјРѕСЂС‚С‹, С„РѕСЂС‚С‹ Рё РјРёРЅРёСЂСѓСЏ}
-Engineer_Descr_f{РІСЂР°Р¶РµСЃРєСѓСЋ Р·Р°С‰РёС‚Сѓ РІРѕ РІСЂРµРјСЏ}
-Engineer_Descr_g{РѕСЃР°Рґ.}
+Engineer_Descr_b{Вы служили одной из}
+Engineer_Descr_c{главных держав Европы в качестве}
+Engineer_Descr_d{военного инженера, строя}
+Engineer_Descr_e{морты, форты и минируя}
+Engineer_Descr_f{вражескую защиту во время}
+Engineer_Descr_g{осад.}
 Engineer_Descr_h{}
 Engineer_Descr_i{}
 
 Explorer_Descr_a{}
-Explorer_Descr_b{Р‘РѕР»СЊС€Р°СЏ С‡Р°СЃС‚СЊ РќРѕРІРѕРіРѕ РЎРІРµС‚Р°}
-Explorer_Descr_c{РІСЃРµ РµС‰Рµ РЅРµ РёСЃСЃР»РµРґРѕРІР°РЅР°, Рё РІС‹}
-Explorer_Descr_d{Р·Р°РЅСЏР»РёСЃСЊ РёСЃСЃР»РµРґРѕРІР°РЅРёРµРј С‚РѕРіРѕ,}
-Explorer_Descr_e{С‡С‚Рѕ Р»РµР¶РёС‚ Р·Р° РіСЂР°РЅРёС†Р°РјРё}
-Explorer_Descr_f{РєРѕР»РѕРЅРёР°Р»СЊРЅС‹С… РґРµСЂР¶Р°РІ.}
+Explorer_Descr_b{Большая часть Нового Света}
+Explorer_Descr_c{все еще не исследована, и вы}
+Explorer_Descr_d{занялись исследованием того,}
+Explorer_Descr_e{что лежит за границами}
+Explorer_Descr_f{колониальных держав.}
 Explorer_Descr_g{}
 Explorer_Descr_h{}
 Explorer_Descr_i{}
 
 Gambler_Descr_a{}
-Gambler_Descr_b{РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Р№ РёРіСЂРѕРє РІ РєР°СЂС‚С‹,}
-Gambler_Descr_c{РІС‹ РІС‹РёРіСЂР°Р»Рё СЃРІРѕР№ РєРѕСЂР°Р±Р»СЊ,}
-Gambler_Descr_d{Р° С‚РµРїРµСЂСЊ РёС‰РµС‚Рµ РїСЂРёРєР»СЋС‡РµРЅРёР№ Рё}
-Gambler_Descr_e{СѓРґР°С‡Рё РІ РјРѕСЂРµ.}
-Gambler_Descr_f{Р­С‚Рѕ РїСЂРёРІРµР»Рѕ Рє РґСѓСЌР»Рё РЅР°}
-Gambler_Descr_g{СЂР°СЃСЃРІРµС‚Рµ СЃ РёСЃРїР°РЅСЃРєРёРј РґРѕРЅРѕРј.}
+Gambler_Descr_b{Профессиональный игрок в карты,}
+Gambler_Descr_c{вы выиграли свой корабль,}
+Gambler_Descr_d{а теперь ищете приключений и}
+Gambler_Descr_e{удачи в море.}
+Gambler_Descr_f{Это привело к дуэли на}
+Gambler_Descr_g{рассвете с испанским доном.}
 Gambler_Descr_h{}
 Gambler_Descr_i{}
 
 Gunner_Descr_a{}
-Gunner_Descr_b{Р’С‹ - РѕРїС‹С‚РЅС‹Р№}
-Gunner_Descr_c{РєР°РЅРѕРЅРёСЂ, РѕС‚РЅС‹РЅРµ}
-Gunner_Descr_d{РєРѕРјРјР°РЅРґСѓСЋС‰РёР№ СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј}
-Gunner_Descr_e{РєРѕСЂР°Р±Р»РµРј.}
+Gunner_Descr_b{Вы - опытный}
+Gunner_Descr_c{канонир, отныне}
+Gunner_Descr_d{коммандующий собственным}
+Gunner_Descr_e{кораблем.}
 Gunner_Descr_f{}
 Gunner_Descr_g{}
 Gunner_Descr_h{}
 Gunner_Descr_i{}
 
 Marine_Descr_a{}
-Marine_Descr_b{Р’С‹ СЃР»СѓР¶РёР»Рё РІ РєР°С‡РµСЃС‚РІРµ}
-Marine_Descr_c{Р±РѕР№С†Р° РЅР° Р±РѕСЂС‚Сѓ РІРѕРµРЅРЅС‹С… СЃСѓРґРµРЅ,}
-Marine_Descr_d{Р°Р±РѕСЂРґРёСЂСѓСЏ РІСЂР°Р¶РµСЃРєРёРµ РєРѕСЂР°Р±Р»Рё}
-Marine_Descr_e{Рё Р·Р°С‰РёС‰Р°СЏ СЃРІРѕР№ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ.}
+Marine_Descr_b{Вы служили в качестве}
+Marine_Descr_c{бойца на борту военных суден,}
+Marine_Descr_d{абордируя вражеские корабли}
+Marine_Descr_e{и защищая свой одновременно.}
 Marine_Descr_f{}
 Marine_Descr_g{}
 Marine_Descr_h{}
 Marine_Descr_i{}
 
 Merchant_Descr_a{}
-Merchant_Descr_b{Р’С‹ РЅРѕРІС‹Р№ РєР°РїРёС‚Р°РЅ}
-Merchant_Descr_c{С‚РѕСЂРіРѕРІРѕРіРѕ СЃСѓРґРЅР°,}
-Merchant_Descr_d{РєСѓРїР»РµРЅРЅРѕРіРѕ Сѓ РµРіРѕ}
-Merchant_Descr_e{Р±С‹РІС€РµРіРѕ РєР°РїРёС‚Р°РЅР°, СѓС€РµРґС€РµРіРѕ}
-Merchant_Descr_f{РЅР° СЃСѓС€Сѓ, РІ РѕС‚СЃС‚Р°РІРєСѓ.}
+Merchant_Descr_b{Вы новый капитан}
+Merchant_Descr_c{торгового судна,}
+Merchant_Descr_d{купленного у его}
+Merchant_Descr_e{бывшего капитана, ушедшего}
+Merchant_Descr_f{на сушу, в отставку.}
 Merchant_Descr_g{}
 Merchant_Descr_h{}
 Merchant_Descr_i{}
 
 Naval Officer_Descr_a{}
-Naval Officer_Descr_b{Р’С‹ - СѓРїРѕР»РЅРѕРјРѕС‡РµРЅРЅС‹Р№}
-Naval Officer_Descr_c{РѕС„РёС†РµСЂ С„Р»РѕС‚Р° РЅР° СЃР»СѓР¶Р±Рµ Сѓ}
-Naval Officer_Descr_d{РѕРґРЅРѕР№ РёР· РІРµР»РёРєРёС… РґРµСЂР¶Р°РІ.}
-Naval Officer_Descr_e{Р’С‹ Р¶РёРІРµС‚Рµ, С‡С‚РѕР±С‹ СЃР»СѓР¶РёС‚СЊ СЃРІРѕРµР№ СЃС‚СЂР°РЅРµ}
-Naval Officer_Descr_f{Рё Р·Р°С‰РёС‰Р°С‚СЊ СЃРІРѕРёС… СЃРѕРѕС‚РµС‡РµСЃС‚РІРµРЅРЅРёРєРѕРІ.}
+Naval Officer_Descr_b{Вы - уполномоченный}
+Naval Officer_Descr_c{офицер флота на службе у}
+Naval Officer_Descr_d{одной из великих держав.}
+Naval Officer_Descr_e{Вы живете, чтобы служить своей стране}
+Naval Officer_Descr_f{и защищать своих соотечественников.}
 Naval Officer_Descr_g{}
 Naval Officer_Descr_h{}
 Naval Officer_Descr_i{}
 
 Physician_Descr_a{}
-Physician_Descr_b{Р‘С‹РІС€РёР№ РєРѕСЂР°Р±РµР»СЊРЅС‹Р№ С…РёСЂСѓСЂРі,}
-Physician_Descr_c{РІС‹ РїСЂРёРІС‹РєР»Рё Рє Р¶РёР·РЅРё РІ РјРѕСЂРµ}
-Physician_Descr_d{Рё С‚РµРїРµСЂСЊ РєРѕРјР°РЅРґСѓРµС‚Рµ
-Physician_Descr_e{СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј СЃСѓРґРЅРѕРј.}
+Physician_Descr_b{Бывший корабельный хирург,}
+Physician_Descr_c{вы привыкли к жизни в море}
+Physician_Descr_d{и теперь командуете
+Physician_Descr_e{собственным судном.}
 Physician_Descr_f{}
 Physician_Descr_g{}
 Physician_Descr_h{}
 Physician_Descr_i{}
 
 Quartermaster_Descr_a{}
-Quartermaster_Descr_b{РљРѕСЂР°Р±РµР»СЊРЅС‹Р№ РєР°Р·РЅР°С‡РµР№,}
-Quartermaster_Descr_c{РІС‹ РІСЃС‚СѓРїРёР»Рё РІ РґРѕР»Р¶РЅРѕСЃС‚СЊ}
-Quartermaster_Descr_d{РєР°РїРёС‚Р°РЅР°, РєРѕРіРґР°}
-Quartermaster_Descr_e{РєРѕРјР°РЅРґСѓСЋС‰РёР№ РєРѕСЂР°Р±Р»РµРј Рё}
-Quartermaster_Descr_f{РїРµСЂРІС‹Р№ РїРѕРјРѕС‰РЅРёРє РїСЂРѕРїР°Р»Рё}
-Quartermaster_Descr_g{РІ РїСЂРµРґС‹РґСѓС‰РµРј РїСЂРёРєР»СЋС‡РµРЅРёРё.}
+Quartermaster_Descr_b{Корабельный казначей,}
+Quartermaster_Descr_c{вы вступили в должность}
+Quartermaster_Descr_d{капитана, когда}
+Quartermaster_Descr_e{командующий кораблем и}
+Quartermaster_Descr_f{первый помощник пропали}
+Quartermaster_Descr_g{в предыдущем приключении.}
 Quartermaster_Descr_h{}
 Quartermaster_Descr_i{}
 
 Rebel_Descr_a{}
-Rebel_Descr_b{Р‘РѕСЂРµС† Р·Р° СЃРІРѕР±РѕРґСѓ РІ Р±РµРіР°С… РѕС‚}
-Rebel_Descr_c{РІР»Р°СЃС‚РµР№ РЎС‚Р°СЂРѕРіРѕ РЎРІРµС‚Р°,}
-Rebel_Descr_d{РІС‹ РїСЂРёС€Р»Рё РІ РќРѕРІС‹Р№ Р·Р°}
-Rebel_Descr_e{Р»СѓС‡С€РµР№ Р¶РёР·РЅСЊСЋ. РџРёСЂР°С‚С‹}
-Rebel_Descr_f{РїСЂРµРґР»Р°РіР°СЋС‚ РІР°Рј СѓР±РµР¶РёС‰Рµ.}
+Rebel_Descr_b{Борец за свободу в бегах от}
+Rebel_Descr_c{властей Старого Света,}
+Rebel_Descr_d{вы пришли в Новый за}
+Rebel_Descr_e{лучшей жизнью. Пираты}
+Rebel_Descr_f{предлагают вам убежище.}
 Rebel_Descr_g{}
 Rebel_Descr_h{}
 Rebel_Descr_i{}
 
 Rogue_Descr_a{}
-Rogue_Descr_b{Рђ РІС‹ СЂР°СЃРїСѓС‚РЅРёРє!}
-Rogue_Descr_c{Р•РґРІР° СЃР±РµР¶Р°РІ РёР· Р•РІСЂРѕРїС‹}
-Rogue_Descr_d{РїРѕСЃР»Рµ СЃРѕР±Р»Р°Р·РЅРµРЅРёСЏ Рё РІС‹РјР°РЅРёРІР°РЅРёСЏ}
-Rogue_Descr_e{Р»РµРґРё РёР· РµРµ СЃРѕРєСЂРѕРІРёС‰РЅРёС†С‹, РІС‹}
-Rogue_Descr_f{РїРѕРїР°Р»Рё РЅР° РґСѓСЌР»СЊ СЃ}
-Rogue_Descr_g{РёСЃРїР°РЅСЃРєРёРј РґРѕРЅРѕРј.}
+Rogue_Descr_b{А вы распутник!}
+Rogue_Descr_c{Едва сбежав из Европы}
+Rogue_Descr_d{после соблазнения и выманивания}
+Rogue_Descr_e{леди из ее сокровищницы, вы}
+Rogue_Descr_f{попали на дуэль с}
+Rogue_Descr_g{испанским доном.}
 Rogue_Descr_h{}
 Rogue_Descr_i{}
 
 Sailor_Descr_a{}
-Sailor_Descr_b{РЎРєСЂРѕРјРЅС‹Р№ РјР°С‚СЂРѕСЃ, РІС‹}
-Sailor_Descr_c{РїСЂРѕРІРµР»Рё РІСЃСЋ СЃРІРѕСЋ Р¶РёР·РЅСЊ РІ}
-Sailor_Descr_d{РјРµС‡С‚Р°С… РѕР± РѕР±Р»Р°РґР°РЅРёРё СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј}
-Sailor_Descr_e{РєРѕСЂР°Р±Р»РµРј. РќР°РєРѕРЅРµС†, СЌС‚РѕС‚ РґРµРЅСЊ РЅР°СЃС‚Р°Р».}
+Sailor_Descr_b{Скромный матрос, вы}
+Sailor_Descr_c{провели всю свою жизнь в}
+Sailor_Descr_d{мечтах об обладании собственным}
+Sailor_Descr_e{кораблем. Наконец, этот день настал.}
 Sailor_Descr_f{}
 Sailor_Descr_g{}
 Sailor_Descr_h{}
 Sailor_Descr_i{}
 
 Shipwright_Descr_a{}
-Shipwright_Descr_b{Р”РёР·Р°Р№РЅРµСЂ Рё СЃС‚СЂРѕРёС‚РµР»СЊ}
-Shipwright_Descr_c{РєРѕСЂР°Р±Р»РµР№, СЃС‚СЂР°СЃС‚СЊ Рє РїСѓС‚РµС€РµСЃС‚РІРёСЏРј}
-Shipwright_Descr_d{РІР·СЏР»Р° РІРµСЂС…, Рё РІС‹}
-Shipwright_Descr_e{РїРѕРєРёРЅСѓР»Рё РїРѕСЂС‚ РЅР° СЃСѓРґРЅРµ,}
-Shipwright_Descr_f{РїРѕСЃС‚СЂРѕРµРЅРЅС‹Рј СЃРѕР±СЃС‚РІРµРЅРЅС‹РјРё СЂСѓРєР°РјРё.}
+Shipwright_Descr_b{Дизайнер и строитель}
+Shipwright_Descr_c{кораблей, страсть к путешествиям}
+Shipwright_Descr_d{взяла верх, и вы}
+Shipwright_Descr_e{покинули порт на судне,}
+Shipwright_Descr_f{построенным собственными руками.}
 Shipwright_Descr_g{}
 Shipwright_Descr_h{}
 Shipwright_Descr_i{}
 
 Smuggler_Descr_a{}
-Smuggler_Descr_b{РџРµСЂРІС‹Р№ РѕС„РёС†РµСЂ РЅР°}
-Smuggler_Descr_c{СЃСѓРґРЅРµ РєРѕРЅС‚СЂР°Р±Р°РЅРґРёСЃС‚РѕРІ, РІР°С€}
-Smuggler_Descr_d{РіР»СѓРїС‹Р№ РєР°РїРёС‚Р°РЅ Р·Р°РіСЂРµРјРµР» РІ}
-Smuggler_Descr_e{С‚СЋСЂСЊРјСѓ, РѕСЃС‚Р°РІРёРІ РІР°СЃ}
-Smuggler_Descr_f{РєРѕРјР°РЅРґРѕРІР°С‚СЊ, Рё С‚РµРїРµСЂСЊ}
-Smuggler_Descr_g{РІС‹ РІ РїРѕРіРѕРЅРµ Р·Р° РїСЂРёР±С‹Р»СЊСЋ.}
+Smuggler_Descr_b{Первый офицер на}
+Smuggler_Descr_c{судне контрабандистов, ваш}
+Smuggler_Descr_d{глупый капитан загремел в}
+Smuggler_Descr_e{тюрьму, оставив вас}
+Smuggler_Descr_f{командовать, и теперь}
+Smuggler_Descr_g{вы в погоне за прибылью.}
 Smuggler_Descr_h{}
 Smuggler_Descr_i{}
 
 Social Climber_Descr_a{}
-Social Climber_Descr_b{Р’С‹ РїРѕ Р¶РёР·РЅРё РЅР°РјРµСЂРµРІР°РµС‚РµСЃСЊ РїРѕСЃРµС‰Р°С‚СЊ РјРµСЃС‚Р°.}
-Social Climber_Descr_c{Р•СЃР»Рё РєРѕСЂР°Р±Р»СЊ РјРѕР¶РµС‚ РІР°СЃ С‚СѓРґР° РѕС‚РІРµР·С‚Рё,}
-Social Climber_Descr_d{С‚Р°Рє С‚РѕРјСѓ Рё Р±С‹С‚СЊ.}
+Social Climber_Descr_b{Вы по жизни намереваетесь посещать места.}
+Social Climber_Descr_c{Если корабль может вас туда отвезти,}
+Social Climber_Descr_d{так тому и быть.}
 Social Climber_Descr_e{}
 Social Climber_Descr_f{}
 Social Climber_Descr_g{}
@@ -189,39 +189,39 @@ Social Climber_Descr_h{}
 Social Climber_Descr_i{}
 
 Sword Master_Descr_a{}
-Sword Master_Descr_b{РњР°СЃС‚РµСЂ С„РµС…С‚РѕРІР°РЅРёСЏ РёР· Р•РІСЂРѕРїС‹, РІС‹}
-Sword Master_Descr_c{С‚СЂРµРЅРёСЂРѕРІР°Р»Рё СЃРѕР»РґР°С‚ Рё Р°СЂРёСЃС‚РѕРєСЂР°С‚РѕРІ Рё}
-Sword Master_Descr_d{Р·РЅР°РµС‚Рµ, С‡РµРј РѕРґРёРЅ РјРµС‡ РѕС‚Р»РёС‡Р°РµС‚СЃСЏ РѕС‚}
-Sword Master_Descr_e{РґСЂСѓРіРѕРіРѕ. РЈСЃС‚Р°РІ РѕС‚ СЌС‚РѕРіРѕ Р·Р°РЅСЏС‚РёСЏ, РІС‹}
-Sword Master_Descr_f{РєСѓРїРёР»Рё РєРѕСЂР°Р±Р»СЊ Рё РїСЂРёР±С‹Р»Рё РЅР° РљР°СЂРёР±С‹.}
+Sword Master_Descr_b{Мастер фехтования из Европы, вы}
+Sword Master_Descr_c{тренировали солдат и аристократов и}
+Sword Master_Descr_d{знаете, чем один меч отличается от}
+Sword Master_Descr_e{другого. Устав от этого занятия, вы}
+Sword Master_Descr_f{купили корабль и прибыли на Карибы.}
 Sword Master_Descr_g{}
 Sword Master_Descr_h{}
 Sword Master_Descr_i{}
 
 Cursed_Descr_a{}
-Cursed_Descr_b{РћСЃС‚СЂРѕРІ, РєСѓРґР° РѕС‚С‹СЃРєР°С‚СЊ РїСѓС‚СЊ РЅРµ РЅР°РґРѕ РЅРёРєРѕРјСѓ,}
-Cursed_Descr_c{С‚Р°Рє РіРѕРІРѕСЂРёР»РѕСЃСЊ. РќРѕ РІС‹ РЅР°С€Р»Рё РµРіРѕ!}
-Cursed_Descr_d{РўР°Рј Р±С‹Р» СЃСѓРЅРґСѓРє. Р’С‹ РІР·СЏР»Рё РІСЃРµ!}
-Cursed_Descr_e{РќРѕ РїРѕРїС‹С‚Р°РµС‚РµСЃСЊ Р»Рё РІС‹ РёР·Р±Р°РІРёС‚СЊСЃСЏ}
-Cursed_Descr_f{РѕС‚ РїСЂРѕРєР»СЏС‚РёСЏ? РР»Рё РІРѕСЃРїРѕР»СЊР·СѓРµС‚РµСЃСЊ}
-Cursed_Descr_g{РµРіРѕ РїСЂРµРёРјСѓС‰РµСЃС‚РІР°РјРё?}
+Cursed_Descr_b{Остров, куда отыскать путь не надо никому,}
+Cursed_Descr_c{так говорилось. Но вы нашли его!}
+Cursed_Descr_d{Там был сундук. Вы взяли все!}
+Cursed_Descr_e{Но попытаетесь ли вы избавиться}
+Cursed_Descr_f{от проклятия? Или воспользуетесь}
+Cursed_Descr_g{его преимуществами?}
 Cursed_Descr_h{}
 Cursed_Descr_i{}
 
 Castaway_Descr_a{}
-Castaway_Descr_b{Р‘РµР· РѕРїС‹С‚Р° Рё РёРјСѓС‰РµСЃС‚РІР°, РІР°Рј}
-Castaway_Descr_c{РїСЂРёРґРµС‚СЃСЏ РЅР°С‡Р°С‚СЊ СЃ РЅСѓР»СЏ.}
-Castaway_Descr_d{Р‘РµР· СЃРѕРјРЅРµРЅРёР№, СЃСѓСЂРѕРІРѕРµ РЅР°С‡Р°Р»Рѕ!}
-Castaway_Descr_e{Р’С‹Р¶РёРІРµС‚Рµ Р»Рё РІС‹, РїСЂРёРЅСЏРІ СЌС‚РѕС‚}
-Castaway_Descr_f{РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅС‹Р№ РІС‹Р·РѕРІ?}
+Castaway_Descr_b{Без опыта и имущества, вам}
+Castaway_Descr_c{придется начать с нуля.}
+Castaway_Descr_d{Без сомнений, суровое начало!}
+Castaway_Descr_e{Выживете ли вы, приняв этот}
+Castaway_Descr_f{исключительный вызов?}
 Castaway_Descr_g{}
 Castaway_Descr_h{}
 Castaway_Descr_i{}
 
 Custom_Descr_a{}
-Custom_Descr_b{РћС‚РєСѓРґР° РІС‹ РїСЂРёС€Р»Рё?}
-Custom_Descr_c{РљСѓРґР° РІС‹ РїРѕР№РґРµС‚Рµ?}
-Custom_Descr_d{Р­С‚Рѕ Р·Р°РіР°РґРєР°!}
+Custom_Descr_b{Откуда вы пришли?}
+Custom_Descr_c{Куда вы пойдете?}
+Custom_Descr_d{Это загадка!}
 Custom_Descr_e{}
 Custom_Descr_f{}
 Custom_Descr_g{}
