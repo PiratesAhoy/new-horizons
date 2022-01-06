@@ -786,10 +786,10 @@ void QuestComplete(string sQuestName)
 				LAi_SetActorType(characterFromID("Coper Blumberger"));
 				LAi_ActorAttack(characterFromID("Coper Blumberger"),characterFromID("soldier2"), "");
 			}
-			if (!LAi_IsDead(characterFromID("Amtуnio Guajira")) && !LAi_IsDead(characterFromID("soldier3")))
+			if (!LAi_IsDead(characterFromID("Amtónio Guajira")) && !LAi_IsDead(characterFromID("soldier3")))
 			{
-				LAi_SetActorType(characterFromID("Amtуnio Guajira"));
-				LAi_ActorAttack(characterFromID("Amtуnio Guajira"),characterFromID("soldier3"), "");
+				LAi_SetActorType(characterFromID("Amtónio Guajira"));
+				LAi_ActorAttack(characterFromID("Amtónio Guajira"),characterFromID("soldier3"), "");
 			}
 			if (!LAi_IsDead(characterFromID("Ayol Bacha")) && !LAi_IsDead(characterFromID("soldier4")))
 			{
@@ -809,11 +809,11 @@ void QuestComplete(string sQuestName)
 				crewref = characterFromID("Ayol Bacha");
 				crewidx = GetCharacterIndex("Ayol Bacha");
 			}
-			if (!LAi_IsDead(characterFromID("Amtуnio Guajira")))
+			if (!LAi_IsDead(characterFromID("Amtónio Guajira")))
 			{
 				survivors = survivors + 1;
-				crewref = characterFromID("Amtуnio Guajira");
-				crewidx = GetCharacterIndex("Amtуnio Guajira");
+				crewref = characterFromID("Amtónio Guajira");
+				crewidx = GetCharacterIndex("Amtónio Guajira");
 			}
 			if (!LAi_IsDead(characterFromID("Coper Blumberger")))
 			{
@@ -863,11 +863,11 @@ void QuestComplete(string sQuestName)
 				LAi_ActorFollowEverywhere(CharacterFromID("Ayol Bacha"), "", 1.0);
 				LAi_group_MoveCharacter(characterFromID("Ayol Bacha"), LAI_GROUP_PLAYER);
 			}
-			if (!LAi_IsDead(characterFromID("Amtуnio Guajira")))
+			if (!LAi_IsDead(characterFromID("Amtónio Guajira")))
 			{
-				LAi_SetActorType(characterFromID("Amtуnio Guajira"));
-				LAi_ActorFollowEverywhere(CharacterFromID("Amtуnio Guajira"), "", 1.0);
-				LAi_group_MoveCharacter(characterFromID("Amtуnio Guajira"), LAI_GROUP_PLAYER);
+				LAi_SetActorType(characterFromID("Amtónio Guajira"));
+				LAi_ActorFollowEverywhere(CharacterFromID("Amtónio Guajira"), "", 1.0);
+				LAi_group_MoveCharacter(characterFromID("Amtónio Guajira"), LAI_GROUP_PLAYER);
 			}
 			if (!LAi_IsDead(characterFromID("Coper Blumberger")))
 			{
@@ -902,7 +902,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.disable_rebirth = false;
 			if (LAi_IsDead(characterFromID("Ralph Partridge"))) ChangeCharacterAddress(characterFromID("Ralph Partridge"), "None", "");
 			if (LAi_IsDead(characterFromID("Coper Blumberger"))) ChangeCharacterAddress(characterFromID("Coper Blumberger"), "None", "");
-			if (LAi_IsDead(characterFromID("Amtуnio Guajira"))) ChangeCharacterAddress(characterFromID("Amtуnio Guajira"), "None", "");
+			if (LAi_IsDead(characterFromID("Amtónio Guajira"))) ChangeCharacterAddress(characterFromID("Amtónio Guajira"), "None", "");
 			if (LAi_IsDead(characterFromID("Ayol Bacha"))) ChangeCharacterAddress(characterFromID("Ayol Bacha"), "None", "");
 			ChangeCharacterAddress(characterFromID("Slave Camp Commandant"), "None", "");
 			if (isofficer(characterFromID("Two Dogs")))
@@ -946,7 +946,7 @@ void QuestComplete(string sQuestName)
 
 			speaker = "";
 			if (!LAi_IsDead(characterFromID("Ayol Bacha"))) speaker= "Ayol Bacha";
-			if (!LAi_IsDead(characterFromID("Amtуnio Guajira"))) speaker= "Amtуnio Guajira";
+			if (!LAi_IsDead(characterFromID("Amtónio Guajira"))) speaker= "Amtónio Guajira";
 			if (!LAi_IsDead(characterFromID("Coper Blumberger"))) speaker= "Coper Blumberger";
 			if (!LAi_IsDead(characterFromID("Ralph Partridge"))) speaker= "Ralph Partridge";
 			if (!LAi_IsDead(officer2)) speaker= characters[officer2idx].id;
@@ -1012,10 +1012,10 @@ void QuestComplete(string sQuestName)
 				LAi_SetActorType(characterFromID("Coper Blumberger"));
 				LAi_ActorGoToLocator(characterFromID("Coper Blumberger"), "reload", "reload_4_1_back", "",65.0);
 			}
-			if (!LAi_IsDead(characterFromID("Amtуnio Guajira")))
+			if (!LAi_IsDead(characterFromID("Amtónio Guajira")))
 			{
-				LAi_SetActorType(characterFromID("Amtуnio Guajira"));
-				LAi_ActorGoToLocator(characterFromID("Amtуnio Guajira"), "reload", "reload_4_1_back", "",65.0);
+				LAi_SetActorType(characterFromID("Amtónio Guajira"));
+				LAi_ActorGoToLocator(characterFromID("Amtónio Guajira"), "reload", "reload_4_1_back", "",65.0);
 			}
 			if (!LAi_IsDead(characterFromID("Ayol Bacha")))
 			{
@@ -1060,7 +1060,7 @@ void QuestComplete(string sQuestName)
 			}
 			ChangeCharacterAddress(characterFromID("Ralph Partridge"), "None", "");
 			ChangeCharacterAddress(characterFromID("Coper Blumberger"), "None", "");
-			ChangeCharacterAddress(characterFromID("Amtуnio Guajira"), "None", "");
+			ChangeCharacterAddress(characterFromID("Amtónio Guajira"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ayol Bacha"), "None", "");
 			StoreOfficers(PChar.id);
 		break;
@@ -2135,7 +2135,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.kidnap_hostage_dead.win_condition.l1.character = romance.id;
 			PChar.quest.kidnap_hostage_dead.win_condition = "hostage_dead";
 
-			Locations[FindLocation("Redmond_town_03")].reload.l9.disable = 1; // If you have kidnapped Lucнa / Edmundo then you won't get to do the courier jobs
+			Locations[FindLocation("Redmond_town_03")].reload.l9.disable = 1; // If you have kidnapped Lucía / Edmundo then you won't get to do the courier jobs
 		break;
 
 		case "kidnap_governor_returns_to_standpoint":
@@ -2365,7 +2365,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.town_battle.win_condition = "raise_alarm";
 		break;
 
-		case "governors_revenge_fetch_romance":	// Triggered by dialog with "Javier Balboa" if you ransomed Lucнa / Edmundo, rescued them from Downing dungeon, and don't have them as officer
+		case "governors_revenge_fetch_romance":	// Triggered by dialog with "Javier Balboa" if you ransomed Lucía / Edmundo, rescued them from Downing dungeon, and don't have them as officer
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "revenge_failed_to_fetch";
 			PChar.quest.governors_revenge_fetch_romance2.win_condition.l1 = "location";
 			PChar.quest.governors_revenge_fetch_romance2.win_condition.l1.location = "Santiago_town_01";
@@ -2754,8 +2754,8 @@ void QuestComplete(string sQuestName)
 			PChar.quest.abduction_officer_santiago_beach2.win_condition.l1.location = "Cuba_shore_05";
 			PChar.quest.abduction_officer_santiago_beach2.win_condition = "abduction_officer_arrived";
 
-			Locations[FindLocation("Cuba_port")].vcskip = true;	// Otherwise too many random people in Havana means Lucнa / Edmundo can't spawn
-			Locations[FindLocation("Cuba_shore_02")].vcskip = true;	// Otherwise Lucнa / Edmundo strolls past random bandits at Bahia de Moa
+			Locations[FindLocation("Cuba_port")].vcskip = true;	// Otherwise too many random people in Havana means Lucía / Edmundo can't spawn
+			Locations[FindLocation("Cuba_shore_02")].vcskip = true;	// Otherwise Lucía / Edmundo strolls past random bandits at Bahia de Moa
 			Locations[FindLocation("Muelle_shore")].vcskip = true;	// Ditto for Oyster Beach
 			PChar.quest.abduction_officer_havana.win_condition.l1 = "location"; // Check for arrival at Havana and related beaches
 			PChar.quest.abduction_officer_havana.win_condition.l1.location = "Cuba_port";
@@ -5486,7 +5486,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "convoy_Willemstad_Shipyard":
-			SetCharacterRemovable(romance, true); // In case you put Lucнa / Edmundo in command of a ship
+			SetCharacterRemovable(romance, true); // In case you put Lucía / Edmundo in command of a ship
 			Pchar.quest.back_in_Willemstad_town.win_condition.l1 = "location";
 			Pchar.quest.back_in_Willemstad_town.win_condition.l1.location = "Willemstad_town";
 			Pchar.quest.back_in_Willemstad_town.win_condition = "convoy_back_in_Willemstad_town";
@@ -5883,7 +5883,7 @@ void QuestComplete(string sQuestName)
 		case "convoy_final_briefing":
 			SetModelFromID(romance, PChar.quest.romance_model);
 			DeleteQuestAttribute("romance_model");
-			if (!isofficer(romance)) SetOfficersIndex(Pchar, 3, romanceidx);	// Just in case you've somehow managed to replace Lucнa / Edmundo
+			if (!isofficer(romance)) SetOfficersIndex(Pchar, 3, romanceidx);	// Just in case you've somehow managed to replace Lucía / Edmundo
 			ChangeCharacterAddressGroup(romance, GetCharacterShipCabin(PChar), "rld", "startloc");
 			DoQuestReloadToLocation(GetCharacterShipCabin(PChar), "reload", "reload1", "convoy_final_briefing2");
 		break;
@@ -7515,7 +7515,7 @@ void QuestComplete(string sQuestName)
 			if (isofficer(romance) && PChar.quest.alignment == "good") ChangeCharacterAddressGroup(romance, "redmond_residence", "goto", "goto4");
 		break;
 
-		case "treachery_villain_invites_romance":	// Triggered by dialog with Piers / Valerie Downing if Lucнa / Edmundo is with you
+		case "treachery_villain_invites_romance":	// Triggered by dialog with Piers / Valerie Downing if Lucía / Edmundo is with you
 			characters[romanceidx].dialog.CurrentNode = "treachery_reject_villain";
 			LAi_SetActorType(romance);
 //			LAi_ActorDialog(romance,PChar,"treachery_romance_rejects_villain",5.0,5.0); // Doesn't seem to lead to next quest case if 'AddDialogExitQuest' present in dialog
@@ -7549,7 +7549,7 @@ void QuestComplete(string sQuestName)
 			LAi_LocationFightDisable(&Locations[FindLocation("Redmond_Residence")], true);
 		break;
 
-		case "threat_goto_santiago": // Triggered by dialog with Lucнa / Edmundo if present when you visit townhall
+		case "threat_goto_santiago": // Triggered by dialog with Lucía / Edmundo if present when you visit townhall
 			Pchar.quest.threat_romance_goto_Santiago.win_condition.l1 = "location";
 			Pchar.quest.threat_romance_goto_Santiago.win_condition.l1.location = "Redmond_Town_01";
 			Pchar.quest.threat_romance_goto_Santiago.win_condition = "threat_romance_goto_Santiago";
@@ -8656,7 +8656,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetFightMode(PChar, false);
 			Locations[FindLocation("PoPrince_Port")].reload.l4.disable = 1;		// Lock ship
 			bQuestDisableSeaEnter = true;
-			Locations[FindLocation("Buccaneers_Camp")].reload.l4.disable = 0;	// Unlock forger's house - not needed if Lucнa or Edmundo is with you but allow it anyway
+			Locations[FindLocation("Buccaneers_Camp")].reload.l4.disable = 0;	// Unlock forger's house - not needed if Lucía or Edmundo is with you but allow it anyway
 			PChar.quest.ardent_hunt_status = "need_forger";
 			if (isofficer(romance))
 			{
@@ -8954,15 +8954,15 @@ void QuestComplete(string sQuestName)
 			LAi_SetCitizenType(CharacterFromID("Ralph Partridge"));
 			ChangeCharacterAddressGroup(CharacterFromID("Coper Blumberger"), "PoPrince_fakefort3", "rld", "loc12");
 			LAi_SetCitizenType(CharacterFromID("Coper Blumberger"));
-			ChangeCharacterAddressGroup(CharacterFromID("Amtуnio Guajira"), "PoPrince_fakefort3", "rld", "loc13");
-			LAi_SetCitizenType(CharacterFromID("Amtуnio Guajira"));
+			ChangeCharacterAddressGroup(CharacterFromID("Amtónio Guajira"), "PoPrince_fakefort3", "rld", "loc13");
+			LAi_SetCitizenType(CharacterFromID("Amtónio Guajira"));
 
 			RemoveCharacterEquip(CharacterFromID("Ralph Partridge"), BLADE_ITEM_TYPE);
 			RemoveCharacterEquip(CharacterFromID("Coper Blumberger"), BLADE_ITEM_TYPE);
-			RemoveCharacterEquip(CharacterFromID("Amtуnio Guajira"), BLADE_ITEM_TYPE);
+			RemoveCharacterEquip(CharacterFromID("Amtónio Guajira"), BLADE_ITEM_TYPE);
 			TempRemoveItems(CharacterFromID("Ralph Partridge"));
 			TempRemoveItems(CharacterFromID("Coper Blumberger"));
-			TempRemoveItems(CharacterFromID("Amtуnio Guajira"));
+			TempRemoveItems(CharacterFromID("Amtónio Guajira"));
 
 			if (PChar.quest.speaker == "") PChar.quest.speaker = "Ralph Partridge";
 			ChangeCharacterAddressGroup(characterFromID("Fort_guard"), "PoPrince_fakefort3", "goto", "goto4");
@@ -9085,8 +9085,8 @@ void QuestComplete(string sQuestName)
 			LAi_ActorFollowEverywhere(CharacterFromID("Ralph Partridge"), "", 10.0);
 			LAi_SetActorType(CharacterFromID("Coper Blumberger"));
 			LAi_ActorFollowEverywhere(CharacterFromID("Coper Blumberger"), "", 10.0);
-			LAi_SetActorType(CharacterFromID("Amtуnio Guajira"));
-			LAi_ActorFollowEverywhere(CharacterFromID("Amtуnio Guajira"), "", 10.0);
+			LAi_SetActorType(CharacterFromID("Amtónio Guajira"));
+			LAi_ActorFollowEverywhere(CharacterFromID("Amtónio Guajira"), "", 10.0);
 			Pchar.quest.hunt_fort_to_town.win_condition.l1 = "location";
 			Pchar.quest.hunt_fort_to_town.win_condition.l1.location = "PoPrince_town";
 			PChar.quest.hunt_fort_to_town.win_condition = "hunt_out_of_fort";
@@ -9099,7 +9099,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.hunt_romance_forges_papers.over = "yes";	// Clear out any quest checks which may be left if you started
 			PChar.quest.hunt_forger_next_day.over = "yes";		// to get forgery and then switched to violent escape
 //			Locations[FindLocation("Buccaneers_Camp")].reload.l4.disable = 1;	// Re-lock forger's house
-			if (isofficer(romance))					// Also reset "romance" in case Lucнa/Edmundo is still in "follow" mode
+			if (isofficer(romance))					// Also reset "romance" in case Lucía/Edmundo is still in "follow" mode
 			{
 				LAi_SetOfficerType(romance); 
 				SetCharacterRemovable(romance, true);
@@ -9200,13 +9200,13 @@ void QuestComplete(string sQuestName)
 			}
 			RestoreTempRemovedItems(CharacterFromID("Ralph Partridge"));
 			RestoreTempRemovedItems(CharacterFromID("Coper Blumberger"));
-			RestoreTempRemovedItems(CharacterFromID("Amtуnio Guajira"));
+			RestoreTempRemovedItems(CharacterFromID("Amtónio Guajira"));
 			LAi_SetCitizenType(CharacterFromID("Ralph Partridge"));
 			LAi_SetCitizenType(CharacterFromID("Coper Blumberger"));
-			LAi_SetCitizenType(CharacterFromID("Amtуnio Guajira"));
+			LAi_SetCitizenType(CharacterFromID("Amtónio Guajira"));
 			ChangeCharacterAddress(characterFromID("Ralph Partridge"), "None", "");
 			ChangeCharacterAddress(characterFromID("Coper Blumberger"), "None", "");
-			ChangeCharacterAddress(characterFromID("Amtуnio Guajira"), "None", "");
+			ChangeCharacterAddress(characterFromID("Amtónio Guajira"), "None", "");
 
 			Pchar.quest.French_fleet_setup.win_condition.l1 = "location";
 			Pchar.quest.French_fleet_setup.win_condition.l1.location = "Redmond";
@@ -11444,12 +11444,12 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterfromID("Jusepe Guimaraes"), "Havana_House_03", "sit", "sit1");
 			LAi_SetHuberType(characterfromID("Jusepe Guimaraes"));
 
-			NPChar = CharacterFromID("Emiliano de Guzmбn");
+			NPChar = CharacterFromID("Emiliano de Guzmán");
 			ChangeCharacterAddress(CharacterFromID(Towns[GetTownIndex("Santiago")].gov), "none", "");
 			ChangeCharacterAddressGroup(NPChar, "Santiago_townhall", "sit", "sit1");
 			LAi_SetHuberType(NPChar);
-			Towns[GetTownIndex("Santiago")].gov = "Emiliano de Guzmбn";
-			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 1;	// Lock Santiago townhall so you can't face Emiliano de Guzmбn until the right time
+			Towns[GetTownIndex("Santiago")].gov = "Emiliano de Guzmán";
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 1;	// Lock Santiago townhall so you can't face Emiliano de Guzmán until the right time
 
 			LAi_Fade("imperial_escort_next_night_in_jail", "imperial_escort_rescuer_arrives");
 		break;
@@ -11840,7 +11840,7 @@ void QuestComplete(string sQuestName)
 
 		case "imperial_escort_agent_captured":
 			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
-			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
 			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
 			switch(GetAttribute(PChar, "quest.imperial_escort.disguise"))
@@ -12197,7 +12197,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetOfficerType(romance);
 			SetCharacterRemovable(romance, false);
 			PChar.quest.imperial_escort.romance_slot = -1;
-			for(i=1; i<OFFICER_MAX; i++)				// Find which slot Lucнa/Edmundo is occupying in case you manage to displace them by recruiting a new officer
+			for(i=1; i<OFFICER_MAX; i++)				// Find which slot Lucía/Edmundo is occupying in case you manage to displace them by recruiting a new officer
 			{
 				if(GetOfficersIndex(PChar,i) == romanceidx) PChar.quest.imperial_escort.romance_slot = i;
 			}
@@ -12236,7 +12236,7 @@ void QuestComplete(string sQuestName)
 		case "imperial_escort_havana_arrival_for_ether":
 			StartQuestMovie(false, false, false);
 			DisableFastTravel(true);
-			if(!IsOfficer(romance) || romance.location != PChar.location)	// If Lucнa/Edmundo has somehow been displaced, put them back
+			if(!IsOfficer(romance) || romance.location != PChar.location)	// If Lucía/Edmundo has somehow been displaced, put them back
 			{
 				SetOfficersIndex(PChar, sti(PChar.quest.imperial_escort.romance_slot), romanceidx);
 				ChangeCharacterAddressGroup(romance,"Cuba_Port", "officers", "Sea_2_"+PChar.quest.imperial_escort.romance_slot);
@@ -12542,7 +12542,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(NPChar, false);
 			NPChar.AbordageMode = 0;
 			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
-			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
 			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
 			AddQuestRecord("Imperial Escort", 28);
@@ -12738,7 +12738,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(NPChar, false);
 			NPChar.AbordageMode = 0;
 			Preprocessor_AddQuestData("agent", GetMyFullName(CharacterFromID("Jaime Lezcano")));
-			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
 			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
 			AddQuestRecord("Imperial Escort", 41);
@@ -12953,28 +12953,28 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_after_rescue_arrest":
-			ChangeCharacterAddressGroup(CharacterFromID("Emiliano de Guzmбn"), "Santiago_townhall", "goto", "goto3");
-			LAi_SetHuberStayType(CharacterFromID("Emiliano de Guzmбn"));
-			TakeItemFromCharacter(CharacterFromID("Emiliano de Guzmбn"), FindCharacterItemByGroup(CharacterFromID("Emiliano de Guzmбn"), BLADE_ITEM_TYPE));
+			ChangeCharacterAddressGroup(CharacterFromID("Emiliano de Guzmán"), "Santiago_townhall", "goto", "goto3");
+			LAi_SetHuberStayType(CharacterFromID("Emiliano de Guzmán"));
+			TakeItemFromCharacter(CharacterFromID("Emiliano de Guzmán"), FindCharacterItemByGroup(CharacterFromID("Emiliano de Guzmán"), BLADE_ITEM_TYPE));
 			if (ENABLE_WEAPONSMOD)
 			{
-				GiveItem2Character(CharacterFromID("Emiliano de Guzmбn"),"bladeC17+2");
-				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmбn"),"bladeC17+2");
+				GiveItem2Character(CharacterFromID("Emiliano de Guzmán"),"bladeC17+2");
+				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmán"),"bladeC17+2");
 			}
 			else
 			{
-				GiveItem2Character(CharacterFromID("Emiliano de Guzmбn"),"bladeC17");
-				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmбn"),"bladeC17");
+				GiveItem2Character(CharacterFromID("Emiliano de Guzmán"),"bladeC17");
+				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmán"),"bladeC17");
 			}
-			if (!CheckCharacterItem(CharacterFromID("Emiliano de Guzmбn"), "goldarmor"))
+			if (!CheckCharacterItem(CharacterFromID("Emiliano de Guzmán"), "goldarmor"))
 			{
-				GiveItem2Character(CharacterFromID("Emiliano de Guzmбn"), "goldarmor");
-				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmбn"), "goldarmor");
+				GiveItem2Character(CharacterFromID("Emiliano de Guzmán"), "goldarmor");
+				EquipCharacterByItem(CharacterFromID("Emiliano de Guzmán"), "goldarmor");
 			}
-			Characters[GetCharacterIndex("Emiliano de Guzmбn")].perks.list.BasicDefence = true;		// Need to assign abilities here because levelling system fouls them up earlier
-			Characters[GetCharacterIndex("Emiliano de Guzmбn")].perks.list.AdvancedDefence = true;
-			Characters[GetCharacterIndex("Emiliano de Guzmбn")].perks.list.SwordplayProfessional = true;
-			Characters[GetCharacterIndex("Emiliano de Guzmбn")].perks.list.CriticalHit = true;
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].perks.list.BasicDefence = true;		// Need to assign abilities here because levelling system fouls them up earlier
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].perks.list.AdvancedDefence = true;
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].perks.list.SwordplayProfessional = true;
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].perks.list.CriticalHit = true;
 			NPChar = CharacterFromID("Imperial_envoy");
 			if (NPChar.location != PChar.location)
 			{
@@ -13076,7 +13076,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorFollowEverywhere(NPChar, "", 5.0);
 			LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
 
-			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
 			AddQuestRecord("Imperial Escort", 42);
 			Preprocessor_Remove("envoy");
@@ -13101,12 +13101,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_after_rescue_onto_townhall4":
-			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;	// Unlock Santiago townhall so you can confront Emiliano de Guzmбn
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;	// Unlock Santiago townhall so you can confront Emiliano de Guzmán
 			Locations[FindLocation("Santiago_town_01")].locators_radius.reload.reload4 = 1.0;
 			LAi_SetPlayerType(PChar);
 			LAi_SetActorType(CharacterFromID("Imperial_envoy"));
 
-			Characters[GetCharacterIndex("Emiliano de Guzmбn")].dialog.CurrentNode = "revenge";
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].dialog.CurrentNode = "revenge";
 			PChar.quest.imperial_escort_setup_guzman.win_condition.l1 = "location";
 			PChar.quest.imperial_escort_setup_guzman.win_condition.l1.location = "Santiago_townhall";
 			PChar.quest.imperial_escort_setup_guzman.win_condition = "imperial_escort_setup_guzman";
@@ -13116,7 +13116,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l1.locator_group = "reload";
 			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l1.locator = "reload4";
 			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l2 = "NPC_Death";
-			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l2.character = "Emiliano de Guzmбn";
+			PChar.quest.imperial_escort_guzman_defeated_1.win_condition.l2.character = "Emiliano de Guzmán";
 			PChar.quest.imperial_escort_guzman_defeated_1.win_condition = "imperial_escort_guzman_defeated_1";
 		break;
 
@@ -13233,7 +13233,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_SetActorType(CharacterFromID("Jusepe Guimaraes"));
 			Characters[GetCharacterIndex("Jusepe Guimaraes")].dialog.CurrentNode = "imperial_escort_that_seems_fair";
-			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_envoy_to_admiral_again",1.0);		// Exits, triggers "imperial_escort_go_get_guzman" if Emiliano de Guzmбn is still alive
+			LAi_ActorDialogNow(CharacterFromID("Jusepe Guimaraes"), PChar,"imperial_escort_envoy_to_admiral_again",1.0);		// Exits, triggers "imperial_escort_go_get_guzman" if Emiliano de Guzmán is still alive
 
 // See cases "imperial_escort_admiral_leaves2" and "imperial_escort_ships_impounded"
 		break;
@@ -13250,22 +13250,22 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_go_get_guzman":
-			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
 			AddQuestRecord("Imperial Escort", 47);
 			Preprocessor_Remove("admiral");
 			Preprocessor_Remove("evilgov");
 			PChar.quest.imperial_escort.arrest_guzman = true;
-			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;		// Unlock Santiago townhall so you can confront Emiliano de Guzmбn
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;		// Unlock Santiago townhall so you can confront Emiliano de Guzmán
 			Locations[FindLocation("Santiago_town_01")].reload.l4.close_for_night = 0;	// by day or night
-			Characters[GetCharacterIndex("Emiliano de Guzmбn")].dialog.CurrentNode = "arrest";
+			Characters[GetCharacterIndex("Emiliano de Guzmán")].dialog.CurrentNode = "arrest";
 			LAi_QuestDelay("imperial_escort_soldiers_join", 0.5);
 			PChar.quest.imperial_escort_setup_guzman.win_condition.l1 = "location";
 			PChar.quest.imperial_escort_setup_guzman.win_condition.l1.location = "Santiago_townhall";
 			PChar.quest.imperial_escort_setup_guzman.win_condition = "imperial_escort_setup_guzman";
 
 //			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1 = "NPC_Death";
-//			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1.character = "Emiliano de Guzmбn";
+//			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1.character = "Emiliano de Guzmán";
 //			PChar.quest.imperial_escort_guzman_defeated_2.win_condition = "imperial_escort_guzman_defeated_2";
 		break;
 
@@ -13346,7 +13346,7 @@ void QuestComplete(string sQuestName)
 			if (!CheckAttribute(PChar, "quest.imperial_escort.arrest_guzman") || sti(PChar.quest.imperial_escort.arrest_guzman) != true)
 			{
 				LAi_QuestDelay("imperial_escort_remove_soldiers", 0.1);
-				Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+				Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 				Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
 				AddQuestRecord("Imperial Escort", 49);
 				Preprocessor_Remove("governor");
@@ -13433,7 +13433,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_soldiers_outside_townhall2":
-			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;	// Unlock Santiago townhall so you can confront Emiliano de Guzmбn
+			Locations[FindLocation("Santiago_town_01")].reload.l4.disable = 0;	// Unlock Santiago townhall so you can confront Emiliano de Guzmán
 			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier1"));
 			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier2"));
 			LAi_SetActorType(CharacterFromID("Spanish_soldier3"));
@@ -13446,7 +13446,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1.locator_group = "reload";
 			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l1.locator = "reload4";
 			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l2 = "NPC_Death";
-			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l2.character = "Emiliano de Guzmбn";
+			PChar.quest.imperial_escort_guzman_defeated_2.win_condition.l2.character = "Emiliano de Guzmán";
 			PChar.quest.imperial_escort_guzman_defeated_2.win_condition = "imperial_escort_guzman_defeated_2";
 		break;
 
@@ -13459,12 +13459,12 @@ void QuestComplete(string sQuestName)
 			LAi_type_actor_Reset(CharacterFromID("Spanish_soldier4"));
 		break;
 
-		case "imperial_escort_fight_guzman":	// Triggered by dialog with Emiliano de Guzmбn
+		case "imperial_escort_fight_guzman":	// Triggered by dialog with Emiliano de Guzmán
 			LAi_LocationFightDisable(&Locations[FindLocation("Santiago_townhall")], false);
-			LAi_SetActorType(CharacterFromID("Emiliano de Guzmбn"));
-			LAi_SetImmortal(CharacterFromID("Emiliano de Guzmбn"), false);
-			LAi_NoRebirthEnable(CharacterFromID("Emiliano de Guzmбn"));
-			LAi_group_MoveCharacter(CharacterFromID("Emiliano de Guzmбn"), LAI_GROUP_MONSTERS);
+			LAi_SetActorType(CharacterFromID("Emiliano de Guzmán"));
+			LAi_SetImmortal(CharacterFromID("Emiliano de Guzmán"), false);
+			LAi_NoRebirthEnable(CharacterFromID("Emiliano de Guzmán"));
+			LAi_group_MoveCharacter(CharacterFromID("Emiliano de Guzmán"), LAI_GROUP_MONSTERS);
 			if (CheckAttribute(PChar, "quest.imperial_escort.guards_join_guzman") && sti(PChar.quest.imperial_escort.guards_join_guzman) == true)
 			{
 				LAi_group_MoveCharacter(CharacterFromID("Spanish_soldier3"), LAI_GROUP_MONSTERS);
@@ -13489,7 +13489,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_guzman_defeated_1a":
-			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("envoy", GetMyFullName(CharacterFromID("Imperial_envoy")));
 			AddQuestRecord("Imperial Escort", 43);
 			Preprocessor_Remove("envoy");
@@ -13503,7 +13503,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "imperial_escort_guzman_defeated_2":
-			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("admiral", GetMyFullName(CharacterFromID("Jusepe Guimaraes")));
 			AddQuestRecord("Imperial Escort", 48);
 			Preprocessor_Remove("admiral");
@@ -13540,11 +13540,11 @@ void QuestComplete(string sQuestName)
 
 		case "imperial_escort_restore_santiago_governor":	// Triggered by dialog with Jusepe Guimaraes
 			NPChar = CharacterFromID("Javier Balboa");
-			ChangeCharacterAddress(CharacterFromID("Emiliano de Guzmбn"), "none", "");
+			ChangeCharacterAddress(CharacterFromID("Emiliano de Guzmán"), "none", "");
 			ChangeCharacterAddressGroup(NPChar, "Santiago_townhall", "sit", "sit1");
 			LAi_SetHuberType(NPChar);
 			Towns[GetTownIndex("Santiago")].gov = "Javier Balboa";
-			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmбn")));
+			Preprocessor_AddQuestData("evilgov", GetMyFullName(CharacterFromID("Emiliano de Guzmán")));
 			Preprocessor_AddQuestData("governor", GetMyFullName(CharacterFromID("Javier Balboa")));
 			AddQuestRecord("Imperial Escort", 49);
 			Preprocessor_Remove("governor");

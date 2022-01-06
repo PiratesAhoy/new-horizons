@@ -22,7 +22,7 @@ string DLG_TEXT[251] = {
 "Dinner!",	//20
 "Very good, let's eat.",
 "What's dat, massa?",
-"A scrap of dirty paper I think. But I can use it to catch the scarabжus!",
+"A scrap of dirty paper I think. But I can use it to catch the scarabæus!",
 "Oh it's getting late - I go to bed now massa Will - I have lock de door for night.",
 "Thank you. One thing Jupiter, do you know where the large cauldron is?",
 "Down stairs.",

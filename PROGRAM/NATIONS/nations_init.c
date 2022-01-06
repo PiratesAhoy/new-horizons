@@ -476,30 +476,30 @@ void InitNations()
 	// NK -->
 	rNation.Ranks.Quantity = 12;
 	rNation.Ranks.1 = "Aspirante";
-	rNation.Ranks.2 = "Alfйrez de Fragate";
-	rNation.Ranks.3 = "Alfйrez de Navнo";
-	rNation.Ranks.4 = "Teniente de Navнo";
-	rNation.Ranks.5 = "Capitбn de Corbeta";
-	rNation.Ranks.6 = "Capitбn de Fragata";
-	rNation.Ranks.7 = "Capitбn de Navнo";
+	rNation.Ranks.2 = "Alférez de Fragate";
+	rNation.Ranks.3 = "Alférez de Navío";
+	rNation.Ranks.4 = "Teniente de Navío";
+	rNation.Ranks.5 = "Capitán de Corbeta";
+	rNation.Ranks.6 = "Capitán de Fragata";
+	rNation.Ranks.7 = "Capitán de Navío";
 	rNation.Ranks.8 = "Contra Almirante";
 	rNation.Ranks.9 = "Vice Almirante";
 	rNation.Ranks.10 = "Almirante";
-	rNation.Ranks.11 = "Capitбn General";
+	rNation.Ranks.11 = "Capitán General";
 	rNation.Ranks.12 = "Almirante General";
 	rNation.Titles.Quantity = 12;
 	rNation.Titles.1 = "Aspirante";
-	rNation.Titles.2 = "Alfйrez de Fragate";
-	rNation.Titles.3 = "Alfйrez de Navнo";
-	rNation.Titles.4 = "Teniente de Navнo";
-	rNation.Titles.5 = "Capitбn de Corbeta";
-	rNation.Titles.6 = "Capitбn de Fragata";
+	rNation.Titles.2 = "Alférez de Fragate";
+	rNation.Titles.3 = "Alférez de Navío";
+	rNation.Titles.4 = "Teniente de Navío";
+	rNation.Titles.5 = "Capitán de Corbeta";
+	rNation.Titles.6 = "Capitán de Fragata";
 	rNation.Titles.7 = "Hidalgo";
 	rNation.Titles.8 = "Caballero";
-	rNation.Titles.9 = "Barуn";
+	rNation.Titles.9 = "Barón";
 	rNation.Titles.10 = "Vizconde";
 	rNation.Titles.11 = "Conde";
-	rNation.Titles.12 = "Marquйs";
+	rNation.Titles.12 = "Marqués";
 	// NK <--
 
 	//Pirate
@@ -905,9 +905,9 @@ void InitNations()
 	rNation.Ranks.2 = "Subtenente";
 	rNation.Ranks.3 = "Segundo-Tenente";
 	rNation.Ranks.4 = "Primeiro-Tenente";
-	rNation.Ranks.5 = "CapitЭo-Tenente";
-	rNation.Ranks.6 = "CapitЭo-de-Fragata";
-	rNation.Ranks.7 = "CapitЭo-de-Mar-e-Guerra";
+	rNation.Ranks.5 = "CapitÝo-Tenente";
+	rNation.Ranks.6 = "CapitÝo-de-Fragata";
+	rNation.Ranks.7 = "CapitÝo-de-Mar-e-Guerra";
 	rNation.Ranks.8 = "Comodoro";
 	rNation.Ranks.9 = "Contra-Almirante";
 	rNation.Ranks.10 = "Vice-Almirante";
@@ -918,14 +918,14 @@ void InitNations()
 	rNation.Titles.2 = "Subtenente";
 	rNation.Titles.3 = "Segundo-Tenente";
 	rNation.Titles.4 = "Primeiro-Tenente";
-	rNation.Titles.5 = "CapitЭo-Tenente";
-	rNation.Titles.6 = "CapitЭo-de-Fragata";
+	rNation.Titles.5 = "CapitÝo-Tenente";
+	rNation.Titles.6 = "CapitÝo-de-Fragata";
 	rNation.Titles.7 = "Fidalgo";
 	rNation.Titles.8 = "Cavaleiro";
-	rNation.Titles.9 = "BarЭo";
+	rNation.Titles.9 = "BarÝo";
 	rNation.Titles.10 = "Visconde";
 	rNation.Titles.11 = "Conde";
-	rNation.Titles.12 = "Marquкs";
+	rNation.Titles.12 = "Marquês";
 	// NK <--
 
 // KK -->
@@ -1066,31 +1066,31 @@ void InitNations()
 
 			// JRH -->
 			rNation.Ranks.Quantity = 12;
-			rNation.Ranks.1 = "Underlцjtnant";
-			rNation.Ranks.2 = "Цverlцjtnant";
-			rNation.Ranks.3 = "Kaptenlцjtnant";
+			rNation.Ranks.1 = "Underlöjtnant";
+			rNation.Ranks.2 = "Överlöjtnant";
+			rNation.Ranks.3 = "Kaptenlöjtnant";
 			rNation.Ranks.4 = "Kapten";
-			rNation.Ranks.5 = "Цrlogskapten";
-			rNation.Ranks.6 = "Kommendцrkapten";
-			rNation.Ranks.7 = "Kommendцr";
+			rNation.Ranks.5 = "Örlogskapten";
+			rNation.Ranks.6 = "Kommendörkapten";
+			rNation.Ranks.7 = "Kommendör";
 			rNation.Ranks.8 = "Schoutbynacht";
 			rNation.Ranks.9 = "Konteramiral";
 			rNation.Ranks.10 = "Viceamiral";
 			rNation.Ranks.11 = "Amiral";
 			rNation.Ranks.12 = "Riksamiral";
 			rNation.Titles.Quantity = 12;
-			rNation.Titles.1 = "Underlцjtnant";
-			rNation.Titles.2 = "Цverlцjtnant";
-			rNation.Titles.3 = "Kaptenlцjtnant";
+			rNation.Titles.1 = "Underlöjtnant";
+			rNation.Titles.2 = "Överlöjtnant";
+			rNation.Titles.3 = "Kaptenlöjtnant";
 			rNation.Titles.4 = "Kapten";
-			rNation.Titles.5 = "Цrlogskapten";
-			rNation.Titles.6 = "Kommendцrkapten";
+			rNation.Titles.5 = "Örlogskapten";
+			rNation.Titles.6 = "Kommendörkapten";
 			rNation.Titles.7 = "Riddare";
 			rNation.Titles.8 = "Friherre";
 			rNation.Titles.9 = "Greve";
-			rNation.Titles.10 = "Borgmдstare";
-			rNation.Titles.11 = "Landshцvding";
-			rNation.Titles.12 = "Riksrеd";
+			rNation.Titles.10 = "Borgmästare";
+			rNation.Titles.11 = "Landshövding";
+			rNation.Titles.12 = "Riksråd";
 			// JRH <--
 		}
 	}

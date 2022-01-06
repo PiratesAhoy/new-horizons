@@ -5,7 +5,7 @@ string DLG_TEXT[62] = {
 "Yes, Captain. Sorry, I don't think we've met before.",
 "I am Captain Foster of the Dreadnought and pleased to meet you, no doubt.",
 "A pleasure to meet you, sir. I am Lieutenant ",
-", newly made captain of Le Rкve and this is Major Wellesley of the...",
+", newly made captain of Le Rêve and this is Major Wellesley of the...",
 "Yes, yes indeed. Well no time for all the niceties. I am in need of your ship Lieutenant.",
 "Sir?",
 "Pay attention man. I will repeat myself. I am Captain Foster of the Dreadnought, a very important ship in these waters, and I need to get back to her. You will take me. Do you understand?",

@@ -2133,7 +2133,7 @@ void QuestComplete(string sQuestName)
 
 		case "Now_get_to_see_Petros_house":
 			Pchar.Quest.Captured_on_Guadeloupe.over = "yes";
-			ChangeCharacterAddress(characterFromID("Franзois de Vigny"), "None", "");
+			ChangeCharacterAddress(characterFromID("François de Vigny"), "None", "");
 			ChangeCharacterAddressGroup(characterFromID("Konrad Kulczycki"),"Guadeloupe_Plantation_inside", "goto", "goto5");
 			ChangeCharacterAddressGroup(characterFromID("Petros"),"Guadeloupe_Plantation_inside", "sit", "sit1");
 			LAi_SetSitType(characterfromID("Petros"));
@@ -8381,7 +8381,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "locator10");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "locator10");
 			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -8393,25 +8393,25 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "locator8");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "locator8");
 			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "locator11");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "locator11");
 			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "locator13");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "locator13");
 			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "soldier03");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "soldier03");
 			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -8462,7 +8462,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "Falaise_de_fleur_location_03_02_3");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "officers", "Falaise_de_fleur_location_03_02_3");
 			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -8474,25 +8474,25 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "locator8");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "locator8");
 			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "sitizen05");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "sitizen05");
 			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "officers", "Falaise_de_fleur_shipyard_3");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "officers", "Falaise_de_fleur_shipyard_3");
 			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "Falaise_de_fleur_shipyard_1");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "officers", "Falaise_de_fleur_shipyard_1");
 			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);

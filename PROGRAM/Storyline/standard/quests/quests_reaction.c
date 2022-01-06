@@ -3137,7 +3137,7 @@ void QuestComplete(string sQuestName)
 			{
 				Characters[GetCharacterIndex("Skull")].Dialog.Filename.GroupDialog = Characters[GetCharacterIndex("Isenbrandt Jurcksen")].Dialog.Filename.GroupDialog;
 			}
-			Towns[GetTownIndex("Quebradas Costillas")].gov = "Skull";						// PB: Set this for real
+			Towns[GetTownIndex("Quebradas Costillas")].gov = "Skull";								// PB: Set this for real
 			ChangeCharacterAddress(characterFromID("Isenbrandt Jurcksen"), "none", "");				// PB: Just in case
 
 			Pchar.quest.Story_LandedOnKhaelRoa.win_condition.l1 = "location";

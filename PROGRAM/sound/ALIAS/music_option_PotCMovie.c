@@ -163,7 +163,7 @@ void RegisterOptionalMusicScheme()
 	switch (LanguageGetLanguage())
 	{
 		case "Polish":
-			rms.(lnode).name = "Piraci z Karaibуw";
+			rms.(lnode).name = "Piraci z Karaibów";
 		break;
 		// default:
 			rms.(lnode).name = "Pirates of the Caribbean";

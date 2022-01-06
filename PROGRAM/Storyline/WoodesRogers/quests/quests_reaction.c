@@ -1872,7 +1872,7 @@ void QuestComplete(string sQuestName)
 			int p1; int p2; int p3; int p4; int p5;	int ptot;
 
 			if(CheckAttribute(Pchar,"quest.wr_quest1") && Pchar.quest.wr_quest1 == "off") return;
-			//after QC: donґt read here no more, go instead to "QC_sound_check_done"
+			//after QC: don´t read here no more, go instead to "QC_sound_check_done"
 
 
 			//this is what can happen - no other cases
@@ -2248,7 +2248,7 @@ void QuestComplete(string sQuestName)
 				case "visit_Natalia":
 					Characters[GetCharacterIndex("Wench1")].dialog.Filename  = "wench_dialog.c";
 					ChangeCharacterAddress(characterFromID("Wench1"), "QC_brothel", "goto6");
-					pchar.quest.wr_quest2 = "neutral";//so the same girl doesnґt teleports again & again to goto6
+					pchar.quest.wr_quest2 = "neutral";//so the same girl doesn´t teleports again & again to goto6
 					LAi_QuestDelay("after_wench", 0.1);
 				break;
 
@@ -5266,7 +5266,7 @@ void QuestComplete(string sQuestName)
 			LAi_QuestDelay("shya_take_sack_box6", 0.1);
 		break;
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-//[2Ѕ] from here
+//[2½] from here
 		case "fill_shya_boxes":
 			pchar.quest.fill_shya_boxes1.win_condition.l1 = "locator";
 			pchar.quest.fill_shya_boxes1.win_condition.l1.location = "QC_shipyard2_JRH";
@@ -9416,7 +9416,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.disable = 0;
 
 			pchar.quest.padlock_shop.win_condition.l1 = "location";
@@ -9455,7 +9455,7 @@ void QuestComplete(string sQuestName)
 		case "shop_closet0":
 			ChangeCharacterAddressGroup(CharacterFromID("Dave Edna"), "wr_shop", "reload", "reload3");
 			LAi_SetStayType(CharacterFromID("Dave Edna"));
-			Locations[FindLocation("wr_shop")].reload.l3.disable = 0;//to shop entrй
+			Locations[FindLocation("wr_shop")].reload.l3.disable = 0;//to shop entré
 			Locations[FindLocation("Redmond_Town_01")].reload.l27.disable = 0;//to shop
 			LAi_QuestDelay("shop_closet1", 0.5);
 		break;
@@ -15125,7 +15125,7 @@ void QuestComplete(string sQuestName)
 			//Log_SetStringToLog("2F");
 		break;
 
-		case "mine_lights_3F":ґ
+		case "mine_lights_3F":´
 			if(CheckAttribute(Pchar,"quest.very_foggy_mine") && Pchar.quest.very_foggy_mine == "yes")
 			{
 				Pchar.quest.mine_skeletons = "mode3";
@@ -15134,7 +15134,7 @@ void QuestComplete(string sQuestName)
 			else
 			{
 				Pchar.quest.mine_skeletons = "mode2";
-				LAi_QuestDelay("mine_skeletons_mode2", 0.1);	//endast hдr & ett stдlle till
+				LAi_QuestDelay("mine_skeletons_mode2", 0.1);	//endast här & ett ställe till
 			}
 
 			Locations[FindLocation("wr_mine_control")].image = "";
@@ -15362,7 +15362,7 @@ void QuestComplete(string sQuestName)
 				else
 				{
 					Pchar.quest.mine_skeletons = "mode2";
-					LAi_QuestDelay("mine_skeletons_mode2", 0.1);	//endast hдr & ett stдlle till
+					LAi_QuestDelay("mine_skeletons_mode2", 0.1);	//endast här & ett ställe till
 				}
 
 				Locations[FindLocation("wr_dungeon3_right")].models.always.locators = "d03_l_JRH_R1";
@@ -27375,7 +27375,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("grandma_finale", 3.0);
 		break;
-//pдr end
+//pär end
 		case "grandma_finale":
 			LAi_SetActorType(CharacterFromID("grandma"));
 			LAi_ActorDialog(characterFromID("grandma"), pchar, "", 0.0, 0.0);
@@ -27647,7 +27647,7 @@ void QuestComplete(string sQuestName)
 
 			DoQuestReloadToLocation("Santiago_townhall", "quest", "pyle" ,"B_A1");
 		break;
-//pдr bonus
+//pär bonus
 	//................................................................................................
 		case "glass_on_stool_sound":
 			PlaySound("PEOPLE\step_stairway2.wav");
@@ -36046,7 +36046,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.escape_mummies.win_condition.l1.location = "wr_animists";
 			pchar.quest.escape_mummies.win_condition = "escape_mummies";
 		break;
-//pдr rain
+//pär rain
 		case "escape_mummies":
 			PlaySound("INTERFACE\closed_locked_door.wav");
 			Locations[FindLocation("wr_animists")].reload.l1.disable = 1;
@@ -42038,7 +42038,7 @@ void QuestComplete(string sQuestName)
 		case "end_corvette_fight7":
 			LAi_ActorGoToLocator(characterFromID("Selkirk"), "goto", "unlock_key", "end_corvette_fight8", 2.0);
 		break;
-//pдr wr_ships some locators small
+//pär wr_ships some locators small
 		case "end_corvette_fight8":
 			PlaySound("INTERFACE\key_unlock.wav");
 			Locations[FindLocation("wr_corv_capmd")].reload.l1.disable = 0;		//to wr_ships
@@ -42247,7 +42247,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("corvette_broadside1", 1.5);
 		break;
-//pдr p20 fix
+//pär p20 fix
 		case "corvette_broadside1":
 			PlaySound("VOICE\ENGLISH\alarm1.wav");
 			ChangeCharacterAddressGroup(characterFromID("wr_pir7"), "wr_ships", "goto", "alarm");
@@ -43602,7 +43602,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("galleon_search10", 1.0);
 		break;
-//pдr guncrew neutral 1
+//pär guncrew neutral 1
 		case "galleon_search10":
 			PlaySound("INTERFACE\closed_door.wav");
 			LAi_SetPlayerType(Pchar);
@@ -43660,7 +43660,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(Pchar, characterFromID("guncrew_1"));
 			Characters[GetCharacterIndex("guncrew_1")].dialog.CurrentNode  = "anvil";
 		break;
-//pдr guncrew neutral 2
+//pär guncrew neutral 2
 		case "anvil_push":
 			//from guncrew_1 dialog
 			PlaySound("OBJECTS\DUEL\woman_hit3.wav");
@@ -44829,7 +44829,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.galleon_sinking7.win_condition.l1.location = "wr_ships";
 			pchar.quest.galleon_sinking7.win_condition = "galleon_sinking7";
 		break;
-//pдr pyle turn
+//pär pyle turn
 		case "galleon_sinking7":
 			PlaySound("OBJECTS\SHIPCHARGE\_Abandon0.wav");
 
@@ -45208,7 +45208,7 @@ void QuestComplete(string sQuestName)
 		case "galleon_sinking20":
 			PostVideoAndQuest("Undersea",1, "galleon_sinking21");
 		break;
-//pдr small loc wr_corvette
+//pär small loc wr_corvette
 		case "galleon_sinking21":
 			SetCurrentTime(7.00, 0);
 			SetNextWeather("Clear");
@@ -46648,18 +46648,18 @@ void QuestComplete(string sQuestName)
 		case "fill_secret_box":
 			Pchar.quest.drawing_kit = "none";
 
-			locations[FindLocation(Pchar.location)].box1.items.red_uniform = 1;	//mycket snygg kostym, ihoplagd, aldrig anvдnd
+			locations[FindLocation(Pchar.location)].box1.items.red_uniform = 1;	//mycket snygg kostym, ihoplagd, aldrig använd
 			locations[FindLocation(Pchar.location)].box1.items.sextant = 1;		//kvadrant
 			locations[FindLocation(Pchar.location)].box1.items.tin_jug = 1;		//liten tennkanna
-			locations[FindLocation(Pchar.location)].box1.items.tobacco = 3;		//flera tobaksflдtor
+			locations[FindLocation(Pchar.location)].box1.items.tobacco = 3;		//flera tobaksflätor
 			locations[FindLocation(Pchar.location)].box1.items."pistol9+2" = 2;	//2 par mycket vackra pistoler
 			locations[FindLocation(Pchar.location)].box1.items.silver_bar = 1;	//silvertacka
 			locations[FindLocation(Pchar.location)].box1.items.clock1 = 1;		//gammal spansk klocka och (1 el 2 itms)
- 			locations[FindLocation(Pchar.location)].box1.items.foreign_items = 1;	//nеgra andra smеsaker av ringa vдrde
-			locations[FindLocation(Pchar.location)].box1.items.drawing_kit = 1;	//cirkelbestick av mдssing
-			locations[FindLocation(Pchar.location)].box1.items.strange_shells = 1;	//5 el 6 underliga snдckor
-			locations[FindLocation(Pchar.location)].box1.items.package = 1;		//gammal sjцmanskappa, med oljedukspaket (karta + anteckningsbok)
-			locations[FindLocation(Pchar.location)].box1.items.temp_purse = 2660;	//pеse med pengar
+ 			locations[FindLocation(Pchar.location)].box1.items.foreign_items = 1;	//några andra småsaker av ringa värde
+			locations[FindLocation(Pchar.location)].box1.items.drawing_kit = 1;	//cirkelbestick av mässing
+			locations[FindLocation(Pchar.location)].box1.items.strange_shells = 1;	//5 el 6 underliga snäckor
+			locations[FindLocation(Pchar.location)].box1.items.package = 1;		//gammal sjömanskappa, med oljedukspaket (karta + anteckningsbok)
+			locations[FindLocation(Pchar.location)].box1.items.temp_purse = 2660;	//påse med pengar
 
 	//		LAi_QuestDelay("red_uniform", 0.1);
 
@@ -49248,7 +49248,7 @@ void QuestComplete(string sQuestName)
 			
 			LAi_QuestDelay("Shipyard_shore_ambush_officers1", 0.75);
 		break;
-//pдr kill
+//pär kill
 		case "Shipyard_shore_ambush_officers1":
 			PlaySound("OBJECTS\DUEL\pistol_bbus.wav");
 			CreateParticleSystem("gunfire" , -21.4, 6.1, 45.3, -21.4, 6.1, 45.3, sti(20) );
@@ -50205,7 +50205,7 @@ void QuestComplete(string sQuestName)
 
 
 
-//pдr jump starts
+//pär jump starts
 
 	//....................................................................................................
 
@@ -52386,7 +52386,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 
-//pдr jump starts
+//pär jump starts
 	//....................................................................................................
 
 		case "Teach_head_all1":
@@ -54722,7 +54722,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("open_Eden_office_from_upper_floor2", 1.0);
 		break;
-//pдr Courtney equip weapons
+//pär Courtney equip weapons
 		case "open_Eden_office_from_upper_floor2":
 			PlaySound("INTERFACE\key_unlock2.wav");
 
@@ -59630,7 +59630,7 @@ void QuestComplete(string sQuestName)
 		case "prisoner9_stay": LAi_SetStayType(characterFromID("bb_prisoner9")); break;
 		case "prisoner10_stay": LAi_SetStayType(characterFromID("bb_prisoner10")); break;
 	//------------------------------------------------------------------------------------------------------------
-//pдr Dover equip weapons
+//pär Dover equip weapons
 		case "bb_prison_alarm":
 			DoQuickSave();
 			PlaySound("INTERFACE\closed_door.wav");
@@ -62446,7 +62446,7 @@ void QuestComplete(string sQuestName)
 		case "Abbey_info":
 			AddQuestRecord("Richards","14");
 		break;
-//pдr day
+//pär day
 	//this stays
 		case "monastary_no_officers":
 			Pchar.Hands_officer = "no";	//if old things still are on
@@ -64551,7 +64551,7 @@ void QuestComplete(string sQuestName)
 		break;
 //......................................................................................................................................................
 //common for all 4 stories
-//pдr p20 loop
+//pär p20 loop
 		case "restore_p20_check":
 			if(CheckCharacterItem(Pchar,"pistolbelt") && CheckCharacterItem(Pchar,"pistol201") && CheckCharacterItem(Pchar,"pistol202")
 			&& CheckCharacterItem(Pchar,"pistol203") && CheckCharacterItem(Pchar,"pistol204") && CheckCharacterItem(Pchar,"pistol205")
@@ -64625,7 +64625,7 @@ void QuestComplete(string sQuestName)
 		case "King_gone":
 			ChangeCharacterAddressGroup(CharacterFromID("gm_crew8"), "none", "", "");
 		break;
-//pдr officers staytype
+//pär officers staytype
 		case "defoe_sit_down":
 			LAi_SetStayType(CharacterFromID("Hands"));
 			LAi_SetStayType(CharacterFromID("Caesar"));
@@ -65725,7 +65725,7 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Kr_cit22")].dialog.CurrentNode  = "townhall_neutral";
 			Characters[GetCharacterIndex("Kr_cit26")].dialog.CurrentNode  = "townhall_neutral";
 		break;
-//pдr hдr value = 0
+//pär här value = 0
 		case "auction_list_check":
 			if(CheckCharacterItem(Pchar,"auction_list_roll"))
 			{
@@ -78807,7 +78807,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialogNow(characterFromID("Mutineer_32"), pchar, "", 0.1);
 			LAi_ActorWaitDialog(Pchar, characterFromID("Mutineer_32"));
 		break;
-//pдr Corvette2
+//pär Corvette2
 		case "Pyle_to_wdeck27":
 			LAi_QuestDelay("Pchar_ooh", 0.01);
 
@@ -79803,7 +79803,7 @@ void QuestComplete(string sQuestName)
 		break;
 	//--------------------------------------------------------------------------------------------------------------
 	//jump start IslaMona after corvette
-//pдr
+//pär
 		case "JS38_1":
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "boat");

@@ -282,9 +282,9 @@ void StartStoryLine()
 				break;
 				case PERSONAL_NATION:
 					SetModelfromArray(ch, GetModelIndex("hadoque"));
-					ch.old.name = "Franзois";
+					ch.old.name = "François";
 					ch.old.lastname = "de Hadoque";
-					ch.name = TranslateString("","Franзois");
+					ch.name = TranslateString("","François");
 					ch.lastname = TranslateString("","de Hadoque");
 				break;
 			}
@@ -296,10 +296,10 @@ void StartStoryLine()
 			ch.nation = iNation;
 			if(CheckCharacterItem(PChar, "Davy_Chest"))
 			{
-				SetModelfromArray(ch, GetModelIndex("davy1"));
-				ch.old.name = "Koleniko";
+				SetModelfromArray(ch, GetModelIndex("Hadras"));
+				ch.old.name = "Hadras";
 				ch.old.lastname = "";
-				ch.name = TranslateString("","Koleniko");
+				ch.name = TranslateString("","Hadras");
 				ch.lastname = "";
 			}
 			else
@@ -765,10 +765,10 @@ void StartStoryLine()
 	{
 		Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Manuel I";
 		Periods[GetCurrentPeriod()].Royal.Portugal.Title = XI_ConvertString("His Most Faithful Majesty");
-		if(GetDataYear() > 1521 && GetDataYear() < 1557) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "JoЭo III";
-		if(GetDataYear() >= 1557 && GetDataYear() <= 1578) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "SebastiЭo";
+		if(GetDataYear() > 1521 && GetDataYear() < 1557) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "JoÝo III";
+		if(GetDataYear() >= 1557 && GetDataYear() <= 1578) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "SebastiÝo";
 		if(GetDataYear() > 1578 && GetDataYear() < 1580) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Henrique";
-		if(GetDataYear() == 1580) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Antуnio"; // GR: the crown was in dispute in 1580, and Antуnio had support throughout the Portuguese Empire even if he didn't do well at home. 
+		if(GetDataYear() == 1580) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "António"; // GR: the crown was in dispute in 1580, and António had support throughout the Portuguese Empire even if he didn't do well at home. 
 		if(GetDataYear() > 1580 && GetDataYear() <= 1598) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Felipe I";
 		if(GetDataYear() > 1598 && GetDataYear() < 1621) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Felipe II";
 	}
@@ -776,9 +776,9 @@ void StartStoryLine()
 	if(GetDataYear() >= 1500){
 		Periods[GetCurrentPeriod()].Royal.France.Name = "Louis XII";
 		Periods[GetCurrentPeriod()].Royal.France.Title = XI_ConvertString("His Most Christian Majesty");
-		if(GetDataYear() >= 1515 && GetDataYear() < 1547) Periods[GetCurrentPeriod()].Royal.France.Name = "Franзois";
+		if(GetDataYear() >= 1515 && GetDataYear() < 1547) Periods[GetCurrentPeriod()].Royal.France.Name = "François";
 		if(GetDataYear() >= 1547 && GetDataYear() < 1559) Periods[GetCurrentPeriod()].Royal.France.Name = "Henri II";
-		if(GetDataYear() >= 1559 && GetDataYear() <= 1560) Periods[GetCurrentPeriod()].Royal.France.Name = "Franзois II";
+		if(GetDataYear() >= 1559 && GetDataYear() <= 1560) Periods[GetCurrentPeriod()].Royal.France.Name = "François II";
 		if(GetDataYear() > 1560 && GetDataYear() < 1574) Periods[GetCurrentPeriod()].Royal.France.Name = "Charles IX";
 		if(GetDataYear() >= 1574 && GetDataYear() <= 1589) Periods[GetCurrentPeriod()].Royal.France.Name = "Henri III";
 		if(GetDataYear() > 1589 && GetDataYear() < 1610) Periods[GetCurrentPeriod()].Royal.France.Name = "Henri IV";
@@ -820,7 +820,7 @@ void StartStoryLine()
 	{
 		Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Felipe III";
 		Periods[GetCurrentPeriod()].Royal.Portugal.Title = XI_ConvertString("His Most Faithful Majesty");
-		if(GetDataYear() > 1640 && GetDataYear() <= 1656) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "JoЭo IV";
+		if(GetDataYear() > 1640 && GetDataYear() <= 1656) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "JoÝo IV";
 		if(GetDataYear() > 1656 && GetDataYear() <= 1683) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Alfonso VI";
 	}
 	// France
@@ -869,13 +869,13 @@ void StartStoryLine()
 	{
 		Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Pedro II";
 		Periods[GetCurrentPeriod()].Royal.Portugal.Title = XI_ConvertString("His Most Faithful Majesty");
-		if(GetDataYear() > 1706 && GetDataYear() <= 1750) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "JoЭo V";
+		if(GetDataYear() > 1706 && GetDataYear() <= 1750) Periods[GetCurrentPeriod()].Royal.Portugal.Name = "JoÝo V";
 	}
 	// France
 	if(GetDataYear() > 1715 && GetDataYear() < 1774)
 	{
 		Periods[GetCurrentPeriod()].Royal.France.Title = XI_ConvertString("His Most Christian Majesty");
-		Periods[GetCurrentPeriod()].Royal.France.Name = "Louis XV le Bien Aimй";
+		Periods[GetCurrentPeriod()].Royal.France.Name = "Louis XV le Bien Aimé";
 	}
 	
 	// COLONIAL POWERS
@@ -895,7 +895,7 @@ void StartStoryLine()
 	// Portugal
 	if(GetDataYear() > 1750 && GetDataYear() < 1777)
 	{
-		Periods[GetCurrentPeriod()].Royal.Portugal.Name = "Josй I";
+		Periods[GetCurrentPeriod()].Royal.Portugal.Name = "José I";
 		Periods[GetCurrentPeriod()].Royal.Portugal.Title = XI_ConvertString("His Most Faithful Majesty");
 	}
 	// REVOLUTIONS
@@ -946,7 +946,7 @@ void StartStoryLine()
 	// Portugal
 	if(GetDataYear() >= 1816)
 	{
-		Periods[GetCurrentPeriod()].Royal.Portugal.Name = "JoЭo VI";
+		Periods[GetCurrentPeriod()].Royal.Portugal.Name = "JoÝo VI";
 		Periods[GetCurrentPeriod()].Royal.Portugal.Title = XI_ConvertString("His Most Faithful Majesty");
 		if(GetDataYear() > 1826)
 		{
@@ -961,12 +961,12 @@ void StartStoryLine()
 		Periods[GetCurrentPeriod()].Royal.France.Title = XI_ConvertString("Republic of France");
 		if(GetDataYear() > 1799 && GetDataYear() < 1804)
 		{
-			Periods[GetCurrentPeriod()].Royal.France.Name = "Napolйon Bonaparte";
+			Periods[GetCurrentPeriod()].Royal.France.Name = "Napoléon Bonaparte";
 			Periods[GetCurrentPeriod()].Royal.France.Title = XI_ConvertString("Premier Consul");
 		}
 		if(GetDataYear() >= 1804 && GetDataYear() <1814)
 		{
-			Periods[GetCurrentPeriod()].Royal.France.Name = "Napolйon Bonaparte";
+			Periods[GetCurrentPeriod()].Royal.France.Name = "Napoléon Bonaparte";
 			Periods[GetCurrentPeriod()].Royal.France.Title = XI_ConvertString("L'Empereur");
 		}
 		if(GetDataYear() >= 1814 && GetDataYear() < 1815)
@@ -976,7 +976,7 @@ void StartStoryLine()
 		}
 		if(GetDataYear() == 1815)
 		{
-			Periods[GetCurrentPeriod()].Royal.France.Name = "Napolйon Bonaparte";
+			Periods[GetCurrentPeriod()].Royal.France.Name = "Napoléon Bonaparte";
 			Periods[GetCurrentPeriod()].Royal.France.Title = XI_ConvertString("L'Empereur");
 		}
 		if(GetDataYear() > 1815 && GetDataYear() <= 1824)
@@ -1357,7 +1357,7 @@ void StartStoryLine()
 		case PLAYER_TYPE_CORSAIR:
 			if (iNation != PIRATE)
 			{
-				if (GetMySimpleOldName(PChar) == "Josй Joaquнm Almeida" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+				if (GetMySimpleOldName(PChar) == "José Joaquím Almeida" && GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
 				{
 					iNation = AMERICA;
 					SetServedNation(iNation);

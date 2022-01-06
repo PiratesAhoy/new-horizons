@@ -27,7 +27,7 @@ string DLG_TEXT[516] = {
 "You will be held as a prisoner aboard my ship while I arrange for a ransom. Pray that a suitable sum is forthcoming.",
 "WHAT?",
 "Sorry, my dear. You wouldn't have been as helpful if I'd told you the truth.",
-"Well, a pirate ship's hold isn't comfortable and I'll need a long bath when I get home. But I was treated well by Capitбn Ardent and the crew.",
+"Well, a pirate ship's hold isn't comfortable and I'll need a long bath when I get home. But I was treated well by Capitán Ardent and the crew.",
 "...",
 "Have you reached a decision about me yet?",
 "I'm inclined to release you. Is there anywhere you'd like to go?",
@@ -50,10 +50,10 @@ string DLG_TEXT[516] = {
 "My! This is a bit sudden! From what I've seen, you're certainly better than ",
 ", but that's not difficult. Please, let me have time to consider your proposal.",
 "By all means consider, but please don't take long!",
-"Hello, capitбn! Thank you for getting me away. I'll miss my family, of course, but I'd have been eternally miserable married to ",
+"Hello, capitán! Thank you for getting me away. I'll miss my family, of course, but I'd have been eternally miserable married to ",
 ". I was about to write a letter to my father explaining that I'm well, so he doesn't worry.",
 "That's a good idea. Add something personal, something I couldn't possibly know, so he'll know I didn't force you to write it. Then I'll see about getting it delivered.",
-"My letter is written, capitбn. Please see it reaches my father. I really don't want him worrying about me.",
+"My letter is written, capitán. Please see it reaches my father. I really don't want him worrying about me.",
 "I'll deliver it in person. Hopefully when he knows the truth he'll be less inclined to hunt me down.",
 "Well, this is it. I'll say goodbye to father for the last time, then I'll leave here forever.",
 "That might not be a good idea. If the guards attack, you might be hurt or killed in the crossfire. And there's no knowing what your father will do if he sees you - he might have me arrested and marry you off to ",
@@ -414,7 +414,7 @@ string DLG_TEXT[516] = {
 "And that was some fine thinking and quick talking on your part! But it looks as though he's remembered you after all - run for the town exit!",
 "I haven't finished my letter yet. It should be ready by tomorrow.",
 "Very well, take as long as you need.",
-"Well, capitбn? Have you decided my fate yet?",
+"Well, capitán? Have you decided my fate yet?",
 "No, but I know how to prevent you from escaping.",
 "How? Will you lock me in this cabin? Or put me in the hold, with a pair of heavy sailors sitting on the hatch?",
 "Neither. There's the door to the gangplank. If you want to return to your father and ",
@@ -513,6 +513,6 @@ string DLG_TEXT[516] = {
 "Good, now I know you'll be safe with me beside you.",
 "Excellent! You won't regret this when you see me in action.",
 "I'm sure of it.",
-"Capitбn", // These are used to address you in case "First time".
+"Capitán", // These are used to address you in case "First time".
 "my dear", // Renumber them there if more lines are added above here
 }

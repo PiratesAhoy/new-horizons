@@ -602,7 +602,7 @@ void ProcessDialogEvent()
 			locations[FindLocation("Redmond_UsurerHouse")].id.label = "TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager";
 			ChangeCharacterAddressGroup(CharacterFromID("Redmond Usurer"), "none", "", "");
 
-			Locations[FindLocation("wr_shop")].reload.l3.disable = 0;//to shop entrй
+			Locations[FindLocation("wr_shop")].reload.l3.disable = 0;//to shop entré
 			Locations[FindLocation("Redmond_Town_01")].reload.l27.disable = 0;//to shop
 
 			Locations[FindLocation("wr_residence")].reload.l7.disable = 1;//locked to arm
@@ -623,7 +623,7 @@ void ProcessDialogEvent()
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 			ChangeCharacterAddressGroup(CharacterFromID("wr_boc4"), "none", "", "");//library guards disturbing textlog
 			ChangeCharacterAddressGroup(CharacterFromID("wr_cor1_1"), "none", "", "");
@@ -800,7 +800,7 @@ void ProcessDialogEvent()
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+			Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 			Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 			Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -844,7 +844,7 @@ void ProcessDialogEvent()
 			locations[FindLocation("Redmond_UsurerHouse")].id.label = "TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager";
 			ChangeCharacterAddressGroup(CharacterFromID("Redmond Usurer"), "none", "", "");
 
-			Locations[FindLocation("wr_shop")].reload.l3.disable = 0;//to shop entrй
+			Locations[FindLocation("wr_shop")].reload.l3.disable = 0;//to shop entré
 			Locations[FindLocation("Redmond_Town_01")].reload.l27.disable = 0;//to shop
 
 			Locations[FindLocation("wr_residence")].reload.l7.disable = 1;//locked to arm
@@ -1027,7 +1027,7 @@ void ProcessDialogEvent()
 				locations[FindLocation("Redmond_UsurerHouse")].id.label = "TEMPORARY OUT OF GOLD. OPEN SOON AGAIN. Robyn Corrick - bank manager";
 				ChangeCharacterAddressGroup(CharacterFromID("Redmond Usurer"), "none", "", "");
 
-				Locations[FindLocation("wr_shop")].reload.l3.disable = 0;//to shop entrй
+				Locations[FindLocation("wr_shop")].reload.l3.disable = 0;//to shop entré
 				Locations[FindLocation("Redmond_Town_01")].reload.l27.disable = 0;//to shop
 
 				Locations[FindLocation("wr_residence")].reload.l7.disable = 1;//locked to arm
@@ -1059,7 +1059,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -1247,7 +1247,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l16.go = "WR_kitchen";
 				Locations[FindLocation("Redmond_Town_01")].reload.l16.emerge = "reload1";
@@ -1484,7 +1484,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -1656,7 +1656,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -1835,7 +1835,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";	
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";	
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -2109,7 +2109,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";	
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";	
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -2239,7 +2239,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -2327,7 +2327,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -2500,7 +2500,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -2695,7 +2695,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";
@@ -2921,7 +2921,7 @@ void ProcessDialogEvent()
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.go = "wr_library";			
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.emerge = "reload6";
 				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.autoreload = "0";
-				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogersґ library.";
+				Locations[FindLocation("Redmond_UsurerHouse")].reload.l3.label = "Woodes Rogers´ library.";
 
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.name = "door_7";
 				Locations[FindLocation("Redmond_Town_01")].reload.l26.go = "Tavern_storeroom";

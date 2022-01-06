@@ -1,12 +1,12 @@
 *.h text eol=crlf working-tree-encoding=UTF-8
 *.c text eol=crlf working-tree-encoding=UTF-8
-*.ini text eol=crlf working-tree-encoding=Windows-1251
+*.ini text eol=crlf working-tree-encoding=UTF-8
 
-*.txt text eol=crlf working-tree-encoding=Windows-1251
+*.txt text eol=crlf working-tree-encoding=UTF-8
 RESOURCE/**/*.txt text eol=crlf working-tree-encoding=UTF-8
 RESOURCE/**/*.ini text eol=crlf working-tree-encoding=UTF-8
 
-PROGRAM/**/DIALOGS/SPANISH/**/*.h working-tree-encoding=Windows-1252
+PROGRAM/**/DIALOGS/SPANISH/**/*.h working-tree-encoding=UTF-8
 
 # Specific files that have encoding issues
 RESOURCE/INI/TEXTS/RUSSIAN/BOOKS/cookbook.txt working-tree-encoding=UTF-8

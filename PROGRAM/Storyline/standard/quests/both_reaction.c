@@ -343,7 +343,7 @@ void BothQuestComplete(string sQuestName)
 				playerGun   = PChar.start_weapon.gun;
 				if(playerGun != "")
 					locations[FindLocation(PChar.location)].box1.items.(playerGun) = 1;
-				locations[FindLocation(PChar.location)].box1.items.spyglass1 = 1;
+				locations[FindLocation(PChar.location)].box1.items.spyglass0 = 1; // PB: Spyglass of Shame, Easter-Egg inspired by interview with Yuri (Ursus) Rogach
 
 				TutDeck.box1.items.medical1 = 2; // PB
 				TutDeck.box1.money = 1000;
@@ -736,7 +736,7 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "Tut_ReloadToOxbayPort":
-			EquipCharacterbyItem(PChar, "Spyglass1"); // NK
+			EquipCharacterbyItem(PChar, "Spyglass0"); // NK; PB: Spyglass of Shame, Easter-Egg inspired by interview with Yuri (Ursus) Rogach
 			ResetHP(&PChar); // NK 05-07-03 - LAi_SetHP(PChar, LAI_DEFAULT_HP + sti(PChar.rank) * 5, LAI_DEFAULT_HP+ sti(PChar.rank) * 5); //NK
 			LAi_SetHP(CharacterFromID("Malcolm Hatcher"), 120.0, 120.0);
 			LAi_group_SetAlarm("tutorial", LAI_GROUP_PLAYER, 0.0);
@@ -2116,7 +2116,7 @@ void BothQuestComplete(string sQuestName)
 // added by MAXIMUS [choose character mod] <--
 
 			if(makeint(PChar.money) == 1000) AddMoneyToCharacter(PChar, 1000);
-			if(CheckCharacterItem(PChar, "Spyglass1") == 0) GiveItem2Character(PChar, "Spyglass1");
+			if(CheckCharacterItem(PChar, "Spyglass0") == 0) GiveItem2Character(PChar, "Spyglass0"); // PB: Spyglass of Shame, Easter-Egg inspired by interview with Yuri (Ursus) Rogach
 			if(CheckCharacterItem(PChar, "medical1") == 0) TakeNItems(PChar, "medical1", 2); // PB
 			if(CheckCharacterItem(PChar, PChar.start_weapon.blade) == 0) GiveItem2Character(PChar, PChar.start_weapon.blade);
 			if(CheckCharacterItem(PChar, PChar.start_weapon.gun) == 0) GiveItem2Character(PChar, PChar.start_weapon.gun);

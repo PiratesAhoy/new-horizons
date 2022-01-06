@@ -8160,7 +8160,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l3.go = "GB_Charleston_high_house_entre";
 	Locations[n].reload.l3.emerge = "reload4";
 	Locations[n].reload.l3.autoreload = "0";
-	Locations[n].reload.l3.label = "Woodes Rogersґfood supply.";
+	Locations[n].reload.l3.label = "Woodes Rogers´food supply.";
 	Locations[n].locators_radius.reload.reload3 = 0.5;
 					
 /*

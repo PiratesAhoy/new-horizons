@@ -1061,7 +1061,7 @@ void LocationInitQuestLocations(ref n)
 
 	//  -------------------------------------------------
 	Locations[n].id = "Hit_house2";
-	Locations[n].id.label = "House of Amйrigo Vieira";		//spell-checked by KAM
+	Locations[n].id.label = "House of Amérigo Vieira";		//spell-checked by KAM
 	Locations[n].filespath.models = "Locations\Inside\Doubleflour_house";
 	Locations[n].image = "Inside_Doubleflour_House_Hitman.tga";
 
@@ -1451,7 +1451,7 @@ void LocationInitQuestLocations(ref n)
 
 	//  -------------------------------------------------
 	Locations[n].id = "Hit_house2";
-	Locations[n].id.label = "House of Amйrigo Vieira";		//spell-checked by KAM
+	Locations[n].id.label = "House of Amérigo Vieira";		//spell-checked by KAM
 	Locations[n].filespath.models = "Locations\Inside\Doubleflour_house";
 	Locations[n].image = "Inside_Doubleflour_House_Hitman.tga";
 

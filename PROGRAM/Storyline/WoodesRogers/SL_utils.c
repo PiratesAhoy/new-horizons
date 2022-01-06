@@ -4559,7 +4559,7 @@ void OpenBoxProcedure_WR()
 				
 				PlaySound("INTERFACE\locked_window.wav");
 			break;
-//pдr sewer
+//pär sewer
 			case "box9":
 				//sewer
 
@@ -5348,7 +5348,7 @@ void OpenBoxProcedure_WR()
 				Logit(TranslateString("","Nueva Suecia lower town"));		
 				PlaySound("INTERFACE\locked_window.wav");
 			break;
-//pдr radius
+//pär radius
 		//LEVER
 			case "box34":
 				switch(Locations[FindLocation(chr.location)].models.always.locators)
@@ -6550,7 +6550,7 @@ void OpenBoxProcedure_WR()
 					ChangeCharacterAddressGroup(chr, "BB_lower_cave", "goto", "goto4");
 				}
 			break;
-//pдr trap	
+//pär trap	
 			case "box14":
 				//at deadly trap
 				
@@ -10653,7 +10653,7 @@ void OpenBoxProcedure_WR()
 								return;
 							}
 						}
-//pдr distill Q2
+//pär distill Q2
 						if(chr.quest.apparatus_level == "top")
 						{
 							if(CheckAttribute(chr, "equip.blade") && chr.equip.blade == "bladebottle_CG2")
@@ -11004,7 +11004,7 @@ void OpenBoxProcedure_WR()
 								PlaySound("INTERFACE\button2.wav");
 								chr.quest.apparatus_level = "glass_tube";
 								chr.quest.apparatus_liquid = "none";
-				//pдr postman
+				//pär postman
 								Locations[FindLocation("wr_farm_alchemy")].models.always.l13 = "";
 								RemoveCharacterEquip(chr, BLADE_ITEM_TYPE);
 								GiveItem2Character(chr,"bladebottle_CT1_nitr");
@@ -11111,7 +11111,7 @@ void OpenBoxProcedure_WR()
 					return;
 				}
 			break;
-//pдr mix med bottle
+//pär mix med bottle
 			case "box5":
 				//MIXTABLE medium bottle
 
@@ -11219,7 +11219,7 @@ void OpenBoxProcedure_WR()
 								return;
 							}
 						}
-					//pдr hдr
+					//pär här
 						if(CheckAttribute(chr, "equip.blade") && chr.equip.blade == "bladebottle_CT1_nitr")
 						{
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix != "11") return;
@@ -11388,7 +11388,7 @@ void OpenBoxProcedure_WR()
 								return;
 							}
 						}
-				//pдr hдr
+				//pär här
 						if(CheckAttribute(chr, "equip.blade") && chr.equip.blade == "bladebottle_CT1_nitr")
 						{
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix != "11") return;
@@ -11520,7 +11520,7 @@ void OpenBoxProcedure_WR()
 							LAi_QuestDelay("place_mixtable_item", 1.5);
 							return;
 						}
-//pдr L.H. fix, only when"14"
+//pär L.H. fix, only when"14"
 						if(CheckAttribute(chr, "equip.blade") && chr.equip.blade == "bladebottle_BS2_LH")
 						{
 							if(CheckAttribute(chr, "Q2_mix") && chr.Q2_mix == "14")
@@ -11537,7 +11537,7 @@ void OpenBoxProcedure_WR()
 								return;
 							}
 						}
-				//pдr extra stringlog 2
+				//pär extra stringlog 2
 						if(CheckAttribute(chr, "equip.blade") && chr.equip.blade == "bladebottle_CB2_mix9")
 						{
 							PlaySound("VOICE\ENGLISH\blaze_hah.wav");
@@ -12151,7 +12151,7 @@ void OpenBoxProcedure_WR()
 
 				LAi_QuestDelay("unlock_from_alchemy", 2.0);
 			break;
-//pдr mix big bottle
+//pär mix big bottle
 			case "box7":
 				//MIXTABLE large bottle
 
@@ -12434,7 +12434,7 @@ void OpenBoxProcedure_WR()
 									LAi_QuestDelay("place_mixtableL_item", 1.5);
 									return;
 								}
-						//pдr extra stringlog
+						//pär extra stringlog
 								if(CheckAttribute(chr, "equip.blade")  )
 								{
 									if(chr.equip.blade == "bladebottle_BP2_ps" || chr.equip.blade == "bladebottle_BS2_LH")
@@ -13519,7 +13519,7 @@ void OpenBoxProcedure_WR()
 								LAi_QuestDelay("place_mixtableL_item", 0.5);
 							}
 						break;
-//pдr mixtable big bottle end
+//pär mixtable big bottle end
 					}
 				}
 				else
@@ -13548,7 +13548,7 @@ void OpenBoxProcedure_WR()
 		}
 		return;
 	}
-//pдr2
+//pär2
 	if(Locations[locidx].id=="wr_farm_alchemy2")
 	{
 		switch(chr.boxname)
@@ -13742,7 +13742,7 @@ void OpenBoxProcedure_WR()
 								}
 								else
 								{
-					//pдr here you loose red liquid
+					//pär here you loose red liquid
 									if(IsEquipCharacterByItem(chr, "bladebottle_CA2_mix11"))
 									{
 										LAi_SetStayType(chr);
@@ -13788,7 +13788,7 @@ void OpenBoxProcedure_WR()
 
 				//blade item types not fists not empty bottles
 			break;
-//pдr gold
+//pär gold
 			case "box6":
 				//GOLDBAR HERE
 
@@ -13900,7 +13900,7 @@ void OpenBoxProcedure_WR()
 				LAi_QuestDelay("pchar_staytype", 1.0);	
 				LAi_QuestDelay("2FH_grinding", 1.7);
 			break;
-//pдr2 box9
+//pär2 box9
 			case "box9":
 				//FIREPLACE also box14
 
@@ -14273,7 +14273,7 @@ void OpenBoxProcedure_WR()
 							}
 							else
 							{
-					//pдr extra funnel equip
+					//pär extra funnel equip
 								gunID = GetCharacterEquipByGroup(chr,GUN_ITEM_TYPE);
 
 								if(gunID == "" && CheckCharacterItem(chr,"pistolfunnel"))
@@ -14321,7 +14321,7 @@ void OpenBoxProcedure_WR()
 							}
 							else
 							{
-					//pдr extra equip
+					//pär extra equip
 								weaponID7 = GetCharacterEquipByGroup(chr,BLADE_ITEM_TYPE);
 								gunID = GetCharacterEquipByGroup(chr,GUN_ITEM_TYPE);
 
@@ -14951,7 +14951,7 @@ void OpenBoxProcedure_WR()
 							}
 							else
 							{
-					//pдr extra funnel equip
+					//pär extra funnel equip
 								gunID = GetCharacterEquipByGroup(chr,GUN_ITEM_TYPE);
 
 								if(gunID == "" && CheckCharacterItem(chr,"pistolfunnel"))
@@ -14999,7 +14999,7 @@ void OpenBoxProcedure_WR()
 							}
 							else
 							{
-					//pдr extra equip
+					//pär extra equip
 								weaponID7 = GetCharacterEquipByGroup(chr,BLADE_ITEM_TYPE);
 								gunID = GetCharacterEquipByGroup(chr,GUN_ITEM_TYPE);
 
@@ -15032,7 +15032,7 @@ void OpenBoxProcedure_WR()
 					break;
 				}
 			break;
-//pдr grind
+//pär grind
 			case "box15":
 				//FILL UP TANK FOR GRINDING
 
@@ -15120,7 +15120,7 @@ void OpenBoxProcedure_WR()
 		}
 		return;
 	}
-//pдr
+//pär
 	if(Locations[locidx].id=="wr_farm_booty2")
 	{
 		switch(chr.boxname)
@@ -15166,7 +15166,7 @@ void OpenBoxProcedure_WR()
 			case "box4":
 				PlaySound("INTERFACE\locked_window.wav");
 			break;
-//pдr gold
+//pär gold
 			case "box5":
 				//GOLDBARS HERE
 
@@ -20828,7 +20828,7 @@ void CreateLandActionsEnvironment_WR()
 				else IActions.ActiveActions.OpenBox.IconNum  	= 3;
 			}
 		}
-//pдr
+//pär
 		if(Pchar.location == "BB_Maltains")
 		{
 			if(Pchar.boxname == "box9")
@@ -21397,7 +21397,7 @@ void CreateLandActionsEnvironment_WR()
 			if(Pchar.boxname == "box13") IActions.ActiveActions.OpenBox.IconNum  	= 63;
 			if(Pchar.boxname == "box14") IActions.ActiveActions.OpenBox.IconNum  	= 30;
 		}
-//pдr
+//pär
 		if(Pchar.location == "BB_burning_cave")
 		{
 			
@@ -22861,7 +22861,7 @@ void LAi_CharacterFireExecute_WR(aref attack, aref enemy, float kDist, int isFin
 					{
 						if(CheckAttribute(attack,"quest.rum_fuel") && attack.quest.rum_fuel == "sack")
 		    				{
-							//Locations[FindLocation(attack.location)].models.always.locators = "tavern02_locators_JRH1_F";//pдr bad idea
+							//Locations[FindLocation(attack.location)].models.always.locators = "tavern02_locators_JRH1_F";//pär bad idea
 							Locations[FindLocation(attack.location)].models.always.locators = "tavern02_locators_JRH2_F";
 							attack.quest.rum_fire = "lit";
 							Locations[FindLocation(attack.location)].models.always.l1 = "sack2_lit";
@@ -23358,7 +23358,7 @@ void LAi_CharacterFireExecute_WR(aref attack, aref enemy, float kDist, int isFin
 						}
 					}
 				}
-//pдr pistolitems
+//pär pistolitems
 				if(CheckAttribute(attack,"quest.lab_position") && attack.quest.lab_position == "mixtableL")
 				{
 					switch(Locations[FindLocation(attack.location)].models.always.l16)
@@ -24127,7 +24127,7 @@ void LAi_CharacterFireExecute_WR(aref attack, aref enemy, float kDist, int isFin
 								}
 							}
 						break;
-//pдr pistolitems end
+//pär pistolitems end
 					}
 				}
 				return;

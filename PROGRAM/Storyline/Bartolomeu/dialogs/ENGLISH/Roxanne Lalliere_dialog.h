@@ -167,7 +167,7 @@ string DLG_TEXT[273] = {
 "Right. Let's be careful during the walk. There are most probably indians in the area.",
 "Bastard, Francois I mean!",
 "As you say. He thinks he won the 'race' but we can still give him a lesson. Let's go and catch him.",
-"Look! Franзois l'Ollonais is dead, someone beat us to it!",
+"Look! François l'Ollonais is dead, someone beat us to it!",
 "Oh look at him! What could have done this?! He is crushed. The bones are broken but there is no blood.",
 "Listen, do you hear?",
 "Someone is coming!",

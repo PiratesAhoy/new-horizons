@@ -113,7 +113,7 @@ void ProcessDialogEvent()
 
 		case "cash":
 			ChangeCharacterReputation(pchar, -10);
-		    	PlayStereoSound("INTERFACE\took_item.wav");
+		    PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, 1500);
 			dialog.snd = "Voice\AMBR\AMBR011";
 			dialog.text = DLG_TEXT[38];

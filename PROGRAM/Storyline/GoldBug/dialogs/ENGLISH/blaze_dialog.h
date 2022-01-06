@@ -267,7 +267,7 @@ string DLG_TEXT[429] = {
 "(You see the port soldier)",
 "That's him again! Let's catch him!",
 "(Barbossa talking to his crew)", 
-"Gentlemen, the time has come! Our torment is nearing an end! For ten years we've been tested and tried. And each man here has moved his mettle a hundred times over and a hundred times again. Punished we were the lot of us, disproportionate to our crime. Here it is! The cursed treasure of Cortйs himself. Every last piece that went astray we have returned. Save for this!",
+"Gentlemen, the time has come! Our torment is nearing an end! For ten years we've been tested and tried. And each man here has moved his mettle a hundred times over and a hundred times again. Punished we were the lot of us, disproportionate to our crime. Here it is! The cursed treasure of Cortés himself. Every last piece that went astray we have returned. Save for this!",
 "Maybe you are immortal, but I can still knock you out idiot! Now, I have to join my crew to invert the situation on my ship.",
 "Captain ",
 "You are accused for crimes against the Crown. Said crimes being numerous in quantity and sinister in nature. The most egregious of these to be cited herewith: piracy, smuggling, sailing under false colours, arson, kidnapping, looting, poaching, brigandage, pilfening, depravity, depredation and general lawlessness. For these crimes, you are sentenced to be hung by the neck until dead. May God have mercy on your soul.",
@@ -299,7 +299,7 @@ string DLG_TEXT[429] = {
 "Now let's do a more methodical -",
 "- investigation of the parchment.",
 "Now the skull is gone! Only my sketch of the beetle remains. Let me think:",	//299
-"When I drew the scarabжus there was no skull apparent upon the parchment. When I had completed the drawing I gave it to Mr Poe, and observed him narrowly until he returned it. He, therefore, did not design the skull, and no one else was present to do it. Then it was not done by human agency. And nevertheless it was done.",
+"When I drew the scarabæus there was no skull apparent upon the parchment. When I had completed the drawing I gave it to Mr Poe, and observed him narrowly until he returned it. He, therefore, did not design the skull, and no one else was present to do it. Then it was not done by human agency. And nevertheless it was done.",
 "The weather was chilly (oh rare and happy accident!) and a fire was blazing upon the hearth.",
 "I was heated with exercise and sat on the bed far from the fireplace. Mr Poe, however, had drawn a stool close to the chimney.",
 "When I consider all these particulars, I doubt not for a moment that heat has been the agent in bringing to light, upon the parchment, the skull which I saw designed upon it.",

@@ -679,7 +679,7 @@ void GivePromotionReward(int iNation)
 					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
-							GiveShip2Character(pchar,"FR_Sloop","Le Rиve",-1,FRANCE,true,true); // Captured from the French
+							GiveShip2Character(pchar,"FR_Sloop","Le Rève",-1,FRANCE,true,true); // Captured from the French
 						break;
 
 						case "Jack Aubrey":
@@ -802,7 +802,7 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_NAPOLEONIC:
-								GiveShip2Character(pchar, "RN_Surprise", "Success", -1, ENGLAND, true, true); // Unitй class Frigate
+								GiveShip2Character(pchar, "RN_Surprise", "Success", -1, ENGLAND, true, true); // Unité class Frigate
 							break;
 						}
 					}
@@ -811,7 +811,7 @@ void GivePromotionReward(int iNation)
 					switch (GetMySimpleOldName(PChar))
 					{
 						case "Horatio Hornblower":
-							GiveShip2Character(pchar, "RN_Essex", "Lydia", -1, ENGLAND, true, true); // Razйe Frigate
+							GiveShip2Character(pchar, "RN_Essex", "Lydia", -1, ENGLAND, true, true); // Razée Frigate
 						break;
 
 						case "Horatio Nelson":
@@ -1007,7 +1007,7 @@ void GivePromotionReward(int iNation)
 							if (GetCompanionIndex(pchar,1) == -1 || GetCompanionIndex(pchar,2) == -1 || GetCompanionIndex(pchar,3) == -1) // GR
 							{
 								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "brtcpt1_18", 3, ENGLAND, false);
-								GiveShip2Character(ch, "RN_Surprise", "Success", -1, ENGLAND, true, true); // Unitй class Frigate
+								GiveShip2Character(ch, "RN_Surprise", "Success", -1, ENGLAND, true, true); // Unité class Frigate
 								SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
 								RemovePassenger  (pchar,     CharacterFromID  (ch.id));
 							}
@@ -1519,11 +1519,11 @@ void GivePromotionReward(int iNation)
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
-							GiveShip2Character(pchar, "Polacca", "Lйopard", -1, FRANCE, true, true);
+							GiveShip2Character(pchar, "Polacca", "Léopard", -1, FRANCE, true, true);
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							GiveShip2Character(pchar, "Polacca", "Lйopard", -1, FRANCE, true, true);
+							GiveShip2Character(pchar, "Polacca", "Léopard", -1, FRANCE, true, true);
 						break;
 
 						case PERIOD_GOLDEN_AGE_OF_PIRACY:
@@ -1535,11 +1535,11 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "Brig2", "Йlan", -1, FRANCE, true, true);
+							GiveShip2Character(pchar, "Brig2", "Élan", -1, FRANCE, true, true);
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "Brig2", "Йlan", -1, FRANCE, true, true);
+							GiveShip2Character(pchar, "Brig2", "Élan", -1, FRANCE, true, true);
 						break;
 					}
 				break;
@@ -1555,7 +1555,7 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_GOLDEN_AGE_OF_PIRACY:
-							GiveShip2Character(pchar, "FR_Postillionen", "Mйduse", -1, FRANCE, true, true); // 6th Rate Frigate
+							GiveShip2Character(pchar, "FR_Postillionen", "Méduse", -1, FRANCE, true, true); // 6th Rate Frigate
 						break;
 
 						case PERIOD_COLONIAL_POWERS:
@@ -1563,11 +1563,11 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "FR_Postillionen", "Mйduse", -1, FRANCE, true, true); // 6th Rate Frigate
+							GiveShip2Character(pchar, "FR_Postillionen", "Méduse", -1, FRANCE, true, true); // 6th Rate Frigate
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "FR_Greyhound", "Comte de Trйville", -1, FRANCE, true, true); // Heavy Sloop-of-War
+							GiveShip2Character(pchar, "FR_Greyhound", "Comte de Tréville", -1, FRANCE, true, true); // Heavy Sloop-of-War
 						break;
 					}
 				break;
@@ -1583,26 +1583,26 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_GOLDEN_AGE_OF_PIRACY:
-							GiveShip2Character(pchar, "RN_RaaFrigate", "Йtoile", -1, FRANCE, true, true); // Frigate
+							GiveShip2Character(pchar, "RN_RaaFrigate", "Étoile", -1, FRANCE, true, true); // Frigate
 						break;
 
 						case PERIOD_COLONIAL_POWERS:
-							GiveShip2Character(pchar, "Corvette1", "Iphigйnie", -1, FRANCE, true, true); // Aurora class Frigate
+							GiveShip2Character(pchar, "Corvette1", "Iphigénie", -1, FRANCE, true, true); // Aurora class Frigate
 						break;
 
 						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "Corvette1", "Iphigйnie", -1, FRANCE, true, true); // Aurora class Frigate
+							GiveShip2Character(pchar, "Corvette1", "Iphigénie", -1, FRANCE, true, true); // Aurora class Frigate
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "FR_Surprise", "DuQuesne", -1, FRANCE, true, true); // Unitй class Frigate
+							GiveShip2Character(pchar, "FR_Surprise", "DuQuesne", -1, FRANCE, true, true); // Unité class Frigate
 						break;
 					}
 				break;
 				case 6: // Capitaine de Vaisseau
 					switch (GetMySimpleOldName(PChar))
 					{
-						case "Franзois-Louis Rousselet":
+						case "François-Louis Rousselet":
 							GiveShip2Character(PChar, "WallerPinnace", "Le Saint Louis", -1, FRANCE, true, true); // Heavy Pinnace of War
 						break;
 
@@ -1618,7 +1618,7 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_GOLDEN_AGE_OF_PIRACY:
-								GiveShip2Character(pchar, "FR_Frigate", "Mйduse", -1, FRANCE, true, true); // Rossiya Frigate
+								GiveShip2Character(pchar, "FR_Frigate", "Méduse", -1, FRANCE, true, true); // Rossiya Frigate
 							break;
 
 							case PERIOD_COLONIAL_POWERS:
@@ -1626,11 +1626,11 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_REVOLUTIONS:
-								GiveShip2Character(pchar, "FR_BattleFrigate", "Achйron", -1, FRANCE, true, true); // Artйmise class Frigate
+								GiveShip2Character(pchar, "FR_BattleFrigate", "Achéron", -1, FRANCE, true, true); // Artémise class Frigate
 							break;
 
 							case PERIOD_NAPOLEONIC:
-								GiveShip2Character(pchar, "FR_BattleFrigate", "Achйron", -1, FRANCE, true, true); // Artйmise class Frigate
+								GiveShip2Character(pchar, "FR_BattleFrigate", "Achéron", -1, FRANCE, true, true); // Artémise class Frigate
 							break;
 						}
 					}
@@ -1672,7 +1672,7 @@ void GivePromotionReward(int iNation)
 				case 8: // Vice-Amiral
 					switch (GetMySimpleOldName(PChar))
 					{
-						case "Franзois-Louis Rousselet":
+						case "François-Louis Rousselet":
 							GiveShip2Character(PChar, "FR_SoleilRoyal", "Dauphin Royal", -1, FRANCE, true, true); // Heavy Pinnace of War
 						break;
 
@@ -1683,7 +1683,7 @@ void GivePromotionReward(int iNation)
 								GiveShip2Character(pchar, "Galeon1", "Forte", -1, FRANCE, true, true); // Royal Manila Galleon
 							break;
 							case PERIOD_THE_SPANISH_MAIN:
-								GiveShip2Character(pchar, "HeavyLineship", "Maillй Brйzй", -1, FRANCE, true, true); // Pinnace-of-War
+								GiveShip2Character(pchar, "HeavyLineship", "Maillé Brézé", -1, FRANCE, true, true); // Pinnace-of-War
 							break;
 							case PERIOD_GOLDEN_AGE_OF_PIRACY:
 								GiveShip2Character(pchar, "FR_Fleuron", "Le Fleuron", -1, FRANCE, true, true); // Fleuron class 3rd Rate
@@ -1695,7 +1695,7 @@ void GivePromotionReward(int iNation)
 								GiveShip2Character(pchar, "FR_Superbe", "Redoutable", -1, FRANCE, true, true); // America class 3rd Rate
 							break;
 							case PERIOD_NAPOLEONIC:
-								GiveShip2Character(pchar, "FR_Bellona", "Tйmйraire", -1, FRANCE, true, true); // Bellona class 3rd Rate
+								GiveShip2Character(pchar, "FR_Bellona", "Téméraire", -1, FRANCE, true, true); // Bellona class 3rd Rate
 							break;
 						}
 					}
@@ -1703,7 +1703,7 @@ void GivePromotionReward(int iNation)
 				case 9: // Vice-Amiral d'Escadre
 					switch (GetMySimpleOldName(PChar))
 					{
-						case "Franзois-Louis Rousselet":
+						case "François-Louis Rousselet":
 							// Nothing on purpose
 						break;
 
@@ -1762,11 +1762,11 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_REVOLUTIONS:
-								GiveShip2Character(ch, "FR_SotL", "Fougueux", -1, FRANCE, true, true); // Intrйpide class 1st Rate
+								GiveShip2Character(ch, "FR_SotL", "Fougueux", -1, FRANCE, true, true); // Intrépide class 1st Rate
 							break;
 
 							case PERIOD_NAPOLEONIC:
-								GiveShip2Character(ch, "FR_SotL", "Fougueux", -1, FRANCE, true, true); // Intrйpide class 1st Rate
+								GiveShip2Character(ch, "FR_SotL", "Fougueux", -1, FRANCE, true, true); // Intrépide class 1st Rate
 							break;
 						}
 						SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
@@ -1809,7 +1809,7 @@ void GivePromotionReward(int iNation)
 						break;
 					}
 				break;
-				case 2: // Alfйrez de Fragate
+				case 2: // Alférez de Fragate
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
@@ -1838,7 +1838,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 
-				case 3: // Alfйrez de Navнo
+				case 3: // Alférez de Navío
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
@@ -1862,12 +1862,12 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "Galeoth1", "Extremeсa", -1, SPAIN, true, true);
+							GiveShip2Character(pchar, "Galeoth1", "Extremeña", -1, SPAIN, true, true);
 						break;
 					}
 				break;
 
-				case 4: // Teniente de Navнo
+				case 4: // Teniente de Navío
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
@@ -1896,19 +1896,19 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 
-				case 5: // Capitбn de Corbeta
+				case 5: // Capitán de Corbeta
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
-							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostуl Felipe", -1, SPAIN, true, true); // 
+							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostól Felipe", -1, SPAIN, true, true); // 
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostуl Felipe", -1, SPAIN, true, true); // 
+							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostól Felipe", -1, SPAIN, true, true); // 
 						break;
 
 						case PERIOD_GOLDEN_AGE_OF_PIRACY:
-							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostуl Felipe", -1, SPAIN, true, true); // 
+							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostól Felipe", -1, SPAIN, true, true); // 
 						break;
 
 						case PERIOD_COLONIAL_POWERS:
@@ -1920,12 +1920,12 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "SP_Surprise", "Cornelia", -1, SPAIN, true, true); // Unitй class Frigate
+							GiveShip2Character(pchar, "SP_Surprise", "Cornelia", -1, SPAIN, true, true); // Unité class Frigate
 						break;
 					}
 				break;
 
-				case 6: // Capitбn de Fragata
+				case 6: // Capitán de Fragata
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
@@ -1954,7 +1954,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 
-				case 7: // Capitбn de Navнo
+				case 7: // Capitán de Navío
 					if (GetCompanionIndex(pchar,1) == -1 || GetCompanionIndex(pchar,2) == -1 || GetCompanionIndex(pchar,3) == -1) // GR
 					{
 						if(GetCurrentPeriod() < PERIOD_COLONIAL_POWERS)
@@ -1968,7 +1968,7 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_THE_SPANISH_MAIN:
-								GiveShip2Character(ch, "SP_Galeon50", "	Nuestra Seсora del Pueblo", -1, SPAIN, true, true); // Royal Galleon
+								GiveShip2Character(ch, "SP_Galeon50", "	Nuestra Señora del Pueblo", -1, SPAIN, true, true); // Royal Galleon
 							break;
 
 							case PERIOD_GOLDEN_AGE_OF_PIRACY:
@@ -1980,7 +1980,7 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_REVOLUTIONS:
-								GiveShip2Character(ch, "SP_Surprise", "Santa Marta", -1, SPAIN, true, true); // Unitй class Frigate
+								GiveShip2Character(ch, "SP_Surprise", "Santa Marta", -1, SPAIN, true, true); // Unité class Frigate
 							break;
 
 							case PERIOD_NAPOLEONIC:
@@ -2014,11 +2014,11 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "FR_Superbe", "San Agustнn", -1, SPAIN, true, true); // America class 3rd Rate
+							GiveShip2Character(pchar, "FR_Superbe", "San Agustín", -1, SPAIN, true, true); // America class 3rd Rate
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "FR_Superbe", "San Agustнn", -1, SPAIN, true, true); // America class 3rd Rate
+							GiveShip2Character(pchar, "FR_Superbe", "San Agustín", -1, SPAIN, true, true); // America class 3rd Rate
 						break;
 					}
 				break;
@@ -2050,11 +2050,11 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_REVOLUTIONS:
-								GiveShip2Character(pchar, "SP_SotL", "Santнsima Trinidad", -1, SPAIN, true, true); // Victory class 1st Rate
+								GiveShip2Character(pchar, "SP_SotL", "Santísima Trinidad", -1, SPAIN, true, true); // Victory class 1st Rate
 							break;
 
 							case PERIOD_NAPOLEONIC:
-								GiveShip2Character(pchar, "SP_SotL", "Santнsima Trinidad", -1, SPAIN, true, true); // Victory class 1st Rate
+								GiveShip2Character(pchar, "SP_SotL", "Santísima Trinidad", -1, SPAIN, true, true); // Victory class 1st Rate
 							break;
 						}
 					}
@@ -2071,9 +2071,9 @@ void GivePromotionReward(int iNation)
 						{
 							case "Blas de Lezo":
 								ch.name = TranslateString("","Francisco");
-								ch.middlename = TranslateString("","Josй");
+								ch.middlename = TranslateString("","José");
 								ch.lastname = TranslateString("","de Ovando");
-								GiveShip2Character(ch, "PO_Poseidon", "Dragуn", -1, SPAIN, true, true);
+								GiveShip2Character(ch, "PO_Poseidon", "Dragón", -1, SPAIN, true, true);
 							break;
 
 							//default:
@@ -2084,7 +2084,7 @@ void GivePromotionReward(int iNation)
 								break;
 
 								case PERIOD_THE_SPANISH_MAIN:
-									GiveShip2Character(ch, "Galeon50", "Nuestra Seсora de las Mercedes", -1, SPAIN, true, true); // War Galleon
+									GiveShip2Character(ch, "Galeon50", "Nuestra Señora de las Mercedes", -1, SPAIN, true, true); // War Galleon
 								break;
 
 								case PERIOD_GOLDEN_AGE_OF_PIRACY:
@@ -2096,11 +2096,11 @@ void GivePromotionReward(int iNation)
 								break;
 
 								case PERIOD_REVOLUTIONS:
-									GiveShip2Character(ch, "FR_FirstRate", "San Carlos", -1, SPAIN, true, true); // Intrйpide class 1st Rate
+									GiveShip2Character(ch, "FR_FirstRate", "San Carlos", -1, SPAIN, true, true); // Intrépide class 1st Rate
 								break;
 
 								case PERIOD_NAPOLEONIC:
-									GiveShip2Character(ch, "FR_FirstRate", "San Carlos", -1, SPAIN, true, true); // Intrйpide class 1st Rate
+									GiveShip2Character(ch, "FR_FirstRate", "San Carlos", -1, SPAIN, true, true); // Intrépide class 1st Rate
 								break;
 							}
 						}
@@ -2120,7 +2120,7 @@ void GivePromotionReward(int iNation)
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
-							GiveShip2Character(pchar, "LuggerCT", "Nossa Senhora da Oliveira e Santo Antуnio", -1, PORTUGAL, true, true); // Lugger
+							GiveShip2Character(pchar, "LuggerCT", "Nossa Senhora da Oliveira e Santo António", -1, PORTUGAL, true, true); // Lugger
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
@@ -2222,16 +2222,16 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "PO_Greyhound", "Sao Joao Magnвnimo", -1, PORTUGAL, true, true); // 6th Rate Frigate
+							GiveShip2Character(pchar, "PO_Greyhound", "Sao Joao Magnânimo", -1, PORTUGAL, true, true); // 6th Rate Frigate
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "PO_Greyhound", "Sao Joao Magnвnimo", -1, PORTUGAL, true, true); // 6th Rate Frigate
+							GiveShip2Character(pchar, "PO_Greyhound", "Sao Joao Magnânimo", -1, PORTUGAL, true, true); // 6th Rate Frigate
 						break;
 					}
 				break;
 
-				case 5: // Capitгo-Tenente
+				case 5: // Capitão-Tenente
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
@@ -2255,12 +2255,12 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "RN_Surprise", "Principe Dom Pedro", -1, PORTUGAL, true, true); // Unitй class Frigate
+							GiveShip2Character(pchar, "RN_Surprise", "Principe Dom Pedro", -1, PORTUGAL, true, true); // Unité class Frigate
 						break;
 					}
 				break;
 
-				case 6: // Capitгo-de-Fragata
+				case 6: // Capitão-de-Fragata
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
@@ -2289,7 +2289,7 @@ void GivePromotionReward(int iNation)
 					}
 				break;
 
-				case 7: // Capitгo-de-Mar-e-Guerra
+				case 7: // Capitão-de-Mar-e-Guerra
 					if (GetCompanionIndex(pchar,1) == -1 || GetCompanionIndex(pchar,2) == -1 || GetCompanionIndex(pchar,3) == -1) // GR
 					{
 						switch(GetCurrentPeriod())
@@ -2321,7 +2321,7 @@ void GivePromotionReward(int iNation)
 
 							case PERIOD_NAPOLEONIC:
 								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Offic_por_19", 3, PORTUGAL, false);
-								GiveShip2Character(ch, "RN_Surprise", "Uniгo", -1, PORTUGAL, true, true); // Unitй class Frigate
+								GiveShip2Character(ch, "RN_Surprise", "União", -1, PORTUGAL, true, true); // Unité class Frigate
 							break;
 						}
 						SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
@@ -2439,11 +2439,11 @@ void GivePromotionReward(int iNation)
 							break;
 
 							case PERIOD_REVOLUTIONS:
-								GiveShip2Character(ch, "RN_Superbe", "Santo Augustinho", -1, PORTUGAL, true, true); // Intrйpide class 1st Rate
+								GiveShip2Character(ch, "RN_Superbe", "Santo Augustinho", -1, PORTUGAL, true, true); // Intrépide class 1st Rate
 							break;
 
 							case PERIOD_NAPOLEONIC:
-								GiveShip2Character(ch, "RN_Superbe", "Santo Augustinho", -1, PORTUGAL, true, true); // Intrйpide class 1st Rate
+								GiveShip2Character(ch, "RN_Superbe", "Santo Augustinho", -1, PORTUGAL, true, true); // Intrépide class 1st Rate
 							break;
 						}
 						SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
@@ -2577,11 +2577,11 @@ void GivePromotionReward(int iNation)
 					switch(GetCurrentPeriod())
 					{
 						case PERIOD_EARLY_EXPLORERS:
-							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostуl Felipe", -1, SPAIN, true, true); // 
+							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostól Felipe", -1, SPAIN, true, true); // 
 						break;
 
 						case PERIOD_THE_SPANISH_MAIN:
-							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostуl Felipe", -1, SPAIN, true, true); // 
+							GiveShip2Character(pchar, "SP_ApostolFelipe", "Apostól Felipe", -1, SPAIN, true, true); // 
 						break;
 
 						case PERIOD_GOLDEN_AGE_OF_PIRACY:
@@ -2593,11 +2593,11 @@ void GivePromotionReward(int iNation)
 						break;
 
 						case PERIOD_REVOLUTIONS:
-							GiveShip2Character(pchar, "RN_Surprise", "Insurgent", -1, AMERICA, true, true); // Unitй class Frigate
+							GiveShip2Character(pchar, "RN_Surprise", "Insurgent", -1, AMERICA, true, true); // Unité class Frigate
 						break;
 
 						case PERIOD_NAPOLEONIC:
-							GiveShip2Character(pchar, "RN_Surprise", "Delaware", -1, AMERICA, true, true); // Unitй class Frigate
+							GiveShip2Character(pchar, "RN_Surprise", "Delaware", -1, AMERICA, true, true); // Unité class Frigate
 						break;
 					}
 				break;
@@ -2650,7 +2650,7 @@ void GivePromotionReward(int iNation)
 
 							case PERIOD_THE_SPANISH_MAIN:
 								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Huber_spa", 3, SPAIN, false);
-								GiveShip2Character(ch, "SP_Galeon50", "	Nuestra Seсora del Pueblo", -1, SPAIN, true, true); // Royal Galleon
+								GiveShip2Character(ch, "SP_Galeon50", "	Nuestra Señora del Pueblo", -1, SPAIN, true, true); // Royal Galleon
 							break;
 
 							case PERIOD_GOLDEN_AGE_OF_PIRACY:
@@ -2665,12 +2665,12 @@ void GivePromotionReward(int iNation)
 
 							case PERIOD_REVOLUTIONS:
 								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "USA_lut_18", 3, AMERICA, false);
-								GiveShip2Character(ch, "RN_Surprise", "Bourbon", -1, AMERICA, true, true); // Unitй class Frigate
+								GiveShip2Character(ch, "RN_Surprise", "Bourbon", -1, AMERICA, true, true); // Unité class Frigate
 							break;
 
 							case PERIOD_NAPOLEONIC:
 								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "USA_lut_18", 3, AMERICA, false);
-								GiveShip2Character(ch, "RN_Surprise", "Adams", -1, AMERICA, true, true); // Unitй class Frigate
+								GiveShip2Character(ch, "RN_Surprise", "Adams", -1, AMERICA, true, true); // Unité class Frigate
 							break;
 						}
 						SetCompanionIndex(pchar, -1, GetCharacterIndex(ch.id));
@@ -2750,7 +2750,7 @@ void GivePromotionReward(int iNation)
 
 							case PERIOD_THE_SPANISH_MAIN:
 								ch = CreateOfficer_Cheat(OFFIC_TYPE_CAPNAVY, "Huber_Spa4_17", 3, SPAIN, false);
-								GiveShip2Character(ch, "Galeon50", "Nuestra Seсora de las Mercedes", -1, SPAIN, true, true); // War Galleon
+								GiveShip2Character(ch, "Galeon50", "Nuestra Señora de las Mercedes", -1, SPAIN, true, true); // War Galleon
 							break;
 
 							case PERIOD_GOLDEN_AGE_OF_PIRACY:
@@ -3195,7 +3195,7 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 				case SPAIN:
 					if (!CheckAttribute(PChar, "knighted"))
 					{
-						if (PChar.sex == "woman") PCharTitle = "Doсa";
+						if (PChar.sex == "woman") PCharTitle = "Doña";
 						else PCharTitle = "Don";
 						SetRankTitle(PChar, TranslateString("", PCharTitle));
 						PChar.knighted = iNation;
@@ -3610,7 +3610,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 						}
 					}
 				break;
-				case 2: // Alfйrez de Fragate
+				case 2: // Alférez de Fragate
 					switch (rand(2))
 					{
 						case 0: PlayerModel = "spa_lut_18"; break;
@@ -3618,13 +3618,13 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 						case 2: PlayerModel = "spa_lut2_18"; break;
 					}
 				break;
-				case 3: // Alfйrez de Navнo
+				case 3: // Alférez de Navío
 				break;
-				case 4: // Teniente de Navнo
+				case 4: // Teniente de Navío
 				break;
-				case 5: // Capitбn de Corbeta
+				case 5: // Capitán de Corbeta
 				break;
-				case 6: // Capitбn de Fragata
+				case 6: // Capitán de Fragata
 					switch(rand(2))
 					{
 						case 0: PlayerModel = "spa_cpt_18"; break;
@@ -3632,7 +3632,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 						case 2: PlayerModel = "spa_cpt2_18"; break;
 					}
 				break;
-				case 7: // Capitбn de Navнo
+				case 7: // Capitán de Navío
 				break;
 				case 8: // Contra Almirante
 				break;
@@ -3643,7 +3643,7 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 				break;
 				case 11: // Almirante General
 				break;
-				case 12: // Capitбn General
+				case 12: // Capitán General
 				break;
 			}
 		break;
@@ -3658,11 +3658,11 @@ string OfficerUniform4Player(int PlayerRank, int iNation)
 				break;
 				case 4: // Primeiro-Tenente
 				break;
-				case 5: // Capitгo-Tenente
+				case 5: // Capitão-Tenente
 				break;
-				case 6: // Capitгo-de-Fragata
+				case 6: // Capitão-de-Fragata
 				break;
-				case 7: // Capitгo-de-Mar-e-Guerra
+				case 7: // Capitão-de-Mar-e-Guerra
 				break;
 				case 8: // Comodoro
 				break;
@@ -4607,42 +4607,42 @@ string GetCharacterCursedSails(ref chr)
 		}
 	}
 
-	if(HasSubStr(tempstring, "red"))			CursedSails = "sail_torn_red_plain.tga";
-	if(HasSubStr(tempstring, "black"))			CursedSails = "sail_torn_black_plain.tga";
-	if(HasSubStr(tempstring, "tan"))			CursedSails = "sail_torn_tan_plain.tga";
-	if(HasSubStr(tempstring, "weathered"))			CursedSails = "sail_torn_weathered_plain.tga";
-	if(HasSubStr(tempstring, "patch"))			CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Gets cursed sails
-	if(HasSubStr(tempstring, "BlackPearl"))			CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Keeps her own sails
-	if(HasSubStr(tempstring, "dutchman"))			CursedSails = "sail_dutchman2.tga";		// Cursed Flying Dutchman keeps her own sails, uncursed Dutchman gets cursed Dutchman sails
-	if(HasSubStr(tempstring, "Empress"))			CursedSails = "sail_torn_red_plain.tga";	// Empress - Torn red sails
-	if(HasSubStr(tempstring, "Empres2"))			CursedSails = "sail_torn_red_plain.tga";	// Empress - Torn red sails
-	if(HasSubStr(tempstring, "qar"))			CursedSails = "sail_torn_red_qar.tga";		// Queen Anne's Revenge - Keeps her own sails
-	if(HasSubStr(tempstring, "mariana"))			CursedSails = "sail_mariana.tga";			// Mariana - Keeps her own sails
+	if(HasSubStr(tempstring, "red"))					CursedSails = "sail_torn_red_plain.tga";
+	if(HasSubStr(tempstring, "black"))					CursedSails = "sail_torn_black_plain.tga";
+	if(HasSubStr(tempstring, "tan"))					CursedSails = "sail_torn_tan_plain.tga";
+	if(HasSubStr(tempstring, "weathered"))				CursedSails = "sail_torn_weathered_plain.tga";
+	if(HasSubStr(tempstring, "patch"))					CursedSails = "sail_BlackPearl_torn.tga";		// Black Pearl - Gets cursed sails
+	if(HasSubStr(tempstring, "BlackPearl"))				CursedSails = "sail_BlackPearl_torn.tga";		// Black Pearl - Keeps her own sails
+	if(HasSubStr(tempstring, "dutchman"))				CursedSails = "sail_dutchman2.tga";				// Cursed Flying Dutchman keeps her own sails, uncursed Dutchman gets cursed Dutchman sails
+	if(HasSubStr(tempstring, "Empress"))				CursedSails = "sail_torn_red_plain.tga";		// Empress - Torn red sails
+	if(HasSubStr(tempstring, "Empres2"))				CursedSails = "sail_torn_red_plain.tga";		// Empress - Torn red sails
+	if(HasSubStr(tempstring, "qar"))					CursedSails = "sail_torn_red_qar.tga";			// Queen Anne's Revenge - Keeps her own sails
+	if(HasSubStr(tempstring, "mariana"))				CursedSails = "sail_mariana.tga";				// Mariana - Keeps her own sails
 	if(HasSubStr(tempstring, "sws_christian_maria"))	CursedSails = "sws_christian_maria_torn.tga";	// Torn versions of special sails
-	if(HasSubStr(tempstring, "castile_leon"))		CursedSails = "sail_castile_leon_torn.tga";
+	if(HasSubStr(tempstring, "castile_leon"))			CursedSails = "sail_castile_leon_torn.tga";
 	if(HasSubStr(tempstring, "holy_roman_empire"))		CursedSails = "sail_holy_roman_empire_torn.tga";
 	if(HasSubStr(tempstring, "DeathVessel_whole"))		CursedSails = "sail_DeathVessel_torn.tga";
 	if(HasSubStr(tempstring, "DeathVessel_whole1"))		CursedSails = "sail_DeathVessel_torn1.tga";
-	if(HasSubStr(tempstring, "Black_Red"))			CursedSails = "sail_Black_Red_torn.tga";
-	if(HasSubStr(tempstring, "Diamond"))			CursedSails = "sail_Diamond_torn.tga";
-	if(HasSubStr(tempstring, "Experto"))			CursedSails = "sail_Experto_torn.tga";
-	if(HasSubStr(tempstring, "Experto1"))			CursedSails = "sail_Experto_torn1.tga";
-	if(HasSubStr(tempstring, "Explorer"))			CursedSails = "sail_Explorer_torn.tga";
-	if(HasSubStr(tempstring, "Explorer1"))			CursedSails = "sail_Explorer_torn1.tga";
-	if(HasSubStr(tempstring, "Gilded"))			CursedSails = "sail_Gilded_torn.tga";
-	if(HasSubStr(tempstring, "Gilded_plain"))		CursedSails = "sail_torn_Gilded_plain.tga";
-	if(HasSubStr(tempstring, "Navigator"))			CursedSails = "sail_Navigator_torn.tga";
-	if(HasSubStr(tempstring, "Navigator1"))			CursedSails = "sail_Navigator_torn1.tga";
-	if(HasSubStr(tempstring, "Officer"))			CursedSails = "sail_Officer_torn.tga";
-	if(HasSubStr(tempstring, "Officer1"))			CursedSails = "sail_Officer_torn1.tga";
-	if(HasSubStr(tempstring, "Red_Striped"))		CursedSails = "sail_Red_Striped_torn.tga";
-	if(HasSubStr(tempstring, "Templar"))			CursedSails = "sail_Templar_torn.tga";
-	if(HasSubStr(tempstring, "Templar1"))			CursedSails = "sail_Templar_torn1.tga";
-	if(HasSubStr(tempstring, "petros"))			CursedSails = "sail_torn_red_plain.tga";
-	if(HasSubStr(tempstring, "petros_plain"))		CursedSails = "sail_torn_petros_plain.tga";
+	if(HasSubStr(tempstring, "Black_Red"))				CursedSails = "sail_Black_Red_torn.tga";
+	if(HasSubStr(tempstring, "Diamond"))				CursedSails = "sail_Diamond_torn.tga";
+	if(HasSubStr(tempstring, "Experto"))				CursedSails = "sail_Experto_torn.tga";
+	if(HasSubStr(tempstring, "Experto1"))				CursedSails = "sail_Experto_torn1.tga";
+	if(HasSubStr(tempstring, "Explorer"))				CursedSails = "sail_Explorer_torn.tga";
+	if(HasSubStr(tempstring, "Explorer1"))				CursedSails = "sail_Explorer_torn1.tga";
+	if(HasSubStr(tempstring, "Gilded"))					CursedSails = "sail_Gilded_torn.tga";
+	if(HasSubStr(tempstring, "Gilded_plain"))			CursedSails = "sail_torn_Gilded_plain.tga";
+	if(HasSubStr(tempstring, "Navigator"))				CursedSails = "sail_Navigator_torn.tga";
+	if(HasSubStr(tempstring, "Navigator1"))				CursedSails = "sail_Navigator_torn1.tga";
+	if(HasSubStr(tempstring, "Officer"))				CursedSails = "sail_Officer_torn.tga";
+	if(HasSubStr(tempstring, "Officer1"))				CursedSails = "sail_Officer_torn1.tga";
+	if(HasSubStr(tempstring, "Red_Striped"))			CursedSails = "sail_Red_Striped_torn.tga";
+	if(HasSubStr(tempstring, "Templar"))				CursedSails = "sail_Templar_torn.tga";
+	if(HasSubStr(tempstring, "Templar1"))				CursedSails = "sail_Templar_torn1.tga";
+	if(HasSubStr(tempstring, "petros"))					CursedSails = "sail_torn_red_plain.tga";
+	if(HasSubStr(tempstring, "petros_plain"))			CursedSails = "sail_torn_petros_plain.tga";
 	if(HasSubStr(tempstring, "petros_black_red"))		CursedSails = "sail_torn_petros_black_red.tga";
 	if(HasSubStr(tempstring, "petros_blue_white"))		CursedSails = "sail_torn_petros_blue_white.tga";
-	if(HasSubStr(tempstring, "barbarossa"))			CursedSails = "sail_torn_barbarossa_plain.tga";
+	if(HasSubStr(tempstring, "barbarossa"))				CursedSails = "sail_torn_barbarossa_plain.tga";
 	if(CursedSails == "")
 		CursedSails = "sail_torn_white_plain.tga";
 

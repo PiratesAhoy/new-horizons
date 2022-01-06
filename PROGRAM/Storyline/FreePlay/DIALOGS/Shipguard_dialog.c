@@ -26,12 +26,12 @@ void ProcessDialogEvent()
 		break;
 
 		case SPAIN:
-			Preprocessor_Add("captain", "Capitбn");
+			Preprocessor_Add("captain", "Capitán");
 			Preprocessor_Add("attack", "Al ataque");
 		break;
 
 		case PORTUGAL:
-			Preprocessor_Add("captain", "CapitЭo");
+			Preprocessor_Add("captain", "CapitÝo");
 			Preprocessor_Add("attack", "Al ataque");
 		break;
 

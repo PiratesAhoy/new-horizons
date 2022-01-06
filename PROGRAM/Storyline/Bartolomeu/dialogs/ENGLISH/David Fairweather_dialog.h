@@ -43,7 +43,7 @@ string DLG_TEXT[51] = {
 "No, and I don't think anbody in the town knows him either.",
 "Last question : Do you know where he went?",
 "I have no idea. I just know he was in a hurry to meet... it's a French name I think... L'Ollonais! he told a crewmember.",
-"Franзois L'Ollonais?!",
+"François L'Ollonais?!",
 "I don't know. I just heard 'L'Ollonais'.",
 "So you can't tell me where the meeting could have taken place.",
 "No, I can't help you with that.",

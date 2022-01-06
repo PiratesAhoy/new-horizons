@@ -127,7 +127,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Bonnie Devlin_dialog.c";
-	ch.greeting = "Gr_Bonnie"; //Gr_Stephan Bonser";
+	ch.greeting = "Gr_Bonnie";
 	ch.rank 	= 20;
 	ch.reputation = "22";
 	ch.experience = "0";
@@ -164,7 +164,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Blaze Devlin_dialog.c";
-	ch.greeting = "Gr_Devlin"; //Gr_Stephan Bonser";
+	ch.greeting = "Gr_Devlin";
 	ch.rank 	= 20;
 	ch.reputation = "22";
 	ch.experience = "0";
@@ -697,7 +697,7 @@ void CreateStoryCharacters(ref n)
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
 	//JRH ammo mod <--
-	ch.greeting = "Gr_SJGfem"; //Gr_Stephan Bonser";
+	ch.greeting = "Gr_SJGfem";
 	ch.rank 	= 40;
 	ch.reputation = "22";
 	ch.experience = "600";
@@ -753,7 +753,7 @@ void CreateStoryCharacters(ref n)
 	TakenItems(ch, "gunpowder", 6);
 	TakenItems(ch, "pistolbullets", 6);
 	//JRH ammo mod <--
-	ch.greeting = "Gr_SJGfem"; //Gr_Stephan Bonser";
+	ch.greeting = "Gr_SJGfem";
 	GiveItem2Character(ch, "commonarmor");
 	ch.equip.armor = "commonarmor";
 	ch.rank 	= 40;
