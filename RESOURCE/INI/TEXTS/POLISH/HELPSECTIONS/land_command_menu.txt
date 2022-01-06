@@ -5,7 +5,7 @@ Party Condition
 
 land_commands_info
 {
-    Postaﬁ gracza i stan jego druûyny moûna zobaczyﬁ w lewym dolnym rogu ekranu podczas chodzenia po lπdzie (Rys. 1). Gracz widzi twarze swojej postaci i oficerÛw oraz dwa paski nad nimi. Niebieski pasek reprezentuje stan za≥adowania pistoletu postaci (jeúli taki posiada), a czerwony to stan zdrowia postaci.
-    Prze≥adowanie pistoletu i uzupe≥nienie zdrowia wymaga czasu.
-    RÛwnieû tutaj znajduje si◊ menu polece, bardzo podobne do menu ikony polecenia statku. Menu moûna otworzyﬁ klawiszem Command. Z tego menu moûesz uûyﬁ polecenia Szybka podrÛû do niektÛrych lokalizacji (rys.2). Miejsca te sπ wymienione na rys.3. Sπ to (od lewej do prawej oznacza sklep odgÛrny) sklep, stocznia, tawerna, rezydencja gubernatora i port, w ktÛrym znajduje si◊ statek gracza. Korzystanie z tego menu jest ca≥kowicie takie samo, jak przy uûyciu menu Ikona polecenia wysy≥ki.
+    Posta≈¢ gracza i stan jego dru≈æyny mo≈æna zobaczy≈¢ w lewym dolnym rogu ekranu podczas chodzenia po lƒÖdzie (Rys. 1). Gracz widzi twarze swojej postaci i oficer√≥w oraz dwa paski nad nimi. Niebieski pasek reprezentuje stan za≈Çadowania pistoletu postaci (je≈õli taki posiada), a czerwony to stan zdrowia postaci.
+    Prze≈Çadowanie pistoletu i uzupe≈Çnienie zdrowia wymaga czasu.
+    R√≥wnie≈æ tutaj znajduje si√ó menu poleceƒë, bardzo podobne do menu ikony polecenia statku. Menu mo≈æna otworzy≈¢ klawiszem Command. Z tego menu mo≈æesz u≈æy≈¢ polecenia Szybka podr√≥≈æ do niekt√≥rych lokalizacji (rys.2). Miejsca te sƒÖ wymienione na rys.3. SƒÖ to (od lewej do prawej oznacza sklep odg√≥rny) sklep, stocznia, tawerna, rezydencja gubernatora i port, w kt√≥rym znajduje si√ó statek gracza. Korzystanie z tego menu jest ca≈Çkowicie takie samo, jak przy u≈æyciu menu Ikona polecenia wysy≈Çki.
 }

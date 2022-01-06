@@ -1,3 +1,3 @@
-title=Samouczek - Zatrudnianie za≥ogi w tawernie
-text.t1=Niestety, straci≥em paru majtkÛw na morzu. Powinieniem poszukaﬁ tawerny i zatrudniﬁ nowych zanim wyp≥yn◊.
+title=Samouczek - Zatrudnianie za≈Çogi w tawernie
+text.t1=Niestety, straci≈Çem paru majtk√≥w na morzu. Powinieniem poszuka≈¢ tawerny i zatrudni≈¢ nowych zanim wyp≈Çyn√ó.
 text.t2=Zrobione!

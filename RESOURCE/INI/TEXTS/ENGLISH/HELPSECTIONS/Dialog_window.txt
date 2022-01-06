@@ -8,5 +8,5 @@ Dialog_window_info
     In the top left corner of the dialogue wiondow you see face of a character you speaking to. And to the right player can see that character's name.
     At the bottom of the screen there is a text window. Here player sees what character tells him and also sees a list of player's phrases he can tell to character. Character's words are gold, and player's answers appears blue. Currently selected player's answer is highlited with bright blue color (pic.2).
     Sometimes not all the text or answers can fit the text window. In this case player sees green up and down arrows in the right part of text window (pic.3). And if there is some text lines below down arrow will be highlighted with bright green. The same about up arrow - it will be highlighted if there is text above.
-    Selection of player's answer can be performed with dialogue selection buttons, and àctivation of selected answer can be performed with dialogue "action" key.
+    Selection of player's answer can be performed with dialogue selection buttons, and activation of selected answer can be performed with dialogue "action" key.
 }

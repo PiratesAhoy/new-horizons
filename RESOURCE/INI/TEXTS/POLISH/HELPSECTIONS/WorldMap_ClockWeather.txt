@@ -5,5 +5,5 @@ Date and Weather Indicator
 
 Clock_Weather_info
 {
-    WskaŸnik daty i pogody znajduje si× w prawym górnym rogu ekranu mapy ›wiata. Liczby na nim pokazuj¹ aktualn¹ dat× gry, a aktualna pogoda i czas dnia s¹ wy›wietlane ze zdj×ciem w okr¹g³ym oknie.
+    WskaÅºnik daty i pogody znajduje siÃ— w prawym gÃ³rnym rogu ekranu mapy â€ºwiata. Liczby na nim pokazujÄ… aktualnÄ… datÃ— gry, a aktualna pogoda i czas dnia sÄ… wyâ€ºwietlane ze zdjÃ—ciem w okrÄ…gÅ‚ym oknie.
 }

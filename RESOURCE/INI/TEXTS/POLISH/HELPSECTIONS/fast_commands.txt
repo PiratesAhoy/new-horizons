@@ -5,23 +5,23 @@ Hot Action Commands
 
 fast_commands_info
 {
-    Ikony poleceğ Hot Action pojawiaj¹ si× w lewym górnym rogu ekranu. Tylko jedna komenda moe byŞ Hot na raz i b×dzie wy›wietlana przez ikon×. Je›li nie ma tam adnej ikony, oznacza to, e w tym miejscu lub o tej godzinie nie mona by³o wykonaŞ adnej akcji Hot.
+    Ikony poleceÄ‘ Hot Action pojawiajÄ… siÃ— w lewym gÃ³rnym rogu ekranu. Tylko jedna komenda moÅ¾e byÅ¢ Hot na raz i bÃ—dzie wyâ€ºwietlana przez ikonÃ—. Jeâ€ºli nie ma tam Å¾adnej ikony, oznacza to, Å¾e w tym miejscu lub o tej godzinie nie moÅ¾na byÅ‚o wykonaÅ¢ Å¾adnej akcji Hot.
 
-    Istniej¹ róne gor¹ce rozkazy akcji dla morza i l¹du.
+    IstniejÄ… rÃ³Å¾ne gorÄ…ce rozkazy akcji dla morza i lÄ…du.
 
-    Podczas gdy gracz jest na morzu, moe korzystaŞ z nast×puj¹cych poleceğ Hot Action (rys.1 od lewej do prawej):
-  - Cumowanie do molo na brzegu lub w mie›cie (dost×pne, je›li statek gracza znajduje si× w pobliu miejsca cumowania i nie ma w pobliu wrogów).
-  - Rozpocznij wej›cie na pok³ad (dost×pne, gdy wrogi statek jest bardzo blisko gracza). Rozpocznij wej›cie na pok³ad z najbliszym wrogim statkiem.
-  - Otwarta mapa ›wiata (dost×pna, gdy w pobliu nie ma statków wroga). Otwórz ekran Mapa ›wiata.
-  - Wymiana lub prze³adowanie (dost×pne, gdy statek towarzysza znajduje si× blisko gracza i nie ma w pobliu wrogów). Otwiera ekran wymiany. Gracz moe wymieniaŞ za³og×, oficerów, towary z jednego statku na inny. Moe równie zast¹piŞ kapitana lub nawet wymieniŞ statki.
+    Podczas gdy gracz jest na morzu, moÅ¾e korzystaÅ¢ z nastÃ—pujÄ…cych poleceÄ‘ Hot Action (rys.1 od lewej do prawej):
+  - Cumowanie do molo na brzegu lub w mieâ€ºcie (dostÃ—pne, jeâ€ºli statek gracza znajduje siÃ— w pobliÅ¾u miejsca cumowania i nie ma w pobliÅ¾u wrogÃ³w).
+  - Rozpocznij wejâ€ºcie na pokÅ‚ad (dostÃ—pne, gdy wrogi statek jest bardzo blisko gracza). Rozpocznij wejâ€ºcie na pokÅ‚ad z najbliÅ¾szym wrogim statkiem.
+  - Otwarta mapa â€ºwiata (dostÃ—pna, gdy w pobliÅ¾u nie ma statkÃ³w wroga). OtwÃ³rz ekran Mapa â€ºwiata.
+  - Wymiana lub przeÅ‚adowanie (dostÃ—pne, gdy statek towarzysza znajduje siÃ— blisko gracza i nie ma w pobliÅ¾u wrogÃ³w). Otwiera ekran wymiany. Gracz moÅ¾e wymieniaÅ¢ zaÅ‚ogÃ—, oficerÃ³w, towary z jednego statku na inny. MoÅ¾e rÃ³wnieÅ¾ zastÄ…piÅ¢ kapitana lub nawet wymieniÅ¢ statki.
 
-Podczas gdy gracz znajduje si× na l¹dzie, moe korzystaŞ z nast×puj¹cych poleceğ Hot Action (rys.2 od lewej do prawej):
-  - Zamkni×ty zamek. Ta ikona pojawia si×, gdy gracz stoi w pobliu zamkni×tych drzwi lub bramy. Ta ikona dostarcza tylko informacji i nic si× nie dzieje, je›li gracz naci›nie klawisz „Hot Action”.
-  - Otwarty zamek. Ta ikona oznacza, e ??gracz stoi przed otwartymi drzwiami lub bram¹ i po naci›ni×ciu przycisku „Hot Action” gracz wejdzie do nast×pnej lokacji.
-  - Uyj / WeŸ przedmiot. Ikony te pokazuj¹, e moesz wzi¹Ş co› lub zrobiŞ co› w tym miejscu. Wszystko zostanie wykonane automatycznie po uyciu klawisza „Hot action”. To polecenie s³uy równie do umieszczania przedmiotów w skrzyniach lub zabierania ich ze skrzyğ.
-  - Popatrz. Ikona pokazuje, e moesz sprawdziŞ przedmiot lub postaŞ stoj¹c¹ w pobliu.
-  - Rozmowa. Ikona pokazuje, e moesz rozpocz¹Ş rozmow× z m×czyzn¹ stoj¹cym przed tob¹.
-  - Odp³yn¹Ş. Ikona pokazuje, e tutaj gracz moe udaŞ si× na swój statek i opu›ciŞ t× wysp×.
+Podczas gdy gracz znajduje siÃ— na lÄ…dzie, moÅ¾e korzystaÅ¢ z nastÃ—pujÄ…cych poleceÄ‘ Hot Action (rys.2 od lewej do prawej):
+  - ZamkniÃ—ty zamek. Ta ikona pojawia siÃ—, gdy gracz stoi w pobliÅ¾u zamkniÃ—tych drzwi lub bramy. Ta ikona dostarcza tylko informacji i nic siÃ— nie dzieje, jeâ€ºli gracz naciâ€ºnie klawisz â€Hot Actionâ€.
+  - Otwarty zamek. Ta ikona oznacza, Å¾e ??gracz stoi przed otwartymi drzwiami lub bramÄ… i po naciâ€ºniÃ—ciu przycisku â€Hot Actionâ€ gracz wejdzie do nastÃ—pnej lokacji.
+  - UÅ¾yj / WeÅº przedmiot. Ikony te pokazujÄ…, Å¾e moÅ¾esz wziÄ…Å¢ coâ€º lub zrobiÅ¢ coâ€º w tym miejscu. Wszystko zostanie wykonane automatycznie po uÅ¾yciu klawisza â€Hot actionâ€. To polecenie sÅ‚uÅ¾y rÃ³wnieÅ¾ do umieszczania przedmiotÃ³w w skrzyniach lub zabierania ich ze skrzyÄ‘.
+  - Popatrz. Ikona pokazuje, Å¾e moÅ¾esz sprawdziÅ¢ przedmiot lub postaÅ¢ stojÄ…cÄ… w pobliÅ¾u.
+  - Rozmowa. Ikona pokazuje, Å¾e moÅ¾esz rozpoczÄ…Å¢ rozmowÃ— z mÃ—Å¾czyznÄ… stojÄ…cym przed tobÄ….
+  - OdpÅ‚ynÄ…Å¢. Ikona pokazuje, Å¾e tutaj gracz moÅ¾e udaÅ¢ siÃ— na swÃ³j statek i opuâ€ºciÅ¢ tÃ— wyspÃ—.
 
-    Polecenie „Hot Action” mona wykonaŞ za pomoc¹ klawisza Akcji .
+    Polecenie â€Hot Actionâ€ moÅ¾na wykonaÅ¢ za pomocÄ… klawisza Akcji .
 }

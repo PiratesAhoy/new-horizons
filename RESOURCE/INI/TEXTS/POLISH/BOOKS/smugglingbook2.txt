@@ -1,15 +1,15 @@
 TEXT	{
-Drogi Czytelniku, jak ju pewnie zauway³e›, jest wi×cej ni jeden sposób na przemycenie na Karaibach. Podczas gdy wyspy mog¹ potrzebowaŞ konkretnych dóbr, które mog¹ byŞ dostarczane przez naszych braci, mog¹ równie istnieŞ osoby, które maj¹ specjalne potrzeby. Tych ludzi moemy równie dostarczyŞ.
+Drogi Czytelniku, jak juÅ¾ pewnie zauwaÅ¾yÅ‚eâ€º, jest wiÃ—cej niÅ¾ jeden sposÃ³b na przemycenie na Karaibach. Podczas gdy wyspy mogÄ… potrzebowaÅ¢ konkretnych dÃ³br, ktÃ³re mogÄ… byÅ¢ dostarczane przez naszych braci, mogÄ… rÃ³wnieÅ¾ istnieÅ¢ osoby, ktÃ³re majÄ… specjalne potrzeby. Tych ludzi moÅ¾emy rÃ³wnieÅ¾ dostarczyÅ¢.
 
-Chyba mówi× o przemycie opium. Uwierz mi, gdy mówi×, e ustalony porz¹dek nie popiera tego i chcia³by, aby zosta³ ca³kowicie usuni×ty z Karaibów. Ale nie znaleŸli jeszcze kadego Dna Opium. Sugeruj×, aby› zanim zaczniesz przemycaŞ opium, najpierw spróbuj znaleŸŞ t× opium×. Prawdopodobnie znajduje si× w jednym z wi×kszych miast na Karaibach i je›li zapytasz przypadkowego ludu miejskiego, prawdopodobnie powie ci, gdzie szukaŞ.
+Chyba mÃ³wiÃ— o przemycie opium. Uwierz mi, gdy mÃ³wiÃ—, Å¾e ustalony porzÄ…dek nie popiera tego i chciaÅ‚by, aby zostaÅ‚ caÅ‚kowicie usuniÃ—ty z KaraibÃ³w. Ale nie znaleÅºli jeszcze kaÅ¾dego Dna Opium. SugerujÃ—, abyâ€º zanim zaczniesz przemycaÅ¢ opium, najpierw sprÃ³buj znaleÅºÅ¢ tÃ— opiumÃ—. Prawdopodobnie znajduje siÃ— w jednym z wiÃ—kszych miast na Karaibach i jeâ€ºli zapytasz przypadkowego ludu miejskiego, prawdopodobnie powie ci, gdzie szukaÅ¢.
 
-Po ustaleniu, sk¹d wzi¹Ş towary, moesz znaleŸŞ klienta. W przesz³o›ci musieli›my znaleŸŞ w³asnych klientów, ale obecnie gildia przemytników prowadzi list× klientów i b×dzie udost×pniaŞ t× list× tobie.
+Po ustaleniu, skÄ…d wziÄ…Å¢ towary, moÅ¾esz znaleÅºÅ¢ klienta. W przeszÅ‚oâ€ºci musieliâ€ºmy znaleÅºÅ¢ wÅ‚asnych klientÃ³w, ale obecnie gildia przemytnikÃ³w prowadzi listÃ— klientÃ³w i bÃ—dzie udostÃ—pniaÅ¢ tÃ— listÃ— tobie.
 
-Je›li znalaz³e› swojego klienta, powiniene› porozmawiaŞ z nim, aby us³yszeŞ, czego potrzebuje, i zdobyŞ to w Den Opium. B¹dŸ jednak ostrony w drodze powrotnej! Stranicy mog¹ si× dowiedzieŞ, e masz na sobie zakazane towary. Zdecydowanie polecam kupowaŞ tylko to, czego potrzebujesz, poniewa ci stranicy b×d¹ d³ugo patrzeŞ! Po zakupie towarów powiniene› wróciŞ do klienta, a on powinien zap³aciŞ ci niez³¹ sum× pieni×dzy.
+Jeâ€ºli znalazÅ‚eâ€º swojego klienta, powinieneâ€º porozmawiaÅ¢ z nim, aby usÅ‚yszeÅ¢, czego potrzebuje, i zdobyÅ¢ to w Den Opium. BÄ…dÅº jednak ostroÅ¾ny w drodze powrotnej! StraÅ¾nicy mogÄ… siÃ— dowiedzieÅ¢, Å¾e masz na sobie zakazane towary. Zdecydowanie polecam kupowaÅ¢ tylko to, czego potrzebujesz, poniewaÅ¾ ci straÅ¾nicy bÃ—dÄ… dÅ‚ugo patrzeÅ¢! Po zakupie towarÃ³w powinieneâ€º wrÃ³ciÅ¢ do klienta, a on powinien zapÅ‚aciÅ¢ ci niezÅ‚Ä… sumÃ— pieniÃ—dzy.
 
-Uwaaj, aby wszyscy kupuj¹cy opium stali si× dealerami po dostarczeniu ich. Wi×c kiedy pomog³e› jednemu klientowi, zawsze powiniene› najpierw pomóc innym, zanim spróbujesz jeszcze raz.
+UwaÅ¾aj, aby wszyscy kupujÄ…cy opium stali siÃ— dealerami po dostarczeniu ich. WiÃ—c kiedy pomogÅ‚eâ€º jednemu klientowi, zawsze powinieneâ€º najpierw pomÃ³c innym, zanim sprÃ³bujesz jeszcze raz.
 
-ycz× wszystkim szcz×›cia przy przygodach z opium.
+Å¾yczÃ— wszystkim szczÃ—â€ºcia przy przygodach z opium.
 
 Podpisano, JL
 }

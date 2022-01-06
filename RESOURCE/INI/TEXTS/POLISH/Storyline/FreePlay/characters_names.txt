@@ -17,7 +17,7 @@ Richelieu{Richelieu}
 Mazarin{Mazarin}
 Teague{Teague}
 Sparrow{Sparrow}
-François{François}
+FranÃ§ois{FranÃ§ois}
 de Hadoque{de Hadoque}
 Koleniko{Koleniko}
 Ragetti{Ragetti}

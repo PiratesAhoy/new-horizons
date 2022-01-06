@@ -1,4 +1,4 @@
 TEXT	{
-TU s¹ ludzie którzy s¹ zainteresowani kupnem opiumu:
+TU sÄ… ludzie ktÃ³rzy sÄ… zainteresowani kupnem opiumu:
 #sOpiumList#
 }

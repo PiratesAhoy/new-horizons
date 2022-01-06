@@ -1,4 +1,4 @@
 TEXT	{
 
-Okr¹g³y strza³ jest uywany przez dzia³a morskie i cz×sto przebija wiele szeregów cz³onków za³ogi, powoduj¹c wiele ofiar. To jak odbijaj¹ca si× kula do kr×gli, która nie zatrzymuje si× po pierwszym uderzeniu, ale kontynuuje i przecina wszystko na swojej drodze. Moe odbijaŞ si×, gdy uderzy o ziemi×, uderzaj¹c ludzi przy kadym odbiciu.
+OkrÄ…gÅ‚y strzaÅ‚ jest uÅ¾ywany przez dziaÅ‚a morskie i czÃ—sto przebija wiele szeregÃ³w czÅ‚onkÃ³w zaÅ‚ogi, powodujÄ…c wiele ofiar. To jak odbijajÄ…ca siÃ— kula do krÃ—gli, ktÃ³ra nie zatrzymuje siÃ— po pierwszym uderzeniu, ale kontynuuje i przecina wszystko na swojej drodze. MoÅ¾e odbijaÅ¢ siÃ—, gdy uderzy o ziemiÃ—, uderzajÄ…c ludzi przy kaÅ¾dym odbiciu.
 }

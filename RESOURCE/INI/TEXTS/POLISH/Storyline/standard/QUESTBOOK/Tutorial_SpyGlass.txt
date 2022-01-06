@@ -1,3 +1,3 @@
 title=Samouczek - Zakup nowej lunety
-text.t1=Wygl¹da na to, e równi luneta zakoğczy³a swój ywot. Moe znajdzie si× jaka› na zmian×.
+text.t1=WyglÄ…da na to, Å¾e rÃ³wniÅ¾ luneta zakoÄ‘czyÅ‚a swÃ³j Å¾ywot. MoÅ¾e znajdzie siÃ— jakaâ€º na zmianÃ—.
 text.t2=Zrobione!
