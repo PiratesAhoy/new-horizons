@@ -9985,8 +9985,8 @@ void InitShips()
 	n++;
 	refShip.Name			= "FastGalleon5";
 	refShip.All 			= "Galeon1";
-	refShip.id			= "FastGalleon5";
-	refShip.Class			= 3;
+	refShip.id				= "FastGalleon5";
+	refShip.Class		   = 3;
 	refShip.SName 			= "FastGalleonW";
 	refShip.Walk  = "FastGalleon"; // PB & back84
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS18;
@@ -9998,9 +9998,9 @@ void InitShips()
 	refShip.Cannons.Borts.cannonb.qty = 4;
 	refShip.MaxCrew			= 400; // GR: was 390, usually over 400 after national modifiers, so increase to 400 and make it officially tier 3
 	refShip.MinCrew			= 90;  // GR: was 45, too small!
-	refShip.Price		   	= 120000;
-	refShip.HP			= 4500;
-	refShip.SP			= 200;
+	refShip.Price		   = 120000;
+	refShip.HP			  = 4500;
+	refShip.SP			  = 200;
 	refShip.Jetty			= false; // PB
 
 	refShip.BigPicTexName	= "SHIPS5"; // Armada
@@ -11767,7 +11767,7 @@ void InitShips()
 // on this day and date Dec 23 2009, 0325h
 
 //-------------------------------------------------------------------------
-// French Battle Frigate (Artйmise class Frigate) By ZarethPL
+// French Battle Frigate (Artémise class Frigate) By ZarethPL
 // Further model and texture work by Captain Armstrong and Armada; rigging by Hylie Pistof
 //     SWS / Flushdeck Frigate / WBT4
 //-------------------------------------------------------------------------
@@ -13897,7 +13897,7 @@ void InitShips()
 // on this day and date Jan 2 10, 2131h
 
 //-------------------------------------------------------------------------
-// Lineship47 by Chris Roupй and Thomas the Terror
+// Lineship47 by Chris Roupé and Thomas the Terror
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 165> (WBT4)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
@@ -15905,7 +15905,7 @@ void InitShips()
 // on this day and date Jan 1 2010, 1711h
 
 //-------------------------------------------------------------------------
-// Intrйpide by Seb
+// Intrépide by Seb
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 198> (WBT4XL)
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
@@ -19547,7 +19547,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// Apostуl Felipe 1626 by pgargon
+// Apostól Felipe 1626 by pgargon
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
@@ -20397,7 +20397,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// Unitй class frigate, French version of RN_Surprise by pgargon, retextured by Grey Roger
+// Unité class frigate, French version of RN_Surprise by pgargon, retextured by Grey Roger
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
@@ -20484,7 +20484,7 @@ void InitShips()
 	}
 
 //-------------------------------------------------------------------------
-// Unitй class frigate, Spanish version of RN_Surprise by pgargon, retextured by Grey Roger
+// Unité class frigate, Spanish version of RN_Surprise by pgargon, retextured by Grey Roger
 //-------------------------------------------------------------------------
 	makeref(refShip,ShipsTypes[n]);
 	n++;
@@ -23747,9 +23747,9 @@ void InitShips()
 	makeref(refShip,ShipsTypes[n]);
 	n++;
 	refShip.Name			= "RN_RaaFrigate";
-	refShip.SName           	= "RaaFrigate";
-	refShip.id			= refShip.Name;
-	refship.walk                    = "RaaFrigate";
+	refShip.SName           		= "RaaFrigate";
+	refShip.id				= refShip.Name;
+	refship.walk                    =  "RaaFrigate";
 	refShip.Class		   	= 5;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS12;
 	refShip.MaxCaliber		= 12;
@@ -23760,14 +23760,14 @@ void InitShips()
 	refShip.Cannons.Borts.cannonf.qty = 2;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 	// NK <--
-	refShip.MaxCrew			= 300;
-	refShip.MinCrew			= 70;
-	refShip.Price			= 190200;
-	refShip.HP			= 3250;
-	refShip.SP			= 200;
-	refShip.Jetty			= false; // PB
+	refShip.MaxCrew		 = 300;
+	refShip.MinCrew		 = 70;
+	refShip.Price		   = 190200;
+	refShip.HP			  = 3250;
+	refShip.SP			  = 200;
+	refShip.Jetty	= false; // PB
 
-	refShip.BigPicTexName		= "SHIPS4"; // Armada
+	refShip.BigPicTexName	= "SHIPS4"; // Armada
 
 // KK -->
 	refShip.BI.Tex = 10;

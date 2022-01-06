@@ -187,11 +187,11 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitQuestBlade(n, "bladetop",                        "top2", "JRH13", 10,   "", "",      0,  0, 	  "", 0,   1);    //alchemy
 
   n = InitQuestBlade(n, "bladebottle_CE0",           "bottle_CE0", "JRH13",  1,   "", "",      0,  0, 	  "", 0,   1);    //empty
-  n = InitQuestBlade(n, "bladebottle_CW1",           "bottle_CW1", "JRH13",  2,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ water
-  n = InitQuestBlade(n, "bladebottle_CT1_sulf",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ H2SO4
-  n = InitQuestBlade(n, "bladebottle_CT1_nitr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ HNO3
-  n = InitQuestBlade(n, "bladebottle_CT1_hydr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ HCl
-  n = InitQuestBlade(n, "bladebottle_CT1_hydrnitr",  "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ HNO3+HCl
+  n = InitQuestBlade(n, "bladebottle_CW1",           "bottle_CW1", "JRH13",  2,   "", "",      0,  0, 	  "", 0,   1);    //½ water
+  n = InitQuestBlade(n, "bladebottle_CT1_sulf",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ H2SO4
+  n = InitQuestBlade(n, "bladebottle_CT1_nitr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HNO3
+  n = InitQuestBlade(n, "bladebottle_CT1_hydr",      "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HCl
+  n = InitQuestBlade(n, "bladebottle_CT1_hydrnitr",  "bottle_CT1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ HNO3+HCl
 
   n = InitQuestBlade(n, "bladebottle_CT2_sulf_w",    "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //H2SO4 + water
   n = InitQuestBlade(n, "bladebottle_CT2_sulf_c",    "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //H2SO4 + chilesalp
@@ -254,30 +254,30 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 //Q2
   n = InitQuestBlade(n, "bladebarrel3", 	   "bladebarrel3", "JRH27",  4,    5, 10,      0,  5, 	  "", 0,   0);	  //Bladebarrel3 Eden tunnel
 
-  n = InitQuestBlade(n, "bladebottle_CC1",           "bottle_CC1", "JRH22",  4,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ black powder: grinded limestone
-  n = InitQuestBlade(n, "bladebottle_CG1",           "bottle_CG1", "JRH22",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ grey powder: grinded SB2S3
-  n = InitQuestBlade(n, "bladebottle_CV1_ss",        "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ white powder, after first boiling: Sodium Sulfate
-  n = InitQuestBlade(n, "bladebottle_CV1_sc",        "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ white powder, after filter: Sodium Carbonate
-  n = InitQuestBlade(n, "bladebottle_CV1_cao",       "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ white powder, after grey powder oven heat2
-  n = InitQuestBlade(n, "bladebottle_CV1_NH4Cl",     "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ white powder, after dung in oven heat1
-  n = InitQuestBlade(n, "bladebottle_CR1",           "bottle_CR1", "JRH30",  9,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ red powder, after filter
+  n = InitQuestBlade(n, "bladebottle_CC1",           "bottle_CC1", "JRH22",  4,   "", "",      0,  0, 	  "", 0,   1);    //½ black powder: grinded limestone
+  n = InitQuestBlade(n, "bladebottle_CG1",           "bottle_CG1", "JRH22",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ grey powder: grinded SB2S3
+  n = InitQuestBlade(n, "bladebottle_CV1_ss",        "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after first boiling: Sodium Sulfate
+  n = InitQuestBlade(n, "bladebottle_CV1_sc",        "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after filter: Sodium Carbonate
+  n = InitQuestBlade(n, "bladebottle_CV1_cao",       "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after grey powder oven heat2
+  n = InitQuestBlade(n, "bladebottle_CV1_NH4Cl",     "bottle_CV1", "JRH13",  3,   "", "",      0,  0, 	  "", 0,   1);    //½ white powder, after dung in oven heat1
+  n = InitQuestBlade(n, "bladebottle_CR1",           "bottle_CR1", "JRH30",  9,   "", "",      0,  0, 	  "", 0,   1);    //½ red powder, after filter
   n = InitQuestBlade(n, "bladebottle_BTc_mix3",      "bottle_BTc", "JRH30",  1,   "", "",      0,  0, 	  "", 0,   1);    //3/4 Na2CO3 + H2O + CaS, before filter
   n = InitQuestBlade(n, "bladebottle_BTc_hydr",      "bottle_BTc", "JRH30",  1,   "", "",      0,  0, 	  "", 0,   1);    //3/4 2NaCl + H2SO4
   n = InitQuestBlade(n, "bladebottle_CV2",           "bottle_CV2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //mix2 after oven
   n = InitQuestBlade(n, "bladebottle_BY2_mix7",      "bottle_BY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: yellow liquid
-  n = InitQuestBlade(n, "bladebottle_BY1_mix7",      "bottle_BY1", "JRH22",  1,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ: yellow liquid (as a rest)
+  n = InitQuestBlade(n, "bladebottle_BY1_mix7",      "bottle_BY1", "JRH22",  1,   "", "",      0,  0, 	  "", 0,   1);    //½: yellow liquid (as a rest)
   n = InitQuestBlade(n, "bladebottle_GY2",           "bottle_GY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: light yellow gas
-  n = InitQuestBlade(n, "bladebottle_BS1_LH",        "bottle_BS1", "JRH22",  2,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ: Liquor Hepatis
+  n = InitQuestBlade(n, "bladebottle_BS1_LH",        "bottle_BS1", "JRH22",  2,   "", "",      0,  0, 	  "", 0,   1);    //½: Liquor Hepatis
   n = InitQuestBlade(n, "bladebottle_BS2_LH",        "bottle_BS2", "JRH22",  6,   "", "",      0,  0, 	  "", 0,   1);    //full: Liquor Hepatis
   n = InitQuestBlade(n, "bladebottle_BY2_mix9",      "bottle_BY2", "JRH22",  5,   "", "",      0,  0, 	  "", 0,   1);    //full: light yellow powder
-  n = InitQuestBlade(n, "bladebottle_BP1_ps",        "bottle_BP1", "JRH30", 10,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ purple: Pulvis Solaris
+  n = InitQuestBlade(n, "bladebottle_BP1_ps",        "bottle_BP1", "JRH30", 10,   "", "",      0,  0, 	  "", 0,   1);    //½ purple: Pulvis Solaris
   n = InitQuestBlade(n, "bladebottle_BP2_ps",        "bottle_BP2", "JRH30", 11,   "", "",      0,  0, 	  "", 0,   1);    //full purple: Pulvis Solaris
   n = InitQuestBlade(n, "bladebottle_BAU",           "bottle_BAU", "JRH30", 12,   "", "",      0,  0, 	  "", 0,   1);    //
 
   n = InitQuestBlade(n, "bladebottle_CB2_mix9",      "bottle_CB2", "JRH12", 12,   "", "",      0,  0, 	  "", 0,   1);    //full: dark yellow powder: dried mix9
-  n = InitQuestBlade(n, "bladebottle_CB1_mix9",      "bottle_CB1", "JRH13",  4,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ dark yellow powder: dried mix9
+  n = InitQuestBlade(n, "bladebottle_CB1_mix9",      "bottle_CB1", "JRH13",  4,   "", "",      0,  0, 	  "", 0,   1);    //½ dark yellow powder: dried mix9
   n = InitQuestBlade(n, "bladebottle_CC2_bps",       "bottle_AC2", "JRH22",  8,   "", "",      0,  0, 	  "", 0,   1);    //full: Black Pulvis Solaris
-  n = InitQuestBlade(n, "bladebottle_CQ1",           "bottle_CQ1", "JRH30", 13,   "", "",      0,  0, 	  "", 0,   1);    //Ѕ liquid mercury
+  n = InitQuestBlade(n, "bladebottle_CQ1",           "bottle_CQ1", "JRH30", 13,   "", "",      0,  0, 	  "", 0,   1);    //½ liquid mercury
   n = InitQuestBlade(n, "bladebottle_CT2_mix11",     "bottle_CT2", "JRH13",  5,   "", "",      0,  0, 	  "", 0,   1);    //full white 
   n = InitQuestBlade(n, "bladebottle_CA2_mix11",     "bottle_CA2", "JRH13",  7,   "", "",      0,  0, 	  "", 0,   1);    //full orange liquid: HgO + HNO2, before filter
   n = InitQuestBlade(n, "bladebottle_CR2_rps",       "bottle_CR2", "JRH12", 13,   "", "",      0,  0, 	  "", 0,   1);    //full: Red Pulvis Solaris
@@ -650,7 +650,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //	              ItemIndex  |     		    	         model
   //----------------------|------|---------------------------------|----------------------------------------------------------------
 //all items are available for all storylines JRH
-  n = InitBuildingItemJRH(n,	"toolchest1",  			"toolchest"); 		//Carpenterґs chest - start mode
+  n = InitBuildingItemJRH(n,	"toolchest1",  			"toolchest"); 		//Carpenter´s chest - start mode
 
   n = InitBuildingItemJRH(n,	"brF4R",  			"Flotsam4R"); 		//broken roof pieces
   n = InitBuildingItemJRH(n,	"brF11",  			"Flotsam11");
@@ -2077,7 +2077,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   itm.nation                  = ENGLAND;
   n++;
 
-  // Sword of Cortйs (SLiB KevAtl)
+  // Sword of Cortés (SLiB KevAtl)
   makeref(itm,Items[n]);
   itm.id                      = "bladeSC";
   itm.skiptrade               = false;  //BB you can sell the item
@@ -3474,10 +3474,11 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
 
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  // SPYGLASSES: ItemIndex                                        Price  texture                activate    nation     cannons   crew     morale    skiptrade
+  // SPYGLASSES: ItemIndex                                        Price  texture                activate    nation     cannons   crew     morale    skipsell
   //               |    itmID   model         icIndex  rare          |      |                      | update  | shipname  | hull    | speed     quality| skiprand
   //               |      |       |   picTexture  |     |   MinLevel |      |                zoom  |    |    | | shiptype| | sail  | | charge    |    | | skipequip
   //---------------|------|-------|-----------|---|-----|----|-------|------|------------------|---|----|----|-|-|-------|-|-|-----|-|-|--|------|----|-|-|----------
+  n = InitSpyglass(n,"spyglass0","",          8, 14,  0.01,  1,    600, "eye_BadTub.tga",    1.5, 500, 150,  1,1,1,      0,0,0,    0,0,0, 0,     1,   1,1,0);// PB: Spyglass of Shame, Easter-Egg inspired by interview with Yuri (Ursus) Rogach
   n = InitSpyglass(n,"spyglass1","",          8, 14,  0.30,  1,    600, "eye_BadTub.tga",    3.0, 500, 150,  1,1,1,      0,0,0,    0,0,0, 0,     1,   0,0,0);// Cheap Spyglass  //BB increased price
   n = InitSpyglass(n,"spyglass2","",          8, 15,  0.10,  1,   1200, "eye_CommonTub.tga", 6.0, 500, 150,  1,1,1,      0,1,1,    0,1,0, 0,     3,   0,0,0);// Average Spyglass//BB increased price
   n = InitSpyglass(n,"spyglass3","",          8, 16,  0.05,  8,   4500, "eye_GoodTub.tga",   8.0, 500, 150,  1,1,1,      1,1,1,    1,1,0, 1,     7,   0,0,0);// Great Spyglass  //BB increased price
@@ -4092,25 +4093,22 @@ void InitWeaponItemArrays()
         blade.minlevel    = 99;
       }
       // PB: Unique Blades <--
-	switch(id)
-	{
-		case "blade1" :		blade.param.time  = 0.05;		break;  // special case
-        	case "blade24":		blade.param.time  = 0.05;		break;  // special case
-		case "bladeC36":	QualitySkipRand = true;			break;  // special case, JRH (only in stores)
-		case "bladeclub":	blade.sound = "OBJECTS\DUEL\club2.wav";	break;//JRH
+      switch(id)
+      {
+		case "blade1" :			blade.param.time  = 0.05;	break;  // special case
+        case "blade24":			blade.param.time  = 0.05;	break;  // special case
+		case "bladeC36":		QualitySkipRand = true;		break;  // special case, JRH (only in stores)
+		case "bladeclub":		blade.sound = "OBJECTS\DUEL\club2.wav";	break;//JRH
 		// PB: Who would want to buy this? -->
-		case "Barmansknife":
-			QualitySkipSell = true;		
-			if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) QualitySkipTrade = true;
-		break;
-		case "Guestsknife":	QualitySkipSell = true;		break;
+		case "Barmansknife":	QualitySkipSell = sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0; break;
+		case "Guestsknife":		QualitySkipSell = true;		break;
 		case "MerchantsBlade":	QualitySkipSell = true;		break;
 		case "Merchantsdagger":	QualitySkipSell = true;		break;
-		case "Minersaxe":	QualitySkipSell = true;		break;
-		case "Minerscrow":	QualitySkipSell = true;		break;
+		case "Minersaxe":		QualitySkipSell = true;		break;
+		case "Minerscrow":		QualitySkipSell = true;		break;
 		case "Piratesdagger":	QualitySkipSell = true;		break;
 		// PB: Who would want to buy this? <--
-	}
+      }
       if ( IT_RPG_STYLE && QualityRare < IT_WEAP_RARITY_CUTOFF ) blade.skipsell = true; // TIH do not ever sell extremely rare items
       if (sti(blade.skipsell) != 1 && i<5) blade.replacewith = GetWeaponIDByQuality(id, i+1); // NK 05-04-06 so that if a weapon sellability gets lost due to quality upping (or they buy a -2 or -1 one), we replace with the next up.
       // PB: Disarm mode toggles -->
@@ -4402,14 +4400,14 @@ int InitGun(  ref ItemIndex,
       switch(id)
       {
         case "pistol3":      gun.multidmg = 1;     break; // PB: Grapeshot Pistol
-	case "portugize":    gun.multidmg = 1;     break; // JRH: Grapeshot Pistol
+		case "portugize":    gun.multidmg = 1;     break; // JRH: Grapeshot Pistol
         case "pistolmtoon":  gun.multidmg = 1;     break; // PB: Musketoon
         case "pistol10":     gun.enblrld = true;   break; // PB: Shotgun
         case "LongRifle_BT": gun.enblrld = true;   break; // JRH: Bartolomeu
-	case "LongRifle_CT": gun.enblrld = true;   break; // JRH: All Storylines
-	case "LongRifle_WT": gun.enblrld = true;   break; // JRH: WoodesRogers
-	case "pistol26":     gun.multidmg = 1;     break; // JRH
-	case "pistolbow":    gun.arrow = 1;        break; // JRH
+		case "LongRifle_CT": gun.enblrld = true;   break; // JRH: All Storylines
+		case "LongRifle_WT": gun.enblrld = true;   break; // JRH: WoodesRogers
+		case "pistol26":     gun.multidmg = 1;     break; // JRH
+		case "pistolbow":    gun.arrow = 1;        break; // JRH
       }
       // PB: Unique Guns -->
       if (IsWeaponUnique(id))
@@ -4810,7 +4808,7 @@ int InitQuestItem(  ref ItemIndex, string id, string txtname, string model,
 	case "long_johns_map":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
 	case "bandana":				qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
 	case "bandana_key":			qstitm.groupID		= EXAMINE_ITEM_TYPE; qstitm.price = 1;	break;
-    	case "MariasLetter":	qstitm.groupID = BOOK_ITEM_TYPE;	qstitm.QuestName = "hornblower_read_marias_letter";	qstitm.text = "MariasLetter";	break;  // GR: Letter from Maria from shortly before she died: Hornblower storyline
+   	case "MariasLetter":	qstitm.groupID = BOOK_ITEM_TYPE;	qstitm.QuestName = "hornblower_read_marias_letter";	qstitm.text = "MariasLetter";	break;  // GR: Letter from Maria from shortly before she died: Hornblower storyline
 	
 	case "port_stock":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
 	case "port_metal":			qstitm.groupID		= EQUIP_ITEM_TYPE;   qstitm.price = 1;	break;
@@ -5070,10 +5068,10 @@ int InitItem( ref   ItemIndex,
     case "book6"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Morgan's Mast Mashing
     case "book7"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Morgan's Almanac
     case "book8"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Pirating With Petros
-    case "book9":						  // Cooking With Albatross - PB: Clue about "Dead Albatross" effect
-	genitm.groupID = BOOK_ITEM_TYPE;
-	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) genitm.text = "cookbook_early";
-	else genitm.text = "cookbook";
+    case "book9":						  						  // Cooking With Albatross - PB: Clue about "Dead Albatross" effect
+		genitm.groupID = BOOK_ITEM_TYPE;
+		if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) genitm.text = "cookbook_early";
+		else genitm.text = "cookbook";
     break;
     case "book10"  : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Definitive Defence
     case "book11"  : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Fighting Forts

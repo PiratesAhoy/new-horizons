@@ -15,8 +15,11 @@ void InitInterface(string iniName)
 	SetSelectable("B_CREDITS",sti(InterfaceStates.Buttons.Credits.enable));
 	SetSelectable("B_QUIT",sti(InterfaceStates.Buttons.Quit.enable));
 
-	if (bSeaActive && !bMapEnter) SetSelectable("B_SAVE",false);
-	if (LAi_IsBoardingProcess() || ownDeckStarted()) SetSelectable("B_SAVE",false); // PB: No save on ship's deck to prevent errors
+	if (bSeaActive && !bMapEnter && iRealismMode > 0) SetSelectable("B_SAVE",false);	// PB: You want arcade?
+																						// Go ahead and literally save yourself in mid-sea-battle then!
+																						// And when you reload your save, your cannons will be magically reloaded; and your sails instantly set again.
+																						// Does this make sense? NOT at all! But you wanted *Arcade*, didn't you?
+	if (LAi_IsBoardingProcess() || ownDeckStarted()) SetSelectable("B_SAVE",false);		// PB: No save on ship's deck to prevent errors
 
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"BACKPICTURE",3, "interfaces\mainback");
 

@@ -463,6 +463,7 @@ void ProcessNodeOk()
 		SetCurrentNode("B_CHARNAME");
 		SetCharacterName(xi_refCharacter, str);
 		GameInterface.strings.CharacterName = xi_refCharacter.name+" "+ stringRet(CheckAttribute(xi_refCharacter,"firstname"),xi_refCharacter.firstname + " ","") + stringRet(CheckAttribute(xi_refCharacter,"middlename"),xi_refCharacter.middlename + " ","") + xi_refCharacter.lastname; // KK
+		//GameInterface.strings.CharacterName = xi_refCharacter.id;  // PB: Where does this actually DO anything? I want the char ID in the [O]-button interface
 	}
 	DeleteAttribute(&GameInterface,nodName+".strdata");
 	SetNodeUsing("RENAMEBOX",false);
@@ -617,6 +618,7 @@ void SetVariable()
 	if(CheckAttribute(xi_refCharacter, "middlename")) namestr += xi_refCharacter.middlename + " ";
 	if(CheckAttribute(xi_refCharacter,"lastname")) namestr += xi_refCharacter.lastname;
 	else namestr += "Coward";
+//	namestr += "(" + xi_refCharacter.id + ")";  // PB: This does not do what I want. Does it even do anything at all? I want the char ID in the [O]-button interface
 	GameInterface.strings.CharacterName = namestr;
     // Scheffnow - bfd <--
 	GameInterface.strings.Reputation = GetTranslatedReputationForSex(xi_refCharacter, GetReputationName(GetCharacterReputation(xi_refCharacter)));

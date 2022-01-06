@@ -286,7 +286,7 @@ if(comName=="activate" || comName=="click")
 	case "EQUIP_BUTTON":
 		if(comName=="activate" || comName=="click")
 		{
-//pдr hдr
+//pär här
 		//JRH -->
 			ref PChar;
 			PChar = GetMainCharacter();
@@ -3362,7 +3362,7 @@ void I_ExamineItem()
 			LAi_QuestDelay("secret_room_finished_check", 0.1);
 		}
 	}
-//pдr BB1
+//pär BB1
 	if(itmName == "sealed_map")
 	{
 		if(IsEquipCharacterByItem(Pchar, "folding_knife"))
@@ -4161,7 +4161,7 @@ void IDoExit(int exitCode)
 	}*/
 	EndCancelInterface(true);
 // MAXIMUS interface MOD <--
-//pдr hдr 2, moved up see pдr hдr
+//pär här 2, moved up see pär här
 //	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) LAi_QuestDelay("pchar_outfit_check", 0.1);	//JRH: see quest_reaction
 }
 

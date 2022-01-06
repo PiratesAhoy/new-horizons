@@ -1298,7 +1298,7 @@ void initFastReloadTable()
 	curTable.l10.tex = FRT_HQ;
 	curTable.l10.note = FRN_HQ;
 	curTable.l10.location = "Admiral_Office";
-	// Casa de Contrataciуn
+	// Casa de Contratación
 	curTable.l11.pic = FRP_CDC;		//GR
 	curTable.l11.tex = FRT_CDC;
 	curTable.l11.note = FRN_CDC;

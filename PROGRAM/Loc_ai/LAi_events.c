@@ -1337,7 +1337,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			{
 				PlaySound("OBJECTS\duel\sword_wind.wav");
 			}
-		
+
 			if(GetAttribute(weapon, "id") == "pistolcenserD")
 			{
 				inc = GetCharacterItem(attack, "incense");
@@ -1395,7 +1395,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 				RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
 				EquipCharacterByItem(attack, "pistolwhip");
 				Pchar.opc_whip = attack.id;
-			
+
 				LAi_QuestDelay("reset_whip_rolled_officer", 1.0);
 			}
 		}
@@ -1518,7 +1518,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			{
 				case "pg2":
 					//for officers essentially
-				
+
 					gp = GetCharacterItem(attack, "gunpowder");
 					pg = GetCharacterItem(attack, "pistolgrapes");
 					if(gp >=2 && pg >= 2)
@@ -1597,7 +1597,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 							GiveItem2Character(characterFromID("Jupiter"), "clubmusketoon");
 							EquipCharacterByItem(characterFromID("Jupiter"), "clubmusketoon");
 
-							LAi_QuestDelay("Jup_clubmtoon_equip_check", 0.1);	
+							LAi_QuestDelay("Jup_clubmtoon_equip_check", 0.1);
 						}
 
 						gp = GetCharacterItem(attack, "gunpowder");
@@ -1838,10 +1838,10 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 					{
 						TakeNItems(attack,"cart_box_O", -1);
 						TakeNItems(attack,"caps_box_O", -1);	//also when wet
-						
+
 						Pchar.gpb_status = sti(Pchar.gpb_status) - 1;
 						Pchar.cap_status = sti(Pchar.cap_status) - 1;
-						
+
 						if(CheckAttribute(weapon, "id") && weapon.id == "pistol204_P")
 						{
 							PlaySound("OBJECTS\duel\reload1.wav");
@@ -1880,7 +1880,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 					{
 						TakeNItems(attack,"cartridges", -1);	//shot!
 				//		PlaySound("OBJECTS\duel\ricoshet.wav");			//only at special occasion
-			
+
 						CreateParticleSystem("gunfire_revolver" , alpha, v+1.4, beta, alpha, v+1.4, beta, sti(20) );
 						CreateParticleSystem("gunfire_revolver" , alpha, v+1.4, beta, alpha, v+1.4, beta, sti(20) );
 
@@ -1929,7 +1929,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 					    {
 							if(CheckCharacterItem(attack, "curare") && !LAi_IsPoison(enemy))
 							{
-								weapon.poison = 1; 
+								weapon.poison = 1;
 								TakeNItems(attack,"curare", -1);
 							}
 							else
@@ -1950,7 +1950,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 								}
 							}
 						}
-						
+
 						if(!CheckAttribute(weapon, "flaming") || weapon.flaming != 1)
 						{
 							if(!bAllies(enemy) && rand(100) > 50)
@@ -1967,7 +1967,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 								}
 							}
 						}
-					
+
 						ar = GetCharacterItem(attack, "bladearrows");
 						if(ar >= 1)
 						{
@@ -1989,7 +1989,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 						{
 							if(IsMainCharacter(attack))
 							{
-								if(ar == 0) 
+								if(ar == 0)
 								{
 									Log_SetStringToLog(TranslateString("","There are no Arrows left"));
 									RemoveCharacterEquip(attack, BLADE_ITEM_TYPE );
@@ -1999,7 +1999,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 
 							if(IsOfficer(attack))
 							{
-								if(ar == 0) 
+								if(ar == 0)
 								{
 									RemoveCharacterEquip(attack, BLADE_ITEM_TYPE );
 									EquipCharacterByItem(attack, FindCharacterItemByGroup(attack, BLADE_ITEM_TYPE));
@@ -2023,7 +2023,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 					if(ar2 >= 1)
 					{
 						TakeNItems(attack,"arrows2", -1);	//shot!
-			
+
 						ar2 = GetCharacterItem(attack, "arrows2");
 						if(ar2 >= 1)
 						{
@@ -2245,7 +2245,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 					weapon.model = "whip_out";
 					RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
 					EquipCharacterByItem(attack, "pistolwhip");
-		
+
 					if(dist <= 3.0)
 					{
 						LAi_ApplyCharacterDamage(enemy, 5.0);
@@ -2265,8 +2265,8 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 							}
 						}
 					}
-			
-					if(IsMainCharacter(attack)) 
+
+					if(IsMainCharacter(attack))
 					{
 						LAi_QuestDelay("reset_whip_rolled_pchar", 1.0);
 					}
@@ -2355,19 +2355,19 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 					TakeItemFromCharacter(attack, "bladearrows");
 					if(!CheckCharacterItem(attack, "bladeX4")) GiveItem2Character(attack, "bladeX4");
 					EquipCharacterByItem(attack, "bladeX4");
-			
+
 			    	if(CheckAttribute(enemy, "chr_ai.hp") && enemy.chr_ai.hp > 30)
 			    	{
 						if(CheckCharacterItem(attack, "curare") && !LAi_IsPoison(enemy))
 						{
-							weapon.poison = 1; 
+							weapon.poison = 1;
 							TakeNItems(attack,"curare", -1);
 						}
 						else
 						{
 							if(CheckCharacterItem(attack, "tar"))
 							{
-								weapon.flaming = 1; 
+								weapon.flaming = 1;
 								TakeNItems(attack,"tar", -1);
 
 								GetCharacterPos(attack, &u, &v, &w);
@@ -2384,7 +2384,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 
 					if(!CheckAttribute(weapon, "flaming") || weapon.flaming != 1)
 					{
-						if(bAllies(enemy) && rand(100) > 50) 
+						if(bAllies(enemy) && rand(100) > 50)
 						{
 							ar = GetCharacterItem(enemy, "bladearrows");
 
@@ -2439,12 +2439,12 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			if(IsMainCharacter(attack) || IsOfficer(attack) || IsOfficerType(attack))
 			{
 				Pchar.npc_rocket = enemy.id;
-				
-				LAi_QuestDelay("NPC_rocket_hit", 0.75);	
+
+				LAi_QuestDelay("NPC_rocket_hit", 0.75);
 			}
 			else
 			{
-				//is NPC	
+				//is NPC
 				LAi_QuestDelay("pchar_rocket_hit", 0.75);
 			}
 		}
@@ -2882,7 +2882,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			Play3DSound(weapon.sound, u, v, w);
 			Play3DSound(weapon.sound, u, v, w);
 		}
-		else 
+		else
 		{
 			if(GetAttribute(attack,"location") == "Tortuga_port" && !IsMainCharacter(attack) && !IsMainCharacter(enemy))
 			{
@@ -2892,8 +2892,8 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			}
 			else PlaySound( weapon.sound );
 		}
-	} 
-	else 
+	}
+	else
 	{
 		if(CheckAttribute(weapon, "id"))
 		{
@@ -3045,10 +3045,10 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 		{
 			if(!IsMainCharacter(attack))
 			{ if(!CheckAttribute(attack, "chr_ai.poison" )) attack.poison_check = "no"; }
-			
+
 			if(!IsMainCharacter(enemy))
 			{ if(!CheckAttribute(enemy, "chr_ai.poison" )) enemy.poison_check = "no"; }
-		
+
 			if(IsMainCharacter(enemy))
 			{
 				PlaySound("OBJECTS\Voices\dead\male\dead4.wav");
@@ -3065,11 +3065,11 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			if(!IsMainCharacter(attack))
 			{ if(CheckAttribute(attack,"poison_check") && attack.poison_check == "no") DeleteAttribute(attack, "poison"); }
 				//so not poisoned attacker stays that way
-	
+
 			if(!IsMainCharacter(enemy))
 			{ if(CheckAttribute(enemy,"poison_check") && enemy.poison_check == "no") DeleteAttribute(enemy, "poison"); }
-				//so not poisoned enemy stays that way 
-			
+				//so not poisoned enemy stays that way
+
 			if(!CheckAttribute(weapon, "selfdmg" ) )
 			{ attack.chr_ai.poison = 0 ;}
 		}
@@ -3085,7 +3085,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 			}
 
 			enemy.chr_ai.poison =  300 ;		// initial targetchr poisoned
-	
+
 			//if(enemy.sex == "man") {LAi_CharacterPlaySound(enemy, "OBJECTS\Voices\dead\male\dead4.wav");}	// groan
 			//	else{LAi_CharacterPlaySound(enemy, "OBJECTS\Voices\dead\female\dead_wom2.wav");}
 
@@ -3310,7 +3310,7 @@ void LAi_CharacterFireExecute(aref attack, aref enemy, float kDist, int isFinded
 	call func(enemy, 0.0001);
 
     //JRH switch rifles -->
-	if(IsEquipCharacterByItem(attack, "pistolmket")) 
+	if(IsEquipCharacterByItem(attack, "pistolmket"))
 	{
 		if(CheckCharacterItem(attack, "blade_mKnife"))
 		{
@@ -3543,7 +3543,7 @@ void LAi_Character_Dead_Process(aref chr)
 			if (GetCharacterShipType(chr) != SHIP_NOTUSED) loc = GetCharacterShipLocation(chr);
 			string TownID = GetBestTown(loc);
 			// <-- KK
-			
+
 			if (TownID != "")
 			{
 				if(GetIslandIDFromTown(TownID) == "Redmond" && CheckAttribute(chr,"quest.Rdm_officiant") && chr.quest.Rdm_officiant == "Claire")
@@ -3563,7 +3563,7 @@ void LAi_Character_Dead_Process(aref chr)
 				chr.NoSave.Resurrection = 1; // PB: Lock the main menu
 			}
 		}
-	
+
 		LAi_CharacterLogoff(chr);
 // KK -->
 		if (!LAi_IsBoardingProcess()) {
@@ -3720,7 +3720,7 @@ void LAi_Character_Dead_Event() // should never be run when CORPSEMODE == 3. NK 
 
 			if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStorylineVar(FindCurrentStoryline(), "BUG_PUZZLES")) > 0)
 			{
-				if(chr.location == "wr_wine_cellar") 
+				if(chr.location == "wr_wine_cellar")
 				{
 					chr.money = 0;
 					if(CheckAttribute(chr,"id") && chr.id == "wr_fatj") {TakenItems(chr, "bladebasket", -1);}
@@ -3741,11 +3741,11 @@ void LAi_Character_Dead_Event() // should never be run when CORPSEMODE == 3. NK 
 			if(GetAttribute(loadedLocation, "abbey") == true) GenerateCorpse = true; // TIH for maltese knight abbey // KK
 		}
 // changed by MAXIMUS 12.10.2006 <--
-		if(bCorpseMode==4 && CheckAttribute(chr,"makelocator")) 
-		{ 
-			DeleteAttribute(chr,"makelocator"); 
-			CharacterExitFromLocation(chr); 
-			GenerateCorpse = false; 
+		if(bCorpseMode==4 && CheckAttribute(chr,"makelocator"))
+		{
+			DeleteAttribute(chr,"makelocator");
+			CharacterExitFromLocation(chr);
+			GenerateCorpse = false;
 		}//MAXIMUS: for captains cabin
 		if(GenerateCorpse)
 		{

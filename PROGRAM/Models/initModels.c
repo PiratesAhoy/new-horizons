@@ -166,7 +166,7 @@ void InitModels(bool isstart)
 	model.Flags.Pirate	= 19;
 	model.Flags.Personal = 43;
 	model.ship		= "Lugger1";
-	model.shipname	= "Krеkan";
+	model.shipname	= "Kråkan";
 	model.date.hour	= 7;
 	model.date.day	= 24;
 	model.date.month	= 10;
@@ -859,7 +859,7 @@ void InitModels(bool isstart)
 	model.Flags.Pirate = 23;
 	model.Flags.Personal = 25;
 	model.ship = "FR_Sloop";
-	model.shipname = "Le Rиve";
+	model.shipname = "Le Rève";
 	model.date.hour = 10;
 	model.date.min = 24;
 	model.date.sec = 42;
@@ -1175,7 +1175,7 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
 
-	model.description =  "As skilled with the sword as she is beautiful, they call her Borinqueсa";
+	model.description =  "As skilled with the sword as she is beautiful, they call her Borinqueña";
 	model.id       =  "50_33Petra";
 	model.FaceId	= 175;
 	model.nation      =  SPAIN;
@@ -1186,7 +1186,7 @@ void InitModels(bool isstart)
 	model.ani         =  "woman_sit";
 	model.height      =  1.75;
 	model.name = "Petra";
-	model.lastname = "Borinqueсa";
+	model.lastname = "Borinqueña";
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelType(isstart, model, OFFIC_TYPE_DOCTOR, 1.0);
 	AddCharacterModel(model);
@@ -1248,7 +1248,7 @@ void InitModels(bool isstart)
 	model.name = "Teresa";
 	model.lastname = "Moreno";
 	model.ship = "FR_Sloop";
-	model.shipname = 	"Le Rиve";
+	model.shipname = 	"Le Rève";
 	model.Flags.Pirate = 19;
 	model.Flags.Personal = 3;
 	model.date.year = 1798;
@@ -1753,7 +1753,8 @@ void InitModels(bool isstart)
 	model.playertype  = PLAYER_TYPE_ADVENTURER;
 	model.Flags.Pirate = 0;
 	model.Flags.Personal = 13;
-	model.date.year = 1777;
+	model.date.month = 1;
+	model.date.year = 1749;
 	AssignModelTypeNation(isstart, model, "Captains", 1.0, HOLLAND);
 	AssignModelType(isstart, model, OFFIC_TYPE_FIRSTMATE, 1.0);
 	AssignModelType(isstart, model, OFFIC_TYPE_QMASTER, 1.0);
@@ -2399,7 +2400,7 @@ void InitModels(bool isstart)
 	model.assigned		=  true;
 	model.name = "Hector";
 	model.lastname = "Barbossa";
-	model.storytitle = "The Curse of Cortйs";
+	model.storytitle = "The Curse of Cortés";
 	model.storytext = "Pirate Lord of the Caspian Sea. Mutineer. And now finder of the lost treasure of Isla de Muerta. You are ready to make good use of your new-found wealth! But a nasty surprise lies in store for you...";
 	model.playertype = PLAYER_TYPE_CURSED;
 	model.ship = SHIP_CURSED;
@@ -2456,7 +2457,7 @@ void InitModels(bool isstart)
 	model.ani		=  "woman_sit";
 	model.name 			=  "Beatrice";
 	model.lastname 		=  "Devlin";
-	model.storytitle =  "Caribbean Tales";
+	model.storytitle =  "Caribbean Tales";  // PB: Hide this one from Specific Characters because there is also a storyline?
 	model.storytext  =  "Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?";
 	model.playertype = PLAYER_TYPE_EXPLORER;
 	model.difficulty = DIFFICULTY_MARINER;
@@ -4009,7 +4010,7 @@ void InitModels(bool isstart)
 	model.Flags.Pirate = 12;
 	model.Flags.Personal = 5;
 	model.ship = "SP_CastelF";
-	model.shipname = "Intrйpido";
+	model.shipname = "Intrépido";
 	model.date.hour = 10;
 	model.date.min = 24;
 	model.date.sec = 42;
@@ -4052,7 +4053,7 @@ void InitModels(bool isstart)
 	model.Flags.Pirate = 12;
 	model.Flags.Personal = 5;
 	model.ship = "SP_CastelF";
-	model.shipname = "Intrйpido";
+	model.shipname = "Intrépido";
 	model.date.hour = 10;
 	model.date.min = 24;
 	model.date.sec = 42;
@@ -4098,7 +4099,7 @@ void InitModels(bool isstart)
 	model.sex	=  "man";
 	model.ani	=  "Rousselet";
 	model.status	=  "C_III"; // added as an identifier, for assigning another animation to the new models
-	model.name	= "Franзois-Louis";
+	model.name	= "François-Louis";
 	model.lastname	= "Rousselet";
 	model.playertype  = PLAYER_TYPE_NAVAL_OFFICER;
 	model.Flags.Pirate = 18;
@@ -4365,10 +4366,10 @@ void InitModels(bool isstart)
 	model.nation      =  PIRATE;
 	model.price       =  3000;
 	model.assigned    =  true;
-	model.height		=  1.85;
-	model.sex		=  "man";
-	model.ani		=  "Rousselet";
-	model.status		=  "C_III"; // added as an identifier, for assigning another animation to the new models
+	model.height      =  1.85;
+	model.sex		  =  "man";
+	model.ani		  =  "Rousselet";
+	model.status      =  "C_III"; // added as an identifier, for assigning another animation to the new models
 	model.name = "Davy";
 	model.lastname = "Jones";
 	model.storytitle = "Lord of the Sea";
@@ -5095,7 +5096,7 @@ void InitModels(bool isstart)
 	model.period = "" + PERIOD_COLONIAL_POWERS + PERIOD_REVOLUTIONS + PERIOD_NAPOLEONIC;
 	AddCharacterModel(model);
 
-	model.description =  "A French Naval Commodore's uniform. Oui, C'est trиs bon.";
+	model.description =  "A French Naval Commodore's uniform. Oui, C'est très bon.";
 	model.id          =  "fra_cmd_18";
 	model.FaceId      =  101;
 	model.minlevel    =  14;
@@ -5146,7 +5147,7 @@ void InitModels(bool isstart)
 	AssignModelTypeNation(isstart, model, "navy", 1.0, FRANCE);	// ccc Feb06
 	AddCharacterModel(model);
 
-	model.description =  "A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la mиre' and 'rouge' from blood!";
+	model.description =  "A French Naval Lieutenant's uniform, s'il vous plait. Blue and white from 'la mère' and 'rouge' from blood!";
 	model.id          =  "fra_lut2_18";
 	model.FaceId      =  101;
 	model.minlevel    =  6;
@@ -5612,7 +5613,7 @@ void InitModels(bool isstart)
 	model.nation	  =  FRANCE;
 	model.price	   =  500;
 	model.assigned	=  true;
-	model.name = "Franзois";
+	model.name = "François";
 	model.lastname = "de Hadoque";
 	model.ship = "FR_Licorne";
 	model.shipname = "La Licorne";
@@ -6140,7 +6141,7 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 	// <-- For the Bartolomeu o Portugues quest
 
-	model.description	=  "It's actually spelled, Conceiзгo!";
+	model.description	=  "It's actually spelled, Conceição!";
 	model.id		=  "Kieron";
 	model.FaceId		=  10;
 	model.nation		=  ENGLAND;
@@ -6430,7 +6431,7 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	model.name	= "Michiel";
 	model.lastname	= "de Ruyter";
-	model.storytitle = "Bestevaкr";
+	model.storytitle = "Bestevaêr";
 	model.storytext = "Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!";
 	model.playertype = PLAYER_TYPE_NAVAL_OFFICER;
 	model.ship	= "NL_NeptunusE";
@@ -6773,7 +6774,7 @@ void InitModels(bool isstart)
 	AssignModelType(isstart, model, OFFIC_TYPE_FIRSTMATE, 1.0); // later switch this to CAP?
 	AddCharacterModel(model);
 
-	model.description =  "I feel like a Portuguese Marine. How about something like Lourenзo Vaz ?";
+	model.description =  "I feel like a Portuguese Marine. How about something like Lourenço Vaz ?";
 	model.id	   =  "Navy_Portugal";
 	model.FaceId	= 363;
 	model.nation	  =  PORTUGAL;
@@ -7632,8 +7633,8 @@ void InitModels(bool isstart)
 	model.assigned	=  true;
 	model.ani	=  "Rousselet";
 	model.status	=  "C_III"; // added as an identifier, for assigning another animation to the new models
-	model.name = "Josй";
-	model.middlename = "Joaquнm";
+	model.name = "José";
+	model.middlename = "Joaquím";
 	model.lastname = "Almeida";
 	model.storytitle = "Rustic Sea Wolf";
 	model.storytext = "I left my Portuguese home in the Azores for America in 1796 at the age of 19. I worked as a merchant for a while but now with the outbreak of war I have turned privateer (includes sidequest specific to this character)";
@@ -7655,7 +7656,7 @@ void InitModels(bool isstart)
 	model.nation	  =  SPAIN;
 	model.price	   =  100;
 	model.assigned	=  true;
-	model.name = "Josй";
+	model.name = "José";
 	model.lastname = "Gaspar";
 	model.storytitle = "The Legend of Gasparilla";
 	model.storytext = "Eventually becoming the last of the Buccaneers, rumours surrounding your life have been scarce. Most say you were born in Spain in 1756 and served in the Spanish Navy. Whatever may be the truth, you worked yourself up from a lowly position until you gained command of a ship of your own. It is time to make a name for yourself in the waters south of Florida!";
@@ -10566,54 +10567,54 @@ void InitModels(bool isstart)
 	model.date.year = 1740;
 	AddCharacterModel(model);
 
-	model.description	=  "Half man, half lobster - one of Davy Jones' crew.";
-	model.id		=  "Penrod";
+	model.description	= "Half man, half lobster - one of Davy Jones' crew.";
+	model.id			= "Penrod";
 	model.FaceId		= 610;
-	model.nation		=  CURSED;
-	model.assigned		=  true;
+	model.nation		= CURSED;
+	model.assigned		= true;
 	model.camouflage	= true; // PB: Everyone is Enemy
-	model.sex		= "skeleton";
+	model.sex			= "skeleton";
 	model.height		= 1.85;
-	model.ani		= "Rousselet";
+	model.ani			= "Rousselet";
 	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
 	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description	= "Half man, half hammerhead shark - one of Davy Jones' crew.";
-	model.id		=  "Maccus";
+	model.id			= "Maccus";
 	model.FaceId		= 611;
 	model.nation		= CURSED;
 	model.assigned		= true;
 	model.camouflage	= true; // PB: Everyone is Enemy
-	model.sex		= "skeleton";
+	model.sex			= "skeleton";
 	model.height		= 1.85;
-	model.ani		= "Rousselet";
+	model.ani			= "Rousselet";
 	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
 	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description	= "Half man, half shellfish - one of Davy Jones' crew.";
-	model.id		= "Palafico";
+	model.id			= "Palafico";
 	model.FaceId		= 612;
 	model.nation		= CURSED;
 	model.assigned		= true;
 	model.camouflage	= true; // PB: Everyone is Enemy
-	model.sex		= "skeleton";
+	model.sex			= "skeleton";
 	model.height		= 1.85;
-	model.ani		= "Rousselet";
+	model.ani			= "Rousselet";
 	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
 	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
 
 	model.description	= "Half man, half shellfish - one of Davy Jones' crew.";
-	model.id		= "Hadras";
+	model.id			= "Hadras";
 	model.FaceId		= 613;
 	model.nation		= CURSED;
 	model.assigned		= true;
 	model.camouflage	= true; // PB: Everyone is Enemy
-	model.sex		= "skeleton";
+	model.sex			= "skeleton";
 	model.height		= 1.85;
-	model.ani		= "Rousselet";
+	model.ani			= "Rousselet";
 	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
 	AssignModelType(isstart, model, "Davycrew", 1.0);
 	AddCharacterModel(model);
@@ -13499,27 +13500,47 @@ void InitModels(bool isstart)
 
 	// PB: Piet Hein Character Addition Tutorial -->
 	model.description	= "A Dutch admiral and privateer for the Dutch Republic during the Eighty Years' War. The first and the last to capture a large part of a Spanish treasure fleet from America.";
-	model.id		= "Piet_Hein";
+	model.id			= "Piet_Hein";
 	model.FaceId		=  592;
 	model.nation		=  HOLLAND;
-	model.price		=  11509524;				// guilders of booty in gold, silver, and other expensive trade goods
+	model.price			=  11509524;				// guilders of booty in gold, silver, and other expensive trade goods
 	model.assigned		=  true;
-	model.name		= "Piet";
+	model.name			= "Piet";
 	//model.middlename	= "Pieterszoon";
 	model.lastname		= "Hein";
 	model.storytitle	= "De Zilvervloot";			// http://www.goudenboekjes.nl/product/de-zilvervloot-piet-hein
-	model.storytext		= "'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piets eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?";
+	model.storytext		= "'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piet's eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?";
 	model.playertype	=  PLAYER_TYPE_CORSAIR;		// start with Letter of Marque/Kapersbrief
 	model.difficulty	=  DIFFICULTY_LANDLUBBER;	// fun for the kids!
-	model.ship		= "NL_NeptunusE";			// 
+	model.ship			= "NL_NeptunusE";			// 
 	model.shipname		= "Neptunus";				// in 1618, when he was captain of the Neptunus, both he and his ship were pressed into service by the Republic of Venice.
 	model.Flags.Pirate	=     1;					// former PiratesAhoy! logo seems fitting
-	model.Flags.Personal	=     9;					// flag of my dear 'ol Amsterdam
+	model.Flags.Personal=     9;					// flag of my dear 'ol Amsterdam
 	model.date.day		=     8;					// my birthday
 	model.date.month	=    10;					// because why not?
 	model.date.year		=  1626;					// Smack-dab in the middle of The Spanish Main period
 	AddCharacterModel(model);
 	// PB: Piet Hein Character Addition Tutorial <--
+
+	model.description	= "Where did he come from? Where will he go?  Where did he come from, Cotton-Eye - no, that can't be right...";
+	model.id			= "DrakeStranton";
+	model.FaceID		= 614;
+	model.nation		= PIRATE;
+	model.assigned		= true;
+	model.name			= "Drake";
+	model.lastname		= "Stranton";
+	model.loadingScreen = "Quest_StrantonFamily.tga";  // Nita+BJ+PB
+	model.storytitle	= "Cursed Vengeance";
+	model.storytext		= "Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.";
+	model.playertype	= PLAYER_TYPE_CORSAIR;
+	model.ship			= "Brig_20_Gun1_181";
+	model.shipname		= "Phantom";
+	model.Flags.Pirate	= 5;
+	model.Flags.Personal= 37;
+	model.date.day		= 10;
+	model.date.month	= 12;
+	model.date.year		= 1721;
+	AddCharacterModel(model);
 
 	model.description =  "";
 	model.id	   =  "zombie1";

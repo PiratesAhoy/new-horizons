@@ -29,13 +29,13 @@ void ProcessDialogEvent()
 		case SPAIN:
 			Preprocessor_Add("attack", "Al ataque");
 			Preprocessor_Add("hello", "Hola, Senor");
-			Preprocessor_Add("captain", "Capitбn");
+			Preprocessor_Add("captain", "Capitán");
 		break;
 
 		case PORTUGAL:
 			Preprocessor_Add("attack", "Al ataque");
 			Preprocessor_Add("hello", "Hola, Senhor");
-			Preprocessor_Add("captain", "CapitЭo");
+			Preprocessor_Add("captain", "CapitÝo");
 		break;
 
 		case HOLLAND:
@@ -66,7 +66,7 @@ void ProcessDialogEvent()
 			if(GetCurrentPeriod() >= PERIOD_THE_SPANISH_MAIN && GetCurrentPeriod() <= PERIOD_COLONIAL_POWERS)
 			{
 				Preprocessor_Add("attack", "Angrip");
-				Preprocessor_Add("hello", "Hallе, min herre");
+				Preprocessor_Add("hello", "Hallå, min herre");
 				Preprocessor_Add("captain", "Kapten");
 			}
 			else

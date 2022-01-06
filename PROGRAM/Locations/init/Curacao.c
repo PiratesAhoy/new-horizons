@@ -181,7 +181,7 @@ void LocationInitCuracao(ref n)
 	Locations[n].reload.l8.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l8.goto_disable = 1; // Screwface: Disable Go-To location
 
-/*  	Locations[n].reload.l9.name = "reload27";
+/* 	Locations[n].reload.l9.name = "reload27";
 	Locations[n].reload.l9.go = "";
 	Locations[n].reload.l9.emerge = "";
 	Locations[n].reload.l9.autoreload = "0";

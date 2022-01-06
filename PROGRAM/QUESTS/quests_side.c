@@ -2288,7 +2288,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_ActorDialog(sld, PChar, "", 2.0, 0);
 			AddXP(pchar, SKILL_SAILING, 500, XP_GROUP_OFFIC);
 		break;
-//pдr
+//pär
 		case "Returned in Greenford for Apothecary":
 			//RestoreCharacterShip(pchar);//PW moved to reduce food use and possible deaths and mutiny and in loop
 			for (i = 0; i < COMPANION_MAX; i++) {//PW now loop for whole pchar fleet
@@ -2396,7 +2396,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_QuestDelay("Finish Beggar Find",0);
 			LAi_QuestDelay("Cartagena_hotel_plants_start",0);
 		break;
-//pдr
+//pär
 		case "Got Hotel Flyer":
 			AddQuestRecord("plants",39);
 			LAi_QuestDelay("Finish Beggar Find",0);
@@ -2889,7 +2889,7 @@ void SideQuestComplete(string sQuestName)
 			
            		
 		break;
-//pдr
+//pär
 
 ///////////////////////////////////////////////////////////////
 ///// Smugglers: Thomas O Reily is annoying
@@ -6714,7 +6714,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto5");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "goto5");
 			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -6726,25 +6726,25 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto7");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto7");
 			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto8");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "goto8");
 			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "goto9");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto9");
 			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto10");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto10");
 			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -6793,7 +6793,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "reload9_3");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "officers", "reload9_3");
 			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -6805,25 +6805,25 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto2");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto2");
 			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto3");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "goto3");
 			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "reload", "reload8");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "reload", "reload8");
 			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "reload8_1");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "officers", "reload8_1");
 			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -8722,9 +8722,9 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(characterFromID("Bart Cooke"), 80.0, 80.0);
 			LAi_SetHP(characterFromID("Wally Cutty"), 80.0, 80.0);
 			LAi_SetHP(characterFromID("Bill Jellybones"), 80.0, 80.0);
-			LAi_SetCheckMinHP(characterFromID("Bart Cooke"), LAi_GetCharacterHP(characterFromID("Bart Cooke"))-1.0, false, "stephan_bonser_attack"); // KK
-			LAi_SetCheckMinHP(characterFromID("Wally Cutty"), LAi_GetCharacterHP(characterFromID("Wally Cutty"))-1.0, false, "stephan_bonser_attack"); // KK
-			LAi_SetCheckMinHP(characterFromID("Bill Jellybones"), LAi_GetCharacterHP(characterFromID("Bill Jellybones"))-1.0, false, "stephan_bonser_attack"); // KK
+			LAi_SetCheckMinHP(characterFromID("Bart Cooke"), LAi_GetCharacterHP(characterFromID("Bart Cooke"))-1.0, false, "bill_jellybones_attack"); // KK
+			LAi_SetCheckMinHP(characterFromID("Wally Cutty"), LAi_GetCharacterHP(characterFromID("Wally Cutty"))-1.0, false, "bill_jellybones_attack"); // KK
+			LAi_SetCheckMinHP(characterFromID("Bill Jellybones"), LAi_GetCharacterHP(characterFromID("Bill Jellybones"))-1.0, false, "bill_jellybones_attack"); // KK
 			ChangeCharacterAddress(characterFromID("Bart Cooke"), "Redmond_Shore_02", "goto4");
 			ChangeCharacterAddress(characterFromID("Wally Cutty"), "Redmond_Shore_02", "goto6");
 			ChangeCharacterAddress(characterFromID("Bill Jellybones"), "Redmond_Shore_02", "goto5");
@@ -8816,7 +8816,7 @@ void SideQuestComplete(string sQuestName)
 			ChangeSmugglerLiking(pchar, -20); //Add liking
 		break;
 
-		case "stephan_bonser_attack":
+		case "bill_jellybones_attack":
 			LAi_RemoveCheckMinHP(characterFromID("Bart Cooke"));
 			LAi_RemoveCheckMinHP(characterFromID("Wally Cutty"));
 			LAi_RemoveCheckMinHP(characterFromID("Bill Jellybones"));
@@ -11726,7 +11726,7 @@ void SideQuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////////////
 // The Kapitein of Kralendijk
 // By Grey Roger
-// Based very loosely on the real life story of the Captain of Kцpenick
+// Based very loosely on the real life story of the Captain of Köpenick
 ///////////////////////////////////////////////////////////////////////
 		case "Kapitein_follow_proposer_upstairs":
 			ChangeCharacterAddressGroup(characterFromID("Willem Voigt"), "Philipsburg_tavern", "tables", "table5");
@@ -12093,7 +12093,7 @@ void SideQuestComplete(string sQuestName)
 
 		case "kapitein_get_money2":
 			PlayStereoSound("INTERFACE\took_item.wav");
-			AddMoneyToCharacter(pchar, 35574);		// About 10 times the number of Marks that the real Captain of Kцpenick got.
+			AddMoneyToCharacter(pchar, 35574);		// About 10 times the number of Marks that the real Captain of Köpenick got.
 			PChar.quest.kapitein = "got_money";
 			LAi_SetActorType(characterFromID("Dou_soldier_1"));
 			Characters[GetCharacterIndex("Dou_soldier_1")].dialog.CurrentNode = "keep_them_here";

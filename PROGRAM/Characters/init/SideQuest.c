@@ -1796,10 +1796,10 @@ void CreateSideQuestCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
-// Franзois Moulin - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
-	ch.old.name = "Franзois";
+// François Moulin - FIND ANGELIQUE MOULIN'S FATHER (Missing Man quest)
+	ch.old.name = "François";
 	ch.old.lastname = "Moulin";
-	ch.name = TranslateString("", "Franзois");
+	ch.name = TranslateString("", "François");
 	ch.lastname = TranslateString("", "Moulin");
 	ch.id	 = "Francois Moulin";
 	ch.model = "old_man1";
@@ -6396,9 +6396,9 @@ void CreateSideQuestCharacters(ref n)
 	SetRank(ch, SPAIN, 5);
 	AddGameCharacter(n, ch);
 
-	ch.old.name = "Seсorita";
+	ch.old.name = "Señorita";
 	ch.old.lastname = "Hebe";
-	ch.name = TranslateString("","Seсorita");
+	ch.name = TranslateString("","Señorita");
 	ch.lastname = TranslateString("","Hebe");
 	ch.id		= "Hebe";
 	ch.model	= "downgirl2";
@@ -6432,9 +6432,9 @@ void CreateSideQuestCharacters(ref n)
 
 	// Crystal Skull sidequest
 	ch.old.name = "Constantino";
-	ch.old.lastname = "Avellбn";
+	ch.old.lastname = "Avellán";
 	ch.name = TranslateString("","Constantino");
-	ch.lastname = TranslateString("","Avellбn");
+	ch.lastname = TranslateString("","Avellán");
 	ch.id		= "Skull_Researcher";
 	ch.model = "9R_Purs";
 	ch.sex = "man";
@@ -6974,9 +6974,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Rafael";
-	ch.old.lastname = "Patiсo";
+	ch.old.lastname = "Patiño";
 	ch.name = TranslateString("","Rafael");
-	ch.lastname = TranslateString("","Patiсo");
+	ch.lastname = TranslateString("","Patiño");
 	ch.id		= "CS_Spanish_Captain2";
 	ch.nation	= SPAIN;
 	ch.model	= "9JdSpa";
@@ -7022,7 +7022,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 2500 + rand(1000);	
-	ch.Ship.Name = "Marнa Santнsima";
+	ch.Ship.Name = "María Santísima";
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "WallerPinnace";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "FR_BattleFrigate";
@@ -7150,7 +7150,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 1500 + rand(1000);	
-	ch.Ship.Name = "Бngel de la Guarda";
+	ch.Ship.Name = "Ángel de la Guarda";
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "GaleonWar";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "Frigate1";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "SP_Surprise";
@@ -7166,9 +7166,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Leonardo";
-	ch.old.lastname = "Echevarrнa";
+	ch.old.lastname = "Echevarría";
 	ch.name = TranslateString("","Leonardo");
-	ch.lastname = TranslateString("","Echevarrнa");
+	ch.lastname = TranslateString("","Echevarría");
 	ch.id		= "CS_Spanish_Captain5";
 	ch.nation	= SPAIN;
 	ch.model	= GetRandomModelForTypeExSubCheck(true, "Captains", "man", SPAIN);
@@ -7230,7 +7230,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = 1500 + rand(1000);	
-	ch.Ship.Name = "Septentriуn";
+	ch.Ship.Name = "Septentrión";
 	if (GetCurrentPeriod() <= PERIOD_GOLDEN_AGE_OF_PIRACY) ch.Ship.Type = "FastGalleon1";
 	if (GetCurrentPeriod() == PERIOD_COLONIAL_POWERS) ch.Ship.Type = "Frigate1";
 	if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) ch.Ship.Type = "SP_Surprise";
