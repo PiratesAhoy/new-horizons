@@ -102,7 +102,7 @@ Chima{Chima}
 Alejandro{Alejandro}
 de Mendoza{de Mendoza}
 Arturo{Arturo}
-de C·diz{de C·diz}
+de C√°diz{de C√°diz}
 Librarian{Librarian}
 
 {=====| CommonQuest.c |=====}
@@ -118,12 +118,12 @@ Vas{Vas}
 de Torres{de Torres}
 Reginald{Reginald}
 de Boeuf{de Boeuf}
-Bjˆrn{Bjˆrn}
-Roos af Hjelms‰ter{Roos af Hjelms‰ter}
+Bj√∂rn{Bj√∂rn}
+Roos af Hjelms√§ter{Roos af Hjelms√§ter}
 Charlie{Charlie}
 Allen{Allen}
 Edgar{Edgar}
-LuÌs{LuÌs}
+Lu√≠s{Lu√≠s}
 Buchinho{Buchinho}
 Abelard{Abelard}
 Laviniere{Laviniere}
@@ -221,12 +221,12 @@ Ibiza{Ibiza}
 Higini{Higini}
 Seat{Seat}
 Probello{Probello}
-Jose Jalapeno{JosÈ JalapeÒo}
+Jose Jalapeno{Jos√© Jalape√±o}
 on the stalk{on the stalk}
 Eustacio{Eustacio}
 Ocampo{Ocampo}
 Patricia{Patricia}
-Sant·ngel{Sant·ngel}
+Sant√°ngel{Sant√°ngel}
 Isidoro{Isidoro}
 Figueroa{Figueroa}
 Magarino{Magarino}
@@ -537,7 +537,7 @@ Marpeut{Marpeut}
 Laure{Laure}
 Sinclair{Sinclair}
 Dubois{Dubois}
-FranÁois{FranÁois}
+Fran√ßois{Fran√ßois}
 de Vigny{de Vigny}
 
 {=====| Hispaniola.c |=====}
@@ -1032,10 +1032,10 @@ Cristobal{Cristobal}
 Leon{Leon}
 Escovar{Escovar}
 Entenza{Entenza}
-SeÒorita{SeÒorita}
+Se√±orita{Se√±orita}
 Hebe{Hebe}
 Constantino{Constantino}
-Avell·n{Avell·n}
+Avell√°n{Avell√°n}
 Growling{Growling}
 Bear{Bear}
 Kicking{Kicking}
@@ -1083,6 +1083,8 @@ Dawg{Dawg}
 Bennett{Bennett}
 Augustin{Augustin}
 Frechilla{Frechilla}
+Dawg{Dawg}
+Brown{Brown}
 
 {=====| StreetMerchants.c |=====}
 Street{Street}
@@ -1162,7 +1164,7 @@ Castrilli{Castrilli}
 Fadrique{Fadrique}
 Leonor{Leonor}
 Esperanza{Esperanza}
-RamÛn{RamÛn}
+Ram√≥n{Ram√≥n}
 Figueras{Figueras}
 Figaux{Figaux}
 Sophie{Sophie}
@@ -1209,7 +1211,7 @@ Tolman{Tolman}
 Voyant{Voyant}
 Fructoso{Fructoso}
 Juana{Juana}
-GarcÌa{GarcÌa}
+Garc√≠a{Garc√≠a}
 Ramos{Ramos}
 Fabiao{Fabiao}
 Dunga{Dunga}
@@ -1240,7 +1242,7 @@ Inocencia{Inocencia}
 Ussica{Ussica}
 Salvadore{Salvadore}
 Jimena{Jimena}
-LÛpez{LÛpez}
+L√≥pez{L√≥pez}
 
 {=====| Turks.c |=====}
 Dante{Dante}

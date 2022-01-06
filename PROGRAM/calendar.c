@@ -674,7 +674,7 @@ void SetCurrentTime(int hour, int minutes)
 	hour = iclamp(0,23,hour);
 	Environment.date.hour = hour;
 	Environment.date.min = minutes;
-	Environment.time = hour + (makefloat(minutes) / 60.0); // KK
+	Environment.time = hour + (makefloat(minutes) / 60.0); // KK; used to have 'makeint' also
 	worldMap.date.hour = hour;
 	worldMap.date.min = minutes;
 }

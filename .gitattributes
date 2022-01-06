@@ -3,13 +3,10 @@
 *.ini text eol=crlf working-tree-encoding=Windows-1251
 
 *.txt text eol=crlf working-tree-encoding=Windows-1251
-RESOURCE/INI/TEXTS/**/*.txt text eol=crlf working-tree-encoding=UTF-8
+RESOURCE/**/*.txt text eol=crlf working-tree-encoding=UTF-8
+RESOURCE/**/*.ini text eol=crlf working-tree-encoding=UTF-8
 
-RESOURCE/INI/TEXTS/SPANISH/**/*.ini working-tree-encoding=UTF-8
-RESOURCE/INI/TEXTS/SPANISH/**/*.txt working-tree-encoding=UTF-8
 PROGRAM/**/DIALOGS/SPANISH/**/*.h working-tree-encoding=Windows-1252
-
-RESOURCE/INI/TEXTS/RUSSIAN/**/*.txt text eol=crlf working-tree-encoding=Windows-1251
 
 # Specific files that have encoding issues
 RESOURCE/INI/TEXTS/RUSSIAN/BOOKS/cookbook.txt working-tree-encoding=UTF-8

@@ -12,15 +12,15 @@ Carlos I{Carlos I}
 Felipe II{Felipe II}
 Felipe III{Felipe III}
 Manuel I{Manuel I}
-Jo›o III{Jo›o III}
-Sebasti›o{Sebasti›o}
+Jo√ùo III{Jo√ùo III}
+Sebasti√ùo{Sebasti√ùo}
 Henrique{Henrique}
-AntÛnio{AntÛnio}
+Ant√≥nio{Ant√≥nio}
 Felipe I{Felipe I}
 Louis XII{Louis XII}
-FranÁois{FranÁois}
+Fran√ßois{Fran√ßois}
 Henri II{Henri II}
-FranÁois II{FranÁois II}
+Fran√ßois II{Fran√ßois II}
 Charles IX{Charles IX}
 Henri III{Henri III}
 Henri IV{Henri IV}
@@ -31,7 +31,7 @@ Richard Cromwell{Richard Cromwell}
 Charles II{Charles II}
 Felipe IV{Felipe IV}
 Carlos II{Carlos II}
-Jo›o IV{Jo›o IV}
+Jo√ùo IV{Jo√ùo IV}
 Alfonso VI{Alfonso VI}
 Louis XIII le Juste{Louis XIII le Juste}
 Louis XIV le Grand{Louis XIV le Grand}
@@ -44,21 +44,21 @@ George I{George I}
 George II{George II}
 Felipe V{Felipe V}
 Pedro II{Pedro II}
-Jo›o V{Jo›o V}
-Louis XV le Bien AimÈ{Louis XV le Bien AimÈ}
+Jo√ùo V{Jo√ùo V}
+Louis XV le Bien Aim√©{Louis XV le Bien Aim√©}
 Fernando VI{Fernando VI}
 Carlos III{Carlos III}
 George III{George III}
-JosÈ I{JosÈ I}
+Jos√© I{Jos√© I}
 Carlos IV{Carlos IV}
 Maria I & Pedro III{Maria I & Pedro III}
 Maria I{Maria I}
 Louis XVI{Louis XVI}
 George IV{George IV}
 Fernando VII{Fernando VII}
-Jo›o VI{Jo›o VI}
+Jo√ùo VI{Jo√ùo VI}
 Maria II{Maria II}
-NapolÈon Bonaparte{NapolÈon Bonaparte}
+Napol√©on Bonaparte{Napol√©on Bonaparte}
 Louis XVIII{Louis XVIII}
 Charles X{Charles X}
 John Adams{John Adams}
@@ -81,17 +81,17 @@ Adolf Fredrik{Adolf Fredrik}
 {=====| Periods.c |=====}
 
 {=====| Royal |=====}
-FranÁois Ier{FranÁois Ier}
-Pedro MenÈndez de AvilÈs{Pedro MenÈndez de AvilÈs}
+Fran√ßois Ier{Fran√ßois Ier}
+Pedro Men√©ndez de Avil√©s{Pedro Men√©ndez de Avil√©s}
 James I Stuart{James I Stuart}
 Abraham Blauvelt{Abraham Blauvelt}
 Isaac Rochussen{Isaac Rochussen}
-Louis XV le Bien-AimÈ{Louis XV le Bien-AimÈ}
+Louis XV le Bien-Aim√©{Louis XV le Bien-Aim√©}
 Fernando V{Fernando V}
 Peter Alston{Peter Alston}
 Pedro III and Maria I{Pedro III and Maria I}
 George Washington{George Washington}
-Joseph-NapolÈon Bonaparte{Joseph-NapolÈon Bonaparte}
+Joseph-Napol√©on Bonaparte{Joseph-Napol√©on Bonaparte}
 Henri Caesar{Henri Caesar}
 
 {=====| 35 names |=====}
@@ -138,31 +138,31 @@ Saint Domingue{Saint Domingue}
 {=====| Towns governors |=====}
 Juan{Juan}
 Ponce{Ponce}
-de LeÛn{de LeÛn}
+de Le√≥n{de Le√≥n}
 Gonzalo{Gonzalo}
-de Guzm·n{de Guzm·n}
-de ¡vila{de ¡vila}
+de Guzm√°n{de Guzm√°n}
+de √Åvila{de √Åvila}
 Antonio{Antonio}
-de Ch·ves{de Ch·ves}
+de Ch√°ves{de Ch√°ves}
 de Esquivel{de Esquivel}
-PÈrez{PÈrez}
+P√©rez{P√©rez}
 de Angulo{de Angulo}
-Nicol·s{Nicol·s}
+Nicol√°s{Nicol√°s}
 de Ovando{de Ovando}
 Diego{Diego}
 de Mazariegos{de Mazariegos}
 Columbus{Columbus}
 Francisco{Francisco}
-GarcÌa{GarcÌa}
+Garc√≠a{Garc√≠a}
 Osorio{Osorio}
 Hernando{Hernando}
 de Soto{de Soto}
 Pedro{Pedro}
-MenÈndez{MenÈndez}
-de AvilÈs{de AvilÈs}
+Men√©ndez{Men√©ndez}
+de Avil√©s{de Avil√©s}
 Gabriel{Gabriel}
 Montalvo{Montalvo}
-CarreÒo{CarreÒo}
+Carre√±o{Carre√±o}
 Gaspar{Gaspar}
 de Torres{de Torres}
 de Venegas{de Venegas}
@@ -177,14 +177,14 @@ Anthony{Anthony}
 Hilton{Hilton}
 de Salamanca{de Salamanca}
 de Montanos{de Montanos}
-Bl·zquez{Bl·zquez}
+Bl√°zquez{Bl√°zquez}
 Xelder{Xelder}
-ValdÈs{ValdÈs}
-RuÌz{RuÌz}
+Vald√©s{Vald√©s}
+Ru√≠z{Ru√≠z}
 de Pereda{de Pereda}
-JosÈ{JosÈ}
+Jos√©{Jos√©}
 Fernandez{Fernandez}
-CÛrdoba{CÛrdoba}
+C√≥rdoba{C√≥rdoba}
 Francis{Francis}
 Willoughby{Willoughby}
 Medina{Medina}
@@ -200,7 +200,7 @@ Caro{Caro}
 Vicente{Vicente}
 de Raja{de Raja}
 Dionisio{Dionisio}
-MartÌnez{MartÌnez}
+Mart√≠nez{Mart√≠nez}
 de la Vega{de la Vega}
 Jan{Jan}
 Simonszoon{Simonszoon}
@@ -212,7 +212,7 @@ Witham{Witham}
 Sir Richard{Sir Richard}
 Dutton{Dutton}
 Colomo{Colomo}
-de Luj·n{de Luj·n}
+de Luj√°n{de Luj√°n}
 Claude{Claude}
 Le Moigne II{Le Moigne II}
 Moore{Moore}
@@ -242,14 +242,14 @@ Richardson{Richardson}
 Herbert{Herbert}
 Daniel{Daniel}
 Sicilian{Sicilian}
-JoaquÌn{JoaquÌn}
+Joaqu√≠n{Joaqu√≠n}
 y Moreno{y Moreno}
 Manuel{Manuel}
 de Ezpeleta{de Ezpeleta}
 Domingo{Domingo}
 Cabello{Cabello}
 y Robles{y Robles}
-FranÁois{FranÁois}
+Fran√ßois{Fran√ßois}
 de Dion{de Dion}
 James{James}
 Cunninghame{Cunninghame}

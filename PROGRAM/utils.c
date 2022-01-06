@@ -2110,9 +2110,9 @@ void InitStorylines()
 		if (send == "_off")		continue;
 		// PB: Disable certain storylines <--
 
-		if (LoadSegment("Storyline\" + sfile)) {
+		if (LoadSegment("Storyline\\" + sfile)) {
 			RegisterStoryline(n); // PB: was i
-			UnloadSegment("Storyline\" + sfile);
+			UnloadSegment("Storyline\\" + sfile);
 			n++;
 		}
 	}

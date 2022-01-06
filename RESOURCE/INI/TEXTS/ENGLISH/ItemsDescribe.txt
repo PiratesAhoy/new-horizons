@@ -91,7 +91,7 @@ These documents were issued by the head of the Dutch West India Company. They in
 itmname_Trade_PassportS {Merchant License}
 itmdescr_Trade_PassportS
 {
-These documents were issued by the head of the Casa de ContrataciÛn. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+These documents were issued by the head of the Casa de Contrataci√≥n. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
 }
 
 itmname_Trade_PassportF {Merchant License}
@@ -103,7 +103,7 @@ These documents were issued by the head of the French West India Company. They i
 itmname_Trade_PassportP {Merchant License}
 itmdescr_Trade_PassportP
 {
-These documents were issued by the head of the Casa da Õndia. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
+These documents were issued by the head of the Casa da √çndia. They indicate that you are an honourable merchant and do not have to pay commission when selling trade goods. It also shows your crew that you are not engaged in any sort of piracy.
 }
 
 itmname_EITC_Passport {EITC Passport}
@@ -217,7 +217,7 @@ Lighter and faster than your basic rapier. A lot of work went into this design.
 itmname_blade14	{Spanish Nobility Longsword}
 itmdescr_blade14
 {
-A beautiful blade, of the type presented to those who are given Spanish titles of nobility. Legend claims that this kind of sword once was used by CortÈs and his officers.
+A beautiful blade, of the type presented to those who are given Spanish titles of nobility. Legend claims that this kind of sword once was used by Cort√©s and his officers.
 }
 
 itmname_blade15	{Iberian Longsword}
@@ -474,7 +474,7 @@ A particually ornate, gold Dirk, that would make a ideal gift for someone... in 
 itmname_blade40	{Polish Hussar's Szabla}
 itmdescr_blade40
 {
-MÍlÈe weapon widely used by the heavy Cavalry of the Polish Hussars. The long, thin, single-edged curved blade is ideal for skewering your opponant while on horse-back. This is the weapon that influenced the later adoption of Sabres into Western European Armies.
+M√™l√©e weapon widely used by the heavy Cavalry of the Polish Hussars. The long, thin, single-edged curved blade is ideal for skewering your opponant while on horse-back. This is the weapon that influenced the later adoption of Sabres into Western European Armies.
 }
 
 itmname_blade43	{US Cavalry Sabre}
@@ -548,7 +548,7 @@ Ornate Dress Sword from the Royal Courts of Paris. Maybe you can impress your op
 itmname_bladeFD	{Francis Drake's Sword}
 itmdescr_bladeFD
 {
-I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by FranÁois Moulin. It's at least a century old and is ornately engraved. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its history.
+I found this ancient looking blade in the Antigua jungle thanks to an old journal given to me by Fran√ßois Moulin. It's at least a century old and is ornately engraved. An inscription on the blade reads "Sir Francis Drake". This blade has magical powers, perhaps due to its history.
 }
 
 
@@ -558,10 +558,10 @@ itmdescr_bladeFD2
 This sword was presented to Francis Drake for services to the English Crown.
 }
 
-itmname_bladeSC	{Sword of CortÈs}
+itmname_bladeSC	{Sword of Cort√©s}
 itmdescr_bladeSC
 {
-I took this ancient saber from AmÈrigo Vieira. It is a mystical, cursed weapon used by Hern·n CortÈs during his conquest of the Aztec empire. The Sword's power is derived in combination with a sacred scabbard, made from the innards of Aztec sacrifices. The blade inscription reads "Hern·n CortÈs 1520 A.D.".
+I took this ancient saber from Am√©rigo Vieira. It is a mystical, cursed weapon used by Hern√°n Cort√©s during his conquest of the Aztec empire. The Sword's power is derived in combination with a sacred scabbard, made from the innards of Aztec sacrifices. The blade inscription reads "Hern√°n Cort√©s 1520 A.D.".
 }
 
 itmname_bladeMH	{Teacher's Pet}
@@ -1061,7 +1061,15 @@ This saber is favoured by the few merchants who want to protect their merchandis
 }
 //SuperDurnius <--
 
-itmname_spyglass1	{Cheap spyglass}
+itmname_spyglass0	{Spyglass of Shame}
+itmdescr_spyglass0
+{
+A cheap spyglass and a downright shameful one can be only one letter apart!
+This particular one was formerly owned by Yuri (Ursus) Rogach, who quickly dumped it in favour of something better.
+Allows the user to see only the ship's name, type, and speed.
+}
+
+itmname_spyglass1	{Cheap Spyglass}
 itmdescr_spyglass1
 {
 A simple spyglass with scratched lenses. This junk does not belong in any self-respecting captain's pocket.
@@ -1922,7 +1930,7 @@ Not suitable for children or people with a nervous disposition.
 itmname_book7 {Morgan's Almanac}
 itmdescr_book7
 {
-Book 3 in a series of 3 showing the practical and personal side of Morgan. Phases of the Moon, Tide Times, Current Speed and direction. Appendix contains Letters from his Mum, Letters to his Mum and Letters of the Alphabet. Bonus Pull-Out: Letters from Pirates he knew, Pirates he didnít know and Pirates who didnít want to know him (mostly now deceased).
+Book 3 in a series of 3 showing the practical and personal side of Morgan. Phases of the Moon, Tide Times, Current Speed and direction. Appendix contains Letters from his Mum, Letters to his Mum and Letters of the Alphabet. Bonus Pull-Out: Letters from Pirates he knew, Pirates he didn‚Äôt know and Pirates who didn‚Äôt want to know him (mostly now deceased).
 }
 
 itmname_book8 {Pirating With Petros}

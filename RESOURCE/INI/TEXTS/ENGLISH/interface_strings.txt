@@ -297,8 +297,8 @@ Redmond{Redmond}
 Isla Muelle{Isla Muelle}
 Oxbay{Oxbay}
 Greenford{Greenford}
-ConceiÁ„o{ConceiÁ„o}
-Conceicao{ConceiÁ„o}
+Concei√ß√£o{Concei√ß√£o}
+Conceicao{Concei√ß√£o}
 Douwesen{Douwesen}
 Quebradas Costillas{Quebradas Costillas}
 Khael Roa{Khael Roa}
@@ -846,7 +846,7 @@ Boarding deck.{Boarding deck}
 Fort inside.{Fort inside}
 Boarding town.{Boarding town}
 
-House of AmÈrigo Vieira{House of Amerigo Vieira}
+House of Am√©rigo Vieira{House of Amerigo Vieira}
 Smithy{Smithy}
 Sunny Haven{Sunny Haven}
 Hidden Cave{Hidden Cave}
@@ -859,7 +859,7 @@ Smugglers Tavern{Smugglers Tavern}
 House of Leader of smugglers{House of Leader of smugglers}
 Rheims house in #stown_name#{Rheims house in #stown_name#}
 
-House of AmÈrigo Vieira.{House of Amerigo Vieira}
+House of Am√©rigo Vieira.{House of Amerigo Vieira}
 Smithy.{Smithy}
 Sunny Haven.{Sunny Haven}
 Hidden Cave.{Hidden Cave}
@@ -1050,14 +1050,14 @@ Barracks{Barracks}
 Church{Church}
 Entrance to plantation{Entrance to plantation}
 Anse Casse-Bois{Anse Casse-Bois}
-BahÌa Grande{BahÌa Grande}
+Bah√≠a Grande{Bah√≠a Grande}
 Ensenada del Bosque Quebrado{Ensenada del Bosque Quebrado}
 
 Barracks.{Barracks}
 Church.{Church}
 Entrance to plantation.{Entrance to plantation}
 Anse Casse-Bois.{Anse Casse-Bois}
-BahÌa Grande.{BahÌa Grande}
+Bah√≠a Grande.{Bah√≠a Grande}
 Ensenada del Bosque Quebrado.{Ensenada del Bosque Quebrado}
 
 Storehouse{Storehouse}
@@ -2101,7 +2101,7 @@ CALL MATES{CALL MATES}
 AWAY BOAT{AWAY BOAT}
 No, I have no more business there.{No, I have no more business there.}
 
-Taino Village{TaÌno Village}
+Taino Village{Ta√≠no Village}
 House of Gilbert Downing{House of Gilbert Downing}
 Old Inquisition prison{Old Inquisition prison}
 Archives{Archives}
@@ -2136,7 +2136,7 @@ Hint: To make an officer available to command your ship, assign that officer to 
 Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.{Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
-Capit·n{Capit·n}
+Capit√°n{Capit√°n}
 
 Three days later...{Three days later...}
 

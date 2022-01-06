@@ -1,7 +1,7 @@
 title=A famous pirate
 text.t1=From now on, I work for the Portuguese Governor. My first task will be to go to #sisland_Oxbay# to find a lead on this Pirate. His ship had been damaged, he would need the assistance of a shipyard. I'll start my search at the #sOxbay# one.
 text.t2=It seems he didn't go this way. Let's hope, I'll be luckier in the #sGreenford# shipyard.
-text.t3=Found it! He repaired the ship in Bridgetown. I know his name now but not where he lives. However, he would have met François L'Ollonais and this French pirate lives on #sTortuga#. Let's go there and see if I can find him or someone who knows him.
+text.t3=Found it! He repaired the ship in Bridgetown. I know his name now but not where he lives. However, he would have met FranÃ§ois L'Ollonais and this French pirate lives on #sTortuga#. Let's go there and see if I can find him or someone who knows him.
 text.t4=That was dangerous, but I've found some more clues. Charles worked for the pirate chief of #sisland_Turks#. I should meet this man and see if he knows where Charles is based.
 text.t5=What bad luck! The pirate chief refused to help me. I need to think a bit, a rum at the tavern always helps. A lot of good ideas come over a drop of rum.
 text.t6=Finally, I know where I can find Charles : at #sCharlestown#. I need to sail with the tide. Hopefully this Charles hasn't moved his base again.

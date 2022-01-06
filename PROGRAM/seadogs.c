@@ -478,7 +478,7 @@ void Main_Start()
 	GetLanguageParameters(); // added by MAXIMUS
 
 	// PB: Catch Erroneous Install -->
-	if (FindFile("", "RESOURCE\*.*", "build14_beta4_final") == "")
+	if (FindFile("", "RESOURCE\\*.*", "build14_beta4_final") == "")
 	{
 		LaunchInstallError();
 	}

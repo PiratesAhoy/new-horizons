@@ -1,4 +1,4 @@
-﻿title=Plata para Cartagena
+title=Plata para Cartagena
 text.t1=#sname# me ha contado algo muy interesante. El tren de la plata, una caravana que transporta plata desde las colonias de España en el interior del continente, se dirige a #sCartagena#. Debería desplazarme hasta allí para averiguar algo más. Tal vez preguntar por las tabernas; discretamente, por supuesto.
 text.t2=#sname#, la camarera de la taberna que hay en el centro de #sCartagena#, está dispuesta a hacer un trato. Una aldea india cercana está sufriendo una enfermedad y no puede permitrse comprar medicinas. A cambio de 100 cajas de medicamentos, me ayudarán a encontrar alguna forma de tender una emboscada al cargamento de plata. Cuando tenga las medicinas, debería decirle a #sfirstname# que le sentaría mejor un vestido azul. Esta es la clave poara comunicarle, sin alertar a nadie que pueda estar escuchando, que lo tengo todo preparado para proceder con el trato.
 text.t3=#sname# necesitará un par de días para hacer los preparativos. Entonces, debería llevar las medicinas a Arenal de los Delfines, la playa cercana a #sCartagena# donde los indios se reunirán conmigo.
