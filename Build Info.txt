@@ -1,4 +1,4 @@
-Build Version: Thursday 2nd December 2021
+Build Version: Saturday 1st January 2022
 Build 14
 
 ==========================
@@ -282,8 +282,8 @@ Build 14:
   . Multi-shot guns losing wrong number of shots when missing target in "Woodes Rogers", "Goldbug" and "Bartolomeu" storylines fixed by Jack Rackham
   . Function 'UpdateItemData()' made to display potion data by Grey Roger
   . Selling Virginie d'Espivant earns correct amount of money by Jack Rackham
-  . Gibbs01.wav": made audible within game, so can be used as greeting sound for Mr. Gibbs - Jack Rackham
-  . Diplomat uses period-correct nation names, correctly handles America and Sweden - Grey Roger
+  . Gibbs01.wav": made audible within game, so can be used as greeting sound for Mr. Gibbs by Jack Rackham
+  . Diplomat uses period-correct nation names, correctly handles America and Sweden by Grey Roger
   . Citizen dialog files corrected to show town population by Homo Eructus
   . "PROGRAM\Characters\Leveling.c, officers.c", "PROGRAM\QUESTS\quests_common.c": calls on GetAttributeN, GetAttributesNum, GetAttributeName changed to supply '&name' (aref) instead of 'name' (object) to prevent bugs by Hammie
   . "SName" attribute for "HMS_Sophie" changed from "Sophie" to "HMS_Sophie" to avoid conflict with woman's name "Sophie" by Homo Eructus
@@ -441,6 +441,7 @@ Build 14:
   . Devlin Opera storyline:
     > New quests "My Brother, Ladies and Gentlemen" and "Yo Ho Ho and a shipment of rum", choice of ways to complete "Yo Ho Ho and a shipment of rum", by Bathtub Pirate
 - Model and Texture Updates:
+  . Improved jungle grass and sky textures by Corsairs-Harbour.ru
   . Swedish East Indiaman high-detail custom model added by Philipjn and Armada
   . Historically accurate British Navy Fleet paint scheme by Armada and Grey Roger
   . HMS Interceptor improved texture by Legendary Spider
@@ -1358,7 +1359,7 @@ Build 14 Beta 2.5:
 	> Multi-damage added to the musketoon
   . Clint Eastwood at the strange house in the Nevis jungle now works as intended by Pieter Boelen
     > He is the ONLY way to get the "Pump Shotgun". Try to take it from him!
-    > Option to replace shotgun with brace of horse pistols in "Arcade" mode by Grey ROger
+    > Option to replace shotgun with brace of horse pistols in "Arcade" mode by Grey Roger
   . Skill level and critical hits taken into account for fencing skill increase by Baste
   . Range of fort cannons reduced by 50% by Armada
   . All ship encounter chances and cabin+deck assignments updated by Armada

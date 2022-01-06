@@ -1,0 +1,1393 @@
+; ==================== Urfin =====================
+
+[Spanish Gr_Ewan Glover]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_001.wav
+
+[Spanish Gr_Reynard Grueneveldt]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_037.wav
+
+[Spanish Gr_douwesen pirate]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_067.wav
+
+[Spanish Gr_Amiel Berangere]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_001.wav
+
+[Spanish Gr_Arabella Silehard]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_f_c_008.wav
+
+[Spanish Gr_Balltesar Figueiredo]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_001.wav
+
+[Spanish Gr_Gheraed Drabbe]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_002.wav
+
+[Spanish Gr_Clair Larrouse]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_002.wav
+
+[Spanish Gr_joseph claude le moigne]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_c_042.wav
+
+[Spanish Gr_Artois Voysey]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_072.wav
+
+[Spanish Gr_Lucien Bescanceny]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_073.wav
+
+[Spanish Gr_Ambroz Bricenos]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_001.wav
+
+[Spanish Gr_Mergildo Hurtado]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_001.wav
+
+[Spanish Gr_John  Filbert]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_019.wav
+
+[Spanish Gr_Alistair Garcilaso]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_061.wav
+
+[Spanish Gr_Vito Leone]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Ita_m_a_001.wav
+
+[Spanish Gr_Anacleto]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_062.wav
+
+[Spanish Gr_Evaristo Filho]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_063.wav
+
+[Spanish Gr_Anacleto Rui Sa Pinto]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_079.wav
+
+[Spanish Gr_vigila mendes]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_b_002.wav
+
+[Spanish Gr_Raoul Calmes]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_074.wav
+
+[Spanish Gr_Clauss]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_080.wav
+
+[Spanish Gr_Maxwell]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_081.wav
+
+[Spanish Gr_Gervasio Serrao]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_064.wav
+
+[Spanish Gr_Gyles Dubois]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_064.wav
+
+[Spanish Gr_Nigel Blythe]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_082.wav
+
+[Spanish Gr_Bernardo Gamboa]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_065.wav
+
+[Spanish Gr_Pieter Nolt]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_083.wav
+
+[Spanish Gr_Pirates vs Blaze]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_079.wav
+
+[Spanish Gr_Shaggy Harry]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_081.wav
+
+[Spanish Gr_CursedPirate]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_082.wav
+
+[Spanish Gr_Smugglers_vs_Blythe]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_069.wav
+
+[Spanish Gr_camilo machado]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_061.wav
+
+[Spanish Gr_Gilbert Ballester]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_074.wav
+
+[Spanish Gr_thierry bosquet]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_075.wav
+
+[Spanish Gr_father Gareth]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_075.wav
+
+[Spanish Gr_Oswald Chappel]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_062.wav
+
+[Spanish Gr_Pater Jourdain]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_c_067.wav
+
+[Spanish Gr_Quest_Pirate_ 01]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_063.wav
+
+[Spanish Gr_Quest_Smuggler_01]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_064.wav
+
+[Spanish Gr_Geffrey Bampfylde]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_023.wav
+
+[Spanish Gr_Smuggler Agent]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_064.wav
+
+[Spanish Gr_Greenford Commander]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_039.wav
+
+[Spanish Gr_Mine Commander]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_040.wav
+
+[Spanish Gr_Redmond Commendant]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_041.wav
+
+[Spanish Gr_baldewyn coffier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_020.wav
+
+[Spanish Gr_Patric Cardone]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_021.wav
+
+[Spanish Gr_Pepin Bertillon]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_001.wav
+
+[Spanish Gr_Arabella's guard]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_042.wav
+
+[Spanish Gr_Smuggler_OnShore]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_061.wav
+
+[Spanish Gr_Edgar Attwood]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_043.wav
+
+[Spanish Gr_Researcher_Captured]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_039.wav
+
+[Spanish Gr_Ferro Cerezo]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_016.wav
+
+[Spanish Gr_Soldier_for_fight_in_tavern_01]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_040.wav
+
+[Spanish Gr_Greenford Soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_041.wav
+
+[Spanish Gr_Mine Keeper]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_042.wav
+
+[Spanish Gr_Rabel Yverneau]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_037.wav
+
+[Spanish Gr_Silehard_bodyguard]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_040.wav
+
+[Spanish Gr_Cops]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_032.wav
+
+[Spanish Gr_isla muelle soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_029.wav
+
+[Spanish Gr_French_arrester_2]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_035.wav
+
+[Spanish Gr_soldier1]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_041.wav
+
+[Spanish Gr_French_arrester]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_036.wav
+
+[Spanish Gr_soldier2]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_042.wav
+
+[Spanish Gr_Leaving_Oxbay]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_037.wav
+
+[Spanish Gr_Valentin Massoni]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_038.wav
+
+; ==================== Fedor =====================
+
+[Spanish Gr_Tanneken Oremans]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_f_a_001.wav
+
+[Spanish Gr_Unhappy women]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_f_a_002.wav
+
+[Spanish Gr_Peasant]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_002.wav
+
+[Spanish Gr_Toff Oremans]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_003.wav
+
+[Spanish Gr_eng_officiant]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_f_c_002.wav
+
+[Spanish Gr_greenford_citizen_01]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_f_c_003.wav
+
+[Spanish Gr_Sabine Matton]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_f_c_004.wav
+
+[Spanish Gr_Sofia Guterres]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_f_c_005.wav
+
+[Spanish Gr_Counterspy]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_001.wav
+
+[Spanish Gr_David Fairweather]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_001.wav
+
+[Spanish Gr_Billy Brock]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_002.wav
+
+[Spanish Gr_Ralph Fawn]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_002.wav
+
+[Spanish Gr_Henry]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_003.wav
+
+[Spanish Gr_Malcolm Hatcher]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_004.wav
+
+[Spanish Gr_Gordon Carpenter]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_004.wav
+
+[Spanish Gr_Danielle hireling]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_005.wav
+
+[Spanish Gr_danielle_quests_pirate]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_006.wav
+
+[Spanish Gr_danielle_sailor]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_007.wav
+
+[Spanish Gr_Murderer_in_Greenford_01]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_001.wav
+
+[Spanish Gr_Ralph Damerell]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_001.wav
+
+[Spanish Gr_Laurence Wellman]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_002.wav
+
+[Spanish Gr_Bucho]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_002.wav
+
+[Spanish Gr_Herald]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_003.wav
+
+[Spanish Gr_EnglishAttack]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_003.wav
+
+[Spanish Gr_researcher]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_004.wav
+
+[Spanish Gr_Miner]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_005.wav
+
+[Spanish Gr_Brendan Applin]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_007.wav
+
+[Spanish Gr_Found_Blaze_1]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_001.wav
+
+[Spanish Gr_Wilfred]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_001.wav
+
+[Spanish Gr_Found_Blaze_2]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_002.wav
+
+[Spanish Gr_Vincent Bethune]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_002.wav
+
+[Spanish Gr_Found_Blaze_3]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_003.wav
+
+[Spanish Gr_Henry Peat]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_004.wav
+
+[Spanish Gr_Rys Bloom]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_005.wav
+
+[Spanish Gr_to_say]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_006.wav
+
+[Spanish Gr_to_say1]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_007.wav
+
+[Spanish Gr_Simon Hanpool]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_033.wav
+
+[Spanish Gr_elzire ayarai]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_f_a_001.wav
+
+[Spanish Gr_Rachel Blacque]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_f_a_002.wav
+
+[Spanish Gr_Sylvie Bondies]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_f_a_003.wav
+
+[Spanish Gr_Virginie d'Espivant]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_f_a_004.wav
+
+[Spanish Gr_Bertillon's Guard]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_001.wav
+
+[Spanish Gr_turpin cabanel]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_002.wav
+
+[Spanish Gr_Leborio Drago]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_003.wav
+
+[Spanish Gr_hardouin aufort]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_004.wav
+
+[Spanish Gr_Marc Blacque]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_005.wav
+
+[Spanish Gr_Milon Blacque]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_006.wav
+
+[Spanish Gr_Orable Caron]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_007.wav
+
+[Spanish Gr_Raymond Bouchez]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_008.wav
+
+[Spanish Gr_Faust Gasquet]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_001.wav
+
+[Spanish Gr_Virgile Boon]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_002.wav
+
+[Spanish Gr_Tancrede Rimbaud]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_b_003.wav
+
+[Spanish Gr_Story_Fra_Occup_common]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_c_035.wav
+
+[Spanish Gr_Story_French Occupant_2]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_c_036.wav
+
+[Spanish Gr_Story_French Occupant]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_c_037.wav
+
+[Spanish Gr_Story_French Soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_c_038.wav
+
+[Spanish Gr_Quest_Satanists]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Ita_m_a_002.wav
+
+[Spanish Gr_andre juliao]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_001.wav
+
+[Spanish Gr_Amerigo Vieira]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_002.wav
+
+[Spanish Gr_Mateus Santos]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_003.wav
+
+[Spanish Gr_Caminero]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_004.wav
+
+[Spanish Gr_Yedam Kinne]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_005.wav
+
+[Spanish Gr_Fabiao Dunga]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_027.wav
+
+[Spanish Gr_witness-dialog]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_001.wav
+
+[Spanish Gr_Stephan Bonser]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_002.wav
+
+[Spanish Gr_Thug]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_004.wav
+
+[Spanish Gr_Wilfred Bythesea]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_005.wav
+
+[Spanish Gr_Mario Figuiera]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_028.wav
+
+[Spanish Gr_Corentin Lucay]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_001.wav
+
+[Spanish Gr_zaid murro]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_002.wav
+
+[Spanish Gr_Jaoquin de masse]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_003.wav
+
+[Spanish Gr_Jordano]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_b_001.wav
+
+[Spanish Gr_Lucas Da Saldanha]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_b_002.wav
+
+[Spanish Gr_Murena]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_b_003.wav
+
+[Spanish Gr_Sidonio Ogarrio]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_b_004.wav
+
+[Spanish Gr_Conceicao Citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_b_001.wav
+name = VOICE\Spanish\Por_m_b_002.wav
+name = VOICE\Spanish\Por_m_b_003.wav
+name = VOICE\Spanish\Por_m_b_004.wav
+name = VOICE\Spanish\Por_m_a_001.wav
+name = VOICE\Spanish\Por_m_a_002.wav
+name = VOICE\Spanish\Por_m_a_003.wav
+name = VOICE\Spanish\Por_m_a_004.wav
+
+[Spanish Gr_Woman_English Citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_f_c_001.wav
+name = VOICE\Spanish\Eng_f_c_002.wav
+name = VOICE\Spanish\Eng_f_c_003.wav
+name = VOICE\Spanish\Eng_f_c_004.wav
+name = VOICE\Spanish\Eng_f_c_005.wav
+name = VOICE\Spanish\Eng_f_c_006.wav
+name = VOICE\Spanish\Eng_f_c_007.wav
+
+[Spanish Gr_Douwesen Citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_001.wav
+name = VOICE\Spanish\Dut_m_a_002.wav
+name = VOICE\Spanish\Dut_m_a_003.wav
+name = VOICE\Spanish\Dut_m_a_004.wav
+name = VOICE\Spanish\Dut_m_a_005.wav
+
+[Spanish Gr_Woman_Dutch Citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_f_a_001.wav
+name = VOICE\Spanish\Dut_f_a_002.wav
+name = VOICE\Spanish\Dut_f_a_003.wav
+name = VOICE\Spanish\Dut_f_a_004.wav
+name = VOICE\Spanish\Dut_f_a_005.wav
+name = VOICE\Spanish\Dut_f_a_006.wav
+
+[Spanish Gr_falaise de fleur citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_001.wav
+name = VOICE\Spanish\Fre_m_a_002.wav
+name = VOICE\Spanish\Fre_m_a_003.wav
+name = VOICE\Spanish\Fre_m_a_004.wav
+name = VOICE\Spanish\Fre_m_a_005.wav
+name = VOICE\Spanish\Fre_m_a_006.wav
+name = VOICE\Spanish\Fre_m_a_007.wav
+
+[Spanish Gr_Woman_French citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_f_a_001.wav
+name = VOICE\Spanish\Fre_f_a_002.wav
+name = VOICE\Spanish\Fre_f_a_003.wav
+name = VOICE\Spanish\Fre_f_a_004.wav
+name = VOICE\Spanish\Fre_f_a_005.wav
+name = VOICE\Spanish\Fre_f_a_006.wav
+name = VOICE\Spanish\Fre_f_a_007.wav
+
+[Spanish Gr_isla muelle citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_b_001.wav
+name = VOICE\Spanish\Spa_m_b_002.wav
+name = VOICE\Spanish\Spa_m_b_003.wav
+name = VOICE\Spanish\Spa_m_b_004.wav
+name = VOICE\Spanish\Spa_m_a_001.wav
+name = VOICE\Spanish\Spa_m_a_002.wav
+name = VOICE\Spanish\Spa_m_a_003.wav
+name = VOICE\Spanish\Spa_m_a_004.wav
+
+[Spanish Gr_falaise de fleur soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_035.wav
+name = VOICE\Spanish\Fre_m_a_036.wav
+name = VOICE\Spanish\Fre_m_a_037.wav
+name = VOICE\Spanish\Fre_m_a_038.wav
+name = VOICE\Spanish\Fre_m_a_039.wav
+name = VOICE\Spanish\Fre_m_a_040.wav
+name = VOICE\Spanish\Fre_m_b_035.wav
+name = VOICE\Spanish\Fre_m_b_036.wav
+name = VOICE\Spanish\Fre_m_b_037.wav
+name = VOICE\Spanish\Fre_m_b_038.wav
+name = VOICE\Spanish\Fre_m_b_039.wav
+name = VOICE\Spanish\Fre_m_b_040.wav
+
+[Spanish Gr_Mine Soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_043.wav
+name = VOICE\Spanish\Eng_m_b_044.wav
+name = VOICE\Spanish\Eng_m_b_039.wav
+name = VOICE\Spanish\Eng_m_b_040.wav
+name = VOICE\Spanish\Eng_m_b_041.wav
+name = VOICE\Spanish\Eng_m_b_042.wav
+
+[Spanish Gr_Oxbay Soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_043.wav
+name = VOICE\Spanish\Eng_m_b_044.wav
+name = VOICE\Spanish\Eng_m_b_039.wav
+name = VOICE\Spanish\Eng_m_b_040.wav
+name = VOICE\Spanish\Eng_m_b_041.wav
+name = VOICE\Spanish\Eng_m_b_042.wav
+
+[Spanish Gr_Oxbay Citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_001.wav
+name = VOICE\Spanish\Eng_m_a_002.wav
+name = VOICE\Spanish\Eng_m_a_003.wav
+name = VOICE\Spanish\Eng_m_a_004.wav
+name = VOICE\Spanish\Eng_m_a_005.wav
+name = VOICE\Spanish\Eng_m_a_006.wav
+name = VOICE\Spanish\Eng_m_b_001.wav
+name = VOICE\Spanish\Eng_m_b_002.wav
+name = VOICE\Spanish\Eng_m_b_003.wav
+name = VOICE\Spanish\Eng_m_b_004.wav
+name = VOICE\Spanish\Eng_m_b_005.wav
+name = VOICE\Spanish\Eng_m_b_006.wav
+
+[Spanish Gr_Greenford Citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_001.wav
+name = VOICE\Spanish\Eng_m_a_002.wav
+name = VOICE\Spanish\Eng_m_a_003.wav
+name = VOICE\Spanish\Eng_m_a_004.wav
+name = VOICE\Spanish\Eng_m_a_005.wav
+name = VOICE\Spanish\Eng_m_a_006.wav
+name = VOICE\Spanish\Eng_m_b_001.wav
+name = VOICE\Spanish\Eng_m_b_002.wav
+name = VOICE\Spanish\Eng_m_b_003.wav
+name = VOICE\Spanish\Eng_m_b_004.wav
+name = VOICE\Spanish\Eng_m_b_005.wav
+name = VOICE\Spanish\Eng_m_b_006.wav
+
+[Spanish Gr_Redmond Citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_001.wav
+name = VOICE\Spanish\Eng_m_a_002.wav
+name = VOICE\Spanish\Eng_m_a_003.wav
+name = VOICE\Spanish\Eng_m_a_004.wav
+name = VOICE\Spanish\Eng_m_a_005.wav
+name = VOICE\Spanish\Eng_m_a_006.wav
+name = VOICE\Spanish\Eng_m_b_001.wav
+name = VOICE\Spanish\Eng_m_b_002.wav
+name = VOICE\Spanish\Eng_m_b_003.wav
+name = VOICE\Spanish\Eng_m_b_004.wav
+name = VOICE\Spanish\Eng_m_b_005.wav
+name = VOICE\Spanish\Eng_m_b_006.wav
+
+[Spanish Gr_QC Citizen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_033.wav
+name = VOICE\Spanish\Por_m_a_034.wav
+name = VOICE\Spanish\Por_m_a_035.wav
+name = VOICE\Spanish\Por_m_a_036.wav
+name = VOICE\Spanish\Por_m_b_033.wav
+name = VOICE\Spanish\Por_m_b_034.wav
+name = VOICE\Spanish\Por_m_b_035.wav
+name = VOICE\Spanish\Por_m_b_036.wav
+
+[Spanish Gr_Patrol]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_043.wav
+name = VOICE\Spanish\Eng_m_b_044.wav
+name = VOICE\Spanish\Eng_m_b_039.wav
+name = VOICE\Spanish\Eng_m_b_040.wav
+name = VOICE\Spanish\Eng_m_b_041.wav
+name = VOICE\Spanish\Eng_m_b_042.wav
+
+[Spanish Gr_Redmond Soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_043.wav
+name = VOICE\Spanish\Eng_m_b_044.wav
+name = VOICE\Spanish\Eng_m_b_039.wav
+name = VOICE\Spanish\Eng_m_b_040.wav
+name = VOICE\Spanish\Eng_m_b_041.wav
+name = VOICE\Spanish\Eng_m_b_042.wav
+
+[Spanish Gr_Conceicao Soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_031.wav
+name = VOICE\Spanish\Por_m_a_032.wav
+name = VOICE\Spanish\Por_m_a_033.wav
+name = VOICE\Spanish\Por_m_a_034.wav
+name = VOICE\Spanish\Por_m_a_035.wav
+name = VOICE\Spanish\Por_m_a_036.wav
+name = VOICE\Spanish\Por_m_b_031.wav
+name = VOICE\Spanish\Por_m_b_032.wav
+name = VOICE\Spanish\Por_m_b_033.wav
+name = VOICE\Spanish\Por_m_b_034.wav
+name = VOICE\Spanish\Por_m_b_035.wav
+name = VOICE\Spanish\Por_m_b_036.wav
+
+[Spanish Gr_French Occupant_2]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_035.wav
+name = VOICE\Spanish\Fre_m_a_036.wav
+name = VOICE\Spanish\Fre_m_a_037.wav
+name = VOICE\Spanish\Fre_m_a_038.wav
+name = VOICE\Spanish\Fre_m_a_039.wav
+name = VOICE\Spanish\Fre_m_a_040.wav
+name = VOICE\Spanish\Fre_m_b_035.wav
+name = VOICE\Spanish\Fre_m_b_036.wav
+name = VOICE\Spanish\Fre_m_b_037.wav
+name = VOICE\Spanish\Fre_m_b_038.wav
+name = VOICE\Spanish\Fre_m_b_039.wav
+name = VOICE\Spanish\Fre_m_b_040.wav
+
+[Spanish Gr_Douwesen Soldier]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_032.wav
+name = VOICE\Spanish\Dut_m_a_033.wav
+name = VOICE\Spanish\Dut_m_a_034.wav
+name = VOICE\Spanish\Dut_m_a_035.wav
+name = VOICE\Spanish\Dut_m_a_036.wav
+name = VOICE\Spanish\Dut_m_b_032.wav
+name = VOICE\Spanish\Dut_m_b_033.wav
+name = VOICE\Spanish\Dut_m_b_034.wav
+name = VOICE\Spanish\Dut_m_b_035.wav
+name = VOICE\Spanish\Dut_m_b_036.wav
+
+[Spanish Gr_Roger Murray]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_028.wav
+name = VOICE\Spanish\Eng_m_a_029.wav
+name = VOICE\Spanish\Eng_m_a_030.wav
+name = VOICE\Spanish\Eng_m_a_031.wav
+name = VOICE\Spanish\Eng_m_a_032.wav
+
+[Spanish Gr_Charles Windem]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_035.wav
+name = VOICE\Spanish\Eng_m_a_037.wav
+name = VOICE\Spanish\Eng_m_a_036.wav
+
+[Spanish Gr_Robert Christopher Silehard]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_045.wav
+name = VOICE\Spanish\Eng_m_a_046.wav
+name = VOICE\Spanish\Eng_m_a_047.wav
+name = VOICE\Spanish\Eng_m_a_048.wav
+name = VOICE\Spanish\Eng_m_a_049.wav
+name = VOICE\Spanish\Eng_m_a_050.wav
+name = VOICE\Spanish\Eng_m_a_051.wav
+
+[Spanish Gr_Thomas O'Reily]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_023.wav
+name = VOICE\Spanish\Eng_m_a_024.wav
+name = VOICE\Spanish\Eng_m_a_025.wav
+name = VOICE\Spanish\Eng_m_a_026.wav
+name = VOICE\Spanish\Eng_m_a_027.wav
+
+[Spanish Gr_Father Bernard]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_072.wav
+name = VOICE\Spanish\Eng_m_a_073.wav
+
+[Spanish Gr_Alan Milds]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_019.wav
+name = VOICE\Spanish\Eng_m_a_020.wav
+name = VOICE\Spanish\Eng_m_a_021.wav
+name = VOICE\Spanish\Eng_m_a_022.wav
+
+[Spanish Gr_Father Jerald]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_a_074.wav
+name = VOICE\Spanish\Eng_m_a_077.wav
+
+[Spanish Gr_Everard Gordon]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_c_033.wav
+name = VOICE\Spanish\Eng_m_c_034.wav
+name = VOICE\Spanish\Eng_m_c_036.wav
+
+[Spanish Gr_Oweyn McDorey]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Eng_m_b_028.wav
+name = VOICE\Spanish\Eng_m_b_029.wav
+name = VOICE\Spanish\Eng_m_b_031.wav
+name = VOICE\Spanish\Eng_m_b_032.wav
+
+[Spanish Gr_antoine lebretton]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_030.wav
+name = VOICE\Spanish\Fre_m_a_031.wav
+name = VOICE\Spanish\Fre_m_a_032.wav
+name = VOICE\Spanish\Fre_m_a_033.wav
+name = VOICE\Spanish\Fre_m_a_034.wav
+
+[Spanish Gr_jean filaut]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_025.wav
+name = VOICE\Spanish\Fre_m_a_026.wav
+name = VOICE\Spanish\Fre_m_a_027.wav
+name = VOICE\Spanish\Fre_m_a_029.wav
+name = VOICE\Spanish\Fre_m_a_028.wav
+
+[Spanish Gr_arnaud matton]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_020.wav
+name = VOICE\Spanish\Fre_m_a_021.wav
+name = VOICE\Spanish\Fre_m_a_022.wav
+name = VOICE\Spanish\Fre_m_a_023.wav
+name = VOICE\Spanish\Fre_m_a_024.wav
+
+[Spanish Gr_Emiliano Rionda]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_b_068.wav
+name = VOICE\Spanish\Spa_m_b_067.wav
+
+[Spanish Gr_claudio burrieza]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_023.wav
+name = VOICE\Spanish\Spa_m_a_024.wav
+name = VOICE\Spanish\Spa_m_a_026.wav
+name = VOICE\Spanish\Spa_m_a_027.wav
+name = VOICE\Spanish\Spa_m_a_028.wav
+
+[Spanish Gr_christofor manuel de alencar]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_036.wav
+name = VOICE\Spanish\Spa_m_a_037.wav
+name = VOICE\Spanish\Spa_m_a_038.wav
+name = VOICE\Spanish\Spa_m_a_039.wav
+name = VOICE\Spanish\Spa_m_a_040.wav
+
+[Spanish Gr_esteban castillo]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_017.wav
+name = VOICE\Spanish\Spa_m_a_018.wav
+name = VOICE\Spanish\Spa_m_a_019.wav
+name = VOICE\Spanish\Spa_m_a_020.wav
+name = VOICE\Spanish\Spa_m_a_021.wav
+name = VOICE\Spanish\Spa_m_a_022.wav
+
+[Spanish Gr_Padre Domingues]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_a_064.wav
+name = VOICE\Spanish\Spa_m_a_061.wav
+name = VOICE\Spanish\Spa_m_a_062.wav
+
+[Spanish Gr_second_spaniard_priest]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Spa_m_b_061.wav
+name = VOICE\Spanish\Spa_m_a_061.wav
+name = VOICE\Spanish\Spa_m_a_062.wav
+
+[Spanish Gr_Jacinto Arcibaldo Barreto]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_039.wav
+name = VOICE\Spanish\Por_m_a_040.wav
+
+[Spanish Gr_Duarte Correja]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_027.wav
+name = VOICE\Spanish\Por_m_a_029.wav
+name = VOICE\Spanish\Por_m_a_030.wav
+
+[Spanish Gr_Martinho Guterres]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_017.wav
+name = VOICE\Spanish\Por_m_a_018.wav
+name = VOICE\Spanish\Por_m_a_019.wav
+name = VOICE\Spanish\Por_m_a_020.wav
+name = VOICE\Spanish\Por_m_a_021.wav
+
+[Spanish Gr_Humberto de Paiva]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_024.wav
+name = VOICE\Spanish\Por_m_a_025.wav
+
+[Spanish Gr_Padre Valentim]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_002.wav
+name = VOICE\Spanish\Por_m_a_004.wav
+
+[Spanish Gr_Lambrecht Fobes]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_022.wav
+name = VOICE\Spanish\Dut_m_a_023.wav
+name = VOICE\Spanish\Dut_m_a_024.wav
+
+[Spanish Gr_Friedrich Corleis]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_027.wav
+name = VOICE\Spanish\Dut_m_a_028.wav
+name = VOICE\Spanish\Dut_m_a_029.wav
+name = VOICE\Spanish\Dut_m_a_030.wav
+name = VOICE\Spanish\Dut_m_a_031.wav
+name = VOICE\Spanish\Dut_m_a_067.wav
+name = VOICE\Spanish\Dut_m_a_068.wav
+name = VOICE\Spanish\Dut_m_a_070.wav
+
+[Spanish Gr_Gheerlof Darlang]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_m_a_012.wav
+name = VOICE\Spanish\Dut_m_a_018.wav
+name = VOICE\Spanish\Dut_m_a_019.wav
+name = VOICE\Spanish\Dut_m_a_020.wav
+
+[Spanish Gr_Peter Blowhorn]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_017.wav
+name = VOICE\Spanish\Por_m_a_018.wav
+name = VOICE\Spanish\Por_m_a_019.wav
+name = VOICE\Spanish\Por_m_a_020.wav
+
+[Spanish Gr_Ines Diaz]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Dut_f_a_003.wav
+name = VOICE\Spanish\Dut_f_a_004.wav
+name = VOICE\Spanish\Dut_f_a_005.wav
+name = VOICE\Spanish\Dut_f_a_001.wav
+
+[Spanish Gr_Isenbrandt Jurcksen]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Por_m_a_033.wav
+name = VOICE\Spanish\Por_m_a_046.wav
+name = VOICE\Spanish\Por_m_a_050.wav
+name = VOICE\Spanish\Por_m_a_051.wav
+name = VOICE\Spanish\Por_m_a_052.wav
+name = VOICE\Spanish\Por_m_a_053.wav
+name = VOICE\Spanish\Por_m_a_055.wav
+
+[Spanish Gr_danielle]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_f_a_001.wav
+name = VOICE\Spanish\Fre_f_a_003.wav
+name = VOICE\Spanish\Fre_f_a_004.wav
+name = VOICE\Spanish\Fre_f_a_005.wav
+name = VOICE\Spanish\Fre_f_a_006.wav
+name = VOICE\Spanish\Fre_f_a_007.wav
+name = VOICE\Spanish\Fre_f_a_008.wav
+
+[Spanish Gr_Raoul Rheims]
+minDistance = 0.45
+maxDistance = 50.0
+volume = 1.0
+name = VOICE\Spanish\Fre_m_a_001.wav
+name = VOICE\Spanish\Fre_m_a_002.wav
+name = VOICE\Spanish\Fre_m_a_003.wav
+name = VOICE\Spanish\Fre_m_a_004.wav
+name = VOICE\Spanish\Fre_m_a_005.wav
+name = VOICE\Spanish\Fre_m_a_006.wav
+name = VOICE\Spanish\Fre_m_a_007.wav

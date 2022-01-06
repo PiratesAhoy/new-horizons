@@ -1,0 +1,823 @@
+#QUEST	Story_OxbayCaptured
+Inform the governor about the French attack.
+#TEXT	1
+A French squadron captured the English colony, Oxbay. The French succeeded because the fort's defenses were so weak. I escaped only by great good fortune. I suppose I should inform the governor of the main English colony - Redmond, Sir Robert Christopher Silehard, about the attack, so he can take appropriate measures. By chance, I noticed someone else also managed to escape the French. I saw a ship sailing away from the bay. I wonder who the captain was.
+#QUEST	Story_1stTaskReceived
+Reconnoiter captured Oxbay city.
+#TEXT	1
+Perhaps I shouldn't have told the governor that Oxbay was attacked. When he heard my news, he began immediate preparations for war, and nearly commandeered my ship. I had to join the King's army in order to save my ship. The first task the Governor gave me is to land on Oxbay island not far from the captured city, then sneak into the city and learn all I can about the French squadron and any further plans of the French.
+#TEXT	2
+When I got to Oxbay, I managed to talk to the local tavern-keeper whose name is Everard Gordon. He told me that local citizens are ready to give any help in order to free Oxbay. The French behave outrageously, and the locals hate them. The tavern keeper also told me that the French are filling up their crews with volunteers. That's a good opportunity for sending out a spy to the French. During our conversation, I got the idea to make friends with some French officer, get him drunk, then tease all the information I need out of him.
+#TEXT	4
+Everything worked as I hoped. Under threat of death, the drunken Massoni told me that the barque 'Oiseau' is at Falaise de Fleur harbor. That very barque is supposed to deliver ammunition to the French squadron, but it's not going to put to sea unless they find an escort ship. Should I inform Silehard about that, or just sail to Falaise de Fleur and find out about everything by myself?
+#TEXT	5
+After I reported to Silehard, he gave me some gold and told me to do something so that the barque 'Oiseau' would be unable to sail to Oxbay. That's much easier said than done. Perhaps if I can get to Falaise de Fleur and find out what the situation is there, I'll be able to think of a way to complete the mission.
+#TEXT	6
+A sailor from the barque 'Oiseau' told me that French authorities hired a brig under the command of a certain Amiel Berangere to escort the barque to Oxbay. I think I should talk to that fellow. The sailor said that I can ask people in the local Falaise de Fleur's tavern about Berangere. He is a regular visitor there.
+#TEXT	7
+I talked to the Falaise de Fleur tavern keeper named Antoine Lebretton. I learned that Berangere rented a room from Lebretton, and that he's probably in there right now.
+#TEXT	8
+Amiel Berangere gave me the honor to escort the 'Oiseau' barque to Oxbay island. He gave me a letter of identification. Now I need to show the letter to the harbormaster of Falaise de Fleur. He'll introduce me to the captain of the barque, Virgile Boon, and then we'll be ready to sail. Of course, thanks to my cunning plans, that barque will never make it to Oxbay, hahaha!
+#TEXT	9
+Amiel Berangere turned out to be an extremely intractable person. Well, he paid for that with his life. I took a letter of identification from his dead body. I should show it to Falaise de Fleur's harbormaster. Then it seems I'll have to meet the captain of the barque.
+#TEXT	10
+I got lucky. Amiel Berangere will take care of all my problems. He'll be happy to sink the barque 'Oiseau' and its poor captain. Admittedly, it cost me no small sum to persuade Amiel to follow the pirate's road, but now I can return to Redmond and report the mission complete as ordered.
+#TEXT	11
+I showed the letter of identification to the harbormaster, and he introduced me to Virgile Boon. Now we are ready to put to sea at any moment. I hope that during the sail I'll be able to snatch the opportunity to board or sink Virgile's wash-tub.
+#TEXT	12
+I've done it! I've completed the mission! The French will be without ammunition, and I expect a handsome reward for my services.
+#TEXT	13
+We just left the town, and I killed Massoni. Before soldiers approached me, I searched his body. It appears that Massoni was escorting a barque named 'Oiseau' to the French colony, Falaise De Fleur. There the barque will be loaded with supplies and armaments. But now that Massoni is not available to accompany them, the barque won't sail to Oxbay until they find a new escort ship.
+#QUEST	Story_2ndTask
+Escort a ship with troops to Oxbay and then meet an agent.
+#TEXT	1
+My second task is to escort the sloop 'Albion' to Oxbay. There is a regiment of English soldiers who are going to harass the French. A local citizen of Greenford will show me a landing place, and will guide them to a cave discovered on the island. When I am done with that mission, I'll have to sneak into the captured town of Oxbay and meet there a certain English agent. The captain of the sloop is waiting for me by the port's entrance.
+#TEXT	2
+I talked to Ewan Glover who is the captain of the sloop 'Albion'. He said that he is ready to put to sea at any moment, and as soon as I'm on board my ship, he'll join me.
+#TEXT	3
+What a naive person that governor is! This is a golden opportunity to turn pirate. Unfortunately, I'll hardly be able to complete Silehard's mission. I'll have to come up with a story about the French attack... or perhaps the pirate's attack.... I hope no one will suspect anything, but, if someone does, then we'll see what happens.
+#TEXT	4
+Most unfortunate. During the voyage we ran into trouble. Despite all my efforts, the sloop 'Albion' sank. Poor Ewan, he seemed such a nice fellow. A thousand devils! I failed the first part of the governor's mission.
+#TEXT	5
+What a wise decision Silehard made when he employed me. We safely arrived at Greenford's harbor, and the 'Albion' now lies under the protection of Greenford. Now I should find that local citizen who'll show us the way to the cave.
+#TEXT	6
+That local fellow named Wilfred found me himself. He said that we should land soldiers at night on a small deserted beach so the French wouldn't sniff out our operation. The beach is to the north-east from Greenford's harbor. We must sail round the island and right behind the lonely rock we'll see at the beach. Wilfred will wait for us there.
+#TEXT	7
+I found a little surprise when I came to the place where I agreed to meet with Wilfred. The French patrol appeared at the beach and I had to fight with them. Luckily, not a single French soldier managed to escape and give the alarm. Then Wilfred took our soldiers to the cave, then Ewan Glover and I returned to Greenford where we bid farewell to each other. It's time to start on the second part of the mission.
+#TEXT	8
+A thousand devils!!! Just as we approached our destination, it was God's will that the sloop 'Albion' sloop should be lost. Alas, now I need to sneak into Oxbay and try to find Tobias there.
+#TEXT	9
+I met Tobias at the Oxbay tavern, and he told me that he managed to bribe one of the captains of the French squadron. Unfortunately, while we were talking, several French guards rushed into the tavern, and I had to fight to avoid being captured.
+#TEXT	10
+After the shipwright named Oweyn Mc Dorey hid us from the French soldiers, Tobias told me that he needs to meet up with a captain, Rabel Yverneau, today. He is supposed to wait for Tobias at the tavern, but Tobias wants to meet at another location, and I must inform Rabel about that.
+#TEXT	11
+It looks like we'll have to escape from here on Rabel's ship. I'll have to get back to Redmond harbor for my ship.
+#TEXT	12
+I escaped from the French squadron, returned to the governor and got the gold I earned. The governor decided that I should take part in the liberation of Oxbay. I can't say that I very happy about his decision. Of course, I've no objection to a little fighting...but not for the English crown. I'm to be informed when our squadron will put to sea. In the meantime I can do as I wish. As His Serene Highness recommends, I am going to go and check out the local tavern, hehehe!
+#QUEST	Meet_Danielle_on_Muelle
+Meet Danielle on Isla Muelle.
+#TEXT	1
+After I passed Anacleto Rui Sa Pinto's test, he offered me a deal. The pirate will give me the brig he captured, and in return I promised to punish his old enemy, Sidonio Ogarrio, who lives at the Isla Muelle colony now. Anacleto can't go there because Spaniards are eager to see him hanging on the gallows.
+#TEXT	2
+First I sailed to Oxbay in order to meet Danielle, but Aurentius told me that Danielle has set out in search of me. Ah, these women - where the dickens has she sailed?
+#TEXT	3
+To my great surprise, when my new ship entered Isla Muelle's harbor, I saw my old ship at an anchor there. My fellows met me ashore. It turned out that they managed to survive the storm, and then reached the nearest port and made repairs on the ship.
+#TEXT	4
+Another fortunate chance has occurred. I met Danielle at Isla Muelle's tavern, and she told me that she has those clay tablets where the legend is recorded. She's lost her ship, and she plans to sail on my ship for some time. She's made a copy of those native tablets, and we are going to Aurentis. I remember he boasted of his knowledge of native languages, so perhaps he'll be able to translate the legend of the Temple of the Sun God.
+#TEXT	5
+Having dropped anchor by Greenford's lighthouse, Danielle and I climbed to the top of the rock. It turned out that English soldiers were waiting for us by the lighthouse rather than Aurentis. It turned out that poor old man has been arrested by order of Governor Silehard for giving aid to traitors to the English crown - that is, Danielle and me. Now he is held in Greenford's prison.
+#QUEST	Capture_Greenford
+Free Clement Aurentius by capturing Greenford colony.
+#TEXT	1
+The English soldiers wanted us to join Aurentius in prison. They have been disappointed - fatally so, I'm afraid. Since we can scarcely hope to find another person in this archipelago to read those native texts, we have resolved to capture the Greenford colony. Why waste energy on half-measures? With our bold plan, we're confident we'll get the old man out of jail. When we are ready to attack the colony, I'll make a landing by the lighthouse. Danielle with part of the crew will attack the city from the land, and I'll concentrate on the fort. Thousand devils, what a fine time we will have!
+#TEXT	2
+The English soldiers wished us to join Aurentius in prison so badly that they got hurt. And since we can't hope to find another man to read those native languages, we have determined to capture Greenford. Danielle will fight on the land, and I will take to the sea.
+#QUEST	Repel_English_Attack
+Repel the English squadron attacking Greenford.
+#TEXT	1
+Apparently, Silehard didn't appreciate our capturing his colony. I was informed by a sailor that the governor has assembled troops and the English squadron is on its way to Greenford. We expect a terrible battle. Danielle will command the fort, and I'll confront the enemy from my quarterdeck as always.
+#QUEST	Sail_to_KhaelRoa
+Sail to Khael Roa with Danielle and Aurentius.
+#TEXT	1
+The English squadron lies at the bottom of Greenford's harbor. The fish will feast well. We doubt we could repulse a second attack, so we'd best take our expert on native languages aboard and make sail for Khael Roa. He can finish his translations during the voyage.
+#QUEST	Into_the_temple
+Sneak into the temple.
+#TEXT	1
+By the Sea Devil! Rumors of treasure certainly attract the wrong sort of people! A whole pirate fleet was waiting for us off Khael Roa. How did those carrion-crows find out that we were sailing there? I don't understand it. After our battle, we landed on Khael Roa. The temple is in the heart of the island, and Aurentius warned us of traps we may find inside.
+#TEXT	2
+Three thousand devils! It turns out that in order to get to that alcove, we need make our way through a labyrinth first. Danielle decided we should split up, and ran off without waiting for our reply. I chose the central path of the labyrinth.
+#QUEST	Thomas_O'Reily_contraband
+Smuggling for Thomas O'Reily.
+#TEXT	1
+A Redmond's shop owner named Thomas O'Reily ordered me to deliver a contraband cargo to Falaise de Fleur. Fits I should sail to a small bay north from this town where Thomas's workers will load my ship with sandalwood. Then I should sail to Falaise de Fleur and deliver the cargo to a fellow named Andre Juliao in the tavern there.
+#TEXT	2
+There is something wrong! Thomas's workers tried to kill me. They said they wanted to teach me and Thomas a lesson. There was no cargo in the bay. I definitely need to find Thomas and find out what is going on.
+#TEXT	3
+Thomas said that the cargo had been loaded aboard another ship, and that this ship sailed away recently. I asked him who attacked me and stole his cargo. He thinks it was the smuggler's guild. They took revenge on him because he stopped using their services. That's an unfortunate situation. In any case, I have to intercept the ship with Thomas' cargo, board it, take the cargo, and deliver it to Falaise de Fleur.
+#TEXT	4
+I successfully delivered the cargo to Andre Juliao. That Portuguese fellow knows nothing about good manners, and besides, it appears that he suspects something about Thomas's dealings with the smuggler's guild. I need to warn Thomas to be careful with Andre.
+#TEXT	5
+Thomas thanked me for the warning and gave me some money.
+#TEXT	6
+Thomas said that those were the members of the smuggler's guild who attacked me and then stole his cargo. He asked me to intercept their ship and get the cargo back, but I had to refuse him because I don't want to get involved with organizations like the smuggler's guild.
+#QUEST	Hire_by_france_for_defeat_england_corvette
+Sink the English corvette.
+#TEXT	1
+The governor of Falaise de Fleur, Joseph Claude Le Moigne, charged me with a mission to sink the English corvette blockading the colony while the French squadron is at sea.
+#TEXT	2
+I had to refuse Le Moigne. 5000 gold is not reward enough for such risks. It's no small matter to battle with an English corvette. It appears that the governor was upset by my refusal.
+#TEXT	3
+The governor was pleased with my performance. He gave me the reward and told me to keep in touch. He wants to work with me in the future as well.
+#QUEST	Blaze_out_from_silehard
+Wait for new orders from Silehard.
+#TEXT	1
+Silehard ordered me to participate in the liberation of Oxbay. Unfortunately, I have little choice; all the city's entrances are blocked. The only thing I can do is await his orders in the tavern.
+#TEXT	2
+What the devil! The English soldiers attacked Danielle and me! Danielle, of course, disappeared immediately after the fight - I suppose she is hiding something from me. Poor girl, she nearly cried - her boatswain Ralph was killed. That's unfortunate; he was a good man. In any case, I need to figure out what's going on here.
+#TEXT	3
+I should have listened to Danielle and gotten out of that tavern. As soon as Danielle left, the soldiers entered the tavern and told me to lay down my arms. There were four of them, so the odds were in their favor and I was forced to yield. What the devil is going on?
+#QUEST	Blaze_in_prison
+Get out of jail.
+#TEXT	1
+The soldiers put me in jail. I don't know where my weapon is, and they probably neglected to inform the governor that I am here. What should I do?
+#TEXT	2
+The jailer by the name of Edgar Attwood let me out of my prison cell in exchange for my agreement to take him on board my ship as a gunner.
+#TEXT	3
+The jailer named Edgar Attwood said that he had been a good gunner, but that he had been fired for hard drinking. I offered him a berth as a gunner on my ship...but only if he let me out of the prison cell. He just laughed.
+#TEXT	4
+I don't like it when people make fun of me. Edgar said that I'd walk on crutches if I kept interrupting him while he told me the story of his life. I grew weary of his threats and shot him.
+#TEXT	5
+Now I have to get out of this dank vault they call a jail. Edgar mentioned that there are several guards standing watch. I'll have to kill them all. That's the only way to regain my freedom.
+#TEXT	6
+Governor Silehard himself came to jail. He said it was a terrible mistake that I was imprisoned, and he offered his full apology. Then he invited me to follow him to his study for a serious conversation.
+#QUEST	Blaze_search_Rheims
+Find the traitor named Raoul Rheims.
+#TEXT	1
+The governor gave me a new mission. I was told to find a certain Rheims who deserted to the French side while carrying out an important mission for the governor. It's known that Rheims' ship has called at the pirate's island. I should sail there, and if Rheims is not there, I'll proceed according to the circumstances. In any case, I'm to find him and bring him to the governor.
+#TEXT	2
+The tavern-keeper, Ines Diaz, told me that Rheims sailed to Conceicao where he has some businesses with Camilo Machado, the leader of the smugglers. According to her, the day before Rheims left, someone tried to shoot him. Perhaps Silehard has sent someone else to kill Rheims?
+#TEXT	3
+The tavern-keeper Ines Diaz refused to talk to me. I'll have to find some other source of information.
+#TEXT	4
+I found out that Rheims has set out for Concecao where he plans to meet with the leader of the smugglers, Camilo Machado.
+#TEXT	5
+One fellow I met in the street of Quebradas Costillas told me that he knows where Rheims is. He asked 1500 gold for the information, and I refused to pay him. However, now it appears I have no choice but to pay to that dirty pirate 1500 gold. Otherwise I'll have to sail to every island in the archipelago trying to track down Rheims myself.
+#TEXT	6
+I tried to ask the tavern-keeper in Conceicao about Rheims, but the fellow was frightened when I mentioned the name of the smuggler leader.
+#TEXT	7
+Finally I got lucky! Machado's messenger was waiting for me by the tavern's entrance. Unfortunately, I didn't get the information I needed from my conversation with the smuggler leader. Rheims sailed away several days ago and Machado posted some guards by his house. It appears I have no other choice but to sneak into Rheims's house - even though that's just what Machado told me not to do. It's best to wait until nightfall. I am going to rent a room in the tavern in order to have a place to wait.
+#TEXT	8
+Night has fallen. Now it's time to sneak into to Rheims's house. The guards shouldn't present much of a problem. I've seen a small window in the house, and it should be easy to get to the house through it. If anything goes wrong, I may be forced to kill the guards to get inside the house.
+#TEXT	9
+I found a letter in Rheims's house where he tells someone to wait for him in a certain place while he is preparing a big expedition. What is he talking about? A couple of minutes after I got inside the house, two cutthroats broke into the house, and I had to fight with them and kill them. It's strange that they said I am the third person who tried to sneak into Rheims's house. However that may be, I have lost track of Rheims, and now I'll have to return to Silehard to report my failure.
+#TEXT	10
+I killed the guards and got inside the house. Now we'll see what I can find here.
+#TEXT	11
+Governor Silehard reacted rather mildly when I reported my failure. I thought he'd be upset. He even paid me the rest of the money for this mission. Perhaps Lady Fortune smiles on me.
+#TEXT	12
+I found out that Rheims really stayed on Quebradas Costillas, and he spent most of the time in the local tavern. I suppose I should talk to the owner of the tavern. I am sure she has something worthwhile she could tell me.
+#TEXT	13
+The pirate who could tell me about the location of Rheims is dead. I guess I don't have any other choice but to sail to every island to find him. I doubt that Rheims would sail to any English colony because it's too dangerous for him.
+#TEXT	14
+Rheims hasn't been on Douwesen island recently. The last time he was here was several months ago. What's interesting, though, is that he paid for everything with Indian golden coins.
+#TEXT	15
+I was at Isla Muelle and learned that no one has seen Rheims there.
+#TEXT	16
+Rheims hasn't been at Falaise de Fleur. My only consolation is that now there are only a few places where Rheims could be.
+#QUEST	blaze_to_Isenbrandt
+Deliver a letter to a pirate chief.
+#TEXT	1
+The Governor Silehard charged me with delivering a letter to a certain Izenbrandt Jurksen who is a pirate chief. In that letter the governor says that he'll reward anyone who can find and kill Rheims. After completing the mission, I'll have to return to Redmond to get another mission.
+#TEXT	2
+I can't say that Jurksen gave me a very hearty welcome. Nonetheless, I gave him the letter. It's interesting - Jurksen mentioned that the governor has used his services many times. Now I am going to sail back to Redmond and tell the governor that I completed his mission.
+#QUEST	blaze_to_incas_collection
+Return the native art collection to Governor Silehard.
+#TEXT	1
+The governor told me that the pirates under the command of Alistair Garcilaso captured the ship that was delivering a collection of native artifacts to Redmond. The pirate's den is on Douwesen island. I've got a mission to find the collection and deliver it to Redmond. This is a difficult challenge, but I'll be well-paid. First I need to find out exactly where the pirate's den is, and then I'll proceed according to circumstances.
+#TEXT	2
+An old fox of a tavern-keeper introduced me to one strange fellow who says he knows where the pirate's den is. This fellow offered to explain how to get there or to show me the way. I asked him just to explain me how to get there.
+#TEXT	3
+An old fox of a tavern-keeper introduced me to one strange fellow who says he knows where the pirate's den is. This fellow offered to explain how to get there or to show me the way. I asked him to show me the way.
+#TEXT	4
+The pirate who agreed to show me the way to the pirate's den attacked me in the jungle. I quickly dispatched him. Now I doubt it will be very easy to sneak into the den.
+#TEXT	5
+I knew it. As soon as the first sentry caught sight of me, he gave the alarm.
+#TEXT	6
+My unsavory reputation helped me talk my way into the pirate's den without fighting.
+#TEXT	7
+From my conversation with the pirate leader I learned that the statuettes are on the pirate's ship except for one statuette that was bought by some girl. I could try to sneak on to the ship now with my fellows while there is no crew aboard, or I could return to my ship and then board the pirate ship - but then I fear it may be more difficult because the pirates will be aboard making ready to put to sea.
+#TEXT	8
+I sneaked aboard the pirate barque with my officers. There were a few more guards than I thought, but we won the fight. I have the collection now, and I will return to the governor.
+#TEXT	9
+I boarded the pirate barque. Now that I have the collection, I can return to the governor.
+#TEXT	10
+During the engagement, I sank the pirate barque. Fortunately it sank in shallow water, and we should be able to get the cargo from her hold.
+#TEXT	11
+My crew spent all day retrieving the goods from the sunken pirate ship's hold. They managed to recover the whole collection, and now it's time to sail to the governor.
+#TEXT	12
+Hmm. It seems that Silehard was most upset because a single idol from the collection is missing - that one idol bought by some unknown girl. But perhaps I am mistaken...he didn't specifically complain to me about it.
+#TEXT	13
+I just bought the collection from the pirates. Unfortunately, I had to pay a handsome sum of money for it. Now I am going to report back to Silehard.
+#TEXT	14
+Alistar Garsilaso, Douwesen's pirate chief, turned out to be a miserable coward. I just leaned on him a little, and he gave me the collection straight away.
+#TEXT	15
+Since I didn't find the collection the Alistar's house, it's probably still on his ship. Now I just need to find the ship. Most likely I'll find it at some nearby bay.
+#TEXT	16
+Alistar refused to cooperate with me. I just hope that the collection of idols is still on the pirate's ship. I suspect it lies in the bay close to the pirate's den.
+#QUEST	move_prisoner_from_greenford
+Deliver a prisoner to the governor.
+#TEXT	1
+The governor charged me with a mission to bring him the prisoner held in Greenford's prison on Oxbay.
+#TEXT	2
+When I said that I wanted to see the prisoner, the commandant told me he had escaped several hours ago. They are looking for him, but there is no good news so far.
+#TEXT	3
+When I arrived at Redmond, I told the governor that the prisoner had escaped. Silehard wasn't at all pleased to hear that.
+#QUEST	resque_researcher
+#TEXT	1
+When I got out of Greenford's jail, I witnessed a group of cutthroats trying to burn one old man. One woman came to me and asked me to help her save the old man because the soldiers refused to help.
+#TEXT	2
+When I got out of Greenford's jail, I witnessed a group of cutthroats trying to burn one old man. A woman came to me and asked me to help her save the old man because the soldiers refuse to do it. I am not crazy enough to fight a crowd of people in order to rescue some old duffer.
+#TEXT	3
+Such rotten luck! As soon as that tender-hearted woman left me, this worthless scum started bothering me. I asked him to leave me alone, and just wanted to leave, but that worthless cur hit me.
+#TEXT	4
+I forced the noisy crowd to disperse.
+#TEXT	5
+People are so easily manipulated. All I needed was a few coins to persuade the crowd to go to the tavern and drink instead of burning the old man.
+#TEXT	6
+By talking to the soldiers I realized they had no intention of helping the poor old man. In any case, I found a solution. I decided to distribute a few coins, and it worked like a charm - the crowd has dispersed.
+#TEXT	7
+By talking to the soldiers I realized they had no intention of helping the poor old man. But I managed to change their minds by persuading them that such behavior discredits them.
+#TEXT	8
+The old man I saved turned out to be peculiar little fellow. Calls himself a 'researcher'. I suppose he must be one of those 'natural philosophers' - mad as a March hare, no doubt. When he found out I was a captain, he immediately got a notion to perform an experiment on my ship. In order to distract him from such unsound ideas, I agreed to go to his house with him.
+#QUEST	again_find_rheims
+Continue searching for Rheims.
+#TEXT	1
+What a surprise! I've met Danielle with a fellow named Vincent at the researcher's house. It turned out that she is also looking for Rheims, and that Vincent helped her locate him. Danielle doesn't mind if I join her and Vincent in search of Rheims. We decided to meet up at the researcher's house in a couple of days. Now I need to get to Silehard in order to tell him that the captive escaped. I also want to let him know that I finally found traces of Rheims. Danielle also wants to settle her affairs.
+#TEXT	2
+I told the governor that I know where Rheims is hiding. He was happy about that and ordered me to find Rheims and take him to Redmond. Now all I have to do is find that poor fellow with the help of Danielle and Vincent.
+#TEXT	3
+I sailed back to Oxbay where I met Danielle. She told me that Vincent got the information that Rheims is on Douwesen island. We are on our way there now.
+#TEXT	4
+As soon as we arrived at Douwesen, Danielle and I went to the tavern where Vincent was waiting for us. He pointed out Rheims, who was sitting there at the tavern, and then he left. We talked to Rheims, and he invited us to come to his house outside the city.
+#TEXT	5
+As soon as we got outside the city, some cutthroats attacked us. Danielle and Rheims ran to Rheims's house while I stayed to fight with our attackers. I settled our dispute, and now I have to go to the jungle. When I see the first fork on the road, I have to go straight, and when I see the second fork, I should turn to the left.
+#TEXT	6
+What on earth? Rheims and Vincent are dead, and Danielle seems to be hysterical!
+#TEXT	7
+That hurts! That crazy girl stuck her dagger in me when I tried to figure out what was going on. Rheims was mortally wounded, and from their talk with Danielle, it appears that Silehard is the one who ordered Rheims killed. What's more - he ordered Rheims killed because Rheims had discovered some treasures. Vincent was a killer in Silehard's service. Oh, dear! To think I served such a rascal! I have to find Danielle now and convince her that I am not to blame.
+#QUEST	search_danielle
+Find Danielle.
+#TEXT	1
+Rheims mentioned that the legend that helped him find the treasures is at the church's library at Isla Muelle. If I want to find Danielle and find out what's going on, I need to go there.
+#TEXT	2
+The Spanish priest named Padre Domingues refused me access to the library. But if I find some documents for him that were stolen by a person named Ferro Cerezo, he'll let me into the library. Cerezo is in Conceicao now.
+#TEXT	3
+It appears that the stolen papers have information that compromise Padre Domingues.
+#TEXT	4
+I managed to persuade Ferro that I need the papers that incriminate Domingues more than Ferro does. Now I can return to Isla Muelle.
+#TEXT	5
+I managed to buy the priest's papers, and now I can sail back toIsla Muelle.
+#TEXT	6
+Ferro refused to give me the papers, leaving me no other choice - I'll have to take them from him. As I understand it, his ship is lying at the port. I'll just have to capture it.
+#TEXT	7
+I boarded Cerezo's ship without difficulty. Now I can return to Domingues.
+#TEXT	8
+Ferro's ship is no ship at all - it's no more than a cockle-shell. I fired a couple of volleys, and it sank. But the papers have disappeared beneath the waves, and that should satisfy Domingues.
+#TEXT	9
+I went to the library and pretty quickly found the book I need. It was on the table. Unfortunately - someone had torn some pages out of it - and I think that someone was Danielle. All I know is that some clay tablets with some strange characters were found in the Oxbay's mines. I suspect the original details of the legend were written on those tablets. I am sure that Danielle is already on Oxbay. There's not a moment to lose.
+#TEXT	10
+When I got out of the city, I was surrounded by some strange fellows. I don't know what they wanted from me. They attacked me, and I was forced to kill them.
+#TEXT	11
+When I got out of the city I was surrounded by some strange fellows. They knocked me senseless and apparently sold me as a slave. I wonder where my companions are....
+#TEXT	12
+A certain Leborio Drago confirmed that I have been sold as a slave to work in the mines. Fortunately my companions escaped. Now how am I going to get out of here?
+#TEXT	13
+I talked to a soldier and told him I work for Silehard. It made an impression on him, and he called an officer. The officer was a good fellow, and now I am free. Moreover, that officer said that if I want to find those clay tablets, I can talk to Leborio Drago. He was the one appointed to look after the fellow who studied the tablets.
+#TEXT	14
+I talked to a soldier and told him that I work for Silehard. It made an impression on him and he called an officer. The latter told me to give him some money in exchange for my freedom, but I didn't have enough to satisfy him.
+#TEXT	15
+Leborio Drago found out that I am a captain, and he offered to help me escape with him. Of course I agreed. According to our plan, we need to get to the lighthouse where my ship will be waiting for us. Somehow Leborio managed to deliver a letter from me to my crew.
+#TEXT	16
+We are free!!! From my conversation with Leborio, I learned that Danielle visited the mines, and then left for Isla Muelle to find a person who studied the tablets.
+#TEXT	17
+Leborio offered me a deal. I get him out of this foul place, and he tells me everything he knows about the clay tablets. Now I should sail to Isla Muelle and try to find a person who made a copy of the tablets.
+#TEXT	18
+I leaned a little on Leborio and he laid out everything he knows to me. It appears that Danielle has already been here, but she left for Isla Muelle in search of the person who made a copy of the tablets.
+#TEXT	19
+Well, I decided to free Leborio, although it cost me dearly. Leborio doesn't know about it yet, but I plan to tell him. I can imagine how happy he'll be.
+#TEXT	20
+They want 1000 gold for Leborio. I don't think he is worth that much.
+#TEXT	21
+I am in Isla Muelle now. I talked to the tavern-keeper, but I didn't get any useful information from him. Nonetheless, I know Danielle is still somewhere here in the colony.
+#TEXT	22
+As soon as I got out of the tavern, I saw Danielle. I followed her. I lost sight of her for some time, and then I saw her again, lying on the ground with some scum with a dagger in his hand standing over her trying to kill her. Thanks be to God I got there in time!
+#TEXT	23
+I talked to Danielle, and everything is fine now. We joined hands, and together we plan to find the treasures and take revenge on Silehard for his treachery.
+#QUEST	Revenge_for_Silehard
+Get details from the governor.
+#TEXT	1
+Danielle proposed to use a secret bay hidden behind the reefs to get to Redmond. She said she knows how to get there through the big crack in the rocks.
+#TEXT	2
+We decided to sneak into Silehard's house at night.
+#TEXT	3
+The scoundrel Silehard has slipped away. So, unfortunately, we didn't get the information we're looking for. Well, what can we do? We'll have to go back to our ships.
+#TEXT	4
+We decided to separate. Danielle is going to sail to Isla Muelle to find the original of the legend, while I will sail to Greenford and try to get the information from the soldiers about the idol that was supposed to be at the house of the late Rheims' navigator.
+#TEXT	5
+I got to Greenford and talked to the soldier. I learned that some captain has the idol. I can find this captain in prison.
+#TEXT	6
+From the conversation with the tavern-keeper, I learned that some captain has the idol. I can find the captain in prison.
+#TEXT	7
+Silehard is one step ahead of me. The idol is on a ship, and the guard captain has an order to arrest everyone interested in the idol. I need to hurry to the port and try to catch the English ship with the idol on board.
+#TEXT	8
+It was a hot battle! It's no easy feat to take an English frigate protected by a fort! I am most pleased with my victory, and my prize - the idol.
+#QUEST	Where_are_i
+To Isla Muelle.
+#TEXT	1
+A terrible storm blew up as soon as I put to sea. I struggling to save my ship for several hours before I was washed overboard. When I came to my senses, I found myself on Douwesen, but my ship and my crew have disappeared.
+#TEXT	2
+The tavern-keeper in Douwesen said that my ship hasn't made it to port. And now I am in trouble. I don't have any money, I don't have my ship, but somehow I must get to Isla Muelle to meet Danielle. Maybe I should hire aboard some ship. The tavern-keeper mentioned that the pirates who live in the jungle hire some sailors to work on their ships.
+#TEXT	3
+At the pirate's den, I found out that a certain Anacleto Rui Sa Pinto is in the tavern, hiring some sailors for his crew.
+#TEXT	4
+Anacleto said that he serves as his own captain, but he could hire me as a ordinary sailor. However, a little later Anacleto offered to let me fight with one big fellow to prove I was worthy to captain his ship.
+#TEXT	5
+I killed the brute - but the faithless Anacleto broke his word, and now he refuses to take me aboard his ship.
+#TEXT	6
+I was forced to kill the scoundrel Anacleto and capture his ship. Now I can sail to Isla Muelle to meet Danielle, or I can try to find my ship and my crew. If my fellows are alive, they are probably on one of the nearby islands.
+#TEXT	7
+I got lucky. A certain Wilfred Bythesea tells me he is my old friend (well...perhaps I remember him...and perhaps not) and offered to give me his ship in exchange for one service. Needless to say, I agreed! Now I can sail to Isla Muelle in order to meet Danielle, or I can try to find my ship and my crew. If my fellows are alive, they are probably on one of the nearby islands.
+#TEXT	8
+Anacleto agreed to take me to Oxbay but I'll have to pay him for his services when we get there. I hope Danielle is still in Isla Muelle.
+#TEXT	9
+That scoundrel deceived me! When we very close to Oxbay, he informed me that he planned to sell me to work in the mines! It's lucky that I managed to win the crew over to my side, and now the ship is mine.
+#TEXT	10
+That rascal deceived me! When we very close to Oxbay, he informed me that he planned to sell me to work in the mines! I had to jump overboard. Luckily I wasn't far from the shore.
+#TEXT	11
+When I got to Oxbay, I discovered that Danielle wasn't there yet. I suspect she is in trouble, so I am going to find her and help her. I recall that she was going to sail to Isla Muelle.
+#TEXT	12
+When I got to Oxbay, I found out that Danielle wasn't there yet. I suspect she is in trouble, so I am going to find her and help her. I recall that she was going to sail to the Isla Muelle. Since I don't have my own ship, and since the researcher's 'yacht' turned out to be just a ... it's not going to be easy to find her.
+#QUEST	Kill_Ogario
+Kill Sidonio Ogarrio.
+#TEXT	1
+Wilfred Bythesea has given me a mission to kill a person named Sidonio Ogarrio who lives in Isla Muelle.
+#QUEST	Church_help
+Help the church.
+#TEXT	1
+Father Bernard is the head of the church in Redmond. He asked me to find evidence to prove whether the priest named Father Jerald is guilty or not. He lives in the city of Greenford, and people say that he is up to his eyes in sin, and that he forgot about God.
+#TEXT	2
+Simon Hanpool is a tavern-keeper in Greenford. I talked to him, and he had no idea that such rumors were circulating about Father Jerald. According to his words, Father Jerald is a good priest, and he tends to his duties without fail.
+#TEXT	3
+Father Jerald's assistant gave evidence of the priest's guilt. I suspect he just wants to take over Jerald's position. I need to refer him to Father Bernard. Maybe he can make him the head of the Temple. This position is still open.
+#TEXT	4
+Father Jerald claims that he is not guilty. And I find him very convincing. I think that something is wrong here.
+#TEXT	5
+I offered the priest to buy the letters and he agreed straight away. Doesn't it prove that he is guilty?
+#TEXT	6
+I offered the priest to buy the letters and he agreed straight away. I don't know whether he is guilty or not, so I can tell Father Bernard whatever I choose.
+#TEXT	7
+The waitress confirmed that she really got several love-letters from Father Jerald.
+#TEXT	8
+The owner of the tavern is still sure that Father Jerald is not guilty. He claims that the letters were written by another person named Yedam Kinne. He is Dutch, he lives here on this island, and he can forge anyone's handwriting. According to the tavern-keeper, he saw Kinne and the priest's assistant together several days ago.
+#TEXT	9
+Yedam Kinne claims he had nothing to do with those letters.
+#TEXT	10
+Yedam Kinne confessed that he wrote the letters. It means Father Jerald is innocent, and his assistant is the one who's caused all this trouble.
+#TEXT	11
+I had to kill that stubborn Dutchman. Unfortunately, now there's no way of knowing whether he wrote those letters or not. Perhaps the tavern-keeper got some information from the waitress?
+#TEXT	12
+The tavern-keeper told me that the girl who said that Father Jerald allegedly harassed her actually worked for Jerald's assistant. So, Father Jerald didn't write her any letters.
+#TEXT	13
+I returned to Redmond and managed to persuade Father Bernard that Father Jerald is innocent. He thanked me and asked to visit him later for my next task.
+#TEXT	14
+I returned to Redmond and told Father Bernard that Father Jerald is guilty. He thanked me and asked to visit him later for my next task.
+#QUEST	Hitman
+Hard labors of an assassin.
+#TEXT	1
+Ambroz Bricenos hired me to kill Mateus Santos. Santos lives on Isla Muelle, in the house to the right from the shipyard.
+#TEXT	2
+I couldn't succeed with Santos. Nonetheless, he didn't kill me; in fact, he offered me a job. I accepted it, and now my target is Ambroz Bricenos. Bricenos is waiting for me at Conceicao shore, near Smugglers Lair.
+#TEXT	3
+Ambroz Bricenos is dead. I must return to Santos for my reward.
+#TEXT	4
+I've decided not to kill Santos. It's clear that the life of an assassin is not for me.
+#TEXT	5
+Santos didn't let me down - I've been paid for killing Bricenos. And I must say, it's a tidy little sum, so I decided to do some more work for Santos. My next target - merchant Geffrey Bampfylde. He lives in Greenford, to the left of tavern, across the street.
+#TEXT	6
+What an ugly man this merchant was! It was a benefit to society to get rid of him. Now to go to Santos and get my money.
+#TEXT	7
+I've decided not to kill Bampfylde, although his death might make the world a happier place. But I've made up my mind. It's clear that the life of an assassin is not for me.
+#TEXT	8
+Yes! Santos paid me well! This Bampfylde must have made somebody really angry, I think, if they were willing to pay so much gold to get rid of him. I decided to do one more job for Santos. He said that I must kill a smuggler called Bertillon. He's often seen in the port of Quebradas Costillas.
+#TEXT	9
+Perhaps insolence is bred deep in a smuggler's blood, but Bertillon is the most insolent of all smugglers. However, this exceptional distinction did nothing to preserve his life. Santos should be well satisfied.
+#TEXT	10
+I decided not to kill Bertilion. Although he is a most insolent fellow, somehow I admire him for it. Perhaps I grow weary of this assassin's life.
+#TEXT	11
+This profession really suits me. It's easy, and it pays well. My next target, Amerigo Vieira, is the personal enemy of Santos, and the best swordsman in this archipelago. What a fight it will be!
+#TEXT	12
+Vieira was really quite a fighter - it was very hard to kill him. Before he died, he said something interesting. I don't know whether it's true or not, but in any case, I should be careful with Santos.
+#TEXT	13
+I decided not to kill Vieira. He said that he, too, worked for Santos for some time, and now Santos was trying to get rid of him because Santos had grown afraid of his best cutthroat. This has the ring of truth, so after this, I've little desire to meet with Santos again.
+#TEXT	14
+I decided not to kill Vieira. He said that he, too, worked for Santos for some time, and now Santos was trying to get rid of him because Santos had grown afraid of his best cutthroat. This has the ring of truth, so after this, I've little desire to meet with Santos again. Besides that, since Vieira's situation is pretty desperate, I was easily able to persuade him to work for me. Having the best swordsman in the archipelago as one of my officers won't hurt.
+#TEXT	15
+The reward for killing the best fighter in this archipelago was well worth the risk. Now Santos has given me a really important mission - to kill the delivery man that came here from Europe. He's an old Italian man, and I can find him on Conceicao.
+#TEXT	16
+I found this man, Vito Leone. He was trying to persuade me that Santos will try to get rid of me, but I'm not so foolish as to believe it. I'm doing my job well, and he's no reason to betray me. By the way, I mustn't forget to see Santos for my payment.
+#TEXT	17
+Vito Leone, the 'delivery man' whose death Santos so desires, appears to be an important man. I've no wish to involve myself in the affairs of a guild of killers, so I'm retiring from the profession. Let them sort each other out as they wish.
+#TEXT	18
+Vito Leone, the 'delivery man' whose death Santos so desires, appears to be an important man. And Santos turns out to be an impudent impostor who kills anybody that presents a threat to him. And since I'm now just such a man, I've decided to help Leone to help get rid of Santos. All I need to do is go upstairs in the Isla Muelle tavern and cut off Santos's head. Leone assures me that Santos will be there with his bodyguards.
+#TEXT	19
+That's that. Santos is dead, Leone paid me my fee, and my life is no longer in danger. My career as an assassin is at an end...but I'm not really sorry to leave the profession. There's little honor in such mercenary bloodletting.
+#TEXT	20
+I've decided not to kill Santos. It's clear that the life of an assassin is not for me.
+#TEXT	21
+A month has passed since Santos gave me the mission, and I still haven't found the victim. I suppose there will be no more missions for me...but I've no regrets. There's not enough excitement or adventure in such a profession for a restless sea dog like me.
+#QUEST	Lucas
+Find the missing son of the Spanish admiral.
+#TEXT	1
+Admiral Da Saldanha has entrusted me with the task of finding his missing son, Lucas, for a reward of 10000 gold. He told me that he lost Lucas' track on Redmond.
+#TEXT	2
+The innkeeper Charles Windem told me that Lucas has indeed been on Redmond, but that he has recently sailed away somewhere. Windem also told me that Lucas had some relationship with Governor Silehard's daughter, Arabella. Maybe she knows where Lucas has gone. Windem said that she often walks in the jungle near the town.
+#TEXT	3
+Well, I must admit that the boy has got some taste. Arabella told me that Lucas has gone to see his father. I must get back to the admiral - maybe the boy is already there.
+#TEXT	4
+It turns out that some bastards kidnapped Lucas when he was on his way to Redmond, and are holding him for ransom. It's a pity the boy's got himself into such a mess, but this whole business is beginning to smell bad. So I refused to help the admiral to free his son - I prefer to be a few thousand coins poorer, but alive.
+#TEXT	5
+It turns out that some bastards kidnapped Lucas when he was on his way to Redmond, and they are holding him for ransom. I have agreed to help the admiral find his son, and now I must bring the kidnappers 20000 gold in exchange for Lucas. They will be waiting for me at the tavern on Falaise de Fleur.
+#TEXT	6
+The dogs! These bastards killed the boy before I could do a thing! Why did I have to show off?! If I had just given them the ransom, Lucas would be alive.... What am I going to tell the admiral?
+#TEXT	7
+I gave the ransom to the kidnappers, and got Lucas alive and well in return. I must hurry to get him to his father.
+#TEXT	8
+I didn't give the ransom to the kidnappers. Instead, I cut them down like the dogs they were. Now I must get Lucas to his father.
+#TEXT	9
+Lucas' father has generously thanked me for saving his son - 10000 coin are now jingling in my pockets.
+#TEXT	10
+Lucas' father has generously thanked me for saving his son - a half of the ransom that I didn't give away is now mine. And this is no small sum - 20000 gold! Good deeds can, on occasion, be quite profitable.
+#TEXT	11
+I have informed the governor of his son's death, and have returned the ransom. He was so cast down with grief I couldn't stand to look at him.
+#TEXT	12
+The admiral was greatly upset by his son's death, of course, but I received my reward from him nonetheless, although I had to return the ransom. Oh, well. Ten thousand gold is not a petty sum.
+#TEXT	13
+The poor old man was simply crushed by the sad news of his son's death. So crushed, in fact, that he didn't doubt my lies about giving the ransom to the kidnappers. This business has turned out to be quite profitable, and almost without any effort. I only had to slit a couple throats. If only I could always be so lucky.
+#TEXT	14
+I couldn't deliver the ransom on time, and the kidnappers killed Lucas. I think I had better not show my face around the Spanish island anytime soon. They won't ask questions...they'll just hang me.
+#QUEST	larrouse
+The French pirate in the tavern.
+#TEXT	1
+In Isla Muelle tavern I met a corsair who refused to talk to me. Maybe I can talk to him later?
+#TEXT	2
+He offered me a prospect I can scarcely refuse - a couple pounds of gold. But Clair didn't give me all the details.
+#TEXT	3
+We are in the mine, but the convoy has already gone. What a disappointment. We will try to intercept it between Greenford and Oxbay.
+#TEXT	4
+We are in the mine, but the convoy has already gone. What a disappointment. I have no further interest in this adventure.
+#TEXT	5
+The traitorous dog! This French scoundrel attacked me when he realized that I'm not going to chase the convoy with him any more.
+#TEXT	6
+When I killed Larousse, all my problems were solved - I've got his ship. On the other hand I had to kill his old crew. But that's their misfortune, not mine.
+#TEXT	7
+Perhaps it's not such a bad idea to chase this convoy. We've got a chance to pull it off.
+#TEXT	8
+We did it! We found the convoy. All that remains is to seize the gold....
+#TEXT	9
+So much misfortune! While we were making ready for battle, the convoy came too close to the town's gates. Now we are opposed by the town garrison, and have no chance of accomplishing our scheme. What a pity!
+#TEXT	10
+We've got the gold! All we need now is to deliver the gold to our ships. The simplest plan is to sail one ship to the bay, while the rest of us get ready to load the gold.
+#TEXT	11
+When we reached the bay we encountered stiff opposition - English soldiers. It was a hard fight, we lost almost all our men, but we won the battle, and were free to sail away with our ship loaded with gold.
+#TEXT	12
+Larouse and I couldn't divide this gold, so I had to kill him.
+#TEXT	13
+So, our little adventure is over. We shared our booty, and Clair offered to sail with me from that moment forward. But I have no great liking for him, and so I declined his offer. If I change my mind, I will find him in the Isla Muelle tavern.
+#TEXT	14
+So, our little adventure is over. We shared our booty, and when Clair offered to sail with me from that moment forward, I accepted his offer.
+#QUEST	mendes
+Escort Vigila Mendes' ship.
+#TEXT	1
+Vigila Mendes has hired me to protect his ship on the voyage to Falaise de Fleur and back to Isla Muelle.
+#TEXT	2
+We came to Falaise de Fleur, and Vigila sold his cargo.
+#TEXT	3
+On our return to Isla Muelle, Vigila gave me my pay. He encouraged me to sail on his ship as a navigator, because his old navigator, Zaid Murro, had retired.
+#TEXT	4
+Most unfortunate! Vigila Mendes was killed. Not a good day.
+#QUEST	murro
+Zaid Murro's problems.
+#TEXT	1
+The former navigator of the 'Juno', Vigila Mendes' ship, now lives as a farmer. He said that some people in the jungle steal his goods. Maybe I can help Zaid.
+#TEXT	2
+In the jungle, after leaving town, I met the bandits Zaid told me about, and they tried to kill me.
+#TEXT	3
+Those bandits were not alone. Deeper in jungle, I met the other members of the outlaw band!
+#TEXT	4
+Now Zaid should have no further problems with these bandits.
+#QUEST	daughter
+Saving Toff's daughter.
+#TEXT	1
+Toff Oremans told me that his girl was kidnapped by some Spaniard in Holland's service. I think I should deal with that problem and help this girl return home.
+#TEXT	2
+The governor directed me to investigate this case, and if my investigation is successful, he will pay me money.
+#TEXT	3
+This Spaniard was unforgivably rude with me. So I killed him and his officer. The girl is saved.
+#TEXT	4
+This Spaniard was unforgivably rude with me. But when his men realized that I was here by the order of the governor, they slew their captain and left.
+#TEXT	5
+Governor paid me a reward - nothing of consequence, of course.
+#TEXT	6
+I've got Nicolas Sharp's saber! Toff Oremans, father of the girl that I saved, gave it to me, and something about this weapon makes me think that it really belonged to the legendary pirate.
+#QUEST	gambled_girl
+A girl won in a card game.
+#TEXT	1
+In one tavern I met a man who proposed to play cards with me. I was astonished when I discovered he planned to wager a girl.
+#TEXT	2
+I won, so the girl is mine.
+#TEXT	3
+The offer of this fellow was offensive. So I killed him.
+#TEXT	4
+This girl is really beautiful. She says she is a noblewoman. Judging by her name, she's French, and I can believe her story, but it won't stop me if I decide to sell her.
+#TEXT	5
+I've met some stupid fellow who offered me money for the girl, but the offer was too small. Perhaps the French governor will offer more.
+#TEXT	6
+The girl told me that she is descended from a very noble family in France, and that she came here to find her lover, a sailor on Falaise de Fleur. It was all going well until the pirates appeared.
+#TEXT	7
+I have decided that is it only right that I should help Virginie find her loved one.
+#TEXT	8
+It is a romantic story, but I think that now, once freed, Virginia can deal with her fate well enough without my help.
+#TEXT	9
+What an irony! We came to Falaise de Fleur and found the fellow that Virginie was searching for, but he turned out to be a real scoundrel. He spoke to her disrespectfully, then left her broken-hearted.
+#TEXT	10
+Virginie said that she is going to sail for home, but she wants to do me a favor in return, and take me to the French governor.
+#TEXT	11
+I don't think this is such a good idea because we are enemies with the French, but Virginie assured me she will protect me.
+#TEXT	12
+A noblewoman's word is a fine guarantee, but I don't trust the French authorities, and I declined Virginie's favor.
+#TEXT	13
+She was right. Of course, the governor wasn't at all glad to see me, but he gave me a reward, and more than that, he pardoned me for my crimes to the French government.
+#TEXT	14
+The French generously rewarded me for returning Virginie.
+#TEXT	15
+It was quite a risky affair, but now it's over. The governor gave me 7000 gold for the girl.
+#TEXT	16
+At the tavern, some strange fellow came to me and bought the girl.
+#QUEST	animists
+Strange things going on in the archipelago.
+#TEXT	1
+When I was on Douwesen, I found out that several children had been kidnapped last night. The women whose children were kidnapped tried to see the governor to ask him for help, but he wouldn't receive any visitors. Maybe I can speak to him.
+#TEXT	2
+The governor of Douwesen asked me to investigate and find the ones who've kidnapped the children. I refused. I don't want to get involved in this strange affair.
+#TEXT	3
+The Governor of Douwesen asked me to investigate the affair of the kidnapped children and promised to pay me well if I succeed. The only thing I know is that a captain of a merchant ship saw a mysterious frigate in the morning, sailing away from the island's bay. The captain is in the tavern now, and I plan to begin my investigation by talking with him.
+#TEXT	4
+I talked to the captain of the merchant ship and found out that a black frigate left Douwesen and headed for Greenford. Perhaps it was the pirates living in the jungle who kidnapped the children.
+#TEXT	5
+I found out from the Douwesen pirates that they themselves suffered from that black frigate that sank one of their ships. Now I have no doubt that the children are on that black frigate. The pirates heard children crying, and the crying was coming from the frigate.
+#TEXT	6
+I was lucky to talk to the navigator of the ship attacked by the black frigate. He said that the name of the frigate is 'Mefisto', and it was headed for Quebradas Costillas after it couldn't catch his ship.
+#TEXT	7
+Alas, I am out of luck, all I managed to find out in the pirate's den is that the black frigate really was here, and that the members of the frigate's crew even killed someone on the seashore.
+#TEXT	8
+Father Bernard hired me to deliver a letter to Padre Domingues. At first sight, the mission seemed quite simple. However, one messenger has already been killed in the city by some people in red cassocks. I suspect that the fellows from that mysterious black frigate have something to do with it.
+#TEXT	9
+I came to Isla Muelle's shore, just as Father Bernard told me to. I was surprised to find some fellows waiting for me there.
+#TEXT	10
+Some strange people proposed that I give them the letter to read in return for 1000 gold, saying that they will return the letter after reading it. I refused, so they drew their weapons.... Afterwards, on their dead bodies I found some strange medallions.
+#TEXT	11
+Some strange people proposed that I give them the letter to read in return for 1000 gold, saying that they will return the letter after reading it. They returned the letter with the seal still on it, but it seems to me that it doesn't look like the original seal.
+#TEXT	12
+Padre Domingues suspected that the letter was opened and then closed with another seal. I told him the truth. Thanks be to God it all ended well.
+#TEXT	13
+Padre Domingues suspected that the letter was opened and then closed with another seal. But I insisted I was innocent. Then he said some things about God's redemption, or something like that. It doesn't matter. I don't like the fathers, anyway.
+#TEXT	14
+After I gave the letter to Padre Domingues, I got another mission. I'm to meet the barque 'Montanez' near Oxbay and guide it to Isla Muelle.
+#TEXT	15
+Oh, dear. When I arrived at Oxbay, the 'Montanez' was already sunk by some ships without any identification. I'll have to return to Padre Domingues empty-handed.
+#TEXT	16
+I arrived just in time! When I reached Oxbay, the 'Montanez' was close to sinking, under attack by three ships without any identification. I've dealt with them.
+#TEXT	17
+Surprisingly, 'Montanez' stopped briefly at Oxbay. From speaking with her captain, I learned that he had to deliver some passenger here. Now I think it's time to sail to Isla Muelle.
+#TEXT	18
+As I suspected, the padre is none too happy with the loss of this barque. Nonetheless, he didn't blame me.
+#TEXT	19
+'Montanez' is anchored near Isla Muelle. Padre Dominguess seems to be very glad. It looks like something quite valuable is on this barque.
+#TEXT	20
+My next mission is to deliver a letter to Father Bernard on Redmond, and to watch out, because nobody should read this letter.
+#TEXT	21
+They waited me near the exit from the church. They looked just like those strange people on Isla Muelle's shore. They didn't really believe that I would give them the letter, and so they drew their weapons.
+#TEXT	22
+The letter is delivered now, and I received the reward I deserved. And now I know who is trying to stop me. Father Gareth. Who could predict that? But now he has attacked me, in the church.
+#TEXT	23
+My new mission is to find the animists' lair. The Church will give me a great reward, but more importantly, these animists have kidnapped children from Douwesen, and I suspect they also are responsible for Padre Domingues' disappearance just after I left Isla Muelle. I think I will start my investigation on Isla Muelle. Maybe somebody there knows something about Padre Domingues' disappearance.
+#TEXT	24
+Now I know the identity of the passenger of the 'Montanez'. It is a Maltese knight, Jaoquin de Masse, who arrived here to help us to defeat a animists band. He looks like an experienced warrior.
+#TEXT	25
+After speaking with the innkeeper, I learned that a 'teacher' who looks like an animist has arrived here. This 'teacher' has great influence upon the local youth, and, in particular, upon one Jordano, the son of local blacksmith. And by a strange coincidence, the father of Jordano has died in very strange circumstances. I should have a talk with this Jordano.
+#TEXT	26
+I've found Jordano without any trouble. I should say that he found me. In any case, I know that this 'teacher' has left Isla Muelle for Greenford, on Oxbay island.
+#TEXT	27
+I know that the man I am searching for is in Greenford's prison.
+#TEXT	28
+The commandant of Greenford prison wouldn't let me see the prisoner. It appears I have no choice but to sail for Redmond to ask Father Bernard to give me a letter, granting me access to the prisoner.
+#TEXT	29
+A return to Redmond will take too long. I tried another plan. I intimidated the weak-willed fellow into giving me access to the prisoner. But I suspect this incident will cause my relationship with England to suffer.
+#TEXT	30
+I found another way to get to the prisoner. It was simple - I just paid 5000 gold, and all obstacles disappeared.
+#TEXT	31
+At my insistence, the captain let me in.
+#TEXT	32
+The only way to find the animists' lair was to set the prisoner free, and I did it. Now we've got to go to Isla Muelle and solve the mystery. I hope it won't take too long....
+#TEXT	33
+Father Bernard gave me a letter setting the Greenford prisoner free, although he seemed amused by my request.
+#TEXT	34
+I decided to question the prisoner in the cell, but he died. Before he died, he said something about the Isla Muelle. Maybe the animists' lair is somewhere nearby? Perhaps on the little island to the north?
+#TEXT	35
+The 'teacher' believed that I was a animist, and told me where to find the lair. His death was quick. And all that remains is to travel to the little island near Isla Muelle and kill all the animists.
+#TEXT	36
+All the animists are dead, including their master. He was no easy opponent. But now I've got to get the children back to Douwesen and tell Father Bernard that our mission has been accomplished.
+#TEXT	37
+With the destruction of the animists band, my problems are solved. 'Mefisto', the frigate with black sails, was waiting for me in the bay.
+#QUEST	artois
+Artois Voysey.
+#TEXT	1
+In Quebradas Costillas I saw two men fighting on the street. When I asked one of them what was going on, he attacked me. I think he was mad.
+#TEXT	2
+The man I've saved is Artois Voysey, and, judging by his word, a good navigator. I made him a member of my crew.
+#TEXT	3
+The man that I've saved is Artois Voysey, and, judging by his word, a good navigator. After I declined to add him to my crew, he said he will wait for me on Quebras Costillas if I should change my mind.
+#TEXT	4
+I think I saw Artois in Conceicao port. It looks like he was going to Conceicao town. Interesting. What is he up to?
+#TEXT	5
+I learned that Artois was here in the tavern. He spoke with some Spanish fellow. Then three other people entered the tavern and confronted Artois and the wounded fellow Artois was speaking with. The wounded fellow is in the tavern upstairs now, so perhaps he knows where Artois has gone.
+#TEXT	6
+Oh, dear. The first thing I saw when I came upstairs was the knife in the fellow's chest. I came too late...he was already dead.
+#TEXT	7
+Considering how lucky I am, it is not surprising that when I came upstairs, soldiers came upon me, and accused me with the murder of this poor man. I was forced to kill them, because I have to find Artois. I don't think it will be easy for me to get out of town now. Maybe it would be better to make my way to the port? I'm not sure that Artois is somewhere here, but I doubt that he will live long.
+#TEXT	8
+I decided to go with the soldiers. I hope that my innocence will be quickly proven.
+#TEXT	9
+That's taken care of, thank heavens. They found witnesses that saw the murderer. I've been set free, and now I can leave the island, or try to find Artois. I suspect he is here somewhere.
+#TEXT	10
+In the jungle near the town I saw strange people standing over Voysey's dead body.
+#TEXT	11
+After I killed all the bandits, I've found that Artois was not dead. I asked him why he was kidnapped. And he told me about a ship whose cargo holds are filled with silver! The ship sank near Douwesen, so you can't reach it by sea, but there is a path through the waterfall. There's a promise of rich treasure in this affair.
+#TEXT	12
+Artois didn't tell me what the bandits were searching for. I think I can guess - they were looking for a secret.
+#TEXT	13
+My strained relations with the Portuguese authorities caused me a big headache, but somehow Artios took care of that through his connections - the Portuguese seem to have miraculously forgotten about my past misdeeds.
+#TEXT	14
+Good heavens! In the next port, someone shot Artois. The attacker managed to escape, so there's nothing left for me to do but go to see my wounded friend.
+#TEXT	15
+Spend 2000 gold to heal Artois, then wait two weeks while he recovers? No way, it's none of my business. Let him deal with this himself.
+#TEXT	16
+I must spend 2000 gold to heal Artois,and then wait two weeks while he recovers. But at least I saved my man.
+#TEXT	17
+After Artois recovered, he told me his story. He knows where to find a wrecked ship whose cargo holds are filled with silver. The ship sank near Douwesen, and you can't reach it by sea, but there is a path through the waterfall to the shore where it crashed. In return for telling me this story, Artois asked me to donate some gold to the Church. Well, I think that even after this donation, there should be plenty of treasure for me.
+#TEXT	18
+Artois was telling the truth. I believe I can get about 50000 for this silver.
+#TEXT	19
+I've kept my word, and have donated 4000 gold to Redmond's church.
+#TEXT	20
+I'm not such a fool as to throw gold away on the Church. Artois is not happy, but who cares?
+#QUEST	trade_fra
+Deliver cargo to Falaise de Fleur.
+#TEXT	1
+I've got to deliver some cargo to Falaise de Fleur within a month, to the store owner Arnaud Matton.
+#QUEST	trade_red
+Deliver cargo to Redmond.
+#TEXT	1
+I've got to deliver some cargo to Redmond within a month, to the store owner Thomas O'Reily.
+#QUEST	trade_ox
+Deliver cargo to Oxbay.
+#TEXT	1
+I've got to deliver some cargo to Oxbay within a month, to the store owner Alan Milds.
+#QUEST	trade_green
+Deliver cargo to Greenford on Oxbay.
+#TEXT	1
+I've got to deliver some cargo to the island of Oxbay, the town of Greenford, within a month, to the store owner John Filbert.
+#QUEST	trade_spa
+Deliver cargo to Isla Muelle.
+#TEXT	1
+I've got to deliver some cargo to Isla Muelle within a month, to the store owner Emiliano Rionda.
+#QUEST	trade_hol
+Deliver cargo to Douwesen.
+#TEXT	1
+I've got to deliver some cargo to Douwesen within a month, to the store owner Gheerlof Darlang.
+#QUEST	trade_por
+Deliver cargo to Conceicao.
+#TEXT	1
+I've got to deliver some cargo to Conceicao within a month, to the store owner Martinho Guterres.
+#QUEST	convoy_fra
+Escort a merchant to Falaise de Fleur.
+#TEXT	1
+I'm to escort a merchant ship to Falaise de Fleur.
+#QUEST	convoy_red
+Escort a merchant to Redmond.
+#TEXT	1
+I'm to escort a merchant ship to Redmond.
+#QUEST	convoy_ox
+Escort a merchant to Oxbay.
+#TEXT	1
+I'm to escort a merchant ship to Oxbay.
+#QUEST	convoy_spa
+Escort a merchant to Isla Muelle.
+#TEXT	1
+I'm to escort a merchant ship to Isla Muelle.
+#QUEST	convoy_hol
+Escort a merchant to Douwesen.
+#TEXT	1
+I'm to escort a merchant ship to Douwesen.
+#QUEST	convoy_por
+Escort the merchant to Conceicao.
+#QUEST	convoy_smg
+Escort a merchant to a secluded bay on Conceicao.
+#TEXT	1
+I'm to escort a merchant to Leviathan Rock, a secluded bay on Conceicao.
+#TEXT	1
+I'm to escort a merchant ship to Conceicao.
+#QUEST	nigel
+Nigel Blythe.
+#TEXT	1
+In Quebradas Costillas I saw two men fighting in the street. It's my principle not to interfere in such matters, but it's a funny thing. After one fellow was killed, the other told me a strange story about how he lost his ship.
+#TEXT	2
+I think that such a strong swordsman will complement my crew well. I made him my officer.
+#TEXT	3
+This fellow offered his services as an officer, but I have my reservations about him, so I told him I have a full crew.
+#TEXT	4
+When I arrived on Oxbay, I found that Nigel had left my ship. Maybe he is in town.
+#TEXT	5
+The fellow's tricks made me get rid of him.
+#TEXT	6
+The fellow didn't waste any time. He sought out a contract to deliver a cargo of chocolate. Unfortunately, the contract was not to my liking, so I had to turn it down.
+#TEXT	7
+The fellow didn't waste any time. He sought out a contract to deliver a cargo of chocolate. Now I'm to deliver this chocolate to Isla Muelle, to Emiliano Rionda's store.
+#TEXT	8
+I forgot all about the chocolate cargo. Now even if I reach Emiliano, I suspect the delivery will be too late.
+#TEXT	9
+I delivered Emiliano Rionda's cargo. It was not very profitable.
+#TEXT	10
+When I came to Conceicao, I found Nigel had already gone. I suspect he is off hatching some scheme again.
+#TEXT	11
+I knew it! The rascal has accepted 10000 gold to kill Mean Harry within a month. It's quite a risky proposition...but I think I can do it.
+#TEXT	12
+I knew it! The rascal has accepted 10000 gold to kill Mean Harry within a month. But when I found out that Garry has at least a corvette or even a frigate, I refused the agreement.
+#TEXT	13
+A month has gone, and I still can't find Harry. But I'm not going to lose any sleep over it. And I've no plans to return any of the gold.
+#TEXT	14
+Mean Harry was not so hard to deal with. Now I've got to go look for a reward. They say that the island's governor will give it to me.
+#TEXT	15
+It's an outrage! Why should I pay taxes? Devils and dogs! Unfortunately the governor has a strong argument on his side - his fleet. But taxes...4000 gold? Argh!
+#TEXT	16
+As soon as I made Nigel captain of my of my ships, he attacked a ship near Douwesen! And it was a smuggler's ship to boot! Damn!
+#TEXT	17
+A smuggler ship sank Nigel. No wonder. But never mind Nigel... it's the loss of my ship that troubles me.
+#TEXT	18
+I helped Nigel defeat a smuggler. I should ask Nigel what's going on...
+#TEXT	19
+The smuggler's friends were waiting for us. I didn't listen to a word they said... I just killed them.
+#TEXT	20
+The smuggler's friends were waiting for us. They killed Nigel, and I escaped while they were busy kicking his corpse. Can't blame them - he was a real bastard.
+#TEXT	21
+That rascal Nigel! He stole my ship! Devils! Late at night he sailed away. Perhaps he is on Isla Muelle... that island was nearby.
+#TEXT	22
+The scoundrel is on Isla Muelle! They saw him in the tavern!
+#TEXT	23
+The tavern owner said that Nigel was here, and he talked with a fellow called Caminero who lives in a house at the back of the tavern.
+#TEXT	24
+Caminero said that Nigel is going to join his old crew on Quebradas Costillas. Interesting...what this fellow up to?
+#TEXT	25
+I've met a sailor from Nigel's ship in Quebradas Costillas tavern. He told me that the rascal left the island, but he doesn't know where he is going. Maybe Clauss, Nigel's boatswain, knows. He is now in Quebradas Costillas store, working off his debts.
+#TEXT	26
+The best way to solve this problem is with a little gold. I just paid Clauss - Nigel's boatswain - for a private talk.
+#TEXT	27
+Clauss said Nigel left the island to join his old crew in Douwesen. The way to his sunken ship full of silver is under a waterfall on Douwesen.
+#TEXT	28
+I arrived just in time. Nigel was astonished to see me. I killed him and took all the silver from the ship.
+#QUEST	chest
+Deliver a closed chest.
+#TEXT	1
+Oweyn MacDorey, the owner of Oxbay shipyard, asked me to deliver a closed chest to Redmond. I have no reservations about doing this favor for a man who just saved Tobias and me from arrest.
+#TEXT	2
+When I walked into the tavern, some strangers approached me and demanded Oweyn's chest.
+#TEXT	3
+I gave the chest to the strangers. They informed me that Oweyn must have set me up, if it was Oweyn who asked me to deliver this particular chest to Redmond. I've got to ask Oweyn what they could possibly be talking about.
+#TEXT	4
+I tried to get rid of the strangers, and they drew their weapons. But devils, I couldn't even scratch them!
+#TEXT	5
+Oweyn is not the fool he seemed to be. He already knows this legend about skeleton pirates and cursed coins. He wanted me to deliver these cursed coins to his enemy in Redmond. Not a bad joke...but the pirates spoiled it. Apparently the fellow who knows all about this business lives on Falaise de Fleur.
+#TEXT	6
+Henry Peat told me a lot about the cursed ship called 'Black Pearl'. Now I just have to find out some more details about that ship and a way to destroy it.
+#QUEST	Tutorial_SpyGlass
+Buy a new spyglass
+#TEXT	1
+My spyglass has seen better days as well. Perhaps there is a replacement available.
+#TEXT	2
+Done!
+#QUEST	Tutorial_Store
+Sell chocolate and leather to the local trader
+#TEXT	1
+I should find a storekeeper and sell goods that I brought to Oxbay. That will bring me money for repairs and to hire crew.
+#TEXT	2
+Done!
+#QUEST	Tutorial_Shipyard
+Repair the damage caused to my ship by a storm
+#TEXT	1
+The hull and rigging are damaged, so I must repair them at the shipyard before leaving the island.
+#TEXT	2
+Done!
+#QUEST	Tutorial_Tavern
+Hire some crew at the tavern
+#TEXT	1
+Unfortunately, a few hands were lost at sea. I should find a tavern to hire some crew before setting sail.
+#TEXT	2
+Done!
+#QUEST	Tutorial_AppearedOnOxbay
+Arrival at Oxbay
+#TEXT	1
+After surviving a fearsome storm, I've finally arrived at Oxbay. Thankfully the ship's cargo is intact.
+
+
+
+

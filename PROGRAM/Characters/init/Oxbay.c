@@ -3093,7 +3093,7 @@ void CreateOxbayCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-    	ch.questchar = true;
+   	ch.questchar = true;
 	AddGameCharacter(n, ch);
 // <-- ditto
 }

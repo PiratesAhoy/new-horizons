@@ -754,12 +754,12 @@ void CreateStreetMerchantsCharacters(ref n)
 	//==============================| Oranjestad Town |=============================//
 	//================================| Oxbay Town |================================//
 
-	ch.old.name = "Street";
-	ch.old.lastname = "Merchant";
-	ch.name = TranslateString("Street","Merchant");
-	ch.lastname = "";
+	ch.old.name = "Dawg";
+	ch.old.lastname = "Brown";
+	ch.name = TranslateString("","Dawg");
+	ch.lastname = TranslateString("","Brown");
 	ch.id		= "Oxbay_Street_merchant_1";
-	ch.model	= "fisherman1"; // Estharos Change from Fatman2_1 to this model
+	ch.model	= "Fatman2_1"; // PB: CutThroat Island Easter Egg
 	ch.sound_type = "merchant";
 	ch.sex = "man";
 	ch.location = "Oxbay_port";

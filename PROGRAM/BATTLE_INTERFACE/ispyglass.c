@@ -841,6 +841,15 @@ void setTelescopeInitParameters(ref rTelescope, aref arItmScope)
 	if (CheckAttribute(arItmScope, "scope.zoom")) fZoom = stf(arItmScope.scope.zoom);
 	if (CheckAttribute(arItmScope, "scope.time_activate")) activateTime = sti(arItmScope.scope.time_activate);
 	if (CheckAttribute(arItmScope, "scope.time_update")) updateTime = sti(arItmScope.scope.time_update);
+	
+	// ChezJfrey & PB: Automatic Switch -->
+	string widescreen = "";
+	float screen_x = stf(showWindow.width);
+	float screen_y = stf(showWindow.height);
+	float screen_ratio = screen_x/screen_y;
+	if(screen_ratio > 1.4){ widescreen = "\\battle_interface\\widescreen\\";}
+	texName = widescreen + texName;
+	// ChezJfrey & PB: Automatic Switch <--
 
 	SendMessage(rTelescope, "lsflll", MSG_TELESCOPE_SET_TYPE, texName, fZoom, nShowItm, activateTime, updateTime);
 }

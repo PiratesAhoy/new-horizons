@@ -1,4 +1,4 @@
-//#include "DIALOGS\Stephan Bonser_dialog.h"
+//#include "DIALOGS\Bart_Cooke_dialog.h"
 void ProcessDialogEvent()
 {
 	ref NPChar, PChar, d;
@@ -81,7 +81,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[15];
 			link.l1 = DLG_TEXT[16];
 			link.l1.go = "exit";
-			AddDialogExitQuest("stephan_bonser_attack");
+			AddDialogExitQuest("bill_jellybones_attack");
 			characters[GetCharacterIndex("Thomas O'Reily")].quest.contraband = "after_fight";
 		break;
 		

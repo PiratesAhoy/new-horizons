@@ -1,0 +1,9 @@
+Documentation/
+MODULES/
+SAVE/
+
+/options
+
+*.log
+*.exe
+*.xls
