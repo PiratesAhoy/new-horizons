@@ -143,13 +143,13 @@ bool LoadLocation(ref loc)
 		if (!CheckAttribute(loc,"models.back")) {
 			//Sea
 			if (loc.environment.sea == "true") {
-				CreateSea("execute","realize");//CreateEntity(&locSea, "sea");
+				CreateSea(EXECUTE,REALIZE);//CreateEntity(&locSea, "sea");
 			} else {
 				if (!ownDeckStarted()) DeleteSeaEnvironment();
 			}
 			//Weather
 			if (loc.environment.weather == "true") {
-				CreateWeather("execute","realize");//CreateEntity(&locWeather, "weather");
+				CreateWeather(EXECUTE,REALIZE);//CreateEntity(&locWeather, "weather");
 			} else {
 				if (!ownDeckStarted()) {
 					DeleteWeatherEnvironment();
@@ -171,9 +171,9 @@ bool LoadLocation(ref loc)
 		if (!CheckAttribute(loc, "models.back")) {
 			if(isTown || isFort) {
 				//Sea
-				if(loc.environment.sea == "true") CreateSea("execute","realize");//CreateEntity(&locSea, "sea");
+				if(loc.environment.sea == "true") CreateSea(EXECUTE,REALIZE);//CreateEntity(&locSea, "sea");
 				//Weather
-				if(loc.environment.weather == "true") CreateWeather("execute","realize");//CreateEntity(&locWeather, "weather");
+				if(loc.environment.weather == "true") CreateWeather(EXECUTE,REALIZE);//CreateEntity(&locWeather, "weather");
 			}
 			if (isTown) CreateShipEnvironment();
 		}
@@ -187,8 +187,8 @@ bool LoadLocation(ref loc)
 // JRH -->
 	if (CheckAttribute(loc, "type") && loc.type == "Rogers_mine")
 	{
-		if(loc.environment.sea == "true") CreateSea("execute","realize");	//must be before weather!!
-		if(loc.environment.weather == "true") CreateWeather("execute","realize");
+		if(loc.environment.sea == "true") CreateSea(EXECUTE,REALIZE);	//must be before weather!!
+		if(loc.environment.weather == "true") CreateWeather(EXECUTE,REALIZE);
 	}
 
 	if (CheckAttribute(loc, "id.label") && loc.id.label == "Captain's cabin")
@@ -855,7 +855,7 @@ bool LocLoadModel(aref loc, string sat, string addition)
 			if (!isEntity(&Island))
 			{
 				CreateEntity(&Island, "Island");
-				LayerAddObject("realize", &Island, 65529);
+				LayerAddObject(REALIZE, &Island, 65529);
 			}
 
 			SendMessage(&Island, "liss", MSG_LOCATION_ADD_MODEL, &mdl, loc.id, loc.filespath.models); // KK
@@ -1277,8 +1277,8 @@ void LocationTimeUpdateFunc()
 			if(oldhour != GetHour())
 			{
 				/*Dealing with weather is too complex for locations because of nightmodel etc.
-				sNewExecuteLayer = "execute";
-				sNewRealizeLayer = "realize";
+				sNewExecuteLayer = EXECUTE;
+				sNewRealizeLayer = REALIZE;
 				Whr_UpdateWeather(false);*/
 			}
 		}

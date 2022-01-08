@@ -226,9 +226,9 @@ void SetShipFlag(int chridx)
 	ShipFlagsQuantity = -1;
 	int iNation = sti(chr.nation);
 	int j;
-	if (FindClass(&arModel, "modelr")) {
+	if (FindEntity(&arModel, "modelr")) {
 		i++;
-		while (FindClassNext(&arModel))
+		while (FindEntityNext(&arModel))
 		{
 			if (i >= model_no && i < next_model_no) {
 				SendMessage(&Flag, "li", MSG_FLAG_DEL_GROUP, &arModel);

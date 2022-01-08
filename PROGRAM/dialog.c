@@ -180,9 +180,7 @@ void StartDialogMain()
 	CharacterRef.lastname = lastname;
 	// PB: Restore Name <--
 
-	LayerCreate("realize",1);
-	LayerSetRealize("realize",1);
-	LayerAddObject("realize",Dialog,-256);
+	LayerAddObject(REALIZE, Dialog,-256);
 	Set_inDialog_Attributes();
 //	ProcessDialogText(); // a simple virtual sailor
 
@@ -285,17 +283,12 @@ void SelfDialog(ref Character)
 	// PB: Restore Name <--
 
 //changed by MAXIMUS: for new "Sail Ho" and DirectSail-Mod -->
-	if(!bSeaActive)
-	{
-		LayerCreate("realize",1);
-		LayerSetRealize("realize",1);
-	}
 	if(bSeaActive && !IsEntity(&worldMap)) {
 		LogsVisible(false); // KK
 		LayerAddObject(SEA_EXECUTE, Dialog, -256);
 		LayerAddObject(SEA_REALIZE, Dialog, -256);
 	} else {
-		LayerAddObject("realize",Dialog,-256);
+		LayerAddObject(REALIZE, Dialog,-256);
 	}
 //changed by MAXIMUS: for new "Sail Ho" and DirectSail-Mod <--
 	Set_inDialog_Attributes();

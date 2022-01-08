@@ -159,14 +159,14 @@ void DoQuickSave()
 	string restrictSave = "save_now";
 
 	aref arTmp;
-	if(FindClass(&arTmp,"fader")) bEnableSave = false;
+	if(FindEntity(&arTmp,"fader")) bEnableSave = false;
 
 	if(dialogRun || dialogSelf) bEnableSave = false;
 	if(!CheckAttribute(&InterfaceStates, "Buttons.Save.enable") || InterfaceStates.Buttons.Save.enable!= 1) bEnableSave = false;
 	if(InterfaceStates.Launched!=0) bEnableSave = false;
 
 	aref arScrShoter;
-	if(FindClass(&arScrShoter,"scrshoter")) bEnableSave = false;
+	if(FindEntity(&arScrShoter,"scrshoter")) bEnableSave = false;
 
 	if(bSeaActive && !bMapEnter) { bEnableSave = false; restrictSave = "save_while sailing"; }
 	if(LAi_IsBoardingProcess()) { bEnableSave = false; restrictSave = "save_while boarding"; }
@@ -233,7 +233,7 @@ void ClearScreenShoter()
 {
 	DeleteEntitiesByType("scrshoter");
 	aref arScrShoter;
-	if(FindClass(&arScrShoter,"scrshoter")) DeleteClass(&arScrShoter));
+	if(FindEntity(&arScrShoter,"scrshoter")) DeleteClass(&arScrShoter));
 	if(CheckAttribute(&InterfaceStates,"MakeScreenShot")) DeleteAttribute(&InterfaceStates,"MakeScreenShot");
 }
 
@@ -324,14 +324,14 @@ void DoAutoSave()
 	string restrictSave = "save_now";
 
 	/*aref arTmp;
-	if(FindClass(&arTmp,"fader")) bEnableSave = false;
+	if(FindEntity(&arTmp,"fader")) bEnableSave = false;
 
 	if(dialogRun || dialogSelf) bEnableSave = false;
 	//if(!CheckAttribute(&InterfaceStates, "Buttons.Save.enable") || InterfaceStates.Buttons.Save.enable!= 1) bEnableSave = false;
 	if(InterfaceStates.Launched!=0) bEnableSave = false;
 
 	aref arScrShoter;
-	if(FindClass(&arScrShoter,"scrshoter")) bEnableSave = false;
+	if(FindEntity(&arScrShoter,"scrshoter")) bEnableSave = false;
 
 	if(bSeaActive) { bEnableSave = false; restrictSave = "save_while sailing"; }
 	if(LAi_IsBoardingProcess()) { bEnableSave = false; restrictSave = "save_while boarding"; }
@@ -392,7 +392,7 @@ void LaunchInfoScreen()
 		BLI_DisableShow();
 		SetEventHandler("makescrshot","LaunchInfoScreenContinue",0);
 		aref arScrShoter;
-		if (!FindClass(&arScrShoter,"scrshoter")) {
+		if (!FindEntity(&arScrShoter,"scrshoter")) {
 			CreateScreenShoter();
 			PostEvent("makescrshot",1);
 		} else {
@@ -422,7 +422,7 @@ void LaunchLootingScreen()
 		BLI_DisableShow();
 		SetEventHandler("makescrshot","LaunchLootingScreenContinue",0);
 		aref arScrShoter;
-		if (!FindClass(&arScrShoter,"scrshoter")) {
+		if (!FindEntity(&arScrShoter,"scrshoter")) {
 			CreateScreenShoter();
 			PostEvent("makescrshot",1);
 		} else {
@@ -450,10 +450,8 @@ void CreateScreenShoter()
 	DeleteEntitiesByType("scrshoter");
 	object scrshoter;
 // KK -->
-	string layer = "realize";
+	int layer = REALIZE;
 	if (bSeaActive && !bAbordageStarted) layer = SEA_REALIZE;
-	LayerCreate(layer, 1);
-	LayerSetRealize(layer, 1);
 	CreateEntity(&scrshoter,"scrshoter");
 	scrshoter.SavePath = "SAVE\" + GetStorylineDir(FindCurrentStoryline());
 	LayerAddObject(layer, &scrshoter, -1);
@@ -978,7 +976,7 @@ void LaunchMainMenu()
 
 	SetEventHandler("makescrshot","LaunchMainMenuContinue",0);
 	aref arScrShoter;
-	if (!FindClass(&arScrShoter,"scrshoter")) {
+	if (!GetEntity(&arScrShoter,"scrshoter")) {
 		CreateScreenShoter();
 		PostEvent("makescrshot",10); // Levis: was 1
 	} else {
@@ -1561,8 +1559,8 @@ void _Procedure_EndVideoPlay()
 	{
 		if(aviVideoObj.layer == "land")
 		{
-			LayerFreeze("realize",false);
-			LayerFreeze("execute",false);
+			LayerFreeze(REALIZE,false);
+			LayerFreeze(EXECUTE,false);
 		}
 		if(aviVideoObj.layer == "sea")
 		{
@@ -1644,8 +1642,8 @@ void RunHelpChooser()
 	bRunHelpChooser = true;
 	EngineLayersOffOn(false);
 	InterfaceStates.Launched=true;
-	LayerAddObject("iExecute",&objHelpChooser,10000);
-	LayerAddObject("iRealize",&objHelpChooser,10000);
+	LayerAddObject(INTERFACE_EXECUTE,&objHelpChooser,10000);
+	LayerAddObject(INTERFACE_REALIZE,&objHelpChooser,10000);
 }
 
 void ProcEndHelpChooser()
@@ -1980,9 +1978,6 @@ void procInfoShow()
 			}
 
 			CreateEntity(&objInfoList[nInfoIdx],"InfoHandler");
-
-			LayerCreate("inf_realize", 1);
-			LayerSetRealize("inf_realize", 1);
 		}
 	}
 	else
@@ -2019,10 +2014,10 @@ void InfoShowSetting()
 		}
 
 		if( bMakeSet ) {
-			LayerAddObject("inf_realize",&objInfoList[i],-1);
+			LayerAddObject(INFO_REALIZE,&objInfoList[i],-1);
 			bAlreadySet = true;
 		} else {
-			LayerDelObject("inf_realize",&objInfoList[i]);
+			LayerDelObject(INFO_REALIZE,&objInfoList[i]);
 		}
 
 		if(i==2) {
@@ -2047,11 +2042,11 @@ void InfoShowSetting()
 	}
 
 	if(bAlreadySet) {
-		LayerFreeze("irealize",true);
-		LayerFreeze("iexecute",true);
+		LayerFreeze(INTERFACE_REALIZE,true);
+		LayerFreeze(INTERFACE_EXECUTE,true);
 	} else {
-		LayerFreeze("irealize",false);
-		LayerFreeze("iexecute",false);
+		LayerFreeze(INTERFACE_REALIZE,false);
+		LayerFreeze(INTERFACE_EXECUTE,false);
 	}
 }
 
@@ -2068,8 +2063,8 @@ void InfoShow_Control()
 			SendMessage(&GameInterface,"l",MSG_INTERFACE_LAUNCH_DASHBOARD);
 		}
 		else Event("evntLowStorageBreak");
-		LayerFreeze("irealize",false);
-		LayerFreeze("iexecute",false);
+		LayerFreeze(INTERFACE_REALIZE,false);
+		LayerFreeze(INTERFACE_EXECUTE,false);
 	}
 }
 
@@ -2081,8 +2076,8 @@ void InfoShow_Control2()
 	{
 		PostEvent("DoInfoShower",0,"sl","OptionsBreak",false);
 		Event("evntOptionsBreak");
-		LayerFreeze("irealize",false);
-		LayerFreeze("iexecute",false);
+		LayerFreeze(INTERFACE_REALIZE,false);
+		LayerFreeze(INTERFACE_EXECUTE,false);
 	}
 }
 

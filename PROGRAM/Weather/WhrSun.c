@@ -26,7 +26,7 @@ void WhrCreateSunGlowEnvironment()
 	if (!isEntity(&SunGlow))
 	{
 		CreateEntity(&SunGlow,"SunGlow");
-		LayerAddObject("sea_reflection",&SunGlow,-1);
+		LayerAddObject(SEA_REFLECTION,&SunGlow,-1);
 	}
 
 	if (sti(aSun.Glow.Enable) != false)
@@ -74,8 +74,8 @@ void WhrCreateSunGlowEnvironment()
 
 void MoveSunGlowToLayers(string sExecuteLayer, string sRealizeLayer)
 {
-	LayerDelObject("execute",&SunGlow);
-	LayerDelObject("realize",&SunGlow);
+	LayerDelObject(EXECUTE,&SunGlow);
+	LayerDelObject(REALIZE,&SunGlow);
 	LayerDelObject(SEA_EXECUTE,&SunGlow);
 	LayerDelObject(SEA_REALIZE,&SunGlow);
 

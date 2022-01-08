@@ -2488,7 +2488,7 @@ float GetRigDamage(int shootIdx, int iBallType, ref damage_chr)
 void MakeSailDmg(int chrIdx, float dmg)
 {
 	object objSail;
-	if( !FindClass(&objSail,"sail") ) return;
+	if( !FindEntity(&objSail,"sail") ) return;
 	if(LAi_IsImmortal(&Characters[chrIdx])) return; // PB: Prevent sail damage
 	SendMessage(&objSail,"lslf", MSG_SAIL_SCRIPT_PROCESSING,"RandomSailsDmg", chrIdx,dmg);
 }

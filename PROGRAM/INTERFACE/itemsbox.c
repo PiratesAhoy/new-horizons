@@ -634,21 +634,21 @@ void InitInterface_RS(string iniName,ref itemsRef,string faceID)
 		BLIVisible(false);
 		SendMessage(&IActions,"ll",LI_SET_VISIBLE,false);
 
-	/*	LayerFreeze("realize",bSeaActive && !ownDeckStarted() && !LAi_IsBoardingProcess());
-		LayerFreeze("execute",true);
+	/*	LayerFreeze(REALIZE,bSeaActive && !ownDeckStarted() && !LAi_IsBoardingProcess());
+		LayerFreeze(EXECUTE,true);
 		bool bShow = ownDeckStarted();
 		if(!bShow) bShow = LAi_IsBoardingProcess();
-		LayerFreeze("sea_realize",!bSeaActive && bShow);
-		LayerFreeze("sea_execute",true);*/
+		LayerFreeze(SEA_REALIZE,!bSeaActive && bShow);
+		LayerFreeze(SEA_EXECUTE,true);*/
 
 		// MM: To avoid boarding crash -->
-	/*	LayerFreeze("realize",true);
-		LayerFreeze("sea_realize",true);
-		LayerFreeze("execute",true);
-		LayerFreeze("sea_execute",true);*/
+	/*	LayerFreeze(REALIZE,true);
+		LayerFreeze(SEA_REALIZE,true);
+		LayerFreeze(EXECUTE,true);
+		LayerFreeze(SEA_EXECUTE,true);*/
 		// MM: To avoid boarding crash <--
 		
-		LayerFreeze("realize",false); // PB: Try this even simpler
+		LayerFreeze(REALIZE,false); // PB: Try this even simpler
 	}
 
 	FillScroll();

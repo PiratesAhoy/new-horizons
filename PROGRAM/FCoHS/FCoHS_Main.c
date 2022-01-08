@@ -212,11 +212,11 @@ void FCoHS_Boarding_StartFade()
 	// Layers
 	LayerFreeze(SEA_EXECUTE, true);
 	LayerFreeze(SEA_REALIZE, true);
-	LayerFreeze("sea_reflection", true);
-	LayerFreeze("execute", false);
-	LayerFreeze("realize", false);
-	MoveWeatherToLayers("execute", "realize");
-	MoveSeaToLayers("execute", "realize");
+	LayerFreeze(SEA_REFLECTION, true);
+	LayerFreeze(EXECUTE, false);
+	LayerFreeze(REALIZE, false);
+	MoveWeatherToLayers(EXECUTE, REALIZE);
+	MoveSeaToLayers(EXECUTE, REALIZE);
 
 	// Delete all cannonballs (although we shouldn't be in combat)
 	SendMessage(&AIBalls, "l", MSG_MODEL_RELEASE);
@@ -244,10 +244,10 @@ void FCoHS_Boarding_EndFade()
 
 	// Unload all models
 	aref arModel;
-	if (FindClass(&arModel, "modelr"))
+	if (FindEntity(&arModel, "modelr"))
 	{
 		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
-		while (FindClassNext(&arModel))
+		while (FindEntityNext(&arModel))
 		{
 			SendMessage(arModel, "l", MSG_MODEL_RELEASE);
 		}
@@ -653,19 +653,19 @@ void FCoHS_Boarding_ReturnEndFade()
 
     // Load all models back to sea
 	aref arModel;
-	if (FindClass(&arModel, "modelr"))
+	if (FindEntity(&arModel, "modelr"))
 	{
 		SendMessage(arModel, "l", MSG_MODEL_RESTORE);
-		while (FindClassNext(&arModel))
+		while (FindEntityNext(&arModel))
 		{
 			SendMessage(arModel, "l", MSG_MODEL_RESTORE);
 		}
 	}
 
 	// Layers
-	LayerFreeze("execute",true);
-	LayerFreeze("realize",true);
-	LayerFreeze("sea_reflection", false);
+	LayerFreeze(EXECUTE,true);
+	LayerFreeze(REALIZE,true);
+	LayerFreeze(SEA_REFLECTION, false);
 	LayerFreeze(SEA_EXECUTE,false);
 	LayerFreeze(SEA_REALIZE,false);
 	MoveWeatherToLayers(SEA_EXECUTE, SEA_REALIZE);

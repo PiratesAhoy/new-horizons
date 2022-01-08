@@ -16,8 +16,8 @@ void InitInterface_I(string iniName, int payment)
 		locCameraSleep(true);
 		//SetTimeScale(0.0);
 
-		LayerFreeze("realize", true);
-		LayerFreeze("execute",true);
+		LayerFreeze(REALIZE, true);
+		LayerFreeze(EXECUTE,true);
 	}
 	SetNodeUsing("VIDEOBASE", bNewInterface);
 	SetNodeUsing("BACKSLIDE", bNewInterface);

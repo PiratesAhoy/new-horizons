@@ -1,9 +1,6 @@
 #ifndef SEA_AI_SCRIPT_DEFINES
 #define SEA_AI_SCRIPT_DEFINES
 
-#define SEA_EXECUTE					"sea_execute"
-#define SEA_REALIZE					"sea_realize"
-
 //
 #define SEA_GET_LAYERS				"SeaGetLayers"
 

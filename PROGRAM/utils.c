@@ -2400,9 +2400,9 @@ int GetCurrentModelrNumber()
 {
 	int n = 0;
 	aref arModel;
-	if (FindClass(&arModel, "modelr")) {
+	if (FindEntity(&arModel, "modelr")) {
 		n++;
-		while (FindClassNext(&arModel)) 
+		while (FindEntityNext(&arModel))
 		{
 			n++;
 		}

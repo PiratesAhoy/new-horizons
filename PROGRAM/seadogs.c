@@ -1,6 +1,8 @@
 #include "BuildSettings.h" // scheffnow
 #include "InternalSettings.h" // where the more esoteric/programmerly things from BS.h got moved. NK 05-07-17
 
+#include "storm-engine\layers.h"
+
 #include "events.h"
 #include "sulan_shipslog.c"
 #include "globals.c"
@@ -113,6 +115,8 @@ ref TortugaDame1;
 ref TortugaDame2;
 ref TortugaDame3;
 // PB: Tortuga Ladies <--
+
+object Render;
 
 void ProcessCheat()
 {
@@ -323,12 +327,6 @@ void Main()
 	SystemDelay(1000);
 	onesec = RDTSC_E(iRDTSC_main);*/
 	// NK <--
-
-	LayerCreate("realize", 1);
-	LayerCreate("sea_realize", 1);
-	LayerCreate("iRealize", 1);
-	LayerCreate("fader_realize", 1);
-	LayerCreate("inf_realize", 1);
 
 	ReloadProgressStart();
 	ControlsInit(GetTargetPlatform(),true);
@@ -602,13 +600,13 @@ void InterfaceDoExit()
 		{
 			if( bSeaActive && !bAbordageStarted )
 			{
-				LayerFreeze("sea_realize",false);
-				LayerFreeze("sea_execute",false);
+				LayerFreeze(SEA_REALIZE,false);
+				LayerFreeze(SEA_EXECUTE,false);
 			}
 			else
 			{
-				LayerFreeze("realize",false);
-				LayerFreeze("execute",false);
+				LayerFreeze(REALIZE, false);
+				LayerFreeze(EXECUTE, false);
 			}
 // KK -->
 			if (CheckAttribute(mchr, "NationsRelations_PreviousNation")) {
@@ -705,22 +703,20 @@ void InterfaceDoExit()
 
 void EngineLayersOffOn(bool on)
 {
-	//LayerSetRealize("realize",on);
-	//LayerSetExecute("execute",on);
 	on = !on;
-	LayerFreeze("realize",on);
-	LayerFreeze("execute",on);
+	LayerFreeze(REALIZE,on);
+	LayerFreeze(EXECUTE,on);
 	if(!bAbordageStarted) { // KK
-		LayerFreeze("sea_realize",on);
-		LayerFreeze("sea_execute",on);
+		LayerFreeze(SEA_REALIZE,on);
+		LayerFreeze(SEA_EXECUTE,on);
 	}
-	//LayerFreeze("sun_trace",on);
-	//LayerFreeze("sea_reflection",on);
-	//LayerFreeze("shadow",on);
-	//LayerFreeze("ship_cannon_trace",on);
-	//LayerFreeze("hull_trace",on);
-	//LayerFreeze("mast_ship_trace",on);
-	//LayerFreeze("sails_trace",on);
+	//LayerFreeze(SUN_TRACE,on);
+	//LayerFreeze(SEA_REFLECTION,on);
+	//LayerFreeze(SHADOW,on);
+	//LayerFreeze(SHIP_CANNON_TRACE,on);
+	//LayerFreeze(HULL_TRACE,on);
+	//LayerFreeze(MAST_SHIP_TRACE,on);
+	//LayerFreeze(SAILS_TRACE,on);
 }
 
 string seadogs_saveFrom = "";
@@ -1043,11 +1039,6 @@ void NewGame_continue()
 
 void InitGame()
 {
-	LayerCreate("realize", 1);
-	LayerCreate("sea_realize", 1);
-	LayerCreate("iRealize", 1);
-	LayerCreate("fader_realize", 1);
-	LayerCreate("inf_realize", 1);
 	Trace("Gauging: createlayers");
 	if(LoadSegment("store\initStore.c"))
 	{

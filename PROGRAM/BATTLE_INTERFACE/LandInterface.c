@@ -59,8 +59,8 @@ void StartBattleLandInterface()
 	BLI_SetShowParameters();
 	CreateEntity(&objLandInterface,"battle_land_interface");
 	DeleteAttribute(&objLandInterface,"");
-	LayerAddObject("execute",&objLandInterface,-1);
-	LayerAddObject("realize",&objLandInterface,-1);
+	LayerAddObject(EXECUTE,&objLandInterface,-1);
+	LayerAddObject(REALIZE,objLandInterface,-1);
 
 	if (!CheckAttribute(InterfaceStates, "BIVisible")) InterfaceStates.BIVisible = true; // KK
 

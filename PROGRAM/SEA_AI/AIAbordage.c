@@ -37,12 +37,12 @@ void Abordage_ReloadStartFade()
 	reload_fader = GetEventData();
 	LayerFreeze(SEA_EXECUTE,true);
 	LayerFreeze(SEA_REALIZE,true);
-	LayerFreeze("sea_reflection",true);
-	LayerFreeze("execute",false);
-	LayerFreeze("realize",false);
+	LayerFreeze(SEA_REFLECTION,true);
+	LayerFreeze(EXECUTE,false);
+	LayerFreeze(REALIZE,false);
 
-	MoveWeatherToLayers("execute", "realize");
-	MoveSeaToLayers("execute", "realize");
+	MoveWeatherToLayers(EXECUTE, REALIZE);
+	MoveSeaToLayers(EXECUTE, REALIZE);
 
 	SendMessage(&AIBalls, "l", MSG_MODEL_RELEASE);
 
@@ -67,7 +67,7 @@ void Go2LocationAfterAbordage()
 	Sea.AbordageMode = false;
 
 	PauseParticles(false);
-	LayerFreeze("sea_reflection", false);
+	LayerFreeze(SEA_REFLECTION, false);
 
 	Sea.MaxSeaHeight = fOldMaxSeaHeight;		// restore old MaxSeaHeight
 }
@@ -76,20 +76,20 @@ void Return2SeaAfterAbordage()
 {
 	// load all models back to sea
 	aref arModel;
-	if (FindClass(&arModel, "modelr")) 
+	if (FindEntity(&arModel, "modelr"))
 	{
 		SendMessage(arModel, "l", MSG_MODEL_RESTORE);
-		while (FindClassNext(&arModel)) 
+		while (FindEntityNext(&arModel))
 		{ 
 			//Trace("XYZ");
 			SendMessage(arModel, "l", MSG_MODEL_RESTORE); 
 		}
 	}
 
-	LayerFreeze("execute",true);
-	LayerFreeze("realize",true);
+	LayerFreeze(EXECUTE,true);
+	LayerFreeze(REALIZE,true);
 
-	LayerFreeze("sea_reflection", false);
+	LayerFreeze(SEA_REFLECTION, false);
 	LayerFreeze(SEA_EXECUTE,false);
 	LayerFreeze(SEA_REALIZE,false);
 
@@ -174,10 +174,10 @@ void Abordage_ReloadEndFade()
 
 	// unload all models
 	aref arModel;
-	if (FindClass(&arModel, "modelr")) 
+	if (FindEntity(&arModel, "modelr"))
 	{
 		SendMessage(arModel, "l", MSG_MODEL_RELEASE);
-		while (FindClassNext(&arModel)) { SendMessage(arModel, "l", MSG_MODEL_RELEASE); }
+		while (FindEntityNext(&arModel)) { SendMessage(arModel, "l", MSG_MODEL_RELEASE); }
 	}
 
 	if (bAbordagePlaceShipNear)

@@ -2790,8 +2790,8 @@ void AddDroppedItem(string locationID, int itmIdx)
 			if(HasSubStr(curItem.model, "blade") || HasSubStr(curItem.model, "pistol")) SendMessage(&curModel, "ls", MSG_MODEL_SET_TECHNIQUE, "BladeItem");
 			else SendMessage(&curModel, "ls", MSG_MODEL_SET_TECHNIQUE, "RandItem");
 
-			LayerAddObject("execute", &curModel, ITEMS_LAYER);
-			LayerAddObject("realize", &curModel, ITEMS_LAYER);
+			LayerAddObject(EXECUTE, &curModel, ITEMS_LAYER);
+			LayerAddObject(REALIZE, &curModel, ITEMS_LAYER);
 
 			string curLocName = curItem.startLocator;
 			SendMessage(SeaLighter, "ssi", "AddModel", curItem.model, &curModel);

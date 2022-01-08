@@ -3,7 +3,7 @@ object	Sea;
 void SeaAI_GetLayers()
 {
 	aref oTmp = GetEventData();
-	SendMessage(oTmp, "lss", AI_MESSAGE_SET_LAYERS, sCurrentSeaExecute, sCurrentSeaRealize);
+	SendMessage(oTmp, "lll", AI_MESSAGE_SET_LAYERS, sCurrentSeaExecute, sCurrentSeaRealize);
 }
 
 void DeleteSea()
@@ -11,7 +11,7 @@ void DeleteSea()
 	DeleteClass(&Sea);
 }
 
-void CreateSea(string sExecuteLayer, string sRealizeLayer)
+void CreateSea(int sExecuteLayer, int sRealizeLayer)
 {
 //	if (IsEntity(&Sea)) DeleteSeaEnvironment(); // KK { Trace("ERROR: Sea Already Loaded!!!"); return; }
 //JA 5DEC06 returned to old function as DeleteSeaEnvironment appears to delete ships models on the sea. Need to leave sea stuff there so can reload after going to deck. (I think)
@@ -21,15 +21,15 @@ void CreateSea(string sExecuteLayer, string sRealizeLayer)
 	CreateEntity(&Sea, "sea");
 	MoveSeaToLayers(sExecuteLayer, sRealizeLayer);
 
-	LayerFreeze("sea_reflection", false);
+	LayerFreeze(SEA_REFLECTION, false);
 
 	Sea.AbordageMode = false;
 }
 
-void MoveSeaToLayers(string sExecuteLayer, string sRealizeLayer)
+void MoveSeaToLayers(int sExecuteLayer, int sRealizeLayer)
 {
-	LayerDelObject("execute", &Sea);
-	LayerDelObject("realize", &Sea);
+	LayerDelObject(EXECUTE, &Sea);
+	LayerDelObject(REALIZE, &Sea);
 	LayerDelObject(SEA_EXECUTE, &Sea);
 	LayerDelObject(SEA_REALIZE, &Sea);
 
@@ -213,8 +213,8 @@ void AISea_ReturnFromAbordage()
 	MoveSeaToLayers(SEA_EXECUTE,SEA_REALIZE);
 	MoveWeatherToLayers(SEA_EXECUTE,SEA_REALIZE);
 
-	LayerFreeze("realize",true);
-	LayerFreeze("execute",true);
+	LayerFreeze(REALIZE,true);
+	LayerFreeze(EXECUTE,true);
 
 	LayerFreeze(SEA_EXECUTE,false);
 	LayerFreeze(SEA_REALIZE,false);
