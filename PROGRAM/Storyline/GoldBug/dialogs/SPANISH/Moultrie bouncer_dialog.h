@@ -1,8 +1,8 @@
 string DLG_TEXT[4] = {
-"Compуrtate o te echarй a la calle.",
-"Claro. Bien. Gracias. Adiуs.",
-"ЎEh, eso es coсac! ЎCierra el grifo o lo lamentarбs!",
-"їUh?",
+"Compórtate o te echaré a la calle.",
+"Claro. Bien. Gracias. Adiós.",
+"¡Eh, eso es coñac! ¡Cierra el grifo o lo lamentarás!",
+"¿Uh?",
 
 
 };

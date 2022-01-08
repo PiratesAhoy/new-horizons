@@ -1,22 +1,22 @@
 string DLG_TEXT[18] = {
-"Hola, Jъpiter, їquй pasa?",
-"Oh, no й nб, 'massa' Will.",
-"Ah, aquн estбs. ЎY encontraste la madera!",
-"Ajб.",
+"Hola, Júpiter, ¿qué pasa?",
+"Oh, no é ná, 'massa' Will.",
+"Ah, aquí estás. ¡Y encontraste la madera!",
+"Ajá.",
 "Toma esta vieja moneda; creo que es china.",
-"China, їeh...?",
-"їPor fin has conseguido algo de papel, Jъpiter?",
-"ЎJъpiter tiй papel y el bicho de oro tamiйn! Aquн e'tб, 'massa' Will!",
-"Buen trabajo. Toma esta pequeсa perla por tus esfuerzos.",
-"Una pe'la, Ўguau!",
-"Cambiando de tema, nos hemos vuelto a quedar sin leсa.",			//10
-"їSн, 'massa'? Vamos a la playa a bu'car mбs madera a la deriva.",
+"China, ¿eh...?",
+"¿Por fin has conseguido algo de papel, Júpiter?",
+"¡Júpiter tié papel y el bicho de oro tamién! Aquí e'tá, 'massa' Will!",
+"Buen trabajo. Toma esta pequeña perla por tus esfuerzos.",
+"Una pe'la, ¡guau!",
+"Cambiando de tema, nos hemos vuelto a quedar sin leña.",			//10
+"¿Sí, 'massa'? Vamos a la playa a bu'car más madera a la deriva.",
 "Eso es, Jup.",
-"їTiй los sacos, 'massa' Will?",
-"Aquн estбn. Ve tъ delante.",
+"¿Tié los sacos, 'massa' Will?",
+"Aquí están. Ve tú delante.",
 "---",
-"Edgar, por fin. Temнa que se hubiera metido en algъn lнo.",
-"Ah, bueno..., no. Lo tengo todo preparado. їNos ponemos en marcha?",
+"Edgar, por fin. Temía que se hubiera metido en algún lío.",
+"Ah, bueno..., no. Lo tengo todo preparado. ¿Nos ponemos en marcha?",
 
 
 };

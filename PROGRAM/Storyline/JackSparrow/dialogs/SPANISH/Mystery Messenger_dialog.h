@@ -1,4 +1,4 @@
 string DLG_TEXT[10] = {
 "Es usted ",
-"Sн, soy yo. їEn quй puedo ayudarte?",
+"Sí, soy yo. ¿En qué puedo ayudarte?",
 }

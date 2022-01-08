@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = {
-"Veo que usted es MUY educado con la seсorita ",
+"Veo que usted es MUY educado con la señorita ",
 "Elizabeth Shaw",
-". Si da un paso en falso, le arrancarй la cabeza.",
-"ЎPor favor! їMe ve como un zoquete?",
+". Si da un paso en falso, le arrancaré la cabeza.",
+"¡Por favor! ¿Me ve como un zoquete?",
 
 };

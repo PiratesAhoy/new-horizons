@@ -1,7 +1,7 @@
 string DLG_TEXT[4] = {
 ".....",
 ".....",
-"їQuй quieres? ЎNo permitimos que se acerquen extraсos a esta casa!",
-"Estб bien, lo siento.",
+"¿Qué quieres? ¡No permitimos que se acerquen extraños a esta casa!",
+"Está bien, lo siento.",
 
 };

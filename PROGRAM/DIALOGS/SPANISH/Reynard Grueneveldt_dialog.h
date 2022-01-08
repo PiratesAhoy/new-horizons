@@ -112,7 +112,7 @@ string DLG_TEXT[179] = {
 "Muy bien.",
 "A la luz de tus anteriores servicios, ",
 " te otorga el rango de ",
-"Has dañado los intereses de ",
+"Has dañado los intereses de ",			 
 ", y ",
 " no olvida a sus enemigos. ¡Vete inmediatamente, o los guardias te echarán a patadas!",
 "...",

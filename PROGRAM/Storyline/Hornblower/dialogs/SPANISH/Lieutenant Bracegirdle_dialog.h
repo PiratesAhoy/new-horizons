@@ -1,10 +1,10 @@
 string DLG_TEXT[8] = {
-"Hola, Hornblower. їLe va todo bien? ",
-"Sн, gracias, teniente.",
-"їTe acuerdas de mн? Teniente Bracegirdle, el Justiniano? Tambiйn debo informar al Indefatigable.",
-"Encantado de volver a verle, teniente. Deberнamos volver a la nave en #sCharlestown#.",
-"Serб un placer, capitбn Sawyer.",
+"Hola, Hornblower. ¿Le va todo bien? ",
+"Sí, gracias, teniente.",
+"¿Te acuerdas de mí? Teniente Bracegirdle, el Justiniano? También debo informar al Indefatigable.",
+"Encantado de volver a verle, teniente. Deberíamos volver a la nave en #sCharlestown#.",
+"Será un placer, capitán Sawyer.",
 "...",
-"ЎCaballeros! Presйntese en el cuarto de cubierta. El navнo del capitбn se acerca.",
-"ЎA la orden, seсor!",
+"¡Caballeros! Preséntese en el cuarto de cubierta. El navío del capitán se acerca.",
+"¡A la orden, señor!",
 };

@@ -1,4 +1,4 @@
-string DLG_TEXT[26] = {
+string DLG_TEXT[26] = { 
 "Buenos días. Mi nombre es ",
 "y soy el representante de la ",
 ". ¿Qué te trae a mi mesa?",

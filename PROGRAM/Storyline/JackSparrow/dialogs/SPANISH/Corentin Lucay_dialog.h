@@ -1,11 +1,11 @@
 string DLG_TEXT[8] = {
-"їLas cuadrillas de tiro del fuerte, dices? Bueno, eso lo cambia todo. їNo estб de acuerdo?, ",
+"¿Las cuadrillas de tiro del fuerte, dices? Bueno, eso lo cambia todo. ¿No está de acuerdo?, ",
 "Bernardo Gamboa",
 "?",
 "...",
-"Me temo que tengo una opiniуn diferente, y tambiйn lo estб el resto de la tripulaciуn. ЎNos estбs poniendo en peligro a todos con este capricho tuyo!",
+"Me temo que tengo una opinión diferente, y también lo está el resto de la tripulación. ¡Nos estás poniendo en peligro a todos con este capricho tuyo!",
 "...",
-"ЎAhora, coge al hombre y vete!",
-"Lo harй, tan pronto como vea al hombre.",
+"¡Ahora, coge al hombre y vete!",
+"Lo haré, tan pronto como vea al hombre.",
 
 };
