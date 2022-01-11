@@ -357,6 +357,10 @@ Hull bears colours of France.}
 
 SwedishIndiaman1_Descr{Lightly armed trader, very fast with good
 cargo capacity.}
+SwedishIndiaman_red_Descr{Lightly armed trader, very fast with good
+cargo capacity. Varnished hull with red decoration.}
+SwedishIndiaman_blue_Descr{Lightly armed trader, very fast with good cargo
+capacity. Varnished hull with dark blue decoration.}
 
 NL_Batavia_Descr{Performance comes second for the 'Batavia'.
 Armed trader in Dutch colours.}
@@ -383,6 +387,8 @@ SP_Battleship_Descr{For a ship-of-the-line, performance comes second.
 Weathered hull is dark painted.}
 Battleship5_Descr{For a ship-of-the-line, performance comes second.
 Weathered hull bears Spanish colours.}
+Battleship1b_Descr{For a ship-of-the-line, performance comes second.
+Hull is painted black and red.}
 
 RN_SuperiorWarship_Descr{For a ship-of-the-line, performance comes second.
 Hull bears colours of the Royal Navy.}
@@ -394,6 +400,10 @@ The weathered hull bears colours of Royal Navy.}
 
 HeavyLineship_Descr{For a ship-of-the-line, performance comes second.
 Hull is red and blue with decorations.}
+HeavyLineship2_Descr{For a ship-of-the-line, performance comes second.
+Hull is yellow and black, with gold decorations.}
+HeavyLineship3_Descr{For a ship-of-the-line, performance comes second.
+Hull has blue and gold decorations.}
 
 Battleship4_Descr{For a ship-of-the-line, performance comes second.
 The varnished hull has black stripes and blue uppers.}

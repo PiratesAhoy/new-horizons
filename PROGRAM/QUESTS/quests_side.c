@@ -6574,7 +6574,23 @@ void SideQuestComplete(string sQuestName)
 			UpdateRelations();
 			characters[GetCharacterIndex("Davy Jones")].nosurrender = 2;
 			Characters[GetCharacterIndex("Davy Jones")].recognized = true;
-			Character_SetAbordageEnable(characterFromID("Davy Jones"), false);
+			Character_SetAbordageEnable(CharacterFromID("Davy Jones"), false);
+
+			NPChar = CharacterFromID("Davy Jones");
+			NPChar.perks.list.BasicDamageControl = true;	// Give Jones some ship-based perks - don't trust the levelling system to assign or keep them
+			NPChar.perks.list.AdvancedDamageControl = true;
+			NPChar.perks.list.Rigging = true;
+			NPChar.perks.list.RiggingAdvance = true;
+			NPChar.perks.list.HullDamageUp = true;
+			NPChar.perks.list.FastReload = true;
+			NPChar.perks.list.SailsDamageUp = true;
+			NPChar.perks.list.CrewDamageUp = true;
+			NPChar.perks.list.CriticalShoot = true;
+			NPChar.perks.list.LongRangeShoot = true;
+			NPChar.perks.list.CannonProfessional = true;
+			NPChar.perks.list.IronWill = true;
+			NPChar.ship.stats.maxcrew = 1280;		// Boost Flying Dutchman's crew, normal crew of 420 is insufficient for 100000 HP.
+			SetCrewQuantity(NPChar, 1280);
 // KK -->
 			PChar.quest.PrepareDavyEncounter.win_condition.l1 = "MapEnter";
 			PChar.quest.PrepareDavyEncounter.win_condition = "PrepareDavyEncounter";
@@ -6714,7 +6730,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "goto5");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto5");
 			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -6726,25 +6742,25 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto7");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto7");
 			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "goto8");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto8");
 			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto9");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "goto", "goto9");
 			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto10");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto10");
 			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -6793,7 +6809,7 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "officers", "reload9_3");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "reload9_3");
 			sld.name = TranslateString("", "Clanker");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -6805,25 +6821,25 @@ void SideQuestComplete(string sQuestName)
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "goto", "goto2");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "goto", "goto2");
 			sld.name = TranslateString("", "Urchin");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy5", "goto", "goto3");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "goto", "goto3");
 			sld.name = TranslateString("", "Wheelback");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy1", "reload", "reload8");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy3", "reload", "reload8");
 			sld.name = TranslateString("", "Wyvern");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
 			LAi_group_MoveCharacter(sld, "DAVY_CREW");
 
-			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy2", "officers", "reload8_1");
+			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "davy4", "officers", "reload8_1");
 			sld.name = TranslateString("", "Quittance");
 			sld.lastname = "";
 			LAi_SetHP(sld, 80.0, 80.0);
@@ -12311,7 +12327,7 @@ void SideQuestComplete(string sQuestName)
 			AddDataToCurrent(0, 2, 0, false);
 			SetCurrentTime(10.00, 0);
 			LAi_Fade("", "");
-			logit("Two months later...");
+			logit(TranslateString("", "Two months later..."));
 			LAi_SetActorType(PChar);
 			LAi_ActorGoToLocator(PChar, "goto", "goto9", "", 10.0);
 			sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[HOLLAND].fantomModel.m0, "goto", "goto22");
@@ -12543,7 +12559,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "hornblower_fort_closed":
-			logit("The fort gate is closed. Wait for Admiral Hernandez to open it.");
+			logit(TranslateString("", "The fort gate is closed. Wait for Admiral Hernandez to open it."));
 		break;
 
 		case "hornblower_fort_opens":
@@ -13647,11 +13663,6 @@ void SideQuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("Lady Barbara Wellesley"), "Seadogs", "rld", "aloc2");
 			ChangeCharacterAddressGroup(CharacterFromID("Oldroyd"), "ShipDeck1", "goto", "goto16");
 //			Locations[FindLocation("Seadogs")].vcskip = true;
-/*			DoReloadFromSeaToLocation("ShipDeck1", "goto", "goto15");
-//			LAi_QuestDelay("Hornblower_to_deck_after_Natividad_battle", 0.1);
-			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition.l1 = "location";
-			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition.l1.location = "ShipDeck1";
-			PChar.quest.Hornblower_to_deck_after_Natividad_battle.win_condition = "Hornblower_to_deck_after_Natividad_battle"; */
 
 			Pchar.quest.Hornblower_return_to_barbados.win_condition.l1 = "Location";
 			PChar.quest.Hornblower_return_to_barbados.win_condition.l1.location = "Oxbay";
@@ -14181,7 +14192,7 @@ void SideQuestComplete(string sQuestName)
 			}
 			else
 			{ 
-				logit("You succumb to the Carib poison.");
+				logit(TranslateString("", "You succumb to the Carib poison."));
 				LAi_KillCharacter(PChar);
 			}
 		break;
@@ -14193,7 +14204,7 @@ void SideQuestComplete(string sQuestName)
 		case "crysskull_execute_hostage":
 			cidx = sti(PChar.quest.crysskull.hostage);
 			sld = GetCharacter(cidx);
-			logit(GetMyFullName(sld) + " has been executed.");
+			logit(GetMyFullName(sld) + " " + TranslateString("", "has been executed."));
 			if (HasSubStr(sld.id, "Enc_Officer")) LAi_UnStoreFantom(sld); // Cancel protection
 			LAi_KillCharacter(sld);
 		break;
@@ -14505,7 +14516,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "crysskull_fire_cannon":
-			logit("Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!");
+			logit(TranslateString("", "Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!"));
 			LAi_QuestDelay("crysskull_bang", 1.0);
 		break;
 
@@ -14893,7 +14904,7 @@ void SideQuestComplete(string sQuestName)
 			{
 				cidx = sti(PChar.quest.crysskull.hostage);
 				sld = GetCharacter(cidx);
-				logit("You failed to rescue " + GetMyFullName(sld) + ".");
+				logit(TranslateString("", "You failed to rescue") + " " + GetMyFullName(sld) + ".");
 				if (HasSubStr(sld.id, "Enc_Officer")) LAi_UnStoreFantom(sld); // Cancel protection
 				LAi_KillCharacter(sld);
 				ChangeCharacterAddress(sld, "None", "");

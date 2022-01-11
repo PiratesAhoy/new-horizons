@@ -7305,4 +7305,3 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetHP(ch, 100.0, 100.0);
 	AddGameCharacter(n, ch);
 }
-	

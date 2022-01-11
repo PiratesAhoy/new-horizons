@@ -617,7 +617,8 @@ void CreateQuebradasCostillasCharacters(ref n)
 	ch.name = TranslateString("", "Celestine");
 	ch.lastname = TranslateString("", "Maupassant");
 	ch.id		= "Mistress";
-	ch.model	= "Liz2"; // KK
+	ch.model	= "Rose"; // GR: was "Liz2" KK
+	ch.model.animation = "woman_ab_PoTC";
 	ch.sound_type = "female_citizen";
 	ch.sex = "woman";
 	ch.location	= "QC_brothel";

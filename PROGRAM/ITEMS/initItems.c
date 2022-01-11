@@ -4096,16 +4096,19 @@ void InitWeaponItemArrays()
       switch(id)
       {
 		case "blade1" :			blade.param.time  = 0.05;	break;  // special case
-        case "blade24":			blade.param.time  = 0.05;	break;  // special case
+        	case "blade24":			blade.param.time  = 0.05;	break;  // special case
 		case "bladeC36":		QualitySkipRand = true;		break;  // special case, JRH (only in stores)
 		case "bladeclub":		blade.sound = "OBJECTS\DUEL\club2.wav";	break;//JRH
 		// PB: Who would want to buy this? -->
-		case "Barmansknife":	QualitySkipSell = sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0; break;
-		case "Guestsknife":		QualitySkipSell = true;		break;
+		case "Barmansknife":
+			QualitySkipSell = true;		
+			if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0) QualitySkipTrade = true;
+		break;
+		case "Guestsknife":	QualitySkipSell = true;		break;
 		case "MerchantsBlade":	QualitySkipSell = true;		break;
 		case "Merchantsdagger":	QualitySkipSell = true;		break;
-		case "Minersaxe":		QualitySkipSell = true;		break;
-		case "Minerscrow":		QualitySkipSell = true;		break;
+		case "Minersaxe":	QualitySkipSell = true;		break;
+		case "Minerscrow":	QualitySkipSell = true;		break;
 		case "Piratesdagger":	QualitySkipSell = true;		break;
 		// PB: Who would want to buy this? <--
       }
@@ -4400,14 +4403,14 @@ int InitGun(  ref ItemIndex,
       switch(id)
       {
         case "pistol3":      gun.multidmg = 1;     break; // PB: Grapeshot Pistol
-		case "portugize":    gun.multidmg = 1;     break; // JRH: Grapeshot Pistol
+	case "portugize":    gun.multidmg = 1;     break; // JRH: Grapeshot Pistol
         case "pistolmtoon":  gun.multidmg = 1;     break; // PB: Musketoon
         case "pistol10":     gun.enblrld = true;   break; // PB: Shotgun
         case "LongRifle_BT": gun.enblrld = true;   break; // JRH: Bartolomeu
-		case "LongRifle_CT": gun.enblrld = true;   break; // JRH: All Storylines
-		case "LongRifle_WT": gun.enblrld = true;   break; // JRH: WoodesRogers
-		case "pistol26":     gun.multidmg = 1;     break; // JRH
-		case "pistolbow":    gun.arrow = 1;        break; // JRH
+	case "LongRifle_CT": gun.enblrld = true;   break; // JRH: All Storylines
+	case "LongRifle_WT": gun.enblrld = true;   break; // JRH: WoodesRogers
+	case "pistol26":     gun.multidmg = 1;     break; // JRH
+	case "pistolbow":    gun.arrow = 1;        break; // JRH
       }
       // PB: Unique Guns -->
       if (IsWeaponUnique(id))
@@ -5068,10 +5071,10 @@ int InitItem( ref   ItemIndex,
     case "book6"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Morgan's Mast Mashing
     case "book7"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Morgan's Almanac
     case "book8"   : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Pirating With Petros
-    case "book9":						  						  // Cooking With Albatross - PB: Clue about "Dead Albatross" effect
-		genitm.groupID = BOOK_ITEM_TYPE;
-		if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) genitm.text = "cookbook_early";
-		else genitm.text = "cookbook";
+    case "book9":						  // Cooking With Albatross - PB: Clue about "Dead Albatross" effect
+	genitm.groupID = BOOK_ITEM_TYPE;
+	if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) genitm.text = "cookbook_early";
+	else genitm.text = "cookbook";
     break;
     case "book10"  : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Definitive Defence
     case "book11"  : genitm.groupID = DOCUMENT_ITEM_TYPE; break;  // Fighting Forts

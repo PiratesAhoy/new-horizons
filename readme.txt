@@ -216,4 +216,4 @@ Please refer to the manual for Technical Support contact details
 
 
 
-© 2003 Bethesda Softworks LLC, a ZeniMax Media company. Audio/Visual elements © 2003 Disney. Distributed under license from Disney Interactive, Inc. Developed in association with Akella Corp. and 1C Company. Bethesda Softworks, ZeniMax and their respective logos are registered trademarks of ZeniMax Media Inc. Other product and company names referenced herein may be trademarks of their respective owners. All Rights Reserved.
+Â© 2003 Bethesda Softworks LLC, a ZeniMax Media company. Audio/Visual elements Â© 2003 Disney. Distributed under license from Disney Interactive, Inc. Developed in association with Akella Corp. and 1C Company. Bethesda Softworks, ZeniMax and their respective logos are registered trademarks of ZeniMax Media Inc. Other product and company names referenced herein may be trademarks of their respective owners. All Rights Reserved.

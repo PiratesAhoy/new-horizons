@@ -1379,5 +1379,45 @@ void ProcessDialogEvent()
 		Link.l1.go = "exit";
 	break;
 // Agent trophy
+
+// Devlin Opera
+	case "Bonnieparty1":
+		Dialog.Text = DLG_TEXT[378];
+		Link.l1 = DLG_TEXT[379];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Party_begins3");
+	break;
+
+	case "Ooops":
+		Dialog.Text = DLG_TEXT[380];
+		Link.l1 = DLG_TEXT[381];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("vase_key");
+	break;
+
+	case "Fallen":
+		Dialog.Text = DLG_TEXT[382];
+		Link.l1 = DLG_TEXT[383];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Bonnie_returns_Martinica_fallen");
+		AddDialogExitQuest("Switch_to_Beatrice");
+	break;
+
+	case "TalkedEH":
+		Dialog.Text = DLG_TEXT[384];
+		Link.l1 = DLG_TEXT[385];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Bonnie_returns_Martinica_talkedfin");
+		AddDialogExitQuest("Switch_to_Beatrice");
+	break;
+
+	case "Chico_ded":
+		Dialog.Text = DLG_TEXT[386];
+		Link.l1 = DLG_TEXT[387];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Blaze_returns_Martinica_duel");
+		AddDialogExitQuest("Switch_to_Beatrice");
+	break;
+// Devlin Opera
 	}
 }

@@ -6,7 +6,7 @@ string DLG_TEXT[12] = {
 "Oh no... I'm afraid I, ehm, I sold the book. I didn't think he'd need it again. I gave it to the Frenchman, Martin Jauri, for five pieces of eight. You have to ask him.",
 "A Frenchman? What is a Frenchman doing here?",
 "I don't know. Gathering information for a future takeover perhaps?",
-"A french takeover? Sure! That's not going to happen in the next 59 years! Where do I find him?",
+"A French takeover? Sure! That's not going to happen in the next 59 years! Where do I find him?",
 "He lives in a small house at the other end of town. The one with three boxes in front of the door.",
 "Alright, I'll go looking for him.",
 "Please don't tell Senor Haraldo I've sold his poetry book!",

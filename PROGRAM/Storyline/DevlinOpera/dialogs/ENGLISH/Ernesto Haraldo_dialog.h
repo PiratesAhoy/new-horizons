@@ -14,7 +14,7 @@ string DLG_TEXT[27] = {
 "Sounds exciting! Can I get a refill?",
 "There you go, dearest. Now tell me about you. Tell me about the ships you've sailed on, the islands you've explored, the battles you've fought... The men you've loved.",
 "Ooooh! Are you jealous, young Spaniard?",
-"No! Not at all! Jealousy isn't something a proud spanish warrior ever allows! Perhaps a little jealous... But only of the men.",
+"No! Not at all! Jealousy isn't something a proud Spanish warrior ever allows! Perhaps a little jealous... But only of the men.",
 "Hi-hi... If I'm blushing now I blame the wine!",
 "You're a convincing little one, aren't one? Well then, to be honest: I don't like this wedding. I don't like how fast everything happened with me and Isabel. I don't like how my father takes pride in this as if I was his circus horse. And I don't like most of my guests. Kofi Macchiato is the worst.",
 "Have you tried talking to your father about this? Or your wife?",

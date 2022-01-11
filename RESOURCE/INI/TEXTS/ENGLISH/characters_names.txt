@@ -1083,7 +1083,6 @@ Dawg{Dawg}
 Bennett{Bennett}
 Augustin{Augustin}
 Frechilla{Frechilla}
-Dawg{Dawg}
 Brown{Brown}
 
 {=====| StreetMerchants.c |=====}

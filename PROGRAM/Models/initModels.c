@@ -4321,7 +4321,7 @@ void InitModels(bool isstart)
 	AddCharacterModel(model);
 
 	model.description =  "Golden decorations adorn this white blouse - what there is of it!";
-	model.id    	  =  "Lukreci";
+	model.id    	  =  "Lukreci";	// Danielle retexture by Nita
 	model.FaceId	  =  578;
 	model.nation      =  PORTUGAL;
 	model.price       =  3500;
@@ -4366,18 +4366,18 @@ void InitModels(bool isstart)
 	model.nation      =  PIRATE;
 	model.price       =  3000;
 	model.assigned    =  true;
-	model.height      =  1.85;
-	model.sex		  =  "man";
-	model.ani		  =  "Rousselet";
-	model.status      =  "C_III"; // added as an identifier, for assigning another animation to the new models
-	model.name = "Davy";
-	model.lastname = "Jones";
-	model.storytitle = "Lord of the Sea";
-	model.storytext = "Having fallen for the treacherous godess of the sea herself, you got your heart broken as a result. Now all you have left is a thirst for vengeance and a ship to be reckoned with! And... you've got a trick up your sleeve to bring terror upon all souls at sea.";
-	model.ship = "CursedDutchman";
-	model.shipname = "Flying Dutchman";
-	model.playertype = PLAYER_TYPE_CURSED;
-	model.difficulty = DIFFICULTY_MARINER;
+	model.height	  =  1.85;
+	model.sex	  =  "man";
+	model.ani	  =  "Rousselet";
+	model.status	  =  "C_III"; // added as an identifier, for assigning another animation to the new models
+	model.name	  = "Davy";
+	model.lastname	  = "Jones";
+	model.storytitle  = "Lord of the Sea";
+	model.storytext	  = "Having fallen for the treacherous godess of the sea herself, you got your heart broken as a result. Now all you have left is a thirst for vengeance and a ship to be reckoned with! And... you've got a trick up your sleeve to bring terror upon all souls at sea.";
+	model.ship	  = "CursedDutchman";
+	model.shipname	  = "Flying Dutchman";
+	model.playertype  = PLAYER_TYPE_CURSED;
+	model.difficulty  = DIFFICULTY_MARINER;
 	model.Flags.Pirate = 15;
 	model.Flags.Personal = 12;
 	model.date.hour = 10;
@@ -10256,6 +10256,20 @@ void InitModels(bool isstart)
 	AssignModelType(isstart, model, "women", 1.0);
 	AssignModelTypeNatMask(isstart, model, "Middle_Citizens", 1.0, GetNationStringSouthEuro());
 	AssignModelTypeNation(isstart, model, "Middle_Citizens", 0.05, PIRATE);
+	AddCharacterModel(model);
+
+	model.description	= "A low-cut, dark red dress capped with a dark bonnet.";
+	model.id	   	= "Rose"; // CoAS model by Nita
+	model.FaceId		= 615;
+	model.nation		= PIRATE;
+	model.price		= 1500;
+	model.name		= "Rose";
+	model.assigned		= true;
+	model.sex		= "woman";
+	model.ani		= "woman_ab_PoTC";
+	model.height	  	= 1.75;
+	model.iscombat		= false;
+	AssignModelType(isstart, model, "women", 1.0);
 	AddCharacterModel(model);
 
 // JMV's USA officer models recoded by Jack Davidson using JMV's textures based on original Akella models -->

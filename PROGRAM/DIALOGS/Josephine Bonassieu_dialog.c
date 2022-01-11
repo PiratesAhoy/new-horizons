@@ -69,6 +69,11 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\FADU\FADU004";
 			dialog.text = DLG_TEXT[13] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[14];
 			link.l99 = DLG_TEXT[16];
+			if (PChar.quest.Bonnie_talk == "Sailing_for_Turks")
+			{
+				link.l1 = DLG_TEXT[41];
+				link.l1.go = "Where_to_go";
+			}
 			link.l99.go = "second time";
 		break;
 
@@ -229,7 +234,8 @@ void ProcessDialogEvent()
 			DialogExit();
 			AddDialogExitQuest("exit_sit");
 		break;
-		
+
+		// A French Companion -->
 		case "begin_1":
 			dialog.snd = "Voice\CLLA\CLLA005";
 			dialog.text = DLG_TEXT[35];
@@ -250,6 +256,36 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[40];
 			link.l1.go = "exit";
 			AddDialogExitQuest("Talks_Laura_Cotton");			
-			break;		
+			break;
+		// <-- A French Companion
+
+		// Devlin Opera -->
+		case "Where_to_go":
+			DisableFastTravel(true);
+			ChangeCharacterAddressGroup(characterfromID("Merciless Mark"),"Turks_townhall", "sit", "sit6");
+			LAi_SetSitType(characterfromID("Merciless Mark"));
+			ChangeCharacterAddressGroup(characterfromID("Robert Cook"),"Turks_townhall", "sit", "sit4");
+			LAi_SetSitType(characterfromID("Robert Cook"));
+			ChangeCharacterAddressGroup(characterfromID("Couch Captain Charles"),"Turks_townhall", "sit", "sit5");
+			LAi_SetSitType(characterfromID("Couch Captain Charles"));
+			ChangeCharacterAddressGroup(characterfromID("Maximus"),"Turks_townhall", "sit", "sit3");
+			LAi_SetSitType(characterfromID("Maximus"));
+			ChangeCharacterAddressGroup(characterfromID("Sir Christopher Mings"),"Turks_townhall", "sit", "sit7");
+			LAi_SetSitType(characterfromID("Sir Christopher Mings"));
+			ChangeCharacterAddressGroup(characterfromID("Nathan Kell"),"Turks_townhall", "goto", "goto6");
+			ChangeCharacterAddressGroup(characterfromID("Thomas the Terror"),"Turks_townhall", "goto", "goto4");
+			ChangeCharacterAddressGroup(characterfromID("Petros"),"Turks_townhall", "goto", "goto5");
+			ChangeCharacterAddressGroup(characterfromID("Catalina the Pirate"),"Turks_townhall", "goto", "goto1");
+			ChangeCharacterAddressGroup(characterfromID("Morgan Terror"),"Turks_port", "goto", "T3_citizen03"); // JRH: new Turks
+			pchar.quest.Morgan_talk = "Approach_Residence";
+			Pchar.quest.to_find_Short_Jack_Gold2.win_condition.l1 = "location";
+			PChar.quest.to_find_Short_Jack_Gold2.win_condition.l1.character = Pchar.id;
+			Pchar.quest.to_find_Short_Jack_Gold2.win_condition.l1.location = "Turks_townhall";
+			Pchar.quest.to_find_Short_Jack_Gold2.win_condition = "to_find_Short_Jack_Gold2";
+			dialog.text = DLG_TEXT[42];
+			link.l99 = DLG_TEXT[43];
+			link.l99.go = "Exit";
+		break;
+		// <-- Devlin Opera	
 	}
 }

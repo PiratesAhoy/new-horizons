@@ -357,6 +357,7 @@ void StartDialogWithMainCharacter()
 	if(dialogDisable) return;
 	//С кем хотим говорить
 	int person = GetEventData();
+	if (person<0 || person>=TOTAL_CHARACTERS) return;	// GR: check for valid character
 	//Сими с собой не беседуем
 	if(person == GetMainCharacterIndex()) return;
 	//С непрогруженными персонажами не беседуем

@@ -85,7 +85,7 @@ void LAi_Stunned_StunCharacter(aref chr, float duration, bool playSFX, bool play
 	{
 		CreateParticleSystem("stars" , x, y+1, z, 0.0, 0.0, 0.0, 20);
 	}
-	
+	QuestsCheck();	// Force quest check so that case "NPC_Stunned" can trigger
 }
 
 // fix this 05-07-12 to check for proper resume old type attribute since it was changed above.
