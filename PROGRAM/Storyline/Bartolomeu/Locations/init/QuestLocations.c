@@ -197,7 +197,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l4.label = "Jungle.";
 	Locations[n].reload.l4.disable = 1;
 
-	Locations[n].island = "Hispaniola"; // PB: To avoid errors
+	Locations[n].island = "IslaMuelle"; // PB: To avoid errors
 	n = n + 1;
 
 	//---------------------------------------------
@@ -244,7 +244,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l2.autoreload = "0";
 	Locations[n].reload.l2.label = "";
 
-	Locations[n].island = "Hispaniola"; // PB: To avoid errors
+	Locations[n].island = "IslaMuelle"; // PB: To avoid errors
 	n = n + 1;
 
 	//  -------------------------------------------------
@@ -282,7 +282,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Residence";
 
-	Locations[n].island = "Hispaniola"; // PB: To avoid errors
+	Locations[n].island = "IslaMuelle"; // PB: To avoid errors
 	n = n + 1;
 	
 	//  -------------------------------------------------	

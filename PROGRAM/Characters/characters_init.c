@@ -217,7 +217,7 @@ void CreateCharacters()
 				{
 					case ENGLAND:	GiveItem2Character(ch, "Trade_PassportE"); break;
 					case FRANCE:	GiveItem2Character(ch, "Trade_PassportF"); break;
-					case SPAIN:		GiveItem2Character(ch, "Trade_PassportS"); break;
+					case SPAIN:	GiveItem2Character(ch, "Trade_PassportS"); break;
 					case HOLLAND:	GiveItem2Character(ch, "Trade_PassportH"); break;
 					case PORTUGAL:	GiveItem2Character(ch, "Trade_PassportP"); break;
 					case PIRATE: break;	// Nothing - trade passports are not for pirates!

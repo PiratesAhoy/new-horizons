@@ -1,4 +1,4 @@
-string DLG_TEXT[378] = {
+string DLG_TEXT[388] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -377,4 +377,14 @@ string DLG_TEXT[378] = {
 "There, that will do until the ship gets to wherever it's going. Now, back into hiding...",
 "I'm too early. I should return here tomorrow night.",
 "But no later! If I'm too late, the smuggler will leave without me and I may never get away from this island.",
+"Oh Boy! This party is boooooooring! I need to sneak out, or at least find something interesting to do!",
+"...",
+"Oooops! I'm sorry! How embarrassing! I can be so clumsy at times! I'M SOOORRY! I put it right back, you see? Sorry...",
+"[THINKS:] Why was there a key in the vase? Well, nobody'll notice!",
+"What a waste of time! Just as the party was getting more exciting, that crazy lady with the rug beater had to show up!",
+"Well, my business here is done. I better get back to the ship to meet up with the others.",
+"Well, that was something. I hope I could help that young man. But most important, I have the money for the rum. Now I should really get back to the ship and meet the others. Beatrice must be worried already!",
+"...",
+"Well, I may be the punching bag, but you, Chico, you're the scabbard!",
+"I should take the money and get out of here. Little Bea must already be furious.",
 };

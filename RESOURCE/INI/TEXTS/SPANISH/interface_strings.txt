@@ -420,6 +420,22 @@ W{O}
 WNW{ONO}
 NW{NO}
 NNW{NNO}
+Dir_N{N}
+Dir_NNE{NNE}
+Dir_NE{NE}
+Dir_ENE{ENE}
+Dir_E{E}
+Dir_ESE{ESE}
+Dir_SE{SE}
+Dir_SSE{SSE}
+Dir_S{S}
+Dir_SSW{SSO}
+Dir_SW{SO}
+Dir_WSW{OSO}
+Dir_W{O}
+Dir_WNW{ONO}
+Dir_NW{NO}
+Dir_NNW{NNO}
 
 Emblem{Emblema}
 Special Sail{Vela especial}

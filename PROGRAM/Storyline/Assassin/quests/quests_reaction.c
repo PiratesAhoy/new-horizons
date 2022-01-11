@@ -328,7 +328,7 @@ void QuestComplete(string sQuestName)
             ChangeCharacterAddressGroup(CharacterFromID("Pelagius Lizarraga"), "Dungeon 1", "reload", "reloadc3");
 	        LAi_SetPoorType(characterfromID("Pelagius Lizarraga"));
 			Characters[GetCharacterIndex("Pelagius Lizarraga")].dialog.currentnode = "begin_1";
-			SetOfficersIndex(PChar, -1, GetCharacterIndex("Chico Cois"));
+			if(SetOfficersIndex(PChar, -1, GetCharacterIndex("Chico Cois")) == GetCharacterIndex("Chico Cois")) SetOfficersIndex(PChar, 1, GetCharacterIndex("Chico Cois"));
 			AddQuestRecord("Apprenticeship", "5");
             LAi_QuestDelay("viagem_timer2", 0.0);				
 		break;		

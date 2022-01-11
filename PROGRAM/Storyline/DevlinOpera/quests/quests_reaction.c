@@ -611,9 +611,14 @@ void QuestComplete(string sQuestName)
 			//Lai_SetCheckMinHP(Pchar, 40.0, false, "Blaze_lost_first_fight");
 			//Lai_SetCheckMinHP(CharacterFromID("Dirty Cesar"), 110.0, true, "Blaze_won_first_fight");
                         LAi_SetCheckMinHP(characterFromID("Dirty Cesar"), LAi_GetCharacterHP(characterFromID("Dirty Cesar"))-10.0, false, "Blaze_won_first_fight");
+
+			PChar.quest.Blaze_won_first_fight.win_condition.l1 = "NPC_Stunned";
+			PChar.quest.Blaze_won_first_fight.win_condition.l1.character = "Dirty Cesar";
+			PChar.quest.Blaze_won_first_fight.win_condition = "Blaze_won_first_fight";
 		break;
 
 		case "Blaze_lost_first_fight":
+			PChar.quest.Blaze_won_first_fight.over = "yes";
                         LAi_RemoveCheckMinHP(CharacterFromID("Dirty Cesar"));
 
 			LAi_type_actor_Reset(CharacterFromID("Dirty Cesar"));
@@ -641,6 +646,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Blaze_won_first_fight":
+			PChar.quest.Blaze_won_first_fight.over = "yes";
                         LAi_RemoveCheckMinHP(PChar);
 
 			LAi_type_actor_Reset(CharacterFromID("Dirty Cesar"));
@@ -689,9 +695,14 @@ void QuestComplete(string sQuestName)
 			//Lai_SetCheckMinHP(Pchar, 40.0, false, "Blaze_lost_second_fight");
 			//Lai_SetCheckMinHP(CharacterFromID("Chico Malo"), 115.0, true, "Blaze_won_second_fight");
                         LAi_SetCheckMinHP(characterFromID("Chico Malo"), LAi_GetCharacterHP(characterFromID("Chico Malo"))-10.0, false, "Blaze_won_second_fight");
+
+			PChar.quest.Blaze_won_second_fight.win_condition.l1 = "NPC_Stunned";
+			PChar.quest.Blaze_won_second_fight.win_condition.l1.character = "Chico Malo";
+			PChar.quest.Blaze_won_second_fight.win_condition = "Blaze_won_second_fight";
 		break;
 
 		case "Blaze_lost_second_fight":
+			PChar.quest.Blaze_won_second_fight.over = "yes";
 			LAi_type_actor_Reset(CharacterFromID("Chico Malo"));
                         LAi_RemoveCheckMinHP(CharacterFromID("Chico Malo"));
 
@@ -704,6 +715,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Blaze_won_second_fight":
+			PChar.quest.Blaze_won_second_fight.over = "yes";
                         LAi_RemoveCheckMinHP(PChar);
 
 			LAi_type_actor_Reset(CharacterFromID("Chico Malo"));
@@ -733,7 +745,16 @@ void QuestComplete(string sQuestName)
 			LAi_ActorRunToLocator(characterFromID("Chico Malo"), "reload", "reload2", "Chico_disappears", 25.0);
 
 //			LAi_SetHP(PChar, LAI_DEFAULT_HP, LAI_DEFAULT_HP);
-			EquipCharacterByItem(Pchar, "blade21");
+			NPChar = characterFromID("Blaze Devlin");
+			if(GetCharacterEquipByGroup(NPChar, BLADE_ITEM_TYPE) != "")
+			{
+				EquipCharacterByItem(Pchar, GetCharacterEquipByGroup(NPChar, BLADE_ITEM_TYPE));
+			}
+			else
+			{
+				EquipCharacterByItem(Pchar, "blade21");
+			}
+//			EquipCharacterByItem(Pchar, "blade21");
 			LAi_ActorRunToLocator(characterFromID("Toni Haraldo"), "goto", "goto19", "",3);
 
 			LAi_SetHP(CharacterFromID("Audience1"), 10.0, 10.0);
@@ -787,8 +808,16 @@ void QuestComplete(string sQuestName)
 		case "Blaze_lost_second_fight2":
 			DoQuestReloadToLocation("Recovery_House", "goto", "goto3" ,"Blaze_Recovered");
 
-			LAi_SetHP(PChar, LAI_DEFAULT_HP, LAI_DEFAULT_HP);
-			EquipCharacterByItem(Pchar, "blade21");
+//			LAi_SetHP(PChar, LAI_DEFAULT_HP, LAI_DEFAULT_HP);
+			NPChar = characterFromID("Blaze Devlin");
+			if(GetCharacterEquipByGroup(NPChar, BLADE_ITEM_TYPE) != "")
+			{
+				EquipCharacterByItem(Pchar, GetCharacterEquipByGroup(NPChar, BLADE_ITEM_TYPE));
+			}
+			else
+			{
+				EquipCharacterByItem(Pchar, "blade21");
+			}
 
 			ChangeCharacterAddressGroup(characterFromID("Toni Haraldo"), "none", "", "");
 			ChangeCharacterAddressGroup(characterFromID("Chico Malo"), "none", "", "");
@@ -1104,9 +1133,9 @@ void QuestComplete(string sQuestName)
 			}
 			else
 			{
-/*
 				ChangeCharacterAddressGroup(characterFromID("Bonnie Devlin"), "Falaise_de_fleur_port_01", "officers", "sea_1");
 				ChangeCharacterAddressGroup(characterFromID("Blaze Devlin"), "Falaise_de_fleur_port_01", "officers", "sea_2");
+/*
 				Pchar.quest.Martinica_Debriefing.win_condition.l1 = "locator";
 				Pchar.quest.Martinica_Debriefing.win_condition.l1.location = "Falaise_de_fleur_port_01";
 				Pchar.quest.Martinica_Debriefing.win_condition.l1.locator_group = "reload";
@@ -1158,6 +1187,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.old_blade = GetCharacterEquipByGroup(PChar, BLADE_ITEM_TYPE);	// Remember what you were carrying
 			PChar.quest.old_gun = GetCharacterEquipByGroup(PChar, GUN_ITEM_TYPE);		// Presence of these attributes means items need to be restored
 			TempRemoveItems(Pchar);
+			StoreOfficers(PChar.id);
 			NPChar = characterFromID("Bonnie Devlin");
 			GiveItem2Character(Pchar, "bladeX4");
 			if(GetCharacterEquipByGroup(NPChar, BLADE_ITEM_TYPE) != "")
@@ -1203,8 +1233,9 @@ void QuestComplete(string sQuestName)
 //			TakeItemFromCharacter(Pchar, "pistol5+2")
 			PChar.quest.old_blade = GetCharacterEquipByGroup(PChar, BLADE_ITEM_TYPE);	// Remember what you were carrying
 			PChar.quest.old_gun = GetCharacterEquipByGroup(PChar, GUN_ITEM_TYPE);		// Presence of these attributes means items need to be restored
-			TempRemoveItems(Pchar);
-			GiveItem2Character(Pchar, "bladeX4");
+			TempRemoveItems(PChar);
+			StoreOfficers(PChar.id);
+			GiveItem2Character(PChar, "bladeX4");
 			NPChar = characterFromID("Blaze Devlin");
 			if(GetCharacterEquipByGroup(NPChar, BLADE_ITEM_TYPE) != "")
 			{
@@ -1243,11 +1274,12 @@ void QuestComplete(string sQuestName)
 			PChar.sex = "woman";
                         PChar.model.animation = "Beatrice";
 			AddPassenger(Pchar, characterFromID("Bonnie Devlin"), 0);
-			SetOfficersIndex(Pchar, 1, getCharacterIndex("Bonnie Devlin"));
-			LAi_SetImmortal(characterFromID("Bonnie Devlin"), true);
-			AddPassenger(Pchar, characterFromID("Blaze Devlin"), 0);
-			SetOfficersIndex(Pchar, 2, getCharacterIndex("Blaze Devlin"));
-			LAi_SetImmortal(characterFromID("Blaze Devlin"), true);
+			SetOfficersIndex(PChar, 1, getCharacterIndex("Bonnie Devlin"));
+			LAi_SetImmortal(CharacterFromID("Bonnie Devlin"), true);
+			AddPassenger(PChar, characterFromID("Blaze Devlin"), 0);
+			SetOfficersIndex(PChar, 2, getCharacterIndex("Blaze Devlin"));
+			LAi_SetImmortal(CharacterFromID("Blaze Devlin"), true);
+			RestoreOfficers(PChar.id);
 			Pchar.name = "Beatrice";
 			Pchar.lastname = "Devlin";
 /*

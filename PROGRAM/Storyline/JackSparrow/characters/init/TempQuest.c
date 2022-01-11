@@ -1219,6 +1219,7 @@ void CreateTempQuestCharacters(ref n)
 	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 990.0, 990.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Konrad";

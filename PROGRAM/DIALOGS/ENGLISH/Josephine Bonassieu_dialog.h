@@ -1,4 +1,4 @@
-string DLG_TEXT[41] = {
+string DLG_TEXT[44] = {
 "Welcome! Take a seat at the free table. What would you like to order, ",
 "?",
 "Nothing. I'm here on business.",
@@ -40,4 +40,7 @@ string DLG_TEXT[41] = {
 "Where is she?",
 "At this hour, I suppose at home. It's the house next to the exit to the jungles.",
 "Thanks!",
+"Actually, we're looking for Short Jack Gold. Have you heard of him?",
+"Ah! The great Short Jack Gold... You won't find him in here M'dear. Try the Townhall. He's usually in there working on some program or another for the island with the rest of the Island Council.",
+"O.K. Thanks.",
 };

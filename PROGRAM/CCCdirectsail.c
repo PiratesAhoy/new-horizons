@@ -1158,7 +1158,7 @@ return;		// LDH 26Mar09
 }
 
 // LDH 14Jan09
-string Directions[16] = {"N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW",};
+string Directions[16] = {"Dir_N","Dir_NNE","Dir_NE","Dir_ENE","Dir_E","Dir_ESE","Dir_SE","Dir_SSE","Dir_S","Dir_SSW","Dir_SW","Dir_WSW","Dir_W","Dir_WNW","Dir_NW","Dir_NNW",};
 string GetCompassDirFromHeading16(float ay)
 {
 

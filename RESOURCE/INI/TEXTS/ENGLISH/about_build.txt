@@ -98,7 +98,7 @@ About_Build_4
 
 - You can fly other nations' flags through F2>Relations. If it is a false flag, you might be recognized. The chance for this increases if you are famous and as you approach more closely to friendly ships that are of an enemy nation. But flying your Personal flag, the sea relations will simply be the same as your real relations.
 
-- Steamship engines needs planks to work.
+- Steamship engines need planks to work.
 
 }
 
@@ -115,6 +115,8 @@ About_Build_5
 WARNING! You can mess things up there! If you edit this file, please follow the instructions at the end of every line! If there's no description and you don't know what you're doing, better to leave it be.
 
 - At the bottom of the mentioned file, you can enable/disable the sidestep ([A] and [D]). We couldn't make the collision control work, so you can slide through the world. Default setting: disabled.
+
+- You can change the appearance of your sails in F2>Ship>Sails.
 
 - Why are there two numbers for skills on the character sheet?
 The first is the character's "native" skill; the second is the skill after bonuses and penalties from items AND/OR ship class have been taken into account.
@@ -145,7 +147,7 @@ About_Build_6
 
 - The Apothecary in Bridgetown offers interesting options, such as increasing your maximum health. Pay him a visit to find out what is required.
 
-- There are some strange coins from a well-known movie out in the Caribbean. It is said that whoever finds and carries one with him/her, a terrible curse will fall upon him/her (and even their crew too, if such coins find their way into the weaponslocker).
+- There are some strange coins from a well-known movie set in the Caribbean. It is said that whoever finds and carries one will suffer a terrible curse (and even the crew too, if such coins find their way into the weapons locker).
 
 - The Opium Den on Jamaica offers skill-enhancing tattoos.
 

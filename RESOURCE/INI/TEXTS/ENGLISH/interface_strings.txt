@@ -420,6 +420,22 @@ W{W}
 WNW{WNW}
 NW{NW}
 NNW{NNW}
+Dir_N{N}
+Dir_NNE{NNE}
+Dir_NE{NE}
+Dir_ENE{ENE}
+Dir_E{E}
+Dir_ESE{ESE}
+Dir_SE{SE}
+Dir_SSE{SSE}
+Dir_S{S}
+Dir_SSW{SSW}
+Dir_SW{SW}
+Dir_WSW{WSW}
+Dir_W{W}
+Dir_WNW{WNW}
+Dir_NW{NW}
+Dir_NNW{NNW}
 
 Emblem{Emblem}
 Special Sail{Special Sail}
@@ -2138,7 +2154,16 @@ Hint: To make an officer available as an escort, assign that officer to one of t
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
 Capitán{Capitán}
 
+You succumb to the Carib poison.{You succumb to the Carib poison.}
+has been executed.{has been executed.}
+Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!{Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!}
+You failed to rescue{You failed to rescue}
+
+Two months later...{Two months later...}
+
 Three days later...{Three days later...}
+
+The fort gate is closed. Wait for Admiral Hernandez to open it.{The fort gate is closed. Wait for Admiral Hernandez to open it.}
 
 A French infantry unit suddenly appears and attacks you!{A French infantry unit suddenly appears and attacks you!}
 Several Conquistadores attack you!{Several Conquistadores attack you!}

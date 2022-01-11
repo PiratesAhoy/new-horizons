@@ -1611,7 +1611,7 @@ void LocationInitTurks(ref n)
 	Locations[n].reload.l4.label = "";
 	Locations[n].locators_radius.reload.reload2_back = 2.0;*/
 
-	Locations[n].island = "Hispaniola"; // NK 04-08-29
+	Locations[n].island = "Turks"; // NK 04-08-29
 	n = n + 1;
 	// -----------------Mosh D24--------------------
 	Locations[n].filespath.models = "locations\Inside\Dungeon_4";
