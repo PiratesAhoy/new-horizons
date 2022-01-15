@@ -128,10 +128,11 @@ void StartDialogMain()
 	DelEventHandler("frame", "StartDialogMain");
 
 // KK -->
+	CreateEntity(&Dialog, "LegacyDialog");
 	if (bNewInterface)
-		CreateEntity(&Dialog, "dialg2");
-	else
-		CreateEntity(&Dialog, "dialog");
+	{
+		Dialog.texture = "dialog/Dialg2.tga";
+	}
 // KK <--
 
 	Log_SetActiveAction("Nothing");//MAXIMUS
@@ -251,10 +252,11 @@ void SelfDialog(ref Character)
 	Dialog.CurrentNode = CharacterRef.Dialog.CurrentNode;
 	//Trace("SelfDialog: dialog path for self character <" + Character.id + "> = " + FullDialogPath);
 // KK -->
+	CreateEntity(&Dialog, "LegacyDialog");
 	if (bNewInterface)
-		CreateEntity(&Dialog, "dialg2");
-	else
-		CreateEntity(&Dialog, "dialog");
+	{
+		Dialog.texture = "dialog/Dialg2.tga";
+	}
 // <-- KK
 	Log_SetActiveAction("Nothing");//MAXIMUS
 	LogsVisible(false); // KK
