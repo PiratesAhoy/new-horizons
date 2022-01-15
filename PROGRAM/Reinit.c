@@ -451,6 +451,7 @@ void Reinit(bool start, bool show)
 					{
 						ch.Fort.Cannons.Type.1 = CANNON_TYPE_LONG_LBS42;
 						ch.Fort.Cannons.Type.2 = CANNON_TYPE_CARRONADE_LBS68;
+						ch.Fort.Cannons.Type.3 = -1;
 					}
 				}
 			}
@@ -477,6 +478,7 @@ void Reinit(bool start, bool show)
 					{
 						ch.Fort.Cannons.Type.1 = CANNON_TYPE_CULVERINE_LBS24;
 						ch.Fort.Cannons.Type.2 = CANNON_TYPE_CANNON_LBS32;
+						ch.Fort.Cannons.Type.3 = -1;
 					}
 				}
 			}

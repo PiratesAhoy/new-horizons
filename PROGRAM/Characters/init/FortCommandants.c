@@ -49,6 +49,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 18; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 30; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Redmond";
@@ -100,6 +102,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 20; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 0; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	ch.town = "Oxbay"; // RM
 	AddGameCharacter(n, ch);
@@ -149,6 +153,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 12; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 20; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	ch.greeting = "Gr_Greenford Commander";
 	LAi_SetHP(ch, 100.0, 100.0);
 	ch.town = "Greenford"; // RM
@@ -200,6 +206,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 22; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 16; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Falaise de Fleur";
@@ -252,6 +260,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 15; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 20; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Conceicao";
@@ -304,6 +314,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 15; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 22; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Douwesen";
@@ -357,6 +369,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 12; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 22; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Isla Muelle";
@@ -413,6 +427,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 29; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 40; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "St John's";
@@ -465,6 +481,8 @@ void CreateFortCommandantsCharacters(ref n)
 	}
 	ch.Fort.Cannons.Type.1.Quantity = 5; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 10; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	// KNB <--
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
@@ -519,6 +537,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 30; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 40; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Santiago";
@@ -572,6 +592,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 30; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 40; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Havana";
@@ -625,6 +647,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 30; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 40; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Pointe a Pitre"; // KK
@@ -678,6 +702,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 29; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 40; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Philipsburg";
@@ -731,6 +757,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 6; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 14; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Marigot";
@@ -784,6 +812,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 30; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 40; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Port au Prince";
@@ -837,6 +867,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 30; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 40; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Santo Domingo";
@@ -889,6 +921,8 @@ void CreateFortCommandantsCharacters(ref n)
 	}
 	ch.Fort.Cannons.Type.1.Quantity = 30; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 40; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	// KNB <--
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
@@ -943,6 +977,8 @@ void CreateFortCommandantsCharacters(ref n)
 	}
 	ch.Fort.Cannons.Type.1.Quantity = 6; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 14; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	// KNB <--
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
@@ -996,6 +1032,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 13; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 25; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Willemstad";
@@ -1048,6 +1086,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 0; //69?; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 88; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Eleuthera";
@@ -1152,6 +1192,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 31;
 	ch.Fort.Cannons.Type.2.Quantity = 30;
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Cartagena";
@@ -1202,6 +1244,8 @@ void CreateFortCommandantsCharacters(ref n)
 	// KNB <--
 	ch.Fort.Cannons.Type.1.Quantity = 22; // KK
 	ch.Fort.Cannons.Type.2.Quantity = 28; // KK
+	ch.Fort.Cannons.Type.3 = -1;
+	ch.Fort.Cannons.Type.3.Quantity = 0;
 	LAi_SetHP(ch, 100.0, 100.0);
 	// RM -->
 	ch.town = "Charlestown";
