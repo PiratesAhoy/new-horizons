@@ -174,10 +174,17 @@ void WhrCreateSkyEnvironment()
 	}
 	else
 	{
-		Sky.Dir = Whr_GetString(aSky,"Dir");
+		Sky.Dir = Whr_GetString(aSky, "Dir");
 		Sky.Color = Whr_GetColor(aSky,"Color");
 	}
     //<-- JRH
+
+	//Hammie -->
+	string dir = Sky.Dir;
+	DeleteAttribute(&Sky, "Dir");
+	Sky.Dir.d1 = dir;
+	Sky.Dir = dir;
+	//<-- Hammie
 
 	Sky.Angle = Whr_GetFloat(aSky,"Angle");
 	Sky.RotateSpeed = Whr_GetFloat(aSky,"Rotate");
