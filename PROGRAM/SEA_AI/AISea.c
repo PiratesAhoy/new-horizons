@@ -1,4 +1,5 @@
 object	Sea;
+object	ShipLights;
 
 void SeaAI_GetLayers()
 {
@@ -22,6 +23,17 @@ void CreateSea(int sExecuteLayer, int sRealizeLayer)
 	MoveSeaToLayers(sExecuteLayer, sRealizeLayer);
 
 	LayerFreeze(SEA_REFLECTION, false);
+
+	if (LoadSegment("sea_ai\ShipLights.c"))
+	{
+		// InitShipLights();
+		UnloadSegment("sea_ai\ShipLights.c");
+	}
+	CreateEntity(&ShipLights, "ShipLights");
+	ReloadProgressUpdate();
+	LayerAddObject(sExecuteLayer, &ShipLights, 0);
+	LayerAddObject(sRealizeLayer, &ShipLights, -1);
+	LayerAddObject(SEA_SUNROAD, &ShipLights, -1);
 
 	Sea.AbordageMode = false;
 }
