@@ -490,7 +490,7 @@ bool LoadLocation(ref loc)
 	} else {
 		if (isTown == true && cdistrict == 1) LocLoadShips(loc);
 	}
-	CreateFlagEnvironment();
+	// CreateFlagEnvironment();
 	ReloadProgressUpdate();
 // <-- KK
 	//Animals===========================================================================

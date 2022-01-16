@@ -193,17 +193,17 @@ void CreateSeaEnvironment()
 	LayerAddObject(SEA_EXECUTE, &SinkEffect, 65531);
 	LayerAddObject(SEA_REALIZE, &SinkEffect, 65531);
 
-	CreateEntity(&PeopleOnShip, "PEOPLE_ON_SHIP");	ReloadProgressUpdate();
-	LayerAddObject(SEA_EXECUTE, &PeopleOnShip, 100);
-	LayerAddObject(SEA_REALIZE, &PeopleOnShip, 100);
+	// CreateEntity(&PeopleOnShip, "PEOPLE_ON_SHIP");	ReloadProgressUpdate();
+	// LayerAddObject(SEA_EXECUTE, &PeopleOnShip, 100);
+	// LayerAddObject(SEA_REALIZE, &PeopleOnShip, 100);
 
 	// 1.03 - CreateEntity(&SeaLocatorShow, "SeaLocatorShow"); ReloadProgressUpdate();
 	// KK LayerAddObject(SEA_REALIZE, &SeaLocatorShow, -1); // since we hadn't created entity...
 
-	CreateEntity(&Telescope, "TELESCOPE");			ReloadProgressUpdate();
-	LayerAddObject(SEA_EXECUTE, &Telescope, -1);
-	LayerAddObject(SEA_REALIZE, &Telescope, -3);
-	TelescopeInitParameters(&Telescope);
+	// CreateEntity(&Telescope, "TELESCOPE");			ReloadProgressUpdate();
+	// LayerAddObject(SEA_EXECUTE, &Telescope, -1);
+	// LayerAddObject(SEA_REALIZE, &Telescope, -3);
+	// TelescopeInitParameters(&Telescope);
 
 	CreateSeaAnimals();								ReloadProgressUpdate();
 
@@ -871,7 +871,7 @@ void SeaLogin(ref Login)
 	}
 	trace("SEA: added ships");
 
-	CreateFlagEnvironment();
+	// CreateFlagEnvironment();
 
 	// set ship for sea camera
 	SeaCameras_SetShipForSeaCamera(rPlayer);
