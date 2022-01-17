@@ -359,7 +359,7 @@ void Main()
 
 	SetEventHandler("Control Activation","proc_break_video",0);
 	SetEventHandler(EVENT_END_VIDEO,"Main_LogoVideo",0);
-	InterfaceStates.videoIdx = 0;
+	InterfaceStates.videoIdx = 4;
 	Event(EVENT_END_VIDEO);
 	ReloadProgressEnd();
 }
