@@ -1,4 +1,4 @@
-#include "battle_interface\msg_control.h"
+#include "storm-engine\battle_interface\msg_control.h"
 #include "sea_ai\script_defines.h"
 #include "battle_interface\landinterface.c"
 #include "battle_interface\ispyglass.c"
