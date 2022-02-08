@@ -1,6 +1,7 @@
 #ifndef COMMON_EVENT_HPP_SCRIPT
 #define COMMON_EVENT_HPP_SCRIPT
 
+// TODO: Update engine to support "ColonyCaptured" event
 #define COLONY_CAPTURED			"ColonyCaptured" // KK
 #define FORT_DESTROYED			"FortDestroyed"
 #define ABORDAGE_START_EVENT		"AbordageStartEvent"

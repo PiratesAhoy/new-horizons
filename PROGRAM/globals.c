@@ -1,5 +1,5 @@
-#include "Sound\sound.h"
-#include "messages.h"
+#include "storm-engine\sound.h"
+#include "storm-engine\messages.h"
 #include "Sound\sound.c"
 
 //--------------------------------------------------------------------

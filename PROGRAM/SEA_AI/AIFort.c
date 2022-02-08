@@ -1,4 +1,4 @@
-#include "sail_msg.h"
+#include "storm-engine\sail_msg.h"
 
 #define		MAX_FORTS						16
 #define		MIN_CANNON_DAMAGE_DISTANCE		20.0
