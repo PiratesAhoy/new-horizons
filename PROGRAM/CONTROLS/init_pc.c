@@ -63,15 +63,10 @@ void ExternControlsInit(bool bFirst)
 	MapControlToGroup("ChrBackward","FightModeControls");
 	MapControlToGroup("ChrBackward","BattleInterfaceControls");
 
-	CI_CreateAndSetControls( "PrimaryLand", "Sidestep_left_on", CI_GetKeyCode(CTL_LAND_SIDESTEP_LEFT), 0, true );
-	MapControlToGroup("Sidestep_left_on", "FightModeControls");
-	CI_CreateAndSetControls( "PrimaryLand", "Sidestep_left_off", CI_GetKeyCode(CTL_LAND_SIDESTEP_LEFT), INVERSE_CONTROL, true );	// set fix option_screen.c
-	MapControlToGroup("Sidestep_left_off", "FightModeControls");
-
-	CI_CreateAndSetControls( "PrimaryLand", "Sidestep_right_on", CI_GetKeyCode(CTL_LAND_SIDESTEP_RIGHT), 0, true );
-	MapControlToGroup("Sidestep_right_on", "FightModeControls");
-	CI_CreateAndSetControls( "PrimaryLand", "Sidestep_right_off", CI_GetKeyCode(CTL_LAND_SIDESTEP_RIGHT), INVERSE_CONTROL, true );	// set fix option_screen.c
-	MapControlToGroup("Sidestep_right_off", "FightModeControls");
+	CI_CreateAndSetControls( "PrimaryLand", "ChrStrafeLeft", CI_GetKeyCode(CTL_LAND_SIDESTEP_LEFT), 0, true );
+	MapControlToGroup("ChrStrafeLeft", "FightModeControls");
+	CI_CreateAndSetControls( "PrimaryLand", "ChrStrafeRight", CI_GetKeyCode(CTL_LAND_SIDESTEP_RIGHT), 0, true );
+	MapControlToGroup("ChrStrafeRight", "FightModeControls");
 
 	CI_CreateAndSetControls( "PrimaryLand", "ChrRun", CI_GetKeyCode(CTL_LAND_RUN), 0, true );
 	MapControlToGroup("ChrRun","FightModeControls");
