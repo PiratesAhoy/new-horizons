@@ -133,6 +133,10 @@ void StartDialogMain()
 	{
 		Dialog.texture = "dialog/Dialg2.tga";
 	}
+	else
+	{
+		Dialog.texture = "dialog/dialog.tga";
+	}
 // KK <--
 
 	Log_SetActiveAction("Nothing");//MAXIMUS
@@ -256,6 +260,10 @@ void SelfDialog(ref Character)
 	if (bNewInterface)
 	{
 		Dialog.texture = "dialog/Dialg2.tga";
+	}
+	else
+	{
+		Dialog.texture = "dialog/dialog.tga";
 	}
 // <-- KK
 	Log_SetActiveAction("Nothing");//MAXIMUS
