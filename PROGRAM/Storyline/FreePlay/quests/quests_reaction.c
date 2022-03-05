@@ -2353,6 +2353,132 @@ void QuestComplete(string sQuestName)
 //    Agent: GR
 ///////////////////////////////////////////////////////////////
 
+// Starting quest -->
+		case "AgentStart_get_room":	// Triggered by dialog with "TQ_Char1", then renting tavern room
+			StartQuestMovie(true, false, false);
+			TrackQuestMovie("start","AgentStart_get_room");
+			LAi_QuestDelay("AgentStart_get_room2", 1.5);
+		break;
+
+		case "AgentStart_get_room2":
+			NPChar = CharacterFromID("TQ_Char1");
+			ChangeCharacterAddressGroup(NPChar, PChar.location, "reload", "reload1");
+			EndQuestMovie();TrackQuestMovie("end","AgentStart_get_room2");
+			LAi_SetActorType(NPChar);
+			NPChar.Dialog.CurrentNode = "agent_start_talk_in_room";
+			LAi_ActorDialog(NPChar, PChar, "", 5.0, 5.0);
+		break;
+
+		case "AgentStart_Prepare_Leave_Room":	// Triggered by dialog with "TQ_Char1" in tavern room if your ship is in port
+			Characters[GetCharacterIndex("TQ_Char1")].location = "None";
+			PChar.quest.AgentStartPrepareLeaveRoom2.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.AgentStartPrepareLeaveRoom2.win_condition.l1.location = PChar.location;
+			PChar.quest.AgentStartPrepareLeaveRoom2.win_condition = "AgentStart_Prepare_Leave_Room2";
+		break;
+
+		case "AgentStart_Prepare_Leave_Room2":
+			PChar.quest.agent_start.agent_tavern = PChar.location;
+			PChar.quest.AgentStartBackToTavern.win_condition.l1 = "ExitFromLocation";
+			PChar.quest.AgentStartBackToTavern.win_condition.l1.location = PChar.location;
+			PChar.quest.AgentStartBackToTavern.win_condition = "AgentStart_Back_To_Tavern";
+		break;
+
+		case "AgentStart_Back_To_Tavern":
+			NPChar = CharacterFromID("TQ_Char1");
+			ChangeCharacterAddressGroup(NPChar, PChar.quest.agent_start.agent_tavern, "goto", "goto2");
+			LAi_SetCitizenType(NPChar);
+			NPChar.Dialog.CurrentNode = "agent_start_ship_moved";
+		break;
+
+		case "AgentStart_follow_to_ship":	// Triggered by dialog with"TQ_Char1"
+			NPChar = CharacterFromID("TQ_Char1");
+			NPChar.Dialog.CurrentNode = "First time";
+			NPChar.name = NPChar.old.name;
+			if (CheckAttribute(NPChar, "middlename")) NPChar.middlename = NPChar.old.middlename;
+			NPChar.lastname = NPChar.old.lastname;
+			NPChar.nation = Characters[GetCharacterIndex("Malcolm Hatcher")].nation;
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollowEverywhere(NPChar, "", 10.0);
+			LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
+			DisableFastTravel(true);
+			PChar.quest.AgentStart_arrived_ship.win_condition.l1 = "location";
+			PChar.quest.AgentStart_arrived_ship.win_condition.l1.location = PChar.location.from_sea;
+			PChar.quest.AgentStart_arrived_ship.win_condition = "AgentStart_arrived_ship";
+		break;
+
+		case "AgentStart_arrived_ship":
+			DisableFastTravel(false);
+			i = sti(Characters[GetCharacterIndex("TQ_Char1")].nation);
+			if (i == PERSONAL_NATION) i = FindFriendlyNation2Nation(PERSONAL_NATION);
+			switch(i)
+			{
+				case ENGLAND:
+					if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) PChar.quest.agent_start.HQ = "Tortuga_townhall";
+					else PChar.quest.agent_start.HQ = "Antigua_Residence";
+				break;
+
+				case FRANCE:
+					if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) PChar.quest.agent_start.HQ = "Tortuga_townhall";
+					else PChar.quest.agent_start.HQ = "PaP_Academy";
+				break;
+
+				case SPAIN:
+					PChar.quest.agent_start.HQ = "Havana_House_03";
+				break;
+
+				case PIRATE:
+					PChar.quest.agent_start.HQ = "QC_residence";
+				break;
+
+				case HOLLAND:
+					if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) PChar.quest.agent_start.HQ = "Tortuga_townhall";
+					else PChar.quest.agent_start.HQ = "Willemstad_townhall";
+				break;
+
+				case PORTUGAL:
+					PChar.quest.agent_start.HQ = "Conceicao_townhall";
+				break;
+
+				case GUEST1_NATION:
+					if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) PChar.quest.agent_start.HQ = "Eleuthera_townhall";
+					else PChar.quest.agent_start.HQ = Characters[GetCharacterIndex("Swedish Emissary")].location;
+				break;
+			}
+			NPChar = CharacterFromID("TQ_Char1");
+			LAi_SetActorType(NPChar);
+			LAi_type_Actor_Reset(NPChar);
+			NPChar.Dialog.CurrentNode = "agent_start_where_to_go";
+//			LAi_SetActorType(NPChar);
+//			LAi_ActorWaitDialog(NPChar, PChar);
+//			LAi_ActorDialog(NPChar, PChar, "AgentStart_Prepare_Board_Ship", 5.0, 5.0);
+			LAi_ActorDialog(NPChar, PChar, "AgentStart_Prepare_Board_Ship", -1, -1);
+		break;
+
+		case "AgentStart_Prepare_Board_Ship":
+			NPChar = CharacterFromID("TQ_Char1");
+			LAi_SetActorType(NPChar);
+			LAi_ActorFollowEverywhere(NPChar, "", 10.0);
+			PChar.quest.AgentStart_arrived_destination.win_condition.l1 = "location";
+			PChar.quest.AgentStart_arrived_destination.win_condition.l1.location = PChar.quest.agent_start.HQ;
+			PChar.quest.AgentStart_arrived_destination.win_condition = "AgentStart_arrived_destination";
+		break;
+
+		case "AgentStart_arrived_destination":
+			NPChar = CharacterFromID("TQ_Char1");
+			ChangeRMRelation(PChar, sti(NPChar.nation), 1.0);
+			LAi_SetActorType(NPChar);
+			LAi_type_Actor_Reset(NPChar);
+			NPChar.Dialog.CurrentNode = "agent_start_reward";
+			LAi_ActorDialog(NPChar, PChar, "AgentStart_ended", 5.0, 5.0);
+		break;
+
+		case "AgentStart_ended":
+			Characters[GetCharacterIndex("TQ_Char1")].location = "None";
+		break;
+
+// <-- Starting quest
+
+// Trophy quest -->
 		case "AgentQuest_setup":	// Triggered by dialog with a governor
 			sld = CharacterFromID("TQ_Captain1");
 			sld.fantomtype = "war";
@@ -2368,6 +2494,16 @@ void QuestComplete(string sQuestName)
 			if (PChar.sex == "woman") NPChar.Dialog.CurrentNode = "help_you";
 			else NPChar.Dialog.CurrentNode = "busy";
 			SetRandomNameToCharacter(NPChar);
+			switch(sti(NPChar.nation))
+			{
+				case ENGLAND:  NPChar.greeting = "Gr_redmond Citizen"; break;
+				case FRANCE:   NPChar.greeting = "Gr_falaise de fleur citizen"; break;
+				case SPAIN:    NPChar.greeting = "Gr_isla muelle citizen"; break;
+				case PIRATE:   NPChar.greeting = "Gr_QC Citizen"; break;
+				case HOLLAND:  NPChar.greeting = "Gr_Douwesen Citizen"; break;
+				case PORTUGAL: NPChar.greeting = "Gr_Conceicao Citizen"; break;
+				NPChar.greeting = "Gr_Herald";
+			}
 			LAi_SetStayType(NPChar);
 
 
@@ -2776,7 +2912,6 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "AgentQuest_wait_till_arrived":
-//			AddDataToCurrent(0, 0, 10 + rand(5), false);
 			WaitDate("", 0, 0, 10 + rand(5), 0, 0);
 			LAi_Fade("AgentQuest_ship_arrives", "AgentQuest_player_stands_up");
 		break;
@@ -3509,6 +3644,7 @@ void QuestComplete(string sQuestName)
 		case "Agentquest_refused_reset":
 			DeleteAttribute(PChar, "quest.agentquest");
 		break;
+// <-- Trophy quest
 
 		PChar.questnotfound = true; // PB: Testing
 	}

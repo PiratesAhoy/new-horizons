@@ -230,7 +230,7 @@ void StartStoryLine()
 			DeleteAttribute(ch, "questchar")
 			SetRandomNameToCharacter(ch);
 			ch.professionalnavy = iNation;
-			SetRank(ch, iNation, 12);
+			SetRank(ch, iNation, 7); // GR: was 12, which would be the chief of the entire navy sitting at a desk in the nation's capital!
 			switch(iNation)
 			{
 				case ENGLAND:

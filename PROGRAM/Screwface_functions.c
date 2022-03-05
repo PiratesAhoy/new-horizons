@@ -281,7 +281,8 @@ bool CheckAllShips(string type, bool initialize)
 					if (CheckAttribute(chr, "PlayerShip") && !HasThisShip(chr.PlayerShip))	bCheckInitial = true;	// GR: If you are already logged and the log is out of date, update it
 					if (bCheckInitial) CheckInitialFlagRelations(chr, visibility_range, ship_range);
 				}
-				Recognized = CheckForMainCharacterfalseflag(chr, visibility_range, ship_range);
+//				Recognized = CheckForMainCharacterfalseflag(chr, visibility_range, ship_range);
+				Recognized = Recognized || CheckForMainCharacterfalseflag(chr, visibility_range, ship_range);
 			}
 		}
 	}
@@ -470,9 +471,10 @@ void CheckInitialFlagRelations(ref chr, float visibility_range, float ship_range
 
 bool CheckForMainCharacterfalseflag(ref chr, float visibility_range, float ship_range)
 {
-	if (IsCompanion(chr))						return false; // Companions don't care
-	if (CheckForPirateException(chr))			return false; // You are friendly to the pirates, flying a pirate flag and the town is tolerant of pirates
-	if (GetAttribute(chr, "skipFalseFlag"))		return false; // Quest ship that will always believe your false flag
+	if (IsCompanion(chr))				return false; // Companions don't care
+	if (CheckForPirateException(chr))		return false; // You are friendly to the pirates, flying a pirate flag and the town is tolerant of pirates
+	if (CheckAttribute(chr, "skipFalseFlag"))	return false; // Quest ship that will always believe your false flag
+	if (iForceDetectionFalseFlag == -1)		return false; // Don't calculate chances because -1 means never recognise you
 
 	ref PChar = GetMainCharacter();
 
@@ -483,9 +485,15 @@ bool CheckForMainCharacterfalseflag(ref chr, float visibility_range, float ship_
 	{
 		if (ship_range < visibility_range)
 		{
-			chance = 0.5 + chance; // 0.5 will be decreased if you are too easily recognized
+ trace("CheckForMainCharacterfalseflag: visibility range = " + visibility_range + ", actual range = " + ship_range);
+ trace("CheckForMainCharacterfalseflag: range factor to recognition = " + chance);
+ trace("CheckForMainCharacterfalseflag: fame/skill factor to recognition = " + GetChanceDetectFalseFlag());
+//			chance = 0.5 + chance; // 0.5 will be decreased if you are too easily recognized
+			chance = chance / 20.0;				// GR: because you're checked repeatedly and frequently
 			chance = chance * GetChanceDetectFalseFlag();
 			if(iForceDetectionFalseFlag == 1) chance = 1.0; // PB: Obeys "iForceDetectionFalseFlag" setting to always see through false flag
+ trace("CheckForMainCharacterfalseflag: final chance of false flag detection by '" + GetMyShipNameShow(chr) + "' in group '" + GetGroupIDFromCharacter(chr) + "' = " + chance);
+ trace("CheckForMainCharacterfalseflag: randVal = " + randVal);
 			if(randVal <= chance)
 			{
 				Trace("FLAGS: The " + GetMyShipNameShow(chr) + " has recognized our false " + GetNationDescByType(GetCurrentFlag()) + " flag at range=" + ship_range + " with visibility=" + visibility_range + ", chance=" + chance + " and frnd=" + randVal);
@@ -518,6 +526,7 @@ void SetGroupHostile(ref chr, bool bBetrayed)
 		}
 		Group_SetTaskAttack(sGroupID, PLAYER_GROUP, false); // False to skip call to SetCharacterRelationBoth!
 	}
+//	UpdateRelations();
 }
 
 void SetCharRelationToFleet(ref chr, int iRelation)
