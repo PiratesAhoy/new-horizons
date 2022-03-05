@@ -43,7 +43,7 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[3];
 				link.l1.go = "exit_to_ship";
 				link.l2 = DLG_TEXT[4];
-				link.l2.go = "exit";
+				link.l2.go = "exit_to_sea";
 			}
 			//if (pchar.quest.main_line == "kill_pirate_06")
 			//trace ("characters[GetCharacterIndex(Pirate Captain 06)].act.hp" + characters[GetCharacterIndex(Pirate Captain 06)].act.hp);
@@ -92,7 +92,13 @@ void ProcessDialogEvent()
 		case "exit_to_ship":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
-			AddDialogExitQuest("exit_to_ship");
+			AddDialogExitQuest("incas_collection_exit_to_ship");
+		break;
+
+		case "exit_to_sea":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			AddDialogExitQuest("incas_collection_exit_to_sea");
 		break;
 
 		case "Exit":

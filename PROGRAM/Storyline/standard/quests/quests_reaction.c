@@ -2,9 +2,9 @@ void QuestComplete(string sQuestName)
 {
 	ref PChar, sld;
 // KK -->
-	int iPassenger, cidx, iHP, cc;
+	int iPassenger, cidx, iHP, cc, n;
 	float locx, locy, locz;
-	string homelocation, homegroup, homelocator;
+	string homelocation, homegroup, homelocator, temp;
 	int canQty = 0;
 	int crewQty = 0;
 // <-- KK
@@ -72,7 +72,7 @@ void QuestComplete(string sQuestName)
 			CaptureTownForNation("Oxbay", FRANCE);	// KK
 
 			// KK: Set French Soldiers for Oxbay -->
-			for (int n = 0; n < CHARACTERS_QUANTITY; n++)
+			for (n = 0; n < CHARACTERS_QUANTITY; n++)
 			{
 				if (!CheckAttribute(characters[n], "location")) continue;
 				if (FindLocation(characters[n].location) == -1) continue;
@@ -2026,7 +2026,7 @@ void QuestComplete(string sQuestName)
 		case "Story_BlazeEscapedFromOxbay":
 			characters[GetCharacterIndex("Oxbay Commander")].skill.Accuracy = 9;
 			characters[GetCharacterIndex("Oxbay Commander")].skill.cannons = 5;
-			locations[FindLocation("Redmond_town_01")].reload.l11.go = "quest_redmond_tavern";
+//			locations[FindLocation("Redmond_town_01")].reload.l11.go = "quest_redmond_tavern"; // GR: Moved to "exit_from_silehard_complete"
 			DeleteAttribute(&Locations[FindLocation("Oxbay_town")],"vcskip"); // NK
 			Locations[FindLocation("quest_redmond_tavern")].vcskip = true; // NK
 			RecalculateJumpTable();
@@ -2087,7 +2087,6 @@ void QuestComplete(string sQuestName)
 				pchar.ship.type = SHIP_NOTUSED_TYPE_NAME; // PS
 				ExchangeCharacterShip(Pchar, characterFromID("Ship Storage"));
 				SetCharacterShipLocation(Pchar, "Redmond_port");
-
 				LAi_type_actor_Reset(characterFromID("Rabel Iverneau"));
 				LAi_type_actor_Reset(characterFromID("Counterspy"));
 				LAi_ActorTurnToCharacter(characterFromID("Rabel Iverneau"), characterFromID("Robert Christopher Silehard"));
@@ -2102,6 +2101,23 @@ void QuestComplete(string sQuestName)
 				LAi_ActorTurnToCharacter(characterFromID("Rabel Iverneau"), characterFromID("Robert Christopher Silehard"));
 				Characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "2nd_Task_no_ship";
 			}
+		break;
+
+		case "Story_restore_ships_after_counterspy": // GR: Restore stored companion ships - triggered by dialog with Robert Christopher Silehard
+			if (sti(GetAttribute(PChar, "quest.counterspy_fleet.original_fleet_size")) > 1)
+			{
+				for (n=1; n<COMPANION_MAX; n++)
+				{
+					temp = "companion" + n;
+					if (PChar.quest.counterspy_fleet.(temp) != "*NULL*")
+					{
+						cc = getCharacterIndex(PChar.quest.counterspy_fleet.(temp));
+						SetCompanionIndex(PChar,-1, cc)
+						if (HasSubStr(PChar.quest.counterspy_fleet.(temp), "Enc_Officer")) LAi_UnStoreFantom(CharacterFromID(PChar.quest.counterspy_fleet.(temp))); // Cancel protection
+					}
+				}
+			}
+			DeleteQuestAttribute("counterspy_fleet");
 		break;
 
 		case "Story_go_get_frigate":		// GR: triggered by dialog with Silehard if you returned with the wrong ship
@@ -2322,42 +2338,41 @@ void QuestComplete(string sQuestName)
 				SetBaseShipData(characterFromID("danielle"));
 			}*/
 
-// KK -->
-			iPassenger = sti(Pchar.Temp.Companion.idx1);
-			if (iPassenger > 0)
+// GR: rewritten code for restoring your fleet -->
+			for (n=1; n<COMPANION_MAX; n++)
 			{
-				SetCompanionIndex(pchar, 1, iPassenger);
-				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_UnStoreFantom(Characters[iPassenger]); // Cancel protection
-			}
-			iPassenger = sti(Pchar.Temp.Companion.idx2);
-			if (iPassenger > 0)
-			{
-				SetCompanionIndex(pchar, 2, iPassenger);
-				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_UnStoreFantom(Characters[iPassenger]);
-			}
-			iPassenger = sti(Pchar.Temp.Companion.idx3);
-			if (iPassenger > 0)
-			{
-				SetCompanionIndex(pchar, 3, iPassenger);
-				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_UnStoreFantom(Characters[iPassenger]);
-			}
-			DeleteAttribute(PChar, "temp.Companion");
-
-			if (GetNotCaptivePassengersQuantity(pchar) > 0) {
-				cidx = GetNotCaptivePassenger(pchar, GetNotCaptivePassengersQuantity(pchar) - 1);
-				if (cidx != -1) {
-//					if (GetCompanionQuantity(PChar) < 3) {
-					if (GetCompanionQuantity(PChar) < COMPANION_MAX-1) {
-						ExchangeCharacterShip(GetCharacter(cidx), characterFromID("Ship Storage"));
-						SetCompanionIndex(PChar, -1, cidx);
-						ExchangeCharacterShip(PChar, GetCharacter(cidx));
-					} else {
-						ExchangeCharacterShip(Pchar, CharacterFromID("Ship Storage"));
-					}
-				} else {
-					ExchangeCharacterShip(Pchar, characterFromID("Ship Storage"));
+				temp = "companion" + n;
+				if (PChar.quest.before_storm_fleet.(temp) != "*NULL*")
+				{
+					cc = getCharacterIndex(PChar.quest.before_storm_fleet.(temp));
+					SetCompanionIndex(PChar,-1, cc)
+					if (HasSubStr(PChar.quest.before_storm_fleet.(temp), "Enc_Officer")) LAi_UnStoreFantom(CharacterFromID(PChar.quest.before_storm_fleet.(temp))); // Cancel protection
 				}
 			}
+			DeleteQuestAttribute("before_storm_fleet");
+
+			ExchangeCharacterShip(PChar, CharacterFromID("Ship Storage"));			// Get your original ship back. The ship which brought you here is now given to dummy character "Ship Storage".
+			if (GetPassengersQuantity(PChar) > 0)						// If you have some passengers...
+			{
+				cidx = -1;
+				for(n = 0; n < GetPassengersQuantity(PChar); n++)			// ... search for one who is a valid character and who is not a prisoner, not already a companion
+				{
+					cc = GetPassenger(PChar, n);
+					if (cc < 0) continue;
+					sld = GetCharacter(cc);
+					if (CheckAttribute(sld, "id") && GetRemovable(sld) && !IsPrisoner(sld) && !IsCompanion(sld) && sld.id != PChar.id)
+					{
+						cidx = cc;
+					}
+				}
+				if (cidx != -1 && GetCompanionQuantity(PChar) < COMPANION_MAX-1)	// If there's a valid passenger, and if you have a spare ship slot, transfer the ship from "Ship Storage" to this passenger...
+				{
+					ExchangeCharacterShip(GetCharacter(cidx), CharacterFromID("Ship Storage"));
+					SetCompanionIndex(PChar, -1, cidx);
+					RemovePassenger(PChar, GetCharacter(cidx));			// ... and remove the ex-passenger from the "Passengers" list. If this is not done, the ship may disappear next time you visit a shipyard.
+				}
+			}
+// <-- GR
 
 			// officers said that Nathaniel's ship was repaired for their last money...
 			pchar.ship.hp = GetCharacterShipHP(pchar);
@@ -3132,12 +3147,8 @@ void QuestComplete(string sQuestName)
 			characters[GetCharacterIndex("Researcher")].AbordageMode = 0;	// KK
 
 			ChangeCharacterAddressGroup(CharacterFromID("Skull"), "QC_residence", "goto", "goto1");			// PB: Replacement for Isenbrandt Jurcksen
-			Characters[GetCharacterIndex("Skull")].Dialog.Filename = Characters[GetCharacterIndex("Isenbrandt Jurcksen")].Dialog.Filename;
-			if (CheckAttribute(CharacterFromID("Isenbrandt Jurcksen"), "Dialog.Filename.GroupDialog"))		// GR: Make Skull use the same dialog as Isenbrandt in case player has joined Pirates
-			{
-				Characters[GetCharacterIndex("Skull")].Dialog.Filename.GroupDialog = Characters[GetCharacterIndex("Isenbrandt Jurcksen")].Dialog.Filename.GroupDialog;
-			}
-			Towns[GetTownIndex("Quebradas Costillas")].gov = "Skull";								// PB: Set this for real
+			Characters[GetCharacterIndex("Skull")].Dialog.Filename = "Isenbrandt Jurcksen_dialog.c";
+			Towns[GetTownIndex("Quebradas Costillas")].gov = "Skull";						// PB: Set this for real
 			ChangeCharacterAddress(characterFromID("Isenbrandt Jurcksen"), "none", "");				// PB: Just in case
 
 			Pchar.quest.Story_LandedOnKhaelRoa.win_condition.l1 = "location";
@@ -3632,6 +3643,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("danielle"), LAI_GROUP_PLAYER);
 			LAi_group_MoveCharacter(characterFromID("ralph fawn"), LAI_GROUP_PLAYER);
 
+			locations[FindLocation("Redmond_town_01")].reload.l11.go = "quest_redmond_tavern"; // GR: Moved here from "Story_BlazeEscapedFromOxbay"
 			ChangeCharacterAddress(characterFromID("Danielle"), "Quest_redmond_tavern", "goto2");
 			ChangeCharacterAddress(characterFromID("Ralph Fawn"), "Quest_redmond_tavern", "goto3");
 			ChangeCharacterAddressGroup(characterFromID("Charles Windem"), "Quest_redmond_tavern", "merchant", "goto1");
@@ -3640,6 +3652,7 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Redmond_port")].reload.l3.disable = 1;
 			locations[FindLocation("Redmond_Shore_01")].reload.l2.disable = 1;
 			locations[FindLocation("Redmond_Shore_02")].reload.l2.disable = 1;
+			bQuestDisableSeaEnter = true; // You're not going back to sea until Silehard allows it!
 
 			/*locations[FindLocation("Redmond_town_01")].reload.l1.disable = 1;
 			locations[FindLocation("Redmond_town_01")].reload.l2.disable = 1;
@@ -3670,6 +3683,7 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Redmond_port")].reload.l3.disable = 0;
 			locations[FindLocation("Redmond_Shore_01")].reload.l2.disable = 0;
 			locations[FindLocation("Redmond_Shore_02")].reload.l2.disable = 0;
+			bQuestDisableSeaEnter = false;	// Now you can go to sea - blocked at "exit_from_silehard_complete"
 		break;
 
 		case "prepare_to_battle_in_quest_redmond_tavern":
@@ -4423,8 +4437,18 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("danielle_sailor"), pchar, "player_back", 2.0, 1.0);
 		break;
 
-		case "exit_to_ship":
+		case "incas_collection_exit_to_ship":
 			DoQuestReloadToLocation("Ship_deck", "reload", "locator2", "fighting_on_deck_complete");
+		break;
+
+		case "incas_collection_exit_to_sea":
+			if (Group_FindGroup("Pirate Captain 06") < 0) Group_CreateGroup("Pirate Captain 06");
+			Group_AddCharacter("Pirate Captain 06", "Pirate Captain 06");
+			Group_SetGroupCommander("Pirate Captain 06", "Pirate Captain 06");
+			Group_SetAddress("Pirate Captain 06", "Douwesen", "Quest_Ships","Quest_Ship_9");
+			sld = CharacterFromID("Pirate Captain 06");
+			DeleteAttribute(sld, "surrendered");
+			sld.nation = PIRATE;
 		break;
 
 		case "fighting_on_deck_complete":
@@ -4440,15 +4464,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kill_all_fighting_on_deck_complete":
-			LAi_QuestDelay("kill_all_fighting_on_deck_complete_2", 2.0);
+//			LAi_QuestDelay("kill_all_fighting_on_deck_complete_2", 2.0);
 			pchar.location.from_sea = "Douwesen_shore_01";
 			SetFleetInTown(GetTownIDFromLocID(pchar.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
 			if(AUTO_SKILL_SYSTEM) { AddPartyExpChar(pchar, "Leadership", 2000); }
 			else { AddPartyExp(pchar, 2000); }
+			DoQuestReloadToLocation("Douwesen_shore_01", "reload", "reload1", "kill_all_fighting_on_deck_complete_2");
 		break;
 
 		case "kill_all_fighting_on_deck_complete_2":
-			DoReloadCharacterToLocation("Douwesen_shore_01", "reload", "reload1");
+//			DoReloadCharacterToLocation("Douwesen_shore_01", "reload", "reload1");
 			pchar.quest.main_line = "blaze_to_incas_collection_begin_6";
 			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "incas_collection_complete_node";
 			setCharacterShipLocation(characterFromID("Pirate Captain 04"), "none");
@@ -5405,39 +5430,26 @@ void QuestComplete(string sQuestName)
 				Pchar.Temp.Officer.idx3.Dialog = Characters[getOfficersIndex(Pchar, 3)].Dialog.Filename;
 				Pchar.Temp.Officer.idx3.CurrentNode = Characters[getOfficersIndex(Pchar, 3)].Dialog.CurrentNode;
 			}
-			if (GetCompanionIndex(pchar,1) > 0)
+
+// GR: new code, same as at "CounterSpy_Talk_AfterTavern_exit" -->
+			PChar.quest.before_storm_fleet.original_fleet_size = GetCompanionQuantity(PChar);
+			if(GetCompanionQuantity(PChar) > 1)
 			{
-				Pchar.Temp.Companion.idx1 = GetCompanionIndex(pchar,1);
-				iPassenger = GetCompanionIndex(pchar,1);
-				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_StoreFantom(Characters[iPassenger]); // Prevent character from being overwritten by another "Enc_Officer"
-				RemoveCharacterCompanion(Pchar, &Characters[iPassenger]);
+				for (n=1; n<COMPANION_MAX; n++)
+				{
+					cc = GetCompanionIndex(PChar,n);
+					temp = "companion" + n;
+					if (cc > 0)
+					{
+						PChar.quest.before_storm_fleet.(temp) = characters[cc].id;
+						if (HasSubStr(PChar.quest.before_storm_fleet.(temp), "Enc_Officer")) LAi_StoreFantom(CharacterFromId(PChar.quest.before_storm_fleet.(temp))); // Prevent character from being overwritten by another "Enc_Officer"
+						RemoveCharacterCompanion(PChar, characters[cc]);
+					}
+					else PChar.quest.before_storm_fleet.(temp) = "*NULL*";
+				}
 			}
-			else
-			{
-				Pchar.Temp.Companion.idx1 = -1;
-			}
-			if (GetCompanionIndex(pchar,2) > 0)
-			{
-				Pchar.Temp.Companion.idx2 = GetCompanionIndex(pchar,2);
-				iPassenger = GetCompanionIndex(pchar,2);
-				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_StoreFantom(Characters[iPassenger]);
-				RemoveCharacterCompanion(Pchar, &Characters[iPassenger]);
-			}
-			else
-			{
-				Pchar.Temp.Companion.idx2 = -1;
-			}
-			if (GetCompanionIndex(pchar,3) > 0)
-			{
-				Pchar.Temp.Companion.idx3 = GetCompanionIndex(pchar,3);
-				iPassenger = GetCompanionIndex(pchar,3);
-				if (HasSubStr(Characters[iPassenger].id, "Enc_Officer")) LAi_StoreFantom(Characters[iPassenger]);
-				RemoveCharacterCompanion(Pchar, &Characters[iPassenger]);
-			}
-			else
-			{
-				Pchar.Temp.Companion.idx3 = -1;
-			}
+// <-- GR
+
 			bMainMenuLaunchAfterVideo = true;
 
 			CI_CreateAndSetControls( "WorldMapControls", "WMapCancel", -1, 0, true );// TIH worldmap cancel screwup prevention Sep3'06
@@ -6324,6 +6336,25 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_CounterspyGoesToPort.win_condition = "Story_CounterspyGoesToPort";*/
 			LAi_ActorRunToLocation(characterFromID("counterspy"), "reload", "reload1", "none", "", "", "", 45.0);
 			LAi_ActorRunToLocation(characterFromID("Rabel Iverneau"), "reload", "reload1", "none", "", "", "", 45.0);
+
+// --> GR: if you have companion ships, store and remove them, or they're likely to be sunk by the fort and blockade fleet - and anyway, how did they get to Speightstown?
+			PChar.quest.counterspy_fleet.original_fleet_size = GetCompanionQuantity(PChar);
+			if(GetCompanionQuantity(PChar) > 1)
+			{
+				for (n=1; n<COMPANION_MAX; n++)
+				{
+					cc = GetCompanionIndex(PChar,n);
+					temp = "companion" + n;
+					if (cc > 0)
+					{
+						PChar.quest.counterspy_fleet.(temp) = characters[cc].id;
+						if (HasSubStr(PChar.quest.counterspy_fleet.(temp), "Enc_Officer")) LAi_StoreFantom(CharacterFromId(PChar.quest.counterspy_fleet.(temp))); // Prevent character from being overwritten by another "Enc_Officer"
+						RemoveCharacterCompanion(PChar, characters[cc]);
+					}
+					else PChar.quest.counterspy_fleet.(temp) = "*NULL*";
+				}
+			}
+// <-- GR
 			ExchangeCharacterShip(characterFromID("Rabel Iverneau"), Pchar);
 			ExchangeCharacterShip(characterFromID("Rabel Iverneau"), characterFromID("Ship Storage"));
 			SetCharacterShipLocation(Pchar, "Oxbay_port");

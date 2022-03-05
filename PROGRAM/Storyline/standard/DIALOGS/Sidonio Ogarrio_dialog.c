@@ -53,8 +53,7 @@ void ProcessDialogEvent()
 
 		case "Fight2":
 			Preprocessor_Add("person", XI_ConvertString(PChar.sex));
-			if(PChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-			else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+			Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(PChar)));
 			dialog.text = DLG_TEXT[5];
 			link.l1 = DLG_TEXT[6];
 			AddDialogExitQuest("kill_Ogario_fight");

@@ -37,6 +37,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.label = "#stown_name#. Center.";
 	LAi_LocationFightDisable(&Locations[n], true);
 
+	Locations[n].island = "Redmond";
 	n = n + 1; 
 
 
@@ -70,7 +71,8 @@ void LocationInitQuestLocations(ref n)
 	//Environment
 	Locations[n].environment.weather = "true";
 	Locations[n].environment.sea = "false";
-		
+
+	Locations[n].island = "IslaMuelle";
 	n = n + 1;
 
 	//  -------------------------------------------------
@@ -109,6 +111,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Redmond. Center.";
 
+	Locations[n].island = "Redmond";
 	n = n + 1;
 
 // KK -->
@@ -240,6 +243,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l2.emerge = "";
 	Locations[n].reload.l2.autoreload = "0";
 
+	Locations[n].island = "Oxbay";
 	n = n + 1;
 
 
@@ -274,6 +278,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].environment.sea = "false";
 	//Reload map
 
+	Locations[n].island = "Oxbay";
 	n = n + 1;
 
 //---------------------------------------------------------------------------
@@ -307,6 +312,7 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.name = "reload1";
 	Locations[n].reload.l1.go = "";
 	Locations[n].reload.l1.emerge = "";
+	Locations[n].island = "Oxbay";
 	n = n + 1;
 
 	// -------------------------------------------------

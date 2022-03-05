@@ -902,7 +902,8 @@ void ProcessDialogEvent()
 			}
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, 20000);
-			AddPartyExpChar(PChar, "Sneak", 10000);
+			if(AUTO_SKILL_SYSTEM) AddPartyExpChar(PChar, "Sneak", 10000);
+			else AddPartyExpChar(PChar, "", 10000);
 			ChangeRMRelation(PChar, iNation, 5);
 			if (!CheckAttribute(PChar, "quest.agentquest.smuggler_fare") || sti(PChar.quest.agentquest.smuggler_fare) == 0)
 			{

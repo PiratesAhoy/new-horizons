@@ -2768,7 +2768,8 @@ void BothQuestComplete(string sQuestName)
 						SetServedNation(iNation);
 						SetRMRelation(PChar, iNation, REP_LEAVEMIN);						// Encourage play for America
 					}
-					iNation = FindEnemyNation2Nation(iNation);
+					iNation = sti(GetAttribute(CharacterFromID("TQ_Char1"), "nation"));
+					if (iNation < 0) iNation = FindEnemyNation2Nation(iNation);
 				break;
 
 				case PLAYER_TYPE_SMUGGLER:
@@ -2925,14 +2926,136 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "Agent_Continue":
+			string agent_model;
+			NPChar = CharacterFromID("TQ_Char1");
+			switch(sti(NPChar.nation))
+			{
+				case ENGLAND:
+					if (NPChar.sex == "woman")
+					{
+						agent_model = "Lady04_ab";
+						NPChar.greeting = "Gr_Woman_English Citizen";
+					}
+					else
+					{
+						agent_model = "9S_Nat";
+						NPChar.greeting = "Gr_redmond Citizen";
+					}
+				break;
+				case FRANCE:
+					if (NPChar.sex == "woman")
+					{
+						if (GetCurrentPeriod() <= PERIOD_THE_SPANISH_MAIN) agent_model = "Milady";
+						else agent_model = "50_Rachel";
+						NPChar.greeting = "Gr_Woman_French citizen";
+					}
+					else
+					{
+						if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS) agent_model = "man1";
+						else agent_model = "Sharl";
+						NPChar.greeting = "Gr_falaise de fleur citizen";
+					}
+				break;
+				case SPAIN:
+					if (NPChar.sex == "woman")
+					{
+						agent_model = "towngirl7_2";
+ 						NPChar.greeting = "Gr_Estrella";
+					}
+					else
+					{
+						agent_model = "Man9";
+						NPChar.greeting = "Gr_isla muelle citizen";
+					}
+				break;
+				case PIRATE:
+					if (NPChar.sex == "woman")
+					{
+						agent_model = "50LCroft";
+						NPChar.greeting = "Gr_Woman_English Citizen";
+					}
+					else
+					{
+						agent_model = "50Evl2in";
+						NPChar.greeting = "Gr_QC Citizen";
+					}
+				break;
+				case HOLLAND:
+					if (NPChar.sex == "woman")
+					{
+						agent_model = "Downgir51";
+						NPChar.greeting = "Gr_Woman_Dutch Citizen";
+					}
+					else
+					{
+						agent_model = "Man1_1";
+						NPChar.greeting = "Gr_Douwesen Citizen";
+					}
+				break;
+				case PORTUGAL:
+					if (NPChar.sex == "woman")
+					{
+						agent_model = "towngirl1_2";
+						NPChar.greeting = "Gr_Woman_English Citizen";
+					}
+					else
+					{
+						agent_model = "man1_2";
+						NPChar.greeting = "Gr_Conceicao Citizen";
+					}
+				break;
+				case GUEST1_NATION:
+					if (NPChar.sex == "woman")
+					{
+						if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+						{
+							agent_model = "liz2";
+							NPChar.greeting = "Gr_Woman_English Citizen";
+						}
+						else
+						{
+							agent_model = "MariaAntonia";
+							NPChar.greeting = "Gr_Woman_Dutch Citizen";
+						}
+					}
+					else
+					{
+						if (GetCurrentPeriod() >= PERIOD_REVOLUTIONS)
+						{
+							agent_model = "korsar";
+							NPChar.greeting = "Gr_Oxbay Citizen";
+						}
+						else
+						{
+							agent_model = "9S_Nat";
+							NPChar.greeting = "Gr_Douwesen Citizen";
+						}
+					}
+				break;
+				if (NPChar.sex == "woman") {agent_model = "Danielle";}
+				else {agent_model = "Blaze"; NPChar.greeting = "Gr_Oxbay Citizen";}
+			}
+			LAi_SetLoginTime(NPChar, 0.0, 24.0);
+			SetModelFromID(NPChar, agent_model);
+			if (GetCurrentFlag() == AMERICA) ChangeCharacterAddressGroup(NPChar, FindTownTavern(GetCurrentTownID()), "sit", "sit5");
+			else ChangeCharacterAddressGroup(NPChar, FindTownTavern(GetCurrentTownID()), "sit", "sit13");
+			LAi_SetSitType(NPChar);
+			NPChar.Dialog.Filename = "Agent_crewman_dialog.c";
+			NPChar.dialog.CurrentNode = "agent_start1";
+			PChar.quest.agent_start.startport = GetCharacterShipLocation(PChar);
+
 			Preprocessor_AddQuestData("town", FindTownName(GetCurrentTownID()));
 			Preprocessor_AddQuestData("island", FindIslandName(FindIslandByLocation(pchar.location)));
+			Preprocessor_AddQuestData("officer", GetMyFullName(CharacterFromID("Malcolm Hatcher")));
+			Preprocessor_AddQuestData("name", GetMySimpleName(NPChar));
+			Preprocessor_AddQuestData("name2", GetMySimpleOldName(NPChar));
 			SetQuestHeader("Beginning_Agent");
-			if (PChar.sex == "man") AddQuestRecord("Beginning_Agent", 1);
-			else AddQuestRecord("Beginning_Agent", 2);
-			CloseQuestHeader("Beginning_Agent");
-			Preprocessor_Remove("town");
+			AddQuestRecord("Beginning_Agent", 1);
+			Preprocessor_Remove("name2");
+			Preprocessor_Remove("name");
+			Preprocessor_Remove("officer");
 			Preprocessor_Remove("island");
+			Preprocessor_Remove("town");
 		break;
 
 		case "Smuggler_Continue":

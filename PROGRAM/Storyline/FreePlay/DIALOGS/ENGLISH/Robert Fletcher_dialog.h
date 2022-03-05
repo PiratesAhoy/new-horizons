@@ -1,4 +1,4 @@
-string DLG_TEXT[340] = {
+string DLG_TEXT[290] = {
 "We've made port at the pirate settlement on Nevis. I had my personal Roger hoisted so no one will give us trouble. The officers and a piece of your crew have elected to make their way through the jungle for Charlestown. I guess they don't want to be hunted down by the English as traitors. Alas you don't have that option. I cannot thank you enough for what you did for my crew and me.",
 "Captain Champers was a pig of a man and what he intended for you was monstrous. I didn't see a choice.",
 "Treacherous dogs. I suppose I saw that coming. What can I do for you, Captain?",
@@ -282,4 +282,11 @@ string DLG_TEXT[340] = {
 "You don't have a choice. Forget your old life... you're mine, ",
 ".",
 " Death is only the beginning.",
+"Not quite on your own. Look for a person named ",
+". ",
+" real name is ",
+" and ",
+" is another of our agents who has been working here. ",
+" will give you further instructions. Start by looking in the tavern. If you're asked about the condition of your ship, say that it was infested by termites but you've got rid of them and repaired the damage.",
+"Very well, sir.",
 };

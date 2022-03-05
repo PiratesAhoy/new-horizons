@@ -1,4 +1,4 @@
-string DLG_TEXT[428] = {
+string DLG_TEXT[436] = {
 "Introduce yourself, if you please. I don't believe I'm acquainted with you.",
 "My name is ",
 ", and I'm captain of the ",
@@ -427,4 +427,12 @@ string DLG_TEXT[428] = {
 "Why are you still here, ",
 "? Go and bring me the ",
 "Sorry, sir. I was just on my way to get it.",
+"By the way, ",
+" has informed me that you acquired some more ships on the way here. You will need to dispose of some of them before your original ships can be returned to you.",
+"Very well, I'll go to the shipyard now.",
+"Well, ",
+"? Have you disposed of your excess ships?",
+"Yes, sir.",
+"Very well. Your original ships are now returned to your command.",
+"And yet you still have too many.",
 };
