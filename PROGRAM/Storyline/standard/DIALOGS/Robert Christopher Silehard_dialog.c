@@ -14,6 +14,7 @@ void ProcessDialogEvent()
 	string sNation = iNation;
 	string stemp = ""; // KK
 	int iTest;
+	int x, y;
 
 	switch(Dialog.CurrentNode)
 	{
@@ -540,10 +541,17 @@ void ProcessDialogEvent()
 		case "2nd_task_failed_4":
 			d.Text = DLG_TEXT[141];
 			Link.l1 = DLG_TEXT[142];
-			Link.l1.go = "Exit";
-			SetQuestHeader("Blaze_out_from_silehard");
-			AddQuestRecord("Blaze_out_from_silehard", 1);
-			AddDialogExitQuest("exit_from_silehard_complete");
+			x = sti(PChar.quest.counterspy_fleet.original_fleet_size);
+			y = GetCompanionQuantity(PChar);
+			if ((x + y - 1) > COMPANION_MAX) link.l1.go = "2nd_task_too_many_ships";
+			else
+			{
+				Link.l1.go = "Exit";
+				SetQuestHeader("Blaze_out_from_silehard");
+				AddQuestRecord("Blaze_out_from_silehard", 1);
+				AddDialogExitQuest("exit_from_silehard_complete");
+				AddDialogExitQuest("Story_restore_ships_after_counterspy");
+			}
 			AddDialogExitQuest("player_back");
 		break;
 
@@ -570,10 +578,17 @@ void ProcessDialogEvent()
 		case "2nd_Task_Complete_4":
 			d.Text = DLG_TEXT[153];
 			Link.l1 = DLG_TEXT[154];
-			Link.l1.go =  "exit";
-			SetQuestHeader("Blaze_out_from_silehard");
-			AddQuestRecord("Blaze_out_from_silehard", 1);
-			AddDialogExitQuest("exit_from_silehard_complete");
+			x = sti(PChar.quest.counterspy_fleet.original_fleet_size);
+			y = GetCompanionQuantity(PChar);
+			if ((x + y - 1) > COMPANION_MAX) link.l1.go = "2nd_task_too_many_ships";
+			else
+			{
+				Link.l1.go = "Exit";
+				SetQuestHeader("Blaze_out_from_silehard");
+				AddQuestRecord("Blaze_out_from_silehard", 1);
+				AddDialogExitQuest("exit_from_silehard_complete");
+				AddDialogExitQuest("Story_restore_ships_after_counterspy");
+			}
 			AddDialogExitQuest("player_back");
 		break;
 
@@ -599,6 +614,42 @@ void ProcessDialogEvent()
 		case "2nd_Task_exit_no_ship":
 			Diag.CurrentNode = "2nd_Task_no_ship_3";
 			DialogExit();
+		break;
+
+		case "2nd_task_too_many_ships":
+			d.text = DLG_TEXT[428] + GetMyName(&Characters[GetCharacterIndex(DLG_TEXT[131])]) + DLG_TEXT[429];
+			link.l1 = DLG_TEXT[430];
+			link.l1.go = "exit_return_fleet";
+		break;
+
+		case "exit_return_fleet":
+			Diag.CurrentNode = "2nd_task_return_fleet";
+			DialogExit();
+		break;
+
+		case "2nd_task_return_fleet":
+			d.text = DLG_TEXT[431] + GetMyName(PChar) + DLG_TEXT[432];
+			link.l1 = DLG_TEXT[433];
+			x = sti(PChar.quest.counterspy_fleet.original_fleet_size);
+			y = GetCompanionQuantity(PChar);
+			if ((x + y - 1) > COMPANION_MAX) link.l1.go = "2nd_task_still_too_many_ships";
+			else link.l1.go = "2nd_task_return_fleet2";
+		break;
+
+		case "2nd_task_return_fleet2":
+			d.text = DLG_TEXT[434];
+			link.l1 = DLG_TEXT[70];
+			SetQuestHeader("Blaze_out_from_silehard");
+			AddQuestRecord("Blaze_out_from_silehard", 1);
+			AddDialogExitQuest("exit_from_silehard_complete");
+			AddDialogExitQuest("Story_restore_ships_after_counterspy");
+			link.l1.go = "exit";
+		break;
+
+		case "2nd_task_still_too_many_ships":
+			d.text = DLG_TEXT[435];
+			link.l1 = DLG_TEXT[430];
+			link.l1.go = "exit_return_fleet";
 		break;
 
 //!!!!__________BY ARTEM!!!!!!!!!!!!!!

@@ -512,8 +512,14 @@ Wapen van Hoorn{Wapen van Hoorn}
 Piet{Piet}
 Pieterszoon{Pieterszoon}
 Hein{Hein}
-The Silver Fleet{La Flota de la Plata}
-'We have quite the journey ahead of us. We are going to get salt. From Africa.' That is Piet's first introduction to the sea and the tough life of seafarers. Years later Piet Hein gets his own ship. What will he do? Discover new lands? Trading? Or... Conquering the Spanish Silver Fleet?{'Tenemos un largo viaje por delante. Vamos a por un cargamento de sal. En África'. Esa es la primera introducción de Piet al mar y la dura vida de los navegantes. Años después, Piet Hein consigue su propio barco. ¿Qué hará con él? ¿Descubrir nuevas tierras? ¿Comerciar? ¿O... capturar la flota española de la plata?}
+De Zilvervloot{La Flota de la Plata}
+'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piet's eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?{'Tenemos un largo viaje por delante. Vamos a por un cargamento de sal. En África'. Esa es la primera introducción de Piet al mar y la dura vida de los navegantes. Años después, Piet Hein consigue su propio barco. ¿Qué hará con él? ¿Descubrir nuevas tierras? ¿Comerciar? ¿O... capturar la flota española de la plata?}
+
+Drake{Drake}
+Stranton{Stranton}
+Phantom{Phantom}
+Cursed Vengeance{Venganza maldita}
+Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Vive una aventura de tesoros y traición, sangre y venganza. En un tiempo en que los piratas tenían el mundo en sus manos y siempre se llevaban a la chica, squeaban el tesoro y conquistaban a sus enemigos. Esta vida desafiará tus preconcepciones acerca de los piratas. ¡Vive, ama y muere como solo un pirata puede hacerlo! Basado en la novela de Brent Jackson.}		
 
 Francis{Francis}
 Drake{Drake}

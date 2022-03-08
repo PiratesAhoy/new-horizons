@@ -570,6 +570,9 @@ Your second basic collection of animated old bones covered in seaweed.{Tu segund
 Your third basic collection of animated old bones covered in seaweed.{Tu tercera colección básica de viejos huesos reanimados cubiertos de algas.}
 Your fourth basic collection of animated old bones covered in seaweed.{Tu cuarta colección básica de viejos huesos reanimados cubiertos de algas.}
 Your fifth basic collection of animated old bones covered in seaweed.{Tu quinta colección básica de viejos huesos reanimados cubiertos de algas.}
+Half man, half shellfish - one of Davy Jones' crew.{Medio hombre, medio molusco; uno de los tripulantes de Davy Jones.}
+Half man, half hammerhead shark - one of Davy Jones' crew.{Medio hombre, medio tiburón martillo; uno de los tripulantes de Davy Jones.}
+Half man, half lobster - one of Davy Jones' crew.{Medio hombre, medio langosta; uno de los tripulantes de Davy Jones.}
 A very strange collection of animated bones, was it ever human.{Una extraña colección de huesos animados, ¿son siquiera humanos?.}
 I need to kill a lot of people, but very quietly!{Necesito matar a mucha gente pero sin hacer ruido.}
 You have business with me, senor?{¿Algún asunto que tratar conmigo, señor?}
@@ -668,6 +671,7 @@ A pale witch in a black dress who probably does not get enough sleep.{Una pálida
 This elegant green dress is studded with pearls and trimmed with lace.{Este elegante vestido verde está adornado con perlas y ribeteado de encaje.}
 Have you a nice green dress like the one worn by the tavern girl in Cartagena?{¿Tienes un bonito vestido como el que lleva la chica de la taberna de Cartagena?}
 A Dutch admiral and privateer for the Dutch Republic during the Eighty Years' War. The first and the last to capture a large part of a Spanish treasure fleet from America.{Un almirante y corsario holandés al servicio de las Provincias Unidas durante la Guerra de los Ochenta Años. El primero y el último en capturar gran parte de una flota española del tesoro de Indias.}
+Where did he come from? Where will he go?  Where did he come from, Cotton-Eye - no, that can't be right...{¿De dónde vino? ¿Adónde va?...}
 Death is only the beginning.{La muerte es solo el principio.}
 An adventurer from the Italic peninsula, in search of glory in the Caribbean.{Un aventurero de la península italiana, en busca de gloria en el Caribe.}
 The son of a French nobleman, who became a well known captain after coming to the Caribbean in quite hasty circumstances.{El hijo de un noble francés, que se convirtió en un capitán bien conocido después de llegar al Caribe en circunstancias bastante apresuradas.}

@@ -423,7 +423,7 @@ float Ship_MastDamage()
 		break;
 
 		case SHIP_MAST_TOUCH_SHIP:
-			if(!IsMainCharacter(rCharacter)) return 0.0; // PB: Collision damage for player ship only
+//			if(!IsMainCharacter(rCharacter)) return 0.0; // PB: Collision damage for player ship only, GR: disabled, let NPC take damage
 		//aref rCollideCharacter = GetEventData();
 			fDamage = fDamage + MAST_SHIP_SCL * collhp;
 		break;
@@ -2446,7 +2446,7 @@ void Ship_Ship2ShipCollision()
 	z = GetEventData();
 
 	ref rOurCharacter = GetCharacter(iOurCharacterIndex);
-	if(!IsMainCharacter(rOurCharacter)) return; // PB: Collision damage for player ship only
+//	if(!IsMainCharacter(rOurCharacter)) return; // PB: Collision damage for player ship only, GR: let NPC ships take damage
 
 	float fHP = (1.0 - fSlide) * fPower * 20.0;
 	//Trace("Ship->Ship touch: idx = " + iOurCharacterIndex + ", fpower = " + fPower + ", fHP = " + fHP + ", fSlide = " + fSlide);

@@ -49,7 +49,7 @@ void ProcessDialogEvent()
 				case PLAYER_TYPE_AGENT:
 					dialog.text = DLG_TEXT[251];
 					link.l1 = DLG_TEXT[252];
-					link.l1.go = "stormystart";
+					link.l1.go = "agent_start2";
 				break;
 
 				case PLAYER_TYPE_SMUGGLER:
@@ -1495,6 +1495,27 @@ void ProcessDialogEvent()
 		case "naval_part3":
 			dialog.text = DLG_TEXT[245] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, true) + ".";
 			link.l1 = DLG_TEXT[246];
+			link.l1.go = "stormystart";
+		break;
+
+		case "agent_start2":
+			ref agent = CharacterFromID("TQ_Char1");
+			if (rand(100) < FEMALE_OFFICER_PERCENTAGE) agent.sex = "woman";
+			else agent.sex = "man";
+			// First set contact's real name according to real nation
+			agent.nation = NPChar.nation;
+			SetRandomNameToCharacter(agent);
+			agent.old.name = agent.name;
+			if (CheckAttribute(agent, "middlename")) agent.old.middlename = agent.middlename;
+			agent.old.lastname = agent.lastname;
+
+			// Now set contact's fake nation and name
+			agent.nation = FindEnemyNation2Nation(sti(NPChar.nation));
+			SetRandomNameToCharacter(agent);
+			PChar.quest.agent_start.officername = GetMyFullName(NPChar);
+
+			dialog.text = DLG_TEXT[283] + GetMySimpleName(agent) + DLG_TEXT[284] + FirstLetterUp(XI_ConvertString(GetMyPronounPossessive(agent))) + DLG_TEXT[285] + GetMySimpleOldName(agent) + DLG_TEXT[286] + GetMyPronounSubj(agent) + DLG_TEXT[287] + FirstLetterUp(GetMyPronounSubj(agent)) + DLG_TEXT[288];
+			link.l1 = DLG_TEXT[289];
 			link.l1.go = "stormystart";
 		break;
 		

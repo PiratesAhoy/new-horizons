@@ -4607,42 +4607,42 @@ string GetCharacterCursedSails(ref chr)
 		}
 	}
 
-	if(HasSubStr(tempstring, "red"))					CursedSails = "sail_torn_red_plain.tga";
-	if(HasSubStr(tempstring, "black"))					CursedSails = "sail_torn_black_plain.tga";
-	if(HasSubStr(tempstring, "tan"))					CursedSails = "sail_torn_tan_plain.tga";
-	if(HasSubStr(tempstring, "weathered"))				CursedSails = "sail_torn_weathered_plain.tga";
-	if(HasSubStr(tempstring, "patch"))					CursedSails = "sail_BlackPearl_torn.tga";		// Black Pearl - Gets cursed sails
-	if(HasSubStr(tempstring, "BlackPearl"))				CursedSails = "sail_BlackPearl_torn.tga";		// Black Pearl - Keeps her own sails
-	if(HasSubStr(tempstring, "dutchman"))				CursedSails = "sail_dutchman2.tga";				// Cursed Flying Dutchman keeps her own sails, uncursed Dutchman gets cursed Dutchman sails
-	if(HasSubStr(tempstring, "Empress"))				CursedSails = "sail_torn_red_plain.tga";		// Empress - Torn red sails
-	if(HasSubStr(tempstring, "Empres2"))				CursedSails = "sail_torn_red_plain.tga";		// Empress - Torn red sails
-	if(HasSubStr(tempstring, "qar"))					CursedSails = "sail_torn_red_qar.tga";			// Queen Anne's Revenge - Keeps her own sails
-	if(HasSubStr(tempstring, "mariana"))				CursedSails = "sail_mariana.tga";				// Mariana - Keeps her own sails
+	if(HasSubStr(tempstring, "red"))			CursedSails = "sail_torn_red_plain.tga";
+	if(HasSubStr(tempstring, "black"))			CursedSails = "sail_torn_black_plain.tga";
+	if(HasSubStr(tempstring, "tan"))			CursedSails = "sail_torn_tan_plain.tga";
+	if(HasSubStr(tempstring, "weathered"))			CursedSails = "sail_torn_weathered_plain.tga";
+	if(HasSubStr(tempstring, "patch"))			CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Gets cursed sails
+	if(HasSubStr(tempstring, "BlackPearl"))			CursedSails = "sail_BlackPearl_torn.tga";	// Black Pearl - Keeps her own sails
+	if(HasSubStr(tempstring, "dutchman"))			CursedSails = "sail_dutchman2.tga";		// Cursed Flying Dutchman keeps her own sails, uncursed Dutchman gets cursed Dutchman sails
+	if(HasSubStr(tempstring, "Empress"))			CursedSails = "sail_torn_red_plain.tga";	// Empress - Torn red sails
+	if(HasSubStr(tempstring, "Empres2"))			CursedSails = "sail_torn_red_plain.tga";	// Empress - Torn red sails
+	if(HasSubStr(tempstring, "qar"))			CursedSails = "sail_torn_red_qar.tga";		// Queen Anne's Revenge - Keeps her own sails
+	if(HasSubStr(tempstring, "mariana"))			CursedSails = "sail_mariana.tga";			// Mariana - Keeps her own sails
 	if(HasSubStr(tempstring, "sws_christian_maria"))	CursedSails = "sws_christian_maria_torn.tga";	// Torn versions of special sails
-	if(HasSubStr(tempstring, "castile_leon"))			CursedSails = "sail_castile_leon_torn.tga";
+	if(HasSubStr(tempstring, "castile_leon"))		CursedSails = "sail_castile_leon_torn.tga";
 	if(HasSubStr(tempstring, "holy_roman_empire"))		CursedSails = "sail_holy_roman_empire_torn.tga";
 	if(HasSubStr(tempstring, "DeathVessel_whole"))		CursedSails = "sail_DeathVessel_torn.tga";
 	if(HasSubStr(tempstring, "DeathVessel_whole1"))		CursedSails = "sail_DeathVessel_torn1.tga";
-	if(HasSubStr(tempstring, "Black_Red"))				CursedSails = "sail_Black_Red_torn.tga";
-	if(HasSubStr(tempstring, "Diamond"))				CursedSails = "sail_Diamond_torn.tga";
-	if(HasSubStr(tempstring, "Experto"))				CursedSails = "sail_Experto_torn.tga";
-	if(HasSubStr(tempstring, "Experto1"))				CursedSails = "sail_Experto_torn1.tga";
-	if(HasSubStr(tempstring, "Explorer"))				CursedSails = "sail_Explorer_torn.tga";
-	if(HasSubStr(tempstring, "Explorer1"))				CursedSails = "sail_Explorer_torn1.tga";
-	if(HasSubStr(tempstring, "Gilded"))					CursedSails = "sail_Gilded_torn.tga";
-	if(HasSubStr(tempstring, "Gilded_plain"))			CursedSails = "sail_torn_Gilded_plain.tga";
-	if(HasSubStr(tempstring, "Navigator"))				CursedSails = "sail_Navigator_torn.tga";
-	if(HasSubStr(tempstring, "Navigator1"))				CursedSails = "sail_Navigator_torn1.tga";
-	if(HasSubStr(tempstring, "Officer"))				CursedSails = "sail_Officer_torn.tga";
-	if(HasSubStr(tempstring, "Officer1"))				CursedSails = "sail_Officer_torn1.tga";
-	if(HasSubStr(tempstring, "Red_Striped"))			CursedSails = "sail_Red_Striped_torn.tga";
-	if(HasSubStr(tempstring, "Templar"))				CursedSails = "sail_Templar_torn.tga";
-	if(HasSubStr(tempstring, "Templar1"))				CursedSails = "sail_Templar_torn1.tga";
-	if(HasSubStr(tempstring, "petros"))					CursedSails = "sail_torn_red_plain.tga";
-	if(HasSubStr(tempstring, "petros_plain"))			CursedSails = "sail_torn_petros_plain.tga";
+	if(HasSubStr(tempstring, "Black_Red"))			CursedSails = "sail_Black_Red_torn.tga";
+	if(HasSubStr(tempstring, "Diamond"))			CursedSails = "sail_Diamond_torn.tga";
+	if(HasSubStr(tempstring, "Experto"))			CursedSails = "sail_Experto_torn.tga";
+	if(HasSubStr(tempstring, "Experto1"))			CursedSails = "sail_Experto_torn1.tga";
+	if(HasSubStr(tempstring, "Explorer"))			CursedSails = "sail_Explorer_torn.tga";
+	if(HasSubStr(tempstring, "Explorer1"))			CursedSails = "sail_Explorer_torn1.tga";
+	if(HasSubStr(tempstring, "Gilded"))			CursedSails = "sail_Gilded_torn.tga";
+	if(HasSubStr(tempstring, "Gilded_plain"))		CursedSails = "sail_torn_Gilded_plain.tga";
+	if(HasSubStr(tempstring, "Navigator"))			CursedSails = "sail_Navigator_torn.tga";
+	if(HasSubStr(tempstring, "Navigator1"))			CursedSails = "sail_Navigator_torn1.tga";
+	if(HasSubStr(tempstring, "Officer"))			CursedSails = "sail_Officer_torn.tga";
+	if(HasSubStr(tempstring, "Officer1"))			CursedSails = "sail_Officer_torn1.tga";
+	if(HasSubStr(tempstring, "Red_Striped"))		CursedSails = "sail_Red_Striped_torn.tga";
+	if(HasSubStr(tempstring, "Templar"))			CursedSails = "sail_Templar_torn.tga";
+	if(HasSubStr(tempstring, "Templar1"))			CursedSails = "sail_Templar_torn1.tga";
+	if(HasSubStr(tempstring, "petros"))			CursedSails = "sail_torn_red_plain.tga";
+	if(HasSubStr(tempstring, "petros_plain"))		CursedSails = "sail_torn_petros_plain.tga";
 	if(HasSubStr(tempstring, "petros_black_red"))		CursedSails = "sail_torn_petros_black_red.tga";
 	if(HasSubStr(tempstring, "petros_blue_white"))		CursedSails = "sail_torn_petros_blue_white.tga";
-	if(HasSubStr(tempstring, "barbarossa"))				CursedSails = "sail_torn_barbarossa_plain.tga";
+	if(HasSubStr(tempstring, "barbarossa"))			CursedSails = "sail_torn_barbarossa_plain.tga";
 	if(CursedSails == "")
 		CursedSails = "sail_torn_white_plain.tga";
 
@@ -5136,11 +5136,11 @@ void InitOpenSeaMod()
 																	// 0.1 - 0.9 : The higher that value the more pirates instead of merchants appear
 		NAVYRAIDER_CHANCE = 								2.0; 	// FLOAT - Ditto, but chance that raider is a foreign warship. Chance for that is coastraider_chance * navyraider_chance
 		MIN_ENEMY_DISTANCE_TO_DISABLE_MAP_ENTER =			100.0;	// FLOAT - original value is 500 - Petros: reset to 500.0 to prevent trouble
-		MIN_ENEMY_DISTANCE_TO_DISABLE_ENTER_2_LOCATION =	100.0;	// FLOAT - original value is 500
+		MIN_ENEMY_DISTANCE_TO_DISABLE_ENTER_2_LOCATION =		100.0;	// FLOAT - original value is 500
 		RANGE_TO_ENEMY =									3500;	// INT - in feet/yards/whatever unit the game uses.
 
 		WDM_MAP_TO_SEA_SCALE =								60;		// orig 19.607843 for this and next line
-		WDM_MAP_TO_SEA_ENCOUNTERS_SCALE =					60;		// was 60 in build, 10.0 in stock. NK 05-04-30
+		WDM_MAP_TO_SEA_ENCOUNTERS_SCALE =						60;		// was 60 in build, 10.0 in stock. NK 05-04-30
 	}
 	else
 	{
@@ -5164,11 +5164,11 @@ void InitOpenSeaMod()
 																	// 0.1 - 0.9 : The higher that value the more pirates instead of merchants appear
 		NAVYRAIDER_CHANCE = 								0.4; 	// FLOAT - Ditto, but chance that raider is a foreign warship. Chance for that is coastraider_chance * navyraider_chance
 		MIN_ENEMY_DISTANCE_TO_DISABLE_MAP_ENTER =			500.0;	// FLOAT - original value is 500 - Petros: reset to 500.0 to prevent trouble
-		MIN_ENEMY_DISTANCE_TO_DISABLE_ENTER_2_LOCATION =	500.0;	// FLOAT - original value is 500
+		MIN_ENEMY_DISTANCE_TO_DISABLE_ENTER_2_LOCATION =		500.0;	// FLOAT - original value is 500
 		RANGE_TO_ENEMY =									3000;	// INT - in feet/yards/whatever unit the game uses.
 
 		WDM_MAP_TO_SEA_SCALE =							19.607843;	// orig 19.607843 for this and next line
-		WDM_MAP_TO_SEA_ENCOUNTERS_SCALE =				19.607843;	// was 60 in build, 10.0 in stock. NK 05-04-30
+		WDM_MAP_TO_SEA_ENCOUNTERS_SCALE =					60.0;		// was 60 in build, 10.0 in stock. NK 05-04-30 Changed to 19.607843, which puts player too close to enemy.  Changed to 45 by GR 30/1/22
 	}
 }
 // stljeffbb Jan 15 2012 <--

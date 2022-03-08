@@ -1,4 +1,4 @@
-Build Version: Tuesday 11th January 2022
+Build Version: Monday 28th February 2022
 Build 14
 
 ==========================
@@ -57,6 +57,7 @@ Build 14:
   . French and Spanish trade offices in Port au Prince and Cartagena, different merchant licences for different nations by Grey Roger
   . New drinkers/gamblers in Havana and Santiago taverns by Grey Roger
   . Investing large sums of money with loanshark improves town economy by Pieter Boelen
+  . Ships Stats and Recognition Guide by HellSailor
 - Gameplay/Balancing Updates:
   . Boarding skill decrease for surrendered captains disabled by Tingyun
   . Assigning of skill bonuses made nation-dependent by Levis
@@ -86,6 +87,9 @@ Build 14:
   . "Cooking With Albatross" removes an albatross and gives 2 food during daily update, by Grey Roger
   . Naval officers can not capture towns for themselves nor select any government but their own when persuading a diplomat in a fort to surrender; diplomats in forts use period-correct king names, obey 'isEnabledTownCapture', by Grey Roger
   . If you have a choice to not execute a surrendered captain and actively choose to do so, lose reputation by Grey Roger
+  . WDM_MAP_TO_SEA_ENCOUNTERS_SCALE increased when Open Sea mod disabled, to increase spawn distance from enemy ships in worldmap encounters, by Grey Roger
+  . NPC ships can now be damaged by collisions by Pieter Boelen and Grey Roger
+  . False flag recognition code corrected to make it work by Pieter Boelen and Grey Roger
 - Code Updates:
   . Limited number of soldiers in Merchant Guild attacks by Pieter Boelen
   . Reduced number of soldiers in Soldier Reinforcements by Pieter Boelen
@@ -355,6 +359,7 @@ Build 14:
     > New sidequest "A French Companion" for FreePlay character José Joaquím Almeida by Bartolomeu o Portugues
     > Rogue / Gambler start: new questbook entries for gambler and female rogue, entire quest made optional, "PO_Fleut50" replaced by "FastMerchantman2" in last two periods, by Grey Roger
     > Elizabeth Shaw's Disappearance: Davy Jones given a lot of seafaring abilities plus MaxCrew and actual crew boosted to make battle with "Flying Dutchman" tougher by Grey Roger
+    > New starting quest for FreePlay agent by Grey Roger
   . Tutorial:
     > Stormy Start potentially permanently lost ship fixed by Jack Rackham
     > Locked Cabin Icon removed after tutorial completes by pedrwyth
@@ -379,6 +384,10 @@ Build 14:
     > Female characters get alternative dialog in two scenes, from original alternative Danielle story, by Grey Roger
     > New sword "bladeMH" as reward for killing Malcolm Hatcher by Grey Roger
     > Skull properly becomes replacement pirate boss on Nevis after Isenbrandt Jurcksen killed in final battle, by Grey Roger
+    > Quest locations have "island" attribute added by Grey Roger
+    > All companion ships sent to Port Royale during second mission, then Silehard checks if you gained new companions on return voyage and can't get original companions back, by Grey Roger
+    > If 'Sirena' fails to show up at Palm Beach for any reason, talking to crewman ashore for option to return to sea puts 'Sirena' back, by Grey Roger
+    > Code to remove companions after storm and restore them at San Juan rewritten to be more reliable by Grey Roger
   . Ardent storyline:
     > Fully completed by Grey Roger
     > New chapter "Imperial Escort" by Grey Roger
@@ -446,6 +455,7 @@ Build 14:
     > Blaze Devlin's fight scene checks for stunned opponents by Grey Roger
 - Model and Texture Updates:
   . Improved jungle grass and sky textures by Corsairs-Harbour.ru
+  . Grass and pine tree textures further improved by Grey Roger
   . Swedish East Indiaman high-detail custom model added by Philipjn and Armada
   . Historically accurate British Navy Fleet paint scheme by Armada and Grey Roger
   . HMS Interceptor improved texture by Legendary Spider
@@ -564,6 +574,9 @@ Build 14:
   . New ships "HeavyLineship2", "HeavyLineship3" imported from GoF; improvements to "HeavyLineship" to the same standard by Grey Roger
   . "Caravel1" and "FastCaravel" have missing shrouds on mizzen mast added, "RN_Galeon_L" has backstays added by Grey Roger
   . New character model "Rose" by Nita
+  . New ship models "RN_FleutWar", "SP_FleutWar", "PinnaceMedium2", "PinnaceMerchant2" by Grey Roger
+  . Improved lighting files for 'Flying Dutchman' cabin by meowsandstuff
+  . Missing cannon fire locators added to port side by Grey Roger
   
 - ADDITIONAL INSTALLATION OPTIONS:
   . Possibility to revert to original black-and-yellow paint scheme for British ships

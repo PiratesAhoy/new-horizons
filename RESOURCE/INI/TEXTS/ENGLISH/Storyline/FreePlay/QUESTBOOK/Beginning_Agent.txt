@@ -1,3 +1,8 @@
-title=Sabotage #stown#
-text.t1=I have arrived at #sisland# under the guise of a false flag and am to stir up as much trouble there as I can. However, I am a free man and quite capable of deciding what to do for myself.
-text.t2=I have arrived at #sisland# under the guise of a false flag and am to stir up as much trouble there as I can. However, I am a free woman and quite capable of deciding what to do for myself.
+title=Under cover in #stown#
+text.t1=I have arrived at #sisland# under the guise of a false flag and am to stir up as much trouble there as I can. First I have been told by #sofficer# that I should locate #sname#, whose real name is #sname2# and who is probably in the local tavern. If asked about my ship, I should say that it was infested by termites but I got rid of them and repaired the damage.
+text.t2=#sname# did indeed ask about my ship, was satisfied with my reply, and confirmed #spronoun3# identity by giving #spronoun3# true name as #sname2#.
+text.t3=I should now move my ship as the #snation# authorities will be looking for #sname2# trying to board a ship in the main port.
+text.t4=#sname2# wants to be taken to #sdestination#.
+text.t5=We have arrived safely at our destination. I have accepted a Letter of Marque from the #snation#. Now to continue my own covert activities...
+text.t6=We have arrived safely at our destination. I have been given some money as a reward. Now to continue my own covert activities...
+

@@ -229,6 +229,12 @@ Painted mostly black and blue.}
 NL_FleutWar_Descr{Decent at speed and turn rate.
 This naval vessel bears Dutch colours.}
 
+RN_FleutWar_Descr{Decent at speed and turn rate.
+This naval vessel is painted yellow and blue.}
+
+SP_FleutWar_Descr{Decent at speed and turn rate.
+This naval vessel is painted red.}
+
 PO_WarGalleon_Descr{Amiable performance.
 English galleon bearing brown and white paint.}
 FR_WarGalleon_Descr{Amiable performance.
@@ -712,10 +718,15 @@ Bearing a red hull with yellow trim.}
 
 PinnaceMerchant_Descr{A large cargo ship. Well built but slow. With an 
 escort this is a real money maker.
-Bearing bearing a Dutch colour scheme.}
+Bearing a Dutch colour scheme.}
+PinnaceMerchant2_Descr{A large cargo ship. Well built but slow. With an 
+escort this is a real money maker.
+Bearing a blue and yellow colour scheme.}
 
 PinnaceMedium_Descr{Well built and the fastest of her type.
 Medium Dutch trader with some green paint.}
+PinnaceMedium2_Descr{Well built and the fastest of her type.
+Medium trader with some blue paint.}
 
 GoldenHind_Descr{The 'Golden Hind' is best known for her circumnavigation of the globe between 1577 and 1580.
 She was originally known as the 'Pelican', but was renamed by Drake mid-voyage in 1578.}
