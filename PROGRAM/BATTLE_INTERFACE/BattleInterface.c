@@ -1524,12 +1524,15 @@ void BI_InitializeCommands()
 
 // KK -->
 	BattleInterface.Commands.Cancel.enable			= false;
-	BattleInterface.Commands.Cancel.picNum			= 0;
+	BattleInterface.Commands.Cancel.picNum			= calcTextureIndex(0, 1);
+	BattleInterface.Commands.Cancel.selPicNum		= calcSelectedTextureIndex(0, 1);
 	BattleInterface.Commands.Cancel.texNum			= 4; // KK
 	BattleInterface.Commands.Cancel.event			= "Cancel";
 	BattleInterface.Commands.Cancel.note			= LanguageConvertString(idLngFile, "sea_Cancel");
 	BattleInterface.Commands.Moor.enable			= false;
-	BattleInterface.Commands.Moor.picNum			= 1;
+	BattleInterface.Commands.Moor.picNum			= calcTextureIndex(1, 4);
+	BattleInterface.Commands.Moor.selPicNum			= calcSelectedTextureIndex(1, 4);
+	BattleInterface.Commands.Moor.texNum			= 1;
 	BattleInterface.Commands.Moor.event				= "BI_Moor";
 	BattleInterface.Commands.Moor.note				= LanguageConvertString(idLngFile, "sea_Moor");
 	BattleInterface.Commands.LandPort.enable		= false;
@@ -1537,17 +1540,21 @@ void BI_InitializeCommands()
 	BattleInterface.Commands.LandPort.event			= "BI_Port";
 	BattleInterface.Commands.LandPort.note			= LanguageConvertString(idLngFile, "sea_Port");
 	BattleInterface.Commands.LandShore.enable		= false;
-	BattleInterface.Commands.LandShore.picNum		= 1;
+	BattleInterface.Commands.LandShore.picNum		= calcTextureIndex(1, 4);
+	BattleInterface.Commands.LandShore.selPicNum		= calcSelectedTextureIndex(1, 4);
 	BattleInterface.Commands.LandShore.texNum		= 2;
 	BattleInterface.Commands.LandShore.event		= "BI_Shore";
 	BattleInterface.Commands.LandShore.note			= LanguageConvertString(idLngFile, "sea_Shore");
 	BattleInterface.Commands.Board.enable			= false;
-	BattleInterface.Commands.Board.picNum			= 2;
+	BattleInterface.Commands.Board.picNum			= calcTextureIndex(2, 4);
+	BattleInterface.Commands.Board.selPicNum		= calcSelectedTextureIndex(2, 4);
+	BattleInterface.Commands.Board.texNum			= 1;
 	BattleInterface.Commands.Board.event			= "BI_Board";
 	BattleInterface.Commands.Board.note				= LanguageConvertString(idLngFile, "sea_Board");
 // KK -->
 	BattleInterface.Commands.AttackTown.enable		= false;
-	BattleInterface.Commands.AttackTown.picNum		= 4;
+	BattleInterface.Commands.AttackTown.picNum		= calcTextureIndex(4, 4);
+	BattleInterface.Commands.AttackTown.selPicNum	= calcSelectedTextureIndex(4, 4);
 	BattleInterface.Commands.AttackTown.texNum		= 6;
 	BattleInterface.Commands.AttackTown.event		= "BI_AttackTown";
 	BattleInterface.Commands.AttackTown.note		= LanguageConvertString(idLngFile, "sea_LandTroops");
@@ -1557,124 +1564,170 @@ void BI_InitializeCommands()
 	BattleInterface.Commands.LandFort.note			= LanguageConvertString(idLngFile, "sea_Fort");
 // <-- KK
 	BattleInterface.Commands.SailTo.enable			= false;
-	BattleInterface.Commands.SailTo.picNum			= 3;
+	BattleInterface.Commands.SailTo.picNum			= calcTextureIndex(3, 4);
+	BattleInterface.Commands.SailTo.selPicNum		= calcSelectedTextureIndex(3, 4);
+	BattleInterface.Commands.SailTo.texNum			= 1;
 	BattleInterface.Commands.SailTo.event			= "BI_SailTo";
 	BattleInterface.Commands.SailTo.note			= LanguageConvertString(idLngFile, "sea_SailTo");
 	BattleInterface.Commands.LandTroops.enable		= false;
-	BattleInterface.Commands.LandTroops.picNum		= 4;
+	BattleInterface.Commands.LandTroops.picNum		= calcTextureIndex(4, 4);
+	BattleInterface.Commands.LandTroops.selPicNum	= calcSelectedTextureIndex(4, 4);
+	BattleInterface.Commands.LandTroops.texNum		= 1;
 	BattleInterface.Commands.LandTroops.event		= "BI_LandTroops";
 	BattleInterface.Commands.LandTroops.note		= LanguageConvertString(idLngFile, "sea_LandTroops");
 	BattleInterface.Commands.Map.enable				= false;
-	BattleInterface.Commands.Map.picNum				= 5;
+	BattleInterface.Commands.Map.picNum				= calcTextureIndex(5, 4);
+	BattleInterface.Commands.Map.selPicNum			= calcSelectedTextureIndex(5, 4);
+	BattleInterface.Commands.Map.texNum				= 1;
 	BattleInterface.Commands.Map.event				= "BI_Map";
 	BattleInterface.Commands.Map.note				= LanguageConvertString(idLngFile, "sea_Map");
 
 	BattleInterface.Commands.Attack.enable			= false;
-	BattleInterface.Commands.Attack.picNum			= 7;
+	BattleInterface.Commands.Attack.picNum			= calcTextureIndex(7, 4);
+	BattleInterface.Commands.Attack.selPicNum		= calcSelectedTextureIndex(7, 4);
+	BattleInterface.Commands.Attack.texNum			= 1;
 	BattleInterface.Commands.Attack.event			= "BI_Attack";
 	BattleInterface.Commands.Attack.note			= LanguageConvertString(idLngFile, "sea_Attack");
 	BattleInterface.Commands.Defend.enable			= false;
-	BattleInterface.Commands.Defend.picNum			= 8;
+	BattleInterface.Commands.Defend.picNum			= calcTextureIndex(8, 4);
+	BattleInterface.Commands.Defend.selPicNum		= calcSelectedTextureIndex(8, 4);
+	BattleInterface.Commands.Defend.teexNum			= 1;
 	BattleInterface.Commands.Defend.event			= "BI_Defend";
 	BattleInterface.Commands.Defend.note			= LanguageConvertString(idLngFile, "sea_Defend");
 	BattleInterface.Commands.SailAway.enable		= false;
-	BattleInterface.Commands.SailAway.picNum		= 9;
+	BattleInterface.Commands.SailAway.picNum		= calcTextureIndex(9, 4);
+	BattleInterface.Commands.SailAway.selPicNum		= calcSelectedTextureIndex(9, 4);
+	BattleInterface.Commands.SailAway.texNum		= 1;
 	BattleInterface.Commands.SailAway.event			= "BI_SailAway";
 	BattleInterface.Commands.SailAway.note			= LanguageConvertString(idLngFile, "sea_SailAway");
 	BattleInterface.Commands.HeaveToDrift.enable	= false;
-	BattleInterface.Commands.HeaveToDrift.picNum	= 10;
+	BattleInterface.Commands.HeaveToDrift.picNum	= calcTextureIndex(10, 4);
+	BattleInterface.Commands.HeaveToDrift.selPicNum	= calcSelectedTextureIndex(10, 4);
+	BattleInterface.Commands.HeaveToDrift.texNum	= 1;
 	BattleInterface.Commands.HeaveToDrift.event		= "BI_HeaveToDrift";
 	BattleInterface.Commands.HeaveToDrift.note		= LanguageConvertString(idLngFile, "sea_HeaveToDrift");
 	BattleInterface.Commands.CCommand.enable		= false;
-	BattleInterface.Commands.CCommand.picNum		= 14;
+	BattleInterface.Commands.CCommand.picNum		= calcTextureIndex(14, 4);
+	BattleInterface.Commands.CCommand.selPicNum		= calcSelectedTextureIndex(14, 4);
+	BattleInterface.Commands.CCommand.texNum		= 1;
 	BattleInterface.Commands.CCommand.event			= "BI_CompanionCommand";
 	BattleInterface.Commands.CCommand.note			= LanguageConvertString(idLngFile, "sea_CCommand");
 	BattleInterface.Commands.Ability.enable			= false;
-	BattleInterface.Commands.Ability.picNum			= 13;
+	BattleInterface.Commands.Ability.picNum			= calcTextureIndex(13, 4);
+	BattleInterface.Commands.Ability.selPicNum		= calcSelectedTextureIndex(13, 4);
+	BattleInterface.Commands.Ability.texNum			= 1;
 	BattleInterface.Commands.Ability.event			= "BI_Ability";
 	BattleInterface.Commands.Ability.note			= LanguageConvertString(idLngFile, "sea_Ability");
 	BattleInterface.Commands.Transfer.enable		= false;
-	BattleInterface.Commands.Transfer.picNum		= 6;
+	BattleInterface.Commands.Transfer.picNum		= calcTextureIndex(6, 4);
+	BattleInterface.Commands.Transfer.selPicNum		= calcSelectedTextureIndex(6, 4);
+	BattleInterface.Commands.Transfer.texNum		= 1;
 	BattleInterface.Commands.Transfer.event			= "BI_Transfer";
 	BattleInterface.Commands.Transfer.note			= LanguageConvertString(idLngFile, "sea_Transfer");
 // FCoHS -->
 	BattleInterface.Commands.FCoHS_Hail.enable		= false;
-	BattleInterface.Commands.FCoHS_Hail.picNum		= 16;
+	BattleInterface.Commands.FCoHS_Hail.picNum		= calcTextureIndex(16, 4);
+	BattleInterface.Commands.FCoHS_Hail.selPicNum	= calcSelectedTextureIndex(16, 4);
+	BattleInterface.Commands.FCoHS_Hail.texNum		= 1;
 	BattleInterface.Commands.FCoHS_Hail.event		= "BI_FCoHS_Hail";
 	BattleInterface.Commands.FCoHS_Hail.note		= LanguageConvertString(idLngFile, "sea_FCoHS_Hail"); // PB: Add text
-	BattleInterface.Commands.FCoHS_Contact.enable	= false;
-	BattleInterface.Commands.FCoHS_Contact.picNum	= 17;
-	BattleInterface.Commands.FCoHS_Contact.event	= "BI_FCoHS_Contact";
-	BattleInterface.Commands.FCoHS_Contact.note		= LanguageConvertString(idLngFile, "sea_FCoHS_Contact"); // PB: Add text
+	BattleInterface.Commands.FCoHS_Contact.enable		= false;
+	BattleInterface.Commands.FCoHS_Contact.picNum		= calcTextureIndex(17, 4);
+	BattleInterface.Commands.FCoHS_Contact.selPicNum	= calcSelectedTextureIndex(17, 4);
+	BattleInterface.Commands.FCoHS_Contact.texNum		= 1;
+	BattleInterface.Commands.FCoHS_Contact.event		= "BI_FCoHS_Contact";
+	BattleInterface.Commands.FCoHS_Contact.note			= LanguageConvertString(idLngFile, "sea_FCoHS_Contact"); // PB: Add text
 // FCoHS <--
 // PB: Kraken Attack -->
 	BattleInterface.Commands.KrakenAttack.enable	= false;
-	BattleInterface.Commands.KrakenAttack.picNum	= 19;
+	BattleInterface.Commands.KrakenAttack.picNum	= calcTextureIndex(19, 4);
+	BattleInterface.Commands.KrakenAttack.selPicNum	= calcSelectedTextureIndex(19, 4);
+	BattleInterface.Commands.KrakenAttack.texNum	= 1;
 	BattleInterface.Commands.KrakenAttack.event		= "BI_KrakenAttack";
 	BattleInterface.Commands.KrakenAttack.note		= LanguageConvertString(idLngFile, "sea_KrakenAttack");
 // PB: Kraken Attack <--
 // PB: Flying Dutchman -->
 	BattleInterface.Commands.SubmergeDutchman.enable	= false;
-	BattleInterface.Commands.SubmergeDutchman.picNum	= 20;
+	BattleInterface.Commands.SubmergeDutchman.picNum	= calcTextureIndex(20, 4);
+	BattleInterface.Commands.SubmergeDutchman.selPicNum	= calcSelectedTextureIndex(20, 4);
+	BattleInterface.Commands.SubmergeDutchman.texNum	= 1;
 	BattleInterface.Commands.SubmergeDutchman.event		= "BI_SubmergeDutchman";
 	BattleInterface.Commands.SubmergeDutchman.note		= LanguageConvertString(idLngFile, "sea_SubmergeDutchman");
 // PB: Flying Dutchman <--
 // PB: Black Pearl -->
 	BattleInterface.Commands.PearlSweeps.enable		= false;
-	BattleInterface.Commands.PearlSweeps.picNum		= 21;
+	BattleInterface.Commands.PearlSweeps.picNum		= calcTextureIndex(21, 4);
+	BattleInterface.Commands.PearlSweeps.selPicNum	= calcSelectedTextureIndex(21, 4);
+	BattleInterface.Commands.PearlSweeps.texNum		= 1;
 	BattleInterface.Commands.PearlSweeps.event		= "BI_PearlSweeps";
 	BattleInterface.Commands.PearlSweeps.note		= LanguageConvertString(idLngFile, "sea_PearlSweeps");
 // PB: Black Pearl <--
 // PB: Queen Anne's Revenge -->
 	BattleInterface.Commands.QARSword.enable		= false;
-	BattleInterface.Commands.QARSword.picNum		= 22;
+	BattleInterface.Commands.QARSword.picNum		= calcTextureIndex(22, 4);
+	BattleInterface.Commands.QARSword.selPicNum		= calcSelectedTextureIndex(22, 4);
+	BattleInterface.Commands.QARSword.texNum		= 1;
 	BattleInterface.Commands.QARSword.event			= "BI_QARSword";
 	BattleInterface.Commands.QARSword.note			= LanguageConvertString(idLngFile, "sea_QARSword");
 // PB: Queen Anne's Revenge <--
 // C92: Sword of Triton Attack -->
 	BattleInterface.Commands.TritonAttack.enable	= false;
-	BattleInterface.Commands.TritonAttack.picNum	= 24;
+	BattleInterface.Commands.TritonAttack.picNum	= calcTextureIndex(24, 4);
+	BattleInterface.Commands.TritonAttack.selPicNum	= calcSelectedTextureIndex(24, 4);
+	BattleInterface.Commands.TritonAttack.texNum	= 1;
 	BattleInterface.Commands.TritonAttack.event		= "BI_TritonAttack";
 	BattleInterface.Commands.TritonAttack.note		= LanguageConvertString(idLngFile, "sea_TritonAttack");
 // C92: Sword of Triton Attack <--
 // TJ&PB: Neptune's Trident -->
-	BattleInterface.Commands.NeptuneTrident.enable	= false;
-	BattleInterface.Commands.NeptuneTrident.picNum	= 23;
-	BattleInterface.Commands.NeptuneTrident.event	= "BI_NeptuneTrident";
-	BattleInterface.Commands.NeptuneTrident.note	= LanguageConvertString(idLngFile, "sea_NeptuneTrident");
+	BattleInterface.Commands.NeptuneTrident.enable		= false;
+	BattleInterface.Commands.NeptuneTrident.picNum		= calcTextureIndex(23, 4);
+	BattleInterface.Commands.NeptuneTrident.selPicNum	= calcSelectedTextureIndex(23, 4);
+	BattleInterface.Commands.NeptuneTrident.texNum		= 1;
+	BattleInterface.Commands.NeptuneTrident.event		= "BI_NeptuneTrident";
+	BattleInterface.Commands.NeptuneTrident.note		= LanguageConvertString(idLngFile, "sea_NeptuneTrident");
 // TJ&PB: Neptune's Trident <--
 	BattleInterface.Commands.Charge.enable			= false;
-	BattleInterface.Commands.Charge.picNum			= 11;
+	BattleInterface.Commands.Charge.picNum			= calcTextureIndex(11, 4);
+	BattleInterface.Commands.Charge.selPicNum		= calcSelectedTextureIndex(11, 4);
+	BattleInterface.Commands.Charge.texNum			= 1;
 	BattleInterface.Commands.Charge.event			= "BI_Charge";
 	BattleInterface.Commands.Charge.note			= LanguageConvertString(idLngFile, "sea_Charge");
 	BattleInterface.Commands.Speed.enable			= false;
-	BattleInterface.Commands.Speed.picNum			= 12;
+	BattleInterface.Commands.Speed.picNum			= calcTextureIndex(12, 4);
+	BattleInterface.Commands.Speed.selPicNum		= calcSelectedTextureIndex(12, 4);
+	BattleInterface.Commands.Speed.texNum			= 1;
 	BattleInterface.Commands.Speed.event			= "BI_Speed";
 	BattleInterface.Commands.Speed.note				= LanguageConvertString(idLngFile, "sea_Speed");
-	BattleInterface.Commands.ImmediateDeath.enable	= false;
-	BattleInterface.Commands.ImmediateDeath.picNum	= 0;
-	BattleInterface.Commands.ImmediateDeath.event	= "BI_ImmDeath";
-	BattleInterface.Commands.ImmediateDeath.texNum	= 7;
-	BattleInterface.Commands.ImmediateDeath.note	= LanguageConvertString(idLngFile, "sea_ImmediateDeath");
+	BattleInterface.Commands.ImmediateDeath.enable		= false;
+	BattleInterface.Commands.ImmediateDeath.picNum		= calcTextureIndex(0, 4);
+	BattleInterface.Commands.ImmediateDeath.selPicNum	= calcSelectedTextureIndex(0, 4);
+	BattleInterface.Commands.ImmediateDeath.event		= "BI_ImmDeath";
+	BattleInterface.Commands.ImmediateDeath.texNum		= 7;
+	BattleInterface.Commands.ImmediateDeath.note		= LanguageConvertString(idLngFile, "sea_ImmediateDeath");
 
 	BattleInterface.AbilityIcons.Brander.enable				= false;
-	BattleInterface.AbilityIcons.Brander.picNum				= 0;
+	BattleInterface.AbilityIcons.Brander.picNum				= calcTextureIndex(0, 4);
+	BattleInterface.AbilityIcons.Brander.selPicNum			= calcSelectedTextureIndex(0, 4);
 	BattleInterface.AbilityIcons.Brander.texNum				= 6;
 	BattleInterface.AbilityIcons.Brander.event				= "BI_Brander";
 	BattleInterface.AbilityIcons.ImmediateReload.enable		= false;
-	BattleInterface.AbilityIcons.ImmediateReload.picNum		= 6;
+	BattleInterface.AbilityIcons.ImmediateReload.picNum		= calcTextureIndex(6, 4);
+	BattleInterface.AbilityIcons.ImmediateReload.selPicNum	= calcSelectedTextureIndex(6, 4);
 	BattleInterface.AbilityIcons.ImmediateReload.texNum		= 6;
 	BattleInterface.AbilityIcons.ImmediateReload.event		= "BI_ImmediateReload";
 	BattleInterface.AbilityIcons.InstantBoarding.enable		= false;
-	BattleInterface.AbilityIcons.InstantBoarding.picNum		= 7;
+	BattleInterface.AbilityIcons.InstantBoarding.picNum		= calcTextureIndex(7, 4);
+	BattleInterface.AbilityIcons.InstantBoarding.selPicNum	= calcSelectedTextureIndex(7, 4);
 	BattleInterface.AbilityIcons.InstantBoarding.texNum		= 6;
 	BattleInterface.AbilityIcons.InstantBoarding.event		= "BI_InstantBoarding";
 	BattleInterface.AbilityIcons.LightRepair.enable			= false;
-	BattleInterface.AbilityIcons.LightRepair.picNum			= 5;
+	BattleInterface.AbilityIcons.LightRepair.picNum			= calcTextureIndex(5, 4);
+	BattleInterface.AbilityIcons.LightRepair.selPicNum		= calcSelectedTextureIndex(5, 4);
 	BattleInterface.AbilityIcons.LightRepair.texNum			= 6;
 	BattleInterface.AbilityIcons.LightRepair.event			= "BI_LightRepair";
 	BattleInterface.AbilityIcons.InstantRepair.enable		= false;
-	BattleInterface.AbilityIcons.InstantRepair.picNum		= 1;
+	BattleInterface.AbilityIcons.InstantRepair.picNum		= calcTextureIndex(1, 4);
+	BattleInterface.AbilityIcons.InstantRepair.selPicNum	= calcSelectedTextureIndex(1, 4);
 	BattleInterface.AbilityIcons.InstantRepair.texNum		= 6;
 	BattleInterface.AbilityIcons.InstantRepair.event		= "BI_InstantRepair";
 	BattleInterface.AbilityIcons.Turn180.enable				= false;
@@ -1682,11 +1735,13 @@ void BI_InitializeCommands()
 	BattleInterface.AbilityIcons.Turn180.texNum				= 6;
 	BattleInterface.AbilityIcons.Turn180.event				= "BI_Turn180";
 	BattleInterface.AbilityIcons.SandbankManeuver.enable	= false;
-	BattleInterface.AbilityIcons.SandbankManeuver.picNum	= 3;
+	BattleInterface.AbilityIcons.SandbankManeuver.picNum	= calcTextureIndex(3, 4);
+	BattleInterface.AbilityIcons.SandbankManeuver.selPicNum	= calcSelectedTextureIndex(3, 4);
 	BattleInterface.AbilityIcons.SandbankManeuver.texNum	= 6;
 	BattleInterface.AbilityIcons.SandbankManeuver.event		= "BI_SandbankManeuver";
 	BattleInterface.AbilityIcons.Troopers.enable			= false;
-	BattleInterface.AbilityIcons.Troopers.picNum			= 4;
+	BattleInterface.AbilityIcons.Troopers.picNum			= calcTextureIndex(4, 4);
+	BattleInterface.AbilityIcons.Troopers.selPicNum			= calcSelectedTextureIndex(4, 4);
 	BattleInterface.AbilityIcons.Troopers.texNum			= 6;
 	BattleInterface.AbilityIcons.Troopers.event				= "BI_Troopers";
 
@@ -1696,16 +1751,22 @@ void BI_InitializeCommands()
 	if (GetCompanionQuantity(mainCh) == 1) {
 		int st = GetCharacterShipType(mainCh);
 		if (st >= 0 && st < SHIP_TYPES_QUANTITY) {
-			BattleInterface.Commands.EnterShip.enable = true;
-			BattleInterface.Commands.EnterShip.picNum = sti(ShipsTypes[st].BI.Pic);
-			BattleInterface.Commands.EnterShip.texNum = sti(ShipsTypes[st].BI.Tex);
-			BattleInterface.Commands.EnterShip.event  = "BI_EnterShip";
-			BattleInterface.Commands.EnterShip.note   = GetMyShipName(mainCh);
-			BattleInterface.Commands.EnterShip.name   = GetMainCharacterIndex();
+			int textureIndex = sti(ShipsTypes[st].BI.Tex);
+			string textureAttr = "t" + textureIndex;
+			int textureColumns = BattleInterface.CommandTextures.list.(textureAttr).columns;
+			int picture = sti(ShipsTypes[st].BI.Pic);
+			BattleInterface.Commands.EnterShip.enable		= true;
+			BattleInterface.Commands.EnterShip.picNum		= calcTextureIndex(picture, textureColumns);
+			BattleInterface.Commands.EnterShip.selPicNum	= calcSelectedTextureIndex(picture, textureColumns);
+			BattleInterface.Commands.EnterShip.texNum		= textureIndex;
+			BattleInterface.Commands.EnterShip.event		= "BI_EnterShip";
+			BattleInterface.Commands.EnterShip.note			= GetMyShipName(mainCh);
+			BattleInterface.Commands.EnterShip.name			= GetMainCharacterIndex();
 		}
 	} else {
 		BattleInterface.Commands.EnterShip.enable = true;
-		BattleInterface.Commands.EnterShip.picNum = 5;
+		BattleInterface.Commands.EnterShip.picNum = calcTextureIndex(5, 4);
+		BattleInterface.Commands.EnterShip.selPicNum = calcSelectedTextureIndex(5, 4);
 		BattleInterface.Commands.EnterShip.texNum = 2;
 		BattleInterface.Commands.EnterShip.event  = "BI_EnterShip";
 		BattleInterface.Commands.EnterShip.note   = LanguageConvertString(idLngFile, "sea_EnterDeck");
@@ -1714,9 +1775,11 @@ void BI_InitializeCommands()
 // MAXIMUS Deck <--
 
 	// Hoist Flag MOD -Amokachi
-	BattleInterface.Commands.HoistFlag.enable			= false;
-	BattleInterface.Commands.HoistFlag.picNum			= 15; // KK
-	BattleInterface.Commands.HoistFlag.event			= "BI_HoistFlag";
+	BattleInterface.Commands.HoistFlag.enable		= false;
+	BattleInterface.Commands.HoistFlag.picNum		= calcTextureIndex(15, 4); // KK
+	BattleInterface.Commands.HoistFlag.selPicNum	= calcSelectedTextureIndex(15, 4); // KK
+	BattleInterface.Commands.HoistFlag.texNum		= 1; // KK
+	BattleInterface.Commands.HoistFlag.event		= "BI_HoistFlag";
 	BattleInterface.Commands.HoistFlag.note			= LanguageConvertString(idLngFile, "sea_HoistFlag");
 
 	LanguageCloseFile(idLngFile);
@@ -1887,70 +1950,86 @@ void SetParameterData()
 	if (iRealismMode == 0 && !NAVIGATION_EQUIPMENT) compasstype = "compass3"; // Erwin Lindemann
 
 	BattleInterface.CommandTextures.list.t0.name = "battle_interface\cicons_charge.tga";
-	BattleInterface.CommandTextures.list.t0.xsize = 1;
+	BattleInterface.CommandTextures.list.t0.columns = 1;
+	BattleInterface.CommandTextures.list.t0.xsize = calcNumberOfTextureColumns(1);
 	BattleInterface.CommandTextures.list.t0.ysize = 4;
 
 	BattleInterface.CommandTextures.list.t1.name = "battle_interface\cicons_command.tga";
-	BattleInterface.CommandTextures.list.t1.xsize = 4;
+	BattleInterface.CommandTextures.list.t1.columns = 4;
+	BattleInterface.CommandTextures.list.t1.xsize = calcNumberOfTextureColumns(4);
 	BattleInterface.CommandTextures.list.t1.ysize = 8; // FCoHS
 
 // KK -->
 	BattleInterface.CommandTextures.list.t2.name = "battle_interface\LandTarget1.tga";
-	BattleInterface.CommandTextures.list.t2.xsize = 4;
+	BattleInterface.CommandTextures.list.t2.columns = 4;
+	BattleInterface.CommandTextures.list.t2.xsize = calcNumberOfTextureColumns(4);
 	BattleInterface.CommandTextures.list.t2.ysize = 2;
 
 	BattleInterface.CommandTextures.list.t3.name = "battle_interface\LandTarget4.tga";
-	BattleInterface.CommandTextures.list.t3.xsize = 8;
+	BattleInterface.CommandTextures.list.t3.columns = 8;
+	BattleInterface.CommandTextures.list.t3.xsize = calcNumberOfTextureColumns(8);
 	BattleInterface.CommandTextures.list.t3.ysize = 4; //JRH
 
 	BattleInterface.CommandTextures.list.t4.name = "battle_interface\Cancel.tga";
-	BattleInterface.CommandTextures.list.t4.xsize = 1;
+	BattleInterface.CommandTextures.list.t4.columns = 1;
+	BattleInterface.CommandTextures.list.t4.xsize = calcNumberOfTextureColumns(1);
 	BattleInterface.CommandTextures.list.t4.ysize = 1;
 // <-- KK
 
 	BattleInterface.CommandTextures.list.t5.name = "battle_interface\SailControls.tga";
-	BattleInterface.CommandTextures.list.t5.xsize = 4;
+	BattleInterface.CommandTextures.list.t5.columns = 4;
+	BattleInterface.CommandTextures.list.t5.xsize = calcNumberOfTextureColumns(4);
 	BattleInterface.CommandTextures.list.t5.ysize = 1;
 
 	BattleInterface.CommandTextures.list.t6.name = "battle_interface\sea_abilitys.tga";
-	BattleInterface.CommandTextures.list.t6.xsize = 4;
+	BattleInterface.CommandTextures.list.t6.columns = 4;
+	BattleInterface.CommandTextures.list.t6.xsize = calcNumberOfTextureColumns(4);
 	BattleInterface.CommandTextures.list.t6.ysize = 2;
 
 	BattleInterface.CommandTextures.list.t7.name = "battle_interface\scull.tga";
-	BattleInterface.CommandTextures.list.t7.xsize = 1;
+	BattleInterface.CommandTextures.list.t7.columns = 1;
+	BattleInterface.CommandTextures.list.t7.xsize = calcNumberOfTextureColumns(1);
 	BattleInterface.CommandTextures.list.t7.ysize = 1;
 
 	BattleInterface.CommandTextures.list.t8.name = "battle_interface\small_nations"+GetCurrentPeriod()+".tga"; // PB
-	BattleInterface.CommandTextures.list.t8.xsize = 16;					//changed by KAM
+	BattleInterface.CommandTextures.list.t8.columns = 16;
+	BattleInterface.CommandTextures.list.t8.xsize = calcNumberOfTextureColumns(16);					//changed by KAM
 	BattleInterface.CommandTextures.list.t8.ysize = 1;
 
 	BattleInterface.CommandTextures.list.t9.name = "battle_interface\Artefact.tga";
-	BattleInterface.CommandTextures.list.t9.xsize = 1;
+	BattleInterface.CommandTextures.list.t9.columns = 1;
+	BattleInterface.CommandTextures.list.t9.xsize = calcNumberOfTextureColumns(1);
 	BattleInterface.CommandTextures.list.t9.ysize = 1;
 
 // KK -->
 	BattleInterface.CommandTextures.list.t10.name = "battle_interface\ships_16.tga";
-	BattleInterface.CommandTextures.list.t10.xsize = 4;
+	BattleInterface.CommandTextures.list.t10.columns = 4;
+	BattleInterface.CommandTextures.list.t10.xsize = calcNumberOfTextureColumns(4);
 	BattleInterface.CommandTextures.list.t10.ysize = 4;
 
 	BattleInterface.CommandTextures.list.t11.name = "battle_interface\ships_1.tga";
-	BattleInterface.CommandTextures.list.t11.xsize = 1;
+	BattleInterface.CommandTextures.list.t11.columns = 1;
+	BattleInterface.CommandTextures.list.t11.xsize = calcNumberOfTextureColumns(1);
 	BattleInterface.CommandTextures.list.t11.ysize = 1;
 
 	BattleInterface.CommandTextures.list.t12.name = "battle_interface\ships_2.tga";
-	BattleInterface.CommandTextures.list.t12.xsize = 1;
+	BattleInterface.CommandTextures.list.t12.columns = 1;
+	BattleInterface.CommandTextures.list.t12.xsize = calcNumberOfTextureColumns(1);
 	BattleInterface.CommandTextures.list.t12.ysize = 2;
 
 	BattleInterface.CommandTextures.list.t13.name = "battle_interface\08shs_02.tga";	//Mod Ship by Duke Surak'nar 17/08/2003
-	BattleInterface.CommandTextures.list.t13.xsize = 1;
+	BattleInterface.CommandTextures.list.t13.columns = 1;
+	BattleInterface.CommandTextures.list.t13.xsize = calcNumberOfTextureColumns(1);
 	BattleInterface.CommandTextures.list.t13.ysize = 1;
 
 	BattleInterface.CommandTextures.list.t14.name = "battle_interface\ships_32.tga";
-	BattleInterface.CommandTextures.list.t14.xsize = 4;
+	BattleInterface.CommandTextures.list.t14.columns = 4;
+	BattleInterface.CommandTextures.list.t14.xsize = calcNumberOfTextureColumns(4);
 	BattleInterface.CommandTextures.list.t14.ysize = 4;
 
 	BattleInterface.CommandTextures.list.t15.name = "battle_interface\ships_48.tga";
-	BattleInterface.CommandTextures.list.t15.xsize = 4;
+	BattleInterface.CommandTextures.list.t15.columns = 4;
+	BattleInterface.CommandTextures.list.t15.xsize = calcNumberOfTextureColumns(4);
 	BattleInterface.CommandTextures.list.t15.ysize = 4;
 // <-- KK
 
@@ -1983,43 +2062,50 @@ void SetParameterData()
 
 // KK -->
 	BattleInterface.UserIcons.ui1.enable = true;
-	BattleInterface.UserIcons.ui1.pic = 0;
+	BattleInterface.UserIcons.ui1.pic = calcTextureIndex(0, 4);
+	BattleInterface.UserIcons.ui1.selPic = calcSelectedTextureIndex(0, 4);
 	BattleInterface.UserIcons.ui1.tex = 5;
 	BattleInterface.UserIcons.ui1.name = "sail_none";
 	BattleInterface.UserIcons.ui1.note = LanguageConvertString(idLngFile, "sea_LowerSails");
 	//----------------------------------------------
 	BattleInterface.UserIcons.ui2.enable = true;
-	BattleInterface.UserIcons.ui2.pic = 1;
+	BattleInterface.UserIcons.ui2.pic = calcTextureIndex(1, 4);
+	BattleInterface.UserIcons.ui2.selPic = calcSelectedTextureIndex(1, 4);
 	BattleInterface.UserIcons.ui2.tex = 5;
 	BattleInterface.UserIcons.ui2.name = "sail_midi";
 	BattleInterface.UserIcons.ui2.note = LanguageConvertString(idLngFile, "sea_BattleSails");
 	//----------------------------------------------
 	BattleInterface.UserIcons.ui3.enable = true;
-	BattleInterface.UserIcons.ui3.pic = 2;
+	BattleInterface.UserIcons.ui3.pic = calcTextureIndex(2, 4);
+	BattleInterface.UserIcons.ui3.selPic = calcSelectedTextureIndex(2, 4);
 	BattleInterface.UserIcons.ui3.tex = 5;
 	BattleInterface.UserIcons.ui3.name = "sail_fast";
 	BattleInterface.UserIcons.ui3.note = LanguageConvertString(idLngFile, "sea_FullSails");
 	//----------------------------------------------
 	BattleInterface.UserIcons.ui4.enable = true;
-	BattleInterface.UserIcons.ui4.pic = 5;
+	BattleInterface.UserIcons.ui4.pic = calcTextureIndex(5, 4);
+	BattleInterface.UserIcons.ui4.selPic = calcSelectedTextureIndex(5, 4);
 	BattleInterface.UserIcons.ui4.tex = 2;
 	BattleInterface.UserIcons.ui4.name = -1;
 	BattleInterface.UserIcons.ui4.note = "";
 	//----------------------------------------------
 	BattleInterface.UserIcons.ui5.enable = true;
-	BattleInterface.UserIcons.ui5.pic = 5;
+	BattleInterface.UserIcons.ui5.pic = calcTextureIndex(5, 4);
+	BattleInterface.UserIcons.ui5.selPic = calcSelectedTextureIndex(5, 4);
 	BattleInterface.UserIcons.ui5.tex = 2;
 	BattleInterface.UserIcons.ui5.name = -1;
 	BattleInterface.UserIcons.ui5.note = "";
 	//----------------------------------------------
 	BattleInterface.UserIcons.ui6.enable = true;
-	BattleInterface.UserIcons.ui6.pic = 5;
+	BattleInterface.UserIcons.ui6.pic = calcTextureIndex(5, 4);
+	BattleInterface.UserIcons.ui6.selPic = calcSelectedTextureIndex(5, 4);
 	BattleInterface.UserIcons.ui6.tex = 2;
 	BattleInterface.UserIcons.ui6.name = -1;
 	BattleInterface.UserIcons.ui6.note = "";
 	//----------------------------------------------
 	BattleInterface.UserIcons.ui7.enable = true;
-	BattleInterface.UserIcons.ui7.pic = 5;
+	BattleInterface.UserIcons.ui7.pic = calcTextureIndex(5, 4);
+	BattleInterface.UserIcons.ui7.selPic = calcSelectedTextureIndex(5, 4);
 	BattleInterface.UserIcons.ui7.tex = 2;
 	BattleInterface.UserIcons.ui7.name = -1;
 	BattleInterface.UserIcons.ui7.note = "";
@@ -2598,7 +2684,8 @@ void procSetUsingAbility()
 			if( GetCharacterItem(mainCh,arcur.id)>0 )
 			{
 				BattleInterface.AbilityIcons.(tmpStr).enable	= true;
-				BattleInterface.AbilityIcons.(tmpStr).picNum	= arcur.quest.pic;
+				BattleInterface.AbilityIcons.(tmpStr).picNum	= calcTextureIndex(arcur.quest.pic, 1);
+				BattleInterface.AbilityIcons.(tmpStr).selPicNum	= calcSelectedTextureIndex(arcur.quest.pic, 1);
 				BattleInterface.AbilityIcons.(tmpStr).texNum	= 9;
 				BattleInterface.AbilityIcons.(tmpStr).event		= arcur.id;
 				BattleInterface.AbilityIcons.(tmpStr).quest		= arcur.quest;
@@ -2903,9 +2990,14 @@ void SetUserIcons(string parent)
 				ref curchr = GetCharacter(cn);
 				int st = GetCharacterShipType(curchr);
 				if (st >= 0 && st < SHIP_TYPES_QUANTITY) {
+					int textureIndex = sti(ShipsTypes[st].BI.Tex);
+					string textureAttr = "t" + textureIndex;
+					int textureColumns = BattleInterface.CommandTextures.list.(textureAttr).columns;
+					int picture = sti(ShipsTypes[st].BI.Pic);
 					BattleInterface.UserIcons.(ui).enable = true;
-					BattleInterface.UserIcons.(ui).pic    = sti(ShipsTypes[st].BI.Pic);
-					BattleInterface.UserIcons.(ui).tex    = sti(ShipsTypes[st].BI.Tex);
+					BattleInterface.UserIcons.(ui).pic    = calcTextureIndex(picture, textureColumns);
+					BattleInterface.UserIcons.(ui).selPic = calcSelectedTextureIndex(picture, textureColumns);
+					BattleInterface.UserIcons.(ui).tex    = textureIndex;
 					BattleInterface.UserIcons.(ui).note   = GetMyShipName(curchr);
 					BattleInterface.UserIcons.(ui).name   = cn;
 				}
