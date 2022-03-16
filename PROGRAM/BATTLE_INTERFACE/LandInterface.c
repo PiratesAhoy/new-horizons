@@ -56,10 +56,9 @@ void StartBattleLandInterface()
 	}
 	bLandInterfaceStart = true;
 
-	BLI_SetShowParameters();
 	CreateEntity(&objLandInterface,"battle_land_interface");
 	DeleteAttribute(&objLandInterface,"");
-	LayerAddObject(EXECUTE,&objLandInterface,-1);
+	LayerAddObject(EXECUTE,objLandInterface,-1);
 	LayerAddObject(REALIZE,objLandInterface,-1);
 
 	if (!CheckAttribute(InterfaceStates, "BIVisible")) InterfaceStates.BIVisible = true; // KK
@@ -382,6 +381,7 @@ void EndBattleLandInterface()
 
 void BLI_SetObjectData()
 {
+    int fTmp, fTmp2;
 	DeleteAttribute(&objLandInterface,"");
 	objLandInterface.data.riskAlarm = 0;
 	// индикатор тревоги
@@ -405,7 +405,7 @@ void BLI_SetObjectData()
 		ar.charge = 0.0;
 	}
 	BLI_SetCommandParameters();
-	BLI_SetMassageParameters();
+	BLI_SetMessageParameters();
 	// текстуры
 	int idLngFile = LanguageOpenFile("commands_name.txt");
 	objLandInterface.CommandTextures.list.t0.name = "battle_interface\LandCommands.tga";
@@ -611,6 +611,82 @@ void BLI_SetObjectData()
 	objLandInterface.UserIcons.cancel.tex = 3;
 	objLandInterface.UserIcons.cancel.name = "cancel";
 
+	objLandInterface.ManSign.backtexturename		= "battle_interface\empty.tga";
+	objLandInterface.ManSign.backcolor				= argb(255,128,128,128);
+	objLandInterface.ManSign.backuv					= "0.0,0.0,1.0,1.0";
+	objLandInterface.ManSign.backoffset				= "0.0,0.0";
+	objLandInterface.ManSign.backiconsize			= "128,128";
+
+	objLandInterface.ManSign.alarmtexturename		= "battle_interface\AlarmBack.tga";
+	objLandInterface.ManSign.alarmhighcolor			= argb(168,168,28,28);
+	objLandInterface.ManSign.alarmlowcolor			= argb(64,168,28,28);
+	objLandInterface.ManSign.alarmuptime			= 2.5;
+	objLandInterface.ManSign.alarmdowntime			= 1.0;
+	objLandInterface.ManSign.alarmuv				= "0.0,0.0,1.0,1.0";
+	fTmp = RecalculateHIcon(-14);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(125);
+	//objLandInterface.ManSign.alarmoffset			= "-14,770";
+	objLandInterface.ManSign.alarmoffset = fTmp + "," + fTmp2;
+	objLandInterface.ManSign.alarmiconsize			= "70,70";
+
+	objLandInterface.ManSign.manstatetexturename	= "battle_interface\ShipState.tga";
+	objLandInterface.ManSign.manstatecolor			= argb(255,128,128,128);
+	objLandInterface.ManSign.manhpuv				= "0.0,0.109,0.5,0.6875";
+	fTmp = RecalculateHIcon(-38);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(128);
+	//objLandInterface.ManSign.manhpoffset			= "-38,767";
+	objLandInterface.ManSign.manhpoffset = fTmp + "," + fTmp2;
+	objLandInterface.ManSign.manhpiconsize			= "64,80";
+	objLandInterface.ManSign.manenegryuv			= "0.5,0.109,1.0,0.6875";
+	fTmp = RecalculateHIcon(38);
+	//objLandInterface.ManSign.manenegryoffset		= "38,767";
+	objLandInterface.ManSign.manenegryoffset = fTmp + "," + fTmp2;
+	objLandInterface.ManSign.manenergyiconsize		= "64,80";
+
+	objLandInterface.ManSign.gunchargetexturename	= "battle_interface\ShipClass.tga";
+	objLandInterface.ManSign.gunchargecolor			= argb(255,168,168,48);
+	objLandInterface.ManSign.gunchargebackcolor		= argb(255,188,48,48);
+	objLandInterface.ManSign.gunchargeuv			= "0.0,0.0,1.0,1.0";
+	fTmp = RecalculateHIcon(-18);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(168);
+	//objLandInterface.ManSign.gunchargeoffset		= "-14,740";
+	objLandInterface.ManSign.gunchargeoffset = fTmp + "," + fTmp2;
+	objLandInterface.ManSign.gunchargeiconsize		= "80,20";
+	objLandInterface.ManSign.gunchargeprogress		= "0.0625, 0.219, 0.359, 0.5, 0.641, 0.781, 0.983";
+
+	objLandInterface.ManSign.manfacecolor			= argb(255,128,128,128);
+	//objLandInterface.ManSign.manfaceoffset			= "-14,770";
+	fTmp = RecalculateHIcon(-14);
+	fTmp2 = sti(showWindow.bottom) -  RecalculateVIcon(125);
+	objLandInterface.ManSign.manfaceoffset = fTmp + "," + fTmp2;
+	//objLandInterface.ManSign.iconoffset1 = objLandInterface.ManSign.manfaceoffset;
+	objLandInterface.ManSign.manfaceiconsize		= "74,74";
+	//objLandInterface.ManSign.commandlistverticaloffset = 735;
+	fTmp2 -= RecalculateVIcon(37);
+	objLandInterface.ManSign.commandlistverticaloffset = fTmp2;
+	//Boyer mod
+	/*
+	objLandInterface.ManSign.iconoffset1 = "70,70";
+	objLandInterface.ManSign.iconoffset2 = "70,180";
+	objLandInterface.ManSign.iconoffset3 = "70,290";
+	objLandInterface.ManSign.iconoffset4 = "70,400";
+	*/
+    string sOff = "iconoffset";
+    fTmp = RecalculateVIcon(95);
+    fTmp2 = RecalculateVIcon(70);
+/*
+	for(i = 1; i<=MAX_NUM_FIGHTERS + 1; i++) {
+		string sOffsetIcon = "iconoffset" + i;
+		objLandInterface.ManSign.(sOffsetIcon) = "70," + (70 + (i-1)*110);
+		trace(sOffsetIcon + " = " + objLandInterface.ManSign.(sOffsetIcon) );
+	}
+*/
+    objLandInterface.ManSign.iconoffset1 = fTmp2 + "," + fTmp2;
+	for(i = OFFICER_MAX; i > 1; i--) {
+        sOff = "iconoffset" + i;
+		objLandInterface.ManSign.(sOff) = (fTmp * i) + "," + fTmp2;
+	}
+
 	LanguageCloseFile(idLngFile);
 		// go to icons
 	int idxloc = FindLoadedLocation();
@@ -622,6 +698,7 @@ void BLI_SetObjectData()
 		CreateReloadPaths(outGroupName);
 	}
 
+	BLI_SetCommandParameters();
 	SendMessage(&objLandInterface,"l",MSG_BATTLE_LAND_START);
 }
 
@@ -639,91 +716,34 @@ bool FindUserIcon(string id,ref uiref)
 	return false;
 }
 
-void BLI_SetShowParameters()
-{
-	aref ar; makearef(ar,objLandInterface.Parameters);
-
-	ar.shadowH = RecalculateVIcon(28);
-	ar.shadowW = RecalculateHIcon(20);
-	ar.shadowTOP = RecalculateVIcon(18);
-	ar.widthCom = RecalculateHIcon(64);
-	ar.heightCom = RecalculateVIcon(64);
-	ar.leftPosCom = sti(showWindow.left)+RecalculateHIcon(16);
-	ar.topPosCom = sti(showWindow.bottom)-RecalculateVIcon(80);
-	ar.distCom = RecalculateHIcon(8);
-
-	ar.widthHealth = RecalculateHIcon(64);
-	ar.heightHealth = RecalculateVIcon(16);
-	ar.distHealth = RecalculateVIcon(4);
-
-	// высота и отступ для количества зарядов пистолета
-	ar.GunShootHeight = RecalculateHIcon(16);
-	ar.GunShootSpace = RecalculateVIcon(2);
-
-	ar.AlarmColorLight	= argb(255,128,128,128);
-	ar.AlarmColorDark	= argb(255,148,38,38);
-	ar.PoisonColorLight	= argb(255,128,128,128);
-	ar.PoisonColorDark	= argb(255,38,148,38);
-	ar.AlarmBlindUpTime		= 0.3;
-	ar.AlarmBlindDownTime	= 0.7;
-
-	ar.DoShowCommandos = true;
-	ar.CommandosQuantity = OFFICER_MAX;
-
-	ar.shadowTexture = "battle_interface\portraits_shadow.tga";
-
-//MAXIMUS: fixed officers-icons - we'll see proper icon for each officer in any location -->
-	//SetOfficerTexture(0);
-	//SetOfficerTexture(1);
-	//SetOfficerTexture(2);
-	//SetOfficerTexture(3);
-	for(int i=0; i<sti(ar.CommandosQuantity); i++)
-	{
-		SetOfficerTexture(i);
-	}
-//MAXIMUS: fixed officers-icons - we'll see proper icon for each officer in any location <--
-
-	ar.stateTexture = "battle_interface\officerstate.tga";
-	ar.gunChargeTexture = "battle_interface\guncharge.tga";
-
-	ar.iconHorzQuantity = 8;
-	ar.iconVertQuantity = 4;
-	BLI_SetCommandParameters();
-	BLI_SetMassageParameters();
-}
-
 void BLI_SetCommandParameters()
 {
-	objLandInterface.CommandShowParam.maxShowQuantity = 10;
-	objLandInterface.CommandShowParam.iconDistance = RecalculateHIcon(4);
-	objLandInterface.CommandShowParam.iconWidth = RecalculateHIcon(64);
-	objLandInterface.CommandShowParam.iconHeight = RecalculateVIcon(64);
-	objLandInterface.CommandShowParam.leftIconsOffset = sti(showWindow.left)+RecalculateHIcon(16);
-	objLandInterface.CommandShowParam.downIconsOffset = sti(showWindow.bottom)-RecalculateVIcon(80);
-	objLandInterface.CommandShowParam.buttonWidth = RecalculateHIcon(8);
-	objLandInterface.CommandShowParam.buttonHeight = RecalculateVIcon(64);
-	objLandInterface.CommandShowParam.buttonOffset = RecalculateHIcon(4);
-	objLandInterface.CommandShowParam.buttonTexture = "battle_interface\lr_buttons.tga";
-	objLandInterface.CommandShowParam.shipStateWidth = RecalculateHIcon(64);
-	objLandInterface.CommandShowParam.shipStateHeight = RecalculateVIcon(16);
-	objLandInterface.CommandShowParam.shipStateTexture = "battle_interface\indicators.tga";
-	objLandInterface.CommandShowParam.shipStateOffset = RecalculateVIcon(0);
-	objLandInterface.CommandShowParam.commandFont = "bold_numbers";
-	objLandInterface.CommandShowParam.printXOffset = RecalculateHIcon(32);
-	objLandInterface.CommandShowParam.printYOffset = RecalculateVIcon(-26);
-	objLandInterface.CommandShowParam.commandNoteFont = "interface_normal";
-	objLandInterface.CommandShowParam.noteXOffset = RecalculateHIcon(0);
-	objLandInterface.CommandShowParam.noteYOffset = RecalculateVIcon(-28);
-	objLandInterface.CommandShowParam.argbTFactorColor = argb(256,64,64,64);
+	objLandInterface.CommandList.CommandMaxIconQuantity = 10;
+	objLandInterface.CommandList.CommandIconSpace = 1;
+	objLandInterface.CommandList.CommandIconLeft = 120;//157;
+	objLandInterface.CommandList.CommandIconWidth = RecalculateHIcon(74);
+	objLandInterface.CommandList.CommandIconHeight = RecalculateVIcon(74);
+
+	objLandInterface.CommandList.CommandNoteFont = "interface_normal";
+	objLandInterface.CommandList.CommandNoteColor = argb(255,255,255,255);
+	objLandInterface.CommandList.CommandNoteScale = 1.0;
+	objLandInterface.CommandList.CommandNoteOffset = RecalculateHIcon(0) + "," + RecalculateVIcon(-60);
+
+	objLandInterface.CommandList.UDArrow_Texture = "battle_interface\arrowly.tga";
+	objLandInterface.CommandList.UDArrow_UV_Up = "0.0,1.0,1.0,0.0";
+	objLandInterface.CommandList.UDArrow_UV_Down = "0.0,0.0,1.0,1.0";
+	objLandInterface.CommandList.UDArrow_Size = RecalculateHIcon(32) + "," + RecalculateVIcon(32);
+	objLandInterface.CommandList.UDArrow_Offset_Up = RecalculateHIcon(-41) + "," + RecalculateVIcon(-30);
+	objLandInterface.CommandList.UDArrow_Offset_Down = RecalculateHIcon(-41) + "," + RecalculateVIcon(46);
 }
 
-void BLI_SetMassageParameters()
+void BLI_SetMessageParameters()
 {
 	objLandInterface.MessageIcons.IconWidth = RecalculateHIcon(64);
 	objLandInterface.MessageIcons.IconHeight = RecalculateVIcon(24);
 	objLandInterface.MessageIcons.IconDist = RecalculateVIcon(2);
 	objLandInterface.MessageIcons.IconBottom = sti(showWindow.bottom)-RecalculateHIcon(80+40);
-	objLandInterface.MessageIcons.IconMaxQuantity = 2;
+	objLandInterface.MessageIcons.IconMaxQuantity = 4;
 	objLandInterface.MessageIcons.BlendTime = 3.0;
 	objLandInterface.MessageIcons.FallSpeed = 22.0;
 	objLandInterface.MessageIcons.argbHighBlind = argb(255,128,128,128);
@@ -757,12 +777,14 @@ void BLI_UpdateObjectData()
 		}
 		curCh = GetCharacter(cn);
 		makearef(ar,objLandInterface.data.icons.(attrName));
-		ar.picture = curCh.FaceId;
-		ar.health = LAi_GetCharacterRelHP(curCh);
-		ar.charge = LAi_GetCharacterRelCharge(curCh);//gun's reload speed (calculates from charges quantity)
-		ar.shootMax = LAi_GetCharacterChargeQuant(curCh);//maximal charges quantity (for current gun)
-		ar.shootCur = LAi_GetCharacterChargeCur(curCh);//actual charges quantity
-		ar.poison = LAi_IsPoison(curCh);
+		SetCharacterIconData(cn,ar);
+		//ar.picture = curCh.FaceId;
+		//ar.health = LAi_GetCharacterRelHP(curCh);
+		//ar.energy = LAi_GetCharacterRelEnergy(curCh);
+		//ar.charge = LAi_GetCharacterRelCharge(curCh);//gun's reload speed (calculates from charges quantity)
+		//ar.shootMax = LAi_GetCharacterChargeQuant(curCh);//maximal charges quantity (for current gun)
+		//ar.shootCur = LAi_GetCharacterChargeCur(curCh);//actual charges quantity
+		//ar.poison = LAi_IsPoison(curCh);
 	}
 	CheckOfficers();//MAXIMUS: updates officers-icons
 	SearchAdditionalLocators();//MAXIMUS: makes box from corpse with hand-icon in the top-left corner
@@ -1810,3 +1832,31 @@ void BLIVisible(bool visibleFlag)
 	LogsVisible(visibleFlag);
 }
 // <-- KK
+
+void SetCharacterIconData(int chrindex, aref arData)
+{
+	ref chref = GetCharacter(chrindex);
+	arData.chrindex = chrindex;
+	arData.health = LAi_GetCharacterRelHP(chref);
+	// arData.energy = LAi_GetCharacterRelEnergy(chref);
+	arData.shootMax = LAi_GetCharacterChargeQuant(chref);
+	arData.shootCur = LAi_GetCharacterChargeCur(chref);
+	if( CheckAttribute(chref,"FaceId") ) {
+		//arData.picture = chref.FaceId;
+		arData.texture = "interfaces\portraits\64\face_"+chref.FaceID+".tga";
+		if( CheckAttribute(chref,"FaceUV") ) {
+			arData.uv = chref.FaceUV;
+		} else {
+			arData.uv = "0.0,0.0,1.0,1.0";
+		}
+	} else {
+		arData.texture = "battle_interface\two.tga";
+		if( chrindex == 1 ) {
+			arData.uv = "0.5,0.0,1.0,1.0";
+		} else {
+			arData.uv = "0.0,0.0,0.5,1.0";
+		}
+	}
+	//arData.charge = LAi_GetCharacterRelCharge(chref);
+	//arData.poison = LAi_IsPoison(chref);
+}
