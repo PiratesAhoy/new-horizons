@@ -1150,3 +1150,9 @@ void LAi_Location_CharacterSGFire()
 	//Проверим на смерть
 	LAi_CheckKillCharacter(enemy);*/
 }
+
+#event_handler("ChrAttackAction", "LAi_ChrAttackAction");
+bool LAi_ChrAttackAction()
+{
+	return true;
+}
