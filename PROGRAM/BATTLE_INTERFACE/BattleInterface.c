@@ -100,10 +100,10 @@ void InitBattleInterface()
 	InitDateTimeDisplay();
 	if (!bRealBattleInterface)
 	{
-		CreateEntity(&INLGuns, "INumberLG_Info");
-		CreateEntity(&INRGuns, "INumberRG_Info");
-		CreateEntity(&INFGuns, "INumberFG_Info");
-		CreateEntity(&INBGuns, "INumberBG_Info");
+		CreateEntity(&INLGuns, "ILogAndActions");
+		CreateEntity(&INRGuns, "ILogAndActions");
+		CreateEntity(&INFGuns, "ILogAndActions");
+		CreateEntity(&INBGuns, "ILogAndActions");
 		DeleteAttribute(&INLGuns, "");
 		DeleteAttribute(&INRGuns, "");
 		DeleteAttribute(&INFGuns, "");
