@@ -446,7 +446,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.id		= "Bootstrap Bill Turner";
 	ch.nation	= ENGLAND;
 	ch.sound_type = "seaman";
-	ch.model	= "Will";
+	ch.model	= "BootstrapBill";	// was "Will"
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";

@@ -5449,6 +5449,9 @@ void QuestComplete(string sQuestName)
 				LAi_SetActorType(&characters[iPassenger]);
 				ChangeCharacterAddress(&characters[iPassenger], "none", "");
 			}
+			GiveItem2Character(CharacterFromId("James Norrington"), "bladeNorr");   // Give Norrington his ceremonial smallsword...
+			EquipCharacterByItem(CharacterFromId("James Norrington"), "bladeNorr");
+			SetModelfromID(CharacterFromId("James Norrington"), "Conorrington");    // ... and his Commodore outfit to go with the 'Dauntless'
 			GiveShip2Character(characterFromID("James Norrington"),"HMS_Dauntless","Dauntless",-1,ENGLAND,true,true);
 			GiveShip2Character(characterFromID("Port Guard"),"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
 			GiveShip2Character(pchar,"HMS_Interceptor","Interceptor",-1,ENGLAND,true,true);
@@ -7308,6 +7311,10 @@ void QuestComplete(string sQuestName)
  			SetOfficersIndex(Pchar, 3, GetCharacterIndex("Mr. Gibbs"));
 			LAi_SetOfficerType(CharacterFromID("Mr. Gibbs"));
 			LAi_SetImmortal(CharacterFromID("Mr. Gibbs"), false);
+			Characters[GetCharacterIndex("Annamaria")].Dialog.Filename = "Enc_Officer_dialog.c";
+			Characters[GetCharacterIndex("Annamaria")].Dialog.CurrentNode = "Hired";
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.Filename = "Enc_Officer_dialog.c";
+			Characters[GetCharacterIndex("Mr. Gibbs")].Dialog.CurrentNode = "Hired";
 			//setCharacterShipLocation(pchar, "Redmond_shore_02");
 
 			ChangeCharacterAddressGroup(CharacterFromID("Laurence Bannerman"),"Grand_Cayman_store", "sit", "sit1");

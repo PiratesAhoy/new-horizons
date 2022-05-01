@@ -124,7 +124,7 @@ object  GameState;
 // LDH new numbers 02May09
 #define TOTAL_CHARACTERS			2600	// Size of Characters array, all the characters in the game. JRH was 2400
 #define MAX_CHARACTERS				2349	// Number of permanent characters, JRH was 2149
-#define LOC_FANTOM_CHARACTERS		2350    // Index of first local fantom, must be > MAX_CHARACTERS, JRH was 2150
+#define LOC_FANTOM_CHARACTERS			2350    // Index of first local fantom, must be > MAX_CHARACTERS, JRH was 2150
 #define FANTOM_CHARACTERS			2400	// Index of first permanent fantom, remainder of Character array is used for these, JRH was 2200
 int CHARACTERS_QUANTITY = 0; // 05-04-05 add int for max char, replace using of MAX_CHARACTERS.
 
@@ -371,7 +371,7 @@ Note that you must be neutral with that nation to buy a LoM and buying the LoM s
 
 // RM <--
 
-#define BUILDVERSION				"14 (11th January 2022)"	// this is not used in reinit.c anymore, so we can use a string now
+#define BUILDVERSION				"14 (27th April 2022)"	// this is not used in reinit.c anymore, so we can use a string now
 #define IS_SGV					14.943				// must be a float - use small numbers to keep them sequential for all these updates --> 12.10 is smaller than 12.9!
 
 #define PA_INET					"www.piratesahoy.net"
@@ -382,15 +382,15 @@ Note that you must be neutral with that nation to buy a LoM and buying the LoM s
 //DO NOT CHANGE THESE UNLESS YOU KNOW WHAT YOU ARE DOING!
 //Note if you are not starting a new game you will have to change these values in the console.
 int DEBUG = 				0; 		// debug mode:
-									//	1. in the "Select Storyline" interface: replaces 'pretty display names' for ships with their 'internal ID', which matches their model folder name.
-									//	2. in the "Shipyard>Appearance" interface: makes ALL ship models and repaints available; and displays their "internal ID" there too.
-									//	3. at the Tailor: adds dialog option to cycle through ALL character models in the game.
-									//	- does also other stuff in places; use http://piratesahoy.net/threads/modding-tips-tricks.24942 to find out what and where.
-									//	  (seriously; what the holly crappaloni does this have to do with marrying governors' daughters/nieces/nephews/sons?!?)
-									//	- as this is not a #define, this can be switched ON/OFF at ANY time in mid-game;
-									//	  most simple/logical is to use PROGRAM\console.c for this (again, refer to the "Modding Tips & Tricks" link above);
-									//	  but you could also link it to a button in an interface, a dialog option, or whatever else catches yer fancy.
-									//	  After all... if you are reading this, then you are a pirate; and you are FREE!
+							//	1. in the "Select Storyline" interface: replaces 'pretty display names' for ships with their 'internal ID', which matches their model folder name.
+							//	2. in the "Shipyard>Appearance" interface: makes ALL ship models and repaints available; and displays their "internal ID" there too.
+							//	3. at the Tailor: adds dialog option to cycle through ALL character models in the game.
+							//	- does also other stuff in places; use http://piratesahoy.net/threads/modding-tips-tricks.24942 to find out what and where.
+							//	  (seriously; what the holly crappaloni does this have to do with marrying governors' daughters/nieces/nephews/sons?!?)
+							//	- as this is not a #define, this can be switched ON/OFF at ANY time in mid-game;
+							//	  most simple/logical is to use PROGRAM\console.c for this (again, refer to the "Modding Tips & Tricks" link above);
+							//	  but you could also link it to a button in an interface, a dialog option, or whatever else catches yer fancy.
+							//	  After all... if you are reading this, then you are a pirate; and you are FREE!
 int DEBUGINFO = 			0; 		// log debug info
 int TRACELOG = 				0; 		// run extra trace() commands
 int TRACEALLLOGS = 			0; 		// trace() every Log() call

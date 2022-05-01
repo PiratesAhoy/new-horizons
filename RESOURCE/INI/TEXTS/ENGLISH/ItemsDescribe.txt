@@ -626,6 +626,12 @@ itmdescr_blade_ebony
 This sabre is different from the other ones. It is made out of unique gold and ebony steel. You can feel a dark aura around this sword.
 }
 
+itmname_bladeNorr {Ceremonial Smallsword}
+itmdescr_bladeNorr
+{
+This sword is a weapon most notably owned by James Norrington. Beautifully hand-forged by blacksmith apprentice William Turner, the sword is perfectly balanced, and gold filigree decorates the handle.
+}
+
 // Axes from SLiB. Jack Davidson. -->
 // TIH --> properly keyed now with 'blade' prefix
 
@@ -1564,7 +1570,7 @@ The keys to the House of Mateus Santos, what doors do they open? Before you atta
 itmname_Santos_Journal1 {Santos To-do Hit List A-N}
 itmdescr_Santos_Journal1
 {
-This apparently is volume one of a journal listing Santos' targets for assassination; Admiral 8Q, Bonny Megs, Cap'n Toast, Captain Cookie, Captain Dams, Catalina the Pirate, Child of Thor, Couch Captain Charles, Diomed, Donkey Pirate, Fred Bob, High Sea Lass, Inez Dias, JMV575, Keith, Kevo44, Kieron, Lady Karen of the Sandwich Isles, Mad Jack, Maximus, Meigger, Muddymonkey77, Nathan Kell
+This apparently is volume one of a journal listing Santos' targets for assassination; Admiral 8Q, Bonny Megs, Cap'n Toast, Captain Cookie, Captain Dams, Catalina the Pirate, Child of Thor, Couch Captain Charles, Diomed, Donkey Pirate, Fred Bob, Grey Roger, High Sea Lass, Inez Dias, JMV575, Keith, Kevo44, Kieron, Lady Karen of the Sandwich Isles, Mad Jack, Maximus, Meigger, Muddymonkey77, Nathan Kell
 }
 
 itmname_Santos_Journal2 {Santo's To-do Hit List O-Z}

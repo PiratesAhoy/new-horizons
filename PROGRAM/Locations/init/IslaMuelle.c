@@ -1553,7 +1553,7 @@ void LocationInitIslaMuelle(ref n)
 	// -------------------------------------------------
 	Locations[n].filespath.models = "locations\Inside\ANIMISTS_Cave";
 	Locations[n].id = "Muelle_ANIMISTS";
-	locations[n].id.label = "ANIMISTS Lair";
+	locations[n].id.label = "Satanists Lair";
 	Locations[n].image = "Inside_Animists_Cave.tga";
 	//Sound
 	locations[n].type = "cave";

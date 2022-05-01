@@ -15690,14 +15690,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Married":
-			characters[GetCharacterIndex("Maria Mason")].married = MR_MARRIED;
-			characters[GetCharacterIndex("Maria Mason")].quest.meeting = "1"
-			characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Gov MR_dialog.c";
-			characters[GetCharacterIndex("Maria Mason")].Dialog.CurrentNode = "First time";
+			Characters[GetCharacterIndex("Maria Mason")].married = MR_MARRIED;
+			Characters[GetCharacterIndex("Maria Mason")].quest.meeting = "1"
+//			characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Gov MR_dialog.c";
+//			characters[GetCharacterIndex("Maria Mason")].Dialog.CurrentNode = "First time";
 			characters[GetCharacterIndex("Maria Mason")].talkpoints = 0;
 			characters[GetCharacterIndex("Maria Mason")].marpoints = 1;
 			characters[GetCharacterIndex("Maria Mason")].pcounter = 0;
-			characters[GetCharacterIndex("Maria Mason")].lastname = TranslateString("","Hornblower");
+			Characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Maria Mason_dialog.c";
+			Characters[GetCharacterIndex("Maria Mason")].Dialog.CurrentNode = "At_home_freeplay";
+			Characters[GetCharacterIndex("Maria Mason")].lastname = TranslateString("","Hornblower");
 //			LAi_SetStayType(characterFromID("Maria Mason"));
 			PChar.married = MR_MARRIED;
 			PChar.married.id = "Maria Mason";
@@ -15720,7 +15722,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Lt. William Bush"), "None", "");
 			LAi_SetPriestType(characterFromID("Father Jerald"));
 			LAi_SetOfficerType(CharacterFromID("Mrs. Mason"));
-			LAi_ActorFollowEverywhere(CharacterFromID("Mrs. Mason"), "", 1.0);
+//			LAi_ActorFollowEverywhere(CharacterFromID("Mrs. Mason"), "", 1.0);
 			Pchar.quest.firstnight.win_condition.l1 = "location";
 			PChar.quest.firstnight.win_condition.l1.character = Pchar.id;
 			Pchar.quest.firstnight.win_condition.l1.location = "Mrs. Mason's House";
@@ -15889,8 +15891,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "interrogation_wolfe_start":
-			characters[GetCharacterIndex("Thomas Wolfe")].name = TranslateString("","Thomas");
-			characters[GetCharacterIndex("Thomas Wolfe")].lastname = TranslateString("","Wolfe");
+			Characters[GetCharacterIndex("Thomas Wolfe")].name = TranslateString("","Thomas");
+			Characters[GetCharacterIndex("Thomas Wolfe")].lastname = TranslateString("","Wolfe");
+			Characters[GetCharacterIndex("Thomas Wolfe")].Dialog.Filename = "Thomas Wolfe_Dialog.c";
+			Characters[GetCharacterIndex("Thomas Wolfe")].Dialog.CurrentNode = "turnabout";
 			ChangeCharacterAddress(characterFromID("Lt. William Bush"), "None", "");
 			LAi_SetActorType(characterFromID("Richard Sharpe"));
 			Characters[GetCharacterIndex("Richard Sharpe")].Dialog.Filename = "Richard Sharpe_Dialog.c";
@@ -15899,7 +15903,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "interrogate_wolfe1":
-			LAi_ActorGotoLocator(characterFromID("Richard Sharpe"),"goto", "goto23", "", 30.0);
+			LAi_SetActorType(CharacterFromID("Richard Sharpe"));
+			LAi_ActorGotoLocator(CharacterFromID("Richard Sharpe"),"goto", "goto23", "", 30.0);
 			pchar.quest.wolfe_in_jail1.win_condition.l1 = "locator";
 			pchar.quest.wolfe_in_jail1.win_condition.l1.location = "Greenford_prison";
 			pchar.quest.wolfe_in_jail1.win_condition.l1.locator_group = "reload";
@@ -15908,7 +15913,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "interrogate_wolfe1a":
-			LAi_ActorTurnToCharacter(characterFromID("Richard Sharpe"), pchar);
+			LAi_SetActorType(CharacterFromID("Richard Sharpe"));
+			LAi_ActorTurnToCharacter(CharacterFromID("Richard Sharpe"), pchar);
 			LAi_SetActorType(characterFromID("Thomas Wolfe"));
 			Characters[GetCharacterIndex("Thomas Wolfe")].Dialog.Filename = "Thomas Wolfe_Dialog.c";
 			Characters[GetCharacterIndex("Thomas Wolfe")].Dialog.CurrentNode = "turnabout";
@@ -15916,11 +15922,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "interrogate_wolfe2":
+			PChar.quest.wolfe_in_jail1.over = "yes";	// In case you talked to Wolfe without hitting the locator to trigger "interrogate_wolfe1a"
+			LAi_SetActorType(CharacterFromID("Richard Sharpe"));
 			Characters[GetCharacterIndex("Richard Sharpe")].Dialog.CurrentNode = "bad_cop";
 			LAi_ActorDialog(characterFromID("Richard Sharpe"),PChar,"",5.0,5.0);
 		break;
 
 		case "interrogate_wolfe3":
+			LAi_SetActorType(CharacterFromID("Thomas Wolfe"));
 			Characters[GetCharacterIndex("Thomas Wolfe")].Dialog.CurrentNode = "good_cop";
 			LAi_ActorDialogNow(characterFromID("Thomas Wolfe"),PChar,"",2.0);
 		break;
@@ -15932,9 +15941,10 @@ void QuestComplete(string sQuestName)
 
 		case "take_wolfe":
 			ChangeCharacterAddressGroup(characterFromID("Thomas Wolfe"), "Greenford_prison", "goto", "goto23");
-			LAi_ActorGotoLocator(characterFromID("Thomas Wolfe"),"officers", "reload1_2", "", 30.0);
-			SetOfficersIndex(Pchar, 1, getCharacterIndex("Richard Sharpe"));
-			SetCharacterRemovable(characterFromID("Richard Sharpe"), false);
+			LAi_SetActorType(CharacterFromID("Thomas Wolfe"));
+			LAi_ActorGotoLocator(CharacterFromID("Thomas Wolfe"),"officers", "reload1_2", "", 30.0);
+			SetOfficersIndex(PChar, 1, GetCharacterIndex("Richard Sharpe"));
+			SetCharacterRemovable(CharacterFromID("Richard Sharpe"), false);
 			Pchar.quest.wolfe_out_of_jail.win_condition.l1 = "location";
 			PChar.quest.wolfe_out_of_jail.win_condition.l1.character = Pchar.id;
 			Pchar.quest.wolfe_out_of_jail.win_condition.l1.location = "Greenford_town";
@@ -16607,8 +16617,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "back_home2":
-			Characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Gov MR_dialog.c";
-			Characters[GetCharacterIndex("Maria Mason")].Dialog.CurrentNode = "First time";
+//			Characters[GetCharacterIndex("Maria Mason")].Dialog.Filename = "Gov MR_dialog.c";
+//			Characters[GetCharacterIndex("Maria Mason")].Dialog.CurrentNode = "First time";
+			Characters[GetCharacterIndex("Maria Mason")].Dialog.CurrentNode = "At_home_freeplay";
 			LAi_SetStayType(CharacterFromID("Maria Mason"));
 			LAi_Fade("", "");
 			WaitDate("", 0, 0, 1, 0, 0);

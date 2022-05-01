@@ -105,6 +105,11 @@ Lebre{Lebre}
 Taegan{Taegan}
 Finch{Finch}
 
+Dark{Dark}
+Teacher{Teacher}
+Satanists{Satanists}
+After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...{After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...}
+
 Anna{Anna}
 De Leiva{De Leiva}
 
@@ -341,12 +346,6 @@ Bestevaêr{Bestevaêr}
 Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!{Born as Michiel Adriaenszoon de Ruyter to a beer porter in Vlissingen, you are a humble man. However, the Anglo-Dutch Wars of the 17th century will give you plenty of opportunity for greatness!}
 Neptunus{Neptunus}
 
-Drake{Drake}
-Stranton{Stranton}
-Cursed Vengeance{Cursed Vengeance}
-Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.{Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.}
-Phantom{Phantom}
-
 Edwaert{Edwaert}
 Mansveldt{Mansveldt}
 
@@ -449,11 +448,17 @@ Enterprise{Enterprise}
 Vito{Vito}
 Leone{Leone}
 
+A Second Calling{A Second Calling}
+After coming to terms with the truth about your father, you've decided it's time to retire from the smith and embrace the life of a sailor.{After coming to terms with the truth about your father, you've decided it's time to retire from the smith and embrace the life of a sailor.}
+Miranda{Miranda}
+
 A Touch of Destiny{A Touch of Destiny}
 Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.{Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.}
 
 Will{Will}
 Turner{Turner}
+
+Bootstrap Bill{Bootstrap Bill}
 
 Ricardo{Ricardo}
 Orellana{Orellana}

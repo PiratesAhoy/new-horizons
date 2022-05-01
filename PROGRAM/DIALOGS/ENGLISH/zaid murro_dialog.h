@@ -62,7 +62,7 @@ string DLG_TEXT[99] = {
 "No one will bother you or your animals anymore.",
 "No, nothing. Farewell.",
 "God bless you! You helped me so much! I can't thank you enough. Take however this spyglass. I found it long ago in a galeons wreck. It served me well at sea and because I won't need it on land I want you to have it!",
-"Your gift is most wellcome! Don't worry. If you need anything in the future - just ask me.",
+"Your gift is most welcome! Don't worry. If you need anything in the future - just ask me.",
 "Some bandits appeared recently on the island, and they are constantly killing my animals. I complained to the local authorities, but they pay no attention.\nI can handle myself well for a man of my age, but I think that there are about five of them, so I can't handle them all.",
 "I think I can help you. Do you know where those bandits camp?",
 "Only five people? You make too much of this problem. I'll teach them a lesson with ease! Do you know where those bandits camp?",

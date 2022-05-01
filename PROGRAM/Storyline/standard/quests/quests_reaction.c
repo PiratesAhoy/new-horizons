@@ -3599,8 +3599,11 @@ void QuestComplete(string sQuestName)
 			if (iPassenger > 0 && GetCharacterShipID(&Characters[iPassenger]) == SHIP_CURSED) GiveShip2Character(&Characters[iPassenger], "BlackPearl", "Black Pearl", -1, PIRATE, true, true);
 			// KK: Swap cursed Pearl with normal Pearl <--
 
-			Reinit_KhaelRoa(); // Enable Khael Roa as personal base
-			LAi_QuestDelay("end_game2", 1.0);	// originally triggered by dialog with Danielle after taking Clement to lighthouse
+			Reinit_KhaelRoa();							// Enable Khael Roa as personal base
+			LAi_group_SetLookRadius(LAI_GROUP_MONSTERS, LAI_GROUP_MNS_LOOK);	// GR: restore monsters to normal detection radius, increased at "monster_generate_in_alcove"
+			LAi_group_SetHearRadius(LAI_GROUP_MONSTERS, LAI_GROUP_MNS_HEAR);
+			LAi_group_SetSayRadius(LAI_GROUP_MONSTERS, LAI_GROUP_MNS_SAY);
+			LAi_QuestDelay("end_game2", 1.0);					// originally triggered by dialog with Danielle after taking Clement to lighthouse
 		break;
 
 		case "end_game2":
@@ -6737,7 +6740,13 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "escape_from_greenford":
-			DeleteAttribute(PChar, "vcskip"); // PB
+			DeleteAttribute(PChar, "vcskip");			// PB
+			LAi_SetGuardianType(CharacterFromID("Eng_soldier_40"));	// GR: put soldiers back to normal
+			LAi_SetGuardianType(CharacterFromID("Eng_soldier_41"));
+			for(n= 3; n<=10; n++)
+			{
+				LAi_SetGuardianType(CharacterFromID("Green_soldier_"+n));
+			}
 		break;
 
 		case "Gervasio_Serrao_fight_again":

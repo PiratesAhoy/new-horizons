@@ -91,7 +91,7 @@ void ProcessDialogEvent()
 		case "Bush_will_stay2":
 			PlaySound("VOICE\ENGLISH\Mason02.wav");
 			dialog.text = DLG_TEXT[14];
-			link.l1 = DLG_TEXT[39];
+			link.l1 = DLG_TEXT[34];
 			link.l1.go = "Exit_Bush_will_stay";
 		break;
 
@@ -104,7 +104,7 @@ void ProcessDialogEvent()
 		case "owes_fifteen":
 			PlaySound("VOICE\ENGLISH\Mason03.wav");
 			dialog.text = DLG_TEXT[15];
-			link.l1 = DLG_TEXT[39];
+			link.l1 = DLG_TEXT[34];
 			link.l1.go = "Exit_owes_fifteen";
 		break;
 

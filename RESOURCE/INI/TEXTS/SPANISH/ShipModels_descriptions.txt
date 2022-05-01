@@ -7,7 +7,7 @@ castillos de proa y de popa, como una nao.
 Casco blanco y rojo decorado con molduras doradas.
 32 cañones, navega mejor a favor del viento gracias a su aparejo redondo.}
 FastCaravel_Descr{El siniestro aspecto de esta carabela no
-anuncia nada bueno para las víctimas de Bartolomeu.
+anuncia nada bueno para las víctimas de Bartolomeu. 
 Casco rojo sangre y negro con molduras doradas.
 32 cañones, navega bien de ceñida gracias a su aparejo latino.}
 CursedCaravel_Descr{"¡Está maldita! ¡Maldita, os digo!"
@@ -15,7 +15,7 @@ Su casco está podrido y cubierto de algas.
 
 32 cañones, navega mejor a favor del viento gracias a su aparejo redondo.}
 Carrack_Descr{Una carraca, o nao, fue el primer buque en dar la
-vuelta al mundo, al mando de Juan Sebastián de Elcano.
+vuelta al mundo, al mando de Juan Sebastián de Elcano. 
 Acabado de madera natural con decoración austera.
 30 cañones, anticuada y torpe en la maniobra pero robusta y bien armada.}
 PO_Caravel50_Descr{Este tipo tardío de caravela es más grande y tiene
@@ -23,11 +23,11 @@ castillos de proa y de popa, como una nao.
 Acabado de madera natural con decoración austera.
 32 cañones, es más versátil que otras carabelas gracias a su aparejo mixto.}
 
-Schooner1_Descr{Las goletas siempre son una buena elección
+Schooner1_Descr{Las goletas siempre son una buena elección 
 tanto para corsarios como para comerciantes. 
 Acabado de madera oscura y popa decorada.
 20 cañones, navega bien de ceñida gracias a sus grandes velas cangrejas.}
-Schooner2_Descr{Las goletas siempre son una buena elección
+Schooner2_Descr{Las goletas siempre son una buena elección 
 tanto para corsarios como para comerciantes.
 Hermoso casco verde con molduras doradas.
 20 cañones, navega bien de ceñida gracias a sus grandes velas cangrejas.}
@@ -35,26 +35,26 @@ SchoonerWar_Descr{Un pequeño barco de guerra, para labores de apoyo,
 exploración o guarda de costas.
 Acabado de madera oscura y popa decorada.
 20 cañones, con las velas cuadras del trinquete es más veloz pero no tan buena navegando de ceñida.}
-Schooner50_Descr{Las goletas siempre son una buena elección
+Schooner50_Descr{Las goletas siempre son una buena elección 
 tanto para corsarios como para comerciantes. 
 Casco pintado en tres colores.
 20 cañones, con el velacho en el trinquete es más veloz pero no tan buena navegando de ceñida.}
-US_Schooner47_Descr{Las goletas siempre son una buena elección
+US_Schooner47_Descr{Las goletas siempre son una buena elección 
 tanto para corsarios como para comerciantes.
 Casco blanco y negro, los colores de la US Navy.
 20 cañones, con las velas cuadras del trinquete es más veloz pero no tan buena navegando de ceñida.}
 
-Hooker_Descr{El bergantín-goleta mezcla velas cuadras y cangrejas
+Hooker_Descr{El bergantín-goleta mezcla velas cuadras y cangrejas 
 para obtener la mayor superficie vélica posible.
 Un robusto casco negro y rojo le da un aspecto duro.
 20 cañones, las velas cuadras del trinquete reducen la velocidad navegando de ceñida.}
 
 Shnyava1_Descr{El paquebote parece un bergantín, pero iza su vela
-cangreja en un mástil corto (esnón) tras el palo mayor.
+cangreja en un mástil corto (esnón) tras el palo mayor. 
 El casco está pintado de blanco y negro.
 20 cañones, es maniobrable pero no navega bien de ceñida.}
 Shnyava2_Descr{El paquebote parece un bergantín, pero iza su vela
-cangreja en un mástil corto (esnón) tras el palo mayor.
+cangreja en un mástil corto (esnón) tras el palo mayor. 
 Casco pintado de azul con molduras doradas.
 20 cañones, es maniobrable pero no navega bien de ceñida. }
 
@@ -242,19 +242,19 @@ después se adaptaron al comercio y a la guerra.
 Casco de madera rojiza con algunas decoraciones.
 16 cañones, navega bien de ceñida gracias a su fino casco y sus velas cangrajas.}
 
-Lugger1_Descr{El lugre, o quechemarín, es un pequeño barco de
+Lugger1_Descr{El lugre, o quechemarín, es un pequeño barco de 
 cabotaje aparejado con tres mástiles de velas al tercio.
 Casco pintado de blanco, negro y amarillo.
 12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
-Lugger2_Descr{El lugre, o quechemarín, es un pequeño barco de
+Lugger2_Descr{El lugre, o quechemarín, es un pequeño barco de 
 cabotaje aparejado con tres mástiles de velas al tercio.
 Casco marrón y amarillo, con detalles blancos.
 12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
-LuggerCT_Descr{El lugre, o quechemarín, es un pequeño barco de
+LuggerCT_Descr{El lugre, o quechemarín, es un pequeño barco de 
 cabotaje aparejado con tres mástiles de velas al tercio.
 Casco pintado de blanco y negro.
 12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
-Lugger4_Descr{El lugre, o quechemarín, es un pequeño barco de
+Lugger4_Descr{El lugre, o quechemarín, es un pequeño barco de 
 cabotaje aparejado con tres mástiles de velas al tercio.
 Pintura azul y blanca muy desgastada.
 12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
@@ -264,14 +264,14 @@ Brújula incluida (pero no apunta al norte).
 Acabado de madera oscura y desgastada.
 12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
 
-Lugger3_Descr{El lugre, o quechemarín, es un pequeño barco de
+Lugger3_Descr{El lugre, o quechemarín, es un pequeño barco de 
 cabotaje aparejado con tres mástiles de velas al tercio.
 Pintura desgastada de color negro y marrón.
 8 cañones, su pequeño tamaño lo hace veloz y maniobrable..}
 
 EdinburghTrader_Descr{Mercante de tres palos que recuerda al
 'Edinburgh Trader'.
-Casco recién pintado de verde y amarillo.
+Casco recién pintado de verde y amarillo. 
 14 cañones, aparejo redondo para navegar a favor del viento.}
 
 FastMerchantman1_Descr{Una fragata de guerra vendida en subasta y convertida
@@ -387,7 +387,7 @@ PiratBattleGalleon_Descr{Un formidable galeón español apresado y
 remodelado por un famoso pirata portugués.
 Casco con cintones de refuerzo y austera decoración portuguesa.
 56 cañones, modificado para ser más rápido y maniobrable.}
-SP_BattleGalleon_Descr{Un formidable galeón español. Erizado de cañones
+SP_BattleGalleon_Descr{Un formidable galeón español. Erizado de cañones 
 y lleno de fieros soldados, es un hueso duro de roer.
 Casco reforzado con austera decoración española.
 56 cañones, robusto y poderoso pero lento y poco maniobrable.}
@@ -485,7 +485,7 @@ Casco blanco, negro y azul con detalles rojos.
 26 cañones, navega bien de ceñida gracias a sus grandes velas latinas.}
 
 Corvette47_Descr{Una pequeña fragata del siglo XVIII,
-construida siguiendo un diseño de origen francés.
+construida siguiendo un diseño de origen francés. 
 Casco pintado con franjas en negro y ocre.
 30 cañones, muy buenas cualidades marineras.}
 
@@ -636,7 +636,7 @@ con buena capcidad de carga.
 El casco está pintado de marrón, amarillo y azul.
 32 cañones, buenas cualidades marineras.}
 
-NL_Batavia_Descr{El 'Batavia' es un mercante armado de la Compañía
+NL_Batavia_Descr{El 'Batavia' es un mercante armado de la Compañía 
 Holandesa de las Indias Orientales, botado en 1628.
 Casco marrón y verde a la holandesa, adornos dorados.
 28 cañones, aceptable velocidad pero poco maniobrable.}
@@ -770,12 +770,12 @@ Pintura blanca y negra, los colores de la US Navy.
 
 FR_SteamFrigate_Descr{Prototipo de fragata propulsada a vapor, lo que le
 permite navegar sin depender del viento.
-Pintura roja y negra, común en la Armada Francesa.
+Pintura roja y negra, común en la Armada Francesa. 
 46 cañones, la máquina y las velas se manejan por separado.}
 
 RN_SteamFrigate_Descr{Prototipo de fragata propulsada a vapor, lo que le
 permite navegar sin depender del viento.
-Pintura beige y negra, común en la Royal Navy.
+Pintura beige y negra, común en la Royal Navy. 
 46 cañones, la máquina y las velas se manejan por separado.}
 
 Pirate_SteamFrigate_Descr{Prototipo de fragata propulsada a vapor, lo que le
@@ -830,7 +830,7 @@ curso de una batalla con una devastadora andanada.
 Casco rojo oscuro y negro, común en la Armada Española.
 104 cañones, ni muy rápido ni muy maniobrable.}
 
-FR_Superbe_Descr{Navío de la famosa clase 'Téméraire', la clase de buque
+FR_Superbe_Descr{Navío de la famosa clase 'Téméraire', la clase de buque 
 capital más numerosa jamás construida.
 Casco rojo y negro, común en la Armada Francesa.
 76 cañones, decentes cualidades marineras para su tamaño.}
@@ -883,7 +883,7 @@ Baltimore en 1799 por Henry Spencer.
 Sencillo y elegante acabado de madera sin pintar.
 14 cañones, muy rápida y maniobrable incluso navegando de ceñida.}
 
-HMS_Mordaunt_Descr{Un navío de línea de cuarta clase de construcción
+HMS_Mordaunt_Descr{Un navío de línea de cuarta clase de construcción 
 privada, comprado por la Royal Navy.
 Casco marrón y blanco, profusamente decorado.
 58 cañones, buenas cualidades marineras para su tamaño.}
@@ -898,7 +898,7 @@ ahora tomado por piratas.
 Casco negro cona centos rojos.
 64 cañones, ni muy rápido ni muy maniobrable.}
 
-SP_ApostolFelipe_Descr{'Apóstol Felipe', uno de los seis galeones
+SP_ApostolFelipe_Descr{'Apóstol Felipe', uno de los seis galeones 
 construidos por Martín de Arana para el rey Felipe IV.
 Casco de madera natural decorado con pinturas religiosas.
 30 cañones, lento y poco maniobrable.}
@@ -1198,7 +1198,7 @@ cualidades marineras. El sueño de todo corsario.
 Ornamentado casco pintado de rojo, azul y blanco.
 30 cañones, navega muy bien de ceñida gracias a su aparejo latino.}
 
-HMS_Centurion_Descr{Un navío de tercera clase de fabricación
+HMS_Centurion_Descr{Un navío de tercera clase de fabricación 
 británica, de principios del siglo XVIII.
 Casco marrón, negro y azul, elegantemente decorado.
 68 cañones, no muy rápido pero relativamente maniobrable.}

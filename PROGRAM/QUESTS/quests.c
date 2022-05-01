@@ -978,6 +978,8 @@ bool DoReloadFromSeaToLocation(string idLocation, string idGroup, string idLocat
 	pchar.tmpWDMtoLand.group = idGroup;
 	pchar.tmpWDMtoLand.locator = idLocator;
 
+	if(HasSubstr(idLocation, "port") || HasSubstr(idLocation, "shore")) UpdateAllTowns(false);	// GR: towns are updated by normal reload to port or shore, so do it here as well
+
 	SetEventHandler("FaderEvent_EndFade", "EndReloadToLocation", 0);
 	CreateEntity(&reload_fader, "fader");
 	if(IsEntity(&reload_fader) == 0) Trace("Reload fader not created!!!");

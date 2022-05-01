@@ -113,7 +113,7 @@ void ProcessDialogEvent()
 		case "bitten2":
 			string antidote = "";
 			medicine_aboard = sti(GetSquadronGoods(PChar, GOOD_TREATMENT));
-			if(CheckCharacterItem(PChar, "potion3") || CheckCharacterItem(PChar, "potion3")) antidote = DLG_TEXT[19];
+			if(CheckCharacterItem(PChar, "potion3") || CheckCharacterItem(PChar, "potion4")) antidote = DLG_TEXT[19];
 			dialog.text = DLG_TEXT[18] + antidote;
 			if(CheckQuestAttribute("colombian_silver.status", "unloaded_medicine"))
 			{

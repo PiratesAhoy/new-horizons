@@ -916,6 +916,7 @@ Oyster Beach{Playa de las Ostras}
 Entrace to #sisland_name# cave{Entrada a la cueva de #sisland_name#}
 Shore{Costa}
 ANIMISTS Lair{Guarida de los ANIMISTAS}
+Satanists Lair{Guarida de los Satanistas}
 
 Trade Square.{Plaza del mercado}
 House of Mateus Santos.{Casa de Mateus Santos}
@@ -926,6 +927,7 @@ Oyster Beach.{Playa de las Ostras}
 Entrace to #sisland_name# cave.{Entrada a la cueva de #sisland_name#}
 Shore.{Costa}
 ANIMISTS Lair.{Guarida de los ANIMISTAS}
+Satanists Lair.{Guarida de los Satanistas}
 
 Prison{Prisión}
 Devil's Throat{Garganta del Diablo}

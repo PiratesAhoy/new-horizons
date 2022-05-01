@@ -909,6 +909,8 @@ bool LEnc_MonstersLoginSelectModel(ref location, aref modelInfo, string group, s
 					modelInfo.model = "Soldiers";
 				}
 				// Cap'n Crunch <--
+				if(ModelIsType(PChar.model, "Animists")) modelinfo.model = "Animists";
+				if(CheckCharacterItem(PChar, "Davy_Chest")) modelinfo.model = "Davycrew";
 			break;
 
 			case "own_deck":
@@ -921,6 +923,8 @@ bool LEnc_MonstersLoginSelectModel(ref location, aref modelInfo, string group, s
 					modelInfo.model = "Soldiers";
 				}
 				// Cap'n Crunch <--
+				if(ModelIsType(PChar.model, "Animists")) modelinfo.model = "Animists";
+				if(CheckCharacterItem(PChar, "Davy_Chest")) modelinfo.model = "Davycrew";
 			break;
 
 			case "ship":
@@ -933,6 +937,8 @@ bool LEnc_MonstersLoginSelectModel(ref location, aref modelInfo, string group, s
 					modelInfo.model = "Soldiers";
 				}
 				// Cap'n Crunch <--
+				if(ModelIsType(PChar.model, "Animists")) modelinfo.model = "Animists";
+				if(CheckCharacterItem(PChar, "Davy_Chest")) modelinfo.model = "Davycrew";
 			break;
 
 			case "Brothel":

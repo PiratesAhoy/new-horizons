@@ -1502,7 +1502,7 @@ Las llaves de la casa de Mateus Santos, ¿qué puertas abren? Antes de que atacara
 itmname_Santos_Journal1 {Lista de objetivos de Santos A-N}
 itmdescr_Santos_Journal1
 {
-Este es aparentmente el primer volumen de un diario con una lista de los objetivos de asesinato de Santos; Admiral 8Q, Bonny Megs, Cap'n Toast, Captain Cookie, Captain Dams, Catalina the Pirate, Child of Thor, Couch Captain Charles, Diomed, Donkey Pirate, Fred Bob, High Sea Lass, Inez Dias, JMV575, Keith, Kevo44, Kieron, Lady Karen of the Sandwich Isles, Mad Jack, Maximus, Meigger, Muddymonkey77, Nathan Kell
+Este es aparentmente el primer volumen de un diario con una lista de los objetivos de asesinato de Santos; Admiral 8Q, Bonny Megs, Cap'n Toast, Captain Cookie, Captain Dams, Catalina the Pirate, Child of Thor, Couch Captain Charles, Diomed, Donkey Pirate, Fred Bob, Grey Roger, High Sea Lass, Inez Dias, JMV575, Keith, Kevo44, Kieron, Lady Karen of the Sandwich Isles, Mad Jack, Maximus, Meigger, Muddymonkey77, Nathan Kell
 }
 
 itmname_Santos_Journal2 {Lista de objetivos de Santos O-Z}
