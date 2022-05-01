@@ -72,7 +72,7 @@ void ProcessDialogEvent()
 			Dialog.snd = "voice\PADI\PADI001";
 
 			// PB: You are a KNOWN enemy because you're flying a hostile flag
-			if (GetFlagRMRelation(sti(Npchar.nation)) == RELATION_ENEMY)
+			if (sti(NPChar.nation) != PERSONAL_NATION && GetFlagRMRelation(sti(Npchar.nation)) == RELATION_ENEMY)
 			{
 				sNation = " " + GetNationDescByType(GetCurrentFlag());
 				if (GetCurrentFlag() == PERSONAL_NATION) sNation = "n "; // PB: Grammar "an enemy"
@@ -87,8 +87,9 @@ void ProcessDialogEvent()
 				// ccc Dec 05 You are recognized for your pirating actions
 				if(GetServedNation() == PIRATE && GetCurrentLocationNation() != PIRATE)	// MT: If serving the pirates and in a non-pirate location, then:
 				{
-					if(frnd()<makefloat(GetRank(pchar, sti(NPChar.nation)))/12.0) //MT: Meant to make you easier to detect as a pirate as you go up in pirate rank
+					if(sti(NPChar.nation) != PERSONAL_NATION && frnd()<makefloat(GetRank(pchar, sti(NPChar.nation)))/12.0) //MT: Meant to make you easier to detect as a pirate as you go up in pirate rank
 					{
+						Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 						Dialog.Text = DLG_TEXT[7] + GetMySimpleName(PChar) + DLG_TEXT[11];
 						Link.l1 = DLG_TEXT[9];
 						Link.l1.go = "exit_soldiers";
@@ -104,10 +105,11 @@ void ProcessDialogEvent()
 				else
 				{
 					//MT: If at war with the nation the guard belongs to, there is a chance to be detected (false flags should only occur when at war):
-					if (GetNationRelation(PERSONAL_NATION, sti(Npchar.nation)) == RELATION_ENEMY && frnd() < GetChanceDetectFalseFlag())
+					if (sti(NPChar.nation) != PERSONAL_NATION && GetNationRelation(PERSONAL_NATION, sti(Npchar.nation)) == RELATION_ENEMY && frnd() < GetChanceDetectFalseFlag())
 					{
 						sNation = " " + GetNationDescByType(GetServedNation());
 						if (GetServedNation() == PERSONAL_NATION) sNation = ""; // PB: Grammar "a spy"
+						Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 						Dialog.Text = DLG_TEXT[7] + GetMySimpleName(PChar) + DLG_TEXT[8] + sNation + DLG_TEXT[10];
 						Link.l1 = DLG_TEXT[9];
 						Link.l1.go = "exit_soldiers";

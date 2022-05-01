@@ -342,9 +342,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_01";
 	ch.model = "ANIMISTS2";
@@ -381,9 +381,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_02";
 	ch.model = "ANIMISTS2";
@@ -420,9 +420,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_03";
 	ch.model = "ANIMISTS2";
@@ -459,9 +459,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_04";
 	ch.model = "ANIMISTS2";
@@ -498,9 +498,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_05";
 	ch.model = "ANIMISTS2";
@@ -537,9 +537,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_06";
 	ch.model = "ANIMISTS2";
@@ -576,9 +576,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_07";
 	ch.model = "ANIMISTS2";
@@ -615,9 +615,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_08";
 	ch.model = "ANIMISTS2";
@@ -654,9 +654,9 @@ void CreateSideQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 				// 
-	ch.old.name = "Animist";
+	ch.old.name = "Satanist";			// was "Animist"
 	ch.old.lastname = "";
-	ch.name = TranslateString("", "Animist");
+	ch.name = TranslateString("", "Satanist");
 	ch.lastname = "";
 	ch.id		= "ANIMISTS_09";
 	ch.model = "ANIMISTS2";

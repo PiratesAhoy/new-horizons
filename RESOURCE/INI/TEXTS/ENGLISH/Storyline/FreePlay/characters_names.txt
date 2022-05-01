@@ -21,6 +21,8 @@ François{François}
 de Hadoque{de Hadoque}
 Koleniko{Koleniko}
 Ragetti{Ragetti}
+Mother{Mother}
+Bootstrap Bill{Bootstrap Bill}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Bartolomeu}
@@ -44,6 +46,8 @@ O'Bannon{O'Bannon}
 Angus{Angus}
 Calhoun{Calhoun}
 Bush{Bush}
+Dark Captain{Dark Captain}
+Dark Cannoneer{Dark Cannoneer}
 
 {=====| TempQuest.c |=====}
 Bart{Bart}

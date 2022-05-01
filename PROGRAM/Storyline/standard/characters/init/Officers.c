@@ -70,7 +70,7 @@ void CreateOfficersCharacters(ref n)
 	ch.name = TranslateString("","Ralph");
 	ch.lastname = TranslateString("","Fawn");
 	ch.id		= "Ralph Fawn";
-	ch.model = "bocman3"; // <-- ES Change from fawn to this model 
+	ch.model = "fawn";
 	ch.sex = "man";
 	ch.sound_type = "seaman";
 	ch.location	= "none";

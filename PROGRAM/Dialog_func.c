@@ -1388,13 +1388,24 @@ string GetCharacterAddressForm(ref chr, int addrtype, bool fname, bool lname)
 		retstr = GetAddressForm(addrtype, fakeNat, bsex);//MAXIMUS: 05.10.2007
 	}
 	
-	if(fname)
+/*	if(fname)
 		retstr += " " + chr.name;
 	if(fname && lname && CheckAttribute(chr, "middlename"))
 		retstr += " " + chr.middlename;
 	if(lname)
 		retstr += " " + chr.lastname;
-	return retstr;	
+	return retstr;	*/
+	if (!CheckAttribute(chr, "lastname") || chr.lastname == "" || GetMyName(chr) == FirstLetterUp(chr.lastname))	// Character has only one name
+	{
+		if (fname || lname) retstr += " " + GetMyName(chr);
+	}
+	else
+	{
+		if(fname) retstr += " " + GetMyName(chr);
+		if(fname && lname && CheckAttribute(chr, "middlename")) retstr += " " + chr.middlename;
+		if(lname) retstr += " " + GetMyLastName(chr);
+	}
+	return retstr;
 }
 /**
  * Returns the officers address form as used e.g in the tailor's mod. But
@@ -1643,8 +1654,14 @@ string GetMarriedName(ref chr)
 	{
 		switch(sti(chr.married))
 		{
-			case MR_MARRIED: return XI_ConvertString("wife"); break;
-			case MR_MISTRESS: return XI_ConvertString("mistress"); break;
+			case MR_MARRIED:
+				if (chr.sex == "woman") return XI_ConvertString("wife");
+				else return XI_ConvertString("husband");
+			break;
+			case MR_MISTRESS:
+				if (chr.sex == "woman") return XI_ConvertString("mistress");
+				else return XI_ConvertString("gentleman");
+			break;
 		}
 	}
 	return XI_ConvertString("friend");

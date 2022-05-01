@@ -1,5 +1,5 @@
-string DLG_TEXT[290] = {
-"We've made port at the pirate settlement on Nevis. I had my personal Roger hoisted so no one will give us trouble. The officers and a piece of your crew have elected to make their way through the jungle for Charlestown. I guess they don't want to be hunted down by the English as traitors. Alas you don't have that option. I cannot thank you enough for what you did for my crew and me.",
+string DLG_TEXT[300] = {
+"We've made port at the pirate settlement on #sisland_Quebradas Costillas#. I had my personal Roger hoisted so no one will give us trouble. The officers and a piece of your crew have elected to make their way through the jungle for #sCharlestown#. I guess they don't want to be hunted down by the English as traitors. Alas you don't have that option. I cannot thank you enough for what you did for my crew and me.",
 "Captain Champers was a pig of a man and what he intended for you was monstrous. I didn't see a choice.",
 "Treacherous dogs. I suppose I saw that coming. What can I do for you, Captain?",
 "Sorry Captain Fletcher, no time for chit chat. I need to be away before the Navy shows up. I know a storm is raging but I'll face that risk, and set sail right away. Goodbye and good luck!",
@@ -210,7 +210,7 @@ string DLG_TEXT[290] = {
 "Unfortunately I can't help you, Captain.",
 "All right. But before you go, I should remind you what business you were going to attend to while on land.",
 "Almost. Your spyglass is old and scratched. You should get yourself a new one. It should be available for sale somewhere in town.",
-"And one more thing: Mishipman Percy was loyal to the captain and rushed ashore as soon as we arrived. Doubtless the fort garrison is learning what happened even now. I'd advise you to fly the Union Jack when you sail out of this port.", // KK
+"And one more thing: Midshipman Percy was loyal to the captain and rushed ashore as soon as we arrived. Doubtless the fort garrison is learning what happened even now. I'd advise you to fly the Union Jack when you sail out of this port.", // KK
 "...If you need my help again, I'll be in the local tavern.",
 "Thanks. Farewell.",
 "As you wish. I can give you some suggestions for what to do if you want, but now I must leave you \n. I'm tired of life at sea. I've lost a hand, a leg, and yesterday I nearly lost my hide. I'm going to retire here, well retire to the tavern that is! My days are for drink and gambling. Mr. Sullivan and the others will serve you well.",
@@ -289,4 +289,14 @@ string DLG_TEXT[290] = {
 " is another of our agents who has been working here. ",
 " will give you further instructions. Start by looking in the tavern. If you're asked about the condition of your ship, say that it was infested by termites but you've got rid of them and repaired the damage.",
 "Very well, sir.",
+"Well, I reckons you've learned enough to earn your keep. See what you can do with the ",
+".",
+"That old tub? Well, I suppose I can't expect a big ship for my first run. Goodbye, Mother.",
+"Thanks for trusting me with this ship, Mother. I won't let you down.",
+"Be most careful, young Turner. I always detested the sea for a reason. I've trained you well as a blacksmith, but you have no experience as a sailor, let alone a captain...",
+"Not to worry, Master John. I've always felt the sea's calling - perhaps it's in my blood. Now, I bid you farewell. I promise a visit to the smith every now and then.",
+"The temple's just been finished, master. We await your orders.",
+"Good. Moor the ship by the bay, I need to catch up with my studies first before we set out to sea.",
+"Captain, the crew are wondering what you plan to do now that Davy Jones is dead and you have taken over the 'Flying Dutchman'.",
+"In due time, we will need to tend to our duty to the souls of the dead. But first we need to gain experience with the ship. She is not as she was when she was cursed.",
 };

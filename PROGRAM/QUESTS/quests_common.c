@@ -4575,7 +4575,7 @@ Cost for level 50 is 55,374,000
 					LAi_SetImmortal(sld, true);
 					sld.dialog.filename = "Dame_dialog.c";
 					sld.id = "dame1";
-					sld.name = "Scarlett";
+					sld.name = TranslateString("Scarlett", "");
 					sld.lastname = "";
 					LAi_SetCitizenType(characterFromID("dame1"));
 
@@ -4583,16 +4583,25 @@ Cost for level 50 is 55,374,000
 					LAi_SetImmortal(sld, true);
 					sld.dialog.filename = "Dame_dialog.c";
 					sld.id = "dame2";
-					sld.name = "Giselle";
+					sld.name = TranslateString("Giselle","");
 					sld.lastname = "";
 					LAi_SetCitizenType(characterFromID("dame2"));
 
-					sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Anamaria", "goto", LAi_FindRandomLocator("goto"));
+					if (PChar.model == "Anamaria" || GetMySimpleOldName(PChar) == "Anamaria")
+					{
+						sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Danblack", "goto", LAi_FindRandomLocator("goto"));
+						sld.name = TranslateString("Harriett", "");
+						sld.lastname = "";
+					}
+					else
+					{
+						sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, "Anamaria", "goto", LAi_FindRandomLocator("goto"));
+						sld.name = TranslateString("Anamaria","");
+						sld.lastname = "";
+					}
 					LAi_SetImmortal(sld, true);
 					sld.dialog.filename = "Dame_dialog.c";
 					sld.id = "dame3";
-					sld.name = "Anamaria";
-					sld.lastname = "";
 					LAi_SetCitizenType(characterFromID("dame3"));
 				}
 				else
@@ -4649,21 +4658,21 @@ Cost for level 50 is 55,374,000
 					sld = LAi_CreateFantomCharacter(false, 0, true, false, 0.25, GetRandomModelForType(-1,"Monks"), "goto", SkelLocator);
 					LAi_SetImmortal(sld, true);
 					sld.id = "bagarreur6";
-					sld.name = "Scared";
-					sld.lastname = "Monk";
+					sld.name = TranslateString("Scared Monk", "");
+					sld.lastname = "";
 					LAi_SetActorType(characterFromID("bagarreur6"));
 					LAi_ActorRunToLocation(characterFromID("bagarreur6"), "reload", "reload7_back", "none", "", "", "skeleton_leaves", 0.0);
 
 					sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.25, GetRandomModelForType(-1,"Skeletons"), "goto", SkelLocator);
 					LAi_SetImmortal(sld, true);
 					sld.id = "bagarreur7";
-					sld.name = "Cursed";
-					sld.lastname = "Skeleton";
+					sld.name = TranslateString("Cursed Skeleton", "");
+					sld.lastname = "";
 					LAi_SetWarriorType(characterFromID("bagarreur7"));
 					LAi_warrior_SetCommander(CharacterFromID("bagarreur7"), CharacterFromID("bagarreur6"));
 				}
 			}
-        break;
+		break;
 
 		case "skeleton_leaves":
 			LAi_SetActorType(characterFromID("bagarreur7"));

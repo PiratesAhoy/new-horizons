@@ -3298,7 +3298,7 @@ void QuestComplete(string sQuestName)
 			Preprocessor_Remove("nation");
 			Preprocessor_Remove("town");
 
-			for(i=1; i<=4; i++)								// And any nearby guards must be dead.
+			for(i=1; i<=4; i++)
 			{
 				if (CheckAttribute(PChar, "quest.agentquest.soldier" + i))
 				{

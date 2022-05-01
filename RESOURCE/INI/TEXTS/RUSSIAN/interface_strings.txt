@@ -7,6 +7,7 @@ save game limit {Вы превысили количество разрешенн
 You can't save while sailing or boarding!{Вы не можете сохраниться в открытом море или во время абордажа!}
 on ship in{На корабле}
 #sisland_name# Waters{Воды острова #sisland_name#}
+Number of saved games{Number of saved games}
 
 Salary info {Ваша команда требует оплаты за месяц. Вы выдадите ее?}
 
@@ -33,6 +34,7 @@ This officer has too low Leadership and Sailing skills to command this ship. Ass
 You can't command a fleet until reaching level{Вы не можете командовать флотом до достижения уровня}
 Leadership. Assign anyway?{Лидерства. Все равно назначить?}
 's current colours{сейчас под флагом}
+Hoist flag{Hoist flag}
 is known as{известен как}
 Raise{Поднять}
 have been installed{установлены}
@@ -145,11 +147,18 @@ You were disarmed!{Вы были разоружены!}
 The Merchant Guild's watchmen are very vigilant...{Сторожа Торговой Гидьдии очень бдительны...}
 The Garrison Commander sent immediate reinforcements...{Командующий Гаррисон послал за подкреплением...}
 Weapon misfired & blew up !{Осечка!}
+Your blade decreased in quality!{Your blade decreased in quality!}
 Robbing helpless citizens isn't good for your reputation !{Грабить честных горожан? Не очень-то это хорошо для Вашей репутации!}
 has gained a new level!{получил новый уровень!}
 (Now level{(Текущий уровень}
+Enemy lost weapon, trying to run!{Enemy lost weapon, trying to run!}
 CHANGE REP FOR PLAYER:{ИЗМЕНЕНИЕ РЕПУТАЦИИ:}
+undrawn blade 1{undrawn blade 1}
+undrawn blade 2{undrawn blade 2}
+firing on undrawn blade 1{firing on undrawn blade 1}
+firing on undrawn blade 2{firing on undrawn blade 2}
 for attacking friends{для атаки союзников}
+stunned victim{stunned victim}
 has been captured by{был захвачен}
 New captain{Новый капитан}
 Gained{получил}
@@ -179,6 +188,7 @@ Letter of Marque{корсарский патент}
 ALARM !  AN AMBUSH !!!!{ТРЕВОГА! ЗАСАДА!!!}
 Gamlet{Разговаривать с трупами своих врагов?! Ваше имя не Гамлет, случайно?}
 NoItems{С этого трупа брать нечего}
+Captain, the crew is envious of the amount of money we have on board and wants to sign articles{Captain, the crew is envious of the amount of money we have on board and wants to sign articles}
 Captain, we have only{Капитан, через}
 days worth of rum left!{дня у нас закончится ром!}
 Captain, we're out of rum!{На корабле закончился ром!}
@@ -245,6 +255,7 @@ on shore leave at{оставленным в порту}
 FAILED{ПРОВАЛЕНО}
 You haven't the file{Нет файла}
 You can't save while carrying a holy relic! Give it to a monk{Вы не можете сохраняться пока у Вас в руках Священная Реликвия. Сначала доставьте её монаху.}
+You can't save while carrying a holy relic in this old abbey! Give it to a monk{You can't save while carrying a holy relic in this old abbey! Give it to the monk}
 You can't save or load until{Вы не можете сохранить игру, пока}
 leaves.{не покинет Вас.}
 NewSave{Новая запись}
@@ -295,6 +306,7 @@ Cayman{Кайман}
 Hispaniola{Испаньола}
 Cuba{Куба}
 Guadeloupe{Гваделупа}
+Santa Marнa de Guadalupe de Extremadura{Санта-Мария-де-Гуадалупе}
 Saint Martin{Сен-Мартен}
 Antigua{Антигуа}
 Turks{Тёркс}
@@ -326,6 +338,46 @@ Current captain{Капитан}
 Ship is currently in companion slot{Корабль находится в компаньонской ячейке}
 empty companion slot{пустая компаньонская ячейка}
 empty berthing slot{пустая стояночная ячейка}
+You can't assign a ship to a companion if you have no ship!{You can't assign a ship to a companion if you have no ship!}
+You can't berth your own ship if your companions have ships!{You can't berth your own ship if your companions have ships!}
+(You can berth/relaunch ships in the Secret hideout){(You can berth/relaunch ships in the Secret hideout)}
+(You must be in the shipyard to berth or relaunch a ship){(You must be in the shipyard to berth or relaunch a ship)}
+Confirm - Swap Ships{Confirm - Swap Ships}
+Confirm - Relaunch Ship{Confirm - Relaunch Ship}
+Confirm - Berth Ship{Confirm - Berth Ship}
+Confirm - Lay Up Ship{Confirm - Lay Up Ship}
+Confirm - Scrap Ship{Confirm - Scrap Ship}
+You have selected to put the{You have selected to put the}
+(currently active) on shore leave, and relaunch the{(currently active) on shore leave, and relaunch the}
+(currently on shore leave). This action is completely reversible; nothing will be lost or stripped from either ship. Note however that berthing charges for the{(currently on shore leave). This action is completely reversible; nothing will be lost or stripped from either ship. Note however that berthing charges for the}
+ will be high ({will be high (}
+/ month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate ({/ month) and you will continue to have to pay the crew, captain and any officers that captain has, albeit at a reduced rate (}
+/ month). Click OK to go ahead with this.{/ month). Click OK to go ahead with this.}
+(currently laid up). If the{(currently laid up). If the}
+goes on shore leave, nothing will be lost or stripped from her, but note that berthing charges will be high ({goes on shore leave, nothing will be lost or stripped from her, but note that berthing charges will be high (}
+/ month). If the{/ month). If the}
+is relaunched, you will have to replace her rigging, her supplies and her crew. Click OK to go ahead with this.{is relaunched, you will have to replace her rigging, her supplies and her crew. Click OK to go ahead with this.}
+(currently active), and relaunch the{(currently active), and relaunch the}
+(currently on shore leave). If the{(currently on shore leave). If the}
+is laid up, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{is laid up, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.}
+You will receive{You will receive}
+for the value of the cargo in the hold at local prices.{for the value of the cargo in the hold at local prices.}
+You will no longer have to pay the crew, and the berthing charge will be low ({You will no longer have to pay the crew, and the berthing charge will be low (}
+/ month).{/ month).}
+If the{If the}
+is relaunched, you will have to replace, her rigging, her supplies and her crew.{is relaunched, you will have to replace, her rigging, her supplies and her crew.}
+Click OK to go ahead with this.{Click OK to go ahead with this.}
+Click OK to confirm that you want to relaunch the{Click OK to confirm that you want to relaunch the}
+You will have to replace, her rigging, her supplies and her crew.{You will have to replace, her rigging, her supplies and her crew.}
+(currently active) on shore leave. This action is completely reversible; nothing will be lost or stripped from her. Note however that berthing charges will be high ({(currently active) on shore leave. This action is completely reversible; nothing will be lost or stripped from her. Note however that berthing charges will be high (}
+(currently active). She will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{(currently active). She will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.}
+Note that if you lay up the{Note that if you lay up the}
+, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.{, she will be stripped of everything except her guns (this includes crew, rigging and upgrades - you will have to replace these when you relaunch the ship), and her captain will return to the passengers list.}
+You will no longer have to pay the crew, and the monthly berthing charge will decrease from{You will no longer have to pay the crew, and the monthly berthing charge will decrease from}
+. Click OK to go ahead with this.{. Click OK to go ahead with this.}
+Click OK to confirm that you want to scrap the{Click OK to confirm that you want to scrap the}
+The ship's captain will return to the passengers list.{The ship's captain will return to the passengers list.}
+
 You have signed articles with your crew.{Вы подписали договор с командой.}
 This means{Это значит, что команда получает долю добычи после каждой экспедиции. Если Вы устали от каперства, то можете платить команде регулярное жалованье. Мораль команды будет более стабильной, хотя и не будет такой высокой, как при дележе добычи.}
 Note: Before you can do this, you must divide the plunder.{Имейте в виду! Перед тем, как сделать это, Вы должны поделиться добычей.}
@@ -340,6 +392,52 @@ FOOD rations are at{Будем кормить}
 level. On these rations, food in the hold is enough for{С таким рационом, еды нам хватит на}
 RUM rations are at{}
 level. On these rations, rum in the hold is enough for{С таким рационом, рома нам хватит на}
+
+The air is calm{The air is calm}
+There are light airs{There are light airs}
+There is a light breeze{There is a light breeze}
+There is a gentle breeze{There is a gentle breeze}
+There is a moderate breeze{There is a moderate breeze}
+There is a fresh breeze{There is a fresh breeze}
+There is a strong breeze{There is a strong breeze}
+There is a near gale{There is a near gale}
+from the{from the}
+Wind is from the{Wind is from the}
+wind_at{at}
+kts{kts}
+N{N}
+NNE{NNE}
+NE{NE}
+ENE{ENE}
+E{E}
+ESE{ESE}
+SE{SE}
+SSE{SSE}
+S{S}
+SSW{SSW}
+SW{SW}
+WSW{WSW}
+W{W}
+WNW{WNW}
+NW{NW}
+NNW{NNW}
+Dir_N{N}
+Dir_NNE{NNE}
+Dir_NE{NE}
+Dir_ENE{ENE}
+Dir_E{E}
+Dir_ESE{ESE}
+Dir_SE{SE}
+Dir_SSE{SSE}
+Dir_S{S}
+Dir_SSW{SSW}
+Dir_SW{SW}
+Dir_WSW{WSW}
+Dir_W{W}
+Dir_WNW{WNW}
+Dir_NW{NW}
+Dir_NNW{NNW}
+
 Emblem{Символ}
 Special Sail{Специальные паруса}
 sails with pirate emblem.{паруса с пиратскими символами.}
@@ -360,6 +458,17 @@ Junk sails for Empress.{Парусиновый хлам.}
 Junk sails for Empress without holes.{Парусиновый хлам без дыр.}
 Sails with the coat of arms of Castile-Leon.{Sails with the coat of arms of Castile-Leon.}
 Sails with the coat of arms of the Holy Roman Empire.{Sails with the coat of arms of the Holy Roman Empire.}
+Red sails with gold fringe, characteristic to Queen Anne's Revenge.{Red sails with gold fringe, characteristic to Queen Anne's Revenge.}
+A set of sails that once belonged to the legendary Death Vessel.{A set of sails that once belonged to the legendary Death Vessel.}
+A set of black sails with red and white stripes.{A set of black sails with red and white stripes.}
+A set of sails bearing diamonds patterns, praised for their beauty.{A set of sails bearing diamonds patterns, praised for their beauty.}
+A set of white sails sporting a chain with broken links, and represent the holder's commitment to freedom.{A set of white sails sporting a chain with broken links, and represent the holder's commitment to freedom.}
+A set of sails with an anchor pattern, representing the conquering explorers of the New World.{A set of sails with an anchor pattern, representing the conquering explorers of the New World.}
+A set of blue sails with gilded gold patterns.{A set of blue sails with gilded gold patterns.}
+A set of sails with the pattern of a master navigator's golden sextant.{A set of sails with the pattern of a master navigator's golden sextant.}
+A set of sails featuring a pattern of crossed muskets.{A set of sails featuring a pattern of crossed muskets.}
+A set of white canvas sails adorned with red stripes.{A set of white canvas sails adorned with red stripes.}
+A set of black and red sails emblazoned with the Templar cross.{A set of black and red sails emblazoned with the Templar cross.}
 National Emblem{Герб}
 sails, without emblem.{Паруса, без эмблем.}
 Plain{Чистые}
@@ -565,9 +674,18 @@ save_while boarding{абордажа}
 save_while sailing or boarding{во время плавания или абордажа}
 save_on deck{на палубе}
 Type{Тип}
+Point{Point}
 Points{Единиц}
 trade_ship{торговля}
 war_ship{война}
+pirate_ship{Pirate ship}
+
+Hostile Port{Hostile Port}
+Friendly Port{Friendly Port}
+Cozumel Waters{Cozumel Waters}
+Random Port{Random Port}
+Random Shore{Random Shore}
+Lifeboat{Lifeboat}
 
 Brothel{Бордель}
 Tutorial Deck{Тренировочная Палуба}
@@ -641,6 +759,10 @@ Sewer{Сточная труба}
 Abandoned mine{Заброшенная шахта}
 Town{Город}
 Dutch West India Company{Голландская Вест-Индская компания}
+Indian Village{Indian Village}
+Casa de Contratacion{Casa de Contratacion}
+French West India Company{French West India Company}
+#stown_name# Gambling House{#stown_name# Gambling House}
 
 Brothel.{Бордель}
 Loanshark's Office.{Контора ростовщика}
@@ -699,6 +821,9 @@ Abbey of the Maltese order.{Аббатство Мальтийского Орде
 Sewer.{Коллектор}
 Abandoned mine.{Заброшенная шахта}
 Town.{Город}
+Casa de Contratacion.{Casa de Contratacion.}
+French West India Company.{French West India Company.}
+Gaming House.{Gaming House.}
 
 Khael Roa Shore{Берег Каэль Роа}
 Incas Temple{Храм инков}
@@ -738,7 +863,7 @@ Boarding deck.{Схватка на палубе}
 Fort inside.{Внутри форта}
 Boarding town.{Захват колонии}
 
-House of Am?rigo Vieira{Дом Америго Виера}
+House of Amйrigo Vieira{Дом Америго Виера}
 Smithy{Кузница}
 Sunny Haven{Солнечная Гавань}
 Hidden Cave{Скрытая пещера}
@@ -751,7 +876,7 @@ Smugglers Tavern{Таверна контрабандистов}
 House of Leader of smugglers{Дом главаря контрабандистов}
 Rheims house in #stown_name#{#stown_name#. Дом Реймса}
 
-House of Am?rigo Vieira.{Дом Америго Виера}
+House of Amйrigo Vieira.{Дом Америго Виера}
 Smithy.{Кузница}
 Sunny Haven.{Солнечная Гавань}
 Hidden Cave.{Скрытая пещера}
@@ -772,7 +897,6 @@ Head port house{Дом начальника порта}
 Center{Городской Центр}
 Octopus Bay{Бухта Осьминога}
 House in #stown_name#{#stown_name#. Дом}
-Old Bridge{Старый мост}
 
 #stown_name#. Slums.{#stown_name#. Трущобы}
 Beach.{Пляж}
@@ -781,6 +905,7 @@ Head port house.{Дом начальника порта}
 Center.{Городской Центр}
 Octopus Bay.{Бухта Осьминога}
 House in #stown_name#.{#stown_name#. Дом}
+Old Bridge{Старый мост}
 
 Trade Square{Торговая площадь}
 House of Mateus Santos{Дом Матеуса Сантоса}
@@ -802,6 +927,7 @@ Oyster Beach.{Устричный Пляж}
 Entrace to #sisland_name# cave.{#sisland_name#. Вход в пещеру}
 Shore.{Берег}
 ANIMISTS Lair.{Убежище АНИМИСТОВ}
+Satanists Lair.{
 
 Prison{Тюрьма}
 Devil's Throat{Глотка Дьявола}
@@ -942,11 +1068,15 @@ Barracks{Казармы}
 Church{Церковь}
 Entrance to plantation{Вход на плантацию}
 Anse Casse-Bois{Таинственная Бухта}
+Bahнa Grande{Bahнa Grande}
+Ensenada del Bosque Quebrado{Ensenada del Bosque Quebrado}
 
 Barracks.{Бараки}
 Church.{Церковь}
 Entrance to plantation.{Вход на плантацию}
 Anse Casse-Bois.{Таинственная Бухта}
+Bahнa Grande.{Bahнa Grande}
+Ensenada del Bosque Quebrado.{Ensenada del Bosque Quebrado}
 
 Storehouse{Склад}
 Storehouse.{Склад}
@@ -977,6 +1107,16 @@ Entrance to house.{Вход в дом}
 Inside house.{Внутри дома}
 #sisland_name# underground.{#sisland_name#. Подземелье}
 Naval officers only!{Только для морских офицеров!}
+
+Rocky Cove{Rocky Cove}
+Sandy Beach{Sandy Beach}
+Arawak Village{Arawak Village}
+Arawak Burialground{Arawak Burialground}
+
+Rocky Cove.{Rocky Cove}
+Sandy Beach.{Sandy Beach}
+Arawak Village.{Arawak Village}
+Arawak Burialground.{Arawak Burialground}
 
 NoCannons{Орудий не осталось!}
 Enough{Вы не можете установить больше орудий!}
@@ -1064,13 +1204,19 @@ No Bombs to Load{На корабле нет бомб}
 
 There's a cave entrance in the Cliff!{Под утёсом виднеется вход в пещеру!}
 NoGambleMoney{Эй! У тебя нет денег?! Возвращайся, когда хоть немного разбогатеешь, или сделай правильный выбор.}
+NoGambleMoneyPoker{Come on, put in your ante}
 NoGamblerMoney{Похоже, ты не сильно богат. Хорошо, мы уменьшим ставку.}
+NoGamblerMoneyPoker{Out of chips eh?}
+IWin{I win}
+YouWin{You win}
 GambleBetMin{Хотите играть на минимальной ставке? Как пожелаете...}
-FirstTimePlayingBlackJack{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. Щелкните левой кнопкой мыши на картах - чтобы начать игру. Щелкните левой кнопкой мыши по портретам - чтобы заставить героя двигаться.}
+GambleBetMinPoker{Putting out the minimum eh? Very wise.}//PW
+FirstTimePlayingVingtUn{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. Щелкните левой кнопкой мыши на картах - чтобы начать игру. Щелкните левой кнопкой мыши по портретам - чтобы заставить героя двигаться.}
 FirstTimePlayingPoker{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. Щелкните левой кнопкой мыши на картах - чтобы начать игру. Щелкните левой кнопкой мыши по портретам - чтобы заставить героя играть. Щелкните левой кнопкой мыши на любой из ваших карт - чтобы изменить эту карту.}
 FirstTimePlayingDumb{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. Щелкните левой кнопкой мыши на картах - чтобы начать игру. Щелкните левой кнопкой мыши на любой из ваших карт - сделать ход.}
 FirstTimePlayingDice{Щелкните левой кнопкой мыши на "Ставка:" - чтобы сделать ставку. Щелкните левой кнопкой мыши на значек поля - отменять ставку. По кружке - чтобы начать игру.}
 Exit from gamble confirm{Вы действительно хотите покинуть эту игру?}
+Exit from gamble confirmPoker{If you quit you lose unless you have played 50 hands or you have all the chips. Do you really want to exit?}
 CrewMutinyLeavesShip{Команда покидает ваш корабль!}
 CrewMutinyArticles1{Вы нарушаете условия нашего соглашения, капитан. Если не заплатите нам}
 CrewMutinyArticles2{золота и не дадите нам небольшую бочку рома, мы прокатим вас на ядре!}
@@ -1087,6 +1233,7 @@ Deserted shore{Пустынный берег}
 Dead Man's Bay{Залив Мертвеца}
 Witch's Rock{Скала Ведьмы}
 Strange sail to the{Странный парус}
+Strange sail{Strange sail}
 Captain, a hint:{Капитан, совет:}
 of_island{}
 lies nothing but open sea!{вранье ничего, кроме открытого моря!}
@@ -1101,7 +1248,9 @@ Southwest{Юго-запад}
 No island within reach{Нет острова в пределах видимости}
 Enter the map to sail to some island{Выйдете на Глобальную карту, чтобы быстро передвигаться между островами}
 in sight{в поле зрения}
+Captain, land in sight{Captain, land in sight}
 to the{}
+Captain, we are approaching{Captain, we are approaching}
 Captain, there is something drifting in the water{Капитан, что-то дрейфует в воде}
 Something is drifting there, DEAD AHEAD,{Что-то дрейфует там, прямо по курсу,}
 Captain, a boat{Капитан, лодка}
@@ -1109,7 +1258,10 @@ Captain, a native raft{Капитан, плот}
 Captain, a dismasted vessel{Капитан, разбитый корабль}
 You don't have enough gunpowder for a mine{Вам не хватает пороха для шахты}
 A mine{Шахта}
+Mine launched{Mine launched}
+We have hit a mine!{We have hit a mine!}
 Collision with a drifting trunk !{Столкновение с дрейфующим бревном!}
+We have collided with a drifting trunk!{We have collided with a drifting trunk!}
 You find some votive items on an Indian ceremonial raft{Вы нашли странные рикуальные предметы на индийском церемониальном плоту}
 You find some burial objects on a witch doctor's funeral raft{Вы нашли странные погребальные дары на похоронном плоту знахарки}
 You find some burial objects on a voodoo priest's funeral raft{Вы нашли странные погребальные дары на похоронном плоту жреца вуду}
@@ -1121,7 +1273,13 @@ Someone has already emptied this abandoned hulk...{Кто - то уже разг
 Directsail mod active{Прямой парус мод активирован}
 Directsail mod deactivated{Прямой парус мод деактивирован}
 Directsail toggled, press 0 to enable{Прямой парус мод переключается, нажмите "0", чтобы включить}
+Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing{Governor Ship Hunting quest active, DirectSail disabled to prevent target ship from disappearing}
+Our position from{Our position from}
 
+#stown_name# Gunsmith{#stown_name# Gunsmith}
+#stown_name# Blacksmith{#stown_name# Blacksmith}
+#stown_name# BlacksmithF{#stown_name# Blacksmith}
+#stown_name# Gun- and Blacksmith{#stown_name# Gun- and Blacksmith}
 Portugese Blacksmith{Португальская Кузница}
 French Blacksmith{Французская Кузница}
 Spanish Blacksmith{Испанская Кузница}
@@ -1129,6 +1287,7 @@ Redmond Blacksmith{Кузница Рэдмонда}
 Opium Den{Курилка}
 Dutch Blacksmith{Голландская Кузница}
 Pirate Blacksmith{Пиратская Кузница}
+Pirate Gun- and Blacksmith{Pirate Gun- and Blacksmith}
 Apothecary{Аптека}
 Eden Rock{Райская Скала}
 Sand Bluff{Песчаный Утес}
@@ -1148,6 +1307,7 @@ Mine{Шахта}
 Sandy Point{Сенди Поинт}
 White Reefs{Белые Рифы}
 Wreckage shore{Берег Крушений}
+Dolphin Sands{Dolphin Sands}
 
 Portugese Blacksmith.{Португальская Кузница}
 French Blacksmith.{Французская Кузница}
@@ -1175,6 +1335,7 @@ Mine.{Шахта}
 Sandy Point.{Сенди Поинт}
 White Reefs.{Белые Рифы}
 Wreckage shore.{Берег Крушений}
+Dolphin Sands.{Dolphin Sands.}
 Boca de Yuman{Бока Де Юман}
 Boca de Hubon{Бока Де Хубон}
 Bahia de San Antonio{Баия-де-Сан-Антонио}
@@ -1215,6 +1376,16 @@ I hesitate to be so bold, but I am lost without you.  Would you complete me by c
 I used to think that I was happy at sea, but I would be much happier knowing that you waited at my home port.  Would you be my wife?{Раньше я думал, что был счастлив на море, но я был бы гораздо счастливее, зная, что вы ждете, меня дома в порту. Хотите быть моей женой?}
 I...  I'm at a loss for words... Ha'hmmm...  I have this ring here, you see, and I...  Would you marry me?{Я...  Я не нахожу слов... Ха... Хм...  У меня есть это кольцо, видите, и я...  Пожалуйста, женитесь на мне?}
 Dear lady, I have trod decks riddled with shot without the depth of fear I feel now.  Please ease my soul and tell me that you'll marry me!{Дорогая леди, я прошел через многое... Пожалуйста освободите мою душу и скажите, что вы женитесь на мне!}
+I would very much like to spend a few moments with the gentleman's company, if he is willing.{I would very much like to spend a few moments with the gentleman's company, if he is willing.}
+My lord, I must admit, you do not fail to impress. Would you care to join me for some conversation?{My lord, I must admit, you do not fail to impress. Would you care to join me for some conversation?}
+You are more thrilling than the fiercest storm of the seven seas!  May I become better acquainted with you?{You are more thrilling than the fiercest storm of the seven seas!  May I become better acquainted with you?}
+I am enchanted by your grace and eloquence. Speak, I pray, that I might know you better!{I am enchanted by your grace and eloquence. Speak, I pray, that I might know you better!}
+I would be honoured and delighted to share a few moments of time with you, my lord.{I would be honoured and delighted to share a few moments of time with you, my lord.}
+My dear, I have mastered the waves and commanded the winds, but you are the one puzzle I cannot solve! Tell me more!{My dear, I have mastered the waves and commanded the winds, but you are the one puzzle I cannot solve! Tell me more!}
+I hesitate to be so bold, but I am lost without you.  Would you complete me by consenting to be my husband?{I hesitate to be so bold, but I am lost without you.  Would you complete me by consenting to be my husband?}
+I used to think that nothing could make me happier than the seas, but you proved otherwise, my lord. Would you be my husband?{I used to think that nothing could make me happier than the seas, but you proved otherwise, my lord. Would you be my husband?}
+I...  I do not know how to ask you this, but... Words elude me, I...  Would you...marry me?{I...  I do not know how to ask you this, but... Words elude me, I...  Would you...marry me?}
+My lord, I have trod decks riddled with shot without the depth of fear I feel now.  Please ease my soul and tell me that you'll marry me!{My lord, I have trod decks riddled with shot without the depth of fear I feel now.  Please ease my soul and tell me that you'll marry me!}
 
 cplates_desc{Медные пластины снижают скорость обрастания днища водорослями и повышает прочность корпуса}
 bcannons_desc{Для тех, кто мог их себе позволить, бронзовые пушки более точные, по сравнению с железными.}
@@ -1226,6 +1397,8 @@ rhull_desc{Сооруженное на скорую руку структурн�
 flushed_desc{'Облегчение' включает в себя удаление надстройки судна, делая более "похожим на фрегат". Это позволяет уменьшить вес корабля,что влияет на мореходность.}
 
 Swamp Island{Подтопленный остров}
+Pirate's Cave{Pirate's Cave}
+Log-house{Log-house}
 Swamp Wreck{Обломки}
 Store upstairs{Складская лестница}
 Woodes Rogers' bedroom{Спальня Вудса Роджерса}
@@ -1444,6 +1617,7 @@ This heavy cast iron door has a silver lock{Эта тяжелая дверь и�
 This heavy cast iron door has a gold lock{Пахнет чистым спиртом.}
 It smells like Pure Alcohol.{Это пахнет как чистым алкоголем.}
 It smells like Sulfuric Acid.{Пахнет серной кислотой.}
+Next time I'll use a bottle.{Next time I'll use a bottle.}
 It smells like Nitric Acid.{Пахнет азотной кислотой.}
 It smells like Hydrochloricic Acid.{Пахнет соляной кислокой.}
 I have made Cognac!{Я сделал коньяк!}
@@ -1508,7 +1682,12 @@ I have 2 sailors left to hire.{Я могу нанять ДВУХ матросо�
 I have 1 sailor left to hire.{Я могу нанять ОДНОГО матроса.}
 I have 2 officers left to hire.{Я могу нанять ДВУХ офицеров.}
 I have 1 officer left to hire.{Я могу нанять ОДНОГО офицера.}
-I need more logs to build a raft.{Для плота нужно больше бревен.}
+Hmm, with some more logs maybe I could build a raft here.{Hmm, with some more logs maybe I could build a raft here.}
+I still need more logs to build a raft.{Для плота нужно больше бревен.}
+Enough with logs - how do I assemble the raft?{Enough with logs - how do I assemble the raft?}
+No, this rope is tied too hard!{No, this rope is tied too hard!}
+No, I can't move it!{No, I can't move it!}
+Hmm. That was maybe not a good idea!?{Hmm. That was maybe not a good idea!?}
 That was it. I'll go back to Charles Vane.{Вот и все. Можно возвращаться к Чарльзу Вэйну.}
 Maybe the Captains in the Sacristy know more...{Возможно капитаны в ризнице знают больше...}
 Maybe the Captains in the Church know more...{Возможно капитаны в церкви знают больше..}
@@ -1703,6 +1882,9 @@ Water is already added.{Вода уже добавлена.}
 In the Gunpowder Mill now:{В Заводе Пороха теперь:}
 water{вода}
 nothing{ничто}
+charcoal{charcoal}
+nitre{nitre}
+sulfur{sulfur}
 I can get rid of bad Mixtures here.{Я могу избавиться от плохих Смесей здесь.}
 Yes! I made it - now to the Restaurant.{Да! Я сделал его - теперь в Ресторан.}
 I have made Gunpowder but there's still some in the Mill - enough for another barrel.{Я сделал Порох, но есть все еще некоторые в Заводе - достаточно для другого барреля.}
@@ -1770,6 +1952,7 @@ I need a Flint too!{Мне нужно еще и огниво!}
 This Ring is eating all my Power!{Это кольцо забирает всю мою силу!}
 Now I only need Fire.{Теперь мне нужен лишь огонь.}
 I have to find another way down.{Мне нужно найти другой путь вниз.}
+I need something to tie the Rope to.{I need something to tie the Rope to.}
 To Mr Poe's house now!{Теперь - в дом мистера По!}
 East tower{Восточная башня}
 South tower{Южная башня}
@@ -1802,6 +1985,9 @@ No, I have already done that.{Нет, это уже сделано.}
 Now when it's clean, maybe I should heat it up again?{Теперь, когда всё очищено, возможно, нужно подогреть его снова?}
 No, I don't want to boil the Parchment!{Нет, я не хочу кипятить Пергамент!}
 No, let's go on instead.{Нет, лучше продолжим.}
+No, it wasn't that easy!{No, it wasn't that easy!}
+Not the right time to leave.{Not the right time to leave.}
+Strange, I wonder why that crate looks different from the others.{Strange, I wonder why that crate looks different from the others.}
 
 West crescent{Западный полумесяц}
 East crescent{Восточный полумесяц}
@@ -1811,14 +1997,23 @@ Rotunda upper levels{Ротонда: верхние уровни}
 Rotunda middle levels{Ротонда: средние уровни}
 Rotunda lower levels{Ротонда: нижние уровни}
 I'll need a Rope here.{Мне понадобится веревка.}
+Kitchen{Kitchen}
 Dormitorium{Общая комната}
 Cellarium{Кладовая}
 Chapter-house{Здание капитула}
 Scriptorium{Помещение для переписывания рукописей}
 Cloister{Монастырь}
+cloister inside{Cloister inside}
+New Cloister Garden{New Cloister Garden}
+Cloister yard{Cloister yard}
+cloister exit{Cloister exit}
 Infirmary{Лазарет}
 Lavatorium{Умывальня}
 Sacristy{Ризница}
+Graveyard{Graveyard}
+Crypt{Crypt}
+Cell{Cell}
+Fort Waxholm{Fort Waxholm}
 
 Something under that straw?{Что-то под той соломой?}
 No, I'll only cut myself on those shards.{Нет, я только порежусь на тех черепках.}
@@ -1872,7 +2067,15 @@ Just one drop...{Только одну каплю...}
 I'll use more this time. Five drops perhaps.{В этот раз попробую больше. Пять капель, возможно.}
 
 Yes! That was the last ghost. Maybe the indian wants to talk to me now...{Yes! That was the last ghost. Maybe the indian wants to talk to me now...}
+Cartagena fort{Cartagena fort}
+Cartagena fort.{Cartagena fort.}
 Cartagena Hotel{Cartagena Hotel}
+Cartagena Hotel Pension{Cartagena Hotel Pension}
+Palace square{Palace square}
+Admiral's Office{Admiral's Office}
+Fort Tunnel{Fort Tunnel}
+Secret passage{Secret passage}
+Inquisition Cave{Inquisition Cave}
 Suarez's house{Дом Суареса}
 Cartographer's House{Дом картографа}
 No, it's stuck in the sand.{No, it's stuck in the sand.}
@@ -1908,11 +2111,61 @@ No, the Painting is too big to carry around. Maybe if I could cut the canvas out
 No, I'll save that to later{No, I'll save that to later}
 Oh yes, I have forgotten the Painting!{Oh yes, I have forgotten the Painting!}
 Oh yes, I have forgotten the Book!{Oh yes, I have forgotten the Book!}
+I have to search for something to step on here.{I have to search for something to step on here.}
+There's something I can use. A pitchfork.{There's something I can use. A pitchfork.}
+That hatch - could be the way to the Captain's cabin.{That hatch - could be the way to the Captain's cabin.}
+I need a long tool to remove the pole.{I need a long tool to remove the pole.}
+CALL MATES{CALL MATES}
+AWAY BOAT{AWAY BOAT}
+No, I have no more business there.{No, I have no more business there.}
 
+Taino Village{Taнno Village}
+House of Gilbert Downing{House of Gilbert Downing}
+Old Inquisition prison{Old Inquisition prison}
+Archives{Archives}
+Abandoned fort{Abandoned fort}
+Slave Camp{Slave Camp}
+
+HINT: If that warden comes close enough to the bars, you can mug him!{HINT: If that warden comes close enough to the bars, you can mug him!}
+Crew remaining:{Crew remaining:}
+crew died of maltreatment{crew died of maltreatment}
+HINT: You aren't well armed and your officers aren't armed at all. Take all the help you can get!{HINT: You aren't well armed and your officers aren't armed at all. Take all the help you can get!}
+crew died in the battle{crew died in the battle}
+I'm taking one of the soldier's uniforms. A disguise might be useful later.{I'm taking one of the soldier's uniforms. A disguise might be useful later.}
+You broke the window and grabbed the map. Now RUN!{You broke the window and grabbed the map. Now RUN!}
+That looks like the original crew returning. Better get aboard and get out of here!{That looks like the original crew returning. Better get aboard and get out of here!}
+Now to wait for the 'Siroco'...{Now to wait for the 'Siroco'...}
+Maybe there's something in that room with the wall markings...{Maybe there's something in that room with the wall markings...}
 You have been given a lockpick.{Вы получили отмычку.}
 Run! They're after you!{Бегите! Вас преследуют!}
 Someone heard that window break!{Кто-то услышал звук разбитого окна!}
+Yedam Kinne should have finished with the pass by now.{Yedam Kinne should have finished with the pass by now.}
+Time to go to church!{Time to go to church!}
+This uniform is uncomfortable, being made for a man, but I'd better wear it whenever I need to talk to the governor.{This uniform is uncomfortable, being made for a man, but I'd better wear it whenever I need to talk to the governor.}
+Finally! Out of that ill-fitting uniform and back into my proper clothes.{Finally! Out of that ill-fitting uniform and back into my proper clothes.}
+Again I have to wear a man's uniform. Better than letting the French see me in my usual outfit, I suppose...{Again I have to wear a man's uniform. Better than letting the French see me in my usual outfit, I suppose...}
+Back to my own ship and back to my own clothes!{Back to my own ship and back to my own clothes!}
+You found all your weapons.{You found all your weapons.}
+You found your equipment. Equip some of it!{You found your equipment. Equip some of it!}
+The lock on this door must date back to the time when this town was Spanish.{The lock on this door must date back to the time when this town was Spanish.}
+It opens with the same key that you used to escape from Havana prison!{It opens with the same key that you used to escape from Havana prison!}
 A few minutes later...{Прошло несколько минут...}
+Hint: To make an officer available to command your ship, assign that officer to one of the shore party slots.{Hint: To make an officer available to command your ship, assign that officer to one of the shore party slots.}
+Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.{Hint: To make an officer available to command your ship, assign that officer to one of the first three shore party slots.}
+Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
+Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
+Capitбn{Capitбn}
+
+You succumb to the Carib poison.{You succumb to the Carib poison.}
+has been executed.{has been executed.}
+Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!{Sorry, but I can't take the chance that you'll make good on your threat to take back the amber skull... FIRE!}
+You failed to rescue{You failed to rescue}
+
+Two months later...{Two months later...}
+
+Three days later...{Three days later...}
+
+The fort gate is closed. Wait for Admiral Hernandez to open it.{The fort gate is closed. Wait for Admiral Hernandez to open it.}
 
 A French infantry unit suddenly appears and attacks you!{На Вас нападают внезапно появившиеся французские пехотинцы!}
 Several Conquistadores attack you!{Несколько конкистадоров нападают на Вас!}
@@ -1936,3 +2189,9 @@ Patrol_Low{low patrolling duty}
 Patrol_Normal{normal patrolling duty}
 Patrol_Medium{alert, the amount of contraband on the island starts to get too much}
 Patrol_High{high alert, despite previous measures contraband still finds its way to this island}
+
+It's Sakharine - is he dead?{It's Sakharine - is he dead?}
+There's poor Sakharine again.{There's poor Sakharine again.}
+I need Tools to assemble this thing.{I need Tools to assemble this thing.}
+I don't have all parts yet.{I don't have all parts yet.}
+No, that's not the right part.{No, that's not the right part.}

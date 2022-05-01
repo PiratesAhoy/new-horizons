@@ -335,7 +335,7 @@ void InitShips()
         refShip.InertiaAccelerationY    = 2.5;  refShip.InertiaBrakingY         = 0.5;
         refShip.InertiaAccelerationZ    = 2.5;  refShip.InertiaBrakingZ         = 2.0;
 	}else{
-		refShip.SpeedRate		= 11.8;
+		refShip.SpeedRate		= 12.3; // GR: was 11.8
 		refShip.TurnRate		= 40;
         refShip.InertiaAccelerationX    = 0.2;  refShip.InertiaBrakingX         = 2.0;
         refShip.InertiaAccelerationY    = 6;    refShip.InertiaBrakingY         = 4;
@@ -438,7 +438,7 @@ void InitShips()
         refShip.InertiaAccelerationY    = 2.25;  refShip.InertiaBrakingY         = 0.5;
         refShip.InertiaAccelerationZ    = 2.5;  refShip.InertiaBrakingZ         = 2.0;
 	}else{
-		refShip.SpeedRate		= 12.0;
+		refShip.SpeedRate		= 12.5; // GR: was 12.0
 		refShip.TurnRate		= 30;
         refShip.InertiaAccelerationX    = 0.2;  refShip.InertiaBrakingX         = 2.0;
         refShip.InertiaAccelerationY    = 6;    refShip.InertiaBrakingY         = 4;
@@ -529,7 +529,7 @@ void InitShips()
         refShip.InertiaAccelerationY    = 2.25;  refShip.InertiaBrakingY         = 0.5;
         refShip.InertiaAccelerationZ    = 2.5;  refShip.InertiaBrakingZ         = 2.0;
 	}else{
-		refShip.SpeedRate		= 12.0;
+		refShip.SpeedRate		= 12.5; // GR: was 12.0
 		refShip.TurnRate		= 30;
         refShip.InertiaAccelerationX    = 0.2;  refShip.InertiaBrakingX         = 2.0;
         refShip.InertiaAccelerationY    = 6;    refShip.InertiaBrakingY         = 4;
@@ -630,7 +630,7 @@ void InitShips()
         refShip.InertiaAccelerationY    = 2.45;  refShip.InertiaBrakingY         = 0.5;
         refShip.InertiaAccelerationZ    = 2.5;  refShip.InertiaBrakingZ         = 2.0;
 	}else{
-		refShip.SpeedRate		= 11.8;
+		refShip.SpeedRate		= 12.3; // GR: was 11.8
 		refShip.TurnRate		= 35;
         refShip.InertiaAccelerationX    = 0.2;  refShip.InertiaBrakingX         = 2.0;
         refShip.InertiaAccelerationY    = 6;    refShip.InertiaBrakingY         = 4;
@@ -1232,7 +1232,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.9;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.6;
+		refShip.SpeedRate		= 11.5; // GR: was 12.6
 		refShip.TurnRate		= 29;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 7;	refShip.InertiaBrakingY		= 6;
@@ -1329,7 +1329,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.9;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.6;
+		refShip.SpeedRate		= 11.5; // GR: was 12.6
 		refShip.TurnRate		= 29;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 7;	refShip.InertiaBrakingY		= 6;
@@ -2008,7 +2008,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.25;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 16.4;
+		refShip.SpeedRate		= 17.4; // GR: was 16.4
 		refShip.TurnRate		= 46.7;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
@@ -2528,7 +2528,7 @@ void InitShips()
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
 		refShip.SpeedRate		= 13.8;
-		refShip.TurnRate		= 37;
+		refShip.TurnRate		= 45; // GR: was 37
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
 		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 4.0;
@@ -3796,7 +3796,7 @@ void InitShips()
 
 	refShip.CanEncounter	= true;
 	refShip.CanBuy		= true;
-	refShip.Model = "Brig"; // KK
+	refShip.Model = "BrigNavy"; // KK
 	refShip.Type.Trade = false;
 	refShip.Type.War = true;
 
@@ -3826,8 +3826,8 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.4;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 14.1;
-		refShip.TurnRate		= 47;
+		refShip.SpeedRate		= 12.7; // GR: was 14.1
+		refShip.TurnRate		= 53;   // GR: was 47
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
 		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 4.0;
@@ -4200,7 +4200,7 @@ void InitShips()
 
 	refShip.CanEncounter	= true;
 	refShip.CanBuy		= true;
-	refShip.Model = "Brig"; // KK
+	refShip.Model = "BrigNavy"; // KK
 	refShip.Type.Trade = false;
 	refShip.Type.War = true;
 
@@ -4230,8 +4230,8 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.4;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 14.1;
-		refShip.TurnRate		= 47;
+		refShip.SpeedRate		= 12.7; // GR: was 14.1
+		refShip.TurnRate		= 53;   // GR: was 47
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
 		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 4.0;
@@ -5197,7 +5197,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 4.5;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 10.0;
+		refShip.SpeedRate		= 12.0; // GR: was 10.0
 		refShip.TurnRate		= 60;
 		refShip.InertiaAccelerationX	= 3.0;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 14;	refShip.InertiaBrakingY		= 5;
@@ -5561,7 +5561,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 15.3;
+		refShip.SpeedRate		= 15.5; // GR: was 15.3
 		refShip.TurnRate		= 55;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 6;
@@ -5742,7 +5742,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 15.3;
+		refShip.SpeedRate		= 15.5; // GR: was 15.3
 		refShip.TurnRate		= 55;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 6;
@@ -5838,7 +5838,7 @@ void InitShips()
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
 		refShip.SpeedRate		= 15.5;
-		refShip.TurnRate		= 43;
+		refShip.TurnRate		= 55; // GR: same as other sloops, since realistic turn rate is also the same.  Was 43
 		refship.InertiaAccelerationX	= 1.0;	refship.InertiaBrakingX		= 2.0;
 		refship.InertiaAccelerationY	= 15;	refship.InertiaBrakingY		= 8;
 		refship.InertiaAccelerationZ	= 6.0;	refship.InertiaBrakingZ		= 3.0;
@@ -6489,7 +6489,7 @@ void InitShips()
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
 		refShip.SpeedRate		= 14.4;
-		refShip.TurnRate		= 51;
+		refShip.TurnRate		= 47; // GR: was 51, higher than other luggers while realistic turn rate is lower
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
 		refShip.InertiaAccelerationZ	= 6.0;	refShip.InertiaBrakingZ		= 2.0;
@@ -6763,7 +6763,7 @@ void InitShips()
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
 		refShip.SpeedRate		= 13.8;
-		refShip.TurnRate		= 37;
+		refShip.TurnRate		= 45; // GR: was 37
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 6;	refShip.InertiaBrakingY		= 4;
 		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 4.0;
@@ -7516,7 +7516,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.9;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.8;
+		refShip.SpeedRate		= 12.5; // GR: was 12.8
 		refShip.TurnRate		= 32;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 1.0;
 		refShip.InertiaAccelerationY	= 8;	refShip.InertiaBrakingY		= 6;
@@ -7611,7 +7611,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.9;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.8;
+		refShip.SpeedRate		= 12.5; // GR: was 12.8
 		refShip.TurnRate		= 32;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 1.0;
 		refShip.InertiaAccelerationY	= 8;	refShip.InertiaBrakingY		= 6;
@@ -8354,12 +8354,11 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.9;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.6;
+		refShip.SpeedRate		= 11.5; // GR: was 12.6
 		refShip.TurnRate		= 29;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 7;	refShip.InertiaBrakingY		= 6;
 		refShip.InertiaAccelerationZ	= 4.0;	refShip.InertiaBrakingZ		= 3.0;
-
 	}
 
 // Review: Vessel configured as:
@@ -9192,18 +9191,17 @@ void InitShips()
 	refShip.RigType = "Bat";
 
 	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
-		refShip.SpeedRate		= 8.7;
+		refShip.SpeedRate		= 8.5; // GR: was 8.7, reduced to match "WallerPinnace"
 		refShip.TurnRate		= 42;
 		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.5;
-		refShip.InertiaAccelerationY	= 1.85;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationY	= 1.9;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 11.0;
-		refShip.TurnRate		= 28;
-		refShip.InertiaAccelerationX = 0.2;		refShip.InertiaBrakingX = 2.0;
-		refShip.InertiaAccelerationY = 7;		refShip.InertiaBrakingY = 6;
-		refShip.InertiaAccelerationZ = 4.0;		refShip.InertiaBrakingZ = 2.0;
-
+		refShip.SpeedRate		= 11.5; // GR: was 11.0
+		refShip.TurnRate		= 29;   // GR: was 28
+		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
+		refShip.InertiaAccelerationY	= 7;	refShip.InertiaBrakingY		= 6;
+		refShip.InertiaAccelerationZ	= 4.0;	refShip.InertiaBrakingZ		= 3.0;
 	}
 
 // Review: Vessel configured as:
@@ -11010,7 +11008,7 @@ void InitShips()
 	refShip.All				= "Brig1";
 	refShip.SName			= "SloopUS";
 	refShip.walk			= "";
-	refShip.id				= refShip.Name;
+	refShip.id			= refShip.Name;
 	refShip.Class			= 6;
 	refShip.Cannon			= CANNON_TYPE_LONG_LBS4;
 	refShip.MaxCaliber		= 4;
@@ -11279,7 +11277,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.0;
+		refShip.SpeedRate		= 14.2; // GR: was 13.0
 		refShip.TurnRate		= 45;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
@@ -13430,7 +13428,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.2;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.5;
+		refShip.SpeedRate		= 13.5; // GR: was 12.5
 		refShip.TurnRate		= 35;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;
@@ -13523,7 +13521,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.2;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.5;
+		refShip.SpeedRate		= 13.5; // GR: was 12.5
 		refShip.TurnRate		= 35;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;
@@ -14287,8 +14285,8 @@ void InitShips()
 	refShip.All				= "Fleut1";
 	refShip.walk			= "";
 	refShip.Class			= 4;
-	refShip.Cannon			= CANNON_TYPE_LONG_LBS18;
-	refShip.MaxCaliber		= 18;
+	refShip.Cannon			= CANNON_TYPE_LONG_LBS12;	// GR: was LONG_LBS18!
+	refShip.MaxCaliber		= 12;				// GR: was 18!
 	refShip.Weight			= Tonnes2CWT(1050);
 	refShip.Capacity		= 2500;
 	refShip.CannonsQuantity		= 28;
@@ -14296,8 +14294,8 @@ void InitShips()
 	refShip.Cannons.Borts.cannonf.qty = 0;
 	refShip.Cannons.Borts.cannonb.qty = 0;
 
-	refShip.MaxCrew			= 200;
-	refShip.MinCrew			= 54;
+	refShip.MaxCrew			= 160;				// GR: was 200
+	refShip.MinCrew			= 38;				// GR: was 54
 
 	refShip.Price           = 140800;
 	refShip.HP              = 5000;
@@ -14828,7 +14826,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.9;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.6;
+		refShip.SpeedRate		= 11.5; // GR: was 12.6
 		refShip.TurnRate		= 29;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 7;	refShip.InertiaBrakingY		= 6;
@@ -15115,7 +15113,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.2;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 12.0;
+		refShip.SpeedRate		= 13.0; // GR: was 12.0
 		refShip.TurnRate		= 35;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;
@@ -19669,7 +19667,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 4.5;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 		}else{
-		refShip.SpeedRate		= 10.0;
+		refShip.SpeedRate		= 13.6; // GR: was 10.0
 		refShip.TurnRate		= 60;
 		refShip.InertiaAccelerationX	= 3.0;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 14;	refShip.InertiaBrakingY		= 5;
@@ -19757,7 +19755,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.0;
+		refShip.SpeedRate		= 13.3; // GR: was 13.0
 		refShip.TurnRate		= 45;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
@@ -19845,7 +19843,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.0;
+		refShip.SpeedRate		= 13.3; // GR: was 13.0
 		refShip.TurnRate		= 45;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
@@ -19933,7 +19931,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.0;
+		refShip.SpeedRate		= 13.3; // GR: was 13.0
 		refShip.TurnRate		= 45;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 12;	refShip.InertiaBrakingY		= 8;
@@ -20110,7 +20108,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.35;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 15.0;
+		refShip.SpeedRate		= 15.5; // GR: was 15.0
 		refShip.TurnRate		= 45;
 		refship.InertiaAccelerationX	= 8.0;	refship.InertiaBrakingX		= 8.0;
 		refship.InertiaAccelerationY	= 6;	refship.InertiaBrakingY		= 6;
@@ -21662,7 +21660,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.8;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 10.0;
+		refShip.SpeedRate		= 10.5; // GR: was 10.0
 		refShip.TurnRate		= 40; // was 35
 		refShip.InertiaAccelerationX = 0.2;		refShip.InertiaBrakingX = 2.0;
 		refShip.InertiaAccelerationY = 7;		refShip.InertiaBrakingY = 6;
@@ -21757,7 +21755,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.8;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 10.0;
+		refShip.SpeedRate		= 11.0; // GR: was 10.0
 		refShip.TurnRate		= 35;
 		refShip.InertiaAccelerationX = 0.2;		refShip.InertiaBrakingX = 2.0;
 		refShip.InertiaAccelerationY = 7;		refShip.InertiaBrakingY = 6;
@@ -21852,7 +21850,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 1.8;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 11.0; // was 10.0
+		refShip.SpeedRate		= 12.0; // was 10.0, GR: then was 11.0
 		refShip.TurnRate		= 40; // was 35
 		refShip.InertiaAccelerationX = 0.2;		refShip.InertiaBrakingX = 2.0;
 		refShip.InertiaAccelerationY = 7;		refShip.InertiaBrakingY = 6;
@@ -22097,12 +22095,12 @@ void InitShips()
 
 	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA){
 		refShip.SpeedRate		= 10.0;
-		refShip.TurnRate		= 90;
+		refShip.TurnRate		= 95; // GR: was 90, now matches other Hoys
 		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.4;
 		refShip.InertiaAccelerationY	= 3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 15.3;
+		refShip.SpeedRate		= 13.3; // GR: was 15.3
 		refShip.TurnRate		= 55;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 6;
@@ -22195,7 +22193,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 15.3;
+		refShip.SpeedRate		= 13.3; // GR: was 15.3
 		refShip.TurnRate		= 55;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 6;
@@ -22288,7 +22286,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 3;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 15.3;
+		refShip.SpeedRate		= 13.3; // GR: was 15.3
 		refShip.TurnRate		= 55;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 6;
@@ -24995,7 +24993,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.25;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.1;
+		refShip.SpeedRate		= 13.8; // GR: was 13.1
 		refShip.TurnRate		= 40;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;
@@ -25083,7 +25081,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.25;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.1;
+		refShip.SpeedRate		= 13.8; // GR: was 13.1
 		refShip.TurnRate		= 40;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;
@@ -25171,7 +25169,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.25;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.1;
+		refShip.SpeedRate		= 13.8; // GR: was 13.1
 		refShip.TurnRate		= 40;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;
@@ -25258,7 +25256,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.25;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.1;
+		refShip.SpeedRate		= 13.8; // GR: was 13.1
 		refShip.TurnRate		= 40;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;
@@ -25346,7 +25344,7 @@ void InitShips()
 		refShip.InertiaAccelerationY	= 2.25;	refShip.InertiaBrakingY		= 0.5;
 		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
 	}else{
-		refShip.SpeedRate		= 13.1;
+		refShip.SpeedRate		= 13.8; // GR: was 13.1
 		refShip.TurnRate		= 40;
 		refShip.InertiaAccelerationX	= 0.2;	refShip.InertiaBrakingX		= 2.0;
 		refShip.InertiaAccelerationY	= 10;	refShip.InertiaBrakingY		= 4;

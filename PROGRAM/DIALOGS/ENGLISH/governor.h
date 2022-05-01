@@ -12,7 +12,7 @@ string DLG_TEXT[189] = {
 "I'm just here to pay my respects, #saddr#. Nothing more.",
 "In that case, please leave my study and let me get back to more important matters.",
 "Yes, of course. Sorry I disturbed you.",
-"I'm sorry, but I don't have anything to talk about right now",
+"I'm sorry, but I don't have anything to talk about right now.",
 "Oh yes? There are some hostiles in our waters.",
 "Those hostiles sound interesting.",
 "I have learned that you completed the task successfully; my congratulations, captain! Here is your reward.",

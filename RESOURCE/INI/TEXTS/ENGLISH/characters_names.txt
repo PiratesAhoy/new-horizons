@@ -896,6 +896,7 @@ Jordano{Jordano}
 Yedam{Yedam}
 Kinne{Kinne}
 Animist{Animist}
+Satanist{Satanist}
 Dark Teacher{Dark Teacher}
 Mystery Man{Mystery Man}
 Teacher{Teacher}
@@ -1088,7 +1089,7 @@ Brown{Brown}
 {=====| StreetMerchants.c |=====}
 Street{Street}
 Merchant{Merchant}
-Street{Street Merchant}
+Street Merchant{Street Merchant}
 Edward{Edward}
 Pear{Pear}
 Patric{Patric}
@@ -1326,3 +1327,9 @@ Urchin{Urchin}
 Wheelback{Wheelback}
 Wyvern{Wyvern}
 Quittance{Quittance}
+Scarlett{Scarlett}
+Giselle{Giselle}
+Harriett{Harriett}
+Anamaria{Anamaria}
+Scared Monk{Scared Monk}
+Cursed Skeleton{Cursed Skeleton}

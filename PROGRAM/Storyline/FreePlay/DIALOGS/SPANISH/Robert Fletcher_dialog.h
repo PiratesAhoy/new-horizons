@@ -1,5 +1,5 @@
 string DLG_TEXT[340] = {
-"Hemos tocado puerto en el asentamiento pirata de Nevis. He mandado izar mi Jolly Roger personal para que nadie nos dé problemas. Los oficiales y una parte de tu tripulación han decidido abrirse camino a través de la selva para llegar a Charlestown. Supongo que no quieren que los ingleses los persigan como traidores. Por desgracia, tú no tienes esa opción. Nunca podré agradecerte lo suficiente lo que hiciste por mi tripulación y por mí.",
+"Hemos tocado puerto en el asentamiento pirata de #sisland_Quebradas Costillas#. He mandado izar mi Jolly Roger personal para que nadie nos dé problemas. Los oficiales y una parte de tu tripulación han decidido abrirse camino a través de la selva para llegar a #sCharlestown#. Supongo que no quieren que los ingleses los persigan como traidores. Por desgracia, tú no tienes esa opción. Nunca podré agradecerte lo suficiente lo que hiciste por mi tripulación y por mí.",
 "El capitán Champers era un cerdo y lo que pretendía hacer contigo era monstruoso. No vi otra opción.",
 "Perros traicioneros. Supongo que lo vi venir. ¿Qué puedo hacer por ti, capitán?",
 "Lo siento, capitán Fletcher, no hay tiempo para cháchara. Necesito alejarme de aquí antes de que aparezca la Armada. Sé que estamos en plena tempestad, pero correré el riesgo y zarparé de inmediato. ¡Adiós y buena suerte!",

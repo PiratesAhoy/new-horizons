@@ -2256,10 +2256,20 @@ void InitModels(bool isstart)
 	model.description =  "A red monk's robe, bath robe, martial arts robe, magician's robe, whatever kind of robe you say it is!";
 	model.id	   =  "Animists1";
 	model.FaceId	= 140;
-	model.nation	  =  BROKEN;
+	model.nation	  =  PIRATE;
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.Flags.Pirate = 13;
+	model.Flags.Personal = 37;
+	model.storytitle = "Satanists";
+	model.storytext = "After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...";
+	model.playertype = PLAYER_TYPE_REBEL;
+	model.name = "Dark";
+	model.lastname = "Teacher";
+	model.ship = "Frigate_Sat";
+	model.shipname = "Mefisto";
+	model.date.hour = 3;
+	model.date.year = 1750;
 	AssignModelType(isstart, model, "Animists", 1.0);
 	AddCharacterModel(model);
 
@@ -3541,8 +3551,8 @@ void InitModels(bool isstart)
 	model.name = "James";
 	model.lastname = "Norrington";
 	model.playertype = PLAYER_TYPE_NAVAL_OFFICER;
-	model.ship = "HMS_Surprise";
-	model.shipname = "Amazon";
+	model.ship = "HMS_Dauntless";
+	model.shipname = "Dauntless";
 	model.Flags.Pirate = 23;
 	model.Flags.Personal = 19;
 	model.date.year = 1740;
@@ -4448,7 +4458,7 @@ void InitModels(bool isstart)
 	model.height		=  1.75;
 	model.name = "";
 	model.lastname = "Anamaria";
-	model.playertype = PLAYER_TYPE_ADVENTURER;
+	model.playertype = PLAYER_TYPE_SMUGGLER;	// was PLAYER_TYPE_ADVENTURER
 	model.difficulty = DIFFICULTY_MARINER;
 	model.ship = "Tartane50";
 	model.shipname = "Jolly Mon";
@@ -10391,21 +10401,51 @@ void InitModels(bool isstart)
 	// <-- no model assignment quest character
 
 	model.description =  "A nice little brown outfit, with a hat pinned up on the side, like Will Turner the swordsmith was wearing at the dock the other day!";
-	model.id	   =  "will";
-	model.FaceId	= 58;
-	model.nation	  =  ENGLAND;
-	model.price	   =  850;
-	model.assigned	=  true;
-	model.storytitle = "A Touch of Destiny";
-	model.storytext = "Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.";
+	model.id	  =  "will";
+	model.FaceId	  = 58;
+	model.nation	  = ENGLAND;
+	model.price	  = 850;
+	model.assigned	  = true;
+	model.storytitle  = "A Second Calling";
+	model.storytext	  = "After coming to terms with the truth about your father, you've decided it's time to retire from the smith and embrace the life of a sailor.";
 	model.playertype  = PLAYER_TYPE_SWORD_MASTER;
-	model.name = "Will";
-	model.lastname = "Turner";
-	model.ship = "FlyingDutchman";
-	model.shipname = 	"Flying Dutchman";
-	model.Flags.Pirate = 22;
+	model.name	  = "Will";
+	model.lastname	  = "Turner";
+	model.ship	  = "lugger4";
+	model.shipname	  = "Miranda";
+	model.Flags.Pirate   = 22;
 	model.Flags.Personal = 15;
-	model.date.year = 1750;
+	model.date.year	  = 1750;
+	AddCharacterModel(model);
+
+	model.description = "A long black coat over a dark red shirt, like Will Turner on the Flying Dutchman.";
+	model.id	  = "WillTurner2";
+	model.FaceId	  = 616;
+	model.nation	  = PIRATE;
+	model.price	  = 850;
+	model.assigned	  = true;
+	model.storytitle  = "A Touch of Destiny";
+	model.storytext	  = "Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.";
+	model.playertype  = PLAYER_TYPE_SWORD_MASTER;
+	model.name	  = "Will";
+	model.lastname	  = "Turner";
+	model.ship	  = "FlyingDutchman";
+	model.shipname	  = "Flying Dutchman";
+	model.Flags.Pirate   = 22;
+	model.Flags.Personal = 15;
+	model.date.year	  = 1750;
+	AddCharacterModel(model);
+
+	// no model assignment quest character -->
+	model.description = "A black coat and grey shirt, like Bootstrap Bill without the fishy bits.";
+	model.id	  = "BootstrapBill";
+	model.FaceID	  = 617;
+	model.nation	  = PIRATE;
+	model.price	  = 600;
+	model.assigned	  = true;
+	model.name	  = "Bootstrap Bill";
+	model.lastname	  = "Turner";
+	model.playertype = PLAYER_TYPE_SAILOR;
 	AddCharacterModel(model);
 
 	// no model assignment quest character -->
@@ -10581,56 +10621,56 @@ void InitModels(bool isstart)
 	model.date.year = 1740;
 	AddCharacterModel(model);
 
-	model.description	= "Half man, half lobster - one of Davy Jones' crew.";
-	model.id			= "Penrod";
+	model.description	=  "Half man, half lobster - one of Davy Jones' crew.";
+	model.id		=  "Penrod";
 	model.FaceId		= 610;
 	model.nation		= CURSED;
 	model.assigned		= true;
 	model.camouflage	= true; // PB: Everyone is Enemy
-	model.sex			= "skeleton";
+	model.sex		= "skeleton";
 	model.height		= 1.85;
-	model.ani			= "Rousselet";
+	model.ani		= "Rousselet";
 	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
-	AssignModelType(isstart, model, "Davycrew", 1.0);
+//	AssignModelType(isstart, model, "Davycrew", 1.0);	// Cancel this so he can't appear as random deck crew
 	AddCharacterModel(model);
 
 	model.description	= "Half man, half hammerhead shark - one of Davy Jones' crew.";
-	model.id			= "Maccus";
+	model.id		=  "Maccus";
 	model.FaceId		= 611;
 	model.nation		= CURSED;
 	model.assigned		= true;
 	model.camouflage	= true; // PB: Everyone is Enemy
-	model.sex			= "skeleton";
+	model.sex		= "skeleton";
 	model.height		= 1.85;
-	model.ani			= "Rousselet";
+	model.ani		= "Rousselet";
 	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
-	AssignModelType(isstart, model, "Davycrew", 1.0);
+//	AssignModelType(isstart, model, "Davycrew", 1.0);	// Cancel this so he can't appear as random deck crew
 	AddCharacterModel(model);
 
 	model.description	= "Half man, half shellfish - one of Davy Jones' crew.";
-	model.id			= "Palafico";
+	model.id		= "Palafico";
 	model.FaceId		= 612;
 	model.nation		= CURSED;
 	model.assigned		= true;
 	model.camouflage	= true; // PB: Everyone is Enemy
-	model.sex			= "skeleton";
+	model.sex		= "skeleton";
 	model.height		= 1.85;
-	model.ani			= "Rousselet";
+	model.ani		= "Rousselet";
 	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
-	AssignModelType(isstart, model, "Davycrew", 1.0);
+//	AssignModelType(isstart, model, "Davycrew", 1.0);	// Cancel this so he can't appear as random deck crew
 	AddCharacterModel(model);
 
 	model.description	= "Half man, half shellfish - one of Davy Jones' crew.";
-	model.id			= "Hadras";
+	model.id		= "Hadras";
 	model.FaceId		= 613;
 	model.nation		= CURSED;
 	model.assigned		= true;
 	model.camouflage	= true; // PB: Everyone is Enemy
-	model.sex			= "skeleton";
+	model.sex		= "skeleton";
 	model.height		= 1.85;
-	model.ani			= "Rousselet";
+	model.ani		= "Rousselet";
 	model.status		= "C_III"; // added as an identifier, for assigning another animation to the new models
-	AssignModelType(isstart, model, "Davycrew", 1.0);
+//	AssignModelType(isstart, model, "Davycrew", 1.0);	// Cancel this so he can't appear as random deck crew
 	AddCharacterModel(model);
 
 	model.description =  "Your first basic collection of animated old bones covered in seaweed.";
@@ -10849,14 +10889,20 @@ void InitModels(bool isstart)
 	model.lastname = "Terror";
 	AddCharacterModel(model);
 
-	model.description =  "A nice little brown outfit, to wear while I learn to be hide my deviousness!";
-	model.id	   =  "Young_Beckett";
-	model.FaceId	= 81;
-	model.nation	  =  ENGLAND;
-	model.price	   =  2500;
-	model.assigned	=  true;
-	model.name = "Cutler";
-	model.lastname = "Beckett";
+	model.description = "A nice little brown outfit, to wear while I learn to be hide my deviousness!";
+	model.id	  = "Young_Beckett";
+	model.FaceId	  = 81;
+	model.nation	  = ENGLAND;
+	model.price	  = 2500;
+	model.assigned	  = true;
+	model.name	  = "Cutler";
+	model.lastname	  = "Beckett";
+	model.ship	  = "HMS_Bounty";
+	model.shipname	  = "Lindesfarne";
+	model.playertype  = PLAYER_TYPE_MERCHANT;
+	model.Flags.Pirate = 23;
+	model.Flags.Personal = 24;
+	model.date.year = 1740;
 	AddCharacterModel(model);
 	//<---- TALISMAN - INSERTING MISSING ENTRIES
 
@@ -13514,22 +13560,22 @@ void InitModels(bool isstart)
 
 	// PB: Piet Hein Character Addition Tutorial -->
 	model.description	= "A Dutch admiral and privateer for the Dutch Republic during the Eighty Years' War. The first and the last to capture a large part of a Spanish treasure fleet from America.";
-	model.id			= "Piet_Hein";
+	model.id		= "Piet_Hein";
 	model.FaceId		=  592;
 	model.nation		=  HOLLAND;
-	model.price			=  11509524;				// guilders of booty in gold, silver, and other expensive trade goods
+	model.price		=  11509524;				// guilders of booty in gold, silver, and other expensive trade goods
 	model.assigned		=  true;
-	model.name			= "Piet";
+	model.name		= "Piet";
 	//model.middlename	= "Pieterszoon";
 	model.lastname		= "Hein";
 	model.storytitle	= "De Zilvervloot";			// http://www.goudenboekjes.nl/product/de-zilvervloot-piet-hein
 	model.storytext		= "'We hebben een flinke reis voor de boeg. We gaan zout halen. In Afrika.' Dat is Piet's eerste kennismaking met de zee en het harde leven van de zeelieden. Jaren later krijgt Piet Hein een eigen schip. Wat zal hij doen? Nieuw land ontdekken? Handel drijven? Of... de Spaanse zilvervloot veroveren?";
 	model.playertype	=  PLAYER_TYPE_CORSAIR;		// start with Letter of Marque/Kapersbrief
 	model.difficulty	=  DIFFICULTY_LANDLUBBER;	// fun for the kids!
-	model.ship			= "NL_NeptunusE";			// 
+	model.ship		= "NL_NeptunusE";			// 
 	model.shipname		= "Neptunus";				// in 1618, when he was captain of the Neptunus, both he and his ship were pressed into service by the Republic of Venice.
 	model.Flags.Pirate	=     1;					// former PiratesAhoy! logo seems fitting
-	model.Flags.Personal=     9;					// flag of my dear 'ol Amsterdam
+	model.Flags.Personal	=     9;					// flag of my dear 'ol Amsterdam
 	model.date.day		=     8;					// my birthday
 	model.date.month	=    10;					// because why not?
 	model.date.year		=  1626;					// Smack-dab in the middle of The Spanish Main period
@@ -13537,20 +13583,20 @@ void InitModels(bool isstart)
 	// PB: Piet Hein Character Addition Tutorial <--
 
 	model.description	= "Where did he come from? Where will he go?  Where did he come from, Cotton-Eye - no, that can't be right...";
-	model.id			= "DrakeStranton";
+	model.id		= "DrakeStranton";
 	model.FaceID		= 614;
 	model.nation		= PIRATE;
 	model.assigned		= true;
-	model.name			= "Drake";
+	model.name		= "Drake";
 	model.lastname		= "Stranton";
-	model.loadingScreen = "Quest_StrantonFamily.tga";  // Nita+BJ+PB
+	model.loadingScreen	= "Quest_StrantonFamily.tga";  // Nita+BJ+PB
 	model.storytitle	= "Cursed Vengeance";
 	model.storytext		= "Go on an adventure of treasure and betrayal, bloodshed and vengeance. A time when the pirate had the upper hand and got the girl, the treasure and conquered his enemies. What you may think about a pirate's life will be challenged to the extreme as they live, love, and die as only a pirate can! Based on the novel by Brent Jackson.";
 	model.playertype	= PLAYER_TYPE_CORSAIR;
-	model.ship			= "Brig_20_Gun1_181";
+	model.ship		= "Brig_20_Gun1_181";
 	model.shipname		= "Phantom";
 	model.Flags.Pirate	= 5;
-	model.Flags.Personal= 37;
+	model.Flags.Personal	= 37;
 	model.date.day		= 10;
 	model.date.month	= 12;
 	model.date.year		= 1721;

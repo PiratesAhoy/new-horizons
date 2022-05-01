@@ -306,6 +306,7 @@ Cayman{Cayman}
 Hispaniola{Hispaniola}
 Cuba{Cuba}
 Guadeloupe{Guadeloupe}
+Santa Maria de Guadalupe de Extremadura{Santa María de Guadalupe}
 Saint Martin{Saint Martin}
 Antigua{Antigua}
 Turks{Turks}
@@ -916,6 +917,7 @@ Oyster Beach{Oyster Beach}
 Entrace to #sisland_name# cave{Entrace to #sisland_name# cave}
 Shore{Shore}
 ANIMISTS Lair{ANIMISTS Lair}
+Satanists Lair{Satanists Lair}
 
 Trade Square.{Trade Square}
 House of Mateus Santos.{House of Mateus Santos}
@@ -926,6 +928,7 @@ Oyster Beach.{Oyster Beach}
 Entrace to #sisland_name# cave.{Entrace to #sisland_name# cave}
 Shore.{Shore}
 ANIMISTS Lair.{ANIMISTS Lair}
+Satanists Lair.{Satanists Lair}
 
 Prison{Prison}
 Devil's Throat{Devil's Throat}

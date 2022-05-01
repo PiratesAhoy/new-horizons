@@ -8082,8 +8082,13 @@ void SideQuestComplete(string sQuestName)
 			else { AddPartyExp(pchar, 50000); }
 			ChangeCharacterReputation(pchar, 10);
 			//pchar.reputation = makeint(pchar.reputation) +10;
-			GiveItem2Character(pchar, "blade20+2");
-
+//			GiveItem2Character(pchar, "blade20+2");	// GR: why?  Possibly to reward players who disabled corpse looting?  If so...
+			if(CORPSEMODE < 2)			// ... give the Teacher's equipment to the player only if corpse looting disabled
+			{
+				if (ENABLE_WEAPONSMOD) GiveItem2Character(ch, "bladeC36+2");
+				else GiveItem2Character(ch, "bladeC36");
+				GiveItem2Character(ch, "commonarmor");
+			}
 			LAi_QuestDelay("destroy_ANIMISTS_complete_2", 6.0);
 		break;
 
@@ -13283,6 +13288,7 @@ void SideQuestComplete(string sQuestName)
 			SetNationRelationBoth(ENGLAND, SPAIN, RELATION_FRIEND);
 			SetNationRelationBoth(SPAIN, FRANCE, RELATION_ENEMY);
 			SetNationRelationBoth(ENGLAND, FRANCE, RELATION_ENEMY);	// Just in case random relations have put them at peace by now
+			if (GetNationRelation2MainCharacter(SPAIN) == RELATION_ENEMY) SetRMRelation(PChar, SPAIN, REL_NEUTRAL);
 			StartQuestMovie(true, true, false);
 			ChangeCharacterAddressGroup(CharacterFromID("Lt. William Bush"), "Cabin_medium", "reload", "reload1");
 			DoReloadFromSeaToLocation("Cabin_medium", "rld", "startloc");
@@ -16224,13 +16230,22 @@ void SideQuestComplete(string sQuestName)
 				}
 
 				AddQuestRecord("colombian_silver", 16);
-				AddCharacterGoods(PChar, GOOD_SILVER, 300);
+				AddCharacterGoods(PChar, GOOD_SILVER, 600);
+				AddCharacterGoods(CharacterFromID("CS_Spanish_Captain1"), GOOD_SILVER, 300);
 				if(AUTO_SKILL_SYSTEM)					// Extra XP if you succeeded in bringing back the silver
 				{
 					AddPartyExpChar(PChar, "Leadership", 5000);
 					AddPartyExpChar(PChar, "", 500);
 				}
 				else {AddPartyExp(PChar, 5000);}
+			}
+			else
+			{
+				for(i = 1; i <= 3; i++)
+				{
+					sld = CharacterFromID("CS_Spanish_Captain"+i);
+					AddCharacterGoods(sld, GOOD_SILVER, 300);
+				}
 			}
 			if(AUTO_SKILL_SYSTEM)					// Basic XP for making it back to the beach
 			{
@@ -16241,6 +16256,10 @@ void SideQuestComplete(string sQuestName)
 
 			if(CheckQuestAttribute("colombian_silver.fleet_ready", "true"))
 			{
+				sld = CharacterFromID("CS_Spanish_Captain5");	// In case this ship was already in a battle
+				DeleteAttribute(sld, "surrendered");
+				sld.nation = SPAIN;
+				sld.Ship.crew.morale = 70;
 				AddQuestRecord("colombian_silver", 17);
 				PChar.quest.colombian_silver_sea_battle.win_condition.l1 = "location";
 				PChar.quest.colombian_silver_sea_battle.win_condition.l1.location = "Colombia";

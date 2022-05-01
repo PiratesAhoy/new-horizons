@@ -3301,6 +3301,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBlade(n, "blade308","blade308",                9,   6,  0.00,  99, 5500, 27.0, 42.0, 45, 37,  "",        4,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Based on Anathros, Sword of the Earth from "Two Worlds" // GR
   n = InitBlade(n, "bladeCiri","CiriSword",              9,   7,  0.00,  99, 8000, 15.0, 30.0, 30, 40,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Ciri's sword from Witcher 3 // DeathDaisy 
   n = InitBlade(n, "witcher_steel","witcher_steel_back", 25,  1,  0.00,  99, 8000, 15.0, 30.0, 30, 40,  "",        3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Flambard used by Geralt // Grey Roger/The Nameless Pirate
+  n = InitBlade(n, "bladeNorr", "bladeNorr",            25,   3,  0.00,  99, 2550, 18.0, 23.0, 39, 23,  ENGLAND,   1,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // James Norrington's ceremonial smallsword
   
   n = InitBlade(n, "bladeA2","bladeA2", 	     "JRH4",  5,  0.00,  99, 1000, 21.0, 39.0, 28, 13,  "",        1,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest
   n = InitBlade(n, "bladeA4","bladeA4", 	     "JRH4",  4,  0.00,  99, 1000, 21.0, 26.0, 28, 13,  "",        3,     1,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // WoodesRogers quest
@@ -4254,6 +4255,7 @@ bool IsWeaponUnique(string id)
 	case "bldevil":		isUnique = true;	break;	// Ricardo Orellana's sword
 	case "blade_ebony":	isUnique = true;	break;	// Avergorex's ebony sabre
 	case "bladerubysb":	isUnique = true;	break;	// Dervia's ruby sabre
+	case "bladeNorr":	isUnique = true;	break;	// James Norrington's ceremonial smallsword
 	case "tomahawk_chief":  isUnique = true;        break;  // Chief's tomahawk for "Crystal Skull" sidequest  
 	case "pistol10":	isUnique = true;        break;  // Shotgun
 	case "pistol62":	isUnique = true;        break;  // Special dual-barrel pistol - Easter egg in San Juan residence

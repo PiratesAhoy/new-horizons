@@ -854,6 +854,8 @@ McGillicutty{McGillicutty}
 Sullivan{Sullivan}
 James{James}
 Lancaster{Lancaster}
+Cutler{Cutler}
+Beckett{Beckett}
 
 {=====| SaintMartin.c |=====}
 Dickman{Dickman}
@@ -896,6 +898,7 @@ Jordano{Jordano}
 Yedam{Yedam}
 Kinne{Kinne}
 Animist{Animista}
+Satanist(Satanista}
 Dark Teacher{Profesor oscuro}
 Mystery Man{Hombre misterioso}
 Teacher{Profesor}
@@ -1083,6 +1086,7 @@ Dawg{Dawg}
 Bennett{Bennett}
 Augustin{Augustin}
 Frechilla{Frechilla}
+Brown{Brown}
 
 {=====| StreetMerchants.c |=====}
 Street{Callejero}
@@ -1325,3 +1329,9 @@ Urchin{Urchin}
 Wheelback{Wheelback}
 Wyvern{Wyvern}
 Quittance{Quittance}
+Scarlett{Scarlett}
+Giselle{Giselle}
+Harriett{Harriett}
+Anamaria{Anamaria}
+Scared Monk{Scared Monk}
+Cursed Skeleton{Cursed Skeleton}

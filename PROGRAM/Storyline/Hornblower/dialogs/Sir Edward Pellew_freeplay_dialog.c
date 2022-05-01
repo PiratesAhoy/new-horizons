@@ -159,7 +159,8 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[34] + PChar.Ship.Name + DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
 			AddDialogExitQuest("Hornblower_get_Sutherland");
-			link.l1.go = "leighton_squadron";
+//			link.l1.go = "leighton_squadron";
+			link.l1.go = "exit";
 		break;
 
 		case "leighton_squadron":
