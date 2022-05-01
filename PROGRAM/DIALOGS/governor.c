@@ -45,7 +45,7 @@ void ProcessDialogEvent()
 	{
 		case "LoM":
 			dialog.text = DLG_TEXT[74];
-			Link.l1 = DLG_TEXT[75] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + ".";
+			Link.l1 = DLG_TEXT[75] + GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false) + ".";
 			Link.l1.go = "LoMa";
 			Link.l2 = DLG_TEXT[36];
 			Link.l2.go = "exit";
@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 			else
 			{
 				dialog.Text = DLG_TEXT[38];
-				Link.l1 = DLG_TEXT[76] + GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false) + DLG_TEXT[77];
+				Link.l1 = DLG_TEXT[76] + GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false) + DLG_TEXT[77];
 				Link.l1.go = "relationbook";
 			}
 // <-- KK
@@ -247,7 +247,7 @@ void ProcessDialogEvent()
 				}
 				if (!CheckAttribute(PChar, "quest.agentquest") && sti(PChar.PlayerType) == PLAYER_TYPE_AGENT && FindCurrentStoryline() == FindStoryline("FreePlay") && PChar.rank >= 10 && GetCharacterBaseSkill(PChar, SKILL_SNEAK) >= 6)
 				{
-					if (GetServedNation() == sti(NPChar.nation) || HaveLetterOfMarque(sti(NPChar.nation)))
+					if (GetServedNation() == iNation || HaveLetterOfMarque(iNation))
 					{
 						if(otherquest) stemp = stemp + DLG_TEXT[155];
 						stemp = stemp + DLG_TEXT[156];
@@ -285,7 +285,7 @@ void ProcessDialogEvent()
 		
 		case "Smuggler_Accepted":
 			Preprocessor_Add("amount", NPChar.quest.smuggle.amount);
-			Preprocessor_Add("cargo", Goods[sti(GetAttribute(NPChar, "quest.smuggle.goods"))].name);
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(GetAttribute(NPChar, "quest.smuggle.goods"))].name));
 			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[87];
 			link.l1 = DLG_TEXT[88];
@@ -357,7 +357,7 @@ void ProcessDialogEvent()
 
 		case "smuggling_check_cargo":
 			Preprocessor_Add("amount", NPChar.quest.smuggle.amount);
-			Preprocessor_Add("cargo", Goods[sti(GetAttribute(NPChar, "quest.smuggle.goods"))].name);
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(GetAttribute(NPChar, "quest.smuggle.goods"))].name));
 			Preprocessor_Add("addr", GetMyAddressForm(NPChar, PChar, ADDR_TITLE, false, false));
 			if(CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling.arrested")) stemp = DLG_TEXT[124];
 			else stemp = DLG_TEXT[90];
@@ -411,7 +411,7 @@ void ProcessDialogEvent()
 
 		case "smuggling_check_money":
 			smugglemoney = sti(PChar.quest.smuggling_guild.governor_smuggling.money);
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			Preprocessor_Add("money", PChar.quest.smuggling_guild.governor_smuggling.money);
 			if (CheckAttribute(NPChar, "quest.cargo_checked"))
 			{
@@ -477,7 +477,7 @@ void ProcessDialogEvent()
 
 		case "smuggling_return_cargo":
 			Preprocessor_Add("amount", PChar.quest.governor_smuggling.recover_cargo.amount);
-			Preprocessor_Add("cargo", Goods[sti(GetAttribute(PChar, "quest.governor_smuggling.recover_cargo.goods"))].name);
+			Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(GetAttribute(PChar, "quest.governor_smuggling.recover_cargo.goods"))].name));
 			dialog.text = DLG_TEXT[143];
 			if (GetSquadronGoods(PChar, sti(PChar.quest.governor_smuggling.recover_cargo.goods)) >= sti(PChar.quest.governor_smuggling.recover_cargo.amount))
 			{
@@ -515,7 +515,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 				stemp = stemp + DLG_TEXT[147];
 				link.l1 = DLG_TEXT[154];
 				link.l1.go = "exit";
@@ -550,7 +550,7 @@ void ProcessDialogEvent()
 			if (CheckAttribute(PChar, "quest.governor_smuggling.recover_cargo"))	// Check if you also have cargo to return
 			{
 				Preprocessor_Add("amount", PChar.quest.governor_smuggling.recover_cargo.amount);
-				Preprocessor_Add("cargo", Goods[sti(GetAttribute(PChar, "quest.governor_smuggling.recover_cargo.goods"))].name);
+				Preprocessor_Add("cargo", XI_ConvertString(Goods[sti(GetAttribute(PChar, "quest.governor_smuggling.recover_cargo.goods"))].name));
 				stemp = stemp + DLG_TEXT[143];
 				if (GetSquadronGoods(PChar, sti(PChar.quest.governor_smuggling.recover_cargo.goods)) >= sti(PChar.quest.governor_smuggling.recover_cargo.amount))
 				{
@@ -567,7 +567,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 				stemp = stemp + DLG_TEXT[147];
 				link.l1 = DLG_TEXT[154];
 				link.l1.go = "exit";
@@ -577,7 +577,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "smuggling_still_not_returned":
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = DLG_TEXT[153];
 			link.l1 = DLG_TEXT[154];
 			link.l1.go = "exit";
@@ -612,7 +612,7 @@ void ProcessDialogEvent()
 			stemp = stemp + smuggling_reward;
 			PlayStereoSound("INTERFACE\took_item.wav");
 			AddMoneyToCharacter(PChar, final_reward);
-			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 			dialog.text = stemp;
 			link.l1 = DLG_TEXT[88];
 			if(CheckCharacterItem(PChar,"smuggling_papers"))
@@ -729,7 +729,7 @@ void ProcessDialogEvent()
 				DeleteAttribute(pchar, "lost.ship.type");
 				ChangeRMRelation(PChar, iNation, -relch);
 
-				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+				Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 				dialog.Text = DLG_TEXT[104];
 				Link.l1 = DLG_TEXT[105];
 				Link.l1.go = "Exit";
@@ -1002,7 +1002,7 @@ void ProcessDialogEvent()
 						}
 						if(ProfessionalNavyNation() == iNation && CheckAttribute(PChar, "lost.ship.type") && GetCharacterShipID(PChar) == SHIP_LIFEBOAT)
 						{
-							Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_CIVIL, false, false));
+							Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
 							Link.l6 = DLG_TEXT[103];
 							Link.l6.go = "restore_ship";
 						}

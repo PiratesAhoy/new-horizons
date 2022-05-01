@@ -1,4 +1,4 @@
-string DLG_TEXT[54] = {
+string DLG_TEXT[60] = {
 "Cheer up Horatio. You'll get another ship soon.",
 "I hope so Maria. I do hope so.",
 "I'm Maria. Mother's gone for a sleep.",
@@ -53,5 +53,10 @@ string DLG_TEXT[54] = {
 "Oh Horatio!",
 "Horry! I'm so glad you're back and safe! I hope you'll stay a long time.",
 "(Thinks: 'Horry'? <wince>) I'm glad to be back with you too, Maria. But I'm afraid my duties at sea won't allow me to stay for very long.",
-
+"Hello, dearest! I'm so happy you came by. It seems like forever since I saw you last!",
+"So, tell me, ",
+", what's been going on around here?",
+"((( ",
+" tells you that nothing very important has happened. )))",
+"...",
 };

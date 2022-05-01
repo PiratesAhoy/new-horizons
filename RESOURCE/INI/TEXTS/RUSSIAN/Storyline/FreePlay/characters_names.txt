@@ -21,6 +21,7 @@ Franзois{Франсуа}
 de Hadoque{де Хадоке}
 Koleniko{Коленико}
 Ragetti{Раджетти}
+Bootstrap Bill{Прихлоп Билл}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Бартоломео}

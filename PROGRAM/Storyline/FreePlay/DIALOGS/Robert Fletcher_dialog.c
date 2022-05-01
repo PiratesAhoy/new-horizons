@@ -56,6 +56,15 @@ void ProcessDialogEvent()
 					dialog.text = DLG_TEXT[253];
 					link.l1 = DLG_TEXT[254];
 					link.l1.go = "stormystart";
+					switch (GetMySimpleOldName(PChar))
+					{
+						case "Anamaria":
+							dialog.text = DLG_TEXT[290] + GetMyShipNameShow(PChar) + DLG_TEXT[291];
+							if (GetCharacterShipID(PChar) == "Tartane50") link.l1 = DLG_TEXT[292];
+							else link.l1 = DLG_TEXT[293];
+							AddDialogExitQuest("rename_PoTC");
+						break;
+					}
 				break;
 
 				case PLAYER_TYPE_CURSED:
@@ -95,6 +104,44 @@ void ProcessDialogEvent()
 					dialog.text = DLG_TEXT[262];
 					link.l1 = DLG_TEXT[263];
 					link.l1.go = "stormystart";
+				break;
+
+				case PLAYER_TYPE_REBEL:
+					switch(GetMySimpleOldName(PChar))
+					{
+						case "Dark Teacher":
+    							dialog.text = DLG_TEXT[296];
+    							link.l1 = DLG_TEXT[297];
+    							link.l1.go = "stormystart";
+						break;
+						dialog.text = DLG_TEXT[0];
+						link.l1 = DLG_TEXT[1];
+						link.l1.go = "intro2";
+						link.l2 = DLG_TEXT[2];
+						link.l2.go = "start1";
+						link.l3 = DLG_TEXT[3];
+						link.l3.go = "stormystart";
+					}
+				break;
+
+				case PLAYER_TYPE_SWORD_MASTER:
+					switch(GetMySimpleOldName(PChar))
+					{
+						case "Will Turner":
+							if (PChar.model == "will")
+							{
+	    							dialog.text = DLG_TEXT[294];
+    								link.l1 = DLG_TEXT[295];
+							}
+							else
+							{
+	    							dialog.text = DLG_TEXT[298];
+    								link.l1 = DLG_TEXT[299];
+							}
+							AddDialogExitQuest("rename_PoTC");
+    							link.l1.go = "stormystart";
+						break;
+					}
 				break;
 
 				dialog.text = DLG_TEXT[0];
@@ -1196,7 +1243,7 @@ void ProcessDialogEvent()
 			addDialogExitQuest("Tut_SkipTutorialOnShip");
 			NextDiag.Tempnode = "Questions";
 			dialog.text = DLG_TEXT[210];
-			if (GetCurrentFlag() == ENGLAND) dialog.text = dialog.text + "\n" + DLG_TEXT[211];
+//			if (GetCurrentFlag() == ENGLAND && GetServedNation() != ENGLAND) dialog.text = dialog.text + "\n" + DLG_TEXT[211];
 			dialog.text = dialog.text + DLG_TEXT[212];
 			link.l1 = DLG_TEXT[213];
 			link.l1.go = "Exit";

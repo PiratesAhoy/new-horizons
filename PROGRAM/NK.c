@@ -3182,6 +3182,13 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 						SetRankTitle(PChar, TranslateString("", PCharTitle));
 						PChar.knighted = iNation;
 					}
+					switch (GetMySimpleOldName(PChar))
+					{
+						case "James Norrington":
+							GiveItem2Character(PChar,"bladeNorr"+qual); // Norrington's ceremonial smallsword
+							EquipCharacterByItem(PChar,"bladeNorr"+qual);
+						break;
+					}
 				break;
 
 				case FRANCE:
@@ -3239,6 +3246,9 @@ void GiveSwordAndPerks(int PlayerRank, int iNation)
 							else
 								LogIt("You seem to have a pretty impressive squadron of your own. Looks like you won't be needing the promotion ship.");
 						}
+					break;
+					case "James Norrington":
+					// Nothing, he got his promotion sword at Commodore/Knight
 					break;
 					//default:
 					GiveItem2Character(pchar,"blade22"+qual); // Corsair's Pride

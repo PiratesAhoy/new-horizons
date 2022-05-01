@@ -72,10 +72,10 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
 
+			if (!CheckAttribute(NPChar, "quest.colombian_silver.counter")) NPChar.quest.colombian_silver.counter = 0;	// Initialise counter for "Colombian Silver" sidequest
 			if(NPChar.quest.meeting == "0")
 			{
 				NPChar.quest.meeting = "1";
-				NPChar.quest.colombian_silver.counter = 0;	// Initialise counter for "Colombian Silver" sidequest
 				tempt1 = DLG_TEXT[0] + GetMyAddressForm(NPChar, PChar, ADDR_TITLE, false, false) + DLG_TEXT[1];
 				if(MRCanMarryRatio(PChar, NPChar, false) > 0.33) tempt1 = DLG_TEXT[2] + GetMyAddressForm(NPChar, PChar, ADDR_TITLE, false, false) +DLG_TEXT[3];
 				if(MRCanMarryRatio(PChar, NPChar, false) > 0.67) tempt1 = DLG_TEXT[4];
@@ -106,10 +106,9 @@ void ProcessDialogEvent()
 						Link.l2.go = "propose";
 					}
 				}
-				NPChar.quest.Meeting = lastspeak_date;
 				if(sti(NPChar.married))
 				{
-					NPChar.quest.colombian_silver.counter = sti(NPChar.quest.colombian_silver.counter) + 1;	// GR: Increase chance of triggering "Colombian Silver" sidequest
+					if (NPChar.quest.Meeting != lastspeak_date) NPChar.quest.colombian_silver.counter = sti(NPChar.quest.colombian_silver.counter) + 1;	// GR: Increase chance of triggering "Colombian Silver" sidequest
 					Link.l1 = DLG_TEXT[19];
 					Link.l1.go = "info";
 					if(sti(NPChar.pcounter))
@@ -127,6 +126,7 @@ void ProcessDialogEvent()
 						Link.l4.go = "dump";
 					}
 				}
+				NPChar.quest.Meeting = lastspeak_date;
 				if(CheckAttribute(NPChar,"skiptext")) { DeleteAttribute(NPChar,"skiptext"); }
 			}
 			break;
@@ -197,7 +197,7 @@ void ProcessDialogEvent()
 			Link.l1 = DLG_TEXT[44];
 			Link.l1.go = "exit";
 
-			if(!CheckAttribute(PChar, "quest.colombian_silver") && rand(7) <= sti(NPChar.quest.colombian_silver.counter))
+			if(!CheckAttribute(PChar, "quest.colombian_silver") && GetAttribute(NPChar, "quest.colombian_silver.lastspeak_date") != lastspeak_date && sti(NPChar.quest.colombian_silver.counter) >= (rand(4) + 2))
 			{
 				d.text = DLG_TEXT[69 + rand(2)];
 				link.l1 = DLG_TEXT[72];
@@ -214,6 +214,7 @@ void ProcessDialogEvent()
 					link.l3.go = "exit_reject_colombian_silver";
 				}
 			}
+			NPChar.quest.colombian_silver.lastspeak_date = lastspeak_date;
 		break;
 
 		case "dump":

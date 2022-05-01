@@ -41,7 +41,13 @@ void BothQuestComplete(string sQuestName)
 		case "StartAdventure":
 // BoP ----- Start A family story Quest -->		
             if (GetMySimpleOldName(PChar) == "José Joaquím Almeida"){LAi_QuestDelay("madero_start", 0.0);}
-// BoP <-- Start A family story Quest -----			
+// BoP <-- Start A family story Quest -----
+
+// --- Renaming NPC's for some player characters -->
+			if (GetMySimpleOldName(PChar) == "Danielle Greene" &&  HasSubstr(PChar.model, "daniell")) {LAi_QuestDelay("rename_standard", 0.0);}
+			if (GetMySimpleOldName(PChar) == "Nathaniel Hawk" &&  HasSubstr(PChar.model, "blaze"))    {LAi_QuestDelay("rename_standard", 0.0);}
+// <-- Renaming NPC's for some player characters ---
+
 			if(CheckQuestAttribute("Tut_start", "complete")) break;
 			if(PChar.location=="Tutorial_Deck") break;
 
@@ -107,9 +113,6 @@ void BothQuestComplete(string sQuestName)
 			if(PChar.location=="Tutorial_deck")//MAXIMUS
 			{
 				questRec = 1;
-			/*	ChangeCharacterAddressGroup(CharacterFromID("John Clifford Brin"), "none", "", "");
-				ChangeCharacterAddressGroup(CharacterFromID("Robert Christopher Silehard"), "Redmond_Residence", "goto", "goto8");
-				Towns[GetTownIndex("Redmond")].gov = "Robert Christopher Silehard";*/
 
 				PChar.DisableModelSelect = true;
 				PChar.quest.EnableModelSelect.win_condition.l1 = "ExitFromLocation";
@@ -149,7 +152,7 @@ void BothQuestComplete(string sQuestName)
 				{
 					switch(CharPlayerType)
 					{
-						case PLAYER_TYPE_NAVAL_OFFICER:	/*nothing*/ break;
+						case PLAYER_TYPE_NAVAL_OFFICER:		/*nothing*/ break;
 						case PLAYER_TYPE_ROGUE:			/*nothing*/ break;
 						case PLAYER_TYPE_GAMBLER:		/*nothing*/ break;
 						case PLAYER_TYPE_AGENT:			/*nothing*/ break;
@@ -2705,6 +2708,15 @@ void BothQuestComplete(string sQuestName)
 				case PLAYER_TYPE_CORSAIR:
 					if (NationNoIsland(GetCurrentFlag(), GetCurrentPeriod()))	CustomStart = true;
 				break;
+				case PLAYER_TYPE_REBEL: 
+					if (GetMySimpleOldName(PChar) == "Dark Teacher" && PChar.model == "animists1")	CustomStart = true;
+				break;
+				case PLAYER_TYPE_SWORD_MASTER: 
+					if (GetMySimpleOldName(PChar) == "Will Turner")
+					{
+						if(PChar.model == "will" || PChar.model == "WillTurner2")	CustomStart = true;
+					}
+				break;
 			}
 			if (CustomStart)
 			{
@@ -2768,8 +2780,9 @@ void BothQuestComplete(string sQuestName)
 						SetServedNation(iNation);
 						SetRMRelation(PChar, iNation, REP_LEAVEMIN);						// Encourage play for America
 					}
-					iNation = sti(GetAttribute(CharacterFromID("TQ_Char1"), "nation"));
-					if (iNation < 0) iNation = FindEnemyNation2Nation(iNation);
+					i = sti(GetAttribute(CharacterFromID("TQ_Char1"), "nation"));
+					if (i < 0) i = FindEnemyNation2Nation(iNation);
+					iNation = i;
 				break;
 
 				case PLAYER_TYPE_SMUGGLER:
@@ -2781,6 +2794,22 @@ void BothQuestComplete(string sQuestName)
 						SetRMRelation(PChar, iNation, REP_LEAVEMIN);						// Encourage play for America
 						TakeNItems(pchar,"opium", 3);										// Levis, PB: Only for Jean Lafitte
 					}
+					if (iNation == PIRATE)										// GR: Don't try smuggling to a pirate port, there's no agent!
+					{
+						i = 1;
+						while (i<=3)										// 3 attempts at most to find a random nation with a colony
+						{
+							iNation = FindEnemyNation2Nation(PIRATE);
+							if (NationNoIsland(iNation, GetCurrentPeriod())) i++;
+							else i = 4;
+						}
+						if (NationNoIsland(iNation, GetCurrentPeriod()))					// Failsafe if no viable target nation found after 3 attempts
+						{
+							if (GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) iNation = SPAIN;		// Early Explorers defaults to Spain, other periods default to England
+							else iNation = ENGLAND;
+						}
+					}
+				//	if (GetMySimpleOldName(PChar) == "Anamaria" && iNation == PIRATE) iNation = ENGLAND;
 					iNation  = FindFriendlyNation2Nation(iNation);
 					GiveShip = false;														// Extra challenge
 					LAi_QuestDelay("learn about smugglers", 0.0);							// Levis
@@ -2800,6 +2829,31 @@ void BothQuestComplete(string sQuestName)
 				case PLAYER_TYPE_CORSAIR:
 					questRecord = "Corsair_Continue";
 				break;
+
+				case PLAYER_TYPE_REBEL:
+					if (GetMySimpleOldName(PChar) == "Dark Teacher" && PChar.model == "Animists1")
+					{
+                    				iNation = PIRATE;
+                    				questRecord = "Animist_Continue";
+					}
+				break;
+
+				case PLAYER_TYPE_SWORD_MASTER:
+					if (GetMySimpleOldName(PChar) == "Will Turner")
+					{
+						if (PChar.model == "will")
+						{
+                    					iNation = ENGLAND;
+							PChar.questline = 2;
+                    					questRecord = "generic_continue";
+							ChangeCharacterAddressGroup(CharacterFromID("Malcolm Hatcher"), "Redmond_tavern", "sit", "sit13");	// "Malcolm Hatcher", i.e. John Brown, would otherwise be in Speightstown tavern
+						}
+						if (PChar.model == "WillTurner2")
+						{
+                    					questRecord = "uncursed_continue";
+						}
+					}
+                		break;
 			}
 
 			// Reload to Appropriate Port
@@ -2823,12 +2877,12 @@ void BothQuestComplete(string sQuestName)
 						loadPort = "Redmond_port";
 						gotoGroup = "reload";
 						rldLocator = "Sea_2_back";
-						break;
+					break;
 					case FRANCE:
 						loadPort = "Falaise_de_fleur_port_01";
 						gotoGroup = "reload";
 						rldLocator = "sea";
-						break;
+					break;
 					case SPAIN:
 						switch(GetMySimpleOldName(PChar))
 						{
@@ -2842,27 +2896,39 @@ void BothQuestComplete(string sQuestName)
 							gotoGroup = "reload";
 							rldLocator = "reload1_back";
 						}
-						break;
+					break;
 					case PIRATE:
 						loadPort = "QC_port";
 						gotoGroup = "reload";
 						rldLocator = "reload1";
-						break;
+        					if (PChar.model == "Jack" && GetMySimpleOldName(PChar) == "Jack Sparrow")
+        					{
+               						loadPort = "Tortuga_Port";
+                					gotoGroup = "reload";
+                					rldLocator = "reload2_back";
+        					}
+        					if (PChar.model == "animists1" && GetMySimpleOldName(PChar) == "Dark Teacher")
+        					{
+                					loadPort = "Muelle_shore_02";
+                					gotoGroup = "reload";
+                					rldLocator = "see";
+        					}
+					break;
 					case HOLLAND:
 						loadPort = "Douwesen_port";
 						gotoGroup = "reload";
 						rldLocator = "reload2";
-						break;
+					break;
 					case PORTUGAL:
 						loadPort = "Conceicao_port";
 						gotoGroup = "reload";
 						rldLocator = "reload2";
-						break;
+					break;
 					case AMERICA:
 						loadPort = "Eleuthera_Port";
 						gotoGroup = "reload";
 						rldLocator = "reload1_back";
-						break;
+					break;
 					case PERSONAL_NATION:
 						switch(CharPlayerType)
 						{
@@ -2902,8 +2968,9 @@ void BothQuestComplete(string sQuestName)
 				{
 					SetCharacterGoods(PChar, CharGood1, 0); // dumps your cargo // KK
 					SetCharacterGoods(PChar, CharGood2, 0); // KK
+					RecalculateCargoLoad(PChar);
 					i = getRandomContrabandGood(GetIslandByID(loadTown));
-					if (i > 0) AddCharacterGoods(PChar, i, (2.0+rand(2))/10.0 * GetCharacterFreeSpace(PChar, i) ); // PB&Levis: Between 20%-40% contraband
+					if (i > 0) AddCharacterGoods(PChar, i, makeint((2.0+rand(2))/10.0 * GetCharacterFreeSpace(PChar, i)) ); // PB&Levis: Between 20%-40% contraband
 				}
 			}
 			
@@ -3062,7 +3129,8 @@ void BothQuestComplete(string sQuestName)
 			Preprocessor_AddQuestData("town", FindTownName(GetCurrentTownID()));
 			Preprocessor_AddQuestData("island", FindIslandName(FindIslandByLocation(pchar.location)));
 			SetQuestHeader("Beginning_Smuggler");
-			AddQuestRecord("Beginning_Smuggler", 1);
+			if (GetServedNation() == PIRATE) AddQuestRecord("Beginning_Smuggler", 2);
+			else AddQuestRecord("Beginning_Smuggler", 1);
 			CloseQuestHeader("Beginning_Smuggler");
 			Preprocessor_Remove("town");
 			Preprocessor_Remove("island");
@@ -3086,6 +3154,128 @@ void BothQuestComplete(string sQuestName)
 		case "Castaway_Continue":
 			AddQuestRecord("Beginning_Castaway", 2);
 			CloseQuestHeader("Beginning_Castaway");
+		break;
+
+		case "Animist_Continue":
+    			Island_SetReloadEnableLocal("IslaMuelle", "reload_2", true);
+    			SetQuestHeader("Beginning_Animist");
+			Nations_SetAllHostile();
+
+			ChangeCharacterAddressGroup(CharacterFromID("Dark Teacher"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Rian Dekkers"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Janneke Blinkerhof"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Lisebet Schefold"), "none", "", "");
+			ChangeCharacterAddressGroup(CharacterFromID("Gheraed Drabbe"), "none", "", "");
+
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_01"), true);
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_02"), true);
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_03"), true);
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_04"), true);
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_05"), true);
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_06"), true);
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_07"), true);
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_08"), true);
+			LAi_SetImmortal(CharacterFromID("ANIMISTS_09"), true);
+			LAi_group_SetAlarmReaction("ANIMISTS_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND, LAI_GROUP_FRIEND);
+
+			PChar.skill.Fencing = 10;
+			PChar.skill.Leadership = 10;
+			PChar.perks.list.BasicDefence = true;
+			PChar.perks.list.AdvancedDefence = true;
+			PChar.perks.list.SwordplayProfessional = true;
+			PChar.perks.list.CriticalHit = true;
+			PChar.Perks.list.Toughness = true;
+			PChar.rank 	= 10;
+			PChar.reputation = "22";
+			PChar.Ship.Crew.Morale = 100;
+			PChar.quest.ANIMISTS = "leader";
+
+			if (PChar.ship.type == "Frigate_sat")
+			{
+				if (GetCurrentPeriod() < PERIOD_GOLDEN_AGE_OF_PIRACY) GiveShip2Character(PChar,"FleutWarSat",PChar.ship.name,-1,PIRATE,true,true);
+				if (GetCurrentPeriod() == PERIOD_REVOLUTIONS) GiveShip2Character(PChar,"PiratFrigateSat",PChar.ship.name,-1,PIRATE,true,true);
+				if (GetCurrentPeriod() == PERIOD_NAPOLEONIC) GiveShip2Character(PChar,"Sat_Essex",PChar.ship.name,-1,PIRATE,true,true);
+			}
+
+			PChar.boardingmodels = "Animists";
+			setCharacterShipLocation(PChar, "Muelle_shore_02");
+/*
+			AddPassenger(Pchar, characterFromID("DarkNavigator"), 0);
+			LAi_SetOfficerType(characterFromID("DarkNavigator"));
+			characters[getCharacterIndex("DarkNavigator")].location = "none";
+			characters[GetCharacterIndex("DarkNavigator")].Dialog.Filename = "Enc_Officer_dialog.c"; // KK
+			characters[GetCharacterIndex("DarkNavigator")].Dialog.CurrentNode = "Hired"; // KK
+			AddPassenger(Pchar, characterFromID("DarkGunner"), 0);
+			LAi_SetOfficerType(characterFromID("DarkGunner"));
+			characters[getCharacterIndex("DarkGunner")].location = "none";
+			characters[GetCharacterIndex("DarkGunner")].Dialog.Filename = "Enc_Officer_dialog.c"; // KK
+			characters[GetCharacterIndex("DarkGunner")].Dialog.CurrentNode = "Hired"; // KK
+*/
+			if(CheckCharacterItem(Pchar, "pistol5") > 0) TakeNItems(Pchar, "pistol5", -1)
+			DeleteAttribute(PChar, "boardingmodels");
+			PChar.boardingmodels = "Animists";
+			for (i = 1; i <= 5; i++)
+			{
+    				NPChar = CharacterFromID("Crewmember_0" + i);
+    				SetModelFromID(NPChar, GetRandomModelForType(true, "Animists"));
+			}
+			for (i = 1; i <= 10; i++)
+			{
+    				NPChar = CharacterFromID("Treas_Crewmember_" + i);
+    				SetModelFromID(NPChar, GetRandomModelForType(true, "Animists"));
+			}
+   			AddQuestRecord("Beginning_Animist", 1);
+   			CloseQuestHeader("Beginning_Animist");
+		break;
+
+		case "generic_continue":
+    			SetQuestHeader("Beginning_Generic");
+			if (!CheckAttribute(PChar, "questline")) PChar.questline = 2;
+			if (PChar.questline == "1")
+			{
+				Preprocessor_AddQuestData("town", FindTownName(GetTownIDFromLocID(PChar.location)));
+   				AddQuestRecord("Beginning_Generic", 1);
+				Preprocessor_Remove("town");
+			}
+			else
+			{
+				Preprocessor_AddQuestData("shiptype", XI_ConvertString(GetShipTypeName(PChar)));
+				Preprocessor_AddQuestData("shipname", GetMyShipNameShow(PChar));
+   				AddQuestRecord("Beginning_Generic", sti(PChar.questline));
+				Preprocessor_Remove("shipname");
+				Preprocessor_Remove("shiptype");
+			}
+   			CloseQuestHeader("Beginning_Generic");
+			DeleteAttribute(PChar, "questline");
+		break;
+
+		case "uncursed_continue":
+			Preprocessor_AddQuestData("shipname", GetMyShipNameShow(PChar));
+   			AddQuestRecord("Beginning_Uncursed", 1);
+			Preprocessor_Remove("shipname");
+		break;
+
+		case "rename_PoTC":
+          		SetModelfromID(characterFromID("John Clifford Brin"), "Modyford");
+			Characters[GetCharacterIndex("John Clifford Brin")].name = TranslateString("", "Weatherby");
+			Characters[GetCharacterIndex("John Clifford Brin")].lastname = TranslateString("", "Swann");
+			Characters[GetCharacterIndex("John Clifford Brin")].greeting = "Gr_John Clifford Brin";
+
+			if(ENABLE_WEAPONSMOD)
+			{
+          			SetModelfromID(CharacterFromID("red_blacksmith"), "old_man2");
+				Characters[GetCharacterIndex("red_blacksmith")].name = TranslateString("", "John");
+				Characters[GetCharacterIndex("red_blacksmith")].lastname = TranslateString("", "Brown");
+				Characters[GetCharacterIndex("red_blacksmith")].greeting = "Gr_Edgar Attwood";
+			}
+		break;
+
+		case "rename_standard":
+          		SetModelfromID(characterFromID("John Clifford Brin"), "huber_eng");
+			Characters[GetCharacterIndex("john clifford brin")].name = TranslateString("", "Robert");
+			Characters[GetCharacterIndex("john clifford brin")].middlename = TranslateString("", "Christopher");
+			Characters[GetCharacterIndex("john clifford brin")].lastname = TranslateString("", "Silehard");
+			Characters[GetCharacterIndex("john clifford brin")].greeting = "Gr_Robert Christopher Silehard";
 		break;
 
 		case "stormystart2":	// this case is only seperate to show the video uninterrupted
@@ -3645,7 +3835,7 @@ void BothQuestComplete(string sQuestName)
 				}
 			}
 			if (GetCurrentFlag() == AMERICA)	ChangeCharacterAddressGroup(CharacterFromID("Malcolm Hatcher"), loadTavern, "sit", "sit5");
-			else								ChangeCharacterAddressGroup(CharacterFromID("Malcolm Hatcher"), loadTavern, "sit", "sit13");
+			else					ChangeCharacterAddressGroup(CharacterFromID("Malcolm Hatcher"), loadTavern, "sit", "sit13");
 			LAi_SetSitType(CharacterFromID("Malcolm Hatcher"));
 			characters[GetCharacterIndex("Malcolm Hatcher")].Dialog.CurrentNode = "Questions";
 			LAi_group_MoveCharacter(CharacterFromID("Malcolm Hatcher"), GetTownCitizenGroup(loadTown));

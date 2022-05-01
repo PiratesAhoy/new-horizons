@@ -1025,10 +1025,10 @@ void RefreshScreen()
 					id = TranslateString("", Locations[lidx].id.label) + ", ";
 					switch(CharNation)
 					{
-						case PERSONAL_NATION:	lidx = FindLocation("Oxbay_port");					break; // PB: was arstart.port
+						case PERSONAL_NATION:		lidx = FindLocation("Oxbay_port");					break; // PB: was arstart.port
 						case ENGLAND:			lidx = FindLocation("Oxbay_port");					break;
 						case FRANCE:			lidx = FindLocation("Falaise_de_fleur_port_01");	break;
-						case SPAIN:				lidx = FindLocation("Muelle_port");					break;
+						case SPAIN:			lidx = FindLocation("Muelle_port");					break;
 						case PIRATE:			lidx = FindLocation("QC_port");						break;
 						case HOLLAND:			lidx = FindLocation("Douwesen_port");				break;
 						case PORTUGAL:			lidx = FindLocation("Conceicao_port");				break;
@@ -1044,15 +1044,21 @@ void RefreshScreen()
 						switch(curPlayerType)
 						{
 							case PLAYER_TYPE_REBEL:
-								lidx = FindLocation("QC_port");										// Rebels always start at Nevis
+								lidx = FindLocation("QC_port");						// Rebels always start at Nevis
+
+								if (GameInterface.strings.CharacterName == GetTranslatedStoryLine(slno, "Dark") + " " + GetTranslatedStoryLine(slno, "Teacher") && GetAttribute(model, "id") == "Animists1")
+								{									// Except when they don't!
+									id += TranslateString("", "Satanists Lair");
+									LocationOverride = true;
+								}
 							break;
 
 							case PLAYER_TYPE_ROGUE:
-								lidx = FindLocation("Cuba_shore_03");								// La Croix opening scene
+								lidx = FindLocation("Cuba_shore_03");					// La Croix opening scene
 							break;
 
 							case PLAYER_TYPE_GAMBLER:
-								lidx = FindLocation("Cuba_shore_03");								// La Croix opening scene
+								lidx = FindLocation("Cuba_shore_03");					// La Croix opening scene
 							break;
 
 							case PLAYER_TYPE_AGENT:
@@ -1106,6 +1112,11 @@ void RefreshScreen()
 									}
 									NavyLockShipSelection(true , model);								// Navy assignment is pre-defined
 								}
+							break;
+
+							case PLAYER_TYPE_SWORD_MASTER:
+								if (GameInterface.strings.CharacterName == GetTranslatedStoryLine(slno, "Will") + " " + GetTranslatedStoryLine(slno, "Turner") && GetAttribute(model, "id") == "will")
+									lidx = FindLocation("Redmond_port");
 							break;
 						}
 					}

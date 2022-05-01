@@ -775,14 +775,14 @@ void TownUpdate(ref ctown, bool instant)
 			ctown.fleetsinport.pchar = true;
 		}
 		// LDH 29Mar09
-		if (TownID == "")
+		if (TownID == "" || TownID == "-1")
 		{
 			ref pchar = GetMainCharacter();
 			string island = "";
 			if (pchar.location.from_sea != "")
 				island = FindIslandByLocation(pchar.location.from_sea);
 			if (island != "")
-				TownID = GetAttribute(FindIsland(island),"towns.1"); // PB: For islands with no towns
+				TownID = GetAttribute(GetIslandByID(island),"towns.1"); // PB: For islands with no towns
 		}
 	}
 	if(!flt) { DeleteAttribute(ctown,"fleetsinport.pchar"); }
@@ -790,7 +790,7 @@ void TownUpdate(ref ctown, bool instant)
 	// LDH 29Mar09
 	// Need to update all towns on an island where a character is on land 
 	// so that going to another town by land won't have traders with no goods or money
-	if (TownID != "" && TownID != -1) // PB: For islands with no towns
+	if (TownID != "" && TownID != "-1") // PB: For islands with no towns
 	{
 		if (GetIslandIDFromTown(ctown.id) == GetIslandIDFromTown(TownID))
 		{

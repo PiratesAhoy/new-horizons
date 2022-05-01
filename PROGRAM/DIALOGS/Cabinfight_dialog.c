@@ -959,6 +959,8 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
+				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 				link.l3 = DLG_TEXT[76];
 				link.l3.go = "take_as_prisoner";
 			}
@@ -995,6 +997,8 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
+				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
 				link.l3 = DLG_TEXT[76];
 				link.l3.go = "take_as_prisoner";
 			}

@@ -263,6 +263,23 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[53];
 			link.l1.go = "Exit";
 		break;
+
+		case "At_home_freeplay":
+			dialog.text = DLG_TEXT[54];
+			link.l1 = DLG_TEXT[55] + GetMyName(NPChar) + DLG_TEXT[56];
+			link.l1.go = "info";
+		break;
+
+		case "info":
+			dialog.text = DLG_TEXT[57] + GetMyName(NPChar) + DLG_TEXT[58];
+			link.l1 = DLG_TEXT[59];
+			link.l1.go = "exit_freeplay";
+		break;
+
+		case "exit_freeplay":
+			NextDiag.CurrentNode = "At_home_freeplay";
+			DialogExit();
+		break;
 	}
 }
 

@@ -1,4 +1,4 @@
-string DLG_TEXT[98] = {
+string DLG_TEXT[125] = {
 "Me han dicho que has insistido mucho para  para hablar conmigo. Mi nombre es ",
 ". Ahora, por favor, dime el propósito de tu visita, ",
 ".",

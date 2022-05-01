@@ -1,0 +1,2 @@
+title=A Curse is Lifted
+text.t1=Davy Jones is dead and the #sshipname# appears as she was before she was cursed. How long can I avoid having to do the duty associated with this ship without falling foul of the same curse?
