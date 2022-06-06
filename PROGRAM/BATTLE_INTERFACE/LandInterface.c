@@ -596,12 +596,12 @@ void BLI_SetObjectData()
 	objLandInterface.Commands.Back.event		= "BI_Back";
 	objLandInterface.Commands.Back.note		    = LanguageConvertString(idLngFile, "land_Back");
 // <-- KK
-	objLandInterface.Commands.ActivateRush.enable	= true;
+	objLandInterface.Commands.ActivateRush.enable		= true;
 	objLandInterface.Commands.ActivateRush.picNum		= calcTextureIndex(6, 2);
 	objLandInterface.Commands.ActivateRush.selPicNum	= calcSelectedTextureIndex(6, 2);
 	objLandInterface.Commands.ActivateRush.texNum		= 0;
-	objLandInterface.Commands.ActivateRush.event	= "BI_ActivateRush";
-	objLandInterface.Commands.ActivateRush.note		= LanguageConvertString(idLngFile, "land_ActivateRush");
+	objLandInterface.Commands.ActivateRush.event		= "BI_ActivateRush";
+	objLandInterface.Commands.ActivateRush.note			= LanguageConvertString(idLngFile, "land_ActivateRush");
 
 	// список пользовательских картинок
 		// cancel icon
@@ -1116,7 +1116,7 @@ void BLI_SetPossibleCommands()
 		objLandInterface.Commands.UseBox.enable	= !HasSubStr(mchref.boxname,"gunpowder") && !HasSubStr(mchref.boxname,"corpse");
 		bUseCommand = true;
 	}//MAXIMUS <--
-	
+
 	if( CheckAttribute(mchref,"activeItem") && mchref.activeItem!="" )
 	{
 		bUseCommand = true;
@@ -1180,6 +1180,7 @@ void BLI_SetPossibleCommands()
 	}
 	LanguageCloseFile(idLngFile);
 }
+
 
 // MAXIMUS // KK -->
 bool CheckForReload()

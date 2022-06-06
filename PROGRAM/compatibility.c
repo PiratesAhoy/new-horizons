@@ -10,6 +10,10 @@ int calcNumberOfTextureColumns(int columns) {
 }
 
 int calcTextureIndex(int index, int columns) {
+	if (columns < 1) {
+		columns = 1;
+	}
+
 	if (NEW_STORM_ENGINE) {
 		int row = index / columns;
 		int column = index % columns;
