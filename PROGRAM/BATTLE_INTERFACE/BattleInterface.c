@@ -1812,8 +1812,7 @@ void BI_InitializeCommands()
 		int st = GetCharacterShipType(mainCh);
 		if (st >= 0 && st < SHIP_TYPES_QUANTITY) {
 			int textureIndex = sti(ShipsTypes[st].BI.Tex);
-			string textureAttr = "t" + textureIndex;
-			int textureColumns = BattleInterface.CommandTextures.list.(textureAttr).columns;
+			int textureColumns = 4; // Hardcoded because textures are not yet loaded at this point
 			int picture = sti(ShipsTypes[st].BI.Pic);
 			BattleInterface.Commands.EnterShip.enable		= true;
 			BattleInterface.Commands.EnterShip.picNum		= calcTextureIndex(picture, textureColumns);
@@ -2113,6 +2112,7 @@ void SetParameterData()
 	BattleInterface.CommandTextures.list.t15.ysize = 4;
 
 	BattleInterface.CommandTextures.list.t16.name = "battle_interface\ships_all.tga";
+	BattleInterface.CommandTextures.list.t16.columns = 16;
 	BattleInterface.CommandTextures.list.t16.xsize = 16;
 	BattleInterface.CommandTextures.list.t16.ysize = 16;
 // <-- KK
