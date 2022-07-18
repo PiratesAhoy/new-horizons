@@ -74,11 +74,11 @@ void InitIslands()
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
 		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 		rIsland.InterfaceTextures.t2.columns = 4;
 
@@ -177,13 +177,14 @@ void InitIslands()
 		rIsland.reload.l4.pic = 22;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
 		rIsland.Trade.Export.id2 = GOOD_LINEN;
@@ -254,13 +255,14 @@ void InitIslands()
 		rIsland.reload.l4.pic = 22;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_EBONY;
 		rIsland.Trade.Export.id2 = GOOD_MAHOGANY;
@@ -366,13 +368,14 @@ void InitIslands()
 		rIsland.reload.l7.pic = 22;
 		rIsland.reload.l7.tex = "t1";
 		rIsland.reload.l7.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_SANDAL;
 		rIsland.Trade.Export.id2 = GOOD_RUM;
@@ -455,13 +458,14 @@ void InitIslands()
 		rIsland.reload.l5.tex = "t2";
 		rIsland.reload.l5.enable = false;		
 		rIsland.reload.l5.goto_enable = false; // Screwface: Disable Sail-To		
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
 		rIsland.Trade.Export.id2 = GOOD_SUGAR;
@@ -535,13 +539,14 @@ void InitIslands()
 		rIsland.reload.l4.pic = 22;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_TOBACCO;
 		rIsland.Trade.Export.id2 = GOOD_COFFEE;
@@ -618,13 +623,14 @@ void InitIslands()
 		rIsland.reload.l4.pic = 22;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_RUM;
 		rIsland.Trade.Export.id2 = GOOD_ALE;
@@ -670,7 +676,7 @@ void InitIslands()
 		rIsland.reload.l1.tex = "t2";
 
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		AddIsland(q, rIsland, locator);
@@ -749,13 +755,14 @@ void InitIslands()
 //		rIsland.reload.l6.pic = 5;
 //		rIsland.reload.l6.tex = "t2";
 //		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_SANDAL;
 		rIsland.Trade.Export.id2 = GOOD_RUM;
@@ -891,13 +898,14 @@ void InitIslands()
 		rIsland.reload.l10.pic = 22;
 		rIsland.reload.l10.tex = "t1";
 		rIsland.reload.l10.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_EBONY;
 		rIsland.Trade.Export.id2 = GOOD_MAHOGANY;
@@ -1032,13 +1040,14 @@ void InitIslands()
 		rIsland.reload.l10.pic = 22;
 		rIsland.reload.l10.tex = "t1";
 		rIsland.reload.l10.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_EBONY;
 		rIsland.Trade.Export.id2 = GOOD_MAHOGANY;
@@ -1099,13 +1108,14 @@ void InitIslands()
 		rIsland.reload.l3.pic = 22;
 		rIsland.reload.l3.tex = "t1";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
 		rIsland.Trade.Export.id2 = GOOD_CHOCOLATE;
@@ -1201,13 +1211,14 @@ void InitIslands()
 		rIsland.reload.l6.pic = 18;
 		rIsland.reload.l6.tex = "t2";
 		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
 		rIsland.Trade.Export.id2 = GOOD_CHOCOLATE;
@@ -1269,13 +1280,14 @@ void InitIslands()
 		rIsland.reload.l3.pic = 19;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		// victualler stores only ship supplies
 		rIsland.Trade.Contraband.id1 = GOOD_CHOCOLATE;
@@ -1374,13 +1386,14 @@ void InitIslands()
 		rIsland.reload.l6.pic = 22;
 		rIsland.reload.l6.tex = "t1";
 		rIsland.reload.l6.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 // KK -->
 		rIsland.Trade.Export.id1 = GOOD_RUM;
@@ -1451,13 +1464,14 @@ void InitIslands()
 		rIsland.reload.l4.pic = 22;
 		rIsland.reload.l4.tex = "t1";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_TOBACCO;
 		rIsland.Trade.Export.id2 = GOOD_COFFEE;
@@ -1531,13 +1545,14 @@ void InitIslands()
 		rIsland.reload.l4.pic = 15;
 		rIsland.reload.l4.tex = "t2";
 		rIsland.reload.l4.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_TOBACCO;
 		rIsland.Trade.Export.id2 = GOOD_COFFEE;
@@ -1606,13 +1621,14 @@ void InitIslands()
 		rIsland.reload.l3.ships.l0.z = -150.0;
 		rIsland.reload.l3.ships.l0.ay = 0.0;
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To*/
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_TOBACCO;
 		rIsland.Trade.Export.id2 = GOOD_COFFEE;
@@ -1656,7 +1672,7 @@ void InitIslands()
 		rIsland.reload.l1.tex = "t2";
 
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		AddIsland(q, rIsland, locator);
@@ -1705,13 +1721,14 @@ void InitIslands()
 		rIsland.reload.l3.pic = 21;
 		rIsland.reload.l3.tex = "t2";
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
-
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
-		rIsland.InterfaceTextures.t1.h = 4;
+		rIsland.InterfaceTextures.t1.h = 8;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		// PB: Temporary copied from Isla Muelle - no contraband, because NO SHORE
 		rIsland.Trade.Export.id1 = GOOD_EBONY;
@@ -1772,7 +1789,7 @@ void InitIslands()
 		rIsland.reload.l3.goto_enable = false; // Screwface: Disable Sail-To
 
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		AddIsland(q, rIsland, locator);
@@ -1800,7 +1817,7 @@ void InitIslands()
 		rIsland.reload.l1.goto_enable = false; // PB
 
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
-		rIsland.InterfaceTextures.t2.h = 4;
+		rIsland.InterfaceTextures.t2.h = 8;
 		rIsland.InterfaceTextures.t2.v = 16;
 
 		AddIsland(q, rIsland, locator);
