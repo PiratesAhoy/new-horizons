@@ -76,9 +76,11 @@ void InitIslands()
 		rIsland.InterfaceTextures.t1 = "battle_interface\moor-town.tga";
 		rIsland.InterfaceTextures.t1.h = 4;
 		rIsland.InterfaceTextures.t1.v = 16;
+		rIsland.InterfaceTextures.t1.columns = 4;
 		rIsland.InterfaceTextures.t2 = "battle_interface\moor-shores.tga";
 		rIsland.InterfaceTextures.t2.h = 4;
 		rIsland.InterfaceTextures.t2.v = 16;
+		rIsland.InterfaceTextures.t2.columns = 4;
 
 		rIsland.Trade.Export.id1 = GOOD_SAILCLOTH;
 		rIsland.Trade.Export.id2 = GOOD_CHOCOLATE;
