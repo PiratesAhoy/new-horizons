@@ -15,7 +15,7 @@ string DLG_TEXT[91] = {
 "I'm listening, ",
 ".",
 "I'm here to get my reward for the death of Dirty Garry.",
-"I'm sorry, but I don't have anything to talk about right now",
+"I'm sorry, but I don't have anything to talk about right now.",
 "Oh, I've heard about what you've done. From the face of all colony I will show you our appreciation.",
 "That's right, I'd like to see a reward.",
 "You're such a joker. Ha ha. Here is your money.", 

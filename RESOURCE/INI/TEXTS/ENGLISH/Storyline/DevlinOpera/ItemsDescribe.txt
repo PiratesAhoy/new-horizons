@@ -21,3 +21,51 @@ itmdescr_Jauri_note
 {
 'Dear Jaqueline, I've gone shopping.'
 }
+
+itmname_juan_bucket_emp	{Empty bucket}
+itmdescr_juan_bucket_emp
+{
+A bucket, taken from a market stall.
+}
+
+itmname_juan_bucket_ful	{Filled bucket}
+itmdescr_juan_bucket_ful
+{
+Now there's some sea water in the bucket.
+}
+
+itmname_sketch_paper	{Piece of paper}
+itmdescr_sketch_paper
+{
+This should be enough for Paolo to do his sketch.
+}
+
+itmname_jorge_bible	{Jorge's Bible}
+itmdescr_jorge_bible
+{
+He truly is a god-fearing man!
+}
+
+itmname_santiago_key	{Key to Santiago's towngate}
+itmdescr_santiago_key
+{
+To let the strayed sailor back in!
+}
+
+itmname_blue_robe	{Hooded Robe}
+itmdescr_blue_robe
+{
+It looks really comfy!
+}
+
+itmname_second_part_map	{Part of a Treasure Map}
+itmdescr_second_part_map
+{
+Part of a treasure map. Now it should be complete!
+}
+
+itmname_full_map	{Eugene Devlin's Treasure Map}
+itmdescr_full_map
+{
+But... What is this? The Treasure Map shows three marked places all over the West Indies, each with a person's name next to it!
+}

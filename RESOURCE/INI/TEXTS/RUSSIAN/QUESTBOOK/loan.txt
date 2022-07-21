@@ -12,3 +12,5 @@ text.t10=Пришлось занять #dammount# золота у ростовщ
 text.t11=Пришлось занять #dammount# золота у ростовщика #sloanshark# в городе #stown# на #sisland#, и теперь его нужно вернуть до #sdeadline#.
 text.t12=Пришлось занять #dammount# золота у ростовщика #sloanshark# в городе #stown# на #sisland#, и теперь его нужно вернуть до #sdeadline#.
 text.t13=Пришлось занять #dammount# золота у ростовщика #sloanshark# в городе #stown# на #sisland#, и теперь его нужно вернуть до #sdeadline#.
+text.t14=Пришлось занять #dammount# золота у ростовщика #sloanshark# в городе #stown# на #sisland#, и теперь его нужно вернуть до #sdeadline#.
+text.t15=Пришлось занять #dammount# золота у ростовщика #sloanshark# в городе #stown# на #sisland#, и теперь его нужно вернуть до #sdeadline#.

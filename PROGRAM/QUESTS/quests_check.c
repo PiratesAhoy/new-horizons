@@ -236,6 +236,13 @@ bool ProcessCondition(aref condition)
 		return bSeaActive && !bAbordageStarted;
 	break;
 // <-- KK
+// GR -->
+	case "LandEnter":
+		if(bSeaActive || bAbordageStarted || IsEntity(&worldMap)) return false;
+		if(HasSubstr(GetAttribute(refCharacter, "location"), "port") || HasSubstr(GetAttribute(refCharacter, "location"), "shore")) return true; // Necessary otherwise 'SeaLogin' triggers it before loading to sea is complete
+		return false;
+	break;
+// <-- GR
 	case "MapEnter":
 		// LDH added 21Feb09
 		if (CheckAttribute(refCharacter,"directsail1.QuestCheckMapEnter"))	// set in Directsail upon islandswitch

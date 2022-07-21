@@ -267,10 +267,10 @@ string GenerateDestination()
 	for(int i=0; i<TOWNS_QUANTITY; i++)
 	{
 		ref ctown; makeref(ctown, Towns[i]);
-		if (GetAttribute(ctown,"skiptrade") == true)																						continue;	// MAXIMUS: added for some towns (such as St. John's on Antigua)
+		if (GetAttribute(ctown,"skiptrade") == true)												continue;	// MAXIMUS: added for some towns (such as St. John's on Antigua)
 		if (sti(ctown.nation) != PIRATE)																												// PB: Any pirate town is fair game
 		{
-		//	if (GetNationRelation2MainCharacter(sti(ctown.nation)) == RELATION_ENEMY)														continue;	// PB: You should never have to go to ports hostile to yourself
+		//	if (GetNationRelation2MainCharacter(sti(ctown.nation)) == RELATION_ENEMY)							continue;	// PB: You should never have to go to ports hostile to yourself
 			if (GetNationRelation(GetCurrentLocationNation(), sti(ctown.nation)) == RELATION_ENEMY && GetCurrentLocationNation() != PIRATE)	continue;	// PB: Nor towns that are hostile to the current location (unless it is pirate)
 		}
 
@@ -2013,6 +2013,8 @@ void CommonQuestComplete(string sQuestName)
 				Characters[makeint(Pchar.quest.FreeRandomOfficerIdx)].index = Pchar.quest.FreeRandomOfficerIdx;
 				Characters[makeint(Pchar.quest.FreeRandomOfficerIdx)].id = Pchar.quest.FreeRandomOfficerID;
 // added by MAXIMUS [for placing new officer in empty slot (default for some officers)] -->
+// GR: disabled because it can kick an unremovable quest officer out of the slot
+/*
 				int ofNum = 3;
 				switch(Characters[makeint(Pchar.quest.FreeRandomOfficerIdx)].quest.officertype)
 				{
@@ -2022,6 +2024,11 @@ void CommonQuestComplete(string sQuestName)
 				}
 				SetOfficersIndex(Pchar, ofNum, makeint(Pchar.quest.FreeRandomOfficerIdx));
 // added by MAXIMUS [for placing new officer in empty slot (default for some officers)] <--
+*/
+// GR: try to put new officer into a free slot, also explicitly add the officer as a passenger as failsafe -->
+				SetOfficersIndex(PChar, -1, sti(PChar.quest.FreeRandomOfficerIdx));
+				AddPassenger(PChar, CharacterFromID(PChar.quest.FreeRandomOfficerID), 0);
+				LAi_SetOfficerType(CharacterFromID(PChar.quest.FreeRandomOfficerID));
 
 				Characters[makeint(Pchar.quest.FreeRandomOfficerIdx)].location = "None";
 
@@ -2063,6 +2070,7 @@ void CommonQuestComplete(string sQuestName)
 				ChangeCharacterAddressGroup(&Characters[makeint(Pchar.quest.HiringOfficerIDX)], "None", "", "");
 				PlaceCharacter(characterFromID(Pchar.quest.FreeRandomOfficerID), "goto");
 				DialogMain(characterFromID(Pchar.quest.FreeRandomOfficerID)); // added by MAXIMUS
+				LAi_SetOfficerType(characterFromID(Pchar.quest.FreeRandomOfficerID));
 			}
 			else
 			{
@@ -2512,6 +2520,8 @@ Cost for level 50 is 55,374,000
 
 			Group_LockTask("Story_Pirate");
 
+			PChar.quest.generate_kill_quest = "searching";
+
 			pchar.quest.kill_pirate_complete.win_condition.l1 = "NPC_Death";
 			pchar.quest.kill_pirate_complete.win_condition.l1.character = "Quest pirate";
 			pchar.quest.kill_pirate_complete.win_condition = "kill_pirate_complete";
@@ -2585,6 +2595,21 @@ Cost for level 50 is 55,374,000
 			DeleteAttribute(pchar, "quest.generate_kill_quest");
 			//pchar.quest.generate_kill_quest = "";
 		break;
+
+		case "kill_pirate_failed":
+			PChar.quest.generate_kill_quest = "gave_up";
+			ChangeCharacterReputation(PChar, -1); //Add some reputation loss -Levis
+			PChar.quest.kill_pirate_refused_timer.win_condition.l1 = "Timer";
+			PChar.quest.kill_pirate_refused_timer.win_condition.l1.date.day   = GetAddingDataDay  (0, 0, 3);
+			PChar.quest.kill_pirate_refused_timer.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 3);
+			PChar.quest.kill_pirate_refused_timer.win_condition.l1.date.year  = GetAddingDataYear (0, 0, 3);
+			PChar.quest.kill_pirate_refused_timer.win_condition = "kill_pirate_refused_timer";
+			i = Group_FindGroup("Story_Pirate");
+			if (i >= 0) Group_DeleteGroupIndex(i);
+			ChangeCharacterAddressGroup(CharacterFromID("Quest Pirate"), "None", "", "");
+			DeleteQuestHeader("hunting");
+			DeleteQuestAttribute("hunting");
+		break;
 // boal <--
 
 		case "sleep_in_tavern":
@@ -2650,12 +2675,25 @@ Cost for level 50 is 55,374,000
 			LAi_SetCurHPMax(pchar);
 			for (i = 1; i < 4; i++)
 			{
-				iOfficer = GetOfficersIndex(Pchar, "" + i);
+				iOfficer = GetOfficersIndex(Pchar, i);
 				if (iOfficer != -1) LAi_SetCurHPMax(&characters[iOfficer]);
 			}
 			LAi_ActorRunToLocator(NPChar,"reload","reload1","girl_gone",40);
 		break;
 		//Levis: Extra atmosphere <--
+
+		//GR: brothel bedroom -->
+		case "to_bedroom_for_girl":
+			NPChar = LAi_CreateFantomCharacter(true, 0, true, false, 0.00, GetRandSubString(GetBrothelModels()), "goto", "goto5");
+			NPChar.nation = GetTownNation(GetCurrentTownID());
+			SetRandomNameToCharacter(NPChar);
+			NPChar.dialog.filename = "wenched_dialog.c";
+			NPChar.greeting = "Gr_Wench";
+			LAi_SetWaitressType(NPChar);
+			// LAi_SetStayType(NPChar);
+			LAi_QuestDelay("restore_hp", 0.0);
+		break;
+		//GR: brothel bedroom <--
 		
 		//Levis: Add waiting time on ship -->
 		case "waited_on_ship_for_time":
@@ -2685,9 +2723,9 @@ Cost for level 50 is 55,374,000
 
 		case "restore_hp":
 			LAi_SetCurHPMax(pchar);
-			for (i = 1; i < 4; i++)
+			for (i = 1; i < OFFICER_MAX; i++)
 			{
-				iOfficer = GetOfficersIndex(Pchar, "" + i);
+				iOfficer = GetOfficersIndex(Pchar, i);
 				if (iOfficer != -1) LAi_SetCurHPMax(&characters[iOfficer]);
 			}
 		break;
@@ -5799,6 +5837,8 @@ void hip_mketB()
 	aref weapon;
 	Items_FindItem(weaponID, &weapon);
 
+	EquipCharacterByItem(attack, FindCharacterItemByGroup(attack, BLADE_ITEM_TYPE));	//so you can use your best blade while the loaded bayonet-musket is ready to fire on your hip
+
 	float GunCurCharge = LAi_GetCharacterRelCharge(attack); // Levis
 	weapon.model = "musketB";
 	RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
@@ -5838,8 +5878,9 @@ void gun_mketB()
 
 	RemoveCharacterEquip(attack, BLADE_ITEM_TYPE );
 	TakeItemFromCharacter(attack, "blademketB");
-	if(!CheckCharacterItem(attack, "bladeX4")) GiveItem2Character(attack, "bladeX4");
-	EquipCharacterByItem(attack, "bladeX4");
+/*	if(!CheckCharacterItem(attack, "bladeX4")) GiveItem2Character(attack, "bladeX4");
+	EquipCharacterByItem(attack, "bladeX4");	*/
+EquipCharacterByItem(attack, FindCharacterItemByGroup(attack, BLADE_ITEM_TYPE));
 
 	float GunCurCharge = LAi_GetCharacterRelCharge(attack); // Levis
 	RemoveCharacterEquip(attack, GUN_ITEM_TYPE );
@@ -6390,8 +6431,9 @@ void reset_check_mguns()
 				if(IsEquipCharacterByItem(tmpChr, "blademketB"))
 				{
 					TakeItemFromCharacter(tmpChr, "blademketB");
-					if(!CheckCharacterItem(tmpChr, "bladeX4")) GiveItem2Character(tmpChr, "bladeX4");
-					EquipCharacterByItem(tmpChr, "bladeX4");
+				/*	if(!CheckCharacterItem(tmpChr, "bladeX4")) GiveItem2Character(tmpChr, "bladeX4");
+					EquipCharacterByItem(tmpChr, "bladeX4");	*/
+				EquipCharacterByItem(tmpChr, FindCharacterItemByGroup(tmpChr, BLADE_ITEM_TYPE));
 
 					GiveItem2Character(tmpChr, "pistolmketB");
 					EquipCharacterByItem(tmpChr, "pistolmketB");

@@ -1339,6 +1339,7 @@ void ProcessDialogEvent()
 		Link.l1 = DLG_TEXT[368];
 		Link.l1.go = "exit";
 	break;
+// Hitman Easter Egg
 
 	case "Bonnieparty1":
 		Dialog.Text = DLG_TEXT[369];
@@ -1378,6 +1379,27 @@ void ProcessDialogEvent()
 		AddDialogExitQuest("Switch_to_Beatrice");
 	break;
 
-// Hitman Easter Egg
+	case "Ricardo":
+		Dialog.Text = DLG_TEXT[379];
+		Link.l1 = DLG_TEXT[380];
+		Link.l1.go = "Ricardo2";
+	break;
+
+	case "Ricardo2":
+		Dialog.Text = DLG_TEXT[381];
+		Link.l1 = DLG_TEXT[382];
+		Link.l1.go = "exit";
+		AddDialogExitQuest("Ricardo_search_Officer");
+	break;
+
+	case "Balboa_ded":
+		Dialog.Text = DLG_TEXT[383];
+		Link.l1 = DLG_TEXT[384];
+		Link.l1.go = "exit";
+		GiveItem2Character(PChar, "second_part_map");
+		AddDialogExitQuest("Blaze_returns_Santiago");
+		AddDialogExitQuest("Switch_to_Beatrice");
+	break;
+
 	}
 }

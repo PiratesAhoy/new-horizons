@@ -322,7 +322,7 @@ bool LEnc_MonstersLoginStart(ref location)
 			{
 				if (makeint(environment.time) > 22.0 || makeint(environment.time) < 8.0 && GettownNation(location.townsack)!=3)
 				{
-					if(rand(20)==0){Random_Raid("smugglers", 20, PIRATE,LAI_GROUP_NEUTRAL,LAI_GROUP_ENEMY,"ALERT!!! PIRATES RAID!!!");}
+					if(rand(20)==0){Random_Raid("smugglers", 20, PIRATE, LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "ALERT!!! PIRATES RAID!!!");}	// was 'LAI_GROUP_NEUTRAL,LAI_GROUP_ENEMY' which makes them attack everyone except you!
 				}
 				if (makeint(GetLocationNation(location))!=PIRATE) //(GettownNation(location.townsack)!=3)
 				{
@@ -1302,9 +1302,9 @@ void LEnc_MonstersLoginCorrectParams(ref location, aref chr, string group, strin
 			break;
 
 			case "Brothel":
-				chr.dialog.filename = "wenched_dialog.c";
+				chr.dialog.filename = "wench_dialog.c";
 				chr.greeting = "Gr_Wench";
-				if(!CheckAttribute(location,"brothels_mom") && !HasSubStr(location.id,"QC"))//MAXIMUS: brothel's mom must be equipped to protect her girls ;)
+				if(!CheckAttribute(location,"brothels_mom") && !CheckAttribute(location, "permanent_mom"))//MAXIMUS: brothel's mom must be equipped to protect her girls ;)
 				{
 					chr.dialog.filename = "mistress_dialog.c";
 					chr.greeting = "Gr_Brothel's mom";

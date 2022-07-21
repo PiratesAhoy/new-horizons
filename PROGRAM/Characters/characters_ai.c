@@ -28,7 +28,7 @@ bool SetCharacterTask_GotoPoint(ref character, string locatorGroup, string locat
 	string slocator = "locators." + locatorGroup + "." + locatorName;
 	if(CheckAttribute(loadedLocation, slocator) == 0)
 	{
-		Trace("SetCharacterTask_GotoPoint -> locator '" + locatorName + "' in group '" + locatorGroup + "' not found");
+		Trace("SetCharacterTask_GotoPoint: '" + GetAttribute(character, "id") + "' -> locator '" + locatorName + "' in group '" + locatorGroup + "' not found");
 		return false;
 	}
 	//Get locator position

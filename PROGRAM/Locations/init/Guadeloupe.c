@@ -860,6 +860,7 @@ void LocationInitguadeloupe(ref n)
 	Locations[n].reload.l1.emerge = "Reloadc2"; // was "reload1";
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Fort."; // was "Plantation.";
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l1.goto_disable = 1; // Screwface: Disable Go-To location
 
 	Locations[n].reload.l2.name = "Reload2";
 	Locations[n].reload.l2.go = "Guadeloupe_Jungle_01";

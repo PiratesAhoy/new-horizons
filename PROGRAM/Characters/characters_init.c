@@ -144,10 +144,21 @@ void CreateCharacters()
 		break;
 		case PLAYER_TYPE_CORSAIR:
 			ch.shiplog.Entry.log0 = "This is a truly momentous occasion. I have worked towards this since I went on account all those years back as a young, know-nothing scallywag with more spine than brains. The crew has elected me captain, replacing our departed leader who lost his head to a cannon ball during our last cruise. Bad for him, good for me. The old man was a good captain and ran a tight ship but I’ve always had my own ideas about how things should be done. Now I get to see if I’m right!";
+			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
+			else GiveItem2Character(ch, "pistol1a");
+			GiveItem2Character(ch, "compass2");
+			GiveItem2Character(ch, "clock1");
 			switch(GetMySimpleOldName(ch))
 			{
 				case "Blackbeard":
-					GiveItem2Character(ch, "Blade_Triton");
+					if (ch.model == "Blackbeard")
+					{
+						GiveItem2Character(ch, "Blade_Triton");
+						GiveItem2Character(ch, "piratespistol");
+						GiveItem2Character(ch, "aztec_compass");
+						if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) TakeItemFromCharacter(ch, "pistol1");
+						else TakeItemFromCharacter(ch, "pistol1a");
+					}
 				break;
 
 				case "Piet Hein":
@@ -155,23 +166,63 @@ void CreateCharacters()
 					GiveItem2Character(ch, "luckydimeA");
 				break;
 
+
+				case "Eduardo Villanueva":
+					if (ch.model == "Villanueva")
+					{
+						GiveItem2Character(ch, "blade16");
+						GiveItem2Character(ch, "piratespistol");
+						if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) TakeItemFromCharacter(ch, "pistol1");
+						else TakeItemFromCharacter(ch, "pistol1a");
+					}
+				break;
+
+				case "Sao Feng":
+					if (ch.model == "SaoFeng")
+					{
+						GiveItem2Character(ch, "blade20");
+						GiveItem2Character(ch, "piratespistol");
+						if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) TakeItemFromCharacter(ch, "pistol1");
+						else TakeItemFromCharacter(ch, "pistol1a");
+					}
+				break;
+
+				case "Capitaine Chevalle":
+					if (ch.model == "Captaine_Chevalle")
+					{
+						GiveItem2Character(ch, "blade9");
+						GiveItem2Character(ch, "piratespistol");
+						if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) TakeItemFromCharacter(ch, "pistol1");
+						else TakeItemFromCharacter(ch, "pistol1a");
+					}
+				break;
+
+				case "Sumbhajee Angria":
+					if (ch.model == "Sri_Sumbhajee")
+					{
+						GiveItem2Character(ch, "blade12");
+						GiveItem2Character(ch, "pistol3_14");
+						GiveItem2Character(ch, "Spyglass4");
+						EquiPCharacterbyItem(ch, "Spyglass4");
+						GiveItem2Character(ch, "jewelry3");
+						if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) TakeItemFromCharacter(ch, "pistol1");
+						else TakeItemFromCharacter(ch, "pistol1a");
+					}
+				break;
+
 				// default
 				if (GetCurrentPeriod() < PERIOD_GOLDEN_AGE_OF_PIRACY)
 				{
 					if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "blade21+2");
-					else					GiveItem2Character(ch, "blade21");
+					else			GiveItem2Character(ch, "blade21");
 					GiveItem2Character(ch, "bladekit");	
 				}
 				else
 				{
 					if(ENABLE_WEAPONSMOD)	GiveItem2Character(ch, "blade27+1");
-					else					GiveItem2Character(ch, "blade27");
+					else			GiveItem2Character(ch, "blade27");
 				}
 			}
-			if (GetCurrentPeriod() >= PERIOD_GOLDEN_AGE_OF_PIRACY) GiveItem2Character(ch, "pistol1");
-			else GiveItem2Character(ch, "pistol1a");
-			GiveItem2Character(ch, "compass2");
-			GiveItem2Character(ch, "clock1");
 		break;
 		case PLAYER_TYPE_ENGINEER:
 			ch.shiplog.Entry.log0 = "I have spent most of my adult life on solid ground, as solid as a battlefields gets in any case, as a military engineer in the service of the crown. With my earnings I have decided to leave the army and invest in a ship. I have arrived in the Caribbean where they say enterprising captains with a solid vessel can do very well for themselves. We shall see. While I must confess that I am not much of a seaman yet, I am past the stage of turning green in poor weather and should pick the rest up quickly as I go.";
@@ -467,7 +518,14 @@ void CreateCharacters()
 			GiveItem2Character(ch, "commonarmor");
 		break;
 		case PLAYER_TYPE_CASTAWAY:
-			ch.shiplog.Entry.log0 = "An old friend of the family has bought me passage on a ship bound for the New World. But whether he did that out of kindness or just to get rid of me, I do not know. I have never had much luck in Europe and the little I own in this world was safely stored in my cabin. It will be difficult to get on my feet, but I am determined to succeed at last!";
+			switch(GetMySimpleOldName(ch))
+			{
+				case "Black Caesar":
+					ch.shiplog.Title.log0 = "No Longer a Slave";
+					ch.shiplog.Entry.log0 = "When I was first brought aboard a white man's ship, I feared that the rest of my life would be as that of a chained beast. One of the crew treated me with kindness and respect and became my only friend. When the ship fell prey to the anger of the storm, that friend released me and together we escaped in the ship's boat. We have made it to an unknown shore. Now we begin a new journey as free men!";
+				break;
+				ch.shiplog.Entry.log0 = "An old friend of the family has bought me passage on a ship bound for the New World. But whether he did that out of kindness or just to get rid of me, I do not know. I have never had much luck in Europe and the little I own in this world was safely stored in my cabin. It will be difficult to get on my feet, but I am determined to succeed at last!";
+			}
 			// Deliberately no items
 		break;
 		case PLAYER_TYPE_CUSTOM:

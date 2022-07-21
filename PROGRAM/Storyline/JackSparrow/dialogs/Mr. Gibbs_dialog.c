@@ -32,21 +32,24 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 
 //			if (PChar.quest.Muerte == "search")
-			if(checkquestattribute("Muerte", "search"))			
+			if (!CheckAttribute(PChar, "quest.cotbp_done") || sti(PChar.quest.cotbp_done) == false)
 			{
-				dialog.snd = "Voice\CLLA\CLLA004";
-				dialog.text = DLG_TEXT[26];
-				link.l1 = DLG_TEXT[2];
-				link.l1.go = "begin_1";				
-				PlaySound("trep\PEOPLE\snore.wav");
-			}
-			if(checkquestattribute("Jacks_early_days", "Get_ready_for_Guadeloupe"))
-			{
-				dialog.snd = "Voice\CLLA\CLLA004";
-				dialog.text = DLG_TEXT[33];
-				link.l1 = DLG_TEXT[35];
-				link.l1.go = "exitGibbs";
-			}			
+				if(checkquestattribute("Muerte", "search"))		
+				{
+					dialog.snd = "Voice\CLLA\CLLA004";
+					dialog.text = DLG_TEXT[26];
+					link.l1 = DLG_TEXT[2];
+					link.l1.go = "begin_1";				
+					PlaySound("trep\PEOPLE\snore.wav");
+				}
+				if(checkquestattribute("Jacks_early_days", "Get_ready_for_Guadeloupe"))
+				{
+					dialog.snd = "Voice\CLLA\CLLA004";
+					dialog.text = DLG_TEXT[33];
+					link.l1 = DLG_TEXT[35];
+					link.l1.go = "exitGibbs";
+				}	
+   			}
 		break;
 
 		case "begin_1":
@@ -185,7 +188,8 @@ void ProcessDialogEvent()
 			link.l2 = DLG_TEXT[38];
 			link.l2.go = "ExitAccompany";			
 		break;
-
+		
+				
 		case "Exit_Stay":
 			AddDialogExitQuest("Goodbye_Gibbs_and_Willemoes");
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Mr. Gibbs"));
@@ -213,5 +217,245 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
+		
+		case "ExitGibbs":
+			AddDialogExitQuest("Gibbs_to_sort_ship");		
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+		
+		//Dead mans chest dialogue
+		case "talk_jack_ship":
+			dialog.snd = "Voice\CLLA\CLLA004";
+			dialog.text = DLG_TEXT[41];
+			link.l1 = DLG_TEXT[42];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Set_sail_turks");
+		break;
+		
+		//Dead mans chest dialogue on ship after turks
+		case "talk_jack_ship_turks":
+			dialog.text = DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44];
+			link.l1.go = "talk_jack_ship_turks2";
+		break;
+		
+		//Dead mans chest dialogue on ship after turks
+		case "talk_jack_ship_turks2":
+			dialog.snd = "Voice\CLLA\CLLA003";
+			dialog.text = DLG_TEXT[45];
+			link.l1 = DLG_TEXT[46];
+			link.l1.go = "talk_jack_ship_turks3";
+			
+		break;
+		
+		//Dead mans chest dialogue on ship after turks
+		case "talk_jack_ship_turks3":
+			dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "exit";
+			AddDialogExitQuest("tp_deck_anamaria_dialog");
+		break;
+		
+		//Dead mans chest dialogue on ship after turks
+		case "tp_deck_gibbs_dialog_turks":
+			dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			link.l1.go = "tp_deck_gibbs_dialog_turks2";
+		break;
+		
+		//Dead mans chest dialogue on ship after turks
+		case "tp_deck_gibbs_dialog_turks2":
+			dialog.text = DLG_TEXT[51];
+			link.l1 = DLG_TEXT[52];
+			link.l1.go = "tp_deck_gibbs_dialog_turks3";
+		break;
+		
+		//Dead mans chest dialogue on ship after turks
+		case "tp_deck_gibbs_dialog_turks3":
+			dialog.text = DLG_TEXT[53];
+			link.l1 = DLG_TEXT[54];
+			link.l1.go = "tp_deck_gibbs_dialog_turks4";
+		break;
+		
+		//Dead mans chest dialogue on ship after turks
+		case "tp_deck_gibbs_dialog_turks4":
+			dialog.text = DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
+			link.l1.go = "tp_deck_gibbs_dialog_turks5";
+		break;
+
+		//Dead mans chest dialogue on ship after turks
+		case "tp_deck_gibbs_dialog_turks5":
+			dialog.text = DLG_TEXT[57];
+			link.l1 = DLG_TEXT[58];
+			link.l1.go = "exit";
+			AddDialogExitQuest("cleanup_after_turks");
+		break;
+
+
+		//Dead mans chest dialogue after bootstrap meeting, sail to shore
+		case "tp_deck_gibbs_dialog_bootstrap":
+			dialog.text = DLG_TEXT[59];
+			link.l1 = DLG_TEXT[60];
+			link.l1.go = "tp_deck_gibbs_dialog_bootstrap2";
+		break;
+		
+		//Dead mans chest dialogue after bootstrap meeting, sail to shore
+		case "tp_deck_gibbs_dialog_bootstrap2":
+			dialog.text = DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "tp_deck_gibbs_dialog_bootstrap3";
+		break;
+		
+		//Dead mans chest dialogue after bootstrap meeting, sail to shore
+		case "tp_deck_gibbs_dialog_bootstrap3":
+			dialog.text = DLG_TEXT[63];
+			link.l1 = DLG_TEXT[64];
+			link.l1.go = "exit";
+			AddDialogExitQuest("load_shore_cannibal"); 
+		break;	
+		
+		case "talk_gibbs_cannibal_shore":
+			dialog.text = DLG_TEXT[65];
+			link.l1 = DLG_TEXT[66];
+			link.l1.go = "exit";
+			AddDialogExitQuest("talk_gibbs_canniba2");
+		break;	
+		
+		//Ambush
+		case "dialogue_gibbs_cave":
+			dialog.text = DLG_TEXT[67];
+			link.l1 = DLG_TEXT[68];
+			link.l1.go = "exit";
+			AddDialogExitQuest("attack_cannibals_2");
+		break;	
+		
+		case "dialogue_gibbs_cave_poisoned":
+			dialog.text = DLG_TEXT[69];
+			link.l1 = DLG_TEXT[70];
+			link.l1.go = "exit";
+			AddDialogExitQuest("fade_before_stunned");
+		break;	
+		
+		case "cavern_talk_gibbs_escape":
+			dialog.text = DLG_TEXT[71];
+			link.l1 = DLG_TEXT[72];
+			link.l1.go = "exit";
+			AddDialogExitQuest("cavern_talk_gibbs_escape4");
+		break;	
+		//On board talk
+		case "after_cannib_talk":
+			dialog.text = DLG_TEXT[73];
+			link.l1 = DLG_TEXT[74];
+			link.l1.go = "after_cannib_talk2";
+		break;	
+		//On board talk
+		case "after_cannib_talk2":
+			dialog.text = DLG_TEXT[75];
+			link.l1 = DLG_TEXT[76];
+			link.l1.go = "exit";
+			AddDialogExitQuest("dialogue_start_deck_cannibals_after_will");
+		break;
+		
+		//At antigua dalma
+		case "talk_jack_antigua":
+			dialog.text = DLG_TEXT[77];
+			link.l1 = DLG_TEXT[78];
+			link.l1.go = "exit";
+			AddDialogExitQuest("antigua_walk_to_dalma_1");
+		break;
+		
+		//At shack dalma
+		case "talk_dalma_antigua":
+			dialog.text = DLG_TEXT[79];
+			link.l1.go = "exit";
+			AddDialogExitQuest("At_Shack_Warning2_6");
+		break;
+		
+		//At shack dalma
+		case "talk_dalma_antigua2":
+			dialog.text = DLG_TEXT[80];
+			link.l1.go = "exit";
+			AddDialogExitQuest("At_Shack_Warning2_9");
+		break;
+		
+		case "talk_shipwreck_dutchman":
+			dialog.text = DLG_TEXT[81];
+			link.l1.go = "exit";
+			AddDialogExitQuest("dialogue_start_deck_shipwreck_4");
+		break;
+		
+		case "talk_shipwreck_dutchman_after":
+			dialog.text = DLG_TEXT[82];
+			link.l1 = DLG_TEXT[83];
+			link.l1.go = "talk_shipwreck_dutchman_after_2";
+		break;
+		
+		case "talk_shipwreck_dutchman_after_2":
+			dialog.text = DLG_TEXT[84];
+			link.l1 = DLG_TEXT[85];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Sparrow_to_tortuga_after_shipw");
+		break;
+		
+		case "Tortuga_gibbs_DMC_talk":
+			dialog.text = DLG_TEXT[86];
+			link.l1 = DLG_TEXT[87];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Tortuga_gibbs_DMC_tavern");
+		break;
+		
+		case "Tavern_gibbs_DMC_talk":
+			dialog.text = DLG_TEXT[88];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Crewman_to_gibbs_tavern");
+		break;
+		
+		case "Tavern_gibbs_DMC_talk_after":
+			dialog.text = DLG_TEXT[89];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Crewman1go");
+		break;
+		
+		case "Tavern_gibbs_DMC_talk_after2":
+			dialog.text = DLG_TEXT[90];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Crewman2go");
+		break;
+		
+		case "Tavern_gibbs_DMC_talk_after3":
+			dialog.text = DLG_TEXT[91];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Crewman3go");
+		break;
+	
+		
+		
+		case "Talk_Gibbs_to_norrington":
+			dialog.text = DLG_TEXT[92];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Norrington_to_gibbs");
+		break;
+		
+		case "Talk_Gibbs_to_norrington_2":
+			dialog.text = DLG_TEXT[93];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Norrington_to_gibbs_2");
+		break;
+		
+		case "Gibbs_port_final_talk":
+		dialog.text = DLG_TEXT[94];
+		link.l1 = DLG_TEXT[95];
+		link.l1.go = "Gibbs_port_final_talk2";
+		break;
+		
+		case "Gibbs_port_final_talk2":
+		dialog.text = DLG_TEXT[96];
+		link.l1 = DLG_TEXT[97];
+		link.l1.go = "exit";
+		AddDialogExitQuest("After_Tortuga_port_cleanup");
+		break;
+	
 	}
 }

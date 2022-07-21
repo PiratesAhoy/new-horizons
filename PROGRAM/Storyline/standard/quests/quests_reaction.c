@@ -2999,6 +2999,15 @@ void QuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Greenford Commander")].Ship.Cargo.Goods.Knippels = Characters[GetCharacterIndex("Greenford Commander")].orig.Ship.Cargo.Goods.Knippels;
 			Characters[GetCharacterIndex("Greenford Commander")].Ship.Cargo.Goods.Bombs = Characters[GetCharacterIndex("Greenford Commander")].orig.Ship.Cargo.Goods.Bombs;
 		//	Characters[GetCharacterIndex("Greenford Commander")].Ship.Cargo.Goods.Gunpowder = Characters[GetCharacterIndex("Greenford Commander")].orig.Ship.Cargo.Goods.Gunpowder; // This crashes the game???
+
+			// Tavern characters sometimes get confused after capture of Bridgetown, so reset them
+			sld = CharacterFromID("Simon Hanpool");
+			sld.greeting = "Gr_Simon Hanpool";
+			LAi_SetBarmanType(sld);
+
+			sld = CharacterFromID("Greenford_officiant");
+			LAi_SetWaitressType(sld);
+
 			// PB: Return Town to England to prevent errors <--
 			LAi_LocationMonstersGen(&Locations[FindLocation("Labirint_1")], true);
 			LAi_LocationMonstersGen(&Locations[FindLocation("Labirint_2")], true);

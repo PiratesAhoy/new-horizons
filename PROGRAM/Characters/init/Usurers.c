@@ -597,7 +597,7 @@ void CreateUsurersCharacters(ref n)
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "6";
 	ch.skill.Sneak = "6";
-	ch.quest.area = "Tortuga";
+	ch.quest.area = "Santo_Domingo";
 	ch.money = "10";
 	LAi_SetBarmanType(ch);
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");

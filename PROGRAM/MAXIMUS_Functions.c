@@ -670,7 +670,7 @@ ref CreateTwinCharacter(ref _refEnemy)
 	Fightincabin.Dialog.Filename = "Cabinfight_dialog.c";
 	Fightincabin.Dialog.Currentnode = "First time";
 	if(Fightincabin.sex=="woman") Fightincabin.greeting = "Gr_Pirate_f";
-	else Fightincabin.greeting = "Gr_Dark Teacher";
+	else Fightincabin.greeting = "Gr_Dark Teacher"; // was "Gr_Dark Teacher" which is identical
 	if (IsFantom) LAi_NPC_Equip(&Fightincabin, sti(Fightincabin.rank), true, 0.5); // KK
 
 	return Fightincabin;
@@ -689,8 +689,8 @@ void InitQCBrothel()
 	Locations[n].reload.l7.name = "Reload9";
 	Locations[n].reload.l7.go = "QC_brothel";
 	Locations[n].reload.l7.emerge = "reload1";
-	Locations[n].reload.l7.autoreload = "0";
 	Locations[n].reload.l7.label = "#stown_name# Brothel.";
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l7.goto_disable = 1;
 
 	// -----BROTHEL--------------------------------------------
 	n = FindLocation("QC_Brothel"); // KK
@@ -739,6 +739,7 @@ void InitQCBrothel()
 	Locations[n].monsters = "0";
 	LAi_LocationFightDisable(Locations[n], true);
 
+    	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
 	Locations[n].island = "QuebradasCostillas"; // NK 04-08-29
 
 	// Bedroom
@@ -759,6 +760,7 @@ void InitTortugaBrothel()
 	Locations[n].reload.l11.go = "Tortuga_Brothel";
 	Locations[n].reload.l11.emerge = "reload1";
 	Locations[n].reload.l11.label = " #stown_name# Brothel.";
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1;
 
 	// -----BROTHEL--------------------------------------------
 	n = FindLocation("Tortuga_Brothel");
@@ -786,6 +788,7 @@ void InitTortugaBrothel()
 	Locations[n].reload.l3.emerge = "reload1";
 	Locations[n].reload.l3.label = "Opium Den";
 
+    	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
 	Locations[n].island = "Hispaniola";
 
 	// Bedroom
@@ -811,6 +814,7 @@ void InitPaPBrothel()
 	Locations[n].reload.l11.go = "PaP_Brothel";
 	Locations[n].reload.l11.emerge = "reload1";
 	Locations[n].reload.l11.label = " #stown_name# Brothel.";
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1;
 
 	// -----BROTHEL--------------------------------------------
 	n = FindLocation("PaP_Brothel");
@@ -838,6 +842,7 @@ void InitPaPBrothel()
 	Locations[n].reload.l3.emerge = "reload1";
 	Locations[n].reload.l3.label = "Opium Den";
 
+    	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
 	Locations[n].island = "Guadeloupe";
 
 	// Bedroom
@@ -865,8 +870,9 @@ void InitCharlestownBrothel()
 	locations[n].reload.l9.emerge = "reload1";
 	locations[n].reload.l9.autoreload = "0";
 	locations[n].reload.l9.label = "Brothel";
-	locations[n].reload.l9.disable = 0;
+//	locations[n].reload.l9.disable = 0;
 	Locations[n].reload.l9.close_for_night = 0;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l9.goto_disable = 1;
 
 	// -----BROTHEL--------------------------------------------
 	n = FindLocation("Charlestown_Brothel");
@@ -892,6 +898,7 @@ void InitCharlestownBrothel()
 	Locations[n].reload.l2.emerge = "reload1";
 	Locations[n].reload.l2.label = "Brothel Bedroom";
 
+    	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
 	Locations[n].island = "QuebradasCostillas";
 
 	// Bedroom
@@ -910,8 +917,9 @@ void InitEleutheraBrothel()
 	locations[n].reload.l9.name = "houseS2";
 	locations[n].reload.l9.go = "Eleuthera_Brothel";
 	locations[n].reload.l9.emerge = "reload1";
-	Locations[n].reload.l11.label = " #stown_name# Brothel.";
+	Locations[n].reload.l9.label = " #stown_name# Brothel.";
 	Locations[n].reload.l9.close_for_night = 0;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l9.goto_disable = 1;
 
 	// -----BROTHEL--------------------------------------------
 	n = FindLocation("Eleuthera_Brothel");
@@ -955,14 +963,17 @@ void InitEleutheraBrothel()
 	LAi_LocationFightDisable(&locations[n], true);
 
 	locations[n].reload.l2.name = "reload2_back";
-	locations[n].reload.l2.go = "Eleuthera_Brothel_room";
+	locations[n].reload.l2.go = "Eleuthera_Brothel_bedroom";
 	locations[n].reload.l2.emerge = "reload1";
 	locations[n].reload.l2.autoreload = "0";
 	locations[n].reload.l2.label = "Brothel room";
 	Locations[n].reload.l2.disable = 1;
 
+    	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
+	Locations[n].island = "Eleuthera";
+
 	// Room
-	n = FindLocation("Eleuthera_Brothel_room");
+	n = FindLocation("Eleuthera_Brothel_bedroom");
 	Locations[n].reload.l1.name = "reload1";
 	Locations[n].reload.l1.go = "Eleuthera_Brothel";
 	Locations[n].reload.l1.emerge = Locations[FindLocation("Eleuthera_Brothel")].reload.l2.name;
@@ -979,6 +990,7 @@ void InitAliceTownBrothel()
 	locations[n].reload.l9.emerge = "reload1";
 	Locations[n].reload.l11.label = " #stown_name# Brothel.";
 	Locations[n].reload.l9.close_for_night = 0;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l9.goto_disable = 1;
 
 	// -----BROTHEL--------------------------------------------
 	n = FindLocation("Alice Town_Brothel");
@@ -1006,6 +1018,7 @@ void InitAliceTownBrothel()
 	Locations[n].reload.l3.emerge = "reload1";
 	Locations[n].reload.l3.label = "Opium Den";
 
+    	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
 	Locations[n].island = "Eleuthera";
 
 	// Bedroom

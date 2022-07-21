@@ -19,7 +19,7 @@ void ProcessDialogEvent()
 	switch(Dialog.CurrentNode)
 	{
 		// -----------------------------------Диалог первый - первая встреча
-		
+
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode; //"First time";
 			DialogExit();

@@ -189,6 +189,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "smithy":
+				Preprocessor_Add("name", GetMyName(CharacterFromID("Hav_blacksmith")));
+				Preprocessor_Add("fullname", GetMyFullName(CharacterFromID("Hav_blacksmith")));
 				d.Text = DLG_TEXT[159];
 				Link.l1 = DLG_TEXT[160];
 				Link.l1.go = "new question";

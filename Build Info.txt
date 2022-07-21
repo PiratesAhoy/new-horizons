@@ -1,4 +1,4 @@
-Build Version: Monday 28th February 2022
+Build Version: Thursday 21st July 2022
 Build 14
 
 ==========================
@@ -58,6 +58,7 @@ Build 14:
   . New drinkers/gamblers in Havana and Santiago taverns by Grey Roger
   . Investing large sums of money with loanshark improves town economy by Pieter Boelen
   . Ships Stats and Recognition Guide by HellSailor
+  . Sabine Matton as officer can be given discretionary salary raises or standard officer salary, by pedrwyth
 - Gameplay/Balancing Updates:
   . Boarding skill decrease for surrendered captains disabled by Tingyun
   . Assigning of skill bonuses made nation-dependent by Levis
@@ -90,6 +91,10 @@ Build 14:
   . WDM_MAP_TO_SEA_ENCOUNTERS_SCALE increased when Open Sea mod disabled, to increase spawn distance from enemy ships in worldmap encounters, by Grey Roger
   . NPC ships can now be damaged by collisions by Pieter Boelen and Grey Roger
   . False flag recognition code corrected to make it work by Pieter Boelen and Grey Roger
+  . Various ship stats rebalanced by HellSailor
+  . Officers hired from tavern attempt to take a free slot, otherwise become non-party passengers, instead of forcibly occupying a party slot, by Grey Roger
+  . If bandits appear in Charlestown Mystery House, fighting is enabled, by Grey Roger
+  . Player and officers heal overnight during sea travel, by Grey Roger
 - Code Updates:
   . Limited number of soldiers in Merchant Guild attacks by Pieter Boelen
   . Reduced number of soldiers in Soldier Reinforcements by Pieter Boelen
@@ -164,6 +169,10 @@ Build 14:
   . "PROGRAM\Loc_ai\types\LAi_stunned.c", PROGRAM\QUESTS\quests_check.c": new quest condition "NPC_Stunned" by Grey Roger and Pieter Boelen
   . "PROGRAM\dialog.c": check for valid character added to function 'StartDialogWithMainCharacter' by Grey Roger
   . "PROGRAM\CCCdirectsail.c", "RESOURCE\INI\TEXTS\ENGLISH\interface_strings.txt": "Directions" array set to use "Dir_N", "Dir_S" etc. instead of "N", "S" etc. by Grey Roger
+  . "book2.txt", "skillbook1.txt", "smugglingbook.txt": spelling and grammar mistakes corrected by OxbayTavern2003
+  . New quest check "LandEnter" checks if you are at location containing "port" or "shore", by Grey Roger
+  . Various duplicate greeting and sound aliases removed to allow new aliases to be added, by Grey Roger
+  . Brothels overhauled by Grey Roger
 - Bug Fixes:
   . Fix to prevent Merchant Guild attack when player group was not responsible by Pieter Boelen
   . Fix to allow larger Random Quest Ships by Pieter Boelen
@@ -293,6 +302,8 @@ Build 14:
   . Citizen dialog files corrected to show town population by Homo Eructus
   . "PROGRAM\Characters\Leveling.c, officers.c", "PROGRAM\QUESTS\quests_common.c": calls on GetAttributeN, GetAttributesNum, GetAttributeName changed to supply '&name' (aref) instead of 'name' (object) to prevent bugs by Hammie
   . "SName" attribute for "HMS_Sophie" changed from "Sophie" to "HMS_Sophie" to avoid conflict with woman's name "Sophie" by Homo Eructus
+  . "merchant" locators in Charlestown and Guadeloupe raised to ground level so that random traders placed when player has extra crew ashore do not appear on top of regular characters, by Grey Roger
+  . Reloading a bayonet musket equips sword instead of fist, by Jack Rackham
 - Storyline Updates:
   . Sidequests:
     > A Girl Won in a Card Game, enabled also at Grenada by Pieter Boelen
@@ -360,6 +371,8 @@ Build 14:
     > Rogue / Gambler start: new questbook entries for gambler and female rogue, entire quest made optional, "PO_Fleut50" replaced by "FastMerchantman2" in last two periods, by Grey Roger
     > Elizabeth Shaw's Disappearance: Davy Jones given a lot of seafaring abilities plus MaxCrew and actual crew boosted to make battle with "Flying Dutchman" tougher by Grey Roger
     > New starting quest for FreePlay agent by Grey Roger
+    > Option to report failure to find target ship of governor ship-hunting quest, by Grey Roger
+    > After you lend Baldewyn Coffier money, he takes over one of the street trader stalls, by pedrwyth
   . Tutorial:
     > Stormy Start potentially permanently lost ship fixed by Jack Rackham
     > Locked Cabin Icon removed after tutorial completes by pedrwyth
@@ -388,6 +401,8 @@ Build 14:
     > All companion ships sent to Port Royale during second mission, then Silehard checks if you gained new companions on return voyage and can't get original companions back, by Grey Roger
     > If 'Sirena' fails to show up at Palm Beach for any reason, talking to crewman ashore for option to return to sea puts 'Sirena' back, by Grey Roger
     > Code to remove companions after storm and restore them at San Juan rewritten to be more reliable by Grey Roger
+    > Bridgetown soldiers restored to normal behaviour after stealing idol, monster detection radius restored to normal after temple, by Grey Roger
+    > Option to make Virgile Boone join you at Octopus Bay if your ship is moored there, by Grey Roger
   . Ardent storyline:
     > Fully completed by Grey Roger
     > New chapter "Imperial Escort" by Grey Roger
@@ -424,10 +439,12 @@ Build 14:
     > Choosing "Blaze" model, i.e. Nathaniel Hawk, gives you the same ship, flags and difficulty as if you were starting "standard" story
     > Bart Renault demands all your money less 1, instead of fixed 999, by Grey Roger
     > New cursed character Ricardo Orellano with special start by GhostOfDeath91
-    > Malcolm Hatcher's nation set to match player's by Grey Roger
+    > Malcolm Hatcher's nation set to match player's, gets title if Malcolm is a naval officer and his nation has a title, by Grey Roger
     > New starting quest for Engineer, "A New Invention" by Jack Rackham
     > New trophy quest for Gambler, "The Poker Tournament" by pedrwyth and Jack Rackham
     > New trophy quest for Agent, "Investigate The <Insert Ship Name>" by Grey Roger
+    > Davy Jones gets weedy skeletons in deck crew and in crew quarters, new special crew models also appear in crew quarters, by Grey Roger
+    > Special start setups for Will Turner, Dark Teacher, Danielle Greene, Anamaria, Blackbeard, Cutler Beckett and various Pirate Lords by Lonious
   . Hornblower storyline:
     > Lieutenant Bush custom model added by Grey Roger
     > Various potential errors fixed by Grey Roger
@@ -444,6 +461,9 @@ Build 14:
     > When you become Barbossa, lose your own officers and get Pintel and Ragetti by Grey Roger
     > Dialog for "Girl Won in a Card Game" added to storyline version of Joseph Claude Le Moigne's dialog files by Salonikasurf
     > Dialog for Cutler Beckett in lighthouse arrest scene now uses AWE line about liberating cargo, by Grey Roger
+    > New quests to cover DMC by Sebrian
+    > New cut-scene videos from DMC by Sebrian
+    > New locations for DMC by Jack Rackham
   . Woodes Rogers storyline:
     > More new WIP content added by Jack Rackham
     > Part 2 extension added and playable by Jack Rackham
@@ -451,8 +471,9 @@ Build 14:
   . The Gold-Bug storyline:
     > Ending fixed by Jack Rackham
   . Devlin Opera storyline:
-    > New quests "My Brother, Ladies and Gentlemen" and "Yo Ho Ho and a shipment of rum", choice of ways to complete "Yo Ho Ho and a shipment of rum", by Bathtub Pirate
+    > New quests "My Brother, Ladies and Gentlemen" and "Yo Ho Ho and a shipment of rum", choice of ways to complete "Yo Ho Ho and a shipment of rum", by BathtubPirate
     > Blaze Devlin's fight scene checks for stunned opponents by Grey Roger
+    > New quest "El Navegante" with choice of ways to complete it, by BathtubPirate
 - Model and Texture Updates:
   . Improved jungle grass and sky textures by Corsairs-Harbour.ru
   . Grass and pine tree textures further improved by Grey Roger
@@ -558,7 +579,7 @@ Build 14:
   . New "sit2" locator type replaces "candles" for player's seat opposite gambler in taverns, made visible if VISIBLE_LOCATORS is set, by Grey Roger & Jack Rackham
   . "Soldier" locator types made visible if VISIBLE_LOCATORS is set, by Grey Roger
   . Improved church as background to "Cartagena_town_01" by Jack Rackham
-  . New playable character "BeatriceB" by Bathtub Pirate
+  . New playable character "BeatriceB" by Jacob
   . Building in Grand Turk near tavern now has "RR Club" sign by Jack Rackham
   . New playable character Ricardo Orellana, with custom sword and loading screen, by GhostofDeath91
   . Two cannon locators added to "Frigate_Sat.gm" and "Frigate_Ex_Sat.gm" for previously unused gunports by Grey Roger
@@ -576,7 +597,10 @@ Build 14:
   . New character model "Rose" by Nita
   . New ship models "RN_FleutWar", "SP_FleutWar", "PinnaceMedium2", "PinnaceMerchant2" by Grey Roger
   . Improved lighting files for 'Flying Dutchman' cabin by meowsandstuff
-  . Missing cannon fire locators added to port side by Grey Roger
+  . Missing cannon fire locators for "HMS_Endeavour" added to port side by Grey Roger
+  . New sword "BladeNorr" for use by Commodore Norrington by Grey Roger
+  . New character models "WillTurner2", "BootstrapBill" and "BlackCaesar" by Grey Roger
+  . New deck models for cursed Flying Dutchman by Grey Roger
   
 - ADDITIONAL INSTALLATION OPTIONS:
   . Possibility to revert to original black-and-yellow paint scheme for British ships

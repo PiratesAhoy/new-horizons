@@ -27,6 +27,13 @@ void StartStoryLine()
 	TakeItemFromCharacter(Pchar, PChar.start_weapon.blade);
 	TakeItemFromCharacter(Pchar, PChar.start_weapon.gun);
 	TakeItemFromCharacter(Pchar, "spyglass2");
+	PChar.start_spyglass = "spyglass1";
+	// PB: Spyglass of Shame, Easter-Egg inspired by interview with Yuri (Ursus) Rogach
+	// GR: only if you have a "Russian" outfit and a non-default Personal flag
+	if(sti(GetAttribute(PChar, "flags.personal")) != 0 || sti(GetAttribute(PChar, "flags.personal.texture")) != 2)
+	{
+		if(HasSubstr(PChar.model, "blaze") || PChar.model == "aleskeevich") PChar.start_spyglass = "spyglass0";
+	}
 	// PB: Override Character Type <--
 
 	//NK -->

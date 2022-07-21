@@ -17,6 +17,11 @@ void ProcessDialogEvent()
 	ref PChar;
 	PChar = GetMainCharacter();
 	
+	string iDay, iMonth;
+	iDay = environment.date.day;
+	iMonth = environment.date.month;
+	string lastspeak_date = iday + " " + iMonth;
+	if(!CheckAttribute(NPChar, "quest.item_date")) NPChar.quest.item_date = NPChar.quest.meeting;
 	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
 
 	
@@ -85,16 +90,34 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[18];
 				link.l1.go = "work_2";
 			}
-			if (npchar.quest.hire == "money_3") //Fix:Storekeeper;19.09
+			if (npchar.quest.hire == "wait_month") //PW Baldewyn stallholder and month not up
 			{
 				dialog.snd = "Voice\BACO\BACO002";
-				dialog.text = DLG_TEXT[19];
+				dialog.text = DLG_TEXT[141] ;
+				link.l1 = DLG_TEXT[146];
+				link.l1.go = "trader";
+			}
+			if (npchar.quest.hire == "trader") //PW Baldewyn stallholder and repaid loan after month.
+			{
+				dialog.snd = "Voice\BACO\BACO002";
+				dialog.text = DLG_TEXT[147] ;
+				link.l1 = DLG_TEXT[148];
+				link.l1.go = "trader";
+			}
+			
+			if (npchar.quest.hire == "money_3") //PW Baldewyn stallholder and month up so repay loan
+			{
+				dialog.snd = "Voice\BACO\BACO002";
+				dialog.text = GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[138];
 				link.l1 = DLG_TEXT[20];
 				link.l1.go = "line_money";
 			}
+			if ((!npchar.quest.hire == "wait_month") && (!npchar.quest.hire == "money_3"))
+			{	
 			link.l2 = pcharrepphrase(DLG_TEXT[21], DLG_TEXT[22]);
 			link.l2.go = "exit";
 			NextDiag.TempNode = "First time";
+			}
 		break;
 
 		case "hire_denied":
@@ -263,13 +286,10 @@ void ProcessDialogEvent()
 			{
 				dialog.snd = "Voice\BACO\BACO020";
 				dialog.text = DLG_TEXT[113] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[114];
-				//link.l1 = DLG_TEXT[115];
-				//link.l1.go = "exit";
-				//if (makeint(pchar.money) > 2500)
-				//{
-					link.l2 = DLG_TEXT[116];
-					link.l2.go = "work_2";
-				//}
+				link.l1 = DLG_TEXT[115];
+				link.l1.go = "exit";
+				npchar.quest.hire = "trader";
+				
 			}
 			else
 			{
@@ -320,7 +340,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[131];
 			link.l1 = DLG_TEXT[132] + GetMyShipNameShow(PChar) + DLG_TEXT[133];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			//PlayStereoSound("INTERFACE\took_item.wav");
 			//AddMoneyToCharacter(pchar,-2500); //Fix:Storekeeper;19.09
 			AddPassenger(pchar, npchar, 0);
 			npchar.quest.hire = "hired";
@@ -332,7 +352,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[134];
 			link.l1 = DLG_TEXT[135] + GetMyShipNameShow(PChar) + DLG_TEXT[136];
 			link.l1.go = "exit";
-			PlayStereoSound("INTERFACE\took_item.wav");
+			//PlayStereoSound("INTERFACE\took_item.wav");
 			//AddMoneyToCharacter(pchar, -2500); //Fix:Storekeeper;19.09
 			if(AUTO_SKILL_SYSTEM)
 			{
@@ -345,9 +365,47 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("hire_baldewyn");
 		break;
 
+		case "trader"://PW Baldewyn stallholder
+			dialog.snd = "Voice\BACO\BACO025";
+			dialog.text = DLG_TEXT[142];
+		
+		/*
+		if ((characters[GetCharacterIndex("Sabine Matton")].quest.hire == "enemy_forever")
+			(
+			//PW intend to have Baldewyn stock basic provisions at his stall if Arnaud wont trade (until he is replaced by Baldewyn)
+			//but stealing the store interface is tricky WIP
+			Link.l1 = DLG_TEXT[144];
+			Link.l1.go = "Baldewyn_provisions";
+			)
+			else
+			(
+		*/
+			Link.l2 = DLG_TEXT[143];
+			Link.l2.go = "Baldewyn_Items";	
+			Link.l3 = DLG_TEXT[145];
+			Link.l3.go = "exit";
+		//)
+		break;
+		
+		case "Baldewyn_Items"://
+		if (!CheckAttribute(npchar, "quest.item_date") || npchar.quest.item_date != lastspeak_date)
+				// PB: Prevent error
+				{
+					GiveItemToTrader(npchar);
+					npchar.quest.item_date = lastspeak_date;
+				}
+			NextDiag.CurrentNode = NextDiag.TempNode;
+			DialogExit();
+			LaunchItemsTrade(NPChar);
+		break; 
+		
+		case "Baldewyn_provisions":
+		//call up the store interface or subset of that with first 8 provisions only
+		break;
+		
 		case "line_money":
 			dialog.snd = "Voice\BACO\BACO026";
-			dialog.text = DLG_TEXT[137] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) + DLG_TEXT[138];
+			dialog.text = DLG_TEXT[137] + GetMyAddressForm(NPChar, PChar, ADDR_CIVIL, false, false) ;
 			link.l1 = DLG_TEXT[139];
 			link.l1.go = "exit";
 			link.l2 = DLG_TEXT[140];
@@ -361,7 +419,8 @@ void ProcessDialogEvent()
 				AddPartyExpChar(pchar, "Sneak", 8);
 			}
 			else { AddPartyExp(pchar, 750); }
-			ChangeCharacterReputation(pchar, 2);
+			//ChangeCharacterReputation(pchar, 2);// PW you got this when you lent the money
+			
 		break;
 
 		case "Exit":

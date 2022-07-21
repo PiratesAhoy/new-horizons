@@ -144,7 +144,7 @@ void ProcessDialogEvent()
 			}
 			if (pchar.quest.main_line == "blaze_goto_douwesen_with_danielle_2")
 			{
-				dialog.text = pchar.name + DLG_TEXT[23] + characters[getcharacterindex(DLG_TEXT[24])].name + DLG_TEXT[25];
+				dialog.text = GetMyName(PChar) + DLG_TEXT[23] + characters[getcharacterindex(DLG_TEXT[24])].name + DLG_TEXT[25];
 				link.l1 = DLG_TEXT[26];
 				link.l1.go = "blaze_goto_douwesen_with_danielle";
 			}

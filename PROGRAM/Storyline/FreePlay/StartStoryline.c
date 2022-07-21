@@ -1,6 +1,6 @@
 void StartStoryLine()
 {
-	ref PChar, ch;
+	ref PChar, ch, officer;
 	PChar = GetMainCharacter();
 	ch = CharacterFromID("Malcolm Hatcher");
 
@@ -213,6 +213,19 @@ void StartStoryLine()
 			}
 		break;
 
+		case PLAYER_TYPE_MERCHANT:
+			if (GetMySimpleOldName(PChar) == "Cutler Beckett" && PChar.model == "Cutler_Beckett")
+			{
+    				ch = CharacterFromID("Malcolm Hatcher");
+    				ch.name = TranslateString("","Lieutenant");
+    				ch.lastname = TranslateString("","Bligh");
+    				ch.Dialog.Filename = "Robert Fletcher_dialog.c";
+    				SetModelfromID(ch, "Eitc_lt1_47");
+				SetRankTitle(PChar, TranslateString("", "Lord"));
+				PChar.knighted = ENGLAND;
+			}
+		break;
+
 		case PLAYER_TYPE_SWORD_MASTER:
 			if (GetMySimpleOldName(PChar) == "Bohdan Aleskeevich Voronov" && iNation == PERSONAL_NATION)
 			{
@@ -394,10 +407,10 @@ void StartStoryLine()
 				// Ragetti
 				if (GetMySimpleOldName(PChar) == "Hector Barbossa")
 				{
-					SetModelfromArray(ch, GetModelIndex("Ragetti"));
-					ch.old.name = "Ragetti";
+					SetModelfromID(ch, "pirat4");
+					ch.old.name = "Twigg";
 					ch.old.lastname = "";
-					ch.name = TranslateString("","Ragetti");
+					ch.name = TranslateString("","Twigg");
 					ch.lastname = "";
 				}
 				else
@@ -419,15 +432,91 @@ void StartStoryLine()
 				SetRandomNameToCharacter(ch);
 				ch.Dialog.Filename = "Robert Fletcher_dialog.c";
 			}
+
+			switch(GetMySimpleOldName(PChar))
+			{
+				case "Blackbeard":
+					if(PChar.model == "Blackbeard")
+					{
+    						ch.Dialog.Filename = "Robert Fletcher_dialog.c";
+    						ch.name = TranslateString("", "Black Caesar");
+						ch.lastname = "";
+   						SetModelfromID(ch, "napitan");
+						ch.greeting = "Gr_QC citizen";
+						PChar.reputation = REPUTATION_SWINDLER;
+					}
+				break;
+
+				case "Eduardo Villanueva":
+					if(PChar.model == "Villanueva")
+					{
+    						ch.Dialog.Filename = "Robert Fletcher_dialog.c";
+						SetModelfromID(ch, "blackman");
+    						ch.name = TranslateString("", "Mateo");
+    						ch.lastname = TranslateString("", "Enrique");
+						ch.greeting = "Gr_qc citizen";
+						PChar.reputation = REPUTATION_RASCAL;
+					}
+				break;
+
+				case "Capitaine Chevalle":
+					if(PChar.model == "captaine_chevalle")
+					{
+   						SetModelfromArray(ch, GetModelIndex("black_corsair"));
+    						ch.name = TranslateString("", "Raoul");
+    						ch.lastname = TranslateString("", "Dupont");
+						ch.greeting = "Gr_thierry bosquet";
+						PChar.reputation = REPUTATION_RASCAL;
+					}
+				break;
+
+				case "Sumbhajee Angria":
+					if(PChar.model == "sri_sumbhajee")
+					{
+   						SetModelfromArray(ch, GetModelIndex("sri_sumbhajee_aid"));
+    						ch.name = TranslateString("", "Askay");
+    						ch.lastname = "";
+						ch.greeting = "Gr_Toff oremans";
+						PChar.reputation = REPUTATION_RASCAL;
+						SetRankTitle(PChar, TranslateString("", "Sri"));
+					}
+				break;
+
+				case "Sao Feng":
+					if(PChar.model == "saofeng")
+					{
+    						ch.Dialog.Filename = "Robert Fletcher_dialog.c";
+   						SetModelfromArray(ch, GetModelIndex("saofeng_guard"));
+    						ch.name = TranslateString("", "Lian");
+    						ch.lastname = "";
+						ch.greeting = "Gr_f_officer_English";
+						PChar.reputation = REPUTATION_RASCAL;
+					}
+				break;
+			}
 		break;
 
 		case PLAYER_TYPE_CASTAWAY:
 			ch = CharacterFromID("Malcolm Hatcher");
 			ch.Dialog.Filename = "Robert Fletcher_dialog.c";
 			ch.nation = iNation;
-			DeleteAttribute(ch, "questchar");
-			SetRandomNameToCharacter(ch);
-			SetModelfromArray(ch, GetModelIndex(GetRandomModelForTypeExSubCheck(1, "Captains", "man", iNation)));
+			switch(GetMySimpleOldName(PChar))
+			{
+				case "Black Caesar":
+					if(PChar.model == "BlackCaesar")
+					{
+   						SetModelfromArray(ch, GetModelIndex("Sailor19"));
+						ch.nation = ENGLAND;
+						DeleteAttribute(ch, "questchar");
+						SetRandomNameToCharacter(ch);
+						ch.greeting = "Gr_Maxwell";
+						ch.keepmodel = true;
+					}
+				break;
+				DeleteAttribute(ch, "questchar");
+				SetRandomNameToCharacter(ch);
+				SetModelfromArray(ch, GetModelIndex(GetRandomModelForTypeExSubCheck(1, "Captains", "man", iNation)));
+			}
 		break;
 
 		case PLAYER_TYPE_ENGINEER:
@@ -1435,19 +1524,202 @@ void StartStoryLine()
 				{
 					iNation = AMERICA;
 					SetServedNation(iNation);
-					SetRMRelation(PChar, iNation, REL_NEUTRAL);										// Encourage play for America
+					SetRMRelation(PChar, iNation, REL_NEUTRAL);									// Encourage play for America
 				}
 				else
 				{
 					SetRMRelation(PChar, PIRATE, REL_AFTERATTACK);									// But are still neutral to the pirates
 				}
-				SetRank(PChar, iNation, 0);															// Non-pirate corsairs get a Letter of Marque
+				SetRank(PChar, iNation, 0);												// Non-pirate corsairs get a Letter of Marque
 			}
 		break;
 
 		case PLAYER_TYPE_CURSED:
 			if(CheckCharacterItem(PChar, "Davy_Chest"))	Nations_SetAllHostile();					// Hostile to everybody
 			DefaultStart = 0;																		// Have to remain hostile to everyone, so skip the extra check later
+		break;
+	}
+
+	switch(GetMySimpleOldName(PChar))
+	{
+		case "Sumbhajee Angria":
+			if(PChar.model == "sri_sumbhajee")
+			{
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_FIRSTMATE, "Sri_Sumbhajee_aid", 3, PIRATE, false);
+				officer.name = TranslateString("", "Pusasn");
+				officer.lastname = "";
+				officer.reputation = REPUTATION_RASCAL;
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				GiveItem2Character(officer, "blade31");
+				GiveItem2Character(officer, "pistol7");
+				if (ENABLE_AMMOMOD)
+				{
+					TakenItems(officer, "gunpowder", 3 + rand(3));
+					TakenItems(officer, "pistolbullets", 3 + rand(3));
+				}
+				officer.greeting = "Gr_Toff Oremans";
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 2, GetCharacterIndex(officer.id));
+			}
+		break;
+
+		case "Sao Feng":
+			if(PChar.model == "saofeng")
+			{
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_ABORDAGE, "saofeng_guard", 3, PIRATE, false);
+				officer.name = TranslateString("", "Lian");
+				officer.lastname = "";
+				officer.reputation = REPUTATION_RASCAL;
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				GiveItem2Character(officer, "blade20");
+				TakenItems(officer, "medical1", 4);
+				officer.greeting = "Gr_Woman_English Citizen";
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 1, GetCharacterIndex(officer.id));
+
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_ABORDAGE, "saofeng_guard", 3, PIRATE, false);
+				officer.name = TranslateString("", "Park");
+				officer.lastname = "";
+				officer.reputation = REPUTATION_RASCAL;
+				officer.lastname = "";
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				GiveItem2Character(officer, "blade20");
+				TakenItems(officer, "medical1", 4);
+				officer.greeting = "Gr_Woman_English Citizen";
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 2, GetCharacterIndex(officer.id));
+
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_FIRSTMATE, "mongol", 3, PIRATE, false);
+				officer.name = TranslateString("","Tai");
+				officer.lastname = TranslateString("","Huang");
+				officer.reputation = REPUTATION_RASCAL;
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				GiveItem2Character(officer, "blade27");
+				GiveItem2Character(officer, "piratespistol");
+				if (ENABLE_AMMOMOD)
+				{
+					TakenItems(officer, "gunpowder", 1 + rand(2));
+					TakenItems(officer, "pistolbullets", 1 + rand(2));
+				}
+				officer.greeting = "Gr_QC citizen";
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 3, GetCharacterIndex(officer.id));
+				PChar.quest.remove_hatcher = true;
+			}
+		break;
+
+		case "Hector Barbossa":
+			if(PChar.model == "Barbossa")
+			{
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_CANNONEER, "Ragetti", 3, PIRATE, false);
+				officer.name = TranslateString("", "Ragetti");
+				officer.lastname = "";
+				officer.reputation = REPUTATION_RASCAL;
+				officer.lastname = "";
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				GiveItem2Character(officer, "blade4");
+				GiveItem2Character(officer, "jerkin");
+				if(CharPlayerType == PLAYER_TYPE_CURSED) GiveItem2Character(officer, "cursedcoin");
+				officer.greeting = "Gr_douwesen pirate";
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 1, GetCharacterIndex(officer.id));
+
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_CANNONEER, "pintel", 3, PIRATE, false);
+				officer.name = TranslateString("", "Pintel");
+				officer.lastname = "";
+				officer.reputation = REPUTATION_RASCAL;
+				officer.lastname = "";
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				GiveItem2Character(officer, "blade4");
+				GiveItem2Character(officer, "pistol1");
+				if (ENABLE_AMMOMOD)
+				{
+					TakenItems(officer, "gunpowder", 3 + rand(3));
+					TakenItems(officer, "pistolbullets", 3 + rand(3));
+				}
+				if(CharPlayerType == PLAYER_TYPE_CURSED) GiveItem2Character(officer, "cursedcoin");
+				officer.greeting = "Gr_douwesen pirate";
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 2, GetCharacterIndex(officer.id));
+
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_BOATSWAIN, "BlackCaesar", 3, PIRATE, false);
+				officer.name = TranslateString("", "Bo'sun");
+				officer.lastname = "";
+				officer.reputation = REPUTATION_RASCAL;
+				officer.lastname = "";
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				GiveItem2Character(officer, "blade4");
+				GiveItem2Character(officer, "jerkin");
+				if(CharPlayerType == PLAYER_TYPE_CURSED) GiveItem2Character(officer, "cursedcoin");
+				officer.greeting = "Gr_douwesen pirate";
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 3, GetCharacterIndex(officer.id));
+			}
+		break;
+
+		case "Cutler Beckett":
+			if(PChar.model == "Cutler_Beckett")
+			{
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_ABORDAGE, "CivilianHB", 3, ENGLAND, false);
+				officer.name = TranslateString("", "Ian");
+				officer.lastname = TranslateString("", "Mercer");
+				officer.reputation = REPUTATION_SWINDLER;
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				GiveItem2Character(officer, "blade22");
+				GiveItem2Character(officer, "piratespistol");
+				if (ENABLE_AMMOMOD)
+				{
+					TakenItems(officer, "gunpowder", 6);
+					TakenItems(officer, "pistolbullets", 6);
+				}
+				officer.greeting = "Gr_seaman";
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 1, GetCharacterIndex(officer.id));
+			}
+		break;
+
+		case "Black Caesar":
+			if(PChar.model == "BlackCaesar")
+			{
+				ch = CharacterFromID("Malcolm Hatcher");
+				officer = CreateOfficer_Cheat(OFFIC_TYPE_ABORDAGE, ch.model, 3, ENGLAND, false);
+				officer.name = GetMyName(ch);
+				officer.lastname = GetMyLastName(ch);
+				officer.reputation = REPUTATION_RASCAL;
+				DeleteAttribute(officer, "loyality");
+				DeleteAttribute(officer, "alignment");
+				DeleteAttribute(officer, "items");
+				DeleteAttribute(officer, "equip");
+				officer.AbordageMode = 1;
+				SetOfficersIndex(PChar, 1, GetCharacterIndex(officer.id));
+				officer.greeting = "Gr_Maxwell";
+				officer.grsex = "man";
+				PChar.quest.remove_hatcher = true;
+			}
 		break;
 	}
 

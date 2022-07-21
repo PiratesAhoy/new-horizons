@@ -1,4 +1,4 @@
-string DLG_TEXT[88] = {
+string DLG_TEXT[97] = {
 "What's the benefit for us?",
 "Anamaria!?",
 "You stole my boat!",
@@ -87,5 +87,13 @@ string DLG_TEXT[88] = {
 "We only need one more piece of the map then! I got my piece off a drunk who got the map piece off a Captain Hector Barbossa. Maybe we should track him down. To find the island isn't easy, Isla de Muerte it's called, and they say you need a special compass to find it. You will also need the complete map or else the cave where the treasure is hidden can't be found.", // TALISMAN changed
 "You will find him here, he is somewhere in #sGreenford#. He has a secret room somewhere. Be careful where you travel though, Cutler Beckett is also on the island and has been asking if anyone has seen you.", // TALISMAN ADDED ---->
 "Ah! Sir Cutler, yes he would have an interest in me, wouldn't he now? Alright then, I'll be careful. In the meantime I shall go find Captain Kell.",
-
+"Show us what it is you got there Jack! It's a key?",
+"No! Much more better. It is a drawing of a key..[Jack holds up the cloth] Gentlemen...and a lady.. what do keys do!?",
+"Keys...unlock...things Captain?",
+"...",
+"Jack, this island is dangerous! We should head back to the ship, what if there's even more of them ?!",
+"Nonsense lass, a bunch of tribesman won't be enough to scare us away! We shall press forward!",
+"We need to get back to the ship captain, this island is filled with them!",
+"As a matter of fact, I can hear more of them approaching...RUN!",
+"Literally, or figuratively? He couldn't literally put his heart in a chest! Could he??",
 };

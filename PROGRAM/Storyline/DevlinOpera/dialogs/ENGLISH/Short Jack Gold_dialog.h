@@ -19,7 +19,7 @@ string DLG_TEXT[24] = {
 "Well, me, my sister Bonnie... and... My brother Blaze...",
 "So there you have it. Your sister has received nothing, else she would have told you, so it is your brother Blaze you need to find to complete the puzzle. And this note here tells you where you have to look for him.",
 "How so?",
-"The snow! There is a small island in the lesser antilles, which the Spaniards call #sisland_Quebradas Costillas#. Meaning 'Our Lady of the Snow'. And its 'dirty' side is on the west coast, which is a notorious hideout for smugglers and pirates...",
+"The snow! There is a small island in the lesser Antilles, which the Spaniards call #sisland_Quebradas Costillas#. Meaning 'Our Lady of the Snow'. And its 'dirty' side is on the west coast, which is a notorious hideout for smugglers and pirates...",
 "When I knew how simple it was... I guess I have a lot to learn! Thank you, Captain Gold!",
 "Nothing to thank, Miss Devlin. No go search for your brother, and good fortune to you.",
 "Oh I will, Captain Gold!",

@@ -1353,6 +1353,17 @@ void ProcessDialogEvent()
 			// boal 05.09.03 offecer need to go to abordage <--
 			Link.l7 = DLG_TEXT[89];
 			Link.l7.go = "clothesyou";
+			//PW -->> Sabine dialog start start
+			if ( NPChar.id == "Sabine Matton") 
+			{
+				if(CheckAttribute(NPChar,"quest.NoRaise")) 
+				{
+					Link.l8 = DLG_TEXT[225];
+					Link.l8.go = "Sabine payrise";
+				}
+			}
+			//PW <----Sabine dialog start end
+			
 			if(CheckAttribute(PChar,"articles") && sti(PChar.articles)) 
 			{
 				Link.l2 = DLG_TEXT[90]; // SA
@@ -1474,7 +1485,37 @@ void ProcessDialogEvent()
 			Link.l1.go = "Exit";
 		break;
 			// <-- added by Aconcagua
+			//PW ---> Sabine to maybe get paid
+		case "Sabine payrise":
+			dialog.text = DLG_TEXT[226];
+			Link.l1 = DLG_TEXT[227];
+			Link.l1.go = "Exit";
+			Link.l2 = DLG_TEXT[228];
+			Link.l2.go = "Sabine payrise1";
+			Link.l3 = DLG_TEXT[229];
+			Link.l3.go = "Sabine normal pay";
+		break;	
 
+		case "Sabine payrise1":
+			NPChar.quest.OfficerPrice = sti(NPChar.quest.OfficerPrice) + 50;
+			OfficerPrice = CalcEncOfficerPrice(NPChar);
+			if(ourMoney >= OfficerPrice) 
+			{
+				PlayStereoSound("INTERFACE\took_item.wav");
+				AddMoneyToCharacter(Pchar, -OfficerPrice);
+  				AddMoneyToCharacter(NPChar, OfficerPrice);
+			
+			}
+			DialogExit();	
+		break;
+		
+		case "Sabine normal pay":
+			if (sti(NPChar.quest.OfficerPrice <= 100)) NPChar.quest.OfficerPrice = 100  ;
+			DeleteAttribute (NPChar,"quest.NoRaise");
+			DialogExit();
+		break;
+		
+		//PW<-- Sabine to get paid end
 		case "layupships":
 			// added after build 11 by KAM (a temporary solution!) -->
 			DialogExit();

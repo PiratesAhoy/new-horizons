@@ -158,7 +158,7 @@ string DLG_TEXT[340] = {
 "Follow me. I'll show you the right door and then you'll be on your own. But if you have any questions, just ask me.",
 "Now you go talk to the merchant, Captain. Sell your ",
 " and ",
-" To get a spyglass, tell the merchant that you want to buy some personal gear and he should have one for sale. After that you should sell our cargo, which is ",
+" To get a spyglass, tell the merchant that you want to buy some personal gear and she should have one for sale. After that you should sell our cargo, which is ",
 " but don't buy anything, we need money to fix up our ship and hire more crew. Do you need more details on trading?",
 ". We can use money acquired from trade to hire crew and repair the ship. Do you need more clarifications?",
 "Yeah, that would be useful.",

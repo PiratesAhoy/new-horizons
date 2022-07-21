@@ -512,11 +512,11 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			Link.l1 = DLG_TEXT[35];
 			Link.l1.go = "price";
 			Link.l2 = DLG_TEXT[36];
-            Link.l2.go = "Exit_not_hire";
+			Link.l2.go = "Exit_not_hire";
 		break;
 
 		case "Exit_not_hire":
-			NPChar.greeting = "Gr_Dark Teacher";
+			NPChar.greeting = "Gr_Clauss"; // was "Gr_Dark Teacher" which is identical
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
@@ -741,8 +741,9 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
-				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+//				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+//				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+				Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 				link.l4 = DLG_TEXT[76];
 				link.l4.go = "take_as_prisoner";
 			}
@@ -959,8 +960,9 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
-				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+//				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+//				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+				Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 				link.l3 = DLG_TEXT[76];
 				link.l3.go = "take_as_prisoner";
 			}
@@ -997,8 +999,9 @@ trace("No reputation was assigned. Randomly assigning reputation " + NPChar.repu
 			}
 			if(bAllowCapture) // TIH allow to take as prisoner Aug24'06
 			{
-				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
-				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+//				if (NPChar.sex == "woman") Preprocessor_Add("pronoun3", XI_ConvertString("her"));
+//				else Preprocessor_Add("pronoun3", XI_ConvertString("his"));
+				Preprocessor_Add("pronoun3", XI_ConvertString(GetMyPronounPossessive(NPChar)));
 				link.l3 = DLG_TEXT[76];
 				link.l3.go = "take_as_prisoner";
 			}

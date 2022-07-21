@@ -15,7 +15,7 @@ string DLG_TEXT[439] = {
 "I'm listening, ",
 ".",
 "I've heard that #syour_gov_kid# has recently got engaged. Would it be possible for me to pay my respects and offer my congratulations in person?",
-"I'm sorry, but I don't have anything to talk about right now",
+"I'm sorry, but I don't have anything to talk about right now.",
 "I'm afraid that won't be possible. #sname# is very busy with studying and can not be disturbed. But I shall be sure to pass on your good wishes, Captain ",
 "My thanks. I hope the wedding goes well.",
 " has told me of an intruder. Now I find you attempting to kidnap ",

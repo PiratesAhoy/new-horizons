@@ -1,5 +1,5 @@
 title=Yo Ho Ho and a shipment of rum
-text.t1=Here we are with a shipload of rum, that we need to deliver to an high-ranking officer on #sisland_Falaise de Fleur# for his son's wedding. We also need to explain why part of it got 'lost' on the way...
+text.t1=Here we are with a shipload of rum, that we need to deliver to a high-ranking officer on #sisland_Falaise de Fleur# for his son's wedding. We also need to explain why part of it got 'lost' on the way...
 text.t2=I need to find the officer who ordered the rum. They say he's always visiting the governor this time of the day.
 text.t3=Toni Haraldo asked me to return his poetry book from a guard named Guzman. But first I need to find the head guard Crespo.
 text.t4=Crespo says Guzman is on duty at the jungle gates.

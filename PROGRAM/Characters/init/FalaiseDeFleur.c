@@ -341,7 +341,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	ch.location.group = "sit2"; // GR: was "candles", PB: was "sit"
 	ch.location.locator = "sit3";
 	ch.Dialog.Filename = "Andre Juliao_dialog.c";
-	ch.greeting = "Gr_andre juliao";
+	ch.greeting = "Gr_Portuguese Officer"; // was "Gr_andre juliao", both just use "Por_m_a_001.wav"
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
 	ch.nation = FRANCE;

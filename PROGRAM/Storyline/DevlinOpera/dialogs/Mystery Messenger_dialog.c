@@ -34,10 +34,28 @@ void ProcessDialogEvent()
 		case "Talking":
 			dialog.text = DLG_TEXT[2];
 			link.l1 = DLG_TEXT[3];
-			link.l1.go = "Exit";
+			link.l1.go = "Exit_letter";
+		break;
+
+		case "Malaga":
+			dialog.text = DLG_TEXT[4];
+			link.l1 = DLG_TEXT[5];
+			link.l1.go = "Malaga2";
+		break;
+
+		case "Malaga2":
+			dialog.text = DLG_TEXT[6];
+			link.l1 = DLG_TEXT[7];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Greenford2Santiago");
 		break;
 
 		case "Exit":
+			DialogExit();
+			Diag.CurrentNode = Diag.TempNode;
+		break;
+
+		case "Exit_letter":
 			AddDialogExitQuest("ReceivedLetter");
 
 			DialogExit();

@@ -33,7 +33,7 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			
 			dialog.snd = "Voice\COLU\COLU001";
-			dialog.text = DLG_TEXT[0] + GetMyLastName(&Characters[GetCharacterIndex(DLG_TEXT[1])]) + DLG_TEXT[2];
+			dialog.text = DLG_TEXT[0];
 			link.l1 = DLG_TEXT[3];
 			link.l1.go = "exit";
 			characters[GetCharacterIndex("Bernardo Gamboa")].dialog.currentnode = "one";

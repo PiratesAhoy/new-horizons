@@ -199,6 +199,14 @@ Jimmy{Jimmy}
 Legs{Legs}
 Port Admiral{Port Admiral}
 Talicerdor{Talicerdor}
+Guard Captain {Guard Captain}
+Prison Guard {Prison Guard}
+Atwood {Atwood}
+Paddley {Paddley}
+Elton {Elton}
+Garfield {Garfield}
+Cannibal Chief {Cannibal Chief}
+Cannibal{Cannibal}
 
 {=====| TempQuestEnemy.c |=====}
 Ronald{Ronald}

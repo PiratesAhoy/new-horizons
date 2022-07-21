@@ -25,6 +25,7 @@ void BothQuestComplete(string sQuestName)
 	ref TutDeck = &Locations[FindLocation("Tutorial_Deck")];
 	string playerBlade = "";
 	string playerGun = "";
+	string playerSpyglass = "";
 // PB <--
 
 	//trace ("ПРОВЕРЯЕТСЯ КВЕСТ " + sQuestName);
@@ -341,9 +342,10 @@ void BothQuestComplete(string sQuestName)
 // <-- KK
 				RemoveCharacterEquip(PChar, GUN_ITEM_TYPE );
 				playerGun   = PChar.start_weapon.gun;
+				playerSpyglass = PChar.start_spyglass;
 				if(playerGun != "")
 					locations[FindLocation(PChar.location)].box1.items.(playerGun) = 1;
-				locations[FindLocation(PChar.location)].box1.items.spyglass0 = 1; // PB: Spyglass of Shame, Easter-Egg inspired by interview with Yuri (Ursus) Rogach
+				locations[FindLocation(PChar.location)].box1.items.(playerSpyglass) = 1;
 
 				TutDeck.box1.items.medical1 = 2; // PB
 				TutDeck.box1.money = 1000;
@@ -736,7 +738,7 @@ void BothQuestComplete(string sQuestName)
 		break;
 
 		case "Tut_ReloadToOxbayPort":
-			EquipCharacterbyItem(PChar, "Spyglass0"); // NK; PB: Spyglass of Shame, Easter-Egg inspired by interview with Yuri (Ursus) Rogach
+			EquipCharacterbyItem(PChar, PChar.start_spyglass); // NK;
 			ResetHP(&PChar); // NK 05-07-03 - LAi_SetHP(PChar, LAI_DEFAULT_HP + sti(PChar.rank) * 5, LAI_DEFAULT_HP+ sti(PChar.rank) * 5); //NK
 			LAi_SetHP(CharacterFromID("Malcolm Hatcher"), 120.0, 120.0);
 			LAi_group_SetAlarm("tutorial", LAI_GROUP_PLAYER, 0.0);
@@ -2116,11 +2118,12 @@ void BothQuestComplete(string sQuestName)
 // added by MAXIMUS [choose character mod] <--
 
 			if(makeint(PChar.money) == 1000) AddMoneyToCharacter(PChar, 1000);
-			if(CheckCharacterItem(PChar, "Spyglass0") == 0) GiveItem2Character(PChar, "Spyglass0"); // PB: Spyglass of Shame, Easter-Egg inspired by interview with Yuri (Ursus) Rogach
+			if(CheckCharacterItem(PChar, PChar.start_spyglass) == 0) GiveItem2Character(PChar, PChar.start_spyglass);
 			if(CheckCharacterItem(PChar, "medical1") == 0) TakeNItems(PChar, "medical1", 2); // PB
 			if(CheckCharacterItem(PChar, PChar.start_weapon.blade) == 0) GiveItem2Character(PChar, PChar.start_weapon.blade);
 			if(CheckCharacterItem(PChar, PChar.start_weapon.gun) == 0) GiveItem2Character(PChar, PChar.start_weapon.gun);
 			DeleteAttribute(PChar, "start_weapon");
+			DeleteAttribute(PChar, "start_spyglass");
 
 			EquiPCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, BLADE_ITEM_TYPE));
 			EquiPCharacterbyItem(PChar, FindCharacterItemByGroup(&PChar, GUN_ITEM_TYPE));

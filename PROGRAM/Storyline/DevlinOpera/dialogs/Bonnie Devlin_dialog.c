@@ -136,6 +136,57 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[30];
 			link.l1 = DLG_TEXT[31];
 			link.l1.go = "exit";
+			AddDialogExitQuest("srsly_Blaze");
+		break;
+
+		case "optimism":
+			dialog.text = DLG_TEXT[32];
+			link.l1 = DLG_TEXT[33];
+			link.l1.go = "exit";
+			AddDialogExitQuest("map_search");
+		break;
+
+		case "Santiago_arrival":
+			dialog.text = DLG_TEXT[34];
+			link.l1 = DLG_TEXT[35];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Santiago_switch_to_Blaze");
+		break;
+
+		case "Santiago_story":
+			dialog.text = DLG_TEXT[36];
+			link.l1 = DLG_TEXT[37];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Santiago_crewmember");
+		break;
+
+//--------------------------------------------------------------
+
+		case "Bonnie_Debriefing_Santiagofullmap":
+			dialog.text = DLG_TEXT[38];
+			link.l1 = DLG_TEXT[39];
+			link.l1.go = "exit";
+			AddDialogExitQuest("celebrating_Blaze");
+		break;
+
+		case "please_glue":
+			dialog.text = DLG_TEXT[40];
+			link.l1 = DLG_TEXT[41];
+			link.l1.go = "exit";
+			AddDialogExitQuest("glue_map2");
+		break;
+
+		case "map_now_glued":
+			dialog.text = DLG_TEXT[42];
+			link.l1 = DLG_TEXT[43];
+			link.l1.go = "map_now_glued2";
+		break;
+
+		case "map_now_glued2":
+			dialog.text = DLG_TEXT[44];
+			link.l1 = DLG_TEXT[45];
+			link.l1.go = "exit";
+			AddDialogExitQuest("To_first_X");
 		break;
 
 //--------------------------------------------------------------

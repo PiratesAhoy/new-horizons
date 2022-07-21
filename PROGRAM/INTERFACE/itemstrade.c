@@ -1590,8 +1590,11 @@ void SellAllLoot()
 				if (CharLevel >= JUNK_BLADE_LEVEL_2) JunkBladeMaxDamage = 25;	// at level  9, start selling blades with max_dmg < 25(60)
 				if (CharLevel >= JUNK_BLADE_LEVEL_3) JunkBladeMaxDamage = 30;	// at level 13, start selling blades with max_dmg < 30(70)
 
-				if (sti(refitm.dmg_max) < JunkBladeMaxDamage) SellMe = true;
-				if (sti(refitm.piercing) > 40 || sti(refitm.block) > 40) SellMe = false;	// don't sell if pierce/block over 40
+				if (CheckAttribute(refitm, "dmg_max") && sti(refitm.dmg_max) < JunkBladeMaxDamage) SellMe = true;
+				if (CheckAttribute(refitm, "piercing") && CheckAttribute(refitm, "block"))
+				{
+					if(sti(refitm.piercing) > 40 || sti(refitm.block) > 40) SellMe = false;	// don't sell if pierce/block over 40
+				}
 			}
 			// LDH 22Jan09 - all items now have a skill attribute. Need to check for actual skill change
 			// Don't sell items that alter skills (includes blades if blades ever have skill mods added)

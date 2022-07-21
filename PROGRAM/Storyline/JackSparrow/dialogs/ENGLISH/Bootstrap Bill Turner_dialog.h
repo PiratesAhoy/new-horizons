@@ -1,4 +1,4 @@
-string DLG_TEXT[213] = {
+string DLG_TEXT[235] = {
 "You'd better get going.",
 "Yeah - I guess I don't really have a choice.",
 "You're alive? You should count yourself blessed to survive such a tempest. I haven't seen a storm like that in all my years!",
@@ -212,5 +212,26 @@ string DLG_TEXT[213] = {
 "Well, she certain doesn't look like she's going anywhere. We need to talk to Eastwood again.",
 "Captain, I am afraid I must leave you. I've just seen Captain Barbossa over there and his ship, I know, goes to England. I really want to get back there. So, with your permission...",
 "Of course, Bootstrap. Perhaps we will meet again one day. Good luck.", 
-
+"Time's run out, Jack.",
+"Bootstrap? Bill Turner??", 
+"Jack Sparrow. You look good.",
+"Is this a dream? ", 
+"No.",
+"I thought not. If it were, there'd be rum.", 
+"You got the Pearl back, I see. [Bootstrap hands a bottle of rum]",
+"I had some help retrieving the Pearl, by the way... Your son.", 
+"William? He ended up a pirate, after all.",
+"Given a liberal definition of the word 'pirate.' He's got an unhealthy streak of honest to him.[Takes a drink from the bottle]", 
+"That's something, then. Though no credit to me.",
+"And to what do I owe the pleasure of your carbuncle?", 
+"Davy Jones. He sent me as an emissary.",
+"Ah, it's you, then. He shanghaied you into service, then.", 
+"I chose it. I'm sorry for the part I played in mutiny'ng against you, Jack. Everything went wrong after that. I ended up cursed, doomed to the depths of the ocean, the weight of the water crushing down on me. Unable to move ... unable to die. All I could do was think. And mostly I thought, even the tiniest hope of escaping this fate ... I would take it. Trade anything for it. It did. Davy Jones came. Made the offer. I could spend one hundred years before the mast, with the hope that after, I would go on to a peaceful rest.",
+"Funny what a man'll do to forestall his final judgment.",
+"You made a deal with him, too, Jack. He raised the Pearl from the depths for you, and thirteen years you've been her Captain. ",
+"Technically the Flying Dutchman already has a captain, so there's no need for me... ",
+"Then it's the Locker for you! Jones' leviathan will find you and drag the Pearl back to the depths, and you along with it! You won't be able to talk your way out of this!",
+"Any idea on when Jones will release said terrible beastie?",
+"I told you, Jack: your time is up! It's not a matter of how long 'til it comes after you - it's a matter of how long 'til you're found.",
+"!!!",
 };

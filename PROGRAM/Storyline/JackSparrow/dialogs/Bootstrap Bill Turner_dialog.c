@@ -119,6 +119,11 @@ void ProcessDialogEvent()
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			EndQuestMovie();TrackQuestMovie("end","peasant_dialog.c -> Exit");
 		break;
+		
+		case "Exit1":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
 
 // -->SJG
 		case "First_Meeting_With_Bootstrap_Tortuga":
@@ -283,6 +288,65 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[212];
 			link.l1.go = "Exit_Barbossa";
 		break;
+		//Exit1 use
+		//Dialogue on the deck/cargo 1-10	
+		case "talk_jack_cargo_deck_DMC":
+			dialog.text = DLG_TEXT[213];
+			link.l1 = DLG_TEXT[214];
+			link.l1.go = "talk_jack_cargo_deck_DMC2";
+		break;
+		case "talk_jack_cargo_deck_DMC2":
+			dialog.text = DLG_TEXT[215];
+			link.l1 = DLG_TEXT[216];
+			link.l1.go = "talk_jack_cargo_deck_DMC3";
+		break;
+		case "talk_jack_cargo_deck_DMC3":
+			dialog.text = DLG_TEXT[217];
+			link.l1 = DLG_TEXT[218];
+			link.l1.go = "talk_jack_cargo_deck_DMC4";
+		break;
+		case "talk_jack_cargo_deck_DMC4":
+			dialog.text = DLG_TEXT[219];
+			link.l1 = DLG_TEXT[220];
+			link.l1.go = "talk_jack_cargo_deck_DMC5";
+		break;
+		case "talk_jack_cargo_deck_DMC5":
+			dialog.text = DLG_TEXT[221];
+			link.l1 = DLG_TEXT[222];
+			link.l1.go = "talk_jack_cargo_deck_DMC6";
+		break;
+		case "talk_jack_cargo_deck_DMC6":
+			dialog.text = DLG_TEXT[223];
+			link.l1 = DLG_TEXT[224];
+			link.l1.go = "talk_jack_cargo_deck_DMC7";
+		break;
+		case "talk_jack_cargo_deck_DMC7":
+			dialog.text = DLG_TEXT[225];
+			link.l1 = DLG_TEXT[226];
+			link.l1.go = "talk_jack_cargo_deck_DMC8";
+		break;
+		case "talk_jack_cargo_deck_DMC8":
+			dialog.text = DLG_TEXT[227];
+			link.l1 = DLG_TEXT[228];
+			link.l1.go = "talk_jack_cargo_deck_DMC9";
+		break;
+		case "talk_jack_cargo_deck_DMC9":
+			dialog.text = DLG_TEXT[229];
+			link.l1 = DLG_TEXT[230];
+			link.l1.go = "talk_jack_cargo_deck_DMC10";
+		break;
+		case "talk_jack_cargo_deck_DMC10":
+			dialog.text = DLG_TEXT[231];
+			link.l1 = DLG_TEXT[232];
+			link.l1.go = "talk_jack_cargo_deck_DMC11";
+		break;
+		case "talk_jack_cargo_deck_DMC11":
+			dialog.text = DLG_TEXT[233];
+			link.l1 = DLG_TEXT[234];
+			link.l1.go = "Exit1";
+			AddDialogExitQuest("talk_cargo_deck_despawn_bootstrap");
+		break;
+		
 
 		case "Exit_Barbossa":
 			DialogExit();

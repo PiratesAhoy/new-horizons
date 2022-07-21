@@ -29,6 +29,7 @@ void StartStoryLine()
 	EquipCharacterbyItem(Pchar, FindCharacterItemByGroup(&PChar, BLADE_ITEM_TYPE));
 	EquipCharacterbyItem(Pchar, FindCharacterItemByGroup(&PChar, GUN_ITEM_TYPE));
 	EquipCharacterbyItem(Pchar, "Spyglass2");
+        TakeItemFromCharacter(Pchar, "compass3");
 // <-- KK
 
 // SJG -->

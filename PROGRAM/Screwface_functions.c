@@ -277,7 +277,7 @@ bool CheckAllShips(string type, bool initialize)
 				if (ship_range < visibility_range)
 				{
 					bool bCheckInitial = false;
-					if (!CheckAttribute(chr, "PlayerShip"))									bCheckInitial = true;	// GR: If you can be seen and aren't already logged, you are now
+					if (!CheckAttribute(chr, "PlayerShip"))					bCheckInitial = true;	// GR: If you can be seen and aren't already logged, you are now
 					if (CheckAttribute(chr, "PlayerShip") && !HasThisShip(chr.PlayerShip))	bCheckInitial = true;	// GR: If you are already logged and the log is out of date, update it
 					if (bCheckInitial) CheckInitialFlagRelations(chr, visibility_range, ship_range);
 				}

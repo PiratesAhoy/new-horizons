@@ -182,6 +182,7 @@ void InitPeriods()
 //	period.Towns."Pointe a Pitre".disable = true;					// not working entirely right yet
 	period.Towns."Pointe a Pitre".gov.name = "Gabriel";
 	period.Towns."Pointe a Pitre".gov.lastname = "Montalvo";
+	period.Towns."Pointe a Pitre".skiptrade = true;
 //	period.Towns.Philipsburg.disable = true;						// not working entirely right yet
 //	period.Towns.Marigot.disable = true;							// not working entirely right yet
 	period.Towns.Eleuthera.Name = "Puerto la Cruz";
