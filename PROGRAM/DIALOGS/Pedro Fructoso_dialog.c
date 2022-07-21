@@ -59,7 +59,14 @@ void ProcessDialogEvent()
 			link.l2 = pcharrepphrase(DLG_TEXT[8], DLG_TEXT[9]);
 			link.l2.go = "crew";
 			link.l3 = pcharrepphrase(DLG_TEXT[10], DLG_TEXT[11]);
-			link.l3.go = "room";
+			if (CheckQuestAttribute("DEVLINTAVERN", "blocked"))
+			{
+				link.l3.go = "blocked";
+			}
+			else
+			{
+				link.l3.go = "room";
+			}
 			link.l99 = DLG_TEXT[12];
 			link.l99.go = "exit";
 		break;
@@ -77,6 +84,12 @@ void ProcessDialogEvent()
 			{
 				link.l1 = DLG_TEXT[57];
 				link.l1.go = "meet_abel";
+			}
+			if (CheckQuestAttribute("JORGE", "search_bible"))
+			{
+				link.l1 = DLG_TEXT[60];
+				link.l1.go = "bible";
+				iTest = iTest + 1;
 			}			
 			link.l99 = DLG_TEXT[15];
 			link.l99.go = "second time";
@@ -88,7 +101,14 @@ void ProcessDialogEvent()
 				dialog.snd = "Voice\FRCO\FRCO017";
 				Dialog.text = DLG_TEXT[18];
 				link.l1 = DLG_TEXT[19];
-				link.l1.go = "room";
+				if (CheckQuestAttribute("DEVLINTAVERN", "blocked"))
+				{
+					link.11.go = "blocked";
+				}
+				else
+				{
+					link.l1.go = "room";
+				}
 				link.l2 = DLG_TEXT[20];
 				link.l2.go = "quests";
 			}
@@ -237,7 +257,7 @@ void ProcessDialogEvent()
 			DialogExit();
 			AddDialogExitQuest("exit_sit");
 		break;
-		
+
 		case "convoy":
 			npchar.work = lastspeak_date;
 			if (GetCompanionIndex(pchar,1) != -1 && GetCompanionIndex(pchar,2) != -1 && GetCompanionIndex(pchar,3) != -1)
@@ -333,13 +353,32 @@ void ProcessDialogEvent()
 
 			Diag.TempNode = "second time";
 		break;
-		
+
 		case "meet_abel":
 			dialog.snd = "Voice\CLLA\CLLA005";
 			dialog.text = DLG_TEXT[58];
 			link.l1 = DLG_TEXT[59];
 			link.l1.go = "exit";
 			AddDialogExitQuest("encontrar_abel");			
-			break;		
+			break;
+
+		case "bible":
+			dialog.text = DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Jorge_found_bible");
+		break;
+
+		case "blocked":
+			dialog.text = DLG_TEXT[63];
+			link.l1 = DLG_TEXT[64];
+			link.l1.go = "blocked2";
+		break;
+
+		case "blocked2":
+			dialog.text = DLG_TEXT[65];
+			link.l1 = DLG_TEXT[66];
+			link.l1.go = "exit";
+		break;			
 	}
 }

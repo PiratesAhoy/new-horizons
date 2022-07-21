@@ -70,7 +70,7 @@ void InitInterface(string iniName)
 	models_qty = 0;
 	for(i = 0; i < OFFICER_MAX; i++) // set bought the models of pchar and officers
 	{
-		cn = GetOfficersIndex(PChar, "" + i);
+		cn = GetOfficersIndex(PChar, i);
 		if(cn != -1)
 		{
 			oldmodel = Characters[cn].model;

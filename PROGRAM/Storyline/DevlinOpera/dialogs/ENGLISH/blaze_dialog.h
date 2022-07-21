@@ -1,4 +1,4 @@
-string DLG_TEXT[379] = {
+string DLG_TEXT[385] = {
 "Oh, it's you, ",
 ". What are you doing here?",
 "None of your business ",
@@ -378,4 +378,10 @@ string DLG_TEXT[379] = {
 "...",
 "Well, I may be the punching bag, but you, Chico, you're the scabbard!",
 "I should take the money and get out of here. Little Bea must already be furious.",
+"[VOICE BEHIND GATE:] Help! Can anybody hear me?",
+"I can hear you!",
+"Please - I've locked myself out! Can you open the gate?",
+"Just wait here, I'll try to find a key!",
+"How convenient, he had the map in his pocket. My business here is done.",
+"...",
 };

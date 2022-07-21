@@ -705,7 +705,7 @@ Esta pistola española no es especialmente precisa, pero hace mucho daño. El meca
 itmname_pistol3_14	{Pistola de la suerte de Jack}
 itmdescr_pistol3_14
 {
-Esta bella pero sobriamente decorada pistola, viene de las colonias Británicas de la India, el fabricante tiene su nombre 'Perry' grabado en la pistola. Orginalmente propiedad de Sri Sumbhajee, pero robada por ti.
+Esta bella pero sobriamente decorada pistola, viene de las colonias Británicas de la India, el fabricante tiene su nombre 'Perry' grabado en la pistola. Originalmente propiedad de Sri Sumbhajee, pero robada por ti.
 }
 
 itmname_pistol4_1	{Pistola de mercenario}

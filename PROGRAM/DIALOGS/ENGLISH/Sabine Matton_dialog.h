@@ -38,7 +38,7 @@ string DLG_TEXT[74] = {
 "Wow, really! I am your 'last hope'? That's kind of interesting! All right, lay out what kind of business you have for me.",
 "I am sorry but I don't have time for solving your problems.",
 "That's nonsense, ask for help from your daddy and don't prevent me from doing my business.",
-"Thank you for agreeing to listen to me. The thing is that I can't stay with my father any longer. He is a good person but he wants to marry me off to someone.",
+"Thank you for agreeing to listen to me. The thing is that I can't stay with my father any longer. He is not a good person and he wants to marry me off to someone.",
 "What's wrong with that for a girl like you?",
 "So, what's wrong with getting married. Once you get your hands on your husband, you can twist him round your little finger.",
 "He wants to marry you to someone against your will? That's not fair, and I understand why you are angry with him, but how can I possibly help you?",

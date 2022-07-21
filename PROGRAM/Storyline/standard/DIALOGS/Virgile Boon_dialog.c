@@ -115,6 +115,11 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[18];
 			Link.l1 = DLG_TEXT[19];
 			Link.l1.go = "Exit";
+			if (CheckAttribute(CharacterFromID("FalaiseDeFleur Commander"), "recognized") || CheckAttribute(CharacterFromID("FalaiseDeFleur Commander"), "PlayerNation") || CheckAttribute(CharacterFromID("FalaiseDeFleur Commander"), "PlayerShip"))
+			{
+				link.l1 = DLG_TEXT[45];
+				link.l1.go = "Fort_attacked_me";
+			}
 		break;
 
 		case "Second Time_NotMet":
@@ -173,6 +178,24 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[43];
 			Link.l1 = DLG_TEXT[44];
 			Link.l1.go = "exit";
+		break;
+
+		case "Fort_attacked_me":
+			d.Text = DLG_TEXT[46];
+		//	if((CalcCharacterSkill(PChar, "Leadership") + CalcCharacterSkill(PChar, "Sneak")) >= (CalcCharacterSkill(NPChar, "Leadership") + CalcCharacterSkill(NPChar, "Sneak")))
+		//	{
+				link.l1 = DLG_TEXT[47];
+				link.l1.go = "no_choice";
+		//	}
+			link.l2 = DLG_TEXT[48];
+			link.l2.go = "exit";
+		break;
+
+		case "no_choice":
+			dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			// AddDialogExitQuest("Story_Boon_Depart_Beach");
+			link.l1.go = "Quest_exit";
 		break;
 	}
 }

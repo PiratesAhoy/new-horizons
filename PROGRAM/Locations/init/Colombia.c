@@ -1299,6 +1299,7 @@ void LocationInitColombia(ref n)
 	Locations[n].reload.l13.emerge = "reload2";
 	Locations[n].reload.l13.autoreload = "0";
 	Locations[n].reload.l13.label = "Gaming House.";
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l13.goto_disable = 1;
 
 	Locations[n].reload.l14.name = "reload14";
 	Locations[n].reload.l14.go = "Cartagena Mansion Town";

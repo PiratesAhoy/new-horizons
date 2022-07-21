@@ -1,4 +1,4 @@
-string DLG_TEXT[94] = { 
+string DLG_TEXT[104] = { 
 "Good Day to you Captain",
 "Good Day to you too, Sir",
 "Captain, I am Midshipman James Norrington of the King's Ship Repulse, may I know to whom I am speaking,.... I have not seen you in these waters before?",
@@ -93,5 +93,14 @@ string DLG_TEXT[94] = {
 "Ha Ha! Worse things happen at sea you know!",
 "You impudent dog! How DARE you!",
 "What? You mean This?",
- 
+"My story... it's exactly the same as your story, just one chapter behind. I chased a man across the Seven Seas. The pursuit cost me my crew, my commission, and my life.",
+"No, not anymore, weren't you listening? I nearly had you all, off Tripoli. I would have, if not for the... hurricane.. ",
+"So do I make your crew, or not? So am I worthy to serve under Captain Jack Sparrow !? You haven't said where you're going. Somewhere nice!",
+"Or should I just kill you now?!",
+"You're hired.",
+"Sorry. Old habits and all that.",
+"Oh, please. The captain of the Flying Dutchman.",
+"You look bloody awful.",
+"You hired me. I can't help it if your standards are lax.",
+"Fair enough.",
 };

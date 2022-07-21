@@ -19,7 +19,7 @@ void RegisterStoryline(int n)
 	sl.(sn).start.playertype = PLAYER_TYPE_EXPLORER;
 	sl.(sn).start.playertype.lock = true;
 	sl.(sn).start.difficulty = DIFFICULTY_MARINER;
-	sl.(sn).start.Flags.Pirate = 20;
+	sl.(sn).start.Flags.Pirate = 6;
 	sl.(sn).start.Flags.Pirate.lock = true;
 	sl.(sn).start.Flags.Personal = 37;
 	sl.(sn).start.Flags.Personal.lock = true;
@@ -34,7 +34,7 @@ void RegisterStoryline(int n)
 	sl.(sn).start.date.month = 4;
 	sl.(sn).start.date.year = 1576;
 	sl.(sn).start.date.lock = true;
-	sl.(sn).start.freedom_level = 1; // PB: Scripted opening, but free play available
+	sl.(sn).start.freedom_level = 2; // PB: Scripted opening, but free play available
 
 	switch (LanguageGetLanguage())
 	{

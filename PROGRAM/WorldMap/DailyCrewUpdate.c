@@ -667,7 +667,13 @@ void DailyCrewUpdate()
 				LogIt(GetWoundedCrewQuantity(chref) + " wounded crewmembers: " + healed_qty + " healed and " + killed_qty + " died from gangrene on "+GetMyShipNameShow(chref)+".");
 			} // Serge Grey: moved and changed for ship's name outputting (24.05.2018).
 		}
+		LAi_SetCurHPMax(chref);		// GR: routine personal healing doesn't seem to happen at sea, so heal fully instead
+	}
 
+	for (i = 1; i < OFFICER_MAX; i++)	// Heal officers too
+	{
+		cn = GetOfficersIndex(PChar, i);
+		if (cn != -1) LAi_SetCurHPMax(&Characters[cn]);
 	}
 
 		

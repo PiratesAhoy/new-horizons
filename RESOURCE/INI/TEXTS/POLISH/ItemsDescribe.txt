@@ -705,7 +705,7 @@ This Spanish pistol is not especially accurate but is hard hitting. The mechanis
 itmname_pistol3_14	{Jack's Lucky Flintlock}
 itmdescr_pistol3_14
 {
-This beautiful, but plain-decorated pistol, comes from the British colonies of India, the maker has his name 'Perry' etched in the pistol. Orginally owned by Sri Sumbhajee, but stolen by you.
+This beautiful, but plain-decorated pistol, comes from the British colonies of India, the maker has his name 'Perry' etched in the pistol. Originally owned by Sri Sumbhajee, but stolen by you.
 }
 
 itmname_pistol4_1	{Mercenary's pistol}

@@ -89,14 +89,35 @@ void ProcessDialogEvent()
 		case "exit_to_find_sister":
 			pchar.quest.Bonnie_talk = "Our_first_meeting";		
 			AddQuestRecord("Mystery Messenger and a letter", 2);
+			AddMoneyToCharacter(pchar, 10000);
 			GiveItem2Character(PChar, "compass3");
 			EquipCharacterByItem(pchar, "compass3");
-			GiveItem2Character(pchar, "spyglass4");
-			EquipCharacterByItem(pchar, "spyglass4");
-			GiveItem2Character(pchar, "blade13+1");
-			EquipCharacterByItem(pchar, "blade13+1");
-			GiveItem2Character(Pchar, "pistol5+2");
-			EquipCharacterByItem(pchar, "pistol5+2");
+
+			GiveItem2Character(pchar, "spyglass3");
+			EquipCharacterByItem(pchar, "spyglass3");
+
+                        if(ENABLE_WEAPONSMOD)
+                        {
+                        GiveItem2Character(pchar, "blade47+1");
+                        EquipCharacterByItem(pchar, "blade47+1");
+                        }
+                        else
+                        {
+                        GiveItem2Character(pchar, "blade47");
+                        EquipCharacterByItem(pchar, "blade47");
+                        }
+
+                        if(ENABLE_WEAPONSMOD)
+                        {
+                        GiveItem2Character(pchar, "pistol27+2");
+                        EquipCharacterByItem(pchar, "pistol27+2");
+                        }
+                        else
+                        {
+                        GiveItem2Character(pchar, "pistol27");
+                        EquipCharacterByItem(pchar, "pisto27");
+                        }
+
 			GiveItem2Character(PChar, "first_part_map");		
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;

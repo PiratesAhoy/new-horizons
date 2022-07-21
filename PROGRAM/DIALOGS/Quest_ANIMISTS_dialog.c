@@ -246,6 +246,12 @@ void ProcessDialogEvent()
 		break;
 //  <-- Cat
 
+		case "FreePlay_minion":
+			dialog.text = DLG_TEXT[57];
+			link.l1 = DLG_TEXT[58];
+			link.l1.go = "exit";
+		break;
+
 		case "exit":
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit();

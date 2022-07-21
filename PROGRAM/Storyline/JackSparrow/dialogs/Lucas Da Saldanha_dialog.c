@@ -130,8 +130,8 @@ void ProcessDialogEvent()
 		
 		case "Find_Shaw":
 		
-			dialog.text = DLG_TEXT[32] + Characters[GetCharacterIndex(DLG_TEXT[33])].name + DLG_TEXT[34];
-			link.l1 = DLG_TEXT[35] + Characters[GetCharacterIndex(DLG_TEXT[36])].name;
+			dialog.text = DLG_TEXT[32] + GetMyName(CharacterFromID(DLG_TEXT[33])) + DLG_TEXT[34];
+			link.l1 = DLG_TEXT[35] + GetMyName(CharacterFromID(DLG_TEXT[36])) + DLG_TEXT[37];
 			link.l1.go = "Exit_Gov";
 			
 		break;

@@ -631,13 +631,13 @@ void CreateTempQuestCharacters(ref n)
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Pirate";
-	ch.old.lastname = "1";
+	ch.old.lastname = "";
 	ch.name = TranslateString("", "Pirate");
-	ch.lastname = TranslateString("", "1");
+	ch.lastname = "";
 	ch.id		= "Pirates_1";
 	ch.model	= "korsar";
 	ch.sound_type = "pirate";
-	LAi_NoRebirthEnable(ch);
+	//LAi_NoRebirthEnable(ch);
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
@@ -661,20 +661,21 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	ch.Dialog.Filename = "Turks_prison_guard1_dialog.c";
 	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Pirate";
-	ch.old.lastname = "2";
+	ch.old.lastname = "";
 	ch.name = TranslateString("", "Pirate");
-	ch.lastname = TranslateString("", "2");
+	ch.lastname = "";
 	ch.id		= "Pirates_2";
 	ch.model	= "corsair2";
 	ch.sound_type = "pirate";
-	LAi_NoRebirthEnable(ch);
+	//LAi_NoRebirthEnable(ch);
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
@@ -698,20 +699,20 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
 	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Pirate";
-	ch.old.lastname = "3";
+	ch.old.lastname = "";
 	ch.name = TranslateString("", "Pirate");
-	ch.lastname = TranslateString("", "3");
+	ch.lastname = "";
 	ch.id		= "Pirates_3";
 	ch.model	= "corsair1";
 	ch.sound_type = "pirate";
-	LAi_NoRebirthEnable(ch);
+	//LAi_NoRebirthEnable(ch);
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
@@ -735,12 +736,277 @@ void CreateTempQuestCharacters(ref n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
 	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
+	ch.old.name = "Pirate";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
+	ch.id		= "Pirates_4";
+	ch.model	= "Fatman2";
+	ch.sound_type = "pirate";
+	//LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "character7";
+	ch.Dialog.Filename = "";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Pirate";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
+	ch.id		= "Pirates_5";
+	ch.model	= "33_Ronald";
+	ch.sound_type = "pirate";
+	//LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "character7";
+	ch.Dialog.Filename = "";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Pirate";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
+	ch.id		= "Pirates_6";
+	ch.model	= "Black_corsair";
+	ch.sound_type = "pirate";
+	//LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "character7";
+	ch.Dialog.Filename = "Pirat.c";
+	ch.Dialog.Filename = "";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Pirate";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Pirate");
+	ch.lastname = "";
+	ch.id		= "Pirates_6";
+	ch.model	= "Black_corsair";
+	ch.sound_type = "pirate";
+	//LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "character7";
+	ch.Dialog.Filename = "Pirat.c";
+	ch.Dialog.Filename = "";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+	
+	
+	ch.old.name = "Sailor";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Sailor");
+	ch.lastname = "";
+	ch.id		= "Sailor_1";
+	ch.model	= "Sailor5";
+	ch.sound_type = "pirate";
+	//LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	//GiveItem2Character(ch, "blade4");
+	//ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "character7";
+	ch.Dialog.Filename = "Turks_prison_guard1_dialog.c";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Sailor";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Sailor");
+	ch.lastname = "";
+	ch.id		= "Sailor_2";
+	ch.model	= "Sailor6";
+	ch.sound_type = "pirate";
+	//LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	//GiveItem2Character(ch, "blade4");
+	//ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "character7";
+	ch.Dialog.Filename = "Turks_prison_guard1_dialog.c";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+	
+	ch.old.name = "Sailor";
+	ch.old.lastname = "";
+	ch.name = TranslateString("", "Sailor");
+	ch.lastname = "";
+	ch.id		= "Corpse";
+	ch.model	= "davy2";
+	ch.sound_type = "pirate";
+	//LAi_NoRebirthEnable(ch);
+	ch.sex = "man";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.nodisarm	= 1;				// PB: Disable disarming
+	ch.location	= "";
+	ch.location.group = "goto";
+	ch.location.locator = "character7";
+	ch.Dialog.Filename = "Turks_prison_guard1_dialog.c";
+	ch.nation = PIRATE;
+	ch.rank 	= 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	LAi_SetActorType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	AddGameCharacter(n, ch);
+	
+	
+	
+	
 	ch.old.name = "Morris";
 	ch.old.lastname = "Murtogg";
 	ch.name = TranslateString("", "Morris");
@@ -1194,15 +1460,15 @@ void CreateTempQuestCharacters(ref n)
 	ch.reputation = "42";
 	ch.experience = "0";
 	ch.skill.Leadership = "8";
-    ch.skill.Fencing = "9";
-    ch.skill.Sailing = "8";
-    ch.skill.Accuracy = "10";
-    ch.skill.Cannons = "10";
-    ch.skill.Grappling = "6";
-    ch.skill.Repair = "5";
-    ch.skill.Defence = "9";
-    ch.skill.Commerce = "1";
-    ch.skill.Sneak = "4";
+	ch.skill.Fencing = "9";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "10";
+	ch.skill.Cannons = "10";
+	ch.skill.Grappling = "6";
+	ch.skill.Repair = "5";
+	ch.skill.Defence = "9";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "4";
 	ch.perks.list.BasicDamageControl = true;
 	ch.perks.list.AdvancedDamageControl = true;
 	ch.perks.list.Rigging = true;
@@ -2879,7 +3145,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.Ship.Name = "Sargento";
 	ch.Ship.Type = "SP_Neptunus";
 	ch.Ship.Stopped = true;
-	ch.Flags.Pirate = 5; // PB: Eduardo Villanueva Pirate Flag
+	ch.Flags.Pirate = 20; // PB: Eduardo Villanueva Pirate Flag
 	ch.Flags.Pirate.texture = 0;
 	ch.Dialog.Filename = "Eduardo Villanueva_dialog.c";
 	ch.greeting = "Gr_Eduardo Villanueva";
@@ -4451,7 +4717,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.name = TranslateString("", "Bos'un");
 	ch.lastname = "";
 	ch.id		= "Bos'un";
-	ch.model	= "Ancient"; 
+	ch.model	= "BlackCaesar"; 
 	ch.sex = "man";
 	GiveItem2Character(ch, "blade4");
 	ch.equip.blade = "blade4";
@@ -4823,6 +5089,8 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.locator = "goto5";
 	ch.Dialog.Filename = "Reynoud Verheugen_dialog.c";
 	ch.greeting = "Gr_Toff Oremans";
+	ch.Ship.Type = "obj_Boat2"; 				//SfsiWreck		
+	ch.Ship.Stopped = true;
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";
@@ -5069,4 +5337,190 @@ void CreateTempQuestCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
 	ch.greeting = "Gr_Redmond Soldier";
 	AddGameCharacter(n, ch);
+	
+	//DMC CHARACTERS//
+
+    // Sailor at Turks Elton Garfield
+	ch.old.name = "Elton";
+	ch.old.lastname = "Garfield";
+	ch.name = TranslateString("","Elton");
+	ch.lastname = TranslateString("","Garfield");
+	ch.id		= "Elton Garfield";
+	ch.model = "corsair1_2";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.rank 	= 30;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "10";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "5";
+	ch.skill.Defence = "7";
+	ch.skill.Commerce = "6";
+	ch.skill.Sneak = "4";
+	ch.money = "100";
+	ch.quest.meeting = "0";
+	ch.Dialog.Filename = "Elton Garfield_dialog.c";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	// Turks prison guard
+	ch.old.name = "Prison";
+	ch.old.lastname = "Guard";
+	ch.name = TranslateString("Prison","Guard");
+	ch.lastname = "";
+	ch.id		= "turks_prison_guard1";
+	ch.model = "50evl2in";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.rank 	= 30;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "10";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "5";
+	ch.skill.Defence = "7";
+	ch.skill.Commerce = "6";
+	ch.skill.Sneak = "4";
+	ch.money = "100";
+	ch.quest.meeting = "0";
+	ch.Dialog.Filename = "Turks_prison_guard1_dialog.c";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+	//Turks prison guard captain
+	ch.old.name = "Guard";
+	ch.old.lastname = "Captain";
+	ch.name = TranslateString("Guard","Captain");
+	ch.lastname = "";
+	ch.id		= "prison_guard_captain";
+	ch.model	= "Corsair5";
+	ch.sound_type = "pirate";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "blade4");
+	ch.equip.blade = "blade4";
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.rank 	= 30;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "10";
+	ch.skill.Fencing = "7";
+	ch.skill.Sailing = "8";
+	ch.skill.Accuracy = "5";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "5";
+	ch.skill.Defence = "7";
+	ch.skill.Commerce = "6";
+	ch.skill.Sneak = "4";
+	ch.money = "100";
+	ch.quest.meeting = "0";
+	ch.Dialog.Filename = "Turks_prison_captain_dialog.c";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+
+	//Atwood Paddley
+	ch.old.name = "Atwood";
+	ch.old.lastname = "Paddley";
+	ch.name = TranslateString("", "Atwood");
+	ch.lastname = TranslateString("","Paddley");
+	ch.id		= "Atwood Paddley";
+	ch.model	= "Bocman";
+	ch.sound_type = "pirate";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	//GiveItem2Character(ch, "blade4");
+	//ch.equip.blade = "blade4";
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.rank 	= 30;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "2";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "5";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "100";
+	ch.quest.meeting = "0";
+	ch.Dialog.Filename = "Atwood_Paddley_dialog.c";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
+	//Cannibal chief
+	ch.old.name = "Cannibal";
+	ch.old.lastname = "Chief";
+	ch.name = TranslateString("Cannibal","Chief");
+	ch.lastname = "";	
+	ch.id		= "Cannibal_chief";
+	ch.model	= "RabBlack_1";
+	ch.sound_type = "pirate";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	//GiveItem2Character(ch, "blade4");
+	//ch.equip.blade = "blade4";
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.rank 	= 30;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "2";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "5";
+	ch.skill.Grappling = "5";
+	ch.skill.Repair = "5";
+	ch.skill.Defence = "3";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "100";
+	ch.quest.meeting = "0";
+	ch.Dialog.Filename = "slave_dialog.c";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 200.0, 200.0);
+	ch.questchar = true;//MAXIMUS: identifier for captives
+	AddGameCharacter(n, ch);
+	
 }

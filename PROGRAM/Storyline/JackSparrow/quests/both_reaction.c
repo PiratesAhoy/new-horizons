@@ -2035,7 +2035,8 @@ void BothQuestComplete(string sQuestName)
 			DoQuestCheckDelay("to_greenford_for_montanez_complete2", 1.0);
 		break;
 
-		case "to_greenford_for_montanez_complete2":			
+		case "to_greenford_for_montanez_complete2":
+			ChangeCharacterAddress(CharacterFromID("Larry"), "none", "");			
 			bQuestDisableMapEnter = true;
 			Island_SetReloadEnableGlobal("Cuba", false);// TIH typo fix Oct31'06
 

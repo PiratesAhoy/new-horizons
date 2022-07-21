@@ -172,6 +172,16 @@ void initFastReloadTable()
 	curTable.l6.tex = FRT_CHURCH;
 	curTable.l6.note = FRN_CHURCH; 
 	curTable.l6.location = "Eleuthera_church";
+	// tailor's shop
+	curTable.l7.pic = FRP_TAILORSHOP;
+	curTable.l7.tex = FRT_TAILORSHOP;
+	curTable.l7.note = FRN_TAILORSHOP;
+	curTable.l7.location = "Eleuthera_TailorsShop";
+	//brothel
+	curTable.l8.pic = FRP_BROTHEL;
+	curTable.l8.tex = FRT_BROTHEL;
+	curTable.l8.note = FRN_BROTHEL;
+	curTable.l8.location = "Eleuthera_brothel";
 
 	makearef(curTable,objFastReloadTable.table.Alice);
 	// store
@@ -207,13 +217,18 @@ void initFastReloadTable()
 	//prison
 	curTable.l9.pic = FRP_PRISON;
 	curTable.l9.tex = FRT_PRISON;
-	curTable.l9.note = FRN_PRISON);
+	curTable.l9.note = FRN_PRISON;
 	curTable.l9.location = "Alice_prison";
 	//brothel
 	curTable.l10.pic = FRP_BROTHEL;
 	curTable.l10.tex = FRT_BROTHEL;
 	curTable.l10.note = FRN_BROTHEL; // KK
-	curTable.l10.location = "Alice_Brothel_room";
+	curTable.l10.location = "Alice_Brothel";
+	// tailor's shop
+	curTable.l11.pic = FRP_TAILORSHOP;
+	curTable.l11.tex = FRT_TAILORSHOP;
+	curTable.l11.note = FRN_TAILORSHOP;
+	curTable.l11.location = "Alice_TailorsShop";
 
 	makearef(curTable,objFastReloadTable.table.Conceicao);
 	// store
@@ -562,13 +577,10 @@ void initFastReloadTable()
 	curTable.l6.note = FRN_BLACKSMITH;
 	curTable.l6.location = "QC_blacksmith";
 	// brothel
-	if(IsBrothelEnabled())
-	{
-		curTable.l7.pic = FRP_BROTHEL; // MAXIMUS interface MOD
-		curTable.l7.tex = FRT_BROTHEL; // MAXIMUS interface MOD
-		curTable.l7.note = FRN_BROTHEL; // KK
-		curTable.l7.location = "QC_brothel"; // MAXIMUS interface MOD
-	}
+	curTable.l7.pic = FRP_BROTHEL; // MAXIMUS interface MOD
+	curTable.l7.tex = FRT_BROTHEL; // MAXIMUS interface MOD
+	curTable.l7.note = FRN_BROTHEL; // KK
+	curTable.l7.location = "QC_brothel"; // MAXIMUS interface MOD
 
 	makearef(curTable,objFastReloadTable.table.Redmond);
 	// store
@@ -671,13 +683,10 @@ void initFastReloadTable()
 	curTable.l7.note = FRN_FORT;
 	curTable.l7.location = "Guadeloupe_fakefort1";
 	// brothel MAXIMUS
-	if(IsBrothelEnabled())
-	{
-		curTable.l8.pic = FRP_BROTHEL;
-		curTable.l8.tex = FRT_BROTHEL;
-		curTable.l8.note = FRN_BROTHEL; // KK
-		curTable.l8.location = "PaP_Brothel";
-	}
+	curTable.l8.pic = FRP_BROTHEL;
+	curTable.l8.tex = FRT_BROTHEL;
+	curTable.l8.note = FRN_BROTHEL; // KK
+	curTable.l8.location = "PaP_Brothel";
 	// academy
 	curTable.l9.pic = FRP_ACADEMY;		//JRH
 	curTable.l9.tex = FRT_ACADEMY;
@@ -882,13 +891,10 @@ void initFastReloadTable()
 	curTable.l3.note = FRN_TAVERN; // KK
 	curTable.l3.location = "Tortuga_tavern";
 	// brothel MAXIMUS
-	if(IsBrothelEnabled())
-	{
-		curTable.l4.pic = FRP_BROTHEL;
-		curTable.l4.tex = FRT_BROTHEL;
-		curTable.l4.note = FRN_BROTHEL; // KK
-		curTable.l4.location = "Tortuga_Brothel";
-	}
+	curTable.l4.pic = FRP_BROTHEL;
+	curTable.l4.tex = FRT_BROTHEL;
+	curTable.l4.note = FRN_BROTHEL; // KK
+	curTable.l4.location = "Tortuga_Brothel";
 	// loanshark MAXIMUS
 	curTable.l5.pic = FRP_LOANSHARK;
 	curTable.l5.tex = FRT_LOANSHARK;
@@ -1111,18 +1117,25 @@ void initFastReloadTable()
 	curTable.l5.note = FRN_LOANSHARK;
 	curTable.l5.location = "Charlestown_usurer";
 	// brothel MAXIMUS
-	if(IsBrothelEnabled())
-	{
-		curTable.l6.pic = FRP_BROTHEL;
-		curTable.l6.tex = FRT_BROTHEL;
-		curTable.l6.note = FRN_BROTHEL;
-		curTable.l6.location = "Charlestown_Brothel";
-	}
+	curTable.l6.pic = FRP_BROTHEL;
+	curTable.l6.tex = FRT_BROTHEL;
+	curTable.l6.note = FRN_BROTHEL;
+	curTable.l6.location = "Charlestown_Brothel";
 	// academy
 	curTable.l7.pic = FRP_ACADEMY;		//JRH
 	curTable.l7.tex = FRT_ACADEMY;
 	curTable.l7.note = FRN_ACADEMY;
 	curTable.l7.location = "Charlestown_Academy";
+	// Church
+	curTable.l8.pic = FRP_CHURCH;		// GR
+	curTable.l8.tex = FRT_CHURCH;
+	curTable.l8.note = FRN_CHURCH; 
+	curTable.l8.location = "Charlestown_church";
+	// Guardhouse
+	curTable.l9.pic = FRP_PRISON;		// GR
+	curTable.l9.tex = FRT_PRISON;
+	curTable.l9.note = FRN_PRISON;
+	curTable.l9.location = "Charlestown_Guardhouse";
 
 	makearef(curTable,objFastReloadTable.table.Oranjestad);
 	// store

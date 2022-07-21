@@ -1,4 +1,4 @@
-string DLG_TEXT[57] = {
+string DLG_TEXT[59] = {
 "Leave us.",
 "...",
 "Not so fast, ",
@@ -56,5 +56,6 @@ string DLG_TEXT[57] = {
 "There's no time to explain. I've intimidated the guards for now. After they stop pissing in their pants, they may gather together enough courage to thwart any attempt to free you. We have to go NOW.", 
 "Pah, water? Water does not scare me nor quench the sacred fires that burn within me!",
 "Fine, I grow weary of this. Perhaps I should just tickle you with my blade, hm?", // <--Cat
-
+"Any orders, master?",
+"None. Don't disturb me.",
 };

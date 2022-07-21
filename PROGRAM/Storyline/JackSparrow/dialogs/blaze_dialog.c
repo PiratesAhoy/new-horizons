@@ -1111,11 +1111,113 @@ void ProcessDialogEvent()
 		Link.l1.go = "exit";
 	break;
 
-//Ship stolen at Tortuga
+	//Ship stolen at Tortuga
 	case "ship_stolen_tortuga":
 		dialog.text = DLG_TEXT[309];
 		link.l1 = DLG_TEXT[310];
 		link.l1.go = "exit";
 	break;
+	
+	//After tia dalma shack
+	case "At_swamp_talk_self":
+		dialog.text = DLG_TEXT[311];
+		link.l1 = DLG_TEXT[312];
+		link.l1.go = "exit";
+		AddDialogExitQuest("Prepare_Gibbs_Deck");
+	break;
+		
+	//After killing first 3 guards
+	case "At_turks_talk_self1":
+		dialog.text = DLG_TEXT[313];
+		link.l1 = DLG_TEXT[314];
+		link.l1.go = "exit";
+		AddDialogExitQuest("prison_guards_attack2");
+	break;
+	
+	//After talking wih atwood/escaping
+	case "Turks_talk_self1_after_atwood":
+		dialog.text = DLG_TEXT[315];
+		link.l1 = DLG_TEXT[316];
+		link.l1.go = "exit";
+		AddDialogExitQuest("after_atwood_coffin");
+	break;
+	
+	//At the gate/coffins
+	case "Turks_talk_self1_get_in_coffin":
+		dialog.text = DLG_TEXT[317];
+		link.l1 = DLG_TEXT[318];
+		link.l1.go = "exit";
+		AddDialogExitQuest("prepare_guards_move");
+	break;
+	
+	//At the cabin talk self go to seadogs
+	case "Deck_cabin_bootstrap":
+		dialog.text = DLG_TEXT[319];
+		link.l1 = DLG_TEXT[320];
+		link.l1.go = "exit";
+		AddDialogExitQuest("tp_deck_bootstrap_cabin_seadogs_cargo2");
+	break;
+	
+	//At the cabin talk self go to cargo
+	case "Deck_cabin_bootstrap_no_seadogs":
+		dialog.text = DLG_TEXT[319];
+		link.l1 = DLG_TEXT[320];
+		link.l1.go = "exit";
+		AddDialogExitQuest("to_cargo_bootstrap_parl_check");
+	break;
+	
+	//At the cabin talk self go find rum
+	case "Deck_walk_bootstrap":
+		dialog.text = DLG_TEXT[319];
+		link.l1 = DLG_TEXT[320];
+		link.l1.go = "exit";
+		AddDialogExitQuest("walk_to_deck_Rum");
+	break;
+	
+	//Try to find rum meet bootsrap next
+	case "Deck_cargo_deck_bootstrap":
+		dialog.text = DLG_TEXT[321];
+		link.l1 = DLG_TEXT[322];
+		link.l1.go = "exit";
+		AddDialogExitQuest("talk_cargo_deck_spawn_bootstrap");
+	break;
+	
+	//Yell to wake up crew at seadogs
+	case "Seadogs_deck_bootstrap":
+		dialog.text = DLG_TEXT[323];
+		link.l1 = DLG_TEXT[324];
+		link.l1.go = "exit";
+		AddDialogExitQuest("tp_to_deck_gibbs_talk_tp");
+	break;
+	
+	//Yell to wake up crew at deck
+	case "Deck_self_bootstrap_fade":
+		dialog.text = DLG_TEXT[323];
+		link.l1 = DLG_TEXT[324];
+		link.l1.go = "exit";
+		AddDialogExitQuest("fade_before_gibbs_deck");
+	break;
+
+	//Will Turner upon arriving on shipwreck
+	case "Shipwreck_enter":
+		dialog.text = DLG_TEXT[325];
+		link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+	
+	//Will Turner
+	case "Shipwreck_after_sailor_1":
+		dialog.text = DLG_TEXT[326];
+		link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+	
+	//Will Turner
+	case "Shipwreck_corpse":
+		dialog.text = DLG_TEXT[327];
+		link.l1.go = "exit";
+		AddDialogExitQuest("pchar_playertype");
+	break;
+	
 	}
 }

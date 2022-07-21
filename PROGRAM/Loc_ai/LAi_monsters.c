@@ -159,6 +159,7 @@ void LAi_CreateMonsters(ref location)
 
 	if(location.id == "QC_brothel_upstairs") return; // ccc Nov06 no residents in brothelbedroom
 	if(HasSubStr(location.id,"brothel") && HasSubStr(location.id,"upstairs")) return;//MAXIMUS: no monsters in brothels bedrooms
+	if(HasSubStr(location.id,"brothel") && HasSubStr(location.id,"bedroom")) return;// GR: no residents in brothels bedrooms
 	if(bMutinyDeckStarted || HasSubStr(location.id,"Tutorial") || HasSubStr(location.id,"Cap") || HasSubStr(location.id,"Cabin") || HasSubStr(location.id,"Hold")) return;//MAXIMUS: no monsters in these locations
 
 	//MAXIMUS: no monsters on Isla De Muerte

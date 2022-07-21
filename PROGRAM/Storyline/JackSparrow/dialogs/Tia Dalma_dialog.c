@@ -275,6 +275,134 @@ void ProcessDialogEvent()
 			PChar.quest.at_Shack_Warning.win_condition = "at_Shack_Warning";*/
 		break;
 		
+		//DMC Quest 
+		case "Arrived_to_antigua_talk":
+			dialog.text = DLG_TEXT[65];
+			link.l1 = DLG_TEXT[66];
+			link.l1.go = "Exit";
+
+			addDialogExitQuest("Swamp_near_shack");
+			//AddQuestRecord("Dead mans chest", 4);
+  
+		break;
+		
+		case "to_the_shack":
+			dialog.text = DLG_TEXT[67];
+			link.l1 = DLG_TEXT[68];
+			link.l1.go = "Exit";
+
+			addDialogExitQuest("To_shack_follow");
+  
+		break;
+		//Explain what do DMC
+		case "find_the_key":
+			dialog.text = DLG_TEXT[69];
+			link.l1 = DLG_TEXT[70];
+			link.l1.go = "find_the_key2";
+  
+		break;
+		
+		//Explain what do DMC
+		case "find_the_key2":
+			dialog.text = DLG_TEXT[71];
+			link.l1 = DLG_TEXT[72];
+			link.l1.go = "find_the_key3";
+  
+		break;
+		
+		//Explain what do DMC
+		case "find_the_key3":
+			dialog.text = DLG_TEXT[73];
+			link.l1 = DLG_TEXT[74];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("shack_open1");
+  
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key4":
+			Logit("find_the_key4");
+			dialog.text = DLG_TEXT[75];
+			link.l1 = DLG_TEXT[76];
+			link.l1.go = "find_the_key5";
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key5":
+			Logit("find_the_key5");
+			dialog.text = DLG_TEXT[77];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_Shack_Warning2_3");
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key6":
+			Logit("find_the_key6");
+			dialog.text = DLG_TEXT[78];
+			link.l1 = DLG_TEXT[79];
+			link.l1.go = "find_the_key7";
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key7": 
+			Logit("find_the_key7");
+			dialog.text = DLG_TEXT[80];
+			link.l1 = DLG_TEXT[81];
+			link.l1.go = "Exit";
+			link.l1.go = "find_the_key7_2";
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key7_2": 
+			Logit("find_the_key7_2");
+			dialog.text = DLG_TEXT[82];
+			link.l1 = DLG_TEXT[83];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_Shack_Warning2_5");
+		break;
+		
+		
+		//Explain what do DMC2
+		case "find_the_key8": 
+			dialog.text = DLG_TEXT[84];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_Shack_Warning2_7");
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key9": 
+			dialog.text = DLG_TEXT[85];
+			link.l1 = DLG_TEXT[86];
+			link.l1.go = "find_the_key9_1";
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key9_1": 
+			dialog.text = DLG_TEXT[87];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_Shack_Warning2_10");
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key10": 
+			dialog.text = DLG_TEXT[88];
+			link.l1.go = "find_the_key10_1";	
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key10_1": 
+			dialog.text = DLG_TEXT[89];
+			link.l1.go = "Exit";	
+			AddDialogExitQuest("At_Shack_Warning2_12");
+		break;
+		
+		//Explain what do DMC2
+		case "find_the_key11": 
+			dialog.text = DLG_TEXT[90];
+			link.l1.go = "Exit";	
+			AddDialogExitQuest("Video_to_shipwreck");
+		break;
+		
 		case "Exit":
 			DialogExit();
 			Diag.CurrentNode = "First time";

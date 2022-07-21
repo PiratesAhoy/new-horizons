@@ -1489,6 +1489,8 @@ if (ENABLE_WEAPONSMOD)
 	LAi_SetStayType(ch); // LDH: Keep him from walking around all the time
 	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
 	AddGameCharacter(n, ch);
+}
+// <-- RobC/Alan_Smithee Blacksmith mod
 
 // Charlestown Citizens
 
@@ -1588,6 +1590,40 @@ if (ENABLE_WEAPONSMOD)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	AddGameCharacter(n, ch);
 
-}
-// <-- RobC/Alan_Smithee Blacksmith mod
+	// Charlestown Mistress
+	ch.old.name		= "Vivienne";
+	ch.old.lastname		= "Stewart";
+	ch.name			= TranslateString("", "Vivienne");
+	ch.lastname		= TranslateString("", "Stewart");
+	ch.id			= "Charlestown_Mistress";
+	ch.model		= "liz2";
+	ch.sound_type		= "female_citizen";
+	ch.sex			= "woman";
+	GiveItem2Character(ch, "Piratesdagger");
+	ch.location		= "Charlestown_Brothel";
+	ch.location.group 	= "goto";
+	ch.location.locator 	= "goto3";
+	ch.Dialog.Filename 	= "mistress_dialog.c";
+	ch.greeting		= "Gr_Brothel's mom";//MAXIMUS
+	Locations[FindLocation("Charlestown_Brothel")].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn another mistress
+	ch.rank			= 1;
+	ch.reputation		= "None";
+	ch.experience		= "10000";
+	ch.skill.Leadership	= "1";
+	ch.skill.Fencing	= "10";
+	ch.skill.Sailing	= "1";
+	ch.skill.Accuracy	= "10";
+	ch.skill.Cannons	= "1";
+	ch.skill.Grappling	= "1";
+	ch.skill.Repair		= "1";
+	ch.skill.Defence	= "10";
+	ch.skill.Commerce	= "1";
+	ch.skill.Sneak		= "10";
+	ch.money		= "1000";
+	LAi_SetHP(ch, 1500.0, 1500.0);
+	LAi_SetWarriorType(ch);
+	LAi_warrior_DialogEnable(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	AddGameCharacter(n, ch);
 }

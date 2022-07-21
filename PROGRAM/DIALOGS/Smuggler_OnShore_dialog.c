@@ -20,7 +20,11 @@ void ProcessDialogEvent()
 	makearef(Diag, NPChar.Dialog);
 
 	bool governor_smuggling = false;
-	if (CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling") && PChar.quest.smuggling_guild.governor_smuggling != "report_made" && PChar.quest.smuggling_guild.governor_smuggling != "report_handed_in" && GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.island") == FindIslandByLocation(PChar.location)) governor_smuggling = true;	// GR: you are smuggling for a governor and are on the right island
+	if (CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling") && PChar.quest.smuggling_guild.governor_smuggling != "report_made" && PChar.quest.smuggling_guild.governor_smuggling != "report_handed_in" && GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.island") == FindIslandByLocation(PChar.location))
+	{
+		governor_smuggling = true;	// GR: you are smuggling for a governor and are on the right island
+		PChar.quest.smuggling_guild.governor_smuggling.contact_made = true;
+	}
 	
 	switch(Dialog.CurrentNode)
 	{

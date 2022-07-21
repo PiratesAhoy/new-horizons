@@ -1,4 +1,4 @@
-string DLG_TEXT[225] = {
+string DLG_TEXT[230] = {
 "Maybe you need an officer, captain?",
 "An officer? And what can you do?",
 "No, I have enough officers for now.",
@@ -224,4 +224,9 @@ string DLG_TEXT[225] = {
 "Very well. I am sure the crew will be ",
 " with their shares.",
 "Thanks for your help.",
+"I think it's time I reviewed your salary.",
+"Thank you Captain I have been trying to improve my skills.",
+"You've been doing well but you're not quite there yet.",
+"You deserve the reward of a salary raise, so keep up the good work.",
+"From now on you'll get a salary paid like the rest of my officers.",
 };

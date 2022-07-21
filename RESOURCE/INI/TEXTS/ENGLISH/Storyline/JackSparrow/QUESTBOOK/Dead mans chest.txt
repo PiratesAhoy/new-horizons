@@ -1,0 +1,10 @@
+title=Dead Man's Chest.
+text.t1=Davy Jones is after me to collect his debt! Tia Dalma has helped me to keep him at bay for a while... but I have to figure something out to save me soul! Where is that rum now...
+text.t2=Tia Dalma has promised to help me, but I must take her to Muscetto Cove on island #sisland_Antigua#.
+text.t3=Now I know how to defeat the captain of the 'Flying Dutchman'! It won't be easy as I have to find the key that unlocks a chest in which is Davy Jones' heart! Tia Dalma gave me name of a man Atwood Paddley, who is somewhere on #sisland_Turks#, he must know something about this key!
+text.t4=I have met a man on the docks of #sGrand Turk#, according to him Atwood is locked in Turks prison. I can try to provoke the prison's guards near the Governor's office...
+text.t5=After all this trouble, I have gathered but a drawing of this key from Davy Jones' chest...I have no idea what to do with it, and me crew doesn't seem too pleased either...devil, I must get me some rum and set the charts...to somewhere... 
+text.t6=#sisland_Khael Roa# could be a good place to start. It's quite small and secluded, perfect for a hiding spot.
+text.t7=I have arrived to #sisland_Khael Roa# shore, and met Boostrap Bill Turner on board, he has warned me that Davy Jones has released the Kraken again, and it will most likely hunt me down if I go to sea! I must find shore!
+text.t8=After barely escaping my fate of being cooked alive, and meeting Will Turner on #sisland_Khael Roa#, I have decided to take the risk and sail to #sisland_Antigua#, I must seek Tia Dalma's guidance yet again.
+text.t9=Finally with the help of Elizabeth Swann and my Compass we are able to set a heading for Davy Jones' chest! I still have to figure out a way to find the key to the said chest after we get it... *Story of Captain Jack Sparrow to be continued soon!*

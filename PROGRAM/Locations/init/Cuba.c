@@ -1175,7 +1175,7 @@ void LocationInitCuba(ref n)
 	Locations[n].models.always.jungle = "Shore06";
 	Locations[n].models.always.jungle.foam = "1";
 	Locations[n].models.always.locators = "Shore06_l";
-	Locations[n].models.always.grassPatch = "Shore06_g";
+	//Locations[n].models.always.grassPatch = "Shore06_g";
 	Locations[n].models.always.seabed = "Shore06_sb";
 	Locations[n].models.always.seabed.foam = "1";
 

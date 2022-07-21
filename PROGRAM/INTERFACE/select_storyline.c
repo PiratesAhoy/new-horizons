@@ -1096,6 +1096,13 @@ void RefreshScreen()
 							case PLAYER_TYPE_CORSAIR:
 								if (NationNoIsland(CharNation, curPeriod))
 									lidx = FindLocation("Tortuga_Port");							// Island-less corsairs start at Tortuga, not Nevis
+								if (GameInterface.strings.CharacterName == GetTranslatedStoryLine(slno, "Blackbeard") && GetAttribute(model, "id") == "Blackbeard")
+									lidx = FindLocation("islademuerte_shore_03");
+							break;
+
+							case PLAYER_TYPE_MERCHANT:
+								if (GameInterface.strings.CharacterName == GetTranslatedStoryLine(slno, "Cutler") + " " + GetTranslatedStoryLine(slno, "Beckett") && GetAttribute(model, "id") == "Cutler_Beckett")
+									lidx = FindLocation("Redmond_port");
 							break;
 
 							case PLAYER_TYPE_NAVAL_OFFICER:

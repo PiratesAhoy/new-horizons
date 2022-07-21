@@ -450,7 +450,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.location.group = "sit";
 	ch.location.locator = "sit13";
 	ch.Dialog.Filename = "Mauricio Juradu_dialog.c";
-	ch.greeting = "Gr_andre juliao";
+	ch.greeting = "Gr_Portuguese Officer"; // was "Gr_andre juliao", both just use "Por_m_a_001.wav"
 	GiveItem2Character(ch, "blade10");
 	ch.equip.blade = "blade10";
 	if(ENABLE_WEAPONSMOD)

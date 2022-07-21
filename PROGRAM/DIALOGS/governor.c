@@ -229,6 +229,12 @@ void ProcessDialogEvent()
 					link.l1.go = "kill_pirate";
 					otherquest = true;
 				}
+				if (CheckQuestAttribute("generate_kill_quest", "searching") && PChar.quest.generate_kill_quest.town == GetCurrentTownID())
+				{
+					dialog.text = DLG_TEXT[189];
+					link.l1 = DLG_TEXT[190] + GetShipDescribe("Quest pirate", false, false, true, true) + DLG_TEXT[191];
+					link.l1.go = "kill_pirate_give_up";
+				}
 				//Added by Levis for the smuggler guild
 				if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_smuggling") && IsInServiceOf(iNation) && iNation != PIRATE && !CheckAttribute(PChar, "quest.governor_smuggling.recover_cargo") && !CheckAttribute(PChar, "quest.governor_smuggling.recover_money"))
 //				if (!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest") && IsInServiceOf(iNation) && iNation != PIRATE)
@@ -669,6 +675,15 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			pchar.quest.generate_kill_quest = "wait_timer";
+		break;
+
+		case "kill_pirate_give_up":
+			Preprocessor_Add("addr", GetCharacterAddressForm(NPChar, ADDR_POLITE, false, false));
+			dialog.text = DLG_TEXT[192] + GetShipDescribe("Quest pirate", false, false, true, true) + DLG_TEXT[193];
+			link.l1 = DLG_TEXT[154];
+			AddDialogExitQuest("kill_pirate_failed");
+			link.l1.go = "exit";
+			ChangeRMRelation(PChar, iNation, -1.0);
 		break;
 // boal <--
 

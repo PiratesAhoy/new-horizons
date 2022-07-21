@@ -178,7 +178,7 @@ void CreateSideQuestCharacters(ref n)
 	ch.money = "1";
 	LAi_SetSitType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
-	ch.greeting = "Gr_Balltesar Figueiredo";
+	ch.greeting = "Gr_Portuguese Officer"; // was "Gr_Balltesar Figueiredo", both just use "Por_m_a_001.wav"
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
@@ -3381,7 +3381,7 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetStayType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 50.0, 50.0);
-	ch.greeting = "Gr_Ambroz Bricenos";
+	ch.greeting = "Gr_Portuguese Officer"; // was "Gr_Ambroz Bricenos", both just use "Por_m_a_001.wav"
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
@@ -5104,7 +5104,7 @@ void CreateSideQuestCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_NoRebirthEnable(ch);
-	ch.greeting = "Gr_Quest_Smuggler_01";
+	ch.greeting = "Gr_Smuggler Agent"; // was "Gr_Quest_Smuggler_01" which is identical
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 

@@ -700,6 +700,7 @@ Room in #stown_name# tavern{Room in #stown_name# tavern}
 #stown_name# residence{#stown_name# residence}
 #stown_name# prison{#stown_name# prison}
 #stown_name# brothel{#stown_name# brothel}
+#stown_name# Brothel room{#stown_name# Brothel room}
 Exit from #stown_name#{Exit from #stown_name#}
 #stown_name# Outskirts{#stown_name# Outskirts}
 #stown_name# Dungeon{#stown_name# Dungeon}
@@ -2156,6 +2157,11 @@ Hint: To make an officer available to command your ship, assign that officer to 
 Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the shore party slots.}
 Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.{Hint: To make an officer available as an escort, assign that officer to one of the first three shore party slots.}
 Capitán{Capitán}
+
+That coward is trying to escape! Go after him!{That coward is trying to escape! Go after him!}
+Keep going, he can't run from you forever!{Keep going, he can't run from you forever!}
+Let's get back to the ship!{Let's get back to the ship!}
+To be continued... Hopefully soon!{To be continued... Hopefully soon!}
 
 You succumb to the Carib poison.{You succumb to the Carib poison.}
 has been executed.{has been executed.}

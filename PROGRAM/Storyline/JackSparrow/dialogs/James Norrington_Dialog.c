@@ -445,6 +445,48 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[90];
 			link.l1 = DLG_TEXT[91];
 			link.l1.go = "exit";
-		break;		
-			}
+		break;
+
+		case "Talk_at_Tortuga_Tavern":		
+			dialog.text = DLG_TEXT[94];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Gibbs_to_norrington_2");
+		break;
+
+		case "Talk_at_Tortuga_Tavern_2":		
+			dialog.text = DLG_TEXT[95];
+			link.l1.go = "Talk_at_Tortuga_Tavern_3";
+		break;
+
+		case "Talk_at_Tortuga_Tavern_3":		
+			dialog.text = DLG_TEXT[96];
+			link.l1.go = "Talk_at_Tortuga_Tavern_4";
+		break;
+		
+		case "Talk_at_Tortuga_Tavern_4":		
+			dialog.text = DLG_TEXT[97];
+			link.l1 = DLG_TEXT[98];
+			link.l1.go = "Talk_at_Tortuga_Tavern_5";
+		break;
+		
+		case "Talk_at_Tortuga_Tavern_5":		
+			dialog.text = DLG_TEXT[99];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Norrington_attack_stand_fade");
+		break;
+		
+		case "Talk_at_Tortuga_Port":		
+			dialog.text = DLG_TEXT[100];
+			link.l1 = DLG_TEXT[101];
+			link.l1.go = "Talk_at_Tortuga_Port2";
+		break;
+		
+		case "Talk_at_Tortuga_Port2":		
+			dialog.text = DLG_TEXT[102];
+			link.l1 = DLG_TEXT[103];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Elizabeth_tortuga_port_talk3");
+		break;
+		
+	}
 }

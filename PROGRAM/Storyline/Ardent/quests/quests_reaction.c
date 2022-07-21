@@ -1478,7 +1478,11 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "ship_is_ours":
-			if (GetCharacterShipType(PChar) == SHIP_NOTUSED) Locations[FindLocation("Santiago_port")].reload.l2.olddisablevalue = 0; // Fix for locked port if you sold the original tartane
+			if (GetCharacterShipType(PChar) == SHIP_NOTUSED)
+			{
+				Locations[FindLocation("Santiago_port")].reload.l2.olddisablevalue = 0; // Fix for locked port if you sold the original tartane
+				DeleteAttribute(PChar, "location.old_from_sea");			// Fix for teleport to port where you sold the tartane when you next go to a shipyard
+			}
 			LAi_SetPlayerType(PChar);
 			GiveShip2Character(PChar,"Shnyava2","Tonina",CANNON_TYPE_CARRONADE_LBS12,SPAIN,false,true);
 			Locations[FindLocation("Quest_Cabin")].reload.l1.disable = 0;
@@ -2158,9 +2162,17 @@ void QuestComplete(string sQuestName)
 			ch.perks.list.SwordplayProfessional = true;
 			ch.perks.list.CriticalHit = true;
 			Ch.Perks.list.Toughness = true;
-			GiveItem2Character(characterfromID("Javier Balboa"), "bladeC23+2");
+			if(ENABLE_WEAPONSMOD)
+			{
+				GiveItem2Character(characterfromID("Javier Balboa"), "bladeC23+2");
+				EquipCharacterByItem(characterfromID("Javier Balboa"),"bladeC23+2");
+			}
+			else
+			{
+				GiveItem2Character(characterfromID("Javier Balboa"), "bladeC23");
+				EquipCharacterByItem(characterfromID("Javier Balboa"),"bladeC23");
+			}
 			GiveItem2Character(characterfromID("Javier Balboa"), "goldarmor");
-			EquipCharacterByItem(characterfromID("Javier Balboa"),"bladeC23");
 			EquipCharacterByItem(characterfromID("Javier Balboa"),"goldarmor");
 			LAi_SetHP(characterfromID("Javier Balboa"), 500.0, 500.0);
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "revenge";
@@ -2279,7 +2291,8 @@ void QuestComplete(string sQuestName)
 				ChangeCharacterAddressGroup(romance, "Tutorial_Deck", "reload", "reload1");
 			}
 			Preprocessor_AddQuestData("name", GetMySimpleName(romance));
-			Preprocessor_AddQuestData("pronoun", romance_pronoun2);
+			if (PChar.sex == "man") Preprocessor_AddQuestData("pronoun", XI_ConvertString("her"));
+			else Preprocessor_AddQuestData("pronoun", XI_ConvertString("him"));
 			AddQuestRecord("Kidnap", 6);
 			Preprocessor_Remove("name");
 			Preprocessor_Remove("pronoun");
@@ -2522,9 +2535,17 @@ void QuestComplete(string sQuestName)
 			ch.perks.list.SwordplayProfessional = true;
 			ch.perks.list.CriticalHit = true;
 			Ch.Perks.list.Toughness = true;
-			GiveItem2Character(characterfromID("Javier Balboa"), "bladeC23+2");
+			if(ENABLE_WEAPONSMOD)
+			{
+				GiveItem2Character(characterfromID("Javier Balboa"), "bladeC23+2");
+				EquipCharacterByItem(characterfromID("Javier Balboa"),"bladeC23+2");
+			}
+			else
+			{
+				GiveItem2Character(characterfromID("Javier Balboa"), "bladeC23");
+				EquipCharacterByItem(characterfromID("Javier Balboa"),"bladeC23");
+			}
 			GiveItem2Character(characterfromID("Javier Balboa"), "goldarmor");
-			EquipCharacterByItem(characterfromID("Javier Balboa"),"bladeC23");
 			EquipCharacterByItem(characterfromID("Javier Balboa"),"goldarmor");
 			LAi_SetHP(characterfromID("Javier Balboa"), 500.0, 500.0);
 			LAi_LocationFightDisable(&Locations[FindLocation("Santiago_townhall")], true);

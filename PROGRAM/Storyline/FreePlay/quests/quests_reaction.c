@@ -2508,6 +2508,7 @@ void QuestComplete(string sQuestName)
 
 
 			sld = LAi_CreateFantomCharacter(false, 0, true, true, 0.0, "9R_Carp", "reload", "reload1");
+			PlaceCharacter(sld, "reload");
 			sld.nation = GetServedNation();
 			sld.Dialog.Filename = "Agent_soldier_dialog.c";
 			sld.Dialog.CurrentNode = "Q_arrives";
@@ -3418,7 +3419,7 @@ void QuestComplete(string sQuestName)
 			SetModelFromID(NPChar, GetRandomModelForTypeExSubCheck(1, "Smugglers", "", PIRATE));
 			SetRandomNameToCharacter(NPChar);
 			if (NPChar.sex == "woman") NPChar.greeting = "Gr_f_officer";
-			else NPChar.greeting = "Gr_Smuggler_OnShore";
+			else NPChar.greeting = "Gr_camilo machado"; // was "Gr_Smuggler_OnShore" which is identical
 			GiveShip2Character(NPChar,"Sloop4","Little Gem",-1,PIRATE,true,true);
 			SetCharacterShipLocation(NPChar, PChar.quest.agentquest.smuggler_beach);
 			LAi_SetStayType(NPChar);

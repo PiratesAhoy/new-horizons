@@ -814,7 +814,7 @@ void CreateStoryCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Counterspy_dialog.c";
-	ch.greeting = "Gr_Counterspy";
+	ch.greeting = "Gr_Ewan Glover"; // was "Gr_Counterspy" which is identical
 	ch.nation = FRANCE;
 	ch.rank 	= 1;
 	ch.reputation = "None";

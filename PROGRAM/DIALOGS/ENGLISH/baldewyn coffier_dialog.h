@@ -1,4 +1,4 @@
-string DLG_TEXT[141] = {
+string DLG_TEXT[149] = {
 "Hello, ",
 ", to what do I owe the honor of your presence?",
 "I am sorry, but are you not called ",
@@ -19,7 +19,7 @@ string DLG_TEXT[141] = {
 "Do you want to hire me as your ship's paymaster?",
 "Yes. I think you'd be a fine addition to my crew.",
 "Oh, here you are. I was just wondering when you were going to appear.",
-"Judging by your happy face, I can see you've got your business back, haven't you?",
+"I can see you're in business again. Judging by your happy face it suits you too.",
 "I'm sorry, #smonsieur# -- I mistook you for another man.",
 "I'm just passing by. I've got no time for the likes of you.",
 "Very well. But if you should need a paymaster someday, I'm the man for the job.",
@@ -113,8 +113,8 @@ string DLG_TEXT[141] = {
 "That's a shame. Goodbye.",
 "Well, that's the best I can offer you. If you're not interested, I'll be going.",
 "That's an intriguing offer, ",
-", and I suppose I'd be a fool to reject it. ",
-"Sorry, we're not even speaking the same language. So long.",
+", but you helped me restart in business for myself. ",
+"Of course, and judging by how quickly you could repay me you will be successful too. I wish you good luck in your venture.",
 "Good that's settled then. I'm glad to have you as a part of my crew.",
 "That's a very interesting offer, ",
 ", but it wouldn't be right for me to leave town while I'm still in debt to ",
@@ -140,5 +140,13 @@ string DLG_TEXT[141] = {
 ". Here is your money as we agreed. You'll find I've added a bonus as a token of my appreciation.",
 "Excellent! I'm glad my trust in you wasn't misplaced. And now, if you'll pardon me, I have to be going.",
 "I have a proposition for you. What would you think of joining my crew as paymaster?",
+"I'll pay you back when the month is up, Captain.",
+"Do you want to trade Captain?",
+"Yes, show me some personal items.",
+"Yes, I could use some provisions.",
+"Not at the moment. Bye.",
+"Perfect I can wait until then.",
+"Well met again Captain.",
+"I hope business is good.",
 
 };

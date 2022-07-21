@@ -31,7 +31,7 @@ string DLG_TEXT[71] = {
 "Your boldness was rewarded... THIS time. The Governor will rather surrender than risk an assault on this impregnable fort. What are your terms?",
 "I'll spare you and the town if you swear allegiance to Portugal.",
 "Swear allegiance to the United Provinces of the Netherlands. Oranje boven...",
-"Swear allegiance to Brtain. Rule, Britannia, rule the waves... AND this town...",
+"Swear allegiance to Britain. Rule, Britannia, rule the waves... AND this town...",
 "Swear allegiance to France. Three cheers to ",
 ", the new ruler of this town...",
 "Swear allegiance to Spain. Long live ",

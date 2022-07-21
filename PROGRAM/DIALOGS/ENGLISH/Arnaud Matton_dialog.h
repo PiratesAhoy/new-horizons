@@ -117,7 +117,7 @@ string DLG_TEXT[327] = {
 "What kind of favor?",
 "I have a daughter. I believe you've already met her.",
 "Yes, I did. She seems a fine girl. But what exactly do you want from me?",
-"Since I lost her mother it has been difficult bringing her up on my own.",
+"Since her mother left it has been difficult bringing her up on my own.",
 "Surely a wealthy merchant like you doesn't need my sympathy?",
 "No, but #sSabine# is of an age where a woman's touch in her life is essential.",
 "Maybe so, but again, what's that to do with me?",

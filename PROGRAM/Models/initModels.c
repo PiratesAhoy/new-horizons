@@ -2421,23 +2421,24 @@ void InitModels(bool isstart)
 	model.date.year = 1740;
 	AddCharacterModel(model);
 
-	model.description =  "They're more like guidelines...";
-	model.id	  =  "Barbossa2";
-	model.FaceId	  =  393;
-	model.nation	  =  ENGLAND;
-	model.price	  =  1000;
-	model.assigned	  =  true;
-	model.name	  = "Hector";
-	model.lastname	  = "Barbossa";
-	model.storytitle  = "On Stranger Tides";
-	model.storytext	  = "Are your days of pirating truly behind you? Or do you serve the crown for your own ulterior motives?";
-	model.playertype  = PLAYER_TYPE_CORSAIR;
-	model.ship	  = "RN_Surprise";
-	model.shipname	  = "Providence";
-	model.Flags.Pirate = 0;
-	model.Flags.Personal = 11;
-	model.date.hour	  = 9;
-	model.date.year	  = 1744;
+	model.description	= "They're more like guidelines...";
+	model.id	  	= "Barbossa2";
+	model.FaceId	  	= 393;
+	model.minlevel		= 10;
+	model.nation	  	= ENGLAND;
+	model.price	  	= 1000;
+	model.assigned	  	= true;
+	model.name	  	= "Hector";
+	model.lastname	  	= "Barbossa";
+	model.storytitle  	= "On Stranger Tides";
+	model.storytext	  	= "Are your days of pirating truly behind you? Or do you serve the crown for your own ulterior motives?";
+	model.playertype  	= PLAYER_TYPE_CORSAIR;
+	model.ship		= "RN_Surprise";
+	model.shipname		= "Providence";
+	model.Flags.Pirate	= 0;
+	model.Flags.Personal	= 11;
+	model.date.hour		= 9;
+	model.date.year		= 1744;
 	AddCharacterModel(model);
 
 	model.description =  "Is it true what they say about redheads? Why don't you come here and find out, cur!";
@@ -2458,7 +2459,7 @@ void InitModels(bool isstart)
 	model.description	=  "Beatrice Devlin. In her original view.";
 	model.id			=  "Beatrice";
 	model.FaceId		=  293;
-	model.nation		=  SPAIN;
+	model.nation		=  ENGLAND;
 	model.price			=  1000;
 	model.assigned		=  true;
 	model.height		=  1.7;
@@ -2471,16 +2472,16 @@ void InitModels(bool isstart)
 	model.storytext  =  "Beatrice Devlin is fond of exploring the newly discovered West Indies. You are a free lass in a free world. Do you have what it takes to create a true Age of Pirates?";
 	model.playertype = PLAYER_TYPE_EXPLORER;
 	model.difficulty = DIFFICULTY_MARINER;
-	model.Flags.Pirate = 11;
-	model.Flags.Personal = 4;
-	model.ship = "PO_CaravelR";
-	model.shipname = "Quicksilver";
+	model.Flags.Pirate = 6;
+	model.Flags.Personal = 37;
+	model.ship = "FastGalleon1";
+	model.shipname = "Discovery";
 	model.date.hour = 10;
 	model.date.min = 24;
 	model.date.sec = 42;
-	model.date.day = 25;
-	model.date.month = 9;
-	model.date.year = 1550;
+	model.date.day = 1;
+	model.date.month = 4;
+	model.date.year = 1576;
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
 
@@ -2488,7 +2489,7 @@ void InitModels(bool isstart)
 	model.description	=  "Beatrice's sister. Slightly younger, slightly sassier and it shows in the outfit.";
 	model.id		=  "BeatriceA";
 	model.FaceId		=  323;
-	model.nation		=  PERSONAL_NATION;
+	model.nation		=  ENGLAND;
 	model.price		=  1000;
 	model.assigned		=  true;
 	model.height		=  1.7;
@@ -2497,7 +2498,7 @@ void InitModels(bool isstart)
 	model.ani		=  "woman_sit";
 	model.name 		=  "Bonnie";
 	model.lastname 		=  "Devlin";
-	model.playertype 	= PLAYER_TYPE_EXPLORER;
+	model.playertype 	= PLAYER_TYPE_ADVENTURER;
 	model.difficulty 	= DIFFICULTY_MARINER;
 	model.Flags.Pirate 	= 5;
 	model.Flags.Personal	= 43;
@@ -2684,7 +2685,7 @@ void InitModels(bool isstart)
 	model.ship = "QueenAnnesRevenge";
 	model.shipname = "Queen Anne's Revenge";
 	model.Flags.Pirate = 20;
-	model.Flags.Personal = 2;
+	model.Flags.Personal = 13; // was 2
 	model.date.year = 1740;
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
@@ -3469,38 +3470,105 @@ void InitModels(bool isstart)
 	model.assigned    =  true;
 	AddCharacterModel(model);
 
-	// no model assignment quest character -->
-	model.description =  "This pirate resembles one famous pennyless French Captain";
-	model.id	   =  "Captaine_Chevalle";
-	model.FaceId	= 417;
-	model.nation	  =  FRANCE;
-	model.price	   =  1000;
-	model.assigned	=  true;
-	model.name = "Captaine";
-	model.lastname = "Chevalle";
-	model.Flags.Pirate = 8;
-	model.shipname = "Fancy";
-	model.date.year = 1740;
+	model.description	= "I am a Pirate Lord, and you are nothing!";
+	model.id		= "Villanueva";
+	model.FaceId		= 215;
+	model.minlevel		= 10;
+	model.nation		= PIRATE;
+	model.price		= 2500;
+	model.assigned		= true;
+	model.name		= "Eduardo";
+	model.lastname		= "Villanueva";
+	model.storytitle	= "Lord of the Adriatic";
+	model.storytext		= "Relive the piratical adventures of Capitán Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.";
+	model.playertype	= PLAYER_TYPE_CORSAIR;
+	model.Flags.Pirate	= 20;
+	model.Flags.Personal	= 34;
+	model.ship		= "SP_Neptunus";
+	model.shipname		= "Sargento";
+	model.date.year		= 1740;
 	AddCharacterModel(model);
 
-	model.description =  "A flashy red coat, trimmed with golden leafs. And on top of that, an Indian pattern bandana. Now I look like a real 'gentlemen' pirate!";
-	model.id	   =  "CaptainTeague";
-	model.FaceId	= 337;
-	model.nation	  =  PIRATE;
-	model.price	   =  1000;
-	model.assigned	=  true;
-	model.name = "Teague";
-	model.lastname = "Sparrow";
-	model.Flags.Pirate = 6;
-	model.Flags.Personal = 22;
-	model.date.hour = 20;
-	model.date.min = 24;
-	model.date.sec = 42;
-	model.date.day = 9;
-	model.date.month = 6;
-	model.date.year = 1740;
+	model.description	= "Have you ever heard of the Pirate Lord of Singapore?";
+	model.id		= "SaoFeng";
+	model.FaceId		= 104;
+	model.minlevel		= 10;
+	model.nation		= PIRATE;
+	model.price		= 150;
+	model.assigned		= true;
+	model.name		= "Sao";
+	model.lastname		= "Feng";
+	model.storytitle	= "Crouching Tiger, Sailing Dragon";
+	model.storytext		= "Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.";
+	model.ship		= "Empress";
+	model.shipname		= "Empress";
+	model.playertype	= PLAYER_TYPE_CORSAIR;
+	model.Flags.Pirate	= 32;
+	model.Flags.Personal	= 37;
+	model.date.year		= 1740;
 	AddCharacterModel(model);
-	// <-- no model assignment quest character
+
+	model.description	= "This pirate resembles one famous pennyless French Captain";
+	model.id		= "Captaine_Chevalle";
+	model.FaceId		= 417;
+	model.minlevel		= 10;
+	model.nation		= FRANCE;
+	model.price		= 1000;
+	model.assigned		= true;
+	model.name		= "Capitaine";
+	model.lastname		= "Chevalle";
+	model.storytitle	= "Lord of the Mediterranean Sea";
+	model.storytext		= "Chevalle, pirate lord of the Mediterranean sea, has embarked on a journey to the Caribbean. Work as a privateer for France, a pirate for yourself, or a rival power...the choice is yours, Capitaine.";
+	model.Flags.Pirate	= 8;
+	model.Flags.Personal	= 23;
+	model.ship		= "FR_CastelF";
+	model.shipname		= "Fancy";
+	model.date.year		= 1740;
+	model.playertype	= PLAYER_TYPE_CORSAIR;
+	AddCharacterModel(model);
+
+	model.description	= "And so... we go to war!";
+	model.id		= "Sri_Sumbhajee";
+	model.FaceId		= 438;
+	model.minlevel		= 10;
+	model.nation		= PIRATE;
+	model.price		= 5000;
+	model.assigned		= true;
+	model.name		= "Sumbhajee";
+	model.lastname		= "Angria";
+	model.storytitle	= "Lord of the Indian Ocean";
+	model.storytext		= "Priest turned pirate lord, Sri Sumbhajee Angria has left the Indian Ocean to resume his piratical activities in the Caribbean.";
+	model.ship		= "xebecvml";
+	model.shipname		= "Otter";
+	model.Flags.Pirate	= 31;
+	model.Flags.Personal	= 1;
+	model.date.year = 1740;
+	model.playertype = PLAYER_TYPE_CORSAIR;
+	AddCharacterModel(model);
+
+	model.description	= "A flashy red coat, trimmed with golden leafs. And on top of that, an Indian pattern bandana. Now I look like a real 'gentlemen' pirate!";
+	model.id		= "CaptainTeague";
+	model.FaceId		= 337;
+	model.minlevel		= 10;
+	model.nation		= PIRATE;
+	model.price		= 1000;
+	model.assigned		= true;
+	model.name		= "Edward";  // was "Teague Sparrow", changed to match "Hoist the Colours"
+	model.lastname		= "Teague";
+	model.Flags.Pirate	= 6;
+	model.Flags.Personal	= 22;
+	model.date.hour		= 20;
+	model.date.min		= 24;
+	model.date.sec		= 42;
+	model.date.day		= 9;
+	model.date.month	= 6;
+	model.date.year		= 1740;
+	model.storytitle	= "Pirate Lord of Madagascar";
+	model.storytext		= "Rumour has it this infamous buccaneer fathered the legendary Captain Jack Sparrow. Some say his accomplishments eclipsed even those of Jack. Steer the ship of the mighty Edward Teague.";
+	model.playertype	= PLAYER_TYPE_CORSAIR;
+	model.ship		= "Piratcorvette";
+	model.shipname		= "Troubadour";
+	AddCharacterModel(model);
 
 	model.description =  "Oh, a bandanna, white long-sleeved shirt, light vest, just the thing to blend into the crowds...";
 	model.id	   =  "Chameleon";
@@ -4042,6 +4110,7 @@ void InitModels(bool isstart)
 
 	model.description	= "Lucia de la Vega incognito.";
 	model.id		= "AnimistLucia";  // Based on "Animistse"
+	model.sex		= "woman";
 	model.FaceId		= 598;
 	model.nation		= BROKEN; // Assigned during story
 	model.price		= 1000;
@@ -4476,7 +4545,7 @@ void InitModels(bool isstart)
 	model.description	=  "Blaze Devlin. In his original view.";
 	model.id		=  "Devlin";
 	model.FaceId		=  292;
-	model.nation		=  SPAIN;
+	model.nation		=  ENGLAND;
 	model.price		=  1000;
 	model.assigned		=  true;
 	model.height		=  1.85;
@@ -4487,17 +4556,17 @@ void InitModels(bool isstart)
 	model.lastname = "Devlin";
 	model.storytitle =  "Age of Pirates";
 	model.storytext  =  "Brother to another well-known character, Blaze Devlin is a corsair always on the hunt for treasure. But what Caribbean Tales lie in store for you? The choice is up to you!";
-	model.playertype = PLAYER_TYPE_CORSAIR;
-	model.Flags.Pirate = 1;
-	model.Flags.Personal = 6;
+	model.playertype = PLAYER_TYPE_SMUGGLER;
+	model.Flags.Pirate = 29;
+	model.Flags.Personal = 42;
 	model.ship = "Barque2";
 	model.shipname = "Fool's Gold";
 	model.date.hour = 21;
 	model.date.min = 11;
 	model.date.sec = 12;
-	model.date.day = 11;
-	model.date.month = 7;
-	model.date.year = 1550;
+	model.date.day = 8;
+	model.date.month = 2;
+	model.date.year = 1576;
 	AddCharacterModel(model);
 	// <-- no model assignment quest character
 
@@ -6591,24 +6660,6 @@ void InitModels(bool isstart)
 	AssignModelType(isstart, model, "Sailors", 1.0);
 	AssignModelType(isstart, model, OFFIC_TYPE_BOATSWAIN, 1.0);
 	AssignModelType(isstart, model, OFFIC_TYPE_CARPENTER, 1.0);
-	AddCharacterModel(model);
-
-	model.description =  "Have you ever heard of the Pirate Lord of Singapore?";
-	model.id	   =  "SaoFeng";
-	model.FaceId	= 104;
-	model.nation = PIRATE;
-	model.price	   =  150;
-	model.assigned	=  true;
-	model.name = "Sao";
-	model.lastname = "Feng";
-	model.storytitle =  "Crouching Tiger, Sailing Dragon";
-	model.storytext  =  "Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.";
-	model.ship = "Empress";
-	model.shipname = "Empress";
-	model.playertype = PLAYER_TYPE_CORSAIR;
-	model.Flags.Pirate = 32;
-	model.Flags.Personal = 1;
-	model.date.year = 1740;
 	AddCharacterModel(model);
 
 	model.description  =  "";
@@ -9991,17 +10042,6 @@ void InitModels(bool isstart)
 	// Assassin Main Quest <--
 
 	// no model assignment quest character -->
-	model.description =  "And so... we go to war!";
-	model.id	   =  "Sri_Sumbhajee";
-	model.FaceId	= 438;
-	model.nation	  =  PIRATE;
-	model.price	   =  5000;
-	model.assigned	=  true;
-	model.name = "Sri";
-	model.lastname = "Sumbhajee";
-	model.Flags.Pirate = 31;
-	AddCharacterModel(model);
-
 	model.description =  "";
 	model.id	   =  "Sri_Sumbhajee_aid";
 	model.FaceId	= 213;
@@ -10603,8 +10643,9 @@ void InitModels(bool isstart)
 	model.lastname = "Charles";
 	AddCharacterModel(model);
 
-	model.description =  "It is nothing personal, it is just good business.";
-	model.id	   =  "Cutler_Beckett";
+	model.description	= "It is nothing personal, it is just good business.";
+	model.id		= "Cutler_Beckett";
+	model.minlevel		= 10;
 	model.FaceId	= 82;
 	model.nation	  =  ENGLAND;
 	model.price	   =  2000;
@@ -11086,20 +11127,6 @@ void InitModels(bool isstart)
 	model.FaceId	= 564;
 	model.nation	  =  BROKEN;
 	model.assigned	=  true;
-	AddCharacterModel(model);
-
-	model.description =  "I am a Pirate Lord, and you are nothing!";
-	model.id	   =  "Villanueva";
-	model.FaceId	= 215;
-	model.nation	  =  PIRATE;
-	model.price       =  2500;
-	model.assigned	=  true;
-	model.name = "Eduardo";
-	model.lastname = "Villanueva";
-	model.Flags.Pirate = 5;
-	model.ship = "SP_Neptunus";
-	model.shipname = "Sargento";
-	model.date.year = 1740;
 	AddCharacterModel(model);
 
 	model.description =  "An aristocratic fancy French lady, but one with a shady past...";
@@ -13600,6 +13627,22 @@ void InitModels(bool isstart)
 	model.date.day		= 10;
 	model.date.month	= 12;
 	model.date.year		= 1721;
+	AddCharacterModel(model);
+
+	model.description	= "A big African warrior with a face full of tattoos.";
+	model.id		= "BlackCaesar"; // "33_Ronald" model with modified "Napitan" texture
+	model.FaceId		= 618;
+	model.nation		= PIRATE;
+	model.price		= 500;
+	model.assigned		= true;
+	model.ani		= "33_Ronald";
+	model.name		= "Black";
+	model.lastname		= "Caesar";
+	model.ship		= "Tartane50";
+	model.shipname		= "Longboat";
+	model.storytitle	= "From Slave to Pirate";
+	model.storytext		= "You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?";
+	model.playertype	= PLAYER_TYPE_CASTAWAY;
 	AddCharacterModel(model);
 
 	model.description =  "";

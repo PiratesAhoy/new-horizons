@@ -602,7 +602,7 @@ int CreateCommonQuestCharacters(int in)
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.greeting = "Gr_Smuggler_OnShore";
+	ch.greeting = "Gr_camilo machado"; // was "Gr_Smuggler_OnShore" which is identical
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
@@ -641,7 +641,7 @@ int CreateCommonQuestCharacters(int in)
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.greeting = "Gr_Smuggler_OnShore";
+	ch.greeting = "Gr_camilo machado"; // was "Gr_Smuggler_OnShore" which is identical
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
@@ -680,7 +680,7 @@ int CreateCommonQuestCharacters(int in)
 	LAi_SetCivilianGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.greeting = "Gr_Smuggler_OnShore";
+	ch.greeting = "Gr_camilo machado"; // was "Gr_Smuggler_OnShore" which is identical
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
@@ -719,7 +719,7 @@ int CreateCommonQuestCharacters(int in)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_NoRebirthEnable(ch);
-	ch.greeting = "Gr_Quest_Smuggler_01";
+	ch.greeting = "Gr_Smuggler Agent"; // was "Gr_Quest_Smuggler_01" which is identical
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 

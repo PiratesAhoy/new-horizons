@@ -395,7 +395,40 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[79];
 			link.l1.go = "Exit_standard_story_setup";
 		break;
-
+		
+		case "talk_jack_ship_turks_anamaria":
+			dialog.text = DLG_TEXT[88];
+			link.l1 = DLG_TEXT[89];
+			link.l1.go = "talk_jack_ship_turks_anamaria2";
+		break;
+		
+		case "talk_jack_ship_turks_anamaria2":
+			dialog.text = DLG_TEXT[90];
+			link.l1 = DLG_TEXT[91];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("tp_deck_gibbs_dialog_turks");
+		break;
+		
+		case "talk_anamaria_cannibal":
+			dialog.text = DLG_TEXT[92];
+			link.l1 = DLG_TEXT[93];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("talk_anamaria_cannibal2");
+		break;
+		
+		case "talk_anamaria_cannibal2":
+			dialog.text = DLG_TEXT[94];
+			link.l1 = DLG_TEXT[95];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("reload_to_shore_cannibal");
+		break;
+		
+		case "talk_anamaria_dalma":
+			dialog.text = DLG_TEXT[96];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_Shack_Warning2_11");
+		break;
+		
 		case "Exit_standard_story_setup":
 			if (GetAttribute(pchar, "Aztec") != "1")
 			{

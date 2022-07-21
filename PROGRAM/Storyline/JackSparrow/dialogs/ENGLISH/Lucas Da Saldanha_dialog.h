@@ -1,4 +1,4 @@
-string DLG_TEXT[37] = {
+string DLG_TEXT[38] = {
 "I'm forever in your debt, sir!",
 "Not at all. I've been paid good money for your salvation.",
 "But who are you? Why did you save me?",
@@ -34,7 +34,7 @@ string DLG_TEXT[37] = {
 "Captain, we must find ",
 "Elizabeth Shaw",
 "!",
-"I'll sort this out ",
+"I'll sort this out, ",
 "Lucas Da Saldanha",
-
+".",
 };

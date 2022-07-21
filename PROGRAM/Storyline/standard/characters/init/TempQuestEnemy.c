@@ -82,6 +82,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
+/*	Duplicated in "Story.c"
 			// Агент перевозимый Дэниель в захваченный Оксбэй
 	ch.old.name = "Tobias";
 	ch.old.lastname = "";
@@ -100,7 +101,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Counterspy_dialog.c";
-	ch.greeting = "Gr_Counterspy";
+	ch.greeting = "Gr_Ewan Glover"; // was "Gr_Counterspy" which is identical
 	ch.rank 	= 1;
 	ch.reputation = "None";
 	ch.experience = "0";
@@ -120,6 +121,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
+*/
 
 			// 1-й Патрульный
 	ch.old.name = "French Patrol";
