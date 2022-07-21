@@ -296,7 +296,7 @@ void SideQuestComplete(string sQuestName)
 //			if(CheckAttribute(PChar,"quest.smuggling_guild.governor_smuggling") && sti(GetAttribute(PChar, "quest.smuggling_guild.governor_smuggling.nation")) == GetSmugglingNation())
 //			{
 //				if(!CheckAttribute(pchar,"quest.smuggling_guild.governor_quest.made_first_report"))
-				if(!CheckCharacterItem(PChar,"smuggling_first_report"))
+				if(!CheckCharacterItem(PChar,"smuggling_first_report") && CheckAttribute(PChar, "quest.smuggling_guild.governor_smuggling.contact_made"))
 				{
 					GiveItem2Character(pchar,"smuggling_first_report");
 					AddQuestRecord("governor_smuggling", 2);
@@ -3434,13 +3434,26 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.baldewyn_wait_month_timer.win_condition.l1.date.month = GetAddingDataMonth(0, 1, 0);
 			PChar.quest.baldewyn_wait_month_timer.win_condition.l1.date.year = GetAddingDataYear(0, 1, 0);
 			PChar.quest.baldewyn_wait_month_timer.win_condition = "baldewyn_wait_month_timer_complete";
+		
+			PChar.quest.baldewyn_wait_day_timer.win_condition.l1 = "Timer";
+			PChar.quest.baldewyn_wait_day_timer.win_condition.l1.date.day = GetAddingDataDay(0, 0, 1);
+			PChar.quest.baldewyn_wait_day_timer.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 1);
+			PChar.quest.baldewyn_wait_day_timer.win_condition.l1.date.year = GetAddingDataYear(0, 0, 1);
+			PChar.quest.baldewyn_wait_day_timer.win_condition = "baldewyn_wait_day_timer_complete";
+			
 		break;
 
 		case "baldewyn_wait_month_timer_complete":
 			characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire =  "money_3"; //Fix:Storekeeper:19.09
 		break;
 
-
+		case "baldewyn_wait_day_timer_complete"://PW timer to place BC on stall
+			ChangeCharacterAddressGroup(characterFromID("Baldewyn Coffier"), "Falaise_De_Fleur_Location_03", "merchant", "merchant3");
+			LAi_SetMerchantType(characterFromID("Baldewyn Coffier"));
+			LAi_SetLoginTime(characterFromID("Baldewyn Coffier"), 6.0, 22.0);
+			ChangeCharacterAddressGroup(characterFromID("FF_Street_merchant_1"),"none","","");
+			
+		break;
 ///////////////////////////////////////////////////////////////
 ///// SINK THE PIRATE CORVETTE
 ///////////////////////////////////////////////////////////////
@@ -6968,7 +6981,7 @@ void SideQuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////
 
 		case "Jackpot_start":
-			SetEnterLocationQuest("Tortuga_tavern", "Jackpot_start_check", 0);
+			if(GetMySimpleOldName(PChar) != "Will Turner") SetEnterLocationQuest("Tortuga_tavern", "Jackpot_start_check", 0);
 		break;
 
 		case "Jackpot_start_check":
@@ -9429,7 +9442,7 @@ void SideQuestComplete(string sQuestName)
 // KK -->
 				for (cidx = 1; cidx < 4; cidx++)
 				{
-					iPassenger = GetOfficersIndex(Pchar, "" + cidx);
+					iPassenger = GetOfficersIndex(Pchar, cidx);
 					if (iPassenger > 0 && Characters[iPassenger].id == "Artois Voysey")
 						pchar.quest.shoot_in_artois_complete = "complete";
 				}
@@ -10341,7 +10354,7 @@ void SideQuestComplete(string sQuestName)
 // PB -->
 				for (cidx = 1; cidx < 4; cidx++)
 				{
-					iPassenger = GetOfficersIndex(Pchar, "" + cidx);
+					iPassenger = GetOfficersIndex(Pchar, cidx);
 					if (iPassenger > 0) LAi_SetOfficerType(&characters[getOfficersIndex(Pchar, cidx)]);
 				}
 // PB <--

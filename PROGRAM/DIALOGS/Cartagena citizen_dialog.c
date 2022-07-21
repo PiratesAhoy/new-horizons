@@ -189,6 +189,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "smithy":
+				Preprocessor_Add("name", GetMyName(CharacterFromID("Cartagena_blacksmith")));
+				Preprocessor_Add("fullname", GetMyFullName(CharacterFromID("Cartagena_blacksmith")));
 				d.Text = DLG_TEXT[159];
 				Link.l1 = DLG_TEXT[160];
 				Link.l1.go = "new question";
@@ -387,7 +389,7 @@ void ProcessDialogEvent()
 			if(Rand(1)== 0)
 			{
 				Link.l1 = pcharrepphrase(DLG_TEXT[130], DLG_TEXT[131]);
-				Link.l1.go = "Havana";
+				Link.l1.go = "Cartagena";
 			}
 			else
 			{
@@ -398,7 +400,7 @@ void ProcessDialogEvent()
 			Link.l2.go = "new question";
 		break;
 
-		case "Havana":
+		case "Cartagena":
 			d.Text = DLG_TEXT[134] + DLG_TEXT[168] + GetTownSize("Cartagena") + DLG_TEXT[169]; // NK
 			Link.l1 = pcharrepphrase(DLG_TEXT[135], DLG_TEXT[136]);
 			Link.l1.go = "new question";

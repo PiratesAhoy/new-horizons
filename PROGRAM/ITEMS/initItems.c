@@ -623,6 +623,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBLDexterior(n,"Totem2",     "B_Totem2",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
   n = InitBLDexterior(n,"Totem3",     "B_Totem3",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
   n = InitBLDexterior(n,"Totem4",     "B_Totem4",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );
+  n = InitBLDexterior(n,"Totem5",     "B_Totem5",      "B_invisible",  "",                 2,   100,  5,   1.0, 2.0,  0, 20 );  //Indian village2
   n = InitBLDexterior(n,"Tipi2",      "B_tipi2",       "B_invisible",  "",                 5,  1000,  5,   1.0, 2.0,  0, 20 );	// Indian tepee
   n = InitBLDexterior(n,"Tipi3",      "B_tipi3",       "B_invisible",  "",                 5,  1000,  5,   1.0, 2.0,  0, 20 );	// Indian tepee
 
@@ -991,6 +992,8 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"ellipse_tower",		"ellipse_tower");	//
   n = InitBuildingItemJRH(n,	"cellar_wall",			"cellar_wall");		// = "B_house02" with an empty inside
   n = InitBuildingItemJRH(n,	"barn",				"barn");		//used for its ladder
+  n = InitBuildingItemJRH(n,	"barn1",			"barn1");		//Tia Dalma swamp
+  n = InitBuildingItemJRH(n,	"3Feet",			"3Feet");		//Tia Dalma swamp
   n = InitBuildingItemJRH(n,	"door_largeh2_tilt",		"door_largeh2_tilt");	//Eden passage
   n = InitBuildingItemJRH(n,	"L_bridge",			"L_bridge");		//outside grotto1
   n = InitBuildingItemJRH(n,	"gatedoor_Mine_light",		"gatedoor_Mine_light");	//BB tunnel
@@ -1086,6 +1089,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
  
   n = InitBuildingItemJRH(n,	"door_U1",			"door_U1");		//Legrands house
   n = InitBuildingItemJRH(n,	"door_attic",			"door_attic");		//Legrands house
+  n = InitBuildingItemJRH(n,	"door_attic1",			"door_attic1");		//Tia Dalma swamp
   n = InitBuildingItemJRH(n,	"door_fort",			"door_fort");		//white fort towers
 
   n = InitBuildingItemJRH(n,	"door_barn",			"door_barn");
@@ -3236,7 +3240,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   //            |         |          |             picTexture |    |   MinLevel |    | maxDamage|   |    |      Disarm    |   Available in period         Last period of availability
   //------------|---------|----------|-------------------|----|----|------|-----|----|-----|----|---|----|---------|------|------------|-----------------------------|---------------
   n = InitBlade(n, "blade1",  "blade1",                  6,  11,  0.90,   1,   63, 15.0, 18.0, 14, 13,  "",        0,     0,    PERIOD_COLONIAL_POWERS,      PERIOD_NAPOLEONIC); // Sabre//BB
-  n = InitBlade(n, "blade2",  "blade2",                  6,  10,  0.90,   1,   67, 12.0, 17.0, 20, 10,  "",        0,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Rapier//BB
+  n = InitBlade(n, "blade2",  "blade2",                  6,  10,  0.90,   1,   67, 12.0, 17.0, 20, 10,  "",        0,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Rapier//BB
   n = InitBlade(n, "blade3",  "blade3",                  6,   8,  0.90,   1,   56, 15.0, 17.0, 15, 10,  FRANCE,    1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Badelaire//BB
   n = InitBlade(n, "blade4",  "blade4",                  6,   7,  0.90,   1,   60, 15.0, 18.0, 15, 11,  "",        1,     0,    PERIOD_GOLDEN_AGE_OF_PIRACY, PERIOD_NAPOLEONIC); // Cutlass//BB (BASE SWORD WEAPON)
   n = InitBlade(n, "blade5",  "blade5",                  6,   9,  0.90,   1,   12,  6.0, 15.0, 30,  4,  "",        0,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Dagger //BB
@@ -3247,7 +3251,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBlade(n, "blade10", "blade10",                 3,   3,  0.40,   5,  161, 21.0, 26.0, 28, 13,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Piranha//BB
   n = InitBlade(n, "blade11", "blade11",                 3,   4,  0.30,   4,  264, 18.0, 22.0, 25, 19,  ENGLAND,   3,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Highlander//BB
   n = InitBlade(n, "blade12", "blade12",                 3,   5,  0.20,   6,  470, 17.0, 21.0, 30, 28,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Arabic Scimitar//BB
-  n = InitBlade(n, "blade13", "blade13",                 3,   6,  0.10,   5,  285, 16.0, 19.0, 35, 15,  "",        1,     0,    PERIOD_THE_SPANISH_MAIN,     PERIOD_NAPOLEONIC); // Dueling Rapier//BB
+  n = InitBlade(n, "blade13", "blade13",                 3,   6,  0.10,   5,  285, 16.0, 19.0, 35, 15,  "",        1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Dueling Rapier//BB
   n = InitBlade(n, "blade14", "blade14",                 3,   7,  0.05,   9, 2280, 22.0, 32.0, 33, 56,  SPAIN,     5,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_NAPOLEONIC); // Spanish Nobility Longsword//BB
   n = InitBlade(n, "blade15", "blade15",                 3,   8,  0.15,   5,  280, 19.0, 21.0, 21, 23,  PORTUGAL,  1,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Iberian Longsword//BB
   n = InitBlade(n, "blade16", "blade16",                 3,   9,  0.15,  10,  711, 21.0, 29.0, 35, 25,  SPAIN,     3,     0,    PERIOD_EARLY_EXPLORERS,      PERIOD_GOLDEN_AGE_OF_PIRACY); // Tizona//BB

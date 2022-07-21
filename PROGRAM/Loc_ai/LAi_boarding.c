@@ -918,7 +918,7 @@ bool SurrenderAction(ref mchr, ref ch, string locationID, string homeLocator, st
 	if (refEnCaptain.sex == "woman")
 		refEnCaptain.greeting = "Gr_Pirate_f";
 	else
-		refEnCaptain.greeting = "Gr_Dark Teacher";
+		refEnCaptain.greeting = "Gr_Clauss"; // was "Gr_Dark Teacher" which is identical
 
 	SDLogIt("Did enemy captain dialog at locator " + homeLocator);
 
@@ -2374,7 +2374,7 @@ void SetUpGovernor()
 		LAi_SetSitType(captured_governor);
 	LAi_SetLoginTime(captured_governor, 0.0, 24.0);
 	LAi_group_MoveCharacter(captured_governor, LAI_GROUP_PLAYER);
-	captured_governor.greeting = "Gr_Dark Teacher";
+	captured_governor.greeting = "Gr_Clauss"; // was "Gr_Dark Teacher" which is identical
 	captured_governor.town = town;
 
 	boarding_enemy = captured_governor;

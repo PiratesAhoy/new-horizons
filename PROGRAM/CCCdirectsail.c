@@ -560,7 +560,8 @@ string GetMapIslandzone(string Island)
 			if(iRealismMode == 0)
 			{
 				LogIt(TranslateString("","Captain, we are approaching") + " " + pchar.directsail1.approaching + ".");
-				PlayStereoSound("notebook_note");
+			//	PlayStereoSound("notebook_note");
+				PlaySound("interface\notebook.wav");	// same sound effect, playing directly removes an alias
 			}
 		}
 		else
@@ -572,7 +573,8 @@ string GetMapIslandzone(string Island)
 				if(iRealismMode == 0)
 				{
 					LogIt(TranslateString("","Captain, we are approaching") + " " + pchar.directsail1.approaching + "!");
-					PlayStereoSound("notebook_note");
+				//	PlayStereoSound("notebook_note");
+					PlaySound("interface\notebook.wav");
 				}
 			}
 		}

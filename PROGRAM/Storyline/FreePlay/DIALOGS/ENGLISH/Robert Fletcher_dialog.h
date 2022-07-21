@@ -1,4 +1,4 @@
-string DLG_TEXT[300] = {
+string DLG_TEXT[313] = {
 "We've made port at the pirate settlement on #sisland_Quebradas Costillas#. I had my personal Roger hoisted so no one will give us trouble. The officers and a piece of your crew have elected to make their way through the jungle for #sCharlestown#. I guess they don't want to be hunted down by the English as traitors. Alas you don't have that option. I cannot thank you enough for what you did for my crew and me.",
 "Captain Champers was a pig of a man and what he intended for you was monstrous. I didn't see a choice.",
 "Treacherous dogs. I suppose I saw that coming. What can I do for you, Captain?",
@@ -299,4 +299,17 @@ string DLG_TEXT[300] = {
 "Good. Moor the ship by the bay, I need to catch up with my studies first before we set out to sea.",
 "Captain, the crew are wondering what you plan to do now that Davy Jones is dead and you have taken over the 'Flying Dutchman'.",
 "In due time, we will need to tend to our duty to the souls of the dead. But first we need to gain experience with the ship. She is not as she was when she was cursed.",
-};
+"Cap'n, we've found this secluded bay which we can set up as our base o' operations.",
+"Perfect. Now, anchor the ship. I'd like to get a survey of it.",
+"Capitán, now that we have arrived in the Caribbean, the crew are wondering about your intentions. Are we to continue to serve Spain?",
+"We shall keep our options open. We shall not give up our service to Spain. But we have not antagonised the pirates here and will not do so.",
+"No, I have finished with Spain. We are pirates now. Hoist the black flag!",
+"What sort of question is that? We have been loyal to Spain and will remain loyal! Now, get out!",
+"Might I say I rather loved that chase! Did that captain think himself a pirate killer? He can't even choose a ship with the right masts! So...when is our next voyage?",
+"Rather be thankful we took the right ship. Don't be too excited,",
+"; you have much to learn. This is a deadly business. Now, I've got to anchor here. I've got some things to settle first.",
+"We've reached port, #ssir#.",
+"Good. Let's anchor here and prepare for our next voyage.",
+"Now that we've got the rest of the crew out of the way, let's get to the boat. We'll need to throw our weapons overboard before we leave, they'll only make the boat heavier.",
+"Thank you again for freeing me. As for weapons, we can find something after we reach shore.",
+}

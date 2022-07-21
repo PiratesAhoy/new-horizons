@@ -170,6 +170,83 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[36];
 			link.l1.go = "prisonexit";
 		break;
+		
+		case "Talk_at_Tortuga_Tavern_Eliza":
+			dialog.text = DLG_TEXT[39];
+			link.l1 = DLG_TEXT[40];
+			link.l1.go = "Talk_at_Tortuga_Tavern_Eliza_2";
+		break;
+		
+		case "Talk_at_Tortuga_Tavern_Eliza_2":
+			dialog.text = DLG_TEXT[41];
+			link.l1 = DLG_TEXT[42];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Elizabeth_tortuga_port_tp");
+		break;
+	
+		//Port scenes
+		case "Elizabeth_tortuga_port_talk":
+			dialog.text = DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44];
+			link.l1.go = "Elizabeth_tortuga_port_talk_2";
+		break;
+		
+		case "Elizabeth_tortuga_port_talk_2":
+			dialog.text = DLG_TEXT[45];
+			link.l1 = DLG_TEXT[46];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Norrington_tortuga_port_talk");
+		break;
+			
+		//Port scenes after norrington
+		case "Elizabeth_tortuga_port_talk_3":
+			dialog.text = DLG_TEXT[47];
+			link.l1 = DLG_TEXT[48];
+			link.l1.go = "Elizabeth_tortuga_port_talk_4";
+		break;
+		
+		case "Elizabeth_tortuga_port_talk_4":
+			dialog.text = DLG_TEXT[49];
+			link.l1 = DLG_TEXT[50];
+			link.l1.go = "Elizabeth_tortuga_port_talk_5";
+		break;
+		
+		case "Elizabeth_tortuga_port_talk_5":
+			dialog.text = DLG_TEXT[51];
+			link.l1 = DLG_TEXT[52];
+			link.l1.go = "Elizabeth_tortuga_port_talk_6";
+		break;
+		
+		case "Elizabeth_tortuga_port_talk_6":
+			dialog.text = DLG_TEXT[53];
+			link.l1 = DLG_TEXT[54];
+			link.l1.go = "Elizabeth_tortuga_port_talk_7";
+		break;
+		
+		case "Elizabeth_tortuga_port_talk_7":
+			dialog.text = DLG_TEXT[55];
+			link.l1 = DLG_TEXT[56];
+			link.l1.go = "Elizabeth_tortuga_port_talk_8";
+		break;
+		
+		case "Elizabeth_tortuga_port_talk_8":
+			dialog.text = DLG_TEXT[57];
+			link.l1 = DLG_TEXT[58];
+			link.l1.go = "Elizabeth_tortuga_port_talk_9";
+		break;
+		
+		case "Elizabeth_tortuga_port_talk_9":
+			dialog.text = DLG_TEXT[59];
+			link.l1 = DLG_TEXT[60];
+			link.l1.go = "Elizabeth_tortuga_port_talk_10";
+		break;
+		
+		case "Elizabeth_tortuga_port_talk_10":
+			dialog.text = DLG_TEXT[61];
+			link.l1 = DLG_TEXT[62];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("Gibbs_talk_port_final");
+		break;
 
 		case "prisonexit":
 			AddDialogExitQuest("ReturntoGovernoragain");
@@ -181,5 +258,6 @@ void ProcessDialogEvent()
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
+		
 	}
 }

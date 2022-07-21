@@ -489,6 +489,148 @@ void ProcessDialogEvent()
 			link.l1.go = "exit talking on turks";
 		break;		
 
+		case "cannibals_will_talk":
+			dialog.text = DLG_TEXT[126];
+			link.l1 = DLG_TEXT[127];
+			link.l1.go = "cannibals_will_talk_2";
+		break;	
+		
+		case "cannibals_will_talk_2":
+			dialog.text = DLG_TEXT[128];
+			link.l1 = DLG_TEXT[129];
+			link.l1.go = "cannibals_will_talk_3";
+		break;	
+		
+		case "cannibals_will_talk_3":
+			dialog.text = DLG_TEXT[130];
+			link.l1 = DLG_TEXT[131];
+			AddDialogExitQuest("cannibals_will_fight");
+			link.l1.go = "Exit";
+		break;	
+		
+		//Run to bridge
+		case "cannibals_will_talk2":
+			dialog.text = DLG_TEXT[132];
+			link.l1 = DLG_TEXT[133];
+			AddDialogExitQuest("cannibals_bridge_run1");
+			link.l1.go = "Exit";
+		break;	
+
+		//On board after cannibals
+		case "after_cannib_talk_will":
+			dialog.text = DLG_TEXT[134];
+			link.l1 = DLG_TEXT[135];
+			link.l1.go = "after_cannib_talk_will2";
+		break;	
+		
+		//On board after cannibals
+		case "after_cannib_talk_will2":
+			dialog.text = DLG_TEXT[136];
+			link.l1 = DLG_TEXT[137];
+			link.l1.go = "after_cannib_talk_will3";
+		break;	
+		
+		//On board after cannibals
+		case "after_cannib_talk_will3":
+			dialog.text = DLG_TEXT[138];
+			link.l1 = DLG_TEXT[139];
+			link.l1.go = "after_cannib_talk_will4";
+		break;	
+		
+		//On board after cannibals
+		case "after_cannib_talk_will4":
+			dialog.text = DLG_TEXT[140];
+			link.l1 = DLG_TEXT[141];
+			link.l1.go = "after_cannib_talk_will5";
+		break;
+
+		//On board after cannibals
+		case "after_cannib_talk_will5":
+			dialog.text = DLG_TEXT[142];
+			link.l1 = DLG_TEXT[143];
+			link.l1.go = "after_cannib_talk_will6";
+		break;
+		
+		//On board after cannibals
+		case "after_cannib_talk_will6":
+			dialog.text = DLG_TEXT[144];
+			link.l1 = DLG_TEXT[145];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("cleanup_after_roa");
+		break;
+		
+		//Antigua in search of dalma
+		case "At_jungle_talk_will":
+			dialog.text = DLG_TEXT[146];
+			link.l1 = DLG_TEXT[147];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_jungle_will_walk");
+		break;
+		
+		//Antigua in search of dalma
+		case "talk_jack_antigua":
+			dialog.text = DLG_TEXT[148];
+			link.l1 = DLG_TEXT[149];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_smugglers_talk_will_2");
+		break;
+		
+		//Antigua in search of dalma
+		case "talk_jack_swamp":
+			dialog.text = DLG_TEXT[150];
+			link.l1 = DLG_TEXT[151];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_swamp_talk_will2");
+		break;
+		
+		//Antigua in hut
+		case "talk_dalma_hut":
+			dialog.text = DLG_TEXT[152];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_Shack_Warning2_4");
+		break;
+		
+		//Antigua in hut
+		case "talk_dalma_hut2":
+			dialog.text = DLG_TEXT[153];
+			link.l1 = DLG_TEXT[154];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_Shack_Warning2_8");
+		break;
+		
+		//Antigua in hut
+		case "talk_dalma_hut3":
+			dialog.text = DLG_TEXT[155];
+			link.l1 = DLG_TEXT[156];
+			link.l1.go = "talk_dalma_hut4";
+		break;
+		
+		//Antigua in hut
+		case "talk_dalma_hut4":
+			dialog.text = DLG_TEXT[157];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("At_Shack_Warning2_13");
+		break;
+		
+		case "talk_shipwreck_dutchman":
+			dialog.text = DLG_TEXT[158];
+			link.l1 = DLG_TEXT[159];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("dialogue_start_deck_shipwreck_3");
+		break;
+		
+		case "talk_shipwreck_dutchman_2":
+			dialog.text = DLG_TEXT[160];
+			link.l1 = DLG_TEXT[161];
+			link.l1.go = "talk_shipwreck_dutchman_3";
+		break;
+		
+		case "talk_shipwreck_dutchman_3":
+			dialog.text = DLG_TEXT[162];
+			link.l1 = DLG_TEXT[163];
+			link.l1.go = "Exit";
+			AddDialogExitQuest("tp_deck_shipwreck");
+		break;
 		
 		case "exitexecution":
 			AddDialogExitQuest("Turner_and_me_in_trouble");

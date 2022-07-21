@@ -1302,7 +1302,7 @@ void CreateTempQuestCharacters(ref n)
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "Christopher Backer_dialog.c";
-	ch.greeting = "Gr_Quest_Smuggler_01";
+	ch.greeting = "Gr_Smuggler Agent"; // was "Gr_Quest_Smuggler_01" which is identical
 	ch.rank 	= 5;
 	ch.reputation = "None";
 	ch.experience = "80";

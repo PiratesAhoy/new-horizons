@@ -39,11 +39,11 @@ void ProcessDialogEvent()
 			Pchar.Quest.Loans.(NPC_Area).StartYear = getDataYear();
 			Pchar.Quest.Loans.(NPC_Area).StartTime = getTime();
 
-			Pchar.quest.(NPC_Area).win_condition.l1 = "Timer";
-			Pchar.quest.(NPC_Area).win_condition.l1.date.day = getDataDay();
-			Pchar.quest.(NPC_Area).win_condition.l1.date.month = getDataMonth() + makeint(Pchar.Quest.Loans.(NPC_Area).Period);
-			Pchar.quest.(NPC_Area).win_condition.l1.date.year = getDataYear();
-			Pchar.quest.(NPC_Area).win_condition = "Loans_" + (NPC_Area); // KK
+			PChar.quest.(NPC_Area).win_condition.l1 = "Timer";
+			PChar.quest.(NPC_Area).win_condition.l1.date.day = GetAddingDataDay(0, sti(PChar.Quest.Loans.(NPC_Area).Period), 0);
+			PChar.quest.(NPC_Area).win_condition.l1.date.month = GetAddingDataMonth(0, sti(PChar.Quest.Loans.(NPC_Area).Period), 0);
+			PChar.quest.(NPC_Area).win_condition.l1.date.year = GetAddingDataYear(0, sti(PChar.Quest.Loans.(NPC_Area).Period), 0);
+			PChar.quest.(NPC_Area).win_condition = "Loans_" + (NPC_Area); // KK
 			
 // KK -->
 			Preprocessor_AddQuestData("town", FindTownName(NPC_Area));
@@ -52,7 +52,7 @@ void ProcessDialogEvent()
 			Preprocessor_AddQuestData("deadline", GetHumanDate(sti(Pchar.quest.(NPC_Area).win_condition.l1.date.year), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.month), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.day))); 
 			Preprocessor_AddQuestData("loanshark", GetMySimpleName(NPChar));
 
-			WriteNewLogEntry("Visited "+FindTownName(GetCurrentTownID()),"I was desperate enough to borrow some money from the local loanshark. Now I have to return "+iLoanAmount+" plus interest to "+GetMySimpleName(NPChar)+" until "+GetHumanDate(sti(Pchar.quest.(NPC_Area).win_condition.l1.date.year), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.month), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.day))+".","Ship",true);
+			WriteNewLogEntry("Visited "+FindTownName(GetCurrentTownID()),"I was desperate enough to borrow some money from the local loanshark. Now I have to return "+iLoanAmount+" plus interest to "+GetMySimpleName(NPChar)+" by "+GetHumanDate(sti(Pchar.quest.(NPC_Area).win_condition.l1.date.year), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.month), sti(Pchar.quest.(NPC_Area).win_condition.l1.date.day))+".","Ship",true);
 
 			switch (GetTownIDFromLocID(Npchar.location))
 			{

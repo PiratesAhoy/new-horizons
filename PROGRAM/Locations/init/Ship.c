@@ -1349,4 +1349,70 @@ void LocationInitShip(ref n)
 // <-- KK
 
 	n = n + 1;
+
+	//ID
+	Locations[n].id = "ShipDeck2FDM";
+	locations[n].id.label = "Ship deck";
+	//Info
+	Locations[n].filespath.models = "locations\decks\Udeck1";
+	Locations[n].image = "Sea.tga";
+	//Sound
+	locations[n].type = "own_deck";
+	Locations[n].lockCamAngle = 0.4;
+	Locations[n].camshuttle = 1;
+	Locations[n].fastreload = "ship";
+	Locations[n].monsters = 1;
+
+	//Models
+	//Always
+	Locations[n].models.always.locators = "FDdeck_ld";
+	Locations[n].models.always.l1 = "FDdeck";
+	Locations[n].models.always.l2 = "FDdeck_f";
+	//Day
+	Locations[n].models.day.charactersPatch = "FDdeck_p";
+	//Night
+	Locations[n].models.night.charactersPatch = "FDdeck_p";
+	//Environment
+	Locations[n].environment.weather = "true";
+	Locations[n].environment.sea = "true";
+	Locations[n].MaxSeaHeight = 0.8; // screwface
+	//Reload map
+	// Captain's cabin on bakbort
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.go = "";
+	Locations[n].reload.l1.emerge = "";
+	Locations[n].reload.l1.autoreload = "0";
+	// Crew Quarters
+	Locations[n].reload.l2.name = "reload2";
+	Locations[n].reload.l2.go = "";
+	Locations[n].reload.l2.emerge = "";
+	Locations[n].reload.l2.autoreload = "0";
+	// Gun decks/cargo hold
+	Locations[n].reload.l3.name = "reload3";
+	Locations[n].reload.l3.go = "";
+	Locations[n].reload.l3.emerge = "";
+	Locations[n].reload.l3.autoreload = "0";
+	// Land on bakbort
+	Locations[n].reload.l4.name = "boatl";
+	Locations[n].reload.l4.go = "";
+	Locations[n].reload.l4.emerge = "";
+	Locations[n].reload.l4.autoreload = "0";
+	// Land on starbort
+	Locations[n].reload.l5.name = "boatr";
+	Locations[n].reload.l5.go = "";
+	Locations[n].reload.l5.emerge = "";
+	Locations[n].reload.l5.autoreload = "0";
+	// Sea
+	Locations[n].reload.l6.name = "sea";
+	Locations[n].reload.l6.go = "Sea";
+	Locations[n].reload.l6.emerge = "";
+	Locations[n].reload.l6.autoreload = "0";
+	Locations[n].reload.l6.label = "Sea.";
+	// Captain's cabin on starbort
+	Locations[n].reload.l7.name = "reload4";
+	Locations[n].reload.l7.go = "";
+	Locations[n].reload.l7.emerge = "";
+	Locations[n].reload.l7.autoreload = "0";
+
+	n = n + 1;
 }

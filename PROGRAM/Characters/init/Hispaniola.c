@@ -1799,6 +1799,42 @@ void CreateHispaniolaCharacters(ref n)
 	AddGameCharacter(n, ch);
 //<-- JRH
 
+	// Tortuga Mistress
+	ch.old.name		= "Doreen";
+	ch.old.lastname		= "Lascana";
+	ch.name			= TranslateString("", "Doreen");
+	ch.lastname		= TranslateString("", "Lascana");
+	ch.id			= "Tortuga_Mistress";
+	ch.model		= "WitchGirl";
+	ch.sound_type		= "female_citizen";
+	ch.sex			= "woman";
+	GiveItem2Character(ch, "Piratesdagger");
+	ch.location		= "Tortuga_Brothel";
+	ch.location.group 	= "goto";
+	ch.location.locator 	= "goto3";
+	ch.Dialog.Filename 	= "mistress_dialog.c";
+	ch.greeting		= "Gr_Brothel's mom";//MAXIMUS
+	ch.rank			= 1;
+	ch.reputation		= "None";
+	ch.experience		= "10000";
+	ch.skill.Leadership	= "1";
+	ch.skill.Fencing	= "10";
+	ch.skill.Sailing	= "1";
+	ch.skill.Accuracy	= "10";
+	ch.skill.Cannons	= "1";
+	ch.skill.Grappling	= "1";
+	ch.skill.Repair		= "1";
+	ch.skill.Defence	= "10";
+	ch.skill.Commerce	= "1";
+	ch.skill.Sneak		= "10";
+	ch.money		= "1000";
+	LAi_SetHP(ch, 1500.0, 1500.0);
+	LAi_SetWarriorType(ch);
+	LAi_warrior_DialogEnable(ch, true);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_group_MoveCharacter(ch, "TORTUGA_CITIZENS");
+	AddGameCharacter(n, ch);
+
 	// Soldier
 	ch.old.name = "Town guard";
 	ch.old.lastname = "";

@@ -935,6 +935,24 @@ void SetSchemeForLocation(ref loc)
 			break;
 
 	// <-- GOLDBUG
+	// DEVLIN -->
+		case "OP_celtic":
+			SetSoundScheme("cave");
+			SetMusicAlarm("OP_celtic");
+			break;
+		case "OP_road":
+			SetSoundScheme("jungle");
+			SetMusicAlarm("OP_road");
+			break;
+		case "OP_village":
+			SetSoundScheme("jungle");
+			SetMusicAlarm("OP_village");
+			break;
+		case "OP_wood":
+			SetSoundScheme("jungle");
+			SetMusicAlarm("OP_wood");
+			break;
+	//<-- DEVLIN
 	// CARTAGENA -->
 		case "inquisition":
 			SetSoundScheme("inquisition");
@@ -954,10 +972,25 @@ void SetSchemeForLocation(ref loc)
 			else
 			{ 
 				SetMusicAlarm("music_brothel_QC");
-				PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_001.wav");
-				PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_002.wav");
-				PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_004.wav");
-				PlayStereoSoundLooped("brothel");
+
+				switch(GetAttribute(loc,"id"))
+				{
+					case "QC_brothel":		// brothel looks like a tavern, crowded, this is where people go for a good time
+						PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_001.wav");
+						PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_002.wav");
+						PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_004.wav");
+						PlayStereoSoundLooped("AMBIENT\BROTHEL\Brothel_00" + (rand(3)+1) + ".wav");
+					break;
+
+					case "Charlestown_Brothel":	// quiet, everyone who wants a party is round at Pirate Settlement
+						PlayStereoSoundLooped("brothel_talks");
+						PlayStereoSoundLooped("brothel");
+					break;
+
+					// Everywhere else: somewhere in between
+					PlayStereoSoundLooped("AMBIENT\BROTHEL\razg_00" + (rand(3)+1) + ".wav");
+					PlayStereoSoundLooped("AMBIENT\BROTHEL\Brothel_00" + (rand(3)+1) + ".wav");
+				}
 			}
 			break;
 		case "brothel_room":

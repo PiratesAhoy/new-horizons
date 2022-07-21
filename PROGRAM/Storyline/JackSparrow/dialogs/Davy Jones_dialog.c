@@ -381,5 +381,111 @@ void ProcessDialogEvent()
 			AddQuestRecord("Davy Jones",3);
 			AddDialogExitQuest("Find_Barbossa_with_Black_Pearl");
 			break;
+			
+			case "Davy_talk_shipwreck1":
+			//PlaySound("VOICE\ENGLISH\DavyJones1.wav");
+			dialog.text = DLG_TEXT[73];
+			link.l1.go = "Davy_talk_shipwreck1_2";
+			break;
+			
+			case "Davy_talk_shipwreck1_2":
+			dialog.text = DLG_TEXT[74];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Sailor_2_to_davy");
+			break;
+			
+			case "Davy_talk_shipwreck1_sail2":
+			dialog.text = DLG_TEXT[75];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Sailor_2_to_davy_2");
+			break;
+			
+			// To the depths.
+			case "Davy_talk_shipwreck1_sail2_2":
+			dialog.text = DLG_TEXT[76];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Davy_talk_Sailor_2_kill");
+			break;
+			
+			// Life is cruel. Why should the afterlife be any different?
+			case "Davy_talk_shipwreck1_sail1_2":
+			dialog.text = DLG_TEXT[77];
+			link.l1.go = "Davy_talk_shipwreck1_sail1_3";
+			break;
+			
+			// Will you serve
+			case "Davy_talk_shipwreck1_sail1_3":
+			dialog.text = DLG_TEXT[78];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Davy_talk_Sailor_1_4");
+			break;
+			
+			case "Davy_talk_will":
+			dialog.text = DLG_TEXT[79];
+			link.l1 = DLG_TEXT[80];
+			link.l1.go = "Davy_talk_will_2";
+			break;
+			
+			case "Davy_talk_will_2":
+			dialog.text = DLG_TEXT[81];
+			link.l1 = DLG_TEXT[82];
+			link.l1.go = "Davy_talk_will_3";
+			break;
+			
+			case "Davy_talk_will_3":
+			dialog.text = DLG_TEXT[83];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Video_to_deck_from_shipw");
+			break;
+			
+			case "Davy_to_jack_deck":
+			dialog.text = DLG_TEXT[84];
+			link.l1 = DLG_TEXT[85];
+			link.l1.go = "Davy_to_jack_deck2";
+			break;
+			
+			case "Davy_to_jack_deck2":
+			dialog.text = DLG_TEXT[86];
+			link.l1 = DLG_TEXT[87];
+			link.l1.go = "Davy_to_jack_deck3";
+			break;
+			
+			case "Davy_to_jack_deck3":
+			dialog.text = DLG_TEXT[88];
+			link.l1 = DLG_TEXT[89];
+			link.l1.go = "Davy_to_jack_deck4";
+			break;
+			
+			case "Davy_to_jack_deck4":
+			dialog.text = DLG_TEXT[90];
+			link.l1 = DLG_TEXT[91];
+			link.l1.go = "Davy_to_jack_deck5";
+			break;
+			
+			case "Davy_to_jack_deck5":
+			dialog.text = DLG_TEXT[92];
+			link.l1 = DLG_TEXT[93];
+			link.l1.go = "Davy_to_jack_deck6";
+			break;
+			
+			case "Davy_to_jack_deck6":
+			dialog.text = DLG_TEXT[94];
+			link.l1 = DLG_TEXT[95];
+			link.l1.go = "Davy_to_jack_deck7";
+			break;
+			
+			case "Davy_to_jack_deck7":
+			dialog.text = DLG_TEXT[96];
+			link.l1 = DLG_TEXT[97];
+			link.l1.go = "Davy_to_jack_deck8";
+			break;
+			
+			case "Davy_to_jack_deck8":
+			dialog.text = DLG_TEXT[98];
+			link.l1 = DLG_TEXT[99];
+			link.l1.go = "exit";
+			AddDialogExitQuest("Sparrow_gibbs_after_shipw");
+			break;
+			
 	}
 }

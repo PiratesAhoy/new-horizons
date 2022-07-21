@@ -29,6 +29,18 @@ void ProcessDialogEvent()
 					link.l1.go = "naval_part2";
 				break;
 
+				case PLAYER_TYPE_MERCHANT:
+					switch (GetMySimpleOldName(PChar))
+					{
+						case "Cutler Beckett":
+							Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false));
+    							dialog.text = DLG_TEXT[309];
+							link.l1 = DLG_TEXT[310];
+							link.l1.go = "stormystart";
+						break;
+					}
+				break;
+
 				case PLAYER_TYPE_ROGUE:
 					dialog.text = DLG_TEXT[247];
 					if(PChar.sex == "woman") link.l1 = DLG_TEXT[264];
@@ -98,11 +110,41 @@ void ProcessDialogEvent()
 					else
 						link.l1 = DLG_TEXT[261];
 					link.l1.go = "stormystart";
+					switch(GetMySimpleOldName(PChar))
+					{
+						case "Blackbeard":
+    							dialog.text = DLG_TEXT[300];
+    							link.l1 = DLG_TEXT[301];
+						break;
+
+						case "Eduardo Villanueva":
+							dialog.text = DLG_TEXT[302];
+							link.l1 = DLG_TEXT[303];
+							link.l1.go = "exit_Villanueva_options_open";
+							link.l2 = DLG_TEXT[304];
+							link.l2.go = "exit_Villanueva_Pirate";
+							link.l3 = DLG_TEXT[305];
+							link.l3.go = "exit_Villanueva_Spain";
+						break;
+
+						case "Sao Feng":
+    							dialog.text = DLG_TEXT[306];
+    							link.l1 = DLG_TEXT[307] + GetMyName(NPChar) + DLG_TEXT[308];
+    							link.l1.go = "stormystart";
+						break;
+					}
 				break;
 
 				case PLAYER_TYPE_CASTAWAY:
-					dialog.text = DLG_TEXT[262];
-					link.l1 = DLG_TEXT[263];
+					switch(GetMySimpleOldName(PChar))
+					{
+						case "Black Caesar":
+							dialog.text = DLG_TEXT[311];
+							link.l1 = DLG_TEXT[312];
+						break;
+						dialog.text = DLG_TEXT[262];
+						link.l1 = DLG_TEXT[263];
+					}
 					link.l1.go = "stormystart";
 				break;
 
@@ -1564,6 +1606,31 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[283] + GetMySimpleName(agent) + DLG_TEXT[284] + FirstLetterUp(XI_ConvertString(GetMyPronounPossessive(agent))) + DLG_TEXT[285] + GetMySimpleOldName(agent) + DLG_TEXT[286] + GetMyPronounSubj(agent) + DLG_TEXT[287] + FirstLetterUp(GetMyPronounSubj(agent)) + DLG_TEXT[288];
 			link.l1 = DLG_TEXT[289];
 			link.l1.go = "stormystart";
+		break;
+
+		case "exit_Villanueva_options_open":
+			SetRank(PChar, SPAIN, 0);
+			SetServedNation(PIRATE);
+			SetRMRelation(PChar, PIRATE, REL_AMNESTY);
+			addDialogExitQuest("stormystart");
+			DialogExit();
+			bChangeNation = true;
+		break;
+
+		case "exit_Villanueva_Pirate":
+			SetServedNation(PIRATE);
+			if (HaveLetterOfMarque(SPAIN)) LeaveService(PChar, SPAIN, false);
+			addDialogExitQuest("stormystart");
+			DialogExit();
+			bChangeNation = true;
+		break;
+
+		case "exit_Villanueva_Spain":
+			SetRank(PChar, SPAIN, 0);
+			SetRelationsAsNation(SPAIN);
+			addDialogExitQuest("stormystart");
+			DialogExit();
+			bChangeNation = true;
 		break;
 		
 		case "exit":

@@ -122,6 +122,18 @@ void InitMusic()
 
 	//============================| GOLDBUG QUEST |===========================//<-- JRH
 
+	//============================| DEVLIN QUEST |===========================//BTP -->
+	tmpref.OP_celtic.f1.name = "MUSIC\op_celtictheme.ogg";
+
+	tmpref.OP_road.f1.name = "MUSIC\op_roadtheme.ogg";
+
+	tmpref.OP_village.f1.name = "MUSIC\op_villagetheme.ogg";
+
+	tmpref.OP_wood.f1.name = "MUSIC\op_woodtheme.ogg";
+
+
+	//============================| DEVLIN QUEST |===========================//<-- BTP
+
 	//===========================| Hornblower Quest |===========================// Grey Roger -->
 	if (FindCurrentStoryline() == FindStoryline("Hornblower"))
 	{

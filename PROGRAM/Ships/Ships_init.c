@@ -7855,7 +7855,7 @@ void InitShips()
 	refShip.america = 0.0; //
 	refShip.sweden = 0.0; //
 
-	refShip.Model = "Light Pinnace"; // KK
+//	refShip.Model = "Light Pinnace"; // KK - not the same as other light pinnaces - GR
 	refShip.Type.Trade = true;
 	refShip.Type.War = false;
 	refShip.CanBuy		= true;
@@ -18137,10 +18137,11 @@ void InitShips()
 // KK -->
 	refShip.BI.Tex = 14;
 	refShip.BI.Pic = 14;
-	refShip.QDeck				= "ShipDeck2";
+	refShip.QDeck				= "ShipDeck2FDM";
 	refShip.CannonsDeck			= 3;
 	refShip.CargoHold			= 2;
 	refShip.Cabin				= "CabinFDM";
+	refShip.DeckTexturesDir			= "FlyingDutchman";
 // <-- KK
 
 	refShip.CanEncounter		= false;

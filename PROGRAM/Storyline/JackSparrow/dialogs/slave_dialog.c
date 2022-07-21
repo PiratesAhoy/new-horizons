@@ -152,6 +152,14 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			AddDialogExitQuest("Dauntless_Deck_NORR8");
 		break;
+		
+		case "get_up_canibals_talk":
+			dialog.text = DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44];
+			link.l1.go = "exit";
+			AddDialogExitQuest("reload_in_village");
+		break;
+		
 
 		case "exit_doctor_bad":
 			Diag.CurrentNode = Diag.TempNode;

@@ -23,12 +23,34 @@ Koleniko{Koleniko}
 Ragetti{Ragetti}
 Mother{Mother}
 Bootstrap Bill{Bootstrap Bill}
+Mateo{Mateo}
+Black Caesar{Black Caesar}
+Raoul{Raoul}
+Dupont{Dupont}
+Askay{Askay}
+Pusasn{Pusasn}
+Lian{Lian}
+Park{Park}
+Tai{Tai}
+Huang{Huang}
+Twigg{Twigg}
+Bo'sun{Bo'sun}
+Pintel{Pintel}
+Ian{Ian}
+Mercer{Mercer}
+Bligh{Bligh}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Bartolomeu}
 Portugues{Portugues}
 Guillaume{Guillaume}
 Auger{Auger}
+
+{=====| both_reaction.c |=====}
+Weatherby{Weatherby}
+Swann{Swann}
+Christopher{Christopher}
+Silehard{Silehard}
 
 {=====| Officers.c |=====}
 William{William}

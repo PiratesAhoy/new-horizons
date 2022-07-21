@@ -1,4 +1,4 @@
-title=General Quest - Borrowed money off of loanshark.
+title=General Quest - Borrowed money from loanshark.
 text.t1=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
 text.t2=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
 text.t3=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
@@ -12,3 +12,5 @@ text.t10=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #sto
 text.t11=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
 text.t12=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
 text.t13=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t14=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.
+text.t15=I've borrowed #dammount# gold off of #sloanshark# the loanshark in #stown# on #sisland# and need to pay it back by the #sdeadline#.

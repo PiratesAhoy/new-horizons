@@ -2353,7 +2353,7 @@ void TIH_PrisonerTakenProcess(ref RefChar, bool bPurgeCrud)
 			Log_SetStringToLog(TranslateString("","CaptainMoney1")+" "+MakeMoneyShow(sti(Prisoner.money),"",MONEY_DELIVER)+" "+TranslateString("","CaptainMoney2"));
 		}
 		if(Prisoner.sex=="woman") Prisoner.greeting = "Gr_Pirate_f";
-		else Prisoner.greeting = "Gr_Dark Teacher";
+		else Prisoner.greeting = "Gr_Clauss"; // was "Gr_Dark Teacher" which is identical
 		boarding_enemy.status = "dead";
 		boarding_enemy.position = "captive";
 		PlayStereoSound("AMBIENT\JAIL\jail_door2.wav");
@@ -2922,7 +2922,7 @@ void GotSlut(string wait)
 			if(HasSubStr(cLoctr.(attrName1).go,"_upstairs") || HasSubStr(cLoctr.(attrName1).go,"_bedroom")) roomName = cLoctr.(attrName1).go;
 		}
 	}
-	DoQuestReloadToLocation(roomName, "goto", "goto4", "restore_hp");
+	DoQuestReloadToLocation(roomName, "goto", "goto4", "to_bedroom_for_girl");
 	TavernWaitDate2("wait_"+wait);
 }
 //MAXIMUS <--

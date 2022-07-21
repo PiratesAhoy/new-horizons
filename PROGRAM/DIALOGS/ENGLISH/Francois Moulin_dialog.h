@@ -23,6 +23,6 @@ string DLG_TEXT[25] = {
 "You can indeed safely assume that. Now follow me, we are going to inform Angelique. She's been worried for long enough now.",
 "Thanks a lot for your help. Please accept this diamond and this old journal as thanks for your assistance. These were given to me by an old dying pirate during my stay at the Buccaneers camp. Please keep them in thanks of your help.",
 "Thank you very much. But I have no use for an old journal. You keep it. Or give it to Captain Boelen for his help to you.",
-"That is very friendly of you. Thanks a lot. Goobye to you both. And be sure to give my regards to Captain Boelen.",
+"That is very friendly of you. Thanks a lot. Goodbye to you both. And be sure to give my regards to Captain Boelen.",
 
 };

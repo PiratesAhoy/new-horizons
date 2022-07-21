@@ -124,4 +124,9 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].vcskip = true;
 
 	n = n + 1;
+
+
+//----------------------------------------
+
+
 }

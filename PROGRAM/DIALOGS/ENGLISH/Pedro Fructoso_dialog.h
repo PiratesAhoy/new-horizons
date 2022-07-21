@@ -1,4 +1,4 @@
-string DLG_TEXT[60] = {
+string DLG_TEXT[67] = {
 "Welcome to my tavern, stranger. My name is ",
 ". What brings you to my humble establishment? Do you need a place to rest?",
 "Thank you. My name is ",
@@ -59,4 +59,11 @@ string DLG_TEXT[60] = {
 "I'm working for Lady Carranza. I want to speak with Abel Barco. Do you know him?",
 "Not really. He's just paid me to inform him when someone working for Lady Carranza would ask for him. And to tell you, tomorrow, he'll wait for you outside the town.",
 "Alright, Tell him I'll be there.",
+"Have you by any chance seen a bible lying around somewhere?",
+"Yes, this pretty bible here has been brought to the 'lost and found'. A sailor had left it on the table.",
+"Wonderful! Let me return it to the rightful owner.", // 62
+"I must apologise, but Captain Torres booked all my rooms for himself and his officers.",
+"I'll just stay in the tavern hall, then.",
+"Sadly, that won't be possible either. A town guard just advised me not to let people swig in here all night, because they often cause trouble. He's not wrong. You should have seen this sailor tonight, he could barely stagger out of the door. I'd bet my boots he didn't make it too far...",
+"Alright then, no sleep for me! [THINKS:] Maybe I shouldn't sleep anyway now! Some of the sailors are still on the loose!",
 };

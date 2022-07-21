@@ -111,19 +111,30 @@ void LocationInitEleuthera(ref n)
 	Locations[n].reload.l8.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l8.goto_disable = 1; // Screwface: Disable Go-To location
 
-    Locations[n].reload.l11.name = "gate";
+    	Locations[n].reload.l11.name = "gate";
 	Locations[n].reload.l11.go = "EleutheraPlantation";
 	Locations[n].reload.l11.emerge = "reload1";
 	Locations[n].reload.l11.autoreload = "0";
 	Locations[n].reload.l11.label = "#stown_name# Plantation";
 	Locations[n].locators_radius.reload.gate = 2.0;
 
-	locations[n].reload.l12.name = "HouseS2";
-	locations[n].reload.l12.go = "Eleuthera_brothel";
-	locations[n].reload.l12.emerge = "reload1_back";
-	locations[n].reload.l12.autoreload = "0";
-	locations[n].reload.l12.label = "#stown_name# Brothel";
-	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l12.goto_disable = 1; // Screwface: Disable Go-To location
+	if(IsBrothelEnabled())
+	{
+		Locations[n].reload.l12.name = "HouseS2";
+		Locations[n].reload.l12.go = "Eleuthera_brothel";
+		Locations[n].reload.l12.emerge = "reload1_back";
+		Locations[n].reload.l12.autoreload = "0";
+		Locations[n].reload.l12.label = "#stown_name# Brothel";
+		if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l12.goto_disable = 1; // Screwface: Disable Go-To location
+	}
+
+	Locations[n].reload.l13.name = "HouseSp1";
+	Locations[n].reload.l13.go = "Eleuthera_TailorsShop";
+	Locations[n].reload.l13.emerge = "locator2";
+	Locations[n].reload.l13.autoreload = "0";
+	Locations[n].reload.l13.label = "Tailor's Shop.";
+	Locations[n].reload.l13.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l13.goto_disable = 1;
 
 	Locations[n].island = "Eleuthera"; // added
 	n = n + 1;
@@ -513,6 +524,51 @@ void LocationInitEleuthera(ref n)
 	Locations[n].reload.l1.label = "#stown_name# Port";
 
 	Locations[n].island = "Eleuthera";
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// TAILOR'S SHOP
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	Locations[n].id = "Eleuthera_TailorsShop";	
+	Locations[n].id.label = "Tailor's Shop.";
+	Locations[n].image = "Inside_StoreSmall.tga";
+
+	//Town sack
+	Locations[n].townsack = "Eleuthera";
+
+	//Sound
+	locations[n].type = "shop";
+	locations[n].fastreload = "Eleuthera";
+	//Models
+	//Always
+	Locations[n].filespath.models = "locations\Inside\StoreSmall";
+	Locations[n].models.always.locators = "SS_l";
+	Locations[n].models.always.store = "SS";
+	Locations[n].models.always.window = "SS_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch   = "SS_p";
+	Locations[n].models.day.fonar			 = "SS_fn";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "SS_p";
+	Locations[n].models.night.fonar		   = "ss_fn";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "..\back\inside_back_";
+
+	Locations[n].reload.l1.name = "locator2";
+	Locations[n].reload.l1.go = "Eleuthera_Port";
+	Locations[n].reload.l1.emerge = "HouseSp1";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#";
+	Locations[n].locators_radius.reload.locator2 = 0.7;
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Eleuthera"; // NK 04-08-29
 	n = n + 1;
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1350,13 +1406,16 @@ void LocationInitEleuthera(ref n)
 	Locations[n].reload.l8.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l8.goto_disable = 1; // Screwface: Disable Go-To location
 
-    locations[n].reload.l9.name = "houseS1";
-	locations[n].reload.l9.go = "Alice_Brothel_room";
-	locations[n].reload.l9.emerge = "reload1";
-	locations[n].reload.l9.autoreload = "0";
-	locations[n].reload.l9.label = "#stown_name# Brothel";
-	Locations[n].reload.l9.close_for_night = 0;
-	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l9.goto_disable = 1; // Screwface: Disable Go-To location
+	if(IsBrothelEnabled())
+	{
+    		Locations[n].reload.l9.name = "houseS1";
+		Locations[n].reload.l9.go = "Alice_Brothel";
+		Locations[n].reload.l9.emerge = "reload1";
+		Locations[n].reload.l9.autoreload = "0";
+		Locations[n].reload.l9.label = "#stown_name# Brothel";
+		Locations[n].reload.l9.close_for_night = 0;
+		if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l9.goto_disable = 1; // Screwface: Disable Go-To location
+	}
 
     Locations[n].reload.l10.name = "gate_back";
 	Locations[n].reload.l10.go = "Alice_exit";
@@ -1372,6 +1431,14 @@ void LocationInitEleuthera(ref n)
 	locations[n].reload.l11.label = "#stown_name# Prison";
 	Locations[n].reload.l11.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1; // Screwface: Disable Go-To location
+
+	Locations[n].reload.l12.name = "HouseF3";
+	Locations[n].reload.l12.go = "Alice_TailorsShop";
+	Locations[n].reload.l12.emerge = "locator2";
+	Locations[n].reload.l12.autoreload = "0";
+	Locations[n].reload.l12.label = "Tailor's Shop.";
+	Locations[n].reload.l12.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l12.goto_disable = 1;
 
     Locations[n].island = "Eleuthera"; // NK 04-08-29
 	n = n + 1;
@@ -1465,7 +1532,7 @@ void LocationInitEleuthera(ref n)
 	locations[n].reload.l1.label = "#stown_name# Tavern";
 	locations[n].locators_radius.reload.reload1 = 0.8;
 
-    Locations[n].island = "Eleuthera"; // NK 04-08-29
+    	Locations[n].island = "Eleuthera"; // NK 04-08-29
 	n = n + 1;
 
  	//-------------------------------------------------
@@ -1490,6 +1557,64 @@ void LocationInitEleuthera(ref n)
 	locations[n].reload.l1.label = "#stown_name# Port";
 
 	Locations[n].island = "Eleuthera"; // NK 04-08-29
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// BROTHEL
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Alice_Brothel";
+	locations[n].id.label = "#stown_name# Brothel";
+	locations[n].filespath.models = "locations\inside\Brothel";
+	locations[n].image = "Inside_Brothel.tga";
+
+	//Town sack
+	locations[n].townsack = "Alice";
+
+	//Sound
+	locations[n].type = "brothel"; // there's a type for brothel
+	locations[n].fastreload = "Alice";
+	//Models
+	//Always
+	locations[n].models.always.locators = "Brothel_locators";
+	locations[n].models.always.store = "Brothel";
+	locations[n].models.always.window = "Brothel_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 50;
+	
+	Locations[n].models.back = "..\back\inside_back_";
+
+	//Day
+	locations[n].models.day.charactersPatch = "Brothel_patch";
+
+	//Night
+	locations[n].models.night.charactersPatch = "Brothel_patch";
+
+	//Environment
+	locations[n].environment.weather = "false";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Alice_Port";
+	locations[n].reload.l1.emerge = "houseS1";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "#stown_name# Port";
+	LAi_LocationFightDisable(&locations[n], true);
+
+	locations[n].reload.l2.name = "reload1_back";
+	locations[n].reload.l2.go = "Alice_Brothel_bedroom";
+	locations[n].reload.l2.emerge = "reload1";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "#stown_name# Brothel room";
+	Locations[n].reload.l2.disable = 1;
+
+	Locations[n].reload.l3.name = "reload2_back";
+	Locations[n].reload.l3.go = "Alice_Brothel_room";
+	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.autoreload = "0";
+	Locations[n].reload.l3.label = "#stown_name# Brothel room";
+
+    	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
+    	Locations[n].island = "Eleuthera"; // NK 04-08-29	
 	n = n + 1;
 
 	//  -------------------------------------------------
@@ -1522,14 +1647,56 @@ void LocationInitEleuthera(ref n)
 
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";
-	Locations[n].reload.l1.go = "Alice_Port";
-	Locations[n].reload.l1.emerge = "houseS1";//<--> Locations[FindLocation(Locations[n].reload.l1.go)].reload.l3.name;
+	Locations[n].reload.l1.go = "Alice_Brothel";
+	Locations[n].reload.l1.emerge = "reload2_back";
 	Locations[n].reload.l1.autoreload = "0";
-	locations[n].reload.l1.label = "#stown_name# Port";
+	locations[n].reload.l1.label = "#stown_name# Brothel";
 
 	LAi_LocationFightDisable(&Locations[n], true);
 
 	Locations[n].island = "Eleuthera";
+	n = n + 1;
+
+	//  -------------------------------------------------
+	locations[n].id = "Alice_Brothel_bedroom";
+	locations[n].id.label = "Brothel Bedroom";
+	locations[n].filespath.models = "locations\inside\Brothel_room";
+	locations[n].image = "Inside_Brothel_Room.tga";
+
+	//Town sack
+	locations[n].townsack = "Alice";
+
+	//Sound
+	locations[n].type = "room";
+	locations[n].fastreload = "Alice";
+	//Models
+	//Always
+	locations[n].models.always.locators = "Brothel_room_locators";
+	locations[n].models.always.store = "Brothel_room";
+	locations[n].models.always.window = "Brothel_room_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 50;
+	
+	Locations[n].models.back = "..\back\inside_back_";
+
+	//Day
+	locations[n].models.day.charactersPatch = "Brothel_room_patch";
+
+	//Night
+	locations[n].models.night.charactersPatch = "Brothel_room_patch";
+
+	//Environment
+	locations[n].environment.weather = "false";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Alice_brothel";
+	locations[n].reload.l1.emerge = "reload1_back";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "#stown_name# Brothel";
+	LAi_LocationFightDisable(&locations[n], true);
+
+    	Locations[n].island = "Eleuthera";
 	n = n + 1;
 
 	//  -------------------------------------------------
@@ -1822,6 +1989,51 @@ void LocationInitEleuthera(ref n)
 	n = n + 1;
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// TAILOR'S SHOP
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	Locations[n].id = "Alice_TailorsShop";	
+	Locations[n].id.label = "Tailor's Shop.";
+	Locations[n].image = "Inside_StoreSmall.tga";
+
+	//Town sack
+	Locations[n].townsack = "Alice";
+
+	//Sound
+	locations[n].type = "shop";
+	locations[n].fastreload = "Alice";
+	//Models
+	//Always
+	Locations[n].filespath.models = "locations\Inside\StoreSmall";
+	Locations[n].models.always.locators = "SS_l";
+	Locations[n].models.always.store = "SS";
+	Locations[n].models.always.window = "SS_w";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch   = "SS_p";
+	Locations[n].models.day.fonar			 = "SS_fn";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "SS_p";
+	Locations[n].models.night.fonar		   = "ss_fn";
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "..\back\inside_back_";
+
+	Locations[n].reload.l1.name = "locator2";
+	locations[n].reload.l1.go = "Alice_Port";
+	Locations[n].reload.l1.emerge = "HouseF3";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.label = "#stown_name#";
+	Locations[n].locators_radius.reload.locator2 = 0.7;
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Eleuthera"; // NK 04-08-29
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// BROTHEL
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	locations[n].id = "Eleuthera_Brothel";
@@ -1863,19 +2075,20 @@ void LocationInitEleuthera(ref n)
 	LAi_LocationFightDisable(&locations[n], true);
 
 	locations[n].reload.l2.name = "reload2_back";
-	locations[n].reload.l2.go = "Eleuthera_Brothel_room";
+	locations[n].reload.l2.go = "Eleuthera_Brothel_bedroom";
 	locations[n].reload.l2.emerge = "reload1";
 	locations[n].reload.l2.autoreload = "0";
 	locations[n].reload.l2.label = "#stown_name# Brothel room";
 	Locations[n].reload.l2.disable = 1;
 
-    Locations[n].island = "Eleuthera"; // NK 04-08-29	
+    	Locations[n].permanent_mom = true; // GR: needed so that LEnc_monsters.c does not spawn random mistress
+    	Locations[n].island = "Eleuthera"; // NK 04-08-29	
 	n = n + 1;
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Brothel Room
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	locations[n].id = "Eleuthera_Brothel_room";
+	locations[n].id = "Eleuthera_Brothel_bedroom";
 	locations[n].id.label = "#stown_name# Brothel room";
 	locations[n].filespath.models = "locations\inside\Brothel_room";
 	locations[n].image = "Inside_Brothel_Room.tga";
@@ -1906,14 +2119,14 @@ void LocationInitEleuthera(ref n)
 	locations[n].environment.weather = "false";
 	locations[n].environment.sea = "false";
 	//Reload map
-	locations[n].reload.l1.name = "reload1_back";
+	locations[n].reload.l1.name = "reload1";
 	locations[n].reload.l1.go = "Eleuthera_brothel";
 	locations[n].reload.l1.emerge = "reload2";
 	locations[n].reload.l1.autoreload = "0";
 	locations[n].reload.l1.label = "#stown_name# Brothel";
 	LAi_LocationFightDisable(&locations[n], true);
 
-    Locations[n].island = "Eleuthera";
+    	Locations[n].island = "Eleuthera";
 	n = n + 1;
 
 	//return n;

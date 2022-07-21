@@ -1,5 +1,5 @@
 string DLG_TEXT[8] = {
-"The fort's gun crews, you say? Well, that changes everything. Don't you agree, ",
+"The fort's gun crews, you say? Well, that changes everything. Don't you agree, Lieutenant?",
 "Bernardo Gamboa",
 "?",
 "...",

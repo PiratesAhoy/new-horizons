@@ -144,6 +144,7 @@ void CreateStoryCharacters(ref n)
 	ch.money = "1000";
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
+	ch.quest.officertype = OFFIC_TYPE_CIVILIAN;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 
@@ -182,6 +183,7 @@ void CreateStoryCharacters(ref n)
 	LAi_SetPoorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
+	ch.quest.officertype = OFFIC_TYPE_CIVILIAN;
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 

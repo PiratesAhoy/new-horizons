@@ -539,6 +539,8 @@ Sinclair{Sinclair}
 Dubois{Dubois}
 François{François}
 de Vigny{de Vigny}
+Amarante{Amarante}
+Bontin{Bontin}
 
 {=====| Hispaniola.c |=====}
 Jehan{Jehan}
@@ -596,6 +598,8 @@ Iguaran{Iguaran}
 Escriva{Escriva}
 Aubert{Aubert}
 de La Chesnaye{de La Chesnaye}
+Doreen{Doreen}
+Lascana{Lascana}
 
 {=====| IslaMona.c |=====}
 Randolf{Randolf}

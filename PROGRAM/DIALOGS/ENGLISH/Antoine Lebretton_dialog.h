@@ -90,7 +90,7 @@ string DLG_TEXT[290] = {
 "I'll do that.",
 "No, there is nobody for the moment. Maybe next time.",
 "Hmm. Then I will wait.",
-"Everyone knows about it , ",
+"Everyone knows about it, ",
 ".",
 "You're right. They're talking about it all across the archipelago, but that's not what I'm getting at.",
 "So what are you getting at?",

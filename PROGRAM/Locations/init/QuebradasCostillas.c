@@ -902,6 +902,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].models.night.charactersPatch = "Charlestown_pn";
 
 	//Reload map
+/*
 	Locations[n].reload.l1.name = "reload2_back";
 	Locations[n].reload.l1.autoreload = "0";
 // KK -->
@@ -986,7 +987,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].reload.l16.label = "Naval Academy";
 	Locations[n].reload.l16.close_for_night = 1;
 	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l16.goto_disable = 1; //JRH
-
+*/
 	//Environment
 	locations[n].environment.weather = "true";
 	locations[n].environment.sea = "true";
@@ -997,7 +998,13 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l1.go = "QuebradasCostillas";
 	locations[n].reload.l1.emerge = "reload_2";
 	locations[n].reload.l1.autoreload = "0";
-	locations[n].reload.l1.label = "Sea.";
+//	locations[n].reload.l1.label = "Sea.";
+// KK -->
+	if (VISIT_DECK == 1)
+		Locations[n].reload.l1.label = "Ship.";
+	else
+		Locations[n].reload.l1.label = "Sea.";
+// <-- KK
 	Locations[n].locators_radius.reload.boat = 12.0;
 
 	locations[n].reload.l3.name = "reload3_back";
@@ -1006,6 +1013,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l3.autoreload = "0";
 	locations[n].reload.l3.label = "Residence";
 	Locations[n].reload.l3.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l3.goto_disable = 1; // Screwface: Disable Go-To location
 
 	locations[n].reload.l4.name = "reload4_back";
 	locations[n].reload.l4.go = "Charlestown_Tavern";
@@ -1013,6 +1021,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l4.autoreload = "0";
 	locations[n].reload.l4.label = "Tavern";
 	Locations[n].reload.l4.close_for_night = 0;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l4.goto_disable = 1; // Screwface: Disable Go-To location
 
 	locations[n].reload.l5.name = "reload5_back";
 	locations[n].reload.l5.go = "Charlestown_shipyard";
@@ -1020,6 +1029,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l5.autoreload = "0";
 	locations[n].reload.l5.label = "Shipyard";
 	Locations[n].reload.l5.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l5.goto_disable = 1; // Screwface: Disable Go-To location
 
 	locations[n].reload.l6.name = "reload6_back";
 	locations[n].reload.l6.go = "Charlestown_Store";
@@ -1027,6 +1037,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l6.autoreload = "0";
 	locations[n].reload.l6.label = "Store";
 	Locations[n].reload.l6.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l6.goto_disable = 1; // Screwface: Disable Go-To location
 
 	locations[n].reload.l7.name = "reload7_back";
 	locations[n].reload.l7.go = "Charlestown_church";
@@ -1034,6 +1045,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l7.autoreload = "0";
 	locations[n].reload.l7.label = "Church";
 	Locations[n].reload.l7.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l7.goto_disable = 1;
 
 	locations[n].reload.l8.name = "reload8_back";
 	locations[n].reload.l8.go = "Charlestown_usurer";
@@ -1042,6 +1054,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l8.label = "Bank";
 //	locations[n].reload.l8.disable = 0;			//JRH: conflict with fast reload
 	Locations[n].reload.l8.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l8.goto_disable = 1; // Screwface: Disable Go-To location
 
 	locations[n].reload.l10.name = "gate";
 	locations[n].reload.l10.go = "QC_Jungle_03";
@@ -1054,7 +1067,8 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l11.emerge = "reload2";
 	locations[n].reload.l11.autoreload = "0";
 	locations[n].reload.l11.label = "prison";
-	Locations[n].reload.l11.disable = 0;
+//	Locations[n].reload.l11.disable = 0;			// GR: conflict with fast travel
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l11.goto_disable = 1;
 
 	locations[n].reload.l12.name = "housesp3";
 	locations[n].reload.l12.go = "Charlestown_House_03";
@@ -1098,6 +1112,7 @@ void LocationInitQuebradasCostillas(ref n)
 	locations[n].reload.l16.label = "Naval Academy";
 //	locations[n].reload.l16.disable = 0;			//JRH: conflict with fast reload
 	Locations[n].reload.l16.close_for_night = 1;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l16.goto_disable = 1; //JRH
 	// SJG <--
 
 	locations[n].reload.l17.name = "reload17";

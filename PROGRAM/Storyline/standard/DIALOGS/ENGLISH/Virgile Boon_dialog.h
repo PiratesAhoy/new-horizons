@@ -1,4 +1,4 @@
-string DLG_TEXT[45] = {
+string DLG_TEXT[51] = {
 "Yes, ",
 "? Can't you see that I'm busy?",
 "Excuse me, I'm ",
@@ -44,5 +44,10 @@ string DLG_TEXT[45] = {
 ". Everything in good time.",
 "We're ready to sail. That's good enough time for me.",
 "Be careful, captain. You may end up paying for your rudeness.",
-
+"I don't want to take the chance that the fort may fire on my ship.",
+"Are you an enemy spy, then? If not, go and see the governor. He should be able to guarantee your safety.",
+"He'll also probably want a lot of money. I'm not paying to escort you, I'm being paid! If you won't sail round to Octopus Bay then you can find another escort. And you can also explain to the governor why the army on #sisland_Oxbay# still has no supplies.",
+"Very well, I'll go to see the governor.",
+"Alright, it seems I have no choice. Return to your ship and I shall sail round to join you.",
+"I'm on my way.",
 };

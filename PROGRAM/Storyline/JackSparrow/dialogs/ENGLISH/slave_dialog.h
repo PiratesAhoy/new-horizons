@@ -1,4 +1,4 @@
-string DLG_TEXT[43] = {
+string DLG_TEXT[45] = {
 "I've seen your fight with our cap. Well, according to our law you're now our new captain, and the ship belongs to you.",
 "Where can I find it?",
 "Oh, it's nearby, at the Palm Beach bay. Turn left when you exit the village, and you'll soon see it.",
@@ -42,5 +42,7 @@ string DLG_TEXT[43] = {
 "Commodore! He's disabled the rudder chain, sir!",
 "That has to be the best pirate I have ever seen.",
 "So it would seem.",
-
+//Jack cannibal scene
+"Een dah-lah! Eeseepi tan daga!? Wa-say kohn.",
+"Kay-lay lam. Lam piki-piki. Lam eensy weensy. Lam say-say... eunuchy. Snip-snip. [THINKS: Looks like they think i'm some sort of a god...Not good!]",
 };

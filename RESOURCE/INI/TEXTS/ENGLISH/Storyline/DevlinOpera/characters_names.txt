@@ -10,6 +10,18 @@ Devlin{Devlin}
 {=====| QuebradasCostillas.c |=====}
 Skull{Skull}
 
+{=====| Cuba.c |=====}
+Subteniente{Subteniente}
+Chorizo{Chorizo}
+Rocoso{Rocoso}
+Don Evaristo{Don Evaristo}
+Dragan{Dragan}
+van Mourik{van Mourik}
+Kevin{Kevin}
+Poor1{Poor}
+Grunk{Grunk}
+Flobb{Flobb}
+
 {=====| Story.c |=====}
 Mystery{Mystery}
 Messenger{Messenger}
@@ -43,5 +55,6 @@ Bartholomew{Bartholomew}
 Roberts{Roberts}
 Merciless{Merciless}
 Mark{Mark}
+Sharp{Sharp}
 
 {=====| 18 characters |=====}

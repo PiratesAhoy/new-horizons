@@ -1,10 +1,16 @@
-string DLG_TEXT[8] = {
+string DLG_TEXT[14] = {
 "Captain! That Short Jack Gold you're searching? Well, I asked around and they say he's in the townhall.",
 "Thank you, sailor.",
 "They also say he's in an important meeting and...",
 "Doesn't want to be disturbed? Well then, we'll wait.",
 "Oh no, they say he definitely wants to be disturbed and welcomes any distraction from that meeting!",
 "Alright then, we'll go and see him.",
-"Ship in sight, Captain! There is a small smailboat, adrift near the coast of that island. Seems pretty abandoned to me.",
+"Ship in sight, Captain! There is a small sailboat, adrift near the coast of that island. Seems pretty abandoned to me.",
 "Very well, sailor, you may return to your post.",
+"Reporting for duty, Captain.",
+"What took you so long?",
+"Forgive me for saying so, Captain, but this place isn't exactly some fishing village.",
+"Right, right, I can see you're out of breath... But have you heard anything about the crew of the 'Villa de Malaga'?",
+"I have, Captain. The crew is on shore leave, so they say, and if you're looking for an officer then your best address would be the tavern.",
+"Very well, sailor. Go get some grog or something.",
 }

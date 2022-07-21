@@ -1,4 +1,3 @@
-
 void ProcessDialogEvent()
 {
 	ref NPChar;
@@ -62,29 +61,29 @@ void ProcessDialogEvent()
 
 			if(rand(100)<10) // chance for random attack, decrease last figure for fewer attacks (GR: was 20)
 			{
-			 ChangeCharacterReputation(Pchar, 4);  // reward: reputation. Change figure to your liking
-			 if(AUTO_SKILL_SYSTEM)
-			 {
-				 AddPartyExpChar(pchar, "Commerce", (1+sti(pchar.skill.fencing)) * 100);
-				 AddPartyExpChar(pchar, "Sneak", (1+sti(pchar.skill.fencing)));
-			 }
-			 else { AddPartyExp(pchar, (1+sti(pchar.skill.fencing)) * 100); }
-			 int sum = sti(pchar.skill.fencing) * 1000;
-			 PlayStereoSound("INTERFACE\took_item.wav");
-			 AddMoneyToCharacter(Pchar, sum);
-//			Ambush("outlaws", 1+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "");
-			Ambush("outlaws", 1+sti(pchar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "reload1");
-			 Dialog.text = DLG_TEXT[10] + sum + DLG_TEXT[11];
-			 link.l1 = RandSwear() + DLG_TEXT[12];
-			 link.l1.go = "exit";
+				ChangeCharacterReputation(Pchar, 4);  // reward: reputation. Change figure to your liking
+				if(AUTO_SKILL_SYSTEM)
+			 	{
+					 AddPartyExpChar(pchar, "Commerce", (1+sti(pchar.skill.fencing)) * 100);
+				 	AddPartyExpChar(pchar, "Sneak", (1+sti(pchar.skill.fencing)));
+			 	}
+				else { AddPartyExp(pchar, (1+sti(pchar.skill.fencing)) * 100); }
+				int sum = sti(pchar.skill.fencing) * 1000;
+				PlayStereoSound("INTERFACE\took_item.wav");
+			 	AddMoneyToCharacter(Pchar, sum);
+				LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], false);
+				Ambush("outlaws", 1+sti(PChar.skill.fencing), LAI_GROUP_ENEMY, LAI_GROUP_ENEMY, "reload1");
+				Dialog.text = DLG_TEXT[10] + sum + DLG_TEXT[11];
+				link.l1 = RandSwear() + DLG_TEXT[12];
+				link.l1.go = "exit";
 			}
 			else
 			{
-			 Dialog.Text = DLG_TEXT[13];
-			 Link.l1 = DLG_TEXT[14];
-			 Link.l1.go = "trade";
-			 Link.l2 = DLG_TEXT[15];
-			 Link.l2.go = "items";
+				Dialog.Text = DLG_TEXT[13];
+				Link.l1 = DLG_TEXT[14];
+				Link.l1.go = "trade";
+				Link.l2 = DLG_TEXT[15];
+				Link.l2.go = "items";
 			}
 		break;
 
