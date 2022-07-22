@@ -254,6 +254,7 @@ void SetShipFlag(int chridx)
 					if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "li", MSG_FLAG_DEL_GROUP, &arModel);
 				}
 				SendMessage(&FortFlag, "li", MSG_FLAG_DEL_GROUP, &arModel);
+				j = PERSONALFLAGS_TEXTURES_QUANTITY - 1;
 				switch (iNation) {
 					case PIRATE:
 						GetPirateFlag(chr, &j);
