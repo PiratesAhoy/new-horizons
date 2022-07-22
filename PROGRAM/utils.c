@@ -2552,7 +2552,6 @@ bool DeleteProfile(string storyline, string profile)
 	while (SendMessage(&GameInterface, "llee", MSG_INTERFACE_SAVE_FILE_FIND, i, &saveName, &fSize) != 0) {
 		if (hasSubStr(saveName, "-=" + profile + "=-")) {
 			SendMessage(&GameInterface, "ls", MSG_INTERFACE_DELETE_SAVE_FILE, saveName);
-			continue;
 		}
 		i++;
 	}
