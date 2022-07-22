@@ -324,6 +324,7 @@ void CreateShipEnvironment()
 	SetEventHandler(SHIP_DETONATE_SMALL, "Ship_DetonateSmall", 0);
 	SetEventHandler(SHIP_ACTIVATE_FIRE_PLACE, "Ship_ActivateFirePlace", 0);
 	SetEventHandler(WHR_LIGHTNING, "Ship_Lightning", 0);
+	SetEventHandler(SHIP_GET_RUNAWAY_POINT, "Ship_GetRunAwayPoint", 0);
 	SetEventHandler("TornadoDamage", "Ship_TornadoDamage", 0);
 	SetEventHandler(SHIP_BRANDER_DETONATE, "Ship_BranderDetonate", 0);
 	SetEventHandler(SHIP_MAST_DAMAGE, "Ship_MastDamage", 0);
@@ -5226,6 +5227,22 @@ void Ship_Lightning()
 			}
 		}
 	}
+}
+
+int Ship_GetRunAwayPoint()
+{
+	aref arChar = GetEventData();
+	float fX = GetEventData();
+	float fZ = GetEventData();
+
+	float fRadius = 10000.0;
+	float fWindAngle = Whr_GetWindAngle();
+
+	arChar.SeaAI.WindAngle = fWindAngle;
+	arChar.SeaAI.RunAwayPnt.x = stf(arChar.Ship.Pos.x) + fRadius * sin(fWindAngle);
+	arChar.SeaAI.RunAwayPnt.z = stf(arChar.Ship.Pos.z) + fRadius * cos(fWindAngle);
+
+	return 0;
 }
 
 // Create a new ship for character
