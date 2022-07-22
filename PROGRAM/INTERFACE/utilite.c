@@ -8,10 +8,29 @@ native void LanguageSetLanguage(string sLanguageName);
 native string XI_ConvertString(string inStr);
 native int GlobalLngFileID();
 native string LanguageGetFaderPic(string faderPicName);
+native string DialogAssembleStr(string idStr, string paramStr);
+native string DialogAddParamToStr(string oldParamStr, string paramID, string paramValue);
 
 native void XI_SetColorCorrection(float fContrast, float fGamma, float fBrightness);
 native void XI_SetMouseSensitivity( float fMouseXSens, float fMouseYSens );
 native void XI_ControlMakeInvert(string sControlName, int bInvertState);
+native void XI_MakeNode(string sIniFileName, string sNodeType, string sNodeName, int nPriority);
+native void XI_DeleteNode(string sNodeName);
+native bool XI_IsWindowEnable(string sWindowName);
+native void XI_WindowShow(string sWindowName, int bShowStatus);
+native void XI_WindowDisable(string sWindowName, int bDisableStatus);
+native void XI_WindowAddNode(string sWindowName, string sNodeName);
+native bool XI_CreateFolder(string sFolderName);
+native bool XI_CheckFolder(string sFolderName);
+native bool XI_DeleteFolder(string sFolderName);
+native bool XI_FindFolders(string sFindTemplate,aref arFoldersList);
+native int XI_StoreNodeLocksWithOff();
+native void XI_RestoreNodeLocks(int nStoreCode);
+native bool XI_IsKeyPressed(string key_name); // key_name = {"shift","control","alt"}
+native bool XI_IsVirtualKeyPressed(int key_code);
+native void XI_RegistryExitKey(string key_name);
+
+native int AddControlTreeNode(int nParent,string sBaseControl,string sOutControl,float fTimeOut);
 
 #libriary "script_interface_functions"
 
