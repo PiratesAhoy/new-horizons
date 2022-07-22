@@ -30,7 +30,7 @@ Please follow these rules when editing settings:
 #define SAIL_OPERATE_DELAY			3		// INT - sailors will operate sails this amount of seconds after receiving command (set to 0 to restore stock PotC)
 // Included in Iron Man Mode:
 #define OPEN_SEA_MOD					0		// BOOL - 1=ON - Worldmap enlarged for realistic DirectSail
-#define WORLDMAP_DISABLED				0		// BOOL - 1=ON - DirectSail enforced
+#define WORLDMAP_DISABLED				1		// BOOL - 1=ON - DirectSail enforced
 #define SAILTO_DISABLED					0		// BOOL - 1=ON - Cannot Sail-To any ships at sea
 #define ONSEA_DATA_DISABLED				0		// BOOL - 1=ON - Spyglass and compass additional information disabled, cannot move camera to non-player ships
 #define REALISTIC_ABILITIES				1		// INT  - 1=DEFAULT: Controlled by Realism Mode - 0 or 2 override the Realism Mode setting
