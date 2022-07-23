@@ -84,7 +84,7 @@ void ExternControlsInit(bool bFirst)
 	MapControlToGroup("ChrFightMode","FightModeControls");
 	MapControlToGroup("ChrFightMode","BattleInterfaceControls");
 
-	CI_CreateAndSetControls( "FightModeControls", "ChrAttack", CI_GetKeyCode(CTL_FIGHT_ATTACK), 0, true );
+	CI_CreateAndSetControls( "FightModeControls", "ChrAttackFast", CI_GetKeyCode(CTL_FIGHT_ATTACK), 0, true );
 
 	CI_CreateAndSetControls( "FightModeControls", "ChrBlock", CI_GetKeyCode(CTL_FIGHT_BLOCK), 0, true );
 	MapControlToGroup("ChrBlock","BattleInterfaceControls");

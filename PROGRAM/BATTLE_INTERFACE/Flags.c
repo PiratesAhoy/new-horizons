@@ -22,9 +22,17 @@ ref procGetRiggingData()
 
 	string datName = GetEventData();
 	if (datName == "GetFlagTexNum") {
+		bool isTriangle = GetEventData() > 0;
 		n = GetEventData();
-		n = GetEventData();
+		bool isSpecialFlag = GetEventData() > 0;
 		if (n == SHIP_FLAG || n == SHIP_PENNANT) {
+			bool isPennant = n == SHIP_PENNANT && isSpecialFlag;
+			bool isFlag = n == SHIP_FLAG && !isSpecialFlag;
+			bool isValid = isPennant || isFlag;
+			if (!isValid) {
+				retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX;
+				return &retVal;
+			}
 			if (locidx < 0)
 				chr = GetCharacter(Ships[CurrentShip]);
 			else
@@ -36,12 +44,12 @@ ref procGetRiggingData()
 				CurrentFlag = 0;
 			}
 			int pos = CurrentFlag;
-			if (n == SHIP_PENNANT) {
+			if (isPennant) {
 				pos -= (ShipFlagsQuantity / 2);
 			}
 			string FlagType = GetShipFlagType(chr, pos);
 			if (bShipWithoutPennants) {
-				if (n == SHIP_PENNANT) FlagType = FLAG_ENSIGN;
+				if (isPennant) FlagType = FLAG_ENSIGN;
 				if (FlagType == FLAG_PENNANT) {
 					n = SHIP_FLAG;
 					FlagType = FLAG_ENSIGN;
@@ -52,11 +60,11 @@ ref procGetRiggingData()
 				retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX;
 				return &retVal;
 			}
-			if (FlagType == FLAG_ENSIGN && n == SHIP_PENNANT) {
+			if (FlagType == FLAG_ENSIGN && isPennant) {
 				retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX;
 				return &retVal;
 			}
-			if (FlagType == FLAG_PENNANT && n == SHIP_FLAG && bShipWithoutPennants == false) {
+			if (FlagType == FLAG_PENNANT && isFlag && bShipWithoutPennants == false) {
 				retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX;
 				return &retVal;
 			}
@@ -66,7 +74,9 @@ ref procGetRiggingData()
 			{ PirateOverride = false; }	 //JRH
 			else PirateOverride = true;															// PB: For Pirate Flags on Forts and Ashore
 		}
-		n = sti(chr.nation);
+		if (CheckAttribute(chr,"nation")) {
+		    n = sti(chr.nation);
+		}
 		switch (n)
 		{
 			case HOLLAND:          retVal = 0;                                break;
@@ -246,6 +256,7 @@ void SetShipFlag(int chridx)
 					if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "li", MSG_FLAG_DEL_GROUP, &arModel);
 				}
 				SendMessage(&FortFlag, "li", MSG_FLAG_DEL_GROUP, &arModel);
+				j = PERSONALFLAGS_TEXTURES_QUANTITY - 1;
 				switch (iNation) {
 					case PIRATE:
 						GetPirateFlag(chr, &j);

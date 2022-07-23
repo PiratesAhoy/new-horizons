@@ -449,9 +449,9 @@ void SetDefaultFight(ref character)
 
 	character.actions.attacktr.a1 = "attack_right_1";
 
-	character.actions.hit.h1 = "hit_1";
-	character.actions.hit.h2 = "hit_2";
-	character.actions.hit.h3 = "hit_3";
+	character.actions.hit_attack.h1 = "hit_1";
+	character.actions.hit_attack.h2 = "hit_2";
+	character.actions.hit_attack.h3 = "hit_3";
 	if(IsMainCharacter(character)) character.actions.hit.h4 = "face_hit";// MAXIMUS
 
 	character.actions.block = "block";

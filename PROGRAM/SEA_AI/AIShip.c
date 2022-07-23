@@ -43,7 +43,6 @@ void CreateFlagEnvironment()
 	int iPeriod = GetCurrentPeriod();
 	bool hasPennant = iPeriod >= GetPeriodFromYear(makeint(PENNANTS_MIN_YEAR));
 	bool hasMerchantFlag = iPeriod >= GetPeriodFromYear(makeint(MERCHANT_FLAGS_MIN_YEAR));
-	string sPeriod = "" + iPeriod;
 
 	if (locidx < 0)
 		shipsqty = iNumShips;
@@ -61,14 +60,16 @@ void CreateFlagEnvironment()
 				chr = GetCharacter(iShips[i]);
 			}
 			if (IsShipMerchant(chr) && !IsEntity(&MerchantFlag)) {
-				CreateEntity(&MerchantFlag, "MFg" + sPeriod);
+				CreateEntity(&MerchantFlag, "Flag");
+				MerchantFlag.texture = "flags\merflg" + (iPeriod + 1) + ".tga"
 				LayerAddObject(sCurrentSeaExecute, &MerchantFlag, iPriority);
 				LayerAddObject(sCurrentSeaRealize, &MerchantFlag, iPriority);
 				LayerAddObject(SEA_REFLECTION, &MerchantFlag, 3);
 				iPriority++;
 
 				if (hasPennant) {
-					CreateEntity(&MerchantPennant, "MPn" + sPeriod);
+					CreateEntity(&MerchantPennant, "Flag");
+					MerchantPennant.texture = "flags\merpnt" + (iPeriod + 1) + ".tga"
 					LayerAddObject(sCurrentSeaExecute, &MerchantPennant, iPriority);
 					LayerAddObject(sCurrentSeaRealize, &MerchantPennant, iPriority);
 					LayerAddObject(SEA_REFLECTION, &MerchantPennant, 3);
@@ -90,15 +91,16 @@ void CreateFlagEnvironment()
 		if (sti(chr.nation) != PIRATE) continue;
 		GetPirateFlag(chr, &ntexture);
 		if (!IsEntity(&PirateFlag[makeint(ntexture)])) { // PB: Add 'makeint' everywhere to avoid error logs
-			sid = "" + ntexture;
-			CreateEntity(&PirateFlag[makeint(ntexture)], "PFg" + sid);
+			CreateEntity(&PirateFlag[makeint(ntexture)], "Flag");
+			PirateFlag[makeint(ntexture)].texture = "flags\pirflg" + (ntexture + 1) + ".tga"
 			LayerAddObject(sCurrentSeaExecute, &PirateFlag[makeint(ntexture)], iPriority);
 			LayerAddObject(sCurrentSeaRealize, &PirateFlag[makeint(ntexture)], iPriority);
 			LayerAddObject(SEA_REFLECTION,   &PirateFlag[makeint(ntexture)], 3);
 			iPriority++;
 
 			if (hasPennant) {
-				CreateEntity(&PiratePennant[makeint(ntexture)], "PPn" + sid);
+				CreateEntity(&PiratePennant[makeint(ntexture)], "Flag");
+				PiratePennant[makeint(ntexture)].texture = "flags\pirpnt" + (ntexture + 1) + ".tga"
 				LayerAddObject(sCurrentSeaExecute, &PiratePennant[makeint(ntexture)], iPriority);
 				LayerAddObject(sCurrentSeaRealize, &PiratePennant[makeint(ntexture)], iPriority);
 				LayerAddObject(SEA_REFLECTION,   &PiratePennant[makeint(ntexture)], 3);
@@ -119,15 +121,16 @@ void CreateFlagEnvironment()
 		if (sti(chr.nation) != PRIVATEER_NATION && sti(chr.nation) != PERSONAL_NATION) continue; // PB: Other characters might have personal nation too!
 		GetPersonalFlag(chr, &ntexture);
 		if (!IsEntity(&PersonalFlag[makeint(ntexture)])) {
-			sid = "" + ntexture;
-			CreateEntity(&PersonalFlag[makeint(ntexture)], "QFg" + sid);
+			CreateEntity(&PersonalFlag[makeint(ntexture)], "Flag");
+			PersonalFlag[makeint(ntexture)].texture = "flags\perflg" + (ntexture + 1) + ".tga"
 			LayerAddObject(sCurrentSeaExecute, &PersonalFlag[makeint(ntexture)], iPriority);
 			LayerAddObject(sCurrentSeaRealize, &PersonalFlag[makeint(ntexture)], iPriority);
 			LayerAddObject(SEA_REFLECTION,   &PersonalFlag[makeint(ntexture)], 3);
 			iPriority++;
 
 			if (hasPennant) {
-				CreateEntity(&PersonalPennant[makeint(ntexture)], "QPn" + sid);
+				CreateEntity(&PersonalPennant[makeint(ntexture)], "Flag");
+				PersonalPennant[makeint(ntexture)].texture = "flags\perpnt" + (ntexture + 1) + ".tga"
 				LayerAddObject(sCurrentSeaExecute, &PersonalPennant[makeint(ntexture)], iPriority);
 				LayerAddObject(sCurrentSeaRealize, &PersonalPennant[makeint(ntexture)], iPriority);
 				LayerAddObject(SEA_REFLECTION,   &PersonalPennant[makeint(ntexture)], 3);
@@ -164,7 +167,6 @@ void CreateRiggingEnvironment()
 	int iPriority = iShipPriority + 1;
 	int iPeriod = GetCurrentPeriod();
 	bool hasPennant = iPeriod >= GetPeriodFromYear(makeint(PENNANTS_MIN_YEAR));
-	string sPeriod = "" + iPeriod;
 	string sid;
 	ref mchr = GetMainCharacter();
 
@@ -186,14 +188,16 @@ void CreateRiggingEnvironment()
 	LayerAddObject(sCurrentSeaRealize, &Vant, iPriority);
 	iPriority++;
 
-	CreateEntity(&Flag, "Flg" + sPeriod);
+	CreateEntity(&Flag, "Flag");
+	Flag.texture = "flags\shpflg" + (iPeriod + 1) + ".tga"
 	LayerAddObject(sCurrentSeaExecute, &Flag, iPriority);
 	LayerAddObject(sCurrentSeaRealize, &Flag, iPriority);
 	LayerAddObject(SEA_REFLECTION, &Flag, 3);
 	iPriority++;
 
 	if (hasPennant) {
-		CreateEntity(&Pennant, "Pnt" + sPeriod);
+		CreateEntity(&Pennant, "Flag");
+		Pennant.texture = "flags\shppnt" + (iPeriod + 1) + ".tga"
 		LayerAddObject(sCurrentSeaExecute, &Pennant, iPriority);
 		LayerAddObject(sCurrentSeaRealize, &Pennant, iPriority);
 		LayerAddObject(SEA_REFLECTION, &Pennant, 3);
@@ -201,15 +205,16 @@ void CreateRiggingEnvironment()
 	}
 
 	GetPirateFlag(mchr, &ntexture);
-	sid = "" + ntexture;
-	CreateEntity(&PirateFlag[ntexture], "PFg" + sid);
+	CreateEntity(&PirateFlag[ntexture], "Flag");
+	PirateFlag[ntexture].texture = "flags\pirflg" + (ntexture + 1) + ".tga"
 	LayerAddObject(sCurrentSeaExecute, &PirateFlag[ntexture], iPriority);
 	LayerAddObject(sCurrentSeaRealize, &PirateFlag[ntexture], iPriority);
 	LayerAddObject(SEA_REFLECTION, &PirateFlag[ntexture], 3);
 	iPriority++;
 
 	if (hasPennant) {
-		CreateEntity(&PiratePennant[ntexture], "PPn" + sid);
+		CreateEntity(&PiratePennant[ntexture], "Flag");
+		PiratePennant[ntexture].texture = "flags\pirpnt" + (ntexture + 1) + ".tga"
 		LayerAddObject(sCurrentSeaExecute, &PiratePennant[ntexture], iPriority);
 		LayerAddObject(sCurrentSeaRealize, &PiratePennant[ntexture], iPriority);
 		LayerAddObject(SEA_REFLECTION, &PiratePennant[ntexture], 3);
@@ -217,22 +222,24 @@ void CreateRiggingEnvironment()
 	}
 
 	GetPersonalFlag(mchr, &ntexture);
-	sid = "" + ntexture;
-	CreateEntity(&PersonalFlag[ntexture], "QFg" + sid);
+	CreateEntity(&PersonalFlag[ntexture], "Flag");
+	PersonalFlag[ntexture].texture = "flags\perflg" + (ntexture + 1) + ".tga"
 	LayerAddObject(sCurrentSeaExecute, &PersonalFlag[ntexture], iPriority);
 	LayerAddObject(sCurrentSeaRealize, &PersonalFlag[ntexture], iPriority);
 	LayerAddObject(SEA_REFLECTION, &PersonalFlag[ntexture], 3);
 	iPriority++;
 
 	if (hasPennant) {
-		CreateEntity(&PersonalPennant[ntexture], "QPn" + sid);
+		CreateEntity(&PersonalPennant[ntexture], "Flag");
+		PersonalPennant[ntexture].texture = "flags\perpnt" + (ntexture + 1) + ".tga"
 		LayerAddObject(sCurrentSeaExecute, &PersonalPennant[ntexture], iPriority);
 		LayerAddObject(sCurrentSeaRealize, &PersonalPennant[ntexture], iPriority);
 		LayerAddObject(SEA_REFLECTION, &PersonalPennant[ntexture], 3);
 		iPriority++;
 	}
 
-	CreateEntity(&FortFlag, "FFg" + sPeriod);
+	CreateEntity(&FortFlag, "Flag");
+	FortFlag.texture = "flags\frtflg" + (iPeriod + 1) + ".tga"
 	LayerAddObject(sCurrentSeaExecute, &FortFlag, iPriority);
 	LayerAddObject(sCurrentSeaRealize, &FortFlag, iPriority);
 	LayerAddObject(SEA_REFLECTION, &FortFlag, 3);
@@ -324,6 +331,7 @@ void CreateShipEnvironment()
 	SetEventHandler(SHIP_DETONATE_SMALL, "Ship_DetonateSmall", 0);
 	SetEventHandler(SHIP_ACTIVATE_FIRE_PLACE, "Ship_ActivateFirePlace", 0);
 	SetEventHandler(WHR_LIGHTNING, "Ship_Lightning", 0);
+	SetEventHandler(SHIP_GET_RUNAWAY_POINT, "Ship_GetRunAwayPoint", 0);
 	SetEventHandler("TornadoDamage", "Ship_TornadoDamage", 0);
 	SetEventHandler(SHIP_BRANDER_DETONATE, "Ship_BranderDetonate", 0);
 	SetEventHandler(SHIP_MAST_DAMAGE, "Ship_MastDamage", 0);
@@ -2297,12 +2305,7 @@ void Ship_ActivateFirePlace()
 	string	sSoundName = GetEventData();
 	float	fFireTime = GetEventData();
 
-	aref	arPos; makearef(arPos, arCharacter.Ship.Pos);
-
-	// LDH iSoundID will almost always be zero, probably because it's too far away to hear if on another ship - 25Mar09
-	int iSoundID = Play3DSoundComplex(sSoundName, stf(arPos.x), 0.0, stf(arPos.z), true, false);
-	string tmpstr = iFirePlaceIndex; arCharacter.fireplaces.(tmpstr) = iSoundID; // NK 05-04-19
-	SendMessage(arShipObject, "llsslf", MSG_SHIP_ACTIVATE_FIRE_PLACE, iFirePlaceIndex, "ship_smoke", "ship_fire", iSoundID, fFireTime);
+	SendMessage(arShipObject, "llsssfl", MSG_SHIP_ACTIVATE_FIRE_PLACE, iFirePlaceIndex, "ship_smoke", "ship_fire", sSoundName, fFireTime, -1);
 
 	// ccc firedrill
 	if(IsMainCharacter(arCharacter) && !CheckAttribute(arCharacter, "Ship.Sink")) { // so this runs only for the player // KK
@@ -5226,6 +5229,22 @@ void Ship_Lightning()
 			}
 		}
 	}
+}
+
+int Ship_GetRunAwayPoint()
+{
+	aref arChar = GetEventData();
+	float fX = GetEventData();
+	float fZ = GetEventData();
+
+	float fRadius = 10000.0;
+	float fWindAngle = Whr_GetWindAngle();
+
+	arChar.SeaAI.WindAngle = fWindAngle;
+	arChar.SeaAI.RunAwayPnt.x = stf(arChar.Ship.Pos.x) + fRadius * sin(fWindAngle);
+	arChar.SeaAI.RunAwayPnt.z = stf(arChar.Ship.Pos.z) + fRadius * cos(fWindAngle);
+
+	return 0;
 }
 
 // Create a new ship for character

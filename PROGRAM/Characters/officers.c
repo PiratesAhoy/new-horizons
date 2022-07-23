@@ -192,7 +192,7 @@ string GetRandomOfficerType()
 	while(retVal == "")
 	{
 		picked = rand(numtypes-1);
-		type = GetAttributeName(GetAttributeN(OfficerTypes,picked));
+		type = GetAttributeName(GetAttributeN(&OfficerTypes,picked));
 		if(CheckAttribute(OfficerTypes,type+".usableoffictype"))
 		{
 			retVal = type;

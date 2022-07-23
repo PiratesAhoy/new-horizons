@@ -360,19 +360,15 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 void Ball_WaterHitEvent()
 {
 	int		iCharacterIndex;
-	float	x, y, z, vx, vy, vz;
+	float	x, y, z;
 
 	iCharacterIndex = GetEventData();
 	x = GetEventData();
 	y = GetEventData();
 	z = GetEventData();
-	vx = GetEventData();
-	vy = GetEventData();
-	vz = GetEventData();
-	//if(iCharacterIndex != -1) trace("for char " + Characters[iCharacterIndex].id + " and ship " + Characters[iCharacterIndex].ship.name + " waterhit at " + x +","+y+","+z+" and v"+vx+","+vy+","+vz);
+	//if(iCharacterIndex != -1) trace("for char " + Characters[iCharacterIndex].id + " and ship " + Characters[iCharacterIndex].ship.name + " waterhit at " + x +","+y+","+z);
 
-	//SendMessage(&BallSplash, "lffffff", MSG_BALLSPLASH_ADD, x, y, z, 0.0, 0.0, 0.0); // vx, vy, vz
-	SendMessage(&BallSplash, "lffffff", MSG_BALLSPLASH_ADD, x, y, z, vx, vy, vz);
+	SendMessage(&BallSplash, "lfff", MSG_BALLSPLASH_ADD, x, y, z);
 	Play3DSound("ball_splash", x, y, z);
 }
 //new Fort hit effect by MM

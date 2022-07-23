@@ -53,7 +53,7 @@
 #include "FCoHS\FCoHS_Main.c"; // Friendly Contact on High Seas Mod
 #include "smuggling.c";	//Everything related to smuggling moved to here -Levis
 #include "Characters\Leveling.c"; //Everything related to leveling move to this -Levis
-
+#include "compatibility.c";
 
 extern void UpdateWorldMap();
 extern void InitGoods();
@@ -359,7 +359,7 @@ void Main()
 
 	SetEventHandler("Control Activation","proc_break_video",0);
 	SetEventHandler(EVENT_END_VIDEO,"Main_LogoVideo",0);
-	InterfaceStates.videoIdx = 0;
+	InterfaceStates.videoIdx = 4;
 	Event(EVENT_END_VIDEO);
 	ReloadProgressEnd();
 }

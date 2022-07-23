@@ -56,6 +56,8 @@ ref procGetSailTextureData()
 
 		if(st!=SHIP_NOTUSED)
 		{
+			BI_objRetValue.maxSP = shref.SP;
+
 			makearef(arEmbl,shref.GeraldSails);						// actually sets the texture of each individual sail -->
 			sq = GetAttributesNum(arEmbl);
 			for(i=0; i<sq; i++)

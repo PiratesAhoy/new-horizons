@@ -3,6 +3,7 @@ native float funcGetSailSpeed(int holeQ,int holeMax,float sailPow);
 native int RandomHole2Sail(int chrIdx, string reyName, int groupNum, int maxHole, int holeData, int addHoleQ);
 native int DeleteOneSailHole(int chrIdx, string groupName, string reyName, int holeMask, int deleteHoleQ );
 native string GetAssembledString(string formatStr, aref arDataBase);
+native int ShipSailState(int chrIdx);
 
 #libriary "script_rigging_files"
 

@@ -108,7 +108,7 @@ void SeaAI_SailToEndFade()
 					}
 				}else{if(Checkattribute(arLocator, "inlagoon")) Deleteattribute(arLocator, "inlagoon");}
 			} // Screwface : end
-			SendMessage(AISea,"lfff", AI_MESSAGE_SAIL_2_LOCATOR, stf(rIslLoc.x), stf(rIslLoc.y), stf(rIslLoc.z));
+			SendMessage(AISea,"lffff", AI_MESSAGE_SAIL_2_LOCATOR, stf(rIslLoc.x), stf(rIslLoc.y), stf(rIslLoc.z), frnd() * PIm2);
 		break;
 		case SAIL_TO_CHARACTER:
 			SendMessage(AISea, "laff", AI_MESSAGE_SAIL_2_CHARACTER, &Characters[sti(sSailToString)], SAILTO_DISTANCE1 + frnd()*(SAILTO_DISTANCE2-SAILTO_DISTANCE1), frnd() * PIm2);    // LDH change
