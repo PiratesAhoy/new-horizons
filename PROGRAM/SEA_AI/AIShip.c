@@ -2305,12 +2305,7 @@ void Ship_ActivateFirePlace()
 	string	sSoundName = GetEventData();
 	float	fFireTime = GetEventData();
 
-	aref	arPos; makearef(arPos, arCharacter.Ship.Pos);
-
-	// LDH iSoundID will almost always be zero, probably because it's too far away to hear if on another ship - 25Mar09
-	int iSoundID = Play3DSoundComplex(sSoundName, stf(arPos.x), 0.0, stf(arPos.z), true, false);
-	string tmpstr = iFirePlaceIndex; arCharacter.fireplaces.(tmpstr) = iSoundID; // NK 05-04-19
-	SendMessage(arShipObject, "llsslf", MSG_SHIP_ACTIVATE_FIRE_PLACE, iFirePlaceIndex, "ship_smoke", "ship_fire", iSoundID, fFireTime);
+	SendMessage(arShipObject, "llsssfl", MSG_SHIP_ACTIVATE_FIRE_PLACE, iFirePlaceIndex, "ship_smoke", "ship_fire", sSoundName, fFireTime, -1);
 
 	// ccc firedrill
 	if(IsMainCharacter(arCharacter) && !CheckAttribute(arCharacter, "Ship.Sink")) { // so this runs only for the player // KK
