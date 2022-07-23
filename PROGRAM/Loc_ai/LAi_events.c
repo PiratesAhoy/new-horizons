@@ -222,8 +222,18 @@ void LAi_CharacterAttack()
 	//int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
 	aref attack = GetEventData();
 	aref enemy = GetEventData();
-	float attackDmg = GetEventData();
-	float hitDmg = GetEventData();
+
+	string attackType = GetEventData();
+	bool isBlocked = GetEventData();
+
+    // TODO
+    float attackDmg = 1.0;
+    float hitDmg = 1.0;
+
+    if (isBlocked) {
+        LAi_CharacterBlock(attack, enemy, attackDmg, hitDmg);
+        return;
+    }
 
 	// end of unchanged original code
 
@@ -436,7 +446,7 @@ void LAi_CharacterAttack()
 			int rank = makeint(attack.rank);
 		//	int punch = rand(rank) + rank; // PB: Orig code
 			// Baste -->
-			float damage
+			float damage;
 			if(GetAttribute(weapon, "id") == "bladeflint")
 				damage = rand(rank)*1;	//JRH
 			else
@@ -802,13 +812,8 @@ void LAi_CharacterAttack()
 	//LanguageCloseFile(tmpLangFileID);
 }
 
-void LAi_CharacterBlock()
+void LAi_CharacterBlock(aref attack, aref enemy, aref attackDmg, aref hitDmg)
 {
-	aref attack = GetEventData();
-	aref enemy = GetEventData();
-	float attackDmg = GetEventData();
-	float hitDmg = GetEventData();
-
 	// PB: Bladedamage mod -->
 	int bladedamage_usage;
 	int bladedamage_level = 0; // changed by MAXIMUS
