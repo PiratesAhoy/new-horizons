@@ -10,6 +10,8 @@
 #define LAI_DEFAULT_HP			40.0		//Количество хп по умолчанию
 #define LAI_DEFAULT_HP_MAX		40.0		//Максимальное количество хп по умолчанию
 #define LAI_DEFAULT_CHARGE		1.0			//Состояние зарядки пистолета по умолчанию
+#define LAI_DEFAULT_ENERGY		100.0		//Количество энергии по умолчанию
+#define LAI_DEFAULT_ENERGY_MAX	100.0		//Количество MAX энергии по умолчанию
 #define LAI_DEFAULT_DLTHP		0.1			//Скорость наростания хп в секунду
 #define LAI_DEFAULT_DLTBLTHP	5			//Скорость наростания бутылочных хп в секунду
 #define LAI_DEFAULT_DLTCHRG		0.05		//Скорость зарядки пистолета в секунду

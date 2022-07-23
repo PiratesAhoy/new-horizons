@@ -1156,3 +1156,19 @@ bool LAi_ChrAttackAction()
 {
 	return true;
 }
+
+#event_handler("NpcEvtHP", "LAi_NPC_EvtGetHP");
+float LAi_NPC_EvtGetHP()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = LAi_GetCharacterRelHP(chr);
+	return npc_return_tmp;
+}
+
+#event_handler("NpcEvtEny", "LAi_NPC_EvtGetEny");
+float LAi_NPC_EvtGetEny()
+{
+	aref chr = GetEventData();
+	npc_return_tmp = LAi_GetCharacterRelEnergy(chr);
+	return npc_return_tmp;
+}

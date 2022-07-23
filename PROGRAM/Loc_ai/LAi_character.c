@@ -250,6 +250,26 @@ float LAi_GetCharacterRelHP(aref chr)
 	return 0.0;
 }
 
+float LAi_GetCharacterRelEnergy(aref chr)
+{
+	float energy = 0.0;
+	if(CheckAttribute(chr, "chr_ai.energy"))
+	{
+		energy = stf(chr.chr_ai.energy);
+		energy = energy / LAi_GetCharacterMaxEnergy(chr); // boal
+	}
+	return energy;
+}
+
+float LAi_GetCharacterMaxEnergy(aref chr)
+{
+	if(CheckAttribute(chr, "chr_ai.energyMax"))
+	{
+		return stf(chr.chr_ai.energyMax);
+	}
+	return LAI_DEFAULT_ENERGY_MAX;
+}
+
 //Установить проверяльщик хп, если их становиться меньше чем, вызвать квест
 void LAi_SetCheckMinHP(aref chr, float min, bool immortal, string quest)
 {
