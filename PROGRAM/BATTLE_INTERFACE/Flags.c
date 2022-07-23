@@ -74,7 +74,9 @@ ref procGetRiggingData()
 			{ PirateOverride = false; }	 //JRH
 			else PirateOverride = true;															// PB: For Pirate Flags on Forts and Ashore
 		}
-		n = sti(chr.nation);
+		if (CheckAttribute(chr,"nation")) {
+		    n = sti(chr.nation);
+		}
 		switch (n)
 		{
 			case HOLLAND:          retVal = 0;                                break;
