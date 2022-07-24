@@ -568,7 +568,7 @@ void LoadGame()
 
 	CreateEntity(&LanguageObject,"obj_strservice");
 	CreateEntity(&reload_fader, "fader");
-	SendMessage(&reload_fader, "ls", FADER_PICTURE, FindReloadPicture("loading_game.tga")); // KK
+	SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture("loading_game.tga")); // KK
 	SendMessage(&reload_fader, "lfl", FADER_IN, RELOAD_TIME_FADE_IN, true);
 	ReloadProgressStart();
 	ref pchar = GetMainCharacter(); // KK
@@ -908,7 +908,7 @@ void NewGame()
 
 	CreateEntity(&LanguageObject,"obj_strservice");
 	CreateEntity(&reload_fader, "fader");
-	SendMessage(&reload_fader, "ls", FADER_PICTURE, FindReloadPicture(LoadingScreen)); // KK
+	SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture(LoadingScreen)); // KK
 	SendMessage(&reload_fader, "lfl", FADER_IN, RELOAD_TIME_FADE_IN, true);
 
 	SetEventHandler("frame","NewGame_continue",1);

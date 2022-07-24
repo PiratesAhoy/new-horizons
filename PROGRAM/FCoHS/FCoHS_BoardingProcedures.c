@@ -38,7 +38,7 @@ void FCoHS_Boarding_Start(int iBoardingTarget)
 
 	// Loading screen for friendly boarding
 	// @TODO (EL#3#): Boarding: Implement loading screen
-	//SendMessage(&reload_fader, "ls", FADER_PICTURE, FindReloadPicture(Locations[FindLocation(DeckID)].image));
+	//SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[FindLocation(DeckID)].image));
 
 	// Fade out
 	SendMessage(&reload_fader, "lfl", FADER_OUT, 1.0, false);

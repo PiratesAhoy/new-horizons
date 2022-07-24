@@ -289,9 +289,9 @@ int Reload(aref reload_group, string locator_name, string current_location)
 			{
 				// KK -->
 				if (VISIT_DECK == 0)
-					SendMessage(&reload_fader, "ls", FADER_PICTURE, FindReloadPicture("Landing.tga"));
+					SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture("Landing.tga"));
 				else
-					SendMessage(&reload_fader, "ls", FADER_PICTURE, FindReloadPicture("Sea.tga"));
+					SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture("Sea.tga"));
 				// <-- KK
 			}
 			else
@@ -315,7 +315,7 @@ int Reload(aref reload_group, string locator_name, string current_location)
 							case 5: LoadingImage = Locations[loc_pict_index].image.5; break;
 							LoadingImage = Locations[loc_pict_index].image;
 						}
-						SendMessage(&reload_fader, "ls", FADER_PICTURE, FindReloadPicture(LoadingImage));
+						SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture(LoadingImage));
 						// PB: Random Loading Screens <--
 					}
 				}

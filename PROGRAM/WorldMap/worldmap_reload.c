@@ -146,7 +146,7 @@ void wdmReloadToSea()
 		}
 	}
 	wdmLoginToSea.imageName = imageName;
-	SendMessage(&wdm_fader, "ls", FADER_PICTURE, FindReloadPicture(imageName));
+	SendMessage(&wdm_fader, "ls", FADER_PICTURE0, FindReloadPicture(imageName));
 // <-- KK
 	wdmDisableTornadoGen = true;
 }
@@ -247,7 +247,7 @@ void wdmReloadToLand(string locationID, string group, string locator, string shi
 	float fadeOutTime = 0.5;
 	SendMessage(&wdm_fader, "lfl", FADER_OUT, fadeOutTime, true);
 	SendMessage(&wdm_fader, "l", FADER_STARTFRAME);
-	if (CheckAttribute(&Locations[wdmToLandIdx], "image")) SendMessage(&wdm_fader, "ls", FADER_PICTURE, FindReloadPicture(Locations[wdmToLandIdx].image));
+	if (CheckAttribute(&Locations[wdmToLandIdx], "image")) SendMessage(&wdm_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[wdmToLandIdx].image));
 
 	PauseAllSounds();
 	ResetSoundScheme();

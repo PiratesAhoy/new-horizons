@@ -123,7 +123,7 @@ void SeaAI_SailToCreateFader()
 	CreateEntity(&SailToFader, "fader");
 	SendMessage(SailToFader, "lfl", FADER_OUT, 0.5, false);
 	SendMessage(SailToFader, "l", FADER_STARTFRAME);
-	SendMessage(&SailToFader, "ls", FADER_PICTURE, FindReloadPicture("Sea.tga")); // KK
+	SendMessage(&SailToFader, "ls", FADER_PICTURE0, FindReloadPicture("Sea.tga")); // KK
 	// NK sailto time 04-09-21
 	AddSeaTimeToCurrent();
 	ref pchar = GetMainCharacter();

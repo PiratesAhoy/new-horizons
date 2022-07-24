@@ -673,7 +673,7 @@ void DPDoFade()
 	SetEventHandler("FaderEvent_StartFade", "DPStartFade", 0);
 	SetEventHandler("FaderEvent_EndFade", "DPEndFade", 0);
 	CreateEntity(&reload_fader, "fader");
-	SendMessage(&reload_fader, "ls", FADER_PICTURE, FindReloadPicture("Ship_Repair.tga")); // KK
+	SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture("Ship_Repair.tga")); // KK
 	SendMessage(&reload_fader, "lfl", FADER_OUT, RELOAD_TIME_FADE_OUT, false);
 }
 

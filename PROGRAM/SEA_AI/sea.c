@@ -416,7 +416,7 @@ void Sea_MapLoad()
 	CreateEntity(&wdm_fader, "fader");
 	SendMessage(&wdm_fader, "lfl", FADER_OUT, 0.7, true);
 	SendMessage(&wdm_fader, "l", FADER_STARTFRAME);
-	SendMessage(&wdm_fader, "ls", FADER_PICTURE, FindReloadPicture("sea.tga")); // KK
+	SendMessage(&wdm_fader, "ls", FADER_PICTURE0, FindReloadPicture("sea.tga")); // KK
 
 	bSkipSeaLogin = true;
 
@@ -442,7 +442,7 @@ void Land_MapLoad()
 	CreateEntity(&wdm_fader, "fader");
 	SendMessage(&wdm_fader, "lfl", FADER_OUT, 0.7, true);
 	SendMessage(&wdm_fader, "l", FADER_STARTFRAME);
-	SendMessage(&wdm_fader, "ls", FADER_PICTURE, FindReloadPicture("sea.tga"));
+	SendMessage(&wdm_fader, "ls", FADER_PICTURE0, FindReloadPicture("sea.tga"));
 
 	bSkipSeaLogin = true;
 
