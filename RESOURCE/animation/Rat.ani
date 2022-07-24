@@ -1,0 +1,23 @@
+animation = Rat.an
+
+[run]
+start_time = 2
+end_time = 10
+
+[panic_run]
+start_time = 11
+end_time = 19
+
+[idle]
+start_time = 20
+end_time = 70
+
+[idle_stand]
+start_time = 70
+end_time = 130
+
+loop = false
+
+[eat]
+start_time = 131
+end_time = 141

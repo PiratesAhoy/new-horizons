@@ -1,0 +1,80 @@
+animation = Lo_Man.an
+
+[stand]
+start_time = 0
+end_time = 0
+
+[sit_down]
+start_time = 0
+end_time = 17
+
+[load_gun]
+start_time = 17
+end_time = 55
+
+[push_bomb]
+start_time = 55
+end_time = 102
+
+[stand_up]
+start_time = 102
+end_time = 119
+
+[reload]
+start_time = 0
+end_time = 119
+loop = false
+
+[walk]
+start_time = 120
+end_time = 136
+data = "Walk speed", "1.3"
+data = "Turn speed", "5.5"
+
+[run]
+start_time = 137
+end_time = 149
+
+[flying]
+start_time = 150
+end_time = 165
+
+[turn_left]
+start_time = 166
+end_time = 186
+loop = false
+
+[turn_right]
+start_time = 166
+end_time = 186
+type = reverse
+loop = false
+
+[action1]
+start_time = 186
+end_time = 246
+loop = false
+
+[action2]
+start_time = 246
+end_time = 311
+loop = false
+
+[action3]
+start_time = 311
+end_time = 372
+loop = false
+
+[action4]
+start_time = 372
+end_time = 441
+loop = false
+
+[crawl]
+start_time = 442
+end_time = 459
+
+[crawl_down]
+start_time = 442
+end_time = 459
+type = reverse

@@ -1,0 +1,5 @@
+animation = Lizard.an
+
+[run]
+start_time = 0
+end_time = 82

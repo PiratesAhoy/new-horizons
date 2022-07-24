@@ -1,0 +1,13 @@
+animation = dialog_head.an
+
+[idle]
+start_time = 0
+end_time = 120
+
+[talk]
+start_time = 120
+end_time = 150
+
+[angry]
+start_time = 150
+end_time = 180

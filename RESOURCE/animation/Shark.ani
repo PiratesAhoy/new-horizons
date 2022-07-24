@@ -1,0 +1,14 @@
+animation = Shark.an
+
+[stand]
+start_time = 0
+end_time = 1
+type = pingpong
+
+[Shark_Swim]
+start_time = 2
+end_time = 25
+
+[Shark_Jump]
+start_time = 26
+end_time = 73
