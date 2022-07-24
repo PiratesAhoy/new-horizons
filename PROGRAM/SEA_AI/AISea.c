@@ -1,6 +1,8 @@
 object	Sea;
 object	ShipLights;
 
+extern void InitShipLights();
+
 void SeaAI_GetLayers()
 {
 	aref oTmp = GetEventData();
@@ -10,6 +12,7 @@ void SeaAI_GetLayers()
 void DeleteSea()
 {
 	DeleteClass(&Sea);
+	DeleteClass(&ShipLights);
 }
 
 void CreateSea(int sExecuteLayer, int sRealizeLayer)
@@ -26,7 +29,7 @@ void CreateSea(int sExecuteLayer, int sRealizeLayer)
 
 	if (LoadSegment("sea_ai\ShipLights.c"))
 	{
-		// InitShipLights();
+		InitShipLights();
 		UnloadSegment("sea_ai\ShipLights.c");
 	}
 	CreateEntity(&ShipLights, "ShipLights");

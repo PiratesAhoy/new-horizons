@@ -876,6 +876,20 @@ void procDoneFireRequest()
 }
 // <-- KK
 
+void Ship_SetLightsAndFlares(ref rCharacter)
+{
+	if(CheckAttribute(sea,"lights") && sti(sea.lights) == 1)
+	{
+		rCharacter.Ship.Flares = 1;
+		rCharacter.Ship.Lights = 1;
+	}
+	else
+	{
+		rCharacter.Ship.Flares = 0;
+		rCharacter.Ship.Lights = 0;
+	}
+}
+
 void Ship_Add2Sea(int iCharacterIndex, bool bFromCoast, string sFantomType)
 {
 	if (iCharacterIndex<0) return;

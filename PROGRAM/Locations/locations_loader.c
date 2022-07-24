@@ -1180,6 +1180,7 @@ void LocLoadShips(ref Location)
 			rCharacter.Ship.Speed.z = 0.0;
 		}
 		// ASVS <--
+		Ship_SetLightsAndFlares(rCharacter);
 		Ship_PrepareShipForLocation(rCharacter);
 		// Screwface : section to send to setshipflag function the real number of ships who are physically in port and avoid CTD in some ports
 		rPlayer.numcoastalindocks = locNumShips; // CTM
@@ -1212,6 +1213,7 @@ void LocLoadShips(ref Location)
 				rCharacter.Ship.Ang.y = GetAngleY(stf(locator.vZ.x),stf(locator.vZ.z));
 				rCharacter.Ship.stopped = true;
 				rCharacter.Ship.Speed.z = 0.0;
+				Ship_SetLightsAndFlares(rCharacter);
 				Ship_PrepareShipForLocation(rCharacter);
 				SendMessage(&locShips[n],"laa",MSG_SHIP_CREATE,&rCharacter,&rShip);
 				locNumShips++;

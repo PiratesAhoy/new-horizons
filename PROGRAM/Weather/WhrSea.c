@@ -22,6 +22,8 @@ void WhrCreateSeaEnvironment()
 
 	Sea.Clear = "";
 
+	Sea.Lights = aCurWeather.Lights;
+
 	Sea.Transparency = Whr_GetFloat(aSea,"Transparency");
 	Sea.FrenelCoefficient = Whr_GetFloat(aSea,"FrenelCoefficient");
 	Sea.WaterReflection = Whr_GetFloat(aSea,"WaterReflection");
