@@ -6,6 +6,8 @@ object PersonalFlag[PERSONALFLAGS_TEXTURES_QUANTITY], PersonalPennant[PERSONALFL
 // <-- KK
 
 #event_handler("proc_ship_adddelayedcumxp","proc_ship_adddelayedcumxp"); //Levis
+#event_handler("Ship_StartLoad", "Ship_StartLoad");
+#event_handler("Ship_EndLoad", "Ship_EndLoad");
 
 // NK 05-03-21 moved max ships, two min_distance defines, all
 // ammo/morale/mast/etc defines to BS.h
@@ -5718,3 +5720,13 @@ void Ship_DoLowerSails()
 	Ship_SetSailState(GetMainCharacterIndex(), iSailState);
 }
 // <-- KK
+
+void Ship_StartLoad()
+{
+	SetTexturePath(0, "Ships\\")
+}
+
+void Ship_EndLoad()
+{
+	SetTexturePath(0, "");
+}

@@ -93,7 +93,10 @@ native int RDTSC_B();
 native int RDTSC_E(int iRDTSC);
 //int onesec; // NK for speedtests.
 
+native int SetTexturePath(int iLevel, string sPath);
+
 #libriary "script_libriary_test"
+#libriary "dx9render_script_libriary"
 
 #event_handler(NEW_GAME_EVENT,"NewGame");
 #event_handler(GAME_OVER_EVENT,"GameOverE");
