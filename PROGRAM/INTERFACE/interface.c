@@ -2105,6 +2105,7 @@ void SetShowWindowParameters(bool TVused, int w,int h, int l,int t,int r,int b)
 	showWindow.bottom = h - RecalculateVIcon(h-b);
 	showWindow.sw = r-l;
 	showWindow.sh = b-t;
+	showWindow.scale =  makefloat(w) / 1024.0;
 }
 
 int RecalculateHIcon(int curHSize)
@@ -2115,6 +2116,16 @@ int RecalculateHIcon(int curHSize)
 int RecalculateVIcon(int curVSize)
 {
 	return makeint(stf(showWindow.aspectRatio)*curVSize);
+}
+
+int RecalculateHIconScaled(int curHSize)
+{
+	return makeint(stf(showWindow.scale)*curHSize);
+}
+
+int RecalculateVIconScaled(int curVSize)
+{
+	return makeint(stf(showWindow.scale)*stf(showWindow.aspectRatio)*curVSize);
 }
 
 string GetVideoFileName(string baseName)

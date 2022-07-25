@@ -200,11 +200,6 @@ void CreateSeaEnvironment()
 	// 1.03 - CreateEntity(&SeaLocatorShow, "SeaLocatorShow"); ReloadProgressUpdate();
 	// KK LayerAddObject(SEA_REALIZE, &SeaLocatorShow, -1); // since we hadn't created entity...
 
-	// CreateEntity(&Telescope, "TELESCOPE");			ReloadProgressUpdate();
-	// LayerAddObject(SEA_EXECUTE, &Telescope, -1);
-	// LayerAddObject(SEA_REALIZE, &Telescope, -3);
-	// TelescopeInitParameters(&Telescope);
-
 	CreateSeaAnimals();								ReloadProgressUpdate();
 
 	// create all other environment
@@ -1001,7 +996,7 @@ void SeaLogin(ref Login)
 	LayerAddObject(SEA_EXECUTE, &SeaOperator, -1);
 	LayerAddObject(SEA_REALIZE, &SeaOperator, 3);*/
 
-	SendMessage(&Telescope, "leee", MSG_TELESCOPE_INIT_ARRAYS, &Nations, &ShipsTypes, &Goods);
+	SendMessage(&objISpyGlass, "leee", MSG_TELESCOPE_INIT_ARRAYS, &Nations, &ShipsTypes, &Goods);
 	trace("Telescope initiated");
 
 	PostEvent(SHIP_CHECK_RELOAD_ENABLE, 100);

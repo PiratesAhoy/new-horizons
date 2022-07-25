@@ -11,6 +11,8 @@ void InterfaceSpyGlassInit()
 	FillISpyGlassParameters();
 	CreateEntity(&objISpyGlass,"ispyglass");
 	DeleteAttribute(&objISpyGlass,"parameters");
+	TelescopeInitParameters();
+
 	LayerAddObject(SEA_EXECUTE,&objISpyGlass,-1);
 	LayerAddObject(SEA_REALIZE,&objISpyGlass,-1);
 	SetEventHandler("SetTelescopeInfo","SetSpyGlassData",0);
@@ -57,7 +59,7 @@ void IS_Frame()
 	if (CheckAttribute(rISpyglass, "shipCharge")) shipCharge = sti(rISpyglass.shipCharge);
 	if (CheckAttribute(rISpyglass, "shipNation")) shipNation = sti(rISpyglass.shipNation);
 
-	SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipCannons, shipCharge, shipNation);
+	// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipCannons, shipCharge, shipNation);
 	SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE, true);
 }
 
@@ -606,27 +608,27 @@ void SetSpyGlassData()
 		distance = Ship_GetDistance2D(mchref, chref);
 		if (distance < GetCharVisibilityRange(mchref, 3)) // Ship type, nation AND name shown inside CLOSE range
 		{
-			SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, -1, -1, -1, -1.0, -1, -1, shipNation);
+			// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, -1, -1, -1, -1.0, -1, -1, shipNation);
 			SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE, true);
 		}
 		else
 		{
 			if (distance < GetCharVisibilityRange(mchref, 2)) // Ship type and nation shown inside MEDIUM range
 			{
-				SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, "", shipType, -1, -1, -1, -1.0, -1, -1, shipNation);
+				// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, "", shipType, -1, -1, -1, -1.0, -1, -1, shipNation);
 				SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE, true);
 			}
 			else
 			{
 				if (distance < GetCharVisibilityRange(mchref, 1)) // Ship type is visible inside LONG range
 				{
-					SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, "", shipType, -1, -1, -1, -1.0, -1, -1, -1);
+					// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, "", shipType, -1, -1, -1, -1.0, -1, -1, -1);
 					SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE, true);
 				}
 			}
 		}
 	} else {
-		SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipCannons, shipCharge, shipNation);
+		// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipCannons, shipCharge, shipNation);
 		SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE,true);
 	}
 	/*rISpyglass.shipName = shipName;
@@ -679,157 +681,179 @@ int TranslateNationCode(int nationCode)
 
 void FillISpyGlassParameters()
 {
-	// скорость фэйда
-	objISpyGlass.parameters.FadeTime = 0.5;
-	// имена текстурных файлов для подложки и иконок
-	objISpyGlass.parameters.BackTextureName = "battle_interface\panel.tga";
-	objISpyGlass.parameters.IconsTextureName = "battle_interface\spyglasses_icons.tga";
-	objISpyGlass.parameters.NationsTextureName = "battle_interface\all_nations"+GetCurrentPeriod()+".tga"; // PB
-	int bottomOffset = 24;
-	// позиция подложки
-	objISpyGlass.parameters.globalpos.left = 0;
-	objISpyGlass.parameters.globalpos.top = sti(showWindow.bottom)-RecalculateVIcon(50+bottomOffset);
-	objISpyGlass.parameters.globalpos.right = sti(showWindow.width);
-	objISpyGlass.parameters.globalpos.bottom = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset);
-	// размер иконок
-	objISpyGlass.parameters.iconsize.x = RecalculateHIcon(40);
-	objISpyGlass.parameters.iconsize.y = RecalculateVIcon(40);
-	// текст об имени корабля и его типе
-	objISpyGlass.parameters.ShipText.font = "interface_normal";
-	objISpyGlass.parameters.ShipText.scale = 1.0;
-	objISpyGlass.parameters.ShipText.left = sti(showWindow.left)+RecalculateHIcon(10+42);
-	objISpyGlass.parameters.ShipText.topName = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset+80);
-	objISpyGlass.parameters.ShipText.topType = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset+36);
-	// текст инфы об корабле
-	objISpyGlass.parameters.DigitData.font = "bold_numbers";
-	objISpyGlass.parameters.DigitData.scale = 0.5;
-	objISpyGlass.parameters.DigitData.topOffset = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset+32);
-	objISpyGlass.parameters.DigitData.leftHull = makeint(205.0*stf(showWindow.sw)/640.0);
-	objISpyGlass.parameters.DigitData.leftSail = makeint(297.0*stf(showWindow.sw)/640.0);
-	objISpyGlass.parameters.DigitData.leftCrew = makeint(393.0*stf(showWindow.sw)/640.0);
-	objISpyGlass.parameters.DigitData.leftSpeed = makeint(478.0*stf(showWindow.sw)/640.0);
-	objISpyGlass.parameters.DigitData.leftCannons = makeint(562.0*stf(showWindow.sw)/640.0);
-	// координаты для иконок
-	objISpyGlass.parameters.Icons.topOffset = sti(showWindow.bottom)-RecalculateVIcon(bottomOffset+45);
-	objISpyGlass.parameters.Icons.leftNation = sti(showWindow.left)+RecalculateHIcon(10);
-	objISpyGlass.parameters.Icons.leftHull = sti(objISpyGlass.parameters.DigitData.leftHull)-RecalculateHIcon(42);
-	objISpyGlass.parameters.Icons.leftSail = sti(objISpyGlass.parameters.DigitData.leftSail)-RecalculateHIcon(42);
-	objISpyGlass.parameters.Icons.leftCrew = sti(objISpyGlass.parameters.DigitData.leftCrew)-RecalculateHIcon(42);
-	objISpyGlass.parameters.Icons.leftSpeed = sti(objISpyGlass.parameters.DigitData.leftSpeed)-RecalculateHIcon(42);
-	objISpyGlass.parameters.Icons.leftCannons = sti(objISpyGlass.parameters.DigitData.leftCannons)-RecalculateHIcon(42);
-	objISpyGlass.parameters.Icons.leftCharge = sti(showWindow.right)-RecalculateHIcon(42);
-	// координаты tu,tv для иконок
-	objISpyGlass.parameters.IconsTexture.hull.left = 0;
-	objISpyGlass.parameters.IconsTexture.hull.top = 0;
-	objISpyGlass.parameters.IconsTexture.hull.right = 0.3125;
-	objISpyGlass.parameters.IconsTexture.hull.bottom = 0.3125;
-	//
-	objISpyGlass.parameters.IconsTexture.sail.left = 0.3125;
-	objISpyGlass.parameters.IconsTexture.sail.top = 0;
-	objISpyGlass.parameters.IconsTexture.sail.right = 0.625;
-	objISpyGlass.parameters.IconsTexture.sail.bottom = 0.3125;
-	//
-	objISpyGlass.parameters.IconsTexture.crew.left = 0.625;
-	objISpyGlass.parameters.IconsTexture.crew.top = 0;
-	objISpyGlass.parameters.IconsTexture.crew.right = 0.9375;
-	objISpyGlass.parameters.IconsTexture.crew.bottom = 0.3125;
-	//
-	objISpyGlass.parameters.IconsTexture.speed.left = 0;
-	objISpyGlass.parameters.IconsTexture.speed.top = 0.3125;
-	objISpyGlass.parameters.IconsTexture.speed.right = 0.3125;
-	objISpyGlass.parameters.IconsTexture.speed.bottom = 0.625;
-	//
-	objISpyGlass.parameters.IconsTexture.cannons.left = 0.3125;
-	objISpyGlass.parameters.IconsTexture.cannons.top = 0.3125;
-	objISpyGlass.parameters.IconsTexture.cannons.right = 0.625;
-	objISpyGlass.parameters.IconsTexture.cannons.bottom = 0.625;
-	//
-	objISpyGlass.parameters.IconsTexture.charge0.left = 0.625;
-	objISpyGlass.parameters.IconsTexture.charge0.top = 0.625;
-	objISpyGlass.parameters.IconsTexture.charge0.right = 0.9375;
-	objISpyGlass.parameters.IconsTexture.charge0.bottom = 0.9375;
-	//
-	objISpyGlass.parameters.IconsTexture.charge1.left = 0.625;
-	objISpyGlass.parameters.IconsTexture.charge1.top = 0.3125;
-	objISpyGlass.parameters.IconsTexture.charge1.right = 0.9375;
-	objISpyGlass.parameters.IconsTexture.charge1.bottom = 0.625;
-	//
-	objISpyGlass.parameters.IconsTexture.charge2.left = 0.3125;
-	objISpyGlass.parameters.IconsTexture.charge2.top = 0.625;
-	objISpyGlass.parameters.IconsTexture.charge2.right = 0.625;
-	objISpyGlass.parameters.IconsTexture.charge2.bottom = 0.9375;
-	//
-	objISpyGlass.parameters.IconsTexture.charge3.left = 0;
-	objISpyGlass.parameters.IconsTexture.charge3.top = 0.625;
-	objISpyGlass.parameters.IconsTexture.charge3.right = 0.3125;
-	objISpyGlass.parameters.IconsTexture.charge3.bottom = 0.9375;
-	//
-	objISpyGlass.parameters.IconsTexture.nations.portugal.left = 0;
-	objISpyGlass.parameters.IconsTexture.nations.portugal.top = 0;
-	objISpyGlass.parameters.IconsTexture.nations.portugal.right = 0.08203125;	//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.portugal.bottom = 0.65625;
-	//
-	objISpyGlass.parameters.IconsTexture.nations.spain.left = 0.08203125;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.spain.top = 0;
-	objISpyGlass.parameters.IconsTexture.nations.spain.right = 0.1640625;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.spain.bottom = 0.65625;
-	//
-	objISpyGlass.parameters.IconsTexture.nations.pirate.left = 0.1640625;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.pirate.top = 0;
-	objISpyGlass.parameters.IconsTexture.nations.pirate.right = 0.24609375;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.pirate.bottom = 0.65625;
-	//
-	objISpyGlass.parameters.IconsTexture.nations.england.left = 0.24609375;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.england.top = 0;
-	objISpyGlass.parameters.IconsTexture.nations.england.right = 0.328125;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.england.bottom = 0.65625;
-	//
-	objISpyGlass.parameters.IconsTexture.nations.holland.left = 0.328125;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.holland.top = 0;
-	objISpyGlass.parameters.IconsTexture.nations.holland.right = 0.41015625;	//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.holland.bottom = 0.65625;
-	//
-	objISpyGlass.parameters.IconsTexture.nations.france.left = 0.41015625;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.france.top = 0;
-	objISpyGlass.parameters.IconsTexture.nations.france.right = 0.4921875;		//changed by KAM
-	objISpyGlass.parameters.IconsTexture.nations.france.bottom = 0.65625;
-	//
-	objISpyGlass.parameters.IconsTexture.nations.america.left = 0.4921875;	// KK
-	objISpyGlass.parameters.IconsTexture.nations.america.top = 0;			// KK
-	objISpyGlass.parameters.IconsTexture.nations.america.right = 0.57421875;	// KK
-	objISpyGlass.parameters.IconsTexture.nations.america.bottom = 0.65625;	// KK
-	//
-	objISpyGlass.parameters.IconsTexture.nations.neutral_nation.left = 0.57421875;	//added by KAM
-	objISpyGlass.parameters.IconsTexture.nations.neutral_nation.top = 0;		//added by KAM
-	objISpyGlass.parameters.IconsTexture.nations.neutral_nation.right = 0.65625;	//added by KAM
-	objISpyGlass.parameters.IconsTexture.nations.neutral_nation.bottom = 0.65625;	//added by KAM
-	//
-	objISpyGlass.parameters.IconsTexture.nations.unknown_nation.left = 0.65625;	//added by KAM
-	objISpyGlass.parameters.IconsTexture.nations.unknown_nation.top = 0;		//added by KAM
-	objISpyGlass.parameters.IconsTexture.nations.unknown_nation.right = 0.73828125;	//added by KAM
-	objISpyGlass.parameters.IconsTexture.nations.unknown_nation.bottom = 0.65625;	//added by KAM
-	//
-	objISpyGlass.parameters.IconsTexture.nations.personal_nation.left = 0.73828125;	// KK
-	objISpyGlass.parameters.IconsTexture.nations.personal_nation.top = 0;			// KK
-	objISpyGlass.parameters.IconsTexture.nations.personal_nation.right = 0.8203125;	// KK
-	objISpyGlass.parameters.IconsTexture.nations.personal_nation.bottom = 0.65625;	// KK
+	objISpyGlass.lens.texture = "BATTLE_INTERFACE\Spyglass\spyglass3.tga";
 
-	objISpyGlass.chr = -1; // KK
+  	int nHCenter = sti(showWindow.right)/2;
+	objISpyGlass.lens.pos = (nHCenter-sti(showWindow.bottom))+","+(sti(showWindow.top)-1)+","+(nHCenter+sti(showWindow.bottom))+","+showWindow.bottom;//showWindow.left+","+showWindow.top+"," + showWindow.right+","+showWindow.bottom;
+	int ntop = sti(showWindow.bottom) - 114;//sti(showWindow.bottom) - RecalculateVIconScaled(114);
+	int nbottom = ntop + 128;//ntop + RecalculateVIconScaled(128);
+
+	//==========================================================
+	objISpyGlass.shipsign.ship.texture = "battle_interface\\ship_icons2.tga";//
+	objISpyGlass.shipsign.ship.pos = 28+","+(ntop+20)+","+92+","+(ntop+84);//RecalculateHIconScaled(28)+","+(ntop+RecalculateVIconScaled(20)) + "," + RecalculateHIconScaled(92)+","+(ntop+RecalculateVIconScaled(84));
+	objISpyGlass.shipsign.ship.uv = "0,0,0.0625,0.0625";//"0,0,0.125,0.25";
+	objISpyGlass.shipsign.back.texture = "battle_interface\\shipbackicon.tga";
+	objISpyGlass.shipsign.back.pos = 8+","+(ntop-2)+","+136+","+(nbottom-2);
+//	objISpyGlass.shipsign.back.pos = 10+","+ntop+","+138+","+nbottom;//RecalculateHIconScaled(10)+","+ntop + "," + RecalculateHIconScaled(138)+","+nbottom;
+	objISpyGlass.shipsign.hp.texture = "battle_interface\\ShipState.tga";
+	objISpyGlass.shipsign.hp.pos = 10+","+(ntop+14)+","+74+","+(ntop+88);//RecalculateHIconScaled(10)+","+(ntop+RecalculateVIconScaled(14)) + "," + RecalculateHIconScaled(74)+","+(ntop+RecalculateVIconScaled(88));
+	objISpyGlass.shipsign.hp.uv = "0.0,0.109,0.5,0.6875";
+	objISpyGlass.shipsign.sp.texture = "battle_interface\\ShipState.tga";
+	objISpyGlass.shipsign.sp.pos = 74+","+(ntop+14)+","+138+","+(ntop+88);//RecalculateHIconScaled(74)+","+(ntop+RecalculateVIconScaled(14)) + "," + RecalculateHIconScaled(138)+","+(ntop+RecalculateVIconScaled(88));
+	objISpyGlass.shipsign.sp.uv = "0.5,0.109,1.0,0.6875";
+	objISpyGlass.shipsign.class.texture = "battle_interface\\ShipClass.tga";
+	objISpyGlass.shipsign.class.pos = 28+","+(ntop+4)+","+92+","+(ntop+20);
+//	objISpyGlass.shipsign.class.pos = 30+","+(ntop+6)+","+94+","+(ntop+22);//RecalculateHIconScaled(30)+","+(ntop+RecalculateVIconScaled(6)) + "," + RecalculateHIconScaled(92)+","+(ntop+RecalculateVIconScaled(22));
+	//
+	objISpyGlass.info.nation.texture = "flagall.tga";
+	objISpyGlass.info.nation.pos = 116+","+(ntop+8)+","+180+","+(ntop+40);//RecalculateHIconScaled(116)+","+(ntop+RecalculateVIconScaled(8)) + "," + RecalculateHIconScaled(180)+","+(ntop+RecalculateVIconScaled(40));
+	objISpyGlass.info.nation.uv = "0,0,0.125,1.0";
+	//
+	objISpyGlass.info.cannon.texture = "battle_interface\\list_icons.tga";
+	objISpyGlass.info.cannon.pos = (nHCenter-RecalculateHIconScaled(252)-48)+","+(ntop+42)+","+(nHCenter-RecalculateHIconScaled(252))+","+(ntop+90);//RecalculateHIconScaled(212)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(260)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.info.cannon.uv = "0.625,0.375,0.6875,0.5";
+	//
+	objISpyGlass.info.speed.texture = "battle_interface\\list_icon2.tga";
+	objISpyGlass.info.speed.pos = (nHCenter-RecalculateHIconScaled(180)-48)+","+(ntop+42)+","+(nHCenter-RecalculateHIconScaled(180))+","+(ntop+90);//RecalculateHIconScaled(284)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(332)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.info.speed.uv = "0.25,0.25,0.375,0.375";
+
+	objISpyGlass.info.sailto.texture = "battle_interface\\list_icons.tga";   // boal // Lexanni: расстояние (хз почему так называется)
+	objISpyGlass.info.sailto.pos = (nHCenter-RecalculateHIconScaled(36)-48)+","+(ntop+42)+","+(nHCenter-RecalculateHIconScaled(36))+","+(ntop+90);//RecalculateHIconScaled(428)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(476)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.info.sailto.uv = "0.75,0.25,0.8125,0.375";
+
+	//
+	objISpyGlass.info.charge.texture = "battle_interface\\list_icon2.tga";//тип боеприпасов
+	objISpyGlass.info.charge.pos = (nHCenter-RecalculateHIconScaled(108)-48)+","+(ntop+42)+","+(nHCenter-RecalculateHIconScaled(108))+","+(ntop+90);//RecalculateHIconScaled(356)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(404)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.info.charge.uv = "0.125,0.5,0.25,0.625";
+
+	objISpyGlass.captain.back.texture = "battle_interface\\shipbackicon.tga";
+	objISpyGlass.captain.back.pos = (sti(showWindow.right)-110)+","+(ntop-2)+","+(sti(showWindow.right)+14)+","+(nbottom-2);
+//	objISpyGlass.captain.back.pos = (sti(showWindow.right)-112)+","+ntop+","+(sti(showWindow.right)+16)+","+nbottom;//RecalculateHIconScaled(906)+","+ntop + "," + RecalculateHIconScaled(1034)+","+nbottom;
+	objISpyGlass.captain.face.texture = "battle_interface\\portraits\\face_0.tga";
+	objISpyGlass.captain.face.pos = (sti(showWindow.right)-94)+","+(ntop+18)+","+(sti(showWindow.right)-30)+","+(ntop+82);//RecalculateHIconScaled(924)+","+(ntop+RecalculateVIconScaled(20)) + "," + RecalculateHIconScaled(988)+","+(ntop+RecalculateVIconScaled(84));
+	//
+
+	objISpyGlass.captain.fencing.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.fencing.pos = (nHCenter+RecalculateHIconScaled(324))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(324)+48)+","+(ntop+90);//RecalculateHIconScaled(830)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(878)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.captain.fencing.uv = "0.875,0.125,1.0,0.25";   // защита
+	objISpyGlass.captain.cannon.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.cannon.pos = (nHCenter+RecalculateHIconScaled(252))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(252)+48)+","+(ntop+90);//RecalculateHIconScaled(758)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(806)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.captain.cannon.uv = "0.75,0.125,0.875,0.25";  // абордаж
+	objISpyGlass.captain.accuracy.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.accuracy.pos = (nHCenter+RecalculateHIconScaled(180))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(180)+48)+","+(ntop+90);//RecalculateHIconScaled(686)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(734)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.captain.accuracy.uv = "0.375,0.125,0.5,0.25";  // орудия
+	objISpyGlass.captain.navigation.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.navigation.pos = (nHCenter+RecalculateHIconScaled(108))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(108)+48)+","+(ntop+90);//RecalculateHIconScaled(614)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(662)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.captain.navigation.uv = "0.25,0.125,0.375,0.25"; // меткость
+	objISpyGlass.captain.boarding.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.boarding.pos = (nHCenter+RecalculateHIconScaled(36))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(36)+48)+","+(ntop+90);//RecalculateHIconScaled(542)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(590)+","+(ntop+RecalculateVIconScaled(90));
+	objISpyGlass.captain.boarding.uv = "0.5,0.125,0.625,0.25";  // навигация
+
+
+	//==========================================================
+	float fBaseScale = stf(showWindow.width) / 1310.0;
+	objISpyGlass.text.shiptype.font = "interface_normal";
+	objISpyGlass.text.shiptype.pos = 116+","+(ntop+46);//RecalculateHIconScaled(116)+","+(ntop+RecalculateVIconScaled(46));
+	objISpyGlass.text.shiptype.color = argb(255,255,255,168);
+	objISpyGlass.text.shiptype.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.text.shipname.font = "interface_normal";
+	objISpyGlass.text.shipname.pos = 116+","+(ntop+72);//RecalculateHIconScaled(116)+","+(ntop+RecalculateVIconScaled(72));
+	objISpyGlass.text.shipname.color = argb(255,255,255,168);
+	objISpyGlass.text.shipname.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.text.cannons.font = "interface_normal";
+	objISpyGlass.text.cannons.pos = (nHCenter-RecalculateHIconScaled(252)-24)+","+(ntop+24);//RecalculateHIconScaled(236)+","+(ntop+RecalculateVIconScaled(26));
+	objISpyGlass.text.cannons.align = "center";
+	objISpyGlass.text.cannons.color = argb(255,255,255,168);
+	objISpyGlass.text.cannons.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.text.speed.font = "interface_normal";
+	objISpyGlass.text.speed.pos = (nHCenter-RecalculateHIconScaled(180)-24)+","+(ntop+24);//RecalculateHIconScaled(308)+","+(ntop+RecalculateVIconScaled(26));
+	objISpyGlass.text.speed.align = "center";
+	objISpyGlass.text.speed.color = argb(255,255,255,168);
+	objISpyGlass.text.speed.scale = fBaseScale * 1.2;
+	// boal
+	objISpyGlass.text.sailto.font = "interface_normal";
+	objISpyGlass.text.sailto.pos = (nHCenter-RecalculateHIconScaled(36)-24)+","+(ntop+24);//RecalculateHIconScaled(452)+","+(ntop+RecalculateVIconScaled(26));
+	objISpyGlass.text.sailto.align = "center";
+	objISpyGlass.text.sailto.color = argb(255,255,255,168);
+	objISpyGlass.text.sailto.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.text.crew.font = "interface_normal";
+	objISpyGlass.text.crew.pos = 60+","+(ntop+80);//RecalculateHIconScaled(60)+","+(ntop+RecalculateVIconScaled(80));
+	objISpyGlass.text.crew.align = "center";
+	objISpyGlass.text.crew.color = argb(255,255,255,168);
+	objISpyGlass.text.crew.scale = fBaseScale * 1.0;
+
+	// captain text data
+	objISpyGlass.captext.capname.font = "interface_normal";
+	objISpyGlass.captext.capname.pos = (sti(showWindow.right)-14)+","+(ntop-20);//RecalculateHIconScaled(1000)+","+(ntop-RecalculateVIconScaled(16));
+	objISpyGlass.captext.capname.align = "right";
+	objISpyGlass.captext.capname.color = argb(255,255,255,168);
+ 	objISpyGlass.captext.capname.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.captext.fencing.font = "interface_normal";
+	objISpyGlass.captext.fencing.pos = (nHCenter+RecalculateHIconScaled(324)+24)+","+(ntop+24);//RecalculateHIconScaled(856)+","+(ntop+RecalculateVIconScaled(26));
+	objISpyGlass.captext.fencing.align = "center";
+	objISpyGlass.captext.fencing.color = argb(255,255,255,168);
+  	objISpyGlass.captext.fencing.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.captext.cannon.font = "interface_normal";
+	objISpyGlass.captext.cannon.pos = (nHCenter+RecalculateHIconScaled(256)+24)+","+(ntop+24);//RecalculateHIconScaled(784)+","+(ntop+RecalculateVIconScaled(26));
+	objISpyGlass.captext.cannon.align = "center";
+	objISpyGlass.captext.cannon.color = argb(255,255,255,168);
+  	objISpyGlass.captext.cannon.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.captext.accuracy.font = "interface_normal";
+	objISpyGlass.captext.accuracy.pos = (nHCenter+RecalculateHIconScaled(180)+24)+","+(ntop+24);//RecalculateHIconScaled(712)+","+(ntop+RecalculateVIconScaled(26));
+	objISpyGlass.captext.accuracy.align = "center";
+	objISpyGlass.captext.accuracy.color = argb(255,255,255,168);
+  	objISpyGlass.captext.accuracy.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.captext.navigation.font = "interface_normal";
+	objISpyGlass.captext.navigation.pos = (nHCenter+RecalculateHIconScaled(108)+24)+","+(ntop+24);//RecalculateHIconScaled(640)+","+(ntop+RecalculateVIconScaled(26));
+	objISpyGlass.captext.navigation.align = "center";
+	objISpyGlass.captext.navigation.color = argb(255,255,255,168);
+ 	objISpyGlass.captext.navigation.scale = fBaseScale * 1.2;
+	//
+	objISpyGlass.captext.boarding.font = "interface_normal";
+	objISpyGlass.captext.boarding.pos = (nHCenter+RecalculateHIconScaled(36)+24)+","+(ntop+24);//RecalculateHIconScaled(566)+","+(ntop+RecalculateVIconScaled(26));
+	objISpyGlass.captext.boarding.align = "center";
+	objISpyGlass.captext.boarding.color = argb(255,255,255,168);
+  	objISpyGlass.captext.boarding.scale = fBaseScale * 1.2;
+	// <-- Lexanni
+	//===============================================
+	objISpyGlass.nationuvarray.uv0 = "0.125,0,0.25,1.0"; // england
+	objISpyGlass.nationuvarray.uv1 = "0.25,0,0.375,1.0"; // france
+	objISpyGlass.nationuvarray.uv2 = "0.5,0,0.625,1.0"; // spain
+	objISpyGlass.nationuvarray.uv3 = "0,0,0.125,1.0"; // holland
+	objISpyGlass.nationuvarray.uv4 = "0.625,0,0.75,1.0"; // pirate
+	objISpyGlass.nationuvarray.uv5 = "0.75,0,0.875,1.0"; // smuggler
+	//
+	objISpyGlass.chargeuvarray.uv0 = "0.0,0.5,0.125,0.625"; // balls
+	objISpyGlass.chargeuvarray.uv1 = "0.125,0.5,0.25,0.625"; // bomb
+	objISpyGlass.chargeuvarray.uv2 = "0.25,0.5,0.375,0.625"; // knippels
+	objISpyGlass.chargeuvarray.uv3 = "0.375,0.5,0.5,0.625"; // grapes
+	//
+	objISpyGlass.sailuvarray.uv0 = "0.5,0.25,0.625,0.375"; // down
+	objISpyGlass.sailuvarray.uv1 = "0.375,0.25,0.5,0.375"; // middle
+	objISpyGlass.sailuvarray.uv2 = "0.25,0.25,0.375,0.375"; // up
 }
 
-void TelescopeInitParameters(ref rTelescope)
+void TelescopeInitParameters()
 {
 	object tmpobj;
 	ref mchref = GetMainCharacter();
 	aref arItmScope;
 
 	if (Items_FindItem(GetCharacterEquipByGroup(mchref, SPYGLASS_ITEM_TYPE), &arItmScope) >= 0)
-	setTelescopeInitParameters(rTelescope, arItmScope);
+		setTelescopeInitParameters(arItmScope);
 	else
-	setTelescopeInitParameters(rTelescope, &tmpobj);
+		setTelescopeInitParameters(&tmpobj);
 }
 
-void setTelescopeInitParameters(ref rTelescope, aref arItmScope)
+void setTelescopeInitParameters(aref arItmScope)
 {
 	string texName = "telescope.tga";
 	float fZoom = 5.5;
@@ -851,5 +875,5 @@ void setTelescopeInitParameters(ref rTelescope, aref arItmScope)
 	texName = widescreen + texName;
 	// ChezJfrey & PB: Automatic Switch <--
 
-	SendMessage(rTelescope, "lsflll", MSG_TELESCOPE_SET_TYPE, texName, fZoom, nShowItm, activateTime, updateTime);
+	SendMessage(objISpyGlass, "lsfll", MSG_TELESCOPE_SET_TYPE, texName, fZoom, activateTime, updateTime);
 }

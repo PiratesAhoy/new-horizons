@@ -4068,7 +4068,7 @@ void SetEquipedItemToCharacter(ref chref, string groupID, string itemID)
 		// GreatZen <-- // <-- KK
 		case SPYGLASS_ITEM_TYPE:
 			if(CheckAttribute(arItm,"id"))
-				setTelescopeInitParameters(&Telescope,arItm);
+				setTelescopeInitParameters(arItm);
 		break;
 
 		case GUN_ITEM_TYPE:

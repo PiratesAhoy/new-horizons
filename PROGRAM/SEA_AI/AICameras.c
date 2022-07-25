@@ -180,7 +180,6 @@ void SeaCameras_SetDieCamera()
 		SeaCameras.Camera = "SeaShipCamera";
 		Crosshair.OutsideCamera = true;
 		PeopleOnShip.IsOnDeck = 0;
-		DeleteClass(&Telescope);
 		SeaCameras_UpdateCamera();
 	}
 }
