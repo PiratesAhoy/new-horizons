@@ -34,35 +34,6 @@ void CheckInterfaceVisible()
 	if(vtype!=0) ResetSpyGlassData();
 }
 
-void IS_Frame()
-{
-	int chridx = -1;
-	int	shipHull = -1;
-	int shipSail = -1;
-	int shipCrew = -1;
-	int shipCannons = -1;
-	int shipCharge = -1;
-	int shipNation = -1;
-	float shipSpeed = -1.0;
-	string shipName = "";
-	string shipType = "";
-	ref rISpyglass; makeref(rISpyglass, objISpyGlass);
-
-	if (CheckAttribute(rISpyglass, "chr")) chridx = sti(rISpyglass.chr);
-	if (CheckAttribute(rISpyglass, "shipName")) shipName = rISpyglass.shipName;
-	if (CheckAttribute(rISpyglass, "shipType")) shipType = rISpyglass.shipType;
-	if (CheckAttribute(rISpyglass, "shipHull")) shipHull = sti(rISpyglass.shipHull);
-	if (CheckAttribute(rISpyglass, "shipSail")) shipSail = sti(rISpyglass.shipSail);
-	if (CheckAttribute(rISpyglass, "shipCrew")) shipCrew = sti(rISpyglass.shipCrew);
-	if (CheckAttribute(rISpyglass, "shipSpeed")) shipSpeed = stf(rISpyglass.shipSpeed);
-	if (CheckAttribute(rISpyglass, "shipCannons")) shipCannons = sti(rISpyglass.shipCannons);
-	if (CheckAttribute(rISpyglass, "shipCharge")) shipCharge = sti(rISpyglass.shipCharge);
-	if (CheckAttribute(rISpyglass, "shipNation")) shipNation = sti(rISpyglass.shipNation);
-
-	// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipCannons, shipCharge, shipNation);
-	SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE, true);
-}
-
 void SetSpyGlassData()
 {
 	int chrIdx = GetEventData();
@@ -78,6 +49,7 @@ void SetSpyGlassData()
 	string shipType = "";
 	int shipDistance = 0; // meh
 	int shipMorale = 45; // NK
+	int shipClass = -1;
 
 	// KBSPG variables
 	int spyglassacc = 0; //KBSPG
@@ -189,7 +161,6 @@ void SetSpyGlassData()
 			{
 				shipDistance = ( Ship_GetDistance2D(GetMainCharacter(), chref) ) / 10;
 				shipDistance *= 10;
-				shipType = shipType + "    " + shipDistance + " " + XI_ConvertString("yards");
 			}
 			// meh <--
 		}
@@ -202,13 +173,13 @@ void SetSpyGlassData()
 			}
 			if( CheckAttribute(arScopeItm,"scope.show.ship_name") && sti(arScopeItm.scope.show.ship_name)!=0 )
 			{
-				shipName = XI_ConvertString(GetShipTypeName(chref)) + " : " + GetMyShipName(chref);
+				shipName = GetMyShipName(chref);
 			}
 			if( CheckAttribute(arScopeItm,"scope.show.ship_type") && sti(arScopeItm.scope.show.ship_type)!=0 )
 			{
-				shipType = XI_ConvertString("BClass") + " " + GetCharacterShipClass(chref);
+				shipType = XI_ConvertString(GetShipTypeName(chref));
+				shipClass = GetCharacterShipClass(chref);
 			}
-
 
 			if( CheckAttribute(arScopeItm,"scope.show.hull") && sti(arScopeItm.scope.show.hull)!=0 )
 			{
@@ -228,7 +199,6 @@ void SetSpyGlassData()
 				// meh -->
 				shipDistance = ( Ship_GetDistance2D(GetMainCharacter(), chref) ) / 10;
 				shipDistance *= 10;
-				shipType = shipType + ",	  " + shipDistance + " " + XI_ConvertString("yards");
 				// meh <--
 			}
 			if( CheckAttribute(arScopeItm,"scope.show.charge") && sti(arScopeItm.scope.show.charge)!=0 )
@@ -256,14 +226,6 @@ void SetSpyGlassData()
 			// NK <--
 		}
 		// <-- KK
-
-		// boal + NK -->
-		//ClearAllLogStrings();
-		//if(showmorale && CheckAttribute(chref,"Ship.Crew.Morale")) { Log_SetStringToLog("Distance " + makeint(Ship_GetDistance2D(GetMainCharacter(), chref)) + ", morale: " + GetMoraleName(sti(chref.Ship.Crew.Morale))); }
-		//else { Log_SetStringToLog("Distance " + makeint(Ship_GetDistance2D(GetMainCharacter(), chref))); }
-		//SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName,shipType, shipHull,shipSail,shipCrew, shipSpeed,shipCannons,shipCharge,shipNation);
-		//SendMessage(&objISpyGlass,"lssllfflll",MSG_ISG_UPDATE, shipName,shipType, shipHull,shipSail,shipCrew, shipSpeed,shipCannons,shipCharge,shipNation);
-		// boal + NK <-- <--
 	}
 	else 	//KBSPG - Otherwise, KBSPG code
 	{
@@ -395,7 +357,6 @@ void SetSpyGlassData()
 			{
 				vtemp = realshipDistance;
 				shipDistance = vtemp + makeint (vtemp/varrange) * (rand( 2*spyglassacc)- spyglassacc);
-				shipType = shipType + "    " + shipDistance + " " + XI_ConvertString("yards");
 			}
 			// meh <--
 		}
@@ -411,29 +372,21 @@ void SetSpyGlassData()
 			{
 				if ( rangeclass >= realshipdistance + (spyglassacc - 1) * incrange )
 				{	
-					shipType = XI_ConvertString("BClass") + " " + GetCharacterShipClass(chref);
+					shipType = XI_ConvertString(GetShipTypeName(chref));
+					shipClass = GetCharacterShipClass(chref);
 				}
 				else
 				{
-					shipType = XI_ConvertString("BClass") + "?";
+					shipClass = -1;
 				}
 			}
 
 
 			if ( CheckAttribute(arScopeItm,"scope.show.ship_name") && sti(arScopeItm.scope.show.ship_name)!=0 )
 			{
-				if ( rangetype >= realshipdistance + (spyglassacc - 1) * incrange )
-				{
-					shipName = XI_ConvertString(GetShipTypeName(chref)) + " : ";
-				}
-				else
-				{
-					shipName = " ";
-				}
-				
 				if ( rangename >= realshipdistance + (spyglassacc - 1) * incrange )
 				{
-					shipName = shipName + GetMyShipName(chref);
+					shipName = GetMyShipName(chref);
 				}
 			}
 			
@@ -449,7 +402,6 @@ void SetSpyGlassData()
 				// meh -->
 				vtemp = realshipDistance;
 				shipDistance = vtemp + makeint (vtemp/varrange) * (rand( 2*spyglassacc)- spyglassacc);
-				shipType = shipType + ",	  " + shipDistance + " " + XI_ConvertString("yards");
 			}
 
 
@@ -570,14 +522,6 @@ void SetSpyGlassData()
 		// <-- KK
 	}
 
-	// boal + NK -->
-	//ClearAllLogStrings();
-	//if(showmorale && CheckAttribute(chref,"Ship.Crew.Morale")) { Log_SetStringToLog("Distance " + makeint(Ship_GetDistance2D(GetMainCharacter(), chref)) + ", morale: " + GetMoraleName(sti(chref.Ship.Crew.Morale))); }
-	//else { Log_SetStringToLog("Distance " + makeint(Ship_GetDistance2D(GetMainCharacter(), chref))); }
-	//SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName,shipType, shipHull,shipSail,shipCrew, shipSpeed,shipCannons,shipCharge,shipNation);
-	//SendMessage(&objISpyGlass,"lssllfflll",MSG_ISG_UPDATE, shipName,shipType, shipHull,shipSail,shipCrew, shipSpeed,shipCannons,shipCharge,shipNation);
-	// boal + NK <-- <--
-
 	// PB: Prevent impossible values -->
 	if(shipHull     < 0  ) shipHull     =   0;
 	if(shipHull     > 100) shipHull     = 100;
@@ -603,32 +547,49 @@ void SetSpyGlassData()
 	if(shipDistance < 0  ) shipDistance =   0;
 	// PB: Prevent impossible values <--
 
+	int nSailState = 1;
+	float fSailSt = Ship_GetSailState(chref);
+	if( fSailSt<0.3 ) {nSailState = 0;}
+	else {
+		if( fSailSt<0.6 ) {nSailState = 1;}
+		else {nSailState = 2;}
+	}
+
+	int shipMaxCannons = shipCannons;
+	int nFace = sti(chref.faceID);
+	int nFencingSkill = GetCharacterSkill(chref,SKILL_DEFENCE);
+	int nCannonSkill = GetCharacterSkill(chref,SKILL_GRAPPLING);
+	int nAccuracySkill = GetCharacterSkill(chref,SKILL_CANNONS);
+	int nNavigationSkill = GetCharacterSkill(chref,SKILL_ACCURACY);
+	int nBoardingSkill = GetCharacterSkill(chref,SKILL_SAILING);
+	string sCaptainName = chref.name + " " + chref.lastname;
+
 	if(iRealismMode>1 || ONSEA_DATA_DISABLED) {  //Screwface : No infos in realistic mod // KK ship type and nation become quite obvious from some distances
 		if (Ship_GetGroupID(chref) != PLAYER_GROUP) shipName = chref.Ship.Name;
 		distance = Ship_GetDistance2D(mchref, chref);
 		if (distance < GetCharVisibilityRange(mchref, 3)) // Ship type, nation AND name shown inside CLOSE range
 		{
-			// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, -1, -1, -1, -1.0, -1, -1, shipNation);
+			SendMessage(&objISpyGlass,"lsslllfflllllllllllssl",MSG_ISG_UPDATE, shipName, shipType, -1, -1, -1, -1.0, -1, -1, -1, -1, shipNation, nSailState, -1, -1, -1, -1, -1, -1, "", "", shipClass);
 			SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE, true);
 		}
 		else
 		{
 			if (distance < GetCharVisibilityRange(mchref, 2)) // Ship type and nation shown inside MEDIUM range
 			{
-				// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, "", shipType, -1, -1, -1, -1.0, -1, -1, shipNation);
+				SendMessage(&objISpyGlass,"lsslllfflllllllllllssl",MSG_ISG_UPDATE, "", shipType, -1, -1, -1, -1.0, -1, -1, -1, -1, shipNation, nSailState, -1, -1, -1, -1, -1, -1, "", "", shipClass);
 				SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE, true);
 			}
 			else
 			{
 				if (distance < GetCharVisibilityRange(mchref, 1)) // Ship type is visible inside LONG range
 				{
-					// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, "", shipType, -1, -1, -1, -1.0, -1, -1, -1);
+					SendMessage(&objISpyGlass,"lsslllfflllllllllllssl",MSG_ISG_UPDATE, "", shipType, -1, -1, -1, -1.0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, "", "", shipClass);
 					SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE, true);
 				}
 			}
 		}
 	} else {
-		// SendMessage(&objISpyGlass,"lsslllflll",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipCannons, shipCharge, shipNation);
+		SendMessage(&objISpyGlass,"lsslllfflllllllllllssl",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipDistance, shipCannons, shipMaxCannons, shipCharge, shipNation, nSailState, nFace, nFencingSkill, nCannonSkill, nAccuracySkill, nNavigationSkill, nBoardingSkill, sCaptainName, "", shipClass);
 		SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE,true);
 	}
 	/*rISpyglass.shipName = shipName;
