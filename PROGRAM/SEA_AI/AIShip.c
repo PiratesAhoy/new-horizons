@@ -966,6 +966,7 @@ void Ship_Add2Sea(int iCharacterIndex, bool bFromCoast, string sFantomType)
 	} // NK 05-04-15
 
 	Ship_ClearImpulseStrength(rCharacter);
+	Ship_SetLightsAndFlares(rCharacter);
 	//trace("cleared impulse");
 
 	rCharacter.Ship.LastBallCharacter = -1;
@@ -5720,6 +5721,13 @@ void Ship_DoLowerSails()
 	Ship_SetSailState(GetMainCharacterIndex(), iSailState);
 }
 // <-- KK
+
+float Ship_GetSailState(ref rCharacter)
+{
+	float fSailState = 1.0;
+	SendMessage(rCharacter, "le", MSG_SHIP_GET_SAIL_STATE, &fSailState);
+	return fSailState;
+}
 
 void Ship_StartLoad()
 {
