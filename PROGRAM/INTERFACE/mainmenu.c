@@ -23,7 +23,7 @@ void InitInterface(string iniName)
 
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"BACKPICTURE",3, "interfaces\mainback");
 
-	string currentversion = " - Build " + BUILDVERSION;
+	string currentversion = " - Build " + BUILDVERSION + " StormX";
 	CreateString(true,"Version","Pirates Ahoy! Community" + currentversion,FONT_QUESTBOOK,COLOR_GREEN_LIGHT,-20,430,SCRIPT_ALIGN_LEFT,0.8);
 	CreateString(true,"Info","http://"+PA_INET,FONT_QUESTBOOK,COLOR_BLUE_LIGHT,-20,470,SCRIPT_ALIGN_LEFT,0.8);
 
