@@ -7,7 +7,10 @@ void WhrCreateSeaEnvironment()
 {
 	aref	aCurWeather = GetCurrentWeather();
 	aref	aSea; makearef(aSea,aCurWeather.Sea);
+	aref	aSea2; makearef(aSea2, aCurWeather.Sea2);
 	aref	aCommon; makearef(aCommon, WhrCommonParams.Sea);
+
+	FixWeather(aCurWeather);
 
 	float fMaxSeaHeight = 2.0;
 
@@ -28,6 +31,9 @@ void WhrCreateSeaEnvironment()
 	Sea.FrenelCoefficient = Whr_GetFloat(aSea,"FrenelCoefficient");
 	Sea.WaterReflection = Whr_GetFloat(aSea,"WaterReflection");
 	Sea.WaterAttenuation = Whr_GetFloat(aSea,"WaterAttenuation");
+
+	Sea.Sea2.BumpScale = Whr_GetFloat(aSea2, "BumpScale");
+
 	switch (GetTargetPlatform()) 
 	{
 		case "xbox":	Sea.GridStep = 0.10;	break;
@@ -94,31 +100,58 @@ void WhrCreateSeaEnvironment()
 		Sea.Sun.AzimuthAngle = Whr_GetFloat(aSea, "SunRoad.Special.AzimuthAngle");
 	}
 
-	switch (GetTargetPlatform()) 
-	{
-		case "xbox":	
-			Sea.CubeMap.Size = 128; 
-			Sea.CubeMap.VectorsSize = 128;
-		break;
-		case "pc":		
-			Sea.CubeMap.Size = 256;
-			Sea.CubeMap.VectorsSize = 128;
-		break;
-	}
+	Sea.CubeMap.Size = 512;
+	Sea.CubeMap.VectorsSize = 256;
 	Sea.CubeMap.Format = "r5g6b5";
 
 	Sea.Sky.Color = Whr_GetColor(aSea, "Sky.Color");
 
-	// harmonics
-	aref aHarmonics; makearef(aHarmonics, aSea.Harmonics);
-	int iNumHarmonics = GetAttributesNum(aHarmonics);
-	for (int i=0;i<iNumHarmonics;i++)
-	{
-		aref aHarmonic = GetAttributeN(aHarmonics,i);
-		string sTemp = "h" + i;
-		Sea.Harmonics.(sTemp) = GetAttributeValue(aHarmonic);
-	}
-		
+	// Advanced Sea initialize
+	Sea.Sea2.WaterColor = Whr_GetColor(aSea2, "WaterColor");
+	Sea.Sea2.SkyColor = Whr_GetColor(aSea2, "SkyColor");
+
+	Sea.Sea2.Amp1 = Whr_GetFloat(aSea2, "Amp1");
+	Sea.Sea2.AnimSpeed1 = Whr_GetFloat(aSea2, "AnimSpeed1");
+	Sea.Sea2.Scale1 = Whr_GetFloat(aSea2, "Scale1");
+	Sea.Sea2.MoveSpeed1 = Whr_GetString(aSea2, "MoveSpeed1");
+
+	Sea.Sea2.Amp2 = Whr_GetFloat(aSea2, "Amp2");
+	Sea.Sea2.AnimSpeed2 = Whr_GetFloat(aSea2, "AnimSpeed2");
+	Sea.Sea2.Scale2 = Whr_GetFloat(aSea2, "Scale2");
+	Sea.Sea2.MoveSpeed2 = Whr_GetString(aSea2, "MoveSpeed2");
+
+	Sea.Sea2.PosShift = Whr_GetFloat(aSea2, "PosShift");
+
+	Sea.Sea2.Reflection = Whr_GetFloat(aSea2, "Reflection");
+	Sea.Sea2.Transparency = Whr_GetFloat(aSea2, "Transparency");
+	Sea.Sea2.Attenuation = Whr_GetFloat(aSea2, "Attenuation");
+	Sea.Sea2.Frenel = Whr_GetFloat(aSea2, "Frenel");
+
+	// Sea.Sea2.SimpleSea = sti(InterfaceStates.SimpleSea);
+
+	Sea.Sea2.FoamEnable = false;
+	// if(FindLocation(sLocation) == -1)
+	// {
+	// 	Sea.Sea2.FoamEnable = true;
+	// 	Sea.Sea2.FoamK = Whr_GetFloat(aSea2, "FoamK");
+	// 	Sea.Sea2.FoamV = Whr_GetFloat(aSea2, "FoamV");
+	// 	Sea.Sea2.FoamUV = Whr_GetFloat(aSea2, "FoamUV");
+	// 	Sea.Sea2.FoamTexDisturb = Whr_GetFloat(aSea2, "FoamTexDisturb");
+	// }
+
+	if(CheckAttribute(aSea2, "LodScale"))
+        Sea.Sea2.LodScale = Whr_GetFloat(aSea2, "LodScale");
+    if(CheckAttribute(aSea2, "GridStep"))
+        Sea.Sea2.GridStep = Whr_GetFloat(aSea2, "GridStep");
+
+	Sea.MaxSeaHeight = fMaxSeaHeight;
+	Sea.isDone = "";
+
+	// if (bSeaActive && !bAbordageStarted)
+	// {
+	// 	pchar.SystemInfo.ScaleSeaHeight = GetScaleSeaHeight();
+	// }
+
 	Sea.isDone = "";
 }
 

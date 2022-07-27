@@ -38,6 +38,15 @@ void WhrCreateRainEnvironment()
 	Rain.TimeBlend = Whr_GetLong(aRain,"TimeBlend");
 	Rain.MaxBlend = Whr_GetLong(aRain,"MaxBlend");
 
+	Rain.RainDrops.DropsNearNum = Whr_GetLong(aRain, "DropsNearNum");
+	Rain.RainDrops.DropsFarNum = Whr_GetLong(aRain, "DropsFarNum");
+	Rain.RainDrops.DropsNearRadius = Whr_GetFloat(aRain, "DropsNearRadius");
+	Rain.RainDrops.DropsFarRadius = Whr_GetFloat(aRain, "DropsFarRadius");
+	Rain.RainDrops.DropsLifeTime = Whr_GetFloat(aRain, "DropsLifeTime");
+	Rain.RainDrops.DropsSize = Whr_GetFloat(aRain, "DropsSize");
+	Rain.RainDrops.DropsColor = Whr_GetLong(aRain, "DropsColor");
+	Rain.RainDrops.DropsTexture = Whr_GetString(aRain, "DropsTexture");
+
 	Rain.Rainbow.Enable = Whr_GetLong(aRainbow,"Enable");
 	Rain.Rainbow.Texture = Whr_GetString(aRainbow,"Texture");
 	
