@@ -102,7 +102,7 @@ void BLI_SetFlags()
 	{
 		if (iShips[init] >= 0 && CheckAttribute(&Characters[iShips[init]], "Flags.DoRefresh") == true) {
 			DeleteAttribute(&Characters[iShips[init]], "Flags.DoRefresh");
-			SetShipFlag(iShips[init]);
+			// SetShipFlag(iShips[init]);
 			init++;
 			objLandInterface.DoSetFlags = init;
 			FlagsDelay();

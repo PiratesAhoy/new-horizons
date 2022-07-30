@@ -228,7 +228,7 @@ bool	bCaptureShip = false;
 #define PIRATEFLAGS_TEXTURES_QUANTITY       5 // JRH: 6 are supported, but not yet used
 #define PERSONALFLAGS_TEXTURES_QUANTITY     7 //
 #define FLAGS_PICTURES_QUANTITY_PER_TEXTURE 7
-#define FLAGS_NULL_PICTURE_TEXTURE_INDEX    7
+#define FLAGS_NULL_PICTURE_TEXTURE_INDEX    -1
 
 bool	bChangeNation = true;
 int CharLocation = 0;

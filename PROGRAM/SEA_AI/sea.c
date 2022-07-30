@@ -153,6 +153,8 @@ void DeleteSeaEnvironment()
 
 void CreateSeaEnvironment()
 {
+	if (IsEntity(&Sea)) { Trace("ERROR: CreateSeaEnvironment Sea Already Loaded!!!"); return; } //fix
+
 	sCurrentSeaExecute = SEA_EXECUTE;
 	sCurrentSeaRealize = SEA_REALIZE;
 
@@ -866,7 +868,7 @@ void SeaLogin(ref Login)
 	}
 	trace("SEA: added ships");
 
-	// CreateFlagEnvironment();
+	CreateFlagEnvironment();
 
 	// set ship for sea camera
 	SeaCameras_SetShipForSeaCamera(rPlayer);

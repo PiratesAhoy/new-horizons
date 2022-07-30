@@ -37,107 +37,92 @@ bool bShipMutiny = false; // KK
 // KK -->
 void CreateFlagEnvironment()
 {
-	ref chr;
-	int i, shipsqty, ntexture;
+	if (IsEntity(Flag) ) {
+		return;
+	}
+
 	int iPriority = iShipPriority + 4;
-	string sid;
-	int locidx = FindLoadedLocation();
 	int iPeriod = GetCurrentPeriod();
 	bool hasPennant = iPeriod >= GetPeriodFromYear(makeint(PENNANTS_MIN_YEAR));
 	bool hasMerchantFlag = iPeriod >= GetPeriodFromYear(makeint(MERCHANT_FLAGS_MIN_YEAR));
 
-	if (locidx < 0)
-		shipsqty = iNumShips;
-	else
-		shipsqty = locNumShips;
+	CreateEntity(&FortFlag, "Flag");
+	FortFlag.texture = "flags\frtflg" + (iPeriod + 1) + ".tga";
+	LayerAddObject(sCurrentSeaExecute, &FortFlag, iPriority);
+	LayerAddObject(sCurrentSeaRealize, &FortFlag, iPriority);
+	LayerAddObject(SEA_REFLECTION, &FortFlag, 3);
+	iPriority++;
+
+	CreateEntity(&Flag, "Flag");
+	Flag.texture = "flags\shpflg" + (iPeriod + 1) + ".tga";
+	LayerAddObject(sCurrentSeaExecute, &Flag, iPriority);
+	LayerAddObject(sCurrentSeaRealize, &Flag, iPriority);
+	LayerAddObject(SEA_REFLECTION, &Flag, 3);
+	iPriority++;
+
+	if (hasPennant) {
+		CreateEntity(&Pennant, "Flag");
+		Pennant.texture = "flags\shppnt" + (iPeriod + 1) + ".tga";
+		LayerAddObject(sCurrentSeaExecute, &Pennant, iPriority);
+		LayerAddObject(sCurrentSeaRealize, &Pennant, iPriority);
+		LayerAddObject(SEA_REFLECTION, &Pennant, 3);
+		iPriority++;
+	}
 
 	if (hasMerchantFlag) {
-		for (i = 0; i < shipsqty; i++)
-		{
-			if (locidx < 0) {
-				if (Ships[i] < 0) continue;
-				chr = GetCharacter(Ships[i]);
-			} else {
-				if (iShips[i] < 0) continue;
-				chr = GetCharacter(iShips[i]);
-			}
-			if (IsShipMerchant(chr) && !IsEntity(&MerchantFlag)) {
-				CreateEntity(&MerchantFlag, "Flag");
-				MerchantFlag.texture = "flags\merflg" + (iPeriod + 1) + ".tga"
-				LayerAddObject(sCurrentSeaExecute, &MerchantFlag, iPriority);
-				LayerAddObject(sCurrentSeaRealize, &MerchantFlag, iPriority);
-				LayerAddObject(SEA_REFLECTION, &MerchantFlag, 3);
-				iPriority++;
+		CreateEntity(&MerchantFlag, "Flag");
+		MerchantFlag.texture = "flags\merflg" + (iPeriod + 1) + ".tga";
+		LayerAddObject(sCurrentSeaExecute, &MerchantFlag, iPriority);
+		LayerAddObject(sCurrentSeaRealize, &MerchantFlag, iPriority);
+		LayerAddObject(SEA_REFLECTION, &MerchantFlag, 3);
+		iPriority++;
 
-				if (hasPennant) {
-					CreateEntity(&MerchantPennant, "Flag");
-					MerchantPennant.texture = "flags\merpnt" + (iPeriod + 1) + ".tga"
-					LayerAddObject(sCurrentSeaExecute, &MerchantPennant, iPriority);
-					LayerAddObject(sCurrentSeaRealize, &MerchantPennant, iPriority);
-					LayerAddObject(SEA_REFLECTION, &MerchantPennant, 3);
-					iPriority++;
-				}
-			}
+		if (hasPennant) {
+				CreateEntity(&MerchantPennant, "Flag");
+				MerchantPennant.texture = "flags\merpnt" + (iPeriod + 1) + ".tga";
+				LayerAddObject(sCurrentSeaExecute, &MerchantPennant, iPriority);
+				LayerAddObject(sCurrentSeaRealize, &MerchantPennant, iPriority);
+				LayerAddObject(SEA_REFLECTION, &MerchantPennant, 3);
+				iPriority++;
 		}
 	}
 
-	for (i = 0; i < shipsqty; i++)
+	int i;
+	for (i = 0; i < PIRATEFLAGS_TEXTURES_QUANTITY; i++)
 	{
-		if (locidx < 0) {
-			if (Ships[i] < 0) continue;
-			chr = GetCharacter(Ships[i]);
-		} else {
-			if (iShips[i] < 0) continue;
-			chr = GetCharacter(iShips[i]);
-		}
-		if (sti(chr.nation) != PIRATE) continue;
-		GetPirateFlag(chr, &ntexture);
-		if (!IsEntity(&PirateFlag[makeint(ntexture)])) { // PB: Add 'makeint' everywhere to avoid error logs
-			CreateEntity(&PirateFlag[makeint(ntexture)], "Flag");
-			PirateFlag[makeint(ntexture)].texture = "flags\pirflg" + (ntexture + 1) + ".tga"
-			LayerAddObject(sCurrentSeaExecute, &PirateFlag[makeint(ntexture)], iPriority);
-			LayerAddObject(sCurrentSeaRealize, &PirateFlag[makeint(ntexture)], iPriority);
-			LayerAddObject(SEA_REFLECTION,   &PirateFlag[makeint(ntexture)], 3);
-			iPriority++;
+		CreateEntity(&PirateFlag[i], "Flag");
+		PirateFlag[i].texture = "flags\pirflg" + (i + 1) + ".tga";
+		LayerAddObject(sCurrentSeaExecute, &PirateFlag[i], iPriority);
+		LayerAddObject(sCurrentSeaRealize, &PirateFlag[i], iPriority);
+		LayerAddObject(SEA_REFLECTION, &PirateFlag[i], 3);
+		iPriority++;
 
-			if (hasPennant) {
-				CreateEntity(&PiratePennant[makeint(ntexture)], "Flag");
-				PiratePennant[makeint(ntexture)].texture = "flags\pirpnt" + (ntexture + 1) + ".tga"
-				LayerAddObject(sCurrentSeaExecute, &PiratePennant[makeint(ntexture)], iPriority);
-				LayerAddObject(sCurrentSeaRealize, &PiratePennant[makeint(ntexture)], iPriority);
-				LayerAddObject(SEA_REFLECTION,   &PiratePennant[makeint(ntexture)], 3);
-				iPriority++;
-			}
+		if (hasPennant) {
+			CreateEntity(&PiratePennant[i], "Flag");
+			PiratePennant[i].texture = "flags\pirpnt" + (i + 1) + ".tga";
+			LayerAddObject(sCurrentSeaExecute, &PiratePennant[i], iPriority);
+			LayerAddObject(sCurrentSeaRealize, &PiratePennant[i], iPriority);
+			LayerAddObject(SEA_REFLECTION, &PiratePennant[i], 3);
+			iPriority++;
 		}
 	}
-
-	for (i = 0; i < shipsqty; i++)
+	for (i = 0; i < PERSONALFLAGS_TEXTURES_QUANTITY; i++)
 	{
-		if (locidx < 0) {
-			if (Ships[i] < 0) continue;
-			chr = GetCharacter(Ships[i]);
-		} else {
-			if (iShips[i] < 0) continue;
-			chr = GetCharacter(iShips[i]);
-		}
-		if (sti(chr.nation) != PRIVATEER_NATION && sti(chr.nation) != PERSONAL_NATION) continue; // PB: Other characters might have personal nation too!
-		GetPersonalFlag(chr, &ntexture);
-		if (!IsEntity(&PersonalFlag[makeint(ntexture)])) {
-			CreateEntity(&PersonalFlag[makeint(ntexture)], "Flag");
-			PersonalFlag[makeint(ntexture)].texture = "flags\perflg" + (ntexture + 1) + ".tga"
-			LayerAddObject(sCurrentSeaExecute, &PersonalFlag[makeint(ntexture)], iPriority);
-			LayerAddObject(sCurrentSeaRealize, &PersonalFlag[makeint(ntexture)], iPriority);
-			LayerAddObject(SEA_REFLECTION,   &PersonalFlag[makeint(ntexture)], 3);
-			iPriority++;
+		CreateEntity(&PersonalFlag[i], "Flag");
+		PersonalFlag[i].texture = "flags\perflg" + (i + 1) + ".tga";
+		PersonalFlag[i].textureRows = 2;
+		LayerAddObject(sCurrentSeaExecute, &PersonalFlag[i], iPriority);
+		LayerAddObject(sCurrentSeaRealize, &PersonalFlag[i], iPriority);
+		LayerAddObject(SEA_REFLECTION, &PersonalFlag[i], 3);
+		iPriority++;
 
-			if (hasPennant) {
-				CreateEntity(&PersonalPennant[makeint(ntexture)], "Flag");
-				PersonalPennant[makeint(ntexture)].texture = "flags\perpnt" + (ntexture + 1) + ".tga"
-				LayerAddObject(sCurrentSeaExecute, &PersonalPennant[makeint(ntexture)], iPriority);
-				LayerAddObject(sCurrentSeaRealize, &PersonalPennant[makeint(ntexture)], iPriority);
-				LayerAddObject(SEA_REFLECTION,   &PersonalPennant[makeint(ntexture)], 3);
-				iPriority++;
-			}
+		if (hasPennant) {
+			CreateEntity(&PersonalPennant[i], "Flag");
+			PersonalPennant[i].texture = "flags\perpnt" + (i + 1) + ".tga";
+			LayerAddObject(sCurrentSeaExecute, &PersonalPennant[i], iPriority);
+			LayerAddObject(sCurrentSeaRealize, &PersonalPennant[i], iPriority);
+			LayerAddObject(SEA_REFLECTION, &PersonalPennant[i], 3);
+			iPriority++;
 		}
 	}
 }
@@ -190,64 +175,9 @@ void CreateRiggingEnvironment()
 	LayerAddObject(sCurrentSeaRealize, &Vant, iPriority);
 	iPriority++;
 
-	CreateEntity(&Flag, "Flag");
-	Flag.texture = "flags\shpflg" + (iPeriod + 1) + ".tga"
-	LayerAddObject(sCurrentSeaExecute, &Flag, iPriority);
-	LayerAddObject(sCurrentSeaRealize, &Flag, iPriority);
-	LayerAddObject(SEA_REFLECTION, &Flag, 3);
-	iPriority++;
-
-	if (hasPennant) {
-		CreateEntity(&Pennant, "Flag");
-		Pennant.texture = "flags\shppnt" + (iPeriod + 1) + ".tga"
-		LayerAddObject(sCurrentSeaExecute, &Pennant, iPriority);
-		LayerAddObject(sCurrentSeaRealize, &Pennant, iPriority);
-		LayerAddObject(SEA_REFLECTION, &Pennant, 3);
-		iPriority++;
-	}
-
-	GetPirateFlag(mchr, &ntexture);
-	CreateEntity(&PirateFlag[ntexture], "Flag");
-	PirateFlag[ntexture].texture = "flags\pirflg" + (ntexture + 1) + ".tga"
-	LayerAddObject(sCurrentSeaExecute, &PirateFlag[ntexture], iPriority);
-	LayerAddObject(sCurrentSeaRealize, &PirateFlag[ntexture], iPriority);
-	LayerAddObject(SEA_REFLECTION, &PirateFlag[ntexture], 3);
-	iPriority++;
-
-	if (hasPennant) {
-		CreateEntity(&PiratePennant[ntexture], "Flag");
-		PiratePennant[ntexture].texture = "flags\pirpnt" + (ntexture + 1) + ".tga"
-		LayerAddObject(sCurrentSeaExecute, &PiratePennant[ntexture], iPriority);
-		LayerAddObject(sCurrentSeaRealize, &PiratePennant[ntexture], iPriority);
-		LayerAddObject(SEA_REFLECTION, &PiratePennant[ntexture], 3);
-		iPriority++;
-	}
-
-	GetPersonalFlag(mchr, &ntexture);
-	CreateEntity(&PersonalFlag[ntexture], "Flag");
-	PersonalFlag[ntexture].texture = "flags\perflg" + (ntexture + 1) + ".tga"
-	LayerAddObject(sCurrentSeaExecute, &PersonalFlag[ntexture], iPriority);
-	LayerAddObject(sCurrentSeaRealize, &PersonalFlag[ntexture], iPriority);
-	LayerAddObject(SEA_REFLECTION, &PersonalFlag[ntexture], 3);
-	iPriority++;
-
-	if (hasPennant) {
-		CreateEntity(&PersonalPennant[ntexture], "Flag");
-		PersonalPennant[ntexture].texture = "flags\perpnt" + (ntexture + 1) + ".tga"
-		LayerAddObject(sCurrentSeaExecute, &PersonalPennant[ntexture], iPriority);
-		LayerAddObject(sCurrentSeaRealize, &PersonalPennant[ntexture], iPriority);
-		LayerAddObject(SEA_REFLECTION, &PersonalPennant[ntexture], 3);
-		iPriority++;
-	}
-
-	CreateEntity(&FortFlag, "Flag");
-	FortFlag.texture = "flags\frtflg" + (iPeriod + 1) + ".tga"
-	LayerAddObject(sCurrentSeaExecute, &FortFlag, iPriority);
-	LayerAddObject(sCurrentSeaRealize, &FortFlag, iPriority);
-	LayerAddObject(SEA_REFLECTION, &FortFlag, 3);
-	iPriority++;
-
 	iNumShips = 0;
+
+	CreateFlagEnvironment();
 }
 
 void DeleteRiggingEnvironment()
@@ -1001,7 +931,11 @@ void Ship_Login(int iCharacterIndex)
 	Event(SHIP_UPDATE_PARAMETERS, "lf", iCharacterIndex, stf(rCharacter.Ship.Speed.z));		// Parameters
 	//trace("started update params");
 	ShipModelrList[iNumShips] = GetCurrentModelrNumber();
+
+	ref flag = GetCharacterFlagEntity(rCharacter);
 	CreateEntity(rCharacter, "Ship");
+	SendMessage(rCharacter, "li", MSG_SHIP_SET_CUSTOM_FLAG, &flag);
+
 	//trace("created entity");
 	SendMessage(&AISea, "liaa", AI_MESSAGE_ADD_SHIP, rCharacter, rCharacter, &ShipsTypes[iShipType]);
 	//trace("added ship");

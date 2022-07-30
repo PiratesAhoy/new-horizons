@@ -485,12 +485,12 @@ bool LoadLocation(ref loc)
 	ReloadProgressUpdate();
 	//Ships================================================================================
 // KK -->
+	CreateFlagEnvironment();
 	if (!LAi_boarding_process) {
 		LocLoadShips(loc);
 	} else {
 		if (isTown == true && cdistrict == 1) LocLoadShips(loc);
 	}
-	CreateFlagEnvironment();
 	ReloadProgressUpdate();
 // <-- KK
 	//Animals===========================================================================
@@ -842,10 +842,7 @@ bool LocLoadModel(aref loc, string sat, string addition)
 	if(res == 0) return 0;
 	//Устанавливаем флаги
 	object mdl;
-	if(SendMessage(loc, "le", MSG_LOCATION_GET_MODEL, &mdl) != 0)
-	{
-		SetTownFlag(loc, &mdl); // KK
-	}
+	SendMessage(loc, "le", MSG_LOCATION_GET_MODEL, &mdl);
 	// Проверяем на пену
 	attr = sat + ".foam";
 	if(CheckAttribute(loc, attr) != 0)
@@ -1194,6 +1191,8 @@ void LocLoadShips(ref Location)
 		rCharacter.Flags.DoRefresh = true; // KK
 		//If(CheckAttribute(GetMainCharacter(),"avoidflagsRe")){DeleteAttribute(GetMainCharacter(),"avoidflagsRe");}
  		// Screwface : end
+ 		ref flag = GetCharacterFlagEntity(rCharacter);
+ 		SendMessage(&locShips[n], "li", MSG_SHIP_SET_CUSTOM_FLAG, &flag);
 		SendMessage(&locShips[n],"laa",MSG_SHIP_CREATE,&rCharacter,&rShip);
 	}
 

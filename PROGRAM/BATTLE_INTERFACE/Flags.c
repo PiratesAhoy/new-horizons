@@ -10,92 +10,53 @@ int CurrentFlag = 0;
 int ShipFlagsQuantity = -1;
 bool bShipWithoutPennants = false;
 
+
+int gRiggingRetVal[2];
 #event_handler("GetRiggingData", "procGetRiggingData");
 ref procGetRiggingData()
 {
-	int n;
-	int retVal = 0;
-	int locidx = FindLoadedLocation();
-	bool PirateOverride = false;															// PB: For Pirate Flags on Forts and Ashore
-	ref chr;
-	ref PChar = GetMainCharacter();
+	gRiggingRetVal[0] = 0;
+	gRiggingRetVal[1] = 0;
+	int n = 0;
+	bool pirateOverride = false; // PB: For Pirate Flags on Forts and Ashore
 
 	string datName = GetEventData();
-	if (datName == "GetFlagTexNum") {
-		bool isTriangle = GetEventData() > 0;
-		n = GetEventData();
-		bool isSpecialFlag = GetEventData() > 0;
-		if (n == SHIP_FLAG || n == SHIP_PENNANT) {
-			bool isPennant = n == SHIP_PENNANT && isSpecialFlag;
-			bool isFlag = n == SHIP_FLAG && !isSpecialFlag;
-			bool isValid = isPennant || isFlag;
-			if (!isValid) {
-				retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX;
-				return &retVal;
-			}
-			if (locidx < 0)
-				chr = GetCharacter(Ships[CurrentShip]);
-			else
-				chr = GetCharacter(iShips[CurrentShip]);
-			if (ShipFlagsQuantity == -1) {
-				ShipFlagsQuantity = GetShipFlagsQuantity(chr);
-				bShipWithoutPennants = ShipWithoutPennants(chr);
-				if (!bShipWithoutPennants) ShipFlagsQuantity *= 2;
-				CurrentFlag = 0;
-			}
-			int pos = CurrentFlag;
-			if (isPennant) {
-				pos -= (ShipFlagsQuantity / 2);
-			}
-			string FlagType = GetShipFlagType(chr, pos);
-			if (bShipWithoutPennants) {
-				if (isPennant) FlagType = FLAG_ENSIGN;
-				if (FlagType == FLAG_PENNANT) {
-					n = SHIP_FLAG;
-					FlagType = FLAG_ENSIGN;
-				}
-			}
-			CurrentFlag++;
-			if (FlagType == FLAG_NONE) {
-				retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX;
-				return &retVal;
-			}
-			if (FlagType == FLAG_ENSIGN && isPennant) {
-				retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX;
-				return &retVal;
-			}
-			if (FlagType == FLAG_PENNANT && isFlag && bShipWithoutPennants == false) {
-				retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX;
-				return &retVal;
-			}
-		} else {
-			chr = GetCharacter(n);
-			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on")
-			{ PirateOverride = false; }	 //JRH
-			else PirateOverride = true;															// PB: For Pirate Flags on Forts and Ashore
-		}
-		if (CheckAttribute(chr,"nation")) {
-		    n = sti(chr.nation);
-		}
-		switch (n)
-		{
-			case HOLLAND:          retVal = 0;                                break;
-			case ENGLAND:          retVal = 1;                                break;
-			case FRANCE:           retVal = 2;                                break;
-			case PORTUGAL:         retVal = 3;                                break;
-			case SPAIN:            retVal = 4;                                break;
-			case PIRATE:
-				if(PirateOverride) retVal = 6;												// PB: For Pirate Flags on Forts and Ashore
-				else	       retVal = GetPirateFlag(chr, &n);           break;
-			case GUEST1_NATION:    retVal = 5;                                break;
-			case GUEST2_NATION:    retVal = 7;                                break;		//JRH 7, was 6
-			case PRIVATEER_NATION: retVal = GetPersonalFlag(chr, &n);         break;
-			case UNKNOWN_NATION:   retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break;		//added by KAM		// changed after build 11 by KAM
-			case NEUTRAL_NATION:   retVal = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break;		//added by KAM
-			case PERSONAL_NATION:  retVal = GetPersonalFlag(chr, &n);         break;
-		}
+	bool isTriangle = GetEventData() > 0;
+	int nation = GetEventData();
+	bool isSpecialFlag = GetEventData() > 0;
+	aref rCharacter = GetMainCharacter();
+
+	if (isSpecialFlag) {
+		gRiggingRetVal[1] = 1;
 	}
-	return &retVal;
+
+	if (datName == "GetShipFlagTexNum") {
+		rCharacter = GetEventData();
+	}
+
+	if (datName == "GetTownFlagTexNum") {
+		pirateOverride = true;
+	}
+
+	switch (nation)
+	{
+		case HOLLAND:          gRiggingRetVal[0] = 0;                                break;
+		case ENGLAND:          gRiggingRetVal[0] = 1;                                break;
+		case FRANCE:           gRiggingRetVal[0] = 2;                                break;
+		case PORTUGAL:         gRiggingRetVal[0] = 3;                                break;
+		case SPAIN:            gRiggingRetVal[0] = 4;                                break;
+		case PIRATE:
+		    if(pirateOverride) gRiggingRetVal[0] = 6; // PB: For Pirate Flags on Forts and Ashore
+		    else               gRiggingRetVal[0] = GetPirateFlag(rCharacter, &n);    break;
+		case GUEST1_NATION:    gRiggingRetVal[0] = 5;                                break;
+		case GUEST2_NATION:    gRiggingRetVal[0] = 7;                                break; //JRH 7, was 6
+		case PRIVATEER_NATION: gRiggingRetVal[0] = GetPersonalFlag(rCharacter, &n);  break;
+		case UNKNOWN_NATION:   gRiggingRetVal[0] = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break; //added by KAM		// changed after build 11 by KAM
+		case NEUTRAL_NATION:   gRiggingRetVal[0] = FLAGS_NULL_PICTURE_TEXTURE_INDEX; break; //added by KAM
+		case PERSONAL_NATION:  gRiggingRetVal[0] = GetPersonalFlag(rCharacter, &n);  break;
+	}
+
+	return &gRiggingRetVal;
 }
 
 int GetShipFlagsQuantity(ref chr)
@@ -212,138 +173,6 @@ void SetFortFlag(ref rModel)
 	}
 }
 
-void SetShipFlag(int chridx)
-{
-	if (chridx < 0) return;
-	ref chr = GetCharacter(chridx);
-	ref Pchar = GetMaincharacter();
-	if (GetShipFlagsQuantity(chr) == 0 || CharacterIsDead(chr) == true || CheckAttribute(chr, "curshipnum") == false) return;
-	int i = 0;
-	int shippos = sti(chr.curshipnum);
-	int ship_quantity = 0;
-	if (FindLoadedLocation() >= 0)
-		ship_quantity = locNumShips;
-	else
-		ship_quantity = iNumShips;
-	int model_no = ShipModelrList[shippos];
-	int next_model_no = -1;
-	if (shippos < ship_quantity) {
-		next_model_no = ShipModelrList[shippos + 1];
-		if (next_model_no == -1) next_model_no = GetCurrentModelrNumber();
-	}
-	aref arModel;
-	CurrentShip = shippos;
-	ShipFlagsQuantity = -1;
-	int iNation = sti(chr.nation);
-	int j;
-	if (FindEntity(&arModel, "modelr")) {
-		i++;
-		while (FindEntityNext(&arModel))
-		{
-			if (i >= model_no && i < next_model_no) {
-				SendMessage(&Flag, "li", MSG_FLAG_DEL_GROUP, &arModel);
-				if (IsEntity(&Pennant)) SendMessage(&Pennant, "li", MSG_FLAG_DEL_GROUP, &arModel);
-				SendMessage(&MerchantFlag, "li", MSG_FLAG_DEL_GROUP, &arModel);
-				if (IsEntity(&MerchantPennant)) SendMessage(&MerchantPennant, "li", MSG_FLAG_DEL_GROUP, &arModel);
-				for (j = 0; j < PIRATEFLAGS_TEXTURES_QUANTITY; j++)
-				{
-					if (IsEntity(&PirateFlag[j])) SendMessage(&PirateFlag[j], "li", MSG_FLAG_DEL_GROUP, &arModel);
-					if (IsEntity(&PiratePennant[j])) SendMessage(&PiratePennant[j], "li", MSG_FLAG_DEL_GROUP, &arModel);
-				}
-				for (j = 0; j < PERSONALFLAGS_TEXTURES_QUANTITY; j++)
-				{
-					if (IsEntity(&PersonalFlag[j])) SendMessage(&PersonalFlag[j], "li", MSG_FLAG_DEL_GROUP, &arModel);
-					if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "li", MSG_FLAG_DEL_GROUP, &arModel);
-				}
-				SendMessage(&FortFlag, "li", MSG_FLAG_DEL_GROUP, &arModel);
-				j = PERSONALFLAGS_TEXTURES_QUANTITY - 1;
-				switch (iNation) {
-					case PIRATE:
-						GetPirateFlag(chr, &j);
-						SendMessage(&PirateFlag[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-						if (IsEntity(&PiratePennant[j])) SendMessage(&PiratePennant[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
-					break;
-					case PRIVATEER_NATION:
-						GetPersonalFlag(chr, &j);
-						SendMessage(&PersonalFlag[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-						if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
-					break;
-					case PERSONAL_NATION:
-						GetPersonalFlag(chr, &j);
-						SendMessage(&PersonalFlag[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-						if (IsEntity(&PersonalPennant[j])) SendMessage(&PersonalPennant[j], "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
-					break;
-					case NEUTRAL_NATION:
-						SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-					break;
-					// default:
-						if (IsEntity(&MerchantFlag) && IsShipMerchant(chr)) {
-							SendMessage(&MerchantFlag, "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-							if (IsEntity(&MerchantPennant)) SendMessage(&MerchantPennant, "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
-						} else {
-							SendMessage(&Flag, "lil", MSG_FLAG_INIT, &arModel, SHIP_FLAG);
-							if (IsEntity(&Pennant)) SendMessage(&Pennant, "lil", MSG_FLAG_INIT, &arModel, SHIP_PENNANT);
-						}
-				}
-			}
-			if (next_model_no > -1 && i >= next_model_no) return;
-			i++;
-		}
-	}
-}
-
-void SetTownFlag(ref loc, object mdl)
-{
-	int i, idx, iNation;
-	string town;
-	ref chr;
-	ref Pchar = GetMaincharacter();
-	if (!CheckAttribute(loc, "townsack")) return;
-	SendMessage(&Flag, "li", MSG_FLAG_DEL_GROUP, &mdl);
-	SendMessage(&MerchantFlag, "li", MSG_FLAG_DEL_GROUP, &mdl);
-	for (i = 0; i < PIRATEFLAGS_TEXTURES_QUANTITY; i++)
-	{
-		if (IsEntity(&PirateFlag[i])) SendMessage(&PirateFlag[i], "li", MSG_FLAG_DEL_GROUP, &mdl);
-		if (IsEntity(&PiratePennant[i])) SendMessage(&PiratePennant[i], "li", MSG_FLAG_DEL_GROUP, &mdl);
-	}
-	for (i = 0; i < PERSONALFLAGS_TEXTURES_QUANTITY; i++)
-	{
-		if (IsEntity(&PersonalFlag[i])) SendMessage(&PersonalFlag[i], "li", MSG_FLAG_DEL_GROUP, &mdl);
-		if (IsEntity(&PersonalPennant[i])) SendMessage(&PersonalPennant[i], "li", MSG_FLAG_DEL_GROUP, &mdl);
-	}
-	SendMessage(&FortFlag, "li", MSG_FLAG_DEL_GROUP, &mdl);
-	town = loc.townsack;
-	iNation = GetTownNation(town);
-	idx = GetTownGovernorIndex(town);
-	if (idx < 0) idx = GetTownFortCommanderIndex(town, 0);
-	if (idx < 0) idx = GetMainCharacterIndex();
-	chr = GetCharacter(idx); // PB
-	switch (iNation) {
-		
-		//ok for red, ok for standard
-		case PIRATE:
-			//JRH:
-			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on") 
-			{
-				GetPirateFlag(chr, &i);
-				SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
-			}
-			else SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &mdl, idx);
-		break;
-		
-/*		case PRIVATEER_NATION:
-			GetPersonalFlag(chr, &i);
-			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
-		break;*/
-		case PERSONAL_NATION:
-			GetPersonalFlag(chr, &i);
-			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &mdl, idx);
-		break;
-		// default:
-			SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &mdl, idx);
-	}
-}
-
 void RefreshFlags()
 {
 	if (FindLoadedLocation() >= 0 && locNumShips > 0) {
@@ -432,4 +261,34 @@ int GetPersonalFlag(ref chr, int ntex)
 		ntex = sti(cmdr.Flags.Personal.texture);
 		return sti(cmdr.Flags.Personal);
 	}*/
+}
+
+ref GetCharacterFlagEntity(ref character) {
+	int nation = sti(character.nation);
+	int index = 0;
+
+	bool found = false;
+	ref result;
+
+	switch(nation) {
+		case PIRATE:
+			GetPirateFlag(character, &index);
+			result = &PirateFlag[index];
+			found = true;
+		break;
+		case PERSONAL_NATION:
+			GetPersonalFlag(character, &index);
+			result = &PersonalFlag[index];
+			found = true;
+		break;
+		if (IsShipMerchant(character) ) {
+			result = &MerchantFlag;
+			found = true;
+		}
+	}
+
+	if (found && IsEntity(result) ) {
+		return result;
+	}
+	return &Flag;
 }

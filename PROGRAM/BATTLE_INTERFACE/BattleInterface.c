@@ -520,7 +520,7 @@ void BI_SetFlags()
 	{
 		if (Ships[init] >= 0 && CheckAttribute(&Characters[Ships[init]], "Flags.DoRefresh") == true) {
 			DeleteAttribute(&Characters[Ships[init]], "Flags.DoRefresh");
-			SetShipFlag(Ships[init]);
+			// SetShipFlag(Ships[init]);
 			init++;
 			BattleInterface.DoSetFlags = init;
 			FlagsDelay();
