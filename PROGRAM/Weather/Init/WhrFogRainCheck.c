@@ -100,11 +100,13 @@ void Whr_FogRainCheck(){
 //		Weathers.Fog.Density = (fog*0.00025);
 		Weathers.Fog.Density = (fog*0.0005);				// denser fog on land - 26Feb09
 		Weathers.Fog.SeaDensity = (fog*0.00025);
+		Weathers.Fog.IslandDensity = (Weathers.Fog.SeaDensity*0.75);
 		Weathers.SpecialSeaFog.Enable = true;
 		Weathers.SpecialSeaFog.Height = fog*400.0;			// LDH - 25Feb09
 		Weathers.SpecialSeaFog.Start = 0.0;
 		Weathers.SpecialSeaFog.Density = (fog*0.00025);
 		Weathers.SpecialSeaFog.SeaDensity = (fog*0.00025);
+		Weathers.SpecialSeaFog.IslandDensity = (Weathers.SpecialSeaFog.SeaDensity*0.75);
 	}
 	else{
 		Weathers.Fog.Enable = true;
@@ -112,12 +114,14 @@ void Whr_FogRainCheck(){
 		Weathers.Fog.Start = 0.0;
 		Weathers.Fog.Density = 0.001;
 		Weathers.Fog.SeaDensity = 0.001;
+		Weathers.Fog.IslandDensity = (Weathers.Fog.SeaDensity*0.75);
 
 		Weathers.SpecialSeaFog.Enable = true;
 		Weathers.SpecialSeaFog.Height = 1500.0;
 		Weathers.SpecialSeaFog.Start = 0.0;
 		Weathers.SpecialSeaFog.Density = 0.001;
 		Weathers.SpecialSeaFog.SeaDensity = 0.001;
+		Weathers.SpecialSeaFog.IslandDensity = (Weathers.SpecialSeaFog.SeaDensity*0.75);
 	}
 
 	fog = tempFog;		// LDH 26Feb09

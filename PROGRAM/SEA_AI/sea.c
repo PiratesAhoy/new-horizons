@@ -610,6 +610,7 @@ void SeaLogin(ref Login)
 		trace("SEA: sealogin loading island " + sIslandID);
 		CreateEntity(&Island, "Island");
 		Island.LightingPath = GetLightingPath();
+		Island.FogDensity = Weathers.Fog.IslandDensity;
 
 		if (GetTargetPlatform() != "xbox")
 		{
@@ -619,7 +620,7 @@ void SeaLogin(ref Login)
 		}
 
 		SendMessage(&Island, "lsss", MSG_ISLAND_LOAD_GEO, "islands", Islands[iIslandIndex].filespath.models, Islands[iIslandIndex].model);
-		LayerAddObject(SEA_REALIZE, &Island, 65529);
+		LayerAddObject(SEA_REALIZE, &Island, 4);
 		LayerAddObject(MAST_ISLAND_TRACE, &Island, 1);
 		LayerAddObject(SUN_TRACE, &Island, 1);
 
