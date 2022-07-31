@@ -18,6 +18,10 @@ void InitCannons()
 		rCannon.Dispersion.X = 1.0;
 		rCannon.Dispersion.Y = 1.0;
 		rCannon.Dispersion.V = 1.0;
+
+		rCannon.HeightMultiply = 1.0;
+		rCannon.SizeMultiply = 1.0;
+		rCannon.TimeSpeedMultiply = 1.0;
 	}
 	n = 0;
 	// NK switch fireangMin/Max to scalars, not the actual arcsize. For use so ships can have varying arcs (esp. forts!)

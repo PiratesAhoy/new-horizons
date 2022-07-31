@@ -81,7 +81,7 @@ void CreateBallsEnvironment()
 
 //int ballNumber;
 
-void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0, float fDirAng, float fHeightAng, float fCannonDirAng)
+void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0, float fDirAng, float fHeightAng, float fCannonDirAng, float fMaxFireDistance)
 {
 	bool BowChaserGreekFire = false; // PB: Queen Anne's Revenge's Bow Chasers
 	float fTempDispersionY, fTempDispersionX, fAccuracy;
@@ -137,7 +137,7 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 						arcan.firingextra = true;
 						for (int c = 0; c < max-cur; c++)
 						{
-							Ball_AddBall(&aCharacter, fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng);
+							Ball_AddBall(&aCharacter, fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng, fMaxFireDistance);
 						}
 						DeleteAttribute(arcan,"firingextra");
 					}
@@ -214,6 +214,27 @@ void Ball_AddBall(aref aCharacter, float fX, float fY, float fZ, float fSpeedV0,
 
 		// KNB To make carronades less accurate
 		ref rCannon = GetCannonByType(sti(aCharacter.Ship.Cannons.Type));
+
+		if (CheckAttribute(rCannon, "HeightMultiply") ) {
+			AIBalls.HeightMultiply = rCannon.HeightMultiply;
+		}
+		else {
+			AIBalls.HeightMultiply = 1.0;
+		}
+		if (CheckAttribute(rCannon, "SizeMultiply") ) {
+			AIBalls.SizeMultiply = rCannon.SizeMultiply;
+		}
+		else {
+			AIBalls.SizeMultiply = 1.0;
+		}
+		if (CheckAttribute(rCannon, "TimeSpeedMultiply") ) {
+			AIBalls.TimeSpeedMultiply = rCannon.TimeSpeedMultiply;
+		}
+		else {
+			AIBalls.TimeSpeedMultiply = 1.0;
+		}
+		AIBalls.MaxFireDistance = fMaxFireDistance;
+
 		// NK read from cannon table
 		fTempDispersionX *= stf(rCannon.dispersion.X);
 		fTempDispersionY *= stf(rCannon.dispersion.Y);

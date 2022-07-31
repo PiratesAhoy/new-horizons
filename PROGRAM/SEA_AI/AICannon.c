@@ -432,7 +432,7 @@ float Cannon_GetFireTime()
 
 void Cannon_FireCannon()
 {
-	float fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng;
+	float fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng, fMaxFireDistance;
 
 	aref aCharacter = GetEventData();
 	fX = GetEventData();
@@ -442,8 +442,9 @@ void Cannon_FireCannon()
 	fDirAng = GetEventData();
 	fHeightAng = GetEventData();
 	fCannonDirAng = GetEventData();
+	fMaxFireDistance = GetEventData();
 
-	Ball_AddBall(aCharacter, fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng);
+	Ball_AddBall(aCharacter, fX, fY, fZ, fSpeedV0, fDirAng, fHeightAng, fCannonDirAng, fMaxFireDistance);
 	DeleteAttribute(aCharacter,"ship.changedammo"); // NK 04-09-15
 	aCharacter.seatime.lastfired = GetSeaTime(); // NK 04-09-16, to set time when last fired/reloaded
 }
