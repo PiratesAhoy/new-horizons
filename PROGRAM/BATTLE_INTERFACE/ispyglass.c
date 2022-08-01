@@ -556,14 +556,33 @@ void SetSpyGlassData()
 	}
 
 	int shipMaxCannons = shipCannons;
-	int nFace = sti(chref.faceID);
-	string sFaceTexture = "interfaces/portraits/64/face_" + nFace + ".tga"
+	string sFaceTexture = "";
+	if (CheckAttribute(chref, "faceID") ) {
+		int nFace = sti(chref.faceID);
+		sFaceTexture = "interfaces/portraits/64/face_" + nFace + ".tga"
+	}
 	int nFencingSkill = GetCharacterSkill(chref, SKILL_DEFENCE);
 	int nCannonSkill = GetCharacterSkill(chref, SKILL_CANNONS);
 	int nAccuracySkill = GetCharacterSkill(chref, SKILL_ACCURACY);
 	int nNavigationSkill = GetCharacterSkill(chref, SKILL_SAILING);
 	int nBoardingSkill = GetCharacterSkill(chref, SKILL_GRAPPLING);
 	string sCaptainName = chref.name + " " + chref.lastname;
+
+	// Set ship icon
+	float uvLeft = 0;
+	float uvTop = 0;
+	float uvRight = 0.125;
+	float uvBottom = 0.125;
+
+	string sTextureName = "battle_interface/ships_all.tga";
+	int iShipType = GetCharacterShipType(chref);
+	if (iShipType != SHIP_FORT) {
+		ref rShipType = &ShipsTypes[iShipType];
+		int textureIndex = sti(rShipType.BI.Tex);
+		int picture = sti(rShipType.BI.Pic);
+		getUvForShipIcon(picture, textureIndex, &uvLeft, &uvTop, &uvRight, &uvBottom);
+	}
+	SendMessage(&objISpyGlass, "lsffff" ,MSG_ISG_SET_SHIPICON, sTextureName, uvLeft, uvTop, uvRight, uvBottom);
 
 	if(iRealismMode>1 || ONSEA_DATA_DISABLED) {  //Screwface : No infos in realistic mod // KK ship type and nation become quite obvious from some distances
 		if (Ship_GetGroupID(chref) != PLAYER_GROUP) shipName = chref.Ship.Name;
@@ -593,6 +612,7 @@ void SetSpyGlassData()
 		SendMessage(&objISpyGlass,"lsslllfflllllllllllssl",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipDistance, shipCannons, shipMaxCannons, shipCharge, shipNation, nSailState, -1, nFencingSkill, nCannonSkill, nAccuracySkill, nNavigationSkill, nBoardingSkill, sCaptainName, sFaceTexture, shipClass);
 		SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE,true);
 	}
+
 	/*rISpyglass.shipName = shipName;
 	rISpyglass.shipType = shipType;
 	rISpyglass.shipHull = shipHull;
@@ -655,7 +675,7 @@ void FillISpyGlassParameters()
 	int nbottom = ntop + 128;//ntop + RecalculateVIconScaled(128);
 
 	//==========================================================
-	objISpyGlass.shipsign.ship.texture = "battle_interface\\ship_icons2.tga";//
+	objISpyGlass.shipsign.ship.texture = "battle_interface/ships_all.tga";//
 	objISpyGlass.shipsign.ship.pos = 28+","+(ntop+20)+","+92+","+(ntop+84);//RecalculateHIconScaled(28)+","+(ntop+RecalculateVIconScaled(20)) + "," + RecalculateHIconScaled(92)+","+(ntop+RecalculateVIconScaled(84));
 	objISpyGlass.shipsign.ship.uv = "0,0,0.0625,0.0625";//"0,0,0.125,0.25";
 	objISpyGlass.shipsign.back.texture = "battle_interface\\shipbackicon.tga";

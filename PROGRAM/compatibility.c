@@ -66,3 +66,19 @@ int getMappedShipIcon(int picture, int textureIndex) {
 	}
 	return picture;
 }
+
+/**
+ * Map ship icon index to uv offsets
+ */
+void getUvForShipIcon(int picture, int textureIndex, ref rLeft, ref rTop, ref rRight, ref rBottom) {
+	picture = getMappedShipIcon(picture, textureIndex);
+	float row = picture / 16;
+	float column = picture % 16;
+
+	rLeft = column / 16.0;
+	rRight = (column + 1.0) / 16;
+	rTop = row / 16.0;
+	rBottom = (row + 1.0) / 16.0;
+}
+
+
