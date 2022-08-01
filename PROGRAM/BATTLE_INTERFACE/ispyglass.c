@@ -558,11 +558,11 @@ void SetSpyGlassData()
 	int shipMaxCannons = shipCannons;
 	int nFace = sti(chref.faceID);
 	string sFaceTexture = "interfaces/portraits/64/face_" + nFace + ".tga"
-	int nFencingSkill = GetCharacterSkill(chref,SKILL_DEFENCE);
-	int nCannonSkill = GetCharacterSkill(chref,SKILL_GRAPPLING);
-	int nAccuracySkill = GetCharacterSkill(chref,SKILL_CANNONS);
-	int nNavigationSkill = GetCharacterSkill(chref,SKILL_ACCURACY);
-	int nBoardingSkill = GetCharacterSkill(chref,SKILL_SAILING);
+	int nFencingSkill = GetCharacterSkill(chref, SKILL_DEFENCE);
+	int nCannonSkill = GetCharacterSkill(chref, SKILL_CANNONS);
+	int nAccuracySkill = GetCharacterSkill(chref, SKILL_ACCURACY);
+	int nNavigationSkill = GetCharacterSkill(chref, SKILL_SAILING);
+	int nBoardingSkill = GetCharacterSkill(chref, SKILL_GRAPPLING);
 	string sCaptainName = chref.name + " " + chref.lastname;
 
 	if(iRealismMode>1 || ONSEA_DATA_DISABLED) {  //Screwface : No infos in realistic mod // KK ship type and nation become quite obvious from some distances
@@ -695,25 +695,25 @@ void FillISpyGlassParameters()
 	objISpyGlass.captain.back.texture = "battle_interface\\shipbackicon.tga";
 	objISpyGlass.captain.back.pos = (sti(showWindow.right)-110)+","+(ntop-2)+","+(sti(showWindow.right)+14)+","+(nbottom-2);
 //	objISpyGlass.captain.back.pos = (sti(showWindow.right)-112)+","+ntop+","+(sti(showWindow.right)+16)+","+nbottom;//RecalculateHIconScaled(906)+","+ntop + "," + RecalculateHIconScaled(1034)+","+nbottom;
-	objISpyGlass.captain.face.texture = "interfaces/portraits/face_0.tga";
+	objISpyGlass.captain.face.texture = "interfaces/portraits/64/face_0.tga";
 	objISpyGlass.captain.face.pos = (sti(showWindow.right)-94)+","+(ntop+18)+","+(sti(showWindow.right)-30)+","+(ntop+82);//RecalculateHIconScaled(924)+","+(ntop+RecalculateVIconScaled(20)) + "," + RecalculateHIconScaled(988)+","+(ntop+RecalculateVIconScaled(84));
 	//
 
-	objISpyGlass.captain.fencing.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.fencing.texture = "interfaces/icons.tga";
 	objISpyGlass.captain.fencing.pos = (nHCenter+RecalculateHIconScaled(324))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(324)+48)+","+(ntop+90);//RecalculateHIconScaled(830)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(878)+","+(ntop+RecalculateVIconScaled(90));
-	objISpyGlass.captain.fencing.uv = "0.875,0.125,1.0,0.25";   // защита
-	objISpyGlass.captain.cannon.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.fencing.uv = "0.437, 0.75, 0.5, 0.875";
+	objISpyGlass.captain.cannon.texture = "interfaces/icons.tga";
 	objISpyGlass.captain.cannon.pos = (nHCenter+RecalculateHIconScaled(252))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(252)+48)+","+(ntop+90);//RecalculateHIconScaled(758)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(806)+","+(ntop+RecalculateVIconScaled(90));
-	objISpyGlass.captain.cannon.uv = "0.75,0.125,0.875,0.25";  // абордаж
-	objISpyGlass.captain.accuracy.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.cannon.uv = "0.25, 0.75, 0.3125, 0.875";
+	objISpyGlass.captain.accuracy.texture = "interfaces/icons.tga";
 	objISpyGlass.captain.accuracy.pos = (nHCenter+RecalculateHIconScaled(180))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(180)+48)+","+(ntop+90);//RecalculateHIconScaled(686)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(734)+","+(ntop+RecalculateVIconScaled(90));
-	objISpyGlass.captain.accuracy.uv = "0.375,0.125,0.5,0.25";  // орудия
-	objISpyGlass.captain.navigation.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.accuracy.uv = "0.1875, 0.75, 0.25, 0.875";
+	objISpyGlass.captain.navigation.texture = "interfaces/icons.tga";
 	objISpyGlass.captain.navigation.pos = (nHCenter+RecalculateHIconScaled(108))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(108)+48)+","+(ntop+90);//RecalculateHIconScaled(614)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(662)+","+(ntop+RecalculateVIconScaled(90));
-	objISpyGlass.captain.navigation.uv = "0.25,0.125,0.375,0.25"; // меткость
-	objISpyGlass.captain.boarding.texture = "interfaces\\icons_spec.tga";
+	objISpyGlass.captain.navigation.uv = "0.125, 0.75, 0.1875, 0.875";
+	objISpyGlass.captain.boarding.texture = "interfaces/icons.tga";
 	objISpyGlass.captain.boarding.pos = (nHCenter+RecalculateHIconScaled(36))+","+(ntop+42)+","+(nHCenter+RecalculateHIconScaled(36)+48)+","+(ntop+90);//RecalculateHIconScaled(542)+","+(ntop+RecalculateVIconScaled(42)) + "," + RecalculateHIconScaled(590)+","+(ntop+RecalculateVIconScaled(90));
-	objISpyGlass.captain.boarding.uv = "0.5,0.125,0.625,0.25";  // навигация
+	objISpyGlass.captain.boarding.uv = "0.3125, 0.75, 0.375, 0.875";
 
 
 	//==========================================================
