@@ -1771,14 +1771,7 @@ string GetQuestBookTitle(string qname)
 	if (!res) return "";
 	if (qt.loaded != qnamefile) res = LoadQuestBookData(qnamefile);
 	if (!res) return "";
-	string t = qt.title;
-	int length = strlen(t);
-	int j = 0;
-	string text = "";
-	while (j < length - 1) {
-		text += strcut(t, j, j);
-		j++;
-	}
+	string text = qt.title;
 	return PreprocessText(text);
 }
 
@@ -1820,25 +1813,10 @@ string GetQuestBookText(string qname, int n)
 	int j = 0;
 	string t = "";
 	if (num == 0) {
-		text = qt.text.(tn);
-		length = strlen(text);
-		while (j < length - 1) {
-			t += strcut(text, j, j);
-			j++;
-		}
-		text = PreprocessText(t);
+		text = PreprocessText(qt.text.(tn));
 	} else {
 		for (i = 0; i < num; i++) {
-			tn = GetAttributeName(GetAttributeN(artn, i));
-			string txt = "";
-			length = strlen(artn.(tn));
-			j = 0;
-			t = "";
-			while (j < length - 1) {
-				t += strcut(artn.(tn), j, j);
-				j++;
-			}
-			text += PreprocessText(t);
+			text += PreprocessText(artn.(tn));
 		}
 	}
 	Preprocessor_Clear(false);
@@ -1871,25 +1849,11 @@ string GetQuestRecordText(string qname, int n)
 	int j = 0;
 	string t = "";
 	if (num == 0) {
-		text = qt.text.(tn);
-		length = strlen(text);
-		while (j < length - 1) {
-			t += strcut(text, j, j);
-			j++;
-		}
-		text = PreprocessText(t);
+		text = PreprocessText(qt.text.(tn));
 	} else {
 		for (int i = 0; i < num; i++) {
 			tn = GetAttributeName(GetAttributeN(artn, i));
-			string txt = "";
-			length = strlen(artn.(tn));
-			j = 0;
-			t = "";
-			while (j < length - 1) {
-				t += strcut(artn.(tn), j, j);
-				j++;
-			}
-			text += PreprocessText(t);
+			text += PreprocessText(artn.(tn));
 		}
 	}
 	return text;
