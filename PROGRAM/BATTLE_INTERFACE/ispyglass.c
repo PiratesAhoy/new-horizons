@@ -640,6 +640,10 @@ int TranslateNationCode(int nationCode)
 	return -1;	// added by KAM
 }
 
+string calculateNationSpyglassUv(int iNation) {
+	return "" + (MakeFloat(iNation) / 12) + ", 0, " + (MakeFloat(iNation + 1) / 12) + ", 0.65625";
+}
+
 void FillISpyGlassParameters()
 {
 	objISpyGlass.lens.texture = "BATTLE_INTERFACE\Spyglass\spyglass3.tga";
@@ -666,7 +670,7 @@ void FillISpyGlassParameters()
 	objISpyGlass.shipsign.class.pos = 28+","+(ntop+4)+","+92+","+(ntop+20);
 //	objISpyGlass.shipsign.class.pos = 30+","+(ntop+6)+","+94+","+(ntop+22);//RecalculateHIconScaled(30)+","+(ntop+RecalculateVIconScaled(6)) + "," + RecalculateHIconScaled(92)+","+(ntop+RecalculateVIconScaled(22));
 	//
-	objISpyGlass.info.nation.texture = "flagall.tga";
+	objISpyGlass.info.nation.texture = "battle_interface/all_nations" + GetCurrentPeriod() + ".tga"; // PB
 	objISpyGlass.info.nation.pos = 116+","+(ntop+8)+","+180+","+(ntop+40);//RecalculateHIconScaled(116)+","+(ntop+RecalculateVIconScaled(8)) + "," + RecalculateHIconScaled(180)+","+(ntop+RecalculateVIconScaled(40));
 	objISpyGlass.info.nation.uv = "0,0,0.125,1.0";
 	//
@@ -785,12 +789,16 @@ void FillISpyGlassParameters()
   	objISpyGlass.captext.boarding.scale = fBaseScale * 1.2;
 	// <-- Lexanni
 	//===============================================
-	objISpyGlass.nationuvarray.uv0 = "0.125,0,0.25,1.0"; // england
-	objISpyGlass.nationuvarray.uv1 = "0.25,0,0.375,1.0"; // france
-	objISpyGlass.nationuvarray.uv2 = "0.5,0,0.625,1.0"; // spain
-	objISpyGlass.nationuvarray.uv3 = "0,0,0.125,1.0"; // holland
-	objISpyGlass.nationuvarray.uv4 = "0.625,0,0.75,1.0"; // pirate
-	objISpyGlass.nationuvarray.uv5 = "0.75,0,0.875,1.0"; // smuggler
+	objISpyGlass.nationuvarray.uv0 = calculateNationSpyglassUv(ENGLAND);
+	objISpyGlass.nationuvarray.uv1 = calculateNationSpyglassUv(FRANCE);
+	objISpyGlass.nationuvarray.uv2 = calculateNationSpyglassUv(SPAIN);
+	objISpyGlass.nationuvarray.uv3 = calculateNationSpyglassUv(PIRATE);
+	objISpyGlass.nationuvarray.uv4 = calculateNationSpyglassUv(HOLLAND);
+	objISpyGlass.nationuvarray.uv5 = calculateNationSpyglassUv(PORTUGAL);
+	objISpyGlass.nationuvarray.uv6 = calculateNationSpyglassUv(GUEST1_NATION);
+	objISpyGlass.nationuvarray.uv7 = calculateNationSpyglassUv(GUEST2_NATION);
+	objISpyGlass.nationuvarray.uv8 = calculateNationSpyglassUv(PRIVATEER_NATION);
+	objISpyGlass.nationuvarray.uv9 = calculateNationSpyglassUv(NEUTRAL_NATION);
 	//
 	objISpyGlass.chargeuvarray.uv0 = "0.0,0.5,0.125,0.625"; // balls
 	objISpyGlass.chargeuvarray.uv1 = "0.125,0.5,0.25,0.625"; // bomb
