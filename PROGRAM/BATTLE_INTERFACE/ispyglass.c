@@ -557,6 +557,7 @@ void SetSpyGlassData()
 
 	int shipMaxCannons = shipCannons;
 	int nFace = sti(chref.faceID);
+	string sFaceTexture = "interfaces/portraits/64/face_" + nFace + ".tga"
 	int nFencingSkill = GetCharacterSkill(chref,SKILL_DEFENCE);
 	int nCannonSkill = GetCharacterSkill(chref,SKILL_GRAPPLING);
 	int nAccuracySkill = GetCharacterSkill(chref,SKILL_CANNONS);
@@ -589,7 +590,7 @@ void SetSpyGlassData()
 			}
 		}
 	} else {
-		SendMessage(&objISpyGlass,"lsslllfflllllllllllssl",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipDistance, shipCannons, shipMaxCannons, shipCharge, shipNation, nSailState, nFace, nFencingSkill, nCannonSkill, nAccuracySkill, nNavigationSkill, nBoardingSkill, sCaptainName, "", shipClass);
+		SendMessage(&objISpyGlass,"lsslllfflllllllllllssl",MSG_ISG_UPDATE, shipName, shipType, shipHull, shipSail, shipCrew, shipSpeed, shipDistance, shipCannons, shipMaxCannons, shipCharge, shipNation, nSailState, -1, nFencingSkill, nCannonSkill, nAccuracySkill, nNavigationSkill, nBoardingSkill, sCaptainName, sFaceTexture, shipClass);
 		SendMessage(&objISpyGlass,"ll",MSG_ISG_VISIBLE,true);
 	}
 	/*rISpyglass.shipName = shipName;
@@ -694,7 +695,7 @@ void FillISpyGlassParameters()
 	objISpyGlass.captain.back.texture = "battle_interface\\shipbackicon.tga";
 	objISpyGlass.captain.back.pos = (sti(showWindow.right)-110)+","+(ntop-2)+","+(sti(showWindow.right)+14)+","+(nbottom-2);
 //	objISpyGlass.captain.back.pos = (sti(showWindow.right)-112)+","+ntop+","+(sti(showWindow.right)+16)+","+nbottom;//RecalculateHIconScaled(906)+","+ntop + "," + RecalculateHIconScaled(1034)+","+nbottom;
-	objISpyGlass.captain.face.texture = "battle_interface\\portraits\\face_0.tga";
+	objISpyGlass.captain.face.texture = "interfaces/portraits/face_0.tga";
 	objISpyGlass.captain.face.pos = (sti(showWindow.right)-94)+","+(ntop+18)+","+(sti(showWindow.right)-30)+","+(ntop+82);//RecalculateHIconScaled(924)+","+(ntop+RecalculateVIconScaled(20)) + "," + RecalculateHIconScaled(988)+","+(ntop+RecalculateVIconScaled(84));
 	//
 
