@@ -670,7 +670,7 @@ void FillSelectedScroll()
 		}
 	}
 
-	GameInterface.itemslist.ListSize = idx-1;
+	GameInterface.itemslist.ListSize = idx;
 	GameInterface.itemslist.current = 0;
 	nCurScrollNum = -1;
 }
