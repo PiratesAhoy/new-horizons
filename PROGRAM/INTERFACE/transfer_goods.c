@@ -507,8 +507,8 @@ void WasGoodsChange()
 	if(curNum != sti(GameInterface.goodslist.current))
 	{
 		curNum = sti(GameInterface.goodslist.current);
+		ChangeScroll();
 	}
-	    ChangeScroll();
 }
 
 void ProcessCancelExit()
