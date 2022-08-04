@@ -1415,7 +1415,7 @@ void AddShipToInterface(int charIndex)
 	}
 
 	//Screwface : No other ships infos in bars in menu in realistic mod
-	if(iRealismMode>0 && charIndex != GetMainCharacterIndex() && !IsCompanion(chRef)) DeleteAttribute(shipRef,"");
+	if(iRealismMode>1 && charIndex != GetMainCharacterIndex() && !IsCompanion(chRef)) DeleteAttribute(shipRef,"");
 
 	SendMessage(&BattleInterface,"llaall",BI_IN_CREATE_SHIP,charIndex,chRef,shipRef,myShip,shipRelation);
 }
@@ -2496,7 +2496,9 @@ void SetParameterData()
 	BattleInterface.ShipInfoImages.CrewOffset.z = 0.0;
 	BattleInterface.ShipInfoImages.CrewUV = "0.0,0.0,1.0,0.166";
 
-	BattleInterface.ShifInfoVisible = true;
+	if (iRealismMode <= 1) {
+		BattleInterface.ShifInfoVisible = true;
+	}
 
 	LanguageCloseFile(idLngFile);
 // <-- KK
