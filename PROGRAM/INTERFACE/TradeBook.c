@@ -5,7 +5,6 @@ int idxIsland;
 ref refIsland;
 int townsQty, nCurScrolli; // added by MAXIMUS
 int curTown = 1; // added by MAXIMUS
-bool bBeParty; // added by MAXIMUS
 ref pchar = GetMainCharacter();
 
 int islandsortorder[22] = {3,4,5,15,17,19,8,16,1,14,10,9,2,12,6,13,11,0,20,21};				// LDH sort islands 22Feb09
@@ -521,22 +520,16 @@ void ProcessCommandExecute()
 	case "LEFTCHANGE_TOWN":
 		if(comName=="click")
 		{
-			if(bBeParty)
-			{
-				SetNextParty(false);
-				SetVariable();
-			}
+			SetNextParty(false);
+			SetVariable();
 		}
 	break;
 
 	case "RIGHTCHANGE_TOWN":
 		if(comName=="click")
 		{
-			if(bBeParty)
-			{
-				SetNextParty(true);
-				SetVariable();
-			}
+			SetNextParty(true);
+			SetVariable();
 		}
 	break;
 
