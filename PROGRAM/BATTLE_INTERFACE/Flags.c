@@ -155,21 +155,21 @@ void SetFortFlag(ref rModel)
 			if(CheckAttribute(Pchar,"special_flag") && Pchar.special_flag == "on") 
 			{
 				GetPirateFlag(chr, &i);
-				SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
+				SendMessage(&PirateFlag[i], "lil", MSG_FLAG_INIT, &rModel, iNation);
 			}
-			else SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &rModel, idx);
+			else SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &rModel, iNation);
 		break;
 	
 /*		case PRIVATEER_NATION:
 			GetPersonalFlag(chr, &i);
-			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
+			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &rModel, iNation);
 		break;*/
 		case PERSONAL_NATION:
 			GetPersonalFlag(chr, &i);
-			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &rModel, idx);
+			SendMessage(&PersonalFlag[i], "lil", MSG_FLAG_INIT, &rModel, iNation);
 		break;
 		// default:
-			SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &rModel, idx);
+			SendMessage(&FortFlag, "lil", MSG_FLAG_INIT, &rModel, iNation);
 	}
 }
 
