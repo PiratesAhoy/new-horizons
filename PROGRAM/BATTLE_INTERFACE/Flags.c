@@ -273,13 +273,19 @@ ref GetCharacterFlagEntity(ref character) {
 	switch(nation) {
 		case PIRATE:
 			GetPirateFlag(character, &index);
-			result = &PirateFlag[index];
-			found = true;
+			index = sti(index);
+			if (index < PIRATEFLAGS_TEXTURES_QUANTITY) {
+				result = &PirateFlag[sti(index)];
+				found = true;
+			}
 		break;
 		case PERSONAL_NATION:
 			GetPersonalFlag(character, &index);
-			result = &PersonalFlag[index];
-			found = true;
+			index = sti(index);
+			if (index < PERSONALFLAGS_TEXTURES_QUANTITY) {
+				result = &PersonalFlag[sti(index)];
+				found = true;
+			}
 		break;
 		if (IsShipMerchant(character) ) {
 			result = &MerchantFlag;
