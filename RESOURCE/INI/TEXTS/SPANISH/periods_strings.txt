@@ -116,7 +116,7 @@ New Granada{Nueva Granada}
 
 {=====| Towns |=====}
 Palo Brasil{Palo Brasil}
-Sao Luis{SÝo Luis}
+Sao Luis{São Luis}
 Santa Ines{Santa Inés}
 Villa de la Vega{Villa de la Vega}
 Pueblo Carlos{Pueblo Carlos}

@@ -107,20 +107,20 @@ void InitRandomShipsNames()
 
 	// Portugal names
 	n = 0;
-	n = AddStr2Array(&sRndShpPoName, n, "Adamastor,Dom Carlos I,Douro,Santa de ConceiçÝo,Príncipe Real,Conde Dom Henrique,Maria I,Medusa,Princesa de Beira,Príncipe Regente,Reinha do Portugal,SÝo António e SÝo Jose,Vasco da Gama,Alfonso de Albuquerque,Dom JoÝo de Castro");		//some portuguese ship names spell-checked by KAM
-	n = AddStr2Array(&sRndShpPoName, n, "Infante Dom Pedro,Santa de Belem,Santa de Bom Succeso,Martin de Freitas,SÝo SebastiÝo,Fénix,Graça,Amazana,Minerva,Princesa Carlota,Perola,Príncipe de Brazil,TritÝo,Bolfinho,Ulisses,Urânia,Cisne,Plongeur,Espadarte,Golfinho,Hidra");
-	n = AddStr2Array(&sRndShpPoName, n, "Princesa de Brazil,Thetis,Torta,Venus,Josefa,SÝo António e Ásia Feliz,Sao Gabriel,Sao Rafael,Benjamin,Princesa Real,San JoÝo Magnânimo,Condessa de Resonde,SÝo António,Águia,Glória,Neptuno,Polífemo,FalcÝo,Giavota,Lebre");
+	n = AddStr2Array(&sRndShpPoName, n, "Adamastor,Dom Carlos I,Douro,Santa de ConceiçÝo,Príncipe Real,Conde Dom Henrique,Maria I,Medusa,Princesa de Beira,Príncipe Regente,Reinha do Portugal,São António e São Jose,Vasco da Gama,Alfonso de Albuquerque,Dom JoÝo de Castro");		//some portuguese ship names spell-checked by KAM
+	n = AddStr2Array(&sRndShpPoName, n, "Infante Dom Pedro,Santa de Belem,Santa de Bom Succeso,Martin de Freitas,São SebastiÝo,Fénix,Graça,Amazana,Minerva,Princesa Carlota,Perola,Príncipe de Brazil,TritÝo,Bolfinho,Ulisses,Urânia,Cisne,Plongeur,Espadarte,Golfinho,Hidra");
+	n = AddStr2Array(&sRndShpPoName, n, "Princesa de Brazil,Thetis,Torta,Venus,Josefa,São António e Ásia Feliz,Sao Gabriel,Sao Rafael,Benjamin,Princesa Real,San JoÝo Magnânimo,Condessa de Resonde,São António,Águia,Glória,Neptuno,Polífemo,FalcÝo,Giavota,Lebre");
 	n = AddStr2Array(&sRndShpPoName, n, "Sem Nome,Serpente de Mar,Voador,Galgo,Vingança,Amorale,Curiosa,Coroa,Princesa,Príncipe,Isabel,Costanca,Laocadia,Tareia,Tina-Maria,Helénica,Marta-Alexandra,Dores,Aldonca,Josefa,Violante,Luciana,Alvares Cabral,Corte Real");
 	n = AddStr2Array(&sRndShpPoName, n, "Betriz,Etelvina,Rainha Dona Amelia,Maria-Augusta,Sónia,Bella,Fernanda,Guiomar,Meiguinha,Teresa,Vasco Da Gama,D Francisco De Almeida,Almirante Magalhaes Correa,Commandante Joao Belo,Vasco Da Gama,Espardarte,Vulcano");
 	n = AddStr2Array(&sRndShpPoName, n, "Tejo,Tamega,Vouga,Gaudiana,Diogo Cao,Corte Real,Nuno Tristao,Pedro Escobar,Almirante Gago Coutinho,Almirante Pereira Da Silva,Alvares Cabral,Commandante Roberto Ivens,Commandante Sacadura Cabral,Joao Coutinho");
 	n = AddStr2Array(&sRndShpPoName, n, "Jacinto Candido,General Pereira D'Eca,Augusto De Castilho,Honorio Barreto,Antonio Enes,Baptiste De Andrada,Joao Roby,Alfonso Cerqueira,Oliveira E Carmo,Commandante Pedro Campbell");
 	n = AddStr2Array(&sRndShpPoName, n, "O Temível,O Temido,O Minho,O Timor,O Supremo,O Sonho,O Sonhador,O Solitário,O Peremptório,O Perfeito,O Pavor,O Ousado,O Notável,O FuracÝo");
-	n = AddStr2Array(&sRndShpPoName, n, "Santa Virgem,SÝo Bartolomeu,SÝo Miguel,SÝo JoÝo de Arga,Santa Luzia,Santo António,Senhora da Graça,Senhora da Vista,SÝo Silvestre,SÝo Mamede,SÝo Bento,Boa Morte,Santo Amaro,SÝo Brás");
-	n = AddStr2Array(&sRndShpPoName, n, "Senhora do Fastio,Senhora da Aparecida,Senhora do Faro,SÝo JoÝo Baptista,Terra de Cerveira,Santo Aginha,Foz do Coura,Santa Marta,SÝo JoÝo da Ribeira,Santa Maria,O Bom Jesus,Dom Sancho I,Melgaço Velho,O Santuário do Rei");
-	n = AddStr2Array(&sRndShpPoName, n, "O Foz do Lima,Vinha da Rainha,Salvador do Monte,Santa Eulália,Santa Cruz,Santa Comba,Santa Catarina,Santa Clara,Santo Vitória,SÝo Pedro,SÝo Geraldo,Rio Tinto,Rio Maior,Rainha Santa Isabel");
-	n = AddStr2Array(&sRndShpPoName, n, "Andorinha,Monte dos Corvos,Senhora das Neves,Santa Cristina,Pedras Negras,SÝo Bernardino,Porto de Mós,Costa Nova,SÝo Vicente,Ponte de Sagres,Monte da Piedade,Santa Bárbara,SÝo Martinho");
-	n = AddStr2Array(&sRndShpPoName, n, "Cavaleiro Preto,Ilha Terceira,Ilha da Madeira,Vila Azeda,SÝo RomÝo,Monte Real,Boa Viagem,Martingança,ConsolaçÝo,Calvaria de Cima,Pinheiro Grande,Rio de Moinhos,Moita da Roda,Mata Mourisca");
-	n = AddStr2Array(&sRndShpPoName, n, "Foz de Arouce,Alcaria Nova,Ninho do Açor,O Horrendo,Herói do Mar,Penamacor,Terreiro das Bruxas,Vila de Santarém,Alfama,SÝo Roque,Torre de Belém,Madre de Deus,Jardim do Mar,Boca do Inferno");
+	n = AddStr2Array(&sRndShpPoName, n, "Santa Virgem,São Bartolomeu,São Miguel,São JoÝo de Arga,Santa Luzia,Santo António,Senhora da Graça,Senhora da Vista,São Silvestre,São Mamede,São Bento,Boa Morte,Santo Amaro,São Brás");
+	n = AddStr2Array(&sRndShpPoName, n, "Senhora do Fastio,Senhora da Aparecida,Senhora do Faro,São JoÝo Baptista,Terra de Cerveira,Santo Aginha,Foz do Coura,Santa Marta,São JoÝo da Ribeira,Santa Maria,O Bom Jesus,Dom Sancho I,Melgaço Velho,O Santuário do Rei");
+	n = AddStr2Array(&sRndShpPoName, n, "O Foz do Lima,Vinha da Rainha,Salvador do Monte,Santa Eulália,Santa Cruz,Santa Comba,Santa Catarina,Santa Clara,Santo Vitória,São Pedro,São Geraldo,Rio Tinto,Rio Maior,Rainha Santa Isabel");
+	n = AddStr2Array(&sRndShpPoName, n, "Andorinha,Monte dos Corvos,Senhora das Neves,Santa Cristina,Pedras Negras,São Bernardino,Porto de Mós,Costa Nova,São Vicente,Ponte de Sagres,Monte da Piedade,Santa Bárbara,São Martinho");
+	n = AddStr2Array(&sRndShpPoName, n, "Cavaleiro Preto,Ilha Terceira,Ilha da Madeira,Vila Azeda,São RomÝo,Monte Real,Boa Viagem,Martingança,ConsolaçÝo,Calvaria de Cima,Pinheiro Grande,Rio de Moinhos,Moita da Roda,Mata Mourisca");
+	n = AddStr2Array(&sRndShpPoName, n, "Foz de Arouce,Alcaria Nova,Ninho do Açor,O Horrendo,Herói do Mar,Penamacor,Terreiro das Bruxas,Vila de Santarém,Alfama,São Roque,Torre de Belém,Madre de Deus,Jardim do Mar,Boca do Inferno");
 
 	// American names
 	n = 0;
