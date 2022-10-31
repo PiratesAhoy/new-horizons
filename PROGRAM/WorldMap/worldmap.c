@@ -93,9 +93,9 @@ void wdmCreateMap(float dx, float dz, float ay)
 	//Create world map engine object
 	ReloadProgressStart();
 // KK -->
-	if (bNewInterface)
-		CreateEntity(&worldMap, "wrldmap2");
-	else
+	// if (bNewInterface)
+	// 	CreateEntity(&worldMap, "wrldmap2");
+	// else
 		CreateEntity(&worldMap,"worldmap");
 // <-- KK
 	worldMap.isLoaded = "true";

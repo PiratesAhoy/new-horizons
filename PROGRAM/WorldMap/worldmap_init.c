@@ -10,15 +10,126 @@ void wdmInitWorldMap()
 	//Debug info
 	worldMap.debug = "false";
 	worldMap.evwin = "false";
-	worldMap.noenc = "false";
+	worldMap.noenc = "true";
+
+	//Start date
+	worldMap.date.hour = CharHour;
+	worldMap.date.min = CharMinute;
+	worldMap.date.sec = CharSecond;
+	worldMap.date.day = CharDay;
+	worldMap.date.month = CharMonth;
+	worldMap.date.year = CharYear;
+	worldMap.date.hourPerSec = 4.0;
+
+	//=========================================================================
+	//Labels
+	//=========================================================================
+	//Icons description
+	// 0----------->
+	// 1-----------> frames
+	// 2----------->
+	// ...
+	// icons
+	//
+	worldMap.icon.width = 32;
+	worldMap.icon.height = 32;
+	worldMap.icon.num = 16; // KK
+	worldMap.icon.frames = 8;
+	worldMap.icon.fps = 10;
+	worldMap.icon.texture = "icons" + GetCurrentPeriod() + ".tga"; // KK
+	//Label types description
+	worldMap.labeltype.Island.icon = -1;				//Default icon
+	worldMap.labeltype.Island.font = "INTERFACE_NORMAL";			//Default font
+	worldMap.labeltype.Island.pivotX = -0.5;			//Default label shifting left-upper point by X (1 -> full width)
+	worldMap.labeltype.Island.pivotY = -0.5;			//Default label shifting left-upper point by Y (1 -> full height)
+	worldMap.labeltype.Island.heightView = 1000.0;		//Default camera height when hide this labels
+	worldMap.labeltype.Island.weight = 100;				//Weight is use when shake intersection labels
+	worldMap.labeltype.Town.icon = -1;
+	worldMap.labeltype.Town.font = "INTERFACE_NORMAL";
+	worldMap.labeltype.Town.pivotX = -0.5;
+	worldMap.labeltype.Town.pivotY = -0.5;
+	worldMap.labeltype.Town.heightView = 250.0;
+	worldMap.labeltype.Town.weight = 50;
+	worldMap.labeltype.Shore.icon = -1;
+	worldMap.labeltype.Shore.font = "INTERFACE_NORMAL";
+	worldMap.labeltype.Shore.pivotX = -0.5;
+	worldMap.labeltype.Shore.pivotY = -0.5;
+	worldMap.labeltype.Shore.heightView = 200.0;
+	worldMap.labeltype.Shore.weight = 1;
+
+	// ========================================================================
+	// Islands
+	// ========================================================================
+	worldMap.labels.FalaiseDeFleur.type = "Island";
+	worldMap.labels.FalaiseDeFleur.id = "FalaiseDeFleur";
+	worldMap.labels.FalaiseDeFleur.locator = "FalaiseDeFleur";
+	worldMap.labels.FalaiseDeFleur.text = FindIslandName("Falaise De Fleur");
+
+	worldMap.labels.Redmond.type = "Island";
+	worldMap.labels.Redmond.id = "Redmond";
+	worldMap.labels.Redmond.locator = "Redmond";
+	worldMap.labels.Redmond.text = FindIslandName("Redmond");
+
+	//------- TOWN ------------------------------------------------------------
+
+	worldMap.labels.FalaiseDeFleur_town.type = "Town";
+	worldMap.labels.FalaiseDeFleur_town.id = "FalaiseDeFleur_town";
+	worldMap.labels.FalaiseDeFleur_town.locator = "FalaiseDeFleur_town";
+	worldMap.labels.FalaiseDeFleur_town.text = FindTownName("Falaise de Fleur");
+	worldMap.labels.FalaiseDeFleur_town.icon = FRANCE;
+
+	//------- SHORE -----------------------------------------------------------
+
+	worldMap.labels.FalaiseDeFleur_shore.type = "Shore";
+	worldMap.labels.FalaiseDeFleur_shore.id = "FalaiseDeFleur_shore";
+	worldMap.labels.FalaiseDeFleur_shore.locator = "FalaiseDeFleur_shore";
+	worldMap.labels.FalaiseDeFleur_shore.text = "Octopus Bay";
+
+
+	//=========================================================================
+	//Internal information - !!!Caution, no checks!!!
+	//=========================================================================
+	//Прараметры влияния ветра на скорость коробля (относительная скорость)
+	worldMap.shipSpeedOppositeWind = 0.3;
+	worldMap.shipSpeedOverWind = 0.8;
+
+	//Player ship
+	worldMap.playerShipActionRadius = 20.0;
+	worldMap.playerShipX = 246.27;
+	worldMap.playerShipZ = 775.34;
+	worldMap.playerShipAy = 3.0;
+	//Camera
+	worldMap.wdmCameraAY = 0.0;					// Rotation angle of the camera
+	worldMap.wdmCameraY = 250.0;				// Camera Height
+	worldMap.wdmCameraRotLock = 0;				// Lock camera rotation
+	//Enemy ship
+	worldMap.enemyshipViewDistMin = 60.0;		//Distance at which the ship starts to fade
+	worldMap.enemyshipViewDistMax = 120.0;		//Distance at which the ship disappears completely
+	worldMap.enemyshipDistKill = 140.0;			//Distance at which the kill vehicle
+	worldMap.enemyshipBrnDistMin = 80.0;		//Minimum distance on the ship who give birth
+	worldMap.enemyshipBrnDistMax = 130.0;		//The maximum distance at which the ship Rozsa
+	//storm
+	worldMap.stormViewDistMin = 90.0;			//Distance at which the storm begins to fade
+	worldMap.stormViewDistMax = 180.0;			//Distance at which the storm disappears completely
+	worldMap.stormDistKill = 190.0;				//Distance at which the killing storm
+	worldMap.stormBrnDistMin = 100.0;			//The minimum distance at which the storm Rozsa
+	worldMap.stormBrnDistMax = 140.0;			//The maximum distance at which the storm Rozsa
+	worldMap.stormZone = 150.0;					//Overall range of storm
+
 	//=========================================================================
 	//Storm interface
+	//=========================================================================
 	worldMap.storm.num = 0;
 	worldMap.storm.cur = 0;
 	worldMap.storm.x = 0;
 	worldMap.storm.z = 0;
 	worldMap.storm.time = 0;
+	worldMap.playerInStorm = 0;
+	worldMap.stormWhithTornado = 0;
+
+	//=========================================================================
 	//Encounter interface
+	//=========================================================================
 	worldMap.encounter.num = 0;
 	worldMap.encounter.cur = 0;
 	worldMap.encounter.x = 0;
@@ -27,36 +138,184 @@ void wdmInitWorldMap()
 	worldMap.encounter.time = 0;
 	worldMap.encounter.type = -1;
 	worldMap.encounter.attack = -1;
+	worldMap.encounter.id = "";
 	//=========================================================================
 	worldMap.fontIslands = "SEADOGS";//"DIALOG21";
 	worldMap.fontLocations = "SEADOGS_SMALL";//"normal";
 	worldMap.labelPivotX = 0.5;
 	worldMap.labelPivotY = 1.5;
 	worldMap.heightViewLabel = 250.0;
-	worldMap.icon.width = 32;
-	worldMap.icon.height = 32;
-	worldMap.icon.texture = "icons" + GetCurrentPeriod() + ".tga"; // KK
-	worldMap.icon.num = 16; // KK
-	worldMap.icon.frames = 8;
-	worldMap.icon.fps = 10;
 	//=========================================================================
 	worldMap.eventWindow.font.header = "normal";
 	worldMap.eventWindow.font.text = "normal";
 	worldMap.eventWindow.font.button = "normal";
-	//==========================================================================
-// PB -->
-	//Start date
-	worldMap.date.hour = CharHour;
-	worldMap.date.min = CharMinute;
-	worldMap.date.sec = CharSecond;
-	worldMap.date.day = CharDay;
-	worldMap.date.month = CharMonth;
-	worldMap.date.year = CharYear;
-// <-- PB
-	worldMap.date.hourPerSec = 4.0;
-	//Output info
+	//=========================================================================
+
+	//=========================================================================
+	//System, NOT FOR EDIT!!!
+	//=========================================================================
+	DeleteAttribute(&worldMap, "encounters");
+	DeleteAttribute(&worldMap, "addQuestEncounters");
+	worldMap.encounters = "";
+	worldMap.addQuestEncounters = "";
+
+	//=========================================================================
+	//Current island
+	//=========================================================================
+	worldMap.island = WDM_NONE_ISLAND;
+	worldMap.island.x = 0;
+	worldMap.island.z = 0;
+	worldMap.zeroX = 0;
+	worldMap.zeroZ = 0;
+
+	//=========================================================================
+	//Wind (read only)
+	//=========================================================================
+	worldMap.WindX = 0.0; // Normalized Direction
+	worldMap.WindZ = 1.0; // Wind
+	worldMap.WindF = 0.5; // Normalized wind force 0..1
+
+	//=========================================================================
+	//Old internal GUI params
+	//=========================================================================
+	worldMap.eventWindow.font.header = "normal";
+	worldMap.eventWindow.font.text = "normal";
+	worldMap.eventWindow.font.button = "normal";
 	worldMap.date.font = "normal";
-	//1=========================================================================
+
+	//=========================================================================
+	//Initialization labels
+	//=========================================================================
+	InitializationLabels();
+	DeleteAttribute(&worldMap, "labeltype");
+
+
+	//==========================================================================
+	// coordinates for the start of the game, cities on a paper map and teleports
+
+
+	worldMap.islands.FalaiseDeFleur.name = "FalaiseDeFleur";
+	worldMap.islands.FalaiseDeFleur.position.x = -746.6099;
+	// worldMap.islands.FalaiseDeFleur.position.y = 30.0;
+	worldMap.islands.FalaiseDeFleur.position.z = 234.9465;
+	worldMap.islands.FalaiseDeFleur.position.rx = -730.7285;
+	worldMap.islands.FalaiseDeFleur.position.rz = 246.8357;
+	// worldMap.islands.FalaiseDeFleur.radius = 110.0;
+	// worldMap.islands.FalaiseDeFleur.kradius = 0.75;
+
+	worldMap.islands.Redmond.name = "Redmond";
+	worldMap.islands.Redmond.position.x = 300.9059;
+	worldMap.islands.Redmond.position.z = -188.6696;
+	worldMap.islands.Redmond.position.rx = 312.9202;
+	worldMap.islands.Redmond.position.rz = -174.4065;
+
+	worldMap.islands.Oxbay.name = "Oxbay";
+	worldMap.islands.Oxbay.position.x = -915.4337;
+	worldMap.islands.Oxbay.position.z = 415.2678;
+	worldMap.islands.Oxbay.position.rx = -876.6284;
+	worldMap.islands.Oxbay.position.rz = 409.4471;
+
+	worldMap.islands.Douwesen.name = "Douwesen";
+	worldMap.islands.Douwesen.position.x = -503.5165;
+	worldMap.islands.Douwesen.position.z = 685.5855;
+	worldMap.islands.Douwesen.position.rx = -471.2567;
+	worldMap.islands.Douwesen.position.rz = 674.4498;
+
+	worldMap.islands.Conceicao.name = "Conceicao";
+	worldMap.islands.Conceicao.position.x = -780.4724;
+	worldMap.islands.Conceicao.position.z = 663.7298;
+	worldMap.islands.Conceicao.position.rx = -707.8312;
+	worldMap.islands.Conceicao.position.rz = 673.5406;
+
+	worldMap.islands.IslaMuelle.name = "IslaMuelle";
+	worldMap.islands.IslaMuelle.position.x = -451.9622;
+	worldMap.islands.IslaMuelle.position.z = -314.4281;
+	worldMap.islands.IslaMuelle.position.rx = -519.2072;
+	worldMap.islands.IslaMuelle.position.rz = -323.7959;
+
+	worldMap.islands.QuebradasCostillas.name = "QuebradasCostillas";
+	worldMap.islands.QuebradasCostillas.position.x = -662.419;
+	worldMap.islands.QuebradasCostillas.position.z = -201.8127;
+	worldMap.islands.QuebradasCostillas.position.rx = -641.6077;
+	worldMap.islands.QuebradasCostillas.position.rz = -168.2621;
+
+	worldMap.islands.KhaelRoa.name = "KhaelRoa";
+	worldMap.islands.KhaelRoa.position.x = 801.3779;
+	worldMap.islands.KhaelRoa.position.z = -445.5364;
+	worldMap.islands.KhaelRoa.position.rx = 805.0779;
+	worldMap.islands.KhaelRoa.position.rz = -437.1364;
+
+	worldMap.islands.Cayman.name = "Cayman";
+	worldMap.islands.Cayman.position.x = 600.5008;
+	worldMap.islands.Cayman.position.z = -266.3481;
+	worldMap.islands.Cayman.position.rx = 594.8008;
+	worldMap.islands.Cayman.position.rz = -254.6481;
+
+	worldMap.islands.Hispaniola.name = "Hispaniola";
+	worldMap.islands.Hispaniola.position.x = -63.4097;
+	worldMap.islands.Hispaniola.position.z = -455.923;
+	worldMap.islands.Hispaniola.position.rx = -73.0069;
+	worldMap.islands.Hispaniola.position.rz = -444.6382;
+
+	worldMap.islands.Cuba.name = "Cuba";
+	worldMap.islands.Cuba.position.x = 458.8936;
+	worldMap.islands.Cuba.position.z = -684.1776;
+	worldMap.islands.Cuba.position.rx = 469.0741;
+	worldMap.islands.Cuba.position.rz = -724.3237;
+
+	worldMap.islands.Guadeloupe.name = "Guadeloupe";
+	worldMap.islands.Guadeloupe.position.x = -720.2772;
+	worldMap.islands.Guadeloupe.position.z = 13.939;
+	worldMap.islands.Guadeloupe.position.rx = -740.3181;
+	worldMap.islands.Guadeloupe.position.rz = 19.6724;
+
+	worldMap.islands.SaintMartin.name = "SaintMartin";
+	worldMap.islands.SaintMartin.position.x = -725.3333;
+	worldMap.islands.SaintMartin.position.z = -366.6779;
+	worldMap.islands.SaintMartin.position.rx = -722.6486;
+	worldMap.islands.SaintMartin.position.rz = -368.5712;
+
+	worldMap.islands.Antigua.name = "Antigua";
+	worldMap.islands.Antigua.position.x = -907.983;
+	worldMap.islands.Antigua.position.z = -236.7188;
+	worldMap.islands.Antigua.position.rx = -905.6271;
+	worldMap.islands.Antigua.position.rz = -239.7206;
+
+	worldMap.islands.Turks.name = "Turks";
+	worldMap.islands.Turks.position.x = -144.7866;
+	worldMap.islands.Turks.position.z = -819.767;
+	worldMap.islands.Turks.position.rx = -129.5201;
+	worldMap.islands.Turks.position.rz = -812.7909;
+
+	worldMap.islands.Curacao.name = "Curacao";
+	worldMap.islands.Curacao.position.x = -341.0551;
+	worldMap.islands.Curacao.position.z = 608.5984;
+	worldMap.islands.Curacao.position.rx = -323.7226;
+	worldMap.islands.Curacao.position.rz = 636.0241;
+
+	worldMap.islands.Eleuthera.name = "Eleuthera";
+	worldMap.islands.Eleuthera.position.x = 133.2902;
+	worldMap.islands.Eleuthera.position.z = -950.2642;
+	worldMap.islands.Eleuthera.position.rx = 164.3902;
+	worldMap.islands.Eleuthera.position.rz = -977.6642;
+
+	worldMap.islands.Aruba.name = "Aruba";
+	worldMap.islands.Aruba.position.x = -168.6169;
+	worldMap.islands.Aruba.position.z = 550.3819;
+	worldMap.islands.Aruba.position.rx = -169.8129;
+	worldMap.islands.Aruba.position.rz = 565.5464;
+
+	// worldMap.islands.Colombia.name = "Colombia";
+	// worldMap.islands.Colombia.position.x = -55.4972;
+	// worldMap.islands.Colombia.position.z = 801.376;
+	// worldMap.islands.Colombia.position.rx = -24.6888;
+	// worldMap.islands.Colombia.position.rz = 807.4202;
+
+	// =========================================================================
+	// Disabled
+	// =========================================================================
+	return;
+
 	//Name
 	worldMap.islands.FalaiseDeFleur.name = "FalaiseDeFleur";
 	//Geometry parameters
@@ -1618,32 +1877,6 @@ void wdmInitWorldMap()
 	worldMap.islands.Colombia.locations.city2.ship.pos.x = 43.8198;
 	worldMap.islands.Colombia.locations.city2.ship.pos.z = 762.9149;
 	
-	//=========================================================================
-	//Internal information - !!!Beware, nor any checks!!!
-	//=========================================================================
-	//Player ship
-	worldMap.playerShipX = 246.27;
-	worldMap.playerShipZ = 775.34;
-	worldMap.playerShipAY = 3.0;
-	worldMap.playerShipActionRadius = 20.0;
-	worldMap.playerShipDispX = stf(worldMap.playerShipX) - stf(worldMap.islands.Oxbay.position.rx);
-	worldMap.playerShipDispZ = stf(worldMap.playerShipZ) - stf(worldMap.islands.Oxbay.position.rz);	
-	//Camera
-	worldMap.wdmCameraAY = 0.0;					//Rotation angle of the camera
-	worldMap.wdmCameraY = 250.0;				//Camera Height
-	//Enemy ship	
-	worldMap.enemyshipViewDistMin = 60.0;		//Distance at which the ship starts to fade
-	worldMap.enemyshipViewDistMax = 120.0;		//Distance at which the ship disappears completely
-	worldMap.enemyshipDistKill = 140.0;			//Distance at which the kill vehicle
-	worldMap.enemyshipBrnDistMin = 80.0;		//Minimum distance on the ship who give birth
-	worldMap.enemyshipBrnDistMax = 130.0;		//The maximum distance at which the ship Rozsa
-	//storm
-	worldMap.stormViewDistMin = 90.0;			//Distance at which the storm begins to fade
-	worldMap.stormViewDistMax = 180.0;			//Distance at which the storm disappears completely
-	worldMap.stormDistKill = 190.0;				//Distance at which the killing storm
-	worldMap.stormBrnDistMin = 100.0;			//The minimum distance at which the storm Rozsa
-	worldMap.stormBrnDistMax = 140.0;			//The maximum distance at which the storm Rozsa
-	worldMap.stormZone = 150.0;					//Overall range of storm
 
 /*
 	//Player ship
@@ -1676,4 +1909,34 @@ void wdmInitWorldMap()
 //	DeleteAttribute(&worldMap, "labeltype");
 */
 
+}
+
+void InitializationLabels()
+{
+	// Let's go over all the islands
+	aref arrayLabels;
+	makearef(arrayLabels, worldMap.labels);
+	int num = GetAttributesNum(arrayLabels);
+	for(int i = 0; i < num; i++)
+	{
+		// Link to label description
+		aref label = GetAttributeN(arrayLabels, i);
+		//
+		if(!CheckAttribute(label, "type")) continue;
+		string typeName = label.type;
+		// Get the label type
+		aref typeParams;
+		makearef(typeParams, worldMap.labeltype.(typeName));
+		// Iterate over the label type parameters and add to the label
+		int numParams = GetAttributesNum(typeParams);
+		for(int j = 0; j < numParams; j++)
+		{
+			// Parameter name
+			string param = GetAttributeName(GetAttributeN(typeParams, j));
+			// Checking the presence in the label
+			if(CheckAttribute(label, param) != 0) continue;
+			// Copying the parameter
+			label.(param) = typeParams.(param);
+		}
+	}
 }
