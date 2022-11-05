@@ -70,6 +70,101 @@ void wdmInitWorldMap()
 	worldMap.labels.Redmond.locator = "Redmond";
 	worldMap.labels.Redmond.text = FindIslandName("Redmond");
 
+	worldMap.labels.Oxbay.type = "Island";
+	worldMap.labels.Oxbay.id = "Oxbay";
+	worldMap.labels.Oxbay.locator = "Oxbay";
+	worldMap.labels.Oxbay.text = FindIslandName("Oxbay");
+
+	worldMap.labels.Douwesen.type = "Island";
+	worldMap.labels.Douwesen.id = "Douwesen";
+	worldMap.labels.Douwesen.locator = "Douwesen";
+	worldMap.labels.Douwesen.text = FindIslandName("Douwesen");
+
+	worldMap.labels.Conceicao.type = "Island";
+	worldMap.labels.Conceicao.id = "Conceicao";
+	worldMap.labels.Conceicao.locator = "Conceicao";
+	worldMap.labels.Conceicao.text = FindIslandName("Conceicao");
+
+	worldMap.labels.IslaMuelle.type = "Island";
+	worldMap.labels.IslaMuelle.id = "IslaMuelle";
+	worldMap.labels.IslaMuelle.locator = "IslaMuelle";
+	worldMap.labels.IslaMuelle.text = FindIslandName("Isla Muelle");
+
+	worldMap.labels.QuebradasCostillas.type = "Island";
+	worldMap.labels.QuebradasCostillas.id = "QuebradasCostillas";
+	worldMap.labels.QuebradasCostillas.locator = "QuebradasCostillas";
+	worldMap.labels.QuebradasCostillas.text = FindIslandName("Khael Roa");
+
+	worldMap.labels.KhaelRoa.type = "Island";
+	worldMap.labels.KhaelRoa.id = "KhaelRoa";
+	worldMap.labels.KhaelRoa.locator = "KhaelRoa";
+	worldMap.labels.KhaelRoa.text = FindIslandName("Quebradas Costillas");
+
+	worldMap.labels.Cayman.type = "Island";
+	worldMap.labels.Cayman.id = "Cayman";
+	worldMap.labels.Cayman.locator = "Cayman";
+	worldMap.labels.Cayman.text = FindIslandName("Cayman");
+
+	worldMap.labels.Hispaniola.type = "Island";
+	worldMap.labels.Hispaniola.id = "Hispaniola";
+	worldMap.labels.Hispaniola.locator = "Hispaniola";
+	worldMap.labels.Hispaniola.text = FindIslandName("Hispaniola");
+
+	worldMap.labels.Cuba.type = "Island";
+	worldMap.labels.Cuba.id = "Cuba";
+	worldMap.labels.Cuba.locator = "Cuba";
+	worldMap.labels.Cuba.text = FindIslandName("Cuba");
+
+	worldMap.labels.Guadeloupe.type = "Island";
+	worldMap.labels.Guadeloupe.id = "Guadeloupe";
+	worldMap.labels.Guadeloupe.locator = "Guadeloupe";
+	worldMap.labels.Guadeloupe.text = FindIslandName("Guadeloupe");
+
+	worldMap.labels.SaintMartin.type = "Island";
+	worldMap.labels.SaintMartin.id = "SaintMartin";
+	worldMap.labels.SaintMartin.locator = "SaintMartin";
+	worldMap.labels.SaintMartin.text = FindIslandName("Saint Martin");
+
+	worldMap.labels.Antigua.type = "Island";
+	worldMap.labels.Antigua.id = "Antigua";
+	worldMap.labels.Antigua.locator = "Antigua";
+	worldMap.labels.Antigua.text = FindIslandName("Antigua");
+
+	worldMap.labels.Turks.type = "Island";
+	worldMap.labels.Turks.id = "Turks";
+	worldMap.labels.Turks.locator = "Turks";
+	worldMap.labels.Turks.text = FindIslandName("Turks");
+
+	worldMap.labels.Curacao.type = "Island";
+	worldMap.labels.Curacao.id = "Curacao";
+	worldMap.labels.Curacao.locator = "Curacao";
+	worldMap.labels.Curacao.text = FindIslandName("Curacao");
+
+	worldMap.labels.Eleuthera.type = "Island";
+	worldMap.labels.Eleuthera.id = "Eleuthera";
+	worldMap.labels.Eleuthera.locator = "Eleuthera";
+	worldMap.labels.Eleuthera.text = FindIslandName("Eleuthera");
+
+	worldMap.labels.Aruba.type = "Island";
+	worldMap.labels.Aruba.id = "Aruba";
+	worldMap.labels.Aruba.locator = "Aruba";
+	worldMap.labels.Aruba.text = FindIslandName("Aruba");
+
+	worldMap.labels.IslaMona.type = "Island";
+	worldMap.labels.IslaMona.id = "IslaMona";
+	worldMap.labels.IslaMona.locator = "IslaMona";
+	worldMap.labels.IslaMona.text = FindIslandName("Isla Mona");
+
+	worldMap.labels.Battle_Rocks.type = "Island";
+	worldMap.labels.Battle_Rocks.id = "Battle_Rocks";
+	worldMap.labels.Battle_Rocks.locator = "Battle_Rocks";
+	worldMap.labels.Battle_Rocks.text = FindIslandName("Petit Tabac");
+
+	// worldMap.labels.Colombia.type = "Island";
+	// worldMap.labels.Colombia.id = "Colombia";
+	// worldMap.labels.Colombia.locator = "Colombia";
+	// worldMap.labels.Colombia.text = FindIslandName("Colombia");
+
 	//------- TOWN ------------------------------------------------------------
 
 	worldMap.labels.FalaiseDeFleur_town.type = "Town";
