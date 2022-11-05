@@ -39,14 +39,6 @@ void wdmEvent_EncounterCreate()
 	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
 }
 
-void wdmEvent_InsideIsland()
-{
-	wdmDisableTornadoGen = true;
-	wdmCurrentIsland = GetEventData();
-	//Trace("Inside to "+wdmCurrentIsland);
-	PlayLandHo(); // NK // added by KAM after build 11 // KK
-}
-
 // KK -->
 void PlayLandHo()
 {
@@ -57,14 +49,6 @@ void PlayLandHo()
 	PlaySound("#land_ho");
 }
 // <-- KK
-
-void wdmEvent_OutsideIsland()
-{
-	wdmCurrentIsland = GetEventData();
-	//Trace("Outside from "+wdmCurrentIsland);
-	wdmCurrentIsland = WDM_NONE_ISLAND;
-	worldMap.outsideIsland = true; // KK
-}
 
 void wdmEvent_PlayerInStorm()
 {
