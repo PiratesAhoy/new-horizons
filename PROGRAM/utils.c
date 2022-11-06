@@ -2526,6 +2526,25 @@ string GetCurrentProfile(string storyline)
 	return GlobalSettings.profile.(storyline);
 }
 
+int FindEmptyProfileSlot(string storyline)
+{
+	int slot = 1;
+	if (CheckAttribute(SaveProfiles, storyline)) {
+		aref arStoryline;
+		makearef(arStoryline, SaveProfiles.(storyline));
+		int numberOfProfiles = GetAttributesNum(arStoryline);
+		for (int i = 0; i < numberOfProfiles; i++) {
+			aref arProfile = GetAttributeN(arStoryline, i);
+			string attrName = GetAttributeName(arProfile);
+			int profileId = sti(strcut(attrName, 1, strlen(attrName) - 1));
+			if (profileId == slot) {
+				slot++;
+			}
+		}
+	}
+	return slot;
+}
+
 bool CreateProfile(string storyline, string profile)
 {
 	if (FindStoryline(storyline) < 0) return false;
@@ -2533,8 +2552,8 @@ bool CreateProfile(string storyline, string profile)
 	//if (pnum > 0) return false;
 	DeleteProfile(storyline, profile); // Screwface : question is asked previously so we must delete here
 	ref rSP; makeref(rSP, SaveProfiles);
-	int pq = GetProfilesQuantity(storyline) + 1;
-	string p = "p" + pq;
+	int profileSlot = FindEmptyProfileSlot(storyline);
+	string p = "p" + profileSlot;
 	rSP.(storyline).(p).id = profile;
 	return true;
 }
