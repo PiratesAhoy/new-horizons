@@ -67,11 +67,13 @@ extern void wdmInitWorldMap();
 #event_handler("WorldMap_EncounterCreate", "wdmEvent_EncounterCreate");
 #event_handler("WorldMap_PlayerInStorm", "wdmEvent_PlayerInStorm");
 #event_handler("WorldMap_ShipEncounter", "wdmEvent_ShipEncounter");
-#event_handler("WorldMap_EventWindowChangeSelectoin", "wdmEvent_EventWindowChangeSelectoin");
-#event_handler("WorldMap_EventWindowSelect", "wdmEvent_EventWindowSelect");
-#event_handler("WorldMap_WaitMenuChangeSelectoin", "wdmEvent_WaitMenuChangeSelectoin");
-#event_handler("WorldMap_WaitMenuSelect", "wdmEvent_WaitMenuSelect");
-#event_handler("WorldMap_DeleteShipEncounter", "wdmEvent_DeleteShipEncounter");
+
+//#event_handler("WorldMap_EventWindowChangeSelectoin", "wdmEvent_EventWindowChangeSelectoin");
+//#event_handler("WorldMap_EventWindowSelect", "wdmEvent_EventWindowSelect");
+//#event_handler("WorldMap_WaitMenuChangeSelectoin", "wdmEvent_WaitMenuChangeSelectoin");
+//#event_handler("WorldMap_WaitMenuSelect", "wdmEvent_WaitMenuSelect");
+//#event_handler("WorldMap_DeleteShipEncounter", "wdmEvent_DeleteShipEncounter");
+
 #event_handler("WorldMap_UpdateDate", "wdmEvent_UpdateDate");
 #event_handler("ExitFromWorldMap", "wdmReloadToSea");
 #event_handler("EventLoadLocation", "wdmOpenLocation");
@@ -128,6 +130,8 @@ void wdmCreateMap(float dx, float dz, float ay)
 	SetTimeScale(MAPSPEED);			// slow motion
 	SetWeatherScheme("seashore_weather");		
 	// ccc maptweak end
+
+	InitWmInterface()
 }
 
 void wdmCreateWorldMap()
