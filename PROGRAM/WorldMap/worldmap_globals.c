@@ -29,7 +29,8 @@ int wdmGetNumberStorms()
 
 void wdmCreateStorm()
 {
-	SendMessage(&worldMap, "l", MSG_WORLDMAP_CREATESTORM);
+	int isTornado = 0;
+	SendMessage(&worldMap, "ll", MSG_WORLDMAP_CREATESTORM, isTornado);
 }
 
 //Ship encounter functions
@@ -57,6 +58,7 @@ bool wdmCreateMerchantShip(int type, string islandName, float dltSpeedInPMPercen
 		kSpeed = 1.0/(1.0 - kSpeed);
 	}
 	string nationShipName = wdmEncounterModelName(type);
+//	bool res = SendMessage(&worldMap, "lsssff", MSG_WORLDMAP_CREATEENC_MER, nationShipName, from, to, kSpeed, timeOutInSec);
 	return SendMessage(&worldMap, "llssf", MSG_WORLDMAP_CREATEENC_MER, type, nationShipName, islandName, kSpeed);
 }
 

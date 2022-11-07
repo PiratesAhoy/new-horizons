@@ -35,8 +35,8 @@ void wdmEvent_EncounterCreate()
 	}
 	//Generate encounters
 	wdmStormGen(dltTime, playerShipX, playerShipZ, playerShipAY);
-	wdmShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
-	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
+//	wdmShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
+//	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
 }
 
 // KK -->

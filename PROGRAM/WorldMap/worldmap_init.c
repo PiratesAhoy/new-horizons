@@ -10,7 +10,7 @@ void wdmInitWorldMap()
 	//Debug info
 	worldMap.debug = "false";
 	worldMap.evwin = "false";
-	worldMap.noenc = "true";
+	worldMap.noenc = "false";
 
 	//Start date
 	worldMap.date.hour = CharHour;
