@@ -47,28 +47,28 @@ void WM_UpdateCurrentAction()
 	Trace("WM_UpdateCurrentAction: Converted type: " + sti(worldMap.encounter_type));
 	switch( sti(worldMap.encounter_type) )
 	{
-	case 0:
+	case WORLDMAP_ENCOUNTER_TYPE_UNKNOWN:
 		Trace("WM_UpdateCurrentAction: Encountering sea");
 		Log_SetActiveAction("EnterToSea");
 		bDefault = false;
 		break;
-	case 1:
+	case WORLDMAP_ENCOUNTER_TYPE_MERCHANT:
 		Trace("WM_UpdateCurrentAction: Encountering ship");
 		Log_SetActiveAction("EnterToShip");
 		bDefault = false;
 		break;
-	case 2:
+	case WORLDMAP_ENCOUNTER_TYPE_WARRING:
 		Trace("WM_UpdateCurrentAction: Encountering battle");
 		Log_SetActiveAction("EnterToAttack");
 		bDefault = false;
 		break;
-	case 3:
+	case WORLDMAP_ENCOUNTER_TYPE_FOLLOW:
 		Trace("WM_UpdateCurrentAction: Encountering enemy");
 
 		Log_SetActiveAction("EnterToEnemy");
 		bDefault = false;
 		break;
-	case 4:
+	case WORLDMAP_ENCOUNTER_TYPE_STORM:
 		Trace("WM_UpdateCurrentAction: Encountering storm");
 		Log_SetActiveAction("EnterToStorm");
 		bDefault = false;
@@ -336,28 +336,28 @@ void WM_SetPossibleCommands()
 	bool bDefault = true;
 	switch( sti(worldMap.encounter_type) )
 	{
-	case 0:
+	case WORLDMAP_ENCOUNTER_TYPE_UNKNOWN:
 		BattleInterface.Commands.EnterToIsland.enable = true;
 		// Log_SetActiveAction("EnterToIsland");
 		Log_SetActiveAction("EnterToSea");  //boal
 		bDefault = false;
 		break;
-	case 1:
+	case WORLDMAP_ENCOUNTER_TYPE_MERCHANT:
 		BattleInterface.Commands.EnterToShip.enable	= true;
 		Log_SetActiveAction("EnterToShip");
 		bDefault = false;
 		break;
-	case 2:
+	case WORLDMAP_ENCOUNTER_TYPE_WARRING:
 		BattleInterface.Commands.EnterToAttack.enable = true;
 		Log_SetActiveAction("EnterToAttack");
 		bDefault = false;
 		break;
-	case 3:
+	case WORLDMAP_ENCOUNTER_TYPE_FOLLOW:
 		BattleInterface.Commands.EnterToEnemy.enable = true;
 		Log_SetActiveAction("EnterToEnemy");
 		bDefault = false;
 		break;
-	case 4:
+	case WORLDMAP_ENCOUNTER_TYPE_STORM:
 		BattleInterface.Commands.EnterToStorm.enable = true;
 		Log_SetActiveAction("EnterToStorm");
 		bDefault = false;

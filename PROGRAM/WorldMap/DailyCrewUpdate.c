@@ -699,7 +699,7 @@ void DailyCrewUpdate()
 				chref.ransom = makeint(stf(chref.ransom) * RANSOM_INC) +1;
 				//if(sti(chref.ransom) == tmpransom) chref.ransom = tmpransom + 1;
 				bool rtmp = false;
-				if(IsEntity(&worldMap) != 0) { if(wdmCurrentIsland != WDM_NONE_ISLAND) { rtmp = true; } }// on wdmap and near island
+				if(IsEntity(&worldMap) != 0) { if(wdmGetCurrentIsland() != WDM_NONE_ISLAND) { rtmp = true; } }// on wdmap and near island
 				else { if(!bSeaActive) { rtmp = true; } } // on land, we presume
 				if(rtmp)
 				{

@@ -1399,7 +1399,7 @@ void QuestToSeaLogin_AddGroupLoc(string sGroupID, int formation, string locGroup
 	}
 }
 
-// запустить квестовую выгрузку в море
+// Launch a quest upload to the sea
 void QuestToSeaLogin_Launch()
 {
 	if (LAi_boarding_process) return;
@@ -1413,8 +1413,7 @@ void QuestToSeaLogin_Launch()
 	}*/
 
 	if (CheckAttribute(&worldMap, "isLoaded") == true && worldMap.isLoaded == "true") {
-		wdmCurrentIsland = questToSeaLoginer.Island;
-		if (wdmCurrentIsland == "") wdmCurrentIsland = WDM_NONE_ISLAND;
+		worldMap.island = questToSeaLoginer.Island;
 		worldMap.FromCoast = sti(questToSeaLoginer.FromCoast);
 		worldMap.QuestToSeaLogin = true;
 		Event("ExitFromWorldMap");

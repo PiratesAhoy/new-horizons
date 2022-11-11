@@ -167,19 +167,107 @@ void wdmInitWorldMap()
 
 	//------- TOWN ------------------------------------------------------------
 
-	worldMap.labels.FalaiseDeFleur_town.type = "Town";
-	worldMap.labels.FalaiseDeFleur_town.id = "FalaiseDeFleur_town";
-	worldMap.labels.FalaiseDeFleur_town.locator = "FalaiseDeFleur_town";
-	worldMap.labels.FalaiseDeFleur_town.text = FindTownName("Falaise de Fleur");
-	worldMap.labels.FalaiseDeFleur_town.icon = FRANCE;
+	worldMap.labels.FalaiseDeFleur_town_1.type = "Town";
+	worldMap.labels.FalaiseDeFleur_town_1.id = "FalaiseDeFleur_town";
+	worldMap.labels.FalaiseDeFleur_town_1.locator = "FalaiseDeFleur_town";
+	worldMap.labels.FalaiseDeFleur_town_1.text = FindTownName("Falaise de Fleur");
+	worldMap.labels.FalaiseDeFleur_town_1.icon = GetTownNation("Falaise de Fleur");
+
+	worldMap.labels.Redmond_town_1.type = "Town";
+	worldMap.labels.Redmond_town_1.id = "Redmond_town";
+	worldMap.labels.Redmond_town_1.locator = "Redmond_town";
+	worldMap.labels.Redmond_town_1.text = FindTownName("Redmond");
+	worldMap.labels.Redmond_town_1.icon = GetTownNation("Redmond");
+
+	worldMap.labels.Oxbay_town_1.type = "Town";
+	worldMap.labels.Oxbay_town_1.id = "Oxbay_town_1";
+	worldMap.labels.Oxbay_town_1.locator = "Oxbay_town_1";
+	worldMap.labels.Oxbay_town_1.text = FindTownName("Oxbay");
+	worldMap.labels.Oxbay_town_1.icon = GetTownNation("Oxbay");
+
+	worldMap.labels.Oxbay_town_2.type = "Town";
+	worldMap.labels.Oxbay_town_2.id = "Oxbay_town_2";
+	worldMap.labels.Oxbay_town_2.locator = "Oxbay_town_2";
+	worldMap.labels.Oxbay_town_2.text = FindTownName("Greenford");
+	worldMap.labels.Oxbay_town_2.icon = GetTownNation("Greenford");
+
+	worldMap.labels.Douwesen_town_1.type = "Town";
+	worldMap.labels.Douwesen_town_1.id = "Douwesen_town_1";
+	worldMap.labels.Douwesen_town_1.locator = "Douwesen_town_1";
+	worldMap.labels.Douwesen_town_1.text = FindTownName("Douwesen");
+	worldMap.labels.Douwesen_town_1.icon = GetTownNation("Douwesen");
+
+	worldMap.labels.Conceicao_town_1.type = "Town";
+	worldMap.labels.Conceicao_town_1.id = "Conceicao_town_1";
+	worldMap.labels.Conceicao_town_1.locator = "Conceicao_town_1";
+	worldMap.labels.Conceicao_town_1.text = FindTownName("Conceicao");
+	worldMap.labels.Conceicao_town_1.icon = GetTownNation("Conceicao");
 
 	//------- SHORE -----------------------------------------------------------
 
-	worldMap.labels.FalaiseDeFleur_shore.type = "Shore";
-	worldMap.labels.FalaiseDeFleur_shore.id = "FalaiseDeFleur_shore";
-	worldMap.labels.FalaiseDeFleur_shore.locator = "FalaiseDeFleur_shore";
-	worldMap.labels.FalaiseDeFleur_shore.text = "Octopus Bay";
+	worldMap.labels.FalaiseDeFleur_shore_1.type = "Shore";
+	worldMap.labels.FalaiseDeFleur_shore_1.id = "FalaiseDeFleur_shore";
+	worldMap.labels.FalaiseDeFleur_shore_1.locator = "FalaiseDeFleur_shore";
+	worldMap.labels.FalaiseDeFleur_shore_1.text = "Octopus Bay";
 
+	worldMap.labels.Redmond_shore_1.type = "Shore";
+	worldMap.labels.Redmond_shore_1.id = "Redmond_shore_1";
+	worldMap.labels.Redmond_shore_1.locator = "Redmond_shore_1";
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
+	{
+		worldMap.labels.Redmond_shore_1.text = "Woodes Rogers' Port";
+	}
+	else
+	{
+		worldMap.labels.Redmond_shore_1.text = "Devil's Throat";
+	}
+
+	worldMap.labels.Redmond_shore_2.type = "Shore";
+	worldMap.labels.Redmond_shore_2.id = "Redmond_shore_2";
+	worldMap.labels.Redmond_shore_2.locator = "Redmond_shore_2";
+	if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0)
+	{
+		worldMap.labels.Redmond_shore_2.text = "Cave Shore";
+	}
+	else
+	{
+		worldMap.labels.Redmond_shore_2.text = "Rocky Shore";
+	}
+
+	worldMap.labels.Oxbay_shore_1.type = "Shore";
+	worldMap.labels.Oxbay_shore_1.id = "Oxbay_shore_1";
+	worldMap.labels.Oxbay_shore_1.locator = "Oxbay_shore_1";
+	worldMap.labels.Oxbay_shore_1.text = "Gray Rock Bay";
+
+	worldMap.labels.Oxbay_shore_2.type = "Shore";
+	worldMap.labels.Oxbay_shore_2.id = "Oxbay_shore_2";
+	worldMap.labels.Oxbay_shore_2.locator = "Oxbay_shore_2";
+	worldMap.labels.Oxbay_shore_2.text = "Far Beach";
+
+	worldMap.labels.Oxbay_shore_3.type = "Shore";
+	worldMap.labels.Oxbay_shore_3.id = "Oxbay_shore_3";
+	worldMap.labels.Oxbay_shore_3.locator = "Oxbay_shore_3";
+	worldMap.labels.Oxbay_shore_3.text = "Lighthouse";
+
+	worldMap.labels.Douwesen_shore_1.type = "Shore";
+	worldMap.labels.Douwesen_shore_1.id = "Douwesen_shore_1";
+	worldMap.labels.Douwesen_shore_1.locator = "Douwesen_shore_1";
+	worldMap.labels.Douwesen_shore_1.text = "Palm Beach";
+
+	worldMap.labels.Douwesen_shore_2.type = "Shore";
+	worldMap.labels.Douwesen_shore_2.id = "Douwesen_shore_2";
+	worldMap.labels.Douwesen_shore_2.locator = "Douwesen_shore_2";
+	worldMap.labels.Douwesen_shore_2.text = "Crab Cliffs";
+
+	worldMap.labels.Conceicao_shore_1.type = "Shore";
+	worldMap.labels.Conceicao_shore_1.id = "Conceicao_shore_1";
+	worldMap.labels.Conceicao_shore_1.locator = "Conceicao_shore_1";
+	worldMap.labels.Conceicao_shore_1.text = "Sunny Haven";
+
+	worldMap.labels.Conceicao_shore_2.type = "Shore";
+	worldMap.labels.Conceicao_shore_2.id = "Conceicao_shore_2";
+	worldMap.labels.Conceicao_shore_2.locator = "Conceicao_shore_2";
+	worldMap.labels.Conceicao_shore_2.text = "Leviathan Rock";
 
 	//=========================================================================
 	//Internal information - !!!Caution, no checks!!!

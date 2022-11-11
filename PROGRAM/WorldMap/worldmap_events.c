@@ -17,11 +17,12 @@ void wdmEvent_EncounterCreate()
 	worldMap.playerShipX = playerShipX;
 	worldMap.playerShipZ = playerShipZ;
 	worldMap.playerShipAY = playerShipAY;
-	if(wdmCurrentIsland!=WDM_NONE_ISLAND && wdmCurrentIsland!="") // PB: Prevent error.log entries
+	string currentIsland = wdmGetCurrentIsland();
+	if(currentIsland!=WDM_NONE_ISLAND && CheckAttribute(worldMap.islands, currentIsland)) // PB: Prevent error.log entries
 	{
-		wdmLoginToSea.island = worldMap.islands.(wdmCurrentIsland).name;
-		float ix = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rx);
-		float iz = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rz);
+		wdmLoginToSea.island = worldMap.islands.(currentIsland).name;
+		float ix = MakeFloat(worldMap.islands.(currentIsland).position.rx);
+		float iz = MakeFloat(worldMap.islands.(currentIsland).position.rz);
 		worldMap.playerShipDispX = (playerShipX - ix);
 		worldMap.playerShipDispZ = (playerShipZ - iz);
 	}else{
