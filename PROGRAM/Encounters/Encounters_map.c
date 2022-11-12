@@ -65,7 +65,8 @@ bool GenerateMapEncounter(int iMapEncounterType, string sIslandID, ref iEncounte
 	{
 		if(!Island_IsEncountersEnable(sIslandID)) {	return false; }
 
-		ref isl = GetIslandByID(worldMap.islands.(wdmCurrentIsland).name);
+		string currentIsland = wdmGetCurrentIsland();
+		ref isl = GetIslandByID(worldMap.islands.(currentIsland).name);
 		iNearIslandNation = sti(isl.smuggling_nation);
 	}
 	// NK <--

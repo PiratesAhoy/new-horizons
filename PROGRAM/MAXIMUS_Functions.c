@@ -1614,7 +1614,7 @@ void DeleteIslaDeMuerte()
 		Islands[FindIsland("IslaDeMuerte")].visible = false;
 		aref ourMap; makearef(ourMap,worldMap.islands);
 		DeleteAttribute(ourMap,"IslaDeMuerte");
-		if(wdmCurrentIsland=="IslaDeMuerte") wdmCurrentIsland = WDM_NONE_ISLAND;
+		if(wdmGetCurrentIsland()=="IslaDeMuerte") worldMap.island = "";
 	}
 }
 //=========================| ISLA DE MUERTE (based on AOP Isla Mona) |=========================//

@@ -3,8 +3,9 @@ extern void CreateLandActionsEnvironment_WR(); // PB: Create external function
 extern void CreateLandActionsEnvironment_BUG(); // PB: Create external function
 extern void CreateLandActionsEnvironment_BART(); // PB: Create external function
 
-#define LOG_FOR_SEA		1
-#define LOG_FOR_LAND	2
+#define LOG_FOR_SEA			1
+#define LOG_FOR_LAND		2
+#define LOG_FOR_WORLDMAP	3
 
 object showWindow;
 
@@ -142,6 +143,10 @@ void CreateILogAndActions(int loadType)
 	if(loadType==LOG_FOR_LAND)
 	{
 		CreateLandActionsEnvironment();
+	}
+	if(loadType==LOG_FOR_WORLDMAP)
+	{
+		CreateWorldMapActionsEnvironment();
 	}
 // KK -->
 	ref rLog; makeref(rLog, ILog);

@@ -7,6 +7,9 @@
 #include "battle_interface\ActivePerksShow.c"
 #include "battle_interface\procGetSailTextureData.c"		// the function procGetSailTextureData() is now moved into a separate file
 #include "battle_interface\flags.c" // KK
+
+#include "battle_interface\WmInterface.c"
+
 #define BI_ICONS_TEXTURE_SHIP1		1
 
 #define BI_ICONS_SHIPS_TEXTURE_NAME "battle_interface\icons.tga"

@@ -34,11 +34,13 @@ void wdmReloadToSea()
 	//Trace("\\");
 	//Trace("psX = " + psX + "   psZ = " + psZ);
 
-	if (wdmCurrentIsland !=	WDM_NONE_ISLAND) {
+	string currentIsland = wdmGetCurrentIsland();
+
+	if (currentIsland !=	WDM_NONE_ISLAND) {
 		//Island
-		wdmLoginToSea.island = worldMap.islands.(wdmCurrentIsland).name;
-		float ix = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rx);
-		float iz = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rz);
+		wdmLoginToSea.island = worldMap.islands.(currentIsland).name;
+		float ix = MakeFloat(worldMap.islands.(currentIsland).position.rx);
+		float iz = MakeFloat(worldMap.islands.(currentIsland).position.rz);
 
 		//Trace("ix = " + ix + "   iz = " + iz);
 

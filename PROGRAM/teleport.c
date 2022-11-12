@@ -60,12 +60,13 @@ void DoTeleportChoose()
 				n = FindIslandBySeaLocation(sTeleportLocName);
 				if(n!=-1)
 				{
-					wdmCurrentIsland = Islands[n].id;
+					worldmap.island = Islands[n].id;
+					string currentIsland = wdmGetCurrentIsland();
 					makearef(ar1,worldMap.islands);
 					for(n=0; n<GetAttributesNum(ar1); n++)
 					{
 						ar2 = GetAttributeN(ar1,n);
-						if(ar2.name==wdmCurrentIsland)
+						if(ar2.name==currentIsland)
 						{
 							worldMap.playerShipX = ar2.position.x;
 							worldMap.playerShipZ = ar2.position.z;
