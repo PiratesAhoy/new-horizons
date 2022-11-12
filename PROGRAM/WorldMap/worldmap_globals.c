@@ -55,24 +55,13 @@ bool wdmCreateMerchantShip(int type, string islandName, float dltSpeedInPMPercen
 	}else{
 		kSpeed = 1.0/(1.0 - kSpeed);
 	}
-	string nationShipName = wdmEncounterModelName(type);
-//	bool res = SendMessage(&worldMap, "lsssff", MSG_WORLDMAP_CREATEENC_MER, nationShipName, from, to, kSpeed, timeOutInSec);
-	return SendMessage(&worldMap, "llssf", MSG_WORLDMAP_CREATEENC_MER, type, nationShipName, islandName, kSpeed);
-}
 
-//if islandName == "" then island finding automatically
-bool wdmCreateMerchantShipTime(int type, string islandName, float dltSpeedInPMPercents, float liveTime)
-{
-	float kSpeed = dltSpeedInPMPercents/100.0;
-	if(kSpeed >= 0.0)
-	{
-		kSpeed = kSpeed + 1.0;
-	}else{
-		kSpeed = 1.0/(1.0 - kSpeed);
-	}
-	if(liveTime < 1.0) liveTime = 1.0;
+	int timeOutInDays = 5+rand(5);
+	float daysPerSec = 24.0/stf(worldMap.date.hourPerSec);
+	float timeOutInSec = daysPerSec*timeOutInDays;
+
 	string nationShipName = wdmEncounterModelName(type);
-	return SendMessage(&worldMap, "llssff", MSG_WORLDMAP_CREATEENC_MER_TIME, type, nationShipName, islandName, kSpeed, liveTime);
+	return SendMessage(&worldMap, "lsssff", MSG_WORLDMAP_CREATEENC_MER, nationShipName, "", "", kSpeed, timeOutInSec);
 }
 
 bool wdmCreateFollowShip(int type, float dltSpeedInPMPercents)
@@ -87,38 +76,25 @@ bool wdmCreateFollowShip(int type, float dltSpeedInPMPercents)
 		kSpeed = 1.0/(1.0 - kSpeed);
 	}
 	string nationShipName = wdmEncounterModelName(type);
-	return SendMessage(&worldMap, "llsf", MSG_WORLDMAP_CREATEENC_FLW, type, nationShipName, kSpeed);
-}
 
-bool wdmCreateFollowShipTime(int type, float dltSpeedInPMPercents, float liveTime)
-{
-	float kSpeed = dltSpeedInPMPercents/100.0;
-	if(kSpeed >= 0.0)
-	{
-		kSpeed = kSpeed + 1.0;
-	}else{
-		kSpeed = 1.0/(1.0 - kSpeed);
-	}
-	if(liveTime < 1.0) liveTime = 1.0;
-	string nationShipName = wdmEncounterModelName(type);
-	return SendMessage(&worldMap, "llsff", MSG_WORLDMAP_CREATEENC_FLW_TIME, type, nationShipName, kSpeed, liveTime);
+	int timeOutInDays = 5+rand(5);
+	float daysPerSec = 24.0/stf(worldMap.date.hourPerSec);
+	float timeOutInSec = daysPerSec*timeOutInDays;
+
+	return SendMessage(&worldMap, "lsff", MSG_WORLDMAP_CREATEENC_FLW, nationShipName, kSpeed, timeOutInSec);
 }
 
 bool wdmCreateWarringShips(int type1, int type2)
 {
 	string nationShipName1 = wdmEncounterModelName(type1);
 	string nationShipName2 = wdmEncounterModelName(type2);
-	return SendMessage(&worldMap, "llsls", MSG_WORLDMAP_CREATEENC_WAR, type1, nationShipName1, type2, nationShipName2);
-}
 
-bool wdmCreateWarringShipsTime(int type1, int type2, float liveTime)
-{
-	if(liveTime < 1.0) liveTime = 1.0;
-	string nationShipName1 = wdmEncounterModelName(type1);
-	string nationShipName2 = wdmEncounterModelName(type2);
-	return SendMessage(&worldMap, "llslsf", MSG_WORLDMAP_CREATEENC_WAR_TIME, type1, nationShipName1, type2, nationShipName2, liveTime);
-}
+	int timeOutInDays = 5+rand(5);
+	float daysPerSec = 24.0/stf(worldMap.date.hourPerSec);
+	float timeOutInSec = daysPerSec*timeOutInDays;
 
+	return SendMessage(&worldMap, "lssf", MSG_WORLDMAP_CREATEENC_WAR, nationShipName1, nationShipName2, timeOutInSec);
+}
 
 void wdmReleaseEncounters()
 {
