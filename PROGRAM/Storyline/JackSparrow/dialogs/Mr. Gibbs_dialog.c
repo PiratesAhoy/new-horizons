@@ -188,8 +188,7 @@ void ProcessDialogEvent()
 			link.l2 = DLG_TEXT[38];
 			link.l2.go = "ExitAccompany";			
 		break;
-		
-				
+
 		case "Exit_Stay":
 			AddDialogExitQuest("Goodbye_Gibbs_and_Willemoes");
 			RemoveOfficersIndex(pchar, GetCharacterIndex("Mr. Gibbs"));

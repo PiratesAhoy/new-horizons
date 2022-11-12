@@ -61,9 +61,10 @@ void ProcessDialogEvent()
 			else
 			// <-- SJG
 			{
-				if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")))
+				if (ProfessionalNavyNation() == sti(GetAttribute(NPChar, "nation")) || sti(GetAttribute(NPChar, "nation")) == PERSONAL_NATION)
 				{
-					d.Text = DLG_TEXT[68] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[69];
+					if(sti(GetAttribute(NPChar, "nation")) == PERSONAL_NATION) d.Text = DLG_TEXT[68] + GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false) + DLG_TEXT[69];
+					else d.Text = DLG_TEXT[68] + GetRankName(PChar, sti(GetAttribute(NPChar, "nation"))) + DLG_TEXT[69];
 					Link.l1 = DLG_TEXT[70];
 					Link.l1.go = "trade";
 					Link.l2 = DLG_TEXT[5];

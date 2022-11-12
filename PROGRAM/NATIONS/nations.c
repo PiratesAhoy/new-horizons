@@ -686,8 +686,8 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 	float relChange   = 0.0;
 
 	bool bValidAttack = GetFlagRMRelation(iNation) == RELATION_ENEMY && !CheckAttribute(char, "traitor");	// You were flying a hostile flag and did not deliberately betray them
-	bValidAttack      = bValidAttack || iActOfPiracy == 0;													// Never an invalid attack if you hit the pirates (even under a pirate flag)
-	DeleteAttribute(char, "traitor");																		// This was temporarily added to the player
+	bValidAttack      = bValidAttack || iActOfPiracy == 0;												// Never an invalid attack if you hit the pirates (even under a pirate flag)
+	DeleteAttribute(char, "traitor");														// This was temporarily added to the player
 	if (bValidAttack)
 	{
 		// Loop through nations to determine if this was an act of piracy
@@ -700,32 +700,40 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 				if (GetLetterOfMarqueQuantity() > 1)	relChange = relChange * (1 - GetLetterOfMarqueQuantity()/10); // GR: Reduce points for multiple LoMs
 			//	TraceAndLog("Add " + relChange + " points: You are in the service of " + GetNationNameByType(i) + ", which is at war with " + GetNationNameByType(iNation));
 				ChangeRMRelation(char, i, relChange);
-				if (curFlag != PIRATE)	iActOfPiracy = 0;													// Any act under a pirate flag IS an act of piracy
+				if (curFlag != PIRATE)	iActOfPiracy = 0;										// Any act under a pirate flag IS an act of piracy
 			}
 		}
 
 		// This happens if you aren't in any service OR you did this attack under a pirate flag, but not if it was the pirates you attacked
-		if (iActOfPiracy > 0)	iActOfPiracy = fPoints;														// For an act of piracy, add full points with the pirates
+		if (iActOfPiracy > 0)	iActOfPiracy = fPoints;												// For an act of piracy, add full points with the pirates
 
 		// Loop through nations to determine how the attacked nation and its allies should respond to this
 		for(i = 0; i < NATIONS_QUANTITY; i++)
 		{
-			if(GetNationRelation(i, iNation) == RELATION_FRIEND)											// This is the nation you attacked OR an ally
+			if(GetNationRelation(i, iNation) == RELATION_FRIEND)										// This is the nation you attacked OR an ally
 			{
-				rel = GetRMRelation(char, i);																// Relation between the checked nation and the player
-				if (i == iNation)																			// This is the nation you attacked
+				rel = GetRMRelation(char, i);												// Relation between the checked nation and the player
+				if (i == iNation)													// This is the nation you attacked
 				{
-					relChange = rel  -  REL_WAR + 1;														// You may immediately become HOSTILE with this nation!
-					if (makeint(rel) <= REL_WAR)								relChange = fPoints;		// They are already hostile, so just subtract the number
-					else																					// You were friendly with them before, bastard!	
+					relChange = rel  -  REL_WAR + 1;										// You may immediately become HOSTILE with this nation!
+					if (makeint(rel) <= REL_WAR) relChange = fPoints;								// They are already hostile, so just subtract the number
+					else														// You were friendly with them before, bastard!	
 					{
-						if (i == PIRATE)										relChange = fPoints;		// The pirates aren't too concerned with you attacking other pirates
-						else {if (iActOfPiracy > 0)								iActOfPiracy += relChange;}	// You had no legal reason for this attack, TRAITOR!
+						if (i == PIRATE) relChange = fPoints;									// The pirates aren't too concerned with you attacking other pirates
+						else
+						{
+							AttackRMRelation(char, iNation);
+							relchange = 0;											// Relation loss already handled by 'AttackRMRelation', no need to do any more
+							if (iActOfPiracy > 0)
+							{
+								iActOfPiracy += relChange;
+							}
+						}	// You had no legal reason for this attack, TRAITOR!
 					}
 				}
 				else																						// This is an ally
 				{
-					relChange = rel  -  REL_AFTERATTACK + 1;												// You may immediately become Wary with this nation
+					relChange = rel  -  REL_AFTERATTACK + 1;									// You may immediately become Wary with this nation
 					if (makeint(rel) <= REL_AFTERATTACK)						relChange = fPoints;		// They are already Wary, so just subtract the number
 					else																					// Else, add an explanatory text message
 					{
@@ -733,9 +741,9 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 						sLogEntry = "The " + GetNationDescByType(i) + " government turned wary of me because of my attack on their " + GetNationDescByType(iNation) + " allies.";
 						WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
 					}
-					if (ServedNation != PERSONAL_NATION && iActOfPiracy == 0)								// Only if you are serving ONE specific nation and committed no act of piracy
+					if (ServedNation != PERSONAL_NATION && iActOfPiracy == 0)							// Only if you are serving ONE specific nation and committed no act of piracy
 					{
-						rel = GetNationRelation(i, ServedNation);											// Relation between the ally and your own served nation
+						rel = GetNationRelation(i, ServedNation);								// Relation between the ally and your own served nation
 					//	TraceAndLog("Served Nation = " + GetNationNameByType(ServedNation) + ", relation with " + GetNationNameByType(i) + " = " + rel);
 						if(rel == RELATION_NEUTRAL || rel == RELATION_FRIEND)	relChange = 0.0;			// You have a legal reason, so the ally doesn't mind
 					}
@@ -757,20 +765,21 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 		{
 			if (i == PIRATE) continue;																		// The pirates don't mind your gross act of piracy
 			rel = GetRMRelation(char, i);																	// Relation between the checked nation and the player
-			LeaveService(char, i, false);																	// Lose navy commission and all your LoMs
 			if (GetNationRelation(i, iNation) == RELATION_FRIEND)											// This is the nation you attacked OR an ally
 			{
-				if (i == iNation)																			// This is the nation you attacked
+				LeaveService(char, i, true);													// Lose navy commission and LoM, also land and title
+				if (i == iNation)														// This is the nation you attacked
 				{
-					SetRMRelation(char, i, REL_MIN);														// The nation you attacked REALLY doesn't approve!
+					SetRMRelation(char, i, REL_MIN);											// The nation you attacked REALLY doesn't approve!
 				}
-				else																						// This is an ally
+				else																// This is an ally
 				{
 					if (rel > REL_WAR) SetRMRelation(char, i, REL_WAR);										// These turn hostile too, if they weren't already
 				}
 			}
 			else
 			{
+				LeaveService(char, i, false);													// Lose navy commission and LoM
 				if (rel > REL_AFTERATTACK) SetRMRelation(char, i, REL_AFTERATTACK);							// All other nations turn Wary because you are untrustworthy
 			}
 			relChange = rel - GetRMRelation(char, i);														// Determine how many points you lost through this action
@@ -1011,7 +1020,10 @@ void LooseLetterOfMarque(int iNation)
 		DeleteAttribute(PChar, "nations."+sNation+".LoM");
 		if (ProfessionalNavyNation() == iNation) DeleteAttribute(PChar, "professionalnavy"); // PB: No more navy
 	}
-	SetServedNation(PERSONAL_NATION);	// PB: Cancel your original served nation
+	if (GetServedNation() != PIRATE || iNation == PIRATE)
+	{
+		SetServedNation(PERSONAL_NATION);	// PB: Cancel your original served nation
+	}
 	HoistFlag(GetServedNation());		// PB: Hoist a new appropriate flag
 }
 
@@ -1219,7 +1231,7 @@ string GetSoldiersGreeting(int nation, string town)
 	case ENGLAND:
 		switch (town) {
 		case "Oxbay":
-			greeting = "Oxbay";
+			greeting = "Redmond"; // was "Oxbay"
 			break;
 		case "Greenford":
 			greeting = "Greenford";

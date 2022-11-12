@@ -850,14 +850,14 @@ int GetWoundedHealedPerDay(ref _refCharacter)
 	if(CharacterHasOfficerType(_refCharacter, OFFIC_TYPE_DOCTOR))
 	{
 		healing_rate = healing_rate + CharacterGetOfficerSkill(_refCharacter, OFFIC_TYPE_DOCTOR, "defence");
-		if(CheckCharacterPerk(_refCharacter, "AdvancedFirstAid"))
+		if(CheckPerkForGroup(_refCharacter, "AdvancedFirstAid"))
 		{
 			healing_rate = healing_rate + 2;
 			trace("2 more healed due to Advanced First Aid");
 		}
 		else
 		{
-			if(CheckCharacterPerk(_refCharacter, "BasicFirstAid"))
+			if(CheckPerkForGroup(_refCharacter, "BasicFirstAid"))
 			{
 				healing_rate = healing_rate + 1;
 				trace("1 more healed due to Basic First Aid");
@@ -3407,7 +3407,7 @@ bool TakeNItems(ref _refCharacter,string itemName, int n)
 	aref arItm;
 	if( Items_FindItem(itemName,&arItm)<0 )
 	{
-		trace("WARNING!!! Item id = "+itemName+" not implemented");
+		trace("WARNING!!! Character '" + GetMySimpleName(_refCharacter) + "': + Item id = "+itemName+" not implemented");
 
 		// LDH - because I'm damned tired of fixing individual instances of these problems when mods are turned off - 31Mar09
 		if ( ! ENABLE_AMMOMOD )

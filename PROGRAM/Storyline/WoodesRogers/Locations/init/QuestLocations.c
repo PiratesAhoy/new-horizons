@@ -133,17 +133,17 @@ void LocationInitQuestLocations(ref n)
     	Locations[n].models.always.l3.tech = "LocationModelBlend";
 
     	//Day
-   	 Locations[n].models.day.charactersPatch = "Jungle2_patch";
+	Locations[n].models.day.charactersPatch = "Jungle2_new_patch";
     	//Night
-    	Locations[n].models.night.charactersPatch = "Jungle2_patch";
+	Locations[n].models.night.charactersPatch = "Jungle2_new_patch";
     	//Environment
     	Locations[n].environment.weather = "true";
     	Locations[n].environment.sea = "true";
     
 	//Reload map
-	Locations[n].locators_radius.box.box4 = 4;
-	Locations[n].locators_radius.box.box5 = 3;
-	Locations[n].locators_radius.box.box6 = 4;
+	Locations[n].locators_radius.box.box4 = 0.0001;		//not used boxes	
+	Locations[n].locators_radius.box.box5 = 0.0001;
+	Locations[n].locators_radius.box.box6 = 0.0001;
 
 	Locations[n].locators_radius.box.box7 = 2.5;		
 	Locations[n].locators_radius.goto.push7 = 3;
@@ -164,36 +164,19 @@ void LocationInitQuestLocations(ref n)
 //--------------------------------------------------------------------------
 
 	locations[n].id = "Swamp_island2";
-	//locations[n].id = "TownExitW_flooded";
 	locations[n].id.label = "Swamp Island";
 	locations[n].image = "wr_shipwreck_island.tga";
 	//Town sack
 	locations[n].townsack = "Redmond";
 	//Sound
 	locations[n].type = "silent_seashore";
-	//locations[n].type = "prison_ships";
-	//locations[n].islandId = "Redmond";
-	//locations[n].islandIdAreal = "Cartahena";
+
 	//Models
 	//Always
 	locations[n].filespath.models = "locations\Outside\Swamp_Island2";
 	Locations[n].models.always.townExit = "townExitW";
-
-//	Locations[n].models.always.townWalls = "townExitW_stucco";
 	Locations[n].models.always.locators = "townExitW_locators_JRH4";
-		
 	Locations[n].models.always.grassPatch = "townExitW_grass";
-//	Locations[n].models.always.grassPatch.texture = "grass\grassshore.tga.tx";
-	
-//	Locations[n].models.always.l1 = "plan1";
-	Locations[n].models.always.l1.level = 9;
-	Locations[n].models.always.l1.tech = "LocationModelBlend";
-//	Locations[n].models.always.l2 = "plan2";
-	Locations[n].models.always.l2.level = 8;
-	Locations[n].models.always.l2.tech = "LocationModelBlend";
-//	Locations[n].models.always.l3 = "plan3";
-	Locations[n].models.always.l3.level = 7;
-	Locations[n].models.always.l3.tech = "LocationModelBlend";
 	
 	//Day
 	locations[n].models.day.charactersPatch = "townExitW_patch";
@@ -206,12 +189,6 @@ void LocationInitQuestLocations(ref n)
 	locations[n].environment.sea = "true";
 	
 	//Reload map
-	locations[n].reload.l1.name = "reload4";
-	locations[n].reload.l1.go = "Cartahena_town";
-	locations[n].reload.l1.emerge = "gate_back";
-	locations[n].reload.l1.autoreload = "0";
-	locations[n].reload.l1.label = "Cartahena";
-
 	locations[n].reload.l4.name = "reload3_back";
 	locations[n].reload.l4.go = "swamp_wreck_inside";
 	locations[n].reload.l4.emerge = "reload7";
@@ -352,47 +329,33 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].island = "Redmond";
 	n = n + 1;
+
 //--------------------------------------------------------------------------
 
 	locations[n].id = "swamp_wreck_inside";
 	locations[n].id.label = "Swamp Wreck";
 	locations[n].filespath.models = "locations\decks\SwampWreck";
 	locations[n].image = "wr_wreck_inside.tga";
+
 	//Town sack
 	locations[n].townsack = "Redmond";
 	locations[n].lockWeather = "Inside";
 	//Sound
-	//locations[n].type = "prison_ships";
 	locations[n].type = "galleon_open";
-	//locations[n].fastreload = "LostShipsCity";
-	//locations[n].islandId = "LostShipsCity";	
+
 	//Models
 	//Always	
-//	Locations[n].models.always.inside = "CeresSmithy";
-//	Locations[n].models.always.inside.level = 65538;
-    Locations[n].models.always.l1 = "CeresSmithy";
-    Locations[n].models.always.l1.level = 65538;
+   	Locations[n].models.always.l1 = "CeresSmithy";
+   	Locations[n].models.always.l1.level = 65538;
 	Locations[n].models.always.seabed = "CeresSmithy_sb";
-//	Locations[n].models.always.outdoor = "CeresSmithy_outdoor";		
-//	Locations[n].models.always.reflect = "CeresSmithy_reflect";
 	Locations[n].models.always.reflect.level = 65531;
 	Locations[n].models.always.reflect.sea_reflection = 1;	
 	Locations[n].models.always.windows = "CeresSmithy_windows";
 	Locations[n].models.always.windows.tech = "LocationWindows";
 	Locations[n].models.always.windows.level = 65539;	
-//	Locations[n].models.always.sails = "CeresSmithy_sails";
-	Locations[n].models.always.sails.tech = "LocationWindows";
-	Locations[n].models.always.sails.level = 65534;	
-//	Locations[n].models.always.plan1 = "Plan1";
-	Locations[n].models.always.plan1.tech = "LocationWindows";
-	Locations[n].models.always.plan1.level = 65533;
-	Locations[n].models.always.plan1.sea_reflection = 1;	
-//	Locations[n].models.always.plan2 = "Plan2";
-	Locations[n].models.always.plan2.tech = "LocationWindows";
-	Locations[n].models.always.plan2.level = 65532;	
 	Locations[n].models.always.locators = "CeresSmithy_locators_JRH";	
 	Locations[n].models.always.grassPatch = "CeresSmithy_grass";
-//	Locations[n].models.always.grassPatch.texture = "grass\algaeU1.tga.tx";					
+				
 	//Day
 	locations[n].models.day.charactersPatch = "CeresSmithy_patch_day";
 	//Locations[n].models.day.jumpPatch = "CeresSmithy_jump_patch";

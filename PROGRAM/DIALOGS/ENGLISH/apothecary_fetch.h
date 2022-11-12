@@ -14,6 +14,6 @@ string DLG_TEXT[19] = {
 "...",
 "As promised, here is your pay. Thank you very much for getting these goods.",
 "I couldn't get your whole delivery in one go, so here is the first part.",
-"Ah thank you very much. Please get the rest as soon as possible. I'm going to use these resources already so If you dont deliver the rest I still have to cancel the order but I can't return these resources either, just so you know.",
+"Ah thank you very much. Please get the rest as soon as possible. I'm going to use these resources already so if you dont deliver the rest I still have to cancel the order but I can't return these resources either, just so you know.",
 "You know what I will keep them with me then until I have everything",
 };

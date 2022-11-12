@@ -231,7 +231,6 @@ void LocationInitEleuthera(ref n)
 
 	Locations[n].island = "Eleuthera";
 	n = n + 1;
-
 	//---------------------------------------------------------------
 
 	Locations[n].filespath.models = "locations\Outside\Passage";

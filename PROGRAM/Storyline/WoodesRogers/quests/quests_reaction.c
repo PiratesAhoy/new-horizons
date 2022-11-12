@@ -799,24 +799,19 @@ void QuestComplete(string sQuestName)
 
 //-------------------------------------------------------------------------------------------
 //swamp island1
+	
 		case "swamp1_pos1_turn_sea":
 			PlaySound("PEOPLE\step_water.wav");
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "goto", "look1");
 
 			LAi_QuestDelay("Pchar_playertype1", 1.0);
 		break;
-
+	
 		case "Pchar_playertype1":
 			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("no_ships_in_sight1", 1.0);
 		break;
-
-		case "Pchar_playertype":
-			LAi_SetPlayerType(Pchar);
-		break;
-
+	
 		case "no_ships_in_sight1":
 			if(Locations[FindLocation(Pchar.location)].models.always.locators == "jungle2_locators_JRH1")
 			{
@@ -834,68 +829,6 @@ void QuestComplete(string sQuestName)
 				}
 			}
 			else PlaySound("VOICE\ENGLISH\blaze_scream.wav");
-		break;
-
-		case "swamp1_pos1_move_to_land":
-			PlaySound("PEOPLE\step_water2.wav");
-			LAi_SetPlayerType(Pchar);
-
-			ChangeCharacterAddressGroup(Pchar, "Swamp_island1", "goto", "goto1");
-		break;
-	//------------------------------------------------------------------------------------
-		case "swamp1_pos2_turn_sea":
-			PlaySound("PEOPLE\step_water.wav");
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "goto", "look2");
-
-			LAi_QuestDelay("Pchar_playertype2", 1.0);
-		break;
-
-		case "Pchar_playertype2":
-			LAi_SetPlayerType(Pchar);
-
-			LAi_QuestDelay("no_ships_in_sight2", 1.0);
-		break;
-
-		case "no_ships_in_sight2":
-			PlaySound("VOICE\ENGLISH\blaze_no_escape.wav");
-			Log_SetStringToLog(LanguageConvertString(tmpLangFileID,"That island is the only land in sight. I have to get there!"));
-		break;
-
-		case "swamp1_pos2_move_to_land":
-			PlaySound("PEOPLE\step_water2.wav");
-			LAi_SetPlayerType(Pchar);
-
-			ChangeCharacterAddressGroup(Pchar, "Swamp_island1", "goto", "goto2");
-		break;
-	//------------------------------------------------------------------------------------
-		case "swamp1_pos3_turn_sea":
-			PlaySound("PEOPLE\step_water.wav");
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "goto", "look3");
-
-			LAi_QuestDelay("Pchar_playertype3", 1.0);
-		break;
-
-		case "Pchar_playertype3":
-			LAi_SetPlayerType(Pchar);
-
-			LAi_QuestDelay("no_ships_in_sight3", 1.0);
-		break;
-
-		case "no_ships_in_sight3":
-			if(Locations[FindLocation(Pchar.location)].models.always.locators == "jungle2_locators_JRH1")
-			{
-				PlaySound("VOICE\ENGLISH\blaze_help.wav");
-			}
-			else PlaySound("VOICE\ENGLISH\blaze_scream.wav");
-		break;
-
-		case "swamp1_pos3_move_to_land":
-			PlaySound("PEOPLE\step_water2.wav");
-			LAi_SetPlayerType(Pchar);
-
-			ChangeCharacterAddressGroup(Pchar, "Swamp_island1", "goto", "goto3");
 		break;
 	//------------------------------------------------------------------------------------
 		case "push_tree1":
@@ -927,19 +860,17 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "sloop_sailaway2":
-
 			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "box", "box4");
+			LAi_ActorTurnToLocator(Pchar, "goto", "goto1");
 
 			LAi_QuestDelay("sloop_sailaway3", 1.0);
 		break;
 
 		case "sloop_sailaway3":
-			LAi_ActorGoToLocator(Pchar, "box", "box4", "sloop_sailaway4", 12.0);
+			LAi_ActorGoToLocator(Pchar, "goto", "at_sea1", "sloop_sailaway4", 20.0);
 		break;
 
 		case "sloop_sailaway4":
-
 			PlaySound("PEOPLE\step_water2.wav");
 			ChangeCharacterAddressGroup(Pchar, "Swamp_island1", "goto", "at_sea1");
 
@@ -982,7 +913,6 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "push_tree3B":
-			LAi_SetPlayerType(Pchar);
 			PlaySound("VOICE\ENGLISH\blaze_puh.wav");
 		break;
 
@@ -2330,9 +2260,10 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("ready_to_break_window1", 0.5);
 		break;
-
-
+//pär roofs start
 		case "ready_to_break_window1":
+			Locations[FindLocation("QC_town")].models.day.charactersPatch = "QCtown_roofs_low";
+			Locations[FindLocation("QC_town")].models.night.charactersPatch = "QCtown_roofs_low";
 			Locations[FindLocation("QC_town")].models.always.locators = "QCtown_l_JRH";
 
 			Locations[FindLocation("QC_Brothel")].reload.l1.disable = 1;//temp locked
@@ -2352,7 +2283,7 @@ void QuestComplete(string sQuestName)
 			PauseAllSounds();//stops music
 			PlaySound("AMBIENT\TOWN\window_dog_pistol.wav");
 
-		locations[FindLocation("QC_town")].type = "silent_town";//stops music only
+			locations[FindLocation("QC_town")].type = "silent_town";//stops music only
 
 			LAi_QuestDelay("window_broken", 1.0);
 		break;
@@ -2413,147 +2344,115 @@ void QuestComplete(string sQuestName)
 		case "both_on_brothel_roof_1":
 			LAi_ActorTurnToLocator(characterFromID("Wench3"), "goto", "roof2");
 			PlaySound("VOICE\ENGLISH\gr_wench3_mhm.wav");
-			LAi_QuestDelay("both_on_brothel_roof_2", 1.0);		//was 2.0
+			LAi_QuestDelay("both_on_brothel_roof_2", 1.0);
 		break;
 
 		case "both_on_brothel_roof_2":
-			LAi_SetPlayerType(Pchar);
 			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "roof2");
 			PlaySound("PEOPLE\Jump_Roof.wav");
-			LAi_QuestDelay("Caroline_walk_1", 1.0);
+
+			LAi_QuestDelay("Caroline_walk_1", 0.5);
 		break;
 //-----------------------------------------------------------------------------------------------------------------
-		case "Caroline_walk_1":
-			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto113w");
-			PlaySound("PEOPLE\Run_Roof.wav");
-			LAi_QuestDelay("Caroline_walk_1A", 0.5);
-		break;
 
-		case "Caroline_walk_1A":
-			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto114");
-			LAi_QuestDelay("Caroline_jump_2", 0.5);
+		case "Caroline_walk_1":
+			LAi_ActorRunToLocator(characterFromID("Wench3"), "box", "box2", "Caroline_jump_2", 2.0);
 		break;
 
 		case "Caroline_jump_2":
 			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto114j");
+			
 			LAi_QuestDelay("Caroline_jump_2A", 0.2);
 		break;
 
 		case "Caroline_jump_2A":
 			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "roof3");
 			PlaySound("PEOPLE\Jump_Roof.wav");
-			LAi_QuestDelay("Caroline_walk_2", 1.0);
+
+			LAi_QuestDelay("Caroline_walk_2", 0.5);
 		break;
 
-		case "Caroline_walk_2":
-			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto115w");
-			PlaySound("PEOPLE\Run_Roof.wav");
-			LAi_QuestDelay("Caroline_walk_2A", 0.5);
-		break;
-
-		case "Caroline_walk_2A":
-			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto116");
-			LAi_QuestDelay("Caroline_jump_3", 0.5);
+		case "Caroline_walk_2":	
+			LAi_ActorRunToLocator(characterFromID("Wench3"), "box", "box3", "Caroline_jump_3", 2.5);
 		break;
 
 		case "Caroline_jump_3":
 			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto116j");
+
 			LAi_QuestDelay("Caroline_jump_3A", 0.2);
 		break;
 
 		case "Caroline_jump_3A":
 			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "roof4");
 			PlaySound("PEOPLE\Jump_Roof.wav");
-			LAi_QuestDelay("Caroline_walk_3", 1.0);
+
+			LAi_QuestDelay("Caroline_walk_3", 0.5);
 		break;
 
 		case "Caroline_walk_3":
-			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto117w");
-			PlaySound("PEOPLE\Run_Roof.wav");
-			LAi_QuestDelay("Caroline_walk_3A", 0.5);
-		break;
-
-		case "Caroline_walk_3A":
-			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto118");
-			LAi_QuestDelay("Caroline_jump_4", 0.5);
+			LAi_ActorRunToLocator(characterFromID("Wench3"), "box", "box4", "Caroline_jump_4", 3.5);
 		break;
 
 		case "Caroline_jump_4":
 			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto118j");
+
 			LAi_QuestDelay("Caroline_jump_4A", 0.2);
 		break;
 
 		case "Caroline_jump_4A":
-			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "reload", "reload20");
+			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "reload20");
 			PlaySound("PEOPLE\Jump_Stone.wav");
-			LAi_QuestDelay("Caroline_on_terrace", 0.5);
+	
+			LAi_QuestDelay("Caroline_jump_4B", 1.0);
+		break;
+
+		case "Caroline_jump_4B":
+			LAi_SetActorType(characterFromID("Wench3"));
+			LAi_ActorTurnToLocator(characterFromID("Wench3"), "goto", "goto107");
+
+			LAi_QuestDelay("Caroline_on_terrace", 1.0);
 		break;
 
 		case "Caroline_on_terrace":
-			LAi_SetActorType(characterFromID("Wench3"));
-			LAi_ActorTurnToCharacter(characterFromID("Wench3"), PChar);
-			LAi_ActorDialog(characterFromID("Wench3"), pchar, "", 1.0, 1.0);
-			LAi_ActorWaitDialog(Pchar, characterFromID("Wench3"));
+			LAi_ActorSelfDialog(characterFromID("Wench3"), "");
 		break;
 //---------------------------------------------------------------------------------------------------------------------
 		case "Blaze_ready_to_walk_0":
 			//from Caroline dialog
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "goto", "roof2");
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "box", "box1");
-		break;
-
-		case "Blaze_walk_0":
-			PlaySound("PEOPLE\Run_stone.wav");
-			LAi_QuestDelay("Blaze_walk_0A", 0.5);
-		break;
-
-		case "Blaze_walk_0A":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "goto111");
-			LAi_QuestDelay("Blaze_roof_fencing_1", 0.7);
-		break;
-//....................................................................................................
-		case "Blaze_roof_fencing_1":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "roof2");
-			PlaySound("PEOPLE\Jump_Roof.wav");
+			LAi_SetPlayerType(Pchar);
 
 			RemoveCharacterEquip(CharacterFromID("Mistress"), BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(CharacterFromID("Mistress"), "blade5" );
 			GiveItem2Character(characterFromID("Mistress"), "bladebbuss");
 			EquipCharacterByItem(characterFromID("Mistress"), "bladebbuss");
 
-			LAi_QuestDelay("Blaze_roof_fencing_1A", 1.0);
+			pchar.quest.Blaze_roof_fencing_1A.win_condition.l1 = "locator"
+			pchar.quest.Blaze_roof_fencing_1A.win_condition.l1.location = "QC_town";
+			pchar.quest.Blaze_roof_fencing_1A.win_condition.l1.locator_group = "goto";
+			pchar.quest.Blaze_roof_fencing_1A.win_condition.l1.locator = "roof2";
+			pchar.quest.Blaze_roof_fencing_1A.win_condition = "Blaze_roof_fencing_1A";
 		break;
-
+	
 		case "Blaze_roof_fencing_1A":
 			PlaySound("AMBIENT\TAVERN\tinkle4.wav");
 			PlaySound("AMBIENT\TAVERN\drop4.wav");
-
-			LAi_group_MoveCharacter(characterFromID("Brthug7"), "ROOF_THUGS_1");
-			LAi_group_Register("ROOF_THUGS_1");
-			LAi_group_SetRelation(LAI_GROUP_PLAYER, "ROOF_THUGS_1", LAI_GROUP_ENEMY);
-			LAi_group_FightGroups(LAI_GROUP_PLAYER, "ROOF_THUGS_1", true);
-
+		
 			LAi_QuestDelay("Blaze_roof_fencing_2", 1.0);
 		break;
 
 		case "Blaze_roof_fencing_2":
 			pchar.quest.wr_quest2 = "warning_thug_behind";
 
-			LAi_SetActorType(characterFromID("Wench3"));
-			LAi_ActorTurnToCharacter(characterFromID("Wench3"), PChar);
-			LAi_ActorDialog(characterFromID("Wench3"), pchar, "", 0.0, 0.0);
-			LAi_ActorWaitDialog(Pchar, characterFromID("Wench3"));
+			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "dialog1");
+			LAi_ActorSelfDialog(characterFromID("Wench3"), "");
 		break;
 
 		case "Blaze_roof_fencing_3":
 			PlaySound("PEOPLE\Run_stone.wav");
 
 			ChangeCharacterAddressGroup(characterFromID("Brthug7"), "QC_town", "goto", "goto111");
-			TakenItems(characterFromID("Brthug7"), "potion1", 2);
-
+			
 			ChangeCharacterAddressGroup(characterFromID("Mistress"), "QC_town", "goto", "goto108");
-
 			LAi_SetActorType(characterFromID("Mistress"));
 			LAi_ActorTurnToLocator(characterFromID("Mistress"), "goto", "roof2");
 
@@ -2565,6 +2464,8 @@ void QuestComplete(string sQuestName)
 
 		case "Blaze_roof_fencing_4":
 			PlaySound("OBJECTS\DUEL\man_attack6.wav");
+			LAi_SetActorType(characterFromID("Brthug7"));
+			LAi_ActorAttack(CharacterFromID("Brthug7"), Pchar, "");
 
 			LAi_SetPlayerType(Pchar);
 
@@ -2575,13 +2476,15 @@ void QuestComplete(string sQuestName)
 
 		case "Blaze_roof_fencing_5":
 			PlaySound("OBJECTS\VOICES\DEAD\female\dead_wom6.wav");
+			
+			LAi_QuestDelay("Blaze_roof_fencing_5A", 1.0);
+		break;
 
-			LAi_group_MoveCharacter(characterFromID("Mistress"), "ROOF_THUGS_2");
-			LAi_group_Register("ROOF_THUGS_2");
-			LAi_group_SetRelation(LAI_GROUP_PLAYER, "ROOF_THUGS_2", LAI_GROUP_ENEMY);
-			LAi_group_FightGroups(LAI_GROUP_PLAYER, "ROOF_THUGS_2", true);
+		case "Blaze_roof_fencing_5A":
+			LAi_SetPlayerType(characterFromID("Mistress"));
+			LAi_SetFightMode(CharacterFromID("Mistress"), true);
 
-			LAi_QuestDelay("Blaze_roof_fencing_6", 2.0);	//was 1.0
+			LAi_QuestDelay("Blaze_roof_fencing_6", 1.0);
 		break;
 
 		case "Blaze_roof_fencing_6":
@@ -2598,108 +2501,60 @@ void QuestComplete(string sQuestName)
 			LAi_ApplyCharacterDamage(Pchar, Php3);
 
 			LAi_QuestDelay("Blaze_roof_fencing_6A", 1.0);
-			LAi_QuestDelay("Blaze_roof_fencing_7", 2.0);
+			LAi_QuestDelay("Blaze_roof_fencing_8", 3.0);
 		break;
 
 		case "Blaze_roof_fencing_6A":
 			PlaySound("OBJECTS\duel\man_hit4.wav");
 		break;
 
-		case "Blaze_roof_fencing_7":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "goto110");
-			PlaySound("PEOPLE\Jump_Stone.wav");
-			LAi_QuestDelay("Blaze_roof_fencing_8", 1.0);
-		break;
-
 		case "Blaze_roof_fencing_8":
 			ChangeCharacterAddressGroup(characterFromID("Mistress"), "QC_town", "goto", "goto107");
 			PlaySound("PEOPLE\Run_roof.wav");
+
 			LAi_QuestDelay("Blaze_roof_fencing_9", 0.5);
 		break;
 
 		case "Blaze_roof_fencing_9":
-			ChangeCharacterAddressGroup(characterFromID("Mistress"), "QC_town", "goto", "goto106");
+			PlaySound("INTERFACE\closed_door.wav");
+			ChangeCharacterAddressGroup(characterFromID("Mistress"), "none", "", "");
+
 			LAi_QuestDelay("Blaze_roof_fencing_10", 1.0);
 		break;
 
 		case "Blaze_roof_fencing_10":
-			PlaySound("INTERFACE\closed_door.wav");
-
 			ChangeCharacterAddressGroup(characterFromID("Brthug7"), "none", "", "");
-			ChangeCharacterAddressGroup(characterFromID("Mistress"), "none", "", "");
 
 			RemoveCharacterEquip(CharacterFromID("Mistress"), BLADE_ITEM_TYPE);
 			TakeItemFromCharacter(CharacterFromID("Mistress"), "bladebbuss" );
 			GiveItem2Character(characterFromID("Mistress"), "blade5");
 			EquipCharacterByItem(characterFromID("Mistress"), "blade5");
 
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "goto", "roof2");
 			LAi_QuestDelay("Blaze_jump_1", 3.0);
 		break;
 //....................................................................................................
 		case "Blaze_jump_1":
 			LAi_SetPlayerType(Pchar);
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "box", "box2");
-			PlaySound("PEOPLE\Jump_Roof.wav");
+
+			pchar.quest.Roof_knifeman_attack1.win_condition.l1 = "locator"
+			pchar.quest.Roof_knifeman_attack1.win_condition.l1.location = "QC_town";
+			pchar.quest.Roof_knifeman_attack1.win_condition.l1.locator_group = "goto";
+			pchar.quest.Roof_knifeman_attack1.win_condition.l1.locator = "roof5";
+			pchar.quest.Roof_knifeman_attack1.win_condition = "Roof_knifeman_attack1";
 		break;
 
-		case "Blaze_walk_1":
-			PlaySound("PEOPLE\Run_roof.wav");
-			LAi_QuestDelay("Blaze_walk_1A", 0.5);
-		break;
-
-		case "Blaze_walk_1A":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "goto114");
-			LAi_QuestDelay("Blaze_jump_2", 0.5);
-		break;
-
-		case "Blaze_jump_2":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "roof3");
-			PlaySound("PEOPLE\Jump_Roof.wav");
-		break;
-
-		case "Blaze_walk_2":
-			PlaySound("PEOPLE\Run_roof.wav");
-			LAi_QuestDelay("Blaze_walk_2A", 0.5);
-		break;
-
-		case "Blaze_walk_2A":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "goto116");
-			LAi_QuestDelay("Blaze_jump_3", 0.5);
-		break;
-
-		case "Blaze_jump_3":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "roof4");
-			PlaySound("PEOPLE\Jump_Roof.wav");
-		break;
-
-		case "Blaze_walk_3":
-			PlaySound("PEOPLE\Run_roof.wav");
-			LAi_QuestDelay("Blaze_walk_3A", 0.5);
-		break;
-
-		case "Blaze_walk_3A":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "goto118");
-			LAi_QuestDelay("Blaze_jump_4", 0.5);
-		break;
-
-
-		case "Blaze_jump_4":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "roof5");
-			PlaySound("PEOPLE\Jump_Stone.wav");
+		case "Roof_knifeman_attack1":
 			LAi_SetStayType(Pchar);
-
-			LAi_QuestDelay("Roof_knifeman_attack2", 1.0);
+			LAi_QuestDelay("Roof_knifeman_attack2", 0.5);		//was 1.0
 		break;
 
 		case "Roof_knifeman_attack2":
 			LAi_SetPlayerType(Pchar);
-
-			LAi_SetActorType(characterFromID("Brthug3"));
-			LAi_ActorAttack(CharacterFromID("Brthug3"), Pchar, "");
+		
 			ChangeCharacterAddressGroup(characterFromID("Brthug3"), "QC_town", "goto", "goto118");
 			GiveItem2Character(CharacterFromID("Brthug3"), "bladeX4");//no blade no laydown
+			LAi_SetPlayerType(characterFromID("Brthug3"));
+			LAi_SetFightMode(CharacterFromID("Brthug3"), true);
 
 			PlaySound("OBJECTS\duel\knife_woodrattle.wav");
 
@@ -2754,7 +2609,7 @@ void QuestComplete(string sQuestName)
 			PlaySound("OBJECTS\duel\knife_male.wav");
 
 			LAi_ApplyCharacterDamage(Pchar, 10 + rand(5));
-			LAi_tmpl_ani_PlayAnimation(Pchar, "afraid", 4.5);		//was 1 0r 1.5
+			LAi_tmpl_ani_PlayAnimation(Pchar, "afraid", 4.5);
 
 			RemoveCharacterEquip(CharacterFromID("Brthug3"), BLADE_ITEM_TYPE);
 	              	TakeItemFromCharacter(CharacterFromID("Brthug3"), "blade5" );//a fake throwing knife
@@ -2805,8 +2660,7 @@ void QuestComplete(string sQuestName)
 		case "afraid_to_jump":
 			//from Caroline dialog1
 
-			ChangeCharacterAddressGroup(CharacterFromID("Wench3"), "QC_town", "goto", "roof6");
-			PlaySound("PEOPLE\Run_stone.wav");
+			LAi_ActorRunToLocator(characterFromID("Wench3"), "goto", "roof6", "_", 2.0);
 
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "goto", "roof6");
@@ -2817,8 +2671,6 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "afraid_to_jump_1":
-			LAi_SetPlayerType(Pchar);
-
 			LAi_SetActorType(characterFromID("Wench3"));
 			LAi_ActorTurnToCharacter(characterFromID("Wench3"), PChar);
 			LAi_ActorDialog(characterFromID("Wench3"), pchar, "", 1.0, 1.0);
@@ -2827,16 +2679,21 @@ void QuestComplete(string sQuestName)
 //=================================================================================================================
 		case "afraid_to_jump_2":
 			//from Caroline dialog2
-			PlaySound("PEOPLE\recoil.wav");
+			LAi_SetPlayerType(Pchar);
 
-			ChangeCharacterAddressGroup(CharacterFromID("Wench3"), "QC_town", "reload", "reload22");
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "box", "box5");
+			LAi_ActorRunToLocator(characterFromID("Wench3"), "goto", "reload22", "_", 2.0);
+		//	ChangeCharacterAddressGroup(Pchar, "QC_town", "box", "box5");
 
 			pchar.quest.wr_quest2 = "store_upperdoor_talk";
+
+			pchar.quest.afraid_to_jump_3.win_condition.l1 = "locator"
+			pchar.quest.afraid_to_jump_3.win_condition.l1.location = "QC_town";
+			pchar.quest.afraid_to_jump_3.win_condition.l1.locator_group = "goto";
+			pchar.quest.afraid_to_jump_3.win_condition.l1.locator = "roof6";	//was roof6
+			pchar.quest.afraid_to_jump_3.win_condition = "afraid_to_jump_3";
 		break;
 
 		case "afraid_to_jump_3":
-			PlaySound("PEOPLE\Run_stone.wav");//pchar running
 			LAi_QuestDelay("afraid_to_jump_4", 2.0);
 		break;
 
@@ -2849,25 +2706,27 @@ void QuestComplete(string sQuestName)
 
 		case "store_upperdoor":
 			//from CK dialog
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "box", "box6");
+		//	ChangeCharacterAddressGroup(Pchar, "QC_town", "box", "box6");
 			pchar.quest.wr_quest2 = "go_on_Captain";
 
 			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "reload", "reload25");
+			LAi_ActorTurnToLocator(Pchar, "goto", "reload25");
 
-			ChangeCharacterAddressGroup(CharacterFromID("Wench3"), "QC_town", "goto", "roof5");
-			PlaySound("PEOPLE\Run_stone.wav");
-
-			LAi_QuestDelay("store_upperdoor_1", 0.5);
+			LAi_ActorRunToLocator(characterFromID("Wench3"), "goto", "roof5", "store_upperdoor_1", 2.0);
 		break;
-
+//pär här
 		case "store_upperdoor_1":
+			LAi_SetActorType(characterFromID("Wench3"));
+			LAi_ActorTurnToCharacter(characterFromID("Wench3"), PChar);
+
 			LAi_SetPlayerType(Pchar);
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "box", "box7", 0.7);
+			Locations[FindLocation("QC_town")].locators_radius.box.box7 = 0.7;
+
+			LAi_QuestDelay("store_upperdoor_2", 0.01);
 		break;
 
 		case "store_upperdoor_2":
-			PlaySound("PEOPLE\Run_stone.wav");
-
 			pchar.quest.store_upstairs.win_condition.l1 = "locator";
 			pchar.quest.store_upstairs.win_condition.l1.location = "QC_store_upstairs";
 			pchar.quest.store_upstairs.win_condition.l1.locator_group = "goto";
@@ -3416,7 +3275,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("3thugs_checkdead", 0.5);
 		break;
-
+//pär här
 		case "3thugs_checkdead":
 			Pchar.quest.3thugs_dead_yes.win_condition.l1 = "NPC_Death";
 			Pchar.quest.3thugs_dead_yes.win_condition.l1.character = "Brthug5";
@@ -3444,7 +3303,9 @@ void QuestComplete(string sQuestName)
 			PlaySound("VOICE\ENGLISH\blaze_puh.wav");
 			PlaySound("VOICE\ENGLISH\blaze_puh.wav");
 			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "reload", "reload23");
+		//	LAi_ActorTurnToLocator(Pchar, "reload", "reload23");
+		LAi_ActorTurnToCharacter(PChar, CharacterFromID("Wench3"));
+
 			LAi_QuestDelay("3thugs_dead_yes_2", 2.0);
 		break;
 
@@ -3458,22 +3319,57 @@ void QuestComplete(string sQuestName)
 			//from caroline dialog
 			ChangeCharacterAddressGroup(Pchar, "QC_town", "box", "box8");
 			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "reload", "reload22");
-		break;
+		//	LAi_ActorTurnToLocator(Pchar, "reload", "reload22");
+	//	LAi_ActorTurnToLocator(Pchar, "goto", "reload22");
 
+			LAi_SetPlayerType(Pchar);
+
+			pchar.quest.run_and_jump_A.win_condition.l1 = "locator";
+			pchar.quest.run_and_jump_A.win_condition.l1.location = "QC_town";
+			pchar.quest.run_and_jump_A.win_condition.l1.locator_group = "goto";
+			pchar.quest.run_and_jump_A.win_condition.l1.locator = "goto28";
+			pchar.quest.run_and_jump_A.win_condition = "run_and_jump_3";
+
+			pchar.quest.run_and_jump_B.win_condition.l1 = "locator";
+			pchar.quest.run_and_jump_B.win_condition.l1.location = "QC_town";
+			pchar.quest.run_and_jump_B.win_condition.l1.locator_group = "goto";
+			pchar.quest.run_and_jump_B.win_condition.l1.locator = "goto29";
+			pchar.quest.run_and_jump_B.win_condition = "run_and_jump_3";
+
+			pchar.quest.run_and_jump_C.win_condition.l1 = "locator";
+			pchar.quest.run_and_jump_C.win_condition.l1.location = "QC_town";
+			pchar.quest.run_and_jump_C.win_condition.l1.locator_group = "goto";
+			pchar.quest.run_and_jump_C.win_condition.l1.locator = "goto30";
+			pchar.quest.run_and_jump_C.win_condition = "run_and_jump_3";
+
+			pchar.quest.run_and_jump_D.win_condition.l1 = "locator";
+			pchar.quest.run_and_jump_D.win_condition.l1.location = "QC_town";
+			pchar.quest.run_and_jump_D.win_condition.l1.locator_group = "goto";
+			pchar.quest.run_and_jump_D.win_condition.l1.locator = "reload22";
+			pchar.quest.run_and_jump_D.win_condition = "run_and_jump_3";
+		break;
+	/*
 		case "run_and_jump_1":
-			PlaySound("PEOPLE\Run_stone.wav");
-			LAi_QuestDelay("run_and_jump_2", 0.5);
-		break;
+			//from box8
 
+		LAi_SetActorType(Pchar);
+		LAi_ActorGoToLocator(Pchar, "goto", "reload22", "run_and_jump_3", 2.0);
+		//	PlaySound("PEOPLE\Run_stone.wav");
+
+		//	LAi_QuestDelay("run_and_jump_2", 0.5);
+		break;
+	
 		case "run_and_jump_2":
-			ChangeCharacterAddressGroup(Pchar, "QC_town", "reload", "reload22");
+		//	ChangeCharacterAddressGroup(Pchar, "QC_town", "reload", "reload22");
+		ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "reload22");
+
 			LAi_QuestDelay("run_and_jump_3", 0.2);
 		break;
-
+	*/
 		case "run_and_jump_3":
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "reload", "reload1");
+
 			LAi_QuestDelay("run_and_jump_5", 0.5);//was 0.2
 		break;
 
@@ -3481,6 +3377,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(Pchar, "QC_town", "goto", "goto40");
 			LAi_SetSitType(Pchar);
 			PlaySound("PEOPLE\Jump_roof.wav");
+
 			LAi_QuestDelay("run_and_jump_8", 0.7);
 		break;
 
@@ -3489,11 +3386,13 @@ void QuestComplete(string sQuestName)
 			LAi_SetPoorType(Pchar);
 			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto40");
 			PlaySound("PEOPLE\Jump.wav");
+
 			LAi_QuestDelay("run_and_jump_9", 0.8);
 		break;
 
 		case "run_and_jump_9":
 			ChangeCharacterAddressGroup(characterFromID("Wench3"), "QC_town", "goto", "goto40A");
+
 			LAi_QuestDelay("run_and_jump_10", 0.1);//was 0.2
 		break;
 
@@ -4801,9 +4700,13 @@ void QuestComplete(string sQuestName)
 
 			LAi_QuestDelay("cb_blaze_ready", 1.0);
 
+		Locations[FindLocation("QC_town")].models.day.charactersPatch = "QCtown_p";		//reset
+		Locations[FindLocation("QC_town")].models.night.charactersPatch = "QCtown_roofs_p";
+	
 			pchar.quest.store_roof_1.win_condition.l1 = "location";
 			pchar.quest.store_roof_1.win_condition.l1.location = "QC_town";
 			pchar.quest.store_roof_1.win_condition = "store_roof_1";
+	
 		break;
 
 		case "cb_blaze_ready":
@@ -15821,7 +15724,15 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "place_plank_on_floor":
-			//from itemlogic prison box7
+			//from SL_utils wr_prison box7
+
+			//extra check as bladeplank still could be in pchars hands
+			if(CheckCharacterItem(Pchar,"bladeplank"))
+			{
+				if(IsEquipCharacterByItem(Pchar, "bladeplank")) RemoveCharacterEquip(Pchar, BLADE_ITEM_TYPE);
+				TakeItemFromCharacter(Pchar, "bladeplank");
+			}
+
 			Locations[FindLocation("wr_prison")].image = "wr_prison.tga";
 			PlaySound("PEOPLE\wood2.wav");
 

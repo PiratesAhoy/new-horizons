@@ -132,7 +132,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -186,7 +186,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 	
 			//Patrol
@@ -240,7 +240,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -294,7 +294,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 	
 			//Patrol
@@ -348,7 +348,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 	
 			//Patrol
@@ -402,7 +402,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -456,7 +456,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -510,7 +510,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -564,7 +564,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -618,7 +618,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -672,7 +672,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -726,7 +726,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -780,7 +780,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -834,7 +834,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -888,7 +888,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -942,7 +942,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -996,7 +996,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -1050,7 +1050,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -1104,7 +1104,7 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 23.0, 8.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);		
 
 			//Guardian
@@ -1158,6 +1158,6 @@ void CreateIslaMonaCharacters(ref n)
 	LAi_SetLoginTime(ch, 23.0, 8.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);		
 }

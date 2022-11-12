@@ -117,6 +117,7 @@ void ProcessDialogEvent()
 			Preprocessor_AddQuestData("amount",sti(NPChar.fetch_quest.amount));
 			Preprocessor_AddQuestData("good",Goods[sti(NPChar.fetch_quest.good)].name);
 			Preprocessor_AddQuestData("money",sti(NPChar.fetch_quest.money));
+			Preprocessor_AddQuestData("pronoun2",XI_ConvertString(GetMyPronounObj(NPChar)));
 			Preprocessor_AddQuestData("date",NPChar.fetch_quest.expire);
 			questbookname = "fetch&number="+NPChar.fetch_quest.cargoid+NPChar.index; //Set a questname
 			SetQuestHeader(questbookname);
@@ -126,6 +127,7 @@ void ProcessDialogEvent()
 			Preprocessor_Remove("amount");
 			Preprocessor_Remove("good");
 			Preprocessor_Remove("money");
+			Preprocessor_Remove("pronoun2");
 			Preprocessor_Remove("date");
 			PChar.fetchquestactive = sti(PChar.fetchquestactive) +1;
 			NPChar.fetch_quest_active = TRUE;

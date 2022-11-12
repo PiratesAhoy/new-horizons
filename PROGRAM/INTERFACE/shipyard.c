@@ -3329,8 +3329,10 @@ void ClampShipToType(ref chref)
 	SetTownGold(sTownName, nStoreMoney); // PW: added because changes to store money from excess cargo were not saved on exiting shipyard
 	if( sti(chref.index)==GetMainCharacterIndex() )
 	{
-		if( CheckAttribute(chref,"location.old_from_sea") ) {
-			chref.location.from_sea = chref.location.old_from_sea;
+		if( CheckAttribute(chref,"location.old_from_sea") )
+		{
+			if(chref.location.old_from_sea != "") chref.location.from_sea = chref.location.old_from_sea;
+			if(chref.location.from_sea == "" && GetCurrentTownID() != "") chref.location.from_sea = GetAttribute(GetCurrentTown(), "boarding.l1");
 			SetFleetInTown(GetTownIDFromLocID(chref.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
 			DeleteAttribute(chref,"location.old_from_sea");
 		}

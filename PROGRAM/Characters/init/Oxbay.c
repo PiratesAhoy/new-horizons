@@ -108,7 +108,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 			//Soldier на входе в город
@@ -146,7 +146,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -184,7 +184,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -222,7 +222,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Беатрис Эпплгейт
@@ -364,7 +364,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 			//Soldier near Seagates of Oxbay
@@ -402,7 +402,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 			//Soldier near Seagates of Oxbay
@@ -440,7 +440,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 			//Soldier near Seagates of Oxbay
@@ -478,7 +478,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -516,7 +516,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -554,7 +554,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Мозес Блинман
@@ -761,7 +761,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 
@@ -799,7 +799,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Marvin";
@@ -901,7 +901,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "";
@@ -938,7 +938,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "";
@@ -975,7 +975,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "";
@@ -1012,7 +1012,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "";
@@ -1049,7 +1049,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "";
@@ -1086,7 +1086,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "";
@@ -1123,7 +1123,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "";
@@ -1160,7 +1160,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 // <-- KK
 
@@ -1477,7 +1477,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol
@@ -1515,7 +1515,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 
@@ -1708,7 +1708,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol
@@ -1746,7 +1746,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol
@@ -1784,7 +1784,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Soldier near the exit from town
@@ -1953,7 +1953,7 @@ void CreateOxbayCharacters(ref n)
 	ch.equip.blade = "blade4";
 	ch.location	= "Greenford_town";
 	ch.location.group = "goto";
-	ch.location.locator = "goto55";
+	ch.location.locator = "goto57"; // Was "goto55", which is near prison
 	ch.Dialog.Filename = "Greenford Soldier_dialog.c";
 	ch.rank 	= 1;
 	ch.nation = ENGLAND;
@@ -2589,7 +2589,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Mine Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Mine Soldier"
 	AddGameCharacter(n, ch);
 
 			//Soldier in mine
@@ -2628,7 +2628,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Mine Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Mine Soldier"
 	AddGameCharacter(n, ch);
 
 			//Soldier in mine
@@ -2667,7 +2667,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Mine Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Mine Soldier"
 	AddGameCharacter(n, ch);
 
 			//Soldier in mine
@@ -2706,7 +2706,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Mine Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Mine Soldier"
 	AddGameCharacter(n, ch);
 
 			//worker in mine
@@ -2942,7 +2942,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Mine Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Mine Soldier"
 	AddGameCharacter(n, ch);
 
 			//Soldier in canyon
@@ -2980,7 +2980,7 @@ void CreateOxbayCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Mine Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Mine Soldier"
 	AddGameCharacter(n, ch);
 
 			//Father Jerald

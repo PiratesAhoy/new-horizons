@@ -81,7 +81,7 @@ void InitInterface_RS(string iniName, ref gambler, string curName)
 	else CardsAmount = MAX_CARDS;
 
 	
-	gambleperk = CheckCharacterPerk(playerChar,"HighStakes"); //Just to be sure because it seemed to work strange.
+	gambleperk = CheckPerkForGroup(playerChar,"HighStakes"); //Just to be sure because it seemed to work strange.
 	gambleChar = gambler;
 	gambleID = gambler.id;
 	infoText = "";

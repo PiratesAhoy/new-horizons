@@ -1153,7 +1153,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -1190,7 +1190,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 	
 			//Patrol
@@ -1227,7 +1227,7 @@ void CreateQuebradasCostillasCharacters(ref n)
 	LAi_SetLoginTime(ch, 6.0, 21.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 	
 			// Jean Filaut (верфь)

@@ -273,12 +273,13 @@ bool LEnc_MonstersLoginStart(ref location)
 							location_or_nation = GetLocationNation(location);
 						switch(location_or_nation)
 						{
-							case 0 : if(GetServedNation() != ENGLAND) {Random_Raid("Soldiers", 10, ENGLAND,  LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
-							case 1 : if(GetServedNation() != FRANCE)  {Random_Raid("Soldiers", 10, FRANCE,   LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
-							case 2 : if(GetServedNation() != SPAIN)   {Random_Raid("Soldiers", 10, SPAIN,    LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
-							case 4 : if(GetServedNation() != HOLLAND) {Random_Raid("Soldiers", 10, HOLLAND,  LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
-							case 5 : if(GetServedNation() != PORTUGAL){Random_Raid("Soldiers", 10, PORTUGAL, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;	
-							case 6 : if(GetServedNation() != AMERICA) {Random_Raid("Soldiers", 10, AMERICA,  LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;	
+							case ENGLAND : if(GetServedNation() != ENGLAND) {Random_Raid("Soldiers", 10, ENGLAND,  LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
+							case FRANCE : if(GetServedNation() != FRANCE)  {Random_Raid("Soldiers", 10, FRANCE,   LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
+							case SPAIN : if(GetServedNation() != SPAIN)   {Random_Raid("Soldiers", 10, SPAIN,    LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
+							case HOLLAND : if(GetServedNation() != HOLLAND) {Random_Raid("Soldiers", 10, HOLLAND,  LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
+							case PORTUGAL : if(GetServedNation() != PORTUGAL){Random_Raid("Soldiers", 10, PORTUGAL, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;	
+							case GUEST1_NATION : if(GetServedNation() != GUEST1_NATION) {Random_Raid("Soldiers", 10, GUEST1_NATION,  LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL,  "MILITARY RAID!!!");}break;
+							case PERSONAL_NATION: if(GetServedNation() != PERSONAL_NATION) {Random_Raid("smugglers", 10, PIRATE, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, "AMBUSH!!!");}break;
 						}
 					break;
 
@@ -286,7 +287,7 @@ bool LEnc_MonstersLoginStart(ref location)
 						Random_Raid("smugglers", 8, PIRATE, LAI_GROUP_ENEMY, LAI_GROUP_NEUTRAL, "AMBUSH!!!");
 					break;
 
-					case 2: 
+					case 2:
 						if (CheckAttribute(location, "townsack"))
 							location_or_nation = GettownNation(location.townsack);
 						else
@@ -294,7 +295,7 @@ bool LEnc_MonstersLoginStart(ref location)
 						if (location_or_nation != PIRATE) Random_Patrol("Soldiers", RAND(15), location_or_nation,"SOLDIERS PATROL!");
 					break;
 
-					case 3: 
+					case 3:
 						if (CheckAttribute(location, "townsack"))
 							location_or_nation = GettownNation(location.townsack);
 						else
@@ -911,6 +912,7 @@ bool LEnc_MonstersLoginSelectModel(ref location, aref modelInfo, string group, s
 				// Cap'n Crunch <--
 				if(ModelIsType(PChar.model, "Animists")) modelinfo.model = "Animists";
 				if(CheckCharacterItem(PChar, "Davy_Chest")) modelinfo.model = "Davycrew";
+				if(CheckCharacterItem(PChar, "Devil_Contract")) modelinfo.model = "Ghost";
 			break;
 
 			case "own_deck":

@@ -1050,9 +1050,9 @@ float getCoastGuardEncounterChance()
 	chance_get_caught = chance_get_caught * (0.8 + (difficulty*0.1)); // is between 1 and 4 and with 2 it should give the same chance and if higher the chance should go up again.
 	if(DEBUG_SMUGGLING>2) trace("SMUGGLING difficulty: "+difficulty+" chance: "+chance_get_caught);
 	//Check perks
-	if(CheckCharacterPerk(Pchar,"ImproveSmuggling")) chance_get_caught = chance_get_caught * 0.95;
-	if(CheckCharacterPerk(Pchar,"AdvanceSmuggling")) chance_get_caught = chance_get_caught * 0.90;
-	if(DEBUG_SMUGGLING>2) trace("SMUGGLING perks ImproveSmuggling: "+CheckCharacterPerk(Pchar,"ImproveSmuggling")+" AdvanceSmuggling "+CheckCharacterPerk(Pchar,"AdvanceSmuggling")+" chance: "+chance_get_caught);
+	if(CheckPerkForGroup(Pchar,"ImproveSmuggling")) chance_get_caught = chance_get_caught * 0.95;
+	if(CheckPerkForGroup(Pchar,"AdvanceSmuggling")) chance_get_caught = chance_get_caught * 0.90;
+	if(DEBUG_SMUGGLING>2) trace("SMUGGLING perks ImproveSmuggling: "+CheckPerkForGroup(Pchar,"ImproveSmuggling")+" AdvanceSmuggling "+CheckPerkForGroup(Pchar,"AdvanceSmuggling")+" chance: "+chance_get_caught);
 	if(DEBUG_SMUGGLING>0) trace("SMUGGLING chance get caught: "+chance_get_caught);
 	return chance_get_caught;
 }
@@ -1100,8 +1100,8 @@ int GetBestSmugglingtime(ref sisland,ref chr)
 	int cLuck = CalcCharacterSkill(chr,SKILL_SNEAK); // DeathDaisy: Changed from float to int since it will always be a round number
 	int cLeadership = CalcCharacterSkill(chr,SKILL_LEADERSHIP);
 	int badinfo_chance = makeint((SMUGGLING_PERCENTAGE_BAD_INFO/100)*(((11-cLuck)*5)-((11-cLeadership)*2)));
-	if(CheckCharacterPerk(chr,"Trustworthy")) badinfo_chance = badinfo_chance*0.7;
-	if(CheckCharacterPerk(chr,"IronWill")) badinfo_chance = badinfo_chance*0.8;
+	if(CheckPerkForGroup(chr,"Trustworthy")) badinfo_chance = badinfo_chance*0.7;
+	if(CheckPerkForGroup(chr,"IronWill")) badinfo_chance = badinfo_chance*0.8;
 	/*if(CheckCharacterPerk(chr,"Charisma")) badinfo_chance = badinfo_chance*0.5;
 	if(CheckCharacterPerk(chr,"WitCharm")) badinfo_chance = 0;*/
 //	trace("chance = "+badinfo_chance);
@@ -1497,8 +1497,8 @@ int getOpiumCaughtChance()
 	chance = chance - (50-GetDifficulty()*10);
 	float mult = 1;
 	//Take smuggling perks into account:
-	if(CheckCharacterPerk(Pchar,"ImproveSmuggling")) mult = mult - 0.10;
-	if(CheckCharacterPerk(Pchar,"AdvanceSmuggling")) mult = mult - 0.15;
+	if(CheckPerkForGroup(Pchar,"ImproveSmuggling")) mult = mult - 0.10;
+	if(CheckPerkForGroup(Pchar,"AdvanceSmuggling")) mult = mult - 0.15;
 	//At night you wont be detected that easy
 	if(!isDay()) 
 	{
@@ -1692,7 +1692,7 @@ void CreateCoastGuardPatrol()
 	if(DEBUG_SMUGGLING>1) trace("SMUGGLING load Coastguard patrol and pursuit");
 	//Levis add smuggling perk -->
 	float largegroup_chance = 100.0;
-	if(CheckCharacterPerk(Pchar,"ImproveSmuggling"))
+	if(CheckPerkForGroup(Pchar,"ImproveSmuggling"))
 	{
 		largegroup_chance = largegroup_chance*0.5;
 	}
@@ -1701,7 +1701,7 @@ void CreateCoastGuardPatrol()
 	string group = "reload";
 	string locator;
 	int fromseachance = 50;
-	if(CheckCharacterPerk(Pchar,"AdvanceSmuggling"))
+	if(CheckPerkForGroup(Pchar,"AdvanceSmuggling"))
 	{
 		fromseachance = fromseachance*0.5;
 	}

@@ -2374,7 +2374,8 @@ void SetUpGovernor()
 		LAi_SetSitType(captured_governor);
 	LAi_SetLoginTime(captured_governor, 0.0, 24.0);
 	LAi_group_MoveCharacter(captured_governor, LAI_GROUP_PLAYER);
-	captured_governor.greeting = "Gr_Clauss"; // was "Gr_Dark Teacher" which is identical
+	if (captured_governor.sex == "woman") captured_governor.greeting = "Gr_Rachel Blacque";		// "Gr_Angelique Moulin" ("Bonjour, monsieur. At your service."), "Gr_Arabella Silehard" ("I'm not so much a governor as I am an agent of the monarchy"), "Gr_Rachel Blacque" ("Oui, monsieur? You wish to speak with me?") 
+	else captured_governor.greeting = "Gr_Clauss";							// "Parlez, captain?" Was "Gr_Dark Teacher" which is identical
 	captured_governor.town = town;
 
 	boarding_enemy = captured_governor;

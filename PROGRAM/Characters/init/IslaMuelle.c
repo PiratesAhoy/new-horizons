@@ -324,7 +324,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol.
@@ -363,7 +363,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Port Administrator
@@ -734,7 +734,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol.
@@ -773,7 +773,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol.
@@ -812,7 +812,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol.
@@ -851,7 +851,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Nunno Gats.
@@ -1144,7 +1144,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol.
@@ -1183,7 +1183,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Garci Crusellas.
@@ -1409,7 +1409,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol.
@@ -1448,7 +1448,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Iuliano Enciso.
@@ -1824,7 +1824,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol.
@@ -1863,7 +1863,7 @@ void CreateIslaMuelleCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Vito Ordonez.

@@ -8070,6 +8070,16 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "final_battle_with_dark_teacher":
+// Attempted fix for game crashing if player disables WEAPONSMOD during game -->
+			ch = CharacterFromID("Dark teacher");
+			if (!ENABLE_WEAPONSMOD)
+			{
+				if (GetCharacterEquipByGroup(ch, BLADE_ITEM_TYPE) == "" || GetCharacterEquipByGroup(ch, BLADE_ITEM_TYPE) == "bladeC36+2")
+				GiveItem2Character(ch, "bladeC36");	// Katana
+				EquipCharacterByItem(ch, "bladeC36");
+			}
+// <-- Attempted fix for game crashing if player disables WEAPONSMOD during game
+
 			LAi_SetStayType(pchar);
 			LAi_SetActorType(characterFromID("Dark teacher"));
 			LAi_ActorDialogNow(characterFromID("Dark teacher"), pchar, "player_back", 1.0);
@@ -12182,8 +12192,9 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "kapitein_escape_to_sea":
-			Locations[FindLocation("Douwesen_town")].reload.l7.disable = 0;		// Unlock townhall entrance
+			Locations[FindLocation("Douwesen_town")].reload.l7.disable = 0;					// Unlock townhall entrance
 			PChar.quest.kapitein = "on_the_run";
+			if (LANDCREWMEMBERS) Locations[FindLocation("Douwesen_town")].vcskip = true;			// Extra crew ashore plus extra encounters can prevent arresting soldiers from spawning
 			PChar.quest.kapitein_arrest.win_condition.l1 = "Timer";
 			PChar.quest.kapitein_arrest.win_condition.l1.date.day = GetAddingDataDay(0,0,14);
 			PChar.quest.kapitein_arrest.win_condition.l1.date.month = GetAddingDataMonth(0,0,14);
@@ -12194,6 +12205,7 @@ void SideQuestComplete(string sQuestName)
 		break;
 
 		case "kapitein_arrest":
+			DeleteAttribute(&Locations[FindLocation("Douwesen_town")],"vcskip");
 			StartQuestMovie(true, true, false);
 			DisableFastTravel(true);
 			for (i=1; i<4; i++)
@@ -12428,6 +12440,7 @@ void SideQuestComplete(string sQuestName)
 		case "Hornblower_initiate_Natividad":	// Triggered by dialog with governor when Hornblower is promoted to rank 6
 			SetQuestHeader("Natividad");
 			AddQuestRecord("Natividad", 1);
+			setCharacterShipLocation(CharacterFromID("Sir Edward Pellew"), "Greenford_port");
 			Characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_freeplay_dialog.c";
 			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.CurrentNode = "First time";
 		break;
@@ -14297,7 +14310,7 @@ void SideQuestComplete(string sQuestName)
 			Characters[GetCharacterIndex("Carib_Warrior")].dialog.CurrentNode = "walk_to_side";
 			LAi_ActorDialog(characterFromID("Carib_Warrior"), PChar, "crysskull_carib_warrior_shows_bridge_way",5.0,5.0);
 
-			PChar.quest.crysskull_bridge_trap1.win_condition.l1 = "locator";
+/*			PChar.quest.crysskull_bridge_trap1.win_condition.l1 = "locator";	// Now set in "Periods.c"
 			PChar.quest.crysskull_bridge_trap1.win_condition.l1.location = "FalaiseDeFleur_Bridge";
 			PChar.quest.crysskull_bridge_trap1.win_condition.l1.locator_group = "goto";
 			PChar.quest.crysskull_bridge_trap1.win_condition.l1.locator = "goto30";
@@ -14306,7 +14319,7 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.crysskull_bridge_trap2.win_condition.l1.location = "FalaiseDeFleur_Bridge";
 			PChar.quest.crysskull_bridge_trap2.win_condition.l1.locator_group = "goto";
 			PChar.quest.crysskull_bridge_trap2.win_condition.l1.locator = "goto40";
-			PChar.quest.crysskull_bridge_trap2.win_condition = "crysskull_bridge_trap";
+			PChar.quest.crysskull_bridge_trap2.win_condition = "crysskull_bridge_trap"; */
 
 			PChar.quest.crysskull_jungle_arrival.win_condition.l1 = "location";
 			PChar.quest.crysskull_jungle_arrival.win_condition.l1.location = "FalaiseDeFleur_jungle_01";

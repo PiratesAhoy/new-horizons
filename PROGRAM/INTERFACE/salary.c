@@ -230,7 +230,7 @@ void SkipSailorPayment()
 
 	int nLeadership = GetShipSkill(mchref,SKILL_LEADERSHIP);
 	int nMoraleDecreaseQ = 30 - nLeaderShip;
-	if( CheckCharacterPerk(mchref,"IronWill") ) nMoraleDecreaseQ /= 2;
+	if (CheckPerkForGroup(mchref,"IronWill")) nMoraleDecreaseQ /= 2;
 	nMoraleDecreaseQ = abs(sti(mchref.repeat_salary_payment)) * nMoraleDecreaseQ;
 	// PB: Repeat Payment Skipping Penalty <--
 

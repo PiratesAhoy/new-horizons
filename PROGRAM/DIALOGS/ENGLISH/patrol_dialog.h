@@ -20,7 +20,7 @@ string DLG_TEXT[23] = {
 "Allright, carry on, and a quiet watch to you.",
 "Haven't you read the 'NO TRESPASSING' signs at the gate? This is a top secret Army fortification, and only soldiers of the elite Coastal Brigade may enter. Anyone else will be considered a spy! Especially certain privateering shipcaptains!",
 "Sign? Sorry, I can't read. And I have an urgent appointment with the royal inspector... eh, I mean I am the inspector and have...",
-"Any orders, #ssir?#",
-"Nothing for now."
+"Any orders, #ssir#?",
+"Nothing for now.",
 
 };

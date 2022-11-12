@@ -1518,6 +1518,9 @@ trace("CaptureTownForNation: town="+town+", 1st="+bFirstInit);
 		ResetCharacterMemory(fortchar); // PB
 		if (iNation != PERSONAL_NATION) SetModelFromID(fortchar, SelectSoldierModelByNation(iNation, "officer"));
 	}
+
+	if (iNation == PERSONAL_NATION && GetCurrentFlag() != PERSONAL_NATION && GetNationRelation(PERSONAL_NATION, GetCurrentFlag()) == RELATION_ENEMY)
+		HoistFlag(PERSONAL_NATION); // GR: if you capture the town for yourself while flying a flag hostile to yourself, auto-hoist Personal flag to avoid trouble with your own fort and soldiers
 }
 
 bool DisableTownCapture(string town, bool disable)

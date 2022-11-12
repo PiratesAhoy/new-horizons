@@ -89,7 +89,7 @@ float MaxHealthPotionForCharacter(ref chref, ref idx)
 			n = GetItemIndex(GetAttributeName(GetAttributeN(chritems, i)));
 			if(CheckAttribute(&Items[n],"potion"))
 			{
-				if(CheckAttribute(&Items[n],"potion.health"))
+				if(CheckAttribute(&Items[n],"potion.health") && stf(Items[n].potion.health)>0)
 				{
 					if(isFinded)
 					{
@@ -127,7 +127,7 @@ float MinHealthPotionForCharacter(ref chref, ref idx)
 			n = GetItemIndex(GetAttributeName(GetAttributeN(chritems, i)));
 			if(n >= 0 && CheckAttribute(&Items[n],"potion"))	// LDH fix for negative index
 			{
-				if(CheckAttribute(&Items[n],"potion.health"))
+				if(CheckAttribute(&Items[n],"potion.health") && stf(Items[n].potion.health)>0)
 				{
 					if(isFinded)
 					{
@@ -252,7 +252,7 @@ int FindQuestUsableItem(ref arFind, int startIdx)
 bool EnablePotionUsing(ref mc, aref arItm)
 {
 	bool bEnableUse = false;
-	if( CheckAttribute(arItm,"potion.health") ) {
+	if( CheckAttribute(arItm,"potion.health") && stf(arItm.potion.health) > 0) {
 		if( LAi_GetCharacterHP(mc)<LAi_GetCharacterMaxHP(mc) ) {
 			return true;
 		}

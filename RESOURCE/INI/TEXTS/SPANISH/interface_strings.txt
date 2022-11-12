@@ -306,6 +306,7 @@ Cayman{Islas Caimán}
 Hispaniola{La Española}
 Cuba{Cuba}
 Guadeloupe{Guadeloupe}
+Santa Maria de Guadalupe de Extremadura{Santa María de Guadalupe}
 Saint Martin{Saint Martin}
 Antigua{Antigua}
 Turks{Islas Turcas}
@@ -699,6 +700,7 @@ Room in #stown_name# tavern{Habitación en la taberna de #stown_name#}
 #stown_name# residence{Residencia de #stown_name#}
 #stown_name# prison{Prisión de #stown_name#}
 #stown_name# brothel{Burdel de #stown_name#}
+#stown_name# Brothel room{Habitación del burdel de #stown_name#}
 Exit from #stown_name#{Salida de #stown_name#}
 #stown_name# Outskirts{Afueras de #stown_name#}
 #stown_name# Dungeon{Mazmorra de #stown_name#}
@@ -1137,9 +1139,6 @@ Your victim produces{Tu víctima saca}
 Your conduct didn't improve your reputation{Tu conducta no ayuda a mejorar tu reputación}
 Mustering those drunken tars takes till nightfall...{Reunir a esos marineros borrachos lleva hasta el anochecer...}
 
-For mature men only!{¡Solo para audiencias maduras!}
-Brothel Bedroom{Dormitorio del burdel}
-Naval academy{Academia Naval}
 Storehouse{Almacén}
 
 You wait here 5 days{Esperas aquí 5 días}

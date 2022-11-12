@@ -15,11 +15,12 @@ void ProcessDialogEvent()
 	makearef(Diag, NPChar.Dialog);
 
 	ref PChar = GetMainCharacter();
+	int iNation = sti(NPChar.nation);
 	
 	Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 	Preprocessor_Add("gender", GetMyAddressForm(NPChar, PChar, ADDR_GENDER, false, false)); // DeathDaisy
-	Preprocessor_Add("gendersubj", FirstLetterUp(GetMyPronounSubj(PChar))); // DeathDaisy
-	Preprocessor_Add("genderobj", GetMyPronounObj(PChar)); // DeathDaisy
+	Preprocessor_Add("gendersubj", FirstLetterUp(XI_ConvertString(GetMyPronounSubj(PChar)))); // DeathDaisy
+	Preprocessor_Add("genderobj", XI_ConvertString(GetMyPronounObj(PChar))); // DeathDaisy
 
 	switch(Dialog.CurrentNode)
 	{
@@ -47,12 +48,12 @@ void ProcessDialogEvent()
 			Dialog.snd = "voice\PADI\PADI001";
 
 			// ccc Dec 05 You are recognized for your pirating actions
-			if(GetServedNation() == PIRATE && GetCurrentLocationNation() != PIRATE)	// PB: Link this to acting as a pirate
+			if(GetServedNation() == PIRATE && GetCurrentLocationNation() != PIRATE && iNation != PERSONAL_NATION)	// PB: Link this to acting as a pirate
 			{
 				Dialog.Text = DLG_TEXT[0] + GetMySimpleName(PChar) + DLG_TEXT[1];
 				Link.l1 = RandSwear() + DLG_TEXT[2];
 				Link.l1.go = "exit_soldiers";
-				switch(makeint(NPChar.nation))
+				switch(iNation)
 				{
 					case ENGLAND : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_a_068.wav"); break;
 					case FRANCE  : PlaySound("VOICE\" + LanguageGetLanguage() + "\Fre_m_c_056.wav"); break;
@@ -60,15 +61,24 @@ void ProcessDialogEvent()
 					case HOLLAND : PlaySound("VOICE\" + LanguageGetLanguage() + "\Dut_m_a_061.wav"); break;
 					case PORTUGAL: PlaySound("VOICE\" + LanguageGetLanguage() + "\Por_m_b_056.wav"); break;
 					case AMERICA : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_a_068.wav"); break;
+					case PERSONAL_NATION : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_b_068.wav"); break;
 				}
 				SetCoastalEnemy("","","","");
 			}
 			else
 			{
-				if (HaveLetterOfMarque(sti(NPChar.nation)))
+				if (HaveLetterOfMarque(sti(NPChar.nation)) || iNation == PERSONAL_NATION)
 				{
-					Dialog.Text = DLG_TEXT[3] + GetMySimpleName(PChar) + DLG_TEXT[4];
-					Link.l1 = DLG_TEXT[5];
+					if (iNation == PERSONAL_NATION)
+					{
+						Dialog.Text = DLG_TEXT[28] + GetMySimpleName(PChar) + DLG_TEXT[29];
+						Link.l1 = DLG_TEXT[30];
+					}
+					else
+					{
+						Dialog.Text = DLG_TEXT[3] + GetMySimpleName(PChar) + DLG_TEXT[4];
+						Link.l1 = DLG_TEXT[5];
+					}
 					Link.l1.go = "exit";
 				}
 				else
@@ -77,7 +87,7 @@ void ProcessDialogEvent()
 					{
 						if(GetRMRelation(PChar, sti(NPChar.nation)) <= REL_WAR)
 						{
-							switch(sti(NPChar.nation))
+							switch(iNation)
 							{
 								case ENGLAND : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_a_067.wav"); break;
 								case FRANCE  : PlaySound("VOICE\" + LanguageGetLanguage() + "\Fre_m_c_065.wav"); break;
@@ -85,6 +95,7 @@ void ProcessDialogEvent()
 								case HOLLAND : PlaySound("VOICE\" + LanguageGetLanguage() + "\Dut_m_a_058.wav"); break;
 								case PORTUGAL: PlaySound("VOICE\" + LanguageGetLanguage() + "\Por_m_b_053.wav"); break;
 								case AMERICA : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_a_067.wav"); break;
+								case PERSONAL_NATION : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_b_067.wav"); break;
 							}
 							Dialog.Text = DLG_TEXT[6] + GetMySimpleName(PChar) + DLG_TEXT[7];
 							Link.l1 = DLG_TEXT[8] + GetNationDescByType(sti(NPChar.nation)) + DLG_TEXT[9];
@@ -102,6 +113,7 @@ void ProcessDialogEvent()
 									case HOLLAND : PlaySound("VOICE\" + LanguageGetLanguage() + "\Dut_m_a_058.wav"); break;
 									case PORTUGAL: PlaySound("VOICE\" + LanguageGetLanguage() + "\Por_m_b_053.wav"); break;
 									case AMERICA : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_a_067.wav"); break;
+									case PERSONAL_NATION : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_b_067.wav"); break;
 								}
 								Dialog.Text = DLG_TEXT[10] + GetNationDescByType(sti(NPChar.nation)) + DLG_TEXT[11] + GetNationDescByType(GetServedNation()) + DLG_TEXT[12];
 								Link.l1 = DLG_TEXT[8] + GetNationDescByType(sti(NPChar.nation)) + DLG_TEXT[9];
@@ -127,6 +139,7 @@ void ProcessDialogEvent()
 								case HOLLAND : PlaySound("VOICE\" + LanguageGetLanguage() + "\Dut_m_a_061.wav"); break;
 								case PORTUGAL: PlaySound("VOICE\" + LanguageGetLanguage() + "\Por_m_b_056.wav"); break;
 								case AMERICA : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_a_068.wav"); break;
+								case PERSONAL_NATION : PlaySound("VOICE\" + LanguageGetLanguage() + "\Eng_m_b_068.wav"); break;
 							}
 							Dialog.Text = DLG_TEXT[15] + GetNationDescByType(GetCurrentFlag()) + DLG_TEXT[16];
 							Link.l1 = DLG_TEXT[17];

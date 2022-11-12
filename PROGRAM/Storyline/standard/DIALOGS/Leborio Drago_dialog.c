@@ -280,7 +280,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			link.l2 = DLG_TEXT[71];
 			link.l2.go = "bad_learn";
-			AddQuestRecord("search_danielle", 17);
+//			AddQuestRecord("search_danielle", 17); // Too soon, this point can lead to either making the deal or threatening Leborio.
 		break;
 
 		case "bad_learn":
@@ -296,7 +296,8 @@ void ProcessDialogEvent()
 			link.l1.go = "bad_story_2";
 			Preprocessor_AddQuestData("Danielle", GetMyName(CharacterFromID("Danielle")));
 			Preprocessor_AddQuestData("pronoun", XI_ConvertString(GetMyPronounSubj(CharacterFromID("Danielle"))));
-			AddQuestRecord("search_danielle", 18);
+			if (pchar.quest.main_line == "resque_leborio") AddQuestRecord("search_danielle", 17);
+			else AddQuestRecord("search_danielle", 18);
 			Preprocessor_Remove("pronoun");
 			Preprocessor_Remove("Danielle");
 			NextDiag.tempnode = "first time";

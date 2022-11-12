@@ -408,6 +408,7 @@ void CreateArubaCharacters(ref n)
 	LAi_group_MoveCharacter(ch, "DOUWESEN_CITIZENS");
 	AddGameCharacter(n, ch);
 
+/*
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
@@ -441,7 +442,7 @@ void CreateArubaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Douwesen Soldier"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "";
@@ -477,15 +478,15 @@ void CreateArubaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Douwesen Soldier"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
-	
+*/
 	ch.old.name = "";
 	ch.old.lastname = "";
 	ch.name = "";
 	ch.lastname = "";
 	ch.id		= "Aruba_soldier1"; //Port guard
-	ch.model	= "Soldier_hol2";
+	ch.model	= 1; // GR: was "Soldier_hol2"
 	ch.sex = "man";
 	ch.sound_type = "soldier";
 	GiveItem2Character(ch, "blade4");
@@ -513,7 +514,7 @@ void CreateArubaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Douwesen Soldier"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
 	
 	ch.old.name = "";
@@ -521,7 +522,7 @@ void CreateArubaCharacters(ref n)
 	ch.name = "";
 	ch.lastname = "";
 	ch.id		= "Aruba_soldier3"; //Port guard
-	ch.model	= "Soldier_hol2";
+	ch.model	= 2; // GR: was "Soldier_hol2"
 	ch.sex = "man";
 	ch.sound_type = "soldier";
 	GiveItem2Character(ch, "blade4");
@@ -549,7 +550,7 @@ void CreateArubaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Douwesen Soldier"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
 	
 	ch.old.name = "";
@@ -557,7 +558,7 @@ void CreateArubaCharacters(ref n)
 	ch.name = "";
 	ch.lastname = "";
 	ch.id		= "Aruba_soldier4"; //Port guard
-	ch.model	= "Soldier_hol2";
+	ch.model	= 3; // GR: was "Soldier_hol2"
 	ch.sex = "man";
 	ch.sound_type = "soldier";
 	GiveItem2Character(ch, "blade4");
@@ -585,7 +586,7 @@ void CreateArubaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Douwesen Soldier"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
 	
 	ch.old.name = "";
@@ -593,7 +594,7 @@ void CreateArubaCharacters(ref n)
 	ch.name = "";
 	ch.lastname = "";
 	ch.id		= "Aruba_soldier5"; //Port guard
-	ch.model	= "Soldier_hol2";
+	ch.model	= 4; // GR: was "Soldier_hol2"
 	ch.sex = "man";
 	ch.sound_type = "soldier";
 	GiveItem2Character(ch, "blade4");
@@ -621,7 +622,7 @@ void CreateArubaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Douwesen Soldier"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
 	
 	ch.old.name = "";
@@ -629,7 +630,7 @@ void CreateArubaCharacters(ref n)
 	ch.name = "";
 	ch.lastname = "";
 	ch.id		= "Aruba_soldier6"; //Port guard
-	ch.model	= "Soldier_hol2";
+	ch.model	= 5; // GR: was "Soldier_hol2"
 	ch.sex = "man";
 	ch.sound_type = "soldier";
 	GiveItem2Character(ch, "blade4");
@@ -657,7 +658,7 @@ void CreateArubaCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Douwesen Soldier"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Arawak";

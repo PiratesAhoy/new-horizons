@@ -48,7 +48,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SHIP_FRENCH_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 	
 			//Patrol
@@ -94,7 +94,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SHIP_FRENCH_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -140,7 +140,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SHIP_FRENCH_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);	
 
 			//Guardian
@@ -186,7 +186,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SHIP_FRENCH_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -232,7 +232,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SHIP_FRENCH_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -278,7 +278,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SHIP_FRENCH_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Guardian
@@ -324,7 +324,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SHIP_FRENCH_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);	
 
 //====================================================================================================================
@@ -1143,7 +1143,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 20.0, 20.0);
 	LAi_group_MoveCharacter(ch, "MORRO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);	
 
        // Patrol	
@@ -1186,7 +1186,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 20.0, 20.0);
 	LAi_group_MoveCharacter(ch, "MORRO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -1229,7 +1229,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 20.0, 20.0);
 	LAi_group_MoveCharacter(ch, "MORRO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Soldier";
@@ -1271,7 +1271,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 20.0, 20.0);
 	LAi_group_MoveCharacter(ch, "MORRO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -1314,7 +1314,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 20.0, 20.0);
 	LAi_group_MoveCharacter(ch, "MORRO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Soldier";
@@ -1356,7 +1356,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 20.0, 20.0);
 	LAi_group_MoveCharacter(ch, "MORRO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Soldier";

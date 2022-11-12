@@ -13,20 +13,20 @@ void ProcessDialogEvent()
 	merch_kid_pronoun2 = XI_ConvertString(GetMyPronounObj(characterFromID(PChar.quest.villain)));
 	if (PChar.sex == "man")
 	{
-		your_gov_kid = DLG_TEXT[431];
-		your_gov_kid2 = DLG_TEXT[435];
-		my_gov_kid = DLG_TEXT[433];
-		my_gov_kid2 = DLG_TEXT[437];
+		your_gov_kid = DLG_TEXT[446];
+		your_gov_kid2 = DLG_TEXT[450];
+		my_gov_kid = DLG_TEXT[448];
+		my_gov_kid2 = DLG_TEXT[452];
 		gov_kid_pronoun3 = XI_ConvertString("her");
 		merch_kid = XI_ConvertString("son");
 		merch_kid_pronoun3 = XI_ConvertString("his");
 	}
 	else
 	{
-		your_gov_kid = DLG_TEXT[432];
-		your_gov_kid2 = DLG_TEXT[436];
-		my_gov_kid = DLG_TEXT[434];
-		my_gov_kid2 = DLG_TEXT[438];
+		your_gov_kid = DLG_TEXT[447];
+		your_gov_kid2 = DLG_TEXT[451];
+		my_gov_kid = DLG_TEXT[449];
+		my_gov_kid2 = DLG_TEXT[453];
 		gov_kid_pronoun3 = XI_ConvertString("his");
 		merch_kid = XI_ConvertString("daughter");
 		merch_kid_pronoun3 = XI_ConvertString("her");
@@ -34,7 +34,7 @@ void ProcessDialogEvent()
 
 	if(CheckAttribute(characterFromID(PChar.quest.romance), "married") && characters[getCharacterIndex(PChar.quest.romance)].married == MR_MARRIED && characters[getCharacterIndex(PChar.quest.romance)].married.id == PChar.id)
 		name = GetMyName(PChar);
-	else name = TranslateString("", "Capitán") + " " + GetMyLastName(PChar);
+	else name = TranslateString("", "Capitбn") + " " + GetMyLastName(PChar);
 
 	DeleteAttribute(&Dialog,"Links");
 
@@ -376,6 +376,46 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[132];
 			if(!LAi_IsDead(characterFromID(PChar.quest.villain)) && !CheckAttribute(PChar, "quest.finale_marriage")) AddDialogExitQuest("assassination_attempt");
 			link.l1.go = "Exit";
+		break;
+
+		case "dining_room1":
+			dialog.text = DLG_TEXT[438];
+			link.l1 = DLG_TEXT[439];
+			link.l1.go = "dining_room_mona";
+			if(CheckQuestAttribute("payroll_ship", "success"))
+			{
+				dialog.text = DLG_TEXT[431] + GetMyName(PChar) + DLG_TEXT[432];
+				link.l1 = DLG_TEXT[433];
+				link.l1.go = "dining_room_payroll_ship";
+			}
+		break;
+
+		case "dining_room_mona":
+			dialog.text = DLG_TEXT[440] + GetMyName(PChar) + DLG_TEXT[441];
+			link.l1 = DLG_TEXT[442];
+			AddDialogExitQuest("reception_chat_to_romance");
+			link.l1.go = "exit";
+		break;
+
+		case "dining_room_payroll_ship":
+			dialog.text = DLG_TEXT[434];
+			link.l1 = DLG_TEXT[435];
+			link.l1.go = "dining_room_payroll_ship2"
+		break;
+
+		case "dining_room_payroll_ship2":
+			dialog.text = DLG_TEXT[436];
+			link.l1 = DLG_TEXT[437];
+			AddDialogExitQuest("reception_chat_to_romance");
+			link.l1.go = "exit";
+		break;
+
+		case "dining_room_imperial_escort":
+			PChar.quest.imperial_escort_enable = true;
+			dialog.text = DLG_TEXT[443] + GetMyName(PChar) + DLG_TEXT[444];
+			link.l1 = DLG_TEXT[445];
+			AddDialogExitQuest("reception_chat_finish");
+			link.l1.go = "exit";
 		break;
 
 		case "reception_done":

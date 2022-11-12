@@ -21,7 +21,7 @@ string DLG_TEXT[48] = {
 "What do you want to talk about?",
 "I'm listening.",
 "I was asked to deliver some cargo to you.",
-"Might you be in need of a captain, sir? I have an excellent ship, and I can deliver any cargo, anywhere you like.",
+"Might you be in need of a captain, ma'am? I have an excellent ship, and I can deliver any cargo, anywhere you like.",
 "I've got no time to talk right now.",
 "No, I don't need your services. Not while you're sinking #snation_desc# ships.",
 "In that case, goodbye.",

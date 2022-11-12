@@ -20,3 +20,4 @@ text.t18=I agreed to take #sMarc#'s 500 gold and pay off the debt, and to take #
 text.t19=I told #sMarc# how happy his family was to receive his letter. This wasn't all that satisfying, though. I wonder if I could do more for this family?
 text.t20=Haha, poor trusting #sMarc#... now I'm 500 gold richer, and he's a bit wiser...
 text.t21=I put some backbone into that whiner, #sOrable#. He's got to learn to not take "no" for an answer. Now he'll show #sRachel# who's boss!
+text.t22=Later I learned that #sRachel# had resisted #sOrable#'s advances so violently that she had died from her injuries.

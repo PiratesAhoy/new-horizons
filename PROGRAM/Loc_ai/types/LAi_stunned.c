@@ -132,7 +132,7 @@ void LAi_StunnedStandsUp(aref chr)
 	else
 	{
 		string func;
-		if(IsOfficer(chr) || bAbordageStarted) func = "LAi_Set"+chr.stuntime.old_type+"Type";
+		if(IsOfficer(chr) || bAbordageStarted || chr.stuntime.old_type == "officer") func = "LAi_Set"+chr.stuntime.old_type+"Type";
 		else func = "LAi_Set"+chr.stuntime.old_type+"TypeNoGroup";
 		trace("old type func name is " + func + ", type is " + chr.stuntime.old_type);
 		call func(chr);

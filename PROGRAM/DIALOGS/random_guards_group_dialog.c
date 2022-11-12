@@ -31,7 +31,7 @@ void ProcessDialogEvent()
 		int pLeadership = CalcCharacterSkill(PChar,SKILL_LEADERSHIP);
 		int pLuck = CalcCharacterSkill(PChar,SKILL_SNEAK);
 		int PersuasionChance = 3+round(rand(pLuck*10)/10)+pLeadership-(getSmugglingState(smugisland)-1);
-		if(CheckCharacterPerk(PChar,"Trustworthy")) PersuasionChance = PersuasionChance+1;
+		if(CheckPerkForGroup(PChar,"Trustworthy")) PersuasionChance = PersuasionChance+1;
 		if(CheckCharacterPerk(PChar,"IronWill")) PersuasionChance = PersuasionChance+1;
 		//if(CheckCharacterPerk(PChar,"Charisma")) PersuasionChance = PersuasionChance+2;
 		//if(CheckCharacterPerk(PChar,"WitCharm")) PersuasionChance = PersuasionChance+3;
@@ -75,7 +75,7 @@ void ProcessDialogEvent()
 			if (sti(NPChar.nation) != PERSONAL_NATION && GetFlagRMRelation(sti(Npchar.nation)) == RELATION_ENEMY)
 			{
 				sNation = " " + GetNationDescByType(GetCurrentFlag());
-				if (GetCurrentFlag() == PERSONAL_NATION) sNation = "n "; // PB: Grammar "an enemy"
+				if (GetCurrentFlag() == PERSONAL_NATION && LanguageGetLanguage() == "English") sNation = "n"; // PB: Grammar "an enemy"
 				Preprocessor_Add("sir", GetMyAddressForm(NPChar, PChar, ADDR_POLITE, false, false)); // DeathDaisy
 				Dialog.Text = DLG_TEXT[7] + GetMySimpleName(PChar) + DLG_TEXT[8] + sNation + DLG_TEXT[32];
 				Link.l1 = DLG_TEXT[9];
@@ -215,7 +215,7 @@ void ProcessDialogEvent()
 			}
 			if(!CheckAttribute(Pchar,"quest.Contraband.Cardwon"))
 			{
-				if(CheckCharacterPerk(PChar,"HighStakes"))
+				if(CheckPerkForGroup(PChar,"HighStakes"))
 				{
 					Link.l3 = DLG_TEXT[28];
 					Link.l3.go = "playgame";

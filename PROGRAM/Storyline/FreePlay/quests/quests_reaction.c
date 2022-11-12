@@ -2401,6 +2401,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorFollowEverywhere(NPChar, "", 10.0);
 			LAi_group_MoveCharacter(NPChar, LAI_GROUP_PLAYER);
 			DisableFastTravel(true);
+           		Locations[FindLocation(PChar.location.from_sea)].vcskip = true;
 			PChar.quest.AgentStart_arrived_ship.win_condition.l1 = "location";
 			PChar.quest.AgentStart_arrived_ship.win_condition.l1.location = PChar.location.from_sea;
 			PChar.quest.AgentStart_arrived_ship.win_condition = "AgentStart_arrived_ship";
@@ -2408,6 +2409,8 @@ void QuestComplete(string sQuestName)
 
 		case "AgentStart_arrived_ship":
 			DisableFastTravel(false);
+			DeleteAttribute(&Locations[FindLocation(PChar.location.from_sea)],"vcskip");
+			LAi_SetFightMode(PChar, false);
 			i = sti(Characters[GetCharacterIndex("TQ_Char1")].nation);
 			if (i == PERSONAL_NATION) i = FindFriendlyNation2Nation(PERSONAL_NATION);
 			switch(i)

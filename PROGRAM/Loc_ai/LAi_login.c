@@ -134,6 +134,11 @@ bool LAi_CharacterLogin(aref chr, string locID)
 			chr.chr_ai.hp = hpmax;
 			hp = hpmax;
 			SetRandomNameToCharacter(chr);
+			if(CheckAttribute(chr, "chr_ai.soldiertype"))
+			{
+				chr.chr_ai.type = chr.chr_ai.soldiertype;
+				if(CheckAttribute(chr, "old.chr_ai.type") && chr.old.chr_ai.type != chr.chr_ai.soldiertype) chr.old.chr_ai.type = chr.chr_ai.type;
+			}
 			func = chr.chr_ai.type;
 			chr.chr_ai.type = "";
 			chr.chr_ai.tmpl = "";

@@ -51,7 +51,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Sir Edward Pellew"), "Antigua_Residence", "goto", "goto9");
 			ChangeCharacterAddress(characterFromID("Antigua_Regulating"), "None", "");
 			ChangeCharacterAddressGroup(characterFromID("Major Dunnitt"), "Antigua_Port", "goto", "goto5");
-			LAi_SetGuardianType(characterFromID("Major Dunnitt"));
+			LAi_SetGuardianTypeNoGroup(characterFromID("Major Dunnitt"));
 
 			LAi_ActorGoToLocator(characterfromID("Rifleman Cooper"), "merchant", "merchant2", "", 0.0);
 			LAi_ActorGoToLocator(characterfromID("Rifleman Haggman"), "merchant", "merchant2", "", 0.0);
@@ -424,7 +424,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Sail_for_Guadeloupe2":
-			LAi_SetGuardianType(characterFromID("Helmsman"));
+			LAi_SetCivilianGuardianType(characterFromID("Helmsman"));
 			characters[GetCharacterIndex("Helmsman")].Dialog.Filename = "Helmsman_dialog.c";
 			Characters[GetCharacterIndex("Helmsman")].dialog.CurrentNode = "First_sailing_orders";
 			LAi_ActorDialog(characterFromID("Helmsman"), pchar, "", 10.0, 10.0);
@@ -3395,8 +3395,6 @@ void QuestComplete(string sQuestName)
 
 			RemoveCharacterEquip(characterFromID("Midshipman Hunter"), BLADE_ITEM_TYPE);
 			RemoveCharacterEquip(characterFromID("Midshipman Hunter"), GUN_ITEM_TYPE);
-			EnableEquip(pchar, BLADE_ITEM_TYPE, false);
-			EnableEquip(pchar, GUN_ITEM_TYPE, false);
 
 			RemoveCharacterEquip(characterFromID("Styles"), BLADE_ITEM_TYPE);
 			RemoveCharacterEquip(characterFromID("Styles"), GUN_ITEM_TYPE);
@@ -3404,8 +3402,8 @@ void QuestComplete(string sQuestName)
 			RemoveCharacterEquip(characterFromID("Matthews"), BLADE_ITEM_TYPE);
 			RemoveCharacterEquip(characterFromID("Matthews"), GUN_ITEM_TYPE);
 
-			RemoveCharacterEquip(characterFromID("Helmsman"), BLADE_ITEM_TYPE);
-			RemoveCharacterEquip(characterFromID("Helmsman"), GUN_ITEM_TYPE);
+			RemoveCharacterEquip(CharacterFromID("Helmsman"), BLADE_ITEM_TYPE);
+			RemoveCharacterEquip(CharacterFromID("Helmsman"), GUN_ITEM_TYPE);
 
 			RemoveCharacterEquip(characterFromID("Perrin"), BLADE_ITEM_TYPE);
 			RemoveCharacterEquip(characterFromID("Perrin"), GUN_ITEM_TYPE);
@@ -4121,7 +4119,8 @@ void QuestComplete(string sQuestName)
 			AddQuestRecord("The Duchess and the Devil", 6);
 			LAi_Fade("", "");
 			SetCurrentTime(22.00, 0);
-			SetNextWeather("Black Pearl Fight");
+		//	SetNextWeather("Black Pearl Fight");
+			SetNextWeather("Stormy");
 			ChangeCharacterAddress(characterFromID("Don Masseredo"), "None", "");
 			DoQuestReloadToLocation("Prison_Shore", "goto", "goto11", "On_the_wreck_beach");
 		break;
@@ -7704,6 +7703,7 @@ void QuestComplete(string sQuestName)
 
 			SetOfficersIndex(Pchar, 1, getCharacterIndex("Lt. Percy Buckland"));
 			SetCharacterRemovable(characterFromID("Lt. Percy Buckland"), false);
+			setCharacterShipLocation(CharacterFromID("Sir Edward Pellew"), "REDMOND_PORT");
 
 			pchar.quest.Arrested_at_Redmond.win_condition.l1 = "location";
 			Pchar.quest.Arrested_at_Redmond.win_condition.l1.character = Pchar.id;
@@ -8754,7 +8754,7 @@ void QuestComplete(string sQuestName)
 
 		case "Quelp_has_some_information":
 			LAi_SetActorType(characterFromID("Lt. Uriah Quelp")); */
-			LAi_SetGuardianType(characterFromID("Lt. Uriah Quelp"));
+			LAi_SetCivilianGuardianType(characterFromID("Lt. Uriah Quelp"));
 			characters[GetCharacterIndex("Lt. Uriah Quelp")].Dialog.Filename = "Lt. Uriah Quelp_dialog.c";
 //			LAi_ActorDialog(characterFromID("Lt. Uriah Quelp"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Lt. Uriah Quelp")].dialog.CurrentNode = "An_interesting_find";
@@ -10448,6 +10448,7 @@ void QuestComplete(string sQuestName)
 
 			ChangeCharacterAddressGroup(characterFromID("Lt. William Bush"), "Greenford_town", "goto", "goto5");
 			LAi_SetOfficerType(characterFromID("Lt. William Bush"));
+			setCharacterShipLocation(CharacterFromID("Sir Edward Pellew"), "Greenford_port");
 
 			LAi_QuestDelay("An_unexpected_meeting2", 3.0);
 		break;
@@ -10988,6 +10989,8 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Lt. Uriah Quelp"), "None", "");
 			Characters[GetCharacterIndex("Lt. William Bush")].dialog.CurrentNode = "First time";
 
+			LAi_SetActorType(CharacterFromID("Rifleman Mansfield"));
+			LAi_type_Actor_Reset(CharacterFromID("Rifleman Mansfield"));
 
 			Pchar.quest.find_the_95th2.win_condition.l1 = "location";
 			PChar.quest.find_the_95th2.win_condition.l1.character = Pchar.id;
@@ -11003,7 +11006,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Able Seaman Stanley"), "Grand_Cayman_Tavern", "goto", "goto6");
 			LAi_SetCitizenType(characterFromID("Able Seaman Stanley")); // PB: Allow dialog with this character
 			Characters[GetCharacterIndex("Able Seaman Stanley")].dialog.CurrentNode = "Rifleman";
-			LAi_SetGuardianType(characterFromID("Rifleman Mansfield"));
+			LAi_SetCivilianGuardianType(CharacterFromID("Rifleman Mansfield"));
 			Characters[GetCharacterIndex("Rifleman Mansfield")].dialog.CurrentNode = "Take_you_to_camp";
 		break;
 
@@ -11029,7 +11032,7 @@ void QuestComplete(string sQuestName)
 
 		case "Talk_to_Murray":
 			LAi_SetActorType(characterFromID("Rifleman Mansfield"));
-			LAi_SetGuardianType(characterFromID("Captain Murray"));
+			LAi_SetCivilianGuardianType(characterFromID("Captain Murray"));
 			Characters[GetCharacterIndex("Captain Murray")].dialog.CurrentNode = "Looking_for_who";
 		break;
 
@@ -11157,7 +11160,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(pchar);
 			ChangeCharacterAddressGroup(characterFromID("Richard Sharpe"), "Mystery_House", "goto", "goto1");
 			LAi_SetActorType(characterFromID("Richard Sharpe"));
-			LAi_SetGuardianType(characterFromID("Lt. William Bush"));
+			LAi_SetCivilianGuardianType(characterFromID("Lt. William Bush"));
 			LAi_QuestDelay("To_see_Teresa3", 0.0);
 		break;
 
@@ -12763,7 +12766,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Rifleman Higgins"), "Guadeloupe_Plantation", "goto", "goto54");
 			ChangeCharacterAddressGroup(characterFromID("Rifleman Tongue"), "Guadeloupe_Plantation", "goto", "goto18");
 
-			LAi_SetGuardianType(characterFromID("Richard Sharpe"));
+			LAi_SetCivilianGuardianType(characterFromID("Richard Sharpe"));
 			characters[GetCharacterIndex("Richard Sharpe")].Dialog.Filename = "Richard Sharpe_dialog.c";
 			LAi_ActorDialog(characterFromID("Richard Sharpe"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Richard Sharpe")].dialog.CurrentNode = "Back_to_Hotspur_wounded";
@@ -13078,7 +13081,7 @@ void QuestComplete(string sQuestName)
 		case "Go_to_Find_Maria":
 			AddQuestRecord("Old Friends - New Enemies", 12);
 			ChangeCharacterAddressGroup(characterFromID("Bernard Gosling"), "Greenford_town", "reload", "reload21");
-			LAi_SetGuardianType(characterFromID("Bernard Gosling"));
+			LAi_SetCivilianGuardianType(characterFromID("Bernard Gosling"));
 
 			Pchar.quest.Go_to_Find_Maria2.win_condition.l1 = "location";
 			PChar.quest.Go_to_Find_Maria2.win_condition.l1.character = Pchar.id;
@@ -13087,7 +13090,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Go_to_Find_Maria2":
-			LAi_SetGuardianType(characterFromID("Bernard Gosling"));
+			LAi_SetCivilianGuardianType(characterFromID("Bernard Gosling"));
 			characters[GetCharacterIndex("Bernard Gosling")].Dialog.Filename = "RN_Sailor_dialog.c";
 			LAi_ActorDialog(characterFromID("Bernard Gosling"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Bernard Gosling")].dialog.CurrentNode = "Nail_up_house";
@@ -15796,7 +15799,7 @@ void QuestComplete(string sQuestName)
 
 		case "assigned_to_atropos4":
 			LAi_ActorSetSitMode(characterFromID("Lt. Eccleston"));
-			LAi_SetGuardianType(characterFromID("Sir Edward Pellew"));
+			LAi_SetCivilianGuardianType(characterFromID("Sir Edward Pellew"));
 			characters[GetCharacterIndex("Sir Edward Pellew")].Dialog.Filename = "Sir Edward Pellew_dialog.c";
 //			LAi_ActorDialog(characterFromID("Sir Edward Pellew"),PChar,"",5.0,5.0);
 			Characters[GetCharacterIndex("Sir Edward Pellew")].dialog.CurrentNode = "Give_atropos";
@@ -15829,7 +15832,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetGuardianType(characterFromID("Teresa Moreno"));
 			Characters[GetCharacterIndex("Teresa Moreno")].dialog.CurrentNode = "looking_for_Wolfe";
 			ChangeCharacterAddressGroup(characterFromID("Major Hogan"), "Guadeloupe_Plantation_inside", "goto", "goto8");
-			LAi_SetGuardianType(characterFromID("Major Hogan"));
+			LAi_SetCivilianGuardianType(characterFromID("Major Hogan"));
 			Characters[GetCharacterIndex("Major Hogan")].dialog.CurrentNode = "looking_for_Wolfe";
 
 			LAi_SetImmortal(characterFromID("Thomas Wolfe"), false);

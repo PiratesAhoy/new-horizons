@@ -186,7 +186,7 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].reload.l18.emerge = "goto30";
 	Locations[n].reload.l18.autoreload = "0";
 	Locations[n].reload.l18.label = "Store upstairs";
-	Locations[n].locators_radius.reload.reload23 = 0.1;
+	Locations[n].locators_radius.reload.reload23 = 0.001;
 
 	//store house middle
 	Locations[n].reload.l19.name = "reload25";
@@ -219,13 +219,13 @@ void LocationInitQuebradasCostillas(ref n)
 	Locations[n].locators_radius.reload.reload44 = 0.5;
 	Locations[n].locators_radius.reload.reload45 = 0.5;
 
-	Locations[n].locators_radius.box.box1 = 0.1;
-	Locations[n].locators_radius.box.box2 = 0.1;
-	Locations[n].locators_radius.box.box3 = 0.1;
-	Locations[n].locators_radius.box.box4 = 0.1;
+	Locations[n].locators_radius.box.box1 = 0.5;
+	Locations[n].locators_radius.box.box2 = 0.5;
+	Locations[n].locators_radius.box.box3 = 0.5;
+	Locations[n].locators_radius.box.box4 = 0.8;
 	Locations[n].locators_radius.box.box5 = 0.1;
 	Locations[n].locators_radius.box.box6 = 0.1;
-	Locations[n].locators_radius.box.box7 = 0.1;
+	Locations[n].locators_radius.box.box7 = 0.001;
 	Locations[n].locators_radius.box.box8 = 0.1;
 
 	//ground left

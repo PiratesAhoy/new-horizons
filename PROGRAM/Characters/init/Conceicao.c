@@ -157,7 +157,7 @@ void CreateConceicaoCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "CONCEICAO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Conceicao Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -195,7 +195,7 @@ void CreateConceicaoCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "CONCEICAO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Conceicao Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 		//Maria Rivaldo -- towngirl3
@@ -670,7 +670,7 @@ void CreateConceicaoCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "CONCEICAO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Conceicao Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -707,7 +707,7 @@ void CreateConceicaoCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "CONCEICAO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Conceicao Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -744,7 +744,7 @@ void CreateConceicaoCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "CONCEICAO_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_Conceicao Soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 	//Irene Torres -- towngirl2
@@ -1329,7 +1329,7 @@ void CreateConceicaoCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SMUGGLERS_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_QC Citizen"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
 
 		//  Luis Chagas -- man2
@@ -1367,7 +1367,7 @@ void CreateConceicaoCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SMUGGLERS_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_QC Citizen"; // was "Gr_Patrol";
 	AddGameCharacter(n, ch);
 
 		//  Camilo Machado -- korsar 4/8/06 SCM Desmond Ray Beltrop

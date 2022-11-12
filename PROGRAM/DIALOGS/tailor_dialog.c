@@ -113,10 +113,12 @@ void InitModelSlots(ref PChar, ref refTailor, string strNow)
 		{
 			breakcounter = 0;
 			intModelNation = refTailor.nation; // PB: ALL_NATIONS included later
-			intModelIndex = GetRandomModelForNation(intModelNation,GetRank(&PChar,intModelNation)); // NK 04-06
+			if(GetCurrentLocationNation() == PERSONAL_NATION && rand(1) == 1) intModelIndex = GetRandomModelForNation(PERSONAL_NATION,1); // GR: allow tailors in player-controlled towns a chance to show Personal outfits
+			else intModelIndex = GetRandomModelForNation(intModelNation,GetRank(&PChar,intModelNation)); // NK 04-06
 			while(IsInvalidModel(PChar, intModelIndex, i) == true)
 			{
-				intModelIndex = GetRandomModelForNation(intModelNation,GetRank(&PChar,intModelNation)); // NK 04-06
+				if(GetCurrentLocationNation() == PERSONAL_NATION && rand(1) == 1) intModelIndex = GetRandomModelForNation(PERSONAL_NATION,1);
+				else intModelIndex = GetRandomModelForNation(intModelNation,GetRank(&PChar,intModelNation)); // NK 04-06
 				breakcounter++; // NK just in case
 				if(breakcounter > 1000)
 				{

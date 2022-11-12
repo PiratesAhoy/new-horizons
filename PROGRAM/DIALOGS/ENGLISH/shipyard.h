@@ -10,10 +10,10 @@ string DLG_TEXT[19] = {
 "You are my hero! Please mind if you don't deliver the goods on time, I won't be able to finish this order. So I would then have to cancel it and I will be unable to pay you as well.",
 "I will do my best for you.",
 "I've got the goods you asked for.",
-"My apologies. Unfortunate I was unable to get the goods for you in time.",
+"My apologies. Unfortunately I was unable to get the goods for you in time.",
 "...",
 "As promised, here is your pay. Thank you very much for getting these goods.",
 "I couldn't get your whole delivery in one go, so here is the first part.",
-"Ah thank you very much. Please get the rest as soon as possible. I'm going to use these resources already so If you dont deliver the rest I still have to cancel the order but I can't return these resources either, just so you know.",
-"You know what I will keep them with me then until I have everything",
+"Ah, thank you very much. Please get the rest as soon as possible. I'm going to use these resources already, so if you don't deliver the rest I still have to cancel the order, but I can't return these resources either, just so you know.",
+"You know what, I will keep them with me then until I have everything",
 };

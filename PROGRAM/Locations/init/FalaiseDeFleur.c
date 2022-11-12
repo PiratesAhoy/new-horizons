@@ -1524,8 +1524,8 @@ void LocationInitFalaiseDeFleur(ref n)
 	n = n + 1;
 
     // -------------------------------------------------
-    Locations[n].id = "FalaiseDeFleur_jungle_01";
-	locations[n].id.label = "#sisland_name# jungles";
+	Locations[n].id = "FalaiseDeFleur_jungle_01";
+	Locations[n].id.label = "#sisland_name# jungles";
 	Locations[n].filespath.models = "locations\Outside\jungle_8";
 	Locations[n].image = "Outside_Jungle_8.tga";
  	//Sound
@@ -1639,31 +1639,31 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].locators_radius.reload.reload1_back = 4;
 
 	Locations[n].reload.l2.name = "reload2";
-	Locations[n].reload.l2.go = "FalaiseDeFleur_jungle_03";
-	Locations[n].reload.l2.emerge = "reload2";
+	Locations[n].reload.l2.go = "FalaiseDeFleur_passage";
+	Locations[n].reload.l2.emerge = "reload1";
 	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].reload.l2.label = "Jungle.";
+	Locations[n].reload.l2.label = "Falaise de Fleur";
 	Locations[n].locators_radius.reload.reload2 = 4;
 
 	Locations[n].reload.l5.name = "reload2_back";
-	Locations[n].reload.l5.go = "FalaiseDeFleur_jungle_03";
-	Locations[n].reload.l5.emerge = "reload2";
+	Locations[n].reload.l5.go = "FalaiseDeFleur_passage";
+	Locations[n].reload.l5.emerge = "reload1";
 	Locations[n].reload.l5.autoreload = "1";
-	Locations[n].reload.l5.label = "Jungle.";
+	Locations[n].reload.l5.label = "Falaise de Fleur";
 	Locations[n].locators_radius.reload.reload2_back = 3;
 
 	Locations[n].reload.l3.name = "reload3";
-	Locations[n].reload.l3.go = "FalaiseDeFleur_jungle_03";
-	Locations[n].reload.l3.emerge = "reload1";
+	Locations[n].reload.l3.go = "FalaiseDeFleur_passage";
+	Locations[n].reload.l3.emerge = "reload2";
 	Locations[n].reload.l3.autoreload = "1";
-	Locations[n].reload.l3.label = "Jungle.";
+	Locations[n].reload.l3.label = "Falaise de Fleur";
 	Locations[n].locators_radius.reload.reload3 = 4;
 
 	Locations[n].reload.l6.name = "reload3_back";
-	Locations[n].reload.l6.go = "FalaiseDeFleur_jungle_03";
-	Locations[n].reload.l6.emerge = "reload1";
+	Locations[n].reload.l6.go = "FalaiseDeFleur_passage";
+	Locations[n].reload.l6.emerge = "reload2";
 	Locations[n].reload.l6.autoreload = "1";
-	Locations[n].reload.l6.label = "Jungle.";
+	Locations[n].reload.l6.label = "Falaise de Fleur";
 	Locations[n].locators_radius.reload.reload3_back = 4;
 
 	Locations[n].vcskip = true; // KK
@@ -1673,20 +1673,24 @@ void LocationInitFalaiseDeFleur(ref n)
 
 	n = n + 1;
 
-	//-------------------------------------------------
-	Locations[n].filespath.models = "locations\Outside\Jungle_1";
+	// -------------------------------------------------
+	Locations[n].filespath.models = "locations\Outside\Passage";
 
-    	Locations[n].id = "FalaiseDeFleur_jungle_03";
-	locations[n].id.label = "#sisland_name# jungles";
-	Locations[n].image = "Outside_Jungle_1.tga";
+	Locations[n].id = "FalaiseDeFleur_passage";
+	locations[n].id.label = "Falaise de Fleur";
+	Locations[n].image = "Outside_Passage2.tga";
 	//Sound
-	locations[n].type = "Jungle";
+	locations[n].type = "seashore";
 
 	//Models
 	//Always
-	Locations[n].models.always.locators = "jungle01_l";
-	Locations[n].models.always.jungle = "jungle01";
-	Locations[n].models.always.grassPatch = "jungle01_g";
+	Locations[n].models.always.locators = "pass2_l";
+	Locations[n].models.always.jungle = "pass2";
+	Locations[n].models.always.jungle.foam = "1";
+	Locations[n].models.always.seabed = "pass2_sb";
+	Locations[n].models.always.seabed.foam = "1";
+	Locations[n].models.always.grassPatch = "pass2_g";
+	Locations[n].models.always.grasspatch.texture = "Grass\grass_flower.tga";
 	Locations[n].models.always.l1 = "plan_1";
 	Locations[n].models.always.l1.level = 9;
 	Locations[n].models.always.l1.tech = "LocationModelBlend";
@@ -1698,44 +1702,44 @@ void LocationInitFalaiseDeFleur(ref n)
 	Locations[n].models.always.l3.tech = "LocationModelBlend";
 
 	//Day
-	Locations[n].models.day.charactersPatch = "jungle01_p";
+	Locations[n].models.day.charactersPatch = "pass2_p";
 	//Night
-	Locations[n].models.night.charactersPatch = "jungle01_p";
+	Locations[n].models.night.charactersPatch = "pass2_p";
 	//Environment
 	Locations[n].environment.weather = "true";
-	Locations[n].environment.sea = "false";
-
-//	LAi_LocationMonstersGen(&locations[n], true);
-//	LAi_LocationSetMonstersTime(&locations[n], 22, 6);
-
+	Locations[n].environment.sea = "true";
 	//Reload map
-	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.name = "reload2";
 	Locations[n].reload.l1.go = "FalaiseDeFleur_jungle_02";
 	Locations[n].reload.l1.emerge = "reload3";
 	Locations[n].reload.l1.autoreload = "1";
-	Locations[n].locators_radius.reload.reload1 = 3.0;
+	//Locations[n].locators_radius.reload.reload2 = 2.0;
+	Locations[n].reload.l1.label = "Jungle.";
 
-	Locations[n].reload.l2.name = "reload1_back";
+	Locations[n].reload.l2.name = "reload2_back";
 	Locations[n].reload.l2.go = "FalaiseDeFleur_jungle_02";
 	Locations[n].reload.l2.emerge = "reload3";
 	Locations[n].reload.l2.autoreload = "1";
-	Locations[n].locators_radius.reload.reload1_back = 3.0;
+	Locations[n].locators_radius.reload.reload2 = 2.0;
+	Locations[n].reload.l2.label = "Jungle.";
 
-	Locations[n].reload.l3.name = "reload2";
+	Locations[n].reload.l3.name = "reload1";
 	Locations[n].reload.l3.go = "FalaiseDeFleur_jungle_02";
 	Locations[n].reload.l3.emerge = "reload2";
 	Locations[n].reload.l3.autoreload = "1";
-	Locations[n].locators_radius.reload.reload2 = 3.0;
+	Locations[n].reload.l3.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload1 = 2.0;
 
-	Locations[n].reload.l4.name = "reload2_back";
+	Locations[n].reload.l4.name = "reload1_back";
 	Locations[n].reload.l4.go = "FalaiseDeFleur_jungle_02";
 	Locations[n].reload.l4.emerge = "reload2";
 	Locations[n].reload.l4.autoreload = "1";
-	Locations[n].locators_radius.reload.reload2_back = 3.0;
+	Locations[n].reload.l4.label = "Jungle.";
+	Locations[n].locators_radius.reload.reload1_back = 2.0;
 
 	Locations[n].vcskip = true; // KK
 
-	Locations[n].island = "FalaiseDeFleur";
+	Locations[n].island = "FalaiseDeFleur"; // NK 04-08-29
 	n = n + 1;
 
 	// -------------------------------------------------
