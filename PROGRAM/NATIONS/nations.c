@@ -986,6 +986,10 @@ float RelationToRMRelation(int rel)
 			return REL_NEUTRAL; // PB: was -1
 		break;
 	}
+
+    // default:
+    Trace("RelationToRMRelation: Failed to determine relation, rel = " + rel);
+	return REL_NEUTRAL;
 }
 
 void ReceiveLetterOfMarque(int iNation)
