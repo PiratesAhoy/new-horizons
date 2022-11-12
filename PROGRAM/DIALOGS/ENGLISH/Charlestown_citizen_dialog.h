@@ -1,4 +1,4 @@
-string DLG_TEXT[174] = {
+string DLG_TEXT[172] = {
 "I welcome you, ",
 ". My name is ",
 ". What's your name?",
@@ -37,10 +37,6 @@ string DLG_TEXT[174] = {
 "Tell me about your colony.",
 "What do you know about #sCharlestown#?",
 "I'd like to get some information about #sCharlestown#.",
-"Hello. An officer left my ship. His name is",
-"Nigel Blythe",
-"Nigel Blythe",
-". Your town is small enough that perhaps you've heard something about him.",
 "Well, there's nothing I need at the moment. Farewell!",
 "Yes, I think I've heard that your friend was in our tavern",
 "Thank you.",
@@ -112,7 +108,9 @@ string DLG_TEXT[174] = {
 "James Griffith",
 ".",
 "I changed my mind. Forget about it.",
-"Well, #sCharlestown# has a mayor, he is here to get some things up order, it is Sergant McBaker, he is also the fortcommander. He doesn't like people who don't listen to him carefully enough, and he has a very fiery temper, so be on your guard.",
+"Well, #sCharlestown# has a military governor, he is here to get some things up order, his name is ",
+"Thomas Modiford",
+". He doesn't like people who don't listen to him carefully enough, and he has a very fiery temper, so be on your guard.",
 "I see. I have a question.",
 "Thank you, goodbye.",
 "They say you can count on him. On the other hand, I've heard that he doesn't like to take unnecessary risks and always does his business prudently. I don't think he's into any shady business either.",
@@ -126,7 +124,7 @@ string DLG_TEXT[174] = {
 "Thank you, goodbye.",
 "Where do you want to get to, ",
 "?",
-" I have this city at my finger-tips, captain, so tell me where you want to get to.",
+"I have this city at my finger-tips, captain, so tell me where you want to get to.",
 "You can count on me, ",
 ".",
 "How can I get to the tavern?",
@@ -152,7 +150,7 @@ string DLG_TEXT[174] = {
 "Is there is anything else besides the city on this island?",
 "Do you know anything about the fort that protects the city?",
 "Let's talk about something else.",
-"Our colony was built about 40 years ago. The island is pretty small, but it has very fertile soil, and there are a couple of convenient bays.\nNew sections are being developed, and trade has increased. Our city was the first settlement, and then came #sCharlestown#.",
+"Our colony was built about 40 years ago. The island is pretty small, but it has very fertile soil, and there are a couple of convenient bays.\nNew sections are being developed, and trade has increased. The first settlement was a small outpost on the other side of the island, a rough place which may still be there for all I know. Later, a larger settlement was founded here which eventually became #sCharlestown#.",
 "Continue...",
 "That's clear. Let's talk about something else ",
 "Then buccaneers became frequent visitors here, so they built the fort to protect the city.",
@@ -173,5 +171,4 @@ string DLG_TEXT[174] = {
 "I see. Let's end our conversation on that, and change the subject.",
 " We have a population of ",
 " citizens.",
-
 };

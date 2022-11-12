@@ -41,8 +41,8 @@ string DLG_TEXT[208] = {
 "Hurry Captain, jump to the next roof!",
 "I'll follow you.",					//40
 "Let's move on to the last house my Captain.",
-"I have an better idea, this door must lead to the store. Maybe we can sneak silently down through the house and reach the gate.",
-"No that would be a to long run.",
+"I have a better idea, this door must lead to the store. Maybe we can sneak silently down through the house and reach the gate.",
+"No that would be a too long run.",
 "Alright we do as you say, anyway - what's your name girl?",
 "We don't have time for that now, my brave buccaneer.",
 "Ok, let's jump again then.", 

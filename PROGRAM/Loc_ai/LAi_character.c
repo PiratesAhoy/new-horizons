@@ -132,8 +132,9 @@ void LAi_SetDltHealth(aref chr, float healthPerSec)
 //Использовать бутылочку-лечилку
 void LAi_UseHealthBottle(aref chr, float healthInBottle)
 {
-	if(healthInBottle <= 0) return;	
-	if(CheckPerkForGroup(chr, "ImprovePotions")) healthInBottle = healthInBottle * 1.1;//partywide boost
+//	if(healthInBottle <= 0) return; // Blocks leeches from giving health drop
+	if(healthInBottle == 0) return; // Only quit if 0 health, i.e. no effect
+	if(CheckPerkForGroup(chr, "ImprovePotions") && healthInBottle>0) healthInBottle = healthInBottle * 1.1;//partywide boost, not for leeches!
 	if(!CheckAttribute(chr, "chr_ai.hp_bottle"))
 	{
 		chr.chr_ai.hp_bottle = "0";
@@ -713,7 +714,7 @@ void LAi_AllCharactersUpdate(float dltTime)
 			if(CheckAttribute(chr_ai, "hp_bottle"))
 			{
 				float bottle = stf(chr_ai.hp_bottle);
-				if(bottle > 0)
+				if(bottle != 0) // was 'if(bottle > 0)', fails to apply HP loss from leeches
 				{
 					//Скорость высасывания из бутылки
 					float bottledlthp = LAI_DEFAULT_DLTBLTHP;
@@ -723,9 +724,20 @@ void LAi_AllCharactersUpdate(float dltTime)
 					}
 					//Количество вытянутых хп за текущий период времени
 					bottledlthp = bottledlthp*dltTime;
-					if(bottledlthp > bottle)
+					if (bottle > 0)
 					{
-						bottledlthp = bottle;
+						if(bottledlthp > bottle)
+						{
+							bottledlthp = bottle;
+						}
+					}
+					else
+					{
+						bottledlthp = bottledlthp*-1;
+						if(bottledlthp < bottle)
+						{
+							bottledlthp = bottle;
+						}
 					}
 					bottle = bottle - bottledlthp;
 					hp = hp + bottledlthp;
@@ -755,8 +767,8 @@ void LAi_AllCharactersUpdate(float dltTime)
 					// El Rapido <--
 					//Redone by Levis for extra perk(s)
 					float multip = 4.0;
-					if(CheckPerkForGroup(chr_ai, "DefendPoison")) multip -= 0.5; //party wide
-					if(IsCharacterPerkOn(chr_ai, "Toughness")) multip -= 1;
+					if(CheckPerkForGroup(chr, "DefendPoison")) multip -= 0.5; //party wide
+					if(IsCharacterPerkOn(chr, "Toughness")) multip -= 1;
 					hp = hp - dltTime*multip;
 					//End redo
 				}

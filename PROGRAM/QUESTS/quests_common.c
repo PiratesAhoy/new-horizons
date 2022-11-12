@@ -578,6 +578,7 @@ void AnnounceFetchQuestEvent(String IslandID, string cargoid) //will be moved la
 
 void UpdateAllCargos() //for now placed here. will be moved later
 {
+	bool fetch_expired;
 	if(DEBUG_FETCH_QUEST) trace("FETCH QUEST: Update all cargos");
 	for(int n=0; n<ISLANDS_QUANTITY; n++) 
 	{
@@ -598,7 +599,18 @@ void UpdateAllCargos() //for now placed here. will be moved later
 					if(cargo.assigned == "fetchquest") fetchquest += 1;
 				}
 				//Check for expiration
-				if((GetDataYear() >= sti(cargo.expireYear)) && (GetDataMonth() >= sti(cargo.expireMonth)) && (GetDataDay() >= sti(cargo.expireDay)))
+//				if((GetDataYear() >= sti(cargo.expireYear)) && (GetDataMonth() >= sti(cargo.expireMonth)) && (GetDataDay() >= sti(cargo.expireDay)))
+				fetch_expired = false;
+				if(GetDataYear() > sti(cargo.expireYear)) fetch_expired = true;
+				if(GetDataYear() == sti(cargo.expireYear))
+				{
+					if(GetDataMonth() > sti(cargo.expireMonth)) fetch_expired = true;
+					if(GetDataMonth() == sti(cargo.expireMonth))
+					{
+						if(GetDataDay() >= sti(cargo.expireDay)) fetch_expired = true;
+					}
+				}
+				if(fetch_expired)
 				{
 					if(DEBUG_FETCH_QUEST) trace("FETCH QUEST: "+cargoid+" on island "+tisland.name+" expired");
 					string cargoid = GetAttributeName(cargo);
@@ -2027,8 +2039,7 @@ void CommonQuestComplete(string sQuestName)
 */
 // GR: try to put new officer into a free slot, also explicitly add the officer as a passenger as failsafe -->
 				SetOfficersIndex(PChar, -1, sti(PChar.quest.FreeRandomOfficerIdx));
-				AddPassenger(PChar, CharacterFromID(PChar.quest.FreeRandomOfficerID), 0);
-				LAi_SetOfficerType(CharacterFromID(PChar.quest.FreeRandomOfficerID));
+				AddPassenger(PChar, Characters[sti(PChar.quest.FreeRandomOfficerIdx)], 0);
 
 				Characters[makeint(Pchar.quest.FreeRandomOfficerIdx)].location = "None";
 
@@ -2069,8 +2080,20 @@ void CommonQuestComplete(string sQuestName)
 			{
 				ChangeCharacterAddressGroup(&Characters[makeint(Pchar.quest.HiringOfficerIDX)], "None", "", "");
 				PlaceCharacter(characterFromID(Pchar.quest.FreeRandomOfficerID), "goto");
-				DialogMain(characterFromID(Pchar.quest.FreeRandomOfficerID)); // added by MAXIMUS
-				LAi_SetOfficerType(characterFromID(Pchar.quest.FreeRandomOfficerID));
+				if(IsOfficer(CharacterFromID(PChar.quest.FreeRandomOfficerID)))
+				{
+					DialogMain(characterFromID(Pchar.quest.FreeRandomOfficerID)); // added by MAXIMUS
+					LAi_SetOfficerType(characterFromID(Pchar.quest.FreeRandomOfficerID));
+				}
+				else
+				{
+					Characters[sti(PChar.quest.HiringOfficerIDX)].location = "none";
+					Characters[sti(PChar.quest.HiringOfficerIDX)].Dialog.Filename = "Enc_Officer_dialog.c";
+					Characters[sti(PChar.quest.HiringOfficerIDX)].Dialog.CurrentNode = "hired";
+					LAi_group_MoveCharacter(&Characters[sti(PChar.quest.HiringOfficerIDX)], LAI_GROUP_PLAYER);
+					LAi_SetActorType(CharacterFromID(PChar.quest.FreeRandomOfficerID));
+					LAi_ActorGoToLocation(CharacterFromID(PChar.quest.FreeRandomOfficerID), "reload", "reload1", "none", "", "", "", -1);
+				}
 			}
 			else
 			{

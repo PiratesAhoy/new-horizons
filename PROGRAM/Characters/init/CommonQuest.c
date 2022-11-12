@@ -960,7 +960,7 @@ int CreateCommonQuestCharacters(int in)
 	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
-	ch.greeting = "Gr_Oxbay Soldier";
+	ch.greeting = "Gr_Redmond Soldier"; // was "Gr_Oxbay Soldier"
 	ch.questchar = true;//MAXIMUS: identifier for captives
 	AddGameCharacter(n, ch);
 

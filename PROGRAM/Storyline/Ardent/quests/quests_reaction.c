@@ -1,6 +1,6 @@
 void QuestComplete(string sQuestName)
 {
-	ref PChar, NPChar, sld, ch, ImpShip;
+	ref PChar, NPChar, sld, ch, ImpShip, lcn;
 // KK -->
 	int iPassenger, cidx, iHP, cc, crew_lost, crew_left, i, n;
 	ref officer1, officer2, romance, villain, arrester, crewref;
@@ -71,17 +71,12 @@ void QuestComplete(string sQuestName)
 			DisableTownCapture("Redmond", true);
 			DisableTownCapture("Santiago", true);
 			DisableTownCapture("Port au Prince", true);
-			Locations[FindLocation("Quest_Santiago_Bedroom")].vcskip = true;
 			if (PChar.sex == "man")
 			{
-				ChangeCharacterAddress(characterFromID("Edmundo de la Vega"), "None", "");
-				ChangeCharacterAddress(characterFromID("Valerie Downing"), "None", "");
 				ChangeCharacterAddressGroup(characterfromID("Piers Downing"), "Quest_Merchant_House", "goto", "goto2");
 			}
 			else
 			{
-				ChangeCharacterAddress(characterFromID("Lucia de la Vega"), "None", "");
-				ChangeCharacterAddress(characterFromID("Piers Downing"), "None", "");
 				ChangeCharacterAddressGroup(characterfromID("Valerie Downing"), "Quest_Merchant_House", "goto", "goto2");
 			}
 			Locations[FindLocation("Havana_prison")].vcskip = true;
@@ -122,6 +117,15 @@ void QuestComplete(string sQuestName)
 
 			SetNextWeather("Clear");
 			DoQuestReloadToLocation("Havana_prison", "goto", "goto24", "In_jail");
+		break;
+
+		case "set_up_bedroom_door":
+			Locations[FindLocation("Santiago_townhall")].reload.l2.name = "reload2";
+			Locations[FindLocation("Santiago_townhall")].reload.l2.go = "Quest_Santiago_Bedroom";
+			Locations[FindLocation("Santiago_townhall")].reload.l2.emerge = "reload1";
+			Locations[FindLocation("Santiago_townhall")].reload.l2.autoreload = "0";
+			Locations[FindLocation("Santiago_townhall")].reload.l2.label = "Bedroom.";
+			Locations[FindLocation("Santiago_townhall")].reload.l2.disable = 1;
 		break;
 
 		case "get_monkey":
@@ -2089,6 +2093,7 @@ void QuestComplete(string sQuestName)
 		case "kidnap_breakin4":
 			LAi_SetStayType(characterFromID("Grigorio Formoselle"));
 			LAi_SetLoginTime(characterFromID("Javier Balboa"), 0.0, 24.0);
+			LAi_QuestDelay("set_up_bedroom_door", 0.0);
 			DoQuestReloadToLocation("Quest_Santiago_Bedroom", "reload", "reload1", "kidnap_breakin5");
 		break;
 
@@ -2197,8 +2202,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "kidnap_battle":
-			LAi_group_MoveCharacter(characterFromID("Santiago_soldier_05"), "SPAIN_SOLDIERS");
-			LAi_group_MoveCharacter(characterFromID("Santiago_soldier_06"), "SPAIN_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("Santiago_soldier_05"), "SPAIN_SOLDIERS");
+			LAi_group_MoveCharacter(CharacterFromID("Santiago_soldier_06"), "SPAIN_SOLDIERS");
 			LAi_group_SetRelation("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			LAi_group_FightGroups("SPAIN_SOLDIERS", LAI_GROUP_PLAYER, true);
 			LAi_group_SetCheck("SPAIN_SOLDIERS", "kidnap_battle_over");
@@ -2209,6 +2214,8 @@ void QuestComplete(string sQuestName)
 
 		case "kidnap_battle_over":
 			DisableFastTravel(false);
+			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], true);
+			LAi_SetFightMode(PChar, false);
 			PChar.quest.ran_away.over = "yes";
 			Characters[romanceidx].dialog.CurrentNode = "apologise";
 			LAi_SetActorType(romance);
@@ -2221,6 +2228,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "continue_with_kidnap":
+			LAi_LocationFightDisable(&Locations[FindLocation(PChar.location)], false);
 			characters[GetCharacterIndex("Santiago_soldier_05")].Dialog.Filename = "Isla Muelle soldier_dialog.c";
 			LAi_SetGuardianType(characterFromID("Santiago_soldier_05"));
 			LAi_SetActorType(romance);
@@ -2918,7 +2926,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "deliver_second_CourtingLetter":
-			Locations[FindLocation("Quest_Santiago_Bedroom")].vcskip = true;
+//			Locations[FindLocation("Quest_Santiago_Bedroom")].vcskip = true;
 			GiveItem2Character(PChar, "CourtingLetter");
 			GiveItem2Character(PChar, "SignetRing");
 			Characters[GetCharacterIndex("Grigorio Formoselle")].dialog.CurrentNode = "second_delivery";
@@ -2933,8 +2941,10 @@ void QuestComplete(string sQuestName)
 			PChar.quest.signet_ring_known = "true";
 		break;
 
-		case "second_CourtingLetter_delivered":
+		case "second_CourtingLetter_delivered":	// Triggered by dialog with Grigorio Formoselle
 			Characters[villainidx].dialog.CurrentNode = "First time";
+			LAi_QuestDelay("set_up_bedroom_door", 0.0);
+			ChangeCharacterAddressGroup(romance, "Quest_Santiago_Bedroom", "goto", "goto5");
 			DoQuestReloadToLocation("Quest_Santiago_Bedroom", "reload", "reload1", "second_CourtingLetter_delivered2");
 		break;
 
@@ -3146,7 +3156,7 @@ void QuestComplete(string sQuestName)
 			PChar.quest.in_store_for_ring.over = "yes";
 		break;
 
-		case "second_CourtingLetter_bow_escape":
+		case "second_CourtingLetter_bow_escape":	// Triggered by dialog with "romance"
 			Pchar.quest.bow_escape_shoot_bow.win_condition.l1 = "Time";				// The rescue with bow and arrow requires:
 			Pchar.quest.bow_escape_shoot_bow.win_condition.l1.time = DAY_TIME_NIGHT;		// night-time,
 			Pchar.quest.bow_escape_shoot_bow.win_condition.l2 = "item";				// you have a bow
@@ -3165,24 +3175,54 @@ void QuestComplete(string sQuestName)
 
 		case "second_CourtingLetter_bow_escape2":
 			Preprocessor_AddQuestData("romance", GetMySimpleName(romance));
-/*
-			if (PChar.sex == "man")
-			{
-				Preprocessor_AddQuestData("pronoun1", "she");
-				Preprocessor_AddQuestData("pronoun2", "her");
-			}
-			else
-			{
-				Preprocessor_AddQuestData("pronoun1", "he");
-				Preprocessor_AddQuestData("pronoun2", "him");
-			}
-*/
 			Preprocessor_AddQuestData("pronoun1", romance_pronoun1);
 			Preprocessor_AddQuestData("pronoun2", romance_pronoun2);
 			AddQuestRecord("Kidnap", 26);
 			Preprocessor_Remove("romance");
 			Preprocessor_Remove("pronoun1");
 			Preprocessor_Remove("pronoun2");
+
+			PChar.quest.bow_escape_open_window.win_condition.l1 = "Time";				//Trigger window open at night
+			PChar.quest.bow_escape_open_window.win_condition.l1.time = DAY_TIME_NIGHT;
+			PChar.quest.bow_escape_open_window.win_condition = "bow_escape_open_window";
+		break;
+
+		case "bow_escape_open_window":
+			Build_at("Santiago_town_01", "window_lit", "", -4.12, 3.8569, -2.823, -0.28, "building");
+			PChar.quest.bow_escape_close_window1.win_condition.l1 = "Time";				//Trigger window closing when not night
+			PChar.quest.bow_escape_close_window1.win_condition.l1.time = DAY_TIME_MORNING;
+			PChar.quest.bow_escape_close_window1.win_condition = "bow_escape_close_window";
+			PChar.quest.bow_escape_close_window2.win_condition.l1 = "Time";
+			PChar.quest.bow_escape_close_window2.win_condition.l1.time = DAY_TIME_DAY;
+			PChar.quest.bow_escape_close_window2.win_condition = "bow_escape_close_window";
+			PChar.quest.bow_escape_close_window3.win_condition.l1 = "Time";
+			PChar.quest.bow_escape_close_window3.win_condition.l1.time = DAY_TIME_EVENING;
+			PChar.quest.bow_escape_close_window3.win_condition = "bow_escape_close_window";
+		break;
+
+		case "bow_escape_close_window":
+			PChar.quest.bow_escape_close_window1.over = "yes";
+			PChar.quest.bow_escape_close_window2.over = "yes";
+			PChar.quest.bow_escape_close_window3.over = "yes";
+			lcn = &Locations[FindLocation("Santiago_town_01")];
+			for(i = 1; i<=MAXBUILDINGS; i++)
+			{
+				if(CheckAttribute(lcn,"building."+i+".building") && lcn.building.(i).building == "window_lit")
+				{
+					Building_delete(lcn, "" + i);
+					i = MAXBUILDINGS;
+				}
+			}
+			if(CheckAttribute(PChar, "quest.bow_escape_stop_window"))
+			{
+				DeleteAttribute(PChar, "quest.bow_escape_stop_window");
+			}
+			else
+			{
+				PChar.quest.bow_escape_open_window.win_condition.l1 = "Time";
+				PChar.quest.bow_escape_open_window.win_condition.l1.time = DAY_TIME_NIGHT;
+				PChar.quest.bow_escape_open_window.win_condition = "bow_escape_open_window";
+			}
 		break;
 
 		case "bow_escape_shoot_bow":
@@ -3216,6 +3256,8 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "bow_escape_in_bedroom":
+			PChar.quest.bow_escape_stop_window = true;
+			LAi_QuestDelay("bow_escape_close_window", 1.0);
 			if (PChar.quest.old_blade != "") EquipCharacterByItem(PChar,PChar.quest.old_blade);
 			if (PChar.quest.old_gun != "") EquipCharacterByItem(PChar,PChar.quest.old_gun);
 			DeleteQuestAttribute("old_blade");
@@ -4916,6 +4958,12 @@ void QuestComplete(string sQuestName)
 			DeleteQuestAttribute("wedding_escort");
 			DeleteQuestAttribute("bride");
 			DeleteQuestAttribute("groom");
+
+			Locations[FindLocation("Santiago_townhall")].reload.l3.name = "reload3";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.go = "Quest_Dining_Room";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.emerge = "reload1";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.autoreload = "0";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.label = "Dining Room.";
 		break;
 
 		case "return_to_residence2":
@@ -4923,20 +4971,92 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(characterfromID("Javier Balboa"));
 			LAi_SetActorType(romance);
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "enjoy_reception";
-			if(LAi_IsDead(villain) || CheckAttribute(PChar, "quest.finale_marriage")) LAi_ActorDialog(CharacterFromID("Javier Balboa"),PChar,"bypass_reception",5.0,5.0);
+			if(LAi_IsDead(villain) || CheckAttribute(PChar, "quest.finale_marriage")) LAi_ActorDialog(CharacterFromID("Javier Balboa"),PChar,"prepare_reception",5.0,5.0);
 //			else LAi_ActorDialog(CharacterFromID("Javier Balboa"),PChar,"assassination_attempt",5.0,5.0);
 			else LAi_ActorDialog(CharacterFromID("Javier Balboa"),PChar,"",5.0,5.0); // Exits to "assassination_attempt"
 		break;
 
-		case "bypass_reception":
+		case "prepare_reception":
+			NPChar = CharacterFromID("Grigorio Formoselle");
+			LAi_SetActorType(NPChar);
+			LAi_ActorGoToLocator(NPChar, "reload", "reload3", "",10.0);
+			Pchar.quest.reception.win_condition.l1 = "location";
+			Pchar.quest.reception.win_condition.l1.location = "Quest_Dining_Room";
+			Pchar.quest.reception.win_condition = "reception";
+		break;
+
+		case "reception":
+			Locations[FindLocation("Quest_Dining_Room")].reload.l1.disable = 1;
+			SetCurrentTime(12, rand(59));
+			ChangeCharacterAddressGroup(romance, "Quest_Dining_Room", "sit", "sit1");
+			ChangeCharacterAddressGroup(CharacterfromID("Javier Balboa"), "Quest_Dining_Room", "sit", "sit2");
+			ChangeCharacterAddressGroup(CharacterfromID("Grigorio Formoselle"), "Quest_Dining_Room", "goto", "goto1");
+			LAi_ActorSetSitMode(romance);
+			LAi_ActorSetSitMode(CharacterfromID("Javier Balboa"));
+
+			Pchar.quest.reception2.win_condition.l1 = "locator";
+			Pchar.quest.reception2.win_condition.l1.location = "Quest_Dining_Room";
+			Pchar.quest.reception2.win_condition.l1.locator_group = "goto";
+			Pchar.quest.reception2.win_condition.l1.locator = "goto6";
+			Pchar.quest.reception2.win_condition = "reception2";
+		break;
+
+		case "reception2":
+			DoQuestReloadToLocation("Quest_Dining_Room", "sit", "sit4", "reception_chat_to_governor");
+		break;
+
+		case "reception_chat_to_governor":
+			LAi_SetSitType(CharacterfromID("Javier Balboa"));
+			LAi_SetActorType(PChar);
+			LAi_ActorSetSitMode(PChar);
+			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "dining_room1";
+			LAi_ActorDialogNow(PChar, CharacterFromID("Javier Balboa"), "", 1.0);				// Triggers "reception_chat_to_romance"
+		break;
+
+		case "reception_chat_to_romance":
+			LAi_SetActorType(PChar);
+			LAi_ActorSetSitMode(PChar);
+			LAi_SetSitType(romance);
+			romance.Dialog.Filename = "romance_dialog.c";
+			romance.dialog.CurrentNode = "reception_dining_room1";
+			LAi_ActorDialogNow(PChar, romance, "", 1.0);							// Triggers "reception_chat_finish" or "reception_imperial_escort_governor_answers"
+		break;
+
+		case "reception_imperial_escort_governor_answers":
+			LAi_SetSitType(CharacterfromID("Javier Balboa"));
+			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "dining_room_imperial_escort";
+			LAi_ActorDialogNow(PChar, CharacterFromID("Javier Balboa"), "", 1.0);				// Triggers "reception_chat_finish"
+		break;
+
+		case "reception_chat_finish":
+			DoQuestReloadToLocation("Quest_Dining_Room", "goto", "goto6", "reception_chat_finish2");
+		break;
+
+		case "reception_chat_finish2":
+			LAi_SetPlayerType(PChar);
+			Locations[FindLocation("Quest_Dining_Room")].reload.l1.disable = 0;
+			PChar.quest.reception_done.win_condition.l1 = "location";
+			PChar.quest.reception_done.win_condition.l1.location = "Santiago_townhall";
+			PChar.quest.reception_done.win_condition = "reception_done";
+		break;
+
+/*		case "bypass_reception":
 			SetCurrentTime(21, rand(10));
 			ChangeCharacterAddressGroup(romance, "Quest_Santiago_Bedroom", "goto", "goto5");
 			DoQuestReloadToLocation("Santiago_townhall", "reload", "reload3", "reception_done");
-		break;
+		break; */
 
 		case "reception_done":
+			Locations[FindLocation("Santiago_townhall")].reload.l3.disable = 1;
+			SetCurrentTime(21, rand(10));
+			ChangeCharacterAddressGroup(romance, "Santiago_townhall", "goto", "goto9");
+			ChangeCharacterAddressGroup(CharacterfromID("Javier Balboa"), "Santiago_townhall", "goto", "goto3");
+			ChangeCharacterAddressGroup(CharacterfromID("Grigorio Formoselle"), "Santiago_townhall", "goto", "goto10");
+			LAi_SetActorType(romance);
+			LAi_SetActorType(CharacterfromID("Javier Balboa"));
+			LAi_SetGuardianTypeNoGroup(CharacterfromID("Grigorio Formoselle"));
 			Characters[GetCharacterIndex("Javier Balboa")].dialog.CurrentNode = "reception_done";
-			LAi_ActorDialog(characterFromID("Javier Balboa"),PChar,"prepare_for_bed",5.0,5.0);
+			LAi_ActorDialog(CharacterFromID("Javier Balboa"),PChar,"prepare_for_bed",5.0,5.0);
 		break;
 
 		case "prepare_for_bed":
@@ -4945,9 +5065,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "bedtime_chat":
+			ChangeCharacterAddressGroup(romance, "Quest_Santiago_Bedroom", "goto", "goto5");
 			LAi_SetStayType(romance);
-			characters[romanceidx].Dialog.Filename = "romance_dialog.c";
-			characters[romanceidx].Dialog.CurrentNode = "wedding_night"; // You will talk to your partner and the dialog exits to "get_lost_player"
+			romance.Dialog.Filename = "romance_dialog.c";
+			romance.Dialog.CurrentNode = "wedding_night"; // You will talk to your partner and the dialog exits to "get_lost_player"
 		break;
 
 		case "get_lost_player":
@@ -4976,6 +5097,7 @@ void QuestComplete(string sQuestName)
 
 		case "morning_after_wedding2":
 			Locations[FindLocation("Santiago_townhall")].reload.l1.disable = 0;
+			Locations[FindLocation("Santiago_townhall")].reload.l3.disable = 0;
 			DisableFastTravel(false);
 			bQuestDisableSeaEnter = false;
 			AddQuestRecord("Marriage", 12);
@@ -7705,7 +7827,7 @@ void QuestComplete(string sQuestName)
 				temp = "m" + (rand(5) + 1);
 				sld = LAi_CreateFantomCharacter(false, 1, true, true, 0.25, Nations[ENGLAND].fantomModel.(temp), "reload", "reload_3_2");
 				sld.id = "Reinforcements " + n;
-				sld.greeting = "Gr_Patrol";
+				sld.greeting = "Gr_Redmond Soldier";
 				sld.nation = ENGLAND;
 				SetRandomNameToCharacter(sld);
 				LAi_SetActorType(sld);
@@ -9138,6 +9260,7 @@ void QuestComplete(string sQuestName)
 
 			LAi_SetFightMode(PChar, false);
 			HoistFlag(FRANCE);
+			iForceDetectionFalseFlag = -1;	// In case Port au Prince fort has previously spotted you as hostile
 			Pchar.quest.hunt_fort_to_town.over = "yes";
 			Pchar.quest.hunt_fort_to_jungle.over = "yes";
 			DisableFastTravel(false);
@@ -9196,6 +9319,8 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.hunt_back_on_deck.win_condition.l1 = "location";
 			Pchar.quest.hunt_back_on_deck.win_condition.l1.location = GetCharacterShipQDeck(PChar);
 			PChar.quest.hunt_back_on_deck.win_condition = "hunt_back_to_ship";
+			PChar.quest.hunt_restore_falseflag_recognition.win_condition.l1 = "MapEnter";
+			PChar.quest.hunt_restore_falseflag_recognition.win_condition = "hunt_restore_falseflag_recognition";
 		break;
 
 		case "hunt_out_of_fort2":
@@ -9234,6 +9359,10 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.French_fleet_setup.win_condition = "French_fleet_setup";
 
 			PChar.quest.invasion_status = "goto_Redmond";
+		break;
+
+		case "hunt_restore_falseflag_recognition":
+			iForceDetectionFalseFlag = 0; // Restore normal false flag detection chances
 		break;
 
 		case "French_fleet_setup":

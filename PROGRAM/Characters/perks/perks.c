@@ -300,7 +300,8 @@ bool CheckCharacterPerk(ref chref, string perkName)
 		}
 	}
 	return false;*/
-	return CheckPerkForGroup(chref, perkName); //Levis
+//	return CheckPerkForGroup(chref, perkName); //Levis
+	return CheckPerkForSingleCharacter(chref, perkName); // GR - shouldn't this be a single character check rather than entire group?
 }
 
 void ActivateCharacterPerk(ref chref, string perkName)
@@ -677,7 +678,7 @@ bool CheckPerkForGroup(ref character, string perkName)
 	if(CheckAttribute(character,"ContribList."+perkName)) 
 	{
 		//Because perks are assigned in all different ways and the code to do it is crap we add a random function to sometimes check if the list is still right.
-		bool val = character.ContribList.(perkName);
+		bool val = sti(character.ContribList.(perkName));
 		return val;
 	}
 	//Check if we are dealing with a captain cause they shouldn't contribute
@@ -723,10 +724,11 @@ bool CheckPerkForGroup(ref character, string perkName)
 		if(CheckPerkForSingleCharacter(chr, perkName)){ character.ContribList.(perkName)=true;  return true;}
 	}
 	//Maybe you are a officer instead of a captain so check the perks of your captain too
-	if(IsPassenger(character))
+	if(IsPassenger(character) && GetOfficerOf(character) != GetAttribute(character, "index"))
 	{
 		captain = GetCharacter(FindCaptainIndex(character));
-		if(CheckPerkForSingleCharacter(captain, perkName)){ character.ContribList.(perkName)=true;  return true;}
+		if(CheckPerkForSingleCharacter(captain, perkName)){ character.ContribList.(perkName)=true;  return true;} // Only checks if the captain is personally contributing the perk, not if he's getting it from his officers
+		if(CheckPerkForGroup(captain, perkName)){ character.ContribList.(perkName)=true;  return true;}
 	}
 	character.ContribList.(perkName)=false; 
 	return false;

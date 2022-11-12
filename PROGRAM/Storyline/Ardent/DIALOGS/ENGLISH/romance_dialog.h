@@ -1,4 +1,4 @@
-string DLG_TEXT[516] = {
+string DLG_TEXT[539] = {
 "Good day, ",
 "Good day to you, too.",
 "What are you doing in my room?",
@@ -513,6 +513,29 @@ string DLG_TEXT[516] = {
 "Good, now I know you'll be safe with me beside you.",
 "Excellent! You won't regret this when you see me in action.",
 "I'm sure of it.",
+"There is something which I have always meant to ask you, ",
+". When you entered my room for the first time, those many months ago, what were your true intentions?",
+"To be brutally honest, I planned to kidnap you and hold you for ransom. But when I learned of your plight, I couldn't do it. Instead I chose to take you away from ",
+".",
+"So, a pirate with a soft heart! But I am very glad of it!",
+"It certainly turned out to be one of my better decisions, ",
+".",
+"I already knew about your forced marriage to ",
+" and that you were not happy about it.",
+"Not happy? I believed you were about to kidnap me and would still rather have gone with you than submit to that hateful marriage!",
+"Yes, I remember your desire for revenge after #spronoun# abducted you and married you anyway. And the money we took from #spronoun3# convoy was far more than any ransom I might have got by kidnapping you.",
+"I hope you don't see me as merely a source of money, ",
+"!",
+"Certainly not! We would not be sitting here now if I did, my dear.",
+"What do you plan to do when you return to sea, ",
+"?",
+"I'm not sure, ",
+". I can continue raiding enemy ships.",
+" Or even attack some forts now that I have a man of war.",
+" And there must be opportunities around the Caribbean for an experienced captain with a powerful ship.",
+"Hmm... my father has been telling me about something which might be just such an opportunity. Father, perhaps what you were telling me before ",
+" arrived would interest #spronoun2#?",
 "Capitán", // These are used to address you in case "First time".
 "my dear", // Renumber them there if more lines are added above here
+"my dear", // Alternative line for non-English translations when player character is female
 }

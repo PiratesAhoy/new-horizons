@@ -155,11 +155,21 @@ void LocAi_Init(ref loc)
 						aref gun2;
 						Items_FindItem(gunID2, &gun2);
 
+						string armourID = GetCharacterEquipByGroup(crew, ARMOR_ITEM_TYPE);
+						aref armour;
+						Items_FindItem(armourID, &armour);
+
+						string armourID2 = GetCharacterEquipByGroup(mainChr, ARMOR_ITEM_TYPE);
+						aref armour2;
+						Items_FindItem(armourID2, &armour2);
+
 						string old_gun;
 						string right_gun;
 
 						string old_blade;
 						string right_blade = "bladeX4";
+
+						string old_armour, right_armour;
 				//---------------------------------------------------------------------------------------------------		
 
 						if(CheckAttribute(blade2, "price"))
@@ -319,6 +329,36 @@ void LocAi_Init(ref loc)
 						//LogIt("gun.shottype = " + gun.shottype);	
 						//LogIt("charges = " + crew.chr_ai.charge);
 						//LAi_SetImmortal(crew, true);		//while testing
+					//---------------------------------------------------------------------------------------------------
+						right_armour = "";
+						if(armourID2 == "cheaparmor")
+						{
+							if(rand(9)<5) right_armour = "jerkin";
+							else right_armour = "cured";
+						}
+						if(armourID2 == "commonarmor")
+						{
+							if(rand(9)<6) right_armour = "cured";
+							else right_armour = "cheaparmor";
+						}
+						if(armourID2 == "goldarmor")
+						{
+							if(rand(9)<7) right_armour = "cheaparmor";
+							else right_armour = "commonarmor";
+						}
+						if(CheckCharacterEquipByGroup(crew, ARMOR_ITEM_TYPE) != right_armour)
+						{
+							if(armourID != "")
+							{
+								old_armour = GetCharacterEquipByGroup(crew, ARMOR_ITEM_TYPE);
+								TakeItemFromCharacter(crew, old_armour);
+							}
+							if(right_armour != "")
+							{
+								GiveItem2Character(crew, right_armour);
+								EquipCharacterbyItem(crew, right_armour);
+							}
+						}
 					//<-- JRH
 					}
 				}

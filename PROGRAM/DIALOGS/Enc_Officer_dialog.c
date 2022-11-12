@@ -1633,7 +1633,8 @@ void ProcessDialogEvent()
 			}
 			if( CheckAttribute(PChar,"location.old_from_sea") )
 			{
-				PChar.location.from_sea = PChar.location.old_from_sea;
+				if(PChar.location.old_from_sea != "") PChar.location.from_sea = PChar.location.old_from_sea;
+				if(PChar.location.from_sea == "" && GetCurrentTownID() != "") PChar.location.from_sea = GetAttribute(GetCurrentTown(), "boarding.l1");
 				DeleteAttribute(PChar,"location.old_from_sea");
 			}
 			dialog.text = DLG_TEXT[45];

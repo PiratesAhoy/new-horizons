@@ -691,7 +691,7 @@ void LocationInitQuestLocations(ref n)
 	//Reload map
 	Locations[n].reload.l1.name = "reload1";		
 	Locations[n].reload.l1.go = "Santiago_townhall";
-	Locations[n].reload.l1.emerge = "reload1";
+	Locations[n].reload.l1.emerge = "reload2";
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "Residence.";
 	Locations[n].reload.l1.disable = 1;
@@ -700,6 +700,44 @@ void LocationInitQuestLocations(ref n)
 
 	Locations[n].island = "Cuba"; // GR 25-02-2016
 	n = n + 1;
+
+	//-------------------------------------------------
+	Locations[n].id = "Quest_Dining_Room";
+	locations[n].id.label = "Dining Room";
+	Locations[n].filespath.models = "Locations\Inside\Dining_room";
+	Locations[n].image = "Inside_diningroom.tga";
+
+	//Town sack
+	Locations[n].townsack = "Santiago";
+
+	//Sound
+	locations[n].type = "residence";
+	locations[n].fastreload = "Santiago";
+	//Models
+	//Always
+	Locations[n].models.always.locators = "Dining_room_Nlocators_GR";
+	Locations[n].models.always.l1 = "Dining_room";
+	Locations[n].models.always.window = "Dining_room_windows";
+	Locations[n].models.always.window.tech = "LocationWindows";
+	Locations[n].models.always.window.level = 50;
+	//Day
+	Locations[n].models.day.charactersPatch = "Dining_room_patch";
+
+	//Night
+	Locations[n].models.night.charactersPatch = "Dining_room_patch";	
+
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+	Locations[n].models.back = "back\ffres1_";
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";		
+	Locations[n].reload.l1.go = "Santiago_townhall";
+	Locations[n].reload.l1.emerge = "reload3";
+	LAi_LocationFightDisable(&Locations[n], true);
+
+	Locations[n].island = "Cuba";
+	nLocationsNum = n + 1;
 
  	//-------------------------------------------------
 	Locations[n].id = "Quest_Merchant_House";
@@ -739,7 +777,6 @@ void LocationInitQuestLocations(ref n)
 	Locations[n].reload.l1.autoreload = "0";
 	Locations[n].reload.l1.label = "#stown_name#. Center.";
 	LAi_LocationFightDisable(&Locations[n], true);
-
 
 	Locations[n].island = "Redmond"; // GR 17-03-2016
 	n = n + 1;

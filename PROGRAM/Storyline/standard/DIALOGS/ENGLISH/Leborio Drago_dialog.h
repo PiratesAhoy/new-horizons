@@ -111,7 +111,7 @@ string DLG_TEXT[115] = {
 "So? What's your point?",
 "...",
 "...",
-"A man came here a couple of months ago and made a copy of those tablets. And just a few days ago, another lady came asking after them, too.",
-"Well, just a few days ago, a sharp young man was in here asking about the same fellow. I told him everything he wanted to know - he was much friendlier than you! So he may just find the man who copied the tablets first.",
+"A man came here a couple of months ago and made a copy of those tablets. And just a few days ago, another man came asking after them, too.",
+"Well, just a few days ago, a sharp young man was in here asking about the same fellow. I told him everything he wanted to know - he was much more persuasive than you! So he may just find the man who copied the tablets first.",
 "Tough girl, are you?",
 };

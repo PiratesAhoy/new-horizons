@@ -124,7 +124,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol.
@@ -164,7 +164,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
     ch.old.name = "Jehan";
@@ -452,7 +452,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol
@@ -490,7 +490,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Patrol
@@ -528,7 +528,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
     ch.old.name = "Basilio";
@@ -2099,7 +2099,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -2138,7 +2138,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Soldier near the entrance from port
@@ -2405,7 +2405,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -2443,7 +2443,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			//Patrol
@@ -2481,7 +2481,7 @@ void CreateHispaniolaCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 // Port-au-Prince citizens

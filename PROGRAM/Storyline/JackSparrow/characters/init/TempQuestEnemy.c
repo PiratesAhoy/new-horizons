@@ -505,7 +505,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 	//Soldier in prison
@@ -544,7 +544,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_isla muelle soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 	ch.old.name = "Prison";

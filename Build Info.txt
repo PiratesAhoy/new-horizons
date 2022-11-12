@@ -1,4 +1,4 @@
-Build Version: Thursday 21st July 2022
+Build Version: Tuesday 8th November 2022
 Build 14
 
 ==========================
@@ -95,6 +95,12 @@ Build 14:
   . Officers hired from tavern attempt to take a free slot, otherwise become non-party passengers, instead of forcibly occupying a party slot, by Grey Roger
   . If bandits appear in Charlestown Mystery House, fighting is enabled, by Grey Roger
   . Player and officers heal overnight during sea travel, by Grey Roger
+  . If you capture the town for yourself while flying a flag hostile to yourself, auto-hoist Personal flag to avoid trouble with your own fort and soldiers, by Grey Roger
+  . Extra crew ashore get armour based on what you have, similar to how they get weapons based on yours, by Grey Roger
+  . Patrol soldiers don't attack or demand a LoM if you own the town, by Fluen and Grey Roger
+  . Function 'AttackRMRelation' called from within 'UpdateRMRelation' to ensure that you lose rank, title and land for treacherously attacking a friendly ship, by Fluen and Grey Roger
+  . Antigua store and shipyard don't demand LoM if you have conquered Antigua for yourself, by Fluen
+  . Trap for Martinique bridge set when game starts, by Grey Roger
 - Code Updates:
   . Limited number of soldiers in Merchant Guild attacks by Pieter Boelen
   . Reduced number of soldiers in Soldier Reinforcements by Pieter Boelen
@@ -173,6 +179,10 @@ Build 14:
   . New quest check "LandEnter" checks if you are at location containing "port" or "shore", by Grey Roger
   . Various duplicate greeting and sound aliases removed to allow new aliases to be added, by Grey Roger
   . Brothels overhauled by Grey Roger
+  . "Guardian" and "Patrol" types get 'chr.chr_ai.soldiertype' attribute which allows dead soldiers to resurrect to the correct type, by Grey Roger
+  . Check for valid "PChar.location.old_from_sea" before copying it to "PChar.location.from_sea", by Grey Roger and pedrwyth
+  . Many spelling and grammar mistakes corrected, more pronouns made variable for female characters, by Fluen
+  . Fast travel to Oranjestad and Santiago ports sends you to the pier instead of the landward gate, by Grey Roger and Fluen
 - Bug Fixes:
   . Fix to prevent Merchant Guild attack when player group was not responsible by Pieter Boelen
   . Fix to allow larger Random Quest Ships by Pieter Boelen
@@ -304,6 +314,10 @@ Build 14:
   . "SName" attribute for "HMS_Sophie" changed from "Sophie" to "HMS_Sophie" to avoid conflict with woman's name "Sophie" by Homo Eructus
   . "merchant" locators in Charlestown and Guadeloupe raised to ground level so that random traders placed when player has extra crew ashore do not appear on top of regular characters, by Grey Roger
   . Reloading a bayonet musket equips sword instead of fist, by Jack Rackham
+  . 'CheckCharacterPerk' calls 'CheckPerkForSingleCharacter' instead of 'CheckPerkForGroup'; various calls on 'CheckCharacterPerk' changed to 'CheckPerkForGroup' where the group should be checked, by Grey Roger
+  . Leeches fixed to apply -10HP and only appear as usable item if character is poisoned, by MrMister
+  . Timer for expiry of fetch quests corrected by Grey Roger
+  . Fix for profiles being scrambled by deleting/recreating by Hammie
 - Storyline Updates:
   . Sidequests:
     > A Girl Won in a Card Game, enabled also at Grenada by Pieter Boelen
@@ -373,6 +387,7 @@ Build 14:
     > New starting quest for FreePlay agent by Grey Roger
     > Option to report failure to find target ship of governor ship-hunting quest, by Grey Roger
     > After you lend Baldewyn Coffier money, he takes over one of the street trader stalls, by pedrwyth
+    > New questbook line for "Saga of a Blacque Family" if you encourage Orable Caron to kill Rachel, by Fluen
   . Tutorial:
     > Stormy Start potentially permanently lost ship fixed by Jack Rackham
     > Locked Cabin Icon removed after tutorial completes by pedrwyth
@@ -413,6 +428,7 @@ Build 14:
     > Resurrection disabled at various points; Santiago port unlocked if you boarded 'Tonina' without a ship of your own by Grey Roger
     > Bow and arrow given at end of "Mayan Temple" quest if ammo mod disabled by Grey Roger
     > Two Dogs Fighting and Jaime Lezcano become standard officers by Grey Roger
+    > "Dining_room" seat locators fixed, room used for reception scene after wedding, by Grey Roger
   . Assassin storyline:
     > Hitman quest ending restored by Pieter Boelen
     > Isla Mona attempted fix by Bartolomeu o Portugues
@@ -445,11 +461,13 @@ Build 14:
     > New trophy quest for Agent, "Investigate The <Insert Ship Name>" by Grey Roger
     > Davy Jones gets weedy skeletons in deck crew and in crew quarters, new special crew models also appear in crew quarters, by Grey Roger
     > Special start setups for Will Turner, Dark Teacher, Danielle Greene, Anamaria, Blackbeard, Cutler Beckett and various Pirate Lords by Lonious
+    > Ricardo Orellana gets scary spooky skeletons as deck crew by GhostOfDeath91
   . Hornblower storyline:
     > Lieutenant Bush custom model added by Grey Roger
     > Various potential errors fixed by Grey Roger
     > Upon promotion to Post Captain, new quest "The Natividad Incident" by Grey Roger (also works for Hornblower as FreePlay character)
     > Monk on Martinique shore removed for battle scene, restored when you reach Speightstown, by Grey Roger
+    > Various characters changed from "GuardianType" to "GuardianTypeNoGroup" or "CivilianGuardianType" to prevent them from always carrying muskets, by Grey Roger
   . Jack Sparrow storyline:
     > First Contact bugs fixed by Pieter Boelen
     > Various bugs fixed by Grey Roger
@@ -601,6 +619,9 @@ Build 14:
   . New sword "BladeNorr" for use by Commodore Norrington by Grey Roger
   . New character models "WillTurner2", "BootstrapBill" and "BlackCaesar" by Grey Roger
   . New deck models for cursed Flying Dutchman by Grey Roger
+  . New location "Bathhouse" for "Hoist the Colours" DMC extension by Jack Rackham
+  . Fixes for walking across roofs in Pirate Settlement, plus smoking chimneys, by Jack Rackham
+  . Merchant locators removed to prevent extra street traders when you have extra crew ashore, shadows of non-existent stalls removed, by Fluen and Grey Roger
   
 - ADDITIONAL INSTALLATION OPTIONS:
   . Possibility to revert to original black-and-yellow paint scheme for British ships

@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(PChar, -1 * sti(NPChar.quest.disguise_price));
 			DeleteAttribute(NPChar, "quest.disguise_price");
 			dialog.text = DLG_TEXT[21];
-			link.l1 = DLG_TEXT[22];
+			link.l1 = DLG_TEXT[22] + GetMyName(NPChar) + ".";
 			AddDialogExitQuest("imperial_escort_restore_tortuga_tailor");
 			link.l1.go = "exit"
 			if(PChar.sex == "woman") GiveModel2Player("ArdentF_2", true);

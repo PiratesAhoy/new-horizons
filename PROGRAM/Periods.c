@@ -182,7 +182,6 @@ void InitPeriods()
 //	period.Towns."Pointe a Pitre".disable = true;					// not working entirely right yet
 	period.Towns."Pointe a Pitre".gov.name = "Gabriel";
 	period.Towns."Pointe a Pitre".gov.lastname = "Montalvo";
-	period.Towns."Pointe a Pitre".skiptrade = true;
 //	period.Towns.Philipsburg.disable = true;						// not working entirely right yet
 //	period.Towns.Marigot.disable = true;							// not working entirely right yet
 	period.Towns.Eleuthera.Name = "Puerto la Cruz";
@@ -729,6 +728,8 @@ void InitTownNationalities()
 			ChangeCharacterAddressGroup(characterFromID("Dutch Emissary"),   "Tortuga_Townhall",  "Sit", "Sit1");
 			ChangeCharacterAddressGroup(characterFromID("English Tailor"),   "Tortuga_tailorsShop", "goto","stay2");
 			ChangeCharacterAddressGroup(characterFromID("Dutch Tailor"),     "Tortuga_tailorsShop", "goto","stay3");
+			Towns[GetTownIndex("Pointe a Pitre")].skiptrade = true;	// Block trade to towns which shouldn't exist
+			Towns[GetTownIndex("Oranjestad")].skiptrade = true;
 
 			if (Items_FindItem("mapGuadeloupe", &item) >= 0) {
 				item.skiptrade = true;
@@ -883,6 +884,19 @@ void InitTownNationalities()
 	PChar.quest.colombian_silver_start.win_condition = "colombian_silver_start";
 	PChar.quest.colombian_silver_start.skip = "yes";
 	//Colombian Silver quest
+
+	//Traps for Martinique bridge and Crystal Skullquest
+	PChar.quest.crysskull_bridge_trap1.win_condition.l1 = "locator";
+	PChar.quest.crysskull_bridge_trap1.win_condition.l1.location = "FalaiseDeFleur_Bridge";
+	PChar.quest.crysskull_bridge_trap1.win_condition.l1.locator_group = "goto";
+	PChar.quest.crysskull_bridge_trap1.win_condition.l1.locator = "goto30";
+	PChar.quest.crysskull_bridge_trap1.win_condition = "crysskull_bridge_trap";
+	PChar.quest.crysskull_bridge_trap2.win_condition.l1 = "locator";
+	PChar.quest.crysskull_bridge_trap2.win_condition.l1.location = "FalaiseDeFleur_Bridge";
+	PChar.quest.crysskull_bridge_trap2.win_condition.l1.locator_group = "goto";
+	PChar.quest.crysskull_bridge_trap2.win_condition.l1.locator = "goto40";
+	PChar.quest.crysskull_bridge_trap2.win_condition = "crysskull_bridge_trap";
+	//Traps for Martinique bridge and Crystal Skullquest
 
 	//JRH: Cartagena New_cloister
 	PChar.quest.cloister_start.win_condition.l1 = "location";

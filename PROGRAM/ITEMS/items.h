@@ -21,7 +21,7 @@
 #define EQUIP2_ITEM_TYPE		"equip2"		//JRH questitem with equip button
 #define EQUIP3_ITEM_TYPE		"equip3"		//JRH questitem with equip button
 #define EXAMINE_ITEM_TYPE		"examine"		//JRH questitem with examine button
-#define OPEN_ITEM_TYPE			"open"		    //JRH ammo item with examine button
+#define OPEN_ITEM_TYPE			"open"		    	//JRH ammo item with examine button
 #define FLIP_ITEM_TYPE			"flip"			//JRH questitem with flip button
 
 // indexes for items` array

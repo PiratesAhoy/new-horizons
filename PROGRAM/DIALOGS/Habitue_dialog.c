@@ -32,7 +32,7 @@ void ProcessDialogEvent()
 		if (makeint(Rand(99)) < GAMBLER_CHANCE) npchar.quest.last_theme = "1";
 		npchar.quest.Meeting = lastspeak_date;
 		npchar.money = rand(10)*100;
-		if(CheckCharacterPerk(PChar,"HighStakes")) npchar.money = sti(npchar.money) * 5; //Added by Levis
+		if(CheckPerkForGroup(PChar,"HighStakes")) npchar.money = sti(npchar.money) * 5; //Added by Levis
 		//Log_SetStringToLog("Money of character " + npchar.id + " is " + npchar.money + "!!!");
 	}
 

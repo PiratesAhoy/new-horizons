@@ -279,7 +279,7 @@ string DLG_TEXT[306] = {
 "Allright, allright. I'll scout the coastal waters myself. Sorry for having disturbed you.",
 "You are a hopeless landlubber, eh? Well, carry on kicking dust! Let us mariners take care of the waters.",
 "Good day Captain! It's a lucky day for you!",
-"What do mean?",
+"What do you mean?",
 "Don't disturb me if you don't want I cut your throat mate.",
 "I have a secret to sell! Do you want to become a rich #sperson#?",
 "What are you talking about? Speak on!",

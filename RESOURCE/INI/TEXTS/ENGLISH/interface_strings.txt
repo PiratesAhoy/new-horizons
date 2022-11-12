@@ -1,7 +1,7 @@
-Delete savefile confirm{Are you sure you want remove this game?}
-Overwrite savefile confirm{Are you sure you want overwrite this game?}
+Delete savefile confirm{Are you sure you want to remove this game?}
+Overwrite savefile confirm{Are you sure you want to overwrite this game?}
 Low storage and unable save create{Insufficent space on your harddrive. Unable to save.}
-Load game confirm{Are you sure you want load this game?}
+Load game confirm{Are you sure you want to load this game?}
 Unable to Load save game{Unable to load save game.}
 save game limit {You have reached the max number of save games allowed. You must delete a game before you can save a new game.}
 You can't save while sailing or boarding!{You can't save while sailing or boarding!}
@@ -11,14 +11,14 @@ Number of saved games{Number of saved games}
 
 Salary info {Your crew demands its monthly salary. Will you pay them?}
 
-New game confirm{Are you sure you want start a new game?}
+New game confirm{Are you sure you want to start a new game?}
 
 Insert Disk Ok {Please insert "Pirates Of The Caribbean" disc 1 and press <Ok> to start application or <Exit> to quit.}
 
 Buy cannons confirm1{Do you really want to buy}
-Buy cannons confirm2{By adding cannons of less caliber you will decrease the firepower of Your ship to}
+Buy cannons confirm2{By adding cannons of less caliber you will decrease the firepower of your ship to}
 Buy cannons confirm3{caliber. You agree?}
-Buy cannons confirm4{By adding cannons of greater caliber you will not increase the firepower of Your ship to}
+Buy cannons confirm4{By adding cannons of greater caliber you will not increase the firepower of your ship to}
 Transfer cannons confirm1{Do you really want to transfer}
 Transfer cannons confirm2{on to the ship}
 Transfer cannons confirm3{By transferring cannons equal or less than the maximum caliber you will get cannons of}
@@ -1139,9 +1139,6 @@ Your victim produces{Your victim produces}
 Your conduct didn't improve your reputation{Your conduct didn't improve your reputation}
 Mustering those drunken tars takes till nightfall...{Mustering those drunken tars takes till nightfall...}
 
-For mature men only!{For mature men only!}
-Brothel Bedroom{Brothel Bedroom}
-Naval academy{Naval academy}
 Storehouse{Storehouse}
 
 You wait here 5 days{You wait here 5 days}
@@ -2127,6 +2124,8 @@ Old Inquisition prison{Old Inquisition prison}
 Archives{Archives}
 Abandoned fort{Abandoned fort}
 Slave Camp{Slave Camp}
+Dining Room{Dining Room}
+Dining Room.{Dining Room}
 
 HINT: If that warden comes close enough to the bars, you can mug him!{HINT: If that warden comes close enough to the bars, you can mug him!}
 Crew remaining:{Crew remaining:}

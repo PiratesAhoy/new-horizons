@@ -231,7 +231,7 @@ void PlayerFastTravel(int startLocIdx, string finishLocName)
 		return;
 	}
 
-	if (HasSubStr(lcn.filespath.models,"Outside\Shore_5")) // PB
+	if (HasSubStr(lcn.filespath.models,"Outside\Shore_5") || HasSubStr(lcn.filespath.models,"Town_Oranjestad\port")) // PB, GR
 	{
 		AddTimeToCurrent(0,TIME_FASTTRAVEL*4); // NK 04-09-21
 		DoReloadCharacterToLocation(finishLocName, "Reload", "reload1");
@@ -242,6 +242,13 @@ void PlayerFastTravel(int startLocIdx, string finishLocName)
 	{
 		AddTimeToCurrent(0,TIME_FASTTRAVEL*3); // NK 04-09-21
 		DoReloadCharacterToLocation(finishLocName, "Reload", "reload_3");
+		return;
+	}
+
+	if (HasSubStr(lcn.filespath.models,"Town_Santiago\port")) // GR
+	{
+		AddTimeToCurrent(0,TIME_FASTTRAVEL*4);
+		DoReloadCharacterToLocation(finishLocName, "Reload", "reload2");
 		return;
 	}
 // Viper - Fast Travel Mod End

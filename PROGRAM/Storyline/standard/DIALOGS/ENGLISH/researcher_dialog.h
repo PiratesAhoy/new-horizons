@@ -74,7 +74,7 @@ string DLG_TEXT[140] = {
 ".",
 "Is that really true? You are an amazing person, captain, but why did you come here to help me all of a sudden?",
 "To be honest, I want you to do me a favour in return.",
-"Hmm...I'm ready to do that captain, but maybe we can continue this conversation some other place?",
+"Hmm...I'm ready to do that, captain, but maybe we can continue this conversation some other place?",
 "Sure. Let's go to the lighthouse, and I'll tell you everything on the way there.",
 "...Foolhardy and reckless! I can't even believe that people are capable of that...",
 "Everyone has his own particular notion of fun.",

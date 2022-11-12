@@ -615,6 +615,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBLDexterior(n,"Field_Cannon_3",     "Field_Cannon_3",     "B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // black field cannon
   n = InitBLDexterior(n,"Field_Cannon_3x2",   "Field_Cannon_3x2",   "B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // black double-barrel field cannon
   n = InitBLDexterior(n,"Field_Cannon_broken","Field_Cannon_broken","B_invisible", "",    30, 10000, 15,   1.0, 2.0,  0, 20 );  // broken iron field cannon
+  n = InitBLDexterior(n,"window_lit", "B_Window_Lit", "B_invisible",	"",                2,   100,  0,   1.0, 2.0,  0, 20 ); 	// window in Santiago lit at night
 
   n = InitBLDexterior(n,"dovecote",   "b_dovecote",   "B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // JRH special for quest in Tortuga
   n = InitBLDexterior(n,"stone_floor","b_stone_floor","B_invisible",  "B_invisible.c",    40, 10000,  5,   1.0, 2.0,  0, 20 );  // JRH special for quest in Tortuga

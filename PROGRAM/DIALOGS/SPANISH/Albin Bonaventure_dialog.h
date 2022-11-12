@@ -25,7 +25,7 @@ string DLG_TEXT[117] = {
 "El ron también cuesta 1 pieza de oro. Si no tienes dinero, no es problema mío.",
 "Pero, ¿todavía estás aquí? Tampoco te puedes permitir las 2 piezas de oro que cuesta el ron...",
 "Está bien, trae ese vino. Después puedes responderme a un par de preguntas...",
-"¡Maldita sea, eso es un robo a mano armada! Trae el vino y responde a mis preguntas."
+"¡Maldita sea, eso es un robo a mano armada! Trae el vino y responde a mis preguntas.",
 "Mala suerte.",
 "Seguro que podré vivir un día más sin tu vino.",
 "Bien, ¿qué puedo hacer por ti?",

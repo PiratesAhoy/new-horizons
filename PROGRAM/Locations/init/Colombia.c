@@ -2108,6 +2108,7 @@ void LocationInitColombia(ref n)
 
 	//Town sack
 	Locations[n].townsack = "Cartagena";
+	locations[n].fastreload = "Cartagena";
 
 	//Sound
 	locations[n].type = "house";
@@ -2235,6 +2236,7 @@ void LocationInitColombia(ref n)
 
 	//Sound
 	locations[n].type = "house";
+	locations[n].fastreload = "Cartagena";
 	
 	//Models
 	//Always

@@ -6186,7 +6186,7 @@ void InitModels(bool isstart)
 	model.id	   =  "Johan_Elting_d";
 	model.ani		 =  "climb";
 	model.FaceId	= 412;
-	model.nation	  =  PERSONAL_NATION;
+	model.nation	  =  BROKEN;
 	model.price	   =  500;
 	model.assigned	=  true;
 	model.name = "Johan";

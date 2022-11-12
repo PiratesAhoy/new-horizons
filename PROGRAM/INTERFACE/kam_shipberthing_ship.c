@@ -250,8 +250,11 @@ void ShipBerthing(int SelCompSlot, int SelPort, int SelBerthSlot, int BDst, int 
 			{	
 				if( CheckAttribute(MainChar,"location.old_from_sea") )
 				{
-					MainChar.location.from_sea = MainChar.location.old_from_sea;
-					SetFleetInTown(GetTownIDFromLocID(MainChar.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+					if(MainChar.location.old_from_sea != "")
+					{
+						MainChar.location.from_sea = MainChar.location.old_from_sea;
+						SetFleetInTown(GetTownIDFromLocID(MainChar.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+					}
 					DeleteAttribute(MainChar,"location.old_from_sea");
 				}
 			}
@@ -259,10 +262,21 @@ void ShipBerthing(int SelCompSlot, int SelPort, int SelBerthSlot, int BDst, int 
 			{
 				if( CheckAttribute(MainChar,"location.old_from_sea") )
 				{
-					MainChar.location.from_sea = MainChar.location.old_from_sea;
-					SetFleetInTown(GetTownIDFromLocID(MainChar.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+					if(MainChar.location.old_from_sea != "")
+					{
+						MainChar.location.from_sea = MainChar.location.old_from_sea;
+						SetFleetInTown(GetTownIDFromLocID(MainChar.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+					}
 					DeleteAttribute(MainChar,"location.old_from_sea");
 				}	
+			}
+			if(!CheckAttribute(MainChar,"location.from_sea") || MainChar.location.from_sea == "")
+			{
+				if(GetCurrentTownID() != "")
+				{
+					MainChar.location.from_sea = GetAttribute(GetCurrentTown(), "boarding.l1");
+					SetFleetInTown(GetTownIDFromLocID(MainChar.location.from_sea), "pchar");
+				}
 			}
 		// NK <--
 //PW <------ copied from transfer_main.c

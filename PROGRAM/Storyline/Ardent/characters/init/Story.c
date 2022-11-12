@@ -375,10 +375,10 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("","Lucía");
 	ch.lastname = TranslateString("","de la Vega");
 	ch.id		= "Lucia de la Vega";
-	ch.model = "Lucia_1";	// was "liz3"
+	ch.model	= "Lucia_1";	// was "liz3"
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
-	ch.location	= "Quest_Santiago_Bedroom";
+	ch.location	= "none"; // was "Quest_Santiago_Bedroom"
 	ch.location.group = "goto";
 	ch.location.locator = "goto5";
 	ch.Dialog.Filename = "romance_dialog.c";
@@ -411,10 +411,10 @@ void CreateStoryCharacters(ref n)
 	ch.name = TranslateString("", "Edmundo");
 	ch.lastname = TranslateString("", "de la Vega");
 	ch.id		= "Edmundo de la Vega";
-	ch.model = "Edmundo";
+	ch.model	= "Edmundo";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
-	ch.location	= "Quest_Santiago_Bedroom";
+	ch.location	= "none"; // was "Quest_Santiago_Bedroom"
 	ch.location.group = "goto";
 	ch.location.locator = "goto5";
 	ch.Dialog.Filename = "romance_dialog.c";
@@ -451,7 +451,7 @@ void CreateStoryCharacters(ref n)
 	ch.model = "lady1"; // was "Diz1"
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
-	ch.location	= "Quest_Merchant_House";
+	ch.location	= "none"; // was "Quest_Merchant_House"
 	ch.location.group = "goto";
 	ch.location.locator = "goto2";
 	ch.Dialog.Filename = "villain_dialog.c";
@@ -512,7 +512,7 @@ void CreateStoryCharacters(ref n)
 	ch.model = "PiersDowning";	// was "Huber_Fra2_17"
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
-	ch.location	= "Quest_Merchant_House";
+	ch.location	= "none"; // was "Quest_Merchant_House"
 	ch.location.group = "goto";
 	ch.location.locator = "goto2";
 	ch.Dialog.Filename = "villain_dialog.c";

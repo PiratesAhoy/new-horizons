@@ -670,7 +670,7 @@ ref CreateTwinCharacter(ref _refEnemy)
 	Fightincabin.Dialog.Filename = "Cabinfight_dialog.c";
 	Fightincabin.Dialog.Currentnode = "First time";
 	if(Fightincabin.sex=="woman") Fightincabin.greeting = "Gr_Pirate_f";
-	else Fightincabin.greeting = "Gr_Dark Teacher"; // was "Gr_Dark Teacher" which is identical
+	else Fightincabin.greeting = "Gr_Clauss"; // was "Gr_Dark Teacher" which is identical
 	if (IsFantom) LAi_NPC_Equip(&Fightincabin, sti(Fightincabin.rank), true, 0.5); // KK
 
 	return Fightincabin;

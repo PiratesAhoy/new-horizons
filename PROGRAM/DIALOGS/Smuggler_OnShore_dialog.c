@@ -229,10 +229,10 @@ void ProcessDialogEvent()
 			{
 				trace("Current smuggler liking = " + CheckSmugglerLiking(PChar));
 				trace("GetPartySkill(PChar, SKILL_SNEAK) = " + GetPartySkill(PChar, SKILL_SNEAK));
-				if (CheckCharacterPerk(PChar,"AdvanceSmuggling")) trace("Advanced Smuggling in use");
+				if (CheckPerkForGroup(PChar,"AdvanceSmuggling")) trace("Advanced Smuggling in use");
 				else trace("Advanced Smuggling NOT in use");
 			}
-			if (CheckCharacterPerk(PChar,"AdvanceSmuggling")) dislike = dislike - 10;
+			if (CheckPerkForGroup(PChar,"AdvanceSmuggling")) dislike = dislike - 10;
 			if (dislike < 5) dislike = 5;
 			if(DEBUG_SMUGGLING>2) trace("Smuggler liking reduced by " + dislike);
 			ChangeSmugglerLiking(PChar, -1 * dislike); //Add liking - how much depends on your general sneakiness and special smuggling talent
@@ -482,7 +482,7 @@ void ProcessDialogEvent()
 			Pchar.quest.Contraband.Counter = 0;
 			//Levis add smuggle perk
 			float price_multiplier = 1.1;
-			if(CheckCharacterPerk(Pchar,"AdvanceSmuggling"))
+			if(CheckPerkForGroup(Pchar,"AdvanceSmuggling"))
 			{
 				price_multiplier = price_multiplier*1.15;
 			}

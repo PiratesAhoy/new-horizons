@@ -177,7 +177,8 @@ void InitMusic()
 
 	tmpref.music_spa_town.f1.name = "MUSIC\Spa_Town.ogg";							// PB: Sea Dogs
 	tmpref.music_spa_town.f2.name = "MUSIC\Spa_Town2.ogg";							// PB: Sea Dogs
-	tmpref.music_spa_town.f3.name = "MUSIC\Spa_Town3.ogg";							// PB: Sea Dogs
+//	tmpref.music_spa_town.f3.name = "MUSIC\Spa_Town3.ogg";							// PB: Sea Dogs
+	tmpref.music_spa_town.f3.name = "MUSIC\36-BF-Townspain.ogg";						// GR: AoP Supermod
 
 	tmpref.music_pir_town.f1.name = "MUSIC\Pir_Town.ogg";							// ASVS: Sea Dogs
 	tmpref.music_pir_town.f2.name = "MUSIC\Pir_Town2.ogg";							// SJG: PotC

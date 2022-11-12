@@ -497,8 +497,11 @@ void CheckMaxShipClassYes()
 		{
 			if( CheckAttribute(refMyCharacter,"location.old_from_sea") )
 			{
-				refMyCharacter.location.from_sea = refMyCharacter.location.old_from_sea;
-				SetFleetInTown(GetTownIDFromLocID(refMyCharacter.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+				if(refMyCharacter.location.old_from_sea != "")
+				{
+					refMyCharacter.location.from_sea = refMyCharacter.location.old_from_sea;
+					SetFleetInTown(GetTownIDFromLocID(refMyCharacter.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+				}
 				DeleteAttribute(refMyCharacter,"location.old_from_sea");
 			}
 		}
@@ -506,9 +509,20 @@ void CheckMaxShipClassYes()
 		{
 			if( CheckAttribute(refMyCharacter,"location.old_from_sea") )
 			{
-				refMyCharacter.location.from_sea = refMyCharacter.location.old_from_sea;
-				SetFleetInTown(GetTownIDFromLocID(refMyCharacter.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+				if(refMyCharacter.location.old_from_sea != "")
+				{
+					refMyCharacter.location.from_sea = refMyCharacter.location.old_from_sea;
+					SetFleetInTown(GetTownIDFromLocID(refMyCharacter.location.from_sea), "pchar"); // NK 05-04-02 WM/IT set fleet.
+				}
 				DeleteAttribute(refMyCharacter,"location.old_from_sea");
+			}
+		}
+		if(!CheckAttribute(refMyCharacter,"location.from_sea") || refMyCharacter.location.from_sea == "")
+		{
+			if(GetCurrentTownID() != "")
+			{
+				refMyCharacter.location.from_sea = GetAttribute(GetCurrentTown(), "boarding.l1");
+				SetFleetInTown(GetTownIDFromLocID(refMyCharacter.location.from_sea), "pchar");
 			}
 		}
 		// NK <--

@@ -97,6 +97,7 @@ void LAi_SetCitizenTypeNoGroup(aref chr)
 void LAi_SetGuardianType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
+	chr.chr_ai.soldiertype = "Guardian";	// GR: For resurrecting to correct type
 	LAi_type_guardian_Init(chr);
 	LAi_group_MoveCharacter(chr, LAI_GROUP_GUARDS);
 	chr.isSoldier = true; // KK
@@ -126,6 +127,7 @@ void LAi_SetCivilianGuardianType(aref chr)
 void LAi_SetPatrolType(aref chr)
 {
 	chr.chr_ai.type = LAI_DEFAULT_TYPE;
+	chr.chr_ai.soldiertype = "Patrol";	// GR: For resurrecting to correct type
 	LAi_SetPatrolTypeNoGroup(chr);
 	LAi_group_MoveCharacter(chr, LAI_GROUP_PATROL);
 	chr.isSoldier = true; // KK

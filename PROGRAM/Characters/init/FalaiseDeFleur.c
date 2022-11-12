@@ -1775,7 +1775,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// patrol
@@ -1814,7 +1814,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Soldier
@@ -2087,7 +2087,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// patrol
@@ -2126,7 +2126,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Soldier
@@ -2399,7 +2399,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// patrol
@@ -2438,7 +2438,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// patrol
@@ -2477,7 +2477,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Soldier
@@ -2672,7 +2672,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// Soldier
@@ -2867,7 +2867,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 			// patrol
@@ -2906,7 +2906,7 @@ void CreateFalaiseDeFleurCharacters(ref n)
 	LAi_SetLoginTime(ch, 22.0, 5.98333);
 	LAi_SetHP(ch, 80.0, 80.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-	ch.greeting = "Gr_Patrol";
+	ch.greeting = "Gr_falaise de fleur soldier"; // was "Gr_Patrol"
 	AddGameCharacter(n, ch);
 
 // --> RobC/Alan_Smithee Blacksmith mod

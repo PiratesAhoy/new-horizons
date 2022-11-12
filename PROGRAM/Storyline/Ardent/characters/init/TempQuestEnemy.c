@@ -775,7 +775,7 @@ void CreateTempQuestEnemyCharacters(ref n)
 	ch.perks.list.SwordplayProfessional = true;
 	ch.money = "2000";
 	ch.Ship.Name = "Sirius";
-	ch.Ship.Type = "PinnaceMerchant";
+	ch.Ship.Type = "PinnaceMerchant2";
 	ch.Ship.Stopped = true;
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 400.0, 400.0);

@@ -81,6 +81,11 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[20];
 			link.l1.go = "family_3";
 //			Characters[GetCharacterIndex("Rachel Blacque")].quest.badguy = "done";
+			Preprocessor_AddQuestData("Orable", GetMySimpleName(CharacterFromID("Orable Caron")));
+			Preprocessor_AddQuestData("Rachel", GetMyName(CharacterFromID("Rachel Blacque")));
+			AddQuestRecord("Blacques", 22); // NK
+			Preprocessor_Remove("Rachel");
+			Preprocessor_Remove("Orable Caron");
 		break;
 
 		case "family_3":

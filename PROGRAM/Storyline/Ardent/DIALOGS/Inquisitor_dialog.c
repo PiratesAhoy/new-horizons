@@ -179,6 +179,15 @@ void ProcessDialogEvent()
 			PChar.quest.mayan_temple = "been_to_temple";
 			PChar.quest.signet_ring_known = "true";
 			PChar.quest.revenge_type = "officer";
+
+			Locations[FindLocation("Santiago_townhall")].reload.l2.disable = 0;
+
+			Locations[FindLocation("Santiago_townhall")].reload.l3.name = "reload3";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.go = "Quest_Dining_Room";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.emerge = "reload1";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.autoreload = "0";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.label = "Dining Room.";
+			Locations[FindLocation("Santiago_townhall")].reload.l3.disable = 0;
 		break;
 
 		case "museum_assistant":

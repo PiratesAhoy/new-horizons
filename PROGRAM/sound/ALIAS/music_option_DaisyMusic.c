@@ -39,7 +39,7 @@ void InitOptionalMusic()
 	tmpref.music_hol_town.f1.name = "MUSIC\DaisyMusic\Tristram.ogg";				// Daisy: Diablo Super Guitar Brothers
 	tmpref.music_hol_town.f2.name = "MUSIC\DaisyMusic\Rogue Encampment.ogg";		// Daisy: Diablo Jonas Lefvert
 	tmpref.music_hol_town.f3.name = "MUSIC\DaisyMusic\Home from the Hunt.ogg";		// Daisy: LotRO
-	tmpref.music_hol_town.f4.name = "MUSIC\DaisyMusic\Geralt of Rivia Guitar.off";	// Daisy: Witcher 3 Jonas Lefvert
+	tmpref.music_hol_town.f4.name = "MUSIC\DaisyMusic\Geralt of Rivia Guitar.ogg";	// Daisy: Witcher 3 Jonas Lefvert
 	
 	tmpref.music_por_town.f1.name = "MUSIC\DaisyMusic\Seville Fantasy.ogg";			// Daisy: Andrei Krylov & Lana Ross
 	tmpref.music_por_town.f2.name = "MUSIC\Por_Town2.ogg";							// PB: No Man's Land

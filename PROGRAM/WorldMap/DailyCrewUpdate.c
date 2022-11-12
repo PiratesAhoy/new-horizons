@@ -87,7 +87,7 @@ void DailyCrewUpdate()
 		{
 			rationedFoodConsumption = foodused / makefloat(foodrations);
 			//Add by levis for cooking perk:
-			if(CheckCharacterPerk(pchar, "Cooking")) rationedFoodConsumption = rationedFoodConsumption*0.9;
+			if(CheckPerkForGroup(pchar, "Cooking")) rationedFoodConsumption = rationedFoodConsumption*0.9;
 		}
 		if(CheckFood) food_daysleft = makeint((makefloat(foodQ) - foodusedtemp) / rationedFoodConsumption);
 

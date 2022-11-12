@@ -395,6 +395,10 @@ Arrowsmith{Arrowsmith}
 Slave{Slave}
 Worker{Worker}
 Slaver{Slaver}
+Josie{Josie}
+Sweat Shop{Sweat Shop}
+Sally{Sally}
+Sweat Shop Sally{Sweat Shop Sally}
 
 {=====| FalaiseDeFleur.c |=====}
 Milon{Milon}

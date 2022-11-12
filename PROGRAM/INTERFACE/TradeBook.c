@@ -408,7 +408,7 @@ void XI_SetIslandData(int curStore)
 				if(CheckAttribute(Stores[curStore],conAttr1)) conSell = Stores[curStore].(conAttr1);
 			//	if(CheckAttribute(Stores[curStore],conAttr2)) conBuy = " / "+Stores[curStore].(conAttr2) + " " + XI_ConvertString("gp")+".";
 				if(CheckAttribute(Stores[curStore],conAttr2)) conBuy = " / " + Stores[curStore].(conAttr2);
-				if(CheckAttribute(Stores[curStore],"STORE_CURDATE") && CheckCharacterPerk(GetMainCharacter(),"Trustworthy")) GameInterface.strings.(strPrice) = conSell + conBuy;
+				if(CheckAttribute(Stores[curStore],"STORE_CURDATE") && CheckPerkForGroup(GetMainCharacter(),"Trustworthy")) GameInterface.strings.(strPrice) = conSell + conBuy;
 				else GameInterface.strings.(strPrice) = XI_ConvertString("Unknown_price");
 				GameInterface.pictures.(picAttr).pic = Goods[idxGoods].name;
 				//Levis Smuggler Addon -->

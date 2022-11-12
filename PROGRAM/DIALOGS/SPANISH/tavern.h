@@ -1,5 +1,5 @@
 string DLG_TEXT[22] = {
-"Estoy buscando un tipo concreto de oficial",
+"Estoy buscando un tipo concreto de oficial.",
 "¿Qué es exactamente lo que estás buscando?",
 "Necesito un contramaestre que me ayude a controlar a mi tripulación.",
 "Un condestable de artillería me vendría muy bien. Mis asrtilleros no aciertan en el blanco.",
