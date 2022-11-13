@@ -306,14 +306,17 @@ int Reload(aref reload_group, string locator_name, string current_location)
 						aref LoadingScreens;
 						string LoadingImage;
 						makearef(LoadingScreens,Locations[loc_pict_index].image);
-						switch(1+rand(GetAttributesNum(LoadingScreens)-1))
-						{
-							case 1: LoadingImage = Locations[loc_pict_index].image.1; break;
-							case 2: LoadingImage = Locations[loc_pict_index].image.2; break;
-							case 3: LoadingImage = Locations[loc_pict_index].image.3; break;
-							case 4: LoadingImage = Locations[loc_pict_index].image.4; break;
-							case 5: LoadingImage = Locations[loc_pict_index].image.5; break;
-							LoadingImage = Locations[loc_pict_index].image;
+						int image_count = GetAttributesNum(LoadingScreens);
+						LoadingImage = Locations[loc_pict_index].image;
+						if (image_count > 0) {
+							switch(1 + rand(image_count - 1))
+							{
+								case 1: LoadingImage = Locations[loc_pict_index].image.1; break;
+								case 2: LoadingImage = Locations[loc_pict_index].image.2; break;
+								case 3: LoadingImage = Locations[loc_pict_index].image.3; break;
+								case 4: LoadingImage = Locations[loc_pict_index].image.4; break;
+								case 5: LoadingImage = Locations[loc_pict_index].image.5; break;
+							}
 						}
 						SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture(LoadingImage));
 						// PB: Random Loading Screens <--
