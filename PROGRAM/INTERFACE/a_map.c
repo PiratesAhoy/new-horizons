@@ -1,12 +1,12 @@
 
 void InitInterface(string iniName)
 {
-    GameInterface.title = "titleReserved";
+	GameInterface.title = "titleReserved";
 
-    SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
+	SendMessage(&GameInterface,"ls",MSG_INTERFACE_INIT,iniName);
 	CreateExitString();//MAXIMUS: standard exit-string for exit-button
 
-    ref chm = GetMainCharacter();
+	ref chm = GetMainCharacter();
 	CreateString(true,"TIME",GetHumanDate(GetDataYear(), GetDataMonth(), GetDataDay()) + " - " + GetStringTime(GetTime()),"seadogs_small",COLOR_BLUE_LIGHT,620,460,SCRIPT_ALIGN_RIGHT,0.6);
 
 	if(CheckAttribute(chm, "maplegend"))		// PB: Show note on Right-Clicking functionality
@@ -100,105 +100,69 @@ void ShowMap()
 	}
 	// stljeffbb Jan 15 2012 <--
 
-	aref refIsl; makearef(refIsl, worldMap.islands);
-	for(int n=0; n<GetAttributesNum(refIsl); n++)
-	{
-		string isIsland = GetAttributeName(GetAttributeN(refIsl,n));
-		if(!CheckAttribute(worldMap,"islands."+isIsland)) continue;
-		if (!CheckAttribute(worldMap,"islands."+isIsland+".position")) continue;	// LDH 25Jan09
+	aref refLabel;
+	makearef(refLabel, worldMap.labels);
+	for (int n = 0; n < GetAttributesNum(refLabel); n++) {
+		string labelId = GetAttributeName(GetAttributeN(refLabel,n));
 
-		string isName = worldMap.islands.(isIsland).label.text;
-		float pozX = makefloat(makefloat(worldMap.islands.(isIsland).position.x)/FAKE_MAP_TO_SEA_SCALE_X);
-		float pozY = makefloat(makefloat(worldMap.islands.(isIsland).position.z)/FAKE_MAP_TO_SEA_SCALE_Y);
+		trace("labelId: " + labelId);
 
-		// PB: Improved Island labels -->
+		if (!CheckAttribute(worldMap, "labels." + labelId)) {
+			trace("Label " + labelId + " not valid");
+			continue;
+		}
+		if (!CheckAttribute(worldMap, "labels." + labelId + ".position")) {
+			trace("Label " + labelId + " does not have a position");
+			continue;
+		}
+
+		string labelText = worldMap.labels.(labelId).text;
+		float pozX = makefloat(makefloat(worldMap.labels.(labelId).position.x)/FAKE_MAP_TO_SEA_SCALE_X);
+		float pozY = makefloat(makefloat(worldMap.labels.(labelId).position.z)/FAKE_MAP_TO_SEA_SCALE_Y);
+
 		int fakeX = makeint(makefloat(fakeMap.X) - pozX);
 		int fakeY = makeint(makefloat(fakeMap.Y) + pozY)-20;
-		switch(isIsland)
-		{
-			case "IslaMona":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+23,SCRIPT_ALIGN_CENTER,0.5);
-			break;
-			case "Battle_Rocks":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+21,SCRIPT_ALIGN_CENTER,0.5);
-			break;
-			case "IslaMuelle":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+10,SCRIPT_ALIGN_CENTER,0.7);
-			break;
-			case "SaintMartin":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY-5,SCRIPT_ALIGN_CENTER,0.7);
-			break;
-			case "QuebradasCostillas":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+30,SCRIPT_ALIGN_CENTER,0.7);
-			break;
-			case "Guadeloupe":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+30,SCRIPT_ALIGN_CENTER,0.7);
-			break;
-			case "FalaiseDeFleur":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+30,SCRIPT_ALIGN_CENTER,0.7);
-			break;
-			case "Oxbay":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+30,SCRIPT_ALIGN_CENTER,0.7);
-			break;
-			case "Conceicao":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+30,SCRIPT_ALIGN_CENTER,0.7);
-			break;
-			case "Eleuthera":
-				CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY+10,SCRIPT_ALIGN_CENTER,0.7);
-			break;
-			CreateString(true,isIsland,isName,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY,SCRIPT_ALIGN_CENTER,0.7);
+
+		string labelType = worldMap.labels.(labelId).type;
+		if (labelType == "Island") {
+			CreateString(true,labelId,labelText,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY,SCRIPT_ALIGN_CENTER,0.7);
 		}
-		// PB: Improved Island labels <--
-		aref wIsland; makearef(wIsland, worldMap.islands.(isIsland).locations);
-		for(int c=0; c<GetAttributesNum(wIsland); c++)
-		{
-			string cityNum = "city"+sti(c+1);
-			if(CheckAttribute(wIsland,cityNum))
+		if (labelType == "Town") {
+			// Convoy quests
+			if(GetAttribute(chm, "quest.generate_convoy_quest.destination") == labelText)
 			{
-				string colonyName = wIsland.(cityNum).name;
-				pozX = makefloat(makefloat(wIsland.(cityNum).position.x)/FAKE_MAP_TO_SEA_SCALE_X);
-				pozY = makefloat(makefloat(wIsland.(cityNum).position.z)/FAKE_MAP_TO_SEA_SCALE_Y);
-				int fakeXr = makeint(makefloat(fakeMap.X) - pozX);
-				int fakeYr = makeint(makefloat(fakeMap.Y) + pozY)-15;
-				if(CheckAttribute(wIsland,cityNum+".real"))
+				CreateImage("CONVOY", "ICONS", "ship speed icon", fakeX-5, fakeY+7, fakeX+9, fakeY+21);
+				if(HasSubStr(chm.location,"tavern") || chm.location == "Antigua_mansion_study")
 				{
-					if(isIsland=="Hispaniola" && cityNum=="city3" && iRealismMode<2 && !OPEN_SEA_MOD) CreateString(true,wIsland.(cityNum).name,FindTownName(colonyName),"seadogs_small",COLOR_GREEN_LIGHT,fakeXr,fakeYr,SCRIPT_ALIGN_CENTER,0.7);
-					if(GetAttribute(chm, "quest.generate_convoy_quest.destination") == wIsland.(cityNum).real)
-					{
-						CreateImage("CONVOY", "ICONS", "ship speed icon", fakeXr-5, fakeYr+7, fakeXr+9, fakeYr+21);
-						if(HasSubStr(chm.location,"tavern") || chm.location == "Antigua_mansion_study")
-						{
-							SetPictureBlind("CONVOY",true,minBlindColor,maxBlindColor);
-							SetPictureBlind("SHIP",false,minBlindColor,maxBlindColor);
-						}
-					}
-
-					int ShowTradeQuest = 0;
-					if(GetAttribute(chm, "quest.generate_trade_quest_progress") == "begin")	ShowTradeQuest = 1;
-					if(HasSubStr(chm.location,"store"))										ShowTradeQuest = 2;
-					if(GetAttribute(chm, "quest.generate_trade_quest_progress.iTradeColony") == wIsland.(cityNum).real && ShowTradeQuest > 0)
-					{
-						CreateImage("CARGO", "ICONS", "ship capacity icon", fakeXr-5, fakeYr+7, fakeXr+9, fakeYr+21);
-						if(ShowTradeQuest > 1)
-						{
-							SetPictureBlind("CARGO",true,minBlindColor,maxBlindColor);
-							SetPictureBlind("SHIP",false,minBlindColor,maxBlindColor);
-						}
-					}
+					SetPictureBlind("CONVOY",true,minBlindColor,maxBlindColor);
+					SetPictureBlind("SHIP",false,minBlindColor,maxBlindColor);
 				}
+			}
 
-				// PB: Treasure Quests -->
-				if(GetAttribute(chm, "treasureloc") == wIsland.(cityNum).name)
-				{
-					CreateImage("MARK", "MARK", "mark", fakeXr-5, fakeYr+7, fakeXr+9, fakeYr+21);
-					if(CheckAttribute(chm, "treasuremap"))
-					{
-						SetPictureBlind("MARK",true,minBlindColor,maxBlindColor);
-						SetPictureBlind("SHIP",false,minBlindColor,maxBlindColor);
-						DeleteAttribute(chm, "treasuremap");
-					}
+			// Trader quests
+			int ShowTradeQuest = 0;
+			if(GetAttribute(chm, "quest.generate_trade_quest_progress") == "begin")	ShowTradeQuest = 1;
+			if(HasSubStr(chm.location,"store"))										ShowTradeQuest = 2;
+			string iTradeColony = GetAttribute(chm, "quest.generate_trade_quest_progress.iTradeColony");
+			trace("iTradeColony = " + iTradeColony);
+			if(iTradeColony == labelText && ShowTradeQuest > 0) {
+				CreateImage("CARGO", "ICONS", "ship capacity icon", fakeX-5, fakeY+7, fakeX+9, fakeY+21);
+				if(ShowTradeQuest > 1) {
+					SetPictureBlind("CARGO",true,minBlindColor,maxBlindColor);
+					SetPictureBlind("SHIP",false,minBlindColor,maxBlindColor);
 				}
-				// PB: Treasure Quests <--
+			}
+		}
+
+		// Treasures
+		if(GetAttribute(chm, "treasureloc") == labelId)
+		{
+			CreateImage("MARK", "MARK", "mark", fakeX-5, fakeY+7, fakeX+9, fakeY+21);
+			if(CheckAttribute(chm, "treasuremap"))
+			{
+				SetPictureBlind("MARK",true,minBlindColor,maxBlindColor);
+				SetPictureBlind("SHIP",false,minBlindColor,maxBlindColor);
+				DeleteAttribute(chm, "treasuremap");
 			}
 		}
 	}
