@@ -282,5 +282,10 @@ void wdmInit()
 		wdmInitWorldMap();
 		UnloadSegment("worldmap\worldmap_init.c");
 	}
+
+	if (!IsEntity(&worldMap)) {
+		CreateEntity(&worldMap,"worldmap");
+		DeleteClass(&worldMap);
+	}
 }
 // <-- KK

@@ -168,55 +168,55 @@ void wdmInitWorldMap()
 	//------- TOWN ------------------------------------------------------------
 
 	worldMap.labels.FalaiseDeFleur_town_1.type = "Town";
-	worldMap.labels.FalaiseDeFleur_town_1.id = "FalaiseDeFleur_town";
+	worldMap.labels.FalaiseDeFleur_town_1.id = "Falaise de Fleur";
 	worldMap.labels.FalaiseDeFleur_town_1.locator = "FalaiseDeFleur_town";
 	worldMap.labels.FalaiseDeFleur_town_1.text = FindTownName("Falaise de Fleur");
 	worldMap.labels.FalaiseDeFleur_town_1.icon = GetTownNation("Falaise de Fleur");
 
 
 	worldMap.labels.Redmond_town_1.type = "Town";
-	worldMap.labels.Redmond_town_1.id = "Redmond_town";
+	worldMap.labels.Redmond_town_1.id = "Redmond";
 	worldMap.labels.Redmond_town_1.locator = "Redmond_town";
 	worldMap.labels.Redmond_town_1.text = FindTownName("Redmond");
 	worldMap.labels.Redmond_town_1.icon = GetTownNation("Redmond");
 
 
 	worldMap.labels.Oxbay_town_1.type = "Town";
-	worldMap.labels.Oxbay_town_1.id = "Oxbay_town_1";
+	worldMap.labels.Oxbay_town_1.id = "Oxbay";
 	worldMap.labels.Oxbay_town_1.locator = "Oxbay_town_1";
 	worldMap.labels.Oxbay_town_1.text = FindTownName("Oxbay");
 	worldMap.labels.Oxbay_town_1.icon = GetTownNation("Oxbay");
 
 	worldMap.labels.Oxbay_town_2.type = "Town";
-	worldMap.labels.Oxbay_town_2.id = "Oxbay_town_2";
+	worldMap.labels.Oxbay_town_2.id = "Greenford";
 	worldMap.labels.Oxbay_town_2.locator = "Oxbay_town_2";
 	worldMap.labels.Oxbay_town_2.text = FindTownName("Greenford");
 	worldMap.labels.Oxbay_town_2.icon = GetTownNation("Greenford");
 
 
 	worldMap.labels.Douwesen_town_1.type = "Town";
-	worldMap.labels.Douwesen_town_1.id = "Douwesen_town_1";
+	worldMap.labels.Douwesen_town_1.id = "Douwesen";
 	worldMap.labels.Douwesen_town_1.locator = "Douwesen_town_1";
 	worldMap.labels.Douwesen_town_1.text = FindTownName("Douwesen");
 	worldMap.labels.Douwesen_town_1.icon = GetTownNation("Douwesen");
 
 
 	worldMap.labels.Conceicao_town_1.type = "Town";
-	worldMap.labels.Conceicao_town_1.id = "Conceicao_town_1";
+	worldMap.labels.Conceicao_town_1.id = "Conceicao";
 	worldMap.labels.Conceicao_town_1.locator = "Conceicao_town_1";
 	worldMap.labels.Conceicao_town_1.text = FindTownName("Conceicao");
 	worldMap.labels.Conceicao_town_1.icon = GetTownNation("Conceicao");
 
 
 	worldMap.labels.IslaMuelle_town_1.type = "Town";
-	worldMap.labels.IslaMuelle_town_1.id = "IslaMuelle_town_1";
+	worldMap.labels.IslaMuelle_town_1.id = "Isla Muelle";
 	worldMap.labels.IslaMuelle_town_1.locator = "IslaMuelle_town_1";
 	worldMap.labels.IslaMuelle_town_1.text = FindTownName("Isla Muelle");
 	worldMap.labels.IslaMuelle_town_1.icon = GetTownNation("Isla Muelle");
 
 
 	worldMap.labels.QuebradasCostillas_town_1.type = "Town";
-	worldMap.labels.QuebradasCostillas_town_1.id = "QuebradasCostillas_town_1";
+	worldMap.labels.QuebradasCostillas_town_1.id = "Charlestown";
 	worldMap.labels.QuebradasCostillas_town_1.locator = "QuebradasCostillas_town_1";
 	worldMap.labels.QuebradasCostillas_town_1.text = FindTownName("Charlestown");
 	worldMap.labels.QuebradasCostillas_town_1.icon = GetTownNation("Charlestown");
@@ -229,52 +229,52 @@ void wdmInitWorldMap()
 
 
 	worldMap.labels.KhaelRoa_town_1.type = "Town";
-	worldMap.labels.KhaelRoa_town_1.id = "KhaelRoa_town_1";
+	worldMap.labels.KhaelRoa_town_1.id = "Khael Roa";
 	worldMap.labels.KhaelRoa_town_1.locator = "KhaelRoa_town_1";
 	worldMap.labels.KhaelRoa_town_1.text = FindTownName("Khael Roa");
 	worldMap.labels.KhaelRoa_town_1.icon = GetTownNation("Khael Roa");
 
 
 	worldMap.labels.Cayman_town_1.type = "Town";
-	worldMap.labels.Cayman_town_1.id = "Cayman_town_1";
+	worldMap.labels.Cayman_town_1.id = "Grand Cayman";
 	worldMap.labels.Cayman_town_1.locator = "Cayman_town_1";
 	worldMap.labels.Cayman_town_1.text = FindTownName("Grand Cayman");
 	worldMap.labels.Cayman_town_1.icon = GetTownNation("Grand Cayman");
 
 
 	worldMap.labels.Hispaniola_town_1.type = "Town";
-	worldMap.labels.Hispaniola_town_1.id = "Hispaniola_town_1";
+	worldMap.labels.Hispaniola_town_1.id = "Port au Prince";
 	worldMap.labels.Hispaniola_town_1.locator = "Hispaniola_town_1";
 	worldMap.labels.Hispaniola_town_1.text = FindTownName("Port au Prince");
 	worldMap.labels.Hispaniola_town_1.icon = GetTownNation("Port au Prince");
 
 	worldMap.labels.Hispaniola_town_2.type = "Town";
-	worldMap.labels.Hispaniola_town_2.id = "Hispaniola_town_2";
+	worldMap.labels.Hispaniola_town_2.id = "Santo Domingo";
 	worldMap.labels.Hispaniola_town_2.locator = "Hispaniola_town_2";
 	worldMap.labels.Hispaniola_town_2.text = FindTownName("Santo Domingo");
 	worldMap.labels.Hispaniola_town_2.icon = GetTownNation("Santo Domingo");
 
 	worldMap.labels.Hispaniola_town_3.type = "Town";
-	worldMap.labels.Hispaniola_town_3.id = "Hispaniola_town_3";
+	worldMap.labels.Hispaniola_town_3.id = "Tortuga";
 	worldMap.labels.Hispaniola_town_3.locator = "Hispaniola_town_3";
 	worldMap.labels.Hispaniola_town_3.text = FindTownName("Tortuga");
 	worldMap.labels.Hispaniola_town_3.icon = GetTownNation("Tortuga");
 
 
 	worldMap.labels.Cuba_town_1.type = "Town";
-	worldMap.labels.Cuba_town_1.id = "Cuba_town_1";
+	worldMap.labels.Cuba_town_1.id = "Havana";
 	worldMap.labels.Cuba_town_1.locator = "Cuba_town_1";
 	worldMap.labels.Cuba_town_1.text = FindTownName("Havana");
 	worldMap.labels.Cuba_town_1.icon = GetTownNation("Havana");
 
 	worldMap.labels.Cuba_town_2.type = "Town";
-	worldMap.labels.Cuba_town_2.id = "Cuba_town_2";
+	worldMap.labels.Cuba_town_2.id = "Santiago";
 	worldMap.labels.Cuba_town_2.locator = "Cuba_town_2";
 	worldMap.labels.Cuba_town_2.text = FindTownName("Santiago");
 	worldMap.labels.Cuba_town_2.icon = GetTownNation("Santiago");
 
 
-	worldMap.labels.Guadeloupe_town_1.id = "Guadeloupe_town_1";
+	worldMap.labels.Guadeloupe_town_1.id = "Pointe a Pitre";
 	worldMap.labels.Guadeloupe_town_1.locator = "Guadeloupe_town_1";
 	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) {
 		worldMap.labels.Guadeloupe_town_1.type = "Shore";
@@ -288,53 +288,53 @@ void wdmInitWorldMap()
 
 
 	worldMap.labels.SaintMartin_town_1.type = "Town";
-	worldMap.labels.SaintMartin_town_1.id = "SaintMartin_town_1";
+	worldMap.labels.SaintMartin_town_1.id = "Philipsburg";
 	worldMap.labels.SaintMartin_town_1.locator = "SaintMartin_town_1";
 	worldMap.labels.SaintMartin_town_1.text = FindTownName("Philipsburg");
 	worldMap.labels.SaintMartin_town_1.icon = GetTownNation("Philipsburg");
 
 	worldMap.labels.SaintMartin_town_2.type = "Town";
-	worldMap.labels.SaintMartin_town_2.id = "SaintMartin_town_2";
+	worldMap.labels.SaintMartin_town_2.id = "Marigot";
 	worldMap.labels.SaintMartin_town_2.locator = "SaintMartin_town_2";
 	worldMap.labels.SaintMartin_town_2.text = FindTownName("Marigot");
 	worldMap.labels.SaintMartin_town_2.icon = GetTownNation("Marigot");
 
 
 	worldMap.labels.Antigua_town_1.type = "Town";
-	worldMap.labels.Antigua_town_1.id = "Antigua_town_1";
+	worldMap.labels.Antigua_town_1.id = "St John's";
 	worldMap.labels.Antigua_town_1.locator = "Antigua_town_1";
 	worldMap.labels.Antigua_town_1.text = FindTownName("St John's");
 	worldMap.labels.Antigua_town_1.icon = GetTownNation("St John's");
 
 
 	worldMap.labels.Turks_town_1.type = "Town";
-	worldMap.labels.Turks_town_1.id = "Turks_town_1";
+	worldMap.labels.Turks_town_1.id = "Grand Turk";
 	worldMap.labels.Turks_town_1.locator = "Turks_town_1";
 	worldMap.labels.Turks_town_1.text = FindTownName("Grand Turk");
 	worldMap.labels.Turks_town_1.icon = GetTownNation("Grand Turk");
 
 
 	worldMap.labels.Curacao_town_1.type = "Town";
-	worldMap.labels.Curacao_town_1.id = "Curacao_town_1";
+	worldMap.labels.Curacao_town_1.id = "Willemstad";
 	worldMap.labels.Curacao_town_1.locator = "Curacao_town_1";
 	worldMap.labels.Curacao_town_1.text = FindTownName("Willemstad");
 	worldMap.labels.Curacao_town_1.icon = GetTownNation("Willemstad");
 
 
 	worldMap.labels.Eleuthera_town_1.type = "Town";
-	worldMap.labels.Eleuthera_town_1.id = "Eleuthera_town_1";
+	worldMap.labels.Eleuthera_town_1.id = "Eleuthera";
 	worldMap.labels.Eleuthera_town_1.locator = "Eleuthera_town_1";
 	worldMap.labels.Eleuthera_town_1.text = FindTownName("Eleuthera");
 	worldMap.labels.Eleuthera_town_1.icon = GetTownNation("Eleuthera");
 
 	worldMap.labels.Eleuthera_town_2.type = "Town";
-	worldMap.labels.Eleuthera_town_2.id = "Eleuthera_town_2";
+	worldMap.labels.Eleuthera_town_2.id = "Alice";
 	worldMap.labels.Eleuthera_town_2.locator = "Eleuthera_town_2";
 	worldMap.labels.Eleuthera_town_2.text = FindTownName("Alice");
 	worldMap.labels.Eleuthera_town_2.icon = GetTownNation("Alice");
 
 
-	worldMap.labels.Aruba_town_1.id = "Aruba_town_1";
+	worldMap.labels.Aruba_town_1.id = "Oranjestad";
 	worldMap.labels.Aruba_town_1.locator = "Aruba_town_1";
 	if(GetCurrentPeriod() == PERIOD_EARLY_EXPLORERS) {
 		worldMap.labels.Aruba_town_1.type = "Shore";
@@ -348,7 +348,7 @@ void wdmInitWorldMap()
 
 
 	worldMap.labels.Colombia_town_1.type = "Town";
-	worldMap.labels.Colombia_town_1.id = "Colombia_town_1";
+	worldMap.labels.Colombia_town_1.id = "Cartagena";
 	worldMap.labels.Colombia_town_1.locator = "Colombia_town_1";
 	worldMap.labels.Colombia_town_1.text = FindTownName("Cartagena");
 	worldMap.labels.Colombia_town_1.icon = GetTownNation("Cartagena");

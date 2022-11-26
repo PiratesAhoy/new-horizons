@@ -128,8 +128,9 @@ void ShowMap()
 			CreateString(true,labelId,labelText,"seadogs_small",COLOR_GREEN_LIGHT,fakeX,fakeY,SCRIPT_ALIGN_CENTER,0.7);
 		}
 		if (labelType == "Town") {
+			string townId = worldMap.labels.(labelId).id;
 			// Convoy quests
-			if(GetAttribute(chm, "quest.generate_convoy_quest.destination") == labelText)
+			if(GetAttribute(chm, "quest.generate_convoy_quest.destination") == townId)
 			{
 				CreateImage("CONVOY", "ICONS", "ship speed icon", fakeX-5, fakeY+7, fakeX+9, fakeY+21);
 				if(HasSubStr(chm.location,"tavern") || chm.location == "Antigua_mansion_study")
@@ -145,7 +146,8 @@ void ShowMap()
 			if(HasSubStr(chm.location,"store"))										ShowTradeQuest = 2;
 			string iTradeColony = GetAttribute(chm, "quest.generate_trade_quest_progress.iTradeColony");
 			trace("iTradeColony = " + iTradeColony);
-			if(iTradeColony == labelText && ShowTradeQuest > 0) {
+			trace("townId = " + townId);
+			if(iTradeColony == townId && ShowTradeQuest > 0) {
 				CreateImage("CARGO", "ICONS", "ship capacity icon", fakeX-5, fakeY+7, fakeX+9, fakeY+21);
 				if(ShowTradeQuest > 1) {
 					SetPictureBlind("CARGO",true,minBlindColor,maxBlindColor);
