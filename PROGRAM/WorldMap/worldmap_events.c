@@ -67,7 +67,7 @@ void wdmEvent_ShipEncounter()
 	float playerShipX = GetEventData();
 	float playerShipZ = GetEventData();
 	float playerShipAY = GetEventData();
-	int eshipIndex = GetEventData();
+	int encounterId = GetEventData();
 	//Trace("Player ship hit in ship encounter with index " + eshipIndex);
 
 	if(CheckAttribute(worldMap, "evwin") != 0)
@@ -80,7 +80,7 @@ void wdmEvent_ShipEncounter()
 	}
 	// boal -->
 //changed by MAXIMUS: for new "Sail Ho" and DirectSail-Mod -->
-	CalculateEncInfoData();
+	CalculateEncInfoData(encounterId);
 /*	ref messenger = DirectSailMessenger("sail_ho");
 	messenger.SailHo = true;
 	messenger.Dialog.Filename = "Enc_WorldMap_dialog.c";

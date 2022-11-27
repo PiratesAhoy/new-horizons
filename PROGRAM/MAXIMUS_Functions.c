@@ -3671,12 +3671,12 @@ void SetLocalizedLabels()
 }*/
 //Levis: Not used anymore
 
-void CalculateEncInfoData()
+void CalculateEncInfoData(int encounterId)
 {
 	ref mainCh = GetMainCharacter();
 	mainCh.ShipEnc = "none";
 	mainCh.CanEscape = 1;
-	EncRecalcReloadToSea();
+	EncRecalcReloadToSea(encounterId);
 
 	float modifier = 1.0;
 	if (checkAttribute(mainCh, "Perks.List.ShipSpeedUp")) {
@@ -3697,7 +3697,7 @@ void CalculateEncInfoData()
 	}
 }
 
-void EncRecalcReloadToSea()
+void EncRecalcReloadToSea(int currentEncounterId)
 {
 	//int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
 	worldMap.encounter.type = "";
@@ -3718,7 +3718,12 @@ void EncRecalcReloadToSea()
 			{
 				totalInfo = totalInfo + " " + XI_ConvertString("vs.") + " ";
 			}
-			rEncounter = &MapEncounters[sti(worldMap.encounter.type)];
+
+			string encounterId = worldMap.encounter.id;
+			aref encData;
+			makearef(encData, worldMap.encounters.(encounterId).encdata);
+			int encounterType = sti(encData.type);
+			rEncounter = &MapEncounters[encounterType];
 
 			if (!CheckAttribute(rEncounter, "RealEncounterType")) {
 				totalInfo = totalInfo + TranslateString("","ships");

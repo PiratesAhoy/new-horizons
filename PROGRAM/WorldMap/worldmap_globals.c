@@ -46,6 +46,20 @@ bool wdmSetCurrentShipData(int shipIndex)
 	return 1;
 }
 
+void wdmStoreNewEncounterData(int type) {
+	string encId = worldMap.EncounterID1;
+	aref encData;
+	makearef(encData, worldMap.encounters.(encId).encdata);
+	encData.type = type;
+}
+
+void wdmStoreNewEncounterData2(int type) {
+	string encId = worldMap.EncounterID2;
+	aref encData;
+	makearef(encData, worldMap.encounters.(encId).encdata);
+	encData.type = type;
+}
+
 bool wdmCreateMerchantShip(int type, string islandName, float dltSpeedInPMPercents)
 {
 	float kSpeed = dltSpeedInPMPercents/100.0;
@@ -61,7 +75,11 @@ bool wdmCreateMerchantShip(int type, string islandName, float dltSpeedInPMPercen
 	float timeOutInSec = daysPerSec*timeOutInDays;
 
 	string nationShipName = wdmEncounterModelName(type);
-	return SendMessage(&worldMap, "lsssff", MSG_WORLDMAP_CREATEENC_MER, nationShipName, "", "", kSpeed, timeOutInSec);
+	bool success = SendMessage(&worldMap, "lsssff", MSG_WORLDMAP_CREATEENC_MER, nationShipName, "", "", kSpeed, timeOutInSec);
+	if (success) {
+		wdmStoreNewEncounterData(type);
+	}
+	return success;
 }
 
 bool wdmCreateFollowShip(int type, float dltSpeedInPMPercents)
@@ -81,7 +99,11 @@ bool wdmCreateFollowShip(int type, float dltSpeedInPMPercents)
 	float daysPerSec = 24.0/stf(worldMap.date.hourPerSec);
 	float timeOutInSec = daysPerSec*timeOutInDays;
 
-	return SendMessage(&worldMap, "lsff", MSG_WORLDMAP_CREATEENC_FLW, nationShipName, kSpeed, timeOutInSec);
+	bool success = SendMessage(&worldMap, "lsff", MSG_WORLDMAP_CREATEENC_FLW, nationShipName, kSpeed, timeOutInSec);
+	if (success) {
+		wdmStoreNewEncounterData(type);
+	}
+	return success;
 }
 
 bool wdmCreateWarringShips(int type1, int type2)
@@ -93,7 +115,12 @@ bool wdmCreateWarringShips(int type1, int type2)
 	float daysPerSec = 24.0/stf(worldMap.date.hourPerSec);
 	float timeOutInSec = daysPerSec*timeOutInDays;
 
-	return SendMessage(&worldMap, "lssf", MSG_WORLDMAP_CREATEENC_WAR, nationShipName1, nationShipName2, timeOutInSec);
+	bool success SendMessage(&worldMap, "lssf", MSG_WORLDMAP_CREATEENC_WAR, nationShipName1, nationShipName2, timeOutInSec);
+	if (success) {
+		wdmStoreNewEncounterData(type1);
+		wdmStoreNewEncounterData2(type2);
+	}
+	return success;
 }
 
 void wdmReleaseEncounters()

@@ -44,7 +44,6 @@ void WM_UpdateCurrentAction()
 {
 	bool bDefault = true;
 	Trace("WM_UpdateCurrentAction: Encountering type: " + worldMap.encounter_type + " near island " + worldMap.encounter_island);
-	Trace("WM_UpdateCurrentAction: Converted type: " + sti(worldMap.encounter_type));
 	switch( sti(worldMap.encounter_type) )
 	{
 	case WORLDMAP_ENCOUNTER_TYPE_UNKNOWN:
