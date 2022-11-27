@@ -103,7 +103,12 @@ void wdmReloadToSea()
 				wdmLoginToSea.encounters.(grp).x = plsX + (encX - psX)*WDM_MAP_TO_SEA_ENCOUNTERS_SCALE;
 				wdmLoginToSea.encounters.(grp).z = plsZ + (encZ - psZ)*WDM_MAP_TO_SEA_ENCOUNTERS_SCALE;
 				wdmLoginToSea.encounters.(grp).ay = worldMap.encounter.ay;
-				wdmLoginToSea.encounters.(grp).type = worldMap.encounter.type;
+
+				string encounterId = worldMap.encounter.id;
+				aref encData;
+				makearef(encData, worldMap.encounters.(encounterId).encdata);
+				int encounterType = sti(encData.type);
+				wdmLoginToSea.encounters.(grp).type = encounterType;
 			}
 		}
 	}
