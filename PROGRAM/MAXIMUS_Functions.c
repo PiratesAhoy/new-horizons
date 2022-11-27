@@ -3671,12 +3671,12 @@ void SetLocalizedLabels()
 }*/
 //Levis: Not used anymore
 
-void CalculateEncInfoData(int encounterId)
+void CalculateEncInfoData()
 {
 	ref mainCh = GetMainCharacter();
 	mainCh.ShipEnc = "none";
 	mainCh.CanEscape = 1;
-	EncRecalcReloadToSea(encounterId);
+	EncRecalcReloadToSea();
 
 	float modifier = 1.0;
 	if (checkAttribute(mainCh, "Perks.List.ShipSpeedUp")) {
@@ -3697,7 +3697,7 @@ void CalculateEncInfoData(int encounterId)
 	}
 }
 
-void EncRecalcReloadToSea(int currentEncounterId)
+void EncRecalcReloadToSea()
 {
 	//int tmpLangFileID = LanguageOpenFile("interface_strings.txt");
 	worldMap.encounter.type = "";

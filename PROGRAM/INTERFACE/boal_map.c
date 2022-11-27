@@ -87,6 +87,8 @@ void ProcCommand()
 			if(comName=="activate" || comName=="click")
 			{
 				//to pass
+				ref pchar = GetMainCharacter();
+				pchar.SkipEshipIndex = pchar.eshipIndex;
 				PostEvent("evntDoPostExit",1,"l",RC_INTERFACE_SALARY_EXIT);
 				if(CheckAttribute(GetMainCharacter(),"ShipEnc")) DeleteAttribute(GetMainCharacter(),"ShipEnc"); // NK
 				ResetVew();
