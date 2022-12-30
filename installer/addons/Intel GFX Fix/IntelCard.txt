@@ -1,0 +1,4 @@
+The Intel Graphics fix allows the game to run properly on systems with Intel integrated GPUs, by disabling various parts of the game's ocean shaders.
+This compromises the quality of the ocean's appearance, but does not affect gameplay, and allows the game to run just as smoothly as it otherwise would on comparable ATI and Nvidia hardware.
+
+DISCLAIMER: This fix is not made by or affiliated with Intel in any way.
