@@ -128,10 +128,10 @@ Section "!Main Files" SEC01
   File /r "..\RESOURCE\*.wav"
   File /r "..\RESOURCE\*.wmv"
 
-  ; File /r "..\RESOURCE\*.gm"
-  ; File /r "..\RESOURCE\*.col"
+  File /r "..\RESOURCE\*.gm"
+  File /r "..\RESOURCE\*.col"
 
-  ; File /r "..\RESOURCE\*.tx"
+  File /r "..\RESOURCE\*.tx"
 
 ;   ${If} ${FileExists} "$INSTDIR\ENGINE.exe"
 ;   ${Else}
