@@ -1,4 +1,4 @@
-string DLG_TEXT[189] = {
+string DLG_TEXT[194] = {
 "Me han dicho que has insistido mucho para pedir una audiencia. Mi nombre es ",
 ". Ahora, por favor, dime el propósito de tu visita., ",
 ".",
@@ -188,4 +188,9 @@ string DLG_TEXT[189] = {
 ", y ahora quieres más! Pero soy una persona razonable. No debería dejarte en la estacada después del servicio que nos has prestado\n Muy bien, puedes contar con otras ",
 " piezas de oro como paga extraordinaria. Con eso y con lo que ya te he pagado, cubrirás tu deuda y aún te quedará algo de recompensa.",
 "Gracias, Excelencia.",
+"¿Y bien? ¿Qué informe me traes de tu misión?",
+"Excelencia, lamento informar de que no he podido encontrar el ",
+".",
+"Puede que te interese saber que, mientras, tu fracasabas en tu misión de encontrar al ",
+", el ocndenado barco se dedicaba a saquear otros de nuestros mercantes. Ahora ha escapado. Este fracaso constará en tu expediente.",
 };

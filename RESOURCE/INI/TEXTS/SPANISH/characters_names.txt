@@ -1337,5 +1337,5 @@ Scarlett{Scarlett}
 Giselle{Giselle}
 Harriett{Harriett}
 Anamaria{Anamaria}
-Scared Monk{Scared Monk}
-Cursed Skeleton{Cursed Skeleton}
+Scared Monk{Monje asustado}
+Cursed Skeleton{Esqueleto maldito}

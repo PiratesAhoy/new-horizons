@@ -212,6 +212,10 @@ void InitMusic()
 	tmpref.storyteller_fun.f1.name = "MUSIC\bensound-smile.ogg";
 
 
+	//===========================| Tribute to Captain Murphy |===========================	// This track is by Flannery, originally for the game "Buccaneers"
+	tmpref.murphy_tribute.f1.name = "MUSIC\Hail Captain Murphy.ogg";			// and included in "New Horizons" with his permission.
+												// Republishing or uploading this track is strictly prohibited.
+
 	//============ SHOP, TAVERN, SHIPYARD ============
 	tmpref.music_shop.f1.name = "MUSIC\Taverna.ogg";
 	tmpref.music_shop.f2.name = "MUSIC\Taverna2.ogg";								// Pillat: Port Royale

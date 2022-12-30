@@ -144,6 +144,17 @@ Agile, weathered vessel with blue paint.}
 LuggerVML_Descr{Quite a fast and agile trader with a strong hull.
 Compass included (but doesn't point North).}
 
+PO_LuggerP_Descr{Small, agile merchant ship adapted for privateering.
+White hull with green and red decoration.}
+SP_LuggerP_Descr{Small, agile merchant ship adapted for privateering.
+Black hull with blue and red decoration.}
+NL_LuggerP_Descr{Small, agile merchant ship adapted for privateering.
+Yellow hull with green and red decoration.}
+FR_LuggerP_Descr{Small, agile merchant ship adapted for privateering.
+Blue hull with red decoration.}
+RN_LuggerP_Descr{Small, agile merchant ship adapted for privateering.
+Brown hull with blue and yellow decoration.}
+
 Lugger3_Descr{Small merchant ship of decent performance.
 Agile vessel with weathered paint.}
 

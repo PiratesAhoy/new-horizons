@@ -1105,7 +1105,20 @@ void OpenBoxProcedure_BUG()
 							chr.quest.Legrands_fireplace = "extinct";
 							Locations[FindLocation(chr.location)].models.always.locators = "mediumhouse01_locators_GB0";
 							locations[FindLocation("Legrands_kitchen")].models.always.l2 = "wood5";
-
+			//pдr fire off
+							if(CheckAttribute(chr, "quest.attic_box1") && chr.quest.attic_box1 == "blocked")
+							{
+								//no smoke
+								Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_tree_nosmoke";
+								Locations[FindLocation("Sullivan_jungle1")].models.always.locators = "QCexit_l_GB_tree_nosmoke";
+							}
+							else
+							{
+								//no smoke
+								Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_nosmoke";
+								Locations[FindLocation("Sullivan_jungle1")].models.always.locators = "QCexit_l_GB_nosmoke";
+							}
+			
 							LAi_QuestDelay("Legrands_damper_closed_smoke", 0.5);
 							return;
 						} 
@@ -1288,7 +1301,7 @@ void OpenBoxProcedure_BUG()
 					PlaySound("PEOPLE\run_stone.wav");
 					ChangeCharacterAddressGroup(chr, "Legrands_backyard", "box", "box6");
 
-					if(Locations[FindLocation(chr.location)].models.always.locators == "qcexit_l_GB_tree")
+					if(Locations[FindLocation(chr.location)].models.always.locators == "qcexit_l_GB_tree" || Locations[FindLocation(chr.location)].models.always.locators == "qcexit_l_GB_tree_nosmoke")
 					{
 						chr.quest.go_to_attic = "phase2";
 					}
@@ -13634,7 +13647,20 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 							locations[FindLocation(attack.location)].models.always.l2 = "wood3";
 							Locations[FindLocation("Legrands_kitchen")].image = "";
 							attack.quest.Legrands_fireplace = "glowing";
-					
+		//pдr fire on	
+							if(CheckAttribute(attack, "quest.attic_box1") && attack.quest.attic_box1 == "blocked")
+							{
+								//smoke
+								Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_tree";
+								Locations[FindLocation("Sullivan_jungle1")].models.always.locators = "QCexit_l_GB_tree";
+							}
+							else
+							{
+								//smoke
+								Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB";
+								Locations[FindLocation("Sullivan_jungle1")].models.always.locators = "QCexit_l_GB";
+							}				
+		
 							LAi_QuestDelay("end_of_tinderbox", 1.0);
 			
 						}
@@ -13705,7 +13731,7 @@ void LAi_CharacterFireExecute_BUG(aref attack, aref enemy, float kDist, int isFi
 								locations[FindLocation(attack.location)].models.always.l2 = "wood3";
 								Locations[FindLocation("Legrands_kitchen")].image = "";
 								attack.quest.Legrands_fireplace = "fire1";
-
+						
 								LAi_QuestDelay("end_of_tinderbox", 1.0);
 							}
 						}

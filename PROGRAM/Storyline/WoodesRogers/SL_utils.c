@@ -16753,7 +16753,8 @@ void OpenBoxProcedure_WR()
 
 				return;
 			break;
-
+		/*
+		//moved to wr_gall_qdeck
 			case "box13":
 				if(CheckAttribute(chr,"quest.captains_door") && chr.quest.captains_door == "closed")
 				{
@@ -16771,7 +16772,7 @@ void OpenBoxProcedure_WR()
 
 				return;
 			break;
-
+		*/
 			case "box14":
 				//place anchor in prow
 
@@ -16850,7 +16851,8 @@ void OpenBoxProcedure_WR()
 
 				return;
 			break;
-
+		/*
+		//moved to wr_gall_qdeck
 			case "box18":
 				//move to steering wheel
 				PlaySound("PEOPLE\run_wood.wav");
@@ -16858,7 +16860,7 @@ void OpenBoxProcedure_WR()
 
 				return;
 			break;
-
+		*/
 			case "box19":
 				//enter ships
 				PlaySound("PEOPLE\recoil.wav");
@@ -16942,6 +16944,31 @@ void OpenBoxProcedure_WR()
 				}
 			break;
 
+		}
+		return;
+	}
+
+	if(Locations[locidx].id=="wr_gall_qdeck")
+	{
+		switch(chr.boxname)
+		{
+			case "box13":
+				if(CheckAttribute(chr,"quest.captains_door") && chr.quest.captains_door == "closed")
+				{
+					PlaySound("PEOPLE\wheel_open.wav");
+
+					LAi_QuestDelay("open_captains_door", 4.0);
+				}
+
+				if(CheckAttribute(chr,"quest.captains_door") && chr.quest.captains_door == "open")
+				{
+					PlaySound("PEOPLE\wheel_close.wav");
+
+					LAi_QuestDelay("close_captains_door", 3.5);
+				}
+
+				return;
+			break;
 		}
 		return;
 	}
@@ -17157,38 +17184,6 @@ void OpenBoxProcedure_WR()
 			case "box2":
 				PlaySound("PEOPLE\Run_roof.wav");
 				ChangeCharacterAddressGroup(chr, "wr_church_outside", "goto", "goto7");
-			break;
-		}
-		return;
-	}
-
-	if(Locations[locidx].id=="wr_church_attic")
-	{
-		switch(chr.boxname)
-		{
-			case "box2":
-
-			break;
-
-			case "box3":
-				PlaySound("PEOPLE\Run_roof.wav");
-				ChangeCharacterAddressGroup(chr, "wr_church_attic", "goto", "goto4");
-
-				LAi_QuestDelay("church_attic2", 0.1);
-			break;
-
-			case "box4":
-				PlaySound("PEOPLE\Run_roof.wav");
-				ChangeCharacterAddressGroup(chr, "wr_church_attic", "goto", "goto11");
-
-				LAi_QuestDelay("church_attic2", 0.1);
-			break;
-
-			case "box5":
-				PlaySound("PEOPLE\Run_roof.wav");
-				ChangeCharacterAddressGroup(chr, "wr_church_attic", "goto", "window");
-
-				LAi_QuestDelay("Vane_returns_to_attic", 1.0);
 			break;
 		}
 		return;
@@ -22322,6 +22317,11 @@ void CreateLandActionsEnvironment_WR()
 				if(Pchar.boxname == "box24") IActions.ActiveActions.OpenBox.IconNum	= 3;
 			}
 			else IActions.ActiveActions.OpenBox.IconNum = 2;
+		}
+
+		if(Pchar.location == "wr_gall_qdeck")
+		{
+			if(Pchar.boxname == "box13") IActions.ActiveActions.OpenBox.IconNum	= 2;
 		}
 
 		if(Pchar.location == "wr_gall_hold_first")

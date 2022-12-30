@@ -1,0 +1,2 @@
+title=La maldición se ha levantado
+text.t1=Davy Jones está muerto y el #sshipname# ha recuperado el aspecto que tenía antes de la maldición. ¿Cuánto tiempo podré aplazar el cumplimiento del deber asociado con este barco sin caer presa de la misma maldición?

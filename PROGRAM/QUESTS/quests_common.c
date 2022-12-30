@@ -5648,7 +5648,6 @@ Cost for level 50 is 55,374,000
 		case "Rheims_house_setup":
 			PChar.quest.rheims_house.done = true;
 			Locations[FindLocation("Rheims_house_in_smugglers")].vcskip = true;
-			Locations[FindLocation("Rheims_house_in_smugglers")].reload.l1.disable = 1;
 			LAi_SetFightMode(PChar, false);
 			LAi_LocationFightDisable(&Locations[FindLocation("Rheims_house_in_smugglers")], true);
 			PChar.quest.Rheims_house_window_setup.win_condition.l1 = "locator";
@@ -5663,6 +5662,7 @@ Cost for level 50 is 55,374,000
 		case "Rheims_house_window_setup":
 			PChar.quest.rheims_house.current_year = GetDataYear();
 			SetCurrentDate(GetDataDay(), GetDataMonth(), 1750);
+			Locations[FindLocation("Rheims_house_in_smugglers")].reload.l1.disable = 1;
 			DoQuestReloadToLocation("Rheims_house_in_smugglers", "goto", "goto2", "Rheims_house_inside");
 		break;
 
@@ -5681,7 +5681,7 @@ Cost for level 50 is 55,374,000
 			LAi_ActorDialog(sld,PChar,"",5.0,5.0);
 		break;
 
-		case "Rheims_exit_setup":
+		case "Rheims_exit_setup":	// Triggered by dialog with "Fake_Nathaniel"
 			LAi_SetCitizenType(CharacterFromID("Fake_Nathaniel"));
 			PChar.quest.Rheims_exit.win_condition.l1 = "locator";
 			PChar.quest.Rheims_exit.win_condition.l1.location = "Rheims_house_in_smugglers";
@@ -5692,6 +5692,7 @@ Cost for level 50 is 55,374,000
 
 		case "Rheims_exit":
 			Locations[FindLocation("Rheims_house_in_smugglers")].type = "house";
+			Locations[FindLocation("Rheims_house_in_smugglers")].reload.l1.disable = 0;
 			SetCurrentDate(GetDataDay(), GetDataMonth(), sti(PChar.quest.rheims_house.current_year));
 			DoQuestReloadToLocation("Smugglers_Lair", "reload", "reload10", "_");
 		break;

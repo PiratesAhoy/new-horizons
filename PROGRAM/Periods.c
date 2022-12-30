@@ -898,6 +898,12 @@ void InitTownNationalities()
 	PChar.quest.crysskull_bridge_trap2.win_condition = "crysskull_bridge_trap";
 	//Traps for Martinique bridge and Crystal Skullquest
 
+	// Captain Murphy Tribute
+	PChar.quest.Murphy_tribute_activate.win_condition.l1 = "location";
+	PChar.quest.Murphy_tribute_activate.win_condition.l1.location = "Capt_Murphy_house";
+	PChar.quest.Murphy_tribute_activate.win_condition = "Murphy_tribute_activate";
+	// Captain Murphy Tribute
+
 	//JRH: Cartagena New_cloister
 	PChar.quest.cloister_start.win_condition.l1 = "location";
 	PChar.quest.cloister_start.win_condition.l1.location = "new_cloister_garden";

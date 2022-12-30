@@ -1033,11 +1033,15 @@ void QuestComplete(string sQuestName)
 						Locations[FindLocation("Legrands_kitchen")].models.always.locators = "mediumhouse01_locators_GB0";
 						locations[FindLocation("Legrands_kitchen")].models.always.l2 = "wood3";
 						Pchar.quest.Legrands_fireplace = "glowing";
+			//YES here already too
+						LAi_QuestDelay("chimney_no_smoke", 0.1);
 					break;	
 
 					case "glowing":
 						locations[FindLocation("Legrands_kitchen")].models.always.l2 = "wood5";
 						Pchar.quest.Legrands_fireplace = "extinct";
+
+						LAi_QuestDelay("chimney_no_smoke", 0.1);
 					break;
 				}
 			}
@@ -1151,6 +1155,8 @@ void QuestComplete(string sQuestName)
 					case "glowing":
 						locations[FindLocation("Legrands_kitchen")].models.always.l2 = "wood5";
 						Pchar.quest.Legrands_fireplace = "extinct";
+
+						LAi_QuestDelay("chimney_no_smoke", 0.1);
 					break;
 				}
 			}
@@ -1222,6 +1228,8 @@ void QuestComplete(string sQuestName)
 					case "glowing":
 						locations[FindLocation("Legrands_kitchen")].models.always.l2 = "wood5";
 						Pchar.quest.Legrands_fireplace = "extinct";
+
+						LAi_QuestDelay("chimney_no_smoke", 0.1);
 					break;
 				}
 			}
@@ -1306,7 +1314,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(Pchar);
 			LAi_ActorTurnToLocator(Pchar, "goto", "look6");
 
-			if(Locations[FindLocation(Pchar.location)].models.always.locators == "qcexit_l_GB_tree")
+			if(Locations[FindLocation(Pchar.location)].models.always.locators == "qcexit_l_GB_tree" || Locations[FindLocation(Pchar.location)].models.always.locators == "qcexit_l_GB_tree_nosmoke")
 			{
 				PlaySound("OBJECTS\VOICES\DEAD\male\dead1.wav");		
 			}
@@ -3222,6 +3230,8 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Legrands_kitchen")].models.always.locators = "mediumhouse01_locators_GB0";
 			ChangeCharacterAddressGroup(Pchar, "Legrands_house", "goto", "staybed");
 			
+			LAi_QuestDelay("chimney_no_smoke", 0.1);
+
 			LAi_SetActorType(pchar);	
 			characters[GetCharacterIndex("Blaze")].dialog.CurrentNode = "new_day";
 			LAi_ActorSelfDialog(pchar, "");
@@ -3230,7 +3240,7 @@ void QuestComplete(string sQuestName)
 		case "new_day_done":
 			LAi_SetPlayerType(pchar);
 			PlaySound("VOICE\ENGLISH\blaze_lets_go.wav");
-	
+
 			pchar.quest.no_wood_first.win_condition.l1 = "locator";
 			pchar.quest.no_wood_first.win_condition.l1.location = "Legrands_kitchen";
 			pchar.quest.no_wood_first.win_condition.l1.locator_group = "goto";
@@ -17646,7 +17656,16 @@ void QuestComplete(string sQuestName)
 		case "attic_blocked1":
 			Pchar.quest.attic_box1 = "blocked";
 			LAi_SetSitType(Pchar);
-			Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_tree";
+
+			if(CheckAttribute(Pchar,"quest.Legrands_fireplace"))
+			{
+				if(Pchar.quest.Legrands_fireplace == "fire2" || Pchar.quest.Legrands_fireplace == "fire1"
+				|| Pchar.quest.Legrands_fireplace == "glowing")
+				{
+					Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_tree";
+				}
+				else Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_tree_nosmoke";
+			}
 
 			PlaySound("PEOPLE\derrick_fall.wav");
 			PlaySound("PEOPLE\roof_broken1.wav");
@@ -21729,7 +21748,16 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Legrands_boathouse")].locators_radius.goto.exit_stop = 0.001;
 			Pchar.quest.house_box1 = "open";
 			Pchar.quest.backyard = "open";
-			Locations[FindLocation("Legrands_backyard")].models.always.locators = "qcexit_l_GB";
+
+			if(CheckAttribute(Pchar,"quest.Legrands_fireplace"))
+			{
+				if(Pchar.quest.Legrands_fireplace == "fire2" || Pchar.quest.Legrands_fireplace == "fire1"
+				|| Pchar.quest.Legrands_fireplace == "glowing")
+				{
+					Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB";
+				}
+				else Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_nosmoke";
+			}
 
 			pchar.quest.home_with_treasure.win_condition.l1 = "location";
 			pchar.quest.home_with_treasure.win_condition.l1.location = "Legrands_house";
@@ -23665,11 +23693,20 @@ void QuestComplete(string sQuestName)
 			else return;
 		break;
 
+		case "chimney_no_smoke":
+			if(CheckAttribute(Pchar, "quest.attic_box1") && Pchar.quest.attic_box1 == "blocked")
+			{
+				Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_tree_nosmoke";
+				Locations[FindLocation("Sullivan_jungle1")].models.always.locators = "QCexit_l_GB_tree_nosmoke";
+			}
+			else
+			{
+				Locations[FindLocation("Legrands_backyard")].models.always.locators = "QCexit_l_GB_nosmoke";
+				Locations[FindLocation("Sullivan_jungle1")].models.always.locators = "QCexit_l_GB_nosmoke";
+			}
+		break;
+
 		//<-- JRH
-
-
-
-
 
 	}
 	

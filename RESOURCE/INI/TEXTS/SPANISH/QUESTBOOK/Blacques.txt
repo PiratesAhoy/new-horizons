@@ -19,4 +19,5 @@ text.t17=Me ofrecí a llevar a #sMarc# de vuelta a casa, pero solo ha ahorrado 5
 text.t18=He accedido a coger las 500 piezas de oro de #sMarc# y hacerme cargo del resto de la deuda, y después llevar a #sMarc# de vuelta con su padre. A veces me asombro hasta a mi. Ahora hablaré con #sThomas# y arreglaremos este asunto.
 text.t19=Le comuniqué a #sMarc# lo feliz que estaba su familia al recibir su carta. Pero no ha sido tan gratificante como esperaba. Me pregunto si hay algo más que pueda hacer por esta familia.
 text.t20=¡Ja ja, #sMarc#, pobre ingenuo...! Ahora yo tengo 500 piezas de oro más, y él es un poco más sabio...
-text.t21=Le he insuflado agallas a ese llorica, #sOrable#. Tiene que aprender a no aceptar un 'no' por respuesta. Ahora le enseñará a #sRachel# quién manda.
+text.t21=Le he insuflado agallas a ese llorica de #sOrable#. Tiene que aprender a no aceptar un 'no' por respuesta. Ahora le enseñará a #sRachel# quién manda.
+text.t22=Tiempo después, me he enterado de que #sRachel# se resisitió a las demandas de #sOrable# con tanta violencia que murió por las heridas que él le causó.

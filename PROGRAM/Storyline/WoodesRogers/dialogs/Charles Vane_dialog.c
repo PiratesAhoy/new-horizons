@@ -498,8 +498,8 @@ void ProcessDialogEvent()
 			PlaySound("VOICE\ENGLISH\pir_capR11.wav");
 
 			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "box", "box4");//so he's not hiding Vane		
-
+			LAi_ActorTurnToLocator(Pchar, "goto", "goto11");	//so he's not hiddden by the wall
+				
 			Dialog.text = DLG_TEXT[81];
 			link.l1 = DLG_TEXT[82];
 			link.l1.go = "cave_door2";

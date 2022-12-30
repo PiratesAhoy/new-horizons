@@ -1910,7 +1910,8 @@ int FindNearShips(int idx)
 	fSortArray(&tmpar, "dist", 0, place-1);
 
 	int r, relplace[MAX_SHIPS_ON_SEA];
-	for (i = 0; i < MAX_SHIPS_ON_SEA; i++) {
+	for (i = 0; i < MAX_SHIPS_ON_SEA; i++)
+	{
 		relplace[i] = 0;
 	}
 	object groupplaces;
@@ -1939,7 +1940,8 @@ int FindNearShips(int idx)
 		CopyAttributes(curplace, arrplace);
 	}
 	// done above. retobj.all.qty = place;
-	for (i = 0; i < place; i++) {
+	for (i = 0; i < place; i++)
+	{
 		tstr = "rel"+i;
 		retobj.(tstr).qty = relplace[i];
 	}

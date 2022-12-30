@@ -1,4 +1,4 @@
-string DLG_TEXT[94] = { 
+string DLG_TEXT[127] = { 
 "Me han dicho que has insistido mucho para pedir una audiencia. Mi nombre es ",
 ". Ahora, por favor, dime el propósito de tu visita, ",
 ".",
@@ -124,7 +124,7 @@ string DLG_TEXT[94] = {
 "Sin duda, gobernador. El 'HMS Endeavour' era el único navío disponible para tal operación.",
 "En cualquier caso, no te preocupes; no he olvidado tu recompensa. Toma estas 25000 monedas de oro. Enseguida pagaré también al capitán Lafitte.",
 "Gracias, gobernador.",
-"Vuelve  averme en el futuro si necesitas trabajo.",
+"Vuelve a verme en el futuro si necesitas trabajo.",
 "Lo haré, gobernador.",
 };
 

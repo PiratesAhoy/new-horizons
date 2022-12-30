@@ -918,7 +918,7 @@ Oyster Beach{Playa de las Ostras}
 Entrace to #sisland_name# cave{Entrada a la cueva de #sisland_name#}
 Shore{Costa}
 ANIMISTS Lair{Guarida de los ANIMISTAS}
-Satanists Lair{Guarida de los Satanistas}
+Satanists Lair{Guarida de los satanistas}
 
 Trade Square.{Plaza del mercado}
 House of Mateus Santos.{Casa de Mateus Santos}
@@ -929,7 +929,7 @@ Oyster Beach.{Playa de las Ostras}
 Entrace to #sisland_name# cave.{Entrada a la cueva de #sisland_name#}
 Shore.{Costa}
 ANIMISTS Lair.{Guarida de los ANIMISTAS}
-Satanists Lair.{Guarida de los Satanistas}
+Satanists Lair.{Guarida de los satanistas}
 
 Prison{Prisión}
 Devil's Throat{Garganta del Diablo}
@@ -1354,6 +1354,7 @@ Navy Office{Oficina Naval}
 Tortuga prison{Prisión de Tortuga}
 Tortuga Townhall{Ayuntamiento de Tortuga}
 House of Pablo Escriva.{Casa de Pablo Escriva.}
+Captain Murphy's House{Casa de Captain Murphy}
 
 have declared a ceasefire!{han declarado un alto el fuego}
 have formed an alliance!{han formado una alianza}

@@ -85,7 +85,7 @@ string DLG_TEXT[93] = {
 "Su Excelencia comete un error. ¡Cuando lleguen los franceses, probablemente acabaremos en celdas vecinas!",
 "Has tenido mucha suerte, capitán ",
 "¿A eso se le puede llamar 'suerte'? ¿Acabar en prisión por intentar advertir a Su Excelencia sobre un ataque a la ciudad?",
-"No, tiene ssuerte de que se produjera tal intento de ataque\n Aunque no podía acusar a #svillain# sin pruebas, ordené que el ejército realizara ejercicios nocturnos en el patio de la iglesia. Emboscaron a los hombres de #svillain# y les impidieron abrir la puerta. Con la muralla asegurada, los franceses fueron fácilmente repelidos\n Como recompensa por tu oportuna advertencia, me complace ofrecerte la amnistía por todos tus crimenes pasados contra Inglaterra.",
+"No, tiene ssuerte de que se produjera tal intento de ataque.\n Aunque no podía acusar a #svillain# sin pruebas, ordené que el ejército realizara ejercicios nocturnos en el patio de la iglesia. Emboscaron a los hombres de #svillain# y les impidieron abrir la puerta. Con la muralla asegurada, los franceses fueron fácilmente repelidos\n Como recompensa por tu oportuna advertencia, me complace ofrecerte la amnistía por todos tus crimenes pasados contra Inglaterra.",
 "Parece que te debo una disculpa, capitán ",
 "... ¡y el agradecimiento de esta ciudad! Incluso después de dudar de ti, tu acción nos salvó de la invasión francesa de la que nos advertiste. Como recompensa, por favor acepta 20000 monedas de oro.",
 "Gracias, Excelencia.",

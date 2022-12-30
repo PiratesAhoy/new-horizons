@@ -576,6 +576,10 @@ void SetSchemeForLocation(ref loc)
 			SetSoundScheme("deck");
 			SetMusicAlarm("Ardent_end");
 			break;
+		case "Murphy_house":
+			SetSoundScheme("residence");
+			SetMusicAlarm("murphy_tribute");
+			break;
         case "San_Felipe_fort":
 	        ResetSoundScheme();
 	        SetTimeScheme("land");

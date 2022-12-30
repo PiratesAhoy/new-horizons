@@ -4701,7 +4701,7 @@ void QuestComplete(string sQuestName)
 			LAi_QuestDelay("cb_blaze_ready", 1.0);
 
 		Locations[FindLocation("QC_town")].models.day.charactersPatch = "QCtown_p";		//reset
-		Locations[FindLocation("QC_town")].models.night.charactersPatch = "QCtown_roofs_p";
+		Locations[FindLocation("QC_town")].models.night.charactersPatch = "QCtown_p";
 	
 			pchar.quest.store_roof_1.win_condition.l1 = "location";
 			pchar.quest.store_roof_1.win_condition.l1.location = "QC_town";
@@ -8206,7 +8206,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorTurnToLocator(characterFromID("Woodes Rogers"), "officers", "reload2_2");
 			LAi_QuestDelay("governor_back9", 1.0);
 		break;
-
+//pär terrace
 		case "governor_back9":
 			Locations[FindLocation("wr_residence")].reload.l1.disable = 0;
 			LAi_SetActorType(characterFromID("Woodes Rogers"));
@@ -8214,8 +8214,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "governor_back10":
-			ChangeCharacterAddressGroup(CharacterFromID("Woodes Rogers"), "Redmond_town_04", "goto", "goto_45");
-			Pchar.quest.wr_terrace = "first_time";
+			ChangeCharacterAddressGroup(CharacterFromID("Woodes Rogers"), "wr_terrace", "goto", "goto_45");
 			Locations[FindLocation("wr_armory")].reload.l2.disable = 0;//open now to residence
 			Locations[FindLocation("wr_residence")].reload.l3.disable = 1;//window now closed
 			Locations[FindLocation("Redmond_Town_01")].reload.l18.disable = 1;//window now closed
@@ -8228,7 +8227,7 @@ void QuestComplete(string sQuestName)
 			LAi_QuestDelay("bladepickaxe1_check", 0.1);
 
 			pchar.quest.terrace_out0.win_condition.l1 = "locator";
-			pchar.quest.terrace_out0.win_condition.l1.location = "Redmond_town_04";
+			pchar.quest.terrace_out0.win_condition.l1.location = "wr_terrace";
 			pchar.quest.terrace_out0.win_condition.l1.locator_group = "goto";
 			pchar.quest.terrace_out0.win_condition.l1.locator = "terr_out1";
 			pchar.quest.terrace_out0.win_condition = "terrace_out0";
@@ -8236,96 +8235,16 @@ void QuestComplete(string sQuestName)
 //...................................................................................................................
 		case "terrace_out0":
 			PlaySound("INTERFACE\closed_door.wav");
+			Locations[FindLocation("wr_residence")].reload.l1.emerge = "reload2";
 
 			LAi_QuestDelay("terrace_out1", 2.0);
 		break;
 
 		case "terrace_out1":
 			PlaySound("PEOPLE\recoil.wav");
-			ChangeCharacterAddressGroup(Pchar, "Redmond_town_04", "goto", "terr_out1X");
+			ChangeCharacterAddressGroup(Pchar, "wr_terrace", "goto", "terr_out1X");
 
-			if(CheckAttribute(Pchar,"quest.wr_terrace") && Pchar.quest.wr_terrace == "first_time")
-			{
-				LAi_QuestDelay("terrace1", 0.1);	//starts Rogers dialog
-			}
-			else
-			{
-				LAi_QuestDelay("terrace_out1_A", 1.0);
-
-			}
-		break;
-
-		case "terrace_out1_A":
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "goto", "terr_in1");
-
-			LAi_QuestDelay("terrace_out2", 1.0);
-		break;
-
-		case "terrace_out2":
-			LAi_SetPlayerType(Pchar);
-			PlaySound("PEOPLE\Run_stone.wav");
-			ChangeCharacterAddressGroup(Pchar, "Redmond_town_04", "goto", "terr_out2");
-
-			LAi_QuestDelay("terrace_out3", 2.0);
-		break;
-
-		case "terrace_out3":
-			DoQuestReloadToLocation("Redmond_town_01", "goto", "terr_out3", "terrace_out4");
-		break;
-
-		case "terrace_out4":
-			PlaySound("PEOPLE\Run_stone.wav");
-
-			LAi_QuestDelay("terrace_out5", 2.0);
-		break;
-
-		case "terrace_out5":
-			PlaySound("INTERFACE\rusty.wav");
-			ChangeCharacterAddressGroup(Pchar, "Redmond_town_01", "reload", "reload6");
-
-	//RESTARTS WAY IN
-			pchar.quest.terrace_in1.win_condition.l1 = "locator";
-			pchar.quest.terrace_in1.win_condition.l1.location = "Redmond_town_04";
-			pchar.quest.terrace_in1.win_condition.l1.locator_group = "goto";
-			pchar.quest.terrace_in1.win_condition.l1.locator = "terr_in1";
-			pchar.quest.terrace_in1.win_condition = "terrace_in1";
-		break;
-//...................................................................................................................
-		case "terrace_in1":
-			//Locations[FindLocation("wr_residence")].reload.l1.disable = 0;		//if locked to terrace
-			PlaySound("INTERFACE\rusty.wav");
-
-			LAi_QuestDelay("terrace_in2", 2.0);
-		break;
-
-		case "terrace_in2":
-			PlaySound("PEOPLE\Run_stone.wav");
-			ChangeCharacterAddressGroup(Pchar, "Redmond_town_04", "goto", "terr_in2");
-
-			LAi_QuestDelay("terrace_in3", 2.0);
-		break;
-
-		case "terrace_in3":
-			PlaySound("PEOPLE\Run_stone.wav");
-			ChangeCharacterAddressGroup(Pchar, "Redmond_town_04", "reload", "reload7");
-
-			pchar.quest.terrace_in4.win_condition.l1 = "locator";
-			pchar.quest.terrace_in4.win_condition.l1.location = "wr_residence";
-			pchar.quest.terrace_in4.win_condition.l1.locator_group = "reload";
-			pchar.quest.terrace_in4.win_condition.l1.locator = "reload1";
-			pchar.quest.terrace_in4.win_condition = "terrace_in4";
-		break;
-
-		case "terrace_in4":
-			PlaySound("INTERFACE\closed_door.wav");
-
-	//RESTARTS WAY OUT
-			pchar.quest.terrace_out0.win_condition.l1 = "locator";
-			pchar.quest.terrace_out0.win_condition.l1.location = "Redmond_town_04";
-			pchar.quest.terrace_out0.win_condition.l1.locator_group = "goto";
-			pchar.quest.terrace_out0.win_condition.l1.locator = "terr_out1";
-			pchar.quest.terrace_out0.win_condition = "terrace_out0";
+			LAi_QuestDelay("terrace1", 0.1);	//starts Rogers dialog
 		break;
 //...................................................................................................................
 		case "governor_back11":
@@ -8350,7 +8269,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("wr_oman1X"), "none", "", "");
 			ChangeCharacterAddressGroup(CharacterFromID("powdermonkey"), "none", "", "");
 			if(CheckCharacterItem(Pchar,"cannonballs")) TakeItemFromCharacter(Pchar, "cannonballs");
-
+		
 			LAi_QuestDelay("terrace2", 1.0);
 		break;
 
@@ -8377,19 +8296,11 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "after_terrace_dialog":
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "goto", "terr_in1");
-
-			LAi_QuestDelay("after_terrace_dialog1", 2.5);
-		break;
-
-		case "after_terrace_dialog1":
-			Pchar.quest.wr_terrace = "second_time";
 			LAi_SetPlayerType(Pchar);
-
-			LAi_QuestDelay("terrace_out2", 1.0);
+			SetLocatorRadius(locations[FindLocation(Pchar.location)], "reload", "reload2", 1.0);
+			locations[FindLocation("wr_terrace")].locators_radius.reload.reload2 = 1.0;		//was small from start
 		break;
-
+	
 		case "bladepickaxe1_check":
 			if(CheckCharacterItem(Pchar,"bladepickaxe1"))
 			{
@@ -17081,7 +16992,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.church_attic.win_condition.l1.location = "wr_church_outside";
 			pchar.quest.church_attic.win_condition = "church_attic";
 		break;
-
+//pär attic patch
 		case "church_attic":
 			//Log_SetStringToLog("reading church_attic");
 
@@ -17094,6 +17005,7 @@ void QuestComplete(string sQuestName)
 
 		case "church_attic1":
 			//Log_SetStringToLog("reading church_attic1");
+			LAi_SetStayType(pchar);
 
 			LAi_SetActorType(CharacterFromID("pir_cap1"));
 			LAi_SetActorType(CharacterFromID("pir_cap2"));
@@ -17193,12 +17105,6 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(CharacterFromID("pir_cap32"));
 
 			LAi_QuestDelay("church_attic_sound", 1.0);
-
-			pchar.quest.church_attic_sound3.win_condition.l1 = "locator";
-			pchar.quest.church_attic_sound3.win_condition.l1.location = "wr_church_attic";
-			pchar.quest.church_attic_sound3.win_condition.l1.locator_group = "goto";
-			pchar.quest.church_attic_sound3.win_condition.l1.locator = "goto4";
-			pchar.quest.church_attic_sound3.win_condition = "church_attic_sound3";
 		break;
 
 		case "church_attic_sound":
@@ -17214,116 +17120,67 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "church_attic_sound2":
-			PlaySound("VOICE\ENGLISH\pir_capDD.wav");
-		break;
-
-		case "church_attic_sound3":
 			PlaySound("VOICE\ENGLISH\pir_capP.wav");
+			LAi_SetPlayerType(pchar);
+
+			LAi_QuestDelay("church_attic2", 2.5);
 
 			pchar.quest.church_attic4.win_condition.l1 = "locator";
 			pchar.quest.church_attic4.win_condition.l1.location = "wr_church_attic";
 			pchar.quest.church_attic4.win_condition.l1.locator_group = "goto";
 			pchar.quest.church_attic4.win_condition.l1.locator = "goto11";
 			pchar.quest.church_attic4.win_condition = "church_attic4";
-		break;
 
+
+		break;
+	
 		case "church_attic2":
 			//from itemlogic
 			LAi_SetActorType(CharacterFromID("pir_cap2"));
 			LAi_SetActorType(CharacterFromID("pir_cap3"));
 			LAi_SetActorType(CharacterFromID("pir_cap4"));
-			LAi_SetActorType(CharacterFromID("pir_cap5"));
 			LAi_SetActorType(CharacterFromID("pir_cap6"));
 			LAi_SetActorType(CharacterFromID("pir_cap7"));
 			LAi_SetActorType(CharacterFromID("pir_cap8"));
-			LAi_SetActorType(CharacterFromID("pir_cap9"));
-			LAi_SetActorType(CharacterFromID("pir_cap10"));
 			LAi_SetActorType(CharacterFromID("pir_cap11"));
 			LAi_SetActorType(CharacterFromID("pir_cap14"));
 			LAi_SetActorType(CharacterFromID("pir_cap15"));
 			LAi_SetActorType(CharacterFromID("pir_cap16"));
-			LAi_SetActorType(CharacterFromID("pir_cap17"));
 			LAi_SetActorType(CharacterFromID("pir_cap18"));
-			LAi_SetActorType(CharacterFromID("pir_cap20"));
 			LAi_SetActorType(CharacterFromID("pir_cap21"));
-			LAi_SetActorType(CharacterFromID("pir_cap22"));
-			LAi_SetActorType(CharacterFromID("pir_cap23"));
 			LAi_SetActorType(CharacterFromID("pir_cap24"));
 
-			//---------------------------------------------
+			LAi_ActorTurnToLocator(characterFromID("pir_cap2"), "goto", "locator9");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap3"), "sit", "sit1");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap4"), "sit", "sit9");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap8"), "sit", "sit14");
 
-			LAi_SetActorType(CharacterFromID("pir_cap26"));
-			LAi_SetActorType(CharacterFromID("pir_cap27"));
-			LAi_SetActorType(CharacterFromID("pir_cap28"));
-			LAi_SetActorType(CharacterFromID("pir_cap29"));
-			LAi_SetActorType(CharacterFromID("pir_cap30"));
-			LAi_SetActorType(CharacterFromID("pir_cap31"));
-			LAi_SetActorType(CharacterFromID("pir_cap32"));
-
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap2"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap3"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap4"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap5"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap6"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap7"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap8"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap9"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap10"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap11"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap14"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap15"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap16"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap17"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap18"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap20"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap21"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap22"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap23"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap24"), Pchar);
-
-			//------------------------------------------------------------
-
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap26"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap27"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap28"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap29"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap30"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap31"), Pchar);
-			LAi_ActorTurnToCharacter(characterFromID("pir_cap32"), Pchar);
+			LAi_ActorTurnToLocator(characterFromID("pir_cap11"), "sit", "sit2");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap14"), "sit", "sit11");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap15"), "sit", "sit8");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap16"), "goto", "goto10");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap18"), "goto", "goto2");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap21"), "sit", "sit17");
+			LAi_ActorTurnToLocator(characterFromID("pir_cap24"), "sit", "sit18");
 
 			LAi_SetStayType(CharacterFromID("pir_cap2"));
 			LAi_SetStayType(CharacterFromID("pir_cap3"));
 			LAi_SetStayType(CharacterFromID("pir_cap4"));
-			LAi_SetStayType(CharacterFromID("pir_cap5"));
 			LAi_SetStayType(CharacterFromID("pir_cap6"));
 			LAi_SetStayType(CharacterFromID("pir_cap7"));
 			LAi_SetStayType(CharacterFromID("pir_cap8"));
-			LAi_SetStayType(CharacterFromID("pir_cap9"));
-			LAi_SetStayType(CharacterFromID("pir_cap10"));
 			LAi_SetStayType(CharacterFromID("pir_cap11"));
 			LAi_SetStayType(CharacterFromID("pir_cap14"));
 			LAi_SetStayType(CharacterFromID("pir_cap15"));
 			LAi_SetStayType(CharacterFromID("pir_cap16"));
-			LAi_SetStayType(CharacterFromID("pir_cap17"));
 			LAi_SetStayType(CharacterFromID("pir_cap18"));
-			LAi_SetStayType(CharacterFromID("pir_cap20"));
 			LAi_SetStayType(CharacterFromID("pir_cap21"));
-			LAi_SetStayType(CharacterFromID("pir_cap22"));
-			LAi_SetStayType(CharacterFromID("pir_cap23"));
 			LAi_SetStayType(CharacterFromID("pir_cap24"));
-
-			//--------------------------------------------
-
-			LAi_SetStayType(CharacterFromID("pir_cap26"));
-			LAi_SetStayType(CharacterFromID("pir_cap27"));
-			LAi_SetStayType(CharacterFromID("pir_cap28"));
-			LAi_SetStayType(CharacterFromID("pir_cap29"));
-			LAi_SetStayType(CharacterFromID("pir_cap30"));
-			LAi_SetStayType(CharacterFromID("pir_cap31"));
-			LAi_SetStayType(CharacterFromID("pir_cap32"));
 		break;
 
 		case "church_attic4":
+			LAi_SetStayType(pchar);
+			ChangeCharacterAddressGroup(Pchar, "wr_church_attic", "goto", "goto11");
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap1"), "wr_church_attic", "sit", "stay1");
 			LAi_SetActorType(CharacterFromID("pir_cap1"));
 			LAi_ActorTurnToCharacter(characterFromID("pir_cap1"), Pchar);
@@ -17635,8 +17492,6 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_church_attic_stairs")].reload.l2.disable = 1;	//to attic
 			Locations[FindLocation("wr_church_inside")].reload.l8.disable = 0;		//chapel stairs
 			locations[FindLocation("wr_chapel_stairs")].id.label = "Chapel stairs";
-			PlaySound("PEOPLE\Run_roof.wav");
-			ChangeCharacterAddressGroup(Pchar, "wr_church_attic", "reload", "reload4");
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap19"), "wr_church_inside", "goto", "goto11");//crew
 
 			LAi_QuestDelay("chapel_prisoners", 1.5);
@@ -31358,7 +31213,32 @@ void QuestComplete(string sQuestName)
 			CloseQuestHeader("Alchemy_gold");
 
 			LAi_QuestDelay("enter_gall_cap_outer1", 0.5);
+
+			pchar.quest.qdeck_sound.win_condition.l1 = "location";
+			pchar.quest.qdeck_sound.win_condition.l1.location = "wr_gall_qdeck";
+			pchar.quest.qdeck_sound.win_condition = "qdeck_sound";
 		break;
+	
+	//-------------------------------------------------------------------------------------------------
+	//pär sound loop
+
+		case "qdeck_sound":
+			PlaySound("INTERFACE\key_lock.wav");
+
+			pchar.quest.cap_outer_sound.win_condition.l1 = "location";
+			pchar.quest.cap_outer_sound.win_condition.l1.location = "wr_gall_cap_outer";
+			pchar.quest.cap_outer_sound.win_condition = "cap_outer_sound";
+		break;
+
+		case "cap_outer_sound":
+			PlaySound("INTERFACE\key_lock.wav");
+
+			pchar.quest.qdeck_sound.win_condition.l1 = "location";
+			pchar.quest.qdeck_sound.win_condition.l1.location = "wr_gall_qdeck";
+			pchar.quest.qdeck_sound.win_condition = "qdeck_sound";
+		break;
+
+	//-------------------------------------------------------------------------------------------------
 
 		case "enter_gall_cap_outer1":
 			//remove all alchemy stuff
@@ -31506,18 +31386,18 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_gall_cap_outer")].locators_radius.reload.reload1 = 0.00001;
 			Locations[FindLocation("wr_gall_cap_outer")].locators_radius.goto.goto7 = 1.5;
 
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "reload", "reload14");
+		//LAi_SetActorType(Pchar);
+		//LAi_ActorTurnToLocator(Pchar, "reload", "reload14");
 
-			LAi_QuestDelay("captains_door1", 1.5);
+		//LAi_QuestDelay("captains_door1", 1.5);
 		break;
-
+	/*
 		case "captains_door1":
 			LAi_SetPlayerType(Pchar);
 			ChangeCharacterAddressGroup(Pchar, "wr_ships", "reload", "reload14");
 			PlaySound("PEOPLE\Run_wood.wav");
 		break;
-
+	*/
 		case "close_captains_door":
 			PlaySound("INTERFACE\rusty.wav");
 
@@ -31528,8 +31408,8 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("wr_gall_cap_outer")].locators_radius.reload.reload1 = 1.5;
 			Locations[FindLocation("wr_gall_cap_outer")].locators_radius.goto.goto7 = 0.00001;
 
-			LAi_SetActorType(Pchar);
-			LAi_ActorTurnToLocator(Pchar, "reload", "reload14");
+		//LAi_SetActorType(Pchar);
+		//LAi_ActorTurnToLocator(Pchar, "reload", "reload14");
 
 			if(CheckAttribute(Pchar,"quest.gunner2") && Pchar.quest.gunner2 == "upper_decks")
 			{
@@ -31549,13 +31429,14 @@ void QuestComplete(string sQuestName)
 				Pchar.quest.gunner2 = "in_hold";
 			}
 
-			LAi_QuestDelay("captains_door1", 1.5);
+		//LAi_QuestDelay("captains_door1", 1.5);
 		break;
-
+	/*
 		case "captains_door1":
 			LAi_SetPlayerType(Pchar);
 			ChangeCharacterAddressGroup(Pchar, "wr_ships", "reload", "reload14");
 		break;
+	*/
 	//----------------------------------------------------------------------------------------
 		case "guncrew_S0_long":
 			PlaySound("PEOPLE\roof_broken1.wav");
@@ -36210,7 +36091,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap30"), "wr_church_attic", "goto", "goto13");
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap31"), "wr_church_attic", "goto", "goto14");
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap32"), "wr_church_attic", "goto", "goto15");
-
+//pär attic rum
 			pchar.quest.lay_pircaps_down.win_condition.l1 = "locator";
 			pchar.quest.lay_pircaps_down.win_condition.l1.location = "wr_church_attic";
 			pchar.quest.lay_pircaps_down.win_condition.l1.locator_group = "goto";
@@ -36219,6 +36100,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "lay_pircaps_down":
+			ChangeCharacterAddressGroup(Pchar, "wr_church_attic", "goto", "window");
+			LAi_SetStayType(Pchar);
+	
 			LAi_SetActorType(CharacterFromID("pir_cap2"));
 			LAi_ActorSetLayMode(CharacterFromID("pir_cap2"));
 			LAi_SetActorType(CharacterFromID("pir_cap3"));
@@ -36264,6 +36148,8 @@ void QuestComplete(string sQuestName)
 			LAi_SetActorType(CharacterFromID("pir_cap31"));
 			LAi_ActorSetLayMode(CharacterFromID("pir_cap31"));
 			LAi_SetCitizenType(CharacterFromID("pir_cap32"));
+
+			LAi_QuestDelay("Vane_returns_to_attic", 1.0);
 		break;
 
 		case "Vane_returns_to_attic":
@@ -36279,10 +36165,12 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Vane_returns_to_attic1":
+			locations[FindLocation("wr_church_attic")].reload.l4.disable = 1;		//no way down this way, temp
 			Locations[FindLocation("wr_church_inside")].reload.l2.disable = 0;		//to sacristy
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap1"), "wr_church_attic", "goto", "goto11");
 			Locations[FindLocation("wr_church_attic_stairs")].reload.l2.emerge = "reload4";	//reset
 
+			LAi_SetStayType(Pchar);	//during dialogs with Vane
 			LAi_SetActorType(CharacterFromID("pir_cap1"));
 			LAi_ActorDialog(characterFromID("pir_cap1"), pchar, "", 0.0, 0.0);
 			LAi_ActorWaitDialog(Pchar, characterFromID("pir_cap1"));
@@ -36291,7 +36179,6 @@ void QuestComplete(string sQuestName)
 
 		case "red_rolls_exchange":
 			//from Vane dialog
-			LAi_SetPlayerType(Pchar);
 
 			LAi_QuestDelay("red_rolls_exchange1", 0.5);
 		break;
@@ -36462,7 +36349,6 @@ void QuestComplete(string sQuestName)
 			LAi_SetCitizenType(CharacterFromID("pir_cap31"));
 			LAi_SetCitizenType(CharacterFromID("pir_cap32"));
 
-			LAi_SetPlayerType(Pchar);
 			PlaySound("VOICE\ENGLISH\pir_capR3.wav");
 
 			LAi_QuestDelay("Vane_fires_cannon10", 2.0);
@@ -36482,13 +36368,14 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "cave_door_done":
-			LAi_SetPlayerType(Pchar);
 			PlaySound("PEOPLE\counter_openclose.wav");
+			locations[FindLocation("wr_church_attic")].reload.l3.disable = 0;
 
 			LAi_QuestDelay("cave_door_done1", 1.0);
 		break;
 
 		case "cave_door_done1":
+			LAi_SetPlayerType(Pchar);
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap1"), "wr_church_inside", "barmen", "stay");
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap18"), "wr_church_inside", "goto", "rackham");
 			ChangeCharacterAddressGroup(CharacterFromID("pir_cap23"), "wr_church_inside", "goto", "stay_s11");
@@ -36501,9 +36388,6 @@ void QuestComplete(string sQuestName)
 		case "cave_door_done2":
 			Locations[FindLocation("wr_church_attic")].type = "Vane_jungle";
 			Locations[FindLocation("wr_church_outside")].type = "Vane_jungle";
-
-			PlaySound("PEOPLE\Run_roof.wav");
-			ChangeCharacterAddressGroup(Pchar, "wr_church_attic", "reload", "reload3");
 
 			pchar.quest.move_pircaps_down.win_condition.l1 = "location";
 			pchar.quest.move_pircaps_down.win_condition.l1.location = "wr_church_outside";
@@ -36541,6 +36425,8 @@ void QuestComplete(string sQuestName)
 		case "move_pircaps_down2":
 			LAi_SetSitType(Pchar);
 			PlaySound("PEOPLE\jump.wav");
+			locations[FindLocation("wr_church_attic")].reload.l3.disable = 1;	//fall down hatch closed
+			locations[FindLocation("wr_church_attic")].reload.l4.disable = 0;	//standard hatch open again
 
 			LAi_QuestDelay("move_pircaps_down3", 0.5);
 		break;
@@ -42871,6 +42757,10 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "corvette_deckfight_over":
+	//pär remove guards seen from qdeck
+	ChangeCharacterAddressGroup(characterFromID("wr_man5_1_copy"), "none", "", "");
+	ChangeCharacterAddressGroup(characterFromID("wr_fsh1_copy"), "none", "", "");
+
 			AddQuestRecord("Woodes_Rogers_crew", "5");
 
 			Pchar.quest.wr_deckfight = "over";
@@ -43687,7 +43577,8 @@ void QuestComplete(string sQuestName)
 			SetNextWeather("Clear");
 
 			pchar.quest.galleon_search12.win_condition.l1 = "locator";
-			pchar.quest.galleon_search12.win_condition.l1.location = "wr_ships";
+		//	pchar.quest.galleon_search12.win_condition.l1.location = "wr_ships";
+		pchar.quest.galleon_search12.win_condition.l1.location = "wr_gall_qdeck";
 			pchar.quest.galleon_search12.win_condition.l1.locator_group = "goto";
 			pchar.quest.galleon_search12.win_condition.l1.locator = "qdeck";
 			pchar.quest.galleon_search12.win_condition = "galleon_search12";
@@ -44473,6 +44364,10 @@ void QuestComplete(string sQuestName)
 		case "galleon_sinking":
 			PlaySound("INTERFACE\closet_open.wav");
 			ChangeCharacterAddressGroup(characterFromID("guncrew_3"), "wr_gall_captain", "goto", "stay11");
+
+	//pär reset qdeck
+	Locations[FindLocation("wr_gall_cap_outer")].reload.l3.go = "wr_ships";
+	Locations[FindLocation("wr_gall_cap_outer")].reload.l4.go = "wr_ships";	
 
 			LAi_QuestDelay("galleon_sinking1", 1.0);
 		break;

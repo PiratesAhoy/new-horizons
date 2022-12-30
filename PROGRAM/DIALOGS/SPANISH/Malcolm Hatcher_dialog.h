@@ -240,5 +240,5 @@ string DLG_TEXT[340] = {
 "Para tener un inicio más fácil, puedes tomar cosas de ese cofre, encontrarás armas y un catalejo. También puedes llvarte todo lo demás, incluso el dinero que encuentres alli.",
 "Puedes ir a la ciudad si lo deseas; tengo algunas cosas que hacer aquí. Nos encontraremos en la taberna local.",
 "Hola, capitán. Una carta para ti.",			//240
-"Muy bien, #sname#. (¡SÍ! La primer acarta que he recibido nunca.)",	//241
+"Muy bien, #sname#. (¡SÍ! La primera carta que he recibido nunca.)",	//241
 };

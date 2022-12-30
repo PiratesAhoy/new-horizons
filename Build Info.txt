@@ -1,4 +1,4 @@
-Build Version: Tuesday 8th November 2022
+Build Version: Wednesday 21st December 2022
 Build 14
 
 ==========================
@@ -59,6 +59,7 @@ Build 14:
   . Investing large sums of money with loanshark improves town economy by Pieter Boelen
   . Ships Stats and Recognition Guide by HellSailor
   . Sabine Matton as officer can be given discretionary salary raises or standard officer salary, by pedrwyth
+  . Sound tracks "Hail Captain Murphy", "Final Salute" by Flannery
 - Gameplay/Balancing Updates:
   . Boarding skill decrease for surrendered captains disabled by Tingyun
   . Assigning of skill bonuses made nation-dependent by Levis
@@ -318,6 +319,9 @@ Build 14:
   . Leeches fixed to apply -10HP and only appear as usable item if character is poisoned, by MrMister
   . Timer for expiry of fetch quests corrected by Grey Roger
   . Fix for profiles being scrambled by deleting/recreating by Hammie
+  . "PROGRAM\SEA_AI\AIShip.c": function 'FindNearShips' corrected to use MAX_SHIPS_ON_SEA instead of fixed maximum 3 by Hammie
+  . "PROGRAM\Characters\CharacterUtilite.c": check for invalid island in 'GetIslandIDByLocationID' by Grey Roger
+  . "PROGRAM\Loc_ai\LAi_events.c": function 'LAi_Character_Dead_Event()' checks for "deathx", "deathy", "deathz" attributes on corpse before trying to create loot locator by Grey Roger
 - Storyline Updates:
   . Sidequests:
     > A Girl Won in a Card Game, enabled also at Grenada by Pieter Boelen
@@ -388,6 +392,7 @@ Build 14:
     > Option to report failure to find target ship of governor ship-hunting quest, by Grey Roger
     > After you lend Baldewyn Coffier money, he takes over one of the street trader stalls, by pedrwyth
     > New questbook line for "Saga of a Blacque Family" if you encourage Orable Caron to kill Rachel, by Fluen
+    > "Captain Murphy's House" Easter egg location as tribute to late forum member Captain Murphy, by Grey Roger
   . Tutorial:
     > Stormy Start potentially permanently lost ship fixed by Jack Rackham
     > Locked Cabin Icon removed after tutorial completes by pedrwyth
@@ -486,8 +491,10 @@ Build 14:
     > More new WIP content added by Jack Rackham
     > Part 2 extension added and playable by Jack Rackham
     > Coast Brothers concert added by Jack Rackham
+    > Walk patches corrected for Redmond terrace, Vane's church attic and the galleons quarterdeck, by Jack Rackham
   . The Gold-Bug storyline:
     > Ending fixed by Jack Rackham
+    > Legrand´s hut outside chimney only smokes when inside fire is on, by Jack Rackham
   . Devlin Opera storyline:
     > New quests "My Brother, Ladies and Gentlemen" and "Yo Ho Ho and a shipment of rum", choice of ways to complete "Yo Ho Ho and a shipment of rum", by BathtubPirate
     > Blaze Devlin's fight scene checks for stunned opponents by Grey Roger
@@ -622,7 +629,9 @@ Build 14:
   . New location "Bathhouse" for "Hoist the Colours" DMC extension by Jack Rackham
   . Fixes for walking across roofs in Pirate Settlement, plus smoking chimneys, by Jack Rackham
   . Merchant locators removed to prevent extra street traders when you have extra crew ashore, shadows of non-existent stalls removed, by Fluen and Grey Roger
-  
+  . Blue interface dialog backgrounds toned down closer to original game texture, both blue and dialog background edges improved by Baste
+  . New ship models "PO_LuggerP", "SP_LuggerP", "NL_LuggerP", "FR_LuggerP", "RN_LuggerP" by Rider88 
+
 - ADDITIONAL INSTALLATION OPTIONS:
   . Possibility to revert to original black-and-yellow paint scheme for British ships
 - For Future Development:

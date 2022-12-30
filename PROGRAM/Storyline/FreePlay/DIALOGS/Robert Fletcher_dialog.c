@@ -1603,7 +1603,7 @@ void ProcessDialogEvent()
 			SetRandomNameToCharacter(agent);
 			PChar.quest.agent_start.officername = GetMyFullName(NPChar);
 
-			dialog.text = DLG_TEXT[283] + GetMySimpleName(agent) + DLG_TEXT[284] + FirstLetterUp(XI_ConvertString(GetMyPronounPossessive(agent))) + DLG_TEXT[285] + GetMySimpleOldName(agent) + DLG_TEXT[286] + GetMyPronounSubj(agent) + DLG_TEXT[287] + FirstLetterUp(GetMyPronounSubj(agent)) + DLG_TEXT[288];
+			dialog.text = DLG_TEXT[283] + GetMySimpleName(agent) + DLG_TEXT[284] + FirstLetterUp(XI_ConvertString(GetMyPronounPossessive(agent))) + DLG_TEXT[285] + GetMySimpleOldName(agent) + DLG_TEXT[286] + (XI_ConvertString(GetMyPronounSubj(agent))) + DLG_TEXT[287] + FirstLetterUp(XI_ConvertString(GetMyPronounSubj(agent))) + DLG_TEXT[288];
 			link.l1 = DLG_TEXT[289];
 			link.l1.go = "stormystart";
 		break;
