@@ -1354,6 +1354,7 @@ Navy Office{Navy Office}
 Tortuga prison{Tortuga prison}
 Tortuga Townhall{Tortuga Townhall}
 House of Pablo Escriva.{House of Pablo Escriva.}
+Captain Murphy's House{Captain Murphy's House}
 
 have declared a ceasefire!{have declared a ceasefire!}
 have formed an alliance!{have formed an alliance!}

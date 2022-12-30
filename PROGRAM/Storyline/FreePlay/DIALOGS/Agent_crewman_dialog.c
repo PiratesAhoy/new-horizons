@@ -179,7 +179,7 @@ void ProcessDialogEvent()
 
 		case "agent_start_where_moored":
 			string sNation;
-			sNation = GetNationDescByType(GetTownNation(GetCurrentTownID()));
+			sNation = XI_ConvertString(GetNationDescByType(GetTownNation(GetCurrentTownID())));
 			if (GetTownNation(GetCurrentTownID()) == PIRATE) sNation = DLG_TEXT[58];
 			if (GetTownNation(GetCurrentTownID()) == AMERICA && GetCurrentPeriod() >= PERIOD_REVOLUTIONS) sNation = DLG_TEXT[59];
 			dialog.text = DLG_TEXT[57] + sNation + DLG_TEXT[60];
@@ -217,7 +217,7 @@ void ProcessDialogEvent()
 			AddDialogExitQuest("AgentStart_Prepare_Leave_Room");
 			link.l1.go = "exit";
 			Preprocessor_AddQuestData("name2", GetMySimpleOldName(NPChar));
-			Preprocessor_AddQuestData("nation", GetNationDescByType(GetTownNation(GetCurrentTownID())));
+			Preprocessor_AddQuestData("nation", XI_ConvertString(GetNationDescByType(GetTownNation(GetCurrentTownID()))));
 			AddQuestRecord("Beginning_Agent", 3);
 			Preprocessor_Remove("nation");
 			Preprocessor_Remove("name2");
@@ -364,7 +364,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[91] + GetMyName(PChar) + DLG_TEXT[92];
 			link.l1 = DLG_TEXT[93] + GetMyName(NPChar) + DLG_TEXT[94];
 			link.l1.go = "exit";
-			Preprocessor_AddQuestData("nation", GetNationDescByType(sti(NPChar.nation)));
+			Preprocessor_AddQuestData("nation", XI_ConvertString(GetNationDescByType(sti(NPChar.nation))));
 			AddQuestRecord("Beginning_Agent", 5);
 			Preprocessor_Remove("nation");
 			CloseQuestHeader("Beginning_Agent");

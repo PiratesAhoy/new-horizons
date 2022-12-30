@@ -8,11 +8,11 @@ Devlin{Devlin}
 {=====| quests_reaction.c |=====}
 
 {=====| QuebradasCostillas.c |=====}
-Skull{Skull}
+Skull{Calavera}
 
 {=====| Story.c |=====}
-Mystery{Mystery}
-Messenger{Messenger}
+Mystery{Misterioso}
+Messenger{Mensajero}
 Emmanuel{Emmanuel}
 Bonnie{Bonnie}
 Short Jack{Short Jack}

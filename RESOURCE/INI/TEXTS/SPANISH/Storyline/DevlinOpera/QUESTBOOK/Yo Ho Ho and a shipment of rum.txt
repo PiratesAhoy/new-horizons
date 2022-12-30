@@ -1,0 +1,12 @@
+title=Yo, ho, ho, y un cargamento de ron
+text.t1=Aquí estamos, con el barco lleno de ron; tenemos que entregarlo a un oficial de alta graduación en #sisland_Falaise de Fleur# para la boda de su hijo. También tendremos que explicarle por qué una parte del cargamento 'se perdió' por el camino...
+text.t2=Tengo que encontrar al oficial que encargó el ron. Dicen que, a estas horas, debería estar visitando al gobernador.
+text.t3=Toni Haraldo me ha pedido que le devuelva el libro de poesía que tiene un guardia llamado Guzmán. Pero primero necesito encontrar al cabo de guardia Crespo.
+text.t4=Crespo dice que Guzmán está de servico en la puerta de la selva.
+text.t5=El francés al que Guzmán vendió el libro vive en una casa pequeña que tiene tres cajas cerca de la puerta.
+text.t6=¡Otra vez demasiado tarde! El francés vendió el libro a un carpintero en el muelle de reparaciones...
+text.t7=... y el carpintero lo regaló. Bonto vive cerca del pozo en los suburbios.
+text.t8=¡Bonto donó el libro a la iglesia!
+text.t9=El sacerdote dice que puedo encontrar a la viuda cerca del pozo que hay junto a la tienda.
+text.t10=Ahora tengo que encontrar a ese nadador en la playa.
+text.t11=¡Supongo que debería volver con Haraldo!

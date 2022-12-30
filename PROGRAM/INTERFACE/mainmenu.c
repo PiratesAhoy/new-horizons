@@ -25,7 +25,7 @@ void InitInterface(string iniName)
 
 	string currentversion = " - Build " + BUILDVERSION;
 	CreateString(true,"Version","Pirates Ahoy! Community" + currentversion,FONT_QUESTBOOK,COLOR_GREEN_LIGHT,-20,430,SCRIPT_ALIGN_LEFT,0.8);
-	CreateString(true,"Info","http://"+PA_INET,FONT_QUESTBOOK,COLOR_BLUE_LIGHT,-20,470,SCRIPT_ALIGN_LEFT,0.8);
+	CreateString(true,"Info","https://"+PA_INET,FONT_QUESTBOOK,COLOR_BLUE_LIGHT,-20,470,SCRIPT_ALIGN_LEFT,0.8);
 
 	SetEventHandler("InterfaceBreak","ProcessBreakExit",0)
 	SetEventHandler("exitCancel","ProcessCancelExit",0);

@@ -218,6 +218,17 @@ void LocationInitTurks(ref n)
 	Locations[n].locators_radius.reload.reload_roof2 = 0.6;
 	Locations[n].locators_radius.reload.reload_roof3 = 0.4;
 
+	// GR: Captain Murphy tribute -->
+	Locations[n].reload.l18.name = "houseS3";
+	Locations[n].reload.l18.go = "Capt_Murphy_house";
+	Locations[n].reload.l18.emerge = "reload1";
+	Locations[n].reload.l18.autoreload = "0";
+	Locations[n].reload.l18.label = "House.";
+	Locations[n].reload.l18.close_for_night = 1;
+	Locations[n].locators_radius.reload.houseS4 = 1.0;
+	if(iRealismMode>0 && DISCOVER_FAST_TRAVEL) Locations[n].reload.l14.goto_disable = 1; // Screwface: Disable Go-To location
+	// <-- GR: Captain Murphy tribute
+
 	Locations[n].locators_radius.box.box1 = 0.001;
 	Locations[n].locators_radius.box.box3 = 0.5;
 	Locations[n].locators_radius.box.box4 = 0.5;
@@ -2059,6 +2070,48 @@ void LocationInitTurks(ref n)
 	LAi_LocationFightDisable(&locations[n], true);
 	Locations[n].island = "Turks";
 	n = n + 1;
+
+	// -------------------------------------------------
+
+	// GR: Captain Murphy tribute -->
+	Locations[n].id = "Capt_Murphy_house";
+	locations[n].id.label = "House";
+	//Town sack
+	Locations[n].townsack = "Grand Turk"; 
+	//Sound
+	locations[n].type = "Murphy_house";
+	locations[n].fastreload = "Grand_Turk";
+
+	locations[n].filespath.models = "locations\inside\ResidenceA02";
+	Locations[n].image = "murphy_house_loading.tga";
+	//Models
+	Locations[n].models.back = "back\turkT_";
+	locations[n].models.always.locators = "residence02_locators";
+	locations[n].models.always.l1 = "residence_Murphy";
+	locations[n].models.always.window = "residence02_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 50;
+	//Day
+	locations[n].models.day.charactersPatch = "residence02_patch";
+
+	//Night
+	locations[n].models.night.charactersPatch = "residence02_patch";
+	//Environment
+	Locations[n].environment.weather = "false";
+	Locations[n].environment.sea = "false";
+
+	//Reload map
+	Locations[n].reload.l1.name = "reload1";
+	Locations[n].reload.l1.emerge = "houseS3";
+	Locations[n].reload.l1.autoreload = "0";
+	Locations[n].reload.l1.go = "Turks_port";
+	Locations[n].reload.l1.label = "#stown_name#";
+
+	LAi_LocationFightDisable(&Locations[n], true);
+	Locations[n].island = "Turks";
+	n = n + 1;
+	// <-- GR: Captain Murphy tribute
+
 	// -------------------------------------------------
 
 // Additional Buildings, works only if Buildingset is installed -----------------------

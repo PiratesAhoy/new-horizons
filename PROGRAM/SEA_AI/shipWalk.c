@@ -39,6 +39,7 @@
 #include "sea_ai\walk\Cutter1_walk.c"
 #include "sea_ai\walk\Indiaman1_walk.c"
 #include "sea_ai\walk\LuggerVML_walk.c"
+#include "sea_ai\walk\LuggerP_walk.c"
 #include "sea_ai\walk\BlackPearl_walk.c"
 #include "sea_ai\walk\Ketch_walk.c" //Petros
 #include "sea_ai\walk\Tartane50_walk.c" //Petros
@@ -151,6 +152,7 @@ void Ship_Walk_Init()
 	Cutter1_walk_init();
 	Indiaman1_walk_init();
 	LuggerVML_walk_init();
+	LuggerP_walk_init();
 	BlackPearl_walk_init();
 	Ketch_walk_init();
 	Tartane50_walk_init(); // Petros
@@ -427,6 +429,10 @@ void Ship_Walk_Create()
 	case "LuggerVML":
 		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship, LuggerVML_walk_count, &LuggerVML_walk_verts, &LuggerVML_walk_graph, &LuggerVML_walk_types);
         //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "LuggerVML", LuggerVML_walk_count, &LuggerVML_walk_verts, &LuggerVML_walk_graph, &LuggerVML_walk_types);
+		break;
+	case "LuggerP":
+		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship, LuggerP_walk_count, &LuggerP_walk_verts, &LuggerP_walk_graph, &LuggerP_walk_types);
+        //SendMessage(WALK_TOOL,"lslee", AI_MESSAGE_ADD_SHIP, "LuggerP", LuggerP_walk_count, &LuggerP_walk_verts, &LuggerP_walk_graph, &LuggerP_walk_types);
 		break;
 	case "BlackPearl":
 		SendMessage(PeopleOnShip,"lileee",AI_MESSAGE_ADD_SHIP,ship, BlackPearl_walk_count, &BlackPearl_walk_verts, &BlackPearl_walk_graph, &BlackPearl_walk_types);

@@ -76,6 +76,36 @@ itmdescr_Trade_Passport
 Este documento ha sido expedido por el director de la Compañía Comercial de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
 }
 
+itmname_Trade_PassportE {Licencia mercantil}
+itmdescr_Trade_PassportE
+{
+Este documento ha sido expedido por el director de la Compañía Comercial de las Indias Orientales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+}
+
+itmname_Trade_PassportH {Licencia mercantil}
+itmdescr_Trade_PassportH
+{
+Este documento ha sido expedido por el director de la Compañía Holandesa de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+}
+
+itmname_Trade_PassportS {Licencia mercantil}
+itmdescr_Trade_PassportS
+{
+Este documento ha sido expedido por el director de la Casa de Contratación de Sevilla. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+}
+
+itmname_Trade_PassportF {Licencia mercantil}
+itmdescr_Trade_PassportF
+{
+Este documento ha sido expedido por el director de la Compañía Francesa de las Indias Occidentales. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería..
+}
+
+itmname_Trade_PassportP {Licencia mercantil}
+itmdescr_Trade_PassportP
+{
+Este documento ha sido expedido por el director de la Casa da India. Indica que eres un honorable mercader y no tienes que pagar comisiones al vender bienes comerciales. También muestra a tu tripulación que no estás envuelto en ningún tipo de piratería.
+}
+
 itmname_EITC_Passport {Pasaporte de la Compañía de las Indias Orientales}
 itmdescr_EITC_Passport
 {
@@ -534,6 +564,12 @@ itmdescr_bladeSC
 Le quité este antiguo sable a Amérigo Vieira. Es un arma mística y maldita usada por Hernán Cortés durante la conquista del Imperio Azteca. El poder de la espada se combina con una vaina sagrada, hecha con las entrañas de vícitmas de los sacrificos aztecas. La inscripción de la hoja reza "Hernán Cortés 1520 A.D.".
 }
 
+itmname_bladeMH	{El favorito del profesor}
+itmdescr_bladeMH
+{
+Esta es mi recompensa por matar a mi tutor. ¡Ahora yo soy el maestro!
+}
+
 // KevAtl SLiB Special Weapon blades <--
 
 itmname_bladeTriton {Espada de Tritón}
@@ -570,6 +606,30 @@ itmname_blangel {Espada Ángel}
 itmdescr_blangel
 {
 Inicialmente diseñada para el conde Guillermo V de Holanda, esta espada ceremonial tiene un pomo en forma de alas de ángel y un gran zafiro engarzado en la guarda.
+}
+
+itmname_bldevil	{Espada de Orellana}
+itmdescr_bldevil
+{
+Nadie sabe quién forjó esta espada. Se dice que fue unvocada desde los negros abismos y entregada a Ricardo Orellana por los servicios prestados a la Inquisición Española. La hoja emite una fuerza malévola, como si un millón de voces gritaran de terror.
+}
+
+itmname_bladerubysb {Sable rúnico de rubí}
+itmdescr_bladerubysb
+{
+Este es uno de los sables rúnicos que fue forjado en las míticas minas de sal de una isla muy lejos del Caribe; solo con blandirla, puedes apreciar que la hoja está afilada como una navaja de afeitar.
+}
+
+itmname_blade_ebony {Sable de ébano}
+itmdescr_blade_ebony
+{
+Este sable es diferente a todos los demás. Está hecho de un acero único, ébano y oro. Puedes snetir un aura oscura rodeando a esta espada.
+}
+
+itmname_bladeNorr {Espadín ceremonial}
+itmdescr_bladeNorr
+{
+Esta espada es un arma propiedad de James Norrington. Bellamente forjasa a mano por el parendiz de herrero William Turner, la espada está perfectamente equilibrada y el mango está decorado con filigrana de oro.
 }
 
 // Axes from SLiB. Jack Davidson. -->
@@ -1006,6 +1066,14 @@ itmdescr_MerchantsBlade
 Este sable es la elección de los pocos mercaderes dispuestos a proteger sus mercancías con su vida. No muy elegante pero cunple su trabajo.
 }
 //SuperDurnius <--
+
+itmname_spyglass0	{Catalejo de la vergüenza}
+itmdescr_spyglass0
+{
+¡Un catalejo barato y uno realmente vergonzoso pueden estar a solo una letra de distancia!
+Este en particular perteneció a Yuri (Ursus) Rogach, que se libró de él en cuanto encontró algo mejor.
+Permite al usuario ver solo el nombre, tipo y velocidad del barco.
+}
 
 itmname_spyglass1	{Catalejo barato}
 itmdescr_spyglass1

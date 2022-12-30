@@ -25,6 +25,7 @@ Wheelback{Wheelback}
 Wyvern{Wyvern}
 Quittance{Quittance}
 Penrod{Penrod}
+French Soldier{Soldado francés}							  
 
 {=====| Officers.c |=====}
 Captaine{Captaine}
@@ -198,6 +199,14 @@ Jimmy{Jimmy}
 Legs{Legs}
 Port Admiral{Almirante del puerto}
 Talicerdor{Talicerdor}
+Guard Captain {Capitán de la guardia}
+Prison Guard {Guardia de la prisión}
+Atwood {Atwood}
+Paddley {Paddley}
+Elton {Elton}
+Garfield {Garfield}
+Cannibal Chief {Cacique caníbal}
+Cannibal{Caníbal}
 
 {=====| TempQuestEnemy.c |=====}
 Ronald{Ronald}
@@ -217,5 +226,8 @@ Spanish Lieutenant{Teniente español}
 Spanish Officer{Oficial español}
 Prison Commendant{Comandante de la prisión}
 Spanish Midshipman{Guardiamarina español}
+
+{=====| Others |=====}
+Nigel{Nigel}
 
 {=====| 189 characters |=====}

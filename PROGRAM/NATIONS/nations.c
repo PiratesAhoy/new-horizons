@@ -731,15 +731,16 @@ bool UpdateRMRelation(ref char, int iNation, float fPoints)
 						}	// You had no legal reason for this attack, TRAITOR!
 					}
 				}
-				else																						// This is an ally
+				else															// This is an ally
 				{
 					relChange = rel  -  REL_AFTERATTACK + 1;									// You may immediately become Wary with this nation
-					if (makeint(rel) <= REL_AFTERATTACK)						relChange = fPoints;		// They are already Wary, so just subtract the number
-					else																					// Else, add an explanatory text message
+					if (makeint(rel) <= REL_AFTERATTACK) relChange = fPoints;							// They are already Wary, so just subtract the number
+					else														// Else, add an explanatory text message
 					{
 						sLogTitle = GetNationNameByType(i) + " turned Wary of me";
 						sLogEntry = "The " + GetNationDescByType(i) + " government turned wary of me because of my attack on their " + GetNationDescByType(iNation) + " allies.";
 						WriteNewLogEntry(sLogTitle,sLogEntry, "Personal", true);
+						if (IsInServiceOf(i)) LeaveService(char, i, true);							// If you had a naval commission or LoM with this nation, lose it
 					}
 					if (ServedNation != PERSONAL_NATION && iActOfPiracy == 0)							// Only if you are serving ONE specific nation and committed no act of piracy
 					{

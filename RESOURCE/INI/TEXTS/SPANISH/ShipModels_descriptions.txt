@@ -264,6 +264,22 @@ Brújula incluida (pero no apunta al norte).
 Acabado de madera oscura y desgastada.
 12 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
 
+PO_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
+Casco blanco con acentos verdes y rojos.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+SP_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
+Casco negro con acentos azules y rojos.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+NL_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
+Casco amarillo con acentos verdes y rojos.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+FR_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
+Casco azul con acentos rojos.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+RN_LuggerP_Descr{Un barco mercante adaptado para la práctica del corso.
+Casco marrón con acentos azules y amarillos.
+8 cañones, su pequeño tamaño lo hace veloz y maniobrable.}
+
 Lugger3_Descr{El lugre, o quechemarín, es un pequeño barco de 
 cabotaje aparejado con tres mástiles de velas al tercio.
 Pintura desgastada de color negro y marrón.

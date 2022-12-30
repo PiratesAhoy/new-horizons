@@ -1,6 +1,6 @@
 string DLG_TEXT[19] = {
 "La gente dice que tienes un gran encargo entre manos. ¿Necesitas ayuda?",
-"La verdad es que sí, #ssir#. La tienda ni siquiera puede satisfacer mi demanda. ¿Podrías ir a buscarme ",
+"La verdad es que sí. Neceisto suministros. Se me está acabando el género. ¿Podrías ir a buscarme ",
 "Te pagaré ",
 " monedas de oro. Por favor, consíguelo antes de ",
 "No hallarás mejor #sgender# que yo para este trabajo. Tendrás esos suministros en poco tiempo.",
@@ -10,10 +10,10 @@ string DLG_TEXT[19] = {
 "Muchas gracias. Ten en cuenta que, si no entregas la carga a tiempo, no voy a ser capaz de terminar el encargo. Entonces tendría que cancelarlo y sería incapaz de pagarte a ti también.",
 "Haré lo que pueda.",
 "Tengo la mercancía que me pediste.",
-"Mis disculpas. Desgraciadamente no pude conseguir la mercancía a tiempo.",
+"Mis disculpas. Desgraciadamente, no pude conseguir la mercancía a tiempo.",
 "...",
 "Como prometí, aquí está tu paga. Muchas gracias por conseguir estos materiales.",
 "No pude conseguir todo tu cargamento de una vez, así que aquí está la primera parte.",
-"Muchas gracias. Por favor, consigue el resto tan pronto como sea posible. Voy a utilizar estos recursos ya, así que si no entregas el resto, tendré que cancelar el encargo igialmente, pero tampoco podré devolver estos recursos; solo para que lo sepas.",
+"Muchas gracias. Por favor, consigue el resto tan pronto como sea posible. Voy a usar estos recursos ya, así que si no entregas el resto todavía tendré que cancelar el encargo, pero tampoco podré devolver estos materiales; solo para que lo sepas.",
 "¿Sabes?, creo que me lo quedaré hasta que tenga todo.",
 };

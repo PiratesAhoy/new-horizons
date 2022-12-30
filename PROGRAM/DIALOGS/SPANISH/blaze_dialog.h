@@ -1,4 +1,4 @@
-string DLG_TEXT[378] = {
+string DLG_TEXT[388] = {
 "Oh, eres tú, ",
 ". ¿Qué estás haciendo aquí?",
 "No es asunto tuyo, ",
@@ -377,4 +377,14 @@ string DLG_TEXT[378] = {
 "Hala, con eso bastará hasta que el barco llegue a donde quiera que que esté yendo. Ahora, de vuelta a mi escondite...",
 "He llegado demasiado pronto, debería volver mañana por la noche.",
 "¡Pero no más tarde! Si me retraso demasiado, el contrabandista se marchará sin mí, y puede que nunca consiga salir de esta isla.",
+"¡Vaya! ¡Esta fiesta es un aburrimiento! Tengo que escaparme de aquí o, por lo menos, encontrar algo interesante que hacer!",
+"...",
+"¡Huy! ¡Lo siento! ¡Qué vergüenza! A veces soy tan tope... ¡Cuantísimo lo siento! Lo pondré donde estaba, ¿ves? Perdón...",
+"[PIENSA:] ¿Por qué había una llave en el jarrón? ¡En fin, nadie se dará cuenta!",
+"¡Qué pérdida de tiempo! ¡Justo cuando la fiesta se estaba poniendo interesante, apareció esa loca con el sacudidor de alfombras!",
+"Bueno, he termiando con mis asuntos aquí. Será mejor que vuevla al barco para reunirme con los otros.",
+"Bueno, menuda aventura. Espero que haya podido ayudar a ese joven. Pero lo más importantes es que tengo el dinero para el ron. Ahora debería volver al barco para reunirme con los otros. ¡Beatrice ya debe de estar preocupada!",
+"...",
+"Bueno, puede que yo sea un saco de boxeo, pero tú, Chico, ¡tú eres la vaina de mi espada!",
+"Debería tomar el dinero y salir de aquí. La pequeña Bea debe de estar furiosa.",
 };

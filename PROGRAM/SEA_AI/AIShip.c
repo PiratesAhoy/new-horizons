@@ -1987,7 +1987,11 @@ int FindNearShips(int idx)
 	aref tmpar; makearef(tmpar, closeobj);
 	fSortArray(&tmpar, "dist", 0, place-1);
 
-	int r, relplace[3]; relplace[0] = 0; relplace[1] = 0; relplace[2] = 0;
+	int r, relplace[MAX_SHIPS_ON_SEA];
+	for (i = 0; i < MAX_SHIPS_ON_SEA; i++)
+	{
+		relplace[i] = 0;
+	}
 	object groupplaces;
 	string tstr2;
 	aref curplace, aref arrplace;
@@ -2014,9 +2018,11 @@ int FindNearShips(int idx)
 		CopyAttributes(curplace, arrplace);
 	}
 	// done above. retobj.all.qty = place;
-	retobj.rel0.qty = relplace[0];
-	retobj.rel1.qty = relplace[1];
-	retobj.rel2.qty = relplace[2];
+	for (i = 0; i < place; i++)
+	{
+		tstr = "rel"+i;
+		retobj.(tstr).qty = relplace[i];
+	}
 	//tstr = "all.0";
 	//retdist = stf(retobj.(tstr).dist);
 	return place;

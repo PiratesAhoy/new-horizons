@@ -6683,6 +6683,456 @@ void InitShips()
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 067> is henceforth complete
 // on this day and date Thursday Dec 31 2009, 2055h
 
+//------------------------------------------------------------------------------------
+//      Privateer Lugger by Rider88
+//	Portuguese version
+//------------------------------------------------------------------------------------
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name			= "PO_LuggerP";
+	refShip.All			= "Lugger1";
+	refShip.SName			= "LuggerP";
+	refShip.id			= refShip.Name;
+	refShip.Class			= 7;
+	refShip.Walk			= "LuggerP";
+	refShip.Cannon			= CANNON_TYPE_LONG_LBS4;
+	refShip.MaxCaliber		= 6;
+	refShip.Weight			= Tonnes2CWT(150);
+	refShip.Capacity		= 800;
+	refShip.CannonsQuantity		= 12;
+	// NK cannon qtys 05-04-18 -->
+	refShip.Cannons.Borts.cannonf.qty = 2;
+	refShip.Cannons.Borts.cannonb.qty = 2;
+	// NK <--
+	refShip.MaxCrew			= 50;
+	refShip.MinCrew			= 12;
+	refShip.Price			= 14800;
+	refShip.HP			= 600;
+	refShip.SP			= 200;
+
+	refShip.BigPicTexName	= "SHIPS5"; // Armada
+// KK -->
+	refShip.BI.Tex = 10;
+	refShip.BI.Pic = 15;
+	refShip.QDeck = "ShipDeck4";
+	refShip.CannonsDeck = 0;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin_small";
+	refShip.Flags.Mast1.Flag1 = FLAG_ENSIGN;	// Bowsprit (mast1)
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;	// Mizzen (mast4)
+	refShip.Flags.Mast3.Flag1 = FLAG_PENNANT;	// Fore topmast (mast201)
+	refship.Flags.Mast4.Flag1 = FLAG_ENSIGN;	// Main topmast (mast301)
+// <-- KK
+
+	//Period
+	refShip.period.0 = 0.0; //
+	refShip.period.1 = 1.0; //
+	refShip.period.2 = 1.0; //
+	refShip.period.3 = 1.0; //
+	refShip.period.4 = 1.0; //
+	refShip.period.5 = 1.0; //
+	//Nation
+	refShip.england = 0.04; //
+	refShip.france = 0.02; //
+	refShip.holland = 0.02; //
+	refShip.portugal = 0.5; //
+	refShip.pirate = 0.02; //
+	refShip.spain = 0.02; //
+	refShip.america = 0.2; //
+	refShip.sweden = 0.04; //
+
+	refShip.Model = "LuggerP";
+	refShip.Type.Trade	= false;
+	refShip.Type.War	= true;
+	refShip.CanBuy		= true;
+	refShip.CanEncounter	= true;
+
+	refShip.WaterLine = 0.5;
+	refShip.SpeedDependWeight = 0.2;
+	refShip.SubSeaDependWeight = 0.6;
+
+	refShip.Height.Bombs.Y			= 2.1;	refShip.Height.Bombs.DY		= 1.0;
+	refShip.Height.Grapes.Y			= 3.1;	refShip.Height.Grapes.DY	= 1.5;
+	refShip.Height.Knippels.Y		= 10.5;	refShip.Height.Knippels.DY	= 8.5;
+	refShip.Height.Balls.Y			= 2.1;	refShip.Height.Balls.DY		= 1.0;
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA)
+	{
+		refShip.SpeedRate		= 10.6;
+		refShip.TurnRate		= 105;
+		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.4;
+		refShip.InertiaAccelerationY	= 4.5;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
+	}
+	else
+	{
+		refShip.SpeedRate		= 13.6;
+		refShip.TurnRate		= 60;
+		refShip.InertiaAccelerationX	= 3.0;	refShip.InertiaBrakingX		= 2.0;
+		refShip.InertiaAccelerationY	= 14;	refShip.InertiaBrakingY		= 5;
+		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 3.0;
+	}
+
+//------------------------------------------------------------------------------------
+//      Privateer Lugger by Rider88
+//	Spanish version
+//------------------------------------------------------------------------------------
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name			= "SP_LuggerP";
+	refShip.All			= "Lugger1";
+	refShip.SName			= "LuggerP";
+	refShip.id			= refShip.Name;
+	refShip.Class			= 7;
+	refShip.Walk			= "LuggerP";
+	refShip.Cannon			= CANNON_TYPE_LONG_LBS4;
+	refShip.MaxCaliber		= 6;
+	refShip.Weight			= Tonnes2CWT(150);
+	refShip.Capacity		= 800;
+	refShip.CannonsQuantity		= 12;
+	// NK cannon qtys 05-04-18 -->
+	refShip.Cannons.Borts.cannonf.qty = 2;
+	refShip.Cannons.Borts.cannonb.qty = 2;
+	// NK <--
+	refShip.MaxCrew			= 50;
+	refShip.MinCrew			= 12;
+	refShip.Price			= 14800;
+	refShip.HP			= 600;
+	refShip.SP			= 200;
+
+	refShip.BigPicTexName	= "SHIPS5"; // Armada
+// KK -->
+	refShip.BI.Tex = 10;
+	refShip.BI.Pic = 15;
+	refShip.QDeck = "ShipDeck4";
+	refShip.CannonsDeck = 0;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin_small";
+	refShip.Flags.Mast1.Flag1 = FLAG_ENSIGN;	// Bowsprit (mast1)
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;	// Mizzen (mast4)
+	refShip.Flags.Mast3.Flag1 = FLAG_PENNANT;	// Fore topmast (mast201)
+	refship.Flags.Mast4.Flag1 = FLAG_ENSIGN;	// Main topmast (mast301)
+// <-- KK
+
+	//Period
+	refShip.period.0 = 0.0; //
+	refShip.period.1 = 1.0; //
+	refShip.period.2 = 1.0; //
+	refShip.period.3 = 1.0; //
+	refShip.period.4 = 1.0; //
+	refShip.period.5 = 1.0; //
+	//Nation
+	refShip.england = 0.02; //
+	refShip.france = 0.04; //
+	refShip.holland = 0.02; //
+	refShip.portugal = 0.02; //
+	refShip.pirate = 0.02; //
+	refShip.spain = 0.5; //
+	refShip.america = 0.1; //
+	refShip.sweden = 0.1; //
+
+	refShip.Model = "LuggerP";
+	refShip.Type.Trade	= false;
+	refShip.Type.War	= true;
+	refShip.CanBuy		= true;
+	refShip.CanEncounter	= true;
+
+	refShip.WaterLine = 0.5;
+	refShip.SpeedDependWeight = 0.2;
+	refShip.SubSeaDependWeight = 0.6;
+
+	refShip.Height.Bombs.Y			= 2.1;	refShip.Height.Bombs.DY		= 1.0;
+	refShip.Height.Grapes.Y			= 3.1;	refShip.Height.Grapes.DY	= 1.5;
+	refShip.Height.Knippels.Y		= 10.5;	refShip.Height.Knippels.DY	= 8.5;
+	refShip.Height.Balls.Y			= 2.1;	refShip.Height.Balls.DY		= 1.0;
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA)
+	{
+		refShip.SpeedRate		= 10.6;
+		refShip.TurnRate		= 105;
+		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.4;
+		refShip.InertiaAccelerationY	= 4.5;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
+	}
+	else
+	{
+		refShip.SpeedRate		= 13.6;
+		refShip.TurnRate		= 60;
+		refShip.InertiaAccelerationX	= 3.0;	refShip.InertiaBrakingX		= 2.0;
+		refShip.InertiaAccelerationY	= 14;	refShip.InertiaBrakingY		= 5;
+		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 3.0;
+	}
+
+//------------------------------------------------------------------------------------
+//      Privateer Lugger by Rider88
+//	Dutch version
+//------------------------------------------------------------------------------------
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name			= "NL_LuggerP";
+	refShip.All			= "Lugger1";
+	refShip.SName			= "LuggerP";
+	refShip.id			= refShip.Name;
+	refShip.Class			= 7;
+	refShip.Walk			= "LuggerP";
+	refShip.Cannon			= CANNON_TYPE_LONG_LBS4;
+	refShip.MaxCaliber		= 6;
+	refShip.Weight			= Tonnes2CWT(150);
+	refShip.Capacity		= 800;
+	refShip.CannonsQuantity		= 12;
+	// NK cannon qtys 05-04-18 -->
+	refShip.Cannons.Borts.cannonf.qty = 2;
+	refShip.Cannons.Borts.cannonb.qty = 2;
+	// NK <--
+	refShip.MaxCrew			= 50;
+	refShip.MinCrew			= 12;
+	refShip.Price			= 14800;
+	refShip.HP			= 600;
+	refShip.SP			= 200;
+
+	refShip.BigPicTexName	= "SHIPS5"; // Armada
+// KK -->
+	refShip.BI.Tex = 10;
+	refShip.BI.Pic = 15;
+	refShip.QDeck = "ShipDeck4";
+	refShip.CannonsDeck = 0;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin_small";
+	refShip.Flags.Mast1.Flag1 = FLAG_ENSIGN;	// Bowsprit (mast1)
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;	// Mizzen (mast4)
+	refShip.Flags.Mast3.Flag1 = FLAG_PENNANT;	// Fore topmast (mast201)
+	refship.Flags.Mast4.Flag1 = FLAG_ENSIGN;	// Main topmast (mast301)
+// <-- KK
+
+	//Period
+	refShip.period.0 = 0.0; //
+	refShip.period.1 = 1.0; //
+	refShip.period.2 = 1.0; //
+	refShip.period.3 = 1.0; //
+	refShip.period.4 = 1.0; //
+	refShip.period.5 = 1.0; //
+	//Nation
+	refShip.england = 0.04; //
+	refShip.france = 0.02; //
+	refShip.holland = 0.5; //
+	refShip.portugal = 0.03; //
+	refShip.pirate = 0.02; //
+	refShip.spain = 0.02; //
+	refShip.america = 0.1; //
+	refShip.sweden = 0.1; //
+
+	refShip.Model = "LuggerP";
+	refShip.Type.Trade	= false;
+	refShip.Type.War	= true;
+	refShip.CanBuy		= true;
+	refShip.CanEncounter	= true;
+
+	refShip.WaterLine = 0.5;
+	refShip.SpeedDependWeight = 0.2;
+	refShip.SubSeaDependWeight = 0.6;
+
+	refShip.Height.Bombs.Y			= 2.1;	refShip.Height.Bombs.DY		= 1.0;
+	refShip.Height.Grapes.Y			= 3.1;	refShip.Height.Grapes.DY	= 1.5;
+	refShip.Height.Knippels.Y		= 10.5;	refShip.Height.Knippels.DY	= 8.5;
+	refShip.Height.Balls.Y			= 2.1;	refShip.Height.Balls.DY		= 1.0;
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA)
+	{
+		refShip.SpeedRate		= 10.6;
+		refShip.TurnRate		= 105;
+		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.4;
+		refShip.InertiaAccelerationY	= 4.5;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
+	}
+	else
+	{
+		refShip.SpeedRate		= 13.6;
+		refShip.TurnRate		= 60;
+		refShip.InertiaAccelerationX	= 3.0;	refShip.InertiaBrakingX		= 2.0;
+		refShip.InertiaAccelerationY	= 14;	refShip.InertiaBrakingY		= 5;
+		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 3.0;
+	}
+
+//------------------------------------------------------------------------------------
+//      Privateer Lugger by Rider88
+//	French version
+//------------------------------------------------------------------------------------
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name			= "FR_LuggerP";
+	refShip.All			= "Lugger1";
+	refShip.SName			= "LuggerP";
+	refShip.id			= refShip.Name;
+	refShip.Class			= 7;
+	refShip.Walk			= "LuggerP";
+	refShip.Cannon			= CANNON_TYPE_LONG_LBS4;
+	refShip.MaxCaliber		= 6;
+	refShip.Weight			= Tonnes2CWT(150);
+	refShip.Capacity		= 800;
+	refShip.CannonsQuantity		= 12;
+	// NK cannon qtys 05-04-18 -->
+	refShip.Cannons.Borts.cannonf.qty = 2;
+	refShip.Cannons.Borts.cannonb.qty = 2;
+	// NK <--
+	refShip.MaxCrew			= 50;
+	refShip.MinCrew			= 12;
+	refShip.Price			= 14800;
+	refShip.HP			= 600;
+	refShip.SP			= 200;
+
+	refShip.BigPicTexName	= "SHIPS5"; // Armada
+// KK -->
+	refShip.BI.Tex = 10;
+	refShip.BI.Pic = 15;
+	refShip.QDeck = "ShipDeck4";
+	refShip.CannonsDeck = 0;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin_small";
+	refShip.Flags.Mast1.Flag1 = FLAG_ENSIGN;	// Bowsprit (mast1)
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;	// Mizzen (mast4)
+	refShip.Flags.Mast3.Flag1 = FLAG_PENNANT;	// Fore topmast (mast201)
+	refship.Flags.Mast4.Flag1 = FLAG_ENSIGN;	// Main topmast (mast301)
+// <-- KK
+
+	//Period
+	refShip.period.0 = 0.0; //
+	refShip.period.1 = 1.0; //
+	refShip.period.2 = 1.0; //
+	refShip.period.3 = 1.0; //
+	refShip.period.4 = 1.0; //
+	refShip.period.5 = 1.0; //
+	//Nation
+	refShip.england = 0.02; //
+	refShip.france = 0.5; //
+	refShip.holland = 0.02; //
+	refShip.portugal = 0.02; //
+	refShip.pirate = 0.02; //
+	refShip.spain = 0.04; //
+	refShip.america = 0.1; //
+	refShip.sweden = 0.2; //
+
+	refShip.Model = "LuggerP";
+	refShip.Type.Trade	= false;
+	refShip.Type.War	= true;
+	refShip.CanBuy		= true;
+	refShip.CanEncounter	= true;
+
+	refShip.WaterLine = 0.5;
+	refShip.SpeedDependWeight = 0.2;
+	refShip.SubSeaDependWeight = 0.6;
+
+	refShip.Height.Bombs.Y			= 2.1;	refShip.Height.Bombs.DY		= 1.0;
+	refShip.Height.Grapes.Y			= 3.1;	refShip.Height.Grapes.DY	= 1.5;
+	refShip.Height.Knippels.Y		= 10.5;	refShip.Height.Knippels.DY	= 8.5;
+	refShip.Height.Balls.Y			= 2.1;	refShip.Height.Balls.DY		= 1.0;
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA)
+	{
+		refShip.SpeedRate		= 10.6;
+		refShip.TurnRate		= 105;
+		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.4;
+		refShip.InertiaAccelerationY	= 4.5;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
+	}
+	else
+	{
+		refShip.SpeedRate		= 13.6;
+		refShip.TurnRate		= 60;
+		refShip.InertiaAccelerationX	= 3.0;	refShip.InertiaBrakingX		= 2.0;
+		refShip.InertiaAccelerationY	= 14;	refShip.InertiaBrakingY		= 5;
+		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 3.0;
+	}
+
+//------------------------------------------------------------------------------------
+//      Privateer Lugger by Rider88
+//	British version
+//------------------------------------------------------------------------------------
+	makeref(refShip,ShipsTypes[n]);
+	n++;
+	refShip.Name			= "RN_LuggerP";
+	refShip.All			= "Lugger1";
+	refShip.SName			= "LuggerP";
+	refShip.id			= refShip.Name;
+	refShip.Class			= 7;
+	refShip.Walk			= "LuggerP";
+	refShip.Cannon			= CANNON_TYPE_LONG_LBS4;
+	refShip.MaxCaliber		= 6;
+	refShip.Weight			= Tonnes2CWT(150);
+	refShip.Capacity		= 800;
+	refShip.CannonsQuantity		= 12;
+	// NK cannon qtys 05-04-18 -->
+	refShip.Cannons.Borts.cannonf.qty = 2;
+	refShip.Cannons.Borts.cannonb.qty = 2;
+	// NK <--
+	refShip.MaxCrew			= 50;
+	refShip.MinCrew			= 12;
+	refShip.Price			= 14800;
+	refShip.HP			= 600;
+	refShip.SP			= 200;
+
+	refShip.BigPicTexName	= "SHIPS5"; // Armada
+// KK -->
+	refShip.BI.Tex = 10;
+	refShip.BI.Pic = 15;
+	refShip.QDeck = "ShipDeck4";
+	refShip.CannonsDeck = 0;
+	refShip.CargoHold = 1;
+	refShip.Cabin = "Cabin_small";
+	refShip.Flags.Mast1.Flag1 = FLAG_ENSIGN;	// Bowsprit (mast1)
+	refShip.Flags.Mast2.Flag1 = FLAG_PENNANT;	// Mizzen (mast4)
+	refShip.Flags.Mast3.Flag1 = FLAG_PENNANT;	// Fore topmast (mast201)
+	refship.Flags.Mast4.Flag1 = FLAG_ENSIGN;	// Main topmast (mast301)
+// <-- KK
+
+	//Period
+	refShip.period.0 = 0.0; //
+	refShip.period.1 = 1.0; //
+	refShip.period.2 = 1.0; //
+	refShip.period.3 = 1.0; //
+	refShip.period.4 = 1.0; //
+	refShip.period.5 = 1.0; //
+	//Nation
+	refShip.england = 0.5; //
+	refShip.france = 0.02; //
+	refShip.holland = 0.03; //
+	refShip.portugal = 0.04; //
+	refShip.pirate = 0.02; //
+	refShip.spain = 0.02; //
+	refShip.america = 0.1; //
+	refShip.sweden = 0.1; //
+
+	refShip.Model = "LuggerP";
+	refShip.Type.Trade	= false;
+	refShip.Type.War	= true;
+	refShip.CanBuy		= true;
+	refShip.CanEncounter	= true;
+
+	refShip.WaterLine = 0.5;
+	refShip.SpeedDependWeight = 0.2;
+	refShip.SubSeaDependWeight = 0.6;
+
+	refShip.Height.Bombs.Y			= 2.1;	refShip.Height.Bombs.DY		= 1.0;
+	refShip.Height.Grapes.Y			= 3.1;	refShip.Height.Grapes.DY	= 1.5;
+	refShip.Height.Knippels.Y		= 10.5;	refShip.Height.Knippels.DY	= 8.5;
+	refShip.Height.Balls.Y			= 2.1;	refShip.Height.Balls.DY		= 1.0;
+
+	if(iRealismMode>0 || REALISTIC_SHIP_INERTIA)
+	{
+		refShip.SpeedRate		= 10.6;
+		refShip.TurnRate		= 105;
+		refShip.InertiaAccelerationX	= 4;	refShip.InertiaBrakingX		= 0.4;
+		refShip.InertiaAccelerationY	= 4.5;	refShip.InertiaBrakingY		= 0.5;
+		refShip.InertiaAccelerationZ	= 2.5;	refShip.InertiaBrakingZ		= 2.0;
+	}
+	else
+	{
+		refShip.SpeedRate		= 13.6;
+		refShip.TurnRate		= 60;
+		refShip.InertiaAccelerationX	= 3.0;	refShip.InertiaBrakingX		= 2.0;
+		refShip.InertiaAccelerationY	= 14;	refShip.InertiaBrakingY		= 5;
+		refShip.InertiaAccelerationZ	= 5.0;	refShip.InertiaBrakingZ		= 3.0;
+	}
+
 //-------------------------------------------------------------------------
 // Edinburgh Trader by ZarethPL - Texture by D4V1DXxX - sails as light brig
 //     <SWS - Willemstad Builders' Trials Winter 09 S/N 074> (WBT2T)

@@ -103,7 +103,7 @@ string DLG_TEXT[117] = {
 "No, hablemos de otra cosa.",
 "Lo siento, capitán. No tengo nada para ti. El capitán ",
 "¡Detened este escándalo ahora mismo o tendré que llamar a los guardias!",
-"¡De acuerdo, está bien! ¡Me voy!",
+"¡De acuerdo, está bien! ¡Ya me voy!",
 "Hasta mañana ",
 "Quiero que esta noche repartas ron gratis para la tripulación de un barco llamado 'Arabella'. Serán alrededor de unos 100 hombres. ¿Cuánto oro necesito para organziarlo?",
 "Para una noche entera y con esa cantidad de hombres, no puedo cobrar menos de 1000 monedas de oro.",

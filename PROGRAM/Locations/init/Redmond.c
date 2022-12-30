@@ -249,8 +249,8 @@ void LocationInitRedmond(ref n)
 
 	//gate to terrace to wr residence
 	Locations[n].reload.l23.name = "reload6";
-	Locations[n].reload.l23.go = "Redmond_town_04";
-	Locations[n].reload.l23.emerge = "terr_in1";
+	Locations[n].reload.l23.go = "wr_terrace";
+	Locations[n].reload.l23.emerge = "reload1";
 	Locations[n].reload.l23.autoreload = "0";
 	Locations[n].reload.l23.label = "Redmond.";
 	Locations[n].locators_radius.reload.reload6 = 0.7;

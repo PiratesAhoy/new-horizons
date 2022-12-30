@@ -1,8 +1,8 @@
 title=Mi primer barco
 text.t1=Me han transferido al 'Indefatigable', al mando del capitán Pellew debido al asunto de Clayton. Por suerte, Archie también ha sido transferido. 
-text.t2=He tenido otro encontronazo con Jack Simpson. Tengo que tener cuidado con él. El capitán me ha dejado al mando del barco con órdenes de poner rumbo a #sCharlestown#, en la isla de #sisland_Quebradas Costillas#. El rumbo a seguir es al este por el sur.
+text.t2=He tenido otro encontronazo con Jack Simpson. Tengo que tener cuidado con él. El capitán me ha dejado al mando del barco con órdenes de poner rumbo a #sCharlestown#, en la isla de #sisland_Quebradas Costillas#. El rumbo a seguir es este cuarta al sureste.
 text.t3=Hemos arribado a #sCharlestown#. Ahora tengo que dirigir las reparaciones del barco. también necesitamos reponer pólvora.
-text.t4=El capitán nos ha informado de que nuestras órdenes son bloquear a los barcos franceses en #sisland_Falaise de Fleur#. En particular, debemos encontrar al 'Téméraire'. El rumbo a seguir es oeste desde aquí hasta que dejemos atrás #sisland_Guadeloupe#, después oeste suroeste hasta #sisland_Falaise de Fleur#.
+text.t4=El capitán nos ha informado de que nuestras órdenes son bloquear a los barcos franceses en #sisland_Falaise de Fleur#. En particular, debemos encontrar al 'Téméraire'. El rumbo a seguir es sur sureste desde aquí hasta que dejemos atrás #sisland_Guadeloupe#, después sur suroeste hasta #sisland_Falaise de Fleur#.
 text.t5=Hemos hundido al 'Téméraire'. Nuestras órdenes ahora son navegar rumbo a #sCharlestown#.
 text.t6=Se me ha ordenado asistir a una reunión con el capitán Sawyer en la taberna.
 text.t7=Debemos conducir el barco a #sGreenford# para recoger a algunos oficiales. Recogeremos al capitán cuando volvamos.

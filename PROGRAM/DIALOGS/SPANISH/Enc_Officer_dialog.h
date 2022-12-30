@@ -1,4 +1,4 @@
-string DLG_TEXT[225] = {
+string DLG_TEXT[230] = {
 "Por casualidad no necesitarás un ofical, ¿verdad, capitán?",
 "¿Un oficial? ¿Y qué sabes hacer?",
 "No, tengo suficientes oficiales por ahora",
@@ -109,9 +109,9 @@ string DLG_TEXT[225] = {
 "",
 "De acuerdo, como desees. ¿Y debemos agregar algunos muebles, accesorios o equipamiento? Eso podría ser necesario para que el edificio realice una función adecuada",
 "No, solo el edificio tal cual.",
-"Aplaza esa orden, tengo que inspeccionar el terreno de construcción una vez más",
+"Cancela esa orden, tengo que inspeccionar el terreno de construcción una vez más",
 "¡Sí, buena idea!",
-"Así que erigiremos una",
+"Así que erigiremos una ",
 " con un ",
 "Exacto, ¡ponte manos a la obra!",
 "Eh, lo siento, no sé con seguridad si este es un buen diseño para este lugar. ¿Y qué dijiste de nuestros recursos?",
@@ -224,5 +224,9 @@ string DLG_TEXT[225] = {
 "Muy bien, seguro que la tripulación estará ",
 " con su parte.",
 "Gracias por tu ayuda.",
+"Creo que es hora de revisar tu salario.",
+"Gracias, capitán. He estado intentando progresar en mis habilidades.",
+"Lo estás haciendo bien, pero todavía no estás ahí.",
+"Te mereces un aumento de salario como recompensa por tu buen trabajo. Sigue así.",
+"A partir de ahora, recibirás un salario como el resto de mis oficiales.",
 };
-

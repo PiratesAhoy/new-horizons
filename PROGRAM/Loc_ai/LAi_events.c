@@ -3857,7 +3857,8 @@ void LAi_Character_Dead_Event() // should never be run when CORPSEMODE == 3. NK 
 							locNum = GetAttributesNum(rootLocs)+1;
 						}
 						newLocName = "corpse_box"+locNum;
-						WriteLocatorGlobal(corpse.location, "box", newLocName, TranslateString("","body_of_"+corpse.sex)+" "+GetMySimpleName(corpse), sti(corpse.index), stf(corpse.deathx), stf(corpse.deathy), stf(corpse.deathz), true);
+						if(!CheckAttribute(corpse, "deathx") || !CheckAttribute(corpse, "deathy") || !CheckAttribute(corpse, "deathz")) trace("LAi_Character_Dead_Event: '" + GetMySimpleName(corpse) + "', Character ID '" + chr.id + "', chridx = " + chridx + ", missing 'death' coordinates, no loot box created"); 
+						else WriteLocatorGlobal(corpse.location, "box", newLocName, TranslateString("","body_of_"+corpse.sex)+" "+GetMySimpleName(corpse), sti(corpse.index), stf(corpse.deathx), stf(corpse.deathy), stf(corpse.deathz), true);
 					}
 					//MAXIMUS: makes box from corpse with hand-icon in the top-left corner <--
 				}// KK -->

@@ -105,6 +105,10 @@ Lebre{Lebre}
 Taegan{Taegan}
 Finch{Finch}
 
+Dark{Oscuro}
+Teacher{Maestro}
+Satanists{Satánicos}
+After escaping the Maltese Order's destruction of your lair in Italy, you've fled to the Caribbean vowing for vengeance in the name of the Prince of Darkness...{Después de escapar a la destrucción de tu guarida en Italia por parte de la Orden de Malta, has huido al Caribe, jurando venganza en el nombre del Príncipe de las Tinieblas...}
 Anna{Anna}
 De Leiva{De Leiva}
 
@@ -181,11 +185,35 @@ James T.{James T.}
 Hook{Hook}
 Jolly Roger{Jolly Roger}
 
-Captaine{Captaine}
+Eduardo{Eduardo}
+Villanueva{Villanueva}
+Sargento{Sargento}
+Lord of the Adriatic{Señor del Adriático}
+Relive the piratical adventures of Capitán Villanueva, feared corsair of the Adriatic Sea. Whether that means serving Spain as a privateer - or turning hostile to anything and everything in his way - that is up to you, the player, to decide.{Revive las piráticas evnturas del capitán Villanueva, temido corsario del mar Adriático. Si eso significa servir a España un como corsario legítimo, o volverte contra cualquiera que se interponga en tu cmaino, es una decisión que depende de ti.}
+
+Sao{Sao}
+Feng{Feng}
+Crouching Tiger, Sailing Dragon{Tigre y Dragón (marino)}
+Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.{Destinado a convertirte en el Señor Pirata de Singapur y azote del Mar de China Meridional, acabas de llegar al Caribe para labrarte un nombre. Tu barco, de un tipo nunca visto en estas aguas, podría darte la ventaja necesaria para convertirte en un pirata de éxito.}
+Empress{Empress}
+
+Capitaine{Capitaine}
 Chevalle{Chevalle}
+Lord of the Mediterranean Sea{Señor del mar Mediterráneo}
+Chevalle, pirate lord of the Mediterranean sea, has embarked on a journey to the Caribbean. Work as a privateer for France, a pirate for yourself, or a rival power...the choice is yours, Capitaine.{Chevalle, señor pirata del mar Mediterráneo, se ha embarcado en un viaje al Caribe. Puedes trabajar como corsario para Francia, como pirata para ti mismo, o para alguna portencia rival... La decisión es tuya, Capitaine.}
 Fancy{Fancy}
 
+Sumbhajee{Sumbhajee}
+Angria{Angria}
+Lord of the Indian Ocean{Señor del océano Índico}
+Priest turned pirate lord, Sri Sumbhajee Angria has left the Indian Ocean to resume his piratical activities in the Caribbean.{Un sacerdote convertido en pirata, Sri Sumbhajee Angria ha dejado las aguas del océano Índioc para continuar sus actividade spiráticas en el Caribe.}
+Otter{Otter}
+
+Edward{Edward}
 Teague{Teague}
+Pirate Lord of Madagascar{Señor pirata de Madagascar}
+Rumour has it this infamous buccaneer fathered the legendary Captain Jack Sparrow. Some say his accomplishments eclipsed even those of Jack. Steer the ship of the mighty Edward Teague.{Los rumores dicen que este infame bucanero engendró al legendario cpaitán Jack Sparrow. Algunos dicen que sus hazañas eclipsan incluso a las del mismo Jack. Gobierna la nave del poderoso Edward Teague.}
+Troubadour{Troubadour}
 
 Amazon{Amazon}
 
@@ -284,12 +312,12 @@ Fanielle{Fanielle}
 
 Ralph{Ralph}
 Fawn{Fawn}
-Having eaten a magic fruit and narrowly avoided being eaten yourself, you now sail the seas in search of the One Piece. Can you rise to become a Pirate King?{Después de comer una fruta mágica y librarte por poco de que te comieran a ti, navegas por los mares en busca del One Piece. ¿Podrás llegar a convertirte en Rey de los Piratas?}
 
 Monkey{Monkey}
 D.{D.}
 Luffy{Luffy}
 Going Merry{Going Merry}
+Having eaten a magic fruit and narrowly avoided being eaten yourself, you now sail the seas in search of the One Piece. Can you rise to become a Pirate King?{Después de comer una fruta mágica y librarte por poco de que te comieran a ti, navegas por los mares en busca del One Piece. ¿Podrás llegar a convertirte en Rey de los Piratas?}
 
 Gherarde{Gherarde}
 de Jongh{de Jongh}
@@ -310,6 +338,11 @@ Henry{Henry}
 Morgan{Morgan}
 Jamaica Merchant{Jamaica Merchant}
 
+Black{Black}
+Caesar{Caesar}
+Longboat{Longboat}
+From Slave to Pirate{De escalvo a pirata}
+You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?{You were taken from your homeland and bound in chains on a slave ship. But not everyone on the ship is an enemy. With a little help from an unexpected ally and  a storm, you escape your captivity. What will you do next?}
 the Beggar{the Beggar}
 
 Rackham{Rackham}
@@ -353,12 +386,6 @@ Modyford{Modyford}
 
 Daniel{Daniel}
 Montbart{Montbart}
-
-Sao{Sao}
-Feng{Feng}
-Crouching Tiger, Sailing Dragon{Tigre y Dragón (marino)}
-Destined to become the Pirate Lord of Singapore and scourge of the South China Sea, you have just made your way to the Caribbean to make a name for yourself. Your uncommon type of ship may give you the leverage you need to become a successful pirate.{Destinado a convertirte en el Señor Pirata de Singapur y azote del Mar de China Meridional, acabas de llegar al Caribe para labrarte un nombre. Tu barco, de un tipo nunca visto en estas aguas, podría darte la ventaja necesaria para convertirte en un pirata de éxito.}
-Empress{Empress}
 
 Morris{Morris}
 Williams{Williams}
@@ -443,13 +470,18 @@ Enterprise{Enterprise}
 Vito{Vito}
 Leone{Leone}
 
+A Second Calling{A Second Calling}
+After coming to terms with the truth about your father, you've decided it's time to retire from the smith and embrace the life of a sailor.{Tras aceptar la verdad sobre tu padre, has decidido que es hora de dejar la herrería y abarazar la vida del marino.}
+Miranda{Miranda}
+
 A Touch of Destiny{Un toque del destino}
 Cursed for killing Davy Jones, you are now captain of the renewed Flying Dutchman. You are tasked to ferry the souls of the dead to the next world. But surely that can wait! For now, you have to become familiar with the tasks of Captain. What you do after that is up to you.{Maldito por haber matado a Davy Jones, ahora eres el capitán del renovado Holandés Errante. Tu misión es transportar las almas de los muertos en la mar al otro mundo. ¡Pero sin duda, eso puede esperar! De momento, tienes que familiarizarte con tus tareas como capitán. Lo que hagas después de eso es cosa tuya.}
 
 Will{Will}
 Turner{Turner}
 
-icardo{Ricardo}
+Bootstrap Bill{Bill el Botas}
+Ricardo{Ricardo}
 Orellana{Orellana}
 The Devil's Ship{El barco del Diablo}
 You made a pact with the Devil to save you and your love from certain death in exchange for your soul. The demon betrays you by taking away everything you cared about. With your heart full of rage and revenge, you sow death in your path with the help of your cursed ship.{Hiciste un pacto con el Diablo para salvar a tu amor y a ti mismo de una muerte segura a cambio de tu alma. El demonio te traicionó arrebatándote todo lo que amabas. Con tu corazón lleno de rabia y ansias de venganza, siembras la muerte en tu camino con la ayuda de tu barco maldito.}
@@ -491,10 +523,6 @@ McAllister{McAllister}
 Brave Black Flag{La audaz bandera negra}
 You have led a mutiny against your cruel captain who meant to kill a group of your countrymen taken as pirates. Now, on the run and marked as a traitor, you must decide what path to follow. Your actions have earned you the respect of the Brotherhood of Pirates. Will you join them under the brave black flag?{Has encabezado un motín contra tu cruel capitán, que pretendía ejecutar a un grupo de compatriotas tuyos apresados como piratas. Ahora, perseguido y marcado como traidor, debes decidir qué camino seguir. Tus acciones te han ganado el respeto de la Hermandad de Piratas. ¿Te unirás a ellos bajo la audaz bandera negra?}
 Defiance{Defiance}
-
-Eduardo{Eduardo}
-Villanueva{Villanueva}
-Sargento{Sargento}
 
 Milady{Milady}
 de Winter{de Winter}

@@ -1,5 +1,5 @@
-string DLG_TEXT[60] = {
-"Te doy la bienvenida a mi taberna. No nos conocemos. Me llamo ",
+string DLG_TEXT[67] = {
+"Te doy la bienvenida a mi taberna. Me llamo ",
 ". ¿Qué te trae a mi humilde establecimiento? ¿Necesitas un lugar donde descansar?",
 "Gracias. Me llamo ",
 ". Estoy aquí por negocios.",
@@ -59,4 +59,11 @@ string DLG_TEXT[60] = {
 "Trabajo para la señora Carranza. Quiero hablar con Abel Barco. ¿Lo conoces?",
 "La verdad es que no. Solo me pagó para informarle cuando alguien que trabaja para la señora Carranza preguntara por él. Y para decirte que mañana te esperará fuera de la ciudad.",
 "Muy bien, Dile que estaré allí.",
+"¿Por casualidad no habrás visto una biblia por ahí tirada?",
+"Sí, alguien trajo esta bonita biblia a mi caja de objetos perdidos. Un marinero se la dejó en la mesa.",
+"¡Maravilloso! Dámela para devolvérsela a su legítimo dueño.", // 62
+"Mis disculpas, pero el capitán Torres ha alquilado todas mis habotaciones para él y sus oficiales.",
+"Entonces, me quedaré en la sala común de la taberna.",
+"Por desgracioa, eso tampoco será posible. Un guardia me ha recomendado que no deje a nadie quedarse aquí toda la noche, porque a menudo causan problemas. Y no le falta razón. Debería haber visto a ese marinero que vino esta noche, apenas podía tenerse en pie cuando salió por la puerta. Me apuesto las botas a que no llegó muy lejos...",
+"¡Está bien, no habrá sueño par amí esta noche! [PIENSA:] Quizás no debería irme a dormir de todas formas. ¡Todavía hay algunos marineros perdidos por ahí!",
 };

@@ -852,6 +852,7 @@ if(sti(GetStorylineVar(FindCurrentStoryline(), "WR_PUZZLES")) > 0 || sti(GetStor
   n = InitBuildingItemJRH(n,	"gibbet4",			"gibbet4");		//horizontal
 
   n = InitBuildingItemJRH(n,	"pole2",			"pole2");		//bladeboom vertical big
+  n = InitBuildingItemJRH(n,	"pole2_dark",			"pole2_dark");		//
   n = InitBuildingItemJRH(n,	"pole3",			"pole3");		//bladeboom horizontal
   n = InitBuildingItemJRH(n,	"plank1",			"plank1");		//bladeplank on the edge
   n = InitBuildingItemJRH(n,	"plank1_dark",			"plank1_dark");		//bladeplank on the edge

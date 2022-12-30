@@ -12425,8 +12425,6 @@ void SideQuestComplete(string sQuestName)
 			DeleteAttribute(NPChar, "quest.old_dialog_file");
 			DeleteAttribute(NPChar, "quest.old_dialog_currentnode");
 		break;
-
-
 ///////////////////////////////////////////////////////////////////////
 // The Kapitein of Kralendijk - end
 ///////////////////////////////////////////////////////////////////////
@@ -14007,7 +14005,6 @@ void SideQuestComplete(string sQuestName)
 			PChar.quest.disable_rebirth = true;
 			PostEvent("LAi_event_GameOver", 0, "s", "mutiny");
 		break;
-
 ///////////////////////////////////////////////////////////////////////
 // Hornblower sidequests - end
 ///////////////////////////////////////////////////////////////////////
@@ -14015,7 +14012,6 @@ void SideQuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////////////
 // The Quest for the Crystal Skull
 ///////////////////////////////////////////////////////////////////////
-
 		case "crysskull_initiate":
 			SetQuestHeader("crystal_skull");
 			Preprocessor_AddQuestData("researcher", GetMyFullName(CharacterFromID("Skull_Researcher")));
@@ -15032,7 +15028,6 @@ void SideQuestComplete(string sQuestName)
 			}
 			PChar.quest.crysskull_execute_hostage.over = "yes";
 		break;
-
 ///////////////////////////////////////////////////////////////////////
 // The Quest for the Crystal Skull - end
 ///////////////////////////////////////////////////////////////////////
@@ -15040,7 +15035,6 @@ void SideQuestComplete(string sQuestName)
 ///////////////////////////////////////////////////////////////////////
 // Colombian Silver
 ///////////////////////////////////////////////////////////////////////
-
 		case "colombian_silver_start":
 			SetEnterLocationQuest("Smugglers_Tavern", "colombian_silver_start_check", 0);
 		break;
@@ -16395,9 +16389,31 @@ void SideQuestComplete(string sQuestName)
 			LAi_ActorAttack(NPChar, PChar, "");
 			NPChar.location = "none";			
 		break;
-
 ///////////////////////////////////////////////////////////////////////
 // Colombian Silver - end
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+// Captain Murphy tribute
+	// This music used here is by Flannery, originally for the game "Buccaneers" and included in "New Horizons"
+	// with his permission.  Republishing or uploading these tracks is strictly prohibited.
+///////////////////////////////////////////////////////////////////////
+		case "Murphy_tribute_activate":
+			ref tmpref; makeref(tmpref, Music_Alias);
+			aref aSailingMusic;
+			makearef(aSailingMusic, Music_Alias.music_day_sailing);
+			n = GetAttributesNum(aSailingMusic);
+			attr = "f" + (n+1);
+			tmpref.music_day_sailing.(attr).name = "MUSIC\Final Salute.ogg";
+			makearef(aSailingMusic, Music_Alias.music_night_sailing);
+			n = GetAttributesNum(aSailingMusic);
+			attr = "f" + (n+1);
+			tmpref.music_night_sailing.(attr).name = "MUSIC\Final Salute.ogg";
+			Locations[FindLocation("Turks_port")].reload.l18.label = "Captain Murphy's House";
+			Locations[FindLocation("Capt_Murphy_house")].id.label = "Captain Murphy's House";
+		break;
+///////////////////////////////////////////////////////////////////////
+// Captain Murphy tribute
 ///////////////////////////////////////////////////////////////////////
 
 		PChar.questnotfound = true; // PB: Testing

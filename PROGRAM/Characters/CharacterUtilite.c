@@ -3566,6 +3566,11 @@ int GetCharacterCurrentIsland(ref _refCharacter)
 string GetIslandIDByLocationID(string locid)
 {
 	int locIdx = FindLocation(locid);
+	if (locIdx<0)
+	{
+		trace("GetIslandIDByLocationID: no index for island '" + locid + "'");
+		return "";
+	}
 	if(CheckAttribute(Locations[locIdx],"island")) { return Islands[FindIsland(Locations[locIdx].island)].id; } // NK bugfix 05-04-02
 	/*aref rootar,ar;
 	makearef(rootar,Locations[0].IslandsList);

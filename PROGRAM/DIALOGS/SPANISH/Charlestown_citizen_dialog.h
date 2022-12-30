@@ -37,10 +37,6 @@ string DLG_TEXT[174] = {
 "Háblame de tu colonia.",
 "¿Qué sabes de #sCharlestown#?",
 "Me gustaría obtener información sobre #sCharlestown#.",
-"Hola. Un oficial abandonó mi barco. Su nombre es",
-"Nigel Blythe",
-"Nigel Blythe",
-". Tu ciudad es lo bastante pequeña como para que tal vez hayas oído algo sobre él.",
 "Bueno, no hay nada que necesite en este momento. ¡Adiós!",
 "Sí, creo que he oído que tu amigo estaba en nuestra taberna",
 "Gracias.",
@@ -112,7 +108,9 @@ string DLG_TEXT[174] = {
 "James Griffith",
 ".",
 "He cambiado de opinión. Olvídalo.",
-"Bueno, #sCharlestown# tiene un alcalde, está aquí para poner las cosas en orden. Es el sarganto McBaker, que también es el comandante del fuerte. No le gusta la gente que no le escucha con la suficiente atencion, y tiene un temperamento muy irascible, así que no bajes la guardia con él.",
+"Bueno, #sCharlestown# tiene un gobernador militar, está aquí para poner las cosas en orden. Se llama "
+"Thomas Modiford",
+". No le gusta la gente que no le escucha con la suficiente atencion, y tiene un temperamento muy irascible, así que no bajes la guardia con él.",
 "Ya veo. Tengo una pregunta.",
 "Gracias, y adiós.",
 "Dicen que se puede contar con él. Por otro lado, he oído que no le gusta correr riesgos innecesarios y siempre lleva sus negocios de la forma más prudente. Tampoco creo que esté metido en ningún negocio turbio.",
@@ -173,5 +171,4 @@ string DLG_TEXT[174] = {
 "Ya veo. Terminemos nuestra conversación sobre ese asunto, y cambiemos de tema.",
 "Tenemos una población de ",
 " ciudadanos.",
-
 };

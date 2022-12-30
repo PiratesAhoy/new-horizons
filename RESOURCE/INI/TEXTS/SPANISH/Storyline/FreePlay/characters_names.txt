@@ -21,6 +21,24 @@ François{François}
 de Hadoque{de Hadoque}
 Koleniko{Koleniko}
 Ragetti{Ragetti}
+Mother{Madre}
+Bootstrap Bill{Bill el Botas}
+Mateo{Mateo}
+Black Caesar{Black Caesar}
+Raoul{Raoul}
+Dupont{Dupont}
+Askay{Askay}
+Pusasn{Pusasn}
+Lian{Lian}
+Park{Park}
+Tai{Tai}
+Huang{Huang}
+Twigg{Twigg}
+Bo'sun{Bo'sun}
+Pintel{Pintel}
+Ian{Ian}
+Mercer{Mercer}
+Bligh{Bligh}
 
 {=====| quests_reaction.c |=====}
 Bartolomeu{Bartolomeu}
@@ -28,6 +46,11 @@ Portugues{Portugues}
 Guillaume{Guillaume}
 Auger{Auger}
 
+{=====| both_reaction.c |=====}
+Weatherby{Weatherby}
+Swann{Swann}
+Christopher{Christopher}
+Silehard{Silehard}
 {=====| Officers.c |=====}
 William{William}
 Sullivan{Sullivan}
@@ -44,6 +67,8 @@ O'Bannon{O'Bannon}
 Angus{Angus}
 Calhoun{Calhoun}
 Bush{Bush}
+Dark Captain{Capitán oscuro}
+Dark Cannoneer{Artillero oscuro}
 
 {=====| TempQuest.c |=====}
 Bart{Bart}

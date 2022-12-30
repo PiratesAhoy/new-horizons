@@ -25829,5 +25829,88 @@ ch.old.name = "";
 	LAi_SetHP(ch, 100.0, 100.0);
 	LAi_NoRebirthEnable(ch);
 	ch.questchar = true; ch.HPBonus = -20; AddGameCharacter(n, ch);
+
+	ch.old.name = "Rogers'";
+	ch.old.lastname = "Crew";
+	ch.name = TranslateString("", "Rogers'");
+	ch.lastname = TranslateString("", "Crew");
+	ch.id		= "wr_man5_1_copy";
+	ch.model = "wr_man5_1";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "blade1");
+	ch.equip.blade = "blade1";
+	GiveItem2Character(ch, "pistol5");
+	ch.equip.gun = "pistol5";
+	if (ENABLE_AMMOMOD) {
+		TakenItems(ch, "gunpowder", 9);
+		TakenItems(ch, "pistolbullets", 1);
+	}
+	ch.location	= "wr_gall_qdeck";
+	ch.location.group = "goto";
+	ch.location.locator = "goto5";
+	ch.Dialog.Filename = "wr crew_dialog.c";
+	ch.greeting = "";
+	ch.rank 	= 5;
+	ch.reputation = "20";
+	ch.experience = "0";
+	ch.skill.Leadership = "0";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "0";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "0";
+	ch.skill.Commerce = "0";
+	ch.skill.Sneak = "0";
+	ch.money = "7";
+	ch.quest.meeting = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.questchar = true;
+	AddGameCharacter(n, ch);
+
+	ch.old.name = "Rogers'";
+	ch.old.lastname = "Crew";
+	ch.name = TranslateString("", "Rogers'");
+	ch.lastname = TranslateString("", "Crew");
+	ch.id		= "wr_fsh1_copy";
+	ch.model = "wr_fsh1";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "bladeX4");
+	ch.equip.blade = "bladeX4";
+	GiveItem2Character(ch, "pistol5");
+	ch.equip.gun = "pistol5";
+	if (ENABLE_AMMOMOD) {
+		TakenItems(ch, "gunpowder", 6);
+		//TakenItems(ch, "pistolbullets", 6);
+	}
+	ch.location	= "wr_gall_qdeck";
+	ch.location.group = "goto";
+	ch.location.locator = "goto6";
+	ch.Dialog.Filename = "wr crew_dialog.c";
+	ch.greeting = "";
+	ch.rank 	= 5;
+	ch.reputation = "20";
+	ch.experience = "0";
+	ch.skill.Leadership = "0";
+	ch.skill.Fencing = "4";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "0";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "0";
+	ch.skill.Commerce = "0";
+	ch.skill.Sneak = "0";
+	ch.money = "1";
+	ch.quest.meeting = "0";
+	LAi_SetStayType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 60.0, 60.0);
+	ch.questchar = true; ch.HPBonus = -20; AddGameCharacter(n, ch);
 }
 	
