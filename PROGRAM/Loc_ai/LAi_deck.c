@@ -80,7 +80,7 @@ void Return2SeaAfterDeck()
 	}
 	//Создаём фейдер и запускаем
 	CreateEntity(&boarding_fader, "fader");
-	SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture("sea.tga")); // KK
+	SetReloadImage(&boarding_fader, "sea.tga");
 
 	float fadeOutTime = RELOAD_TIME_FADE_OUT;
 
@@ -132,7 +132,7 @@ void Sea_DeckStartNow(int chridx, string deckname)
 	DeckID = deckname; // KK
 
 	// SCREWFACE : loading screen is different for different deck model
-	if (CheckAttribute(&Locations[FindLocation(DeckID)], "image")) SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[FindLocation(DeckID)].image)); // KK
+	if (CheckAttribute(&Locations[FindLocation(DeckID)], "image")) SetReloadImage(&boarding_fader, Locations[FindLocation(DeckID)].image); // KK
 	// SCREWFACE : END
 
 	SendMessage(&boarding_fader, "lfl", FADER_OUT, 1.0, false);
@@ -547,7 +547,7 @@ void Sea_CabinStartNow(int chridx)
 	ref mchr = GetMainCharacter();
 // KK -->
 	deckID = GetCharacterShipCabin(GetCharacter(chridx));
-	if (CheckAttribute(Locations[FindLocation(deckID)], "image")) SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[FindLocation(DeckID)].image));
+	if (CheckAttribute(Locations[FindLocation(deckID)], "image")) SetReloadImage(&boarding_fader, Locations[FindLocation(DeckID)].image);
 // <-- KK
 	// SCREWFACE : END
 
@@ -1009,7 +1009,7 @@ void Deck_GoBack()
 	SetEventHandler("FaderEvent_EndFade", "DeckBack_ReloadEndFadeAfter", 0);
 
 	CreateEntity(&boarding_fader, "fader");
-	if (CheckAttribute(&Locations[LandLocationIdx], "image")) SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[LandLocationIdx].image));
+	if (CheckAttribute(&Locations[LandLocationIdx], "image")) SetReloadImage(&boarding_fader, Locations[LandLocationIdx].image);
 
 	float fadeOutTime = RELOAD_TIME_FADE_OUT;
 
@@ -1210,9 +1210,9 @@ void Land_DeckStartNow(int chridx, string deckname)
 	{
 		LAi_QuestDelay("gunner_ammo", 1.0);
 
-		SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture("Landing.tga"));
+		SetReloadImage(&boarding_fader, "Landing.tga");
 	} else {
-		if (CheckAttribute(Locations[FindLocation(deckID)], "image")) SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[FindLocation(DeckID)].image));
+		if (CheckAttribute(Locations[FindLocation(deckID)], "image")) SetReloadImage(&boarding_fader, Locations[FindLocation(DeckID)].image);
 	}
 
 	SendMessage(&boarding_fader, "lfl", FADER_OUT, 1.0, false);
@@ -1275,7 +1275,7 @@ void Land_ToPort()
 
 		ref mchr = GetMainCharacter();
 		CreateEntity(&boarding_fader, "fader");
-		if (CheckAttribute(&Locations[FindLocation(mchr.location.from_sea)], "image")) SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[FindLocation(mchr.location.from_sea)].image));
+		if (CheckAttribute(&Locations[FindLocation(mchr.location.from_sea)], "image")) SetReloadImage(&boarding_fader, Locations[FindLocation(mchr.location.from_sea)].image);
 
 		float fadeOutTime = RELOAD_TIME_FADE_OUT;
 
@@ -1410,7 +1410,7 @@ void Land_CabinStartNow(int chridx)
 	bDeckEnter = true;
 
 	deckID = GetCharacterShipCabin(GetCharacter(iShipCaptain));
-	if (CheckAttribute(Locations[FindLocation(deckID)], "image")) SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[FindLocation(DeckID)].image));
+	if (CheckAttribute(Locations[FindLocation(deckID)], "image")) SetReloadImage(&boarding_fader, Locations[FindLocation(DeckID)].image);
 	SendMessage(&boarding_fader, "lfl", FADER_OUT, 1.0, false);
 	SendMessage(&boarding_fader, "l", FADER_STARTFRAME);
 

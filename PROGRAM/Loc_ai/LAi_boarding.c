@@ -1006,15 +1006,15 @@ void LAi_ReloadBoarding()
 	}
 	if (next_boarding_location >= 0) {
 		if (CheckAttribute(&Locations[next_boarding_location], "image"))
-			SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[next_boarding_location].image));
+			SetReloadImage(&boarding_fader, Locations[next_boarding_location].image);
 	} else {
 		if (!IsFort) {
 			if (IsTown) {
-				SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[FindLocation(boarding_enemy.location)].image));
+				SetReloadImage(&boarding_fader, Locations[FindLocation(boarding_enemy.location)].image);
 			} else {
 				string boarding_cabin = GetCharacterShipCabin(boarding_enemy);
 				if (boarding_cabin == "Cabin_none") boarding_cabin = GetCharacterShipQDeck(boarding_enemy);
-				SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[FindLocation("BOARDING_" + boarding_cabin)].image));
+				SetReloadImage(&boarding_fader, Locations[FindLocation("BOARDING_" + boarding_cabin)].image);
 			}
 		}
 	}

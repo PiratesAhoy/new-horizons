@@ -34,7 +34,7 @@ void Return2SeaAfterMutinyDeck()
 	SetEventHandler("FaderEvent_EndFade", "MutinyDeck_ReloadEndFadeAfter", 0);
 	//Создаём фейдер и запускаем
 	CreateEntity(&boarding_fader, "fader");
-	SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture("sea.tga")); // KK
+	SetReloadImage(&boarding_fader, "sea.tga"); // KK
 
 	float fadeOutTime = RELOAD_TIME_FADE_OUT;
 	
@@ -89,7 +89,7 @@ void Sea_MutinyDeckStartNow()
 			float fadeOutTime = 0.5;
 			SendMessage(&wdm_fader, "lfl", FADER_OUT, fadeOutTime, true);
 			SendMessage(&wdm_fader, "l", FADER_STARTFRAME);
-			SendMessage(&wdm_fader, "ls", FADER_PICTURE0, FindReloadPicture("Mutiny.tga"));
+			SetReloadImage(&wdm_fader, "Mutiny.tga");
 
 			PauseAllSounds();
 			ResetSoundScheme();
@@ -101,7 +101,7 @@ void Sea_MutinyDeckStartNow()
 			SetEventHandler("FaderEvent_StartFade", "MutinyDeck_ReloadStartFade", 0);
 			SetEventHandler("FaderEvent_EndFade", "MutinyDeck_ReloadEndFade", 0);
 
-			SendMessage(&boarding_fader, "ls", FADER_PICTURE0, FindReloadPicture("Mutiny.tga")); // KK
+			SetReloadImage(&boarding_fader, "Mutiny.tga"); // KK
 
 			SendMessage(&boarding_fader, "lfl", FADER_OUT, 1.0, false);
 			SendMessage(&boarding_fader, "l", FADER_STARTFRAME);

@@ -68,8 +68,8 @@ void ProcessDialogEvent()
 						CreateEntity(&SeaFader, "fader");
 						switch(NPChar.greeting)
 						{
-							case "land_ho": SendMessage(&SeaFader, "ls", FADER_PICTURE0, "Loading\\"+LanguageGetLanguage()+"\\LandHo.tga"); break;
-							case "sail_ho": SendMessage(&SeaFader, "ls", FADER_PICTURE0, "Loading\\"+LanguageGetLanguage()+"\\SailHo.tga"); break;
+							case "land_ho": SetReloadImage(&SeaFader, "LandHo.tga"); break;
+							case "sail_ho": SetReloadImage(&SeaFader, "SailHo.tga"); break;
 						}
 						SendMessage(&SeaFader, "lfl", FADER_IN, 0.5, true);
 						Sea_ReloadStartDirect();
@@ -80,8 +80,8 @@ void ProcessDialogEvent()
 			CreateEntity(&SeaFader, "fader");
 			switch(NPChar.greeting)
 			{
-				case "land_ho": SendMessage(&SeaFader, "ls", FADER_PICTURE0, "Loading\\"+LanguageGetLanguage()+"\\LandHo.tga"); break;
-				case "sail_ho": SendMessage(&SeaFader, "ls", FADER_PICTURE0, "Loading\\"+LanguageGetLanguage()+"\\SailHo.tga"); break;
+				case "land_ho": SetReloadImage(&SeaFader, "LandHo.tga"); break;
+				case "sail_ho": SetReloadImage(&SeaFader, "SailHo.tga"); break;
 			}
 			SendMessage(&SeaFader, "lfl", FADER_IN, 0.5, true);
 			Sea_ReloadStartDirect();
