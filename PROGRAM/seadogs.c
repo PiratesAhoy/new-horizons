@@ -575,7 +575,7 @@ void LoadGame()
 
 	CreateEntity(&LanguageObject,"obj_strservice");
 	CreateEntity(&reload_fader, "fader");
-	SetReloadImage(&reload_fader, "loading_game.tga"); // KK
+	SetReloadImage(&reload_fader, "loading_game"); // KK
 	SendMessage(&reload_fader, "lfl", FADER_IN, RELOAD_TIME_FADE_IN, true);
 	ReloadProgressStart();
 	ref pchar = GetMainCharacter(); // KK
@@ -909,8 +909,7 @@ void NewGame()
 	string TextureFolder = "RESOURCE\Textures\Loading\"+ LanguageGetLanguage() +"\";
 	ref model = ModelFromID(CharModel);
 	if (CheckAttribute(model, "loadingScreen"))	LoadingScreen = model.loadingScreen;
-//	if(FindFile(TextureFolder, "*.tx", LoadingScreen+".tx") == "") LoadingScreen = "new_game.tga";
-	if(FindReloadPicture(LoadingScreen) == "") LoadingScreen = "new_game.tga";//MAXIMUS 25.04.2019: method FindFile not works with localization
+	if(FindReloadPicture(LoadingScreen) == "") LoadingScreen = "new_game";//MAXIMUS 25.04.2019: method FindFile not works with localization
 	// PB: Storyline Specific Start New Game Screens <--
 
 	CreateEntity(&LanguageObject,"obj_strservice");

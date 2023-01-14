@@ -289,9 +289,9 @@ int Reload(aref reload_group, string locator_name, string current_location)
 			{
 				// KK -->
 				if (VISIT_DECK == 0)
-					SetReloadImage(&reload_fader, "Landing.tga");
+					SetReloadImage(&reload_fader, "Landing");
 				else
-					SetReloadImage(&reload_fader, "Sea.tga");
+					SetReloadImage(&reload_fader, "Sea");
 				// <-- KK
 			}
 			else
@@ -557,21 +557,41 @@ bool TeleportCharacterFromCurLocationToLocation(string locatorExit, string group
 // KK -->
 string FindReloadPicture(string fname)
 {
-	if (FindFile("RESOURCE\Textures\Loading\" + LanguageGetLanguage(), "*.tga.tx", fname + ".tx") != "")
-		return "Loading\" + LanguageGetLanguage() + "\" + fname;
-	if (FindFile("RESOURCE\Textures\Loading", "*.tga.tx", fname + ".tx") != "")	// GR: Moved down so that localised versions take precedence
-		return "Loading\" + fname;
-	if (FindFile("RESOURCE\Textures\Loading", "*.tga", fname) != "")	// GR: Moved down so that localised versions take precedence
-		return "Loading\" + fname;
-	if (FindFile("RESOURCE\Textures\Loading\ENGLISH", "*.tga.tx", fname + ".tx") != "")
-		return "Loading\ENGLISH\" + fname;
-	if (FindFile("RESOURCE\Textures\INTERFACES\BACKGROUND", "*.tga.tx", fname + ".tx") != "")//MAXIMUS
-		return "INTERFACES\BACKGROUND\" + fname;
+	string result;
+
+	result = FindReloadTextureName(fname, "RESOURCE\Textures\Loading\" + LanguageGetLanguage());
+	if (result != "") return result;
+
+	result = FindReloadTextureName(fname, "RESOURCE\Textures\Loading");
+	if (result != "") return result;
+
+	result = FindReloadTextureName(fname, "RESOURCE\Textures\Loading\ENGLISH");
+	if (result != "") return result;
+
+	result = FindReloadTextureName(fname, "RESOURCE\Textures\INTERFACES\BACKGROUND");
+	if (result != "") return result;
+
 	return "";
 }
 
+string FindReloadTextureName(string fname, string folder) {
+	if (FindFile(folder, "*.tga.tx", fname + ".tx") != "")
+        return folder + "\" + fname;
+	if (FindFile(folder, "*.tga", fname) != "")
+        return folder + "\" + fname;
+	if (FindFile(folder, "*.tga.tx", fname + ".tga.tx") != "")
+        return folder + "\" + fname + ".tga.tx";
+	if (FindFile(folder, "*.tga", fname + ".tga") != "")
+        return folder + "\" + fname + ".tga";
+	if (FindFile(folder, "*.png", fname + ".png") != "")
+        return folder + "\" + fname + ".png";
+    if (FindFile(folder, "*.jpg", fname + ".jpg") != "")
+        return folder + "\" + fname + ".jpg";
+    return "";
+}
+
 void SetReloadImage(ref fader, string image) {
-	SendMessage(fader, "ls", FADER_PICTURE0, FindReloadPicture("background.tga"));
+	SendMessage(fader, "ls", FADER_PICTURE0, FindReloadPicture("background"));
 	SendMessage(fader, "ls", FADER_PICTURE, FindReloadPicture(image));
 }
 

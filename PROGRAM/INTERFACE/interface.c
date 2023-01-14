@@ -1965,7 +1965,8 @@ void procInfoShow()
 			break;
 
 			case "game prepare":
-				objInfoList[nInfoIdx].picbackfilename = "Loading\loading.tga";
+				objInfoList[nInfoIdx].picfilename = "Loading\loading.jpg";
+				objInfoList[nInfoIdx].picbackfilename = "Loading\background.jpg";
 			break;
 
 			case "MainMenuLaunch":
