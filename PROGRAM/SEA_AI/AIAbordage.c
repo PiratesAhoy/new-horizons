@@ -293,9 +293,9 @@ void Sea_AbordageStartNow(int _iAbordageMode, int _iAbordageCharacter, bool _bPl
 	if (boarding_deck < 0) boarding_deck = FindLocation("BOARDING_ShipDeck1");
 	DeckID = Locations[boarding_deck].id;
 	if (CheckAttribute(Locations[boarding_deck], "image"))
-		SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture(Locations[boarding_deck].image));
+		SetReloadImage(&reload_fader, Locations[boarding_deck].image);
 	else
-		SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture("Boarding.tga"));
+		SetReloadImage(&reload_fader, "Boarding.tga");
 // <-- KK
 	SendMessage(&reload_fader, "lfl", FADER_OUT, 1.0, false);
 	SendMessage(&reload_fader, "l", FADER_STARTFRAME);

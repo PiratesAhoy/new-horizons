@@ -289,9 +289,9 @@ int Reload(aref reload_group, string locator_name, string current_location)
 			{
 				// KK -->
 				if (VISIT_DECK == 0)
-					SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture("Landing.tga"));
+					SetReloadImage(&reload_fader, "Landing.tga");
 				else
-					SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture("Sea.tga"));
+					SetReloadImage(&reload_fader, "Sea.tga");
 				// <-- KK
 			}
 			else
@@ -318,7 +318,7 @@ int Reload(aref reload_group, string locator_name, string current_location)
 								case 5: LoadingImage = Locations[loc_pict_index].image.5; break;
 							}
 						}
-						SendMessage(&reload_fader, "ls", FADER_PICTURE0, FindReloadPicture(LoadingImage));
+						SetReloadImage(&reload_fader, LoadingImage);
 						// PB: Random Loading Screens <--
 					}
 				}
@@ -561,10 +561,18 @@ string FindReloadPicture(string fname)
 		return "Loading\" + LanguageGetLanguage() + "\" + fname;
 	if (FindFile("RESOURCE\Textures\Loading", "*.tga.tx", fname + ".tx") != "")	// GR: Moved down so that localised versions take precedence
 		return "Loading\" + fname;
+	if (FindFile("RESOURCE\Textures\Loading", "*.tga", fname) != "")	// GR: Moved down so that localised versions take precedence
+		return "Loading\" + fname;
 	if (FindFile("RESOURCE\Textures\Loading\ENGLISH", "*.tga.tx", fname + ".tx") != "")
 		return "Loading\ENGLISH\" + fname;
 	if (FindFile("RESOURCE\Textures\INTERFACES\BACKGROUND", "*.tga.tx", fname + ".tx") != "")//MAXIMUS
 		return "INTERFACES\BACKGROUND\" + fname;
 	return "";
 }
+
+void SetReloadImage(ref fader, string image) {
+	SendMessage(fader, "ls", FADER_PICTURE0, FindReloadPicture("background.tga"));
+	SendMessage(fader, "ls", FADER_PICTURE, FindReloadPicture(image));
+}
+
 // <-- KK

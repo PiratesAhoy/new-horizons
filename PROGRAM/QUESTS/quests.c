@@ -1421,7 +1421,7 @@ void QuestToSeaLogin_Launch()
 	}
 
 	CreateEntity(&SeaFader, "fader");
-	SendMessage(&SeaFader, "ls", FADER_PICTURE0, FindReloadPicture(questToSeaLoginer.ImageName));
+	SetReloadImage(&SeaFader, questToSeaLoginer.ImageName);
 	SendMessage(&SeaFader, "lfl", FADER_OUT, 1.0, true);
 }
 
