@@ -366,7 +366,7 @@ void Main()
 
 	SetEventHandler("Control Activation","proc_break_video",0);
 	SetEventHandler(EVENT_END_VIDEO,"Main_LogoVideo",0);
-	InterfaceStates.videoIdx = 4;
+	InterfaceStates.videoIdx = 0;
 	Event(EVENT_END_VIDEO);
 	ReloadProgressEnd();
 }
@@ -387,29 +387,29 @@ void Main_LogoVideo()
 		}
 	break;
 
-	case 1:
-		{
-			InterfaceStates.videoIdx = 2;
-			StartPostVideo("WaltDisneyLogo",1);
-			return;
-		}
-	break;
-
-	case 2:
-		{
-			InterfaceStates.videoIdx = 3;
-			StartPostVideo("AkellaLogo",1);
-			return;
-		}
-	break;
-
-	case 3:
-		{
-			InterfaceStates.videoIdx = 4;
-			StartPostVideo("BethesdaLogo",1);
-			return;
-		}
-	break;
+//	case 1:
+//		{
+//			InterfaceStates.videoIdx = 2;
+//			StartPostVideo("WaltDisneyLogo",1);
+//			return;
+//		}
+//	break;
+//
+//	case 2:
+//		{
+//			InterfaceStates.videoIdx = 3;
+//			StartPostVideo("AkellaLogo",1);
+//			return;
+//		}
+//	break;
+//
+//	case 3:
+//		{
+//			InterfaceStates.videoIdx = 4;
+//			StartPostVideo("BethesdaLogo",1);
+//			return;
+//		}
+//	break;
 	}
 
 	DelEventHandler(EVENT_END_VIDEO,"Main_LogoVideo");
